@@ -1,0 +1,65 @@
+Players                                                No. Pl1 Pl2 Def  L1  L2   IMPs    Bid  Play1  Play2   Lead1   Lead2    Def
+SESTER Sven - LEVENKO Vassili                          239  57  61 120  53  67   0.82   0.52   0.04   0.19   -0.02    0.03   0.06
+HERBST Ilan - HERBST Ophir                             260  84  69 106  61  45   0.73   0.16   0.19   0.07   -0.00    0.09   0.22
+KALITA Jacek - KOTOROWICZ Krzysztof                    200  53  44 103  53  50   0.71   0.38   0.16   0.02    0.05   -0.04   0.13
+FALLENIUS Bjorn - FREDIN Peter                         260  59  55 146  62  84   0.70   0.58   0.06  -0.02    0.01    0.06   0.02
+ZACK Yaniv - BAREL Michael                             199  47  53  97  53  44   0.59   0.44   0.03   0.10    0.03    0.05  -0.06
+BURAS Krzysztof - NARKIEWICZ Grzegorz                  280  76  76 127  62  65   0.59   0.23   0.11   0.15   -0.06    0.09   0.07
+GINOSSAR Eldad - PACHTMAN Ron                          260  73  55 130  55  75   0.55   0.22   0.04   0.14    0.03    0.08   0.02
+JANSMA Jan - PAULISSEN Gert-Jan                        239  62  66 110  59  51   0.52   0.27   0.17   0.04   -0.02    0.01   0.05
+RUDAKOV Evgeni - KHVEN Max                             240  61  51 126  65  61   0.49   0.15   0.03   0.16    0.02   -0.01   0.14
+BERTHEAU Peter - NYSTROM Fredrik                       260  65  79 115  57  58   0.45   0.16   0.15   0.15    0.05   -0.03  -0.03
+HACKETT Jason - HACKETT Justin                         260  56  61 141  68  73   0.43   0.05   0.11   0.24   -0.03    0.04   0.02
+LUKS Leo - NABER Lauri                                 240  56  66 116  55  61   0.42   0.35  -0.00  -0.09    0.01    0.00   0.15
+ZMUDZINSKI Adam - BALICKI Cezary                       240  57  56 125  57  68   0.40   0.03   0.02   0.08    0.03    0.11   0.14
+FUCIK Jan - PURKARTHOFER Gunther                       280  75  69 134  65  69   0.39   0.24   0.08  -0.00    0.00    0.06   0.01
+DUBININ Alexander - GROMOV Andrey                      220  55  68  96  42  54   0.37   0.30  -0.02   0.10    0.06    0.00  -0.09
+BLAKSET Lars - RON Jacob                               260  66  59 131  67  64   0.33   0.31   0.06   0.06    0.01   -0.01  -0.11
+KHIUPPENEN Yury - KHOLOMEEV Vadim                      260  73  65 122  59  63   0.31  -0.03   0.23   0.04    0.03   -0.03   0.06
+UPMARK Johan - CULLIN Per-Ola                          180  36  46  97  53  44   0.24   0.22  -0.03   0.04   -0.09    0.01   0.09
+O'BRIAIN Micheal - O'BRIAIN Padraig                    320  87  70 160  76  84   0.21   0.18   0.02  -0.03    0.01   -0.01   0.05
+CRUZEIRO Jorge - PEREIRA Paulo Goncalves               240  43  58 137  63  74   0.18   0.09   0.06   0.03   -0.01   -0.06   0.06
+BJARNARSON Gregers - ASKGAARD Michael                  220  51  63 105  57  48   0.18   0.17   0.03   0.05    0.01   -0.02  -0.07
+BARBOSA Juliano - PALMA Antonio                        240  62  74 102  51  51   0.11   0.09   0.08  -0.02   -0.03    0.04  -0.04
+DE WIJS Simon - MULLER Bauke                           239  62  50 125  68  57   0.10  -0.04  -0.02   0.04    0.04    0.03   0.05
+GHIGHECI Ovidiu - ROTARU Iulian                        240  58  66 114  66  48   0.10   0.08   0.07  -0.09   -0.04   -0.06   0.12
+BRINK Sjoert - DRIJVER Bas                             240  59  65 116  59  57   0.09   0.30   0.04  -0.06    0.05    0.05  -0.29
+SANDQVIST Nicklas - McINTOSH Andrew                    220  50  65 104  55  49  -0.00  -0.19  -0.04   0.18   -0.05   -0.01   0.12
+GODED Federico - GODED MERINO Gonzalo                  280  79  65 135  69  66  -0.02  -0.06   0.05   0.06   -0.03    0.03  -0.08
+DEMARCIN Eric - BACKES Jean Marie                      240  67  45 126  65  61  -0.04  -0.16  -0.04  -0.01    0.05    0.02   0.12
+LOEFGREN Martin - RENNO Ilkka                          220  51  54 115  65  50  -0.04   0.23  -0.04  -0.21   -0.02   -0.11   0.11
+TOWNSEND Tom - GOLD David                              240  62  56 121  63  58  -0.08  -0.02  -0.05  -0.01    0.02    0.03  -0.05
+DEHAYE Bernard - KURGAN Daniel                         260  71  70 116  51  65  -0.08  -0.03   0.02  -0.04   -0.03   -0.05   0.05
+TOGNETTI Rene - DESMOULINS Christophe                  240  52  59 127  65  62  -0.09   0.02  -0.13   0.04   -0.04    0.04  -0.02
+KARAMANLIS Philippos - PROTONOTARIOS Manolis           260  71  72 115  57  58  -0.14  -0.02   0.03  -0.07    0.02   -0.17   0.06
+KARPOV Maksim - LAANEMAE Tiit                          240  66  57 116  53  63  -0.15  -0.35  -0.05   0.01    0.09    0.08   0.08
+FLORIN Filip - IONITA Marius                           220  60  57 101  49  52  -0.16   0.07  -0.04  -0.03    0.03   -0.07  -0.10
+TERRANEO Franz - TERRANEO Sylvia                       220  61  52 106  54  52  -0.16  -0.21   0.11   0.01    0.06   -0.02  -0.11
+VANDERVORST Mike - DEWASME Isabelle                    219  53  47 116  53  63  -0.16  -0.29   0.06  -0.06   -0.01   -0.04   0.16
+BAUSBACK Nikolas - ENGEL Berthold                      240  47  62 129  57  72  -0.17   0.04   0.18  -0.04   -0.11    0.04  -0.28
+O'BRIEN Brendan J - PIGOT Peter Jr                     160  33  38  88  45  43  -0.21  -0.15  -0.04  -0.05    0.06   -0.01  -0.01
+ALLAVENA Jean Charles - FREY Nathalie                  240  70  58 111  53  58  -0.23  -0.14   0.03  -0.07   -0.02   -0.02  -0.01
+CASTANHEIRA Jorge Carlos - PESSOA Sofia                240  62  58 119  51  68  -0.23  -0.10  -0.15   0.07   -0.00   -0.06   0.01
+ANGELOPOULOS Petros - KOUKOUSELIS Tassos               240  64  61 115  54  61  -0.26  -0.20  -0.07   0.17   -0.03   -0.02  -0.11
+BASABE Enrique - KNAP Andres                           300  64  63 170  77  93  -0.26  -0.50   0.12   0.01    0.01    0.02   0.08
+BILDE Morten - HANSEN Jrrgen Cilleborg                 240  47  74 117  61  56  -0.33  -0.05  -0.18  -0.12   -0.02   -0.02   0.05
+ANASTASIADIS Kostas - OIKONOMOPOULOS Giorgos           220  57  57 106  53  53  -0.35  -0.24  -0.06   0.00   -0.07   -0.01   0.02
+BRICIU Marius - COLDEA Ionut                           260  77  64 119  55  64  -0.44  -0.27  -0.06  -0.14   -0.04   -0.01   0.08
+CATELLANI Marco - FISSORE Henri                        239  66  60 112  63  49  -0.46  -0.48   0.02  -0.04    0.10    0.10  -0.15
+BONOMELLI Alberto - FIORINI Fiorenzo                   260  53  80 126  64  62  -0.50  -0.19  -0.18   0.05   -0.02   -0.02  -0.14
+TERRANEO Christian - LINDERMANN Arno                   220  58  47 114  53  61  -0.51  -0.16  -0.21  -0.11    0.00    0.04  -0.07
+WALSH Terry - O'GORMAN Derek                           240  50  64 126  65  61  -0.54  -0.12   0.07  -0.32   -0.01    0.02  -0.17
+CHUMAK Yuliy - ROVYSHYN Oleg                           239  52  59 127  70  57  -0.54  -0.36   0.08  -0.08    0.02   -0.04  -0.16
+SHUKHMEYSTER Borys - KARLYKOV Petro                    260  74  61 124  55  69  -0.54  -0.16   0.11   0.05   -0.08   -0.18  -0.28
+CARRASCO Gabriel - FRACTMAN Gabriel                    100  23  26  51  18  33  -0.65  -0.22  -0.36  -0.07    0.02    0.08  -0.11
+BANCHEREAU Philippe - PALAZO Denis                     260  54  60 144  72  72  -0.76  -0.36  -0.04  -0.09   -0.06    0.03  -0.23
+RYBNIKOV Gennadii - KYCHANOV Valentin                  220  58  58 104  45  59  -0.77  -0.26  -0.16  -0.10   -0.02   -0.03  -0.20
+FAZZARDI Gianfranco - PERLINI Maria Cristina           220  38  43 137  72  65  -0.77  -0.18  -0.15  -0.05   -0.09    0.01  -0.30
+MIETI Renzo - PAOLUCCI Mauro                           240  64  42 133  73  60  -1.17  -0.62  -0.16  -0.11    0.01   -0.04  -0.23
+
+Players                                                No. Pl1 Pl2 Def  L1  L2   IMPs    Bid  Play1  Play2   Lead1   Lead2    Def
+FRACTMAN Gabriel - KNAP Andres                          20   5  11   4   3   1   2.22   2.00  -0.20   0.40    0.01   -0.02   0.03
+BERTHEAU Peter - CULLIN Per-Ola                         19   2   8   9   6   3   0.26   0.14   0.04   0.20   -0.25    0.04   0.10
+FRACTMAN Gabriel - GODED Federico                       20   3   3  14   3  11  -0.15   0.46   0.17   0.34   -0.05   -0.20  -0.86
+CARRASCO Gabriel - FRACTMAN Gabriel                    100  23  26  51  18  33  -0.65  -0.22  -0.36  -0.07    0.02    0.08  -0.11
+

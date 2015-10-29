@@ -1,0 +1,83 @@
+1|ABU JABER Aida
+2|ABU JABER Yasmin
+3|ACAR Asli
+4|ADAMSON Sheila
+5|ADUT Vera
+6|ATALAY Belis
+7|AUDICHE Christina
+8|BABOT Mari Carmen
+9|BADAWI Laila
+10|BAERT Christine
+11|BALDYSZ Cathy
+12|BANASZKIEWICZ Ewa
+13|BARNES Marta
+14|BENNETT Debbie
+15|BISTOQUET Chantal
+16|BOLDT Silvia Elena
+17|BORDALLO CORTINA Cristina
+18|BOURKE Margaret
+19|BRINGOLD Solange
+20|BROCK Sally
+21|BROWN Fiona
+22|CASSIN Jacqueline
+23|CHUBAROVA Svetlana
+24|DEMME Ina
+25|DHONDY Heather
+26|DJUROVIC Nevena
+27|DUFRAT Katarzyna
+28|DUVERNOY Roselyne
+29|ELKIN Irene
+30|ERKAN Berrak
+31|FRANCES Ana
+32|GARATEGUY Maria Del Rosario
+33|GINSBERG Candice
+34|GONG Fang-Wen
+35|GRANT Maida
+36|GROMOVA Victoria
+37|GULEVICH Anna
+38|HAMADEH AWWAD Maha
+39|HAMDY Nessrine
+40|HAVAS Elizabeth
+41|HOMSY Marguerite
+42|HU Sheau-Fong
+43|IACAPRARO Maria Elena
+44|IRIBARREN Gloria
+45|KAZMUCHA Danuta
+46|KHALIL Lily
+47|KHONICHEVA Elena
+48|KHOURI Maud
+49|LUSK Sue
+50|MATUT Maria Luisa (Marisa)
+51|McDONALD Sheila
+52|McGOWAN Elizabeth (Liz)
+53|MENG Gloria
+54|NISBET Pamela
+55|OYMEN Ozlem
+56|PANADERO Maria
+57|PONOMAREVA Tatiana
+58|PUNCH Sam
+59|QASHU Azza
+60|SAKET Randa
+61|SAKOWSKA Natalia
+62|SENIOR Nevena
+63|SHAH Bhanumati Sobhag
+64|SHAH Indira Shantilal
+65|SHAH Parfula Suryakant
+66|SHAH Sumitra Rasiklal
+67|SHAH Surekhakumari Kirankumar
+68|SHAH Vasanti Rashmikant
+69|SMALINSKY Ana Lia
+70|SMITH Nicola
+71|SO Ho-Yee
+72|STOCKDALE Susan
+73|SYMONS Anne
+74|THOMSON Lesley
+75|TRACOL Anny
+76|TRAVIS Barbara
+77|TSAI Po-Ya
+78|TSAI Wen-Chuan
+79|VOROBEYCHIKOVA Olga
+80|WOLPERT Hazel
+81|WYNSTON Linda
+82|YAVAS Dilek
+83|ZMUDA Justyna

@@ -1,0 +1,96 @@
+General
+=======
+
+These are all command-line instructions.  If you want to compile
+the code from an integrated development environment, you probably
+know what you're doing and you'll figure it out :-).
+
+If you have trouble, read the Makefile.  They all have the compiler
+warning levels set rather high, and they are set to fail even on
+warnings.  You can turn this off.
+
+The optional next step is to test the executable.
+
+Generally speaking:
+
+* Your paths and your system must be set up ahead of time.
+* You must have "make", or you will have to find a manual way
+  of compiling.
+* If your compiler does not have the name that I assume in 
+  the Makefile, then modify the Makefile.
+
+
+General instructions
+====================
+
+1. Go to the src directory.
+
+2. Copy the right Makefile_... from the Makefiles sub-directory
+to the src directory and call it Makefile, see below. (Or use make -f)
+
+3. If your compiler does not have the name assumed in the Makefile
+(see below), modify the Makefile.
+
+4. make clean (not necessary if you're starting clean).
+
+5. make depend (ditto).
+
+6. make.
+
+
+System-specific data
+====================
+
+Microsoft Visual C++ (Unix-like, so Cygwin and mingw)
+--------------------
+Makefile: Makefile_Visual
+Compiler: cl
+
+
+Microsoft Visual C++ (Windows-like, so no "mV", different "make")
+--------------------
+Makefile: Makefile_Visual_Windows
+Compiler: cl
+
+Mingw
+-----
+Makefile: Makefile_mingw
+Compiler: i686-w64-mingw32-g++
+
+
+Cygwin
+------
+Makefile: Makefile_cygwin
+Compiler: g++
+
+
+Linux (static library .a)
+=====
+Makefile: Makefile_linux
+Compiler: g++
+
+
+Linux (dynamic library .ld)
+=====
+Makefile: Makefile_linux_shared
+Compiler: g++
+
+
+Apple
+=====
+Makefile: Makefile_Mac_clang (for clang compiler, single-threaded)
+Makefile: Makefile_Mac_clang (for GNU g++ compiler, multi-threaded)
+Compiler: g++
+
+
+Testing
+=======
+
+In the src directory, you can invoke the program as
+
+./vtest.exe
+
+which should just give a brief usage message.  If that works, then
+you can invoke the program in several ways that are explained in 
+the usage message.
+

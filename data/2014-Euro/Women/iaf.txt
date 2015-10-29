@@ -1,0 +1,77 @@
+Players                                                No. Pl1 Pl2 Def  L1  L2   IMPs    Bid  Play1  Play2   Lead1   Lead2    Def
+SACCAVINI Ilaria - PAOLUZI Simonetta                   256  62  57 137  78  59   0.89   0.36   0.06   0.14    0.12    0.03   0.18
+SARNIAK Anna - BALDYSZ Cathy                           304  82  86 135  66  69   0.86   0.24   0.16   0.21    0.02    0.03   0.20
+WORTEL Meike - MICHIELSEN Marion                       287  72  70 145  61  84   0.70   0.31   0.16   0.17   -0.02   -0.03   0.11
+UYGAN Filiz - OZGUR Hatice                             304  82  86 135  75  60   0.67   0.13   0.00   0.15    0.06    0.09   0.24
+SENIOR Nevena - DHONDY Heather                         224  62  45 117  50  67   0.66   0.40   0.08   0.06    0.11    0.01  -0.00
+SCHALTZ Dorthe - BEKKOUCHE Nadia                       352  96  67 188  81 107   0.63   0.28   0.04   0.08    0.02    0.04   0.16
+ZOCHOWSKA Joanna - REESS Vanessa                       272  73  77 122  56  66   0.63   0.47  -0.06   0.14   -0.02    0.05   0.05
+BROWN Fiona - DRAPER Catherine                         224  70  46 107  55  52   0.61   0.37   0.19   0.03    0.03   -0.00  -0.00
+BALINT Mihaela - MIHAI Geta                            352  76 112 163  76  87   0.51   0.35   0.07   0.12   -0.00   -0.05   0.03
+SIMONS Anneke - PASMAN Jet                             192  41  52  98  49  49   0.51   0.35  -0.00  -0.01    0.05    0.01   0.12
+WEBER Elke - GLADIATOR Anne                            240  67  51 122  56  66   0.44   0.22   0.12   0.16   -0.02    0.00  -0.04
+CHAVARRIA Margherita - PISCITELLI Francesca            224  38  66 118  56  62   0.42   0.10  -0.02   0.24   -0.00   -0.01   0.11
+GROMOVA Victoria - PONOMAREVA Tatiana                  240  69  52 119  57  62   0.38  -0.09   0.19   0.10    0.02    0.06   0.12
+WILLARD Sylvie - CRONIER Benedicte                     304  57  84 163  93  70   0.36   0.48  -0.06   0.01   -0.02   -0.03  -0.02
+SJOBERG Emma - RIMSTEDT Sandra                         288  77  73 138  67  71   0.32   0.01   0.19   0.09   -0.05   -0.06   0.15
+GULEVICH Anna - KHONICHEVA Elena                       272  86  51 134  70  64   0.31   0.11  -0.07   0.08    0.03    0.04   0.13
+VAN ZWOL Wietske - ARNOLDS Carla                       224  55  66 103  41  62   0.26   0.22  -0.07  -0.11    0.07    0.03   0.11
+BERTHEAU Kathrine - LARSSON Jessica                    240  84  46 109  53  56   0.23   0.19  -0.03   0.00   -0.00   -0.00   0.08
+ALMIRALL Marta - ALMIRALL Nuria                        256  49  71 136  89  47   0.16  -0.02  -0.02   0.20   -0.00    0.03  -0.02
+SMITH Nicola - BROCK Sally                             255  56  74 124  63  61   0.16   0.16  -0.17   0.05    0.04   -0.00   0.08
+ADAMSON Sheila - SYMONS Anne                           224  56  39 128  68  60   0.08  -0.02  -0.01  -0.03    0.14    0.01  -0.00
+SVER Nikica - PILIPOVIC Marina                         304  68  89 147  62  85   0.08  -0.25   0.06   0.05    0.04    0.08   0.10
+KULCHYCKY Jill - RIGNEY Teresa                         256  71  38 145  74  71   0.07   0.15  -0.12   0.05    0.07   -0.01  -0.07
+LEVIT-PORAT Ruth - POPLILOV Matilda                    256  60  67 128  65  63   0.05   0.32  -0.08  -0.08   -0.01    0.02  -0.14
+FERLAZZO Caterina - MANARA Gabriella                   223  44  61 117  64  53   0.03   0.29  -0.13  -0.07    0.00    0.04  -0.10
+NOSACKI Michal - SAADA Nathalie                        208  47  59 101  49  52   0.01   0.25  -0.03  -0.10   -0.09   -0.02  -0.01
+GREENWOOD Diane - KENNY Joan                           224  50  58 116  63  53  -0.00   0.14   0.02   0.03   -0.06    0.05  -0.16
+OZBAY Irem - ATES Ebru                                 192  54  45  93  49  44  -0.01   0.30  -0.07  -0.20   -0.00    0.06  -0.09
+GIAMPIETRO Cristina - NEHMERT Pony Beate               224  48  61 114  51  63  -0.02  -0.15   0.13  -0.06    0.01   -0.06   0.11
+FUGLESTAD Ann Karin - HARDING Marianne                 272  60  70 142  61  81  -0.04   0.03   0.03   0.13   -0.05   -0.07  -0.11
+FARHAT Faten - KREIDIEH Hana                           144  35  38  69  21  48  -0.05  -0.19   0.13   0.05    0.09    0.11  -0.24
+GRAIZER Nurit - MORAN OHAYON Orit                      208  34  48 125  64  61  -0.06  -0.14  -0.03   0.04    0.05   -0.02   0.04
+TAUBE Aire - ORAS Maarja                               288  89  74 125  59  66  -0.09  -0.13   0.06   0.01    0.01    0.02  -0.06
+ZMUDA Justyna - DUFRAT Katarzyna                       208  51  48 109  71  38  -0.10   0.06   0.00   0.04    0.13   -0.07  -0.26
+BABOT Mari Carmen - PANADERO Maria                     239  52  66 120  58  62  -0.11  -0.17   0.05  -0.07    0.03    0.01   0.03
+THOMASBERGER Hannelore - WEIHS Bettina                 352  90  85 175  97  78  -0.12  -0.10  -0.06  -0.05   -0.04    0.06   0.07
+CAMPAGNANO Debora - HUGON Elisabeth                    128  32  34  62  35  27  -0.13  -0.41  -0.00  -0.11    0.15    0.07   0.17
+BILDE Lone - RASMUSSEN Helle                           349 106  88 155  81  74  -0.13  -0.16   0.04   0.02    0.01   -0.06   0.04
+VECHIATTO Claudia - EGGELING Marie                     240  57  63 118  62  56  -0.17   0.07   0.05  -0.08   -0.04   -0.06  -0.11
+LEKOVA-KOVACHEVA Anna - MIRCHEVA Ralitsa Mihaylova     256  76  79 101  55  46  -0.17  -0.10   0.03   0.02    0.01   -0.04  -0.09
+STEGAROIU Marina - PAVEL Jacqueline                    350  73  88 189 119  70  -0.18  -0.11  -0.05  -0.08   -0.01    0.03   0.05
+ECONOMOU Liana - MAMIDAKI Lina                         256  72  54 129  66  63  -0.19  -0.13  -0.12   0.09    0.04   -0.08  -0.00
+DJORDJEVIC Aleksandra - MANDZO Gordana                 256  60  67 127  46  81  -0.19  -0.36   0.09   0.17   -0.02   -0.07  -0.01
+MIHOVA Elena - NIKOLOVA MARTA                          240  64  53 123  68  55  -0.22  -0.06   0.11  -0.31   -0.02   -0.02   0.09
+WENNEVOLD Ida - HELNESS Gunn                           240  70  66 104  66  38  -0.23   0.02  -0.02  -0.13   -0.06   -0.02  -0.01
+THORESEN Siv - REMEN Solvi                             192  54  40  98  36  62  -0.24  -0.58   0.10  -0.07    0.08   -0.05   0.29
+TOMLJANOVIC Sandra - MULLER Renata                     223  61  47 115  58  57  -0.25  -0.09  -0.01   0.01   -0.01   -0.02  -0.13
+AHLESVED Catharina - GRONKVIST Maria                   176  32  40 102  49  53  -0.25  -0.08  -0.02   0.02   -0.00   -0.01  -0.16
+ZAIM Mey - ATALAY Belis                                208  69  39 100  47  53  -0.26  -0.08  -0.09   0.17   -0.01    0.01  -0.27
+KAZMUCHA Danuta - MISZEWSKA Ewa                        192  55  30 107  62  45  -0.26  -0.23   0.01  -0.12   -0.05    0.06   0.07
+MALAKOVA Desislava - MITEVA Marieta                    208  44  41 121  58  63  -0.31  -0.15  -0.13   0.08    0.03   -0.01  -0.13
+SIMIC Olga - DANILOVIC Vesna                           272  84  62 126  65  61  -0.32  -0.07  -0.01  -0.10   -0.02    0.03  -0.14
+McGOWAN Elizabeth (Liz) - PUNCH Sam                    256  77  63 115  52  63  -0.32   0.01   0.02  -0.15   -0.04   -0.09  -0.08
+WISEMAN Yvonne - McQUAKER Fiona                        224  69  47 108  60  48  -0.32  -0.12  -0.02  -0.04   -0.04    0.01  -0.11
+SARV Pihel - VIILUP Triinu                             304  95  59 150  84  66  -0.33  -0.24  -0.04   0.04   -0.06    0.05  -0.08
+ANGEBRANDT Dietlind - PICHLER Eva                      352  84  85 182  89  93  -0.36  -0.12   0.05  -0.08   -0.04    0.03  -0.21
+KYRIAKIDOU Antonia (Nitsa) - LAMBRINOU Sophie          224  15 106 103  91  12  -0.36  -0.02  -0.02  -0.19   -0.10    0.07  -0.09
+VOROBEYCHIKOVA Olga - CHUBAROVA Svetlana               192  54  46  92  48  44  -0.47  -0.35   0.02   0.06   -0.05   -0.07  -0.07
+DOWLING-LONG Hilary - PENDER Gilda                     224  51  61 110  65  45  -0.49  -0.37  -0.04  -0.16    0.03   -0.03   0.08
+CAFRANGA-MARTORELL Carmen - FRANCES Ana                207  49  58 100  56  44  -0.49  -0.28   0.04   0.11   -0.00   -0.03  -0.34
+SEPP Tuul - TEINEMAA Irene                             112  20  22  70  35  35  -0.52  -0.18  -0.07   0.05   -0.10   -0.10  -0.12
+TALIJAN Biljana - BANJAC Bojana                        176  47  36  92  48  44  -0.69  -0.31  -0.15  -0.15    0.04   -0.04  -0.09
+BRKLJACIC Tihana - KULOVIC-PROBST Sandra               176  40  47  88  43  45  -0.71  -0.02  -0.19  -0.22   -0.12   -0.00  -0.16
+MITSI Georgia - PANAGAKI Maria                         224  61  42 120  54  66  -0.74  -0.13  -0.21  -0.08   -0.08   -0.03  -0.21
+CHAMMAA Iman - HAMDAN Nahla                            112  18  19  75  32  43  -2.20  -1.11  -0.21  -0.14   -0.19   -0.09  -0.45
+
+Players                                                No. Pl1 Pl2 Def  L1  L2   IMPs    Bid  Play1  Play2   Lead1   Lead2    Def
+HAMDAN Nahla - KREIDIEH Hana                            16   3   4   9   3   6   1.48   0.59   0.11   0.15    0.47    0.03   0.13
+ANAWATI Claude - KREIDIEH Hana                          96  28  22  46  13  33   0.00  -0.00   0.26   0.08   -0.19    0.02  -0.16
+FARHAT Faten - RAMADAN Youmna                           32   5  15  12   3   9  -0.12   0.20  -0.05  -0.32   -0.02   -0.03   0.09
+HAMDAN Nahla - ANAWATI Claude                           96  27  25  44  18  26  -0.14  -0.15  -0.04   0.13    0.05    0.02  -0.14
+KREIDIEH Hana - RAMADAN Youmna                          16   3   4   9   0   9  -1.13  -0.42   0.17  -0.04    0.00   -0.18  -0.66
+ANAWATI Claude - RAMADAN Youmna                         47   9  20  18   6  12  -1.34  -1.09   0.07  -0.22    0.06   -0.03  -0.14
+CHAMMAA Iman - FARHAT Faten                             80   8  31  41  17  24  -1.64  -1.09  -0.32  -0.03   -0.10   -0.05  -0.05
+FARHAT Faten - HAMDAN Nahla                             32  11  11  10   1   9  -1.68  -1.14  -0.36  -0.62   -0.01    0.15   0.30
+

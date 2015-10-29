@@ -1,0 +1,61 @@
+# This is the valet Makefile for Windows and the Microsoft Visual C++
+# compiler.  Unlike the other Makefiles, it does not assume a 
+# Unix-like setup.
+
+# If your Microsoft compiler is not called cl, change it here.
+CC		= cl
+CC_FLAGS     	= /O2 /Oi /Ot /Oy /GL
+
+# These flags are not turned on by default, but DDS should pass them.
+# Turn them on below.
+WARN_FLAGS	=		\
+	/W4			\
+	/wd4127			\
+	/wd4555			\
+	/wd4668			\
+	/wd4701			\
+	/wd4710			\
+	/wd4711			\
+	/wd4820			\
+	/wd4986			\
+	/wd4987			\
+	/wd4996			\
+	/WX                     \
+        /EHsc
+
+# Here you can turn on warnings.
+# CC_FULL_FLAGS	= $(CC_FLAGS)
+CC_FULL_FLAGS	= $(CC_FLAGS) $(WARN_FLAGS)
+
+SOURCE_FILES 	=		\
+        valet.cpp               \
+        args.cpp                \
+        files.cpp               \
+        parse.cpp               \
+        scoring.cpp             \
+        misc.cpp                \
+        Pairs.cpp               \
+        Hand.cpp                \
+        Scores.cpp
+
+OBJ_FILES 	=		\
+        valet.obj               \
+        args.obj                \
+        files.obj               \
+        parse.obj               \
+        scoring.obj             \
+        misc.obj                \
+        Pairs.obj               \
+        Hand.obj                \
+        Scores.obj
+
+valet:	$(OBJ_FILES)
+	$(CC) $(CC_FULL_FLAGS) $(OBJ_FILES) /out:valet.exe
+
+%.obj:	%.cpp
+	$(CC) $(CC_FULL_FLAGS) /c $<
+
+clean:
+	del $(OBJ_FILES) valet.exe
+
+# DO NOT DELETE

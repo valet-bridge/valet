@@ -1,0 +1,9 @@
+./valet.exe -n names1.txt -s scores1.txt > a1
+./valet.exe -n names1.txt -s scores1.txt -v imps > b1
+
+./valet.exe -n names2.txt -s scores2.txt -l > a1
+./valet.exe -n names2.txt -s scores2.txt -v imps -l > b2
+
+./valet.exe -n names3.txt -s scores3.txt -v imps -l > b3
+./valet.exe -n names4.txt -s scores4.txt -v imps -l > b4
+./valet.exe -n names5.txt -s scores5.txt -v imps -l > b5

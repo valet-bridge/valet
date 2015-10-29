@@ -1,0 +1,75 @@
+Players                                                No. Pl1 Pl2 Def  L1  L2 Butler    Bid  Play1  Play2   Lead1   Lead2    Def
+FREY Nathalie - REESS Vanessa                          192  48  48  96  46  50   1.06   0.34   0.14   0.02    0.11    0.14   0.31
+SMITH Nicola - DHONDY Heather                          208  48  46 113  59  54   0.92   0.70   0.25  -0.01   -0.03    0.05  -0.04
+WILLARD Sylvie - CRONIER Benedicte                     240  62  52 122  66  56   0.91   0.51   0.03   0.19    0.06    0.02   0.11
+VRIEND Bep - ARNOLDS Carla                             240  37  99 103  75  28   0.82   0.52   0.03   0.09    0.00    0.04   0.15
+AUKEN Sabine - VON ARNIM Daniela                       320  84  77 158  83  75   0.77   0.30   0.20   0.13    0.01    0.08   0.05
+STANSBY JoAnna - ROSENBERG Debbie                      304  92  69 143  80  63   0.73   0.44   0.17   0.01    0.03   -0.01   0.09
+ZHANG Yalan - GU Ling                                  224  65  37 122  53  69   0.70   0.30   0.41   0.07    0.02   -0.01  -0.09
+ALBERTI Anja - SCHRAVERUS-MEUER Mirja                  176  42  47  85  46  39   0.67   0.38  -0.01  -0.10    0.13    0.06   0.21
+GAVIARD Daniele - SAUL Catherine                       240  29  93 115  85  30   0.63   0.22   0.16   0.11    0.05   -0.01   0.09
+SUN Ming - WANG Jian                                   224  41  67 115  82  33   0.56   0.28   0.01   0.02    0.17   -0.00   0.08
+SUTHERLIN Peggy - ALLISON Karen                        192  51  49  91  32  59   0.56   0.13   0.02   0.28    0.16   -0.08   0.06
+WANG Ping - LIU Yi Qian                                224  66  49 106  57  49   0.54   0.28   0.16  -0.09    0.05   -0.03   0.16
+WITTES Pam - MANCUSO Renee                             256  40  78 135  68  67   0.50   0.20   0.13  -0.00   -0.04    0.02   0.19
+KHALIL Lily - KHOURI Maud                              208  50  48 107  59  48   0.44   0.58  -0.02   0.09   -0.04   -0.04  -0.13
+DE MELLO Sylvia Figueira - PAIN Leda                   192  43  55  94  51  43   0.30   0.38   0.03  -0.09   -0.06   -0.03   0.07
+SPRUNG Jo Ann - SULGROVE Kathy                         224  54  68 100  45  55   0.28   0.24   0.02  -0.09    0.12   -0.08   0.08
+YULE Kathryn - DON Rose                                256  67  60 129  75  54   0.26   0.31  -0.03  -0.00   -0.02   -0.00   0.01
+CIMON Francine - LEE Linda                             240  61  53 124  63  61   0.23   0.09   0.22  -0.11    0.03    0.08  -0.07
+LEVITINA Irina - NARASIMHAN Hansa                      128  47  19  62  35  27   0.23   0.17   0.04  -0.10   -0.14   -0.01   0.27
+WOODS Meredith - BOURKE Margaret                       224  58  58 105  54  51   0.21   0.33  -0.08  -0.12    0.08    0.08  -0.08
+STAWOWY Barbara - NEHMERT Pony Beate                   176  25  56  95  39  56   0.20  -0.11   0.25  -0.00    0.10   -0.03  -0.01
+LEVIN Jill - PICUS Sue                                 240  64  73 101  39  62   0.13   0.24  -0.01   0.04   -0.01   -0.08  -0.04
+CHAI Greta - CHOO Jane                                 224  46  51 125  58  67   0.11  -0.12   0.11   0.02    0.03   -0.07   0.13
+WEIGKRICHT Terry - GRUMM Iris                          272  61  69 140  65  75   0.10   0.14   0.03   0.05   -0.01   -0.04  -0.07
+TERRANEO Sylvia - KRIFTNER Susanne                     256  62  69 122  68  54   0.07   0.27  -0.08  -0.00   -0.01   -0.03  -0.07
+BERTHEAU Kathrine - MIDSKOG Catarina                   256  57  81 118  55  63   0.06  -0.00  -0.05   0.21    0.04    0.04  -0.18
+RYMAN Jenny - RYMAN Mari                               224  48  67 107  51  56   0.04  -0.23  -0.04   0.03    0.06    0.10   0.14
+GORDON Dianna - KRAFT Beverly                          224  65  43 113  63  50   0.04   0.07   0.07  -0.02    0.11    0.02  -0.21
+SETOGUCHI Nobuko - OTA Hiroko                          224  54  56 112  54  58   0.04   0.05   0.03   0.14    0.05   -0.05  -0.18
+BRUNNER Michelle - GOLDENFIELD Rhona                   224  53  43 126  66  60  -0.03   0.07  -0.10   0.03    0.02   -0.03  -0.01
+CUNHA Ines - FERREIRA Isabel                           224  49  66 103  61  42  -0.04  -0.03  -0.07   0.03   -0.07    0.01   0.10
+SIMONS Anneke - PASMAN Jet                             224  19  91 113  77  36  -0.04  -0.31  -0.03   0.25    0.08    0.09  -0.11
+TELTSCHER Kitty - BROCK Sally                          240  75  61 103  55  48  -0.07  -0.08  -0.15   0.17    0.02    0.03  -0.07
+AMANO Ayako - SEKIZAWA Miho                            240  56  75 107  44  63  -0.10  -0.19   0.06   0.04    0.05    0.02  -0.08
+NOGUEIRA Heloisa - ASSUMPCAO Ana Maria                 240  32  80 126  64  62  -0.13  -0.39   0.07   0.18   -0.05   -0.01   0.06
+DARYANANI Padma - PACHECO Morella                      208  45  55 106  47  59  -0.15   0.15   0.03  -0.25    0.02    0.00  -0.10
+TULLY Therese - LUSK Sue                               240  58  69 111  54  57  -0.19  -0.08   0.02   0.13   -0.07    0.07  -0.26
+AGHA Rubina - ALI Abida Nazar                          256  70  45 140  69  71  -0.22   0.04   0.05  -0.03   -0.00   -0.00  -0.27
+MOUSSA Nada - SARWAT Safeya (Sophie)                   144  38  36  70  39  31  -0.24  -0.07   0.10  -0.19    0.04   -0.01  -0.11
+OLIVEIRA Anabella - RAMALHO Teresa                     224  56  48 119  73  46  -0.25   0.02  -0.08   0.02   -0.10   -0.05  -0.06
+GUERRAOUI Farida - HACHIMI Hayet                       256  77  37 140  68  72  -0.25  -0.13  -0.02   0.02   -0.11   -0.06   0.06
+TADEU Ana - LIMA Paula                                 224  58  60 103  54  49  -0.27   0.03  -0.06  -0.17    0.05   -0.05  -0.07
+BOLDT Silvia Elena - IRIBARREN Gloria                  224  32  80 110  61  49  -0.27  -0.06  -0.01   0.02   -0.02   -0.06  -0.14
+VAN ZWOL Wietske - HOOGWEG Femke                       208  27  72 106  60  46  -0.30  -0.08  -0.02   0.17   -0.11   -0.02  -0.23
+LLOYD Tania - McLEISH Paula                            240  64  57 117  54  63  -0.31  -0.35  -0.17  -0.03    0.02    0.04   0.18
+COSTA Delia - ALONSO Ana Maria De                      208  40  65 101  51  50  -0.32  -0.17  -0.21   0.19    0.02   -0.04  -0.10
+SMART Diana - BEALE Felicity                           208  38  46 124  50  74  -0.32  -0.09  -0.08  -0.00   -0.05   -0.12   0.02
+BELRHITI ALAOUI Khadija - SEBTI Noufissa               208  41  52 114  67  47  -0.32  -0.18  -0.08   0.03   -0.00    0.07  -0.16
+MACHADO Marta C. Cruz - MANDELOT Agota                 240  80  52 107  56  51  -0.32  -0.43   0.10   0.03   -0.04    0.08  -0.06
+ALEGRE Eleonora - HERRERA Florencia                    240  64  55 121  64  57  -0.33   0.06  -0.01  -0.02    0.01   -0.15  -0.21
+SONAWALA Indira - CHOTHIA Feroza                       240  44  60 135  64  71  -0.33  -0.32   0.16  -0.10   -0.14   -0.01   0.08
+CLINTON Barb - EATON Joan                              208  51  54 101  47  54  -0.34  -0.17  -0.16   0.06    0.05   -0.07  -0.05
+TAN Yoke Lan - SEET Choon Cheng                        224  46  65 112  48  64  -0.36  -0.15   0.07  -0.01    0.08   -0.03  -0.32
+SMITH Ivy - HIRSCHAUT Fida                             224  68  48 107  49  58  -0.38  -0.42   0.01  -0.03   -0.01    0.04   0.03
+WATTAR Nada - HAMDY Nessrine                           272  67  79 124  59  65  -0.40  -0.52  -0.03   0.05    0.01    0.00   0.09
+AZWER Zeenat - SAIGOL Rehana                           224  65  57 102  48  54  -0.42  -0.25   0.06  -0.08    0.04   -0.21   0.03
+SHIMAMURA Kyoko - FUKUDA Shoko                         208  56  42 109  61  48  -0.48  -0.13  -0.16   0.03    0.07   -0.09  -0.19
+FORSBERG Catharina - GRONKVIST Maria                   192  35  46 109  53  56  -0.48  -0.44   0.03   0.05   -0.01   -0.02  -0.09
+HORSMAN Eileen - RICHARDSON Carol                      176  33  41 100  57  43  -0.49  -0.56  -0.00   0.09    0.08   -0.01  -0.09
+BOKHARI Shirin - RASHID Samia                          192  41  59  89  38  51  -0.55  -0.03  -0.15  -0.19   -0.06   -0.02  -0.10
+SMEDEREVAC Jovanka - ERHART Maria                      144  39  39  66  30  36  -0.58  -0.43   0.03   0.00   -0.07   -0.06  -0.04
+SICKA Bimal - SAIN Aparna                              208  75  22 108  41  67  -0.61  -0.60   0.10  -0.11   -0.04   -0.03   0.07
+ZULLIAN Teresa Loschi de - BETTINI Maria Grazia        224  48  74 101  39  62  -0.61  -0.05  -0.09  -0.17   -0.04   -0.02  -0.24
+LAKHANI Geeta - RAYTHATHA Ameeta                       224  65  42 115  66  49  -0.67  -0.54  -0.14   0.02   -0.01    0.11  -0.10
+ENDO Kimiko - LAM Ze Ying                              224  56  67  98  47  51  -0.88  -0.44  -0.12  -0.21    0.04   -0.05  -0.10
+KABBAJ Leila - OHANA Marie-Claire                      160  29  55  72  44  28  -0.98  -0.24  -0.18  -0.21   -0.16   -0.07  -0.13
+
+Players                                                No. Pl1 Pl2 Def  L1  L2 Butler    Bid  Play1  Play2   Lead1   Lead2    Def
+KHOURI Maud - SARWAT Safeya (Sophie)                    16   5   1  10   4   6   0.50  -0.00   0.69   0.01    0.16   -0.01  -0.34
+KHOURI Maud - MOUSSA Nada                               32   6   8  18   7  11   0.41   0.74   0.04  -0.74    0.04    0.13   0.20
+GUERRAOUI Farida - KABBAJ Leila                         16   2   2  12   8   4  -0.25   0.12   0.31   0.10   -0.20   -0.08  -0.49
+BELRHITI ALAOUI Khadija - OHANA Marie-Claire            32  10   7  15   5  10  -0.91   0.32  -0.12  -0.43   -0.25    0.01  -0.44
+HIRSCHAUT Fida - PACHECO Morella                        16   4   3   9   5   4  -1.13  -0.37   0.28  -0.03   -0.75    0.02  -0.28
+

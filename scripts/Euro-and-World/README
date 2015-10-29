@@ -1,0 +1,14 @@
+These scripts can be useful as a starting point when
+screen-scraping results from HTML files online.
+
+getfiles.pl gets files according to the naming used by the website
+(which you have to guess).
+
+names.pl extracts the player names into a file of names(you have to
+parse the syntax).
+
+number.pl puts consecutive numbers in front of player names, turning
+that file into a valid names file.
+
+parse.pl extracts the board results using also the names files from
+the previous step.

@@ -1,0 +1,264 @@
+Players                                                No. Pl1 Pl2 Def  L1  L2 Butler    Bid  Play1  Play2   Lead1   Lead2    Def
+Jason Hackett - Justin Hackett                         220  46  54 120  52  68   1.25   0.34   0.33   0.31    0.00    0.00   0.27
+Tarek Sadek - Waleed El Ahmady                         320  72  89 158  82  76   1.17   0.54   0.19   0.22    0.00    0.00   0.23
+Fulvio Fantoni - Claudio Nunes                         220  57  51 111  51  60   1.14   0.52   0.13   0.23    0.00    0.00   0.26
+Adam Zmudzinski - Cezary Balicki                       240  46  63 130  60  70   1.10   0.57   0.07   0.15    0.00    0.00   0.31
+Steve Weinstein - Bobby Levin                          240  54  74 111  49  62   1.03   0.60   0.13   0.32    0.00    0.00  -0.01
+Hugh McGann - Tom Hanlon                               260  66  77 117  53  64   1.00   0.56  -0.05   0.21    0.00    0.00   0.28
+Hector Camberos - Alejandro Bianchedi                  120  40  25  55  28  27   1.00   1.04  -0.35   0.01    0.00    0.00   0.30
+Abdel Salam Ghoneim - Samer El-Sheikh                  220  64  36 118  55  63   0.99   0.73   0.29  -0.05    0.00    0.00   0.02
+Jian Ming Dai - Li Xin Yang                            220  56  46 118  56  62   0.98   0.53   0.08   0.05    0.00    0.00   0.32
+Andrew Robson - David Bakhshi                          240  58  81 101  44  57   0.90   0.77   0.16  -0.01    0.00    0.00  -0.01
+Gábor Winkler - Miklós Dumbovich                       260  76  51 133  76  57   0.86   0.58   0.13  -0.01    0.00    0.00   0.16
+Jouri Khokhlov - Vlaadimir Rekunov                     220  48  52 119  60  59   0.85   0.29   0.18   0.29    0.00    0.00   0.09
+Sartaj Hans - Tony Nunn                                240  62  47 130  57  73   0.85   0.64  -0.03   0.05    0.00    0.00   0.19
+Magnus E Magnusson - Matthías Torvaldsson              240  65  68 107  56  51   0.85   0.45   0.10   0.09    0.00    0.00   0.20
+Michael Rosenberg - Zia Mahmood                        240  55  67 118  59  59   0.85  -0.01   0.34   0.08    0.00    0.00   0.43
+Osmo Kiema - Dogan Uzum                                100  22  19  59  30  29   0.84   0.21   0.11   0.30    0.00    0.00   0.23
+Israel Yadlin - Doron Yadlin                           240  44  49 146  80  66   0.82   0.48  -0.01  -0.03    0.00    0.00   0.38
+Tom Townsend - David Gold                              220  53  61 106  49  57   0.80   0.66   0.09  -0.01    0.00    0.00   0.05
+Gábor Macskásy - György Szalay                         240  54  58 128  61  67   0.78   0.54   0.11  -0.16    0.00    0.00   0.29
+Andrés Knap - Arturo Wasik                             240  50  59 131  67  64   0.77   0.45   0.02   0.31    0.00    0.00  -0.00
+Hideki Takano - Tadashi Imakura                        240  53  59 126  59  67   0.77   0.47   0.23   0.18    0.00    0.00  -0.11
+Jan Jansma - Loek Jr. Verhees                          260  50  86 124  66  58   0.76   0.28   0.16   0.00    0.00    0.00   0.31
+Shaolin Sun - Xin Li                                   140  24  36  78  36  42   0.73   0.12   0.33   0.07    0.00    0.00   0.21
+Franck Multon - Jean-Christophe Quantin                280  73  80 125  61  64   0.71   0.32   0.04   0.05    0.00    0.00   0.30
+Haojun Shi - Zejun Zhuang                              220  49  58 113  49  64   0.70   0.40  -0.02   0.05    0.00    0.00   0.27
+John Carroll - Tom Garvey                              200  44  45 111  50  61   0.69   0.53  -0.06   0.09    0.00    0.00   0.13
+Jean-Jacques Palau - Jérôme Rombaut                    240  43  53 144  70  74   0.69  -0.12   0.23   0.23    0.00    0.00   0.35
+Entscho Wladow - Michael Elinescu                      240  75  46 118  72  46   0.69   0.52   0.02   0.08    0.00    0.00   0.07
+Maarten Schollaardt - Bas Drijver                      200  53  47 100  50  50   0.68   0.35   0.09   0.07    0.00    0.00   0.17
+Gabriel Chagas - Miguel Villas Boas                    320 107  64 149  73  76   0.67   0.46   0.18   0.03    0.00    0.00   0.00
+Nafiz Zorlu - Salvador Assael                          300  80  82 137  68  69   0.66   0.46   0.09  -0.00    0.00    0.00   0.12
+Andreas Babsch - Wolfgang Bieder                       200  62  44  92  55  37   0.65   0.39  -0.03  -0.07    0.00    0.00   0.36
+Josef Piekarek - Tomasz Gotard                         240  46  66 128  62  66   0.65   0.39   0.10  -0.05    0.00    0.00   0.21
+Georgo Karakolev - Zahari Zahariev                     220  54  61 105  52  53   0.65   0.33  -0.11   0.25    0.00    0.00   0.19
+Ricco van Prooijen - Sjoert Brink                      180  40  36 104  48  56   0.63   0.33   0.16   0.04    0.00    0.00   0.10
+Giorgio Duboin - Norberto Bocchi                       240  53  70 116  65  51   0.62   0.18  -0.03   0.10    0.00    0.00   0.38
+Lars Lund Madsen - Morten Lund Madsen                  220  57  50 113  54  59   0.61   0.23   0.05   0.06    0.00    0.00   0.27
+Erik Sælensminde - Boye Brogeland                      260  70  50 140  74  66   0.59   0.41  -0.00   0.05    0.00    0.00   0.14
+Agustin Madala - Alejandro Bianchedi                   180  58  39  83  35  48   0.57   0.13   0.15   0.22    0.00    0.00   0.06
+Georgy Matushko - Max Khven                            220  57  71  92  46  46   0.56   0.05   0.19  -0.04    0.00    0.00   0.36
+Robert Parasian Tobing - Taufik Gautama Asbi           280  79  57 144  66  78   0.53   0.35   0.01   0.18    0.00    0.00  -0.00
+Iulian Rotaru - Marius Briciu                          240  50  68 122  67  55   0.52   0.39   0.17  -0.03    0.00    0.00  -0.01
+Pritish Kushari - Sumit Mukherjee                      160  32  35  92  48  44   0.52   0.34  -0.00   0.01    0.00    0.00   0.17
+Julian Stefanov - Victor Aronov                        240  60  58 122  68  54   0.51   0.55  -0.04  -0.16    0.00    0.00   0.16
+Martin Schifko - Andreas Gloyer                        280  71  78 130  76  54   0.50   0.24   0.09  -0.04    0.00    0.00   0.21
+Jon-Egil Furunes - Tor Helness                         260  75  69 116  46  70   0.49   0.12   0.16   0.10    0.00    0.00   0.11
+Johan Sylvan - PO Sundelin                             120  33  29  58  28  30   0.49   0.16   0.16  -0.08    0.00    0.00   0.25
+Amedeo Comella - Stefano Sabbatini                     220  53  45 122  55  67   0.49  -0.00   0.06   0.11    0.00    0.00   0.31
+László Honti - László Szilágyi                         180  48  37  94  59  35   0.48  -0.07  -0.01   0.19    0.00    0.00   0.37
+Magnus Lindkvist - Peter Fredin                        320  84  82 154  83  71   0.46   0.55   0.01   0.12    0.00    0.00  -0.23
+Pablo Lambardi - Pablo Ravenna                         140  33  45  62  23  39   0.46   0.46  -0.05   0.04    0.00    0.00   0.00
+Nicholas FitzGibbon - Adam Mesbur                      220  35  69 115  51  64   0.45   0.15   0.07   0.07    0.00    0.00   0.15
+Jan - E - Alam Fazli - Abdul Rehman Allana             280  75  63 142  73  69   0.42   0.02   0.15   0.10    0.00    0.00   0.16
+Agustin Madala - Pablo Ravenna                         120  36  28  56  22  34   0.41   0.02   0.07   0.10    0.00    0.00   0.22
+Sverrir Armansson - Adalsteinn Jorgensen               220  52  52 116  45  71   0.40   0.24  -0.11   0.22    0.00    0.00   0.05
+Gabriel Carrasco - Gabriel Fractman                    220  60  57 102  47  55   0.40   0.38  -0.09   0.16    0.00    0.00  -0.05
+Jelena Alfejeva - Vladimir Gonca                       240  77  53 109  62  47   0.40   0.13   0.04   0.13    0.00    0.00   0.09
+Gabriel Harfouche - Michel Eidy                        340  73  97 169  84  85   0.39   0.13   0.15  -0.00    0.00    0.00   0.11
+Piotr Tuszynski - Apolinary Kowalski                   220  61  56 103  54  49   0.39   0.15  -0.11   0.24    0.00    0.00   0.11
+Laurent Thuillez - Lionel Sebbane                      160  47  35  77  47  30   0.38   0.25   0.12   0.10    0.00    0.00  -0.09
+Hiroshi Kaku - Masaaki Takayama                        180  41  53  86  36  50   0.38   0.29   0.01   0.14    0.00    0.00  -0.05
+Dubravko Diklic - Miro Tesla                           220  54  59 106  52  54   0.37   0.01   0.23   0.06    0.00    0.00   0.07
+Hans Christian Graversen - Poul Clemmensen             240  75  64 100  47  53   0.37   0.09   0.09   0.22    0.00    0.00  -0.02
+Li Xin Yang - Shaolin Sun                              100  22  19  58  29  29   0.37  -0.14   0.08   0.04    0.00    0.00   0.39
+Alekos Lambrinos - Loukas Zotos                        220  53  61 105  54  51   0.37   0.26  -0.00   0.09    0.00    0.00   0.02
+Lauri Naber - Leo Luks                                 240  79  49 111  42  69   0.35   0.09  -0.05   0.12    0.00    0.00   0.19
+Faycal Hamdan - Pierre Chidiac                         120  34  40  46  24  22   0.34  -0.11   0.26   0.10    0.00    0.00   0.09
+Giorgi Uchava - Rati Burdiashvili                      140  28  42  69  32  37   0.34   0.66   0.09   0.01    0.00    0.00  -0.43
+Hédi Baccour - Craig Gower                             200  48  51 101  44  57   0.32   0.25  -0.03   0.02    0.00    0.00   0.08
+Franky Steven Karwur - Santje Panelewen                280  52  64 163  55 108   0.32  -0.02   0.18  -0.00    0.00    0.00   0.17
+Branko Vlajnic - Dimitraki Zipovski                    240  68  53 119  62  57   0.32   0.28  -0.14   0.06    0.00    0.00   0.12
+Maris Matisons - Per Gunnar Eliasson                   240  54  63 123  56  67   0.30   0.20   0.06  -0.15    0.00    0.00   0.19
+Martin Schaltz - Søren Christiansen                    220  47  56 117  56  61   0.30   0.19   0.12   0.07    0.00    0.00  -0.08
+Marco Toma - Diego Brenner                             200  46  55  99  55  44   0.29   0.25   0.13  -0.00    0.00    0.00  -0.08
+Kemal Shoaib - Khursheed Hadi                          240  69  75  95  38  57   0.29   0.26  -0.05  -0.02    0.00    0.00   0.10
+Mariusz Puczynski - Bartosz Chmurski                   200  42  58 100  42  58   0.28   0.26   0.06  -0.22    0.00    0.00   0.17
+Ken Rae - David Gerrard                                220  62  44 113  59  54   0.28   0.18   0.11  -0.01    0.00    0.00  -0.00
+Martin Reid - Peter Newell                             260  65  66 128  74  54   0.26   0.14   0.15  -0.02    0.00    0.00  -0.00
+Chia-Hsin Wu - Chih Kuo Shen                           180  46  43  90  39  51   0.26  -0.04   0.14   0.23    0.00    0.00  -0.07
+Masayuki Ino - Tadashi Imakura                         240  77  43 120  53  67   0.25   0.31   0.19  -0.12    0.00    0.00  -0.13
+Jonas P Erlingson - Steinar Jonsson                    220  46  49 125  71  54   0.24   0.14  -0.01   0.06    0.00    0.00   0.05
+Alfredo Versace - Lorenzo Lauria                       220  51  59 108  42  66   0.22   0.04   0.08   0.08    0.00    0.00   0.01
+Panayiotis Kannavos - Theodore Triantafyllopoulos      240  59  63 117  60  57   0.22  -0.05   0.08  -0.00    0.00    0.00   0.19
+Michael Cummings - David Lindop                        240  65  60 115  65  50   0.20  -0.04  -0.02   0.17    0.00    0.00   0.09
+Suleyman Kolata - Yalcin Atabey                        280  68  82 129  67  62   0.20  -0.11   0.22   0.07    0.00    0.00   0.02
+Fredrik Nyström - Peter Bertheau                       240  54  70 116  63  53   0.20   0.20   0.03   0.00    0.00    0.00  -0.03
+Alexander Doubinine - Andrei Gromov                    240  44  63 133  62  71   0.18   0.34  -0.02   0.06    0.00    0.00  -0.20
+Kwok Fai Mak - Dicky Wai Kit Lai                       220  50  48 122  56  66   0.17   0.05   0.07  -0.02    0.00    0.00   0.06
+Klaus Reps - Bernard Ludewig                           200  57  53  90  50  40   0.16   0.08   0.13  -0.07    0.00    0.00   0.02
+Kauko Koistinen - Osmo Kiema                           320  87  75 155  75  80   0.16  -0.07   0.16   0.04    0.00    0.00   0.03
+Marian Radulescu - Bogdan Marina                       220  51  60 109  46  63   0.15   0.01  -0.05  -0.01    0.00    0.00   0.20
+Ranko Tica - Sarfaraz Ahmed Khan                       160  38  29  92  45  47   0.15  -0.06   0.21   0.09    0.00    0.00  -0.10
+Gunnar Andersson - Bjorn Wenneberg                     220  66  44 110  58  52   0.14   0.27  -0.13  -0.09    0.00    0.00   0.09
+Eugenio Gambigliani - Camillo Gaddi                    220  44  62 114  59  55   0.12   0.09  -0.08   0.18    0.00    0.00  -0.07
+Faycal Hamdan - Nagib Baroudi                          140  36  42  62  33  29   0.11  -0.17  -0.04   0.13    0.00    0.00   0.19
+Patrick Le Boulenge - Philippe Caputo                  160  29  44  87  37  50   0.11   0.13   0.02  -0.00    0.00    0.00  -0.03
+Jan Petter Svendsen - Rune Hauge                       160  52  43  65  31  34   0.11   0.16  -0.17  -0.10    0.00    0.00   0.21
+Jeffrey Sapire - Neville Eber                          260  74  65 121  59  62   0.10   0.09  -0.18   0.17    0.00    0.00   0.02
+Ilan Herbst - Ofir Herbst                              240  58  70 111  68  43   0.09  -0.08   0.11  -0.01    0.00    0.00   0.07
+Malcolm Mayer - Tom Jacob                              220  69  55  95  47  48   0.09   0.02  -0.18   0.20    0.00    0.00   0.04
+Jim Patrick - John Matheson                            220  64  53 103  49  54   0.08  -0.21   0.04   0.21    0.00    0.00   0.03
+Philippe Teysseidre - Zvi Engel                        260  81  67 111  53  58   0.07   0.12   0.11  -0.02    0.00    0.00  -0.14
+Roman Smolski - Vera Petty                             260  77  56 126  59  67   0.07   0.14   0.09  -0.14    0.00    0.00  -0.03
+Manash Kumar Mukherjee - Rana Roy                      240  77  46 117  64  53   0.07  -0.13   0.14   0.05    0.00    0.00   0.01
+Filip Kurbalija - Tim Rees                             340  73  97 170  97  73   0.06   0.09  -0.04   0.01    0.00    0.00  -0.00
+Gocha Goshadze - David Chechelashvili                  260  58  64 138  81  57   0.04   0.02  -0.12  -0.02    0.00    0.00   0.16
+Samuel Wan - Derek Zen                                 240  53  66 121  56  65   0.02  -0.16   0.19   0.07    0.00    0.00  -0.07
+Philippe Mathieu - Dominique Gerin                     260  57  70 133  74  59   0.02  -0.03   0.11  -0.03    0.00    0.00  -0.04
+Vytautas Vainikonis - Wojtek Olanski                   220  44  49 127  61  66   0.00  -0.25   0.04   0.01    0.00    0.00   0.20
+Hédi Baccour - Tahar Touil                             180  37  40 102  56  46   0.00  -0.09  -0.12   0.17    0.00    0.00   0.03
+Ivars Rubenis - Ugis Jansons                           220  56  47 117  64  53  -0.01   0.17   0.03   0.07    0.00    0.00  -0.29
+Hong Dong Duong - Tarik Yalcin                         240  66  48 125  56  69  -0.01   0.09   0.02   0.02    0.00    0.00  -0.14
+Ettore Pizza - Carlo Magnani                           240  79  59 102  54  48  -0.02  -0.22   0.23   0.01    0.00    0.00  -0.03
+Gopal Hingorani - Diniar Minwalla                      336  77  92 167  86  81  -0.02  -0.15   0.02   0.07    0.00    0.00   0.04
+Aris Filios - Yankos Papakyriacopoulos                 220  55  70  93  37  56  -0.03   0.27  -0.05  -0.25    0.00    0.00  -0.00
+Ron Klinger - Bruce Neill                              260  76  67 117  65  52  -0.05   0.09  -0.00   0.10    0.00    0.00  -0.23
+Alan Shum Sum Sze - Wai Kit Chan                       220  53  48 119  69  50  -0.05  -0.36   0.16   0.09    0.00    0.00   0.06
+Rui Santos - Sofia Pessoa                              220  64  56  98  41  57  -0.05  -0.01   0.12  -0.10    0.00    0.00  -0.06
+Goran Borevkovic - Vedan Zoric                         240  59  56 125  67  58  -0.05   0.33  -0.06  -0.09    0.00    0.00  -0.23
+Philip Gue - Terry Brown                               180  45  47  88  38  50  -0.06  -0.11   0.19  -0.15    0.00    0.00   0.02
+Hayet Hachimi - Mohamed Said Berrada                   120  28  31  60  29  31  -0.07   0.06  -0.08  -0.11    0.00    0.00   0.07
+Hector Camberos - Pablo Lambardi                       120  29  25  65  41  24  -0.08  -0.07   0.22   0.06    0.00    0.00  -0.29
+Jorge Cruzeiro - Paulo Gonçalves Pereira               220  46  64 110  52  58  -0.09  -0.20   0.04  -0.09    0.00    0.00   0.16
+Amar Nath Banerjee - Sumit Mukherjee                   180  44  43  92  53  39  -0.09   0.22   0.37  -0.02    0.00    0.00  -0.65
+Jean Pierre Bouveresse - Jeanine Moers                 260  59  54 147  68  79  -0.09   0.04   0.02  -0.02    0.00    0.00  -0.14
+Mika Salomaa - Sue Bäckström                           320  72  80 168  72  96  -0.10  -0.26   0.03   0.06    0.00    0.00   0.08
+Marwan Ghanem - Sireen Barakat                         340  68  80 190  91  99  -0.10   0.07  -0.05   0.02    0.00    0.00  -0.14
+Jose Ignacio Torres - Antonio Frances                  220  56  51 111  49  62  -0.11   0.35  -0.10  -0.23    0.00    0.00  -0.13
+Ranko Tica - Samir Dolarevic                           196  41  45 110  50  60  -0.12  -0.07   0.06   0.20    0.00    0.00  -0.32
+Ilkka Renno - Martin Löfgren                           240  57  64 118  64  54  -0.14  -0.06  -0.02   0.02    0.00    0.00  -0.08
+Aarne Rummel - Ivar Kalma                              220  63  38 118  58  60  -0.15   0.01  -0.21   0.03    0.00    0.00   0.03
+Su-Beng Tan - Sze-Guan Tan                             340  82  75 182  97  85  -0.15  -0.20   0.16   0.14    0.00    0.00  -0.26
+Michal Zadrazil - David Vozábal                        220  49  55 115  50  65  -0.15  -0.15  -0.01   0.06    0.00    0.00  -0.05
+James Priebe - Stephen Mackay                          220  56  56 106  63  43  -0.17  -0.33   0.09  -0.06    0.00    0.00   0.12
+José Maria Valdes - Paolo Pasquini                     260  52  75 133  68  65  -0.18  -0.32   0.13   0.19    0.00    0.00  -0.17
+Dwayne Crombie - Michael Cornell                       200  43  49 108  58  50  -0.20   0.00  -0.01   0.04    0.00    0.00  -0.22
+Andris Smilgajs - Bruno Rubenis                        220  58  61 100  55  45  -0.20   0.13  -0.11  -0.09    0.00    0.00  -0.12
+Roy Welland - Björn Fallenius                          200  51  45 104  58  46  -0.21   0.13  -0.22  -0.08    0.00    0.00  -0.03
+Fernando Piedra - Dmitrij Nikolenkov                   240  58  56 125  63  62  -0.22  -0.23  -0.01  -0.12    0.00    0.00   0.13
+Peter Goodman - Adam Dunn                              340  88  90 162  79  83  -0.23  -0.21   0.06  -0.02    0.00    0.00  -0.06
+Vasili Batov - Veselin Dyakov                          220  43  63 113  54  59  -0.24   0.05   0.01  -0.19    0.00    0.00  -0.11
+Guilherme Junqueira - Alcio Maia                       160  33  38  88  52  36  -0.25   0.04  -0.30   0.12    0.00    0.00  -0.11
+Douglas Piper - John Murdoch                           240  70  52 118  67  51  -0.25  -0.19   0.08   0.07    0.00    0.00  -0.21
+Sören Hein - Stefan Helling                            260  63  59 138  71  67  -0.25   0.12  -0.11  -0.04    0.00    0.00  -0.23
+Leonid Podgur - Avi Kalish                             200  51  64  84  37  47  -0.25  -0.07  -0.17  -0.01    0.00    0.00  -0.01
+Teong-Wah Lim - David Law                              340  85  79 175  90  85  -0.26   0.11  -0.12   0.02    0.00    0.00  -0.26
+Karlo Brguljan - Davor Rase                            220  60  61  99  42  57  -0.28   0.01  -0.04  -0.06    0.00    0.00  -0.19
+Jakub Slemr - Petr Pulkrab                             220  48  62 110  52  58  -0.28  -0.29  -0.10  -0.02    0.00    0.00   0.12
+Hayet Hachimi - Abdellatif Belkouch                    120  31  29  60  24  36  -0.31  -0.00  -0.27  -0.16    0.00    0.00   0.12
+Jorge Castanheira - Nuno Mascarenhas                   240  70  54 116  60  56  -0.32  -0.53   0.19   0.06    0.00    0.00  -0.03
+Alon Apteker - Bernard Donde                           220  61  63  96  49  47  -0.33  -0.27  -0.04  -0.02    0.00    0.00   0.00
+Ghassan Ghanem - Nuha Hattar Ghaned                    220  48  56 116  52  64  -0.34  -0.22  -0.02   0.06    0.00    0.00  -0.16
+Giorgi Abzianidze - Revaz Beriashvili                  280  74  80 126  64  62  -0.35  -0.25  -0.15   0.08    0.00    0.00  -0.03
+Alain Cotti - Marcel Guevel                            240  52  66 122  69  53  -0.35  -0.20   0.12  -0.10    0.00    0.00  -0.18
+Bernd Saurer - Doris Fischer                           200  49  53  98  48  50  -0.35  -0.30   0.09  -0.02    0.00    0.00  -0.13
+Faruk Masic - Miklós Dumbovich                         276  70  62 142  67  75  -0.36  -0.31  -0.09  -0.03    0.00    0.00   0.07
+Young-Hong Cheng - Chuan-Cheng Chen                    280  68  68 144  66  78  -0.36  -0.25   0.04   0.01    0.00    0.00  -0.15
+Stevica Kikic - Vladimir Kalcic                        220  61  51 108  61  47  -0.37   0.04  -0.04  -0.22    0.00    0.00  -0.15
+Monya Jellouli - Tahar Touil                           100  27  24  49  19  30  -0.38   0.02  -0.04  -0.30    0.00    0.00  -0.05
+Abdelkamel Rerhaye - Abdellah Laghrari                 200  51  55  93  42  51  -0.38  -0.29   0.06  -0.06    0.00    0.00  -0.10
+Gheorghe Serpoi - Calin Stirbu                         220  45  54 120  61  59  -0.39  -0.36   0.07  -0.15    0.00    0.00   0.06
+Jacques Stas - David Johnson                           260  56  61 143  80  63  -0.40  -0.12  -0.08  -0.07    0.00    0.00  -0.13
+Martine de Tessieres - Aymeric de Tessieres            180  36  39 105  50  55  -0.40  -0.09   0.20   0.02    0.00    0.00  -0.53
+Jongki Tumbel - Bill Mondigir                          120  27  40  52  27  25  -0.42  -0.14  -0.16   0.03    0.00    0.00  -0.15
+Aleksandar Kaludercic - Sinisa Vuleta                  180  43  40  96  49  47  -0.42  -0.37  -0.04   0.09    0.00    0.00  -0.10
+Martin Anastacio - Dan Lulu                            200  52  55  93  44  49  -0.44  -0.17  -0.00  -0.02    0.00    0.00  -0.26
+Genevieve Vigna - Yves Mondon                          200  44  52 104  48  56  -0.47  -0.03  -0.09  -0.23    0.00    0.00  -0.13
+Sven Sester - Tüüve Jugandi                             220  57  51 111  56  55  -0.51  -0.44   0.18   0.01    0.00    0.00  -0.25
+Mohamed Heshmat - Tarek Nadim                          120  24  26  70  32  38  -0.52  -0.36   0.01  -0.22    0.00    0.00   0.05
+Pavel Pekny - Bohumir Zajicek                          240  57  42 141  74  67  -0.53  -0.24  -0.05  -0.16    0.00    0.00  -0.09
+Marco Sasselli - Bachar Abou Chanab                    200  54  39 107  49  58  -0.53  -0.48   0.19  -0.07    0.00    0.00  -0.16
+Jean Gérard Théodore - Jean-Claude Wong Kai In         220  50  55 114  54  60  -0.54  -0.15  -0.14  -0.19    0.00    0.00  -0.06
+Ghassan Ghanem - Samir Zeine                           120  27  34  57  28  29  -0.55   0.29  -0.41  -0.14    0.00    0.00  -0.30
+Sally Sykes - David Sykes                              260  51  81 128  56  72  -0.58  -0.42  -0.24   0.14    0.00    0.00  -0.07
+Khondoker Mobinul Islam - Md. Hasinur Rahman Talukder  340  82 100 158  70  88  -0.59  -0.16   0.02  -0.30    0.00    0.00  -0.15
+Loreto Cuevas - Marcelo Caracci                        340  72  88 179  86  93  -0.59  -0.39  -0.17   0.16    0.00    0.00  -0.19
+Lewis Richardson - Ray Jotcham                         220  59  50 108  59  49  -0.60  -0.39  -0.07  -0.14    0.00    0.00   0.00
+Stephen Robinson - Wong Choo Wai                       220  49  57 114  48  66  -0.61  -0.64   0.04   0.02    0.00    0.00  -0.03
+Eduardo Piza - Pilar Vitoria                           100  21  21  57  18  39  -0.64  -0.25   0.12  -0.05    0.00    0.00  -0.46
+Md. Anisul Haque - Nitya Gopal Saha                    340  83  65 188  92  96  -0.64  -0.43  -0.05   0.03    0.00    0.00  -0.19
+Takis Politis - Dimitris Kalavanas                     220  63  59  97  53  44  -0.65  -0.44  -0.10  -0.04    0.00    0.00  -0.07
+Albert Quiogue - Ceferino Carreon                      220  53  47 119  57  62  -0.65  -0.21  -0.00  -0.06    0.00    0.00  -0.38
+Zoran Koldzic - Dejan Jovanovic                        220  62  55 103  56  47  -0.67  -0.21  -0.20   0.16    0.00    0.00  -0.43
+Gustavo De Lemos - Hector Manrique                     240  70  56 114  60  54  -0.69  -0.33  -0.18   0.03    0.00    0.00  -0.20
+Gonzalo Herrera - Sonya Resk                           340 120  61 158  71  87  -0.70  -0.40  -0.05  -0.06    0.00    0.00  -0.18
+John MacGregor - Pilar Vitoria                         100  35  22  43  21  22  -0.71  -0.32   0.30  -0.36    0.00    0.00  -0.32
+Guy-Alain Germon - Laurent Desportes                   220  61  60  99  48  51  -0.72  -0.24  -0.15  -0.16    0.00    0.00  -0.17
+Lassâad Jedidi - Mohamed Ali Lakhdhar                  200  55  57  87  41  46  -0.74  -0.52  -0.06   0.03    0.00    0.00  -0.19
+HP Modi - RKD Shah                                     200  49  60  91  43  48  -0.75  -0.40  -0.03  -0.03    0.00    0.00  -0.30
+Jacobo Podvilewicz - Kenneth Frey                      340  77  96 166  69  97  -0.76  -0.44  -0.16   0.01    0.00    0.00  -0.16
+Alejandro Sanchez - Beatriz Marangunic                 340  99  82 158  82  76  -0.77  -0.54  -0.09  -0.11    0.00    0.00  -0.02
+Dennis Kow - Derrick Heng                              240  48  54 138  75  63  -0.82  -0.39  -0.09  -0.21    0.00    0.00  -0.13
+KV Bhaft - Nurudin Ajania                              220  52  59 108  55  53  -0.82  -0.35  -0.04  -0.14    0.00    0.00  -0.29
+Frosso Tilliri - Rena Lordos                           200  43  51 104  50  54  -0.85  -0.26  -0.41   0.03    0.00    0.00  -0.21
+John Glynn - Bill Pare                                 160  40  51  69  28  41  -0.86  -0.32  -0.39   0.10    0.00    0.00  -0.25
+John MacGregor - Steve Allen                           160  50  38  72  33  39  -0.88  -0.34   0.01  -0.23    0.00    0.00  -0.31
+Michaël Chan - Bashir Elahee Doomun                    220  62  48 108  59  49  -0.89  -0.21  -0.06  -0.42    0.00    0.00  -0.20
+Ellen Graewert - David Thompson                        180  46  39  95  46  49  -0.89  -0.32  -0.11  -0.02    0.00    0.00  -0.44
+Patrick Hamel - Sylvian Brethes                        220  57  52 111  56  55  -0.92  -0.35   0.00  -0.01    0.00    0.00  -0.56
+Simone Divies - Christian Vincent                      220  66  69  84  47  37  -0.98  -0.24  -0.22  -0.28    0.00    0.00  -0.24
+Foo Yoke Lan - Jane Choo                               220  50  73  96  52  44  -0.98  -0.57  -0.10  -0.14    0.00    0.00  -0.18
+Gary Lam Po Tang - Nandansing Hurpaul                  240  66  53 121  58  63  -0.99  -0.53  -0.26  -0.13    0.00    0.00  -0.07
+George Daniel - Modisaotsile Dikgang                   336  90  88 157  77  80  -1.01  -0.92  -0.02   0.10    0.00    0.00  -0.17
+Shun-Ho Chuang - Chien-Hsun Chen                       120  36  37  47  24  23  -1.08  -0.63  -0.24  -0.14    0.00    0.00  -0.06
+Mohamed Said Berrada - Abdellatif Belkouch             100  24  26  49  25  24  -1.09  -0.75  -0.17   0.28    0.00    0.00  -0.45
+Prafulla Shah - Ashwin Shah                            260  54  68 138  60  78  -1.18  -0.50  -0.16  -0.13    0.00    0.00  -0.39
+Eduardo Piza - John Goold                              180  38  47  93  35  58  -1.23  -0.55  -0.15  -0.13    0.00    0.00  -0.39
+Valerie Morley - Colin Morley                          220  49  59 112  50  62  -1.25  -0.64  -0.25  -0.06    0.00    0.00  -0.30
+Jean-Olivier Begouin - Robert Barinci                  220  47  56 117  59  58  -1.29  -0.48  -0.27  -0.09    0.00    0.00  -0.45
+Fabienne Bourgeois - Jany Grenié                       140  38  42  60  33  27  -1.40  -0.83  -0.23  -0.26    0.00    0.00  -0.08
+Alain Hoyon - Philippe Teysseidre                      200  49  49 101  51  50  -1.41  -0.61  -0.30  -0.37    0.00    0.00  -0.13
+Franco Gusso - Carlos Diaz                             180  37  48  94  50  44  -1.57  -0.93  -0.06  -0.29    0.00    0.00  -0.29
+
+Players                                                No. Pl1 Pl2 Def  L1  L2 Butler    Bid  Play1  Play2   Lead1   Lead2    Def
+John Goold - John MacGregor                             20   1   3  16  10   6   1.45   0.83  -0.28   0.04    0.00    0.00   0.86
+Jari Bäckström - Mika Salomaa                           20   4   5  10   4   6   1.25   0.70  -0.08   0.58    0.00    0.00   0.05
+Laurent Desportes - Christophe de Tessieres             20   6   5   9   5   4   1.05   1.07   0.32  -0.34    0.00    0.00   0.00
+Mohamed Heshmat - Tarek Sadek                           20   8   5   7   3   4   1.00   0.06   0.78   0.01    0.00    0.00   0.16
+Osmo Kiema - Dogan Uzum                                100  22  19  59  30  29   0.84   0.21   0.11   0.30    0.00    0.00   0.23
+Pritish Kushari - Rana Roy                              20   4   5  11   3   8   0.75  -0.72   0.02   0.70    0.00    0.00   0.76
+Eduardo Piza - John MacGregor                           20   4   3  13  10   3   0.60   1.09  -0.11   0.57    0.00    0.00  -0.95
+Li Xin Yang - Shaolin Sun                              100  22  19  58  29  29   0.37  -0.14   0.08   0.04    0.00    0.00   0.39
+Guy-Alain Germon - Christophe de Tessieres              60  21  21  18  10   8   0.33  -0.48  -0.04   0.48    0.00    0.00   0.38
+Mariusz Puczynski - Apolinary Kowalski                  20   2   4  14  11   3   0.25   0.10   0.10   0.03    0.00    0.00   0.02
+Chien-Hsun Chen - Chih Kuo Shen                         20   1   7  12   9   3   0.25  -0.12  -0.17   0.28    0.00    0.00   0.26
+Hassibul Hassan - Rana Roy                              40   8   8  24  13  11   0.25   0.52   0.02   0.03    0.00    0.00  -0.33
+Abdelkamel Rerhaye - Abdellatif Belkouch                20   8   1  11   2   9   0.15   0.22   0.04  -0.03    0.00    0.00  -0.08
+Hédi Baccour - Monya Jellouli                           60  18  12  30  20  10   0.07   0.06  -0.03   0.26    0.00    0.00  -0.23
+Aymeric de Tessieres - Christophe de Tessieres          60  10  13  37  19  18   0.05   0.10  -0.14   0.10    0.00    0.00  -0.02
+Sjoert Brink - Bas Drijver                              40   7  12  21  10  11   0.03  -0.26   0.27   0.12    0.00    0.00  -0.10
+Martine de Tessieres - Christophe de Tessieres          20   4   7   9   3   6   0.00   0.90   0.02  -0.25    0.00    0.00  -0.67
+Lassâad Jedidi - Monya Jellouli                         60  17  12  30  13  17  -0.03  -0.00   0.04  -0.16    0.00    0.00   0.09
+Mohamed Said Berrada - Abdellah Laghrari                20   3   4  13   7   6  -0.05   0.35   0.56  -0.23    0.00    0.00  -0.73
+Samir Dolarevic - Sinisa Vuleta                         20   2   6  12   7   5  -0.10  -0.05  -0.15   0.04    0.00    0.00   0.05
+Hédi Baccour - Mohamed Ali Lakhdhar                     60  12  16  32  12  20  -0.10  -0.05  -0.02   0.18    0.00    0.00  -0.21
+Mohamed Said Berrada - Abdelkamel Rerhaye               60  13  23  23  11  12  -0.12  -0.02   0.06  -0.17    0.00    0.00   0.01
+Martine de Tessieres - Thibault de Tessieres            40  10  10  20  15   5  -0.20  -1.05   0.68  -0.25    0.00    0.00   0.43
+Nagib Baroudi - Pierre Chidiac                          80  17  15  48  20  28  -0.22  -0.37   0.08  -0.09    0.00    0.00   0.15
+Thibault de Tessieres - Aymeric de Tessieres            40  16  10  14   6   8  -0.22   0.32   0.01  -0.30    0.00    0.00  -0.25
+Chien-Hsun Chen - Chuan-Cheng Chen                      60  15  21  24  17   7  -0.23   0.07   0.14   0.09    0.00    0.00  -0.53
+Albert Quiogue - Jehran Chua                            60  17  18  25  10  15  -0.32  -0.23   0.28   0.09    0.00    0.00  -0.46
+Manash Kumar Mukherjee - Pritish Kushari                40  12  12  16   9   7  -0.38  -0.08  -0.07  -0.17    0.00    0.00  -0.06
+Monya Jellouli - Tahar Touil                           100  27  24  49  19  30  -0.38   0.02  -0.04  -0.30    0.00    0.00  -0.05
+Lassâad Jedidi - Osmo Kiema                             20   4   6  10   5   5  -0.60  -1.07   0.21   0.30    0.00    0.00  -0.04
+Eduardo Piza - Pilar Vitoria                           100  21  21  57  18  39  -0.64  -0.25   0.12  -0.05    0.00    0.00  -0.46
+John MacGregor - Pilar Vitoria                         100  35  22  43  21  22  -0.71  -0.32   0.30  -0.36    0.00    0.00  -0.32
+Hédi Baccour - Lassâad Jedidi                           20   7   2  11   5   6  -0.75   0.42  -0.65   0.04    0.00    0.00  -0.57
+Laurent Desportes - Thibault de Tessieres               20   8   4   8   4   4  -0.80   0.26  -0.28  -0.02    0.00    0.00  -0.75
+Patrick Hamel - Yves Mondon                             60  12  21  27  15  12  -0.82  -0.06   0.05  -0.36    0.00    0.00  -0.45
+Jeanine Moers - Philippe Mathieu                        20   4   3  13   6   7  -0.90  -0.40  -0.12  -0.17    0.00    0.00  -0.21
+Guy-Alain Germon - Thibault de Tessieres                20   3   4  13   4   9  -1.00  -0.57  -0.02   0.02    0.00    0.00  -0.43
+Mohamed Said Berrada - Abdellatif Belkouch             100  24  26  49  25  24  -1.09  -0.75  -0.17   0.28    0.00    0.00  -0.45
+Jehran Chua - Martin Anastacio                          80  19  19  40  19  21  -1.13  -0.90   0.02  -0.02    0.00    0.00  -0.22
+Jehran Chua - Dan Lulu                                  60  19  16  24  15   9  -1.20  -0.84   0.04  -0.29    0.00    0.00  -0.11
+John Goold - Pilar Vitoria                              40   7  12  21  11  10  -1.40  -0.72   0.18  -0.60    0.00    0.00  -0.26
+Jehran Chua - Ceferino Carreon                          60  13   9  38  22  16  -1.47  -0.73   0.07   0.24    0.00    0.00  -1.04
+Abdellah Laghrari - Abdellatif Belkouch                 40   8  11  21  13   8  -1.67  -0.51  -0.14  -0.17    0.00    0.00  -0.86
+Shun-Ho Chuang - Chih Kuo Shen                          20   7   3  10   4   6  -1.70  -1.80  -0.20   0.44    0.00    0.00  -0.15
+Amy Anette - Steve Allen                                60  14  14  32  13  19  -2.08  -1.48  -0.32  -0.14    0.00    0.00  -0.15
+Valerie Morley - Dimitris Kalavanas                     20  10   4   6   2   4  -2.20   0.22  -1.02  -0.32    0.00    0.00  -1.09
+Frosso Tilliri - Takis Politis                          20   5   5  10   7   3  -2.40  -0.75  -0.32  -0.33    0.00    0.00  -0.99
+Hideki Takano - Hiroshi Kaku                            20   3   4  13   4   9  -2.60  -0.87  -0.51  -0.70    0.00    0.00  -0.52
+

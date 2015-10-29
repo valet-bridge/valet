@@ -1,0 +1,9 @@
+These scripts can be useful when turning individual IAF or datum files
+(in CSV format) into an overall CSV file.
+
+edit.pl capitalizes the last name if that's not already the case
+(we just look at the first word of each player to determine this),
+and swaps the player names around if necessary (so that the first
+name is lexigraphically smaller than the second one), 
+
+merge.pl combines data for the same pair into a single entry.

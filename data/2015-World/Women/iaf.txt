@@ -1,0 +1,72 @@
+Players                                                No. Pl1 Pl2 Def  L1  L2   IMPs    Bid  Play1  Play2   Lead1   Lead2    Def
+BROWN Fiona - DRAPER Catherine                         224  62  49 112  60  52   1.11   0.44   0.20   0.22    0.03   -0.01   0.24
+SHEN (1) Qi - WANG Wen Fei                             224  56  58 109  62  47   0.86   0.29   0.13   0.10   -0.06    0.09   0.32
+BREWIAK Grazyna - KAZMUCHA Danuta                      208  55  47 106  55  51   0.82   0.59   0.03   0.05    0.06    0.01   0.08
+HOULBERG Anne-Sofie - MADSEN Christina Lund            224  49  64 110  58  52   0.80   0.57   0.07   0.08   -0.03   -0.03   0.14
+CHAMBERS Juanita - GLASSON Joann                       128  37  28  63  34  29   0.77   0.19   0.18  -0.03    0.07    0.03   0.33
+FERLAZZO Caterina - MANARA Gabriella                   240  56  65 116  68  48   0.77   0.51  -0.00   0.12   -0.03    0.05   0.12
+PAOLUZI Simonetta - SACCAVINI Ilaria                   208  41  54 112  61  51   0.76   0.32   0.21   0.11    0.08   -0.02   0.06
+BILDE Lone - RASMUSSEN Helle                           224  58  64 100  51  49   0.73   0.34   0.20   0.10    0.05    0.02   0.03
+WORTEL Meike - MICHIELSEN Marion                       256  71  66 118  58  60   0.69   0.60  -0.08   0.05    0.01   -0.05   0.16
+WILLARD Sylvie - CRONIER Benedicte                     288  61  86 139  65  74   0.68   0.44   0.05   0.05    0.02    0.03   0.10
+WOLPERT Jenny - LEVIN Jill                             272  84  64 123  60  63   0.67   0.21   0.11   0.17    0.09    0.08   0.01
+SEAMON-MOLSON Janice - SOKOLOW Tobi                    256  69  65 120  64  56   0.67   0.15   0.21   0.00    0.11    0.00   0.18
+ZUR-CAMPANILE Migry - MEYERS Jill                      288  75  68 144  69  75   0.64   0.31   0.11  -0.01    0.02    0.10   0.12
+SIMONS Anneke - PASMAN Jet                             208  51  53 103  45  58   0.63   0.41   0.14   0.09    0.00   -0.01   0.00
+SMITH Nicola - BROCK Sally                             224  62  60 101  57  44   0.63   0.31   0.02   0.17   -0.06    0.04   0.15
+BEKKOUCHE Nadia - RAHELT Maria Marit                   224  51  64 109  49  60   0.56   0.48  -0.10   0.16    0.01    0.00  -0.00
+ZOCHOWSKA Joanna - REESS Vanessa                       240  69  55 115  57  58   0.56   0.28   0.16  -0.10    0.12   -0.03   0.14
+CIMON Francine - FRASER Sandra                         224  48  56 120  69  51   0.55   0.36   0.05   0.06   -0.02    0.04   0.06
+DEAS Lynn - PALMER Beth                                288  77  68 142  84  58   0.47   0.28   0.16   0.09    0.03   -0.05  -0.04
+SENIOR Nevena - DHONDY Heather                         224  62  57 105  65  40   0.43   0.21   0.14   0.10    0.03    0.00  -0.04
+SARNIAK Anna - BALDYSZ Cathy                           239  55  53 128  60  68   0.43   0.10   0.07   0.10    0.02   -0.00   0.14
+WANG Hongli - ZHANG Yu                                 224  54  55 114  57  57   0.42   0.27   0.04   0.10   -0.03    0.05  -0.00
+SAKAMOTO Midori - NISHIDA Natsuko                      224  57  59 107  48  59   0.42   0.27  -0.01  -0.01    0.07    0.02   0.10
+CHAVARRIA Margherita - PISCITELLI Francesca            224  63  56 104  49  55   0.36  -0.15   0.15   0.17    0.11   -0.00   0.09
+TACHE Nina - DOUER Alisa                               192  55  40  97  50  47   0.32  -0.10   0.09   0.19    0.01    0.03   0.10
+FUNG Kismet - GARTAGANIS Judith                        239  68  56 115  60  55   0.25   0.17   0.12   0.16   -0.07    0.04  -0.17
+TRAVIS Barbara - GINSBERG Candice                      239  79  43 115  56  59   0.24  -0.01   0.13  -0.01    0.10    0.00   0.03
+CORREA Paula - DE MELLO Sylvia Figueira                240  63  57 119  59  60   0.17   0.15   0.03  -0.01   -0.01    0.06  -0.05
+GIBBONS Christine - GIBBONS Jenna                      208  50  71  86  42  44   0.13   0.08   0.18   0.01    0.00   -0.03  -0.11
+CHEN Yin-Shou - KUO Lin-Shou                           240  63  56 119  58  61   0.12   0.23  -0.16  -0.13   -0.04    0.09   0.14
+VAN ZWOL Wietske - ARNOLDS Carla                       208  47  52 108  58  50   0.11   0.26   0.04  -0.07   -0.02   -0.07  -0.03
+YAN Ru - LI Yiting                                     224  62  48 113  65  48   0.10   0.02   0.00   0.12    0.01    0.02  -0.06
+SATO Makiko - SHIMAMURA Kyoko                          224  57  60 106  54  52   0.10   0.53  -0.39  -0.17    0.10   -0.00   0.03
+TSAO Chiung-Yueh - HSU Hsiu-Chin                       240  57  73 109  46  63   0.09  -0.16   0.13  -0.04    0.03    0.09   0.05
+ZMUDA Justyna - DUFRAT Katarzyna                       224  53  63 108  57  51   0.05  -0.24   0.05   0.08    0.09   -0.02   0.09
+CAMPAGNANO Debora - HUGON Elisabeth                    144  42  31  71  35  36   0.03   0.13  -0.10   0.01    0.02   -0.00  -0.03
+BOURKE Margaret - LUSK Sue                             240  43  65 129  68  61   0.01  -0.10   0.13  -0.03   -0.05   -0.04   0.09
+BRISEBOIS Isabelle - NYSTROM Samantha                  208  57  52  98  49  49  -0.01  -0.05   0.03   0.01   -0.06   -0.01   0.07
+NARASIMHAN Hansa - RADIN Judi                          112  23  36  53  26  27  -0.03  -0.08  -0.04   0.07   -0.08   -0.05   0.15
+MIYAKUNI Ayako - OTA Hiroko                            224  50  45 129  70  59  -0.05  -0.17   0.13  -0.00   -0.04   -0.02   0.06
+WILKINSON Jenny - NEWTON Shirley                       224  56  56 112  47  65  -0.06  -0.09   0.11  -0.04   -0.01    0.04  -0.07
+HOMSY Marguerite - KHOURI Maud                         240  49  67 122  67  55  -0.17   0.01  -0.20   0.02   -0.00    0.05  -0.05
+DEORA Hema - KARMARKAR Marianne                        224  58  54 111  56  55  -0.22   0.11  -0.20   0.18    0.02   -0.08  -0.24
+BILTOFT Valentina - FULLER Leone                       192  46  45 100  47  53  -0.23  -0.46   0.03   0.14   -0.06    0.02   0.10
+HAMDY Nessrine - BADAWI Laila                          207  53  46 107  59  48  -0.25  -0.11   0.12  -0.12   -0.05   -0.04  -0.05
+SWIEL Joy - NARUNSKY Maureen                           240  55  65 116  64  52  -0.33  -0.23  -0.08  -0.18    0.02    0.02   0.11
+WU Ling Li - LIU Pei-Hua                               192  54  50  87  35  52  -0.34  -0.15  -0.20   0.03   -0.01    0.01  -0.03
+AGHA Rubina - AZWER Zeenat                             288  73  64 149  66  83  -0.43  -0.46  -0.00  -0.03   -0.04    0.03   0.06
+DARYANANI Padma - PACHECO Morella                      224  58  50 113  49  64  -0.44  -0.26  -0.16   0.03   -0.04   -0.03   0.02
+VARGAS DE ANDRADE Isabella - PAIN Leda                 240  19 103 116  91  25  -0.48  -0.24  -0.10   0.13    0.02   -0.02  -0.26
+CARTNER Linda - PALMER Glenis                          240  46  60 133  70  63  -0.48  -0.18  -0.02  -0.07    0.04   -0.03  -0.21
+THIRION Christiane - FABBRICATORE Sophie               240  57  52 130  53  77  -0.55  -0.11  -0.11  -0.08   -0.07    0.06  -0.23
+BISTOQUET Chantal - MOERS Jeanine                      240  62  52 125  68  57  -0.56  -0.25  -0.13  -0.15    0.14   -0.13  -0.05
+KENNY Renee - LIPSHITZ Charmaine                       224  54  55 113  53  60  -0.57  -0.40  -0.04  -0.07   -0.09   -0.02   0.03
+PACHECO Juliana - PONCIONI Graca                       192  48  47  96  42  54  -0.65  -0.16  -0.25  -0.11   -0.07   -0.10   0.04
+CASSIN Jacqueline - GARCIA Anne                        192  50  46  95  54  41  -0.76   0.02  -0.10  -0.16   -0.04   -0.06  -0.43
+SOLIMAN Hoda - PHILIPPE PASCAL Catherine               224  53  52 119  59  60  -0.80  -0.46  -0.10  -0.05   -0.07    0.03  -0.14
+AL-NAJJAB Najwa - FAKHOURI Amal                        224  45  50 128  72  56  -0.81  -0.41  -0.00  -0.10   -0.05    0.06  -0.30
+SUAREZ Adriana - DE JESUS Karla                        224  53  57 111  54  57  -0.90  -0.39  -0.13   0.03   -0.04   -0.06  -0.32
+HAI Rubina Saeed - RAZA Fatima                         240  59  74 105  54  51  -0.92  -0.55  -0.10   0.10   -0.14    0.04  -0.27
+SAKET Huda - GHARBIEH May Abu                          224  56  49 117  59  58  -0.93  -0.32  -0.18  -0.01   -0.10   -0.04  -0.28
+ASHBERG Jocelyn - KAMINER Shirley                      208  42  57 109  45  64  -1.09  -0.49  -0.14  -0.37    0.00   -0.12   0.03
+BOKHARI Roshan Ara - DOSSA Qudsia                      144  32  30  82  45  37  -1.09  -0.71  -0.06  -0.15   -0.04   -0.02  -0.12
+JAJOO Monica - BATRA Puja                              224  55  38 129  71  58  -1.49  -0.81  -0.19  -0.06    0.06   -0.10  -0.39
+ALZABEN Mona - KANAN Noura                             224  53  58 112  61  51  -1.55  -0.59  -0.38  -0.19   -0.04   -0.01  -0.33
+SAIN Aparna - CHOTHIA Feroza                           224  66  55 102  44  58  -1.56  -0.86  -0.14  -0.08   -0.01   -0.12  -0.35
+
+Players                                                No. Pl1 Pl2 Def  L1  L2   IMPs    Bid  Play1  Play2   Lead1   Lead2    Def
+TACHE Nina - DARYANANI Padma                            16   2   2  12   6   6  -1.70  -2.34   0.00  -0.00    0.12   -0.03   0.55
+SUAREZ Adriana - TACHE Nina                             16   6   4   6   3   3  -2.58  -2.82   0.38  -0.17    0.00    0.00   0.02
+

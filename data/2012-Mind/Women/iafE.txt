@@ -1,0 +1,50 @@
+Players                                                No. Pl1 Pl2 Def  L1  L2   IMPs    Bid  Play1  Play2   Lead1   Lead2    Def
+BROCK Sally - SMITH Nicola                             128  42  30  56  25  31   1.48   0.80   0.17  -0.07    0.09    0.11   0.39
+GULEVICH Anna - KHONICHEVA Elena                       144  34  31  77  40  37   1.16   0.87   0.07   0.05   -0.02   -0.04   0.23
+GROMOVA Victoria - PONOMAREVA Tatiana                  128  37  38  53  14  39   1.05   0.53   0.18   0.21   -0.02    0.01   0.13
+CHUBAROVA Svetlana - VOROBEYCHIKOVA Olga               144  36  36  71  29  42   1.02   0.77   0.00  -0.19    0.00    0.09   0.35
+McGOWAN Elizabeth (Liz) - PUNCH Sam                    160  45  40  75  43  32   0.73   0.35   0.15   0.10    0.09    0.04   0.01
+KAZMUCHA Danuta - SAKOWSKA Natalia                     144  36  39  69  29  40   0.73   0.46   0.01   0.21   -0.05   -0.01   0.11
+ADUT Vera - ATALAY Belis                               112  36  28  48  22  26   0.72   0.50   0.18   0.09   -0.12    0.04   0.03
+ACAR Asli - ERKAN Berrak                               160  42  40  77  37  40   0.72   0.11   0.30   0.19    0.01   -0.02   0.12
+ADAMSON Sheila - SYMONS Anne                           144  24  30  90  45  45   0.45   0.22   0.07   0.06   -0.01   -0.07   0.19
+BOURKE Margaret - LUSK Sue                             144  38  30  76  41  35   0.42   0.44  -0.03  -0.02   -0.02    0.04  -0.00
+KHALIL Lily - KHOURI Maud                              144  38  37  67  29  38   0.39   0.07   0.02   0.18    0.06    0.11  -0.04
+PANADERO Maria - BABOT Mari Carmen                     144  34  36  73  40  33   0.29  -0.16   0.09   0.12    0.12   -0.01   0.13
+DUFRAT Katarzyna - ZMUDA Justyna                       144  30  39  75  40  35   0.26  -0.09   0.10   0.24   -0.24    0.01   0.24
+SO Ho-Yee - TSAI Po-Ya                                 128  29  35  64  25  39   0.26   0.12   0.08   0.03   -0.03    0.02   0.04
+DEMME Ina - WOLPERT Hazel                              160  41  34  84  41  43   0.24   0.12   0.05   0.01    0.05    0.00   0.00
+GRANT Maida - McDONALD Sheila                          112  32  30  50  25  25   0.23  -0.00   0.03   0.11    0.04    0.02   0.04
+GINSBERG Candice - TRAVIS Barbara                      127  22  39  66  35  31   0.21   0.29   0.05   0.08   -0.11    0.01  -0.12
+DJUROVIC Nevena - HAVAS Elizabeth                      144  28  38  78  33  45   0.17  -0.04  -0.13   0.06    0.10    0.10   0.09
+BOLDT Silvia Elena - IRIBARREN Gloria                  160  39  37  84  40  44   0.14   0.18   0.00  -0.01    0.04   -0.05  -0.03
+BROWN Fiona - STOCKDALE Susan                          128  31  28  69  33  36   0.12   0.04   0.02   0.03    0.02    0.02  -0.01
+OYMEN Ozlem - YAVAS Dilek                              144  39  40  65  34  31   0.05   0.07  -0.07   0.20   -0.02    0.11  -0.24
+GONG Fang-Wen - HU Sheau-Fong                          176  43  31 102  53  49  -0.00  -0.01  -0.02   0.10   -0.01   -0.09   0.02
+BALDYSZ Cathy - BANASZKIEWICZ Ewa                      127  32  28  66  32  34  -0.08   0.02  -0.04  -0.08    0.00   -0.01   0.02
+THOMSON Lesley - WYNSTON Linda                         144  46  30  66  32  34  -0.19  -0.00   0.01   0.04   -0.04    0.01  -0.20
+BENNETT Debbie - NISBET Pamela                         112  25  36  51  24  27  -0.25  -0.32   0.05   0.16   -0.02    0.08  -0.20
+GARATEGUY Maria Del Rosario - IACAPRARO Maria Elena    143  19  57  67  37  30  -0.25  -0.08  -0.07  -0.04    0.03   -0.05  -0.05
+DHONDY Heather - SENIOR Nevena                         159  34  49  75  46  29  -0.29  -0.16  -0.09   0.10    0.10    0.04  -0.29
+BARNES Marta - MATUT Maria Luisa (Marisa)              128  31  36  60  34  26  -0.30  -0.39  -0.16   0.13   -0.05    0.06   0.10
+SHAH Sumitra Rasiklal - SHAH Surekhakumari Kirankumar  144  48  33  62  38  24  -0.39  -0.19  -0.21   0.06   -0.03   -0.02  -0.01
+MENG Gloria - TSAI Wen-Chuan                           111  32  34  45  16  29  -0.40  -0.10   0.10  -0.18    0.07   -0.06  -0.24
+QASHU Azza - SAKET Randa                               160  37  33  90  42  48  -0.41  -0.08  -0.06   0.09   -0.15   -0.05  -0.15
+HAMDY Nessrine - BADAWI Laila                          144  33  35  75  32  43  -0.41  -0.25   0.02  -0.23   -0.07    0.02   0.08
+BORDALLO CORTINA Cristina - FRANCES Ana                143  34  35  73  38  35  -0.44  -0.33  -0.17  -0.16   -0.03    0.05   0.20
+HOMSY Marguerite - AUDICHE Christina                   112  28  27  56  26  30  -0.53  -0.33   0.05  -0.16   -0.01    0.04  -0.13
+BISTOQUET Chantal - TRACOL Anny                        144  45  33  65  40  25  -0.57  -0.24   0.04  -0.06   -0.05   -0.06  -0.20
+SHAH Parfula Suryakant - SHAH Vasanti Rashmikant       127  40  26  61  31  30  -0.77  -0.18  -0.22  -0.05   -0.01   -0.09  -0.22
+ELKIN Irene - SMALINSKY Ana Lia                        112  25  29  56  26  30  -0.87  -0.30  -0.07  -0.13   -0.00   -0.08  -0.28
+BRINGOLD Solange - CASSIN Jacqueline                   144  36  30  77  41  36  -1.02  -0.62  -0.01  -0.26   -0.10   -0.03  -0.01
+SHAH Bhanumati Sobhag - SHAH Indira Shantilal          144  31  32  80  41  39  -1.15  -0.77   0.11  -0.18   -0.00   -0.00  -0.30
+BAERT Christine - DUVERNOY Roselyne                    128  28  29  71  23  48  -1.22  -0.56  -0.29  -0.28   -0.10   -0.05   0.06
+
+Players                                                No. Pl1 Pl2 Def  L1  L2   IMPs    Bid  Play1  Play2   Lead1   Lead2    Def
+ABU JABER Aida - ABU JABER Yasmin                       80  15  19  44  19  25  -0.39  -0.15  -0.26   0.10   -0.12    0.03   0.01
+HOMSY Marguerite - KHOURI Maud                          15   3   5   7   3   4  -0.51  -0.48  -0.03  -0.20   -0.08   -0.12   0.40
+ABU JABER Yasmin - HAMADEH AWWAD Maha                   48  12  15  21  12   9  -0.84  -0.57  -0.54   0.04    0.19    0.05  -0.00
+ABU JABER Aida - HAMADEH AWWAD Maha                     80  27  21  32  19  13  -0.99  -0.47  -0.20  -0.14    0.07   -0.02  -0.24
+ABU JABER Aida - QASHU Azza                             32   5   7  20  11   9  -1.39  -1.30  -0.18   0.01   -0.10    0.01   0.17
+ABU JABER Aida - SAKET Randa                            16   7   2   7   3   4  -1.51  -0.11  -1.23   0.00   -0.01   -0.05  -0.12
+

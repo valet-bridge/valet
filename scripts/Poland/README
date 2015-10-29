@@ -1,0 +1,25 @@
+These scripts are similar to those in the Euro-and-World directory.
+They might be used as follows.
+
+
+1. Get the files using perl getfiles.pl
+   - Set the location in the script
+   - Put the files in a directory under html
+
+2. In that directory
+   foreach i (*.html)
+     tail -1 $i > ../tail/$i
+   end
+
+3. Get the names
+   perl names.pl liga1314/tail/* > names0.txt
+
+4. sort names0.txt | uniq > names1.txt
+
+5. perl number.pl < names1.txt > names.txt
+   rm names0.txt names1.txt
+
+6. perl parse.pl liga1314/names.txt liga1314/tail/*.html > scores0.txt
+
+7. sort -n scores0.txt > scores.txt
+   rm scores0.txt

@@ -1,0 +1,8 @@
+set d = '2005-World/Women'
+set m = 'Matches'
+set s = 'scores.txt'
+set n = 'names.txt'
+
+perl parse.pl $d/$n $d/$m/* > scores0.txt
+sort -n scores0.txt > $d/$s
+rm scores0.txt

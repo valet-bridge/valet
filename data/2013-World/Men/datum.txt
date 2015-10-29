@@ -1,0 +1,78 @@
+Players                                                No. Pl1 Pl2 Def  L1  L2 Butler    Bid  Play1  Play2   Lead1   Lead2    Def
+FANTONI Fulvio - NUNES Claudio                         256  66  73 117  58  59   1.10   0.35   0.42   0.05    0.11    0.10   0.07
+WEINSTEIN Steve - LEVIN Robert (Bobby)                 224  51  58 115  49  66   1.05   0.62  -0.11   0.24   -0.02    0.00   0.31
+BOCCHI Norberto - MADALA Agustin                       256  78  54 124  57  67   0.92  -0.11   0.52   0.08    0.07    0.00   0.36
+WOLPERT Gavin - KRANYAK John                           224  46  62 116  55  61   0.84   0.54   0.19   0.12   -0.08   -0.05   0.12
+BURAS Krzysztof - NARKIEWICZ Grzegorz                  239  75  53 111  62  49   0.81   0.51   0.15   0.07    0.03    0.03   0.04
+HELGEMO Geir - HELNESS Tor                             256  58  66 132  69  63   0.75   0.51   0.09   0.16   -0.03   -0.10   0.12
+FORRESTER Tony - ROBSON Andrew                         112  34  25  53  29  24   0.71   0.33   0.18   0.01    0.14   -0.02   0.08
+VERSACE Alfredo - LAURIA Lorenzo                       224  60  55 108  57  51   0.70   0.34   0.01  -0.08    0.15    0.09   0.19
+DE WIJS Simon - MULLER Bauke                           224  62  50 112  47  65   0.70   0.42  -0.05   0.03   -0.00    0.07   0.23
+SMIRNOV Alexander - PIEKAREK Josef                     239  54  54 131  64  67   0.65   0.49   0.03   0.05   -0.01    0.04   0.05
+BRINK Sjoert - DRIJVER Bas                             272  51  71 150  69  81   0.51   0.10   0.12   0.20    0.00   -0.05   0.13
+ZMUDZINSKI Adam - BALICKI Cezary                       256  48  66 142  63  79   0.47   0.09  -0.06   0.18    0.02    0.05   0.19
+GOLD David - BAKHSHI David                             112  32  30  50  21  29   0.43   0.28   0.08   0.10   -0.08   -0.06   0.11
+SHI Zheng Jun - JU Chuancheng                          256  55  82 119  84  35   0.35   0.12  -0.04  -0.07    0.04    0.01   0.30
+FLEISHER Martin - KAMIL Mike                           159  41  39  79  36  43   0.33   0.30   0.19  -0.09    0.01    0.08  -0.17
+WOLPERT Darren - KORBEL Daniel                         288  74  74 140  77  63   0.33   0.13  -0.05   0.02    0.00    0.03   0.20
+SHI Haojun - LIAN Ruoyang                              224  53  57 114  71  43   0.32  -0.01  -0.08   0.06    0.05    0.11   0.19
+CHEN Dawei - FURUTA Kazuo                              240  59  49 132  66  66   0.30   0.45   0.04   0.02   -0.12   -0.09   0.01
+TOWNSEND Tom - BAKHSHI David                           144  41  34  69  30  39   0.30   0.12   0.07   0.14   -0.00    0.05  -0.08
+MAHMOOD Zia - MARTEL Chip                              240  66  65 109  45  64   0.30   0.29   0.11  -0.09   -0.02    0.08  -0.08
+WILLENKEN Chris - ROSENBERG Michael                    272  64  67 141  66  75   0.26   0.22   0.05   0.07    0.11   -0.10  -0.09
+ALLFREY Alexander - ROBSON Andrew                      144  37  45  62  31  31   0.24   0.02  -0.05   0.19    0.00    0.00   0.09
+DUBOIN Giorgio - SEMENTA Antonio                       192  47  42 103  46  57   0.22  -0.17   0.12  -0.04   -0.08    0.03   0.37
+LAMBARDI Pablo - RIZZO Leonardo                        255  63  60 132  61  71   0.20   0.24  -0.12   0.13    0.02    0.01  -0.08
+BATHURST Kevin - DWYER Kevin                           224  56  64 104  39  65   0.20   0.19   0.08  -0.04    0.04   -0.03  -0.04
+TAKAYAMA Masaaki - KAKU Hiroshi                        224  51  70 103  57  46   0.20   0.28   0.04  -0.12   -0.01    0.01  -0.01
+TOBING Robert Parasian - ASBI Taufik Gautama           336  72  74 190  82 108   0.17  -0.19   0.23  -0.03    0.06    0.03   0.07
+GARTAGANIS Judith - GARTAGANIS Nicholas                192  53  57  82  47  35   0.16   0.14  -0.07   0.02    0.08    0.01  -0.02
+WANG Weimin - ZHANG Bangxiang                          192  40  39 113  56  57   0.13   0.43   0.20   0.07   -0.08   -0.12  -0.37
+VILLAS-BOAS Miguel - CAMPOS Joao-Paulo                 224  48  65 111  58  53   0.11   0.39   0.02  -0.16    0.05   -0.17  -0.01
+GEORGE Julius Anthonius - KARWUR Franky Steven         239  54  68 117  49  68   0.10   0.19  -0.14   0.02    0.00    0.07  -0.05
+FORRESTER Tony - GOLD David                            160  36  36  88  43  45   0.09   0.20  -0.18   0.16    0.03    0.04  -0.15
+FRITSCHE Joerg - ROHOWSKY Roland                       223  67  56 100  44  56   0.08   0.15   0.02   0.05   -0.01   -0.01  -0.12
+THOMSON Matthew - KANETKAR Avi                         256  56  70 130  61  69   0.06  -0.01   0.04   0.01   -0.04   -0.06   0.11
+ZIMMERMANN Pierre - MULTON Franck                      160  47  27  86  33  53   0.06   0.15   0.08   0.04   -0.02    0.05  -0.25
+SMITH Jeff - THURSTON Paul                             192  71  22  99  13  86   0.04  -0.04  -0.05  -0.05    0.05    0.13   0.00
+TERAMOTO Tadashi - INO Masayuki                        208  41  62 105  50  55   0.01  -0.21   0.13   0.20   -0.04    0.06  -0.12
+NEWELL Peter - REID Martin                             240  67  52 121  64  57  -0.01   0.09  -0.13   0.10    0.02   -0.04  -0.05
+CAMBEROS Hector - PELLEGRINI Carlos                    224  54  68 102  47  55  -0.02  -0.06  -0.01  -0.14    0.13   -0.06   0.11
+CORNELL Michael - BACH Ashley                          223  66  33 124  48  76  -0.07   0.25  -0.15  -0.01    0.02   -0.01  -0.18
+JASSEM Krzysztof - MAZURKIEWICZ Marcin                 176  40  49  87  31  56  -0.13   0.02  -0.00  -0.12    0.05   -0.06  -0.01
+TOMA Marco - BRENNER Diego                             224  50  68 106  47  59  -0.16  -0.14   0.00   0.04    0.02   -0.07  -0.01
+GERIN Dominique - PELLETIER Jean-Claude                256  73  76 107  53  54  -0.18  -0.28   0.11  -0.03   -0.06    0.03   0.05
+GROMOELLER Michael - REHDER Martin                     208  51  45 112  54  58  -0.18   0.02  -0.03  -0.11   -0.05   -0.10   0.08
+KEMPCZYNSKI Alain - MATHIEU Philippe                   224  47  56 121  65  56  -0.29   0.01  -0.05  -0.09    0.02   -0.06  -0.11
+APTEKER Alon - GOWER Craig                             335  76  88 171  86  85  -0.29  -0.26  -0.06  -0.01   -0.07    0.00   0.11
+TEWARI Rajeshwar - BALAKRISHNAN Prabhakar              192  43  43 106  59  47  -0.35   0.07  -0.18  -0.17    0.04    0.06  -0.17
+HUSSEIN Ahmed - SADEK Tarek                            240  71  56 113  32  81  -0.39  -0.29  -0.13   0.08   -0.03    0.05  -0.07
+BRUM Paulo Roberto - CHAGAS Gabriel                    224  58  55 111  58  53  -0.39  -0.24   0.01  -0.07    0.08   -0.01  -0.16
+CHAO Allen - HO Chia-Sheng                             224  63  46 115  57  58  -0.42  -0.05  -0.15  -0.04   -0.08   -0.10   0.00
+BOSENBERG Christopher Henry - EBER Neville             336  74  98 164  87  77  -0.45  -0.10  -0.14  -0.02    0.02   -0.01  -0.21
+VENKATARAMAN Kadayam Raman - CHOKSHI Sunit             224  50  81  93  46  47  -0.48  -0.32  -0.10  -0.04    0.05   -0.00  -0.07
+KROCHMALIK Robert - LAVINGS Paul                       208  56  59  93  49  44  -0.50  -0.22  -0.01  -0.20    0.01   -0.00  -0.08
+TISLEVOLL Geir-Olav - WARE Michael                     208  71  36 101  58  43  -0.50  -0.29   0.02   0.08    0.10   -0.18  -0.24
+VAN PROOIJEN Ricco - VERHEES Jr Louk                   176  45  47  84  48  36  -0.54  -0.30  -0.03  -0.16    0.18    0.02  -0.26
+NABIL Karim - SAAID Abd El-Salam                       176  37  42  97  49  48  -0.59  -0.67   0.01   0.10   -0.06   -0.07   0.10
+BASIONY Wael - MACI Teodoras                           336  73  92 171  70 101  -0.64  -0.39  -0.06   0.14   -0.00   -0.04  -0.28
+NOSHY Sherif - SAMIR Ahmed                             224  65  42 117  58  59  -0.70  -0.56  -0.07   0.03   -0.00    0.03  -0.12
+BILSKI George - BROWN Terry                            208  52  49 107  61  46  -0.70  -0.43  -0.04  -0.04   -0.01    0.02  -0.19
+NADAR Kiran - SATYANARAYANA Bachiraju                  224  47  61 116  62  54  -0.73  -0.52  -0.15  -0.16    0.05    0.02   0.04
+HO Jia-Dong - SHEN Nai Jeng                            224  59  49 116  63  53  -0.77  -0.58  -0.22   0.20   -0.03    0.00  -0.14
+CHEN Rong-Jenn - HUANG Jerry                           224  56  65 103  45  58  -0.88  -0.34  -0.22  -0.03   -0.05   -0.05  -0.19
+SYED  Imran Ali - NONOO Meer Ebrahim                   320  81  86 153  71  82  -0.92  -0.47  -0.12  -0.08   -0.02   -0.03  -0.20
+ALUJAS Gabino - RAVENNA Pablo                          176  41  45  89  44  45  -1.04  -0.74  -0.08  -0.07   -0.00   -0.06  -0.09
+SOUDAN Luc - ARAGONES Rene                             160  51  24  85  49  36  -1.33  -0.65  -0.15  -0.13   -0.08   -0.08  -0.25
+
+Players                                                No. Pl1 Pl2 Def  L1  L2 Butler    Bid  Play1  Play2   Lead1   Lead2    Def
+TEWARI Rajeshwar - SATYANARAYANA Bachiraju              16   2   5   9   2   7   2.06   1.15   0.13   0.41   -0.14    0.07   0.43
+PELLEGRINI Carlos - RAVENNA Pablo                       16   2   3  11   5   6   1.13   0.80  -0.03   0.78    0.35   -0.44  -0.34
+KARWUR Franky Steven - SACUL Denny                      96  28  24  44  27  17   0.34   0.23   0.14   0.09   -0.16   -0.18   0.22
+NABIL Karim - SAMIR Ahmed                               16   0   6  10   5   5  -1.13  -0.71   0.00  -0.04   -0.75   -0.36   0.73
+NABIL Karim - SADEK Tarek                               16   5   3   8   3   5  -1.13  -0.80   0.61  -0.44   -0.73    0.05   0.19
+SYED  Imran Ali - SHAFEEA Tahir Hameed                  16   4   4   8   2   6  -1.50  -0.75   0.28   0.06    0.01   -0.65  -0.45
+SOUDAN Luc - MATHIEU Philippe                           16   6   3   7   4   3  -2.25  -0.23  -1.04  -0.02   -0.34   -0.06  -0.55
+TEWARI Rajeshwar - VENKATARAMAN Kadayam Raman           16   4   5   7   2   5  -2.81  -1.22  -0.37  -0.59   -0.00    0.02  -0.65
+SOUDAN Luc - GERIN Dominique                            16   5   2   9   4   5  -4.31  -1.37  -0.29   0.05    0.17    0.06  -2.93
+

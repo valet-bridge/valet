@@ -1,0 +1,107 @@
+1|ALFEJEVA Jelena
+2|ALFONSIN Julio Alberto
+3|ALUJAS Gustavo Jorge
+4|ASH Mike
+5|AXDORPH Mats
+6|BABSCH Andreas
+7|BAKKEREN Ton
+8|BARCZY Peter
+9|BENNETT Roy
+10|BERTENS Huub
+11|BIEDER Wolfgang
+12|BLAIS Christian
+13|BRIOLINI Giancarlo
+14|BRISON Jean-Pierre
+15|CESPEDES Ma. Guadalupe
+16|CHIU Wai-Lap Abby
+17|CHOI Jung Jin
+18|CHOKSHI Sunit
+19|COTTI Alain
+20|CULLIN Per-Ola
+21|DAI Jianming
+22|DALAL Rajesh
+23|DE MULLER Serge
+24|DE WIJS Simon
+25|DIBBS Joseph Michael
+26|DIEGUES Vitor
+27|DUBININ Alexander
+28|EFRAIMSSON Bengt-Erik
+29|FIORINI Fiorenzo
+30|FU Zhong
+31|FUCIK Jan
+32|GENEROSI Gian Mario
+33|GERMANIS Aigars
+34|GINOSSAR Eldad
+35|GOLFARELLI DELLA MASSA Vittorio
+36|GROMOV Andrey
+37|GULYAS Daniel
+38|GUPTA Subhash
+39|HARANGOZO Laszlo
+40|HENRIQUES Jose Carlos
+41|HERBST Ilan
+42|HERBST Ophir
+43|HERRERA Gonzalo
+44|JAMES Rex
+45|JANG Jung Bae
+46|JANSONS Ugis
+47|JONES Trevor
+48|KALISH Avi
+49|KHOLOMEEV Vadim
+50|KHYUPPENEN Yury
+51|LAU Pik-Kin Tony
+52|LEE Bok Hee
+53|LEE Karl
+54|LEE Kyeom Soon
+55|LEMA Fernando Alfredo
+56|LEOUTHAM Jules
+57|LEUNG Cheuk-Hin Kinman
+58|LEUNG Chung-Man Ivan
+59|LIGGAT David
+60|LINDERMANN Arno
+61|LOPES Antonio Victoria
+62|LUIS Carlos
+63|MATHESON John
+64|MATISONS Maris
+65|MAZET Charly Didier Jean Jacques
+66|McGOWAN Elizabeth (Liz)
+67|MEDAN Didier
+68|MONTANELLI Enzo
+69|MONTELONGO Dora
+70|MORATH Anders
+71|MULLER Bauke
+72|NADAR Kiran
+73|NG Chi-Cheung Baron
+74|OSTBERG Johnny
+75|PACHTMAN Ron
+76|PAGANI Enrico
+77|PAZ Nuno
+78|PECCI Ferrante
+79|PELLEGRINI Carlos
+80|PODGUR Leonid
+81|PURKARTHOFER Gunther
+82|RAMONDT Vincent
+83|RUBENIS Ivars
+84|SA Joao
+85|SATYANARAYANA Bachiraju
+86|SEO Neong Wook
+87|SHI Haojun
+88|SHUDNEV Andrey
+89|SIME Iain
+90|SMILGAJS Andris
+91|SOROLDONI Massimo
+92|SZALAY Gyorgy
+93|SZE Shun Sum Alan
+94|SZEGEDI Balazs
+95|TERRANEO Christian
+96|TRENKA Peter
+97|UPMARK Johan
+98|VENKATARAMAN Kadayam Raman
+99|WESTRA Berry
+100|WHITE Hubert
+101|WONG Calvin
+102|YANG Lixin
+103|ZACCARIA Daniele
+104|ZHAO Jie
+105|ZHMAK Maksim
+106|ZHUANG Zejun
+107|ZUMEL Gerardo Enrique

@@ -1,0 +1,63 @@
+Players                                                No. Pl1 Pl2 Def  L1  L2 Butler    Bid  Play1  Play2   Lead1   Lead2    Def
+DUBOIN Giorgio - SEMENTA Antonio                       159  34  41  84  42  42   1.58   1.04   0.05   0.18    0.07    0.09   0.15
+FANTONI Fulvio - NUNES Claudio                         175  44  48  83  45  38   1.00   0.29   0.22   0.16    0.08    0.05   0.20
+MULTON Franck - ZIMMERMANN Pierre                      160  40  43  77  37  40   1.00   0.75   0.09   0.17    0.09    0.02  -0.12
+APTEKER Alon - GOWER Craig                             160  38  37  85  37  48   0.97   0.84  -0.13   0.25   -0.06   -0.02   0.10
+CHRISTIANSEN Soren - AUKEN Jens                        160  60  27  73  34  39   0.80   0.42   0.16  -0.06   -0.08   -0.01   0.37
+CHAGAS Gabriel - VILLAS-BOAS Miguel                    240 105  14 120  10 110   0.68   0.67   0.04  -0.04    0.01   -0.14   0.14
+COLDEA Ionut - IONITA Marius                           255  69  66 120  62  58   0.61   0.65  -0.05   0.20   -0.08   -0.02  -0.09
+LESKELA Vesa - TOIVONEN Mikko                          256  71  64 121  65  56   0.58   0.46   0.06   0.04    0.01    0.03  -0.02
+LAURIA Lorenzo - VERSACE Alfredo                       159  69   9  81  10  71   0.55   0.42  -0.03  -0.01   -0.03    0.00   0.20
+HANLON Tom - McGANN Hugh                               173  47  39  87  51  36   0.53   0.15   0.19  -0.05    0.09    0.15   0.01
+BRICIU Marius - GHIGHECI Ovidiu                        256  45  82 128  51  77   0.50   0.07   0.09   0.22    0.08    0.04  -0.00
+AHMED Jahangir - QURESHI Ahsan                         144  44  28  72  41  31   0.49   0.13   0.31   0.05    0.06   -0.02  -0.05
+LEVENKO Vassili - SESTER Sven                          160  41  41  78  52  26   0.46   0.24  -0.08  -0.13    0.09    0.09   0.24
+BOMPIS Marc - QUANTIN Jean-Christophe                  224  62  44 118  64  54   0.44  -0.11   0.11   0.17    0.03    0.07   0.16
+ITO Yoichi - NARITA Hidenori                           176  25  57  94  29  65   0.43   0.32   0.06  -0.02    0.03   -0.12   0.16
+KOISTINEN Kauko - LEIKOLA Juuso                        256  56  64 135  62  73   0.40   0.08  -0.00   0.18    0.02    0.13  -0.02
+JACOB Dan - LEBI Robert                                191  59  53  78  35  43   0.38   0.27  -0.11   0.22   -0.02   -0.06   0.07
+HENC Marian - LOHAY Karol                              175  53  28  94  50  44   0.35  -0.02   0.32  -0.02    0.00   -0.14   0.22
+DEMUY Vincent - FOURCAUDOT Marc-Andre                  160  73   5  82   5  77   0.32  -0.01   0.36  -0.03   -0.01   -0.05   0.08
+BRENNER Diego - CASTELLO BRANCO Marcelo                176  52  41  83  48  35   0.28   0.26   0.12   0.13    0.06   -0.07  -0.22
+HANSEN Jorgen - BILDE Morten                           171  45  45  81  36  45   0.25  -0.11   0.11   0.03   -0.02    0.04   0.21
+KARPOV Maksim - LAANEMAE Tiit                          192  54  36 102  54  48   0.23   0.14  -0.02   0.09    0.02   -0.01  -0.00
+LUKS Leo - NABER Lauri                                 160  35  38  87  43  44   0.18   0.57  -0.33  -0.15   -0.07   -0.00   0.16
+BOSENBERG Christopher Henry - EBER Neville             176  45  54  77  32  45   0.18  -0.01   0.04   0.08    0.09   -0.00  -0.01
+PENG Gui Ping - TSANG Yeuk Chow                        192  54  34 104  58  46   0.10   0.19  -0.09   0.03    0.04    0.14  -0.20
+O'BRIAIN Micheal - O'BRIAIN Padraig                    112  30  24  58  23  35   0.06   0.02   0.05  -0.22    0.09    0.05   0.07
+ASKGAARD Michael - BJARNARSON Gregers                  176  39  44  93  55  38  -0.09  -0.07  -0.06   0.05    0.02   -0.04   0.00
+BOROS Gejza - MUNKA Vladimir                           160  32  46  82  29  53  -0.12  -0.34   0.17   0.27   -0.02   -0.09  -0.11
+CARROLL John - GARVEY Tommy                            224  63  60 101  41  60  -0.13   0.17  -0.01  -0.16   -0.07    0.08  -0.14
+SHAH Ashwin - SHAH Prafula                             176  51  31  94  46  48  -0.15  -0.17  -0.02  -0.01    0.07    0.02  -0.05
+NODA Hiroyuki - OHTAKA Eiji                            160  43  33  84  43  41  -0.17   0.26  -0.02   0.01   -0.12    0.02  -0.31
+MOHAMED Shamshad - MOHAMMED Kalamazad                  192  46  51  93  46  47  -0.23  -0.02  -0.12  -0.02   -0.00   -0.17   0.09
+COPE Tim - HOLMAN Glen                                 176  49  40  87  31  56  -0.24  -0.06  -0.13  -0.00    0.04    0.01  -0.11
+KOBAYASHI Yasushi - YOSHIDA Masaru                     175  38  47  90  39  51  -0.37  -0.07   0.03  -0.31   -0.00   -0.14   0.12
+LEI Vincent - ROSARIO Antonio Pedro do                 143  30  30  82  30  52  -0.41  -0.70   0.13   0.16   -0.02    0.13  -0.11
+LIAQAT Farrukh - RAHIM Yasser                          192  43  63  85  43  42  -0.41   0.03  -0.18  -0.02    0.04   -0.02  -0.27
+FERGANI Kamel - L'ECUYER Nicolas                       160  35  43  82  43  39  -0.48  -0.54  -0.03   0.17    0.10   -0.13  -0.06
+BUTT Nauman - NAQI Zia Hyder                           173  31  43  99  37  62  -0.52  -0.26  -0.07   0.05    0.02   -0.11  -0.15
+FAIGENBAUM Albert - PILON Dominique                    128  34  35  59  26  33  -0.58  -0.37  -0.11   0.11   -0.05   -0.09  -0.07
+PERSAD Bobby - SEEPERSAD Mohan                         176  34  59  83  33  50  -0.63  -0.25  -0.14  -0.02   -0.04   -0.12  -0.06
+CHEONG Hong Mou - LAI U Peng                           127  31  30  66  28  38  -0.69  -0.60  -0.06  -0.03   -0.05    0.01   0.04
+AJANIA Nurdin - BHATT Krishnakant                      176  39  53  84  55  29  -1.24  -0.87  -0.10  -0.07   -0.06    0.01  -0.15
+FITZPATRICK Alvin - HOWARD Joseph                      144  49  37  58  29  29  -1.35  -1.28   0.11  -0.14    0.03    0.01  -0.07
+MOKRAN Pavel - SUCHA Eva                               176  54  29  93  33  60  -1.51  -0.71   0.00  -0.12   -0.05    0.04  -0.67
+SHAH Kamal K - SHARMA Rakesh                           160  49  33  78  41  37  -1.58  -1.17  -0.29   0.07    0.04   -0.03  -0.20
+
+Players                                                No. Pl1 Pl2 Def  L1  L2 Butler    Bid  Play1  Play2   Lead1   Lead2    Def
+SEMENTA Antonio - VERSACE Alfredo                       16   7   6   3   1   2   1.81   0.49   0.37   1.08    0.02    0.03  -0.18
+CHEONG Hong Mou - ROSARIO Antonio Pedro do              16   6   5   5   1   4   1.38   1.30  -0.04   0.15    0.00    0.01  -0.05
+CHEONG Hong Mou - LEI Vincent                           32   9   8  15   8   7   0.72   0.41  -0.06  -0.22   -0.04    0.08   0.55
+CASTELLO BRANCO Marcelo - FIGUEIREDO Mauricio           32   8   7  17   8   9   0.59  -0.40   0.44  -0.02    0.02    0.01   0.55
+HAMZARAJ Rasim - XHULI Armand                           16   8   1   7   7   0   0.38   1.65  -0.06   0.00   -1.20    0.00  -0.02
+HAMZARAJ Rasim - XHULI Vjollca                          48  12   7  29  15  14  -0.44   0.02   0.37  -0.45   -0.22    0.11  -0.27
+XHORI Artan - XHULI Armand                              79  18  16  45  18  27  -0.53  -0.34  -0.05  -0.15    0.07   -0.13   0.07
+KAPO Kostandin - XHORI Artan                            80  27  16  37  22  15  -0.59  -0.67   0.04   0.13    0.01   -0.02  -0.07
+BRENNER Diego - FIGUEIREDO Mauricio                     47   9   7  29  11  18  -0.77   0.08  -0.15  -0.06   -0.06   -0.18  -0.38
+HAMZARAJ Rasim - SHEQI Gezim                            64  24   5  35  22  13  -1.44  -0.78  -0.27  -0.06    0.05   -0.03  -0.35
+CHAGAS Gabriel - ASSUMPCAO Pedro Paulo                  16   6   2   8   2   6  -1.44  -1.10   0.31  -0.34    0.01   -0.02  -0.30
+KAPO Kostandin - XHULI Vjollca                          96  26  14  56  22  34  -1.82  -0.54  -0.06  -0.34   -0.17    0.08  -0.80
+KAPO Kostandin - SHEQI Gezim                            48  13  12  23  10  13  -1.92  -0.69  -0.79  -0.19    0.07   -0.03  -0.28
+SHEQI Gezim - XHULI Armand                              80  22  26  32  14  18  -3.41  -2.18  -0.51  -0.35   -0.15   -0.10  -0.11
+

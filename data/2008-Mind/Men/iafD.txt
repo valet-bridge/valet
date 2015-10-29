@@ -1,0 +1,66 @@
+Players                                                No. Pl1 Pl2 Def  L1  L2   IMPs    Bid  Play1  Play2   Lead1   Lead2    Def
+GOLD David - TOWNSEND Tom                              192  50  61  81  39  42   1.04   0.49   0.14   0.25   -0.04    0.15   0.07
+PIEKAREK Josef - SMIRNOV Alexander                     192  50  39 103  66  37   1.03   0.77   0.18   0.01    0.02   -0.00   0.05
+FREEMAN Richard (Dick) - NICKELL Nick                  160  49  41  70  38  32   0.99   0.63   0.18   0.05    0.07    0.02   0.05
+WLADOW Entscho - ELINESCU Michael                      192  53  51  88  39  49   0.96   0.35   0.08   0.13    0.14    0.00   0.26
+GROMOELLER Michael - KIRMSE Andreas                    160  33  44  82  49  33   0.86   0.17   0.31   0.16   -0.09   -0.07   0.38
+MECKSTROTH Jeff - RODWELL Eric                         240  71  51 118  65  53   0.86   0.41   0.29   0.05    0.01   -0.02   0.11
+GOKSU Hakan - BEDIR Selahaddin                         176  49  42  84  46  38   0.80   0.57   0.22   0.06   -0.05   -0.02   0.02
+KANDEMIR Ismail - KOLATA Suleyman                      240  50  74 116  65  51   0.64   0.45  -0.08   0.12    0.07    0.01   0.07
+HACKETT Jason - HACKETT Justin                         192  45  52  95  45  50   0.62   0.68   0.02  -0.16   -0.07    0.01   0.13
+GEORGE Julius Anthonius - ASBI Taufik Gautama          208  43  61 104  44  60   0.56  -0.07   0.11   0.13    0.10    0.06   0.24
+JITNGAMKUSOL Terasak - PLENGSAP Kridsadayut            192  41  51  99  39  60   0.56   0.43   0.08  -0.12    0.03    0.07   0.07
+MEDUSHEUSKI Henadzi - SOTNIKAU Andrej                  224  48  52 124  60  64   0.41   0.33  -0.11   0.00    0.08    0.08   0.02
+KARWUR Franky Steven - PANELEWEN Santje                160  37  33  90  37  53   0.40   0.20   0.00   0.01   -0.09    0.06   0.22
+GONTHA Leslie - BOJOH Jemmy                            176  41  41  93  51  42   0.36   0.37  -0.01   0.03   -0.08    0.03   0.02
+MALINOWSKI Artur - SANDQVIST Nicklas                   160  40  37  83  35  48   0.25   0.08   0.06   0.04   -0.06    0.09   0.05
+ANG-KAEW Pramoul - LIMSINSOPON Kirawat                 176  49  48  79  44  35   0.25   0.30  -0.18  -0.13    0.08    0.01   0.17
+OLANSKI Wojtek - VAINIKONIS Vytautas                   176  66  31  78  48  30   0.22  -0.01   0.02  -0.01    0.09   -0.02   0.15
+KARAMANLIS Philippos - PROTONOTARIOS Manolis           192  60  45  87  33  54   0.20   0.10  -0.04   0.11   -0.10   -0.03   0.17
+GHANEM Marwan - BARAKAT Sireen                         272  70  61 141  73  68   0.17   0.44   0.05  -0.12    0.01   -0.06  -0.14
+TUASON Carmen - VIROLA Romulo                          176  32  61  83  36  47   0.14   0.11   0.03   0.01    0.10   -0.16   0.06
+ZOTOS Loukas - SAPOUNAKIS Aris                         192  48  51  92  52  40   0.12   0.45  -0.06  -0.12    0.00   -0.02  -0.13
+BRIGHTLING Richard J - THOMSON Ian                     160  35  39  86  49  37   0.12   0.31  -0.07   0.07   -0.16    0.14  -0.16
+BOZEMPERGK Kostas - KAMINARIS Filaretos                160  36  43  81  40  41   0.09  -0.28   0.06   0.18   -0.11    0.09   0.16
+GRADOVSKY Oleg - VALFSON Mikhail                       208  59  50  99  46  53   0.04   0.05  -0.05   0.06    0.09    0.00  -0.11
+KITCHAKARN Patnarin - LEELASA-NGUAN Pornthep           176  44  45  87  48  39   0.03  -0.11   0.10   0.02   -0.03    0.04  -0.00
+BASALYGA Vadim - RAMANOVICH Siarhei                    112  21  32  58  32  26   0.03  -0.46   0.13   0.30    0.13   -0.10   0.02
+GILL Peter - RICHMAN Bobby                             208  43  70  95  43  52   0.02  -0.04   0.12   0.01   -0.02   -0.06   0.00
+ABOU CHANAB Bachar - SASSELLI Marco                    192  41  42 109  61  48   0.01  -0.13   0.18  -0.02   -0.00    0.00  -0.02
+EIDI Michel - HARFOUCHE Gabriel                        224 107  12 103  10  93  -0.07   0.03  -0.11   0.01    0.00   -0.08   0.07
+JOVANOVIC Dejan - KOLDZIC Zoran                        272  79  52 140  70  70  -0.09  -0.12  -0.01   0.09    0.10   -0.02  -0.13
+SAULIS Alvydas - VAINIKONIS Erikas                     176  35  49  92  45  47  -0.10  -0.30   0.22  -0.22    0.12    0.07   0.02
+KOKSOY Enver - OZGUL Levent                            128  27  38  63  23  40  -0.10  -0.00  -0.12   0.06    0.02   -0.04  -0.03
+COMPTON Chris - HAMMAN Bob                             144  35  35  73  41  32  -0.17  -0.61   0.19   0.11   -0.03    0.10   0.06
+ZIVKOVIC Gojko - MOSSOP David                          176  45  56  74  41  33  -0.19  -0.35   0.04  -0.03    0.01    0.06   0.07
+GROSSET Philippe - TOULET Sandra                       176  41  32 103  53  50  -0.26  -0.30   0.08  -0.01    0.00    0.02  -0.05
+SIMON Philippe - TOULET Patrice                        176  39  51  84  41  43  -0.26   0.40  -0.21  -0.15   -0.03    0.06  -0.33
+CHIDIAC Pierre - HACHEM Tony                           128  32  32  64  33  31  -0.28  -0.50  -0.04   0.31    0.09   -0.08  -0.06
+GHANEM Ghassan - HATTAR-GHANEM Nuha                    272  83  67 121  60  61  -0.30  -0.21   0.15  -0.05   -0.01   -0.03  -0.14
+KLINGER Ron - MULLAMPHY Matthew                        176  27  40 108  54  54  -0.36   0.04  -0.00  -0.26    0.09   -0.08  -0.16
+PERISIC Marko - TODOROVIC Nebojsa                      272  79  54 137  63  74  -0.37  -0.14  -0.15  -0.04    0.01   -0.05   0.01
+PASQUINI Paolo - SULTAN Perla                          208  47  53 107  66  41  -0.54  -0.44   0.07  -0.16    0.03   -0.01  -0.04
+AHMAD Mushir - MINWALLA Diniar                         272  71  81 120  58  62  -0.60   0.02  -0.25  -0.04   -0.04   -0.04  -0.25
+LA SPADA Olivier - MAGNUSSON Stephan                   160  40  41  79  34  45  -0.61  -0.43  -0.01   0.10   -0.08    0.01  -0.21
+DROUET Didier - MONDON Yves                            176  46  45  84  44  40  -0.74  -0.37  -0.04  -0.21    0.00   -0.02  -0.11
+DIEBOLD Zoraida - ROSEN Eduardo                        176  52  39  85  43  42  -1.14  -0.62   0.02  -0.15   -0.02   -0.09  -0.29
+JANKAUSKAS Arunas - POSKA Gediminas                    160  38  47  75  41  34  -1.20  -0.73  -0.12  -0.10   -0.02   -0.12  -0.12
+DANIEL George - DIKGANG Modisaotsile                   272  61  53 156  72  84  -1.39  -0.73  -0.08  -0.24    0.03   -0.07  -0.30
+MORGANTI Lillian - MORGANTI Ugo                        160  39  37  83  41  42  -1.63  -0.68  -0.22  -0.27   -0.01   -0.04  -0.42
+
+Players                                                No. Pl1 Pl2 Def  L1  L2   IMPs    Bid  Play1  Play2   Lead1   Lead2    Def
+CHIDIAC Pierre - HAMDAN Faycal                          64  12  22  30  11  19   1.47   0.38   0.18   0.82    0.02   -0.05   0.11
+FAYAD Mireille - HARFOUCHE Gabriel                      32  10   0  22   1  21   0.98  -0.03   0.64   0.00    0.00    0.14   0.24
+CARREON Ceferino - ANASTACIO Martin                     64  16  17  30  15  15  -0.03  -0.18   0.26   0.07    0.06   -0.15  -0.10
+FAYAD Mireille - HAMDAN Faycal                          80  14  19  45  23  22  -0.24  -0.05  -0.16   0.13    0.11   -0.12  -0.15
+REYES Vicente - VIROLA Romulo                           16   8   4   4   2   2  -0.27   0.09   0.07  -0.40   -0.02   -0.01  -0.01
+ANASTACIO Martin - REYES Vicente                        96  21  23  52  33  19  -0.44  -0.01  -0.04   0.10   -0.22    0.09  -0.37
+MAGNUSSON Stephan - SASSELLI Marco                      16   2   5   9   3   6  -0.46  -0.19   0.09  -0.29   -0.00   -0.22   0.15
+MONDON Yves - TOULET Patrice                            16   0   2  14   5   9  -0.49  -0.35   0.00   0.16   -0.02    0.14  -0.42
+CARREON Ceferino - QUIMSON Angeles                      96  25  23  48  23  25  -0.57  -0.74   0.04   0.06    0.02    0.07  -0.01
+SAULIS Alvydas - VAINIKONIS Vytautas                    16   5   1  10   3   7  -0.74  -0.68   0.57  -0.05   -0.07    0.40  -0.91
+QUIMSON Angeles - REYES Vicente                         80  17  25  38  15  23  -1.32  -0.87  -0.09  -0.16   -0.08   -0.09  -0.04
+HACHEM Tony - HAMDAN Faycal                             16   8   4   4   1   3  -1.49  -1.74   0.09   0.13    0.00   -0.06   0.09
+ANASTACIO Martin - QUIMSON Angeles                      16   2   2  12  10   2  -1.81  -1.49   0.01  -0.14    0.02    0.02  -0.22
+OLANSKI Wojtek - VAINIKONIS Erikas                      16   5   2   9   5   4  -2.21  -0.97  -0.42  -0.36   -0.08   -0.35  -0.02
+

@@ -1,0 +1,78 @@
+# This is the valet Makefile for Windows and the MinGW compiler.
+# It does assume a Unix-like setup for some commands,
+# but if you only want to call "make" with the default target,
+# you should be OK.
+
+# If your exact compiler name is not given here, change it.
+# CC		= mingw32-g++
+CC		= i686-w64-mingw32-g++
+
+CC_FLAGS	= -O3 -flto -fopenmp -mtune=generic
+
+# These flags are not turned on be default, but DDS should pass them.
+# Turn them on below.
+WARN_FLAGS	= 		\
+	-Wshadow 		\
+	-Wsign-conversion 	\
+	-pedantic -Wall -Wextra  \
+	-Wcast-align -Wcast-qual \
+	-Wctor-dtor-privacy 	\
+	-Wdisabled-optimization \
+	-Winit-self 		\
+	-Wlogical-op 		\
+	-Wmissing-declarations 	\
+	-Wmissing-include-dirs 	\
+	-Wnoexcept 		\
+	-Wold-style-cast 	\
+	-Woverloaded-virtual 	\
+	-Wredundant-decls 	\
+	-Wsign-promo 		\
+	-Wstrict-null-sentinel 	\
+	-Wstrict-overflow=1 	\
+	-Wswitch-default -Wundef \
+	-Werror 		\
+	-Wno-unused 		\
+	-Wno-unknown-pragmas 	\
+	-Wno-long-long		\
+	-Wno-format
+
+# Here you can turn on warnings.
+# CC_FULL_FLAGS	= $(CC_FLAGS)
+CC_FULL_FLAGS	= $(CC_FLAGS) $(WARN_FLAGS)
+
+SOURCE_FILES 	=		\
+        valet.cpp               \
+        args.cpp                \
+        files.cpp               \
+        parse.cpp               \
+        scoring.cpp             \
+        misc.cpp                \
+        Pairs.cpp               \
+        Hand.cpp                \
+        Scores.cpp
+
+O_FILES 	= $(subst .cpp,.o,$(SOURCE_FILES))
+
+valet:	$(O_FILES)
+	$(CC) $(LIB_FLAGS) $(CC_FULL_FLAGS) $(O_FILES) -o valet.exe
+
+%.o:	%.cpp
+	$(CC) $(CC_FULL_FLAGS) $(DDS_THR) -c $<
+
+depend:
+	makedepend -Y -- $(CC_FLAGS) -- $(SOURCE_FILES)
+
+clean:
+	rm -f $(O_FILES) valet.exe
+
+# DO NOT DELETE
+
+valet.o: cst.h args.h files.h scoring.h misc.h Pairs.h Hand.h Scores.h
+args.o: args.h cst.h
+files.o: files.h Pairs.h cst.h Hand.h parse.h
+parse.o: Pairs.h cst.h parse.h
+scoring.o: cst.h scoring.h
+misc.o: Pairs.h cst.h misc.h
+Pairs.o: cst.h Pairs.h
+Hand.o: cst.h Pairs.h Hand.h scoring.h
+Scores.o: Scores.h cst.h Pairs.h

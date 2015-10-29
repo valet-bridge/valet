@@ -1,0 +1,98 @@
+1|AHMED Jahangir
+2|AJANIA Nurdin
+3|APTEKER Alon
+4|ASKGAARD Michael
+5|ASSUMPCAO Pedro Paulo
+6|AUKEN Jens
+7|BHATT Krishnakant
+8|BILDE Morten
+9|BJARNARSON Gregers
+10|BOMPIS Marc
+11|BOROS Gejza
+12|BOSENBERG Christopher Henry
+13|BRENNER Diego
+14|BRICIU Marius
+15|BUTT Nauman
+16|CARROLL John
+17|CASTELLO BRANCO Marcelo
+18|CHAGAS Gabriel
+19|CHEONG Hong Mou
+20|CHRISTIANSEN Soren
+21|COLDEA Ionut
+22|COPE Tim
+23|DEMUY Vincent
+24|DUBOIN Giorgio
+25|EBER Neville
+26|FAIGENBAUM Albert
+27|FANTONI Fulvio
+28|FERGANI Kamel
+29|FIGUEIREDO Mauricio
+30|FITZPATRICK Alvin
+31|FOURCAUDOT Marc-Andre
+32|GARVEY Tommy
+33|GHIGHECI Ovidiu
+34|GOWER Craig
+35|HAMZARAJ Rasim
+36|HANLON Tom
+37|HANSEN Jorgen
+38|HENC Marian
+39|HOLMAN Glen
+40|HOWARD Joseph
+41|IONITA Marius
+42|ITO Yoichi
+43|JACOB Dan
+44|KAPO Kostandin
+45|KARPOV Maksim
+46|KOBAYASHI Yasushi
+47|KOISTINEN Kauko
+48|LAANEMAE Tiit
+49|LAI U Peng
+50|LAURIA Lorenzo
+51|LEBI Robert
+52|L'ECUYER Nicolas
+53|LEI Vincent
+54|LEIKOLA Juuso
+55|LESKELA Vesa
+56|LEVENKO Vassili
+57|LIAQAT Farrukh
+58|LOHAY Karol
+59|LUKS Leo
+60|McGANN Hugh
+61|MOHAMED Shamshad
+62|MOHAMMED Kalamazad
+63|MOKRAN Pavel
+64|MULTON Franck
+65|MUNKA Vladimir
+66|NABER Lauri
+67|NAQI Zia Hyder
+68|NARITA Hidenori
+69|NODA Hiroyuki
+70|NUNES Claudio
+71|O'BRIAIN Micheal
+72|O'BRIAIN Padraig
+73|OHTAKA Eiji
+74|PENG Gui Ping
+75|PERSAD Bobby
+76|PILON Dominique
+77|QUANTIN Jean-Christophe
+78|QURESHI Ahsan
+79|RAHIM Yasser
+80|ROSARIO Antonio Pedro do
+81|SEEPERSAD Mohan
+82|SEMENTA Antonio
+83|SESTER Sven
+84|SHAH Ashwin
+85|SHAH Kamal K
+86|SHAH Prafula
+87|SHARMA Rakesh
+88|SHEQI Gezim
+89|SUCHA Eva
+90|TOIVONEN Mikko
+91|TSANG Yeuk Chow
+92|VERSACE Alfredo
+93|VILLAS-BOAS Miguel
+94|XHORI Artan
+95|XHULI Armand
+96|XHULI Vjollca
+97|YOSHIDA Masaru
+98|ZIMMERMANN Pierre

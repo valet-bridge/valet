@@ -1,0 +1,62 @@
+Players                                                No. Pl1 Pl2 Def  L1  L2 Butler    Bid  Play1  Play2   Lead1   Lead2    Def
+BROWN Fiona - STOCKDALE Susan                          180  45  42  92  49  43   0.98   0.45   0.21   0.13    0.05    0.01   0.13
+ZOCHOWSKA Joanna - D'OVIDIO Catherine                  200  56  52  91  44  47   0.81   0.27   0.03   0.12    0.14    0.02   0.24
+TAL Dana - TAL Noga                                    280  66  61 153  73  80   0.74   0.36   0.11   0.04    0.03    0.03   0.17
+PASMAN Jet - SIMONS Anneke                             260  69  60 131  81  50   0.72   0.59   0.10   0.08   -0.00   -0.03  -0.01
+YAVAS Dilek - OYMEN Ozlem                              280  87  73 120  67  53   0.70   0.24   0.03   0.12    0.03    0.06   0.22
+KAZMUCHA Danuta - SAKOWSKA Natalia                     220  58  58 104  52  52   0.68   0.21   0.17   0.11    0.07    0.08   0.04
+DEKKERS Laura - MICHIELSEN Marion                      279  64  69 145  72  73   0.61   0.51  -0.10   0.06    0.02   -0.02   0.14
+ACAR Asli - ERKAN Berrak                               220  53  35 132  72  60   0.55   0.45   0.01   0.12   -0.08    0.08  -0.04
+WILLARD Sylvie - CRONIER Benedicte                     300  69  82 149  73  76   0.54   0.45   0.08  -0.08    0.05    0.04   0.00
+PAOLUZI Simonetta - SACCAVINI Ilaria                   258  73  61 124  62  62   0.50   0.48   0.02   0.13    0.02   -0.00  -0.16
+RIMSTEDT Sandra - SJOBERG Emma                         299  76  67 156  69  87   0.47   0.65  -0.17   0.08   -0.08    0.11  -0.12
+BREWIAK Grazyna - DUFRAT Katarzyna                     240  66  49 125  58  67   0.38   0.47  -0.09  -0.06    0.06    0.00   0.00
+DHONDY Heather - SENIOR Nevena                         280  55  92 132  63  69   0.35   0.10  -0.07   0.05    0.07    0.05   0.16
+BROCK Sally - SMITH Nicola                             260  74  54 131  58  73   0.33  -0.02  -0.00   0.14   -0.06    0.08   0.20
+BERTHEAU Kathrine - LARSSON Jessica                    240  55  59 126  70  56   0.33   0.17   0.11  -0.02   -0.01    0.05   0.04
+BEKKOUCHE Nadia - SCHALTZ Dorthe                       320  74  80 165  74  91   0.30   0.12   0.12   0.01    0.04    0.02  -0.02
+KRIFTNER Susanne - SMEDEREVAC Jovanka                  359  71 105 181  77 104   0.29  -0.08   0.06   0.24    0.00   -0.00   0.07
+CARCASSONNE-LABAERE Valerie - DEWASME Isabelle         280  74  54 152  72  80   0.29   0.23  -0.11   0.02    0.06    0.00   0.08
+VAN ZWOL Wietske - ARNOLDS Carla                       180  47  50  82  39  43   0.27   0.14   0.06   0.17    0.12   -0.12  -0.09
+HOULBERG Anne-Sofie - MADSEN Christina Lund            220  61  64  95  42  53   0.25   0.07   0.06   0.09    0.00    0.06  -0.02
+McGOWAN Elizabeth (Liz) - PUNCH Sam                    280  76  75 129  63  66   0.24   0.16   0.13  -0.11    0.03    0.03   0.01
+GAVIARD Daniele - REESS Vanessa                        220  59  56 105  53  52   0.17   0.23  -0.13   0.06   -0.01   -0.06   0.07
+ZMUDA Justyna - TACZEWSKA Joanna                       260  67  55 137  67  70   0.15   0.23   0.01   0.06   -0.03   -0.02  -0.10
+WISEMAN Yvonne - McQUAKER Fiona                        240  58  50 131  73  58   0.12   0.08   0.11   0.05   -0.01   -0.05  -0.06
+BOHNSACK Susanne - KHANUKOVA Yevgeniya                 160  38  35  87  34  53   0.10   0.45  -0.07   0.05   -0.16   -0.18   0.01
+WEIGKRICHT Terry - FISCHER Doris                       280  67  69 143  75  68   0.10  -0.08  -0.02   0.06   -0.01    0.03   0.11
+FUGLESTAD Ann Karin - HARDING Marianne                 300  82  79 137  67  70   0.09  -0.01  -0.02   0.14   -0.04   -0.02   0.04
+NOSACKI Michal - SAADA Nathalie                        180  47  43  90  42  48   0.07  -0.25   0.27  -0.05   -0.02    0.05   0.09
+TOPIOL Yael - DE GRAVE Greet                           140  36  31  72  34  38   0.04   0.16  -0.01   0.09    0.06   -0.04  -0.22
+JOHANSSON Marie - ANDERSSON Pia                        180  49  40  91  39  52  -0.01  -0.18   0.06  -0.05    0.10    0.13  -0.08
+VIST Gunn Tove - HOLMOY Stine                          200  46  48 105  50  55  -0.03  -0.02   0.01   0.12    0.00   -0.01  -0.14
+FERLAZZO Caterina - MANARA Gabriella                   219  44  66 108  56  52  -0.05   0.08   0.10  -0.11   -0.04   -0.00  -0.07
+LEVIT-PORAT Ruth - POPLILOV Matilda                    260  56  80 123  66  57  -0.07   0.15   0.08  -0.14   -0.08   -0.05  -0.02
+ECONOMOU Liana - KANELLOPOULOU Despina                 280  65  69 145  73  72  -0.09   0.10  -0.04  -0.09    0.03   -0.11   0.02
+BROGELAND Tonje Aasand - SVENDSEN Tone Torkelsen       220  52  53 115  74  41  -0.16  -0.27   0.17   0.07   -0.04   -0.00  -0.08
+GLADIATOR Anne - ALBERTI Anja                          280  67  65 147  66  81  -0.19  -0.15   0.16   0.00   -0.04   -0.10  -0.07
+ADUT Vera - ATALAY Belis                               220  54  56 109  55  54  -0.20  -0.17   0.13  -0.08   -0.03   -0.01  -0.04
+GEORGIEVA Draga - PETROVA Valentina                    239  56  58 125  65  60  -0.29  -0.10   0.06  -0.08   -0.11   -0.01  -0.05
+KYRIAKIDOU Antonia (Nitsa) - LAMBRINOU Sophie          260  31 104 125 101  24  -0.30  -0.13  -0.01  -0.07    0.01   -0.01  -0.09
+ADAMSON Sheila - SYMONS Anne                           200  53  43 103  48  55  -0.31   0.11  -0.16  -0.15   -0.06   -0.04  -0.01
+TOUTENEL Els - DOBBELS Tine                            300  75  82 143  68  75  -0.32   0.10  -0.15  -0.14    0.00   -0.06  -0.08
+GIAMPIETRO Cristina - NEHMERT Pony Beate               280  63  75 142  60  82  -0.33  -0.19  -0.18   0.02   -0.04    0.02   0.04
+GOLIN Cristina - OLIVIERI Gabriella                    240  55  59 125  58  67  -0.33  -0.31  -0.05   0.03   -0.01   -0.08   0.10
+VETRUSHKOVA-KOSTOVA Velina - STOYANOVA Dilyanka        240  72  56 111  58  53  -0.38  -0.22   0.02   0.01    0.07   -0.06  -0.19
+CRIADO DEL RAY Isabel - MURUAGA Angeles                260  58  76 126  62  64  -0.38  -0.41  -0.14   0.10    0.16   -0.02  -0.06
+TAUBE Aire - ORAS Maarja                               260  67  70 123  63  60  -0.48  -0.51  -0.01  -0.07   -0.02    0.11   0.02
+VIDENOVA Karka - ANGELOVA Maria                        240  47  65 128  64  64  -0.52  -0.41  -0.00  -0.09    0.08   -0.04  -0.05
+SARV Pihel - SEPP Tuul                                 240  66  55 118  54  64  -0.52  -0.13   0.02  -0.14   -0.04   -0.04  -0.20
+HAND Valerie - O'KEEFFE Aileen                         260  66  54 138  52  86  -0.57  -0.39   0.12  -0.01   -0.04    0.03  -0.28
+VELONI Anastasia - MAMIDAKI Lina                       180  39  44  97  60  37  -0.68  -0.47  -0.04   0.23    0.04   -0.06  -0.38
+GARCIA CAMBON Manola - TAPIAS Paz                      220  73  50  97  48  49  -0.81  -0.74  -0.05  -0.08    0.06   -0.03   0.02
+JOYCE Emer - KENNY Joan                                240  58  65 116  54  62  -0.84  -0.57   0.09  -0.09   -0.00   -0.08  -0.19
+BARNES Marta - LEON Pilar                              220  73  54  92  55  37  -0.91  -0.53  -0.06  -0.23   -0.05   -0.12   0.08
+VIILUP Triinu - PIIBELEHT Ines                         219  61  54 104  50  54  -0.94  -0.40  -0.24   0.05   -0.00   -0.14  -0.20
+BILDE Lone - RASMUSSEN Helle                           180  54  34  92  49  43  -1.06  -0.73   0.01  -0.25   -0.06   -0.06   0.03
+DOWLING-LONG Hilary - PENDER Gilda                     220  52  58 109  43  66  -1.15  -0.75  -0.01  -0.13   -0.05   -0.07  -0.14
+
+Players                                                No. Pl1 Pl2 Def  L1  L2 Butler    Bid  Play1  Play2   Lead1   Lead2    Def
+ANGEBRANDT Dietlind - PICHLER Eva                       80  24  17  39  14  25  -0.34  -0.41  -0.06  -0.04    0.08    0.17  -0.07
+BARNES Marta - TAPIAS Paz                               20   8   4   8   4   4  -2.00  -1.33  -0.24  -0.22   -0.05   -0.16   0.01
+
