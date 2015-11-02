@@ -28,5 +28,8 @@ void GetVul(
 int CalculateIMPs(
   int rawScore);
 
+int CalculateMPs(
+  int rawScore);
+
 #endif
 

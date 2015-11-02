@@ -24,6 +24,9 @@ using namespace std;
 extern OptionsType options;
 extern Pairs pairs;
 
+typedef int (*fptrType)(int rawScore);
+fptrType fptr;
+
 
 //////////////////////////////////////////////////
 //                                              //
@@ -163,14 +166,7 @@ void Hand::SetPairSwaps(
 }
 
 
-//////////////////////////////////////////////////
-//                                              //
-// Functions common to datum and IAF scoring    //
-//                                              //
-//////////////////////////////////////////////////
-
-
-void Hand::SetPassoutIMPs(
+void Hand::SetPassout(
   const ResultType& res,
   const float totalIMPs,
   ValetEntryType& entryNS,
@@ -199,7 +195,7 @@ void Hand::SetPassoutIMPs(
 }
 
 
-void Hand::SetPlayResultIMPs(
+void Hand::SetPlayResult(
   const ResultType& res, 
   const float totalIMPs, 
   const float bidIMPs, 
@@ -330,17 +326,16 @@ float Hand::GetDatumBidding(
 
 //////////////////////////////////////////////////
 //                                              //
-// Functions only for IAF scoring               //
+// Functions only for IAF scoring and MPs       //
 //                                              //
 //////////////////////////////////////////////////
 
 
-float Hand::GetIAFOverall(
+float Hand::GetOverallScore(
   const vector<int> rawScore,
   const int score)
 {
-  // This is used for IMPs-across-the-field scoring.
-  // For a given score, we calculate the average number of IMPs
+  // For a given score, we calculate the average number of IMPs/MPs
   // against all the other pairs.  If we've seen the score before,
   // we use a cached value.
 
@@ -348,7 +343,7 @@ float Hand::GetIAFOverall(
   if (it != scoreLookup.end())
     return it->second;
 
-  float IMPs = 0;
+  float result = 0;
   unsigned count = 0;
   bool seenSelfFlag = false;
 
@@ -360,26 +355,26 @@ float Hand::GetIAFOverall(
       seenSelfFlag = true;
       continue;
     }
-    IMPs += static_cast<float>(CalculateIMPs(score - rawScore[i]));
+    result += static_cast<float>((*fptr)(score - rawScore[i]));
     count++;
   }
 
   assert(count > 0);
-  return (scoreLookup[score] = IMPs / count);
+  return (scoreLookup[score] = result / count);
 }
 
 
-float Hand::GetIAFBidding(
+float Hand::GetBiddingScore(
   const vector<int> rawScore,
   const unsigned no,
   const unsigned vul,
   const unsigned resMatrix[5][14],
-  const float IAFs)
+  const float overallResult)
 {
   // This is analogous to GetDatumBidding for Butler scoring.
   // We compare to all other scores, not to the datum.
 
-  float bidIAF = 0.;
+  float bidResult = 0.;
   unsigned count = 0;
   ResultType resArtif = results[no];
   unsigned d = resArtif.denom;
@@ -394,186 +389,17 @@ float Hand::GetIAFBidding(
     resArtif.tricks = t;
     int artifScore = CalculateRawScore(resArtif, vul, t);
 
-    bidIAF += resMatrix[d][t] * GetIAFOverall(rawScore, artifScore);
+    bidResult +=
+      resMatrix[d][t] * Hand::GetOverallScore(rawScore, artifScore);
     count += resMatrix[d][t];
   }
 
   // Special case:  If we're the only ones to play in a denomination,
   // we somewhat arbitrarily assign the full score to the bidding.
   if (count == 0)
-    return IAFs;
+    return overallResult;
   else
-    return bidIAF / count;
-}
-
-
-//////////////////////////////////////////////////
-//                                              //
-// Functions only for matchpoint scoring        //
-//                                              //
-//////////////////////////////////////////////////
-
-
-void Hand::SetPassoutMatchpoints(
-  const ResultType& res,
-  const float totalMPs,
-  ValetEntryType& entryNS,
-  ValetEntryType& entryEW)
-{
-  // Pass-out.
-  int pairNoNS = pairs.GetPairNumber(res.north, res.south);
-  assert(pairNoNS != 0);
-  if (pairNoNS < 0)
-    pairNoNS = -pairNoNS; // Doesn't matter for pass-out
-
-  int pairNoEW = pairs.GetPairNumber(res.east, res.west);
-  assert(pairNoEW != 0);
-  if (pairNoEW < 0)
-    pairNoEW = -pairNoEW; // Doesn't matter for pass-out
-
-  entryNS.pairNo = static_cast<unsigned>(pairNoNS);
-  entryNS.oppNo = static_cast<unsigned>(pairNoEW);
-  entryNS.overall = totalMPs;
-  entryNS.bidScore = totalMPs;
-
-  entryEW.pairNo = static_cast<unsigned>(pairNoEW);
-  entryEW.oppNo = static_cast<unsigned>(pairNoNS);
-  entryEW.overall = 100.f - totalMPs;
-  entryEW.bidScore = 100.f - totalMPs;
-}
-
-
-void Hand::SetPlayResultMatchpoints(
-  const ResultType& res, 
-  const float totalMPs, 
-  const float bidMPs, 
-  const float leadMPs, 
-  ValetEntryType& entryNS, 
-  ValetEntryType& entryEW)
-{
-  unsigned decl, leader;
-  Hand::SetPairSwaps(res, entryNS, entryEW, decl, leader);
-
-  entryNS.overall = totalMPs;
-  entryNS.bidScore = bidMPs;
-  entryEW.overall = 100.f - totalMPs;
-  entryEW.bidScore = 100.f - bidMPs;
-
-  if (res.declarer == VALET_NORTH || res.declarer == VALET_SOUTH)
-  {
-    // Average of bid score and play score is overall score.
-
-    entryNS.declFlag[decl] = true;
-    entryNS.playScore[decl] = 2*totalMPs - bidMPs;
-
-    entryEW.defFlag = true;
-    entryEW.leadFlag[leader] = true;
-
-    if (options.leadFlag && res.leadDenom > 0)
-    {
-      // leadMPs are seen from NS's side up to here.
-      // Average of lead score and defense score is overall score.
-
-      entryEW.leadScore[leader] = 100.f - leadMPs;
-      entryEW.defScore = 100.f - 2 * entryNS.playScore[decl] + leadMPs;
-    }
-    else
-      entryEW.defScore = 100.f - entryNS.playScore[decl];
-  }
-  else
-  {
-    entryEW.declFlag[decl] = true;
-    entryEW.playScore[decl] = bidMPs - 2*totalMPs;
-
-    entryNS.defFlag = true;
-    entryNS.leadFlag[leader] = true;
-
-    if (options.leadFlag && res.leadDenom > 0)
-    {
-      // leadMPs are seen from NS's side up to here.
-      entryNS.leadScore[leader] = leadMPs;
-      entryNS.defScore = 200.f - 2 * entryEW.playScore[decl] - leadMPs;
-    }
-    else
-      entryNS.defScore = 100.f - entryEW.playScore[decl];
-  }
-}
-
-
-float Hand::GetMPOverall(
-  const vector<int> rawScore,
-  const int score)
-{
-  // This is used for matchpoint scoring.
-  // For a given score, we calculate the average number of MPs
-  // against all the other pairs.  If we've seen the score before,
-  // we use a cached value.
-
-  map<int, float>::iterator it = scoreLookup.find(score);
-  if (it != scoreLookup.end())
-    return it->second;
-
-  float MPs = 0;
-  unsigned count = 0;
-  bool seenSelfFlag = false;
-
-  for (unsigned i = 0; i < numEntries; i++)
-  {
-    // Skip own score.
-    if (! seenSelfFlag && rawScore[i] == score)
-    {
-      seenSelfFlag = true;
-      continue;
-    }
-
-    if (score > rawScore[i])
-      MPs += 1.;
-    else if (score == rawScore[i])
-      MPs += 0.5;
-    count++;
-  }
-
-  assert(count > 0);
-  return (scoreLookup[score] = (100.f * MPs) / count);
-}
-
-
-float Hand::GetMPBidding(
-  const vector<int> rawScore,
-  const unsigned no,
-  const unsigned vul,
-  const unsigned resMatrix[5][14],
-  const float MPs)
-{
-  // This is analogous to GetIAFBidding for IAF scoring.
-  // We compare to all other scores, not to the datum.
-
-  float bidMP = 0.;
-  unsigned count = 0;
-  ResultType resArtif = results[no];
-  unsigned d = resArtif.denom;
-  for (unsigned t = 0; t <= 13; t++)
-  {
-    if (resMatrix[d][t] == 0)
-      continue;
-
-    // Make a synthetic result of our contract with different
-    // declarers (including ourselves, but that scores 0).
-
-    resArtif.tricks = t;
-    int artifScore = CalculateRawScore(resArtif, vul, t);
-
-    bidMP += resMatrix[d][t] * GetMPOverall(rawScore, artifScore);
-    count += resMatrix[d][t];
-  }
-
-  // Special case:  If we're the only ones to play in a denomination,
-  // we somewhat arbitrarily assign the full score to the bidding.
-  if (count == 0)
-    return MPs;
-  else
-    return bidMP / count;
-
+    return bidResult / count;
 }
 
 
@@ -635,7 +461,7 @@ vector<ValetEntryType> Hand::CalculateScores()
         CalculateIMPs(rawScore[i] - datum));
 
       if (res.level == 0)
-        Hand::SetPassoutIMPs(res, butlerIMPs, entryNS, entryEW);
+        Hand::SetPassout(res, butlerIMPs, entryNS, entryEW);
       else
       {
         bidIMPs = GetDatumBidding(res, vulList[i], 
@@ -650,13 +476,20 @@ vector<ValetEntryType> Hand::CalculateScores()
         else
           leadIMPs = 0.f;
 
-        Hand::SetPlayResultIMPs(res, butlerIMPs, bidIMPs, leadIMPs,
+        Hand::SetPlayResult(res, butlerIMPs, bidIMPs, leadIMPs,
           entryNS, entryEW);
       }
     }
   }
-  else if (options.valet == VALET_IMPS_ACROSS_FIELD)
+  else
   {
+    if (options.valet == VALET_IMPS_ACROSS_FIELD)
+      fptr = &CalculateIMPs;
+    else if (options.valet == VALET_MATCHPOINTS)
+      fptr = &CalculateMPs;
+    else
+     assert(false);
+
     scoreLookup.clear();
     float bidIAF, bidLeadIAF, leadIAF = 0.f;
 
@@ -669,68 +502,28 @@ vector<ValetEntryType> Hand::CalculateScores()
 
       const ResultType& res = results[i];
 
-      float IAFs = Hand::GetIAFOverall(rawScore, rawScore[i]);
+      float IAFs = Hand::GetOverallScore(rawScore, rawScore[i]);
 
       if (res.level == 0)
-        Hand::SetPassoutIMPs(res, IAFs, entryNS, entryEW);
+        Hand::SetPassout(res, IAFs, entryNS, entryEW);
       else
       {
-        bidIAF = GetIAFBidding(rawScore, i, vulList[i], 
+        bidIAF = GetBiddingScore(rawScore, i, vulList[i], 
           resDeclMatrix[res.declarer], IAFs);
 
         if (options.leadFlag && res.leadRank > 0)
         {
-          bidLeadIAF = GetIAFBidding(rawScore, i, vulList[i], 
+          bidLeadIAF = GetBiddingScore(rawScore, i, vulList[i], 
             resDeclLeadMatrix[res.declarer][res.leadDenom], IAFs);
           leadIAF = bidLeadIAF - bidIAF;
         }
         else
           leadIAF = 0.f;
 
-        Hand::SetPlayResultIMPs(res, IAFs, bidIAF, leadIAF,
-          entryNS, entryEW);
+        Hand::SetPlayResult(res, IAFs, bidIAF, leadIAF, entryNS, entryEW);
       }
     }
   }
-  else if (options.valet == VALET_MATCHPOINTS)
-  {
-    scoreLookup.clear();
-    float bidMP, bidLeadMP, leadMP = 0.f;
-
-    for (unsigned i = 0; i < numEntries; i++)
-    {
-      ValetEntryType& entryNS = entries[vno++];
-      ValetEntryType& entryEW = entries[vno++];
-      Hand::ResetValetEntry(entryNS);
-      Hand::ResetValetEntry(entryEW);
-
-      const ResultType& res = results[i];
-
-      float MPs = Hand::GetMPOverall(rawScore, rawScore[i]);
-
-      if (res.level == 0)
-        Hand::SetPassoutMatchpoints(res, MPs, entryNS, entryEW);
-      else
-      {
-        bidMP = GetMPBidding(rawScore, i, vulList[i], 
-          resDeclMatrix[res.declarer], MPs);
-
-        if (options.leadFlag && res.leadRank > 0)
-        {
-          bidLeadMP = GetMPBidding(rawScore, i, vulList[i], 
-            resDeclLeadMatrix[res.declarer][res.leadDenom], MPs);
-          leadMP = bidLeadMP - bidMP;
-        }
-        else
-          leadMP = 0.f;
-
-        Hand::SetPlayResultMatchpoints(res, MPs, bidMP, leadMP,
-          entryNS, entryEW);
-      }
-    }
-  }
-  else
-    assert(false);
 
   return entries;
 }

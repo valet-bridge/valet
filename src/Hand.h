@@ -47,35 +47,18 @@ class Hand
       const unsigned resMatrix[5][14],
       const int datum);
 
-    float GetIAFOverall(
+    float GetOverallScore(
       const vector<int> rawScore,
       const int score);
 
-    float GetIAFBidding(
+    float GetBiddingScore(
       const vector<int> rawScore,
       const unsigned no,
       const unsigned vul,
       const unsigned resMatrix[5][14],
-      float IAFs);
+      float overallResult);
       
-    float GetMPOverall(
-      const vector<int> rawScore,
-      const int score);
-
-    float GetMPBidding(
-      const vector<int> rawScore,
-      const unsigned no,
-      const unsigned vul,
-      const unsigned resMatrix[5][14],
-      float IAFs);
-      
-    void SetPassoutIMPs(
-      const ResultType& res,
-      const float totalIMPs,
-      ValetEntryType& entryNS,
-      ValetEntryType& entryEW);
-
-    void SetPassoutMatchpoints(
+    void SetPassout(
       const ResultType& res,
       const float totalIMPs,
       ValetEntryType& entryNS,
@@ -88,7 +71,7 @@ class Hand
       unsigned& decl,
       unsigned& leader);
 
-    void SetPlayResultIMPs(
+    void SetPlayResult(
       const ResultType& res,
       const float totalIMPs,
       const float bidIMPs,
@@ -96,15 +79,6 @@ class Hand
       ValetEntryType& entryNS,
       ValetEntryType& entryEW);
       
-    void SetPlayResultMatchpoints(
-      const ResultType& res,
-      const float totalMPs,
-      const float bidMPs,
-      const float leadMPs,
-      ValetEntryType& entryNS,
-      ValetEntryType& entryEW);
-      
-
 
   public:
 

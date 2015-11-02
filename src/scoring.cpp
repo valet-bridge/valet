@@ -258,3 +258,13 @@ int CalculateIMPs(
   return sign * static_cast<int>(IMPlookup[v/10 + 1]);
 }
 
+
+int CalculateMPs(
+  int rawScore)
+{
+  if (rawScore == 0)
+    return 0;
+  else
+    return (rawScore > 0 ? 1 : -1);
+}
+

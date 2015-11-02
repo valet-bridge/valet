@@ -157,13 +157,27 @@ void Scores::Normalize()
     if (c.numHands == 0)
       return;
 
-    c.overall = c.overallCum / c.numHands;
-    c.bid = c.bidCum / c.numHands;
-    c.play1 = c.play1Cum / c.numHands;
-    c.play2 = c.play2Cum / c.numHands;
-    c.lead1 = c.lead1Cum / c.numHands;
-    c.lead2 = c.lead2Cum / c.numHands;
-    c.def = c.defCum / c.numHands;
+    if (options.valet == VALET_MATCHPOINTS)
+    {
+      // Convert scale from -1 .. +1 to 0 .. 100%.
+      c.overall = 100.f * (c.overallCum + c.numHands) / (2.f * c.numHands);
+      c.bid = 100.f * (c.bidCum + c.numHands) / (2.f * c.numHands);
+      c.play1 = 100.f * (c.play1Cum + c.numHands) / (2.f * c.numHands);
+      c.play2 = 100.f * (c.play2Cum + c.numHands) / (2.f * c.numHands);
+      c.lead1 = 100.f * (c.lead1Cum + c.numHands) / (2.f * c.numHands);
+      c.lead2 = 100.f * (c.lead2Cum + c.numHands) / (2.f * c.numHands);
+      c.def = 100.f * (c.defCum + c.numHands) / (2.f * c.numHands);
+    }
+    else
+    {
+      c.overall = c.overallCum / c.numHands;
+      c.bid = c.bidCum / c.numHands;
+      c.play1 = c.play1Cum / c.numHands;
+      c.play2 = c.play2Cum / c.numHands;
+      c.lead1 = c.lead1Cum / c.numHands;
+      c.lead2 = c.lead2Cum / c.numHands;
+      c.def = c.defCum / c.numHands;
+    }
 
     if (options.adjustForOpps)
     {
