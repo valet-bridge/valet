@@ -91,7 +91,7 @@ int Pairs::GetPairNumber(
   const string tag1,
   const string tag2)
 {
-  if (! TagExists(tag1) || ! TagExists(tag2) || tag1 == tag2)
+  if (! TagExists(tag1) || ! TagExists(tag2))
     return 0;
 
   int retval;
@@ -124,7 +124,7 @@ string Pairs::GetPairName(
   const string tag1,
   const string tag2)
 {
-  if (! TagExists(tag1) || ! TagExists(tag2) || tag1 == tag2)
+  if (! TagExists(tag1) || ! TagExists(tag2))
     return 0;
 
   if (tag1 < tag2)
