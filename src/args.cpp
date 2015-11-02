@@ -247,14 +247,22 @@ bool ParseRound()
     return false;
 
   char str1[8], str2[8];
+#if (! defined_MSC_VER || _MSC_VER < 1400)
   strncpy(str1, stmp.c_str(), pos);
+#else
+  strncpy_s(str1, stmp.c_str(), pos);
+#endif
   str1[pos] = '\0';
   if ((m = atoi(str1)) <= 0)
     return false;
   options.roundFirst = static_cast<unsigned>(m);
 
   stmp.erase(0, pos+1);
+#if (! defined_MSC_VER || _MSC_VER < 1400)
   strncpy(str2, stmp.c_str(), stmp.size());
+#else
+  strncpy_s(str2, stmp.c_str(), stmp.size());
+#endif
   str2[stmp.size()] = '\0';
   if ((m = atoi(str2)) <= 0)
     return false;
