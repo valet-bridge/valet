@@ -12,11 +12,20 @@
 
 #include <assert.h>
 
+#include "valet.h"
 #include "cst.h"
 #include "scoring.h"
 
 using namespace std;
 
+
+// Map denomination to order 0, 1, 2, 3, 4.
+// The denominations are in the order S, H, D, C, N (as in DDS).
+
+const unsigned DenomToOrder[5] =
+{
+  3, 2, 1, 0, 4
+};
 
 // First index: 0 nonvul, 1 vul. Second index: tricks down
 const int DoubledTricks[2][14] =
@@ -188,7 +197,8 @@ int CalculateRawScore(
   }
   else
   {
-    unsigned contractNo = 5 * (res.level-1) + res.denom;
+    unsigned denomOrder = DenomToOrder[res.denom];
+    unsigned contractNo = 5 * (res.level-1) + denomOrder;
     unsigned baseScore, adder = 0;
     switch(res.multiplier)
     {
@@ -197,7 +207,7 @@ int CalculateRawScore(
           ContractScores[contractNo][vul]);
 
         if (delta > 0)
-          adder = static_cast<unsigned>(delta * Overtricks[res.denom]);
+          adder = static_cast<unsigned>(delta * Overtricks[denomOrder]);
         break;
 
       case VALET_DOUBLED:

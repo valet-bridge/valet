@@ -59,10 +59,10 @@ clean:
 
 valet.obj: cst.h args.h files.h scoring.h misc.h Pairs.h Hand.h Scores.h
 args.obj: args.h cst.h
-files.obj: files.h Pairs.h cst.h Hand.h parse.h
-parse.obj: Pairs.h cst.h parse.h
-scoring.obj: cst.h scoring.h
+files.obj: files.h Pairs.h cst.h Hand.h parse.h misc.h
+parse.obj: Pairs.h cst.h parse.h valet.h
+scoring.obj: valet.h cst.h scoring.h
 misc.obj: Pairs.h cst.h misc.h
 Pairs.obj: cst.h Pairs.h
-Hand.obj: cst.h Pairs.h Hand.h scoring.h
+Hand.obj: valet.h cst.h Pairs.h Hand.h scoring.h
 Scores.obj: Scores.h cst.h Pairs.h

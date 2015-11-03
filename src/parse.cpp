@@ -17,6 +17,7 @@
 
 #include "Pairs.h"
 #include "parse.h"
+#include "valet.h"
 #include "cst.h"
 
 using namespace std;

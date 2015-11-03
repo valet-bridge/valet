@@ -16,6 +16,7 @@
 
 using namespace std;
 
+#include "valet.h"
 #include "cst.h"
 #include "Pairs.h"
 #include "Hand.h"

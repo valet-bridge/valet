@@ -11,24 +11,6 @@
 
 #include <string>
 
-#define VALET_NORTH 0
-#define VALET_EAST 1
-#define VALET_SOUTH 2
-#define VALET_WEST 3
-
-#define VALET_CLUBS 0
-#define VALET_DIAMONDS 1
-#define VALET_HEARTS 2
-#define VALET_SPADES 3
-#define VALET_NOTRUMP 4
-
-#define VALET_UNDOUBLED 0
-#define VALET_DOUBLED 1
-#define VALET_REDOUBLED 2
-
-#define VALET_NOT_VUL 0
-#define VALET_VUL 1
-
 
 const char ValetPositions[4][6] =
 {
@@ -37,7 +19,7 @@ const char ValetPositions[4][6] =
 
 const char ValetDenoms[5][9] =
 {
-  "Clubs", "Diamonds", "Hearts", "Spades", "Notrump"
+  "Spades", "Hearts", "Diamonds", "Clubs", "Notrump"
 };
 
 const char ValetMultipliers[3][3] =
