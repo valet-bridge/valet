@@ -15,7 +15,6 @@
 
 using namespace std;
 
-#include "cst.h"
 #include "Pairs.h"
 
 #define PAIRS_CHUNK_SIZE 32
@@ -37,7 +36,9 @@ void Pairs::Reset()
   tagToPlayerName.clear();
   playersToPairNo.clear();
   pairNoToPairName.clear();
+  pairNoToPairTags.clear();
   pairNoToPairName.resize(PAIRS_CHUNK_SIZE);
+  pairNoToPairTags.resize(PAIRS_CHUNK_SIZE);
   numPairs = 0;
   listNo = PAIRS_CHUNK_SIZE;
 }
@@ -60,7 +61,6 @@ bool Pairs::AddPlayer(
     return false;
   else
   {
-    
     tagToPlayerName[tag] = name;
     return true;
   }
@@ -107,9 +107,12 @@ int Pairs::GetPairNumber(
       unsigned numNewChunks = (numPairs / PAIRS_CHUNK_SIZE) + 1;
       listNo = numNewChunks * PAIRS_CHUNK_SIZE;
       pairNoToPairName.resize(listNo);
+      pairNoToPairTags.resize(listNo);
     }
     playersToPairNo[tag] = numPairs;
     pairNoToPairName[numPairs] = Pairs::GetPairName(tag1, tag2);
+    pairNoToPairTags[numPairs].tag1 = tag1;
+    pairNoToPairTags[numPairs].tag2 = tag2;
     retval = static_cast<int>(numPairs);
   }
 
@@ -149,6 +152,17 @@ string Pairs::GetPairName(
 {
   assert(pno < listNo);
   return pairNoToPairName[pno];
+}
+
+
+void Pairs::GetPairTags(
+  const unsigned pno,
+  string& tag1,
+  string& tag2)
+{
+  assert(pno > 0);
+  tag1 = pairNoToPairTags[pno].tag1;
+  tag2 = pairNoToPairTags[pno].tag2;
 }
 
 

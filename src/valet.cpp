@@ -25,15 +25,16 @@ using namespace std;
 
 
 OptionsType options;
-
 typedef map<string, Hand>::iterator it_type;
 map<string, Hand> handList;
 Pairs pairs;
 Scores scores;
+ErrorType error;
 
 
 int main(int argc, char * argv[])
 {
+  error.flag = false;
   ReadArgs(argc, argv);
   SetTables();
 

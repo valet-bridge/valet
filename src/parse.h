@@ -9,12 +9,21 @@
 #ifndef VALET_PARSE_H
 #define VALET_PARSE_H
 
+#include <string>
 #include "cst.h"
 
-bool LineToResult(
-  const std::vector<std::string> tokens,
+template <class ContainerT>
+
+void tokenize(
+  const std::string& str,
+  ContainerT& tokens,
+  const std::string& delimiters);
+
+int ParseScoreLine(
+  const std::string line,
   ResultType& res,
   unsigned& rno,
-  unsigned& bno);
+  unsigned& bno,
+  bool skipNameCheck = false);
 
 #endif

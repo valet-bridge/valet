@@ -17,7 +17,6 @@
 using namespace std;
 
 #include "valet.h"
-#include "cst.h"
 #include "Pairs.h"
 #include "Hand.h"
 #include "scoring.h"
@@ -56,11 +55,15 @@ void Hand::Reset()
 }
 
 
-void Hand::SetBoardNumber(
+int Hand::SetBoardNumber(
   const unsigned n)
 {
+  if (boardNo > 0 && n != boardNo)
+    return RETURN_BOARD_NUMBER_CHANGE;
+
   boardNo = n;
   GetVul(boardNo, vulNS, vulEW);
+  return RETURN_NO_FAULT;
 }
 
 

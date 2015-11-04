@@ -10,10 +10,12 @@
 #define VALET_MISC_H
 
 void PrintResult(
-  const ResultType& res);
+  const ResultType& res,
+  std::ostream& oss = std::cout);
 
 void PrintEntry(
-  const ValetEntryType& entry);
+  const ValetEntryType& entry,
+  std::ostream& oss = std::cout);
 
 #endif
 

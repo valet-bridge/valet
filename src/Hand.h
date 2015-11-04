@@ -90,7 +90,7 @@ class Hand
 
     unsigned GetNumEntries();
 
-    void SetBoardNumber(
+    int SetBoardNumber(
       const unsigned n);
 
     void AddResult(

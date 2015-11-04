@@ -10,6 +10,7 @@
 #define VALET_CST_H
 
 #include <string>
+#include <sstream>
 
 
 const char ValetPositions[4][6] =
@@ -149,6 +150,14 @@ struct ValetEntryType
   float playScore[2];
   float leadScore[2];
   float defScore;
+};
+
+
+struct ErrorType
+{
+  bool flag;
+  int no;
+  std::stringstream message;
 };
 
 

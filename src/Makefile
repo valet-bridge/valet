@@ -28,31 +28,62 @@ WARN_FLAGS	=		\
 # CC_FULL_FLAGS	= $(CC_FLAGS)
 CC_FULL_FLAGS	= $(CC_FLAGS) $(WARN_FLAGS)
 
-SOURCE_FILES 	=		\
-        valet.cpp               \
-        args.cpp                \
-        files.cpp               \
-        parse.cpp               \
-        scoring.cpp             \
+LIB_FLAGS       = /link /DLL
+
+DLLBASE         = valet
+DLL             = $(DLLBASE).dll
+DLIB            = $(DLLBASE).lib
+
+VFILE           = valetres
+
+VALET_FILES	=		\
+	args.cpp                \
+	files.cpp               \
+        Hand.cpp		\
         misc.cpp                \
         Pairs.cpp               \
-        Hand.cpp                \
-        Scores.cpp
+        parse.cpp               \
+	Scores.cpp		\
+        scoring.cpp             \
+	valet.cpp
 
-OBJ_FILES 	= $(subst .cpp,.obj,$(SOURCE_FILES)) 
+LIB_FILES 	=		\
+        Hand.cpp		\
+        Pairs.cpp               \
+        parse.cpp               \
+        scoring.cpp             \
+	vlib.cpp
 
+DRIVER_FILES =			\
+	driver.cpp
 
-valet:	$(OBJ_FILES)
-	$(CC) $(CC_FULL_FLAGS) $(OBJ_FILES)
+VOBJ_FILES 	= $(subst .cpp,.obj,$(VALET_FILES)) 
+LOBJ_FILES 	= $(subst .cpp,.obj,$(LIB_FILES)) $(VFILE).obj
+DOBJ_FILES 	= $(subst .cpp,.obj,$(DRIVER_FILES)) 
+
+valet:	$(VOBJ_FILES)
+	$(CC) $(CC_FULL_FLAGS) $(VOBJ_FILES) /Fevalet.exe
+
+dll:	$(LOBJ_FILES)
+	$(CC) $(CC_FULL_FLAGS) $(LOBJ_FILES) $(LIB_FLAGS) /out:$(DLL)
+
+driver:	$(DOBJ_FILES)
+	link /LTCG $(DOBJ_FILES) $(DLIB) /out:driver.exe
 
 %.obj:	%.cpp
 	$(CC) $(CC_FULL_FLAGS) /c $<
 
+$(DLLBASE).res:	$(DLLBASE).rc
+	windres $(DLLBASE).rc $(DLLBASE).res
+
+$(VFILE).obj:	$(DLLBASE).res
+	cvtres /MACHINE:X86 /OUT:$(VFILE).obj $(DLLBASE).res
+
 depend:
-	makedepend -Y -o.obj -- $(CC_FLAGS) -- $(SOURCE_FILES)
+	makedepend -Y -o.obj -- $(CC_FLAGS) -- $(VALET_FILES) $(LIB_FILES) $(DRIVER_FILES)
 
 clean:
-	rm -f $(OBJ_FILES) valet.exe
+	rm -f $(OBJ_FILES) $(LOBJ_FILES) $(DOBJ_FILES) valet.exe $(DLL) $(DLLBASE).{lib,exp,def,obj,res}
 
 
 # DO NOT DELETE

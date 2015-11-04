@@ -21,54 +21,19 @@
 #include "Pairs.h"
 #include "Hand.h"
 #include "parse.h"
-#include "cst.h"
+#include "valet.h"
 
 using namespace std;
 
 extern OptionsType options;
 extern Pairs pairs;
 extern map<string, Hand> handList;
+extern ErrorType error;
 
 
 string MakeHandTag(
   const unsigned rno,
   const unsigned bno);
-
-
-// tokenize splits a string into tokens separated by delimiter.
-// http://stackoverflow.com/questions/236129/split-a-string-in-c
-
-template <class ContainerT>
-
-void tokenize(
-  const string& str, 
-  ContainerT& tokens,
-  const string& delimiters)
-{
-  string::size_type pos, lastPos = 0;
-
-  typedef ContainerT Base;
-  typedef typename Base::value_type ValueType;
-  typedef typename ValueType::size_type SizeType;
-
-  while (true)
-  {
-    pos = str.find_first_of(delimiters, lastPos);
-    if (pos == std::string::npos)
-    {
-      pos = str.length();
-      tokens.push_back(ValueType(str.data()+lastPos, 
-        static_cast<SizeType>(pos - lastPos)));
-      break;
-    }
-    else
-    {
-      tokens.push_back(ValueType(str.data()+lastPos,
-        static_cast<SizeType>(pos - lastPos)));
-    }
-    lastPos = pos + 1;
-   }
-}
 
 
 bool ReadNameFile(
@@ -118,7 +83,6 @@ string MakeHandTag(
 }
 
 
-#include "misc.h"
 bool ReadScoresFile(
   const string scoresFile)
 {
@@ -132,7 +96,6 @@ bool ReadScoresFile(
   handList.clear();
   string line;
   unsigned lno = 0, rno, bno = 0;
-  vector<string> tokens(32);
   ResultType res;
   string tag;
 
@@ -142,23 +105,25 @@ bool ReadScoresFile(
     if (line[0] == '#' || line.empty())
       continue;
 
-    tokens.clear();
-    tokenize(line, tokens, "|");
-    size_t tlen = tokens.size();
-    if (tlen != 9 && tlen != 10)
+    int r;
+    if ((r = ParseScoreLine(line, res, rno, bno)) != RETURN_NO_FAULT)
     {
-      cerr << "File '" << scoresFile << "', line " << lno << 
-        ":\nGot " << tlen << " tokens, wanted 9 or 10\n";
-      cerr << "(" << line << ")" << endl;
-      return false;
-    }
-
-    if (! LineToResult(tokens, res, rno, bno))
-    {
-      cerr << "File '" << scoresFile << "', line " << lno << 
-        ": Syntax error\n";
-      cerr << "(" << line << ")" << endl;
-      return false;
+      if (r == RETURN_TOKEN_NUMBER)
+      {
+        cerr << "File '" << scoresFile << "', line " << lno << 
+          ":\nGot wrong number of tokens, wanted 9 or 10\n";
+        cerr << "(" << line << ")\n";
+        cerr << error.message.str();
+        return false;
+      }
+      else
+      {
+        cerr << "File '" << scoresFile << "', line " << lno << 
+          ": Syntax error\n";
+        cerr << "(" << line << ")\n";
+        cerr << error.message.str();
+        return false;
+      }
     }
 
     if (options.roundFirst > 0 && rno < options.roundFirst)
@@ -169,7 +134,7 @@ bool ReadScoresFile(
     tag = MakeHandTag(rno, bno);
     map<string, Hand>::iterator it = handList.find(tag);
     if (it == handList.end())
-      handList[tag].SetBoardNumber(bno);
+      static_cast<void>(handList[tag].SetBoardNumber(bno));
     handList[tag].AddResult(res);
   }
 

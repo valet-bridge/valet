@@ -16,8 +16,6 @@
 #include <vector>
 #include <map>
 
-using namespace std;
-
 #include "cst.h"
 
 
@@ -25,21 +23,29 @@ class Pairs
 {
   private:
 
-    map<string, string> tagToPlayerName;
+    std::map<std::string, std::string> tagToPlayerName;
 
-    map<string, unsigned> playersToPairNo;
+    std::map<std::string, unsigned> playersToPairNo;
 
-    vector<string> pairNoToPairName;
+    std::vector<std::string> pairNoToPairName;
+
+    struct pairTags
+    {
+      std::string tag1;
+      std::string tag2;
+    };
+
+    std::vector<pairTags> pairNoToPairTags;
 
     unsigned numPairs;
 
     unsigned listNo;
 
     bool PairExists(
-      const string pair);
+      const std::string pair);
 
-    string PadString(
-      const string& s,
+    std::string PadString(
+      const std::string& s,
       const unsigned width = 32);
 
 
@@ -54,14 +60,14 @@ class Pairs
     // Returns false if the player already exists.
 
     bool AddPlayer(
-      const string tag,
-      const string name);
+      const std::string tag,
+      const std::string name);
 
-    string GetPlayerName(
-      const string tag);
+    std::string GetPlayerName(
+      const std::string tag);
 
     bool TagExists(
-      const string tag);
+      const std::string tag);
 
     // May return a negative number, which means that the real pair 
     // number is positive and that the pair tags were in the opposite 
@@ -71,22 +77,27 @@ class Pairs
     // score components to individuals, so it is not enough to know 
     // the pair number.
     // The pair numbers are consecutive, starting from 1.
-    // Returns as an error (at least one tag does not exist).
+    // Returns 0 as an error (at least one tag does not exist).
 
     int GetPairNumber(
-      const string tag1,
-      const string tag2);
+      const std::string tag1,
+      const std::string tag2);
 
     // Returns "" if the pair does not exist.
 
-    string GetPairName(
-      const string tag1,
-      const string tag2);
+    std::string GetPairName(
+      const std::string tag1,
+      const std::string tag2);
 
-    string GetPairName(
+    void GetPairTags(
+      const unsigned pno,
+      std::string& tag1,
+      std::string& tag2);
+
+    std::string GetPairName(
       const unsigned pno);
 
-    string GetPairNamePadded(
+    std::string GetPairNamePadded(
       const unsigned pno,
       const unsigned width = 32);
       

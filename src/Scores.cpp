@@ -18,7 +18,6 @@
 
 #include "Scores.h"
 #include "Pairs.h"
-#include "cst.h"
 
 using namespace std;
 
@@ -97,8 +96,6 @@ void Scores::AddEntry(
   }
 
   // Remember the opponent in order to be able to compensate.
-  // char buffer[33];
-  // const string oppstr(itoa(entry.oppNo, buffer, 10));
   ostringstream oss;
   oss << entry.oppNo;
   const string oppstr = oss.str();

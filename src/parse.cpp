@@ -18,12 +18,12 @@
 #include "Pairs.h"
 #include "parse.h"
 #include "valet.h"
-#include "cst.h"
 
 using namespace std;
 
 
 extern Pairs pairs;
+extern ErrorType error;
 
 
 bool TokenToUnsigned(
@@ -50,6 +50,42 @@ bool CharToRank(
   unsigned& r);
 
 
+// tokenize splits a string into tokens separated by delimiter.
+// http://stackoverflow.com/questions/236129/split-a-string-in-c
+
+template <class ContainerT>
+
+void tokenize(
+  const string& str, 
+  ContainerT& tokens,
+  const string& delimiters)
+{
+  string::size_type pos, lastPos = 0;
+
+  typedef ContainerT Base;
+  typedef typename Base::value_type ValueType;
+  typedef typename ValueType::size_type SizeType;
+
+  while (true)
+  {
+    pos = str.find_first_of(delimiters, lastPos);
+    if (pos == std::string::npos)
+    {
+      pos = str.length();
+      tokens.push_back(ValueType(str.data()+lastPos, 
+        static_cast<SizeType>(pos - lastPos)));
+      break;
+    }
+    else
+    {
+      tokens.push_back(ValueType(str.data()+lastPos,
+        static_cast<SizeType>(pos - lastPos)));
+    }
+    lastPos = pos + 1;
+   }
+}
+
+
 bool TokenToUnsigned(
   const string token,
   unsigned lowerLimit,
@@ -63,10 +99,13 @@ bool TokenToUnsigned(
       (upperLimit > 0 && res > upperLimit))
   {
     if (upperLimit > 0)
-      cerr << err << "'" << token << "' is not " <<
+      error.message << err << "'" << token << "' is not " <<
         lowerLimit << ".." << upperLimit << endl;
     else
-      cerr << err << "'" << token << "' is not >= " << lowerLimit << endl;
+      error.message << err << "'" << token << "' is not >= " << 
+        lowerLimit << endl;
+
+    error.flag = true;
     return false;
   }
   else
@@ -93,7 +132,8 @@ bool CharToPlayer(
       p = VALET_WEST;
       return true;
     default:
-      cerr << "'" << static_cast<unsigned>(c) <<
+      error.flag = true;
+      error.message << "'" << static_cast<unsigned>(c) <<
         "' is not a player (NESW)" << endl;
       return false;
   }
@@ -139,7 +179,8 @@ bool CharToDenom(
       d = VALET_CLUBS;
       return true;
     default:
-      cerr << "'" << static_cast<unsigned>(c) <<
+      error.flag = true;
+      error.message << "'" << static_cast<unsigned>(c) <<
         "' is not a denomination (NSHDC)" << endl;
       return false;
   }
@@ -182,7 +223,8 @@ bool CharToRank(
   }
   else
   {
-    cerr << "'" << static_cast<unsigned>(c) <<
+    error.flag = true;
+    error.message << "'" << static_cast<unsigned>(c) <<
       "' is not a rank" << endl;
     return false;
   }
@@ -193,43 +235,60 @@ bool LineToResult(
   const vector<string> tokens,
   ResultType& res,
   unsigned& rno,
-  unsigned& bno)
+  unsigned& bno,
+  bool skipNameCheck)
 {
   if (! TokenToUnsigned(tokens[0], 1, 0, "Round number", rno))
+  {
+    error.no = RETURN_ROUND_NUMBER;
     return false;
+  }
 
   if (! TokenToUnsigned(tokens[1], 1, 0, "Board number", bno))
+  {
+    error.no = RETURN_BOARD_NUMBER;
     return false;
+  }
 
   res.north = tokens[2];
-  if (! pairs.TagExists(res.north))
+  if (! skipNameCheck && ! pairs.TagExists(res.north))
   { 
-    cerr << "'" << res.north << " is not a valid player\n";
+    error.flag = true;
+    error.no = RETURN_PLAYER_NORTH_TAG;
+    error.message << "'" << res.north << "' is not a valid player\n";
     return false;
   }
   res.east = tokens[3];
-  if (! pairs.TagExists(res.east))
+  if (! skipNameCheck && ! pairs.TagExists(res.east))
   { 
-    cerr << "'" << res.east << " is not a valid player\n";
+    error.flag = true;
+    error.no = RETURN_PLAYER_EAST_TAG;
+    error.message << "'" << res.east << "' is not a valid player\n";
     return false;
   }
   res.south = tokens[4];
-  if (! pairs.TagExists(res.south))
+  if (! skipNameCheck && ! pairs.TagExists(res.south))
   { 
-    cerr << "'" << res.south << " is not a valid player\n";
+    error.flag = true;
+    error.no = RETURN_PLAYER_SOUTH_TAG;
+    error.message << "'" << res.south << "' is not a valid player\n";
     return false;
   }
   res.west = tokens[5];
-  if (! pairs.TagExists(res.west))
+  if (! skipNameCheck && ! pairs.TagExists(res.west))
   { 
-    cerr << "'" << res.west << " is not a valid player\n";
+    error.flag = true;
+    error.no = RETURN_PLAYER_WEST_TAG;
+    error.message << "'" << res.west << "' is not a valid player\n";
     return false;
   }
 
   size_t cl = tokens[6].size();
   if (cl == 0 || cl > 4)
   {
-    cerr << "'" << tokens[6].c_str() << " is not a contract" << endl;
+    error.flag = true;
+    error.no = RETURN_CONTRACT_FORMAT_TEXT;
+    error.message << "'" << tokens[6].c_str() << " is not a contract\n";
     return false;
   }
 
@@ -237,8 +296,9 @@ bool LineToResult(
   {
     if (tokens[6] != "P")
     {
-      cerr << "'" << tokens[6].c_str() << " is not a passed contract" << 
-        endl;
+      error.flag = true;
+      error.no = RETURN_CONTRACT_FORMAT_TEXT;
+      error.message << "'" << tokens[6].c_str() << " is not a contract\n";
       return false;
     }
     res.level = 0;
@@ -246,17 +306,28 @@ bool LineToResult(
   }
 
   if (! CharToLevel(tokens[6][0], res.level))
+  {
+    error.flag = true;
+    error.no = RETURN_LEVEL;
+    error.message << "'" << tokens[6].c_str() << " is not a contract\n";
     return false;
+  }
 
   if (! CharToDenom(tokens[6][1], res.denom))
+  {
+    error.flag = true;
+    error.no = RETURN_DENOM;
+    error.message << "'" << tokens[6].c_str() << " is not a contract\n";
     return false;
+  }
 
   if (cl == 3)
   {
     if (tokens[6][2] != 'X')
     {
-      cerr << "'" << tokens[6].c_str() << " is not a doubled contract" << 
-        endl;
+      error.flag = true;
+      error.no = RETURN_MULTIPLIER;
+      error.message << "'" << tokens[6].c_str() << " is not a contract\n";
       return false;
     }
     res.multiplier = VALET_DOUBLED;
@@ -265,8 +336,9 @@ bool LineToResult(
   {
     if (tokens[6][2] != 'X' || tokens[6][3] != 'X')
     {
-      cerr << "'" << tokens[6].c_str() << " is not a redoubled contract" << 
-        endl;
+      error.flag = true;
+      error.no = RETURN_MULTIPLIER;
+      error.message << "'" << tokens[6].c_str() << " is not a contract\n";
       return false;
     }
     res.multiplier = VALET_REDOUBLED;
@@ -277,15 +349,27 @@ bool LineToResult(
 
   if (tokens[7].size() != 1)
   {
-    cerr << "'" << tokens[7].c_str() << " is not a declarer" << endl;
+    error.flag = true;
+    error.no = RETURN_DECLARER;
+    error.message << "'" << tokens[7].c_str() << " is not a declarer\n";
     return false;
   }
 
   if (! CharToPlayer(tokens[7][0], res.declarer))
+  {
+    error.flag = true;
+    error.no = RETURN_DECLARER;
+    error.message << "'" << tokens[7].c_str() << " is not a declarer\n";
     return false;
+  }
 
   if (! TokenToUnsigned(tokens[8], 0, 13, "Tricks", res.tricks))
+  {
+    error.flag = true;
+    error.no = RETURN_TRICKS;
+    error.message << "'" << tokens[8].c_str() << " is not a trick number\n";
     return false;
+  }
 
   if (tokens.size() == 9)
   {
@@ -295,16 +379,55 @@ bool LineToResult(
 
   if (tokens[9].size() != 2)
   {
-    cerr << "'" << tokens[9].c_str() << " is not a lead" << endl;
+    error.flag = true;
+    error.no = RETURN_LEAD_TEXT;
+    error.message << "'" << tokens[9].c_str() << " is not a lead\n";
     return false;
   }
 
   if (! CharToDenom(tokens[9][0], res.leadDenom))
+  {
+    error.flag = true;
+    error.no = RETURN_LEAD_DENOM;
+    error.message << "'" << tokens[9].c_str() << " is not a lead\n";
     return false;
+  }
 
   if (! CharToRank(tokens[9][1], res.leadRank))
+  {
+    error.flag = true;
+    error.no = RETURN_LEAD_RANK;
+    error.message << "'" << tokens[9].c_str() << " is not a lead\n";
     return false;
+  }
 
   return true;
+}
+
+
+int ParseScoreLine(
+  const string line,
+  ResultType& res,
+  unsigned &rno,
+  unsigned &bno,
+  bool skipNameCheck)
+{
+  vector<string> tokens(32);
+  tokens.clear();
+
+  tokenize(line, tokens, "|");
+  size_t tlen = tokens.size();
+  if (tlen != 9 && tlen != 10)
+  {
+    error.flag = true;
+    error.no = RETURN_TOKEN_NUMBER;
+    error.message << "Token number " << tlen << " is invalid\n";
+    return false;
+  }
+
+  if (LineToResult(tokens, res, rno, bno, skipNameCheck))
+    return RETURN_NO_FAULT;
+  else
+    return error.no;
 }
 

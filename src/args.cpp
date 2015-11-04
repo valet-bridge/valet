@@ -247,7 +247,7 @@ bool ParseRound()
     return false;
 
   char str1[8], str2[8];
-#if (! defined_MSC_VER || _MSC_VER < 1400)
+#if (! defined(_MSC_VER) || _MSC_VER < 1400)
   strncpy(str1, stmp.c_str(), pos);
 #else
   strncpy_s(str1, stmp.c_str(), pos);
@@ -258,7 +258,7 @@ bool ParseRound()
   options.roundFirst = static_cast<unsigned>(m);
 
   stmp.erase(0, pos+1);
-#if (! defined_MSC_VER || _MSC_VER < 1400)
+#if (! defined(_MSC_VER) || _MSC_VER < 1400)
   strncpy(str2, stmp.c_str(), stmp.size());
 #else
   strncpy_s(str2, stmp.c_str(), stmp.size());
