@@ -88,12 +88,18 @@ clean:
 
 # DO NOT DELETE
 
-valet.obj: cst.h args.h files.h scoring.h misc.h Pairs.h Hand.h Scores.h
 args.obj: args.h cst.h
-files.obj: files.h Pairs.h cst.h Hand.h parse.h misc.h
+files.obj: files.h Pairs.h cst.h Hand.h parse.h valet.h
+Hand.obj: valet.h Pairs.h cst.h Hand.h scoring.h
+misc.obj: Pairs.h cst.h misc.h
+Pairs.obj: Pairs.h cst.h
+parse.obj: Pairs.h cst.h parse.h valet.h
+Scores.obj: Scores.h cst.h Pairs.h
+scoring.obj: valet.h cst.h scoring.h
+valet.obj: cst.h args.h files.h scoring.h misc.h Pairs.h Hand.h Scores.h
+Hand.obj: valet.h Pairs.h cst.h Hand.h scoring.h
+Pairs.obj: Pairs.h cst.h
 parse.obj: Pairs.h cst.h parse.h valet.h
 scoring.obj: valet.h cst.h scoring.h
-misc.obj: Pairs.h cst.h misc.h
-Pairs.obj: cst.h Pairs.h
-Hand.obj: valet.h cst.h Pairs.h Hand.h scoring.h
-Scores.obj: Scores.h cst.h Pairs.h
+vlib.obj: valet.h parse.h cst.h scoring.h Pairs.h Hand.h
+driver.obj: Valet.h

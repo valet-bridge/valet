@@ -76,7 +76,6 @@ static void __attribute__ ((destructor)) libEnd(void)
 #endif
 
 
-
 int STDCALL ValetSetControl(
   struct ControlType * control)
 {
@@ -102,7 +101,14 @@ int STDCALL ValetSetControl(
 }
 
 
-void STDCALL ValetClearData()
+void STDCALL ValetClear()
+{
+  ValetClearHand();
+  pairs.Reset();
+}
+
+
+void STDCALL ValetClearHand()
 {
   hand.Reset();
   nextEntry = 0;
@@ -224,15 +230,21 @@ int SetInput(
 }
 
 
-int STDCALL ValetAddByTagStruct(
+int STDCALL ValetAddByTag(
   struct PlayersTagType * players,
   struct InputResultType * input)
 {
   ResultType res;
-  res.north = players->north; 
-  res.east = players->east; 
-  res.south = players->south; 
-  res.west = players->west; 
+  ostringstream ossn, osse, osss, ossw;
+
+  ossn << players->north;
+  res.north = ossn.str();
+  osse << players->east;
+  res.east = osse.str();
+  osss << players->south;
+  res.south = osss.str();
+  ossw << players->west;
+  res.west = ossw.str();
 
   int r;
   if ((r = SetInput(input, res)) != RETURN_NO_FAULT)
@@ -244,21 +256,21 @@ int STDCALL ValetAddByTagStruct(
 }
 
 
-int STDCALL ValetAddByNumberStruct(
+int STDCALL ValetAddByNumber(
   struct PlayersNumberType * players,
   struct InputResultType * input)
 {
   ResultType res;
-  ostringstream oss;
+  ostringstream ossn, osse, osss, ossw;
 
-  oss << players->north;
-  res.north = oss.str();
-  oss << players->east;
-  res.east = oss.str();
-  oss << players->south;
-  res.south = oss.str();
-  oss << players->west;
-  res.west = oss.str();
+  ossn << players->north;
+  res.north = ossn.str();
+  osse << players->east;
+  res.east = osse.str();
+  osss << players->south;
+  res.south = osss.str();
+  ossw << players->west;
+  res.west = ossw.str();
 
   int r;
   if ((r = SetInput(input, res)) != RETURN_NO_FAULT)
@@ -297,16 +309,16 @@ void SetResults(
   output->leadFlag[0] = vres.leadFlag[0];
   output->leadFlag[1] = vres.leadFlag[1];
 
-  output->overall = vres.overall;
-  output->bidScore = vres.bidScore;
+  output->overallDecl = vres.overall;
+  output->bidScoreDecl = vres.bidScore;
   
-  output->playScore[0] = vres.playScore[0];
-  output->playScore[1] = vres.playScore[1];
+  output->playScoreDecl[0] = vres.playScore[0];
+  output->playScoreDecl[1] = vres.playScore[1];
   
-  output->leadScore[0] = vres.leadScore[0];
-  output->leadScore[1] = vres.leadScore[1];
+  output->leadScoreDef[0] = vres.leadScore[0];
+  output->leadScoreDef[1] = vres.leadScore[1];
 
-  output->defScore = vres.defScore;
+  output->restScoreDef = vres.defScore;
 }
 
 
@@ -360,7 +372,7 @@ bool STDCALL ValetGetNextScoreByNumber(
   positions->decl2 = static_cast<unsigned>(strtol(decl2.c_str(), &pend, 10));
   positions->def1 = static_cast<unsigned>(strtol(def1.c_str(), &pend, 10));
   positions->def2 = static_cast<unsigned>(strtol(def2.c_str(), &pend, 10));
-    
+
   SetResults(output, vres);
   return true;
 }
@@ -378,6 +390,13 @@ void STDCALL ValetErrorMessage(
     case RETURN_UNKNOWN_FAULT:
       strcpy(line, TEXT_UNKNOWN_FAULT);
       break;
+    case RETURN_VALET_MODE:
+      strcpy(line, TEXT_VALET_MODE);
+      break;
+    case RETURN_TOKEN_NUMBER:
+      strcpy(line, TEXT_TOKEN_NUMBER);
+      break;
+
     case RETURN_ROUND_NUMBER:
       strcpy(line, TEXT_ROUND_NUMBER);
       break;
@@ -410,12 +429,6 @@ void STDCALL ValetErrorMessage(
       break;
     case RETURN_LEAD_TEXT:
       strcpy(line, TEXT_LEAD_TEXT);
-      break;
-    case RETURN_VALET_MODE:
-      strcpy(line, TEXT_VALET_MODE);
-      break;
-    case RETURN_TOKEN_NUMBER:
-      strcpy(line, TEXT_TOKEN_NUMBER);
       break;
     case RETURN_LEVEL:
       strcpy(line, TEXT_LEVEL);

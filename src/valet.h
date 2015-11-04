@@ -32,65 +32,64 @@
 #define RETURN_NO_FAULT 1
 #define TEXT_NO_FAULT "Success"
 
-// Currently doesn't happen
 #define RETURN_UNKNOWN_FAULT -1
 #define TEXT_UNKNOWN_FAULT "General error"
 
-#define RETURN_ROUND_NUMBER -2
-#define TEXT_ROUND_NUMBER "Round number not in range"
-
-#define RETURN_BOARD_NUMBER -3
-#define TEXT_BOARD_NUMBER "Board number not in range"
-
-#define RETURN_BOARD_NUMBER_CHANGE -4
-#define TEXT_BOARD_NUMBER_CHANGE "Board number changed"
-
-#define RETURN_PLAYER_NORTH_TAG -5
-#define TEXT_PLAYER_NORTH_TAG "North is not a known player"
-
-#define RETURN_PLAYER_EAST_TAG -6
-#define TEXT_PLAYER_EAST_TAG "East is not a known player"
-
-#define RETURN_PLAYER_SOUTH_TAG -7
-#define TEXT_PLAYER_SOUTH_TAG "South is not a known player"
-
-#define RETURN_PLAYER_WEST_TAG -8
-#define TEXT_PLAYER_WEST_TAG "West is not a known player"
-
-#define RETURN_CONTRACT_FORMAT_TEXT -9
-#define TEXT_CONTRACT_FORMAT_TEXT "Contract is not in recognized format"
-
-#define RETURN_DECLARER_TEXT -10
-#define TEXT_DECLARER_TEXT "Contract is not in recognized format"
-
-#define RETURN_TRICKS -11
-#define TEXT_TRICKS "Number of tricks is not in range"
-
-#define RETURN_LEAD_TEXT -12
-#define TEXT_LEAD_TEXT "Not a valid lead"
-
-#define RETURN_VALET_MODE -13
+#define RETURN_VALET_MODE -2
 #define TEXT_VALET_MODE "Not a valid valet mode"
 
-#define RETURN_TOKEN_NUMBER -14
+#define RETURN_TOKEN_NUMBER -3
 #define TEXT_TOKEN_NUMBER "Not a valid number of tokens"
 
-#define RETURN_LEVEL -15
+#define RETURN_ROUND_NUMBER -10
+#define TEXT_ROUND_NUMBER "Round number not in range"
+
+#define RETURN_BOARD_NUMBER -11
+#define TEXT_BOARD_NUMBER "Board number not in range"
+
+#define RETURN_BOARD_NUMBER_CHANGE -12
+#define TEXT_BOARD_NUMBER_CHANGE "Board number changed"
+
+#define RETURN_PLAYER_NORTH_TAG -13
+#define TEXT_PLAYER_NORTH_TAG "North is not a known player"
+
+#define RETURN_PLAYER_EAST_TAG -14
+#define TEXT_PLAYER_EAST_TAG "East is not a known player"
+
+#define RETURN_PLAYER_SOUTH_TAG -15
+#define TEXT_PLAYER_SOUTH_TAG "South is not a known player"
+
+#define RETURN_PLAYER_WEST_TAG -16
+#define TEXT_PLAYER_WEST_TAG "West is not a known player"
+
+#define RETURN_CONTRACT_FORMAT_TEXT -17
+#define TEXT_CONTRACT_FORMAT_TEXT "Contract is not in recognized format"
+
+#define RETURN_DECLARER_TEXT -18
+#define TEXT_DECLARER_TEXT "Contract is not in recognized format"
+
+#define RETURN_TRICKS -19
+#define TEXT_TRICKS "Number of tricks is not in range"
+
+#define RETURN_LEAD_TEXT -20
+#define TEXT_LEAD_TEXT "Not a valid lead"
+
+#define RETURN_LEVEL -21
 #define TEXT_LEVEL "Not a valid level"
 
-#define RETURN_DENOM -16
+#define RETURN_DENOM -22
 #define TEXT_DENOM "Not a valid denom"
 
-#define RETURN_MULTIPLIER -17
+#define RETURN_MULTIPLIER -23
 #define TEXT_MULTIPLIER "Not a valid multiplier"
 
-#define RETURN_DECLARER -18
+#define RETURN_DECLARER -24
 #define TEXT_DECLARER "Not a valid declarer"
 
-#define RETURN_LEAD_DENOM -19
+#define RETURN_LEAD_DENOM -25
 #define TEXT_LEAD_DENOM "Not a valid leadDenom"
 
-#define RETURN_LEAD_RANK -20
+#define RETURN_LEAD_RANK -26
 #define TEXT_LEAD_RANK "Not a valid leadRank"
 
 
@@ -181,18 +180,20 @@ struct OutputResultType
   bool declFlag[2];
   bool defFlag;
   bool leadFlag[2];
-  float overall;
-  float bidScore;
-  float playScore[2];
-  float leadScore[2];
-  float defScore;
+  float overallDecl;
+  float bidScoreDecl;
+  float playScoreDecl[2];
+  float leadScoreDef[2];
+  float restScoreDef;
 };
 
 
 EXTERN_C DLLEXPORT int STDCALL ValetSetControl(
   struct ControlType * control);
 
-EXTERN_C DLLEXPORT void STDCALL ValetClearData();
+EXTERN_C DLLEXPORT void STDCALL ValetClear();
+
+EXTERN_C DLLEXPORT void STDCALL ValetClearHand();
 
 EXTERN_C DLLEXPORT int STDCALL ValetSetBoardNumber(
   unsigned no);
@@ -200,13 +201,13 @@ EXTERN_C DLLEXPORT int STDCALL ValetSetBoardNumber(
 EXTERN_C DLLEXPORT int STDCALL ValetAddByLine(
   char line[VALET_INPUT_MAX_LENGTH]);
 
-EXTERN_C DLLEXPORT int STDCALL ValetAddByTagStruct(
+EXTERN_C DLLEXPORT int STDCALL ValetAddByTag(
   struct PlayersTagType * players,
-  struct InputType * input);
+  struct InputResultType * input);
 
-EXTERN_C DLLEXPORT int STDCALL ValetAddByNumberStruct(
+EXTERN_C DLLEXPORT int STDCALL ValetAddByNumber(
   struct PlayersNumberType * players,
-  struct InputType * input);
+  struct InputResultType * input);
 
 EXTERN_C DLLEXPORT int STDCALL ValetCalculate();
 
@@ -223,3 +224,4 @@ EXTERN_C DLLEXPORT void STDCALL ValetErrorMessage(
   char line[80]);
 
 #endif
+
