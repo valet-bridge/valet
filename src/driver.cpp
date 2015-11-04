@@ -13,6 +13,8 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <stdlib.h>
+#include <string.h>
 
 #include "Valet.h"
 
@@ -239,7 +241,7 @@ int main(int argc, char * argv[])
     PlayersTagType players;
     InputResultType input;
 
-    for (int i = 0; i < ENTRIES; i++)
+    for (unsigned i = 0; i < ENTRIES; i++)
     {
       SetTagInputs(players, input, i);
 
@@ -256,7 +258,7 @@ int main(int argc, char * argv[])
     PlayersNumberType players;
     InputResultType input;
 
-    for (int i = 0; i < ENTRIES; i++)
+    for (unsigned i = 0; i < ENTRIES; i++)
     {
       SetNumberInputs(players, input, i);
 

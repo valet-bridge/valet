@@ -1,12 +1,13 @@
-# This is the valet Makefile for Windows and the Microsoft Visual C++
-# compiler.  Unlike the other Makefiles, it does not assume a 
-# Unix-like setup.
+# This is the Valet Makefile for Windows and the Microsoft Visual C++
+# compiler.  It does assume a Unix-like setup for some commands,
+# but if you only want to call "make" with the default target,
+# you should be OK.
 
 # If your Microsoft compiler is not called cl, change it here.
 CC		= cl
 CC_FLAGS     	= /O2 /Oi /Ot /Oy /GL
 
-# These flags are not turned on by default, but DDS should pass them.
+# These flags are not turned on by default, but Valet should pass them.
 # Turn them on below.
 WARN_FLAGS	=		\
 	/W4			\
@@ -27,35 +28,92 @@ WARN_FLAGS	=		\
 # CC_FULL_FLAGS	= $(CC_FLAGS)
 CC_FULL_FLAGS	= $(CC_FLAGS) $(WARN_FLAGS)
 
-SOURCE_FILES 	=		\
-        valet.cpp               \
-        args.cpp                \
-        files.cpp               \
-        parse.cpp               \
-        scoring.cpp             \
+LIB_FLAGS       = /link /DLL
+
+DLLBASE         = valet
+DLL             = $(DLLBASE).dll
+DLIB            = $(DLLBASE).lib
+
+VFILE           = valetres
+
+VALET_FILES	=		\
+	args.cpp                \
+	files.cpp               \
+        Hand.cpp		\
         misc.cpp                \
         Pairs.cpp               \
-        Hand.cpp                \
-        Scores.cpp
+        parse.cpp               \
+	Scores.cpp		\
+        scoring.cpp             \
+	valet.cpp
 
-OBJ_FILES 	=		\
-        valet.obj               \
-        args.obj                \
-        files.obj               \
-        parse.obj               \
-        scoring.obj             \
+LIB_FILES 	=		\
+        Hand.cpp		\
+        Pairs.cpp               \
+        parse.cpp               \
+        scoring.cpp             \
+	vlib.cpp
+
+DRIVER_FILES =			\
+	driver.cpp
+
+VOBJ_FILES	=		\
+	args.obj                \
+	files.obj               \
+        Hand.obj		\
         misc.obj                \
         Pairs.obj               \
-        Hand.obj                \
-        Scores.obj
+        parse.obj               \
+	Scores.obj		\
+        scoring.obj             \
+	valet.obj
 
-valet:	$(OBJ_FILES)
-	$(CC) $(CC_FULL_FLAGS) $(OBJ_FILES) /out:valet.exe
+LOBJ_FILES 	=		\
+        Hand.obj		\
+        Pairs.obj               \
+        parse.obj               \
+        scoring.obj             \
+	vlib.obj
+
+DOBJ_FILES =			\
+	driver.obj
+
+valet:	$(VOBJ_FILES)
+	$(CC) $(CC_FULL_FLAGS) $(VOBJ_FILES) /Fevalet.exe
+
+dll:	$(LOBJ_FILES)
+	$(CC) $(CC_FULL_FLAGS) $(LOBJ_FILES) $(LIB_FLAGS) /out:$(DLL)
+
+driver:	$(DOBJ_FILES)
+	link /LTCG $(DOBJ_FILES) $(DLIB) /out:driver.exe
 
 %.obj:	%.cpp
 	$(CC) $(CC_FULL_FLAGS) /c $<
 
+$(DLLBASE).res:	$(DLLBASE).rc
+	windres $(DLLBASE).rc $(DLLBASE).res
+
+$(VFILE).obj:	$(DLLBASE).res
+	cvtres /MACHINE:X86 /OUT:$(VFILE).obj $(DLLBASE).res
+
 clean:
-	del $(OBJ_FILES) valet.exe
+	del $(VOBJ_FILES) $(LOBJ_FILES) $(DOBJ_FILES) valet.exe $(DLL) $(DLLBASE).{lib,exp,def,obj,res}
+
 
 # DO NOT DELETE
+
+args.obj: args.h cst.h
+files.obj: files.h Pairs.h cst.h Hand.h parse.h valet.h
+Hand.obj: valet.h Pairs.h cst.h Hand.h scoring.h
+misc.obj: Pairs.h cst.h misc.h
+Pairs.obj: Pairs.h cst.h
+parse.obj: Pairs.h cst.h parse.h valet.h
+Scores.obj: Scores.h cst.h Pairs.h
+scoring.obj: valet.h cst.h scoring.h
+valet.obj: cst.h args.h files.h scoring.h misc.h Pairs.h Hand.h Scores.h
+Hand.obj: valet.h Pairs.h cst.h Hand.h scoring.h
+Pairs.obj: Pairs.h cst.h
+parse.obj: Pairs.h cst.h parse.h valet.h
+scoring.obj: valet.h cst.h scoring.h
+vlib.obj: valet.h parse.h cst.h scoring.h Pairs.h Hand.h
+driver.obj: Valet.h

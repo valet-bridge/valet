@@ -28,78 +28,41 @@ WARN_FLAGS	=		\
 # CC_FULL_FLAGS	= $(CC_FLAGS)
 CC_FULL_FLAGS	= $(CC_FLAGS) $(WARN_FLAGS)
 
-LIB_FLAGS       = /link /DLL
-
-DLLBASE         = valet
-DLL             = $(DLLBASE).dll
-DLIB            = $(DLLBASE).lib
-
-VFILE           = valetres
-
-VALET_FILES	=		\
-	args.cpp                \
-	files.cpp               \
-        Hand.cpp		\
+SOURCE_FILES 	=		\
+        valet.cpp               \
+        args.cpp                \
+        files.cpp               \
+        parse.cpp               \
+        scoring.cpp             \
         misc.cpp                \
         Pairs.cpp               \
-        parse.cpp               \
-	Scores.cpp		\
-        scoring.cpp             \
-	valet.cpp
+        Hand.cpp                \
+        Scores.cpp
 
-LIB_FILES 	=		\
-        Hand.cpp		\
-        Pairs.cpp               \
-        parse.cpp               \
-        scoring.cpp             \
-	vlib.cpp
+OBJ_FILES 	= $(subst .cpp,.obj,$(SOURCE_FILES)) 
 
-DRIVER_FILES =			\
-	driver.cpp
 
-VOBJ_FILES 	= $(subst .cpp,.obj,$(VALET_FILES)) 
-LOBJ_FILES 	= $(subst .cpp,.obj,$(LIB_FILES)) $(VFILE).obj
-DOBJ_FILES 	= $(subst .cpp,.obj,$(DRIVER_FILES)) 
-
-valet:	$(VOBJ_FILES)
-	$(CC) $(CC_FULL_FLAGS) $(VOBJ_FILES) /Fevalet.exe
-
-dll:	$(LOBJ_FILES)
-	$(CC) $(CC_FULL_FLAGS) $(LOBJ_FILES) $(LIB_FLAGS) /out:$(DLL)
-
-driver:	$(DOBJ_FILES)
-	link /LTCG $(DOBJ_FILES) $(DLIB) /out:driver.exe
+valet:	$(OBJ_FILES)
+	$(CC) $(CC_FULL_FLAGS) $(OBJ_FILES)
 
 %.obj:	%.cpp
 	$(CC) $(CC_FULL_FLAGS) /c $<
 
-$(DLLBASE).res:	$(DLLBASE).rc
-	windres $(DLLBASE).rc $(DLLBASE).res
-
-$(VFILE).obj:	$(DLLBASE).res
-	cvtres /MACHINE:X86 /OUT:$(VFILE).obj $(DLLBASE).res
-
 depend:
-	makedepend -Y -o.obj -- $(CC_FLAGS) -- $(VALET_FILES) $(LIB_FILES) $(DRIVER_FILES)
+	makedepend -Y -o.obj -- $(CC_FLAGS) -- $(SOURCE_FILES)
 
 clean:
-	rm -f $(OBJ_FILES) $(LOBJ_FILES) $(DOBJ_FILES) valet.exe $(DLL) $(DLLBASE).{lib,exp,def,obj,res}
+	rm -f $(OBJ_FILES) valet.exe
 
 
 # DO NOT DELETE
 
-args.obj: args.h cst.h
-files.obj: files.h Pairs.h cst.h Hand.h parse.h valet.h
-Hand.obj: valet.h Pairs.h cst.h Hand.h scoring.h
-misc.obj: Pairs.h cst.h misc.h
-Pairs.obj: Pairs.h cst.h
-parse.obj: Pairs.h cst.h parse.h valet.h
-Scores.obj: Scores.h cst.h Pairs.h
-scoring.obj: valet.h cst.h scoring.h
 valet.obj: cst.h args.h files.h scoring.h misc.h Pairs.h Hand.h Scores.h
-Hand.obj: valet.h Pairs.h cst.h Hand.h scoring.h
-Pairs.obj: Pairs.h cst.h
-parse.obj: Pairs.h cst.h parse.h valet.h
-scoring.obj: valet.h cst.h scoring.h
-vlib.obj: valet.h parse.h cst.h scoring.h Pairs.h Hand.h
-driver.obj: Valet.h
+args.obj: args.h cst.h
+files.obj: files.h Pairs.h cst.h Hand.h parse.h
+parse.obj: Pairs.h cst.h parse.h
+scoring.obj: cst.h scoring.h
+misc.obj: Pairs.h cst.h misc.h
+Pairs.obj: cst.h Pairs.h
+Hand.obj: cst.h Pairs.h Hand.h scoring.h
+Scores.obj: Scores.h cst.h Pairs.h

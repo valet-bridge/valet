@@ -7,6 +7,8 @@
 */
 
 #include <string>
+#include <stdlib.h>
+#include <string.h>
 
 #include "valet.h"
 #include "parse.h"
@@ -24,6 +26,18 @@ ErrorType error;
 unsigned numEntries = 16;
 vector<ValetEntryType> entries(numEntries);
 unsigned nextEntry = 0;
+
+
+void AddPlayers(
+  const ResultType& res);
+
+int SetInput(
+  InputResultType * input,
+  ResultType& res);
+
+void SetResults(
+  OutputResultType * output,
+  ValetEntryType& vres);
 
 
 #if defined(_WIN32) || defined(USES_DLLMAIN)

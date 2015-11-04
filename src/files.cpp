@@ -16,6 +16,8 @@
 #include <sstream>
 #include <string>
 #include <map>
+#include <functional>
+#include <algorithm>
 
 #include "files.h"
 #include "Pairs.h"
@@ -105,6 +107,10 @@ bool ReadScoresFile(
     if (line[0] == '#' || line.empty())
       continue;
 
+    // Trim line end
+    line.erase(find_if(line.rbegin(), line.rend(),
+      not1(ptr_fun<int, int>(isspace))).base(), line.end());
+
     int r;
     if ((r = ParseScoreLine(line, res, rno, bno)) != RETURN_NO_FAULT)
     {
@@ -119,9 +125,9 @@ bool ReadScoresFile(
       else
       {
         cerr << "File '" << scoresFile << "', line " << lno << 
-          ": Syntax error\n";
-        cerr << "(" << line << ")\n";
-        cerr << error.message.str();
+          ": Syntax error" << endl;
+        cerr << "(" << line << ")" << endl;
+        cerr << error.message.str() << endl;
         return false;
       }
     }

@@ -49,6 +49,12 @@ bool CharToRank(
   const char c,
   unsigned& r);
 
+bool LineToResult(
+  const vector<string> tokens,
+  ResultType& res,
+  unsigned& rno,
+  unsigned& bno,
+  bool skipNameCheck);
 
 // tokenize splits a string into tokens separated by delimiter.
 // http://stackoverflow.com/questions/236129/split-a-string-in-c

@@ -40,30 +40,72 @@ WARN_FLAGS	= 		\
 # CC_FULL_FLAGS	= $(CC_FLAGS)
 CC_FULL_FLAGS	= $(CC_FLAGS) $(WARN_FLAGS)
 
-SOURCE_FILES 	=		\
-        valet.cpp               \
-        args.cpp                \
-        files.cpp               \
-        parse.cpp               \
-        scoring.cpp             \
+DLLBASE         = valet
+DLL             = $(DLLBASE).dll
+DLIB            = $(DLLBASE).lib
+
+LIB_FLAGS       = -mdll
+LIB_USE_FLAGS   = -L. -l$(DLLBASE)
+
+VFILE           = valetres
+
+VALET_FILES	=		\
+	args.cpp                \
+	files.cpp               \
+        Hand.cpp		\
         misc.cpp                \
         Pairs.cpp               \
-        Hand.cpp                \
-        Scores.cpp
+        parse.cpp               \
+	Scores.cpp		\
+        scoring.cpp             \
+	valet.cpp
 
-O_FILES 	= $(subst .cpp,.o,$(SOURCE_FILES))
+LD_FLAGS        =               \
+        -Wl,--subsystem,windows \
+        -Wl,--output-def,$(DLLBASE).def \
+        -Wl,--dynamicbase       \
+        -Wl,--nxcompat          \
+        -Wl,--no-seh            \
+        -Wl,--enable-stdcall-fixup
 
-valet:	$(O_FILES)
-	$(CC) $(LIB_FLAGS) $(CC_FULL_FLAGS) $(O_FILES) -o valet.exe
+LIB_FILES 	=		\
+        Hand.cpp		\
+        Pairs.cpp               \
+        parse.cpp               \
+        scoring.cpp             \
+	vlib.cpp
+
+DRIVER_FILES =			\
+	driver.cpp
+
+VOBJ_FILES 	= $(subst .cpp,.o,$(VALET_FILES)) 
+LOBJ_FILES 	= $(subst .cpp,.o,$(LIB_FILES)) $(VFILE).o
+DOBJ_FILES 	= $(subst .cpp,.o,$(DRIVER_FILES)) 
+
+
+valet:	$(VOBJ_FILES)
+	$(CC) $(CC_FULL_FLAGS) $(VOBJ_FILES) -o valet.exe
+
+dll:	$(LOBJ_FILES)
+	$(CC) $(LIB_FLAGS) $(CC_FULL_FLAGS) $(LOBJ_FILES) $(LD_FLAGS) $(EXPORTER) -o $(DLL)
+
+driver:	$(DOBJ_FILES)
+	$(CC) $(CC_FULL_FLAGS) $(DOBJ_FILES) $(LD_FLAGS) $(LIB_USE_FLAGS) -o driver 
 
 %.o:	%.cpp
-	$(CC) $(CC_FULL_FLAGS) $(DDS_THR) -c $<
+	$(CC) $(CC_FULL_FLAGS) -c $<
+
+$(DLLBASE).res:	$(DLLBASE).rc
+	windres $(DLLBASE).rc $(DLLBASE).res
+
+$(VFILE).o:	$(DLLBASE).res
+	cvtres /MACHINE:X86 /OUT:$(VFILE).o $(DLLBASE).res
 
 depend:
-	makedepend -Y -- $(CC_FLAGS) -- $(SOURCE_FILES)
+	makedepend -Y -o.obj -- $(CC_FLAGS) -- $(VALET_FILES) $(LIB_FILES) $(DRIVER_FILES)
 
 clean:
-	rm -f $(O_FILES) valet.exe
+	rm -f $(OBJ_FILES) $(LOBJ_FILES) $(DOBJ_FILES) valet.exe driver.exe $(DLL) $(DLLBASE).{lib,exp,def,obj,res}
 
 # DO NOT DELETE
 
@@ -76,3 +118,4 @@ misc.o: Pairs.h cst.h misc.h
 Pairs.o: cst.h Pairs.h
 Hand.o: cst.h Pairs.h Hand.h scoring.h
 Scores.o: Scores.h cst.h Pairs.h
+
