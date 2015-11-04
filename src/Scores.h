@@ -71,6 +71,11 @@ class Scores
     unsigned numPairs;
     unsigned length;
 
+    void AddCompensation(
+      const unsigned pairNo,
+      const unsigned oppNo,
+      const float value);
+
     double Difference(
       const CumulType& c1,
       const CumulType& c2,

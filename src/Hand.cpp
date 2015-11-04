@@ -111,8 +111,7 @@ const unsigned Hswap[2][2] = { {0, 1}, {1, 0} };
 
 void Hand::SetPairSwaps(
   const ResultType& res, 
-  ValetEntryType& entryNS, 
-  ValetEntryType& entryEW,
+  ValetEntryType& entry, 
   unsigned& decl,
   unsigned& leader)
 {
@@ -126,12 +125,12 @@ void Hand::SetPairSwaps(
   assert(pairNoNS != 0);
   if (pairNoNS < 0)
   {
-    entryNS.pairNo = static_cast<unsigned>(-pairNoNS);
+    entry.pairNo = static_cast<unsigned>(-pairNoNS);
     swapNS = 1;
   }
   else
   {
-    entryNS.pairNo = static_cast<unsigned>(pairNoNS);
+    entry.pairNo = static_cast<unsigned>(pairNoNS);
     swapNS = 0;
   }
 
@@ -139,17 +138,14 @@ void Hand::SetPairSwaps(
   assert(pairNoEW != 0);
   if (pairNoEW < 0)
   {
-    entryEW.pairNo = static_cast<unsigned>(-pairNoEW);
+    entry.oppNo = static_cast<unsigned>(-pairNoEW);
     swapEW = 1;
   }
   else
   {
-    entryEW.pairNo = static_cast<unsigned>(pairNoEW);
+    entry.oppNo = static_cast<unsigned>(pairNoEW);
     swapEW = 0;
   }
-
-  entryNS.oppNo = entryEW.pairNo;
-  entryEW.oppNo = entryNS.pairNo;
 
   if (res.declarer == VALET_NORTH || res.declarer == VALET_SOUTH)
   {
@@ -173,8 +169,7 @@ void Hand::SetPairSwaps(
 void Hand::SetPassout(
   const ResultType& res,
   const float totalIMPs,
-  ValetEntryType& entryNS,
-  ValetEntryType& entryEW)
+  ValetEntryType& entry)
 {
   // Pass-out.
   int pairNoNS = pairs.GetPairNumber(res.north, res.south);
@@ -187,15 +182,10 @@ void Hand::SetPassout(
   if (pairNoEW < 0)
     pairNoEW = -pairNoEW; // Doesn't matter for pass-out
 
-  entryNS.pairNo = static_cast<unsigned>(pairNoNS);
-  entryNS.oppNo = static_cast<unsigned>(pairNoEW);
-  entryNS.overall = totalIMPs;
-  entryNS.bidScore = totalIMPs;
-
-  entryEW.pairNo = static_cast<unsigned>(pairNoEW);
-  entryEW.oppNo = static_cast<unsigned>(pairNoNS);
-  entryEW.overall = -totalIMPs;
-  entryEW.bidScore = -totalIMPs;
+  entry.pairNo = static_cast<unsigned>(pairNoNS);
+  entry.oppNo = static_cast<unsigned>(pairNoEW);
+  entry.overall = totalIMPs;
+  entry.bidScore = totalIMPs;
 }
 
 
@@ -204,51 +194,37 @@ void Hand::SetPlayResult(
   const float totalIMPs, 
   const float bidIMPs, 
   const float leadIMPs,
-  ValetEntryType& entryNS, 
-  ValetEntryType& entryEW)
+  ValetEntryType& entry)
 {
   unsigned decl, leader;
-  Hand::SetPairSwaps(res, entryNS, entryEW, decl, leader);
+  Hand::SetPairSwaps(res, entry, decl, leader);
 
-  entryNS.overall = totalIMPs;
-  entryNS.bidScore = bidIMPs;
-  entryEW.overall = -totalIMPs;
-  entryEW.bidScore = -bidIMPs;
-
-  if (res.declarer == VALET_NORTH || res.declarer == VALET_SOUTH)
+  // All IMPs are seen from NS's side up to here.
+  float sign = 1.f;
+  if (res.declarer == VALET_EAST || res.declarer == VALET_WEST)
   {
-    entryNS.declFlag[decl] = true;
-    entryNS.playScore[decl] = totalIMPs - bidIMPs;
+    sign = -1.f;
+    unsigned tmp = entry.pairNo;
+    entry.pairNo = entry.oppNo;
+    entry.oppNo = tmp;
+  }
 
-    entryEW.defFlag = true;
-    entryEW.leadFlag[leader] = true;
+  entry.declFlag[decl] = true;
+  entry.defFlag = true;
+  entry.leadFlag[leader] = true;
 
-    if (options.leadFlag && res.leadRank > 0)
-    {
-      // leadIMPs are seen from NS's side up to here.
-      entryEW.leadScore[leader] = -leadIMPs;
-      entryEW.defScore = bidIMPs - totalIMPs + leadIMPs;
-    }
-    else
-      entryEW.defScore = bidIMPs - totalIMPs;
+  entry.overall = sign * totalIMPs;
+  entry.bidScore = sign * bidIMPs;
+
+  entry.playScore[decl] = sign * (totalIMPs - bidIMPs);
+
+  if (options.leadFlag && res.leadRank > 0)
+  {
+    entry.leadScore[leader] = - sign * leadIMPs;
+    entry.defScore = sign * (bidIMPs - totalIMPs + leadIMPs);
   }
   else
-  {
-    entryEW.declFlag[decl] = true;
-    entryEW.playScore[decl] = bidIMPs - totalIMPs;
-
-    entryNS.defFlag = true;
-    entryNS.leadFlag[leader] = true;
-
-    if (options.leadFlag && res.leadRank > 0)
-    {
-      // leadIMPs are seen from NS's side up to here.
-      entryNS.leadScore[leader] = leadIMPs;
-      entryNS.defScore = totalIMPs - bidIMPs - leadIMPs;
-    }
-    else
-      entryNS.defScore = totalIMPs - bidIMPs;
-  }
+    entry.defScore = sign * (bidIMPs - totalIMPs);
 }
 
 
@@ -441,11 +417,9 @@ vector<ValetEntryType> Hand::CalculateScores()
     }
   }
 
-  vector<ValetEntryType> entries(2*numEntries);
+  vector<ValetEntryType> entries(numEntries);
   if (numEntries == 0)
     return entries;
-
-  unsigned vno = 0;
 
   if (options.valet == VALET_IMPS)
   {
@@ -454,10 +428,8 @@ vector<ValetEntryType> Hand::CalculateScores()
 
     for (unsigned i = 0; i < numEntries; i++)
     {
-      ValetEntryType& entryNS = entries[vno++];
-      ValetEntryType& entryEW = entries[vno++];
-      Hand::ResetValetEntry(entryNS);
-      Hand::ResetValetEntry(entryEW);
+      ValetEntryType& entry = entries[i];
+      Hand::ResetValetEntry(entry);
 
       const ResultType& res = results[i];
 
@@ -465,7 +437,7 @@ vector<ValetEntryType> Hand::CalculateScores()
         CalculateIMPs(rawScore[i] - datum));
 
       if (res.level == 0)
-        Hand::SetPassout(res, butlerIMPs, entryNS, entryEW);
+        Hand::SetPassout(res, butlerIMPs, entry);
       else
       {
         bidIMPs = GetDatumBidding(res, vulList[i], 
@@ -480,8 +452,7 @@ vector<ValetEntryType> Hand::CalculateScores()
         else
           leadIMPs = 0.f;
 
-        Hand::SetPlayResult(res, butlerIMPs, bidIMPs, leadIMPs,
-          entryNS, entryEW);
+        Hand::SetPlayResult(res, butlerIMPs, bidIMPs, leadIMPs, entry);
       }
     }
   }
@@ -499,17 +470,15 @@ vector<ValetEntryType> Hand::CalculateScores()
 
     for (unsigned i = 0; i < numEntries; i++)
     {
-      ValetEntryType& entryNS = entries[vno++];
-      ValetEntryType& entryEW = entries[vno++];
-      Hand::ResetValetEntry(entryNS);
-      Hand::ResetValetEntry(entryEW);
+      ValetEntryType& entry = entries[i];
+      Hand::ResetValetEntry(entry);
 
       const ResultType& res = results[i];
 
       float IAFs = Hand::GetOverallScore(rawScore, rawScore[i]);
 
       if (res.level == 0)
-        Hand::SetPassout(res, IAFs, entryNS, entryEW);
+        Hand::SetPassout(res, IAFs, entry);
       else
       {
         bidIAF = GetBiddingScore(rawScore, i, vulList[i], 
@@ -524,7 +493,7 @@ vector<ValetEntryType> Hand::CalculateScores()
         else
           leadIAF = 0.f;
 
-        Hand::SetPlayResult(res, IAFs, bidIAF, leadIAF, entryNS, entryEW);
+        Hand::SetPlayResult(res, IAFs, bidIAF, leadIAF, entry);
       }
     }
   }

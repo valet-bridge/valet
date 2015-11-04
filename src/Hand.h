@@ -61,13 +61,11 @@ class Hand
     void SetPassout(
       const ResultType& res,
       const float totalIMPs,
-      ValetEntryType& entryNS,
-      ValetEntryType& entryEW);
+      ValetEntryType& entry);
 
     void SetPairSwaps(
       const ResultType& res,
-      ValetEntryType& entryNS,
-      ValetEntryType& entryEW,
+      ValetEntryType& entry,
       unsigned& decl,
       unsigned& leader);
 
@@ -76,8 +74,7 @@ class Hand
       const float totalIMPs,
       const float bidIMPs,
       const float leadIMPs,
-      ValetEntryType& entryNS,
-      ValetEntryType& entryEW);
+      ValetEntryType& entry);
       
 
   public:

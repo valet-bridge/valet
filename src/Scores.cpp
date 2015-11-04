@@ -47,60 +47,16 @@ void Scores::Reset()
 }
 
 
-void Scores::AddEntry(
-  const ValetEntryType& entry)
+void Scores::AddCompensation(
+  const unsigned pairNo,
+  const unsigned oppNo,
+  const float value)
 {
-  if (entry.pairNo >= length)
-  {
-    unsigned numNewChunks = (entry.pairNo / SCORES_CHUNK_SIZE) + 1;
-    length = numNewChunks * SCORES_CHUNK_SIZE;
-    pairScores.resize(static_cast<size_t>(length));
-    oppScores.resize(static_cast<size_t>(length));
-    oppComp.resize(static_cast<size_t>(length));
-  }
-
-  CumulType& c = pairScores[entry.pairNo];
-  c.pairNo = entry.pairNo;
-  c.numHands++;
-  c.bidCum += entry.bidScore;
-  c.overallCum += entry.overall;
-
-  if (entry.declFlag[0])
-  {
-    c.numPlay1++;
-    c.play1Cum += entry.playScore[0];
-  }
-  else if (entry.declFlag[1])
-  {
-    c.numPlay2++;
-    c.play2Cum += entry.playScore[1];
-  }
-  else if (entry.defFlag)
-  {
-    c.defCum += entry.defScore;
-    c.numDef++;
-
-    if (options.leadFlag)
-    {
-      if (entry.leadFlag[0])
-      {
-        c.numLead1++;
-        c.lead1Cum += entry.leadScore[0];
-      }
-      else if (entry.leadFlag[1])
-      {
-        c.numLead2++;
-        c.lead2Cum += entry.leadScore[1];
-      }
-    }
-  }
-
-  // Remember the opponent in order to be able to compensate.
   ostringstream oss;
-  oss << entry.oppNo;
+  oss << oppNo;
   const string oppstr = oss.str();
 
-  OppMapType& oppMap = oppScores[entry.pairNo];
+  OppMapType& oppMap = oppScores[pairNo];
   OppMapType::iterator it = oppMap.find(oppstr);
   if (it == oppMap.end())
   {
@@ -108,8 +64,73 @@ void Scores::AddEntry(
     oppMap[oppstr].count = 0;
   }
 
-  oppMap[oppstr].cumul += entry.overall;
+  oppMap[oppstr].cumul += value;
   oppMap[oppstr].count++;
+}
+
+
+void Scores::AddEntry(
+  const ValetEntryType& entry)
+{
+  unsigned m = (entry.pairNo > entry.oppNo ? entry.pairNo : entry.oppNo);
+  if (m >= length)
+  {
+    unsigned numNewChunks = (m / SCORES_CHUNK_SIZE) + 1;
+    length = numNewChunks * SCORES_CHUNK_SIZE;
+    pairScores.resize(static_cast<size_t>(length));
+    oppScores.resize(static_cast<size_t>(length));
+    oppComp.resize(static_cast<size_t>(length));
+  }
+
+  CumulType& cDecl = pairScores[entry.pairNo];
+  cDecl.pairNo = entry.pairNo;
+  cDecl.numHands++;
+  cDecl.bidCum += entry.bidScore;
+  cDecl.overallCum += entry.overall;
+
+  if (entry.declFlag[0])
+  {
+    cDecl.numPlay1++;
+    cDecl.play1Cum += entry.playScore[0];
+  }
+  else if (entry.declFlag[1])
+  {
+    cDecl.numPlay2++;
+    cDecl.play2Cum += entry.playScore[1];
+  }
+
+  // The overall and bidding scores have to be inverted.
+  // The detailed scores have already been inverted.
+
+  CumulType& cDef = pairScores[entry.oppNo];
+  cDef.pairNo = entry.oppNo;
+  cDef.numHands++;
+  cDef.bidCum -= entry.bidScore;
+  cDef.overallCum -= entry.overall;
+
+  if (entry.defFlag)
+  {
+    cDef.defCum += entry.defScore;
+    cDef.numDef++;
+
+    if (options.leadFlag)
+    {
+      if (entry.leadFlag[0])
+      {
+        cDef.numLead1++;
+        cDef.lead1Cum += entry.leadScore[0];
+      }
+      else if (entry.leadFlag[1])
+      {
+        cDef.numLead2++;
+        cDef.lead2Cum += entry.leadScore[1];
+      }
+    }
+  }
+
+  // Remember the opponent in order to be able to compensate.
+  Scores::AddCompensation(entry.pairNo, entry.oppNo, entry.overall);
+  Scores::AddCompensation(entry.oppNo, entry.pairNo, -entry.overall);
 }
 
 
