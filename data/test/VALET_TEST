@@ -1,0 +1,10 @@
+./valet.exe -d ../data/2015-World/Men -l -a -v datum > chennai_datum2.txt
+./valet.exe -d ../data/2015-World/Men -l -a -v imps > chennai_iaf2.txt
+./valet.exe -d ../data/2015-World/Men -l -a -v matchpoints > chennai_mp2.txt
+
+echo -- Chennai datum --
+diff --ignore-all-space chennai_datum.txt chennai_datum2.txt
+echo -- Chennai IAF --
+diff --ignore-all-space chennai_iaf.txt chennai_iaf2.txt
+echo -- Chennai MP --
+diff --ignore-all-space chennai_mp.txt chennai_mp2.txt
