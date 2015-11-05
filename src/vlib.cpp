@@ -74,7 +74,7 @@ extern "C" BOOL APIENTRY DllMain(
   return 1;
 }
 
-#elif defined(USES_CONSTRUCTOR)
+#elif defined(__linux) || defined(__APPLE__)
 
 static void __attribute__ ((constructor)) libInit(void)
 {

@@ -123,5 +123,5 @@ Pairs.o: Pairs.h cst.h
 parse.o: Pairs.h cst.h parse.h valet.h
 scoring.o: valet.h cst.h scoring.h
 vlib.o: valet.h parse.h cst.h scoring.h Pairs.h Hand.h
-driver.o: Valet.h dsupport.h
-dsupport.o: Valet.h dsupport.h
+driver.o: valet.h dsupport.h
+dsupport.o: valet.h dsupport.h

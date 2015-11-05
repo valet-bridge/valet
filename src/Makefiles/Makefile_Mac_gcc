@@ -81,7 +81,7 @@ valet:	$(VOBJ_FILES)
 lib:	$(LOBJ_FILES)
 	ar rcs $(STATIC_LIB) $(LOBJ_FILES)
 
-driver:	$(DOBJ_FILES)
+driver:	$(DOBJ_FILES) $(STATIC_LIB)
 	$(CC) $(CC_FULL_FLAGS) $(DOBJ_FILES) $(LD_FLAGS) $(LIB_USE_FLAGS) -o driver 
 
 %.o:	%.cpp
@@ -109,5 +109,5 @@ Pairs.o: Pairs.h cst.h
 parse.o: Pairs.h cst.h parse.h valet.h
 scoring.o: valet.h cst.h scoring.h
 vlib.o: valet.h parse.h cst.h scoring.h Pairs.h Hand.h
-driver.o: Valet.h dsupport.h
-dsupport.o: Valet.h dsupport.h
+driver.o: valet.h dsupport.h
+dsupport.o: valet.h dsupport.h

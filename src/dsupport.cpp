@@ -16,7 +16,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "Valet.h"
+#include "valet.h"
 #include "dsupport.h"
 
 using namespace std;

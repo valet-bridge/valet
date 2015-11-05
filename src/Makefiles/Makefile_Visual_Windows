@@ -118,5 +118,5 @@ Pairs.obj: Pairs.h cst.h
 parse.obj: Pairs.h cst.h parse.h valet.h
 scoring.obj: valet.h cst.h scoring.h
 vlib.obj: valet.h parse.h cst.h scoring.h Pairs.h Hand.h
-driver.obj: Valet.h dsupport.h
-dsupport.obj: Valet.h dsupport.h
+driver.obj: valet.h dsupport.h
+dsupport.obj: valet.h dsupport.h
