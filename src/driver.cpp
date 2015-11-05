@@ -120,6 +120,15 @@ int main(int argc, char * argv[])
 
     while (ValetGetNextScoreByNumber(&players, &output))
     {
+      if (players.decl1 == 0 ||
+          players.decl2 == 0 ||
+          players.def1 == 0 ||
+          players.def1 == 0)
+      {
+        cout << "A player tag was not numerical" << endl;
+        return RETURN_UNKNOWN_FAULT;
+      }
+
       if (! output.declFlag[0] && ! output.declFlag[1])
         PrintPassedResultByNumber(players, output);
       else
