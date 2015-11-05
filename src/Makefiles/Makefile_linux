@@ -1,68 +1,114 @@
-# This is the Valet Makefile for Windows and the Microsoft Visual C++
-# compiler.  It does assume a Unix-like setup for some commands,
-# but if you only want to call "make" with the default target,
-# you should be OK.
+# This the DDS Makefile for Linux and the GNU g++ compiler.
 
-# If your Microsoft compiler is not called cl, change it here.
-CC		= cl
-CC_FLAGS     	= /O2 /Oi /Ot /Oy /GL
+# If your compiler name is not given here, change it.
+CC		= g++
 
-# These flags are not turned on by default, but Valet should pass them.
+# Use this one to get OpenMP multi-threading
+CC_FLAGS	= -O3 -flto -fopenmp -mtune=generic
+
+LD_FLAGS	= 		\
+	-Wl,--dynamicbase 	\
+	-Wl,--nxcompat 		\
+	-Wl,--no-seh 		\
+	-Wl,--enable-stdcall-fixup
+
+
+# These flags are not turned on be default, but DDS should pass them.
 # Turn them on below.
-WARN_FLAGS	=		\
-	/W4			\
-	/wd4127			\
-	/wd4555			\
-	/wd4668			\
-	/wd4701			\
-	/wd4710			\
-	/wd4711			\
-	/wd4820			\
-	/wd4986			\
-	/wd4987			\
-	/wd4996			\
-	/WX                     \
-        /EHsc
+WARN_FLAGS	= 		\
+	-Wshadow 		\
+	-Wsign-conversion 	\
+	-pedantic -Wall -Wextra  \
+	-Wcast-align -Wcast-qual \
+	-Wctor-dtor-privacy 	\
+	-Wdisabled-optimization \
+	-Winit-self 		\
+	-Wlogical-op 		\
+	-Wmissing-declarations 	\
+	-Wmissing-include-dirs 	\
+	-Wnoexcept 		\
+	-Wold-style-cast 	\
+	-Woverloaded-virtual 	\
+	-Wredundant-decls 	\
+	-Wsign-promo 		\
+	-Wstrict-null-sentinel 	\
+	-Wstrict-overflow=1 	\
+	-Wswitch-default -Wundef \
+	-Werror 		\
+	-Wno-unused 		\
+	-Wno-unknown-pragmas 	\
+	-Wno-long-long		\
+	-Wno-format
 
 # Here you can turn on warnings.
 # CC_FULL_FLAGS	= $(CC_FLAGS)
 CC_FULL_FLAGS	= $(CC_FLAGS) $(WARN_FLAGS)
 
-SOURCE_FILES 	=		\
-        valet.cpp               \
-        args.cpp                \
-        files.cpp               \
-        parse.cpp               \
-        scoring.cpp             \
+DLLBASE		= valet
+STATIC_LIB	= lib$(DLLBASE).a
+LIB_USE_FLAGS   = -L. -l$(DLLBASE)
+
+VALET_FILES	=		\
+	args.cpp                \
+	files.cpp               \
+        Hand.cpp		\
         misc.cpp                \
         Pairs.cpp               \
-        Hand.cpp                \
-        Scores.cpp
+        parse.cpp               \
+	Scores.cpp		\
+        scoring.cpp             \
+	valet.cpp
 
-OBJ_FILES 	= $(subst .cpp,.obj,$(SOURCE_FILES)) 
+LIB_FILES 	=		\
+        Hand.cpp		\
+        Pairs.cpp               \
+        parse.cpp               \
+        scoring.cpp             \
+	vlib.cpp
+
+DRIVER_FILES =			\
+	driver.cpp              \
+	dsupport.cpp
+
+VOBJ_FILES 	= $(subst .cpp,.o,$(VALET_FILES)) 
+LOBJ_FILES 	= $(subst .cpp,.o,$(LIB_FILES))
+DOBJ_FILES 	= $(subst .cpp,.o,$(DRIVER_FILES)) 
 
 
-valet:	$(OBJ_FILES)
-	$(CC) $(CC_FULL_FLAGS) $(OBJ_FILES)
+valet:	$(VOBJ_FILES)
+	$(CC) $(CC_FULL_FLAGS) $(VOBJ_FILES) -o valet
 
-%.obj:	%.cpp
-	$(CC) $(CC_FULL_FLAGS) /c $<
+lib:	$(LOBJ_FILES)
+	ar rcs $(STATIC_LIB) $(LOBJ_FILES)
+
+driver:	$(DOBJ_FILES)
+	$(CC) $(CC_FULL_FLAGS) $(DOBJ_FILES) $(LD_FLAGS) $(LIB_USE_FLAGS) -o driver 
+
+%.o:	%.cpp
+	$(CC) $(CC_FULL_FLAGS) -c $<
 
 depend:
-	makedepend -Y -o.obj -- $(CC_FLAGS) -- $(SOURCE_FILES)
+	makedepend -Y -- $(CC_FLAGS) -- $(VALET_FILES) $(LIB_FILES) $(DRIVER_FILES)
 
 clean:
-	rm -f $(OBJ_FILES) valet.exe
+	rm -f $(OBJ_FILES) $(LOBJ_FILES) $(DOBJ_FILES) valet driver $(DLL) $(DLLBASE).{lib,exp,def,obj,res}
 
 
 # DO NOT DELETE
 
-valet.obj: cst.h args.h files.h scoring.h misc.h Pairs.h Hand.h Scores.h
-args.obj: args.h cst.h
-files.obj: files.h Pairs.h cst.h Hand.h parse.h
-parse.obj: Pairs.h cst.h parse.h
-scoring.obj: cst.h scoring.h
-misc.obj: Pairs.h cst.h misc.h
-Pairs.obj: cst.h Pairs.h
-Hand.obj: cst.h Pairs.h Hand.h scoring.h
-Scores.obj: Scores.h cst.h Pairs.h
+args.o: args.h cst.h
+files.o: files.h Pairs.h cst.h Hand.h parse.h valet.h
+Hand.o: valet.h Pairs.h cst.h Hand.h scoring.h
+misc.o: Pairs.h cst.h misc.h
+Pairs.o: Pairs.h cst.h
+parse.o: Pairs.h cst.h parse.h valet.h
+Scores.o: Scores.h cst.h Pairs.h
+scoring.o: valet.h cst.h scoring.h
+valet.o: cst.h args.h files.h scoring.h misc.h Pairs.h Hand.h Scores.h
+Hand.o: valet.h Pairs.h cst.h Hand.h scoring.h
+Pairs.o: Pairs.h cst.h
+parse.o: Pairs.h cst.h parse.h valet.h
+scoring.o: valet.h cst.h scoring.h
+vlib.o: valet.h parse.h cst.h scoring.h Pairs.h Hand.h
+driver.o: Valet.h dsupport.h
+dsupport.o: Valet.h dsupport.h

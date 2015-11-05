@@ -1,4 +1,4 @@
-# This is the valet Makefile for Mac OS and the clang compiler.
+# This is the valet Makefile for Mac OS and the g++ compiler.
 
 # If your compiler name is not given here, change it.
 CC		= g++
@@ -44,40 +44,70 @@ WARN_FLAGS	= 		\
 # CC_FULL_FLAGS	= $(CC_FLAGS)
 CC_FULL_FLAGS	= $(CC_FLAGS) $(WARN_FLAGS)
 
+DLLBASE         = valet
+STATIC_LIB      = lib$(DLLBASE).a
+LIB_USE_FLAGS   = -L. -l$(DLLBASE)
 
-SOURCE_FILES 	=		\
-        valet.cpp               \
-        args.cpp                \
-        files.cpp               \
-        parse.cpp               \
-        scoring.cpp             \
+VALET_FILES	=		\
+	args.cpp                \
+	files.cpp               \
+        Hand.cpp		\
         misc.cpp                \
         Pairs.cpp               \
-        Hand.cpp                \
-        Scores.cpp
+        parse.cpp               \
+	Scores.cpp		\
+        scoring.cpp             \
+	valet.cpp
 
-O_FILES 	= $(subst .cpp,.o,$(SOURCE_FILES))
+LIB_FILES 	=		\
+        Hand.cpp		\
+        Pairs.cpp               \
+        parse.cpp               \
+        scoring.cpp             \
+	vlib.cpp
 
-valet:	$(O_FILES)
-	$(CC) $(CC_FUL_FLAGS) $(O_FILES) -o valet
+DRIVER_FILES =			\
+	driver.cpp              \
+	dsupport.cpp
+
+VOBJ_FILES 	= $(subst .cpp,.o,$(VALET_FILES)) 
+LOBJ_FILES 	= $(subst .cpp,.o,$(LIB_FILES))
+DOBJ_FILES 	= $(subst .cpp,.o,$(DRIVER_FILES)) 
+
+
+valet:	$(VOBJ_FILES)
+	$(CC) $(CC_FULL_FLAGS) $(VOBJ_FILES) -o valet
+
+lib:	$(LOBJ_FILES)
+	ar rcs $(STATIC_LIB) $(LOBJ_FILES)
+
+driver:	$(DOBJ_FILES)
+	$(CC) $(CC_FULL_FLAGS) $(DOBJ_FILES) $(LD_FLAGS) $(LIB_USE_FLAGS) -o driver 
 
 %.o:	%.cpp
 	$(CC) $(CC_FULL_FLAGS) -c $<
 
 depend:
-	makedepend -Y -- $(CC_FLAGS) -- $(SOURCE_FILES)
+	makedepend -Y -- $(CC_FLAGS) -- $(VALET_FILES) $(LIB_FILES) $(DRIVER_FILES)
 
 clean:
-	rm -f $(O_FILES)
+	rm -f $(OBJ_FILES) $(LOBJ_FILES) $(DOBJ_FILES) valet driver $(DLL) $(DLLBASE).{lib,exp,def,obj,res}
 
 # DO NOT DELETE
 
-valet.o: cst.h args.h files.h scoring.h misc.h Pairs.h Hand.h Scores.h
 args.o: args.h cst.h
-files.o: files.h Pairs.h cst.h Hand.h parse.h
-parse.o: Pairs.h cst.h parse.h
-scoring.o: cst.h scoring.h
+files.o: files.h Pairs.h cst.h Hand.h parse.h valet.h
+Hand.o: valet.h Pairs.h cst.h Hand.h scoring.h
 misc.o: Pairs.h cst.h misc.h
-Pairs.o: cst.h Pairs.h
-Hand.o: cst.h Pairs.h Hand.h scoring.h
+Pairs.o: Pairs.h cst.h
+parse.o: Pairs.h cst.h parse.h valet.h
 Scores.o: Scores.h cst.h Pairs.h
+scoring.o: valet.h cst.h scoring.h
+valet.o: cst.h args.h files.h scoring.h misc.h Pairs.h Hand.h Scores.h
+Hand.o: valet.h Pairs.h cst.h Hand.h scoring.h
+Pairs.o: Pairs.h cst.h
+parse.o: Pairs.h cst.h parse.h valet.h
+scoring.o: valet.h cst.h scoring.h
+vlib.o: valet.h parse.h cst.h scoring.h Pairs.h Hand.h
+driver.o: Valet.h dsupport.h
+dsupport.o: Valet.h dsupport.h

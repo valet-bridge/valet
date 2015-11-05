@@ -76,7 +76,8 @@ LIB_FILES 	=		\
 	vlib.cpp
 
 DRIVER_FILES =			\
-	driver.cpp
+	driver.cpp              \
+	dsupport.cpp
 
 VOBJ_FILES 	= $(subst .cpp,.o,$(VALET_FILES)) 
 LOBJ_FILES 	= $(subst .cpp,.o,$(LIB_FILES)) $(VFILE).o
@@ -109,13 +110,19 @@ clean:
 
 # DO NOT DELETE
 
-valet.o: cst.h args.h files.h scoring.h misc.h Pairs.h Hand.h Scores.h
-args.o: args.h cst.h
-files.o: files.h Pairs.h cst.h Hand.h parse.h
-parse.o: Pairs.h cst.h parse.h
-scoring.o: cst.h scoring.h
-misc.o: Pairs.h cst.h misc.h
-Pairs.o: cst.h Pairs.h
-Hand.o: cst.h Pairs.h Hand.h scoring.h
-Scores.o: Scores.h cst.h Pairs.h
-
+args.obj: args.h cst.h
+files.obj: files.h Pairs.h cst.h Hand.h parse.h valet.h
+Hand.obj: valet.h Pairs.h cst.h Hand.h scoring.h
+misc.obj: Pairs.h cst.h misc.h
+Pairs.obj: Pairs.h cst.h
+parse.obj: Pairs.h cst.h parse.h valet.h
+Scores.obj: Scores.h cst.h Pairs.h
+scoring.obj: valet.h cst.h scoring.h
+valet.obj: cst.h args.h files.h scoring.h misc.h Pairs.h Hand.h Scores.h
+Hand.obj: valet.h Pairs.h cst.h Hand.h scoring.h
+Pairs.obj: Pairs.h cst.h
+parse.obj: Pairs.h cst.h parse.h valet.h
+scoring.obj: valet.h cst.h scoring.h
+vlib.obj: valet.h parse.h cst.h scoring.h Pairs.h Hand.h
+driver.obj: Valet.h dsupport.h
+dsupport.obj: Valet.h dsupport.h

@@ -74,7 +74,8 @@ LIB_FILES 	=		\
 	vlib.cpp
 
 DRIVER_FILES =			\
-	driver.cpp
+	driver.cpp              \
+	dsupport.cpp
 
 VOBJ_FILES 	= $(subst .cpp,.o,$(VALET_FILES)) 
 LOBJ_FILES 	= $(subst .cpp,.o,$(LIB_FILES))
@@ -122,4 +123,5 @@ Pairs.o: Pairs.h cst.h
 parse.o: Pairs.h cst.h parse.h valet.h
 scoring.o: valet.h cst.h scoring.h
 vlib.o: valet.h parse.h cst.h scoring.h Pairs.h Hand.h
-driver.o: Valet.h
+driver.o: Valet.h dsupport.h
+dsupport.o: Valet.h dsupport.h
