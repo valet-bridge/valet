@@ -1,0 +1,71 @@
+9.773|Bjarke Friis
+9.774|Marianne Staal Rasmussen
+9.775|Anne-Sofie Houlberg
+9.776|Christina Lund Madsen
+9.777|Lone Bilde
+9.778|Helle Rasmussen
+9.779|Kasper Konow
+9.780|Michael Askgaard
+9.781|Mats Nilsland
+9.782|Søren Christiansen
+9.783|Jonas Houmøller
+9.784|Lauge Schäffer
+9.828|Knud Harries
+9.829|Morten Andersen
+9.830|Klaus Adamsen
+9.831|Dennis Koch-Palmund
+9.832|Jan Sejr Nicolajsen
+9.833|Mads Grove
+9.834|Nils Mønsted
+9.835|Jan Pedersen
+9.836|Tom Nørgaard
+9.837|Trine Bilde
+9.838|Johan Hammelev
+9.839|Camilla Bo Krefeld
+9.840|Jacob Røn
+9.841|Kell Krogh
+9.842|Christian Reinholdt
+9.843|Sejr Andreas Jensen
+9.844|Mikkel Larsen
+9.845|Peter Fredin
+9.852|Erik Brok
+9.853|Otto Dahl
+9.854|Mads Krøjgaard
+9.855|Niels Krøjgaard
+9.856|Jan Kølbæk
+9.857|Andreas Marquardsen
+9.904|Steen Schou
+9.905|Knud-Aage Boesgaard
+9.906|Jørgen Cilleborg Hansen
+9.907|Frederik Mørk
+9.908|Hans Christian Nielsen
+9.917|Thorvald Aagaard
+9.918|Mikkel Bensby Nøhr
+9.919|Maria Rahelt
+9.920|Anders Sigsgaard
+9.921|Tina Ege
+9.922|Ole Raulund
+9.945|Thomas Vang Larsen
+9.946|Lars Lund Madsen
+9.947|Morten Lund Madsen
+9.948|Jesper Dall
+9.949|Rico Hemberg
+9.959|Flemming Dahl
+9.960|Bettina Kalkerup
+9.961|John Vermehren Norris
+9.962|Allan Cohen
+9.963|Henrik Norman Hansen
+9.964|Flemming Poulsen
+9.965|Peter Schaltz
+9.966|Dorthe Schaltz
+9.967|Martin Schaltz
+9.968|Anders Hagen
+9.969|Knut Blakset
+9.970|Mathias Bruun
+9.984|Hans Chr Graversen
+9.985|Henrik Caspersen
+9.986|Morten Bilde
+9.987|Dennis Bilde
+9.988|Lars Tofte
+9.989|Emil Jepsen
+9999|UnKnown
