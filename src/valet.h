@@ -26,7 +26,7 @@
 
 
 // Error codes. See interface document for more detail.
-// Call ErrorMessage(code, line[]) to get the text form in line[].
+// Call ValetErrorMessage(code, line[]) to get the text form in line[].
 
 // Success.
 #define RETURN_NO_FAULT 1
@@ -50,46 +50,43 @@
 #define RETURN_BOARD_NUMBER_CHANGE -12
 #define TEXT_BOARD_NUMBER_CHANGE "Board number changed"
 
-#define RETURN_PLAYER_NORTH_TAG -13
-#define TEXT_PLAYER_NORTH_TAG "North is not a known player"
+#define RETURN_PLAYER_NORTH -13
+#define TEXT_PLAYER_NORTH "North is not a known or valid player"
 
-#define RETURN_PLAYER_EAST_TAG -14
-#define TEXT_PLAYER_EAST_TAG "East is not a known player"
+#define RETURN_PLAYER_EAST -14
+#define TEXT_PLAYER_EAST "East is not a known or valid player"
 
-#define RETURN_PLAYER_SOUTH_TAG -15
-#define TEXT_PLAYER_SOUTH_TAG "South is not a known player"
+#define RETURN_PLAYER_SOUTH -15
+#define TEXT_PLAYER_SOUTH "South is not a known or valid player"
 
-#define RETURN_PLAYER_WEST_TAG -16
-#define TEXT_PLAYER_WEST_TAG "West is not a known player"
+#define RETURN_PLAYER_WEST -16
+#define TEXT_PLAYER_WEST "West is not a known or valid player"
 
 #define RETURN_CONTRACT_FORMAT_TEXT -17
 #define TEXT_CONTRACT_FORMAT_TEXT "Contract is not in recognized format"
 
-#define RETURN_DECLARER_TEXT -18
-#define TEXT_DECLARER_TEXT "Contract is not in recognized format"
-
-#define RETURN_TRICKS -19
+#define RETURN_TRICKS -18
 #define TEXT_TRICKS "Number of tricks is not in range"
 
-#define RETURN_LEAD_TEXT -20
+#define RETURN_LEAD_TEXT -19
 #define TEXT_LEAD_TEXT "Not a valid lead"
 
-#define RETURN_LEVEL -21
+#define RETURN_LEVEL -20
 #define TEXT_LEVEL "Not a valid level"
 
-#define RETURN_DENOM -22
+#define RETURN_DENOM -21
 #define TEXT_DENOM "Not a valid denom"
 
-#define RETURN_MULTIPLIER -23
+#define RETURN_MULTIPLIER -22
 #define TEXT_MULTIPLIER "Not a valid multiplier"
 
-#define RETURN_DECLARER -24
+#define RETURN_DECLARER -23
 #define TEXT_DECLARER "Not a valid declarer"
 
-#define RETURN_LEAD_DENOM -25
+#define RETURN_LEAD_DENOM -24
 #define TEXT_LEAD_DENOM "Not a valid leadDenom"
 
-#define RETURN_LEAD_RANK -26
+#define RETURN_LEAD_RANK -25
 #define TEXT_LEAD_RANK "Not a valid leadRank"
 
 
@@ -188,6 +185,8 @@ struct OutputResultType
 };
 
 
+EXTERN_C DLLEXPORT void STDCALL ValetInit();
+
 EXTERN_C DLLEXPORT int STDCALL ValetSetControl(
   struct ControlType * control);
 
@@ -209,7 +208,7 @@ EXTERN_C DLLEXPORT int STDCALL ValetAddByNumber(
   struct PlayersNumberType * players,
   struct InputResultType * input);
 
-EXTERN_C DLLEXPORT int STDCALL ValetCalculate();
+EXTERN_C DLLEXPORT void STDCALL ValetCalculate();
 
 EXTERN_C DLLEXPORT bool STDCALL ValetGetNextScoreByTag(
   struct PositionsTagType * players,
@@ -221,7 +220,7 @@ EXTERN_C DLLEXPORT bool STDCALL ValetGetNextScoreByNumber(
 
 EXTERN_C DLLEXPORT void STDCALL ValetErrorMessage(
   int code,
-  char line[80]);
+  char line[160]);
 
 #endif
 

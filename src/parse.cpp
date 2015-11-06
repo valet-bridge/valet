@@ -105,13 +105,19 @@ bool TokenToUnsigned(
       (upperLimit > 0 && res > upperLimit))
   {
     if (upperLimit > 0)
-      error.message << err << "'" << token << "' is not " <<
-        lowerLimit << ".." << upperLimit << endl;
+      error.message << "Got " << err << ": " << token <<
+       " (not " << lowerLimit << " .. " << upperLimit << ")\n";
     else
-      error.message << err << "'" << token << "' is not >= " << 
-        lowerLimit << endl;
+      error.message << "Got " << err << ": " << token <<
+       " (not >= " << lowerLimit << ")\n";
 
     error.flag = true;
+    return false;
+  }
+  else if (*pend != '\0')
+  {
+    error.flag = true;
+    error.message << "Got " << err << ": " << token << " (not a number)\n";
     return false;
   }
   else
@@ -126,21 +132,23 @@ bool CharToPlayer(
   switch(c)
   {
     case 'N':
+    case 'n':
       p = VALET_NORTH;
       return true;
     case 'E':
+    case 'e':
       p = VALET_EAST;
       return true;
     case 'S':
+    case 's':
       p = VALET_SOUTH;
       return true;
     case 'W':
+    case 'w':
       p = VALET_WEST;
       return true;
     default:
       error.flag = true;
-      error.message << "'" << static_cast<unsigned>(c) <<
-        "' is not a player (NESW)" << endl;
       return false;
   }
 }
@@ -150,7 +158,7 @@ bool CharToLevel(
   const char c,
   unsigned& d)
 {
-  if (c < '0' || c > '9')
+  if (c < '1' || c > '7')
     return false;
   
   d = static_cast<unsigned>(c - '0');
@@ -186,8 +194,6 @@ bool CharToDenom(
       return true;
     default:
       error.flag = true;
-      error.message << "'" << static_cast<unsigned>(c) <<
-        "' is not a denomination (NSHDC)" << endl;
       return false;
   }
 }
@@ -230,8 +236,6 @@ bool CharToRank(
   else
   {
     error.flag = true;
-    error.message << "'" << static_cast<unsigned>(c) <<
-      "' is not a rank" << endl;
     return false;
   }
 }
@@ -244,13 +248,13 @@ bool LineToResult(
   unsigned& bno,
   bool skipNameCheck)
 {
-  if (! TokenToUnsigned(tokens[0], 1, 0, "Round number", rno))
+  if (! TokenToUnsigned(tokens[0], 1, 0, "round number", rno))
   {
     error.no = RETURN_ROUND_NUMBER;
     return false;
   }
 
-  if (! TokenToUnsigned(tokens[1], 1, 0, "Board number", bno))
+  if (! TokenToUnsigned(tokens[1], 1, 0, "board number", bno))
   {
     error.no = RETURN_BOARD_NUMBER;
     return false;
@@ -260,32 +264,36 @@ bool LineToResult(
   if (! skipNameCheck && ! pairs.TagExists(res.north))
   { 
     error.flag = true;
-    error.no = RETURN_PLAYER_NORTH_TAG;
-    error.message << "'" << res.north << "' is not a valid player\n";
+    error.no = RETURN_PLAYER_NORTH;
+    error.message << "Got North player: '" << res.north << 
+      "' (not in name list)\n";
     return false;
   }
   res.east = tokens[3];
   if (! skipNameCheck && ! pairs.TagExists(res.east))
   { 
     error.flag = true;
-    error.no = RETURN_PLAYER_EAST_TAG;
-    error.message << "'" << res.east << "' is not a valid player\n";
+    error.no = RETURN_PLAYER_EAST;
+    error.message << "Got East player: '" << res.east <<
+      "' (not in name list)\n";
     return false;
   }
   res.south = tokens[4];
   if (! skipNameCheck && ! pairs.TagExists(res.south))
   { 
     error.flag = true;
-    error.no = RETURN_PLAYER_SOUTH_TAG;
-    error.message << "'" << res.south << "' is not a valid player\n";
+    error.no = RETURN_PLAYER_SOUTH;
+    error.message << "Got South player: '" << res.south << 
+      "' (not in name list)\n";
     return false;
   }
   res.west = tokens[5];
   if (! skipNameCheck && ! pairs.TagExists(res.west))
   { 
     error.flag = true;
-    error.no = RETURN_PLAYER_WEST_TAG;
-    error.message << "'" << res.west << "' is not a valid player\n";
+    error.no = RETURN_PLAYER_WEST;
+    error.message << "Got West player: '" << res.west <<
+      "' (not in name list)\n";
     return false;
   }
 
@@ -294,17 +302,19 @@ bool LineToResult(
   {
     error.flag = true;
     error.no = RETURN_CONTRACT_FORMAT_TEXT;
-    error.message << "'" << tokens[6].c_str() << " is not a contract\n";
+    error.message << "Got contract: '" << tokens[6].c_str() <<
+      "' (bad length)\n";
     return false;
   }
 
   if (cl == 1)
   {
-    if (tokens[6] != "P")
+    if (tokens[6] != "P" && tokens[6] != "p")
     {
       error.flag = true;
       error.no = RETURN_CONTRACT_FORMAT_TEXT;
-      error.message << "'" << tokens[6].c_str() << " is not a contract\n";
+      error.message << "Got contract: '" << tokens[6].c_str() <<
+        "' (if length 1, must be P or p)\n";
       return false;
     }
     res.level = 0;
@@ -315,7 +325,8 @@ bool LineToResult(
   {
     error.flag = true;
     error.no = RETURN_LEVEL;
-    error.message << "'" << tokens[6].c_str() << " is not a contract\n";
+    error.message << "Got contract: '" << tokens[6].c_str() <<
+      "' (can't find a level 1 .. 7)\n";
     return false;
   }
 
@@ -323,28 +334,32 @@ bool LineToResult(
   {
     error.flag = true;
     error.no = RETURN_DENOM;
-    error.message << "'" << tokens[6].c_str() << " is not a contract\n";
+    error.message << "Got contract: '" << tokens[6].c_str() <<
+      "' (can't find a denomination, want NSHDC/nshdc)\n";
     return false;
   }
 
   if (cl == 3)
   {
-    if (tokens[6][2] != 'X')
+    if (tokens[6][2] != 'X' && tokens[6][2] != 'x')
     {
       error.flag = true;
       error.no = RETURN_MULTIPLIER;
-      error.message << "'" << tokens[6].c_str() << " is not a contract\n";
+      error.message << "Got contract: '" << tokens[6].c_str() <<
+        "' (expected last letter to be X or x)\n";
       return false;
     }
     res.multiplier = VALET_DOUBLED;
   }
   else if (cl == 4)
   {
-    if (tokens[6][2] != 'X' || tokens[6][3] != 'X')
+    if ((tokens[6][2] != 'X' && tokens[6][2] != 'x')|| 
+        (tokens[6][3] != 'X' && tokens[6][3] != 'x'))
     {
       error.flag = true;
       error.no = RETURN_MULTIPLIER;
-      error.message << "'" << tokens[6].c_str() << " is not a contract\n";
+      error.message << "Got contract: '" << tokens[6].c_str() <<
+        "' (expected last letters to be XX or xx)\n";
       return false;
     }
     res.multiplier = VALET_REDOUBLED;
@@ -353,27 +368,19 @@ bool LineToResult(
     res.multiplier = VALET_UNDOUBLED;
 
 
-  if (tokens[7].size() != 1)
+  if (tokens[7].size() != 1 || ! CharToPlayer(tokens[7][0], res.declarer))
   {
     error.flag = true;
     error.no = RETURN_DECLARER;
-    error.message << "'" << tokens[7].c_str() << " is not a declarer\n";
+    error.message << "Got declarer: '" << tokens[7].c_str() <<
+      "' (expected NESW or nesw)\n";
     return false;
   }
 
-  if (! CharToPlayer(tokens[7][0], res.declarer))
-  {
-    error.flag = true;
-    error.no = RETURN_DECLARER;
-    error.message << "'" << tokens[7].c_str() << " is not a declarer\n";
-    return false;
-  }
-
-  if (! TokenToUnsigned(tokens[8], 0, 13, "Tricks", res.tricks))
+  if (! TokenToUnsigned(tokens[8], 0, 13, "tricks", res.tricks))
   {
     error.flag = true;
     error.no = RETURN_TRICKS;
-    error.message << "'" << tokens[8].c_str() << " is not a trick number\n";
     return false;
   }
 
@@ -387,7 +394,8 @@ bool LineToResult(
   {
     error.flag = true;
     error.no = RETURN_LEAD_TEXT;
-    error.message << "'" << tokens[9].c_str() << " is not a lead\n";
+    error.message << "Got lead: '" << tokens[9].c_str() <<
+      "' (expected two characters)\n";
     return false;
   }
 
@@ -395,7 +403,8 @@ bool LineToResult(
   {
     error.flag = true;
     error.no = RETURN_LEAD_DENOM;
-    error.message << "'" << tokens[9].c_str() << " is not a lead\n";
+    error.message << "Got lead: '" << tokens[9].c_str() <<
+      "' (can't find a denomination, want NSHDC/nshdc)\n";
     return false;
   }
 
@@ -403,7 +412,8 @@ bool LineToResult(
   {
     error.flag = true;
     error.no = RETURN_LEAD_RANK;
-    error.message << "'" << tokens[9].c_str() << " is not a lead\n";
+    error.message << "Got lead: '" << tokens[9].c_str() <<
+      "' (can't find a rank, want AKQJT, akqjt or 2 .. 9)\n";
     return false;
   }
 
@@ -427,13 +437,18 @@ int ParseScoreLine(
   {
     error.flag = true;
     error.no = RETURN_TOKEN_NUMBER;
-    error.message << "Token number " << tlen << " is invalid\n";
-    return false;
+    error.message << "Got token number: " << tlen <<
+      " (expected 9 or 10)\n";
+    error.message << "Parsed line: '" << line << "'\n";
+    return error.no;
   }
 
   if (LineToResult(tokens, res, rno, bno, skipNameCheck))
     return RETURN_NO_FAULT;
   else
+  {
+    error.message << "Parsed line: '" << line << "'\n";
     return error.no;
+  }
 }
 

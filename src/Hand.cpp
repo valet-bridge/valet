@@ -67,6 +67,12 @@ int Hand::SetBoardNumber(
 }
 
 
+unsigned Hand::GetBoardNumber()
+{
+  return boardNo;
+}
+
+
 unsigned Hand::GetNumEntries()
 {
   return numEntries;

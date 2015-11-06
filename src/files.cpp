@@ -114,22 +114,10 @@ bool ReadScoresFile(
     int r;
     if ((r = ParseScoreLine(line, res, rno, bno)) != RETURN_NO_FAULT)
     {
-      if (r == RETURN_TOKEN_NUMBER)
-      {
-        cerr << "File '" << scoresFile << "', line " << lno << 
-          ":\nGot wrong number of tokens, wanted 9 or 10\n";
-        cerr << "(" << line << ")\n";
-        cerr << error.message.str();
-        return false;
-      }
-      else
-      {
-        cerr << "File '" << scoresFile << "', line " << lno << 
-          ": Syntax error" << endl;
-        cerr << "(" << line << ")" << endl;
-        cerr << error.message.str() << endl;
-        return false;
-      }
+      cerr << "File '" << scoresFile << "', line " << lno << 
+        ": Syntax error" << endl;
+      cerr << error.message.str();
+      return false;
     }
 
     if (options.roundFirst > 0 && rno < options.roundFirst)

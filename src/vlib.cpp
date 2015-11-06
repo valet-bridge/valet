@@ -28,6 +28,11 @@ vector<ValetEntryType> entries(numEntries);
 unsigned nextEntry = 0;
 
 
+void ValetInit();
+
+int CheckNonzeroPlayers(
+  ResultType& res);
+
 void AddPlayers(
   const ResultType& res);
 
@@ -60,10 +65,7 @@ extern "C" BOOL APIENTRY DllMain(
 {
 
   if (ul_reason_for_call == DLL_PROCESS_ATTACH)
-  {
-    error.flag = false;
-    SetTables();
-  }
+    ValetInit();
   else if (ul_reason_for_call == DLL_PROCESS_DETACH)
   {
   }
@@ -78,8 +80,7 @@ extern "C" BOOL APIENTRY DllMain(
 
 static void __attribute__ ((constructor)) libInit(void)
 {
-  error.flag = false;
-  SetTables();
+  ValetInit();
 }
 
 
@@ -88,6 +89,15 @@ static void __attribute__ ((destructor)) libEnd(void)
 }
 
 #endif
+
+
+void STDCALL ValetInit()
+{
+  error.flag = false;
+  error.no = RETURN_NO_FAULT;
+  error.message.str("");
+  SetTables();
+}
 
 
 int STDCALL ValetSetControl(
@@ -103,7 +113,7 @@ int STDCALL ValetSetControl(
   {
     error.flag = true;
     error.no = RETURN_VALET_MODE;
-    error.message << control->valet << " is not a valid mode\n";
+    error.message << "Got mode: " << control->valet << "\n";
     return error.no;
   }
 
@@ -158,12 +168,15 @@ int STDCALL ValetAddByLine(
 
   int r = ParseScoreLine(str, res, rno, bno, true);
   if (r != RETURN_NO_FAULT)
-  {
     return r;
-  }
 
   if ((r = hand.SetBoardNumber(bno)) != RETURN_NO_FAULT)
+  {
+    error.message << "Got board number: " << bno <<
+      " (expected " << hand.GetBoardNumber() << ")\n";
+    error.message << "Parsed line: '" << line << "'\n";
     return r;
+  }
 
   AddPlayers(res);
 
@@ -184,11 +197,11 @@ int SetInput(
   res.leadDenom = input->leadDenom;
   res.leadRank = input->leadRank;
 
-  if (res.level > 7)
+  if (res.level == 0 || res.level > 7)
   {
     error.flag = true;
     error.no = RETURN_LEVEL;
-    error.message << "level was " << res.level << "\n";
+    error.message << "Got level: " << res.level << " (expected 1 .. 7)\n";
     return RETURN_LEVEL;
   }
 
@@ -196,7 +209,7 @@ int SetInput(
   {
     error.flag = true;
     error.no = RETURN_DENOM;
-    error.message << "denom was " << res.denom << "\n";
+    error.message << "Got denom: " << res.denom << " (expected 0 .. 3)\n";
     return RETURN_DENOM;
   }
 
@@ -204,7 +217,8 @@ int SetInput(
   {
     error.flag = true;
     error.no = RETURN_MULTIPLIER;
-    error.message << "multiplier was " << res.multiplier << "\n";
+    error.message << "Got multiplier: " << res.multiplier << 
+      " (expected 0 .. 2)\n";
     return RETURN_MULTIPLIER;
   }
 
@@ -212,7 +226,8 @@ int SetInput(
   {
     error.flag = true;
     error.no = RETURN_DECLARER;
-    error.message << "declarer was " << res.declarer << "\n";
+    error.message << "Got declarer: " << res.declarer << 
+      " (expected 0 .. 3)\n";
     return RETURN_DECLARER;
   }
 
@@ -220,7 +235,8 @@ int SetInput(
   {
     error.flag = true;
     error.no = RETURN_TRICKS;
-    error.message << "tricks was " << res.tricks << "\n";
+    error.message << "Got tricks: " << res.tricks << 
+      " (expected 0 .. 13)\n";
     return RETURN_TRICKS;
   }
 
@@ -228,7 +244,8 @@ int SetInput(
   {
     error.flag = true;
     error.no = RETURN_LEAD_DENOM;
-    error.message << "leadDenom was " << res.leadDenom << "\n";
+    error.message << "Got leadDenom: " << res.leadDenom << 
+      " (expected 0 .. 3)\n";
     return RETURN_LEAD_DENOM;
   }
 
@@ -236,8 +253,52 @@ int SetInput(
   {
     error.flag = true;
     error.no = RETURN_LEAD_RANK;
-    error.message << "leadRank was " << res.leadRank << "\n";
+    error.message << "Got leadRank: " << res.leadDenom << 
+      " (expected 2 .. 14)\n";
     return RETURN_LEAD_RANK;
+  }
+
+  return RETURN_NO_FAULT;
+}
+
+
+int CheckNonzeroPlayers(
+  ResultType& res)
+{
+  if (res.north == "0")
+  {
+    error.flag = true;
+    error.no = RETURN_PLAYER_NORTH;
+    error.message << "Got North number: " << res.north <<
+      " (must be >= 1)\n";
+    return error.no;
+  }
+
+  if (res.east == "0")
+  {
+    error.flag = true;
+    error.no = RETURN_PLAYER_EAST;
+    error.message << "Got East number: " << res.east <<
+      " (must be >= 1)\n";
+    return error.no;
+  }
+
+  if (res.south == "0")
+  {
+    error.flag = true;
+    error.no = RETURN_PLAYER_SOUTH;
+    error.message << "Got South number: " << res.south <<
+      " (must be >= 1)\n";
+    return error.no;
+  }
+
+  if (res.west == "0")
+  {
+    error.flag = true;
+    error.no = RETURN_PLAYER_WEST;
+    error.message << "Got West number: " << res.west <<
+      " (must be >= 1)\n";
+    return error.no;
   }
 
   return RETURN_NO_FAULT;
@@ -261,6 +322,9 @@ int STDCALL ValetAddByTag(
   res.west = ossw.str();
 
   int r;
+  if ((r = CheckNonzeroPlayers(res)) != RETURN_NO_FAULT)
+    return r;
+
   if ((r = SetInput(input, res)) != RETURN_NO_FAULT)
     return r;
 
@@ -287,6 +351,9 @@ int STDCALL ValetAddByNumber(
   res.west = ossw.str();
 
   int r;
+  if ((r = CheckNonzeroPlayers(res)) != RETURN_NO_FAULT)
+    return r;
+
   if ((r = SetInput(input, res)) != RETURN_NO_FAULT)
     return r;
 
@@ -296,7 +363,7 @@ int STDCALL ValetAddByNumber(
 }
 
 
-int STDCALL ValetCalculate()
+void STDCALL ValetCalculate()
 {
   unsigned num = hand.GetNumEntries();
   if (num > numEntries)
@@ -307,7 +374,6 @@ int STDCALL ValetCalculate()
 
   entries = hand.CalculateScores();
   nextEntry = 0;
-  return RETURN_NO_FAULT;
 }
 
 
@@ -394,7 +460,7 @@ bool STDCALL ValetGetNextScoreByNumber(
 
 void STDCALL ValetErrorMessage(
   int code,
-  char line[80])
+  char line[160])
 {
   switch (code)
   {
@@ -420,23 +486,20 @@ void STDCALL ValetErrorMessage(
     case RETURN_BOARD_NUMBER_CHANGE:
       strcpy(line, TEXT_BOARD_NUMBER_CHANGE);
       break;
-    case RETURN_PLAYER_NORTH_TAG:
-      strcpy(line, TEXT_PLAYER_NORTH_TAG);
+    case RETURN_PLAYER_NORTH:
+      strcpy(line, TEXT_PLAYER_NORTH);
       break;
-    case RETURN_PLAYER_EAST_TAG:
-      strcpy(line, TEXT_PLAYER_EAST_TAG);
+    case RETURN_PLAYER_EAST:
+      strcpy(line, TEXT_PLAYER_EAST);
       break;
-    case RETURN_PLAYER_SOUTH_TAG:
-      strcpy(line, TEXT_PLAYER_SOUTH_TAG);
+    case RETURN_PLAYER_SOUTH:
+      strcpy(line, TEXT_PLAYER_SOUTH);
       break;
-    case RETURN_PLAYER_WEST_TAG:
-      strcpy(line, TEXT_PLAYER_WEST_TAG);
+    case RETURN_PLAYER_WEST:
+      strcpy(line, TEXT_PLAYER_WEST);
       break;
     case RETURN_CONTRACT_FORMAT_TEXT:
       strcpy(line, TEXT_CONTRACT_FORMAT_TEXT);
-      break;
-    case RETURN_DECLARER_TEXT:
-      strcpy(line, TEXT_DECLARER_TEXT);
       break;
     case RETURN_TRICKS:
       strcpy(line, TEXT_TRICKS);
@@ -464,6 +527,10 @@ void STDCALL ValetErrorMessage(
       break;
     default:
       strcpy(line, "Not a valet error code");
+      return;
   }
+  strcat(line, "\n");
+  string tmp = error.message.str();
+  strcat(line, tmp.c_str());
 }
 

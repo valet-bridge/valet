@@ -90,6 +90,8 @@ class Hand
     int SetBoardNumber(
       const unsigned n);
 
+    unsigned GetBoardNumber();
+
     void AddResult(
       const ResultType& res);
 

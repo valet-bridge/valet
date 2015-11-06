@@ -34,7 +34,7 @@ int main(int argc, char * argv[])
   }
 
   int errorCode;
-  char line[80];
+  char line[160];
 
   ControlType control;
   control.valet = VALET_SCORING_IAF;
@@ -43,7 +43,7 @@ int main(int argc, char * argv[])
   if ((errorCode = ValetSetControl(&control)) != RETURN_NO_FAULT)
   {
     ValetErrorMessage(errorCode, line);
-    cout << line << endl;
+    cout << line;
     return errorCode;
   }
 
@@ -57,7 +57,7 @@ int main(int argc, char * argv[])
       if ((errorCode = ValetAddByLine(example[i])) != RETURN_NO_FAULT)
       {
         ValetErrorMessage(errorCode, line);
-        cout << line << endl;
+        cout << line;
         return errorCode;
       }
     }
@@ -74,7 +74,7 @@ int main(int argc, char * argv[])
       if ((errorCode = ValetAddByTag(&players, &input)) != RETURN_NO_FAULT)
       {
         ValetErrorMessage(errorCode, line);
-        cout << line << endl;
+        cout << line;
         return errorCode;
       }
     }
@@ -91,7 +91,7 @@ int main(int argc, char * argv[])
       if ((errorCode = ValetAddByNumber(&players, &input)) != RETURN_NO_FAULT)
       {
         ValetErrorMessage(errorCode, line);
-        cout << line << endl;
+        cout << line;
         return errorCode;
       }
     }
