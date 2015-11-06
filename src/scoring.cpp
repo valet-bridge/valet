@@ -18,6 +18,8 @@
 
 using namespace std;
 
+extern OptionsType options;
+
 
 // Map denomination to order 0, 1, 2, 3, 4.
 // The denominations are in the order S, H, D, C, N (as in DDS).
@@ -263,6 +265,17 @@ int CalculateIMPs(
   {
     v = rawScore;
     sign = 1;
+  }
+
+  if (options.datumHardRounding)
+  {
+    //  374 ->  370,  375 ->  370.
+    v = (v/10)*10;
+  }
+  else
+  {
+    //  374 ->  370,  375 ->  380.
+    v = ((v+5)/10)*10;
   }
 
   return sign * static_cast<int>(IMPlookup[v/10 + 1]);

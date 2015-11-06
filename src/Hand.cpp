@@ -264,18 +264,7 @@ int Hand::GetDatum(
   else
     datum = datum / static_cast<int>(numEntries);
 
-  if (options.datumHardRounding)
-  {
-    //  374 ->  370,  375 ->  370
-    // -374 -> -370, -375 -> -370
-    return (datum >= 0 ? ((datum+0)/10)*10 : -((-datum+0)/10)*10 );
-  }
-  else
-  {
-    //  374 ->  370,  375 ->  380
-    // -374 -> -370, -375 -> -380
-    return (datum >= 0 ? ((datum+5)/10)*10 : -((-datum+5)/10)*10 );
-  }
+  return datum;
 }
 
 
