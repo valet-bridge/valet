@@ -158,7 +158,7 @@ bool CharToLevel(
   const char c,
   unsigned& d)
 {
-  if (c < '1' || c > '7')
+  if (c < '0' || c > '7')
     return false;
   
   d = static_cast<unsigned>(c - '0');

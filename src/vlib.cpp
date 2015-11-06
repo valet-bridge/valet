@@ -93,10 +93,15 @@ static void __attribute__ ((destructor)) libEnd(void)
 
 void STDCALL ValetInit()
 {
+  SetTables();
+
   error.flag = false;
   error.no = RETURN_NO_FAULT;
   error.message.str("");
-  SetTables();
+
+  options.valet = VALET_SCORING_IAF;
+  options.leadFlag = false;
+  options.datumHardRounding = false;
 }
 
 

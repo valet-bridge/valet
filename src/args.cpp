@@ -72,7 +72,7 @@ void Usage(
   cout <<
     "Usage: " << basename << " [options]\n\n" <<
     "-v, --valettype s  Valet type, one of datum, imps, matchpoints\n" <<
-    "                   (default: datum).\n" <<
+    "                   (default: imps).\n" <<
     "\n" <<
     "-d, --directory s  Read the input files from directory s.\n" <<
     "\n" <<

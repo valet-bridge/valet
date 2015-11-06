@@ -1,9 +1,11 @@
 Introduction
 ============
-Valet calculates the "Valet score" for pairs in a bridge tournament.  It is similar to the "Butler score", but it splits a pair's performance into several components:
+Valet calculates the "Valet score" for pairs in a bridge tournament.  It is an improved "Butler score" that splits a pair's performance into several components:
 * Bidding,
 * Declarer play,
 * Defense, optionally divided into opening lead and subsequent defense.
+
+The sum of the components is effectively the Butler score.
 
 Unlike the Butler score, the Valet score can be applied in principle to all kinds of tournament forms including matchpointed pairs.  It does require a fair quantity of data to provide meaningful results.  It will not be very meaningful in the local duplicate, although it could be applied across all the club evenings in a year, perhaps.
 
@@ -12,6 +14,8 @@ Please refer to the "doc" directory for explanations.
 The main use can hopefully be as an integral part of scoring programs.  I expressly would like programmers of scoring programs to do this.  You are welcome to port the code to other languages, integrate it into your own code etc.  I just ask that the acknowledge the origin and let me know.  Most of the program just shuffles data around -- the real logic is in Hand.cpp and a bit in Scoring.cpp.
 
 It is possible to use Valet as a stand-alone program, and I've done it for a fair number of major tournaments.  The main trouble is getting the data into a suitable format.  Here I have chosen a very simple input format, and it should be possible to write filters to convert other structured data to this format.  (Please consider submitting your filter if you write one.)
+
+Valet is also available as a DLL with a relatively simple interface modeled on DDS (of which I am a co-author).
 
 I developed the Valet concept in 2004 after playing the Istanbul Olympiad (for Luxembourg with Stefan Helling), and I implemented the ideas in Excel VBA code.  I tried to publish a short article on it in Bridge World at the time, but that never came about.  
 

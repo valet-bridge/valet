@@ -9,7 +9,7 @@ If you have trouble, read the Makefile.  They all have the compiler
 warning levels set rather high, and they are set to fail even on
 warnings.  You can turn this off.
 
-The optional next step is to test the executable.
+After compilation, the optional next step is to test the executable.
 
 Generally speaking:
 
@@ -35,7 +35,12 @@ to the src directory and call it Makefile, see below. (Or use make -f)
 
 5. make depend (ditto).
 
-6. make.
+6a. For the stand-alone valet program:
+   make valet
+
+6b. For the DLL (or statically linked library on Linux and Mac):
+   make dll (or make lib on Linux and Mac)
+   make driver
 
 
 System-specific data
@@ -86,11 +91,18 @@ Compiler: g++
 Testing
 =======
 
-In the src directory, you can invoke the program as
+In the src directory, you can invoke the stand-alone program as
 
-./vtest.exe
+./valet.exe
 
 which should just give a brief usage message.  If that works, then
 you can invoke the program in several ways that are explained in 
 the usage message.
+
+The DLL driver program has a single board hard-wired in its code.
+You can run the program with
+
+./driver.exe 1 (or 2 or 3)
+
+and you should get a list of results.
 
