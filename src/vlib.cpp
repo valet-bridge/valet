@@ -28,7 +28,7 @@ vector<ValetEntryType> entries(numEntries);
 unsigned nextEntry = 0;
 
 
-void ValetInit();
+void STDCALL ValetInit();
 
 int CheckNonzeroPlayers(
   ResultType& res);
@@ -99,7 +99,7 @@ void STDCALL ValetInit()
   error.no = RETURN_NO_FAULT;
   error.message.str("");
 
-  options.valet = VALET_SCORING_IAF;
+  options.valet = static_cast<ScoringType>(VALET_SCORING_IAF);
   options.leadFlag = false;
   options.datumHardRounding = false;
 }

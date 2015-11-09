@@ -167,6 +167,17 @@ void Scores::Compensate()
 }
 
 
+float Scores::ScaleMP(
+  const float value,
+  const unsigned num)
+{
+  if (num > 0)
+    return 100.f * (value + num) / (2.f * num);
+  else
+    return 50.f;
+}
+
+
 void Scores::Normalize()
 {
   for (unsigned pno = 1; pno < length; pno++)
@@ -178,13 +189,19 @@ void Scores::Normalize()
     if (options.valet == VALET_MATCHPOINTS)
     {
       // Convert scale from -1 .. +1 to 0 .. 100%.
-      c.overall = 100.f * (c.overallCum + c.numHands) / (2.f * c.numHands);
-      c.bid = 100.f * (c.bidCum + c.numHands) / (2.f * c.numHands);
-      c.play1 = 100.f * (c.play1Cum + c.numHands) / (2.f * c.numHands);
-      c.play2 = 100.f * (c.play2Cum + c.numHands) / (2.f * c.numHands);
-      c.lead1 = 100.f * (c.lead1Cum + c.numHands) / (2.f * c.numHands);
-      c.lead2 = 100.f * (c.lead2Cum + c.numHands) / (2.f * c.numHands);
-      c.def = 100.f * (c.defCum + c.numHands) / (2.f * c.numHands);
+      c.overall = Scores::ScaleMP(c.overallCum, c.numHands);
+      c.bid = Scores::ScaleMP(c.bidCum, c.numHands);
+      c.play1 = Scores::ScaleMP(c.play1Cum, c.numHands);
+      c.play2 = Scores::ScaleMP(c.play2Cum, c.numHands);
+      c.lead1 = Scores::ScaleMP(c.lead1Cum, c.numHands);
+      c.lead2 = Scores::ScaleMP(c.lead2Cum, c.numHands);
+      c.def = Scores::ScaleMP(c.defCum, c.numHands);
+
+      c.play1perChance = Scores::ScaleMP(c.play1Cum, c.numPlay1);
+      c.play2perChance = Scores::ScaleMP(c.play2Cum, c.numPlay2);
+      c.lead1perChance = Scores::ScaleMP(c.lead1Cum, c.numLead1);
+      c.lead2perChance = Scores::ScaleMP(c.lead2Cum, c.numLead2);
+      c.defperChance = Scores::ScaleMP(c.defCum, c.numDef);
     }
     else
     {
@@ -195,6 +212,17 @@ void Scores::Normalize()
       c.lead1 = c.lead1Cum / c.numHands;
       c.lead2 = c.lead2Cum / c.numHands;
       c.def = c.defCum / c.numHands;
+
+      if (c.numPlay1 > 0)
+        c.play1perChance = c.play1Cum / c.numPlay1;
+      if (c.numPlay2 > 0)
+        c.play2perChance = c.play2Cum / c.numPlay2;
+      if (c.numLead1 > 0)
+        c.lead1perChance = c.lead1Cum / c.numLead1;
+      if (c.numLead2 > 0)
+        c.lead2perChance = c.lead2Cum / c.numLead2;
+      if (c.numDef > 0)
+        c.defperChance = c.defCum / c.numDef;
     }
 
     if (options.adjustForOpps)
@@ -356,21 +384,25 @@ void Scores::PrintText(
   cout << 
     setw(54) << left << "Players" << right <<
     setw(4) << "No." << 
-    setw(4) << "Pl1" << 
-    setw(4) << "Pl2" << 
-    setw(4) << "Def" << 
-    setw(4) << "L1" << 
-    setw(4) << "L2" <<
     setw(7) << scoringTags[options.valet].header <<
     setw(7) << "Bid" <<
-    setw(7) << "Play1" <<
-    setw(7) << "Play2";
+    setw(7) << "Play" <<
+    setw(7) << "Def" <<
+    setw(6) << "#Pl1" << 
+    setw(6) << "Pl1" << 
+    setw(6) << "#Pl2" << 
+    setw(6) << "Pl2";
 
   if (options.leadFlag)
-    cout << setw(8) << "Lead1" << setw(8) << "Lead2";
+    cout << 
+      setw(6) << "#L1" << 
+      setw(6) << "L1" << 
+      setw(6) << "#L2" << 
+      setw(6) << "L2";
 
   cout <<
-    setw(7) << "Def" << "\n";
+    setw(6) << "#Def" <<
+    setw(6) << "Def" << "\n";
 
   for (unsigned pno = 1; pno < length; pno++)
   {
@@ -381,23 +413,26 @@ void Scores::PrintText(
     cout << 
       left << pairs.GetPairNamePadded(c.pairNo, 54) << right <<
       setw(4) << c.numHands << 
-      setw(4) << c.numPlay1 << 
-      setw(4) << c.numPlay2 << 
-      setw(4) << c.numDef << 
-      setw(4) << c.numLead1 << 
-      setw(4) << c.numLead2 <<
       setw(7) << fixed << setprecision(prec) << c.overall << 
       setw(7) << fixed << setprecision(prec) << c.bid << 
-      setw(7) << fixed << setprecision(prec) << c.play1 << 
-      setw(7) << fixed << setprecision(prec) << c.play2;
+      setw(7) << fixed << setprecision(prec) << c.play1 + c.play2 << 
+      setw(7) << fixed << setprecision(prec) << 
+        c.lead1 + c.lead2 + c.def << 
+      setw(6) << c.numPlay1 << 
+      setw(6) << fixed << setprecision(prec) << c.play1perChance << 
+      setw(6) << c.numPlay2 << 
+      setw(6) << fixed << setprecision(prec) << c.play2perChance;
 
     if (options.leadFlag)
       cout <<
-        setw(8) << fixed << setprecision(prec) << c.lead1 << 
-        setw(8) << fixed << setprecision(prec) << c.lead2;
+        setw(6) << c.numLead1 << 
+        setw(6) << fixed << setprecision(prec) << c.lead1perChance << 
+        setw(6) << c.numLead2 << 
+        setw(6) << fixed << setprecision(prec) << c.lead2perChance;
 
     cout <<
-      setw(7) << fixed << setprecision(prec) << c.def << "\n";
+      setw(6) << c.numDef << 
+      setw(6) << fixed << setprecision(prec) << c.def << "\n";
   }
   cout << "\n";
 }
@@ -414,20 +449,25 @@ void Scores::PrintCSV(
   cout << 
     "Players" << s <<
     "No." << s <<
-    "Pl1" << s <<
-    "Pl2" << s <<
-    "Def" << s <<
-    "L1" << s <<
-    "L2" << s <<
     scoringTags[options.valet].header << s <<
     "Bid" << s <<
-    "Play1" << s <<
-    "Play2" << s;
+    "Play" << s <<
+    "Def" << s <<
+    "#Pl1" << s <<
+    "Pl1" << s <<
+    "#Pl2" << s <<
+    "Pl2" << s;
 
   if (options.leadFlag)
-    cout << s << "Lead1" << s << "Lead2" << s;
+    cout << 
+      "#L1" << s <<
+      "L1" << s <<
+      "#L2" << s <<
+      "L2" << s;
 
-  cout << "Def" << "\n";
+  cout <<
+    "#Def" << s <<
+    "Def" << "\n";
 
   for (unsigned pno = 1; pno < length; pno++)
   {
@@ -438,22 +478,26 @@ void Scores::PrintCSV(
     cout << 
       pairs.GetPairName(c.pairNo) << s <<
       c.numHands << s <<
-      c.numPlay1 << s <<
-      c.numPlay2 << s <<
-      c.numDef << s <<
-      c.numLead1 << s <<
-      c.numLead2 <<s <<
       fixed << setprecision(prec) << c.overall << s <<
       fixed << setprecision(prec) << c.bid << s <<
-      fixed << setprecision(prec) << c.play1 << s <<
-      fixed << setprecision(prec) << c.play2 << s;
+      fixed << setprecision(prec) << c.play1 + c.play2 << s <<
+      fixed << setprecision(prec) << 
+        c.lead1 + c.lead2 + c.def << s << 
+      c.numPlay1 << s <<
+      fixed << setprecision(prec) << c.play1perChance << s <<
+      c.numPlay2 << s <<
+      fixed << setprecision(prec) << c.play2perChance << s;
 
     if (options.leadFlag)
-      cout << fixed << setprecision(prec) << c.lead1 << s << 
-        fixed << setprecision(prec) << c.lead2 << s;
+      cout <<
+        c.numLead1 << s <<
+        fixed << setprecision(prec) << c.lead1perChance <<  s <<
+        c.numLead2 << s <<
+        fixed << setprecision(prec) << c.lead2perChance << s;
 
     cout <<
-      fixed << setprecision(prec) << c.def << "\n";
+      c.numDef <<  s <<
+      fixed << setprecision(prec) << c.defperChance << "\n";
   }
   cout << "\n";
 }

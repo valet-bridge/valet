@@ -53,6 +53,12 @@ class Scores
       float lead1;
       float lead2;
       float def;
+
+      float play1perChance;
+      float play2perChance;
+      float lead1perChance;
+      float lead2perChance;
+      float defperChance;
     };
 
     struct OppType
@@ -70,6 +76,10 @@ class Scores
 
     unsigned numPairs;
     unsigned length;
+
+    float Scores::ScaleMP(
+      const float value,
+      const unsigned num);
 
     void AddCompensation(
       const unsigned pairNo,

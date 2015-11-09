@@ -75,7 +75,7 @@
 #define TEXT_LEVEL "Not a valid level"
 
 #define RETURN_DENOM -21
-#define TEXT_DENOM "Not a valid denom"
+#define TEXT_DENOM "Not a valid denomination"
 
 #define RETURN_MULTIPLIER -22
 #define TEXT_MULTIPLIER "Not a valid multiplier"

@@ -114,7 +114,7 @@ const unsigned levelList[TEST_ENTRIES] =
 
 const unsigned denomList[TEST_ENTRIES] =
 {
-  4, 1, 1, 1, 1, 1, 4, 1, 1, 4, 4, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4,
+  4, 1, 1, 1, 1, 1, 4, 1, 1, 4, 4, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4
 };
 
 const unsigned multiplierList[TEST_ENTRIES] =
