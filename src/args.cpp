@@ -31,7 +31,7 @@ struct optEntry
   unsigned numArgs;
 };
 
-#define VALET_NUM_OPTIONS 13
+#define VALET_NUM_OPTIONS 14
 
 const optEntry optList[VALET_NUM_OPTIONS] =
 {
@@ -44,10 +44,11 @@ const optEntry optList[VALET_NUM_OPTIONS] =
   {"l", "leads", 0},
   {"e", "extremes", 0},
   {"h", "hardround", 0},
-  {"a", "adjustopps", 0},
+  {"c", "compensate", 0},
   {"o", "order", 1},
+  {"a", "average", 0},
   {"f", "format", 1},
-  {"c", "char", 1}
+  {"j", "join", 1}
 };
 
 string shortOptsAll, shortOptsWithArg;
@@ -98,7 +99,7 @@ void Usage(
     "                   score.  So 379 rounds to 370, not to 380\n" <<
     "                   (default: no).\n" <<
     "\n" <<
-    "-a, -adjustopps    Adjust overall score for the average strength\n" <<
+    "-c, -compensate    Compensate overall score for the average strength\n" <<
     "                   of the specific opponents faced (default: no).\n" <<
     "\n" <<
     "-o, --order s      Sorting order of the output.  Valid orders are\n" <<
@@ -108,12 +109,14 @@ void Usage(
     "                   leadoverplay (lead minus play),\n" <<
     "                   (case-insensitive).\n" <<
     "\n" <<
+    "-a, --average      Show certain averages in the output tables.\n"
+    "\n" <<
     "-f, --format s     Output file format: text or csv (broadly\n" <<
     "                   speaking, comma-separated values suitable for\n" <<
     "                   loading into e.g. Microsoft Excel)\n" <<
     "                   (default: text).\n" <<
     "\n" <<
-    "-c, --char c       Separator for csv output (default the comma,\n" <<
+    "-j, --join c       Separator for csv output (default the comma,\n" <<
     "                   ',' (without the marks).  In German Excel it \n" <<
     "                   is useful to set this to ';', and so on.\n" <<
     endl;
@@ -183,8 +186,9 @@ void SetDefaults()
   options.leadFlag = false;
   options.datumFilter = false;
   options.datumHardRounding = false;
-  options.adjustForOpps = false;
+  options.compensateFlag = false;
   options.sort = VALET_SORT_OVERALL;
+  options.averageFlag = false;
   options.format = VALET_FORMAT_TEXT;
   options.separator = ',';
 }
@@ -193,7 +197,7 @@ void SetDefaults()
 void PrintOptions()
 {
   cout << left;
-  cout << setw(12) << "valet" << setw(12) << 
+  cout << setw(12) << "valettype" << setw(12) << 
     scoringTags[options.valet].arg << "\n";
   cout << setw(12) << "directory" << setw(12) << options.directory << "\n";
   cout << setw(12) << "names" << setw(12) << options.nameFile << "\n";
@@ -210,13 +214,15 @@ void PrintOptions()
     (options.datumFilter ? "true" : "false") << "\n";
   cout << setw(12) << "hardround" << setw(12) << 
     (options.datumHardRounding ? "true" : "false") << "\n";
-  cout << setw(12) << "adjustopps" << setw(12) << 
-    (options.adjustForOpps ? "true" : "false") << "\n";
+  cout << setw(12) << "compensate" << setw(12) << 
+    (options.compensateFlag ? "true" : "false") << "\n";
   cout << setw(12) << "order" << setw(12) << 
     sortingTags[options.sort].str << "\n";
+  cout << setw(12) << "average" << setw(12) << 
+    (options.averageFlag ? "true" : "false") << "\n";
   cout << setw(12) << "format" << setw(12) << 
     (options.format == VALET_FORMAT_TEXT ? "text" : "csv") << "\n";
-  cout << setw(12) << "char" << setw(12) << options.separator << "\n";
+  cout << setw(12) << "join" << setw(12) << options.separator << "\n";
   cout << "\n" << right;
 }
 
@@ -368,8 +374,8 @@ void ReadArgs(
         options.datumHardRounding = true;
         break;
 
-      case 'a':
-        options.adjustForOpps = true;
+      case 'c':
+        options.compensateFlag = true;
         break;
 
       case 'o':
@@ -392,6 +398,10 @@ void ReadArgs(
         }
         break;
 
+      case 'a':
+        options.averageFlag = true;
+        break;
+
       case 'f':
         stmp = optarg;
         if (stmp == "text")
@@ -406,7 +416,7 @@ void ReadArgs(
         }
         break;
 
-      case 'c':
+      case 'j':
         options.separator = optarg;
         if (options.separator.size() != 1)
         {

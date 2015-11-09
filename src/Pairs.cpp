@@ -111,8 +111,16 @@ int Pairs::GetPairNumber(
     }
     playersToPairNo[tag] = numPairs;
     pairNoToPairName[numPairs] = Pairs::GetPairName(tag1, tag2);
-    pairNoToPairTags[numPairs].tag1 = tag1;
-    pairNoToPairTags[numPairs].tag2 = tag2;
+    if (tag1 < tag2)
+    {
+      pairNoToPairTags[numPairs].tag1 = tag1;
+      pairNoToPairTags[numPairs].tag2 = tag2;
+    }
+    else
+    {
+      pairNoToPairTags[numPairs].tag1 = tag2;
+      pairNoToPairTags[numPairs].tag2 = tag1;
+    }
     retval = static_cast<int>(numPairs);
   }
 

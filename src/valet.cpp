@@ -61,7 +61,7 @@ int main(int argc, char * argv[])
   }
 
 
-  if (options.adjustForOpps)
+  if (options.compensateFlag)
     scores.Compensate();
 
   scores.Normalize();

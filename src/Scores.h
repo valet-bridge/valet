@@ -77,7 +77,7 @@ class Scores
     unsigned numPairs;
     unsigned length;
 
-    float Scores::ScaleMP(
+    float ScaleMP(
       const float value,
       const unsigned num);
 
@@ -98,6 +98,17 @@ class Scores
     bool SkipScore(
       const CumulType& c,
       const unsigned mode);
+
+    void PrintTextPair(
+      const float average,
+      const unsigned no,
+      const int prec);
+
+    void PrintCSVPair(
+      const float average,
+      const unsigned no,
+      const int prec,
+      const string s);
 
     void PrintText(
       const unsigned mode);

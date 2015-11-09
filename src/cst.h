@@ -113,9 +113,10 @@ struct OptionsType
 
   bool datumFilter;
   bool datumHardRounding;
-  bool adjustForOpps;
+  bool compensateFlag;
 
   SortingType sort;
+  bool averageFlag;
 
   FormatType format;
   std::string separator;

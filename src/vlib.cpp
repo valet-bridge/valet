@@ -28,8 +28,6 @@ vector<ValetEntryType> entries(numEntries);
 unsigned nextEntry = 0;
 
 
-void STDCALL ValetInit();
-
 int CheckNonzeroPlayers(
   ResultType& res);
 
@@ -169,7 +167,7 @@ int STDCALL ValetAddByLine(
 {
   string str(line);
   ResultType res;
-  unsigned rno, bno;
+  unsigned rno = 0, bno = 0;
 
   int r = ParseScoreLine(str, res, rno, bno, true);
   if (r != RETURN_NO_FAULT)

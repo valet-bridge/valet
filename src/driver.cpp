@@ -33,6 +33,8 @@ int main(int argc, char * argv[])
     return 0;
   }
 
+  ValetInit();
+
   int errorCode;
   char line[160];
 

@@ -225,7 +225,7 @@ void Scores::Normalize()
         c.defperChance = c.defCum / c.numDef;
     }
 
-    if (options.adjustForOpps)
+    if (options.compensateFlag)
     {
       // Quite arbitrary split.
       if (options.leadFlag)
@@ -374,6 +374,33 @@ bool Scores::SkipScore(
 }
 
 
+void Scores::PrintTextPair(
+  const float average,
+  const unsigned no,
+  const int prec)
+{
+  if (no > 0)
+    cout << setw(5) << fixed << setprecision(prec) << average << 
+      " (" << setw(3) << no << ")";
+  else
+    cout << setw(5) << "-" << " (  0)";
+}
+
+
+void Scores::PrintCSVPair(
+  const float average,
+  const unsigned no,
+  const int prec,
+  const string s
+  )
+{
+  if (no > 0)
+    cout << setprecision(prec) << average << s << no << s;
+  else
+    cout << "-" << s << "0" << s;
+}
+
+
 void Scores::PrintText(
   const unsigned mode)
 {
@@ -382,27 +409,58 @@ void Scores::PrintText(
     return;
 
   cout << 
-    setw(54) << left << "Players" << right <<
+    setw(54) << "" << " | " <<
+    setw(11) << "" << " | " <<
+    setw(12) << "" << " | " <<
+    setw(8) << "" <<
+    setw(6) << "Play" <<
+    setw(10) << "" << " | " <<
+    setw(7) << "" <<
+    setw(4) << "Declaring" <<
+    setw(8) << "" << " | ";
+    
+  if (options.leadFlag)
+  {
+    if (options.averageFlag)
+      cout << 
+        setw(19) << "" << 
+        setw(11) << "Defending" <<
+        setw(20) << "" << " |";
+    else
+      cout << 
+        setw(13) << "" << 
+        setw(11) << "Defending" <<
+        setw(13) << "" << " |";
+  }
+
+  cout << "\n";
+
+  cout << 
+    setw(54) << left << "Players" << right << " | " <<
     setw(4) << "No." << 
-    setw(7) << scoringTags[options.valet].header <<
-    setw(7) << "Bid" <<
-    setw(7) << "Play" <<
-    setw(7) << "Def" <<
-    setw(6) << "#Pl1" << 
-    setw(6) << "Pl1" << 
-    setw(6) << "#Pl2" << 
-    setw(6) << "Pl2";
+    setw(7) << scoringTags[options.valet].header << " | " <<
+    setw(5) << "Bid" <<
+    setw(7) << "Play" << " | " <<
+    setw(11) << "Declaring" << "  " <<
+    setw(11) << "Defending" << " | " <<
+    setw(11) << "Declarer1" <<
+    setw(13) << "Declarer2";
 
   if (options.leadFlag)
+  {
     cout << 
-      setw(6) << "#L1" << 
-      setw(6) << "L1" << 
-      setw(6) << "#L2" << 
-      setw(6) << "L2";
+      " | " <<
+      setw(11) << "Lead1" << "  " <<
+      setw(11) << "Lead2";
 
-  cout <<
-    setw(6) << "#Def" <<
-    setw(6) << "Def" << "\n";
+    if (options.averageFlag)
+      cout << setw(13) << "Average";
+
+    cout << 
+      setw(13) << "Play";
+  }
+
+  cout << " |\n";
 
   for (unsigned pno = 1; pno < length; pno++)
   {
@@ -411,28 +469,58 @@ void Scores::PrintText(
       continue;
 
     cout << 
-      left << pairs.GetPairNamePadded(c.pairNo, 54) << right <<
+      left << pairs.GetPairNamePadded(c.pairNo, 54) << right << " | " <<
       setw(4) << c.numHands << 
-      setw(7) << fixed << setprecision(prec) << c.overall << 
-      setw(7) << fixed << setprecision(prec) << c.bid << 
-      setw(7) << fixed << setprecision(prec) << c.play1 + c.play2 << 
-      setw(7) << fixed << setprecision(prec) << 
-        c.lead1 + c.lead2 + c.def << 
-      setw(6) << c.numPlay1 << 
-      setw(6) << fixed << setprecision(prec) << c.play1perChance << 
-      setw(6) << c.numPlay2 << 
-      setw(6) << fixed << setprecision(prec) << c.play2perChance;
+      setw(7) << fixed << setprecision(prec) << c.overall <<  " | " <<
+      setw(5) << fixed << setprecision(prec) << c.bid << 
+      setw(7) << fixed << setprecision(prec) << c.overall - c.bid << " | ";
+
+    unsigned n = c.numPlay1 + c.numPlay2;
+    if (n > 0)
+      Scores::PrintTextPair(
+        (c.play1perChance*c.numPlay1 + c.play2perChance*c.numPlay2) / n, 
+        n, prec);
+    else
+      Scores::PrintTextPair(0., 0, prec);
+
+    cout << "  ";
+    n = c.numDef;
+    if (n)
+      Scores::PrintTextPair(
+        (c.lead1perChance * c.numLead1 +
+         c.lead2perChance * c.numLead2 +
+         c.defperChance * c.numDef) / n, n, prec);
+    else
+      Scores::PrintTextPair(0., 0, prec);
+
+    cout << " | ";
+
+    Scores::PrintTextPair(c.play1perChance, c.numPlay1, prec);
+    cout << "  ";
+    Scores::PrintTextPair(c.play2perChance, c.numPlay2, prec);
+
+    cout << " | ";
 
     if (options.leadFlag)
-      cout <<
-        setw(6) << c.numLead1 << 
-        setw(6) << fixed << setprecision(prec) << c.lead1perChance << 
-        setw(6) << c.numLead2 << 
-        setw(6) << fixed << setprecision(prec) << c.lead2perChance;
+    {
+      Scores::PrintTextPair(c.lead1perChance, c.numLead1, prec);
+      cout << "  ";
+      Scores::PrintTextPair(c.lead2perChance, c.numLead2, prec);
+      cout << "  ";
+      
+      if (options.averageFlag)
+      {
+        Scores::PrintTextPair(
+          (c.lead1perChance * c.numLead1 + c.lead2perChance * c.numLead2) /
+          (c.numPlay1 + c.numPlay2), c.numPlay1 + c.numPlay2, prec);
+        cout << "  ";
+      }
 
-    cout <<
-      setw(6) << c.numDef << 
-      setw(6) << fixed << setprecision(prec) << c.def << "\n";
+      Scores::PrintTextPair(c.defperChance, c.numDef, prec);
+      cout << " |";
+    }
+
+    cout << "\n";
   }
   cout << "\n";
 }
@@ -446,28 +534,37 @@ void Scores::PrintCSV(
     return;
 
   const string s = options.separator;
+
   cout << 
     "Players" << s <<
-    "No." << s <<
+    "Count" << s <<
     scoringTags[options.valet].header << s <<
     "Bid" << s <<
     "Play" << s <<
+    "Decl" << s <<
+    "#" << s <<
     "Def" << s <<
-    "#Pl1" << s <<
-    "Pl1" << s <<
-    "#Pl2" << s <<
-    "Pl2" << s;
+    "#" << s <<
+    "Decl1" << s <<
+    "#" << s <<
+    "Decl2" << s <<
+    "#" << s;
 
   if (options.leadFlag)
-    cout << 
-      "#L1" << s <<
-      "L1" << s <<
-      "#L2" << s <<
-      "L2" << s;
+  {
+    cout <<
+      "Lead1" << s <<
+      "#" << s <<
+      "Lead2" << s <<
+      "#" << s;
 
-  cout <<
-    "#Def" << s <<
-    "Def" << "\n";
+    if (options.averageFlag)
+      cout << "Avg" << s << "#" << s;
+
+    cout << "Play" << s << "#";
+  }
+
+  cout << "\n";
 
   for (unsigned pno = 1; pno < length; pno++)
   {
@@ -480,24 +577,43 @@ void Scores::PrintCSV(
       c.numHands << s <<
       fixed << setprecision(prec) << c.overall << s <<
       fixed << setprecision(prec) << c.bid << s <<
-      fixed << setprecision(prec) << c.play1 + c.play2 << s <<
-      fixed << setprecision(prec) << 
-        c.lead1 + c.lead2 + c.def << s << 
-      c.numPlay1 << s <<
-      fixed << setprecision(prec) << c.play1perChance << s <<
-      c.numPlay2 << s <<
-      fixed << setprecision(prec) << c.play2perChance << s;
+      fixed << setprecision(prec) << c.overall - c.bid << s;
+
+    unsigned n = c.numPlay1 + c.numPlay2;
+    if (n > 0)
+      Scores::PrintCSVPair(
+        (c.play1perChance*c.numPlay1 + c.play2perChance*c.numPlay2) / n, 
+        n, prec, s);
+    else
+      Scores::PrintCSVPair(0., 0, prec, s);
+
+    cout << "  ";
+    n = c.numDef;
+    if (n)
+      Scores::PrintCSVPair(
+        (c.lead1perChance * c.numLead1 +
+         c.lead2perChance * c.numLead2 +
+         c.defperChance * c.numDef) / n, n, prec, s);
+    else
+      Scores::PrintCSVPair(0., 0, prec, s);
+
+    Scores::PrintCSVPair(c.play1perChance, c.numPlay1, prec, s);
+    Scores::PrintCSVPair(c.play2perChance, c.numPlay2, prec, s);
 
     if (options.leadFlag)
-      cout <<
-        c.numLead1 << s <<
-        fixed << setprecision(prec) << c.lead1perChance <<  s <<
-        c.numLead2 << s <<
-        fixed << setprecision(prec) << c.lead2perChance << s;
+    {
+      Scores::PrintCSVPair(c.lead1perChance, c.numLead1, prec, s);
+      Scores::PrintCSVPair(c.lead2perChance, c.numLead2, prec, s);
+      
+      if (options.averageFlag)
+        Scores::PrintCSVPair(
+          (c.lead1perChance * c.numLead1 + c.lead2perChance * c.numLead2) /
+          (c.numPlay1 + c.numPlay2), c.numPlay1 + c.numPlay2, prec, s);
 
-    cout <<
-      c.numDef <<  s <<
-      fixed << setprecision(prec) << c.defperChance << "\n";
+      Scores::PrintCSVPair(c.defperChance, c.numDef, prec, s);
+    }
+
+    cout << "\n";
   }
   cout << "\n";
 }

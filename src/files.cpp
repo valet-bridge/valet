@@ -97,7 +97,7 @@ bool ReadScoresFile(
 
   handList.clear();
   string line;
-  unsigned lno = 0, rno, bno = 0;
+  unsigned lno = 0, rno = 0, bno = 0;
   ResultType res;
   string tag;
 
