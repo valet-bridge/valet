@@ -6,13 +6,6 @@ CC		= g++
 # Use this one to get OpenMP multi-threading
 CC_FLAGS	= -O3 -flto -mtune=generic
 
-LD_FLAGS	= 		\
-	-Wl,--dynamicbase 	\
-	-Wl,--nxcompat 		\
-	-Wl,--no-seh 		\
-	-Wl,--enable-stdcall-fixup
-
-
 # These flags are not turned on be default, but DDS should pass them.
 # Turn them on below.
 WARN_FLAGS	= 		\
