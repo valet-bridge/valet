@@ -1,0 +1,25 @@
+LIBRARY valet
+EXPORTS
+  ValetSetControl
+  ValetSetControl@4 = ValetSetControl
+  ValetClear
+  ValetClear@0 = ValetClear
+  ValetClearHand
+  ValetClearHand@0 = ValetClearHand
+  ValetSetBoardNumber
+  ValetSetBoardNumber@4 = ValetSetBoardNumber
+  ValetAddByLine
+  ValetAddByLine@4 = ValetAddByLine
+  ValetAddByTag
+  ValetAddByTag@8 = ValetAddByTag
+  ValetAddByNumber
+  ValetAddByNumber@8 = ValetAddByNumber
+  ValetCalculate
+  ValetCalculate@0 = ValetCalculate
+  ValetGetNextScoreByTag
+  ValetGetNextScoreByTag@8 = ValetGetNextScoreByTag
+  ValetGetNextScoreByNumber
+  ValetGetNextScoreByNumber@8 = ValetGetNextScoreByNumber
+  ValetErrorMessage
+  ValetErrorMessage@8 = ValetErrorMessage
+

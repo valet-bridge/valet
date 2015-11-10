@@ -42,9 +42,8 @@ to the src directory and call it Makefile, see below. (Or use make -f)
    make dll (or make lib on Linux and Mac)
    make driver
 
-If you use Microsoft Visual Studio, there is also a zip file of 
-a working set-up included under src/VS.  This was kindly provided
-by Thorvald Aagaard.
+If you use Microsoft Visual Studio, there is also a working set-up 
+included under src/VS.  This was kindly provided by Thorvald Aagaard.
 
 
 System-specific data
