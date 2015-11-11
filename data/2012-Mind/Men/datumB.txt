@@ -1,51 +1,53 @@
-Players                                                No. Pl1 Pl2 Def  L1  L2 Butler    Bid  Play1  Play2   Lead1   Lead2    Def
-KATZ Ralph - NICKELL Nick                              112  19  28  64  35  29   1.27   1.04  -0.01   0.06   -0.04   -0.02   0.24
-PILON Dominique - TOFFIER Philippe                     144  40  34  70  33  37   1.25   0.86   0.15   0.05   -0.03    0.03   0.19
-BALICKI Cezary - ZMUDZINSKI Adam                       160  43  26  90  43  47   0.86   0.43   0.02   0.11    0.21    0.03   0.06
-LORENZINI Cedric - ROMBAUT Jerome                      160  47  34  79  39  40   0.81   0.17   0.10   0.19   -0.01    0.01   0.35
-MECKSTROTH Jeff - RODWELL Eric                         192  53  54  85  50  35   0.67   0.27   0.04   0.24    0.13   -0.04   0.03
-LINDERMANN Arno - TERRANEO Christian                   192  62  41  89  40  49   0.62   0.44  -0.06  -0.00    0.08   -0.06   0.22
-HAMMAN Bob - MAHMOOD Zia                               144  34  43  67  38  29   0.59   0.37   0.10   0.05    0.08   -0.05   0.04
-BURAS Krzysztof - NARKIEWICZ Grzegorz                  176  50  49  77  45  32   0.57   0.61   0.01  -0.05   -0.04   -0.00   0.05
-BOMPIS Marc - QUANTIN Jean-Christophe                  144  37  41  66  35  31   0.51   0.53  -0.11   0.03   -0.01    0.00   0.07
-ZAK Piotr - ZAREMBA Jerzy                              112  34  23  55  34  21   0.38   0.30  -0.13   0.16   -0.07    0.01   0.11
-NIKOLAYENKO Dmytro - RYBNIKOV Gennadii                 192  45  49  96  51  45   0.36   0.26   0.04  -0.02    0.03   -0.01   0.06
-HANLON Tom - McGANN Hugh                               160  47  42  71  38  33   0.34  -0.09   0.27   0.10   -0.01   -0.02   0.08
-HUANG Patrick K. H. - WU Chang-Dar                     128  32  34  62  35  27   0.33   0.52  -0.07  -0.08    0.03   -0.02  -0.04
-FITZGIBBON Nicholas - MESBUR Adam                      176  47  48  81  40  41   0.31   0.19  -0.09  -0.05   -0.03    0.03   0.27
-CAMPOS Joao-Paulo - VILLAS-BOAS Miguel                 224  54  58 111  54  57   0.25   0.14  -0.01   0.12    0.02   -0.00  -0.01
-LUKS Leo - NABER Lauri                                 160  36  39  84  39  45   0.24   0.23  -0.00   0.13   -0.06   -0.06   0.00
-TISLEVOLL Geir-Olav - WARE Michael                     160  45  41  74  42  32   0.19   0.27   0.07  -0.11   -0.05    0.01  -0.01
-LEVENKO Vassili - SESTER Sven                          128  27  31  70  29  41   0.18   0.03   0.02   0.05   -0.03   -0.04   0.15
-MIETI Renzo - BAGORDO Alessandro                       144  40  31  72  39  33   0.17   0.29   0.05   0.12   -0.07   -0.05  -0.18
-BABSCH Andreas - SCHIFKO Martin                        127  30  35  61  30  31   0.13  -0.02  -0.03   0.24   -0.08    0.06  -0.03
-CARROLL John - GARVEY Tommy                            112  19  33  60  29  31   0.11   0.09  -0.00   0.14   -0.00   -0.09  -0.02
-HUANG Dong - LIU Jian Tao                              128  26  32  70  43  27   0.02   0.23   0.02  -0.02   -0.04   -0.03  -0.14
-DAMASO Nuno - PRATAS Pedro                             144  22  39  83  44  39  -0.04  -0.15   0.06  -0.11   -0.00    0.05   0.11
-AMIN Bani - SALAHUDDIN Mohammed                        144  33  31  79  48  31  -0.15   0.01  -0.05   0.03   -0.04    0.01  -0.11
-LEE Nok Yin - TSANG Pui Kei                            160  38  43  79  47  32  -0.20   0.36  -0.04  -0.14   -0.15   -0.05  -0.19
-PINTO Rui - BARBOSA Juliano                            160  32  42  86  40  46  -0.21  -0.42   0.13  -0.06    0.05    0.07   0.02
-CASTELLO BRANCO Marcelo - BARBOSA Roberto              144  34  37  72  31  41  -0.26   0.49  -0.21  -0.14   -0.05   -0.14  -0.21
-CHUMAK Yuliy - ROVYSHYN Oleg                           176  48  34  94  49  45  -0.27  -0.29  -0.11  -0.02    0.10   -0.00   0.04
-KARPOV Maksim - LAANEMAE Tiit                          160  35  46  79  48  31  -0.36  -0.17   0.08   0.06   -0.05    0.06  -0.33
-CHUNG Jonky - LIU Chang-Kae                            160  39  45  76  38  38  -0.38  -0.56  -0.07  -0.09    0.24    0.09   0.02
-LIAQAT Farrukh - SAID Junaid                           192  43  52  94  45  49  -0.49  -0.05  -0.15  -0.07    0.06   -0.10  -0.18
-CORNELL Michael - BACH Ashley                          160  39  37  84  40  44  -0.51  -0.29  -0.06  -0.04   -0.03    0.14  -0.23
-ASKARI Hasan - GHEEWALA Tahseen                        160  37  35  87  54  33  -0.52  -0.39  -0.09   0.05   -0.07   -0.01  -0.01
-CHEUNG Lik - FUNG Chi Pong                             160  39  42  78  49  29  -0.56  -0.17  -0.15  -0.08   -0.05   -0.07  -0.05
-FUCIK Jan - PURKARTHOFER Gunther                       128  38  33  57  25  32  -0.57  -0.85   0.03   0.09    0.02    0.00   0.13
-LI Vincent Hoi Yuen - LUNG Ka-Cheung                   127  31  33  63  29  34  -0.65  -0.27  -0.21   0.22   -0.04   -0.17  -0.19
-AHAMED Sayed - HANZALA Dewan Mohammad                  160  42  44  74  41  33  -0.69  -0.57   0.08   0.03   -0.10   -0.06  -0.07
-BARTOLACELLI Gabriella - BERTAZZONI Maurizio           160  34  41  85  40  45  -0.74  -0.56  -0.12  -0.16   -0.20    0.06   0.24
-PARRI Gabriele - TAMAGNINI Secondo                     144  38  41  65  39  26  -0.76  -0.54  -0.11  -0.10    0.01    0.11  -0.12
-LARA Maria Joao - OREY CAPUCHO Manuel d'               144  41  35  67  31  36  -0.83  -0.79   0.02  -0.02    0.06   -0.00  -0.10
-KAMAL N. H. Shamsuzzaman - RAHMAN Jamilur              144  29  35  80  34  46  -1.40  -1.00  -0.11  -0.35    0.09    0.08  -0.11
+                                                       |             |              |           Play           |        Declaring         |                Defending              |
+Players                                                |  No. Butler |   Bid   Play |   Declaring    Defending |   Declarer1    Declarer2 |       Lead1        Lead2         Play |
+KATZ Ralph - NICKELL Nick                              |  112   1.27 |  1.04   0.23 |  0.10 ( 47)   0.33 ( 64) | -0.09 ( 19)   0.22 ( 28) | -0.10 ( 35)  -0.10 ( 29)   0.43 ( 64) |
+PILON Dominique - TOFFIER Philippe                     |  144   1.25 |  0.86   0.39 |  0.38 ( 74)   0.39 ( 70) |  0.53 ( 40)   0.22 ( 34) | -0.12 ( 33)   0.11 ( 37)   0.39 ( 70) |
+BALICKI Cezary - ZMUDZINSKI Adam                       |  160   0.84 |  0.42   0.42 |  0.30 ( 69)   0.52 ( 90) |  0.08 ( 43)   0.66 ( 26) |  0.80 ( 43)   0.10 ( 47)   0.09 ( 90) |
+LORENZINI Cedric - ROMBAUT Jerome                      |  160   0.79 |  0.16   0.63 |  0.57 ( 81)   0.68 ( 79) |  0.34 ( 47)   0.90 ( 34) | -0.02 ( 39)   0.01 ( 40)   0.69 ( 79) |
+MECKSTROTH Jeff - RODWELL Eric                         |  192   0.68 |  0.28   0.41 |  0.51 (107)   0.27 ( 85) |  0.15 ( 53)   0.87 ( 54) |  0.51 ( 50)  -0.24 ( 35)   0.07 ( 85) |
+LINDERMANN Arno - TERRANEO Christian                   |  192   0.61 |  0.44   0.17 | -0.12 (103)   0.52 ( 89) | -0.19 ( 62)  -0.02 ( 41) |  0.37 ( 40)  -0.24 ( 49)   0.48 ( 89) |
+BURAS Krzysztof - NARKIEWICZ Grzegorz                  |  176   0.59 |  0.62  -0.03 | -0.07 ( 99)   0.01 ( 77) |  0.02 ( 50)  -0.16 ( 49) | -0.14 ( 45)  -0.02 ( 32)   0.10 ( 77) |
+HAMMAN Bob - MAHMOOD Zia                               |  144   0.59 |  0.37   0.22 |  0.30 ( 77)   0.14 ( 67) |  0.47 ( 34)   0.16 ( 43) |  0.29 ( 38)  -0.24 ( 29)   0.08 ( 67) |
+BOMPIS Marc - QUANTIN Jean-Christophe                  |  144   0.51 |  0.53  -0.02 | -0.13 ( 78)   0.13 ( 66) | -0.46 ( 37)   0.15 ( 41) | -0.06 ( 35)   0.02 ( 31)   0.15 ( 66) |
+ZAK Piotr - ZAREMBA Jerzy                              |  112   0.38 |  0.29   0.08 |  0.07 ( 57)   0.09 ( 55) | -0.42 ( 34)   0.80 ( 23) | -0.25 ( 34)   0.05 ( 21)   0.22 ( 55) |
+NIKOLAYENKO Dmytro - RYBNIKOV Gennadii                 |  192   0.37 |  0.26   0.10 |  0.04 ( 94)   0.18 ( 96) |  0.16 ( 45)  -0.08 ( 49) |  0.11 ( 51)  -0.03 ( 45)   0.13 ( 96) |
+HANLON Tom - McGANN Hugh                               |  160   0.36 | -0.09   0.45 |  0.69 ( 89)   0.13 ( 71) |  0.95 ( 47)   0.41 ( 42) | -0.04 ( 38)  -0.07 ( 33)   0.19 ( 71) |
+HUANG Patrick K. H. - WU Chang-Dar                     |  128   0.32 |  0.51  -0.19 | -0.31 ( 66)  -0.06 ( 62) | -0.28 ( 32)  -0.33 ( 34) |  0.10 ( 35)  -0.10 ( 27)  -0.07 ( 62) |
+FITZGIBBON Nicholas - MESBUR Adam                      |  176   0.32 |  0.19   0.13 | -0.26 ( 95)   0.59 ( 81) | -0.34 ( 47)  -0.19 ( 48) | -0.13 ( 40)   0.14 ( 41)   0.58 ( 81) |
+CAMPOS Joao-Paulo - VILLAS-BOAS Miguel                 |  224   0.24 |  0.13   0.11 |  0.22 (112)   0.01 (111) | -0.06 ( 54)   0.47 ( 58) |  0.07 ( 54)  -0.02 ( 57)  -0.02 (111) |
+LUKS Leo - NABER Lauri                                 |  160   0.24 |  0.23   0.01 |  0.27 ( 75)  -0.22 ( 84) | -0.02 ( 36)   0.53 ( 39) | -0.24 ( 39)  -0.19 ( 45)  -0.01 ( 84) |
+TISLEVOLL Geir-Olav - WARE Michael                     |  160   0.21 |  0.28  -0.07 | -0.06 ( 86)  -0.08 ( 74) |  0.25 ( 45)  -0.41 ( 41) | -0.17 ( 42)   0.07 ( 32)  -0.01 ( 74) |
+LEVENKO Vassili - SESTER Sven                          |  128   0.18 |  0.01   0.17 |  0.17 ( 58)   0.16 ( 70) |  0.11 ( 27)   0.23 ( 31) | -0.12 ( 29)  -0.13 ( 41)   0.28 ( 70) |
+MIETI Renzo - BAGORDO Alessandro                       |  144   0.16 |  0.28  -0.12 |  0.36 ( 71)  -0.60 ( 72) |  0.20 ( 40)   0.57 ( 31) | -0.28 ( 39)  -0.20 ( 33)  -0.36 ( 72) |
+CARROLL John - GARVEY Tommy                            |  112   0.13 |  0.10   0.03 |  0.31 ( 52)  -0.21 ( 60) |  0.03 ( 19)   0.46 ( 33) | -0.02 ( 29)  -0.33 ( 31)  -0.03 ( 60) |
+BABSCH Andreas - SCHIFKO Martin                        |  127   0.12 | -0.03   0.15 |  0.40 ( 65)  -0.11 ( 61) | -0.13 ( 30)   0.86 ( 35) | -0.33 ( 30)   0.23 ( 31)  -0.06 ( 61) |
+HUANG Dong - LIU Jian Tao                              |  128   0.02 |  0.24  -0.23 | -0.02 ( 58)  -0.39 ( 70) |  0.08 ( 26)  -0.11 ( 32) | -0.11 ( 43)  -0.14 ( 27)  -0.27 ( 70) |
+DAMASO Nuno - PRATAS Pedro                             |  144  -0.03 | -0.15   0.12 | -0.11 ( 61)   0.29 ( 83) |  0.38 ( 22)  -0.39 ( 39) | -0.00 ( 44)   0.20 ( 39)   0.20 ( 83) |
+AMIN Bani - SALAHUDDIN Mohammed                        |  144  -0.16 |  0.01  -0.17 | -0.05 ( 64)  -0.27 ( 79) | -0.24 ( 33)   0.15 ( 31) | -0.14 ( 48)   0.04 ( 31)  -0.20 ( 79) |
+PINTO Rui - BARBOSA Juliano                            |  160  -0.19 | -0.41   0.22 |  0.17 ( 74)   0.26 ( 86) |  0.68 ( 32)  -0.22 ( 42) |  0.21 ( 40)   0.24 ( 46)   0.04 ( 86) |
+LEE Nok Yin - TSANG Pui Kei                            |  160  -0.21 |  0.36  -0.56 | -0.35 ( 81)  -0.78 ( 79) | -0.19 ( 38)  -0.49 ( 43) | -0.51 ( 47)  -0.23 ( 32)  -0.39 ( 79) |
+CASTELLO BRANCO Marcelo - BARBOSA Roberto              |  144  -0.24 |  0.49  -0.73 | -0.68 ( 71)  -0.78 ( 72) | -0.87 ( 34)  -0.52 ( 37) | -0.25 ( 31)  -0.48 ( 41)  -0.40 ( 72) |
+CHUMAK Yuliy - ROVYSHYN Oleg                           |  176  -0.27 | -0.28   0.01 | -0.27 ( 82)   0.25 ( 94) | -0.40 ( 48)  -0.09 ( 34) |  0.37 ( 49)  -0.02 ( 45)   0.07 ( 94) |
+KARPOV Maksim - LAANEMAE Tiit                          |  160  -0.36 | -0.17  -0.20 |  0.27 ( 81)  -0.67 ( 79) |  0.36 ( 35)   0.19 ( 46) | -0.17 ( 48)   0.28 ( 31)  -0.68 ( 79) |
+CHUNG Jonky - LIU Chang-Kae                            |  160  -0.38 | -0.56   0.18 | -0.32 ( 84)   0.74 ( 76) | -0.31 ( 39)  -0.34 ( 45) |  1.01 ( 38)   0.40 ( 38)   0.03 ( 76) |
+LIAQAT Farrukh - SAID Junaid                           |  192  -0.49 | -0.04  -0.45 | -0.44 ( 95)  -0.47 ( 94) | -0.65 ( 43)  -0.26 ( 52) |  0.25 ( 45)  -0.41 ( 49)  -0.37 ( 94) |
+CORNELL Michael - BACH Ashley                          |  160  -0.52 | -0.30  -0.22 | -0.20 ( 76)  -0.24 ( 84) | -0.26 ( 39)  -0.15 ( 37) | -0.12 ( 40)   0.51 ( 44)  -0.45 ( 84) |
+ASKARI Hasan - GHEEWALA Tahseen                        |  160  -0.54 | -0.40  -0.14 | -0.10 ( 72)  -0.17 ( 87) | -0.42 ( 37)   0.24 ( 35) | -0.22 ( 54)  -0.04 ( 33)  -0.02 ( 87) |
+CHEUNG Lik - FUNG Chi Pong                             |  160  -0.54 | -0.16  -0.39 | -0.45 ( 81)  -0.33 ( 78) | -0.62 ( 39)  -0.29 ( 42) | -0.15 ( 49)  -0.40 ( 29)  -0.09 ( 78) |
+FUCIK Jan - PURKARTHOFER Gunther                       |  128  -0.58 | -0.86   0.28 |  0.22 ( 71)   0.35 ( 57) |  0.10 ( 38)   0.36 ( 33) |  0.10 ( 25)   0.01 ( 32)   0.30 ( 57) |
+LI Vincent Hoi Yuen - LUNG Ka-Cheung                   |  127  -0.66 | -0.27  -0.39 |  0.04 ( 64)  -0.83 ( 63) | -0.84 ( 31)   0.86 ( 33) | -0.18 ( 29)  -0.66 ( 34)  -0.39 ( 63) |
+AHAMED Sayed - HANZALA Dewan Mohammad                  |  160  -0.69 | -0.57  -0.12 |  0.20 ( 86)  -0.50 ( 74) |  0.30 ( 42)   0.10 ( 44) | -0.39 ( 41)  -0.30 ( 33)  -0.15 ( 74) |
+BARTOLACELLI Gabriella - BERTAZZONI Maurizio           |  160  -0.74 | -0.56  -0.18 | -0.61 ( 75)   0.19 ( 85) | -0.55 ( 34)  -0.65 ( 41) | -0.80 ( 40)   0.21 ( 45)   0.45 ( 85) |
+PARRI Gabriele - TAMAGNINI Secondo                     |  144  -0.76 | -0.54  -0.21 | -0.38 ( 79)  -0.01 ( 65) | -0.40 ( 38)  -0.36 ( 41) |  0.03 ( 39)   0.60 ( 26)  -0.27 ( 65) |
+LARA Maria Joao - OREY CAPUCHO Manuel d'               |  144  -0.85 | -0.80  -0.04 | -0.02 ( 76)  -0.07 ( 67) |  0.05 ( 41)  -0.10 ( 35) |  0.30 ( 31)  -0.00 ( 36)  -0.21 ( 67) |
+KAMAL N. H. Shamsuzzaman - RAHMAN Jamilur              |  144  -1.41 | -1.00  -0.41 | -1.04 ( 64)   0.10 ( 80) | -0.55 ( 29)  -1.44 ( 35) |  0.39 ( 34)   0.26 ( 46)  -0.21 ( 80) |
 
-Players                                                No. Pl1 Pl2 Def  L1  L2 Butler    Bid  Play1  Play2   Lead1   Lead2    Def
-HUANG Patrick K. H. - YANG Sidney                       64  16  16  32  11  21   0.22  -0.14  -0.02   0.15    0.05    0.05   0.13
-D'ORSI Ernesto - FIGUEIREDO Mauricio                    80   1  40  38  34   4   0.03  -0.48  -0.01   0.37    0.21   -0.02  -0.04
-DANYLYUK Tetyana - DANYLYUK Volodymyr                   80  22  21  37  20  17   0.00   0.23  -0.03   0.02   -0.09   -0.08  -0.05
-WANG Jed - YANG Sidney                                  80  15  15  50  24  26  -0.22  -0.13   0.02  -0.14    0.09    0.16  -0.23
-BILAL Gulzar - MOHIUDDIN Khaled                         96  20  25  50  24  26  -1.08  -0.78  -0.02   0.08   -0.07    0.02  -0.32
-HUANG Patrick K. H. - WANG Jed                          16   4   5   7   5   2   0.38  -1.34   1.15   0.39    0.16   -0.01   0.02
+                                                       |             |              |           Play           |        Declaring         |                Defending              |
+Players                                                |  No. Butler |   Bid   Play |   Declaring    Defending |   Declarer1    Declarer2 |       Lead1        Lead2         Play |
+HUANG Patrick K. H. - YANG Sidney                      |   64   0.22 | -0.14   0.36 |  0.26 ( 32)   0.47 ( 32) | -0.08 ( 16)   0.59 ( 16) |  0.26 ( 11)   0.16 ( 21)   0.27 ( 32) |
+D'ORSI Ernesto - FIGUEIREDO Mauricio                   |   80   0.01 | -0.50   0.51 |  0.70 ( 41)   0.32 ( 38) | -0.83 (  1)   0.74 ( 40) |  0.51 ( 34)  -0.42 (  4)  -0.09 ( 38) |
+DANYLYUK Tetyana - DANYLYUK Volodymyr                  |   80  -0.01 |  0.21  -0.23 | -0.03 ( 43)  -0.45 ( 37) | -0.13 ( 22)   0.07 ( 21) | -0.36 ( 20)  -0.38 ( 17)  -0.09 ( 37) |
+WANG Jed - YANG Sidney                                 |   80  -0.21 | -0.12  -0.09 | -0.35 ( 30)   0.06 ( 50) |  0.11 ( 15)  -0.80 ( 15) |  0.30 ( 24)   0.50 ( 26)  -0.35 ( 50) |
+BILAL Gulzar - MOHIUDDIN Khaled                        |   96  -1.09 | -0.78  -0.32 |  0.13 ( 45)  -0.72 ( 50) | -0.09 ( 20)   0.30 ( 25) | -0.28 ( 24)   0.09 ( 26)  -0.63 ( 50) |
+HUANG Patrick K. H. - WANG Jed                         |   16   0.44 | -1.31   1.74 |  2.79 (  9)   0.40 (  7) |  4.61 (  4)   1.32 (  5) |  0.53 (  5)  -0.08 (  2)   0.05 (  7) |
 

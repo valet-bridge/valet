@@ -1,55 +1,57 @@
-Players                                                No. Pl1 Pl2 Def  L1  L2 Butler    Bid  Play1  Play2   Lead1   Lead2    Def
-FISHER Lotan - SCHWARTZ Ron                            220  61  40 118  57  61   1.28   0.41   0.22   0.05    0.14    0.19   0.27
-MADALA Agustin - BOCCHI Norberto                       240  40  94 106  81  25   1.08   0.78  -0.00   0.01    0.20   -0.02   0.11
-ARONOV Victor - STEFANOV Julian                        220  54  64 102  46  56   0.90   0.87  -0.06   0.11    0.03    0.04  -0.09
-KARAKOLEV Georgi - MIHOV Vladimir                      220  55  60 105  58  47   0.77   0.51   0.18   0.08    0.02    0.04  -0.06
-HANLON Tom - McGANN Hugh                               260  62  68 130  59  71   0.67   0.48  -0.04   0.11   -0.01    0.11   0.03
-WRANG Frederic - SYLVAN Johan                          200  55  39 106  68  38   0.65   0.21   0.19  -0.03    0.15   -0.01   0.13
-DUBOIN Giorgio - SEMENTA Antonio                       200  45  55  99  42  57   0.58   0.41  -0.05   0.04    0.05   -0.02   0.15
-NYSTROM Fredrik - UPMARK Johan                         200  50  52  98  56  42   0.58   0.23   0.19   0.12   -0.02    0.06  -0.00
-PIEKAREK Josef - SMIRNOV Alexander                     220  54  46 119  61  58   0.52   0.49  -0.00   0.02    0.02    0.04  -0.04
-BERG Jan Tore - SVENDSEN Odin                          200  49  52  99  48  51   0.46   0.38   0.06   0.03    0.01   -0.08   0.05
-KANDEMIR Ismail - KOLATA Suleyman                      200  45  51 103  52  51   0.41  -0.03   0.25   0.06    0.11    0.08  -0.05
-NYEMTSEV Oleksandr - SHUKHMEYSTER Borys                218  61  48 109  45  64   0.40   0.20   0.22  -0.04   -0.05    0.04   0.03
-GROMOELLER Michael - REHDER Martin                     220  56  58 106  60  46   0.36   0.27  -0.08   0.03   -0.01   -0.03   0.18
-BROGELAND Boye - NYBO Frode                            240  62  54 124  65  59   0.35   0.03   0.19  -0.02    0.12   -0.08   0.11
-FALLENIUS Bjorn - FREDIN Peter                         240  28  85 127  88  39   0.32   0.28  -0.17   0.19    0.00    0.04  -0.02
-LAKATOS Peter - SZILAGYI Laszlo                        219  58  57 104  51  53   0.32   0.01   0.05   0.20    0.04   -0.05   0.06
-FRITSCHE Joerg - ROHOWSKY Roland                       200  61  44  95  52  43   0.31   0.43  -0.00  -0.02   -0.03    0.04  -0.10
-ASSAEL Salvador - KOKSOY Enver                         220  44  66 110  62  48   0.26   0.04   0.12  -0.04    0.02    0.10   0.02
-LAURIA Lorenzo - VERSACE Alfredo                       200  53  51  96  50  46   0.24  -0.05   0.01   0.25    0.03    0.03  -0.01
-DOXIADIS Konstantinos - KANNAVOS Panagiotis            220  47  61 112  59  53   0.22   0.00   0.10  -0.08    0.02    0.11   0.06
-WINKLER Gabor - HOMONNAY Geza                          220  54  55 111  51  60   0.19   0.16   0.01   0.15   -0.11   -0.07   0.06
-OLANSKI Wojtek - VAINIKONIS Vytautas                   240  65  48 127  57  70   0.15   0.08   0.25  -0.08   -0.00   -0.02  -0.07
-PADON Dror - BIRMAN Alon                               200  46  58  96  40  56   0.08   0.01   0.14  -0.14   -0.04   -0.02   0.14
-KARAMANLIS Philippos - PROTONOTARIOS Manolis           200  43  58  99  65  34   0.08   0.08  -0.03  -0.02    0.04   -0.05   0.06
-EIDI Michel - VROUSTIS Vassilis                        220  59  47 113  58  55   0.05  -0.11   0.15  -0.00   -0.09    0.03   0.07
-MARASHEV Vladimir - TSONCHEV Ivan                      200  61  45  94  44  50   0.00  -0.27   0.20   0.01    0.04   -0.01   0.03
-CARROLL John - GARVEY Tommy                            160  37  42  80  41  39  -0.03  -0.10  -0.14   0.06    0.02    0.13  -0.00
-HERBST Ilan - HERBST Ophir                             220  65  54 100  47  53  -0.07  -0.27   0.00   0.04   -0.00   -0.07   0.23
-MICHAILOVAS Andrius - SAULIS Alvydas                   200  55  48  97  49  48  -0.11  -0.35  -0.08   0.21    0.12    0.07  -0.07
-GERMANIS Aigars - RUBENIS Ivars                        220  47  68 105  51  54  -0.12  -0.19   0.01   0.09   -0.03    0.06  -0.05
-NIKOLAYENKO Dmytro - RYBNIKOV Gennadii                 240  62  48 129  85  44  -0.12  -0.26   0.06  -0.07   -0.06    0.08   0.13
-JANSONS Ugis - SMILGAJS Andris                         200  50  55  95  46  49  -0.14   0.13  -0.14  -0.09   -0.05    0.01  -0.01
-FITZGIBBON Nicholas - MESBUR Adam                      220  52  49 119  65  54  -0.16  -0.06   0.09  -0.06    0.06   -0.05  -0.13
-ZORLU Nafiz - TOKAY Mustafa Cem                        220  57  58 104  39  65  -0.18  -0.10  -0.20   0.11    0.03   -0.07   0.04
-HEGEDUS Gal - SZEGEDI Balazs                           200  55  45 100  55  45  -0.22  -0.09  -0.21   0.12    0.07    0.05  -0.16
-CHARLSEN Thomas - HOFTANISKA Thor Erik                 200  36  62 102  46  56  -0.26  -0.22   0.14   0.10   -0.12   -0.09  -0.07
-BALASOVS Jurijs - BETHERS Uldis                        219  53  49 117  65  52  -0.29  -0.19   0.03   0.02   -0.01   -0.00  -0.14
-ARLOVICH Andrei - VAINIKONIS Erikas                    200  52  47 101  44  57  -0.31  -0.19   0.07   0.01   -0.05   -0.02  -0.14
-DE ROOS Daniel - VERMEIREN Raf                         240  55  63 122  60  62  -0.35   0.02  -0.03   0.02   -0.09   -0.10  -0.17
-CHUMAK Yuliy - ROVYSHYN Oleg                           180  45  41  94  41  53  -0.45  -0.28   0.03   0.01    0.02    0.03  -0.26
-GOMEZ HIERRO Ramon - GONCALVES Pedro                   200  47  50 103  54  49  -0.45  -0.16  -0.10   0.04   -0.09   -0.08  -0.06
-DEBUS Eric - VAN MECHELEN Rutger                       200  43  51 106  32  74  -0.48  -0.08  -0.26  -0.08    0.06   -0.02  -0.10
-DRAGIC Miroslav - ASH Mike                             199  45  47 107  54  53  -0.52  -0.24  -0.04   0.02    0.04   -0.06  -0.23
-CAPUTO Philippe - VAN MIDDELEM Guy                     200  37  58 104  51  53  -0.62  -0.34  -0.08  -0.09    0.03   -0.03  -0.11
-FERREIRA Carlos - NETO Manuel                          200  50  46 104  56  48  -0.75  -0.14  -0.11  -0.17   -0.15   -0.09  -0.09
-GORDON Irving - WHYTE William                          200  53  50  96  52  44  -0.88  -0.59  -0.07  -0.15   -0.03   -0.05   0.02
-PIPER Douglas - WILKINSON Alexander William            239  70  59 110  66  44  -0.92  -0.45  -0.15   0.08   -0.06    0.01  -0.36
-CORRAL Mari Car - GONSALVES Miguel                     220  54  50 116  54  62  -0.93  -0.50  -0.18   0.11   -0.07   -0.01  -0.27
-LARA Maria Joao - OREY CAPUCHO Manuel d'               220  60  54 105  57  48  -0.99  -0.26  -0.07  -0.21   -0.17   -0.07  -0.21
-GODED MERINO Gonzalo - VINCENT Herve                   220  56  63 101  50  51  -1.13  -0.48   0.02  -0.20   -0.03   -0.09  -0.36
-DAMASO Nuno - PRATAS Pedro                             220  68  46 106  47  59  -1.15  -0.80  -0.29  -0.11    0.05    0.01  -0.01
+                                                       |             |              |           Play           |        Declaring         |                Defending              |
+Players                                                |  No. Butler |   Bid   Play |   Declaring    Defending |   Declarer1    Declarer2 |       Lead1        Lead2         Play |
+FISHER Lotan - SCHWARTZ Ron                            |  220   1.29 |  0.42   0.87 |  0.58 (101)   1.12 (118) |  0.78 ( 61)   0.28 ( 40) |  0.54 ( 57)   0.68 ( 61)   0.51 (118) |
+MADALA Agustin - BOCCHI Norberto                       |  240   1.09 |  0.79   0.30 |  0.02 (134)   0.65 (106) | -0.02 ( 40)   0.04 ( 94) |  0.59 ( 81)  -0.18 ( 25)   0.24 (106) |
+ARONOV Victor - STEFANOV Julian                        |  220   0.90 |  0.87   0.03 |  0.09 (118)  -0.04 (102) | -0.24 ( 54)   0.37 ( 64) |  0.15 ( 46)   0.14 ( 56)  -0.18 (102) |
+KARAKOLEV Georgi - MIHOV Vladimir                      |  220   0.77 |  0.52   0.26 |  0.49 (115)   0.00 (105) |  0.73 ( 55)   0.27 ( 60) |  0.08 ( 58)   0.16 ( 47)  -0.12 (105) |
+HANLON Tom - McGANN Hugh                               |  260   0.67 |  0.49   0.19 |  0.13 (130)   0.24 (130) | -0.18 ( 62)   0.41 ( 68) | -0.06 ( 59)   0.38 ( 71)   0.06 (130) |
+WRANG Frederic - SYLVAN Johan                          |  200   0.65 |  0.21   0.44 |  0.34 ( 94)   0.52 (106) |  0.70 ( 55)  -0.16 ( 39) |  0.46 ( 68)  -0.03 ( 38)   0.24 (106) |
+DUBOIN Giorgio - SEMENTA Antonio                       |  200   0.59 |  0.42   0.17 | -0.01 (100)   0.36 ( 99) | -0.21 ( 45)   0.15 ( 55) |  0.22 ( 42)  -0.06 ( 57)   0.30 ( 99) |
+NYSTROM Fredrik - UPMARK Johan                         |  200   0.57 |  0.23   0.34 |  0.60 (102)   0.07 ( 98) |  0.75 ( 50)   0.46 ( 52) | -0.07 ( 56)   0.30 ( 42)  -0.01 ( 98) |
+PIEKAREK Josef - SMIRNOV Alexander                     |  220   0.52 |  0.48   0.04 |  0.02 (100)   0.05 (119) | -0.02 ( 54)   0.07 ( 46) |  0.09 ( 61)   0.16 ( 58)  -0.07 (119) |
+BERG Jan Tore - SVENDSEN Odin                          |  200   0.45 |  0.37   0.08 |  0.17 (101)  -0.02 ( 99) |  0.22 ( 49)   0.12 ( 52) |  0.05 ( 48)  -0.30 ( 51)   0.11 ( 99) |
+KANDEMIR Ismail - KOLATA Suleyman                      |  200   0.43 | -0.03   0.46 |  0.66 ( 96)   0.28 (103) |  1.13 ( 45)   0.24 ( 51) |  0.43 ( 52)   0.31 ( 51)  -0.09 (103) |
+NYEMTSEV Oleksandr - SHUKHMEYSTER Borys                |  218   0.41 |  0.21   0.20 |  0.38 (109)   0.02 (109) |  0.81 ( 61)  -0.16 ( 48) | -0.25 ( 45)   0.14 ( 64)   0.05 (109) |
+BROGELAND Boye - NYBO Frode                            |  240   0.37 |  0.04   0.33 |  0.37 (116)   0.30 (124) |  0.76 ( 62)  -0.08 ( 54) |  0.46 ( 65)  -0.32 ( 59)   0.21 (124) |
+GROMOELLER Michael - REHDER Martin                     |  220   0.36 |  0.27   0.09 | -0.10 (114)   0.30 (106) | -0.32 ( 56)   0.10 ( 58) | -0.03 ( 60)  -0.13 ( 46)   0.37 (106) |
+FRITSCHE Joerg - ROHOWSKY Roland                       |  200   0.32 |  0.44  -0.12 | -0.04 (105)  -0.20 ( 95) | -0.01 ( 61)  -0.08 ( 44) | -0.12 ( 52)   0.20 ( 43)  -0.23 ( 95) |
+LAKATOS Peter - SZILAGYI Laszlo                        |  219   0.32 |  0.01   0.31 |  0.48 (115)   0.12 (104) |  0.18 ( 58)   0.78 ( 57) |  0.17 ( 51)  -0.21 ( 53)   0.14 (104) |
+FALLENIUS Bjorn - FREDIN Peter                         |  240   0.31 |  0.28   0.03 |  0.03 (113)   0.04 (127) | -1.49 ( 28)   0.53 ( 85) |  0.01 ( 88)   0.22 ( 39)  -0.04 (127) |
+ASSAEL Salvador - KOKSOY Enver                         |  220   0.25 |  0.03   0.23 |  0.16 (110)   0.29 (110) |  0.63 ( 44)  -0.15 ( 66) |  0.08 ( 62)   0.45 ( 48)   0.05 (110) |
+LAURIA Lorenzo - VERSACE Alfredo                       |  200   0.23 | -0.06   0.29 |  0.49 (104)   0.08 ( 96) |  0.04 ( 53)   0.97 ( 51) |  0.11 ( 50)   0.10 ( 46)  -0.03 ( 96) |
+DOXIADIS Konstantinos - KANNAVOS Panagiotis            |  220   0.22 |  0.01   0.22 |  0.04 (108)   0.38 (112) |  0.45 ( 47)  -0.27 ( 61) |  0.07 ( 59)   0.46 ( 53)   0.13 (112) |
+WINKLER Gabor - HOMONNAY Geza                          |  220   0.18 |  0.15   0.03 |  0.31 (109)  -0.25 (111) |  0.02 ( 54)   0.60 ( 55) | -0.48 ( 51)  -0.24 ( 60)   0.11 (111) |
+OLANSKI Wojtek - VAINIKONIS Vytautas                   |  240   0.15 |  0.07   0.08 |  0.36 (113)  -0.17 (127) |  0.93 ( 65)  -0.42 ( 48) | -0.00 ( 57)  -0.08 ( 70)  -0.13 (127) |
+PADON Dror - BIRMAN Alon                               |  200   0.08 |  0.00   0.07 | -0.00 (104)   0.15 ( 96) |  0.61 ( 46)  -0.48 ( 58) | -0.22 ( 40)  -0.08 ( 56)   0.29 ( 96) |
+KARAMANLIS Philippos - PROTONOTARIOS Manolis           |  200   0.06 |  0.07  -0.01 | -0.12 (101)   0.10 ( 99) | -0.15 ( 43)  -0.09 ( 58) |  0.14 ( 65)  -0.30 ( 34)   0.12 ( 99) |
+EIDI Michel - VROUSTIS Vassilis                        |  220   0.05 | -0.10   0.15 |  0.30 (106)   0.01 (113) |  0.54 ( 59)  -0.00 ( 47) | -0.33 ( 58)   0.11 ( 55)   0.13 (113) |
+MARASHEV Vladimir - TSONCHEV Ivan                      |  200  -0.02 | -0.28   0.26 |  0.39 (106)   0.11 ( 94) |  0.65 ( 61)   0.05 ( 45) |  0.20 ( 44)  -0.05 ( 50)   0.04 ( 94) |
+CARROLL John - GARVEY Tommy                            |  160  -0.04 | -0.11   0.06 | -0.16 ( 79)   0.28 ( 80) | -0.59 ( 37)   0.22 ( 42) |  0.10 ( 41)   0.53 ( 39)  -0.03 ( 80) |
+HERBST Ilan - HERBST Ophir                             |  220  -0.07 | -0.27   0.20 |  0.07 (119)   0.35 (100) | -0.00 ( 65)   0.16 ( 54) | -0.00 ( 47)  -0.29 ( 53)   0.51 (100) |
+MICHAILOVAS Andrius - SAULIS Alvydas                   |  200  -0.10 | -0.35   0.25 |  0.26 (103)   0.24 ( 97) | -0.28 ( 55)   0.87 ( 48) |  0.48 ( 49)   0.30 ( 48)  -0.15 ( 97) |
+NIKOLAYENKO Dmytro - RYBNIKOV Gennadii                 |  240  -0.12 | -0.26   0.14 | -0.01 (110)   0.27 (129) |  0.24 ( 62)  -0.35 ( 48) | -0.16 ( 85)   0.41 ( 44)   0.24 (129) |
+GERMANIS Aigars - RUBENIS Ivars                        |  220  -0.12 | -0.20   0.07 |  0.18 (115)  -0.05 (105) |  0.04 ( 47)   0.29 ( 68) | -0.13 ( 51)   0.25 ( 54)  -0.11 (105) |
+JANSONS Ugis - SMILGAJS Andris                         |  200  -0.14 |  0.14  -0.28 | -0.44 (105)  -0.09 ( 95) | -0.55 ( 50)  -0.34 ( 55) | -0.21 ( 46)   0.03 ( 49)  -0.01 ( 95) |
+FITZGIBBON Nicholas - MESBUR Adam                      |  220  -0.15 | -0.06  -0.09 |  0.06 (101)  -0.22 (119) |  0.36 ( 52)  -0.26 ( 49) |  0.19 ( 65)  -0.19 ( 54)  -0.24 (119) |
+ZORLU Nafiz - TOKAY Mustafa Cem                        |  220  -0.18 | -0.10  -0.08 | -0.16 (115)   0.02 (104) | -0.77 ( 57)   0.43 ( 58) |  0.19 ( 39)  -0.23 ( 65)   0.09 (104) |
+HEGEDUS Gal - SZEGEDI Balazs                           |  200  -0.21 | -0.08  -0.13 | -0.17 (100)  -0.09 (100) | -0.74 ( 55)   0.52 ( 45) |  0.26 ( 55)   0.20 ( 45)  -0.32 (100) |
+CHARLSEN Thomas - HOFTANISKA Thor Erik                 |  200  -0.26 | -0.23  -0.04 |  0.49 ( 98)  -0.55 (102) |  0.80 ( 36)   0.31 ( 62) | -0.54 ( 46)  -0.32 ( 56)  -0.13 (102) |
+BALASOVS Jurijs - BETHERS Uldis                        |  219  -0.29 | -0.20  -0.09 |  0.11 (102)  -0.27 (117) |  0.14 ( 53)   0.09 ( 49) | -0.02 ( 65)  -0.00 ( 52)  -0.26 (117) |
+ARLOVICH Andrei - VAINIKONIS Erikas                    |  200  -0.31 | -0.19  -0.12 |  0.17 ( 99)  -0.40 (101) |  0.27 ( 52)   0.06 ( 47) | -0.21 ( 44)  -0.06 ( 57)  -0.28 (101) |
+DE ROOS Daniel - VERMEIREN Raf                         |  240  -0.36 |  0.02  -0.37 | -0.03 (118)  -0.71 (122) | -0.16 ( 55)   0.08 ( 63) | -0.35 ( 60)  -0.38 ( 62)  -0.34 (122) |
+CHUMAK Yuliy - ROVYSHYN Oleg                           |  180  -0.44 | -0.27  -0.17 |  0.09 ( 86)  -0.40 ( 94) |  0.13 ( 45)   0.06 ( 41) |  0.07 ( 41)   0.10 ( 53)  -0.49 ( 94) |
+GOMEZ HIERRO Ramon - GONCALVES Pedro                   |  200  -0.46 | -0.16  -0.30 | -0.14 ( 97)  -0.44 (103) | -0.42 ( 47)   0.13 ( 50) | -0.33 ( 54)  -0.33 ( 49)  -0.11 (103) |
+DEBUS Eric - VAN MECHELEN Rutger                       |  200  -0.47 | -0.08  -0.39 | -0.71 ( 94)  -0.11 (106) | -1.19 ( 43)  -0.31 ( 51) |  0.37 ( 32)  -0.05 ( 74)  -0.19 (106) |
+DRAGIC Miroslav - ASH Mike                             |  199  -0.53 | -0.25  -0.28 | -0.06 ( 92)  -0.47 (107) | -0.18 ( 45)   0.05 ( 47) |  0.15 ( 54)  -0.23 ( 53)  -0.43 (107) |
+CAPUTO Philippe - VAN MIDDELEM Guy                     |  200  -0.63 | -0.35  -0.28 | -0.37 ( 95)  -0.21 (104) | -0.42 ( 37)  -0.33 ( 58) |  0.12 ( 51)  -0.13 ( 53)  -0.20 (104) |
+FERREIRA Carlos - NETO Manuel                          |  200  -0.74 | -0.14  -0.60 | -0.58 ( 96)  -0.62 (104) | -0.43 ( 50)  -0.74 ( 46) | -0.54 ( 56)  -0.37 ( 48)  -0.16 (104) |
+GORDON Irving - WHYTE William                          |  200  -0.87 | -0.58  -0.29 | -0.43 (103)  -0.14 ( 96) | -0.27 ( 53)  -0.60 ( 50) | -0.13 ( 52)  -0.24 ( 44)   0.04 ( 96) |
+PIPER Douglas - WILKINSON Alexander William            |  239  -0.92 | -0.45  -0.47 | -0.12 (129)  -0.89 (110) | -0.50 ( 70)   0.34 ( 59) | -0.23 ( 66)   0.08 ( 44)  -0.78 (110) |
+CORRAL Mari Car - GONSALVES Miguel                     |  220  -0.92 | -0.50  -0.43 | -0.16 (104)  -0.66 (116) | -0.75 ( 54)   0.48 ( 50) | -0.27 ( 54)  -0.04 ( 62)  -0.52 (116) |
+LARA Maria Joao - OREY CAPUCHO Manuel d'               |  220  -0.99 | -0.26  -0.73 | -0.53 (114)  -0.95 (105) | -0.25 ( 60)  -0.85 ( 54) | -0.67 ( 57)  -0.31 ( 48)  -0.44 (105) |
+GODED MERINO Gonzalo - VINCENT Herve                   |  220  -1.13 | -0.48  -0.65 | -0.32 (119)  -1.04 (101) |  0.08 ( 56)  -0.69 ( 63) | -0.12 ( 50)  -0.39 ( 51)  -0.78 (101) |
+DAMASO Nuno - PRATAS Pedro                             |  220  -1.15 | -0.80  -0.35 | -0.77 (114)   0.09 (106) | -0.95 ( 68)  -0.50 ( 46) |  0.22 ( 47)   0.03 ( 59)  -0.02 (106) |
 
-Players                                                No. Pl1 Pl2 Def  L1  L2 Butler    Bid  Play1  Play2   Lead1   Lead2    Def
+                                                       |             |              |           Play           |        Declaring         |                Defending              |
+Players                                                |  No. Butler |   Bid   Play |   Declaring    Defending |   Declarer1    Declarer2 |       Lead1        Lead2         Play |
 

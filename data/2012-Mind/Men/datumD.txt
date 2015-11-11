@@ -1,48 +1,50 @@
-Players                                                No. Pl1 Pl2 Def  L1  L2 Butler    Bid  Play1  Play2   Lead1   Lead2    Def
-BERG Jan Tore - SVENDSEN Odin                          144  40  34  70  33  37   1.28   0.80   0.26  -0.02    0.08   -0.01   0.16
-HELGEMO Geir - HELNESS Tor                             176  57  45  74  37  37   1.27   0.64   0.18   0.25    0.03   -0.04   0.21
-FRIEDLANDER Ehud - LIRAN Inon                          144  46  32  66  35  31   1.14   0.55   0.28   0.09    0.07    0.05   0.09
-FANTONI Fulvio - NUNES Claudio                         176  51  32  93  48  45   1.13   0.65   0.01   0.22   -0.04   -0.02   0.32
-AKER A. Orhan - KOKTEN Namik                           160  28  50  82  46  36   1.09   0.69   0.06  -0.04   -0.00   -0.10   0.48
-INGIMARSSON Throstur - MAGNUSSON Magnus Eidur          224  55  50 118  59  59   1.04   0.79   0.14   0.06    0.00    0.04   0.01
-JU Chuancheng - SHI Zheng Jun                          192  71  30  91  29  62   1.00   0.82   0.11   0.10   -0.02    0.04  -0.04
-KARAMANLIS Philippos - PROTONOTARIOS Manolis           144  31  44  69  35  34   0.90   0.59   0.06   0.12    0.03    0.04   0.05
-CHARLSEN Thomas - HOFTANISKA Thor Erik                 160  40  44  75  33  42   0.82   0.55   0.06   0.02    0.08   -0.03   0.14
-BAREKET Ilan - LENGY Assaf                             144  37  24  83  45  38   0.78   0.53   0.09   0.10    0.03   -0.09   0.12
-GINOSSAR Eldad - PACHTMAN Ron                          160  50  36  74  37  37   0.51   0.48   0.02   0.05   -0.05   -0.04   0.05
-HANAYAMA Takeshi - TERAMOTO Tadashi                    144  33  39  72  36  36   0.43   0.25  -0.01   0.02   -0.03    0.16   0.05
-IMAKURA Tadashi - INO Masayuki                         160  33  44  83  40  43   0.41   0.32   0.18  -0.07    0.12    0.04  -0.17
-LIAN Ruoyang - SHI Haojun                              128  26  26  76  26  50   0.37   0.36  -0.05   0.06   -0.08    0.07   0.00
-GUR Okay - YILMAZ M.Gokhan                             160  41  38  81  42  39   0.22   0.11  -0.02   0.04    0.07   -0.01   0.04
-LILLEY David - NAGY Zoltan                             144  33  38  73  31  42   0.18   0.02   0.17   0.06   -0.04    0.02  -0.05
-FURUTA Kazuo - KAKU Hiroshi                            144  34  25  84  38  46   0.15  -0.08   0.01   0.16   -0.01    0.06   0.02
-CENGIZ Nuri - KURU Ercan                               128  42  27  59  26  33   0.09   0.14   0.08   0.13    0.04   -0.15  -0.14
-PEKKINEN Markku - SALMENKIVI Eero                      224  56  55 113  61  52   0.03  -0.02   0.03  -0.08   -0.01    0.02   0.08
-GROETHEIM Glenn - TUNDAL Ulf Haakon                    144  33  36  75  39  36  -0.08  -0.43   0.03   0.06   -0.08    0.04   0.30
-KOISTINEN Kauko - NIEMI Seppo                          224  78  37 108  53  55  -0.08   0.07   0.11  -0.02   -0.06    0.01  -0.20
-KROCHMALIK Robert - LAVINGS Paul                       144  35  35  74  39  35  -0.11  -0.24   0.03  -0.00    0.04    0.11  -0.05
-BALASOVS Jurijs - BETHERS Uldis                        144  43  28  73  35  38  -0.13   0.04  -0.00  -0.13    0.06   -0.02  -0.07
-BRIKMANE Liga - BENDIKS Janis                          160  32  41  86  33  53  -0.21   0.01  -0.10  -0.07   -0.01    0.11  -0.16
-DONG Lidang - SHAN Sheng                               128  36  31  61  32  29  -0.23  -0.23   0.26  -0.27    0.02   -0.01  -0.00
-DOXIADIS Konstantinos - KANNAVOS Panagiotis            176  37  47  92  39  53  -0.31   0.07   0.03   0.03   -0.01   -0.09  -0.34
-EINARSSON Bjarni Holmar - JORGENSEN Adalsteinn         224  51  66 107  42  65  -0.32  -0.41   0.04  -0.02    0.03   -0.06   0.12
-BROWN Terry - KANETKAR Avi                             160  43  47  70  36  34  -0.42  -0.65   0.26  -0.18    0.01    0.19  -0.04
-PASQUINI Paolo - VALDES Jose Maria                     160  45  44  71  36  35  -0.46  -0.12  -0.08  -0.04    0.03    0.00  -0.25
-CHAPLET Isabelle - MACGREGOR John                      224  44  60 119  51  68  -0.46  -0.57   0.06   0.21   -0.04    0.01  -0.13
-GUSSO Franco - HANTOS Jonathan                         160  28  47  85  33  52  -0.56  -0.40   0.00  -0.10   -0.04   -0.02   0.00
-DIKGANG Modisaotsile - MINWALLA Diniar                 224  49  52 123  68  55  -0.63  -0.17  -0.18  -0.14   -0.09    0.00  -0.06
-JANSONS Ugis - SMILGAJS Andris                         143  39  36  68  35  33  -0.76  -0.64  -0.06  -0.11   -0.03   -0.00   0.08
-AOUATE Catherine - WAN HOI Regine                      144  25  42  77  27  50  -0.90  -0.44  -0.18   0.03   -0.07   -0.16  -0.08
-CRUZ Danny - DOHNERT Lutz                              128  23  29  76  34  42  -1.15  -0.98  -0.08  -0.05   -0.03    0.01  -0.02
-LEMARINEL Michel - TEYSSEDRE Philippe                  160  40  49  71  37  34  -1.26  -0.62  -0.20  -0.18   -0.09   -0.07  -0.10
-MAFA Letsogile - MOEDI Omphemetse                      224  63  51 109  56  53  -1.34  -0.53  -0.31  -0.05   -0.09   -0.05  -0.31
-BOYER Marie-Therese - BLANC Robert                     144  29  46  68  36  32  -1.58  -0.89  -0.15  -0.06   -0.04   -0.09  -0.35
-ALLEN Steve - PIZA Eduardo                             224  50  72 102  52  50  -1.75  -0.98  -0.04  -0.37   -0.04   -0.04  -0.27
+                                                       |             |              |           Play           |        Declaring         |                Defending              |
+Players                                                |  No. Butler |   Bid   Play |   Declaring    Defending |   Declarer1    Declarer2 |       Lead1        Lead2         Play |
+BERG Jan Tore - SVENDSEN Odin                          |  144   1.30 |  0.82   0.48 |  0.47 ( 74)   0.49 ( 70) |  0.94 ( 40)  -0.08 ( 34) |  0.35 ( 33)  -0.02 ( 37)   0.34 ( 70) |
+HELGEMO Geir - HELNESS Tor                             |  176   1.28 |  0.64   0.64 |  0.76 (102)   0.49 ( 74) |  0.57 ( 57)   0.99 ( 45) |  0.15 ( 37)  -0.20 ( 37)   0.51 ( 74) |
+FRIEDLANDER Ehud - LIRAN Inon                          |  144   1.15 |  0.56   0.59 |  0.67 ( 78)   0.48 ( 66) |  0.87 ( 46)   0.39 ( 32) |  0.32 ( 35)   0.25 ( 31)   0.20 ( 66) |
+FANTONI Fulvio - NUNES Claudio                         |  176   1.12 |  0.64   0.48 |  0.48 ( 83)   0.48 ( 93) |  0.00 ( 51)   1.23 ( 32) | -0.16 ( 48)  -0.09 ( 45)   0.60 ( 93) |
+AKER A. Orhan - KOKTEN Namik                           |  160   1.12 |  0.71   0.41 |  0.07 ( 78)   0.73 ( 82) |  0.38 ( 28)  -0.10 ( 50) | -0.01 ( 46)  -0.46 ( 36)   0.93 ( 82) |
+INGIMARSSON Throstur - MAGNUSSON Magnus Eidur          |  224   1.05 |  0.80   0.26 |  0.42 (105)   0.12 (118) |  0.56 ( 55)   0.26 ( 50) |  0.00 ( 59)   0.17 ( 59)   0.03 (118) |
+JU Chuancheng - SHI Zheng Jun                          |  192   1.01 |  0.82   0.19 |  0.40 (101)  -0.05 ( 91) |  0.31 ( 71)   0.62 ( 30) | -0.16 ( 29)   0.13 ( 62)  -0.09 ( 91) |
+KARAMANLIS Philippos - PROTONOTARIOS Manolis           |  144   0.90 |  0.59   0.31 |  0.36 ( 75)   0.26 ( 69) |  0.27 ( 31)   0.41 ( 44) |  0.13 ( 35)   0.18 ( 34)   0.10 ( 69) |
+CHARLSEN Thomas - HOFTANISKA Thor Erik                 |  160   0.81 |  0.55   0.26 |  0.14 ( 84)   0.41 ( 75) |  0.21 ( 40)   0.07 ( 44) |  0.37 ( 33)  -0.14 ( 42)   0.32 ( 75) |
+BAREKET Ilan - LENGY Assaf                             |  144   0.77 |  0.53   0.25 |  0.44 ( 61)   0.10 ( 83) |  0.35 ( 37)   0.58 ( 24) |  0.11 ( 45)  -0.34 ( 38)   0.20 ( 83) |
+GINOSSAR Eldad - PACHTMAN Ron                          |  160   0.51 |  0.47   0.04 |  0.13 ( 86)  -0.07 ( 74) |  0.05 ( 50)   0.24 ( 36) | -0.21 ( 37)  -0.15 ( 37)   0.11 ( 74) |
+HANAYAMA Takeshi - TERAMOTO Tadashi                    |  144   0.44 |  0.26   0.18 |  0.02 ( 72)   0.34 ( 72) | -0.03 ( 33)   0.07 ( 39) | -0.13 ( 36)   0.63 ( 36)   0.09 ( 72) |
+IMAKURA Tadashi - INO Masayuki                         |  160   0.41 |  0.32   0.09 |  0.23 ( 77)  -0.03 ( 83) |  0.89 ( 33)  -0.26 ( 44) |  0.49 ( 40)   0.12 ( 43)  -0.33 ( 83) |
+LIAN Ruoyang - SHI Haojun                              |  128   0.37 |  0.36   0.00 |  0.03 ( 52)  -0.01 ( 76) | -0.26 ( 26)   0.31 ( 26) | -0.37 ( 26)   0.18 ( 50)  -0.00 ( 76) |
+GUR Okay - YILMAZ M.Gokhan                             |  160   0.21 |  0.09   0.11 |  0.05 ( 79)   0.17 ( 81) | -0.06 ( 41)   0.17 ( 38) |  0.26 ( 42)  -0.05 ( 39)   0.06 ( 81) |
+LILLEY David - NAGY Zoltan                             |  144   0.17 |  0.00   0.16 |  0.47 ( 71)  -0.13 ( 73) |  0.76 ( 33)   0.22 ( 38) | -0.18 ( 31)   0.08 ( 42)  -0.10 ( 73) |
+FURUTA Kazuo - KAKU Hiroshi                            |  144   0.15 | -0.08   0.23 |  0.39 ( 59)   0.12 ( 84) |  0.00 ( 34)   0.92 ( 25) | -0.05 ( 38)   0.20 ( 46)   0.03 ( 84) |
+CENGIZ Nuri - KURU Ercan                               |  128   0.07 |  0.13  -0.06 |  0.38 ( 69)  -0.57 ( 59) |  0.23 ( 42)   0.60 ( 27) |  0.17 ( 26)  -0.61 ( 33)  -0.31 ( 59) |
+PEKKINEN Markku - SALMENKIVI Eero                      |  224   0.05 | -0.01   0.06 | -0.08 (111)   0.19 (113) |  0.16 ( 56)  -0.32 ( 55) | -0.02 ( 61)   0.09 ( 52)   0.16 (113) |
+GROETHEIM Glenn - TUNDAL Ulf Haakon                    |  144  -0.08 | -0.44   0.35 |  0.18 ( 69)   0.51 ( 75) |  0.12 ( 33)   0.24 ( 36) | -0.31 ( 39)   0.18 ( 36)   0.58 ( 75) |
+KOISTINEN Kauko - NIEMI Seppo                          |  224  -0.09 |  0.06  -0.15 |  0.19 (115)  -0.52 (108) |  0.33 ( 78)  -0.11 ( 37) | -0.25 ( 53)   0.06 ( 55)  -0.42 (108) |
+KROCHMALIK Robert - LAVINGS Paul                       |  144  -0.10 | -0.24   0.14 |  0.05 ( 70)   0.23 ( 74) |  0.11 ( 35)  -0.01 ( 35) |  0.18 ( 39)   0.46 ( 35)  -0.08 ( 74) |
+BALASOVS Jurijs - BETHERS Uldis                        |  144  -0.14 |  0.03  -0.17 | -0.28 ( 71)  -0.07 ( 73) | -0.02 ( 43)  -0.69 ( 28) |  0.24 ( 35)  -0.08 ( 38)  -0.14 ( 73) |
+BRIKMANE Liga - BENDIKS Janis                          |  160  -0.19 |  0.02  -0.22 | -0.36 ( 73)  -0.10 ( 86) | -0.49 ( 32)  -0.27 ( 41) | -0.06 ( 33)   0.36 ( 53)  -0.29 ( 86) |
+DONG Lidang - SHAN Sheng                               |  128  -0.22 | -0.22   0.00 | -0.01 ( 67)   0.02 ( 61) |  0.95 ( 36)  -1.13 ( 31) |  0.10 ( 32)  -0.04 ( 29)  -0.01 ( 61) |
+DOXIADIS Konstantinos - KANNAVOS Panagiotis            |  176  -0.32 |  0.07  -0.39 |  0.12 ( 84)  -0.85 ( 92) |  0.15 ( 37)   0.10 ( 47) | -0.06 ( 39)  -0.30 ( 53)  -0.66 ( 92) |
+EINARSSON Bjarni Holmar - JORGENSEN Adalsteinn         |  224  -0.32 | -0.42   0.10 |  0.04 (117)   0.17 (107) |  0.19 ( 51)  -0.08 ( 66) |  0.14 ( 42)  -0.22 ( 65)   0.25 (107) |
+BROWN Terry - KANETKAR Avi                             |  160  -0.43 | -0.64   0.22 |  0.12 ( 90)   0.34 ( 70) |  0.95 ( 43)  -0.64 ( 47) |  0.06 ( 36)   0.89 ( 34)  -0.12 ( 70) |
+PASQUINI Paolo - VALDES Jose Maria                     |  160  -0.46 | -0.12  -0.33 | -0.22 ( 89)  -0.47 ( 71) | -0.30 ( 45)  -0.14 ( 44) |  0.15 ( 36)   0.02 ( 35)  -0.55 ( 71) |
+CHAPLET Isabelle - MACGREGOR John                      |  224  -0.47 | -0.58   0.11 |  0.57 (104)  -0.29 (119) |  0.28 ( 44)   0.78 ( 60) | -0.20 ( 51)   0.04 ( 68)  -0.23 (119) |
+GUSSO Franco - HANTOS Jonathan                         |  160  -0.56 | -0.40  -0.16 | -0.22 ( 75)  -0.11 ( 85) |  0.01 ( 28)  -0.35 ( 47) | -0.20 ( 33)  -0.06 ( 52)   0.01 ( 85) |
+DIKGANG Modisaotsile - MINWALLA Diniar                 |  224  -0.64 | -0.18  -0.47 | -0.71 (101)  -0.26 (123) | -0.84 ( 49)  -0.60 ( 52) | -0.28 ( 68)   0.01 ( 55)  -0.11 (123) |
+JANSONS Ugis - SMILGAJS Andris                         |  143  -0.76 | -0.64  -0.12 | -0.32 ( 75)   0.10 ( 68) | -0.23 ( 39)  -0.42 ( 36) | -0.11 ( 35)  -0.01 ( 33)   0.16 ( 68) |
+AOUATE Catherine - WAN HOI Regine                      |  144  -0.90 | -0.43  -0.47 | -0.35 ( 67)  -0.57 ( 77) | -1.05 ( 25)   0.07 ( 42) | -0.35 ( 27)  -0.46 ( 50)  -0.14 ( 77) |
+CRUZ Danny - DOHNERT Lutz                              |  128  -1.15 | -0.98  -0.17 | -0.33 ( 52)  -0.06 ( 76) | -0.43 ( 23)  -0.25 ( 29) | -0.10 ( 34)   0.02 ( 42)  -0.03 ( 76) |
+LEMARINEL Michel - TEYSSEDRE Philippe                  |  160  -1.26 | -0.63  -0.63 | -0.67 ( 89)  -0.59 ( 71) | -0.78 ( 40)  -0.57 ( 49) | -0.39 ( 37)  -0.33 ( 34)  -0.23 ( 71) |
+MAFA Letsogile - MOEDI Omphemetse                      |  224  -1.34 | -0.53  -0.81 | -0.71 (114)  -0.93 (109) | -1.11 ( 63)  -0.22 ( 51) | -0.37 ( 56)  -0.19 ( 53)  -0.65 (109) |
+BOYER Marie-Therese - BLANC Robert                     |  144  -1.58 | -0.89  -0.69 | -0.41 ( 75)  -1.01 ( 68) | -0.72 ( 29)  -0.21 ( 46) | -0.18 ( 36)  -0.38 ( 32)  -0.74 ( 68) |
+ALLEN Steve - PIZA Eduardo                             |  224  -1.74 | -0.97  -0.77 | -0.76 (122)  -0.78 (102) | -0.17 ( 50)  -1.16 ( 72) | -0.18 ( 52)  -0.19 ( 50)  -0.60 (102) |
 
-Players                                                No. Pl1 Pl2 Def  L1  L2 Butler    Bid  Play1  Play2   Lead1   Lead2    Def
-KANNAVOS Panagiotis - VROUSTIS Vassilis                 16   6   6   4   2   2   2.31   0.53   0.62   0.28    0.42   -0.00   0.46
-MULTON Franck - ZIMMERMANN Pierre                       96  33  13  50  22  28   1.67   0.84   0.67   0.00    0.06    0.02   0.07
-PROTONOTARIOS Manolis - VROUSTIS Vassilis               15   3   2  10   3   7   0.20  -0.26   0.01  -0.05   -0.02    0.16   0.35
-EIDI Michel - VROUSTIS Vassilis                         64  20  15  29  10  19   0.09  -0.16  -0.04   0.02   -0.02    0.03   0.26
-KARAMANLIS Philippos - VROUSTIS Vassilis                32   9  12  11   9   2  -2.38  -1.28  -0.30  -0.61    0.03   -0.01  -0.22
+                                                       |             |              |           Play           |        Declaring         |                Defending              |
+Players                                                |  No. Butler |   Bid   Play |   Declaring    Defending |   Declarer1    Declarer2 |       Lead1        Lead2         Play |
+KANNAVOS Panagiotis - VROUSTIS Vassilis                |   16   2.31 |  0.53   1.78 |  1.21 ( 12)   3.50 (  4) |  1.66 (  6)   0.75 (  6) |  3.33 (  2)  -0.02 (  2)   1.84 (  4) |
+MULTON Franck - ZIMMERMANN Pierre                      |   96   1.67 |  0.84   0.83 |  1.40 ( 46)   0.31 ( 50) |  1.94 ( 33)   0.00 ( 13) |  0.27 ( 22)   0.06 ( 28)   0.15 ( 50) |
+PROTONOTARIOS Manolis - VROUSTIS Vassilis              |   15   0.27 | -0.19   0.46 | -0.10 (  5)   0.73 ( 10) |  0.07 (  3)  -0.35 (  2) | -0.10 (  3)   0.35 (  7)   0.52 ( 10) |
+EIDI Michel - VROUSTIS Vassilis                        |   64   0.08 | -0.17   0.25 | -0.06 ( 35)   0.61 ( 29) | -0.16 ( 20)   0.08 ( 15) | -0.13 ( 10)   0.12 ( 19)   0.58 ( 29) |
+KARAMANLIS Philippos - VROUSTIS Vassilis               |   32  -2.41 | -1.31  -1.10 | -1.39 ( 21)  -0.56 ( 11) | -1.06 (  9)  -1.63 ( 12) |  0.12 (  9)  -0.08 (  2)  -0.64 ( 11) |
 

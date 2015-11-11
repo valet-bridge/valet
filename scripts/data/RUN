@@ -3,9 +3,9 @@ set VALET = ../src/valet.exe
 foreach d (*Polish* *Olympiad *World/Men *World/Women *Euro/Women 2006-Euro/Men)
   echo $d
   $VALET -d $d -v datum -l -m 100 > $d/datum.txt
-  $VALET -d $d -v datum -l -f csv -c ';' -m 100 > $d/datum.csv
+  $VALET -d $d -v datum -l -f csv -j';' -m 100 > $d/datum.csv
   $VALET -d $d -v imps -l -m 100 > $d/iaf.txt
-  $VALET -d $d -v imps -l -f csv -c ';' -m 100 > $d/iaf.csv
+  $VALET -d $d -v imps -l -f csv -j';' -m 100 > $d/iaf.csv
   perl -pi -e 's/\./,/g' $d/datum.csv
   perl -pi -e 's/\./,/g' $d/iaf.csv
   rm $d/*.bak
@@ -16,9 +16,9 @@ foreach d (2008-Euro/Men 201*Euro/Men)
   foreach s (A B)
     set FILES = "-n names$s.txt -s scores$s.txt"
     $VALET -d $d -v datum -l $FILES -m 100 > $d/datum$s.txt
-    $VALET -d $d -v datum -l $FILES -f csv -c ';' -m 100 > $d/datum$s.csv
+    $VALET -d $d -v datum -l $FILES -f csv -j';' -m 100 > $d/datum$s.csv
     $VALET -d $d -v imps -l $FILES -m 100 > $d/iaf$s.txt
-    $VALET -d $d -v imps -l $FILES -f csv -c ';' -m 100 > $d/iaf$s.csv
+    $VALET -d $d -v imps -l $FILES -f csv -j';' -m 100 > $d/iaf$s.csv
     perl -pi -e 's/\./,/g' $d/datum$s.csv
     perl -pi -e 's/\./,/g' $d/iaf$s.csv
     rm $d/*.bak
@@ -30,9 +30,9 @@ foreach d (*Mind/Men)
   foreach s (A B C D)
     set FILES = "-n names$s.txt -s scores$s.txt"
     $VALET -d $d -v datum -l $FILES -m 100 > $d/datum$s.txt
-    $VALET -d $d -v datum -l $FILES -f csv -c ';' -m 100 > $d/datum$s.csv
+    $VALET -d $d -v datum -l $FILES -f csv -j';' -m 100 > $d/datum$s.csv
     $VALET -d $d -v imps -l $FILES -m 100 > $d/iaf$s.txt
-    $VALET -d $d -v imps -l $FILES -f csv -c ';' -m 100 > $d/iaf$s.csv
+    $VALET -d $d -v imps -l $FILES -f csv -j';' -m 100 > $d/iaf$s.csv
     perl -pi -e 's/\./,/g' $d/datum$s.csv
     perl -pi -e 's/\./,/g' $d/iaf$s.csv
     rm $d/*.bak
@@ -44,9 +44,9 @@ foreach d (*Mind/Women)
   foreach s (E F G)
     set FILES = "-n names$s.txt -s scores$s.txt"
     $VALET -d $d -v datum -l $FILES -m 100 > $d/datum$s.txt
-    $VALET -d $d -v datum -l $FILES -f csv -c ';' -m 100 > $d/datum$s.csv
+    $VALET -d $d -v datum -l $FILES -f csv -j';' -m 100 > $d/datum$s.csv
     $VALET -d $d -v imps -l $FILES -m 100 > $d/iaf$s.txt
-    $VALET -d $d -v imps -l $FILES -f csv -c ';' -m 100 > $d/iaf$s.csv
+    $VALET -d $d -v imps -l $FILES -f csv -j';' -m 100 > $d/iaf$s.csv
     perl -pi -e 's/\./,/g' $d/datum$s.csv
     perl -pi -e 's/\./,/g' $d/iaf$s.csv
     rm $d/*.bak

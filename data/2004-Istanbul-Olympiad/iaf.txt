@@ -1,264 +1,266 @@
-Players                                                No. Pl1 Pl2 Def  L1  L2   IMPs    Bid  Play1  Play2   Lead1   Lead2    Def
-Jason Hackett - Justin Hackett                         220  46  54 120  52  68   1.19   0.34   0.28   0.28    0.00    0.00   0.27
-Tarek Sadek - Waleed El Ahmady                         320  72  89 158  82  76   1.05   0.45   0.18   0.19    0.00    0.00   0.23
-Fulvio Fantoni - Claudio Nunes                         220  57  51 111  51  60   1.04   0.49   0.10   0.19    0.00    0.00   0.26
-Adam Zmudzinski - Cezary Balicki                       240  46  63 130  60  70   1.02   0.55   0.06   0.13    0.00    0.00   0.27
-Abdel Salam Ghoneim - Samer El-Sheikh                  220  64  36 118  55  63   0.86   0.66   0.22  -0.05    0.00    0.00   0.03
-Jian Ming Dai - Li Xin Yang                            220  56  46 118  56  62   0.86   0.47   0.08   0.03    0.00    0.00   0.27
-Steve Weinstein - Bobby Levin                          240  54  74 111  49  62   0.85   0.47   0.11   0.27    0.00    0.00  -0.00
-Hugh McGann - Tom Hanlon                               260  66  77 117  53  64   0.85   0.46  -0.05   0.18    0.00    0.00   0.27
-Hector Camberos - Alejandro Bianchedi                  120  40  25  55  28  27   0.82   0.84  -0.30   0.01    0.00    0.00   0.26
-Israel Yadlin - Doron Yadlin                           240  44  49 146  80  66   0.79   0.47  -0.00  -0.03    0.00    0.00   0.35
-Sartaj Hans - Tony Nunn                                240  62  47 130  57  73   0.79   0.61  -0.03   0.04    0.00    0.00   0.17
-Gábor Winkler - Miklós Dumbovich                       260  76  51 133  76  57   0.78   0.53   0.12  -0.00    0.00    0.00   0.14
-Jouri Khokhlov - Vlaadimir Rekunov                     220  48  52 119  60  59   0.78   0.28   0.17   0.26    0.00    0.00   0.07
-Andrew Robson - David Bakhshi                          240  58  81 101  44  57   0.77   0.66   0.13  -0.02    0.00    0.00  -0.00
-Michael Rosenberg - Zia Mahmood                        240  55  67 118  59  59   0.77   0.05   0.29   0.07    0.00    0.00   0.36
-Shaolin Sun - Xin Li                                   140  24  36  78  36  42   0.76   0.21   0.29   0.06    0.00    0.00   0.19
-Magnus E Magnusson - Matthías Torvaldsson              240  65  68 107  56  51   0.74   0.37   0.10   0.09    0.00    0.00   0.17
-Osmo Kiema - Dogan Uzum                                100  22  19  59  30  29   0.73   0.18   0.08   0.24    0.00    0.00   0.22
-Tom Townsend - David Gold                              220  53  61 106  49  57   0.70   0.56   0.08  -0.01    0.00    0.00   0.07
-Hideki Takano - Tadashi Imakura                        240  53  59 126  59  67   0.70   0.43   0.20   0.15    0.00    0.00  -0.09
-Andrés Knap - Arturo Wasik                             240  50  59 131  67  64   0.68   0.42   0.01   0.26    0.00    0.00  -0.02
-Gábor Macskásy - György Szalay                         240  54  58 128  61  67   0.67   0.46   0.09  -0.15    0.00    0.00   0.27
-Jean-Jacques Palau - Jérôme Rombaut                    240  43  53 144  70  74   0.64  -0.08   0.20   0.19    0.00    0.00   0.33
-Ricco van Prooijen - Sjoert Brink                      180  40  36 104  48  56   0.62   0.35   0.14   0.03    0.00    0.00   0.10
-Haojun Shi - Zejun Zhuang                              220  49  58 113  49  64   0.62   0.34  -0.01   0.04    0.00    0.00   0.24
-Entscho Wladow - Michael Elinescu                      240  75  46 118  72  46   0.61   0.46   0.01   0.06    0.00    0.00   0.08
-Nafiz Zorlu - Salvador Assael                          300  80  82 137  68  69   0.61   0.39   0.09   0.01    0.00    0.00   0.12
-Andreas Babsch - Wolfgang Bieder                       200  62  44  92  55  37   0.61   0.38  -0.03  -0.06    0.00    0.00   0.31
-Maarten Schollaardt - Bas Drijver                      200  53  47 100  50  50   0.60   0.30   0.09   0.05    0.00    0.00   0.16
-John Carroll - Tom Garvey                              200  44  45 111  50  61   0.60   0.46  -0.06   0.08    0.00    0.00   0.11
-Franck Multon - Jean-Christophe Quantin                280  73  80 125  61  64   0.60   0.26   0.03   0.05    0.00    0.00   0.26
-Josef Piekarek - Tomasz Gotard                         240  46  66 128  62  66   0.60   0.35   0.09  -0.04    0.00    0.00   0.20
-Jan Jansma - Loek Jr. Verhees                          260  50  86 124  66  58   0.57   0.18   0.14  -0.01    0.00    0.00   0.26
-Giorgio Duboin - Norberto Bocchi                       240  53  70 116  65  51   0.55   0.12  -0.01   0.09    0.00    0.00   0.35
-Lars Lund Madsen - Morten Lund Madsen                  220  57  50 113  54  59   0.53   0.18   0.05   0.05    0.00    0.00   0.25
-Gabriel Chagas - Miguel Villas Boas                    320 107  64 149  73  76   0.53   0.37   0.14   0.02    0.00    0.00   0.00
-Erik Sælensminde - Boye Brogeland                      260  70  50 140  74  66   0.53   0.39   0.01   0.03    0.00    0.00   0.11
-Agustin Madala - Alejandro Bianchedi                   180  58  39  83  35  48   0.51   0.12   0.13   0.19    0.00    0.00   0.06
-Johan Sylvan - PO Sundelin                             120  33  29  58  28  30   0.50   0.19   0.14  -0.07    0.00    0.00   0.24
-Georgy Matushko - Max Khven                            220  57  71  92  46  46   0.48   0.02   0.15  -0.02    0.00    0.00   0.32
-Amedeo Comella - Stefano Sabbatini                     220  53  45 122  55  67   0.48  -0.01   0.08   0.10    0.00    0.00   0.31
-Pritish Kushari - Sumit Mukherjee                      160  32  35  92  48  44   0.47   0.33  -0.00  -0.00    0.00    0.00   0.14
-Robert Parasian Tobing - Taufik Gautama Asbi           280  79  57 144  66  78   0.46   0.29   0.02   0.15    0.00    0.00   0.00
-Julian Stefanov - Victor Aronov                        240  60  58 122  68  54   0.46   0.47  -0.04  -0.14    0.00    0.00   0.16
-László Honti - László Szilágyi                         180  48  37  94  59  35   0.44  -0.06  -0.00   0.18    0.00    0.00   0.32
-Iulian Rotaru - Marius Briciu                          240  50  68 122  67  55   0.44   0.32   0.16  -0.03    0.00    0.00  -0.01
-Martin Schifko - Andreas Gloyer                        280  71  78 130  76  54   0.43   0.18   0.08  -0.03    0.00    0.00   0.21
-Georgo Karakolev - Zahari Zahariev                     220  54  61 105  52  53   0.43   0.18  -0.11   0.22    0.00    0.00   0.14
-Agustin Madala - Pablo Ravenna                         120  36  28  56  22  34   0.42   0.05   0.08   0.11    0.00    0.00   0.19
-Sverrir Armansson - Adalsteinn Jorgensen               220  52  52 116  45  71   0.41   0.25  -0.10   0.19    0.00    0.00   0.07
-Magnus Lindkvist - Peter Fredin                        320  84  82 154  83  71   0.41   0.49   0.01   0.12    0.00    0.00  -0.21
-Jon-Egil Furunes - Tor Helness                         260  75  69 116  46  70   0.41   0.09   0.13   0.09    0.00    0.00   0.09
-Gabriel Carrasco - Gabriel Fractman                    220  60  57 102  47  55   0.40   0.34  -0.09   0.16    0.00    0.00  -0.02
-Gabriel Harfouche - Michel Eidy                        340  73  97 169  84  85   0.40   0.15   0.13   0.00    0.00    0.00   0.12
-Nicholas FitzGibbon - Adam Mesbur                      220  35  69 115  51  64   0.39   0.15   0.05   0.06    0.00    0.00   0.13
-Pablo Lambardi - Pablo Ravenna                         140  33  45  62  23  39   0.38   0.37  -0.02   0.04    0.00    0.00  -0.01
-Alekos Lambrinos - Loukas Zotos                        220  53  61 105  54  51   0.38   0.31   0.00   0.06    0.00    0.00   0.01
-Laurent Thuillez - Lionel Sebbane                      160  47  35  77  47  30   0.36   0.21   0.10   0.11    0.00    0.00  -0.06
-Martin Schaltz - Søren Christiansen                    220  47  56 117  56  61   0.35   0.22   0.11   0.07    0.00    0.00  -0.04
-Jan - E - Alam Fazli - Abdul Rehman Allana             280  75  63 142  73  69   0.35  -0.03   0.11   0.12    0.00    0.00   0.15
-Hans Christian Graversen - Poul Clemmensen             240  75  64 100  47  53   0.34   0.10   0.06   0.20    0.00    0.00  -0.02
-Piotr Tuszynski - Apolinary Kowalski                   220  61  56 103  54  49   0.34   0.15  -0.10   0.20    0.00    0.00   0.10
-Jelena Alfejeva - Vladimir Gonca                       240  77  53 109  62  47   0.34   0.10   0.04   0.11    0.00    0.00   0.08
-Faycal Hamdan - Pierre Chidiac                         120  34  40  46  24  22   0.33  -0.06   0.22   0.08    0.00    0.00   0.09
-Mariusz Puczynski - Bartosz Chmurski                   200  42  58 100  42  58   0.31   0.27   0.07  -0.19    0.00    0.00   0.16
-Lauri Naber - Leo Luks                                 240  79  49 111  42  69   0.31   0.07  -0.03   0.10    0.00    0.00   0.18
-Hiroshi Kaku - Masaaki Takayama                        180  41  53  86  36  50   0.30   0.20   0.02   0.12    0.00    0.00  -0.04
-Li Xin Yang - Shaolin Sun                              100  22  19  58  29  29   0.30  -0.13   0.06   0.01    0.00    0.00   0.36
-Hédi Baccour - Craig Gower                             200  48  51 101  44  57   0.30   0.26  -0.03   0.02    0.00    0.00   0.05
-Chia-Hsin Wu - Chih Kuo Shen                           180  46  43  90  39  51   0.29   0.04   0.11   0.20    0.00    0.00  -0.06
-Dubravko Diklic - Miro Tesla                           220  54  59 106  52  54   0.28  -0.03   0.20   0.06    0.00    0.00   0.05
-Giorgi Uchava - Rati Burdiashvili                      140  28  42  69  32  37   0.28   0.54   0.09   0.01    0.00    0.00  -0.36
-Franky Steven Karwur - Santje Panelewen                280  52  64 163  55 108   0.28  -0.03   0.16   0.01    0.00    0.00   0.14
-Masayuki Ino - Tadashi Imakura                         240  77  43 120  53  67   0.28   0.32   0.17  -0.09    0.00    0.00  -0.12
-Kemal Shoaib - Khursheed Hadi                          240  69  75  95  38  57   0.26   0.24  -0.03  -0.02    0.00    0.00   0.07
-Branko Vlajnic - Dimitraki Zipovski                    240  68  53 119  62  57   0.25   0.21  -0.13   0.05    0.00    0.00   0.11
-Maris Matisons - Per Gunnar Eliasson                   240  54  63 123  56  67   0.25   0.19   0.04  -0.13    0.00    0.00   0.14
-Ken Rae - David Gerrard                                220  62  44 113  59  54   0.25   0.20   0.05  -0.01    0.00    0.00   0.00
-Jonas P Erlingson - Steinar Jonsson                    220  46  49 125  71  54   0.24   0.15  -0.01   0.06    0.00    0.00   0.05
-Martin Reid - Peter Newell                             260  65  66 128  74  54   0.23   0.13   0.10  -0.00    0.00    0.00  -0.00
-Kwok Fai Mak - Dicky Wai Kit Lai                       220  50  48 122  56  66   0.23   0.12   0.08  -0.02    0.00    0.00   0.06
-Alexander Doubinine - Andrei Gromov                    240  44  63 133  62  71   0.23   0.35  -0.01   0.05    0.00    0.00  -0.16
-Alfredo Versace - Lorenzo Lauria                       220  51  59 108  42  66   0.22   0.06   0.07   0.08    0.00    0.00   0.02
-Marco Toma - Diego Brenner                             200  46  55  99  55  44   0.21   0.19   0.11  -0.00    0.00    0.00  -0.09
-Marian Radulescu - Bogdan Marina                       220  51  60 109  46  63   0.20   0.05  -0.04  -0.01    0.00    0.00   0.20
-Suleyman Kolata - Yalcin Atabey                        280  68  82 129  67  62   0.19  -0.08   0.19   0.08    0.00    0.00   0.01
-Ranko Tica - Sarfaraz Ahmed Khan                       160  38  29  92  45  47   0.19  -0.00   0.21   0.07    0.00    0.00  -0.09
-Panayiotis Kannavos - Theodore Triantafyllopoulos      240  59  63 117  60  57   0.18  -0.03   0.05  -0.01    0.00    0.00   0.17
-Patrick Le Boulenge - Philippe Caputo                  160  29  44  87  37  50   0.16   0.13  -0.00   0.01    0.00    0.00   0.02
-Fredrik Nyström - Peter Bertheau                       240  54  70 116  63  53   0.16   0.15   0.02   0.01    0.00    0.00  -0.02
-Kauko Koistinen - Osmo Kiema                           320  87  75 155  75  80   0.14  -0.05   0.13   0.03    0.00    0.00   0.03
-Klaus Reps - Bernard Ludewig                           200  57  53  90  50  40   0.14   0.07   0.11  -0.07    0.00    0.00   0.03
-Gunnar Andersson - Bjorn Wenneberg                     220  66  44 110  58  52   0.10   0.20  -0.12  -0.07    0.00    0.00   0.08
-Michael Cummings - David Lindop                        240  65  60 115  65  50   0.10  -0.10  -0.01   0.13    0.00    0.00   0.08
-Jan Petter Svendsen - Rune Hauge                       160  52  43  65  31  34   0.10   0.14  -0.15  -0.08    0.00    0.00   0.18
-Jeffrey Sapire - Neville Eber                          260  74  65 121  59  62   0.09   0.07  -0.15   0.16    0.00    0.00   0.02
-Philippe Teysseidre - Zvi Engel                        260  81  67 111  53  58   0.08   0.12   0.09  -0.02    0.00    0.00  -0.12
-Faycal Hamdan - Nagib Baroudi                          140  36  42  62  33  29   0.08  -0.18  -0.03   0.12    0.00    0.00   0.17
-Ilan Herbst - Ofir Herbst                              240  58  70 111  68  43   0.08  -0.07   0.09  -0.01    0.00    0.00   0.06
-Filip Kurbalija - Tim Rees                             340  73  97 170  97  73   0.07   0.11  -0.04   0.01    0.00    0.00  -0.01
-Roman Smolski - Vera Petty                             260  77  56 126  59  67   0.03   0.13   0.08  -0.13    0.00    0.00  -0.04
-Gocha Goshadze - David Chechelashvili                  260  58  64 138  81  57   0.03  -0.02  -0.10  -0.01    0.00    0.00   0.16
-Vytautas Vainikonis - Wojtek Olanski                   220  44  49 127  61  66   0.02  -0.14   0.02  -0.00    0.00    0.00   0.15
-Manash Kumar Mukherjee - Rana Roy                      240  77  46 117  64  53   0.02  -0.14   0.11   0.04    0.00    0.00   0.01
-Ivars Rubenis - Ugis Jansons                           220  56  47 117  64  53   0.02   0.17   0.03   0.07    0.00    0.00  -0.25
-Samuel Wan - Derek Zen                                 240  53  66 121  56  65   0.01  -0.18   0.17   0.09    0.00    0.00  -0.06
-Goran Borevkovic - Vedan Zoric                         240  59  56 125  67  58   0.01   0.34  -0.05  -0.09    0.00    0.00  -0.19
-Malcolm Mayer - Tom Jacob                              220  69  55  95  47  48   0.01  -0.06  -0.15   0.17    0.00    0.00   0.05
-Eugenio Gambigliani - Camillo Gaddi                    220  44  62 114  59  55   0.01  -0.00  -0.09   0.15    0.00    0.00  -0.06
-Hong Dong Duong - Tarik Yalcin                         240  66  48 125  56  69   0.01   0.09   0.01   0.01    0.00    0.00  -0.11
-Philippe Mathieu - Dominique Gerin                     260  57  70 133  74  59  -0.01  -0.04   0.09  -0.01    0.00    0.00  -0.05
-Gopal Hingorani - Diniar Minwalla                      336  77  92 167  86  81  -0.01  -0.13   0.01   0.05    0.00    0.00   0.05
-Rui Santos - Sofia Pessoa                              220  64  56  98  41  57  -0.02   0.00   0.10  -0.08    0.00    0.00  -0.05
-Jim Patrick - John Matheson                            220  64  53 103  49  54  -0.02  -0.24   0.01   0.18    0.00    0.00   0.02
-Hector Camberos - Pablo Lambardi                       120  29  25  65  41  24  -0.02  -0.01   0.17   0.07    0.00    0.00  -0.25
-Ettore Pizza - Carlo Magnani                           240  79  59 102  54  48  -0.02  -0.23   0.20   0.02    0.00    0.00  -0.02
-Jorge Cruzeiro - Paulo Gonçalves Pereira               220  46  64 110  52  58  -0.04  -0.15   0.04  -0.09    0.00    0.00   0.16
-Mika Salomaa - Sue Bäckström                           320  72  80 168  72  96  -0.04  -0.20   0.03   0.06    0.00    0.00   0.07
-Ron Klinger - Bruce Neill                              260  76  67 117  65  52  -0.04   0.05   0.02   0.10    0.00    0.00  -0.20
-Alan Shum Sum Sze - Wai Kit Chan                       220  53  48 119  69  50  -0.05  -0.30   0.14   0.07    0.00    0.00   0.04
-Jean Pierre Bouveresse - Jeanine Moers                 260  59  54 147  68  79  -0.05   0.07   0.01  -0.01    0.00    0.00  -0.13
-Hédi Baccour - Tahar Touil                             180  37  40 102  56  46  -0.06  -0.10  -0.11   0.14    0.00    0.00   0.01
-Philip Gue - Terry Brown                               180  45  47  88  38  50  -0.06  -0.09   0.16  -0.13    0.00    0.00   0.00
-Amar Nath Banerjee - Sumit Mukherjee                   180  44  43  92  53  39  -0.07   0.18   0.32  -0.01    0.00    0.00  -0.57
-Ranko Tica - Samir Dolarevic                           196  41  45 110  50  60  -0.07  -0.00   0.06   0.18    0.00    0.00  -0.30
-Aris Filios - Yankos Papakyriacopoulos                 220  55  70  93  37  56  -0.08   0.16  -0.03  -0.22    0.00    0.00   0.00
-James Priebe - Stephen Mackay                          220  56  56 106  63  43  -0.09  -0.26   0.09  -0.05    0.00    0.00   0.13
-Michal Zadrazil - David Vozábal                        220  49  55 115  50  65  -0.10  -0.09  -0.02   0.05    0.00    0.00  -0.05
-Ilkka Renno - Martin Löfgren                           240  57  64 118  64  54  -0.13  -0.08  -0.02   0.03    0.00    0.00  -0.07
-José Maria Valdes - Paolo Pasquini                     260  52  75 133  68  65  -0.13  -0.27   0.11   0.18    0.00    0.00  -0.15
-Roy Welland - Björn Fallenius                          200  51  45 104  58  46  -0.14   0.15  -0.19  -0.08    0.00    0.00  -0.03
-Su-Beng Tan - Sze-Guan Tan                             340  82  75 182  97  85  -0.14  -0.19   0.14   0.12    0.00    0.00  -0.21
-Aarne Rummel - Ivar Kalma                              220  63  38 118  58  60  -0.14  -0.00  -0.18   0.01    0.00    0.00   0.04
-Marwan Ghanem - Sireen Barakat                         340  68  80 190  91  99  -0.14   0.03  -0.05   0.00    0.00    0.00  -0.12
-Dwayne Crombie - Michael Cornell                       200  43  49 108  58  50  -0.15   0.04  -0.02   0.02    0.00    0.00  -0.20
-Guilherme Junqueira - Alcio Maia                       160  33  38  88  52  36  -0.16   0.11  -0.27   0.11    0.00    0.00  -0.12
-Vasili Batov - Veselin Dyakov                          220  43  63 113  54  59  -0.16   0.11   0.00  -0.18    0.00    0.00  -0.10
-Hayet Hachimi - Mohamed Said Berrada                   120  28  31  60  29  31  -0.16  -0.02  -0.09  -0.10    0.00    0.00   0.05
-Jose Ignacio Torres - Antonio Frances                  220  56  51 111  49  62  -0.17   0.27  -0.10  -0.21    0.00    0.00  -0.13
-Jakub Slemr - Petr Pulkrab                             220  48  62 110  52  58  -0.21  -0.27  -0.06  -0.01    0.00    0.00   0.13
-Jorge Castanheira - Nuno Mascarenhas                   240  70  54 116  60  56  -0.21  -0.42   0.16   0.06    0.00    0.00  -0.01
-Hayet Hachimi - Abdellatif Belkouch                    120  31  29  60  24  36  -0.22  -0.00  -0.22  -0.10    0.00    0.00   0.11
-Peter Goodman - Adam Dunn                              340  88  90 162  79  83  -0.22  -0.23   0.04   0.01    0.00    0.00  -0.04
-Douglas Piper - John Murdoch                           240  70  52 118  67  51  -0.23  -0.13   0.06   0.05    0.00    0.00  -0.20
-Fernando Piedra - Dmitrij Nikolenkov                   240  58  56 125  63  62  -0.24  -0.24  -0.01  -0.10    0.00    0.00   0.11
-Teong-Wah Lim - David Law                              340  85  79 175  90  85  -0.26   0.08  -0.11   0.01    0.00    0.00  -0.25
-Andris Smilgajs - Bruno Rubenis                        220  58  61 100  55  45  -0.27   0.03  -0.11  -0.08    0.00    0.00  -0.10
-Leonid Podgur - Avi Kalish                             200  51  64  84  37  47  -0.27  -0.11  -0.15  -0.01    0.00    0.00   0.00
-Sören Hein - Stefan Helling                            260  63  59 138  71  67  -0.27   0.03  -0.09  -0.03    0.00    0.00  -0.19
-Bernd Saurer - Doris Fischer                           200  49  53  98  48  50  -0.29  -0.24   0.08  -0.01    0.00    0.00  -0.12
-Alon Apteker - Bernard Donde                           220  61  63  96  49  47  -0.29  -0.24  -0.04  -0.03    0.00    0.00   0.01
-Alain Cotti - Marcel Guevel                            240  52  66 122  69  53  -0.30  -0.19   0.10  -0.06    0.00    0.00  -0.15
-Ghassan Ghanem - Nuha Hattar Ghaned                    220  48  56 116  52  64  -0.30  -0.21  -0.01   0.07    0.00    0.00  -0.15
-Karlo Brguljan - Davor Rase                            220  60  61  99  42  57  -0.31  -0.04  -0.05  -0.05    0.00    0.00  -0.16
-Young-Hong Cheng - Chuan-Cheng Chen                    280  68  68 144  66  78  -0.31  -0.23   0.04   0.01    0.00    0.00  -0.13
-Martine de Tessieres - Aymeric de Tessieres            180  36  39 105  50  55  -0.32  -0.02   0.17   0.02    0.00    0.00  -0.49
-Gheorghe Serpoi - Calin Stirbu                         220  45  54 120  61  59  -0.33  -0.31   0.06  -0.13    0.00    0.00   0.06
-Faruk Masic - Miklós Dumbovich                         276  70  62 142  67  75  -0.33  -0.29  -0.09  -0.04    0.00    0.00   0.08
-Stevica Kikic - Vladimir Kalcic                        220  61  51 108  61  47  -0.35  -0.01  -0.04  -0.18    0.00    0.00  -0.13
-Abdelkamel Rerhaye - Abdellah Laghrari                 200  51  55  93  42  51  -0.35  -0.26   0.03  -0.05    0.00    0.00  -0.07
-Giorgi Abzianidze - Revaz Beriashvili                  280  74  80 126  64  62  -0.36  -0.27  -0.14   0.07    0.00    0.00  -0.02
-Jacques Stas - David Johnson                           260  56  61 143  80  63  -0.36  -0.08  -0.08  -0.08    0.00    0.00  -0.12
-Monya Jellouli - Tahar Touil                           100  27  24  49  19  30  -0.37   0.05  -0.05  -0.30    0.00    0.00  -0.07
-Aleksandar Kaludercic - Sinisa Vuleta                  180  43  40  96  49  47  -0.40  -0.32  -0.04   0.06    0.00    0.00  -0.10
-Jongki Tumbel - Bill Mondigir                          120  27  40  52  27  25  -0.40  -0.14  -0.16   0.04    0.00    0.00  -0.15
-Genevieve Vigna - Yves Mondon                          200  44  52 104  48  56  -0.40  -0.02  -0.08  -0.21    0.00    0.00  -0.09
-Martin Anastacio - Dan Lulu                            200  52  55  93  44  49  -0.41  -0.17  -0.02  -0.00    0.00    0.00  -0.22
-Marco Sasselli - Bachar Abou Chanab                    200  54  39 107  49  58  -0.41  -0.39   0.16  -0.06    0.00    0.00  -0.13
-Mohamed Heshmat - Tarek Nadim                          120  24  26  70  32  38  -0.46  -0.32   0.01  -0.18    0.00    0.00   0.03
-Sven Sester - Tüüve Jugandi                             220  57  51 111  56  55  -0.46  -0.39   0.16  -0.00    0.00    0.00  -0.24
-Pavel Pekny - Bohumir Zajicek                          240  57  42 141  74  67  -0.46  -0.21  -0.03  -0.14    0.00    0.00  -0.08
-Sally Sykes - David Sykes                              260  51  81 128  56  72  -0.48  -0.33  -0.20   0.12    0.00    0.00  -0.06
-Lewis Richardson - Ray Jotcham                         220  59  50 108  59  49  -0.49  -0.31  -0.06  -0.12    0.00    0.00   0.01
-Loreto Cuevas - Marcelo Caracci                        340  72  88 179  86  93  -0.51  -0.36  -0.13   0.16    0.00    0.00  -0.17
-John MacGregor - Pilar Vitoria                         100  35  22  43  21  22  -0.52  -0.23   0.29  -0.32    0.00    0.00  -0.26
-Jean Gérard Théodore - Jean-Claude Wong Kai In         220  50  55 114  54  60  -0.53  -0.14  -0.14  -0.17    0.00    0.00  -0.08
-Khondoker Mobinul Islam - Md. Hasinur Rahman Talukder  340  82 100 158  70  88  -0.53  -0.14   0.03  -0.26    0.00    0.00  -0.15
-Ghassan Ghanem - Samir Zeine                           120  27  34  57  28  29  -0.53   0.20  -0.35  -0.12    0.00    0.00  -0.26
-Md. Anisul Haque - Nitya Gopal Saha                    340  83  65 188  92  96  -0.54  -0.36  -0.03   0.02    0.00    0.00  -0.17
-Stephen Robinson - Wong Choo Wai                       220  49  57 114  48  66  -0.55  -0.59   0.04   0.01    0.00    0.00  -0.01
-Eduardo Piza - Pilar Vitoria                           100  21  21  57  18  39  -0.56  -0.24   0.10  -0.06    0.00    0.00  -0.36
-Zoran Koldzic - Dejan Jovanovic                        220  62  55 103  56  47  -0.61  -0.18  -0.17   0.15    0.00    0.00  -0.40
-Guy-Alain Germon - Laurent Desportes                   220  61  60  99  48  51  -0.62  -0.19  -0.14  -0.13    0.00    0.00  -0.16
-Takis Politis - Dimitris Kalavanas                     220  63  59  97  53  44  -0.62  -0.42  -0.09  -0.02    0.00    0.00  -0.09
-Albert Quiogue - Ceferino Carreon                      220  53  47 119  57  62  -0.63  -0.21  -0.01  -0.06    0.00    0.00  -0.34
-HP Modi - RKD Shah                                     200  49  60  91  43  48  -0.64  -0.32  -0.03  -0.03    0.00    0.00  -0.26
-Gustavo De Lemos - Hector Manrique                     240  70  56 114  60  54  -0.64  -0.28  -0.16   0.01    0.00    0.00  -0.21
-Gonzalo Herrera - Sonya Resk                           340 120  61 158  71  87  -0.66  -0.39  -0.05  -0.07    0.00    0.00  -0.15
-Jacobo Podvilewicz - Kenneth Frey                      340  77  96 166  69  97  -0.66  -0.36  -0.15  -0.00    0.00    0.00  -0.15
-Lassâad Jedidi - Mohamed Ali Lakhdhar                  200  55  57  87  41  46  -0.67  -0.48  -0.06   0.02    0.00    0.00  -0.16
-Alejandro Sanchez - Beatriz Marangunic                 340  99  82 158  82  76  -0.72  -0.48  -0.10  -0.12    0.00    0.00  -0.01
-Ellen Graewert - David Thompson                        180  46  39  95  46  49  -0.73  -0.24  -0.09  -0.04    0.00    0.00  -0.36
-KV Bhaft - Nurudin Ajania                              220  52  59 108  55  53  -0.73  -0.33  -0.04  -0.11    0.00    0.00  -0.25
-Frosso Tilliri - Rena Lordos                           200  43  51 104  50  54  -0.75  -0.24  -0.39   0.04    0.00    0.00  -0.16
-Dennis Kow - Derrick Heng                              240  48  54 138  75  63  -0.76  -0.37  -0.08  -0.19    0.00    0.00  -0.11
-Foo Yoke Lan - Jane Choo                               220  50  73  96  52  44  -0.79  -0.47  -0.06  -0.11    0.00    0.00  -0.15
-Michaël Chan - Bashir Elahee Doomun                    220  62  48 108  59  49  -0.83  -0.21  -0.06  -0.36    0.00    0.00  -0.20
-Patrick Hamel - Sylvian Brethes                        220  57  52 111  56  55  -0.85  -0.30  -0.02  -0.03    0.00    0.00  -0.50
-George Daniel - Modisaotsile Dikgang                   336  90  88 157  77  80  -0.86  -0.79   0.00   0.09    0.00    0.00  -0.16
-Gary Lam Po Tang - Nandansing Hurpaul                  240  66  53 121  58  63  -0.87  -0.43  -0.21  -0.14    0.00    0.00  -0.08
-John MacGregor - Steve Allen                           160  50  38  72  33  39  -0.87  -0.45   0.01  -0.19    0.00    0.00  -0.25
-Simone Divies - Christian Vincent                      220  66  69  84  47  37  -0.87  -0.18  -0.21  -0.26    0.00    0.00  -0.23
-Mohamed Said Berrada - Abdellatif Belkouch             100  24  26  49  25  24  -0.89  -0.59  -0.14   0.23    0.00    0.00  -0.39
-John Glynn - Bill Pare                                 160  40  51  69  28  41  -0.95  -0.41  -0.38   0.08    0.00    0.00  -0.24
-Shun-Ho Chuang - Chien-Hsun Chen                       120  36  37  47  24  23  -0.96  -0.54  -0.21  -0.13    0.00    0.00  -0.08
-Prafulla Shah - Ashwin Shah                            260  54  68 138  60  78  -1.01  -0.41  -0.13  -0.13    0.00    0.00  -0.35
-Eduardo Piza - John Goold                              180  38  47  93  35  58  -1.06  -0.46  -0.14  -0.11    0.00    0.00  -0.36
-Valerie Morley - Colin Morley                          220  49  59 112  50  62  -1.07  -0.52  -0.20  -0.06    0.00    0.00  -0.29
-Jean-Olivier Begouin - Robert Barinci                  220  47  56 117  59  58  -1.14  -0.39  -0.24  -0.10    0.00    0.00  -0.41
-Alain Hoyon - Philippe Teysseidre                      200  49  49 101  51  50  -1.26  -0.53  -0.28  -0.34    0.00    0.00  -0.11
-Fabienne Bourgeois - Jany Grenié                       140  38  42  60  33  27  -1.33  -0.85  -0.20  -0.21    0.00    0.00  -0.07
-Franco Gusso - Carlos Diaz                             180  37  48  94  50  44  -1.39  -0.81  -0.07  -0.26    0.00    0.00  -0.25
+                                                       |             |              |           Play           |        Declaring         |                Defending              |
+Players                                                |  No.   IMPs |   Bid   Play |   Declaring    Defending |   Declarer1    Declarer2 |       Lead1        Lead2         Play |
+Jason Hackett - Justin Hackett                         |  220   1.19 |  0.34   0.84 |  1.25 (100)   0.50 (120) |  1.36 ( 46)   1.16 ( 54) |  0.00 ( 52)   0.00 ( 68)   0.50 (120) |
+Tarek Sadek - Waleed El Ahmady                         |  320   1.05 |  0.45   0.60 |  0.73 (161)   0.47 (158) |  0.78 ( 72)   0.69 ( 89) |  0.00 ( 82)   0.00 ( 76)   0.47 (158) |
+Fulvio Fantoni - Claudio Nunes                         |  220   1.04 |  0.49   0.55 |  0.59 (108)   0.51 (111) |  0.39 ( 57)   0.81 ( 51) |  0.00 ( 51)   0.00 ( 60)   0.51 (111) |
+Adam Zmudzinski - Cezary Balicki                       |  240   1.02 |  0.55   0.47 |  0.43 (109)   0.50 (130) |  0.33 ( 46)   0.51 ( 63) |  0.00 ( 60)   0.00 ( 70)   0.50 (130) |
+Abdel Salam Ghoneim - Samer El-Sheikh                  |  220   0.86 |  0.66   0.20 |  0.38 (100)   0.05 (118) |  0.77 ( 64)  -0.32 ( 36) |  0.00 ( 55)   0.00 ( 63)   0.05 (118) |
+Jian Ming Dai - Li Xin Yang                            |  220   0.86 |  0.47   0.38 |  0.24 (102)   0.51 (118) |  0.30 ( 56)   0.16 ( 46) |  0.00 ( 56)   0.00 ( 62)   0.51 (118) |
+Steve Weinstein - Bobby Levin                          |  240   0.85 |  0.47   0.38 |  0.72 (128)  -0.00 (111) |  0.48 ( 54)   0.89 ( 74) |  0.00 ( 49)   0.00 ( 62)  -0.00 (111) |
+Hugh McGann - Tom Hanlon                               |  260   0.85 |  0.46   0.39 |  0.23 (143)   0.60 (117) | -0.20 ( 66)   0.59 ( 77) |  0.00 ( 53)   0.00 ( 64)   0.60 (117) |
+Hector Camberos - Alejandro Bianchedi                  |  120   0.82 |  0.84  -0.03 | -0.54 ( 65)   0.57 ( 55) | -0.91 ( 40)   0.06 ( 25) |  0.00 ( 28)   0.00 ( 27)   0.57 ( 55) |
+Israel Yadlin - Doron Yadlin                           |  240   0.79 |  0.47   0.32 | -0.08 ( 93)   0.57 (146) | -0.01 ( 44)  -0.14 ( 49) |  0.00 ( 80)   0.00 ( 66)   0.57 (146) |
+Sartaj Hans - Tony Nunn                                |  240   0.79 |  0.61   0.18 |  0.02 (109)   0.31 (130) | -0.12 ( 62)   0.22 ( 47) |  0.00 ( 57)   0.00 ( 73)   0.31 (130) |
+Gábor Winkler - Miklós Dumbovich                       |  260   0.78 |  0.53   0.25 |  0.23 (127)   0.27 (133) |  0.40 ( 76)  -0.02 ( 51) |  0.00 ( 76)   0.00 ( 57)   0.27 (133) |
+Jouri Khokhlov - Vlaadimir Rekunov                     |  220   0.78 |  0.28   0.50 |  0.94 (100)   0.13 (119) |  0.76 ( 48)   1.10 ( 52) |  0.00 ( 60)   0.00 ( 59)   0.13 (119) |
+Andrew Robson - David Bakhshi                          |  240   0.77 |  0.66   0.11 |  0.19 (139)  -0.01 (101) |  0.55 ( 58)  -0.07 ( 81) |  0.00 ( 44)   0.00 ( 57)  -0.01 (101) |
+Michael Rosenberg - Zia Mahmood                        |  240   0.77 |  0.05   0.72 |  0.72 (122)   0.73 (118) |  1.27 ( 55)   0.26 ( 67) |  0.00 ( 59)   0.00 ( 59)   0.73 (118) |
+Shaolin Sun - Xin Li                                   |  140   0.76 |  0.21   0.54 |  0.82 ( 60)   0.35 ( 78) |  1.69 ( 24)   0.24 ( 36) |  0.00 ( 36)   0.00 ( 42)   0.35 ( 78) |
+Magnus E Magnusson - Matthías Torvaldsson              |  240   0.74 |  0.37   0.36 |  0.34 (133)   0.39 (107) |  0.36 ( 65)   0.31 ( 68) |  0.00 ( 56)   0.00 ( 51)   0.39 (107) |
+Osmo Kiema - Dogan Uzum                                |  100   0.73 |  0.18   0.55 |  0.80 ( 41)   0.38 ( 59) |  0.38 ( 22)   1.29 ( 19) |  0.00 ( 30)   0.00 ( 29)   0.38 ( 59) |
+Tom Townsend - David Gold                              |  220   0.70 |  0.56   0.14 |  0.13 (114)   0.15 (106) |  0.32 ( 53)  -0.02 ( 61) |  0.00 ( 49)   0.00 ( 57)   0.15 (106) |
+Hideki Takano - Tadashi Imakura                        |  240   0.70 |  0.43   0.27 |  0.76 (112)  -0.16 (126) |  0.92 ( 53)   0.62 ( 59) |  0.00 ( 59)   0.00 ( 67)  -0.16 (126) |
+Andrés Knap - Arturo Wasik                             |  240   0.68 |  0.42   0.26 |  0.61 (109)  -0.04 (131) |  0.06 ( 50)   1.07 ( 59) |  0.00 ( 67)   0.00 ( 64)  -0.04 (131) |
+Gábor Macskásy - György Szalay                         |  240   0.67 |  0.46   0.20 | -0.14 (112)   0.50 (128) |  0.39 ( 54)  -0.62 ( 58) |  0.00 ( 61)   0.00 ( 67)   0.50 (128) |
+Jean-Jacques Palau - Jérôme Rombaut                    |  240   0.64 | -0.08   0.72 |  0.97 ( 96)   0.55 (144) |  1.12 ( 43)   0.86 ( 53) |  0.00 ( 70)   0.00 ( 74)   0.55 (144) |
+Ricco van Prooijen - Sjoert Brink                      |  180   0.62 |  0.35   0.27 |  0.41 ( 76)   0.18 (104) |  0.62 ( 40)   0.17 ( 36) |  0.00 ( 48)   0.00 ( 56)   0.18 (104) |
+Haojun Shi - Zejun Zhuang                              |  220   0.62 |  0.34   0.27 |  0.06 (107)   0.48 (113) | -0.06 ( 49)   0.17 ( 58) |  0.00 ( 49)   0.00 ( 64)   0.48 (113) |
+Entscho Wladow - Michael Elinescu                      |  240   0.61 |  0.46   0.15 |  0.14 (121)   0.16 (118) |  0.04 ( 75)   0.30 ( 46) |  0.00 ( 72)   0.00 ( 46)   0.16 (118) |
+Nafiz Zorlu - Salvador Assael                          |  300   0.61 |  0.39   0.22 |  0.18 (162)   0.26 (137) |  0.33 ( 80)   0.03 ( 82) |  0.00 ( 68)   0.00 ( 69)   0.26 (137) |
+Andreas Babsch - Wolfgang Bieder                       |  200   0.61 |  0.38   0.23 | -0.16 (106)   0.68 ( 92) | -0.08 ( 62)  -0.26 ( 44) |  0.00 ( 55)   0.00 ( 37)   0.68 ( 92) |
+Maarten Schollaardt - Bas Drijver                      |  200   0.60 |  0.30   0.30 |  0.27 (100)   0.33 (100) |  0.32 ( 53)   0.22 ( 47) |  0.00 ( 50)   0.00 ( 50)   0.33 (100) |
+John Carroll - Tom Garvey                              |  200   0.60 |  0.46   0.14 |  0.05 ( 89)   0.21 (111) | -0.28 ( 44)   0.38 ( 45) |  0.00 ( 50)   0.00 ( 61)   0.21 (111) |
+Franck Multon - Jean-Christophe Quantin                |  280   0.60 |  0.26   0.34 |  0.14 (153)   0.59 (125) |  0.11 ( 73)   0.17 ( 80) |  0.00 ( 61)   0.00 ( 64)   0.59 (125) |
+Josef Piekarek - Tomasz Gotard                         |  240   0.60 |  0.35   0.25 |  0.10 (112)   0.37 (128) |  0.48 ( 46)  -0.16 ( 66) |  0.00 ( 62)   0.00 ( 66)   0.37 (128) |
+Jan Jansma - Loek Jr. Verhees                          |  260   0.57 |  0.18   0.39 |  0.25 (136)   0.55 (124) |  0.72 ( 50)  -0.02 ( 86) |  0.00 ( 66)   0.00 ( 58)   0.55 (124) |
+Giorgio Duboin - Norberto Bocchi                       |  240   0.55 |  0.12   0.43 |  0.15 (123)   0.72 (116) | -0.06 ( 53)   0.31 ( 70) |  0.00 ( 65)   0.00 ( 51)   0.72 (116) |
+Lars Lund Madsen - Morten Lund Madsen                  |  220   0.53 |  0.18   0.36 |  0.22 (107)   0.49 (113) |  0.21 ( 57)   0.22 ( 50) |  0.00 ( 54)   0.00 ( 59)   0.49 (113) |
+Gabriel Chagas - Miguel Villas Boas                    |  320   0.53 |  0.37   0.16 |  0.30 (171)   0.00 (149) |  0.43 (107)   0.10 ( 64) |  0.00 ( 73)   0.00 ( 76)   0.00 (149) |
+Erik Sælensminde - Boye Brogeland                      |  260   0.53 |  0.39   0.14 |  0.08 (120)   0.20 (140) |  0.02 ( 70)   0.17 ( 50) |  0.00 ( 74)   0.00 ( 66)   0.20 (140) |
+Agustin Madala - Alejandro Bianchedi                   |  180   0.51 |  0.12   0.38 |  0.59 ( 97)   0.14 ( 83) |  0.39 ( 58)   0.90 ( 39) |  0.00 ( 35)   0.00 ( 48)   0.14 ( 83) |
+Johan Sylvan - PO Sundelin                             |  120   0.50 |  0.19   0.31 |  0.14 ( 62)   0.49 ( 58) |  0.51 ( 33)  -0.27 ( 29) |  0.00 ( 28)   0.00 ( 30)   0.49 ( 58) |
+Georgy Matushko - Max Khven                            |  220   0.48 |  0.02   0.46 |  0.24 (128)   0.77 ( 92) |  0.59 ( 57)  -0.05 ( 71) |  0.00 ( 46)   0.00 ( 46)   0.77 ( 92) |
+Amedeo Comella - Stefano Sabbatini                     |  220   0.48 | -0.01   0.49 |  0.40 ( 98)   0.56 (122) |  0.33 ( 53)   0.47 ( 45) |  0.00 ( 55)   0.00 ( 67)   0.56 (122) |
+Pritish Kushari - Sumit Mukherjee                      |  160   0.47 |  0.33   0.14 | -0.01 ( 67)   0.25 ( 92) | -0.00 ( 32)  -0.02 ( 35) |  0.00 ( 48)   0.00 ( 44)   0.25 ( 92) |
+Robert Parasian Tobing - Taufik Gautama Asbi           |  280   0.46 |  0.29   0.18 |  0.35 (136)   0.01 (144) |  0.07 ( 79)   0.75 ( 57) |  0.00 ( 66)   0.00 ( 78)   0.01 (144) |
+Julian Stefanov - Victor Aronov                        |  240   0.46 |  0.47  -0.01 | -0.35 (118)   0.32 (122) | -0.14 ( 60)  -0.57 ( 58) |  0.00 ( 68)   0.00 ( 54)   0.32 (122) |
+László Honti - László Szilágyi                         |  180   0.44 | -0.06   0.50 |  0.38 ( 85)   0.62 ( 94) | -0.01 ( 48)   0.88 ( 37) |  0.00 ( 59)   0.00 ( 35)   0.62 ( 94) |
+Iulian Rotaru - Marius Briciu                          |  240   0.44 |  0.32   0.12 |  0.27 (118)  -0.03 (122) |  0.78 ( 50)  -0.10 ( 68) |  0.00 ( 67)   0.00 ( 55)  -0.03 (122) |
+Martin Schifko - Andreas Gloyer                        |  280   0.43 |  0.18   0.26 |  0.09 (149)   0.45 (130) |  0.30 ( 71)  -0.10 ( 78) |  0.00 ( 76)   0.00 ( 54)   0.45 (130) |
+Georgo Karakolev - Zahari Zahariev                     |  220   0.43 |  0.18   0.25 |  0.21 (115)   0.29 (105) | -0.43 ( 54)   0.78 ( 61) |  0.00 ( 52)   0.00 ( 53)   0.29 (105) |
+Agustin Madala - Pablo Ravenna                         |  120   0.42 |  0.05   0.37 |  0.35 ( 64)   0.40 ( 56) |  0.26 ( 36)   0.47 ( 28) |  0.00 ( 22)   0.00 ( 34)   0.40 ( 56) |
+Sverrir Armansson - Adalsteinn Jorgensen               |  220   0.41 |  0.25   0.16 |  0.19 (104)   0.14 (116) | -0.41 ( 52)   0.79 ( 52) |  0.00 ( 45)   0.00 ( 71)   0.14 (116) |
+Magnus Lindkvist - Peter Fredin                        |  320   0.41 |  0.49  -0.08 |  0.25 (166)  -0.44 (154) |  0.05 ( 84)   0.46 ( 82) |  0.00 ( 83)   0.00 ( 71)  -0.44 (154) |
+Jon-Egil Furunes - Tor Helness                         |  260   0.41 |  0.09   0.32 |  0.41 (144)   0.21 (116) |  0.46 ( 75)   0.36 ( 69) |  0.00 ( 46)   0.00 ( 70)   0.21 (116) |
+Gabriel Carrasco - Gabriel Fractman                    |  220   0.40 |  0.34   0.05 |  0.14 (117)  -0.04 (102) | -0.32 ( 60)   0.62 ( 57) |  0.00 ( 47)   0.00 ( 55)  -0.04 (102) |
+Gabriel Harfouche - Michel Eidy                        |  340   0.40 |  0.15   0.25 |  0.26 (170)   0.23 (169) |  0.59 ( 73)   0.01 ( 97) |  0.00 ( 84)   0.00 ( 85)   0.23 (169) |
+Nicholas FitzGibbon - Adam Mesbur                      |  220   0.39 |  0.15   0.24 |  0.23 (104)   0.25 (115) |  0.31 ( 35)   0.19 ( 69) |  0.00 ( 51)   0.00 ( 64)   0.25 (115) |
+Pablo Lambardi - Pablo Ravenna                         |  140   0.38 |  0.37   0.02 |  0.04 ( 78)  -0.02 ( 62) | -0.07 ( 33)   0.13 ( 45) |  0.00 ( 23)   0.00 ( 39)  -0.02 ( 62) |
+Alekos Lambrinos - Loukas Zotos                        |  220   0.38 |  0.31   0.07 |  0.12 (114)   0.02 (105) |  0.01 ( 53)   0.22 ( 61) |  0.00 ( 54)   0.00 ( 51)   0.02 (105) |
+Laurent Thuillez - Lionel Sebbane                      |  160   0.36 |  0.21   0.16 |  0.42 ( 82)  -0.12 ( 77) |  0.35 ( 47)   0.51 ( 35) |  0.00 ( 47)   0.00 ( 30)  -0.12 ( 77) |
+Martin Schaltz - Søren Christiansen                    |  220   0.35 |  0.22   0.13 |  0.37 (103)  -0.08 (117) |  0.49 ( 47)   0.26 ( 56) |  0.00 ( 56)   0.00 ( 61)  -0.08 (117) |
+Jan - E - Alam Fazli - Abdul Rehman Allana             |  280   0.35 | -0.03   0.38 |  0.46 (138)   0.30 (142) |  0.41 ( 75)   0.52 ( 63) |  0.00 ( 73)   0.00 ( 69)   0.30 (142) |
+Hans Christian Graversen - Poul Clemmensen             |  240   0.34 |  0.10   0.24 |  0.44 (139)  -0.04 (100) |  0.19 ( 75)   0.74 ( 64) |  0.00 ( 47)   0.00 ( 53)  -0.04 (100) |
+Piotr Tuszynski - Apolinary Kowalski                   |  220   0.34 |  0.15   0.19 |  0.18 (117)   0.20 (103) | -0.37 ( 61)   0.78 ( 56) |  0.00 ( 54)   0.00 ( 49)   0.20 (103) |
+Jelena Alfejeva - Vladimir Gonca                       |  240   0.34 |  0.10   0.23 |  0.28 (130)   0.18 (109) |  0.13 ( 77)   0.49 ( 53) |  0.00 ( 62)   0.00 ( 47)   0.18 (109) |
+Faycal Hamdan - Pierre Chidiac                         |  120   0.33 | -0.06   0.39 |  0.49 ( 74)   0.23 ( 46) |  0.78 ( 34)   0.25 ( 40) |  0.00 ( 24)   0.00 ( 22)   0.23 ( 46) |
+Mariusz Puczynski - Bartosz Chmurski                   |  200   0.31 |  0.27   0.04 | -0.24 (100)   0.32 (100) |  0.32 ( 42)  -0.65 ( 58) |  0.00 ( 42)   0.00 ( 58)   0.32 (100) |
+Lauri Naber - Leo Luks                                 |  240   0.31 |  0.07   0.24 |  0.12 (128)   0.38 (111) | -0.09 ( 79)   0.47 ( 49) |  0.00 ( 42)   0.00 ( 69)   0.38 (111) |
+Hiroshi Kaku - Masaaki Takayama                        |  180   0.30 |  0.20   0.10 |  0.27 ( 94)  -0.08 ( 86) |  0.07 ( 41)   0.42 ( 53) |  0.00 ( 36)   0.00 ( 50)  -0.08 ( 86) |
+Li Xin Yang - Shaolin Sun                              |  100   0.30 | -0.13   0.43 |  0.18 ( 41)   0.62 ( 58) |  0.27 ( 22)   0.07 ( 19) |  0.00 ( 29)   0.00 ( 29)   0.62 ( 58) |
+Hédi Baccour - Craig Gower                             |  200   0.30 |  0.26   0.04 | -0.02 ( 99)   0.09 (101) | -0.13 ( 48)   0.09 ( 51) |  0.00 ( 44)   0.00 ( 57)   0.09 (101) |
+Chia-Hsin Wu - Chih Kuo Shen                           |  180   0.29 |  0.04   0.25 |  0.63 ( 89)  -0.12 ( 90) |  0.45 ( 46)   0.83 ( 43) |  0.00 ( 39)   0.00 ( 51)  -0.12 ( 90) |
+Dubravko Diklic - Miro Tesla                           |  220   0.28 | -0.03   0.32 |  0.51 (113)   0.11 (106) |  0.80 ( 54)   0.24 ( 59) |  0.00 ( 52)   0.00 ( 54)   0.11 (106) |
+Giorgi Uchava - Rati Burdiashvili                      |  140   0.28 |  0.54  -0.26 |  0.20 ( 70)  -0.73 ( 69) |  0.45 ( 28)   0.03 ( 42) |  0.00 ( 32)   0.00 ( 37)  -0.73 ( 69) |
+Franky Steven Karwur - Santje Panelewen                |  280   0.28 | -0.03   0.30 |  0.40 (116)   0.24 (163) |  0.85 ( 52)   0.03 ( 64) |  0.00 ( 55)   0.00 (108)   0.24 (163) |
+Masayuki Ino - Tadashi Imakura                         |  240   0.28 |  0.32  -0.04 |  0.15 (120)  -0.23 (120) |  0.52 ( 77)  -0.52 ( 43) |  0.00 ( 53)   0.00 ( 67)  -0.23 (120) |
+Kemal Shoaib - Khursheed Hadi                          |  240   0.26 |  0.24   0.02 | -0.09 (144)   0.18 ( 95) | -0.12 ( 69)  -0.07 ( 75) |  0.00 ( 38)   0.00 ( 57)   0.18 ( 95) |
+Branko Vlajnic - Dimitraki Zipovski                    |  240   0.25 |  0.21   0.04 | -0.15 (121)   0.23 (119) | -0.45 ( 68)   0.23 ( 53) |  0.00 ( 62)   0.00 ( 57)   0.23 (119) |
+Maris Matisons - Per Gunnar Eliasson                   |  240   0.25 |  0.19   0.06 | -0.17 (117)   0.28 (123) |  0.19 ( 54)  -0.49 ( 63) |  0.00 ( 56)   0.00 ( 67)   0.28 (123) |
+Ken Rae - David Gerrard                                |  220   0.25 |  0.20   0.05 |  0.09 (106)   0.01 (113) |  0.19 ( 62)  -0.04 ( 44) |  0.00 ( 59)   0.00 ( 54)   0.01 (113) |
+Jonas P Erlingson - Steinar Jonsson                    |  220   0.24 |  0.15   0.09 |  0.10 ( 95)   0.08 (125) | -0.05 ( 46)   0.25 ( 49) |  0.00 ( 71)   0.00 ( 54)   0.08 (125) |
+Martin Reid - Peter Newell                             |  260   0.23 |  0.13   0.10 |  0.20 (131)  -0.01 (128) |  0.42 ( 65)  -0.01 ( 66) |  0.00 ( 74)   0.00 ( 54)  -0.01 (128) |
+Kwok Fai Mak - Dicky Wai Kit Lai                       |  220   0.23 |  0.12   0.11 |  0.12 ( 98)   0.10 (122) |  0.34 ( 50)  -0.10 ( 48) |  0.00 ( 56)   0.00 ( 66)   0.10 (122) |
+Alexander Doubinine - Andrei Gromov                    |  240   0.23 |  0.35  -0.12 |  0.08 (107)  -0.28 (133) | -0.08 ( 44)   0.19 ( 63) |  0.00 ( 62)   0.00 ( 71)  -0.28 (133) |
+Alfredo Versace - Lorenzo Lauria                       |  220   0.22 |  0.06   0.16 |  0.29 (110)   0.04 (108) |  0.28 ( 51)   0.29 ( 59) |  0.00 ( 42)   0.00 ( 66)   0.04 (108) |
+Marco Toma - Diego Brenner                             |  200   0.21 |  0.19   0.02 |  0.21 (101)  -0.19 ( 99) |  0.48 ( 46)  -0.01 ( 55) |  0.00 ( 55)   0.00 ( 44)  -0.19 ( 99) |
+Marian Radulescu - Bogdan Marina                       |  220   0.20 |  0.05   0.15 | -0.10 (111)   0.41 (109) | -0.17 ( 51)  -0.03 ( 60) |  0.00 ( 46)   0.00 ( 63)   0.41 (109) |
+Suleyman Kolata - Yalcin Atabey                        |  280   0.19 | -0.08   0.28 |  0.50 (150)   0.02 (129) |  0.78 ( 68)   0.26 ( 82) |  0.00 ( 67)   0.00 ( 62)   0.02 (129) |
+Ranko Tica - Sarfaraz Ahmed Khan                       |  160   0.19 | -0.00   0.19 |  0.67 ( 67)  -0.15 ( 92) |  0.87 ( 38)   0.41 ( 29) |  0.00 ( 45)   0.00 ( 47)  -0.15 ( 92) |
+Panayiotis Kannavos - Theodore Triantafyllopoulos      |  240   0.18 | -0.03   0.21 |  0.09 (122)   0.34 (117) |  0.20 ( 59)  -0.02 ( 63) |  0.00 ( 60)   0.00 ( 57)   0.34 (117) |
+Patrick Le Boulenge - Philippe Caputo                  |  160   0.16 |  0.13   0.04 |  0.03 ( 73)   0.04 ( 87) | -0.00 ( 29)   0.05 ( 44) |  0.00 ( 37)   0.00 ( 50)   0.04 ( 87) |
+Fredrik Nyström - Peter Bertheau                       |  240   0.16 |  0.15   0.01 |  0.05 (124)  -0.04 (116) |  0.08 ( 54)   0.03 ( 70) |  0.00 ( 63)   0.00 ( 53)  -0.04 (116) |
+Kauko Koistinen - Osmo Kiema                           |  320   0.14 | -0.05   0.20 |  0.33 (162)   0.06 (155) |  0.50 ( 87)   0.14 ( 75) |  0.00 ( 75)   0.00 ( 80)   0.06 (155) |
+Klaus Reps - Bernard Ludewig                           |  200   0.14 |  0.07   0.07 |  0.07 (110)   0.06 ( 90) |  0.39 ( 57)  -0.28 ( 53) |  0.00 ( 50)   0.00 ( 40)   0.06 ( 90) |
+Gunnar Andersson - Bjorn Wenneberg                     |  220   0.10 |  0.20  -0.10 | -0.37 (110)   0.17 (110) | -0.40 ( 66)  -0.33 ( 44) |  0.00 ( 58)   0.00 ( 52)   0.17 (110) |
+Michael Cummings - David Lindop                        |  240   0.10 | -0.10   0.20 |  0.23 (125)   0.16 (115) | -0.05 ( 65)   0.53 ( 60) |  0.00 ( 65)   0.00 ( 50)   0.16 (115) |
+Jan Petter Svendsen - Rune Hauge                       |  160   0.10 |  0.14  -0.05 | -0.39 ( 95)   0.45 ( 65) | -0.46 ( 52)  -0.31 ( 43) |  0.00 ( 31)   0.00 ( 34)   0.45 ( 65) |
+Jeffrey Sapire - Neville Eber                          |  260   0.09 |  0.07   0.03 |  0.01 (139)   0.05 (121) | -0.53 ( 74)   0.63 ( 65) |  0.00 ( 59)   0.00 ( 62)   0.05 (121) |
+Philippe Teysseidre - Zvi Engel                        |  260   0.08 |  0.12  -0.04 |  0.13 (148)  -0.27 (111) |  0.30 ( 81)  -0.08 ( 67) |  0.00 ( 53)   0.00 ( 58)  -0.27 (111) |
+Faycal Hamdan - Nagib Baroudi                          |  140   0.08 | -0.18   0.26 |  0.15 ( 78)   0.39 ( 62) | -0.13 ( 36)   0.39 ( 42) |  0.00 ( 33)   0.00 ( 29)   0.39 ( 62) |
+Ilan Herbst - Ofir Herbst                              |  240   0.08 | -0.07   0.14 |  0.15 (128)   0.13 (111) |  0.36 ( 58)  -0.02 ( 70) |  0.00 ( 68)   0.00 ( 43)   0.13 (111) |
+Filip Kurbalija - Tim Rees                             |  340   0.07 |  0.11  -0.04 | -0.06 (170)  -0.02 (170) | -0.18 ( 73)   0.02 ( 97) |  0.00 ( 97)   0.00 ( 73)  -0.02 (170) |
+Roman Smolski - Vera Petty                             |  260   0.03 |  0.13  -0.09 | -0.11 (133)  -0.08 (126) |  0.27 ( 77)  -0.62 ( 56) |  0.00 ( 59)   0.00 ( 67)  -0.08 (126) |
+Gocha Goshadze - David Chechelashvili                  |  260   0.03 | -0.02   0.05 | -0.24 (122)   0.30 (138) | -0.44 ( 58)  -0.05 ( 64) |  0.00 ( 81)   0.00 ( 57)   0.30 (138) |
+Vytautas Vainikonis - Wojtek Olanski                   |  220   0.02 | -0.14   0.17 |  0.03 ( 93)   0.26 (127) |  0.08 ( 44)  -0.01 ( 49) |  0.00 ( 61)   0.00 ( 66)   0.26 (127) |
+Manash Kumar Mukherjee - Rana Roy                      |  240   0.02 | -0.14   0.16 |  0.30 (123)   0.01 (117) |  0.36 ( 77)   0.21 ( 46) |  0.00 ( 64)   0.00 ( 53)   0.01 (117) |
+Ivars Rubenis - Ugis Jansons                           |  220   0.02 |  0.17  -0.15 |  0.20 (103)  -0.47 (117) |  0.11 ( 56)   0.31 ( 47) |  0.00 ( 64)   0.00 ( 53)  -0.47 (117) |
+Samuel Wan - Derek Zen                                 |  240   0.01 | -0.18   0.20 |  0.53 (119)  -0.13 (121) |  0.79 ( 53)   0.32 ( 66) |  0.00 ( 56)   0.00 ( 65)  -0.13 (121) |
+Goran Borevkovic - Vedan Zoric                         |  240   0.01 |  0.34  -0.33 | -0.29 (115)  -0.37 (125) | -0.22 ( 59)  -0.37 ( 56) |  0.00 ( 67)   0.00 ( 58)  -0.37 (125) |
+Malcolm Mayer - Tom Jacob                              |  220   0.01 | -0.06   0.07 |  0.03 (124)   0.11 ( 95) | -0.48 ( 69)   0.67 ( 55) |  0.00 ( 47)   0.00 ( 48)   0.11 ( 95) |
+Eugenio Gambigliani - Camillo Gaddi                    |  220   0.01 | -0.00   0.01 |  0.14 (106)  -0.11 (114) | -0.44 ( 44)   0.54 ( 62) |  0.00 ( 59)   0.00 ( 55)  -0.11 (114) |
+Hong Dong Duong - Tarik Yalcin                         |  240   0.01 |  0.09  -0.08 |  0.05 (114)  -0.20 (125) |  0.05 ( 66)   0.04 ( 48) |  0.00 ( 56)   0.00 ( 69)  -0.20 (125) |
+Philippe Mathieu - Dominique Gerin                     |  260  -0.01 | -0.04   0.03 |  0.16 (127)  -0.10 (133) |  0.43 ( 57)  -0.05 ( 70) |  0.00 ( 74)   0.00 ( 59)  -0.10 (133) |
+Gopal Hingorani - Diniar Minwalla                      |  336  -0.01 | -0.13   0.12 |  0.13 (169)   0.10 (167) |  0.06 ( 77)   0.19 ( 92) |  0.00 ( 86)   0.00 ( 81)   0.10 (167) |
+Rui Santos - Sofia Pessoa                              |  220  -0.02 |  0.00  -0.03 |  0.05 (120)  -0.11 ( 98) |  0.34 ( 64)  -0.30 ( 56) |  0.00 ( 41)   0.00 ( 57)  -0.11 ( 98) |
+Jim Patrick - John Matheson                            |  220  -0.02 | -0.24   0.22 |  0.37 (117)   0.05 (103) |  0.05 ( 64)   0.76 ( 53) |  0.00 ( 49)   0.00 ( 54)   0.05 (103) |
+Hector Camberos - Pablo Lambardi                       |  120  -0.02 | -0.01  -0.01 |  0.53 ( 54)  -0.46 ( 65) |  0.71 ( 29)   0.31 ( 25) |  0.00 ( 41)   0.00 ( 24)  -0.46 ( 65) |
+Ettore Pizza - Carlo Magnani                           |  240  -0.02 | -0.23   0.21 |  0.39 (138)  -0.04 (102) |  0.60 ( 79)   0.10 ( 59) |  0.00 ( 54)   0.00 ( 48)  -0.04 (102) |
+Jorge Cruzeiro - Paulo Gonçalves Pereira               |  220  -0.04 | -0.15   0.11 | -0.11 (110)   0.33 (110) |  0.17 ( 46)  -0.31 ( 64) |  0.00 ( 52)   0.00 ( 58)   0.33 (110) |
+Mika Salomaa - Sue Bäckström                           |  320  -0.04 | -0.20   0.17 |  0.19 (152)   0.14 (168) |  0.12 ( 72)   0.25 ( 80) |  0.00 ( 72)   0.00 ( 96)   0.14 (168) |
+Ron Klinger - Bruce Neill                              |  260  -0.04 |  0.05  -0.08 |  0.21 (143)  -0.44 (117) |  0.06 ( 76)   0.37 ( 67) |  0.00 ( 65)   0.00 ( 52)  -0.44 (117) |
+Alan Shum Sum Sze - Wai Kit Chan                       |  220  -0.05 | -0.30   0.25 |  0.46 (101)   0.08 (119) |  0.58 ( 53)   0.32 ( 48) |  0.00 ( 69)   0.00 ( 50)   0.08 (119) |
+Jean Pierre Bouveresse - Jeanine Moers                 |  260  -0.05 |  0.07  -0.13 |  0.01 (113)  -0.23 (147) |  0.06 ( 59)  -0.05 ( 54) |  0.00 ( 68)   0.00 ( 79)  -0.23 (147) |
+Hédi Baccour - Tahar Touil                             |  180  -0.06 | -0.10   0.04 |  0.07 ( 77)   0.02 (102) | -0.53 ( 37)   0.62 ( 40) |  0.00 ( 56)   0.00 ( 46)   0.02 (102) |
+Philip Gue - Terry Brown                               |  180  -0.06 | -0.09   0.03 |  0.06 ( 92)   0.00 ( 88) |  0.63 ( 45)  -0.49 ( 47) |  0.00 ( 38)   0.00 ( 50)   0.00 ( 88) |
+Amar Nath Banerjee - Sumit Mukherjee                   |  180  -0.07 |  0.18  -0.25 |  0.66 ( 87)  -1.11 ( 92) |  1.32 ( 44)  -0.02 ( 43) |  0.00 ( 53)   0.00 ( 39)  -1.11 ( 92) |
+Ranko Tica - Samir Dolarevic                           |  196  -0.07 | -0.00  -0.07 |  0.53 ( 86)  -0.54 (110) |  0.28 ( 41)   0.76 ( 45) |  0.00 ( 50)   0.00 ( 60)  -0.54 (110) |
+Aris Filios - Yankos Papakyriacopoulos                 |  220  -0.08 |  0.16  -0.24 | -0.43 (125)   0.00 ( 93) | -0.12 ( 55)  -0.68 ( 70) |  0.00 ( 37)   0.00 ( 56)   0.00 ( 93) |
+James Priebe - Stephen Mackay                          |  220  -0.09 | -0.26   0.17 |  0.08 (112)   0.27 (106) |  0.37 ( 56)  -0.21 ( 56) |  0.00 ( 63)   0.00 ( 43)   0.27 (106) |
+Michal Zadrazil - David Vozábal                        |  220  -0.10 | -0.09  -0.01 |  0.07 (104)  -0.09 (115) | -0.09 ( 49)   0.21 ( 55) |  0.00 ( 50)   0.00 ( 65)  -0.09 (115) |
+Ilkka Renno - Martin Löfgren                           |  240  -0.13 | -0.08  -0.06 |  0.02 (121)  -0.14 (118) | -0.07 ( 57)   0.11 ( 64) |  0.00 ( 64)   0.00 ( 54)  -0.14 (118) |
+José Maria Valdes - Paolo Pasquini                     |  260  -0.13 | -0.27   0.13 |  0.58 (127)  -0.29 (133) |  0.53 ( 52)   0.61 ( 75) |  0.00 ( 68)   0.00 ( 65)  -0.29 (133) |
+Roy Welland - Björn Fallenius                          |  200  -0.14 |  0.15  -0.29 | -0.54 ( 96)  -0.06 (104) | -0.73 ( 51)  -0.34 ( 45) |  0.00 ( 58)   0.00 ( 46)  -0.06 (104) |
+Su-Beng Tan - Sze-Guan Tan                             |  340  -0.14 | -0.19   0.05 |  0.57 (157)  -0.40 (182) |  0.59 ( 82)   0.55 ( 75) |  0.00 ( 97)   0.00 ( 85)  -0.40 (182) |
+Aarne Rummel - Ivar Kalma                              |  220  -0.14 | -0.00  -0.14 | -0.39 (101)   0.07 (118) | -0.64 ( 63)   0.03 ( 38) |  0.00 ( 58)   0.00 ( 60)   0.07 (118) |
+Marwan Ghanem - Sireen Barakat                         |  340  -0.14 |  0.03  -0.17 | -0.12 (148)  -0.22 (190) | -0.26 ( 68)   0.00 ( 80) |  0.00 ( 91)   0.00 ( 99)  -0.22 (190) |
+Dwayne Crombie - Michael Cornell                       |  200  -0.15 |  0.04  -0.20 |  0.00 ( 92)  -0.37 (108) | -0.07 ( 43)   0.07 ( 49) |  0.00 ( 58)   0.00 ( 50)  -0.37 (108) |
+Guilherme Junqueira - Alcio Maia                       |  160  -0.16 |  0.11  -0.27 | -0.35 ( 71)  -0.21 ( 88) | -1.29 ( 33)   0.46 ( 38) |  0.00 ( 52)   0.00 ( 36)  -0.21 ( 88) |
+Vasili Batov - Veselin Dyakov                          |  220  -0.16 |  0.11  -0.28 | -0.36 (106)  -0.20 (113) |  0.02 ( 43)  -0.61 ( 63) |  0.00 ( 54)   0.00 ( 59)  -0.20 (113) |
+Hayet Hachimi - Mohamed Said Berrada                   |  120  -0.16 | -0.02  -0.15 | -0.40 ( 59)   0.10 ( 60) | -0.40 ( 28)  -0.40 ( 31) |  0.00 ( 29)   0.00 ( 31)   0.10 ( 60) |
+Jose Ignacio Torres - Antonio Frances                  |  220  -0.17 |  0.27  -0.44 | -0.64 (107)  -0.25 (111) | -0.41 ( 56)  -0.89 ( 51) |  0.00 ( 49)   0.00 ( 62)  -0.25 (111) |
+Jakub Slemr - Petr Pulkrab                             |  220  -0.21 | -0.27   0.06 | -0.14 (110)   0.27 (110) | -0.29 ( 48)  -0.03 ( 62) |  0.00 ( 52)   0.00 ( 58)   0.27 (110) |
+Jorge Castanheira - Nuno Mascarenhas                   |  240  -0.21 | -0.42   0.20 |  0.42 (124)  -0.03 (116) |  0.54 ( 70)   0.27 ( 54) |  0.00 ( 60)   0.00 ( 56)  -0.03 (116) |
+Hayet Hachimi - Abdellatif Belkouch                    |  120  -0.22 | -0.00  -0.22 | -0.65 ( 60)   0.22 ( 60) | -0.86 ( 31)  -0.43 ( 29) |  0.00 ( 24)   0.00 ( 36)   0.22 ( 60) |
+Peter Goodman - Adam Dunn                              |  340  -0.22 | -0.23   0.01 |  0.10 (178)  -0.09 (162) |  0.17 ( 88)   0.03 ( 90) |  0.00 ( 79)   0.00 ( 83)  -0.09 (162) |
+Douglas Piper - John Murdoch                           |  240  -0.23 | -0.13  -0.09 |  0.22 (122)  -0.41 (118) |  0.21 ( 70)   0.23 ( 52) |  0.00 ( 67)   0.00 ( 51)  -0.41 (118) |
+Fernando Piedra - Dmitrij Nikolenkov                   |  240  -0.24 | -0.24  -0.01 | -0.24 (114)   0.21 (125) | -0.04 ( 58)  -0.45 ( 56) |  0.00 ( 63)   0.00 ( 62)   0.21 (125) |
+Teong-Wah Lim - David Law                              |  340  -0.26 |  0.08  -0.34 | -0.20 (164)  -0.48 (175) | -0.42 ( 85)   0.04 ( 79) |  0.00 ( 90)   0.00 ( 85)  -0.48 (175) |
+Andris Smilgajs - Bruno Rubenis                        |  220  -0.27 |  0.03  -0.30 | -0.36 (119)  -0.23 (100) | -0.43 ( 58)  -0.29 ( 61) |  0.00 ( 55)   0.00 ( 45)  -0.23 (100) |
+Leonid Podgur - Avi Kalish                             |  200  -0.27 | -0.11  -0.16 | -0.29 (115)   0.00 ( 84) | -0.60 ( 51)  -0.03 ( 64) |  0.00 ( 37)   0.00 ( 47)   0.00 ( 84) |
+Sören Hein - Stefan Helling                            |  260  -0.27 |  0.03  -0.31 | -0.25 (122)  -0.36 (138) | -0.36 ( 63)  -0.13 ( 59) |  0.00 ( 71)   0.00 ( 67)  -0.36 (138) |
+Bernd Saurer - Doris Fischer                           |  200  -0.29 | -0.24  -0.05 |  0.15 (102)  -0.25 ( 98) |  0.35 ( 49)  -0.04 ( 53) |  0.00 ( 48)   0.00 ( 50)  -0.25 ( 98) |
+Alon Apteker - Bernard Donde                           |  220  -0.29 | -0.24  -0.06 | -0.12 (124)   0.03 ( 96) | -0.14 ( 61)  -0.10 ( 63) |  0.00 ( 49)   0.00 ( 47)   0.03 ( 96) |
+Alain Cotti - Marcel Guevel                            |  240  -0.30 | -0.19  -0.11 |  0.07 (118)  -0.29 (122) |  0.46 ( 52)  -0.23 ( 66) |  0.00 ( 69)   0.00 ( 53)  -0.29 (122) |
+Ghassan Ghanem - Nuha Hattar Ghaned                    |  220  -0.30 | -0.21  -0.09 |  0.13 (104)  -0.28 (116) | -0.04 ( 48)   0.27 ( 56) |  0.00 ( 52)   0.00 ( 64)  -0.28 (116) |
+Karlo Brguljan - Davor Rase                            |  220  -0.31 | -0.04  -0.26 | -0.19 (121)  -0.35 ( 99) | -0.20 ( 60)  -0.19 ( 61) |  0.00 ( 42)   0.00 ( 57)  -0.35 ( 99) |
+Young-Hong Cheng - Chuan-Cheng Chen                    |  280  -0.31 | -0.23  -0.08 |  0.09 (136)  -0.24 (144) |  0.16 ( 68)   0.02 ( 68) |  0.00 ( 66)   0.00 ( 78)  -0.24 (144) |
+Martine de Tessieres - Aymeric de Tessieres            |  180  -0.32 | -0.02  -0.30 |  0.45 ( 75)  -0.85 (105) |  0.87 ( 36)   0.07 ( 39) |  0.00 ( 50)   0.00 ( 55)  -0.85 (105) |
+Gheorghe Serpoi - Calin Stirbu                         |  220  -0.33 | -0.31  -0.02 | -0.16 ( 99)   0.10 (120) |  0.29 ( 45)  -0.54 ( 54) |  0.00 ( 61)   0.00 ( 59)   0.10 (120) |
+Faruk Masic - Miklós Dumbovich                         |  276  -0.33 | -0.29  -0.04 | -0.26 (132)   0.16 (142) | -0.34 ( 70)  -0.17 ( 62) |  0.00 ( 67)   0.00 ( 75)   0.16 (142) |
+Stevica Kikic - Vladimir Kalcic                        |  220  -0.35 | -0.01  -0.34 | -0.42 (112)  -0.26 (108) | -0.13 ( 61)  -0.76 ( 51) |  0.00 ( 61)   0.00 ( 47)  -0.26 (108) |
+Abdelkamel Rerhaye - Abdellah Laghrari                 |  200  -0.35 | -0.26  -0.09 | -0.04 (106)  -0.15 ( 93) |  0.13 ( 51)  -0.20 ( 55) |  0.00 ( 42)   0.00 ( 51)  -0.15 ( 93) |
+Giorgi Abzianidze - Revaz Beriashvili                  |  280  -0.36 | -0.27  -0.08 | -0.11 (154)  -0.04 (126) | -0.52 ( 74)   0.26 ( 80) |  0.00 ( 64)   0.00 ( 62)  -0.04 (126) |
+Jacques Stas - David Johnson                           |  260  -0.36 | -0.08  -0.28 | -0.35 (117)  -0.22 (143) | -0.35 ( 56)  -0.34 ( 61) |  0.00 ( 80)   0.00 ( 63)  -0.22 (143) |
+Monya Jellouli - Tahar Touil                           |  100  -0.37 |  0.05  -0.42 | -0.68 ( 51)  -0.15 ( 49) | -0.17 ( 27)  -1.24 ( 24) |  0.00 ( 19)   0.00 ( 30)  -0.15 ( 49) |
+Aleksandar Kaludercic - Sinisa Vuleta                  |  180  -0.40 | -0.32  -0.08 |  0.04 ( 83)  -0.19 ( 96) | -0.18 ( 43)   0.28 ( 40) |  0.00 ( 49)   0.00 ( 47)  -0.19 ( 96) |
+Jongki Tumbel - Bill Mondigir                          |  120  -0.40 | -0.14  -0.26 | -0.21 ( 67)  -0.34 ( 52) | -0.69 ( 27)   0.11 ( 40) |  0.00 ( 27)   0.00 ( 25)  -0.34 ( 52) |
+Genevieve Vigna - Yves Mondon                          |  200  -0.40 | -0.02  -0.38 | -0.61 ( 96)  -0.18 (104) | -0.38 ( 44)  -0.80 ( 52) |  0.00 ( 48)   0.00 ( 56)  -0.18 (104) |
+Martin Anastacio - Dan Lulu                            |  200  -0.41 | -0.17  -0.23 | -0.03 (107)  -0.46 ( 93) | -0.06 ( 52)  -0.01 ( 55) |  0.00 ( 44)   0.00 ( 49)  -0.46 ( 93) |
+Marco Sasselli - Bachar Abou Chanab                    |  200  -0.41 | -0.39  -0.02 |  0.23 ( 93)  -0.24 (107) |  0.61 ( 54)  -0.30 ( 39) |  0.00 ( 49)   0.00 ( 58)  -0.24 (107) |
+Mohamed Heshmat - Tarek Nadim                          |  120  -0.46 | -0.32  -0.14 | -0.40 ( 50)   0.05 ( 70) |  0.05 ( 24)  -0.82 ( 26) |  0.00 ( 32)   0.00 ( 38)   0.05 ( 70) |
+Sven Sester - Tüüve Jugandi                             |  220  -0.46 | -0.39  -0.08 |  0.33 (108)  -0.47 (111) |  0.63 ( 57)  -0.02 ( 51) |  0.00 ( 56)   0.00 ( 55)  -0.47 (111) |
+Pavel Pekny - Bohumir Zajicek                          |  240  -0.46 | -0.21  -0.25 | -0.41 ( 99)  -0.14 (141) | -0.12 ( 57)  -0.80 ( 42) |  0.00 ( 74)   0.00 ( 67)  -0.14 (141) |
+Sally Sykes - David Sykes                              |  260  -0.48 | -0.33  -0.14 | -0.16 (132)  -0.12 (128) | -1.04 ( 51)   0.40 ( 81) |  0.00 ( 56)   0.00 ( 72)  -0.12 (128) |
+Lewis Richardson - Ray Jotcham                         |  220  -0.49 | -0.31  -0.17 | -0.36 (109)   0.01 (108) | -0.23 ( 59)  -0.51 ( 50) |  0.00 ( 59)   0.00 ( 49)   0.01 (108) |
+Loreto Cuevas - Marcelo Caracci                        |  340  -0.51 | -0.36  -0.15 |  0.05 (160)  -0.32 (179) | -0.63 ( 72)   0.60 ( 88) |  0.00 ( 86)   0.00 ( 93)  -0.32 (179) |
+John MacGregor - Pilar Vitoria                         |  100  -0.52 | -0.23  -0.29 | -0.05 ( 57)  -0.61 ( 43) |  0.82 ( 35)  -1.44 ( 22) |  0.00 ( 21)   0.00 ( 22)  -0.61 ( 43) |
+Jean Gérard Théodore - Jean-Claude Wong Kai In         |  220  -0.53 | -0.14  -0.39 | -0.65 (105)  -0.15 (114) | -0.61 ( 50)  -0.69 ( 55) |  0.00 ( 54)   0.00 ( 60)  -0.15 (114) |
+Khondoker Mobinul Islam - Md. Hasinur Rahman Talukder  |  340  -0.53 | -0.14  -0.39 | -0.44 (182)  -0.33 (158) |  0.12 ( 82)  -0.90 (100) |  0.00 ( 70)   0.00 ( 88)  -0.33 (158) |
+Ghassan Ghanem - Samir Zeine                           |  120  -0.53 |  0.20  -0.74 | -0.93 ( 61)  -0.55 ( 57) | -1.57 ( 27)  -0.43 ( 34) |  0.00 ( 28)   0.00 ( 29)  -0.55 ( 57) |
+Md. Anisul Haque - Nitya Gopal Saha                    |  340  -0.54 | -0.36  -0.18 | -0.03 (148)  -0.31 (188) | -0.14 ( 83)   0.11 ( 65) |  0.00 ( 92)   0.00 ( 96)  -0.31 (188) |
+Stephen Robinson - Wong Choo Wai                       |  220  -0.55 | -0.59   0.04 |  0.11 (106)  -0.02 (114) |  0.19 ( 49)   0.04 ( 57) |  0.00 ( 48)   0.00 ( 66)  -0.02 (114) |
+Eduardo Piza - Pilar Vitoria                           |  100  -0.56 | -0.24  -0.33 |  0.08 ( 42)  -0.63 ( 57) |  0.46 ( 21)  -0.31 ( 21) |  0.00 ( 18)   0.00 ( 39)  -0.63 ( 57) |
+Zoran Koldzic - Dejan Jovanovic                        |  220  -0.61 | -0.18  -0.43 | -0.04 (117)  -0.86 (103) | -0.61 ( 62)   0.59 ( 55) |  0.00 ( 56)   0.00 ( 47)  -0.86 (103) |
+Guy-Alain Germon - Laurent Desportes                   |  220  -0.62 | -0.19  -0.43 | -0.50 (121)  -0.36 ( 99) | -0.50 ( 61)  -0.49 ( 60) |  0.00 ( 48)   0.00 ( 51)  -0.36 ( 99) |
+Takis Politis - Dimitris Kalavanas                     |  220  -0.62 | -0.42  -0.20 | -0.21 (122)  -0.19 ( 97) | -0.32 ( 63)  -0.09 ( 59) |  0.00 ( 53)   0.00 ( 44)  -0.19 ( 97) |
+Albert Quiogue - Ceferino Carreon                      |  220  -0.63 | -0.21  -0.42 | -0.17 (100)  -0.63 (119) | -0.05 ( 53)  -0.30 ( 47) |  0.00 ( 57)   0.00 ( 62)  -0.63 (119) |
+HP Modi - RKD Shah                                     |  200  -0.64 | -0.32  -0.32 | -0.11 (109)  -0.57 ( 91) | -0.11 ( 49)  -0.11 ( 60) |  0.00 ( 43)   0.00 ( 48)  -0.57 ( 91) |
+Gustavo De Lemos - Hector Manrique                     |  240  -0.64 | -0.28  -0.36 | -0.27 (126)  -0.45 (114) | -0.53 ( 70)   0.05 ( 56) |  0.00 ( 60)   0.00 ( 54)  -0.45 (114) |
+Gonzalo Herrera - Sonya Resk                           |  340  -0.66 | -0.39  -0.27 | -0.23 (181)  -0.33 (158) | -0.15 (120)  -0.37 ( 61) |  0.00 ( 71)   0.00 ( 87)  -0.33 (158) |
+Jacobo Podvilewicz - Kenneth Frey                      |  340  -0.66 | -0.36  -0.30 | -0.29 (173)  -0.31 (166) | -0.64 ( 77)  -0.01 ( 96) |  0.00 ( 69)   0.00 ( 97)  -0.31 (166) |
+Lassâad Jedidi - Mohamed Ali Lakhdhar                  |  200  -0.67 | -0.48  -0.20 | -0.06 (112)  -0.37 ( 87) | -0.21 ( 55)   0.08 ( 57) |  0.00 ( 41)   0.00 ( 46)  -0.37 ( 87) |
+Alejandro Sanchez - Beatriz Marangunic                 |  340  -0.72 | -0.48  -0.23 | -0.41 (181)  -0.03 (158) | -0.34 ( 99)  -0.50 ( 82) |  0.00 ( 82)   0.00 ( 76)  -0.03 (158) |
+Ellen Graewert - David Thompson                        |  180  -0.73 | -0.24  -0.49 | -0.27 ( 85)  -0.68 ( 95) | -0.34 ( 46)  -0.18 ( 39) |  0.00 ( 46)   0.00 ( 49)  -0.68 ( 95) |
+KV Bhaft - Nurudin Ajania                              |  220  -0.73 | -0.33  -0.40 | -0.30 (111)  -0.52 (108) | -0.15 ( 52)  -0.42 ( 59) |  0.00 ( 55)   0.00 ( 53)  -0.52 (108) |
+Frosso Tilliri - Rena Lordos                           |  200  -0.75 | -0.24  -0.51 | -0.74 ( 94)  -0.31 (104) | -1.82 ( 43)   0.16 ( 51) |  0.00 ( 50)   0.00 ( 54)  -0.31 (104) |
+Dennis Kow - Derrick Heng                              |  240  -0.76 | -0.37  -0.39 | -0.65 (102)  -0.20 (138) | -0.42 ( 48)  -0.85 ( 54) |  0.00 ( 75)   0.00 ( 63)  -0.20 (138) |
+Foo Yoke Lan - Jane Choo                               |  220  -0.79 | -0.47  -0.33 | -0.31 (123)  -0.35 ( 96) | -0.27 ( 50)  -0.34 ( 73) |  0.00 ( 52)   0.00 ( 44)  -0.35 ( 96) |
+Michaël Chan - Bashir Elahee Doomun                    |  220  -0.83 | -0.21  -0.61 | -0.83 (110)  -0.40 (108) | -0.21 ( 62)  -1.64 ( 48) |  0.00 ( 59)   0.00 ( 49)  -0.40 (108) |
+Patrick Hamel - Sylvian Brethes                        |  220  -0.85 | -0.30  -0.55 | -0.10 (109)  -0.99 (111) | -0.09 ( 57)  -0.12 ( 52) |  0.00 ( 56)   0.00 ( 55)  -0.99 (111) |
+George Daniel - Modisaotsile Dikgang                   |  336  -0.86 | -0.79  -0.07 |  0.17 (178)  -0.35 (157) |  0.00 ( 90)   0.34 ( 88) |  0.00 ( 77)   0.00 ( 80)  -0.35 (157) |
+Gary Lam Po Tang - Nandansing Hurpaul                  |  240  -0.87 | -0.43  -0.43 | -0.71 (119)  -0.16 (121) | -0.78 ( 66)  -0.63 ( 53) |  0.00 ( 58)   0.00 ( 63)  -0.16 (121) |
+John MacGregor - Steve Allen                           |  160  -0.87 | -0.45  -0.42 | -0.32 ( 88)  -0.56 ( 72) |  0.04 ( 50)  -0.78 ( 38) |  0.00 ( 33)   0.00 ( 39)  -0.56 ( 72) |
+Simone Divies - Christian Vincent                      |  220  -0.87 | -0.18  -0.69 | -0.76 (135)  -0.60 ( 84) | -0.69 ( 66)  -0.81 ( 69) |  0.00 ( 47)   0.00 ( 37)  -0.60 ( 84) |
+Mohamed Said Berrada - Abdellatif Belkouch             |  100  -0.89 | -0.59  -0.30 |  0.18 ( 50)  -0.79 ( 49) | -0.60 ( 24)   0.90 ( 26) |  0.00 ( 25)   0.00 ( 24)  -0.79 ( 49) |
+John Glynn - Bill Pare                                 |  160  -0.95 | -0.41  -0.54 | -0.52 ( 91)  -0.56 ( 69) | -1.51 ( 40)   0.25 ( 51) |  0.00 ( 28)   0.00 ( 41)  -0.56 ( 69) |
+Shun-Ho Chuang - Chien-Hsun Chen                       |  120  -0.96 | -0.54  -0.42 | -0.57 ( 73)  -0.20 ( 47) | -0.71 ( 36)  -0.43 ( 37) |  0.00 ( 24)   0.00 ( 23)  -0.20 ( 47) |
+Prafulla Shah - Ashwin Shah                            |  260  -1.01 | -0.41  -0.60 | -0.54 (122)  -0.65 (138) | -0.61 ( 54)  -0.49 ( 68) |  0.00 ( 60)   0.00 ( 78)  -0.65 (138) |
+Eduardo Piza - John Goold                              |  180  -1.06 | -0.46  -0.60 | -0.52 ( 85)  -0.69 ( 93) | -0.66 ( 38)  -0.40 ( 47) |  0.00 ( 35)   0.00 ( 58)  -0.69 ( 93) |
+Valerie Morley - Colin Morley                          |  220  -1.07 | -0.52  -0.55 | -0.54 (108)  -0.56 (112) | -0.92 ( 49)  -0.22 ( 59) |  0.00 ( 50)   0.00 ( 62)  -0.56 (112) |
+Jean-Olivier Begouin - Robert Barinci                  |  220  -1.14 | -0.39  -0.75 | -0.72 (103)  -0.78 (117) | -1.11 ( 47)  -0.40 ( 56) |  0.00 ( 59)   0.00 ( 58)  -0.78 (117) |
+Alain Hoyon - Philippe Teysseidre                      |  200  -1.26 | -0.53  -0.73 | -1.26 ( 98)  -0.23 (101) | -1.14 ( 49)  -1.38 ( 49) |  0.00 ( 51)   0.00 ( 50)  -0.23 (101) |
+Fabienne Bourgeois - Jany Grenié                       |  140  -1.33 | -0.85  -0.48 | -0.72 ( 80)  -0.16 ( 60) | -0.74 ( 38)  -0.71 ( 42) |  0.00 ( 33)   0.00 ( 27)  -0.16 ( 60) |
+Franco Gusso - Carlos Diaz                             |  180  -1.39 | -0.81  -0.58 | -0.69 ( 85)  -0.49 ( 94) | -0.32 ( 37)  -0.97 ( 48) |  0.00 ( 50)   0.00 ( 44)  -0.49 ( 94) |
 
-Players                                                No. Pl1 Pl2 Def  L1  L2   IMPs    Bid  Play1  Play2   Lead1   Lead2    Def
-John Goold - John MacGregor                             20   1   3  16  10   6   1.35   0.76  -0.23   0.02    0.00    0.00   0.80
-Jari Bäckström - Mika Salomaa                           20   4   5  10   4   6   1.07   0.56  -0.08   0.56    0.00    0.00   0.04
-Mohamed Heshmat - Tarek Sadek                           20   8   5   7   3   4   0.88   0.09   0.57   0.04    0.00    0.00   0.18
-Laurent Desportes - Christophe de Tessieres             20   6   5   9   5   4   0.87   0.79   0.34  -0.28    0.00    0.00   0.02
-Osmo Kiema - Dogan Uzum                                100  22  19  59  30  29   0.73   0.18   0.08   0.24    0.00    0.00   0.22
-Eduardo Piza - John MacGregor                           20   4   3  13  10   3   0.68   1.08  -0.11   0.53    0.00    0.00  -0.81
-Pritish Kushari - Rana Roy                              20   4   5  11   3   8   0.60  -0.53   0.01   0.50    0.00    0.00   0.62
-Li Xin Yang - Shaolin Sun                              100  22  19  58  29  29   0.30  -0.13   0.06   0.01    0.00    0.00   0.36
-Guy-Alain Germon - Christophe de Tessieres              60  21  21  18  10   8   0.27  -0.44  -0.00   0.44    0.00    0.00   0.28
-Abdelkamel Rerhaye - Abdellatif Belkouch                20   8   1  11   2   9   0.26   0.36   0.02  -0.03    0.00    0.00  -0.09
-Mariusz Puczynski - Apolinary Kowalski                  20   2   4  14  11   3   0.26   0.10   0.08   0.03    0.00    0.00   0.05
-Hassibul Hassan - Rana Roy                              40   8   8  24  13  11   0.25   0.47   0.00   0.03    0.00    0.00  -0.26
-Chien-Hsun Chen - Chih Kuo Shen                         20   1   7  12   9   3   0.22  -0.05  -0.14   0.27    0.00    0.00   0.14
-Sjoert Brink - Bas Drijver                              40   7  12  21  10  11   0.11  -0.11   0.23   0.13    0.00    0.00  -0.14
-Hédi Baccour - Monya Jellouli                           60  18  12  30  20  10   0.02   0.01  -0.01   0.20    0.00    0.00  -0.18
-Martine de Tessieres - Christophe de Tessieres          20   4   7   9   3   6   0.01   0.80   0.02  -0.20    0.00    0.00  -0.61
-Samir Dolarevic - Sinisa Vuleta                         20   2   6  12   7   5  -0.01   0.06  -0.16   0.07    0.00    0.00   0.02
-Aymeric de Tessieres - Christophe de Tessieres          60  10  13  37  19  18  -0.04   0.07  -0.16   0.07    0.00    0.00  -0.02
-Lassâad Jedidi - Monya Jellouli                         60  17  12  30  13  17  -0.05   0.03   0.01  -0.14    0.00    0.00   0.05
-Mohamed Said Berrada - Abdelkamel Rerhaye               60  13  23  23  11  12  -0.08  -0.03   0.06  -0.14    0.00    0.00   0.03
-Thibault de Tessieres - Aymeric de Tessieres            40  16  10  14   6   8  -0.14   0.32   0.04  -0.28    0.00    0.00  -0.23
-Martine de Tessieres - Thibault de Tessieres            40  10  10  20  15   5  -0.19  -0.97   0.61  -0.24    0.00    0.00   0.42
-Nagib Baroudi - Pierre Chidiac                          80  17  15  48  20  28  -0.20  -0.29   0.05  -0.07    0.00    0.00   0.11
-Chien-Hsun Chen - Chuan-Cheng Chen                      60  15  21  24  17   7  -0.23  -0.05   0.15   0.15    0.00    0.00  -0.49
-Hédi Baccour - Mohamed Ali Lakhdhar                     60  12  16  32  12  20  -0.24  -0.17  -0.03   0.15    0.00    0.00  -0.20
-Mohamed Said Berrada - Abdellah Laghrari                20   3   4  13   7   6  -0.26   0.18   0.45  -0.20    0.00    0.00  -0.68
-Manash Kumar Mukherjee - Pritish Kushari                40  12  12  16   9   7  -0.32  -0.05  -0.08  -0.15    0.00    0.00  -0.05
-Monya Jellouli - Tahar Touil                           100  27  24  49  19  30  -0.37   0.05  -0.05  -0.30    0.00    0.00  -0.07
-Albert Quiogue - Jehran Chua                            60  17  18  25  10  15  -0.39  -0.35   0.27   0.08    0.00    0.00  -0.39
-John MacGregor - Pilar Vitoria                         100  35  22  43  21  22  -0.52  -0.23   0.29  -0.32    0.00    0.00  -0.26
-Lassâad Jedidi - Osmo Kiema                             20   4   6  10   5   5  -0.54  -0.99   0.21   0.23    0.00    0.00   0.02
-Laurent Desportes - Thibault de Tessieres               20   8   4   8   4   4  -0.56   0.33  -0.22  -0.00    0.00    0.00  -0.67
-Eduardo Piza - Pilar Vitoria                           100  21  21  57  18  39  -0.56  -0.24   0.10  -0.06    0.00    0.00  -0.36
-Hédi Baccour - Lassâad Jedidi                           20   7   2  11   5   6  -0.63   0.32  -0.52   0.03    0.00    0.00  -0.46
-Patrick Hamel - Yves Mondon                             60  12  21  27  15  12  -0.74  -0.07   0.05  -0.31    0.00    0.00  -0.40
-Jeanine Moers - Philippe Mathieu                        20   4   3  13   6   7  -0.79  -0.32  -0.11  -0.17    0.00    0.00  -0.19
-Mohamed Said Berrada - Abdellatif Belkouch             100  24  26  49  25  24  -0.89  -0.59  -0.14   0.23    0.00    0.00  -0.39
-Jehran Chua - Martin Anastacio                          80  19  19  40  19  21  -0.93  -0.71   0.01  -0.02    0.00    0.00  -0.22
-Guy-Alain Germon - Thibault de Tessieres                20   3   4  13   4   9  -0.93  -0.60   0.02   0.01    0.00    0.00  -0.36
-John Goold - Pilar Vitoria                              40   7  12  21  11  10  -1.17  -0.56   0.13  -0.53    0.00    0.00  -0.22
-Jehran Chua - Dan Lulu                                  60  19  16  24  15   9  -1.20  -0.88   0.03  -0.26    0.00    0.00  -0.09
-Shun-Ho Chuang - Chih Kuo Shen                          20   7   3  10   4   6  -1.20  -1.33  -0.14   0.34    0.00    0.00  -0.07
-Jehran Chua - Ceferino Carreon                          60  13   9  38  22  16  -1.36  -0.69   0.06   0.20    0.00    0.00  -0.93
-Abdellah Laghrari - Abdellatif Belkouch                 40   8  11  21  13   8  -1.46  -0.40  -0.12  -0.14    0.00    0.00  -0.79
-Amy Anette - Steve Allen                                60  14  14  32  13  19  -1.71  -1.16  -0.29  -0.14    0.00    0.00  -0.13
-Frosso Tilliri - Takis Politis                          20   5   5  10   7   3  -1.78  -0.43  -0.22  -0.33    0.00    0.00  -0.81
-Hideki Takano - Hiroshi Kaku                            20   3   4  13   4   9  -2.14  -0.62  -0.50  -0.52    0.00    0.00  -0.49
-Valerie Morley - Dimitris Kalavanas                     20  10   4   6   2   4  -2.23   0.02  -0.96  -0.30    0.00    0.00  -0.99
+                                                       |             |              |           Play           |        Declaring         |                Defending              |
+Players                                                |  No.   IMPs |   Bid   Play |   Declaring    Defending |   Declarer1    Declarer2 |       Lead1        Lead2         Play |
+John Goold - John MacGregor                            |   20   1.35 |  0.76   0.59 | -1.02 (  4)   0.99 ( 16) | -4.56 (  1)   0.15 (  3) |  0.00 ( 10)   0.00 (  6)   0.99 ( 16) |
+Jari Bäckström - Mika Salomaa                          |   20   1.07 |  0.56   0.52 |  1.07 (  9)   0.08 ( 10) | -0.40 (  4)   2.24 (  5) |  0.00 (  4)   0.00 (  6)   0.08 ( 10) |
+Mohamed Heshmat - Tarek Sadek                          |   20   0.88 |  0.09   0.79 |  0.94 ( 13)   0.51 (  7) |  1.43 (  8)   0.15 (  5) |  0.00 (  3)   0.00 (  4)   0.51 (  7) |
+Laurent Desportes - Christophe de Tessieres            |   20   0.87 |  0.79   0.08 |  0.11 ( 11)   0.04 (  9) |  1.13 (  6)  -1.11 (  5) |  0.00 (  5)   0.00 (  4)   0.04 (  9) |
+Osmo Kiema - Dogan Uzum                                |  100   0.73 |  0.18   0.55 |  0.80 ( 41)   0.38 ( 59) |  0.38 ( 22)   1.29 ( 19) |  0.00 ( 30)   0.00 ( 29)   0.38 ( 59) |
+Eduardo Piza - John MacGregor                          |   20   0.68 |  1.08  -0.39 |  1.21 (  7)  -1.25 ( 13) | -0.53 (  4)   3.52 (  3) |  0.00 ( 10)   0.00 (  3)  -1.25 ( 13) |
+Pritish Kushari - Rana Roy                             |   20   0.60 | -0.53   1.13 |  1.13 (  9)   1.13 ( 11) |  0.07 (  4)   1.98 (  5) |  0.00 (  3)   0.00 (  8)   1.13 ( 11) |
+Li Xin Yang - Shaolin Sun                              |  100   0.30 | -0.13   0.43 |  0.18 ( 41)   0.62 ( 58) |  0.27 ( 22)   0.07 ( 19) |  0.00 ( 29)   0.00 ( 29)   0.62 ( 58) |
+Guy-Alain Germon - Christophe de Tessieres             |   60   0.27 | -0.44   0.71 |  0.62 ( 42)   0.92 ( 18) | -0.01 ( 21)   1.26 ( 21) |  0.00 ( 10)   0.00 (  8)   0.92 ( 18) |
+Abdelkamel Rerhaye - Abdellatif Belkouch               |   20   0.26 |  0.36  -0.10 | -0.02 (  9)  -0.16 ( 11) |  0.04 (  8)  -0.52 (  1) |  0.00 (  2)   0.00 (  9)  -0.16 ( 11) |
+Mariusz Puczynski - Apolinary Kowalski                 |   20   0.26 |  0.10   0.16 |  0.38 (  6)   0.06 ( 14) |  0.84 (  2)   0.15 (  4) |  0.00 ( 11)   0.00 (  3)   0.06 ( 14) |
+Hassibul Hassan - Rana Roy                             |   40   0.25 |  0.47  -0.22 |  0.09 ( 16)  -0.43 ( 24) |  0.01 (  8)   0.17 (  8) |  0.00 ( 13)   0.00 ( 11)  -0.43 ( 24) |
+Chien-Hsun Chen - Chih Kuo Shen                        |   20   0.22 | -0.05   0.27 |  0.32 (  8)   0.24 ( 12) | -2.81 (  1)   0.76 (  7) |  0.00 (  9)   0.00 (  3)   0.24 ( 12) |
+Sjoert Brink - Bas Drijver                             |   40   0.11 | -0.11   0.22 |  0.76 ( 19)  -0.27 ( 21) |  1.33 (  7)   0.43 ( 12) |  0.00 ( 10)   0.00 ( 11)  -0.27 ( 21) |
+Hédi Baccour - Monya Jellouli                          |   60   0.02 |  0.01   0.01 |  0.38 ( 30)  -0.37 ( 30) | -0.04 ( 18)   1.02 ( 12) |  0.00 ( 20)   0.00 ( 10)  -0.37 ( 30) |
+Martine de Tessieres - Christophe de Tessieres         |   20   0.01 |  0.80  -0.79 | -0.34 ( 11)  -1.35 (  9) |  0.08 (  4)  -0.58 (  7) |  0.00 (  3)   0.00 (  6)  -1.35 (  9) |
+Samir Dolarevic - Sinisa Vuleta                        |   20  -0.01 |  0.06  -0.07 | -0.24 (  8)   0.04 ( 12) | -1.63 (  2)   0.22 (  6) |  0.00 (  7)   0.00 (  5)   0.04 ( 12) |
+Aymeric de Tessieres - Christophe de Tessieres         |   60  -0.04 |  0.07  -0.12 | -0.24 ( 23)  -0.04 ( 37) | -0.95 ( 10)   0.30 ( 13) |  0.00 ( 19)   0.00 ( 18)  -0.04 ( 37) |
+Lassâad Jedidi - Monya Jellouli                        |   60  -0.05 |  0.03  -0.08 | -0.27 ( 29)   0.09 ( 30) |  0.04 ( 17)  -0.71 ( 12) |  0.00 ( 13)   0.00 ( 17)   0.09 ( 30) |
+Mohamed Said Berrada - Abdelkamel Rerhaye              |   60  -0.08 | -0.03  -0.04 | -0.13 ( 36)   0.08 ( 23) |  0.29 ( 13)  -0.36 ( 23) |  0.00 ( 11)   0.00 ( 12)   0.08 ( 23) |
+Thibault de Tessieres - Aymeric de Tessieres           |   40  -0.14 |  0.32  -0.46 | -0.36 ( 26)  -0.64 ( 14) |  0.11 ( 16)  -1.11 ( 10) |  0.00 (  6)   0.00 (  8)  -0.64 ( 14) |
+Martine de Tessieres - Thibault de Tessieres           |   40  -0.19 | -0.97   0.79 |  0.73 ( 20)   0.85 ( 20) |  2.43 ( 10)  -0.98 ( 10) |  0.00 ( 15)   0.00 (  5)   0.85 ( 20) |
+Nagib Baroudi - Pierre Chidiac                         |   80  -0.20 | -0.29   0.10 | -0.04 ( 32)   0.19 ( 48) |  0.24 ( 17)  -0.36 ( 15) |  0.00 ( 20)   0.00 ( 28)   0.19 ( 48) |
+Chien-Hsun Chen - Chuan-Cheng Chen                     |   60  -0.23 | -0.05  -0.19 |  0.50 ( 36)  -1.23 ( 24) |  0.59 ( 15)   0.44 ( 21) |  0.00 ( 17)   0.00 (  7)  -1.23 ( 24) |
+Hédi Baccour - Mohamed Ali Lakhdhar                    |   60  -0.24 | -0.17  -0.07 |  0.26 ( 28)  -0.37 ( 32) | -0.14 ( 12)   0.57 ( 16) |  0.00 ( 12)   0.00 ( 20)  -0.37 ( 32) |
+Mohamed Said Berrada - Abdellah Laghrari               |   20  -0.26 |  0.18  -0.43 |  0.70 (  7)  -1.04 ( 13) |  2.99 (  3)  -1.02 (  4) |  0.00 (  7)   0.00 (  6)  -1.04 ( 13) |
+Manash Kumar Mukherjee - Pritish Kushari               |   40  -0.32 | -0.05  -0.27 | -0.38 ( 24)  -0.12 ( 16) | -0.27 ( 12)  -0.49 ( 12) |  0.00 (  9)   0.00 (  7)  -0.12 ( 16) |
+Monya Jellouli - Tahar Touil                           |  100  -0.37 |  0.05  -0.42 | -0.68 ( 51)  -0.15 ( 49) | -0.17 ( 27)  -1.24 ( 24) |  0.00 ( 19)   0.00 ( 30)  -0.15 ( 49) |
+Albert Quiogue - Jehran Chua                           |   60  -0.39 | -0.35  -0.04 |  0.59 ( 35)  -0.93 ( 25) |  0.94 ( 17)   0.26 ( 18) |  0.00 ( 10)   0.00 ( 15)  -0.93 ( 25) |
+John MacGregor - Pilar Vitoria                         |  100  -0.52 | -0.23  -0.29 | -0.05 ( 57)  -0.61 ( 43) |  0.82 ( 35)  -1.44 ( 22) |  0.00 ( 21)   0.00 ( 22)  -0.61 ( 43) |
+Lassâad Jedidi - Osmo Kiema                            |   20  -0.54 | -0.99   0.46 |  0.88 ( 10)   0.04 ( 10) |  1.05 (  4)   0.77 (  6) |  0.00 (  5)   0.00 (  5)   0.04 ( 10) |
+Laurent Desportes - Thibault de Tessieres              |   20  -0.56 |  0.33  -0.89 | -0.38 ( 12)  -1.67 (  8) | -0.56 (  8)  -0.02 (  4) |  0.00 (  4)   0.00 (  4)  -1.67 (  8) |
+Eduardo Piza - Pilar Vitoria                           |  100  -0.56 | -0.24  -0.33 |  0.08 ( 42)  -0.63 ( 57) |  0.46 ( 21)  -0.31 ( 21) |  0.00 ( 18)   0.00 ( 39)  -0.63 ( 57) |
+Hédi Baccour - Lassâad Jedidi                          |   20  -0.63 |  0.32  -0.95 | -1.07 (  9)  -0.84 ( 11) | -1.47 (  7)   0.33 (  2) |  0.00 (  5)   0.00 (  6)  -0.84 ( 11) |
+Patrick Hamel - Yves Mondon                            |   60  -0.74 | -0.07  -0.67 | -0.49 ( 33)  -0.90 ( 27) |  0.23 ( 12)  -0.90 ( 21) |  0.00 ( 15)   0.00 ( 12)  -0.90 ( 27) |
+Jeanine Moers - Philippe Mathieu                       |   20  -0.79 | -0.32  -0.47 | -0.81 (  7)  -0.29 ( 13) | -0.56 (  4)  -1.14 (  3) |  0.00 (  6)   0.00 (  7)  -0.29 ( 13) |
+Mohamed Said Berrada - Abdellatif Belkouch             |  100  -0.89 | -0.59  -0.30 |  0.18 ( 50)  -0.79 ( 49) | -0.60 ( 24)   0.90 ( 26) |  0.00 ( 25)   0.00 ( 24)  -0.79 ( 49) |
+Jehran Chua - Martin Anastacio                         |   80  -0.93 | -0.71  -0.23 | -0.02 ( 38)  -0.43 ( 40) |  0.06 ( 19)  -0.09 ( 19) |  0.00 ( 19)   0.00 ( 21)  -0.43 ( 40) |
+Guy-Alain Germon - Thibault de Tessieres               |   20  -0.93 | -0.60  -0.33 |  0.09 (  7)  -0.56 ( 13) |  0.15 (  3)   0.05 (  4) |  0.00 (  4)   0.00 (  9)  -0.56 ( 13) |
+John Goold - Pilar Vitoria                             |   40  -1.17 | -0.56  -0.61 | -0.84 ( 19)  -0.41 ( 21) |  0.76 (  7)  -1.77 ( 12) |  0.00 ( 11)   0.00 ( 10)  -0.41 ( 21) |
+Jehran Chua - Dan Lulu                                 |   60  -1.20 | -0.88  -0.32 | -0.40 ( 35)  -0.22 ( 24) |  0.08 ( 19)  -0.96 ( 16) |  0.00 ( 15)   0.00 (  9)  -0.22 ( 24) |
+Shun-Ho Chuang - Chih Kuo Shen                         |   20  -1.20 | -1.33   0.13 |  0.39 ( 10)  -0.14 ( 10) | -0.41 (  7)   2.27 (  3) |  0.00 (  4)   0.00 (  6)  -0.14 ( 10) |
+Jehran Chua - Ceferino Carreon                         |   60  -1.36 | -0.69  -0.67 |  0.69 ( 22)  -1.46 ( 38) |  0.27 ( 13)   1.30 (  9) |  0.00 ( 22)   0.00 ( 16)  -1.46 ( 38) |
+Abdellah Laghrari - Abdellatif Belkouch                |   40  -1.46 | -0.40  -1.05 | -0.54 ( 19)  -1.51 ( 21) | -0.60 (  8)  -0.51 ( 11) |  0.00 ( 13)   0.00 (  8)  -1.51 ( 21) |
+Amy Anette - Steve Allen                               |   60  -1.71 | -1.16  -0.56 | -0.92 ( 28)  -0.25 ( 32) | -1.25 ( 14)  -0.58 ( 14) |  0.00 ( 13)   0.00 ( 19)  -0.25 ( 32) |
+Frosso Tilliri - Takis Politis                         |   20  -1.78 | -0.43  -1.35 | -1.09 ( 10)  -1.61 ( 10) | -0.87 (  5)  -1.30 (  5) |  0.00 (  7)   0.00 (  3)  -1.61 ( 10) |
+Hideki Takano - Hiroshi Kaku                           |   20  -2.14 | -0.62  -1.52 | -2.94 (  7)  -0.75 ( 13) | -3.35 (  3)  -2.62 (  4) |  0.00 (  4)   0.00 (  9)  -0.75 ( 13) |
+Valerie Morley - Dimitris Kalavanas                    |   20  -2.23 |  0.02  -2.25 | -1.81 ( 14)  -3.29 (  6) | -1.93 ( 10)  -1.51 (  4) |  0.00 (  2)   0.00 (  4)  -3.29 (  6) |
 

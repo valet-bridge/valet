@@ -1,64 +1,66 @@
-Players                                                No. Pl1 Pl2 Def  L1  L2   IMPs    Bid  Play1  Play2   Lead1   Lead2    Def
-WANG Wen Fei - LIU Yi Qian                             176  42  44  90  47  43   1.19   0.81   0.07  -0.08    0.04    0.04   0.31
-CULHAM Susan - FUNG Kismet                             176  42  55  79  36  43   0.86   0.53  -0.03   0.27   -0.11    0.07   0.12
-AHONEN Hulda - NURMI Pia                               272  56  85 130  67  63   0.85   0.52   0.08   0.16    0.07   -0.03   0.06
-FARHOLT Stense - RAHELT Maria Marit                    176  32  44  99  46  53   0.85   0.34   0.13   0.21    0.01   -0.02   0.17
-WANG Hongli - SUN Ming                                 176  52  41  82  40  42   0.81   0.31   0.08   0.03    0.13    0.09   0.17
-KHONICHEVA Elena - NIKITINA Alexandra                  176  50  51  75  35  40   0.80   0.56   0.02   0.18   -0.05   -0.03   0.12
-ADAMSON Sheila - MARTIN Anne                           192  41  60  91  53  38   0.75   0.43   0.20   0.00    0.04   -0.02   0.10
-JEANIN-NALTET Dominique - THUILLEZ Pascale             192  41  46 105  56  49   0.74   0.33  -0.04   0.10   -0.00    0.01   0.35
-DARYANANI Padma - PACHECO Morella                      224  48  82  93  55  38   0.73   0.58   0.14   0.00    0.07   -0.03  -0.03
-GUY Veronica - PUNCH Sam                               176  45  53  78  40  38   0.67   0.26   0.04   0.16    0.05    0.22  -0.06
-BOJOH Lusje Olha - TUEJE Julita Grace                  256  70  64 120  57  63   0.66   0.30   0.19   0.12    0.04   -0.03   0.04
-GROMOVA Victoria - PONOMAREVA Tatiana                  176  46  35  94  50  44   0.65   0.52  -0.16  -0.01    0.03    0.03   0.25
-DAUVERGNE Sophie - HUGON Elisabeth                     192  43  48 100  51  49   0.62   0.22   0.10   0.19    0.04   -0.04   0.11
-BACKSTROM Sue - TUOMI Raija                            272  59  69 143  71  72   0.62   0.41   0.08   0.07   -0.07   -0.10   0.22
-CAFRANGA-MARTORELL Carmen - FRANCES Ana                192  63  35  93  58  35   0.59   0.28   0.10   0.10    0.13    0.06  -0.09
-TAN Gemma - UNSON Rosemarie A.                         192  46  48  97  53  44   0.57   0.45  -0.10   0.12   -0.15    0.05   0.20
-BAJOS DE HEREDIA Blandine - LEVY Anne-Frederique       160  42  51  67  31  36   0.57   0.35  -0.07   0.22    0.01    0.05   0.02
-EGE Tina - HOUMOLLER Bjorg                             176  43  50  83  42  41   0.55   0.48  -0.02  -0.10   -0.00   -0.01   0.21
-HERNANDEZ Maria Eugenia - PANADERO Maria               176  45  39  92  43  49   0.42  -0.06   0.20   0.16    0.05    0.04   0.04
-ZHANG Yalan - GU Ling                                  192  51  49  92  43  49   0.31   0.19   0.08   0.02   -0.04   -0.02   0.08
-ABU JABER Aida - KREIDIEH Hana                         192  41  64  86  40  46   0.30  -0.06   0.00   0.36    0.03   -0.02  -0.01
-BEKKOUCHE Nadia - BINDERKRANTZ Trine                   192  54  52  86  39  47   0.30   0.22  -0.05   0.15   -0.03   -0.08   0.07
-VOROBEYCHIKOVA Olga - CHUBAROVA Svetlana               192  50  40 102  49  53   0.26   0.06   0.06   0.04    0.05   -0.02   0.06
-LUSK Sue - TULLY Therese                               224  63  52 109  53  56   0.11   0.06  -0.01   0.09    0.04   -0.00  -0.07
-DAVIDOVIC Radmila - NIKOLIC Tamara                     128  41  28  58  35  23   0.08   0.34  -0.04  -0.09   -0.06    0.01  -0.07
-GRANT Maida - McDONALD Sheila                          176  37  41  97  54  43   0.04   0.18  -0.02  -0.12    0.01   -0.00  -0.01
-BEALE Felicity - SMART Diana                           160  48  30  82  43  39   0.02  -0.28   0.03   0.02    0.06    0.02   0.16
-EGAN Victoria - MAYER Faith                            224  57  65 102  46  56  -0.02  -0.32   0.05   0.18   -0.01   -0.00   0.09
-CUMPSTONE Karen - NISBET Pamela                        192  46  48  98  47  51  -0.05  -0.36   0.07   0.19    0.05    0.07  -0.08
-MURRAY-WHITE Sally - SNASHALL Helen                    160  36  41  81  33  48  -0.10   0.02  -0.07  -0.04   -0.04   -0.01   0.04
-LEON Pilar - ALMIRALL Marta                            176  45  45  85  41  44  -0.24  -0.24   0.03   0.01   -0.04    0.13  -0.14
-GAUDREAULT Pascale - LACROIX Martine                   176  42  38  95  61  34  -0.25  -0.17   0.02  -0.13    0.00   -0.06   0.10
-DEVLETIAN Maro - TAGLIAVIA Marisa                      160  32  49  79  53  26  -0.26  -0.28   0.06   0.06   -0.03   -0.00  -0.07
-GHARBIEH May Abu - AL BITAR Mais                       176  46  39  91  60  31  -0.27  -0.28   0.01  -0.02   -0.10    0.07   0.05
-ORAS Maarja - PIIBELEHT Ines                           176  40  53  83  39  44  -0.29  -0.06   0.04  -0.25   -0.06    0.09  -0.05
-LIIVAK Jane - VIILUP Triinu                            192  39  52 100  53  47  -0.31   0.16  -0.14  -0.08   -0.05   -0.07  -0.13
-BRAJOVIC Ana Zorana - DJORDJEVIC Aleksandra            208  40  45 122  60  62  -0.31  -0.04  -0.11   0.04    0.03   -0.10  -0.14
-RABICEW Elisabeth - SMITH Ivy                          160  32  42  86  41  45  -0.36  -0.33  -0.02   0.14   -0.09   -0.03  -0.03
-DAMAYANTI Fera - RIANTINI -                            192  54  35 103  53  50  -0.47  -0.38  -0.08   0.02    0.04    0.01  -0.07
-ALONSO Ana Maria De - ANGELERI Monica Susana           192  50  45  96  50  46  -0.47  -0.10  -0.28  -0.05   -0.04   -0.07   0.08
-BERNASCONI Maria Isabel - BOLDT Silvia Elena           176  43  50  83  37  46  -0.62  -0.02  -0.14  -0.30    0.14    0.02  -0.32
-BARKER Gertrude - SMITH Jane                           208  50  47 111  51  60  -0.70  -0.37  -0.06  -0.09   -0.06    0.05  -0.17
-AHUJA Kavita - KANJI Amina                             192  48  53  90  44  46  -0.95  -0.21  -0.18  -0.22   -0.08    0.02  -0.27
-DIMITRIJEVIC Gordana - LAZIC Sanja                     208  43  56 109  58  51  -0.95  -0.79   0.13  -0.22    0.04   -0.01  -0.10
-COSTA Delia - ROTH Ana                                 176  51  37  88  50  38  -1.00  -0.72  -0.19   0.01   -0.12    0.14  -0.12
-HEINLO Liidia - KORK Eha                               176  45  42  87  44  43  -1.02  -0.71  -0.02  -0.04   -0.05   -0.02  -0.19
-WAY Margaret - JOHNSON Jean                            176  38  40  97  39  58  -1.22  -0.62  -0.29   0.07    0.03   -0.09  -0.32
-ZABANEH Hala - QASHU Azza                              128  38  23  67  32  35  -1.30  -0.93  -0.15  -0.00   -0.08    0.01  -0.15
-VIRJEE Vimla - RAMRAKHA Shashi Dev Vrat                208  49  52 107  48  59  -1.33  -0.42  -0.12  -0.13   -0.07   -0.05  -0.53
-ASHAK FARAG Magda - RAYNER Sheena                      160  42  35  81  33  48  -1.42  -0.58  -0.28  -0.09   -0.10   -0.12  -0.25
-NANJI Farida - PATEL Manjula                           144  34  41  69  41  28  -2.22  -1.29  -0.10  -0.16   -0.26   -0.04  -0.37
+                                                       |             |              |           Play           |        Declaring         |                Defending              |
+Players                                                |  No.   IMPs |   Bid   Play |   Declaring    Defending |   Declarer1    Declarer2 |       Lead1        Lead2         Play |
+WANG Wen Fei - LIU Yi Qian                             |  176   1.19 |  0.81   0.38 | -0.01 ( 86)   0.75 ( 90) |  0.31 ( 42)  -0.32 ( 44) |  0.14 ( 47)   0.16 ( 43)   0.60 ( 90) |
+CULHAM Susan - FUNG Kismet                             |  176   0.86 |  0.53   0.33 |  0.43 ( 97)   0.20 ( 79) | -0.13 ( 42)   0.86 ( 55) | -0.52 ( 36)   0.30 ( 43)   0.27 ( 79) |
+AHONEN Hulda - NURMI Pia                               |  272   0.85 |  0.52   0.34 |  0.46 (141)   0.20 (130) |  0.37 ( 56)   0.52 ( 85) |  0.29 ( 67)  -0.15 ( 63)   0.13 (130) |
+FARHOLT Stense - RAHELT Maria Marit                    |  176   0.85 |  0.34   0.51 |  0.78 ( 76)   0.31 ( 99) |  0.71 ( 32)   0.83 ( 44) |  0.05 ( 46)  -0.06 ( 53)   0.31 ( 99) |
+WANG Hongli - SUN Ming                                 |  176   0.81 |  0.31   0.50 |  0.20 ( 93)   0.84 ( 82) |  0.26 ( 52)   0.13 ( 41) |  0.58 ( 40)   0.40 ( 42)   0.36 ( 82) |
+KHONICHEVA Elena - NIKITINA Alexandra                  |  176   0.80 |  0.56   0.24 |  0.34 (101)   0.10 ( 75) |  0.07 ( 50)   0.61 ( 51) | -0.26 ( 35)  -0.12 ( 40)   0.28 ( 75) |
+ADAMSON Sheila - MARTIN Anne                           |  192   0.75 |  0.43   0.32 |  0.38 (101)   0.26 ( 91) |  0.92 ( 41)   0.01 ( 60) |  0.16 ( 53)  -0.09 ( 38)   0.20 ( 91) |
+JEANIN-NALTET Dominique - THUILLEZ Pascale             |  192   0.74 |  0.33   0.41 |  0.14 ( 87)   0.64 (105) | -0.19 ( 41)   0.44 ( 46) | -0.01 ( 56)   0.03 ( 49)   0.63 (105) |
+DARYANANI Padma - PACHECO Morella                      |  224   0.73 |  0.58   0.15 |  0.24 (130)   0.03 ( 93) |  0.64 ( 48)   0.01 ( 82) |  0.30 ( 55)  -0.17 ( 38)  -0.08 ( 93) |
+GUY Veronica - PUNCH Sam                               |  176   0.67 |  0.26   0.41 |  0.35 ( 98)   0.48 ( 78) |  0.14 ( 45)   0.53 ( 53) |  0.22 ( 40)   1.01 ( 38)  -0.12 ( 78) |
+BOJOH Lusje Olha - TUEJE Julita Grace                  |  256   0.66 |  0.30   0.36 |  0.59 (134)   0.11 (120) |  0.69 ( 70)   0.48 ( 64) |  0.18 ( 57)  -0.11 ( 63)   0.08 (120) |
+GROMOVA Victoria - PONOMAREVA Tatiana                  |  176   0.65 |  0.52   0.13 | -0.37 ( 81)   0.57 ( 94) | -0.60 ( 46)  -0.06 ( 35) |  0.09 ( 50)   0.11 ( 44)   0.47 ( 94) |
+DAUVERGNE Sophie - HUGON Elisabeth                     |  192   0.62 |  0.22   0.40 |  0.62 ( 91)   0.20 (100) |  0.45 ( 43)   0.77 ( 48) |  0.14 ( 51)  -0.15 ( 49)   0.20 (100) |
+BACKSTROM Sue - TUOMI Raija                            |  272   0.62 |  0.41   0.21 |  0.32 (128)   0.10 (143) |  0.38 ( 59)   0.28 ( 69) | -0.25 ( 71)  -0.37 ( 72)   0.41 (143) |
+CAFRANGA-MARTORELL Carmen - FRANCES Ana                |  192   0.59 |  0.28   0.30 |  0.39 ( 98)   0.21 ( 93) |  0.31 ( 63)   0.55 ( 35) |  0.44 ( 58)   0.31 ( 35)  -0.18 ( 93) |
+TAN Gemma - UNSON Rosemarie A.                         |  192   0.57 |  0.45   0.12 |  0.04 ( 94)   0.21 ( 97) | -0.43 ( 46)   0.49 ( 48) | -0.55 ( 53)   0.23 ( 44)   0.40 ( 97) |
+BAJOS DE HEREDIA Blandine - LEVY Anne-Frederique       |  160   0.57 |  0.35   0.22 |  0.24 ( 93)   0.19 ( 67) | -0.29 ( 42)   0.68 ( 51) |  0.08 ( 31)   0.21 ( 36)   0.04 ( 67) |
+EGE Tina - HOUMOLLER Bjorg                             |  176   0.55 |  0.48   0.07 | -0.23 ( 93)   0.41 ( 83) | -0.07 ( 43)  -0.36 ( 50) | -0.02 ( 42)  -0.04 ( 41)   0.44 ( 83) |
+HERNANDEZ Maria Eugenia - PANADERO Maria               |  176   0.42 | -0.06   0.49 |  0.75 ( 84)   0.25 ( 92) |  0.77 ( 45)   0.74 ( 39) |  0.20 ( 43)   0.15 ( 49)   0.07 ( 92) |
+ZHANG Yalan - GU Ling                                  |  192   0.31 |  0.19   0.12 |  0.19 (100)   0.05 ( 92) |  0.30 ( 51)   0.07 ( 49) | -0.17 ( 43)  -0.08 ( 49)   0.18 ( 92) |
+ABU JABER Aida - KREIDIEH Hana                         |  192   0.30 | -0.06   0.36 |  0.65 (105)   0.01 ( 86) |  0.00 ( 41)   1.07 ( 64) |  0.15 ( 40)  -0.09 ( 46)  -0.01 ( 86) |
+BEKKOUCHE Nadia - BINDERKRANTZ Trine                   |  192   0.30 |  0.22   0.07 |  0.19 (106)  -0.07 ( 86) | -0.17 ( 54)   0.57 ( 52) | -0.13 ( 39)  -0.33 ( 47)   0.17 ( 86) |
+VOROBEYCHIKOVA Olga - CHUBAROVA Svetlana               |  192   0.26 |  0.06   0.20 |  0.21 ( 90)   0.19 (102) |  0.23 ( 50)   0.18 ( 40) |  0.22 ( 49)  -0.06 ( 53)   0.11 (102) |
+LUSK Sue - TULLY Therese                               |  224   0.11 |  0.06   0.05 |  0.15 (115)  -0.06 (109) | -0.04 ( 63)   0.40 ( 52) |  0.17 ( 53)  -0.00 ( 56)  -0.14 (109) |
+DAVIDOVIC Radmila - NIKOLIC Tamara                     |  128   0.08 |  0.34  -0.26 | -0.24 ( 69)  -0.27 ( 58) | -0.12 ( 41)  -0.42 ( 28) | -0.22 ( 35)   0.04 ( 23)  -0.15 ( 58) |
+GRANT Maida - McDONALD Sheila                          |  176   0.04 |  0.18  -0.14 | -0.33 ( 78)   0.01 ( 97) | -0.11 ( 37)  -0.53 ( 41) |  0.03 ( 54)  -0.00 ( 43)  -0.01 ( 97) |
+BEALE Felicity - SMART Diana                           |  160   0.02 | -0.28   0.30 |  0.12 ( 78)   0.47 ( 82) |  0.11 ( 48)   0.13 ( 30) |  0.21 ( 43)   0.10 ( 39)   0.31 ( 82) |
+EGAN Victoria - MAYER Faith                            |  224  -0.02 | -0.32   0.31 |  0.43 (122)   0.16 (102) |  0.21 ( 57)   0.62 ( 65) | -0.06 ( 46)  -0.00 ( 56)   0.19 (102) |
+CUMPSTONE Karen - NISBET Pamela                        |  192  -0.05 | -0.36   0.31 |  0.53 ( 94)   0.09 ( 98) |  0.29 ( 46)   0.76 ( 48) |  0.22 ( 47)   0.27 ( 51)  -0.15 ( 98) |
+MURRAY-WHITE Sally - SNASHALL Helen                    |  160  -0.10 |  0.02  -0.12 | -0.23 ( 77)  -0.02 ( 81) | -0.32 ( 36)  -0.16 ( 41) | -0.19 ( 33)  -0.04 ( 48)   0.08 ( 81) |
+LEON Pilar - ALMIRALL Marta                            |  176  -0.24 | -0.24  -0.00 |  0.07 ( 90)  -0.08 ( 85) |  0.11 ( 45)   0.03 ( 45) | -0.16 ( 41)   0.54 ( 44)  -0.28 ( 85) |
+GAUDREAULT Pascale - LACROIX Martine                   |  176  -0.25 | -0.17  -0.08 | -0.26 ( 80)   0.08 ( 95) |  0.07 ( 42)  -0.62 ( 38) |  0.01 ( 61)  -0.31 ( 34)   0.18 ( 95) |
+DEVLETIAN Maro - TAGLIAVIA Marisa                      |  160  -0.26 | -0.28   0.02 |  0.24 ( 81)  -0.20 ( 79) |  0.32 ( 32)   0.19 ( 49) | -0.09 ( 53)  -0.02 ( 26)  -0.14 ( 79) |
+GHARBIEH May Abu - AL BITAR Mais                       |  176  -0.27 | -0.28   0.01 | -0.03 ( 85)   0.05 ( 91) |  0.02 ( 46)  -0.09 ( 39) | -0.28 ( 60)   0.41 ( 31)   0.09 ( 91) |
+ORAS Maarja - PIIBELEHT Ines                           |  176  -0.29 | -0.06  -0.23 | -0.40 ( 93)  -0.05 ( 83) |  0.19 ( 40)  -0.84 ( 53) | -0.27 ( 39)   0.36 ( 44)  -0.11 ( 83) |
+LIIVAK Jane - VIILUP Triinu                            |  192  -0.31 |  0.16  -0.47 | -0.47 ( 91)  -0.47 (100) | -0.68 ( 39)  -0.31 ( 52) | -0.17 ( 53)  -0.28 ( 47)  -0.25 (100) |
+BRAJOVIC Ana Zorana - DJORDJEVIC Aleksandra            |  208  -0.31 | -0.04  -0.27 | -0.16 ( 85)  -0.36 (122) | -0.55 ( 40)   0.20 ( 45) |  0.10 ( 60)  -0.33 ( 62)  -0.24 (122) |
+RABICEW Elisabeth - SMITH Ivy                          |  160  -0.36 | -0.33  -0.02 |  0.26 ( 74)  -0.27 ( 86) | -0.08 ( 32)   0.53 ( 42) | -0.34 ( 41)  -0.10 ( 45)  -0.06 ( 86) |
+DAMAYANTI Fera - RIANTINI -                            |  192  -0.47 | -0.38  -0.09 | -0.15 ( 89)  -0.04 (103) | -0.30 ( 54)   0.09 ( 35) |  0.13 ( 53)   0.05 ( 50)  -0.13 (103) |
+ALONSO Ana Maria De - ANGELERI Monica Susana           |  192  -0.47 | -0.10  -0.37 | -0.67 ( 95)  -0.07 ( 96) | -1.08 ( 50)  -0.22 ( 45) | -0.16 ( 50)  -0.30 ( 46)   0.15 ( 96) |
+BERNASCONI Maria Isabel - BOLDT Silvia Elena           |  176  -0.62 | -0.02  -0.61 | -0.85 ( 93)  -0.34 ( 83) | -0.59 ( 43)  -1.07 ( 50) |  0.68 ( 37)   0.07 ( 46)  -0.68 ( 83) |
+BARKER Gertrude - SMITH Jane                           |  208  -0.70 | -0.37  -0.34 | -0.32 ( 97)  -0.35 (111) | -0.27 ( 50)  -0.38 ( 47) | -0.26 ( 51)   0.17 ( 60)  -0.32 (111) |
+AHUJA Kavita - KANJI Amina                             |  192  -0.95 | -0.21  -0.74 | -0.77 (101)  -0.71 ( 90) | -0.73 ( 48)  -0.81 ( 53) | -0.36 ( 44)   0.07 ( 46)  -0.57 ( 90) |
+DIMITRIJEVIC Gordana - LAZIC Sanja                     |  208  -0.95 | -0.79  -0.16 | -0.20 ( 99)  -0.13 (109) |  0.61 ( 43)  -0.82 ( 56) |  0.16 ( 58)  -0.06 ( 51)  -0.19 (109) |
+COSTA Delia - ROTH Ana                                 |  176  -1.00 | -0.72  -0.28 | -0.36 ( 88)  -0.19 ( 88) | -0.64 ( 51)   0.03 ( 37) | -0.41 ( 50)   0.64 ( 38)  -0.23 ( 88) |
+HEINLO Liidia - KORK Eha                               |  176  -1.02 | -0.71  -0.31 | -0.11 ( 87)  -0.51 ( 87) | -0.07 ( 45)  -0.16 ( 42) | -0.20 ( 44)  -0.07 ( 43)  -0.38 ( 87) |
+WAY Margaret - JOHNSON Jean                            |  176  -1.22 | -0.62  -0.60 | -0.50 ( 78)  -0.69 ( 97) | -1.36 ( 38)   0.31 ( 40) |  0.14 ( 39)  -0.28 ( 58)  -0.57 ( 97) |
+ZABANEH Hala - QASHU Azza                              |  128  -1.30 | -0.93  -0.38 | -0.32 ( 61)  -0.43 ( 67) | -0.51 ( 38)  -0.01 ( 23) | -0.33 ( 32)   0.03 ( 35)  -0.28 ( 67) |
+VIRJEE Vimla - RAMRAKHA Shashi Dev Vrat                |  208  -1.33 | -0.42  -0.91 | -0.52 (101)  -1.27 (107) | -0.52 ( 49)  -0.52 ( 52) | -0.32 ( 48)  -0.18 ( 59)  -1.03 (107) |
+ASHAK FARAG Magda - RAYNER Sheena                      |  160  -1.42 | -0.58  -0.84 | -0.76 ( 77)  -0.93 ( 81) | -1.05 ( 42)  -0.40 ( 35) | -0.50 ( 33)  -0.39 ( 48)  -0.49 ( 81) |
+NANJI Farida - PATEL Manjula                           |  144  -2.22 | -1.29  -0.93 | -0.49 ( 75)  -1.41 ( 69) | -0.41 ( 34)  -0.56 ( 41) | -0.93 ( 41)  -0.22 ( 28)  -0.77 ( 69) |
 
-Players                                                No. Pl1 Pl2 Def  L1  L2   IMPs    Bid  Play1  Play2   Lead1   Lead2    Def
-CUUNJIENG Carmencita - TAN Gemma                        16   5   4   7   4   3   0.42   0.01   0.09   0.21   -0.00    0.02   0.10
-AFRIANI Setiatin - HAYATI -                             96  24  17  54  25  29   0.36   0.29  -0.00  -0.11   -0.04    0.06   0.16
-CUUNJIENG Carmencita - MAYER Faith                      16   2   4  10   6   4   0.31   0.29  -0.01  -0.27    0.51   -0.00  -0.22
-TAN Gemma - VELHAGEN Consuelo                           48  10   8  30  15  15  -0.26  -0.46  -0.03   0.13    0.15    0.05  -0.09
-ABU JABER Aida - ZABANEH Hala                           16   5   5   6   3   3  -0.26   1.17   0.00  -0.18    0.11    0.00  -1.37
-EGAN Victoria - VELHAGEN Consuelo                       32   5   6  21  13   8  -0.42  -0.46   0.11  -0.03   -0.10    0.06   0.00
-ZABANEH Hala - GHARBIEH May Abu                         16   5   4   7   3   4  -1.66  -0.51  -0.33  -0.65    0.04   -0.01  -0.20
-GHARBIEH May Abu - KREIDIEH Hana                        16   2   9   5   4   1  -1.82  -1.10  -0.46   0.26   -0.44   -0.05  -0.03
-CUUNJIENG Carmencita - EGAN Victoria                    16   4   3   9   7   2  -4.18  -2.99  -0.21  -0.56    0.04    0.00  -0.47
+                                                       |             |              |           Play           |        Declaring         |                Defending              |
+Players                                                |  No.   IMPs |   Bid   Play |   Declaring    Defending |   Declarer1    Declarer2 |       Lead1        Lead2         Play |
+CUUNJIENG Carmencita - TAN Gemma                       |   16   0.42 |  0.01   0.42 |  0.54 (  9)   0.26 (  7) |  0.29 (  5)   0.84 (  4) | -0.01 (  4)   0.12 (  3)   0.22 (  7) |
+AFRIANI Setiatin - HAYATI -                            |   96   0.36 |  0.29   0.07 | -0.26 ( 41)   0.32 ( 54) | -0.00 ( 24)  -0.63 ( 17) | -0.16 ( 25)   0.21 ( 29)   0.28 ( 54) |
+CUUNJIENG Carmencita - MAYER Faith                     |   16   0.31 |  0.29   0.02 | -0.73 (  6)   0.46 ( 10) | -0.06 (  2)  -1.07 (  4) |  1.36 (  6)  -0.01 (  4)  -0.35 ( 10) |
+TAN Gemma - VELHAGEN Consuelo                          |   48  -0.26 | -0.46   0.20 |  0.26 ( 18)   0.17 ( 30) | -0.14 ( 10)   0.76 (  8) |  0.49 ( 15)   0.16 ( 15)  -0.15 ( 30) |
+ABU JABER Aida - ZABANEH Hala                          |   16  -0.26 |  1.17  -1.43 | -0.28 ( 10)  -3.35 (  6) |  0.01 (  5)  -0.57 (  5) |  0.57 (  3)   0.02 (  3)  -3.64 (  6) |
+EGAN Victoria - VELHAGEN Consuelo                      |   32  -0.42 | -0.46   0.04 |  0.21 ( 11)  -0.05 ( 21) |  0.68 (  5)  -0.18 (  6) | -0.24 ( 13)   0.24 (  8)   0.00 ( 21) |
+ZABANEH Hala - GHARBIEH May Abu                        |   16  -1.66 | -0.51  -1.15 | -1.74 (  9)  -0.38 (  7) | -1.05 (  5)  -2.61 (  4) |  0.21 (  3)  -0.03 (  4)  -0.45 (  7) |
+GHARBIEH May Abu - KREIDIEH Hana                       |   16  -1.82 | -1.10  -0.72 | -0.29 ( 11)  -1.67 (  5) | -3.65 (  2)   0.46 (  9) | -1.74 (  4)  -0.83 (  1)  -0.11 (  5) |
+CUUNJIENG Carmencita - EGAN Victoria                   |   16  -4.18 | -2.99  -1.19 | -1.75 (  7)  -0.76 (  9) | -0.83 (  4)  -2.98 (  3) |  0.10 (  7)   0.01 (  2)  -0.83 (  9) |
 
