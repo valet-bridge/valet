@@ -70,6 +70,10 @@ class Scores
     unsigned numPairs;
     unsigned length;
 
+    OppType * PrepareCompensation(
+      const unsigned pairNo,
+      const unsigned oppNo);
+
     float Scale(
       const float value,
       const unsigned num) const;
@@ -81,7 +85,7 @@ class Scores
     void AddCompensation(
       const unsigned pairNo,
       const unsigned oppNo,
-      const float value);
+      const OppCompType& oppValues);
 
     double Difference(
       const CumulType& c1,

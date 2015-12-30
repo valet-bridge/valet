@@ -47,10 +47,9 @@ void Scores::Reset()
 }
 
 
-void Scores::AddCompensation(
+Scores::OppType * Scores::PrepareCompensation(
   const unsigned pairNo,
-  const unsigned oppNo,
-  const float value)
+  const unsigned oppNo)
 {
   ostringstream oss;
   oss << oppNo;
@@ -67,8 +66,26 @@ void Scores::AddCompensation(
     }
   }
 
-  oppMap[oppstr].num[VALET_OVERALL]++;
-  oppMap[oppstr].sum[VALET_OVERALL] += value;
+  return &oppMap[oppstr];
+}
+
+
+void Scores::AddCompensation(
+  const unsigned pairNo,
+  const unsigned oppNo,
+  const OppCompType& oppValues)
+{
+  OppType * opp = Scores::PrepareCompensation(pairNo, oppNo);
+  OppType * pair = Scores::PrepareCompensation(oppNo, pairNo);
+
+  for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
+  {
+    opp->num[i]++;
+    opp->sum[i] += oppValues.sum[i];
+
+    pair->num[i]++;
+    pair->sum[i] -= oppValues.sum[i];
+  }
 }
 
 
@@ -131,9 +148,19 @@ void Scores::AddEntry(
     }
   }
 
+  // Ugh.  But I don't feel like rewriting the entry data structure,
+  // as this depends on list[2].
+  OppCompType oppValues;
+  oppValues.sum[VALET_OVERALL] = entry.overall;
+  oppValues.sum[VALET_BID] = entry.bidScore;
+  oppValues.sum[VALET_PLAY1] = entry.playScore[0];
+  oppValues.sum[VALET_PLAY2] = entry.playScore[1];
+  oppValues.sum[VALET_LEAD1] = entry.leadScore[0];
+  oppValues.sum[VALET_LEAD2] = entry.leadScore[1];
+  oppValues.sum[VALET_DEF] = entry.defScore;
+
   // Remember the opponent in order to be able to compensate.
-  Scores::AddCompensation(entry.pairNo, entry.oppNo, entry.overall);
-  Scores::AddCompensation(entry.oppNo, entry.pairNo, -entry.overall);
+  Scores::AddCompensation(entry.pairNo, entry.oppNo, oppValues);
 }
 
 
