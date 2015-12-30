@@ -196,14 +196,15 @@ void Scores::Compensate()
       }
     }
 
-    if (oppResults.num[VALET_OVERALL] == 0)
-      oppComp[pno].sum[VALET_OVERALL] = 0.f;
-    else if (options.valet == VALET_MATCHPOINTS)
-      oppComp[pno].sum[VALET_OVERALL] = -50.f + 
-        oppResults.sum[VALET_OVERALL] / oppResults.num[VALET_OVERALL];
-    else
-      oppComp[pno].sum[VALET_OVERALL] = 
-        oppResults.sum[VALET_OVERALL] / oppResults.num[VALET_OVERALL];
+    for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
+    {
+      if (oppResults.num[i] == 0)
+        oppComp[pno].sum[i] = 0.f;
+      else if (options.valet == VALET_MATCHPOINTS)
+        oppComp[pno].sum[i] = -50.f + oppResults.sum[i] / oppResults.num[i];
+      else
+        oppComp[pno].sum[i] = oppResults.sum[i] / oppResults.num[i];
+      }
   }
 }
 
