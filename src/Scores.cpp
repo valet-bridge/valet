@@ -263,27 +263,8 @@ void Scores::Normalize()
     }
 
     if (options.compensateFlag)
-    {
-      // Quite arbitrary split.
-      if (options.leadFlag)
-      {
-        c.avgPerChance[VALET_OVERALL] += oppComp[pno].sum[VALET_OVERALL];
-        c.avgPerChance[VALET_BID] += oppComp[pno].sum[VALET_OVERALL] / 3.f;
-        c.avgTotal[VALET_PLAY1] += oppComp[pno].sum[VALET_OVERALL] / 6.f;
-        c.avgTotal[VALET_PLAY2] += oppComp[pno].sum[VALET_OVERALL] / 6.f;
-        c.avgTotal[VALET_LEAD1] += oppComp[pno].sum[VALET_OVERALL] / 12.f;
-        c.avgTotal[VALET_LEAD1] += oppComp[pno].sum[VALET_OVERALL] / 12.f;
-        c.avgTotal[VALET_DEF] += oppComp[pno].sum[VALET_OVERALL] / 6.f;
-      }
-      else
-      {
-        c.avgPerChance[VALET_OVERALL] += oppComp[pno].sum[VALET_OVERALL];
-        c.avgPerChance[VALET_BID] += oppComp[pno].sum[VALET_OVERALL] / 3.f;
-        c.avgTotal[VALET_PLAY1] += oppComp[pno].sum[VALET_OVERALL] / 6.f;
-        c.avgTotal[VALET_PLAY2] += oppComp[pno].sum[VALET_OVERALL] / 6.f;
-        c.avgTotal[VALET_DEF] += oppComp[pno].sum[VALET_OVERALL] / 3.f;
-      }
-    }
+      for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
+        c.avgPerChance[i] += oppComp[pno].sum[i];
   }
 }
 
