@@ -496,3 +496,24 @@ vector<ValetEntryType> Hand::CalculateScores()
   return entries;
 }
 
+
+int Hand::GetDatumOnly()
+{
+  if (numEntries == 0)
+    return 0;
+
+  vector<int> rawScore(numEntries);
+  vector<unsigned> vulList(numEntries);
+
+  for (unsigned i = 0; i < numEntries; i++)
+  {
+    unsigned decl = results[i].declarer;
+    vulList[i] = (decl == VALET_NORTH || 
+      decl == VALET_SOUTH ? vulNS : vulEW);
+
+    rawScore[i] = CalculateRawScore(results[i], vulList[i]);
+  }
+
+  return Hand::GetDatum(rawScore);
+}
+

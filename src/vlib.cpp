@@ -380,6 +380,12 @@ void STDCALL ValetCalculate()
 }
 
 
+int STDCALL ValetGetDatum()
+{
+  return hand.GetDatumOnly();
+}
+
+
 void SetResults(
   OutputResultType * output,
   ValetEntryType& vres)

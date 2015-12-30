@@ -96,6 +96,8 @@ class Hand
       const ResultType& res);
 
     vector<ValetEntryType> CalculateScores();
+
+    int GetDatumOnly();
 };
 
 #endif

@@ -210,6 +210,8 @@ EXTERN_C DLLEXPORT int STDCALL ValetAddByNumber(
 
 EXTERN_C DLLEXPORT void STDCALL ValetCalculate();
 
+EXTERN_C DLLEXPORT int STDCALL ValetGetDatum();
+
 EXTERN_C DLLEXPORT bool STDCALL ValetGetNextScoreByTag(
   struct PositionsTagType * players,
   struct OutputResultType * output);
