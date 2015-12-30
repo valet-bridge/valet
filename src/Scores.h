@@ -27,38 +27,26 @@ class Scores
 {
   private:
 
+    enum CumulEntryType
+    {
+      VALET_OVERALL = 0,
+      VALET_BID = 1,
+      VALET_PLAY1 = 2,
+      VALET_PLAY2 = 3,
+      VALET_LEAD1 = 4,
+      VALET_LEAD2 = 5,
+      VALET_DEF = 6,
+      VALET_ENTRY_SIZE = 7
+    };
+
     struct CumulType
     {
       unsigned pairNo;
 
-      unsigned numHands;
-      unsigned numPlay1;
-      unsigned numPlay2;
-      unsigned numDef;
-      unsigned numLead1;
-      unsigned numLead2;
-
-      float overallCum;
-      float bidCum;
-      float play1Cum;
-      float play2Cum;
-      float lead1Cum;
-      float lead2Cum;
-      float defCum;
-
-      float overall;
-      float bid;
-      float play1;
-      float play2;
-      float lead1;
-      float lead2;
-      float def;
-
-      float play1perChance;
-      float play2perChance;
-      float lead1perChance;
-      float lead2perChance;
-      float defperChance;
+      unsigned num[VALET_ENTRY_SIZE];
+      float sum[VALET_ENTRY_SIZE];
+      float avgTotal[VALET_ENTRY_SIZE];
+      float avgPerChance[VALET_ENTRY_SIZE];
     };
 
     struct OppType
@@ -77,9 +65,13 @@ class Scores
     unsigned numPairs;
     unsigned length;
 
+    float Scale(
+      const float value,
+      const unsigned num) const;
+
     float ScaleMP(
       const float value,
-      const unsigned num);
+      const unsigned num) const;
 
     void AddCompensation(
       const unsigned pairNo,
@@ -89,32 +81,36 @@ class Scores
     double Difference(
       const CumulType& c1,
       const CumulType& c2,
-      SortingType sort);
+      SortingType sort) const;
 
     bool PreparePrint(
       const unsigned mode,
-      int& prec);
+      int& prec) const;
 
     bool SkipScore(
       const CumulType& c,
-      const unsigned mode);
+      const unsigned mode) const;
 
     void PrintTextPair(
       const float average,
       const unsigned no,
-      const int prec);
+      const int prec) const;
 
     void PrintCSVPair(
       const float average,
       const unsigned no,
       const int prec,
-      const string s);
+      const string s) const;
+
+    void PrintTextHeader() const;
 
     void PrintText(
-      const unsigned mode);
+      const unsigned mode) const;
+
+    void PrintCSVHeader() const;
 
     void PrintCSV(
-      const unsigned mode);
+      const unsigned mode) const;
 
   public:
 
@@ -134,7 +130,7 @@ class Scores
     void Sort(
       const SortingType sort);
 
-    void Print();
+    void Print() const;
 };
 
 #endif
