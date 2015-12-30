@@ -51,13 +51,18 @@ class Scores
 
     struct OppType
     {
-      float cumul;
-      unsigned count;
+      unsigned num[VALET_ENTRY_SIZE];
+      float sum[VALET_ENTRY_SIZE];
+    };
+
+    struct OppCompType
+    {
+      float sum[VALET_ENTRY_SIZE];
     };
 
 
     vector<CumulType> pairScores;
-    vector<float> oppComp;
+    vector<OppCompType> oppComp;
 
     typedef map<string, OppType> OppMapType;
     vector<OppMapType> oppScores;

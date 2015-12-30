@@ -60,12 +60,15 @@ void Scores::AddCompensation(
   OppMapType::iterator it = oppMap.find(oppstr);
   if (it == oppMap.end())
   {
-    oppMap[oppstr].cumul = 0.f;
-    oppMap[oppstr].count = 0;
+    for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
+    {
+      oppMap[oppstr].num[i] = 0;
+      oppMap[oppstr].sum[i] = 0.f;
+    }
   }
 
-  oppMap[oppstr].cumul += value;
-  oppMap[oppstr].count++;
+  oppMap[oppstr].num[VALET_OVERALL]++;
+  oppMap[oppstr].sum[VALET_OVERALL] += value;
 }
 
 
@@ -144,7 +147,13 @@ void Scores::Compensate()
 
   for (unsigned pno = 1; pno < length; pno++)
   {
-    OppType oppResults = {0.f, 0};
+    OppType oppResults;
+    for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
+    {
+      oppResults.num[i] = 0;
+      oppResults.sum[i] = 0.;
+    }
+
     OppMapType& oppMap = oppScores[pno];
 
     for (it_type it = oppMap.begin(); it != oppMap.end(); it++)
@@ -153,18 +162,21 @@ void Scores::Compensate()
         strtol(it->first.c_str(), &pend, 10));
       assert(oppNo > 0 && oppNo < length);
 
-      oppResults.cumul += pairScores[oppNo].sum[VALET_OVERALL] - 
-        it->second.cumul;
-      oppResults.count += pairScores[oppNo].num[VALET_OVERALL] - 
-        it->second.count;
+      for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
+      {
+        oppResults.sum[i] += pairScores[oppNo].sum[i] - it->second.sum[i];
+        oppResults.num[i] += pairScores[oppNo].num[i] - it->second.num[i];
+      }
     }
 
-    if (oppResults.count == 0)
-      oppComp[pno] = 0.f;
+    if (oppResults.num[VALET_OVERALL] == 0)
+      oppComp[pno].sum[VALET_OVERALL] = 0.f;
     else if (options.valet == VALET_MATCHPOINTS)
-      oppComp[pno] = -50.f + oppResults.cumul / oppResults.count;
+      oppComp[pno].sum[VALET_OVERALL] = -50.f + 
+        oppResults.sum[VALET_OVERALL] / oppResults.num[VALET_OVERALL];
     else
-      oppComp[pno] = oppResults.cumul / oppResults.count;
+      oppComp[pno].sum[VALET_OVERALL] = 
+        oppResults.sum[VALET_OVERALL] / oppResults.num[VALET_OVERALL];
   }
 }
 
@@ -222,21 +234,21 @@ void Scores::Normalize()
       // Quite arbitrary split.
       if (options.leadFlag)
       {
-        c.avgTotal[VALET_OVERALL] += oppComp[pno];
-        c.avgTotal[VALET_BID] += oppComp[pno] / 3.f;
-        c.avgTotal[VALET_PLAY1] += oppComp[pno] / 6.f;
-        c.avgTotal[VALET_PLAY2] += oppComp[pno] / 6.f;
-        c.avgTotal[VALET_LEAD1] += oppComp[pno] / 12.f;
-        c.avgTotal[VALET_LEAD1] += oppComp[pno] / 12.f;
-        c.avgTotal[VALET_DEF] += oppComp[pno] / 6.f;
+        c.avgTotal[VALET_OVERALL] += oppComp[pno].sum[VALET_OVERALL];
+        c.avgTotal[VALET_BID] += oppComp[pno].sum[VALET_OVERALL] / 3.f;
+        c.avgTotal[VALET_PLAY1] += oppComp[pno].sum[VALET_OVERALL] / 6.f;
+        c.avgTotal[VALET_PLAY2] += oppComp[pno].sum[VALET_OVERALL] / 6.f;
+        c.avgTotal[VALET_LEAD1] += oppComp[pno].sum[VALET_OVERALL] / 12.f;
+        c.avgTotal[VALET_LEAD1] += oppComp[pno].sum[VALET_OVERALL] / 12.f;
+        c.avgTotal[VALET_DEF] += oppComp[pno].sum[VALET_OVERALL] / 6.f;
       }
       else
       {
-        c.avgTotal[VALET_OVERALL] += oppComp[pno];
-        c.avgTotal[VALET_BID] += oppComp[pno] / 3.f;
-        c.avgTotal[VALET_PLAY1] += oppComp[pno] / 6.f;
-        c.avgTotal[VALET_PLAY2] += oppComp[pno] / 6.f;
-        c.avgTotal[VALET_DEF] += oppComp[pno] / 3.f;
+        c.avgTotal[VALET_OVERALL] += oppComp[pno].sum[VALET_OVERALL];
+        c.avgTotal[VALET_BID] += oppComp[pno].sum[VALET_OVERALL] / 3.f;
+        c.avgTotal[VALET_PLAY1] += oppComp[pno].sum[VALET_OVERALL] / 6.f;
+        c.avgTotal[VALET_PLAY2] += oppComp[pno].sum[VALET_OVERALL] / 6.f;
+        c.avgTotal[VALET_DEF] += oppComp[pno].sum[VALET_OVERALL] / 3.f;
       }
     }
   }
