@@ -104,8 +104,11 @@ void Scores::AddEntry(
 
   CumulType& cDecl = pairScores[entry.pairNo];
   cDecl.pairNo = entry.pairNo;
+
   cDecl.num[VALET_OVERALL]++;
   cDecl.sum[VALET_OVERALL] += entry.overall;
+
+  cDecl.num[VALET_BID]++;
   cDecl.sum[VALET_BID] += entry.bidScore;
 
   if (entry.declFlag[0])
@@ -126,6 +129,8 @@ void Scores::AddEntry(
   cDef.pairNo = entry.oppNo;
   cDef.num[VALET_OVERALL]++;
   cDef.sum[VALET_OVERALL] -= entry.overall;
+
+  cDef.num[VALET_BID]++;
   cDef.sum[VALET_BID] -= entry.bidScore;
 
   if (entry.defFlag)
@@ -245,7 +250,7 @@ void Scores::Normalize()
       for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
         c.avgTotal[i] = Scores::ScaleMP(c.sum[i], c.num[VALET_OVERALL]);
 
-      for (int i = VALET_PLAY1; i < VALET_ENTRY_SIZE; i++)
+      for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
         c.avgPerChance[i] = Scores::ScaleMP(c.sum[i], c.num[i]);
     }
     else
@@ -253,7 +258,7 @@ void Scores::Normalize()
       for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
         c.avgTotal[i] = Scores::Scale(c.sum[i], c.num[VALET_OVERALL]);
 
-      for (int i = VALET_PLAY1; i < VALET_ENTRY_SIZE; i++)
+      for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
         c.avgPerChance[i] = Scores::Scale(c.sum[i], c.num[i]);
     }
 
@@ -262,8 +267,8 @@ void Scores::Normalize()
       // Quite arbitrary split.
       if (options.leadFlag)
       {
-        c.avgTotal[VALET_OVERALL] += oppComp[pno].sum[VALET_OVERALL];
-        c.avgTotal[VALET_BID] += oppComp[pno].sum[VALET_OVERALL] / 3.f;
+        c.avgPerChance[VALET_OVERALL] += oppComp[pno].sum[VALET_OVERALL];
+        c.avgPerChance[VALET_BID] += oppComp[pno].sum[VALET_OVERALL] / 3.f;
         c.avgTotal[VALET_PLAY1] += oppComp[pno].sum[VALET_OVERALL] / 6.f;
         c.avgTotal[VALET_PLAY2] += oppComp[pno].sum[VALET_OVERALL] / 6.f;
         c.avgTotal[VALET_LEAD1] += oppComp[pno].sum[VALET_OVERALL] / 12.f;
@@ -272,8 +277,8 @@ void Scores::Normalize()
       }
       else
       {
-        c.avgTotal[VALET_OVERALL] += oppComp[pno].sum[VALET_OVERALL];
-        c.avgTotal[VALET_BID] += oppComp[pno].sum[VALET_OVERALL] / 3.f;
+        c.avgPerChance[VALET_OVERALL] += oppComp[pno].sum[VALET_OVERALL];
+        c.avgPerChance[VALET_BID] += oppComp[pno].sum[VALET_OVERALL] / 3.f;
         c.avgTotal[VALET_PLAY1] += oppComp[pno].sum[VALET_OVERALL] / 6.f;
         c.avgTotal[VALET_PLAY2] += oppComp[pno].sum[VALET_OVERALL] / 6.f;
         c.avgTotal[VALET_DEF] += oppComp[pno].sum[VALET_OVERALL] / 3.f;
@@ -291,37 +296,37 @@ double Scores::Difference(
   switch(sort)
   {
     case VALET_SORT_OVERALL:
-      return c1.avgTotal[VALET_OVERALL] - c2.avgTotal[VALET_OVERALL];
+      return c1.avgPerChance[VALET_OVERALL] - c2.avgPerChance[VALET_OVERALL];
 
     case VALET_SORT_BIDDING:
-      return c1.avgTotal[VALET_BID] - c2.avgTotal[VALET_BID];
+      return c1.avgPerChance[VALET_BID] - c2.avgPerChance[VALET_BID];
 
     case VALET_SORT_PLAY:
-      return c1.avgTotal[VALET_PLAY1] + c1.avgTotal[VALET_PLAY2] - 
-        (c2.avgTotal[VALET_PLAY1] + c2.avgTotal[VALET_PLAY2]);
+      return c1.avgPerChance[VALET_PLAY1] + c1.avgPerChance[VALET_PLAY2] - 
+        (c2.avgPerChance[VALET_PLAY1] + c2.avgPerChance[VALET_PLAY2]);
 
     case VALET_SORT_DEFENSE:
-      return c1.avgTotal[VALET_DEF] - c2.avgTotal[VALET_DEF];
+      return c1.avgPerChance[VALET_DEF] - c2.avgPerChance[VALET_DEF];
 
     case VALET_SORT_LEAD:
-      return c1.avgTotal[VALET_LEAD1] + c1.avgTotal[VALET_LEAD2] - 
-        (c2.avgTotal[VALET_LEAD1] + c2.avgTotal[VALET_LEAD2]);
+      return c1.avgPerChance[VALET_LEAD1] + c1.avgPerChance[VALET_LEAD2] - 
+        (c2.avgPerChance[VALET_LEAD1] + c2.avgPerChance[VALET_LEAD2]);
 
     case VALET_SORT_BID_OVER_PLAY:
-      return (c1.avgTotal[VALET_BID] - c2.avgTotal[VALET_BID]) -
-        (c1.avgTotal[VALET_PLAY1] + c1.avgTotal[VALET_PLAY2] - 
-        (c2.avgTotal[VALET_PLAY1] + c2.avgTotal[VALET_PLAY2]));
+      return (c1.avgPerChance[VALET_BID] - c2.avgPerChance[VALET_BID]) -
+        (c1.avgPerChance[VALET_PLAY1] + c1.avgPerChance[VALET_PLAY2] - 
+        (c2.avgPerChance[VALET_PLAY1] + c2.avgPerChance[VALET_PLAY2]));
 
     case VALET_SORT_DEF_OVER_PLAY:
-      return c1.avgTotal[VALET_DEF] - c2.avgTotal[VALET_DEF] -
-        (c1.avgTotal[VALET_PLAY1] + c1.avgTotal[VALET_PLAY2] - 
-        (c2.avgTotal[VALET_PLAY1] + c2.avgTotal[VALET_PLAY2]));
+      return c1.avgPerChance[VALET_DEF] - c2.avgPerChance[VALET_DEF] -
+        (c1.avgPerChance[VALET_PLAY1] + c1.avgPerChance[VALET_PLAY2] - 
+        (c2.avgPerChance[VALET_PLAY1] + c2.avgPerChance[VALET_PLAY2]));
 
     case VALET_SORT_LEAD_OVER_PLAY:
-      return c1.avgTotal[VALET_LEAD1] + c1.avgTotal[VALET_LEAD2] - 
-        (c2.avgTotal[VALET_LEAD1] + c2.avgTotal[VALET_LEAD2]) -
-        (c1.avgTotal[VALET_PLAY1] + c1.avgTotal[VALET_PLAY2] - 
-        (c2.avgTotal[VALET_PLAY1] + c2.avgTotal[VALET_PLAY2]));
+      return c1.avgPerChance[VALET_LEAD1] + c1.avgPerChance[VALET_LEAD2] - 
+        (c2.avgPerChance[VALET_LEAD1] + c2.avgPerChance[VALET_LEAD2]) -
+        (c1.avgPerChance[VALET_PLAY1] + c1.avgPerChance[VALET_PLAY2] - 
+        (c2.avgPerChance[VALET_PLAY1] + c2.avgPerChance[VALET_PLAY2]));
     
     default:
       assert(false);
@@ -515,11 +520,11 @@ void Scores::PrintText(
       left << pairs.GetPairNamePadded(c.pairNo, 54) << right << " | " <<
       setw(4) << c.num[VALET_OVERALL] << 
       setw(7) << fixed << setprecision(prec) << 
-        c.avgTotal[VALET_OVERALL] <<  " | " <<
+        c.avgPerChance[VALET_OVERALL] <<  " | " <<
       setw(5) << fixed << setprecision(prec) << 
-        c.avgTotal[VALET_BID] << 
+        c.avgPerChance[VALET_BID] << 
       setw(7) << fixed << setprecision(prec) << 
-        c.avgTotal[VALET_OVERALL] - c.avgTotal[VALET_BID] << " | ";
+        c.avgPerChance[VALET_OVERALL] - c.avgPerChance[VALET_BID] << " | ";
 
     unsigned n = c.num[VALET_PLAY1] + c.num[VALET_PLAY2];
     if (n > 0)
@@ -637,10 +642,10 @@ void Scores::PrintCSV(
     cout << 
       pairs.GetPairName(c.pairNo) << s <<
       c.num[VALET_OVERALL] << s <<
-      fixed << setprecision(prec) << c.avgTotal[VALET_OVERALL] << s <<
-      fixed << setprecision(prec) << c.avgTotal[VALET_BID] << s <<
+      fixed << setprecision(prec) << c.avgPerChance[VALET_OVERALL] << s <<
+      fixed << setprecision(prec) << c.avgPerChance[VALET_BID] << s <<
       fixed << setprecision(prec) << 
-        c.avgTotal[VALET_OVERALL] - c.avgTotal[VALET_BID] << s;
+        c.avgPerChance[VALET_OVERALL] - c.avgPerChance[VALET_BID] << s;
 
     unsigned n = c.num[VALET_PLAY1] + c.num[VALET_PLAY2];
     if (n > 0)
