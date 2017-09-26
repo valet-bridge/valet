@@ -204,6 +204,7 @@ sub read_names
   {
     my $line = $lines[$i];
     chomp $line;
+    $line =~ s///g;
     my @elems = split /\|/, $line;
     $names{$elems[1]} = $elems[0];
   }
