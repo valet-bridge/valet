@@ -650,7 +650,7 @@ void Scores::PrintCSV(
     Scores::PrintCSVPair(c.avgPerChance[VALET_PLAY1], 
       c.num[VALET_PLAY1], prec, s);
     Scores::PrintCSVPair(c.avgPerChance[VALET_PLAY2], 
-      c.num[VALET_PLAY1], prec, s);
+      c.num[VALET_PLAY2], prec, s);
 
     if (options.leadFlag)
     {
