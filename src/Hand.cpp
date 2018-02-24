@@ -378,6 +378,114 @@ float Hand::GetBiddingScore(
 }
 
 
+float Hand::GetOverallScoreAgainstCloud(
+  const int myRawScore,
+  const unsigned no,
+  const vector<unsigned>& vulList,
+  const unsigned resDeclMatrix[4][5][14],
+  const float overallResult)
+{
+  // GetBiddingScore calculates the average score in *our* contract
+  // with others' tricks.
+  // OverallScoreAgainstCloud calculates the average score that we 
+  // would get in *our* contract with a (possibly fictitious) number 
+  // of tricks, against *others'* scores with all possible numbers of
+  // tricks.
+  // If called with our actual number of tricks, this is effectively
+  // a more general overall score than GetOverallScore.  But it
+  // doesn't in general add up to 0.
+
+  if (numEntries <= 1)
+    return overallResult;
+
+  float bidResult = 0.;
+  for (unsigned i = 0; i < numEntries; i++)
+  {
+    if (i == no)
+      continue;
+
+    ResultType oppArtif = results[i];
+    unsigned declOpp = oppArtif.declarer;
+    unsigned dOpp = oppArtif.denom;
+cout << "  i " << i << " d " << dOpp << "\n";
+    unsigned count = 0;
+    float subResult = 0.;
+
+    for (unsigned tOpp = 0; tOpp <= 13; tOpp++)
+    {
+cout << "    t  " << tOpp << " : " << 
+  resDeclMatrix[declOpp][dOpp][dOpp] << "\n";
+      if (resDeclMatrix[declOpp][dOpp][tOpp] == 0)
+        continue;
+
+      oppArtif.tricks = tOpp;
+      int artifOppScore = CalculateRawScore(oppArtif, vulList[i], tOpp);
+cout << "    t " << tOpp << ": artif " << artifOppScore << "\n";
+
+      subResult += resDeclMatrix[declOpp][dOpp][tOpp] * 
+        static_cast<float>((*fptr)(myRawScore - artifOppScore));
+      
+      count += resDeclMatrix[declOpp][dOpp][tOpp];
+    }
+cout << "  i " << i << ": sub " << subResult << " count " << count << "\n";
+
+    if (count > 0)
+      bidResult += subResult / count;
+  }
+
+  return bidResult / (numEntries-1);
+}
+
+
+float Hand::GetCloudBiddingScore(
+  const unsigned no,
+  const vector<unsigned>& vulList,
+  const unsigned resDeclMatrix[4][5][14],
+  const float overallResult)
+{
+  // This uses GetOverallScoreAgainstCloud to calculate our own
+  // weighted score for all our possible own trick numbers.
+
+  float bidResult = 0.;
+  unsigned count = 0;
+  ResultType resArtif = results[no];
+  unsigned decl = resArtif.declarer;
+  unsigned d = resArtif.denom;
+cout << "no " << no << " d " << d << "\n";
+  for (unsigned t = 0; t <= 13; t++)
+  {
+    if (resDeclMatrix[decl][d][t] == 0)
+      continue;
+
+    // Make a synthetic result of our contract with different
+    // declarers (including ourselves, but that scores 0).
+
+    resArtif.tricks = t;
+    int artifScore = CalculateRawScore(resArtif, vulList[no], t);
+
+    float b = resDeclMatrix[decl][d][t] * Hand::GetOverallScoreAgainstCloud(
+        artifScore, no, vulList, resDeclMatrix, overallResult);
+cout << "no " << no << " asc " << artifScore << " b " << b << " c " <<
+  resDeclMatrix[decl][d][t] << "\n";
+    bidResult += b;
+    count += resDeclMatrix[decl][d][t];
+  }
+if (count)
+  cout << "no overall " << bidResult << " / " << count << " = " <<
+    bidResult / count << " \n\n";
+else
+  cout << "No opps\n\n";
+
+  // Special case:  If we're the only ones to play in a denomination,
+  // we somewhat arbitrarily assign the full score to the bidding.
+  if (count == 0)
+    return overallResult;
+  else
+    return bidResult / count;
+}
+
+
+
 //////////////////////////////////////////////////
 //                                              //
 // General scoring function, uses above         //
@@ -470,14 +578,20 @@ vector<ValetEntryType> Hand::CalculateScores()
 
       const ResultType& res = results[i];
 
+      // TODO: Choose based on input argument.
       float IAFs = Hand::GetOverallScore(rawScore, rawScore[i]);
+      // float IAFs = Hand::GetOverallScoreAgainstCloud(
+        // rawScore[i], i, vulList, resDeclMatrix, 0.);
 
       if (res.level == 0)
         Hand::SetPassout(res, IAFs, entry);
       else
       {
+        // TODO: Choose based on input argument.
         bidIAF = GetBiddingScore(rawScore, i, vulList[i], 
           resDeclMatrix[res.declarer], IAFs);
+        // bidIAF = GetCloudBiddingScore(i, vulList, 
+          // resDeclMatrix, IAFs);
 
         if (options.leadFlag && res.leadRank > 0)
         {

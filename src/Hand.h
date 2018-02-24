@@ -58,6 +58,19 @@ class Hand
       const unsigned resMatrix[5][14],
       float overallResult);
       
+    float GetOverallScoreAgainstCloud(
+      const int myRawScore,
+      const unsigned no,
+      const vector<unsigned>& vulList,
+      const unsigned resDeclMatrix[4][5][14],
+      float overallResult);
+      
+    float GetCloudBiddingScore(
+      const unsigned no,
+      const vector<unsigned>& vulList,
+      const unsigned resDeclMatrix[4][5][14],
+      float overallResult);
+      
     void SetPassout(
       const ResultType& res,
       const float totalIMPs,
