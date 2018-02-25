@@ -70,7 +70,8 @@ for my $fname (@ARGV)
           }
           else
           {
-            splice @entries, 4, 0, '_Z_', '_Z_', '_Z_';
+            # splice @entries, 4, 0, '_Z_', '_Z_', '_Z_';
+            splice @entries, 4, 0, '_Z_';
           }
         }
 
@@ -90,7 +91,8 @@ for my $fname (@ARGV)
 
         if ($entries[0] eq 'PASS' || $entries[0] eq 'Pass')
         {
-          splice @entries, 4, 0, '_Z_', '_Z_';
+          # splice @entries, 4, 0, '_Z_', '_Z_';
+          splice @entries, 4, 0, '_Z_';
         }
 
         print_line($roundno, $boardno, $nc, $ec, $sc, $wc,

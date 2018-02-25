@@ -1,4 +1,4 @@
-set d = '2005-World/Women'
+set d = '2018-Open/Open'
 set m = 'Matches'
 set s = 'scores.txt'
 set n = 'names.txt'

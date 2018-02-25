@@ -6,11 +6,11 @@ use v5.10;
 
 use File::Fetch;
 
-my $rounds = 21;
-my $sprefix1 = '2005-World/Women/Rounds';
-my $sprefix2 = '2005-World/Women/Matches';
-my $tno = 528;
-my $tourney1 = 'http://www.worldbridge.org/Repository/tourn/Estoril.05/Asp/';
+my $rounds = 15;
+my $sprefix1 = '2018-Open/Open/Rounds';
+my $sprefix2 = '2018-Open/Open/Matches';
+my $tno = 1480;
+my $tourney1 = 'http://www.eurobridge.org/Repository/competitions/18Monaco/microSite/Asp/';
 
 # World Mind Games
 # ----------------
@@ -61,10 +61,13 @@ my $tourney1 = 'http://www.worldbridge.org/Repository/tourn/Estoril.05/Asp/';
 #
 # 2014: 1023, 1024, 1021
 # 'http://www.eurobridge.org/Repository/competitions/14Opatija/microSite/Asp/';
+#
+# 2018: 1480
+# 'http://www.eurobridge.org/Repository/competitions/18Monaco/microSite/Asp/';
 
 
 my $fetch1 = "$sprefix1/RoundTeams.asp";
-my $boarddetails = "Boarddetails.asp";
+my $boarddetails = "BoardDetails.asp";
 my $fetch2 = "$sprefix2/$boarddetails";
 my $tourney2 = "RoundTeams.asp?qtournid=$tno&qroundno=";
 my $prefix = "$tourney1$tourney2";

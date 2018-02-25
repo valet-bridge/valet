@@ -4,7 +4,7 @@ screen-scraping results from HTML files online.
 getfiles.pl gets files according to the naming used by the website
 (which you have to guess).
 
-names.pl extracts the player names into a file of names(you have to
+names.pl extracts the player names into a file of names (you have to
 parse the syntax).
 
 number.pl puts consecutive numbers in front of player names, turning
