@@ -231,6 +231,8 @@ void Hand::SetPlayResult(
   }
   else
     entry.defScore = sign * (bidIMPs - totalIMPs);
+
+  entry.result = res;
 }
 
 

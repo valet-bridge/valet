@@ -151,6 +151,8 @@ struct ValetEntryType
   float playScore[2];
   float leadScore[2];
   float defScore;
+
+  ResultType result;
 };
 
 
