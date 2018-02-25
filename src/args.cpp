@@ -31,7 +31,7 @@ struct optEntry
   unsigned numArgs;
 };
 
-#define VALET_NUM_OPTIONS 14
+#define VALET_NUM_OPTIONS 15
 
 const optEntry optList[VALET_NUM_OPTIONS] =
 {
@@ -44,6 +44,7 @@ const optEntry optList[VALET_NUM_OPTIONS] =
   {"l", "leads", 0},
   {"e", "extremes", 0},
   {"h", "hardround", 0},
+  {"t", "tableau", 1},
   {"c", "compensate", 0},
   {"o", "order", 1},
   {"a", "average", 0},
@@ -98,6 +99,9 @@ void Usage(
     "                   IMPs), round down and not to the nearest\n" <<
     "                   score.  So 379 rounds to 370, not to 380\n" <<
     "                   (default: no).\n" <<
+    "\n" <<
+    "-t, --tableau      Output a file of tableaux for each hand\n" <<
+    "                   to file argument (default: not set).\n" <<
     "\n" <<
     "-c, -compensate    Compensate overall score for the average strength\n" <<
     "                   of the specific opponents faced (default: no).\n" <<
@@ -186,6 +190,7 @@ void SetDefaults()
   options.leadFlag = false;
   options.datumFilter = false;
   options.datumHardRounding = false;
+  options.tableauFlag = false;
   options.compensateFlag = false;
   options.sort = VALET_SORT_OVERALL;
   options.averageFlag = false;
@@ -214,6 +219,8 @@ void PrintOptions()
     (options.datumFilter ? "true" : "false") << "\n";
   cout << setw(12) << "hardround" << setw(12) << 
     (options.datumHardRounding ? "true" : "false") << "\n";
+  cout << setw(12) << "tableau" << setw(12) << 
+    (options.datumHardRounding ? options.tableauFile : "false") << "\n";
   cout << setw(12) << "compensate" << setw(12) << 
     (options.compensateFlag ? "true" : "false") << "\n";
   cout << setw(12) << "order" << setw(12) << 
@@ -372,6 +379,11 @@ void ReadArgs(
 
       case 'h':
         options.datumHardRounding = true;
+        break;
+
+      case 't':
+        options.tableauFlag = true;
+        options.tableauFile = optarg;
         break;
 
       case 'c':

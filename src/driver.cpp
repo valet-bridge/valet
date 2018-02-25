@@ -42,6 +42,7 @@ int main(int argc, char * argv[])
   control.valet = VALET_SCORING_IAF;
   control.leadFlag = true;
   control.datumHardRounding = false;
+  control.tableauFlag = false;
   if ((errorCode = ValetSetControl(&control)) != RETURN_NO_FAULT)
   {
     ValetErrorMessage(errorCode, line);

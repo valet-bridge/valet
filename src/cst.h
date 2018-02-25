@@ -18,9 +18,19 @@ const char ValetPositions[4][6] =
   "North", "East", "South", "West"
 };
 
+const char ValetPositionsShort[4][6] =
+{
+  "N", "E", "S", "W"
+};
+
 const char ValetDenoms[5][9] =
 {
   "Spades", "Hearts", "Diamonds", "Clubs", "Notrump"
+};
+
+const char ValetDenomsShort[5][9] =
+{
+  "S", "H", "D", "C", "NT"
 };
 
 const char ValetMultipliers[3][3] =
@@ -102,6 +112,7 @@ struct OptionsType
   std::string directory;
   std::string nameFile;
   std::string scoresFile;
+  std::string tableauFile;
 
   bool roundFlag;
   unsigned roundFirst;
@@ -114,6 +125,7 @@ struct OptionsType
   bool datumFilter;
   bool datumHardRounding;
   bool compensateFlag;
+  bool tableauFlag;
 
   SortingType sort;
   bool averageFlag;

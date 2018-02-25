@@ -100,6 +100,7 @@ void STDCALL ValetInit()
   options.valet = static_cast<ScoringType>(VALET_SCORING_IAF);
   options.leadFlag = false;
   options.datumHardRounding = false;
+  options.tableauFlag = false;
 }
 
 
@@ -123,6 +124,7 @@ int STDCALL ValetSetControl(
   options.leadFlag = control->leadFlag;
 
   options.datumHardRounding = control->datumHardRounding;
+  options.tableauFlag = control->tableauFlag;
 
   return RETURN_NO_FAULT;
 }

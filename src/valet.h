@@ -121,6 +121,7 @@ struct ControlType
   unsigned valet;
   bool leadFlag;
   bool datumHardRounding;
+  bool tableauFlag;
 };
 
 

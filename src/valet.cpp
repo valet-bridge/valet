@@ -11,6 +11,7 @@
 
 
 #include <iostream>
+#include <fstream>
 
 #include "cst.h"
 #include "args.h"
@@ -44,6 +45,17 @@ int main(int argc, char * argv[])
   if (! ReadScoresFile(options.directory + "/" + options.scoresFile))
     return(0);
 
+  fstream tableauStream;
+  if (options.tableauFlag)
+  {
+    tableauStream.open(options.tableauFile, fstream::out);
+    if (! tableauStream.is_open())
+    {
+      cerr << "Can't write to " << options.tableauFile << "\n";
+      exit(1);
+    }
+  }
+
   unsigned numEntries = 16;
   vector<ValetEntryType> entries(numEntries);
   for (it_type it = handList.begin(); it != handList.end(); it++)
@@ -58,11 +70,18 @@ int main(int argc, char * argv[])
     entries = it->second.CalculateScores();
     for (unsigned i = 0; i < entries.size(); i++)
       scores.AddEntry(entries[i]);
+    
+    if (options.tableauFlag)
+      PrintEntryTableau(entries, it->second.GetBoardNumber(),
+        tableauStream);
   }
 
 
   if (options.compensateFlag)
     scores.Compensate();
+
+  if (options.tableauFlag)
+    tableauStream.close();
 
   scores.Normalize();
   scores.Sort(options.sort);
