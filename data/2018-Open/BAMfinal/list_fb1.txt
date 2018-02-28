@@ -1,0 +1,6 @@
+                                                       |             |              |           Play           |        Declaring         |                Defending              |
+Players                                                |  No.     MP |   Bid   Play |   Declaring    Defending |   Declarer1    Declarer2 |       Lead1        Lead2         Play |
+SCHNEIDER Michael - SMYKALLA Gisela                    |   88   50.6 |  51.9   48.7 |  47.7 ( 41)   43.3 ( 47) |  48.4 ( 24)   46.7 ( 17) |  49.1 ( 21)   49.6 ( 26)   50.2 ( 47) |
+ELLERBECK Max - HEIN Soren                             |   88   50.0 |  51.8   48.3 |  48.4 ( 44)   47.8 ( 44) |  48.6 ( 14)   48.3 ( 30) |  49.6 ( 22)   48.0 ( 22)   49.3 ( 44) |
+NNN999 - NNN999                                        | 13262   50.0 |  50.0   50.0 |  50.0 (6454)   50.1 (6448) |  50.1 (2582)   49.9 (3872) |  50.0 (3245)   50.1 (3203)   50.0 (6448) |
+
