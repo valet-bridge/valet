@@ -6,10 +6,10 @@ use v5.10;
 
 use File::Fetch;
 
-my $rounds = 15;
-my $sprefix1 = '2018-Open/Open/Rounds';
-my $sprefix2 = '2018-Open/Open/Matches';
-my $tno = 1480;
+my $rounds = 50;
+my $sprefix1 = '2018-Open/BAMFA1/Rounds';
+my $sprefix2 = '2018-Open/BAMFA1/Matches';
+my $tno = 1493;
 my $tourney1 = 'http://www.eurobridge.org/Repository/competitions/18Monaco/microSite/Asp/';
 
 # World Mind Games
@@ -72,7 +72,7 @@ my $fetch2 = "$sprefix2/$boarddetails";
 my $tourney2 = "RoundTeams.asp?qtournid=$tno&qroundno=";
 my $prefix = "$tourney1$tourney2";
 
-for my $r (1 .. $rounds)
+for my $r (26 .. $rounds)
 {
   # First get the round overview.
   say "Round $r";

@@ -8,7 +8,6 @@ my %names;
 my $namefile = shift;
 read_names($namefile);
 
-my @entries;
 
 my ($no, $eo, $so, $wo, $nc, $ec, $sc, $wc);
 
@@ -18,9 +17,19 @@ for my $fname (@ARGV)
 {
   # say "File $fname";
   open my $fh, "<$fname" or die "Can't open $fname";
+  my @entries;
 
   my @players = ();
   my $players_seen = 0;
+
+  $no = 999;
+  $eo = 999;
+  $so = 999;
+  $wo = 999;
+  $nc = 999;
+  $ec = 999;
+  $sc = 999;
+  $wc = 999;
 
   my $boardno = 0;
   my $line;
@@ -40,7 +49,7 @@ for my $fname (@ARGV)
       push @players, $line;
       if (++$players_seen == 8)
       {
-        $no = $names{$players[0]} || die "$players[0]";
+        $no = $names{$players[0]} || die "$fname: $players[0]";
         $eo = $names{$players[3]} || die "$players[3]";
         $so = $names{$players[6]} || die "$players[6]";
         $wo = $names{$players[2]} || die "$players[2]";
@@ -59,7 +68,7 @@ for my $fname (@ARGV)
       my $newno = $1;
       if ($boardno != 0)
       {
-        print_line($roundno, $boardno, $no, $eo, $so, $wo,
+        print_line($fname, $roundno, $boardno, $no, $eo, $so, $wo,
 	  $entries[0], $entries[1], $entries[3], $entries[2]);
 
         if ($entries[0] eq 'PASS' || $entries[0] eq 'Pass')
@@ -75,7 +84,7 @@ for my $fname (@ARGV)
           }
         }
 
-        print_line($roundno, $boardno, $nc, $ec, $sc, $wc,
+        print_line($fname, $roundno, $boardno, $nc, $ec, $sc, $wc,
 	  $entries[5], $entries[6], $entries[8], $entries[7]);
         undef @entries;
       }
@@ -86,7 +95,7 @@ for my $fname (@ARGV)
     {
       if ($line =~ /\<\/table\>/)
       {
-        print_line($roundno, $boardno, $no, $eo, $so, $wo,
+        print_line($fname, $roundno, $boardno, $no, $eo, $so, $wo,
 	  $entries[0], $entries[1], $entries[3], $entries[2]);
 
         if ($entries[0] eq 'PASS' || $entries[0] eq 'Pass')
@@ -95,7 +104,7 @@ for my $fname (@ARGV)
           splice @entries, 4, 0, '_Z_';
         }
 
-        print_line($roundno, $boardno, $nc, $ec, $sc, $wc,
+        print_line($fname, $roundno, $boardno, $nc, $ec, $sc, $wc,
 	  $entries[5], $entries[6], $entries[8], $entries[7]);
         last;
       }
@@ -144,13 +153,13 @@ exit;
 
 sub print_line
 {
-  my ($round, $no, $p0, $p1, $p2, $p3, $e0, $e1, $e2, $e3) = @_;
+  my ($fname, $round, $no, $p0, $p1, $p2, $p3, $e0, $e1, $e2, $e3) = @_;
 
   if (! defined $e0)
   {
     # say "e0";
     # return;
-    die "e0";
+    die "$fname: e0";
   }
 
   if ($e0 eq 'PASS' || $e0 eq 'PAS' || $e0 eq 'Pass')
@@ -186,7 +195,7 @@ sub print_line
     {
 if (! defined $p0)
 {
-  die "p0";
+  die "$fname: $p0";
 }
       $e3 =~ s/10$/T/;
       print "$round|$no|$p0|$p1|$p2|$p3|$e0|$e1|$e2|$e3\n";
