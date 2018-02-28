@@ -19,6 +19,7 @@ using namespace std;
 #include "misc.h"
 
 extern Pairs pairs;
+extern OptionsType options;
 
 
 void PrintResult(
@@ -100,7 +101,7 @@ string  ResultKey(const ResultType& res)
   stringstream ss;
   ss << res.level << ValetDenomsShort[res.denom] <<
     ValetMultipliers[res.multiplier] << ", " <<
-    ValetPositions[res.declarer] << ", " <<
+    ValetPositionsShort[res.declarer] << ", " <<
     ValetDenomsShort[res.leadDenom] << ", " << 
     res.tricks;
 
@@ -110,7 +111,7 @@ string  ResultKey(const ResultType& res)
 
 void PrintEntryTableau(
   const vector<ValetEntryType>& entries,
-  const unsigned bno,
+  const string& boardtag,
   ostream& oss)
 {
   struct CumType
@@ -124,7 +125,6 @@ void PrintEntryTableau(
 
   map<string, CumType> cum;
 
-  // TODO Matchpoints
   int prec;
   if (1)
     prec = 2;
@@ -168,7 +168,47 @@ void PrintEntryTableau(
     }
   }
 
-  oss << "DECLARER, Board " << bno << "\n\n";
+  if (options.valet == VALET_MATCHPOINTS)
+  {
+    // TODO Matchpoints
+    // Loop over cum keys
+    // 100 * (x+1)/2 for overall, bid, lead, def
+    // Negative is 51% / 49%, so 100 - 51, add 2*50.
+    const unsigned total = cum.size();
+
+    for (auto& cumit: cum)
+    {
+      const string key = cumit.first;
+      auto& celem = cumit.second;
+      const unsigned n = celem.count;
+
+      celem.overall /= n;
+      celem.bidScore /= n;
+      celem.leadScore /= n;
+      celem.defScore /= n;
+
+      celem.overall = 100.f * (celem.overall + 1.f) / 2.f;
+      celem.bidScore = 100.f * (celem.bidScore + 1.f) / 2.f;
+      celem.leadScore = 100.f * (celem.leadScore + 1.f) / 2.f;
+      celem.defScore = 100.f * (celem.defScore + 1.f) / 2.f;
+    }
+  }
+  else
+  {
+    for (auto& cumit: cum)
+    {
+      const string key = cumit.first;
+      auto& celem = cumit.second;
+      const unsigned n = celem.count;
+
+      celem.overall /= n;
+      celem.bidScore /= n;
+      celem.leadScore /= n;
+      celem.defScore /= n;
+    }
+  }
+
+  oss << "DECLARER, Board " << boardtag << "\n\n";
 
   oss << setw(16) << left << "Contract";
   oss << setw(8) << right << "Count";
@@ -176,7 +216,8 @@ void PrintEntryTableau(
   oss << setw(8) << "Bid";
   oss << setw(8) << "Play" << "\n";
 
-  // TODO Only IMPs so far.  Always shows lead.  Ditto below.
+  const float MP_OFFSET = (options.valet == VALET_MATCHPOINTS ?
+    100.f : 0.f);
 
   for (auto& cumit: cum)
   {
@@ -185,13 +226,13 @@ void PrintEntryTableau(
 
     oss << left << setw(16) << cumit.first <<
       setw(8) << right << n  <<
-      setw(8) << fixed << setprecision(prec) << celem.overall / n <<
-      setw(8) << fixed << setprecision(prec) << celem.bidScore / n <<
+      setw(8) << fixed << setprecision(prec) << celem.overall <<
+      setw(8) << fixed << setprecision(prec) << celem.bidScore <<
       setw(8) << fixed << setprecision(prec) << 
-        -(celem.leadScore + celem.defScore) / n << "\n";
+        1.5f * MP_OFFSET -(celem.leadScore + celem.defScore) << "\n";
   }
 
-  oss << "\nDEFENDER, Board " << bno << "\n\n";
+  oss << "\nDEFENDER, Board " << boardtag << "\n\n";
 
   oss << setw(16) << left << "Contract";
   oss << setw(8) << right << "Count";
@@ -207,10 +248,12 @@ void PrintEntryTableau(
 
     oss << left << setw(16) << cumit.first <<
       setw(8) << right << n  <<
-      setw(8) << -celem.overall / n <<
-      setw(8) << fixed << setprecision(prec) << -celem.bidScore / n <<
-      setw(8) << fixed << setprecision(prec) << celem.leadScore / n <<
-      setw(8) << fixed << setprecision(prec) << celem.defScore / n << "\n";
+      setw(8) << MP_OFFSET -celem.overall <<
+      setw(8) << fixed << setprecision(prec) << 
+        MP_OFFSET -celem.bidScore <<
+      setw(8) << fixed << setprecision(prec) << celem.leadScore <<
+      setw(8) << fixed << setprecision(prec) << celem.defScore << "\n";
   }
+  oss << "\n";
 }
 

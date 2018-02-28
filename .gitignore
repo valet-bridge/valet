@@ -30,3 +30,6 @@
 *.app
 *.swp
 *.bak
+
+*.asp
+*.gz

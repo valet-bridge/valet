@@ -72,8 +72,7 @@ int main(int argc, char * argv[])
       scores.AddEntry(entries[i]);
     
     if (options.tableauFlag)
-      PrintEntryTableau(entries, it->second.GetBoardNumber(),
-        tableauStream);
+      PrintEntryTableau(entries, it->first, tableauStream);
   }
 
 

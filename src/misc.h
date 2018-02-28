@@ -24,7 +24,7 @@ void PrintEntry(
 
 void PrintEntryTableau(
   const vector<ValetEntryType>& entries,
-  const unsigned boardno,
+  const string& boardtag,
   std::ostream& oss = std::cout);
   
 #endif

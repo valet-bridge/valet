@@ -491,6 +491,11 @@ void Scores::PrintText(
 
   Scores::PrintTextHeader();
 
+  // TODO: Copy math to CSV matchpoint output as well.
+
+  const float MP_OFFSET = 
+    (options.valet == VALET_MATCHPOINTS ? 50.f : 0.f);
+
   for (unsigned pno = 1; pno < length; pno++)
   {
     const CumulType& c = pairScores[pno];
@@ -503,10 +508,13 @@ void Scores::PrintText(
       setw(7) << fixed << setprecision(prec) << 
         c.avgPerChance[VALET_OVERALL] <<  " | " <<
       setw(5) << fixed << setprecision(prec) << 
-        c.avgPerChance[VALET_BID] << 
+        c.avgPerChance[VALET_BID] <<
       setw(7) << fixed << setprecision(prec) << 
-        c.avgPerChance[VALET_OVERALL] - c.avgPerChance[VALET_BID] << " | ";
+        MP_OFFSET +
+        c.avgPerChance[VALET_OVERALL] - 
+        c.avgPerChance[VALET_BID] << " | ";
 
+    // Declarer score.
     unsigned n = c.num[VALET_PLAY1] + c.num[VALET_PLAY2];
     if (n > 0)
       Scores::PrintTextPair(
@@ -516,18 +524,22 @@ void Scores::PrintText(
     else
       Scores::PrintTextPair(0., 0, prec);
 
+    // Defender score.
     cout << "  ";
     n = c.num[VALET_DEF];
     if (n)
-      Scores::PrintTextPair(
+    {
+      Scores::PrintTextPair(-MP_OFFSET +
         (c.avgPerChance[VALET_LEAD1] * c.num[VALET_PLAY1] +
          c.avgPerChance[VALET_LEAD2] * c.num[VALET_PLAY2] +
          c.avgPerChance[VALET_DEF] * c.num[VALET_DEF]) / n, n, prec);
+    }
     else
       Scores::PrintTextPair(0., 0, prec);
 
     cout << " | ";
 
+    // Individual declarer scores.
     Scores::PrintTextPair(c.avgPerChance[VALET_PLAY1], 
       c.num[VALET_PLAY1], prec);
     cout << "  ";
