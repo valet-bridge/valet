@@ -125,6 +125,7 @@ struct OptionsType
   bool datumFilter;
   bool datumHardRounding;
   bool compensateFlag;
+  bool cloudFlag;
   bool tableauFlag;
 
   SortingType sort;

@@ -170,10 +170,6 @@ void PrintEntryTableau(
 
   if (options.valet == VALET_MATCHPOINTS)
   {
-    // TODO Matchpoints
-    // Loop over cum keys
-    // 100 * (x+1)/2 for overall, bid, lead, def
-    // Negative is 51% / 49%, so 100 - 51, add 2*50.
     const unsigned total = cum.size();
 
     for (auto& cumit: cum)

@@ -580,20 +580,31 @@ vector<ValetEntryType> Hand::CalculateScores()
 
       const ResultType& res = results[i];
 
-      // TODO: Choose based on input argument.
-      float IAFs = Hand::GetOverallScore(rawScore, rawScore[i]);
-      // float IAFs = Hand::GetOverallScoreAgainstCloud(
-        // rawScore[i], i, vulList, resDeclMatrix, 0.);
+      float IAFs;
+      if (options.cloudFlag)
+      {
+        IAFs = Hand::GetOverallScoreAgainstCloud(
+          rawScore[i], i, vulList, resDeclMatrix, 0.);
+      }
+      else
+      {
+        IAFs = Hand::GetOverallScore(rawScore, rawScore[i]);
+      }
 
       if (res.level == 0)
         Hand::SetPassout(res, IAFs, entry);
       else
       {
-        // TODO: Choose based on input argument.
-        bidIAF = GetBiddingScore(rawScore, i, vulList[i], 
-          resDeclMatrix[res.declarer], IAFs);
-        // bidIAF = GetCloudBiddingScore(i, vulList, 
-          // resDeclMatrix, IAFs);
+        if (options.cloudFlag)
+        {
+          bidIAF = GetCloudBiddingScore(i, vulList, 
+            resDeclMatrix, IAFs);
+        }
+        else
+        {
+          bidIAF = GetBiddingScore(rawScore, i, vulList[i], 
+            resDeclMatrix[res.declarer], IAFs);
+        }
 
         if (options.leadFlag && res.leadRank > 0)
         {

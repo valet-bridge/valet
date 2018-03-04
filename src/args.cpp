@@ -31,7 +31,7 @@ struct optEntry
   unsigned numArgs;
 };
 
-#define VALET_NUM_OPTIONS 15
+#define VALET_NUM_OPTIONS 16
 
 const optEntry optList[VALET_NUM_OPTIONS] =
 {
@@ -45,6 +45,7 @@ const optEntry optList[VALET_NUM_OPTIONS] =
   {"e", "extremes", 0},
   {"h", "hardround", 0},
   {"t", "tableau", 1},
+  {"x", "nocloud", 0},
   {"c", "compensate", 0},
   {"o", "order", 1},
   {"a", "average", 0},
@@ -99,6 +100,9 @@ void Usage(
     "                   IMPs), round down and not to the nearest\n" <<
     "                   score.  So 379 rounds to 370, not to 380\n" <<
     "                   (default: no).\n" <<
+    "\n" <<
+    "-x, --nocloud      Use the simpler, but mathematically less\n" <<
+    "                   satisfying Valet score (default: not set).\n" <<
     "\n" <<
     "-t, --tableau      Output a file of tableaux for each hand\n" <<
     "                   to file argument (default: not set).\n" <<
@@ -190,6 +194,7 @@ void SetDefaults()
   options.leadFlag = false;
   options.datumFilter = false;
   options.datumHardRounding = false;
+  options.cloudFlag = true;
   options.tableauFlag = false;
   options.compensateFlag = false;
   options.sort = VALET_SORT_OVERALL;
@@ -219,6 +224,8 @@ void PrintOptions()
     (options.datumFilter ? "true" : "false") << "\n";
   cout << setw(12) << "hardround" << setw(12) << 
     (options.datumHardRounding ? "true" : "false") << "\n";
+  cout << setw(12) << "cloud" << setw(12) << 
+    (options.cloudFlag ? "true" : "false") << "\n";
   cout << setw(12) << "tableau" << setw(12) << 
     (options.datumHardRounding ? options.tableauFile : "false") << "\n";
   cout << setw(12) << "compensate" << setw(12) << 
@@ -379,6 +386,10 @@ void ReadArgs(
 
       case 'h':
         options.datumHardRounding = true;
+        break;
+
+      case 'x':
+        options.cloudFlag = false;
         break;
 
       case 't':
