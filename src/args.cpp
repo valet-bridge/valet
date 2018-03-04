@@ -183,7 +183,7 @@ int GetNextArgToken(
 
 void SetDefaults()
 {
-  options.valet = VALET_IMPS;
+  options.valet = VALET_IMPS_ACROSS_FIELD;
   options.directory = ".";
   options.nameFile = "names.txt";
   options.scoresFile = "scores.txt";
