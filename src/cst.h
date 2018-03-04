@@ -12,6 +12,8 @@
 #include <string>
 #include <sstream>
 
+using namespace std;
+
 
 const char ValetPositions[4][6] =
 {
@@ -61,9 +63,9 @@ enum ScoringType
 struct ScoringPairType
 {
   ScoringType scoring;
-  std::string arg;
-  std::string explanation;
-  std::string header;
+  string arg;
+  string explanation;
+  string header;
 };
 
 const ScoringPairType scoringTags[] =
@@ -89,7 +91,7 @@ enum SortingType
 struct sortPairType
 {
   SortingType sort;
-  std::string str;
+  string str;
 };
 
 const sortPairType sortingTags[] =
@@ -109,10 +111,10 @@ struct OptionsType
 {
   ScoringType valet;
 
-  std::string directory;
-  std::string nameFile;
-  std::string scoresFile;
-  std::string tableauFile;
+  string directory;
+  string nameFile;
+  string scoresFile;
+  string tableauFile;
 
   bool roundFlag;
   unsigned roundFirst;
@@ -132,16 +134,16 @@ struct OptionsType
   bool averageFlag;
 
   FormatType format;
-  std::string separator;
+  string separator;
 };
 
 
 struct ResultType
 {
-  std::string north;
-  std::string east;
-  std::string south;
-  std::string west;
+  string north;
+  string east;
+  string south;
+  string west;
   unsigned level;
   unsigned denom;
   unsigned multiplier;
@@ -173,7 +175,7 @@ struct ErrorType
 {
   bool flag;
   int no;
-  std::stringstream message;
+  stringstream message;
 };
 
 

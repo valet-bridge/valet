@@ -11,11 +11,14 @@
 
 #include <string>
 
+using namespace std;
+
+
 bool ReadNameFile(
-  const std::string nameFile);
+  const string& nameFile);
 
 bool ReadScoresFile(
-  const std::string scoresFile);
+  const string& scoresFile);
 
 #endif
 

@@ -415,7 +415,7 @@ void Scores::PrintCSVPair(
   const float average,
   const unsigned no,
   const int prec,
-  const string s) const
+  const string& s) const
 {
   if (no > 0)
     cout << setprecision(prec) << average << s << no << s;

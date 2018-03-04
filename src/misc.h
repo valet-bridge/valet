@@ -16,16 +16,16 @@ using namespace std;
 
 void PrintResult(
   const ResultType& res,
-  std::ostream& oss = std::cout);
+  ostream& oss = std::cout);
 
 void PrintEntry(
   const ValetEntryType& entry,
-  std::ostream& oss = std::cout);
+  ostream& oss = std::cout);
 
 void PrintEntryTableau(
   const vector<ValetEntryType>& entries,
   const string& boardtag,
-  std::ostream& oss = std::cout);
+  ostream& oss = std::cout);
   
 #endif
 

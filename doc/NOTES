@@ -2,10 +2,28 @@
 
 program.cpp
 -------
-Debug cloud score
+Debug cloud score.
+What works in Example 7:
+- IAF, no cloud
+- IAF, cloud
+- Datum, no cloud
+
+What doesn't work:
+- Datum, cloud (equals no cloud)
+- IAF, cloud on the big examples (infinite loop?)
+- IAF, cloud outputs a bunch of debug info
+
+What might work:
+- Lead in the context of cloud IAF (or datum)
+
 In tableau, don't print lead score and text tag unless requested
+
+In tableau and in aggregate scoring table:
+- Output "fair" and "luck" columns as well
+- Play becomes relative to "fair", not to "Butler"
+
+Make PrintText more modular
 Fix PrintCSV (TODO tag)
-Make it look more like C++
 
 data
 ----

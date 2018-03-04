@@ -12,15 +12,17 @@
 #include <string>
 #include "cst.h"
 
+using namespace std;
+
 template <class ContainerT>
 
 void tokenize(
-  const std::string& str,
+  const string& str,
   ContainerT& tokens,
-  const std::string& delimiters);
+  const string& delimiters);
 
 int ParseScoreLine(
-  const std::string line,
+  const string& line,
   ResultType& res,
   unsigned& rno,
   unsigned& bno,

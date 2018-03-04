@@ -45,7 +45,7 @@ void Pairs::Reset()
 
 
 bool Pairs::TagExists(
-  const string tag)
+  const string& tag)
 {
   map<string, string>::iterator it = tagToPlayerName.find(tag);
   return (it != tagToPlayerName.end());
@@ -53,8 +53,8 @@ bool Pairs::TagExists(
 
 
 bool Pairs::AddPlayer(
-  const string tag,
-  const string name)
+  const string& tag,
+  const string& name)
 {
   // Don't reassign a name.
   if (Pairs::TagExists(tag))
@@ -68,7 +68,7 @@ bool Pairs::AddPlayer(
 
 
 string Pairs::GetPlayerName(
-  const string tag)
+  const string& tag)
 {
   if (Pairs::TagExists(tag))
     return tagToPlayerName[tag];
@@ -80,7 +80,7 @@ string Pairs::GetPlayerName(
 
 
 bool Pairs::PairExists(
-  const string pair)
+  const string& pair)
 {
   map<string, unsigned>::iterator it = playersToPairNo.find(pair);
   return (it != playersToPairNo.end());
@@ -88,8 +88,8 @@ bool Pairs::PairExists(
 
 
 int Pairs::GetPairNumber(
-  const string tag1,
-  const string tag2)
+  const string& tag1,
+  const string& tag2)
 {
   if (! TagExists(tag1) || ! TagExists(tag2))
     return 0;
@@ -132,8 +132,8 @@ int Pairs::GetPairNumber(
 
 
 string Pairs::GetPairName(
-  const string tag1,
-  const string tag2)
+  const string& tag1,
+  const string& tag2)
 {
   if (! TagExists(tag1) || ! TagExists(tag2))
     return 0;

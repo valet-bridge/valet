@@ -309,7 +309,7 @@ float Hand::GetDatumBidding(
 
 
 float Hand::GetOverallScore(
-  const vector<int> rawScore,
+  const vector<int>& rawScore,
   const int score)
 {
   // For a given score, we calculate the average number of IMPs/MPs
@@ -342,7 +342,7 @@ float Hand::GetOverallScore(
 
 
 float Hand::GetBiddingScore(
-  const vector<int> rawScore,
+  const vector<int>& rawScore,
   const unsigned no,
   const unsigned vul,
   const unsigned resMatrix[5][14],

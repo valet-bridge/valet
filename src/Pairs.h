@@ -18,34 +18,36 @@
 
 #include "cst.h"
 
+using namespace std;
+
 
 class Pairs
 {
   private:
 
-    std::map<std::string, std::string> tagToPlayerName;
+    map<string, string> tagToPlayerName;
 
-    std::map<std::string, unsigned> playersToPairNo;
+    map<string, unsigned> playersToPairNo;
 
-    std::vector<std::string> pairNoToPairName;
+    vector<string> pairNoToPairName;
 
     struct pairTags
     {
-      std::string tag1;
-      std::string tag2;
+      string tag1;
+      string tag2;
     };
 
-    std::vector<pairTags> pairNoToPairTags;
+    vector<pairTags> pairNoToPairTags;
 
     unsigned numPairs;
 
     unsigned listNo;
 
     bool PairExists(
-      const std::string pair);
+      const string& pair);
 
-    std::string PadString(
-      const std::string& s,
+    string PadString(
+      const string& s,
       const unsigned width = 32);
 
 
@@ -60,14 +62,14 @@ class Pairs
     // Returns false if the player already exists.
 
     bool AddPlayer(
-      const std::string tag,
-      const std::string name);
+      const string& tag,
+      const string& name);
 
-    std::string GetPlayerName(
-      const std::string tag);
+    string GetPlayerName(
+      const string& tag);
 
     bool TagExists(
-      const std::string tag);
+      const string& tag);
 
     // May return a negative number, which means that the real pair 
     // number is positive and that the pair tags were in the opposite 
@@ -80,24 +82,24 @@ class Pairs
     // Returns 0 as an error (at least one tag does not exist).
 
     int GetPairNumber(
-      const std::string tag1,
-      const std::string tag2);
+      const string& tag1,
+      const string& tag2);
 
     // Returns "" if the pair does not exist.
 
-    std::string GetPairName(
-      const std::string tag1,
-      const std::string tag2);
+    string GetPairName(
+      const string& tag1,
+      const string& tag2);
 
     void GetPairTags(
       const unsigned pno,
-      std::string& tag1,
-      std::string& tag2);
+      string& tag1,
+      string& tag2);
 
-    std::string GetPairName(
+    string GetPairName(
       const unsigned pno);
 
-    std::string GetPairNamePadded(
+    string GetPairNamePadded(
       const unsigned pno,
       const unsigned width = 32);
       

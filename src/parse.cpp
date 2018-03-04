@@ -30,7 +30,7 @@ bool TokenToUnsigned(
   const string token,
   unsigned lowerLimit,
   unsigned upperLimit,
-  const string err,
+  const string& err,
   unsigned& res);
 
 bool CharToPlayer(
@@ -50,7 +50,7 @@ bool CharToRank(
   unsigned& r);
 
 bool LineToResult(
-  const vector<string> tokens,
+  const vector<string>& tokens,
   ResultType& res,
   unsigned& rno,
   unsigned& bno,
@@ -96,7 +96,7 @@ bool TokenToUnsigned(
   const string token,
   unsigned lowerLimit,
   unsigned upperLimit,
-  const string err,
+  const string& err,
   unsigned& res)
 {
   char *pend;
@@ -242,7 +242,7 @@ bool CharToRank(
 
 
 bool LineToResult(
-  const vector<string> tokens,
+  const vector<string>& tokens,
   ResultType& res,
   unsigned& rno,
   unsigned& bno,
@@ -422,7 +422,7 @@ bool LineToResult(
 
 
 int ParseScoreLine(
-  const string line,
+  const string& line,
   ResultType& res,
   unsigned &rno,
   unsigned &bno,

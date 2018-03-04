@@ -109,7 +109,7 @@ class Scores
       const float average,
       const unsigned no,
       const int prec,
-      const string s) const;
+      const string& s) const;
 
     void PrintTextHeader() const;
 

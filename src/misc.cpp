@@ -93,7 +93,7 @@ void PrintEntry(
 }
 
 
-string  ResultKey(const ResultType& res)
+string ResultKey(const ResultType& res)
 {
   if (res.level == 0)
     return "pass";

@@ -48,11 +48,11 @@ class Hand
       const int datum);
 
     float GetOverallScore(
-      const vector<int> rawScore,
+      const vector<int>& rawScore,
       const int score);
 
     float GetBiddingScore(
-      const vector<int> rawScore,
+      const vector<int>& rawScore,
       const unsigned no,
       const unsigned vul,
       const unsigned resMatrix[5][14],

@@ -39,7 +39,7 @@ string MakeHandTag(
 
 
 bool ReadNameFile(
-  const string nameFile)
+  const string& nameFile)
 {
   ifstream fname(nameFile.c_str());
   if (! fname.is_open())
@@ -86,7 +86,7 @@ string MakeHandTag(
 
 
 bool ReadScoresFile(
-  const string scoresFile)
+  const string& scoresFile)
 {
   ifstream fname(scoresFile.c_str());
   if (! fname.is_open())
