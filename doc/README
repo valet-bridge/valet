@@ -1,0 +1,20 @@
+This directory contains a number of documents describing or using
+the Valet score in various ways.
+
+In this directory, the Principles document is a quite complete
+exposition of theory and examples.  (The spreadsheet contains two
+of the tables that are included in the document itself.)
+
+The introductory article is a short summary to whet the appetite.
+
+The "others" directory contains articles and documents written by
+others.  In particular, Thorvald Aagard has applied the Valet score
+to some Danish national-team players.  Michele Cammarata has
+translated the introductory article into Italian -- this was published
+in the Italian bridge magazine.  Michele also wrote a somewhat
+mathematical article that helped both of us to arrive a the final
+mathematical formulation of the Valet score, described in the 
+Appendix of the Principles document.
+
+The "program" directory contains instructions for those who want
+to use the Valet program, either directly or as a DLL.
