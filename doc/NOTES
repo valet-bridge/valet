@@ -20,10 +20,6 @@ In tableau and in aggregate scoring table:
 - Output "fair" and "luck" columns as well
 - Play becomes relative to "fair", not to "Butler"
 
-Make PrintText more modular
-Fix PrintCSV (TODO tag)
-
-Clean out the cout comments in Hands.cpp
 Grep for TODO
 
 data

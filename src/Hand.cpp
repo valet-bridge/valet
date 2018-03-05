@@ -409,27 +409,22 @@ float Hand::GetOverallScoreAgainstCloud(
     ResultType oppArtif = results[i];
     unsigned declOpp = oppArtif.declarer;
     unsigned dOpp = oppArtif.denom;
-// cout << "  i " << i << " d " << dOpp << "\n";
     unsigned count = 0;
     float subResult = 0.;
 
     for (unsigned tOpp = 0; tOpp <= 13; tOpp++)
     {
-// cout << "    t  " << tOpp << " : " << 
-  // resDeclMatrix[declOpp][dOpp][dOpp] << "\n";
       if (resDeclMatrix[declOpp][dOpp][tOpp] == 0)
         continue;
 
       oppArtif.tricks = tOpp;
       int artifOppScore = CalculateRawScore(oppArtif, vulList[i], tOpp);
-// cout << "    t " << tOpp << ": artif " << artifOppScore << "\n";
 
       subResult += resDeclMatrix[declOpp][dOpp][tOpp] * 
         static_cast<float>((*fptr)(myRawScore - artifOppScore));
       
       count += resDeclMatrix[declOpp][dOpp][tOpp];
     }
-// cout << "  i " << i << ": sub " << subResult << " count " << count << "\n";
 
     if (count > 0)
       bidResult += subResult / count;
@@ -453,7 +448,6 @@ float Hand::GetCloudBiddingScore(
   ResultType resArtif = results[no];
   unsigned decl = resArtif.declarer;
   unsigned d = resArtif.denom;
-// cout << "no " << no << " d " << d << "\n";
   for (unsigned t = 0; t <= 13; t++)
   {
     if (resDeclMatrix[decl][d][t] == 0)
@@ -467,16 +461,9 @@ float Hand::GetCloudBiddingScore(
 
     float b = resDeclMatrix[decl][d][t] * Hand::GetOverallScoreAgainstCloud(
         artifScore, no, vulList, resDeclMatrix, overallResult);
-// cout << "no " << no << " asc " << artifScore << " b " << b << " c " <<
-  // resDeclMatrix[decl][d][t] << "\n";
     bidResult += b;
     count += resDeclMatrix[decl][d][t];
   }
-// if (count)
-  // cout << "no overall " << bidResult << " / " << count << " = " <<
-    // bidResult / count << " \n\n";
-// else
-  // cout << "No opps\n\n";
 
   // Special case:  If we're the only ones to play in a denomination,
   // we somewhat arbitrarily assign the full score to the bidding.
