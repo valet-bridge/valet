@@ -2,16 +2,7 @@
 
 program.cpp
 -------
-Debug cloud score.
-What works in Example 7:
-- IAF, no cloud
-- IAF, cloud
-- Datum, no cloud
-
-What doesn't work:
 - Datum, cloud (equals no cloud)
-- IAF, cloud on the big examples (infinite loop?)
-- IAF, cloud outputs a bunch of debug info
 
 What might work:
 - Lead in the context of cloud IAF (or datum)
@@ -19,8 +10,6 @@ What might work:
 In tableau and in aggregate scoring table:
 - Output "fair" and "luck" columns as well
 - Play becomes relative to "fair", not to "Butler"
-
-Grep for TODO
 
 data
 ----
@@ -31,6 +20,3 @@ document
 --------
 Include results for cloud score and tables at the end
 At least 50 hands played
-
-Say that ej is not the same as in Michele
-m11 becomes e11
