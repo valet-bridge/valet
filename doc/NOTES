@@ -16,14 +16,15 @@ What doesn't work:
 What might work:
 - Lead in the context of cloud IAF (or datum)
 
-In tableau, don't print lead score and text tag unless requested
-
 In tableau and in aggregate scoring table:
 - Output "fair" and "luck" columns as well
 - Play becomes relative to "fair", not to "Butler"
 
 Make PrintText more modular
 Fix PrintCSV (TODO tag)
+
+Clean out the cout comments in Hands.cpp
+Grep for TODO
 
 data
 ----
@@ -33,3 +34,7 @@ Publish version 1.1
 document
 --------
 Include results for cloud score and tables at the end
+At least 50 hands played
+
+Say that ej is not the same as in Michele
+m11 becomes e11

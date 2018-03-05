@@ -22,7 +22,7 @@ void PrintEntry(
   const ValetEntryType& entry,
   ostream& oss = std::cout);
 
-void PrintEntryTableau(
+void PrintTableauText(
   const vector<ValetEntryType>& entries,
   const string& boardtag,
   ostream& oss = std::cout);

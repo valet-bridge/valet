@@ -21,6 +21,15 @@ using namespace std;
 extern Pairs pairs;
 extern OptionsType options;
 
+struct CumType
+{
+  unsigned count;
+  float overall;
+  float bidScore;
+  float leadScore;
+  float defScore;
+};
+
 
 void PrintResult(
   const ResultType& res,
@@ -109,28 +118,10 @@ string ResultKey(const ResultType& res)
 }
 
 
-void PrintEntryTableau(
+void AccumulateTableau(
   const vector<ValetEntryType>& entries,
-  const string& boardtag,
-  ostream& oss)
+  map<string, CumType>& cum)
 {
-  struct CumType
-  {
-    unsigned count;
-    float overall;
-    float bidScore;
-    float leadScore;
-    float defScore;
-  };
-
-  map<string, CumType> cum;
-
-  int prec;
-  if (1)
-    prec = 2;
-  else
-    prec = 2;
-
   for (auto& entry: entries)
   {
     const ResultType& res = entry.result;
@@ -167,7 +158,12 @@ void PrintEntryTableau(
       cum[key].defScore += entry.defScore;
     }
   }
+}
 
+
+void AverageTableau(
+  map<string, CumType>& cum)
+{
   if (options.valet == VALET_MATCHPOINTS)
   {
     const unsigned total = cum.size();
@@ -203,6 +199,17 @@ void PrintEntryTableau(
       celem.defScore /= n;
     }
   }
+}
+
+
+void PrintTableauText(
+  const vector<ValetEntryType>& entries,
+  const string& boardtag,
+  ostream& oss)
+{
+  map<string, CumType> cum;
+  AccumulateTableau(entries, cum);
+  AverageTableau(cum);
 
   oss << "DECLARER, Board " << boardtag << "\n\n";
 
@@ -211,6 +218,8 @@ void PrintEntryTableau(
   oss << setw(8) << "Overall";
   oss << setw(8) << "Bid";
   oss << setw(8) << "Play" << "\n";
+
+  const int prec = 2;
 
   const float MP_OFFSET = (options.valet == VALET_MATCHPOINTS ?
     100.f : 0.f);
@@ -234,8 +243,13 @@ void PrintEntryTableau(
   oss << setw(8) << right << "Count";
   oss << setw(8) << "Overall";
   oss << setw(8) << "Bid";
-  oss << setw(8) << "Lead";
-  oss << setw(8) << "Restdef" << "\n";
+  if (options.leadFlag)
+  {
+    oss << setw(8) << "Lead";
+    oss << setw(8) << "Restdef" << "\n";
+  }
+  else
+    oss << setw(8) << "Def" << "\n";
 
   for (auto& cumit: cum)
   {
@@ -246,9 +260,12 @@ void PrintEntryTableau(
       setw(8) << right << n  <<
       setw(8) << MP_OFFSET -celem.overall <<
       setw(8) << fixed << setprecision(prec) << 
-        MP_OFFSET -celem.bidScore <<
-      setw(8) << fixed << setprecision(prec) << celem.leadScore <<
-      setw(8) << fixed << setprecision(prec) << celem.defScore << "\n";
+        MP_OFFSET - celem.bidScore;
+
+    if (options.leadFlag)
+      oss << setw(8) << fixed << setprecision(prec) << celem.leadScore;
+
+    oss << setw(8) << fixed << setprecision(prec) << celem.defScore << "\n";
   }
   oss << "\n";
 }
