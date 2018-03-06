@@ -1,22 +1,33 @@
-2018-02-28
+2018-03-06
 
 program.cpp
--------
-- Datum, cloud (equals no cloud)
+-----------
+- Cloud score not implemented for datum scoring yet
 
-What might work:
-- Lead in the context of cloud IAF (or datum)
+- -t now segfaults (on example7 at least)
+  -d ../data/examples -n names7.txt -s scores7.txt -t tab.txt
+
+- example7 no longer generates the right output
+
+- is -v imps not default?
+
+- check the colors with example7 and an example8
+  in which one player is alone in her contract
 
 In tableau and in aggregate scoring table:
 - Output "fair" and "luck" columns as well
 - Play becomes relative to "fair", not to "Butler"
 
+What might work:
+- Lead in the context of cloud IAF (or datum)
+
 data
 ----
 Add Euro 2018 output of qualifying
-Publish version 1.1
 
 document
 --------
-Include results for cloud score and tables at the end
-At least 50 hands played
+- Include results for cloud score and tables at the end;
+  at least 50 hands played
+
+Publish version 1.1
