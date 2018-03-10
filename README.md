@@ -21,11 +21,11 @@ I developed the Valet concept in 2004 after playing the Istanbul Olympiad (for L
 
 I next thought about the Valet score when a related subject came up on BridgeWinners, and I posted about it [here](http://bridgewinners.com/article/view/the-valet-score/).  The discussion encouraged me to port the code to C++ (the Excel code spent a lot of time getting data into and out of cells) and to generalize it in various ways.
 
-The current version is Valet 1.0 released in October 2015 and licensed under the Apache 2.0 license in the LICENSE FILE.
+The current version is Valet 1.1 released in March 2018 and licensed under the Apache 2.0 license in the LICENSE FILE.
 
 Release notes are in the ChangeLog file.
 
-(c) Soren Hein 2015.
+(c) Soren Hein 2015-18.
 
 
 Overview
@@ -68,14 +68,23 @@ or (on Linux or MacOS)
 
 at the command prompt and you should get a usage summary.  An actual example would be
 
-./valet.exe -imps -csv=';' ../data/2004-Istanbul-Olympiad 
+./valet.exe ../data/2004-Istanbul-Olympiad 
 
-which should generate a comma-separated value file, using across-the-field IMPs, that you can open from Excel.  (Not that csv files use different separators in different Microsoft Office languages.  I showed the way to get a semi-colon which is the one used in German.)
+which should generate a text file using across-the-field IMPs.
+
+
+Acknowledgements
+================
+The "cloud" Valet score benefitted greatly from discussion with Michele Cammerata.
+
+The useability of the DLL benefitted greatly from Thorvald Aagard's use.
+
+Both these worthies also published documenting using the Valet score (see the doc directory).
 
 
 Bugs
 ====
-Version 1.0 has no known bugs.
+Version 1.1 does not implement strengh compensation (-c) for matchpoints (-v matchpoints).  Other than that, there are no known bugs.
 
 Please report bugs to soren.hein@gmail.com.
 

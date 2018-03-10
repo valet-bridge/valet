@@ -2,4 +2,11 @@ v1.0, 26 October 2015
 ---------------------
 Initial release to the unsuspecting public.
 
-
+v1.1, 10 March 2018
+-------------------
+* Implemented "cloud" Valet scoring, which is the mathematically and
+practically best scoring algorithm.
+* Explained "cloud" Valet scoring in detail in the documentation.
+* Added GetDatum DLL function.
+* Improved the compensation for the opposition strength.
+* Fixed output bugs.
