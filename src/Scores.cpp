@@ -623,7 +623,7 @@ void Scores::PrintCSV(
   Scores::PrintCSVHeader();
 
   const float MP_OFFSET =
-    (options.valet ? VALET_MATCHPOINTS ? 50.f : 0.f);
+    (options.valet == VALET_MATCHPOINTS ? 50.f : 0.f);
 
   const string s = options.separator;
 
