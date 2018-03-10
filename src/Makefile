@@ -5,7 +5,10 @@
 
 # If your Microsoft compiler is not called cl, change it here.
 CC		= cl
-CC_FLAGS     	= /O2 /Oi /Ot /Oy /GL
+# CC_FLAGS     	= /O2 /Oi /Ot /Oy /GL /Zi /EHsc
+CC_FLAGS     	= /Ox /GL /Zi /EHsc
+
+CC_LINK		= /LTCG /DEBUG /OPT:REF,ICF
 
 # These flags are not turned on by default, but Valet should pass them.
 # Turn them on below.
@@ -69,7 +72,7 @@ dll:	$(LOBJ_FILES)
 	$(CC) $(CC_FULL_FLAGS) $(LOBJ_FILES) $(LIB_FLAGS) /out:$(DLL)
 
 driver:	$(DOBJ_FILES)
-	link /LTCG $(DOBJ_FILES) $(DLIB) /out:driver.exe
+	link $(CC_LINK) $(DOBJ_FILES) $(DLIB) /out:driver.exe
 
 %.obj:	%.cpp
 	$(CC) $(CC_FULL_FLAGS) /c $<

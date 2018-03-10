@@ -51,6 +51,11 @@ class Hand
       const vector<int>& rawScore,
       const int score);
 
+    float GetOverallScore(
+      const vector<int>& rawScore,
+      const int score,
+      const unsigned skipIndex);
+
     float GetBiddingScore(
       const vector<int>& rawScore,
       const unsigned no,
@@ -58,6 +63,13 @@ class Hand
       const unsigned resMatrix[5][14],
       float overallResult);
       
+    void CalculateCloudDatumScores(
+      const vector<unsigned>& vulList,
+      const unsigned resDeclMatrix[4][5][14],
+      const unsigned resDeclLeadMatrix[4][4][5][14],
+      vector<int>& cloudDatumScore,
+      vector<int>& cloudDatumLeadScore);
+
     float GetOverallScoreAgainstCloud(
       const int myRawScore,
       const unsigned no,

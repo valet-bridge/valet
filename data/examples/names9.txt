@@ -1,0 +1,16 @@
+1|North-3N-10
+2|East-3N-10
+3|South-3N-10
+4|West-3N-10
+5|North-3N-13
+6|East-3N-13
+7|South-3N-13
+8|West-3N-13
+9|North-5C-13
+10|East-5C-13
+11|South-5C-13
+12|West-5C-13
+13|North-7C-12
+14|East-7C-12
+15|South-7C-12
+16|West-7C-12

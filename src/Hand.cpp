@@ -251,7 +251,8 @@ int Hand::GetDatum(
 
   int datum = 0;
   int dmin = 9999, dmax = -9999;
-  for (unsigned i = 0; i < numEntries; i++)
+  const auto n = rawScore.size();
+  for (unsigned i = 0; i < n; i++)
   {
     if (rawScore[i] < dmin)
       dmin = rawScore[i];
@@ -261,10 +262,10 @@ int Hand::GetDatum(
     datum += rawScore[i];
   }
 
-  if (options.datumFilter && numEntries > 2)
-    datum = (datum-dmin-dmax) / static_cast<int>(numEntries-2);
+  if (options.datumFilter && n > 2)
+    datum = (datum-dmin-dmax) / static_cast<int>(n-2);
   else
-    datum = datum / static_cast<int>(numEntries);
+    datum = datum / static_cast<int>(n);
 
   return datum;
 }
@@ -341,6 +342,29 @@ float Hand::GetOverallScore(
 }
 
 
+float Hand::GetOverallScore(
+  const vector<int>& rawScore,
+  const int score,
+  const unsigned skipIndex)
+{
+  float result = 0;
+  unsigned count = 0;
+
+  for (unsigned i = 0; i < numEntries; i++)
+  {
+    // Skip own score.
+    if (i == skipIndex)
+      continue;
+
+    result += static_cast<float>((*fptr)(score - rawScore[i]));
+    count++;
+  }
+
+  assert(count > 0);
+  return (result / count);
+}
+
+
 float Hand::GetBiddingScore(
   const vector<int>& rawScore,
   const unsigned no,
@@ -377,6 +401,50 @@ float Hand::GetBiddingScore(
     return overallResult;
   else
     return bidResult / count;
+}
+
+
+void Hand::CalculateCloudDatumScores(
+  const vector<unsigned>& vulList,
+  const unsigned resDeclMatrix[4][5][14],
+  const unsigned resDeclLeadMatrix[4][4][5][14],
+  vector<int>& cloudDatumScore,
+  vector<int>& cloudDatumLeadScore)
+{
+  // CalculateCloudDatumScores calculates the "datum" score of each
+  // player within his result cloud, i.e. as an average of all
+  // declarers in his denomination from the same side.
+
+  for (unsigned i = 0; i < numEntries; i++)
+  {
+    const unsigned decl = results[i].declarer;
+    const unsigned d = results[i].denom;
+    const unsigned l = results[i].leadDenom;
+
+    vector<int> raw, rawLead;
+    for (unsigned t = 0; t <= 13; t++)
+    {
+      const unsigned n = resDeclMatrix[decl][d][t];
+      if (n == 0)
+        continue;
+
+      int r = CalculateRawScore(results[i], vulList[i], t);
+      for (unsigned j = 0; j < n; j++)
+        raw.push_back(r);
+
+      if (options.leadFlag)
+      {
+        const unsigned m = resDeclLeadMatrix[decl][l][d][t];
+        r = CalculateRawScore(results[i], vulList[i], t);
+        for (unsigned j = 0; j < m; j++)
+          rawLead.push_back(r);
+      }
+    }
+    cloudDatumScore[i] = GetDatum(raw);
+
+    if (options.leadFlag)
+      cloudDatumLeadScore[i] = GetDatum(rawLead);
+  }
 }
 
 
@@ -515,8 +583,18 @@ vector<ValetEntryType> Hand::CalculateScores()
 
   if (options.valet == VALET_IMPS)
   {
+    fptr = &CalculateIMPs;
     int datum = Hand::GetDatum(rawScore);
+
+    scoreLookup.clear();
     float bidIMPs, bidLeadIMPs, leadIMPs = 0.f;
+
+    vector<int> cloudDatumScore(numEntries),
+      cloudDatumLeadScore(numEntries);
+
+    if (options.cloudFlag)
+      CalculateCloudDatumScores(vulList, resDeclMatrix,
+        resDeclLeadMatrix, cloudDatumScore, cloudDatumLeadScore);
 
     for (unsigned i = 0; i < numEntries; i++)
     {
@@ -525,26 +603,53 @@ vector<ValetEntryType> Hand::CalculateScores()
 
       const ResultType& res = results[i];
 
-      float butlerIMPs = static_cast<float>(
-        CalculateIMPs(rawScore[i] - datum));
+      if (options.cloudFlag)
+      {
+        float butlerIMPs =
+          GetOverallScore(cloudDatumScore, rawScore[i], i);
 
-      if (res.level == 0)
-        Hand::SetPassout(res, butlerIMPs, entry);
+        if (res.level == 0)
+          Hand::SetPassout(res, butlerIMPs, entry);
+        else
+        {
+          bidIMPs = GetOverallScore(cloudDatumScore,
+            cloudDatumScore[i], i);
+
+          if (options.leadFlag && res.leadRank > 0)
+          {
+            bidLeadIMPs = GetOverallScore(cloudDatumLeadScore,
+              cloudDatumScore[i], i);
+            leadIMPs = bidLeadIMPs - bidIMPs;
+          }
+          else
+            leadIMPs = 0.f;
+
+          Hand::SetPlayResult(res, butlerIMPs, bidIMPs, leadIMPs, entry);
+        }
+      }
       else
       {
-        bidIMPs = GetDatumBidding(res, vulList[i], 
-          resDeclMatrix[res.declarer], datum);
+        float butlerIMPs = static_cast<float>(
+          CalculateIMPs(rawScore[i] - datum));
 
-        if (options.leadFlag && res.leadRank > 0)
-        {
-          bidLeadIMPs = GetDatumBidding(res, vulList[i], 
-            resDeclLeadMatrix[res.declarer][res.leadDenom], datum);
-          leadIMPs = bidLeadIMPs - bidIMPs;
-        }
+        if (res.level == 0)
+          Hand::SetPassout(res, butlerIMPs, entry);
         else
-          leadIMPs = 0.f;
+        {
+          bidIMPs = GetDatumBidding(res, vulList[i], 
+            resDeclMatrix[res.declarer], datum);
 
-        Hand::SetPlayResult(res, butlerIMPs, bidIMPs, leadIMPs, entry);
+          if (options.leadFlag && res.leadRank > 0)
+          {
+            bidLeadIMPs = GetDatumBidding(res, vulList[i], 
+              resDeclLeadMatrix[res.declarer][res.leadDenom], datum);
+            leadIMPs = bidLeadIMPs - bidIMPs;
+          }
+          else
+            leadIMPs = 0.f;
+
+          Hand::SetPlayResult(res, butlerIMPs, bidIMPs, leadIMPs, entry);
+        }
       }
     }
   }

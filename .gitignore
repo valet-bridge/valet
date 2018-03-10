@@ -33,3 +33,11 @@
 
 *.asp
 *.gz
+*.db
+*.sln
+*.pdb
+*.suo
+*.vcxproj
+*.opendb
+*.filters
+*.user

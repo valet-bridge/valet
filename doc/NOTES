@@ -1,19 +1,5 @@
 2018-03-06
 
-program.cpp
------------
-- Check that it works on PC as well:
-  -d ../data/examples -n names7.txt -s scores7.txt -t tab.txt
-
-- Cloud score not implemented for datum scoring yet
-
-- check the colors with example7 and an example8
-  in which one player is alone in her contract
-  o3/b4, o2/b3
-
-What might work:
-- Lead in the context of cloud IAF (or datum)
-
 data
 ----
 Add Euro 2018 output of qualifying

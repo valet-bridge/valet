@@ -110,9 +110,12 @@ string ResultKey(const ResultType& res)
   stringstream ss;
   ss << res.level << ValetDenomsShort[res.denom] <<
     ValetMultipliers[res.multiplier] << ", " <<
-    ValetPositionsShort[res.declarer] << ", " <<
-    ValetDenomsShort[res.leadDenom] << ", " << 
-    res.tricks;
+    ValetPositionsShort[res.declarer] << ", ";
+
+  if (options.leadFlag)
+    ss << ValetDenomsShort[res.leadDenom] << ", ";
+
+  ss << res.tricks;
 
   return ss.str();
 }
