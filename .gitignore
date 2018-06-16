@@ -42,3 +42,4 @@
 *.filters
 *.user
 *.tmp
+*.ipch

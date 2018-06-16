@@ -475,6 +475,9 @@ float Hand::GetOverallScoreAgainstCloud(
       continue;
 
     ResultType oppArtif = results[i];
+    if (oppArtif.level == 0)
+      continue;
+
     unsigned declOpp = oppArtif.declarer;
     unsigned dOpp = oppArtif.denom;
     unsigned count = 0;
@@ -567,6 +570,9 @@ vector<ValetEntryType> Hand::CalculateScores()
       decl == VALET_SOUTH ? vulNS : vulEW);
 
     rawScore[i] = CalculateRawScore(results[i], vulList[i]);
+
+    if (results[i].level == 0)
+      continue;
 
     resDeclMatrix[decl][denom][tricks]++;
 

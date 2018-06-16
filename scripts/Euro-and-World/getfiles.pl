@@ -6,10 +6,10 @@ use v5.10;
 
 use File::Fetch;
 
-my $rounds = 23;
-my $sprefix1 = '2018-Euro/Women/Rounds';
-my $sprefix2 = '2018-Euro/Women/Matches';
-my $tno = 1501;
+my $rounds = 21;
+my $sprefix1 = '2018-Euro/Seniors/Rounds';
+my $sprefix2 = '2018-Euro/Seniors/Matches';
+my $tno = 1502;
 my $tourney1 = 'http://db.eurobridge.org/Repository/competitions/18Ostend/microSite/Asp/';
 
 # Open European
