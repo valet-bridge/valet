@@ -1,0 +1,7 @@
+foreach i (bl*.csv)
+  perl germanize.pl $i > a$i
+  mv a$i $i
+end
+
+perl decorate.pl bl.csv bl[123]*.csv > b.csv
+mv b.csv bl.csv

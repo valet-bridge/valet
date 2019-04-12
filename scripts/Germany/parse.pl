@@ -21,7 +21,7 @@ for my $fname (@ARGV)
   # say "File $fname";
   open my $fh, "<$fname" or die "Can't open $fname";
 
-  $fname =~ /_k(\d+)_d(\d+)_bd_(\d+)/;
+  $fname =~ /k(\d+)_d(\d+)_bd_(\d+)/;
   my $league = $1; # Not used
   my $roundno = $2;
   my $boardno = $3;
@@ -32,7 +32,11 @@ for my $fname (@ARGV)
   {
     chomp $line;
 
-    last if ($lcount > 0 && $line =~ /Datumsscore/);
+    if ($lcount > 0 && $line =~ /Datumsscore/)
+    {
+      print "New datum score ($lcount): '$line'\n";
+      last;
+    }
 
     next unless $line =~ /TITLE/;
 
@@ -44,15 +48,20 @@ for my $fname (@ARGV)
 
     my $na = $#a;
 
-    next if ($na == 10 && $a[5] eq '%');
-    next if ($na == 9 && $a[4] eq '%');
-    next if ($na == 6 && $a[3] eq 'MP');
-    next if ($na == 6 && $a[3] eq '%');
+    if (($na == 10 && $a[5] eq '%') ||
+        ($na == 9 && $a[4] eq '%') ||
+        ($na == 6 && $a[3] eq 'MP') ||
+        ($na == 6 && $a[3] eq '%') ||
+        $line =~ /gewichtet/)
+    {
+      print "TD decision: '$line'\n";
+      next;
+    }
 
     if ($na != 5 && $na != 8 && $na != 9 && $na != 10 && $na != 11)
     {
       # Likely TD decision.
-      next if ($line =~ /gewichtet/);
+      # next if ($line =~ /gewichtet/);
 
       my $n = 0;
       for my $l (@a)
@@ -147,6 +156,7 @@ for my $fname (@ARGV)
       $contract, $declarer, $tricks, $lead);
   }
   close $fh;
+  # warn "$fname: $lcount";
 }
 
 exit;
@@ -277,12 +287,12 @@ sub print_line
     {
       print "$round|$no|$p0|$p1|$p2|$p3|$e0|$e1|$e2\n";
     }
+    elsif ($e3 eq "")
+    {
+      print "$round|$no|$p0|$p1|$p2|$p3|$e0|$e1|$e2\n";
+    }
     else
     {
-if (! defined $p0)
-{
-  die "$fname: $p0";
-}
       $e3 =~ s/10$/T/;
       print "$round|$no|$p0|$p1|$p2|$p3|$e0|$e1|$e2|$e3\n";
     }

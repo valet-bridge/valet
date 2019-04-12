@@ -19,7 +19,7 @@ for my $k (1 .. 5)
 {
   for my $d (1 .. 9)
   {
-    for my $bd (1 .. 16)
+    for my $bd (1 .. 32)
     {
       my $ext = "k${k}_d${d}_bd_${bd}.html";
       my $download = $dprefix . $ext;

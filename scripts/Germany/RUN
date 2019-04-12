@@ -1,0 +1,7 @@
+perl parse.pl names.txt pairs.txt liga2019/* > scores.txt
+
+perl parse.pl names.txt pairs.txt liga2019/k1* > scores1.txt
+perl parse.pl names.txt pairs.txt liga2019/k2* > scores2.txt
+perl parse.pl names.txt pairs.txt liga2019/k3* > scores3a.txt
+perl parse.pl names.txt pairs.txt liga2019/k4* > scores3b.txt
+perl parse.pl names.txt pairs.txt liga2019/k5* > scores3c.txt
