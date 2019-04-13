@@ -1,9 +1,11 @@
-./valet -d ../scripts/Germany -n names.txt -s scores.txt -f csv -m 90 -a > bl.csv
+set d = ../data/2018-German-League
 
-./valet -d ../scripts/Germany -n names.txt -s scores1.txt -f csv -m 90 -a > bl1.csv
-./valet -d ../scripts/Germany -n names.txt -s scores2.txt -f csv -m 90 -a > bl2.csv
-./valet -d ../scripts/Germany -n names.txt -s scores3a.txt -f csv -m 90 -a > bl3a.csv
-./valet -d ../scripts/Germany -n names.txt -s scores3b.txt -f csv -m 90 -a > bl3b.csv
-./valet -d ../scripts/Germany -n names.txt -s scores3c.txt -f csv -m 90 -a > bl3c.csv
+./valet -d $d -n names.txt -s scores.txt -f csv -m 90 -a > bl.csv
 
-mv bl*.csv ../scripts/Germany
+./valet -d $d -n names.txt -s scores1.txt -f csv -m 90 -a > bl1.csv
+./valet -d $d -n names.txt -s scores2.txt -f csv -m 90 -a > bl2.csv
+./valet -d $d -n names.txt -s scores3a.txt -f csv -m 90 -a > bl3a.csv
+./valet -d $d -n names.txt -s scores3b.txt -f csv -m 90 -a > bl3b.csv
+./valet -d $d -n names.txt -s scores3c.txt -f csv -m 90 -a > bl3c.csv
+
+mv bl*.csv $d

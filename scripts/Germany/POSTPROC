@@ -1,7 +1,9 @@
-foreach i (bl*.csv)
-  perl germanize.pl $i > a$i
-  mv a$i $i
+set d = 2010-German-League
+
+foreach i ($d/bl*.csv)
+  perl germanize.pl $i > x.csv
+  mv x.csv $i
 end
 
-perl decorate.pl bl.csv bl[123]*.csv > b.csv
-mv b.csv bl.csv
+perl decorate.pl $d/bl.csv $d/bl[123]*.csv > x.csv
+mv x.csv $d/bl.csv

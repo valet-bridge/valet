@@ -17,7 +17,7 @@ for my $fname (@ARGV)
 
   my $base = $fname;
   $base =~ s/\..*//;
-  $base =~ s/^bl//;
+  $base =~ s/.*bl//;
 
   my $line;
   while ($line = <$fh>)

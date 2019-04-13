@@ -111,6 +111,10 @@ for my $fname (@ARGV)
     $lcount++;
     my $pairEW = $a[$na-1];
 
+    # 2010 special: Pair numbers reused between leagues.
+    $pairNS += ($league-1) * 2000;
+    $pairEW += ($league-1) * 2000;
+   
     if (! defined $pairs[$pairNS])
     {
       die "Unrecognized pair number $pairNS";

@@ -1,0 +1,17 @@
+set dd = liga2010
+set ee = ../../data/2010-German-League
+
+perl names.pl ${dd}/*.html | sort | uniq > names.txt
+
+perl number.pl names.txt > n.txt
+mv n.txt names.txt
+
+perl pairs.pl ${dd}/*.html | sort | uniq > pairs.txt
+
+perl parse.pl names.txt pairs.txt ${dd}/* > scores.txt
+
+perl parse.pl names.txt pairs.txt ${dd}/k1* > scores1.txt
+perl parse.pl names.txt pairs.txt ${dd}/k2* > scores2a.txt
+perl parse.pl names.txt pairs.txt ${dd}/k3* > scores2b.txt
+
+cp *.txt ${ee}
