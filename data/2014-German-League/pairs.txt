@@ -1,0 +1,190 @@
+1003|Anja Alberti|Dieter Laidig
+1004|Otto Ruthenberg|Emile Sansour
+1005|Mirja Schraverus-Meuer|Axel Meuer
+101|Jörg Fritsche|Michael Gromöller
+102|Helmut Häusler|Dr. Andreas Kirmse
+103|Michael Gromöller|Martin Rehder
+104|Jörg Fritsche|Roland Rohowsky
+105|Josef Piekarek|Alexander Smirnov
+106|Jörg Fritsche|Martin Rehder
+1103|Max Ellerbeck|Felix Zimmermann
+1104|Stefan Häßler|Fred Wrobel
+1105|Christian Dörmer|Holger Hoffmann
+1106|Christian Dörmer|Fred Wrobel
+1203|Roland Kühnle|Ulrik Wittek
+1204|Stefan Back|Heinrich Nowak
+1205|Annaïg Della Monta|Dr. Alfred Berthold
+1301|Christine Kraus|Ulf Bormann
+1303|Dr. Gerben Dirksen|Michael Thomsen
+1304|Thomas Martin|Norbert Stübinger
+1401|Dr. Gabriele Krämer|Dr. Neklan Chmelik
+1402|Krzysztof Dec|Christian Lepa
+1403|Georg Szasz|Max Winter
+1404|Dr. Neklan Chmelik|Max Winter
+1405|Dr. Gabriele Krämer|Krzysztof Dec
+1406|Krzysztof Dec|Georg Szasz
+1503|Raffael Braun|Hans-Joachim Prieß
+1504|Marie Eggeling|Dietmar Korb
+1505|Joachim Hegener|Felix Schadendorf
+1603|Wolfram von Alvensleben|Oliver Hevemeier
+1604|Flora Zarkesch-Boeddeker|Robert Boeddeker
+1703|Berthold Engel|Josias Prinz zu Waldeck
+1704|Claudia Vechiatto|Sebastian Weyand
+1705|Claudia Vechiatto|Berthold Engel
+1706|Florian Alter|Hartmut Kondoch
+1707|Hartmut Kondoch|Josias Prinz zu Waldeck
+1708|Berthold Engel|Sebastian Weyand
+1709|Claudia Vechiatto|Hartmut Kondoch
+1803|Dr. Jean Georgiades|Frank Reichelt
+1804|Gisela Smykalla|Dr. Michael Schneider
+1805|Claudia Lüßmann|Ingo Lüßmann
+1903|Robert Maybach|Wolf Stahl
+1904|Anne Gladiator|Elke Weber
+1905|Ulrike Schreckenberger|Andreas Babsch
+1906|Ulrike Schreckenberger|Gregor Sieber
+2003|Michael Schröder|Stefan Vernon
+2004|Alexander Rapoport|Alexei Vinogradov
+2005|Ingeborg Metzler|Bernd Metzler
+2006|Malgorzata Schröder|Michael Schröder
+203|Jochen Bitschené|Herbert Klumpp
+204|Rainer Handel|Christoph Kemmer
+205|Nedju Buchlev|Sebastian Reim
+206|Sebastian Reim|Klaus Reps
+207|Jochen Bitschené|Klaus Reps
+2103|Christian Glubrecht|Peter Heckmann
+2104|Robert Koch|Göran Mattsson
+2105|Marian Powalla|Adam Griger
+2203|Christian Löwenstein|Daniel Buse
+2204|Anne Heim|Nils Bokholt
+2205|Nils Bokholt|Roland Watzdorf
+2206|Anne Heim|Roland Watzdorf
+2207|Anne Heim|Jürgen Nordmann
+2208|Karin Mavridis|Georg Mavridis
+2301|Yasmin Basegmez|Peter Bode
+2302|Helge Dzellak|Tilman Oeckinghaus
+2303|Peter Bode|Sybil Müller-Maubach
+2402|Christoph Hauschild|Theo Reinhard
+2403|Andeas Böhmer|Erhard Sternheimer
+2404|Dr. Regine Neuhauser-Riess|Thomas Neuhauser
+2501|Günter Buhr|Hans-Peter Fütterer
+2502|Rainer Herrmann|Detlev Kröning
+2603|Martin Jentsch|Lothar Schmidt
+2604|Hans Ott|Dr. Wolfgang Walenta
+2703|Eckhard Renken|Franz-Jürgen Röttger
+2704|Rolf Beckmann|Wolfram Rach
+2705|Udo Kreimeyer|Wolfgang Sonntag
+2706|Angelika Röttger|Wolfram Rach
+2801|Willi Neidow|Rudi Salzer
+2802|Ulrich Staber|Klaus-Dieter Wacker
+2803|Rudi Salzer|Karl Wartlick
+2804|Willi Neidow|Ulrich Staber
+2806|Willi Neidow|Klaus-Dieter Wacker
+2807|Ulrich Staber|Karl Wartlick
+2902|Michael Haffer|Sven Krupp
+2903|Frank Röttger|Karl-Heinz Schmidt
+2904|Oleg Galimov|Nikolas Roemer
+3003|Ilia Chapiro|Oleksandr Friedmann
+3004|Peter Klein|Walter Sorger
+3005|Marta Janeczek|Ireneus Kokocinski
+3006|Katharina Brinck|Vemund Vikjord
+303|Laszló Honti|Reiner Marsal
+304|Miklós Dumbovich|Dr. Josef Harsányi
+305|Dr. Michael Elinescu|Dr. Entscho Wladow
+3103|Anna Morgiel|Thomas Gotard
+3104|Kathryn Herz|Eckhard Böhlke
+3105|Joachim Cappeller|Clemens Oelker
+3201|Matthias Berghaus|Frank-Onno Bettermann
+3203|Hartmut Brückner|Ralf Speckmann
+3204|Stefan Helling|Dr. Sören Hein
+3301|Jascha Garre|Fabian Hupe
+3302|Werner Kühn|Michael Pauly
+3303|Michael Pauly|Martin Stoszek
+3304|Werner Kühn|Martin Stoszek
+3401|Dr. Silvia Klasberg-Brawanski|Nico Forchert
+3402|Horst Hübner|Omid Karimi
+3403|Nico Forchert|Omid Karimi
+3404|Horst Hübner|Dr. Peer Köster
+3405|Dr. Silvia Klasberg-Brawanski|Dr. Peer Köster
+3501|Ulrike Liss|Mieke Plath
+3503|Andreas Schiffmann|Darius Schiffmann
+3504|Fikret Dogan|Cumhor Kirdemir
+3505|Fikret Dogan|Andreas Schiffmann
+3506|Mieke Plath|Fikret Dogan
+3507|Mieke Plath|Cumhor Kirdemir
+3603|Frederic Boldt|Jan Chodorowski
+3604|Regine Bartels|Thomas Schmitt
+3605|Dr. Helmut Horacek|Hans-Jörg Schinze
+3606|Frederic Boldt|Dr. Helmut Horacek
+3607|Hans-Jörg Schinze|Bert Hanken
+3609|Dr. Helmut Horacek|Thomas Schmitt
+3703|Martin Meckel|Thorsten Roth
+3704|Bernhard Kaiser|Ferit Tavlan
+3705|Sabine Flory|Jürgen Flory
+3706|Norbert Gutleben|Ferit Tavlan
+3802|Dr. Bernhard Schirm|Dr. Andreas Spiegl
+3803|Michael Hornbrook|Dr. Ilan Wolff
+3804|Dr. Gerhard Thurn|Borys Jawlinsky
+3901|Barbara von Kleist|Sabine Würdemann
+3903|Volker Hund-Schulze|Benedikt Wiemeyer
+3904|Dr. Ralf Schlotmann|Uli Trepnau
+4003|Hans Jürgen Bäumges|Andreas Holowski
+4004|Adam Rduch|Peter Reuters
+4005|Marian Mrukwa|Adam Rduch
+4006|Diana Farken|Achim Greune
+4007|Andreas Holowski|Adam Rduch
+401|Nikolas Bausback|Martin Loefgren
+402|Joachim Parsch|Martin Schrödel
+403|Martin Schrödel|Martin Werner
+404|Joachim Parsch|Klaus Zeitler
+4101|Carina Tetal|Klaus Amann
+4102|Jan van Oosten|Dr. Ansgar Seiter
+4103|Roland Voigt|Ulrich Voigt
+4203|Bernd Engelhardt|Martin Hofmann
+4204|Stefan Behn|Dirk Nedler
+4205|Pawel Serwatowski|Andreas Visetti
+4206|Stefan Behn|Andrzej Konczak
+4301|Keith Brundage|Bharat Gurbaxani
+4303|André Marx|Ralf-D. Zepelin
+4304|Matthias Stenneken|Ralf Wollenberg
+4402|Helmut Lux|Ulrich Schweding
+4403|Asok Lean|Klaus Spiegelberg
+4404|Bernhard Landwehr|Herbert Vetter
+4503|Matthias Voigt|Dr. Gerold Wieber
+4504|Tobias Förster|Dr. Claus Neidhardt
+4505|Herbert Thieme|Lydia Engler
+4506|Herbert Thieme|Dr. Klaus Krtschil
+4601|Susanne Bohnsack|Yevgeniya Khanukova
+4602|Henning Bohnsack|Vitaliy Khanukov
+4603|Henning Bohnsack|Ralph Wickert
+4604|Yevgeniya Khanukova|Vitaliy Khanukov
+4605|Susanne Bohnsack|Ralph Wickert
+4606|Susanne Bohnsack|Henning Bohnsack
+4702|Helga Stoermer|Lutz Narajek
+4703|Tobias Pickhard|Hans-Jürgen Riedel
+4704|Petra Eleftherakis|Lutz Narajek
+4705|Lutz Narajek|Ingo Schmid
+4801|Dr. Bettina Bohnhorst|Dr. Jürgen Sander
+4802|Andreas Schaper|Dr. Lutz Wienert
+4901|Ursula Brzuska|Leela Guba
+4903|Gerritt Guba|Béla Raasch
+4904|Heide Uhrig|Jan Turski
+4905|Torsten Kistner|Jan Turski
+4906|Heide Uhrig|Torsten Kistner
+5001|Jens Harbarth|Dr. Bernhard Kopp
+5002|Dr. Arno Kretschmer|Tobias Müller
+5003|Dr. Arno Kretschmer|Lukas Schenk
+503|Dr. Richard Bley|Dr. Michael Tomski
+504|Dr. Rolf Kühn|Dr. Frank Pioch
+505|Dimitri Markaris|Ralf Schmellekamp
+603|Julius Linde|Christian Schwerdt
+604|Peter Jokisch|Udo Kasimir
+605|David Cole|Paul Grünke
+701|Janko Katerbau|Jacek Lesniczak
+703|Paul Orth|Matthias Schüller
+704|Fabian von Löbbecke|Dirk Sanne
+803|Hans Frerichs|Ulrich Wenning
+804|Ulrich Kratz|Bernhard Sträter
+805|Waltraud Vogt|Loek Fresen
+903|Matthias Felmy|Martin Wüst
+904|Dr. Claus Günther|Christian Schlicker
+905|Dr. Peter Freche|Dr. Karl-Heinz Kaiser
