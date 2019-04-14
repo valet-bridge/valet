@@ -1,0 +1,115 @@
+2019-04-14
+
+Expand Valet to give scores for:
+
+- Bidding
+  - Winning/losing the bidding in a partial at level
+    - 1
+    - 2
+    - 3 
+    - 4
+  - Winning/losing the bidding in game
+  - Winning/losing the bidding in small slam
+  - Winning/losing the bidding in grand slam
+  - Passing out a hand
+  - So 15 categories
+  - Maybe doubled/undoubled, so 30 categories
+  - One special categories is everything redoubled (as so small)
+
+- More detail
+  - Partials (few bid/make game)
+  - Tight games (bidding has modest positive bidding score; no slam)
+  - Comfortable games (not bidding has negative bidding score)
+  - Similar for slam types
+
+- Defense
+  - Defending partials, games, small slams, grand slams (5)
+  - Split into leads and remainder in each case (so 10 total)
+    - Quality depends on whether opponents give away information
+  - Split is on whether a game bonus is at stake (2H* has one)
+
+- Play
+  - Similar, but there's a value to not giving away information in
+    the bidding (they lead and defend less well)
+
+- Profile
+- A pair also has a profile for ending up in each of the 31
+  bidding categories (% vector), as well as an absolute count which
+  signifies the solidity of the %.
+- Is it possible that WHEN a pair ends up in these, THEN
+  the bidding score is more or less the same for all pairs?
+  We could test the hypothesis.
+  The main difference is in how OFTEN they end up in each?
+- Or some pairs bid better slams than others?
+
+- Matching up in a 16-board segment
+  - Perl(?) script
+  - How do we calculate an expected value of matching up two pairs?
+  - Look at each hand record and classify into a tight, not so
+    competitive game for our side, a partscore battle, etc.
+  - For the ones that are mostly our hand or theirs, apply our
+    probabilities of reaching a partial level, game or slam.
+  - Apply the lead and play scores to reach an expected score.
+  - If there are no hand records, use a priori probabilities.
+
+Combining
+---------
+Say we're 54/46 to play and our opponents are 50/50.
+Then we'd expect to play 54% of the time.
+If they're 46/54, we'd probably expect roughly 58%.
+Probably 50 + our score - their score.
+ 
+- Maybe the bid scores mainly depend on the levels etc reached
+- So we need to combine the % vectors to get a distribution
+- Then the bid scores for the two pairs are symmetrical
+- We can read off the play scores and take the difference.
+
+
+Statistical power
+-----------------
+Try to explain 16-board outcomes in a correlation analysis.
+% of variance explained.
+
+1. Baseline: Expect a drawn match.
+2. Use only the Butler of the matched pairs (difference).
+3. Use the Valet as above.
+
+
+Quality of doubles
+------------------
+- Distinguish
+  - Partial undoubled, partial-into-partial, partial-into-game
+  - Game undoubled, game doubled
+  - Small slam undoubled, small slam doubled
+  - Grand slam undoubled, grand slam doubled
+  - All redoubled contracts together
+- For undoubled contracts, look at potential to increase bid score
+  by doubling (vs Valet score for doubling, may not always be available,
+  but could be calculated)
+- For doubled contracts, compare to datum (in order to have something).
+  It would be less reasonable to compare to the same contract undoubled,
+  as the alternative is often an own game.
+
+- How well do we double?
+- How well to the opponents double us?
+
+Quality of game bidding
+-----------------------
+- For each hand where we stopped below game in a denomination,
+  see how much better or worse it would have been to bid game.
+  (Make sure we make and this is not bad when doubled.)
+  If better, count this against us.
+- If we let them play a partial, and game had a better bid score,
+  that counts against us too.
+- If they bid game and we get a better score for bidding something
+  undoubled (and doubling us would be even better for us), that 
+  would count too.
+- Then we've got the sacrifices.
+- There are games where we probably could have stopped, as it's
+  mostly played our way and many people play lower.
+
+Quality of slam bidding
+-----------------------
+- There are slams intended to make, and there are sacrifices.
+- There are slams where we probably could have stopped, as it's
+  mostly played our way.
