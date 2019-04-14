@@ -60,7 +60,7 @@
 60|Detlev Kröning
 61|Dieter Laidig
 62|Dietmar Korb
-63|Dima Nikolenkov
+63|Dimitrij Nikolenkov
 64|Dimitrios Markaris
 65|Dirk Gyselinck
 66|Dirk Nedler
@@ -137,9 +137,9 @@
 137|Gregor Sieber
 138|Günter Buhr
 139|Hans Frerichs
-140|Hans Joachim Trapp
+140|Hans-Joachim Trapp
 141|Hans-Joachim Prieß
-142|Hans-Jörg Schinze
+142|Hans-Jörge Schinze
 143|Hans-Jürgen Lübbe
 144|Hans-Jürgen Riedel
 145|Hans-Peter Fütterer
@@ -171,7 +171,7 @@
 171|Jens Harbarth
 172|Joachim Cappeller
 173|Joachim Parsch
-174|Jochen Bitschene
+174|Jochen Bitschené
 175|Jörg Fritsche
 176|Josef Piekarek
 177|Josias Prinz zu Waldeck
@@ -256,7 +256,7 @@
 256|Robert van Mourik
 257|Roland Kühnle
 258|Roland Rohowsky
-259|Roland Voigt
+259|Dr. Roland Voigt
 260|Roland Watzdorf
 261|Rolf Beckmann
 262|Rudi Salzer

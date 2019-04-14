@@ -4,7 +4,7 @@
 4|Alexander Rapoport
 5|Alexander Smirnov
 6|Alexei Vinogradov
-7|Andeas Böhmer
+7|Andreas Böhmer
 8|Andreas Babsch
 9|Andreas Bollhorst
 10|Andreas Jansen
@@ -21,7 +21,7 @@
 21|Antje Berghaus
 22|Axel Meuer
 23|Barbara von Kleist
-24|Beatrix Kuzselka
+24|Beatrix Wodniansky
 25|Benedikt Wiemeyer
 26|Bernard Ludewig
 27|Bernd Donner
@@ -30,7 +30,7 @@
 30|Bernd Metzler
 31|Bernhard Sträter
 32|Berthold Engel
-33|Borys Yawlinsky
+33|Boris Yavlinsky
 34|Burkhard Thamm
 35|Caren Grenz
 36|Christian Dörmer
@@ -53,7 +53,7 @@
 53|Diana Farken
 54|Dieter Laidig
 55|Dietmar Korb
-56|Dimitri Markaris
+56|Dimitrios Markaris
 57|Dirk Gyselinck
 58|Dirk Nedler
 59|Dirk Sanne
@@ -75,7 +75,7 @@
 75|Dr. Gerhard Thurn
 76|Dr. Helmut Horacek
 77|Dr. Ilan Wolff
-78|Dr. Jean Georgiadis
+78|Dr. Jean Georgiades
 79|Dr. Josef Harsanyi
 80|Dr. Jürgen Sander
 81|Dr. Karl-Heinz Kaiser
@@ -106,7 +106,7 @@
 106|Fabian von Löbbecke
 107|Felix Schadendorf
 108|Felix Zimmermann
-109|Flora Boeddeker
+109|Flora Zarkesch-Boeddeker
 110|Frank Reichelt
 111|Frank-Onno Bettermann
 112|Franz-Jürgen Röttger
@@ -126,7 +126,7 @@
 126|Hans Ott
 127|Hans-Joachim Prieß
 128|Hans-Joachim Trapp
-129|Hans-Jörg Schinze
+129|Hans-Jörge Schinze
 130|Hans-Jürgen Riedel
 131|Hans-Peter Fütterer
 132|Hartmut Brückner
@@ -169,7 +169,7 @@
 169|Kai Röhlk
 170|Kai Timofejew
 171|Kareen Schroeder
-172|Karin Buhr
+172|Karin Schumann-Buhr
 173|Karin Mavridis
 174|Karin Wenning
 175|Karl Wartlick
@@ -193,7 +193,7 @@
 193|Marina Tetyusheva
 194|Martin Hofmann
 195|Martin Jentsch
-196|Martin Loefgren
+196|Martin Löfgren
 197|Martin Rehder
 198|Martin Schrödel
 199|Martin Stoszek
@@ -205,10 +205,10 @@
 205|Max Ellerbeck
 206|Michael Gromöller
 207|Michael Hornbrook
-208|Michael Kammermeier
+208|Dr. Michael Kammermeier
 209|Michael Pauly
 210|Michael Schröder
-211|Miklós Dumbovich
+211|Miklos Dumbovich
 212|Mirja Schraverus-Meuer
 213|Nedju Buchlev
 214|Nikolas Bausback
@@ -224,7 +224,7 @@
 224|Peter Heckmann
 225|Peter Jokisch
 226|Petra Eleftherakis
-227|Prinz Josias zu Waldeck
+227|Josias Prinz zu Waldeck
 228|Prof. Dr. Roland Schmid
 229|Prof. Ulrich Spengler
 230|Raffael Braun
@@ -243,13 +243,13 @@
 243|Roland Godlewski
 244|Roland Kühnle
 245|Roland Rohowsky
-246|Roland Voigt
+246|Dr. Roland Voigt
 247|Roland Watzdorf
 248|Rolf Beckmann
 249|Rudi Salzer
 250|Sabine Würdemann
 251|Sebastian Reim
-252|Sebastian Weyand
+252|Dr. Sebastian Weyand
 253|Stanislaus Kosikowski
 254|Stefan Back
 255|Stefan Behn
@@ -271,7 +271,7 @@
 271|Udo Kasimir
 272|Udo Kreimeyer
 273|Ulf Bormann
-274|Uli Trepnau
+274|Ulrich Trepnau
 275|Ulrich Kratz
 276|Ulrich Staber
 277|Ulrich Voigt
@@ -284,7 +284,7 @@
 284|Waltraud Vogt
 285|Werner Kühn
 286|Werner Schneider
-287|Wlodzimiers Duszynski
+287|Wlodzimierz Duszynski
 288|Wolf Stahl
 289|Wolfgang Sonntag
 290|Wolfram Rach

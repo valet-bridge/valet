@@ -47,7 +47,7 @@
 47|Christian Farwig
 48|Christian Fröhner
 49|Christian Glubrecht
-50|Christian Löwenstein
+50|Dr. Christian Löwenstein
 51|Christian Schlicker
 52|Christian Schwerdt
 53|Christian Tobias Bolik
@@ -172,7 +172,7 @@
 172|Jerzy Kozyczkowski
 173|Joachim Cappeller
 174|Joachim Parsch
-175|Jochen Bitschene
+175|Jochen Bitschené
 176|Jörg Fritsche
 177|Julius Linde
 178|Jürgen Flory
@@ -187,7 +187,7 @@
 187|Klaus Amann
 188|Klaus Appelt
 189|Klaus Forster
-190|Klaus jun. Reps
+190|Klaus Reps
 191|Klaus Spiegelberg
 192|Klaus Zeitler
 193|Krzysztof Dec
@@ -260,7 +260,7 @@
 260|Robert Jaßniger
 261|Robert Maybach
 262|Roland Rohowsky
-263|Roland Voigt
+263|Dr. Roland Voigt
 264|Roland Watzdorf
 265|Rolf Beckmann
 266|Roy Welland

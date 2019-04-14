@@ -4,7 +4,7 @@
 4|Alexander Rapoport
 5|Alexander Smirnov
 6|Alexei Vinogradov
-7|Andeas Böhmer
+7|Andreas Böhmer
 8|André Marx
 9|Andreas Babsch
 10|Andreas Holowski
@@ -15,7 +15,7 @@
 15|Angelika Röttger
 16|Anja Alberti
 17|Anna Morgiel
-18|Annaïg Della Monta
+18|Annaig Della Monta
 19|Anne Gladiator
 20|Anne Heim
 21|Asok Lean
@@ -31,12 +31,12 @@
 31|Bert Hanken
 32|Berthold Engel
 33|Bharat Gurbaxani
-34|Borys Jawlinsky
-35|Carina Tetal
+34|Boris Yavlinsky
+35|Dr. Carina Tetal
 36|Christian Dörmer
 37|Christian Glubrecht
 38|Christian Lepa
-39|Christian Löwenstein
+39|Dr. Christian Löwenstein
 40|Christian Schlicker
 41|Christian Schwerdt
 42|Christine Kraus
@@ -45,7 +45,7 @@
 45|Claudia Lüßmann
 46|Claudia Vechiatto
 47|Clemens Oelker
-48|Cumhor Kirdemir
+48|Cumhur Kirdemir
 49|Daniel Buse
 50|Darius Schiffmann
 51|David Cole
@@ -53,7 +53,7 @@
 53|Diana Farken
 54|Dieter Laidig
 55|Dietmar Korb
-56|Dimitri Markaris
+56|Dimitrios Markaris
 57|Dirk Nedler
 58|Dirk Sanne
 59|Dr. Alfred Berthold
@@ -75,7 +75,7 @@
 75|Dr. Helmut Horacek
 76|Dr. Ilan Wolff
 77|Dr. Jean Georgiades
-78|Dr. Josef Harsányi
+78|Dr. Josef Harsanyi
 79|Dr. Jürgen Sander
 80|Dr. Karl-Heinz Kaiser
 81|Dr. Klaus Krtschil
@@ -112,7 +112,7 @@
 112|Franz-Jürgen Röttger
 113|Fred Wrobel
 114|Frederic Boldt
-115|Georg Mavridis
+115|Georgios Mavridis
 116|Georg Szasz
 117|Gerritt Guba
 118|Gisela Smykalla
@@ -123,7 +123,7 @@
 123|Hans Jürgen Bäumges
 124|Hans Ott
 125|Hans-Joachim Prieß
-126|Hans-Jörg Schinze
+126|Hans-Jörge Schinze
 127|Hans-Jürgen Riedel
 128|Hans-Peter Fütterer
 129|Hartmut Brückner
@@ -136,7 +136,7 @@
 136|Helmut Lux
 137|Henning Bohnsack
 138|Herbert Klumpp
-139|Herbert Thieme
+139|Dr. Herbert Thieme
 140|Herbert Vetter
 141|Holger Hoffmann
 142|Horst Hübner
@@ -174,7 +174,7 @@
 174|Klaus Zeitler
 175|Klaus-Dieter Wacker
 176|Krzysztof Dec
-177|Laszló Honti
+177|Laszlo Honti
 178|Leela Guba
 179|Loek Fresen
 180|Lothar Schmidt
@@ -188,7 +188,7 @@
 188|Marta Janeczek
 189|Martin Hofmann
 190|Martin Jentsch
-191|Martin Loefgren
+191|Martin Löfgren
 192|Martin Meckel
 193|Martin Rehder
 194|Martin Schrödel
@@ -209,10 +209,10 @@
 209|Michael Schröder
 210|Michael Thomsen
 211|Mieke Plath
-212|Miklós Dumbovich
+212|Miklos Dumbovich
 213|Mirja Schraverus-Meuer
 214|Nedju Buchlev
-215|Nico Forchert
+215|Niko Forchert
 216|Nikolas Bausback
 217|Nikolas Roemer
 218|Nils Bokholt
@@ -247,14 +247,14 @@
 247|Robert Maybach
 248|Roland Kühnle
 249|Roland Rohowsky
-250|Roland Voigt
+250|Dr. Roland Voigt
 251|Roland Watzdorf
 252|Rolf Beckmann
 253|Rudi Salzer
 254|Sabine Flory
 255|Sabine Würdemann
 256|Sebastian Reim
-257|Sebastian Weyand
+257|Dr. Sebastian Weyand
 258|Stefan Back
 259|Stefan Behn
 260|Stefan Häßler
@@ -277,7 +277,7 @@
 277|Udo Kasimir
 278|Udo Kreimeyer
 279|Ulf Bormann
-280|Uli Trepnau
+280|Ulrich Trepnau
 281|Ulrich Kratz
 282|Ulrich Schweding
 283|Ulrich Staber
@@ -298,5 +298,5 @@
 298|Wolfgang Sonntag
 299|Wolfram Rach
 300|Wolfram von Alvensleben
-301|Yasmin Basegmez
+301|Dr. Yasmin Basegmez
 302|Yevgeniya Khanukova

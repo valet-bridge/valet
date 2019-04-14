@@ -1,7 +1,7 @@
 1|Achim Greune
 2|Alexander Smirnov
 3|Alexandra Schwerdt
-4|Andeas Böhmer
+4|Andreas Böhmer
 5|Andrea Reim
 6|Andreas Bollhorst
 7|Andreas Gondorf
@@ -11,7 +11,7 @@
 11|Angelika Röttger
 12|Anja Alberti
 13|Axel Meuer
-14|Beate Nehmert
+14|Pony Nehmert
 15|Bernard Ludewig
 16|Bernd Bussek
 17|Bernd Engelhardt
@@ -25,12 +25,12 @@
 25|Claudia Vechiatto
 26|Claus Daehr
 27|Clemens Oelker
-28|Cristina Giampetro
+28|Cristina Giampietro
 29|Dennis Kraemer
 30|Detlev Kröning
 31|Diana Farken
 32|Dieter Laidig
-33|Dimitri Markaris
+33|Dimitrios Markaris
 34|Dirk Gyselinck
 35|Dirk Sanne
 36|Dr. Andreas Kirmse
@@ -40,8 +40,8 @@
 40|Dr. Gerhard Göttsch
 41|Dr. Gerold Wieber
 42|Dr. Herbert Thieme
-43|Dr. Jean Georgiadis
-44|Dr. Josef Harsányi
+43|Dr. Jean Georgiades
+44|Dr. Josef Harsanyi
 45|Dr. Karl-Heinz Kaiser
 46|Dr. László Gotthard
 47|Dr. Marcus Joest
@@ -62,7 +62,7 @@
 62|Fabian Hupe
 63|Fabian von Löbbecke
 64|Felix Zimmermann
-65|Flora Boeddeker
+65|Flora Zarkesch-Boeddeker
 66|Frank Reichelt
 67|Frank-Onno Bettermann
 68|Franz-Jürgen Röttger
@@ -70,13 +70,13 @@
 70|Fried Weber
 71|Friedrich Kleißendorf
 72|George Cohner
-73|Gerben Dirksen
+73|Dr. Gerben Dirksen
 74|Gisela Smykalla
 75|Göran Mattsson
 76|Günter Buhr
 77|Hans Frerichs
 78|Hans Ott
-79|Hans-Jörg Schinze
+79|Hans-Jörge Schinze
 80|Hartmut Brückner
 81|Hartmut Kondoch
 82|Heinrich Nowak
@@ -105,19 +105,19 @@
 105|Josias Prinz zu Waldeck
 106|Julius Linde
 107|Jürgen Hollich
-108|Karin Buhr
+108|Karin Schumann-Buhr
 109|Kathryn Herz
 110|Klaus Kersting
 111|Klaus Reps
 112|Klaus-Dieter Wacker
-113|Laszló Honti
+113|Laszlo Honti
 114|Loek Fresen
 115|Lothar Schmidt
 116|Marc Schomann
 117|Maria Würmseer
 118|Martin Hofmann
 119|Martin Jentsch
-120|Martin Loefgren
+120|Martin Löfgren
 121|Martin Rehder
 122|Martin Schrödel
 123|Martin Werner
@@ -126,8 +126,8 @@
 126|Matthias Schüller
 127|Max Neumann
 128|Michael Gromöller
-129|Michael Tomski
-130|Miklós Dumbovich
+129|Dr. Michael Tomski
+130|Miklos Dumbovich
 131|Mirja Schraverus-Meuer
 132|Nedju Buchlev
 133|Nikolas Bausback
@@ -139,7 +139,7 @@
 139|Peter Jokisch
 140|Peter Kazub
 141|Petra von Malchus
-142|Prof. Roland Schmidt
+142|Prof. Dr. Roland Schmid
 143|Prof. Ulrich Spengler
 144|Rainer Handel
 145|Rainer Herrmann
@@ -168,7 +168,7 @@
 168|Tomasz Gotard
 169|Udo Kasimir
 170|Udo Kreimeyer
-171|Ulrich Jahr
+171|Ullrich Jahr
 172|Ulrich Kratz
 173|Ulrich Wenning
 174|Uwe Breusch

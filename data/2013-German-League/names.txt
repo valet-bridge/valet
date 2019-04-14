@@ -14,14 +14,14 @@
 14|Angelika Röttger
 15|Anja Alberti
 16|Anke Herrlett
-17|Annaïg Della Monta
+17|Annaig Della Monta
 18|Anne Gladiator
 19|Anssi Bragge
 20|Antje Berghaus
 21|Asok Lean
 22|Axel Meuer
 23|Barbara von Kleist
-24|Beatrix Kuzselka
+24|Beatrix Wodniansky
 25|Bernd Donner
 26|Bernd Engelhardt
 27|Bernd Gahntz
@@ -33,7 +33,7 @@
 33|Berthold Engel
 34|Bettina Kaiser
 35|Bharat Gurbaxani
-36|Borys Jawlinski
+36|Boris Yavlinsky
 37|Burkhard Thamm
 38|Christian Dörmer
 39|Christian Farwig
@@ -105,7 +105,7 @@
 105|Felix Schadendorf
 106|Felix Zimmermann
 107|Ferit Tavlan
-108|Flora Boeddeker
+108|Flora Zarkesch-Boeddeker
 109|Frank Lamprecht
 110|Frank Reichelt
 111|Frank Wichmann
@@ -114,7 +114,7 @@
 114|Fred Wrobel
 115|Frederic Boldt
 116|Friedrich Kleißendorf
-117|Georg Mavridis
+117|Georgios Mavridis
 118|Georg Nippgen
 119|Georg Weisz
 120|Gerda Heinrichs
@@ -130,7 +130,7 @@
 130|Hans Humburg
 131|Hans Ott
 132|Hans-Joachim Prieß
-133|Hans-Jörg Schinze
+133|Hans-Jörge Schinze
 134|Hans-Jürgen Riedel
 135|Hans-Peter Fütterer
 136|Hartmut Brückner
@@ -163,7 +163,7 @@
 163|Joachim Cappeller
 164|Joachim Hegener
 165|Joachim Parsch
-166|Jochen Bitschene
+166|Jochen Bitschené
 167|Jörg Fritsche
 168|Josef Knoll
 169|Josef Piekarek
@@ -172,7 +172,7 @@
 172|Jürgen Flory
 173|Jürgen Hollich
 174|Jürgen Nordmann
-175|Jürgen Sander
+175|Dr. Jürgen Sander
 176|Kai Timofejew
 177|Kareen Schroeder
 178|Karin Mavridis
@@ -214,7 +214,7 @@
 214|Michael Pauly
 215|Michael Schröder
 216|Mieke Plath
-217|Miklós Dumbovich
+217|Miklos Dumbovich
 218|Mirja Schraverus-Meuer
 219|Nadia Sanne
 220|Nedju Buchlev
@@ -238,7 +238,7 @@
 238|Rainer Herrmann
 239|Ralf Schmellekamp
 240|Ralf Speckmann
-241|Ralf-Dieter Zepelin
+241|Ralf-D. Zepelin
 242|Regine Bartels
 243|Reiner Marsal
 244|Robert Boeddeker
@@ -247,14 +247,14 @@
 247|Roland Godlewski
 248|Roland Kühnle
 249|Roland Rohowsky
-250|Roland Voigt
+250|Dr. Roland Voigt
 251|Roland Watzdorf
 252|Rolf Beckmann
 253|Rudi Salzer
 254|Sabine Flory
 255|Sabrina Wichmann
 256|Sebastian Reim
-257|Sebastian Weyand
+257|Dr. Sebastian Weyand
 258|Sijan Stankov
 259|Stefan Back
 260|Stefan Behn

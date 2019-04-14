@@ -3,7 +3,7 @@
 3|Alexander Finke
 4|Alexander Rapoport
 5|Alexander Smirnov
-6|Andeas Böhmer
+6|Andreas Böhmer
 7|André Kriner
 8|Andrea Reim
 9|Andreas Bollhorst
@@ -20,8 +20,8 @@
 20|Anselm Kiessling
 21|Antje Berghaus
 22|Axel Meuer
-23|Beate Nehmert
-24|Beatrix Kuzselka
+23|Pony Nehmert
+24|Beatrix Wodniansky
 25|Bernard Ludewig
 26|Bernd Engelhardt
 27|Bernd Gahntz
@@ -30,8 +30,8 @@
 30|Berthold Engel
 31|Bettina Brammann-Kuisat
 32|Bodo Lagemann
-33|Borys Yawlinsky
-34|Carina Tetal
+33|Boris Yavlinsky
+34|Dr. Carina Tetal
 35|Christian Dörmer
 36|Christian Farwig
 37|Christian Fröhner
@@ -51,7 +51,7 @@
 51|Diana Farken
 52|Dieter Laidig
 53|Dietmar Korb
-54|Dimitri Markaris
+54|Dimitrios Markaris
 55|Dirk Gyselinck
 56|Dirk Nedler
 57|Dirk Sanne
@@ -72,7 +72,7 @@
 72|Dr. Helmut Horacek
 73|Dr. Herbert Thieme
 74|Dr. Ilan Wolff
-75|Dr. Jean Georgiadis
+75|Dr. Jean Georgiades
 76|Dr. Johann Wempen
 77|Dr. Josef Harsanyi
 78|Dr. Jürgen Sander
@@ -102,7 +102,7 @@
 102|Fabian von Löbbecke
 103|Felix Schadendorf
 104|Felix Zimmermann
-105|Flora Boeddeker
+105|Flora Zarkesch-Boeddeker
 106|Frank Dethlefsen
 107|Frank Lamprecht
 108|Frank Reichelt
@@ -162,7 +162,7 @@
 162|Jürgen Dürkop
 163|Jürgen Hollich
 164|Kai Gladigau
-165|Karin Buhr
+165|Karin Schumann-Buhr
 166|Karl Wartlick
 167|Kathryn Herz
 168|Klaus Amann
@@ -170,7 +170,7 @@
 170|Klaus Reps
 171|Klaus Zeitler
 172|Klaus-Dieter Wacker
-173|Laszló Honti
+173|Laszlo Honti
 174|Loek Fresen
 175|Lothar Schmidt
 176|Lothar Schulze
@@ -184,7 +184,7 @@
 184|Marina Tetyusheva
 185|Martin Hofmann
 186|Martin Jentsch
-187|Martin Loefgren
+187|Martin Löfgren
 188|Martin Rehder
 189|Martin Schrödel
 190|Martin Werner
@@ -198,12 +198,12 @@
 198|Michael Hornbrook
 199|Michael Pauly
 200|Michael Schröder
-201|Miklós Dumbovich
+201|Miklos Dumbovich
 202|Mirja Schraverus-Meuer
 203|Nadia Sanne
 204|Nedju Buchlev
 205|Nikolas Bausback
-206|Nils Bockholt
+206|Nils Bokholt
 207|Oliver Hevemeier
 208|Omid Karimi
 209|Ortwin Wagner
@@ -215,10 +215,10 @@
 215|Petra Eleftherakis
 216|Petra von Malchus
 217|Petra Wüstner-Weiß
-218|Prinz Josias zu Waldeck
+218|Josias Prinz zu Waldeck
 219|Prof. Dr. Paul Margaretha
 220|Prof. Dr. Uwe Rösler
-221|Prof. Roland Schmidt
+221|Prof. Dr. Roland Schmid
 222|Prof. Ulrich Spengler
 223|Raffael Braun
 224|Rainer Handel
@@ -235,14 +235,14 @@
 235|Roland Kühnle
 236|Roland Plaß
 237|Roland Rohowsky
-238|Roland Voigt
+238|Dr. Roland Voigt
 239|Roland Watzdorf
 240|Rolf Beckmann
 241|Rudi Salzer
 242|Sabine Würdemann
 243|Sabrina Wichmann
 244|Sebastian Reim
-245|Sebastian Weyand
+245|Dr. Sebastian Weyand
 246|Simon Beadle
 247|Stefan Back
 248|Stefan Behn
@@ -264,7 +264,7 @@
 264|Udo Kasimir
 265|Udo Kreimeyer
 266|Ulf Bormann
-267|Uli Trepnau
+267|Ulrich Trepnau
 268|Ulrich Kratz
 269|Ulrich Staber
 270|Ulrich Voigt

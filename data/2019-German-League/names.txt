@@ -57,7 +57,7 @@
 57|Detlef Karcher
 58|Dieter Laidig
 59|Dietmar Korb
-60|Dima Nikolenkov
+60|Dimitrij Nikolenkov
 61|Dimitrios Markaris
 62|Dirk Röhring
 63|Dirk Sanne
@@ -141,8 +141,8 @@
 141|Henning Sahlmüller
 142|Herbert Klumpp
 143|Herbert Vetter
-144|Herr Jokisch
-145|Herr U. Kasimir
+144|Peter Jokisch
+145|Udo Kasimir
 146|Hilmar Benecke
 147|Hiltrud Jäschke
 148|Holger Hoffmann
@@ -167,7 +167,7 @@
 167|Josias Prinz zu Waldeck
 168|Julius Linde
 169|Jürgen Flory
-170|Jürgen Sander
+170|Dr. Jürgen Sander
 171|Kareen Schroeder
 172|Karin Mavridis
 173|Karin Wenning

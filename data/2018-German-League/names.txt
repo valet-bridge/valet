@@ -1,5 +1,5 @@
 1|Adam Meyerson
-2|Albrecht Holstein
+2|Albrecht Hollstein
 3|Alessandro Calmanovici
 4|Alexander Rapoport
 5|Alexander Studt
@@ -62,7 +62,7 @@
 62|David Cole
 63|Detlef Karcher
 64|Dieter Laidig
-65|Dima Nikolenkov
+65|Dimitrij Nikolenkov
 66|Dimitrios Markaris
 67|Dirk Sanne
 68|Dirk Schroeder
@@ -166,12 +166,12 @@
 166|Joachim Cappeller
 167|Joachim Hegener
 168|Joachim Parsch
-169|Jochen Bitschene
+169|Jochen Bitschené
 170|Jörg Fritsche
 171|Josias Prinz zu Waldeck
 172|Julius Linde
 173|Jürgen Flory
-174|Jürgen Sander
+174|Dr. Jürgen Sander
 175|Kareen Schroeder
 176|Karin Mavridis
 177|Karin Wenning
