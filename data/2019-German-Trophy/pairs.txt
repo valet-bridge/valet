@@ -1,0 +1,174 @@
+103|Thomas Burg|Peter Zelnik
+104|Wolfgang Lauss|Heini Berger
+201|Martin Rokyta|Karl Kaiser
+202|Werner Broser|Walter Schuster
+301|Ivan Nanev|Vladimir Mihov
+302|Diana Damianova|Viktor Aronov
+403|Patrik Boura|Frantisek Kralik
+404|Erik Klems|Michal Kopecky
+501|Sophie Bune|Soeren Caspersen
+502|Andreas Plejdrup|Christian Lahrmann
+503|Sophie Bune|Andreas Plejdrup
+504|Soeren Caspersen|Christian Lahrmann
+603|Edward Levy|Sarah Bell
+604|Ben Norton|Alex Roberts
+701|Ivars Rubenis|Aigars Germanis
+702|Andris Smilgajs|Ugis Jansons
+801|Uldis Bethers|Juris Balasovs
+802|Janis Bendiks|Janis Bethers
+901|Wubbo de Boer|Agnes Snellers
+902|Tom van Overbeeke|Ricardo Westerbeek
+1001|Peter van der Gaast|Emile Schols
+1002|Niels van Bijsterveldt|Pim Coppens
+1101|Guy Mendes de Léon|Thibo Sprinkhuizen
+1102|Veri Kiljan|Luc Tijssen
+1201|Erik Saelensminde|Karl Christian Bauman
+1202|Jan Erik Olsen|Morten Olsen
+1203|Karl Christian Bauman|Jan Erik Olsen
+1204|Erik Saelensminde|Morten Olsen
+1205|Stig Martinussen|Jan Petter Svendsen
+1206|Erik Saelensminde|Jan Petter Svendsen
+1207|Erik Saelensminde|Stig Martinussen
+1208|Morten Olsen|Jan Petter Svendsen
+1301|Per-Ove Grime|Cato Sundeng
+1302|Vidar Smith|Lars Allard
+1401|Elżbieta Chodacka|Agnieszka Piesiewicz
+1402|Joanna Kokot|Dominika Ocylok
+1501|Maja Mrozek|Ewa Dziubinska
+1502|Agnieszka Mankiewicz|Karolina Melkonyan
+1601|Piotr Solecki|Cezary Kmiecik
+1602|Jan Włodkowski|Robert Włodkowski
+1703|Zbigniew Lasocki|Jacek Batóg
+1704|Robert Cylwik|Wojciech Bondarewicz
+1705|Robert Cylwik|Robert Zaciura
+1801|Horia Georgescu|Razvan Gheorghe
+1802|Anton Negoescu|Cornel Teodorescu
+1901|Andrey Gromov|Anna Gulevich
+1902|Vadim Kholomeev|Yury Khyuppenen
+2001|Sören Hein|Mihnea Nedelcu
+2002|Felix Schadendorf|Daniel Josch
+2101|Reese Milner|Hemant Lall
+2103|Roy Welland|Sabine Auken
+2104|Hemant Lall|Petra Hamman
+2203|Sarah Teshome|Richard Winter
+2204|Dr. Silvia Klasberg-Brawanski|Martin Cantor
+2205|Kjeld Hansen|Peter Lund
+2301|Stanislaw Janik|Jacek Lesniczak
+2302|Pawel Siwinski|Zdzislaw Swiatek
+2401|Elianna Meyerson|Adam Meyerson
+2402|Wolfhart Umlauft|Jan Sohl
+2403|Elke Weber|Fried Weber
+2503|Tim Heeres|Marcel Swidde
+2504|Dennis Kruis|Hendrik Bijker
+2601|Kathryn Herz|Eckhard Böhlke
+2602|Hans-Joachim Prieß|André Hagen
+2701|Gareth Bartley|Jutta Bartley
+2702|Mike Scoltock|Richard Fedrick
+2801|Theresa Weigkricht|Jovanka Smederevac
+2802|Ulrike Liss|Claus Daehr
+2903|Mirja Schraverus-Meuer|Axel Meuer
+2904|Florian Weiss|Philipp Scheberan
+2905|Max Ellerbeck|Zuzana Otradovcova
+3001|Vera Waaga|Ralf Speckmann
+3002|Jürgen Nordmann|Norbert Keßler
+3003|Gerda Heinrichs|Karin Wenning
+3101|Simone Christine Riese|Thomas Riese
+3103|Vita Hupe|Philipp Schwan
+3201|Annaig Della Monta|Alfred Berthold
+3202|Francisco Pereira Coutinho|NN
+3303|Lutz Springer|Axel Neffe
+3304|Charlotte Farwig|Christian Farwig
+3401|Ursula Brzuska|Leela Guba
+3402|Gabriele Knoll|Kai-Ulrich Benthack
+3503|Ute Struthoff|Lars Christiansen
+3504|Martin Peschke|Gerald Voigt
+3601|Uwe Schoolmann|Annikki Schoolmann
+3602|Jürgen Sander|Bettina Bohnhorst
+3701|Flora Zarkesch-Boeddeker|Robert Boeddeker
+3702|Christian Löwenstein|Daniel Buse
+3803|Hans Frerichs|Ulrich Wenning
+3804|Ulrich Kratz|Bernhard Sträter
+3805|Herbert Klumpp|Reiner Marsal
+3901|Michael Dierich|Martin Jentsch
+3903|Martin Jentsch|Klaus Spiegelberg
+3904|Ulrich Schweding|Hema Adhikary
+3905|Michael Dierich|Klaus Spiegelberg
+4001|Kim Sanne|NN
+4002|Sven Farwig|Lara Bednarski
+4003|Mona Rieger|Alexandra Dammann
+4101|Benjamin Helm|Stefan Weber
+4102|Ole Farwig|Tim Wrobbel
+4103|Marius Gündel|Jonathan Pieper
+4201|Maximilian Litterst|Sibrand van Oosten
+4202|Philipp Pabst|Viktor Otto
+4203|Maximilian Stepper|Hartmut Kondoch
+4204|Maximilian Litterst|Philipp Pabst
+4303|Florian Alter|Lauritz Streck
+4304|Tomasz Gotard|Thomas Gotard
+4305|Florian Alter|Jan-Hendrik de Wiljes
+4401|Barbara Hieronimus|Andrea Rolfmeyer
+4402|Heidrun Ganser|Waltraud Grüning
+4501|Bernd Wagemann|Sybille Schultebraucks
+4502|Maria Peters|Klaus Vogt
+4601|Richard Bley|Oliver Hevemeier
+4602|Martin Schrödel|Michael Tomski
+4701|Michael Gromöller|Andreas Kirmse
+4703|Michael Gromöller|Jörg Fritsche
+4704|Andreas Kirmse|Helmut Häusler
+4705|Klaus Reps|Jörg Fritsche
+4706|Michael Gromöller|Helmut Häusler
+4801|Ronald Kalf|Georg Kippenberg
+4802|Andreas Gondorf|Mechthild Gondorf
+4903|Claudia Lüßmann|Ingo Lüßmann
+4904|Michael Schneider|Gisela Smykalla
+5003|Georg Weisz|Rainer Herrmann
+5004|Jakov Kats|Ilia Chapiro
+5101|Marie Eggeling|Matthias Felmy
+5102|Christian Schwerdt|Julius Linde
+5201|David Cole|Kevin Castner
+5202|Peter Jokisch|Udo Kasimir
+5301|Claudia Auer|Martin Auer
+5302|Margit Sträter|Pavel Bobrov
+5303|Pavel Bobrov|Frank Dethlefsen
+5304|Martin Auer|Margit Sträter
+5305|Margit Sträter|Frank Dethlefsen
+5306|Claudia Auer|Margit Sträter
+5401|Barbara von Kleist|Sabine Würdemann
+5402|Volker Hund-Schulze|Benedikt Wiemeyer
+5403|Ria Kürschner|Anne Gromöller
+5501|Ercan Sehmus|Husam Refaat Hassan
+5503|Husam Refaat Hassan|Okan Dindas
+5504|Mehmet Alper Tegmen|Hilmi Kilicarslan
+5505|Okan Dindas|Hilmi Kilicarslan
+5506|Ercan Sehmus|Mehmet Alper Tegmen
+5507|Ercan Sehmus|Hilmi Kilicarslan
+5508|Husam Refaat Hassan|Hilmi Kilicarslan
+5509|Ercan Sehmus|Okan Dindas
+5601|Norbert Schilhart|Nedju Buchlev
+5602|Helmut Horacek|Omid Karimi
+5701|Waltraud Vogt|Loek Fresen
+5702|Paul Orth|Matthias Schüller
+5803|Heinrich Nowak|Otto Ruthenberg
+5804|Karl Wartlick|Dieter Laidig
+5901|Cumhur Kirdemir|Fikret Dogan
+5902|Ralph Vitters|Bernd Gahntz
+6003|Carina Tetal|Klaus Amann
+6004|Anne Gladiator|Tobias Förster
+6101|Philip Calder|Udo Petersen
+6102|Dietmar Korb|Bharat Gurbaxani
+6103|Udo Petersen|Ulrike Köppchen
+6104|Philip Calder|Ulrike Köppchen
+6203|Wiebke Farwig|Mathias Farwig
+6204|Marianne Ermlich|Günter Marwitz
+6301|Henning Bohnsack|Lutz Gröbler
+6302|Daniela Westermann|Vitaliy Khanukov
+6303|Vitaliy Khanukov|Bernd Donner
+6304|Daniela Westermann|Bernd Donner
+6305|Henning Bohnsack|Vitaliy Khanukov
+6306|Lutz Gröbler|Vitaliy Khanukov
+6401|Geeske Joel|Daniela von Arnim
+6402|Roland Rohowsky|Paul Grünke
+6501|Helga Hagenberg|Dietlind Hilverda
+6502|Ton Bellekom|Ulf Tormin
+6601|Sebastian Reim|Guido Hopfenheit
+6602|Dr. Claus Günther|Christian Schlicker

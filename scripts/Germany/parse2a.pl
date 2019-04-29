@@ -26,6 +26,9 @@ for my $fname (@ARGV)
   my $roundno = $2;
   my $boardno = $3;
 
+# Kludge for 2019 Trophy
+# $roundno += 10 if $league > 1;
+
   my $line;
   my $lcount = 0;
   while ($line = <$fh>)
@@ -112,12 +115,12 @@ for my $fname (@ARGV)
     my $pairEW = $a[$na-1];
 
     # 2010 special: Pair numbers reused between leagues.
-    $pairNS += ($league-1) * 2000;
-    $pairEW += ($league-1) * 2000;
+    # $pairNS += ($league-1) * 2000;
+    # $pairEW += ($league-1) * 2000;
    
     if (! defined $pairs[$pairNS])
     {
-      die "Unrecognized pair number $pairNS";
+      die "Unrecognized pair number $pairNS in $fname";
     }
 
     if (! defined $pairs[$pairEW])
