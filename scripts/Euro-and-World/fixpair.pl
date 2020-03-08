@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use v5.10;
 
-# Copy in player names into unnames BoardDetails file.
+# Copy in player names into unnamed BoardDetails file.
 
 my $fname = shift @ARGV;
 open my $fh, "<$fname" or die "Can't open $fname";
