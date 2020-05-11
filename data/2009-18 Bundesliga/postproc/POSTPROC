@@ -1,0 +1,9 @@
+set d = .
+
+foreach i ($d/bl*.csv)
+  perl germanize.pl $i > x.csv
+  mv x.csv $i
+end
+
+perl decorate.pl $d/bl.csv $d/bl[123]*.csv > x.csv
+mv x.csv $d/bl.csv
