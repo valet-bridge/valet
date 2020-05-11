@@ -1,0 +1,5 @@
+								                </span>
+								                  </font></td>
+								                <td width="80" valign="middle" align="center"><img src="/graphics/Hand/board3.gif" width="65" height="65"></td>
+								                <td width="150" valign="middle"><font color="#0246B7">
+								                	<span class="SpanStyleVisitingTeam">

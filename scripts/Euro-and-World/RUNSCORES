@@ -1,4 +1,4 @@
-set d = '2018-Euro/Seniors'
+set d = '2020-Monaco/Open'
 set m = 'Matches'
 set s = 'scores.txt'
 set n = 'names.txt'

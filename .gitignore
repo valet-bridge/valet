@@ -43,3 +43,5 @@
 *.user
 *.tmp
 *.ipch
+
+scripts/*/*/*.html
