@@ -1,3 +1,25 @@
+2019-06-25
+
+-p, --player      Track player with that tag
+-P --players dir  Track all players?
+
+-z, --analyze     For player with that tag
+-Z, --anylyzeall dir
+
+Output order if numeric should be numerically sorted
+
+Tableau has scores (-50, +200) and is sorted by them.
+If player is specified, his scores are marked with *
+
+
+
+2019-BAM
+Why are matchpoints a bit different for E and W declarers of same
+contract?
+
+2019-Open
+Does correction work right?  Seems to over-adjust us vs Michael-Ingo.
+
 2019-04-14
 
 Expand Valet to give scores for:
