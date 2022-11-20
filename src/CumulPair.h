@@ -54,6 +54,8 @@ struct CumulPair
 
     float averageNonLead() const;
 
+    float figure(const SortingType sort) const;
+
     string strOverall(
       const Pairs& pairs,
       const int prec,

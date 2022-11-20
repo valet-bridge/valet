@@ -132,11 +132,14 @@ void Scores::Compensate()
   for (unsigned pno = 1; pno < length; pno++)
   {
     CumulPair oppResults;
+    oppResults.clear();
+    /*
     for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
     {
       oppResults.num[i] = 0;
       oppResults.sum[i] = 0.;
     }
+    */
 
     OppMapType& oppMap = oppScores[pno];
 

@@ -181,60 +181,40 @@ void CumulPair::operator -= (const CumulPair& c2)
 }
 
 
+float CumulPair::figure(const SortingType sort) const
+{
+  if (sort == VALET_SORT_OVERALL)
+    return avgPerChance[VALET_OVERALL];
+  else if (sort == VALET_SORT_BIDDING)
+    return avgPerChance[VALET_BID];
+  else if (sort == VALET_SORT_PLAY)
+    return avgPerChance[VALET_PLAY1] + avgPerChance[VALET_PLAY2];
+  else if (sort == VALET_SORT_DEFENSE)
+    return avgPerChance[VALET_DEF];
+  else if (sort == VALET_SORT_LEAD)
+    return avgPerChance[VALET_LEAD1] + avgPerChance[VALET_LEAD2];
+  else if (sort == VALET_SORT_BID_OVER_PLAY)
+    return avgPerChance[VALET_BID] -
+      (avgPerChance[VALET_PLAY1] + avgPerChance[VALET_PLAY2]);
+  else if (sort == VALET_SORT_DEF_OVER_PLAY)
+    return avgPerChance[VALET_DEF] -
+      (avgPerChance[VALET_PLAY1] + avgPerChance[VALET_PLAY2]);
+  else if (sort == VALET_SORT_LEAD_OVER_PLAY)
+    return avgPerChance[VALET_LEAD1] + avgPerChance[VALET_LEAD2] -
+      (avgPerChance[VALET_PLAY1] + avgPerChance[VALET_PLAY2]);
+  else
+  {
+    assert(false);
+    return 0.f;
+  }
+}
+
+
 bool CumulPair::greater(
   const CumulPair& c2,
   const SortingType sort) const
 {
- float f1, f2;
-
- switch (sort)
- {
-    case VALET_SORT_OVERALL:
-      return (avgPerChance[VALET_OVERALL] >
-        c2.avgPerChance[VALET_OVERALL]);
-
-    case VALET_SORT_BIDDING:
-      return (avgPerChance[VALET_BID] > 
-        c2.avgPerChance[VALET_BID]);
-
-    case VALET_SORT_PLAY:
-      return (avgPerChance[VALET_PLAY1] + avgPerChance[VALET_PLAY2] >
-        c2.avgPerChance[VALET_PLAY1] + c2.avgPerChance[VALET_PLAY2]);
-
-    case VALET_SORT_DEFENSE:
-      return (avgPerChance[VALET_DEF] > c2.avgPerChance[VALET_DEF]);
-
-    case VALET_SORT_LEAD:
-      return (avgPerChance[VALET_LEAD1] + avgPerChance[VALET_LEAD2] >
-        c2.avgPerChance[VALET_LEAD1] + c2.avgPerChance[VALET_LEAD2]);
-
-    case VALET_SORT_BID_OVER_PLAY:
-      f1 = avgPerChance[VALET_BID] -
-        (avgPerChance[VALET_PLAY1] + avgPerChance[VALET_PLAY2]);
-      f2 = c2.avgPerChance[VALET_BID] -
-        (c2.avgPerChance[VALET_PLAY1] + c2.avgPerChance[VALET_PLAY2]);
-      return (f1 > f2);
-
-    case VALET_SORT_DEF_OVER_PLAY:
-      f1 = avgPerChance[VALET_DEF] -
-        (avgPerChance[VALET_PLAY1] + avgPerChance[VALET_PLAY2]);
-      f2 = c2.avgPerChance[VALET_DEF] -
-        (c2.avgPerChance[VALET_PLAY1] + c2.avgPerChance[VALET_PLAY2]);
-      return (f1 > f2);
-
-    case VALET_SORT_LEAD_OVER_PLAY:
-      f1 = 
-        avgPerChance[VALET_LEAD1] + avgPerChance[VALET_LEAD2] -
-        (avgPerChance[VALET_PLAY1] + avgPerChance[VALET_PLAY2]);
-      f2 = 
-        c2.avgPerChance[VALET_LEAD1] + c2.avgPerChance[VALET_LEAD2] -
-        (c2.avgPerChance[VALET_PLAY1] + c2.avgPerChance[VALET_PLAY2]);
-      return (f1 > f2);
-
-    default:
-      assert(false);
-      return 0.;
-  }
+  return (CumulPair::figure(sort) > c2.figure(sort));
 }
 
 
