@@ -4,6 +4,7 @@ inputs/args.obj: inputs/args.h cst.h
 inputs/files.obj: inputs/files.h inputs/parse.h cst.h Pairs.h cst.h Hand.h
 inputs/files.obj: valet.h
 inputs/parse.obj: inputs/parse.h cst.h Pairs.h cst.h valet.h
+scores/Aspect.obj: scores/Aspect.h misc.h
 misc.obj: Pairs.h cst.h misc.h
 Hand.obj: valet.h Pairs.h cst.h Hand.h scoring.h
 Pairs.obj: Pairs.h cst.h

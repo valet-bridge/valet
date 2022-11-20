@@ -5,6 +5,8 @@ VALET_FILES   =                                         \
                 inputs/files.cpp                        \
                 inputs/parse.cpp                        \
                                                         \
+                scores/Aspect.cpp                       \
+                                                        \
                 misc.cpp                                \
                 Hand.cpp                                \
                 Pairs.cpp                               \

@@ -30,39 +30,19 @@ class Aspect
 
   public:
 
-    void incr(const float f)
-    {
-      num++;
-      sum += f;
-    };
+    void incr(const float f);
 
-    void decr(const float f)
-    {
-      num++;
-      sum -= f;
-    };
+    void decr(const float f);
 
-    void operator += (const Aspect& a2)
-    {
-      num += a2.num;
-      sum += a2.sum;
-    };
+    void operator += (const Aspect& a2);
 
-    void operator -= (const Aspect& a2)
-    {
-      num -= a2.num;
-      sum -= a2.sum;
-    };
+    void operator -= (const Aspect& a2);
 
-    bool empty() const
-    {
-      return (num == 0);
-    };
+    bool empty() const;
 
-    float average(const ScoringType stype) const
-    {
-      return scale(sum, num, stype);
-    };
+    float average(const ScoringType stype) const;
+
+    string str(const int prec) const;
 };
 
 #endif
