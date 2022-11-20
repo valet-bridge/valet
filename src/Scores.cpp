@@ -409,7 +409,9 @@ void Scores::PrintTextHeader() const
 
   cout << 
     setw(54) << "" << " | " <<
-    c.strHeaderText() << "\n";
+    c.strHeaderText1() << "\n" <<
+    setw(54) << left << "Players" << right << " | " <<
+    c.strHeaderText2() << "\n";
 }
 
 

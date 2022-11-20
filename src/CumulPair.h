@@ -52,7 +52,8 @@ struct CumulPair
 
   string strHeaderCSV() const;
 
-  string strHeaderText() const;
+  string strHeaderText1() const;
+  string strHeaderText2() const;
 
   string strOverall(
     const int prec,

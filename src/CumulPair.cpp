@@ -92,7 +92,7 @@ float CumulPair::averageNonLead() const
 }
 
 
-string CumulPair::strHeaderText() const
+string CumulPair::strHeaderText1() const
 {
   stringstream ss;
 
@@ -120,10 +120,15 @@ string CumulPair::strHeaderText() const
         setw(13) << "" << " |";
   }
 
-  ss << "\n";
+  return ss.str();
+}
+
+
+string CumulPair::strHeaderText2() const
+{
+  stringstream ss;
 
   ss <<
-    setw(54) << left << "Players" << right << " | " <<
     setw(4) << "No." <<
     setw(7) << scoringTags[options.valet].header << " | " <<
     setw(5) << "Bid" <<
