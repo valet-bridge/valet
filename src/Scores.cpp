@@ -206,37 +206,24 @@ bool Scores::PreparePrint(
 }
 
 
-void Scores::PrintText(
-  const unsigned mode) const
+string Scores::str(
+  const unsigned mode,
+  const FormatType format) const
 {
+  stringstream ss;
+
   int prec;
   if (! Scores::PreparePrint(mode, prec))
-    return;
+    return "";
 
-  cout << Scores::strHeader(VALET_FORMAT_TEXT);
-
-  for (unsigned pno = 1; pno < length; pno++)
-  {
-    cout << pairScores[pno].strLine(pairs, mode, prec, VALET_FORMAT_TEXT);
-  }
-  cout << "\n";
-}
-
-
-void Scores::PrintCSV(
-  const unsigned mode) const
-{
-  int prec;
-  if (! Scores::PreparePrint(mode, prec))
-    return;
-
-  cout << Scores::strHeader(VALET_FORMAT_CSV);
+  ss << Scores::strHeader(format);
 
   for (unsigned pno = 1; pno < length; pno++)
-  {
-    cout << pairScores[pno].strLine(pairs, mode, prec, VALET_FORMAT_CSV);
-  }
-  cout << "\n";
+    ss << pairScores[pno].strLine(pairs, mode, prec, format);
+
+  ss << "\n";
+  
+  return ss.str();
 }
 
 
@@ -265,17 +252,7 @@ string Scores::strHeader(const FormatType format) const
 }
 
 
-void Scores::Print() const
+string Scores::str() const
 {
-  if (options.format == VALET_FORMAT_TEXT)
-  {
-    Scores::PrintText(0);
-    Scores::PrintText(1);
-  }
-  else
-  {
-    Scores::PrintCSV(0);
-    Scores::PrintCSV(1);
-  }
+  return Scores::str(0, options.format) + Scores::str(1, options.format);
 }
-

@@ -86,7 +86,7 @@ int main(int argc, char * argv[])
 
   scores.Normalize();
   scores.Sort(options.sort);
-  scores.Print();
+  cout << scores.str();
   cout.flush();
 }
 

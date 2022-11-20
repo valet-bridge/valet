@@ -30,14 +30,6 @@ class Scores
 {
   private:
 
-    /*
-    struct OppCompType
-    {
-      float sum[VALET_ENTRY_SIZE];
-    };
-    */
-
-
     vector<CumulPair> pairScores;
     vector<CumulPair> oppComp;
 
@@ -51,16 +43,6 @@ class Scores
       const unsigned pairNo,
       const unsigned oppNo);
 
-    /*
-    float Scale(
-      const float value,
-      const unsigned num) const;
-
-    float ScaleMP(
-      const float value,
-      const unsigned num) const;
-      */
-
     void AddCompensation(
       const unsigned pairNo,
       const unsigned oppNo,
@@ -70,13 +52,11 @@ class Scores
       const unsigned mode,
       int& prec) const;
 
-    void PrintText(
-      const unsigned mode) const;
-
     string strHeader(const FormatType format) const;
 
-    void PrintCSV(
-      const unsigned mode) const;
+    string str(
+      const unsigned mode,
+      const FormatType format) const;
 
   public:
 
@@ -96,7 +76,8 @@ class Scores
     void Sort(
       const SortingType sort);
 
-    void Print() const;
+    string str() const;
+
 };
 
 #endif
