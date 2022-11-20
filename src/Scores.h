@@ -72,9 +72,11 @@ class Scores
       const unsigned mode,
       int& prec) const;
 
+    /*
     bool SkipScore(
       const CumulPair& c,
       const unsigned mode) const;
+      */
 
     void PrintTextHeader() const;
 

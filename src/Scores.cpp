@@ -271,12 +271,14 @@ bool Scores::PreparePrint(
 }
 
 
+/*
 bool Scores::SkipScore(
   const CumulPair& c,
   const unsigned mode) const
 {
   return c.skip(mode);
 }
+*/
 
 
 void Scores::PrintTextHeader() const
@@ -303,7 +305,8 @@ void Scores::PrintText(
   for (unsigned pno = 1; pno < length; pno++)
   {
     const CumulPair& c = pairScores[pno];
-    if (Scores::SkipScore(c, mode))
+    // if (Scores::SkipScore(c, mode))
+    if (c.skip(mode))
       continue;
 
     cout << 
@@ -340,7 +343,8 @@ void Scores::PrintCSV(
   for (unsigned pno = 1; pno < length; pno++)
   {
     const CumulPair& c = pairScores[pno];
-    if (Scores::SkipScore(c, mode))
+    // if (Scores::SkipScore(c, mode))
+    if (c.skip(mode))
       continue;
 
     cout << 
