@@ -30,10 +30,12 @@ enum CumulEnum
   VALET_PLAY_SUM = 2,
   VALET_PLAY1 = 3,
   VALET_PLAY2 = 4,
-  VALET_LEAD1 = 5,
-  VALET_LEAD2 = 6,
-  VALET_DEF = 7,
-  VALET_ENTRY_SIZE = 8
+  VALET_LEAD_SUM = 5,
+  VALET_LEAD1 = 6,
+  VALET_LEAD2 = 7,
+  VALET_DEF_SUM = 8,
+  VALET_DEF = 9,
+  VALET_ENTRY_SIZE = 10
 };
 
 class CumulPair
@@ -49,8 +51,6 @@ class CumulPair
     vector<Aspect> aspects;
 
     float averageDefense() const;
-
-    float averageLead() const;
 
     string strOverall(
       const Pairs& pairs,

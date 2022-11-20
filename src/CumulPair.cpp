@@ -85,14 +85,32 @@ void CumulPair::incrDefenders(const ValetEntryType& entry)
 
   if (entry.defFlag)
   {
-    aspects[VALET_DEF].incr(entry.defScore);
 
     if (options.leadFlag)
     {
+      aspects[VALET_DEF].incr(entry.defScore);
+
+      float dsum = entry.defScore;
+
       if (entry.leadFlag[0])
+      {
+        aspects[VALET_LEAD_SUM].incr(entry.leadScore[0]);
         aspects[VALET_LEAD1].incr(entry.leadScore[0]);
+        dsum += entry.leadScore[0];
+      }
       else if (entry.leadFlag[1])
+      {
+        aspects[VALET_LEAD_SUM].incr(entry.leadScore[1]);
         aspects[VALET_LEAD2].incr(entry.leadScore[1]);
+        dsum += entry.leadScore[1];
+      }
+
+      aspects[VALET_DEF_SUM].incr(dsum);
+    }
+    else
+    {
+      aspects[VALET_DEF].incr(entry.defScore);
+      aspects[VALET_DEF_SUM].incr(entry.defScore);
     }
   }
 
@@ -147,25 +165,6 @@ float CumulPair::averageDefense() const
     //   (aspects[VALET_LEAD1].sum +
     //    aspects[VALET_LEAD2].sum +
     //    aspects[VALET_DEF].sum) / n3;
-  }
-  else
-    return 0.;
-}
-
-
-float CumulPair::averageLead() const
-{
-  const float n1 = static_cast<float>(num[VALET_LEAD1]);
-  const float n2 = static_cast<float>(num[VALET_LEAD2]);
-  const float n3 = static_cast<float>(num[VALET_PLAY1]);
-  const float n4 = static_cast<float>(num[VALET_PLAY2]);
-  const float n = n3 + n4;
-  if (n > 0)
-  {
-    return (avgPerChance[VALET_LEAD1] * n1 +
-      avgPerChance[VALET_LEAD2] * n2) / n;
-
-    // return (aspects[VALET_LEAD1].sum + aspects[VALET_LEAD2].sum) / n;
   }
   else
     return 0.;
@@ -446,15 +445,16 @@ string CumulPair::strDetails(
   stringstream ss;
 
   // Declarer score.
-  unsigned n = num[VALET_PLAY1] + num[VALET_PLAY2];
+  // unsigned n = num[VALET_PLAY1] + num[VALET_PLAY2];
   ss << aspects[VALET_PLAY_SUM].str(prec);
 
   if (format == VALET_FORMAT_TEXT)
     ss << "  ";
 
   // Defender score.
-  n = num[VALET_DEF];
+  unsigned n = num[VALET_DEF];
   ss << strPair(CumulPair::averageDefense(), n, prec, format);
+  // ss << aspects[VALET_DEF_SUM].str(prec);
 
   if (format == VALET_FORMAT_TEXT)
     ss << " | ";
@@ -484,8 +484,7 @@ string CumulPair::strDetails(
 
     if (options.averageFlag)
     {
-      ss << strPair(CumulPair::averageLead(),
-        num[VALET_PLAY1] + num[VALET_PLAY2], prec, format);
+      ss << aspects[VALET_LEAD_SUM].str(prec);
 
       if (format == VALET_FORMAT_TEXT)
         ss << "  ";
