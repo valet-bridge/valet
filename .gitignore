@@ -45,3 +45,8 @@
 *.ipch
 
 scripts/*/*/*.html
+
+src/x64/Debug/Valet.tlog/*
+src/x64/Debug/*
+src/.vs/Valet/FileContentIndex/*
+src/.vs/Valet/v17/*
