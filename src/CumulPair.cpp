@@ -189,7 +189,7 @@ void CumulPair::operator += (const CumulPair& c2)
     sum[i] += c2.sum[i];
     num[i] += c2.num[i];
 
-    aspects[i] -= c2.aspects[i];
+    aspects[i] += c2.aspects[i];
   }
 }
 
@@ -278,7 +278,13 @@ void CumulPair::compensate(
   const ScoringEnum stype)
 {
   for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
+  {
+    // cout << "i " << endl;
+    // cout << "was  " << aspects[i].str(2) << endl;
+    // cout << "comp " << oppComp.aspects[i].str(2) << endl;
     aspects[i].compensate(oppComp.aspects[i], stype);
+    // cout << "is   " << aspects[i].str(2) << endl;
+  }
 
   if (stype == VALET_MATCHPOINTS)
   {
@@ -464,9 +470,9 @@ string CumulPair::strDetails(
     ss << " | ";
 
   // Individual declarer scores.
-  // ss << aspects[VALET_PLAY1].str(prec);
-  ss << strPair(avgPerChance[VALET_PLAY1], num[VALET_PLAY1], 
-    prec, format);
+  ss << aspects[VALET_PLAY1].str(prec);
+  // ss << strPair(avgPerChance[VALET_PLAY1], num[VALET_PLAY1], 
+    // prec, format);
 
   if (format == VALET_FORMAT_TEXT)
     ss << "  ";

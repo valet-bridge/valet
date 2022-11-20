@@ -77,8 +77,7 @@ string Aspect::str(const int prec) const
   if (options.format == VALET_FORMAT_TEXT)
   {
     if (num > 0)
-      ss << setw(5) << fixed << setprecision(prec) << 
-        sum / static_cast<float>(num) <<
+      ss << setw(5) << fixed << setprecision(prec) << average <<
         " (" << setw(3) << num << ")";
     else
       ss << setw(5) << "-" << " (  0)";
@@ -86,8 +85,7 @@ string Aspect::str(const int prec) const
   else if (options.format == VALET_FORMAT_CSV)
   {
     if (num > 0)
-      ss << setprecision(prec) << 
-        sum / static_cast<float>(num) << options.separator <<
+      ss << setprecision(prec) << average << options.separator <<
         num << options.separator;
     else
       ss << "-" << options.separator << "0" << options.separator;
