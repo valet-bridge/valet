@@ -53,10 +53,10 @@ enum FormatType: unsigned
 };
 
 
-enum TableauType: unsigned
+enum TableType: unsigned
 {
-  VALET_TABLEAU_MANY,
-  VALET_TABLEAU_FEW
+  VALET_TABLE_MANY = 0,
+  VALET_TABLE_FEW = 1
 };
 
 

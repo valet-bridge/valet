@@ -19,7 +19,7 @@ using namespace std;
 #include "CumulPair.h"
 
 enum FormatType: unsigned;
-enum TableauType: unsigned;
+enum TableType: unsigned;
 
 class Scores
 {
@@ -41,12 +41,12 @@ class Scores
     void storeCrossCumul(const ValetEntryType& entry);
 
     bool PreparePrint(
-      const unsigned mode,
+      const TableType ttype,
       int& prec) const;
 
     string strHeader(const FormatType format) const;
 
-    string str(const TableauType ttype) const;
+    string str(const TableType ttype) const;
 
   public:
 
@@ -56,8 +56,7 @@ class Scores
 
     void Reset();
 
-    void AddEntry(
-      const ValetEntryType& entry);
+    void AddEntry(const ValetEntryType& entry);
 
     void Compensate();
 

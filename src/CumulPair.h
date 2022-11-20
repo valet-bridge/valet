@@ -10,7 +10,10 @@
 #ifndef VALET_CUMUL_PAIR_H
 #define VALET_CUMUL_PAIR_H
 
+#include <vector>
 #include <string>
+
+#include "scores/Aspect.h"
 
 class Pairs;
 struct ValetEntryType;
@@ -43,6 +46,8 @@ class CumulPair
     float avgTotal[VALET_ENTRY_SIZE];
     float avgPerChance[VALET_ENTRY_SIZE];
 
+    vector<Aspect> aspects;
+
     float averagePlay() const;
 
     float averageDefense() const;
@@ -66,6 +71,8 @@ class CumulPair
 
   public:
 
+    CumulPair();
+
     void clear();
 
     void setPair(const unsigned pairNoIn);
@@ -84,7 +91,7 @@ class CumulPair
 
     float figure(const SortingType sort) const;
 
-    bool skip(const unsigned mode) const;
+    bool skip(const TableType ttype) const;
 
     string strHeaderCSV() const;
 
@@ -93,7 +100,7 @@ class CumulPair
 
     string strLine(
       const Pairs& pairs,
-      const unsigned mode,
+      const TableType ttype,
       const int prec,
       const FormatType format) const;
 };

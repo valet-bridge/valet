@@ -45,6 +45,9 @@ void Scores::Reset()
   oppScores.resize(SCORES_CHUNK_SIZE);
   oppComp.resize(SCORES_CHUNK_SIZE);
   length = SCORES_CHUNK_SIZE;
+
+  for (auto& p: pairScores)
+    p.clear();
 }
 
 
@@ -175,17 +178,17 @@ void Scores::Sort(
 
 
 bool Scores::PreparePrint(
-  const unsigned mode,
+  const TableType ttype,
   int& prec) const
 {
-  if (mode == 1 && options.minHands == 0)
+  if (ttype == VALET_TABLE_FEW && options.minHands == 0)
     return false;
 
   bool flag = false;
   for (unsigned pno = 1; pno < length && ! flag; pno++)
   {
     const CumulPair& c = pairScores[pno];
-    if (! c.skip(mode))
+    if (! c.skip(ttype))
       flag = true;
   }
 
@@ -229,7 +232,7 @@ string Scores::strHeader(const FormatType format) const
 }
 
 
-string Scores::str(const TableauType ttype) const
+string Scores::str(const TableType ttype) const
 {
   stringstream ss;
 
@@ -251,6 +254,6 @@ string Scores::str(const TableauType ttype) const
 string Scores::str() const
 {
   return 
-    Scores::str(VALET_TABLEAU_MANY) + 
-    Scores::str(VALET_TABLEAU_FEW);
+    Scores::str(VALET_TABLE_MANY) + 
+    Scores::str(VALET_TABLE_FEW);
 }

@@ -20,6 +20,12 @@
 extern OptionsType options;
 
 
+CumulPair::CumulPair()
+{
+  aspects.resize(VALET_ENTRY_SIZE);
+}
+
+
 void CumulPair::clear()
 {
   for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
@@ -38,6 +44,16 @@ void CumulPair::setPair(const unsigned pairNoIn)
 
 void CumulPair::incrDeclarer(const ValetEntryType& entry)
 {
+  assert(aspects.size() == VALET_ENTRY_SIZE);
+  aspects[VALET_OVERALL].incr(entry.overall);
+  aspects[VALET_BID].incr(entry.bidScore);
+
+  if (entry.declFlag[0])
+    aspects[VALET_PLAY1].incr(entry.playScore[0]);
+  else if (entry.declFlag[1])
+    aspects[VALET_PLAY2].incr(entry.playScore[1]);
+
+
   num[VALET_OVERALL]++;
   sum[VALET_OVERALL] += entry.overall;
 
@@ -59,6 +75,23 @@ void CumulPair::incrDeclarer(const ValetEntryType& entry)
 
 void CumulPair::incrDefenders(const ValetEntryType& entry)
 {
+  assert(aspects.size() == VALET_ENTRY_SIZE);
+  aspects[VALET_OVERALL].decr(entry.overall);
+  aspects[VALET_BID].decr(entry.bidScore);
+
+  if (entry.defFlag)
+  {
+    aspects[VALET_DEF].decr(entry.defScore);
+
+    if (options.leadFlag)
+    {
+      if (entry.leadFlag[0])
+        aspects[VALET_LEAD1].incr(entry.leadScore[0]);
+      else if (entry.leadFlag[1])
+        aspects[VALET_LEAD2].incr(entry.leadScore[1]);
+    }
+  }
+
   num[VALET_OVERALL]++;
   sum[VALET_OVERALL] -= entry.overall;
 
@@ -97,6 +130,7 @@ float CumulPair::averagePlay() const
   {
     return (avgPerChance[VALET_PLAY1] * n1 +
       avgPerChance[VALET_PLAY2] * n2) / n;
+    // return (aspects[VALET_PLAY1].sum + aspects[VALET_PLAY2].sum) / n;
   }
   else
     return 0.;
@@ -120,6 +154,11 @@ float CumulPair::averageDefense() const
       (avgPerChance[VALET_LEAD1] * n1 +
        avgPerChance[VALET_LEAD2] * n2 +
        avgPerChance[VALET_DEF] * n3) / n3;
+
+    // return -offsetMP +
+    //   (aspects[VALET_LEAD1].sum +
+    //    aspects[VALET_LEAD2].sum +
+    //    aspects[VALET_DEF].sum) / n3;
   }
   else
     return 0.;
@@ -129,12 +168,14 @@ float CumulPair::averageDefense() const
 float CumulPair::averageLead1() const
 {
   return avgPerChance[VALET_LEAD1];
+  // return aspects[VALET_LEAD1].average(stype);
 }
 
 
 float CumulPair::averageLead2() const
 {
   return avgPerChance[VALET_LEAD2];
+  // return aspects[VALET_LEAD2].average(stype);
 }
 
 
@@ -149,6 +190,8 @@ float CumulPair::averageLead() const
   {
     return (avgPerChance[VALET_LEAD1] * n1 +
       avgPerChance[VALET_LEAD2] * n2) / n;
+
+    // return (aspects[VALET_LEAD1].sum + aspects[VALET_LEAD2].sum) / n;
   }
   else
     return 0.;
@@ -158,25 +201,32 @@ float CumulPair::averageLead() const
 float CumulPair::averageNonLead() const
 {
   return avgPerChance[VALET_DEF];
+  // return aspects[VALET_DEF].average(stype);
 }
 
 
 void CumulPair::operator += (const CumulPair& c2)
 {
+  assert(aspects.size() == VALET_ENTRY_SIZE);
   for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
   {
     sum[i] += c2.sum[i];
     num[i] += c2.num[i];
+
+    aspects[i] -= c2.aspects[i];
   }
 }
 
 
 void CumulPair::operator -= (const CumulPair& c2)
 {
+  assert(aspects.size() == VALET_ENTRY_SIZE);
   for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
   {
     sum[i] -= c2.sum[i];
     num[i] -= c2.num[i];
+
+    aspects[i] -= c2.aspects[i];
   }
 }
 
@@ -211,18 +261,29 @@ float CumulPair::figure(const SortingType sort) const
 }
 
 
-bool CumulPair::skip(const unsigned mode) const
+bool CumulPair::skip(const TableType ttype) const
 {
+  assert(aspects.size() == VALET_ENTRY_SIZE);
   if (num[VALET_OVERALL] == 0)
+  {
     return true;
+    assert(aspects[VALET_OVERALL].empty());
+  }
+  else
+    assert(! aspects[VALET_OVERALL].empty());
 
-  if (mode == 0)
+  if (ttype == VALET_TABLE_MANY)
   {
     if (num[VALET_OVERALL] < options.minHands)
       return true;
   }
-  else if (num[VALET_OVERALL] > options.minHands)
+  else  if (ttype == VALET_TABLE_FEW)
+  {
+    if (num[VALET_OVERALL] > options.minHands)
       return true;
+  }
+  else
+    assert(false);
 
   return false;
 }
@@ -476,11 +537,11 @@ string CumulPair::strDetails(
 
 string CumulPair::strLine(
   const Pairs& pairs,
-  const unsigned mode,
+  const TableType ttype,
   const int prec,
   const FormatType format) const
 {
-  if (CumulPair::skip(mode))
+  if (CumulPair::skip(ttype))
     return "";
 
   return 
