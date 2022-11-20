@@ -32,9 +32,9 @@ enum CumulEnum
   VALET_ENTRY_SIZE = 7
 };
 
-struct CumulPair
+class CumulPair
 {
-  // private:
+  private:
 
     unsigned pairNo;
 
@@ -64,7 +64,7 @@ struct CumulPair
       const int prec,
       const FormatType format) const;
 
-  // public:
+  public:
 
     void clear();
 

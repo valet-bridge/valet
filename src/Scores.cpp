@@ -66,29 +66,26 @@ CumulPair& Scores::getCrossCumulPair(
 
 void Scores::storeCrossCumul(const ValetEntryType& entry)
 {
+  // Remember the pairs who played in order to be able to compensate.
   CumulPair& opp = Scores::getCrossCumulPair(entry.pairNo, entry.oppNo);
   CumulPair& pair = Scores::getCrossCumulPair(entry.oppNo, entry.pairNo);
 
-  // Ugh.  But I don't feel like rewriting the entry data structure,
-  // as this depends on list[2].
-  CumulPair oppValues;
-  oppValues.sum[VALET_OVERALL] = entry.overall;
-  oppValues.sum[VALET_BID] = entry.bidScore;
-  oppValues.sum[VALET_PLAY1] = entry.playScore[0];
-  oppValues.sum[VALET_PLAY2] = entry.playScore[1];
-  oppValues.sum[VALET_LEAD1] = entry.leadScore[0];
-  oppValues.sum[VALET_LEAD2] = entry.leadScore[1];
-  oppValues.sum[VALET_DEF] = entry.defScore;
+  CumulPair oppCP;
+  CumulPair pairCP;
 
+  oppCP.clear();
+  pairCP.clear();
 
-  for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
-  {
-    opp.num[i]++;
-    opp.sum[i] += oppValues.sum[i];
+  // The entry always yields a declaring entry for us and a defending
+  // entry for the other pair.
+  oppCP.incrDefenders(entry);
+  pairCP.incrDeclarer(entry);
 
-    pair.num[i]++;
-    pair.sum[i] -= oppValues.sum[i];
-  }
+  oppCP.scale(options.valet);
+  pairCP.scale(options.valet);
+
+  opp += oppCP;
+  pair += pairCP;
 }
 
 
@@ -116,7 +113,6 @@ void Scores::AddEntry(
   cDef.setPair(entry.oppNo);
   cDef.incrDefenders(entry);
 
-  // Remember the opponent in order to be able to compensate.
   Scores::storeCrossCumul(entry);
 }
 
