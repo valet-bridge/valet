@@ -403,34 +403,6 @@ bool Scores::SkipScore(
 }
 
 
-/*
-void Scores::PrintTextPair(
-  const float average,
-  const unsigned no,
-  const int prec) const
-{
-  if (no > 0)
-    cout << setw(5) << fixed << setprecision(prec) << average << 
-      " (" << setw(3) << no << ")";
-  else
-    cout << setw(5) << "-" << " (  0)";
-}
-
-
-void Scores::PrintCSVPair(
-  const float average,
-  const unsigned no,
-  const int prec,
-  const string& s) const
-{
-  if (no > 0)
-    cout << setprecision(prec) << average << s << no << s;
-  else
-    cout << "-" << s << "0" << s;
-}
-*/
-
-
 void Scores::PrintTextHeader() const
 {
   cout << 
@@ -519,54 +491,7 @@ void Scores::PrintText(
         c.avgPerChance[VALET_OVERALL] - 
         c.avgPerChance[VALET_BID] << " | ";
 
-    // Declarer score.
-    unsigned n = c.num[VALET_PLAY1] + c.num[VALET_PLAY2];
-    cout << strPair(c.averagePlay(), n, prec, VALET_FORMAT_TEXT);
-
-    // Defender score.
-    cout << "  ";
-    n = c.num[VALET_DEF];
-    cout << strPair(c.averageDefense(), n, prec, VALET_FORMAT_TEXT);
-
-    cout << " | ";
-
-    // Individual declarer scores.
-    cout << strPair(
-      c.avgPerChance[VALET_PLAY1], c.num[VALET_PLAY1], prec,
-        VALET_FORMAT_TEXT);
-    cout << "  ";
-    cout << strPair(
-      c.avgPerChance[VALET_PLAY2], c.num[VALET_PLAY2], prec,
-        VALET_FORMAT_TEXT);
-
-    cout << " | ";
-
-    if (options.leadFlag)
-    {
-      cout << strPair(c.averageLead1(), c.num[VALET_LEAD1], prec,
-        VALET_FORMAT_TEXT);
-      cout << "  ";
-      cout << strPair(c.averageLead2(), c.num[VALET_LEAD2], prec,
-        VALET_FORMAT_TEXT);
-      cout << "  ";
-      
-      if (options.averageFlag)
-      {
-        cout << strPair(
-          c.averageLead(),
-          c.num[VALET_PLAY1] + c.num[VALET_PLAY2], 
-          prec,
-          VALET_FORMAT_TEXT);
-        cout << "  ";
-      }
-
-      cout << strPair(
-        c.avgPerChance[VALET_DEF], c.num[VALET_DEF], prec,
-          VALET_FORMAT_TEXT);
-      cout << " |";
-    }
-
-    cout << "\n";
+    cout << c.strDetails(prec, VALET_FORMAT_TEXT);
   }
   cout << "\n";
 }

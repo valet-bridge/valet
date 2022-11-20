@@ -10,19 +10,12 @@
 #ifndef VALET_CUMUL_PAIR_H
 #define VALET_CUMUL_PAIR_H
 
-#include <iostream>
-#include <iomanip>
 #include <string>
 #include <vector>
 
 using namespace std;
 
 #include "cst.h"
-
-extern OptionsType options;
-
-#define SCORES_CHUNK_SIZE 16
-
 
 enum CumulEnum
 {
@@ -56,6 +49,10 @@ struct CumulPair
   float averageLead() const;
 
   float averageNonLead() const;
+
+  string strDetails(
+    const int prec,
+    const FormatType format) const;
 };
 
 #endif

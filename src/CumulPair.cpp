@@ -13,6 +13,7 @@
 #include <cassert>
 
 #include "CumulPair.h"
+#include "misc.h"
 #include "cst.h"
 
 extern OptionsType options;
@@ -88,4 +89,60 @@ float CumulPair::averageLead() const
 float CumulPair::averageNonLead() const
 {
   return avgPerChance[VALET_DEF];
+}
+
+
+string CumulPair::strDetails(
+  const int prec,
+  const FormatType format) const
+{
+  stringstream ss;
+
+  // Declarer score.
+  unsigned n = num[VALET_PLAY1] + num[VALET_PLAY2];
+  ss << strPair(CumulPair::averagePlay(), n, prec, format);
+
+  // Defender score.
+  ss << "  ";
+  n = num[VALET_DEF];
+  ss << strPair(CumulPair::averageDefense(), n, prec, format);
+
+  ss << " | ";
+
+  // Individual declarer scores.
+  ss << strPair(
+    avgPerChance[VALET_PLAY1], num[VALET_PLAY1], prec, format);
+  ss << "  ";
+  ss << strPair(
+    avgPerChance[VALET_PLAY2], num[VALET_PLAY2], prec, format);
+
+  ss << " | ";
+
+  if (options.leadFlag)
+  {
+    ss << strPair(avgPerChance[VALET_LEAD1], num[VALET_LEAD1], prec,
+      format);
+    ss << "  ";
+    ss << strPair(avgPerChance[VALET_LEAD2], num[VALET_LEAD2], prec,
+      format);
+    ss << "  ";
+
+    if (options.averageFlag)
+    {
+      ss << strPair(
+        CumulPair::averageLead(),
+        num[VALET_PLAY1] + num[VALET_PLAY2],
+        prec,
+        format);
+      ss << "  ";
+    }
+
+    ss << strPair(
+      avgPerChance[VALET_DEF], num[VALET_DEF], prec, format);
+    ss << " |";
+  }
+
+  ss << "\n";
+
+  return ss.str();
 }
