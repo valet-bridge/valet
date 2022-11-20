@@ -16,6 +16,7 @@
 #include "cst.h"
 
 class Pairs;
+enum SortingType: unsigned;
 
 
 enum CumulEnum
@@ -59,6 +60,10 @@ struct CumulPair
 
     void incrDeclarer(const ValetEntryType& entry);
     void incrDefenders(const ValetEntryType& entry);
+
+    bool greater(
+      const CumulPair& c2,
+      const SortingType sort) const;
 
     bool skip(const unsigned mode) const;
 

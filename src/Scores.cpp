@@ -1,20 +1,18 @@
 /* 
    Valet, a generalized Butler scorer for bridge.
 
-   Copyright (C) 2015 by Soren Hein.
+   Copyright (C) 2015-23 by Soren Hein.
 
    See LICENSE and README.
 */
 
 
 
-#include <assert.h>
-
 #include <iostream>
-#include <string>
 #include <sstream>
-#include <stdio.h>
-#include <stdlib.h>
+#include <string>
+#include <algorithm>
+#include <cassert>
 
 #include "Scores.h"
 #include "Pairs.h"
@@ -234,76 +232,14 @@ void Scores::Normalize()
 }
 
 
-double Scores::Difference(
-  const CumulPair& c1,
-  const CumulPair& c2,
-  SortingType sort) const
-{
-  switch(sort)
-  {
-    case VALET_SORT_OVERALL:
-      return c1.avgPerChance[VALET_OVERALL] - c2.avgPerChance[VALET_OVERALL];
-
-    case VALET_SORT_BIDDING:
-      return c1.avgPerChance[VALET_BID] - c2.avgPerChance[VALET_BID];
-
-    case VALET_SORT_PLAY:
-      return c1.avgPerChance[VALET_PLAY1] + c1.avgPerChance[VALET_PLAY2] - 
-        (c2.avgPerChance[VALET_PLAY1] + c2.avgPerChance[VALET_PLAY2]);
-
-    case VALET_SORT_DEFENSE:
-      return c1.avgPerChance[VALET_DEF] - c2.avgPerChance[VALET_DEF];
-
-    case VALET_SORT_LEAD:
-      return c1.avgPerChance[VALET_LEAD1] + c1.avgPerChance[VALET_LEAD2] - 
-        (c2.avgPerChance[VALET_LEAD1] + c2.avgPerChance[VALET_LEAD2]);
-
-    case VALET_SORT_BID_OVER_PLAY:
-      return (c1.avgPerChance[VALET_BID] - c2.avgPerChance[VALET_BID]) -
-        (c1.avgPerChance[VALET_PLAY1] + c1.avgPerChance[VALET_PLAY2] - 
-        (c2.avgPerChance[VALET_PLAY1] + c2.avgPerChance[VALET_PLAY2]));
-
-    case VALET_SORT_DEF_OVER_PLAY:
-      return c1.avgPerChance[VALET_DEF] - c2.avgPerChance[VALET_DEF] -
-        (c1.avgPerChance[VALET_PLAY1] + c1.avgPerChance[VALET_PLAY2] - 
-        (c2.avgPerChance[VALET_PLAY1] + c2.avgPerChance[VALET_PLAY2]));
-
-    case VALET_SORT_LEAD_OVER_PLAY:
-      return c1.avgPerChance[VALET_LEAD1] + c1.avgPerChance[VALET_LEAD2] - 
-        (c2.avgPerChance[VALET_LEAD1] + c2.avgPerChance[VALET_LEAD2]) -
-        (c1.avgPerChance[VALET_PLAY1] + c1.avgPerChance[VALET_PLAY2] - 
-        (c2.avgPerChance[VALET_PLAY1] + c2.avgPerChance[VALET_PLAY2]));
-    
-    default:
-      assert(false);
-      return 0.;
-  }
-}
-
-
 void Scores::Sort(
-  const SortingType sort)
+  const SortingType stype)
 {
-  // Simple bubble sort.
-
-  unsigned n = length-1;
-  do
-  {
-    unsigned new_n = 1;
-    for (unsigned i = 2; i < n; i++)
+  sort(next(pairScores.begin()), pairScores.end(),
+    [stype](const CumulPair& c1, const CumulPair& c2)
     {
-      if (Scores::Difference(pairScores[i-1], pairScores[i], sort) >= 0)
-        continue;
-
-      CumulPair ctmp = pairScores[i-1];
-      pairScores[i-1] = pairScores[i];
-      pairScores[i] = ctmp;
-
-      new_n = i;
-    }
-    n = new_n;
-  }
-  while (n > 1);
+      return c1.greater(c2, stype);
+    });
 }
 
 

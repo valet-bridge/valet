@@ -76,7 +76,7 @@ const ScoringPairType scoringTags[] =
 };
 
 
-enum SortingType
+enum SortingType: unsigned
 {
   VALET_SORT_OVERALL,
   VALET_SORT_BIDDING,
