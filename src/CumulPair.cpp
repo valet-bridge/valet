@@ -20,6 +20,16 @@
 extern OptionsType options;
 
 
+void CumulPair::clear()
+{
+  for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
+  {
+    num[i] = 0;
+    sum[i]= 0.f;
+  }
+}
+
+
 void CumulPair::setPair(const unsigned pairNoIn)
 {
   pairNo = pairNoIn;
@@ -148,6 +158,26 @@ float CumulPair::averageLead() const
 float CumulPair::averageNonLead() const
 {
   return avgPerChance[VALET_DEF];
+}
+
+
+void CumulPair::operator += (const CumulPair& c2)
+{
+  for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
+  {
+    sum[i] += c2.sum[i];
+    num[i] += c2.num[i];
+  }
+}
+
+
+void CumulPair::operator -= (const CumulPair& c2)
+{
+  for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
+  {
+    sum[i] -= c2.sum[i];
+    num[i] -= c2.num[i];
+  }
 }
 
 

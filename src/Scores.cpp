@@ -50,20 +50,13 @@ CumulPair * Scores::PrepareCompensation(
   const unsigned pairNo,
   const unsigned oppNo)
 {
-  ostringstream oss;
-  oss << oppNo;
-  const string oppstr = oss.str();
+  const string oppstr = to_string(oppNo);
 
   OppMapType& oppMap = oppScores[pairNo];
   OppMapType::iterator it = oppMap.find(oppstr);
+
   if (it == oppMap.end())
-  {
-    for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
-    {
-      oppMap[oppstr].num[i] = 0;
-      oppMap[oppstr].sum[i] = 0.f;
-    }
-  }
+    oppMap[oppstr].clear();
 
   return &oppMap[oppstr];
 }
@@ -153,11 +146,9 @@ void Scores::Compensate()
         strtol(it->first.c_str(), &pend, 10));
       assert(oppNo > 0 && oppNo < length);
 
-      for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
-      {
-        oppResults.sum[i] += pairScores[oppNo].sum[i] - it->second.sum[i];
-        oppResults.num[i] += pairScores[oppNo].num[i] - it->second.num[i];
-      }
+      // Add each opponent, then subtract out or own results against them.
+      oppResults += pairScores[oppNo];
+      oppResults -= it->second;
     }
 
     for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)

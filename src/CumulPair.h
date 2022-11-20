@@ -65,13 +65,18 @@ struct CumulPair
 
   // public:
 
+    void clear();
+
     void setPair(const unsigned pairNoIn);
 
     void incrDeclarer(const ValetEntryType& entry);
     void incrDefenders(const ValetEntryType& entry);
 
+    void operator += (const CumulPair& c2);
+    void operator -= (const CumulPair& c2);
+
     bool greater(
-      const CumulPair& c2,
+      const CumulPair& cp2,
       const SortingType sort) const;
 
     bool skip(const unsigned mode) const;
