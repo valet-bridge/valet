@@ -239,18 +239,18 @@ void CumulPair::scale(const ScoringType stype)
 
 
 void CumulPair::compensate(
-  const float comp[],
+  const CumulPair& oppComp,
   const ScoringType stype)
 {
   if (stype == VALET_MATCHPOINTS)
   {
     for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
-      avgPerChance[i] += comp[i] - 50.f;
+      avgPerChance[i] += oppComp.avgPerChance[i] - 50.f;
   }
   else
   {
     for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
-      avgPerChance[i] += comp[i];
+      avgPerChance[i] += oppComp.avgPerChance[i];
   }
 }
 

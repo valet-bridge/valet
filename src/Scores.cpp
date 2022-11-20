@@ -164,7 +164,7 @@ void Scores::Normalize()
     c.scale(options.valet);
 
     if (options.compensateFlag)
-      c.compensate(oppComp[pno].avgPerChance, options.valet);
+      c.compensate(oppComp[pno], options.valet);
   }
 }
 
