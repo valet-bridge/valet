@@ -92,6 +92,49 @@ float CumulPair::averageNonLead() const
 }
 
 
+string CumulPair::strOverall(
+  const int prec,
+  const FormatType format) const
+{
+  stringstream ss;
+
+  const float MP_OFFSET =
+    (options.valet == VALET_MATCHPOINTS ? 50.f : 0.f);
+
+  if (format == VALET_FORMAT_TEXT)
+  {
+    ss <<
+      setw(4) << num[VALET_OVERALL] <<
+      setw(7) << fixed << setprecision(prec) <<
+        avgPerChance[VALET_OVERALL] <<  " | " <<
+      setw(5) << fixed << setprecision(prec) <<
+        avgPerChance[VALET_BID] <<
+      setw(7) << fixed << setprecision(prec) <<
+        MP_OFFSET +
+        avgPerChance[VALET_OVERALL] -
+        avgPerChance[VALET_BID] << " | ";
+  }
+  else if (format == VALET_FORMAT_CSV)
+  {
+    const string sep = options.separator;
+    ss <<
+      num[VALET_OVERALL] << sep <<
+      fixed << setprecision(prec) << 
+        avgPerChance[VALET_OVERALL] << sep <<
+      fixed << setprecision(prec) << 
+        avgPerChance[VALET_BID] << sep <<
+      fixed << setprecision(prec) <<
+        MP_OFFSET +
+        avgPerChance[VALET_OVERALL] -
+        avgPerChance[VALET_BID] << sep;
+  }
+  else
+    assert(false);
+
+  return ss.str();
+}
+
+
 string CumulPair::strDetails(
   const int prec,
   const FormatType format) const

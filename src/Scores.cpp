@@ -470,8 +470,8 @@ void Scores::PrintText(
 
   Scores::PrintTextHeader();
 
-  const float MP_OFFSET = 
-    (options.valet == VALET_MATCHPOINTS ? 50.f : 0.f);
+  // const float MP_OFFSET = 
+    // (options.valet == VALET_MATCHPOINTS ? 50.f : 0.f);
 
   for (unsigned pno = 1; pno < length; pno++)
   {
@@ -481,15 +481,7 @@ void Scores::PrintText(
 
     cout << 
       left << pairs.GetPairNamePadded(c.pairNo, 54) << right << " | " <<
-      setw(4) << c.num[VALET_OVERALL] << 
-      setw(7) << fixed << setprecision(prec) << 
-        c.avgPerChance[VALET_OVERALL] <<  " | " <<
-      setw(5) << fixed << setprecision(prec) << 
-        c.avgPerChance[VALET_BID] <<
-      setw(7) << fixed << setprecision(prec) << 
-        MP_OFFSET +
-        c.avgPerChance[VALET_OVERALL] - 
-        c.avgPerChance[VALET_BID] << " | ";
+      c.strOverall(prec, VALET_FORMAT_TEXT);
 
     cout << c.strDetails(prec, VALET_FORMAT_TEXT);
   }
@@ -543,9 +535,6 @@ void Scores::PrintCSV(
 
   Scores::PrintCSVHeader();
 
-  const float MP_OFFSET =
-    (options.valet == VALET_MATCHPOINTS ? 50.f : 0.f);
-
   const string s = options.separator;
 
   for (unsigned pno = 1; pno < length; pno++)
@@ -556,13 +545,7 @@ void Scores::PrintCSV(
 
     cout << 
       pairs.GetPairName(c.pairNo) << s <<
-      c.num[VALET_OVERALL] << s <<
-      fixed << setprecision(prec) << c.avgPerChance[VALET_OVERALL] << s <<
-      fixed << setprecision(prec) << c.avgPerChance[VALET_BID] << s <<
-      fixed << setprecision(prec) << 
-        MP_OFFSET +
-        c.avgPerChance[VALET_OVERALL] - 
-        c.avgPerChance[VALET_BID] << s;
+      c.strOverall(prec, VALET_FORMAT_CSV);
 
     cout << c.strDetails(prec, VALET_FORMAT_CSV);
   }

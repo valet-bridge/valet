@@ -50,6 +50,10 @@ struct CumulPair
 
   float averageNonLead() const;
 
+  string strOverall(
+    const int prec,
+    const FormatType format) const;
+
   string strDetails(
     const int prec,
     const FormatType format) const;
