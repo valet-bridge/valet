@@ -471,31 +471,23 @@ string CumulPair::strDetails(
 
   // Individual declarer scores.
   ss << aspects[VALET_PLAY1].str(prec);
-  // ss << strPair(avgPerChance[VALET_PLAY1], num[VALET_PLAY1], 
-    // prec, format);
 
   if (format == VALET_FORMAT_TEXT)
     ss << "  ";
 
-  // ss << aspects[VALET_PLAY2].str(prec);
-  ss << strPair(avgPerChance[VALET_PLAY2], num[VALET_PLAY2], 
-    prec, format);
+  ss << aspects[VALET_PLAY2].str(prec);
 
   if (format == VALET_FORMAT_TEXT)
     ss << " | ";
 
   if (options.leadFlag)
   {
-    // ss << aspects[VALET_LEAD1].str(prec);
-    ss << strPair(avgPerChance[VALET_LEAD1], num[VALET_LEAD1], 
-      prec, format);
+    ss << aspects[VALET_LEAD1].str(prec);
 
     if (format == VALET_FORMAT_TEXT)
       ss << "  ";
 
-    // ss << aspects[VALET_LEAD2].str(prec);
-    ss << strPair(avgPerChance[VALET_LEAD2], num[VALET_LEAD2], 
-      prec, format);
+    ss << aspects[VALET_LEAD2].str(prec);
 
     if (format == VALET_FORMAT_TEXT)
       ss << "  ";
