@@ -12,6 +12,7 @@
 #include <string>
 #include <cassert>
 
+#include "Pairs.h"
 #include "CumulPair.h"
 #include "misc.h"
 #include "cst.h"
@@ -150,6 +151,23 @@ float CumulPair::averageNonLead() const
 }
 
 
+bool CumulPair::skip(const unsigned mode) const
+{
+  if (num[VALET_OVERALL] == 0)
+    return true;
+
+  if (mode == 0)
+  {
+    if (num[VALET_OVERALL] < options.minHands)
+      return true;
+  }
+  else if (num[VALET_OVERALL] > options.minHands)
+      return true;
+
+  return false;
+}
+
+
 string CumulPair::strHeaderText1() const
 {
   stringstream ss;
@@ -255,6 +273,7 @@ string CumulPair::strHeaderCSV() const
 
 
 string CumulPair::strOverall(
+  const Pairs& pairs,
   const int prec,
   const FormatType format) const
 {
@@ -266,6 +285,7 @@ string CumulPair::strOverall(
   if (format == VALET_FORMAT_TEXT)
   {
     ss <<
+      left << pairs.GetPairNamePadded(pairNo, 54) << right << " | " <<
       setw(4) << num[VALET_OVERALL] <<
       setw(7) << fixed << setprecision(prec) <<
         avgPerChance[VALET_OVERALL] <<  " | " <<
@@ -280,6 +300,7 @@ string CumulPair::strOverall(
   {
     const string sep = options.separator;
     ss <<
+      pairs.GetPairName(pairNo) << sep << 
       num[VALET_OVERALL] << sep <<
       fixed << setprecision(prec) << 
         avgPerChance[VALET_OVERALL] << sep <<

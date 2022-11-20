@@ -13,9 +13,10 @@
 #include <string>
 #include <vector>
 
-using namespace std;
-
 #include "cst.h"
+
+class Pairs;
+
 
 enum CumulEnum
 {
@@ -59,12 +60,15 @@ struct CumulPair
     void incrDeclarer(const ValetEntryType& entry);
     void incrDefenders(const ValetEntryType& entry);
 
+    bool skip(const unsigned mode) const;
+
     string strHeaderCSV() const;
 
     string strHeaderText1() const;
     string strHeaderText2() const;
 
     string strOverall(
+      const Pairs& pairs,
       const int prec,
       const FormatType format) const;
 

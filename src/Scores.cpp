@@ -105,62 +105,14 @@ void Scores::AddEntry(
 
   CumulPair& cDecl = pairScores[entry.pairNo];
   cDecl.setPair(entry.pairNo);
-  // cDecl.pairNo = entry.pairNo;
-
   cDecl.incrDeclarer(entry);
-  /*
-  cDecl.num[VALET_OVERALL]++;
-  cDecl.sum[VALET_OVERALL] += entry.overall;
-
-  cDecl.num[VALET_BID]++;
-  cDecl.sum[VALET_BID] += entry.bidScore;
-
-  if (entry.declFlag[0])
-  {
-    cDecl.num[VALET_PLAY1]++;
-    cDecl.sum[VALET_PLAY1] += entry.playScore[0];
-  }
-  else if (entry.declFlag[1])
-  {
-    cDecl.num[VALET_PLAY2]++;
-    cDecl.sum[VALET_PLAY2] += entry.playScore[1];
-  }
-  */
 
   // The overall and bidding scores have to be inverted.
   // The detailed scores have already been inverted.
 
   CumulPair& cDef = pairScores[entry.oppNo];
   cDef.setPair(entry.oppNo);
-  // cDef.pairNo = entry.oppNo;
   cDef.incrDefenders(entry);
-  /*
-  cDef.num[VALET_OVERALL]++;
-  cDef.sum[VALET_OVERALL] -= entry.overall;
-
-  cDef.num[VALET_BID]++;
-  cDef.sum[VALET_BID] -= entry.bidScore;
-
-  if (entry.defFlag)
-  {
-    cDef.num[VALET_DEF]++;
-    cDef.sum[VALET_DEF] += entry.defScore;
-
-    if (options.leadFlag)
-    {
-      if (entry.leadFlag[0])
-      {
-        cDef.num[VALET_LEAD1]++;
-        cDef.sum[VALET_LEAD1] += entry.leadScore[0];
-      }
-      else if (entry.leadFlag[1])
-      {
-        cDef.num[VALET_LEAD2]++;
-        cDef.sum[VALET_LEAD2] += entry.leadScore[1];
-      }
-    }
-  }
-  */
 
   // Ugh.  But I don't feel like rewriting the entry data structure,
   // as this depends on list[2].
@@ -366,20 +318,11 @@ bool Scores::PreparePrint(
   for (unsigned pno = 1; pno < length && ! flag; pno++)
   {
     const CumulPair& c = pairScores[pno];
-    if (mode == 0)
-    {
-      // Players with at least a certain number of boards
-      if (c.num[VALET_OVERALL] >= options.minHands)
-        flag = true;
-    }
-    else
-    {
-      // Players with less than a certain number of boards
-      if (c.num[VALET_OVERALL] < options.minHands) 
-        flag = true;
-    }
+    if (! c.skip(mode))
+      flag = true;
   }
 
+  // Skip if all entries are skipped.
   if (! flag)
     return false;
 
@@ -396,18 +339,7 @@ bool Scores::SkipScore(
   const CumulPair& c,
   const unsigned mode) const
 {
-  if (c.num[VALET_OVERALL] == 0)
-    return true;
-
-  if (mode == 0)
-  {
-    if (c.num[VALET_OVERALL] < options.minHands)
-      return true;
-  }
-  else if (c.num[VALET_OVERALL] > options.minHands)
-      return true;
-
-  return false;
+  return c.skip(mode);
 }
 
 
@@ -439,8 +371,8 @@ void Scores::PrintText(
       continue;
 
     cout << 
-      left << pairs.GetPairNamePadded(c.pairNo, 54) << right << " | " <<
-      c.strOverall(prec, VALET_FORMAT_TEXT);
+      // left << pairs.GetPairNamePadded(c.pairNo, 54) << right << " | " <<
+      c.strOverall(pairs, prec, VALET_FORMAT_TEXT);
 
     cout << c.strDetails(prec, VALET_FORMAT_TEXT);
   }
@@ -476,8 +408,8 @@ void Scores::PrintCSV(
       continue;
 
     cout << 
-      pairs.GetPairName(c.pairNo) << s <<
-      c.strOverall(prec, VALET_FORMAT_CSV);
+      // pairs.GetPairName(c.pairNo) << s <<
+      c.strOverall(pairs, prec, VALET_FORMAT_CSV);
 
     cout << c.strDetails(prec, VALET_FORMAT_CSV);
   }

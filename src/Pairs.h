@@ -43,12 +43,11 @@ class Pairs
 
     unsigned listNo;
 
-    bool PairExists(
-      const string& pair);
+    bool PairExists(const string& pair) const;
 
     string PadString(
       const string& s,
-      const unsigned width = 32);
+      const unsigned width = 32) const;
 
 
   public:
@@ -68,8 +67,7 @@ class Pairs
     string GetPlayerName(
       const string& tag);
 
-    bool TagExists(
-      const string& tag);
+    bool TagExists(const string& tag) const;
 
     // May return a negative number, which means that the real pair 
     // number is positive and that the pair tags were in the opposite 
@@ -89,7 +87,7 @@ class Pairs
 
     string GetPairName(
       const string& tag1,
-      const string& tag2);
+      const string& tag2) const;
 
     void GetPairTags(
       const unsigned pno,
@@ -97,11 +95,11 @@ class Pairs
       string& tag2);
 
     string GetPairName(
-      const unsigned pno);
+      const unsigned pno) const;
 
     string GetPairNamePadded(
       const unsigned pno,
-      const unsigned width = 32);
+      const unsigned width = 32) const;
       
 };
 

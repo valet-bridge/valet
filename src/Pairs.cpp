@@ -44,10 +44,10 @@ void Pairs::Reset()
 }
 
 
-bool Pairs::TagExists(
-  const string& tag)
+bool Pairs::TagExists(const string& tag) const
 {
-  map<string, string>::iterator it = tagToPlayerName.find(tag);
+  // map<string, string>::iterator it = tagToPlayerName.find(tag);
+  const auto it = tagToPlayerName.find(tag);
   return (it != tagToPlayerName.end());
 }
 
@@ -79,10 +79,10 @@ string Pairs::GetPlayerName(
 }
 
 
-bool Pairs::PairExists(
-  const string& pair)
+bool Pairs::PairExists(const string& pair) const
 {
-  map<string, unsigned>::iterator it = playersToPairNo.find(pair);
+  // map<string, unsigned>::iterator it = playersToPairNo.find(pair);
+  const auto it = playersToPairNo.find(pair);
   return (it != playersToPairNo.end());
 }
 
@@ -133,7 +133,7 @@ int Pairs::GetPairNumber(
 
 string Pairs::GetPairName(
   const string& tag1,
-  const string& tag2)
+  const string& tag2)  const
 {
   if (! TagExists(tag1) || ! TagExists(tag2))
     return 0;
@@ -141,22 +141,27 @@ string Pairs::GetPairName(
   if (tag1 < tag2)
   {
     if (Pairs::PairExists(tag1+"|"+tag2))
-      return tagToPlayerName[tag1] + " - " + tagToPlayerName[tag2];
+      // return tagToPlayerName[tag1] + " - " + tagToPlayerName[tag2];
+      return 
+        tagToPlayerName.find(tag1)->second + " - " +
+        tagToPlayerName.find(tag2)->second;
     else
       return "";
   }
   else
   {
     if (Pairs::PairExists(tag2+"|"+tag1))
-      return tagToPlayerName[tag2] + " - " + tagToPlayerName[tag1];
+      // return tagToPlayerName[tag2] + " - " + tagToPlayerName[tag1];
+      return
+        tagToPlayerName.find(tag2)->second + " - " +
+        tagToPlayerName.find(tag1)->second;
     else
       return "";
   }
 }
 
 
-string Pairs::GetPairName(
-  const unsigned pno)
+string Pairs::GetPairName(const unsigned pno) const
 {
   assert(pno < listNo);
   return pairNoToPairName[pno];
@@ -176,7 +181,7 @@ void Pairs::GetPairTags(
 
 string Pairs::GetPairNamePadded(
   const unsigned pno,
-  const unsigned width)
+  const unsigned width) const
 {
   assert(pno < listNo);
   return Pairs::PadString(pairNoToPairName[pno], width);
@@ -185,7 +190,7 @@ string Pairs::GetPairNamePadded(
 
 string Pairs::PadString(
   const string& s,
-  const unsigned width)
+  const unsigned width) const
 {
   // Some foreign characters take up 2 chars but print as 1.
   // So we pad some spaces at the end.
