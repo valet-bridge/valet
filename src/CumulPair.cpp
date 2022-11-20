@@ -92,6 +92,105 @@ float CumulPair::averageNonLead() const
 }
 
 
+string CumulPair::strHeaderText() const
+{
+  stringstream ss;
+
+  ss <<
+    setw(11) << "" << " | " <<
+    setw(12) << "" << " | " <<
+    setw(8) << "" <<
+    setw(6) << "Play" <<
+    setw(10) << "" << " | " <<
+    setw(7) << "" <<
+    setw(4) << "Declaring" <<
+    setw(8) << "" << " | ";
+
+  if (options.leadFlag)
+  {
+    if (options.averageFlag)
+      ss <<
+        setw(19) << "" <<
+        setw(11) << "Defending" <<
+        setw(20) << "" << " |";
+    else
+      ss <<
+        setw(13) << "" <<
+        setw(11) << "Defending" <<
+        setw(13) << "" << " |";
+  }
+
+  ss << "\n";
+
+  ss <<
+    setw(54) << left << "Players" << right << " | " <<
+    setw(4) << "No." <<
+    setw(7) << scoringTags[options.valet].header << " | " <<
+    setw(5) << "Bid" <<
+    setw(7) << "Play" << " | " <<
+    setw(11) << "Declaring" << "  " <<
+    setw(11) << "Defending" << " | " <<
+    setw(11) << "Declarer1" <<
+    setw(13) << "Declarer2";
+
+  if (options.leadFlag)
+  {
+    ss <<
+      " | " <<
+      setw(11) << "Lead1" << "  " <<
+      setw(11) << "Lead2";
+
+    if (options.averageFlag)
+      ss << setw(13) << "Average";
+
+    ss <<
+      setw(13) << "Play";
+  }
+
+  ss << " |";
+
+  return ss.str();
+}
+
+
+string CumulPair::strHeaderCSV() const
+{
+  stringstream ss;
+
+  const string sep = options.separator;
+
+  ss <<
+    "Count" << sep <<
+    scoringTags[options.valet].header << sep <<
+    "Bid" << sep <<
+    "Play" << sep <<
+    "Decl" << sep <<
+    "#" << sep <<
+    "Def" << sep <<
+    "#" << sep <<
+    "Decl1" << sep <<
+    "#" << sep <<
+    "Decl2" << sep <<
+    "#" << sep;
+
+  if (options.leadFlag)
+  {
+    ss <<
+      "Lead1" << sep <<
+      "#" << sep <<
+      "Lead2" << sep <<
+      "#" << sep;
+
+    if (options.averageFlag)
+      ss << "Avg" << sep << "#" << sep;
+
+    ss << "Play" << sep << "#";
+  }
+
+  return ss.str();
+}
+
+
 string CumulPair::strOverall(
   const int prec,
   const FormatType format) const

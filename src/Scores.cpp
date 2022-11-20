@@ -405,59 +405,11 @@ bool Scores::SkipScore(
 
 void Scores::PrintTextHeader() const
 {
+  CumulPair c;
+
   cout << 
     setw(54) << "" << " | " <<
-    setw(11) << "" << " | " <<
-    setw(12) << "" << " | " <<
-    setw(8) << "" <<
-    setw(6) << "Play" <<
-    setw(10) << "" << " | " <<
-    setw(7) << "" <<
-    setw(4) << "Declaring" <<
-    setw(8) << "" << " | ";
-    
-  if (options.leadFlag)
-  {
-    if (options.averageFlag)
-      cout << 
-        setw(19) << "" << 
-        setw(11) << "Defending" <<
-        setw(20) << "" << " |";
-    else
-      cout << 
-        setw(13) << "" << 
-        setw(11) << "Defending" <<
-        setw(13) << "" << " |";
-  }
-
-  cout << "\n";
-
-  cout << 
-    setw(54) << left << "Players" << right << " | " <<
-    setw(4) << "No." << 
-    setw(7) << scoringTags[options.valet].header << " | " <<
-    setw(5) << "Bid" <<
-    setw(7) << "Play" << " | " <<
-    setw(11) << "Declaring" << "  " <<
-    setw(11) << "Defending" << " | " <<
-    setw(11) << "Declarer1" <<
-    setw(13) << "Declarer2";
-
-  if (options.leadFlag)
-  {
-    cout << 
-      " | " <<
-      setw(11) << "Lead1" << "  " <<
-      setw(11) << "Lead2";
-
-    if (options.averageFlag)
-      cout << setw(13) << "Average";
-
-    cout << 
-      setw(13) << "Play";
-  }
-
-  cout << " |\n";
+    c.strHeaderText() << "\n";
 }
 
 
@@ -491,38 +443,11 @@ void Scores::PrintText(
 
 void Scores::PrintCSVHeader() const
 {
-  const string s = options.separator;
+  CumulPair c;
 
   cout << 
-    "Players" << s <<
-    "Count" << s <<
-    scoringTags[options.valet].header << s <<
-    "Bid" << s <<
-    "Play" << s <<
-    "Decl" << s <<
-    "#" << s <<
-    "Def" << s <<
-    "#" << s <<
-    "Decl1" << s <<
-    "#" << s <<
-    "Decl2" << s <<
-    "#" << s;
-
-  if (options.leadFlag)
-  {
-    cout <<
-      "Lead1" << s <<
-      "#" << s <<
-      "Lead2" << s <<
-      "#" << s;
-
-    if (options.averageFlag)
-      cout << "Avg" << s << "#" << s;
-
-    cout << "Play" << s << "#";
-  }
-
-  cout << "\n";
+    "Players" << options.separator <<
+    c.strHeaderCSV() << "\n";
 }
 
 
