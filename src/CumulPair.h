@@ -48,8 +48,6 @@ class CumulPair
 
     vector<Aspect> aspects;
 
-    float averagePlay() const;
-
     float averageDefense() const;
 
     float averageLead() const;

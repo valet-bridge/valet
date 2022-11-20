@@ -85,7 +85,7 @@ void CumulPair::incrDefenders(const ValetEntryType& entry)
 
   if (entry.defFlag)
   {
-    aspects[VALET_DEF].decr(entry.defScore);
+    aspects[VALET_DEF].incr(entry.defScore);
 
     if (options.leadFlag)
     {
@@ -122,30 +122,6 @@ void CumulPair::incrDefenders(const ValetEntryType& entry)
     }
   }
 
-}
-
-
-float CumulPair::averagePlay() const
-{
-  const float n1 = static_cast<float>(num[VALET_PLAY1]);
-  const float n2 = static_cast<float>(num[VALET_PLAY2]);
-  const float n = n1 + n2;
-  if (n > 0)
-  {
-/*
-cout << "averagePlay: n1 " << n1 << ", n2 " << n2 << ": avg1 " <<
-  avgPerChance[VALET_PLAY1] * n1 << ", avg2 " <<
-  avgPerChance[VALET_PLAY2] * n2 << "\n";
-cout << "sum " << 
-  avgPerChance[VALET_PLAY1] * n1 +
-  avgPerChance[VALET_PLAY2] * n2 << "\n";
-  */
-    return (avgPerChance[VALET_PLAY1] * n1 +
-      avgPerChance[VALET_PLAY2] * n2) / n;
-    // return (aspects[VALET_PLAY1].sum + aspects[VALET_PLAY2].sum) / n;
-  }
-  else
-    return 0.;
 }
 
 
@@ -515,9 +491,7 @@ string CumulPair::strDetails(
         ss << "  ";
     }
 
-    // ss << aspects[VALET_DEF].str(prec);
-    ss << strPair(
-      avgPerChance[VALET_DEF], num[VALET_DEF], prec, format);
+    ss << aspects[VALET_DEF].str(prec);
 
     if (format == VALET_FORMAT_TEXT)
       ss << " |";
