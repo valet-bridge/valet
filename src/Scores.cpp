@@ -48,7 +48,7 @@ void Scores::Reset()
 }
 
 
-CumulPair * Scores::PrepareCompensation(
+CumulPair& Scores::getCrossCumulPair(
   const unsigned pairNo,
   const unsigned oppNo)
 {
@@ -60,25 +60,34 @@ CumulPair * Scores::PrepareCompensation(
   if (it == oppMap.end())
     oppMap[oppstr].clear();
 
-  return &oppMap[oppstr];
+  return oppMap[oppstr];
 }
 
 
-void Scores::AddCompensation(
-  const unsigned pairNo,
-  const unsigned oppNo,
-  const CumulPair& oppValues)
+void Scores::storeCrossCumul(const ValetEntryType& entry)
 {
-  CumulPair * opp = Scores::PrepareCompensation(pairNo, oppNo);
-  CumulPair * pair = Scores::PrepareCompensation(oppNo, pairNo);
+  CumulPair& opp = Scores::getCrossCumulPair(entry.pairNo, entry.oppNo);
+  CumulPair& pair = Scores::getCrossCumulPair(entry.oppNo, entry.pairNo);
+
+  // Ugh.  But I don't feel like rewriting the entry data structure,
+  // as this depends on list[2].
+  CumulPair oppValues;
+  oppValues.sum[VALET_OVERALL] = entry.overall;
+  oppValues.sum[VALET_BID] = entry.bidScore;
+  oppValues.sum[VALET_PLAY1] = entry.playScore[0];
+  oppValues.sum[VALET_PLAY2] = entry.playScore[1];
+  oppValues.sum[VALET_LEAD1] = entry.leadScore[0];
+  oppValues.sum[VALET_LEAD2] = entry.leadScore[1];
+  oppValues.sum[VALET_DEF] = entry.defScore;
+
 
   for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
   {
-    opp->num[i]++;
-    opp->sum[i] += oppValues.sum[i];
+    opp.num[i]++;
+    opp.sum[i] += oppValues.sum[i];
 
-    pair->num[i]++;
-    pair->sum[i] -= oppValues.sum[i];
+    pair.num[i]++;
+    pair.sum[i] -= oppValues.sum[i];
   }
 }
 
@@ -107,19 +116,8 @@ void Scores::AddEntry(
   cDef.setPair(entry.oppNo);
   cDef.incrDefenders(entry);
 
-  // Ugh.  But I don't feel like rewriting the entry data structure,
-  // as this depends on list[2].
-  CumulPair oppValues;
-  oppValues.sum[VALET_OVERALL] = entry.overall;
-  oppValues.sum[VALET_BID] = entry.bidScore;
-  oppValues.sum[VALET_PLAY1] = entry.playScore[0];
-  oppValues.sum[VALET_PLAY2] = entry.playScore[1];
-  oppValues.sum[VALET_LEAD1] = entry.leadScore[0];
-  oppValues.sum[VALET_LEAD2] = entry.leadScore[1];
-  oppValues.sum[VALET_DEF] = entry.defScore;
-
   // Remember the opponent in order to be able to compensate.
-  Scores::AddCompensation(entry.pairNo, entry.oppNo, oppValues);
+  Scores::storeCrossCumul(entry);
 }
 
 

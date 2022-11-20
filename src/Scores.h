@@ -34,14 +34,11 @@ class Scores
     unsigned numPairs;
     unsigned length;
 
-    CumulPair * PrepareCompensation(
+    CumulPair& getCrossCumulPair(
       const unsigned pairNo,
       const unsigned oppNo);
 
-    void AddCompensation(
-      const unsigned pairNo,
-      const unsigned oppNo,
-      const CumulPair& oppValues);
+    void storeCrossCumul(const ValetEntryType& entry);
 
     bool PreparePrint(
       const unsigned mode,
