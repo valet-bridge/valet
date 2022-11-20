@@ -1,4 +1,7 @@
-The problem next is the compensation of Aspect
+Get rid of old way in CumulPair (num, sum, avgPerChance)
+- Need more formatting in Aspect for CumulPair::strOverall
+Check I haven't broken matchpoints
+
 Put stuff in scores/ directory
 CumulPair -> Score
 

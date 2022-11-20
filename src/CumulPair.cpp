@@ -143,34 +143,6 @@ void CumulPair::incrDefenders(const ValetEntryType& entry)
 }
 
 
-float CumulPair::averageDefense() const
-{
-  const float n1 = static_cast<float>(num[VALET_PLAY1]);
-  const float n2 = static_cast<float>(num[VALET_PLAY2]);
-  const float n3 = static_cast<float>(num[VALET_DEF]);
-  const float n = n1 + n2 + n3;
-  if (n > 0)
-  {
-    // TODO Not convinced that this is the only place 
-    // that this needs to show up...
-    const float offsetMP =
-      (options.valet == VALET_MATCHPOINTS ? 50.f : 0.f);
-
-    return -offsetMP +
-      (avgPerChance[VALET_LEAD1] * n1 +
-       avgPerChance[VALET_LEAD2] * n2 +
-       avgPerChance[VALET_DEF] * n3) / n3;
-
-    // return -offsetMP +
-    //   (aspects[VALET_LEAD1].sum +
-    //    aspects[VALET_LEAD2].sum +
-    //    aspects[VALET_DEF].sum) / n3;
-  }
-  else
-    return 0.;
-}
-
-
 void CumulPair::operator += (const CumulPair& c2)
 {
   for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
@@ -267,13 +239,7 @@ void CumulPair::compensate(
   const ScoringEnum stype)
 {
   for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
-  {
-    // cout << "i " << endl;
-    // cout << "was  " << aspects[i].str(2) << endl;
-    // cout << "comp " << oppComp.aspects[i].str(2) << endl;
     aspects[i].compensate(oppComp.aspects[i], stype);
-    // cout << "is   " << aspects[i].str(2) << endl;
-  }
 
   if (stype == VALET_MATCHPOINTS)
   {
@@ -438,61 +404,51 @@ string CumulPair::strOverall(
 }
 
 
-string CumulPair::strDetails(
-  const int prec,
-  const FormatEnum format) const
+string CumulPair::strDetails(const int prec) const
 {
   stringstream ss;
 
   // Declarer score.
-  // unsigned n = num[VALET_PLAY1] + num[VALET_PLAY2];
   ss << aspects[VALET_PLAY_SUM].str(prec);
-
-  if (format == VALET_FORMAT_TEXT)
+  if (options.format == VALET_FORMAT_TEXT)
     ss << "  ";
 
   // Defender score.
-  unsigned n = num[VALET_DEF];
-  ss << strPair(CumulPair::averageDefense(), n, prec, format);
-  // ss << aspects[VALET_DEF_SUM].str(prec);
-
-  if (format == VALET_FORMAT_TEXT)
+  ss << aspects[VALET_DEF_SUM].str(prec);
+  if (options.format == VALET_FORMAT_TEXT)
     ss << " | ";
 
   // Individual declarer scores.
   ss << aspects[VALET_PLAY1].str(prec);
-
-  if (format == VALET_FORMAT_TEXT)
+  if (options.format == VALET_FORMAT_TEXT)
     ss << "  ";
 
   ss << aspects[VALET_PLAY2].str(prec);
-
-  if (format == VALET_FORMAT_TEXT)
+  if (options.format == VALET_FORMAT_TEXT)
     ss << " | ";
 
   if (options.leadFlag)
   {
+    // Individual lead scores.
     ss << aspects[VALET_LEAD1].str(prec);
-
-    if (format == VALET_FORMAT_TEXT)
+    if (options.format == VALET_FORMAT_TEXT)
       ss << "  ";
 
     ss << aspects[VALET_LEAD2].str(prec);
-
-    if (format == VALET_FORMAT_TEXT)
+    if (options.format == VALET_FORMAT_TEXT)
       ss << "  ";
 
     if (options.averageFlag)
     {
+      // Overall lead score.
       ss << aspects[VALET_LEAD_SUM].str(prec);
-
-      if (format == VALET_FORMAT_TEXT)
+      if (options.format == VALET_FORMAT_TEXT)
         ss << "  ";
     }
 
+    // Defense score (excluding leads if these are shown).
     ss << aspects[VALET_DEF].str(prec);
-
-    if (format == VALET_FORMAT_TEXT)
+    if (options.format == VALET_FORMAT_TEXT)
       ss << " |";
   }
 
@@ -513,6 +469,6 @@ string CumulPair::strLine(
 
   return 
     CumulPair::strOverall(pairs, prec, format) +
-    CumulPair::strDetails(prec, format);
+    CumulPair::strDetails(prec);
 }
 

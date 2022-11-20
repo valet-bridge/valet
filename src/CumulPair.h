@@ -50,16 +50,12 @@ class CumulPair
 
     vector<Aspect> aspects;
 
-    float averageDefense() const;
-
     string strOverall(
       const Pairs& pairs,
       const int prec,
       const FormatEnum format) const;
 
-    string strDetails(
-      const int prec,
-      const FormatEnum format) const;
+    string strDetails(const int prec) const;
 
   public:
 
