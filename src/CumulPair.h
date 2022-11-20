@@ -27,12 +27,13 @@ enum CumulEnum
 {
   VALET_OVERALL = 0,
   VALET_BID = 1,
-  VALET_PLAY1 = 2,
-  VALET_PLAY2 = 3,
-  VALET_LEAD1 = 4,
-  VALET_LEAD2 = 5,
-  VALET_DEF = 6,
-  VALET_ENTRY_SIZE = 7
+  VALET_PLAY_SUM = 2,
+  VALET_PLAY1 = 3,
+  VALET_PLAY2 = 4,
+  VALET_LEAD1 = 5,
+  VALET_LEAD2 = 6,
+  VALET_DEF = 7,
+  VALET_ENTRY_SIZE = 8
 };
 
 class CumulPair

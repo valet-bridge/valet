@@ -48,9 +48,15 @@ void CumulPair::incrDeclarer(const ValetEntryType& entry)
   aspects[VALET_BID].incr(entry.bidScore);
 
   if (entry.declFlag[0])
+  {
+    aspects[VALET_PLAY_SUM].incr(entry.playScore[0]);
     aspects[VALET_PLAY1].incr(entry.playScore[0]);
+  }
   else if (entry.declFlag[1])
+  {
+    aspects[VALET_PLAY_SUM].incr(entry.playScore[1]);
     aspects[VALET_PLAY2].incr(entry.playScore[1]);
+  }
 
 
   num[VALET_OVERALL]++;
@@ -126,6 +132,14 @@ float CumulPair::averagePlay() const
   const float n = n1 + n2;
   if (n > 0)
   {
+/*
+cout << "averagePlay: n1 " << n1 << ", n2 " << n2 << ": avg1 " <<
+  avgPerChance[VALET_PLAY1] * n1 << ", avg2 " <<
+  avgPerChance[VALET_PLAY2] * n2 << "\n";
+cout << "sum " << 
+  avgPerChance[VALET_PLAY1] * n1 +
+  avgPerChance[VALET_PLAY2] * n2 << "\n";
+  */
     return (avgPerChance[VALET_PLAY1] * n1 +
       avgPerChance[VALET_PLAY2] * n2) / n;
     // return (aspects[VALET_PLAY1].sum + aspects[VALET_PLAY2].sum) / n;
@@ -457,7 +471,7 @@ string CumulPair::strDetails(
 
   // Declarer score.
   unsigned n = num[VALET_PLAY1] + num[VALET_PLAY2];
-  ss << strPair(CumulPair::averagePlay(), n, prec, format);
+  ss << aspects[VALET_PLAY_SUM].str(prec);
 
   if (format == VALET_FORMAT_TEXT)
     ss << "  ";
