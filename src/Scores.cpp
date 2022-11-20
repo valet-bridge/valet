@@ -65,7 +65,7 @@ CumulPair * Scores::PrepareCompensation(
 void Scores::AddCompensation(
   const unsigned pairNo,
   const unsigned oppNo,
-  const OppCompType& oppValues)
+  const CumulPair& oppValues)
 {
   CumulPair * opp = Scores::PrepareCompensation(pairNo, oppNo);
   CumulPair * pair = Scores::PrepareCompensation(oppNo, pairNo);
@@ -107,7 +107,7 @@ void Scores::AddEntry(
 
   // Ugh.  But I don't feel like rewriting the entry data structure,
   // as this depends on list[2].
-  OppCompType oppValues;
+  CumulPair oppValues;
   oppValues.sum[VALET_OVERALL] = entry.overall;
   oppValues.sum[VALET_BID] = entry.bidScore;
   oppValues.sum[VALET_PLAY1] = entry.playScore[0];
@@ -147,16 +147,22 @@ void Scores::Compensate()
       oppResults -= it->second;
     }
 
-    for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
+    if (options.valet == VALET_MATCHPOINTS)
     {
-      const float n = static_cast<float>(oppResults.num[i]);
-      if (n == 0)
-        oppComp[pno].sum[i] = 0.f;
-      else if (options.valet == VALET_MATCHPOINTS)
-        oppComp[pno].sum[i] = -50.f + oppResults.sum[i] / n;
-      else
-        oppComp[pno].sum[i] = oppResults.sum[i] / n;
+      for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
+      {
+        const float n = static_cast<float>(oppResults.num[i]);
+        if (n == 0)
+          oppComp[pno].sum[i] = 0.f;
+        else
+          oppComp[pno].sum[i] = -50.f + oppResults.sum[i] / n;
       }
+    }
+    else
+    {
+      oppComp[pno] = oppResults;
+      oppComp[pno].scale(options.valet);
+    }
   }
 }
 
@@ -170,7 +176,12 @@ void Scores::Normalize()
     c.scale(options.valet);
 
     if (options.compensateFlag)
-      c.compensate(oppComp[pno].sum);
+    {
+      if (options.valet == VALET_MATCHPOINTS)
+        c.compensate(oppComp[pno].sum);
+      else
+        c.compensate(oppComp[pno].avgPerChance);
+    }
   }
 }
 

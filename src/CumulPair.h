@@ -75,13 +75,13 @@ struct CumulPair
     void operator += (const CumulPair& c2);
     void operator -= (const CumulPair& c2);
 
-    float figure(const SortingType sort) const;
-
-    bool skip(const unsigned mode) const;
-
     void scale(const ScoringType stype);
 
     void compensate(const float comp[]);
+
+    float figure(const SortingType sort) const;
+
+    bool skip(const unsigned mode) const;
 
     string strHeaderCSV() const;
 

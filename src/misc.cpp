@@ -283,6 +283,7 @@ float scale(
   {
     if (num > 0)
     {
+      // Convert -1 .. +1 to 0 .. 100%.
       const float n = static_cast<float>(num);
       return 100.f * (sum + n) / (2.f * n);
     }

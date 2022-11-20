@@ -30,14 +30,16 @@ class Scores
 {
   private:
 
+    /*
     struct OppCompType
     {
       float sum[VALET_ENTRY_SIZE];
     };
+    */
 
 
     vector<CumulPair> pairScores;
-    vector<OppCompType> oppComp;
+    vector<CumulPair> oppComp;
 
     typedef map<string, CumulPair> OppMapType;
     vector<OppMapType> oppScores;
@@ -62,7 +64,7 @@ class Scores
     void AddCompensation(
       const unsigned pairNo,
       const unsigned oppNo,
-      const OppCompType& oppValues);
+      const CumulPair& oppValues);
 
     bool PreparePrint(
       const unsigned mode,

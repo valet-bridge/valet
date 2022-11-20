@@ -25,7 +25,7 @@ void CumulPair::clear()
   for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
   {
     num[i] = 0;
-    sum[i]= 0.f;
+    sum[i] = 0.f;
   }
 }
 
@@ -230,8 +230,6 @@ bool CumulPair::skip(const unsigned mode) const
 
 void CumulPair::scale(const ScoringType stype)
 {
-  // If matchpoints, conversion -1 .. +1 to 0 .. 100%.
-
   for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
   {
     avgTotal[i] = ::scale(sum[i], num[VALET_OVERALL], stype);
