@@ -44,7 +44,6 @@ void CumulPair::setPair(const unsigned pairNoIn)
 
 void CumulPair::incrDeclarer(const ValetEntryType& entry)
 {
-  assert(aspects.size() == VALET_ENTRY_SIZE);
   aspects[VALET_OVERALL].incr(entry.overall);
   aspects[VALET_BID].incr(entry.bidScore);
 
@@ -75,7 +74,6 @@ void CumulPair::incrDeclarer(const ValetEntryType& entry)
 
 void CumulPair::incrDefenders(const ValetEntryType& entry)
 {
-  assert(aspects.size() == VALET_ENTRY_SIZE);
   aspects[VALET_OVERALL].decr(entry.overall);
   aspects[VALET_BID].decr(entry.bidScore);
 
@@ -165,20 +163,6 @@ float CumulPair::averageDefense() const
 }
 
 
-float CumulPair::averageLead1() const
-{
-  return avgPerChance[VALET_LEAD1];
-  // return aspects[VALET_LEAD1].average(stype);
-}
-
-
-float CumulPair::averageLead2() const
-{
-  return avgPerChance[VALET_LEAD2];
-  // return aspects[VALET_LEAD2].average(stype);
-}
-
-
 float CumulPair::averageLead() const
 {
   const float n1 = static_cast<float>(num[VALET_LEAD1]);
@@ -198,16 +182,8 @@ float CumulPair::averageLead() const
 }
 
 
-float CumulPair::averageNonLead() const
-{
-  return avgPerChance[VALET_DEF];
-  // return aspects[VALET_DEF].average(stype);
-}
-
-
 void CumulPair::operator += (const CumulPair& c2)
 {
-  assert(aspects.size() == VALET_ENTRY_SIZE);
   for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
   {
     sum[i] += c2.sum[i];
@@ -220,7 +196,6 @@ void CumulPair::operator += (const CumulPair& c2)
 
 void CumulPair::operator -= (const CumulPair& c2)
 {
-  assert(aspects.size() == VALET_ENTRY_SIZE);
   for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
   {
     sum[i] -= c2.sum[i];
@@ -263,7 +238,6 @@ float CumulPair::figure(const SortingType sort) const
 
 bool CumulPair::skip(const TableType ttype) const
 {
-  assert(aspects.size() == VALET_ENTRY_SIZE);
   if (num[VALET_OVERALL] == 0)
   {
     return true;

@@ -52,13 +52,7 @@ class CumulPair
 
     float averageDefense() const;
 
-    float averageLead1() const;
-
-    float averageLead2() const;
-
     float averageLead() const;
-
-    float averageNonLead() const;
 
     string strOverall(
       const Pairs& pairs,

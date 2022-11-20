@@ -98,11 +98,16 @@ void Scores::AddEntry(
   unsigned m = (entry.pairNo > entry.oppNo ? entry.pairNo : entry.oppNo);
   if (m >= length)
   {
-    unsigned numNewChunks = (m / SCORES_CHUNK_SIZE) + 1;
+    const unsigned numNewChunks = (m / SCORES_CHUNK_SIZE) + 1;
+    const unsigned newScores = numNewChunks * SCORES_CHUNK_SIZE - length;
+
     length = numNewChunks * SCORES_CHUNK_SIZE;
     pairScores.resize(static_cast<size_t>(length));
     oppScores.resize(static_cast<size_t>(length));
     oppComp.resize(static_cast<size_t>(length));
+
+    for (unsigned i = length-newScores; i < length; i++)
+      pairScores[i].clear();
   }
 
   CumulPair& cDecl = pairScores[entry.pairNo];
