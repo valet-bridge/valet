@@ -564,40 +564,7 @@ void Scores::PrintCSV(
         c.avgPerChance[VALET_OVERALL] - 
         c.avgPerChance[VALET_BID] << s;
 
-    // Declarer score.
-    unsigned n = c.num[VALET_PLAY1] + c.num[VALET_PLAY2];
-    cout << strPair(
-      c.averagePlay(), n, prec, VALET_FORMAT_CSV);
-
-    // Defender score.
-    cout << "  ";
-    n = c.num[VALET_DEF];
-    cout << strPair(c.averageDefense(), n, prec, VALET_FORMAT_CSV);
-
-    // Individual declarer scores.
-    cout << strPair(c.avgPerChance[VALET_PLAY1],
-      c.num[VALET_PLAY1], prec, VALET_FORMAT_CSV);
-    cout << strPair(c.avgPerChance[VALET_PLAY2],
-      c.num[VALET_PLAY2], prec, VALET_FORMAT_CSV);
-
-    if (options.leadFlag)
-    {
-      cout << strPair(c.averageLead1(),
-        c.num[VALET_LEAD1], prec, VALET_FORMAT_CSV);
-      cout << strPair(c.averageLead2(),
-        c.num[VALET_LEAD2], prec, VALET_FORMAT_CSV);
-      
-      if (options.averageFlag)
-        cout << strPair(
-          c.averageLead(),
-          c.num[VALET_PLAY1] + c.num[VALET_PLAY2],
-          prec, VALET_FORMAT_CSV);
-
-      cout << strPair(c.averageNonLead(),
-        c.num[VALET_DEF], prec, VALET_FORMAT_CSV);
-    }
-
-    cout << "\n";
+    cout << c.strDetails(prec, VALET_FORMAT_CSV);
   }
   cout << "\n";
 }

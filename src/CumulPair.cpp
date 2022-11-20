@@ -102,44 +102,57 @@ string CumulPair::strDetails(
   unsigned n = num[VALET_PLAY1] + num[VALET_PLAY2];
   ss << strPair(CumulPair::averagePlay(), n, prec, format);
 
+  if (format == VALET_FORMAT_TEXT)
+    ss << "  ";
+
   // Defender score.
-  ss << "  ";
   n = num[VALET_DEF];
   ss << strPair(CumulPair::averageDefense(), n, prec, format);
 
-  ss << " | ";
+  if (format == VALET_FORMAT_TEXT)
+    ss << " | ";
 
   // Individual declarer scores.
-  ss << strPair(
-    avgPerChance[VALET_PLAY1], num[VALET_PLAY1], prec, format);
-  ss << "  ";
-  ss << strPair(
-    avgPerChance[VALET_PLAY2], num[VALET_PLAY2], prec, format);
+  ss << strPair(avgPerChance[VALET_PLAY1], num[VALET_PLAY1], 
+    prec, format);
 
-  ss << " | ";
+  if (format == VALET_FORMAT_TEXT)
+    ss << "  ";
+
+  ss << strPair(avgPerChance[VALET_PLAY2], num[VALET_PLAY2], 
+    prec, format);
+
+  if (format == VALET_FORMAT_TEXT)
+    ss << " | ";
 
   if (options.leadFlag)
   {
-    ss << strPair(avgPerChance[VALET_LEAD1], num[VALET_LEAD1], prec,
-      format);
-    ss << "  ";
-    ss << strPair(avgPerChance[VALET_LEAD2], num[VALET_LEAD2], prec,
-      format);
-    ss << "  ";
+    ss << strPair(avgPerChance[VALET_LEAD1], num[VALET_LEAD1], 
+      prec, format);
+
+    if (format == VALET_FORMAT_TEXT)
+      ss << "  ";
+
+    ss << strPair(avgPerChance[VALET_LEAD2], num[VALET_LEAD2], 
+      prec, format);
+
+    if (format == VALET_FORMAT_TEXT)
+      ss << "  ";
 
     if (options.averageFlag)
     {
-      ss << strPair(
-        CumulPair::averageLead(),
-        num[VALET_PLAY1] + num[VALET_PLAY2],
-        prec,
-        format);
-      ss << "  ";
+      ss << strPair(CumulPair::averageLead(),
+        num[VALET_PLAY1] + num[VALET_PLAY2], prec, format);
+
+      if (format == VALET_FORMAT_TEXT)
+        ss << "  ";
     }
 
     ss << strPair(
       avgPerChance[VALET_DEF], num[VALET_DEF], prec, format);
-    ss << " |";
+
+    if (format == VALET_FORMAT_TEXT)
+      ss << " |";
   }
 
   ss << "\n";
