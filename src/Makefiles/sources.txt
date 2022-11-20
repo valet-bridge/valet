@@ -8,5 +8,6 @@ VALET_FILES   =                                         \
                 misc.cpp                                \
                 Hand.cpp                                \
                 Pairs.cpp                               \
+                CumulPair.cpp                           \
                 Scores.cpp                              \
                 scoring.cpp

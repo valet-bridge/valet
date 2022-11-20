@@ -18,6 +18,7 @@
 
 using namespace std;
 
+#include "CumulPair.h"
 #include "cst.h"
 
 extern OptionsType options;
@@ -29,6 +30,7 @@ class Scores
 {
   private:
 
+    /*
     enum CumulEntryType
     {
       VALET_OVERALL = 0,
@@ -117,6 +119,7 @@ class Scores
         return avgPerChance[VALET_DEF];
       };
     };
+    */
 
     struct OppType
     {
@@ -130,7 +133,7 @@ class Scores
     };
 
 
-    vector<CumulType> pairScores;
+    vector<CumulPair> pairScores;
     vector<OppCompType> oppComp;
 
     typedef map<string, OppType> OppMapType;
@@ -157,8 +160,8 @@ class Scores
       const OppCompType& oppValues);
 
     double Difference(
-      const CumulType& c1,
-      const CumulType& c2,
+      const CumulPair& c1,
+      const CumulPair& c2,
       SortingType sort) const;
 
     bool PreparePrint(
@@ -166,7 +169,7 @@ class Scores
       int& prec) const;
 
     bool SkipScore(
-      const CumulType& c,
+      const CumulPair& c,
       const unsigned mode) const;
 
     /*
