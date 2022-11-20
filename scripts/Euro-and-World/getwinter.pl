@@ -6,11 +6,51 @@ use v5.10;
 
 use File::Fetch;
 
-my $rounds = 15;
-my $sprefix1 = '2020-Monaco/Teams/Rounds';
-my $sprefix2 = '2020-Monaco/Teams/Matches';
-my $tno = 2000;
-my $tourney1 = 'http://www.eurobridge.org/Repository/competitions/20Monaco/microSite/Asp/';
+# Open
+# my $rounds = 29;
+# my $sprefix1 = '22Madeira/Open/Rounds';
+# my $sprefix2 = '22Madeira/Open/Matches';
+# my $tno = 2220;
+# my $tourney1 = 'http://db.eurobridge.org/Repository/competitions/22Madeira/microSite/Asp/';
+
+# Women
+# my $rounds = 19;
+# my $sprefix1 = '22Madeira/Women/Rounds';
+# my $sprefix2 = '22Madeira/Women/Matches';
+# my $tno = 2221;
+# my $tourney1 = 'http://db.eurobridge.org/Repository/competitions/22Madeira/microSite/Asp/';
+
+# Seniors
+my $rounds = 19;
+my $sprefix1 = '22Madeira/Seniors/Rounds';
+my $sprefix2 = '22Madeira/Seniors/Matches';
+my $tno = 2222;
+my $tourney1 = 'http://db.eurobridge.org/Repository/competitions/22Madeira/microSite/Asp/';
+
+# Mixed
+# my $rounds = 21;
+# my $sprefix1 = '22Madeira/Mixed/Rounds';
+# my $sprefix2 = '22Madeira/Mixed/Matches';
+# my $tno = 2223;
+# my $tourney1 = 'http://db.eurobridge.org/Repository/competitions/22Madeira/microSite/Asp/';
+
+# my $rounds = 23;
+# my $sprefix1 = '2022-Salsomaggiore/Venice/Rounds';
+# my $sprefix2 = '2022-Salsomaggiore/Venice/Matches';
+# my $tno = 2201;
+# my $tourney1 = 'http://db.worldbridge.org/Repository/tourn/salsomaggiore.22/microSite/Asp/';
+
+# my $rounds = 23;
+# my $sprefix1 = '2022-Salsomaggiore/Teams/Rounds';
+# my $sprefix2 = '2022-Salsomaggiore/Teams/Matches';
+# my $tno = 2203;
+# my $tourney1 = 'http://db.worldbridge.org/Repository/tourn/salsomaggiore.22/microSite/Asp/';
+
+# my $rounds = 15;
+# my $sprefix1 = '2020-Monaco/Teams/Rounds';
+# my $sprefix2 = '2020-Monaco/Teams/Matches';
+# my $tno = 2000;
+# my $tourney1 = 'http://www.eurobridge.org/Repository/competitions/20Monaco/microSite/Asp/';
 
 # 2000: Qualifying teams
 # 2001: Qualifying BAM, 1st day
@@ -107,7 +147,7 @@ for my $r (1 .. $rounds)
   say $name;
 
   my $res1 = $fetch1;
-  $res1 =~ s/Teams/Teams$r/;
+  $res1 =~ s/Teams.asp/Teams$r.asp/;
 
   my $ff = File::Fetch->new(uri => $name); 
   my $where = $ff->fetch(to => $sprefix1) or die $ff->error;
