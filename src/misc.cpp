@@ -274,6 +274,30 @@ void PrintTableauText(
 }
 
 
+float scale(
+  const float sum,
+  const unsigned num,
+  const ScoringType stype)
+{
+  if (stype == VALET_MATCHPOINTS)
+  {
+    if (num > 0)
+    {
+      const float n = static_cast<float>(num);
+      return 100.f * (sum + n) / (2.f * n);
+    }
+    else
+      return 50.f;
+  }
+  else
+  {
+    if (num > 0)
+      return sum / static_cast<float>(num);
+    else
+      return 0.;
+  }
+}
+
 
 string strPair(
   const float average,

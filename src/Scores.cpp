@@ -46,7 +46,7 @@ void Scores::Reset()
 }
 
 
-Scores::OppType * Scores::PrepareCompensation(
+CumulPair * Scores::PrepareCompensation(
   const unsigned pairNo,
   const unsigned oppNo)
 {
@@ -74,8 +74,8 @@ void Scores::AddCompensation(
   const unsigned oppNo,
   const OppCompType& oppValues)
 {
-  OppType * opp = Scores::PrepareCompensation(pairNo, oppNo);
-  OppType * pair = Scores::PrepareCompensation(oppNo, pairNo);
+  CumulPair * opp = Scores::PrepareCompensation(pairNo, oppNo);
+  CumulPair * pair = Scores::PrepareCompensation(oppNo, pairNo);
 
   for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
   {
@@ -138,7 +138,7 @@ void Scores::Compensate()
 
   for (unsigned pno = 1; pno < length; pno++)
   {
-    OppType oppResults;
+    CumulPair oppResults;
     for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
     {
       oppResults.num[i] = 0;
@@ -204,30 +204,15 @@ void Scores::Normalize()
   for (unsigned pno = 1; pno < length; pno++)
   {
     CumulPair& c = pairScores[pno];
-    if (c.num[VALET_OVERALL] == 0)
-      return;
+    // if (c.num[VALET_OVERALL] == 0)
+      // continue;
 
-    if (options.valet == VALET_MATCHPOINTS)
-    {
-      // Convert scale from -1 .. +1 to 0 .. 100%.
-      for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
-        c.avgTotal[i] = Scores::ScaleMP(c.sum[i], c.num[VALET_OVERALL]);
-
-      for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
-        c.avgPerChance[i] = Scores::ScaleMP(c.sum[i], c.num[i]);
-    }
-    else
-    {
-      for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
-        c.avgTotal[i] = Scores::Scale(c.sum[i], c.num[VALET_OVERALL]);
-
-      for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
-        c.avgPerChance[i] = Scores::Scale(c.sum[i], c.num[i]);
-    }
+    c.scale(options.valet);
 
     if (options.compensateFlag)
-      for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
-        c.avgPerChance[i] += oppComp[pno].sum[i];
+      c.compensate(oppComp[pno].sum);
+      // for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
+        // c.avgPerChance[i] += oppComp[pno].sum[i];
   }
 }
 

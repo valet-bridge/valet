@@ -76,6 +76,10 @@ struct CumulPair
 
     bool skip(const unsigned mode) const;
 
+    void scale(const ScoringType stype);
+
+    void compensate(const float comp[]);
+
     string strHeaderCSV() const;
 
     string strHeaderText1() const;

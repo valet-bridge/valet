@@ -29,6 +29,11 @@ void PrintTableauText(
   const string& boardtag,
   ostream& oss = std::cout);
 
+float scale(
+  const float sum,
+  const unsigned num,
+  const ScoringType stype);
+
 string strPair(
   const float average,
   const unsigned count,

@@ -225,6 +225,25 @@ bool CumulPair::skip(const unsigned mode) const
 }
 
 
+void CumulPair::scale(const ScoringType stype)
+{
+  // If matchpoints, conversion -1 .. +1 to 0 .. 100%.
+
+  for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
+  {
+    avgTotal[i] = ::scale(sum[i], num[VALET_OVERALL], stype);
+    avgPerChance[i] = ::scale(sum[i], num[i], stype);
+  }
+}
+
+
+void CumulPair::compensate(const float comp[])
+{
+  for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
+    avgPerChance[i] += comp[i];
+}
+
+
 string CumulPair::strHeaderText1() const
 {
   stringstream ss;
