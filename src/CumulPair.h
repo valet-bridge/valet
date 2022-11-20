@@ -54,6 +54,15 @@ struct CumulPair
 
     float averageNonLead() const;
 
+    string strOverall(
+      const Pairs& pairs,
+      const int prec,
+      const FormatType format) const;
+
+    string strDetails(
+      const int prec,
+      const FormatType format) const;
+
   // public:
 
     void setPair(const unsigned pairNoIn);
@@ -72,12 +81,9 @@ struct CumulPair
     string strHeaderText1() const;
     string strHeaderText2() const;
 
-    string strOverall(
+    string strLine(
       const Pairs& pairs,
-      const int prec,
-      const FormatType format) const;
-
-    string strDetails(
+      const unsigned mode,
       const int prec,
       const FormatType format) const;
 };

@@ -271,28 +271,6 @@ bool Scores::PreparePrint(
 }
 
 
-/*
-bool Scores::SkipScore(
-  const CumulPair& c,
-  const unsigned mode) const
-{
-  return c.skip(mode);
-}
-*/
-
-
-void Scores::PrintTextHeader() const
-{
-  CumulPair c;
-
-  cout << 
-    setw(54) << "" << " | " <<
-    c.strHeaderText1() << "\n" <<
-    setw(54) << left << "Players" << right << " | " <<
-    c.strHeaderText2() << "\n";
-}
-
-
 void Scores::PrintText(
   const unsigned mode) const
 {
@@ -300,32 +278,13 @@ void Scores::PrintText(
   if (! Scores::PreparePrint(mode, prec))
     return;
 
-  Scores::PrintTextHeader();
+  cout << Scores::strHeader(VALET_FORMAT_TEXT);
 
   for (unsigned pno = 1; pno < length; pno++)
   {
-    const CumulPair& c = pairScores[pno];
-    // if (Scores::SkipScore(c, mode))
-    if (c.skip(mode))
-      continue;
-
-    cout << 
-      // left << pairs.GetPairNamePadded(c.pairNo, 54) << right << " | " <<
-      c.strOverall(pairs, prec, VALET_FORMAT_TEXT);
-
-    cout << c.strDetails(prec, VALET_FORMAT_TEXT);
+    cout << pairScores[pno].strLine(pairs, mode, prec, VALET_FORMAT_TEXT);
   }
   cout << "\n";
-}
-
-
-void Scores::PrintCSVHeader() const
-{
-  CumulPair c;
-
-  cout << 
-    "Players" << options.separator <<
-    c.strHeaderCSV() << "\n";
 }
 
 
@@ -336,24 +295,38 @@ void Scores::PrintCSV(
   if (! Scores::PreparePrint(mode, prec))
     return;
 
-  Scores::PrintCSVHeader();
-
-  const string s = options.separator;
+  cout << Scores::strHeader(VALET_FORMAT_CSV);
 
   for (unsigned pno = 1; pno < length; pno++)
   {
-    const CumulPair& c = pairScores[pno];
-    // if (Scores::SkipScore(c, mode))
-    if (c.skip(mode))
-      continue;
-
-    cout << 
-      // pairs.GetPairName(c.pairNo) << s <<
-      c.strOverall(pairs, prec, VALET_FORMAT_CSV);
-
-    cout << c.strDetails(prec, VALET_FORMAT_CSV);
+    cout << pairScores[pno].strLine(pairs, mode, prec, VALET_FORMAT_CSV);
   }
   cout << "\n";
+}
+
+
+string Scores::strHeader(const FormatType format) const
+{
+  stringstream ss;
+
+  CumulPair c;
+
+  if (format == VALET_FORMAT_TEXT)
+  {
+    ss << 
+      setw(54) << "" << " | " <<
+      c.strHeaderText1() << "\n" <<
+      setw(54) << left << "Players" << right << " | " <<
+      c.strHeaderText2() << "\n";
+  }
+  else if (format == VALET_FORMAT_CSV)
+  {
+    ss << "Players" << options.separator << c.strHeaderCSV() << "\n";
+  }
+  else
+    assert(false);
+  
+  return ss.str();
 }
 
 

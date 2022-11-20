@@ -442,3 +442,19 @@ string CumulPair::strDetails(
 
   return ss.str();
 }
+
+
+string CumulPair::strLine(
+  const Pairs& pairs,
+  const unsigned mode,
+  const int prec,
+  const FormatType format) const
+{
+  if (CumulPair::skip(mode))
+    return "";
+
+  return 
+    CumulPair::strOverall(pairs, prec, format) +
+    CumulPair::strDetails(prec, format);
+}
+

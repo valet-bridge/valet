@@ -72,18 +72,10 @@ class Scores
       const unsigned mode,
       int& prec) const;
 
-    /*
-    bool SkipScore(
-      const CumulPair& c,
-      const unsigned mode) const;
-      */
-
-    void PrintTextHeader() const;
-
     void PrintText(
       const unsigned mode) const;
 
-    void PrintCSVHeader() const;
+    string strHeader(const FormatType format) const;
 
     void PrintCSV(
       const unsigned mode) const;
