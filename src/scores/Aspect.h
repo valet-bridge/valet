@@ -27,6 +27,8 @@ class Aspect
 
     float sum;
 
+    float average;
+
 
   public:
 
@@ -40,7 +42,11 @@ class Aspect
 
     bool empty() const;
 
-    float average(const ScoringEnum stype) const;
+    void scale(const ScoringEnum stype);
+
+    void compensate(
+      const Aspect& a2,
+      const ScoringEnum stype);
 
     string str(const int prec) const;
 };

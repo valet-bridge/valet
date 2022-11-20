@@ -267,8 +267,8 @@ void CumulPair::scale(const ScoringEnum stype)
 {
   for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
   {
-    avgTotal[i] = ::scale(sum[i], num[VALET_OVERALL], stype);
     avgPerChance[i] = ::scale(sum[i], num[i], stype);
+    aspects[i].scale(stype);
   }
 }
 
@@ -277,6 +277,9 @@ void CumulPair::compensate(
   const CumulPair& oppComp,
   const ScoringEnum stype)
 {
+  for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
+    aspects[i].compensate(oppComp.aspects[i], stype);
+
   if (stype == VALET_MATCHPOINTS)
   {
     for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)

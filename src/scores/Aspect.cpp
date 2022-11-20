@@ -53,9 +53,20 @@ bool Aspect::empty() const
 }
 
 
-float Aspect::average(const ScoringEnum stype) const
+void Aspect::scale(const ScoringEnum stype)
 {
-  return scale(sum, num, stype);
+  average = ::scale(sum, num, stype);
+}
+
+
+void Aspect::compensate(
+  const Aspect& a2,
+  const ScoringEnum stype)
+{
+  if (stype == VALET_MATCHPOINTS)
+    average += a2.average - 50.f;
+  else
+    average += a2.average;
 }
 
 

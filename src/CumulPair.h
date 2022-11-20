@@ -43,7 +43,6 @@ class CumulPair
 
     unsigned num[VALET_ENTRY_SIZE];
     float sum[VALET_ENTRY_SIZE];
-    float avgTotal[VALET_ENTRY_SIZE];
     float avgPerChance[VALET_ENTRY_SIZE];
 
     vector<Aspect> aspects;
