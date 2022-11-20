@@ -147,22 +147,8 @@ void Scores::Compensate()
       oppResults -= it->second;
     }
 
-    if (options.valet == VALET_MATCHPOINTS)
-    {
-      for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
-      {
-        const float n = static_cast<float>(oppResults.num[i]);
-        if (n == 0)
-          oppComp[pno].sum[i] = 0.f;
-        else
-          oppComp[pno].sum[i] = -50.f + oppResults.sum[i] / n;
-      }
-    }
-    else
-    {
-      oppComp[pno] = oppResults;
-      oppComp[pno].scale(options.valet);
-    }
+    oppComp[pno] = oppResults;
+    oppComp[pno].scale(options.valet);
   }
 }
 
@@ -176,12 +162,7 @@ void Scores::Normalize()
     c.scale(options.valet);
 
     if (options.compensateFlag)
-    {
-      if (options.valet == VALET_MATCHPOINTS)
-        c.compensate(oppComp[pno].sum);
-      else
-        c.compensate(oppComp[pno].avgPerChance);
-    }
+      c.compensate(oppComp[pno].avgPerChance, options.valet);
   }
 }
 

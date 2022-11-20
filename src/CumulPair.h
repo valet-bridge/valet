@@ -77,7 +77,9 @@ struct CumulPair
 
     void scale(const ScoringType stype);
 
-    void compensate(const float comp[]);
+    void compensate(
+      const float comp[],
+      const ScoringType stype);
 
     float figure(const SortingType sort) const;
 
