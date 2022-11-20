@@ -14,8 +14,10 @@
 #include <fstream>
 
 #include "cst.h"
-#include "args.h"
-#include "files.h"
+
+#include "inputs/args.h"
+#include "inputs/files.h"
+
 #include "scoring.h"
 #include "misc.h"
 #include "Pairs.h"

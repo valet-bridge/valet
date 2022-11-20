@@ -17,7 +17,8 @@
 #include <string.h>
 
 #include "args.h"
-#include "cst.h"
+
+#include "../cst.h"
 
 using namespace std;
 

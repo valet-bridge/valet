@@ -284,7 +284,7 @@ float Hand::GetDatumBidding(
   // This gives us the bidding performance, in a way.
 
   float bidIMPs = 0.;
-  unsigned count = 0;
+  float count = 0;
   unsigned d = res.denom;
   for (unsigned t = 0; t <= 13; t++)
   {
@@ -292,9 +292,10 @@ float Hand::GetDatumBidding(
       continue;
 
     int artifScore = CalculateRawScore(res, vul, t);
-    bidIMPs += resMatrix[d][t] * 
+    const float r = static_cast<float>(resMatrix[d][t]);
+    bidIMPs += r *
       static_cast<float>(CalculateIMPs(artifScore - datum));
-    count += resMatrix[d][t];
+    count += r;
   }
 
   assert(count > 0);
@@ -322,7 +323,7 @@ float Hand::GetOverallScore(
     return it->second;
 
   float result = 0;
-  unsigned count = 0;
+  float count = 0;
   bool seenSelfFlag = false;
 
   for (unsigned i = 0; i < numEntries; i++)
@@ -348,7 +349,7 @@ float Hand::GetOverallScore(
   const unsigned skipIndex)
 {
   float result = 0;
-  unsigned count = 0;
+  float count = 0;
 
   for (unsigned i = 0; i < numEntries; i++)
   {
@@ -376,7 +377,7 @@ float Hand::GetBiddingScore(
   // We compare to all other scores, not to the datum.
 
   float bidResult = 0.;
-  unsigned count = 0;
+  float count = 0;
   ResultType resArtif = results[no];
   unsigned d = resArtif.denom;
   for (unsigned t = 0; t <= 13; t++)
@@ -390,9 +391,9 @@ float Hand::GetBiddingScore(
     resArtif.tricks = t;
     int artifScore = CalculateRawScore(resArtif, vul, t);
 
-    bidResult +=
-      resMatrix[d][t] * Hand::GetOverallScore(rawScore, artifScore);
-    count += resMatrix[d][t];
+    const float r = static_cast<float>(resMatrix[d][t]);
+    bidResult += r * Hand::GetOverallScore(rawScore, artifScore);
+    count += r;
   }
 
   // Special case:  If we're the only ones to play in a denomination,
@@ -480,7 +481,7 @@ float Hand::GetOverallScoreAgainstCloud(
 
     unsigned declOpp = oppArtif.declarer;
     unsigned dOpp = oppArtif.denom;
-    unsigned count = 0;
+    float count = 0;
     float subResult = 0.;
 
     for (unsigned tOpp = 0; tOpp <= 13; tOpp++)
@@ -491,17 +492,18 @@ float Hand::GetOverallScoreAgainstCloud(
       oppArtif.tricks = tOpp;
       int artifOppScore = CalculateRawScore(oppArtif, vulList[i], tOpp);
 
-      subResult += resDeclMatrix[declOpp][dOpp][tOpp] * 
+      const float r = static_cast<float>(resDeclMatrix[declOpp][dOpp][tOpp]);
+      subResult += r * 
         static_cast<float>((*fptr)(myRawScore - artifOppScore));
       
-      count += resDeclMatrix[declOpp][dOpp][tOpp];
+      count += r;
     }
 
     if (count > 0)
       bidResult += subResult / count;
   }
 
-  return bidResult / (numEntries-1);
+  return bidResult / static_cast<float>(numEntries-1);
 }
 
 
@@ -515,7 +517,7 @@ float Hand::GetCloudBiddingScore(
   // weighted score for all our possible own trick numbers.
 
   float bidResult = 0.;
-  unsigned count = 0;
+  float count = 0;
   ResultType resArtif = results[no];
   unsigned decl = resArtif.declarer;
   unsigned d = resArtif.denom;
@@ -530,10 +532,11 @@ float Hand::GetCloudBiddingScore(
     resArtif.tricks = t;
     int artifScore = CalculateRawScore(resArtif, vulList[no], t);
 
-    float b = resDeclMatrix[decl][d][t] * Hand::GetOverallScoreAgainstCloud(
+    const float r = static_cast<float>(resDeclMatrix[decl][d][t]);
+    float b = r * Hand::GetOverallScoreAgainstCloud(
         artifScore, no, vulList, resDeclMatrix, overallResult);
     bidResult += b;
-    count += resDeclMatrix[decl][d][t];
+    count += r;
   }
 
   // Special case:  If we're the only ones to play in a denomination,

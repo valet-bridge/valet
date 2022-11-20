@@ -20,10 +20,11 @@
 #include <algorithm>
 
 #include "files.h"
-#include "Pairs.h"
-#include "Hand.h"
 #include "parse.h"
-#include "valet.h"
+
+#include "../Pairs.h"
+#include "../Hand.h"
+#include "../valet.h"
 
 using namespace std;
 
@@ -104,12 +105,9 @@ bool ReadScoresFile(
   while (getline(fname, line))
   {
     lno++;
+    line.erase(remove(line.begin(), line.end(), '\r'), line.end());
     if (line[0] == '#' || line.empty())
       continue;
-
-    // Trim line end
-    line.erase(find_if(line.rbegin(), line.rend(),
-      not1(ptr_fun<int, int>(isspace))).base(), line.end());
 
     int r;
     if ((r = ParseScoreLine(line, res, rno, bno)) != RETURN_NO_FAULT)

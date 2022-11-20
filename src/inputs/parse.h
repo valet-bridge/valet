@@ -10,7 +10,8 @@
 #define VALET_PARSE_H
 
 #include <string>
-#include "cst.h"
+
+#include "../cst.h"
 
 using namespace std;
 

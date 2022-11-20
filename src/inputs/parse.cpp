@@ -15,9 +15,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "Pairs.h"
 #include "parse.h"
-#include "valet.h"
+
+#include "../Pairs.h"
+#include "../valet.h"
 
 using namespace std;
 

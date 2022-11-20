@@ -1,0 +1,12 @@
+VALET_FILES   =                                         \
+                valet.cpp                               \
+                                                        \
+                inputs/args.cpp                         \
+                inputs/files.cpp                        \
+                inputs/parse.cpp                        \
+                                                        \
+                misc.cpp                                \
+                Hand.cpp                                \
+                Pairs.cpp                               \
+                Scores.cpp                              \
+                scoring.cpp

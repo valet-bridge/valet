@@ -1,0 +1,16 @@
+valet.obj: cst.h inputs/args.h inputs/files.h scoring.h misc.h Pairs.h Hand.h
+valet.obj: Scores.h
+inputs/args.obj: inputs/args.h cst.h
+inputs/files.obj: inputs/files.h Pairs.h cst.h Hand.h inputs/parse.h valet.h
+inputs/parse.obj: Pairs.h cst.h inputs/parse.h valet.h
+misc.obj: Pairs.h cst.h misc.h
+Hand.obj: valet.h Pairs.h cst.h Hand.h scoring.h
+Pairs.obj: Pairs.h cst.h
+Scores.obj: Scores.h cst.h Pairs.h
+scoring.obj: valet.h cst.h scoring.h
+Hand.obj: valet.h Pairs.h cst.h Hand.h scoring.h
+Pairs.obj: Pairs.h cst.h
+scoring.obj: valet.h cst.h scoring.h
+vlib.obj: valet.h inputs/parse.h cst.h scoring.h Pairs.h Hand.h
+driver.obj: valet.h dsupport.h
+dsupport.obj: valet.h dsupport.h

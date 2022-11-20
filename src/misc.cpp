@@ -12,6 +12,8 @@
 
 #include <iostream>
 #include <fstream>
+#include <sstream>
+#include <cassert>
 
 using namespace std;
 
@@ -169,13 +171,11 @@ void AverageTableau(
 {
   if (options.valet == VALET_MATCHPOINTS)
   {
-    const unsigned total = cum.size();
-
     for (auto& cumit: cum)
     {
       const string key = cumit.first;
       auto& celem = cumit.second;
-      const unsigned n = celem.count;
+      const float n = static_cast<float>(celem.count);
 
       celem.overall /= n;
       celem.bidScore /= n;
@@ -194,7 +194,7 @@ void AverageTableau(
     {
       const string key = cumit.first;
       auto& celem = cumit.second;
-      const unsigned n = celem.count;
+      const float n = static_cast<float>(celem.count);
 
       celem.overall /= n;
       celem.bidScore /= n;
@@ -271,5 +271,37 @@ void PrintTableauText(
     oss << setw(8) << fixed << setprecision(prec) << celem.defScore << "\n";
   }
   oss << "\n";
+}
+
+
+
+string strPair(
+  const float average,
+  const unsigned count,
+  const int prec,
+  const FormatType format)
+{
+  stringstream ss;
+
+  if (format == VALET_FORMAT_TEXT)
+  {
+    if (count > 0)
+      ss << setw(5) << fixed << setprecision(prec) << average <<
+        " (" << setw(3) << count << ")";
+    else
+      ss << setw(5) << "-" << " (  0)";
+  }
+  else if (format == VALET_FORMAT_CSV)
+  {
+    if (count > 0)
+      ss << setprecision(prec) << average << options.separator <<
+        count << options.separator;
+    else
+      ss << "-" << options.separator << "0" << options.separator;
+  }
+  else
+    assert(false);
+
+  return ss.str();
 }
 

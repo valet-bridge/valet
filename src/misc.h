@@ -10,6 +10,8 @@
 #define VALET_MISC_H
 
 #include <vector>
+#include <string>
+
 #include "cst.h"
 
 using namespace std;
@@ -26,6 +28,12 @@ void PrintTableauText(
   const vector<ValetEntryType>& entries,
   const string& boardtag,
   ostream& oss = std::cout);
+
+string strPair(
+  const float average,
+  const unsigned count,
+  const int prec,
+  const FormatType format);
   
 #endif
 

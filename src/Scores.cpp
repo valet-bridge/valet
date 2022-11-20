@@ -18,6 +18,7 @@
 
 #include "Scores.h"
 #include "Pairs.h"
+#include "misc.h"
 
 using namespace std;
 
@@ -203,12 +204,13 @@ void Scores::Compensate()
 
     for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
     {
-      if (oppResults.num[i] == 0)
+      const float n = static_cast<float>(oppResults.num[i]);
+      if (n == 0)
         oppComp[pno].sum[i] = 0.f;
       else if (options.valet == VALET_MATCHPOINTS)
-        oppComp[pno].sum[i] = -50.f + oppResults.sum[i] / oppResults.num[i];
+        oppComp[pno].sum[i] = -50.f + oppResults.sum[i] / n;
       else
-        oppComp[pno].sum[i] = oppResults.sum[i] / oppResults.num[i];
+        oppComp[pno].sum[i] = oppResults.sum[i] / n;
       }
   }
 }
@@ -219,7 +221,7 @@ float Scores::Scale(
   const unsigned num) const
 {
   if (num > 0)
-    return value / num;
+    return value / static_cast<float>(num);
   else
     return 0.;
 }
@@ -230,7 +232,10 @@ float Scores::ScaleMP(
   const unsigned num) const
 {
   if (num > 0)
-    return 100.f * (value + num) / (2.f * num);
+  {
+    const float n = static_cast<float>(num);
+    return 100.f * (value + n) / (2.f * n);
+  }
   else
     return 50.f;
 }
@@ -398,6 +403,7 @@ bool Scores::SkipScore(
 }
 
 
+/*
 void Scores::PrintTextPair(
   const float average,
   const unsigned no,
@@ -422,6 +428,7 @@ void Scores::PrintCSVPair(
   else
     cout << "-" << s << "0" << s;
 }
+*/
 
 
 void Scores::PrintTextHeader() const
@@ -514,59 +521,90 @@ void Scores::PrintText(
 
     // Declarer score.
     unsigned n = c.num[VALET_PLAY1] + c.num[VALET_PLAY2];
+    cout << strPair(c.averagePlay(), n, prec, VALET_FORMAT_TEXT);
+    /*
+    unsigned n = c.num[VALET_PLAY1] + c.num[VALET_PLAY2];
     if (n > 0)
-      Scores::PrintTextPair(
+      // Scores::PrintTextPair(
+      cout << strPair(
         (c.avgPerChance[VALET_PLAY1] * c.num[VALET_PLAY1] + 
          c.avgPerChance[VALET_PLAY2] * c.num[VALET_PLAY2]) / n, 
-        n, prec);
+        n, prec, VALET_FORMAT_TEXT);
     else
-      Scores::PrintTextPair(0., 0, prec);
+      // Scores::PrintTextPair(
+      cout << strPair(0., 0, prec, VALET_FORMAT_TEXT);
+      */
 
     // Defender score.
     cout << "  ";
     n = c.num[VALET_DEF];
+    cout << strPair(c.averageDefense(), n, prec, VALET_FORMAT_TEXT);
+    /*
     if (n)
     {
-      Scores::PrintTextPair(-MP_OFFSET +
+      // Scores::PrintTextPair(
+      cout << strPair(
+        -MP_OFFSET +
         (c.avgPerChance[VALET_LEAD1] * c.num[VALET_PLAY1] +
          c.avgPerChance[VALET_LEAD2] * c.num[VALET_PLAY2] +
-         c.avgPerChance[VALET_DEF] * c.num[VALET_DEF]) / n, n, prec);
+         c.avgPerChance[VALET_DEF] * c.num[VALET_DEF]) / n, n, prec,
+         VALET_FORMAT_TEXT);
     }
     else
-      Scores::PrintTextPair(0., 0, prec);
+      // Scores::PrintTextPair(0., 0, prec);
+      cout << strPair(0., 0, prec, VALET_FORMAT_TEXT);
+      */
 
     cout << " | ";
 
     // Individual declarer scores.
-    Scores::PrintTextPair(c.avgPerChance[VALET_PLAY1], 
-      c.num[VALET_PLAY1], prec);
+    // Scores::PrintTextPair(
+    cout << strPair(
+      c.avgPerChance[VALET_PLAY1], c.num[VALET_PLAY1], prec,
+        VALET_FORMAT_TEXT);
     cout << "  ";
-    Scores::PrintTextPair(c.avgPerChance[VALET_PLAY2], 
-      c.num[VALET_PLAY2], prec);
+    // Scores::PrintTextPair(
+    cout << strPair(
+      c.avgPerChance[VALET_PLAY2], c.num[VALET_PLAY2], prec,
+        VALET_FORMAT_TEXT);
 
     cout << " | ";
 
     if (options.leadFlag)
     {
-      Scores::PrintTextPair(c.avgPerChance[VALET_LEAD1], 
-        c.num[VALET_LEAD1], prec);
+      // Scores::PrintTextPair(
+      // cout << strPair(
+        // c.avgPerChance[VALET_LEAD1], c.num[VALET_LEAD1], prec,
+          // VALET_FORMAT_TEXT);
+      cout << strPair(c.averageLead1(), c.num[VALET_LEAD1], prec,
+        VALET_FORMAT_TEXT);
       cout << "  ";
-      Scores::PrintTextPair(c.avgPerChance[VALET_LEAD2], 
-        c.num[VALET_LEAD2], prec);
+      // Scores::PrintTextPair(
+      // cout << strPair(
+        // c.avgPerChance[VALET_LEAD2], c.num[VALET_LEAD2], prec,
+          // VALET_FORMAT_TEXT);
+      cout << strPair(c.averageLead2(), c.num[VALET_LEAD2], prec,
+        VALET_FORMAT_TEXT);
       cout << "  ";
       
       if (options.averageFlag)
       {
-        Scores::PrintTextPair(
-          (c.avgPerChance[VALET_LEAD1] * c.num[VALET_LEAD1] + 
-           c.avgPerChance[VALET_LEAD2] * c.num[VALET_LEAD2]) /
-          (c.num[VALET_PLAY1] + c.num[VALET_PLAY2]), 
-          c.num[VALET_PLAY1] + c.num[VALET_PLAY2], prec);
+        // Scores::PrintTextPair(
+        cout << strPair(
+          // (c.avgPerChance[VALET_LEAD1] * c.num[VALET_LEAD1] + 
+           // c.avgPerChance[VALET_LEAD2] * c.num[VALET_LEAD2]) /
+          // (c.num[VALET_PLAY1] + c.num[VALET_PLAY2]), 
+          c.averageLead(),
+          c.num[VALET_PLAY1] + c.num[VALET_PLAY2], 
+          prec,
+          VALET_FORMAT_TEXT);
         cout << "  ";
       }
 
-      Scores::PrintTextPair(c.avgPerChance[VALET_DEF], 
-        c.num[VALET_DEF], prec);
+      // Scores::PrintTextPair(
+      cout << strPair(
+        c.avgPerChance[VALET_DEF], c.num[VALET_DEF], prec,
+          VALET_FORMAT_TEXT);
       cout << " |";
     }
 
@@ -645,6 +683,9 @@ void Scores::PrintCSV(
 
     // Declarer score.
     unsigned n = c.num[VALET_PLAY1] + c.num[VALET_PLAY2];
+    cout << strPair(
+      c.averagePlay(), n, prec, VALET_FORMAT_CSV);
+    /*
     if (n > 0)
       Scores::PrintCSVPair(
         (c.avgPerChance[VALET_PLAY1] * c.num[VALET_PLAY1] + 
@@ -652,10 +693,13 @@ void Scores::PrintCSV(
         n, prec, s);
     else
       Scores::PrintCSVPair(0., 0, prec, s);
+      */
 
     // Defender score.
     cout << "  ";
     n = c.num[VALET_DEF];
+    cout << strPair(c.averageDefense(), n, prec, VALET_FORMAT_CSV);
+    /*
     if (n)
       Scores::PrintCSVPair(-MP_OFFSET +
         (c.avgPerChance[VALET_LEAD1] * c.num[VALET_LEAD1] +
@@ -663,29 +707,50 @@ void Scores::PrintCSV(
          c.avgPerChance[VALET_DEF] * c.num[VALET_DEF]) / n, n, prec, s);
     else
       Scores::PrintCSVPair(0., 0, prec, s);
+      */
 
     // Individual declarer scores.
+    /*
     Scores::PrintCSVPair(c.avgPerChance[VALET_PLAY1], 
       c.num[VALET_PLAY1], prec, s);
     Scores::PrintCSVPair(c.avgPerChance[VALET_PLAY2], 
       c.num[VALET_PLAY2], prec, s);
+      */
+    cout << strPair(c.avgPerChance[VALET_PLAY1],
+      c.num[VALET_PLAY1], prec, VALET_FORMAT_CSV);
+    cout << strPair(c.avgPerChance[VALET_PLAY2],
+      c.num[VALET_PLAY2], prec, VALET_FORMAT_CSV);
 
     if (options.leadFlag)
     {
+      /*
       Scores::PrintCSVPair(c.avgPerChance[VALET_LEAD1], 
         c.num[VALET_LEAD1], prec, s);
       Scores::PrintCSVPair(c.avgPerChance[VALET_LEAD2], 
         c.num[VALET_LEAD2], prec, s);
+        */
+      cout << strPair(c.averageLead1(),
+        c.num[VALET_LEAD1], prec, VALET_FORMAT_CSV);
+      cout << strPair(c.averageLead2(),
+        c.num[VALET_LEAD2], prec, VALET_FORMAT_CSV);
       
       if (options.averageFlag)
+        /*
         Scores::PrintCSVPair(
           (c.avgPerChance[VALET_LEAD1] * c.num[VALET_LEAD1] + 
            c.avgPerChance[VALET_LEAD2] * c.num[VALET_LEAD2]) /
           (c.num[VALET_PLAY1] + c.num[VALET_PLAY2]), 
           c.num[VALET_PLAY1] + c.num[VALET_PLAY2], prec, s);
+        */
+        cout << strPair(
+          c.averageLead(),
+          c.num[VALET_PLAY1] + c.num[VALET_PLAY2],
+          prec, VALET_FORMAT_CSV);
 
-      Scores::PrintCSVPair(c.avgPerChance[VALET_DEF], 
-        c.num[VALET_DEF], prec, s);
+      // Scores::PrintCSVPair(c.avgPerChance[VALET_DEF], 
+        // c.num[VALET_DEF], prec, s);
+      cout << strPair(c.averageNonLead(),
+        c.num[VALET_DEF], prec, VALET_FORMAT_CSV);
     }
 
     cout << "\n";
