@@ -11,11 +11,12 @@
 #define VALET_CUMUL_PAIR_H
 
 #include <string>
-#include <vector>
-
-#include "cst.h"
 
 class Pairs;
+struct ValetEntryType;
+
+enum FormatType: unsigned;
+enum ScoringType: unsigned;
 enum SortingType: unsigned;
 
 

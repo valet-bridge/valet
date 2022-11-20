@@ -10,8 +10,6 @@
 #ifndef VALET_SCORES_H
 #define VALET_SCORES_H
 
-#include <iostream>
-#include <iomanip>
 #include <string>
 #include <vector>
 #include <map>
@@ -19,12 +17,9 @@
 using namespace std;
 
 #include "CumulPair.h"
-#include "cst.h"
 
-extern OptionsType options;
-
-#define SCORES_CHUNK_SIZE 16
-
+enum FormatType: unsigned;
+enum TableauType: unsigned;
 
 class Scores
 {
@@ -54,9 +49,7 @@ class Scores
 
     string strHeader(const FormatType format) const;
 
-    string str(
-      const unsigned mode,
-      const FormatType format) const;
+    string str(const TableauType ttype) const;
 
   public:
 
@@ -73,8 +66,7 @@ class Scores
 
     void Normalize();
 
-    void Sort(
-      const SortingType sort);
+    void Sort(const SortingType sort);
 
     string str() const;
 

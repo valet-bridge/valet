@@ -46,14 +46,21 @@ const char ValetRanks[15] =
 };
 
 
-enum FormatType
+enum FormatType: unsigned
 {
   VALET_FORMAT_TEXT,
   VALET_FORMAT_CSV
 };
 
 
-enum ScoringType
+enum TableauType: unsigned
+{
+  VALET_TABLEAU_MANY,
+  VALET_TABLEAU_FEW
+};
+
+
+enum ScoringType: unsigned
 {
   VALET_IMPS,
   VALET_IMPS_ACROSS_FIELD,

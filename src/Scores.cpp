@@ -20,6 +20,8 @@
 
 using namespace std;
 
+#define SCORES_CHUNK_SIZE 16
+
 
 extern Pairs pairs;
 extern OptionsType options;
@@ -206,32 +208,13 @@ bool Scores::PreparePrint(
 }
 
 
-string Scores::str(
-  const unsigned mode,
-  const FormatType format) const
-{
-  stringstream ss;
-
-  int prec;
-  if (! Scores::PreparePrint(mode, prec))
-    return "";
-
-  ss << Scores::strHeader(format);
-
-  for (unsigned pno = 1; pno < length; pno++)
-    ss << pairScores[pno].strLine(pairs, mode, prec, format);
-
-  ss << "\n";
-  
-  return ss.str();
-}
-
-
 string Scores::strHeader(const FormatType format) const
 {
   stringstream ss;
 
   CumulPair c;
+
+  // TODO Put players str into Pairs and pass Pairs to c
 
   if (format == VALET_FORMAT_TEXT)
   {
@@ -252,7 +235,28 @@ string Scores::strHeader(const FormatType format) const
 }
 
 
+string Scores::str(const TableauType ttype) const
+{
+  stringstream ss;
+
+  int prec;
+  if (! Scores::PreparePrint(ttype, prec))
+    return "";
+
+  ss << Scores::strHeader(options.format);
+
+  for (unsigned pno = 1; pno < length; pno++)
+    ss << pairScores[pno].strLine(pairs, ttype, prec, options.format);
+
+  ss << "\n";
+  
+  return ss.str();
+}
+
+
 string Scores::str() const
 {
-  return Scores::str(0, options.format) + Scores::str(1, options.format);
+  return 
+    Scores::str(VALET_TABLEAU_MANY) + 
+    Scores::str(VALET_TABLEAU_FEW);
 }
