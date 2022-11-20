@@ -49,6 +49,7 @@ class Scores
       const unsigned pairNo,
       const unsigned oppNo);
 
+    /*
     float Scale(
       const float value,
       const unsigned num) const;
@@ -56,6 +57,7 @@ class Scores
     float ScaleMP(
       const float value,
       const unsigned num) const;
+      */
 
     void AddCompensation(
       const unsigned pairNo,

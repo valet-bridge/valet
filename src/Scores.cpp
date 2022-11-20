@@ -133,13 +133,6 @@ void Scores::Compensate()
   {
     CumulPair oppResults;
     oppResults.clear();
-    /*
-    for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
-    {
-      oppResults.num[i] = 0;
-      oppResults.sum[i] = 0.;
-    }
-    */
 
     OppMapType& oppMap = oppScores[pno];
 
@@ -168,45 +161,16 @@ void Scores::Compensate()
 }
 
 
-float Scores::Scale(
-  const float value,
-  const unsigned num) const
-{
-  if (num > 0)
-    return value / static_cast<float>(num);
-  else
-    return 0.;
-}
-
-
-float Scores::ScaleMP(
-  const float value,
-  const unsigned num) const
-{
-  if (num > 0)
-  {
-    const float n = static_cast<float>(num);
-    return 100.f * (value + n) / (2.f * n);
-  }
-  else
-    return 50.f;
-}
-
-
 void Scores::Normalize()
 {
   for (unsigned pno = 1; pno < length; pno++)
   {
     CumulPair& c = pairScores[pno];
-    // if (c.num[VALET_OVERALL] == 0)
-      // continue;
 
     c.scale(options.valet);
 
     if (options.compensateFlag)
       c.compensate(oppComp[pno].sum);
-      // for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
-        // c.avgPerChance[i] += oppComp[pno].sum[i];
   }
 }
 
@@ -217,7 +181,7 @@ void Scores::Sort(
   sort(next(pairScores.begin()), pairScores.end(),
     [stype](const CumulPair& c1, const CumulPair& c2)
     {
-      return c1.greater(c2, stype);
+      return c1.figure(stype) > c2.figure(stype);
     });
 }
 

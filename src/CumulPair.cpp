@@ -183,6 +183,7 @@ void CumulPair::operator -= (const CumulPair& c2)
 
 float CumulPair::figure(const SortingType sort) const
 {
+  // Different figures of merit on which we can sort.
   if (sort == VALET_SORT_OVERALL)
     return avgPerChance[VALET_OVERALL];
   else if (sort == VALET_SORT_BIDDING)
@@ -207,14 +208,6 @@ float CumulPair::figure(const SortingType sort) const
     assert(false);
     return 0.f;
   }
-}
-
-
-bool CumulPair::greater(
-  const CumulPair& c2,
-  const SortingType sort) const
-{
-  return (CumulPair::figure(sort) > c2.figure(sort));
 }
 
 

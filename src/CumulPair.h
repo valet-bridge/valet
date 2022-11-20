@@ -54,8 +54,6 @@ struct CumulPair
 
     float averageNonLead() const;
 
-    float figure(const SortingType sort) const;
-
     string strOverall(
       const Pairs& pairs,
       const int prec,
@@ -77,9 +75,7 @@ struct CumulPair
     void operator += (const CumulPair& c2);
     void operator -= (const CumulPair& c2);
 
-    bool greater(
-      const CumulPair& cp2,
-      const SortingType sort) const;
+    float figure(const SortingType sort) const;
 
     bool skip(const unsigned mode) const;
 
