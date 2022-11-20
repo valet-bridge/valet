@@ -31,37 +31,46 @@ enum CumulEnum
 
 struct CumulPair
 {
-  unsigned pairNo;
+  // private:
 
-  unsigned num[VALET_ENTRY_SIZE];
-  float sum[VALET_ENTRY_SIZE];
-  float avgTotal[VALET_ENTRY_SIZE];
-  float avgPerChance[VALET_ENTRY_SIZE];
+    unsigned pairNo;
 
-  float averagePlay() const;
+    unsigned num[VALET_ENTRY_SIZE];
+    float sum[VALET_ENTRY_SIZE];
+    float avgTotal[VALET_ENTRY_SIZE];
+    float avgPerChance[VALET_ENTRY_SIZE];
 
-  float averageDefense() const;
+    float averagePlay() const;
 
-  float averageLead1() const;
+    float averageDefense() const;
 
-  float averageLead2() const;
+    float averageLead1() const;
 
-  float averageLead() const;
+    float averageLead2() const;
 
-  float averageNonLead() const;
+    float averageLead() const;
 
-  string strHeaderCSV() const;
+    float averageNonLead() const;
 
-  string strHeaderText1() const;
-  string strHeaderText2() const;
+  // public:
 
-  string strOverall(
-    const int prec,
-    const FormatType format) const;
+    void setPair(const unsigned pairNoIn);
 
-  string strDetails(
-    const int prec,
-    const FormatType format) const;
+    void incrDeclarer(const ValetEntryType& entry);
+    void incrDefenders(const ValetEntryType& entry);
+
+    string strHeaderCSV() const;
+
+    string strHeaderText1() const;
+    string strHeaderText2() const;
+
+    string strOverall(
+      const int prec,
+      const FormatType format) const;
+
+    string strDetails(
+      const int prec,
+      const FormatType format) const;
 };
 
 #endif

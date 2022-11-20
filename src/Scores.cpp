@@ -104,8 +104,11 @@ void Scores::AddEntry(
   }
 
   CumulPair& cDecl = pairScores[entry.pairNo];
-  cDecl.pairNo = entry.pairNo;
+  cDecl.setPair(entry.pairNo);
+  // cDecl.pairNo = entry.pairNo;
 
+  cDecl.incrDeclarer(entry);
+  /*
   cDecl.num[VALET_OVERALL]++;
   cDecl.sum[VALET_OVERALL] += entry.overall;
 
@@ -122,12 +125,16 @@ void Scores::AddEntry(
     cDecl.num[VALET_PLAY2]++;
     cDecl.sum[VALET_PLAY2] += entry.playScore[1];
   }
+  */
 
   // The overall and bidding scores have to be inverted.
   // The detailed scores have already been inverted.
 
   CumulPair& cDef = pairScores[entry.oppNo];
-  cDef.pairNo = entry.oppNo;
+  cDef.setPair(entry.oppNo);
+  // cDef.pairNo = entry.oppNo;
+  cDef.incrDefenders(entry);
+  /*
   cDef.num[VALET_OVERALL]++;
   cDef.sum[VALET_OVERALL] -= entry.overall;
 
@@ -153,6 +160,7 @@ void Scores::AddEntry(
       }
     }
   }
+  */
 
   // Ugh.  But I don't feel like rewriting the entry data structure,
   // as this depends on list[2].
@@ -423,9 +431,6 @@ void Scores::PrintText(
     return;
 
   Scores::PrintTextHeader();
-
-  // const float MP_OFFSET = 
-    // (options.valet == VALET_MATCHPOINTS ? 50.f : 0.f);
 
   for (unsigned pno = 1; pno < length; pno++)
   {

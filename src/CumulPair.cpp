@@ -19,6 +19,64 @@
 extern OptionsType options;
 
 
+void CumulPair::setPair(const unsigned pairNoIn)
+{
+  pairNo = pairNoIn;
+}
+
+
+void CumulPair::incrDeclarer(const ValetEntryType& entry)
+{
+  num[VALET_OVERALL]++;
+  sum[VALET_OVERALL] += entry.overall;
+
+  num[VALET_BID]++;
+  sum[VALET_BID] += entry.bidScore;
+
+  if (entry.declFlag[0])
+  {
+    num[VALET_PLAY1]++;
+    sum[VALET_PLAY1] += entry.playScore[0];
+  }
+  else if (entry.declFlag[1])
+  {
+    num[VALET_PLAY2]++;
+    sum[VALET_PLAY2] += entry.playScore[1];
+  }
+}
+
+
+void CumulPair::incrDefenders(const ValetEntryType& entry)
+{
+  num[VALET_OVERALL]++;
+  sum[VALET_OVERALL] -= entry.overall;
+
+  num[VALET_BID]++;
+  sum[VALET_BID] -= entry.bidScore;
+
+  if (entry.defFlag)
+  {
+    num[VALET_DEF]++;
+    sum[VALET_DEF] += entry.defScore;
+
+    if (options.leadFlag)
+    {
+      if (entry.leadFlag[0])
+      {
+        num[VALET_LEAD1]++;
+        sum[VALET_LEAD1] += entry.leadScore[0];
+      }
+      else if (entry.leadFlag[1])
+      {
+        num[VALET_LEAD2]++;
+        sum[VALET_LEAD2] += entry.leadScore[1];
+      }
+    }
+  }
+
+}
+
+
 float CumulPair::averagePlay() const
 {
   const float n1 = static_cast<float>(num[VALET_PLAY1]);
