@@ -171,8 +171,7 @@ void Scores::Normalize()
 }
 
 
-void Scores::Sort(
-  const SortingType stype)
+void Scores::Sort(const SortingEnum stype)
 {
   sort(next(pairScores.begin()), pairScores.end(),
     [stype](const CumulPair& c1, const CumulPair& c2)
@@ -183,7 +182,7 @@ void Scores::Sort(
 
 
 bool Scores::PreparePrint(
-  const TableType ttype,
+  const TableEnum ttype,
   int& prec) const
 {
   if (ttype == VALET_TABLE_FEW && options.minHands == 0)
@@ -210,7 +209,7 @@ bool Scores::PreparePrint(
 }
 
 
-string Scores::strHeader(const FormatType format) const
+string Scores::strHeader(const FormatEnum format) const
 {
   stringstream ss;
 
@@ -237,7 +236,7 @@ string Scores::strHeader(const FormatType format) const
 }
 
 
-string Scores::str(const TableType ttype) const
+string Scores::str(const TableEnum ttype) const
 {
   stringstream ss;
 

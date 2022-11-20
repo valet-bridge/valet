@@ -206,7 +206,7 @@ void CumulPair::operator -= (const CumulPair& c2)
 }
 
 
-float CumulPair::figure(const SortingType sort) const
+float CumulPair::figure(const SortingEnum sort) const
 {
   // Different figures of merit on which we can sort.
   if (sort == VALET_SORT_OVERALL)
@@ -236,7 +236,7 @@ float CumulPair::figure(const SortingType sort) const
 }
 
 
-bool CumulPair::skip(const TableType ttype) const
+bool CumulPair::skip(const TableEnum ttype) const
 {
   if (num[VALET_OVERALL] == 0)
   {
@@ -263,7 +263,7 @@ bool CumulPair::skip(const TableType ttype) const
 }
 
 
-void CumulPair::scale(const ScoringType stype)
+void CumulPair::scale(const ScoringEnum stype)
 {
   for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
   {
@@ -275,7 +275,7 @@ void CumulPair::scale(const ScoringType stype)
 
 void CumulPair::compensate(
   const CumulPair& oppComp,
-  const ScoringType stype)
+  const ScoringEnum stype)
 {
   if (stype == VALET_MATCHPOINTS)
   {
@@ -397,7 +397,7 @@ string CumulPair::strHeaderCSV() const
 string CumulPair::strOverall(
   const Pairs& pairs,
   const int prec,
-  const FormatType format) const
+  const FormatEnum format) const
 {
   stringstream ss;
 
@@ -442,7 +442,7 @@ string CumulPair::strOverall(
 
 string CumulPair::strDetails(
   const int prec,
-  const FormatType format) const
+  const FormatEnum format) const
 {
   stringstream ss;
 
@@ -461,12 +461,14 @@ string CumulPair::strDetails(
     ss << " | ";
 
   // Individual declarer scores.
+  // ss << aspects[VALET_PLAY1].str(prec);
   ss << strPair(avgPerChance[VALET_PLAY1], num[VALET_PLAY1], 
     prec, format);
 
   if (format == VALET_FORMAT_TEXT)
     ss << "  ";
 
+  // ss << aspects[VALET_PLAY2].str(prec);
   ss << strPair(avgPerChance[VALET_PLAY2], num[VALET_PLAY2], 
     prec, format);
 
@@ -475,12 +477,14 @@ string CumulPair::strDetails(
 
   if (options.leadFlag)
   {
+    // ss << aspects[VALET_LEAD1].str(prec);
     ss << strPair(avgPerChance[VALET_LEAD1], num[VALET_LEAD1], 
       prec, format);
 
     if (format == VALET_FORMAT_TEXT)
       ss << "  ";
 
+    // ss << aspects[VALET_LEAD2].str(prec);
     ss << strPair(avgPerChance[VALET_LEAD2], num[VALET_LEAD2], 
       prec, format);
 
@@ -496,6 +500,7 @@ string CumulPair::strDetails(
         ss << "  ";
     }
 
+    // ss << aspects[VALET_DEF].str(prec);
     ss << strPair(
       avgPerChance[VALET_DEF], num[VALET_DEF], prec, format);
 
@@ -511,9 +516,9 @@ string CumulPair::strDetails(
 
 string CumulPair::strLine(
   const Pairs& pairs,
-  const TableType ttype,
+  const TableEnum ttype,
   const int prec,
-  const FormatType format) const
+  const FormatEnum format) const
 {
   if (CumulPair::skip(ttype))
     return "";

@@ -32,13 +32,13 @@ void PrintTableauText(
 float scale(
   const float sum,
   const unsigned num,
-  const ScoringType stype);
+  const ScoringEnum stype);
 
 string strPair(
   const float average,
   const unsigned count,
   const int prec,
-  const FormatType format);
+  const FormatEnum format);
   
 #endif
 

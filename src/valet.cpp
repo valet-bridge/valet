@@ -85,7 +85,7 @@ int main(int argc, char * argv[])
     tableauStream.close();
 
   scores.Normalize();
-  scores.Sort(options.sort);
+  scores.Sort(static_cast<SortingEnum>(options.sort));
   cout << scores.str();
   cout.flush();
 }

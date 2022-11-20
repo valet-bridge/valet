@@ -18,8 +18,8 @@ using namespace std;
 
 #include "CumulPair.h"
 
-enum FormatType: unsigned;
-enum TableType: unsigned;
+enum FormatEnum: unsigned;
+enum TableEnum: unsigned;
 
 class Scores
 {
@@ -41,12 +41,12 @@ class Scores
     void storeCrossCumul(const ValetEntryType& entry);
 
     bool PreparePrint(
-      const TableType ttype,
+      const TableEnum ttype,
       int& prec) const;
 
-    string strHeader(const FormatType format) const;
+    string strHeader(const FormatEnum format) const;
 
-    string str(const TableType ttype) const;
+    string str(const TableEnum ttype) const;
 
   public:
 
@@ -62,7 +62,7 @@ class Scores
 
     void Normalize();
 
-    void Sort(const SortingType sort);
+    void Sort(const SortingEnum sort);
 
     string str() const;
 

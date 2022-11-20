@@ -16,7 +16,7 @@
 
 using namespace std;
 
-enum SortingType: unsigned;
+enum ScoringEnum: unsigned;
 
 
 class Aspect
@@ -40,7 +40,7 @@ class Aspect
 
     bool empty() const;
 
-    float average(const ScoringType stype) const;
+    float average(const ScoringEnum stype) const;
 
     string str(const int prec) const;
 };

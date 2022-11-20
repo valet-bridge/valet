@@ -7,7 +7,6 @@ CumulPair:
 * strHeader* combine to outside world?
 * FormatType -> FormatEnum
 * ScoringType -> ScoringEnum
-* strLine mode as enum instead
 * Can get format from options ourselves
 * Pairs headers clean up
 

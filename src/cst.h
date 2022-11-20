@@ -46,21 +46,21 @@ const char ValetRanks[15] =
 };
 
 
-enum FormatType: unsigned
+enum FormatEnum: unsigned
 {
   VALET_FORMAT_TEXT,
   VALET_FORMAT_CSV
 };
 
 
-enum TableType: unsigned
+enum TableEnum: unsigned
 {
   VALET_TABLE_MANY = 0,
   VALET_TABLE_FEW = 1
 };
 
 
-enum ScoringType: unsigned
+enum ScoringEnum: unsigned
 {
   VALET_IMPS,
   VALET_IMPS_ACROSS_FIELD,
@@ -69,7 +69,7 @@ enum ScoringType: unsigned
 
 struct ScoringPairType
 {
-  ScoringType scoring;
+  ScoringEnum scoring;
   string arg;
   string explanation;
   string header;
@@ -116,7 +116,7 @@ const sortPairType sortingTags[] =
 
 struct OptionsType
 {
-  ScoringType valet;
+  ScoringEnum valet;
 
   string directory;
   string nameFile;
@@ -140,7 +140,7 @@ struct OptionsType
   SortingType sort;
   bool averageFlag;
 
-  FormatType format;
+  FormatEnum format;
   string separator;
 };
 

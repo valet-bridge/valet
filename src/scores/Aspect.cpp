@@ -53,7 +53,7 @@ bool Aspect::empty() const
 }
 
 
-float Aspect::average(const ScoringType stype) const
+float Aspect::average(const ScoringEnum stype) const
 {
   return scale(sum, num, stype);
 }

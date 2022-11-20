@@ -18,9 +18,9 @@
 class Pairs;
 struct ValetEntryType;
 
-enum FormatType: unsigned;
-enum ScoringType: unsigned;
-enum SortingType: unsigned;
+enum FormatEnum: unsigned;
+enum ScoringEnum: unsigned;
+enum SortingEnum: unsigned;
 
 
 enum CumulEnum
@@ -57,11 +57,11 @@ class CumulPair
     string strOverall(
       const Pairs& pairs,
       const int prec,
-      const FormatType format) const;
+      const FormatEnum format) const;
 
     string strDetails(
       const int prec,
-      const FormatType format) const;
+      const FormatEnum format) const;
 
   public:
 
@@ -77,15 +77,15 @@ class CumulPair
     void operator += (const CumulPair& c2);
     void operator -= (const CumulPair& c2);
 
-    void scale(const ScoringType stype);
+    void scale(const ScoringEnum stype);
 
     void compensate(
       const CumulPair& oppComp,
-      const ScoringType stype);
+      const ScoringEnum stype);
 
-    float figure(const SortingType sort) const;
+    float figure(const SortingEnum sort) const;
 
-    bool skip(const TableType ttype) const;
+    bool skip(const TableEnum ttype) const;
 
     string strHeaderCSV() const;
 
@@ -94,9 +94,9 @@ class CumulPair
 
     string strLine(
       const Pairs& pairs,
-      const TableType ttype,
+      const TableEnum ttype,
       const int prec,
-      const FormatType format) const;
+      const FormatEnum format) const;
 };
 
 #endif
