@@ -172,25 +172,26 @@ void CumulPair::operator -= (const CumulPair& c2)
 float CumulPair::figure(const SortingEnum sort) const
 {
   // Different figures of merit on which we can sort.
+
   if (sort == VALET_SORT_OVERALL)
-    return avgPerChance[VALET_OVERALL];
+    return aspects[VALET_OVERALL].getAverage();
   else if (sort == VALET_SORT_BIDDING)
-    return avgPerChance[VALET_BID];
+    return aspects[VALET_BID].getAverage();
   else if (sort == VALET_SORT_DECL)
-    return avgPerChance[VALET_DECL1] + avgPerChance[VALET_DECL2];
+    return aspects[VALET_DECL_SUM].getAverage();
   else if (sort == VALET_SORT_DEFENSE)
-    return avgPerChance[VALET_DEF];
+    return aspects[VALET_DEF].getAverage();
   else if (sort == VALET_SORT_LEAD)
-    return avgPerChance[VALET_LEAD1] + avgPerChance[VALET_LEAD2];
+    return aspects[VALET_LEAD_SUM].getAverage();
   else if (sort == VALET_SORT_BID_OVER_DECL)
-    return avgPerChance[VALET_BID] -
-      (avgPerChance[VALET_DECL1] + avgPerChance[VALET_DECL2]);
+    return aspects[VALET_BID].getAverage() - 
+      aspects[VALET_DECL_SUM].getAverage();
   else if (sort == VALET_SORT_DEF_OVER_DECL)
-    return avgPerChance[VALET_DEF] -
-      (avgPerChance[VALET_DECL1] + avgPerChance[VALET_DECL2]);
+    return aspects[VALET_DEF].getAverage() -
+      aspects[VALET_DECL_SUM].getAverage();
   else if (sort == VALET_SORT_LEAD_OVER_DECL)
-    return avgPerChance[VALET_LEAD1] + avgPerChance[VALET_LEAD2] -
-      (avgPerChance[VALET_DECL1] + avgPerChance[VALET_DECL2]);
+    return aspects[VALET_LEAD_SUM].getAverage() -
+      aspects[VALET_DECL_SUM].getAverage();
   else
   {
     assert(false);
