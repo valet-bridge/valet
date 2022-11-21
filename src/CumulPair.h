@@ -47,7 +47,6 @@ class CumulPair
 
     unsigned num[VALET_ENTRY_SIZE];
     float sum[VALET_ENTRY_SIZE];
-    float avgPerChance[VALET_ENTRY_SIZE];
 
     vector<Aspect> aspects;
 
@@ -71,11 +70,9 @@ class CumulPair
     void operator += (const CumulPair& c2);
     void operator -= (const CumulPair& c2);
 
-    void scale(const ScoringEnum stype);
+    void scale();
 
-    void compensate(
-      const CumulPair& oppComp,
-      const ScoringEnum stype);
+    void compensate(const CumulPair& oppComp);
 
     float figure(const SortingEnum sort) const;
 

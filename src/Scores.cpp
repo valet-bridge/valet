@@ -84,8 +84,8 @@ void Scores::storeCrossCumul(const ValetEntryType& entry)
   oppCP.incrDefenders(entry);
   pairCP.incrDeclarer(entry);
 
-  oppCP.scale(options.valet);
-  pairCP.scale(options.valet);
+  oppCP.scale();
+  pairCP.scale();
 
   opp += oppCP;
   pair += pairCP;
@@ -152,7 +152,7 @@ void Scores::Compensate()
     }
 
     oppComp[pno] = oppResults;
-    oppComp[pno].scale(options.valet);
+    oppComp[pno].scale();
   }
 }
 
@@ -163,10 +163,10 @@ void Scores::Normalize()
   {
     CumulPair& c = pairScores[pno];
 
-    c.scale(options.valet);
+    c.scale();
 
     if (options.compensateFlag)
-      c.compensate(oppComp[pno], options.valet);
+      c.compensate(oppComp[pno]);
   }
 }
 
