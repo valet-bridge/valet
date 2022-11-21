@@ -373,10 +373,8 @@ string CumulPair::strOverall(
     ss <<
       left << pairs.GetPairNamePadded(pairNo, 54) << right << " | " <<
       setw(4) << num[VALET_OVERALL] <<
-      setw(7) << fixed << setprecision(prec) <<
-        avgPerChance[VALET_OVERALL] <<  " | " <<
-      setw(5) << fixed << setprecision(prec) <<
-        avgPerChance[VALET_BID] <<
+        aspects[VALET_OVERALL].strAverage(7, prec) <<  " | " <<
+        aspects[VALET_BID].strAverage(5, prec) <<
       setw(7) << fixed << setprecision(prec) <<
         MP_OFFSET +
         avgPerChance[VALET_OVERALL] -
@@ -388,10 +386,8 @@ string CumulPair::strOverall(
     ss <<
       pairs.GetPairName(pairNo) << sep << 
       num[VALET_OVERALL] << sep <<
-      fixed << setprecision(prec) << 
-        avgPerChance[VALET_OVERALL] << sep <<
-      fixed << setprecision(prec) << 
-        avgPerChance[VALET_BID] << sep <<
+        aspects[VALET_OVERALL].strAverage(0, prec) <<
+        aspects[VALET_BID].strAverage(0, prec) <<
       fixed << setprecision(prec) <<
         MP_OFFSET +
         avgPerChance[VALET_OVERALL] -

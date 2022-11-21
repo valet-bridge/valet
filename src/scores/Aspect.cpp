@@ -70,6 +70,23 @@ void Aspect::compensate(
 }
 
 
+string Aspect::strAverage(
+  const int width,
+  const int prec) const
+{
+  stringstream ss;
+
+  if (options.format == VALET_FORMAT_TEXT)
+    ss << setw(width) << fixed << setprecision(prec) << average;
+  else if (options.format == VALET_FORMAT_CSV)
+    ss << fixed << setprecision(prec) << average << options.separator;
+  else
+    assert(false);
+
+  return ss.str();
+}
+
+
 string Aspect::str(const int prec) const
 {
   stringstream ss;
@@ -85,8 +102,8 @@ string Aspect::str(const int prec) const
   else if (options.format == VALET_FORMAT_CSV)
   {
     if (num > 0)
-      ss << setprecision(prec) << average << options.separator <<
-        num << options.separator;
+      ss << fixed << setprecision(prec) << average << 
+        options.separator << num << options.separator;
     else
       ss << "-" << options.separator << "0" << options.separator;
   }

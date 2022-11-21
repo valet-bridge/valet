@@ -48,6 +48,10 @@ class Aspect
       const Aspect& a2,
       const ScoringEnum stype);
 
+    string strAverage(
+      const int width,
+      const int prec) const;
+
     string str(const int prec) const;
 };
 
