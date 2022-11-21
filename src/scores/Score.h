@@ -6,24 +6,26 @@
    See LICENSE and README.
 */
 
+// Score is a single line in the output Valet sheet (a single pair).
 
-#ifndef VALET_CUMUL_PAIR_H
-#define VALET_CUMUL_PAIR_H
+
+#ifndef VALET_SCORE_H
+#define VALET_SCORE_H
 
 #include <vector>
 #include <string>
 
-#include "scores/Aspect.h"
-#include "cst.h"
+#include "Aspect.h"
 
 class Pairs;
 struct ValetEntryType;
 
 enum ScoringEnum: unsigned;
 enum SortingEnum: unsigned;
+enum TableEnum: unsigned;
 
 
-class CumulPair
+class Score
 {
   private:
 
@@ -39,19 +41,19 @@ class CumulPair
 
   public:
 
-    CumulPair();
+    Score();
 
     void setPair(const unsigned pairNoIn);
 
     void incrDeclarer(const ValetEntryType& entry);
     void incrDefenders(const ValetEntryType& entry);
 
-    void operator += (const CumulPair& c2);
-    void operator -= (const CumulPair& c2);
+    void operator += (const Score& s2);
+    void operator -= (const Score& s2);
 
     void scale();
 
-    void compensate(const CumulPair& oppComp);
+    void compensate(const Score& oppScore);
 
     float figure(const SortingEnum sort) const;
 

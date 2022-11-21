@@ -48,7 +48,7 @@ void Scores::Reset()
 }
 
 
-CumulPair& Scores::getCrossCumulPair(
+Score& Scores::getCrossScore(
   const unsigned pairNo,
   const unsigned oppNo)
 {
@@ -64,11 +64,11 @@ CumulPair& Scores::getCrossCumulPair(
 void Scores::storeCrossCumul(const ValetEntryType& entry)
 {
   // Remember the pairs who played in order to be able to compensate.
-  CumulPair& opp = Scores::getCrossCumulPair(entry.pairNo, entry.oppNo);
-  CumulPair& pair = Scores::getCrossCumulPair(entry.oppNo, entry.pairNo);
+  Score& opp = Scores::getCrossScore(entry.pairNo, entry.oppNo);
+  Score& pair = Scores::getCrossScore(entry.oppNo, entry.pairNo);
 
-  CumulPair oppCP;
-  CumulPair pairCP;
+  Score oppCP;
+  Score pairCP;
 
   // The entry always yields a declaring entry for us and a defending
   // entry for the other pair.
@@ -98,14 +98,14 @@ void Scores::AddEntry(
     oppComp.resize(static_cast<size_t>(length));
   }
 
-  CumulPair& cDecl = pairScores[entry.pairNo];
+  Score& cDecl = pairScores[entry.pairNo];
   cDecl.setPair(entry.pairNo);
   cDecl.incrDeclarer(entry);
 
   // The overall and bidding scores have to be inverted.
   // The detailed scores have already been inverted.
 
-  CumulPair& cDef = pairScores[entry.oppNo];
+  Score& cDef = pairScores[entry.oppNo];
   cDef.setPair(entry.oppNo);
   cDef.incrDefenders(entry);
 
@@ -123,7 +123,7 @@ void Scores::Compensate()
 
   for (unsigned pno = 1; pno < length; pno++)
   {
-    CumulPair oppResults;
+    Score oppResults;
 
     OppMapType& oppMap = oppScores[pno];
 
@@ -148,7 +148,7 @@ void Scores::Normalize()
 {
   for (unsigned pno = 1; pno < length; pno++)
   {
-    CumulPair& c = pairScores[pno];
+    Score& c = pairScores[pno];
 
     c.scale();
 
@@ -161,7 +161,7 @@ void Scores::Normalize()
 void Scores::Sort(const SortingEnum stype)
 {
   sort(next(pairScores.begin()), pairScores.end(),
-    [stype](const CumulPair& c1, const CumulPair& c2)
+    [stype](const Score& c1, const Score& c2)
     {
       return c1.figure(stype) > c2.figure(stype);
     });
@@ -178,7 +178,7 @@ bool Scores::PreparePrint(
   bool flag = false;
   for (unsigned pno = 1; pno < length && ! flag; pno++)
   {
-    const CumulPair& c = pairScores[pno];
+    const Score& c = pairScores[pno];
     if (! c.skip(ttype))
       flag = true;
   }
@@ -200,7 +200,7 @@ string Scores::strHeader(const FormatEnum format) const
 {
   stringstream ss;
 
-  CumulPair c;
+  Score c;
 
   // TODO Put players str into Pairs and pass Pairs to c
 

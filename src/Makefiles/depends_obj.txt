@@ -1,15 +1,15 @@
 valet.obj: cst.h inputs/args.h inputs/files.h scoring.h misc.h Pairs.h Hand.h
-valet.obj: Scores.h CumulPair.h scores/Aspect.h misc.h
+valet.obj: Scores.h scores/Score.h scores/Aspect.h
 inputs/args.obj: inputs/args.h cst.h
 inputs/files.obj: inputs/files.h inputs/parse.h cst.h Pairs.h cst.h Hand.h
 inputs/files.obj: valet.h
 inputs/parse.obj: inputs/parse.h cst.h Pairs.h cst.h valet.h
-scores/Aspect.obj: scores/Aspect.h misc.h
+scores/Aspect.obj: scores/Aspect.h misc.h cst.h
+scores/Score.obj: scores/Score.h scores/Aspect.h Pairs.h cst.h
 misc.obj: Pairs.h cst.h misc.h
 Hand.obj: valet.h Pairs.h cst.h Hand.h scoring.h
 Pairs.obj: Pairs.h cst.h
-CumulPair.obj: Pairs.h cst.h CumulPair.h scores/Aspect.h misc.h misc.h
-Scores.obj: Scores.h CumulPair.h scores/Aspect.h misc.h Pairs.h cst.h misc.h
+Scores.obj: Scores.h scores/Score.h scores/Aspect.h Pairs.h cst.h misc.h
 scoring.obj: valet.h cst.h scoring.h
 Hand.obj: valet.h Pairs.h cst.h Hand.h scoring.h
 Pairs.obj: Pairs.h cst.h

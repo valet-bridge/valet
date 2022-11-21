@@ -12,13 +12,14 @@
 #include <string>
 #include <cassert>
 
-#include "Pairs.h"
-#include "CumulPair.h"
+#include "Score.h"
+
+#include "../Pairs.h"
 
 extern OptionsType options;
 
 
-enum CumulEnum
+enum ScoreEnum
 {
   VALET_OVERALL = 0,
   VALET_BID = 1,
@@ -35,19 +36,19 @@ enum CumulEnum
 };
 
 
-CumulPair::CumulPair()
+Score::Score()
 {
   aspects.resize(VALET_ENTRY_SIZE);
 }
 
 
-void CumulPair::setPair(const unsigned pairNoIn)
+void Score::setPair(const unsigned pairNoIn)
 {
   pairNo = pairNoIn;
 }
 
 
-void CumulPair::incrDeclarer(const ValetEntryType& entry)
+void Score::incrDeclarer(const ValetEntryType& entry)
 {
   aspects[VALET_OVERALL].incr(entry.overall);
   aspects[VALET_BID].incr(entry.bidScore);
@@ -66,7 +67,7 @@ void CumulPair::incrDeclarer(const ValetEntryType& entry)
 }
 
 
-void CumulPair::incrDefenders(const ValetEntryType& entry)
+void Score::incrDefenders(const ValetEntryType& entry)
 {
   aspects[VALET_OVERALL].decr(entry.overall);
   aspects[VALET_BID].decr(entry.bidScore);
@@ -104,23 +105,23 @@ void CumulPair::incrDefenders(const ValetEntryType& entry)
 }
 
 
-void CumulPair::operator += (const CumulPair& c2)
+void Score::operator += (const Score& s2)
 {
-  assert(aspects.size() == c2.aspects.size());
+  assert(aspects.size() == s2.aspects.size());
   for (size_t i = 0; i < aspects.size(); i++)
-    aspects[i] += c2.aspects[i];
+    aspects[i] += s2.aspects[i];
 }
 
 
-void CumulPair::operator -= (const CumulPair& c2)
+void Score::operator -= (const Score& s2)
 {
-  assert(aspects.size() == c2.aspects.size());
+  assert(aspects.size() == s2.aspects.size());
   for (size_t i = 0; i < aspects.size(); i++)
-    aspects[i] -= c2.aspects[i];
+    aspects[i] -= s2.aspects[i];
 }
 
 
-float CumulPair::figure(const SortingEnum sort) const
+float Score::figure(const SortingEnum sort) const
 {
   // Different figures of merit on which we can sort.
 
@@ -151,7 +152,7 @@ float CumulPair::figure(const SortingEnum sort) const
 }
 
 
-bool CumulPair::skip(const TableEnum ttype) const
+bool Score::skip(const TableEnum ttype) const
 {
   if (aspects[VALET_OVERALL].empty())
     return true;
@@ -173,22 +174,22 @@ bool CumulPair::skip(const TableEnum ttype) const
 }
 
 
-void CumulPair::scale()
+void Score::scale()
 {
   for (auto& aspect: aspects)
     aspect.scale();
 }
 
 
-void CumulPair::compensate(const CumulPair& oppComp)
+void Score::compensate(const Score& oppScore)
 {
-  assert(aspects.size() == oppComp.aspects.size());
+  assert(aspects.size() == oppScore.aspects.size());
   for (size_t i = 0; i < aspects.size(); i++)
-    aspects[i].compensate(oppComp.aspects[i]);
+    aspects[i].compensate(oppScore.aspects[i]);
 }
 
 
-string CumulPair::strHeaderText1() const
+string Score::strHeaderText1() const
 {
   stringstream ss;
 
@@ -220,7 +221,7 @@ string CumulPair::strHeaderText1() const
 }
 
 
-string CumulPair::strHeaderText2() const
+string Score::strHeaderText2() const
 {
   stringstream ss;
 
@@ -254,7 +255,7 @@ string CumulPair::strHeaderText2() const
 }
 
 
-string CumulPair::strHeaderCSV() const
+string Score::strHeaderCSV() const
 {
   stringstream ss;
 
@@ -292,7 +293,7 @@ string CumulPair::strHeaderCSV() const
 }
 
 
-string CumulPair::strOverall(
+string Score::strOverall(
   const Pairs& pairs,
   const int prec) const
 {
@@ -310,7 +311,7 @@ string CumulPair::strOverall(
 }
 
 
-string CumulPair::strDetails(const int prec) const
+string Score::strDetails(const int prec) const
 {
   stringstream ss;
 
@@ -346,14 +347,14 @@ string CumulPair::strDetails(const int prec) const
 }
 
 
-string CumulPair::strLine(
+string Score::strLine(
   const Pairs& pairs,
   const TableEnum ttype,
   const int prec) const
 {
-  if (CumulPair::skip(ttype))
+  if (Score::skip(ttype))
     return "";
 
-  return CumulPair::strOverall(pairs, prec) + CumulPair::strDetails(prec);
+  return Score::strOverall(pairs, prec) + Score::strDetails(prec);
 }
 

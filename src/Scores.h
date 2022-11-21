@@ -16,7 +16,7 @@
 
 using namespace std;
 
-#include "CumulPair.h"
+#include "scores/Score.h"
 
 enum FormatEnum: unsigned;
 enum TableEnum: unsigned;
@@ -25,16 +25,16 @@ class Scores
 {
   private:
 
-    vector<CumulPair> pairScores;
-    vector<CumulPair> oppComp;
+    vector<Score> pairScores;
+    vector<Score> oppComp;
 
-    typedef map<string, CumulPair> OppMapType;
+    typedef map<string, Score> OppMapType;
     vector<OppMapType> oppScores;
 
     unsigned numPairs;
     unsigned length;
 
-    CumulPair& getCrossCumulPair(
+    Score& getCrossScore(
       const unsigned pairNo,
       const unsigned oppNo);
 
