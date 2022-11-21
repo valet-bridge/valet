@@ -231,7 +231,7 @@ void CumulPair::scale(const ScoringEnum stype)
   for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
   {
     avgPerChance[i] = ::scale(sum[i], num[i], stype);
-    aspects[i].scale(stype);
+    aspects[i].scale();
   }
 }
 
@@ -241,7 +241,7 @@ void CumulPair::compensate(
   const ScoringEnum stype)
 {
   for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
-    aspects[i].compensate(oppComp.aspects[i], stype);
+    aspects[i].compensate(oppComp.aspects[i]);
 
   if (stype == VALET_MATCHPOINTS)
   {
@@ -424,4 +424,5 @@ string CumulPair::strLine(
 
   return CumulPair::strOverall(pairs, prec) + CumulPair::strDetails(prec);
 }
+
 

@@ -12,11 +12,7 @@
 
 #include <string>
 
-#include "../misc.h"
-
 using namespace std;
-
-enum ScoringEnum: unsigned;
 
 enum Padding
 {
@@ -50,11 +46,11 @@ class Aspect
 
     bool empty() const;
 
-    void scale(const ScoringEnum stype);
+    void scale();
 
-    void compensate(
-      const Aspect& a2,
-      const ScoringEnum stype);
+    void compensate( const Aspect& a2);
+
+    float getAverage() const;
 
     string pad(const Padding padding) const;
 

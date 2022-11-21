@@ -14,6 +14,7 @@
 #include <string>
 
 #include "scores/Aspect.h"
+#include "cst.h"
 
 class Pairs;
 struct ValetEntryType;
