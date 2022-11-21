@@ -37,8 +37,6 @@ class Aspect
 
     float average;
 
-    string pad(const Padding padding) const;
-
 
   public:
 
@@ -57,6 +55,8 @@ class Aspect
     void compensate(
       const Aspect& a2,
       const ScoringEnum stype);
+
+    string pad(const Padding padding) const;
 
     string strCount(const int width) const;
 

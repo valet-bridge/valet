@@ -1,21 +1,21 @@
 /* 
    Valet, a generalized Butler scorer for bridge.
 
-   Copyright (C) 2015 by Soren Hein.
+   Copyright (C) 2015-2023 by Soren Hein.
 
    See LICENSE and README.
 */
 
 
-
-#include <assert.h>
-
 #include <iostream>
+#include <iomanip>
+#include <sstream>
 #include <string>
-
-using namespace std;
+#include <cassert>
 
 #include "Pairs.h"
+
+extern OptionsType options;
 
 #define PAIRS_CHUNK_SIZE 32
 
@@ -161,13 +161,6 @@ string Pairs::GetPairName(
 }
 
 
-string Pairs::GetPairName(const unsigned pno) const
-{
-  assert(pno < listNo);
-  return pairNoToPairName[pno];
-}
-
-
 void Pairs::GetPairTags(
   const unsigned pno,
   string& tag1,
@@ -179,12 +172,26 @@ void Pairs::GetPairTags(
 }
 
 
-string Pairs::GetPairNamePadded(
+string Pairs::GetPairName(
   const unsigned pno,
   const unsigned width) const
 {
   assert(pno < listNo);
-  return Pairs::PadString(pairNoToPairName[pno], width);
+  if (options.format == VALET_FORMAT_TEXT)
+  {
+    stringstream ss;
+    ss << left << Pairs::PadString(pairNoToPairName[pno], width) << right;
+    return ss.str();
+  }
+  else if (options.format == VALET_FORMAT_CSV)
+  {
+    return pairNoToPairName[pno] + options.separator;
+  }
+  else
+  {
+    assert(false);
+    return "";
+  }
 }
 
 

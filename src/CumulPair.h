@@ -18,7 +18,6 @@
 class Pairs;
 struct ValetEntryType;
 
-enum FormatEnum: unsigned;
 enum ScoringEnum: unsigned;
 enum SortingEnum: unsigned;
 
@@ -53,8 +52,7 @@ class CumulPair
 
     string strOverall(
       const Pairs& pairs,
-      const int prec,
-      const FormatEnum format) const;
+      const int prec) const;
 
     string strDetails(const int prec) const;
 
@@ -90,8 +88,7 @@ class CumulPair
     string strLine(
       const Pairs& pairs,
       const TableEnum ttype,
-      const int prec,
-      const FormatEnum format) const;
+      const int prec) const;
 };
 
 #endif

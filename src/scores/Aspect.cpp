@@ -72,7 +72,7 @@ void Aspect::compensate(
 
 string Aspect::pad(const Padding padding) const
 {
-  if (padding == PAD_NONE)
+  if (options.format != VALET_FORMAT_TEXT || padding == PAD_NONE)
     return "";
   else if (padding == PAD_SPACE)
     return "  ";

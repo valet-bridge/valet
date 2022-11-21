@@ -95,9 +95,6 @@ class Pairs
       string& tag2);
 
     string GetPairName(
-      const unsigned pno) const;
-
-    string GetPairNamePadded(
       const unsigned pno,
       const unsigned width = 32) const;
       

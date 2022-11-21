@@ -362,35 +362,17 @@ string CumulPair::strHeaderCSV() const
 
 string CumulPair::strOverall(
   const Pairs& pairs,
-  const int prec,
-  const FormatEnum format) const
+  const int prec) const
 {
   stringstream ss;
 
-  const float MP_OFFSET =
-    (options.valet == VALET_MATCHPOINTS ? 50.f : 0.f);
-
-  if (format == VALET_FORMAT_TEXT)
-  {
-    ss <<
-      left << pairs.GetPairNamePadded(pairNo, 54) << right << " | " <<
-      aspects[VALET_OVERALL].strCount(4) <<
-      aspects[VALET_OVERALL].strAverage(7, prec, PAD_BAR) <<  // " | " <<
-      aspects[VALET_BID].strAverage(5, prec, PAD_NONE) <<
-      aspects[VALET_PLAY].strAverage(7, prec, PAD_BAR); // << " | ";
-  }
-  else if (format == VALET_FORMAT_CSV)
-  {
-    const string sep = options.separator;
-    ss <<
-      pairs.GetPairName(pairNo) << sep << 
-      aspects[VALET_OVERALL].strCount(4) <<
-      aspects[VALET_OVERALL].strAverage(7, prec, PAD_BAR) <<
-      aspects[VALET_BID].strAverage(5, prec, PAD_NONE) <<
-      aspects[VALET_PLAY].strAverage(7, prec, PAD_BAR);
-  }
-  else
-    assert(false);
+  ss <<
+    pairs.GetPairName(pairNo, 54) << 
+    aspects[VALET_OVERALL].pad(PAD_BAR) << 
+    aspects[VALET_OVERALL].strCount(4) <<
+    aspects[VALET_OVERALL].strAverage(7, prec, PAD_BAR) <<
+    aspects[VALET_BID].strAverage(5, prec, PAD_NONE) <<
+    aspects[VALET_PLAY].strAverage(7, prec, PAD_BAR);
 
   return ss.str();
 }
@@ -435,14 +417,11 @@ string CumulPair::strDetails(const int prec) const
 string CumulPair::strLine(
   const Pairs& pairs,
   const TableEnum ttype,
-  const int prec,
-  const FormatEnum format) const
+  const int prec) const
 {
   if (CumulPair::skip(ttype))
     return "";
 
-  return 
-    CumulPair::strOverall(pairs, prec, format) +
-    CumulPair::strDetails(prec);
+  return CumulPair::strOverall(pairs, prec) + CumulPair::strDetails(prec);
 }
 

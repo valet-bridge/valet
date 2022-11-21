@@ -247,7 +247,7 @@ string Scores::str(const TableEnum ttype) const
   ss << Scores::strHeader(options.format);
 
   for (unsigned pno = 1; pno < length; pno++)
-    ss << pairScores[pno].strLine(pairs, ttype, prec, options.format);
+    ss << pairScores[pno].strLine(pairs, ttype, prec);
 
   ss << "\n";
   
