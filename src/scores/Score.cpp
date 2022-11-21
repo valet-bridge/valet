@@ -293,6 +293,29 @@ string Score::strHeaderCSV() const
 }
 
 
+string Score::strHeader() const
+{
+  stringstream ss;
+
+  if (options.format == VALET_FORMAT_TEXT)
+  {
+    ss <<
+      setw(54) << "" << " | " <<
+      Score::strHeaderText1() << "\n" <<
+      setw(54) << left << "Players" << right << " | " <<
+      Score::strHeaderText2() << "\n";
+  }
+  else if (options.format == VALET_FORMAT_CSV)
+  {
+    ss << "Players" << options.separator << Score::strHeaderCSV() << "\n";
+  }
+  else
+    assert(false);
+
+  return ss.str();
+}
+
+
 string Score::strOverall(
   const Pairs& pairs,
   const int prec) const

@@ -20,7 +20,6 @@
 class Pairs;
 struct ValetEntryType;
 
-enum ScoringEnum: unsigned;
 enum SortingEnum: unsigned;
 enum TableEnum: unsigned;
 
@@ -32,6 +31,11 @@ class Score
     unsigned pairNo;
 
     vector<Aspect> aspects;
+
+    string strHeaderCSV() const;
+
+    string strHeaderText1() const;
+    string strHeaderText2() const;
 
     string strOverall(
       const Pairs& pairs,
@@ -59,10 +63,7 @@ class Score
 
     bool skip(const TableEnum ttype) const;
 
-    string strHeaderCSV() const;
-
-    string strHeaderText1() const;
-    string strHeaderText2() const;
+    string strHeader() const;
 
     string strLine(
       const Pairs& pairs,

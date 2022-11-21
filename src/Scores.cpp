@@ -196,30 +196,10 @@ bool Scores::PreparePrint(
 }
 
 
-string Scores::strHeader(const FormatEnum format) const
+string Scores::strHeader([[maybe_unused]] const FormatEnum format) const
 {
-  stringstream ss;
-
-  Score c;
-
-  // TODO Put players str into Pairs and pass Pairs to c
-
-  if (format == VALET_FORMAT_TEXT)
-  {
-    ss << 
-      setw(54) << "" << " | " <<
-      c.strHeaderText1() << "\n" <<
-      setw(54) << left << "Players" << right << " | " <<
-      c.strHeaderText2() << "\n";
-  }
-  else if (format == VALET_FORMAT_CSV)
-  {
-    ss << "Players" << options.separator << c.strHeaderCSV() << "\n";
-  }
-  else
-    assert(false);
-  
-  return ss.str();
+  Score s;
+  return s.strHeader();  
 }
 
 
