@@ -68,6 +68,12 @@ void Aspect::compensate(const Aspect& a2)
 }
 
 
+unsigned Aspect::getCount() const
+{
+  return num;
+}
+
+
 float Aspect::getAverage() const
 {
   return average;

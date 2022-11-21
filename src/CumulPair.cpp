@@ -26,16 +26,6 @@ CumulPair::CumulPair()
 }
 
 
-void CumulPair::clear()
-{
-  for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
-  {
-    num[i] = 0;
-    sum[i] = 0.f;
-  }
-}
-
-
 void CumulPair::setPair(const unsigned pairNoIn)
 {
   pairNo = pairNoIn;
@@ -58,24 +48,6 @@ void CumulPair::incrDeclarer(const ValetEntryType& entry)
     aspects[VALET_DECL_SUM].incr(entry.playScore[1]);
     aspects[VALET_DECL2].incr(entry.playScore[1]);
   }
-
-
-  num[VALET_OVERALL]++;
-  sum[VALET_OVERALL] += entry.overall;
-
-  num[VALET_BID]++;
-  sum[VALET_BID] += entry.bidScore;
-
-  if (entry.declFlag[0])
-  {
-    num[VALET_DECL1]++;
-    sum[VALET_DECL1] += entry.playScore[0];
-  }
-  else if (entry.declFlag[1])
-  {
-    num[VALET_DECL2]++;
-    sum[VALET_DECL2] += entry.playScore[1];
-  }
 }
 
 
@@ -85,87 +57,49 @@ void CumulPair::incrDefenders(const ValetEntryType& entry)
   aspects[VALET_BID].decr(entry.bidScore);
   aspects[VALET_PLAY].decr(entry.overall - entry.bidScore);
 
-  if (entry.defFlag)
+  if (! entry.defFlag)
+    return;
+
+  if (options.leadFlag)
   {
+    aspects[VALET_DEF].incr(entry.defScore);
 
-    if (options.leadFlag)
+    float dsum = entry.defScore;
+
+    if (entry.leadFlag[0])
     {
-      aspects[VALET_DEF].incr(entry.defScore);
-
-      float dsum = entry.defScore;
-
-      if (entry.leadFlag[0])
-      {
-        aspects[VALET_LEAD_SUM].incr(entry.leadScore[0]);
-        aspects[VALET_LEAD1].incr(entry.leadScore[0]);
-        dsum += entry.leadScore[0];
-      }
-      else if (entry.leadFlag[1])
-      {
-        aspects[VALET_LEAD_SUM].incr(entry.leadScore[1]);
-        aspects[VALET_LEAD2].incr(entry.leadScore[1]);
-        dsum += entry.leadScore[1];
-      }
-
-      aspects[VALET_DEF_SUM].incr(dsum);
+      aspects[VALET_LEAD_SUM].incr(entry.leadScore[0]);
+      aspects[VALET_LEAD1].incr(entry.leadScore[0]);
+      dsum += entry.leadScore[0];
     }
-    else
+    else if (entry.leadFlag[1])
     {
-      aspects[VALET_DEF].incr(entry.defScore);
-      aspects[VALET_DEF_SUM].incr(entry.defScore);
+      aspects[VALET_LEAD_SUM].incr(entry.leadScore[1]);
+      aspects[VALET_LEAD2].incr(entry.leadScore[1]);
+      dsum += entry.leadScore[1];
     }
+
+    aspects[VALET_DEF_SUM].incr(dsum);
   }
-
-  num[VALET_OVERALL]++;
-  sum[VALET_OVERALL] -= entry.overall;
-
-  num[VALET_BID]++;
-  sum[VALET_BID] -= entry.bidScore;
-
-  if (entry.defFlag)
+  else
   {
-    num[VALET_DEF]++;
-    sum[VALET_DEF] += entry.defScore;
-
-    if (options.leadFlag)
-    {
-      if (entry.leadFlag[0])
-      {
-        num[VALET_LEAD1]++;
-        sum[VALET_LEAD1] += entry.leadScore[0];
-      }
-      else if (entry.leadFlag[1])
-      {
-        num[VALET_LEAD2]++;
-        sum[VALET_LEAD2] += entry.leadScore[1];
-      }
-    }
+    aspects[VALET_DEF].incr(entry.defScore);
+    aspects[VALET_DEF_SUM].incr(entry.defScore);
   }
-
 }
 
 
 void CumulPair::operator += (const CumulPair& c2)
 {
   for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
-  {
-    sum[i] += c2.sum[i];
-    num[i] += c2.num[i];
-
     aspects[i] += c2.aspects[i];
-  }
 }
 
 
 void CumulPair::operator -= (const CumulPair& c2)
 {
   for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
-  {
-    sum[i] -= c2.sum[i];
-    num[i] -= c2.num[i];
-
     aspects[i] -= c2.aspects[i];
-  }
 }
 
 
@@ -202,22 +136,17 @@ float CumulPair::figure(const SortingEnum sort) const
 
 bool CumulPair::skip(const TableEnum ttype) const
 {
-  if (num[VALET_OVERALL] == 0)
-  {
+  if (aspects[VALET_OVERALL].empty())
     return true;
-    assert(aspects[VALET_OVERALL].empty());
-  }
-  else
-    assert(! aspects[VALET_OVERALL].empty());
 
   if (ttype == VALET_TABLE_MANY)
   {
-    if (num[VALET_OVERALL] < options.minHands)
+    if (aspects[VALET_OVERALL].getCount() < options.minHands)
       return true;
   }
   else  if (ttype == VALET_TABLE_FEW)
   {
-    if (num[VALET_OVERALL] > options.minHands)
+    if (aspects[VALET_OVERALL].getCount() > options.minHands)
       return true;
   }
   else

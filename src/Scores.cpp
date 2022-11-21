@@ -45,9 +45,6 @@ void Scores::Reset()
   oppScores.resize(SCORES_CHUNK_SIZE);
   oppComp.resize(SCORES_CHUNK_SIZE);
   length = SCORES_CHUNK_SIZE;
-
-  for (auto& p: pairScores)
-    p.clear();
 }
 
 
@@ -59,9 +56,6 @@ CumulPair& Scores::getCrossCumulPair(
 
   OppMapType& oppMap = oppScores[pairNo];
   OppMapType::iterator it = oppMap.find(oppstr);
-
-  if (it == oppMap.end())
-    oppMap[oppstr].clear();
 
   return oppMap[oppstr];
 }
@@ -75,9 +69,6 @@ void Scores::storeCrossCumul(const ValetEntryType& entry)
 
   CumulPair oppCP;
   CumulPair pairCP;
-
-  oppCP.clear();
-  pairCP.clear();
 
   // The entry always yields a declaring entry for us and a defending
   // entry for the other pair.
@@ -105,9 +96,6 @@ void Scores::AddEntry(
     pairScores.resize(static_cast<size_t>(length));
     oppScores.resize(static_cast<size_t>(length));
     oppComp.resize(static_cast<size_t>(length));
-
-    for (unsigned i = length-newScores; i < length; i++)
-      pairScores[i].clear();
   }
 
   CumulPair& cDecl = pairScores[entry.pairNo];
@@ -136,7 +124,6 @@ void Scores::Compensate()
   for (unsigned pno = 1; pno < length; pno++)
   {
     CumulPair oppResults;
-    oppResults.clear();
 
     OppMapType& oppMap = oppScores[pno];
 

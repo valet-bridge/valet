@@ -50,6 +50,8 @@ class Aspect
 
     void compensate( const Aspect& a2);
 
+    unsigned getCount() const;
+
     float getAverage() const;
 
     string pad(const Padding padding) const;

@@ -45,9 +45,6 @@ class CumulPair
 
     unsigned pairNo;
 
-    unsigned num[VALET_ENTRY_SIZE];
-    float sum[VALET_ENTRY_SIZE];
-
     vector<Aspect> aspects;
 
     string strOverall(
@@ -59,8 +56,6 @@ class CumulPair
   public:
 
     CumulPair();
-
-    void clear();
 
     void setPair(const unsigned pairNoIn);
 
