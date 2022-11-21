@@ -46,16 +46,17 @@ void CumulPair::incrDeclarer(const ValetEntryType& entry)
 {
   aspects[VALET_OVERALL].incr(entry.overall);
   aspects[VALET_BID].incr(entry.bidScore);
+  aspects[VALET_PLAY].incr(entry.overall - entry.bidScore);
 
   if (entry.declFlag[0])
   {
-    aspects[VALET_PLAY_SUM].incr(entry.playScore[0]);
-    aspects[VALET_PLAY1].incr(entry.playScore[0]);
+    aspects[VALET_DECL_SUM].incr(entry.playScore[0]);
+    aspects[VALET_DECL1].incr(entry.playScore[0]);
   }
   else if (entry.declFlag[1])
   {
-    aspects[VALET_PLAY_SUM].incr(entry.playScore[1]);
-    aspects[VALET_PLAY2].incr(entry.playScore[1]);
+    aspects[VALET_DECL_SUM].incr(entry.playScore[1]);
+    aspects[VALET_DECL2].incr(entry.playScore[1]);
   }
 
 
@@ -67,13 +68,13 @@ void CumulPair::incrDeclarer(const ValetEntryType& entry)
 
   if (entry.declFlag[0])
   {
-    num[VALET_PLAY1]++;
-    sum[VALET_PLAY1] += entry.playScore[0];
+    num[VALET_DECL1]++;
+    sum[VALET_DECL1] += entry.playScore[0];
   }
   else if (entry.declFlag[1])
   {
-    num[VALET_PLAY2]++;
-    sum[VALET_PLAY2] += entry.playScore[1];
+    num[VALET_DECL2]++;
+    sum[VALET_DECL2] += entry.playScore[1];
   }
 }
 
@@ -82,6 +83,7 @@ void CumulPair::incrDefenders(const ValetEntryType& entry)
 {
   aspects[VALET_OVERALL].decr(entry.overall);
   aspects[VALET_BID].decr(entry.bidScore);
+  aspects[VALET_PLAY].decr(entry.overall - entry.bidScore);
 
   if (entry.defFlag)
   {
@@ -174,21 +176,21 @@ float CumulPair::figure(const SortingEnum sort) const
     return avgPerChance[VALET_OVERALL];
   else if (sort == VALET_SORT_BIDDING)
     return avgPerChance[VALET_BID];
-  else if (sort == VALET_SORT_PLAY)
-    return avgPerChance[VALET_PLAY1] + avgPerChance[VALET_PLAY2];
+  else if (sort == VALET_SORT_DECL)
+    return avgPerChance[VALET_DECL1] + avgPerChance[VALET_DECL2];
   else if (sort == VALET_SORT_DEFENSE)
     return avgPerChance[VALET_DEF];
   else if (sort == VALET_SORT_LEAD)
     return avgPerChance[VALET_LEAD1] + avgPerChance[VALET_LEAD2];
-  else if (sort == VALET_SORT_BID_OVER_PLAY)
+  else if (sort == VALET_SORT_BID_OVER_DECL)
     return avgPerChance[VALET_BID] -
-      (avgPerChance[VALET_PLAY1] + avgPerChance[VALET_PLAY2]);
-  else if (sort == VALET_SORT_DEF_OVER_PLAY)
+      (avgPerChance[VALET_DECL1] + avgPerChance[VALET_DECL2]);
+  else if (sort == VALET_SORT_DEF_OVER_DECL)
     return avgPerChance[VALET_DEF] -
-      (avgPerChance[VALET_PLAY1] + avgPerChance[VALET_PLAY2]);
-  else if (sort == VALET_SORT_LEAD_OVER_PLAY)
+      (avgPerChance[VALET_DECL1] + avgPerChance[VALET_DECL2]);
+  else if (sort == VALET_SORT_LEAD_OVER_DECL)
     return avgPerChance[VALET_LEAD1] + avgPerChance[VALET_LEAD2] -
-      (avgPerChance[VALET_PLAY1] + avgPerChance[VALET_PLAY2]);
+      (avgPerChance[VALET_DECL1] + avgPerChance[VALET_DECL2]);
   else
   {
     assert(false);
@@ -372,26 +374,20 @@ string CumulPair::strOverall(
   {
     ss <<
       left << pairs.GetPairNamePadded(pairNo, 54) << right << " | " <<
-      setw(4) << num[VALET_OVERALL] <<
-        aspects[VALET_OVERALL].strAverage(7, prec) <<  " | " <<
-        aspects[VALET_BID].strAverage(5, prec) <<
-      setw(7) << fixed << setprecision(prec) <<
-        MP_OFFSET +
-        avgPerChance[VALET_OVERALL] -
-        avgPerChance[VALET_BID] << " | ";
+      aspects[VALET_OVERALL].strCount(4) <<
+      aspects[VALET_OVERALL].strAverage(7, prec, PAD_BAR) <<  // " | " <<
+      aspects[VALET_BID].strAverage(5, prec, PAD_NONE) <<
+      aspects[VALET_PLAY].strAverage(7, prec, PAD_BAR); // << " | ";
   }
   else if (format == VALET_FORMAT_CSV)
   {
     const string sep = options.separator;
     ss <<
       pairs.GetPairName(pairNo) << sep << 
-      num[VALET_OVERALL] << sep <<
-        aspects[VALET_OVERALL].strAverage(0, prec) <<
-        aspects[VALET_BID].strAverage(0, prec) <<
-      fixed << setprecision(prec) <<
-        MP_OFFSET +
-        avgPerChance[VALET_OVERALL] -
-        avgPerChance[VALET_BID] << sep;
+      aspects[VALET_OVERALL].strCount(4) <<
+      aspects[VALET_OVERALL].strAverage(7, prec, PAD_BAR) <<
+      aspects[VALET_BID].strAverage(5, prec, PAD_NONE) <<
+      aspects[VALET_PLAY].strAverage(7, prec, PAD_BAR);
   }
   else
     assert(false);
@@ -405,47 +401,29 @@ string CumulPair::strDetails(const int prec) const
   stringstream ss;
 
   // Declarer score.
-  ss << aspects[VALET_PLAY_SUM].str(prec);
-  if (options.format == VALET_FORMAT_TEXT)
-    ss << "  ";
+  ss << aspects[VALET_DECL_SUM].str(prec, PAD_SPACE);
 
   // Defender score.
-  ss << aspects[VALET_DEF_SUM].str(prec);
-  if (options.format == VALET_FORMAT_TEXT)
-    ss << " | ";
+  ss << aspects[VALET_DEF_SUM].str(prec, PAD_BAR);
 
   // Individual declarer scores.
-  ss << aspects[VALET_PLAY1].str(prec);
-  if (options.format == VALET_FORMAT_TEXT)
-    ss << "  ";
-
-  ss << aspects[VALET_PLAY2].str(prec);
-  if (options.format == VALET_FORMAT_TEXT)
-    ss << " | ";
+  ss << aspects[VALET_DECL1].str(prec, PAD_SPACE);
+  ss << aspects[VALET_DECL2].str(prec, PAD_BAR);
 
   if (options.leadFlag)
   {
     // Individual lead scores.
-    ss << aspects[VALET_LEAD1].str(prec);
-    if (options.format == VALET_FORMAT_TEXT)
-      ss << "  ";
-
-    ss << aspects[VALET_LEAD2].str(prec);
-    if (options.format == VALET_FORMAT_TEXT)
-      ss << "  ";
+    ss << aspects[VALET_LEAD1].str(prec, PAD_SPACE);
+    ss << aspects[VALET_LEAD2].str(prec, PAD_SPACE);
 
     if (options.averageFlag)
     {
       // Overall lead score.
-      ss << aspects[VALET_LEAD_SUM].str(prec);
-      if (options.format == VALET_FORMAT_TEXT)
-        ss << "  ";
+      ss << aspects[VALET_LEAD_SUM].str(prec, PAD_SPACE);
     }
 
     // Defense score (excluding leads if these are shown).
-    ss << aspects[VALET_DEF].str(prec);
-    if (options.format == VALET_FORMAT_TEXT)
-      ss << " |";
+    ss << aspects[VALET_DEF].str(prec, PAD_BAR_END);
   }
 
   ss << "\n";

@@ -87,12 +87,12 @@ enum SortingType: unsigned
 {
   VALET_SORT_OVERALL,
   VALET_SORT_BIDDING,
-  VALET_SORT_PLAY,
+  VALET_SORT_DECL,
   VALET_SORT_DEFENSE,
   VALET_SORT_LEAD,
-  VALET_SORT_BID_OVER_PLAY,
-  VALET_SORT_DEF_OVER_PLAY,
-  VALET_SORT_LEAD_OVER_PLAY
+  VALET_SORT_BID_OVER_DECL,
+  VALET_SORT_DEF_OVER_DECL,
+  VALET_SORT_LEAD_OVER_DECL
 };
 
 struct sortPairType
@@ -105,12 +105,12 @@ const sortPairType sortingTags[] =
 {
   {VALET_SORT_OVERALL, "overall"},
   {VALET_SORT_BIDDING, "bidding"},
-  {VALET_SORT_PLAY, "play"},
+  {VALET_SORT_DECL, "decl"},
   {VALET_SORT_DEFENSE, "defense"},
   {VALET_SORT_LEAD, "lead"},
-  {VALET_SORT_BID_OVER_PLAY, "bidoverplay"},
-  {VALET_SORT_DEF_OVER_PLAY, "defoverplay"},
-  {VALET_SORT_LEAD_OVER_PLAY, "leadoverplay"}
+  {VALET_SORT_BID_OVER_DECL, "bidoverdecl"},
+  {VALET_SORT_DEF_OVER_DECL, "defoverdecl"},
+  {VALET_SORT_LEAD_OVER_DECL, "leadoverdecl"}
 };
 
 

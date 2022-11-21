@@ -18,6 +18,14 @@ using namespace std;
 
 enum ScoringEnum: unsigned;
 
+enum Padding
+{
+  PAD_NONE = 0,
+  PAD_SPACE = 1,
+  PAD_BAR = 2,
+  PAD_BAR_END = 3
+};
+
 
 class Aspect
 {
@@ -28,6 +36,8 @@ class Aspect
     float sum;
 
     float average;
+
+    string pad(const Padding padding) const;
 
 
   public:
@@ -48,11 +58,16 @@ class Aspect
       const Aspect& a2,
       const ScoringEnum stype);
 
+    string strCount(const int width) const;
+
     string strAverage(
       const int width,
-      const int prec) const;
+      const int prec,
+      const Padding padding) const;
 
-    string str(const int prec) const;
+    string str(
+      const int prec,
+      const Padding padding) const;
 };
 
 #endif

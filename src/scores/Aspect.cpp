@@ -70,14 +70,51 @@ void Aspect::compensate(
 }
 
 
-string Aspect::strAverage(
-  const int width,
-  const int prec) const
+string Aspect::pad(const Padding padding) const
+{
+  if (padding == PAD_NONE)
+    return "";
+  else if (padding == PAD_SPACE)
+    return "  ";
+  else if (padding == PAD_BAR)
+    return " | ";
+  else if (padding == PAD_BAR_END)
+    return " |";
+  else
+  {
+    assert(false);
+    return "";
+  }
+}
+
+
+string Aspect::strCount(const int width) const
 {
   stringstream ss;
 
   if (options.format == VALET_FORMAT_TEXT)
+    ss << setw(width) << num;
+  else if (options.format == VALET_FORMAT_CSV)
+    ss << num << options.separator;
+  else
+    assert(false);
+
+  return ss.str();
+}
+
+
+string Aspect::strAverage(
+  const int width,
+  const int prec,
+  const Padding padding) const
+{
+  stringstream ss;
+
+  if (options.format == VALET_FORMAT_TEXT)
+  {
     ss << setw(width) << fixed << setprecision(prec) << average;
+    ss << Aspect::pad(padding);
+  }
   else if (options.format == VALET_FORMAT_CSV)
     ss << fixed << setprecision(prec) << average << options.separator;
   else
@@ -87,7 +124,9 @@ string Aspect::strAverage(
 }
 
 
-string Aspect::str(const int prec) const
+string Aspect::str(
+  const int prec,
+  const Padding padding) const
 {
   stringstream ss;
 
@@ -98,6 +137,8 @@ string Aspect::str(const int prec) const
         " (" << setw(3) << num << ")";
     else
       ss << setw(5) << "-" << " (  0)";
+    
+    ss << Aspect::pad(padding);
   }
   else if (options.format == VALET_FORMAT_CSV)
   {
