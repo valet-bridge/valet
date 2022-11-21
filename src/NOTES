@@ -1,18 +1,10 @@
-Get rid of old way in CumulPair (num, sum, avgPerChance)
-- Need more formatting in Aspect for CumulPair::strOverall
 Check I haven't broken matchpoints
 
 Put stuff in scores/ directory
 CumulPair -> Score
 
 CumulPair:
-* struct ... num, sum, avgTotal, avgPerChance
-* vector, sized in .cpp
-* enum CumulEnum therefore in cpp as well
-* has own +=, -=
-* All average*() needed?
 * strHeader* combine to outside world?
-* Can get format from options ourselves
 * Pairs headers clean up
 
 Negative pair numbers are not a good idea

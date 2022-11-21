@@ -23,22 +23,6 @@ enum ScoringEnum: unsigned;
 enum SortingEnum: unsigned;
 
 
-enum CumulEnum
-{
-  VALET_OVERALL = 0,
-  VALET_BID = 1,
-  VALET_PLAY = 2,
-  VALET_DECL_SUM = 3,
-  VALET_DECL1 = 4,
-  VALET_DECL2 = 5,
-  VALET_LEAD_SUM = 6,
-  VALET_LEAD1 = 7,
-  VALET_LEAD2 = 8,
-  VALET_DEF_SUM = 9,
-  VALET_DEF = 10,
-  VALET_ENTRY_SIZE = 11
-};
-
 class CumulPair
 {
   private:

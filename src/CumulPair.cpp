@@ -14,10 +14,25 @@
 
 #include "Pairs.h"
 #include "CumulPair.h"
-#include "misc.h"
-#include "cst.h"
 
 extern OptionsType options;
+
+
+enum CumulEnum
+{
+  VALET_OVERALL = 0,
+  VALET_BID = 1,
+  VALET_PLAY = 2,
+  VALET_DECL_SUM = 3,
+  VALET_DECL1 = 4,
+  VALET_DECL2 = 5,
+  VALET_LEAD_SUM = 6,
+  VALET_LEAD1 = 7,
+  VALET_LEAD2 = 8,
+  VALET_DEF_SUM = 9,
+  VALET_DEF = 10,
+  VALET_ENTRY_SIZE = 11
+};
 
 
 CumulPair::CumulPair()
@@ -91,14 +106,16 @@ void CumulPair::incrDefenders(const ValetEntryType& entry)
 
 void CumulPair::operator += (const CumulPair& c2)
 {
-  for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
+  assert(aspects.size() == c2.aspects.size());
+  for (size_t i = 0; i < aspects.size(); i++)
     aspects[i] += c2.aspects[i];
 }
 
 
 void CumulPair::operator -= (const CumulPair& c2)
 {
-  for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
+  assert(aspects.size() == c2.aspects.size());
+  for (size_t i = 0; i < aspects.size(); i++)
     aspects[i] -= c2.aspects[i];
 }
 
@@ -158,14 +175,15 @@ bool CumulPair::skip(const TableEnum ttype) const
 
 void CumulPair::scale()
 {
-  for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
-    aspects[i].scale();
+  for (auto& aspect: aspects)
+    aspect.scale();
 }
 
 
 void CumulPair::compensate(const CumulPair& oppComp)
 {
-  for (int i = VALET_OVERALL; i < VALET_ENTRY_SIZE; i++)
+  assert(aspects.size() == oppComp.aspects.size());
+  for (size_t i = 0; i < aspects.size(); i++)
     aspects[i].compensate(oppComp.aspects[i]);
 }
 
@@ -338,5 +356,4 @@ string CumulPair::strLine(
 
   return CumulPair::strOverall(pairs, prec) + CumulPair::strDetails(prec);
 }
-
 
