@@ -40,11 +40,9 @@ Scores::~Scores()
 
 void Scores::Reset()
 {
-  numPairs = 0;
   pairScores.resize(SCORES_CHUNK_SIZE);
   oppScores.resize(SCORES_CHUNK_SIZE);
   oppComp.resize(SCORES_CHUNK_SIZE);
-  length = SCORES_CHUNK_SIZE;
 }
 
 
@@ -83,16 +81,15 @@ void Scores::storeCrossCumul(const ValetEntryType& entry)
 }
 
 
-void Scores::AddEntry(
-  const ValetEntryType& entry)
+void Scores::add(const ValetEntryType& entry)
 {
   unsigned m = (entry.pairNo > entry.oppNo ? entry.pairNo : entry.oppNo);
-  if (m >= length)
+  if (m >= pairScores.size())
   {
-    const unsigned numNewChunks = (m / SCORES_CHUNK_SIZE) + 1;
-    const unsigned newScores = numNewChunks * SCORES_CHUNK_SIZE - length;
+    const size_t numNewChunks = (m / SCORES_CHUNK_SIZE) + 1;
+    const size_t newScores = numNewChunks * SCORES_CHUNK_SIZE - pairScores.size();
 
-    length = numNewChunks * SCORES_CHUNK_SIZE;
+    const size_t length = numNewChunks * SCORES_CHUNK_SIZE;
     pairScores.resize(static_cast<size_t>(length));
     oppScores.resize(static_cast<size_t>(length));
     oppComp.resize(static_cast<size_t>(length));
@@ -115,7 +112,7 @@ void Scores::AddEntry(
 
 void Scores::scale()
 {
-  for (unsigned pno = 1; pno < length; pno++)
+  for (unsigned pno = 1; pno < pairScores.size(); pno++)
     pairScores[pno].scale();
 }
 
@@ -128,7 +125,7 @@ void Scores::calcCompensation()
   typedef OppMapType::iterator it_type;
   char *pend;
 
-  for (unsigned pno = 1; pno < length; pno++)
+  for (unsigned pno = 1; pno < pairScores.size(); pno++)
   {
     Score oppResults;
 
@@ -138,7 +135,7 @@ void Scores::calcCompensation()
     {
       unsigned oppNo = static_cast<unsigned>(
         strtol(it->first.c_str(), &pend, 10));
-      assert(oppNo > 0 && oppNo < length);
+      assert(oppNo > 0 && oppNo < pairScores.size());
 
       // Add each opponent, then subtract out or own results against them.
       oppResults += pairScores[oppNo];
@@ -157,7 +154,7 @@ void Scores::compensate()
 
   Scores::calcCompensation();
 
-  for (unsigned pno = 1; pno < length; pno++)
+  for (unsigned pno = 1; pno < pairScores.size(); pno++)
     pairScores[pno].compensate(oppComp[pno]);
 }
 
@@ -174,7 +171,7 @@ void Scores::sort(const SortingEnum stype)
 
 bool Scores::onlySkips(const TableEnum ttype) const
 {
-  for (unsigned pno = 1; pno < length; pno++)
+  for (unsigned pno = 1; pno < pairScores.size(); pno++)
     if (! pairScores[pno].skip(ttype))
       return false;
 
@@ -195,7 +192,7 @@ string Scores::str(const TableEnum ttype) const
 
   const int prec = (options.valet == VALET_MATCHPOINTS ? 1 : 2);
 
-  for (unsigned pno = 1; pno < length; pno++)
+  for (unsigned pno = 1; pno < pairScores.size(); pno++)
     ss << pairScores[pno].strLine(pairs, ttype, prec);
 
   ss << "\n";

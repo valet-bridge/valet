@@ -71,21 +71,22 @@ int main(int argc, char * argv[])
 
     entries = it->second.CalculateScores();
     for (unsigned i = 0; i < entries.size(); i++)
-      scores.AddEntry(entries[i]);
+      scores.add(entries[i]);
     
     if (options.tableauFlag)
       PrintTableauText(entries, it->first, tableauStream);
   }
 
 
-  if (options.compensateFlag)
-    scores.Compensate();
-
   if (options.tableauFlag)
     tableauStream.close();
 
-  scores.Normalize();
-  scores.Sort(static_cast<SortingEnum>(options.sort));
+  scores.scale();
+
+  if (options.compensateFlag)
+    scores.compensate();
+
+  scores.sort(static_cast<SortingEnum>(options.sort));
   cout << scores.str();
   cout.flush();
 }

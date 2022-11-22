@@ -34,9 +34,6 @@ class Scores
     typedef map<string, Score> OppMapType;
     vector<OppMapType> oppScores;
 
-    unsigned numPairs;
-    unsigned length;
-
     Score& getCrossScore(
       const unsigned pairNo,
       const unsigned oppNo);
@@ -57,7 +54,7 @@ class Scores
 
     void Reset();
 
-    void AddEntry(const ValetEntryType& entry);
+    void add(const ValetEntryType& entry);
 
     void scale();
 
