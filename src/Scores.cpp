@@ -168,50 +168,30 @@ void Scores::Sort(const SortingEnum stype)
 }
 
 
-bool Scores::PreparePrint(
-  const TableEnum ttype,
-  int& prec) const
+bool Scores::onlySkips(const TableEnum ttype) const
 {
-  if (ttype == VALET_TABLE_FEW && options.minHands == 0)
-    return false;
-
-  bool flag = false;
-  for (unsigned pno = 1; pno < length && ! flag; pno++)
+  for (unsigned pno = 1; pno < length; pno++)
   {
-    const Score& c = pairScores[pno];
-    if (! c.skip(ttype))
-      flag = true;
+    if (! pairScores[pno].skip(ttype))
+      return false;
   }
-
-  // Skip if all entries are skipped.
-  if (! flag)
-    return false;
-
-  if (options.valet == VALET_MATCHPOINTS)
-    prec = 1;
-  else
-    prec = 2;
 
   return true;
 }
 
 
-string Scores::strHeader([[maybe_unused]] const FormatEnum format) const
-{
-  Score s;
-  return s.strHeader();  
-}
-
-
 string Scores::str(const TableEnum ttype) const
 {
-  stringstream ss;
-
-  int prec;
-  if (! Scores::PreparePrint(ttype, prec))
+  if (ttype == VALET_TABLE_FEW && options.minHands == 0)
     return "";
 
-  ss << Scores::strHeader(options.format);
+  if (Scores::onlySkips(ttype))
+    return "";
+
+  stringstream ss;
+  ss << pairScores[0].strHeader();
+
+  const int prec = (options.valet == VALET_MATCHPOINTS ? 1 : 2);
 
   for (unsigned pno = 1; pno < length; pno++)
     ss << pairScores[pno].strLine(pairs, ttype, prec);

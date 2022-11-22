@@ -40,11 +40,7 @@ class Scores
 
     void storeCrossCumul(const ValetEntryType& entry);
 
-    bool PreparePrint(
-      const TableEnum ttype,
-      int& prec) const;
-
-    string strHeader(const FormatEnum format) const;
+    bool onlySkips(const TableEnum ttype) const;
 
     string str(const TableEnum ttype) const;
 
