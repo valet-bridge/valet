@@ -1,3 +1,11 @@
+Scores
+------
+1. Check calcCompensation
+   - strtol??
+   - map not unsigned pair index?
+2. Why index from 1?
+3. 
+
 Check I haven't broken matchpoints
 Put stuff in scores/ directory
 Negative pair numbers are not a good idea

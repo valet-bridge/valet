@@ -34,10 +34,6 @@ class Scores
     typedef map<string, Score> OppMapType;
     vector<OppMapType> oppScores;
 
-    Score& getCrossScore(
-      const unsigned pairNo,
-      const unsigned oppNo);
-
     void storeCrossCumul(const ValetEntryType& entry);
 
     void calcCompensation();

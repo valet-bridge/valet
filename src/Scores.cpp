@@ -43,24 +43,11 @@ void Scores::Reset()
 }
 
 
-Score& Scores::getCrossScore(
-  const unsigned pairNo,
-  const unsigned oppNo)
-{
-  const string oppstr = to_string(oppNo);
-
-  OppMapType& oppMap = oppScores[pairNo];
-  OppMapType::iterator it = oppMap.find(oppstr);
-
-  return oppMap[oppstr];
-}
-
-
 void Scores::storeCrossCumul(const ValetEntryType& entry)
 {
   // Remember the pairs who played in order to be able to compensate.
-  Score& opp = Scores::getCrossScore(entry.pairNo, entry.oppNo);
-  Score& pair = Scores::getCrossScore(entry.oppNo, entry.pairNo);
+  Score& opp = oppScores[entry.pairNo][to_string(entry.oppNo)];
+  Score& pair = oppScores[entry.oppNo][to_string(entry.pairNo)];
 
   Score oppCP;
   Score pairCP;
