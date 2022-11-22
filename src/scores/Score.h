@@ -17,7 +17,6 @@
 
 #include "Aspect.h"
 
-class Pairs;
 struct ValetEntryType;
 
 enum SortingEnum: unsigned;
@@ -37,10 +36,7 @@ class Score
     string strHeaderText1() const;
     string strHeaderText2() const;
 
-    string strOverall(
-      const Pairs& pairs,
-      const int prec) const;
-
+    string strOverall(const int prec) const;
     string strDetails(const int prec) const;
 
   public:
@@ -66,7 +62,6 @@ class Score
     string strHeader() const;
 
     string strLine(
-      const Pairs& pairs,
       const TableEnum ttype,
       const int prec) const;
 };

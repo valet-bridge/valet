@@ -15,15 +15,12 @@
 #include <cassert>
 
 #include "Scores.h"
-#include "Pairs.h"
 #include "misc.h"
 
 using namespace std;
 
 #define SCORES_CHUNK_SIZE 16
 
-
-extern Pairs pairs;
 extern OptionsType options;
 
 
@@ -193,7 +190,7 @@ string Scores::str(const TableEnum ttype) const
   const int prec = (options.valet == VALET_MATCHPOINTS ? 1 : 2);
 
   for (unsigned pno = 1; pno < pairScores.size(); pno++)
-    ss << pairScores[pno].strLine(pairs, ttype, prec);
+    ss << pairScores[pno].strLine(ttype, prec);
 
   ss << "\n";
   

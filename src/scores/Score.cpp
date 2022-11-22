@@ -16,6 +16,7 @@
 
 #include "../Pairs.h"
 
+extern Pairs pairs;
 extern OptionsType options;
 
 
@@ -316,9 +317,7 @@ string Score::strHeader() const
 }
 
 
-string Score::strOverall(
-  const Pairs& pairs,
-  const int prec) const
+string Score::strOverall(const int prec) const
 {
   stringstream ss;
 
@@ -371,13 +370,12 @@ string Score::strDetails(const int prec) const
 
 
 string Score::strLine(
-  const Pairs& pairs,
   const TableEnum ttype,
   const int prec) const
 {
   if (Score::skip(ttype))
     return "";
 
-  return Score::strOverall(pairs, prec) + Score::strDetails(prec);
+  return Score::strOverall(prec) + Score::strDetails(prec);
 }
 
