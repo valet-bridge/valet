@@ -43,28 +43,6 @@ void Scores::Reset()
 }
 
 
-void Scores::storeCrossCumul(const ValetEntryType& entry)
-{
-  // Remember the pairs who played in order to be able to compensate.
-  Score& opp = oppScores[entry.pairNo][to_string(entry.oppNo)];
-  Score& pair = oppScores[entry.oppNo][to_string(entry.pairNo)];
-
-  Score oppCP;
-  Score pairCP;
-
-  // The entry always yields a declaring entry for us and a defending
-  // entry for the other pair.
-  oppCP.incrDefenders(entry);
-  pairCP.incrDeclarer(entry);
-
-  oppCP.scale();
-  pairCP.scale();
-
-  opp += oppCP;
-  pair += pairCP;
-}
-
-
 void Scores::add(const ValetEntryType& entry)
 {
   unsigned m = (entry.pairNo > entry.oppNo ? entry.pairNo : entry.oppNo);
@@ -79,18 +57,25 @@ void Scores::add(const ValetEntryType& entry)
     oppComp.resize(static_cast<size_t>(length));
   }
 
+  Score pairCP;
+  Score oppCP;
+
+  // The entry always yields a declaring entry for us and a defending
+  // entry for the other pair.
+  pairCP.incrDeclarer(entry);
+  oppCP.incrDefenders(entry);
+
   Score& cDecl = pairScores[entry.pairNo];
   cDecl.setPair(entry.pairNo);
-  cDecl.incrDeclarer(entry);
-
-  // The overall and bidding scores have to be inverted.
-  // The detailed scores have already been inverted.
+  cDecl += pairCP;
 
   Score& cDef = pairScores[entry.oppNo];
   cDef.setPair(entry.oppNo);
-  cDef.incrDefenders(entry);
+  cDef += oppCP;
 
-  Scores::storeCrossCumul(entry);
+  // Remember the pairs who played in order to be able to compensate.
+  oppScores[entry.pairNo][to_string(entry.oppNo)] += oppCP;
+  oppScores[entry.oppNo][to_string(entry.pairNo)] += pairCP;
 }
 
 

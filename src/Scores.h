@@ -34,8 +34,6 @@ class Scores
     typedef map<string, Score> OppMapType;
     vector<OppMapType> oppScores;
 
-    void storeCrossCumul(const ValetEntryType& entry);
-
     void calcCompensation();
 
     bool onlySkips(const TableEnum ttype) const;
