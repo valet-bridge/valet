@@ -14,12 +14,15 @@
 #include <vector>
 #include <map>
 
-using namespace std;
-
 #include "scores/Score.h"
 
-enum FormatEnum: unsigned;
+using namespace std;
+
 enum TableEnum: unsigned;
+enum SortingEnum: unsigned;
+
+struct ValetEntryType;
+
 
 class Scores
 {
@@ -40,6 +43,8 @@ class Scores
 
     void storeCrossCumul(const ValetEntryType& entry);
 
+    void calcCompensation();
+
     bool onlySkips(const TableEnum ttype) const;
 
     string str(const TableEnum ttype) const;
@@ -54,11 +59,11 @@ class Scores
 
     void AddEntry(const ValetEntryType& entry);
 
-    void Compensate();
+    void scale();
 
-    void Normalize();
+    void compensate();
 
-    void Sort(const SortingEnum sort);
+    void sort(const SortingEnum sort);
 
     string str() const;
 

@@ -113,7 +113,14 @@ void Scores::AddEntry(
 }
 
 
-void Scores::Compensate()
+void Scores::scale()
+{
+  for (unsigned pno = 1; pno < length; pno++)
+    pairScores[pno].scale();
+}
+
+
+void Scores::calcCompensation()
 {
   // Compensate for the average strength of opponents, ignoring
   // each opponent's results against us.
@@ -144,23 +151,20 @@ void Scores::Compensate()
 }
 
 
-void Scores::Normalize()
+void Scores::compensate()
 {
+  assert(options.compensateFlag);
+
+  Scores::calcCompensation();
+
   for (unsigned pno = 1; pno < length; pno++)
-  {
-    Score& c = pairScores[pno];
-
-    c.scale();
-
-    if (options.compensateFlag)
-      c.compensate(oppComp[pno]);
-  }
+    pairScores[pno].compensate(oppComp[pno]);
 }
 
 
-void Scores::Sort(const SortingEnum stype)
+void Scores::sort(const SortingEnum stype)
 {
-  sort(next(pairScores.begin()), pairScores.end(),
+  ::sort(next(pairScores.begin()), pairScores.end(),
     [stype](const Score& c1, const Score& c2)
     {
       return c1.figure(stype) > c2.figure(stype);
@@ -171,10 +175,8 @@ void Scores::Sort(const SortingEnum stype)
 bool Scores::onlySkips(const TableEnum ttype) const
 {
   for (unsigned pno = 1; pno < length; pno++)
-  {
     if (! pairScores[pno].skip(ttype))
       return false;
-  }
 
   return true;
 }
