@@ -1,0 +1,80 @@
+[Board "17"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:AT942.754.92.KT8 Q6.KJT62.AKQ863. 85.AQ93.T.QJ5432 KJ73.8.J754.A976"]
+
+[Board "18"]
+[Dealer "E"]
+[Vulnerable "NS"]
+[Deal "N:.T73.Q832.Q98654 QT97652.AJ5.AJ.7 AK843.KQ62.K5.J3 J.984.T9764.AKT2"]
+
+[Board "19"]
+[Dealer "S"]
+[Vulnerable "EW"]
+[Deal "N:Q7.AJ54.A974.A85 J654.Q87.5.KQJ32 AKT.K93.KJ862.96 9832.T62.QT3.T74"]
+
+[Board "20"]
+[Dealer "W"]
+[Vulnerable "Both"]
+[Deal "N:K854.83.J64.T843 32.J42.AKT95.972 AQT97.AKT5.87.K5 J6.Q976.Q32.AQJ6"]
+
+[Board "21"]
+[Dealer "N"]
+[Vulnerable "NS"]
+[Deal "N:AT2.Q82.KT7.AJT5 QJ53.T9764.A42.8 K64.AK53.J6.K973 987.J.Q9853.Q642"]
+
+[Board "22"]
+[Dealer "E"]
+[Vulnerable "EW"]
+[Deal "N:Q.J9762.K642.875 9842.QT8.QT73.AT K75.543.AJ9.K432 AJT63.AK.85.QJ96"]
+
+[Board "23"]
+[Dealer "S"]
+[Vulnerable "Both"]
+[Deal "N:QT84.A7.743.AT42 .K9865.A86.KQ763 K76532.43.KJ9.J5 AJ9.QJT2.QT52.98"]
+
+[Board "24"]
+[Dealer "W"]
+[Vulnerable "None"]
+[Deal "N:J532.T982.JT64.J AQ9.AJ73.AQ.Q753 T6.KQ64.K95.K984 K874.5.8732.AT62"]
+
+[Board "25"]
+[Dealer "N"]
+[Vulnerable "EW"]
+[Deal "N:QT8.AT653.QJ.Q32 AJ932.Q74.962.A4 754.K.AKT543.T75 K6.J982.87.KJ986"]
+
+[Board "26"]
+[Dealer "E"]
+[Vulnerable "Both"]
+[Deal "N:AQT65.KJ82..QJ32 7.A953.AT853.KT5 KJ84.QT4.KJ972.8 932.76.Q64.A9764"]
+
+[Board "27"]
+[Dealer "S"]
+[Vulnerable "None"]
+[Deal "N:J.AJ84.AJ8.AQT74 AQT4.K53.T2.KJ86 K32.Q62.Q63.9532 98765.T97.K9754."]
+
+[Board "28"]
+[Dealer "W"]
+[Vulnerable "NS"]
+[Deal "N:Q8.K972.K7.AQJ97 JT62.AT5.984.KT5 .643.AJT52.86432 AK97543.QJ8.Q63."]
+
+[Board "29"]
+[Dealer "N"]
+[Vulnerable "Both"]
+[Deal "N:KT32.A83.J93.JT8 QJ854.J96.5.K543 976.K75.QT762.A6 A.QT42.AK84.Q972"]
+
+[Board "30"]
+[Dealer "E"]
+[Vulnerable "None"]
+[Deal "N:T7.J652.K8753.96 KJ63.T987.2.AJ72 98542.AKQ.QT9.K3 AQ.43.AJ64.QT854"]
+
+[Board "31"]
+[Dealer "S"]
+[Vulnerable "NS"]
+[Deal "N:QT7.AQJ4.J863.52 J98.K9752.4.KQ97 K3.3.A9752.AJT63 A6542.T86.KQT.84"]
+
+[Board "32"]
+[Dealer "W"]
+[Vulnerable "EW"]
+[Deal "N:J964..KT98.KJ842 AQ83.K98762.7.AT .AQ43.A642.Q7653 KT752.JT5.QJ53.9"]
+
