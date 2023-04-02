@@ -49,7 +49,8 @@ const vector<OptEntry> optList =
   {"o", "order", 1},
   {"a", "average", 0},
   {"f", "format", 1},
-  {"j", "join", 1}
+  {"j", "join", 1},
+  {"L", "learn", 1}
 };
 
 
@@ -128,6 +129,10 @@ void usage(const char base[])
     "-j, --join c       Separator for csv output (default the comma,\n" <<
     "                   ',' (without the marks).  In German Excel it \n" <<
     "                   is useful to set this to ';', and so on.\n" <<
+    "\n" <<
+    "-L, --learn lfile  Output summary data for each hand that is\n" <<
+    "                   suitable for learning (clustering)." <<
+    "                   Then stop without generating Valet scores." <<
     endl;
 }
 
@@ -202,6 +207,8 @@ void setDefaults()
   options.averageFlag = false;
   options.format = VALET_FORMAT_TEXT;
   options.separator = ',';
+  options.learnFlag = false;
+  options.learnFile = "learn.txt";
 }
 
 
@@ -245,6 +252,11 @@ void printOptions()
     (options.format == VALET_FORMAT_TEXT ? "text" : "csv") << "\n";
   cout << setw(12) << "join" << 
     setw(12) << options.separator << "\n";
+  if (options.learnFlag)
+    cout << setw(12) << "learn" << 
+      setw(12) << options.learnFile << "\n";
+  else
+    cout << setw(12) << "learn" << "false\n";
   cout << "\n" << right;
 }
 
@@ -435,6 +447,11 @@ void readArgs(
           nextToken -= 2;
           errFlag = true;
         }
+        break;
+
+      case 'L':
+        options.learnFlag = true;
+        options.learnFile = optarg;
         break;
 
       default:

@@ -113,6 +113,9 @@ struct Options
 
   FormatEnum format;
   string separator;
+
+  bool learnFlag;
+  string learnFile;
 };
 
 struct Error
