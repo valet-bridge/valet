@@ -152,7 +152,7 @@ void ScoreInput::setPassout(
 
 
 void ScoreInput::getLevelStats(
-  TableauSide& tsideEffective,
+  ValetSide& tsideEffective,
   TableauLevel& tlevel) const
 {
   tsideEffective = sideEffective;
@@ -161,7 +161,7 @@ void ScoreInput::getLevelStats(
 
 
 void ScoreInput::getStrainStats(
-  TableauSide& tsideActual,
+  ValetSide& tsideActual,
   TableauStrain& tstrain) const
 {
   tsideActual = sideActual;

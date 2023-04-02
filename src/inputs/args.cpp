@@ -131,8 +131,8 @@ void usage(const char base[])
     "                   is useful to set this to ';', and so on.\n" <<
     "\n" <<
     "-L, --learn lfile  Output summary data for each hand that is\n" <<
-    "                   suitable for learning (clustering)." <<
-    "                   Then stop without generating Valet scores." <<
+    "                   suitable for learning (clustering).\n" <<
+    "                   Then stop without generating Valet scores.\n" <<
     endl;
 }
 
@@ -462,6 +462,12 @@ void readArgs(
     if (errFlag)
       break;
   }
+
+  if (options.tableauFlag && options.learnFlag)
+    errFlag = true;
+
+  if (options.pairSheetsFlag && options.learnFlag)
+    errFlag = true;
 
   if (errFlag || c == -1)
   {

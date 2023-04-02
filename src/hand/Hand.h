@@ -153,6 +153,9 @@ class Hand
     void add(const Result& result);
 
     void calculateScores(vector<ScoreInput>& entries);
+
+    // A profile for simple clustering.
+    string strProfile() const;
 };
 
 #endif

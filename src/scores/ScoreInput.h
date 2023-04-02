@@ -17,7 +17,7 @@ using namespace std;
 
 enum TableauLevel: unsigned;
 enum TableauStrain: unsigned;
-enum TableauSide: unsigned;
+enum ValetSide: unsigned;
 
 
 struct ScoreInput
@@ -36,8 +36,8 @@ struct ScoreInput
   unsigned multiplier;
   TableauLevel level;
   TableauStrain strain;
-  TableauSide sideActual;
-  TableauSide sideEffective;
+  ValetSide sideActual;
+  ValetSide sideEffective;
 
   string keyResult;
 
@@ -55,11 +55,11 @@ struct ScoreInput
     const float totalIMPs);
 
   void getLevelStats(
-    TableauSide& tsideEffective,
+    ValetSide& tsideEffective,
     TableauLevel& tlevel) const;
 
   void getStrainStats(
-    TableauSide& tsideActual,
+    ValetSide& tsideActual,
     TableauStrain& tstrain) const;
 
   string str() const;

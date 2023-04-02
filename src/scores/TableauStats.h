@@ -12,6 +12,8 @@
 
 #include <vector>
 
+#include "../cst.h"
+
 using namespace std;
 
 
@@ -65,16 +67,9 @@ const vector<StrainEntry> strains =
   {STRAIN_CLUBS, "Clubs"}
 };
 
-enum TableauSide: unsigned
-{
-  SIDE_NS = 0,
-  SIDE_EW = 1,
-  SIDE_SIZE = 2
-};
-
 struct SideEntry
 {
-  TableauSide side;
+  ValetSide side;
   string name;
 };
 

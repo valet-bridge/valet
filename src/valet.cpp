@@ -72,7 +72,7 @@ int main(int argc, char const * argv[])
     ps.open(options.pairSheetsFile, fstream::out);
     if (! ps.is_open())
     {
-      cerr << "Can't write to " << options.pairSheetsFlag << "\n";
+      cerr << "Can't write to " << options.pairSheetsFile << "\n";
       exit(1);
     }
   }
@@ -133,6 +133,22 @@ int main(int argc, char const * argv[])
 
   if (options.compensateFlag)
     scores.compensate();
+
+  if (options.learnFlag)
+  {
+    fstream ls;
+    ls.open(options.learnFile, fstream::out);
+    if (! ls.is_open())
+    {
+      cerr << "Can't write to " << options.learnFile << "\n";
+      exit(1);
+    }
+
+    for (auto& hentry: hlist)
+      ls << hentry.str << "," << hentry.handPtr->strProfile();
+
+    exit(0);
+  }
 
   scores.sort(static_cast<SortingEnum>(options.sort));
   cout << scores.str();

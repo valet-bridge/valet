@@ -9,6 +9,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <sstream>
 #include <cassert>
 
 #include "Hand.h"
@@ -19,6 +20,7 @@
 #include "../valet.h"
 #include "../scoring.h"
 #include "../cst.h"
+#include "../learn/LearnLevel.h"
 
 
 extern Options options;
@@ -752,5 +754,49 @@ void Hand::calculateScores(vector<ScoreInput>& entries)
       }
     }
   }
+}
+
+
+string Hand::strProfile() const
+{
+  float passed = 0.f;
+  vector<float> first, second;
+  first.resize(VALET_LEARN_SIZE);
+  second.resize(VALET_LEARN_SIZE);
+
+  const float incr = 1.f / static_cast<float>(numEntries);
+  int cumScore = 0;
+
+  for (unsigned index = 0; index < numEntries; index++)
+  {
+    const Result& result = results[index];
+    if (result.isPassedOut())
+      passed += incr;
+    else if (result.declarerNS())
+    {
+      first[result.getLearn()] += incr;
+      cumScore += result.calcScore();
+    }
+    else if (result.declarerEW())
+    {
+      second[result.getLearn()] += incr;
+      cumScore += result.calcScore();
+    }
+    else
+      assert(false);
+  }
+
+  if (cumScore < 0)
+    swap(first, second);
+
+  stringstream ss;
+  ss << setprecision(4) << fixed;
+  for (unsigned level = 0; level < VALET_PASSED_OUT; level++)
+    ss << first[level] << ",";
+  for (unsigned level = 0; level < VALET_PASSED_OUT; level++)
+    ss << second[level] << ",";
+  ss << passed << "\n";
+
+  return ss.str();
 }
 

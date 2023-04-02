@@ -33,7 +33,7 @@ Tableau::Tableau()
 
 void Tableau::add(const vector<ScoreInput>& entries)
 {
-  TableauSide tsideEffective, tsideActual;
+  ValetSide tsideEffective, tsideActual;
   TableauLevel tlevel;
   TableauStrain tstrain;
 

@@ -18,7 +18,10 @@
 #include "pairs/Players.h"
 #include "pairs/Pairs.h"
 
+#include "learn/LearnLevel.h"
+
 #include "scoringTables.h"
+
 
 extern Players players;
 extern Pairs pairs;
@@ -320,6 +323,65 @@ unsigned Result::getLeadDenom() const
 unsigned Result::getLeadRank() const
 {
   return leadRank;
+}
+
+
+LearnLevel Result::getLearn() const
+{
+  if (level == 0)
+    return VALET_PASSED_OUT;
+  else if (level == 7)
+  {
+    if (multiplier == VALET_UNDOUBLED)
+      return VALET_GRAND_SLAM_UNDOUBLED;
+    else if (multiplier == VALET_DOUBLED)
+      return VALET_GRAND_SLAM_DOUBLED;
+    else if (multiplier == VALET_REDOUBLED)
+      return VALET_GRAND_SLAM_REDOUBLED;
+  }
+  else if (level == 6)
+  {
+    if (multiplier == VALET_UNDOUBLED)
+      return VALET_SMALL_SLAM_UNDOUBLED;
+    else if (multiplier == VALET_DOUBLED)
+      return VALET_SMALL_SLAM_DOUBLED;
+    else if (multiplier == VALET_REDOUBLED)
+      return VALET_SMALL_SLAM_REDOUBLED;
+  }
+  else if (level == 5 ||
+      (level == 4 && denom != VALET_CLUBS && denom != VALET_DIAMONDS) ||
+      (level == 3 && denom == VALET_NOTRUMP))
+  {
+    if (multiplier == VALET_UNDOUBLED)
+      return VALET_GAME_UNDOUBLED;
+    else if (multiplier == VALET_DOUBLED)
+      return VALET_GAME_DOUBLED;
+    else if (multiplier == VALET_REDOUBLED)
+      return VALET_GAME_REDOUBLED;
+  }
+  else if (multiplier == VALET_UNDOUBLED)
+  {
+    return VALET_PARTIAL_UNDOUBLED;
+  }
+  else if (multiplier == VALET_DOUBLED)
+  {
+    if (level == 4 ||
+        level == 3 ||
+        (level == 2 && denom != VALET_CLUBS && denom != VALET_DIAMONDS))
+      return VALET_PARTIAL_DOUBLED_GAME;
+    else
+      return VALET_PARTIAL_DOUBLED_NOT_GAME;
+  }
+  else if (multiplier == VALET_REDOUBLED)
+  {
+    if (level == 1 && (denom == VALET_CLUBS || denom == VALET_DIAMONDS))
+      return VALET_PARTIAL_REDOUBLED_NOT_GAME;
+    else
+      return VALET_PARTIAL_REDOUBLED_GAME;
+  }
+
+  // To have something.
+  return VALET_PASSED_OUT;
 }
 
 

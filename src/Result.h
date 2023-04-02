@@ -13,6 +13,8 @@
 
 using namespace std;
 
+enum LearnLevel: unsigned;
+
 
 class Result
 {
@@ -42,59 +44,61 @@ class Result
 
   public:
 
-  void setPlayers(
-    const string& northIn,
-    const string& eastIn,
-    const string& southIn,
-    const string& westIn);
+    void setPlayers(
+      const string& northIn,
+      const string& eastIn,
+      const string& southIn,
+      const string& westIn);
 
-  void setPassedOut();
+    void setPassedOut();
 
-  void setGeneralResult(
-    const unsigned levelIn,
-    const unsigned denomIn,
-    const unsigned multiplierIn,
-    const unsigned declarerIn,
-    const unsigned tricksIn,
-    const unsigned vulIn);
+    void setGeneralResult(
+      const unsigned levelIn,
+      const unsigned denomIn,
+      const unsigned multiplierIn,
+      const unsigned declarerIn,
+      const unsigned tricksIn,
+      const unsigned vulIn);
 
-  void setNoLead();
+    void setNoLead();
 
-  void setLead(
-    const unsigned leadDenomIn,
-    const unsigned leadRankIn);
+    void setLead(
+      const unsigned leadDenomIn,
+      const unsigned leadRankIn);
 
-  void setTricks(const unsigned tricksIn);
+    void setTricks(const unsigned tricksIn);
 
-  void getPairData(
-    unsigned& pairNS,
-    unsigned& pairEW,
-    unsigned& declIndex, // The indices are 0 or 1
-    unsigned& leadIndex,
-    bool& passedOutFlag) const;
+    void getPairData(
+      unsigned& pairNS,
+      unsigned& pairEW,
+      unsigned& declIndex, // The indices are 0 or 1
+      unsigned& leadIndex,
+      bool& passedOutFlag) const;
 
-  // Use the actual tricks.
-  int calcScore() const;
+    // Use the actual tricks.
+    int calcScore() const;
 
-  // Use the stated tricks.
-  int calcScore(const unsigned tricks) const;
+    // Use the stated tricks.
+    int calcScore(const unsigned tricks) const;
 
-  bool isPassedOut() const;
-  bool declarerNS() const;
-  bool declarerEW() const;
-  bool hasLead() const;
+    bool isPassedOut() const;
+    bool declarerNS() const;
+    bool declarerEW() const;
+    bool hasLead() const;
 
-  unsigned getLevel() const;
-  unsigned getDenom() const;
-  unsigned getMultiplier() const;
-  unsigned getDeclarer() const;
-  unsigned getTricks() const;
-  unsigned getLeadDenom() const;
-  unsigned getLeadRank() const;
+    unsigned getLevel() const;
+    unsigned getDenom() const;
+    unsigned getMultiplier() const;
+    unsigned getDeclarer() const;
+    unsigned getTricks() const;
+    unsigned getLeadDenom() const;
+    unsigned getLeadRank() const;
 
-  string key() const;
+    LearnLevel getLearn() const;
 
-  string strDebug() const;
+    string key() const;
+
+    string strDebug() const;
 
 };
 
