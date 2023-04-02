@@ -1,0 +1,6 @@
+ Generate the tableau file:
+ ./valet -d ../data/2016-Euro/Men -l -t tableau.txt -p pairs.txt > out.txt
+
+ Generate the pruned tableau file and the two sides for exercise:
+ perl slammish.pl tableau.txt ../../data/2016-Euro/Men/hands
+ (actually it doesn't yet prune the tableau file)

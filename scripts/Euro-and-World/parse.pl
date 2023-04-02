@@ -64,6 +64,15 @@ for my $fname (@ARGV)
     {
       $roundno = $1;
     }
+    elsif ($line =~ /Round/)
+    {
+      $line = <$fh>;
+      chomp $line;
+      if ($line =~ /^\s*(\d+)/)
+      {
+        $roundno = $1;
+      }
+    }
     elsif ($line =~ /Board[Aa]cross.asp\?qboard=0*(\d+)/)
     {
       my $newno = $1;

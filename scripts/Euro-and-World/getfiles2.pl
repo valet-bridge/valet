@@ -47,10 +47,22 @@ my $tourney1 = 'http://db.eurobridge.org/repository/competitions/20monaco/micros
 # 'http://www.worldbridge.org/Repository/tourn/Veldhoven.11/microSite/Results/';
 #
 # 2013: 980, 981
-# 'http://www.worldbridge.org/Repository/tourn/Bali.13/Asp/';
+# 'http://www.worldbridge.org/Repository/tourn/Bali.13/microSite/Asp/';
 #
 # 2015: 1130, 1131
-# 'http://www.worldbridge.org/Repository/tourn/chennai.15/MicroSiteAsp/';
+# 'http://www.worldbridge.org/Repository/tourn/chennai.15/microSite/Asp/';
+#
+# 2017: 1440, 1441
+# 'http://www.worldbridge.org/Repository/tourn/lyon.17/microSite/Asp/';
+#
+# 2019: 1640, 1641, 23 rounds
+# 'http://www.worldbridge.org/Repository/tourn/wuhan.19/microSite/Asp/';
+#
+# 2019: 2200, 2201, 23 rounds
+# 'http://www.worldbridge.org/Repository/tourn/salsomaggiore.22/microSite/Asp/';
+#
+# 2019: 2200, 2201, 23 rounds
+# 'http://www.worldbridge.org/Repository/tourn/salsomaggiore.22/microSite/Asp/';
 
 # European Championships
 # ----------------------
@@ -71,8 +83,14 @@ my $tourney1 = 'http://db.eurobridge.org/repository/competitions/20monaco/micros
 # 2014: 1023, 1024, 1021
 # 'http://www.eurobridge.org/Repository/competitions/14Opatija/microSite/Asp/';
 #
+# 2016: 1210 (37 rounds)
+# 'http://www.eurobridge.org/Repository/competitions/16Budapest/microSite/Asp/';
+#
 # 2018: 1480
 # 'http://www.eurobridge.org/Repository/competitions/18Monaco/microSite/Asp/';
+#
+# 2022: 2220, 29 rounds
+# 'http://www.eurobridge.org/Repository/competitions/22Madeira/microSite/Asp/';
 
 
 my $fetch1 = "$sprefix1/RoundTeams.asp";

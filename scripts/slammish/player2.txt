@@ -1,0 +1,714 @@
+Round  3
+Board  10
+Dealer E
+Vul    Both
+
+West
+
+K
+KQ97542
+KT94
+6
+
+----------
+
+Round  3
+Board  13
+Dealer N
+Vul    Both
+
+West
+
+KT4
+AKQ2
+KQ7
+J93
+
+----------
+
+Round  4
+Board  27
+Dealer S
+Vul    None
+
+West
+
+KQ32
+AK432
+A7
+64
+
+----------
+
+Round  4
+Board  29
+Dealer N
+Vul    Both
+
+South
+
+KJ3
+86
+QT6
+AJT96
+
+----------
+
+Round  5
+Board  2
+Dealer E
+Vul    NS
+
+West
+
+KQJ6
+AK95
+T6
+T53
+
+----------
+
+Round  6
+Board  27
+Dealer S
+Vul    None
+
+South
+
+T973
+K5
+53
+AT854
+
+----------
+
+Round  6
+Board  30
+Dealer E
+Vul    None
+
+South
+
+K873
+A753
+K4
+J84
+
+----------
+
+Round  7
+Board  8
+Dealer W
+Vul    None
+
+South
+
+AQT86
+9
+A75
+6542
+
+----------
+
+Round  9
+Board  15
+Dealer S
+Vul    NS
+
+West
+
+9732
+KJ864
+A9
+42
+
+----------
+
+Round  10
+Board  27
+Dealer S
+Vul    None
+
+South
+
+AQ74
+AJT85
+T86
+9
+
+----------
+
+Round  11
+Board  5
+Dealer N
+Vul    NS
+
+South
+
+AKT7
+KJ4
+K964
+KJ
+
+----------
+
+Round  11
+Board  10
+Dealer E
+Vul    Both
+
+West
+
+9
+AKT5
+864
+A9732
+
+----------
+
+Round  11
+Board  15
+Dealer S
+Vul    NS
+
+South
+
+863
+AQ6
+AKJ62
+J7
+
+----------
+
+Round  12
+Board  18
+Dealer E
+Vul    NS
+
+South
+
+A6
+AQ8
+KJ8743
+A5
+
+----------
+
+Round  12
+Board  23
+Dealer S
+Vul    Both
+
+South
+
+AQ6
+K9843
+
+AJ754
+
+----------
+
+Round  12
+Board  26
+Dealer E
+Vul    Both
+
+South
+
+3
+T43
+KJ87
+AQT63
+
+----------
+
+Round  13
+Board  2
+Dealer E
+Vul    NS
+
+South
+
+K7542
+J
+A842
+QJ9
+
+----------
+
+Round  13
+Board  9
+Dealer N
+Vul    EW
+
+South
+
+AK75
+KQT83
+76
+AJ
+
+----------
+
+Round  14
+Board  17
+Dealer N
+Vul    None
+
+South
+
+KT9
+8743
+AK7642
+
+
+----------
+
+Round  14
+Board  24
+Dealer W
+Vul    None
+
+South
+
+AJ98432
+96
+632
+8
+
+----------
+
+Round  14
+Board  30
+Dealer E
+Vul    None
+
+South
+
+K8
+42
+AQT742
+AJ7
+
+----------
+
+Round  15
+Board  9
+Dealer N
+Vul    EW
+
+West
+
+AKJ4
+
+A542
+KQJ84
+
+----------
+
+Round  17
+Board  1
+Dealer N
+Vul    None
+
+West
+
+T752
+K86
+AJ632
+2
+
+----------
+
+Round  17
+Board  8
+Dealer W
+Vul    None
+
+West
+
+AQ74
+T
+KQ62
+AJT4
+
+----------
+
+Round  18
+Board  17
+Dealer N
+Vul    None
+
+South
+
+AQ83
+QT9
+6
+KQ854
+
+----------
+
+Round  18
+Board  24
+Dealer W
+Vul    None
+
+South
+
+AK954
+A8
+J98
+A53
+
+----------
+
+Round  18
+Board  29
+Dealer N
+Vul    Both
+
+West
+
+K7
+KQJ93
+T5
+QT82
+
+----------
+
+Round  19
+Board  1
+Dealer N
+Vul    None
+
+South
+
+AKJ6542
+J753
+K9
+
+
+----------
+
+Round  20
+Board  21
+Dealer N
+Vul    NS
+
+West
+
+KQJ8
+K8
+AJT8
+QT2
+
+----------
+
+Round  20
+Board  27
+Dealer S
+Vul    None
+
+South
+
+
+K83
+KT97
+AQJ986
+
+----------
+
+Round  21
+Board  4
+Dealer W
+Vul    Both
+
+West
+
+QJ42
+Q8
+AKJ872
+8
+
+----------
+
+Round  21
+Board  9
+Dealer N
+Vul    EW
+
+West
+
+KJ432
+AQ
+AQ652
+2
+
+----------
+
+Round  22
+Board  22
+Dealer E
+Vul    EW
+
+West
+
+AK63
+AT863
+9
+654
+
+----------
+
+Round  23
+Board  6
+Dealer E
+Vul    EW
+
+South
+
+J85
+AKQ8742
+A
+86
+
+----------
+
+Round  24
+Board  18
+Dealer E
+Vul    NS
+
+South
+
+K5
+2
+AKT97542
+KJ
+
+----------
+
+Round  24
+Board  19
+Dealer S
+Vul    EW
+
+West
+
+KQ95
+KQ6
+AQ3
+KJT
+
+----------
+
+Round  24
+Board  32
+Dealer W
+Vul    EW
+
+West
+
+QT98
+J
+AKQ94
+763
+
+----------
+
+Round  26
+Board  17
+Dealer N
+Vul    None
+
+South
+
+AK432
+AK5
+T
+AK83
+
+----------
+
+Round  27
+Board  2
+Dealer E
+Vul    NS
+
+West
+
+KT973
+AK6
+A95
+A6
+
+----------
+
+Round  27
+Board  8
+Dealer W
+Vul    None
+
+South
+
+AKQT
+Q8764
+K53
+A
+
+----------
+
+Round  28
+Board  28
+Dealer W
+Vul    NS
+
+West
+
+Q875
+KQ876
+AT84
+
+
+----------
+
+Round  29
+Board  9
+Dealer N
+Vul    EW
+
+West
+
+QJ9
+A2
+AJ874
+AK7
+
+----------
+
+Round  29
+Board  12
+Dealer W
+Vul    NS
+
+South
+
+AQJ2
+AKT
+QJ8
+K54
+
+----------
+
+Round  31
+Board  2
+Dealer E
+Vul    NS
+
+South
+
+AKJ6
+KQ
+94
+KT843
+
+----------
+
+Round  32
+Board  21
+Dealer N
+Vul    NS
+
+South
+
+4
+T94
+AQ4
+AKQT43
+
+----------
+
+Round  35
+Board  6
+Dealer E
+Vul    EW
+
+South
+
+QT4
+AQ43
+8
+AQ732
+
+----------
+
+Round  35
+Board  15
+Dealer S
+Vul    NS
+
+West
+
+AKT76
+AT87
+
+K932
+
+----------
+
+Round  36
+Board  24
+Dealer W
+Vul    None
+
+South
+
+J
+A965
+AKT862
+J7
+
+----------
+
+Round  36
+Board  25
+Dealer N
+Vul    EW
+
+West
+
+AT7
+A76
+AK83
+T62
+
+----------
+
+Round  36
+Board  27
+Dealer S
+Vul    None
+
+South
+
+AQJ97
+98
+KQJ84
+9
+
+----------
+
+Round  37
+Board  4
+Dealer W
+Vul    Both
+
+South
+
+T962
+74
+T9832
+J5
+
+----------
+

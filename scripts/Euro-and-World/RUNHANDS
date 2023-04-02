@@ -1,0 +1,49 @@
+#!/bin/tcsh
+
+set ctr = 0
+set post = 'Open/Hands'
+
+foreach d (2005-World 2006-Euro 2007-World 2008-Euro 2008-Mind 2009-World 2010-Euro 2011-World)
+  @ ctr = $ctr + 1
+  perl parsedist.pl $ctr $d/$post > xhands$ctr.txt
+  perl selectround.pl $ctr $d/Open/scores.txt > xscores$ctr.txt
+end
+
+# These are manually combined into one set of 32 boards.
+# Number 15 also becomes number 31.
+# Number 32 also becomes number 16.
+perl rehand.pl xhands1.txt low  > hands1.txt
+perl rehand.pl xhands2.txt high > hands2.txt
+
+# This is a single set of hands 1-15.
+# They get manually duplicated into 17-31.
+# Boards 16 and 32 are random.
+perl rehand.pl xhands3.txt low  > hands3.txt
+
+# These are manually combined into one set of 32 boards.
+# Number 15 also becomes number 31.
+# Number 32 also becomes number 16.
+perl rehand.pl xhands4.txt low  > hands4.txt
+perl rehand.pl xhands5.txt high > hands5.txt
+
+# This is a single set of hands 1-15.
+# They get manually duplicated into 17-31.
+# Boards 16 and 32 are random.
+perl rehand.pl xhands6.txt low  > hands6.txt
+
+# These are manually combined into one set of 32 boards.
+# Number 15 also becomes number 31.
+# Number 32 also becomes number 16.
+perl rehand.pl xhands7.txt low  > hands7.txt
+perl rehand.pl xhands8.txt high > hands8.txt
+
+perl rescore.pl xhands1.txt xscores1.txt low  > scores1.txt
+perl rescore.pl xhands2.txt xscores2.txt high > scores2.txt
+perl rescore.pl xhands3.txt xscores3.txt low  > scores3.txt
+
+perl rescore.pl xhands4.txt xscores4.txt low  > scores4.txt
+perl rescore.pl xhands5.txt xscores5.txt high > scores5.txt
+perl rescore.pl xhands6.txt xscores6.txt low  > scores6.txt
+
+perl rescore.pl xhands7.txt xscores7.txt low  > scores7.txt
+perl rescore.pl xhands8.txt xscores8.txt high > scores8.txt
