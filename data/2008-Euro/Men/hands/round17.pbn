@@ -1,0 +1,100 @@
+[Board "1"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:86532.K964.5.T94 QT9.JT3.KQ.AQ853 AKJ.Q8.AJT743.K6 74.A752.9862.J72"]
+
+[Board "2"]
+[Dealer "E"]
+[Vulnerable "NS"]
+[Deal "N:3.Q98432.J96.986 KT75.A75.T853.J7 QJ964..AKQ42.K52 A82.KJT6.7.AQT43"]
+
+[Board "3"]
+[Dealer "S"]
+[Vulnerable "EW"]
+[Deal "N:K963.J86.A93.KQT T7.AKQ43.J4.J642 AQ52.92.KQ7.8753 J84.T75.T8652.A9"]
+
+[Board "4"]
+[Dealer "W"]
+[Vulnerable "Both"]
+[Deal "N:KT853.T93.T.K873 Q6.J742.AQ932.J6 A97.AQ865.KJ7.T4 J42.K.8654.AQ952"]
+
+[Board "5"]
+[Dealer "N"]
+[Vulnerable "NS"]
+[Deal "N:Q8.AJ7642.A7.J82 AK62.Q.J62.QT965 T7.T95.KQ95.AK73 J9543.K83.T843.4"]
+
+[Board "6"]
+[Dealer "E"]
+[Vulnerable "EW"]
+[Deal "N:AT872.T432.96.43 K94.7.JT854.AT86 53.KQ986.Q.KQJ97 QJ6.AJ5.AK732.52"]
+
+[Board "7"]
+[Dealer "S"]
+[Vulnerable "Both"]
+[Deal "N:J963.K6.T72.J764 742.QJT975.J4.53 8.A84.KQ9865.AQ2 AKQT5.32.A3.KT98"]
+
+[Board "8"]
+[Dealer "W"]
+[Vulnerable "None"]
+[Deal "N:7632.AT763.53.KQ K.J9.QT9764.9865 AQJ5.K5.KJ8.AT32 T984.Q842.A2.J74"]
+
+[Board "9"]
+[Dealer "N"]
+[Vulnerable "EW"]
+[Deal "N:54.97652.632.T52 QT9.Q843.A95.763 KJ62.AKJT.J8.AQ4 A873..KQT74.KJ98"]
+
+[Board "10"]
+[Dealer "E"]
+[Vulnerable "Both"]
+[Deal "N:A87.T963.76.KJ32 JT3.K82.QJ32.Q74 K954.AJ7.AK85.A8 Q62.Q54.T94.T965"]
+
+[Board "11"]
+[Dealer "S"]
+[Vulnerable "None"]
+[Deal "N:KQ9854.Q7.742.96 AJ73.A85.KQJT.J4 T2.KJT2.A8653.85 6.9643.9.AKQT732"]
+
+[Board "12"]
+[Dealer "W"]
+[Vulnerable "NS"]
+[Deal "N:T532.985.643.K85 J6.J7432.AK752.6 Q4.KT6.Q8.JT9732 AK987.AQ.JT9.AQ4"]
+
+[Board "13"]
+[Dealer "N"]
+[Vulnerable "Both"]
+[Deal "N:JT9752.Q.AJ2.T93 KQ83.A94.KT9.762 4.JT762.Q4.AQ854 A6.K853.87653.KJ"]
+
+[Board "14"]
+[Dealer "E"]
+[Vulnerable "None"]
+[Deal "N:A73.K92.AJ9.Q643 86.A43.KQT632.AK QT.JT75.875.T952 KJ9542.Q86.4.J87"]
+
+[Board "15"]
+[Dealer "S"]
+[Vulnerable "NS"]
+[Deal "N:AQ93.KQJ75.8.954 42.T6.KJ6542.AK6 KT5.A984.AT3.873 J876.32.Q97.QJT2"]
+
+[Board "16"]
+[Dealer "W"]
+[Vulnerable "EW"]
+[Deal "N:J2.62.AT2.AQJT84 AT84.AJ3.K863.K5 75.KQT94.J95.973 KQ963.875.Q74.62"]
+
+[Board "17"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:KJ743.Q6.Q7.AJ84 986.JT72.KT85.95 T5.K9843.42.7632 AQ2.A5.AJ963.KQT"]
+
+[Board "18"]
+[Dealer "E"]
+[Vulnerable "NS"]
+[Deal "N:JT42.7.95.KT9432 K9765.KJ.A73.A87 A3.AT854.T4.QJ65 Q8.Q9632.KQJ862."]
+
+[Board "19"]
+[Dealer "S"]
+[Vulnerable "EW"]
+[Deal "N:A73.K984.A83.752 QT9.65.KT42.KJ83 852.AQT32.J7.AQ4 KJ64.J7.Q965.T96"]
+
+[Board "20"]
+[Dealer "W"]
+[Vulnerable "Both"]
+[Deal "N:3.8643.AKJ97.Q72 A65.Q52.53.K9653 KJ874.KJ9.QT82.A QT92.AT7.64.JT84"]
+

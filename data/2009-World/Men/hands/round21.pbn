@@ -1,0 +1,80 @@
+[Board "1"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:Q852.AQ8.8543.87 AK93.97.AJT.J542 JT4.KT3.962.K963 76.J6542.KQ7.AQT"]
+
+[Board "2"]
+[Dealer "E"]
+[Vulnerable "NS"]
+[Deal "N:J8.K72.J753.KQT4 7654.Q43.864.632 QT9.JT.AK92.J975 AK32.A9865.QT.A8"]
+
+[Board "3"]
+[Dealer "S"]
+[Vulnerable "EW"]
+[Deal "N:Q976.K9.832.AJ42 K2.T75432.AJT9.K JT3.AJ8.Q74.T986 A854.Q6.K65.Q753"]
+
+[Board "4"]
+[Dealer "W"]
+[Vulnerable "Both"]
+[Deal "N:A2.QT4.AJ963.543 K843.95.Q2.J9762 9.AJ8763.T754.AQ QJT765.K2.K8.KT8"]
+
+[Board "5"]
+[Dealer "N"]
+[Vulnerable "NS"]
+[Deal "N:86.T86.T9853.752 KQT92.KJ54.2.986 AJ4.A97.AKQJ4.KJ 753.Q32.76.AQT43"]
+
+[Board "6"]
+[Dealer "E"]
+[Vulnerable "EW"]
+[Deal "N:87654.QJT6.J98.2 AK93.32.AQ72.654 JT2.A95.T543.KQ7 Q.K874.K6.AJT983"]
+
+[Board "7"]
+[Dealer "S"]
+[Vulnerable "Both"]
+[Deal "N:732.K54.74.KJT94 AJT9.96.A652.Q85 Q8654.QT7.KQ8.A6 K.AJ832.JT93.732"]
+
+[Board "8"]
+[Dealer "W"]
+[Vulnerable "None"]
+[Deal "N:AQ95.KT742.6.KQ8 43.AJ63.AQJT.A93 KT7.95.K732.T765 J862.Q8.9854.J42"]
+
+[Board "9"]
+[Dealer "N"]
+[Vulnerable "EW"]
+[Deal "N:763.A843.AJ54.93 K52.JT2.QT982.65 9.Q9765.K6.QJT72 AQJT84.K.73.AK84"]
+
+[Board "10"]
+[Dealer "E"]
+[Vulnerable "Both"]
+[Deal "N:54.54.AK972.JT93 KJ3.J7.QJ4.AQ542 AT87.AKQT632.T.6 Q962.98.8653.K87"]
+
+[Board "11"]
+[Dealer "S"]
+[Vulnerable "None"]
+[Deal "N:J875.J98.J9754.Q QT93.A54.AK.KT62 6.KQT763.2.A9743 AK42.2.QT863.J85"]
+
+[Board "12"]
+[Dealer "W"]
+[Vulnerable "NS"]
+[Deal "N:97652.KQ73.32.T5 AQ84.8.QT4.AKJ43 KJ3.AJ54.J9865.8 T.T962.AK7.Q9762"]
+
+[Board "13"]
+[Dealer "N"]
+[Vulnerable "Both"]
+[Deal "N:KQ4.KQJ7.KQJ5.K2 A32.653.T742.T97 T97.A98.A8.AQ643 J865.T42.963.J85"]
+
+[Board "14"]
+[Dealer "E"]
+[Vulnerable "None"]
+[Deal "N:T98.63.8743.A632 7.T9542.AK6.KQ95 AJ652.AQJ87.Q9.T KQ43.K.JT52.J874"]
+
+[Board "15"]
+[Dealer "S"]
+[Vulnerable "NS"]
+[Deal "N:83.T962.T87.AK54 74.Q83.AK.T87632 962.A7.Q5432.QJ9 AKQJT5.KJ54.J96."]
+
+[Board "16"]
+[Dealer "W"]
+[Vulnerable "EW"]
+[Deal "N:KJT64.K9843.T2.6 872.QJ75.874.QJ5 Q.A6.AKJ65.A9872 A953.T2.Q93.KT43"]
+
