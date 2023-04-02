@@ -1,7 +1,7 @@
 /* 
    Valet, a generalized Butler scorer for bridge.
 
-   Copyright (C) 2015 by Soren Hein.
+   Copyright (C) 2015-2023 by Soren Hein.
 
    See LICENSE and README.
 */
@@ -12,29 +12,26 @@
 
 #include <iostream>
 #include <iomanip>
-#include <string>
-#include <stdlib.h>
-#include <string.h>
+#include <vector>
 
 #include "args.h"
+#include "parse.h"
 
 #include "../cst.h"
 
 using namespace std;
 
 
-extern OptionsType options;
+extern Options options;
 
-struct optEntry
+struct OptEntry
 {
   string shortName;
   string longName;
   unsigned numArgs;
 };
 
-#define VALET_NUM_OPTIONS 16
-
-const optEntry optList[VALET_NUM_OPTIONS] =
+const vector<OptEntry> optList =
 {
   {"v", "valettype", 1},
   {"d", "directory", 1},
@@ -46,6 +43,7 @@ const optEntry optList[VALET_NUM_OPTIONS] =
   {"e", "extremes", 0},
   {"h", "hardround", 0},
   {"t", "tableau", 1},
+  {"p", "pairs", 1},
   {"x", "nocloud", 0},
   {"c", "compensate", 0},
   {"o", "order", 1},
@@ -54,19 +52,19 @@ const optEntry optList[VALET_NUM_OPTIONS] =
   {"j", "join", 1}
 };
 
-string shortOptsAll, shortOptsWithArg;
 
-int GetNextArgToken(
-  int argc,
-  char * argv[]);
+int getNextArgToken(
+  const int argc,
+  char const * argv[],
+  int& nextToken,
+  char const *& optarg);
 
-void SetDefaults();
+void setDefaults();
 
-bool ParseRound();
+bool parseRound(char const * optarg);
 
 
-void Usage(
-  const char base[])
+void usage(const char base[])
 {
   string basename(base);
   const size_t l = basename.find_last_of("\\/");
@@ -108,7 +106,9 @@ void Usage(
     "-t, --tableau      Output a file of tableaux for each hand\n" <<
     "                   to file argument (default: not set).\n" <<
     "\n" <<
-    "-c, -compensate    Compensate overall score for the average strength\n" <<
+    "-p, --pairs        Output a file of scores ordered by pair.\n" <<
+    "\n" <<
+    "-c, --compensate   Compensate overall score for the average strength\n" <<
     "                   of the specific opponents faced (default: no).\n" <<
     "\n" <<
     "-o, --order s      Sorting order of the output.  Valid orders are\n" <<
@@ -132,12 +132,11 @@ void Usage(
 }
 
 
-int nextToken = 1;
-char * optarg;
-
-int GetNextArgToken(
-  int argc,
-  char * argv[])
+int getNextArgToken(
+  const int argc,
+  char const * argv[],
+  int& nextToken,
+  char const *& optarg)
 {
   // 0 means done, -1 means error.
 
@@ -159,11 +158,11 @@ int GetNextArgToken(
   else
     return -1;
 
-  for (unsigned i = 0; i < VALET_NUM_OPTIONS; i++)
+  for (const auto& opt: optList)
   {
-    if (str == optList[i].shortName || str == optList[i].longName)
+    if (str == opt.shortName || str == opt.longName)
     {
-      if (optList[i].numArgs == 1)
+      if (opt.numArgs == 1)
       {
         if (nextToken+1 >= argc)
           return -1;
@@ -182,7 +181,7 @@ int GetNextArgToken(
 }
 
 
-void SetDefaults()
+void setDefaults()
 {
   options.valet = VALET_IMPS_ACROSS_FIELD;
   options.directory = ".";
@@ -197,6 +196,7 @@ void SetDefaults()
   options.datumHardRounding = false;
   options.cloudFlag = true;
   options.tableauFlag = false;
+  options.pairSheetsFlag = false;
   options.compensateFlag = false;
   options.sort = VALET_SORT_OVERALL;
   options.averageFlag = false;
@@ -205,121 +205,104 @@ void SetDefaults()
 }
 
 
-void PrintOptions()
+void printOptions()
 {
   cout << left;
-  cout << setw(12) << "valettype" << setw(12) << 
-    scoringTags[options.valet].arg << "\n";
-  cout << setw(12) << "directory" << setw(12) << options.directory << "\n";
-  cout << setw(12) << "names" << setw(12) << options.nameFile << "\n";
-  cout << setw(12) << "scores" << setw(12) << options.scoresFile << "\n";
+  cout << setw(12) << "valettype" << 
+    setw(12) << scoringTags[options.valet].arg << "\n";
+  cout << setw(12) << "directory" << 
+    setw(12) << options.directory << "\n";
+  cout << setw(12) << "names" << 
+    setw(12) << options.nameFile << "\n";
+  cout << setw(12) << "scores" << 
+    setw(12) << options.scoresFile << "\n";
   if (options.roundFlag)
-    cout << setw(12) << "rounds" << options.roundFirst << " to " <<
-      options.roundLast << "\n";
+    cout << setw(12) << "rounds" << options.roundFirst << 
+      " to " << options.roundLast << "\n";
   else
     cout << setw(12) << "rounds" << "no limitation\n";
-  cout << setw(12) << "minhands" << setw(12) << options.minHands << "\n";
+  cout << setw(12) << "minhands" << 
+    setw(12) << options.minHands << "\n";
   cout << setw(12) << "lead" << setw(12) << 
     (options.leadFlag ? "true" : "false") << "\n";
-  cout << setw(12) << "extremes" << setw(12) << 
-    (options.datumFilter ? "true" : "false") << "\n";
-  cout << setw(12) << "hardround" << setw(12) << 
-    (options.datumHardRounding ? "true" : "false") << "\n";
-  cout << setw(12) << "cloud" << setw(12) << 
-    (options.cloudFlag ? "true" : "false") << "\n";
+  cout << setw(12) << "extremes" << 
+    setw(12) << (options.datumFilter ? "true" : "false") << "\n";
+  cout << setw(12) << "hardround" << 
+    setw(12) << (options.datumHardRounding ? "true" : "false") << "\n";
+  cout << setw(12) << "cloud" << 
+    setw(12) << (options.cloudFlag ? "true" : "false") << "\n";
   cout << setw(12) << "tableau" << setw(12) << 
     (options.datumHardRounding ? options.tableauFile : "false") << "\n";
-  cout << setw(12) << "compensate" << setw(12) << 
-    (options.compensateFlag ? "true" : "false") << "\n";
-  cout << setw(12) << "order" << setw(12) << 
-    sortingTags[options.sort].str << "\n";
-  cout << setw(12) << "average" << setw(12) << 
-    (options.averageFlag ? "true" : "false") << "\n";
+  cout << setw(12) << "pair sheet" << setw(12) << 
+    options.pairSheetsFlag << "\n";
+  cout << setw(12) << "compensate" << 
+    setw(12) << (options.compensateFlag ? "true" : "false") << "\n";
+  cout << setw(12) << "order" << 
+    setw(12) << sortingTags[options.sort].str << "\n";
+  cout << setw(12) << "average" << 
+    setw(12) << (options.averageFlag ? "true" : "false") << "\n";
   cout << setw(12) << "format" << setw(12) << 
     (options.format == VALET_FORMAT_TEXT ? "text" : "csv") << "\n";
-  cout << setw(12) << "join" << setw(12) << options.separator << "\n";
+  cout << setw(12) << "join" << 
+    setw(12) << options.separator << "\n";
   cout << "\n" << right;
 }
 
 
-bool ParseRound()
+bool parseRound(char const * optarg)
 {
   // Allow 5 as well as 1-3
-  char * temp;
-  int m = static_cast<int>(strtol(optarg, &temp, 0));
-  if (* temp == '\0')
+  string str(optarg);
+  int m;
+
+  if (parseInt(str, m))
   {
     if (m <= 0)
-    {
       return false;
-    }
-    else
-    {
-      options.roundFirst = static_cast<unsigned>(m);
-      options.roundLast = static_cast<unsigned>(m);
-      return true;
-    }
+
+    options.roundFirst = static_cast<unsigned>(m);
+    options.roundLast = static_cast<unsigned>(m);
+    return true;
   }
 
-  string stmp(optarg);
-  string::size_type pos;
-  pos = stmp.find_first_of("-", 0);
-  if (pos == std::string::npos || pos > 7)
+  vector<string> tokens;
+  tokenize(str, tokens, "-");
+  if (tokens.size() != 2)
     return false;
 
-  char str1[8], str2[8];
-#if (! defined(_MSC_VER) || _MSC_VER < 1400)
-  strncpy(str1, stmp.c_str(), pos);
-#else
-  strncpy_s(str1, stmp.c_str(), pos);
-#endif
-  str1[pos] = '\0';
-  if ((m = atoi(str1)) <= 0)
-    return false;
+  if (! parseInt(tokens[0], m) || m <= 0)
+      return false;
+
   options.roundFirst = static_cast<unsigned>(m);
 
-  stmp.erase(0, pos+1);
-#if (! defined(_MSC_VER) || _MSC_VER < 1400)
-  strncpy(str2, stmp.c_str(), stmp.size());
-#else
-  strncpy_s(str2, stmp.c_str(), stmp.size());
-#endif
-  str2[stmp.size()] = '\0';
-  if ((m = atoi(str2)) <= 0)
-    return false;
+  if (! parseInt(tokens[1], m) || m <= 0)
+      return false;
+
   options.roundLast = static_cast<unsigned>(m);
 
-  if (options.roundLast < options.roundFirst)
-    return false;
-
-  return true;
+  return (options.roundFirst <= options.roundLast);
 }
 
 
-void ReadArgs(
-  int argc,
-  char * argv[])
+void readArgs(
+  const int argc,
+  const char * argv[])
 {
-  for (unsigned i = 0; i < VALET_NUM_OPTIONS; i++)
-  {
-    shortOptsAll += optList[i].shortName;
-    if (optList[i].numArgs)
-      shortOptsWithArg += optList[i].shortName;
-  }
-
   if (argc == 1)
   {
-    Usage(argv[0]);
+    usage(argv[0]);
     exit(0);
   }
 
-  SetDefaults();
+  setDefaults();
 
-  int c, m;
+  int c, m, nextToken = 1;
   bool errFlag = false, matchFlag;
+  char const * optarg;
+
   string stmp;
 
-  while ((c = GetNextArgToken(argc, argv)) > 0)
+  while ((c = getNextArgToken(argc, argv, nextToken, optarg)) > 0)
   {
     switch(c)
     {
@@ -357,7 +340,7 @@ void ReadArgs(
 
       case 'r':
         options.roundFlag = true;
-        if (! ParseRound())
+        if (! parseRound(optarg))
         {
           cout << " Could not parse round\n";
           nextToken -= 2;
@@ -366,9 +349,8 @@ void ReadArgs(
         break;
 
       case 'm':
-        char * temp;
-        m = static_cast<int>(strtol(optarg, &temp, 0));
-        if (m < 1)
+        stmp = optarg;
+        if (! parseInt(stmp, m) || m < 1)
         {
           cout << "Number of hands must be >= 1\n\n";
           nextToken -= 2;
@@ -396,6 +378,11 @@ void ReadArgs(
       case 't':
         options.tableauFlag = true;
         options.tableauFile = optarg;
+        break;
+
+      case 'p':
+        options.pairSheetsFlag = true;
+        options.pairSheetsFile = optarg;
         break;
 
       case 'c':

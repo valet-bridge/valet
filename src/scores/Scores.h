@@ -1,7 +1,7 @@
 /* 
-   Valet, a bridge single-suit double-dummy quick-trick solver.
+   Valet, a generalized Butler scorer for bridge.
 
-   Copyright (C) 2015 by Soren Hein.
+   Copyright (C) 2015-2023 by Soren Hein.
 
    See LICENSE and README.
 */
@@ -14,27 +14,30 @@
 #include <vector>
 #include <map>
 
-#include "scores/Score.h"
+#include "Score.h"
 
 using namespace std;
 
 enum TableEnum: unsigned;
 enum SortingEnum: unsigned;
 
-struct ValetEntryType;
+struct ScoreInput;
 
 
 class Scores
 {
   private:
 
-    vector<Score> pairScores;
-    vector<Score> oppComp;
+    struct ScoreData
+    {
+      Score score;
+      map<size_t, Score> oppScores;
+    };
 
-    typedef map<string, Score> OppMapType;
-    vector<OppMapType> oppScores;
+    vector<ScoreData> scoreData;
 
-    void calcCompensation();
+
+    void resize(const size_t index);
 
     bool onlySkips(const TableEnum ttype) const;
 
@@ -44,11 +47,9 @@ class Scores
 
     Scores();
 
-    ~Scores();
+    void clear();
 
-    void Reset();
-
-    void add(const ValetEntryType& entry);
+    void add(const ScoreInput& entry);
 
     void scale();
 
@@ -57,7 +58,6 @@ class Scores
     void sort(const SortingEnum sort);
 
     string str() const;
-
 };
 
 #endif

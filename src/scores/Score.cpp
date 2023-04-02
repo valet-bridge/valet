@@ -1,7 +1,7 @@
 /* 
    Valet, a generalized Butler scorer for bridge.
 
-   Copyright (C) 2015-23 by Soren Hein.
+   Copyright (C) 2015-2023 by Soren Hein.
 
    See LICENSE and README.
 */
@@ -13,11 +13,12 @@
 #include <cassert>
 
 #include "Score.h"
+#include "ScoreInput.h"
 
-#include "../Pairs.h"
+#include "../pairs/Pairs.h"
 
 extern Pairs pairs;
-extern OptionsType options;
+extern Options options;
 
 
 enum ScoreEnum
@@ -49,7 +50,7 @@ void Score::setPair(const unsigned pairNoIn)
 }
 
 
-void Score::incrDeclarer(const ValetEntryType& entry)
+void Score::incrDeclarer(const ScoreInput& entry)
 {
   aspects[VALET_OVERALL].incr(entry.overall);
   aspects[VALET_BID].incr(entry.bidScore);
@@ -68,7 +69,7 @@ void Score::incrDeclarer(const ValetEntryType& entry)
 }
 
 
-void Score::incrDefenders(const ValetEntryType& entry)
+void Score::incrDefenders(const ScoreInput& entry)
 {
   aspects[VALET_OVERALL].decr(entry.overall);
   aspects[VALET_BID].decr(entry.bidScore);
@@ -119,6 +120,28 @@ void Score::operator -= (const Score& s2)
   assert(aspects.size() == s2.aspects.size());
   for (size_t i = 0; i < aspects.size(); i++)
     aspects[i] -= s2.aspects[i];
+}
+
+
+bool Score::operator < (const Score& s2) const
+{
+  if (aspects[VALET_OVERALL].getAverage() > 
+      s2.aspects[VALET_OVERALL].getAverage())
+    return true;
+  else if (aspects[VALET_OVERALL].getAverage() < 
+      s2.aspects[VALET_OVERALL].getAverage())
+    return false;
+  else if (aspects[VALET_BID].getAverage() > 
+      s2.aspects[VALET_BID].getAverage())
+    return true;
+  else
+    return false;
+}
+
+
+unsigned Score::getCount() const
+{
+  return aspects[VALET_OVERALL].getCount();
 }
 
 
@@ -322,7 +345,7 @@ string Score::strOverall(const int prec) const
   stringstream ss;
 
   ss <<
-    pairs.GetPairName(pairNo, 54) << 
+    pairs.getPairName(pairNo, 54) << 
     aspects[VALET_OVERALL].pad(PAD_BAR) << 
     aspects[VALET_OVERALL].strCount(4) <<
     aspects[VALET_OVERALL].strAverage(7, prec, PAD_BAR) <<
@@ -369,6 +392,58 @@ string Score::strDetails(const int prec) const
 }
 
 
+string Score::strDeclarerHeaderTrunc() const
+{
+  stringstream ss;
+  ss << setw(8) << "Overall";
+  ss << setw(8) << "Bid";
+  ss << setw(8) << "Play" << "\n";
+  return ss.str();
+}
+
+
+string Score::strDeclarerHeader() const
+{
+  stringstream ss;
+
+  ss << setw(16) << left << "Contract";
+  ss << setw(8) << right << "Count";
+  ss << Score::strDeclarerHeaderTrunc();
+
+  return ss.str();
+}
+
+
+string Score::strDefenseHeaderTrunc() const
+{
+  stringstream ss;
+  ss << setw(8) << "Overall";
+  ss << setw(8) << "Bid";
+
+  if (options.leadFlag)
+  {
+    ss << setw(8) << "Lead";
+    ss << setw(8) << "Restdef" << "\n";
+  }
+  else
+    ss << setw(8) << "Def" << "\n";
+
+  return ss.str();
+}
+
+
+string Score::strDefenseHeader() const
+{
+  stringstream ss;
+
+  ss << setw(16) << left << "Contract";
+  ss << setw(8) << right << "Count";
+  ss << Score::strDefenseHeaderTrunc();
+
+  return ss.str();
+}
+
+
 string Score::strLine(
   const TableEnum ttype,
   const int prec) const
@@ -377,5 +452,62 @@ string Score::strLine(
     return "";
 
   return Score::strOverall(prec) + Score::strDetails(prec);
+}
+
+
+string Score::strDeclarerLineTrunc() const
+{
+  stringstream ss;
+
+  ss << 
+    aspects[VALET_OVERALL].strAverageText(8, 2) << 
+    aspects[VALET_BID].strAverageText(8, 2) << 
+    aspects[VALET_PLAY].strAverageText(8, 2) << "\n";
+
+  return ss.str();
+}
+
+
+string Score::strDeclarerLine(
+  const string& key,
+  const unsigned count) const
+{
+  stringstream ss;
+
+  ss << left << setw(16) << key <<
+    setw(8) << right << count <<
+    Score::strDeclarerLineTrunc();
+
+  return ss.str();
+}
+
+
+string Score::strDefenseLineTrunc() const
+{
+  stringstream ss;
+
+  ss << 
+    aspects[VALET_OVERALL].strAverageText(8, 2) << 
+    aspects[VALET_BID].strAverageText(8, 2);
+
+  if (options.leadFlag)
+    ss << aspects[VALET_LEAD_SUM].strAverageText(8, 2);
+
+  ss << aspects[VALET_DEF].strAverageText(8, 2) << "\n";
+
+  return ss.str();
+}
+
+string Score::strDefenseLine(
+  const string& key,
+  const unsigned count) const
+{
+  stringstream ss;
+
+  ss << left << setw(16) << key <<
+    setw(8) << right << count <<
+    Score::strDefenseLineTrunc();
+
+  return ss.str();
 }
 

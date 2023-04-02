@@ -1,7 +1,7 @@
 /* 
    Valet, a generalized Butler scorer for bridge.
 
-   Copyright (C) 2015 by Soren Hein.
+   Copyright (C) 2015-2023 by Soren Hein.
 
    See LICENSE and README.
 */
@@ -13,37 +13,6 @@
 #include <sstream>
 
 using namespace std;
-
-
-const char ValetPositions[4][6] =
-{
-  "North", "East", "South", "West"
-};
-
-const char ValetPositionsShort[4][6] =
-{
-  "N", "E", "S", "W"
-};
-
-const char ValetDenoms[5][9] =
-{
-  "Spades", "Hearts", "Diamonds", "Clubs", "Notrump"
-};
-
-const char ValetDenomsShort[5][9] =
-{
-  "S", "H", "D", "C", "NT"
-};
-
-const char ValetMultipliers[3][3] =
-{
-  "", "X", "XX"
-};
-
-const char ValetRanks[15] =
-{
-  '0', '0', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A'
-};
 
 
 enum FormatEnum: unsigned
@@ -67,7 +36,7 @@ enum ScoringEnum: unsigned
   VALET_MATCHPOINTS
 };
 
-struct ScoringPairType
+struct ScoringPair
 {
   ScoringEnum scoring;
   string arg;
@@ -75,7 +44,7 @@ struct ScoringPairType
   string header;
 };
 
-const ScoringPairType scoringTags[] =
+const ScoringPair scoringTags[] =
 {
   {VALET_IMPS, "datum", "Butler IMPs", "Butler"},
   {VALET_IMPS_ACROSS_FIELD, "imps", "IMPs across the field", "IMPs"},
@@ -83,7 +52,7 @@ const ScoringPairType scoringTags[] =
 };
 
 
-enum SortingType: unsigned
+enum SortingEnum: unsigned
 {
   VALET_SORT_OVERALL,
   VALET_SORT_BIDDING,
@@ -95,13 +64,13 @@ enum SortingType: unsigned
   VALET_SORT_LEAD_OVER_DECL
 };
 
-struct sortPairType
+struct SortPair
 {
-  SortingType sort;
+  SortingEnum sort;
   string str;
 };
 
-const sortPairType sortingTags[] =
+const SortPair sortingTags[] =
 {
   {VALET_SORT_OVERALL, "overall"},
   {VALET_SORT_BIDDING, "bidding"},
@@ -114,7 +83,7 @@ const sortPairType sortingTags[] =
 };
 
 
-struct OptionsType
+struct Options
 {
   ScoringEnum valet;
 
@@ -122,6 +91,7 @@ struct OptionsType
   string nameFile;
   string scoresFile;
   string tableauFile;
+  string pairSheetsFile;
 
   bool roundFlag;
   unsigned roundFirst;
@@ -136,54 +106,20 @@ struct OptionsType
   bool compensateFlag;
   bool cloudFlag;
   bool tableauFlag;
+  bool pairSheetsFlag;
 
-  SortingType sort;
+  SortingEnum sort;
   bool averageFlag;
 
   FormatEnum format;
   string separator;
 };
 
-
-struct ResultType
-{
-  string north;
-  string east;
-  string south;
-  string west;
-  unsigned level;
-  unsigned denom;
-  unsigned multiplier;
-  unsigned declarer;
-  unsigned tricks;
-  unsigned leadDenom;
-  unsigned leadRank;
-};
-
-
-struct ValetEntryType
-{
-  unsigned pairNo;
-  unsigned oppNo;
-  bool declFlag[2];
-  bool defFlag;
-  bool leadFlag[2];
-  float overall;
-  float bidScore;
-  float playScore[2];
-  float leadScore[2];
-  float defScore;
-
-  ResultType result;
-};
-
-
-struct ErrorType
+struct Error
 {
   bool flag;
   int no;
   stringstream message;
 };
-
 
 #endif

@@ -1,0 +1,14 @@
+foreach i (1 2 3 4 5 6 7 8)
+  ./valet -d ../training -s R$i/sall$i.txt -l -t tableau$i.txt -p pairs$i.txt -f csv -j ';' > out$i.csv
+  perl postproc.pl out$i.csv > tmp
+  mv tmp out$i.csv
+
+  perl selectpairs.pl pairs$i.txt > tmp
+  mv tmp pairs$i.txt
+end
+
+foreach i (2 3 4 5 6 7 8)
+  ./valet -d ../training -r 1-$i -s R$i/cum$i.txt -l -t tableaucum$i.txt -p pairscum$i.txt -f csv -j ';' > cum$i.csv
+  perl postproc.pl cum$i.csv > tmp
+  mv tmp cum$i.csv
+end

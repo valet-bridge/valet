@@ -1,7 +1,7 @@
 /* 
-   Valet, a bridge single-suit double-dummy quick-trick solver.
+   Valet, a generalized Butler scorer for bridge.
 
-   Copyright (C) 2015-23 by Soren Hein.
+   Copyright (C) 2015-2023 by Soren Hein.
 
    See LICENSE and README.
 */
@@ -17,7 +17,7 @@
 
 #include "Aspect.h"
 
-struct ValetEntryType;
+struct ScoreInput;
 
 enum SortingEnum: unsigned;
 enum TableEnum: unsigned;
@@ -45,15 +45,19 @@ class Score
 
     void setPair(const unsigned pairNoIn);
 
-    void incrDeclarer(const ValetEntryType& entry);
-    void incrDefenders(const ValetEntryType& entry);
+    void incrDeclarer(const ScoreInput& entry);
+    void incrDefenders(const ScoreInput& entry);
 
     void operator += (const Score& s2);
     void operator -= (const Score& s2);
 
+    bool operator < (const Score& s2) const;
+
     void scale();
 
     void compensate(const Score& oppScore);
+
+    unsigned getCount() const;
 
     float figure(const SortingEnum sort) const;
 
@@ -64,6 +68,24 @@ class Score
     string strLine(
       const TableEnum ttype,
       const int prec) const;
+
+    string strDeclarerHeaderTrunc() const;
+    string strDeclarerHeader() const;
+
+    string strDefenseHeaderTrunc() const;
+    string strDefenseHeader() const;
+
+    string strDeclarerLineTrunc() const;
+
+    string strDeclarerLine(
+      const string& key,
+      const unsigned count) const;
+
+    string strDefenseLineTrunc() const;
+
+    string strDefenseLine(
+      const string& key,
+      const unsigned count) const;
 };
 
 #endif

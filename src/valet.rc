@@ -15,7 +15,7 @@ BEGIN
             VALUE "FileDescription", "valet"
             VALUE "FileVersion", "1.1.0.0"
             VALUE "InternalName", "valet.dll"
-            VALUE "LegalCopyright", "Copyright © 2015 Soren Hein"
+            VALUE "LegalCopyright", "Copyright © 2015-2023 Soren Hein"
             VALUE "OriginalFilename", "valet.dll"
             VALUE "ProductName", "Valet scoring for bridge"
             VALUE "ProductVersion", "1.1.0.0"

@@ -1,0 +1,46 @@
+set d = '../data/examples'
+
+./valet -d $d -n names1.txt -s scores1.txt -v datum -x -t tab1_datum.txt > out1_datum.txt
+./valet -d $d -n names1.txt -s scores1.txt -x -t tab1_iaf.txt > out1_iaf.txt
+
+./valet -d $d -n names2.txt -s scores2.txt -l -v datum -x -t tab2_datum.txt > out2_datum.txt
+./valet -d $d -n names2.txt -s scores2.txt -l -x -t tab2_iaf.txt > out2_iaf.txt
+
+./valet -d $d -n names3.txt -s scores3.txt -l -x -t tab3_iaf.txt > out3_iaf.txt
+./valet -d $d -n names4.txt -s scores4.txt -l -x -t tab4_iaf.txt > out4_iaf.txt
+./valet -d $d -n names5.txt -s scores5.txt -l -x -t tab5_iaf.txt > out5_iaf.txt
+
+./valet -d $d -n names6.txt -s scores6.txt -x -t tab6_iaf.txt > out6_iaf.txt
+
+./valet -d $d -n names7.txt -s scores7.txt -t tab7_iaf.txt > out7_iaf.txt
+./valet -d $d -n names7.txt -s scores7.txt -v datum -t tab7_datum.txt > out7_datum.txt
+
+echo tab1_datum.txt
+diff tab1_datum.txt ref
+
+echo tab1_iaf.txt
+diff tab1_iaf.txt ref
+
+echo tab2_datum.txt
+diff tab2_datum.txt ref
+
+echo tab2_iaf.txt
+diff tab2_iaf.txt ref
+
+echo tab3_iaf.txt
+diff tab3_iaf.txt ref
+
+echo tab4_iaf.txt
+diff tab4_iaf.txt ref
+
+echo tab5_iaf.txt
+diff tab5_iaf.txt ref
+
+echo tab6_iaf.txt
+diff tab6_iaf.txt ref
+
+echo tab7_iaf.txt
+diff tab7_iaf.txt ref
+
+echo tab7_datum.txt
+diff tab7_datum.txt ref

@@ -1,0 +1,16 @@
+set d = '../data/examples'
+
+./valet -d $d -n names1.txt -s scores1.txt -v datum -x -t ref/tab1_datum.txt > ref/out1_datum.txt
+./valet -d $d -n names1.txt -s scores1.txt -x -t ref/tab1_iaf.txt > ref/out1_iaf.txt
+
+./valet -d $d -n names2.txt -s scores2.txt -l -v datum -x -t ref/tab2_datum.txt > ref/out2_datum.txt
+./valet -d $d -n names2.txt -s scores2.txt -l -x -t ref/tab2_iaf.txt > ref/out2_iaf.txt
+
+./valet -d $d -n names3.txt -s scores3.txt -l -x -t ref/tab3_iaf.txt > ref/out3_iaf.txt
+./valet -d $d -n names4.txt -s scores4.txt -l -x -t ref/tab4_iaf.txt > ref/out4_iaf.txt
+./valet -d $d -n names5.txt -s scores5.txt -l -x -t ref/tab5_iaf.txt > ref/out5_iaf.txt
+
+./valet -d $d -n names6.txt -s scores6.txt -x -t ref/tab6_iaf.txt > ref/out6_iaf.txt
+
+./valet -d $d -n names7.txt -s scores7.txt -t ref/tab7_iaf.txt > ref/out7_iaf.txt
+./valet -d $d -n names7.txt -s scores7.txt -v datum -t ref/tab7_datum.txt > ref/out7_datum.txt

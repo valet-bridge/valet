@@ -1,7 +1,7 @@
 /* 
    Valet, a generalized Butler scorer for bridge.
 
-   Copyright (C) 2015 by Soren Hein.
+   Copyright (C) 2015-2023 by Soren Hein.
 
    See LICENSE and README.
 */
@@ -9,27 +9,16 @@
 #ifndef VALET_SCORING_H
 #define VALET_SCORING_H
 
-void SetTables();
+void setTables();
 
-int CalculateRawScore(
-  const ResultType& res,
-  const unsigned vul);
-
-int CalculateRawScore(
-  const ResultType& res,
-  const unsigned vul,
-  const unsigned tricks);
-
-void GetVul(
+void getVul(
   const unsigned boardNo,
   unsigned& vulNS,
   unsigned& vulEW);
 
-int CalculateIMPs(
-  int rawScore);
+int calculateIMPs(int rawScore);
 
-int CalculateMPs(
-  int rawScore);
+int calculateMPs(int rawScore);
 
 #endif
 

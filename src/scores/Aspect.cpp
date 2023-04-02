@@ -1,11 +1,10 @@
 /* 
    Valet, a generalized Butler scorer for bridge.
 
-   Copyright (C) 2015-23 by Soren Hein.
+   Copyright (C) 2015-2023 by Soren Hein.
 
    See LICENSE and README.
 */
-
 
 
 #include <iostream>
@@ -14,9 +13,10 @@
 #include <cassert>
 
 #include "Aspect.h"
-#include "../misc.h"
 
-extern OptionsType options;
+#include "../cst.h"
+
+extern Options options;
 
 
 void Aspect::incr(const float f)
@@ -55,7 +55,24 @@ bool Aspect::empty() const
 
 void Aspect::scale()
 {
-  average = ::scale(sum, num, options.valet);
+  if (options.valet == VALET_MATCHPOINTS)
+  {
+    if (num > 0)
+    {
+      // Convert -1 .. +1 to 0 .. 100%.
+      const float n = static_cast<float>(num);
+      average = 100.f * (sum + n) / (2.f * n);
+    }
+    else
+      average = 50.f;
+  }
+  else
+  {
+    if (num > 0)
+      average = sum / static_cast<float>(num);
+    else
+      average = 0.;
+  }
 }
 
 
@@ -113,6 +130,16 @@ string Aspect::strCount(const int width) const
 }
 
 
+string Aspect::strAverageText(
+  const int width,
+  const int prec) const
+{
+  stringstream ss;
+  ss << setw(width) << fixed << setprecision(prec) << average;
+  return ss.str();
+}
+
+
 string Aspect::strAverage(
   const int width,
   const int prec,
@@ -122,7 +149,7 @@ string Aspect::strAverage(
 
   if (options.format == VALET_FORMAT_TEXT)
   {
-    ss << setw(width) << fixed << setprecision(prec) << average;
+    ss << Aspect::strAverageText(width, prec);
     ss << Aspect::pad(padding);
   }
   else if (options.format == VALET_FORMAT_CSV)

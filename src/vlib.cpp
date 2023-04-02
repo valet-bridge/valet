@@ -1,47 +1,12 @@
 /* 
    Valet, a generalized Butler scorer for bridge.
 
-   Copyright (C) 2015 by Soren Hein.
+   Copyright (C) 2015-2023 by Soren Hein.
 
    See LICENSE and README.
 */
 
-#include <string>
-#include <stdlib.h>
-#include <string.h>
-
 #include "valet.h"
-#include "parse.h"
-#include "scoring.h"
-#include "Pairs.h"
-#include "Hand.h"
-
-using namespace std;
-
-OptionsType options;
-Hand hand;
-Pairs pairs;
-ErrorType error;
-
-unsigned numEntries = 16;
-vector<ValetEntryType> entries(numEntries);
-unsigned nextEntry = 0;
-
-
-int CheckNonzeroPlayers(
-  ResultType& res);
-
-void AddPlayers(
-  const ResultType& res);
-
-int SetInput(
-  InputResultType * input,
-  ResultType& res);
-
-void SetResults(
-  OutputResultType * output,
-  ValetEntryType& vres);
-
 
 #if defined(_WIN32) || defined(USES_DLLMAIN)
 
@@ -88,16 +53,72 @@ static void __attribute__ ((destructor)) libEnd(void)
 
 #endif
 
+#include <fstream>
+#include <string>
+#include <stdlib.h>
+#include <string.h>
+
+#include "pairs/Players.h"
+#include "pairs/Pairs.h"
+#include "hand/Hand.h"
+
+#include "scores/ScoreInput.h"
+
+#include "inputs/parse.h"
+
+#include "scoring.h"
+
+
+using namespace std;
+
+Options options;
+Players players;
+Pairs pairs;
+map<string, Hand> hands;
+Hand hand;
+Error error;
+
+vector<ScoreInput> entries;
+unsigned nextEntry = 0;
+
+
+bool checkNonzeroPlayer(
+  const int& playerNo,
+  const string& str,
+  const int errNo);
+
+bool checkNonzeroPlayer(
+  const string& playerStr,
+  const string& str,
+  const int errNo);
+
+int checkNonzeroPlayers(const PlayerNumbers& playersIn);
+
+int checkNonzeroPlayers(const PlayerTags& playersIn);
+
+void addPlayers(const PlayerTags& playersIn);
+
+void addPlayers(const PlayerNumbers& playersIn);
+
+int setResult(
+  const InputResult& input,
+  Result& result);
+
+void setOutput(
+  const ScoreInput& vres,
+  OutputResult& output);
+
+
 
 void STDCALL ValetInit()
 {
-  SetTables();
+  setTables();
 
   error.flag = false;
   error.no = RETURN_NO_FAULT;
   error.message.str("");
 
-  options.valet = static_cast<ScoringType>(VALET_SCORING_IAF);
+  options.valet = static_cast<ScoringEnum>(VALET_SCORING_IAF);
   options.leadFlag = false;
   options.datumHardRounding = false;
   options.cloudFlag = true;
@@ -106,29 +127,29 @@ void STDCALL ValetInit()
 
 
 int STDCALL ValetSetControl(
-  struct ControlType * control)
+  struct Control * controlPtr)
 {
-  if (control->valet == VALET_SCORING_DATUM)
+  if (controlPtr->valet == VALET_SCORING_DATUM)
     options.valet = VALET_IMPS;
-  else if (control->valet == VALET_SCORING_IAF)
+  else if (controlPtr->valet == VALET_SCORING_IAF)
     options.valet = VALET_IMPS_ACROSS_FIELD;
-  else if (control->valet == VALET_SCORING_MP)
+  else if (controlPtr->valet == VALET_SCORING_MP)
     options.valet = VALET_MATCHPOINTS;
   else
   {
     error.flag = true;
     error.no = RETURN_VALET_MODE;
-    error.message << "Got mode: " << control->valet << "\n";
+    error.message << "Got mode: " << controlPtr->valet << "\n";
     return error.no;
   }
 
-  options.leadFlag = control->leadFlag;
+  options.leadFlag = controlPtr->leadFlag;
 
-  options.datumHardRounding = control->datumHardRounding;
+  options.datumHardRounding = controlPtr->datumHardRounding;
 
-  options.cloudFlag = control->cloudFlag;
+  options.cloudFlag = controlPtr->cloudFlag;
 
-  options.tableauFlag = control->tableauFlag;
+  options.tableauFlag = controlPtr->tableauFlag;
 
   return RETURN_NO_FAULT;
 }
@@ -137,13 +158,13 @@ int STDCALL ValetSetControl(
 void STDCALL ValetClear()
 {
   ValetClearHand();
-  pairs.Reset();
+  pairs.reset();
 }
 
 
 void STDCALL ValetClearHand()
 {
-  hand.Reset();
+  hand.reset();
   nextEntry = 0;
 }
 
@@ -154,321 +175,298 @@ int STDCALL ValetSetBoardNumber(
   if (no == 0)
     return RETURN_BOARD_NUMBER;
   else
-    return hand.SetBoardNumber(no);
+    return hand.setBoardNumber(no);
 }
 
 
-void AddPlayers(
-  const ResultType& res)
+void addPlayers(const PlayerTags& playerTags)
 {
-  pairs.AddPlayer(res.north, res.north);
-  pairs.AddPlayer(res.east, res.east);
-  pairs.AddPlayer(res.south, res.south);
-  pairs.AddPlayer(res.west, res.west);
+  players.add(string(playerTags.north), string(playerTags.north));
+  players.add(string(playerTags.east), string(playerTags.east));
+  players.add(string(playerTags.south), string(playerTags.south));
+  players.add(string(playerTags.west), string(playerTags.west));
 }
 
 
-int STDCALL ValetAddByLine(
-  char line[VALET_INPUT_MAX_LENGTH])
+void addPlayers(const PlayerNumbers& playerNumbers)
+{
+  players.add(to_string(playerNumbers.north), 
+    to_string(playerNumbers.north));
+  players.add(to_string(playerNumbers.east), 
+    to_string(playerNumbers.east));
+  players.add(to_string(playerNumbers.south), 
+    to_string(playerNumbers.south));
+  players.add(to_string(playerNumbers.west), 
+    to_string(playerNumbers.west));
+}
+
+
+int STDCALL ValetAddByLine(char line[])
 {
   string str(line);
-  ResultType res;
+  Result result;
+
   unsigned rno = 0, bno = 0;
 
-  int r = ParseScoreLine(str, res, rno, bno, true);
+  int r = parseScoreLine(str, result, rno, bno, true);
   if (r != RETURN_NO_FAULT)
     return r;
 
-  if ((r = hand.SetBoardNumber(bno)) != RETURN_NO_FAULT)
+  if ((r = hand.setBoardNumber(bno)) != RETURN_NO_FAULT)
   {
     error.message << "Got board number: " << bno <<
-      " (expected " << hand.GetBoardNumber() << ")\n";
+      " (expected " << hand.getBoardNumber() << ")\n";
     error.message << "Parsed line: '" << line << "'\n";
     return r;
   }
 
-  AddPlayers(res);
+  // Inelegant: Reparse the string, this time into a PlayerTags.
+  PlayerTags playerTags;
+  r = parseScoreLine(str, playerTags);
+  if (r != RETURN_NO_FAULT)
+    return r;
 
-  hand.AddResult(res);
+  addPlayers(playerTags);
+
+  hand.add(result);
   return RETURN_NO_FAULT;
 }
 
 
-int SetInput(
-  InputResultType * input,
-  ResultType& res)
+int setResult(
+  const InputResult& input,
+  Result& result)
 {
-  res.level = input->level;
-  res.denom = input->denom;
-  res.multiplier = input->multiplier;
-  res.declarer = input->declarer;
-  res.tricks = input->tricks;
-  res.leadDenom = input->leadDenom;
-  res.leadRank = input->leadRank;
+  unsigned vulNS, vulEW;
+  getVul(hand.getBoardNumber(), vulNS, vulEW);
+  const unsigned vul = 
+    (input.declarer == VALET_NORTH || input.declarer == VALET_SOUTH ?
+    vulNS : vulEW);
 
-  if (res.level == 0 || res.level > 7)
-  {
-    error.flag = true;
-    error.no = RETURN_LEVEL;
-    error.message << "Got level: " << res.level << " (expected 1 .. 7)\n";
-    return RETURN_LEVEL;
-  }
+  result.setGeneralResult(
+    input.level,
+    input.denom,
+    input.multiplier,
+    input.declarer,
+    input.tricks,
+    vul);
 
-  if (res.denom > 4)
-  {
-    error.flag = true;
-    error.no = RETURN_DENOM;
-    error.message << "Got denom: " << res.denom << " (expected 0 .. 3)\n";
-    return RETURN_DENOM;
-  }
-
-  if (res.multiplier > 2)
-  {
-    error.flag = true;
-    error.no = RETURN_MULTIPLIER;
-    error.message << "Got multiplier: " << res.multiplier << 
-      " (expected 0 .. 2)\n";
-    return RETURN_MULTIPLIER;
-  }
-
-  if (res.declarer > 3)
-  {
-    error.flag = true;
-    error.no = RETURN_DECLARER;
-    error.message << "Got declarer: " << res.declarer << 
-      " (expected 0 .. 3)\n";
-    return RETURN_DECLARER;
-  }
-
-  if (res.tricks > 13)
-  {
-    error.flag = true;
-    error.no = RETURN_TRICKS;
-    error.message << "Got tricks: " << res.tricks << 
-      " (expected 0 .. 13)\n";
-    return RETURN_TRICKS;
-  }
-
-  if (res.leadDenom > 4)
-  {
-    error.flag = true;
-    error.no = RETURN_LEAD_DENOM;
-    error.message << "Got leadDenom: " << res.leadDenom << 
-      " (expected 0 .. 3)\n";
-    return RETURN_LEAD_DENOM;
-  }
-
-  if (res.leadRank < 2 || res.leadRank > 14)
-  {
-    error.flag = true;
-    error.no = RETURN_LEAD_RANK;
-    error.message << "Got leadRank: " << res.leadDenom << 
-      " (expected 2 .. 14)\n";
-    return RETURN_LEAD_RANK;
-  }
+  result.setLead(
+    input.leadDenom,
+    input.leadRank);
 
   return RETURN_NO_FAULT;
 }
 
 
-int CheckNonzeroPlayers(
-  ResultType& res)
+bool checkNonzeroPlayer(
+  const int& playerNo,
+  const string& str,
+  const int errNo)
 {
-  if (res.north == "0")
+  if (playerNo == 0)
   {
     error.flag = true;
-    error.no = RETURN_PLAYER_NORTH;
-    error.message << "Got North number: " << res.north <<
-      " (must be >= 1)\n";
-    return error.no;
-  }
+    error.no = errNo;
+    error.message << "Got " << str << " number: " << 
+      playerNo << " (must be >= 1)\n";
 
-  if (res.east == "0")
-  {
-    error.flag = true;
-    error.no = RETURN_PLAYER_EAST;
-    error.message << "Got East number: " << res.east <<
-      " (must be >= 1)\n";
-    return error.no;
+    return false;
   }
+  else
+    return true;
+}
 
-  if (res.south == "0")
-  {
-    error.flag = true;
-    error.no = RETURN_PLAYER_SOUTH;
-    error.message << "Got South number: " << res.south <<
-      " (must be >= 1)\n";
-    return error.no;
-  }
 
-  if (res.west == "0")
+int checkNonzeroPlayers(const PlayerNumbers& playerNumbers)
+{
+  if (! checkNonzeroPlayer(playerNumbers.north, "North", 
+      RETURN_PLAYER_NORTH))
+    return error.no;
+
+  if (! checkNonzeroPlayer(playerNumbers.east, "East", 
+      RETURN_PLAYER_EAST))
+    return error.no;
+
+  if (! checkNonzeroPlayer(playerNumbers.south, "South", 
+      RETURN_PLAYER_SOUTH))
+    return error.no;
+
+  if (! checkNonzeroPlayer(playerNumbers.west, "West", 
+      RETURN_PLAYER_WEST))
+    return error.no;
+
+  return RETURN_NO_FAULT;
+}
+
+
+bool checkNonzeroPlayer(
+  const string& playerStr,
+  const string& str,
+  const int errNo)
+{
+  if (playerStr == "0")
   {
     error.flag = true;
-    error.no = RETURN_PLAYER_WEST;
-    error.message << "Got West number: " << res.west <<
-      " (must be >= 1)\n";
-    return error.no;
+    error.no = errNo;
+    error.message << "Got " << str << " number: " << 
+      playerStr << " (must be >= 1)\n";
+
+    return false;
   }
+  else
+    return true;
+}
+
+
+int checkNonzeroPlayers(const PlayerTags& playerTags)
+{
+  if (! checkNonzeroPlayer(playerTags.north, "North", RETURN_PLAYER_NORTH))
+    return error.no;
+
+  if (! checkNonzeroPlayer(playerTags.east, "East", RETURN_PLAYER_EAST))
+    return error.no;
+
+  if (! checkNonzeroPlayer(playerTags.south, "South", RETURN_PLAYER_SOUTH))
+    return error.no;
+
+  if (! checkNonzeroPlayer(playerTags.west, "West", RETURN_PLAYER_WEST))
+    return error.no;
 
   return RETURN_NO_FAULT;
 }
 
 
 int STDCALL ValetAddByTag(
-  struct PlayersTagType * players,
-  struct InputResultType * input)
+  struct PlayerTags * playerTagsPtr,
+  struct InputResult * inputPtr)
 {
-  ResultType res;
-  ostringstream ossn, osse, osss, ossw;
-
-  ossn << players->north;
-  res.north = ossn.str();
-  osse << players->east;
-  res.east = osse.str();
-  osss << players->south;
-  res.south = osss.str();
-  ossw << players->west;
-  res.west = ossw.str();
+  Result result;
+  result.setPlayers(
+    playerTagsPtr->north,
+    playerTagsPtr->east,
+    playerTagsPtr->south,
+    playerTagsPtr->west);
 
   int r;
-  if ((r = CheckNonzeroPlayers(res)) != RETURN_NO_FAULT)
+  if ((r = checkNonzeroPlayers(* playerTagsPtr)) != RETURN_NO_FAULT)
     return r;
 
-  if ((r = SetInput(input, res)) != RETURN_NO_FAULT)
+  if ((r = setResult(* inputPtr, result)) != RETURN_NO_FAULT)
     return r;
 
-  AddPlayers(res);
-  hand.AddResult(res);
+  addPlayers(* playerTagsPtr);
+  hand.add(result);
   return RETURN_NO_FAULT;
 }
 
 
 int STDCALL ValetAddByNumber(
-  struct PlayersNumberType * players,
-  struct InputResultType * input)
+  struct PlayerNumbers * playerNumbersPtr,
+  struct InputResult * inputPtr)
 {
-  ResultType res;
-  ostringstream ossn, osse, osss, ossw;
-
-  ossn << players->north;
-  res.north = ossn.str();
-  osse << players->east;
-  res.east = osse.str();
-  osss << players->south;
-  res.south = osss.str();
-  ossw << players->west;
-  res.west = ossw.str();
+  Result result;
+  result.setPlayers(
+    to_string(playerNumbersPtr->north),
+    to_string(playerNumbersPtr->east),
+    to_string(playerNumbersPtr->south),
+    to_string(playerNumbersPtr->west));
 
   int r;
-  if ((r = CheckNonzeroPlayers(res)) != RETURN_NO_FAULT)
+  if ((r = checkNonzeroPlayers(* playerNumbersPtr)) != RETURN_NO_FAULT)
     return r;
 
-  if ((r = SetInput(input, res)) != RETURN_NO_FAULT)
+  if ((r = setResult(* inputPtr, result)) != RETURN_NO_FAULT)
     return r;
 
-  AddPlayers(res);
-  hand.AddResult(res);
+  addPlayers(* playerNumbersPtr);
+  hand.add(result);
   return RETURN_NO_FAULT;
 }
 
 
 void STDCALL ValetCalculate()
 {
-  unsigned num = hand.GetNumEntries();
-  if (num > numEntries)
-  {
-    entries.resize(num);
-    numEntries = num;
-  }
-
-  entries = hand.CalculateScores();
+  entries.clear();
+  hand.calculateScores(entries);
   nextEntry = 0;
 }
 
 
-int STDCALL ValetGetDatum()
+void setOutput(
+  const ScoreInput& entry,
+  OutputResult& output)
 {
-  return hand.GetDatumOnly();
-}
+  output.declFlag[0] = entry.declFlag[0];
+  output.declFlag[1] = entry.declFlag[1];
 
+  output.defFlag = entry.defFlag;
 
-void SetResults(
-  OutputResultType * output,
-  ValetEntryType& vres)
-{
-  output->declFlag[0] = vres.declFlag[0];
-  output->declFlag[1] = vres.declFlag[1];
+  output.leadFlag[0] = entry.leadFlag[0];
+  output.leadFlag[1] = entry.leadFlag[1];
 
-  output->defFlag = vres.defFlag;
-
-  output->leadFlag[0] = vres.leadFlag[0];
-  output->leadFlag[1] = vres.leadFlag[1];
-
-  output->overallDecl = vres.overall;
-  output->bidScoreDecl = vres.bidScore;
+  output.overallDecl = entry.overall;
+  output.bidScoreDecl = entry.bidScore;
   
-  output->playScoreDecl[0] = vres.playScore[0];
-  output->playScoreDecl[1] = vres.playScore[1];
+  output.playScoreDecl[0] = entry.playScore[0];
+  output.playScoreDecl[1] = entry.playScore[1];
   
-  output->leadScoreDef[0] = vres.leadScore[0];
-  output->leadScoreDef[1] = vres.leadScore[1];
+  output.leadScoreDef[0] = entry.leadScore[0];
+  output.leadScoreDef[1] = entry.leadScore[1];
 
-  output->restScoreDef = vres.defScore;
+  output.restScoreDef = entry.defScore;
 }
 
 
 bool STDCALL ValetGetNextScoreByTag(
-  struct PositionsTagType * positions,
-  struct OutputResultType * output)
+  struct PositionTags * positionTagsPtr,
+  struct OutputResult * outputPtr)
 {
   if (nextEntry == entries.size())
     return false;
 
-  ValetEntryType& vres = entries[nextEntry];
+  const ScoreInput& entry = entries[nextEntry];
   nextEntry++;
 
   string decl1, decl2, def1, def2;
-  pairs.GetPairTags(vres.pairNo, decl1, decl2);
-  pairs.GetPairTags(vres.oppNo, def1, def2);
+  pairs.getPairTags(entry.pairNo, decl1, decl2);
+  pairs.getPairTags(entry.oppNo, def1, def2);
 
-#if (! defined(_MSC_VER) || _MSC_VER < 1400)
-  strncpy(positions->decl1, decl1.c_str(), VALET_TAG_MAX_LENGTH);
-  strncpy(positions->decl2, decl2.c_str(), VALET_TAG_MAX_LENGTH);
-  strncpy(positions->def1, def1.c_str(), VALET_TAG_MAX_LENGTH);
-  strncpy(positions->def2, def2.c_str(), VALET_TAG_MAX_LENGTH);
-#else
-  strncpy_s(positions->decl1, decl1.c_str(), VALET_TAG_MAX_LENGTH);
-  strncpy_s(positions->decl2, decl2.c_str(), VALET_TAG_MAX_LENGTH);
-  strncpy_s(positions->def1, def1.c_str(), VALET_TAG_MAX_LENGTH);
-  strncpy_s(positions->def2, def2.c_str(), VALET_TAG_MAX_LENGTH);
-#endif
+  strncpy(positionTagsPtr->decl1, decl1.c_str(), VALET_INPUT_MAX_LENGTH);
+  strncpy(positionTagsPtr->decl2, decl2.c_str(), VALET_INPUT_MAX_LENGTH);
+  strncpy(positionTagsPtr->def1, def1.c_str(), VALET_INPUT_MAX_LENGTH);
+  strncpy(positionTagsPtr->def2, def2.c_str(), VALET_INPUT_MAX_LENGTH);
 
-  SetResults(output, vres);
+  setOutput(entry, * outputPtr);
   return true;
 }
 
 
 bool STDCALL ValetGetNextScoreByNumber(
-  struct PositionsNumberType * positions,
-  struct OutputResultType * output)
+  struct PositionNumbers * positionNumbersPtr,
+  struct OutputResult * outputPtr)
 {
   if (nextEntry == entries.size())
     return false;
 
-  ValetEntryType& vres = entries[nextEntry];
+  const ScoreInput& entry = entries[nextEntry];
   nextEntry++;
 
   string decl1, decl2, def1, def2;
-  pairs.GetPairTags(vres.pairNo, decl1, decl2);
-  pairs.GetPairTags(vres.oppNo, def1, def2);
+  pairs.getPairTags(entry.pairNo, decl1, decl2);
+  pairs.getPairTags(entry.oppNo, def1, def2);
 
   char *pend;
-  positions->decl1 = static_cast<unsigned>(strtol(decl1.c_str(), &pend, 10));
-  positions->decl2 = static_cast<unsigned>(strtol(decl2.c_str(), &pend, 10));
-  positions->def1 = static_cast<unsigned>(strtol(def1.c_str(), &pend, 10));
-  positions->def2 = static_cast<unsigned>(strtol(def2.c_str(), &pend, 10));
+  positionNumbersPtr->decl1 = 
+    static_cast<unsigned>(strtol(decl1.c_str(), &pend, 10));
+  positionNumbersPtr->decl2 = 
+    static_cast<unsigned>(strtol(decl2.c_str(), &pend, 10));
+  positionNumbersPtr->def1 = 
+    static_cast<unsigned>(strtol(def1.c_str(), &pend, 10));
+  positionNumbersPtr->def2 = 
+    static_cast<unsigned>(strtol(def2.c_str(), &pend, 10));
 
-  SetResults(output, vres);
+  setOutput(entry, * outputPtr);
   return true;
 }
 

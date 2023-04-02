@@ -1,7 +1,7 @@
 /* 
    Valet, a generalized Butler scorer for bridge.
 
-   Copyright (C) 2015 by Soren Hein.
+   Copyright (C) 2015-2023 by Soren Hein.
 
    See LICENSE and README.
 */
@@ -9,14 +9,13 @@
 #ifndef VALET_ARGS_H
 #define VALET_ARGS_H
 
-void Usage(
- const char base[]);
+void usage(const char base[]);
 
-void PrintOptions();
+void printOptions();
 
-void ReadArgs(
-  int argc,
-  char * argv[]);
+void readArgs(
+  const int argc,
+  char const * argv[]);
 
 #endif
 

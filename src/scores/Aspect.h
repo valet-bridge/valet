@@ -1,5 +1,5 @@
 /* 
-   Valet, a bridge single-suit double-dummy quick-trick solver.
+   Valet, a generalized Butler scorer for bridge.
 
    Copyright (C) 2015-2023 by Soren Hein.
 
@@ -57,6 +57,10 @@ class Aspect
     string pad(const Padding padding) const;
 
     string strCount(const int width) const;
+
+    string strAverageText(
+      const int width,
+      const int prec) const;
 
     string strAverage(
       const int width,

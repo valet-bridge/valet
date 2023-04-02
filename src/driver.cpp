@@ -1,7 +1,7 @@
 /* 
    Valet, a generalized Butler scorer for bridge.
 
-   Copyright (C) 2015 by Soren Hein.
+   Copyright (C) 2015-2023 by Soren Hein.
 
    See LICENSE and README.
 */
@@ -12,6 +12,7 @@
 
 #include <iostream>
 #include <iomanip>
+#include <vector>
 #include <string>
 #include <stdlib.h>
 #include <string.h>
@@ -26,10 +27,10 @@ extern char example[TEST_ENTRIES][80];
 
 int main(int argc, char * argv[])
 {
-  int mode = GetMode(argc, argv);
+  int mode = getMode(argc, argv);
   if (mode == -1)
   {
-    Usage(argv);
+    usage(argv);
     return 0;
   }
 
@@ -38,11 +39,12 @@ int main(int argc, char * argv[])
   int errorCode;
   char line[160];
 
-  ControlType control;
+  Control control;
   control.valet = VALET_SCORING_IAF;
   control.leadFlag = true;
   control.datumHardRounding = false;
   control.tableauFlag = false;
+
   if ((errorCode = ValetSetControl(&control)) != RETURN_NO_FAULT)
   {
     ValetErrorMessage(errorCode, line);
@@ -67,14 +69,15 @@ int main(int argc, char * argv[])
   }
   else if (mode == 1)
   {
-    PlayersTagType players;
-    InputResultType input;
+    PlayerTags playerTags;
+    InputResult input;
 
     for (unsigned i = 0; i < TEST_ENTRIES; i++)
     {
-      SetTagInputs(players, input, i);
+      setTagInputs(playerTags, input, i);
 
-      if ((errorCode = ValetAddByTag(&players, &input)) != RETURN_NO_FAULT)
+      if ((errorCode = ValetAddByTag(&playerTags, &input)) != 
+        RETURN_NO_FAULT)
       {
         ValetErrorMessage(errorCode, line);
         cout << line;
@@ -84,14 +87,15 @@ int main(int argc, char * argv[])
   }
   else
   {
-    PlayersNumberType players;
-    InputResultType input;
+    PlayerNumbers playerNumbers;
+    InputResult input;
 
     for (unsigned i = 0; i < TEST_ENTRIES; i++)
     {
-      SetNumberInputs(players, input, i);
+      setNumberInputs(playerNumbers, input, i);
 
-      if ((errorCode = ValetAddByNumber(&players, &input)) != RETURN_NO_FAULT)
+      if ((errorCode = ValetAddByNumber(&playerNumbers, &input)) != 
+        RETURN_NO_FAULT)
       {
         ValetErrorMessage(errorCode, line);
         cout << line;
@@ -104,38 +108,52 @@ int main(int argc, char * argv[])
 
   if (mode == 0 || mode == 1)
   {
-    PositionsTagType players;
-    OutputResultType output;
+    PositionTags positionTags;
+    OutputResult output;
 
-    while (ValetGetNextScoreByTag(&players, &output))
+    while (ValetGetNextScoreByTag(&positionTags, &output))
     {
-      if (! output.declFlag[0] && ! output.declFlag[1])
-        PrintPassedResultByTag(players, output);
+      if (output.passedOut())
+      {
+        cout << positionTags.strPassedOut();
+        cout << output.strPassedOut();
+      }
       else
-        PrintPlayedResultByTag(players, output);
+      {
+        cout << positionTags.strGeneral(
+          output.declFlag[0], output.leadFlag[0]);
+        cout << output.strGeneral();
+      }
       cout << "\n";
     }
   }
   else
   {
-    PositionsNumberType players;
-    OutputResultType output;
+    PositionNumbers positionNumbers;
+    OutputResult output;
 
-    while (ValetGetNextScoreByNumber(&players, &output))
+    while (ValetGetNextScoreByNumber(&positionNumbers, &output))
     {
-      if (players.decl1 == 0 ||
-          players.decl2 == 0 ||
-          players.def1 == 0 ||
-          players.def1 == 0)
+      if (positionNumbers.decl1 == 0 ||
+          positionNumbers.decl2 == 0 ||
+          positionNumbers.def1 == 0 ||
+          positionNumbers.def2 == 0)
       {
         cout << "A player tag was not numerical" << endl;
         return RETURN_UNKNOWN_FAULT;
       }
 
-      if (! output.declFlag[0] && ! output.declFlag[1])
-        PrintPassedResultByNumber(players, output);
+      if (output.passedOut())
+      {
+        cout << positionNumbers.strPassedOut();
+        cout << output.strPassedOut();
+      }
       else
-        PrintPlayedResultByNumber(players, output);
+      {
+        cout << positionNumbers.strGeneral(
+          output.declFlag[0], output.leadFlag[0]);
+        cout << output.strGeneral();
+      }
       cout << "\n";
     }
   }

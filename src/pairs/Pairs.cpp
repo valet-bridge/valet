@@ -14,15 +14,17 @@
 #include <cassert>
 
 #include "Pairs.h"
+#include "Players.h"
 
-extern OptionsType options;
+extern Players players;
+extern Options options;
 
 #define PAIRS_CHUNK_SIZE 32
 
 
 Pairs::Pairs()
 {
-  Pairs::Reset();
+  Pairs::reset();
 }
 
 
@@ -31,9 +33,8 @@ Pairs::~Pairs()
 }
 
 
-void Pairs::Reset()
+void Pairs::reset()
 {
-  tagToPlayerName.clear();
   playersToPairNo.clear();
   pairNoToPairName.clear();
   pairNoToPairTags.clear();
@@ -44,60 +45,30 @@ void Pairs::Reset()
 }
 
 
-bool Pairs::TagExists(const string& tag) const
+bool Pairs::pairExists(const string& pair) const
 {
-  // map<string, string>::iterator it = tagToPlayerName.find(tag);
-  const auto it = tagToPlayerName.find(tag);
-  return (it != tagToPlayerName.end());
-}
-
-
-bool Pairs::AddPlayer(
-  const string& tag,
-  const string& name)
-{
-  // Don't reassign a name.
-  if (Pairs::TagExists(tag))
-    return false;
-  else
-  {
-    tagToPlayerName[tag] = name;
-    return true;
-  }
-}
-
-
-string Pairs::GetPlayerName(
-  const string& tag)
-{
-  if (Pairs::TagExists(tag))
-    return tagToPlayerName[tag];
-  else
-  {
-    return "";
-  }
-}
-
-
-bool Pairs::PairExists(const string& pair) const
-{
-  // map<string, unsigned>::iterator it = playersToPairNo.find(pair);
   const auto it = playersToPairNo.find(pair);
   return (it != playersToPairNo.end());
 }
 
 
-int Pairs::GetPairNumber(
+void Pairs::getPairData(
   const string& tag1,
-  const string& tag2)
+  const string& tag2,
+  PairData& pairData)
 {
-  if (! TagExists(tag1) || ! TagExists(tag2))
-    return 0;
+  if (! players.exists(tag1) || ! players.exists(tag2))
+  {
+    pairData.foundFlag = false;
+    pairData.flipFlag = false;
+    pairData.number = numeric_limits<unsigned>::max();
+    return;
+  }
 
   int retval;
   string tag = (tag1 < tag2 ? tag1+"|"+tag2 : tag2+"|"+tag1);
 
-  if (Pairs::PairExists(tag))
+  if (Pairs::pairExists(tag))
     retval = static_cast<int>(playersToPairNo[tag]);
   else
   {
@@ -110,7 +81,7 @@ int Pairs::GetPairNumber(
       pairNoToPairTags.resize(listNo);
     }
     playersToPairNo[tag] = numPairs;
-    pairNoToPairName[numPairs] = Pairs::GetPairName(tag1, tag2);
+    pairNoToPairName[numPairs] = Pairs::getPairName(tag1, tag2);
     if (tag1 < tag2)
     {
       pairNoToPairTags[numPairs].tag1 = tag1;
@@ -124,44 +95,37 @@ int Pairs::GetPairNumber(
     retval = static_cast<int>(numPairs);
   }
 
-  if (tag1 < tag2)
-    return retval;
-  else
-    return -retval;
+  pairData.foundFlag = true;
+  pairData.flipFlag = ! (tag1 < tag2);
+  pairData.number = retval;
 }
 
 
-string Pairs::GetPairName(
+string Pairs::getPairName(
   const string& tag1,
   const string& tag2)  const
 {
-  if (! TagExists(tag1) || ! TagExists(tag2))
-    return 0;
+  if (! players.exists(tag1) || ! players.exists(tag2))
+    return "";
 
   if (tag1 < tag2)
   {
-    if (Pairs::PairExists(tag1+"|"+tag2))
-      // return tagToPlayerName[tag1] + " - " + tagToPlayerName[tag2];
-      return 
-        tagToPlayerName.find(tag1)->second + " - " +
-        tagToPlayerName.find(tag2)->second;
+    if (Pairs::pairExists(tag1+"|"+tag2))
+      return players.getName(tag1) + " - " + players.getName(tag2);
     else
       return "";
   }
   else
   {
-    if (Pairs::PairExists(tag2+"|"+tag1))
-      // return tagToPlayerName[tag2] + " - " + tagToPlayerName[tag1];
-      return
-        tagToPlayerName.find(tag2)->second + " - " +
-        tagToPlayerName.find(tag1)->second;
+    if (Pairs::pairExists(tag2+"|"+tag1))
+      return players.getName(tag2) + " - " + players.getName(tag1);
     else
       return "";
   }
 }
 
 
-void Pairs::GetPairTags(
+void Pairs::getPairTags(
   const unsigned pno,
   string& tag1,
   string& tag2)
@@ -172,7 +136,7 @@ void Pairs::GetPairTags(
 }
 
 
-string Pairs::GetPairName(
+string Pairs::getPairName(
   const unsigned pno,
   const unsigned width) const
 {
@@ -180,7 +144,7 @@ string Pairs::GetPairName(
   if (options.format == VALET_FORMAT_TEXT)
   {
     stringstream ss;
-    ss << left << Pairs::PadString(pairNoToPairName[pno], width) << right;
+    ss << left << Pairs::padString(pairNoToPairName[pno], width) << right;
     return ss.str();
   }
   else if (options.format == VALET_FORMAT_CSV)
@@ -195,7 +159,7 @@ string Pairs::GetPairName(
 }
 
 
-string Pairs::PadString(
+string Pairs::padString(
   const string& s,
   const unsigned width) const
 {

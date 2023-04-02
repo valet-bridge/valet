@@ -1,0 +1,17 @@
+set d = '../data/2022-Salsomaggiore/Wuhan'
+
+date
+./valet -d $d -m 64 -l -c -v datum -t tab0.txt > ref0.txt
+./valet -d $d -m 64 -l -c -v datum -x -t tab1.txt > ref1.txt
+./valet -d $d -m 64 -l -c -v imps -t tab2.txt > ref2.txt
+./valet -d $d -m 64 -l -c -v imps -x -t tab3.txt > ref3.txt
+./valet -d $d -m 64 -l -c -v matchpoints -t tab4.txt > ref4.txt
+./valet -d $d -m 64 -l -c -v matchpoints -x -t tab5.txt > ref5.txt
+date
+
+foreach i (0 1 2 3 4 5)
+  echo tab$i
+  diff tab$i.txt ref | wc
+  echo ref$i
+  diff ref$i.txt ref | wc
+end

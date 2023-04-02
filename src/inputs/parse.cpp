@@ -1,7 +1,7 @@
 /* 
    Valet, a generalized Butler scorer for bridge.
 
-   Copyright (C) 2015 by Soren Hein.
+   Copyright (C) 2015-2023 by Soren Hein.
 
    See LICENSE and README.
 */
@@ -9,53 +9,26 @@
 
 // The functions in this file help to parse the scores file.
 
-
-#include <string>
 #include <vector>
-#include <stdio.h>
-#include <stdlib.h>
+#include <cassert>
 
-#include "parse.h"
+// #include <stdio.h>
+#include <string.h>
 
-#include "../Pairs.h"
+#include "../pairs/Players.h"
+
 #include "../valet.h"
+#include "../scoring.h"
+#include "../Result.h"
+#include "../cst.h"
+
+#include "pinternal.h"
 
 using namespace std;
 
+extern Players players;
+extern Error error;
 
-extern Pairs pairs;
-extern ErrorType error;
-
-
-bool TokenToUnsigned(
-  const string token,
-  unsigned lowerLimit,
-  unsigned upperLimit,
-  const string& err,
-  unsigned& res);
-
-bool CharToPlayer(
-  const char c,
-  unsigned& p);
-
-bool CharToLevel(
-  const char c,
-  unsigned& d);
-
-bool CharToDenom(
-  const char c,
-  unsigned& d);
-
-bool CharToRank(
-  const char c,
-  unsigned& r);
-
-bool LineToResult(
-  const vector<string>& tokens,
-  ResultType& res,
-  unsigned& rno,
-  unsigned& bno,
-  bool skipNameCheck);
 
 // tokenize splits a string into tokens separated by delimiter.
 // http://stackoverflow.com/questions/236129/split-a-string-in-c
@@ -93,15 +66,47 @@ void tokenize(
 }
 
 
-bool TokenToUnsigned(
-  const string token,
-  unsigned lowerLimit,
-  unsigned upperLimit,
+bool parseInt(
+  const string& text,
+  int& value)
+{
+  if (text == "")
+    return false;
+
+  int i;
+  size_t pos;
+  try
+  {
+    i = stoi(text, &pos, 0);
+    if (pos != text.size())
+      return false;
+  }
+  catch (...)
+  {
+    return false;
+  }
+
+  value = i;
+  return true;
+}
+
+
+bool tokenToUnsigned(
+  const string& token,
+  const unsigned lowerLimit,
+  const unsigned upperLimit,
   const string& err,
   unsigned& res)
 {
-  char *pend;
-  res = static_cast<unsigned>(strtol(token.c_str(), &pend, 10));
+  int i;
+  if (! parseInt(token, i))
+  {
+    error.flag = true;
+    error.message << "Got " << err << ": " << token << " (not a number)\n";
+    return false;
+  }
+  res = static_cast<unsigned>(i);
+    
   if ((lowerLimit > 0 && res < lowerLimit) || 
       (upperLimit > 0 && res > upperLimit))
   {
@@ -115,18 +120,12 @@ bool TokenToUnsigned(
     error.flag = true;
     return false;
   }
-  else if (*pend != '\0')
-  {
-    error.flag = true;
-    error.message << "Got " << err << ": " << token << " (not a number)\n";
-    return false;
-  }
   else
     return true;
 }
 
 
-bool CharToPlayer(
+bool charToPlayer(
   const char c,
   unsigned& p)
 {
@@ -155,22 +154,32 @@ bool CharToPlayer(
 }
 
 
-bool CharToLevel(
-  const char c,
+bool tokenToLevel(
+  const string& token,
   unsigned& d)
 {
+  const char c = token[0];
   if (c < '0' || c > '7')
+  {
+    error.flag = true;
+    error.no = RETURN_LEVEL;
+    error.message << "Got contract: '" << token.c_str() <<
+      "' (can't find a level 1 .. 7)\n";
     return false;
+  }
   
   d = static_cast<unsigned>(c - '0');
   return true;
 }
 
 
-bool CharToDenom(
-  const char c,
+bool tokenToDenom(
+  const string& token,
+  const unsigned index,
+  const string& tag,
   unsigned& d)
 {
+  const char c = token[index];
   switch(c)
   {
     case 'N':
@@ -194,16 +203,143 @@ bool CharToDenom(
       d = VALET_CLUBS;
       return true;
     default:
+    {
       error.flag = true;
+      error.no = RETURN_DENOM;
+      error.message << 
+        "Got " << tag << 
+        ": '" << token.c_str() <<
+        "' (can't find a denomination, want NSHDC/nshdc)\n";
       return false;
+    }
   }
 }
 
 
-bool CharToRank(
-  const char c,
+bool lineToNumbers(
+  const vector<string>& tokens,
+  unsigned& roundNo,
+  unsigned& boardNo)
+{
+  if (! tokenToUnsigned(tokens[0], 1, 0, "round number", roundNo))
+  {
+    error.no = RETURN_ROUND_NUMBER;
+    return false;
+  }
+
+  if (! tokenToUnsigned(tokens[1], 1, 0, "board number", boardNo))
+  {
+    error.no = RETURN_BOARD_NUMBER;
+    return false;
+  }
+
+  return true;
+}
+
+
+bool checkPlayer(
+  const string& token,
+  const string& tag,
+  const int errNo)
+{
+  if (! players.exists(token))
+  { 
+    error.flag = true;
+    error.no = errNo;
+    error.message << 
+      "Got " << tag << 
+      " player: '" << token << 
+      "' (not in name list)\n";
+    return false;
+  }
+  else
+    return true;
+}
+
+
+bool checkContract(const string& token)
+{
+  size_t cl = token.size();
+  if (cl == 0 || cl > 4)
+  {
+    error.flag = true;
+    error.no = RETURN_CONTRACT_FORMAT_TEXT;
+    error.message << "Got contract: '" << token.c_str() <<
+      "' (bad length)\n";
+    return false;
+  }
+
+  if (cl == 1 && token != "P" && token != "p")
+  {
+    error.flag = true;
+    error.no = RETURN_CONTRACT_FORMAT_TEXT;
+    error.message << "Got contract: '" << token.c_str() <<
+      "' (if length 1, must be P or p)\n";
+    return false;
+  }
+
+  return true;
+}
+
+
+bool tokenToMultiplier(
+  const string& token,
+  unsigned& multiplier)
+{
+  if (token.size() == 3)
+  {
+    if (token[2] != 'X' && token[2] != 'x')
+    {
+      error.flag = true;
+      error.no = RETURN_MULTIPLIER;
+      error.message << "Got contract: '" << token.c_str() <<
+        "' (expected last letter to be X or x)\n";
+      return false;
+    }
+    multiplier = VALET_DOUBLED;
+  }
+  else if (token.size() == 4)
+  {
+    if ((token[2] != 'X' && token[2] != 'x') || 
+        (token[3] != 'X' && token[3] != 'x'))
+    {
+      error.flag = true;
+      error.no = RETURN_MULTIPLIER;
+      error.message << "Got contract: '" << token.c_str() <<
+        "' (expected last letters to be XX or xx)\n";
+      return false;
+    }
+    multiplier = VALET_REDOUBLED;
+  }
+  else
+    multiplier = VALET_UNDOUBLED;
+
+  return true;
+}
+
+
+bool tokenToPlayer(
+  const string& token,
+  unsigned& player)
+{
+  if (token.size() != 1 || ! charToPlayer(token[0], player))
+  {
+    error.flag = true;
+    error.no = RETURN_DECLARER;
+    error.message << "Got declarer: '" << token.c_str() <<
+      "' (expected NESW or nesw)\n";
+    return false;
+  }
+  else
+    return true;
+}
+
+
+bool tokenToRank(
+  const string& token,
   unsigned& r)
 {
+  const char c = token[1];
   if (c >= '2' && c <= '9')
   {
     r = static_cast<unsigned>(c - '0');
@@ -237,157 +373,83 @@ bool CharToRank(
   else
   {
     error.flag = true;
+    error.no = RETURN_LEAD_RANK;
+    error.message << "Got lead: '" << token.c_str() <<
+      "' (can't find a rank, want AKQJT, akqjt or 2 .. 9)\n";
     return false;
   }
 }
 
 
-bool LineToResult(
+bool lineToResult(
   const vector<string>& tokens,
-  ResultType& res,
-  unsigned& rno,
-  unsigned& bno,
+  Result& result,
+  unsigned& roundNo,
+  unsigned& boardNo,
   bool skipNameCheck)
 {
-  if (! TokenToUnsigned(tokens[0], 1, 0, "round number", rno))
-  {
-    error.no = RETURN_ROUND_NUMBER;
+  if (! lineToNumbers(tokens, roundNo, boardNo))
     return false;
-  }
 
-  if (! TokenToUnsigned(tokens[1], 1, 0, "board number", bno))
-  {
-    error.no = RETURN_BOARD_NUMBER;
+  if (! skipNameCheck && 
+      ! checkPlayer(tokens[2], "North", RETURN_PLAYER_NORTH))
     return false;
-  }
 
-  res.north = tokens[2];
-  if (! skipNameCheck && ! pairs.TagExists(res.north))
-  { 
-    error.flag = true;
-    error.no = RETURN_PLAYER_NORTH;
-    error.message << "Got North player: '" << res.north << 
-      "' (not in name list)\n";
+  if (! skipNameCheck && 
+      ! checkPlayer(tokens[3], "East", RETURN_PLAYER_EAST))
     return false;
-  }
-  res.east = tokens[3];
-  if (! skipNameCheck && ! pairs.TagExists(res.east))
-  { 
-    error.flag = true;
-    error.no = RETURN_PLAYER_EAST;
-    error.message << "Got East player: '" << res.east <<
-      "' (not in name list)\n";
-    return false;
-  }
-  res.south = tokens[4];
-  if (! skipNameCheck && ! pairs.TagExists(res.south))
-  { 
-    error.flag = true;
-    error.no = RETURN_PLAYER_SOUTH;
-    error.message << "Got South player: '" << res.south << 
-      "' (not in name list)\n";
-    return false;
-  }
-  res.west = tokens[5];
-  if (! skipNameCheck && ! pairs.TagExists(res.west))
-  { 
-    error.flag = true;
-    error.no = RETURN_PLAYER_WEST;
-    error.message << "Got West player: '" << res.west <<
-      "' (not in name list)\n";
-    return false;
-  }
 
-  size_t cl = tokens[6].size();
-  if (cl == 0 || cl > 4)
-  {
-    error.flag = true;
-    error.no = RETURN_CONTRACT_FORMAT_TEXT;
-    error.message << "Got contract: '" << tokens[6].c_str() <<
-      "' (bad length)\n";
+  if (! skipNameCheck && 
+      ! checkPlayer(tokens[4], "South", RETURN_PLAYER_SOUTH))
     return false;
-  }
 
-  if (cl == 1)
+  if (! skipNameCheck && 
+      ! checkPlayer(tokens[5], "West", RETURN_PLAYER_WEST))
+    return false;
+
+  result.setPlayers(tokens[2], tokens[3], tokens[4], tokens[5]);
+
+  if (! checkContract(tokens[6]))
+    return false;
+
+  if (tokens[6].size() == 1)
   {
-    if (tokens[6] != "P" && tokens[6] != "p")
-    {
-      error.flag = true;
-      error.no = RETURN_CONTRACT_FORMAT_TEXT;
-      error.message << "Got contract: '" << tokens[6].c_str() <<
-        "' (if length 1, must be P or p)\n";
-      return false;
-    }
-    res.level = 0;
+    result.setPassedOut();
     return true;
   }
 
-  if (! CharToLevel(tokens[6][0], res.level))
-  {
-    error.flag = true;
-    error.no = RETURN_LEVEL;
-    error.message << "Got contract: '" << tokens[6].c_str() <<
-      "' (can't find a level 1 .. 7)\n";
+
+  unsigned level, denom, multiplier, declarer, tricks;
+  if (! tokenToLevel(tokens[6], level))
     return false;
-  }
 
-  if (! CharToDenom(tokens[6][1], res.denom))
-  {
-    error.flag = true;
-    error.no = RETURN_DENOM;
-    error.message << "Got contract: '" << tokens[6].c_str() <<
-      "' (can't find a denomination, want NSHDC/nshdc)\n";
+  if (! tokenToDenom(tokens[6], 1, "contract", denom))
     return false;
-  }
 
-  if (cl == 3)
-  {
-    if (tokens[6][2] != 'X' && tokens[6][2] != 'x')
-    {
-      error.flag = true;
-      error.no = RETURN_MULTIPLIER;
-      error.message << "Got contract: '" << tokens[6].c_str() <<
-        "' (expected last letter to be X or x)\n";
-      return false;
-    }
-    res.multiplier = VALET_DOUBLED;
-  }
-  else if (cl == 4)
-  {
-    if ((tokens[6][2] != 'X' && tokens[6][2] != 'x')|| 
-        (tokens[6][3] != 'X' && tokens[6][3] != 'x'))
-    {
-      error.flag = true;
-      error.no = RETURN_MULTIPLIER;
-      error.message << "Got contract: '" << tokens[6].c_str() <<
-        "' (expected last letters to be XX or xx)\n";
-      return false;
-    }
-    res.multiplier = VALET_REDOUBLED;
-  }
-  else
-    res.multiplier = VALET_UNDOUBLED;
-
-
-  if (tokens[7].size() != 1 || ! CharToPlayer(tokens[7][0], res.declarer))
-  {
-    error.flag = true;
-    error.no = RETURN_DECLARER;
-    error.message << "Got declarer: '" << tokens[7].c_str() <<
-      "' (expected NESW or nesw)\n";
+  if (! tokenToMultiplier(tokens[6], multiplier))
     return false;
-  }
 
-  if (! TokenToUnsigned(tokens[8], 0, 13, "tricks", res.tricks))
+  if (! tokenToPlayer(tokens[7], declarer))
+    return false;
+
+  if (! tokenToUnsigned(tokens[8], 0, 13, "tricks", tricks))
   {
     error.flag = true;
     error.no = RETURN_TRICKS;
     return false;
   }
 
+  unsigned vulNS, vulEW;
+  getVul(boardNo, vulNS, vulEW);
+  const unsigned vul = (declarer == VALET_NORTH || declarer == VALET_SOUTH ?
+    vulNS : vulEW);
+
+  result.setGeneralResult(level, denom, multiplier, declarer, tricks, vul);
+
+
   if (tokens.size() == 9)
   {
-    res.leadRank = 0;
+    result.setNoLead();
     return true;
   }
 
@@ -400,40 +462,30 @@ bool LineToResult(
     return false;
   }
 
-  if (! CharToDenom(tokens[9][0], res.leadDenom))
-  {
-    error.flag = true;
-    error.no = RETURN_LEAD_DENOM;
-    error.message << "Got lead: '" << tokens[9].c_str() <<
-      "' (can't find a denomination, want NSHDC/nshdc)\n";
+  unsigned leadDenom, leadRank;
+  if (! tokenToDenom(tokens[9], 0, "denomination", leadDenom))
     return false;
-  }
 
-  if (! CharToRank(tokens[9][1], res.leadRank))
-  {
-    error.flag = true;
-    error.no = RETURN_LEAD_RANK;
-    error.message << "Got lead: '" << tokens[9].c_str() <<
-      "' (can't find a rank, want AKQJT, akqjt or 2 .. 9)\n";
+  if (! tokenToRank(tokens[9], leadRank))
     return false;
-  }
+
+  result.setLead(leadDenom, leadRank);
 
   return true;
 }
 
 
-int ParseScoreLine(
+int parseScoreLine(
   const string& line,
-  ResultType& res,
-  unsigned &rno,
-  unsigned &bno,
-  bool skipNameCheck)
+  Result& result,
+  unsigned& roundNo,
+  unsigned& boardNo,
+  const bool skipNameCheck)
 {
-  vector<string> tokens(32);
-  tokens.clear();
-
+  vector<string> tokens;
   tokenize(line, tokens, "|");
-  size_t tlen = tokens.size();
+  const size_t tlen = tokens.size();
+
   if (tlen != 9 && tlen != 10)
   {
     error.flag = true;
@@ -444,7 +496,7 @@ int ParseScoreLine(
     return error.no;
   }
 
-  if (LineToResult(tokens, res, rno, bno, skipNameCheck))
+  if (lineToResult(tokens, result, roundNo, boardNo, skipNameCheck))
     return RETURN_NO_FAULT;
   else
   {
@@ -453,3 +505,52 @@ int ParseScoreLine(
   }
 }
 
+
+int parseScoreLine(
+  const string& line,
+  PlayerTags& playerTags)
+{
+  vector<string> tokens;
+  tokenize(line, tokens, "|");
+  const size_t tlen = tokens.size();
+
+  // Short form as we have already called the other parseScoreLine.
+  assert(tlen == 9 || tlen == 10);
+
+  strncpy(playerTags.north, tokens[2].c_str(), VALET_INPUT_MAX_LENGTH);
+  strncpy(playerTags.east,  tokens[3].c_str(), VALET_INPUT_MAX_LENGTH);
+  strncpy(playerTags.south, tokens[4].c_str(), VALET_INPUT_MAX_LENGTH);
+  strncpy(playerTags.west,  tokens[5].c_str(), VALET_INPUT_MAX_LENGTH);
+
+  return RETURN_NO_FAULT;
+}
+
+
+bool lessByBoard(
+  const string& str1,
+  const string& str2)
+{
+  // This is a kludge: We may have str1 "1|1" and str2 "1|10".
+  // We want str1 to be less than str2.
+
+  vector<string> tokens1, tokens2;
+  tokenize(str1, tokens1, "|");
+  tokenize(str2, tokens2, "|");
+  assert(tokens1.size() == 2);
+  assert(tokens2.size() == 2);
+
+  int r1, r2, b1, b2;
+  parseInt(tokens1[0], r1);
+  parseInt(tokens1[1], b1);
+  parseInt(tokens2[0], r2);
+  parseInt(tokens2[1], b2);
+
+  if (r1 < r2)
+    return true;
+  else if (r1 > r2)
+    return false;
+  else if (b1 < b2)
+    return true;
+  else
+    return false;
+}

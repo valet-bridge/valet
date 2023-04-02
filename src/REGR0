@@ -1,0 +1,8 @@
+set d = '../data/2022-Salsomaggiore/Wuhan'
+
+./valet -d $d -m 64 -l -c -v datum -t ref/tab0.txt > ref/ref0.txt
+./valet -d $d -m 64 -l -c -v datum -x -t ref/tab1.txt > ref/ref1.txt
+./valet -d $d -m 64 -l -c -v imps -t ref/tab2.txt > ref/ref2.txt
+./valet -d $d -m 64 -l -c -v imps -x -t ref/tab3.txt > ref/ref3.txt
+./valet -d $d -m 64 -l -c -v matchpoints -t ref/tab4.txt > ref/ref4.txt
+./valet -d $d -m 64 -l -c -v matchpoints -x -t ref/tab5.txt > ref/ref5.txt

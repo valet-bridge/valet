@@ -1,15 +1,27 @@
-Scores
-------
-1. Check calcCompensation
-   - strtol??
-   - The resizing?
-   - map not unsigned pair index?
-2. Why index from 1?
-3. 
+Code
+----
+* Passout should perhaps count as no play or defense at all
+* Compensation could be a least-squares problem.
+* Tableau has scores (-50, +200) and can be sorted by them
+* Output order of boards if numeric should be numerically sorted
 
-Check I haven't broken matchpoints
-Put stuff in scores/ directory
-Negative pair numbers are not a good idea
+
+Text
+----
+* Pronouns: Declarer he, defender she.
+* Check all examples in Word.
+
+
+Example 9 segfaults on -l option, at least with -x -l
+
+
+In CalculateScores, gets turned into
+
+  Score score1;
+  Score score2;
+  string keyResult;
+
+Scores::add and Tableau::add use this
 
 
 2019-06-25
@@ -20,19 +32,14 @@ Negative pair numbers are not a good idea
 -z, --analyze     For player with that tag
 -Z, --anylyzeall dir
 
-Output order if numeric should be numerically sorted
 
-Tableau has scores (-50, +200) and is sorted by them.
-If player is specified, his scores are marked with *
+If player is specified, his scores are marked with * in tableau
 
 
 
 2019-BAM
 Why are matchpoints a bit different for E and W declarers of same
 contract?
-
-2019-Open
-Does correction work right?  Seems to over-adjust us vs Michael-Ingo.
 
 2019-04-14
 

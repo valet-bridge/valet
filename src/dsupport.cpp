@@ -1,7 +1,7 @@
 /* 
    Valet, a generalized Butler scorer for bridge.
 
-   Copyright (C) 2015 by Soren Hein.
+   Copyright (C) 2015-2023 by Soren Hein.
 
    See LICENSE and README.
 */
@@ -11,10 +11,9 @@
 
 
 #include <iostream>
-#include <iomanip>
+#include <vector>
 #include <string>
-#include <stdlib.h>
-#include <string.h>
+#include <cassert>
 
 #include "valet.h"
 #include "dsupport.h"
@@ -51,107 +50,115 @@ char example[TEST_ENTRIES][80] =
   "1|1|85|128|91|24|3N|E|7|C6"
 };
 
-const unsigned northNoList[TEST_ENTRIES] =
+const vector<PlayerTags> playerTagsList =
 {
-  101, 102, 106, 110, 111, 113,  12,  14,  15,  23,
-   29,   3,  45,  51,  55,  66,  71,  78,  81,  83,
-   84,  85
+  { "SCHALTZ Martin",         "KRANYAK John",  
+    "CHRISTIANSEN Soren",     "DEMUY Vincent"},
+  { "SMITH Jeff",             "BRUM Paulo",  
+    "MILES Daniel",           "SALOMAO Jeovani"},
+  { "STEPHENS Robert",        "MAZURKIEWICZ Marcin",  
+    "FICK Hennie",            "JASSEN Krzysztof"},
+  { "SYLVAN Johan",           "HALLASA Jawan", 
+    "WRANG Frederic",         "SWEIDAN Fadi"},
+  { "TAN Gideon",             "DANAILOV Diyan",  
+    "FONG Kien Hoong",        "STAMATOV Jerry"},
+  { "TERAMOTO Tadashi",       "ABD ELLATEIF Khaled",  
+    "KAKU Hiroshi",           "EISSA Tamer"},
+  { "BARBOSA Roberto",        "WOLPERT Darren",  
+    "BRENNER Diego",          "KORBEL Daniel"},
+  { "BESSIS Thomas",          "KANG Meng", 
+    "VOLCKER Frederic",       "SUN Shaolin"},
+  { "BOUVERESSE Jean-Pierre", "WARE Michael",  
+    "MATHIEU Philippe",       "TISLEVOLL Geir-Olav"},
+  { "CORNELL Michael",        "GERIN Dominique",   
+    "BACH Ashley",            "PELLETIER Jean-Claude"},
+  { "ELSHORBAGY Emad",        "FURUTA Kazuo",  
+    "MONIR Ahmed",            "CHEN Dawei"},
+  { "ABDUL-HADI Rana",        "UPMARK Johan",   
+    "ABDUL-JALIL Jamal",      "NYSTROM Fredrik"},
+  { "HACKETT Justin",         "BANARJEE Amar",  
+    "HACKETT Jason",          "ROY Rana"},
+  { "HURD John",              "KONOW Kasper", 
+    "WOOLDRIDGE Joel",        "ASKGAARD Michael"},
+  { "KALITA Jacek",           "KAPREY Imtiaz",  
+    "NOWOSADZKI Michal",      "GRUNDER Martin"},
+  { "LI Xiaoyi",              "ROMBAUT Jerome",  
+    "HU Linlin",              "COMBESCURE Francois"},
+  { "MAJUMDER Subir",         "FORRESTER Tony",  
+    "MANNA Gopinath",         "ROBSON Andrew"},
+  { "MILNE Liam",             "NABIL Karim",  
+    "GRIFFITHS Aneurin",      "SADEK Tarek"},
+  { "MUZZIO Ernesto",         "MECKSTROTH Jeff",  
+    "CAMBEROS Hector",        "RODWELL Eric"},
+  { "NANEV Ivan",             "LOO Choon Chou",  
+    "GUNV Rossen",            "POON Hua"},
+  { "NICKELL Nick",           "GARCIA DA ROSA Rodrigo",  
+    "KATZ Ralph",             "PELLEGRINI Carlos"},
+  { "NOSHY Sherif",           "WYER Paul",  
+    "RAMADAN Baher",          "COURTNEY Michael"}
 };
 
-string northTagList[TEST_ENTRIES] =
+const vector<PlayerNumbers> playerNumbersList =
 {
-  "101", "102", "106", "110", "111", "113",  "12",  "14",  "15",  "23",
-   "29",   "3",  "45",  "51",  "55",  "66",  "71",  "78",  "81",  "83",
-   "84",  "85"
-};
-
-const unsigned eastNoList[TEST_ENTRIES] =
-{
-   62,  17,  74,  46,  26,   1, 124,  56, 120,  38,
-   34, 116,  10,  60,  57,  94,  33,  82,  75,  68,
-   35, 128
-};
-
-string eastTagList[TEST_ENTRIES] =
-{
-   "62",  "17",  "74",  "46",  "26",   "1", "124",  "56", "120",  "38",
-   "34", "116",  "10",  "60",  "57",  "94",  "33",  "82",  "75",  "68",
-   "35", "128"
-};
-
-const unsigned southNoList[TEST_ENTRIES] =
-{
-   21,  77,  30, 127,  32,  54,  16, 118,  73,   7,
-   79,   4,  44, 126,  86,  49,  72,  41,  18,  43,
-   58,  91
-};
-
-string southTagList[TEST_ENTRIES] =
-{
-   "21",  "77",  "30", "127",  "32",  "54",  "16", "118",  "73",   "7",
-   "79",   "4",  "44", "126",  "86",  "49",  "72",  "41",  "18",  "43",
-   "58",  "91"
-};
-
-const unsigned westNoList[TEST_ENTRIES] =
-{
-   27,  99,  53, 109, 104,  28,  61, 108, 115,  89,
-   20,  87,  95,   6,  42,  22,  92,  98,  93,  90,
-   88,  24
-};
-
-string westTagList[TEST_ENTRIES] =
-{
-   "27",  "99",  "53", "109", "104",  "28",  "61", "108", "115",  "89",
-   "20",  "87",  "95",   "6",  "42",  "22",  "92",  "98",  "93",  "90",
-   "88",  "24"
-};
-
-const unsigned levelList[TEST_ENTRIES] =
-{
-  3, 4, 4, 4, 4, 4, 3, 4, 4, 3, 3, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3
-};
-
-const unsigned denomList[TEST_ENTRIES] =
-{
-  4, 1, 1, 1, 1, 1, 4, 1, 1, 4, 4, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4
-};
-
-const unsigned multiplierList[TEST_ENTRIES] =
-{
-  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-};
-
-const unsigned declList[TEST_ENTRIES] =
-{
-  1, 1, 3, 3, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 3, 1, 1, 1, 1
-};
-
-const unsigned tricksList[TEST_ENTRIES] =
-{
-  7, 9, 8, 10, 8, 9, 7, 9, 9, 7, 9, 10, 9, 9, 9, 9, 10, 9, 9, 7, 7, 7
-};
-
-const unsigned leadSuitList[TEST_ENTRIES] =
-{
-  3, 0, 3, 3, 2, 0, 3, 2, 0, 3, 0, 2, 2, 2, 0, 2, 2, 0, 3, 3, 3, 3
-};
-
-const unsigned leadRankList[TEST_ENTRIES] =
-{
-  4, 2, 12, 12, 4, 11, 4, 4, 2, 4, 2, 6, 4, 4, 11, 4, 3, 6, 4, 6, 6, 6
+  { 101,  62,  21,  27},
+  { 102,  17,  77,  99},
+  { 106,  74,  30,  53},
+  { 110,  46, 127, 109},
+  { 111,  26,  32, 104},
+  { 113,   1,  54,  28},
+  {  12, 124,  16,  61},
+  {  14,  56, 118, 108},
+  {  15, 120,  73, 115},
+  {  23,  38,   7,  89},
+  {  29,  34,  79,  20},
+  {   3, 116,   4,  87},
+  {  45,  10,  44,  95},
+  {  51,  60, 126,   6},
+  {  55,  57,  86,  42},
+  {  66,  94,  49,  22},
+  {  71,  33,  72,  92},
+  {  78,  82,  41,  98},
+  {  81,  75,  18,  93},
+  {  83,  68,  43,  90},
+  {  84,  35,  58,  88},
+  {  85, 128,  91,  24}
 };
 
 
-void SetContractInputs(
-  InputResultType& input,
-  const unsigned i);
+const vector<InputResult> inputResults =
+{
+  // level, denom,   multiplier, decl,   tricks, lead suit, lead rank
+  {      3, VALET_NOTRUMP,    0, VALET_EAST,  7, VALET_CLUBS,     4},
+  {      4, VALET_HEARTS,     0, VALET_EAST,  9, VALET_SPADES,    2},
+  {      4, VALET_HEARTS,     0, VALET_WEST,  8, VALET_CLUBS,    12},
+  {      4, VALET_HEARTS,     0, VALET_WEST, 10, VALET_CLUBS,    12},
+  {      4, VALET_HEARTS,     0, VALET_EAST,  8, VALET_DIAMONDS,  4},
+  {      4, VALET_HEARTS,     0, VALET_WEST,  9, VALET_SPADES,   11},
+  {      3, VALET_NOTRUMP,    0, VALET_EAST,  7, VALET_CLUBS,     4},
+  {      4, VALET_HEARTS,     0, VALET_EAST,  9, VALET_DIAMONDS,  4},
+  {      4, VALET_HEARTS,     0, VALET_EAST,  9, VALET_SPADES,    2},
+  {      3, VALET_NOTRUMP,    0, VALET_EAST,  7, VALET_CLUBS,     4},
+  {      3, VALET_NOTRUMP,    0, VALET_EAST,  9, VALET_SPADES,    2},
+  {      4, VALET_HEARTS,     0, VALET_EAST, 10, VALET_DIAMONDS,  6},
+  {      4, VALET_HEARTS,     0, VALET_EAST,  9, VALET_DIAMONDS,  4},
+  {      4, VALET_HEARTS,     0, VALET_EAST,  9, VALET_DIAMONDS,  4},
+  {      4, VALET_HEARTS,     0, VALET_WEST,  9, VALET_SPADES,   11},
+  {      4, VALET_HEARTS,     0, VALET_EAST,  9, VALET_DIAMONDS,  4},
+  {      4, VALET_HEARTS,     0, VALET_EAST, 10, VALET_DIAMONDS,  3},
+  {      4, VALET_HEARTS,     0, VALET_WEST,  9, VALET_SPADES,    6},
+  {      3, VALET_NOTRUMP,    0, VALET_EAST,  9, VALET_CLUBS,     4},
+  {      3, VALET_NOTRUMP,    0, VALET_EAST,  7, VALET_CLUBS,     6},
+  {      3, VALET_NOTRUMP,    0, VALET_EAST,  7, VALET_CLUBS,     6},
+  {      3, VALET_NOTRUMP,    0, VALET_EAST,  7, VALET_CLUBS,     6}
+};
 
-void PrintPlayedResultNumerical(
-  OutputResultType& output);
+
+void setContractInputs(
+  InputResult& input,
+  const unsigned resultNo);
 
 
-int GetMode(
+int getMode(
   int argc,
   char * argv[])
 {
@@ -168,8 +175,7 @@ int GetMode(
 }
 
 
-void Usage(
-  char * argv[])
+void usage(char * argv[])
 {
   string basename(argv[0]);
   const size_t l = basename.find_last_of("\\/");
@@ -183,159 +189,45 @@ void Usage(
 }
 
 
-void SetContractInputs(
-  InputResultType& input,
-  const unsigned i)
+void setContractInputs(
+  InputResult& input,
+  const unsigned resultNo)
 {
-  input.level = levelList[i];
-  input.denom = denomList[i];
-  input.multiplier = multiplierList[i];
-  input.declarer = declList[i];
-  input.tricks = tricksList[i];
-  input.leadDenom = leadSuitList[i];
-  input.leadRank = leadRankList[i];
+  input = inputResults[resultNo];
+
+  assert(input.level <= 7);
+  assert(input.denom <= 4);
+  assert(input.multiplier <= 2);
+  assert(input.declarer <= 3);
+  assert(input.tricks <= 13);
+  assert(input.leadDenom <= 4);
+  assert(input.leadRank >= 2 && input.leadRank <= 14);
 }
 
 
-void SetTagInputs(
-  PlayersTagType& players, 
-  InputResultType& input, 
-  const unsigned i)
+void setTagInputs(
+  PlayerTags& playerTags, 
+  InputResult& input, 
+  const unsigned resultNo)
 {
-#if (! defined(_MSC_VER) || _MSC_VER < 1400)
-  strncpy(players.north, northTagList[i].c_str(), VALET_TAG_MAX_LENGTH);
-  strncpy(players.east, eastTagList[i].c_str(), VALET_TAG_MAX_LENGTH);
-  strncpy(players.south, southTagList[i].c_str(), VALET_TAG_MAX_LENGTH);
-  strncpy(players.west, westTagList[i].c_str(), VALET_TAG_MAX_LENGTH);
-#else
-  strncpy_s(players.north, northTagList[i].c_str(), VALET_TAG_MAX_LENGTH);
-  strncpy_s(players.east, eastTagList[i].c_str(), VALET_TAG_MAX_LENGTH);
-  strncpy_s(players.south, southTagList[i].c_str(), VALET_TAG_MAX_LENGTH);
-  strncpy_s(players.west, westTagList[i].c_str(), VALET_TAG_MAX_LENGTH);
-#endif
+  playerTags = playerTagsList[resultNo];
 
-  SetContractInputs(input, i);
+  setContractInputs(input, resultNo);
 }
 
 
-void SetNumberInputs(
-  PlayersNumberType& players, 
-  InputResultType& input, 
-  const unsigned i)
+void setNumberInputs(
+  PlayerNumbers& playerNumbers, 
+  InputResult& input, 
+  const unsigned resultNo)
 {
-  players.north = northNoList[i];
-  players.east = eastNoList[i];
-  players.south = southNoList[i];
-  players.west = westNoList[i];
+  playerNumbers = playerNumbersList[resultNo];
 
-  SetContractInputs(input, i);
-}
+  assert(playerNumbers.north > 0);
+  assert(playerNumbers.east > 0);
+  assert(playerNumbers.west > 0);
+  assert(playerNumbers.south > 0);
 
-
-void PrintPassedResultByTag(
-  PositionsTagType& players,
-  OutputResultType& output)
-{
-  cout << "Pair 1: " << 
-    players.decl1 << " - " << 
-    players.decl2 << "\n";
-  cout << "Pair 2: " << 
-    players.def1 << " - " << 
-    players.def2 << "\n";
-  cout << "Passed out\n";
-  cout << "Overall and bidding score: " << 
-    fixed << setprecision(2) << output.overallDecl << " / " << 
-    fixed << setprecision(2) << -output.overallDecl << "\n";
-}
-
-
-void PrintPassedResultByNumber(
-  PositionsNumberType& players,
-  OutputResultType& output)
-{
-  cout << "Pair 1: " << 
-    static_cast<int>(players.decl1) << " - " << 
-    static_cast<int>(players.decl2) << "\n";
-  cout << "Pair 2: " << 
-    static_cast<int>(players.def1) << " - " << 
-    static_cast<int>(players.def2) << "\n";
-  cout << "Passed out\n";
-  cout << "Overall and bidding score: " << 
-    fixed << setprecision(2) << output.overallDecl << " / " << 
-    fixed << setprecision(2) << -output.overallDecl << "\n";
-}
-
-
-void PrintPlayedResultNumerical(
-  OutputResultType& output)
-{
-  cout << 
-    setw(24) << left << "Overall score: " << right << setw(6) <<
-    fixed << setprecision(2) << output.overallDecl << " / " << 
-    fixed << setprecision(2) << -output.overallDecl << "\n";
-  cout << 
-    setw(24) << left << "Bidding score: " << right << setw(6) <<
-    fixed << setprecision(2) << output.bidScoreDecl << " / " << 
-    fixed << setprecision(2) << -output.bidScoreDecl << "\n";
-  cout << 
-    setw(24) << left << "Declarer play score: " << right << setw(6) <<
-    fixed << setprecision(2) <<
-    (output.declFlag[0] ? output.playScoreDecl[0] : 
-        output.playScoreDecl[1]) << "\n";
-  cout << 
-    setw(24) << left << "Lead score: " << right << setw(6) <<
-    "       / " <<
-    fixed << setprecision(2) <<
-    (output.leadFlag[0] ? output.leadScoreDef[0] : 
-      output.leadScoreDef[1]) << "\n";
-  cout << 
-    setw(24) << left << "Rest defense score: " << right << setw(6) <<
-    "       / " <<
-    fixed << setprecision(2) << output.restScoreDef << "\n";
-}
-
-
-void PrintPlayedResultByTag(
-  PositionsTagType& players,
-  OutputResultType& output)
-{
-  cout << 
-    setw(24) << left << "Declaring pair: " << right <<
-    players.decl1 << " - " << 
-    players.decl2 << 
-    " (declarer is " <<
-    (output.declFlag[0] ? "first" : "second") <<
-    " player)\n";
-    cout << 
-      setw(24) << left << "Defending pair: " << right <<
-      players.def1 << " - " << 
-      players.def2 << 
-      " (opening leader is " <<
-      (output.leadFlag[0] ? "first" : "second") <<
-      " player)\n";
-  
-  PrintPlayedResultNumerical(output);
-}
-
-void PrintPlayedResultByNumber(
-  PositionsNumberType& players,
-  OutputResultType& output)
-{
-  cout << 
-    setw(24) << left << "Declaring pair: " << right <<
-    static_cast<int>(players.decl1) << " - " << 
-    static_cast<int>(players.decl2) << 
-    " (declarer is " <<
-    (output.declFlag[0] ? "first" : "second") <<
-    " player)\n";
-    cout << 
-      setw(24) << left << "Defending pair: " << right <<
-      static_cast<int>(players.def1) << " - " << 
-      static_cast<int>(players.def2) << 
-      " (opening leader is " <<
-      (output.leadFlag[0] ? "first" : "second") <<
-      " player)\n";
-  
-  PrintPlayedResultNumerical(output);
+  setContractInputs(input, resultNo);
 }
 

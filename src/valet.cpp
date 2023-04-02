@@ -1,7 +1,7 @@
 /* 
    Valet, a generalized Butler scorer for bridge.
 
-   Copyright (C) 2015 by Soren Hein.
+   Copyright (C) 2015-2023 by Soren Hein.
 
    See LICENSE and README.
 */
@@ -12,74 +12,122 @@
 
 #include <iostream>
 #include <fstream>
+#include <list>
+#include <cassert>
 
-#include "cst.h"
+#include "pairs/Players.h"
+#include "pairs/Pairs.h"
+#include "hand/Hand.h"
+#include "scores/Scores.h"
+
+#include "scores/ScoreInput.h"
+#include "scores/Tableau.h"
+#include "scores/PairSheets.h"
 
 #include "inputs/args.h"
 #include "inputs/files.h"
+#include "inputs/parse.h"
 
 #include "scoring.h"
-#include "misc.h"
-#include "Pairs.h"
-#include "Hand.h"
-#include "Scores.h"
+
+#include "cst.h"
 
 using namespace std;
 
 
-OptionsType options;
-typedef map<string, Hand>::iterator it_type;
-map<string, Hand> handList;
+Options options;
+Players players;
 Pairs pairs;
+map<string, Hand> hands;
 Scores scores;
-ErrorType error;
+Error error;
 
 
-int main(int argc, char * argv[])
+int main(int argc, char const * argv[])
 {
   error.flag = false;
-  ReadArgs(argc, argv);
-  SetTables();
+  readArgs(argc, argv);
+  setTables();
 
-  if (! ReadNameFile(options.directory + "/" + options.nameFile))
+  if (! readNameFile(options.directory + "/" + options.nameFile))
     return(0);
 
-  if (! ReadScoresFile(options.directory + "/" + options.scoresFile))
+  if (! readScoresFile(options.directory + "/" + options.scoresFile))
     return(0);
 
-  fstream tableauStream;
+  fstream ts;
   if (options.tableauFlag)
   {
-    tableauStream.open(options.tableauFile, fstream::out);
-    if (! tableauStream.is_open())
+    ts.open(options.tableauFile, fstream::out);
+    if (! ts.is_open())
     {
       cerr << "Can't write to " << options.tableauFile << "\n";
       exit(1);
     }
   }
 
-  unsigned numEntries = 16;
-  vector<ValetEntryType> entries(numEntries);
-  for (it_type it = handList.begin(); it != handList.end(); it++)
+  fstream ps;
+  if (options.pairSheetsFlag)
   {
-    unsigned num = it->second.GetNumEntries();
-    if (num > numEntries)
+    ps.open(options.pairSheetsFile, fstream::out);
+    if (! ps.is_open())
     {
-      entries.resize(num);
-      numEntries = num;
+      cerr << "Can't write to " << options.pairSheetsFlag << "\n";
+      exit(1);
     }
-
-    entries = it->second.CalculateScores();
-    for (unsigned i = 0; i < entries.size(); i++)
-      scores.add(entries[i]);
-    
-    if (options.tableauFlag)
-      PrintTableauText(entries, it->first, tableauStream);
   }
 
+  // Kludge to get the hand in the right semantic order.
+  struct HandEntry
+  {
+    string str;
+    Hand * handPtr;
+
+    bool operator < (const HandEntry& he2) const
+    {
+      return lessByBoard(str, he2.str);
+    };
+  };
+
+  list<HandEntry> hlist;
+  for (auto& hand: hands)
+    hlist.push_back({hand.first, &hand.second});
+
+  hlist.sort();
+
+  PairSheets pairSheets;
+
+  for (auto& hentry: hlist)
+  {
+    vector<ScoreInput> entries;
+
+    hentry.handPtr->calculateScores(entries);
+
+    for (auto& entry: entries)
+    {
+      scores.add(entry);
+      if (options.pairSheetsFlag)
+        pairSheets.add(hentry.str, entry);
+    }
+    
+    if (options.tableauFlag)
+    {
+      Tableau tableau;
+      tableau.add(entries);
+      tableau.scale();
+      ts << tableau.str(hentry.str);
+    }
+  }
 
   if (options.tableauFlag)
-    tableauStream.close();
+    ts.close();
+
+  if (options.pairSheetsFlag)
+  {
+    pairSheets.sort();
+    ps << pairSheets.str();
+    ps.close();
+  }
 
   scores.scale();
 

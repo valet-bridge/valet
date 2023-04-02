@@ -1,15 +1,21 @@
 VALET_FILES   =                                         \
-                valet.cpp                               \
-                                                        \
                 inputs/args.cpp                         \
                 inputs/files.cpp                        \
                 inputs/parse.cpp                        \
                                                         \
+                pairs/Players.cpp                       \
+                pairs/Pairs.cpp                         \
+                                                        \
                 scores/Aspect.cpp                       \
                 scores/Score.cpp                        \
+                scores/Scores.cpp                       \
+                scores/ScoreInput.cpp                   \
+                scores/Tableau.cpp                      \
+                scores/PairSheets.cpp                   \
                                                         \
-                misc.cpp                                \
-                Hand.cpp                                \
-                Pairs.cpp                               \
-                Scores.cpp                              \
+                hand/Hand.cpp                           \
+                hand/products.cpp                       \
+                                                        \
+                vstrings.cpp                            \
+                Result.cpp                              \
                 scoring.cpp

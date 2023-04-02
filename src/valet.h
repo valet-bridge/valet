@@ -1,7 +1,7 @@
 /* 
    Valet, a generalized Butler scorer for bridge.
 
-   Copyright (C) 2015 by Soren Hein.
+   Copyright (C) 2015-2023 by Soren Hein.
 
    See LICENSE and README.
 */
@@ -115,8 +115,10 @@
 #define VALET_TAG_MAX_LENGTH 16
 #define VALET_INPUT_MAX_LENGTH 128
 
+#include <string>
 
-struct ControlType
+
+struct Control
 {
   unsigned valet;
   bool leadFlag;
@@ -126,16 +128,16 @@ struct ControlType
 };
 
 
-struct PlayersTagType
+struct PlayerTags
 {
-  char north[VALET_TAG_MAX_LENGTH];
-  char east[VALET_TAG_MAX_LENGTH];
-  char south[VALET_TAG_MAX_LENGTH];
-  char west[VALET_TAG_MAX_LENGTH];
+  char north[VALET_INPUT_MAX_LENGTH];
+  char east[VALET_INPUT_MAX_LENGTH];
+  char south[VALET_INPUT_MAX_LENGTH];
+  char west[VALET_INPUT_MAX_LENGTH];
 };
 
 
-struct PlayersNumberType
+struct PlayerNumbers
 {
   unsigned north;
   unsigned east;
@@ -144,25 +146,37 @@ struct PlayersNumberType
 };
 
 
-struct PositionsTagType
+struct PositionTags
 {
-  char decl1[VALET_TAG_MAX_LENGTH];
-  char decl2[VALET_TAG_MAX_LENGTH];
-  char def1[VALET_TAG_MAX_LENGTH];
-  char def2[VALET_TAG_MAX_LENGTH];
+  char decl1[VALET_INPUT_MAX_LENGTH];
+  char decl2[VALET_INPUT_MAX_LENGTH];
+  char def1[VALET_INPUT_MAX_LENGTH];
+  char def2[VALET_INPUT_MAX_LENGTH];
+
+  std::string strPassedOut() const;
+
+  std::string strGeneral(
+   const bool declFirstFlag,
+   const bool leadFirstFlag) const;
 };
 
 
-struct PositionsNumberType
+struct PositionNumbers
 {
   unsigned decl1;
   unsigned decl2;
   unsigned def1;
   unsigned def2;
+
+  std::string strPassedOut() const;
+
+  std::string strGeneral(
+   const bool declFirstFlag,
+   const bool leadFirstFlag) const;
 };
 
 
-struct InputResultType
+struct InputResult
 {
   unsigned level;
   unsigned denom;
@@ -174,7 +188,7 @@ struct InputResultType
 };
 
 
-struct OutputResultType
+struct OutputResult
 {
   bool declFlag[2];
   bool defFlag;
@@ -184,13 +198,18 @@ struct OutputResultType
   float playScoreDecl[2];
   float leadScoreDef[2];
   float restScoreDef;
+
+  bool passedOut() const;
+
+  std::string strPassedOut() const;
+  std::string strGeneral() const;
 };
 
 
 EXTERN_C DLLEXPORT void STDCALL ValetInit();
 
 EXTERN_C DLLEXPORT int STDCALL ValetSetControl(
-  struct ControlType * control);
+  struct Control * controlPtr);
 
 EXTERN_C DLLEXPORT void STDCALL ValetClear();
 
@@ -200,27 +219,25 @@ EXTERN_C DLLEXPORT int STDCALL ValetSetBoardNumber(
   unsigned no);
 
 EXTERN_C DLLEXPORT int STDCALL ValetAddByLine(
-  char line[VALET_INPUT_MAX_LENGTH]);
+  char line[]);
 
 EXTERN_C DLLEXPORT int STDCALL ValetAddByTag(
-  struct PlayersTagType * players,
-  struct InputResultType * input);
+  struct PlayerTags * playerTagsPtr,
+  struct InputResult * inputPtr);
 
 EXTERN_C DLLEXPORT int STDCALL ValetAddByNumber(
-  struct PlayersNumberType * players,
-  struct InputResultType * input);
+  struct PlayerNumbers * playerNumbersPtr,
+  struct InputResult * inputPtr);
 
 EXTERN_C DLLEXPORT void STDCALL ValetCalculate();
 
-EXTERN_C DLLEXPORT int STDCALL ValetGetDatum();
-
 EXTERN_C DLLEXPORT bool STDCALL ValetGetNextScoreByTag(
-  struct PositionsTagType * players,
-  struct OutputResultType * output);
+  struct PositionTags * positionTagsPtr,
+  struct OutputResult * outputPtr);
 
 EXTERN_C DLLEXPORT bool STDCALL ValetGetNextScoreByNumber(
-  struct PositionsNumberType * players,
-  struct OutputResultType * output);
+  struct PositionNumbers * positionNumbersPtr,
+  struct OutputResult * outputPtr);
 
 EXTERN_C DLLEXPORT void STDCALL ValetErrorMessage(
   int code,

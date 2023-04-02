@@ -45,19 +45,17 @@ DLIB            = $(DLLBASE).lib
 VFILE           = valetres
 
 LIB_FILES 	=		\
-        Hand.cpp		\
-        Pairs.cpp               \
-        parse.cpp               \
-        scoring.cpp             \
+	$(VALET_FILES)		\
 	vlib.cpp
 
 DRIVER_FILES =			\
 	driver.cpp              \
-	dsupport.cpp
+	dsupport.cpp		\
+	vstrings.cpp
 
 include $(INCL_SOURCE)
 
-VOBJ_FILES 	= $(subst .cpp,.obj,$(VALET_FILES)) 
+VOBJ_FILES 	= $(subst .cpp,.obj,$(VALET_FILES)) valet.obj
 LOBJ_FILES 	= $(subst .cpp,.obj,$(LIB_FILES)) $(VFILE).obj
 DOBJ_FILES 	= $(subst .cpp,.obj,$(DRIVER_FILES)) 
 
@@ -77,7 +75,7 @@ $(DLLBASE).res:	$(DLLBASE).rc
 	windres $(DLLBASE).rc $(DLLBASE).res
 
 $(VFILE).obj:	$(DLLBASE).res
-	cvtres /MACHINE:X86 /OUT:$(VFILE).obj $(DLLBASE).res
+	cvtres /MACHINE:X64 /OUT:$(VFILE).obj $(DLLBASE).res
 
 depend:
 	makedepend -Y -o.obj -- $(CC_FLAGS) -- $(VALET_FILES) $(LIB_FILES) $(DRIVER_FILES)

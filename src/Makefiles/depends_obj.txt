@@ -1,19 +1,51 @@
-valet.obj: cst.h inputs/args.h inputs/files.h scoring.h misc.h Pairs.h Hand.h
-valet.obj: Scores.h scores/Score.h scores/Aspect.h
-inputs/args.obj: inputs/args.h cst.h
-inputs/files.obj: inputs/files.h inputs/parse.h cst.h Pairs.h cst.h Hand.h
-inputs/files.obj: valet.h
-inputs/parse.obj: inputs/parse.h cst.h Pairs.h cst.h valet.h
-scores/Aspect.obj: scores/Aspect.h misc.h cst.h
-scores/Score.obj: scores/Score.h scores/Aspect.h Pairs.h cst.h
-misc.obj: Pairs.h cst.h misc.h
-Hand.obj: valet.h Pairs.h cst.h Hand.h scoring.h
-Pairs.obj: Pairs.h cst.h
-Scores.obj: Scores.h scores/Score.h scores/Aspect.h Pairs.h cst.h misc.h
-scoring.obj: valet.h cst.h scoring.h
-Hand.obj: valet.h Pairs.h cst.h Hand.h scoring.h
-Pairs.obj: Pairs.h cst.h
-scoring.obj: valet.h cst.h scoring.h
-vlib.obj: valet.h inputs/parse.h cst.h scoring.h Pairs.h cst.h Hand.h
+inputs/args.obj: inputs/args.h inputs/parse.h cst.h
+inputs/files.obj: inputs/files.h inputs/parse.h pairs/Players.h hand/Hand.h
+inputs/files.obj: Result.h valet.h cst.h
+inputs/parse.obj: pairs/Players.h valet.h scoring.h Result.h cst.h
+inputs/parse.obj: inputs/pinternal.h
+pairs/Players.obj: pairs/Players.h
+pairs/Pairs.obj: pairs/Pairs.h cst.h pairs/Players.h
+scores/Aspect.obj: scores/Aspect.h cst.h
+scores/Score.obj: scores/Score.h scores/Aspect.h scores/ScoreInput.h Result.h
+scores/Score.obj: pairs/Pairs.h cst.h
+scores/Scores.obj: scores/Scores.h scores/Score.h scores/Aspect.h
+scores/Scores.obj: scores/ScoreInput.h Result.h cst.h
+scores/ScoreInput.obj: scores/ScoreInput.h Result.h scores/TableauStats.h
+scores/ScoreInput.obj: valet.h cst.h
+scores/Tableau.obj: scores/Tableau.h scores/Score.h scores/Aspect.h
+scores/Tableau.obj: scores/ScoreInput.h Result.h scores/TableauStats.h
+hand/Hand.obj: hand/Hand.h hand/products.h scores/ScoreInput.h Result.h
+hand/Hand.obj: valet.h scoring.h cst.h
+hand/products.obj: hand/products.h scoring.h cst.h
+vstrings.obj: valet.h
+Result.obj: Result.h pairs/Players.h pairs/Pairs.h cst.h scoringTables.h
+Result.obj: valet.h
+scoring.obj: Result.h valet.h cst.h scoring.h
+inputs/args.obj: inputs/args.h inputs/parse.h cst.h
+inputs/files.obj: inputs/files.h inputs/parse.h pairs/Players.h hand/Hand.h
+inputs/files.obj: Result.h valet.h cst.h
+inputs/parse.obj: pairs/Players.h valet.h scoring.h Result.h cst.h
+inputs/parse.obj: inputs/pinternal.h
+pairs/Players.obj: pairs/Players.h
+pairs/Pairs.obj: pairs/Pairs.h cst.h pairs/Players.h
+scores/Aspect.obj: scores/Aspect.h cst.h
+scores/Score.obj: scores/Score.h scores/Aspect.h scores/ScoreInput.h Result.h
+scores/Score.obj: pairs/Pairs.h cst.h
+scores/Scores.obj: scores/Scores.h scores/Score.h scores/Aspect.h
+scores/Scores.obj: scores/ScoreInput.h Result.h cst.h
+scores/ScoreInput.obj: scores/ScoreInput.h Result.h scores/TableauStats.h
+scores/ScoreInput.obj: valet.h cst.h
+scores/Tableau.obj: scores/Tableau.h scores/Score.h scores/Aspect.h
+scores/Tableau.obj: scores/ScoreInput.h Result.h scores/TableauStats.h
+hand/Hand.obj: hand/Hand.h hand/products.h scores/ScoreInput.h Result.h
+hand/Hand.obj: valet.h scoring.h cst.h
+hand/products.obj: hand/products.h scoring.h cst.h
+vstrings.obj: valet.h
+Result.obj: Result.h pairs/Players.h pairs/Pairs.h cst.h scoringTables.h
+Result.obj: valet.h
+scoring.obj: Result.h valet.h cst.h scoring.h
+vlib.obj: valet.h pairs/Players.h pairs/Pairs.h cst.h hand/Hand.h
+vlib.obj: scores/ScoreInput.h Result.h inputs/parse.h scoring.h
 driver.obj: valet.h dsupport.h
 dsupport.obj: valet.h dsupport.h
+vstrings.obj: valet.h

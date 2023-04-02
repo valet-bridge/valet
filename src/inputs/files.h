@@ -1,7 +1,7 @@
 /* 
    Valet, a generalized Butler scorer for bridge.
 
-   Copyright (C) 2015 by Soren Hein.
+   Copyright (C) 2015-2023 by Soren Hein.
 
    See LICENSE and README.
 */
@@ -14,11 +14,9 @@
 using namespace std;
 
 
-bool ReadNameFile(
-  const string& nameFile);
+bool readNameFile(const string& nameFile);
 
-bool ReadScoresFile(
-  const string& scoresFile);
+bool readScoresFile(const string& scoresFile);
 
 #endif
 

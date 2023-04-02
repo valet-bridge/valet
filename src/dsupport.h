@@ -1,7 +1,7 @@
 /* 
    Valet, a generalized Butler scorer for bridge.
 
-   Copyright (C) 2015 by Soren Hein.
+   Copyright (C) 2015-2023 by Soren Hein.
 
    See LICENSE and README.
 */
@@ -11,38 +11,21 @@
 
 #define TEST_ENTRIES 22
 
-int GetMode(
+int getMode(
   int argc,
   char * argv[]);
 
-void Usage(
-  char * argv[]);
+void usage(char * argv[]);
 
-void SetTagInputs(
-  PlayersTagType& players, 
-  InputResultType& input, 
-  const unsigned i);
+void setTagInputs(
+  PlayerTags& players, 
+  InputResult& input, 
+  const unsigned resultNo);
 
-void SetNumberInputs(
-  PlayersNumberType& players, 
-  InputResultType& input, 
-  const unsigned i);
-
-void PrintPassedResultByTag(
-  PositionsTagType& players,
-  OutputResultType& output);
-
-void PrintPassedResultByNumber(
-  PositionsNumberType& players,
-  OutputResultType& output);
-
-void PrintPlayedResultByTag(
-  PositionsTagType& players,
-  OutputResultType& output);
-
-void PrintPlayedResultByNumber(
-  PositionsNumberType& players,
-  OutputResultType& output);
+void setNumberInputs(
+  PlayerNumbers& players, 
+  InputResult& input, 
+  const unsigned resultNo);
 
 #endif
 

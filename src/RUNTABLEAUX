@@ -1,0 +1,3 @@
+foreach i (1 2 3 4 5 6 7 8)
+  ./valet -d ../data/2023-Training -s R$i/scores$i.txt -l -t tableau$i.txt -p pairs$i.txt -r $i -f csv -j ';' > out$i.txt
+end
