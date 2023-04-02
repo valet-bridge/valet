@@ -1,0 +1,23 @@
+cat R1/scores1.txt R1/sour1.txt > R1/sall1.txt
+
+cat R2/scores2.txt R2/sour2.txt > R2/sall2.txt
+cat R1/sall1.txt R2/sall2.txt > R2/cum2.txt
+
+cat R3/scores3.txt R3/sour3.txt > R3/sall3.txt
+cat R2/cum2.txt R3/sall3.txt > R3/cum3.txt
+
+cat R4/scores4.txt R4/sour4.txt > R4/sall4.txt
+cat R3/cum3.txt R4/sall4.txt > R4/cum4.txt
+
+cat R5/scores5.txt R5/sour5.txt > R5/sall5.txt
+cat R4/cum4.txt R5/sall5.txt > R5/cum5.txt
+
+cat R6/scores6.txt R6/sour6.txt > R6/sall6.txt
+cat R5/cum5.txt R6/sall6.txt > R6/cum6.txt
+
+cat R7/scores7.txt R7/sour7.txt > R7/sall7.txt
+cat R6/cum6.txt R7/sall7.txt > R7/cum7.txt
+
+cat R8/scores8.txt R8/sour8.txt > R8/sall8.txt
+cat R7/cum7.txt R8/sall8.txt > R8/cum8.txt
+

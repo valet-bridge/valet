@@ -1,0 +1,739 @@
+BOARD 8|16
+
+LEVELS
+Side               Grand  Small slam        Game     Partial Double opps
+NS                     -           -           8           3           9
+EW                     -           -           -           2           -
+
+STRAINS
+Side                  NT      Spades      Hearts    Diamonds       Clubs
+NS                     5           -           1           5           -
+EW                     -           3           8           -           -
+
+DECLARER NORTH-SOUTH
+Contract           Count Overall     Bid    Play
+3NT, N, S, 11          1    4.83    4.55    0.29
+3NT, N, S, 10          1    4.26    4.55   -0.29
+3NT, S, C, 10          2    4.24    4.24    0.00
+3NT, S, D, 10          1    4.24    4.24    0.00
+3D, N, C, 10           1   -2.77   -2.93    0.15
+3D, S, H, 9            1   -3.43   -3.43    0.00
+5D, N, D, 10           1   -6.27   -6.55    0.27
+5D, N, H, 10           1   -6.27   -6.55    0.27
+5D, N, D, 9            1   -7.37   -6.55   -0.82
+3H, S, S, 7            1   -7.44   -7.44    0.00
+
+DECLARER EAST-WEST
+Contract           Count Overall     Bid    Play
+2SX, E, H, 8           1   13.73   13.73    0.00
+2S, W, H, 6            1    1.07   -0.02    1.09
+1HX, E, C, 6           1    0.93   -3.17    4.10
+1HX, E, S, 6           2    0.93   -3.17    4.10
+2S, W, S, 5            1   -1.11   -0.02   -1.09
+1HX, E, C, 5           2   -5.62   -3.17   -2.46
+1HX, E, D, 5           1   -5.62   -3.17   -2.46
+1HX, E, S, 5           2   -5.62   -3.17   -2.46
+
+DEFENDERS NORTH-SOUTH
+Contract           Count Overall     Bid    Lead Restdef
+1HX, E, C, 5           2    5.62    3.17    0.27    2.19
+1HX, E, D, 5           1    5.62    3.17    2.46    0.00
+1HX, E, S, 5           2    5.62    3.17   -0.82    3.28
+2S, W, S, 5            1    1.11    0.02    1.09    0.00
+1HX, E, C, 6           1   -0.93    3.17    0.27   -4.37
+1HX, E, S, 6           2   -0.93    3.17   -0.82   -3.28
+2S, W, H, 6            1   -1.07    0.02   -1.09    0.00
+2SX, E, H, 8           1  -13.73  -13.73    0.00    0.00
+
+DEFENDERS EAST-WEST
+Contract           Count Overall     Bid    Lead Restdef
+3H, S, S, 7            1    7.44    7.44    0.00    0.00
+5D, N, D, 9            1    7.37    6.55    0.27    0.55
+5D, N, D, 10           1    6.27    6.55    0.27   -0.55
+5D, N, H, 10           1    6.27    6.55   -0.27    0.00
+3D, S, H, 9            1    3.43    3.43    0.00    0.00
+3D, N, C, 10           1    2.77    2.93   -0.15    0.00
+3NT, S, C, 10          2   -4.24   -4.24    0.00    0.00
+3NT, S, D, 10          1   -4.24   -4.24    0.00    0.00
+3NT, N, S, 10          1   -4.26   -4.55    0.00    0.29
+3NT, N, S, 11          1   -4.83   -4.55    0.00   -0.29
+
+
+BOARD 8|17
+
+LEVELS
+Side               Grand  Small slam        Game     Partial Double opps
+NS                     -           -           4           9           2
+EW                     -           -           1           2           4
+
+STRAINS
+Side                  NT      Spades      Hearts    Diamonds       Clubs
+NS                     2           -          10           5           -
+EW                     -           5           -           -           -
+
+DECLARER NORTH-SOUTH
+Contract           Count Overall     Bid    Play
+2H, S, H, 10           1    4.49    0.94    3.55
+2D, N, D, 9            1    3.14    3.14    0.00
+3D, S, C, 9            1    3.04    1.41    1.63
+2D, S, H, 8            1    2.82    2.97   -0.15
+2H, S, S, 7            1   -0.24    0.94   -1.18
+2H, N, C, 7            2   -0.33   -0.55    0.22
+2H, N, H, 7            2   -0.33   -0.55    0.22
+3NT, N, C, 7           1   -1.75   -1.75    0.00
+3NT, S, C, 7           1   -1.75   -1.75    0.00
+4H, S, S, 7            1   -2.71    0.14   -2.85
+5H, N, D, 6            1   -4.83   -4.05   -0.77
+5DX, S, C, 9           1   -6.04   -7.71    1.67
+4HX, S, H, 7           1   -9.33   -4.33   -5.01
+5DX, S, S, 8           1   -9.38   -7.71   -1.67
+4HX, N, D, 7           1   -9.56  -10.09    0.53
+
+DECLARER EAST-WEST
+Contract           Count Overall     Bid    Play
+1S, E, D, 6            1   -1.80   -0.85   -0.96
+3S, W, C, 6            1   -3.98   -3.55   -0.44
+4S, E, D, 7            1   -4.10   -4.75    0.66
+3SX, E, S, 6           1  -10.12   -9.16   -0.96
+4SX, W, H, 7           1  -10.37  -11.74    1.37
+
+DEFENDERS NORTH-SOUTH
+Contract           Count Overall     Bid    Lead Restdef
+4SX, W, H, 7           1   10.37   11.74   -1.37    0.00
+3SX, E, S, 6           1   10.12    9.16    0.96    0.00
+4S, E, D, 7            1    4.10    4.75   -0.16   -0.49
+3S, W, C, 6            1    3.98    3.55    0.44    0.00
+1S, E, D, 6            1    1.80    0.85   -0.48    1.43
+
+DEFENDERS EAST-WEST
+Contract           Count Overall     Bid    Lead Restdef
+4HX, N, D, 7           1    9.56   10.09    1.06   -1.59
+5DX, S, S, 8           1    9.38    7.71    1.67    0.00
+4HX, S, H, 7           1    9.33    4.33   -5.01   10.01
+5DX, S, C, 9           1    6.04    7.71   -1.67    0.00
+5H, N, D, 6            1    4.83    4.05    0.31    0.46
+4H, S, S, 7            1    2.71   -0.14    2.85    0.00
+3NT, N, C, 7           1    1.75    1.75    0.00    0.00
+3NT, S, C, 7           1    1.75    1.75    0.00    0.00
+2H, N, C, 7            2    0.33    0.55   -0.22    0.00
+2H, N, H, 7            2    0.33    0.55   -0.22    0.00
+2H, S, S, 7            1    0.24   -0.94    1.18    0.00
+2D, S, H, 8            1   -2.82   -2.97    0.15    0.00
+3D, S, C, 9            1   -3.04   -1.41   -1.63    0.00
+2D, N, D, 9            1   -3.14   -3.14    0.00    0.00
+2H, S, H, 10           1   -4.49   -0.94   -1.18   -2.37
+
+
+BOARD 8|18
+
+LEVELS
+Side               Grand  Small slam        Game     Partial Double opps
+NS                     -           -           -           -           1
+EW                     1           -          20           -           -
+
+STRAINS
+Side                  NT      Spades      Hearts    Diamonds       Clubs
+NS                     -           -           -           -           -
+EW                    11           -           -          11           -
+
+DECLARER EAST-WEST
+Contract           Count Overall     Bid    Play
+5DX, E, C, 11          1    3.76    3.76    0.00
+3NT, W, H, 12          3    2.24    1.40    0.85
+3NT, W, H, 11          5    1.29    1.40   -0.10
+3NT, W, H, 10          1    0.39    1.40   -1.01
+3NT, W, S, 10          1    0.39    1.40   -1.01
+5D, E, S, 11           8   -0.67   -0.67    0.00
+3NT, E, S, 9           1   -0.67   -0.67    0.00
+5D, E, H, 11           1   -0.67   -0.67    0.00
+7D, E, H, 11           1  -11.05  -11.05    0.00
+
+DEFENDERS NORTH-SOUTH
+Contract           Count Overall     Bid    Lead Restdef
+7D, E, H, 11           1   11.05   11.05    0.00    0.00
+3NT, E, S, 9           1    0.67    0.67    0.00    0.00
+5D, E, H, 11           1    0.67    0.67    0.00    0.00
+5D, E, S, 11           8    0.67    0.67    0.00    0.00
+3NT, W, H, 10          1   -0.39   -1.40   -0.11    1.12
+3NT, W, S, 10          1   -0.39   -1.40    1.01    0.00
+3NT, W, H, 11          5   -1.29   -1.40   -0.11    0.22
+3NT, W, H, 12          3   -2.24   -1.40   -0.11   -0.74
+5DX, E, C, 11          1   -3.76   -3.76    0.00    0.00
+
+
+BOARD 8|19
+
+LEVELS
+Side               Grand  Small slam        Game     Partial Double opps
+NS                     -           1           -           -           1
+EW                     -           -           4           -          16
+
+STRAINS
+Side                  NT      Spades      Hearts    Diamonds       Clubs
+NS                     -          10           -           7           -
+EW                     1           -           4           -           -
+
+DECLARER NORTH-SOUTH
+Contract           Count Overall     Bid    Play
+6DX, S, C, 11          3    5.33    4.79    0.55
+5SX, N, H, 10          1    5.25    2.88    2.36
+6SX, N, H, 11          1    5.00   -2.34    7.34
+6S, N, H, 9            1    4.43    4.67   -0.24
+5SX, N, H, 9           1    1.39    2.88   -1.49
+6SX, S, C, 10          2    1.31    1.31    0.00
+7DX, S, C, 11          3    1.28    0.68    0.60
+6SX, N, H, 10          1    1.12   -2.34    3.46
+5SX, N, H, 8           1   -2.82    2.88   -5.70
+7DX, S, C, 10          1   -2.90    0.68   -3.58
+6SX, N, H, 9           1   -3.07   -2.34   -0.74
+6SX, N, H, 8           1   -8.36   -2.34   -6.03
+
+DECLARER EAST-WEST
+Contract           Count Overall     Bid    Play
+6HX, E, D, 12          1   15.87   15.87    0.00
+4H, E, D, 12           1    6.76    6.76    0.00
+5H, E, D, 12           2    6.76    6.76    0.00
+4NT, E, D, 6           1  -12.49  -12.49    0.00
+
+DEFENDERS NORTH-SOUTH
+Contract           Count Overall     Bid    Lead Restdef
+4NT, E, D, 6           1   12.49   12.49    0.00    0.00
+4H, E, D, 12           1   -6.76   -6.76    0.00    0.00
+5H, E, D, 12           2   -6.76   -6.76    0.00    0.00
+6HX, E, D, 12          1  -15.87  -15.87    0.00    0.00
+
+DEFENDERS EAST-WEST
+Contract           Count Overall     Bid    Lead Restdef
+6SX, N, H, 8           1    8.36    2.34    0.00    6.03
+6SX, N, H, 9           1    3.07    2.34    0.00    0.74
+7DX, S, C, 10          1    2.90   -0.68    0.00    3.58
+5SX, N, H, 8           1    2.82   -2.88    0.00    5.70
+6SX, N, H, 10          1   -1.12    2.34    0.00   -3.46
+7DX, S, C, 11          3   -1.28   -0.68    0.00   -0.60
+6SX, S, C, 10          2   -1.31   -1.31    0.00    0.00
+5SX, N, H, 9           1   -1.39   -2.88    0.00    1.49
+6S, N, H, 9            1   -4.43   -4.67    0.00    0.24
+6SX, N, H, 11          1   -5.00    2.34    0.00   -7.34
+5SX, N, H, 10          1   -5.25   -2.88    0.00   -2.36
+6DX, S, C, 11          3   -5.33   -4.79    0.00   -0.55
+
+
+BOARD 8|20
+
+LEVELS
+Side               Grand  Small slam        Game     Partial Double opps
+NS                     -           -          19           3           -
+EW                     -           -           -           -           -
+
+STRAINS
+Side                  NT      Spades      Hearts    Diamonds       Clubs
+NS                     3           -          19           -           -
+EW                     -           -           -           -           -
+
+DECLARER NORTH-SOUTH
+Contract           Count Overall     Bid    Play
+4H, N, H, 10           4    6.08    1.39    4.70
+4H, N, S, 10           2    6.08    1.39    4.70
+4H, S, C, 10           3    6.08    1.42    4.66
+4H, S, S, 10           2    6.08    1.42    4.66
+3H, N, S, 10           1   -2.02   -2.55    0.53
+3H, S, S, 9            1   -2.48   -2.18   -0.31
+2NT, N, S, 8           1   -3.24   -4.33    1.09
+4H, S, S, 9            2   -6.35    1.42   -7.77
+4H, N, H, 9            2   -6.36    1.39   -7.74
+4H, N, S, 9            1   -6.36    1.39   -7.74
+3NT, N, S, 8           1   -6.75   -7.37    0.62
+4H, N, H, 8            1   -8.27    1.39   -9.66
+3NT, N, S, 7           1   -8.61   -7.37   -1.24
+
+DEFENDERS EAST-WEST
+Contract           Count Overall     Bid    Lead Restdef
+3NT, N, S, 7           1    8.61    7.37    0.00    1.24
+4H, N, H, 8            1    8.27   -1.39    0.91    8.75
+3NT, N, S, 8           1    6.75    7.37    0.00   -0.62
+4H, N, H, 9            2    6.36   -1.39    0.91    6.84
+4H, N, S, 9            1    6.36   -1.39   -1.59    9.33
+4H, S, S, 9            2    6.35   -1.42    2.80    4.97
+2NT, N, S, 8           1    3.24    4.33    0.00   -1.09
+3H, S, S, 9            1    2.48    2.18    0.11    0.20
+3H, N, S, 10           1    2.02    2.55   -0.41   -0.12
+4H, S, S, 10           2   -6.08   -1.42    2.80   -7.46
+4H, S, C, 10           3   -6.08   -1.42   -4.66    0.00
+4H, N, H, 10           4   -6.08   -1.39    0.91   -5.61
+4H, N, S, 10           2   -6.08   -1.39   -1.59   -3.11
+
+
+BOARD 8|21
+
+LEVELS
+Side               Grand  Small slam        Game     Partial Double opps
+NS                     -           -           -          14           -
+EW                     -           -           -           1           -
+
+STRAINS
+Side                  NT      Spades      Hearts    Diamonds       Clubs
+NS                    14           -           -           -           -
+EW                     1           -           -           -           -
+
+DECLARER NORTH-SOUTH
+Contract           Count Overall     Bid    Play
+1NT, N, S, 8           1    4.63   -0.27    4.90
+1NT, S, H, 8           1    4.61   -0.95    5.55
+1NT, N, D, 7           2    3.89   -0.27    4.16
+pass (NS)              5    1.63    1.63    0.00
+1NT, N, H, 6           4   -1.07   -0.27   -0.80
+1NT, S, H, 6           1   -1.11   -0.95   -0.16
+1NT, N, H, 5           3   -3.61   -0.27   -3.34
+1NT, S, H, 5           2   -3.64   -0.95   -2.70
+
+DECLARER EAST-WEST
+Contract           Count Overall     Bid    Play
+1NT, W, D, 8           1    1.68    1.68    0.00
+
+DEFENDERS NORTH-SOUTH
+Contract           Count Overall     Bid    Lead Restdef
+1NT, W, D, 8           1   -1.68   -1.68    0.00    0.00
+
+DEFENDERS EAST-WEST
+Contract           Count Overall     Bid    Lead Restdef
+1NT, S, H, 5           2    3.64    0.95    0.00    2.70
+1NT, N, H, 5           3    3.61    0.27    1.89    1.45
+1NT, S, H, 6           1    1.11    0.95    0.00    0.16
+1NT, N, H, 6           4    1.07    0.27    1.89   -1.09
+pass (NS)              5   -1.63   -1.63    0.00    0.00
+1NT, N, D, 7           2   -3.89    0.27   -4.16    0.00
+1NT, S, H, 8           1   -4.61    0.95    0.00   -5.55
+1NT, N, S, 8           1   -4.63    0.27   -4.90    0.00
+
+
+BOARD 8|22
+
+LEVELS
+Side               Grand  Small slam        Game     Partial Double opps
+NS                     -           -           -           -           -
+EW                     -           -          22           -           -
+
+STRAINS
+Side                  NT      Spades      Hearts    Diamonds       Clubs
+NS                     -           -           -           -           -
+EW                    21           -           1           -           -
+
+DECLARER EAST-WEST
+Contract           Count Overall     Bid    Play
+3NT, E, S, 13          1    1.87    0.03    1.84
+3NT, E, S, 12          7    1.09    0.03    1.06
+4H, E, S, 11           1    0.10    0.10    0.00
+3NT, E, C, 11          1    0.09    0.03    0.06
+3NT, E, S, 11          2    0.09    0.03    0.06
+3NT, W, C, 11          1    0.09   -0.11    0.20
+3NT, W, S, 11          3    0.09   -0.11    0.20
+3NT, W, H, 10          1   -0.91   -0.11   -0.80
+3NT, E, S, 9           5   -1.86    0.03   -1.89
+
+DEFENDERS NORTH-SOUTH
+Contract           Count Overall     Bid    Lead Restdef
+3NT, E, S, 9           5    1.86   -0.03    0.00    1.89
+3NT, W, H, 10          1    0.91    0.11    0.80    0.00
+3NT, W, C, 11          1   -0.09    0.11   -0.20    0.00
+3NT, W, S, 11          3   -0.09    0.11   -0.20    0.00
+3NT, E, S, 11          2   -0.09   -0.03    0.00   -0.07
+3NT, E, C, 11          1   -0.09   -0.03   -0.06    0.00
+4H, E, S, 11           1   -0.10   -0.10    0.00    0.00
+3NT, E, S, 12          7   -1.09   -0.03    0.00   -1.07
+3NT, E, S, 13          1   -1.87   -0.03    0.00   -1.84
+
+
+BOARD 8|23
+
+LEVELS
+Side               Grand  Small slam        Game     Partial Double opps
+NS                     -           -           -           -           -
+EW                     -           1          20           -           1
+
+STRAINS
+Side                  NT      Spades      Hearts    Diamonds       Clubs
+NS                     -           -           -           -           1
+EW                    13           -           6           2           -
+
+DECLARER NORTH-SOUTH
+Contract           Count Overall     Bid    Play
+3CX, N, D, 6           1   -4.76   -4.76    0.00
+
+DECLARER EAST-WEST
+Contract           Count Overall     Bid    Play
+4H, E, C, 12           1    1.67    1.03    0.64
+4H, E, H, 12           1    1.67    1.03    0.64
+4H, E, C, 11           1    0.96    1.03   -0.07
+4H, E, H, 11           2    0.96    1.03   -0.07
+3NT, W, C, 11          1    0.95    0.95    0.00
+3NT, E, C, 11          4    0.91    0.14    0.77
+3NT, E, S, 11          2    0.91    0.14    0.77
+4H, E, S, 10           1   -0.04    1.03   -1.07
+3NT, E, C, 10          1   -0.09    0.14   -0.23
+3NT, E, S, 10          1   -0.09    0.14   -0.23
+3NT, E, S, 9           1   -0.90    0.14   -1.04
+3NT, E, C, 9           3   -0.90    0.14   -1.04
+5D, W, C, 11           1   -0.95   -0.95    0.00
+6D, E, C, 11           1  -12.67  -12.67    0.00
+
+DEFENDERS NORTH-SOUTH
+Contract           Count Overall     Bid    Lead Restdef
+6D, E, C, 11           1   12.67   12.67    0.00    0.00
+5D, W, C, 11           1    0.95    0.95    0.00    0.00
+3NT, E, C, 9           3    0.90   -0.14    0.03    1.01
+3NT, E, S, 9           1    0.90   -0.14   -0.07    1.11
+3NT, E, C, 10          1    0.09   -0.14    0.03    0.20
+3NT, E, S, 10          1    0.09   -0.14   -0.07    0.30
+4H, E, S, 10           1    0.04   -1.03    1.07    0.00
+3NT, E, C, 11          4   -0.91   -0.14    0.03   -0.80
+3NT, E, S, 11          2   -0.91   -0.14   -0.07   -0.70
+3NT, W, C, 11          1   -0.95   -0.95    0.00    0.00
+4H, E, C, 11           1   -0.96   -1.03   -0.29    0.36
+4H, E, H, 11           2   -0.96   -1.03   -0.17    0.24
+4H, E, C, 12           1   -1.67   -1.03   -0.29   -0.36
+4H, E, H, 12           1   -1.67   -1.03   -0.17   -0.48
+
+DEFENDERS EAST-WEST
+Contract           Count Overall     Bid    Lead Restdef
+3CX, N, D, 6           1    4.76    4.76    0.00    0.00
+
+
+BOARD 8|24
+
+LEVELS
+Side               Grand  Small slam        Game     Partial Double opps
+NS                     -           -           -           -           -
+EW                     -           1          21           -           -
+
+STRAINS
+Side                  NT      Spades      Hearts    Diamonds       Clubs
+NS                     -           -           -           -           -
+EW                     2           -          20           -           -
+
+DECLARER EAST-WEST
+Contract           Count Overall     Bid    Play
+4H, E, D, 11           2    4.17    1.10    3.08
+4H, W, D, 11           2    4.15    0.66    3.50
+3NT, W, S, 10          2    3.34    3.34    0.00
+4H, E, C, 10           1    3.24    1.10    2.14
+4H, E, H, 10           1    3.24    1.10    2.14
+4H, E, S, 10           5    3.24    1.10    2.14
+4H, W, D, 10           2    3.22    0.66    2.57
+4H, E, H, 9            2   -6.67    1.10   -7.77
+4H, W, C, 9            1   -6.69    0.66   -7.35
+5H, W, D, 10           1   -6.92   -4.14   -2.78
+5H, W, C, 9            1   -8.05   -4.14   -3.91
+5H, E, S, 9            1   -8.10   -5.57   -2.53
+6H, E, H, 10           1   -8.25   -8.20   -0.05
+
+DEFENDERS NORTH-SOUTH
+Contract           Count Overall     Bid    Lead Restdef
+6H, E, H, 10           1    8.25    8.20    0.31   -0.26
+5H, E, S, 9            1    8.10    5.57    1.60    0.93
+5H, W, C, 9            1    8.05    4.14    3.91    0.00
+5H, W, D, 10           1    6.92    4.14   -1.57    4.35
+4H, W, C, 9            1    6.69   -0.66    7.35    0.00
+4H, E, H, 9            2    6.67   -1.10    2.81    4.96
+4H, W, D, 10           2   -3.22   -0.66   -2.94    0.37
+4H, E, C, 10           1   -3.24   -1.10   -2.14    0.00
+4H, E, H, 10           1   -3.24   -1.10    2.81   -4.96
+4H, E, S, 10           5   -3.24   -1.10   -0.49   -1.65
+3NT, W, S, 10          2   -3.34   -3.34    0.00    0.00
+4H, W, D, 11           2   -4.15   -0.66   -2.94   -0.56
+4H, E, D, 11           2   -4.17   -1.10   -3.08    0.00
+
+
+BOARD 8|25
+
+LEVELS
+Side               Grand  Small slam        Game     Partial Double opps
+NS                     -           -          13           8           -
+EW                     -           -           -           1           -
+
+STRAINS
+Side                  NT      Spades      Hearts    Diamonds       Clubs
+NS                    20           -           -           -           1
+EW                     -           -           1           -           -
+
+DECLARER NORTH-SOUTH
+Contract           Count Overall     Bid    Play
+3NT, S, H, 11          1    4.74    3.98    0.76
+3NT, N, H, 10          1    3.87    1.49    2.38
+3NT, N, S, 10          1    3.87    1.49    2.38
+3NT, N, C, 9           2    3.10    1.49    1.61
+3NT, N, D, 9           7    3.10    1.49    1.61
+1NT, N, C, 10          1   -2.55   -3.12    0.57
+2NT, S, H, 9           1   -3.02   -2.38   -0.64
+1NT, N, D, 9           2   -3.07   -3.12    0.05
+2NT, N, D, 9           1   -3.07   -3.12    0.05
+2NT, N, D, 8           2   -3.88   -3.12   -0.76
+2C, S, D, 10           1   -3.90   -3.90    0.00
+3NT, N, D, 8           1   -7.32    1.49   -8.81
+
+DECLARER EAST-WEST
+Contract           Count Overall     Bid    Play
+2H, W, S, 4            1   -3.17   -3.17    0.00
+
+DEFENDERS NORTH-SOUTH
+Contract           Count Overall     Bid    Lead Restdef
+2H, W, S, 4            1    3.17    3.17    0.00    0.00
+
+DEFENDERS EAST-WEST
+Contract           Count Overall     Bid    Lead Restdef
+3NT, N, D, 8           1    7.32   -1.49    0.80    8.01
+2C, S, D, 10           1    3.90    3.90    0.00    0.00
+2NT, N, D, 8           2    3.88    3.12    0.14    0.62
+1NT, N, D, 9           2    3.07    3.12    0.14   -0.19
+2NT, N, D, 9           1    3.07    3.12    0.14   -0.19
+2NT, S, H, 9           1    3.02    2.38    0.00    0.64
+1NT, N, C, 10          1    2.55    3.12   -0.22   -0.35
+3NT, N, D, 9           7   -3.10   -1.49    0.80   -2.40
+3NT, N, C, 9           2   -3.10   -1.49   -1.86    0.26
+3NT, N, H, 10          1   -3.87   -1.49   -2.38    0.00
+3NT, N, S, 10          1   -3.87   -1.49   -2.38    0.00
+3NT, S, H, 11          1   -4.74   -3.98    0.00   -0.76
+
+
+BOARD 8|26
+
+LEVELS
+Side               Grand  Small slam        Game     Partial Double opps
+NS                     -           -           -           2           -
+EW                     -           -           2          18           -
+
+STRAINS
+Side                  NT      Spades      Hearts    Diamonds       Clubs
+NS                     -           -           2           -           -
+EW                    12           1           -           7           -
+
+DECLARER NORTH-SOUTH
+Contract           Count Overall     Bid    Play
+2H, N, D, 7            2   -1.87   -1.87    0.00
+
+DECLARER EAST-WEST
+Contract           Count Overall     Bid    Play
+1NT, E, H, 9           2    3.31    2.75    0.56
+1NT, E, S, 8           1    2.68    2.75   -0.07
+1NT, W, H, 8           1    2.60    1.29    1.31
+2NT, W, H, 8           1    2.44   -2.00    4.44
+2D, W, C, 9            1    2.16    1.36    0.81
+2D, W, S, 9            1    2.16    1.36    0.81
+3D, W, S, 9            2    2.12    0.32    1.80
+3D, W, C, 9            1    2.12    0.32    1.80
+1NT, E, H, 7           1    1.69    2.75   -1.06
+1NT, W, H, 7           1    1.61    1.29    0.32
+3D, W, S, 8            1   -2.99    0.32   -3.32
+2NT, W, H, 7           2   -3.09   -2.00   -1.09
+2S, W, C, 7            1   -3.14   -3.14    0.00
+3D, W, C, 7            1   -5.35    0.32   -5.67
+2NT, W, H, 6           1   -5.42   -2.00   -3.42
+3NT, W, H, 7           2   -5.59   -5.25   -0.33
+
+DEFENDERS NORTH-SOUTH
+Contract           Count Overall     Bid    Lead Restdef
+3NT, W, H, 7           2    5.59    5.25    0.00    0.33
+2NT, W, H, 6           1    5.42    2.00    0.00    3.42
+3D, W, C, 7            1    5.35   -0.32    0.69    4.98
+2S, W, C, 7            1    3.14    3.14    0.00    0.00
+2NT, W, H, 7           2    3.09    2.00    0.00    1.09
+3D, W, S, 8            1    2.99   -0.32   -0.52    3.84
+1NT, W, H, 7           1   -1.61   -1.29    0.00   -0.32
+1NT, E, H, 7           1   -1.69   -2.75   -0.02    1.08
+3D, W, C, 9            1   -2.12   -0.32    0.69   -2.49
+3D, W, S, 9            2   -2.12   -0.32   -0.52   -1.28
+2D, W, C, 9            1   -2.16   -1.36    0.90   -1.70
+2D, W, S, 9            1   -2.16   -1.36   -0.67   -0.13
+2NT, W, H, 8           1   -2.44    2.00    0.00   -4.44
+1NT, W, H, 8           1   -2.60   -1.29    0.00   -1.31
+1NT, E, S, 8           1   -2.68   -2.75    0.07    0.00
+1NT, E, H, 9           2   -3.31   -2.75   -0.02   -0.54
+
+DEFENDERS EAST-WEST
+Contract           Count Overall     Bid    Lead Restdef
+2H, N, D, 7            2    1.87    1.87    0.00    0.00
+
+
+BOARD 8|27
+
+LEVELS
+Side               Grand  Small slam        Game     Partial Double opps
+NS                     4          17           1           -           -
+EW                     -           -           -           -           -
+
+STRAINS
+Side                  NT      Spades      Hearts    Diamonds       Clubs
+NS                     -           -          22           -           -
+EW                     -           -           -           -           -
+
+DECLARER NORTH-SOUTH
+Contract           Count Overall     Bid    Play
+7H, S, D, 13           3   10.01    5.68    4.34
+7H, S, H, 13           1   10.01    5.68    4.34
+6H, S, C, 13           4   -0.57   -0.71    0.15
+6H, S, D, 13           3   -0.57   -0.71    0.15
+6H, S, H, 13           6   -0.57   -0.71    0.15
+6H, S, C, 12           1   -1.37   -0.71   -0.66
+6H, S, D, 12           1   -1.37   -0.71   -0.66
+6H, S, H, 12           2   -1.37   -0.71   -0.66
+4H, S, C, 13           1  -10.56  -10.59    0.03
+
+DEFENDERS EAST-WEST
+Contract           Count Overall     Bid    Lead Restdef
+4H, S, C, 13           1   10.56   10.59   -0.00   -0.02
+6H, S, C, 12           1    1.37    0.71   -0.01    0.67
+6H, S, D, 12           1    1.37    0.71   -0.03    0.69
+6H, S, H, 12           2    1.37    0.71    0.03    0.62
+6H, S, D, 13           3    0.57    0.71   -0.03   -0.11
+6H, S, H, 13           6    0.57    0.71    0.03   -0.18
+6H, S, C, 13           4    0.57    0.71   -0.01   -0.13
+7H, S, D, 13           3  -10.01   -5.68   -0.93   -3.41
+7H, S, H, 13           1  -10.01   -5.68    0.96   -5.30
+
+
+BOARD 8|28
+
+LEVELS
+Side               Grand  Small slam        Game     Partial Double opps
+NS                     -           -           2           9           1
+EW                     -           -           -          10           -
+
+STRAINS
+Side                  NT      Spades      Hearts    Diamonds       Clubs
+NS                     2           9           -           -           -
+EW                     1           -           2           8           -
+
+DECLARER NORTH-SOUTH
+Contract           Count Overall     Bid    Play
+3NT, S, D, 9           1    9.79    2.43    7.36
+2S, N, H, 10           1    1.44   -1.06    2.50
+2S, S, D, 9            2    0.83    0.83   -0.00
+2S, S, H, 9            1    0.83    0.83   -0.00
+2S, N, H, 9            3    0.75   -1.06    1.80
+3NT, S, D, 8           1   -4.92    2.43   -7.36
+2S, N, H, 7            2   -5.01   -1.06   -3.95
+
+DECLARER EAST-WEST
+Contract           Count Overall     Bid    Play
+2D, W, C, 8            2    5.05    4.03    1.02
+2D, E, S, 7            1    1.89    2.51   -0.61
+3D, E, S, 8            1    1.78    0.54    1.24
+3D, W, H, 7            1    0.28    1.31   -1.03
+3D, E, S, 7            3    0.23    0.54   -0.31
+2H, W, C, 6            1    0.21    0.21    0.00
+3H, W, C, 6            1   -1.05   -1.05    0.00
+3NTX, W, D, 5          1  -12.17  -12.17    0.00
+
+DEFENDERS NORTH-SOUTH
+Contract           Count Overall     Bid    Lead Restdef
+3NTX, W, D, 5          1   12.17   12.17    0.00    0.00
+3H, W, C, 6            1    1.05    1.05    0.00    0.00
+2H, W, C, 6            1   -0.21   -0.21    0.00    0.00
+3D, E, S, 7            3   -0.23   -0.54    0.00    0.31
+3D, W, H, 7            1   -0.28   -1.31    1.03    0.00
+3D, E, S, 8            1   -1.78   -0.54    0.00   -1.24
+2D, E, S, 7            1   -1.89   -2.51    0.00    0.61
+2D, W, C, 8            2   -5.05   -4.03   -1.02    0.00
+
+DEFENDERS EAST-WEST
+Contract           Count Overall     Bid    Lead Restdef
+2S, N, H, 7            2    5.01    1.06    0.00    3.95
+3NT, S, D, 8           1    4.92   -2.43    0.00    7.36
+2S, N, H, 9            3   -0.75    1.06    0.00   -1.80
+2S, S, D, 9            2   -0.83   -0.83    0.00    0.00
+2S, S, H, 9            1   -0.83   -0.83    0.00    0.00
+2S, N, H, 10           1   -1.44    1.06    0.00   -2.50
+3NT, S, D, 9           1   -9.79   -2.43    0.00   -7.36
+
+
+BOARD 8|29
+
+LEVELS
+Side               Grand  Small slam        Game     Partial Double opps
+NS                     -           -           -          15           1
+EW                     -           -           -           5           1
+
+STRAINS
+Side                  NT      Spades      Hearts    Diamonds       Clubs
+NS                     2           -           -           -          14
+EW                     -           -           6           -           -
+
+DECLARER NORTH-SOUTH
+Contract           Count Overall     Bid    Play
+3CX, S, H, 9           1   10.51   10.51    0.00
+3C, S, C, 9            1   -0.51   -0.51    0.00
+3C, S, H, 9            1   -0.51   -0.51    0.00
+2C, N, H, 9            1   -0.52   -0.62    0.10
+3C, N, H, 9            8   -0.55   -1.41    0.86
+1NT, N, H, 7           1   -1.09   -1.09    0.00
+3C, N, H, 8            2   -5.28   -1.41   -3.86
+2NT, N, H, 7           1   -5.47   -5.47    0.00
+
+DECLARER EAST-WEST
+Contract           Count Overall     Bid    Play
+2H, E, D, 7            4    0.57    0.57    0.00
+3H, E, D, 7            1   -2.20   -2.20    0.00
+4HX, E, D, 7           1  -11.89  -11.89    0.00
+
+DEFENDERS NORTH-SOUTH
+Contract           Count Overall     Bid    Lead Restdef
+4HX, E, D, 7           1   11.89   11.89    0.00    0.00
+3H, E, D, 7            1    2.20    2.20    0.00    0.00
+2H, E, D, 7            4   -0.57   -0.57    0.00    0.00
+
+DEFENDERS EAST-WEST
+Contract           Count Overall     Bid    Lead Restdef
+2NT, N, H, 7           1    5.47    5.47    0.00    0.00
+3C, N, H, 8            2    5.28    1.41    0.00    3.86
+1NT, N, H, 7           1    1.09    1.09    0.00    0.00
+3C, N, H, 9            8    0.55    1.41    0.00   -0.86
+2C, N, H, 9            1    0.52    0.62    0.00   -0.10
+3C, S, C, 9            1    0.51    0.51    0.00    0.00
+3C, S, H, 9            1    0.51    0.51    0.00    0.00
+3CX, S, H, 9           1  -10.51  -10.51    0.00    0.00
+
+
+BOARD 8|30
+
+LEVELS
+Side               Grand  Small slam        Game     Partial Double opps
+NS                     -           -           -          15           -
+EW                     -           -           -           6           1
+
+STRAINS
+Side                  NT      Spades      Hearts    Diamonds       Clubs
+NS                     -          16           -           -           -
+EW                     -           -           -           4           2
+
+DECLARER NORTH-SOUTH
+Contract           Count Overall     Bid    Play
+2S, N, C, 9            1    4.14    3.48    0.67
+3S, N, H, 9            1    4.02    0.71    3.30
+3S, N, C, 9            3    4.02    0.71    3.30
+2S, N, C, 8            3    3.14    3.48   -0.33
+2S, S, S, 8            1    3.13    3.13    0.00
+3S, N, C, 8            6   -0.94    0.71   -1.65
+4SX, N, C, 8           1   -7.13   -5.60   -1.52
+
+DECLARER EAST-WEST
+Contract           Count Overall     Bid    Play
+3C, E, S, 10           2    3.10    3.10    0.00
+3D, E, S, 10           2    3.10    3.10    0.00
+3D, W, S, 10           2    3.10    3.10    0.00
+
+DEFENDERS NORTH-SOUTH
+Contract           Count Overall     Bid    Lead Restdef
+3C, E, S, 10           2   -3.10   -3.10    0.00    0.00
+3D, E, S, 10           2   -3.10   -3.10    0.00    0.00
+3D, W, S, 10           2   -3.10   -3.10    0.00    0.00
+
+DEFENDERS EAST-WEST
+Contract           Count Overall     Bid    Lead Restdef
+4SX, N, C, 8           1    7.13    5.60    0.22    1.31
+3S, N, C, 8            6    0.94   -0.71    0.24    1.41
+2S, S, S, 8            1   -3.13   -3.13    0.00    0.00
+2S, N, C, 8            3   -3.14   -3.48    0.05    0.29
+3S, N, C, 9            3   -4.02   -0.71    0.24   -3.54
+3S, N, H, 9            1   -4.02   -0.71   -3.30    0.00
+2S, N, C, 9            1   -4.14   -3.48    0.05   -0.71
+
+
