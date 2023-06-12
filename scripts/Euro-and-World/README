@@ -1,14 +1,46 @@
 These scripts can be useful as a starting point when
 screen-scraping results from HTML files online.
 
-getfiles.pl gets files according to the naming used by the website
-(which you have to guess).
+perl getfiles.pl 592
+gets the round and match files.  The number has to be integrated
+within Tourneys.pm which knows the URL's, directory names, round 
+counts etc.
 
-names.pl extracts the player names into a file of names (you have to
-parse the syntax).
+perl names.pl path/*.asp > names0.txt
+sort names0.txt | uniq > names1.txt
+perl number.pl names1.txt > path/names.txt
+rm names0.txt names1.txt
+generates a numbered file of player names.
 
-number.pl puts consecutive numbers in front of player names, turning
-that file into a valid names file.
+perl parse.pl path/names.txt path/*.asp > scores0.txt
+sort -n !$ > path/scores.txt
+rm scores0.txt
+generates a score file using the names file.
 
-parse.pl extracts the board results using also the names files from
-the previous step.
+perl getdist.pl 592
+generates a Hands directory and downloads the hands.
+For this step, the scores.txt file has to be in the directory.
+
+mkdir path/PBN (the script doesn't create this automatically)
+perl parsedist.pl directory-path
+fills out the PBN directory
+
+Then depending on the complexity of the tournament:
+
+- If all (Men, Women, Seniors, Mixed) play the same boards in the
+  same round numbers:  We can parse all of them in one go.
+  We can use the PBN of one of the sections.
+
+- If not, we have to use a map.txt file which renumbers rounds and
+  score entries.  If one section has both a round-robin and a final,
+  for example, these are combined.  The sections can also be combined.
+
+perl checkmap.pl directory-path
+checks that the PBN boards are the same in those sections and rounds
+that are supposed to be the same according to map.txt.  It does not
+modify anything.
+
+perl mergemap.pl directory-path
+makes an integrated scores.txt file with the new round names,
+as well as an integrated PBN directory (which must also be created
+manually first).

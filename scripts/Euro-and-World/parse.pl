@@ -78,24 +78,82 @@ for my $fname (@ARGV)
       my $newno = $1;
       if ($boardno != 0)
       {
+        # print "open $boardno: $no, $eo, $so, $wo\n";
+        # print "entries before  ", join(', ', @entries), "\n";
+
+        if ($#entries == 0 && $entries[0] eq '0')
+        {
+          # Effectively an empty line with only a 0 IMP score.
+          # This should not happen, but e.g. Antalya 2007,
+          # Women's RR, Round 2 Table 1.
+
+          print_line($fname, $roundno, $boardno, $no, $eo, $so, $wo,
+            "None", "", "", "");
+          print_line($fname, $roundno, $boardno, $nc, $ec, $sc, $wc,
+            "None", "", "", "");
+
+          $boardno = $newno;
+          undef @entries;
+          next;
+        }
+
+        if ($#entries == 1 && $entries[0] eq '0' &&
+            $entries[1] eq '0')
+        {
+          # This too should not happen, but e.g. Beijing 2008,
+          # Seniors, Round 1 Table 8.
+          print_line($fname, $roundno, $boardno, $no, $eo, $so, $wo,
+            "None", "", "", "");
+          print_line($fname, $roundno, $boardno, $nc, $ec, $sc, $wc,
+            "None", "", "", "");
+
+          $boardno = $newno;
+          $boardno = $newno;
+          undef @entries;
+          next;
+        }
+
+        if ($#entries == -1)
+        {
+          print_line($fname, $roundno, $boardno, $no, $eo, $so, $wo,
+            "None", "", "", "");
+          print_line($fname, $roundno, $boardno, $nc, $ec, $sc, $wc,
+            "None", "", "", "");
+
+          $boardno = $newno;
+          undef @entries;
+          next;
+        }
+
+        # print "entries before  ", join(', ', @entries), "\n";
+        fix_entries(\@entries);
+        # print "entries after   ", join(', ', @entries), "\n";
+
+        if (! defined $entries[0])
+        {
+          print "A  ", join(', ', @entries), "\n";
+        }
+
         print_line($fname, $roundno, $boardno, $no, $eo, $so, $wo,
 	  $entries[0], $entries[1], $entries[3], $entries[2]);
+        # print "\n";
 
-        if ($entries[0] eq 'PASS' || $entries[0] eq 'Pass')
+        # print "closed $boardno: $nc, $ec, $sc, $wc\n";
+
+        if (! defined $entries[5])
         {
-          if ($#entries < 4)
-          {
-            $entries[5] = 'Pass';
-          }
-          else
-          {
-            # splice @entries, 4, 0, '_Z_', '_Z_', '_Z_';
-            splice @entries, 4, 0, '_Z_';
-          }
+          # print "B  ", join(', ', @entries), "\n";
+          print_line($fname, $roundno, $boardno, $nc, $ec, $sc, $wc,
+            "None", "", "", "");
+          $boardno = $newno;
+          undef @entries;
+          next;
         }
 
         print_line($fname, $roundno, $boardno, $nc, $ec, $sc, $wc,
 	  $entries[5], $entries[6], $entries[8], $entries[7]);
+        # print "\n";
+
         undef @entries;
       }
       $boardno = $newno;
@@ -103,20 +161,74 @@ for my $fname (@ARGV)
     }
     elsif ($boardno != 0)
     {
-      if ($line =~ /\<\/table\>/)
+      if ($line =~ /^\<\/table\>/)
       {
+        # print "open $boardno: $no, $eo, $so, $wo\n";
+        # print "entries before  ", join(', ', @entries), "\n";
+
+        if ($#entries == 0 && $entries[0] eq '0')
+        {
+          # Effectively an empty line with only a 0 IMP score.
+          # This should not happen, but e.g. Antalya 2007,
+          # Women's RR, Round 2 Table 1.
+
+          print_line($fname, $roundno, $boardno, $no, $eo, $so, $wo,
+            "None", "", "", "");
+          print_line($fname, $roundno, $boardno, $nc, $ec, $sc, $wc,
+            "None", "", "", "");
+
+          last;
+        }
+
+        if ($#entries == 1 && $entries[0] eq '0' &&
+            $entries[1] eq '0')
+        {
+          # This too should not happen, but e.g. Beijing 2008,
+          # Mixed TNT, Round 1 Table 11.
+          print_line($fname, $roundno, $boardno, $no, $eo, $so, $wo,
+            "None", "", "", "");
+          print_line($fname, $roundno, $boardno, $nc, $ec, $sc, $wc,
+            "None", "", "", "");
+
+          last;
+        }
+
+        if ($#entries == -1)
+        {
+          print_line($fname, $roundno, $boardno, $no, $eo, $so, $wo,
+            "None", "", "", "");
+          print_line($fname, $roundno, $boardno, $nc, $ec, $sc, $wc,
+            "None", "", "", "");
+
+          last;
+        }
+
+        # print "entries before  ", join(', ', @entries), "\n";
+        fix_entries(\@entries);
+        # print "entries after   ", join(', ', @entries), "\n";
+
+        if (! defined $entries[0])
+        {
+          print "C  ", join(', ', @entries), "\n";
+        }
+
         print_line($fname, $roundno, $boardno, $no, $eo, $so, $wo,
 	  $entries[0], $entries[1], $entries[3], $entries[2]);
 
-        if ($entries[0] eq 'PASS' || $entries[0] eq 'Pass')
+        # print "closed $boardno: $nc, $ec, $sc, $wc\n";
+
+        if (! defined $entries[5])
         {
-          # splice @entries, 4, 0, '_Z_', '_Z_';
-          splice @entries, 4, 0, '_Z_';
+          print "D  ", join(', ', @entries), "\n";
         }
 
         print_line($fname, $roundno, $boardno, $nc, $ec, $sc, $wc,
 	  $entries[5], $entries[6], $entries[8], $entries[7]);
         last;
+      }
+      elsif ($line =~ /\<\/table\>/)
+      {
+        next;
       }
 
       next if ($line =~ /^\s*$/);
@@ -183,6 +295,14 @@ sub print_line
   {
     # Skip
   }
+  elsif (lc($e0) =~ /adj/)
+  {
+    print "$round|$no|$p0|$p1|$p2|$p3|Adj.|S|0\n";
+  }
+  elsif (lc($e0) =~ /none/)
+  {
+    print "$round|$no|$p0|$p1|$p2|$p3|None|S|0\n";
+  }
   else
   {
     my $level = substr $e0, 0, 1;
@@ -197,7 +317,7 @@ sub print_line
     {
       print "$round|$no|$p0|$p1|$p2|$p3|P|S|0\n";
     }
-    elsif ($e3 eq 'X')
+    elsif ($e3 eq 'X' || $e3 eq '_Z_')
     {
       print "$round|$no|$p0|$p1|$p2|$p3|$e0|$e1|$e2\n";
     }
@@ -231,3 +351,215 @@ sub read_names
   }
 }
 
+
+sub find_plausible_contract
+{
+  my ($entries_ref, $cindex_ref) = @_;
+
+  while ($$cindex_ref < $#$entries_ref)
+  {
+    if (looks_like_contract($entries_ref->[$$cindex_ref]) ||
+        lc($entries_ref->[$$cindex_ref]) =~ /adj/)
+    {
+      return 1;
+    }
+    $$cindex_ref++;
+  }
+
+  return 0;
+}
+
+
+sub pad_plausible_contract
+{
+  my ($entries_ref, $cindex) = @_;
+  if ($cindex < 5)
+  {
+    # Pad out so the contract is in position 5.
+    splice @$entries_ref,  $cindex, 0, ('_Z_') x (5 - $cindex);
+  }
+  elsif ($cindex > 5)
+  {
+    die "Haven't seen this before";
+  }
+}
+
+
+sub fix_entries
+{
+  my $entries_ref = pop;
+
+  if ($entries_ref->[0] eq 'PASS' || $entries_ref->[0] eq 'Pass')
+  {
+    if ($#$entries_ref < 4)
+    {
+      # TODO Does this generate spurious passes?
+      $entries_ref->[5] = 'Pass';
+      return;
+    }
+
+    my $cindex = 1;
+    my $flag = 0;
+    if (find_plausible_contract($entries_ref, \$cindex))
+    {
+      pad_plausible_contract($entries_ref, $cindex);
+    }
+    else
+    {
+      # TODO Not sure what this does.
+      splice @$entries_ref, 4, 0, '_Z_';
+    }
+  }
+  elsif ($entries_ref->[1] eq 'PASS' || $entries_ref->[1] eq 'Pass')
+  {
+    $entries_ref->[0] = 'Pass';
+    if ($#$entries_ref < 4)
+    {
+      $entries_ref->[5] = 'Pass';
+    }
+    else
+    {
+      splice @$entries_ref, 4, 0, '_Z_';
+    }
+  }
+  elsif (lc($entries_ref->[0]) =~ /adj/)
+  {
+    $entries_ref->[0] = 'Adj.';
+
+    my $cindex = 1;
+    my $flag = 0;
+    if (find_plausible_contract($entries_ref, \$cindex))
+    {
+      pad_plausible_contract($entries_ref, $cindex);
+    }
+  }
+  elsif ($#$entries_ref >= 5 && lc($entries_ref->[5]) =~ /adj/)
+  {
+    $entries_ref->[5] = 'Adj.';
+  }
+  elsif (looks_like_front_skip($entries_ref))
+  {
+    splice @$entries_ref, 1, 0, 'S', '0', '0', '';
+    $entries_ref->[0] = 'None';
+  }
+  elsif (looks_like_back_skip($entries_ref))
+  {
+    push @$entries_ref, 'S', '0', '0', '';
+    $entries_ref->[5] = 'None';
+  }
+  else 
+  {
+    if (looks_like_tricks($entries_ref->[2]) &&
+        looks_like_score($entries_ref->[3]))
+    {
+      # Probably the open room misses a lead.
+      splice @$entries_ref, 2, 0, '_Z_';
+    }
+
+    if (looks_like_tricks($entries_ref->[7]) &&
+        looks_like_score($entries_ref->[8]))
+    {
+      # Probably the closed room misses a lead.
+      splice @$entries_ref, 7, 0, '_Z_';
+    }
+  }
+}
+
+
+sub looks_like_contract
+{
+  my $text = pop;
+  return 1 if ($text =~ /Adj/);
+
+  return 0 unless length($text) >= 2 && length($text) <= 4;
+
+  if (length $text == 3)
+  {
+    return 0 unless substr($text, 2, 1) eq 'X';
+  }
+  elsif (length $text == 4)
+  {
+    return 0 unless substr($text, 2, 2) eq 'XX';
+  }
+
+  my $level = substr($text, 0, 1);
+  return 0 unless $level =~ /^[1-7]/;
+  my $denom = substr($text, 1, 1);
+  return 0 unless $denom =~ /^[SHDCN]/;
+  return 1;
+}
+
+
+sub looks_like_tricks
+{
+  my $text = pop;
+  if (! defined $text)
+  {
+    return;
+  }
+  elsif ($text =~ /^\d+$/)
+  {
+    return ($text >= 0 && $text <= 13);
+  }
+  else
+  {
+    return 0;
+  }
+}
+
+
+sub looks_like_score
+{
+  my $text = pop;
+  if (! defined $text)
+  {
+    return;
+  }
+  elsif ($text =~ /^\d+$/)
+  {
+    return ($text > -3000 && $text < 3000 &&
+      $text == 10 * int($text/10));
+  }
+  else
+  {
+    return 0;
+  }
+}
+
+
+sub looks_like_front_skip
+{
+  my $entries_ref = pop;
+
+  if ($#$entries_ref == 5 &&
+      $entries_ref->[0] eq '0' &&
+      looks_like_contract($entries_ref->[1]) &&
+      looks_like_tricks($entries_ref->[4]) &&
+      looks_like_score($entries_ref->[5]))
+  {
+    return 1;
+  }
+  else
+  {
+    return 0;
+  }
+}
+
+
+sub looks_like_back_skip
+{
+  my $entries_ref = pop;
+
+  if ($#$entries_ref == 5 &&
+      $entries_ref->[5] eq '0' &&
+      looks_like_contract($entries_ref->[0]) &&
+      looks_like_tricks($entries_ref->[3]) &&
+      looks_like_score($entries_ref->[4]))
+  {
+    return 1;
+  }
+  else
+  {
+    return 0;
+  }
+}

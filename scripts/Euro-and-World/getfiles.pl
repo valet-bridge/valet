@@ -6,11 +6,36 @@ use v5.10;
 
 use File::Fetch;
 
-my $rounds = 21;
-my $sprefix1 = '2018-Euro/Seniors/Rounds';
-my $sprefix2 = '2018-Euro/Seniors/Matches';
-my $tno = 1502;
-my $tourney1 = 'http://db.eurobridge.org/Repository/competitions/18Ostend/microSite/Asp/';
+use lib '.';
+use Tourneys;
+
+# perl getfiles3.pl 592
+# where 592 is a tournament number that we know about,
+# on either Eurobridge or Worldbridge.
+#
+# Number 935 requires the ANCHORS entry for Lille.12 to end on
+# Results and not on Asp.
+
+init_tourneys();
+
+# Parse command line.
+die "Need a tournament number" unless $#ARGV == 0;
+my $tno = shift;
+
+die "Not a known tournament number" unless defined $MAP[$tno];
+
+my $site = $MAP[$tno][0];
+my $tag = $MAP[$tno][1];
+my $dir = $MAP[$tno][2];
+my $group = $MAP[$tno][3];
+my $round_first = $MAP[$tno][4];
+my $round_last = $MAP[$tno][5];
+my $spell_flag = $MAP[$tno][6];
+
+my $tourney1 = $site  . $ANCHORS{$tag};
+my $sprefix1 = "$dir/$group/Rounds";
+my $sprefix2 = "$dir/$group/Matches";
+
 
 # Open European
 # -------------
@@ -21,67 +46,14 @@ my $tourney1 = 'http://db.eurobridge.org/Repository/competitions/18Ostend/microS
 # my $tno = 1493;
 # my $tourney1 = 'http://www.eurobridge.org/Repository/competitions/18Monaco/microSite/Asp/';
 
-# World Mind Games
-# ----------------
-#
-# 2012: 949-952, 953-955?
-# 'http://www.worldbridge.org/Repository/tourn/Lille.12/microSite/Results/';
-#
-# 2008: 694-697, 698-700
-# 'http://www.worldbridge.org/Repository/tourn/Beijing.08/Asp/';
-
-# Bermuda Bowl and Venice Cup
-# ---------------------------
-#
-# 2005: 527, 528
-# 'http://www.worldbridge.org/Repository/tourn/Estoril.05/Asp/';
-# Also lower-case Boarddetails
-#
-# 2007: 607, 608
-# 'http://www.worldbridge.org/Repository/tourn/Shanghai.07/Asp/';
-#
-# 2009: 782, 783
-# 'http://www.worldbridge.org/Repository/tourn/SaoPaulo.09/Asp/';
-#
-# 2011: 881, 882
-# 'http://www.worldbridge.org/Repository/tourn/Veldhoven.11/microSite/Results/';
-#
-# 2013: 980, 981
-# 'http://www.worldbridge.org/Repository/tourn/Bali.13/Asp/';
-#
-# 2015: 1130, 1131
-# 'http://www.worldbridge.org/Repository/tourn/chennai.15/MicroSiteAsp/';
-
-# European Championships
-# ----------------------
-#
-# 2006: 552, 553
-# 'http://www.eurobridge.org/Repository/competitions/06Warsaw/asp/';
-# Boarddetails, not BoardDetails (lower case d)
-#
-# 2008: 677, 678, 675
-# 'http://www.eurobridge.org/Repository/competitions/08Pau/Asp/';
-#
-# 2010: 819, 820, 817
-# 'http://www.eurobridge.org/Repository/competitions/10Ostend/microSite/Asp/';
-#
-# 2012: 916, 917, 914
-# 'http://www.eurobridge.org/Repository/competitions/12Dublin/microSite/Asp/';
-#
-# 2014: 1023, 1024, 1021
-# 'http://www.eurobridge.org/Repository/competitions/14Opatija/microSite/Asp/';
-#
-# 2018: 1480
-# 'http://www.eurobridge.org/Repository/competitions/18Monaco/microSite/Asp/';
-
 
 my $fetch1 = "$sprefix1/RoundTeams.asp";
-my $boarddetails = "BoardDetails.asp";
+my $boarddetails = ($spell_flag ? "BoardDetails.asp" : "Boarddetails.asp");
 my $fetch2 = "$sprefix2/$boarddetails";
 my $tourney2 = "RoundTeams.asp?qtournid=$tno&qroundno=";
 my $prefix = "$tourney1$tourney2";
 
-for my $r (1 .. $rounds)
+for my $r ($round_first .. $round_last)
 {
   # First get the round overview.
   say "Round $r";

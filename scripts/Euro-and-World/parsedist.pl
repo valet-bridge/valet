@@ -4,15 +4,19 @@ use strict;
 use warnings;
 use v5.10;
 
-# Reads a directory of raw html files and extracts the hands in 
-# something like PBN.
+use lib '.';
+use Tourneys;
+
+# Reads a complete directory of raw html files (all rounds)
+# and extracts the hands in something like PBN.
 
 use File::Fetch;
 
-# perl parsedist.pl 1 2005-World/Open/Hands
+# perl parsedist.pl 531
+# Looks in 2005-World/Open/Hands
+# Writes to 2005-World/Open/PBN
 
-# Round to select for output.
-my $ROUND = shift;
+init_tourneys();
 
 # 0-based, so the first entry is table 16.
 my @VUL = qw(
@@ -29,13 +33,28 @@ my @DEALER = qw(
   N    E    S    W
   N    E    S);
 
-my $dirname = shift;
-opendir my $dir, $dirname or die "Cannot open directory $dirname: $!";
-my @files = readdir $dir;
-closedir $dir;
+# Parse command line.
+die "Need a tournament number" unless $#ARGV == 0;
+my $tno = shift;
+
+die "Not a known tournament number" unless defined $MAP[$tno];
+
+my $dir = $MAP[$tno][2];
+my $group = $MAP[$tno][3];
+my $dirgroup = "$dir/$group";
+
+my $wholename = "$dirgroup/Hands";
+opendir my $dirg, $wholename or die "Cannot open directory $wholename: $!";
+my @files = readdir $dirg;
+closedir $dirg;
+
+my @texts;
 
 for my $file (@files)
 { 
+  my $fullfile = "$wholename/$file";
+  next if -d $fullfile;
+
   next if $file =~ /^\.\.?$/;
 
   $file =~ /(\d+)\.(\d+)/;
@@ -43,12 +62,12 @@ for my $file (@files)
   my $round = $2;
   $board =~ s/^0+//;
   $round =~ s/^0+//;
-  next unless $round == $ROUND;
 
-  my $fullfile = "$dirname/$file";
 
   open my $fh, "<$fullfile" or die "Can't open file $fullfile: $!";
-  # say "File $fullfile";
+
+  # TMP!!!
+  # next if $file =~ /15..702/;
 
   my $line;
   my @hand;
@@ -78,7 +97,7 @@ for my $file (@files)
       $cumul =~ s/\&[^;]*;/|/g;
       $cumul =~ s/\s//g;
       my @a = split(/\|/, $cumul);
-      die $cumul unless $#a == 4;
+      die "$file, $line, $cumul" unless $#a == 4;
 
       $a[1] = "" if $a[1] eq "-";
       $a[2] = "" if $a[2] eq "-";
@@ -94,24 +113,35 @@ for my $file (@files)
     }
   }
 
-  # Regular
-  # print "$round $board \"N:",
-    # join('.', @{$hand[0]}), " ",
-    # join('.', @{$hand[1]}), " ",
-    # join('.', @{$hand[2]}), " ",
-    # join('.', @{$hand[3]}), "\"\n";
-
   # PBN-like
   # print "XXX $round\n";
-  print "[Board \"$board\"]\n";
-  print "[Dealer \"", $DEALER[$board % 16], "\"]\n";
-  print "[Vulnerable \"", $VUL[$board % 16], "\"]\n";
-  print "[Deal \"N:",
-    join('.', @{$hand[0]}), " ", # North
-    join('.', @{$hand[2]}), " ", # East
-    join('.', @{$hand[3]}), " ", # South
-    join('.', @{$hand[1]}), "\"]\n\n"; # West
+  # print "XXX $board\n";
+  my $s;
+  $s = "[Board \"$board\"]\n";
+  $s .= "[Dealer \"" . $DEALER[$board % 16] . "\"]\n";
+  $s .= "[Vulnerable \"" . $VUL[$board % 16] . "\"]\n";
+  $s .= "[Deal \"N:" .
+    join('.', @{$hand[0]}) . " " . # North
+    join('.', @{$hand[2]}) . " " . # East
+    join('.', @{$hand[3]}) . " " . # South
+    join('.', @{$hand[1]}) . "\"]\n\n"; # West
+
+  push @{$texts[$round]}, $s;
 
   close $fh;
 }
 
+for my $r (0 .. $#texts)
+{
+  next unless defined $texts[$r];
+
+  my $out = "$dirgroup/PBN/round$r.pbn";
+  open my $fo, ">$out" or die "Can't open file $out $!";
+
+  for my $t (@{$texts[$r]})
+  {
+    print $fo $t;
+  }
+
+  close $fo;
+}

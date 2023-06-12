@@ -1,8 +1,8 @@
-set d = '2016-Mind/Open'
+set d = '2005-World/Seniors'
 set m = 'Matches'
 set s = 'scores.txt'
 set n = 'names.txt'
 
-perl parse.pl $d/$n $d/$m/*.asp > scores0.txt
+perl parsetmp.pl $d/$n $d/$m/*.asp > scores0.txt
 sort -n scores0.txt > $d/$s
 rm scores0.txt
