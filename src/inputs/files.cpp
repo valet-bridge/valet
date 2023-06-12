@@ -34,7 +34,7 @@ extern Error error;
 
 
 string makeHandTag(
-  const unsigned roundNo,
+  const string& roundTag,
   const unsigned boardNo);
 
 
@@ -75,10 +75,10 @@ bool readNameFile(const string& nameFile)
 
 
 string makeHandTag(
-  const unsigned roundNo,
+  const string& roundTag,
   const unsigned boardNo)
 {
-  return to_string(roundNo) + "|" + to_string(boardNo);
+  return roundTag + "|" + to_string(boardNo);
 }
 
 
@@ -93,7 +93,8 @@ bool readScoresFile(const string& scoresFile)
 
   hands.clear();
   string line;
-  unsigned lno = 0, roundNo = 0, boardNo = 0;
+  unsigned lno = 0, boardNo = 0;
+  string roundTag;
   Result result;
   string tag;
 
@@ -101,10 +102,18 @@ bool readScoresFile(const string& scoresFile)
   {
     lno++;
     line.erase(remove(line.begin(), line.end(), '\r'), line.end());
-    if (line[0] == '#' || line.empty())
+    if (line[0] == '#' || 
+        line.empty() ||
+        line.find("Adj") != string::npos ||
+        line.find("adj") != string::npos ||
+        line.find("ADJ") != string::npos ||
+        line.find("None") != string::npos)
+    {
+      // Also skip adjusted scores.
       continue;
+    }
 
-    if (parseScoreLine(line, result, roundNo, boardNo) != RETURN_NO_FAULT)
+    if (parseScoreLine(line, result, roundTag, boardNo) != RETURN_NO_FAULT)
     {
       cerr << "File '" << scoresFile << "', line " << lno << 
         ": Syntax error" << endl;
@@ -112,12 +121,26 @@ bool readScoresFile(const string& scoresFile)
       return false;
     }
 
+    // Turn something like "Men17" into "17" so it can be compared
+    // to a numerical range of rounds.
+    const string numericalPart = 
+      roundTag.substr(roundTag.find_first_of("0123456789"));
+    int roundNoInt;
+    if (! parseInt(numericalPart, roundNoInt))
+    {
+      cerr << "Unable to turn " << roundTag << 
+        " into numerical round." << endl;
+      return false;
+    }
+    const unsigned roundNo = static_cast<unsigned>(roundNoInt);
+
+
     if (options.roundFirst > 0 && roundNo < options.roundFirst)
       continue;
     if (options.roundLast > 0 && roundNo > options.roundLast)
       continue;
 
-    tag = makeHandTag(roundNo, boardNo);
+    tag = makeHandTag(roundTag, boardNo);
     if (hands.find(tag) == hands.end())
       static_cast<void>(hands[tag].setBoardNumber(boardNo));
     hands[tag].add(result);

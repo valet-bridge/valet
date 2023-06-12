@@ -31,7 +31,7 @@ bool parseInt(
 int parseScoreLine(
   const string& line,
   Result& result,
-  unsigned& roundNo,
+  string& roundTag,
   unsigned& boardNo,
   const bool skipNameCheck = false);
 

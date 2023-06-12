@@ -39,7 +39,7 @@ bool charToDenom(
 
 bool lineToNumbers(
   const vector<string>& tokens,
-  unsigned& roundNo,
+  string& roundTag,
   unsigned& boardNo);
 
 bool checkPlayer(
@@ -64,7 +64,7 @@ bool tokenToRank(
 bool lineToResult(
   const vector<string>& tokens,
   Result& res,
-  unsigned& roundNo,
+  string& roundTag,
   unsigned& boardNo,
   bool skipNameCheck);
 

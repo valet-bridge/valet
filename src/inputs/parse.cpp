@@ -218,14 +218,10 @@ bool tokenToDenom(
 
 bool lineToNumbers(
   const vector<string>& tokens,
-  unsigned& roundNo,
+  string& roundTag,
   unsigned& boardNo)
 {
-  if (! tokenToUnsigned(tokens[0], 1, 0, "round number", roundNo))
-  {
-    error.no = RETURN_ROUND_NUMBER;
-    return false;
-  }
+  roundTag = tokens[0];
 
   if (! tokenToUnsigned(tokens[1], 1, 0, "board number", boardNo))
   {
@@ -288,12 +284,12 @@ bool tokenToMultiplier(
 {
   if (token.size() == 3)
   {
-    if (token[2] != 'X' && token[2] != 'x')
+    if (token[2] != 'X' && token[2] != 'x' && token[2]!= '*')
     {
       error.flag = true;
       error.no = RETURN_MULTIPLIER;
       error.message << "Got contract: '" << token.c_str() <<
-        "' (expected last letter to be X or x)\n";
+        "' (expected last letter to be X, x or *)\n";
       return false;
     }
     multiplier = VALET_DOUBLED;
@@ -384,11 +380,11 @@ bool tokenToRank(
 bool lineToResult(
   const vector<string>& tokens,
   Result& result,
-  unsigned& roundNo,
+  string& roundTag,
   unsigned& boardNo,
   bool skipNameCheck)
 {
-  if (! lineToNumbers(tokens, roundNo, boardNo))
+  if (! lineToNumbers(tokens, roundTag, boardNo))
     return false;
 
   if (! skipNameCheck && 
@@ -453,12 +449,12 @@ bool lineToResult(
     return true;
   }
 
-  if (tokens[9].size() != 2)
+  if (tokens[9].size() != 1 && tokens[9].size() != 2)
   {
     error.flag = true;
     error.no = RETURN_LEAD_TEXT;
     error.message << "Got lead: '" << tokens[9].c_str() <<
-      "' (expected two characters)\n";
+      "' (expected one or two characters)\n";
     return false;
   }
 
@@ -466,8 +462,16 @@ bool lineToResult(
   if (! tokenToDenom(tokens[9], 0, "denomination", leadDenom))
     return false;
 
-  if (! tokenToRank(tokens[9], leadRank))
-    return false;
+  if (tokens[9].size() == 1)
+  {
+    // To have something.
+    leadRank = 2;
+  }
+  else
+  {
+    if (! tokenToRank(tokens[9], leadRank))
+      return false;
+  }
 
   result.setLead(leadDenom, leadRank);
 
@@ -478,7 +482,7 @@ bool lineToResult(
 int parseScoreLine(
   const string& line,
   Result& result,
-  unsigned& roundNo,
+  string& roundTag,
   unsigned& boardNo,
   const bool skipNameCheck)
 {
@@ -496,7 +500,7 @@ int parseScoreLine(
     return error.no;
   }
 
-  if (lineToResult(tokens, result, roundNo, boardNo, skipNameCheck))
+  if (lineToResult(tokens, result, roundTag, boardNo, skipNameCheck))
     return RETURN_NO_FAULT;
   else
   {
