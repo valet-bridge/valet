@@ -55,6 +55,7 @@ src/*.txt
 *.pyc
 
 scripts/Euro-and-World/20*
+scripts/Euro-and-World/*.txt
 scripts/cluster/data/20*
 scripts/cluster/*.txt
 scripts/cluster/*.csv
