@@ -1,0 +1,9 @@
+set d = '2022-World'
+set m = 'Matches'
+set n = 'names.txt'
+
+perl names.pl $d/${m}*/* > names0.txt
+sort names0.txt | uniq > names1.txt
+
+perl number.pl names1.txt > $d/$n
+rm names0.txt names1.txt

@@ -1,0 +1,151 @@
+echo 2005-World
+perl mergemap.pl 2005-World
+
+echo 2006-Euro
+perl mergemap.pl 2006-Euro/Seniors/Final
+perl mergemap.pl 2006-Euro/Seniors
+perl mergemap.pl 2006-Euro
+
+echo 2007-World
+perl mergemap.pl 2007-World
+
+echo 2007-WTNT
+cp 2007-WTNT/Open/scores.txt 2007-WTNT/scores.txt
+
+echo 2007-Open-Euro
+perl mergemap.pl 2007-Open-Euro/Open/RR
+perl mergemap.pl 2007-Open-Euro/Open/Swiss
+perl mergemap.pl 2007-Open-Euro/Open
+perl mergemap.pl 2007-Open-Euro/Women/RR
+cp 2007-Open-Euro/Women/RR/scores.txt 2007-Open-Euro/Women
+perl mergemap.pl 2007-Open-Euro/Seniors/RR
+cp 2007-Open-Euro/Seniors/RR/scores.txt 2007-Open-Euro/Seniors
+perl mergemap.pl 2007-Open-Euro/Mixed/RR
+perl mergemap.pl 2007-Open-Euro/Mixed/Swiss
+perl mergemap.pl 2007-Open-Euro/Mixed
+perl mergemap.pl 2007-Open-Euro
+
+echo 2008-Euro
+perl mergemap.pl 2008-Euro/Open/RR
+perl mergemap.pl 2008-Euro/Open
+perl mergemap.pl 2008-Euro
+
+echo 2008-Mind
+perl mergemap.pl 2008-Mind/Open
+perl mergemap.pl 2008-Mind/Women
+perl mergemap.pl 2008-Mind/Seniors
+perl mergemap.pl 2008-Mind
+
+echo 2008-MTNT
+cp 2008-MTNT/Mixed/scores.txt 2008-MTNT/scores.txt
+
+echo 2009-Open-Euro
+cat 2009-Open-Euro/Open/RR/*/scores.txt | sort -n > 2009-Open-Euro/Open/RR/scores.txt
+cat 2009-Open-Euro/Open/Swiss/*/scores.txt | sort -n > 2009-Open-Euro/Open/Swiss/scores.txt
+perl mergemap.pl 2009-Open-Euro/Open
+cat 2009-Open-Euro/Women/*/scores.txt | sort -n > 2009-Open-Euro/Women/scores.txt
+cat 2009-Open-Euro/Seniors/*/scores.txt | sort -n > 2009-Open-Euro/Seniors/scores.txt
+cat 2009-Open-Euro/Mixed/RR/*/scores.txt | sort -n > 2009-Open-Euro/Mixed/RR/scores.txt
+cat 2009-Open-Euro/Mixed/Swiss/*/scores.txt | sort -n > 2009-Open-Euro/Mixed/Swiss/scores.txt
+perl mergemap.pl 2009-Open-Euro/Mixed
+perl mergemap.pl 2009-Open-Euro
+
+echo 2009-World
+perl mergemap.pl 2009-World
+
+echo 2009-WTNT
+cp 2009-WTNT/Open/scores.txt 2009-WTNT/scores.txt
+
+echo 2010-Euro
+cat 2010-Euro/Open/RR/*/scores.txt | sort -n > 2010-Euro/Open/RR/scores.txt
+cat 2010-Euro/Open/*/scores.txt | sort -n > 2010-Euro/Open/scores.txt
+perl mergemap.pl 2010-Euro
+
+echo 2011-World
+perl mergemap.pl 2011-World
+
+echo 2011-WTNT
+cp 2011-WTNT/Open/scores.txt 2011-WTNT/scores.txt
+
+echo 2012-Euro
+cat 2012-Euro/Open/RR/*/scores.txt | sort -n > 2012-Euro/Open/RR/scores.txt
+cat 2012-Euro/Open/*/scores.txt | sort -n > 2012-Euro/Open/scores.txt
+perl mergemap.pl 2012-Euro
+
+echo 2012-Mind
+cat 2012-Mind/Open/*/scores.txt | sort -n > 2012-Mind/Open/scores.txt
+cat 2012-Mind/Women/*/scores.txt | sort -n > 2012-Mind/Women/scores.txt
+cat 2012-Mind/Seniors/*/scores.txt | sort -n > 2012-Mind/Seniors/scores.txt
+perl mergemap.pl 2012-Mind
+
+echo 2012-MTNT
+cp 2012-MTNT/Mixed/scores.txt 2012-MTNT/scores.txt
+
+echo 2013-Open-Euro
+perl mergemap.pl 2013-Open-Euro
+
+echo 2013-World
+cat 2013-World/*/scores.txt | sort -n > 2013-World/scores.txt
+
+echo 2013-WTNT
+cp 2013-WTNT/Open/scores.txt 2013-WTNT/scores.txt
+
+echo 2014-Euro
+cat 2014-Euro/Open/RR/*/scores.txt | sort -n > 2014-Euro/Open/RR/scores.txt
+cat 2014-Euro/Open/*/scores.txt | sort -n > 2014-Euro/Open/scores.txt
+cat 2014-Euro/Seniors/Final/*/scores.txt | sort -n > 2014-Euro/Seniors/Final/scores.txt
+perl mergemap.pl 2014-Euro/Seniors
+perl mergemap.pl 2014-Euro
+
+echo 2015-Open-Euro
+perl mergemap.pl 2015-Open-Euro
+
+echo 2015-World
+perl mergemap.pl 2015-World
+
+echo 2015-WTNT
+cp 2015-WTNT/Open/scores.txt 2015-WTNT/scores.txt
+
+echo 2016-Euro
+perl mergemap.pl 2016-Euro
+
+echo 2016-Mind
+cat 2016-Mind/Open/*/scores.txt | sort -n > 2016-Mind/Open/scores.txt
+cat 2016-Mind/Women/*/scores.txt | sort -n > 2016-Mind/Women/scores.txt
+perl mergemap.pl 2016-Mind
+
+echo 2017-Open-Euro
+perl mergemap.pl 2017-Open-Euro
+
+echo 2017-World
+perl mergemap.pl 2017-World
+
+echo 2017-WTNT
+cp 2017-WTNT/Open/scores.txt 2017-WTNT/scores.txt
+
+echo 2018-Euro
+perl mergemap.pl 2018-Euro
+
+echo 2019-Open-Euro
+perl mergemap.pl 2019-Open-Euro
+
+echo 2019-Euro-Mixed
+cp 2019-Euro-Mixed/Mixed/scores.txt 2019-Euro-Mixed/scores.txt
+
+echo 2019-WTNT
+cp 2019-WTNT/Open/scores.txt 2019-WTNT/scores.txt
+
+echo 2019-World
+cat 2019-World/*/scores.txt | sort -n > 2019-World/scores.txt
+
+echo 2020-Winter
+cp 2020-Winter/Open/scores.txt 2020-Winter/scores.txt
+
+echo 2022-World
+perl mergemap.pl 2022-World
+
+echo 2022-Euro
+perl mergemap.pl 2022-Euro
+
+echo 2023-Winter
+cp 2023-Winter/Open/scores.txt 2023-Winter/scores.txt
