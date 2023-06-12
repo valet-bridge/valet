@@ -2,22 +2,48 @@ import pandas as pd
 import numpy as np
 from sklearn.cluster import Birch
 
-
-def get_data(filename):
-  """Reads in the basic data."""
-  full = pd.read_csv(filename, delimiter = ',', header=None)
-
-  # Drop the first entry indicating where the hand came from.
-  hands = full[full.columns[1:]].to_numpy()
-  print(hands.shape)
-  return full, hands
+from Args import Args
+from Diagrams import Diagrams
+from Tableaux import Tableaux
+from Profiles import Profiles
 
 
-full, hands = get_data('learn.txt')
+# from PBN import PBN
 
-model = Birch(threshold = 0.5, branching_factor = 50, n_clusters = None)
 
-model.fit(hands)
+# Get the command-line arguments.
+args = Args()
+train, validate, test = args.parse()
 
-pred = model.predict(hands)
-print(pred)
+diagrams = Diagrams()
+diagrams.read(train)
+
+tableaux = Tableaux()
+tableaux.read(train)
+
+profiles = Profiles()
+profiles.read(train)
+
+profiles.passout(diagrams, tableaux)
+
+# profiles.passout_occasional(diagrams, tableaux)
+
+# tag = "4|1|1"
+# print(diagrams.str(tag))
+
+# print(profiles.str("4|1|1"))
+
+# model = Birch(threshold = 0.5, branching_factor = 50, n_clusters = None)
+
+# hands is a numpy array
+# model.fit(hands)
+
+# pred = model.predict(hands)
+# print(pred)
+
+# p = "N:KJT6.K875.832.Q2 A43.JT42.AKQ9.AJ Q72.6.654.KT7654 985.AQ93.JT7.983"
+# pbn = PBN()
+# print(pbn.pbn_to_text(p))
+
+# print(sets.rounds(4))
+
