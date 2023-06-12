@@ -1,0 +1,15 @@
+foreach i (../scripts/Euro-and-World/20*)
+  echo $i
+  set v = `basename $i`
+  echo $v
+  set k = ../scripts/cluster/data/$v
+  echo $k
+  ./valet -d $i -t tableau.txt -f csv > valet.csv
+  mv tableau.txt $k
+  mv valet.csv $k
+
+  ./valet -d $i -L learn.txt > tmp.txt
+  mv learn.txt $k
+
+  cp $i/PBN/* $k
+end
