@@ -68,7 +68,7 @@ class Term:
   
   def lower_contains(self, modifier):
     '''Checks whether the modifier is consistent with a lower term.'''
-    if (modifier.value1 > self.value1):
+    if (modifier.value1 < self.value1):
       return False
     elif (modifier.term_type == TERM_TYPE.TERM_LOWER.value):
       return True
@@ -82,7 +82,7 @@ class Term:
 
   def upper_contains(self, modifier):
     '''Checks whether the modifier is consistent with an upper term.'''
-    if (modifier.value1 < self.value1):
+    if (modifier.value1 > self.value1):
       return False
     elif (modifier.term_type == TERM_TYPE.TERM_UPPER.value):
       return True
@@ -147,7 +147,12 @@ class Term:
       assert False
       return False
 
+
+  def uses(self, modifier):
+    '''Checks whether the modifier term is already used.'''
+    return (self.comp_param == modifier.comp_param)
   
+
   def match(self, valuation):
     '''Return a bool match of the term with the valuation.'''
     assert self.term_type != TERM_TYPE.TERM_SIZE.value
@@ -172,7 +177,7 @@ class Term:
     assert self.term_type != TERM_TYPE.TERM_SIZE.value
 
     s = COMPOSITE_PARAMS_TAGS[self.comp_param] + ": " + \
-        TERM_NAMES[TERM_TYPE.TERM_LOWER.value];
+        TERM_NAMES[self.term_type];
     if (self.term_type == TERM_TYPE.TERM_LOWER.value or
         self.term_type == TERM_TYPE.TERM_UPPER.value or
         self.term_type == TERM_TYPE.TERM_EXACT.value):

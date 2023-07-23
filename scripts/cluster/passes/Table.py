@@ -1,7 +1,8 @@
 from dataclasses import dataclass
+from copy import deepcopy
 
 from passes.Row import Row
-from Composites import COMPOSITE_PARAMS
+from Composites import (COMPOSITE_PARAMS, COMPOSITE_PARAMS_LOOKUP)
 
 
 @dataclass
@@ -51,7 +52,6 @@ class Table:
     '''Parse from index.  Return the next unparsed index.'''
     assert index+2 < len(components)
 
-
     s = components[index]
     if (not s in COMPOSITE_PARAMS_LOOKUP):
       assert False
@@ -61,14 +61,15 @@ class Table:
 
     if (oper == "in" or oper == "notin"):
       assert index+3 < len(components)
-      value1 = self.parse_int(components[2])
-      value2 = self.parse_int(components[3])
+      value1 = self.parse_int(components[index+2])
+      value2 = self.parse_int(components[index+3])
       if (oper == "in"):
         row.add_range(tag, value1, value2)
       else:
         row.add_outside(tag, value1, value2)
+      return index+4
     else:
-      value1 = self.parse_int(components[2])
+      value1 = self.parse_int(components[index+2])
       if (oper == ">="):
         row.add_lower(tag, value1)
       elif (oper == "<="):
@@ -77,6 +78,7 @@ class Table:
         row.add_equal(tag, value1)
       else:
         assert(False)
+      return index+3
 
 
   def parse_modify_line(self, components, fn):
@@ -106,45 +108,62 @@ class Table:
 
     row_modif = Row()
     index = num_when + 1
-    while (index < num_when):
+    while (index < len(components)):
       index = self.parse_components_from(row_modif, components, index)
 
-    # Then we check whether there are inactive matches.
-    num_inactive = 0
-    index_match = 0
-    for index in (range(len(rows))):
-      if ((not rows[index].active_flag) and 
-          rows[index].row.contains(row_core)):
-        num_inactive = num_inactive + 1
-        index_match = index
-    
-    if (num_inactive >= 2):
-      assert False
+    # Then we check the active and inactive matches.
+    list_active = []
+    list_inactive = []
+    max_inactive_term_count = 0
 
-    if (num_inactive == 1):
-      re_new = rows[index].copy()
-      re_new.row.add(row_modif)
-      rows.append(re_new)
+    for index in (range(len(self.rows))):
+      if (self.rows[index].row.contains(row_core) and
+          not self.rows[index].row.already_uses(row_modif)):
+        if (self.rows[index].active_flag):
+          list_active.append(index)
+        else:
+          list_inactive.append(index)
+          tc = self.rows[index].row.term_count()
+          if (tc > max_inactive_term_count):
+            max_inactive_term_count = tc
+    
+    if (len(list_active) == 0):
+      if (len(list_inactive) == 0):
+        assert(False)
+
+      for index in list_inactive:
+        # Only the inactive ones that are maximally long.
+        if (self.rows[index].row.term_count() < max_inactive_term_count):
+          continue
+
+        re_new = deepcopy(self.rows[index])
+        re_new.row.add(row_modif)
+        re_new.active_flag = True
+        re_new.row.add_to_overall_prob(fn)
+        self.rows.append(re_new)
+
       return
 
-    # There are no inactive matches.
-    for index in (range(len(rows))):
-      if (rows[index].active_flag and rows[index].row.contains(row_core)):
-        re = rows[index]
-        re.row.add(row_modif)
-        re.row.add_to_overall_prob(fn)
+    # There are active matches.
+    for index in list_active:
+      # Make a copy and turn the original inactive.
+      re = deepcopy(self.rows[index])
+      self.rows[index].active_flag = False
+
+      re.row.add(row_modif)
+      re.row.add_to_overall_prob(fn)
+      self.rows.append(re)
 
 
   def parse_primary_line(self, components, fn):
     '''Parse a normal line.'''
-    re = RowEntry()
+    re = RowEntry(Row(), True)
     re.row.set_overall_prob(fn)
-    re.active_flag = True
     self.rows.append(re)
 
     index = 0
     while (index < len(components)):
-      index = self.parse_components_from(row, components, index)
+      index = self.parse_components_from(re.row, components, index)
 
 
   def read_file(self, fname):
@@ -154,6 +173,9 @@ class Table:
     lines = content.split("\n")
 
     for line in lines:
+      if (line.startswith('#') or line.strip() == ''):
+        continue
+
       fields = line.split(":")
       assert len(fields) == 2
 
@@ -165,9 +187,9 @@ class Table:
 
       components = fields[0].split()
       if (components[0] == "modify"):
-        parse_modify_line(components, fn)
+        self.parse_modify_line(components, fn)
       else:
-        parse_primary_line(components, fn)
+        self.parse_primary_line(components, fn)
 
   
   def lookup(self, valuation):

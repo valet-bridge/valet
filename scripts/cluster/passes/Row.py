@@ -81,6 +81,11 @@ class Row:
     assert self.prob >= 0. and self.prob <= 1.
 
   
+  def term_count(self):
+    '''Returns the number of terms in the row.'''
+    return len(self.terms)
+
+  
   def contains(self, modifier):
     '''Checks whether the modifier row is consistent with the row.'''
     if (len(modifier.terms) > len(self.terms)):
@@ -103,6 +108,17 @@ class Row:
         return False
 
     return True
+
+  
+  def already_uses(self, modifier):
+    '''Checks whether the modifier is already used in the row.'''
+
+    for i in range(len(modifier.terms)):
+      for j in range(len(self.terms)):
+        if (self.terms[j].uses(modifier.terms[i])):
+          return True
+      
+    return False
 
   
   def match(self, valuation):

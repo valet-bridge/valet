@@ -31,7 +31,8 @@ class COMPOSITE_PARAMS(Enum):
   COMP_EFF_L4 = 27
   COMP_MCONC = 28
   COMP_TWOCONC = 29
-  COMP_SIZE = 30
+  COMP_SPADES = 30
+  COMP_SIZE = 31
 
 COMPOSITE_PARAMS_NAMES = [
   "HCP", "Adjusted HCP", "CCCC points", "Zar points", "FL points",
@@ -42,16 +43,16 @@ COMPOSITE_PARAMS_NAMES = [
   "Eff. S-H", "Eff. abs(S-H)", "Eff. max(S,H)", "Eff. min(S,H)",
   "Eff. max(D,C)", "Eff. min(D,C)",
   "Eff. 1st len", "Eff. 2nd len", "Eff. 3rd len", "Eff. 4th len",
-  "Major conc.", "Top-2 conc." ]
+  "Major conc.", "Top-2 conc.", "Spades" ]
 
 COMPOSITE_PARAMS_TAGS = [
   "HCP", "AHCP", "CCCC", "ZP", "FL",
-  "Controls", "Playtricks", "Quicktricks", "Losers",
+  "controls", "Playtricks", "Quicktricks", "Losers",
   "Outtops1", "Outtops2", "Outtops3", "Outtops4", "Outtops5",
   "BAL", "UNBAL", "SBAL", "notSBAL",
   "EffSH", "EffSHdiff", "EffSHmax", "EffSHmin",
   "EffDCmax", "EffDCmin",
-  "Eff1", "Eff2", "Eff3", "Eff4", "Mconc", "Top2conc" ]
+  "Eff1", "Eff2", "Eff3", "Eff4", "Mconc", "Top2conc", "spades"]
 
 COMPOSITE_PARAMS_LOOKUP = {}
 for i in range(len(COMPOSITE_PARAMS_NAMES)):

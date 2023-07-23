@@ -116,7 +116,7 @@ class Profiles:
     '''Filter out some hands that tend to get passed out.'''
 
     table = Table()
-    table.set_default()
+    table.read_file("test.txt")
     print("TABLE\n")
     print(table.str())
     print("ENDTABLE\n")

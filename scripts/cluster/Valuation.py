@@ -745,6 +745,9 @@ class Valuation:
 
     self.set_comp_balanced()
 
+    self.comp_values[COMPOSITE_PARAMS.COMP_SPADES.value] = \
+      self.suit_values[self.SUITS.BRIDGE_SPADES.value][self.SUIT_PARAMS.SUIT_LENGTH.value] 
+
     if (full_flag):
       self.calc_details(values)
 
