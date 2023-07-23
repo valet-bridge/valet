@@ -5,6 +5,7 @@ from enum import Enum
 from Sets import Sets
 from Valuation import Valuation
 from PBN import PBN
+from passes.Table import Table
 
 class Profiles:
   # Reads the percentage vectors for a directory.
@@ -113,6 +114,13 @@ class Profiles:
   
   def passout(self, diagrams, tableaux):
     '''Filter out some hands that tend to get passed out.'''
+
+    table = Table()
+    table.set_default()
+    print("TABLE\n")
+    print(table.str())
+    print("ENDTABLE\n")
+
     pbn = PBN()
     valuation = Valuation()
     for tag, profile in self.profiles.items():

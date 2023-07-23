@@ -1,4 +1,5 @@
 from enum import Enum
+from Composites import (COMPOSITE_PARAMS, COMPOSITE_PARAMS_NAMES, COMPOSITE_PARAMS_SCALES)
 
 # This is more or less a port of the Valuation.cpp in my Build repo.
 # See more comments there.
@@ -95,59 +96,6 @@ class Valuation:
     1, 1, 1, 1, 1, 1, 1, 1,
     1, 1, 1 ]
   
-  class COMPOSITE_PARAMS(Enum):
-    COMP_HCP = 0
-    COMP_AHCP = 1
-    COMP_CCCC = 2
-    COMP_ZP = 3
-    COMP_FL = 4
-    COMP_CONTROLS = 5
-    COMP_PLAY_TRICKS = 6
-    COMP_QUICK_TRICKS = 7
-    COMP_LOSERS = 8
-    COMP_OUTTOPS1 = 9
-    COMP_OUTTOPS2 = 10
-    COMP_OUTTOPS3 = 11
-    COMP_OUTTOPS4 = 12
-    COMP_OUTTOPS5 = 13
-    COMP_BAL = 14
-    COMP_UNBAL = 15
-    COMP_SBAL = 16
-    COMP_UNSBAL = 17
-    COMP_EFF_MDIFF = 18
-    COMP_EFF_MABSDIFF = 19
-    COMP_EFF_MMAX = 20
-    COMP_EFF_MMIN = 21
-    COMP_EFF_mMAX = 22
-    COMP_EFF_mMIN = 23
-    COMP_EFF_L1 = 24
-    COMP_EFF_L2 = 25
-    COMP_EFF_L3 = 26
-    COMP_EFF_L4 = 27
-    COMP_MCONC = 28
-    COMP_TWOCONC = 29
-    COMP_SIZE = 30
-
-  COMPOSITE_PARAMS_NAMES = [
-    "HCP", "Adjusted HCP", "CCCC points", "Zar points", "FL points",
-    "Controls", "Play tricks", "Quick tricks", "Losers",
-    "Outside tops1", "Outside tops2", "Outside tops3",
-    "Outside tops4", "Outside tops5",
-    "Balanced", "Unbalanced", "Semi-balanced", "Not semi-BAL",
-    "Eff. S-H", "Eff. abs(S-H)", "Eff. max(S,H)", "Eff. min(S,H)",
-    "Eff. max(D,C)", "Eff. min(D,C)",
-    "Eff. 1st len", "Eff. 2nd len", "Eff. 3rd len", "Eff. 4th len",
-    "Major conc.", "Top-2 conc." ]
-
-  COMPOSITE_PARAMS_SCALES = [
-    1, 1, 20, 1, 1,
-    1, 2, 2, 2,
-    1, 1, 1, 1, 1,
-    1, 1, 1, 1,
-    2, 2, 2, 2, 2, 2,
-    2, 2, 2, 2,
-    1, 1 ]
-
   SUIT_TO_HCP = {}
   TEXT_TO_HOLDING = {}
   HOLDING_TO_TEXT = []
@@ -168,7 +116,7 @@ class Valuation:
     self.dist_values = [[0] * self.DIST_PARAMS.DIST_SIZE.value
       for x in range(self.BRIDGE_SUITS)]
 
-    self.comp_values = [0] * self.COMPOSITE_PARAMS.COMP_SIZE.value
+    self.comp_values = [0] * COMPOSITE_PARAMS.COMP_SIZE.value
 
     self.set_text_tables()
     self.set_suit_tables()
@@ -702,46 +650,46 @@ class Valuation:
     deff = self.suit_values[2][self.SUIT_PARAMS.SUIT_EFF_LENGTH.value]
     ceff = self.suit_values[3][self.SUIT_PARAMS.SUIT_EFF_LENGTH.value]
 
-    self.comp_values[self.COMPOSITE_PARAMS.COMP_EFF_MDIFF.value] = \
+    self.comp_values[COMPOSITE_PARAMS.COMP_EFF_MDIFF.value] = \
       seff-heff
-    self.comp_values[self.COMPOSITE_PARAMS.COMP_EFF_MABSDIFF.value] = \
+    self.comp_values[COMPOSITE_PARAMS.COMP_EFF_MABSDIFF.value] = \
       abs(seff-heff)
-    self.comp_values[self.COMPOSITE_PARAMS.COMP_EFF_MMAX.value] = \
+    self.comp_values[COMPOSITE_PARAMS.COMP_EFF_MMAX.value] = \
       max(seff, heff)
-    self.comp_values[self.COMPOSITE_PARAMS.COMP_EFF_MMIN.value] = \
+    self.comp_values[COMPOSITE_PARAMS.COMP_EFF_MMIN.value] = \
       min(seff, heff)
-    self.comp_values[self.COMPOSITE_PARAMS.COMP_EFF_mMAX.value] = \
+    self.comp_values[COMPOSITE_PARAMS.COMP_EFF_mMAX.value] = \
       max(deff, ceff)
-    self.comp_values[self.COMPOSITE_PARAMS.COMP_EFF_mMIN.value] = \
+    self.comp_values[COMPOSITE_PARAMS.COMP_EFF_mMIN.value] = \
       min(deff, ceff)
 
     res = self.suit_order_data(seff, heff, deff, ceff)
 
-    self.comp_values[self.COMPOSITE_PARAMS.COMP_EFF_L1.value] = res['L1']
-    self.comp_values[self.COMPOSITE_PARAMS.COMP_EFF_L2.value] = res['L2']
-    self.comp_values[self.COMPOSITE_PARAMS.COMP_EFF_L3.value] = res['L3']
-    self.comp_values[self.COMPOSITE_PARAMS.COMP_EFF_L4.value] = res['L4']
+    self.comp_values[COMPOSITE_PARAMS.COMP_EFF_L1.value] = res['L1']
+    self.comp_values[COMPOSITE_PARAMS.COMP_EFF_L2.value] = res['L2']
+    self.comp_values[COMPOSITE_PARAMS.COMP_EFF_L3.value] = res['L3']
+    self.comp_values[COMPOSITE_PARAMS.COMP_EFF_L4.value] = res['L4']
 
     longest1 = self.dist_values[self.DIST_PARAMS.DIST_LONGEST1.value]
     longest2 = self.dist_values[self.DIST_PARAMS.DIST_LONGEST2.value]
 
-    if (self.comp_values[self.COMPOSITE_PARAMS.COMP_HCP.value] == 0):
-      self.comp_values[self.COMPOSITE_PARAMS.COMP_MCONC.value] = 0
-      self.comp_values[self.COMPOSITE_PARAMS.COMP_TWOCONC.value] = 0
+    if (self.comp_values[COMPOSITE_PARAMS.COMP_HCP.value] == 0):
+      self.comp_values[COMPOSITE_PARAMS.COMP_MCONC.value] = 0
+      self.comp_values[COMPOSITE_PARAMS.COMP_TWOCONC.value] = 0
     else:
       shcp = self.SUIT_PARAMS.SUIT_HCP.value
 
-      self.comp_values[self.COMPOSITE_PARAMS.COMP_MCONC.value] = 100. * \
+      self.comp_values[COMPOSITE_PARAMS.COMP_MCONC.value] = 100. * \
         (self.suit_values[self.SUITS.BRIDGE_SPADES.value][shcp] + \
         self.suit_values[self.SUITS.BRIDGE_HEARTS.value][shcp]) / \
-        self.comp_values[self.COMPOSITE_PARAMS.COMP_HCP.value]
+        self.comp_values[COMPOSITE_PARAMS.COMP_HCP.value]
 
-      self.comp_values[self.COMPOSITE_PARAMS.COMP_TWOCONC.value] = 100. * \
+      self.comp_values[COMPOSITE_PARAMS.COMP_TWOCONC.value] = 100. * \
         (self.suit_values[longest1][shcp] + \
         self.suit_values[longest2][shcp]) / \
-        self.comp_values[self.COMPOSITE_PARAMS.COMP_HCP.value]
+        self.comp_values[COMPOSITE_PARAMS.COMP_HCP.value]
 
-    q = self.COMPOSITE_PARAMS.COMP_OUTTOPS1.value
+    q = COMPOSITE_PARAMS.COMP_OUTTOPS1.value
     for p in range(self.SUIT_PARAMS.SUIT_TOP1.value, \
       self.SUIT_PARAMS.SUIT_TOP5.value + 1):
       self.comp_values[q] = 0
@@ -784,7 +732,7 @@ class Valuation:
     self.lookup(values)
 
     # Abuse of enum numbering!
-    q = self.COMPOSITE_PARAMS.COMP_HCP.value
+    q = COMPOSITE_PARAMS.COMP_HCP.value
     for p in range(self.SUIT_PARAMS.SUIT_HCP.value, \
       self.SUIT_PARAMS.SUIT_TOP5.value+1):
       self.comp_values[q] = 0
@@ -792,7 +740,7 @@ class Valuation:
         self.comp_values[q] += self.suit_values[s][p]
       q += 1
 
-    self.comp_values[self.COMPOSITE_PARAMS.COMP_ZP.value] += \
+    self.comp_values[COMPOSITE_PARAMS.COMP_ZP.value] += \
       self.dist_values[self.DIST_PARAMS.DIST_ZP.value]
 
     self.set_comp_balanced()
@@ -821,29 +769,34 @@ class Valuation:
       return "UNBAL"
 
 
-  def getHCP():
+  def getHCP(self):
     '''Return the internally stored HCP value.'''
-    return self.comp_values[COMP_HCP]
+    return self.comp_values[COMPOSITE_PARAMS.COMP_HCP.value]
 
 
-  def getAHCP():
+  def getAHCP(self):
     '''Return the internally stored adjusted-HCP value.'''
-    return self.comp_values[COMP_AHCP]
+    return self.comp_values[COMPOSITE_PARAMS.COMP_AHCP.value]
 
 
-  def getKnR():
+  def getKnR(self):
     '''Return the internally stored Kaplan-Rubens (4C)  value.'''
-    return self.comp_values[COMP_CCCC]
+    return self.comp_values[COMPOSITE_PARAMS.COMP_CCCC.value]
 
 
-  def getZP():
+  def getZP(self):
     '''Return the internally stored Zar point value.'''
-    return self.comp_values[COMP_ZP]
+    return self.comp_values[COMPOSITE_PARAMS.COMP_ZP.value]
 
 
-  def getFL():
+  def getFL(self):
     '''Return the internally stored "Figuren-Längen" value.'''
-    return comp_values[COMP_FL]
+    return self.comp_values[COMPOSITE_PARAMS.COMP_FL.value]
+
+  
+  def get_comp_value(self, index):
+    '''Return the internally stored composite value.'''
+    return self.comp_values[index]
 
   
   def str_header(self, text):
@@ -883,14 +836,14 @@ class Valuation:
 
     s += "Overall parameters:\n\n"
     if detail_flag:
-      upper = self.COMPOSITE_PARAMS.COMP_SIZE.value
+      upper = COMPOSITE_PARAMS.COMP_SIZE.value
     else:
-      upper = self.COMPOSITE_PARAMS.COMP_EFF_MDIFF.value
+      upper = COMPOSITE_PARAMS.COMP_EFF_MDIFF.value
 
     for p in range(upper):
-      s += '%-20s' % self.COMPOSITE_PARAMS_NAMES[p]
+      s += '%-20s' % COMPOSITE_PARAMS_NAMES[p]
       s += self.str_entry(self.comp_values[p], \
-        self.COMPOSITE_PARAMS_SCALES[p]) + "\n"
+        COMPOSITE_PARAMS_SCALES[p]) + "\n"
     s += "\n"
 
     return s
@@ -907,9 +860,9 @@ class Valuation:
     s_zp = ""
 
     i_len = self.SUIT_PARAMS.SUIT_LENGTH.value
-    i_hcp = self.COMPOSITE_PARAMS.COMP_HCP.value
-    i_cccc = self.COMPOSITE_PARAMS.COMP_CCCC.value
-    i_zp = self.COMPOSITE_PARAMS.COMP_ZP.value
+    i_hcp = COMPOSITE_PARAMS.COMP_HCP.value
+    i_cccc = COMPOSITE_PARAMS.COMP_CCCC.value
+    i_zp = COMPOSITE_PARAMS.COMP_ZP.value
 
     for p in range(dealer_index, dealer_index+4):
       pno = p % 4
@@ -921,15 +874,15 @@ class Valuation:
       s_dtag += self.dist_tag(lengths) + self.SEP
 
       s_hcp += str(self.comp_values[i_hcp] /
-        self.COMPOSITE_PARAMS_SCALES[i_hcp])
+        COMPOSITE_PARAMS_SCALES[i_hcp])
       s_hcp += self.SEP
 
       s_cccc += str(self.comp_values[i_cccc] /
-        self.COMPOSITE_PARAMS_SCALES[i_cccc])
+        COMPOSITE_PARAMS_SCALES[i_cccc])
       s_cccc += self.SEP
 
       s_zp += str(self.comp_values[i_zp] /
-        self.COMPOSITE_PARAMS_SCALES[i_zp])
+        COMPOSITE_PARAMS_SCALES[i_zp])
       s_zp += self.SEP
 
     return s_dist + s_dtag + s_hcp + s_cccc + s_zp
