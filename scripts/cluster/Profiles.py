@@ -5,6 +5,7 @@ from enum import Enum
 from Sets import Sets
 from Valuation import Valuation
 from PBN import PBN
+from Distributions import (DISTRIBUTIONS, Distribution)
 from passes.Table import Table
 
 class Profiles:
