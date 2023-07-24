@@ -182,47 +182,56 @@ DISTRIBUTION_NAMES = [
   "13MAJ000", "13MIN000",
   ]
 
+# Tired of enums...
+DPAR_MAX_LEN = 0
+DPAR_MIN_LEN = 1
+DPAR_MAX_MAJOR = 2
+DPAR_MIN_MAJOR = 3
+DPAR_MAX_MINOR = 4
+DPAR_MIN_MINOR = 5
+DPAR_SIZE = 6
+
 
 class Distribution:
 
   def __init__(self):
     self.name2number = {}
-    for d in (range(DISTRIBUTION_NAMES)):
-      self.name2number[DISTRIBUTION_NAMES[d]] = d
+    for i, d in enumerate(DISTRIBUTION_NAMES):
+      self.name2number[d] = i
 
   
-  def number4(self, min_len):
-    if (min_len == 1):
+  def number4(self, params):
+    if (params[DPAR_MIN_LEN] == 1):
       return DISTRIBUTIONS.DIST_4441.value
-    elif (min_len == 2):
+    elif (params[DPAR_MIN_LEN] == 2):
       return DISTRIBUTIONS.DIST_4432.value
     else:
       return DISTRIBUTIONS.DIST_4333.value
 
   
-  def number5major(self, min_len, max_minor, min_minor):
-    if (min_len == 0):
-      if (min_major == 5):
+  def number5major(self, params):
+    if (params[DPAR_MIN_LEN] == 0):
+      if (params[DPAR_MIN_MAJOR] == 5):
         return DISTRIBUTIONS.DIST_55MAJ30.value
-      elif (min_major == 4):
+      elif (params[DPAR_MIN_MAJOR] == 4):
         return DISTRIBUTIONS.DIST_54MAJ40.value
-      elif (min_major == 3):
+      elif (params[DPAR_MIN_MAJOR] == 3):
         return DISTRIBUTIONS.DIST_53MAJ50.value
-      elif (max_minor == 5):
+      elif (params[DPAR_MAX_MINOR] == 5):
         return DISTRIBUTIONS.DIST_50MAJ53.value
-      elif (max_minor == 4):
+      elif (params[DPAR_MAX_MINOR] == 4):
         return DISTRIBUTIONS.DIST_50MAJ44.value
       else:
         assert(False)
-    elif (min_len == 1):
-      if (min_major == 5):
+    elif (params[DPAR_MIN_LEN] == 1):
+      if (params[DPAR_MIN_MAJOR] == 5):
         return DISTRIBUTIONS.DIST_55MAJ21.value
-      elif (min_minor == 5):
+      elif (params[DPAR_MIN_MINOR] == 5):
         return DISTRIBUTIONS.DIST_5MAJ5MIN21.value
       else:
         return DISTRIBUTIONS.DIST_5MAJ431.value
-    elif (min_len == 2):
-      if (min_major == 4 or min_minor == 4):
+    elif (params[DPAR_MIN_LEN] == 2):
+      if (params[DPAR_MAX_MINOR] == 2 or params[DPAR_MAX_MINOR] == 4):
         return DISTRIBUTIONS.DIST_5MAJ422.value
       else:
         return DISTRIBUTIONS.DIST_5MAJ332.value
@@ -230,23 +239,23 @@ class Distribution:
       assert False
 
 
-  def number5minor(self, min_len, max_major, min_major, min_minor):
-    if (min_len == 0):
-      if (min_major == 4):
+  def number5minor(self, params):
+    if (params[DPAR_MIN_LEN] == 0):
+      if (params[DPAR_MIN_MAJOR] == 4):
         return DISTRIBUTIONS.DIST_44MAJ50.value
-      elif (min_minor == 5):
+      elif (params[DPAR_MIN_MINOR] == 5):
         return DISTRIBUTIONS.DIST_55MIN30.value
-      elif (min_minor == 4):
+      elif (params[DPAR_MIN_MINOR] == 4):
         return DISTRIBUTIONS.DIST_40MAJ54.value
       else:
         assert False
-    elif (min_len == 1):
-      if (min_minor == 5):
+    elif (params[DPAR_MIN_LEN] == 1):
+      if (params[DPAR_MIN_MINOR] == 5):
         return DISTRIBUTIONS.DIST_55MIN21.value
       else:
         return DISTRIBUTIONS.DIST_5MIN431.value
-    elif (min_len == 2):
-      if (max_major == 4 or min_minor == 4):
+    elif (params[DPAR_MIN_LEN] == 2):
+      if (params[DPAR_MAX_MAJOR] == 4 or params[DPAR_MIN_MINOR] == 4):
         return DISTRIBUTIONS.DIST_5MIN422.value
       else:
         return DISTRIBUTIONS.DIST_5MIN332.value
@@ -254,242 +263,238 @@ class Distribution:
       assert False
 
   
-  def number6major(self, min_len, max_minor, min_minor):
-    if (min_len == 2):
+  def number6major(self, params):
+    if (params[DPAR_MIN_LEN] == 2):
       return DISTRIBUTIONS.DIST_6MAJ322.value
-    elif (min_len == 1):
-      if (max_minor == 5):
+    elif (params[DPAR_MIN_LEN] == 1):
+      if (params[DPAR_MAX_MINOR] == 5):
         return DISTRIBUTIONS.DIST_61MAJ51.value
-      elif (max_minor == 3):
+      elif (params[DPAR_MAX_MINOR] == 3):
         return DISTRIBUTIONS.DIST_6MAJ331.value
-      elif (max_minor == 1):
+      elif (params[DPAR_MAX_MINOR] == 1):
         return DISTRIBUTIONS.DIST_65MAJ11.value
       else:
         return DISTRIBUTIONS.DIST_6MAJ421.value
-    elif (max_minor == 6):
+    elif (params[DPAR_MAX_MINOR] == 6):
       return DISTRIBUTIONS.DIST_6MAJ6MIN10.value
-    elif (max_minor == 5):
+    elif (params[DPAR_MAX_MINOR] == 5):
       return DISTRIBUTIONS.DIST_6MAJ5MIN20.value
-    elif (max_minor == 2):
+    elif (params[DPAR_MAX_MINOR] == 2):
       return DISTRIBUTIONS.DIST_65MAJ20.value
-    elif (max_minor == 1):
+    elif (params[DPAR_MAX_MINOR] == 1):
       return DISTRIBUTIONS.DIST_66MAJ10.value
     else:
       return DISTRIBUTIONS.DIST_6MAJ430.value
 
 
-  def number6minor(self, min_len, max_major, min_major, min_minor):
-    if (min_len == 2):
+  def number6minor(self, params):
+    if (params[DPAR_MIN_LEN] == 2):
       return DISTRIBUTIONS.DIST_6MIN332.value
-    elif (min_len == 1):
-      if (max_major == 5):
+    elif (params[DPAR_MIN_LEN] == 1):
+      if (params[DPAR_MAX_MAJOR] == 5):
         return DISTRIBUTIONS.DIST_51MAJ61.value
-      elif (max_major == 1):
+      elif (params[DPAR_MAX_MAJOR] == 1):
         return DISTRIBUTIONS.DIST_65MIN11.value
-      elif (max_major == 3):
+      elif (params[DPAR_MAX_MAJOR] == 3):
         return DISTRIBUTIONS.DIST_6MIN331.value
       else:
         return DISTRIBUTIONS.DIST_6MIN421.value
-    elif (max_major == 5):
+    elif (params[DPAR_MAX_MAJOR] == 5):
       return DISTRIBUTIONS.DIST_5MAJ6MIN20.value
-    elif (max_major == 2):
+    elif (params[DPAR_MAX_MAJOR] == 2):
       return DISTRIBUTIONS.DIST_65MIN20.value
-    elif (max_major == 1):
+    elif (params[DPAR_MAX_MAJOR] == 1):
       return DISTRIBUTIONS.DIST_66MIN10.value
     else:
       return DISTRIBUTIONS.DIST_6MIN430.value
 
 
-  def number7major(self, min_len, max_minor, min_minor):
-    if (min_len == 2):
+  def number7major(self, params):
+    if (params[DPAR_MIN_LEN] == 2):
       return DISTRIBUTIONS.DIST_7MAJ222.value
-    elif (min_len == 1):
-      if (max_minor == 4):
+    elif (params[DPAR_MIN_LEN] == 1):
+      if (params[DPAR_MAX_MINOR] == 4):
         return DISTRIBUTIONS.DIST_71MAJ41.value
-      elif (max_minor == 1):
+      elif (params[DPAR_MAX_MINOR] == 1):
         return DISTRIBUTIONS.DIST_74MAJ11.value
       else:
         return DISTRIBUTIONS.DIST_7MAJ321.value
-    elif (max_minor == 6):
+    elif (params[DPAR_MAX_MINOR] == 6):
       return DISTRIBUTIONS.DIST_7MAJ6MIN.value
-    elif (max_minor == 5):
+    elif (params[DPAR_MAX_MINOR] == 5):
       return DISTRIBUTIONS.DIST_7MAJ5MIN10.value
-    elif (max_minor == 4):
+    elif (params[DPAR_MAX_MINOR] == 4):
       return DISTRIBUTIONS.DIST_7MAJ4MIN20.value
-    elif (max_minor == 3):
+    elif (params[DPAR_MAX_MINOR] == 3):
       return DISTRIBUTIONS.DIST_7MAJ330.value
-    elif (max_minor == 2):
+    elif (params[DPAR_MAX_MINOR] == 2):
       return DISTRIBUTIONS.DIST_74MAJ20.value
-    elif (max_minor == 1):
+    elif (params[DPAR_MAX_MINOR] == 1):
       return DISTRIBUTIONS.DIST_75MAJ10.value
     else:
       return DISTRIBUTIONS.DIST_76MAJ00.value
 
 
-  def number7minor(self, min_len, max_major, min_major, min_minor):
-    if (min_len == 2):
+  def number7minor(self, params):
+    if (params[DPAR_MIN_LEN] == 2):
       return DISTRIBUTIONS.DIST_7MIN222.value
-    elif (min_len == 1):
-      if (max_major == 4):
+    elif (params[DPAR_MIN_LEN] == 1):
+      if (params[DPAR_MAX_MAJOR] == 4):
         return DISTRIBUTIONS.DIST_71MIN41.value
-      elif (max_major == 1):
+      elif (params[DPAR_MAX_MAJOR] == 1):
         return DISTRIBUTIONS.DIST_74MIN11.value
       else:
         return DISTRIBUTIONS.DIST_7MIN321.value
-    if (max_major == 6):
+    if (params[DPAR_MAX_MAJOR] == 6):
       return DISTRIBUTIONS.DIST_6MAJ7MIN.value
-    elif (max_major == 5):
+    elif (params[DPAR_MAX_MAJOR] == 5):
       return DISTRIBUTIONS.DIST_5MAJ7MIN10.value
-    elif (max_major == 4):
+    elif (params[DPAR_MAX_MAJOR] == 4):
       return DISTRIBUTIONS.DIST_4MAJ7MIN20.value
-    elif (max_major == 3):
+    elif (params[DPAR_MAX_MAJOR] == 3):
       return DISTRIBUTIONS.DIST_7MIN330.value
-    elif (max_major == 2):
+    elif (params[DPAR_MAX_MAJOR] == 2):
       return DISTRIBUTIONS.DIST_74MIN20.value
-    elif (max_major == 1):
+    elif (params[DPAR_MAX_MAJOR] == 1):
       return DISTRIBUTIONS.DIST_75MIN10.value
     else:
       return DISTRIBUTIONS.DIST_76MIN00.value
 
 
-  def number8major(self, min_len, max_minor, min_minor):
-    if (min_len == 1):
-      if (max_minor == 2):
+  def number8major(self, params):
+    if (params[DPAR_MIN_LEN] == 1):
+      if (params[DPAR_MAX_MINOR] == 2):
         return DISTRIBUTIONS.DIST_8MAJ221.value
       else:
         return DISTRIBUTIONS.DIST_8MAJ311.value
-    elif (max_minor == 5):
+    elif (params[DPAR_MAX_MINOR] == 5):
       return DISTRIBUTIONS.DIST_8MAJ5MIN.value
-    elif (max_minor == 4):
+    elif (params[DPAR_MAX_MINOR] == 4):
       return DISTRIBUTIONS.DIST_8MAJ4MIN10.value
-    elif (max_minor == 1):
+    elif (params[DPAR_MAX_MINOR] == 1):
       return DISTRIBUTIONS.DIST_84MAJ10.value
-    elif (max_minor == 0):
+    elif (params[DPAR_MAX_MINOR] == 0):
       return DISTRIBUTIONS.DIST_85MAJ00.value
     else:
       return DISTRIBUTIONS.DIST_8MAJ320.value
 
 
-  def number8minor(self, min_len, max_major, min_major, min_minor):
-    if (min_len == 1):
-      if (max_major == 2):
+  def number8minor(self, params):
+    if (params[DPAR_MIN_LEN] == 1):
+      if (params[DPAR_MAX_MAJOR] == 2):
         return DISTRIBUTIONS.DIST_8MIN221.value
       else:
         return DISTRIBUTIONS.DIST_8MIN311.value
-    elif (max_major == 5):
+    elif (params[DPAR_MAX_MAJOR] == 5):
       return DISTRIBUTIONS.DIST_5MAJ8MIN.value
-    elif (max_major == 4):
+    elif (params[DPAR_MAX_MAJOR] == 4):
       return DISTRIBUTIONS.DIST_4MAJ8MIN10.value
-    elif (max_major == 1):
+    elif (params[DPAR_MAX_MAJOR] == 1):
       return DISTRIBUTIONS.DIST_84MIN10.value
-    elif (max_major == 0):
+    elif (params[DPAR_MAX_MAJOR] == 0):
       return DISTRIBUTIONS.DIST_85MIN00.value
     else:
       return DISTRIBUTIONS.DIST_8MIN320.value
 
 
-  def number9major(self, min_len, max_minor, min_minor):
-    if (min_len == 1):
+  def number9major(self, params):
+    if (params[DPAR_MIN_LEN] == 1):
       return DISTRIBUTIONS.DIST_9MAJ211.value
-    elif (max_minor == 4):
+    elif (params[DPAR_MAX_MINOR] == 4):
       return DISTRIBUTIONS.DIST_9MAJ4MIN.value
-    elif (max_minor == 2):
+    elif (params[DPAR_MAX_MINOR] == 2):
       return DISTRIBUTIONS.DIST_9MAJ220.value
-    elif (max_minor == 0):
+    elif (params[DPAR_MAX_MINOR] == 0):
       return DISTRIBUTIONS.DIST_94MAJ00.value
     else:
       return DISTRIBUTIONS.DIST_9MAJ310.value
 
 
-  def number9minor(self, min_len, max_major, min_major, min_minor):
-    if (min_len == 1):
+  def number9minor(self, params):
+    if (params[DPAR_MIN_LEN] == 1):
       return DISTRIBUTIONS.DIST_9MIN211.value
-    elif (max_major == 4):
+    elif (params[DPAR_MAX_MAJOR] == 4):
       return DISTRIBUTIONS.DIST_4MAJ9MIN.value
-    elif (max_major == 2):
+    elif (params[DPAR_MAX_MAJOR] == 2):
       return DISTRIBUTIONS.DIST_9MIN220.value
-    elif (max_major == 0):
+    elif (params[DPAR_MAX_MAJOR] == 0):
       return DISTRIBUTIONS.DIST_94MIN00.value
     else:
       return DISTRIBUTIONS.DIST_9MIN310.value
 
 
-  def number(self, spades, hearts, diamonds, clubs):
-    max_len = max(spades, hearts, diamonds, clubs)
-    min_len = min(spades, hearts, diamonds, clubs)
-    max_major = max(spades, hearts)
-    min_major = min(spades, hearts)
-    max_minor = max(diamonds, clubs)
-    min_minor = min(diamonds, clubs)
+  def number(self, lengths):
+    params = [None] * DPAR_SIZE
+    params[DPAR_MAX_LEN] = max(lengths)
+    params[DPAR_MIN_LEN] = min(lengths)
+    params[DPAR_MAX_MAJOR] = max(lengths[0], lengths[1])
+    params[DPAR_MIN_MAJOR] = min(lengths[0], lengths[1])
+    params[DPAR_MAX_MINOR] = max(lengths[2], lengths[3])
+    params[DPAR_MIN_MINOR] = min(lengths[2], lengths[3])
 
-    if (max_len == 4):
-      return self.number4(min_len)
-    elif (max_len == 5):
-      if (max_major == 5):
-        return number5major(min_len, max_minor, min_minor)
+    if (params[DPAR_MAX_LEN] == 4):
+      return self.number4(params)
+    elif (params[DPAR_MAX_LEN] == 5):
+      if (params[DPAR_MAX_MAJOR] == 5):
+        return self.number5major(params)
       else:
-        return number5minor(min_len, max_major, min_major, min_minor)
-    elif (max_len == 6):
-      if (max_major == 6):
-        return number6major(min_len, max_minor, min_minor)
+        return self.number5minor(params)
+    elif (params[DPAR_MAX_LEN] == 6):
+      if (params[DPAR_MAX_MAJOR] == 6):
+        return self.number6major(params)
       else:
-        return number6minor(min_len, max_major, min_major, min_minor)
-    elif (max_len == 7):
-      if (max_major == 7):
-        return number7major(min_len, max_minor, min_minor)
+        return self.number6minor(params)
+    elif (params[DPAR_MAX_LEN] == 7):
+      if (params[DPAR_MAX_MAJOR] == 7):
+        return self.number7major(params)
       else:
-        return number7minor(min_len, max_major, min_major, min_minor)
-    elif (max_len == 8):
-      if (max_major == 8):
-        return number8major(min_len, max_minor, min_minor)
+        return self.number7minor(params)
+    elif (params[DPAR_MAX_LEN] == 8):
+      if (params[DPAR_MAX_MAJOR] == 8):
+        return self.number8major(params)
       else:
-        return number8minor(min_len, max_major, min_major, min_minor)
-    elif (max_len == 9):
-      if (max_major == 9):
-        return number9major(min_len, max_minor, min_minor)
+        return self.number8minor(params)
+    elif (params[DPAR_MAX_LEN] == 9):
+      if (params[DPAR_MAX_MAJOR] == 9):
+        return self.number9major(params)
       else:
-        return number9minor(min_len, max_major, min_major, min_minor)
-    elif (max_len == 10):
-      if (max_major == 10):
-        if (min_len == 1):
+        return self.number9minor(params)
+    elif (params[DPAR_MAX_LEN] == 10):
+      if (params[DPAR_MAX_MAJOR] == 10):
+        if (params[DPAR_MIN_LEN] == 1):
           return DISTRIBUTIONS.DIST_10MAJ111.value
-        elif (max_minor == 1 or max_minor == 2):
+        elif (params[DPAR_MAX_MINOR] == 1 or params[DPAR_MAX_MINOR] == 2):
           return DISTRIBUTIONS.DIST_10MAJ210.value
         else:
           return DISTRIBUTIONS.DIST_10MAJ300.value
-      elif (min_len == 1):
+      elif (params[DPAR_MIN_LEN] == 1):
         return DISTRIBUTIONS.DIST_10MIN111.value
-      elif (max_major == 1 or max_major == 2):
+      elif (params[DPAR_MAX_MAJOR] == 1 or params[DPAR_MAX_MAJOR] == 2):
         return DISTRIBUTIONS.DIST_10MIN210.value
       else:
         return DISTRIBUTIONS.DIST_10MIN300.value
-    elif (max_len == 11):
-      if (max_major == 11):
-        if (max_minor == 1):
+    elif (params[DPAR_MAX_LEN] == 11):
+      if (params[DPAR_MAX_MAJOR] == 11):
+        if (params[DPAR_MAX_MINOR] == 1):
           return DISTRIBUTIONS.DIST_11MAJ110.value
         else:
           return DISTRIBUTIONS.DIST_11MAJ200.value
-      elif (max_major == 1):
+      elif (params[DPAR_MAX_MAJOR] == 1):
         return DISTRIBUTIONS.DIST_11MIN110.value
       else:
         return DISTRIBUTIONS.DIST_11MIN200.value
 
-    elif (max_len == 12):
-      if (max_major == 12):
+    elif (params[DPAR_MAX_LEN] == 12):
+      if (params[DPAR_MAX_MAJOR] == 12):
         return DISTRIBUTIONS.DIST_12MAJ100.value
       else:
         return DISTRIBUTIONS.DIST_12MIN100.value
-    elif (max_len == 13):
-      if (max_major == 13):
+    elif (params[DPAR_MAX_LEN] == 13):
+      if (params[DPAR_MAX_MAJOR] == 13):
         return DISTRIBUTIONS.DIST_13MAJ000.value
       else:
         return DISTRIBUTIONS.DIST_13MIN000.value
 
     else:
       assert False
-
-      
-  def number(self, name):
-    assert name in self.name2number
-    return self.name2number[name]
 

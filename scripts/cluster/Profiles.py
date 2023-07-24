@@ -5,7 +5,8 @@ from enum import Enum
 from Sets import Sets
 from Valuation import Valuation
 from PBN import PBN
-from Distributions import (DISTRIBUTIONS, Distribution)
+from Distributions import (DISTRIBUTIONS, DISTRIBUTION_NAMES, Distribution)
+from Vulnerability import Vulnerability
 from passes.Table import Table
 
 class Profiles:
@@ -124,6 +125,9 @@ class Profiles:
 
     pbn = PBN()
     valuation = Valuation()
+    distribution = Distribution()
+    vulnerability = Vulnerability()
+
     for tag, profile in self.profiles.items():
       if tag in self.seen:
         continue
@@ -142,6 +146,28 @@ class Profiles:
         # print(pbn.strHCP(diagrams.lookup(tag)))
         # print(tableaux.lookup(tag))
         # print(self.str(tag))
+
+        suits = []
+        holdings = []
+        dealer_index = self.numerical_data(diagrams, pbn, tag,
+          suits, holdings)
+
+        for p in range(self.BRIDGE_PLAYERS):
+          player_abs = (dealer_index + p) % 4
+          vul_abs_str = diagrams.lookup(tag)["vul"]
+          vul_rel = vulnerability.relative(vul_abs_str, player_abs)
+          lengths = [len(suits[player_abs][sno]) 
+            for sno in range(self.BRIDGE_SUITS)]
+          dist_number = distribution.number(lengths)
+
+          # So now we should be able to do
+          # pass_tables.lookup(dist_number, player_rel, vul_rel)
+
+          # print("suits", suits[player_abs])
+          # print("lengths", lengths)
+          # print("dist", dist_number)
+          # print("name", DISTRIBUTION_NAMES[dist_number])
+
         print(self.strCSV(tableaux, diagrams, pbn, valuation, tag, sum))
         self.seen[tag] = 1
 
@@ -170,6 +196,23 @@ class Profiles:
     '''Look up the profile corresponding to the tag which must exist.'''
     assert tag in self.profiles
     return self.profiles[tag]
+
+
+  def numerical_data(self, diagrams, pbn, tag, suits, holdings):
+    '''Turn diagram information into more actionable data.'''
+    assert tag in self.profiles
+
+    suits[:] = [["" for p in range(self.BRIDGE_PLAYERS)]
+      for s in range(self.BRIDGE_SUITS)]
+
+    pbn.pbn_to_suits(diagrams.lookup(tag)["pbn"], suits)
+
+    holdings[:] = [["" for p in range(self.BRIDGE_PLAYERS)]
+      for s in range(self.BRIDGE_SUITS)]
+
+    pbn.suits_to_holdings(suits, holdings)
+
+    return self.PLAYER_NUMBERS_SHORT[diagrams.lookup(tag)["dealer"]]
 
 
   def str(self, tag):
