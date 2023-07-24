@@ -7,7 +7,8 @@ from Valuation import Valuation
 from PBN import PBN
 from Distributions import (DISTRIBUTIONS, DISTRIBUTION_NAMES, Distribution)
 from Vulnerability import Vulnerability
-from passes.Table import Table
+from passes.PassTables import PassTables
+from passes.PassMap import PassMap
 
 class Profiles:
   # Reads the percentage vectors for a directory.
@@ -117,11 +118,9 @@ class Profiles:
   def passout(self, diagrams, tableaux):
     '''Filter out some hands that tend to get passed out.'''
 
-    table = Table()
-    table.read_file("test.txt")
-    print("TABLE\n")
-    print(table.str())
-    print("ENDTABLE\n")
+    pass_tables = PassTables()
+    pass_map = PassMap()
+    # table.read_file("test.txt")
 
     pbn = PBN()
     valuation = Valuation()
@@ -152,6 +151,7 @@ class Profiles:
         dealer_index = self.numerical_data(diagrams, pbn, tag,
           suits, holdings)
 
+        prob_predicted = 1.
         for p in range(self.BRIDGE_PLAYERS):
           player_abs = (dealer_index + p) % 4
           vul_abs_str = diagrams.lookup(tag)["vul"]
@@ -159,9 +159,18 @@ class Profiles:
           lengths = [len(suits[player_abs][sno]) 
             for sno in range(self.BRIDGE_SUITS)]
           dist_number = distribution.number(lengths)
+          valuation.evaluate(holdings[p], False)
 
-          # So now we should be able to do
-          # pass_tables.lookup(dist_number, player_rel, vul_rel)
+          print("looking up dist", dist_number, "p_rel", p, "vul_rel", vul_rel)
+          print("suits", suits[player_abs])
+          prob_pred, default_flag = \
+            pass_tables.lookup(dist_number, p, vul_rel, valuation)
+          print("got", prob_pred)
+
+          prob_predicted *= prob_pred
+          
+          print("adding", sum, prob_predicted)
+        pass_map.add(sum, prob_predicted)
 
           # print("suits", suits[player_abs])
           # print("lengths", lengths)
@@ -170,6 +179,9 @@ class Profiles:
 
         print(self.strCSV(tableaux, diagrams, pbn, valuation, tag, sum))
         self.seen[tag] = 1
+
+    print(pass_map.strCSV())
+    print("correlation", pass_map.correlate(False))
 
 
   def passout_occasional(self, diagrams, tableaux):
