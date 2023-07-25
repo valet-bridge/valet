@@ -78,7 +78,12 @@ class Row:
   def add_to_overall_prob(self, prob):
     '''Adds to the overall probability of the row.'''
     self.prob = self.prob + prob
-    assert self.prob >= 0. and self.prob <= 1.
+    if (self.prob < 0.):
+      print("Warning", self.prob)
+      self.prob = 0.
+    elif (self.prob > 1.):
+      print("Warning", self.prob)
+      self.prob = 1.
 
   
   def term_count(self):

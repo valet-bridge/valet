@@ -216,8 +216,13 @@ class Profiles:
           confusion_matrix[default_count][0][1] += 1
           
 
-    print("confusion matrix\n", confusion_matrix)
+    print("confusion matrix")
+    for cm in confusion_matrix:
+      for row in cm:
+        print([round(i) for i in row])
+      print("")
 
+    print("correlations")
     for pm in pass_maps:
       pm.correlate(False)
     # print(pass_map.strCSV())
