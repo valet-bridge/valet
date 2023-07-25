@@ -162,28 +162,26 @@ class Profiles:
             for sno in range(self.BRIDGE_SUITS)]
           dist_number = distribution.number(lengths)
 
-          # print("looking up dist", dist_number, "p_rel", p, "vul_rel", vul_rel)
-          # print("suits", suits[player_abs])
           prob_pred, default_flag = \
             pass_tables.lookup(dist_number, p, vul_rel, holdings[player_abs], valuation)
-          # print("got", prob_pred)
 
           prob_predicted *= prob_pred
           
-        print("adding", sum, prob_predicted)
+        # print("adding", sum, prob_predicted)
         pass_map.add(sum, prob_predicted)
 
-          # print("suits", suits[player_abs])
-          # print("lengths", lengths)
-          # print("dist", dist_number)
-          # print("name", DISTRIBUTION_NAMES[dist_number])
+        # print("suits", suits[player_abs])
+        # print("lengths", lengths)
+        # print("dist", dist_number)
+        # print("name", DISTRIBUTION_NAMES[dist_number])
 
         print(self.strCSV(tableaux, diagrams, pbn, valuation, tag, sum))
         self.seen[tag] = 1
 
-    print(pass_map.strCSV())
+    pass_map.correlate(False)
+    # print(pass_map.strCSV())
     # pass_map.plot()
-    print("correlation", pass_map.correlate(False))
+    # print("correlation", pass_map.correlate(False))
 
 
   def passout_occasional(self, diagrams, tableaux):
