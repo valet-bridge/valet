@@ -132,6 +132,7 @@ class Profiles:
       lengths = [len(suits[player_abs][sno]) 
         for sno in range(self.BRIDGE_SUITS)]
       dist_number = dist.number(lengths)
+      # print("lengths", lengths, "no", dist_number)
 
       prob_hand, default_flag = \
         pass_tables.lookup(dist_number, p, vul_rel, \
@@ -142,14 +143,15 @@ class Profiles:
 
       prob *= prob_hand
 
-    return prob, default_flag
+    return prob, num_defaults
 
   
   def passout(self, diagrams, tableaux):
     '''Filter out some hands that tend to get passed out.'''
 
+    # Index is the number of defaults in that prediction.
+    pass_maps = [PassMap() for _ in range(5)]
     pass_tables = PassTables()
-    pass_map = PassMap()
     # table.read_file("test.txt")
 
     pbn = PBN()
@@ -157,7 +159,8 @@ class Profiles:
     distribution = Distribution()
     vulnerability = Vulnerability()
 
-    confusion_matrix = [[0, 0], [0, 0]]
+    # First index is the number of defaults in that prediction.
+    confusion_matrix = np.zeros((5, 2, 2))
 
     for tag, profile in self.profiles.items():
       if tag in self.seen:
@@ -188,7 +191,7 @@ class Profiles:
 
           
         # print("adding", sum, prob_predicted)
-        pass_map.add(sum, prob_predicted)
+        pass_maps[default_count].add(sum, prob_predicted)
 
         # print("suits", suits[player_abs])
         # print("lengths", lengths)
@@ -199,23 +202,24 @@ class Profiles:
         self.seen[tag] = 1
 
         if (prob_predicted == 0.):
-          confusion_matrix[1][0] += 1
+          confusion_matrix[default_count][1][0] += 1
         else:
-          confusion_matrix[1][1] += 1
+          confusion_matrix[default_count][1][1] += 1
       else:
         prob_predicted, default_count = \
           self.predict(diagrams, pbn, tag, distribution, \
             vulnerability, valuation, pass_tables)
 
         if (prob_predicted == 0.):
-          confusion_matrix[0][0] += 1
+          confusion_matrix[default_count][0][0] += 1
         else:
-          confusion_matrix[0][1] += 1
+          confusion_matrix[default_count][0][1] += 1
           
 
-    print("confusion matrix", confusion_matrix)
+    print("confusion matrix\n", confusion_matrix)
 
-    pass_map.correlate(False)
+    for pm in pass_maps:
+      pm.correlate(False)
     # print(pass_map.strCSV())
     # pass_map.plot()
     # print("correlation", pass_map.correlate(False))

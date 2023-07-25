@@ -42,7 +42,7 @@ class Table:
   
   def is_default(self):
     '''Self-identifies as default or not.'''
-    return default_flag
+    return self.default_flag
 
   
   def parse_int(self, s):
@@ -196,7 +196,7 @@ class Table:
       else:
         self.parse_primary_line(components, fn)
 
-    default_flag = False
+    self.default_flag = False
 
   
   def lookup(self, valuation):

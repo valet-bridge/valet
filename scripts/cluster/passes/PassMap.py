@@ -17,6 +17,8 @@ class PassMap:
   def correlate(self, drop00_flag):
     '''Calculate a correlation of the histogram.'''
     # TODO Implement drop00_flag.
+    if (len(self.x) == 0):
+      return
 
     # Apparently this is needed
     X = sm.add_constant(self.x)

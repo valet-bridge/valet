@@ -139,6 +139,8 @@ class DISTRIBUTIONS(Enum):
   DIST_13MAJ000 = 97
   DIST_13MIN000 = 98
 
+  DIST_SIZE = 99
+
 
 DISTRIBUTION_NAMES = [
   "4432",
@@ -497,4 +499,9 @@ class Distribution:
 
     else:
       assert False
+
+
+  def name_to_number(self, name):
+    assert name in self.name2number
+    return self.name2number[name]
 
