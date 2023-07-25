@@ -114,6 +114,36 @@ class Profiles:
         tag = str(no) + "|" + board_tags[i]
         self.profiles[tag] = vectors[i]
 
+
+  def predict(self, diagrams, pbn, tag, dist, vul, valuation, pass_tables):
+    '''Makes a prediction of the passing probability.'''
+    prob = 1.
+    num_defaults = 0
+
+    suits = []
+    holdings = []
+    dealer_index = self.numerical_data(diagrams, pbn, tag, suits, holdings)
+
+    for p in range(self.BRIDGE_PLAYERS):
+      player_abs = (dealer_index + p) % 4
+      vul_abs_str = diagrams.lookup(tag)["vul"]
+      vul_rel = vul.relative(vul_abs_str, player_abs)
+
+      lengths = [len(suits[player_abs][sno]) 
+        for sno in range(self.BRIDGE_SUITS)]
+      dist_number = dist.number(lengths)
+
+      prob_hand, default_flag = \
+        pass_tables.lookup(dist_number, p, vul_rel, \
+          holdings[player_abs], valuation)
+
+      if (default_flag):
+        num_defaults += 1
+
+      prob *= prob_hand
+
+    return prob, default_flag
+
   
   def passout(self, diagrams, tableaux):
     '''Filter out some hands that tend to get passed out.'''
@@ -127,9 +157,18 @@ class Profiles:
     distribution = Distribution()
     vulnerability = Vulnerability()
 
+    confusion_matrix = [[0, 0], [0, 0]]
+
     for tag, profile in self.profiles.items():
       if tag in self.seen:
         continue
+
+      if not diagrams.has(tag):
+        continue
+
+      prob_predicted, default_count = \
+        self.predict(diagrams, pbn, tag, distribution, \
+          vulnerability, valuation, pass_tables)
 
       sum = 0.
       for vtype in self.Vtypes:
@@ -146,26 +185,7 @@ class Profiles:
         # print(tableaux.lookup(tag))
         # print(self.str(tag))
 
-        suits = []
-        holdings = []
-        dealer_index = self.numerical_data(diagrams, pbn, tag,
-          suits, holdings)
 
-        # print("valuation", valuation.strCSV(holdings, dealer_index, False))
-
-        prob_predicted = 1.
-        for p in range(self.BRIDGE_PLAYERS):
-          player_abs = (dealer_index + p) % 4
-          vul_abs_str = diagrams.lookup(tag)["vul"]
-          vul_rel = vulnerability.relative(vul_abs_str, player_abs)
-          lengths = [len(suits[player_abs][sno]) 
-            for sno in range(self.BRIDGE_SUITS)]
-          dist_number = distribution.number(lengths)
-
-          prob_pred, default_flag = \
-            pass_tables.lookup(dist_number, p, vul_rel, holdings[player_abs], valuation)
-
-          prob_predicted *= prob_pred
           
         # print("adding", sum, prob_predicted)
         pass_map.add(sum, prob_predicted)
@@ -177,6 +197,23 @@ class Profiles:
 
         print(self.strCSV(tableaux, diagrams, pbn, valuation, tag, sum))
         self.seen[tag] = 1
+
+        if (prob_predicted == 0.):
+          confusion_matrix[1][0] += 1
+        else:
+          confusion_matrix[1][1] += 1
+      else:
+        prob_predicted, default_count = \
+          self.predict(diagrams, pbn, tag, distribution, \
+            vulnerability, valuation, pass_tables)
+
+        if (prob_predicted == 0.):
+          confusion_matrix[0][0] += 1
+        else:
+          confusion_matrix[0][1] += 1
+          
+
+    print("confusion matrix", confusion_matrix)
 
     pass_map.correlate(False)
     # print(pass_map.strCSV())

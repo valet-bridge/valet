@@ -61,6 +61,11 @@ class Diagrams:
         self.parse_lines(no, rno, lines)
 
 
+  def has(self, tag):
+    '''Check whether the tag exists.'''
+    return tag in self.diagrams
+
+
   def lookup(self, tag):
     '''Look up the diagram corresponding to the tag which must exist.'''
     assert tag in self.diagrams
