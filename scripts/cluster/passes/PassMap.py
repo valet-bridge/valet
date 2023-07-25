@@ -1,4 +1,7 @@
 import numpy as np
+import matplotlib
+import matplotlib.pyplot as plt
+# matplotlib.use('TkAgg')
 
 STEP_SIZE = 0.01
 MAP_SIZE = 101
@@ -27,6 +30,7 @@ class PassMap:
     '''Add a data point.'''
     index1 = self.float2index(freq_actual)
     index2 = self.float2index(freq_predicted)
+    print("Adding", freq_actual, freq_predicted, index1, index2)
     self.matrix[index1][index2] += 1
 
   
@@ -55,4 +59,16 @@ class PassMap:
   def strCSV(self):
     '''Return a CSV field.'''
     return '\n'.join(SEP.join(map(str, row)) for row in self.matrix)
+
+  
+"""
+  def plot(self):
+    '''Make a heatmap.'''
+    plt.imshow(self.matrix, origin='lower', cmap='jet')
+    plt.colorbar(label = 'Frequency')
+    plt.title('Heatmap')
+    plt.xlabel('Actual')
+    plt.ylabel('Predicted')
+    plt.show()
+"""
 

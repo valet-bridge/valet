@@ -14,8 +14,9 @@ class PassTables:
       self.tables[i].set_default()
 
 
-  def lookup(self, dist_index, player_rel, vul_rel, valuation):
+  def lookup(self, dist_index, player_rel, vul_rel, holding, valuation):
     '''Look up the passing probability.'''
     index = 16 * dist_index + 4 * player_rel + vul_rel
+    valuation.evaluate(holding, False)
     return self.tables[index].lookup(valuation)
 

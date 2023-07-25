@@ -151,6 +151,8 @@ class Profiles:
         dealer_index = self.numerical_data(diagrams, pbn, tag,
           suits, holdings)
 
+        # print("valuation", valuation.strCSV(holdings, dealer_index, False))
+
         prob_predicted = 1.
         for p in range(self.BRIDGE_PLAYERS):
           player_abs = (dealer_index + p) % 4
@@ -159,17 +161,16 @@ class Profiles:
           lengths = [len(suits[player_abs][sno]) 
             for sno in range(self.BRIDGE_SUITS)]
           dist_number = distribution.number(lengths)
-          valuation.evaluate(holdings[p], False)
 
-          print("looking up dist", dist_number, "p_rel", p, "vul_rel", vul_rel)
-          print("suits", suits[player_abs])
+          # print("looking up dist", dist_number, "p_rel", p, "vul_rel", vul_rel)
+          # print("suits", suits[player_abs])
           prob_pred, default_flag = \
-            pass_tables.lookup(dist_number, p, vul_rel, valuation)
-          print("got", prob_pred)
+            pass_tables.lookup(dist_number, p, vul_rel, holdings[player_abs], valuation)
+          # print("got", prob_pred)
 
           prob_predicted *= prob_pred
           
-          print("adding", sum, prob_predicted)
+        print("adding", sum, prob_predicted)
         pass_map.add(sum, prob_predicted)
 
           # print("suits", suits[player_abs])
@@ -181,6 +182,7 @@ class Profiles:
         self.seen[tag] = 1
 
     print(pass_map.strCSV())
+    # pass_map.plot()
     print("correlation", pass_map.correlate(False))
 
 
