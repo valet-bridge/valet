@@ -1,3 +1,4 @@
+import numpy as np
 import statsmodels.api as sm
 
 
@@ -31,3 +32,14 @@ class PassMap:
       "{:.4f}".format(results.params[1]), "* prediction")
 
     print("R-squared : ", "{:.4f}".format(results.rsquared))
+
+    x = np.array(self.x)
+    y = np.array(self.y)
+
+    meanX = np.mean(x)
+    meanY = np.mean(y)
+    rms = np.sqrt(np.mean(np.square(x - y)))
+
+    print("mean actual", "{:.4f}".format(meanX))
+    print("mean pred  ", "{:.4f}".format(meanY))
+    print("RMS        ", "{:.4f}".format(rms), "\n")

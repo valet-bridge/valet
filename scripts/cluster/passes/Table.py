@@ -198,6 +198,9 @@ class Table:
 
     self.default_flag = False
 
+    for re in self.rows:
+      re.row.saturate()
+
   
   def lookup(self, valuation):
     '''Look up the passing probability for a given valuation.'''

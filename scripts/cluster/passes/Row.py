@@ -78,6 +78,10 @@ class Row:
   def add_to_overall_prob(self, prob):
     '''Adds to the overall probability of the row.'''
     self.prob = self.prob + prob
+
+  
+  def saturate(self):
+    '''Limit the probability to [0, 1] in case it has moved outside.'''
     if (self.prob < 0.):
       print("Warning", self.prob)
       self.prob = 0.

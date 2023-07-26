@@ -178,15 +178,18 @@ class Profiles:
         k = vtype.value
         sum += self.PASSOUT[k] * profile[k]
       
+      if default_count == 0:
+        print(diagrams.str(tag))
+        print(pbn.strHCP(diagrams.lookup(tag)))
+        # print(tableaux.lookup(tag))
+        print(self.str(tag))
+        print("actual", sum)
+        print("predicted", prob_predicted)
+
       # TODO Can vary:
       if sum > 0.0:
         # print("hand", suits[0])
         # print(valuation.str(1))
-
-        # print(diagrams.str(tag))
-        # print(pbn.strHCP(diagrams.lookup(tag)))
-        # print(tableaux.lookup(tag))
-        # print(self.str(tag))
 
 
           
@@ -198,7 +201,7 @@ class Profiles:
         # print("dist", dist_number)
         # print("name", DISTRIBUTION_NAMES[dist_number])
 
-        print(self.strCSV(tableaux, diagrams, pbn, valuation, tag, sum))
+        # print(self.strCSV(tableaux, diagrams, pbn, valuation, tag, sum))
         self.seen[tag] = 1
 
         if (prob_predicted == 0.):
