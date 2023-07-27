@@ -69,7 +69,7 @@ driver:	$(DOBJ_FILES)
 	link /LTCG $(DOBJ_FILES) $(DLIB) /out:driver.exe
 
 %.obj:	%.cpp
-	$(CC) $(COMPILE_FLAGS) /c $< /Fo$@
+	$(CC) $(COMPILE_FLAGS) /c $< -Fo$@
 
 $(DLLBASE).res:	$(DLLBASE).rc
 	windres $(DLLBASE).rc $(DLLBASE).res

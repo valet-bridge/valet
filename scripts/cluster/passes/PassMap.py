@@ -42,4 +42,5 @@ class PassMap:
 
     print("mean actual", "{:.4f}".format(meanX))
     print("mean pred  ", "{:.4f}".format(meanY))
+    print("mean diff  ", "{:.4f}".format(meanY - meanX))
     print("RMS        ", "{:.4f}".format(rms), "\n")
