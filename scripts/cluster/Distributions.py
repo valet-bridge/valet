@@ -228,7 +228,7 @@ class Distribution:
     elif (params[DPAR_MIN_LEN] == 1):
       if (params[DPAR_MIN_MAJOR] == 5):
         return DISTRIBUTIONS.DIST_55MAJ21.value
-      elif (params[DPAR_MIN_MINOR] == 5):
+      elif (params[DPAR_MAX_MINOR] == 5):
         return DISTRIBUTIONS.DIST_5MAJ5MIN21.value
       else:
         return DISTRIBUTIONS.DIST_5MAJ431.value

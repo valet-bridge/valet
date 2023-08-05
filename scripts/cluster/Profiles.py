@@ -178,13 +178,16 @@ class Profiles:
         k = vtype.value
         sum += self.PASSOUT[k] * profile[k]
       
-      if default_count == 0:
+      # if default_count == 0:
+      # 0 means that all four hands are covered by actual tables.
+      # >= 0 means every single hand.
+      if default_count >= 0:
         print(diagrams.str(tag))
         print(pbn.strHCP(diagrams.lookup(tag)))
         # print(tableaux.lookup(tag))
         print(self.str(tag))
-        print("actual", sum)
-        print("predicted", prob_predicted)
+        print("actual   ", "{:.4f}".format(sum))
+        print("predicted", "{:.4f}".format(prob_predicted))
 
       # TODO Can vary:
       if sum > 0.0:
