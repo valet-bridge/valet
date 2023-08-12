@@ -52,7 +52,7 @@ class Term:
 
   def set_range(self, comp_param, value1, value2):
     '''Set the range (both ends inclusive).'''
-    self.term_type = TERM_TYPE.TERM_LOWER.value
+    self.term_type = TERM_TYPE.TERM_RANGE.value
     self.comp_param = comp_param
     self.value1 = value1
     self.value2 = value2
@@ -60,7 +60,7 @@ class Term:
 
   def set_outside(self, comp_param, value1, value2):
     '''Set the range (both ends exclusive).'''
-    self.term_type = TERM_TYPE.TERM_LOWER.value
+    self.term_type = TERM_TYPE.TERM_OUTSIDE.value
     self.comp_param = comp_param
     self.value1 = value1
     self.value2 = value2
@@ -184,7 +184,7 @@ class Term:
       return s + " " + str(self.value1);
     elif (self.term_type == TERM_TYPE.TERM_RANGE.value or
         self.term_type == TERM_TYPE.TERM_OUTSIDE.value):
-      return s + " " + str(self.value1) + "-" + str(self_value2);
+      return s + " " + str(self.value1) + "-" + str(self.value2);
     else:
       assert False
 

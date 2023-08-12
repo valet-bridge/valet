@@ -173,6 +173,10 @@ class Profiles:
         self.predict(diagrams, pbn, tag, distribution, \
           vulnerability, valuation, pass_tables)
 
+      # Experimental truncation.
+      if prob_predicted <= 0.001:
+        prob_predicted = 0.
+
       sum = 0.
       for vtype in self.Vtypes:
         k = vtype.value
@@ -212,9 +216,9 @@ class Profiles:
         else:
           confusion_matrix[default_count][1][1] += 1
       else:
-        prob_predicted, default_count = \
-          self.predict(diagrams, pbn, tag, distribution, \
-            vulnerability, valuation, pass_tables)
+        # prob_predicted, default_count = \
+          # self.predict(diagrams, pbn, tag, distribution, \
+            # vulnerability, valuation, pass_tables)
 
         if (prob_predicted == 0.):
           confusion_matrix[default_count][0][0] += 1

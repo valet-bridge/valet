@@ -59,6 +59,7 @@ class Table:
 
     s = components[index]
     if (not s in COMPOSITE_PARAMS_LOOKUP):
+      print("Got component", s)
       assert False
     tag = COMPOSITE_PARAMS_LOOKUP[s]
 
@@ -187,7 +188,7 @@ class Table:
       try:
         fn = float(fields[1])
       except:
-        print(f"'{f}' is not a floating point number")
+        print(fields[1], "is not a floating point number")
         assert False
 
       components = fields[0].split()

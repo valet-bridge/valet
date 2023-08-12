@@ -24,6 +24,8 @@ class PassTables:
 
     for txt_file in self.find_txt_files():
       parts = re.split('[/.]', txt_file)
+      if len(parts) != 6:
+        print("parts", parts)
       assert len(parts) == 6
       assert parts[3] in POSITIONS
       assert parts[5] == "txt"

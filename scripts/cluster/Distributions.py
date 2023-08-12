@@ -502,6 +502,8 @@ class Distribution:
 
 
   def name_to_number(self, name):
+    if (not name in self.name2number):
+      print("name", name)
     assert name in self.name2number
     return self.name2number[name]
 

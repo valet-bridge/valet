@@ -25,22 +25,31 @@ read_board_file($file1, \%store1);
 read_board_file($file2, \%store2);
 
 my %stats;
+$stats{nworse} = 0;
+$stats{nbetter} = 0;
 calc_stats(\%store1, \%store2, \%stats);
 
-printf("%-20s%6d\n", "Number better", $stats{nbetter});
-printf("%-20s%6d\n", "Number worse", $stats{nworse});
+printf("%-20s%7d\n", "Number better", $stats{nbetter});
+printf("%-20s%7d\n", "Number worse", $stats{nworse});
 print "\n";
-printf("%-20s%6d\n", "Avg diff before", $stats{avgdiff1});
-printf("%-20s%6d\n", "Avg diff after", $stats{avgdiff2});
+printf("%-20s%7.4f\n", "Avg diff before", $stats{avgdiff1});
+printf("%-20s%7.4f\n", "Avg diff after", $stats{avgdiff2});
 print "\n";
-printf("%-20s%6d\n", "Avg sumsq before", $stats{avgsumsq1});
-printf("%-20s%6d\n", "Avg sumsq after", $stats{avgsumsq2});
+printf("%-20s%7.4f\n", "Avg sumsq before", $stats{avgsumsq1});
+printf("%-20s%7.4f\n", "Avg sumsq after", $stats{avgsumsq2});
+print "\n";
+my $n = $stats{nbetter} + $stats{nworse};
+printf("%-20s%7.4f\n", "Tot sumsq before", $n * $stats{avgsumsq1});
+printf("%-20s%7.4f\n", "Tot sumsq after", $n * $stats{avgsumsq2});
 
 
 sub read_board_file
 {
   my ($fname, $store_ref) = @_;
   open my $fr, '<', $fname or die "Can't open $fname: $!";
+
+  my $totsq = 0.;
+  my $numsq = 0;
 
   while (my $line = <$fr>)
   {
@@ -66,6 +75,8 @@ sub read_board_file
         {
           my $pred = $1;
           $store_ref->{$tag}{pred} = $pred;
+          $totsq += ($pred - $store_ref->{$tag}{actual}) ** 2;
+          $numsq++;
           last;
         }
         else
@@ -75,6 +86,10 @@ sub read_board_file
       }
     }
   }
+  
+  printf("Total sum of squared differences: %10.4f\n", $totsq);
+  printf("Number of squared differences   : %10d\n", $numsq);
+  printf("Average squared difference      : %10.4f\n\n", $totsq / $numsq);
 }
 
 
@@ -105,10 +120,12 @@ sub calc_stats
 
     if ($newabsdiff < $oldabsdiff)
     {
+      # print "BETTER $key: $oldabsdiff $newabsdiff\n";
       $stats_ref->{nbetter}++;
     }
     else
     {
+      print "WORSE  $key: $oldabsdiff $newabsdiff\n";
       $stats_ref->{nworse}++;
     }
 
@@ -127,7 +144,7 @@ sub calc_stats
   $stats_ref->{avgdiff1} /= $ndiff;
   $stats_ref->{avgdiff2} /= $ndiff;
   $stats_ref->{avgsumsq1} /= $ndiff;
-  $stats_ref->{avgsumsq1} /= $ndiff;
+  $stats_ref->{avgsumsq2} /= $ndiff;
 
   # Check that the two stores have the same keys.
   for my $key (sort keys %{$store2_ref})
