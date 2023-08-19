@@ -59,3 +59,8 @@ scripts/Euro-and-World/*.txt
 scripts/cluster/data/20*
 scripts/cluster/*.txt
 scripts/cluster/*.csv
+
+**/Both.txt
+**/None.txt
+**/They.txt
+**/We.txt
