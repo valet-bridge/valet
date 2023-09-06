@@ -1,6 +1,14 @@
-HCP <= 8: 0.00
-HCP >= 8: 0.00
+# HCP<=8&controls<=2       5     1   0.200    26     0   0.000
+# HCP<=8&controls>=3      13     0   0.000    20     0   0.000
+# HCP>=9&LongHCP>=4       32     0   0.000    65     0   0.000
+#
+# Passes: 1, passouts 0, hard error 0.000
 
-# The data is thin.
+HCP <= 8: 0.000
+HCP >= 9: 0.022
 
-modify HCP <= 8 when controls <= 2: +0.10
+modify HCP <= 8 when controls <= 2: +0.200
+modify HCP <= 8 when controls >= 3: 0.000
+
+modify HCP >= 9 when LongHCP <= 3: +0.000
+modify HCP >= 9 when LongHCP >= 4: -0.022

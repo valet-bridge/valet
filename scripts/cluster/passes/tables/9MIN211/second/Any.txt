@@ -1,3 +1,9 @@
-controls == 0: 0.30
-controls in 1 4: 0.03
-controls >= 5: 0.00
+# controls==0              0     0   0.000     4     0   0.000
+# controlsin1-4           25     2   0.080    39     0   0.005
+# controls>=5              8     0   0.000    10     0   0.000
+#
+# Passes: 2, passouts 0, hard error 0.005
+
+controls == 0: 0.300
+controls in 1 4: 0.080
+controls >= 5: 0.000

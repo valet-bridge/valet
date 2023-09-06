@@ -1,6 +1,10 @@
+# HCP<=9&controls<=3      11     4   0.364    11     0   0.000
+# HCP>=10                 10     0   0.000    10     0   0.000
+#
+# Passes: 4, passouts 0, hard error 0.000
+
 HCP <= 9: 0.00
-HCP >= 9: 0.00
+HCP >= 10: 0.00
 
-# The data is thin.
-
-modify HCP <= 9 when controls <= 3: +0.50
+modify HCP <= 9 when controls <= 3: +0.364
+modify HCP <= 9 when controls >= 4: +0.000

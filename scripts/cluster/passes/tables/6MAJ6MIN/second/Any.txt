@@ -1,6 +1,8 @@
-HCP <= 9: 0.00
-HCP >= 9: 0.00
+HCP <= 4: 1.000
+HCP in 5 6: 0.667
+HCP in 7 8: 0.577
+HCP == 9: 0.222
+HCP == 10: 0.050
+HCP >= 11: 0.000
 
-# The data is thin.
-
-modify HCP <= 9 when controls <= 3: +0.40
+# For 7-8 HCP, ShortHCP gives counter-intuitive result.

@@ -1,3 +1,9 @@
-controls == 0: 0.30
-controls in 1 4: 0.03
-controls >= 5: 0.00
+# controlsin1-4           14     2   0.143    34     0   0.002
+# controls>=5             13     0   0.000    24     0   0.000
+#
+# Passes: 2, passouts 0, hard error 0.002
+
+controls == 0: 0.300
+# The next one seems way too high in the data -- too optimistic of me?
+controls in 1 4: 0.005
+controls >= 5: 0.000

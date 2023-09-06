@@ -1,3 +1,10 @@
+# controls==0              0     0   0.000    10     0   0.000
+# controlsin1-4           18     1   0.056    52     0   0.003
+# controls>=5              6     0   0.000     8     0   0.000
+#
+# Passes: 1, passouts 0, hard error 0.003
+
 controls == 0: 0.30
-controls in 1 4: 0.03
+# The next one seems way too high in the data.
+controls in 1 4: 0.005
 controls >= 5: 0.00

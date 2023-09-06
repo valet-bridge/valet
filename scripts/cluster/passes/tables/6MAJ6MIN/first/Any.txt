@@ -1,6 +1,15 @@
-HCP <= 9: 0.00
-HCP >= 9: 0.00
+HCP <= 4: 0.600
+HCP == 5: 0.467
+HCP in 6 7: 0.425
+HCP == 8: 0.373
+HCP == 9: 0.128
+HCP == 10: 0.000
+HCP == 11: 0.013
+HCP >= 12: 0.000
 
-# The data is thin.
+# modify HCP == 8 when controls <= 1: +0.151
+# modify HCP == 8 when controls == 2: +0.091
+# modify HCP == 8 when controls >= 3: -0.219
 
-modify HCP <= 9 when controls <= 3: +0.40
+modify HCP == 8 when ShortHCP in 2 3: +0.127
+modify HCP == 8 when ShortHCP notin 2 3: -0.011
