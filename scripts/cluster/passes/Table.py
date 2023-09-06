@@ -2,6 +2,8 @@ from dataclasses import dataclass
 from copy import deepcopy
 
 from passes.Row import Row
+from passes.Sigmoid import Sigmoid
+from passes.ProbInfo import ProbInfo
 from Composites import (COMPOSITE_PARAMS, COMPOSITE_PARAMS_LOOKUP)
 
 
@@ -18,6 +20,7 @@ class Table:
 
     self.rows = []
     self.default_flag = True
+    self.prob_info = ProbInfo()
 
 
   def set_default(self):
@@ -50,6 +53,51 @@ class Table:
       return int(s)
     except:
       print(f"'{s}' is not a floating point number")
+      assert False
+
+
+  def parse_prob_info(self, fname, text, prob_info):
+    '''Parse either a probability of sigmoid data.'''
+    if "sigmoid(" in text:
+      # Parse the format "sigmoid(float1, float2, float3, float4)".
+      scopy = text.replace(" ", "")
+      if scopy[-1] != ")":
+        print("String", str, "does not end on ')'")
+        assert False
+      
+      score = scopy[8:-1]
+      tokens = score.split(",")
+      assert len(tokens) == 4
+
+      floats = []
+      for token in tokens:
+        try:
+          fn = float(token)
+          floats.append(fn)
+        except:
+          print(token, "is not a floating point number")
+          assert False
+
+      prob_info.prob = 0.
+      prob_info.prob_adder = 0.
+      prob_info.algo_flag = True
+      prob_info.mean = floats[0]
+      prob_info.divisor = floats[1]
+      prob_info.intercept = floats[2]
+      prob_info.slope = floats[3]
+
+      # TODO Wasteful
+      sigmoid = Sigmoid()
+      sigmoid.set(floats[0], floats[1], floats[2], floats[3])
+      prob_info.crossover = sigmoid.calc_sigmoid(floats[2])
+      return
+
+    # Parse a single float.
+    try:
+      prob_info.prob = float(text)
+      prob_info.algo_flag = False
+    except:
+      print(token, "is not a floating point number")
       assert False
 
 
@@ -161,10 +209,13 @@ class Table:
       self.rows.append(re)
 
 
-  def parse_primary_line(self, components, fn):
+  def parse_primary_line(self, components, prob_data):
     '''Parse a normal line.'''
     re = RowEntry(Row(), True)
-    re.row.set_overall_prob(fn)
+    if prob_data.algo_flag:
+      re.row.set_algo(prob_data)
+    else:
+      re.row.set_overall_prob(prob_data.prob)
     self.rows.append(re)
 
     index = 0
@@ -178,6 +229,8 @@ class Table:
       content = rfile.read()
     lines = content.split("\n")
 
+    prob_info = ProbInfo()
+
     for line in lines:
       if (line.startswith('#') or line.strip() == ''):
         continue
@@ -185,17 +238,13 @@ class Table:
       fields = line.split(":")
       assert len(fields) == 2
 
-      try:
-        fn = float(fields[1])
-      except:
-        print(fields[1], "is not a floating point number")
-        assert False
+      self.parse_prob_info(fname, fields[1], prob_info)
 
       components = fields[0].split()
       if (components[0] == "modify"):
-        self.parse_modify_line(components, fn)
+        self.parse_modify_line(components, prob_info.prob)
       else:
-        self.parse_primary_line(components, fn)
+        self.parse_primary_line(components, prob_info)
 
     self.default_flag = False
 
@@ -209,7 +258,7 @@ class Table:
       if (not re.active_flag):
         continue
 
-      match_flag, prob = re.row.match(valuation)
+      match_flag, algo_flag, prob = re.row.match(valuation)
       if (match_flag):
         return prob, self.default_flag
 

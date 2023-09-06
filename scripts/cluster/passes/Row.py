@@ -1,4 +1,7 @@
 from passes.Term import Term
+from passes.Sigmoid import Sigmoid
+from Composites import COMPOSITE_PARAMS
+
 
 # In the simplest case, each row consists of a single term or
 # a sequence of terms that must all be fulfilled for the row to match.
@@ -27,6 +30,8 @@ class Row:
   def __init__(self):
     self.terms = []
     self.prob = -1.
+    self.algo_flag = False
+    self.sigmoid = Sigmoid()
 
 
   def add_lower(self, comp_param, value):
@@ -67,6 +72,15 @@ class Row:
   def set_overall_prob(self, prob):
     '''Sets the overall probability of the row.'''
     self.prob = prob
+    self.algo_flag = False
+
+
+  def set_algo(self, pdata):
+    '''Set sigmoid parameters.'''
+    self.prob = 0.
+    self.algo_flag = True
+    self.sigmoid.set(pdata.mean, pdata.divisor, pdata.intercept, 
+      pdata.slope)
 
   
   def add(self, row_new):
@@ -134,10 +148,14 @@ class Row:
     '''Return a bool match with the valuation, and the probability.'''
     for term in self.terms:
       if (not term.match(valuation)):
-        return False, 0.
+        return False, False, 0.
 
-    assert self.prob >= 0.
-    return True, self.prob
+    if self.algo_flag:
+      cccc = valuation.get_comp_value(COMPOSITE_PARAMS.COMP_CCCC.value)
+      return True, True, self.sigmoid.calc(cccc / 20.)
+    else:
+      assert self.prob >= 0.
+      return True, False, self.prob
 
 
   def str(self):

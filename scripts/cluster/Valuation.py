@@ -1,3 +1,5 @@
+import sys
+
 from enum import Enum
 from Composites import (COMPOSITE_PARAMS, COMPOSITE_PARAMS_NAMES, COMPOSITE_PARAMS_SCALES)
 
@@ -676,6 +678,10 @@ class Valuation:
     if (self.comp_values[COMPOSITE_PARAMS.COMP_HCP.value] == 0):
       self.comp_values[COMPOSITE_PARAMS.COMP_MCONC.value] = 0
       self.comp_values[COMPOSITE_PARAMS.COMP_TWOCONC.value] = 0
+
+      self.comp_values[COMPOSITE_PARAMS.COMP_HCP_SHORTEST.value] = 0
+      self.comp_values[COMPOSITE_PARAMS.COMP_HCP_LONGEST.value] = 0
+      self.comp_values[COMPOSITE_PARAMS.COMP_HCP_LONG12.value] = 0
     else:
       shcp = self.SUIT_PARAMS.SUIT_HCP.value
 
@@ -688,6 +694,25 @@ class Valuation:
         (self.suit_values[longest1][shcp] + \
         self.suit_values[longest2][shcp]) / \
         self.comp_values[COMPOSITE_PARAMS.COMP_HCP.value]
+
+      self.comp_values[COMPOSITE_PARAMS.COMP_HCP_LONGEST.value] = \
+        self.suit_values[longest1][shcp]
+        
+      self.comp_values[COMPOSITE_PARAMS.COMP_HCP_LONG12.value] = \
+        self.suit_values[longest1][shcp] + self.suit_values[longest2][shcp]
+
+      # Find the shortest non-void suit.  If there are two such,
+      # this parameter is not meaningful.
+      short_nonzero = sys.maxsize
+      short_HCP = sys.maxsize
+      for s in range(self.BRIDGE_SUITS):
+        sl = self.suit_values[s][self.SUIT_PARAMS.SUIT_LENGTH.value]
+        if (sl > 0 and sl < short_nonzero):
+          short_nonzero = sl
+          short_HCP = self.suit_values[s][shcp]
+
+      assert(short_nonzero < 40)
+      self.comp_values[COMPOSITE_PARAMS.COMP_HCP_SHORTEST.value] = short_HCP
 
     q = COMPOSITE_PARAMS.COMP_OUTTOPS1.value
     for p in range(self.SUIT_PARAMS.SUIT_TOP1.value, \
