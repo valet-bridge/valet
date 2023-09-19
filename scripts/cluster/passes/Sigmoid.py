@@ -1,11 +1,13 @@
+import numpy as np
+from scipy.optimize import curve_fit
 import math
 
 class Sigmoid:
   '''A sigmoid, turning into a line on the left.'''
 
   def __init__(self):
-    self.mean = 0.
-    self.divisor = 0.
+    self.mean = 10.
+    self.divisor = 1.
     self.intercept = 0.
     self.slope = 0.
     self.crossover = 0.
@@ -33,6 +35,19 @@ class Sigmoid:
   def calc_sigmoid(self, x):
     '''Calculate the sigmoid term above the intercept.'''
     return 1. - 1. / (1. + math.exp(-(x - self.mean) / self.divisor))
+
+
+  @staticmethod
+  def _sigmoid(x, mean, dividor):
+    '''Static sigmoid function to be used by curve_fit.'''
+    return 1. - 1. / (1. + np.exp(-(x - mean) / divisor))
+
+   
+  def fit_data(self, x_data, y_data):
+    '''Fit the sigmoid parameters to the provided numpy data.'''
+    params, _ = curve_fit(self._sigmoid, x_data, y_data, \
+      p0 = [self.mean, self.divisor])
+    self.mean, self.divisor = params
 
 
   def calc(self, x):

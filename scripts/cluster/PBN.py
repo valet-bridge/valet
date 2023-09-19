@@ -1,3 +1,8 @@
+# DDS encoding.
+PLAYER_NAMES_SHORT = ["N", "E", "S", "W"]
+PLAYER_NAMES_LONG = ["North", "East", "South", "West"]
+PLAYER_NUMBERS_SHORT = {"N": 0, "E": 1, "S": 2, "W": 3}
+
 class PBN:
   # DDS encoding, but without the two bottom 00 bits: ((2 << 13) - 1).
   BRIDGE_TRICKS = 13
@@ -13,11 +18,6 @@ class PBN:
   HOLDING_TO_TEXT = [None] * MAX_HOLDING
   SUIT_TO_HCP = {}
   PBN_TO_HOLDING = {}
-
-  # DDS encoding.
-  PLAYER_NAMES_SHORT = ["N", "E", "S", "W"]
-  PLAYER_NAMES_LONG = ["North", "East", "South", "West"]
-  PLAYER_NUMBERS_SHORT = {"N": 0, "E": 1, "S": 2, "W": 3}
 
 
   def __init__(self):
@@ -44,7 +44,7 @@ class PBN:
     '''Turn N:KJT6.K875.832.Q2 etc. into 4x4 array of strings.'''
     first, cards = pbn.split(":")
     hands = cards.split(" ")
-    index = self.PLAYER_NUMBERS_SHORT[first]
+    index = PLAYER_NUMBERS_SHORT[first]
 
     # Split into individual suit strings.
     # North is 0, East is 1 etc.
@@ -67,18 +67,18 @@ class PBN:
     text = ""
 
     # North
-    text += "%14s%s\n" % ("", self.PLAYER_NAMES_LONG[0])
+    text += "%14s%s\n" % ("", PLAYER_NAMES_LONG[0])
     for s in range(self.BRIDGE_SUITS):
       text += "%14s%s\n" % ("", texts[0][s])
 
     # West, East
-    text += "%-14s%14s%s\n" % (self.PLAYER_NAMES_LONG[3], "",
-      self.PLAYER_NAMES_LONG[1])
+    text += "%-14s%14s%s\n" % (PLAYER_NAMES_LONG[3], "",
+      PLAYER_NAMES_LONG[1])
     for s in range(self.BRIDGE_SUITS):
       text += "%-14s%14s%s\n" % (texts[3][s], "", texts[1][s])
 
     # South
-    text += "%14s%s\n" % ("", self.PLAYER_NAMES_LONG[2])
+    text += "%14s%s\n" % ("", PLAYER_NAMES_LONG[2])
     for s in range(self.BRIDGE_SUITS):
       text += "%14s%s\n" % ("", texts[2][s])
 
@@ -171,7 +171,7 @@ class PBN:
   def strCSV(self, diagram, suits):
     '''Make a string suitable for an overall passed-hand CSV line.'''
 
-    dealer_index = self.PLAYER_NUMBERS_SHORT[diagram["dealer"]]
+    dealer_index = PLAYER_NUMBERS_SHORT[diagram["dealer"]]
     fourth_index = (dealer_index + 3) % 4
     fourth_suits = suits[fourth_index]
     void_suits = [fourth_suits[s] if fourth_suits[s] != "" else "-"

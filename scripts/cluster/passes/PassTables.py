@@ -68,7 +68,7 @@ class PassTables:
     vulnerability = Vulnerability()
 
     for txt_file in self.find_txt_files():
-      parts = re.split('[/.]', txt_file)
+      parts = re.split(r'[\\/.]', txt_file)
 
       if len(parts) == 5:
         self.read_any_pos_vul(txt_file, parts, distribution)
@@ -95,6 +95,6 @@ class PassTables:
   def lookup(self, dist_index, player_rel, vul_rel, holding, valuation):
     '''Look up the passing probability.'''
     index = 16 * dist_index + 4 * player_rel + vul_rel
-    valuation.evaluate(holding, False)
+    valuation.evaluate(holding, True)
     return self.tables[index].lookup(valuation)
 

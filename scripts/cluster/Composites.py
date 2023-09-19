@@ -4,41 +4,43 @@ class COMPOSITE_PARAMS(Enum):
   COMP_HCP = 0
   COMP_AHCP = 1
   COMP_CCCC = 2
-  COMP_ZP = 3
-  COMP_FL = 4
-  COMP_CONTROLS = 5
-  COMP_PLAY_TRICKS = 6
-  COMP_QUICK_TRICKS = 7
-  COMP_LOSERS = 8
-  COMP_OUTTOPS1 = 9
-  COMP_OUTTOPS2 = 10
-  COMP_OUTTOPS3 = 11
-  COMP_OUTTOPS4 = 12
-  COMP_OUTTOPS5 = 13
-  COMP_BAL = 14
-  COMP_UNBAL = 15
-  COMP_SBAL = 16
-  COMP_UNSBAL = 17
-  COMP_EFF_MDIFF = 18
-  COMP_EFF_MABSDIFF = 19
-  COMP_EFF_MMAX = 20
-  COMP_EFF_MMIN = 21
-  COMP_EFF_mMAX = 22
-  COMP_EFF_mMIN = 23
-  COMP_EFF_L1 = 24
-  COMP_EFF_L2 = 25
-  COMP_EFF_L3 = 26
-  COMP_EFF_L4 = 27
-  COMP_MCONC = 28
-  COMP_TWOCONC = 29
-  COMP_HCP_SHORTEST = 30
-  COMP_HCP_LONGEST = 31
-  COMP_HCP_LONG12 = 32
-  COMP_SPADES = 33
-  COMP_SIZE = 34
+  COMP_CCCC_LIGHT = 3
+  COMP_ZP = 4
+  COMP_FL = 5
+  COMP_CONTROLS = 6
+  COMP_PLAY_TRICKS = 7
+  COMP_QUICK_TRICKS = 8
+  COMP_LOSERS = 9
+  COMP_OUTTOPS1 = 10
+  COMP_OUTTOPS2 = 11
+  COMP_OUTTOPS3 = 12
+  COMP_OUTTOPS4 = 13
+  COMP_OUTTOPS5 = 14
+  COMP_BAL = 15
+  COMP_UNBAL = 16
+  COMP_SBAL = 17
+  COMP_UNSBAL = 18
+  COMP_EFF_MDIFF = 19
+  COMP_EFF_MABSDIFF = 20
+  COMP_EFF_MMAX = 21
+  COMP_EFF_MMIN = 22
+  COMP_EFF_mMAX = 23
+  COMP_EFF_mMIN = 24
+  COMP_EFF_L1 = 25
+  COMP_EFF_L2 = 26
+  COMP_EFF_L3 = 27
+  COMP_EFF_L4 = 28
+  COMP_MCONC = 29
+  COMP_TWOCONC = 30
+  COMP_HCP_SHORTEST = 31
+  COMP_HCP_LONGEST = 32
+  COMP_HCP_LONG12 = 33
+  COMP_SPADES = 34
+  COMP_SIZE = 35
 
 COMPOSITE_PARAMS_NAMES = [
-  "HCP", "Adjusted HCP", "CCCC points", "Zar points", "FL points",
+  "HCP", "Adjusted HCP", "CCCC points", "CCCC light", 
+  "Zar points", "FL points",
   "Controls", "Play tricks", "Quick tricks", "Losers",
   "Outside tops1", "Outside tops2", "Outside tops3",
   "Outside tops4", "Outside tops5",
@@ -50,7 +52,7 @@ COMPOSITE_PARAMS_NAMES = [
   "Short HCP", "Long HCP", "Long12 HCP", "Spades" ]
 
 COMPOSITE_PARAMS_TAGS = [
-  "HCP", "AHCP", "CCCC", "ZP", "FL",
+  "HCP", "AHCP", "CCCC", "CCCClight", "ZP", "FL",
   "controls", "Playtricks", "Quicktricks", "Losers",
   "Outtops1", "Outtops2", "Outtops3", "Outtops4", "Outtops5",
   "BAL", "UNBAL", "SBAL", "notSBAL",

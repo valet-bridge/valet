@@ -151,8 +151,8 @@ class Row:
         return False, False, 0.
 
     if self.algo_flag:
-      cccc = valuation.get_comp_value(COMPOSITE_PARAMS.COMP_CCCC.value)
-      return True, True, self.sigmoid.calc(cccc / 20.)
+      cccc = valuation.get_comp_value(COMPOSITE_PARAMS.COMP_CCCC_LIGHT.value)
+      return True, True, self.sigmoid.calc(cccc / 4.)
     else:
       assert self.prob >= 0.
       return True, False, self.prob

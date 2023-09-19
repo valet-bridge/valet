@@ -9,7 +9,7 @@ use Scalar::Util 'looks_like_number';
 
 if ($#ARGV != 1)
 {
-  print "Usage: perl delta.pl file number\n";
+  print "Usage: perl worst.pl file number\n";
   exit;
 }
 

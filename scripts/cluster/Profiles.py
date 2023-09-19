@@ -4,9 +4,9 @@ from enum import Enum
 
 from Sets import Sets
 from Valuation import Valuation
-from PBN import PBN
+from PBN import (PBN, PLAYER_NAMES_LONG)
 from Distributions import (DISTRIBUTIONS, DISTRIBUTION_NAMES, Distribution)
-from Vulnerability import Vulnerability
+from Vulnerability import (Vulnerability, VUL_RELATIVE_NAMES)
 from passes.PassTables import PassTables
 from passes.PassMap import PassMap
 
@@ -119,6 +119,7 @@ class Profiles:
     '''Makes a prediction of the passing probability.'''
     prob = 1.
     num_defaults = 0
+    pstr = ""
 
     suits = []
     holdings = []
@@ -142,8 +143,12 @@ class Profiles:
         num_defaults += 1
 
       prob *= prob_hand
+      pstr += "{:16s}".format(DISTRIBUTION_NAMES[dist_number]) + \
+        "{:10s}".format(PLAYER_NAMES_LONG[player_abs]) + \
+        "{:10s}".format(VUL_RELATIVE_NAMES[vul_rel]) + \
+        "{:.4f}".format(prob_hand) + "\n"
 
-    return prob, num_defaults
+    return prob, num_defaults, pstr
 
   
   def passout(self, diagrams, tableaux):
@@ -169,7 +174,7 @@ class Profiles:
       if not diagrams.has(tag):
         continue
 
-      prob_predicted, default_count = \
+      prob_predicted, default_count, pstr = \
         self.predict(diagrams, pbn, tag, distribution, \
           vulnerability, valuation, pass_tables)
 
@@ -189,9 +194,10 @@ class Profiles:
         print(diagrams.str(tag))
         print(pbn.strHCP(diagrams.lookup(tag)))
         # print(tableaux.lookup(tag))
-        print(self.str(tag))
+        # print(self.str(tag))
+        print(pstr)
         print("actual   ", "{:.4f}".format(sum))
-        print("predicted", "{:.4f}".format(prob_predicted))
+        print("predicted", "{:.4f}".format(prob_predicted), "\n")
 
       # TODO Can vary:
       if sum > 0.0:

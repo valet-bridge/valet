@@ -33,32 +33,35 @@ class Valuation:
     SUIT_HCP = 0
     SUIT_AHCP = 1
     SUIT_CCCC = 2
-    SUIT_ZP = 3
-    SUIT_FL = 4
-    SUIT_CONTROLS = 5
-    SUIT_PLAY_TRICKS = 6
-    SUIT_QUICK_TRICKS = 7
-    SUIT_LOSERS = 8
-    SUIT_TOP1 = 9
-    SUIT_TOP2 = 10
-    SUIT_TOP3 = 11
-    SUIT_TOP4 = 12
-    SUIT_TOP5 = 13
-    SUIT_LENGTH = 14
-    SUIT_EFF_LENGTH = 15
-    SUIT_SPOT_SUM = 16
-    SUIT_SPOT_SUM3 = 17
-    SUIT_SIZE = 18
+    SUIT_CCCC_LIGHT = 3
+    SUIT_ZP = 4
+    SUIT_FL = 5
+    SUIT_CONTROLS = 6
+    SUIT_PLAY_TRICKS = 7
+    SUIT_QUICK_TRICKS = 8
+    SUIT_LOSERS = 9
+    SUIT_TOP1 = 10
+    SUIT_TOP2 = 11
+    SUIT_TOP3 = 12
+    SUIT_TOP4 = 13
+    SUIT_TOP5 = 14
+    SUIT_LENGTH = 15
+    SUIT_EFF_LENGTH = 16
+    SUIT_SPOT_SUM = 17
+    SUIT_SPOT_SUM3 = 18
+    SUIT_SIZE = 19
 
   SUIT_PARAMS_NAMES = [
-    "HCP", "Adjusted HCP", "CCCC comp.", "Zar comp.", "FL points",
+    "HCP", "Adjusted HCP", "CCCC comp.", "CCCC light",
+    "Zar comp.", "FL points",
     "Controls", "Play tricks", "Quick tricks", "Losers",
     "Aces", "AK's", "AKQ's", "AKQJ's", "AKQJT's",
     "Length", "Eff. length",
     "Spot sum", "Top-3 spot sum" ]
 
   SUIT_PARAMS_SCALES = [
-    1, 1, 20, 1, 1,
+    1, 1, 20, 4,
+    1, 1,
     1, 2, 2, 2,
     1, 1, 1, 1, 1,
     1, 2,
@@ -160,6 +163,9 @@ class Valuation:
 
       # Needs tops and controls.
       self.set_suit_KnR(cards, h)
+
+      # Needs tops.
+      self.set_suit_CCCC_light(cards, h)
 
       self.set_suit_ZP(cards, h)
       self.set_suit_FL(h)
@@ -314,7 +320,7 @@ class Valuation:
   
 
   def set_suit_KnR(self, cards, holding):
-    '''CCC by Kaplan and Rubens.'''
+    '''CCCC by Kaplan and Rubens.'''
     hlist = self.SUIT_LIST[holding]
 
     cccc = self.SUIT_PARAMS.SUIT_CCCC.value
@@ -343,7 +349,7 @@ class Valuation:
         adder += 1
     elif (hlist[length] == 7):
       # +0.5 for lacking both Q and j, +0.5 for having the T.
-      if (cards[2] == 0 and cards[3] == 0): adder += 1
+      if (cards[2] == 0 or cards[3] == 0): adder += 1
       if (cards[4]): adder += 1
     else:
       # +1, plus +1 for the T with two+ higher or with the J.
@@ -353,11 +359,17 @@ class Valuation:
         else:
           adder += 1
       
-      # +0.5 for the 9 with two+ higher, the T or the 8.
       if (cards[5]):
-        if (hlist[self.SUIT_PARAMS.SUIT_TOP3.value] >= 2 and \
-          (cards[4] or cards[6])): 
+        # +0.5 for the 9 with two+ higher, the T or the 8.
+        if (hlist[self.SUIT_PARAMS.SUIT_TOP3.value] >= 2 or \
+          cards[4] or cards[6]): 
           adder += 1
+
+        # 4-6 cards with no eight or ten, and exactly three higher.
+        if (cards[4] == 0 and cards[6] == 0 and \
+          hlist[self.SUIT_PARAMS.SUIT_TOP4.value] == 3):
+          adder += 1
+
 
     hlist[cccc] += adder * hlist[length]
 
@@ -391,6 +403,87 @@ class Valuation:
       else:
         if (hlist[self.SUIT_PARAMS.SUIT_TOP4.value] == 1 and cards[5]): 
           hlist[cccc] += 5 
+    return
+
+  
+  def set_suit_CCCC_light(self, cards, holding):
+    '''Simplified CCCC.'''
+    hlist = self.SUIT_LIST[holding]
+
+    cccc_light = self.SUIT_PARAMS.SUIT_CCCC_LIGHT.value
+    length = self.SUIT_PARAMS.SUIT_LENGTH.value
+
+    hlist[cccc_light] = 0
+
+    # 4-3-2-1 count.
+    adder = 4 * hlist[self.SUIT_PARAMS.SUIT_HCP.value]
+
+    if (hlist[length] == 2):
+      if (hlist[self.SUIT_PARAMS.SUIT_TOP4.value] >= 1):
+        if (hlist[self.SUIT_PARAMS.SUIT_TOP3.value] == 2):
+          adder -= 2 # -0.50 if stiff AK, AQ, KQ
+        else:
+          adder -= 1 # -0.25 if AJ, KJ, QJ or Hx
+
+    if (cards[4] == 1 and hlist[self.SUIT_PARAMS.SUIT_TOP5.value] + cards[5] >= 3):
+      adder += 1 # +0.25 if strong ten with at least two of AKQJ9
+
+    '''if (cards[0] == 1): # Ace
+      if (hlist[length] == 1):
+        adder -= 2 # -0.50 if stiff ace
+    elif (hlist[length] >= 3):
+      adder += 2 # +0.50 if Axx(+)
+
+    if (cards[1] == 1): # King
+      if (hlist[length] == 1):
+        adder -= 8 # -2.00 if stiff king
+      elif (hlist[length] == 2 and cards[2] == 0 and cards[3] == 0):
+        adder -= 2 # -0.50 if AK or Ax stiff (but not KQ, KJ)
+      elif (hlist[length] >= 3):
+        adder += 1 # -0.50 if AK or Ax stiff (but not KQ, KJ)
+
+    if (cards[2] == 1): # Queen
+      if (hlist[length] == 1):
+        adder -= 6 # # -1.50 if stiff queen
+      elif (hlist[length] == 2):
+        if (cards[0] == 1 or cards[1] == 1):
+          adder -= 3 # -0.75 if AQ or KQ stiff
+        elif (cards[3] == 0):
+          adder -= 4 # -1.00 if Qx stiff
+      elif (cards[0] == 0 and cards[1] == 0 and cards[3] == 0):
+        adder -= 2 # -0.50 if Qxx(+)
+      elif (cards[0] == 1 or cards[1] == 1):
+        adder -= 1 # -0.25 if AQx(+), KQx(+)
+
+    if (cards[3] == 1): # Jack
+      if (hlist[length] == 1):
+        adder -= 4 # -1.00 if stiff jack
+      elif (hlist[length] == 2):
+      if (hlist[length] == 2):
+        if (cards[0] == 1 or cards[1] == 1 or cards[2] == 1):
+          adder -= 0 # -0.25 if AJ, KJ, QJ stiff
+          # adder -= 2 # -0.50 if AJ, KJ, QJ stiff
+        else:
+          adder -= 1 # -0.75 if Jx stiff
+      elif (cards[0] == 1 or cards[1] == 1 or cards[2] == 1):
+        adder -= 1 # -0.25 if third or more with one+ of AKQ
+      else:
+        adder -= 2 # -0.50 if third or more without a top
+
+    if (cards[4] == 1 and hlist[length] >= 3): # Ten
+      # if (hlist[self.SUIT_PARAMS.SUIT_TOP5.value] >= 3):
+        # adder += 1 # +0.25 if at least two of AKQJ9
+        # adder += 2 # +0.50 if at least two of AKQJ9
+      # elif (hlist[self.SUIT_PARAMS.SUIT_TOP5.value] + cards[5] == 2):
+      if (hlist[self.SUIT_PARAMS.SUIT_TOP5.value] + cards[5] == 2):
+        adder += 1 # +0.25 if exactly one of AKQJ9
+
+    if (cards[5] == 1 and hlist[length] >= 3): # # Nine
+      if (hlist[self.SUIT_PARAMS.SUIT_TOP5.value] + cards[6] >= 2):
+        adder += 1 # +0.25 if at least two of AKQJT8 '''
+      
+    hlist[cccc_light] += adder
+
     return
 
   
