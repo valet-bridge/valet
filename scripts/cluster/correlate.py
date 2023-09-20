@@ -297,18 +297,12 @@ sigmoids = Sigmoids()
 bin_midpoints = (bins[:-1] + bins[1:]) / 2
 sigmoids.calc(bin_midpoints)
 
-# Predict the absolute number of passes for each (pos, vul, variable no.)
-results_dno_df = sigmoids.hist_to_prediction(hist_dno)
-results_sno_df = sigmoids.hist_to_prediction(hist_sno_reset)
+# Predict the absolute number of passes for each variable number.
+# The results are numpy 1D arrays.
+results_dno = sigmoids.hist_to_prediction(hist_dno, NUM_DIST)
+results_sno = sigmoids.hist_to_prediction(hist_sno_reset, NUM_SUITS)
 
 
-
-
-sum_dno = results_dno_df.groupby('dno')['result'].sum()
-results_dno = sum_dno.reindex(range(NUM_DIST), fill_value = 0).values
-
-sum_sno = results_sno_df.groupby('dno')['result'].sum()
-results_sno = sum_sno.reindex(range(NUM_SUITS), fill_value = 0).values
 
 print("Distribution pass predictions\n")
 for dno in range(NUM_DIST):

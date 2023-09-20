@@ -34,7 +34,7 @@ class Sigmoids:
     })
 
   
-  def hist_to_prediction(self, hist_df):
+  def hist_to_prediction(self, hist_df, num_vars):
     '''Adds up sigmoid values for each (pos, vul, dno) in dataframe.'''
 
     # Make another dataframe where the bin counts go into hist_value
@@ -51,7 +51,9 @@ class Sigmoids:
     merged_df['result'] = merged_df['hist_value'] * merged_df['sigmoid']
 
     # Add them up.  For each (pos, vul, dno) we now have a result.
-    return merged_df.groupby(['pos', 'vul', 'dno']).agg({'result': 'sum'})
+    sum_var_no = merged_df.groupby(['dno']).agg({'result': 'sum'})
+
+    return sum_var_no['result'].reindex(range(num_vars), fill_value = 0).values
 
   
   def extract_vectors(self, grouped_df):
