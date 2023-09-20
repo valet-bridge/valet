@@ -1,18 +1,10 @@
 import pandas as pd
 import numpy as np
+import itertools
+from itertools import chain
 
+from fit.fitconst import *
 from passes.Sigmoid import Sigmoid
-
-# SUITDATA_FILE = "suitdata100.csv"
-SUITDATA_FILE = "suitdata.csv"
-BRIDGE_TRICKS = 13
-NUM_DIST = 560
-NUM_SUITS = 512
-NUM_VAR = NUM_DIST + NUM_SUITS
-NUM_TOPS = 6
-NUM_DOMINANCES = 864
-NUM_POS = 4
-NUM_VUL = 4
 
 
 def set_dist_data(dist_info):
@@ -226,7 +218,7 @@ set_lp_constraints(suit_info, dominances, solution, step_size, \
 '''
 
 # Set up the sigmoids.
-sigmoids = [[Sigmoid() for _ in range(NUM_VUL)] for _ in range(NUM_POS)]
+# sigmoids = [[Sigmoid() for _ in range(NUM_VUL)] for _ in range(NUM_POS)]
 
 
 # Read in the data of hands.
@@ -261,8 +253,9 @@ for field in sum_fields:
 # Discretize the sum column
 
 # Strength is 0..100 in 0.01 steps.
-bins = np.arange(0, 100, 0.01)
+bins = np.arange(0, MAX_STRENGTH, STRENGTH_STEP)
 bin_midpoints = (bins[:-1] + bins[1:]) / 2
+print("size", len(bins), NUM_STRENGTH_STEPS)
 
 df['bin'] = pd.cut(df['sum'], bins=bins, include_lowest=True, \
   right=False, labels=False)
@@ -314,19 +307,22 @@ hist_sno_reset = hist_sno_reset.rename(columns={'value': 'dno'})
 # Apply Sigmoid to histograms
 sigmoids = [[Sigmoid() for _ in range(NUM_VUL)] for _ in range(NUM_POS)]
 
-sigmoid_values = [[[sig.calc_sigmoid_parallel(b) for b in bin_midpoints] for sig in pos_sigmoids] for pos_sigmoids in sigmoids]
+sigmoid_values = [[[sig.calc(b) for b in bin_midpoints] for sig in pos_sigmoids] for pos_sigmoids in sigmoids]
 
+# Generate all combinations of pos, vul, and bin_midpoints
+pos_vul_bin_combinations = list(itertools.product( \
+  range(NUM_POS), range(NUM_VUL), range(len(bin_midpoints))))
+
+# Flatten the 3D sigmoid_values list into a 1D list
 sigmoid_df = pd.DataFrame({
-    'pos': \
-      [p for p in range(NUM_POS) for _ in range(NUM_VUL * len(bin_midpoints))],
-    'vul': \
-      [v for _ in range(NUM_POS) for v in range(NUM_VUL) \
-        for _ in range(len(bin_midpoints))],
-    'bin': list(range(len(bin_midpoints))) * (NUM_POS * NUM_VUL),
-
-    'sigmoid': [value for sublist1 in sigmoid_values \
-      for sublist2 in sublist1 for value in sublist2]
+    'pos': [item[0] for item in pos_vul_bin_combinations],
+    'vul': [item[1] for item in pos_vul_bin_combinations],
+    'bin': [item[2] for item in pos_vul_bin_combinations],
+    'sigmoid': list(chain.from_iterable(chain.from_iterable(sigmoid_values)))
 })
+
+# print(sigmoid_df)
+# print(sigmoid_df2)
 
 def apply_sigmoid_to_histogram(hist_df, sigmoid_series):
   # Merging to align the indices
@@ -375,3 +371,13 @@ print("")
 # print(final_results_sno)
 
 
+# So it seems we can calculate the number of passes from sigmoids.
+# We need the sign vector.  And then we need to calculate the gradients
+# by histograms similar to above.  This then gives us the c vector
+# for the LP problem.
+# Split out into some files and functions.
+# Then set up to run
+# In the case of box constraints, no lower limit of 0 on the
+# values? Keep moving the boxes, recalculating the gradients, until
+# the solution is interiot with respect to the box constraints.
+# Then make the numpy arrays for adjusting the sigmoid parameters.

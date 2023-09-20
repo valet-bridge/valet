@@ -12,6 +12,9 @@ class Sigmoid:
     self.slope = 0.
     self.crossover = 0.
 
+    self.sdev = np.zeros(2)
+    self.errsq = 0.
+
   
   def set(self, mean, divisor, intercept, slope):
     '''Set the parameters.'''
@@ -32,39 +35,61 @@ class Sigmoid:
       return value
 
 
-  def calc_sigmoid(self, x):
-    '''Calculate the sigmoid term above the intercept.'''
-    return 1. - 1. / (1. + math.exp(-(x - self.mean) / self.divisor))
-
-  
-  def calc_sigmoid_parallel(self, x):
+  def calc(self, x):
     '''Calculate the sigmoid term above the intercept.'''
     return 1. - 1. / (1. + np.exp(-(x - self.mean) / self.divisor))
 
   
-  def calc_derivative_np(self, x):
+  def calc_derivative(self, x):
     assert self.divisor > 0.
-    sv = self._sigmoid(x, self.mean, self.divisor)
+    sv = self.calc(x)
     return - sv * (1 - sv) / self.divisor
 
+  
+  def calc_derivative_from_values(self, values):
+    assert self.divisor > 0.
+    return - values * (1 - values) / self.divisor
 
+  
   @staticmethod
-  def _sigmoid(x, mean, divisor):
-    '''Static sigmoid function to be used by curve_fit.'''
+  def _calc(x, mean, divisor):
     return 1. - 1. / (1. + np.exp(-(x - mean) / divisor))
 
-   
-  def fit_data(self, x_data, y_data):
+
+  def fit_data(self, x_data, sigma, y_data):
     '''Fit the sigmoid parameters to the provided numpy data.'''
-    params, _ = curve_fit(self._sigmoid, x_data, y_data, \
-      p0 = [self.mean, self.divisor])
+    params, pcov = curve_fit(self._calc, x_data, y_data, \
+      sigma = sigma,
+      p0 = [self.mean, self.divisor],
+      bounds=([1, 0.1], [float('inf'), float('inf')]))
     self.mean, self.divisor = params
 
+    self.sdev = np.sqrt(np.diag(pcov))
+    self.errsq = np.sum((y_data - self.calc(x_data)) ** 2)
 
-  def calc(self, x):
+
+  def calc_both(self, x):
     '''Calculate the overall value.'''
     if (x <= self.intercept):
       return self.calc_linear(x)
     else:
-      return self.calc_sigmoid(x)
+      return self.calc(x)
+
+  
+  def str_header(self):
+    '''Returns a header.'''
+    s = "{:8s}".format("Mean") + "{:8s}".format("Sigma") + \
+      "{:8s}".format("sd1") + "{:8s}".format("sd2") + \
+      "{:8s}".format("sqerr")
+    returns
+  
+
+  def str(self):
+    '''Returns a string of parameters.'''
+    s = "{:8.3f}".format(self.mean) + \
+      "{:8.3f}".format(self.divisor) + \
+      "{:8.3f}".format(self.sdev[0]) + \
+      "{:8.3f}".format(self.sdev[1]) + \
+      "{:8.3f}".format(self.sqerr)
+    return s
 
