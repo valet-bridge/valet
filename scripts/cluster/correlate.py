@@ -5,26 +5,9 @@ from itertools import chain
 
 from fit.fitconst import *
 from fit.SuitInfo import SuitInfo
+from fit.DistInfo import DistInfo
 from fit.Sigmoids import Sigmoids
 from passes.Sigmoid import Sigmoid
-
-
-def set_dist_data(dist_info):
-  dno = 0
-  hcp = [3, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-
-  for spades in range(BRIDGE_TRICKS + 1):
-    for hearts in range(BRIDGE_TRICKS + 1 - spades):
-      for diamonds in range(BRIDGE_TRICKS + 1 - spades - hearts):
-        clubs = BRIDGE_TRICKS - spades - hearts - diamonds
-
-        dist_info[dno]['text'] = str(spades) + "=" + \
-          str(hearts) + "=" + str(diamonds) + "=" + str(clubs)
-
-        dist_info[dno]['hcp'] = hcp[spades] + hcp[hearts] + \
-          hcp[diamonds] + hcp[clubs]
-
-        dno += 1
 
 
 def set_lp_constraints_upper(dominances, A_ub, b_ub):
@@ -60,8 +43,8 @@ def init_solution(suit_info, dist_info, solution):
   '''Initialize with standard HCP and distribution points.'''
   for sno in range(NUM_SUITS):
     solution[sno] = suit_info.get(sno)['hcp']
-  for dno, di in enumerate(dist_info):
-    solution[NUM_SUITS + dno] = di['hcp']
+  for dno in range(NUM_DIST):
+    solution[NUM_SUITS + dno] = dist_info.get(dno)['hcp']
 
 
 def add_strengths(solution, bins, df):
@@ -93,11 +76,8 @@ def add_strengths(solution, bins, df):
 
 
 # Set up some data-independent tables.
-
-dist_info = [{} for _ in range(NUM_DIST)]
-set_dist_data(dist_info)
-
 suit_info = SuitInfo()
+dist_info = DistInfo()
 
 
 # Initialize the solution with standard HCP and distribution points.
@@ -198,7 +178,7 @@ print("Distribution pass predictions\n")
 for dno in range(NUM_DIST):
   if results_dno[dno] == 0 and pass_marginal_dist[dno] == 0: continue
   print("{:4d}".format(dno), \
-    "{:10s}".format(dist_info[dno]['text']), \
+    "{:10s}".format(dist_info.get(dno)['text']), \
     "{:10.4f}".format(results_dno[dno]), \
     "{:6d}".format(pass_marginal_dist[dno]))
 print("")
@@ -212,9 +192,6 @@ for sno in range(NUM_SUITS):
     "{:6d}".format(pass_marginal_suit[sno]))
 print("")
 
-# print(final_results_dno)
-# print(final_results_sno)
-
 
 # So it seems we can calculate the number of passes from sigmoids.
 # We need the sign vector.  And then we need to calculate the gradients
@@ -226,3 +203,4 @@ print("")
 # values? Keep moving the boxes, recalculating the gradients, until
 # the solution is interiot with respect to the box constraints.
 # Then make the numpy arrays for adjusting the sigmoid parameters.
+# Probably need to update the strengths in df before adjusting.
