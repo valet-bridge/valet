@@ -125,6 +125,20 @@ class SuitInfo:
             'dominated': self.suit_list[length][new_tops]['sno']})
 
 
+  def set_lp_upper_constraints(self, A_ub, b_ub):
+    for index, dom in enumerate(self.dominances):
+      A_ub[index][dom['dominant']] = 1
+      A_ub[index][dom['dominated']] = -1
+      b_ub[index] = 0
+
+  
+  def set_lp_equal_constraints(self, A_eq, b_eq):
+    for sno, si in enumerate(suit_info):
+      A_eq[0][sno] = si['count']
+
+    b_eq[0] = (2 << BRIDGE_TRICKS) * 10 / 2 # Average of 5 HCP
+
+
   def set(self):
     self.set_suit_list()
     self.set_suit_info()

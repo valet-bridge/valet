@@ -11,30 +11,32 @@ from fit.Sigmoids import Sigmoids
 from passes.Sigmoid import Sigmoid
 
 
+'''
 def set_lp_constraints_upper(dominances, A_ub, b_ub):
   for index, dom in enumerate(dominances):
     A_ub[index][dom['dominant']] = 1
     A_ub[index][dom['dominated']] = -1
     b_ub[index] = 0
 
-
 def set_lp_constraints_equal(suit_info, A_eq, b_eq):
   for sno, si in enumerate(suit_info):
     A_eq[0][sno] = si['count']
   
   b_eq[0] = (2 << BRIDGE_TRICKS) * 10 / 2 # Average of 5 HCP
+'''
 
 
-def set_lp_constraints_box(estimate, step_size, bounds):
-  estimate.set_box_constraints(step_size, bounds)
-
-
-def set_lp_constraints(suit_info, dominances, estimate, step_size, \
+def set_lp_constraints(suit_info, estimate, step_size, \
   A_ub, b_ub, A_eq, b_eq, bounds):
 
-  set_lp_constraints_upper(dominances, A_ub, b_ub)
-  set_lp_constraints_equal(suit_info, A_eq, b_eq)
-  set_lp_constraints_box(estimate, step_size, bounds)
+  # Dominances
+  suit_info.set_lp_upper_constraints(A_ub, b_ub)
+
+  # Weighted average of 5 points per suit.
+  suit_info.set_lp_equal_constraints(A_eq, b_eq)
+
+  # Limits +/- one step_size.
+  estimate.set_box_constraints(step_size, bounds)
 
 
 
@@ -58,7 +60,7 @@ bounds = np.zeros(NUM_VAR)
 step_size = 0.01
 
 # TODO Get dominances from SuitInfo somehow.
-set_lp_constraints(suit_info, dominances, solution, step_size, \
+set_lp_constraints(suit_info, solution, step_size, \
   A_ub, b_ub, A_eq, b_eq, bounds)
 '''
 
