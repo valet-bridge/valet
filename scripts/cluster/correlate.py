@@ -6,6 +6,7 @@ from itertools import chain
 from fit.fitconst import *
 from fit.SuitInfo import SuitInfo
 from fit.DistInfo import DistInfo
+from fit.Variables import Variables
 from fit.Sigmoids import Sigmoids
 from passes.Sigmoid import Sigmoid
 
@@ -54,8 +55,8 @@ def add_strengths(solution, bins, df):
 
   # Based on the current "solution", set up some lookup tables in order
   # to be able to make a sum column.
-  lookup_suit = [solution[index] for index in suit_indices]
-  lookup_dist = [solution[NUM_SUITS + index] for index in dist_indices]
+  lookup_suit = solution[:NUM_SUITS]
+  lookup_dist = solution[NUM_SUITS:]
 
   lookup = {
     'dno': pd.Series(lookup_dist, index = dist_indices),
@@ -173,25 +174,9 @@ results_dno = sigmoids.hist_to_prediction(hist_dno, NUM_DIST)
 results_sno = sigmoids.hist_to_prediction(hist_sno_reset, NUM_SUITS)
 
 
-
-print("Distribution pass predictions\n")
-for dno in range(NUM_DIST):
-  if results_dno[dno] == 0 and pass_marginal_dist[dno] == 0: continue
-  print("{:4d}".format(dno), \
-    "{:10s}".format(dist_info.get(dno)['text']), \
-    "{:10.4f}".format(results_dno[dno]), \
-    "{:6d}".format(pass_marginal_dist[dno]))
-print("")
-
-print("Suit pass predictions\n")
-for sno in range(NUM_SUITS):
-  if results_sno[sno] == 0 and pass_marginal_suit[sno] == 0: continue
-  print("{:4d}".format(sno), \
-    "{:16s}".format(suit_info.get(sno)['text']), \
-    "{:16.4f}".format(results_sno[sno]), \
-    "{:6d}".format(pass_marginal_suit[sno]))
-print("")
-
+predictions = Variables()
+predictions.concatenate(results_sno, results_dno)
+print(predictions.str(suit_info, dist_info, pass_marginal_suit, pass_marginal_dist))
 
 # So it seems we can calculate the number of passes from sigmoids.
 # We need the sign vector.  And then we need to calculate the gradients
