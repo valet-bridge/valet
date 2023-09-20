@@ -36,9 +36,20 @@ class Sigmoid:
     '''Calculate the sigmoid term above the intercept.'''
     return 1. - 1. / (1. + math.exp(-(x - self.mean) / self.divisor))
 
+  
+  def calc_sigmoid_parallel(self, x):
+    '''Calculate the sigmoid term above the intercept.'''
+    return 1. - 1. / (1. + np.exp(-(x - self.mean) / self.divisor))
+
+  
+  def calc_derivative_np(self, x):
+    assert self.divisor > 0.
+    sv = self._sigmoid(x, self.mean, self.divisor)
+    return - sv * (1 - sv) / self.divisor
+
 
   @staticmethod
-  def _sigmoid(x, mean, dividor):
+  def _sigmoid(x, mean, divisor):
     '''Static sigmoid function to be used by curve_fit.'''
     return 1. - 1. / (1. + np.exp(-(x - mean) / divisor))
 
