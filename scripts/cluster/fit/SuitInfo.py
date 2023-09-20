@@ -133,7 +133,7 @@ class SuitInfo:
 
   
   def set_lp_equal_constraints(self, A_eq, b_eq):
-    for sno, si in enumerate(suit_info):
+    for sno, si in enumerate(self.suit_info):
       A_eq[0][sno] = si['count']
 
     b_eq[0] = (2 << BRIDGE_TRICKS) * 10 / 2 # Average of 5 HCP

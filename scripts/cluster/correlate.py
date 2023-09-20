@@ -8,61 +8,21 @@ from fit.SuitInfo import SuitInfo
 from fit.DistInfo import DistInfo
 from fit.Variables import Variables
 from fit.Sigmoids import Sigmoids
+from fit.LPsolver import LPsolver
 from passes.Sigmoid import Sigmoid
-
-
-'''
-def set_lp_constraints_upper(dominances, A_ub, b_ub):
-  for index, dom in enumerate(dominances):
-    A_ub[index][dom['dominant']] = 1
-    A_ub[index][dom['dominated']] = -1
-    b_ub[index] = 0
-
-def set_lp_constraints_equal(suit_info, A_eq, b_eq):
-  for sno, si in enumerate(suit_info):
-    A_eq[0][sno] = si['count']
-  
-  b_eq[0] = (2 << BRIDGE_TRICKS) * 10 / 2 # Average of 5 HCP
-'''
-
-
-def set_lp_constraints(suit_info, estimate, step_size, \
-  A_ub, b_ub, A_eq, b_eq, bounds):
-
-  # Dominances
-  suit_info.set_lp_upper_constraints(A_ub, b_ub)
-
-  # Weighted average of 5 points per suit.
-  suit_info.set_lp_equal_constraints(A_eq, b_eq)
-
-  # Limits +/- one step_size.
-  estimate.set_box_constraints(step_size, bounds)
-
 
 
 # Set up some data-independent tables.
 suit_info = SuitInfo()
 dist_info = DistInfo()
 
-
 # Initialize the solution with standard HCP and distribution points.
 solution = Variables()
 solution.init_by_hcp(suit_info, dist_info)
 
-# Set up the matrix of the linearized LP problem.
-'''
-c = np.zeros(NUM_VAR)
-A_ub = np.zeros((NUM_DOMINANCES, NUM_VAR))
-b_ub = np.zeros(NUM_DOMINANCES)
-A_eq = np.zeros((1, NUM_VAR))
-b_eq = np.zeros(1)
-bounds = np.zeros(NUM_VAR)
-step_size = 0.01
-
-# TODO Get dominances from SuitInfo somehow.
-set_lp_constraints(suit_info, solution, step_size, \
-  A_ub, b_ub, A_eq, b_eq, bounds)
-'''
+# Set up the constraints of the linearized LP problem.
+lp_solver = LPsolver()
+lp_solver.set_constraints(suit_info, solution, 0.01)
 
 # Read in the data of hands.
 df = pd.read_csv(SUITDATA_FILE, header = None, \
@@ -74,6 +34,7 @@ bins = np.arange(0, MAX_STRENGTH, STRENGTH_STEP)
 
 # Add sum and bin columns to df based on dno, sno1 .. sno4.
 solution.add_strengths(bins, df)
+
 
 
 # Sum up the passes.
@@ -96,6 +57,8 @@ pass_marginal_dist = \
 sno_melted = df.melt(id_vars=['pos', 'vul', 'pass', 'bin'], value_vars=['sno1', 'sno2', 'sno3', 'sno4'])
 grouped_df_sno = sno_melted.groupby(['pos', 'vul', 'value']).agg({'pass':'sum'}).unstack(fill_value=0)
 pass_matrix_suit = grouped_df_sno.values
+
+
 
 # Again sum over pos and vul, mostly for statistics.
 full_sno_index = pd.Index(range(NUM_SUITS))
@@ -145,8 +108,6 @@ print(predictions.str(suit_info, dist_info, \
 # We need the sign vector.  And then we need to calculate the gradients
 # by histograms similar to above.  This then gives us the c vector
 # for the LP problem.
-# Split out into some files and functions.
-# Then set up to run
 # In the case of box constraints, no lower limit of 0 on the
 # values? Keep moving the boxes, recalculating the gradients, until
 # the solution is interiot with respect to the box constraints.
