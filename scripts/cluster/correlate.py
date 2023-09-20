@@ -4,6 +4,7 @@ import itertools
 from itertools import chain
 
 from fit.fitconst import *
+from fit.SuitInfo import SuitInfo
 from fit.Sigmoids import Sigmoids
 from passes.Sigmoid import Sigmoid
 
@@ -24,118 +25,6 @@ def set_dist_data(dist_info):
           hcp[diamonds] + hcp[clubs]
 
         dno += 1
-
-
-def count_ones(n):
-  count = 0
-  while n:
-      n &= n - 1
-      count += 1
-  return count
-
-
-def hcp(tops):
-  points = 0
-  if (tops & 0x20):
-    points += 4
-  if (tops & 0x10):
-    points += 3
-  if (tops & 0x08):
-    points += 2
-  if (tops & 0x04):
-    points += 1
-  return points
-
-
-def suit_text(length, tops):
-  text = ""
-  top_count = 0
-  if (tops & 0x20):
-    text += 'A';
-    top_count += 1
-  if (tops & 0x10):
-    text += 'K';
-    top_count += 1
-  if (tops & 0x08):
-    text += 'Q';
-    top_count += 1
-  if (tops & 0x04):
-    text += 'J';
-    top_count += 1
-  if (tops & 0x02):
-    text += 'T';
-    top_count += 1
-  if (tops & 0x01):
-    text += '9';
-    top_count += 1
-
-  text += 'x' * (length - top_count)
-  return text
-
-
-def set_suit_list(suit_list):
-  reduced_suit_number = 0
-  for holding in range(1 << BRIDGE_TRICKS):
-    length = count_ones(holding)
-    tops = holding >> 7
-
-    if 'count' not in suit_list[length][tops]:
-      suit_list[length][tops]['sno'] = reduced_suit_number
-      suit_list[length][tops]['count'] = 1
-      reduced_suit_number += 1
-    else:
-      suit_list[length][tops]['count'] += 1
-
-
-def set_suit_info(suit_list, suit_info):
-  for length, row in enumerate(suit_list):
-    for tops, cell in enumerate(row):
-      if 'sno' not in cell: continue
-
-      suit_info[cell['sno']] = {}
-      entry_ref = suit_info[cell['sno']]
-
-      entry_ref = suit_info[cell['sno']]
-      entry_ref['length'] = length
-      entry_ref['tops'] = tops
-      entry_ref['count'] = cell['count']
-      entry_ref['hcp'] = hcp(tops)
-      entry_ref['text'] = suit_text(length, tops)
-
-
-def set_suit_dominances(suit_list, dominances):
-  for length, row in enumerate(suit_list):
-    for tops, cell in enumerate(row):
-      if 'sno' not in cell: continue
-
-      bits = [0] * NUM_TOPS
-      for bit in range(NUM_TOPS):
-        bits[bit] = tops & (1 << bit)
-
-      for bit in range(1, NUM_TOPS):
-        if (bits[bit] and not bits[bit-1]):
-          new_tops = tops
-          new_tops ^= 1 << bit
-          new_tops |= 1 << (bit-1)
-
-          dominances.append({'dominant': suit_list[length][tops]['sno'], \
-            'dominated': suit_list[length][new_tops]['sno']})
-      
-      # It is possible to turn a nine into an x when there is an x free.
-      if (bits[0] and count_ones(tops) > length + BRIDGE_TRICKS - NUM_TOPS):
-        new_tops = tops
-        new_tops ^= 1;
-        dominances.append({'dominant': suit_list[length][tops]['sno'], \
-          'dominated': suit_list[length][new_tops]['sno']})
-
-
-def set_suit_data(suit_info, dominances):
-  # Tricks 0..13, 6-cards tops.
-  suit_list = [[{} for _ in range(64)] for _ in range(14)]
-
-  set_suit_list(suit_list)
-  set_suit_info(suit_list, suit_info)
-  set_suit_dominances(suit_list, dominances)
 
 
 def set_lp_constraints_upper(dominances, A_ub, b_ub):
@@ -169,8 +58,8 @@ def set_lp_constraints(suit_info, dominances, estimate, step_size, \
 
 def init_solution(suit_info, dist_info, solution):
   '''Initialize with standard HCP and distribution points.'''
-  for sno, si in enumerate(suit_info):
-    solution[sno] = si['hcp']
+  for sno in range(NUM_SUITS):
+    solution[sno] = suit_info.get(sno)['hcp']
   for dno, di in enumerate(dist_info):
     solution[NUM_SUITS + dno] = di['hcp']
 
@@ -208,12 +97,7 @@ def add_strengths(solution, bins, df):
 dist_info = [{} for _ in range(NUM_DIST)]
 set_dist_data(dist_info)
 
-suit_info = [{} for _ in range(NUM_SUITS)]
-
-# There are 864 dominances.
-dominances = []
-
-set_suit_data(suit_info, dominances)
+suit_info = SuitInfo()
 
 
 # Initialize the solution with standard HCP and distribution points.
@@ -230,6 +114,7 @@ b_eq = np.zeros(1)
 bounds = np.zeros(NUM_VAR)
 step_size = 0.01
 
+# TODO Get dominances from SuitInfo somehow.
 set_lp_constraints(suit_info, dominances, solution, step_size, \
   A_ub, b_ub, A_eq, b_eq, bounds)
 '''
@@ -297,13 +182,10 @@ sigmoids = Sigmoids()
 bin_midpoints = (bins[:-1] + bins[1:]) / 2
 sigmoids.calc(bin_midpoints)
 
-print("Before")
-print(sigmoids.str())
-sigmoids.fit_data(df)
-print("After")
-print(sigmoids.str())
-
-quit()
+# This is how to fit and print sigmoids.
+# sigmoids.fit_data(df)
+# print(sigmoids.str())
+# quit()
 
 # Predict the absolute number of passes for each variable number.
 # The results are numpy 1D arrays.
@@ -325,7 +207,7 @@ print("Suit pass predictions\n")
 for sno in range(NUM_SUITS):
   if results_sno[sno] == 0 and pass_marginal_suit[sno] == 0: continue
   print("{:4d}".format(sno), \
-    "{:16s}".format(suit_info[sno]['text']), \
+    "{:16s}".format(suit_info.get(sno)['text']), \
     "{:16.4f}".format(results_sno[sno]), \
     "{:6d}".format(pass_marginal_suit[sno]))
 print("")
