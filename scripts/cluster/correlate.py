@@ -4,6 +4,7 @@ import itertools
 from itertools import chain
 
 from fit.fitconst import *
+from fit.Sigmoids import Sigmoids
 from passes.Sigmoid import Sigmoid
 
 
@@ -255,7 +256,7 @@ for field in sum_fields:
 # Strength is 0..100 in 0.01 steps.
 bins = np.arange(0, MAX_STRENGTH, STRENGTH_STEP)
 bin_midpoints = (bins[:-1] + bins[1:]) / 2
-print("size", len(bins), NUM_STRENGTH_STEPS)
+print("size", len(bins), NUM_STRENGTH_STEPS, bin_midpoints.shape)
 
 df['bin'] = pd.cut(df['sum'], bins=bins, include_lowest=True, \
   right=False, labels=False)
@@ -304,44 +305,15 @@ hist_sno_reset = hist_sno.reset_index()
 # Easier to call it dno
 hist_sno_reset = hist_sno_reset.rename(columns={'value': 'dno'})
 
-# Apply Sigmoid to histograms
-sigmoids = [[Sigmoid() for _ in range(NUM_VUL)] for _ in range(NUM_POS)]
 
-sigmoid_values = [[[sig.calc(b) for b in bin_midpoints] for sig in pos_sigmoids] for pos_sigmoids in sigmoids]
-
-# Generate all combinations of pos, vul, and bin_midpoints
-pos_vul_bin_combinations = list(itertools.product( \
-  range(NUM_POS), range(NUM_VUL), range(len(bin_midpoints))))
-
-# Flatten the 3D sigmoid_values list into a 1D list
-sigmoid_df = pd.DataFrame({
-    'pos': [item[0] for item in pos_vul_bin_combinations],
-    'vul': [item[1] for item in pos_vul_bin_combinations],
-    'bin': [item[2] for item in pos_vul_bin_combinations],
-    'sigmoid': list(chain.from_iterable(chain.from_iterable(sigmoid_values)))
-})
-
-# print(sigmoid_df)
-# print(sigmoid_df2)
-
-def apply_sigmoid_to_histogram(hist_df, sigmoid_series):
-  # Merging to align the indices
-  melted_hist_df = hist_df.melt(id_vars=['pos', 'vul', 'dno'], value_name='hist_value', var_name='bin')
-
-  merged_df = melted_hist_df.merge(
-      sigmoid_series,
-      on=['pos', 'vul', 'bin'], 
-      how='left'
-  )
-
-  # Multiply 'hist_value' by 'sigmoid' to get the result for each row
-  merged_df['result'] = merged_df['hist_value'] * merged_df['sigmoid']
-    
-  return merged_df.groupby(['pos', 'vul', 'dno']).agg({'result': 'sum'})
+sigmoids = Sigmoids()
+sigmoids.calc(bin_midpoints)
+results_dno_df = sigmoids.hist_to_prediction(hist_dno)
+results_sno_df = sigmoids.hist_to_prediction(hist_sno_reset)
 
 
-results_dno_df = apply_sigmoid_to_histogram(hist_dno, sigmoid_df)
-results_sno_df = apply_sigmoid_to_histogram(hist_sno_reset, sigmoid_df)
+
+
 
 sum_dno = results_dno_df.groupby('dno')['result'].sum()
 results_dno = sum_dno.reindex(range(NUM_DIST), fill_value = 0).values
