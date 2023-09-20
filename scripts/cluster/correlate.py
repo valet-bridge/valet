@@ -79,23 +79,20 @@ passes_pos_vul_dno = df_pos_vul_dno.values
 passes_dno = df_dno['pass'].values
 
 
+# Make histograms of binned strength for each (pos, vul, value).
+hist_dno = df.pivot_table( \
+  index = ['pos', 'vul', 'dno'], \
+  columns = 'bin', \
+  aggfunc = 'size', \
+  fill_value = 0).reset_index()
 
+hist_sno = df_melted.pivot_table( \
+  index = ['pos', 'vul', 'sno'], \
+  columns = 'bin', \
+  aggfunc = 'size', \
+  fill_value = 0).reset_index()
 
-sno_melted = df.melt(id_vars=['pos', 'vul', 'pass', 'bin'], value_vars=['sno1', 'sno2', 'sno3', 'sno4'])
-
-
-# Make a histogram of binned strength for each (pos, vul, value).
-# hist_dno = df.groupby(['pos', 'vul', 'dno', 'bin']).size().unstack(fill_value=0)
-hist_dno = df.pivot_table(index=['pos', 'vul', 'dno'], 
-                          columns='bin', 
-                          aggfunc='size', 
-                          fill_value=0).reset_index()
-
-hist_sno = sno_melted.groupby(['pos', 'vul', 'value', 'bin']).size().unstack(fill_value=0).groupby(level=[0, 1, 2]).sum()
-hist_sno_reset = hist_sno.reset_index()
-# Easier to call it dno
-hist_sno_reset = hist_sno_reset.rename(columns={'value': 'dno'})
-
+hist_sno.rename(columns = {'sno': 'dno'}, inplace = True)
 
 
 # Calculate all sigmoid values that occur in binned histograms.
@@ -107,7 +104,7 @@ sigmoids.calc(bin_midpoints)
 # Predict the absolute number of passes for each variable number.
 # The results are numpy 1D arrays.
 results_dno = sigmoids.hist_to_prediction(hist_dno, NUM_DIST)
-results_sno = sigmoids.hist_to_prediction(hist_sno_reset, NUM_SUITS)
+results_sno = sigmoids.hist_to_prediction(hist_sno, NUM_SUITS)
 
 
 predictions = Variables()
@@ -120,12 +117,26 @@ print(predictions.str(suit_info, dist_info, \
 # print(sigmoids.str())
 # quit()
 
-# So it seems we can calculate the number of passes from sigmoids.
-# We need the sign vector.  And then we need to calculate the gradients
-# by histograms similar to above.  This then gives us the c vector
-# for the LP problem.
-# In the case of box constraints, no lower limit of 0 on the
-# values? Keep moving the boxes, recalculating the gradients, until
-# the solution is interiot with respect to the box constraints.
-# Then make the numpy arrays for adjusting the sigmoid parameters.
-# Probably need to update the strengths in df before adjusting.
+'''
+We are lacking a calculation of the signed gradient for each variable.
+There is a sign for each (pos, vul) combination.
+It depends on the sign of actual minus predicted passes.
+Actual passes are in passes_pos_vul_sno and passes_pos_vul_dno.
+Predicted passes are just the histogram product in sigmoids.
+The absolute gradient (always negative) can be derived from the
+sigmoid values in the same histogram.
+
+do
+  First fit sigmoids to our 10-HCP starting point.
+
+  Then an LP fit:
+  do
+    calculate the gradient around the current solution
+    set up the c vector in the LP problem
+    solve with +/- 0.01 around the current solution
+  until the solution is interior w.r.t. the box bounds
+
+until the LP didn't change anything (much?)
+
+'''
+
