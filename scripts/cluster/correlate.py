@@ -26,10 +26,7 @@ def set_lp_constraints_equal(suit_info, A_eq, b_eq):
 
 
 def set_lp_constraints_box(estimate, step_size, bounds):
-  assert estimate.shape == bounds.shape
-  lower = np.maximum(estimate - step_size, 0)
-  upper = estimate + step_size
-  bounds = list(zip(lower, upper))
+  estimate.set_box_constraints(step_size, bounds)
 
 
 def set_lp_constraints(suit_info, dominances, estimate, step_size, \
@@ -40,41 +37,6 @@ def set_lp_constraints(suit_info, dominances, estimate, step_size, \
   set_lp_constraints_box(estimate, step_size, bounds)
 
 
-def init_solution(suit_info, dist_info, solution):
-  '''Initialize with standard HCP and distribution points.'''
-  for sno in range(NUM_SUITS):
-    solution[sno] = suit_info.get(sno)['hcp']
-  for dno in range(NUM_DIST):
-    solution[NUM_SUITS + dno] = dist_info.get(dno)['hcp']
-
-
-def add_strengths(solution, bins, df):
-  '''Use solution and bins to add exact and binned strength to df.'''
-  suit_indices = np.arange(0, NUM_SUITS)
-  dist_indices = np.arange(0, NUM_DIST)
-
-  # Based on the current "solution", set up some lookup tables in order
-  # to be able to make a sum column.
-  lookup_suit = solution[:NUM_SUITS]
-  lookup_dist = solution[NUM_SUITS:]
-
-  lookup = {
-    'dno': pd.Series(lookup_dist, index = dist_indices),
-    'sno1': pd.Series(lookup_suit, index = suit_indices),
-    'sno2': pd.Series(lookup_suit, index = suit_indices),
-    'sno3': pd.Series(lookup_suit, index = suit_indices),
-    'sno4': pd.Series(lookup_suit, index = suit_indices)
-  }
-
-  df['sum'] = 0
-  for field in ['dno', 'sno1', 'sno2', 'sno3', 'sno4']:
-    df['sum'] += df[field].map(lookup[field])
-
-  # Discretize the sum column
-  df['bin'] = pd.cut(df['sum'], bins = bins, include_lowest = True, \
-    right = False, labels = False)
-
-
 
 # Set up some data-independent tables.
 suit_info = SuitInfo()
@@ -82,8 +44,8 @@ dist_info = DistInfo()
 
 
 # Initialize the solution with standard HCP and distribution points.
-solution = np.zeros(NUM_VAR)
-init_solution(suit_info, dist_info, solution)
+solution = Variables()
+solution.init_by_hcp(suit_info, dist_info)
 
 # Set up the matrix of the linearized LP problem.
 '''
@@ -108,11 +70,9 @@ df = pd.read_csv(SUITDATA_FILE, header = None, \
 # Strength is 0..100 in 0.01 steps.
 bins = np.arange(0, MAX_STRENGTH, STRENGTH_STEP)
 
-# Add sum and bin columns based on dno, sno1 .. sno4.
-add_strengths(solution, bins, df)
+# Add sum and bin columns to df based on dno, sno1 .. sno4.
+solution.add_strengths(bins, df)
 
-
-# print(df)
 
 # Sum up the passes.
 grouped_df_dno = df.groupby(['pos', 'vul', 'dno']).agg({'pass': 'sum'}).unstack(fill_value=0)
@@ -163,11 +123,6 @@ sigmoids = Sigmoids()
 bin_midpoints = (bins[:-1] + bins[1:]) / 2
 sigmoids.calc(bin_midpoints)
 
-# This is how to fit and print sigmoids.
-# sigmoids.fit_data(df)
-# print(sigmoids.str())
-# quit()
-
 # Predict the absolute number of passes for each variable number.
 # The results are numpy 1D arrays.
 results_dno = sigmoids.hist_to_prediction(hist_dno, NUM_DIST)
@@ -176,7 +131,13 @@ results_sno = sigmoids.hist_to_prediction(hist_sno_reset, NUM_SUITS)
 
 predictions = Variables()
 predictions.concatenate(results_sno, results_dno)
-print(predictions.str(suit_info, dist_info, pass_marginal_suit, pass_marginal_dist))
+print(predictions.str(suit_info, dist_info, \
+  pass_marginal_suit, pass_marginal_dist))
+
+# This is how to fit and print sigmoids.
+# sigmoids.fit_data(df)
+# print(sigmoids.str())
+# quit()
 
 # So it seems we can calculate the number of passes from sigmoids.
 # We need the sign vector.  And then we need to calculate the gradients
