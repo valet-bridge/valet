@@ -167,21 +167,40 @@ def set_lp_constraints(suit_info, dominances, estimate, step_size, \
   set_lp_constraints_box(estimate, step_size, bounds)
 
 
-def apply_sigmoid(hist, sigmoids, bin_midpoints, extended_midpoints):
-  # This function computes the sum of the bin count times the sigmoid 
-  # function for each bin.  It expects the histogram to be indexed by 
-  # (pos, vul, field_value, bin), where bin represents the discretized 
-  # 'sum' value.
-    
-  # Compute the sigmoid function for the midpoint of each bin
-  results = []
-  for (pos, vul), group in hist.groupby(level=[0, 1]):
-    sigmoid_result = sigmoids[pos][vul](extended_midpoints)
-    result = (group.values * sigmoid_result).sum(axis=1)
-    results.append(pd.Series(result, index=group.index.droplevel([0, 1])))
-    
-  # Concatenate the results and return
-  return pd.concat(results)
+def init_solution(suit_info, dist_info, solution):
+  '''Initialize with standard HCP and distribution points.'''
+  for sno, si in enumerate(suit_info):
+    solution[sno] = si['hcp']
+  for dno, di in enumerate(dist_info):
+    solution[NUM_SUITS + dno] = di['hcp']
+
+
+def add_strengths(solution, bins, df):
+  '''Use solution and bins to add exact and binned strength to df.'''
+  suit_indices = np.arange(0, NUM_SUITS)
+  dist_indices = np.arange(0, NUM_DIST)
+
+  # Based on the current "solution", set up some lookup tables in order
+  # to be able to make a sum column.
+  lookup_suit = [solution[index] for index in suit_indices]
+  lookup_dist = [solution[NUM_SUITS + index] for index in dist_indices]
+
+  lookup = {
+    'dno': pd.Series(lookup_dist, index = dist_indices),
+    'sno1': pd.Series(lookup_suit, index = suit_indices),
+    'sno2': pd.Series(lookup_suit, index = suit_indices),
+    'sno3': pd.Series(lookup_suit, index = suit_indices),
+    'sno4': pd.Series(lookup_suit, index = suit_indices)
+  }
+
+  df['sum'] = 0
+  for field in ['dno', 'sno1', 'sno2', 'sno3', 'sno4']:
+    df['sum'] += df[field].map(lookup[field])
+
+  # Discretize the sum column
+  df['bin'] = pd.cut(df['sum'], bins = bins, include_lowest = True, \
+    right = False, labels = False)
+
 
 
 # Set up some data-independent tables.
@@ -197,12 +216,9 @@ dominances = []
 set_suit_data(suit_info, dominances)
 
 
-# Set up a vector that will become the solution.
+# Initialize the solution with standard HCP and distribution points.
 solution = np.zeros(NUM_VAR)
-for sno, si in enumerate(suit_info):
-  solution[sno] = si['hcp']
-for dno, di in enumerate(dist_info):
-  solution[NUM_SUITS + dno] = di['hcp']
+init_solution(suit_info, dist_info, solution)
 
 # Set up the matrix of the linearized LP problem.
 '''
@@ -218,48 +234,17 @@ set_lp_constraints(suit_info, dominances, solution, step_size, \
   A_ub, b_ub, A_eq, b_eq, bounds)
 '''
 
-# Set up the sigmoids.
-# sigmoids = [[Sigmoid() for _ in range(NUM_VUL)] for _ in range(NUM_POS)]
-
-
 # Read in the data of hands.
 df = pd.read_csv(SUITDATA_FILE, header = None, \
   names = ['tag', 'pos', 'vul', 'pass', 'dno', \
   'sno1', 'sno2', 'sno3', 'sno4'])
 
-
-# Based on the current "solution", set up some lookup tables in order
-# to be able to make a sum column.
-
-suit_indices = np.arange(0, NUM_SUITS)
-dist_indices = np.arange(0, NUM_DIST)
-
-lookup_suit = [solution[index] for index in suit_indices]
-lookup_dist = [solution[NUM_SUITS + index] for index in dist_indices]
-
-lookup = {
-  'dno': pd.Series(lookup_dist, index = dist_indices),
-  'sno1': pd.Series(lookup_suit, index = suit_indices),
-  'sno2': pd.Series(lookup_suit, index = suit_indices),
-  'sno3': pd.Series(lookup_suit, index = suit_indices),
-  'sno4': pd.Series(lookup_suit, index = suit_indices)
-}
-
-df['sum'] = 0
-sum_fields = ['dno', 'sno1', 'sno2', 'sno3', 'sno4']
-for field in sum_fields:
-  df['sum'] += df[field].map(lookup[field])
-
-
-# Discretize the sum column
-
 # Strength is 0..100 in 0.01 steps.
 bins = np.arange(0, MAX_STRENGTH, STRENGTH_STEP)
-bin_midpoints = (bins[:-1] + bins[1:]) / 2
-print("size", len(bins), NUM_STRENGTH_STEPS, bin_midpoints.shape)
 
-df['bin'] = pd.cut(df['sum'], bins=bins, include_lowest=True, \
-  right=False, labels=False)
+# Add sum and bin columns based on dno, sno1 .. sno4.
+add_strengths(solution, bins, df)
+
 
 # print(df)
 
@@ -306,11 +291,15 @@ hist_sno_reset = hist_sno.reset_index()
 hist_sno_reset = hist_sno_reset.rename(columns={'value': 'dno'})
 
 
+# Calculate all sigmoid values that occur in binned histograms.
 sigmoids = Sigmoids()
+
+bin_midpoints = (bins[:-1] + bins[1:]) / 2
 sigmoids.calc(bin_midpoints)
+
+# Predict the absolute number of passes for each (pos, vul, variable no.)
 results_dno_df = sigmoids.hist_to_prediction(hist_dno)
 results_sno_df = sigmoids.hist_to_prediction(hist_sno_reset)
-
 
 
 
