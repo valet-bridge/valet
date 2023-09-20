@@ -35,38 +35,53 @@ bins = np.arange(0, MAX_STRENGTH, STRENGTH_STEP)
 # Add sum and bin columns to df based on dno, sno1 .. sno4.
 solution.add_strengths(bins, df)
 
+# Melt the sno1..sno4 fields into a single sno field.
+df_melted = df.melt(\
+  id_vars = ['pos', 'vul', 'pass', 'dno', 'bin'], \
+  value_vars = ['sno1', 'sno2', 'sno3', 'sno4'], \
+  value_name = 'sno')
 
 
-# Sum up the passes.
-grouped_df_dno = df.groupby(['pos', 'vul', 'dno']).agg({'pass': 'sum'}).unstack(fill_value=0)
-pass_matrix_dist = grouped_df_dno.values
+# Count the actual passes by (pos, vul, sno) and only by sno.
+df_pos_vul_sno = df_melted.groupby( \
+  ['pos', 'vul', 'sno']).agg({'pass' : 'sum'}).unstack(fill_value = 0)
 
-# Sum over pos and vul, mostly for statistics.
-full_dno_index = pd.Index(range(NUM_DIST))
-df_without_dno = grouped_df_dno.groupby(level=['pos', 'vul']).sum()
-pass_marginal_series = df_without_dno.sum(axis=0)
+# Here we must re-index as some of the NUM_SUITS options may be missing.
+df_sno = df_melted.groupby('sno').agg({'pass': 'sum'}).reindex( \
+  np.arange(NUM_SUITS), fill_value = 0)
 
-# Simplify the index to only contain 'dno' values
-pass_marginal_dno_series = pass_marginal_series.droplevel(0)
+# Count the number of chances to pass by (pos, vul, sno).
+hist_pos_vul_sno = df_melted.groupby(['pos', 'vul', 'sno']).size()
 
-# Reindexing to get the desired numpy array
-pass_marginal_dist = \
-  pass_marginal_dno_series.reindex(full_dno_index, fill_value=0).values
+# Call it dno as Sigmoids expects this column name in both cases.
+hist_pos_vul_sno.index.rename(names = {'sno': 'dno'}, inplace = True)
+
+# The passes as numpy
+passes_pos_vul_sno = df_pos_vul_sno.values
+passes_sno = df_sno['pass'].values
+
+
+# Count the actual passes by (pos, vul, dno) and only by dno.
+# We start from df, not from df_melted, as df_melted has the same dno
+# appearing four times (once for sno1..sno4).
+df_pos_vul_dno = df.groupby( \
+  ['pos', 'vul', 'dno']).agg({'pass' : 'sum'}).unstack(fill_value = 0)
+
+# Here we must re-index as some of the NUM_DIST options may be missing.
+df_dno = df.groupby('dno').agg({'pass': 'sum'}).reindex( \
+  np.arange(NUM_DIST), fill_value = 0)
+
+# Count the number of chances to pass by (pos, vul, dno).
+hist_pos_vul_dno = df.groupby(['pos', 'vul', 'dno']).size()
+
+# The passes as numpy
+passes_pos_vul_dno = df_pos_vul_dno.values
+passes_dno = df_dno['pass'].values
+
+
 
 
 sno_melted = df.melt(id_vars=['pos', 'vul', 'pass', 'bin'], value_vars=['sno1', 'sno2', 'sno3', 'sno4'])
-grouped_df_sno = sno_melted.groupby(['pos', 'vul', 'value']).agg({'pass':'sum'}).unstack(fill_value=0)
-pass_matrix_suit = grouped_df_sno.values
-
-
-
-# Again sum over pos and vul, mostly for statistics.
-full_sno_index = pd.Index(range(NUM_SUITS))
-df_without_sno = grouped_df_sno.groupby(level=['pos', 'vul']).sum()
-pass_marginal_sno_series = df_without_sno.sum(axis=0)
-pass_marginal_sno_series = pass_marginal_sno_series.droplevel(0)
-pass_marginal_suit = \
-  pass_marginal_sno_series.reindex(full_sno_index, fill_value=0).values
 
 
 # Make a histogram of binned strength for each (pos, vul, value).
@@ -80,6 +95,7 @@ hist_sno = sno_melted.groupby(['pos', 'vul', 'value', 'bin']).size().unstack(fil
 hist_sno_reset = hist_sno.reset_index()
 # Easier to call it dno
 hist_sno_reset = hist_sno_reset.rename(columns={'value': 'dno'})
+
 
 
 # Calculate all sigmoid values that occur in binned histograms.
@@ -97,7 +113,7 @@ results_sno = sigmoids.hist_to_prediction(hist_sno_reset, NUM_SUITS)
 predictions = Variables()
 predictions.concatenate(results_sno, results_dno)
 print(predictions.str(suit_info, dist_info, \
-  pass_marginal_suit, pass_marginal_dist))
+  passes_sno, passes_dno))
 
 # This is how to fit and print sigmoids.
 # sigmoids.fit_data(df)
