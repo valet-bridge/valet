@@ -65,7 +65,9 @@ class Sigmoid:
     self.mean, self.divisor = params
 
     self.sdev = np.sqrt(np.diag(pcov))
-    self.errsq = np.sum((y_data - self.calc(x_data)) ** 2)
+    sum = np.sum(np.reciprocal(sigma))
+    self.errsq = \
+      np.sqrt(np.sum(((y_data - self.calc(x_data)) / sigma) ** 2)) / sum
 
 
   def calc_both(self, x):
@@ -78,10 +80,10 @@ class Sigmoid:
   
   def str_header(self):
     '''Returns a header.'''
-    s = "{:8s}".format("Mean") + "{:8s}".format("Sigma") + \
-      "{:8s}".format("sd1") + "{:8s}".format("sd2") + \
-      "{:8s}".format("sqerr")
-    returns
+    s = "{:>8s}".format("Mean") + "{:>8s}".format("Sigma") + \
+      "{:>8s}".format("sd1") + "{:>8s}".format("sd2") + \
+      "{:>8s}".format("averr")
+    return s
   
 
   def str(self):
@@ -90,6 +92,6 @@ class Sigmoid:
       "{:8.3f}".format(self.divisor) + \
       "{:8.3f}".format(self.sdev[0]) + \
       "{:8.3f}".format(self.sdev[1]) + \
-      "{:8.3f}".format(self.sqerr)
+      "{:8.3f}".format(self.errsq)
     return s
 

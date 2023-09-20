@@ -58,13 +58,13 @@ class Sigmoids:
   
   def extract_vectors(self, grouped_df):
     '''Extracts vectors for a given pos, vul grouping.'''
-    x_data = grouped_df['bin'].unique() / 100.
+    df = grouped_df.groupby('bin').agg(
+      pass_count = ('pass', 'sum'),
+      total_count = ('pass', 'size')).reset_index()
 
-    bin_counts = grouped_df['bin'].value_counts()
-    sigma = 1 / bin_counts.reindex(grouped_df['bin']).values
-
-    avg_pass = grouped_df.groupby('bin')['pass'].mean()
-    y_data = avg_pass.reindex(grouped_df['bin']).values
+    x_data = df['bin'].values / 100.
+    sigma = (1 / df['total_count']).values
+    y_data = (df['pass_count'] / df['total_count']).values
 
     return x_data, sigma, y_data
 
@@ -79,14 +79,14 @@ class Sigmoids:
 
   def str(self):
     '''Returns a string of the sigmoid parameters.'''
-    s = "{:6s}".format("pos") + \
-      "{:6s}".format("vul") + \
-      self.sigmoids[0].str_header()
+    s = "{:>6s}".format("pos") + \
+      "{:>6s}".format("vul") + \
+      self.sigmoids[0][0].str_header() + "\n"
 
     for pos in range(NUM_POS):
       for vul in range(NUM_VUL):
         s += "{:6d}".format(pos) + "{:6d}".format(vul) + \
-          self.sigmoids[pos][vul].str()
+          self.sigmoids[pos][vul].str() + "\n"
 
     return s
         

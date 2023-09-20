@@ -297,6 +297,14 @@ sigmoids = Sigmoids()
 bin_midpoints = (bins[:-1] + bins[1:]) / 2
 sigmoids.calc(bin_midpoints)
 
+print("Before")
+print(sigmoids.str())
+sigmoids.fit_data(df)
+print("After")
+print(sigmoids.str())
+
+quit()
+
 # Predict the absolute number of passes for each variable number.
 # The results are numpy 1D arrays.
 results_dno = sigmoids.hist_to_prediction(hist_dno, NUM_DIST)
