@@ -127,8 +127,9 @@ class SuitInfo:
 
   def set_lp_upper_constraints(self, A_ub, b_ub):
     for index, dom in enumerate(self.dominances):
-      A_ub[index][dom['dominant']] = 1
-      A_ub[index][dom['dominated']] = -1
+      # If the jack dominates the ten, then -jack + ten <= 0
+      A_ub[index][dom['dominant']] = -1
+      A_ub[index][dom['dominated']] = 1
       b_ub[index] = 0
 
   
@@ -136,7 +137,7 @@ class SuitInfo:
     for sno, si in enumerate(self.suit_info):
       A_eq[0][sno] = si['count']
 
-    b_eq[0] = (2 << BRIDGE_TRICKS) * 10 / 2 # Average of 5 HCP
+    b_eq[0] = (1 << BRIDGE_TRICKS) * 10 / 2 # Average of 5 HCP
 
 
   def set(self):

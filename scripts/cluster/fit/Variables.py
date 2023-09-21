@@ -47,12 +47,12 @@ class Variables:
       right = False, labels = False)
 
   
-  def set_box_constraints(self, step_size, bounds):
+  def set_box_constraints(self, step_size):
     '''Set bounds to +/- step_size around variables.'''
 
     # In case we want >= 0 as well.
     # lower = np.maximum(self.data - step_size, 0)
-    bounds = list(zip(self.data - step_size, self.data + step_size))
+    return list(zip(self.data - step_size, self.data + step_size))
 
   
   def concatenate(self, suit_variables, dist_variables):

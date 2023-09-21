@@ -22,7 +22,7 @@ class LPsolver:
 
   
   def set_box_constraints(self, estimate, step_size):
-    estimate.set_box_constraints(step_size, self.bounds)
+    self.bounds = estimate.set_box_constraints(step_size)
 
 
   def set_constraints(self, suit_info, estimate, step_size):
@@ -117,6 +117,43 @@ class LPsolver:
 
 
   def run_once(self):
+    '''
+    print("c vector")
+    for i in range(len(self.c)):
+      if self.c[i]:
+        print(i, self.c[i])
+    print("\n")
+
+    print("A_ub")
+    for i in range(len(self.A_ub)):
+      for j in range(len(self.A_ub[0])):
+        if (self.A_ub[i][j]):
+          print(i, j, self.A_ub[i][j])
+    print("\n")
+
+    print("b_ub")
+    for i in range(len(self.b_ub)):
+      if self.b_ub[i]:
+        print(i, self.b_ub[i])
+    print("\n")
+
+    print("A_eq")
+    print(self.A_eq)
+    print("\n")
+
+    print("b_eq")
+    print(self.b_eq)
+    for i in range(len(self.b_eq)):
+      if self.b_eq[i]:
+        print(i, self.b_eq[i])
+    print("\n")
+
+    print("bounds")
+    for i in range(len(self.bounds)):
+      print(i, self.bounds[i])
+    print("\n")
+    '''
+    
     result = linprog(self.c, A_ub = self.A_ub, b_ub = self.b_ub, \
       A_eq = self.A_eq, b_eq = self.b_eq, bounds = self.bounds)
     print(result.message)
