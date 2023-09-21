@@ -60,14 +60,23 @@ class Sigmoids:
     # Add them up.  For each (pos, vul, dno) we now have a result.
     sum_var_no_df = merged_df.groupby(['dno']).agg({'result': 'sum'})
 
+    prediction = \
+      sum_var_no_df['result'].reindex(range(num_vars), fill_value = 0) \
+      .values
+
     # Same for the derivative.
     merged_df['derivative'] = \
       merged_df['hist_value'] * merged_df['deriv']
 
-    remerged_df = merged_df.merge(actual_df.reset_index(),
+    # Add up the derivatives for (pos, vul, dno).
+    gradient_df = merged_df \
+      .groupby(['pos', 'vul', 'dno']) \
+      .agg({'derivative': 'sum', 'result': 'sum'})
+
+    remerged_df = gradient_df.merge(actual_df.reset_index(),
       on = ['pos', 'vul', 'dno'], 
       how ='left')
-      
+
     # Explanation of polarity: Let's say 'result' is 100 and 'pass' is 80.
     # There are more predicted than actual passes.  Therefore if we 
     # increase the value of the corresponding value, we move further to
@@ -76,21 +85,21 @@ class Sigmoids:
     # The LP optimization is a minimization.  Therefore inreasing the
     # variable should make the LP objective function more negative.
     # Therefore the gradient should be negative.
+    # But the actual sigmoid gradient is always negative, so we
+    # make the sign positive in this case.
 
     remerged_df['sign'] = \
-      np.sign(remerged_df['pass'] - remerged_df['result'])
+      np.sign(remerged_df['result'] - remerged_df['pass'])
 
     remerged_df['gradient'] = remerged_df['sign'] * \
-      remerged_df['hist_value'] * merged_df['deriv']
-
-    prediction = \
-      sum_var_no_df['result'].reindex(range(num_vars), fill_value = 0).values
+      remerged_df['derivative']
 
     # Add them up.  For each (pos, vul, dno) we now have a result.
     gradient_df = remerged_df.groupby(['dno']).agg({'gradient': 'sum'})
 
     gradient = \
-      gradient_df['gradient'].reindex(range(num_vars), fill_value = 0).values
+      gradient_df['gradient'].reindex(range(num_vars), fill_value = 0) \
+      .values
 
     return prediction, gradient
 

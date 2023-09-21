@@ -101,6 +101,10 @@ hist_sno.rename(columns = {'sno': 'dno'}, inplace = True)
 # Calculate all sigmoid values that occur in binned histograms.
 sigmoids = Sigmoids()
 
+# Fit the sigmoids.
+sigmoids.fit_data(df)
+# print(sigmoids.str())
+
 bin_midpoints = (bins[:-1] + bins[1:]) / 2
 sigmoids.calc(bin_midpoints)
 
@@ -117,20 +121,17 @@ predictions.concatenate(results_sno, results_dno)
 print(predictions.str(suit_info, dist_info, \
   passes_sno, passes_dno))
 
+gradients = Variables()
+gradients.concatenate(gradient_sno, gradient_dno)
+print(gradients.str(suit_info, dist_info, \
+  passes_sno, passes_dno))
+
 # This is how to fit and print sigmoids.
 # sigmoids.fit_data(df)
 # print(sigmoids.str())
 # quit()
 
 '''
-We are lacking a calculation of the signed gradient for each variable.
-There is a sign for each (pos, vul) combination.
-It depends on the sign of actual minus predicted passes.
-Actual passes are in passes_pos_vul_sno and passes_pos_vul_dno.
-Predicted passes are just the histogram product in sigmoids.
-The absolute gradient (always negative) can be derived from the
-sigmoid values in the same histogram.
-
 do
   First fit sigmoids to our 10-HCP starting point.
 
@@ -142,6 +143,8 @@ do
   until the solution is interior w.r.t. the box bounds
 
 until the LP didn't change anything (much?)
+
+Maybe sigma in the curve_fit is more like sqrt(n) than n?
 
 '''
 
