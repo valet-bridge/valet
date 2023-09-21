@@ -49,7 +49,6 @@ class Variables:
   
   def set_box_constraints(self, step_size, bounds):
     '''Set bounds to +/- step_size around variables.'''
-    assert self.data.shape == bounds.shape
 
     # In case we want >= 0 as well.
     # lower = np.maximum(self.data - step_size, 0)

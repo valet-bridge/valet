@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+from scipy.optimize import linprog
 
 from fit.fitconst import *
 from fit.SuitInfo import SuitInfo
@@ -17,7 +18,7 @@ class LPsolver:
     self.b_ub = np.zeros(NUM_DOMINANCES)
     self.A_eq = np.zeros((1, NUM_VAR))
     self.b_eq = np.zeros(1)
-    self.bounds = np.zeros(NUM_VAR)
+    self.bounds = []
 
   
   def set_box_constraints(self, estimate, step_size):
@@ -113,6 +114,14 @@ class LPsolver:
       sigmoids.hist_to_prediction(hist_sno, df_pos_vul_sno, NUM_SUITS)
 
     return gradient_sno, gradient_dno
+
+
+  def run_once(self):
+    result = linprog(self.c, A_ub = self.A_ub, b_ub = self.b_ub, \
+      A_eq = self.A_eq, b_eq = self.b_eq, bounds = self.bounds)
+    print(result.message)
+
+    return np.array(result.x)
     
 
   def run_until_interior(self, df, sigmoids, bins, solution):
@@ -135,16 +144,19 @@ class LPsolver:
 
       self.set_objective(gradient_sno, gradient_dno)
 
-      new_solution = self.run()
+      new_solution = self.run_once()
 
       iter += 1
       print("LP iteration", iter, "complete")
+      print(new_solution)
+      quit()
 
       change = self.calc_change(solution, new_solution)
 
       if self.is_interior(new_solution):
         break
 
+      solution = new_solution
 
     return change
 
