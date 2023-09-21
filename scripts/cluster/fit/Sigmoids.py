@@ -21,6 +21,12 @@ class Sigmoids:
       for pos_val_sigmoid in pos_sigmoids] \
       for pos_sigmoids in self.sigmoids]
 
+    # The derivatives can actually also be calculates from the 
+    # sigmoid values.  Check later on whether this is a speed issue.
+    derivatives = [[pos_val_sigmoid.calc_derivative(x_data)
+      for pos_val_sigmoid in pos_sigmoids] \
+      for pos_sigmoids in self.sigmoids]
+
     # Generate all combinations of pos, vul, and bin_midpoints
     pos_vul_bin_combinations = list(itertools.product( \
       range(NUM_POS), range(NUM_VUL), range(len(x_data))))
@@ -30,11 +36,12 @@ class Sigmoids:
         'pos': [item[0] for item in pos_vul_bin_combinations],
         'vul': [item[1] for item in pos_vul_bin_combinations],
         'bin': [item[2] for item in pos_vul_bin_combinations],
-        'sigmoid': list(chain.from_iterable(chain.from_iterable(values)))
+        'sigmoid': list(chain.from_iterable(chain.from_iterable(values))),
+        'deriv': list(chain.from_iterable(chain.from_iterable(derivatives)))
     })
 
   
-  def hist_to_prediction(self, hist_df, num_vars):
+  def hist_to_prediction(self, hist_df, actual_df, num_vars):
     '''Adds up sigmoid values for each (pos, vul, dno) in dataframe.'''
 
     # Make another dataframe where the bin counts go into hist_value
@@ -42,7 +49,7 @@ class Sigmoids:
     melted_df = hist_df.melt(id_vars=['pos', 'vul', 'dno'], \
       value_name = 'hist_value', var_name = 'bin')
 
-    # Align the sigmoid values in self.ff with the melted frame.
+    # Align the sigmoid values in self.df with the melted frame.
     merged_df = melted_df.merge(self.df, 
       on = ['pos', 'vul', 'bin'], 
       how ='left')
@@ -51,9 +58,41 @@ class Sigmoids:
     merged_df['result'] = merged_df['hist_value'] * merged_df['sigmoid']
 
     # Add them up.  For each (pos, vul, dno) we now have a result.
-    sum_var_no = merged_df.groupby(['dno']).agg({'result': 'sum'})
+    sum_var_no_df = merged_df.groupby(['dno']).agg({'result': 'sum'})
 
-    return sum_var_no['result'].reindex(range(num_vars), fill_value = 0).values
+    # Same for the derivative.
+    merged_df['derivative'] = \
+      merged_df['hist_value'] * merged_df['deriv']
+
+    remerged_df = merged_df.merge(actual_df.reset_index(),
+      on = ['pos', 'vul', 'dno'], 
+      how ='left')
+      
+    # Explanation of polarity: Let's say 'result' is 100 and 'pass' is 80.
+    # There are more predicted than actual passes.  Therefore if we 
+    # increase the value of the corresponding value, we move further to
+    # the right on the sigmoid which decreases the prediction and brings
+    # it closer to the actual value.  
+    # The LP optimization is a minimization.  Therefore inreasing the
+    # variable should make the LP objective function more negative.
+    # Therefore the gradient should be negative.
+
+    remerged_df['sign'] = \
+      np.sign(remerged_df['pass'] - remerged_df['result'])
+
+    remerged_df['gradient'] = remerged_df['sign'] * \
+      remerged_df['hist_value'] * merged_df['deriv']
+
+    prediction = \
+      sum_var_no_df['result'].reindex(range(num_vars), fill_value = 0).values
+
+    # Add them up.  For each (pos, vul, dno) we now have a result.
+    gradient_df = remerged_df.groupby(['dno']).agg({'gradient': 'sum'})
+
+    gradient = \
+      gradient_df['gradient'].reindex(range(num_vars), fill_value = 0).values
+
+    return prediction, gradient
 
   
   def extract_vectors(self, grouped_df):

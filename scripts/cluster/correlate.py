@@ -44,7 +44,10 @@ df_melted = df.melt(\
 
 # Count the actual passes by (pos, vul, sno) and only by sno.
 df_pos_vul_sno = df_melted.groupby( \
-  ['pos', 'vul', 'sno']).agg({'pass' : 'sum'}).unstack(fill_value = 0)
+  ['pos', 'vul', 'sno']).agg({'pass' : 'sum'})
+
+# Rename from sno to dno to fit with Sigmoids (hist_to_prediction).
+df_pos_vul_sno.index.names = ['pos', 'vul', 'dno']
 
 # Here we must re-index as some of the NUM_SUITS options may be missing.
 df_sno = df_melted.groupby('sno').agg({'pass': 'sum'}).reindex( \
@@ -57,7 +60,7 @@ hist_pos_vul_sno = df_melted.groupby(['pos', 'vul', 'sno']).size()
 hist_pos_vul_sno.index.rename(names = {'sno': 'dno'}, inplace = True)
 
 # The passes as numpy
-passes_pos_vul_sno = df_pos_vul_sno.values
+passes_pos_vul_sno = df_pos_vul_sno.unstack(fill_value = 0).values
 passes_sno = df_sno['pass'].values
 
 
@@ -65,7 +68,7 @@ passes_sno = df_sno['pass'].values
 # We start from df, not from df_melted, as df_melted has the same dno
 # appearing four times (once for sno1..sno4).
 df_pos_vul_dno = df.groupby( \
-  ['pos', 'vul', 'dno']).agg({'pass' : 'sum'}).unstack(fill_value = 0)
+  ['pos', 'vul', 'dno']).agg({'pass' : 'sum'})
 
 # Here we must re-index as some of the NUM_DIST options may be missing.
 df_dno = df.groupby('dno').agg({'pass': 'sum'}).reindex( \
@@ -75,7 +78,7 @@ df_dno = df.groupby('dno').agg({'pass': 'sum'}).reindex( \
 hist_pos_vul_dno = df.groupby(['pos', 'vul', 'dno']).size()
 
 # The passes as numpy
-passes_pos_vul_dno = df_pos_vul_dno.values
+passes_pos_vul_dno = df_pos_vul_dno.unstack(fill_value = 0).values
 passes_dno = df_dno['pass'].values
 
 
@@ -103,8 +106,10 @@ sigmoids.calc(bin_midpoints)
 
 # Predict the absolute number of passes for each variable number.
 # The results are numpy 1D arrays.
-results_dno = sigmoids.hist_to_prediction(hist_dno, NUM_DIST)
-results_sno = sigmoids.hist_to_prediction(hist_sno, NUM_SUITS)
+results_dno, gradient_dno = \
+  sigmoids.hist_to_prediction(hist_dno, df_pos_vul_dno, NUM_DIST)
+results_sno, gradient_sno = \
+  sigmoids.hist_to_prediction(hist_sno, df_pos_vul_sno, NUM_SUITS)
 
 
 predictions = Variables()
