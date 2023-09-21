@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import time
 
 from fit.fitconst import *
 from fit.SuitInfo import SuitInfo
@@ -19,12 +20,15 @@ solution.init_by_hcp(suit_info, dist_info)
 
 # Set up the constraints of the linearized LP problem.
 lp_solver = LPsolver()
-lp_solver.set_constraints(suit_info, solution, 0.01)
+lp_solver.set_constraints(suit_info, dist_info, solution, 0.01)
 
 # Read in the data of hands.
+start_time = time.time()
 df = pd.read_csv(SUITDATA_FILE, header = None, \
   names = ['tag', 'pos', 'vul', 'pass', 'dno', \
   'sno1', 'sno2', 'sno3', 'sno4'])
+end_time = time.time()
+# print("CSV read time", "{:.4f}".format(end_time - start_time))
 
 # Strength is 0..100 in 0.01 steps.
 bins = np.arange(0, MAX_STRENGTH, STRENGTH_STEP)
@@ -37,10 +41,15 @@ sigmoids = Sigmoids()
 iter_no = 0
 
 while True: # Sigmoid fit followed by linearized LP
+  print("Starting overall iteration", iter_no)
+  print("----------------------------\n")
 
   # Fit the sigmoids.
+  start_time = time.time()
   sigmoids.fit_data(df)
-  # print(sigmoids.str())
+  end_time = time.time()
+  # print(" Sigmoid fit time", "{:.4f}".format(end_time - start_time))
+  print(sigmoids.str())
 
   # Recalculate all sigmoid values that occur in binned histograms,
   # as the sigmoid parameters have changed.
@@ -51,7 +60,16 @@ while True: # Sigmoid fit followed by linearized LP
 
   iter_no += 1
 
+  print(solution.str_simple(suit_info, dist_info))
+
   # TODO More like a condition on change.
-  if iter_no == 3:
+  if iter_no == 200:
     break
 
+
+# sqrt(n) in sigma?
+
+# Some constants being recalculated (#passes actual)
+
+# Force the distribution HCP to stay at the same average
+# Probably weight them by frequency to keep the drift down

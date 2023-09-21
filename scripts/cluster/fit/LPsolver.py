@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import time
 from scipy.optimize import linprog
 
 from fit.fitconst import *
@@ -16,8 +17,8 @@ class LPsolver:
     self.c = np.zeros(NUM_VAR)
     self.A_ub = np.zeros((NUM_DOMINANCES, NUM_VAR))
     self.b_ub = np.zeros(NUM_DOMINANCES)
-    self.A_eq = np.zeros((1, NUM_VAR))
-    self.b_eq = np.zeros(1)
+    self.A_eq = np.zeros((2, NUM_VAR))
+    self.b_eq = np.zeros(2)
     self.bounds = []
 
   
@@ -25,12 +26,15 @@ class LPsolver:
     self.bounds = estimate.set_box_constraints(step_size)
 
 
-  def set_constraints(self, suit_info, estimate, step_size):
+  def set_constraints(self, suit_info, dist_info, estimate, step_size):
     # Dominances
     suit_info.set_lp_upper_constraints(self.A_ub, self.b_ub)
 
     # Weighted average of 5 points per suit.
     suit_info.set_lp_equal_constraints(self.A_eq, self.b_eq)
+
+    # Sum (unweighted) of distribution HCP to remain constant.
+    dist_info.set_lp_equal_constraints(self.A_eq, self.b_eq)
 
     # Limits of +/- 1 step_size.
     self.set_box_constraints(estimate, step_size)
@@ -159,6 +163,32 @@ class LPsolver:
     print(result.message)
 
     return np.array(result.x)
+
+
+  def calc_change(self, solution, new_solution):
+    
+    num_changes = 0
+    changes_var = 0
+    change_obj = 0
+    num_interior = 0
+
+    for i in range(NUM_VAR):
+      s0 = solution.data[i]
+      s1 = new_solution.data[i]
+      b0 = self.bounds[i][0]
+      b1 = self.bounds[i][1]
+
+      delta = abs(s0-s1)
+      if (delta > 1.e-6):
+        num_changes += 1
+      
+      changes_var += delta
+      if (s1-b0 > 1.e-6 and b1-s1 > 1.e-6):
+        num_interior += 1
+
+    change_obj = self.c @ (solution.data - new_solution.data)
+
+    return num_changes, changes_var, change_obj, num_interior
     
 
   def run_until_interior(self, df, sigmoids, bins, solution):
@@ -169,32 +199,54 @@ class LPsolver:
     # recalculated.
 
     iter = 0
+    solution0 = solution
+    new_solution = Variables()
 
     while True:
 
       self.set_box_constraints(solution, 0.01)
 
+      start_time = time.time()
       solution.add_strengths(bins, df)
+      end_time = time.time()
+      # print("add_strengths time", "{:.4f}".format(end_time - start_time))
 
+      start_time = time.time()
       gradient_sno, gradient_dno = self.calc_gradients( \
         df, sigmoids, bins, solution)
+      end_time = time.time()
+      # print("calc_gradients time", "{:.4f}".format(end_time - start_time))
 
       self.set_objective(gradient_sno, gradient_dno)
 
-      new_solution = self.run_once()
+      start_time = time.time()
+      new_solution.data = self.run_once()
+      end_time = time.time()
+      # print("one LP iter time", "{:.4f}".format(end_time - start_time))
+
 
       iter += 1
-      print("LP iteration", iter, "complete")
-      print(new_solution)
-      quit()
+      print("LP iteration", "{:12d}".format(iter))
 
-      change = self.calc_change(solution, new_solution)
+      num_changes, changes_var, change_obj, num_interior = \
+        self.calc_change(solution, new_solution)
 
-      if self.is_interior(new_solution):
+      print("num_changes ", "{:12d}".format(num_changes))
+      print("changes_var ", "{:12.4f}".format(changes_var))
+      print("change_obj  ", "{:12.4f}".format(change_obj))
+      print("num_interior", "{:12d}".format(num_interior), "\n")
+
+      solution.data = new_solution.data
+
+      if num_interior == NUM_VAR:
         break
 
-      solution = new_solution
+      if iter == 10:
+        break
 
-    return change
+    num_changes, changes_var, change_obj, num_interior = \
+      self.calc_change(solution0, new_solution)
+
+    return change_obj
 
 

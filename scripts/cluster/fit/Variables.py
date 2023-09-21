@@ -84,3 +84,21 @@ class Variables:
     return s
 
 
+  def str_simple(self, suit_info, dist_info):
+    s = "Distribution variables\n\n"
+    for dno in range(NUM_DIST):
+      dv = self.data[dno + NUM_SUITS]
+      s += "{:4d}".format(dno) + " " + \
+        "{:10s}".format(dist_info.get(dno)['text']) + " " + \
+        "{:10.4f}".format(dv) + " " + "\n"
+
+    s += "\nSuit variables\n\n"
+    for sno in range(NUM_SUITS):
+      sv = self.data[sno]
+      s += "{:4d}".format(sno) + " " + \
+        "{:16s}".format(suit_info.get(sno)['text']) + " " + \
+        "{:16.4f}".format(sv) + " " + "\n"
+    
+    return s
+
+
