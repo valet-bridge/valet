@@ -129,8 +129,8 @@ class SuitInfo:
               'dominated': self.suit_list[length][new_tops]['sno']})
       
         # It is possible to turn a nine into an x when there is an x free.
-        if (bits[0] and self.count_ones(tops) > \
-            length + BRIDGE_TRICKS - NUM_TOPS):
+        if (bits[0] and self.count_ones(tops) <= \
+            length - NUM_TOPS - BRIDGE_TRICKS):
           new_tops = tops
           new_tops ^= 1;
           self.dominances.append({ \
@@ -147,10 +147,14 @@ class SuitInfo:
 
   
   def set_lp_equal_constraints(self, A_eq, b_eq):
-    for sno, si in enumerate(self.suit_info):
-      A_eq[0][sno] = si['count']
+    sum = np.zeros(BRIDGE_TRICKS+1)
 
-    b_eq[0] = (1 << BRIDGE_TRICKS) * 10 / 2 # Average of 5 HCP
+    for sno, si in enumerate(self.suit_info):
+      A_eq[si['length']][sno] = si['count']
+      sum[si['length']] += si['hcp'] * si['count']
+
+    for length in range(BRIDGE_TRICKS+1):
+      b_eq[length] = sum[length]
 
 
   def set(self):

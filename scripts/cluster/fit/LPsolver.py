@@ -18,8 +18,8 @@ class LPsolver:
     self.c = np.zeros(NUM_VAR)
     self.A_ub = np.zeros((NUM_DOMINANCES, NUM_VAR))
     self.b_ub = np.zeros(NUM_DOMINANCES)
-    self.A_eq = np.zeros((2, NUM_VAR))
-    self.b_eq = np.zeros(2)
+    self.A_eq = np.zeros((BRIDGE_TRICKS+2, NUM_VAR))
+    self.b_eq = np.zeros(BRIDGE_TRICKS+2)
     self.bounds = []
 
   
@@ -211,7 +211,7 @@ class LPsolver:
       if num_interior == NUM_VAR:
         break
 
-      if iter == 2:
+      if iter == 100:
         break
 
     num_changes, changes_var, change_obj, num_interior = \

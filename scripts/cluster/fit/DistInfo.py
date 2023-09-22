@@ -44,11 +44,11 @@ class DistInfo:
 
     for dno in range(NUM_DIST):
       prob = self.dist_info[dno]['comb'] / call
-      A_eq[1][NUM_SUITS + dno] = prob
+      A_eq[BRIDGE_TRICKS+1][NUM_SUITS + dno] = prob
       sum += self.dist_info[dno]['hcp'] * prob
 
     # The sum it happens to be to begin with
-    b_eq[1] = sum
+    b_eq[BRIDGE_TRICKS+1] = sum
 
 
   def get(self, dno):
