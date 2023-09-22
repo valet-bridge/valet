@@ -211,7 +211,7 @@ class LPsolver:
       if num_interior == NUM_VAR:
         break
 
-      if iter == 100:
+      if iter == 2:
         break
 
     num_changes, changes_var, change_obj, num_interior = \

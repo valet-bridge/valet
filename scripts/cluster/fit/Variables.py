@@ -63,6 +63,8 @@ class Variables:
 
 
   def str(self, suit_info, dist_info, pass_suit_counts, pass_dist_counts):
+    s = dist_info.str_with_variables_passes(self.data, pass_dist_counts)
+    '''
     s = "Distribution pass predictions\n\n"
     for dno in range(NUM_DIST):
       dv = self.data[dno + NUM_SUITS]
@@ -71,33 +73,17 @@ class Variables:
         "{:10s}".format(dist_info.get(dno)['text']) + " " + \
         "{:10.4f}".format(dv) + " " + \
         "{:6d}".format(pass_dist_counts[dno]) + "\n"
+        '''
 
-    s += "\nSuit pass predictions\n\n"
-    for sno in range(NUM_SUITS):
-      sv = self.data[sno]
-      if sv == 0 and pass_suit_counts[sno] == 0: continue
-      s += "{:4d}".format(sno) + " " + \
-        "{:16s}".format(suit_info.get(sno)['text']) + " " + \
-        "{:16.4f}".format(sv) + " " + \
-        "{:6d}".format(pass_suit_counts[sno]) + "\n"
+    s += "\n"
+    s += suit_info.str_with_variables_passes(self.data, pass_suit_counts)
     
     return s
 
 
   def str_simple(self, suit_info, dist_info):
-    s = "Distribution variables\n\n"
-    for dno in range(NUM_DIST):
-      dv = self.data[dno + NUM_SUITS]
-      s += "{:4d}".format(dno) + " " + \
-        "{:10s}".format(dist_info.get(dno)['text']) + " " + \
-        "{:10.4f}".format(dv) + " " + "\n"
-
-    s += "\nSuit variables\n\n"
-    for sno in range(NUM_SUITS):
-      sv = self.data[sno]
-      s += "{:4d}".format(sno) + " " + \
-        "{:16s}".format(suit_info.get(sno)['text']) + " " + \
-        "{:16.4f}".format(sv) + " " + "\n"
+    s = dist_info.str_with_variables(self.data) + "\n" + \
+      suit_info.str_with_variables(self.data)
     
     return s
 

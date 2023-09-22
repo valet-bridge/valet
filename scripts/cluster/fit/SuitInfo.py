@@ -1,3 +1,5 @@
+import numpy as np
+
 from fit.fitconst import *
 
 class SuitInfo:
@@ -12,6 +14,9 @@ class SuitInfo:
 
     # For the current parameters there are 864 dominances.
     self.dominances = []
+
+    # Print order.
+    self.order = np.zeros(NUM_SUITS, dtype = int)
 
     self.set()
 
@@ -85,15 +90,23 @@ class SuitInfo:
       for tops, cell in enumerate(row):
         if 'sno' not in cell: continue
 
-        self.suit_info[cell['sno']] = {}
-        entry_ref = self. suit_info[cell['sno']]
+        sno = cell['sno']
+        self.suit_info[sno] = {}
+        entry_ref = self.suit_info[sno]
 
-        entry_ref = self. suit_info[cell['sno']]
+        entry_ref = self. suit_info[sno]
         entry_ref['length'] = length
         entry_ref['tops'] = tops
         entry_ref['count'] = cell['count']
         entry_ref['hcp'] = self.hcp(tops)
         entry_ref['text'] = self.suit_text(length, tops)
+
+    order_no = 0
+    for length in range(BRIDGE_TRICKS+1):
+      for tops in range(1 << NUM_TOPS):
+        if 'sno' not in self.suit_list[length][tops]: continue
+        self.order[order_no] = self.suit_list[length][tops]['sno']
+        order_no += 1
 
 
   def set_suit_dominances(self):
@@ -149,4 +162,29 @@ class SuitInfo:
   def get(self, sno):
     assert sno < len(self.suit_info)
     return self.suit_info[sno]
+
+  
+  def str_with_variables(self, variables):
+    s = "Suit variables\n\n"
+    for sno in self.order:
+      sv = variables[sno]
+      if sv == 0: continue
+      s += "{:4d}".format(sno) + " " + \
+        "{:16s}".format(self.suit_info[sno]['text']) + " " + \
+        "{:16.4f}".format(sv) + "\n"
+
+    return s
+
+  
+  def str_with_variables_passes(self, variables, pass_counts):
+    s = "Suit pass predictions\n\n"
+    for sno in self.order:
+      sv = variables[sno]
+      if sv == 0 and pass_counts[sno] == 0: continue
+      s += "{:4d}".format(sno) + " " + \
+        "{:16s}".format(self.suit_info[sno]['text']) + " " + \
+        "{:16.4f}".format(sv) + " " + \
+        "{:6d}".format(pass_counts[sno]) + "\n"
+
+    return s
 
