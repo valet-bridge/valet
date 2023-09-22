@@ -66,10 +66,10 @@ while True: # Sigmoid fit followed by linearized LP
   if iter_no == 200:
     break
 
-
+# In LP sub-iter, when calculating gradient for each variable,
+# also note the squared differences between actual and predicted passes.
+# Add them up as a measure of quality.
+# Allow many more iterations within one LP?  Does measure converge?
+# Why does sigmoid fit perhaps not improve the measure?
 # sqrt(n) in sigma?
-
 # Some constants being recalculated (#passes actual)
-
-# Force the distribution HCP to stay at the same average
-# Probably weight them by frequency to keep the drift down

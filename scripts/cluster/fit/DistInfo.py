@@ -37,8 +37,9 @@ class DistInfo:
     sum = 0
 
     for dno in range(NUM_DIST):
-      A_eq[1][NUM_SUITS + dno] = self.dist_info[dno]['comb'] / call
-      sum += self.dist_info[dno]['hcp'] * A_eq[1][NUM_SUITS + dno]
+      prob = self.dist_info[dno]['comb'] / call
+      A_eq[1][NUM_SUITS + dno] = prob
+      sum += self.dist_info[dno]['hcp'] * prob
 
     # The sum it happens to be to begin with
     b_eq[1] = sum
