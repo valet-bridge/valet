@@ -58,11 +58,11 @@ class Sigmoids:
     merged_df['result'] = merged_df['hist_value'] * merged_df['sigmoid']
 
     # Add them up.  For each (pos, vul, dno) we now have a result.
-    sum_var_no_df = merged_df.groupby(['dno']).agg({'result': 'sum'})
+    # sum_var_no_df = merged_df.groupby(['dno']).agg({'result': 'sum'})
 
-    prediction = \
-      sum_var_no_df['result'].reindex(range(num_vars), fill_value = 0) \
-      .values
+    # prediction = \
+      # sum_var_no_df['result'].reindex(range(num_vars), fill_value = 0) \
+      # .values
 
     # Same for the derivative.
     merged_df['derivative'] = \
@@ -101,7 +101,9 @@ class Sigmoids:
       gradient_df['gradient'].reindex(range(num_vars), fill_value = 0) \
       .values
 
-    return prediction, gradient
+    total_error = ((remerged_df['result'] - remerged_df['pass']) ** 2).sum()
+
+    return gradient, total_error / (num_vars * NUM_SUITS * NUM_DIST)
 
   
   def extract_vectors(self, grouped_df):
@@ -111,7 +113,7 @@ class Sigmoids:
       total_count = ('pass', 'size')).reset_index()
 
     x_data = df['bin'].values / 100.
-    sigma = (1 / df['total_count']).values
+    sigma = (1 / np.sqrt(df['total_count'])).values
     y_data = (df['pass_count'] / df['total_count']).values
 
     return x_data, sigma, y_data

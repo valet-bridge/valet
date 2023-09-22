@@ -10,6 +10,30 @@ from fit.Sigmoids import Sigmoids
 from fit.LPsolver import LPsolver
 
 
+def calc_actual_passes(df):
+  '''The actual passes are constant across the optimizations.'''
+
+  df_melted = df.melt(\
+    id_vars = ['pos', 'vul', 'pass', 'dno'], \
+    value_vars = ['sno1', 'sno2', 'sno3', 'sno4'], \
+    value_name = 'sno')
+
+  # Count the actual passes by (pos, vul, sno) and only by sno.
+  df_pos_vul_sno = df_melted.groupby( \
+    ['pos', 'vul', 'sno']).agg({'pass' : 'sum'})
+
+  # Rename from sno to dno to fit with Sigmoids (hist_to_prediction).
+  df_pos_vul_sno.index.names = ['pos', 'vul', 'dno']
+
+  # Count the actual passes by (pos, vul, dno) and only by dno.
+  # We start from df, not from df_melted, as df_melted has the same dno
+  # appearing four times (once for sno1..sno4).
+  df_pos_vul_dno = df.groupby( \
+    ['pos', 'vul', 'dno']).agg({'pass' : 'sum'})
+
+  return df_pos_vul_sno, df_pos_vul_dno
+
+
 # Set up some data-independent tables.
 suit_info = SuitInfo()
 dist_info = DistInfo()
@@ -29,6 +53,8 @@ df = pd.read_csv(SUITDATA_FILE, header = None, \
   'sno1', 'sno2', 'sno3', 'sno4'])
 end_time = time.time()
 # print("CSV read time", "{:.4f}".format(end_time - start_time))
+
+df_pos_vul_sno, df_pos_vul_dno = calc_actual_passes(df)
 
 # Strength is 0..100 in 0.01 steps.
 bins = np.arange(0, MAX_STRENGTH, STRENGTH_STEP)
@@ -56,7 +82,8 @@ while True: # Sigmoid fit followed by linearized LP
   sigmoids.calc(bin_midpoints)
 
   # Run a linearized LP.
-  change = lp_solver.run_until_interior(df, sigmoids, bins, solution)
+  change = lp_solver.run_until_interior(df, df_pos_vul_sno, df_pos_vul_dno,
+    sigmoids, bins, solution)
 
   iter_no += 1
 
@@ -66,10 +93,8 @@ while True: # Sigmoid fit followed by linearized LP
   if iter_no == 200:
     break
 
-# In LP sub-iter, when calculating gradient for each variable,
-# also note the squared differences between actual and predicted passes.
-# Add them up as a measure of quality.
 # Allow many more iterations within one LP?  Does measure converge?
-# Why does sigmoid fit perhaps not improve the measure?
-# sqrt(n) in sigma?
-# Some constants being recalculated (#passes actual)
+
+# Why does sigmoid fit not improve the measure?
+
+# Why does each LP subiter take longer?  Probably just more bins?
