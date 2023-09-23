@@ -93,8 +93,6 @@ while True: # Sigmoid fit followed by linearized LP
   if iter_no == 200:
     break
 
-# Allow many more iterations within one LP?  Does measure converge?
-
-# Why does sigmoid fit not improve the measure?
-
-# Why does each LP subiter take longer?  Probably just more bins?
+# TODO
+# Could introduce some manual equalities based on observation.
+# Write a file format, e.g. JT9, JTx, Jxx

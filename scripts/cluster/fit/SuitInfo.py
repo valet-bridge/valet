@@ -129,8 +129,8 @@ class SuitInfo:
               'dominated': self.suit_list[length][new_tops]['sno']})
       
         # It is possible to turn a nine into an x when there is an x free.
-        if (bits[0] and self.count_ones(tops) <= \
-            length - NUM_TOPS - BRIDGE_TRICKS):
+        if (bits[0] and self.count_ones(tops) > \
+            length + NUM_TOPS - BRIDGE_TRICKS):
           new_tops = tops
           new_tops ^= 1;
           self.dominances.append({ \
