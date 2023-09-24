@@ -14,22 +14,22 @@ def calc_actual_passes(df):
   '''The actual passes are constant across the optimizations.'''
 
   df_melted = df.melt(\
-    id_vars = ['pos', 'vul', 'pass', 'dno'], \
+    id_vars = ['pos', 'vul', 'pass', 'dno', 'bin'], \
     value_vars = ['sno1', 'sno2', 'sno3', 'sno4'], \
     value_name = 'sno')
 
-  # Count the actual passes by (pos, vul, sno) and only by sno.
+  # Count the actual passes by (pos, vul, sno, bin).
   df_pos_vul_sno = df_melted.groupby( \
-    ['pos', 'vul', 'sno']).agg({'pass' : 'sum'})
+    ['pos', 'vul', 'sno', 'bin']).agg({'pass' : 'sum'})
 
   # Rename from sno to dno to fit with Sigmoids (hist_to_prediction).
-  df_pos_vul_sno.index.names = ['pos', 'vul', 'dno']
+  df_pos_vul_sno.index.names = ['pos', 'vul', 'dno', 'bin']
 
-  # Count the actual passes by (pos, vul, dno) and only by dno.
+  # Count the actual passes by (pos, vul, dno, bin).
   # We start from df, not from df_melted, as df_melted has the same dno
   # appearing four times (once for sno1..sno4).
   df_pos_vul_dno = df.groupby( \
-    ['pos', 'vul', 'dno']).agg({'pass' : 'sum'})
+    ['pos', 'vul', 'dno', 'bin']).agg({'pass' : 'sum'})
 
   return df_pos_vul_sno, df_pos_vul_dno
 
@@ -54,14 +54,14 @@ df = pd.read_csv(SUITDATA_FILE, header = None, \
 end_time = time.time()
 # print("CSV read time", "{:.4f}".format(end_time - start_time))
 
-df_pos_vul_sno, df_pos_vul_dno = calc_actual_passes(df)
-
 # Strength is 0..100 in 0.01 steps.
 bins = np.arange(0, MAX_STRENGTH, STRENGTH_STEP)
 bin_midpoints = (bins[:-1] + bins[1:]) / 2
 
 # The sigmoid fits needs this.
 solution.add_strengths(bins, df)
+
+# df_pos_vul_sno, df_pos_vul_dno = calc_actual_passes(df)
 
 sigmoids = Sigmoids()
 iter_no = 0
@@ -82,8 +82,22 @@ while True: # Sigmoid fit followed by linearized LP
   sigmoids.calc(bin_midpoints)
 
   # Run a linearized LP.
-  change = lp_solver.run_until_interior(df, df_pos_vul_sno, df_pos_vul_dno,
-    sigmoids, bins, solution)
+  # Could probably do the first LP iteration as:
+  # 30 * 0.10
+  # 10 * 0.05
+  # 15 * 0.025
+  # 20 * 0.01
+
+  if (iter_no == 0):
+    step_size = 0.05
+    num_iters = 50
+  else:
+    step_size = 0.01
+    num_iters = 100
+
+  change = lp_solver.run_until_interior(df, \
+    # df_pos_vul_sno, df_pos_vul_dno,
+    sigmoids, bins, step_size, 100, solution, suit_info, dist_info)
 
   iter_no += 1
 

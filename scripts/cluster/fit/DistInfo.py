@@ -1,3 +1,5 @@
+import os
+import csv
 import numpy as np
 from math import comb
 
@@ -11,7 +13,14 @@ class DistInfo:
 
     self.order = np.zeros(NUM_DIST, dtype = int)
 
+    # Look up "3=4=3=3" into the corresponding distribution number.
+    self.dist_lookup = {}
+
+    # Equivalences among suit variables can be read in.
+    self.equivalences = []
+
     self.set()
+    self.read_equivalences()
 
 
   def set(self):
@@ -31,11 +40,36 @@ class DistInfo:
 
           self.dist_info[dno]['comb'] = comb(13, spades) * \
             comb(13, hearts) * comb(13, diamonds) * comb(13, clubs)
+          
+          self.dist_lookup[self.dist_info[dno]['text']] = dno
 
           dno += 1
 
     comb_values = np.array([item['comb'] for item in self.dist_info])
     self.order = np.argsort(comb_values)[::-1]
+
+
+  def read_equivalences(self):
+    if not os.path.exists(DIST_EQUIV_FILE):
+      return
+    if not os.path.isfile(DIST_EQUIV_FILE):
+      return
+
+    with open(DIST_EQUIV_FILE, 'r') as csvfile:
+      reader = csv.reader(csvfile, skipinitialspace = True)
+      for row in reader:
+        elem0 = row[0]
+        if elem0 not in self.dist_lookup:
+          print(elem0, "not a known distribution")
+          quit()
+
+        for i in range(1, len(row)):
+          elem1 = row[i]
+          if elem1 not in self.dist_lookup:
+            print(elem1, "not a known distribution")
+            quit
+          self.equivalences.append([self.dist_lookup[elem0], \
+            self.dist_lookup[elem1]])
 
 
   def set_lp_equal_constraints(self, A_eq, b_eq):
@@ -56,6 +90,10 @@ class DistInfo:
     return self.dist_info[dno]
 
   
+  def num_equivalences(self):
+    return len(self.equivalences)
+
+
   def str_with_variables(self, variables):
     s = "Distribution variables\n\n"
     for dno in self.order:

@@ -1,3 +1,5 @@
+import os
+import csv
 import numpy as np
 
 from fit.fitconst import *
@@ -17,6 +19,12 @@ class SuitInfo:
 
     # Print order.
     self.order = np.zeros(NUM_SUITS, dtype = int)
+
+    # Look up "KQx" into the corresponding suit number.
+    self.suit_lookup = {}
+
+    # Equivalences among suit variables can be read in.
+    self.equivalences = []
 
     self.set()
 
@@ -101,6 +109,8 @@ class SuitInfo:
         entry_ref['hcp'] = self.hcp(tops)
         entry_ref['text'] = self.suit_text(length, tops)
 
+        self.suit_lookup[entry_ref['text']] = sno
+
     order_no = 0
     for length in range(BRIDGE_TRICKS+1):
       for tops in range(1 << NUM_TOPS):
@@ -138,6 +148,29 @@ class SuitInfo:
             'dominated': self.suit_list[length][new_tops]['sno']})
 
 
+  def read_equivalences(self):
+    if not os.path.exists(SUIT_EQUIV_FILE):
+      return
+    if not os.path.isfile(SUIT_EQUIV_FILE):
+      return
+
+    with open(SUIT_EQUIV_FILE, 'r') as csvfile:
+      reader = csv.reader(csvfile, skipinitialspace = True)
+      for row in reader:
+        elem0 = row[0]
+        if elem0 not in self.suit_lookup:
+          print(elem0, "not a known suit")
+          quit()
+
+        for i in range(1, len(row)):
+          elem1 = row[i]
+          if elem1 not in self.suit_lookup:
+            print(elem1, "not a known suit")
+            quit
+          self.equivalences.append([self.suit_lookup[elem0], \
+            self.suit_lookup[elem1]])
+
+
   def set_lp_upper_constraints(self, A_ub, b_ub):
     for index, dom in enumerate(self.dominances):
       # If the jack dominates the ten, then -jack + ten <= 0
@@ -156,11 +189,22 @@ class SuitInfo:
     for length in range(BRIDGE_TRICKS+1):
       b_eq[length] = sum[length]
 
+    '''
+    for length in range(BRIDGE_TRICKS+1):
+      for sno in range(NUM_SUITS):
+        if (A_eq[length][sno] > 0):
+          print(length, sno, ":", A_eq[length][sno])
+      if (b_eq[length] >0):
+        print(length, "sum", b_eq[length])
+    quit()
+    '''
+
 
   def set(self):
     self.set_suit_list()
     self.set_suit_info()
     self.set_suit_dominances()
+    self.read_equivalences()
 
   
   def get(self, sno):
@@ -178,6 +222,10 @@ class SuitInfo:
         "{:16.4f}".format(sv) + "\n"
 
     return s
+
+  
+  def num_equivalences(self):
+    return len(self.equivalences)
 
   
   def str_with_variables_passes(self, variables, pass_counts):

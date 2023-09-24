@@ -46,7 +46,8 @@ class LPsolver:
     self.c[NUM_SUITS:] = gradient_dno
 
   
-  def calc_gradients(self, df, df_pos_vul_sno, df_pos_vul_dno, \
+  def calc_gradients(self, df, \
+    # df_pos_vul_sno, df_pos_vul_dno, \
     sigmoids, bins, solution):
     '''Calculate the gradients w.r.t. the variables.'''
 
@@ -71,14 +72,29 @@ class LPsolver:
 
     hist_sno.rename(columns = {'sno': 'dno'}, inplace = True)
 
+    # Have to recalculate the pass bins for (pos, vul, sno, bin), 
+    # as the strengths have changed.
+    df_pos_vul_sno = df_melted.groupby( \
+      ['pos', 'vul', 'sno', 'bin']).agg({'pass' : 'sum'})
+
+    # Rename from sno to dno to fit with Sigmoids (hist_to_prediction).
+    df_pos_vul_sno.index.names = ['pos', 'vul', 'dno', 'bin']
+
+    # Count the actual passes by (pos, vul, dno, bin).
+    # We start from df, not from df_melted, as df_melted has the same dno
+    # appearing four times (once for sno1..sno4).
+    df_pos_vul_dno = df.groupby( \
+      ['pos', 'vul', 'dno', 'bin']).agg({'pass' : 'sum'})
+
+
     # Predict the absolute number of passes for each variable number.
     # The results are numpy 1D arrays.  Also calculate the gradients.
     # results_dno, gradient_dno, total_error_dno = \
     gradient_dno, total_error_dno = \
-      sigmoids.hist_to_prediction(hist_dno, df_pos_vul_dno, NUM_DIST)
+      sigmoids.hist_to_gradients(hist_dno, df_pos_vul_dno, NUM_DIST)
     # results_sno, gradient_sno, total_error_sno = \
     gradient_sno, total_error_sno = \
-      sigmoids.hist_to_prediction(hist_sno, df_pos_vul_sno, NUM_SUITS)
+      sigmoids.hist_to_gradients(hist_sno, df_pos_vul_sno, NUM_SUITS)
 
     return gradient_sno, gradient_dno, total_error_sno, total_error_dno
 
@@ -154,8 +170,9 @@ class LPsolver:
     return num_changes, changes_var, change_obj, num_interior
     
 
-  def run_until_interior(self, df, df_pos_vul_sno, df_pos_vul_dno, \
-    sigmoids, bins, solution):
+  def run_until_interior(self, df, \
+    # df_pos_vul_sno, df_pos_vul_dno, \
+    sigmoids, bins, step_size, num_iters, solution, suit_info, dist_info):
     '''Set up and re-run LP until the box bounds are not right.'''
 
     # Add sum and bin columns to df based on dno, sno1 .. sno4.
@@ -168,27 +185,18 @@ class LPsolver:
 
     while True:
 
-      self.set_box_constraints(solution, 0.01)
+      self.set_box_constraints(solution, step_size)
 
-      start_time = time.time()
       solution.add_strengths(bins, df)
-      end_time = time.time()
-      # print("add_strengths time", "{:.4f}".format(end_time - start_time))
 
-      start_time = time.time()
       gradient_sno, gradient_dno, error_sno, error_dno = \
-        self.calc_gradients(df, df_pos_vul_sno, df_pos_vul_dno, \
+        self.calc_gradients(df, \
+        # df_pos_vul_sno, df_pos_vul_dno, \
         sigmoids, bins, solution)
-      end_time = time.time()
-      print("calc_gradients time", "{:.4f}".format(end_time - start_time))
 
       self.set_objective(gradient_sno, gradient_dno)
 
-      start_time = time.time()
       new_solution.data = self.run_once()
-      end_time = time.time()
-      # print("one LP iter time", "{:.4f}".format(end_time - start_time))
-
 
       iter += 1
       print("LP iteration", "{:12d}".format(iter))
@@ -201,9 +209,10 @@ class LPsolver:
       print("error total ", "{:12.4f}".format(error_sno + error_dno))
       print("changes_var ", "{:12.4f}".format(changes_var))
       print("num_changes ", "{:12d}".format(num_changes))
-      print("changes_var ", "{:12.4f}".format(changes_var))
       print("change_obj  ", "{:12.4f}".format(change_obj))
       print("num_interior", "{:12d}".format(num_interior), "\n")
+
+      print(new_solution.str_simple(suit_info, dist_info))
       sys.stdout.flush()
 
       solution.data = new_solution.data
@@ -211,7 +220,7 @@ class LPsolver:
       if num_interior == NUM_VAR:
         break
 
-      if iter == 100:
+      if iter == num_iters:
         break
 
     num_changes, changes_var, change_obj, num_interior = \
