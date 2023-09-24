@@ -10,30 +10,6 @@ from fit.Sigmoids import Sigmoids
 from fit.LPsolver import LPsolver
 
 
-def calc_actual_passes(df):
-  '''The actual passes are constant across the optimizations.'''
-
-  df_melted = df.melt(\
-    id_vars = ['pos', 'vul', 'pass', 'dno', 'bin'], \
-    value_vars = ['sno1', 'sno2', 'sno3', 'sno4'], \
-    value_name = 'sno')
-
-  # Count the actual passes by (pos, vul, sno, bin).
-  df_pos_vul_sno = df_melted.groupby( \
-    ['pos', 'vul', 'sno', 'bin']).agg({'pass' : 'sum'})
-
-  # Rename from sno to dno to fit with Sigmoids (hist_to_prediction).
-  df_pos_vul_sno.index.names = ['pos', 'vul', 'dno', 'bin']
-
-  # Count the actual passes by (pos, vul, dno, bin).
-  # We start from df, not from df_melted, as df_melted has the same dno
-  # appearing four times (once for sno1..sno4).
-  df_pos_vul_dno = df.groupby( \
-    ['pos', 'vul', 'dno', 'bin']).agg({'pass' : 'sum'})
-
-  return df_pos_vul_sno, df_pos_vul_dno
-
-
 # Set up some data-independent tables.
 suit_info = SuitInfo()
 dist_info = DistInfo()
@@ -44,15 +20,14 @@ solution.init_by_hcp(suit_info, dist_info)
 
 # Set up the constraints of the linearized LP problem.
 lp_solver = LPsolver()
+lp_solver.resize_eq(suit_info.num_equivalences(), \
+  dist_info.num_equivalences())
 lp_solver.set_constraints(suit_info, dist_info, solution, 0.01)
 
 # Read in the data of hands.
-start_time = time.time()
 df = pd.read_csv(SUITDATA_FILE, header = None, \
   names = ['tag', 'pos', 'vul', 'pass', 'dno', \
   'sno1', 'sno2', 'sno3', 'sno4'])
-end_time = time.time()
-# print("CSV read time", "{:.4f}".format(end_time - start_time))
 
 # Strength is 0..100 in 0.01 steps.
 bins = np.arange(0, MAX_STRENGTH, STRENGTH_STEP)
@@ -60,8 +35,6 @@ bin_midpoints = (bins[:-1] + bins[1:]) / 2
 
 # The sigmoid fits needs this.
 solution.add_strengths(bins, df)
-
-# df_pos_vul_sno, df_pos_vul_dno = calc_actual_passes(df)
 
 sigmoids = Sigmoids()
 iter_no = 0
@@ -71,10 +44,7 @@ while True: # Sigmoid fit followed by linearized LP
   print("----------------------------\n")
 
   # Fit the sigmoids.
-  start_time = time.time()
   sigmoids.fit_data(df)
-  end_time = time.time()
-  # print(" Sigmoid fit time", "{:.4f}".format(end_time - start_time))
   print(sigmoids.str())
 
   # Recalculate all sigmoid values that occur in binned histograms,
@@ -90,13 +60,12 @@ while True: # Sigmoid fit followed by linearized LP
 
   if (iter_no == 0):
     step_size = 0.05
-    num_iters = 50
+    num_iters = 100
   else:
     step_size = 0.01
     num_iters = 100
 
   change = lp_solver.run_until_interior(df, \
-    # df_pos_vul_sno, df_pos_vul_dno,
     sigmoids, bins, step_size, 100, solution, suit_info, dist_info)
 
   iter_no += 1
@@ -106,7 +75,3 @@ while True: # Sigmoid fit followed by linearized LP
   # TODO More like a condition on change.
   if iter_no == 200:
     break
-
-# TODO
-# Could introduce some manual equalities based on observation.
-# Write a file format, e.g. JT9, JTx, Jxx

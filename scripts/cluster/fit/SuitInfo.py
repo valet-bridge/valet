@@ -162,13 +162,36 @@ class SuitInfo:
           print(elem0, "not a known suit")
           quit()
 
+        # The LP solver is a bit finicky about starting from
+        # a feasible solution.  If we require two variables to
+        # equal that aren't, such as T9x and JTx (just an example)
+        # then the starting point won't be feasible.  So first we
+        # figure out the weighted HCP for the row.
+
+        sno0 = self.suit_lookup[elem0]
+        count0 = self.suit_info[sno0]['count']
+        hcp_sum = self.suit_info[sno0]['hcp'] * count0
+        count_sum = count0
+
         for i in range(1, len(row)):
           elem1 = row[i]
           if elem1 not in self.suit_lookup:
             print(elem1, "not a known suit")
             quit
-          self.equivalences.append([self.suit_lookup[elem0], \
-            self.suit_lookup[elem1]])
+          sno1 = self.suit_lookup[elem1]
+          count1 = self.suit_info[sno1]['count']
+          hcp_sum += self.suit_info[sno1]['hcp'] * count1
+          count_sum += count1
+
+        hcp_average = hcp_sum / count_sum
+
+        self.suit_info[sno0]['hcp'] = hcp_average
+
+        for i in range(1, len(row)):
+          elem1 = row[i]
+          sno1 = self.suit_lookup[elem1]
+          self.equivalences.append([sno0, sno1])
+          self.suit_info[sno1]['hcp'] = hcp_average
 
 
   def set_lp_upper_constraints(self, A_ub, b_ub):
@@ -189,13 +212,20 @@ class SuitInfo:
     for length in range(BRIDGE_TRICKS+1):
       b_eq[length] = sum[length]
 
+    # Then the equivalences.
+    index = BRIDGE_TRICKS + 1
+    for i in range(len(self.equivalences)):
+      equiv = self.equivalences[i]
+      A_eq[index + i][equiv[0]] = 1
+      A_eq[index + i][equiv[1]] = -1
+      b_eq[index + i] = 0
+
     '''
-    for length in range(BRIDGE_TRICKS+1):
+    for length in range(BRIDGE_TRICKS+1 + len(self.equivalences)):
       for sno in range(NUM_SUITS):
-        if (A_eq[length][sno] > 0):
-          print(length, sno, ":", A_eq[length][sno])
-      if (b_eq[length] >0):
-        print(length, "sum", b_eq[length])
+        if (A_eq[length][sno] != 0):
+          print("equiv", length, sno, ":", A_eq[length][sno])
+      print(length, "sum", b_eq[length])
     quit()
     '''
 

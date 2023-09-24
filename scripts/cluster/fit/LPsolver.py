@@ -18,9 +18,16 @@ class LPsolver:
     self.c = np.zeros(NUM_VAR)
     self.A_ub = np.zeros((NUM_DOMINANCES, NUM_VAR))
     self.b_ub = np.zeros(NUM_DOMINANCES)
-    self.A_eq = np.zeros((BRIDGE_TRICKS+2, NUM_VAR))
-    self.b_eq = np.zeros(BRIDGE_TRICKS+2)
+    self.A_eq = np.zeros((0, 0))
+    self.b_eq = np.zeros(0)
     self.bounds = []
+
+  
+  def resize_eq(self, suit_equiv, dist_equiv):
+    '''Only know the size of A_eq and B_eq when we've read the files.'''
+    self.A_eq = np.zeros((BRIDGE_TRICKS + 2 + suit_equiv + dist_equiv, \
+      NUM_VAR))
+    self.b_eq = np.zeros(BRIDGE_TRICKS + 2 + suit_equiv + dist_equiv)
 
   
   def set_box_constraints(self, estimate, step_size):
@@ -31,11 +38,15 @@ class LPsolver:
     # Dominances
     suit_info.set_lp_upper_constraints(self.A_ub, self.b_ub)
 
-    # Weighted average of 5 points per suit.
+    # Weighted average points within each suit length.
+    # Also the suit equivalences.
+    # So BRIDGE_TRICKS+1 + num_equivalences in total.
     suit_info.set_lp_equal_constraints(self.A_eq, self.b_eq)
 
     # Sum (unweighted) of distribution HCP to remain constant.
-    dist_info.set_lp_equal_constraints(self.A_eq, self.b_eq)
+    # Also the distribution equivalences.
+    dist_info.set_lp_equal_constraints(suit_info.num_equivalences(), \
+      self.A_eq, self.b_eq)
 
     # Limits of +/- 1 step_size.
     self.set_box_constraints(estimate, step_size)
@@ -136,6 +147,18 @@ class LPsolver:
       print(i, self.bounds[i])
     print("\n")
     '''
+
+    '''
+    print("A_eq")
+    for i in range(len(self.A_eq)):
+      for j in range(len(self.A_eq[i])):
+        if self.A_eq[i][j] != 0:
+          print(i, j, self.A_eq[i][j])
+
+    print("b_eq")
+    for i in range(len(self.b_eq)):
+      print(i, self.b_eq[i])
+    '''
     
     result = linprog(self.c, A_ub = self.A_ub, b_ub = self.b_ub, \
       A_eq = self.A_eq, b_eq = self.b_eq, bounds = self.bounds)
@@ -196,7 +219,33 @@ class LPsolver:
 
       self.set_objective(gradient_sno, gradient_dno)
 
+      '''
+      print("equality constraints right now")
+      slack = self.b_eq - (self.A_eq @ solution.data)
+      for i in range(len(slack)):
+        if slack[i] != 0:
+          print("slack at", i, slack[i])
+          for j in range(len(self.A_eq[i])):
+            if (self.A_eq[i][j] != 0):
+              print('A_eq', j, self.A_eq[i][j])
+              print("var value", solution.data[j])
+          print('b_eq', self.b_eq[i])
+      quit()
+      '''
+
       new_solution.data = self.run_once()
+
+      '''
+      print("equality constraints after LP")
+      slack = self.b_eq - (self.A_eq @ solution.data)
+      for i in range(len(slack)):
+        if slack[i] != 0:
+          print("slack at", i, slack[i])
+          for j in range(len(self.A_eq[i])):
+            if (self.A_eq[i][j] != 0):
+              print('A_eq', j, self.A_eq[i][j])
+          print('b_eq', self.b_eq[i])
+          '''
 
       iter += 1
       print("LP iteration", "{:12d}".format(iter))

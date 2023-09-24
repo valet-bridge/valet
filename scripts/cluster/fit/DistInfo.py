@@ -68,21 +68,36 @@ class DistInfo:
           if elem1 not in self.dist_lookup:
             print(elem1, "not a known distribution")
             quit
-          self.equivalences.append([self.dist_lookup[elem0], \
-            self.dist_lookup[elem1]])
+          self.equivalences.append( \
+            [NUM_SUITS + self.dist_lookup[elem0], \
+            NUM_SUITS + self.dist_lookup[elem1]])
 
 
-  def set_lp_equal_constraints(self, A_eq, b_eq):
+  def set_lp_equal_constraints(self, num_suit_equiv, A_eq, b_eq):
     call = comb(52, 13)
     sum = 0
 
+    index = BRIDGE_TRICKS+1 + num_suit_equiv
+
     for dno in range(NUM_DIST):
       prob = self.dist_info[dno]['comb'] / call
-      A_eq[BRIDGE_TRICKS+1][NUM_SUITS + dno] = prob
+      A_eq[index][NUM_SUITS + dno] = prob
       sum += self.dist_info[dno]['hcp'] * prob
 
     # The sum it happens to be to begin with
-    b_eq[BRIDGE_TRICKS+1] = sum
+    b_eq[index] = sum
+
+    # Then add the equivalences.
+    for i in range(len(self.equivalences)):
+      equiv = self.equivalences[i]
+      A_eq[index + i + 1][equiv[0]] = 1
+      A_eq[index + i + 1][equiv[1]] = -1
+      b_eq[index + i + 1] = 0
+
+    # Unlike in SuitInfo we're not moving our initial solution
+    # outside of the feasible region by doing this, as long as
+    # the distributions we are equating have the same number of
+    # initial distribution points.
 
 
   def get(self, dno):
