@@ -1,0 +1,50 @@
+9, T
+xx, 9x
+Ax, A9
+xxx, 9xx
+QTx, QT9
+KTx, KT9
+KQx, KQ9
+AQx, AQ9
+xxxx, 9xxx
+xxxxxx, 9xxxxx, Txxxxx, T9xxxx
+xxxxxxx, 9xxxxxx
+9xxxxxxx, Txxxxxxx, T9xxxxxx
+Jxxxxxxx, J9xxxxxx, Qxxxxxxx, Q9xxxxxx
+QT9xxxxx, QJxxxxxx, QJ9xxxxx, QJTxxxxx, QJT9xxxx
+KTxxxxxx, KT9xxxxx
+KJxxxxxx, KJ9xxxxx
+A9xxxxxx, ATxxxxxx, AT9xxxxx, AJxxxxxx, AJ9xxxxx
+KJTxxxxx, KJT9xxxx, AJTxxxxx
+KQxxxxxx, AQxxxxxx
+KQ9xxxxx, KQTxxxxx, KQT9xxxx, KQJxxxxx, KQJTxxxx, KQJ9xxxx
+AQ9xxxxx, AQTxxxxx, AQT9xxxx, AQJxxxxx, AQJ9xxxx, AQJTxxxx
+AKxxxxxx, AK9xxxxx, AKTxxxxx, AKT9xxxx, AKJxxxxx, AKJ9xxxx, AKJTxxxx
+KQJT9xxx, AQJT9xxx, AKJT9xxx
+AKQxxxxx, AKQ9xxxx, AKQTxxxx, AKQJxxxx
+AKQT9xxx, AKQJ9xxx, AKQJTxxx, AKQJT9xx
+T9xxxxxxx, J9xxxxxxx, JTxxxxxxx, JT9xxxxxx, Q9xxxxxxx, QTxxxxxxx
+QT9xxxxxx, QJxxxxxxx, QJ9xxxxxx, QJTxxxxxx, QJT9xxxxx
+K9xxxxxxx, KTxxxxxxx, KT9xxxxxx, KJxxxxxxx, KJ9xxxxxx
+KJTxxxxxx, KJT9xxxxx
+KQxxxxxxx, KQ9xxxxxx, KQTxxxxxx, KQT9xxxxx, KQJxxxxxx, KQJ9xxxxx, KQJTxxxxx, KQJT9xxxx
+A9xxxxxxx, ATxxxxxxx, AT9xxxxxx, AJxxxxxxx, AJ9xxxxxx
+AJTxxxxxx, AJT9xxxxx
+AQxxxxxxx, AQ9xxxxxx, AQTxxxxxx, AQT9xxxxx, AQJxxxxxx, AQJ9xxxxx, AQJTxxxxx, AQJT9xxxx
+AKxxxxxxx, AK9xxxxxx, AKTxxxxxx, AKT9xxxxx, AKJxxxxxx, AKJ9xxxxx, AKJTxxxxx, AKJT9xxxx
+AKQxxxxxx, AKQ9xxxxx, AKQTxxxxx, AKQT9xxxx, AKQJxxxxx, AKQJ9xxxx, AKQJTxxxx, AKQJT9xxx
+JT9xxxxxxx, QT9xxxxxxx
+QJ9xxxxxxx, QJTxxxxxxx, QJT9xxxxxx
+KT9xxxxxxx, KJ9xxxxxxx, KJTxxxxxxx, KJT9xxxxxx
+KJ9xxxxxxx, KJTxxxxxxx, KJT9xxxxxx
+KQ9xxxxxxx, KQTxxxxxxx, KQT9xxxxxx, KQJxxxxxxx, KQJ9xxxxxx, KQJTxxxxxx, KQJT9xxxxx
+AT9xxxxxxx, AJ9xxxxxxx, AJTxxxxxxx, AJT9xxxxxx
+AQ9xxxxxxx, AQTxxxxxxx, AQT9xxxxxx
+AQJxxxxxxx, AQJ9xxxxxx, AQJTxxxxxx, AQJT9xxxxx
+AK9xxxxxxx, AKTxxxxxxx, AKT9xxxxxx, AKJxxxxxxx, AKJ9xxxxxx, AKJTxxxxxx, AKJT9xxxxx
+AKQxxxxxxx, AKQ9xxxxxx, AKQTxxxxxx, AKQT9xxxxx, AKQJxxxxxx, AKQJ9xxxxx, AKQJTxxxxx, AKQJT9xxxx
+KJT9xxxxxxx, QJT9xxxxxxx
+KQT9xxxxxxx, KQJ9xxxxxxx, KQJTxxxxxxx, KQJT9xxxxxx
+AQT9xxxxxxx, AQJ9xxxxxxx, AQJTxxxxxxx, AQJT9xxxxxx, AJT9xxxxxxx
+AKQ9xxxxxxx, AKQTxxxxxxx, AKQT9xxxxxx, AKQJxxxxxxx, AKQJ9xxxxxx, AKQJTxxxxxx, AKQJT9xxxxx, AKT9xxxxxxx, AKJ9xxxxxxx, AKJTxxxxxxx, AKJT9xxxxxx
+AQJT9xxxxxxx, AKJT9xxxxxxx, AKQT9xxxxxxx, AKQJ9xxxxxxx, AKQJTxxxxxxx, AKQJT9xxxxxx
