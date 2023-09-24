@@ -1,0 +1,40 @@
+import pandas as pd
+import numpy as np
+import time
+
+from fit.fitconst import *
+from fit.SuitInfo import SuitInfo
+from fit.DistInfo import DistInfo
+from fit.Variables import Variables
+
+
+# Set up some data-independent tables.
+suit_info = SuitInfo()
+dist_info = DistInfo()
+
+# Read in the data of hands.
+df = pd.read_csv(SUITDATA_FILE, header = None, \
+  names = ['tag', 'pos', 'vul', 'pass', 'dno', \
+  'sno1', 'sno2', 'sno3', 'sno4'])
+
+df_melted = df.melt(\
+  id_vars = ['pos', 'vul', 'pass', 'dno'], \
+  value_vars = ['sno1', 'sno2', 'sno3', 'sno4'], \
+  value_name = 'sno')
+
+suit_index = pd.RangeIndex(start=0, stop=NUM_SUITS)
+dist_index = pd.RangeIndex(start=0, stop=NUM_DIST)
+
+sno_histogram = df_melted['sno'].value_counts().sort_index()
+sno_histogram = sno_histogram.reindex(suit_index, fill_value=0)
+sno_array = sno_histogram.values
+
+dno_histogram = df_melted['dno'].value_counts().sort_index()
+dno_histogram = dno_histogram.reindex(dist_index, fill_value=0)
+dno_array = dno_histogram.values
+
+var = Variables()
+var.concatenate(sno_array, dno_array)
+
+print(var.str_simple(suit_info, dist_info))
+
