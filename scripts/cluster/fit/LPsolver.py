@@ -223,15 +223,14 @@ class LPsolver:
       print("equality constraints right now")
       slack = self.b_eq - (self.A_eq @ solution.data)
       for i in range(len(slack)):
-        if slack[i] != 0:
+        if abs(slack[i]) > 1.e-6: 
           print("slack at", i, slack[i])
           for j in range(len(self.A_eq[i])):
             if (self.A_eq[i][j] != 0):
               print('A_eq', j, self.A_eq[i][j])
               print("var value", solution.data[j])
           print('b_eq', self.b_eq[i])
-      quit()
-      '''
+          '''
 
       new_solution.data = self.run_once()
 
@@ -239,13 +238,14 @@ class LPsolver:
       print("equality constraints after LP")
       slack = self.b_eq - (self.A_eq @ solution.data)
       for i in range(len(slack)):
-        if slack[i] != 0:
+        if abs(slack[i]) > 1.e-6: 
           print("slack at", i, slack[i])
           for j in range(len(self.A_eq[i])):
             if (self.A_eq[i][j] != 0):
               print('A_eq', j, self.A_eq[i][j])
           print('b_eq', self.b_eq[i])
-          '''
+      quit()
+      '''
 
       iter += 1
       print("LP iteration", "{:12d}".format(iter))

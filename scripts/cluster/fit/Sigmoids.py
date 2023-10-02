@@ -10,9 +10,14 @@ class Sigmoids:
   '''16 sigmoids, one for each pos and vul.'''
 
   def __init__(self):
-    self.sigmoids = \
-      [[Sigmoid() for _ in range(NUM_VUL)] for _ in range(NUM_POS)]
+    self.sigmoids = []
     self.df = pd.DataFrame()
+
+  
+  def init(self, num_pos):
+    self.num_pos = num_pos
+    self.sigmoids = \
+      [[Sigmoid() for _ in range(NUM_VUL)] for _ in range(num_pos)]
 
   
   def calc(self, x_data):
@@ -20,10 +25,10 @@ class Sigmoids:
 
     # The derivatives can actually also be calculated from the 
     # sigmoid values.  Check later on whether this is a speed issue.
-    values = np.empty(NUM_VUL * NUM_POS * len(x_data))
-    derivatives = np.empty(NUM_VUL * NUM_POS * len(x_data))
+    values = np.empty(NUM_VUL * self.num_pos * len(x_data))
+    derivatives = np.empty(NUM_VUL * self.num_pos * len(x_data))
 
-    for pos in range(NUM_POS):
+    for pos in range(self.num_pos):
       for vul in range(NUM_VUL):
        start = (NUM_VUL * pos + vul) * len(x_data)
        s = slice(start, start + len(x_data))
@@ -32,7 +37,7 @@ class Sigmoids:
         
     # Generate all combinations of pos, vul, and bin_midpoints
     pos_vul_bin_combinations = list(itertools.product( \
-      range(NUM_POS), range(NUM_VUL), range(len(x_data))))
+      range(self.num_pos), range(NUM_VUL), range(len(x_data))))
 
     # Flatten the 3D sigmoid_values list into a 1D list
     self.df = pd.DataFrame({
@@ -130,7 +135,7 @@ class Sigmoids:
       "{:>6s}".format("vul") + \
       self.sigmoids[0][0].str_header() + "\n"
 
-    for pos in range(NUM_POS):
+    for pos in range(self.num_pos):
       for vul in range(NUM_VUL):
         s += "{:6d}".format(pos) + "{:6d}".format(vul) + \
           self.sigmoids[pos][vul].str() + "\n"

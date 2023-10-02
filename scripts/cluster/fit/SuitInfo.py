@@ -76,6 +76,8 @@ class SuitInfo:
       top_count += 1
 
     text += 'x' * (length - top_count)
+    if text == "":
+      text = "void"
     return text
 
 
@@ -143,6 +145,7 @@ class SuitInfo:
             length + NUM_TOPS - BRIDGE_TRICKS):
           new_tops = tops
           new_tops ^= 1;
+
           self.dominances.append({ \
             'dominant': self.suit_list[length][tops]['sno'], \
             'dominated': self.suit_list[length][new_tops]['sno']})
@@ -246,7 +249,7 @@ class SuitInfo:
     s = "Suit variables\n\n"
     for sno in self.order:
       sv = variables[sno]
-      if sv == 0: continue
+      # if sv == 0: continue
       s += "{:4d}".format(sno) + " " + \
         "{:16s}".format(self.suit_info[sno]['text']) + " " + \
         "{:16.4f}".format(sv) + "\n"

@@ -9,6 +9,13 @@ from fit.Variables import Variables
 from fit.Sigmoids import Sigmoids
 from fit.LPsolver import LPsolver
 
+# 0: all 16 combinations of pos and vul.
+# 1: only fourth position, all vuls.
+# 2: only first through third position, all vuls.
+# 3: only third position, all vuls.
+# 4: only first-second position
+mode = 4
+
 
 # Set up some data-independent tables.
 suit_info = SuitInfo()
@@ -33,10 +40,45 @@ df = pd.read_csv(SUITDATA_FILE, header = None, \
 bins = np.arange(0, MAX_STRENGTH, STRENGTH_STEP)
 bin_midpoints = (bins[:-1] + bins[1:]) / 2
 
+sigmoids = Sigmoids()
+
+if (mode == 0):
+  sigmoids.init(NUM_POS)
+elif (mode == 1):
+  # Keep only rows where pos is 3.
+  df = df[df['pos'] == 3]
+
+  # Relabel the 'pos' values from 3 to 0.
+  df['pos'] = 0
+
+  sigmoids.init(1)
+elif (mode == 2):
+  # Delete all rows where pos is 3.
+  df = df[df['pos'] != 3]
+
+  sigmoids.init(NUM_POS-1)
+elif (mode == 3):
+  # Keep only rows where pos is 2.
+  df = df[df['pos'] == 2]
+
+  # Relabel the 'pos' values from 2 to 0.
+  df['pos'] = 0
+
+  sigmoids.init(1)
+elif (mode == 4):
+  # Delete all rows where pos is 3.
+  df = df[df['pos'] != 3]
+
+  # Delete all rows where pos is 2.
+  df = df[df['pos'] != 2]
+
+  sigmoids.init(NUM_POS-2)
+else:
+  assert(False)
+
 # The sigmoid fits needs this.
 solution.add_strengths(bins, df)
 
-sigmoids = Sigmoids()
 iter_no = 0
 
 while True: # Sigmoid fit followed by linearized LP
@@ -73,5 +115,5 @@ while True: # Sigmoid fit followed by linearized LP
   print(solution.str_simple(suit_info, dist_info))
 
   # TODO More like a condition on change.
-  if iter_no == 200:
+  if iter_no == 7:
     break

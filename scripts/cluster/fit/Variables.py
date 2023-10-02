@@ -64,17 +64,6 @@ class Variables:
 
   def str(self, suit_info, dist_info, pass_suit_counts, pass_dist_counts):
     s = dist_info.str_with_variables_passes(self.data, pass_dist_counts)
-    '''
-    s = "Distribution pass predictions\n\n"
-    for dno in range(NUM_DIST):
-      dv = self.data[dno + NUM_SUITS]
-      if dv == 0 and pass_dist_counts[dno] == 0: continue
-      s += "{:4d}".format(dno) + " " + \
-        "{:10s}".format(dist_info.get(dno)['text']) + " " + \
-        "{:10.4f}".format(dv) + " " + \
-        "{:6d}".format(pass_dist_counts[dno]) + "\n"
-        '''
-
     s += "\n"
     s += suit_info.str_with_variables_passes(self.data, pass_suit_counts)
     

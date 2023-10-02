@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 # Parse the output of correlate.py and make traces for each
-# # distribution and suit separateley.
+# distribution and suit separateley.
 
 if ($#ARGV != 0)
 {
@@ -161,6 +161,10 @@ sub update_trace
     my $sum6 = 0;
     for my $i ($block_counter-5 .. $block_counter)
     {
+if (! defined $traces_ref->[$suit_counter][$i]{value})
+{
+  print "HERE\n";
+}
       $sum6 += $traces_ref->[$suit_counter][$i]{value};
     }
     $traces_ref->[$suit_counter][$block_counter]{avg6} = $sum6 / 6;
