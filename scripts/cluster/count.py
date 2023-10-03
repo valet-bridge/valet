@@ -2,10 +2,14 @@ import pandas as pd
 import numpy as np
 import time
 
+from fit.FitArgs import FitArgs
 from fit.fitconst import *
 from fit.SuitInfo import SuitInfo
 from fit.DistInfo import DistInfo
 from fit.Variables import Variables
+
+fit_args = FitArgs()
+pos_list, vul_list = fit_args.parse()
 
 
 # Set up some data-independent tables.
@@ -18,39 +22,15 @@ df = pd.read_csv(SUITDATA_FILE, header = None, \
   'sno1', 'sno2', 'sno3', 'sno4'])
 
 
-# 0: all 16 combinations of pos and vul.
-# 1: only fourth position, all vul.
-# 2: only first through third position, all vul.
-# 3: only third position, all vuls.
-# 4: only first-second position
-mode = 1
+# Limit df to the positions and vulnerabilities from the command line.
+df = df[df['pos'].isin(pos_list)]
+df = df[df['vul'].isin(vul_list)]
 
-
-if (mode == 0):
-  sigmoids.init(NUM_POS)
-elif (mode == 1):
-  # Keep only rows where pos is 3.
-  df = df[df['pos'] == 3]
-
-  # Relabel the 'pos' values from 3 to 0.
-  df['pos'] = 0
-elif (mode == 2):
-  # Delete all rows where pos is 3.
-  df = df[df['pos'] != 3]
-elif (mode == 3):
-  # Keep only rows where pos is 2.
-  df = df[df['pos'] == 2]
-
-  # Relabel the 'pos' values from 2 to 0.
-  df['pos'] = 0
-elif (mode == 4):
-  # Delete all rows where pos is 3.
-  df = df[df['pos'] != 3]
-
-  # Delete all rows where pos is 2.
-  df = df[df['pos'] != 2]
-else:
-  assert(False)
+# Only keep rows with the corresponding pos and vul values.
+map_pos = {old: new for new, old in enumerate(pos_list)}
+map_vul = {old: new for new, old in enumerate(vul_list)}
+df['pos'] = df['pos'].replace(map_pos)
+df['vul'] = df['vul'].replace(map_vul)
 
 
 df_melted = df.melt(\

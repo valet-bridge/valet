@@ -14,10 +14,11 @@ class Sigmoids:
     self.df = pd.DataFrame()
 
   
-  def init(self, num_pos):
+  def init(self, num_pos, num_vul):
     self.num_pos = num_pos
+    self.num_vul = num_vul
     self.sigmoids = \
-      [[Sigmoid() for _ in range(NUM_VUL)] for _ in range(num_pos)]
+      [[Sigmoid() for _ in range(num_vul)] for _ in range(num_pos)]
 
   
   def calc(self, x_data):
@@ -25,19 +26,19 @@ class Sigmoids:
 
     # The derivatives can actually also be calculated from the 
     # sigmoid values.  Check later on whether this is a speed issue.
-    values = np.empty(NUM_VUL * self.num_pos * len(x_data))
-    derivatives = np.empty(NUM_VUL * self.num_pos * len(x_data))
+    values = np.empty(self.num_vul * self.num_pos * len(x_data))
+    derivatives = np.empty(self.num_vul * self.num_pos * len(x_data))
 
     for pos in range(self.num_pos):
-      for vul in range(NUM_VUL):
-       start = (NUM_VUL * pos + vul) * len(x_data)
+      for vul in range(self.num_vul):
+       start = (self.num_vul * pos + vul) * len(x_data)
        s = slice(start, start + len(x_data))
        values[s] = self.sigmoids[pos][vul].calc(x_data)
        derivatives[s] = self.sigmoids[pos][vul].calc_derivative(x_data)
         
     # Generate all combinations of pos, vul, and bin_midpoints
     pos_vul_bin_combinations = list(itertools.product( \
-      range(self.num_pos), range(NUM_VUL), range(len(x_data))))
+      range(self.num_pos), range(self.num_vul), range(len(x_data))))
 
     # Flatten the 3D sigmoid_values list into a 1D list
     self.df = pd.DataFrame({
@@ -105,7 +106,7 @@ class Sigmoids:
 
     total_error = ((error_df['prediction'] - error_df['pass']) ** 2).sum()
 
-    return gradient, total_error / (num_vars * NUM_SUITS * NUM_DIST)
+    return gradient, total_error / num_vars
 
   
   def extract_vectors(self, grouped_df):
@@ -129,15 +130,16 @@ class Sigmoids:
       self.sigmoids[pos][vul].fit_data(x_data, sigma, y_data)
   
 
-  def str(self):
+  def str(self, pos_list, vul_list):
     '''Returns a string of the sigmoid parameters.'''
     s = "{:>6s}".format("pos") + \
       "{:>6s}".format("vul") + \
       self.sigmoids[0][0].str_header() + "\n"
 
     for pos in range(self.num_pos):
-      for vul in range(NUM_VUL):
-        s += "{:6d}".format(pos) + "{:6d}".format(vul) + \
+      for vul in range(self.num_vul):
+        s += "{:6d}".format(pos_list[pos]) + \
+          "{:6d}".format(vul_list[vul]) + \
           self.sigmoids[pos][vul].str() + "\n"
 
     return s

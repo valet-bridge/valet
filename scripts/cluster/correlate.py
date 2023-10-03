@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import time
 
+from fit.FitArgs import FitArgs
 from fit.fitconst import *
 from fit.SuitInfo import SuitInfo
 from fit.DistInfo import DistInfo
@@ -9,12 +10,8 @@ from fit.Variables import Variables
 from fit.Sigmoids import Sigmoids
 from fit.LPsolver import LPsolver
 
-# 0: all 16 combinations of pos and vul.
-# 1: only fourth position, all vuls.
-# 2: only first through third position, all vuls.
-# 3: only third position, all vuls.
-# 4: only first-second position
-mode = 4
+fit_args = FitArgs()
+pos_list, vul_list = fit_args.parse()
 
 
 # Set up some data-independent tables.
@@ -42,39 +39,16 @@ bin_midpoints = (bins[:-1] + bins[1:]) / 2
 
 sigmoids = Sigmoids()
 
-if (mode == 0):
-  sigmoids.init(NUM_POS)
-elif (mode == 1):
-  # Keep only rows where pos is 3.
-  df = df[df['pos'] == 3]
+# Limit df to the positions and vulnerabilities from the command line.
+sigmoids.init(len(pos_list), len(vul_list))
+df = df[df['pos'].isin(pos_list)]
+df = df[df['vul'].isin(vul_list)]
 
-  # Relabel the 'pos' values from 3 to 0.
-  df['pos'] = 0
-
-  sigmoids.init(1)
-elif (mode == 2):
-  # Delete all rows where pos is 3.
-  df = df[df['pos'] != 3]
-
-  sigmoids.init(NUM_POS-1)
-elif (mode == 3):
-  # Keep only rows where pos is 2.
-  df = df[df['pos'] == 2]
-
-  # Relabel the 'pos' values from 2 to 0.
-  df['pos'] = 0
-
-  sigmoids.init(1)
-elif (mode == 4):
-  # Delete all rows where pos is 3.
-  df = df[df['pos'] != 3]
-
-  # Delete all rows where pos is 2.
-  df = df[df['pos'] != 2]
-
-  sigmoids.init(NUM_POS-2)
-else:
-  assert(False)
+# Only keep rows with the corresponding pos and vul values.
+map_pos = {old: new for new, old in enumerate(pos_list)}
+map_vul = {old: new for new, old in enumerate(vul_list)}
+df['pos'] = df['pos'].replace(map_pos)
+df['vul'] = df['vul'].replace(map_vul)
 
 # The sigmoid fits needs this.
 solution.add_strengths(bins, df)
@@ -87,7 +61,7 @@ while True: # Sigmoid fit followed by linearized LP
 
   # Fit the sigmoids.
   sigmoids.fit_data(df)
-  print(sigmoids.str())
+  print(sigmoids.str(pos_list, vul_list))
 
   # Recalculate all sigmoid values that occur in binned histograms,
   # as the sigmoid parameters have changed.
