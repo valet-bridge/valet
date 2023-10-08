@@ -244,20 +244,16 @@ class SuitInfo:
     with open(SUIT_EQUIV_FILE, 'r') as csvfile:
       reader = csv.reader(csvfile, skipinitialspace = True)
       for row in reader:
-        elem0 = row[0]
-        if elem0 not in self.suit_lookup:
-          print(elem0, "not a known suit")
-          quit()
-
         if self.equiv_is_skipped(row):
           continue
 
         # The LP solver is a bit finicky about starting from
-        # a feasible solution.  If we require two variables to
+        # a feasible solution.  If we require two variables to be
         # equal that aren't, such as T9x and JTx (just an example)
         # then the starting point won't be feasible.  So first we
         # figure out the weighted HCP for the row.
 
+        elem0 = row[0]
         sno0 = self.suit_lookup[elem0]
         count0 = self.suit_info[sno0]['count']
         hcp_sum = self.suit_info[sno0]['hcp'] * count0
@@ -267,7 +263,7 @@ class SuitInfo:
           elem1 = row[i]
           if elem1 not in self.suit_lookup:
             print(elem1, "not a known suit")
-            quit
+            quit()
           sno1 = self.suit_lookup[elem1]
           count1 = self.suit_info[sno1]['count']
           hcp_sum += self.suit_info[sno1]['hcp'] * count1

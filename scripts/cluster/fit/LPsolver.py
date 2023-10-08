@@ -23,15 +23,15 @@ class LPsolver:
     self.bounds = []
 
   
-  def resize_eq(self, suit_info, dist_equiv):
+  def resize_eq(self, suit_info, dist_info):
     '''Only know the size of LP matrices when we've read the files.'''
 
     self.A_ub = np.zeros((suit_info.get_num_dominances(), NUM_VAR))
     self.b_ub = np.zeros(suit_info.get_num_dominances())
 
-    self.A_eq = np.zeros((suit_info.num_equalities() + dist_equiv + 1, \
-      NUM_VAR))
-    self.b_eq = np.zeros(suit_info.num_equalities() + dist_equiv + 1)
+    num_equalities = suit_info.num_equalities() + dist_info.num_equalities()
+    self.A_eq = np.zeros((num_equalities, NUM_VAR))
+    self.b_eq = np.zeros(num_equalities)
 
   
   def set_box_constraints(self, estimate, step_size):
@@ -188,7 +188,7 @@ class LPsolver:
     return num_changes, changes_var, change_obj, num_interior
     
 
-  def print_equality_satisfaction(self):
+  def print_equality_satisfaction(self, solution):
     slack = self.b_eq - (self.A_eq @ solution.data)
     for i in range(len(slack)):
       if abs(slack[i]) > 1.e-6: 
@@ -226,10 +226,8 @@ class LPsolver:
 
       self.set_objective(gradient_sno, gradient_dno)
 
-      '''
-      print("equality constraints right now")
-      self.print_equality_satisfaction()
-      '''
+      # print("equality constraints before LP")
+      # self.print_equality_satisfaction(solution)
 
       new_solution.data = self.run_once()
 

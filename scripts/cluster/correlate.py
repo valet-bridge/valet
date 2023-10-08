@@ -18,12 +18,14 @@ pos_list, vul_list = fit_args.parse()
 suit_info = SuitInfo()
 dist_info = DistInfo()
 
+dist_info.read(pos_list)
+
 solution = Variables()
 
 # Set up the constraints of the linearized LP problem.
 # Also set a feasible starting point for the LP problem.
 lp_solver = LPsolver()
-lp_solver.resize_eq(suit_info, dist_info.num_equivalences())
+lp_solver.resize_eq(suit_info, dist_info)
 lp_solver.set_constraints(suit_info, dist_info, solution, 0.01)
 
 # Read in the data of hands.
