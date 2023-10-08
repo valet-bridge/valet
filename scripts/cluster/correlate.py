@@ -23,8 +23,7 @@ solution = Variables()
 # Set up the constraints of the linearized LP problem.
 # Also set a feasible starting point for the LP problem.
 lp_solver = LPsolver()
-lp_solver.resize_eq(suit_info.num_equalities(), \
-  dist_info.num_equivalences())
+lp_solver.resize_eq(suit_info, dist_info.num_equivalences())
 lp_solver.set_constraints(suit_info, dist_info, solution, 0.01)
 
 # Read in the data of hands.

@@ -16,6 +16,7 @@ class SuitInfo:
 
     # For the current parameters there are 864 dominances.
     self.dominances = []
+    self.num_dominances = 0
 
     # Print order.
     self.order = np.zeros(NUM_SUITS, dtype = int)
@@ -156,6 +157,24 @@ class SuitInfo:
          self.num_complete_len_skips += 1
 
 
+  def dominance_is_skipped(self, sno0, sno1):
+    num_skips = 0
+    if self.suit_info[sno0]['skip']:
+      num_skips += 1
+    if self.suit_info[sno1]['skip']:
+      num_skips += 1
+      
+    if num_skips == 0:
+      return False
+    elif num_skips == 2:
+      return True
+    else:
+      print("Dominance has mixed skips and non-skips:", sno0, sno1)
+      quit()
+
+    return False
+
+
   def set_suit_dominances(self):
     for length, row in enumerate(self.suit_list):
       for tops, cell in enumerate(row):
@@ -171,9 +190,13 @@ class SuitInfo:
             new_tops ^= 1 << bit
             new_tops |= 1 << (bit-1)
 
-            self.dominances.append({ \
-              'dominant': self.suit_list[length][tops]['sno'], \
-              'dominated': self.suit_list[length][new_tops]['sno']})
+            sno0 = self.suit_list[length][tops]['sno']
+            sno1 = self.suit_list[length][new_tops]['sno']
+            if self.dominance_is_skipped(sno0, sno1):
+              continue
+
+            self.dominances.append({'dominant': sno0, 'dominated': sno1})
+            self.num_dominances += 1
       
         # It is possible to turn a nine into an x when there is an x free.
         if (bits[0] and self.count_ones(tops) > \
@@ -181,9 +204,13 @@ class SuitInfo:
           new_tops = tops
           new_tops ^= 1;
 
-          self.dominances.append({ \
-            'dominant': self.suit_list[length][tops]['sno'], \
-            'dominated': self.suit_list[length][new_tops]['sno']})
+          sno0 = self.suit_list[length][tops]['sno']
+          sno1 = self.suit_list[length][new_tops]['sno']
+          if self.dominance_is_skipped(sno0, sno1):
+            continue
+
+          self.dominances.append({'dominant': sno0, 'dominated': sno1})
+          self.num_dominances += 1
 
 
   def equiv_is_skipped(self, row):
@@ -329,8 +356,8 @@ class SuitInfo:
   def set(self):
     self.set_suit_list()
     self.set_suit_info()
-    self.set_suit_dominances()
     self.read_skips()
+    self.set_suit_dominances()
     self.read_equivalences()
 
   
@@ -359,6 +386,10 @@ class SuitInfo:
     return (BRIDGE_TRICKS + 1 - self.num_complete_len_skips) + \
       len(self.equivalences) + \
       self.num_skips
+
+ 
+  def get_num_dominances(self):
+    return self.num_dominances
 
   
   def str_with_variables_passes(self, variables, pass_counts):

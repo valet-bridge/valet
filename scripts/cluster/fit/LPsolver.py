@@ -16,18 +16,22 @@ class LPsolver:
 
   def __init__(self):
     self.c = np.zeros(NUM_VAR)
-    self.A_ub = np.zeros((NUM_DOMINANCES, NUM_VAR))
-    self.b_ub = np.zeros(NUM_DOMINANCES)
+    self.A_ub = np.zeros((0, 0))
+    self.b_ub = np.zeros(0)
     self.A_eq = np.zeros((0, 0))
     self.b_eq = np.zeros(0)
     self.bounds = []
 
   
-  def resize_eq(self, suit_equalities, dist_equiv):
-    '''Only know the size of A_eq and B_eq when we've read the files.'''
-    self.A_eq = np.zeros((suit_equalities + dist_equiv + 1, \
+  def resize_eq(self, suit_info, dist_equiv):
+    '''Only know the size of LP matrices when we've read the files.'''
+
+    self.A_ub = np.zeros((suit_info.get_num_dominances(), NUM_VAR))
+    self.b_ub = np.zeros(suit_info.get_num_dominances())
+
+    self.A_eq = np.zeros((suit_info.num_equalities() + dist_equiv + 1, \
       NUM_VAR))
-    self.b_eq = np.zeros(suit_equalities + dist_equiv + 1)
+    self.b_eq = np.zeros(suit_info.num_equalities() + dist_equiv + 1)
 
   
   def set_box_constraints(self, estimate, step_size):
