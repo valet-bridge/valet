@@ -23,11 +23,11 @@ class LPsolver:
     self.bounds = []
 
   
-  def resize_eq(self, suit_equiv, dist_equiv):
+  def resize_eq(self, suit_equalities, dist_equiv):
     '''Only know the size of A_eq and B_eq when we've read the files.'''
-    self.A_eq = np.zeros((BRIDGE_TRICKS + 2 + suit_equiv + dist_equiv, \
+    self.A_eq = np.zeros((suit_equalities + dist_equiv + 1, \
       NUM_VAR))
-    self.b_eq = np.zeros(BRIDGE_TRICKS + 2 + suit_equiv + dist_equiv)
+    self.b_eq = np.zeros(suit_equalities + dist_equiv + 1)
 
   
   def set_box_constraints(self, estimate, step_size):
@@ -38,15 +38,14 @@ class LPsolver:
     # Dominances
     suit_info.set_lp_upper_constraints(self.A_ub, self.b_ub)
 
-    # Weighted average points within each suit length.
-    # Also the suit equivalences.
-    # So BRIDGE_TRICKS+1 + num_equivalences in total.
     suit_info.set_lp_equal_constraints(self.A_eq, self.b_eq)
 
     # Sum (unweighted) of distribution HCP to remain constant.
     # Also the distribution equivalences.
-    dist_info.set_lp_equal_constraints(suit_info.num_equivalences(), \
+    dist_info.set_lp_equal_constraints(suit_info.num_equalities(), \
       self.A_eq, self.b_eq)
+
+    estimate.init_by_hcp(suit_info, dist_info)
 
     # Limits of +/- 1 step_size.
     self.set_box_constraints(estimate, step_size)
@@ -110,55 +109,47 @@ class LPsolver:
     return gradient_sno, gradient_dno, total_error_sno, total_error_dno
 
 
-  def run_once(self):
-    '''
-    print("c vector")
+  def print_lp_problem(self):
+    print("c vector, length", len(self.c))
     for i in range(len(self.c)):
       if self.c[i]:
         print(i, self.c[i])
     print("\n")
 
-    print("A_ub")
+    print("A_ub, length", len(self.A_ub))
     for i in range(len(self.A_ub)):
       for j in range(len(self.A_ub[0])):
         if (self.A_ub[i][j]):
           print(i, j, self.A_ub[i][j])
     print("\n")
 
-    print("b_ub")
+    print("b_ub, length", len(self.b_ub))
     for i in range(len(self.b_ub)):
       if self.b_ub[i]:
         print(i, self.b_ub[i])
     print("\n")
 
-    print("A_eq")
-    print(self.A_eq)
+    print("A_eq, shape", self.A_eq.shape)
+    for i in range(len(self.A_eq)):
+      for j in range(len(self.A_eq[i])):
+        if self.A_eq[i][j] != 0:
+          print(i, j, self.A_eq[i][j])
     print("\n")
 
-    print("b_eq")
-    print(self.b_eq)
+    print("b_eq, length", len(self.b_eq))
     for i in range(len(self.b_eq)):
       if self.b_eq[i]:
         print(i, self.b_eq[i])
     print("\n")
 
-    print("bounds")
+    print("bounds, length", len(self.bounds))
     for i in range(len(self.bounds)):
       print(i, self.bounds[i])
     print("\n")
-    '''
 
-    '''
-    print("A_eq")
-    for i in range(len(self.A_eq)):
-      for j in range(len(self.A_eq[i])):
-        if self.A_eq[i][j] != 0:
-          print(i, j, self.A_eq[i][j])
 
-    print("b_eq")
-    for i in range(len(self.b_eq)):
-      print(i, self.b_eq[i])
-    '''
+  def run_once(self):
+    # self.print_lp_problem()
     
     result = linprog(self.c, A_ub = self.A_ub, b_ub = self.b_ub, \
       A_eq = self.A_eq, b_eq = self.b_eq, bounds = self.bounds)
@@ -193,6 +184,18 @@ class LPsolver:
     return num_changes, changes_var, change_obj, num_interior
     
 
+  def print_equality_satisfaction(self):
+    slack = self.b_eq - (self.A_eq @ solution.data)
+    for i in range(len(slack)):
+      if abs(slack[i]) > 1.e-6: 
+        print("slack at", i, slack[i])
+        for j in range(len(self.A_eq[i])):
+          if (self.A_eq[i][j] != 0):
+            print('A_eq', j, self.A_eq[i][j])
+            print("var value", solution.data[j])
+        print('b_eq', self.b_eq[i])
+
+
   def run_until_interior(self, df, \
     # df_pos_vul_sno, df_pos_vul_dno, \
     sigmoids, bins, step_size, num_iters, solution, suit_info, dist_info):
@@ -221,31 +224,10 @@ class LPsolver:
 
       '''
       print("equality constraints right now")
-      slack = self.b_eq - (self.A_eq @ solution.data)
-      for i in range(len(slack)):
-        if abs(slack[i]) > 1.e-6: 
-          print("slack at", i, slack[i])
-          for j in range(len(self.A_eq[i])):
-            if (self.A_eq[i][j] != 0):
-              print('A_eq', j, self.A_eq[i][j])
-              print("var value", solution.data[j])
-          print('b_eq', self.b_eq[i])
-          '''
+      self.print_equality_satisfaction()
+      '''
 
       new_solution.data = self.run_once()
-
-      '''
-      print("equality constraints after LP")
-      slack = self.b_eq - (self.A_eq @ solution.data)
-      for i in range(len(slack)):
-        if abs(slack[i]) > 1.e-6: 
-          print("slack at", i, slack[i])
-          for j in range(len(self.A_eq[i])):
-            if (self.A_eq[i][j] != 0):
-              print('A_eq', j, self.A_eq[i][j])
-          print('b_eq', self.b_eq[i])
-      quit()
-      '''
 
       iter += 1
       print("LP iteration", "{:12d}".format(iter))

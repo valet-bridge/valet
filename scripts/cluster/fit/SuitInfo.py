@@ -26,6 +26,10 @@ class SuitInfo:
     # Equivalences among suit variables can be read in.
     self.equivalences = []
 
+    self.num_skips = 0
+    self.num_complete_len_skips = 0
+    self.active_by_len = [0 for _ in range(BRIDGE_TRICKS + 1)]
+
     self.set()
 
 
@@ -90,6 +94,7 @@ class SuitInfo:
       if 'count' not in self.suit_list[length][tops]:
         self.suit_list[length][tops]['sno'] = reduced_suit_number
         self.suit_list[length][tops]['count'] = 1
+        self.active_by_len[length] += 1
         reduced_suit_number += 1
       else:
         self.suit_list[length][tops]['count'] += 1
@@ -110,6 +115,7 @@ class SuitInfo:
         entry_ref['count'] = cell['count']
         entry_ref['hcp'] = self.hcp(tops)
         entry_ref['text'] = self.suit_text(length, tops)
+        entry_ref['skip'] = False
 
         self.suit_lookup[entry_ref['text']] = sno
 
@@ -119,6 +125,35 @@ class SuitInfo:
         if 'sno' not in self.suit_list[length][tops]: continue
         self.order[order_no] = self.suit_list[length][tops]['sno']
         order_no += 1
+
+
+  def read_skips(self):
+    '''Read suit variables that are too thin to estimate.'''
+    if not os.path.exists(SUIT_SKIP_FILE):
+      return
+    if not os.path.isfile(SUIT_SKIP_FILE):
+      return
+
+    with open(SUIT_SKIP_FILE, 'r') as csvfile:
+      reader = csv.reader(csvfile, delimiter = ' ', skipinitialspace = True)
+      for row in reader:
+        assert len(row) == 3
+        (sno, text, val) = (int(row[0]), row[1], float(row[2]))
+
+        assert sno >= 0 and sno < len(self.suit_info)
+        entry_ref = self.suit_info[sno]
+
+        assert entry_ref['text'] == text
+        entry_ref['skip'] = True
+        entry_ref['hcp'] = val
+        self.active_by_len[entry_ref['length']] -= 1
+        self.num_skips += 1
+
+      # Count how many lengths are skipped completely.
+      for length in range(BRIDGE_TRICKS + 1):
+        assert self.active_by_len[length] >= 0
+        if self.active_by_len[length] == 0:
+         self.num_complete_len_skips += 1
 
 
   def set_suit_dominances(self):
@@ -151,6 +186,28 @@ class SuitInfo:
             'dominated': self.suit_list[length][new_tops]['sno']})
 
 
+  def equiv_is_skipped(self, row):
+    num_skips = 0
+    for elem in row:
+      if elem not in self.suit_lookup:
+        print(elem, "not a known suit")
+        quit()
+
+      sno = self.suit_lookup[elem]
+      if self.suit_info[sno]['skip']:
+        num_skips += 1
+      
+    if num_skips == 0:
+      return False
+    elif num_skips == len(row):
+      return True
+    else:
+      print(row, "has mixed skips and non-skips")
+      quit()
+
+    return False
+
+
   def read_equivalences(self):
     if not os.path.exists(SUIT_EQUIV_FILE):
       return
@@ -164,6 +221,9 @@ class SuitInfo:
         if elem0 not in self.suit_lookup:
           print(elem0, "not a known suit")
           quit()
+
+        if self.equiv_is_skipped(row):
+          continue
 
         # The LP solver is a bit finicky about starting from
         # a feasible solution.  If we require two variables to
@@ -188,6 +248,7 @@ class SuitInfo:
 
         hcp_average = hcp_sum / count_sum
 
+        # Then we reset each of the equivalences to that same average.
         self.suit_info[sno0]['hcp'] = hcp_average
 
         for i in range(1, len(row)):
@@ -205,38 +266,71 @@ class SuitInfo:
       b_ub[index] = 0
 
   
-  def set_lp_equal_constraints(self, A_eq, b_eq):
-    sum = np.zeros(BRIDGE_TRICKS+1)
+  def set_lp_equality_hcp(self, A_eq, b_eq):
+    '''Set the equalities for each length unless completely skipped.'''
+    num_active_lengths = BRIDGE_TRICKS + 1 - self.num_complete_len_skips
+    sum = np.zeros(num_active_lengths)
 
+    # Make an array of the lengths that are not skipped.
+    collapsed_lengths = np.zeros(BRIDGE_TRICKS + 1, dtype = int)
+    collapsed_len = 0
+    for l in range(BRIDGE_TRICKS + 1):
+      if self.active_by_len[l]:
+        collapsed_lengths[l] = collapsed_len
+        collapsed_len += 1
+      
+    # Add an HCP balance for each length unless completely skipped.
     for sno, si in enumerate(self.suit_info):
-      A_eq[si['length']][sno] = si['count']
-      sum[si['length']] += si['hcp'] * si['count']
+      length = si['length']
+      if self.active_by_len[length] == False:
+        continue
 
-    for length in range(BRIDGE_TRICKS+1):
-      b_eq[length] = sum[length]
+      collapsed_len = collapsed_lengths[length]
+      A_eq[collapsed_len][sno] = si['count']
+      sum[collapsed_len] += si['hcp'] * si['count']
 
-    # Then the equivalences.
-    index = BRIDGE_TRICKS + 1
+    for collapsed_len in range(num_active_lengths):
+      b_eq[collapsed_len] = sum[collapsed_len]
+
+    return num_active_lengths
+
+
+  def set_lp_equal_constraints(self, A_eq, b_eq):
+    '''Add three kinds of suit equality constraints.'''
+
+    # Add the equalities for each length unless completely skipped.
+    index = self.set_lp_equality_hcp(A_eq, b_eq)
+
+    # Add the active equivalences.
     for i in range(len(self.equivalences)):
       equiv = self.equivalences[i]
       A_eq[index + i][equiv[0]] = 1
       A_eq[index + i][equiv[1]] = -1
       b_eq[index + i] = 0
 
+    # Add the skip equalities.
+    index += len(self.equivalences)
+    for sno, si in enumerate(self.suit_info):
+      if si['skip']:
+        A_eq[index][sno] = 1
+        b_eq[index] = si['hcp']
+        index += 1
+
     '''
-    for length in range(BRIDGE_TRICKS+1 + len(self.equivalences)):
+    for index in range(self.num_equalities()):
+      print("equiv", index, ":")
       for sno in range(NUM_SUITS):
-        if (A_eq[length][sno] != 0):
-          print("equiv", length, sno, ":", A_eq[length][sno])
-      print(length, "sum", b_eq[length])
-    quit()
-    '''
+        if (A_eq[index][sno] != 0):
+          print("  ", self.suit_info[sno]['text'], ":", A_eq[index][sno])
+      print("  == ", b_eq[index])
+      '''
 
 
   def set(self):
     self.set_suit_list()
     self.set_suit_info()
     self.set_suit_dominances()
+    self.read_skips()
     self.read_equivalences()
 
   
@@ -257,8 +351,14 @@ class SuitInfo:
     return s
 
   
-  def num_equivalences(self):
-    return len(self.equivalences)
+  def num_equalities(self):
+    # There is an equality constraint for each length unless skipped.
+    # There is one for each (active) suit equivalence.  The inactive
+    # ones were skipped at read time.
+    # There is one for each skip.
+    return (BRIDGE_TRICKS + 1 - self.num_complete_len_skips) + \
+      len(self.equivalences) + \
+      self.num_skips
 
   
   def str_with_variables_passes(self, variables, pass_counts):

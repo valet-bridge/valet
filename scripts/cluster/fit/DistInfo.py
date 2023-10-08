@@ -73,11 +73,11 @@ class DistInfo:
             NUM_SUITS + self.dist_lookup[elem1]])
 
 
-  def set_lp_equal_constraints(self, num_suit_equiv, A_eq, b_eq):
+  def set_lp_equal_constraints(self, num_suit_equalities, A_eq, b_eq):
     call = comb(52, 13)
     sum = 0
 
-    index = BRIDGE_TRICKS+1 + num_suit_equiv
+    index = num_suit_equalities
 
     for dno in range(NUM_DIST):
       prob = self.dist_info[dno]['comb'] / call

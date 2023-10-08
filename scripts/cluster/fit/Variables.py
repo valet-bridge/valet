@@ -12,10 +12,15 @@ class Variables:
     self.data = np.zeros(NUM_VAR)
 
 
-  def init_by_hcp(self, suit_info, dist_info):
-    '''Initialize with standard HCP and distribution points.'''
+  def init_suit_by_hcp(self, suit_info):
+    '''Initialize suits with standard HCP and distribution points.'''
     for sno in range(NUM_SUITS):
       self.data[sno] = suit_info.get(sno)['hcp']
+
+  def init_by_hcp(self, suit_info, dist_info):
+    '''Initialize with standard HCP and distribution points.'''
+    self.init_suit_by_hcp(suit_info)
+
     for dno in range(NUM_DIST):
       self.data[NUM_SUITS + dno] = dist_info.get(dno)['hcp']
 

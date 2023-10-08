@@ -18,3 +18,6 @@ NUM_STRENGTH_STEPS = int(MAX_STRENGTH / STRENGTH_STEP)
 
 SUIT_EQUIV_FILE = "fit/suit_equiv.txt"
 DIST_EQUIV_FILE = "fit/dist_equiv.txt"
+
+SUIT_SKIP_FILE = "out/suit_skip.txt"
+DIST_SKIP_FILE = "out/dist_skip.txt"
