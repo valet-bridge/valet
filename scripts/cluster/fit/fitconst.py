@@ -1,5 +1,6 @@
 # SUITDATA_FILE = "suitdata100.csv"
-SUITDATA_FILE = "suitdata.csv"
+SUITDATA_FILE = "labels/original/passes.csv"
+OPENING_FILE = "labels/original/detail.csv"
 
 BRIDGE_TRICKS = 13
 NUM_POS = 4
@@ -20,3 +21,5 @@ DIST_EQUIV_FILE = "fit/dist_equiv.txt"
 
 SUIT_SKIP_FILE = "out/suit_skip.txt"
 DIST_SKIP_FILE = "out/dist_skip.txt"
+
+SUIT_VALUE_FILE = "fit/suit_map.txt"

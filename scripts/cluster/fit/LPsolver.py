@@ -60,9 +60,12 @@ class LPsolver:
     self.c[NUM_SUITS:] = gradient_dno
 
   
-  def calc_gradients(self, df, \
-    # df_pos_vul_sno, df_pos_vul_dno, \
-    sigmoids, bins, solution):
+  def set_sqerr(self, sqerr, error_sno, error_dno):
+    sqerr.data[:NUM_SUITS] = error_sno
+    sqerr.data[NUM_SUITS:] = error_dno
+
+  
+  def calc_gradients(self, df, sigmoids, bins, solution):
     '''Calculate the gradients w.r.t. the variables.'''
 
     # Melt the sno1..sno4 fields into a single sno field.
@@ -103,14 +106,12 @@ class LPsolver:
 
     # Predict the absolute number of passes for each variable number.
     # The results are numpy 1D arrays.  Also calculate the gradients.
-    # results_dno, gradient_dno, total_error_dno = \
-    gradient_dno, total_error_dno = \
+    gradient_dno, error_dno = \
       sigmoids.hist_to_gradients(hist_dno, df_pos_vul_dno, NUM_DIST)
-    # results_sno, gradient_sno, total_error_sno = \
-    gradient_sno, total_error_sno = \
+    gradient_sno, error_sno = \
       sigmoids.hist_to_gradients(hist_sno, df_pos_vul_sno, NUM_SUITS)
 
-    return gradient_sno, gradient_dno, total_error_sno, total_error_dno
+    return gradient_sno, gradient_dno, error_sno, error_dno
 
 
   def print_lp_problem(self):
@@ -212,6 +213,7 @@ class LPsolver:
     iter = 0
     solution0 = solution
     new_solution = Variables()
+    sqerr = Variables()
 
     while True:
 
@@ -220,9 +222,13 @@ class LPsolver:
       solution.add_strengths(bins, df)
 
       gradient_sno, gradient_dno, error_sno, error_dno = \
-        self.calc_gradients(df, \
-        # df_pos_vul_sno, df_pos_vul_dno, \
-        sigmoids, bins, solution)
+        self.calc_gradients(df, sigmoids, bins, solution)
+
+      # This is only for statistics and has no influence on
+      # the optimization.  There are four suits for each dist.
+      aggr_error_sno = sum(error_sno) / 4
+      aggr_error_dno = sum(error_dno)
+      self.set_sqerr(sqerr, error_sno, error_dno)
 
       self.set_objective(gradient_sno, gradient_dno)
 
@@ -237,15 +243,16 @@ class LPsolver:
       num_changes, changes_var, change_obj, num_interior = \
         self.calc_change(solution, new_solution)
 
-      print("error suit  ", "{:12.4f}".format(error_sno))
-      print("error dist  ", "{:12.4f}".format(error_dno))
-      print("error total ", "{:12.4f}".format(error_sno + error_dno))
+      print("error suit  ", "{:12.4f}".format(aggr_error_sno))
+      print("error dist  ", "{:12.4f}".format(aggr_error_dno))
+      print("error total ", "{:12.4f}".format(aggr_error_sno + aggr_error_dno))
       print("changes_var ", "{:12.4f}".format(changes_var))
       print("num_changes ", "{:12d}".format(num_changes))
       print("change_obj  ", "{:12.4f}".format(change_obj))
       print("num_interior", "{:12d}".format(num_interior), "\n")
 
       print(new_solution.str_simple(suit_info, dist_info))
+      print(sqerr.str_simple_errors(suit_info, dist_info))
       sys.stdout.flush()
 
       solution.data = new_solution.data

@@ -53,13 +53,15 @@ class DistInfo:
 
   
   def check_skips(self, smallest, largest, cutoff):
-    if largest <= cutoff:
+    if smallest <= cutoff:
+    # if largest <= cutoff:
       return False
-    elif smallest >= cutoff + 1:
-      return True
     else:
-      print("Inconsistency:", smallest, largest, cutoff)
-      quit()
+    # elif smallest >= cutoff + 1:
+      return True
+    # else:
+      # print("Inconsistency:", smallest, largest, cutoff)
+      # quit()
     
     return False
 
@@ -157,6 +159,11 @@ class DistInfo:
             NUM_SUITS + self.dist_lookup[elem1]])
 
 
+  def set_to_zero(self):
+    for dno in range(NUM_DIST):
+      self.dist_info[dno]['hcp'] = 0
+
+
   def set_lp_equal_constraints(self, num_suit_equalities, A_eq, b_eq):
     '''Add three kinds of distribution equality constraints.'''
 
@@ -211,8 +218,8 @@ class DistInfo:
     return 1 + len(self.equivalences) + self.num_skips
 
 
-  def str_with_variables(self, variables):
-    s = "Distribution variables\n\n"
+  def str_with_variables(self, variables, title = "Distribution variables"):
+    s = title + "\n\n"
     for dno in self.order:
       dv = variables[dno + NUM_SUITS]
       s += "{:4d}".format(dno) + " " + \

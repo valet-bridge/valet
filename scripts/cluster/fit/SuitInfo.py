@@ -128,6 +128,29 @@ class SuitInfo:
         order_no += 1
 
 
+  def read_values(self, fname):
+    '''Read non-HCP initializations from a file.'''
+    if not os.path.exists(fname):
+      return
+    if not os.path.isfile(fname):
+      return
+
+    # This is quite similar to read_skips, and maybe they can be merged
+    # at some point.  For now this method is a quick way to initialize.
+
+    with open(fname, 'r') as file:
+      reader = csv.reader(file, delimiter = ' ', skipinitialspace = True)
+      for row in reader:
+        assert len(row) == 3
+        (sno, text, val) = (int(row[0]), row[1], float(row[2]))
+
+        assert sno >= 0 and sno < len(self.suit_info)
+        entry_ref = self.suit_info[sno]
+
+        assert entry_ref['text'] == text
+        entry_ref['hcp'] = val
+
+
   def read_skips(self):
     '''Read suit variables that are too thin to estimate.'''
     if not os.path.exists(SUIT_SKIP_FILE):
@@ -362,8 +385,8 @@ class SuitInfo:
     return self.suit_info[sno]
 
   
-  def str_with_variables(self, variables):
-    s = "Suit variables\n\n"
+  def str_with_variables(self, variables, title = "Suit variables"):
+    s = title + "\n\n"
     for sno in self.order:
       sv = variables[sno]
       # if sv == 0: continue

@@ -17,6 +17,7 @@ class Variables:
     for sno in range(NUM_SUITS):
       self.data[sno] = suit_info.get(sno)['hcp']
 
+
   def init_by_hcp(self, suit_info, dist_info):
     '''Initialize with standard HCP and distribution points.'''
     self.init_suit_by_hcp(suit_info)
@@ -81,4 +82,11 @@ class Variables:
     
     return s
 
+
+  def str_simple_errors(self, suit_info, dist_info):
+    s = dist_info.str_with_variables(self.data, "Distribution errors") + \
+      "\n" + \
+      suit_info.str_with_variables(self.data, "Suit errors")
+    
+    return s
 

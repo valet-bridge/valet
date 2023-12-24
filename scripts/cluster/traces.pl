@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 # Parse the output of correlate.py and make traces for each
-# distribution and suit separateley.
+# distribution and suit separately.
 
 if ($#ARGV != 0)
 {

@@ -78,7 +78,7 @@ while True: # Sigmoid fit followed by linearized LP
     step_size = 0.05
     num_iters = 100
   else:
-    step_size = 0.01
+    step_size = 0.0102
     num_iters = 100
 
   change = lp_solver.run_until_interior(df, \
