@@ -95,7 +95,7 @@ lp_solver.set_constraints(suit_info, dist_info, solution, 0.01)
 
 # Read in the data of hands.
 # df = pd.read_csv(SUITDATA_FILE, header = None, \
-  # names = ['tag', 'pos', 'vul', 'pass', 'dno', \
+  # names = ['tag', 'pos', 'vul', 'open', 'dno', \
   # 'sno1', 'sno2', 'sno3', 'sno4'])
 
 # Strength is 0..100 in 0.01 steps.

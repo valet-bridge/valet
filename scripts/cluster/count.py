@@ -18,7 +18,7 @@ dist_info = DistInfo()
 
 # Read in the data of hands.
 df = pd.read_csv(SUITDATA_FILE, header = None, \
-  names = ['tag', 'pos', 'vul', 'pass', 'dno', \
+  names = ['tag', 'pos', 'vul', 'open', 'dno', \
   'sno1', 'sno2', 'sno3', 'sno4'])
 
 
@@ -34,7 +34,7 @@ df['vul'] = df['vul'].replace(map_vul)
 
 
 df_melted = df.melt(\
-  id_vars = ['pos', 'vul', 'pass', 'dno'], \
+  id_vars = ['pos', 'vul', 'open', 'dno'], \
   value_vars = ['sno1', 'sno2', 'sno3', 'sno4'], \
   value_name = 'sno')
 

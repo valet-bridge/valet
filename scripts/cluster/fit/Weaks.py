@@ -120,13 +120,13 @@ class Weaks:
     # total_error = pred_error @ pred_error
 
     # This is going to be very jumpy no matter how good we get,
-    # as there won't always be a lot of passes for a single combination
+    # as there won't always be a lot of opens for a single combination
     # of pos, vul, dno and bin.  I suppose we could instead aggregate
     # over bins, and only then square and add up.
     # error_df = remerged_df.groupby(['dno']) \
-      # .agg({'prediction': 'sum', 'pass': 'sum'})
+      # .agg({'prediction': 'sum', 'open': 'sum'})
 
-    # total_error = ((error_df['prediction'] - error_df['pass']) ** 2).sum()
+    # total_error = ((error_df['prediction'] - error_df['open']) ** 2).sum()
 
     # return gradient, total_error / num_vars
     return gradient, sq_error
@@ -151,7 +151,7 @@ class Weaks:
 
 
   def fit_data(self, df):
-    '''Fits the weaks to a dataframe with pos, vul, bin and pass.'''
+    '''Fits the weaks to a dataframe with pos, vul, bin and open.'''
     results = df.groupby(['pos', 'vul']).apply(self.extract_vectors)
 
     for (pos, vul), (x_data, sigma, y_data) in results.items():

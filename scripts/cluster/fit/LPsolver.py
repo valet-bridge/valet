@@ -70,7 +70,7 @@ class LPsolver:
 
     # Melt the sno1..sno4 fields into a single sno field.
     df_melted = df.melt(\
-      id_vars = ['pos', 'vul', 'pass', 'dno', 'bin'], \
+      id_vars = ['pos', 'vul', 'open', 'dno', 'bin'], \
       value_vars = ['sno1', 'sno2', 'sno3', 'sno4'], \
       value_name = 'sno')
 
@@ -89,22 +89,22 @@ class LPsolver:
 
     hist_sno.rename(columns = {'sno': 'dno'}, inplace = True)
 
-    # Have to recalculate the pass bins for (pos, vul, sno, bin), 
+    # Have to recalculate the open bins for (pos, vul, sno, bin), 
     # as the strengths have changed.
     df_pos_vul_sno = df_melted.groupby( \
-      ['pos', 'vul', 'sno', 'bin']).agg({'pass' : 'sum'})
+      ['pos', 'vul', 'sno', 'bin']).agg({'open' : 'sum'})
 
     # Rename from sno to dno to fit with Sigmoids (hist_to_prediction).
     df_pos_vul_sno.index.names = ['pos', 'vul', 'dno', 'bin']
 
-    # Count the actual passes by (pos, vul, dno, bin).
+    # Count the actual opens by (pos, vul, dno, bin).
     # We start from df, not from df_melted, as df_melted has the same dno
     # appearing four times (once for sno1..sno4).
     df_pos_vul_dno = df.groupby( \
-      ['pos', 'vul', 'dno', 'bin']).agg({'pass' : 'sum'})
+      ['pos', 'vul', 'dno', 'bin']).agg({'open' : 'sum'})
 
 
-    # Predict the absolute number of passes for each variable number.
+    # Predict the absolute number of opens for each variable number.
     # The results are numpy 1D arrays.  Also calculate the gradients.
     gradient_dno, error_dno = \
       sigmoids.hist_to_gradients(hist_dno, df_pos_vul_dno, NUM_DIST)

@@ -37,23 +37,23 @@ class Sigmoid:
 
   def calc(self, x):
     '''Calculate the sigmoid term above the intercept.'''
-    return 1. - 1. / (1. + np.exp(-(x - self.mean) / self.divisor))
+    return 1. / (1. + np.exp(-(x - self.mean) / self.divisor))
 
   
   def calc_derivative(self, x):
     assert self.divisor > 0.
     sv = self.calc(x)
-    return - sv * (1 - sv) / self.divisor
+    return sv * (1 - sv) / self.divisor
 
   
   def calc_derivative_from_values(self, values):
     assert self.divisor > 0.
-    return - values * (1 - values) / self.divisor
+    return values * (1 - values) / self.divisor
 
   
   @staticmethod
   def _calc(x, mean, divisor):
-    return 1. - 1. / (1. + np.exp(-(x - mean) / divisor))
+    return 1. / (1. + np.exp(-(x - mean) / divisor))
 
 
   def fit_data(self, x_data, sigma, y_data):

@@ -64,13 +64,13 @@ class Sigmoids:
       how ='left')
 
     # The gradient is more or less
-    # the sum of deriv * (bin_counts * sigmoid - pass number in bin).
+    # the sum of deriv * (bin_counts * sigmoid - open number in bin).
 
     remerged_df = merged_df.merge(actual_df.reset_index(),
       on = ['pos', 'vul', 'dno', 'bin'], 
       how ='left')
 
-    remerged_df['pass'].fillna(0, inplace = True)
+    remerged_df['open'].fillna(0, inplace = True)
 
     remerged_df['prediction'] = \
       remerged_df['bin_counts'] * remerged_df['sigmoid']
@@ -79,11 +79,11 @@ class Sigmoids:
     # the error.
     remerged_df['sq_err'] = \
       remerged_df['prediction'] * remerged_df['sigmoid'] + \
-      remerged_df['pass'] * (1 - 2 * remerged_df['sigmoid'])
+      remerged_df['open'] * (1 - 2 * remerged_df['sigmoid'])
 
     remerged_df['gradient'] = \
       remerged_df['deriv'] * \
-        (remerged_df['prediction'] - remerged_df['pass'])
+        (remerged_df['prediction'] - remerged_df['open'])
 
     # Add up the derivatives for (pos, vul, dno).
     gradient_df = remerged_df.groupby(['dno']).agg({'gradient': 'sum'})
@@ -91,17 +91,17 @@ class Sigmoids:
     # Do the same for the prediction errors.
     sqerr_df = remerged_df.groupby(['dno']).agg({'sq_err': 'sum'})
 
-    # Explanation of polarity: Say 'prediction' is 100 and 'pass' is 80.
-    # There are more predicted than actual passes.  Therefore if we 
+    # Explanation of polarity: Say 'prediction' is 100 and 'open' is 80.
+    # There are more predicted than actual openings.  Therefore if we 
     # increase the value of the corresponding variable, we move further to
-    # the right on the sigmoid which decreases the prediction and brings
-    # it closer to the actual value.  
+    # the right on the sigmoid which increases the prediction and brings
+    # it further away from the actual value.  
     # The LP optimization is a minimization.  Therefore increasing the
-    # variable should make the LP objective function more negative.
-    # Therefore the gradient should be negative.
-    # The actual sigmoid gradient is always negative.
-    # Putting this together: If prediction > pass and deriv < 0,
-    # then gradient < 0.
+    # variable should make the LP objective function more positive.
+    # Therefore the gradient should be positive.
+    # The actual sigmoid gradient is always positive.
+    # Putting this together: If prediction > open and deriv > 0,
+    # then gradient > 0.
 
     gradient = \
       gradient_df['gradient'].reindex(range(num_vars), fill_value = 0) \
@@ -116,13 +116,13 @@ class Sigmoids:
     # total_error = pred_error @ pred_error
 
     # This is going to be very jumpy no matter how good we get,
-    # as there won't always be a lot of passes for a single combination
+    # as there won't always be a lot of opens for a single combination
     # of pos, vul, dno and bin.  I suppose we could instead aggregate
     # over bins, and only then square and add up.
     # error_df = remerged_df.groupby(['dno']) \
-      # .agg({'prediction': 'sum', 'pass': 'sum'})
+      # .agg({'prediction': 'sum', 'open': 'sum'})
 
-    # total_error = ((error_df['prediction'] - error_df['pass']) ** 2).sum()
+    # total_error = ((error_df['prediction'] - error_df['open']) ** 2).sum()
 
     # return gradient, total_error / num_vars
     return gradient, sq_error
@@ -131,18 +131,18 @@ class Sigmoids:
   def extract_vectors(self, grouped_df):
     '''Extracts vectors for a given pos, vul grouping.'''
     df = grouped_df.groupby('bin').agg(
-      pass_count = ('pass', 'sum'),
-      total_count = ('pass', 'size')).reset_index()
+      open_count = ('open', 'sum'),
+      total_count = ('open', 'size')).reset_index()
 
     x_data = df['bin'].values / 100.
     sigma = (1 / np.sqrt(df['total_count'])).values
-    y_data = (df['pass_count'] / df['total_count']).values
+    y_data = (df['open_count'] / df['total_count']).values
 
     return x_data, sigma, y_data
 
 
   def fit_data(self, df):
-    '''Fits the sigmoids to a dataframe with pos, vul, bin and pass.'''
+    '''Fits the sigmoids to a dataframe with pos, vul, bin and open.'''
     results = df.groupby(['pos', 'vul']).apply(self.extract_vectors)
 
     for (pos, vul), (x_data, sigma, y_data) in results.items():
