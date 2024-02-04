@@ -50,6 +50,33 @@ my @CITY_LIST =
 
 my %CITIES = map { $_ => 1 } @CITY_LIST;
 
+my %CORRECTIONS = (
+  'Albuquerque NM' => 'Albuquerque, NM',
+  'Ann Arbor MI' => 'Ann Arbor, MI',
+  'Arona Tenerife' => 'Arona',
+  'Atlanta' => 'Atlanta, GA',
+  'Baden Baden' => 'Baden-Baden',
+  'DunLaoghaire' => 'Dun Laoghaire',
+  'Fort Lauderdale Florida' => 'Fort Lauderdale, FL',
+  'Hamilton Ontario' => 'Hamilton, ON',
+  'Malta' => 'Valletta',
+  'Miami' => 'Miami, FL',
+  'Miami Beach' => 'Miami Beach, FL',
+  'Miami Beach FL' => 'Miami Beach, FL',
+  'New Orleans' => 'New Orleans, LA',
+  'New York' => 'New York City, NY',
+  'Orlando' => 'Orlando, FL',
+  'Philadelphia' => 'Philadelphia, PA',
+  'Salt Lake City' => 'Salt Lake City, UT',
+  'Santa Sofia Forli' => 'Santa Sofia (Forli)',
+  'Sao Paolo' => 'Sao Paulo',
+  'Seattle' => 'Seattle, OR',
+  'Sorento' => 'Sorrento',
+  'St. Vincent' => 'Saint-Vincent',
+  'Talinn' => 'Tallinn',
+  'Turkiye' => 'Turkey'
+  );
+
 
 sub new
 {
@@ -61,7 +88,9 @@ sub new
 sub valid
 {
   my ($self, $text) = @_;
-  return exists $CITIES{$text} ? 1 : 0;
+  return 1 if exists $CITIES{$text};
+  return 1 if exists $CORRECTIONS{$text};
+  return 0;
 }
 
 

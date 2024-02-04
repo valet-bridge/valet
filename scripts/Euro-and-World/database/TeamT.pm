@@ -7,6 +7,7 @@ use warnings;
 use Exporter;
 use v5.10;
 
+use Players;
 use Util;
 
 
@@ -17,49 +18,25 @@ sub new
 }
 
 
-sub read_from_lines
+sub add_from_chunk
 {
-  my ($self, $tourn_ref, $header_lines_ref, $team_lines_ref) = @_;
+  my ($self, $chunk_ref, $players_ref, $errstr) = @_;
 
-  die "Expected 3 header lines" unless $#$header_lines_ref == 2;
+  die "Team has no name" unless defined $chunk_ref->{NAME};
+  my $team_name = $chunk_ref->{NAME};
 
-  die "Expected TITLE" unless 
-    $header_lines_ref->[0] =~ /^TITLE (.*)/;
-  $self->{title} = $1;
+  my $team_restriction = (defined $chunk_ref->{RESTRICTION} ?
+    $chunk_ref->{RESTRICTION} : 'Unstated');
 
-  die "Expected ID" unless 
-    $header_lines_ref->[1] =~ /^ID (\d+)/;
-  $self->{id} = $1;
+  die "Name already seen" if defined $self->{$team_restriction}{$team_name};
 
-  die "Expected DETAILS" unless 
-    $header_lines_ref->[2] =~ /^DETAILS (\d+)/;
-  $self->{details} = $1;
-
-  $self->check_header($tourn_ref);
-
-  # TODO Receive the tournament data
-  # Check title, details (parse these) against it
-  # Get the tournament-level restrictions
-  # Check team-level restrictions against it
-
-  my $team_name = '';
-  my $team_restriction = '';
-
-  for my $line (@$team_lines_ref)
+  for my $key (keys %$chunk_ref)
   {
-    if ($line =~ /^NAME (.*)/)
+    next if $key eq 'NAME' || $key eq 'RESTRICTION';
+
+    if ($key =~ /^PLAYER(\d)$/)
     {
-      $team_name = $1;
-      die "Tournament $self->{id}: Team $team_name already seen"
-        if defined $self->{$team_name};
-    }
-    elsif ($line =~ /^RESTRICTION (.*)/)
-    {
-      $self->{restrictions}{$team_name} = $1;
-    }
-    elsif ($line =~ /^PLAYER(\d) (.*)/)
-    {
-      my ($pcount, $pname) = ($1, $2);
+      my ($pcount, $pname) = ($1, $chunk_ref->{$key});
       $pname =~ tr/\xA0/ /;
       $pname =~ s/\s+/ /g;
       my $country = '';
@@ -72,48 +49,38 @@ sub read_from_lines
       }
 
       # Put the name into the standard format.
-      $pname = reverse_name($pname);
+      $pname = Util::reverse_name($pname);
 
-      $self->{teams}{$team_name}[$pcount]{name} = $pname;
-      $self->{teams}{$team_name}[$pcount]{country} = $country
+      $self->{$team_restriction}{$team_name}[$pcount]{name} = $pname;
+      $self->{$team_restriction}{$team_name}[$pcount]{country} = $country
         unless $country eq '';
     }
-    elsif ($line =~ /^ID(\d) (.*)/)
+    elsif ($key =~ /^ID(\d)$/)
     {
-      my ($pcount, $pid) = ($1, $2);
-      $self->{teams}{$team_name}[$pcount]{id} = $pid;
+      my ($pcount, $pid) = ($1, $chunk_ref->{$key});
+      $self->{$team_restriction}{$team_name}[$pcount]{id} = $pid;
     }
-    elsif ($line =~ /^COUNTRY(\d) (.*)/)
+    elsif ($key =~ /^COUNTRY(\d)$/)
     {
-      my ($pcount, $country) = ($1, $2);
-      $self->{teams}{$team_name}[$pcount]{country} = $country;
+      my ($pcount, $country) = ($1, $chunk_ref->{$key});
+      $self->{$team_restriction}{$team_name}[$pcount]{country} = $country;
     }
-    elsif ($line =~ /^FUNCTION(\d) (.*)/)
+    elsif ($key =~ /^FUNCTION(\d)$/)
     {
       # We actually ignore this, as all the entries are players.
-      my $fnc = $2;
+      my $fnc = $chunk_ref->{$key};
       $fnc =~ s/^\s+|\s+$//;
       die "ID $self->{id}: Unknown function $fnc" unless
         ($fnc eq 'player' || lc($fnc) eq 'pc');
     }
-    elsif ($line !~ /^\s*$/)
+    else
     {
-      die "Unknown line $line";
+      die "Unknown key $key";
     }
   }
-}
 
-
-sub check_header
-{
-  my ($self, $tourn_ref) = @_;
-
-  die $self->flag_error($tourn_ref) unless 
-    defined $tourn_ref->[$self->{id}];
-
-  die $self->flag_error($tourn_ref) unless 
-    $self->{title} eq $tourn_ref->[$self->{id}]{TITLE};
-    
+  $self->check_team(\@{$self->{$team_restriction}{$team_name}},
+    $players_ref, $team_name, $errstr);
 }
 
 
@@ -132,6 +99,56 @@ sub guess_correct
     # Could also be of the form (1), which is not really a country,
     # so add it back on.
     $$pname_ref = $$pname_ref . " ($$country_ref)";
+    $$country_ref = '';
+  }
+}
+
+
+sub check_team
+{
+  my ($self, $team_ref, $players, $team_name, $errstr) = @_;
+
+  my $active = 0;
+  for my $pno (0 .. $#$team_ref)
+  {
+    next unless defined $team_ref->[$pno];
+    $active++;
+
+    if (! defined $team_ref->[$pno]{name} ||
+        ! defined $team_ref->[$pno]{id})
+    {
+      die "$errstr, $team_name: " . 
+        "Team player lacks at least one of name and ID";
+    }
+
+    my $name = $team_ref->[$pno]{name};
+    if (! $players->has_name($name))
+    {
+      die "$errstr, $team_name: " .
+        "Player $name does not match a name in the player list";
+    }
+
+    my $id = $players->name_to_id($name);
+    if ($id != $team_ref->[$pno]{id})
+    {
+      die "$errstr, $team_name: " .
+        "Player $name, ID $id does not match $team_ref->[$pno]{id}";
+    }
+
+    next unless defined $team_ref->[$pno]{country};
+    my $c = $team_ref->[$pno]{country};
+
+    if ($c ne '-' &&
+        ! $players->player_has_country($team_ref->[$pno]{id}, $c))
+    {
+      die "$errstr, $team_name: " .
+        "Player $name, ID $id: Country $c does not match";
+    }
+  }
+
+  if ($active == 0 || $active > 8)
+  {
+    print "$errstr $team_name: $active players on team\n";
   }
 }
 

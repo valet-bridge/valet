@@ -13,6 +13,8 @@ my %RESTRICTIONS = (
   "Juniors Swiss series" => { age =>, "U26", gender => "Open" },
   "Juniors B-A-M series" => { age =>, "U26", gender => "Open" },
 
+  "U28 series" => { age =>, "U28", gender => "Open" },
+
   "Youngsters series" => { age =>, "U21", gender => "Open" },
   "U31 series" => { age =>, "U31", gender => "Open" },
 

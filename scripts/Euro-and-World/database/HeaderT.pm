@@ -25,6 +25,9 @@ our $age;
 use Gender;
 our $gender;
 
+use Restriction;
+our $restriction;
+
 my %MONTHS = (
   'January' => '01',
   'February' => '02',
@@ -50,6 +53,7 @@ sub new
   $form = Form->new() if ! defined $form;
   $age = Age->new() if ! defined $age;
   $gender = Gender->new() if ! defined $gender;
+  $restriction = Restriction->new() if ! defined $restriction;
   return bless {}, $class;
 }
 
@@ -272,7 +276,7 @@ sub check_from_details
     {
       die "$errstr: Expected city Online with title $title";
     }
-    if ($self->{COUNTRY} ne 'Online')
+    if ($self->{COUNTRY} ne 'ONL')
     {
       die "$errstr: Expected country Online with title $title";
     }
@@ -286,7 +290,7 @@ sub check_from_details
   if ($l - $dot_index == 1)
   {
     # Hopefully just a year
-    die "$errstr: Year $words[$l]vs $self->{YEAR}" unless
+    die "$errstr: Year $words[$l] vs $self->{YEAR}" unless
       $words[$l] eq $self->{YEAR};
   }
   elsif ($l - $dot_index == 2)
@@ -313,7 +317,7 @@ sub check_from_details
     die "$errstr: Year $words[$l]vs $self->{YEAR}" unless
       $words[$l] eq $self->{YEAR};
 
-    $self->check_month_ranges($words[$l-4], $words[$l-3],
+    $self->check_months_range($words[$l-4], $words[$l-3],
       $words[$l-2], $words[$l-1], $errstr);
   }
   else
@@ -358,7 +362,7 @@ sub check_location
     $dot_index >= 2;
 
   # Look for something like Miami Beach, U.S.A.
-  my $city_guess = join ' ', @{$words_ref->[0 .. $dot_index-2]};
+  my $city_guess = join ' ', @{$words_ref}[0 .. $dot_index-2];
   my $country_guess = $words_ref->[$dot_index-1];
 
   if ($country->valid($country_guess))
@@ -371,9 +375,9 @@ sub check_location
     die "$errstr: $city_guess not a country" if $dot_index == 2;
 
     # Maybe it's of the form 'Great Britain' or 'Czech Republic'.
-    $city_guess = join ' ', @{$words_ref->[0 .. $dot_index-3]};
+    $city_guess = join ' ', @{$words_ref}[0 .. $dot_index-3];
     my $country_guess2 = join ' ', 
-      @{$words_ref->[$dot_index-2 .. $dot_index-1]};
+      @{$words_ref}[$dot_index-2 .. $dot_index-1];
 
     if ($country->valid($country_guess2))
     {
@@ -406,10 +410,10 @@ sub check_month
 
   die "$errstr: $month not a month" unless defined $MONTHS{$month};
 
-  my $date_start = $self->{YEAR} . '-' .  $month;
+  my $date_start = $self->{YEAR} . '-' .  $MONTHS{$month};
   my $date_end = $date_start;
 
-  $self->check_finished_date($date_start, $date_end, $errstr);
+  $self->check_finished_dates($date_start, $date_end, $errstr);
 
 }
 
@@ -428,10 +432,10 @@ sub check_month_range
   die "$errstr: $day2 not a day" unless 
     $self->month_day($day2, \$end);
 
-  my $date_start = $self->{YEAR} . '-' .  $month . '-' . $start;
-  my $date_end = $self->{YEAR} . '-' .  $month . '-' . $end;
+  my $date_start = $self->{YEAR} . '-' .  $MONTHS{$month} . '-' . $start;
+  my $date_end = $self->{YEAR} . '-' .  $MONTHS{$month} . '-' . $end;
 
-  $self->check_finished_date($date_start, $date_end, $errstr);
+  $self->check_finished_dates($date_start, $date_end, $errstr);
 }
 
 
@@ -450,10 +454,53 @@ sub check_months_range
   die "$errstr: $day2 not a day" unless 
     $self->month_day($day2, \$end);
 
-  my $date_start = $self->{YEAR} . '-' .  $month1 . '-' . $start;
-  my $date_end = $self->{YEAR} . '-' .  $month2 . '-' . $end;
+  my $date_start = $self->{YEAR} . '-' .  $MONTHS{$month1} . '-' . $start;
+  my $date_end = $self->{YEAR} . '-' .  $MONTHS{$month2} . '-' . $end;
 
-  $self->check_finished_date($date_start, $date_end, $errstr);
+  $self->check_finished_dates($date_start, $date_end, $errstr);
 }
+
+
+sub is_teams
+{
+  my ($self) = @_;
+
+  if (defined $self->{FORM})
+  {
+    return ($self->{FORM} =~ /Teams/ ? 1 : 0);
+  }
+  else
+  {
+    die "No form";
+  }
+}
+
+
+sub restriction_compatible
+{
+  my ($self, $unit_restriction) = @_;
+
+  # The tournament may permit multiple sub-tournaments.
+  # The unit restriction is the restriction on a team or a pair.
+  
+  return $restriction->check(
+    $self->{RESTRICTION_AGE}, 
+    $self->{RESTRICTION_GENDER},
+    $unit_restriction);
+}
+
+
+sub str
+{
+  my ($self) = @_;
+
+  for my $field (qw(TITLE ID CITY COUNTRY ORGANIZER
+    DATE_START DATE_END YEAR FORM RESTRICTION_AGE RESTRICTION_GENDER))
+  {
+    next unless defined $self->{$field};
+    print "$field $self->{$field}\n";
+  }
+}
+
 
 1;

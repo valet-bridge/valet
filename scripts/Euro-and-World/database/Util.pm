@@ -16,8 +16,13 @@ sub reverse_name
   my $i = 0;
   my $flag = 0;
   my $index;
-  for $i (0 .. $#a)
+
+  # The last word may be of the form (n), which stays at the end.
+  my $last_real = ($a[-1] =~ /^\(\d\)$/ ? -1 + $#a : $#a);
+
+  for $i (0 .. $last_real)
   {
+    # Find the first (real) upper-case word
     my $n = $a[$i];
     my $l = length $n;
     if ($n eq uc($n) && 
@@ -31,10 +36,10 @@ sub reverse_name
     }
   }
     
-  $index = $#a if ! $flag;
+  $index = $last_real if ! $flag;
 
   my $reversed_name = $a[$index];
-  for my $j ($index+1 .. $#a)
+  for my $j ($index+1 .. $last_real)
   {
     $reversed_name .= " " . $a[$j];
   }
@@ -42,6 +47,11 @@ sub reverse_name
   for my $j (0 .. $index-1)
   {
     $reversed_name .= " " . $a[$j];
+  }
+
+  if ($last_real != $#a)
+  {
+    $reversed_name .= ' ' . $a[-1];
   }
 
   return $reversed_name;

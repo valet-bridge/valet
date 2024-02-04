@@ -7,6 +7,11 @@ use warnings;
 use Exporter;
 use v5.10;
 
+use Util;
+
+use Country;
+our $country;
+
 my $SINGLE = 0; # One value
 my $EARLIEST = 1; # Numerical value, want the earliest one
 my $LATEST = 2; # Numerical value, want the latest one
@@ -49,47 +54,11 @@ my @ORDER = qw(
 
 sub new
 {
-  return bless {}, shift;
-}
+  my $class = shift;
 
+  $country = Country->new() if ! defined $country;
 
-sub reverse_name
-{
-  # Effectively puts the upper-case ending words first
-
-  my @a = split /\s+/, pop;
-  my $i = 0;
-  my $flag = 0;
-  my $index;
-  for $i (0 .. $#a)
-  {
-    my $n = $a[$i];
-    my $l = length $n;
-    if ($n eq uc($n) && 
-        $n ne '-' &&
-        ($l >= 3 || ($l == 2 && substr($n, 1, 1) ne '.')))
-
-    {
-      $flag = 1;
-      $index = $i;
-      last;
-    }
-  }
-    
-  $index = $#a if ! $flag;
-
-  my $reversed_name = $a[$index];
-  for my $j ($index+1 .. $#a)
-  {
-    $reversed_name .= " " . $a[$j];
-  }
-
-  for my $j (0 .. $index-1)
-  {
-    $reversed_name .= " " . $a[$j];
-  }
-
-  return $reversed_name;
+  return bless {}, $class;
 }
 
 
@@ -179,7 +148,7 @@ sub set_field
     {
       my $v = $value;
       $v =~ s/\s+/ /g;
-      $self->{$field}[0] = reverse_name($v);
+      $self->{$field}[0] = Util::reverse_name($v);
     }
     else
     {
@@ -224,7 +193,7 @@ sub set_field
     if ($field eq 'NAME_DEPRECATED')
     {
       $cvalue =~ s/\s+/ /g;
-      $cvalue = reverse_name($cvalue);
+      $cvalue = Util::reverse_name($cvalue);
     }
 
     for my $entry (@{$self->{$field}})
@@ -247,7 +216,7 @@ sub has_name
 {
   my ($self, $name) = @_;
 
-  my $cname = reverse_name($name);
+  my $cname = Util::reverse_name($name);
 
   for my $field (qw(NAME NAME_PREFERRED NAME_DEPRECATED))
   {
@@ -292,7 +261,7 @@ sub name
 
 sub has_country
 {
-  my ($self, $country, $cname) = @_;
+  my ($self, $cname) = @_;
 
   for my $field (qw(COUNTRY COUNTRY_DEPRECATED))
   {

@@ -7,7 +7,7 @@ use warnings;
 use Exporter;
 use v5.10;
 
-my @AGE_LIST = qw(Open Seniors U31 U26 U21 U16 U13 Multiple);
+my @AGE_LIST = qw(Open Seniors U31 U28 U26 U21 U16 U13 Multiple);
 
 my %AGES = map { $_ => 1} @AGE_LIST;
 

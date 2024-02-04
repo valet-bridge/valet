@@ -75,14 +75,14 @@ sub id_to_name
 
 sub player_has_country
 {
-  my ($self, $country, $id, $cname) = @_;
+  my ($self, $id, $cname) = @_;
 
   if (! defined $self->{players}[$id])
   {
     die "Players: Don't have ID $id";
   }
 
-  return $self->{players}[$id]->has_country($country, $cname);
+  return $self->{players}[$id]->has_country($cname);
 }
 
 
