@@ -274,6 +274,22 @@ sub expand_name_hash
 }
 
 
+sub name
+{
+  my ($self) = @_;
+
+  for my $field (qw(NAME_PREFERRED NAME NAME_DEPRECATED))
+  {
+    for my $entry (@{$self->{$field}})
+    {
+      return $entry;
+    }
+  }
+
+  die "No name found";
+}
+
+
 sub has_country
 {
   my ($self, $country, $cname) = @_;
