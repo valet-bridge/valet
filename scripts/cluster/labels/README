@@ -1,0 +1,25 @@
+original/detail.csv
+hands   all
+labels  0 is pass, 1 is a weak club opening, ...
+        See Build: dispatch/Openings.h
+
+original/passes.csv
+hands   all
+labels  0 is any opening, 1 is pass
+
+original/openings.csv
+hands   all
+labels  0 is pass, 1 is any opening
+
+original/triages.csv
+hands   all
+labels  0 is pass, 1 is ~ an opening strength opening, 2 is ~ some preempt
+
+original/strongs.csv
+hands   all
+labels  0 is non-strong opening, 1 is ~ an opening strength opening.
+
+
+nonines/*
+Same, but no hands with >= 9-card suits.
+This eliminates 811 hands out of 1.63m, so about 1 in 2,000.
