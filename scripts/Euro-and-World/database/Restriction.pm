@@ -67,4 +67,78 @@ sub check
   return 1;
 }
 
+
+sub gender
+{
+  my ($self, $tourn_gender, $unit_restriction, $errstr) = @_;
+
+  my $specific_gender;
+  if (defined $RESTRICTIONS{$unit_restriction})
+  {
+    $specific_gender = $RESTRICTIONS{$unit_restriction}{gender};
+  }
+  else
+  {
+    $specific_gender = $unit_restriction;
+  }
+
+  if ($tourn_gender eq 'Women')
+  {
+    if ($specific_gender eq 'Women')
+    {
+      return 'Women';
+    }
+    else
+    {
+      die "$errstr: Unit restriction $unit_restriction " .
+        "incompatible with $tourn_gender";
+    }
+  }
+  else
+  {
+    return $specific_gender;
+  }
+}
+
+
+sub age
+{
+  my ($self, $tourn_age, $unit_restriction, $errstr) = @_;
+
+  my $specific_age;
+  if (defined $RESTRICTIONS{$unit_restriction})
+  {
+    $specific_age = $RESTRICTIONS{$unit_restriction}{age};
+  }
+  else
+  {
+    $specific_age = $unit_restriction;
+  }
+
+  if ($tourn_age eq 'Open' || $tourn_age eq 'Multiple')
+  {
+    return $specific_age;
+  }
+  elsif ($tourn_age eq 'Seniors')
+  {
+    if ($specific_age eq 'Seniors')
+    {
+      return $specific_age;
+    }
+    else
+    {
+      die "$errstr: Unit age $specific_age incompatible with Seniors";
+    }
+  }
+  elsif ($tourn_age eq $specific_age)
+  {
+    return $specific_age;
+  }
+  else
+  {
+    die "$errstr: Unit age $specific_age incompatible with $tourn_age";
+  }
+}
+
+
 1;

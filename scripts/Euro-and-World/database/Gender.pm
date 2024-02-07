@@ -25,5 +25,4 @@ sub valid
   return exists $GENDERS{$text} ? 1 : 0;
 }
 
-
 1;

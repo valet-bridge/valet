@@ -231,6 +231,26 @@ sub check_gender
 }
 
 
+sub restrict_gender
+{
+  my ($self, $unit_gender, $errstr) = @_;
+  return $restriction->gender(
+    $self->{RESTRICTION_GENDER}, 
+    $unit_gender, 
+    $errstr);
+}
+
+
+sub restrict_age
+{
+  my ($self, $unit_age, $errstr) = @_;
+  return $restriction->age(
+    $self->{RESTRICTION_AGE},
+    $unit_age,
+    $errstr);
+}
+
+
 sub set_from_buffer
 {
   my ($self, $buffer_ref, $errstr) = @_;
