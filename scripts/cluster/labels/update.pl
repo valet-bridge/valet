@@ -14,7 +14,7 @@ use v5.10;
 # - Replaces the player with full-name.
 # - Makes a backup copy of the names file.
 
-my $names_file = 'copy.txt';
+my $names_file = 'names_full.txt';
 my $bak_file = 'names_full.bak';
 
 if ($#ARGV != 2)

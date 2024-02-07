@@ -23,7 +23,8 @@ my @PLAYERS;
 read_lin_players($sfile);
 
 my %PDB;
-read_player_DB("players.txt");
+# read_player_DB("players.txt");
+read_simple_player_file("pnames.txt");
 
 my (%hits_final, %hits_unresolved);
 my $num_hits_final = 0;
@@ -129,3 +130,24 @@ sub read_player_DB
   close $fp;
 }
 
+
+sub read_simple_player_file
+{
+  my $fname = pop;
+  open my $fp, '<', $fname or return; # File doesn't have to exist
+
+  while (my $line = <$fp>)
+  {
+    chomp $line;
+    $line =~ s///g;
+    next if ($line =~ /^#/);
+    next if ($line =~ /^\s*$/);
+
+    if ($line !~ /^(\d+)\s+(.*)/)
+    {
+      print "$line\n";
+    }
+    $PDB{$2} = $1;
+  }
+  close $fp;
+}

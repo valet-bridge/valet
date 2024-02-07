@@ -6,26 +6,24 @@ use v5.10;
 
 use IO::Handle;
 use File::Copy;
-use File::Fetch;
+use WWW::Mechanize;
 use HTML::TreeBuilder;
 
-die "perl get_wbf.pl" unless $#ARGV == -1;
+die "perl get_wbl.pl" unless $#ARGV == -1;
 
-my $PLAYER_FIRST = 37;
-my $PLAYER_LAST = 100;
+my $PLAYER_FIRST = 10001;
+my $PLAYER_LAST = 222191;
 
-my $sprefix = "http://www.wbfmasterpoints.com/playerdetail.asp?Code=";
+my $sprefix = "http://db.worldbridge.org/Repository/peopleforscrappcm/person.asp";
 my $outdir = "wbf/";
 
-my $output_file = "record.txt"; # Is appended
-my $output_bak = "record.bak";
+my $output_file = "wbf.txt"; # Is appended
+my $output_bak = "wbf.bak";
 
-my $tournament_file = "tournaments.txt"; # Is appended
-my $tournament_bak = "tournaments.bak";
+my $tournament_file = "wbf_tournaments.txt"; # Is appended
+my $tournament_bak = "wbf_tournaments.bak";
 
-
-# Where the fetch ends up.
-my $fetched = 'wbf/playerdetail.asp';
+my $ungendered = 'database/names/ungendered.txt';
 
 
 # Player file.
@@ -63,46 +61,87 @@ else
     "Cannot open $tournament_file for appending: $!";
 }
 
+my @player_numbers;
+read_ungendered($ungendered, \@player_numbers);
 
-for my $pno ($PLAYER_FIRST .. $PLAYER_LAST)
+
+my $mech = WWW::Mechanize->new();
+  
+$mech->cookie_jar(HTTP::Cookies->new());
+$mech->get('http://www.worldbridge.org');
+
+$mech->agent('Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0');
+$mech->add_header('Accept-Language' => 'en-US,en;q=0.5');
+$mech->add_header('Accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8');
+$mech->add_header('User-Agent' => 'Mozilla/5.0');
+$mech->add_header('Referer' => $sprefix . 'person.asp?qryid=3899');
+
+my %form_data = ( 
+  qsortadmin => '1', 
+  qshowcontrol => '---11------' );
+
+my $missing_tourn_no;
+if ($#tournaments > 10000)
 {
-  my $url = $sprefix . $pno;
-  say "Player $pno, $url";
+  $missing_tourn_no = $#tournaments + 1;
+}
+else
+{
+  # Should be higher than the highest one in use.
+  $missing_tourn_no = 10000;
+}
 
-  my $ff = File::Fetch->new(uri => $url); 
-  my $where = $ff->fetch(to => $outdir) or next;
+for my $pno (@player_numbers)
+{
+  next unless $pno >= $PLAYER_FIRST && $pno <= $PLAYER_LAST;
 
+  say "Player $pno";
 
-  # my $tree = HTML::TreeBuilder::XPath->new;
-  # $tree->parse_file($where);
+  $form_data{qryid} = $pno;
+  $mech->post($sprefix, \%form_data);
+  if (! $mech->success)
+  {
+    print "Player probably does not exist\n";
+    next;
+  }
 
-  # my @list_items = $tree->findnodes('//ul[@id="menu"]/li');
+  my $tree = HTML::TreeBuilder->new_from_content($mech->content);
 
-  # foreach my $li (@list_items)
-  # {
-    # print $li->as_text, "\n";
-  # }
+  # print $tree->as_HTML('<>&', "  ", {});
+  # exit;
 
-  my $tree = HTML::TreeBuilder->new;
-  $tree->parse_file($fetched);
+  # Find the specific <form> element
+  my $form = $tree->look_down(
+      "_tag", "form",
+      "action", "person.asp",
+      "name", "controlfrm"
+  );
 
-  my $table = navigate_to_table($tree);
-
-  my @table_data;
-  read_key_table($table, \@table_data);
-
-  $tree->delete;
+  die "Form not found" unless $form;
 
   my %player;
-  get_player_info($table_data[0][0], \%player);
+  $player{wbf} = $pno;
 
-  # Check that row 7 is the first row of the history table.
-  die "Not a table header" unless $#{$table_data[7]} == 7;
+  if (! get_player($form, \%player))
+  {
+    print "Player is probably empty\n";
+    next;
+  }
+
+  if ($player{gender} eq '?')
+  {
+    # Probably no playing record
+    # print $fp "\n";
+    sleep(3);
+    next;
+  }
+
+  print_player($fp, \%player);
 
   my @played;
-  get_tournaments(\@table_data, \@played, \@tournaments, $ft);
-
-  print_player($fp, \%player, \@played);
+  get_tournament_info($ft, $form, \@played, \@tournaments,
+    \$missing_tourn_no);
+  print_played($fp, \@played, \@tournaments);
 
   sleep(5);
 }
@@ -113,11 +152,348 @@ close $ft;
 exit;
 
 
+sub get_player
+{
+  my ($form, $player_ref) = @_;
+
+  # First <h3> element within the form
+  my $name_pos = $form->look_down("_tag", "h3") or return 0;
+
+  get_name($name_pos, $player_ref);
+
+  # First <div> with class "col-md-12"
+  my $id_pos = $form->look_down("_tag", "div", "class", qr/col-md-12/)
+    or die "No leading table";
+
+  return 0 unless get_id($id_pos, $player_ref);
+
+  return 0 unless get_gender($id_pos, $player_ref);
+
+  return 1;
+}
+
+
+sub get_tournament_info
+{
+  my ($ft, $form, $played_ref, $tourn_ref, $missing_no_ref) = @_;
+
+  # Two <table>'s with class "table-edit"
+  my @tables = $form->look_down("_tag", "table", "class", qr/table-edit/);
+
+  my @headings = $form->look_down("_tag", "th", 
+    sub { $_[0]->look_down("_tag", "img", "onclick", qr/.+/) } );
+  my @head_texts = map {$_->as_text } @headings;
+
+  die "Mismatch" unless $#tables == $#head_texts;
+
+  my $team_index = -1;
+  my $pair_index = -1;
+  for my $i (0 .. $#head_texts)
+  {
+    if ($head_texts[$i] =~ /Playing Record \(Team Events\)/i)
+    {
+      $team_index = $i;
+    }
+    elsif ($head_texts[$i] =~ /Playing Record \(Pairs or Individual Events\)/i)
+    {
+      $pair_index = $i;
+    }
+  }
+
+  if ($team_index == -1 && $pair_index == -1)
+  {
+    return;
+  }
+
+  if ($team_index != -1)
+  {
+    get_played($ft, $tables[$team_index], $played_ref, $tourn_ref,
+      $missing_no_ref);
+  }
+
+  if ($pair_index != -1)
+  {
+    get_played($ft, $tables[$pair_index], $played_ref, $tourn_ref,
+      $missing_no_ref);
+  }
+}
+
+
+sub get_name
+{
+  my ($pos, $player_ref) = @_;
+  $player_ref->{name} = $pos->as_text;
+}
+
+
+sub get_id
+{
+  my ($pos, $player_ref) = @_;
+
+  my @div_list = $pos->look_down("_tag", "div", "class", qr/col-md-8/);
+  if ($#div_list <= 0)
+  {
+    return 0;
+  }
+
+  my $counter = 0;
+  for my $div (@div_list)
+  {
+    if ($counter == 0)
+    {
+      my $country = $div->as_text;
+      $country =~ s/\x{A0}//g; # &nbsp
+      $country =~ s/^\s+|\s+$//g;
+      $player_ref->{country} = $country;
+    }
+    elsif ($counter == 1)
+    {
+      my $nbo = $div->as_text;
+      $nbo =~ s/^\s+|\s+$//g;
+      $player_ref->{nbo} = $nbo;
+    }
+    $counter++;
+    return 1 if $counter == 2;
+  }
+  return 1;
+}
+
+
+sub get_gender
+{
+  my ($pos, $player_ref) = @_;
+
+  my @div_list = $pos->look_down("_tag", "div", "class", qr/col-md-9/);
+  if ($#div_list < 4)
+  {
+    return 0;
+  }
+
+  my $counter = 0;
+  for my $div (@div_list)
+  {
+    if ($counter == 0)
+    {
+      my $gender = $div->as_text;
+      if ($gender eq 'Open')
+      {
+        $gender = 'M';
+      }
+      elsif ($gender eq 'Women')
+      {
+        $gender = 'F';
+      }
+      else
+      {
+        $gender = '?';
+      }
+      $player_ref->{gender} = $gender;
+    }
+    $counter++;
+    return 1 if $counter == 1;
+  }
+  return 1;
+}
+
+
+sub parse_tournament_name
+{
+  my ($a_tag, $name_ref, $location_ref, $type_ref) = @_;
+
+  # If we don't preserve the newline, the text
+  # becomes harder to parse.
+  my $html_with_newlines = $a_tag->as_HTML;
+  $html_with_newlines =~ s/<br ?\/?>/\|/gi;
+
+  my $new_tree = HTML::TreeBuilder->new;
+  $new_tree->parse_content($html_with_newlines);
+  my $text = $new_tree->as_text;
+  
+  my @lines = split /\|/, $text;
+  $$name_ref = $lines[0];
+
+  if ($lines[1] =~ /(.*) \d\d\d\d - (.*)/)
+  {
+    $$location_ref = $1;
+    $$type_ref = $2;
+  }
+  elsif ($lines[1] =~ /(.*) - (.*)/)
+  {
+    $$location_ref = "";
+    $$type_ref = $2;
+  }
+  else
+  {
+    die "Could not get location-like field";
+  }
+
+}
+
+
+sub parse_info
+{
+  my ($pos, $info_ref) = @_;
+
+  # If we don't preserve the newline, the text
+  # becomes harder to parse.
+  my $html_with_newlines = $pos->as_HTML;
+  $html_with_newlines =~ s/<br ?\/?>/\|/gi;
+
+  my $new_tree = HTML::TreeBuilder->new;
+  $new_tree->parse_content($html_with_newlines);
+  my $text = $new_tree->as_text;
+  
+  my @lines = split /\|/, $text;
+  $$info_ref = $lines[0];
+  $$info_ref =~ s/\x{A0}/ /g; # &nbsp
+  $$info_ref =~ s/^\s+|\s+$//g;
+}
+
+
+sub get_played
+{
+  my ($ft, $table, $player_ref, $tournaments_ref, $missing_no_ref) = @_;
+
+  my $row = 1 + $#$player_ref;
+  my $counter = 0;
+  
+  my @info;
+
+  foreach my $td ($table->look_down("_tag", "td")) 
+  {
+    my $mod = $counter % 4;
+
+    if ($mod == 1)
+    {
+       # The tournament name and link.
+       my $a_tag = $td->look_down("_tag", "a");
+       my ($name, $location, $type, $index);
+       if ($a_tag)
+       {
+         my $link = $a_tag->attr('href');
+         $link =~ /qtournid=(\d+)/;
+         $index = $1;
+
+         parse_tournament_name($a_tag, \$name, \$location, \$type);
+       }
+       else
+       {
+         # This is a kludge, as the tournament may well be present
+         # as an "un-numbered" entry.  Here we just add it, and we
+         # deal with it later in a separate script that renumbers
+         # these tournaments.
+         $index = $$missing_no_ref;
+         $$missing_no_ref++;
+         print "Warning: Missing tournament link\n";
+
+         parse_tournament_name($td, \$name, \$location, \$type);
+       }
+
+       $info[1] = $name;
+       $info[4] = $location;
+       $info[5] = $index;
+    }
+    elsif ($mod == 3)
+    {
+      # For teams: Team name
+      # For pairs: Partner name
+      my $info;
+      parse_info($td, \$info);
+      $info[3] = $info;
+    }
+    else
+    {
+      # If we don't preserve the newline, the text
+      # becomes harder to parse.
+      my $html_with_newlines = $td->as_HTML;
+      $html_with_newlines =~ s/<br ?\/?>/\n/gi;
+
+      my $new_tree = HTML::TreeBuilder->new;
+      $new_tree->parse_content($html_with_newlines);
+      $info[$mod] = $new_tree->as_text;
+    }
+
+
+    $counter++;
+
+    if ($mod == 3)
+    {
+      my $index = $info[5];
+
+      $player_ref->[$row]{index} = $index;
+      $player_ref->[$row]{position} = $info[2];
+      $player_ref->[$row]{info} = $info[3];
+
+      if (defined $tournaments_ref->[$index])
+      {
+         die "Year mismatch\n"
+           if ($tournaments_ref->[$index]{year} ne $info[0]);
+         die "Name mismatch\n"
+           if ($tournaments_ref->[$index]{name} ne $info[1]);
+         die "Location mismatch\n"
+           if ($tournaments_ref->[$index]{location} ne $info[4]);
+      }
+      else
+      {
+        $tournaments_ref->[$index]{year} = $info[0];
+        $tournaments_ref->[$index]{name} = $info[1];
+        $tournaments_ref->[$index]{location} = $info[4];
+
+        printf $ft ("TOURNAMENT %d|%d|%s|%s\n",
+          $index, 
+          $tournaments_ref->[$index]{year},
+          $tournaments_ref->[$index]{location},
+          $tournaments_ref->[$index]{name});
+        
+        $ft->flush or die "Could not flush filehandle: $!";
+      }
+
+      @info = ();
+      $row++;
+    }
+  }
+}
+
+
+sub print_tournaments
+{
+  my ($fh, $tourn_ref) = @_;
+
+  for my $index (0 .. $#$tourn_ref)
+  {
+    next unless defined $tourn_ref->[$index];
+
+    printf $fh ("TOURNAMENT %d|%d|%s\n",
+      $index, 
+      $tourn_ref->[$index]{year},
+      $tourn_ref->[$index]{name});
+  }
+
+  $fh->flush or die "Could not flush filehandle: $!";
+}
+
+
+sub print_played
+{
+  my ($fp, $played_ref, $tourn_ref) = @_;
+
+  for my $row (@$played_ref)
+  {
+    my $index = $row->{index};
+    printf $fp ("TOURNAMENT %d|%d|%s\n",
+      $index,
+      $tourn_ref->[$index]{year},
+      $row->{info});
+  }
+  print $fp "\n";
+}
+
+
 sub read_tournaments
 {
   my($tournament_file, $tref) = @_;
 
-  open $ft, '<', $tournament_file or 
+  open my $ft, '<', $tournament_file or 
     die "Can't open $tournament_file for reading: $!";
 
   my $line;
@@ -127,263 +503,43 @@ sub read_tournaments
     next unless $line =~ /^TOURNAMENT (.*)$/;
 
     my @elements = split /\|/, $1;
-    die "Need 3 elements" unless $#elements == 2;
+    die "Need 4 elements" unless $#elements == 3;
 
     $tref->[$elements[0]]{year} = $elements[1];
-    $tref->[$elements[0]]{name} = $elements[2];
+    $tref->[$elements[0]]{location} = $elements[2];
+    $tref->[$elements[0]]{name} = $elements[3];
   }
     
   close $ft;
 }
 
 
-sub navigate_to_table
+sub read_ungendered
 {
-  my $tree = pop;
+  my ($pname, $pnum_ref) = @_;
 
-  # Find the specific table
-  my $table = $tree->look_down(
-    _tag => 'table', 
-      class => qr/table table-responsive table-condensed table-hover table-striped/);
-  die "No table" unless $table;
-  return $table;
-}
+  open my $fg, '<', $pname or 
+    die "Can't open $pname for reading: $!";
 
-
-sub read_key_table
-{
-  my ($table, $table_data_ref) = @_;
-
-  foreach my $tr ($table->look_down(_tag => 'tr')) 
+  my $line;
+  while ($line = <$fg>)
   {
-    # Skip <tr> with align="right" as this is a masterpoint table.
-    next if $tr->attr('align') && $tr->attr('align') eq 'right';
-
-    # Initialize an array for this row
-    my @row_data;
-
-    # Process each <td> in the row
-    foreach my $td ($tr->look_down(_tag => 'td')) 
-    {
-      my $text = $td->as_text;
-      $text =~ s/^\s+|\s+$//g;
-
-      if (my $a_tag = $td->look_down(_tag => 'a'))
-      {
-        # Check for an href attribute contained txttid.
-        if (my ($txttid) = $a_tag->attr('href') =~ /txttid=(\d+)/)
-        {
-          push @row_data, $txttid;
-          push @row_data, $text;
-        }
-        else
-        {
-          die "No txttid";
-        }
-      }
-      else
-      {
-        push @row_data, $text;
-      }
-    }
-
-    # Add the row to the table data
-    push @$table_data_ref, \@row_data;
+    chomp $line;
+    push @$pnum_ref, $line;
   }
-}
-
-
-sub get_player_info
-{
-  my ($text, $player_ref) = @_;
-  my $nbsp = chr(160);
-  my @parts = split /$nbsp/, $text;
-
-  # Remove leading and trailing spaces.
-  @parts = map { s/^\s+|\s+$//g; $_ } @parts;
-
-  my $plast = $#parts;
-
-  # If plast-2 contains "Deceased", then there is an
-  # extra element.
-
-  my $of_expected;
-  my $deceased_flag;
-  if ($parts[$plast-2] =~ /Deceased (\d+)/)
-  {
-    $player_ref->{deceased} = $1;
-    $deceased_flag = 1;
-    $of_expected = $plast-4;
-  }
-  elsif ($parts[$plast-2] =~ /Deceased/)
-  {
-    # Without a year.
-    $player_ref->{deceased} = 'Yes';
-    $deceased_flag = 1;
-    $of_expected = $plast-4;
-  }
-  else
-  {
-    $player_ref->{deceased} = 'No';
-    $deceased_flag = 0;
-    $of_expected = $plast-3;
-  }
-
-
-  die "Expected 'of' in the right place" unless
-    $parts[$of_expected]  =~ /^of/;
-
-  $player_ref->{signifier} = $parts[0];
-  if ($player_ref->{signifier} eq 'Mr')
-  {
-    $player_ref->{gender} = 'M';
-  }
-  elsif ($player_ref->{signifier} eq 'Mrs')
-  {
-    $player_ref->{gender} = 'F';
-  }
-  else
-  {
-    die "Gender? $player_ref->{signifier}";
-  }
-
-  for my $i (1 .. $of_expected-1)
-  {
-    push @{$player_ref->{names}}, $parts[$i];
-  }
-
-  $player_ref->{name} = uc($parts[$of_expected-1]);
-  for my $i (1 .. $of_expected-2)
-  {
-    $player_ref->{name} .= " $parts[$i]";
-  }
-
-  if ($deceased_flag)
-  {
-    $player_ref->{country} = $parts[$of_expected+1];
-
-    if ($parts[$plast-2] =~ /WBF Player Ref: (.*) \| NBO Number/)
-    {
-      $player_ref->{wbf_nbo_no} = $1;
-    }
-  }
-  else
-  {
-    if ($parts[$plast-2] =~ /(.+)WBF Player Ref: (.*) \| NBO Number/)
-    {
-      ($player_ref->{country}, $player_ref->{wbf_nbo_no}) = ($1, $2);
-    }
-    elsif ($parts[$plast-2] =~ /(.+)WBF Player Ref: /)
-    {
-      $player_ref->{country} = $1;
-    }
-  }
-
-  if ($parts[$plast-1] =~ /^(\S+) Current WBF/)
-  {
-    $player_ref->{nbo_no} = $1;
-  }
-
-  die "No WBF number" unless
-    $parts[$plast] =~ /(.+) \(please/;
-
-  $player_ref->{wbf_no} = $1;
-
-  # Remove leading and trailing spaces.
-  %$player_ref = 
-    map { $_ => $player_ref->{$_} =~ s/^\s+|\s+$//gr } keys %$player_ref;
-
-  # Remove leading and trailing spaces.
-  @{$player_ref->{names}} = 
-    map { s/^\s+|\s+$//g; $_ } @{$player_ref->{names}};
-
-}
-
-
-sub get_tournaments
-{
-  my ($data_ref, $played_ref, $tournaments_ref, $ft) = @_;
-
-  my $tno = 0;
-  for my $rno (8 .. $#$data_ref)
-  {
-    $played_ref->[$tno]{year} = $data_ref->[$rno][0];
-    $played_ref->[$tno]{id} = $data_ref->[$rno][2];
-    $played_ref->[$tno]{name} = $data_ref->[$rno][3];
-    $played_ref->[$tno]{represent} = $data_ref->[$rno][4];
-
-    my $tid = $data_ref->[$rno][2];
-
-    if (defined $tournaments_ref->[$tid])
-    {
-      # We've seen this tournament before.
-      if ($tournaments_ref->[$tid]{year} ne $played_ref->[$tno]{year})
-      {
-        print "Tournament ID: $tid: Year ",
-          $tournaments_ref->[$tid]{year}, 
-          " vs ", 
-          $played_ref->[$tno]{year},
-          "\n";
-        die "Mismatch";
-      }
-
-      if ($tournaments_ref->[$tid]{name} ne $played_ref->[$tno]{name})
-      {
-        print "Tournament ID: $tid: Name ",
-          $tournaments_ref->[$tid]{name}, 
-          " vs ", 
-          $played_ref->[$tno]{name},
-          "\n";
-        die "Mismatch";
-      }
-    }
-    else
-    {
-      $tournaments_ref->[$tid]{name} = $played_ref->[$tno]{name};
-      $tournaments_ref->[$tid]{year} = $played_ref->[$tno]{year};
-
-      print $ft "TOURNAMENT ", $tid, "|",
-        $played_ref->[$tno]{year}, "|",
-        $played_ref->[$tno]{name}, "\n";
-
-      $ft->flush or die "Could not flush filehandle: $!";
-    }
-
-    $tno++;
-  }
+    
+  close $fg;
 }
 
 
 sub print_player
 {
-  my ($fh, $pref, $tref) = @_;
+  my ($fh, $player_ref,) = @_;
 
-  print $fh "NAME $pref->{name}\n";
-  print $fh "GENDER $pref->{gender}\n";
-  print $fh "DECEASED $pref->{deceased}\n";
-  print $fh "COUNTRY $pref->{country}\n";
-  print $fh "WBF $pref->{wbf_no}\n";
-
-  if (defined $pref->{nbo_no})
-  {
-    print $fh "WBF-NBO $pref->{nbo_no}\n";
-  }
-  elsif (defined $pref->{wbf_nbo_no})
-  {
-    print $fh "WBF-NBO $pref->{wbf_nbo_no}\n";
-  }
-  else
-  {
-    print $fh "WBF-NBO None\n";
-  }
-
-  foreach my $t (@$tref)
-  {
-    print $fh "TOURNAMENT $t->{id}|$t->{year}|$t->{represent}\n";
-  }
-
-  print $fh "\n";
-
-  $fh->flush or die "Could not flush filehandle: $!";
+  print $fh "NAME $player_ref->{name}\n";
+  print $fh "COUNTRY $player_ref->{country}\n";
+  print $fh "WBF $player_ref->{wbf}\n";
+  print $fh "NBO $player_ref->{nbo}\n";
+  print $fh "GENDER $player_ref->{gender}\n";
 }
 

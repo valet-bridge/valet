@@ -11,8 +11,8 @@ use HTML::TreeBuilder;
 
 die "perl get_ebl.pl" unless $#ARGV == -1;
 
-my $PLAYER_FIRST = 1137;
-my $PLAYER_LAST = 1137;
+my $PLAYER_FIRST = 222112;
+my $PLAYER_LAST = 230000;
 
 my $sprefix = "http://db.eurobridge.org/Repository/scripts/person.asp";
 my $outdir = "ebl/";
@@ -75,6 +75,17 @@ my %form_data = (
   qsortadmin => '1', 
   qshowcontrol => '---11------' );
 
+my $missing_tourn_no;
+if ($#tournaments > 10000)
+{
+  $missing_tourn_no = $#tournaments + 1;
+}
+else
+{
+  # Should be higher than the highest one in use.
+  $missing_tourn_no = 10000;
+}
+
 for my $pno ($PLAYER_FIRST .. $PLAYER_LAST)
 {
   say "Player $pno";
@@ -100,7 +111,13 @@ for my $pno ($PLAYER_FIRST .. $PLAYER_LAST)
 
   my %player;
   $player{ebl} = $pno;
-  get_player($form, \%player);
+
+  if (! get_player($form, \%player))
+  {
+    print "Player is probably empty\n";
+    next;
+  }
+
   print_player($fp, \%player);
 
   if ($player{gender} eq '?')
@@ -111,8 +128,9 @@ for my $pno ($PLAYER_FIRST .. $PLAYER_LAST)
     next;
   }
 
-  my (@played, @tournaments);
-  get_tournament_info($ft, $form, \@played, \@tournaments);
+  my @played;
+  get_tournament_info($ft, $form, \@played, \@tournaments,
+    \$missing_tourn_no);
   print_played($fp, \@played, \@tournaments);
 
   sleep(5);
@@ -129,7 +147,8 @@ sub get_player
   my ($form, $player_ref) = @_;
 
   # First <h3> element within the form
-  my $name_pos = $form->look_down("_tag", "h3") or die "No name";
+  my $name_pos = $form->look_down("_tag", "h3") or return 0;
+
   get_name($name_pos, $player_ref);
 
   # First <div> with class "col-md-12"
@@ -149,12 +168,14 @@ sub get_player
     # Probably no playing record.
     $player_ref->{gender} = '?';
   }
+
+  return 1;
 }
 
 
 sub get_tournament_info
 {
-  my ($ft, $form, $played_ref, $tourn_ref) = @_;
+  my ($ft, $form, $played_ref, $tourn_ref, $missing_no_ref) = @_;
 
   # Two <table>'s with class "table-edit"
   my @tables = $form->look_down("_tag", "table", "class", qr/table-edit/);
@@ -186,12 +207,14 @@ sub get_tournament_info
 
   if ($team_index != -1)
   {
-    get_played($ft, $tables[$team_index], $played_ref, $tourn_ref);
+    get_played($ft, $tables[$team_index], $played_ref, $tourn_ref,
+      $missing_no_ref);
   }
 
   if ($pair_index != -1)
   {
-    get_played($ft, $tables[$pair_index], $played_ref, $tourn_ref);
+    get_played($ft, $tables[$pair_index], $played_ref, $tourn_ref,
+      $missing_no_ref);
   }
 }
 
@@ -298,7 +321,7 @@ sub parse_info
 
 sub get_played
 {
-  my ($ft, $table, $player_ref, $tournaments_ref) = @_;
+  my ($ft, $table, $player_ref, $tournaments_ref, $missing_no_ref) = @_;
 
   my $row = 1 + $#$player_ref;
   my $counter = 0;
@@ -313,15 +336,27 @@ sub get_played
     {
        # The tournament name and link.
        my $a_tag = $td->look_down("_tag", "a");
-       die "No link" unless $a_tag;
+       my ($name, $location, $type, $index);
+       if ($a_tag)
+       {
+         my $link = $a_tag->attr('href');
+         $link =~ /qtournid=(\d+)/;
+         $index = $1;
 
-       my $link = $a_tag->attr('href');
-       $link =~ /qtournid=(\d+)/;
-       my $index = $1;
+         parse_tournament_name($a_tag, \$name, \$location, \$type);
+       }
+       else
+       {
+         # This is a kludge, as the tournament may well be present
+         # as an "un-numbered" entry.  Here we just add it, and we
+         # deal with it later in a separate script that renumbers
+         # these tournaments.
+         $index = $$missing_no_ref;
+         $$missing_no_ref++;
+         print "Warning: Missing tournament link\n";
 
-       my ($name, $location, $type);
-       parse_tournament_name($a_tag,
-         \$name, \$location, \$type);
+         parse_tournament_name($td, \$name, \$location, \$type);
+       }
 
        $info[1] = $name;
        $info[4] = $location;
@@ -378,6 +413,8 @@ sub get_played
           $tournaments_ref->[$index]{year},
           $tournaments_ref->[$index]{location},
           $tournaments_ref->[$index]{name});
+        
+        $ft->flush or die "Could not flush filehandle: $!";
       }
 
       @info = ();
@@ -400,6 +437,8 @@ sub print_tournaments
       $tourn_ref->[$index]{year},
       $tourn_ref->[$index]{name});
   }
+
+  $fh->flush or die "Could not flush filehandle: $!";
 }
 
 

@@ -70,6 +70,11 @@ for my $lin (0 .. $#PLAYERS)
     next if $pard eq $players[$p]; # Don't partner yourself
 
     $partners{$pard}++;
+
+    # if ($pard =~ /Peter/)
+    # {
+      # print "$lin\n";
+    # }
   }
 }
 

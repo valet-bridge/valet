@@ -1,5 +1,5 @@
 # SUITDATA_FILE = "suitdata100.csv"
-SUITDATA_FILE = "labels/original/openings.csv"
+SUITDATA_FILE = "labels/nonines/strongs.csv"
 OPENING_FILE = "labels/original/detail.csv"
 
 BRIDGE_TRICKS = 13
