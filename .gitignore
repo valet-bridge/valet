@@ -56,9 +56,28 @@ src/*.txt
 
 scripts/Euro-and-World/20*
 scripts/Euro-and-World/*.txt
+scripts/Euro-and-World/database/*.txt
+scripts/Euro-and-World/database/0_basic/*.txt
+scripts/Euro-and-World/database/1_edited/*.txt
+scripts/Euro-and-World/database/2_genders/*.txt
+scripts/Euro-and-World/database/3_highs/*.txt
+scripts/Euro-and-World/database/4_tourndata/*.txt
+scripts/Euro-and-World/database/5_tsemantics/*.txt
+scripts/Euro-and-World/database/6_consolidated/*.txt
+scripts/Euro-and-World/database/7_women/bak/*.txt
+scripts/Euro-and-World/database/7_women/*.txt
+scripts/Euro-and-World/database/8_refile/bak/*.txt
+scripts/Euro-and-World/database/names/wbf/manual/*.txt
+scripts/Euro-and-World/database/names/wbf/*.txt
+scripts/Euro-and-World/database/names/results/*.txt
 scripts/cluster/data/20*
 scripts/cluster/*.txt
 scripts/cluster/*.csv
+scripts/cluster/labels/bak/*.txt
+scripts/cluster/labels/original/*.csv
+scripts/cluster/labels/nonines/*.csv
+scripts/cluster/out/out*
+scripts/cluster/out/count*
 
 **/Both.txt
 **/None.txt
