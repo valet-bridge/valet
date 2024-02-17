@@ -274,6 +274,13 @@ sub has_country
 }
 
 
+sub gender
+{
+  my ($self) = @_;
+  return $self->{GENDER}[0];
+}
+
+
 sub str
 {
   my ($self) = @_;

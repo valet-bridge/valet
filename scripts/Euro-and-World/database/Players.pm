@@ -73,6 +73,18 @@ sub id_to_name
 }
 
 
+sub id_to_gender
+{
+  my ($self, $id) = @_;
+
+  if (! defined $self->{players}[$id])
+  {
+    die "Players: ID $id not found";
+  }
+  return $self->{players}[$id]->gender();
+}
+
+
 sub player_has_country
 {
   my ($self, $id, $cname) = @_;

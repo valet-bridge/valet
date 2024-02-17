@@ -11,6 +11,72 @@ use Team;
 use Players;
 use Util;
 
+# Mixed teams, 6 player split 4-2 or 2-4 (M-F), where it seems legitimate
+my %FOUR_TWO_MIXED = (
+  '44, LIPPO BANK II' => 1,     '44, PALESTINE' => 1,
+  '44, VOLHEJN' => 1,           '44, ZENIT' => 1,
+  '51, BOUVERESSE' => 1,        '51, CERVI' => 1,
+  '51, DERI' => 1,              '51, FILIPPI' => 1,
+  '51, HEATHER' => 1,           '51, HENDRICKX' => 1,
+  '51, KOWALSKI' => 1,          '51, MIDSKOPG' => 1,
+  '51, SAUNDERS' => 1,          '51, SOLAKOGLOU' => 1,
+  '95, ALLIX' => 1,             '238, KREMER' => 1,
+  '240, BLOUQUIT' => 1,         '240, BEAUVILLAIN' => 1,
+  '240, MOYET' => 1,            '240, SUSSEL' => 1,
+  '240, BURNET' => 1,           '242, LISE' => 1,
+  '242, BURGAY' => 1,           '242, DELEVA' => 1,
+  '242, COURTY' => 1,           '459, HKHZ' => 1,
+  '459, SALMAN' => 1,           '459, KANTARCI' => 1,
+  '459, YENER' => 1,            '484, ZIMMERMANN' => 1,
+  '484, SERF' => 1,             '594, GELIN' => 1,
+  '688, RUSSIA' => 1,           '688, TOPBRIDGE' => 1,
+  '688, DONGFENG' => 1,         "688, SHENZHEN WOMEN'S WORLD" => 1,
+  '717, DARKMOON' => 1,
+  '935, KENYA' => 1,            '935, DJARUM2' => 1,
+  '942, GOTTLIEB' => 1,         '942, EIDE' => 1,
+  '1030, SHENZHEN' => 1,        '1030, SHENZHEN NANGANG POWER' => 1,
+  '1030, HEY YO' => 1,          '1030, QINGHAI BRIDGE ASSOCIATION' => 1,
+  '1030, SANSHA SATELLITE TV' => 1, '1256, BOUVERESSE MIXED' => 1,
+  '1256, CERVI MIXED' => 1,     '1256, DERI MIXED' => 1,
+  '1256, FILIPPI MIXED' => 1,   '1256, HEATHER MIXED' => 1,
+  '1256, HENDRICKX MIXED' => 1, '1256, KOWALSKI MIXED' => 1,
+  '1256, MIDSKOPG MIXED' => 1,  '1256, SAUNDERS MIXED' => 1,
+  '1400, CALANDRA' => 1,        '1542, KENYA TT MIXED' => 1,
+  '1542, DJARUM2 TT MIXED' => 1, '1543, FEIXIANG' => 1,
+  '1643, CHINESE TAIPEI' => 1,  '1643, CHINA' => 1
+);
+
+# Mixed teams, 4 players split 3-1 or 1-3, maybe players missing?
+my %THREE_ONE_MIXED = (
+  '3, MAURY' => 1,              '3, DAVIES' => 1,
+  '3, HOBSON' => 1,             '3, GUNTHER' => 1,
+  '3, KRIEGER' => 1,            '3, LARSSON' => 1,
+  '3, YALMAN' => 1,             '3, ZOBU' => 1,
+  '12, LABAERE A.' => 1,        '44, ARMSTRONG' => 1,
+  '44, GERARD' => 1,            '51, FAIVRE' => 1,
+  '95, McGOWAN' => 1,           '238, BURTON' => 1,
+  '240, AUKEN' => 1,            '240, OLIVIERI' => 1,
+  '240, NILSSON KA' => 1,       '240, HANSEN' => 1,
+  '242, WINTER' => 1,           '242, ASSAEL' => 1,
+  '242, PETRIGNANI' => 1,       '242, SUSSEL' => 1,
+  '242, YALMAN' => 1,           '431, MORSE' => 1,
+  '459, FALAY' => 1,            '459, KAMEL' => 1,
+  '459, HACKETT' => 1,          '688, BEIJING HENGSHA' => 1,
+  '942, DENMARK' => 1,          '942, CMN' => 1,
+  '1030, NORCO' => 1,           '1030, ZHEJIANG JINJIANG BRIDGE CLUB' => 1,
+  '1030, BRIDGE ASSOCIATION OF FUJIAN P' => 1,
+  '1030, BEIJING CENTURY WEIDA' => 1,
+  '1030, WUHAN' => 1,           '1256, FAIVRE MIXED' => 1,
+  '1400, BREMNES' => 1
+);
+
+# Not enough knowledge to delete these odd mixed teams completely.
+my %ODDS_AND_ENDS = (
+  '3, BEAUMIER' => 1,           '51, GILBOA' => 1,
+  '242, SIDAR' => 1,            '272, GODFREY' => 1,
+  '1256, GILBOA MIXED' => 1,    '10018, BRAZIL' => 1
+);
+
 
 sub new
 {
@@ -65,6 +131,37 @@ sub add_from_chunk
 
   $self->{$team_restriction}{$team_name}->fill_player_map(
     \%{$self->{_players}}, $team_name);
+  
+  $self->{$team_restriction}{$team_name}->analyze_gender(
+    $players_ref, $errstr);
+  
+  if (! $self->{$team_restriction}{$team_name}->check_gender(
+    $team_restriction))
+  {
+    if (defined $FOUR_TWO_MIXED{"$errstr, $team_name"} &&
+      $self->{$team_restriction}{$team_name}->size() == 6)
+    {
+      # Skip
+    }
+    elsif (defined $THREE_ONE_MIXED{"$errstr, $team_name"} &&
+      $self->{$team_restriction}{$team_name}->size() == 4)
+    {
+      # Skip
+    }
+    elsif (defined $ODDS_AND_ENDS{"$errstr, $team_name"})
+    {
+      # Skip
+    }
+    else
+    {
+      print "$errstr, $team_name: Team gender mismatch\n";
+      print "Restriction $team_restriction\n";
+      print "Profile ",
+        $self->{$team_restriction}{$team_name}->str_gender(), "\n";
+      print $self->{$team_restriction}{$team_name}->str($players_ref), 
+        "\n";
+    }
+  }
 }
 
 

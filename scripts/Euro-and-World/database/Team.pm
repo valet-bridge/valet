@@ -10,6 +10,14 @@ use v5.10;
 use Players;
 use Util;
 
+use constant
+{
+  GENDER_OPEN => 1,
+  GENDER_WOMEN => 2,
+  GENDER_MIXED => 4,
+  GENDER_UNKNOWN => 8
+};
+
 
 sub new
 {
@@ -131,24 +139,17 @@ sub check_basics
 }
 
 
-sub check_gender
+sub make_gender_histogram
 {
-  my ($self, $team_restriction, $team_ref, 
-    $players, $team_name, $errstr) = @_;
+  my ($self, $players, $histo_ref) = @_;
 
-  # Analyze_gender
-  # Can loop over $self->{players}
-  #   fill $self->{gender}{M, F, ?}, ++
-  #
-  # Consistent with
-  #   Women: No M
-  #   Mixed: |M-F| <= 1 and min(M,F) >= 1
-  #
-  # Check no ?, output if so
-  # Check balanced counts if mixed, output if not
-  # I guess a team can be all-male, all-female, mixed-OK or
-  # mixed-confusing, or have question marks
-  # Some kind of string function that makes a nice stats line
+  $histo_ref->{$_} = 0 for qw(M F ?);
+
+  for my $pentry (@{$self->{players}})
+  {
+    next unless defined $pentry;
+    $histo_ref->{$players->id_to_gender($pentry->{id})}++;
+  }
 }
 
 
@@ -163,6 +164,101 @@ sub fill_player_map
     next unless defined $pentry;
     push @{$player_map_ref->{$pentry->{id}}}, $team_name;
   }
+}
+
+
+sub analyze_gender
+{
+  my ($self, $players, $errstr) = @_;
+
+  my %gender_histo;
+  $self->make_gender_histogram($players, \%gender_histo);
+
+  $self->{possible_gender} = GENDER_OPEN;
+
+  if ($gender_histo{M} == 0)
+  {
+    $self->{possible_gender} |= GENDER_WOMEN;
+  }
+  elsif (abs($gender_histo{M} - $gender_histo{F}) <= 1)
+  {
+    $self->{possible_gender} |= GENDER_MIXED;
+  }
+
+  if ($gender_histo{'?'} > 0)
+  {
+    $self->{possible_gender} |= GENDER_UNKNOWN;
+  }
+}
+
+
+sub check_gender
+{
+  my ($self, $team_restriction) = @_;
+
+  # Bit of a kludge to put both restrictions into a string
+  my @a = split '-', $team_restriction;
+  die "$team_restriction not recognized" unless $#a == 1;
+  my $gender_restriction = $a[0];
+
+  if ($gender_restriction eq 'Open')
+  {
+    return 1;
+  }
+  elsif ($gender_restriction eq 'Women')
+  {
+    return (($self->{possible_gender} & GENDER_WOMEN) ? 1 : 0);
+  }
+  elsif ($gender_restriction eq 'Mixed')
+  {
+    return (($self->{possible_gender} & GENDER_MIXED) ? 1 : 0);
+  }
+  else
+  {
+    die "$gender_restriction not recognized";
+  }
+}
+
+
+sub size
+{
+  my ($self) = @_;
+
+  my $c = 0;
+  for my $pentry (@{$self->{players}})
+  {
+    $c++ if defined $pentry;
+  }
+  return $c;
+}
+
+
+
+sub str
+{
+  my ($self, $players) = @_;
+  my $str = '';
+  for my $pentry (@{$self->{players}})
+  {
+    next unless defined $pentry;
+    $str .= sprintf("%s %5d  %s\n",
+      $players->id_to_gender($pentry->{id}),
+      $pentry->{id},
+      $pentry->{name});
+  }
+  return $str;
+}
+
+
+sub str_gender
+{
+  my ($self) = @_;
+  my $str = '';
+  $str .= 'O' if $self->{possible_gender} & GENDER_OPEN;
+  $str .= 'W' if $self->{possible_gender} & GENDER_WOMEN;
+  $str .= 'M' if $self->{possible_gender} & GENDER_MIXED;
+  $str .= '?' if $self->{possible_gender} & GENDER_UNKNOWN;
+  return $str;
 }
 
 1;
