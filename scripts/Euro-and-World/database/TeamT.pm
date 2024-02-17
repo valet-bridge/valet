@@ -100,6 +100,8 @@ sub get_team_restriction
 
   my $team_restriction = $team_gender_restriction . '-' .
     $team_age_restriction;
+  
+  return $team_restriction;
 }
 
 
@@ -162,21 +164,6 @@ sub add_from_chunk
         "\n";
     }
   }
-}
-
-
-sub check_gender
-{
-  my ($self, $team_restriction, $team_ref, 
-    $players, $team_name, $errstr) = @_;
-
-  # In loop can count M, F, ?
-  # Store the 1D count in self
-  # Check no ?, output if so
-  # Check balanced counts if mixed, output if not
-  # I guess a team can be all-male, all-female, mixed-OK or
-  # mixed-confusing, or have question marks
-  # Some kind of string function that makes a nice stats line
 }
 
 

@@ -80,7 +80,6 @@ sub check_combined
       {
         for my $player (@{$comb_ref->[$tno]{$hash_str}})
         {
-
           next unless exists $player->{id};
           push @id_list, $player->{id};
         }

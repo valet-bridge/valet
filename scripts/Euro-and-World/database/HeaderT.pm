@@ -496,6 +496,21 @@ sub is_teams
 }
 
 
+sub is_pairs
+{
+  my ($self) = @_;
+
+  if (defined $self->{FORM})
+  {
+    return ($self->{FORM} =~ /Pairs/ ? 1 : 0);
+  }
+  else
+  {
+    die "No form";
+  }
+}
+
+
 sub restriction_compatible
 {
   my ($self, $unit_restriction) = @_;

@@ -84,7 +84,7 @@ sub gender
 
   if ($tourn_gender eq 'Women')
   {
-    if ($specific_gender eq 'Women')
+    if ($specific_gender eq 'Women' || $specific_gender eq 'None')
     {
       return 'Women';
     }
@@ -121,18 +121,20 @@ sub age
   }
   elsif ($tourn_age eq 'Seniors')
   {
-    if ($specific_age eq 'Seniors')
+    if ($specific_age eq 'Seniors' ||
+        $specific_age eq 'None')
     {
-      return $specific_age;
+      return 'Seniors';
     }
     else
     {
       die "$errstr: Unit age $specific_age incompatible with Seniors";
     }
   }
-  elsif ($tourn_age eq $specific_age)
+  elsif ($tourn_age eq $specific_age ||
+    $specific_age eq 'None')
   {
-    return $specific_age;
+    return $tourn_age;
   }
   else
   {
