@@ -184,12 +184,15 @@ sub check_from_names
     }
     else
     {
-if ($tno == 21)
+if ($tno == 11)
 {
   # print "HERE\n";
 }
       if ($pair_flag)
       {
+        $comb_ref->[$tno]->check_non_uniques(
+          $players, "Tournament $tno");
+
         $comb_ref->[$tno]->check_against_name_data(
           \%{$from_names_ref->[$tno]}, $players, "Tournament $tno");
       }

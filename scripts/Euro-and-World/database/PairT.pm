@@ -84,6 +84,28 @@ sub add_from_chunk
 }
 
 
+sub check_non_uniques
+{
+  my ($self, $players, $errstr) = @_;
+
+  my $str = '';
+  for my $ebl (sort keys %{$self->{_players}})
+  {
+    my $num = $#{$self->{_players}{$ebl}};
+    if ($num >= 1)
+    {
+      $str .= $ebl . ", " . $players->id_to_name($ebl) .
+        " (" . ($num+1) . " occurrences)\n";
+    }
+  }
+
+  if ($str ne '')
+  {
+    print "$errstr:\n$str\n";
+  }
+}
+
+
 sub check_against_name_data
 {
   my ($self, $name_data_ref, $players, $errstr) = @_;
