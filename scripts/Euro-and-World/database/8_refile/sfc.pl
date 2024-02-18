@@ -175,6 +175,7 @@ sub check_from_names
     }
 
     my $team_flag = $tourn_headers_ref->[$tno]->is_teams();
+    my $pair_flag = $tourn_headers_ref->[$tno]->is_pairs();
 
     if ($team_flag)
     {
@@ -187,6 +188,12 @@ if ($tno == 21)
 {
   # print "HERE\n";
 }
+      if ($pair_flag)
+      {
+        $comb_ref->[$tno]->check_against_name_data(
+          \%{$from_names_ref->[$tno]}, $players, "Tournament $tno");
+      }
+
       # Build player map
       my @from_comb;
       for my $pair_no (0 .. @{$from_comb_ref->[$tno]{pairs}})

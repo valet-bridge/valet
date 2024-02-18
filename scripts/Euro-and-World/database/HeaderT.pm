@@ -251,6 +251,16 @@ sub restrict_age
 }
 
 
+sub restrict_stage
+{
+  my ($self, $unit_stage, $errstr) = @_;
+  return $restriction->stage(
+    $self->{RESTRICTION_STAGE},
+    $unit_stage,
+    $errstr);
+}
+
+
 sub set_from_buffer
 {
   my ($self, $buffer_ref, $errstr) = @_;
@@ -530,7 +540,8 @@ sub str
   my ($self) = @_;
 
   for my $field (qw(TITLE ID CITY COUNTRY ORGANIZER
-    DATE_START DATE_END YEAR FORM RESTRICTION_AGE RESTRICTION_GENDER))
+    DATE_START DATE_END YEAR FORM
+    RESTRICTION_AGE RESTRICTION_GENDER RESTRICTION_STAGE))
   {
     next unless defined $self->{$field};
     print "$field $self->{$field}\n";

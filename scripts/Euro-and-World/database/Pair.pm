@@ -161,7 +161,7 @@ sub check_gender
 
   # Bit of a kludge to put both restrictions into a string
   my @a = split '-', $team_restriction;
-  die "$team_restriction not recognized" unless $#a == 1;
+  die "$team_restriction not recognized" unless $#a == 2;
   my $gender_restriction = $a[0];
 
   if ($gender_restriction eq 'Open' ||

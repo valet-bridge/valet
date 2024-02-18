@@ -32,8 +32,13 @@ sub get_pair_restriction
   my $pair_age_restriction = $tourn_header->restrict_age(
     $unit_restriction, $errstr);
 
-  my $pair_restriction = $pair_gender_restriction . '-' .
-    $pair_age_restriction;
+  my $pair_stage_restriction = $tourn_header->restrict_stage(
+    $unit_restriction, $errstr);
+
+  my $pair_restriction = 
+    $pair_gender_restriction . '-' .
+    $pair_age_restriction . '-' .
+    $pair_stage_restriction;
 
   return $pair_restriction;
 }
@@ -81,15 +86,22 @@ sub add_from_chunk
 
 sub check_against_name_data
 {
-  my ($self, $name_data_ref, $errstr) = @_;
+  my ($self, $name_data_ref, $players, $errstr) = @_;
 
   for my $name_pair_no (0 .. $#{$name_data_ref->{pairs}})
   {
     my $active = 0;
+    my $minus_ones = 0; # Only one player of a pair may be given
     my %tourn_pairs;
 
     for my $ebl (@{$name_data_ref->{pairs}[$name_pair_no]})
     {
+      if ($ebl == -1)
+      {
+        $minus_ones++;
+        next;
+      }
+
       $active++;
       if (defined $self->{_players}{$ebl})
       {
@@ -100,10 +112,18 @@ sub check_against_name_data
       }
       else
       {
-        print "$errstr, $name_pair_no: ",
-          "Player ID $ebl missing from tournament\n";
+        print "$errstr, pair number $name_pair_no:\n";
+        print "Player ", $players->id_to_name($ebl),
+          " (EBL $ebl) missing from tournament\n\n";
         next;
       }
+    }
+
+    if ($minus_ones >= 2)
+    {
+      print "$errstr, pair number $name_pair_no:\n";
+      print "Both players missing\n\n";
+      next;
     }
 
     my $num = 0;
@@ -117,18 +137,42 @@ sub check_against_name_data
       }
     }
 
+    next if $num == 1;
     if ($num == 0)
     {
-      print "$errstr, $name_pair_no: No pair covers all player data\n";
-      next;
+      print "$errstr, pair number $name_pair_no:\n";
+      print "No pair covers all player data\n";
+    }
+    else
+    {
+      print "$errstr, pair number $name_pair_no:\n";
+      print "$num pairs cover all player data\n";
     }
 
-    if ($num > 1)
+    print $self->str_ebl_pair(
+      $name_data_ref->{pairs}[$name_pair_no],
+      $players);
+  }
+}
+
+
+sub str_ebl_pair
+{
+  my ($self, $ebl_list_ref, $players) = @_;
+
+  my $str = '';
+  for my $ebl (@$ebl_list_ref)
+  {
+    if ($ebl == -1)
     {
-      print "$errstr, $name_pair_no: $num pairs cover all player data\n";
-      next;
+      $str .= "  (missing)\n";
+    }
+    else
+    {
+      $str .= "  $ebl, " . $players->id_to_name($ebl) . "\n";
     }
   }
+  $str .= "\n";
 }
 
 

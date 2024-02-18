@@ -8,44 +8,77 @@ use Exporter;
 use v5.10;
 
 my %RESTRICTIONS = (
-  "Girls series" => { age => "U26", gender => "Women" },
-  "Juniors series" => { age =>, "U26", gender => "Open" },
-  "Juniors Swiss series" => { age =>, "U26", gender => "Open" },
-  "Juniors B-A-M series" => { age =>, "U26", gender => "Open" },
+  "Girls series" => 
+    { age => "U26", gender => "Women", stage => "General" },
+  "Juniors series" => 
+    { age =>, "U26", gender => "Open", stage => "General" },
+  "Juniors Swiss series" => 
+    { age =>, "U26", gender => "Open", stage => "General" },
+  "Juniors B-A-M series" => 
+    { age =>, "U26", gender => "Open", stage => "General" },
+  "U28 series" => 
+    { age =>, "U28", gender => "Open", stage => "General" },
+  "Youngsters series" => 
+    { age =>, "U21", gender => "Open", stage => "General" },
+  "U31 series" => 
+    { age =>, "U31", gender => "Open", stage => "General" },
 
-  "U28 series" => { age =>, "U28", gender => "Open" },
+  "Kids series" => 
+    { age => "U16", gender => "Open", stage => "General" },
 
-  "Youngsters series" => { age =>, "U21", gender => "Open" },
-  "U31 series" => { age =>, "U31", gender => "Open" },
+  "All series" => 
+    { age => "Open", gender => "Open", stage => "General" },
+  "Open series" => 
+    { age => "Open", gender => "Open", stage => "General" },
+  "Transnational Open series" => 
+    { age => "Open", gender => "Open", stage => "General" },
+  "Bermuda Bowl series" => 
+    { age => "Open", gender => "Open", stage => "General" },
+  "Rosenblum Cup series" => 
+    { age => "Open", gender => "Open", stage => "General" },
+  "Rosenblum series" => 
+    { age => "Open", gender => "Open", stage => "General" },
+  "Rand Cup series" => 
+    { age => "Open", gender => "Open", stage => "General" },
+  "Transnational Teams series" => 
+    { age => "Open", gender => "Open", stage => "General" },
+  "Open Olympiad series" => 
+    { age => "Open", gender => "Open", stage => "General" },
+  "Olympiad series" => 
+    { age => "Open", gender => "Open", stage => "General" },
+  "Transnational Teams (BB) series" => 
+    { age =>"Open", gender => "Open", stage => "General" },
 
-  "Kids series" => { age => "U16", gender => "Open" },
+  "Senior Bowl series" => 
+    { age => "Seniors", gender => "Open", stage => "General" },
+  "Seniors series" => 
+    { age => "Seniors", gender => "Open", stage => "General" },
+  "d'Orsi Bowl series" => 
+    { age => "Seniors", gender => "Open", stage => "General" },
 
-  "All series" => { age => "Open", gender => "Open" },
-  "Open series" => { age => "Open", gender => "Open" },
-  "Transnational Open series" => { age => "Open", gender => "Open" },
-  "Bermuda Bowl series" => { age => "Open", gender => "Open" },
-  "Rosenblum Cup series" => { age => "Open", gender => "Open" },
-  "Rosenblum series" => { age => "Open", gender => "Open" },
-  "Rand Cup series" => { age => "Open", gender => "Open" },
-  "Transnational Teams series" => { age => "Open", gender => "Open" },
-  "Open Olympiad series" => { age => "Open", gender => "Open" },
-  "Olympiad series" => { age => "Open", gender => "Open" },
-  "Transnational Teams (BB) series" => { age =>"Open", gender => "Open" },
+  "Venice Cup series"  => 
+    { age => "Open", gender => "Women", stage => "General" },
+  "McConnell Cup series"  => 
+    { age => "Open", gender => "Women", stage => "General" },
+  "McConnell series"  => 
+    { age => "Open", gender => "Women", stage => "General" },
+  "Women series" => 
+    { age => "Open", gender => "Women", stage => "General" },
 
-  "Senior Bowl series" => { age => "Seniors", gender => "Open" },
-  "Seniors series" => { age => "Seniors", gender => "Open" },
-  "d'Orsi Bowl series" => { age => "Seniors", gender => "Open" },
-
-  "Venice Cup series"  => { age => "Open", gender => "Women" },
-  "McConnell Cup series"  => { age => "Open", gender => "Women" },
-  "McConnell series"  => { age => "Open", gender => "Women" },
-  "Women series" => { age => "Open", gender => "Women" },
-
-  "Wuhan Cup series" => { age => "Open", gender => "Mixed" },
-  "Mixed series" => { age => "Open", gender => "Mixed" },
-  "Mixed Teams series" => { age => "Open", gender => "Mixed" },
-  "Transnational Mixed series" => { age => "Open", gender => "Mixed" },
-  "Transnational Mixed Teams series" => { age => "Open", gender => "Mixed" }
+  "Wuhan Cup series" => 
+    { age => "Open", gender => "Mixed", stage => "General" },
+  "Mixed series" => 
+    { age => "Open", gender => "Mixed", stage => "General" },
+  "Mixed series Qualifying" => 
+    { age => "Open", gender => "Mixed", stage => "Qualifying" },
+  "Mixed series Consolation" => 
+    { age => "Open", gender => "Mixed", stage => "Consolation" },
+  "Mixed Teams series" => 
+    { age => "Open", gender => "Mixed", stage => "General" },
+  "Transnational Mixed series" => 
+    { age => "Open", gender => "Mixed", stage => "General" },
+  "Transnational Mixed Teams series" => 
+    { age => "Open", gender => "Mixed", stage => "General" }
 );
 
 
@@ -139,6 +172,32 @@ sub age
   else
   {
     die "$errstr: Unit age $specific_age incompatible with $tourn_age";
+  }
+}
+
+
+sub stage
+{
+  my ($self, $tourn_stage, $unit_restriction, $errstr) = @_;
+
+  if (! defined $tourn_stage || $tourn_stage eq 'Multiple')
+  {
+    if (defined $unit_restriction)
+    {
+      return $unit_restriction;
+    }
+    else
+    {
+      return 'General';
+    }
+  }
+  elsif (defined $unit_restriction)
+  {
+    die "$errstr: Unit stage $unit_restriction vs $tourn_stage";
+  }
+  else
+  {
+    return $tourn_stage;
   }
 }
 

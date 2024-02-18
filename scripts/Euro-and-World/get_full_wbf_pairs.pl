@@ -12,7 +12,7 @@ use HTML::TreeBuilder;
 die "perl get_wbf_pairs.pl" unless $#ARGV == -1;
 
 my $TOURN_FIRST = 11;
-my $TOURN_LAST = 11;
+my $TOURN_LAST = 3000;
 
 my $sprefix = "http://www.worldbridge.org/pairschampRPperson/?qtournid=";
 my $outdir = "wbf_pairs/";
@@ -175,9 +175,17 @@ sub get_pairs
 
   my @rows = $table->look_down(_tag => 'tr');
 
+  my $series = '';
+
   for my $row (@rows)
   {
     my @tds = $row->look_down(_tag => 'td');
+    
+    if ($#tds == 6)
+    {
+      $series = $tds[2]->as_text;
+    }
+
     next unless $#tds == 7;
 
     my ($player1, $qid1);
@@ -190,6 +198,7 @@ sub get_pairs
     next unless parse_countries($tds[5],\$ctr1, \$ctr2);
 
     push @$pairs_ref, {
+      series => $series,
       player1 => $player1,
       player2 => $player2,
       pid1 => $qid1,
@@ -207,6 +216,7 @@ sub print_pairs
 
   for my $pair (@$pref)
   {
+    print $fh "RESTRICTION $pair->{series}\n";
     print $fh "PLAYER1 $pair->{player1}\n";
     print $fh "PLAYER2 $pair->{player2}\n";
     print $fh "ID1 $pair->{pid1}\n";
