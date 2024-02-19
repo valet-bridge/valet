@@ -118,14 +118,14 @@ sub make_gender_histogram
 
 sub fill_player_map
 {
-  my ($self, $player_map_ref, $pair_no) = @_;
+  my ($self, $player_map_ref, $restriction, $pair_no) = @_;
 
   for my $pentry (@{$self->{players}})
   {
     # There can be multiple teams for one player if the event
     # combined several series into one web page.
     next unless defined $pentry;
-    push @{$player_map_ref->{$pentry->{id}}}, $pair_no;
+    push @{$player_map_ref->{$pentry->{id}}{$restriction}}, $pair_no;
   }
 }
 

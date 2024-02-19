@@ -66,7 +66,7 @@ sub add_from_chunk
     $players_ref, "$errstr, $pair_no");
 
   $self->{$pair_restriction}[$pair_no]->fill_player_map(
-    \%{$self->{_players}}, $pair_no);
+    \%{$self->{_players}}, $pair_restriction, $pair_no);
   
   $self->{$pair_restriction}[$pair_no]->analyze_gender(
     $players_ref, $errstr);
@@ -91,11 +91,14 @@ sub check_non_uniques
   my $str = '';
   for my $ebl (sort keys %{$self->{_players}})
   {
-    my $num = $#{$self->{_players}{$ebl}};
-    if ($num >= 1)
+    for my $restriction (keys %{$self->{_players}{$ebl}})
     {
-      $str .= $ebl . ", " . $players->id_to_name($ebl) .
-        " (" . ($num+1) . " occurrences)\n";
+      my $num = $#{$self->{_players}{$ebl}{$restriction}};
+      if ($num >= 1)
+      {
+        $str .= $ebl . ", " . $players->id_to_name($ebl) .
+          " (" . ($num+1) . " occurrences in $restriction)\n";
+      }
     }
   }
 
@@ -124,20 +127,22 @@ sub make_pairs_histo
       $minus_ones++;
       next;
     }
-
     $$active_ref++;
-    if (defined $self->{_players}{$ebl})
+
+    my $hit = 0;
+    for my $restriction (keys %{$self->{_players}{$ebl}})
     {
-      for my $tourn_pair_no (@{$self->{_players}{$ebl}})
+      $hit++;
+      for my $tourn_pair_no (@{$self->{_players}{$ebl}{$restriction}})
       {
-        $tourn_pairs_ref->{$tourn_pair_no}++;
+        $tourn_pairs_ref->{$restriction}{$tourn_pair_no}++;
       }
     }
-    else
+
+    if (! $hit)
     {
       print "$errstr: Player ", $players->id_to_name($ebl),
         " (EBL $ebl) missing from tournament\n\n";
-      next;
     }
   }
 
@@ -163,27 +168,46 @@ sub check_against_name_data
       next;
     }
 
-    my $num = 0;
-    my $tourn_hit;
-    for my $tourn_pair_no (sort keys %tourn_pairs)
+    my %num_by_restriction;
+    my $highest = 0;
+
+    for my $restriction (keys %tourn_pairs)
     {
-      if ($tourn_pairs{$tourn_pair_no} == $active)
+      for my $tourn_pair_no (sort keys %{$tourn_pairs{$restriction}})
       {
-        $num++;
-        $tourn_hit = $tourn_pair_no;
+        if ($tourn_pairs{$restriction}{$tourn_pair_no} == $active)
+        {
+          $num_by_restriction{$restriction}++;
+          if ($num_by_restriction{$restriction} > $highest)
+          {
+            $highest = $num_by_restriction{$restriction};
+          }
+        }
       }
     }
 
-    next if $num == 1;
+    next if $highest == 1;
 
     print "$errstr, pair number $name_pair_no:\n";
-    print $num == 0 ?
-      "No pair covers all player data\n" :
-      "$num pairs cover all player data\n";
+    print $highest == 0 ?
+      "No pair covers all player data in any restriction\n" :
+      "$highest pairs cover all player data in some restriction\n";
 
     print $self->str_ebl_pair(
       $name_data_ref->{pairs}[$name_pair_no],
       $players);
+
+    if ($highest > 1)
+    {
+      for my $restriction (keys %num_by_restriction)
+      {
+        if ($num_by_restriction{$restriction} > 1)
+        {
+          print "$restriction: ", $num_by_restriction{$restriction},
+            " times\n";
+        }
+      }
+    }
   }
 }
 

@@ -70,6 +70,9 @@ scripts/Euro-and-World/database/8_refile/bak/*.txt
 scripts/Euro-and-World/database/names/wbf/manual/*.txt
 scripts/Euro-and-World/database/names/wbf/*.txt
 scripts/Euro-and-World/database/names/results/*.txt
+scripts/Euro-and-World/database/full_pairs/*
+scripts/Euro-and-World/database/full_pairs/*
+scripts/Euro-and-World/database/full_split/*
 scripts/cluster/data/20*
 scripts/cluster/*.txt
 scripts/cluster/*.csv
