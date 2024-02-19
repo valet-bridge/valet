@@ -106,6 +106,45 @@ sub check_non_uniques
 }
 
 
+sub make_pairs_histo
+{
+  my ($self, $name_pair_ref, $players, 
+    $tourn_pairs_ref, $active_ref, $errstr) = @_; 
+
+  # Only one player of a pair may be given.
+  # But if both should be missing, we return 0.
+  my $minus_ones = 0; 
+
+  $$active_ref = 0;
+
+  for my $ebl (@$name_pair_ref)
+  {
+    if ($ebl == -1)
+    {
+      $minus_ones++;
+      next;
+    }
+
+    $$active_ref++;
+    if (defined $self->{_players}{$ebl})
+    {
+      for my $tourn_pair_no (@{$self->{_players}{$ebl}})
+      {
+        $tourn_pairs_ref->{$tourn_pair_no}++;
+      }
+    }
+    else
+    {
+      print "$errstr: Player ", $players->id_to_name($ebl),
+        " (EBL $ebl) missing from tournament\n\n";
+      next;
+    }
+  }
+
+  return ($minus_ones < 2);
+}
+
+
 sub check_against_name_data
 {
   my ($self, $name_data_ref, $players, $errstr) = @_;
@@ -113,35 +152,11 @@ sub check_against_name_data
   for my $name_pair_no (0 .. $#{$name_data_ref->{pairs}})
   {
     my $active = 0;
-    my $minus_ones = 0; # Only one player of a pair may be given
     my %tourn_pairs;
 
-    for my $ebl (@{$name_data_ref->{pairs}[$name_pair_no]})
-    {
-      if ($ebl == -1)
-      {
-        $minus_ones++;
-        next;
-      }
-
-      $active++;
-      if (defined $self->{_players}{$ebl})
-      {
-        for my $tourn_pair_no (@{$self->{_players}{$ebl}})
-        {
-          $tourn_pairs{$tourn_pair_no}++;
-        }
-      }
-      else
-      {
-        print "$errstr, pair number $name_pair_no:\n";
-        print "Player ", $players->id_to_name($ebl),
-          " (EBL $ebl) missing from tournament\n\n";
-        next;
-      }
-    }
-
-    if ($minus_ones >= 2)
+    if (! $self->make_pairs_histo(
+      \@{$name_data_ref->{pairs}[$name_pair_no]},
+      $players, \%tourn_pairs, \$active, $errstr))
     {
       print "$errstr, pair number $name_pair_no:\n";
       print "Both players missing\n\n";
@@ -160,16 +175,11 @@ sub check_against_name_data
     }
 
     next if $num == 1;
-    if ($num == 0)
-    {
-      print "$errstr, pair number $name_pair_no:\n";
-      print "No pair covers all player data\n";
-    }
-    else
-    {
-      print "$errstr, pair number $name_pair_no:\n";
-      print "$num pairs cover all player data\n";
-    }
+
+    print "$errstr, pair number $name_pair_no:\n";
+    print $num == 0 ?
+      "No pair covers all player data\n" :
+      "$num pairs cover all player data\n";
 
     print $self->str_ebl_pair(
       $name_data_ref->{pairs}[$name_pair_no],
