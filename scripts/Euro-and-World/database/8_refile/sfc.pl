@@ -184,7 +184,7 @@ sub check_from_names
     }
     else
     {
-if ($tno == 11)
+if ($tno == 21)
 {
   # print "HERE\n";
 }

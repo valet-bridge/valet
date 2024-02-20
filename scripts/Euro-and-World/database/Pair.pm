@@ -139,13 +139,26 @@ sub analyze_gender
 
   $self->{possible_gender} = GENDER_OPEN;
 
-  if ($gender_histo{M} == 0)
+  my $sumMF = $gender_histo{M} + $gender_histo{F};
+
+  if ($sumMF == 2)
   {
-    $self->{possible_gender} |= GENDER_WOMEN;
+    if ($gender_histo{M} == 0)
+    {
+      $self->{possible_gender} |= GENDER_WOMEN;
+    }
+    elsif ($gender_histo{M} == 1 && $gender_histo{F} == 1)
+    {
+      $self->{possible_gender} |= GENDER_MIXED;
+    }
   }
-  elsif ($gender_histo{M} == 1 && $gender_histo{F} == 1)
+  elsif ($sumMF == 1 && $gender_histo{'?'} == 0)
   {
     $self->{possible_gender} |= GENDER_MIXED;
+    if ($gender_histo{F} == 1)
+    {
+      $self->{possible_gender} |= GENDER_WOMEN;
+    }
   }
 
   if ($gender_histo{'?'} > 0)

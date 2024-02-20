@@ -10,12 +10,24 @@ use v5.10;
 my %RESTRICTIONS = (
   "Girls series" => 
     { age => "U26", gender => "Women", stage => "General" },
+
   "Juniors series" => 
     { age =>, "U26", gender => "Open", stage => "General" },
+  "Juniors series Semifinal A" => 
+    { age =>, "U26", gender => "Open", stage => "Semifinal A" },
+  "Juniors series Semifinal B" => 
+    { age =>, "U26", gender => "Open", stage => "Semifinal B" },
+  "Juniors series Qualification A" => 
+    { age =>, "U26", gender => "Open", stage => "Qualifying A" },
+  "Juniors series Qualification B" => 
+    { age =>, "U26", gender => "Open", stage => "Qualifying B" },
+  "Juniors series Consolation" => 
+    { age =>, "U26", gender => "Open", stage => "Consolation" },
   "Juniors Swiss series" => 
     { age =>, "U26", gender => "Open", stage => "General" },
   "Juniors B-A-M series" => 
     { age =>, "U26", gender => "Open", stage => "General" },
+
   "U28 series" => 
     { age =>, "U28", gender => "Open", stage => "General" },
   "Youngsters series" => 
@@ -25,11 +37,35 @@ my %RESTRICTIONS = (
 
   "Kids series" => 
     { age => "U16", gender => "Open", stage => "General" },
+  "Kids series Qualifier" => 
+    { age => "U16", gender => "Open", stage => "Qualifying" },
 
   "All series" => 
     { age => "Open", gender => "Open", stage => "General" },
+
   "Open series" => 
     { age => "Open", gender => "Open", stage => "General" },
+  "Open series Final B" => 
+    { age => "Open", gender => "Open", stage => "Final B" },
+  "Open series Final C" => 
+    { age => "Open", gender => "Open", stage => "Final C" },
+  "Open series Semifinal" => 
+    { age => "Open", gender => "Open", stage => "Semifinal" },
+  "Open series Semifinal A" => 
+    { age => "Open", gender => "Open", stage => "Semifinal A" },
+  "Open series Semifinal B" => 
+    { age => "Open", gender => "Open", stage => "Semifinal B" },
+  "Open series Qualifying" => 
+    { age => "Open", gender => "Open", stage => "Qualifying" },
+  "Open series Consolation" => 
+    { age => "Open", gender => "Open", stage => "Consolation" },
+  "Open series Consolation A" => 
+    { age => "Open", gender => "Open", stage => "Consolation A" },
+  "Open series Consolation B" => 
+    { age => "Open", gender => "Open", stage => "Consolation B" },
+  "Open series Qualifier" => 
+    { age => "Open", gender => "Open", stage => "Qualifying" },
+
   "Transnational Open series" => 
     { age => "Open", gender => "Open", stage => "General" },
   "Bermuda Bowl series" => 
@@ -53,6 +89,18 @@ my %RESTRICTIONS = (
     { age => "Seniors", gender => "Open", stage => "General" },
   "Seniors series" => 
     { age => "Seniors", gender => "Open", stage => "General" },
+  "Seniors series Semifinal" => 
+    { age => "Seniors", gender => "Open", stage => "Semifinal" },
+  "Seniors series Semifinal A" => 
+    { age => "Seniors", gender => "Open", stage => "Semifinal A" },
+  "Seniors series Semifinal B" => 
+    { age => "Seniors", gender => "Open", stage => "Semifinal B" },
+  "Seniors series Qualifier" => 
+    { age => "Seniors", gender => "Open", stage => "Qualifying" },
+  "Seniors series Qualifying" => 
+    { age => "Seniors", gender => "Open", stage => "Qualifying" },
+  "Seniors series Consolation" => 
+    { age => "Seniors", gender => "Open", stage => "Consolation" },
   "d'Orsi Bowl series" => 
     { age => "Seniors", gender => "Open", stage => "General" },
 
@@ -64,11 +112,35 @@ my %RESTRICTIONS = (
     { age => "Open", gender => "Women", stage => "General" },
   "Women series" => 
     { age => "Open", gender => "Women", stage => "General" },
+  "Women series Semifinal" => 
+    { age => "Open", gender => "Women", stage => "Semifinal" },
+  "Women series Semifinal A" => 
+    { age => "Open", gender => "Women", stage => "Semifinal A" },
+  "Women series Semifinal B" => 
+    { age => "Open", gender => "Women", stage => "Semifinal B" },
+  "Women series Qualifier" => 
+    { age => "Open", gender => "Women", stage => "Qualifying" },
+  "Women series Qualifying" => 
+    { age => "Open", gender => "Women", stage => "Qualifying" },
+  "Women series Consolation" => 
+    { age => "Open", gender => "Women", stage => "Consolation" },
+  "Women series Consolation B" => 
+    { age => "Open", gender => "Women", stage => "Consolation B" },
 
   "Wuhan Cup series" => 
     { age => "Open", gender => "Mixed", stage => "General" },
   "Mixed series" => 
     { age => "Open", gender => "Mixed", stage => "General" },
+  "Mixed series Final A" => 
+    { age => "Open", gender => "Mixed", stage => "Final A" },
+  "Mixed series Final B" => 
+    { age => "Open", gender => "Mixed", stage => "Final B" },
+  "Mixed series Final C" => 
+    { age => "Open", gender => "Mixed", stage => "Final C" },
+  "Mixed series Semifinal A" => 
+    { age => "Open", gender => "Mixed", stage => "Semifinal A" },
+  "Mixed series Semifinal B" => 
+    { age => "Open", gender => "Mixed", stage => "Semifinal B" },
   "Mixed series Qualifying" => 
     { age => "Open", gender => "Mixed", stage => "Qualifying" },
   "Mixed series Consolation" => 
@@ -180,20 +252,23 @@ sub stage
 {
   my ($self, $tourn_stage, $unit_restriction, $errstr) = @_;
 
+  my $specific_stage;
+  if (defined $RESTRICTIONS{$unit_restriction})
+  {
+    $specific_stage = $RESTRICTIONS{$unit_restriction}{stage};
+  }
+  else
+  {
+    $specific_stage = $unit_restriction;
+  }
+
   if (! defined $tourn_stage || $tourn_stage eq 'Multiple')
   {
-    if (defined $unit_restriction)
-    {
-      return $unit_restriction;
-    }
-    else
-    {
-      return 'General';
-    }
+    return $specific_stage;
   }
-  elsif (defined $unit_restriction)
+  elsif ($specific_stage ne $tourn_stage)
   {
-    die "$errstr: Unit stage $unit_restriction vs $tourn_stage";
+    die "$errstr: Unit stage $specific_stage vs $tourn_stage";
   }
   else
   {
