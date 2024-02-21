@@ -196,6 +196,14 @@ if ($tno == 21)
         $comb_ref->[$tno]->check_against_name_data(
           \%{$from_names_ref->[$tno]}, $players, "Tournament $tno");
       }
+      else
+      {
+        $comb_ref->[$tno]->check_non_uniques(
+          $players, "Tournament $tno");
+
+        $comb_ref->[$tno]->check_against_name_data(
+          \%{$from_names_ref->[$tno]}, $players, "Tournament $tno");
+      }
 
       # Build player map
       my @from_comb;

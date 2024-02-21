@@ -52,7 +52,7 @@ sub add_from_chunk
     $tourn_header, $chunk_ref->{RESTRICTION}, $errstr);
     
   push @{$self->{$pair_restriction}}, Pair->new();
-  my $pair_no = $#{$self->{$pair_restriction}}, Pair->new();
+  my $pair_no = $#{$self->{$pair_restriction}};
 
   for my $key (keys %$chunk_ref)
   {

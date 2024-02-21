@@ -521,6 +521,21 @@ sub is_pairs
 }
 
 
+sub is_individual
+{
+  my ($self) = @_;
+
+  if (defined $self->{FORM})
+  {
+    return ($self->{FORM} =~ /Individual/ ? 1 : 0);
+  }
+  else
+  {
+    die "No form";
+  }
+}
+
+
 sub restriction_compatible
 {
   my ($self, $unit_restriction) = @_;
