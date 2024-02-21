@@ -29,6 +29,8 @@ my (@name_players, @name_tournaments);
 read_names_into_players($names_file, \@tournament_headers,
   $players, \@name_tournaments);
 
+# $players->check_names();
+
 my @combined;
 read_combined($comb_file, $players, \@tournament_headers, \@combined);
 

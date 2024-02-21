@@ -281,6 +281,25 @@ sub gender
 }
 
 
+sub check_names
+{
+  my ($self, $errstr) = @_;
+  my %names;
+  for my $field (qw(NAME_PREFERRED NAME NAME_DEPRECATED))
+  {
+    for my $entry (@{$self->{$field}})
+    {
+      my $n = Util::reverse_name($entry);
+      if (defined $names{$n})
+      {
+        warn "$errstr: Duplication involving $n";
+      }
+      $names{$n} = 1;
+    }
+  }
+}
+
+
 sub str
 {
   my ($self) = @_;

@@ -98,4 +98,16 @@ sub player_has_country
 }
 
 
+sub check_names
+{
+  my ($self) = @_;
+
+  for my $id (0 .. $#{$self->{players}})
+  {
+    next unless defined $self->{players}[$id];
+    $self->{players}[$id]->check_names($id);
+  }
+}
+
+
 1;
