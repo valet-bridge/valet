@@ -98,8 +98,13 @@ sub get_team_restriction
   my $team_age_restriction = $tourn_header->restrict_age(
     $unit_restriction, $errstr);
 
-  my $team_restriction = $team_gender_restriction . '-' .
-    $team_age_restriction;
+  my $team_stage_restriction = $tourn_header->restrict_stage(
+    $unit_restriction, $errstr);
+
+  my $team_restriction = 
+    $team_gender_restriction . '-' .
+    $team_age_restriction . '-' .
+    $team_stage_restriction;
   
   return $team_restriction;
 }
@@ -132,7 +137,7 @@ sub add_from_chunk
     $players_ref, "$errstr, $team_name");
 
   $self->{$team_restriction}{$team_name}->fill_player_map(
-    \%{$self->{_players}}, $team_name);
+    \%{$self->{_players}}, $team_name, $team_restriction);
   
   $self->{$team_restriction}{$team_name}->analyze_gender(
     $players_ref, $errstr);
@@ -167,55 +172,124 @@ sub add_from_chunk
 }
 
 
+sub check_non_uniques
+{
+  my ($self, $players, $errstr) = @_;
+
+  my $str = '';
+  for my $ebl (sort keys %{$self->{_players}})
+  {
+    for my $restriction (keys %{$self->{_players}{$ebl}})
+    {
+      my $num = $#{$self->{_players}{$ebl}{$restriction}};
+      if ($num >= 1)
+      {
+        $str .= $ebl . ", " . $players->id_to_name($ebl) .
+          " (" . ($num+1) . " occurrences in $restriction)\n";
+      }
+    }
+  }
+
+  if ($str ne '')
+  {
+    print "$errstr:\n$str\n";
+  }
+}
+
+
+sub make_teams_histo
+{
+  my ($self, $name_team_ref, $players,
+    $tourn_teams_ref, $active_ref, $errstr) = @_;
+
+  my $minus_ones = 0;
+
+  $$active_ref = 0;
+
+  for my $ebl (@$name_team_ref)
+  {
+    if ($ebl == -1)
+    {
+      $minus_ones++;
+      next;
+    }
+    $$active_ref++;
+
+    my $hit = 0;
+    for my $restriction (keys %{$self->{_players}{$ebl}})
+    {
+      $hit++;
+      for my $tourn_team_no (@{$self->{_players}{$ebl}{$restriction}})
+      {
+        $tourn_teams_ref->{$restriction}{$tourn_team_no}++;
+      }
+    }
+
+    if (! $hit)
+    {
+      print "$errstr: Player ", $players->id_to_name($ebl),
+        " (EBL $ebl) missing from teams tournament\n\n";
+    }
+  }
+
+  return ($minus_ones == 0);
+}
+
+
 sub check_against_name_data
 {
-  my ($self, $name_data_ref, $errstr) = @_;
+  my ($self, $name_data_ref, $players, $errstr) = @_;
 
   for my $team_name (sort keys %$name_data_ref)
   {
     my $active = 0;
     my %tourn_teams;
 
-    for my $ebl (@{$name_data_ref->{$team_name}})
+    if (! $self->make_teams_histo(
+      \@{$name_data_ref->{$team_name}},
+      $players, \%tourn_teams, \$active, $errstr))
     {
-      $active++;
-      if (defined $self->{_players}{$ebl})
+      print "$errstr, $team_name: At least one team player is -1";
+      next;
+    }
+
+    my %num_by_restriction;
+    my $highest = 0;
+
+    for my $restriction (keys %tourn_teams)
+    {
+      for my $tourn_team_name (sort keys %{$tourn_teams{$restriction}})
       {
-        for my $team_name (@{$self->{_players}{$ebl}})
+        if ($tourn_teams{$restriction}{$tourn_team_name} == $active)
         {
-          $tourn_teams{$team_name}++;
+          $num_by_restriction{$restriction}++;
+          if ($num_by_restriction{$restriction} > $highest)
+          {
+            $highest = $num_by_restriction{$restriction};
+          }
         }
       }
-      else
+    }
+
+    next if $highest == 1;
+
+    print "$errstr, $team_name:\n";
+    print $highest == 0 ?
+      "No team covers all player data in any restriction\n" :
+      "$highest teams cover all player data in some restriction\n";
+
+    print $self->str_ebl_team($name_data_ref->{$team_name}, $players);
+
+    if ($highest > 1)
+    {
+      for my $restriction (keys %num_by_restriction)
       {
-        print "$errstr, $team_name: ",
-          "Player ID $ebl missing from tournament\n";
-        next;
+        if ($num_by_restriction{$restriction} > 1)
+        {
+          print "$restriction: ", $num_by_restriction{$restriction},
+            " times\n";
+        }
       }
-    }
-
-    my $num = 0;
-    my $tourn_hit;
-    for my $tourn_team_name (sort keys %tourn_teams)
-    {
-      if ($tourn_teams{$tourn_team_name} == $active &&
-          $self->team_name_compatible($team_name, $tourn_team_name))
-      {
-        $num++;
-        $tourn_hit = $tourn_team_name;
-      }
-    }
-
-    if ($num == 0)
-    {
-      print "$errstr, $team_name: No valid team covers all player data\n";
-      next;
-    }
-
-    if ($num > 1)
-    {
-      print "$errstr, $team_name: $num teams cover all player data\n";
-      next;
     }
   }
 }
@@ -234,6 +308,25 @@ sub team_name_compatible
   }
 
   return 0;
+}
+
+sub str_ebl_team
+{
+  my ($self, $ebl_list_ref, $players) = @_;
+
+  my $str = '';
+  for my $ebl (@$ebl_list_ref)
+  {
+    if ($ebl == -1)
+    {
+      $str .= "  (missing)\n";
+    }
+    else
+    {
+      $str .= "  $ebl, " . $players->id_to_name($ebl) . "\n";
+    }
+  }
+  $str .= "\n";
 }
 
 

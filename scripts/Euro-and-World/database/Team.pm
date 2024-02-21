@@ -155,14 +155,14 @@ sub make_gender_histogram
 
 sub fill_player_map
 {
-  my ($self, $player_map_ref, $team_name) = @_;
+  my ($self, $player_map_ref, $team_name, $restriction) = @_;
 
   for my $pentry (@{$self->{players}})
   {
     # There can be multiple teams for one player if the event
     # combined several series into one web page.
     next unless defined $pentry;
-    push @{$player_map_ref->{$pentry->{id}}}, $team_name;
+    push @{$player_map_ref->{$pentry->{id}}{$restriction}}, $team_name;
   }
 }
 
@@ -198,7 +198,7 @@ sub check_gender
 
   # Bit of a kludge to put both restrictions into a string
   my @a = split '-', $team_restriction;
-  die "$team_restriction not recognized" unless $#a == 1;
+  die "$team_restriction not recognized" unless $#a == 2;
   my $gender_restriction = $a[0];
 
   if ($gender_restriction eq 'Open')

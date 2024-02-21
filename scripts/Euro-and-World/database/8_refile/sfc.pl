@@ -5,14 +5,10 @@ use warnings;
 use v5.10;
 
 use lib '..';
+use Read;
 use Players;
 use Country;
 use Restriction;
-
-use lib '../7_women';
-use Read;
-
-use TeamT;
 
 # Check single-factor consistencies of fields.
 
@@ -33,12 +29,10 @@ my (@name_players, @name_tournaments);
 read_names_into_players($names_file, \@tournament_headers,
   $players, \@name_tournaments);
 
-my @combined_structured;
-read_combined_in_chunks($comb_file, $players, 
-  \@tournament_headers, \@combined_structured);
+my @combined;
+read_combined($comb_file, $players, \@tournament_headers, \@combined);
 
-check_from_names(\@tournament_headers,
-  \@name_tournaments, \@combined_structured);
+check_from_names(\@tournament_headers, \@name_tournaments, \@combined);
 exit;
 
 # my $select = 10009;
@@ -66,33 +60,10 @@ sub check_from_names
       next;
     }
 
-    my $team_flag = $tourn_headers_ref->[$tno]->is_teams();
-    my $pair_flag = $tourn_headers_ref->[$tno]->is_pairs();
+    $comb_ref->[$tno]->check_non_uniques($players, "Tournament $tno");
 
-    if ($team_flag)
-    {
-      # TODO check_non_uniques for teams
-      # TODO Then don't have to check flags
-
-      $comb_ref->[$tno]->check_against_name_data(
-        \%{$from_names_ref->[$tno]}, "Tournament $tno");
-    }
-    elsif ($pair_flag)
-    {
-      $comb_ref->[$tno]->check_non_uniques(
-        $players, "Tournament $tno");
-
-      $comb_ref->[$tno]->check_against_name_data(
-        \%{$from_names_ref->[$tno]}, $players, "Tournament $tno");
-    }
-    else
-    {
-      $comb_ref->[$tno]->check_non_uniques(
-        $players, "Tournament $tno");
-
-      $comb_ref->[$tno]->check_against_name_data(
-        \%{$from_names_ref->[$tno]}, $players, "Tournament $tno");
-    }
+    $comb_ref->[$tno]->check_against_name_data(
+      \%{$from_names_ref->[$tno]}, $players, "Tournament $tno");
   }
 }
 
