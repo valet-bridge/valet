@@ -67,23 +67,23 @@ my %RESTRICTIONS = (
     { age => "Open", gender => "Open", stage => "Qualifying" },
 
   "Transnational Open series" => 
-    { age => "Open", gender => "Open", stage => "General" },
+    { age => "Open", gender => "Open", stage => "BB" },
   "Bermuda Bowl series" => 
-    { age => "Open", gender => "Open", stage => "General" },
+    { age => "Open", gender => "Open", stage => "BB" },
   "Rosenblum Cup series" => 
-    { age => "Open", gender => "Open", stage => "General" },
+    { age => "Open", gender => "Open", stage => "Rosenblum" },
   "Rosenblum series" => 
-    { age => "Open", gender => "Open", stage => "General" },
+    { age => "Open", gender => "Open", stage => "Rosenblum" },
   "Rand Cup series" => 
-    { age => "Open", gender => "Open", stage => "General" },
+    { age => "Open", gender => "Open", stage => "Rand" },
   "Transnational Teams series" => 
-    { age => "Open", gender => "Open", stage => "General" },
+    { age => "Open", gender => "Open", stage => "TNT" },
   "Open Olympiad series" => 
     { age => "Open", gender => "Open", stage => "General" },
   "Olympiad series" => 
     { age => "Open", gender => "Open", stage => "General" },
   "Transnational Teams (BB) series" => 
-    { age =>"Open", gender => "Open", stage => "General" },
+    { age =>"Open", gender => "Open", stage => "TNT" },
 
   "Senior Bowl series" => 
     { age => "Seniors", gender => "Open", stage => "General" },
@@ -105,11 +105,11 @@ my %RESTRICTIONS = (
     { age => "Seniors", gender => "Open", stage => "General" },
 
   "Venice Cup series"  => 
-    { age => "Open", gender => "Women", stage => "General" },
+    { age => "Open", gender => "Women", stage => "VC" },
   "McConnell Cup series"  => 
-    { age => "Open", gender => "Women", stage => "General" },
+    { age => "Open", gender => "Women", stage => "McConnell" },
   "McConnell series"  => 
-    { age => "Open", gender => "Women", stage => "General" },
+    { age => "Open", gender => "Women", stage => "McConnell" },
   "Women series" => 
     { age => "Open", gender => "Women", stage => "General" },
   "Women series Semifinal" => 
@@ -128,7 +128,7 @@ my %RESTRICTIONS = (
     { age => "Open", gender => "Women", stage => "Consolation B" },
 
   "Wuhan Cup series" => 
-    { age => "Open", gender => "Mixed", stage => "General" },
+    { age => "Open", gender => "Mixed", stage => "WC" },
   "Mixed series" => 
     { age => "Open", gender => "Mixed", stage => "General" },
   "Mixed series Final A" => 
@@ -148,9 +148,9 @@ my %RESTRICTIONS = (
   "Mixed Teams series" => 
     { age => "Open", gender => "Mixed", stage => "General" },
   "Transnational Mixed series" => 
-    { age => "Open", gender => "Mixed", stage => "General" },
+    { age => "Open", gender => "Mixed", stage => "TNT" },
   "Transnational Mixed Teams series" => 
-    { age => "Open", gender => "Mixed", stage => "General" }
+    { age => "Open", gender => "Mixed", stage => "TNT" }
 );
 
 

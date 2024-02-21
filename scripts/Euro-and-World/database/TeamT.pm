@@ -120,7 +120,7 @@ sub add_from_chunk
   my $team_restriction = $self->get_team_restriction(
     $tourn_header, $chunk_ref->{RESTRICTION}, $errstr);
     
-  die "Name already seen" 
+  die "Name $team_name already seen for restriction $team_restriction" 
     if defined $self->{$team_restriction}{$team_name};
 
   $self->{$team_restriction}{$team_name} = Team->new();
