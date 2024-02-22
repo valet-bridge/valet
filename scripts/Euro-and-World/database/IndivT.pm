@@ -172,4 +172,22 @@ sub str_ebl_indiv
 }
 
 
+sub str_gender_stats_new
+{
+  my ($self, $players) = @_;
+
+  my %counts;
+  for my $restriction (keys %$self)
+  {
+    next if $restriction eq '_players';
+    for my $pair (@{$self->{$restriction}})
+    {
+      $pair->update_gender_count(\%{$counts{$restriction}});
+    }
+  }
+
+  return Util::count_to_tourn_stats(\%counts);
+}
+
+
 1;

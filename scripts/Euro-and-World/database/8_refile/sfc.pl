@@ -66,6 +66,15 @@ sub check_from_names
 
     $comb_ref->[$tno]->check_against_name_data(
       \%{$from_names_ref->[$tno]}, $players, "Tournament $tno");
+    
+    if ($tourn_headers_ref->[$tno]->is_teams())
+    {
+      my $str = $comb_ref->[$tno]->str_gender_stats_new();
+      if ($str ne '')
+      {
+        print "Teams tournament $tno:\n$str\n";
+      }
+    }
   }
 }
 

@@ -82,6 +82,8 @@ my %RESTRICTIONS = (
     { age => "Open", gender => "Open", stage => "General" },
   "Olympiad series" => 
     { age => "Open", gender => "Open", stage => "General" },
+  "Women Olympiad series" => 
+    { age => "Open", gender => "Women", stage => "General" },
   "Transnational Teams (BB) series" => 
     { age =>"Open", gender => "Open", stage => "TNT" },
 
@@ -187,11 +189,11 @@ sub gender
     $specific_gender = $unit_restriction;
   }
 
-  if ($tourn_gender eq 'Women')
+  if ($tourn_gender eq 'Women' || $tourn_gender eq 'Mixed')
   {
-    if ($specific_gender eq 'Women' || $specific_gender eq 'None')
+    if ($specific_gender eq $tourn_gender || $specific_gender eq 'None')
     {
-      return 'Women';
+      return $tourn_gender;
     }
     else
     {

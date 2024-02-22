@@ -232,4 +232,59 @@ sub str_ebl_pair
 }
 
 
+sub str_gender_stats
+{
+  my ($self, $players) = @_;
+
+  my $str = '';
+  my (%keys, %counts);
+
+  for my $restriction (keys %$self)
+  {
+    next if $restriction eq '_players';
+    for my $pair (@{$self->{$restriction}})
+    {
+      my $gstr = $pair->str_gender();
+      $counts{$restriction}{$gstr}++;
+      $keys{$gstr}++;
+    }
+  }
+
+  $str .= sprintf("%-24s", "");
+  for my $g (sort keys %keys)
+  {
+    $str .= sprintf("%5s", $g);
+  }
+  $str .= "\n";
+
+  for my $restriction (sort keys %counts)
+  {
+    $str .= sprintf("%-24s", $restriction);
+    for my $g (sort keys %keys)
+    {
+      $str .= sprintf("%5d", $counts{$restriction}{$g} || 0);
+    }
+    $str .= "\n";
+  }
+  return $str;
+}
+
+sub str_gender_stats_new
+{
+  my ($self, $players) = @_;
+
+  my %counts;
+  for my $restriction (keys %$self)
+  {
+    next if $restriction eq '_players';
+    for my $pair (@{$self->{$restriction}})
+    {
+      $pair->update_gender_count(\%{$counts{$restriction}});
+    }
+  }
+
+  return Util::count_to_tourn_stats(\%counts);
+}
+
+
 1;

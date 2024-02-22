@@ -32,17 +32,21 @@ my %FOUR_TWO_MIXED = (
   '594, GELIN' => 1,            '688, RUSSIA' => 1,
   '688, TOPBRIDGE' => 1,        '688, DONGFENG' => 1,
   "688, SHENZHEN WOMEN'S WORLD" => 1, '717, DARKMOON' => 1,
-  '935, KENYA' => 1,            '935, DJARUM2' => 1,
-  '942, GOTTLIEB' => 1,         '942, EIDE' => 1,
-  '1030, SHENZHEN' => 1,        '1030, SHENZHEN NANGANG POWER' => 1,
-  '1030, HEY YO' => 1,          '1030, QINGHAI BRIDGE ASSOCIATION' => 1,
-  '1030, SANSHA SATELLITE TV' => 1, '1256, BOUVERESSE MIXED' => 1,
-  '1256, CERVI MIXED' => 1,     '1256, DERI MIXED' => 1,
-  '1256, FILIPPI MIXED' => 1,   '1256, HEATHER MIXED' => 1,
-  '1256, HENDRICKX MIXED' => 1, '1256, KOWALSKI MIXED' => 1,
-  '1256, MIDSKOPG MIXED' => 1,  '1256, SAUNDERS MIXED' => 1,
-  '1400, CALANDRA' => 1,        '1542, KENYA TT MIXED' => 1,
-  '1542, DJARUM2 TT MIXED' => 1, '1543, FEIXIANG' => 1,
+  '832, PIN AN' => 1,           '935, KENYA' => 1,
+  '935, DJARUM2' => 1,          '942, GOTTLIEB' => 1,
+  '942, EIDE' => 1,             '969, MANO' => 1,
+  '1030, PING AN CHINA' => 1,   '1030, SHENZHEN' => 1,
+  '1030, SHENZHEN NANGANG POWER' => 1, '1030, HEY YO' => 1,
+  '1030, QINGHAI BRIDGE ASSOCIATION' => 1,
+  '1030, SANSHA SATELLITE TV' => 1, 
+  '1256, DERI MIXED' => 1,      '1256, FILIPPI MIXED' => 1,
+  '1256, HEATHER MIXED' => 1,   '1256, HENDRICKX MIXED' => 1,
+  '1256, KOWALSKI MIXED' => 1,  '1256, MIDSKOPG MIXED' => 1,
+  '1256, SAUNDERS MIXED' => 1,  '1400, CALANDRA' => 1,
+  '1256, BOUVERESSE MIXED' => 1, '1256, CERVI MIXED' => 1,
+  '1412, CALANDRA' => 1,        '1412, SEWIL' => 1,
+  '1542, KENYA TT MIXED' => 1,  '1542, DJARUM2 TT MIXED' => 1,
+  '1543, FEIXIANG' => 1,        '1600, BOSPHORUS' => 1,
   '1643, CHINESE TAIPEI' => 1,  '1643, CHINA' => 1
 );
 
@@ -66,8 +70,11 @@ my %THREE_ONE_MIXED = (
   '1030, NORCO' => 1,           '1030, ZHEJIANG JINJIANG BRIDGE CLUB' => 1,
   '1030, BRIDGE ASSOCIATION OF FUJIAN P' => 1,
   '1030, BEIJING CENTURY WEIDA' => 1,
-  '1030, WUHAN' => 1,           '1256, FAIVRE MIXED' => 1,
-  '1400, BREMNES' => 1
+  '1030, WUHAN' => 1,           '1101, LEGEANKA' => 1,
+  '1101, I SISTE ELITEN' => 1,  '1256, FAIVRE MIXED' => 1,
+  '1256, BOUVERESSE MIXED' => 1, '1256, CERVI MIXED' => 1,
+  '1400, BREMNES' => 1,         '1412, DYRKORN' => 1,
+  '1412, LOLA' => 1
 );
 
 # Not enough knowledge to delete these odd mixed teams completely.
@@ -327,6 +334,25 @@ sub str_ebl_team
     }
   }
   $str .= "\n";
+}
+
+
+sub str_gender_stats_new
+{
+  my ($self, $players) = @_;
+
+  my %counts;
+  for my $restriction (keys %$self)
+  {
+    next if $restriction eq '_players';
+    for my $team_name (keys %{$self->{$restriction}})
+    {
+      $self->{$restriction}{$team_name}->
+        update_gender_count(\%{$counts{$restriction}});
+    }
+  }
+
+  return Util::count_to_tourn_stats(\%counts);
 }
 
 

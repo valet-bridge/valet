@@ -227,6 +227,17 @@ sub str
 }
 
 
+sub update_gender_count
+{
+  my ($self, $count_ref) = @_;
+  $count_ref->{'S'}++;
+  $count_ref->{'O'}++ if $self->{possible_gender} & GENDER_OPEN;
+  $count_ref->{'W'}++ if $self->{possible_gender} & GENDER_WOMEN;
+  $count_ref->{'M'}++ if $self->{possible_gender} & GENDER_MIXED;
+  $count_ref->{'?'}++ if $self->{possible_gender} & GENDER_UNKNOWN;
+}
+
+
 sub str_gender
 {
   my ($self) = @_;
