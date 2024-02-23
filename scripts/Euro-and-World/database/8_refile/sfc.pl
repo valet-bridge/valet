@@ -62,19 +62,23 @@ sub check_from_names
       next;
     }
 
-    $comb_ref->[$tno]->check_non_uniques($players, "Tournament $tno");
+    my $form = $tourn_headers_ref->[$tno]->form();
+
+    $comb_ref->[$tno]->check_non_uniques($players, 
+      "$form tournament $tno");
 
     $comb_ref->[$tno]->check_against_name_data(
-      \%{$from_names_ref->[$tno]}, $players, "Tournament $tno");
+      \%{$from_names_ref->[$tno]}, $players, 
+      "$form tournament $tno");
     
-    if ($tourn_headers_ref->[$tno]->is_teams())
-    {
-      my $str = $comb_ref->[$tno]->str_gender_stats_new();
-      if ($str ne '')
-      {
-        print "Teams tournament $tno:\n$str\n";
-      }
-    }
+    # if ($form eq 'Individual')
+    # {
+      # my $str = $comb_ref->[$tno]->str_gender_stats_new();
+      # if ($str ne '')
+      # {
+        # print "Individual tournament $tno:\n$str\n";
+      # }
+    # }
   }
 }
 

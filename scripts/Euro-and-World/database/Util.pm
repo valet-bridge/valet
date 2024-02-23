@@ -8,7 +8,13 @@ use Exporter;
 use v5.10;
 
 our @ISA = qw(Exporter);
-our @EXPORT_OK = qw(reverse_name count_to_tourn_stats);
+our @EXPORT_OK = qw(
+  reverse_name 
+  count_to_tourn_stats
+  get_unit_restriction
+  check_non_uniques
+  histo_to_collisions
+  str_collisions);
 
 sub reverse_name
 {
@@ -112,6 +118,96 @@ sub count_to_tourn_stats
   else
   {
     return $hdr . $str;
+  }
+}
+
+
+sub get_unit_restriction
+{
+  my ($tourn_header, $chunk_restriction, $errstr) = @_;
+
+  # Used by TeamT, PairT and IndivT to merge the overall tournament
+  # restriction with any unit-level restriction (team, pair, individual).
+
+  my $unit_restriction = (defined $chunk_restriction ?
+    $chunk_restriction : 'None');
+
+  my $unit_gender_restriction = $tourn_header->restrict_gender(
+    $unit_restriction, $errstr);
+
+  my $unit_age_restriction = $tourn_header->restrict_age(
+    $unit_restriction, $errstr);
+
+  my $unit_stage_restriction = $tourn_header->restrict_stage(
+    $unit_restriction, $errstr);
+
+  return
+    $unit_gender_restriction . '-' .
+    $unit_age_restriction . '-' .
+    $unit_stage_restriction;
+}
+
+
+sub check_non_uniques
+{
+  my ($unit_hash_ref, $players, $errstr) = @_;
+
+  # Used by the tournament types to check for duplicated players.
+
+  my $str = '';
+  for my $ebl (sort keys %$unit_hash_ref)
+  {
+    for my $restriction (keys %{$unit_hash_ref->{$ebl}})
+    {
+      my $num = $#{$unit_hash_ref->{$ebl}{$restriction}};
+      if ($num >= 1)
+      {
+        $str .= $ebl . ", " . $players->id_to_name($ebl) .
+          " (" . ($num+1) . " occurrences in $restriction)\n";
+      }
+    }
+  }
+
+  if ($str ne '')
+  {
+    print "$errstr:\n$str\n";
+  }
+}
+
+
+sub histo_to_collisions
+{
+  my ($histo_ref, $active, $hits_ref, $highest_ref) = @_;
+
+  # Used by TeamT and PairT.
+
+  for my $restriction (keys %$histo_ref)
+  {
+    for my $unit_id (sort keys %{$histo_ref->{$restriction}})
+    {
+      if ($histo_ref->{$restriction}{$unit_id} == $active)
+      {
+        $hits_ref->{$restriction}++;
+        if ($hits_ref->{$restriction} > $$highest_ref)
+        {
+          $$highest_ref = $hits_ref->{$restriction};
+        }
+      }
+    }
+  }
+}
+
+
+sub str_collisions
+{
+  my ($histo_ref) = @_;
+
+  for my $restriction (keys %$histo_ref)
+  {
+    if ($histo_ref->{$restriction} > 1)
+    {
+      print "$restriction: ", $histo_ref->{$restriction}, " times\n";
+    }
   }
 }
 

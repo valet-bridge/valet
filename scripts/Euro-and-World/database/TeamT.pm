@@ -92,31 +92,6 @@ sub new
 }
 
 
-sub get_team_restriction
-{
-  my ($self, $tourn_header, $chunk_restriction, $errstr) = @_;
-
-  my $unit_restriction = (defined $chunk_restriction ?
-    $chunk_restriction : 'Open');
-
-  my $team_gender_restriction = $tourn_header->restrict_gender(
-    $unit_restriction, $errstr);
-    
-  my $team_age_restriction = $tourn_header->restrict_age(
-    $unit_restriction, $errstr);
-
-  my $team_stage_restriction = $tourn_header->restrict_stage(
-    $unit_restriction, $errstr);
-
-  my $team_restriction = 
-    $team_gender_restriction . '-' .
-    $team_age_restriction . '-' .
-    $team_stage_restriction;
-  
-  return $team_restriction;
-}
-
-
 sub add_from_chunk
 {
   my ($self, $tourn_header, $chunk_ref, $players_ref, $errstr) = @_;
@@ -124,7 +99,7 @@ sub add_from_chunk
   die "Team has no name" unless defined $chunk_ref->{NAME};
   my $team_name = $chunk_ref->{NAME};
 
-  my $team_restriction = $self->get_team_restriction(
+  my $team_restriction = Util::get_unit_restriction(
     $tourn_header, $chunk_ref->{RESTRICTION}, $errstr);
     
   die "Name $team_name already seen for restriction $team_restriction" 
@@ -182,25 +157,7 @@ sub add_from_chunk
 sub check_non_uniques
 {
   my ($self, $players, $errstr) = @_;
-
-  my $str = '';
-  for my $ebl (sort keys %{$self->{_players}})
-  {
-    for my $restriction (keys %{$self->{_players}{$ebl}})
-    {
-      my $num = $#{$self->{_players}{$ebl}{$restriction}};
-      if ($num >= 1)
-      {
-        $str .= $ebl . ", " . $players->id_to_name($ebl) .
-          " (" . ($num+1) . " occurrences in $restriction)\n";
-      }
-    }
-  }
-
-  if ($str ne '')
-  {
-    print "$errstr:\n$str\n";
-  }
+  Util::check_non_uniques(\%{$self->{_players}}, $players, $errstr);
 }
 
 
@@ -262,21 +219,8 @@ sub check_against_name_data
 
     my %num_by_restriction;
     my $highest = 0;
-
-    for my $restriction (keys %tourn_teams)
-    {
-      for my $tourn_team_name (sort keys %{$tourn_teams{$restriction}})
-      {
-        if ($tourn_teams{$restriction}{$tourn_team_name} == $active)
-        {
-          $num_by_restriction{$restriction}++;
-          if ($num_by_restriction{$restriction} > $highest)
-          {
-            $highest = $num_by_restriction{$restriction};
-          }
-        }
-      }
-    }
+    Util::histo_to_collisions(\%tourn_teams, $active,
+      \%num_by_restriction, \$highest);
 
     next if $highest == 1;
 
@@ -285,18 +229,11 @@ sub check_against_name_data
       "No team covers all player data in any restriction\n" :
       "$highest teams cover all player data in some restriction\n";
 
-    print $self->str_ebl_team($name_data_ref->{$team_name}, $players);
+    print $players->str_ebl_list(\@{$name_data_ref->{$team_name}});
 
     if ($highest > 1)
     {
-      for my $restriction (keys %num_by_restriction)
-      {
-        if ($num_by_restriction{$restriction} > 1)
-        {
-          print "$restriction: ", $num_by_restriction{$restriction},
-            " times\n";
-        }
-      }
+      print Util::str_collisions(\%num_by_restriction);
     }
   }
 }
@@ -315,25 +252,6 @@ sub team_name_compatible
   }
 
   return 0;
-}
-
-sub str_ebl_team
-{
-  my ($self, $ebl_list_ref, $players) = @_;
-
-  my $str = '';
-  for my $ebl (@$ebl_list_ref)
-  {
-    if ($ebl == -1)
-    {
-      $str .= "  (missing)\n";
-    }
-    else
-    {
-      $str .= "  $ebl, " . $players->id_to_name($ebl) . "\n";
-    }
-  }
-  $str .= "\n";
 }
 
 

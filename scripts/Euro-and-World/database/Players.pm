@@ -110,4 +110,25 @@ sub check_names
 }
 
 
+sub str_ebl_list
+{
+  my ($self, $ebl_list_ref) = @_;
+
+  my $str = '';
+  for my $ebl (@$ebl_list_ref)
+  {
+    if ($ebl == -1)
+    {
+      $str .= "  (missing)\n";
+    }
+    else
+    {
+      $str .= "  $ebl, " . $self->id_to_name($ebl) . "\n";
+    }
+  }
+  $str .= "\n";
+  return $str;
+}
+
+
 1;

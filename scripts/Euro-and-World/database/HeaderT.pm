@@ -536,6 +536,18 @@ sub is_individual
 }
 
 
+sub form
+{
+  my ($self) = @_;
+
+  die "No form" unless defined $self->{FORM};
+  return "Teams" if $self->{FORM} =~ /Teams/;
+  return "Pairs" if $self->{FORM} =~ /Pairs/;
+  return "Individual" if $self->{FORM} =~ /Individual/;
+  die "No valid form stored";
+}
+
+
 sub restriction_compatible
 {
   my ($self, $unit_restriction) = @_;
