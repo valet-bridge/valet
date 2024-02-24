@@ -34,8 +34,89 @@ read_names_into_players($names_file, \@tournament_headers,
 my @combined;
 read_combined($comb_file, $players, \@tournament_headers, \@combined);
 
-check_from_names(\@tournament_headers, \@name_tournaments, \@combined);
+my @time_sorted_tournaments;
+time_sort_tournaments(\@tournament_headers, \@time_sorted_tournaments);
+
+my @player_matrix;
+tournament_to_player_matrix(\@combined, \@player_matrix);
+
+# check_from_names(\@tournament_headers, \@name_tournaments, \@combined);
+
+# Just the players
+# print $players->str();
+
+# Player and tournaments
+print $players->str_player_matrix(
+  \@tournament_headers, \@time_sorted_tournaments,
+  \@player_matrix, $players);
+
+# Just the tournament headers
+# print_tournament_headers(\@tournament_headers);
+
+# Headers and tournament content
+# print_tournament_contents(\@tournament_headers, \@combined);
+
 exit;
+
+
+sub print_tournament_headers
+{
+  my ($tournament_headers_ref) = @_;
+  for my $header (@$tournament_headers_ref)
+  {
+    next unless defined $header;
+    print $header->str(), "\n";
+  }
+}
+
+
+sub print_tournament_contents
+{
+  my ($tournament_headers_ref, $combined_ref) = @_;
+  for my $header (@$tournament_headers_ref)
+  {
+    next unless defined $header;
+    print $header->str(), "\n";
+    my $id = $header->id();
+    if (! defined $combined_ref->[$id])
+    {
+      print "UNDEFINED!\n\n";
+    }
+    else
+    {
+      print $combined_ref->[$id]->str($players);
+    }
+  }
+}
+
+
+sub time_sort_tournaments
+{
+  my ($tournament_headers_ref, $time_sorted_ref) = @_;
+  my $tsno = 0;
+  for my $header (@$tournament_headers_ref)
+  {
+    next unless defined $header;
+    $time_sorted_ref->[$tsno]{id} = $header->id();
+    $time_sorted_ref->[$tsno]{time} = $header->time();
+    $tsno++;
+  }
+
+  @$time_sorted_ref = sort { $a->{time} cmp $b->{time} } @$time_sorted_ref;
+}
+
+
+sub tournament_to_player_matrix
+{
+  my ($combined_ref, $player_matrix_ref) = @_;
+
+  for my $tno (0 .. @$combined_ref)
+  {
+    next unless defined $combined_ref->[$tno];
+    $combined_ref->[$tno]->fill_player_matrix($tno, $player_matrix_ref);
+  }
+}
+
 
 # my $select = 10009;
 # print_teams_tournament(\%{$tournaments[$select]}, $select,

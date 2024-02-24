@@ -129,6 +129,22 @@ sub str_ebl_indiv
 }
 
 
+sub fill_player_matrix
+{
+  my ($self, $tno, $player_matrix_ref) = @_;
+
+  for my $restriction (keys %$self)
+  {
+    next if $restriction eq '_players';
+    for my $indiv (@{$self->{$restriction}})
+    {
+      $indiv->fill_player_matrix(
+        $tno, $restriction, '', $player_matrix_ref);
+    }
+  }
+}
+
+
 sub str_gender_stats_new
 {
   my ($self, $players) = @_;
@@ -144,6 +160,22 @@ sub str_gender_stats_new
   }
 
   return Util::count_to_tourn_stats(\%counts);
+}
+
+
+sub str
+{
+  my ($self, $players) = @_;
+  my $str = '';
+  for my $restriction (sort keys %$self)
+  {
+    next if $restriction eq '_players';
+    for my $indiv (@{$self->{$restriction}})
+    {
+      $str .= $indiv->str($players) . "\n";
+    }
+  }
+  return $str;
 }
 
 

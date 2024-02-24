@@ -131,4 +131,61 @@ sub str_ebl_list
 }
 
 
+sub str
+{
+  my ($self) = @_;
+
+  my $str = '';
+
+  for my $id (0 .. $#{$self->{players}})
+  {
+    next unless defined $self->{players}[$id];
+    $str .= $self->{players}[$id]->str() . "\n";
+  }
+  return $str;
+}
+
+
+sub str_player_matrix
+{
+  my ($self, $tournament_headers_ref, $time_sorted_ref,
+    $player_matrix_ref, $players) = @_;
+
+  my $str = '';
+  my @histo;
+
+  for my $id (0 .. $#{$self->{players}})
+  {
+    next unless defined $self->{players}[$id];
+    $str .= $self->{players}[$id]->str();
+
+    my $entries = 0;
+    for my $elem (@$time_sorted_ref)
+    {
+      my $tno = $elem->{id};
+      next unless defined $player_matrix_ref->[$id]{$tno};
+
+      for my $allies (@{$player_matrix_ref->[$id]{$tno}})
+      {
+        $str .= $tournament_headers_ref->[$tno]->str_line() . '|' .
+          $allies->str($players) . "\n";
+        $entries++;
+      }
+    }
+    $str .= "\n";
+    $histo[$entries]++;
+  }
+
+  # for my $entry (0 .. $#histo)
+  # {
+    # if (defined $histo[$entry])
+    # {
+      # $str .= sprintf("%3d %5d\n", $entry, $histo[$entry]);
+    # }
+  # }
+  # $str .= "\n";
+  return $str;
+}
+
+
 1;

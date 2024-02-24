@@ -141,10 +141,12 @@ sub get_unit_restriction
   my $unit_stage_restriction = $tourn_header->restrict_stage(
     $unit_restriction, $errstr);
 
-  return
+  my $concat =
     $unit_gender_restriction . '-' .
     $unit_age_restriction . '-' .
     $unit_stage_restriction;
+
+  return $tourn_header->simplify_restriction($concat);
 }
 
 

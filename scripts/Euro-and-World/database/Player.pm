@@ -304,14 +304,16 @@ sub str
 {
   my ($self) = @_;
 
+  my $str = '';
   for my $field (@ORDER)
   {
     next unless defined $self->{$field};
     for my $value (@{$self->{$field}})
     {
-      print "$field $value\n";
+      $str .= "$field $value\n";
     }
   }
+  return $str;
 }
 
 

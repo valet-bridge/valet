@@ -8,6 +8,7 @@ use Exporter;
 use v5.10;
 
 use Players;
+use Allies;
 use Util;
 
 use constant
@@ -198,7 +199,7 @@ sub check_gender
 
   # Bit of a kludge to put both restrictions into a string
   my @a = split '-', $team_restriction;
-  die "$team_restriction not recognized" unless $#a == 2;
+  die "$team_restriction not recognized" unless $#a <= 2;
   my $gender_restriction = $a[0];
 
   if ($gender_restriction eq 'Open')
@@ -215,7 +216,8 @@ sub check_gender
   }
   else
   {
-    die "$gender_restriction not recognized";
+    # Probably Open.
+    return 1;
   }
 }
 
@@ -232,6 +234,25 @@ sub size
   return $c;
 }
 
+
+sub fill_player_matrix
+{
+  my ($self, $tno, $restriction, $team_name, $player_matrix_ref) = @_;
+
+  my @list;
+  for my $pentry (@{$self->{players}})
+  {
+    next unless defined $pentry;
+    push @list, $pentry->{id};
+  }
+
+  for my $i (0 .. $#list)
+  {
+    my $allies = Allies->new();
+    $allies->set_by_list(\@list, $restriction, $team_name, $i);
+    push @{$player_matrix_ref->[$list[$i]]{$tno}}, $allies;
+  }
+}
 
 
 sub str

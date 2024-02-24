@@ -261,6 +261,13 @@ sub restrict_stage
 }
 
 
+sub simplify_restriction
+{
+  my ($self, $concat) = @_;
+  return $restriction->simplify($concat);
+}
+
+
 sub set_from_buffer
 {
   my ($self, $buffer_ref, $errstr) = @_;
@@ -536,6 +543,21 @@ sub is_individual
 }
 
 
+sub id
+{
+  my ($self) = @_;
+  return $self->{ID};
+}
+
+
+sub time
+{
+  my ($self) = @_;
+  return $self->{DATE_START} if defined $self->{DATE_START};
+  return $self->{YEAR};
+}
+
+
 sub form
 {
   my ($self) = @_;
@@ -573,6 +595,35 @@ sub str
     next unless defined $self->{$field};
     print "$field $self->{$field}\n";
   }
+}
+
+
+sub str_line
+{
+  my ($self) = @_;
+
+  my $short_form;
+  if ($self->{FORM} =~ /Teams/)
+  {
+    $short_form = 'Teams';
+  }
+  elsif ($self->{FORM} =~ /Pairs/)
+  {
+    $short_form = 'Pairs';
+  }
+  elsif ($self->{FORM} =~ /Individual/)
+  {
+    $short_form = 'Indiv';
+  }
+  else
+  {
+    die "Bad form: $self->{FORM}";
+  }
+
+  return sprintf("%s|%s|%s",
+    (defined $self->{DATE_START} ? $self->{DATE_START} : $self->{YEAR}),
+    $short_form,
+    $self->{ID});
 }
 
 

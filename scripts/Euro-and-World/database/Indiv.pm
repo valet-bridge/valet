@@ -126,7 +126,7 @@ sub check_gender
 
   # Bit of a kludge to put both restrictions into a string
   my @a = split '-', $team_restriction;
-  die "$team_restriction not recognized" unless $#a == 2;
+  die "$team_restriction not recognized" unless $#a <= 2;
   my $gender_restriction = $a[0];
 
   if ($gender_restriction eq 'Open' ||
@@ -142,6 +142,20 @@ sub check_gender
   {
     die "Individual $gender_restriction not recognized";
   }
+}
+
+
+sub fill_player_matrix
+{
+  my ($self, $tno, $restriction, $label, $player_matrix_ref) = @_;
+
+  my @list;
+  next unless defined $self->{id};
+  push @list, $self->{id};
+
+  my $allies = Allies->new();
+  $allies->set_by_list(\@list, $restriction, $label, 0);
+  push @{$player_matrix_ref->[$self->{id}]{$tno}}, $allies;
 }
 
 

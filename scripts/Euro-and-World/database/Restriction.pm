@@ -155,6 +155,26 @@ my %RESTRICTIONS = (
     { age => "Open", gender => "Mixed", stage => "TNT" }
 );
 
+my %SIMPLIFICATIONS = (
+  'Open-Open-General' => 'Open',
+  'None-None-None' => 'Open',
+
+  'Open-Open-Qualifying' => 'Qualifying',
+  'Open-Open-Final B' => 'Final B',
+  'Open-Open-Consolation' => 'Consolation',
+  'Open-Open-BB' => 'BB',
+  'Open-Open-Rosenblum' => 'Rosenblum',
+
+  'Open-U26-General' => 'U26',
+
+  'Open-Seniors-General' => 'Seniors',
+
+  'Mixed-Open-General' => 'Mixed',
+  'Mixed-None-None' => 'Mixed',
+
+  'Women-Open-General' => 'Women'
+);
+
 
 sub new
 {
@@ -275,6 +295,24 @@ sub stage
   else
   {
     return $tourn_stage;
+  }
+}
+
+
+sub simplify
+{
+  my ($self, $concat) = @_;
+
+  # Bit of a kludge
+  if (defined $SIMPLIFICATIONS{$concat})
+  {
+    # Not sure this method is a good idea.
+    return $concat;
+    # return $SIMPLIFICATIONS{$concat};
+  }
+  else
+  {
+    return $concat;
   }
 }
 

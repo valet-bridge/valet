@@ -185,6 +185,23 @@ sub str_gender_stats
   return $str;
 }
 
+
+sub fill_player_matrix
+{
+  my ($self, $tno, $player_matrix_ref) = @_;
+
+  for my $restriction (keys %$self)
+  {
+    next if $restriction eq '_players';
+    for my $pair (@{$self->{$restriction}})
+    {
+      $pair->fill_player_matrix(
+        $tno, $restriction, '', $player_matrix_ref);
+    }
+  }
+}
+
+
 sub str_gender_stats_new
 {
   my ($self, $players) = @_;
@@ -200,6 +217,23 @@ sub str_gender_stats_new
   }
 
   return Util::count_to_tourn_stats(\%counts);
+}
+
+
+sub str
+{
+  my ($self, $players) = @_;
+  my $str = '';
+  for my $restriction (sort keys %$self)
+  {
+    next if $restriction eq '_players';
+    for my $pair (@{$self->{$restriction}})
+    {
+      $str .= "RESTRICTION $restriction\n";
+      $str .= $pair->str($players) . "\n";
+    }
+  }
+  return $str;
 }
 
 
