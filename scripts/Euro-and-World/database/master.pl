@@ -4,19 +4,20 @@ use strict;
 use warnings;
 use v5.10;
 
-use lib '..';
+use lib '.';
 use Read;
 use Players;
 use Country;
 use Restriction;
 
-# Check single-factor consistencies of fields.
+# Check consistencies of fields.
+# Write four output files.
 
-die "perl sfc.pl" unless $#ARGV == -1;
+die "perl master.pl" unless $#ARGV == -1;
 
-my $names_file = 'ebl.txt';
-my $comb_file = 'combined.txt';
-my $tourn_file = 'tournaments.txt';
+my $names_file = 'data/ebl.txt';
+my $comb_file = 'data/combined.txt';
+my $tourn_file = 'data/tournaments.txt';
 
 my $players = Players->new();
 my $country = Country->new();
@@ -42,18 +43,18 @@ tournament_to_player_matrix(\@combined, \@player_matrix);
 
 check_from_names(\@tournament_headers, \@name_tournaments, \@combined);
 
-# 1. Just the players
+# 1. Just the players, players.txt
 # print $players->str();
 
-# 2. Player and tournaments
+# 2. Player and tournaments, byplayer.txt
 # print $players->str_player_matrix(
   # \@tournament_headers, \@time_sorted_tournaments,
   # \@player_matrix, $players);
 
-# 3. Just the tournament headers
+# 3. Just the tournament headers, headers.txt
 # print_tournament_headers(\@tournament_headers);
 
-# 4. Headers and tournament content
+# 4. Headers and tournament content, bytourn.txt
 # print_tournament_contents(\@tournament_headers, \@combined);
 
 exit;

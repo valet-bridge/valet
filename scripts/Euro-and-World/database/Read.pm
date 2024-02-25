@@ -7,7 +7,6 @@ use warnings;
 use Exporter;
 use v5.10;
 
-use lib '..';
 use HeaderT;
 use TeamT;
 use PairT;
