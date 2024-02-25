@@ -21,7 +21,7 @@ sub new
 
 sub add_from_chunk
 {
-  my ($self, $tourn_header, $chunk_ref, $players_ref, $errstr) = @_;
+  my ($self, $tourn_header, $chunk_ref, $players, $errstr) = @_;
 
   my $indiv_restriction = Util::get_unit_restriction(
     $tourn_header, $chunk_ref->{RESTRICTION}, $errstr);
@@ -38,13 +38,13 @@ sub add_from_chunk
   }
 
   $self->{$indiv_restriction}[$indiv_no]->check_basics(
-    $players_ref, "$errstr, $indiv_no");
+    $players, "$errstr, $indiv_no");
 
   $self->{$indiv_restriction}[$indiv_no]->fill_player_map(
     \%{$self->{_players}}, $indiv_restriction, $indiv_no);
   
   $self->{$indiv_restriction}[$indiv_no]->analyze_gender(
-    $players_ref, $errstr);
+    $players, $errstr);
   
   if (! $self->{$indiv_restriction}[$indiv_no]->check_gender(
     $indiv_restriction))
@@ -53,8 +53,17 @@ sub add_from_chunk
     print "Restriction $indiv_restriction\n";
     print "Profile ",
       $self->{$indiv_restriction}[$indiv_no]->str_gender(), "\n";
-    print $self->{$indiv_restriction}[$indiv_no]->str($players_ref), 
-      "\n";
+    print $self->{$indiv_restriction}[$indiv_no]->str($players), "\n";
+  }
+
+  my $year = $tourn_header->year();
+  if (! $self->{$indiv_restriction}[$indiv_no]->check_and_update_age(
+    $year, $indiv_restriction, $players))
+  {
+    print "$errstr, $indiv_no: Individual age mismatch\n";
+    print "Restriction: $indiv_restriction\n";
+    print "Year: $year\n";
+    print $self->{$indiv_restriction}[$indiv_no]->str($players), "\n";
   }
 }
 

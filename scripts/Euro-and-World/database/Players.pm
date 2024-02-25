@@ -10,6 +10,12 @@ use v5.10;
 use lib '.';
 use Player;
 
+my %SKIP_AGE = (
+  '7611' => 1,
+  '21330' => 1
+);
+
+
 sub new
 {
   return bless {}, shift;
@@ -128,6 +134,20 @@ sub str_ebl_list
   }
   $str .= "\n";
   return $str;
+}
+
+
+sub check_and_update_age
+{
+  my ($self, $id, $year, $restriction) = @_;
+  if (! defined $self->{players}[$id])
+  {
+    die "Players: ID $id not found";
+  }
+
+  return 1 if defined $SKIP_AGE{$id};
+
+  return $self->{players}[$id]->check_and_update_age($year, $restriction);
 }
 
 

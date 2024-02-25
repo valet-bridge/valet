@@ -21,7 +21,7 @@ sub new
 
 sub add_from_chunk
 {
-  my ($self, $tourn_header, $chunk_ref, $players_ref, $errstr) = @_;
+  my ($self, $tourn_header, $chunk_ref, $players, $errstr) = @_;
 
   my $pair_restriction = Util::get_unit_restriction(
     $tourn_header, $chunk_ref->{RESTRICTION}, $errstr);
@@ -38,13 +38,12 @@ sub add_from_chunk
   }
 
   $self->{$pair_restriction}[$pair_no]->check_basics(
-    $players_ref, "$errstr, $pair_no");
+    $players, "$errstr, $pair_no");
 
   $self->{$pair_restriction}[$pair_no]->fill_player_map(
     \%{$self->{_players}}, $pair_restriction, $pair_no);
   
-  $self->{$pair_restriction}[$pair_no]->analyze_gender(
-    $players_ref, $errstr);
+  $self->{$pair_restriction}[$pair_no]->analyze_gender( $players, $errstr);
   
   if (! $self->{$pair_restriction}[$pair_no]->check_gender(
     $pair_restriction))
@@ -53,8 +52,18 @@ sub add_from_chunk
     print "Restriction $pair_restriction\n";
     print "Profile ",
       $self->{$pair_restriction}[$pair_no]->str_gender(), "\n";
-    print $self->{$pair_restriction}[$pair_no]->str($players_ref), 
+    print $self->{$pair_restriction}[$pair_no]->str($players), 
       "\n";
+  }
+
+  my $year = $tourn_header->year();
+  if (! $self->{$pair_restriction}[$pair_no]->check_and_update_ages(
+    $year, $pair_restriction, $players))
+  {
+    print "$errstr, $pair_no: Age mismatch for a pair player\n";
+    print "Restriction: $pair_restriction\n";
+    print "Year of tournament: $year\n";
+    print $self->{$pair_restriction}[$pair_no]->str($players), "\n";
   }
 }
 

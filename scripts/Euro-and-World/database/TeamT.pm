@@ -94,7 +94,7 @@ sub new
 
 sub add_from_chunk
 {
-  my ($self, $tourn_header, $chunk_ref, $players_ref, $errstr) = @_;
+  my ($self, $tourn_header, $chunk_ref, $players, $errstr) = @_;
 
   die "Team has no name" unless defined $chunk_ref->{NAME};
   my $team_name = $chunk_ref->{NAME};
@@ -116,13 +116,13 @@ sub add_from_chunk
   }
 
   $self->{$team_restriction}{$team_name}->check_basics(
-    $players_ref, "$errstr, $team_name");
+    $players, "$errstr, $team_name");
 
   $self->{$team_restriction}{$team_name}->fill_player_map(
     \%{$self->{_players}}, $team_name, $team_restriction);
   
   $self->{$team_restriction}{$team_name}->analyze_gender(
-    $players_ref, $errstr);
+    $players, $errstr);
   
   if (! $self->{$team_restriction}{$team_name}->check_gender(
     $team_restriction))
@@ -147,9 +147,19 @@ sub add_from_chunk
       print "Restriction $team_restriction\n";
       print "Profile ",
         $self->{$team_restriction}{$team_name}->str_gender(), "\n";
-      print $self->{$team_restriction}{$team_name}->str($players_ref), 
+      print $self->{$team_restriction}{$team_name}->str($players), 
         "\n";
     }
+  }
+
+  my $year = $tourn_header->year();
+  if (! $self->{$team_restriction}{$team_name}->check_and_update_ages(
+    $year, $team_restriction, $players))
+  {
+    print "$errstr, $team_name: Age mismatch for a team member\n";
+    print "Restriction: $team_restriction\n";
+    print "Year of tournament: $year\n";
+    print $self->{$team_restriction}{$team_name}->str($players), "\n";
   }
 }
 

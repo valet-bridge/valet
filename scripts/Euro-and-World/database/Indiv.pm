@@ -122,11 +122,11 @@ sub analyze_gender
 
 sub check_gender
 {
-  my ($self, $team_restriction) = @_;
+  my ($self, $indiv_restriction) = @_;
 
   # Bit of a kludge to put both restrictions into a string
-  my @a = split '-', $team_restriction;
-  die "$team_restriction not recognized" unless $#a <= 2;
+  my @a = split '-', $indiv_restriction;
+  die "$indiv_restriction not recognized" unless $#a <= 2;
   my $gender_restriction = $a[0];
 
   if ($gender_restriction eq 'Open' ||
@@ -142,6 +142,27 @@ sub check_gender
   {
     die "Individual $gender_restriction not recognized";
   }
+}
+
+
+sub check_and_update_age
+{
+  my ($self, $year, $indiv_restriction, $players) = @_;
+
+  my @a = split '-', $indiv_restriction;
+  die "$indiv_restriction not recognized" unless $#a == 2;
+  my $age_restriction = $a[1];
+
+  next unless defined $self->{id};
+  my $id = $self->{id};
+
+  if (! $players->check_and_update_age($id, $year, $age_restriction))
+  {
+    print "Age mismatch for player ID $id\n";
+    print $self->str($players);
+    return 0;
+  }
+  return 1;
 }
 
 

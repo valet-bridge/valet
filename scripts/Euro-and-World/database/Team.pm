@@ -222,6 +222,29 @@ sub check_gender
 }
 
 
+sub check_and_update_ages
+{
+  my ($self, $year, $team_restriction, $players) = @_;
+
+  my @a = split '-', $team_restriction;
+  die "$team_restriction not recognized" unless $#a <= 2;
+  my $age_restriction = $a[1];
+
+  for my $pentry (@{$self->{players}})
+  {
+    next unless defined $pentry;
+    my $id = $pentry->{id};
+    if (! $players->check_and_update_age($id, $year, $age_restriction))
+    {
+      print "Age mismatch for player ID $id\n";
+      print $self->str($players);
+      return 0;
+    }
+  }
+  return 1;
+}
+
+
 sub size
 {
   my ($self) = @_;
@@ -280,6 +303,7 @@ sub update_gender_count
   $count_ref->{'M'}++ if $self->{possible_gender} & GENDER_MIXED;
   $count_ref->{'?'}++ if $self->{possible_gender} & GENDER_UNKNOWN;
 }
+
 
 sub str_gender
 {

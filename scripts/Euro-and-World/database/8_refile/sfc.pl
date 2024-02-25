@@ -29,7 +29,7 @@ my (@name_players, @name_tournaments);
 read_names_into_players($names_file, \@tournament_headers,
   $players, \@name_tournaments);
 
-# $players->check_names();
+$players->check_names();
 
 my @combined;
 read_combined($comb_file, $players, \@tournament_headers, \@combined);
@@ -40,20 +40,20 @@ time_sort_tournaments(\@tournament_headers, \@time_sorted_tournaments);
 my @player_matrix;
 tournament_to_player_matrix(\@combined, \@player_matrix);
 
-# check_from_names(\@tournament_headers, \@name_tournaments, \@combined);
+check_from_names(\@tournament_headers, \@name_tournaments, \@combined);
 
-# Just the players
+# 1. Just the players
 # print $players->str();
 
-# Player and tournaments
-print $players->str_player_matrix(
-  \@tournament_headers, \@time_sorted_tournaments,
-  \@player_matrix, $players);
+# 2. Player and tournaments
+# print $players->str_player_matrix(
+  # \@tournament_headers, \@time_sorted_tournaments,
+  # \@player_matrix, $players);
 
-# Just the tournament headers
+# 3. Just the tournament headers
 # print_tournament_headers(\@tournament_headers);
 
-# Headers and tournament content
+# 4. Headers and tournament content
 # print_tournament_contents(\@tournament_headers, \@combined);
 
 exit;
@@ -117,15 +117,6 @@ sub tournament_to_player_matrix
   }
 }
 
-
-# my $select = 10009;
-# print_teams_tournament(\%{$tournaments[$select]}, $select,
-  # \%{$name_tournaments[$select]});
-
-# my $select = 10014;
-# print_pairs_tournament(\%{$tournaments[$select]}, $select,
-  # \%{$name_tournaments[$select]});
-
 exit;
 
 
@@ -151,64 +142,6 @@ sub check_from_names
     $comb_ref->[$tno]->check_against_name_data(
       \%{$from_names_ref->[$tno]}, $players, 
       "$form tournament $tno");
-    
-    # if ($form eq 'Individual')
-    # {
-      # my $str = $comb_ref->[$tno]->str_gender_stats_new();
-      # if ($str ne '')
-      # {
-        # print "Individual tournament $tno:\n$str\n";
-      # }
-    # }
-  }
-}
-
-
-sub print_teams_tournament
-{
-  my ($tournament_header_ref, $tid, $tourn_data_ref) = @_;
-
-  print "TITLE ", $tournament_header_ref->{TITLE}, "\n";
-  print "ID ", $tid, "\n";
-  print "DETAILS CHECKTHIS!\n\n";
-
-  for my $tname (sort keys %$tourn_data_ref)
-  {
-    print "NAME ", $tname, "\n";
-    print "RESTRICTION Juniors series\n";
-    # print "RESTRICTION CHECKTHIS!\n";
-
-    my $no = 0;
-    for my $pid (@{$tourn_data_ref->{$tname}})
-    {
-      print "PLAYER$no ", $players->id_to_name($pid), "\n";
-      print "ID$no $pid\n";
-      print "FUNCTION$no player\n";
-      $no++;
-    }
-    print "\n";
-  }
-}
-
-
-sub print_pairs_tournament
-{
-  my ($tournament_header_ref, $tid, $tourn_data_ref) = @_;
-
-  print "TITLE ", $tournament_header_ref->{TITLE}, "\n";
-  print "ID ", $tid, "\n";
-  print "DETAILS CHECKTHIS!\n\n";
-
-  for my $pair (@{$tourn_data_ref->{pairs}})
-  {
-    my $no = 1;
-    for my $pid (@$pair)
-    {
-      print "PLAYER$no ", $players->id_to_name($pid), "\n";
-      print "ID$no $pid\n";
-      $no++;
-    }
-    print "\n";
   }
 }
 

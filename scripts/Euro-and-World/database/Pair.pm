@@ -170,11 +170,11 @@ sub analyze_gender
 
 sub check_gender
 {
-  my ($self, $team_restriction) = @_;
+  my ($self, $pair_restriction) = @_;
 
   # Bit of a kludge to put both restrictions into a string
-  my @a = split '-', $team_restriction;
-  die "$team_restriction not recognized" unless $#a <= 2;
+  my @a = split '-', $pair_restriction;
+  die "$pair_restriction not recognized" unless $#a <= 2;
   my $gender_restriction = $a[0];
 
   if ($gender_restriction eq 'Open' ||
@@ -195,6 +195,29 @@ sub check_gender
     # Probably Open.
     return 1;
   }
+}
+
+
+sub check_and_update_ages
+{
+  my ($self, $year, $pair_restriction, $players) = @_;
+
+  my @a = split '-', $pair_restriction;
+  die "$pair_restriction not recognized" unless $#a <= 2;
+  my $age_restriction = $a[1];
+
+  for my $pentry (@{$self->{players}})
+  {
+    next unless defined $pentry;
+    my $id = $pentry->{id};
+    if (! $players->check_and_update_age($id, $year, $age_restriction))
+    {
+      print "Age mismatch for player ID $id\n";
+      print $self->str($players);
+      return 0;
+    }
+  }
+  return 1;
 }
 
 
@@ -224,6 +247,7 @@ sub fill_player_matrix
 
   for my $i (0 .. $#list)
   {
+    next unless defined $list[0];
     my $allies = Allies->new();
     $allies->set_by_list(\@list, $restriction, $label, $i);
     push @{$player_matrix_ref->[$list[$i]]{$tno}}, $allies;

@@ -558,6 +558,13 @@ sub time
 }
 
 
+sub year
+{
+  my ($self) = @_;
+  return $self->{YEAR};
+}
+
+
 sub form
 {
   my ($self) = @_;

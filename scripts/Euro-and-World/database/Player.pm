@@ -12,6 +12,8 @@ use Util;
 use Country;
 our $country;
 
+use Year;
+
 my $SINGLE = 0; # One value
 my $EARLIEST = 1; # Numerical value, want the earliest one
 my $LATEST = 2; # Numerical value, want the latest one
@@ -45,8 +47,6 @@ my %FIELDS = (
 
 my @ORDER = qw(
   NAME NAME_PREFERRED NAME_DEPRECATED
-  BIRTH_EXACT BIRTH_EARLIEST BIRTH_LATEST
-  DEATH_EXACT DEATH_EARLIEST DEATH_LATEST
   COUNTRY COUNTRY_DEPRECATED
   EBL EBL_DEPRECATED
   WBF WBF_DEPRECATED);
@@ -59,60 +59,6 @@ sub new
   $country = Country->new() if ! defined $country;
 
   return bless {}, $class;
-}
-
-
-sub check_years
-{
-  my ($self, $lead) = @_;
-
-  my $earliest = $lead . '_EARLIEST';
-  my $latest = $lead . '_LATEST';
-  my $exact = $lead . '_EXACT';
-
-  if (defined $self->{$exact})
-  {
-    # Check earliest and latest if present, and then delete them.
-
-    if (defined $self->{$earliest})
-    {
-      # So 1990 and >= 1988.
-      if ($self->{$exact} < $self->{$earliest})
-      {
-        die "Player: $earliest ($self->{$earliest}) >  " .
-          "$exact ($self->{$exact})";
-      }
-      delete $self->{$earliest};
-    }
-
-    if (defined $self->{$latest})
-    {
-      if ($self->{$exact} > $self->{$latest})
-      {
-        die "Player: $latest ($self->{$latest}) <  " .
-          "$exact ($self->{$exact})";
-      }
-      delete $self->{$latest};
-    }
-    return;
-  }
-
-  return unless defined $self->{$earliest} && defined $self->{$latest};
-
-  # Check that earliest <= latest.
-  if ($self->{$earliest} > $self->{$latest})
-  {
-    die "Player: $earliest ($self->{$earliest}) > " .
-      "$latest ($self->{$latest})";
-  }
-
-  # If earliest == latest, make an exact value.
-  if ($self->{$earliest} == $self->{$latest})
-  {
-    $self->{$exact} = $self->{$earliest};
-    delete $self->{$earliest};
-    delete $self->{$latest};
-  }
 }
 
 
@@ -130,25 +76,31 @@ sub set_field
 
   if (! defined $self->{$field}[0])
   {
-    if (($field eq 'BIRTH_EARLIEST' || $field eq 'BIRTH_LATEST') &&
-        defined $self->{BIRTH_EXACT})
-    {
-      # We already know.
-      return;
-    }
-
-    if (($field eq 'DEATH_EARLIEST' || $field eq 'DEATH_LATEST') &&
-        defined $self->{DEATH_EXACT})
-    {
-      # We already know.
-      return;
-    }
-
     if ($field =~ /NAME/)
     {
       my $v = $value;
       $v =~ s/\s+/ /g;
       $self->{$field}[0] = Util::reverse_name($v);
+    }
+    elsif ($field eq 'BIRTH_EARLIEST' || $field eq 'BIRTH_LATEST')
+    {
+      $self->{BIRTH}[0] = Year->new() unless defined $self->{BIRTH}[0];
+
+      my $bfield = ($field eq 'BIRTH_EARLIEST' ? 'EARLIEST' : 'LATEST');
+      if (! $self->{BIRTH}[0]->add($bfield, $value))
+      {
+        die "Could not add birth information";
+      }
+    }
+    elsif ($field eq 'DEATH_EARLIEST' || $field eq 'DEATH_LATEST')
+    {
+      $self->{DEATH}[0] = Year->new() unless defined $self->{DEATH}[0];
+
+      my $bfield = ($field eq 'DEATH_EARLIEST' ? 'EARLIEST' : 'LATEST');
+      if (! $self->{DEATH}[0]->add($bfield, $value))
+      {
+        die "Could not add death information";
+      }
     }
     else
     {
@@ -169,23 +121,11 @@ sub set_field
   }
   elsif ($ftype == $EARLIEST)
   {
-    # Say that we get two different data points on a person
-    # Born >= 1990 and born >= 1992.  We want to keep <= 1992.
-
-    if ($value > $self->{$field}[0])
-    {
-      $self->{$field}[0] = $value;
-    }
+    # Already done.
   }
   elsif ($ftype == $LATEST)
   {
-    # Say that we get two different data points on a person
-    # Born <= 1960 and born <= 1962.  We want to keep <= 1960.
-
-    if ($value < $self->{$field}[0])
-    {
-      $self->{$field}[0] = $value;
-    }
+    # Already done.
   }
   elsif ($ftype == $LIST)
   {
@@ -206,9 +146,6 @@ sub set_field
   {
     die "Player: Unknown field type (internal error)";
   }
-
-  check_years($self, 'BIRTH');
-  check_years($self, 'DEATH');
 }
 
 
@@ -300,6 +237,15 @@ sub check_names
 }
 
 
+sub check_and_update_age
+{
+  my ($self, $year, $restriction) = @_;
+
+  $self->{BIRTH}[0] = Year->new() unless defined $self->{BIRTH}[0];
+  return $self->{BIRTH}[0]->add_by_year($year, $restriction, 'BIRTH');
+}
+
+
 sub str
 {
   my ($self) = @_;
@@ -313,6 +259,8 @@ sub str
       $str .= "$field $value\n";
     }
   }
+  $str .= $self->{BIRTH}[0]->str('BIRTH') if defined $self->{BIRTH}[0];
+  $str .= $self->{DEATH}[0]->str('DEATH') if defined $self->{DEATH}[0];
   return $str;
 }
 
