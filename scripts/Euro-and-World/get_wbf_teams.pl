@@ -11,8 +11,8 @@ use HTML::TreeBuilder;
 
 die "perl get_wbf_teams.pl" unless $#ARGV == -1;
 
-my $TOURN_FIRST = 2393;
-my $TOURN_LAST = 2393;
+my $TOURN_FIRST = 1542;
+my $TOURN_LAST = 1542;
 
 my $sprefix = "http://www.worldbridge.org/teamchampRPperson/?qtournid=";
 my $outdir = "wbf_teams/";
