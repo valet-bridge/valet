@@ -127,6 +127,9 @@ my %COUNTRIES = (
   "Zimbabwe" => "ZIM", ZIM => "ZIM"
 );
 
+my %COUNTRIES_LC = map { lc($_) => $COUNTRIES{$_}} keys %COUNTRIES;
+
+
 
 sub new
 {
@@ -139,6 +142,13 @@ sub valid
 {
   my ($self, $text) = @_;
   return exists $COUNTRIES{$text} ? 1 : 0;
+}
+
+
+sub valid_lc
+{
+  my ($self, $text) = @_;
+  return exists $COUNTRIES_LC{lc($text)} ? 1 : 0;
 }
 
 
