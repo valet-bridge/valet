@@ -1,0 +1,13 @@
+# HCP<=8                   0     0   0.000   643     0   0.081
+# HCP==9&LongHCP<=4        1     1   1.000    89     1   0.210
+# HCP==9&LongHCP>=5        0     0   0.000    82     0   0.107
+# HCP>=10                 52     0   0.000   975     0   0.000
+#
+# Passes: 1, passouts 1 of 1789, hard error 0.978
+
+HCP <= 8: 1.000
+HCP == 9: 1.000
+HCP >= 10: 0.000
+
+modify HCP == 9 when LongHCP <= 4: +0.000
+modify HCP == 9 when LongHCP >= 5: +0.000

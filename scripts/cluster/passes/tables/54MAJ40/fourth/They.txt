@@ -1,0 +1,9 @@
+# HCP>=0                  47     0   0.000   812     0   0.000
+#
+# Passes: 0, passouts 0 of 812, hard error 0.000
+
+# HCP>=0                  47     0   0.000   812     0   0.000
+#
+# Passes: 0, passouts 0 of 812, hard error 0.000
+
+HCP >= 0: 0.000

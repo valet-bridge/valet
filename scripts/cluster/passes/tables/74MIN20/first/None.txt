@@ -1,0 +1,18 @@
+# HCPin3-5                18     6   0.333    18     0   0.000
+# HCPin6-7                30     6   0.200    30     0   0.000
+# HCP==8                  11     1   0.091    11     0   0.000
+# HCP==9                  30     1   0.033    30     0   0.000
+# HCP==10                  8     1   0.125     8     0   0.017
+# HCP>=11                 52     0   0.000    52     0   0.000
+#
+# Passes: 15, passouts 0 of 149, hard error 0.017
+
+HCP <= 2: 1.000
+HCP in 3 5: 0.333
+HCP in 6 7: 0.200
+HCP == 8: 0.091
+HCP == 9: 0.033
+HCP == 10: 0.125
+HCP >= 11: 0.000
+
+# Neither controls not LongHCP helps with HCP == 10...

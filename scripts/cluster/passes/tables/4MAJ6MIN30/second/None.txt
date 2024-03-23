@@ -1,0 +1,27 @@
+# HCP<=3                   9     9   1.000    32     0   0.000
+# HCPin3-7                62    59   0.952   220     0   0.019
+# HCP==8&LongHCP<=3       21    21   1.000    28     0   0.052
+# HCP==8&LongHCP>=4       24    20   0.833    54     0   0.020
+# HCP==9&ShortHCP==0      21     9   0.429    38     0   0.012
+# HCP==9&ShortHCP>=1      29    23   0.793    67     0   0.063
+# HCP==10&ShortHCP==0     31     2   0.065    49     0   0.010
+# HCP==10&ShortHCP>=1     32     7   0.219    64     0   0.163
+# HCP>=11                227     0   0.000   411     0   0.000
+#
+# Passes: 150, passouts 0 of 963, hard error 0.339
+
+HCP <= 3: 1.000
+HCP in 3 7: 0.952
+HCP == 8: 0.911
+HCP == 9: 0.640
+HCP == 10: 0.143
+HCP >= 11: 0.000
+
+modify HCP == 8 when LongHCP <= 3: +0.089
+modify HCP == 8 when LongHCP >= 4: -0.078
+
+modify HCP == 9 when ShortHCP == 0: -0.211
+modify HCP == 9 when ShortHCP >= 1: +0.153
+
+modify HCP == 10 when ShortHCP == 0: -0.078
+modify HCP == 10 when ShortHCP >= 1: +0.076

@@ -1,0 +1,28 @@
+# HCP<=1                   0     0   0.000     2     0   0.000
+# HCPin2-4                 0     0   0.000     7     0   0.000
+# HCPin5-7                 2     1   0.500    50     0   0.005
+# HCP==8                   6     0   0.000    32     0   0.002
+# HCP==9&controls==4       0     0   0.000     3     0   0.000
+# HCP==9&controls==3       0     0   0.000    14     0   0.001
+# HCP==9&controls==2       4     1   0.250    11     0   0.042
+# HCP==9&controls==1       0     0   0.000     4     0   0.002
+# HCP>=10                 36     0   0.000   157     0   0.000
+#
+# Passes: 2, passouts 0, hard error 0.052
+
+# Created values for <= 1, 2-4
+# Differences for 5-7 (0.500), 8 (0.000)
+# 9 probably too high
+
+HCP <= 1: 0.875
+HCP in 2 4: 0.083
+HCP in 5 7: 0.083
+HCP == 8: 0.100
+HCP == 9: 0.250
+HCP >= 10: 0.000
+
+modify HCP == 9 when controls == 0: +0.000
+modify HCP == 9 when controls == 1: +0.000
+modify HCP == 9 when controls == 2: +0.000
+modify HCP == 9 when controls == 3: +0.000
+modify HCP == 9 when controls == 4: +0.000

@@ -1,0 +1,10 @@
+# HCPin3-5                 0     0   0.000    32     0   0.000
+# HCP>=6                   8     0   0.000   505     0   0.000
+#
+# Passes: 0, passouts 0 of 537, hard error 0.000
+
+# Manual invention
+
+HCP <= 2: 1.000
+HCP in 3 5: 0.400
+HCP >= 6: 0.000

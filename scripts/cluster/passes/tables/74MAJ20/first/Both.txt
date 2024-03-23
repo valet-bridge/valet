@@ -1,0 +1,20 @@
+# HCPin3-5                33    24   0.727    33     0   0.000
+# HCP==6                   4     1   0.250     4     0   0.000
+# HCP==7                  20    13   0.650    20     0   0.000
+# HCP==8                  18     5   0.278    18     0   0.015
+# HCP==9&Long12HCP>=6     16     5   0.312    16     1   0.181
+# HCP>=10                 67     0   0.000    67     0   0.000
+#
+# Passes: 48, passouts 1, hard error 0.834
+
+HCP <= 2: 0.727
+HCP in 3 5: 0.727
+HCP == 6: 0.250
+HCP == 7: 0.650
+HCP == 8: 0.278
+HCP == 9: 0.312
+HCP >= 10: 0.000
+
+modify HCP == 9 when Long12HCP <= 3: +0.688
+modify HCP == 9 when Long12HCP in 4 5: +0.688
+modify HCP == 9 when Long12HCP >= 6: +0.000

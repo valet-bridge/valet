@@ -1,0 +1,53 @@
+# HCP<=2                  11    10   0.909   476     0   0.009
+# HCP==3                  10     9   0.900   431     0   0.005
+# HCP==4                  21    20   0.952   664     0   0.050
+# HCP==5                 107   103   0.963  1060     0   0.078
+# HCP==6                 106   102   0.962  1162     1   0.127
+# HCP==7&ShortHCP<=2     149   125   0.839  1168     2   0.646
+# HCP==7&ShortHCP>=3      21    20   0.952   284     0   0.038
+# HCP==8&ShortHCP<=2     181   157   0.867  1188     1   2.809
+# HCP==8&ShortHCP>=3      50    46   0.920   396     0   0.279
+# HCP==9&ShortHCP==0     123    80   0.650   780     3   4.444
+# HCP==9&ShortHCP>=1     121   101   0.835   820    12   6.643
+# HCP==10&LongHCP<=1      52    41   0.788   223     5   3.328
+# HCP==10&LongHCP==2      32    22   0.688   156     2   2.976
+# HCP==10&LongHCP>=3     234   112   0.479  1209    13  10.673
+# HCP==11&LongHCP<=3     151    45   0.298   608     5   5.490
+# HCP==11&LongHCP>=4     234    20   0.085  1066     2   3.092
+# HCP==12&ShortHCP==0    111     0   0.000   524     0   0.000
+# HCP==12&ShortHCP>=1    242     3   0.012   942     1   0.398
+# HCP>=13               1998     0   0.000  4928     0   0.000
+#
+# Passes: 1016, passouts 47 of 18085, hard error 18.455
+
+HCP <= 2: 0.909
+HCP == 3: 0.900
+HCP == 4: 0.952
+HCP == 5: 0.963
+HCP == 6: 0.962
+HCP == 7: 0.853
+HCP == 8: 0.879
+HCP == 9: 0.742
+HCP == 10: 0.550
+HCP == 11: 0.169
+HCP == 12: 0.008
+HCP >= 13: 0.000
+
+modify HCP == 7 when ShortHCP <= 2: -0.014
+modify HCP == 7 when ShortHCP >= 3: +0.099
+
+modify HCP == 8 when ShortHCP <= 2: -0.012
+modify HCP == 8 when ShortHCP >= 3: +0.041
+
+modify HCP == 9 when ShortHCP == 0: -0.092
+modify HCP == 9 when ShortHCP >= 1: +0.093
+
+modify HCP == 10 when LongHCP <= 1: +0.238
+modify HCP == 10 when LongHCP == 2: +0.137
+modify HCP == 10 when LongHCP >= 3: -0.071
+
+modify HCP == 11 when LongHCP <= 3: +0.129
+modify HCP == 11 when LongHCP >= 4: -0.084
+
+modify HCP == 12 when ShortHCP == 0: -0.008
+modify HCP == 12 when ShortHCP >= 1: +0.004

@@ -1,0 +1,21 @@
+# HCP<=4                   5     5   1.000     5     0   0.000
+# HCPin5-7                39    30   0.769    39     0   0.003
+# HCP==8&controls<=1      14    10   0.714    14     0   0.228
+# HCP==8&controls>=3       1     0   0.000     1     0   0.000
+# HCP==8&controls==2       2     1   0.500     2     0   0.000
+# HCP==9                  20     7   0.350    20     0   0.012
+# HCP==10                 45     1   0.022    45     0   0.036
+# HCP>=11                116     0   0.000   116     0   0.000
+#
+# Passes: 54, passouts 0 of 242, hard error 0.279
+
+HCP <= 4: 1.000
+HCP in 5 7: 0.769
+HCP == 8: 0.647
+HCP == 9: 0.350
+HCP == 10: 0.022
+HCP >= 11: 0.000
+
+modify HCP == 8 when controls <= 1: +0.067
+modify HCP == 8 when controls == 2: -0.147
+modify HCP == 8 when controls >= 3: -0.647

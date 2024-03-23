@@ -1,0 +1,23 @@
+# HCP<=10                 60    60   1.000  9893    60  61.172
+# HCP==11&LongHCP<=1      10     8   0.800   180     8   8.001
+# HCP==11&LongHCPin2-3    16     7   0.438   374     7   7.763
+# HCP==11&LongHCP>=4      31    25   0.806  1023    25  28.551
+# HCP==12                 80     6   0.075  1383     6   6.346
+# HCP==13&ShortHCP<=1     34     2   0.059   506     2   2.046
+# HCP==13&ShortHCP>=2     64     0   0.000   682     0   0.000
+# HCP>=14                814     0   0.000  3609     0   0.000
+#
+# Passes: 108, passouts 108 of 17650, hard error 5.879
+
+HCP <= 10: 1.000
+HCP == 11: 0.702
+HCP == 12: 0.075
+HCP == 13: 0.020
+HCP >= 14: 0.000
+
+modify HCP == 11 when LongHCP <= 1: +0.098
+modify HCP == 11 when LongHCP in 2 3: -0.264
+modify HCP == 11 when LongHCP >= 4: +0.104
+
+modify HCP == 13 when ShortHCP <= 1: +0.039
+modify HCP == 13 when ShortHCP >= 2: -0.020

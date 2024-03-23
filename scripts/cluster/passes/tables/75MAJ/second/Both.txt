@@ -1,0 +1,9 @@
+# HCP<=5                   1     1   1.000     7     0   0.000
+# HCPin6-7&ShortHCPout2-3  4     1   0.250     7     0   0.054
+# HCP>=8                  21     0   0.000    34     0   0.000
+#
+# Passes: 2, passouts 0, hard error 0.054
+
+HCP <= 5: 1.000
+HCP in 6 7: 0.250
+HCP >= 8: 0.000

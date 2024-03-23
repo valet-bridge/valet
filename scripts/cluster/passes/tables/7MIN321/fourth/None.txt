@@ -1,0 +1,13 @@
+HCP <= 7: 1.000
+HCP == 8: 1.000
+HCP == 9: 1.000
+HCP == 10: 1.000
+HCP >= 11: 0.000
+
+# This is made up.
+modify HCP == 9 when LongHCP <= 3: -0.100
+modify HCP == 9 when LongHCP >= 4: -0.300
+
+# This is made up.
+modify HCP == 10 when LongHCP <= 3: -0.200
+modify HCP == 10 when LongHCP >= 4: -0.700

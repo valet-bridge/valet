@@ -1,0 +1,11 @@
+# HCP<=11&LongHCP>=2      13     2   0.154  2166     2   1.745
+# HCP<=11&LongHCP<=1      11     3   0.273   481     3   1.732
+# HCP>=12                117     0   0.000  1283     0   0.000
+#
+# Passes: 5, passouts 5 of 3930, hard error 1.523
+
+HCP <= 11: 0.208
+HCP >= 12: 0.000
+
+modify HCP <= 11 when LongHCP <= 1: +0.065
+modify HCP <= 11 when LongHCP >= 2: -0.054

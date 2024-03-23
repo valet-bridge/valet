@@ -1,0 +1,15 @@
+# HCP<=8                   1     1   1.000  1891     1   2.636
+# HCP==9&spades==4         5     3   0.600   179     3   2.129
+# HCP==9&spades==5         4     1   0.250   210     1   0.571
+# HCP>=10                263     0   0.000  2632     0   0.000
+#
+# Passes: 5, passouts 5 of 4912, hard error 2.936
+
+HCP <= 8: 1.000
+HCP == 9: 0.444
+HCP >= 10: 0.000
+
+# Manual
+
+modify HCP == 9 when spades == 4: +0.200
+modify HCP == 9 when spades == 5: -0.200

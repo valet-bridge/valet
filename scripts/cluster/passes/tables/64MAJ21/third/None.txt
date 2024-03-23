@@ -1,0 +1,29 @@
+# HCP<=1                   0     0   0.000    20     0   0.000
+# HCP==2                   1     0   0.000    17     0   0.000
+# HCP==3                   2     1   0.500    23     0   0.000
+# HCP==4                   2     1   0.500    70     0   0.002
+# HCP==5                   5     1   0.200   104     0   0.001
+# HCP==6&ShortHCPin2-3     0     0   0.000     5     0   0.001
+# HCP==6&ShortHCPout2-3    0     0   0.000   113     0   0.006
+# HCP==7                  14     1   0.071   134     0   0.043
+# HCP==8                  23     2   0.087   157     0   0.043
+# HCP==9                  21     1   0.048   185     0   0.015
+# HCP>=10                284     0   0.000   983     0   0.000
+#
+# Passes: 7, passouts 0 of 1811, hard error 0.111
+
+HCP <= 1: 1.00
+HCP == 2: 0.000
+HCP == 3: 0.500
+HCP == 4: 0.500
+HCP == 5: 0.200
+# I made this one up.  Does it occur?
+HCP == 6: 0.150
+HCP == 7: 0.071
+HCP == 8: 0.087
+HCP == 9: 0.048
+HCP >= 10: 0.000
+
+# No actual examples, so I made these up
+modify HCP == 6 when ShortHCP in 2 3: +0.100
+modify HCP == 6 when ShortHCP notin 2 3: -0.003

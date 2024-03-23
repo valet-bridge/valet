@@ -1,0 +1,7 @@
+HCP <= 10: 1.000
+HCP >= 11: 0.000
+
+# The modification for >= 7 LongHCP is invented.
+
+modify HCP <= 10 when LongHCP <= 6: +0.000
+modify HCP <= 10 when LongHCP >= 7: -0.750

@@ -1,0 +1,11 @@
+# HCP<=9                  19     7   0.368   128     0   0.014
+# HCP==10                  5     2   0.400    25     0   0.071
+# HCP>=11                 26     0   0.000   104     0   0.000
+#
+# Passes: 9, passouts 0 of 257, hard error 0.085
+
+# Not much to do about HCP == 10
+
+HCP <= 9: 0.368
+HCP == 10: 0.400
+HCP >= 11: 0.000

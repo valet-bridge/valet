@@ -1,0 +1,40 @@
+# HCP==1                   6     4   0.667     6     0   0.000
+# HCP==2                  22    20   0.909    22     0   0.000
+# HCP==3                  34    16   0.471    34     0   0.000
+# HCP==4                  70    44   0.629    70     0   0.001
+# HCP==5                 136    63   0.463   136     0   0.002
+# HCP==6                  99    52   0.525    99     0   0.024
+# HCP==7                 147    91   0.619   147     0   0.012
+# HCP==8                 184   121   0.658   184     0   0.265
+# HCP==9&ShortHCPin2-3    26    13   0.500    26     0   0.053
+# HCP==9&ShortHCPout2-3  150    60   0.400   150     0   0.690
+# HCP==10&ShortHCPin2-3   19     8   0.421    19     0   0.172
+# HCP==10&ShortHCPout2-3 122     7   0.057   122     0   0.127
+# HCP==11&ShortHCPin2-3   22     4   0.182    22     0   0.001
+# HCP==11&ShortHCPout2-3 156     1   0.006   156     0   0.007
+# HCP>=12                633     1   0.002   633     0   0.184
+#
+# Passes: 518, passouts 0 of 1840, hard error 1.538
+
+HCP == 0: 0.929
+HCP == 1: 0.667
+HCP == 2: 0.909
+HCP == 3: 0.471
+HCP == 4: 0.629
+HCP == 5: 0.463
+HCP == 6: 0.525
+HCP == 7: 0.619
+HCP == 8: 0.658
+HCP == 9: 0.415
+HCP == 10: 0.106
+HCP == 11: 0.028
+HCP >= 12: 0.002
+
+modify HCP == 9 when ShortHCP in 2 3: +0.085
+modify HCP == 9 when ShortHCP notin 2 3: -0.015
+
+modify HCP == 10 when ShortHCP in 2 3: +0.315
+modify HCP == 10 when ShortHCP notin 2 3: -0.049
+
+modify HCP == 11 when ShortHCP in 2 3: +0.154
+modify HCP == 11 when ShortHCP notin 2 3: -0.022

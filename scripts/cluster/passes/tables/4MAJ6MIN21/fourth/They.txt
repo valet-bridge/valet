@@ -1,0 +1,17 @@
+# HCP<=10&controls>=4      4     1   0.250   151     1   0.703
+# HCP<=10&controls<=3      4     2   0.500  1747     2   3.451
+# HCP==11&controls<=3      1     1   1.000   184     1   0.632
+# HCP==11&controls>=4      2     0   0.000   130     0   0.000
+# HCP>=12                153     0   0.000  1192     0   0.000
+#
+# Passes: 4, passouts 4 of 3404, hard error 2.116
+
+HCP <= 10: 0.375
+HCP == 11: 0.333
+HCP >= 12: 0.000
+
+modify HCP <= 10 when controls <= 3: +0.125
+modify HCP <= 10 when controls >= 4: -0.125
+
+modify HCP == 11 when controls <= 3: +0.667
+modify HCP == 11 when controls >= 4: -0.333

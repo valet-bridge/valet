@@ -1,0 +1,16 @@
+# HCP<=1                   0     0   0.000     2     0   0.002
+# HCPin2-4                 0     0   0.000    32     0   0.001
+# HCPin5-7                 4     0   0.000    68     0   0.000
+# HCP==8                   1     1   1.000    14     0   0.007
+# HCP>=9                  52     0   0.000   228     0   0.000
+#
+# Passes: 1, passouts 0, hard error 0.010
+
+# Difference for 5-7 (0.000)
+# 8 probably too high
+
+HCP <= 1: 0.875
+HCP in 2 4: 0.083
+HCP in 5 7: 0.000
+HCP == 8: 1.000
+HCP >= 9: 0.000

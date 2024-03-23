@@ -1,0 +1,39 @@
+# HCP<=1                   8     7   0.875    37     0   0.001
+# HCPin2-3                40    31   0.775   147     0   0.016
+# HCP==4                  64    37   0.578   164     0   0.003
+# HCP==5                  79    34   0.430   175     0   0.006
+# HCP==6                  98    34   0.347   239     0   0.023
+# HCP==7                  83     6   0.072   232     0   0.011
+# HCP==8                 102    14   0.137   253     0   0.083
+# HCP==9&LongHCP==0        6     5   0.833    10     0   0.030
+# HCP==9&LongHCP==1       16     8   0.500    22     0   0.032
+# HCP==9&LongHCP==2       28     9   0.321    39     0   0.081
+# HCP==9&LongHCP>=3      137     9   0.066   285     0   0.229
+# HCP==10&LongHCPin0-1     3     2   0.667    21     0   0.064
+# HCP==10&LongHCP==2      15     3   0.200    23     1   0.096
+# HCP==10&LongHCP>=3     167    11   0.066   358     1   0.381
+# HCP==11                216     2   0.009   360     1   0.132
+# HCP>=12                725     1   0.001  1208     0   0.000
+#
+# Passes: 213, passouts 3 of 3573, hard error 2.970
+
+HCP <= 1: 0.875
+HCP in 2 3: 0.775
+HCP == 4: 0.578
+HCP == 5: 0.430
+HCP == 6: 0.347
+HCP == 7: 0.072
+HCP == 8: 0.137
+HCP == 9: 0.166
+HCP == 10: 0.086
+HCP == 11: 0.009
+HCP >= 12: 0.000
+
+modify HCP == 9 when LongHCP == 0: +0.667
+modify HCP == 9 when LongHCP == 1: +0.334
+modify HCP == 9 when LongHCP == 2: +0.155
+modify HCP == 9 when LongHCP >= 3: -0.100
+
+modify HCP == 10 when LongHCP in 0 1: +0.581
+modify HCP == 10 when LongHCP == 2: +0.114
+modify HCP == 10 when LongHCP >= 3: -0.020

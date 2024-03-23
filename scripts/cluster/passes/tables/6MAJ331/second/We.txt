@@ -1,0 +1,53 @@
+# HCP<=3                  34    34   1.000   201     0   0.016
+# HCP==4                  51    50   0.980   151     0   0.006
+# HCP==5                  80    65   0.812   225     0   0.015
+# HCP==6                  93    71   0.763   254     0   0.003
+# HCP==7&LongHCPin0-2     53    47   0.887   102     0   0.164
+# HCP==7&LongHCPin3-4     65    27   0.415   177     0   0.022
+# HCP==7&LongHCP>=5       27     3   0.111   101     0   0.004
+# HCP==8&LongHCP==0        5     4   0.800    15     0   0.001
+# HCP==8&LongHCPin1-2     33    22   0.667    87     0   0.021
+# HCP==8&LongHCP>=5       77    11   0.143   142     0   0.049
+# HCP==8&LongHCPin3-4     68    26   0.382   190     0   0.264
+# HCP==9&LongHCP==0        5     5   1.000    15     0   0.001
+# HCP==9&LongHCPin1-4     89    35   0.393   211     0   0.409
+# HCP==9&LongHCP>=5       98     7   0.071   194     0   0.018
+# HCP==10&LongHCP<=2      21     4   0.190    71     0   0.014
+# HCP==10&LongHCPin3-5    76     8   0.105   202     0   0.169
+# HCP==10&LongHCP>=6      80     0   0.000   179     0   0.000
+# HCP==11&LongHCP<=2      15     2   0.133    33     0   0.039
+# HCP==11&LongHCP>=3     185     2   0.011   365     0   0.099
+# HCP>=12                813     0   0.000  1344     0   0.000
+#
+# Passes: 423, passouts 0 of 4259, hard error 1.314
+
+HCP <= 3: 1.000
+HCP == 4: 0.980
+HCP == 5: 0.812
+HCP == 6: 0.763
+HCP == 7: 0.531
+HCP == 8: 0.344
+HCP == 9: 0.245
+HCP == 10: 0.068
+HCP == 11: 0.020
+HCP >= 12: 0.000
+
+modify HCP == 7 when LongHCP in 0 2: +0.356
+modify HCP == 7 when LongHCP in 3 4: -0.116
+modify HCP == 7 when LongHCP >= 5: -0.420
+
+modify HCP == 8 when LongHCP == 0: +0.456
+modify HCP == 8 when LongHCP in 1 2: +0.323
+modify HCP == 8 when LongHCP in 3 4: +0.038
+modify HCP == 8 when LongHCP >= 5: -0.201
+
+modify HCP == 9 when LongHCP == 0: +0.755
+modify HCP == 9 when LongHCP in 1 4: +0.148
+modify HCP == 9 when LongHCP >= 5: -0.174
+
+modify HCP == 10 when LongHCP <= 2: +0.122
+modify HCP == 10 when LongHCP in 3 5: +0.037
+modify HCP == 10 when LongHCP >= 6: -0.068
+
+modify HCP == 11 when LongHCP <= 2: +0.113
+modify HCP == 11 when LongHCP >= 3: -0.009

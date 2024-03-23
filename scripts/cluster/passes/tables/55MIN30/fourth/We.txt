@@ -1,0 +1,20 @@
+# HCP<=6                   0     0   0.000    99     0   0.002
+# HCP==7                   0     0   0.000    32     0   0.001
+# HCP==8                   0     0   0.000    29     0   0.000
+# HCP==9                   0     0   0.000    27     0   0.014
+# HCP==10&ShortHCPin2-3    1     1   1.000    32     1   1.142
+# HCP==10&ShortHCPout2-3   0     0   0.000    21     0   0.030
+# HCP>=11                  0     0   0.000   153     0   0.000
+#
+# Passes: 1, passouts 1 of 393, hard error 0.189
+
+# Almost entirely synthetic
+HCP <= 6: 1.000
+HCP == 7: 1.000
+HCP == 8: 1.000
+HCP == 9: 0.500
+HCP == 10: 0.200
+HCP >= 11: 0.000
+
+modify HCP == 10 when ShortHCP in 2 3: +0.800
+modify HCP == 10 when ShortHCP notin 2 3: +0.000

@@ -1,0 +1,35 @@
+CCCClight <= 38: 0.999
+CCCClight == 39: 0.990
+CCCClight == 40: 0.968
+CCCClight == 41: 0.989
+CCCClight == 42: 0.829
+CCCClight == 43: 0.810
+CCCClight == 44: 0.741
+CCCClight == 45: 0.660
+CCCClight == 46: 0.056
+CCCClight == 47: 0.052
+CCCClight == 48: 0.049
+CCCClight == 49: 0.024
+CCCClight >= 50: 0.000
+
+modify CCCClight == 43 when controls <= 2: +0.046
+modify CCCClight == 43 when controls == 3: -0.009
+modify CCCClight == 43 when controls == 4: +0.005
+modify CCCClight == 43 when controls >= 5: -0.130
+
+modify CCCClight == 44 when controls <= 2: +0.131
+modify CCCClight == 44 when controls == 3: +0.078
+modify CCCClight == 44 when controls == 4: -0.048
+modify CCCClight == 44 when controls >= 5: -0.162
+
+modify CCCClight == 45 when controls <= 3: +0.036
+modify CCCClight == 45 when controls >= 4: -0.027
+
+modify CCCClight == 46 when controls <= 3: +0.035
+modify CCCClight == 46 when controls >= 4: -0.056
+
+modify CCCClight == 47 when controls <= 3: +0.034
+modify CCCClight == 47 when controls >= 4: -0.030
+
+modify CCCClight == 48 when controls <= 3: +0.044
+modify CCCClight == 48 when controls >= 4: -0.030

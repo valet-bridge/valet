@@ -1,0 +1,52 @@
+# HCP==0                  22    22   1.000    22     0   0.000
+# HCP==1                  38    36   0.947    38     0   0.000
+# HCP==2                  49    46   0.939    49     0   0.000
+# HCP==3                 107    97   0.907   107     0   0.000
+# HCP==4                 142   132   0.930   142     0   0.005
+# HCP==5                 218   196   0.899   218     0   0.004
+# HCP==6                 256   221   0.863   256     0   0.029
+# HCP==7                 284   254   0.894   284     0   0.113
+# HCP==8&Long12HCP<=3     61    57   0.934    61     0   0.007
+# HCP==8&Long12HCP>=4    331   296   0.894   331     1   1.086
+# HCP==9&Long12HCP<=3     34    32   0.941    34     1   0.748
+# HCP==9&Long12HCP>=4    398   348   0.874   398     2   4.487
+# HCP==10&controls<=2     72    59   0.819    72     0   0.639
+# HCP==10&controls>=3    343   238   0.694   343     2   3.753
+# HCP==11&controls>=4    168    11   0.065   168     2   0.219
+# HCP==11&controls<=1      4     0   0.000     4     0   0.000
+# HCP==11&controls==2     56    13   0.232    56     0   0.017
+# HCP==11&controls==3    132    21   0.159   132     1   0.948
+# HCP==12                387     2   0.005   387     0   0.121
+# HCP>=13               1258     1   0.001  1258     0   0.201
+#
+# Passes: 2082, passouts 9 of 4360, hard error 7.547
+
+HCP == 0: 1.000
+HCP == 1: 0.947
+HCP == 2: 0.939
+HCP == 3: 0.907
+HCP == 4: 0.930
+HCP == 5: 0.899
+HCP == 6: 0.863
+HCP == 7: 0.894
+HCP == 8: 0.901
+HCP == 9: 0.880
+HCP == 10: 0.716
+HCP == 11: 0.125
+HCP == 12: 0.005
+HCP >= 13: 0.001
+
+modify HCP == 8 when Long12HCP <= 3: +0.033
+modify HCP == 8 when Long12HCP >= 4: -0.007
+
+modify HCP == 9 when Long12HCP <= 3: +0.061
+modify HCP == 9 when Long12HCP >= 4: -0.006
+
+modify HCP == 10 when controls <= 2: +0.103
+modify HCP == 10 when controls >= 3: -0.022
+
+# First one is manual
+modify HCP == 11 when controls <= 1: -0.325
+modify HCP == 11 when controls == 2: +0.107
+modify HCP == 11 when controls == 3: +0.034
+modify HCP == 11 when controls >= 4: -0.060

@@ -1,0 +1,21 @@
+# HCP<=5                   8     6   0.750   125     0   0.012
+# HCPin6-8                27    12   0.444   212     0   0.033
+# HCP==9&spades==4        25     4   0.160    74     0   0.002
+# HCP==9&spades==5         5     0   0.000    46     0   0.000
+# HCP==10&spades==4        9     1   0.111    32     0   0.171
+# HCP==10&spades==5        4     0   0.000    38     0   0.000
+# HCP>=11                142     0   0.000   423     0   0.000
+#
+# Passes: 23, passouts 0 of 950, hard error 0.218
+
+HCP <= 5: 0.75
+HCP in 6 8: 0.444
+HCP == 9: 0.133
+HCP == 10: 0.077
+HCP >= 11: 0.00
+
+modify HCP == 9 when spades == 4: +0.027
+modify HCP == 9 when spades == 5: -0.133
+
+modify HCP == 10 when spades == 4: +0.034
+modify HCP == 10 when spades == 5: -0.133

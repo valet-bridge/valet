@@ -1,0 +1,13 @@
+# HCP<=9                   7     7   1.000  3066     7   4.330
+# HCP==10&ShortHCP<=1      1     0   0.000   389     0   0.000
+# HCP==10&ShortHCP>=2      2     1   0.500   248     1   1.440
+# HCP>=11                226     0   0.000  2765     0   0.000
+#
+# Passes: 8, passouts 8 of 6468, hard error 3.110
+
+HCP <= 9: 1.000
+HCP == 10: 0.333
+HCP >= 11: 0.000
+
+modify HCP == 10 when ShortHCP <= 1: -0.333
+modify HCP == 10 when ShortHCP >= 2: +0.167

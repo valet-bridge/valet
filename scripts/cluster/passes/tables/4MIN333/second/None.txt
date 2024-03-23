@@ -1,0 +1,32 @@
+CCCClight <= 39: 0.997
+CCCClight == 40: 0.977
+CCCClight == 41: 0.932
+CCCClight == 42: 0.824
+CCCClight == 43: 0.824
+CCCClight == 44: 0.759
+CCCClight == 45: 0.748
+CCCClight == 46: 1.000
+CCCClight == 47: 1.000
+CCCClight == 48: 0.062
+CCCClight == 49: 0.038
+CCCClight == 50: 0.000
+CCCClight == 51: 0.000
+CCCClight == 52: 0.003
+CCCClight == 53: 0.008
+CCCClight >= 54: 0.000
+
+modify CCCClight == 40 when Quicktricks <= 4: +0.003
+modify CCCClight == 40 when Quicktricks >= 5: -0.054
+
+modify CCCClight == 41 when Quicktricks <= 4: +0.006
+modify CCCClight == 41 when Quicktricks >= 5: -0.099
+
+modify CCCClight == 44 when Quicktricks <= 2: +0.056
+modify CCCClight == 44 when Quicktricks == 3: +0.097
+modify CCCClight == 44 when Quicktricks == 4: -0.031
+modify CCCClight == 44 when Quicktricks == 5: -0.017
+modify CCCClight == 44 when Quicktricks >= 6: -0.259
+
+modify CCCClight == 45 when Quicktricks <= 3: +0.059
+modify CCCClight == 45 when Quicktricks == 4: -0.072
+modify CCCClight == 45 when Quicktricks >= 5: -0.048

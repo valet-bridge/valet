@@ -1,0 +1,27 @@
+# HCP<=9                   4     4   1.000  4710     4   4.968
+# HCP==10&spades==1        1     1   1.000   241     1   0.981
+# HCP==10&spades>=3       13     8   0.615   647     8   4.498
+# HCP==11&spades==1        7     3   0.429   218     3   0.952
+# HCP==11&spades>=3       37     3   0.081   712     3   3.166
+# HCP==12&spades==1        2     2   1.000   167     2   0.357
+# HCP==12&spades>=3       32     1   0.031   566     1   0.835
+# HCP>=13                314     1   0.003  2610     1   0.000
+#
+# Passes: 23, passouts 23 of 9871, hard error 9.511
+
+HCP <= 9: 1.000
+HCP == 10: 0.643
+HCP == 11: 0.136
+HCP == 12: 0.088
+HCP >= 13: 0.000
+
+# All manual
+
+modify HCP == 10 when spades == 1: +0.100
+modify HCP == 10 when spades >= 3: -0.100
+
+modify HCP == 11 when spades == 1: +0.050
+modify HCP == 11 when spades >= 3: -0.050
+
+modify HCP == 12 when spades == 1: +0.050
+modify HCP == 12 when spades >= 3: -0.050

@@ -1,0 +1,5 @@
+# HCP>=0                  16     1   0.062    33     0   0.016
+#
+# Passes: 1, passouts 0, hard error 0.016
+
+HCP >= 0: 0.000

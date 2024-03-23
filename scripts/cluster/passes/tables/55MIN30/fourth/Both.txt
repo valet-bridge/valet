@@ -1,0 +1,10 @@
+# HCP<=9                   1     1   1.000   159     1   0.368
+# HCP>=10                 19     1   0.053   171     1   0.000
+#
+# Passes: 2, passouts 2 of 330, hard error 1.632
+
+# Too little data to understand the pass with HCP == 9.
+# Ignore a pass with 12 HCP.
+
+HCP <= 9: 1.000
+HCP >= 10: 0.000

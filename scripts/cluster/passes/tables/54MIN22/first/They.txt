@@ -1,0 +1,45 @@
+# HCP<=1                  68    67   0.985    68     0   0.000
+# HCPin2-5               578   562   0.972   578     0   0.006
+# HCP==6                 343   334   0.974   343     0   0.021
+# HCP==7                 366   352   0.962   366     0   0.017
+# HCP==8                 346   337   0.974   346     0   0.217
+# HCP==9&LongHCP<=3      160   156   0.975   160     0   0.494
+# HCP==9&LongHCP>=4      262   240   0.916   262     0   0.217
+# HCP==10&LongHCP<=3     152   133   0.875   152     0   0.428
+# HCP==10&LongHCP>=4     226   179   0.792   226     0   2.411
+# HCP==11&controls<=2     61    22   0.361    61     1   0.250
+# HCP==11&controls==3    132    39   0.295   132     0   0.408
+# HCP==11&controls==4    162    29   0.179   162     0   0.541
+# HCP==11&controls>=5     20     1   0.050    20     0   0.004
+# HCP==12&controls<=2     22     2   0.091    22     0   0.192
+# HCP==12&controls==3    119     3   0.025   119     0   0.057
+# HCP==12&controls>=4    174     1   0.006   174     0   0.024
+# HCP>=13               1105     0   0.000  1105     0   0.000
+#
+# Passes: 2457, passouts 1 of 4296, hard error 5.787
+
+HCP <= 1: 0.985
+HCP in 2 5: 0.972
+HCP == 6: 0.974
+HCP == 7: 0.962
+HCP == 8: 0.974
+HCP == 9: 0.938
+HCP == 10: 0.825
+HCP == 11: 0.243
+HCP == 12: 0.019
+HCP >= 13: 0.000
+
+modify HCP == 9 when LongHCP <= 3: +0.037
+modify HCP == 9 when LongHCP >= 4: -0.022
+
+modify HCP == 10 when LongHCP <= 3: +0.050
+modify HCP == 10 when LongHCP >= 4: -0.033
+
+modify HCP == 11 when controls <= 2: +0.118
+modify HCP == 11 when controls == 3: +0.052
+modify HCP == 11 when controls == 4: -0.064
+modify HCP == 11 when controls >= 5: -0.193
+
+modify HCP == 12 when controls <= 2: +0.072
+modify HCP == 12 when controls == 3: +0.006
+modify HCP == 12 when controls >= 4: -0.013

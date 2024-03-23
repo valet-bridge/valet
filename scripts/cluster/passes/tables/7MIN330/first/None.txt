@@ -1,0 +1,17 @@
+# HCP<=2                   6     5   0.833     6     0   0.000
+# HCPin3-5                22    16   0.727    22     0   0.000
+# HCPin6-7                43     9   0.209    43     0   0.000
+# HCPin8-9                57    16   0.281    57     0   0.001
+# HCP==10                 30     4   0.133    30     0   0.000
+# HCP>=11                138     1   0.007   138     0   0.000
+#
+# Passes: 51, passouts 0 of 296, hard error 0.001
+
+# Seems to be a pass with >= 14 HCP, ignore
+
+HCP <= 2: 0.833
+HCP in 3 5: 0.727
+HCP in 6 7: 0.209
+HCP in 8 9: 0.281
+HCP == 10: 0.133
+HCP >= 11: 0.000

@@ -1,0 +1,9 @@
+# HCP<=8                   1     1   1.000   428     1   0.121
+# HCP>=9                  23     0   0.000   570     0   0.000
+#
+# Passes: 1, passouts 1 of 998, hard error 0.879
+
+HCP <= 8: 1.000
+HCP >= 9: 0.000
+
+# Nothing to go on.
