@@ -7,6 +7,8 @@ use warnings;
 use Exporter;
 use v5.10;
 
+# https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3
+
 my %COUNTRIES = (
   Albania => "ALB", ALB => "ALB",
   Argentina => "ARG", ARG => "ARG",
@@ -20,7 +22,7 @@ my %COUNTRIES = (
   Belarus => "BLR", BLR => "BLR",
   Belgium => "BEL", BEL => "BEL",
   Bermuda => "BER", BER => "BER", # Not standard
-  "Bosnia & Herzegovina" => "BIH", BIH => "BIH",
+  "Bosnia & Herzegovina" => "BIH", Bosnia => "BIH", BIH => "BIH",
   Botswana => "BOT", BOT => "BOT", # Not standard
   Brazil => "BRA", BRA => "BRA",
   Bulgaria => "BUL", BUL => "BUL", # Not standard
@@ -71,6 +73,7 @@ my %COUNTRIES = (
   Liechtenstein => "LIE", LIE => "LIE",
   Lithuania => "LTU", LTU => "LTU",
   Luxembourg => "LUX", LUX => "LUX",
+  Macau => "MAC", MAC => "MAC",
   Madagascar => "MAD", MAD => "MAD", # Not standard
   Malaysia => "MAS", MAS => "MAS", # Not standard
   Malta => "MLT", MLT => "MLT",
@@ -83,8 +86,11 @@ my %COUNTRIES = (
   Morocco => "MAR", MAR => "MAR",
   Netherlands => "NED", NED => "NED", # Not standard
   "Netherlands Antilles" => "AHO", AHO => "AHO", # Not standard
+  "New Caledonia" => "NCL", NCL => "NCL",
   "New Guinea" => "PNG", PNG => "PNG",
   "New Zealand" => "NZL", NZL => "NZL",
+  "North Macedonia" => "NKD", NKD => "NKD",
+  "Northern Ireland" => "NIR", NIR => "NIR", # Unofficial
   Norway => "NOR", NOR => "NOR",
   Online => "ONL", ONL => "ONL", # Not standard
   Pakistan => "PAK", PAK => "PAK",
@@ -112,6 +118,7 @@ my %COUNTRIES = (
   Sweden => "SWE", SWE => "SWE",
   Switzerland => "SUI", SUI => "SUI", # Not standard
   Syria => "SYR", SYR => "SYR",
+  Tanzania => "TZA", TZA => "TZA",
   Thailand => "THA", THA => "THA",
   "Trinidad and Tobago" => "TRI", TRI => "TRI", # Not standard
   Tunisia => "TUN", TUN => "TUN",
