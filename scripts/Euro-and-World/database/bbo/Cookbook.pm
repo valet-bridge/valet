@@ -9,24 +9,31 @@ package Cookbook;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(
   %MERGE_ALIASES
-  %FIELD_ALIASES 
   %SPELL_ALIASES
   %COUNTRY_ALIASES
   %CITY_ALIASES
   %MONTH_ALIASES
   %WEEKDAY_ALIASES
   %ORDINAL_ALIASES
+  %NUMERAL_ALIASES
   %NAMED_TEAM_ALIASES
   %TOURNAMENT_ALIASES
+  %STAGE_ALIASES
+  %MODE_ALIASES
   %MONIKER_ALIASES
   %ORIGIN_ALIASES
+  %SPONSOR_ALIASES
+  %MEMORIAL_ALIASES
   %KILL_ALIASES
 );
 
 # Some words obviously belong together, and if their tokens
 # are separated early on, it is harder to keep them together.
 our %MERGE_ALIASES = (
-  Superleague => [ "super league", "sup league"],
+  EBL => ["E_B_L_"],
+
+  Eurochamp => ["eur champ"],
+  Superleague => [ "super league", "sup league", "superleague"],
   Bermudabowl => [ "bermuda bowl", "bb"],
   Venicecup => ["venice cup", "vc", "venice"], # I hope
   Nationscup => ["nations cup"],
@@ -41,9 +48,7 @@ our %MERGE_ALIASES = (
   Muratkilercioglu => ["murat kilercioglu"],
   Grandprix => ["grand prix"],
   Kalanitrophy => ["kalani trophy"],
-
-  Quarterfinal => ["quarter final", "quet final", "quartal final" ],
-  Knockout => ["knock out", "knock-out"],
+  Vitoteams => ["vito teams"],
 
   Interclub => ["inter club", "inter-club", "inter-clubs"],
   Interprovince => ["inter province", "inter-province",
@@ -53,48 +58,70 @@ our %MERGE_ALIASES = (
   Roundrobin => ["round robin", "roun robin", "round bobin",
     "round-robin", "r_robin", "r robin", "round roubin"],
 
+  Goancurry => ["goan curry"],
+  Stonecutters => ["stone cutters"],
+  Vestagder => ["vest-agder", "vest - agder"],
+  Heimdal => ["heimdal bk"],
+  Mohansicka => ["mohan sicka"],
+
+  GetImmo => ["get immo", "get-immo"],
+
+  Final => ["phase finale"],
+  Semifinal => ["meia final", "meias finais", 
+    "semi final", "semi-final", "semi finals", "semi-finals",
+    "demi-finale", "demi-finales", "1_2final", "semi <final"],
+  Quarterfinal => ["quarter final", "quarter finals",
+    "quarter-final", "quet final", "quartal final", "1_4final",
+    "round of 8"], # Error-prone: "1st Quarter Final" can be either
+  PO => ["play-off", "play off"],
+
+  Rof128 => ["round of 128"],
+  Rof64 => ["round of 64"],
+  Rof32 => ["round of 32"],
+  Rof18 => ["phase a 18"],
+  Rof16 => ["round of 16", "phase a 16"],
+  Rof12 => ["phase a 12"],
+  Knockout => ["knock out", "knock-out", "knockouts"],
+  Tiebreak => ["tiebreak", "tie", "extra boards", "extra time",
+    "extra stanza", "semifinals extra", "ot"],
+
   "U20" => ["u 20"],
   "U21" => ["under 21"],
   "U25" => ["u 25"],
   "U28" => ["under 28"],
 
-  EBL => ["E_B_L_"],
-  Eurochamp => ["eur champ"],
-
   BAM => ["b-a-m", "b-a-m-"],
 
-  of => ["out of"],
-);
-
-our %FIELD_ALIASES = (
-  ROUND => [qw(round rounds rouns rueda ruond rd riund rnd rds
-    tound tour runde runder rn r rond ronda ronud roudn roun
-    stanza stan stanzas stanzaq stranza)],
-  SEGMENT => [qw(segment seg segm segement segemt segmant segmen 
-    segmento segments segmetn segmnet segnment sgment segt sengemt
-    set)]
+  of => ["out of"]
 );
 
 our %SPELL_ALIASES = (
   Final => [qw(final fianl filnal fin finais finale finales finali 
-    finals finall finas fnal fnals f)],
+    finals finall finas fnal fnals fina f sinal)],
   SF => [qw(semifinal semif semifinals semifinale semifinali
     seminfinal semifinales semis semfin sfinal sfinals sf 
-    semifianls semýfýnal)],
+    semifianls semýfýnal sefi)],
   Semi => [qw(semi meia meias)],
   QF => [qw(qf quarterfinal quafin quarterf quarterfinals 
-    qfinal qfinals quaterfinal)],
+    qfinal qfinals quaterfinal ottavi)],
   RR => [qw(rr rrobin roundrobin)],
   PO => [qw(po playoff playoffs)],
   KO => [qw(ko elimination kostage knockout knockouts)],
+
+  Round => [qw(round rounds rouns rueda ruond rd riund rnd rds
+    tound tour runde runder rn r rond ronda ronud roudn roun
+    stanza stsnza stan stanzas stanzaq stranza)],
   Session => [qw(session serssion sesion sesión sesj sesjon sess
     sessió Sessión ses seksjon sesje sessie sesson sesssion sessions
-    sessão)],
+    sessão stage)],
   Section => [qw(section segssion seksjon sektion)],
-  Match => [qw(match mathc m kamp incontro matxh)],
+  Match => [qw(match mathc m kamp incontro matxh macth)],
+  Segment => [qw(segment seg segm segement segemt segmant segmen 
+    segmento segments segmetn segmnet segnment sgment segt sengemt
+    set part)],
   Quarter => [qw(quarter quaerter quater)],
 
-  Teams => [qw(teams team equipos team's lag teamd)],
+  Teams => [qw(teams team equipos team's lag teamd terms)],
   Pairs => [qw(pairs pair paýrs psirs parejas)],
   Individual => [qw(individual ind indiv indivual)],
 
@@ -102,29 +129,35 @@ our %SPELL_ALIASES = (
   Women => [qw(women woman wemen womans women's womens ladies ladies's
     damas)],
   Mixed => [qw(mixed mix mixte)],
-  Girls => [qw(girls)],
+  Girls => [qw(girls gir)],
+  Kids => [qw(kids)],
+
   Seniors => [qw(seniors senior seniors)],
   Juniors => [qw(juniors junior yunior)],
-  Schools => [qw(schools school)],
+  U28 => [qw(u28)],
+  U21 => [qw(u21)],
   Youngsters => [qw(youngsters yougerters youth youngster)],
+  Schools => [qw(schools school)],
 
-  Open => [qw(open o libres opain oper)],
+  Open => [qw(open o libres opain oper ope op)],
 
   Table => [qw(table)],
-  Boards => [qw(boards brds donnes)],
-  Group => [qw(group grup grp groups)],
+  Boards => [qw(boards board brds donnes spil)],
+  Group => [qw(group grup grp groups pool)],
 
   MP => [qw(matchpoints matchpoint machpoints macthpoints mpoints mp)],
   IMP => [qw(imp ýmp)],
   BAM => [qw(BAM)],
+  Patton => [qw(patton)],
 
   Qualifying => [qw(quailfy qual qualf qualfication quali qualif
     qualification qualifier qualify qualifying quallification qualy
-    qr qulification prelim preliminary pre pelim)],
-  Swiss => [qw(swiss sw swis)],
-  Trials => [qw(trials trial selectio)],
+    qr qulification prelim preliminary pre pelim
+    clasificacion clasificatoria)],
+  Swiss => [qw(swiss sw swis suisse)],
+  Trials => [qw(trials trial selectio selection)],
 
-  Of => [qw(of af off 0f av de)]
+  Of => [qw(of af off 0f av de olf pf from)]
 );
 
 our %COUNTRY_ALIASES = (
@@ -143,6 +176,7 @@ our %COUNTRY_ALIASES = (
   Malta => [qw(malta)],
   Monaco => [qw(monaco)],
   Netherlands => [qw(netherlands netherland)],
+  Norway => [qw(norway nor)],
   Pakistan => [qw(pakistan)],
   Scotland => [qw(scotland sco)],
   Turkey => [qw(turkey tur)],
@@ -190,40 +224,73 @@ our %WEEKDAY_ALIASES = (
 );
 
 our %ORDINAL_ALIASES = (
-  first => [qw(first)],
-  second => [qw(second segundo segunda)],
-  third => [qw(third)],
-  fourth => [qw(fourth)],
-  eighth => [qw(eighth)]
+  first => [qw(first 1rst 1er)],
+  second => [qw(second segundo segunda 2e)],
+  third => [qw(third tercer 3e)],
+  fourth => [qw(fourth 4rth 4e)],
+  eighth => [qw(eighth 8e)]
+);
+
+our %NUMERAL_ALIASES = (
+  '1' => [qw(one)],
+  '2' => [qw(two)],
+  '3' => [qw(three)],
+  '4' => [qw(four)],
+  '5' => [qw(five)],
+  '6' => [qw(six)],
+  '7' => [qw(seven)],
+  '8' => [qw(eight)]
+);
+
+our %ROMAN_ALIASES = (
+  '1' => [qw(i)],
+  '2' => [qw(ii)],
+  '3' => [qw(iii)],
+  '4' => [qw(iv)],
+  '5' => [qw(v)],
+  '6' => [qw(vi)],
+  '7' => [qw(vii)],
+  '8' => [qw(viii)],
+  '9' => [qw(ix)],
+  '10' => [qw(x)],
+  '11' => [qw(xi)],
+  '12' => [qw(xii)]
 );
 
 our %NAMED_TEAM_ALIASES = (
+  Ao => [qw(ao)],
   Baker => [qw(baker)],
   Bramley => [qw(bramley)],
   Daskalakis => [qw(daskalakis)],
   Cayne => [qw(cayne)],
   Delfour => [qw(delfour)],
   Doussot => [qw(doussot)],
+  DKI => [qw(dki)],
   Ekeblad => [qw(ekeblad)],
   Fireman => [qw(fireman)],
   Goldman => [qw(goldman)],
+  Grabel => [qw(grabel)],
   Gromov => [qw(gromov)],
   Gursel => [qw(gursel)],
+  Heimdal => [qw(heimdal)],
+  Hollman => [qw(hollman)],
   Jacobs => [qw(jacobs)],
+  Kasday => [qw(kasday)],
   Kasle => [qw(kasle)],
   Kolata => [qw(kolata)],
+  Lall => [qw(lall)],
   Lavazza => [qw(lavazza)],
   Lynch => [qw(lynch)],
   Mahaffey => [qw(mahaffey)],
   Milner => [qw(milner)],
-  Murat => [qw(murat)],
-  Mohan => [qw(mohan)],
   Moss => [qw(moss)],
   Narasimhan => [qw(narasimhan)],
   Nickell => [qw(nickell)],
   Robinson => [qw(robinson robinso)],
   Schwartz => [qw(schwartz)],
   Strul => [qw(strul)],
+  Sulsel => [qw(sulsel)],
+  Weed => [qw(weed)],
   Zimmermann => [qw(zimmermann)]
 );
 
@@ -233,9 +300,29 @@ our %TOURNAMENT_ALIASES = (
   Olympiad => [qw(olympiad olympiads)],
 );
 
+our %STAGE_ALIASES = (
+  Final => [qw(final)],
+  Semifinal => [qw(semifinal)],
+  Quarterfinal => [qw(quarterfinal)],
+  Rof12 => [qw(rof12)],
+  Rof16 => [qw(rof16)],
+  Rof18 => [qw(rof18)],
+  Rof32 => [qw(rof32)],
+  Rof64 => [qw(rof64)],
+  Rof128 => [qw(rof128)]
+);
+
+our %MODE_ALIASES = (
+  Danish => [qw(danish)],
+  Monrad => [qw(monrad)],
+  Swiss => [qw(swiss)],
+  Barometer => [qw(barometer)]
+);
+
 our %MONIKER_ALIASES = (
   "Bermuda Bowl" => [qw(bermudabowl bermuda)],
   "Venice Cup" => [qw(venicecup)],
+  "D'Orsi Cup" => [qw(dosb)],
   "Ruia Gold" => [qw(ruiagold)],
   "Ruia Silver" => [qw(ruiasilver)],
   "Nations Cup" => [qw(nationscup)],
@@ -245,7 +332,8 @@ our %MONIKER_ALIASES = (
   "FX Securities Cup" => [qw(fxcup)],
   "Serdica Cup" => [qw(serdicacup)],
   "Gro's Supercup" => [qw(grocup)],
-  "National Open Teams" => [qw(not)]
+  "National Open Teams" => [qw(not)],
+  "Murat Kilercioglu" => [qw(muratkilercioglu)]
 );
 
 our %ORIGIN_ALIASES = (
@@ -253,13 +341,27 @@ our %ORIGIN_ALIASES = (
   Region => [qw(interregion)],
   City => [qw(intercity)],
   Club => [qw(interclub)],
-  University => [qw(university)]
+  University => [qw(university univ)],
+  Transnational => [qw(transnational transnation trans 
+    transnatio transnat)]
+);
+
+our %SPONSOR_ALIASES = (
+  SportAccord => [qw(sportaccord)],
+  MULTICOMS => [qw(multicoms)]
+);
+
+our %MEMORIAL_ALIASES = (
+  "Mohan Sicka" => [qw(mohansicka)]
 );
 
 our %KILL_ALIASES = (
   Kill => [qw(Untitled
     BBO1o BBO2o BBO3o BBVG BBOVG 
-    BBO1 BBO2 BBO3 BBO4)]
+    BBO BBO1 BBO2 BBO3 BBO4
+    fluff reloaded 12b
+    champion championship champions champion's championship's
+    man mandarin =)]
 );
 
 1;
