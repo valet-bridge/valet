@@ -29,6 +29,7 @@ open my $fh, '<', $file or die "Cannot read tfile: $!";
 my %chunk;
 my $line;
 my $lno = 0;
+my $unknown = 0;
 
 while ($line = <$fh>)
 {
@@ -62,7 +63,7 @@ while ($line = <$fh>)
     }
     elsif ($1 eq 'EVENT')
     {
-      if ($chunk{BBONO} == 9965)
+      if ($chunk{BBONO} == 3283)
       {
         print "HERE\n";
       }
@@ -79,6 +80,7 @@ while ($line = <$fh>)
 }
 
 close $fh;
+print "TOTAL $unknown\n";
 
 
 sub parse_teams
@@ -313,7 +315,25 @@ sub unmash
   for my $i (reverse 0 .. $#$list_ref)
   {
     my $part = $list_ref->[$i];
-    if ($part =~ /^(\d+)of(\d+)$/i)
+    if ($part =~ /^([^0-9]+)(\d+)$/)
+    {
+      # session1, and in general letters followed by only digits.
+      my ($tag, $n) = ($1, $2);
+      splice(@$list_ref, $i, 0, ('') x 2);
+      $list_ref->[$i  ] = $tag;
+      $list_ref->[$i+1] = '|';
+      $list_ref->[$i+2] = $n;
+    }
+    elsif ($part =~ /^(\d+)([A-Fa-f])$/)
+    {
+      # 13A, and in general digits followed by a "small" letter.
+      my ($n, $letter) = ($1, $2);
+      splice(@$list_ref, $i, 0, ('') x 2);
+      $list_ref->[$i  ] = $n;
+      $list_ref->[$i+1] = '|';
+      $list_ref->[$i+2] = $letter;
+    }
+    elsif ($part =~ /(\d+)of(\d+)\b/i)
     {
       # 2of3
       my ($n1, $n2) = ($1, $2);
@@ -323,25 +343,6 @@ sub unmash
       $list_ref->[$i+2] = 'of';
       $list_ref->[$i+3] = '|';
       $list_ref->[$i+4] = $n2;
-    }
-    elsif ($part =~ /^of(\d+)$/i)
-    {
-      # of3
-      my $n2 = $1;
-      splice(@$list_ref, $i, 0, ('') x 2);
-      $list_ref->[$i  ] = 'of';
-      $list_ref->[$i+1] = '|';
-      $list_ref->[$i+2] = $n2;
-    }
-    elsif ($part =~ /^([^0-9]+)(\d+)$/ &&
-      defined $FIX_HASH{lc($1)}{VALUE})
-    {
-      # session1
-      my ($tag, $n) = ($1, $2);
-      splice(@$list_ref, $i, 0, ('') x 2);
-      $list_ref->[$i  ] = $FIX_HASH{lc($1)}{VALUE};
-      $list_ref->[$i+1] = '|';
-      $list_ref->[$i+2] = $n;
     }
     elsif ($part =~ /^r(\d+)t(\d+)$/i)
     {
@@ -456,8 +457,11 @@ sub kill_studied
         # From the front
         splice(@$list_ref, $i, 2);
       }
-      elsif ($list_ref->[$i-1]{VALUE} eq 'SPACE' &&
-             $list_ref->[$i+1]{VALUE} eq 'SPACE')
+      elsif (($list_ref->[$i-1]{VALUE} eq 'SPACE' ||
+              $list_ref->[$i-1]{VALUE} eq 'ARTIFICIAL') &&
+             ($list_ref->[$i+1]{VALUE} eq 'SPACE' ||
+              $list_ref->[$i+1]{VALUE} eq 'UNDERSCORE' ||
+              $list_ref->[$i+1]{VALUE} eq 'ARTIFICIAL'))
       {
         # Surrounded by spaces, so kill one of them.
         splice(@$list_ref, $i, 2);
@@ -500,6 +504,7 @@ sub study_part
   return 0 if is_year($part, $study_ref);
 
   print "UNKNOWN $part\n";
+  $unknown++;
   $study_ref->{CATEGORY} = 'UNKNOWN';
   $study_ref->{VALUE} = $part;
   return 0;
