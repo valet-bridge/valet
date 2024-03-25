@@ -62,9 +62,9 @@ while ($line = <$fh>)
     }
     elsif ($1 eq 'EVENT')
     {
-      if ($chunk{BBONO} == 26502)
+      if ($chunk{BBONO} == 9965)
       {
-        # print "HERE\n";
+        print "HERE\n";
       }
 
       study_event($2, \%chunk);
@@ -334,12 +334,12 @@ sub unmash
       $list_ref->[$i+2] = $n2;
     }
     elsif ($part =~ /^([^0-9]+)(\d+)$/ &&
-      defined $FIX_HASH{lc($1)})
+      defined $FIX_HASH{lc($1)}{VALUE})
     {
       # session1
       my ($tag, $n) = ($1, $2);
       splice(@$list_ref, $i, 0, ('') x 2);
-      $list_ref->[$i  ] = $FIX_HASH{lc($1)};
+      $list_ref->[$i  ] = $FIX_HASH{lc($1)}{VALUE};
       $list_ref->[$i+1] = '|';
       $list_ref->[$i+2] = $n;
     }
@@ -528,10 +528,6 @@ sub study_event
     }
   }
 
-  if ($kill_flag)
-  {
-    # TODO
-    kill_studied(\@studied);
-  }
+  kill_studied(\@studied) if $kill_flag;
 }
 

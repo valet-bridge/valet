@@ -87,7 +87,6 @@ my %MERGE_ALIASES = (
   Goancurry => ["goan curry"],
   Stonecutters => ["stone cutters"],
   Vestagder => ["vest-agder", "vest - agder"],
-  Heimdal => ["heimdal bk"],
 
   # AGE
   "U20" => ["u 20"],
