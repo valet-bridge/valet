@@ -15,57 +15,6 @@ use Cookbook;
 # 3. Split TEAMS into TEAM1, TEAM2 when there are (real) teams.
 # 4. Try to parse the event string in detail.
 
-my %MERGE_SUBS;
-reverse_aliases(\%MERGE_ALIASES, \%MERGE_SUBS);
-
-my %SPELL_SUBS;
-reverse_aliases(\%SPELL_ALIASES, \%SPELL_SUBS);
-
-my %COUNTRY_SUBS;
-reverse_aliases(\%COUNTRY_ALIASES, \%COUNTRY_SUBS);
-
-my %CITY_SUBS;
-reverse_aliases(\%CITY_ALIASES, \%CITY_SUBS);
-
-my %MONTH_SUBS;
-reverse_aliases(\%MONTH_ALIASES, \%MONTH_SUBS);
-
-my %WEEKDAY_SUBS;
-reverse_aliases(\%WEEKDAY_ALIASES, \%WEEKDAY_SUBS);
-
-my %ORDINAL_SUBS;
-reverse_aliases(\%ORDINAL_ALIASES, \%ORDINAL_SUBS);
-
-my %NUMERAL_SUBS;
-reverse_aliases(\%NUMERAL_ALIASES, \%NUMERAL_SUBS);
-
-my %NAMED_TEAM_SUBS;
-reverse_aliases(\%NAMED_TEAM_ALIASES, \%NAMED_TEAM_SUBS);
-
-my %TOURNAMENT_SUBS;
-reverse_aliases(\%TOURNAMENT_ALIASES, \%TOURNAMENT_SUBS);
-
-my %STAGE_SUBS;
-reverse_aliases(\%STAGE_ALIASES, \%STAGE_SUBS);
-
-my %MODE_SUBS;
-reverse_aliases(\%MODE_ALIASES, \%MODE_SUBS);
-
-my %MONIKER_SUBS;
-reverse_aliases(\%MONIKER_ALIASES, \%MONIKER_SUBS);
-
-my %ORIGIN_SUBS;
-reverse_aliases(\%ORIGIN_ALIASES, \%ORIGIN_SUBS);
-
-my %SPONSOR_SUBS;
-reverse_aliases(\%SPONSOR_ALIASES, \%SPONSOR_SUBS);
-
-my %MEMORIAL_SUBS;
-reverse_aliases(\%MEMORIAL_ALIASES, \%MEMORIAL_SUBS);
-
-my %KILL_SUBS;
-reverse_aliases(\%KILL_ALIASES, \%KILL_SUBS);
-
 my @FIELDS = qw(BBONO TITLE MONIKER DATE LOCATION EVENT 
   SEGMENT ROUND COUNTER
   RESTRICTION_ORIGIN FORM GENDER AGE
@@ -113,9 +62,9 @@ while ($line = <$fh>)
     }
     elsif ($1 eq 'EVENT')
     {
-      if ($chunk{BBONO} == 10534)
+      if ($chunk{BBONO} == 26502)
       {
-        print "HERE\n";
+        # print "HERE\n";
       }
 
       study_event($2, \%chunk);
@@ -130,6 +79,25 @@ while ($line = <$fh>)
 }
 
 close $fh;
+
+
+sub parse_teams
+{
+  my ($text, $cref) = @_;
+
+  if ($text =~ /(.*) vs. (.*)/)
+  {
+    my ($team1, $team2) = ($1, $2);
+    $team1 =~ s/\(\d+\)\s*$//;
+    $team2 =~ s/\(\d+\)\s*$//;
+    $chunk{TEAM1} = $team1;
+    $chunk{TEAM2} = $team2;
+  }
+  else
+  {
+    print "Can't parse team line $text\n";
+  }
+}
 
 
 sub print_chunk
@@ -147,124 +115,70 @@ sub print_chunk
 }
 
 
-sub reverse_aliases
-{
-  my ($aliases_ref, $subst_ref) = @_;
-  for my $key (keys %$aliases_ref)
-  {
-    for my $alias (@{$aliases_ref->{$key}})
-    {
-      $subst_ref->{lc($alias)} = $key;
-    }
-  }
-}
-
-
 sub is_separator
 {
   my ($part, $study_ref) = @_;
 
   if ($part =~ /^\s+$/)
   {
-    $study_ref->{CLASS} = 'SEPARATOR';
+    $study_ref->{CATEGORY} = 'SEPARATOR';
     $study_ref->{VALUE} = 'SPACE';
     return 1;
   }
   elsif ($part eq '.')
   {
-    $study_ref->{CLASS} = 'SEPARATOR';
+    $study_ref->{CATEGORY} = 'SEPARATOR';
     $study_ref->{VALUE} = 'DOT';
     return 1;
   }
   elsif ($part eq ':')
   {
-    $study_ref->{CLASS} = 'SEPARATOR';
+    $study_ref->{CATEGORY} = 'SEPARATOR';
     $study_ref->{VALUE} = 'COLON';
     return 1;
   }
   elsif ($part eq ';')
   {
-    $study_ref->{CLASS} = 'SEPARATOR';
+    $study_ref->{CATEGORY} = 'SEPARATOR';
     $study_ref->{VALUE} = 'SEMICOLON';
     return 1;
   }
   elsif ($part eq '-')
   {
-    $study_ref->{CLASS} = 'SEPARATOR';
+    $study_ref->{CATEGORY} = 'SEPARATOR';
     $study_ref->{VALUE} = 'DASH';
     return 1;
   }
   elsif ($part eq '_')
   {
-    $study_ref->{CLASS} = 'SEPARATOR';
+    $study_ref->{CATEGORY} = 'SEPARATOR';
     $study_ref->{VALUE} = 'UNDERSCORE';
     return 1;
   }
   elsif ($part eq '/')
   {
-    $study_ref->{CLASS} = 'SEPARATOR';
+    $study_ref->{CATEGORY} = 'SEPARATOR';
     $study_ref->{VALUE} = 'SLASH';
     return 1;
   }
   elsif ($part eq '(')
   {
-    $study_ref->{CLASS} = 'SEPARATOR';
+    $study_ref->{CATEGORY} = 'SEPARATOR';
     $study_ref->{VALUE} = 'LEFT_PAREN';
     return 1;
   }
   elsif ($part eq ')')
   {
-    $study_ref->{CLASS} = 'SEPARATOR';
+    $study_ref->{CATEGORY} = 'SEPARATOR';
     $study_ref->{VALUE} = 'RIGHT_PAREN';
     return 1;
   }
   elsif ($part eq '|')
   {
     # Artificial separator made when unmashing.
-    $study_ref->{CLASS} = 'SEPARATOR';
+    $study_ref->{CATEGORY} = 'SEPARATOR';
     $study_ref->{VALUE} = 'ARTIFICIAL';
     return 1;
-  }
-  else
-  {
-    return 0;
-  }
-}
-
-
-sub is_capital_letter
-{
-  my ($part, $study_ref) = @_;
-
-  if ($part =~ /^[A-Z]$/)
-  {
-    $study_ref->{CLASS} = 'LETTER';
-    $study_ref->{VALUE} = $part;
-    return 1;
-  }
-  else
-  {
-    return 0;
-  }
-}
-
-
-sub is_year
-{
-  my ($part, $study_ref) = @_;
-
-  if ($part =~ /^\d\d\d\d$/)
-  {
-    if ($part >= 1900 && $part <= 2100)
-    {
-      $study_ref->{CLASS} = 'YEAR';
-      $study_ref->{VALUE} = $part;
-      return 1;
-    }
-    else
-    {
-      die "Not a year? $part";
-    }
   }
   else
   {
@@ -280,7 +194,7 @@ sub is_small_integer
   # Up to 100
   if ($part =~ /^\d+$/ && $part >= 0 && $part < 100)
   {
-    $study_ref->{CLASS} = 'SMALL_INT';
+    $study_ref->{CATEGORY} = 'NUMERAL';
     $part =~ s/^0+//; # Remove leading zeroes
     $study_ref->{VALUE} = $part;
     return 1;
@@ -291,15 +205,9 @@ sub is_small_integer
     my $n = $1;
     $n =~ s/^0+//; # Remove leading zeroes
 
-    $study_ref->{CLASS} = 'SMALL_INT';
+    $study_ref->{CATEGORY} = 'NUMERAL';
     $study_ref->{VALUE} = $n;
     return 1;
-  }
-  elsif (defined $NUMERAL_SUBS{lc($part)})
-  {
-    # third
-    $study_ref->{CLASS} = 'SMALL_INT';
-    $study_ref->{VALUE} = $NUMERAL_SUBS{lc($part)};
   }
   else
   {
@@ -324,7 +232,7 @@ sub is_small_ordinal
     my $ord = $1;
     if ($ord >= 0 && $ord < 100)
     {
-      $study_ref->{CLASS} = 'ORDINAL';
+      $study_ref->{CATEGORY} = 'ORDINAL';
       $ord =~ s/^0+//; # Remove leading zeroes
       $study_ref->{VALUE} = $ord;
       return 1;
@@ -341,15 +249,39 @@ sub is_small_ordinal
 }
 
 
-sub is_in_hash
+sub is_capital_letter
 {
-  my ($part, $hash_ref, $tag, $study_ref) = @_;
+  my ($part, $study_ref) = @_;
 
-  if (defined $hash_ref->{lc($part)})
+  if ($part =~ /^[A-Z]$/)
   {
-    $study_ref->{CLASS} = $tag;
+    $study_ref->{CATEGORY} = 'LETTER';
     $study_ref->{VALUE} = $part;
     return 1;
+  }
+  else
+  {
+    return 0;
+  }
+}
+
+
+sub is_year
+{
+  my ($part, $study_ref) = @_;
+
+  if ($part =~ /^\d\d\d\d$/)
+  {
+    if ($part >= 1900 && $part <= 2100)
+    {
+      $study_ref->{CATEGORY} = 'YEAR';
+      $study_ref->{VALUE} = $part;
+      return 1;
+    }
+    else
+    {
+      die "Not a year? $part";
+    }
   }
   else
   {
@@ -363,9 +295,9 @@ sub mash
   my $text = pop;
 
   my $res = $text;
-  for my $key (keys %MERGE_SUBS)
+  for my $key (keys %MERGE_HASH)
   {
-    $res =~s/\b$key\b/$MERGE_SUBS{$key}/gi;
+    $res =~s/\b$key\b/$MERGE_HASH{$key}/gi;
   }
   return $res;
 }
@@ -402,12 +334,12 @@ sub unmash
       $list_ref->[$i+2] = $n2;
     }
     elsif ($part =~ /^([^0-9]+)(\d+)$/ &&
-      defined $SPELL_SUBS{lc($1)})
+      defined $FIX_HASH{lc($1)})
     {
       # session1
       my ($tag, $n) = ($1, $2);
       splice(@$list_ref, $i, 0, ('') x 2);
-      $list_ref->[$i  ] = $SPELL_SUBS{lc($1)};
+      $list_ref->[$i  ] = $FIX_HASH{lc($1)};
       $list_ref->[$i+1] = '|';
       $list_ref->[$i+2] = $n;
     }
@@ -424,6 +356,42 @@ sub unmash
       $list_ref->[$i+4] = 'Table';
       $list_ref->[$i+5] = '|';
       $list_ref->[$i+6] = $table;
+    }
+    elsif ($part =~ /^r(\d+)t(\d+)([abcd])$/i)
+    {
+      # R10T1A
+      my ($round, $table, $group) = ($1, $2, $3);
+      $round =~ s/^0+//; # Remove leading zeroes
+      splice(@$list_ref, $i, 0, ('') x 10);
+      $list_ref->[$i  ] = 'Round';
+      $list_ref->[$i+1] = '|';
+      $list_ref->[$i+2] = $round;
+      $list_ref->[$i+3] = '|';
+      $list_ref->[$i+4] = 'Table';
+      $list_ref->[$i+5] = '|';
+      $list_ref->[$i+6] = $table;
+      $list_ref->[$i+7] = '|';
+      $list_ref->[$i+8] = 'Group';
+      $list_ref->[$i+9] = '|';
+      $list_ref->[$i+10] = $group;
+    }
+    elsif ($part =~ /^r(\d+)t([abcd])(\d+)$/i)
+    {
+      # R10T1A
+      my ($round, $group, $table) = ($1, $2, $3);
+      $round =~ s/^0+//; # Remove leading zeroes
+      splice(@$list_ref, $i, 0, ('') x 10);
+      $list_ref->[$i  ] = 'Round';
+      $list_ref->[$i+1] = '|';
+      $list_ref->[$i+2] = $round;
+      $list_ref->[$i+3] = '|';
+      $list_ref->[$i+4] = 'Table';
+      $list_ref->[$i+5] = '|';
+      $list_ref->[$i+6] = $table;
+      $list_ref->[$i+7] = '|';
+      $list_ref->[$i+8] = 'Group';
+      $list_ref->[$i+9] = '|';
+      $list_ref->[$i+10] = $group;
     }
     elsif ($part =~ /^t(\d+)$/i)
     {
@@ -447,7 +415,9 @@ sub unmash
       $list_ref->[$i+5] = '|';
       $list_ref->[$i+6] = $round;
     }
-    elsif ($part =~ /^(\d\d)(.+)$/ && defined $MONTH_SUBS{lc($2)})
+    elsif ($part =~ /^(\d\d)(.+)$/ && 
+      defined $FIX_HASH{lc($2)}{CATEGORY} &&
+      $FIX_HASH{lc($2)}{CATEGORY} eq 'MONTH')
     {
       # 10Jan
       # We could in principle remember that the day and month go 
@@ -456,13 +426,13 @@ sub unmash
       splice(@$list_ref, $i, 0, ('') x 2);
       $list_ref->[$i  ] = $day;
       $list_ref->[$i+1] = '|';
-      $list_ref->[$i+2] = $MONTH_SUBS{lc($2)};
+      $list_ref->[$i+2] = $month;
     }
   }
 }
 
 
-sub kill_part
+sub kill_studied
 {
   my ($list_ref) = @_;
 
@@ -474,7 +444,7 @@ sub kill_part
     next unless $i <= $#$list_ref; 
 
     my $part = $list_ref->[$i];
-    if (defined $KILL_SUBS{lc($part)})
+    if ($part->{CATEGORY} eq 'KILL')
     {
       if ($i == $#$list_ref)
       {
@@ -486,18 +456,18 @@ sub kill_part
         # From the front
         splice(@$list_ref, $i, 2);
       }
-      elsif ($list_ref->[$i-1] =~ /^\s+$/ &&
-          $list_ref->[$i+1] =~ /^\s+$/)
+      elsif ($list_ref->[$i-1]{VALUE} eq 'SPACE' &&
+             $list_ref->[$i+1]{VALUE} eq 'SPACE')
       {
         # Surrounded by spaces, so kill one of them.
         splice(@$list_ref, $i, 2);
       }
-      elsif ($list_ref->[$i-1] eq '(' &&
-          $list_ref->[$i+1] eq ')')
+      elsif ($list_ref->[$i-1]{VALUE} eq 'LEFT_PAREN' &&
+             $list_ref->[$i+1]{VALUE} eq 'RIGHT_PAREN')
       {
         # Surrounded by parentheses.
         splice(@$list_ref, $i, 2);
-        $list_ref->[$i-1] = ' ';
+        $list_ref->[$i-1]{VALUE} = 'SPACE';
       }
       else
       {
@@ -510,37 +480,29 @@ sub kill_part
 
 sub study_part
 {
+  # Returns 1 if it is a kill.
+
   my ($part, $study_ref) = @_;
 
   return if is_separator($part, $study_ref);
-  return if is_capital_letter($part, $study_ref);
 
-  my $lc_part = lc($part);
-  if (defined $SPELL_SUBS{$lc_part})
+  my $fix = $FIX_HASH{lc($part)};
+  if (defined $fix->{CATEGORY})
   {
-    $study_ref->{KEYWORD} = $SPELL_SUBS{$lc_part};
-    return;
+    $study_ref->{CATEGORY} = $fix->{CATEGORY};
+    $study_ref->{VALUE} = $fix->{VALUE};
+    return ($fix->{CATEGORY} eq 'KILL');
   }
 
-  return if is_year($part, $study_ref);
-  return if is_small_integer($part, $study_ref);
-  return if is_small_ordinal($part, $study_ref);
-  return if is_in_hash($part, \%NAMED_TEAM_SUBS, 'NAMED_TEAM', $study_ref);
-  return if is_in_hash($part, \%MONTH_SUBS, 'MONTH', $study_ref);
-  return if is_in_hash($part, \%COUNTRY_SUBS, 'COUNTRY', $study_ref);
-  return if is_in_hash($part, \%CITY_SUBS, 'CITY', $study_ref);
-  return if is_in_hash($part, \%WEEKDAY_SUBS, 'WEEKDAY', $study_ref);
-  return if is_in_hash($part, \%ORDINAL_SUBS, 'ORDINAL', $study_ref);
-  return if is_in_hash($part, \%TOURNAMENT_SUBS, 'TTYPE', $study_ref);
-  return if is_in_hash($part, \%MONIKER_SUBS, 'MONIKER', $study_ref);
-  return if is_in_hash($part, \%ORIGIN_SUBS, 'RESTRICTION_ORIGIN', 
-    $study_ref);
-  return if is_in_hash($part, \%STAGE_SUBS, 'STAGE', $study_ref);
-  return if is_in_hash($part, \%MODE_SUBS, 'MODE', $study_ref);
-  return if is_in_hash($part, \%SPONSOR_SUBS, 'SPONSOR', $study_ref);
-  return if is_in_hash($part, \%MEMORIAL_SUBS, 'MEMORIAL', $study_ref);
+  return 0 if is_small_integer($part, $study_ref);
+  return 0 if is_small_ordinal($part, $study_ref);
+  return 0 if is_capital_letter($part, $study_ref);
+  return 0 if is_year($part, $study_ref);
 
   print "UNKNOWN $part\n";
+  $study_ref->{CATEGORY} = 'UNKNOWN';
+  $study_ref->{VALUE} = $part;
+  return 0;
 }
 
 
@@ -553,33 +515,23 @@ sub study_event
   my $mashed = mash($text);
 
   my @parts = grep {$_ ne ''} split /([.\-_:;\/\(\)]|\s+)/, $mashed;
-
   unmash(\@parts);
-  kill_part(\@parts);
 
   my @studied;
+  my $kill_flag = 0;
+
   for my $i (0 .. $#parts)
   {
-    study_part($parts[$i], \%{$studied[$i]});
+    if (study_part($parts[$i], \%{$studied[$i]}))
+    {
+      $kill_flag = 1;
+    }
   }
-}
 
-
-sub parse_teams
-{
-  my ($text, $cref) = @_;
-
-  if ($text =~ /(.*) vs. (.*)/)
+  if ($kill_flag)
   {
-    my ($team1, $team2) = ($1, $2);
-    $team1 =~ s/\(\d+\)\s*$//;
-    $team2 =~ s/\(\d+\)\s*$//;
-    $chunk{TEAM1} = $team1;
-    $chunk{TEAM2} = $team2;
-  }
-  else
-  {
-    print "Can't parse team line $text\n";
+    # TODO
+    kill_studied(\@studied);
   }
 }
 
