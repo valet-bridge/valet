@@ -10,6 +10,8 @@ our @ISA = qw(Exporter);
 our @EXPORT = qw(
   %MERGE_HASH
   %FIX_HASH
+  @PEEL_FRONT
+  @PEEL_BACK
 );
 
 # This merge gets executed first of all.
@@ -53,7 +55,7 @@ my %MERGE_ALIASES = (
 
   # MOVEMENT
   Roundrobin => ["round robin", "roun robin", "round bobin",
-    "round-robin", "r_robin", "r robin", "round roubin"],
+    "round-robin", "r_robin", "r robin", "round roubin", "rrobin"],
 
   # ORIGIN
   Interclub => ["inter club", "inter-club", "inter-clubs"],
@@ -82,7 +84,8 @@ my %MERGE_ALIASES = (
   Rof12 => ["phase a 12"],
   Knockout => ["knock out", "knock-out"],
   Tiebreak => ["extra boards", "extra time", "extra stanza", 
-    "semifinals extra", "tie break", "tie reak"],
+    "semifinals extra", "tie break", "tie reak", "-tie break"],
+  "Second half" => ["second ha"],
 
   # SCORING
   BAM => ["b-a-m", "b-a-m-"],
@@ -93,18 +96,23 @@ my %MERGE_ALIASES = (
   Vestagder => ["vest-agder", "vest - agder"],
 
   # AGE
-  "U20" => ["u 20"],
-  "U21" => ["under 21"],
-  "U25" => ["u 25"],
-  "U28" => ["under 28"],
+  U20 => ["u 20"],
+  U21 => ["under 21"],
+  U25 => ["u 25"],
+  U28 => ["under 28"],
 
   # GENDER
 
   # COUNTRY, CITY, MONTH, WEEKDAY, ORDINAL, NUMERAL, ROMAN: none
-  "fifth" => ["5 eme"],
+  Guangdong => [],
+  fifth => ["5 eme"],
 
   # PARTICLE
-  of => ["out of"]
+  of => ["out of"],
+  of5 => ["0f5"], # Typo
+  '()' => ['(\+2)'], # Uninteresting
+  "first half" => ["1mt", "1emt"],
+  "second half" => ["2mt", "2emt"]
 );
 
 
@@ -161,6 +169,7 @@ our %FIX_ALIASES =
 
   ORGANIZER =>
   {
+    EBL => [qw(ebl)],
   },
     
   TOURNAMENT =>
@@ -203,13 +212,12 @@ our %FIX_ALIASES =
       qualification qualifier qualify quallification qualy
       qr qulification prelim preliminary pre pelim
       clasificacion clasificatoria)],
-    Knockout => [qw(knock knockouts)],
-    Tiebreak => [qw(tie ot)]
+    Knockout => [qw(knock knockouts)]
   },
 
   FORM =>
   {
-    Teams => [qw(team equipos team's lag teamd terms)],
+    Teams => [qw(team equipos team's lag teamd terms tm)],
     Pairs => [qw(pair paýrs psirs parejas)],
     Individual => [qw(ind indiv indivual)]
   },
@@ -228,6 +236,8 @@ our %FIX_ALIASES =
     Playoff => [qw(po playoff playoffs)],
     "Knock-out" => [qw(ko elimination kostage knockout knockouts)],
     PreQF => [qw(pqf)],
+    Tiebreak => [qw(tie ot)],
+    Consolation => [qw(conso)],
 
     Round => [qw(rounds rouns rueda ruond rd riund rnd rds ound
       tound tour runde runder rn r rond ronda ronud roudn roun turno)],
@@ -246,6 +256,7 @@ our %FIX_ALIASES =
     Quarter => [qw(quaerter quater qtr)],
     Place => [qw(puesto)],
 
+    Rof => [],
     Rof12 => [],
     Rof16 => [],
     Rof18 => [],
@@ -327,7 +338,8 @@ our %FIX_ALIASES =
   TABLE =>
   {
     Table => [],
-    Room => [qw(rm)]
+    Room => [qw(rm)],
+    Closed => [qw(closed)]
   },
 
   BOARDS =>
@@ -351,7 +363,7 @@ our %FIX_ALIASES =
     Latvia => [],
     Malta => [],
     Monaco => [],
-    Netherlands => [qw(netherland)],
+    Netherlands => [qw(netherland hol)],
     Norway => [qw(nor)],
     "Northern Ireland" => [qw(ni)],
     Pakistan => [],
@@ -408,11 +420,14 @@ our %FIX_ALIASES =
     Thursday => [qw(thu)],
     Friday => [qw(fri freitag)],
     Saturday => [qw(sat samstag)],
-    Sunday => [qw(sun sonntag)]
+    Sunday => [qw(sun sonntag)],
+    Day => []
   },
 
-  WEEKEND =>
+  TEMPORAL =>
   {
+    Weekend => [],
+    Week => []
   },
 
   ORDINAL =>
@@ -422,13 +437,14 @@ our %FIX_ALIASES =
     third => [qw(tercer 3e)],
     fourth => [qw(4rth 4e)],
     fifth => [],
-    eighth => [qw(8e)]
+    eighth => [qw(8e)],
+    last => [qw(lats ultimo)]
   },
 
   NUMERAL =>
   {
     '1' => [qw(one !)],
-    '2' => [qw(two ")],
+    '2' => [qw(two 2])],
     '3' => [qw(three)],
     '4' => [qw(four)],
     '5' => [qw(five)],
@@ -455,7 +471,7 @@ our %FIX_ALIASES =
 
   PARTICLE =>
   {
-    And => [qw(&)],
+    And => [qw(& +)],
     Of => [qw(af off 0f 0ff av de olf pf fo from)]
   },
 
@@ -468,10 +484,15 @@ our %FIX_ALIASES =
       man mandarin 
       fluff reloaded missed this
       game series npc rank
-      afternoon night barriere best delayed dup combined only int
+      evening afternoon night barriere best delayed dup combined 
+      only int titan
       12b è no n° vs =), '#']
   }
 );
+
+our @PEEL_FRONT = qw(match ro16 rr segment semifinal stanza swiss vs);
+
+our @PEEL_BACK = qw(match of round rounds rr segment session sessão tempo);
 
 our %MERGE_HASH;
 for my $key (keys %MERGE_ALIASES)
