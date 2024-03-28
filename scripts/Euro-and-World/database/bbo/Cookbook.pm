@@ -198,9 +198,9 @@ our %FIX_ALIASES =
     Champion => [qw(champions champion's)],
     Championship => [qw(championship's)],
     Cup => [],
-    League => [qw(leahue)],
+    League => [],
     Olympiad => [qw(olympiads)],
-    Open => [qw(open o libres opain oper ope op
+    Open => [qw(open o libres opain oper op
       terbuka terbukaerbuka)], # Ambiguous
     Tournament => [qw(tournoi tounoi)],
     Trials => [qw(trial selectio selection prueba)],
@@ -244,13 +244,13 @@ our %FIX_ALIASES =
 
   ITERATOR =>
   {
-    Final => [qw(fianl filnal fin finais finale finales finali ff
+    Final => [qw(fianl filnal fin finale finales finali ff
       ofinals finals finall finas fnal fnals fina f sinal 
       fýnal final!)],
     "Semi-final" => [qw(semifinal semif semifinals semifinale semifinali
       seminfinal semifinales semis semfin sfinal sfinals sf
       semifianls semýfýnal sefi yf)],
-    Semi => [qw(meia meias sem semin)],
+    Semi => [],
     "Quarter-final" => [qw(quarterfinal quafin quarterf quarterfinals 
       qfinal qfinals quaterfinal qf ottavi quarti)],
     Playoff => [qw(po playoff playoffs)],
@@ -275,12 +275,12 @@ our %FIX_ALIASES =
     Round => [qw(rounds rouns rueda ruond rd riund rnd rds ound ro
       tound tour runde runder rn r rond ronda ronud roudn roun 
       turno turul sr)],
-    Stanza => [qw(stanza stsnza stan stanzas stanzaq stranza)],
+    Stanza => [qw(stanza stanzas stranza)],
     Session => [qw(serssion sesion sesión sesj sesjon sess
       sessió sessión ses sesje sessie sesson sesssion sessions
       sessão devre segssion séance séan seans seansi)],
     Stage => [],
-    Section => [qw(ssegssion seksjon sektion)],
+    Section => [qw(seksjon sektion)],
     Match => [qw(mathc m kamp incontro matxh macth meci matches mo
       maych mecz)],
     Segment => [qw(seg segm segement segemt segmant segmen segemnt
@@ -291,7 +291,7 @@ our %FIX_ALIASES =
     Tempo => [],
     Half => [qw(hallf halvleg halv hlf mt)],
     Part => [qw(parte)],
-    Quarter => [qw(quaerter quater qtr qua)],
+    Quarter => [qw(quaerter quater qtr)],
     Place => [qw(puesto lugar)],
     Top => [],
     Play => [],
@@ -326,8 +326,6 @@ our %FIX_ALIASES =
   {
     Seniors => [qw(senior seniors seniors seniors' senior*)],
     Juniors => [qw(junior yunior)],
-    U28 => [qw(u28)],
-    U21 => [qw(u21)],
     Youngsters => [qw(yougerters youth young youngster)],
     Schools => [qw(school)],
     Girls => [qw(gir)],
@@ -344,7 +342,7 @@ our %FIX_ALIASES =
 
   GROUP =>
   {
-    Group => [qw(grup grp gr groups pool)],
+    Group => [qw(grp gr groups pool)],
   },
 
   COLOR =>
@@ -356,8 +354,7 @@ our %FIX_ALIASES =
   TABLE =>
   {
     Table => [qw(t)],
-    Room => [qw(rm)],
-    Closed => [qw(closed)]
+    Room => [qw(rm)]
   },
 
   BOARDS =>
@@ -370,13 +367,11 @@ our %FIX_ALIASES =
     Bulgaria => [],
     'Czech Republic' => [qw(czech)],
     CBAI => [], # Don't map directly to Ireland; could be "Ireland 2"
-    Denmark => [],
     England => [qw(eng)],
-    Estonia => [],
     Finland => [],
     France => [qw(fra)],
     Hungary => [qw(hungarian)],
-    Ireland => [qw(iire ire roi)],
+    Ireland => [qw(ire roi)],
     Israel => [],
     Italy => [],
     Latvia => [],
@@ -403,7 +398,6 @@ our %FIX_ALIASES =
     Pau => [],
     Radkov => [],
     Vancouver => [],
-    Wroclaw => [],
     Zurich => []
   },
 
@@ -453,18 +447,18 @@ our %FIX_ALIASES =
   ORDINAL =>
   {
     first => [qw(1rst 1er primera fir)],
-    second => [qw(segundo segunda 2e sec)],
-    third => [qw(tercer 3e)],
-    fourth => [qw(4rth 4e)],
+    second => [qw(segundo segunda sec)],
+    third => [qw(tercer)],
+    fourth => [qw(4rth)],
     fifth => [],
-    eighth => [qw(8e)],
+    eighth => [],
     last => [qw(lats ultimo)]
   },
 
   NUMERAL =>
   {
     '1' => [qw(one !)],
-    '2' => [qw(two 2])],
+    '2' => [qw(two)],
     '3' => [qw(three)],
     '4' => [qw(four)],
     '5' => [qw(five)],
@@ -492,22 +486,20 @@ our %FIX_ALIASES =
   PARTICLE =>
   {
     And => [qw(& +)],
-    Of => [qw(af off 0f av de olf pf fo from)],
+    Of => [qw(af off av de olf pf fo from)],
     To => [],
   },
 
   KILL =>
   {
-    Kill => [qw(untitled
-      bbo bbo1 bbo2 bbo3 bbo4
-      bbo1o bbo2o bbo3o 
+    Kill => [qw(untitled bbo 
       bbvg bbovg vg vmg
       man mandarin 
       fluff reloaded missed this train tren ch mac ore oam le friendly
       game series npc rank tpatkawan patkawan phase tadkov friendship
       am evening afternoon night soir barriere best delayed us
-      dup combined for only alle int titan silver gold vp sm
-      12b è no n° vs =), 
+      combined for only alle int titan silver gold vp sm
+      è no n° vs =), 
       '#', '?', 'one!', 'ab', 'a&b', ']']
   }
 );
