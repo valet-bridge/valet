@@ -33,6 +33,9 @@ my $line;
 my $lno = 0;
 my $unknown = 0;
 
+my %MERGE_SEEN;
+my %FIX_SEEN;
+
 while ($line = <$fh>)
 {
   chomp $line;
@@ -48,7 +51,7 @@ while ($line = <$fh>)
     }
     else
     {
-      if ($chunk{BBONO} == 15118)
+      if ($chunk{BBONO} == 491)
       {
         print "HERE\n";
       }
@@ -79,6 +82,22 @@ while ($line = <$fh>)
 
 close $fh;
 print "TOTAL $unknown\n";
+
+for my $key (sort keys %MERGE_HASH)
+{
+  if (! defined $MERGE_SEEN{$key})
+  {
+    print "Missing merge key $key\n";
+  }
+}
+
+for my $key (sort keys %FIX_HASH)
+{
+  if (! defined $FIX_SEEN{$key})
+  {
+    print "Missing fix key $key\n";
+  }
+}
 
 
 sub parse_teams
@@ -326,7 +345,11 @@ sub mash
   my $res = $text;
   for my $key (keys %MERGE_HASH)
   {
-    $res =~s/\b$key\b/$MERGE_HASH{$key}/gi;
+if (
+    $res =~s/\b$key\b/$MERGE_HASH{$key}/gi) # ;
+{
+$MERGE_SEEN{lc($key)}++;
+}
   }
   return $res;
 }
@@ -383,7 +406,8 @@ sub split_on_known_words
     for my $i (reverse 0 .. $#$list_ref)
     {
       my $part = lc($list_ref->[$i]);
-      next if defined $FIX_HASH{$part}{VALUE};
+      my $fix = $FIX_HASH{$part};
+      next if defined $fix->{VALUE};
 
       for my $front (@PEEL_FRONT)
       {
@@ -453,6 +477,7 @@ sub split_on_tournament_group
         {
           die "No value for $front";
         }
+$FIX_SEEN{lc($front)}++;
 
         $list_ref->[$i  ] = $fix->{VALUE};
         $list_ref->[$i+1] = '|';
@@ -475,6 +500,7 @@ sub split_on_tournament_group
         {
           die "No value for $front";
         }
+$FIX_SEEN{lc($back)}++;
 
         $list_ref->[$i  ] = ($front eq 'W' ? 'Women' : 'Open');
         $list_ref->[$i+1] = '|';
@@ -593,6 +619,7 @@ sub study_part
   {
     $study_ref->{CATEGORY} = $fix->{CATEGORY};
     $study_ref->{VALUE} = $fix->{VALUE};
+$FIX_SEEN{lc($part)}++;
     return ($fix->{CATEGORY} eq 'KILL');
   }
 

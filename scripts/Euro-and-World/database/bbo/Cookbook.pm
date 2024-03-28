@@ -31,7 +31,6 @@ my %MERGE_ALIASES = (
   Superleague => ["super league", "sup league", "sup l",
     "super leahue", "sup leg"],
   Bermudabowl => ["bermuda bowl"],
-  Venicecup => ["venice cup"],
   Nationscup => ["nations cup"],
   Hungariancup => ["hungarian cup"],
   Fortunacup => ["fortuna cup"],
@@ -69,8 +68,7 @@ my %MERGE_ALIASES = (
   Interclub => ["inter club", "inter-club", "inter-clubs"],
   Interprovince => ["inter province", "inter-province",
     "inter-provinces", "inter provinces"],
-  Interregion => ["inter region", "inter-region", "inter-regional"],
-  Intercity => ["inter-city", "inter city"],
+  Interregion => ["inter-region", "inter-regional"],
   Proam => ["pro am"],
 
   # STAGE
@@ -80,7 +78,7 @@ my %MERGE_ALIASES = (
     "demi-finale", "demi-finales", "1_2final", "semi <final",
     "yarý final", "simi final"],
   Quarterfinal => ["quarter final", "quarter finals",
-    "quarter-final", "quet final", "quartal final", "1_4final",
+    "quarter-final", "quet final", "quartal final",
     "quarti finale", "qtr finals",
     "round of 8"], # Error-prone: "1st Quarter Final" can be either
   PreQF => ["pre qf", "pr qf"],
@@ -99,17 +97,13 @@ my %MERGE_ALIASES = (
   "Session 1" => ["única sesión"],
 
   # SCORING
-  BAM => ["b-a-m", "b-a-m-"],
+  BAM => ["b-a-m"],
   MP => ["matchpoint"],
 
   # NAMED_TEAM
-  Stonecutters => ["stone cutters"],
   Vestagder => ["vest-agder", "vest - agder"],
 
   # AGE
-  U20 => ["u 20"],
-  U21 => ["under 21"],
-  U25 => ["u 25"],
   U28 => ["under 28"],
 
   # GENDER
