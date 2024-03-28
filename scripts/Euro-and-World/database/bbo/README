@@ -1,7 +1,4 @@
-Test EVENT vs team names.
-Can probably reduce NAMED_TEAM quite a bit.
-
-Not that many "real" words left.
-More important to work on unmash
-
-Keep the original text in studied
+Keep the original text around.
+Check that every word in Cookbook is used at least once.
+Same for every method in cook.pl.
+Look briefly where most of the time goes.

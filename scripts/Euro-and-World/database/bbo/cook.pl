@@ -3,6 +3,8 @@
 use strict;
 use warnings;
 use v5.10;
+use utf8;
+use open ':std', ':encoding(UTF-8)';
 
 use lib '.';
 use Cookbook;
@@ -46,7 +48,7 @@ while ($line = <$fh>)
     }
     else
     {
-      if ($chunk{BBONO} == 5925)
+      if ($chunk{BBONO} == 15118)
       {
         print "HERE\n";
       }
@@ -171,6 +173,12 @@ sub is_separator
     $study_ref->{VALUE} = 'RIGHT_PAREN';
     return 1;
   }
+  elsif ($part eq '"')
+  {
+    $study_ref->{CATEGORY} = 'SEPARATOR';
+    $study_ref->{VALUE} = 'QUOTE';
+    return 1;
+  }
   elsif ($part eq '|')
   {
     # Artificial separator made when unmashing.
@@ -219,8 +227,11 @@ sub is_small_ordinal
   my $part = pop;
   if
      ($part =~ /^(\d+)th$/i ||
+      $part =~ /^(\d+)rth$/i ||
       $part =~ /^(\d+)st$/i ||
+      $part =~ /^(\d+)rst$/i ||
       $part =~ /^(\d+)rd$/i ||
+      $part =~ /^(\d+)er$/i ||
       $part =~ /^(\d+)eme$/i ||
       $part =~ /^(\d+)°$/i ||
       $part =~ /^(\d+)º$/i ||
@@ -278,7 +289,7 @@ sub is_letter
 }
 
 
-sub is_year
+sub is_date
 {
   my ($part, $study_ref) = @_;
 
@@ -294,6 +305,12 @@ sub is_year
     {
       die "Not a year? $part";
     }
+  }
+  elsif ($part =~ /^\d\d\d\d-\d\d-\d\d$/)
+  {
+    $study_ref->{CATEGORY} = 'DATE';
+    $study_ref->{VALUE} = $part;
+    return 1;
   }
   else
   {
@@ -328,6 +345,13 @@ sub split_on_digit_groups
     {
       my @a = grep {$_ ne ''} split /(\d+)/, $part;
       die "No real split: $part" unless $#a > 0;
+
+      if ($#a == 1 && $a[0] =~ /^rof$/i)
+      {
+        # Don't split Rof128 etc.
+        next;
+      }
+
       my $add = 2 * $#a - 1;
       splice(@$list_ref, $i, 0, ('') x $add);
       for my $j (0 .. $#a)
@@ -340,29 +364,27 @@ sub split_on_digit_groups
 }
 
 
-sub unmash
+sub split_on_known_words
 {
   my ($list_ref) = @_;
 
   # Some entries may be mashed together.  It's easier to split them
   # out than to try to recognize them later.
+  # As there can be several layers of this, we do it recursively.
+  # Not very efficiently implemented: Don't have to reexamine elements
+  # that could not be split once.
   
-  for my $i (reverse 0 .. $#$list_ref)
+  my $hit = 1;
+  my $ctr = 0;
+  while ($hit)
   {
-    my $part = $list_ref->[$i];
+    $ctr++;
+    $hit = 0;
+    for my $i (reverse 0 .. $#$list_ref)
+    {
+      my $part = lc($list_ref->[$i]);
+      next if defined $FIX_HASH{$part}{VALUE};
 
-    if ($part =~ /\b([A-Z][a-z]+)([A-Z][a-z]+)$/)
-    {
-      # One capitalized word followed by another: LastRound
-      my ($word1, $word2) = ($1, $2);
-      splice(@$list_ref, $i, 0, ('') x 2);
-      $list_ref->[$i  ] = $word1;
-      $list_ref->[$i+1] = '|';
-      $list_ref->[$i+2] = $word2;
-    }
-    else
-    {
-      my $hit = 0;
       for my $front (@PEEL_FRONT)
       {
         if ($part =~ /^$front(.+)$/i)
@@ -388,6 +410,7 @@ sub unmash
           $list_ref->[$i  ] = $front;
           $list_ref->[$i+1] = '|';
           $list_ref->[$i+2] = $back;
+          $hit = 1;
           last;
         }
       }
@@ -404,6 +427,110 @@ sub unteam
   $res =~ s/\Q$team1\E// if defined $team1;
   $res =~ s/\Q$team2\E// if defined $team2;
   return $res;
+}
+
+
+sub split_on_tournament_group
+{
+  my ($list_ref) = @_;
+
+  # A number of words are commonly followed by A or B.
+  
+  for my $i (reverse 0 .. $#$list_ref)
+  {
+    my $part = $list_ref->[$i];
+
+    my $hit = 0;
+    for my $front (@PRE_GROUP)
+    {
+      if ($part =~ /^$front([AB])$/i)
+      {
+        my $back = $1;
+        splice(@$list_ref, $i, 0, ('') x 2);
+
+        my $fix = $FIX_HASH{lc($front)};
+        if (! defined $fix->{VALUE})
+        {
+          die "No value for $front";
+        }
+
+        $list_ref->[$i  ] = $fix->{VALUE};
+        $list_ref->[$i+1] = '|';
+        $list_ref->[$i+2] = $back;
+        $hit = 1;
+        last;
+      }
+    }
+    next if $hit;
+
+    for my $back (@POST_GROUP)
+    {
+      if ($part =~ /^([OW])$back$/i)
+      {
+        my $front = $1;
+        splice(@$list_ref, $i, 0, ('') x 2);
+
+        my $fix = $FIX_HASH{lc($back)};
+        if (! defined $fix->{VALUE})
+        {
+          die "No value for $front";
+        }
+
+        $list_ref->[$i  ] = ($front eq 'W' ? 'Women' : 'Open');
+        $list_ref->[$i+1] = '|';
+        $list_ref->[$i+2] = $fix->{VALUE};
+        $hit = 1;
+        last;
+      }
+      next if $hit;
+    }
+
+    # Kludge.
+    if ($part eq 'OR')
+    {
+      splice(@$list_ref, $i, 0, ('') x 2);
+      $list_ref->[$i  ] = 'Open';
+      $list_ref->[$i+1] = '|';
+      $list_ref->[$i+2] = 'Room';
+      
+    }
+    elsif ($part eq 'or')
+    {
+      $list_ref->[$i  ] = 'Of'; # Typically a typo
+    }
+  }
+}
+
+
+sub split_on_date
+{
+  my ($list_ref) = @_;
+
+  # A number of words are commonly followed by A or B.
+  
+  for my $i (reverse 0 .. $#$list_ref)
+  {
+    my $part = $list_ref->[$i];
+
+    next unless $part =~ /^\d+$/ && $part > 19000000;
+
+    if ($part =~ /^(\d\d\d\d)(\d\d)(\d\d)0(\d)$/)
+    {
+      # Only really used once.
+      my ($year, $month, $day, $r) = ($1, $2, $3, $4);
+      splice(@$list_ref, $i, 0, ('') x 4);
+      $list_ref->[$i  ] = "$year-$month-$day";
+      $list_ref->[$i+1] = '|';
+      $list_ref->[$i+2] = "Round";
+      $list_ref->[$i+3] = '|';
+      $list_ref->[$i+4] = $r;
+
+    }
+    else
+    {
+      die "Probably a date? $part";
+    }
+  }
 }
 
 
@@ -472,7 +599,7 @@ sub study_part
   return 0 if is_small_integer($part, $study_ref);
   return 0 if fix_small_ordinal($part, $study_ref);
   return 0 if is_letter($part, $study_ref);
-  return 0 if is_year($part, $study_ref);
+  return 0 if is_date($part, $study_ref);
 
   print "UNKNOWN $part\n";
   $unknown++;
@@ -486,6 +613,13 @@ sub study_event
 {
   my ($text, $cref) = @_;
 
+  if ($cref->{BBONO} >= 4790 && $cref->{BBONO} <= 4860 &&
+      $cref->{TITLE} =~ /^Buffet/)
+  {
+    # I think we can discard these.
+    return;
+  }
+
   # First remove team names that are entirely duplicated.
   my $mashed = unteam($text, $cref->{TEAM1}, $cref->{TEAM2});
 
@@ -493,9 +627,20 @@ sub study_event
   # they obviously belong together.
   $mashed = mash($mashed);
 
-  my @parts = grep {$_ ne ''} split /([.\-\+_:;\/\(\)]|\s+)/, $mashed;
+  # Split on separators.
+  my @parts = grep {$_ ne ''} split /([.\-\+_:;"\/\(\)]|\s+)/, $mashed;
+
+  # Separate words that runs into each other.
+  split_on_known_words(\@parts);
+
+  # Split on groups of digits.
   split_on_digit_groups(\@parts);
-  unmash(\@parts);
+
+  # Split some known words + A or B at the end.
+  split_on_tournament_group(\@parts);
+
+  # Split on ISO date.
+  split_on_date(\@parts);
 
   my @studied;
   my $kill_flag = 0;
