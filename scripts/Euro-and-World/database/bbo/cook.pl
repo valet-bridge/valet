@@ -46,6 +46,13 @@ while ($line = <$fh>)
     }
     else
     {
+      if ($chunk{BBONO} == 5925)
+      {
+        print "HERE\n";
+      }
+
+      study_event($chunk{EVENT}, \%chunk);
+
       print_chunk(\%chunk);
     }
   }
@@ -60,15 +67,6 @@ while ($line = <$fh>)
     if ($1 eq 'TEAMS')
     {
       parse_teams($2, \%chunk);
-    }
-    elsif ($1 eq 'EVENT')
-    {
-      if ($chunk{BBONO} == 3105)
-      {
-        print "HERE\n";
-      }
-
-      study_event($2, \%chunk);
     }
     else
     {
@@ -88,8 +86,8 @@ sub parse_teams
   if ($text =~ /(.*) vs. (.*)/)
   {
     my ($team1, $team2) = ($1, $2);
-    $team1 =~ s/\(\d+\)\s*$//;
-    $team2 =~ s/\(\d+\)\s*$//;
+    $team1 =~ s/\s*\(\d+\)\s*$//;
+    $team2 =~ s/\s*\(\d+\)\s*$//;
     $chunk{TEAM1} = $team1;
     $chunk{TEAM2} = $team2;
   }
@@ -218,8 +216,9 @@ sub is_small_integer
 
 sub is_small_ordinal
 {
-  my ($part, $study_ref) = @_;
-  if ($part =~ /^(\d+)th$/i ||
+  my $part = pop;
+  if
+     ($part =~ /^(\d+)th$/i ||
       $part =~ /^(\d+)st$/i ||
       $part =~ /^(\d+)rd$/i ||
       $part =~ /^(\d+)eme$/i ||
@@ -228,8 +227,21 @@ sub is_small_ordinal
       $part =~ /^(\d+)ª$/i ||
       $part =~ /^(\d+)nd$/i)
   {
+    return $1;
+  }
+  else
+  {
+    return 0;
+  }
+}
+
+
+sub fix_small_ordinal
+{
+  my ($part, $study_ref) = @_;
+  if (my $ord = is_small_ordinal($part))
+  {
     # We don't check whether the ending matches the number.
-    my $ord = $1;
     if ($ord >= 0 && $ord < 100)
     {
       $study_ref->{CATEGORY} = 'ORDINAL';
@@ -303,6 +315,31 @@ sub mash
 }
 
 
+sub split_on_digit_groups
+{
+  my ($list_ref) = @_;
+
+  for my $i (reverse 0 .. $#$list_ref)
+  {
+    my $part = $list_ref->[$i];
+
+    if ($part =~ /\d/ && $part =~ /[^\d]/ &&
+      ! is_small_ordinal($part))
+    {
+      my @a = grep {$_ ne ''} split /(\d+)/, $part;
+      die "No real split: $part" unless $#a > 0;
+      my $add = 2 * $#a - 1;
+      splice(@$list_ref, $i, 0, ('') x $add);
+      for my $j (0 .. $#a)
+      {
+        $list_ref->[$i + 2*$j] = $a[$j];
+        $list_ref->[$i + 2*$j + 1] = '|';
+      }
+    }
+  }
+}
+
+
 sub unmash
 {
   my ($list_ref) = @_;
@@ -313,47 +350,8 @@ sub unmash
   for my $i (reverse 0 .. $#$list_ref)
   {
     my $part = $list_ref->[$i];
-    if ($part =~ /^([^0-9]+)(\d+)$/)
-    {
-      # session1, and in general letters followed by only digits.
-      my ($tag, $n) = ($1, $2);
-      splice(@$list_ref, $i, 0, ('') x 2);
-      $list_ref->[$i  ] = $tag;
-      $list_ref->[$i+1] = '|';
-      $list_ref->[$i+2] = $n;
-    }
-    elsif ($part =~ /^([^0-9]+)(\d+)([ABCabc])$/)
-    {
-      # Similar, but followed then by one of ABCabc: Match1A.
-      my ($tag, $n, $group) = ($1, $2, $3);
-      splice(@$list_ref, $i, 0, ('') x 4);
-      $list_ref->[$i  ] = $tag;
-      $list_ref->[$i+1] = '|';
-      $list_ref->[$i+2] = $n;
-      $list_ref->[$i+3] = '|';
-      $list_ref->[$i+4] = $group;
-    }
-    elsif ($part =~ /^(\d+)([A-Fa-f])$/)
-    {
-      # 13A, and in general digits followed by a "small" letter.
-      my ($n, $letter) = ($1, $2);
-      splice(@$list_ref, $i, 0, ('') x 2);
-      $list_ref->[$i  ] = $n;
-      $list_ref->[$i+1] = '|';
-      $list_ref->[$i+2] = $letter;
-    }
-    elsif ($part =~ /\b(\d+)([^0-9]+)(\d+)\b/i)
-    {
-      # 2of3, 4and5, but also 4Final1 (presumably quarterfinal?).
-      my ($n1, $word, $n2) = ($1, $2, $3);
-      splice(@$list_ref, $i, 0, ('') x 4);
-      $list_ref->[$i  ] = $n1;
-      $list_ref->[$i+1] = '|';
-      $list_ref->[$i+2] = $word;
-      $list_ref->[$i+3] = '|';
-      $list_ref->[$i+4] = $n2;
-    }
-    elsif ($part =~ /\b([A-Z][a-z]+)([A-Z][a-z]+)$/)
+
+    if ($part =~ /\b([A-Z][a-z]+)([A-Z][a-z]+)$/)
     {
       # One capitalized word followed by another: LastRound
       my ($word1, $word2) = ($1, $2);
@@ -361,100 +359,6 @@ sub unmash
       $list_ref->[$i  ] = $word1;
       $list_ref->[$i+1] = '|';
       $list_ref->[$i+2] = $word2;
-    }
-    elsif ($part =~ /^r(\d+)([fstw]+)(\d+)$/i)
-    {
-      # R10T1
-      my ($round, $tag, $no) = ($1, $2, $3);
-      my $tname;
-      if (lc($tag) eq 't')
-      {
-        $tname = 'Table';
-      }
-      elsif (lc($tag) eq 'w')
-      {
-        $tname = 'Women';
-      }
-      elsif (lc($tag) eq 'sf')
-      {
-        $tname = 'Semifinal';
-      }
-      else
-      {
-        $tname = $tag;
-      }
-
-      $round =~ s/^0+//; # Remove leading zeroes
-      splice(@$list_ref, $i, 0, ('') x 6);
-      $list_ref->[$i  ] = 'Round';
-      $list_ref->[$i+1] = '|';
-      $list_ref->[$i+2] = $round;
-      $list_ref->[$i+3] = '|';
-      $list_ref->[$i+4] = $tname;
-      $list_ref->[$i+5] = '|';
-      $list_ref->[$i+6] = $no;
-    }
-    elsif ($part =~ /^r(\d+)t(\d+)([abcd])$/i)
-    {
-      # R10T1A
-      my ($round, $table, $group) = ($1, $2, $3);
-      $round =~ s/^0+//; # Remove leading zeroes
-      splice(@$list_ref, $i, 0, ('') x 10);
-      $list_ref->[$i  ] = 'Round';
-      $list_ref->[$i+1] = '|';
-      $list_ref->[$i+2] = $round;
-      $list_ref->[$i+3] = '|';
-      $list_ref->[$i+4] = 'Table';
-      $list_ref->[$i+5] = '|';
-      $list_ref->[$i+6] = $table;
-      $list_ref->[$i+7] = '|';
-      $list_ref->[$i+8] = 'Group';
-      $list_ref->[$i+9] = '|';
-      $list_ref->[$i+10] = $group;
-    }
-    elsif ($part =~ /^r(\d+)t([abcd])(\d+)$/i)
-    {
-      # R10TA1
-      my ($round, $group, $table) = ($1, $2, $3);
-      $round =~ s/^0+//; # Remove leading zeroes
-      splice(@$list_ref, $i, 0, ('') x 10);
-      $list_ref->[$i  ] = 'Round';
-      $list_ref->[$i+1] = '|';
-      $list_ref->[$i+2] = $round;
-      $list_ref->[$i+3] = '|';
-      $list_ref->[$i+4] = 'Table';
-      $list_ref->[$i+5] = '|';
-      $list_ref->[$i+6] = $table;
-      $list_ref->[$i+7] = '|';
-      $list_ref->[$i+8] = 'Group';
-      $list_ref->[$i+9] = '|';
-      $list_ref->[$i+10] = $group;
-    }
-    elsif ($part =~ /^s(\d+)r(\d+)$/i)
-    {
-      # S10R4
-      my ($seg, $round) = ($1, $2);
-      splice(@$list_ref, $i, 0, ('') x 6);
-      $list_ref->[$i  ] = 'Session';
-      $list_ref->[$i+1] = '|';
-      $list_ref->[$i+2] = $seg;
-      $list_ref->[$i+3] = '|';
-      $list_ref->[$i+4] = 'Round';
-      $list_ref->[$i+5] = '|';
-      $list_ref->[$i+6] = $round;
-    }
-    elsif ($part =~ /^(\d\d)(.+)$/ && 
-      defined $FIX_HASH{lc($2)}{CATEGORY} &&
-      $FIX_HASH{lc($2)}{CATEGORY} eq 'MONTH')
-    {
-      # 10Jan
-      # We could in principle remember that the day and month go 
-      # together.
-      my ($day, $month) = ($1, $2);
-      splice(@$list_ref, $i, 0, ('') x 2);
-      $list_ref->[$i  ] = $day;
-      $list_ref->[$i+1] = '|';
-      $list_ref->[$i+2] = $month;
     }
     else
     {
@@ -492,6 +396,17 @@ sub unmash
 }
 
 
+sub unteam
+{
+  my ($text, $team1, $team2) = @_;
+
+  my $res = $text;
+  $res =~ s/\Q$team1\E// if defined $team1;
+  $res =~ s/\Q$team2\E// if defined $team2;
+  return $res;
+}
+
+
 sub kill_studied
 {
   my ($list_ref) = @_;
@@ -516,12 +431,8 @@ sub kill_studied
         # From the front
         splice(@$list_ref, $i, 2);
       }
-      elsif (($list_ref->[$i-1]{VALUE} eq 'SPACE' ||
-              $list_ref->[$i-1]{VALUE} eq 'ARTIFICIAL') &&
-             ($list_ref->[$i+1]{VALUE} eq 'SPACE' ||
-              $list_ref->[$i+1]{VALUE} eq 'UNDERSCORE' ||
-              $list_ref->[$i+1]{VALUE} eq 'DASH' ||
-              $list_ref->[$i+1]{VALUE} eq 'ARTIFICIAL'))
+      elsif ($list_ref->[$i-1]{VALUE} eq 'SPACE' ||
+             $list_ref->[$i-1]{VALUE} eq 'ARTIFICIAL')
       {
         # Surrounded by spaces, so kill one of them.
         splice(@$list_ref, $i, 2);
@@ -535,7 +446,7 @@ sub kill_studied
       }
       else
       {
-        die "Don't know how to kill this: $part";
+        die "Don't know how to kill this: $part->{VALUE}";
       }
     }
   }
@@ -559,7 +470,7 @@ sub study_part
   }
 
   return 0 if is_small_integer($part, $study_ref);
-  return 0 if is_small_ordinal($part, $study_ref);
+  return 0 if fix_small_ordinal($part, $study_ref);
   return 0 if is_letter($part, $study_ref);
   return 0 if is_year($part, $study_ref);
 
@@ -575,11 +486,15 @@ sub study_event
 {
   my ($text, $cref) = @_;
 
-  # First mash some adjacent, separate words together because
+  # First remove team names that are entirely duplicated.
+  my $mashed = unteam($text, $cref->{TEAM1}, $cref->{TEAM2});
+
+  # Then mash some adjacent, separate words together because
   # they obviously belong together.
-  my $mashed = mash($text);
+  $mashed = mash($mashed);
 
   my @parts = grep {$_ ne ''} split /([.\-\+_:;\/\(\)]|\s+)/, $mashed;
+  split_on_digit_groups(\@parts);
   unmash(\@parts);
 
   my @studied;

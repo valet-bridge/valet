@@ -25,7 +25,7 @@ my %MERGE_ALIASES = (
   # MONIKER
   Eurochamp => ["eur champ"],
   Superleague => ["super league", "sup league", "sup l",
-    "super leahue"],
+    "super leahue", "sup leg"],
   Bermudabowl => ["bermuda bowl"],
   Venicecup => ["venice cup"],
   Nationscup => ["nations cup"],
@@ -43,19 +43,24 @@ my %MERGE_ALIASES = (
   Vitoteams => ["vito teams"],
 
   # SPONSOR
-  GetImmo => ["get immo", "get-immo"],
+  Jetimmo => ["get immo", "get-immo", "jet immo"],
+  KWS => [],
+  LYLaw => [qw(L&Y)],
+  "Bridge Club" => ["briagclub"],
 
   # MEMORIAL
   Mohansicka => ["mohan sicka"],
 
   # ORGANIZER
-  EBL => ["E_B_L_"],
+  EBL => ["e_b_l_"],
+  BBO => ["bridge base online"],
 
   # TOURNAMENT: none
 
   # MOVEMENT
   Roundrobin => ["round robin", "roun robin", "round bobin",
-    "round-robin", "r_robin", "r robin", "round roubin", "rrobin"],
+    "round-robin", "r_robin", "r robin", "round roubin", "rrobin",
+    "round ronin"],
 
   # ORIGIN
   Interclub => ["inter club", "inter-club", "inter-clubs"],
@@ -63,6 +68,7 @@ my %MERGE_ALIASES = (
     "inter-provinces", "inter provinces"],
   Interregion => ["inter region", "inter-region", "inter-regional"],
   Intercity => ["inter-city", "inter city"],
+  Proam => ["pro am"],
 
   # STAGE
   Final => ["phase finale", "fin als"],
@@ -84,14 +90,15 @@ my %MERGE_ALIASES = (
   Rof12 => ["phase a 12"],
   Knockout => ["knock out", "knock-out"],
   Tiebreak => ["extra boards", "extra time", "extra stanza", 
-    "semifinals extra", "tie break", "tie reak", "-tie break"],
+    "semifinals extra", "tie break", "tie reak", "tiebreak"],
   "Second half" => ["second ha"],
+  Bronze => ["small final"],
 
   # SCORING
   BAM => ["b-a-m", "b-a-m-"],
+  Matchpoint => ["matchpoint"],
 
   # NAMED_TEAM
-  Goancurry => ["goan curry"],
   Stonecutters => ["stone cutters"],
   Vestagder => ["vest-agder", "vest - agder"],
 
@@ -106,13 +113,16 @@ my %MERGE_ALIASES = (
   # COUNTRY, CITY, MONTH, WEEKDAY, ORDINAL, NUMERAL, ROMAN: none
   Guangdong => [],
   fifth => ["5 eme"],
+  "Open RR" => ["orr"],
+  "Women RR" => ["wrr"],
+  "First half" => ["1mt", "1emt", "andata"],
+    "second half" => ["2mt", "2emt", "ritorno", "retur"],
 
   # PARTICLE
   of => ["out of"],
+  "12th" => ["12 th"],
   of5 => ["0f5"], # Typo
-  '()' => ['(\+2)'], # Uninteresting
-  "first half" => ["1mt", "1emt"],
-  "second half" => ["2mt", "2emt"]
+  '()' => ['(\+2)'] # Uninteresting
 );
 
 
@@ -130,10 +140,12 @@ our %FIX_ALIASES =
     "Australian National Women Teams" => [qw(nwt)],
     "Bermuda Bowl" => [qw(bermudabowl bermuda bb)],
     "Canadian National Teams" => [qw(cntc)],
-    "D'Orsi Cup" => [qw(dosb)],
+    "Club Championship" => [qw(KM)], # Or Copenhagen...
+    "D'Orsi Senior Cup" => [qw(dosb sb)],
     "European" => [qw(eurochamp)],
     "Fortuna Cup" => [qw(fortunacup)],
     "FX Securities Cup" => [qw(fxcup)],
+    "Geologi Cup" => [qw(geologi)],
     "Grand Prix" => [qw[(grandprix)]],
     "Gro's Supercup" => [qw(grocup)],
     "Hungarian Cup" => [qw(hungariancup)],
@@ -142,10 +154,12 @@ our %FIX_ALIASES =
     "Murat Kilercioglu" => [qw(muratkilercioglu)],
     "Nations Cup" => [qw(nationscup)],
     "Nordic Championship" => [qw(nm)],
+    "PABFC" => [qw(pabfc)],
     "Ruia Gold" => [qw(ruiagold)],
     "Ruia Silver" => [qw(ruiasilver)],
+    "Ruia Cup" => [qw(ruia)],
     "Serdica Cup" => [qw(serdicacup)],
-    "Super League" => [qw(superleague)],
+    "Super League" => [qw(superleague sl)],
     "USBC" => [],
     "Vanderbilt" => [qw(vandy)],
     "Venice Cup" => [qw(venicecup vc venice)], # I hope
@@ -157,19 +171,22 @@ our %FIX_ALIASES =
 
   SPONSOR =>
   {
-    "Get Immo" => [qw(getimmo)],
+    "Jet Immo" => [qw(jetimmo)],
+    "L&Y Law" => [qw(lylaw)],
     MULTICOMS => [qw(multicoms)],
     SportAccord => [qw(sportaccord)]
   },
 
   MEMORIAL =>
   {
+    "Maharaja Holkar" => [qw(holkar)],
     "Mohan Sicka" => [qw(mohansicka)]
   },
 
   ORGANIZER =>
   {
     EBL => [qw(ebl)],
+    "Bridge Club Saint Étoile" => [qw(bcsh)],
   },
     
   TOURNAMENT =>
@@ -179,15 +196,18 @@ our %FIX_ALIASES =
     Cup => [],
     League => [qw(leahue)],
     Olympiad => [qw(olympiads)],
-    Open => [qw(open o libres opain oper ope op)], # Ambiguous
+    Open => [qw(open o libres opain oper ope op
+      terbuka terbukaerbuka)], # Ambiguous
     Tournament => [qw(tournoi tounoi)],
-    Trials => [qw(trial selectio selection prueba)]
+    Trials => [qw(trial selectio selection prueba)],
+    Super => []
   },
 
   MOVEMENT =>
   {
     Barometer => [],
     Danish => [],
+    Goulash => [],
     Monrad => [],
     Patton => [],
     "Round robin" => [qw(roundrobin)],
@@ -197,22 +217,15 @@ our %FIX_ALIASES =
 
   ORIGIN =>
   {
+    World => [qw(mondial)],
     Province => [qw(interprovince)],
     Region => [qw(interregion)],
     City => [qw(intercity)],
     Club => [qw(interclub)],
     University => [qw(university univ)],
     Transnational => [qw(transnational transnation trans 
-      transnatio transnat)]
-  },
-
-  STAGE =>
-  {
-    Qualifying => [qw(quailfy qual qualf qualfication quali qualif
-      qualification qualifier qualify quallification qualy
-      qr qulification prelim preliminary pre pelim
-      clasificacion clasificatoria)],
-    Knockout => [qw(knock knockouts)]
+      transnatio transnat tn)],
+    Invitational => [],
   },
 
   FORM =>
@@ -229,17 +242,26 @@ our %FIX_ALIASES =
     "Semi-final" => [qw(semifinal semif semifinals semifinale semifinali
       seminfinal semifinales semis semfin sfinal sfinals sf
       semifianls semýfýnal sefi yf)],
-    Semi => [qw(meia meias)],
+    Semi => [qw(meia meias sem)],
     "Quarter-final" => [qw(quarterfinal quafin quarterf quarterfinals 
       qfinal qfinals quaterfinal qf ottavi quarti)],
-    "Round-robin" => [qw(rrobin roundrobin rr)],
     Playoff => [qw(po playoff playoffs)],
     "Knock-out" => [qw(ko elimination kostage knockout knockouts)],
-    PreQF => [qw(pqf)],
     Tiebreak => [qw(tie ot)],
     Consolation => [qw(conso)],
+    Bronze => [],
+    Berth => [],
 
-    Round => [qw(rounds rouns rueda ruond rd riund rnd rds ound
+    Qualifying => [qw(quailfy qual qualf qualfication quali qualif
+      qualification qualifier qualify quallification qualy
+      qr qulification prelim preliminary pre pelim
+      clasificacion clasificatoria)],
+    Knockout => [qw(knock knockouts)],
+
+    "Round-robin" => [qw(rrobin roundrobin rr)],
+    PreQF => [qw(pqf)],
+
+    Round => [qw(rounds rouns rueda ruond rd riund rnd rds ound ro
       tound tour runde runder rn r rond ronda ronud roudn roun turno)],
     Stanza => [qw(stanza stsnza stan stanzas stanzaq stranza)],
     Session => [qw(serssion sesion sesión sesj sesjon sess
@@ -247,13 +269,16 @@ our %FIX_ALIASES =
       sessão devre segssion séance séan seans seansi)],
     Stage => [],
     Section => [qw(ssegssion seksjon sektion)],
-    Match => [qw(mathc m kamp incontro matxh macth meci matches mecz)],
+    Match => [qw(mathc m kamp incontro matxh macth meci matches 
+      maych mecz)],
     Segment => [qw(seg segm segement segemt segmant segmen segemnt
-      segmento segments segmetn segmnet segnment sgment segt sengemt)],
+      segmento segments segmetn segmnet segnment sgment segt sengemt 
+      se eg),
+      'seg#'],
     Set => [qw(sets)],
     Half => [qw(hallf halvleg halv hlf mt)],
     Part => [qw(parte)],
-    Quarter => [qw(quaerter quater qtr)],
+    Quarter => [qw(quaerter quater qtr qua)],
     Place => [qw(puesto)],
 
     Rof => [],
@@ -274,45 +299,17 @@ our %FIX_ALIASES =
 
   NAMED_TEAM =>
   {
-    Ao => [],
-    Baker => [],
-    Bramley => [],
     Daskalakis => [],
-    Cayne => [],
-    Delfour => [],
-    Doussot => [],
-    DKI => [],
-    Ekeblad => [],
-    Fireman => [],
-    Goldman => [],
-    Grabel => [],
-    Gromov => [],
-    Gursel => [],
-    Heimdal => [],
-    Hollman => [],
-    Jacobs => [],
-    Kasday => [],
-    Kasle => [],
-    Kolata => [],
-    Lall => [],
     Lavazza => [],
-    Lynch => [],
-    Mahaffey => [],
-    Milner => [],
-    Moss => [],
-    Narasimhan => [],
-    Nickell => [],
     Robinson => [qw(robinso)],
-    Schwartz => [],
-    Strul => [],
-    Sulsel => [],
-    Weed => [],
-    Zimmermann => []
+    Sternberg => [qw(stern)],
+    "Vest-Agder" => [qw(vestagder)],
+    Weed => []
   },
 
   AGE =>
   {
-    Seniors => [qw(senior seniors seniors')],
+    Seniors => [qw(senior seniors seniors seniors*')],
     Juniors => [qw(junior yunior)],
     U28 => [qw(u28)],
     U21 => [qw(u21)],
@@ -324,9 +321,9 @@ our %FIX_ALIASES =
 
   GENDER =>
   {
-    Men => [qw(mens men's men`s)],
+    Men => [qw(mens men's men`s pa)],
     Women => [qw(woman wemen womans women's womens ladies ladies's
-      damas)],
+      damas pi wo)],
     Mixed => [qw(mix mixte)],
   },
 
@@ -357,7 +354,7 @@ our %FIX_ALIASES =
     Finland => [],
     France => [qw(fra)],
     Hungary => [qw(hungarian)],
-    Ireland => [qw(iire roi)],
+    Ireland => [qw(iire ire roi)],
     Israel => [],
     Italy => [],
     Latvia => [],
@@ -426,14 +423,15 @@ our %FIX_ALIASES =
 
   TEMPORAL =>
   {
+    Spring => [],
     Weekend => [],
     Week => []
   },
 
   ORDINAL =>
   {
-    first => [qw(1rst 1er primera)],
-    second => [qw(segundo segunda 2e)],
+    first => [qw(1rst 1er primera fir)],
+    second => [qw(segundo segunda 2e sec)],
     third => [qw(tercer 3e)],
     fourth => [qw(4rth 4e)],
     fifth => [],
@@ -480,19 +478,21 @@ our %FIX_ALIASES =
     Kill => [qw(untitled
       bbo bbo1 bbo2 bbo3 bbo4
       bbo1o bbo2o bbo3o 
-      bbvg bbovg 
+      bbvg bbovg vg vmg
       man mandarin 
       fluff reloaded missed this
-      game series npc rank
-      evening afternoon night barriere best delayed dup combined 
-      only int titan
-      12b è no n° vs =), '#']
+      game series npc rank tpatkawan 
+      evening afternoon night soir barriere best delayed dup combined 
+      for only alle int titan gold
+      12b è no n° vs =), '#', '"', '?', 'one!']
   }
 );
 
-our @PEEL_FRONT = qw(match ro16 rr segment semifinal stanza swiss vs);
+our @PEEL_FRONT = qw(match maych ro16 rr segment
+  semifinal stanza swiss vs);
 
-our @PEEL_BACK = qw(match of round rounds rr segment session sessão tempo);
+our @PEEL_BACK = qw(match of round rounds rr segment session sessão 
+  tempo);
 
 our %MERGE_HASH;
 for my $key (keys %MERGE_ALIASES)
