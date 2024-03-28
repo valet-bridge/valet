@@ -5,6 +5,7 @@ use warnings;
 use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
+use Time::HiRes qw(time);
 
 use lib '.';
 use Cookbook;
@@ -33,8 +34,7 @@ my $line;
 my $lno = 0;
 my $unknown = 0;
 
-my %MERGE_SEEN;
-my %FIX_SEEN;
+my $time1 = 0;
 
 while ($line = <$fh>)
 {
@@ -51,7 +51,7 @@ while ($line = <$fh>)
     }
     else
     {
-      if ($chunk{BBONO} == 491)
+      if ($chunk{BBONO} == 19947)
       {
         print "HERE\n";
       }
@@ -82,22 +82,6 @@ while ($line = <$fh>)
 
 close $fh;
 print "TOTAL $unknown\n";
-
-for my $key (sort keys %MERGE_HASH)
-{
-  if (! defined $MERGE_SEEN{$key})
-  {
-    print "Missing merge key $key\n";
-  }
-}
-
-for my $key (sort keys %FIX_HASH)
-{
-  if (! defined $FIX_SEEN{$key})
-  {
-    print "Missing fix key $key\n";
-  }
-}
 
 
 sub parse_teams
@@ -341,16 +325,8 @@ sub is_date
 sub mash
 {
   my $text = pop;
-
   my $res = $text;
-  for my $key (keys %MERGE_HASH)
-  {
-if (
-    $res =~s/\b$key\b/$MERGE_HASH{$key}/gi) # ;
-{
-$MERGE_SEEN{lc($key)}++;
-}
-  }
+  $res =~ s/$MERGE_REGEX/$MERGE_HASH{lc($1)}/ge;
   return $res;
 }
 
@@ -409,34 +385,28 @@ sub split_on_known_words
       my $fix = $FIX_HASH{$part};
       next if defined $fix->{VALUE};
 
-      for my $front (@PEEL_FRONT)
+      if ($part =~ $FRONT_REGEX)
       {
-        if ($part =~ /^$front(.+)$/i)
-        {
-          my $back = $1;
-          splice(@$list_ref, $i, 0, ('') x 2);
-          $list_ref->[$i  ] = $front;
-          $list_ref->[$i+1] = '|';
-          $list_ref->[$i+2] = $back;
-          $hit = 1;
-          last;
-        }
+        my ($front, $back) = ($1, $2);
+        splice(@$list_ref, $i, 0, ('') x 2);
+        $list_ref->[$i  ] = $front;
+        $list_ref->[$i+1] = '|';
+        $list_ref->[$i+2] = $back;
+        $hit = 1;
+        last;
       }
 
       next if $hit;
 
-      for my $back (@PEEL_BACK)
+      if ($part =~ $BACK_REGEX)
       {
-        if ($part =~ /^(.+)$back$/i)
-        {
-          my $front = $1;
-          splice(@$list_ref, $i, 0, ('') x 2);
-          $list_ref->[$i  ] = $front;
-          $list_ref->[$i+1] = '|';
-          $list_ref->[$i+2] = $back;
-          $hit = 1;
-          last;
-        }
+        my ($front, $back) = ($1, $2);
+        splice(@$list_ref, $i, 0, ('') x 2);
+        $list_ref->[$i  ] = $front;
+        $list_ref->[$i+1] = '|';
+        $list_ref->[$i+2] = $back;
+        $hit = 1;
+        last;
       }
     }
   }
@@ -465,51 +435,43 @@ sub split_on_tournament_group
     my $part = $list_ref->[$i];
 
     my $hit = 0;
-    for my $front (@PRE_GROUP)
+    if ($part =~ $PRE_GROUP_REGEX)
     {
-      if ($part =~ /^$front([AB])$/i)
+      my ($front, $back) = ($1, $2);
+      splice(@$list_ref, $i, 0, ('') x 2);
+
+      my $fix = $FIX_HASH{lc($front)};
+      if (! defined $fix->{VALUE})
       {
-        my $back = $1;
-        splice(@$list_ref, $i, 0, ('') x 2);
-
-        my $fix = $FIX_HASH{lc($front)};
-        if (! defined $fix->{VALUE})
-        {
-          die "No value for $front";
-        }
-$FIX_SEEN{lc($front)}++;
-
-        $list_ref->[$i  ] = $fix->{VALUE};
-        $list_ref->[$i+1] = '|';
-        $list_ref->[$i+2] = $back;
-        $hit = 1;
-        last;
+        die "No value for $front";
       }
+
+      $list_ref->[$i  ] = $fix->{VALUE};
+      $list_ref->[$i+1] = '|';
+      $list_ref->[$i+2] = $back;
+      $hit = 1;
+      last;
     }
     next if $hit;
 
-    for my $back (@POST_GROUP)
+    if ($part =~ $POST_GROUP_REGEX)
     {
-      if ($part =~ /^([OW])$back$/i)
+      my ($front, $back) = ($1, $2);
+      splice(@$list_ref, $i, 0, ('') x 2);
+
+      my $fix = $FIX_HASH{lc($back)};
+      if (! defined $fix->{VALUE})
       {
-        my $front = $1;
-        splice(@$list_ref, $i, 0, ('') x 2);
-
-        my $fix = $FIX_HASH{lc($back)};
-        if (! defined $fix->{VALUE})
-        {
-          die "No value for $front";
-        }
-$FIX_SEEN{lc($back)}++;
-
-        $list_ref->[$i  ] = ($front eq 'W' ? 'Women' : 'Open');
-        $list_ref->[$i+1] = '|';
-        $list_ref->[$i+2] = $fix->{VALUE};
-        $hit = 1;
-        last;
+        die "No value for $front";
       }
-      next if $hit;
+
+      $list_ref->[$i  ] = ($front eq 'W' ? 'Women' : 'Open');
+      $list_ref->[$i+1] = '|';
+      $list_ref->[$i+2] = $fix->{VALUE};
+      $hit = 1;
+      last;
     }
+    next if $hit;
 
     # Kludge.
     if ($part eq 'OR')
@@ -619,7 +581,6 @@ sub study_part
   {
     $study_ref->{CATEGORY} = $fix->{CATEGORY};
     $study_ref->{VALUE} = $fix->{VALUE};
-$FIX_SEEN{lc($part)}++;
     return ($fix->{CATEGORY} eq 'KILL');
   }
 

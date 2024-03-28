@@ -11,11 +11,13 @@ package Cookbook;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(
   %MERGE_HASH
+  $MERGE_REGEX
+  %MERGE_LOWER_TO_ORIG_CASE
   %FIX_HASH
-  @PEEL_FRONT
-  @PEEL_BACK
-  @PRE_GROUP
-  @POST_GROUP
+  $FRONT_REGEX
+  $BACK_REGEX
+  $PRE_GROUP_REGEX
+  $POST_GROUP_REGEX
 );
 
 # This merge gets executed first of all.
@@ -161,7 +163,7 @@ our %FIX_ALIASES =
     "Super League" => [qw(superleague sl)],
     "USBC" => [],
     "Vanderbilt" => [qw(vandy)],
-    "Venice Cup" => [qw(venicecup vc venice)], # I hope
+    "Venice Cup" => [qw(vc venice)], # I hope
     "VITO Teams" => [qw(vitoteams)],
     "World Mind Sports Games" => [qw(wmsg mind)],
     "World Transnational Open Teams" => [qw(wtot)],
@@ -202,7 +204,7 @@ our %FIX_ALIASES =
     Olympiad => [qw(olympiads)],
     Open => [qw(open o libres opain oper op
       terbuka terbukaerbuka)], # Ambiguous
-    Tournament => [qw(tournoi tounoi)],
+    Tournament => [qw(tounoi)],
     Trials => [qw(trial selectio selection prueba)],
     Super => [qw(sup)],
     Welcome => []
@@ -228,8 +230,7 @@ our %FIX_ALIASES =
     City => [qw(intercity)],
     Club => [qw(interclub)],
     University => [qw(university univ)],
-    Transnational => [qw(transnational transnation trans 
-      transnatio transnat tn)],
+    Transnational => [qw(transnation trans transnatio transnat tn)],
     Invitational => [],
     Proam => [],
   },
@@ -255,7 +256,7 @@ our %FIX_ALIASES =
       qfinal qfinals quaterfinal qf ottavi quarti)],
     Playoff => [qw(po playoff playoffs)],
     "Knock-out" => [qw(ko elimination kostage knockout knockouts)],
-    Tiebreak => [qw(tie ot)],
+    Tiebreak => [qw(ot)],
     Consolation => [qw(conso)],
     Bronze => [],
     Berth => [],
@@ -273,7 +274,7 @@ our %FIX_ALIASES =
     PreQF => [qw(pqf)],
 
     Round => [qw(rounds rouns rueda ruond rd riund rnd rds ound ro
-      tound tour runde runder rn r rond ronda ronud roudn roun 
+      tound tour runde runder rn r rond ronda ronud roudn
       turno turul sr)],
     Stanza => [qw(stanza stanzas stranza)],
     Session => [qw(serssion sesion sesión sesj sesjon sess
@@ -307,7 +308,7 @@ our %FIX_ALIASES =
 
   SCORING =>
   {
-    MP => [qw(matchpoints matchpoint machpoints macthpoints mpoints)],
+    MP => [qw(machpoints macthpoints mpoints)],
     IMP => [qw(ýmp)],
     BAM => [],
   },
@@ -342,7 +343,7 @@ our %FIX_ALIASES =
 
   GROUP =>
   {
-    Group => [qw(grp gr groups pool)],
+    Group => [qw(gr groups pool)],
   },
 
   COLOR =>
@@ -365,13 +366,13 @@ our %FIX_ALIASES =
   COUNTRY =>
   {
     Bulgaria => [],
-    'Czech Republic' => [qw(czech)],
+    'Czech Republic' => [],
     CBAI => [], # Don't map directly to Ireland; could be "Ireland 2"
     England => [qw(eng)],
     Finland => [],
     France => [qw(fra)],
-    Hungary => [qw(hungarian)],
-    Ireland => [qw(ire roi)],
+    Hungary => [],
+    Ireland => [qw(roi)],
     Israel => [],
     Italy => [],
     Latvia => [],
@@ -497,23 +498,35 @@ our %FIX_ALIASES =
       man mandarin 
       fluff reloaded missed this train tren ch mac ore oam le friendly
       game series npc rank tpatkawan patkawan phase tadkov friendship
-      am evening afternoon night soir barriere best delayed us
+      am afternoon night soir barriere best delayed us
       combined for only alle int titan silver gold vp sm
       è no n° vs =), 
       '#', '?', 'one!', 'ab', 'a&b', ']']
   }
 );
 
-our @PEEL_FRONT = qw(teams match maych rr segment
+my @PEEL_FRONT = qw(teams match maych rr segment
   semifinal stanza swiss vs juniors);
 
-our @PEEL_BACK = qw(pairs team teams match round rounds rnd rr 
+my @PEEL_BACK = qw(pairs team teams match round rounds rnd rr 
   segment session sessão stanza tempo final semi);
 
-our @ROMAN = qw(i ii iii iv v vi vii viii ix x xi xii);
-our @PRE_GROUP = (qw(f group q qf sf semi t), @ROMAN);
+my $FRONT_PATTERN = join('|', map { quotemeta } @PEEL_FRONT);
+our $FRONT_REGEX = qr/^($FRONT_PATTERN)(.+)$/i;
 
-our @POST_GROUP = qw(rr);
+my $BACK_PATTERN = join('|', map { quotemeta } @PEEL_BACK);
+our $BACK_REGEX = qr/^(.+)($BACK_PATTERN)$/i;
+
+my @ROMAN = qw(i ii iii iv v vi vii viii ix x xi xii);
+my @PRE_GROUP = (qw(f group q qf sf semi t), @ROMAN);
+
+my $PRE_GROUP_PATTERN = join('|', map { quotemeta } @PRE_GROUP);
+our $PRE_GROUP_REGEX = qr/^($PRE_GROUP_PATTERN)([AB])$/i;
+
+my @POST_GROUP = qw(rr);
+
+my $POST_GROUP_PATTERN = join('|', map { quotemeta } @POST_GROUP);
+our $POST_GROUP_REGEX = qr/^([OW])($POST_GROUP_PATTERN)$/i;
 
 our %MERGE_HASH;
 for my $key (keys %MERGE_ALIASES)
@@ -523,6 +536,9 @@ for my $key (keys %MERGE_ALIASES)
     $MERGE_HASH{lc($alias)} = $key;
   }
 }
+
+my $MERGE_PATTERN = join('|', map { quotemeta } keys %MERGE_HASH);
+our $MERGE_REGEX = qr/\b($MERGE_PATTERN)\b/i;
 
 our %FIX_HASH;
 for my $category (keys %FIX_ALIASES)
