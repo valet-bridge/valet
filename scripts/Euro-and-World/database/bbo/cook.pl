@@ -56,7 +56,8 @@ while ($line = <$fh>)
         print "HERE\n";
       }
 
-      study_event($chunk{EVENT}, \%chunk);
+      my @studied_event;
+      study_event($chunk{EVENT}, \%chunk, \@studied_event);
 
       print_chunk(\%chunk);
     }
@@ -115,6 +116,216 @@ sub print_chunk
     }
   }
   print "\n";
+}
+
+
+sub unteam
+{
+  my ($text, $team1, $team2) = @_;
+
+  my $res = $text;
+  $res =~ s/\Q$team1\E// if defined $team1;
+  $res =~ s/\Q$team2\E// if defined $team2;
+  return $res;
+}
+
+
+sub mash
+{
+  my $text = pop;
+  my $res = $text;
+  $res =~ s/$MERGE_REGEX/$MERGE_HASH{lc($1)}/ge;
+  return $res;
+}
+
+
+sub split_on_known_words
+{
+  my ($list_ref) = @_;
+
+  # Some entries may be mashed together.  It's easier to split them
+  # out than to try to recognize them later.
+  # As there can be several layers of this, we do it recursively.
+  # Not very efficiently implemented: Don't have to reexamine elements
+  # that could not be split once.
+  
+  my $hit = 1;
+  my $ctr = 0;
+  while ($hit)
+  {
+    $ctr++;
+    $hit = 0;
+    for my $i (reverse 0 .. $#$list_ref)
+    {
+      my $part = lc($list_ref->[$i]);
+      my $fix = $FIX_HASH{$part};
+      next if defined $fix->{VALUE};
+
+      if ($part =~ $FRONT_REGEX)
+      {
+        my ($front, $back) = ($1, $2);
+        splice(@$list_ref, $i, 0, ('') x 2);
+        $list_ref->[$i  ] = $front;
+        $list_ref->[$i+1] = '|';
+        $list_ref->[$i+2] = $back;
+        $hit = 1;
+        last;
+      }
+
+      next if $hit;
+
+      if ($part =~ $BACK_REGEX)
+      {
+        my ($front, $back) = ($1, $2);
+        splice(@$list_ref, $i, 0, ('') x 2);
+        $list_ref->[$i  ] = $front;
+        $list_ref->[$i+1] = '|';
+        $list_ref->[$i+2] = $back;
+        $hit = 1;
+        last;
+      }
+    }
+  }
+}
+
+
+sub split_on_digit_groups
+{
+  my ($list_ref) = @_;
+
+  for my $i (reverse 0 .. $#$list_ref)
+  {
+    my $part = $list_ref->[$i];
+
+    if ($part =~ /\d/ && $part =~ /[^\d]/ &&
+      ! is_small_ordinal($part))
+    {
+      my @a = grep {$_ ne ''} split /(\d+)/, $part;
+      die "No real split: $part" unless $#a > 0;
+
+      if ($#a == 1 && $a[0] =~ /^rof$/i)
+      {
+        # Don't split Rof128 etc.
+        next;
+      }
+
+      my $add = 2 * $#a - 1;
+      splice(@$list_ref, $i, 0, ('') x $add);
+      for my $j (0 .. $#a)
+      {
+        $list_ref->[$i + 2*$j] = $a[$j];
+        $list_ref->[$i + 2*$j + 1] = '|';
+      }
+    }
+  }
+}
+
+
+sub split_on_pre_group
+{
+  my ($list_ref, $part, $i) = @_;
+
+  if ($part =~ $PRE_GROUP_REGEX)
+  {
+    my ($front, $back) = ($1, $2);
+    splice(@$list_ref, $i, 0, ('') x 2);
+
+    my $fix = $FIX_HASH{lc($front)};
+    if (! defined $fix->{VALUE})
+    {
+      die "No value for $front";
+    }
+
+    $list_ref->[$i  ] = $fix->{VALUE};
+    $list_ref->[$i+1] = '|';
+    $list_ref->[$i+2] = $back;
+    return 1;
+  }
+  return 0;
+}
+
+
+sub split_on_post_group
+{
+  my ($list_ref, $part, $i) = @_;
+
+  if ($part =~ $POST_GROUP_REGEX)
+  {
+    my ($front, $back) = ($1, $2);
+    splice(@$list_ref, $i, 0, ('') x 2);
+
+    my $fix = $FIX_HASH{lc($back)};
+    if (! defined $fix->{VALUE})
+    {
+      die "No value for $back";
+    }
+
+    $list_ref->[$i  ] = ($front eq 'W' ? 'Women' : 'Open');
+    $list_ref->[$i+1] = '|';
+    $list_ref->[$i+2] = $fix->{VALUE};
+    return 1;
+  }
+  return 0;
+}
+
+
+sub split_on_tournament_group
+{
+  my ($list_ref) = @_;
+
+  # A number of words are commonly followed by A or B.
+  
+  for my $i (reverse 0 .. $#$list_ref)
+  {
+    my $part = $list_ref->[$i];
+
+    next if split_on_pre_group($list_ref, $part, $i);
+
+    next if split_on_post_group($list_ref, $part, $i);
+
+    # Kludge.
+    if ($part eq 'OR')
+    {
+      splice(@$list_ref, $i, 0, ('') x 2);
+      $list_ref->[$i  ] = 'Open';
+      $list_ref->[$i+1] = '|';
+      $list_ref->[$i+2] = 'Room';
+      
+    }
+    elsif ($part eq 'or')
+    {
+      $list_ref->[$i  ] = 'Of'; # Typically a typo
+    }
+  }
+}
+
+
+sub split_on_date
+{
+  my ($list_ref) = @_;
+
+  for my $i (reverse 0 .. $#$list_ref)
+  {
+    my $part = $list_ref->[$i];
+
+    next unless $part =~ /^\d+$/ && $part > 19000000;
+
+    if ($part =~ /^(\d\d\d\d)(\d\d)(\d\d)0(\d)$/)
+    {
+      # Only really used once.
+      my ($year, $month, $day, $r) = ($1, $2, $3, $4);
+      splice(@$list_ref, $i, 0, ('') x 4);
+      $list_ref->[$i  ] = "$year-$month-$day";
+      $list_ref->[$i+1] = '|';
+      $list_ref->[$i+2] = "Round";
+      $list_ref->[$i+3] = '|';
+      $list_ref->[$i+4] = $r;
+    }
+    else
+    {
+      die "Probably a date? $part";
+    }
+  }
 }
 
 
@@ -322,206 +533,6 @@ sub is_date
 }
 
 
-sub mash
-{
-  my $text = pop;
-  my $res = $text;
-  $res =~ s/$MERGE_REGEX/$MERGE_HASH{lc($1)}/ge;
-  return $res;
-}
-
-
-sub split_on_digit_groups
-{
-  my ($list_ref) = @_;
-
-  for my $i (reverse 0 .. $#$list_ref)
-  {
-    my $part = $list_ref->[$i];
-
-    if ($part =~ /\d/ && $part =~ /[^\d]/ &&
-      ! is_small_ordinal($part))
-    {
-      my @a = grep {$_ ne ''} split /(\d+)/, $part;
-      die "No real split: $part" unless $#a > 0;
-
-      if ($#a == 1 && $a[0] =~ /^rof$/i)
-      {
-        # Don't split Rof128 etc.
-        next;
-      }
-
-      my $add = 2 * $#a - 1;
-      splice(@$list_ref, $i, 0, ('') x $add);
-      for my $j (0 .. $#a)
-      {
-        $list_ref->[$i + 2*$j] = $a[$j];
-        $list_ref->[$i + 2*$j + 1] = '|';
-      }
-    }
-  }
-}
-
-
-sub split_on_known_words
-{
-  my ($list_ref) = @_;
-
-  # Some entries may be mashed together.  It's easier to split them
-  # out than to try to recognize them later.
-  # As there can be several layers of this, we do it recursively.
-  # Not very efficiently implemented: Don't have to reexamine elements
-  # that could not be split once.
-  
-  my $hit = 1;
-  my $ctr = 0;
-  while ($hit)
-  {
-    $ctr++;
-    $hit = 0;
-    for my $i (reverse 0 .. $#$list_ref)
-    {
-      my $part = lc($list_ref->[$i]);
-      my $fix = $FIX_HASH{$part};
-      next if defined $fix->{VALUE};
-
-      if ($part =~ $FRONT_REGEX)
-      {
-        my ($front, $back) = ($1, $2);
-        splice(@$list_ref, $i, 0, ('') x 2);
-        $list_ref->[$i  ] = $front;
-        $list_ref->[$i+1] = '|';
-        $list_ref->[$i+2] = $back;
-        $hit = 1;
-        last;
-      }
-
-      next if $hit;
-
-      if ($part =~ $BACK_REGEX)
-      {
-        my ($front, $back) = ($1, $2);
-        splice(@$list_ref, $i, 0, ('') x 2);
-        $list_ref->[$i  ] = $front;
-        $list_ref->[$i+1] = '|';
-        $list_ref->[$i+2] = $back;
-        $hit = 1;
-        last;
-      }
-    }
-  }
-}
-
-
-sub unteam
-{
-  my ($text, $team1, $team2) = @_;
-
-  my $res = $text;
-  $res =~ s/\Q$team1\E// if defined $team1;
-  $res =~ s/\Q$team2\E// if defined $team2;
-  return $res;
-}
-
-
-sub split_on_tournament_group
-{
-  my ($list_ref) = @_;
-
-  # A number of words are commonly followed by A or B.
-  
-  for my $i (reverse 0 .. $#$list_ref)
-  {
-    my $part = $list_ref->[$i];
-
-    my $hit = 0;
-    if ($part =~ $PRE_GROUP_REGEX)
-    {
-      my ($front, $back) = ($1, $2);
-      splice(@$list_ref, $i, 0, ('') x 2);
-
-      my $fix = $FIX_HASH{lc($front)};
-      if (! defined $fix->{VALUE})
-      {
-        die "No value for $front";
-      }
-
-      $list_ref->[$i  ] = $fix->{VALUE};
-      $list_ref->[$i+1] = '|';
-      $list_ref->[$i+2] = $back;
-      $hit = 1;
-      last;
-    }
-    next if $hit;
-
-    if ($part =~ $POST_GROUP_REGEX)
-    {
-      my ($front, $back) = ($1, $2);
-      splice(@$list_ref, $i, 0, ('') x 2);
-
-      my $fix = $FIX_HASH{lc($back)};
-      if (! defined $fix->{VALUE})
-      {
-        die "No value for $front";
-      }
-
-      $list_ref->[$i  ] = ($front eq 'W' ? 'Women' : 'Open');
-      $list_ref->[$i+1] = '|';
-      $list_ref->[$i+2] = $fix->{VALUE};
-      $hit = 1;
-      last;
-    }
-    next if $hit;
-
-    # Kludge.
-    if ($part eq 'OR')
-    {
-      splice(@$list_ref, $i, 0, ('') x 2);
-      $list_ref->[$i  ] = 'Open';
-      $list_ref->[$i+1] = '|';
-      $list_ref->[$i+2] = 'Room';
-      
-    }
-    elsif ($part eq 'or')
-    {
-      $list_ref->[$i  ] = 'Of'; # Typically a typo
-    }
-  }
-}
-
-
-sub split_on_date
-{
-  my ($list_ref) = @_;
-
-  # A number of words are commonly followed by A or B.
-  
-  for my $i (reverse 0 .. $#$list_ref)
-  {
-    my $part = $list_ref->[$i];
-
-    next unless $part =~ /^\d+$/ && $part > 19000000;
-
-    if ($part =~ /^(\d\d\d\d)(\d\d)(\d\d)0(\d)$/)
-    {
-      # Only really used once.
-      my ($year, $month, $day, $r) = ($1, $2, $3, $4);
-      splice(@$list_ref, $i, 0, ('') x 4);
-      $list_ref->[$i  ] = "$year-$month-$day";
-      $list_ref->[$i+1] = '|';
-      $list_ref->[$i+2] = "Round";
-      $list_ref->[$i+3] = '|';
-      $list_ref->[$i+4] = $r;
-
-    }
-    else
-    {
-      die "Probably a date? $part";
-    }
-  }
-}
-
-
 sub kill_studied
 {
   my ($list_ref) = @_;
@@ -599,7 +610,7 @@ sub study_part
 
 sub study_event
 {
-  my ($text, $cref) = @_;
+  my ($text, $cref, $sref) = @_;
 
   if ($cref->{BBONO} >= 4790 && $cref->{BBONO} <= 4860 &&
       $cref->{TITLE} =~ /^Buffet/)
@@ -630,17 +641,15 @@ sub study_event
   # Split on ISO date.
   split_on_date(\@parts);
 
-  my @studied;
+  # Make a semantic, studied version of the event.
   my $kill_flag = 0;
 
   for my $i (0 .. $#parts)
   {
-    if (study_part($parts[$i], \%{$studied[$i]}))
-    {
-      $kill_flag = 1;
-    }
+    $sref->[$i]{TEXT} = $parts[$i];
+    $kill_flag = 1 if study_part($parts[$i], \%{$sref->[$i]});
   }
 
-  kill_studied(\@studied) if $kill_flag;
+  kill_studied($sref) if $kill_flag;
 }
 

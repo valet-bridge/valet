@@ -1,1 +1,9 @@
-Keep the original text around.
+Now we have to work semantically on the studies we've created.
+
+So maybe we keep count of the number of studies.
+And we have a series of reductions.
+For example, a Segment followed by (space) followed by 4
+becomes a counter called Segment and a value of 4.
+A counted followed by "of 4" augments the counter with that information.
+A counter has a print method that prints what it knows.
+Then we see how much we've explained
