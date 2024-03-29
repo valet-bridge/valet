@@ -11,6 +11,15 @@ my @AGE_LIST = qw(Open None Seniors U31 U28 U26 U21 U16 U13 Multiple);
 
 my %AGES = map { $_ => 1} @AGE_LIST;
 
+my %GUESSES =
+(
+  Juniors => 'U26',
+  Youngsters => 'U21',
+  Kids => 'U16',
+  Schools => 'U13',
+  Girls => 'U26'
+);
+
 
 sub new
 {
@@ -23,6 +32,24 @@ sub valid
 {
   my ($self, $text) = @_;
   return exists $AGES{$text} ? 1 : 0;
+}
+
+
+sub guess
+{
+  my ($self, $text) = @_;
+  if (exists $AGES{$text})
+  {
+    return $text;
+  }
+  elsif (exists $GUESSES{$text})
+  {
+    return $GUESSES{$text};
+  }
+  else
+  {
+    die "Can't guess Age of $text";
+  }
 }
 
 

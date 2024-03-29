@@ -545,7 +545,9 @@ for my $category (keys %FIX_ALIASES)
 {
   for my $value (keys %{$FIX_ALIASES{$category}})
   {
-    $FIX_HASH{lc($value)} = { CATEGORY => $category, VALUE => $value };
+    $FIX_HASH{lc($value)} = { CATEGORY => $category, VALUE => $value }
+      unless $category eq 'ROMAN';
+
     for my $fix (@{$FIX_ALIASES{$category}{$value}})
     {
       $FIX_HASH{$fix} = { CATEGORY => $category, VALUE => $value };

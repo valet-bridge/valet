@@ -8,7 +8,11 @@ use open ':std', ':encoding(UTF-8)';
 use Time::HiRes qw(time);
 
 use lib '.';
+use lib '..';
 use Cookbook;
+
+use Age;
+use Sponsor;
 
 # Turn the raw output of
 # ./reader -I ... -Q 9=4=0=0 -v 63
@@ -17,6 +21,9 @@ use Cookbook;
 # 2. Leave out fields that are empty
 # 3. Split TEAMS into TEAM1, TEAM2 when there are (real) teams.
 # 4. Try to parse the event string in detail.
+
+my $age = Age->new();
+my $sponsor = Sponsor->new();
 
 my @FIELDS = qw(BBONO TITLE MONIKER DATE LOCATION EVENT 
   SEGMENT ROUND COUNTER
@@ -33,6 +40,8 @@ my %chunk;
 my $line;
 my $lno = 0;
 my $unknown = 0;
+
+my %event_stats;
 
 my $time1 = 0;
 
@@ -59,6 +68,18 @@ while ($line = <$fh>)
       my @studied_event;
       study_event($chunk{EVENT}, \%chunk, \@studied_event);
 
+      process_event(\@studied_event);
+
+      for my $elem (@studied_event)
+      {
+        if ($elem->{CATEGORY} eq 'AGE')
+        {
+          print "HERE\n";
+        }
+        $event_stats{$elem->{CATEGORY}}++ unless exists $elem->{STATUS};
+      }
+
+
       print_chunk(\%chunk);
     }
   }
@@ -82,7 +103,12 @@ while ($line = <$fh>)
 }
 
 close $fh;
-print "TOTAL $unknown\n";
+print "TOTAL $unknown\n\n";
+
+for my $key (sort keys %event_stats)
+{
+  printf("%6d %s\n", $event_stats{$key}, $key);
+}
 
 
 sub parse_teams
@@ -653,3 +679,31 @@ sub study_event
   kill_studied($sref) if $kill_flag;
 }
 
+
+sub process_singletons
+{
+  my ($sref) = @_;
+
+  for my $elem (@$sref)
+  {
+    if ($elem->{CATEGORY} eq 'AGE')
+    {
+      $elem->{VALUE} = $age->guess($elem->{VALUE});
+      $elem->{STATUS} = 'FINAL';
+    }
+    elsif ($elem->{CATEGORY} eq 'SPONSOR')
+    {
+      die "No sponsor $elem->{VALUE}" unless 
+        $sponsor->valid($elem->{VALUE});
+      $elem->{STATUS} = 'FINAL';
+    }
+  }
+}
+
+
+sub process_event
+{
+  my ($sref) = @_;
+
+  process_singletons($sref);
+}
