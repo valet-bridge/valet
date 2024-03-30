@@ -12,6 +12,7 @@ my @ORIGIN_LIST =
   "World",
   "Province",
   "Region",
+  "Country",
   "City",
   "Club",
   "University",

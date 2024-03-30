@@ -28,26 +28,26 @@ our @EXPORT = qw(
 
 my %MERGE_ALIASES = (
 
-  # MONIKER
-  Eurochamp => ["eur champ"],
-  Superleague => ["super league", "sup league", "sup l",
-    "super leahue", "sup leg"],
+  # TNAME
   Bermudabowl => ["bermuda bowl"],
-  Nationscup => ["nations cup"],
-  Hungariancup => ["hungarian cup"],
+  Eurochamp => ["eur champ"],
   Fortunacup => ["fortuna cup"],
-  Kepricup => ["kepri cup"],
   FXcup => ["fx sec_ cup"],
-  Serdicacup => ["serdika cup"],
+  IsrGP => ["israel grand prix"],
+  Hungariancup => ["hungarian cup"],
+  Kepricup => ["kepri cup"],
   Grocup => ["gro's supercup"],
+  Nationscup => ["nations cup"],
   Ruiagold => ["ruia gold", "ruia gols"],
   Ruiasilver => ["ruia silver"],
-  Muratkilercioglu => ["murat kilercioglu"],
-  Grandprix => ["grand prix"],
-  Kalanitrophy => ["kalani trophy"],
+  Serdikacup => ["serdika cup"],
+  Superleague => ["super league", "sup league", "sup l",
+    "super leahue", "sup leg"],
+  VAKM => ["vest-agder km", "vest - agder"],
   Vitoteams => ["vito teams"],
 
   # SPONSOR
+  FXSec => [qw(fx securities)],
   Jetimmo => ["get immo", "get-immo", "jet immo"],
   LYLaw => [qw(L&Y)],
   "Bridgeclub" => ["briagclub"],
@@ -103,7 +103,6 @@ my %MERGE_ALIASES = (
   MP => ["matchpoint"],
 
   # NAMED_TEAM
-  Vestagder => ["vest-agder", "vest - agder"],
 
   # AGE
   U28 => ["under 28"],
@@ -134,36 +133,32 @@ my %MERGE_ALIASES = (
 
 our %FIX_ALIASES = 
 (
-  MONIKER => 
+  TNAME => 
   {
     "Australian National Open Teams" => [qw(not)],
     "Australian National Senior Teams" => [qw(nst)],
     "Australian National Women Teams" => [qw(nwt)],
     "Bermuda Bowl" => [qw(bermudabowl bermuda bb)],
     "Canadian National Teams" => [qw(cntc)],
-    "Club Championship" => [qw(km)], # Or Copenhagen...
     "D'Orsi Senior Cup" => [qw(dosb sb sc)],
-    "European" => [qw(eurochamp)],
+    "European Championship" => [qw(eurochamp)],
     "Fortuna Cup" => [qw(fortunacup)],
     "FX Securities Cup" => [qw(fxcup)],
     "Geologi Cup" => [qw(geologi)],
-    "Grand Prix" => [qw(grandprix)],
+    "Israel Grand Prix" => [qw(isrgp)],
     "Gro's Supercup" => [qw(grocup)],
     "Hungarian Cup" => [qw(hungariancup)],
-    "Kalani Trophy" => [qw(kalanitrophy)],
     "Kepri Cup" => [qw(kepricup)],
-    "Murat Kilercioglu" => [qw(muratkilercioglu)],
     "Nations Cup" => [qw(nationscup)],
     "Nordic Championship" => [qw(nm)],
-    "PABFC" => [qw(pabfc)],
     "Ruia Gold" => [qw(ruiagold)],
     "Ruia Silver" => [qw(ruiasilver)],
     "Ruia Cup" => [qw(ruia)],
-    "Serdica Cup" => [qw(serdicacup)],
-    "Super League" => [qw(superleague sl)],
-    "USBC" => [],
+    "Serdika Cup" => [qw(serdikacup)],
+    "United States Bridge Championship" => ["usbc"],
     "Vanderbilt" => [qw(vandy)],
     "Venice Cup" => [qw(vc venice)], # I hope
+    "Vest-Agder Club Championship" => [qw(vakm)],
     "VITO Teams" => [qw(vitoteams)],
     "World Mind Sports Games" => [qw(wmsg mind)],
     "World Transnational Open Teams" => [qw(wtot)],
@@ -172,8 +167,8 @@ our %FIX_ALIASES =
 
   SPONSOR =>
   {
+    "FX Securities" => [qw(fxsec)],
     "Jet Immo" => [qw(jetimmo)],
-    "Kalani Group" => [qw(kalani)],
     KWS => [],
     "L&Y Law" => [qw(lylaw)],
     MULTICOMS => [qw(multicoms)],
@@ -185,7 +180,9 @@ our %FIX_ALIASES =
   MEMORIAL =>
   {
     "Maharaja Holkar" => [qw(holkar)],
-    "Mohan Sicka" => [qw(mohansicka)]
+    "Mohan Sicka" => [qw(mohansicka)],
+    "Murat Kilercioglu" => [qw(murat kilercioglu)],
+    "P.C. Kalani" => [qw(kalani)]
   },
 
   ORGANIZER =>
@@ -202,6 +199,7 @@ our %FIX_ALIASES =
     Champion => [qw(champions champion's)],
     Championship => [qw(championship's)],
     Cup => [],
+    Trophy => [],
     League => [],
     Olympiad => [qw(olympiads)],
     Open => [qw(open o libres opain oper op
@@ -263,6 +261,7 @@ our %FIX_ALIASES =
     "Final Segment" => [qw(fs)],
     "Qualifying Segment" => [qw(qs)],
     "Round-robin" => [qw(rrobin roundrobin rr)],
+    "Super League" => [qw(superleague sl)],
 
     Qualifying => [qw(quailfy qual qualf qualfication quali qualif
       qualification qualifier qualify quallification qualy
@@ -495,7 +494,7 @@ our %FIX_ALIASES =
   {
     Kill => [qw(untitled
       bbo bbvg bbovg vg vmg bridge
-      man mandarin 
+      man mandarin pabfc
       fluff reloaded missed this train tren ch mac ore oam le friendly
       game series npc rank tpatkawan patkawan phase tadkov friendship
       am afternoon night soir barriere best delayed us

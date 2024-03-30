@@ -10,7 +10,10 @@ use v5.10;
 my @MEMORIAL_LIST = 
 (
   'Maharaja Holkar',
-  'Mohan Sicka'
+  'Mohan Sicka',
+  'Murat Kilercioglu',
+  'P.C. Kalani',
+  'Shri Ram Niwas Ruia'
 );
 
 my %MEMORIAL = map { $_ => 1} @MEMORIAL_LIST;

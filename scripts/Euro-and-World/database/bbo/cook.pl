@@ -22,6 +22,7 @@ use Organizer;
 use Origin;
 use Scoring;
 use Sponsor;
+use Tname;
 use Weekday;
 
 # Turn the raw output of
@@ -44,6 +45,7 @@ $CATEGORIES{ORGANIZER} = Organizer->new();
 $CATEGORIES{ORIGIN} = Origin->new();
 $CATEGORIES{SCORING} = Scoring->new();
 $CATEGORIES{SPONSOR} = Sponsor->new();
+$CATEGORIES{TNAME} = Tname->new();
 $CATEGORIES{WEEKDAY} = Weekday->new();
 
 my @FIELDS = qw(BBONO TITLE MONIKER DATE LOCATION EVENT 

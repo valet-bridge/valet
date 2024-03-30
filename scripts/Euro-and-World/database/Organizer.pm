@@ -9,11 +9,14 @@ use v5.10;
 
 my @ORGANIZER_LIST = 
 (
+  "ABCL",
   "Bridge Base Online",
   "Bridge Club Saint Etoile",
   "CBAI",
   "EBL",
-  "Guangdong Bridge Club"
+  "Guangdong Bridge Club",
+  "Kepri Contract Bridge Association",
+  "USBF"
 );
 
 my %ORGANIZERS = map { $_ => 1} @ORGANIZER_LIST;

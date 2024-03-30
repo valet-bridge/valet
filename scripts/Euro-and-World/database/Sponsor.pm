@@ -9,8 +9,8 @@ use v5.10;
 
 my @SPONSOR_LIST = 
 (
+  'FX Securities',
   'Jet Immo',
-  'Kalani Group',
   'KWS',
   'L&Y Law',
   'MULTICOMS',
