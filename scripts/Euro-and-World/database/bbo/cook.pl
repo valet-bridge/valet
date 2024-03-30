@@ -32,18 +32,19 @@ use Weekday;
 # 3. Split TEAMS into TEAM1, TEAM2 when there are (real) teams.
 # 4. Try to parse the event string in detail.
 
-my $age = Age->new();
-my $city = City->new();
-my $country = Country->new();
-my $form = Form->new();
-my $gender = Gender->new();
-my $memorial = Memorial->new();
-my $movement = Movement->new();
-my $organizer = Organizer->new();
-my $origin = Origin->new();
-my $scoring = Scoring->new();
-my $sponsor = Sponsor->new();
-my $weekday = Weekday->new();
+my %CATEGORIES;
+$CATEGORIES{AGE} = Age->new();
+$CATEGORIES{CITY} = City->new();
+$CATEGORIES{COUNTRY} = Country->new();
+$CATEGORIES{FORM} = Form->new();
+$CATEGORIES{GENDER} = Gender->new();
+$CATEGORIES{MEMORIAL} = Memorial->new();
+$CATEGORIES{MOVEMENT} = Movement->new();
+$CATEGORIES{ORGANIZER} = Organizer->new();
+$CATEGORIES{ORIGIN} = Origin->new();
+$CATEGORIES{SCORING} = Scoring->new();
+$CATEGORIES{SPONSOR} = Sponsor->new();
+$CATEGORIES{WEEKDAY} = Weekday->new();
 
 my @FIELDS = qw(BBONO TITLE MONIKER DATE LOCATION EVENT 
   SEGMENT ROUND COUNTER
@@ -799,77 +800,19 @@ sub process_singletons
       my $hit = 0;
       if ($elem->{CATEGORY} eq 'AGE')
       {
-        $elem->{VALUE} = $age->guess($elem->{VALUE});
-        $hit = 1;
-      }
-      elsif ($elem->{CATEGORY} eq 'CITY')
-      {
-        die "No gender $elem->{VALUE}" unless 
-          $city->valid($elem->{VALUE});
-        $hit = 1;
-      }
-      elsif ($elem->{CATEGORY} eq 'COUNTRY')
-      {
-        die "No country $elem->{VALUE}" unless 
-          $country->valid($elem->{VALUE});
+        $elem->{VALUE} = $CATEGORIES{AGE}->guess($elem->{VALUE});
         $hit = 1;
       }
       elsif ($elem->{CATEGORY} eq 'DATE')
       {
         $hit = 1;
       }
-      elsif ($elem->{CATEGORY} eq 'FORM')
+      elsif (defined $CATEGORIES{$elem->{CATEGORY}})
       {
-        die "No form $elem->{VALUE}" unless 
-          $form->valid($elem->{VALUE});
-        $hit = 1;
-      }
-      elsif ($elem->{CATEGORY} eq 'GENDER')
-      {
-        die "No gender $elem->{VALUE}" unless 
-          $gender->valid($elem->{VALUE});
-        $hit = 1;
-      }
-      elsif ($elem->{CATEGORY} eq 'MEMORIAL')
-      {
-        die "No memorial $elem->{VALUE}" unless 
-          $memorial->valid($elem->{VALUE});
-        $hit = 1;
-      }
-      elsif ($elem->{CATEGORY} eq 'MOVEMENT')
-      {
-        die "No movement $elem->{VALUE}" unless 
-          $movement->valid($elem->{VALUE});
-        $hit = 1;
-      }
-      elsif ($elem->{CATEGORY} eq 'ORGANIZER')
-      {
-        die "No organizer $elem->{VALUE}" unless 
-          $organizer->valid($elem->{VALUE});
-        $hit = 1;
-      }
-      elsif ($elem->{CATEGORY} eq 'SCORING')
-      {
-        die "No scoring $elem->{VALUE}" unless 
-          $scoring->valid($elem->{VALUE});
-        $hit = 1;
-      }
-      elsif ($elem->{CATEGORY} eq 'ORIGIN')
-      {
-        die "No origin $elem->{VALUE}" unless 
-          $origin->valid($elem->{VALUE});
-        $hit = 1;
-      }
-      elsif ($elem->{CATEGORY} eq 'SPONSOR')
-      {
-        die "No sponsor $elem->{VALUE}" unless 
-          $sponsor->valid($elem->{VALUE});
-        $hit = 1;
-      }
-      elsif ($elem->{CATEGORY} eq 'WEEKDAY')
-      {
-        die "No weekday $elem->{VALUE}" unless 
-          $weekday->valid($elem->{VALUE});
+        if (! $CATEGORIES{$elem->{CATEGORY}}->valid($elem->{VALUE}))
+        {
+          die "No " . lc($elem->{CATEGORY}) . ": $elem->{VALUE}";
+        }
         $hit = 1;
       }
 
