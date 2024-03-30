@@ -12,6 +12,9 @@ use lib '..';
 use Cookbook;
 
 use Age;
+use City;
+use Country;
+use Gender;
 use Sponsor;
 
 # Turn the raw output of
@@ -23,6 +26,9 @@ use Sponsor;
 # 4. Try to parse the event string in detail.
 
 my $age = Age->new();
+my $city = City->new();
+my $country = Country->new();
+my $gender = Gender->new();
 my $sponsor = Sponsor->new();
 
 my @FIELDS = qw(BBONO TITLE MONIKER DATE LOCATION EVENT 
@@ -42,6 +48,7 @@ my $lno = 0;
 my $unknown = 0;
 
 my %event_stats;
+my @chain_stats;
 
 my $time1 = 0;
 
@@ -60,25 +67,25 @@ while ($line = <$fh>)
     }
     else
     {
-      if ($chunk{BBONO} == 19947)
+      if ($chunk{BBONO} == 193)
       {
         print "HERE\n";
       }
 
-      my @studied_event;
-      study_event($chunk{EVENT}, \%chunk, \@studied_event);
+      my @event_chains;
+      study_event($chunk{EVENT}, \%chunk, \@event_chains);
 
-      process_event(\@studied_event);
+      process_event(\@event_chains);
 
-      for my $elem (@studied_event)
+      for my $chain (@event_chains)
       {
-        if ($elem->{CATEGORY} eq 'AGE')
-        {
-          print "HERE\n";
-        }
-        $event_stats{$elem->{CATEGORY}}++ unless exists $elem->{STATUS};
-      }
+        $chain_stats[$#$chain]++;
 
+        for my $elem (@$chain)
+        {
+          $event_stats{$elem->{CATEGORY}}++ unless exists $elem->{STATUS};
+        }
+      }
 
       print_chunk(\%chunk);
     }
@@ -105,10 +112,28 @@ while ($line = <$fh>)
 close $fh;
 print "TOTAL $unknown\n\n";
 
+print "Category stats\n";
+my $cat_sum = 0;
 for my $key (sort keys %event_stats)
 {
   printf("%6d %s\n", $event_stats{$key}, $key);
+  $cat_sum += $event_stats{$key} unless $key eq 'SEPARATOR';
 }
+print '-' x 20, "\n";
+printf "%6d Effective sum\n\n", $cat_sum;
+
+print "Chain stats\n";
+my $chain_count = 0;
+my $chain_prod = 0;
+for my $i (0 .. $#chain_stats)
+{
+  my $count = $chain_stats[$i] // 0;
+  printf "%4d %6d\n", $i, $count;
+  $chain_count += $count;
+  $chain_prod += $count * $i;
+}
+print '-' x 11, "\n";
+printf "%4s %6.2f\n", "Avg", $chain_prod / $chain_count;
 
 
 sub parse_teams
@@ -672,11 +697,13 @@ sub study_event
 
   for my $i (0 .. $#parts)
   {
-    $sref->[$i]{TEXT} = $parts[$i];
-    $kill_flag = 1 if study_part($parts[$i], \%{$sref->[$i]});
+    $sref->[0][$i]{text} = $parts[$i];
+    $sref->[0][$i]{position} = $i;
+
+    $kill_flag = 1 if study_part($parts[$i], \%{$sref->[0][$i]});
   }
 
-  kill_studied($sref) if $kill_flag;
+  kill_studied(\@{$sref->[0]}) if $kill_flag;
 }
 
 
@@ -684,11 +711,34 @@ sub process_singletons
 {
   my ($sref) = @_;
 
-  for my $elem (@$sref)
+  for my $elem (@{$sref->[0]})
   {
     if ($elem->{CATEGORY} eq 'AGE')
     {
       $elem->{VALUE} = $age->guess($elem->{VALUE});
+      $elem->{STATUS} = 'FINAL';
+    }
+    elsif ($elem->{CATEGORY} eq 'CITY')
+    {
+      die "No gender $elem->{VALUE}" unless 
+        $city->valid($elem->{VALUE});
+      $elem->{STATUS} = 'FINAL';
+    }
+    elsif ($elem->{CATEGORY} eq 'COUNTRY')
+    {
+      die "No country $elem->{VALUE}" unless 
+        $country->valid($elem->{VALUE}) || $elem->{VALUE} eq 'CBAI';
+      $elem->{STATUS} = 'FINAL';
+    }
+    elsif ($elem->{CATEGORY} eq 'DATE')
+    {
+      $elem->{STATUS} = 'FINAL';
+      # print "XXD $elem->{VALUE}\n";
+    }
+    elsif ($elem->{CATEGORY} eq 'GENDER')
+    {
+      die "No gender $elem->{VALUE}" unless 
+        $gender->valid($elem->{VALUE});
       $elem->{STATUS} = 'FINAL';
     }
     elsif ($elem->{CATEGORY} eq 'SPONSOR')
@@ -698,6 +748,7 @@ sub process_singletons
       $elem->{STATUS} = 'FINAL';
     }
   }
+      # print "XXD $elem->{VALUE}\n";
 }
 
 

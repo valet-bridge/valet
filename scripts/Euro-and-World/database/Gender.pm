@@ -7,7 +7,7 @@ use warnings;
 use Exporter;
 use v5.10;
 
-my @GENDER_LIST = qw(Open Women Mixed Multiple);
+my @GENDER_LIST = qw(Open Men Women Mixed Multiple);
 
 my %GENDERS = map { $_ => 1} @GENDER_LIST;
 

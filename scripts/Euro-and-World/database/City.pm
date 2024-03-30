@@ -11,8 +11,8 @@ my @CITY_LIST =
   ( "Aachen", "Ajaccio", "Albena", "Albuquerque, NM", "Amman", 
     "Amsterdam", "Ann Arbor, MI", "Antalya", "Arhus", "Arona", 
     "Athens",  "Atlanta, GA",
-    "Bali", "Bad Honnef", "Baden-Baden", "Bangkok", "Barcelona", 
-    "Beijing", "Beirut", "Bellaria", "Bermuda", "Biarritz", 
+    "Bali", "Bad Honnef", "Baden-Baden", "Ballymena", "Bangkok", 
+    "Barcelona", "Beijing", "Beirut", "Bellaria", "Bermuda", "Biarritz", 
     "Bielefeld", "Birmingham", "Bordeaux", "Brasov", "Brighton", 
     "Brussels", "Bucharest", "Budapest", "Buenos Aires", "Burghausen", 
     "Cannes", "Cardiff", "Chennai", "Como", "Copenhagen",
@@ -21,7 +21,7 @@ my @CITY_LIST =
     "Geneva", "Ghent", "Guaruja",
     "Hague", "Hamilton, ON", "Hammamet", "Hasselt", "Helsinki", "Herzliya",
     "Istanbul", "Izmir", "Jesolo", "Jurmala",
-    "Karachi", "Kfar Hamaccabiah", "Killarney", "Kosice",
+    "Karachi", "Kfar Hamaccabiah", "Killarney", "Kolkata", "Kosice",
     "Larnaca", "Las Palmas", "Lausanne", "Liepaja", 
     "Lille", "Lisbon", "Lund", "Lyon",
     "Maastricht", "Madeira", "Malmo", "Mangaratiba", "Manila", 
@@ -35,7 +35,7 @@ my @CITY_LIST =
     "Palermo", "Papendal", "Paris", "Pau", "Perth", "Pezinok",
     "Philadelphia, PA", "Piestany", "Plovdiv", 
     "Poznan", "Prague", "Protaras", "Ptuj",
-    "Rhodes", "Riccione", "Riga", "Rio de Janeiro", "Rome",
+    "Radkov", "Rhodes", "Riccione", "Riga", "Rio de Janeiro", "Rome",
     "Saint-Vincent", "Salsomaggiore", "Salt Lake City, UT", 
     "Samorin", "San Marino", "Sanremo", "Santa Sofia (Forli)",
     "Santiago", "Sanya", 
@@ -43,10 +43,10 @@ my @CITY_LIST =
     "Stargard", "Stirling", "Stockholm", "Strasbourg", "Sydney", 
     "Taicang", "Taipei", "Tallinn", "Tata", "Tenerife", "Tianjin",
     "Tignes", "Torquay", "Tromso", "Turin", "Turku",
-    "Valkenburg", "Valletta", "Veldhoven", "Venice", "Vejle", "Verona", 
-    "Vienna", "Vilamoura", "Vilnius",
+    "Valkenburg", "Valletta", "Vancouver", "Veldhoven", "Venice", 
+    "Vejle", "Verona", "Vienna", "Vilamoura", "Vilnius",
     "Warsaw", "Wiesbaden", "Wroclaw", "Wuhan", "Wujang",
-    "Yokohama", "Zagreb");
+    "Yokohama", "Zagreb", "Zurich");
 
 my %CITIES = map { $_ => 1 } @CITY_LIST;
 
