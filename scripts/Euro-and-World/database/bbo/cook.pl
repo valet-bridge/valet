@@ -15,6 +15,9 @@ use Age;
 use City;
 use Country;
 use Gender;
+use Organizer;
+use Origin;
+use Scoring;
 use Sponsor;
 
 # Turn the raw output of
@@ -29,6 +32,9 @@ my $age = Age->new();
 my $city = City->new();
 my $country = Country->new();
 my $gender = Gender->new();
+my $organizer = Organizer->new();
+my $origin = Origin->new();
+my $scoring = Scoring->new();
 my $sponsor = Sponsor->new();
 
 my @FIELDS = qw(BBONO TITLE MONIKER DATE LOCATION EVENT 
@@ -49,6 +55,7 @@ my $unknown = 0;
 
 my %event_stats;
 my @chain_stats;
+my $solved_count = 0;
 
 my $time1 = 0;
 
@@ -67,25 +74,27 @@ while ($line = <$fh>)
     }
     else
     {
-      if ($chunk{BBONO} == 193)
+      if ($chunk{BBONO} == 14112)
       {
         print "HERE\n";
       }
 
-      my @event_chains;
-      study_event($chunk{EVENT}, \%chunk, \@event_chains);
+      my (%event_chains, @event_solved);
+      study_event($chunk{EVENT}, \%chunk, \%event_chains);
 
-      process_event(\@event_chains);
+      process_event(\%event_chains, \@event_solved);
 
-      for my $chain (@event_chains)
+      while (my ($key, $chain) = each %event_chains)
       {
-        $chain_stats[$#$chain]++;
+        $chain_stats[$#$chain + 1]++;
 
         for my $elem (@$chain)
         {
-          $event_stats{$elem->{CATEGORY}}++ unless exists $elem->{STATUS};
+          $event_stats{$elem->{CATEGORY}}++;
         }
       }
+
+      $solved_count += $#event_solved + 1;
 
       print_chunk(\%chunk);
     }
@@ -133,8 +142,9 @@ for my $i (0 .. $#chain_stats)
   $chain_prod += $count * $i;
 }
 print '-' x 11, "\n";
-printf "%4s %6.2f\n", "Avg", $chain_prod / $chain_count;
+printf "%4s %6.2f\n\n", "Avg", $chain_prod / $chain_count;
 
+print "Solved $solved_count\n";
 
 sub parse_teams
 {
@@ -420,6 +430,12 @@ sub is_separator
     $study_ref->{VALUE} = 'UNDERSCORE';
     return 1;
   }
+  elsif ($part eq '+')
+  {
+    $study_ref->{CATEGORY} = 'SEPARATOR';
+    $study_ref->{VALUE} = 'PLUS';
+    return 1;
+  }
   elsif ($part eq '/')
   {
     $study_ref->{CATEGORY} = 'SEPARATOR';
@@ -661,7 +677,7 @@ sub study_part
 
 sub study_event
 {
-  my ($text, $cref, $sref) = @_;
+  my ($text, $cref, $chains_ref) = @_;
 
   if ($cref->{BBONO} >= 4790 && $cref->{BBONO} <= 4860 &&
       $cref->{TITLE} =~ /^Buffet/)
@@ -697,64 +713,154 @@ sub study_event
 
   for my $i (0 .. $#parts)
   {
-    $sref->[0][$i]{text} = $parts[$i];
-    $sref->[0][$i]{position} = $i;
+    $chains_ref->{0}[$i]{text} = $parts[$i];
+    $chains_ref->{0}[$i]{position_first} = $i;
+    $chains_ref->{0}[$i]{position_last} = $i;
 
-    $kill_flag = 1 if study_part($parts[$i], \%{$sref->[0][$i]});
+    $kill_flag = 1 if study_part($parts[$i], \%{$chains_ref->{0}[$i]});
   }
 
-  kill_studied(\@{$sref->[0]}) if $kill_flag;
+  kill_studied(\@{$chains_ref->{0}}) if $kill_flag;
+}
+
+
+sub split_chain_on
+{
+  my ($chains_ref, $chain_no, $chain_max_ref,
+    $elem, $elem_no, $solved_ref) = @_;
+
+  my $chain_length = $#{$chains_ref->{$chain_no}};
+
+  if ($elem_no < $chain_length)
+  {
+    die "Expected separator" unless 
+      $chains_ref->{$chain_no}[$elem_no+1]{CATEGORY} eq 'SEPARATOR';
+
+    $elem->{position_last}++;
+    $elem->{text} .= $chains_ref->{$chain_no}[$elem_no+1]{VALUE};
+
+    if ($elem_no +1 < $chain_length)
+    {
+      # Make the number of the new partial chain.
+      $$chain_max_ref++;
+
+      # Skip the trailing separator.
+      @{$chains_ref->{$$chain_max_ref}} = 
+        @{$chains_ref->{$chain_no}}[$elem_no+2 .. $chain_length];
+    }
+  }
+
+  # Remove elements in the original chain.
+  my $last;
+  if ($elem_no > 0)
+  {
+    die "Expected separator" unless
+      $chains_ref->{$chain_no}[$elem_no-1]{CATEGORY} eq 'SEPARATOR';
+    
+    $last = $elem_no-1;
+
+    $elem->{position_first}--;
+    $elem->{text} = $chains_ref->{$chain_no}[$elem_no-1]{VALUE} .
+      $elem->{text};
+  }
+  else
+  {
+    $last = 0;
+  }
+
+  # Copy out the element that has been solved.
+  push @$solved_ref, $elem;
+
+
+  splice (@{$chains_ref->{$chain_no}}, $elem_no);
 }
 
 
 sub process_singletons
 {
-  my ($sref) = @_;
+  my ($chains_ref, $solved_ref) = @_;
 
-  for my $elem (@{$sref->[0]})
+  my $chain_no = 0;
+  my $chain_max = 0;
+
+  do
   {
-    if ($elem->{CATEGORY} eq 'AGE')
+    my $elem_no = 0;
+    for my $elem (@{$chains_ref->{$chain_no}})
     {
-      $elem->{VALUE} = $age->guess($elem->{VALUE});
-      $elem->{STATUS} = 'FINAL';
+      my $hit = 0;
+      if ($elem->{CATEGORY} eq 'AGE')
+      {
+        $elem->{VALUE} = $age->guess($elem->{VALUE});
+        $hit = 1;
+      }
+      elsif ($elem->{CATEGORY} eq 'CITY')
+      {
+        die "No gender $elem->{VALUE}" unless 
+          $city->valid($elem->{VALUE});
+        $hit = 1;
+      }
+      elsif ($elem->{CATEGORY} eq 'COUNTRY')
+      {
+        die "No country $elem->{VALUE}" unless 
+          $country->valid($elem->{VALUE});
+        $hit = 1;
+      }
+      elsif ($elem->{CATEGORY} eq 'DATE')
+      {
+        $hit = 1;
+      }
+      elsif ($elem->{CATEGORY} eq 'GENDER')
+      {
+        die "No gender $elem->{VALUE}" unless 
+          $gender->valid($elem->{VALUE});
+        $hit = 1;
+      }
+      elsif ($elem->{CATEGORY} eq 'ORGANIZER')
+      {
+        die "No organizer $elem->{VALUE}" unless 
+          $organizer->valid($elem->{VALUE});
+        $hit = 1;
+      }
+      elsif ($elem->{CATEGORY} eq 'SCORING')
+      {
+        die "No scoring $elem->{VALUE}" unless 
+          $scoring->valid($elem->{VALUE});
+        $hit = 1;
+      }
+      elsif ($elem->{CATEGORY} eq 'ORIGIN')
+      {
+        die "No origin $elem->{VALUE}" unless 
+          $origin->valid($elem->{VALUE});
+        $hit = 1;
+      }
+      elsif ($elem->{CATEGORY} eq 'SPONSOR')
+      {
+        die "No sponsor $elem->{VALUE}" unless 
+          $sponsor->valid($elem->{VALUE});
+        $hit = 1;
+      }
+
+      if ($hit)
+      {
+        split_chain_on($chains_ref, $chain_no, \$chain_max,
+          $elem, $elem_no, $solved_ref);
+        last;
+      }
+
+      $elem_no++;
     }
-    elsif ($elem->{CATEGORY} eq 'CITY')
-    {
-      die "No gender $elem->{VALUE}" unless 
-        $city->valid($elem->{VALUE});
-      $elem->{STATUS} = 'FINAL';
-    }
-    elsif ($elem->{CATEGORY} eq 'COUNTRY')
-    {
-      die "No country $elem->{VALUE}" unless 
-        $country->valid($elem->{VALUE}) || $elem->{VALUE} eq 'CBAI';
-      $elem->{STATUS} = 'FINAL';
-    }
-    elsif ($elem->{CATEGORY} eq 'DATE')
-    {
-      $elem->{STATUS} = 'FINAL';
-      # print "XXD $elem->{VALUE}\n";
-    }
-    elsif ($elem->{CATEGORY} eq 'GENDER')
-    {
-      die "No gender $elem->{VALUE}" unless 
-        $gender->valid($elem->{VALUE});
-      $elem->{STATUS} = 'FINAL';
-    }
-    elsif ($elem->{CATEGORY} eq 'SPONSOR')
-    {
-      die "No sponsor $elem->{VALUE}" unless 
-        $sponsor->valid($elem->{VALUE});
-      $elem->{STATUS} = 'FINAL';
-    }
+    $chain_no++;
   }
-      # print "XXD $elem->{VALUE}\n";
+  while ($chain_no <= $chain_max);
+
+  # print "XXD $elem->{VALUE}\n";
 }
 
 
 sub process_event
 {
-  my ($sref) = @_;
+  my ($chains_ref, $solved_ref) = @_;
 
-  process_singletons($sref);
+  process_singletons($chains_ref, $solved_ref);
 }

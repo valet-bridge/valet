@@ -190,8 +190,9 @@ our %FIX_ALIASES =
 
   ORGANIZER =>
   {
+    CBAI => [], # Don't map directly to Ireland; could be "Ireland 2"
     EBL => [qw(ebl)],
-    "Bridge Club Saint Étoile" => [qw(bcsh)],
+    "Bridge Club Saint Etoile" => [qw(bcsh)],
     "Guangdong Bridge Club" => [qw(guangdong bridgeclub)]
   },
     
@@ -367,7 +368,6 @@ our %FIX_ALIASES =
   {
     Bulgaria => [],
     'Czech Republic' => [],
-    CBAI => [], # Don't map directly to Ireland; could be "Ireland 2"
     England => [qw(eng)],
     Finland => [],
     France => [qw(fra)],

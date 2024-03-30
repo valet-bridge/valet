@@ -7,10 +7,15 @@ use warnings;
 use Exporter;
 use v5.10;
 
-my @ORGANIZER_LIST = qw(EBL WBF EOC IOC BFAME CSB);
+my @ORGANIZER_LIST = 
+(
+  "CBAI",
+  "EBL",
+  "Bridge Club Saint Etoile",
+  "Guangdong Bridge Club"
+);
 
-my %ORGANIZERS;
-$ORGANIZERS{$_} = 1 for @ORGANIZER_LIST;
+my %ORGANIZERS = map { $_ => 1} @ORGANIZER_LIST;
 
 
 sub new
