@@ -157,15 +157,22 @@ printf "%4s %6.2f\n\n", "Avg", $chain_prod / $chain_count;
 
 print "Solved $solved_count\n";
 
+
 sub parse_teams
 {
   my ($text, $cref) = @_;
 
+  $text =~ s/\- npc//g;
+  $text =~ s/\(npc\)//g;
+
   if ($text =~ /(.*) vs. (.*)/)
   {
     my ($team1, $team2) = ($1, $2);
-    $team1 =~ s/\s*\(\d+\)\s*$//;
+    $team1 =~ s/\s*\(\d+\)\s*$//; # (69)
     $team2 =~ s/\s*\(\d+\)\s*$//;
+    $team1 =~ s/^\s+|\s+$//g; # Leading and trailing space
+    $team2 =~ s/^\s+|\s+$//g;
+
     $chunk{TEAM1} = $team1;
     $chunk{TEAM2} = $team2;
   }
@@ -636,6 +643,7 @@ sub kill_studied
         splice(@$list_ref, $i, 2);
       }
       elsif ($list_ref->[$i-1]{VALUE} eq 'SPACE' ||
+             $list_ref->[$i-1]{VALUE} eq 'SLASH' ||
              $list_ref->[$i-1]{VALUE} eq 'ARTIFICIAL')
       {
         # Surrounded by spaces, so kill one of them.

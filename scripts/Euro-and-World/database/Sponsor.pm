@@ -12,6 +12,7 @@ my @SPONSOR_LIST =
   'FX Securities',
   'Jet Immo',
   'KWS',
+  'Lavazza',
   'L&Y Law',
   'MULTICOMS',
   'Solakoglu',

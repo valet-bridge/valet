@@ -102,8 +102,6 @@ my %MERGE_ALIASES = (
   BAM => ["b-a-m"],
   MP => ["matchpoint"],
 
-  # NAMED_TEAM
-
   # AGE
   U28 => ["under 28"],
 
@@ -143,7 +141,6 @@ our %FIX_ALIASES =
     "D'Orsi Senior Cup" => [qw(dosb sb sc)],
     "European Championship" => [qw(eurochamp)],
     "Fortuna Cup" => [qw(fortunacup)],
-    "FX Securities Cup" => [qw(fxcup)],
     "Geologi Cup" => [qw(geologi)],
     "Israel Grand Prix" => [qw(isrgp)],
     "Gro's Supercup" => [qw(grocup)],
@@ -170,6 +167,7 @@ our %FIX_ALIASES =
     "FX Securities" => [qw(fxsec)],
     "Jet Immo" => [qw(jetimmo)],
     KWS => [],
+    Lavazza => [],
     "L&Y Law" => [qw(lylaw)],
     MULTICOMS => [qw(multicoms)],
     Solakoglu => [],
@@ -312,16 +310,6 @@ our %FIX_ALIASES =
     IMP => [qw(ýmp)],
     BAM => [],
     Patton => []
-  },
-
-  NAMED_TEAM =>
-  {
-    Daskalakis => [],
-    Lavazza => [],
-    Robinson => [qw(robinso)],
-    Sternberg => [qw(stern)],
-    "Vest-Agder" => [qw(vestagder)],
-    Weed => []
   },
 
   AGE =>
@@ -495,6 +483,7 @@ our %FIX_ALIASES =
     Kill => [qw(untitled
       bbo bbvg bbovg vg vmg bridge
       man mandarin pabfc
+      daskalakis robinso stern
       fluff reloaded missed this train tren ch mac ore oam le friendly
       game series npc rank tpatkawan patkawan phase tadkov friendship
       am afternoon night soir barriere best delayed us
