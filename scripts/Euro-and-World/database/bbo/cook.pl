@@ -14,11 +14,15 @@ use Cookbook;
 use Age;
 use City;
 use Country;
+use Form;
 use Gender;
+use Memorial;
+use Movement;
 use Organizer;
 use Origin;
 use Scoring;
 use Sponsor;
+use Weekday;
 
 # Turn the raw output of
 # ./reader -I ... -Q 9=4=0=0 -v 63
@@ -31,11 +35,15 @@ use Sponsor;
 my $age = Age->new();
 my $city = City->new();
 my $country = Country->new();
+my $form = Form->new();
 my $gender = Gender->new();
+my $memorial = Memorial->new();
+my $movement = Movement->new();
 my $organizer = Organizer->new();
 my $origin = Origin->new();
 my $scoring = Scoring->new();
 my $sponsor = Sponsor->new();
+my $weekday = Weekday->new();
 
 my @FIELDS = qw(BBONO TITLE MONIKER DATE LOCATION EVENT 
   SEGMENT ROUND COUNTER
@@ -810,10 +818,28 @@ sub process_singletons
       {
         $hit = 1;
       }
+      elsif ($elem->{CATEGORY} eq 'FORM')
+      {
+        die "No form $elem->{VALUE}" unless 
+          $form->valid($elem->{VALUE});
+        $hit = 1;
+      }
       elsif ($elem->{CATEGORY} eq 'GENDER')
       {
         die "No gender $elem->{VALUE}" unless 
           $gender->valid($elem->{VALUE});
+        $hit = 1;
+      }
+      elsif ($elem->{CATEGORY} eq 'MEMORIAL')
+      {
+        die "No memorial $elem->{VALUE}" unless 
+          $memorial->valid($elem->{VALUE});
+        $hit = 1;
+      }
+      elsif ($elem->{CATEGORY} eq 'MOVEMENT')
+      {
+        die "No movement $elem->{VALUE}" unless 
+          $movement->valid($elem->{VALUE});
         $hit = 1;
       }
       elsif ($elem->{CATEGORY} eq 'ORGANIZER')
@@ -838,6 +864,12 @@ sub process_singletons
       {
         die "No sponsor $elem->{VALUE}" unless 
           $sponsor->valid($elem->{VALUE});
+        $hit = 1;
+      }
+      elsif ($elem->{CATEGORY} eq 'WEEKDAY')
+      {
+        die "No weekday $elem->{VALUE}" unless 
+          $weekday->valid($elem->{VALUE});
         $hit = 1;
       }
 

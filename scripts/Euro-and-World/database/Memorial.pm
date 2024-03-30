@@ -1,21 +1,19 @@
 #!perl
 
-package Scoring;
+package Memorial;
 
 use strict;
 use warnings;
 use Exporter;
 use v5.10;
 
-my @SCORING_LIST = 
+my @MEMORIAL_LIST = 
 (
-  "MP",
-  "IMP",
-  "BAM",
-  "Patton"
+  'Maharaja Holkar',
+  'Mohan Sicka'
 );
 
-my %SCORING = map { $_ => 1} @SCORING_LIST;
+my %MEMORIAL = map { $_ => 1} @MEMORIAL_LIST;
 
 
 sub new
@@ -28,7 +26,7 @@ sub new
 sub valid
 {
   my ($self, $text) = @_;
-  return exists $SCORING{$text} ? 1 : 0;
+  return exists $MEMORIAL{$text} ? 1 : 0;
 }
 
 

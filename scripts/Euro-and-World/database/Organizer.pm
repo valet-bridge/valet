@@ -9,9 +9,10 @@ use v5.10;
 
 my @ORGANIZER_LIST = 
 (
+  "Bridge Base Online",
+  "Bridge Club Saint Etoile",
   "CBAI",
   "EBL",
-  "Bridge Club Saint Etoile",
   "Guangdong Bridge Club"
 );
 

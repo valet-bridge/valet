@@ -57,7 +57,7 @@ my %MERGE_ALIASES = (
 
   # ORGANIZER
   EBL => ["e_b_l_"],
-  BBO => ["bridge base online"],
+  "BridgeBaseOnline" => ["bridge base online"],
 
   # TOURNAMENT: none
 
@@ -190,9 +190,10 @@ our %FIX_ALIASES =
 
   ORGANIZER =>
   {
+    "Bridge Club Saint Etoile" => [qw(bcsh)],
+    "Bridge Base Online" => ["bridgebaseonline"],
     CBAI => [], # Don't map directly to Ireland; could be "Ireland 2"
     EBL => [qw(ebl)],
-    "Bridge Club Saint Etoile" => [qw(bcsh)],
     "Guangdong Bridge Club" => [qw(guangdong bridgeclub)]
   },
     
@@ -217,8 +218,6 @@ our %FIX_ALIASES =
     Danish => [],
     Goulash => [],
     Monrad => [],
-    Patton => [],
-    "Round-robin" => [qw(rrobin roundrobin rr)],
     Swiss => [qw(sw swis suisse)],
     Triangle => []
   },
@@ -240,8 +239,7 @@ our %FIX_ALIASES =
   {
     Teams => [qw(team equipos team's lag teamd terms tm)],
     Pairs => [qw(pair paýrs psirs parejas)],
-    Individual => [qw(ind indiv indivual)],
-    Bridge => []
+    Individual => [qw(ind indiv indivual)]
   },
 
   ITERATOR =>
@@ -264,6 +262,7 @@ our %FIX_ALIASES =
     "Final Round" => [qw(fr)],
     "Final Segment" => [qw(fs)],
     "Qualifying Segment" => [qw(qs)],
+    "Round-robin" => [qw(rrobin roundrobin rr)],
 
     Qualifying => [qw(quailfy qual qualf qualfication quali qualif
       qualification qualifier qualify quallification qualy
@@ -297,6 +296,7 @@ our %FIX_ALIASES =
     Place => [qw(puesto lugar)],
     Top => [],
     Play => [],
+    Day => [],
 
     Rof => [],
     Rof12 => [],
@@ -312,6 +312,7 @@ our %FIX_ALIASES =
     MP => [qw(machpoints macthpoints mpoints)],
     IMP => [qw(ýmp)],
     BAM => [],
+    Patton => []
   },
 
   NAMED_TEAM =>
@@ -434,8 +435,7 @@ our %FIX_ALIASES =
     Thursday => [qw(thu)],
     Friday => [qw(fri freitag)],
     Saturday => [qw(sat samstag)],
-    Sunday => [qw(sun sonntag)],
-    Day => []
+    Sunday => [qw(sun sonntag)]
   },
 
   TEMPORAL =>
@@ -493,8 +493,8 @@ our %FIX_ALIASES =
 
   KILL =>
   {
-    Kill => [qw(untitled bbo 
-      bbvg bbovg vg vmg
+    Kill => [qw(untitled
+      bbo bbvg bbovg vg vmg bridge
       man mandarin 
       fluff reloaded missed this train tren ch mac ore oam le friendly
       game series npc rank tpatkawan patkawan phase tadkov friendship
