@@ -1,4 +1,4 @@
-Now we have to work semantically on the studies we've created.
+Binary coding of the ~ 30 categories?
 
 So maybe we keep count of the number of studies.
 And we have a series of reductions.
@@ -8,6 +8,45 @@ A counted followed by "of 4" augments the counter with that information.
 A counter has a print method that prints what it knows.
 Then we see how much we've explained
 
-Make CBAI an ORGANIZER, not a COUNTRY
-
 Make something called Region.pm with Kepri in it
+
+Categories:
+
+TNAME
+SPONSOR
+MEMORIAL
+ORGANIZER
+TOURNAMENT
+MOVEMENT
+ORIGIN
+FORM
+SCORING
+
+ITERATOR
+
+AGE
+GENDER
+
+GROUP
+COLOR
+TABLE
+BOARDS
+
+COUNTRY
+REGION
+GEOCOVER
+CITY
+
+YEAR
+MONTH
+DATE
+WEEKDAY
+TEMPORAL
+
+ORDINAL
+NUMERAL
+ROMAN
+
+PARTICLE
+
+KILL

@@ -238,6 +238,14 @@ our %FIX_ALIASES =
     Individual => [qw(ind indiv indivual)]
   },
 
+  SCORING =>
+  {
+    MP => [qw(machpoints macthpoints mpoints)],
+    IMP => [qw(ýmp)],
+    BAM => [],
+    Patton => []
+  },
+
   ITERATOR =>
   {
     Final => [qw(fianl filnal fin finale finales finali ff
@@ -302,14 +310,6 @@ our %FIX_ALIASES =
     Rof32 => [],
     Rof64 => [],
     Rof128 => []
-  },
-
-  SCORING =>
-  {
-    MP => [qw(machpoints macthpoints mpoints)],
-    IMP => [qw(ýmp)],
-    BAM => [],
-    Patton => []
   },
 
   AGE =>

@@ -48,6 +48,15 @@ $CATEGORIES{SPONSOR} = Sponsor->new();
 $CATEGORIES{TNAME} = Tname->new();
 $CATEGORIES{WEEKDAY} = Weekday->new();
 
+my @CHAIN_PATTERN =
+(
+  { CATEGORY => [qw(ITERATOR)] },
+  { CATEGORY => [qw(SEPARATOR)] },
+  { CATEGORY => [qw(NUMERAL ORDINAL)], VALUE => 'Of' },
+  { CATEGORY => [qw(SEPARATOR)] },
+  { CATEGORY => [qw(NUMERAL)] }
+);
+
 my @FIELDS = qw(BBONO TITLE MONIKER DATE LOCATION EVENT 
   SEGMENT ROUND COUNTER
   RESTRICTION_ORIGIN FORM GENDER AGE
@@ -85,7 +94,7 @@ while ($line = <$fh>)
     }
     else
     {
-      if ($chunk{BBONO} == 14112)
+      if ($chunk{BBONO} == 11)
       {
         print "HERE\n";
       }
@@ -838,8 +847,65 @@ sub process_singletons
     $chain_no++;
   }
   while ($chain_no <= $chain_max);
+}
 
-  # print "XXD $elem->{VALUE}\n";
+
+sub process_separators
+{
+  my ($chains_ref) = @_;
+
+  # Don't start or end with one.
+  # Don't have two next to one another.
+
+  while (my ($key, $chain) = each %$chains_ref)
+  {
+    next if ($#$chain == -1);
+
+    # Leading separators.
+    while ($chain->[0]{CATEGORY} eq 'SEPARATOR')
+    {
+      if ($#$chain >= 1)
+      {
+        $chain->[1]{text} = $chain->[0]{text} . $chain->[1]{text};
+        if ($chain->[1]{CATEGORY} eq 'SEPARATOR')
+        {
+          $chain->[1]{VALUE} = 'ARTIFICIAL';
+        }
+      }
+      splice(@$chain, 0, 1);
+      last if ($#$chain == -1);
+    }
+    next if ($#$chain <= 0);
+
+    # Trailing separators.
+    while ($chain->[-1]{CATEGORY} eq 'SEPARATOR')
+    {
+      if ($#$chain >= 1)
+      {
+        $chain->[-2]{text} .= $chain->[-1]{text};
+        if ($chain->[-2]{CATEGORY} eq 'SEPARATOR')
+        {
+          $chain->[-2]{VALUE} = 'ARTIFICIAL';
+        }
+      }
+      splice(@$chain, -1);
+      last if ($#$chain == -1);
+    }
+    next if ($#$chain <= 0);
+
+    for my $i (reverse 0 .. $#$chain)
+    {
+      # The chain now does not start nor end with a separator,
+      # and it has at least two elements.
+      if ($chain->[$i]{CATEGORY} eq 'SEPARATOR' &&
+          $chain->[$i-1]{CATEGORY} eq 'SEPARATOR')
+      {
+        $chain->[$i-1]{text} .= $chain->[$i]{text};
+        $chain->[$i-1]{VALUE} = 'ARTIFICIAL';
+        splice(@$chain, $i, 1);
+      }
+    }
+  }
 }
 
 
@@ -848,4 +914,5 @@ sub process_event
   my ($chains_ref, $solved_ref) = @_;
 
   process_singletons($chains_ref, $solved_ref);
+  process_separators($chains_ref);
 }
