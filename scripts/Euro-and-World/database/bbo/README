@@ -1,5 +1,7 @@
 Binary coding of the ~ 30 categories?
 
+When KILL'ing, also preserve the text of the surrounding separators.
+
 In Solved have a field with a pointer to a class Solved
 or something like that.  It can print.  It can hold a singleton
 or it can set a counter with several arguments, polymorphic-like.

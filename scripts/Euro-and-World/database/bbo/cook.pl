@@ -10,6 +10,7 @@ use Time::HiRes qw(time);
 use lib '.';
 use lib '..';
 use Cookbook;
+use Tchar;
 
 use Age;
 use City;
@@ -51,10 +52,13 @@ $CATEGORIES{WEEKDAY} = Weekday->new();
 my @PATTERNS =
 (
   [
-    { CATEGORY => [qw(ITERATOR)] },
-    { CATEGORY => [qw(NUMERAL ORDINAL)] },
-    { CATEGORY => [qw(PARTICLE)], VALUE => 'Of' },
-    { CATEGORY => [qw(NUMERAL)] }
+    [
+      { CATEGORY => [qw(ITERATOR)] },
+      { CATEGORY => [qw(NUMERAL ORDINAL)] },
+      { CATEGORY => [qw(PARTICLE)], VALUE => 'Of' },
+      { CATEGORY => [qw(NUMERAL)] }
+    ],
+    [ 'COUNTER_SINGLE_OF', 1, 'VALUE', 3, 'VALUE']
   ]
 );
 
@@ -95,15 +99,15 @@ while ($line = <$fh>)
     }
     else
     {
-      if ($chunk{BBONO} == 542)
+      if ($chunk{BBONO} == 22983)
       {
         print "HERE\n";
       }
 
-      my (%event_chains, @event_solved);
+      my (%event_chains, %event_solved);
       study_event($chunk{EVENT}, \%chunk, \%event_chains);
 
-      process_event(\%event_chains, \@event_solved);
+      process_event(\%event_chains, \%event_solved);
 
       while (my ($key, $chain) = each %event_chains)
       {
@@ -115,9 +119,13 @@ while ($line = <$fh>)
         }
       }
 
-      $solved_count += $#event_solved + 1;
+      $solved_count += scalar keys %event_solved;
 
       print_chunk(\%chunk);
+
+      print_solved(\%event_solved);
+
+      print_chains(\%event_chains);
     }
   }
   else
@@ -183,6 +191,18 @@ sub parse_teams
     $team1 =~ s/^\s+|\s+$//g; # Leading and trailing space
     $team2 =~ s/^\s+|\s+$//g;
 
+    my $fix1 = $FIX_HASH{lc($team1)};
+    if (defined $fix1 && $fix1->{CATEGORY} eq 'COUNTRY')
+    {
+      $team1 = $fix1->{VALUE};
+    }
+
+    my $fix2 = $FIX_HASH{lc($team2)};
+    if (defined $fix2 && $fix2->{CATEGORY} eq 'COUNTRY')
+    {
+      $team2 = $fix2->{VALUE};
+    }
+
     $chunk{TEAM1} = $team1;
     $chunk{TEAM2} = $team2;
   }
@@ -206,6 +226,48 @@ sub print_chunk
   }
   print "\n";
 }
+
+
+sub print_solved
+{
+  my $solved_ref = pop;
+
+  my $num_keys = scalar keys %$solved_ref;
+  if ($num_keys == 0)
+  {
+    print "Solved: Nothing\n";
+    return;
+  }
+
+  print "Solved:\n";
+  for my $key (sort keys %$solved_ref)
+  {
+    print $solved_ref->{$key}->str();
+  }
+  print "\n";
+}
+
+
+sub print_chains
+{
+  my $chains_ref = pop;
+
+  my $chain_no = 0;
+  my $chain_max = -1 + scalar keys %$chains_ref;
+
+  for my $c (0 .. $chain_no)
+  {
+    print "Chain $c: ";
+    my $chain = $chains_ref->{$c};
+    for my $elem (@$chain)
+    {
+      print $elem->{text};
+    }
+    print "\n";
+  }
+  print "\n";
+}
+
 
 
 sub unteam
@@ -645,7 +707,14 @@ sub kill_studied
       if ($i == $#$list_ref)
       {
         # From the back
-        splice(@$list_ref, $i-1, 2);
+        if ($i == 0)
+        {
+          splice(@$list_ref, 0);
+        }
+        else
+        {
+          splice(@$list_ref, $i-1, 2);
+        }
       }
       elsif ($i == 0)
       {
@@ -747,6 +816,16 @@ sub study_event
     $chains_ref->{0}[$i]{position_last} = $i;
 
     $kill_flag = 1 if study_part($parts[$i], \%{$chains_ref->{0}[$i]});
+
+    my $elem = $chains_ref->{0}[$i];
+    if ($elem->{CATEGORY} eq 'COUNTRY' &&
+       ($elem->{VALUE} eq $cref->{TEAM1} ||
+        $elem->{VALUE} eq $cref->{TEAM2}))
+    {
+      # It could be that the country name is spelled differently
+      # in EVENT and TEAMS.
+      $elem->{CATEGORY} = 'KILL';
+    }
   }
 
   kill_studied(\@{$chains_ref->{0}}) if $kill_flag;
@@ -755,8 +834,7 @@ sub study_event
 
 sub split_chain_on
 {
-  my ($chains_ref, $chain_no, $chain_max_ref,
-    $elem, $elem_no, $solved_ref) = @_;
+  my ($chains_ref, $chain_no, $chain_max_ref, $elem, $elem_no) = @_;
 
   my $chain_length = $#{$chains_ref->{$chain_no}};
 
@@ -797,10 +875,6 @@ sub split_chain_on
     $last = 0;
   }
 
-  # Copy out the element that has been solved.
-  push @$solved_ref, $elem;
-
-
   splice (@{$chains_ref->{$chain_no}}, $elem_no);
 }
 
@@ -839,7 +913,14 @@ sub process_singletons
       if ($hit)
       {
         split_chain_on($chains_ref, $chain_no, \$chain_max,
-          $elem, $elem_no, $solved_ref);
+          $elem, $elem_no);
+
+        # Copy out the element that has been solved.
+        my $cat = $elem->{CATEGORY};
+        warn "Category $cat already seen" if exists $solved_ref->{$cat};
+        $solved_ref->{$cat} = Tchar->new();
+        $solved_ref->{$cat}->set('SINGLETON', $elem);
+
         last;
       }
 
@@ -939,13 +1020,17 @@ sub process_patterns
 {
   my ($chains_ref, $solved_ref) = @_;
 
-  while (my ($key, $chain) = each %$chains_ref)
+  my $chain_no = 0;
+  my $chain_max = -1 + scalar keys %$chains_ref;
+
+  do
   {
-    next if $#$chain == -1;
+    my $chain = $chains_ref->{$chain_no};
+    # TODO Skip over empty chain -- how?
 
     for my $pattern (@PATTERNS)
     {
-      my $plen = $#$pattern;
+      my $plen = $#{$pattern->[0]};
 
       my $start_index = 0;
       while ($start_index + 2*$plen <= $#$chain)
@@ -953,7 +1038,7 @@ sub process_patterns
         my $miss = 0;
         for my $p (0 .. $plen)
         {
-          my $pelem = $pattern->[$p];
+          my $pelem = $pattern->[0][$p];
           if (! pattern_match($chain->[$start_index + 2*$p], $pelem))
           {
             $miss = 1;
@@ -963,14 +1048,41 @@ sub process_patterns
 
         if (! $miss)
         {
-          # TODO Collapse, but into what? It's pattern-dependent.
-          print "OFHIT\n";
+          my $cat = $chain->[$start_index]{VALUE};
+          die "Category $cat already seen" if exists $solved_ref->{$cat};
+          $solved_ref->{$cat} = Tchar->new();
+
+          my $reaction = $pattern->[1];
+
+          my @arg_list;
+          for (my $r = 1; $r <= $#$reaction; $r += 2)
+          {
+            my $pos = $start_index + 2 * $reaction->[$r];
+            push @arg_list, $chain->[$pos]{$reaction->[$r+1]};
+          }
+
+          my $elem = $chain->[$start_index];
+          for my $p (1 .. 2*$plen)
+          {
+            $elem->{text} .= $chain->[$start_index + $p]{text};
+          }
+          $elem->{position_last} = 
+            $chain->[$start_index + 2*$plen]{position_last};
+
+          splice(@$chain, $start_index+1, 2*$plen);
+
+          $solved_ref->{$cat}->set($reaction->[0], $elem, @arg_list);
+
+          split_chain_on($chains_ref, $chain_no, \$chain_max,
+            $elem, $start_index);
         }
 
         $start_index += 2;
       }
     }
+    $chain_no++;
   }
+  while ($chain_no <= $chain_max);
 }
 
 

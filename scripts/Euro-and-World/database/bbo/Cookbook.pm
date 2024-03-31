@@ -54,10 +54,12 @@ my %MERGE_ALIASES = (
 
   # MEMORIAL
   Mohansicka => ["mohan sicka"],
+  "muratkilercioglu" => ["murat kilercioglu"],
 
   # ORGANIZER
   EBL => ["e_b_l_"],
   "BridgeBaseOnline" => ["bridge base online"],
+  "guangdongbridgeclub" => ["guangdong bridgeclub"],
 
   # TOURNAMENT: none
 
@@ -179,7 +181,7 @@ our %FIX_ALIASES =
   {
     "Maharaja Holkar" => [qw(holkar)],
     "Mohan Sicka" => [qw(mohansicka)],
-    "Murat Kilercioglu" => [qw(murat kilercioglu)],
+    "Murat Kilercioglu" => [qw(muratkilercioglu)],
     "P.C. Kalani" => [qw(kalani)]
   },
 
@@ -189,7 +191,7 @@ our %FIX_ALIASES =
     "Bridge Base Online" => ["bridgebaseonline"],
     CBAI => [], # Don't map directly to Ireland; could be "Ireland 2"
     EBL => [qw(ebl)],
-    "Guangdong Bridge Club" => [qw(guangdong bridgeclub)]
+    "Guangdong Bridge Club" => [qw(guangdongbridgeclub)]
   },
     
   TOURNAMENT =>
@@ -360,15 +362,15 @@ our %FIX_ALIASES =
     Finland => [],
     France => [qw(fra)],
     Hungary => [],
-    Ireland => [qw(roi)],
+    Ireland => [qw(roi), 'rep of ireland'],
     Israel => [],
     Italy => [],
     Latvia => [],
     Malta => [],
     Monaco => [],
-    Netherlands => [qw(netherland hol)],
+    Netherlands => [qw(netherland)],
     Norway => [qw(nor)],
-    "Northern Ireland" => [qw(ni)],
+    "Northern Ireland" => [qw(ni), 'n ireland'],
     Pakistan => [],
     Scotland => [qw(sco)],
     Turkey => [qw(tur)],
@@ -439,6 +441,8 @@ our %FIX_ALIASES =
     third => [qw(tercer)],
     fourth => [qw(4rth)],
     fifth => [],
+    sixth => [],
+    seventh => [],
     eighth => [],
     last => [qw(lats ultimo)]
   },
@@ -483,7 +487,7 @@ our %FIX_ALIASES =
     Kill => [qw(untitled
       bbo bbvg bbovg vg vmg bridge
       man mandarin pabfc
-      daskalakis robinso stern
+      daskalakis robinso stern hol
       fluff reloaded missed this train tren ch mac ore oam le friendly
       game series npc rank tpatkawan patkawan phase tadkov friendship
       am afternoon night soir barriere best delayed us
