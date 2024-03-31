@@ -48,13 +48,14 @@ $CATEGORIES{SPONSOR} = Sponsor->new();
 $CATEGORIES{TNAME} = Tname->new();
 $CATEGORIES{WEEKDAY} = Weekday->new();
 
-my @CHAIN_PATTERN =
+my @PATTERNS =
 (
-  { CATEGORY => [qw(ITERATOR)] },
-  { CATEGORY => [qw(SEPARATOR)] },
-  { CATEGORY => [qw(NUMERAL ORDINAL)], VALUE => 'Of' },
-  { CATEGORY => [qw(SEPARATOR)] },
-  { CATEGORY => [qw(NUMERAL)] }
+  [
+    { CATEGORY => [qw(ITERATOR)] },
+    { CATEGORY => [qw(NUMERAL ORDINAL)] },
+    { CATEGORY => [qw(PARTICLE)], VALUE => 'Of' },
+    { CATEGORY => [qw(NUMERAL)] }
+  ]
 );
 
 my @FIELDS = qw(BBONO TITLE MONIKER DATE LOCATION EVENT 
@@ -94,7 +95,7 @@ while ($line = <$fh>)
     }
     else
     {
-      if ($chunk{BBONO} == 11)
+      if ($chunk{BBONO} == 542)
       {
         print "HERE\n";
       }
@@ -867,6 +868,7 @@ sub process_separators
       if ($#$chain >= 1)
       {
         $chain->[1]{text} = $chain->[0]{text} . $chain->[1]{text};
+        $chain->[1]{position_first} = $chain->[0]{position_first};
         if ($chain->[1]{CATEGORY} eq 'SEPARATOR')
         {
           $chain->[1]{VALUE} = 'ARTIFICIAL';
@@ -883,6 +885,7 @@ sub process_separators
       if ($#$chain >= 1)
       {
         $chain->[-2]{text} .= $chain->[-1]{text};
+        $chain->[-2]{position_last} = $chain->[-1]{position_last};
         if ($chain->[-2]{CATEGORY} eq 'SEPARATOR')
         {
           $chain->[-2]{VALUE} = 'ARTIFICIAL';
@@ -901,8 +904,70 @@ sub process_separators
           $chain->[$i-1]{CATEGORY} eq 'SEPARATOR')
       {
         $chain->[$i-1]{text} .= $chain->[$i]{text};
+        $chain->[$i-1]{position_last} = $chain->[$i]{position_last};
         $chain->[$i-1]{VALUE} = 'ARTIFICIAL';
         splice(@$chain, $i, 1);
+      }
+    }
+  }
+}
+
+
+sub pattern_match
+{
+  my ($chain_elem, $pattern_elem) = @_;
+
+  my $category = $chain_elem->{CATEGORY};
+
+  my $hit = 0;
+  for my $cand (@{$pattern_elem->{CATEGORY}})
+  {
+    if ($category eq $cand)
+    {
+      $hit = 1;
+      last;
+    }
+  }
+
+  return 0 unless $hit;
+  return 1 unless defined $pattern_elem->{VALUE};
+  return ($chain_elem->{VALUE} eq $pattern_elem->{VALUE});
+}
+
+
+sub process_patterns
+{
+  my ($chains_ref, $solved_ref) = @_;
+
+  while (my ($key, $chain) = each %$chains_ref)
+  {
+    next if $#$chain == -1;
+
+    for my $pattern (@PATTERNS)
+    {
+      my $plen = $#$pattern;
+
+      my $start_index = 0;
+      while ($start_index + 2*$plen <= $#$chain)
+      {
+        my $miss = 0;
+        for my $p (0 .. $plen)
+        {
+          my $pelem = $pattern->[$p];
+          if (! pattern_match($chain->[$start_index + 2*$p], $pelem))
+          {
+            $miss = 1;
+            last;
+          }
+        }
+
+        if (! $miss)
+        {
+          # TODO Collapse, but into what? It's pattern-dependent.
+          print "OFHIT\n";
+        }
+
+        $start_index += 2;
       }
     }
   }
@@ -915,4 +980,5 @@ sub process_event
 
   process_singletons($chains_ref, $solved_ref);
   process_separators($chains_ref);
+  process_patterns($chains_ref, $solved_ref);
 }

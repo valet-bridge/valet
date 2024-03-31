@@ -1,12 +1,8 @@
 Binary coding of the ~ 30 categories?
 
-So maybe we keep count of the number of studies.
-And we have a series of reductions.
-For example, a Segment followed by (space) followed by 4
-becomes a counter called Segment and a value of 4.
-A counted followed by "of 4" augments the counter with that information.
-A counter has a print method that prints what it knows.
-Then we see how much we've explained
+In Solved have a field with a pointer to a class Solved
+or something like that.  It can print.  It can hold a singleton
+or it can set a counter with several arguments, polymorphic-like.
 
 Make something called Region.pm with Kepri in it
 
