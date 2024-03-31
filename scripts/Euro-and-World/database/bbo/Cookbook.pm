@@ -32,7 +32,6 @@ my %MERGE_ALIASES = (
   Bermudabowl => ["bermuda bowl"],
   Eurochamp => ["eur champ"],
   Fortunacup => ["fortuna cup"],
-  FXcup => ["fx sec_ cup"],
   IsrGP => ["israel grand prix"],
   Hungariancup => ["hungarian cup"],
   Kepricup => ["kepri cup"],
@@ -47,7 +46,7 @@ my %MERGE_ALIASES = (
   Vitoteams => ["vito teams"],
 
   # SPONSOR
-  FXSec => [qw(fx securities)],
+  FXSec => ['fx sec_'],
   Jetimmo => ["get immo", "get-immo", "jet immo"],
   LYLaw => [qw(L&Y)],
   "Bridgeclub" => ["briagclub"],
@@ -59,7 +58,7 @@ my %MERGE_ALIASES = (
   # ORGANIZER
   EBL => ["e_b_l_"],
   "BridgeBaseOnline" => ["bridge base online"],
-  "guangdongbridgeclub" => ["guangdong bridgeclub"],
+  "guangdongbridgeclub" => ["guangdong briagclub"],
 
   # TOURNAMENT: none
 
@@ -76,7 +75,7 @@ my %MERGE_ALIASES = (
   Proam => ["pro am"],
 
   # STAGE
-  Final => ["phase finale", "fin als"],
+  Final => ["phase finale", "fin als", "f i n a l"],
   Semifinal => ["meia final", "meias finais", 
     "semi final", "semi-final", "semi finals", "semi-finals",
     "demi-finale", "demi-finales", "1_2final", "semi <final",
@@ -91,7 +90,7 @@ my %MERGE_ALIASES = (
   Rof64 => ["round of 64"],
   Rof32 => ["round of 32"],
   Rof18 => ["phase a 18"],
-  Rof16 => ["round of 16", "phase a 16"],
+  Rof16 => ["round of 16", "phase a 16", "rd of 16"],
   Rof12 => ["phase a 12"],
   Knockout => ["knock out", "knock-out"],
   Tiebreak => ["extra boards", "extra time", "extra stanza", 

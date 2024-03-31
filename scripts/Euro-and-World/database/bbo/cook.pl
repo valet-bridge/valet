@@ -99,7 +99,7 @@ while ($line = <$fh>)
     }
     else
     {
-      if ($chunk{BBONO} == 22983)
+      if ($chunk{BBONO} == 20489)
       {
         print "HERE\n";
       }
@@ -252,18 +252,13 @@ sub print_chains
 {
   my $chains_ref = pop;
 
-  my $chain_no = 0;
   my $chain_max = -1 + scalar keys %$chains_ref;
 
-  for my $c (0 .. $chain_no)
+  for my $c (0 .. $chain_max)
   {
-    print "Chain $c: ";
     my $chain = $chains_ref->{$c};
-    for my $elem (@$chain)
-    {
-      print $elem->{text};
-    }
-    print "\n";
+    print "Chain $c (", 1 + $#$chain, "): ", 
+      join('|', map { $_->{text} } @$chain), "\n";
   }
   print "\n";
 }
