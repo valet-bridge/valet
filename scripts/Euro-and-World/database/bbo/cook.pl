@@ -54,11 +54,14 @@ my @PATTERNS =
   [
     [
       { CATEGORY => [qw(ITERATOR)] },
+      { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(NUMERAL ORDINAL)] },
+      { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(PARTICLE)], VALUE => 'Of' },
+      { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(NUMERAL)] }
     ],
-    [ 'COUNTER_SINGLE_OF', 1, 'VALUE', 3, 'VALUE']
+    [ 'COUNTER_SINGLE_OF', 2, 'VALUE', 6, 'VALUE']
   ]
 );
 
@@ -259,6 +262,8 @@ sub print_chains
     my $chain = $chains_ref->{$c};
     print "Chain $c (", 1 + $#$chain, "): ", 
       join('|', map { $_->{text} } @$chain), "\n";
+    print "Chain $c (", 1 + $#$chain, "): ", 
+      join('|', map { $_->{VALUE} } @$chain), "\n";
   }
   print "\n";
 }
@@ -1028,13 +1033,13 @@ sub process_patterns
       my $plen = $#{$pattern->[0]};
 
       my $start_index = 0;
-      while ($start_index + 2*$plen <= $#$chain)
+      while ($start_index + $plen <= $#$chain)
       {
         my $miss = 0;
         for my $p (0 .. $plen)
         {
           my $pelem = $pattern->[0][$p];
-          if (! pattern_match($chain->[$start_index + 2*$p], $pelem))
+          if (! pattern_match($chain->[$start_index + $p], $pelem))
           {
             $miss = 1;
             last;
@@ -1052,19 +1057,19 @@ sub process_patterns
           my @arg_list;
           for (my $r = 1; $r <= $#$reaction; $r += 2)
           {
-            my $pos = $start_index + 2 * $reaction->[$r];
+            my $pos = $start_index + $reaction->[$r];
             push @arg_list, $chain->[$pos]{$reaction->[$r+1]};
           }
 
           my $elem = $chain->[$start_index];
-          for my $p (1 .. 2*$plen)
+          for my $p (1 .. $plen)
           {
             $elem->{text} .= $chain->[$start_index + $p]{text};
           }
           $elem->{position_last} = 
-            $chain->[$start_index + 2*$plen]{position_last};
+            $chain->[$start_index + $plen]{position_last};
 
-          splice(@$chain, $start_index+1, 2*$plen);
+          splice(@$chain, $start_index+1, $plen);
 
           $solved_ref->{$cat}->set($reaction->[0], $elem, @arg_list);
 

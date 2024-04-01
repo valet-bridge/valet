@@ -1,13 +1,12 @@
-Binary coding of the ~ 30 categories?
+Change pattern to include separators.
+VALUE is also a candidate list and not a scalar.
+Maybe add an ANCHOR => 'FRONT' or 'BACK' for the "regex".
 
 When KILL'ing, also preserve the text of the surrounding separators.
 
-In Solved have a field with a pointer to a class Solved
-or something like that.  It can print.  It can hold a singleton
-or it can set a counter with several arguments, polymorphic-like.
-
 Make something called Region.pm with Kepri in it
 
+Binary coding of the ~ 30 categories?
 Categories:
 
 TNAME
