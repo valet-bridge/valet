@@ -18,35 +18,6 @@ use lib '.';
 use lib '..';
 use Cookbook;
 
-use Age;
-use City;
-use Country;
-use Form;
-use Gender;
-use Memorial;
-use Movement;
-use Organizer;
-use Origin;
-use Scoring;
-use Sponsor;
-use Tname;
-use Weekday;
-
-my %CATEGORIES;
-$CATEGORIES{AGE} = Age->new();
-$CATEGORIES{CITY} = City->new();
-$CATEGORIES{COUNTRY} = Country->new();
-$CATEGORIES{FORM} = Form->new();
-$CATEGORIES{GENDER} = Gender->new();
-$CATEGORIES{MEMORIAL} = Memorial->new();
-$CATEGORIES{MOVEMENT} = Movement->new();
-$CATEGORIES{ORGANIZER} = Organizer->new();
-$CATEGORIES{ORIGIN} = Origin->new();
-$CATEGORIES{SCORING} = Scoring->new();
-$CATEGORIES{SPONSOR} = Sponsor->new();
-$CATEGORIES{TNAME} = Tname->new();
-$CATEGORIES{WEEKDAY} = Weekday->new();
-
 
 sub parse_teams
 {
