@@ -29,11 +29,12 @@ my @SINGLETON_LIST = qw
 
 my @ITERATOR_LIST = 
 (
-  qw(Final Semi-final Semi Quarter-final Quarter Qletter Rof16 Rof32
+  qw(Final Semi-final Semi Quarter-final Quarter Qletter 
+  Rof12 Rof16 Rof18 Rof32 Rof64 Rof128
   Knock-out PreQF Playoff Qualifying Consolation Tiebreak
-  Berth Place Half
+  Berth Place Bronze Half
   Match Segment Set Session Section Stanza Stage Round Tempo Part 
-  Day Top Round-robin),
+  Day Top Round-robin Play),
   'Super League', 'Final Round', 'Qualifying Segment'
 );
 
@@ -73,12 +74,26 @@ sub set
   if ($num_args == 2 && $_[0] eq 'SINGLETON')
   {
     # ('SINGLETON', $elem).
+
     die "No singleton $elem->{CATEGORY}" unless 
       exists $SINGLETON{$elem->{CATEGORY}};
 
     $self->{TYPE} = 'SINGLETON';
     $self->{CATEGORY} = $elem->{CATEGORY};
     $self->{VALUE} = $elem->{VALUE};
+  }
+  elsif ($num_args == 2 && $_[0] eq 'COUNTER_NONE')
+  {
+    # ('COUNTER_NONE', $elem).
+    
+    die "No iterator $elem->{CATEGORY}" unless 
+      $elem->{CATEGORY} eq 'ITERATOR';
+    die "No iterator type $elem->{VALUE}" unless 
+      exists $ITERATOR{$elem->{VALUE}};
+
+    $self->{TYPE} = 'COUNTER';
+    $self->{SUB_TYPE} = 'EMPTY';
+    $self->{CATEGORY} = $elem->{VALUE};
   }
   elsif ($num_args == 3 && $_[0] eq 'COUNTER_SINGLE')
   {
@@ -155,7 +170,11 @@ sub str_no_newline
   }
   elsif ($self->{TYPE} eq 'COUNTER')
   {
-    if ($self->{SUB_TYPE} eq 'SINGLE_OF')
+    if ($self->{SUB_TYPE} eq 'EMPTY')
+    {
+      return $self->{CATEGORY} . ' (empty)';
+    }
+    elsif ($self->{SUB_TYPE} eq 'SINGLE_OF')
     {
       return $self->{CATEGORY} . ' ' . 
         $self->{ITERATOR_VALUE} . ' of ' .

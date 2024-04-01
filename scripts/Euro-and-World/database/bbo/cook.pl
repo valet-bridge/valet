@@ -111,6 +111,15 @@ my @PATTERNS =
     'END'
   ],
 
+  # Final (exact; so an iterator without a value)
+  [
+    [
+      { CATEGORY => [qw(ITERATOR)] }
+    ],
+    [ 'COUNTER_NONE', 0],
+    'EXACT'
+  ],
+
   # 3 Round (exact)
   [
     [
@@ -196,7 +205,7 @@ while ($line = <$fh>)
 
       while (my ($key, $chain) = each %event_chains)
       {
-        $chain_stats[$#$chain + 1]++;
+        $chain_stats[$#$chain + 1]++ if $#$chain >= 0;
 
         for my $elem (@$chain)
         {
@@ -302,9 +311,13 @@ sub print_chains
 
   my $chain_max = -1 + scalar keys %$chains_ref;
 
+  my $hit = 0;
   for my $c (0 .. $chain_max)
   {
     my $chain = $chains_ref->{$c};
+    next unless $#$chain >= 0;
+    $hit = 1;
+
     print "Chain $c (", 1 + $#$chain, "): ", 
       join('|', map { $_->{text} } @$chain), "\n";
     print "Chain $c (", 1 + $#$chain, "): ", 
@@ -312,7 +325,7 @@ sub print_chains
     print "Chain $c (", 1 + $#$chain, "): ", 
       join('|', map { $_->{CATEGORY} } @$chain), "\n";
   }
-  print "\n";
+  print "\n" if $hit;
 }
 
 

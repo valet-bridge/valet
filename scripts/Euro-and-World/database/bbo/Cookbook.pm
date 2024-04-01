@@ -65,7 +65,7 @@ my %MERGE_ALIASES = (
   # MOVEMENT
   Roundrobin => ["round robin", "roun robin", "round bobin",
     "round-robin", "r_robin", "r robin", "round roubin", "rrobin",
-    "round ronin", "grup maçlari"],
+    "round ronin", "grup maçlari", "r_r_", "r_r"],
 
   # ORIGIN
   Interclub => ["inter club", "inter-club", "inter-clubs"],
