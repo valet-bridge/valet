@@ -223,6 +223,8 @@ while ($line = <$fh>)
 
       process_event(\%event_chains, \%event_solved);
 
+      post_process_event(\%event_chains, \%event_solved);
+
       while (my ($key, $chain) = each %event_chains)
       {
         $chain_stats[$#$chain + 1]++ if $#$chain >= 0;
@@ -842,3 +844,103 @@ sub process_event
   process_separators($chains_ref);
   process_patterns($chains_ref, $solved_ref);
 }
+
+
+sub synthetic_singleton
+{
+  my ($solved_ref, $elem, $category, $die_flag) = @_;
+
+  if (exists $solved_ref->{$category})
+  {
+    die "Already $category?" if $die_flag;
+    return;
+  }
+
+  $elem->{CATEGORY} = $category;
+
+  $solved_ref->{$category} = Tchar->new();
+  $solved_ref->{$category}->set('SINGLETON', $elem);
+}
+
+
+sub fix_some_singletons_manually
+{
+  my ($chains_ref, $solved_ref) = @_;
+
+  my $chain_no = 0;
+  my $chain_max = -1 + scalar keys %$chains_ref;
+
+  do
+  {
+    my $chain = $chains_ref->{$chain_no};
+    if ($#$chain == 0)
+    {
+      my $elem = $chain->[0];
+      if (($elem->{CATEGORY} eq 'TOURNAMENT' && $elem->{VALUE} eq 'Open') ||
+          ($elem->{CATEGORY} eq 'LETTER' && $elem->{VALUE} eq 'O'))
+      {
+        $elem->{VALUE} = 'Open';
+
+        # This should mean no gender nor age restriction.
+        synthetic_singleton($solved_ref, $elem, 'AGE', 0);
+        synthetic_singleton($solved_ref, $elem, 'GENDER', 0);
+
+        splice(@$chain, 0);
+      }
+      elsif ($elem->{CATEGORY} eq 'GENDER')
+      {
+        synthetic_singleton($solved_ref, $elem, 'GENDER', 1);
+
+        splice(@$chain, 0);
+      }
+      elsif ($elem->{CATEGORY} eq 'LETTER' && $elem->{VALUE} eq 'W')
+      {
+        $elem->{VALUE} = 'Women';
+        synthetic_singleton($solved_ref, $elem, 'GENDER', 1);
+
+        splice(@$chain, 0);
+      }
+      elsif ($elem->{CATEGORY} eq 'LETTER' && $elem->{VALUE} eq 'J')
+      {
+        $elem->{VALUE} = 'Juniors';
+        synthetic_singleton($solved_ref, $elem, 'AGE', 1);
+
+        splice(@$chain, 0);
+      }
+      elsif ($elem->{CATEGORY} eq 'LETTER' && $elem->{VALUE} eq 'Y')
+      {
+        $elem->{VALUE} = 'Youngsters';
+        synthetic_singleton($solved_ref, $elem, 'AGE', 1);
+
+        splice(@$chain, 0);
+      }
+      elsif ($elem->{CATEGORY} eq 'LETTER' &&
+        $elem->{VALUE} =~ /^[A-Fa-f]$/)
+      {
+        # This should mean no group.
+        synthetic_singleton($solved_ref, $elem, 'GROUP', 1);
+
+        splice(@$chain, 0);
+      }
+      elsif ($elem->{CATEGORY} eq 'YEAR')
+      {
+        synthetic_singleton($solved_ref, $elem, 'YEAR', 1);
+
+        splice(@$chain, 0);
+      }
+    }
+    $chain_no++;
+  }
+  while ($chain_no <= $chain_max);
+}
+
+
+sub post_process_event
+{
+  my ($chains_ref, $solved_ref) = @_;
+  
+  # More manual processing of some short chains.
+
+  fix_some_singletons_manually($chains_ref, $solved_ref);
+}
+
