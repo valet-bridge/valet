@@ -50,6 +50,9 @@ $CATEGORIES{SPONSOR} = Sponsor->new();
 $CATEGORIES{TNAME} = Tname->new();
 $CATEGORIES{WEEKDAY} = Weekday->new();
 
+my @SIMPLE_LIST = qw(NUMERAL ORDINAL LETTER SEPARATOR);
+my %SIMPLE_CATEGORIES = map { $_ => 1} @SIMPLE_LIST;
+
 my @PATTERNS =
 (
   # Segment 3 of 7 (anywhere)
@@ -238,7 +241,7 @@ while ($line = <$fh>)
     }
     else
     {
-      if ($chunk{BBONO} == 1345)
+      if ($chunk{BBONO} == 12569)
       {
         print "HERE\n";
       }
@@ -578,6 +581,56 @@ sub split_on_most_parentheses
 }
 
 
+sub split_on_some_iterators
+{
+  my ($chains_ref) = @_;
+
+  my $chain_no = 0;
+  my $chain_max = -1 + scalar keys %$chains_ref;
+
+  do
+  {
+    my $chain = $chains_ref->{$chain_no};
+    my $elem = $chain->[0];
+
+    # Look for a string of elements starting with ITERATOR
+    # and only using ORDINAL, NUMERAL, PARTICLE and LETTER
+    # until the next ITERATOR.
+
+    if ($#$chain >= 1 && $elem->{CATEGORY} eq 'ITERATOR')
+    {
+      my $ok = 1;
+      my $elem_no = 1;
+      while ($elem_no <= $#$chain)
+      {
+        my $cat = $chain->[$elem_no]{CATEGORY};
+        last if $cat eq 'ITERATOR';
+
+        if (! exists $SIMPLE_CATEGORIES{$cat})
+        {
+          $ok = 0;
+          last;
+        }
+        $elem_no++;
+      }
+
+      if ($ok && $elem_no < $#$chain)
+      {
+        # Split from $elem_no onward into a new chain.
+        $chain_max++;
+        @{$chains_ref->{$chain_max}} = 
+          @{$chains_ref->{$chain_no}}[$elem_no .. $#$chain];
+
+        # Delete the corresponding range from this chain.
+        splice(@$chain, $elem_no-1);
+      }
+    }
+    $chain_no++;
+  }
+  while ($chain_no <= $chain_max);
+}
+
+
 sub process_singletons
 {
   my ($chains_ref, $solved_ref) = @_;
@@ -803,8 +856,7 @@ sub index_match
     $cat = $chain->[$index]{VALUE};
   }
 
-  die "Category $cat already seen" if exists $solved_ref->{$cat};
-  $solved_ref->{$cat} = Tchar->new();
+  $solved_ref->{$cat} = Tchar->new() unless exists $solved_ref->{$cat};
 
   my $reaction = $pattern->[1];
 
@@ -887,6 +939,9 @@ sub process_event
 
   process_singletons($chains_ref, $solved_ref);
   process_separators($chains_ref);
+
+  split_on_some_iterators($chains_ref);
+
   process_patterns($chains_ref, $solved_ref);
 }
 

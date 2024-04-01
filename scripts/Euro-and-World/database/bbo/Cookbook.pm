@@ -119,7 +119,7 @@ my %MERGE_ALIASES = (
 
   # PARTICLE
   "vs ni" => [qw(vni)],
-  of => ["out of"],
+  of => ["out of", "0f"],
   "12th" => ["12 th"],
   of5 => ["0f5"], # Typo
   "off" => ["0ff"],
@@ -313,7 +313,10 @@ our %FIX_ALIASES =
     Rof18 => [],
     Rof32 => [],
     Rof64 => [],
-    Rof128 => []
+    Rof128 => [],
+
+    Table => [qw(t)],
+    Room => [qw(rm)]
   },
 
   AGE =>
@@ -343,12 +346,6 @@ our %FIX_ALIASES =
   {
     Red => [],
     White => []
-  },
-
-  TABLE =>
-  {
-    Table => [qw(t)],
-    Room => [qw(rm)]
   },
 
   BOARDS =>

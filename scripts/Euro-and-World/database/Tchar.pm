@@ -81,9 +81,18 @@ sub set
     die "No singleton $elem->{CATEGORY}" unless 
       exists $SINGLETON{$elem->{CATEGORY}};
 
-    $self->{TYPE} = 'SINGLETON';
-    $self->{CATEGORY} = $elem->{CATEGORY};
-    $self->{VALUE} = $elem->{VALUE};
+    if (exists $self->{TYPE})
+    {
+      die unless $self->{TYPE} eq 'SINGLETON';
+      die unless $self->{CATEGORY} eq $elem->{CATEGORY};
+      die unless $self->{VALUE} eq $elem->{VALUE};
+    }
+    else
+    {
+      $self->{TYPE} = 'SINGLETON';
+      $self->{CATEGORY} = $elem->{CATEGORY};
+      $self->{VALUE} = $elem->{VALUE};
+    }
   }
   elsif ($num_args == 2 && $_[0] eq 'COUNTER_NONE')
   {
@@ -94,9 +103,18 @@ sub set
     die "No iterator type $elem->{VALUE}" unless 
       exists $ITERATOR{$elem->{VALUE}};
 
-    $self->{TYPE} = 'COUNTER';
-    $self->{SUB_TYPE} = 'EMPTY';
-    $self->{CATEGORY} = $elem->{VALUE};
+    if (exists $self->{TYPE})
+    {
+      die unless $self->{TYPE} eq 'COUNTER';
+      die unless $self->{SUB_TYPE} eq 'EMPTY';
+      die unless $self->{CATEGORY} eq $elem->{VALUE};
+    }
+    else
+    {
+      $self->{TYPE} = 'COUNTER';
+      $self->{SUB_TYPE} = 'EMPTY';
+      $self->{CATEGORY} = $elem->{VALUE};
+    }
   }
   elsif ($num_args == 3 && $_[0] eq 'COUNTER_SINGLE')
   {
@@ -107,10 +125,31 @@ sub set
     die "No iterator type $elem->{VALUE}" unless 
       exists $ITERATOR{$elem->{VALUE}};
 
-    $self->{TYPE} = 'COUNTER';
-    $self->{SUB_TYPE} = 'SINGLE';
-    $self->{CATEGORY} = $elem->{VALUE};
-    $self->{ITERATOR_VALUE} = $_[2];
+    if (exists $self->{TYPE})
+    {
+      die unless $self->{TYPE} eq 'COUNTER';
+      die unless $self->{SUB_TYPE} eq 'SINGLE';
+      die unless $self->{CATEGORY} eq $elem->{VALUE};
+
+      if ($_[2] > $self->{ITERATOR_VALUE})
+      {
+        $self->{SUB_TYPE} = 'RANGE';
+        $self->{ITERATOR_START} = $self->{ITERATOR_VALUE};
+        $self->{ITERATOR_END} = $_[2];
+        delete $self->{ITERATOR_VALUE};
+      }
+      else
+      {
+        die unless $self->{ITERATOR_VALUE} eq $_[2];
+      }
+    }
+    else
+    {
+      $self->{TYPE} = 'COUNTER';
+      $self->{SUB_TYPE} = 'SINGLE';
+      $self->{CATEGORY} = $elem->{VALUE};
+      $self->{ITERATOR_VALUE} = $_[2];
+    }
   }
   elsif ($num_args == 4 && $_[0] eq 'COUNTER_SINGLE_OF')
   {
@@ -121,34 +160,71 @@ sub set
     die "No iterator type $elem->{VALUE}" unless 
       exists $ITERATOR{$elem->{VALUE}};
 
-    $self->{TYPE} = 'COUNTER';
-    $self->{SUB_TYPE} = 'SINGLE_OF';
-    $self->{CATEGORY} = $elem->{VALUE};
-    $self->{ITERATOR_VALUE} = $_[2];
-    $self->{ITERATOR_OF} = $_[3];
+    if (exists $self->{TYPE})
+    {
+      die unless $self->{TYPE} eq 'COUNTER';
+      die unless $self->{SUB_TYPE} eq 'SINGLE_OF';
+      die unless $self->{CATEGORY} eq $elem->{VALUE};
+      die unless $self->{ITERATOR_VALUE} eq $_[2];
+      die unless $self->{ITERATOR_OF} eq $_[3];
+    }
+    else
+    {
+      $self->{TYPE} = 'COUNTER';
+      $self->{SUB_TYPE} = 'SINGLE_OF';
+      $self->{CATEGORY} = $elem->{VALUE};
+      $self->{ITERATOR_VALUE} = $_[2];
+      $self->{ITERATOR_OF} = $_[3];
+    }
   }
   elsif ($num_args == 3 && $_[0] eq 'COUNTER_GENERIC')
   {
     # ('COUNTER_GENERIC', $elem, value).
 
-    $self->{TYPE} = 'COUNTER';
-    $self->{SUB_TYPE} = 'SINGLE';
-    $self->{CATEGORY} = 'Generic';
-    $self->{ITERATOR_VALUE} = $_[2];
+    if (exists $self->{TYPE})
+    {
+      die unless $self->{TYPE} eq 'COUNTER';
+      die unless $self->{SUB_TYPE} eq 'SINGLE';
+      die unless $self->{CATEGORY} eq 'Generic';
+      die unless $self->{ITERATOR_VALUE} eq $_[2];
+    }
+    else
+    {
+      $self->{TYPE} = 'COUNTER';
+      $self->{SUB_TYPE} = 'SINGLE';
+      $self->{CATEGORY} = 'Generic';
+      $self->{ITERATOR_VALUE} = $_[2];
+    }
   }
   elsif ($num_args == 4 && $_[0] eq 'COUNTER_GENERIC_OF')
   {
     # ('COUNTER_GENERIC_OF', $elem, value, of).
 
-    $self->{TYPE} = 'COUNTER';
-    $self->{SUB_TYPE} = 'SINGLE_OF';
-    $self->{CATEGORY} = 'Generic';
-    $self->{ITERATOR_VALUE} = $_[2];
-    $self->{ITERATOR_OF} = $_[3];
+    if (exists $self->{TYPE})
+    {
+      die unless $self->{TYPE} eq 'COUNTER';
+      die unless $self->{SUB_TYPE} eq 'SINGLE_OF';
+      die unless $self->{CATEGORY} eq 'Generic';
+      die unless $self->{ITERATOR_VALUE} eq $_[2];
+      die unless $self->{ITERATOR_OF} eq $_[3];
+    }
+    else
+    {
+      $self->{TYPE} = 'COUNTER';
+      $self->{SUB_TYPE} = 'SINGLE_OF';
+      $self->{CATEGORY} = 'Generic';
+      $self->{ITERATOR_VALUE} = $_[2];
+      $self->{ITERATOR_OF} = $_[3];
+    }
   }
   elsif ($num_args == 5 && $_[0] eq 'DATE')
   {
     # ('DATE', $elem, day, month, year).
+
+    if (exists $self->{TYPE})
+    {
+      die "DATE already set";
+    }
 
     my $month = $_[3];
     $month = $MONTHS{$month} if exists $MONTHS{$month};
@@ -190,6 +266,12 @@ sub str_no_newline
     {
       return $self->{CATEGORY} . ' ' . 
         $self->{ITERATOR_VALUE};
+    }
+    elsif ($self->{SUB_TYPE} eq 'RANGE')
+    {
+      return $self->{CATEGORY} . ' ' . 
+        $self->{ITERATOR_START} . '-' .
+        $self->{ITERATOR_END};
     }
     elsif ($self->{SUB_TYPE} eq 'SINGLE_OF')
     {

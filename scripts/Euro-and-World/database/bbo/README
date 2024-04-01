@@ -1,4 +1,8 @@
-3:
+* Make a Chains.pm
+* Then the rest is Patterns.pm
+* Check whether all patterns are still used or sensible
+
+
 Qletter, dash, Final (ITER-SEP-ITER), merge to QF
 2 B (NUM-SEP-LETTER)
 2:1 (NUM-SEP-NUM with colon), round and segment?
