@@ -62,19 +62,13 @@ my @PATTERNS =
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(NUMERAL)] }
     ],
-    [ 'COUNTER_SINGLE_OF', 2, 'VALUE', 6, 'VALUE'],
+    # Argument list:
+    # (0) The Tchar type
+    # (1) The pattern element whose category and value are used in Tchar
+    # (2,3), (4,5) etc. The arguments passed to Tchar
+    #          (0)        (1)(2)   (3)   (4)   (5)
+    [ 'COUNTER_SINGLE_OF', 0, 2, 'VALUE', 6, 'VALUE'],
     'ANY'
-  ],
-
-  # Final 2 (exact)
-  [
-    [
-      { CATEGORY => [qw(ITERATOR)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(NUMERAL)] }
-    ],
-    [ 'COUNTER_SINGLE', 2, 'VALUE'],
-    'EXACT'
   ],
 
   # 7 February 2004 (anywhere)
@@ -86,9 +80,32 @@ my @PATTERNS =
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(YEAR)] }
     ],
-    [ 'DATE', 0, 'VALUE', 2, 'VALUE', 4, 'VALUE'],
+    [ 'DATE', 0, 0, 'VALUE', 2, 'VALUE', 4, 'VALUE'],
     'ANY'
-  ]
+  ],
+
+  # Final 2 (exact)
+  [
+    [
+      { CATEGORY => [qw(ITERATOR)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(NUMERAL)] }
+    ],
+    [ 'COUNTER_SINGLE', 0, 2, 'VALUE'],
+    'EXACT'
+  ],
+
+  # 3 Round (exact)
+  [
+    [
+      { CATEGORY => [qw(NUMERAL ORDINAL)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(ITERATOR)] }
+    ],
+    [ 'COUNTER_SINGLE', 2, 0, 'VALUE'],
+    'EXACT'
+  ],
+
 );
 
 my @FIELDS = qw(BBONO TITLE MONIKER DATE LOCATION EVENT 
@@ -1059,10 +1076,13 @@ sub pattern_match
 
 sub collapse_elements
 {
-  my ($elem, $chain, $start_index, $plen) = @_;
+  my ($elem, $chain, $start_index, $anchor_count, $plen) = @_;
 
   # Before we splice out the matched elements, we keep some
   # information from them.
+
+  $elem->{CATEGORY} = $chain->[$start_index + $anchor_count]{CATEGORY};
+  $elem->{VALUE} = $chain->[$start_index + $anchor_count]{VALUE};
 
   for my $p (1 .. $plen)
   {
@@ -1077,7 +1097,7 @@ sub make_arg_list
 {
   my ($chain, $start_index, $reaction, $arg_list_ref) = @_;
 
-  for (my $r = 1; $r <= $#$reaction; $r += 2)
+  for (my $r = 2; $r <= $#$reaction; $r += 2)
   {
     my $pos = $start_index + $reaction->[$r];
     push @$arg_list_ref, $chain->[$pos]{$reaction->[$r+1]};
@@ -1102,7 +1122,7 @@ sub index_match
   make_arg_list($chain, $index, $reaction, \@arg_list);
 
   my $elem = $chain->[$index];
-  collapse_elements($elem, $chain, $index, $plen);
+  collapse_elements($elem, $chain, $index, $reaction->[1], $plen);
 
   splice(@$chain, $index+1, $plen);
 

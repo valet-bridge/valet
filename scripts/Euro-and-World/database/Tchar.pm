@@ -30,8 +30,9 @@ my @SINGLETON_LIST = qw
 my @ITERATOR_LIST = 
 (
   qw(Final Semi-final Semi Quarter-final Quarter Qletter Rof16 Rof32
-  Knock-out PreQF Playoff Qualifying Consolation
-  Berth Match Segment Set Session Section Stanza Stage Round Part
+  Knock-out PreQF Playoff Qualifying Consolation 
+  Berth Place Half
+  Match Segment Set Session Section Stanza Stage Round Tempo Part
   Round-robin),
   'Super League', 'Final Round', 'Qualifying Segment'
 );
