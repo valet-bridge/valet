@@ -316,9 +316,6 @@ sub print_chains
 }
 
 
-
-
-
 sub split_chain_on
 {
   my ($chains_ref, $chain_no, $chain_max_ref, $elem, $elem_no) = @_;
@@ -428,6 +425,73 @@ sub split_on_space_dashes
         }
       }
 
+      $elem_no++;
+    }
+    $chain_no++;
+  }
+  while ($chain_no <= $chain_max);
+}
+
+
+sub split_on_most_parentheses
+{
+  my ($chains_ref) = @_;
+
+  my $chain_no = 0;
+  my $chain_max = -1 + scalar keys %$chains_ref;
+
+  do
+  {
+    my $chain = $chains_ref->{$chain_no};
+    my $elem_no = 0;
+    for my $elem (@$chain)
+    {
+      if ($elem_no > 0 && $elem_no < $#$chain)
+      {
+        # Don't split on ends -- they get removed later anyway.
+        if ($elem->{CATEGORY} eq 'SEPARATOR' &&
+            $elem->{VALUE} eq 'LEFT_PAREN')
+        {
+          # Special case: Don't split on "(of".
+          my $succ = $chain->[$elem_no+1];
+          next if ($succ->{CATEGORY} eq 'PARTICLE' &&
+              $succ->{VALUE} eq 'Of');
+
+          my $last_real = $elem_no+1;
+          while ($last_real <= $#$chain && 
+            ($chain->[$last_real]{CATEGORY} ne 'SEPARATOR' ||
+             $chain->[$last_real]{VALUE} ne 'RIGHT_PAREN'))
+          {
+            $last_real++;
+          }
+
+          my $last_paren;
+          if ($last_real > $#$chain)
+          {
+            $last_real = $#$chain;
+            $last_paren = $last_real; # No closing parenthesis
+          }
+          else
+          {
+            $last_paren = $last_real;
+            $last_real--;
+          }
+
+          # So now the content is in [elem_no+1, last_real],
+          # and the whole parenthesis construct is in 
+          # [elem_no, last_paren].
+
+          # Move the content to a new chain.
+          $chain_max++;
+          @{$chains_ref->{$chain_max}} = 
+            @{$chains_ref->{$chain_no}}[$elem_no+1 .. $last_real];
+
+          # Delete the whole range.
+          splice(@$chain, $elem_no, $last_paren - $elem_no + 1);
+
+          last;
+        }
+      }
       $elem_no++;
     }
     $chain_no++;
@@ -702,6 +766,10 @@ sub process_event
   # Split on a dash with a space to its left and/or right.
   # This seems quite reliable.
   split_on_space_dashes($chains_ref);
+
+  # In general turn parenthesis-enclosed text into a chain,
+  # but not e.g. "of 7".
+  split_on_most_parentheses($chains_ref);
 
   process_singletons($chains_ref, $solved_ref);
   process_separators($chains_ref);
