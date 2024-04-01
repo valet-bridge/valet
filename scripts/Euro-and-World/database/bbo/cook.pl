@@ -51,7 +51,7 @@ $CATEGORIES{WEEKDAY} = Weekday->new();
 
 my @PATTERNS =
 (
-  # Segment 3 of 7
+  # Segment 3 of 7 (anywhere)
   [
     [
       { CATEGORY => [qw(ITERATOR)] },
@@ -62,10 +62,22 @@ my @PATTERNS =
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(NUMERAL)] }
     ],
-    [ 'COUNTER_SINGLE_OF', 2, 'VALUE', 6, 'VALUE']
+    [ 'COUNTER_SINGLE_OF', 2, 'VALUE', 6, 'VALUE'],
+    'ANY'
   ],
 
-  # 7 February 2004
+  # Final 2 (exact)
+  [
+    [
+      { CATEGORY => [qw(ITERATOR)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(NUMERAL)] }
+    ],
+    [ 'COUNTER_SINGLE', 2, 'VALUE'],
+    'EXACT'
+  ],
+
+  # 7 February 2004 (anywhere)
   [
     [
       { CATEGORY => [qw(NUMERAL ORDINAL)] },
@@ -74,8 +86,8 @@ my @PATTERNS =
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(YEAR)] }
     ],
-    [ 'DATE', 0, 'VALUE', 2, 'VALUE', 4, 'VALUE']
-
+    [ 'DATE', 0, 'VALUE', 2, 'VALUE', 4, 'VALUE'],
+    'ANY'
   ]
 );
 
@@ -1115,14 +1127,26 @@ sub process_patterns
     for my $pattern (@PATTERNS)
     {
       my $plen = $#{$pattern->[0]};
+      my $anchor = $pattern->[2];
 
-      my $start_index = 0;
-      while ($start_index + $plen <= $#$chain)
+      if ($anchor eq 'ANY')
       {
-        index_match($chain, $start_index, $pattern, $plen,
-          $chains_ref, $chain_no, \$chain_max, $solved_ref);
+        my $start_index = 0;
+        while ($start_index + $plen <= $#$chain)
+        {
+          index_match($chain, $start_index, $pattern, $plen,
+            $chains_ref, $chain_no, \$chain_max, $solved_ref);
 
-        $start_index += 2;
+          $start_index += 2;
+        }
+      }
+      elsif ($anchor eq 'EXACT')
+      {
+        if ($plen == $#$chain)
+        {
+          index_match($chain, 0, $pattern, $plen,
+            $chains_ref, $chain_no, \$chain_max, $solved_ref);
+        }
       }
     }
     $chain_no++;

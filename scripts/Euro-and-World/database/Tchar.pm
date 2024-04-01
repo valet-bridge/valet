@@ -29,11 +29,11 @@ my @SINGLETON_LIST = qw
 
 my @ITERATOR_LIST = 
 (
-  qw(Final Semi-final Semi Quarter-final Quarter Qletter Rof16
-  Knock-out PreQF Playoff
-  Berth Match Segment Set Session Section Stanza Stage Round
+  qw(Final Semi-final Semi Quarter-final Quarter Qletter Rof16 Rof32
+  Knock-out PreQF Playoff Qualifying Consolation
+  Berth Match Segment Set Session Section Stanza Stage Round Part
   Round-robin),
-  'Super League'
+  'Super League', 'Final Round', 'Qualifying Segment'
 );
 
 my %SINGLETON = map { $_ => 1} @SINGLETON_LIST;
@@ -79,6 +79,20 @@ sub set
     $self->{CATEGORY} = $elem->{CATEGORY};
     $self->{VALUE} = $elem->{VALUE};
   }
+  elsif ($num_args == 3 && $_[0] eq 'COUNTER_SINGLE')
+  {
+    # ('COUNTER_SINGLE', $elem, value).
+
+    die "No iterator $elem->{CATEGORY}" unless 
+      $elem->{CATEGORY} eq 'ITERATOR';
+    die "No iterator type $elem->{VALUE}" unless 
+      exists $ITERATOR{$elem->{VALUE}};
+
+    $self->{TYPE} = 'COUNTER';
+    $self->{SUB_TYPE} = 'SINGLE';
+    $self->{CATEGORY} = $elem->{VALUE};
+    $self->{ITERATOR_VALUE} = $_[2];
+  }
   elsif ($num_args == 4 && $_[0] eq 'COUNTER_SINGLE_OF')
   {
     # ('COUNTER_SINGLE_OF', $elem, value, of).
@@ -93,7 +107,6 @@ sub set
     $self->{CATEGORY} = $elem->{VALUE};
     $self->{ITERATOR_VALUE} = $_[2];
     $self->{ITERATOR_OF} = $_[3];
-
   }
   elsif ($num_args == 5 && $_[0] eq 'DATE')
   {
@@ -129,12 +142,23 @@ sub str_no_newline
   {
     return $self->{CATEGORY} . ' ' . $self->{VALUE};
   }
-  elsif ($self->{TYPE} eq 'COUNTER' &&
-      $self->{SUB_TYPE} eq 'SINGLE_OF')
+  elsif ($self->{TYPE} eq 'COUNTER')
   {
-    return $self->{CATEGORY} . ' ' . 
-      $self->{ITERATOR_VALUE} . ' of ' .
-      $self->{ITERATOR_OF};
+    if ($self->{SUB_TYPE} eq 'SINGLE_OF')
+    {
+      return $self->{CATEGORY} . ' ' . 
+        $self->{ITERATOR_VALUE} . ' of ' .
+        $self->{ITERATOR_OF};
+    }
+    elsif ($self->{SUB_TYPE} eq 'SINGLE')
+    {
+      return $self->{CATEGORY} . ' ' . 
+        $self->{ITERATOR_VALUE};
+    }
+    else
+    {
+      die "Don't know how to str this";
+    }
   }
   elsif ($self->{TYPE} eq 'DATE')
   {
