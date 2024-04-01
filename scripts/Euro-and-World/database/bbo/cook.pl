@@ -59,7 +59,7 @@ my @PATTERNS =
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(NUMERAL ORDINAL)] },
       { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(PARTICLE)], VALUE => 'Of' },
+      { CATEGORY => [qw(PARTICLE)], VALUE => [qw(Of)] },
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(NUMERAL)] }
     ],
@@ -72,13 +72,13 @@ my @PATTERNS =
     'ANY'
   ],
 
-  # Segment 3/7 (anywhere)
+  # Segment 3/7 or 3_7 (anywhere)
   [
     [
       { CATEGORY => [qw(ITERATOR)] },
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(NUMERAL)] },
-      { CATEGORY => [qw(SEPARATOR)], VALUE => 'SLASH' },
+      { CATEGORY => [qw(SEPARATOR)], VALUE => [qw(SLASH UNDERSCORE)] },
       { CATEGORY => [qw(NUMERAL)] }
     ],
     [ 'COUNTER_SINGLE_OF', 0, 2, 'VALUE', 4, 'VALUE'],
@@ -89,9 +89,9 @@ my @PATTERNS =
   [
     [
       { CATEGORY => [qw(ITERATOR)] },
-      { CATEGORY => [qw(SEPARATOR)], VALUE => 'ARTIFICIAL' },
+      { CATEGORY => [qw(SEPARATOR)], VALUE => [qw(ARTIFICIAL)] },
       { CATEGORY => [qw(NUMERAL)] },
-      { CATEGORY => [qw(SEPARATOR)], VALUE => 'UNDERSCORE' },
+      { CATEGORY => [qw(SEPARATOR)], VALUE => [qw(UNDERSCORE)] },
       { CATEGORY => [qw(NUMERAL)] }
     ],
     [ 'COUNTER_SINGLE_OF', 0, 2, 'VALUE', 4, 'VALUE'],
@@ -156,7 +156,7 @@ my @PATTERNS =
     [
       { CATEGORY => [qw(NUMERAL ORDINAL)] },
       { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(PARTICLE)], VALUE => 'Of' },
+      { CATEGORY => [qw(PARTICLE)], VALUE => [qw(Of)] },
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(NUMERAL)] }
     ],
@@ -168,7 +168,7 @@ my @PATTERNS =
   [
     [
       { CATEGORY => [qw(NUMERAL)] },
-      { CATEGORY => [qw(SEPARATOR)], VALUE => 'SLASH' },
+      { CATEGORY => [qw(SEPARATOR)], VALUE => [qw(SLASH)] },
       { CATEGORY => [qw(NUMERAL)] }
     ],
     [ 'COUNTER_GENERIC_OF', 0, 0, 'VALUE', 2, 'VALUE'],
@@ -686,7 +686,17 @@ sub pattern_elem_match
 
   return 0 unless $hit;
   return 1 unless defined $pattern_elem->{VALUE};
-  return ($chain_elem->{VALUE} eq $pattern_elem->{VALUE});
+
+  my $value = $chain_elem->{VALUE};
+
+  for my $cand (@{$pattern_elem->{VALUE}})
+  {
+    if ($value eq $cand)
+    {
+      return 1;
+    }
+  }
+  return 0;
 }
 
 

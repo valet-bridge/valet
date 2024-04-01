@@ -38,7 +38,7 @@ my @ITERATOR_LIST =
   Match Segment Set Session Section Stanza Stage Round Tempo Part 
   R S
   Day Top Round-robin Play),
-  'Super League', 'Final Round', 'Qualifying Segment'
+  'Super League', 'Final Round', 'Qualifying Segment', 'Final Segment'
 );
 
 my %SINGLETON = map { $_ => 1} @SINGLETON_LIST;

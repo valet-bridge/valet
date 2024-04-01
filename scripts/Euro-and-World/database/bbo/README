@@ -1,12 +1,3 @@
-singles:
-Ordinal -> generic counter
-Numeral -> ditto
-
-
-
-
-VALUE is also a candidate list and not a scalar.
-
 When KILL'ing, also preserve the text of the surrounding separators.
 
 Make something called Region.pm with Kepri in it

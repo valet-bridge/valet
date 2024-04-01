@@ -197,8 +197,7 @@ our %FIX_ALIASES =
     
   TOURNAMENT =>
   {
-    Champion => [qw(champions champion's)],
-    Championship => [qw(championship's)],
+    Championship => [qw(championship's champions champion's)],
     Cup => [],
     Trophy => [],
     League => [],
