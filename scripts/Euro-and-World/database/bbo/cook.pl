@@ -51,6 +51,7 @@ $CATEGORIES{WEEKDAY} = Weekday->new();
 
 my @PATTERNS =
 (
+  # Segment 3 of 7
   [
     [
       { CATEGORY => [qw(ITERATOR)] },
@@ -62,6 +63,19 @@ my @PATTERNS =
       { CATEGORY => [qw(NUMERAL)] }
     ],
     [ 'COUNTER_SINGLE_OF', 2, 'VALUE', 6, 'VALUE']
+  ],
+
+  # 7 February 2004
+  [
+    [
+      { CATEGORY => [qw(NUMERAL)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(MONTH)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(YEAR)] }
+    ],
+    [ 'DATE', 0, 'VALUE', 2, 'VALUE', 4, 'VALUE']
+
   ]
 );
 

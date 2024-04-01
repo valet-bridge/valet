@@ -40,6 +40,20 @@ my %SINGLETON = map { $_ => 1} @SINGLETON_LIST;
 
 my %ITERATOR = map { $_ => 1} @ITERATOR_LIST;
 
+my %MONTHS = (
+  'January' => '01',
+  'February' => '02',
+  'March' => '03',
+  'April' => '04',
+  'May' => '05',
+  'June' => '06',
+  'July' => '07',
+  'August' => '08',
+  'September' => '09',
+  'October' => '10',
+  'November' => '11',
+  'December' => '12');
+
 
 sub new
 {
@@ -53,25 +67,22 @@ sub set
   my $self = shift;
   my $num_args = @_;
 
+  my $elem = $_[1];
+
   if ($num_args == 2 && $_[0] eq 'SINGLETON')
   {
-    my $elem = $_[1];
+    # ('SINGLETON', $elem).
     die "No singleton $elem->{CATEGORY}" unless 
       exists $SINGLETON{$elem->{CATEGORY}};
 
     $self->{TYPE} = 'SINGLETON';
     $self->{CATEGORY} = $elem->{CATEGORY};
     $self->{VALUE} = $elem->{VALUE};
-
-    $self->{text} = $elem->{text};
-    $self->{position_first} = $elem->{position_first};
-    $self->{position_last} = $elem->{position_last};
   }
   elsif ($num_args == 4 && $_[0] eq 'COUNTER_SINGLE_OF')
   {
-    # ('COUNTER_SINGLE_OF', $elem, $value, $of).
+    # ('COUNTER_SINGLE_OF', $elem, value, of).
 
-    my $elem = $_[1];
     die "No iterator $elem->{CATEGORY}" unless 
       $elem->{CATEGORY} eq 'ITERATOR';
     die "No iterator type $elem->{VALUE}" unless 
@@ -83,13 +94,56 @@ sub set
     $self->{ITERATOR_VALUE} = $_[2];
     $self->{ITERATOR_OF} = $_[3];
 
-    $self->{text} = $elem->{text};
-    $self->{position_first} = $elem->{position_first};
-    $self->{position_last} = $elem->{position_last};
+  }
+  elsif ($num_args == 5 && $_[0] eq 'DATE')
+  {
+    # ('DATE', $elem, day, month, year).
+
+    my $month = $_[3];
+    $month = $MONTHS{$month} if exists $MONTHS{$month};
+
+    my $day = $_[2];
+    $day = '0' . $day if length($day) == 1;
+
+    $self->{TYPE} = 'DATE';
+    $self->{CATEGORY} = 'DATE';
+    $self->{VALUE} = "$_[4]-$month-$day";
   }
   else
   {
     die "Don't know how to set this";
+  }
+
+  $self->{text} = $elem->{text};
+  $self->{position_first} = $elem->{position_first};
+  $self->{position_last} = $elem->{position_last};
+}
+
+
+sub str_no_newline
+{
+  my $self = shift;
+
+  die "No type" unless exists $self->{TYPE};
+  if ($self->{TYPE} eq 'SINGLETON')
+  {
+    return $self->{CATEGORY} . ' ' . $self->{VALUE};
+  }
+  elsif ($self->{TYPE} eq 'COUNTER' &&
+      $self->{SUB_TYPE} eq 'SINGLE_OF')
+  {
+    return $self->{CATEGORY} . ' ' . 
+      $self->{ITERATOR_VALUE} . ' of ' .
+      $self->{ITERATOR_OF};
+  }
+  elsif ($self->{TYPE} eq 'DATE')
+  {
+    return $self->{CATEGORY} . ' ' . 
+      $self->{VALUE};
+  }
+  else
+  {
+    die "Don't know how to str this";
   }
 }
 
@@ -98,22 +152,25 @@ sub str
 {
   my $self = shift;
 
-  die "No type" unless exists $self->{TYPE};
-  if ($self->{TYPE} eq 'SINGLETON')
+  return $self->str_no_newline() . "\n";
+}
+
+
+sub str_ancillary
+{
+  my $self = shift;
+
+  my $str = ' (pos ';
+  if ($self->{position_first} eq $self->{position_last})
   {
-    return $self->{CATEGORY} . ' ' . $self->{VALUE} . "\n";
-  }
-  elsif ($self->{TYPE} eq 'COUNTER' &&
-      $self->{SUB_TYPE} eq 'SINGLE_OF')
-  {
-    return $self->{CATEGORY} . ' ' . 
-      $self->{ITERATOR_VALUE} . ' of ' .
-      $self->{ITERATOR_OF} .  "\n";
+    $str .= $self->{position_first};
   }
   else
   {
-    die "Don't know how to str this";
+    $str .= $self->{position_first} . '-' . $self->{position_last};
   }
+  $str .= ', orig ' . $self->{text} . ")";
+  return $str;
 }
 
 
@@ -121,25 +178,7 @@ sub str_full
 {
   my $self = shift;
 
-  die "No type" unless exists $self->{TYPE};
-  if ($self->{TYPE} eq 'SINGLETON')
-  {
-    my $str = $self->{CATEGORY} . ' ' . $self->{VALUE} . '(pos ';
-    if ($self->{position_first} eq $self->{position_last})
-    {
-      $str .= $self->{position_first};
-    }
-    else
-    {
-      $str .= $self->{position_first} . '-' . $self->{position_last};
-    }
-    $str .= ', orig ' . $self->{text} . ")\n";
-    return $str;
-  }
-  else
-  {
-    die "Don't know how to str this";
-  }
+  return $self->str_no_newline() . $self->ancillary() . "\n";
 }
 
 
