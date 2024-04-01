@@ -115,6 +115,17 @@ my @PATTERNS =
   ],
 
 
+  # 7th Match (from the front)
+  [
+    [
+      { CATEGORY => [qw(ORDINAL)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(ITERATOR)] },
+    ],
+    [ 'COUNTER_SINGLE', 2, 0, 'VALUE'],
+    'BEGIN'
+  ],
+
   # Final 2 (from the end)
   [
     [
@@ -228,7 +239,7 @@ while ($line = <$fh>)
     }
     else
     {
-      if ($chunk{BBONO} == 12569)
+      if ($chunk{BBONO} == 2940)
       {
         print "HERE\n";
       }
@@ -493,7 +504,7 @@ sub index_match
   }
   else
   {
-    $cat = $chain->[$index]{VALUE};
+    $cat = $chain->[$index + $pattern->[1][1]]{VALUE};
   }
 
   $solved_ref->{$cat} = Tchar->new() unless exists $solved_ref->{$cat};
@@ -540,6 +551,14 @@ sub process_patterns
             $chains_ref, $chain_no, \$chain_max, $solved_ref);
 
           $start_index += 2;
+        }
+      }
+      elsif ($anchor eq 'BEGIN')
+      {
+        if ($plen <= $#$chain)
+        {
+          index_match($chain, 0, $pattern, $plen,
+            $chains_ref, $chain_no, \$chain_max, $solved_ref);
         }
       }
       elsif ($anchor eq 'END')
