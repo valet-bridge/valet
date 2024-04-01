@@ -281,7 +281,7 @@ our %FIX_ALIASES =
     PreQF => [qw(pqf)],
 
     Round => [qw(rounds rouns rueda ruond rd riund rnd rds ound ro
-      tound tour runde runder rn r rond ronda ronud roudn
+      tound tour runde runder rn rond ronda ronud roudn
       turno turul sr)],
     R => [],
     Stanza => [qw(stanza stanzas stranza stsnza stan)],

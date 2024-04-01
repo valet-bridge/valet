@@ -1,3 +1,9 @@
+3:
+Qletter, dash, Final (ITER-SEP-ITER), merge to QF
+2 B (NUM-SEP-LETTER)
+2:1 (NUM-SEP-NUM with colon), round and segment?
+
+
 When KILL'ing, also preserve the text of the surrounding separators.
 
 Make something called Region.pm with Kepri in it

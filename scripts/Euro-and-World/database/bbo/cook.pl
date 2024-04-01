@@ -75,7 +75,7 @@ my @PATTERNS =
   # Segment 3/7 or 3_7 (anywhere)
   [
     [
-      { CATEGORY => [qw(ITERATOR)] },
+      { CATEGORY => [qw(ITERATOR TABLE)] },
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(NUMERAL)] },
       { CATEGORY => [qw(SEPARATOR)], VALUE => [qw(SLASH UNDERSCORE)] },
@@ -111,10 +111,24 @@ my @PATTERNS =
     'ANY'
   ],
 
+  # 2v3 (destroy, anywhere)
+  [
+    [
+      { CATEGORY => [qw(NUMERAL )] },
+      { CATEGORY => [qw(SEPARATOR)], VALUE => [qw(ARTIFICIAL)] },
+      { CATEGORY => [qw(ROMAN)], VALUE => [qw(5)] },
+      { CATEGORY => [qw(SEPARATOR)], VALUE => [qw(ARTIFICIAL)] },
+      { CATEGORY => [qw(NUMERAL)] }
+    ],
+    [ 'KILL', 0],
+    'ANY'
+  ],
+
+
   # Final 2 (from the end)
   [
     [
-      { CATEGORY => [qw(ITERATOR)] },
+      { CATEGORY => [qw(ITERATOR TABLE)] },
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(NUMERAL)] }
     ],
@@ -137,6 +151,17 @@ my @PATTERNS =
       { CATEGORY => [qw(NUMERAL ORDINAL)] }
     ],
     [ 'COUNTER_GENERIC', 0, 0, 'VALUE'],
+    'EXACT'
+  ],
+
+  # 3_4 (exact)
+  [
+    [
+      { CATEGORY => [qw(NUMERAL)] },
+      { CATEGORY => [qw(SEPARATOR)], VALUE => [qw(UNDERSCORE)] },
+      { CATEGORY => [qw(NUMERAL)] }
+    ],
+    [ 'COUNTER_GENERIC_OF', 0, 0, 'VALUE', 2, 'VALUE'],
     'EXACT'
   ],
 
@@ -751,6 +776,15 @@ sub index_match
 
   return unless pattern_match($chain, $index, $pattern->[0], $plen);
 
+  if ($pattern->[1][0] eq 'KILL')
+  {
+    # Special case.
+    my $elem = $chain->[$index];
+    splice(@$chain, $index+1, $plen);
+    split_chain_on($chains_ref, $chain_no, $chain_max_ref, $elem, $index);
+    return;
+  }
+
   my $cat;
   if ($pattern->[1][0] =~ /^COUNTER_GENERIC/)
   {
@@ -768,6 +802,7 @@ sub index_match
   {
     $cat = $chain->[$index]{VALUE};
   }
+
   die "Category $cat already seen" if exists $solved_ref->{$cat};
   $solved_ref->{$cat} = Tchar->new();
 

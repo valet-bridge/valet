@@ -641,6 +641,7 @@ sub study_event
       # It could be that the country name is spelled differently
       # in EVENT and TEAMS.
       $elem->{CATEGORY} = 'KILL';
+      $kill_flag = 1;
     }
   }
 

@@ -36,7 +36,7 @@ my @ITERATOR_LIST =
   Knock-out PreQF Playoff Qualifying Consolation Tiebreak
   Berth Place Bronze Half
   Match Segment Set Session Section Stanza Stage Round Tempo Part 
-  R S
+  R S Table Room
   Day Top Round-robin Play),
   'Super League', 'Final Round', 'Qualifying Segment', 'Final Segment'
 );
@@ -103,7 +103,7 @@ sub set
     # ('COUNTER_SINGLE', $elem, value).
 
     die "No iterator $elem->{CATEGORY}" unless 
-      $elem->{CATEGORY} eq 'ITERATOR';
+      $elem->{CATEGORY} eq 'ITERATOR' || $elem->{CATEGORY} eq 'TABLE';
     die "No iterator type $elem->{VALUE}" unless 
       exists $ITERATOR{$elem->{VALUE}};
 
@@ -117,7 +117,7 @@ sub set
     # ('COUNTER_SINGLE_OF', $elem, value, of).
 
     die "No iterator $elem->{CATEGORY}" unless 
-      $elem->{CATEGORY} eq 'ITERATOR';
+      $elem->{CATEGORY} eq 'ITERATOR' || $elem->{CATEGORY} eq 'TABLE';
     die "No iterator type $elem->{VALUE}" unless 
       exists $ITERATOR{$elem->{VALUE}};
 
