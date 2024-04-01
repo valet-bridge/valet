@@ -81,11 +81,22 @@ my @PATTERNS =
       { CATEGORY => [qw(SEPARATOR)], VALUE => 'SLASH' },
       { CATEGORY => [qw(NUMERAL)] }
     ],
-    # Argument list:
     [ 'COUNTER_SINGLE_OF', 0, 2, 'VALUE', 4, 'VALUE'],
     'ANY'
   ],
 
+  # RR3_3 (anywhere)
+  [
+    [
+      { CATEGORY => [qw(ITERATOR)] },
+      { CATEGORY => [qw(SEPARATOR)], VALUE => 'ARTIFICIAL' },
+      { CATEGORY => [qw(NUMERAL)] },
+      { CATEGORY => [qw(SEPARATOR)], VALUE => 'UNDERSCORE' },
+      { CATEGORY => [qw(NUMERAL)] }
+    ],
+    [ 'COUNTER_SINGLE_OF', 0, 2, 'VALUE', 4, 'VALUE'],
+    'ANY'
+  ],
 
   # 7 February 2004 (anywhere)
   [
@@ -193,7 +204,7 @@ while ($line = <$fh>)
     }
     else
     {
-      if ($chunk{BBONO} == 1968)
+      if ($chunk{BBONO} == 169)
       {
         print "HERE\n";
       }
@@ -215,11 +226,14 @@ while ($line = <$fh>)
 
       $solved_count += scalar keys %event_solved;
 
-      print_chunk(\%chunk);
+      if (open_chains(\%event_chains))
+      {
+        print_chunk(\%chunk);
 
-      print_solved(\%event_solved);
+        print_solved(\%event_solved);
 
-      print_chains(\%event_chains);
+        print_chains(\%event_chains);
+      }
     }
   }
   else
@@ -302,6 +316,21 @@ sub print_solved
     print $solved_ref->{$key}->str();
   }
   print "\n";
+}
+
+
+sub open_chains
+{
+  my $chains_ref = pop;
+
+  my $chain_max = -1 + scalar keys %$chains_ref;
+
+  for my $c (0 .. $chain_max)
+  {
+    my $chain = $chains_ref->{$c};
+    return 1 if $#$chain >= 0;
+  }
+  return 0;
 }
 
 
@@ -518,7 +547,7 @@ sub process_singletons
   my ($chains_ref, $solved_ref) = @_;
 
   my $chain_no = 0;
-  my $chain_max = 0;
+  my $chain_max = -1 + scalar keys %$chains_ref;
 
   do
   {
