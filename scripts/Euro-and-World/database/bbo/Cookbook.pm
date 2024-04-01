@@ -284,6 +284,7 @@ our %FIX_ALIASES =
     Round => [qw(rounds rouns rueda ruond rd riund rnd rds ound ro
       tound tour runde runder rn r rond ronda ronud roudn
       turno turul sr)],
+    R => [],
     Stanza => [qw(stanza stanzas stranza stsnza stan)],
     Session => [qw(serssion sesion sesión sesj sesjon sess
       sessió sessión ses sesje sessie sesson sesssion sessions
@@ -296,6 +297,7 @@ our %FIX_ALIASES =
       segmento segments segmetn segmnet segnment sgment segt sengemt 
       se eg),
       'seg#'],
+    S => [],
     Set => [qw(sets)],
     Tempo => [],
     Half => [qw(hallf halvleg halv hlf mt)],

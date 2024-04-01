@@ -34,6 +34,7 @@ my @ITERATOR_LIST =
   Knock-out PreQF Playoff Qualifying Consolation Tiebreak
   Berth Place Bronze Half
   Match Segment Set Session Section Stanza Stage Round Tempo Part 
+  R S
   Day Top Round-robin Play),
   'Super League', 'Final Round', 'Qualifying Segment'
 );
@@ -124,6 +125,15 @@ sub set
     $self->{ITERATOR_VALUE} = $_[2];
     $self->{ITERATOR_OF} = $_[3];
   }
+  elsif ($num_args == 3 && $_[0] eq 'COUNTER_GENERIC')
+  {
+    # ('COUNTER_GENERIC', $elem, value).
+
+    $self->{TYPE} = 'COUNTER';
+    $self->{SUB_TYPE} = 'SINGLE';
+    $self->{CATEGORY} = 'Generic';
+    $self->{ITERATOR_VALUE} = $_[2];
+  }
   elsif ($num_args == 4 && $_[0] eq 'COUNTER_GENERIC_OF')
   {
     # ('COUNTER_GENERIC_OF', $elem, value, of).
@@ -173,6 +183,11 @@ sub str_no_newline
     if ($self->{SUB_TYPE} eq 'EMPTY')
     {
       return $self->{CATEGORY} . ' (empty)';
+    }
+    elsif ($self->{SUB_TYPE} eq 'SINGLE')
+    {
+      return $self->{CATEGORY} . ' ' . 
+        $self->{ITERATOR_VALUE};
     }
     elsif ($self->{SUB_TYPE} eq 'SINGLE_OF')
     {

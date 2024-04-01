@@ -131,6 +131,15 @@ my @PATTERNS =
     'EXACT'
   ],
 
+  # Number (exact)
+  [
+    [
+      { CATEGORY => [qw(NUMERAL ORDINAL)] }
+    ],
+    [ 'COUNTER_GENERIC', 0, 0, 'VALUE'],
+    'EXACT'
+  ],
+
   # 3 Round (exact)
   [
     [
@@ -204,7 +213,7 @@ while ($line = <$fh>)
     }
     else
     {
-      if ($chunk{BBONO} == 169)
+      if ($chunk{BBONO} == 1345)
       {
         print "HERE\n";
       }
@@ -730,7 +739,23 @@ sub index_match
 
   return unless pattern_match($chain, $index, $pattern->[0], $plen);
 
-  my $cat = $chain->[$index]{VALUE};
+  my $cat;
+  if ($pattern->[1][0] =~ /^COUNTER_GENERIC/)
+  {
+    # Make a unique extension if needed.
+    my $cat0 = $pattern->[1][0];
+    $cat = $cat0;
+    my $try = 1;
+    while (exists $solved_ref->{$cat})
+    {
+      $cat = $cat0 . "_$try";
+      $try++;
+    }
+  }
+  else
+  {
+    $cat = $chain->[$index]{VALUE};
+  }
   die "Category $cat already seen" if exists $solved_ref->{$cat};
   $solved_ref->{$cat} = Tchar->new();
 

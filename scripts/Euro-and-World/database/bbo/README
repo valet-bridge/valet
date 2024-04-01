@@ -1,8 +1,11 @@
-We should be able to state from which element the cat, value derives.
-It's not always the front one of a pattern.
+singles:
+Ordinal -> generic counter
+Numeral -> ditto
+
+
+
 
 VALUE is also a candidate list and not a scalar.
-Maybe add an ANCHOR => 'FRONT' or 'BACK' for the "regex".
 
 When KILL'ing, also preserve the text of the surrounding separators.
 

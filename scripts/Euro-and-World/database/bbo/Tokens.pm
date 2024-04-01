@@ -180,7 +180,7 @@ sub split_on_digit_groups
       for my $j (0 .. $#a)
       {
         $list_ref->[$i + 2*$j] = $a[$j];
-        $list_ref->[$i + 2*$j + 1] = '|';
+        $list_ref->[$i + 2*$j + 1] = '|' unless $j == $#a;
       }
     }
   }
