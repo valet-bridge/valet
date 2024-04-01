@@ -97,6 +97,7 @@ my %MERGE_ALIASES = (
   "Second half" => ["second ha"],
   Bronze => ["small final"],
   "Session 1" => ["única sesión"],
+  "Knockout" => ["knock out", "knock-out"],
 
   # SCORING
   BAM => ["b-a-m"],
@@ -259,8 +260,8 @@ our %FIX_ALIASES =
       qfinal qfinals quaterfinal qf ottavi quarti)],
     Playoff => [qw(po playoff playoffs)],
     "Knock-out" => [qw(ko elimination kostage knockout knockouts
-      knock knockouts knock-out), 'knock out'],
-    Tiebreak => [qw(ot)],
+      knock knockouts)],
+    Tiebreak => [qw(ot tie)],
     Consolation => [qw(conso)],
     Bronze => [],
     Berth => [],
@@ -281,7 +282,7 @@ our %FIX_ALIASES =
     Round => [qw(rounds rouns rueda ruond rd riund rnd rds ound ro
       tound tour runde runder rn r rond ronda ronud roudn
       turno turul sr)],
-    Stanza => [qw(stanza stanzas stranza)],
+    Stanza => [qw(stanza stanzas stranza stsnza stan)],
     Session => [qw(serssion sesion sesión sesj sesjon sess
       sessió sessión ses sesje sessie sesson sesssion sessions
       sessão devre segssion séance séan seans seansi)],
@@ -332,7 +333,7 @@ our %FIX_ALIASES =
 
   GROUP =>
   {
-    Group => [qw(gr groups pool)],
+    Group => [qw(gr grp groups pool)],
   },
 
   COLOR =>
@@ -360,7 +361,7 @@ our %FIX_ALIASES =
     Finland => [],
     France => [qw(fra)],
     Hungary => [],
-    Ireland => [qw(roi), 'rep of ireland'],
+    Ireland => [qw(ire roi), 'rep of ireland'],
     Israel => [],
     Italy => [],
     Latvia => [],
@@ -483,7 +484,7 @@ our %FIX_ALIASES =
   KILL =>
   {
     Kill => [qw(untitled
-      bbo bbvg bbovg vg vmg bridge
+      bbo bbvg bbovg vg vmg bridge dup
       man mandarin pabfc
       daskalakis robinso stern hol
       fluff reloaded missed this train tren ch mac ore oam le friendly
@@ -508,7 +509,7 @@ my $BACK_PATTERN = join('|', map { quotemeta } @PEEL_BACK);
 our $BACK_REGEX = qr/^(.+)($BACK_PATTERN)$/i;
 
 my @ROMAN = qw(i ii iii iv v vi vii viii ix x xi xii);
-my @PRE_GROUP = (qw(f group q qf sf semi t), @ROMAN);
+my @PRE_GROUP = (qw(f group q qf sf semi t open), @ROMAN);
 
 my $PRE_GROUP_PATTERN = join('|', map { quotemeta } @PRE_GROUP);
 our $PRE_GROUP_REGEX = qr/^($PRE_GROUP_PATTERN)([AB])$/i;

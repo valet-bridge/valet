@@ -68,7 +68,7 @@ my @PATTERNS =
   # 7 February 2004
   [
     [
-      { CATEGORY => [qw(NUMERAL)] },
+      { CATEGORY => [qw(NUMERAL ORDINAL)] },
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(MONTH)] },
       { CATEGORY => [qw(SEPARATOR)] },
@@ -116,7 +116,7 @@ while ($line = <$fh>)
     }
     else
     {
-      if ($chunk{BBONO} == 20489)
+      if ($chunk{BBONO} == 27279)
       {
         print "HERE\n";
       }
@@ -278,6 +278,8 @@ sub print_chains
       join('|', map { $_->{text} } @$chain), "\n";
     print "Chain $c (", 1 + $#$chain, "): ", 
       join('|', map { $_->{VALUE} } @$chain), "\n";
+    print "Chain $c (", 1 + $#$chain, "): ", 
+      join('|', map { $_->{CATEGORY} } @$chain), "\n";
   }
   print "\n";
 }
@@ -374,7 +376,7 @@ sub split_on_digit_groups
         next;
       }
 
-      my $add = 2 * $#a - 1;
+      my $add = 2 * $#a;
       splice(@$list_ref, $i, 0, ('') x $add);
       for my $j (0 .. $#a)
       {

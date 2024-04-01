@@ -29,7 +29,7 @@ my @SINGLETON_LIST = qw
 
 my @ITERATOR_LIST = 
 (
-  qw(Final Semi-final Semi Quarter-final Quarter Rof16
+  qw(Final Semi-final Semi Quarter-final Quarter Qletter Rof16
   Knock-out PreQF Playoff
   Berth Match Segment Set Session Section Stanza Stage Round
   Round-robin),
