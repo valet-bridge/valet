@@ -581,8 +581,11 @@ sub fix_some_singletons_manually
     if ($#$chain == 0)
     {
       my $elem = $chain->[0];
-      if (($elem->{CATEGORY} eq 'TOURNAMENT' && $elem->{VALUE} eq 'Open') ||
-          ($elem->{CATEGORY} eq 'LETTER' && $elem->{VALUE} eq 'O'))
+      my $cat = $elem->{CATEGORY};
+      my $value = $elem->{VALUE};
+
+      if (($cat eq 'TOURNAMENT' && $value eq 'Open') ||
+          ($cat eq 'LETTER' && $value eq 'O'))
       {
         $elem->{VALUE} = 'Open';
 
@@ -592,44 +595,100 @@ sub fix_some_singletons_manually
 
         splice(@$chain, 0);
       }
-      elsif ($elem->{CATEGORY} eq 'GENDER')
+      elsif ($cat eq 'TOURNAMENT')
       {
-        synthetic_singleton($solved_ref, $elem, 'GENDER', 1);
+        if ($value ne 'Super')
+        {
+          synthetic_singleton($solved_ref, $elem, 'TOURNAMENT', 1);
+        }
 
         splice(@$chain, 0);
       }
-      elsif ($elem->{CATEGORY} eq 'LETTER' && $elem->{VALUE} eq 'W')
+      elsif ($cat eq 'GROUP' || $cat eq 'BOARDS')
+      {
+        splice(@$chain, 0);
+      }
+      elsif ($cat eq 'GENDER' || $cat eq 'TEMPORAL')
+      {
+        synthetic_singleton($solved_ref, $elem, $cat, 1);
+
+        splice(@$chain, 0);
+      }
+      elsif ($cat eq 'LETTER' && $value eq 'W')
       {
         $elem->{VALUE} = 'Women';
         synthetic_singleton($solved_ref, $elem, 'GENDER', 1);
 
         splice(@$chain, 0);
       }
-      elsif ($elem->{CATEGORY} eq 'LETTER' && $elem->{VALUE} eq 'J')
+      elsif ($cat eq 'LETTER' && $value eq 'J')
       {
         $elem->{VALUE} = 'Juniors';
         synthetic_singleton($solved_ref, $elem, 'AGE', 1);
 
         splice(@$chain, 0);
       }
-      elsif ($elem->{CATEGORY} eq 'LETTER' && $elem->{VALUE} eq 'Y')
+      elsif ($cat eq 'LETTER' && $value eq 'Y')
       {
         $elem->{VALUE} = 'Youngsters';
         synthetic_singleton($solved_ref, $elem, 'AGE', 1);
 
         splice(@$chain, 0);
       }
-      elsif ($elem->{CATEGORY} eq 'LETTER' &&
-        $elem->{VALUE} =~ /^[A-Fa-f]$/)
+      elsif ($cat eq 'LETTER' && $value eq 'K')
+      {
+        $elem->{VALUE} = 'Kids';
+        synthetic_singleton($solved_ref, $elem, 'AGE', 1);
+
+        splice(@$chain, 0);
+      }
+      elsif ($chain_no == 0 && $cat eq 'LETTER' && $value eq 'G')
+      {
+        $elem->{VALUE} = 'Juniors';
+        synthetic_singleton($solved_ref, $elem, 'AGE', 0);
+
+        $elem->{VALUE} = 'Women';
+        synthetic_singleton($solved_ref, $elem, 'GENDER', 0);
+
+        splice(@$chain, 0);
+      }
+      elsif ($cat eq 'LETTER' && $value =~ /^[A-Ha-h]$/)
       {
         # This should mean no group.
         synthetic_singleton($solved_ref, $elem, 'GROUP', 1);
 
         splice(@$chain, 0);
       }
-      elsif ($elem->{CATEGORY} eq 'YEAR')
+      elsif ($cat eq 'ROMAN' && ($value == 1 || $value == 5))
+      {
+        # Tends to be a leftover from A v B.
+        # Not sure about I, but it's rare.
+
+        splice(@$chain, 0);
+      }
+      elsif ($cat eq 'YEAR')
       {
         synthetic_singleton($solved_ref, $elem, 'YEAR', 1);
+
+        splice(@$chain, 0);
+      }
+      elsif ($cat eq 'PARTICLE' && 
+          ($elem->{text} eq 'OF' || $elem->{text} eq 'FO'))
+      {
+        # Tends to be OF for Open Final.
+
+        $elem->{VALUE} = 'Open';
+
+        # This should mean no gender nor age restriction.
+        synthetic_singleton($solved_ref, $elem, 'AGE', 1);
+        synthetic_singleton($solved_ref, $elem, 'GENDER', 1);
+
+        die "Already $cat?" if exists $solved_ref->{Final};
+
+        $elem->{CATEGORY} = 'ITERATOR';
+        $elem->{VALUE} = 'Final';
+        $solved_ref->{Final} = Tchar->new();
+        $solved_ref->{Final}->set('COUNTER_NONE', $elem);
 
         splice(@$chain, 0);
       }
