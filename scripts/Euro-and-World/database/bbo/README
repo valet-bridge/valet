@@ -1,4 +1,3 @@
-Change pattern to include separators.
 VALUE is also a candidate list and not a scalar.
 Maybe add an ANCHOR => 'FRONT' or 'BACK' for the "regex".
 

@@ -116,7 +116,7 @@ while ($line = <$fh>)
     }
     else
     {
-      if ($chunk{BBONO} == 27279)
+      if ($chunk{BBONO} == 1300)
       {
         print "HERE\n";
       }
@@ -891,7 +891,7 @@ sub split_chain_on
     $last = 0;
   }
 
-  splice (@{$chains_ref->{$chain_no}}, $elem_no);
+  splice (@{$chains_ref->{$chain_no}}, $last);
 }
 
 
@@ -1073,6 +1073,33 @@ sub make_arg_list
 }
 
 
+sub index_match
+{
+  my ($chain, $index, $pattern, $plen, 
+    $chains_ref, $chain_no, $chain_max_ref, $solved_ref) = @_;
+
+  return unless pattern_match($chain, $index, $pattern->[0], $plen);
+
+  my $cat = $chain->[$index]{VALUE};
+  die "Category $cat already seen" if exists $solved_ref->{$cat};
+  $solved_ref->{$cat} = Tchar->new();
+
+  my $reaction = $pattern->[1];
+
+  my @arg_list;
+  make_arg_list($chain, $index, $reaction, \@arg_list);
+
+  my $elem = $chain->[$index];
+  collapse_elements($elem, $chain, $index, $plen);
+
+  splice(@$chain, $index+1, $plen);
+
+  $solved_ref->{$cat}->set($reaction->[0], $elem, @arg_list);
+
+  split_chain_on($chains_ref, $chain_no, $chain_max_ref, $elem, $index);
+}
+
+
 sub process_patterns
 {
   my ($chains_ref, $solved_ref) = @_;
@@ -1092,27 +1119,8 @@ sub process_patterns
       my $start_index = 0;
       while ($start_index + $plen <= $#$chain)
       {
-        if (pattern_match($chain, $start_index, $pattern->[0], $plen))
-        {
-          my $cat = $chain->[$start_index]{VALUE};
-          die "Category $cat already seen" if exists $solved_ref->{$cat};
-          $solved_ref->{$cat} = Tchar->new();
-
-          my $reaction = $pattern->[1];
-
-          my @arg_list;
-          make_arg_list($chain, $start_index, $reaction, \@arg_list);
-
-          my $elem = $chain->[$start_index];
-          collapse_elements($elem, $chain, $start_index, $plen);
-
-          splice(@$chain, $start_index+1, $plen);
-
-          $solved_ref->{$cat}->set($reaction->[0], $elem, @arg_list);
-
-          split_chain_on($chains_ref, $chain_no, \$chain_max,
-            $elem, $start_index);
-        }
+        index_match($chain, $start_index, $pattern, $plen,
+          $chains_ref, $chain_no, \$chain_max, $solved_ref);
 
         $start_index += 2;
       }
