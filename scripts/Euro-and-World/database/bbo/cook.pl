@@ -71,6 +71,21 @@ my @PATTERNS =
     'ANY'
   ],
 
+  # Segment 3/7 (anywhere)
+  [
+    [
+      { CATEGORY => [qw(ITERATOR)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(NUMERAL)] },
+      { CATEGORY => [qw(SEPARATOR)], VALUE => 'SLASH' },
+      { CATEGORY => [qw(NUMERAL)] }
+    ],
+    # Argument list:
+    [ 'COUNTER_SINGLE_OF', 0, 2, 'VALUE', 4, 'VALUE'],
+    'ANY'
+  ],
+
+
   # 7 February 2004 (anywhere)
   [
     [
@@ -84,7 +99,7 @@ my @PATTERNS =
     'ANY'
   ],
 
-  # Final 2 (exact)
+  # Final 2 (from the end)
   [
     [
       { CATEGORY => [qw(ITERATOR)] },
@@ -92,7 +107,7 @@ my @PATTERNS =
       { CATEGORY => [qw(NUMERAL)] }
     ],
     [ 'COUNTER_SINGLE', 0, 2, 'VALUE'],
-    'EXACT'
+    'END'
   ],
 
   # 3 Round (exact)
@@ -106,6 +121,29 @@ my @PATTERNS =
     'EXACT'
   ],
 
+  # 2 of 4 (exact)
+  [
+    [
+      { CATEGORY => [qw(NUMERAL ORDINAL)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(PARTICLE)], VALUE => 'Of' },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(NUMERAL)] }
+    ],
+    [ 'COUNTER_GENERIC_OF', 0, 0, 'VALUE', 4, 'VALUE'],
+    'EXACT'
+  ],
+
+  # 2/4 (exact)
+  [
+    [
+      { CATEGORY => [qw(NUMERAL)] },
+      { CATEGORY => [qw(SEPARATOR)], VALUE => 'SLASH' },
+      { CATEGORY => [qw(NUMERAL)] }
+    ],
+    [ 'COUNTER_GENERIC_OF', 0, 0, 'VALUE', 2, 'VALUE'],
+    'EXACT'
+  ],
 );
 
 my @FIELDS = qw(BBONO TITLE MONIKER DATE LOCATION EVENT 
@@ -145,7 +183,7 @@ while ($line = <$fh>)
     }
     else
     {
-      if ($chunk{BBONO} == 1300)
+      if ($chunk{BBONO} == 1968)
       {
         print "HERE\n";
       }
@@ -885,42 +923,112 @@ sub split_chain_on
 
   if ($elem_no < $chain_length)
   {
-    die "Expected separator" unless 
-      $chains_ref->{$chain_no}[$elem_no+1]{CATEGORY} eq 'SEPARATOR';
+    my $next_real_elem;
+    if ($chains_ref->{$chain_no}[$elem_no+1]{CATEGORY} eq 'SEPARATOR')
+    {
+      $elem->{position_last} =
+       $chains_ref->{$chain_no}[$elem_no+1]{position_last};
+      $elem->{text} .= 
+        $chains_ref->{$chain_no}[$elem_no+1]{VALUE};
 
-    $elem->{position_last}++;
-    $elem->{text} .= $chains_ref->{$chain_no}[$elem_no+1]{VALUE};
+      $next_real_elem = $elem_no + 2;
+    }
+    else
+    {
+      $next_real_elem = $elem_no + 1;
+    }
 
-    if ($elem_no +1 < $chain_length)
+    if ($next_real_elem <= $chain_length)
     {
       # Make the number of the new partial chain.
       $$chain_max_ref++;
 
       # Skip the trailing separator.
       @{$chains_ref->{$$chain_max_ref}} = 
-        @{$chains_ref->{$chain_no}}[$elem_no+2 .. $chain_length];
+        @{$chains_ref->{$chain_no}}[$next_real_elem .. $chain_length];
     }
   }
 
   # Remove elements in the original chain.
-  my $last;
+  my $first_removed_elem;
   if ($elem_no > 0)
   {
-    die "Expected separator" unless
-      $chains_ref->{$chain_no}[$elem_no-1]{CATEGORY} eq 'SEPARATOR';
-    
-    $last = $elem_no-1;
+    if ($chains_ref->{$chain_no}[$elem_no-1]{CATEGORY} eq 'SEPARATOR')
+    {
+      $elem->{position_first} =
+        $chains_ref->{$chain_no}[$elem_no-1]{position_first};
+      $elem->{text} = $chains_ref->{$chain_no}[$elem_no-1]{VALUE} .
+        $elem->{text};
 
-    $elem->{position_first}--;
-    $elem->{text} = $chains_ref->{$chain_no}[$elem_no-1]{VALUE} .
-      $elem->{text};
+      $first_removed_elem = $elem_no - 1;
+    }
+    else
+    {
+      $first_removed_elem = $elem_no;
+    }
   }
   else
   {
-    $last = 0;
+    $first_removed_elem = 0;
   }
 
-  splice (@{$chains_ref->{$chain_no}}, $last);
+  splice (@{$chains_ref->{$chain_no}}, $first_removed_elem);
+}
+
+
+sub split_on_space_dashes
+{
+  my ($chains_ref) = @_;
+
+  my $chain_no = 0;
+  my $chain_max = 0;
+
+  do
+  {
+    my $chain = $chains_ref->{$chain_no};
+    my $elem_no = 0;
+    for my $elem (@$chain)
+    {
+      if ($elem_no > 0 && $elem_no < $#$chain)
+      {
+        # Don't split on ends -- they get removed later anyway.
+        if ($elem->{CATEGORY} eq 'SEPARATOR' &&
+            $elem->{VALUE} eq 'DASH')
+        {
+          my $first = $elem_no;
+          my $last = $elem_no;
+
+          my $pred = $chain->[$elem_no-1];
+          if ($pred->{CATEGORY} eq 'SEPARATOR' &&
+              $pred->{VALUE} eq 'SPACE')
+          {
+            $first--;
+          }
+
+          my $succ = $chain->[$elem_no+1];
+          if ($succ->{CATEGORY} eq 'SEPARATOR' &&
+              $succ->{VALUE} eq 'SPACE')
+          {
+            $last++;
+          }
+
+          if ($first != $last)
+          {
+            # Found at least one neighboring space.
+            splice(@$chain, $first+1, $last-$first);
+           
+            split_chain_on($chains_ref, $chain_no, \$chain_max, 
+              $elem, $first);
+          }
+          last;
+        }
+      }
+
+      $elem_no++;
+    }
+    $chain_no++;
+  }
+  while ($chain_no <= $chain_max);
 }
 
 
@@ -1160,6 +1268,14 @@ sub process_patterns
           $start_index += 2;
         }
       }
+      elsif ($anchor eq 'END')
+      {
+        if ($plen <= $#$chain)
+        {
+          index_match($chain, $#$chain - $plen, $pattern, $plen,
+            $chains_ref, $chain_no, \$chain_max, $solved_ref);
+        }
+      }
       elsif ($anchor eq 'EXACT')
       {
         if ($plen == $#$chain)
@@ -1178,6 +1294,10 @@ sub process_patterns
 sub process_event
 {
   my ($chains_ref, $solved_ref) = @_;
+
+  # Split on a dash with a space to its left and/or right.
+  # This seems quite reliable.
+  split_on_space_dashes($chains_ref);
 
   process_singletons($chains_ref, $solved_ref);
   process_separators($chains_ref);

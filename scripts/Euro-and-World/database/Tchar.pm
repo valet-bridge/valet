@@ -30,10 +30,10 @@ my @SINGLETON_LIST = qw
 my @ITERATOR_LIST = 
 (
   qw(Final Semi-final Semi Quarter-final Quarter Qletter Rof16 Rof32
-  Knock-out PreQF Playoff Qualifying Consolation 
+  Knock-out PreQF Playoff Qualifying Consolation Tiebreak
   Berth Place Half
-  Match Segment Set Session Section Stanza Stage Round Tempo Part
-  Round-robin),
+  Match Segment Set Session Section Stanza Stage Round Tempo Part 
+  Day Top Round-robin),
   'Super League', 'Final Round', 'Qualifying Segment'
 );
 
@@ -106,6 +106,16 @@ sub set
     $self->{TYPE} = 'COUNTER';
     $self->{SUB_TYPE} = 'SINGLE_OF';
     $self->{CATEGORY} = $elem->{VALUE};
+    $self->{ITERATOR_VALUE} = $_[2];
+    $self->{ITERATOR_OF} = $_[3];
+  }
+  elsif ($num_args == 4 && $_[0] eq 'COUNTER_GENERIC_OF')
+  {
+    # ('COUNTER_GENERIC_OF', $elem, value, of).
+
+    $self->{TYPE} = 'COUNTER';
+    $self->{SUB_TYPE} = 'SINGLE_OF';
+    $self->{CATEGORY} = 'Generic';
     $self->{ITERATOR_VALUE} = $_[2];
     $self->{ITERATOR_OF} = $_[3];
   }
