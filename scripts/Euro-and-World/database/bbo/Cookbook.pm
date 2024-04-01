@@ -92,7 +92,6 @@ my %MERGE_ALIASES = (
   Rof18 => ["phase a 18"],
   Rof16 => ["round of 16", "phase a 16", "rd of 16", "r.of 16"],
   Rof12 => ["phase a 12"],
-  Knockout => ["knock out", "knock-out"],
   Tiebreak => ["extra boards", "extra time", "extra stanza", 
     "semifinals extra", "tie break", "tie reak", "tiebreak"],
   "Second half" => ["second ha"],
@@ -259,7 +258,8 @@ our %FIX_ALIASES =
     "Quarter-final" => [qw(quarterfinal quafin quarterf quarterfinals 
       qfinal qfinals quaterfinal qf ottavi quarti)],
     Playoff => [qw(po playoff playoffs)],
-    "Knock-out" => [qw(ko elimination kostage knockout knockouts)],
+    "Knock-out" => [qw(ko elimination kostage knockout knockouts
+      knock knockouts knock-out), 'knock out'],
     Tiebreak => [qw(ot)],
     Consolation => [qw(conso)],
     Bronze => [],
@@ -274,7 +274,6 @@ our %FIX_ALIASES =
       qualification qualifier qualify quallification qualy
       qr qulification prelim preliminary pre pelim
       clasificacion clasificatoria)],
-    Knockout => [qw(knock knockouts)],
     Qletter => [qw(q)],
 
     PreQF => [qw(pqf)],

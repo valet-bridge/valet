@@ -994,7 +994,7 @@ sub process_separators
 }
 
 
-sub pattern_match
+sub pattern_elem_match
 {
   my ($chain_elem, $pattern_elem) = @_;
 
@@ -1013,6 +1013,47 @@ sub pattern_match
   return 0 unless $hit;
   return 1 unless defined $pattern_elem->{VALUE};
   return ($chain_elem->{VALUE} eq $pattern_elem->{VALUE});
+}
+
+
+sub pattern_match
+{
+  my ($chain, $start_index, $elem_pattern, $plen) = @_;
+
+  for my $p (0 .. $plen)
+  {
+    return 0 unless pattern_elem_match(
+        $chain->[$start_index + $p], $elem_pattern->[$p]);
+  }
+  return 1;
+}
+
+
+sub collapse_elements
+{
+  my ($elem, $chain, $start_index, $plen) = @_;
+
+  # Before we splice out the matched elements, we keep some
+  # information from them.
+
+  for my $p (1 .. $plen)
+  {
+    $elem->{text} .= $chain->[$start_index + $p]{text};
+  }
+
+  $elem->{position_last} = $chain->[$start_index + $plen]{position_last};
+}
+
+
+sub make_arg_list
+{
+  my ($chain, $start_index, $reaction, $arg_list_ref) = @_;
+
+  for (my $r = 1; $r <= $#$reaction; $r += 2)
+  {
+    my $pos = $start_index + $reaction->[$r];
+    push @$arg_list_ref, $chain->[$pos]{$reaction->[$r+1]};
+  }
 }
 
 
@@ -1035,18 +1076,7 @@ sub process_patterns
       my $start_index = 0;
       while ($start_index + $plen <= $#$chain)
       {
-        my $miss = 0;
-        for my $p (0 .. $plen)
-        {
-          my $pelem = $pattern->[0][$p];
-          if (! pattern_match($chain->[$start_index + $p], $pelem))
-          {
-            $miss = 1;
-            last;
-          }
-        }
-
-        if (! $miss)
+        if (pattern_match($chain, $start_index, $pattern->[0], $plen))
         {
           my $cat = $chain->[$start_index]{VALUE};
           die "Category $cat already seen" if exists $solved_ref->{$cat};
@@ -1055,19 +1085,10 @@ sub process_patterns
           my $reaction = $pattern->[1];
 
           my @arg_list;
-          for (my $r = 1; $r <= $#$reaction; $r += 2)
-          {
-            my $pos = $start_index + $reaction->[$r];
-            push @arg_list, $chain->[$pos]{$reaction->[$r+1]};
-          }
+          make_arg_list($chain, $start_index, $reaction, \@arg_list);
 
           my $elem = $chain->[$start_index];
-          for my $p (1 .. $plen)
-          {
-            $elem->{text} .= $chain->[$start_index + $p]{text};
-          }
-          $elem->{position_last} = 
-            $chain->[$start_index + $plen]{position_last};
+          collapse_elements($elem, $chain, $start_index, $plen);
 
           splice(@$chain, $start_index+1, $plen);
 
