@@ -479,6 +479,7 @@ our %FIX_ALIASES =
     And => [qw(& +)],
     Of => [qw(af off av de olf pf fo from)],
     To => [],
+    vs => []
   },
 
   KILL =>
@@ -491,7 +492,7 @@ our %FIX_ALIASES =
       game series npc rank tpatkawan patkawan phase tadkov friendship
       am afternoon night soir barriere best delayed us
       combined for only alle int titan silver gold vp sm
-      è no n° vs =), 
+      è no n° =), 
       '#', '?', 'one!', 'ab', 'a&b', ']']
   }
 );

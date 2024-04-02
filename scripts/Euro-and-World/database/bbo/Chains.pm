@@ -692,6 +692,142 @@ sub fix_some_singletons_manually
 
         splice(@$chain, 0);
       }
+      elsif ($cat eq 'PARTICLE' && $value eq 'vs')
+      {
+        # Delete
+        splice(@$chain, 0);
+      }
+    }
+    $chain_no++;
+  }
+  while ($chain_no <= $chain_max);
+}
+
+
+sub fix_some_tripletons_manually
+{
+  my ($chains_ref, $solved_ref) = @_;
+
+  my $chain_no = 0;
+  my $chain_max = -1 + scalar keys %$chains_ref;
+
+  do
+  {
+    my $chain = $chains_ref->{$chain_no};
+    if ($#$chain == 2)
+    {
+      my $elem0 = $chain->[0];
+      my $elem1 = $chain->[1];
+      my $elem2 = $chain->[2];
+
+      if ($elem0->{CATEGORY} eq 'NUMERAL' &&
+          $elem2->{CATEGORY} eq 'LETTER')
+      {
+        # 2 B: Treat this as a generic counter with two values.
+
+        my $category = 'Generic';
+        die "Already $category?" if exists $solved_ref->{$category};
+
+        $elem0->{CATEGORY} = $category;
+
+        $solved_ref->{$category} = Tchar->new();
+        $solved_ref->{$category}->set('COUNTER_DOUBLE', $elem0,
+          $elem0->{VALUE}, $elem2->{VALUE});
+
+        splice(@$chain, 0);
+      }
+      elsif ($elem0->{CATEGORY} eq 'LETTER' &&
+          $elem2->{CATEGORY} eq 'NUMERAL')
+      {
+        # B 2.
+
+        my $category = 'Generic';
+        die "Already $category?" if exists $solved_ref->{$category};
+
+        $elem0->{CATEGORY} = $category;
+
+        $solved_ref->{$category} = Tchar->new();
+        $solved_ref->{$category}->set('COUNTER_DOUBLE', $elem0,
+          $elem2->{VALUE}, $elem0->{VALUE});
+
+        splice(@$chain, 0);
+      }
+      elsif ($elem0->{CATEGORY} eq 'MONTH' &&
+             $elem2->{CATEGORY} eq 'YEAR')
+      {
+        # YEAR_MONTH
+        # About 5 cases
+        print "XXX2\n";
+      }
+      elsif ($elem0->{CATEGORY} eq 'ORDINAL' &&
+             $elem2->{CATEGORY} eq 'ORDINAL')
+      {
+        # 5th eighth, so generic counter 5 of 8.
+        # About 26 cases
+        print "XXX3\n";
+      }
+      elsif ($elem0->{CATEGORY} eq 'NUMERAL' &&
+             $elem1->{CATEGORY} eq 'SEPARATOR' &&
+             $elem1->{text} =~ /_/ &&
+             $elem2->{CATEGORY} eq 'NUMERAL')
+      {
+        # 2 _ 2, so generic counter 2 of 2.
+        # About 84 cases
+        print "XXX4\n";
+      }
+      elsif ($elem0->{CATEGORY} eq 'NUMERAL' &&
+             $elem1->{CATEGORY} eq 'SEPARATOR' &&
+             $elem1->{VALUE} eq 'COLON' &&
+             $elem2->{CATEGORY} eq 'NUMERAL')
+      {
+        # 5:2, so round 5 segment 2.
+        # About 250 cases
+        print "XXX5\n";
+      }
+      elsif ($elem0->{CATEGORY} eq 'NUMERAL' &&
+             $elem2->{CATEGORY} eq 'NUMERAL')
+      {
+        # 140
+        print "XXX6\n";
+      }
+      elsif ($elem0->{CATEGORY} eq 'TOURNAMENT' &&
+             $elem2->{CATEGORY} eq 'NUMERAL')
+      {
+        # 86
+        print "XXX7\n";
+      }
+      elsif ($elem0->{CATEGORY} eq 'NUMERAL' &&
+             $elem2->{CATEGORY} eq 'TOURNAMENT')
+      {
+        # 4
+        print "XXX7a\n";
+      }
+      elsif ($elem0->{CATEGORY} eq 'TOURNAMENT' &&
+             $elem2->{CATEGORY} eq 'ITERATOR')
+      {
+        # 26
+        print "XXX8\n";
+      }
+      elsif ($elem0->{CATEGORY} eq 'ITERATOR' &&
+             $elem2->{CATEGORY} eq 'TOURNAMENT')
+      {
+        # 36
+        print "XXX9\n";
+      }
+      elsif ($elem0->{CATEGORY} eq 'ITERATOR' &&
+             $elem2->{CATEGORY} eq 'ITERATOR')
+      {
+        # 79
+        print "XXX10\n";
+      }
+      elsif ($elem0->{CATEGORY} eq 'ITERATOR' &&
+             $elem2->{CATEGORY} eq 'LETTER')
+      {
+        # 292
+        print "XXX11\n";
+      }
+
+
     }
     $chain_no++;
   }
@@ -706,6 +842,7 @@ sub post_process_event
   # More manual processing of some short chains.
 
   fix_some_singletons_manually($chains_ref, $solved_ref);
+  fix_some_tripletons_manually($chains_ref, $solved_ref);
 }
 
 1;

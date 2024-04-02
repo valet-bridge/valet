@@ -134,7 +134,8 @@ for my $i (0 .. $#chain_stats)
   $chain_prod += $count * $i;
 }
 print '-' x 11, "\n";
-printf "%4s %6.2f\n\n", "Avg", $chain_prod / $chain_count;
+printf "%4s %6.2f\n", "Avg", $chain_prod / $chain_count;
+printf "%4s %6d\n\n", "Sum", $chain_count;
 
 print "Solved $solved_count\n";
 

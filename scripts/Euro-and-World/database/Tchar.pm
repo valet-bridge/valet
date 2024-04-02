@@ -69,6 +69,48 @@ sub new
 }
 
 
+sub same
+{
+  my ($self, $elem) = @_;
+  
+  return 0 unless scalar keys %$self != scalar keys %$elem;
+
+  for my $key (keys %$elem)
+  {
+    return 0 unless exists $self->{$key};
+    return 0 unless $self->{$key} eq $elem->{$key};
+  }
+  return 1;
+}
+
+
+sub set_singleton
+{
+  my ($self, $elem) = @_;
+
+  # ('SINGLETON', $elem).
+
+  die "No singleton $elem->{CATEGORY}" unless 
+    exists $SINGLETON{$elem->{CATEGORY}};
+
+  if (exists $self->{TYPE})
+  {
+    die "Inconsistent singleton" unless $self->same($elem);
+  }
+  else
+  {
+    %$self = %$elem;
+    $self->{TYPE} = 'SINGLETON';
+  }
+}
+
+
+sub set_counter_none
+{
+  my ($self, $elem) = @_;
+}
+
+
 sub set
 {
   my $self = shift;
@@ -78,23 +120,7 @@ sub set
 
   if ($num_args == 2 && $_[0] eq 'SINGLETON')
   {
-    # ('SINGLETON', $elem).
-
-    die "No singleton $elem->{CATEGORY}" unless 
-      exists $SINGLETON{$elem->{CATEGORY}};
-
-    if (exists $self->{TYPE})
-    {
-      die unless $self->{TYPE} eq 'SINGLETON';
-      die unless $self->{CATEGORY} eq $elem->{CATEGORY};
-      die unless $self->{VALUE} eq $elem->{VALUE};
-    }
-    else
-    {
-      $self->{TYPE} = 'SINGLETON';
-      $self->{CATEGORY} = $elem->{CATEGORY};
-      $self->{VALUE} = $elem->{VALUE};
-    }
+    $self->set_singleton($elem);
   }
   elsif ($num_args == 2 && $_[0] eq 'COUNTER_NONE')
   {
@@ -152,6 +178,21 @@ sub set
       $self->{CATEGORY} = $elem->{VALUE};
       $self->{ITERATOR_VALUE} = $_[2];
     }
+  }
+  elsif ($num_args == 4 && $_[0] eq 'COUNTER_DOUBLE')
+  {
+    # ('COUNTER_DOUBLE', $elem, value, letter).
+
+    die "No iterator $elem->{CATEGORY}" unless 
+      $elem->{CATEGORY} eq 'ITERATOR' || $elem->{CATEGORY} eq 'Generic';
+
+    die "TYPE already set" if exists $self->{TYPE};
+
+    $self->{TYPE} = 'COUNTER';
+    $self->{SUB_TYPE} = 'DOUBLE';
+    $self->{CATEGORY} = $elem->{CATEGORY};
+    $self->{ITERATOR_VALUE} = $_[2];
+    $self->{ITERATOR_LETTER} = $_[3];
   }
   elsif ($num_args == 4 && $_[0] eq 'COUNTER_SINGLE_OF')
   {
@@ -269,6 +310,12 @@ sub str_no_newline
       return $self->{CATEGORY} . ' ' . 
         $self->{ITERATOR_VALUE};
     }
+    elsif ($self->{SUB_TYPE} eq 'DOUBLE')
+    {
+      return $self->{CATEGORY} . ' ' . 
+        $self->{ITERATOR_VALUE} . ' ' .
+        $self->{ITERATOR_LETTER};
+    }
     elsif ($self->{SUB_TYPE} eq 'RANGE')
     {
       return $self->{CATEGORY} . ' ' . 
@@ -335,7 +382,6 @@ sub str_full
 
   return $self->str_no_newline() . $self->ancillary() . "\n";
 }
-
 
 
 1;
