@@ -16,6 +16,7 @@ use Tchar;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(
+  kill_studied
   process_event
   post_process_event
   split_chain_on
@@ -53,6 +54,60 @@ $CATEGORIES{WEEKDAY} = Weekday->new();
 
 my @SIMPLE_LIST = qw(NUMERAL ORDINAL LETTER SEPARATOR);
 my %SIMPLE_CATEGORIES = map { $_ => 1} @SIMPLE_LIST;
+
+
+sub kill_studied
+{
+  my ($list_ref) = @_;
+
+  # Some entries should be skipped.
+
+  for my $i (reverse 0 .. $#$list_ref)
+  {
+    # Can happen when deleting from the back
+    next unless $i <= $#$list_ref;
+
+    my $part = $list_ref->[$i];
+    if ($part->{CATEGORY} eq 'KILL')
+    {
+      if ($i == $#$list_ref)
+      {
+        # From the back
+        if ($i == 0)
+        {
+          splice(@$list_ref, 0);
+        }
+        else
+        {
+          splice(@$list_ref, $i-1, 2);
+        }
+      }
+      elsif ($i == 0)
+      {
+        # From the front
+        splice(@$list_ref, $i, 2);
+      }
+      elsif ($list_ref->[$i-1]{VALUE} eq 'SPACE' ||
+             $list_ref->[$i-1]{VALUE} eq 'SLASH' ||
+             $list_ref->[$i-1]{VALUE} eq 'ARTIFICIAL')
+      {
+        # Surrounded by spaces, so kill one of them.
+        splice(@$list_ref, $i, 2);
+      }
+      elsif ($list_ref->[$i-1]{VALUE} eq 'LEFT_PAREN' &&
+             $list_ref->[$i+1]{VALUE} eq 'RIGHT_PAREN')
+      {
+        # Surrounded by parentheses.
+        splice(@$list_ref, $i, 2);
+        $list_ref->[$i-1]{VALUE} = 'SPACE';
+      }
+      else
+      {
+        die "Don't know how to kill this: $part->{VALUE}";
+      }
+    }
+  }
+}
 
 
 sub split_chain_on
@@ -535,6 +590,8 @@ sub index_match
 sub process_event
 {
   my ($chains_ref, $solved_ref) = @_;
+
+  kill_studied(\@{$chains_ref->{0}});
 
   # Split on a dash with a space to its left and/or right.
   # This seems quite reliable.

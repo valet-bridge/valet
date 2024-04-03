@@ -96,7 +96,7 @@ my %MERGE_ALIASES = (
   Semifinal => ['meia final', 'meias finais', 
     'semi final', 'semi-final', 'semi finals', 'semi-finals',
     'demi-finale', 'demi-finales', '1_2finale', 'semi <final',
-    'yarý final', 'simi final', 'round of 4'],
+    'yarý final', 'simi final', 'round of 4', 's.f.'],
   Quarterfinal => ['quarter final', 'quarter finals',
     'quarter-final', 'quet final', 'quartal final',
     'quarti finale', 'qtr finals',

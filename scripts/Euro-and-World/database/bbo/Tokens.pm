@@ -467,60 +467,6 @@ sub is_date
 }
 
 
-sub kill_studied
-{
-  my ($list_ref) = @_;
-
-  # Some entries should be skipped.
-  
-  for my $i (reverse 0 .. $#$list_ref)
-  {
-    # Can happen when deleting from the back
-    next unless $i <= $#$list_ref; 
-
-    my $part = $list_ref->[$i];
-    if ($part->{CATEGORY} eq 'KILL')
-    {
-      if ($i == $#$list_ref)
-      {
-        # From the back
-        if ($i == 0)
-        {
-          splice(@$list_ref, 0);
-        }
-        else
-        {
-          splice(@$list_ref, $i-1, 2);
-        }
-      }
-      elsif ($i == 0)
-      {
-        # From the front
-        splice(@$list_ref, $i, 2);
-      }
-      elsif ($list_ref->[$i-1]{VALUE} eq 'SPACE' ||
-             $list_ref->[$i-1]{VALUE} eq 'SLASH' ||
-             $list_ref->[$i-1]{VALUE} eq 'ARTIFICIAL')
-      {
-        # Surrounded by spaces, so kill one of them.
-        splice(@$list_ref, $i, 2);
-      }
-      elsif ($list_ref->[$i-1]{VALUE} eq 'LEFT_PAREN' &&
-             $list_ref->[$i+1]{VALUE} eq 'RIGHT_PAREN')
-      {
-        # Surrounded by parentheses.
-        splice(@$list_ref, $i, 2);
-        $list_ref->[$i-1]{VALUE} = 'SPACE';
-      }
-      else
-      {
-        die "Don't know how to kill this: $part->{VALUE}";
-      }
-    }
-  }
-}
-
-
 sub study_part
 {
   # Returns 1 if it is a kill.
@@ -580,7 +526,6 @@ sub study_event
   split_on_date(\@parts);
 
   # Make a semantic, studied version of the event.
-  my $kill_flag = 0;
 
   for my $i (0 .. $#parts)
   {
@@ -588,8 +533,7 @@ sub study_event
     $chains_ref->{0}[$i]{position_first} = $i;
     $chains_ref->{0}[$i]{position_last} = $i;
 
-    $kill_flag = 1 if 
-      study_part($parts[$i], \%{$chains_ref->{0}[$i]}, $unknown_ref);
+    study_part($parts[$i], \%{$chains_ref->{0}[$i]}, $unknown_ref);
 
     my $elem = $chains_ref->{0}[$i];
     if ($elem->{CATEGORY} eq 'COUNTRY' &&
@@ -599,11 +543,8 @@ sub study_event
       # It could be that the country name is spelled differently
       # in EVENT and TEAMS.
       $elem->{CATEGORY} = 'KILL';
-      $kill_flag = 1;
     }
   }
-
-  kill_studied(\@{$chains_ref->{0}}) if $kill_flag;
 }
 
 1;
