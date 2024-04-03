@@ -9,6 +9,7 @@ use Time::HiRes qw(time);
 
 use lib '.';
 
+use Despace;
 use Tokens;
 use Chains;
 use Patterns;
@@ -60,8 +61,11 @@ while ($line = <$fh>)
         print "HERE\n";
       }
 
+      # Fix some space-related issues.
+      my $mashed = despace($chunk{EVENT});
+
       my (%event_chains, %event_solved);
-      study_event($chunk{EVENT}, \%chunk, \%event_chains, \$unknown);
+      study_event($mashed, \%chunk, \%event_chains, \$unknown);
 
       process_event(\%event_chains, \%event_solved);
 
@@ -138,6 +142,15 @@ printf "%4s %6.2f\n", "Avg", $chain_prod / $chain_count;
 printf "%4s %6d\n\n", "Sum", $chain_count;
 
 print "Solved $solved_count\n";
+
+
+# sub mash
+# {
+  # my $text = pop;
+  # my $res = $text;
+  # $res =~ s/$MERGE_REGEX/$MERGE_HASH{lc($1)}/ge;
+  # return $res;
+# }
 
 
 sub print_chunk

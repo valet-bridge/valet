@@ -38,7 +38,7 @@ my @ITERATOR_LIST =
   Knock-out PreQF Playoff Qualifying Consolation Tiebreak
   Berth Place Bronze Half
   Match Segment Set Session Section Stanza Stage Round Tempo Part 
-  R S Table Room
+  R S Table Room Boards Weekend Week Group
   Day Top Round-robin Play),
   'Super League', 'Final Round', 'Qualifying Segment', 'Final Segment'
 );

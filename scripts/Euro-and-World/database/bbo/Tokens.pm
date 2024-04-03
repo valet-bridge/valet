@@ -67,15 +67,6 @@ sub unteam
 }
 
 
-sub mash
-{
-  my $text = pop;
-  my $res = $text;
-  $res =~ s/$MERGE_REGEX/$MERGE_HASH{lc($1)}/ge;
-  return $res;
-}
-
-
 sub split_on_known_words
 {
   my ($list_ref) = @_;
@@ -573,14 +564,10 @@ sub study_event
   # First remove team names that are entirely duplicated.
   my $mashed = unteam($text, $cref->{TEAM1}, $cref->{TEAM2});
 
-  # Then mash some adjacent, separate words together because
-  # they obviously belong together.
-  $mashed = mash($mashed);
-
   # Split on separators.
   my @parts = grep {$_ ne ''} split /([.\-\+_:;"\/\(\)]|\s+)/, $mashed;
 
-  # Separate words that runs into each other.
+  # Separate words that run into each other.
   split_on_known_words(\@parts);
 
   # Split on groups of digits.
