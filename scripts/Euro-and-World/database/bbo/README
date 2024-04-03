@@ -1,3 +1,13 @@
+Tokens should use
+CATEGORY: ITERATOR, SINGLETON, KILL, AMBIGUOUS, SEPARATOR
+FIELD:    Round   , Date     , nth , nth      , nth
+VALUE:    nothing , 2023---  , nth , nth      , SPACE etc.
+
+Should be in Token already.
+In Cookbook, pick out the values and map to AMBIGUOUS in
+the big hash already.  That'
+
+
 1. Tokens creates one list of Token's
 2. A Chain is a list of Token's
 3. Two tokens like to combine with a binding strength 0-9

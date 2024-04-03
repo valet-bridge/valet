@@ -19,6 +19,24 @@ use lib '..';
 use Cookbook;
 
 
+sub clean_team
+{
+  my $team = pop;
+  $team =~ s/\s*\(\d+\)\s*$//; # (69)
+  $team =~ s/^\s+|\s+$//g; # Leading and trailing space
+
+  my $fix = $FIX_HASH{lc($team)};
+  if (defined $fix && $fix->{CATEGORY} eq 'COUNTRY')
+  {
+    return $fix->{VALUE};
+  }
+  else
+  {
+    return $team;
+  }
+}
+
+
 sub parse_teams
 {
   my ($text, $cref) = @_;
@@ -26,32 +44,20 @@ sub parse_teams
   $text =~ s/\- npc//g;
   $text =~ s/\(npc\)//g;
 
-  if ($text =~ /(.*) vs. (.*)/)
+  if ($text =~ /(.*) vs\. (.*)/)
   {
     my ($team1, $team2) = ($1, $2);
-    $team1 =~ s/\s*\(\d+\)\s*$//; # (69)
-    $team2 =~ s/\s*\(\d+\)\s*$//;
-    $team1 =~ s/^\s+|\s+$//g; # Leading and trailing space
-    $team2 =~ s/^\s+|\s+$//g;
-
-    my $fix1 = $FIX_HASH{lc($team1)};
-    if (defined $fix1 && $fix1->{CATEGORY} eq 'COUNTRY')
-    {
-      $team1 = $fix1->{VALUE};
-    }
-
-    my $fix2 = $FIX_HASH{lc($team2)};
-    if (defined $fix2 && $fix2->{CATEGORY} eq 'COUNTRY')
-    {
-      $team2 = $fix2->{VALUE};
-    }
-
-    $cref->{TEAM1} = $team1;
-    $cref->{TEAM2} = $team2;
+    $cref->{TEAM1} = clean_team($team1);
+    $cref->{TEAM2} = clean_team($team2);
+  }
+  elsif ($text =~ /^\s*$/ || $text =~ /^\s*vs\.\s*$/)
+  {
+    $cref->{TEAM1} = '';
+    $cref->{TEAM2} = '';
   }
   else
   {
-    print "Can't parse team line $text\n";
+    die "Can't parse team line $text\n";
   }
 }
 
