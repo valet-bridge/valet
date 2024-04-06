@@ -10,8 +10,9 @@ use Time::HiRes qw(time);
 use lib '.';
 
 use Despace;
-use Tokens;
+use Tokenize;
 use Chains;
+use Chain;
 use Patterns;
 
 # Parse the raw output of
@@ -56,7 +57,7 @@ while ($line = <$fh>)
     }
     else
     {
-      if ($chunk{BBONO} == 2940)
+      if ($chunk{BBONO} == 193)
       {
         print "HERE\n";
       }
@@ -65,9 +66,14 @@ while ($line = <$fh>)
       my $mashed = despace($chunk{EVENT});
 
       my (%event_chains, %event_solved);
-      study_event($mashed, \%chunk, \%event_chains, \$unknown);
 
-      process_event(\%event_chains, \%event_solved);
+      my $chain = Chain->new();
+      my @chains;
+      push @chains, $chain;
+
+      study_event($mashed, \%chunk, \%event_chains, $chain, \$unknown);
+
+      process_event(\%event_chains, \%event_solved, \@chains);
 
       process_patterns(\%event_chains, \%event_solved);
 

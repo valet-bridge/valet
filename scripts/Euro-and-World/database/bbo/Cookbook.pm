@@ -52,6 +52,7 @@ my @SINGLETON_LIST = qw(
   ORDINAL
   NUMERAL
   ROMAN
+  LETTER
   PARTICLE
   KILL
 );
@@ -469,52 +470,52 @@ my %AMBIGUITIES =
   '1_4' => [ 
     ['ITERATOR', 'BASE', 'NUMERAL', 1, 'OF', 'NUMERAL', 4],
     ['ITERATOR', 'FIELD', 'Quarter'] ],
-  'F' => [
+  'f' => [
     ['SINGLETON', 'LETTER', 'F'],
     ['ITERATOR', 'FIELD', 'Final'] ],
-  'G' => [
+  'g' => [
     ['SINGLETON', 'LETTER', 'G'],
     ['SINGLETON', 'GENDER', 'Girls', 'SINGLETON', 'AGE', 'U26'],
     ['ITERATOR', 'FIELD', 'Group'] ],
-  'J' => [
+  'j' => [
     ['SINGLETON', 'LETTER', 'J'],
     ['SINGLETON', 'AGE', 'U26'] ],
-  'M' => [
+  'm' => [
     ['SINGLETON', 'LETTER', 'M'],
     ['SINGLETON', 'GENDER', 'Men'],
     ['ITERATOR', 'FIELD', 'Match'] ],
-  'O' => [
+  'o' => [
     ['SINGLETON', 'LETTER', 'O'],
     ['SINGLETON', 'GENDER', 'Open'],
     ['SINGLETON', 'AGE', 'Open'],
     ['SINGLETON', 'GENDER', 'Open', 'SINGLETON', 'AGE', 'Open'] ],
-  'S' => [
+  's' => [
     ['SINGLETON', 'LETTER', 'S'],
     ['SINGLETON', 'AGE', 'Seniors'],
     ['ITERATOR', 'FIELD', 'Segment'],
     ['ITERATOR', 'FIELD', 'Semi'] ],
-  'T' => [
+  't' => [
     ['SINGLETON', 'LETTER', 'T'],
     ['ITERATOR', 'FIELD', 'Table'] ],
-  'Q' => [
+  'q' => [
     ['SINGLETON', 'LETTER', 'Q'],
     ['ITERATOR', 'FIELD', 'Quarter'],
     ['ITERATOR', 'FIELD', 'Qualifying'] ],
-  'V' => [
+  'v' => [
     ['SINGLETON', 'ROMAN', 5],
     ['SINGLETON', 'LETTER', 'V'],
     ['SINGLETON', 'PARTICLE', 'vs'] ],
-  'W' => [
+  'w' => [
     ['SINGLETON', 'LETTER', 'W'],
     ['SINGLETON', 'GENDER', 'Women'] ],
-  'Open' => [
+  'open' => [
     ['SINGLETON', 'GENDER', 'Open'],
     ['SINGLETON', 'AGE', 'Open'],
     ['SINGLETON', 'GENDER', 'Open', 'SINGLETON', 'AGE', 'Open'] ],
-  'Swiss' => [
+  'swiss' => [
     ['SINGLETON', 'MOVEMENT', 'Swiss'],
     ['SINGLETON', 'COUNTRY', 'Switzerland'] ],
-  'Danish' => [
+  'danish' => [
     ['SINGLETON', 'MOVEMENT', 'Danish'],
     ['SINGLETON', 'COUNTRY', 'Denmark'] ]
 );

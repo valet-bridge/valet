@@ -58,7 +58,7 @@ my %SIMPLE_CATEGORIES = map { $_ => 1} @SIMPLE_LIST;
 
 sub kill_studied
 {
-  my ($list_ref) = @_;
+  my ($list_ref, $chains) = @_;
 
   # Some entries should be skipped.
 
@@ -106,6 +106,27 @@ sub kill_studied
         die "Don't know how to kill this: $part->{VALUE}";
       }
     }
+  }
+
+  my $chain_no = 0;
+  while ($chain_no <= $#$chains)
+  {
+    my $chain = $chains->[$chain_no];
+
+    $chain->clean_separators();
+
+    for my $index (0 .. $chain->last())
+    {
+      next unless $chain->category($index) eq 'KILL';
+
+      my $chain2 = $chain->kill_on($index);
+      if (defined $chain2)
+      {
+        splice(@$chains, $chain_no+1, 0, $chain2);
+        last;
+      }
+    }
+    $chain_no++;
   }
 }
 
@@ -589,9 +610,9 @@ sub index_match
 
 sub process_event
 {
-  my ($chains_ref, $solved_ref) = @_;
+  my ($chains_ref, $solved_ref, $chains) = @_;
 
-  kill_studied(\@{$chains_ref->{0}});
+  kill_studied(\@{$chains_ref->{0}}, $chains);
 
   # Split on a dash with a space to its left and/or right.
   # This seems quite reliable.
