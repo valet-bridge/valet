@@ -19,6 +19,31 @@ use Chains;
 my @SIMPLE_LIST = qw(NUMERAL ORDINAL LETTER SEPARATOR);
 my %SIMPLE_CATEGORIES = map { $_ => 1} @SIMPLE_LIST;
 
+my @PATTERNS_NEW =
+(
+  # 3 of 7 (anywhere).
+  # 1. The pattern.
+  # 2. The anchor.
+  # 3. The index of the method used to react.
+  # 4. 1 if we split on the front.
+  # 5. 1 if we split after the back.
+  [
+    [
+      { CATEGORY => [qw(NUMERAL ORDINAL)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(SINGLETON)], 
+        FIELD => [qw(Particle)],
+        VALUE => [qw(Of)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(NUMERAL)] }
+    ],
+    'ANY',
+    0,
+    0,
+    1
+  ]
+);
+
 my @PATTERNS =
 (
   # Segment 3 of 7 (anywhere)
@@ -366,6 +391,68 @@ sub process_patterns
     $chain_no++;
   }
   while ($chain_no <= $chain_max);
+}
+
+
+sub process_patterns_new
+{
+  my ($chains) = @_;
+
+  for my $overall_pattern (@PATTERNS_NEW)
+  {
+    my $pattern = $overall_pattern->[0];
+    my $anchor = $overall_pattern->[1];
+    my $action = $overall_pattern->[2];
+    my $split_front = $overall_pattern->[3];
+    my $split_back = $overall_pattern->[4];
+    my $plen = $#$pattern;
+
+    my $chain_no = 0;
+    while ($chain_no <= $#$chains)
+    {
+      my $chain = $chains->[$chain_no];
+      if ($chain->status() eq 'OPEN')
+      {
+        my $match = $chain->match($pattern, $anchor);
+        if ($match >= 0)
+        {
+          if ($action == 0)
+          {
+            my %hash = ( 
+              BASE => $chain->value($match),
+              OF => $chain->value($match+4));
+
+            my $token = $chain->check_out($match);
+            $token->set_counter(\%hash);
+          }
+          else
+          {
+            die "Unknown action $action";
+          }
+
+          $chain->collapse_elements($match, $match + $plen);
+          $chain->delete($match+1, $match + $plen);
+          $chain->complete_if_one();
+
+          if ($split_back && $match < $chain->last())
+          {
+            my $chain2 = $chain->split_on($match + $plen + 2);
+            $chain->complete_if_one();
+            $chain2->complete_if_one();
+            splice(@$chains, $chain_no+1, 0, $chain2);
+          }
+
+          if ($split_front && $match > 0)
+          {
+            my $chain2 = $chain->split_on($match);
+            $chain->complete_if_one();
+            $chain2->complete_if_one();
+            splice(@$chains, $chain_no+1, 0, $chain2);
+          }
+        }
+      }
+    }
+  }
 }
 
 1;

@@ -36,13 +36,21 @@ sub append
 }
 
 
+sub check_out
+{
+  my ($self, $index) = @_;
+  die "Index $index out of bounds" unless $index <= $self->{LAST};
+  return $self->{LIST}[$index];
+}
+
+
 sub collapse_elements
 {
   my ($self, $first, $last) = @_;
 
   for my $index ($first+1 .. $last)
   {
-    $self->{LIST}[$first]->merge($self->{LIST}[$index]);
+    $self->{LIST}[$first]->merge_origin($self->{LIST}[$index]);
   }
 }
 
@@ -139,6 +147,13 @@ sub status
 {
   my ($self) = @_;
   return $self->{STATUS};
+}
+
+
+sub complete_if_one
+{
+  my ($self) = @_;
+  $self->{STATUS} = 'COMPLETE' if $self->{LAST} == 0;
 }
 
 
@@ -283,6 +298,75 @@ sub kill_on
   {
     return $self->split_on($index);
   }
+}
+
+
+sub delete
+{
+  my ($self, $first, $last) = @_;
+  die "Last $last out of bounds" if $last > $self->{LAST};
+  die "Bad order" if $first > $last;
+
+  splice(@{$self->{LIST}}, $first, $last-$first+1);
+  $self->{LAST} = $#{$self->{LIST}};
+  $self->{STATUS} = 'OPEN';
+}
+
+
+sub index_match
+{
+  my ($self, $pattern, $plen, $index) = @_;
+
+  for my $p (0 .. $plen)
+  {
+    return 0 unless 
+      $self->{LIST}[$index]->match($index + $p, $pattern->[$p]);
+  }
+  return 1;
+}
+
+
+sub match
+{
+  my ($self, $pattern, $anchor) = @_;
+
+  # Returns -1 if no match, otherwise the index of the first match.
+
+  my $plen = $#$pattern;
+
+  if ($anchor eq 'ANY')
+  {
+    my $index = 0;
+    while ($index + $plen <= $self->{LAST})
+    {
+      return $index if $self->index_match($pattern, $plen, $index);
+      $index++;
+    }
+  }
+  elsif ($anchor eq 'BEGIN')
+  {
+    if ($plen <= $self->{LAST})
+    {
+      return 0 if $self->index_match($pattern, $plen, 0);
+    }
+  }
+  elsif ($anchor eq 'END')
+  {
+    if ($plen <= $self->{LAST})
+    {
+      my $index = $self->{LAST} - $plen;
+      return $index if $self->index_match($pattern, $plen, $index);
+    }
+  }
+  elsif ($anchor eq 'EXACT')
+  {
+    if ($plen == $self->{LAST})
+    {
+      return 0 if $self->index_match($pattern, $plen, 0);
+    }
+  }
+
+  return -1;
 }
 
 

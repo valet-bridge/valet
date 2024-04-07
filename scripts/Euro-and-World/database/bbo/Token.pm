@@ -24,6 +24,7 @@ use Separators;
 #   version might be "Round 2 B of 7", but a token can be augmented
 #   from a relatively basic version such as "2" by adding new
 #   information.
+# - COUNTER.  This is like an ITERATOR without the FIELD.
 # - SINGLETON.  This mostly corresponds with a field that directly
 #   describes a tournament/entry and that only has one value.
 #   For example, "2012-07-04" might be a DATE.  Nowhere is in
@@ -47,6 +48,8 @@ use Separators;
 #   "VIRTUAL".
 # - AMBIGUOUS has an empty field.
 # - KILL doesn't really have a field.
+#
+# A token may also have a VALUE.
 #
 # An ITERATOR has up to three components called "BASE", "OF" and "TO".
 # so in "Round 1-2 of 7" 1 is the base, 2 the "to", and 7 the "of".
@@ -85,6 +88,14 @@ sub set_iterator_field
     if (exists $self->{CATEGORY} && $self->{CATEGORY} ne 'ITERATOR');
   $self->{CATEGORY} = 'ITERATOR';
   $self->{FIELD} = $field;
+}
+
+
+sub set_counter
+{
+  my ($self, $hash) = @_;
+  $self->{CATEGORY} = 'COUNTER';
+  $self->{$_} = $hash->{$_} for keys %$hash;
 }
 
 
@@ -130,21 +141,61 @@ sub set_unknown
 }
 
 
-sub merge
+sub merge_origin
 {
   my ($self, $token2) = @_;
+
+  $self->{text} .= $token2->{text};
+  $self->{position_last} = $token2->{position_last};
 
   if ($self->{CATEGORY} eq 'SEPARATOR' &&
       $token2->{CATEGORY} eq 'SEPARATOR')
   {
+    # Special case.
     $self->{FIELD} |= $token2->{FIELD};
-    $self->{text} .= $token2->{text};
-    $self->{position_last} = $token2->{position_last};
   }
-  else
+}
+
+
+sub match_aspect
+{
+  my ($self, $hash, $aspect) = @_;
+
+  if (exists $hash->{$aspect})
   {
-    die "Don't know how to merge these yet";
+    for my $cand (@{$hash->{$aspect}})
+    {
+      if ($cand eq 'undef')
+      {
+        return (! defined $self->{$aspect});
+      }
+      elsif (! defined $self->{$aspect})
+      {
+        return 0;
+      }
+      elsif ($cand eq $self->{$aspect})
+      {
+        return 1;
+      }
+    }
   }
+  return 0;
+}
+
+
+sub match
+{
+  my ($self, $hash) = @_;
+
+  # $hash may have fields CATEGORY, FIELD and VALUE, each of which
+  # is a list.
+  # If set, the list elements may be 'undef' which means that 
+  # the corresponding token field must not be defined.
+
+  return 1 if $self->match_aspect($hash, 'CATEGORY');
+  return 1 if $self->match_aspect($hash, 'FIELD');
+  return 1 if $self->match_aspect($hash, 'VALUE');
+  return 0;
 }
 
 
@@ -203,6 +254,14 @@ sub str_iterator
 }
 
 
+sub str_counter
+{
+  my ($self) = @_;
+
+  die "Haven't learned str_counter yet";
+}
+
+
 sub str_singleton
 {
   my ($self) = @_;
@@ -257,6 +316,10 @@ sub str
 
   my $str;
   if ($category eq 'ITERATOR')
+  {
+    $str = str_iterator();
+  }
+  elsif ($category eq 'COUNTER')
   {
     $str = str_iterator();
   }
