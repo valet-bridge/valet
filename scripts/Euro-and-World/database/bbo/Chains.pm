@@ -25,6 +25,7 @@ our @EXPORT = qw(
 use Age;
 use City;
 use Country;
+use Date;
 use Form;
 use Gender;
 use Memorial;
@@ -40,6 +41,7 @@ our %CATEGORIES;
 $CATEGORIES{AGE} = Age->new();
 $CATEGORIES{CITY} = City->new();
 $CATEGORIES{COUNTRY} = Country->new();
+$CATEGORIES{DATE} = Date->new();
 $CATEGORIES{FORM} = Form->new();
 $CATEGORIES{GENDER} = Gender->new();
 $CATEGORIES{MEMORIAL} = Memorial->new();
@@ -58,7 +60,7 @@ my %SIMPLE_CATEGORIES = map { $_ => 1} @SIMPLE_LIST;
 
 sub kill_studied
 {
-  my ($list_ref, $chains) = @_;
+  my ($list_ref) = @_;
 
   # Some entries should be skipped.
 
@@ -107,6 +109,12 @@ sub kill_studied
       }
     }
   }
+}
+
+
+sub split_on_kill
+{
+  my ($chains) = @_;
 
   my $chain_no = 0;
   while ($chain_no <= $#$chains)
@@ -378,12 +386,7 @@ sub process_singletons
     for my $elem (@{$chains_ref->{$chain_no}})
     {
       my $hit = 0;
-      if ($elem->{CATEGORY} eq 'DATE')
-      {
-        # TODO Maybe also gets a valid() method
-        $hit = 1;
-      }
-      elsif (defined $CATEGORIES{$elem->{CATEGORY}})
+      if (defined $CATEGORIES{$elem->{CATEGORY}})
       {
         if (! $CATEGORIES{$elem->{CATEGORY}}->valid($elem->{VALUE}))
         {
@@ -411,6 +414,40 @@ sub process_singletons
     $chain_no++;
   }
   while ($chain_no <= $chain_max);
+}
+
+
+sub split_on_singleton
+{
+  my ($chains) = @_;
+
+  my $chain_no = 0;
+  while ($chain_no <= $#$chains)
+  {
+    my $chain = $chains->[$chain_no];
+    if ($chain->status() eq 'OPEN')
+    {
+      for my $index (0 .. $chain->last())
+      {
+        next unless $index >= 2; # Don't split on front
+        next unless $chain->category($index) eq 'SINGLETON';
+
+        my $field = $chain->field($index);
+        my $obj = $CATEGORIES{$field};
+        next unless defined $obj;
+
+        if (! $obj->valid($chain->value($index)))
+        {
+          die "No SINGLETON $field, " . $chain->value->($index);
+        }
+
+        my $chain2 = $chain->split_on($index);
+        splice(@$chains, $chain_no+1, 0, $chain2);
+        last;
+      }
+    }
+    $chain_no++;
+  }
 }
 
 
@@ -608,8 +645,9 @@ sub process_event
 {
   my ($chains_ref, $solved_ref, $chains) = @_;
 
-  # TODO More like split_on_kill
-  kill_studied(\@{$chains_ref->{0}}, $chains);
+  kill_studied(\@{$chains_ref->{0}});
+  split_on_kill($chains);
+  split_on_singleton($chains);
 
   # Split on a dash with a space to its left and/or right.
   # This seems quite reliable.

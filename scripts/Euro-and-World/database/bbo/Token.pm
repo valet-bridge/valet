@@ -171,6 +171,22 @@ sub category
 }
 
 
+sub field
+{
+  my ($self) = @_;
+  die "No field" unless exists $self->{FIELD};
+  return $self->{FIELD};
+}
+
+
+sub value
+{
+  my ($self) = @_;
+  die "No value" unless exists $self->{VALUE};
+  return $self->{VALUE};
+}
+
+
 sub str_full
 {
   my ($self) = @_;

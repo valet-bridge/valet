@@ -143,6 +143,10 @@ sub split_on_digit_groups
         # Don't split Rof128 etc.
         next;
       }
+      elsif ($#a == 1 && $a[0] eq 'U' && $a[1] <= 31)
+      {
+        # Don't split U31 etc.
+      }
 
       my $add = 2 * $#a;
       splice(@$list_ref, $i, 0, ('') x $add);

@@ -21,7 +21,7 @@ use Cookbook;
 sub new
 {
   my $class = shift;
-  my $self = bless {LAST => -1}, $class;
+  my $self = bless {LAST => -1, STATUS => 'COMPLETE'}, $class;
   return $self;
 }
 
@@ -111,11 +111,34 @@ sub clean_separators
 }
 
 
+sub status
+{
+  my ($self) = @_;
+  return $self->{STATUS};
+}
+
+
 sub category
 {
   my ($self, $index) = @_;
   die "Index $index out of bounds" unless $index <= $self->{LAST};
   return $self->{LIST}[$index]->category();
+}
+
+
+sub field
+{
+  my ($self, $index) = @_;
+  die "Index $index out of bounds" unless $index <= $self->{LAST};
+  return $self->{LIST}[$index]->field();
+}
+
+
+sub value
+{
+  my ($self, $index) = @_;
+  die "Index $index out of bounds" unless $index <= $self->{LAST};
+  return $self->{LIST}[$index]->value();
 }
 
 
@@ -146,6 +169,7 @@ sub copy_from
   {
     $chain2->{SENTINEL} = $self->{SENTINEL};
     delete $self->{SENTINEL};
+    $self->{LAST}--;
   }
 }
 
@@ -162,7 +186,7 @@ sub truncate_before
   $self->{SENTINEL} = $last;
 
   splice @{$self->{LIST}}, $index-1, $self->{LAST};
-  $self->{LAST} = $index-1;
+  $self->{LAST} = $index-2;
 
   split @{$self->{BINDING}}, $index-2, $#{$self->{BINDING}} if
     exists $self->{BINDING};
