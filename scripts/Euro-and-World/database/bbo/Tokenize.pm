@@ -496,7 +496,11 @@ sub study_part
 {
   # Returns 1 if it is a kill.
 
-  my ($part, $cref, $study_ref, $token, $unknown_ref) = @_;
+  my ($part, $cref, $study_ref, $i, $chain, $unknown_ref) = @_;
+
+  my $token = Token->new();
+  $token->set_origin($i, $part);
+  $chain->append($token);
 
   return if is_separator($part, $study_ref, $token);
 
@@ -525,6 +529,20 @@ sub study_part
       $study_ref->{CATEGORY} = $fix->{CATEGORY};
       $study_ref->{VALUE} = $fix->{VALUE};
       $token->set_iterator_field($fix->{VALUE});
+    }
+    elsif ($fix->{CATEGORY} eq 'AGE' &&
+        $fix->{VALUE} eq 'Girls')
+    {
+      # Special case signifying both age and gender.
+      $study_ref->{CATEGORY} = $fix->{CATEGORY};
+      $study_ref->{VALUE} = 'Juniors'; # A bug, ignoring gender
+
+      $token->set_singleton('AGE', 'Juniors');
+
+      my $token2 = Token->new();
+      $token2->set_origin($i, $part);
+      $chain->append($token2);
+      $token2->set_singleton('GENDER', 'Women');
     }
     else
     {
@@ -587,12 +605,8 @@ sub study_event
     $chains_ref->{0}[$i]{position_first} = $i;
     $chains_ref->{0}[$i]{position_last} = $i;
 
-    my $token = Token->new();
-    $token->set_origin($i, $parts[$i]);
-    $chain->append($token);
-
     study_part($parts[$i], $cref, 
-      \%{$chains_ref->{0}[$i]}, $token, $unknown_ref);
+      \%{$chains_ref->{0}[$i]}, $i, $chain, $unknown_ref);
   }
 }
 

@@ -9,15 +9,18 @@ use v5.10;
 
 my @AGE_LIST = qw(Open None Seniors U31 U28 U26 U21 U16 U13 Multiple);
 
+my @WIDER_LIST = qw(Juniors Youngsters Kids Schools);
+
 my %AGES = map { $_ => 1} @AGE_LIST;
+
+my %WIDER_AGES = map { $_ => 1} @AGE_LIST, @WIDER_LIST;
 
 my %GUESSES =
 (
   Juniors => 'U26',
   Youngsters => 'U21',
   Kids => 'U16',
-  Schools => 'U13',
-  Girls => 'U26'
+  Schools => 'U13'
 );
 
 
@@ -31,7 +34,7 @@ sub new
 sub valid
 {
   my ($self, $text) = @_;
-  return exists $AGES{$text} ? 1 : 0;
+  return exists $WIDER_AGES{$text} ? 1 : 0;
 }
 
 

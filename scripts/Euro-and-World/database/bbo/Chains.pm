@@ -378,13 +378,9 @@ sub process_singletons
     for my $elem (@{$chains_ref->{$chain_no}})
     {
       my $hit = 0;
-      if ($elem->{CATEGORY} eq 'AGE')
+      if ($elem->{CATEGORY} eq 'DATE')
       {
-        $elem->{VALUE} = $CATEGORIES{AGE}->guess($elem->{VALUE});
-        $hit = 1;
-      }
-      elsif ($elem->{CATEGORY} eq 'DATE')
-      {
+        # TODO Maybe also gets a valid() method
         $hit = 1;
       }
       elsif (defined $CATEGORIES{$elem->{CATEGORY}})
@@ -612,6 +608,7 @@ sub process_event
 {
   my ($chains_ref, $solved_ref, $chains) = @_;
 
+  # TODO More like split_on_kill
   kill_studied(\@{$chains_ref->{0}}, $chains);
 
   # Split on a dash with a space to its left and/or right.
