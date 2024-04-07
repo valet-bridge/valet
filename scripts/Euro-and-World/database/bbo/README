@@ -1,3 +1,22 @@
+Probably QF etc should also be STAGE, not ITERATOR.
+
+Reductions:
+1. ITERATOR, FIELD Rof
+   SEPARATOR
+   SINGLETON, FIELD NUMERAL, 4 8 12 16 18 32 64 128
+   -> SINGLETON, STAGE, could be QF, Rof12, ..., no value
+
+2. SINGLETON, PARTICLE, VALUE Of
+   SEPARATOR
+   SINGLETON, FIELD NUMERAL
+   -> ITERATOR, no field, the OF entry has NUMERAL set
+
+3. SINGLETON, NUMERAL
+   SEPARATOR, FIELD has SLASH
+   SINGLETON, NUMERAL (less than first one)
+   -> ITERATOR, no field, BASE NUMERAL and OF NUMERAL
+
+
 Tokens should use
 CATEGORY: ITERATOR, SINGLETON, KILL, AMBIGUOUS, SEPARATOR
 FIELD:    Round   , Date     , nth , nth      , nth

@@ -9,6 +9,7 @@ use v5.10;
 
 use lib '.';
 use Cookbook;
+use Separators;
 
 # A Token has some basic information about its origin:
 # - text is (close to) the text snippet that gave rise to it,
@@ -59,22 +60,6 @@ use Cookbook;
 # when contextual data is added.
 #
 # Other categories may have a single VALUE field.
-
-my %SEPARATORS =
-(
-  'SPACE' => 0x1,
-  'DOT' => 0x2,
-  'COLON' => 0x4,
-  'SEMICOLON' => 0x8,
-  'DASH' => 0x10,
-  'UNDERSCORE' => 0x20,
-  'PLUS' => 0x40,
-  'SLASH' => 0x80,
-  'LEFT_PAREN' => 0x100,
-  'RIGHT_PAREN' => 0x200,
-  'QUOTE' => 0x400,
-  'VIRTUAL' => 0x800
-);
 
 
 sub new
@@ -184,6 +169,14 @@ sub value
   my ($self) = @_;
   die "No value" unless exists $self->{VALUE};
   return $self->{VALUE};
+}
+
+
+sub text
+{
+  my ($self) = @_;
+  die "No text" unless exists $self->{text};
+  return $self->{text};
 }
 
 

@@ -38,6 +38,7 @@ my $unknown = 0;
 
 my %event_stats;
 my @chain_stats;
+my @chain_stats_new;
 my $solved_count = 0;
 
 my $time1 = 0;
@@ -57,7 +58,7 @@ while ($line = <$fh>)
     }
     else
     {
-      if ($chunk{BBONO} == 2038)
+      if ($chunk{BBONO} == 2317)
       {
         print "HERE\n";
       }
@@ -89,15 +90,38 @@ while ($line = <$fh>)
         }
       }
 
+      my $open_flag = 0;
+      for my $chain (@chains)
+      {
+        my $status = $chain->status();
+        $chain_stats_new[$chain->last()+1]{$status}++;
+        $open_flag = 1 if $status eq 'OPEN';
+      }
+
       $solved_count += scalar keys %event_solved;
 
-      if (open_chains(\%event_chains))
+      if ($open_flag)
       {
         print_chunk(\%chunk);
 
-        print_solved(\%event_solved);
+        # print_solved(\%event_solved);
 
-        print_chains(\%event_chains);
+        # print_chains(\%event_chains);
+        
+        for my $chain_no (0 .. $#chains)
+        {
+          printf("Chain %d %2d %8s: %s\n",
+            $chain_no,
+            $chains[$chain_no]->last()+1,
+            $chains[$chain_no]->status(),
+            $chains[$chain_no]->text());
+          printf("Chain %d %2d %8s: %s\n",
+            $chain_no,
+            $chains[$chain_no]->last()+1,
+            $chains[$chain_no]->status(),
+            $chains[$chain_no]->catcat());
+        }
+        printf "\n";
       }
     }
   }
@@ -147,7 +171,31 @@ print '-' x 11, "\n";
 printf "%4s %6.2f\n", "Avg", $chain_prod / $chain_count;
 printf "%4s %6d\n\n", "Sum", $chain_count;
 
-print "Solved $solved_count\n";
+print "Solved $solved_count\n\n";
+
+my %csum;
+print "New chain stats\n\n";
+printf("%6s%10s%10s%10s\n", "", "OPEN", "COMPLETE", "KILLED");
+for my $i (0 .. $#chain_stats_new)
+{
+  my %h;
+  for my $key (qw(OPEN COMPLETE KILLED))
+  {
+    if (exists $chain_stats_new[$i]{$key})
+    {
+      $h{$key} = $chain_stats_new[$i]{$key};
+    }
+    else
+    {
+      $h{$key} = 0;
+    }
+    $csum{$key} += $h{$key};
+  }
+  printf("%6d%10d%10d%10d\n", $i, $h{OPEN}, $h{COMPLETE}, $h{KILLED});
+}
+print '-' x 36, "\n";
+printf("%6s%10d%10d%10d\n", "Sum",
+  $csum{OPEN}, $csum{COMPLETE}, $csum{KILLED});
 
 
 # sub mash

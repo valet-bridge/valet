@@ -13,6 +13,7 @@ use lib '.';
 use lib '..';
 
 use Tchar;
+use Separators;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(
@@ -373,6 +374,35 @@ sub split_on_some_iterators
 }
 
 
+sub split_on_some_iters
+{
+  my ($chains) = @_;
+
+  my $chain_no = 0;
+  while ($chain_no <= $#$chains)
+  {
+    my $chain = $chains->[$chain_no];
+    if ($chain->status() eq 'OPEN' && $chain->category(0) eq 'ITERATOR')
+    {
+      my $index = 1;
+      while ($index <= $chain->last() &&
+          exists $SIMPLE_CATEGORIES{$chain->category($index)})
+      {
+        $index++;
+      }
+
+      if ($index <= $chain->last() &&
+          $chain->category($index) eq 'ITERATOR')
+      {
+        my $chain2 = $chain->split_on($index);
+        splice(@$chains, $chain_no+1, 0, $chain2);
+      }
+    }
+    $chain_no++;
+  }
+}
+
+
 sub process_singletons
 {
   my ($chains_ref, $solved_ref) = @_;
@@ -443,6 +473,92 @@ sub split_on_singleton
 
         my $chain2 = $chain->split_on($index);
         splice(@$chains, $chain_no+1, 0, $chain2);
+        last;
+      }
+    }
+    $chain_no++;
+  }
+}
+
+
+sub split_on_dash_space
+{
+  my ($chains) = @_;
+
+  my $chain_no = 0;
+  while ($chain_no <= $#$chains)
+  {
+    my $chain = $chains->[$chain_no];
+    if ($chain->status() eq 'OPEN')
+    {
+      for my $index (1 .. $chain->last()-1)
+      {
+        next unless $chain->category($index) eq 'SEPARATOR';
+
+        my $field = $chain->field($index);
+        if (($field & $SEPARATORS{DASH}) &&
+            ($field & $SEPARATORS{SPACE}))
+        {
+          $index++;
+          while ($index <= $chain->last() &&
+              $chain->category($index) eq 'SEPARATOR')
+          {
+            $index++;
+          }
+
+          die "Should not happen" if $index > $chain->last();
+
+          my $chain2 = $chain->split_on($index);
+          splice(@$chains, $chain_no+1, 0, $chain2);
+          last;
+        }
+
+      }
+    }
+    $chain_no++;
+  }
+}
+
+
+sub split_on_most_parens
+{
+  my ($chains) = @_;
+
+  my $chain_no = 0;
+  while ($chain_no <= $#$chains)
+  {
+    my $chain = $chains->[$chain_no];
+    if ($chain->status() eq 'OPEN')
+    {
+      for my $index (0 .. $chain->last()-1)
+      {
+        # Look for '('.
+        next unless $chain->category($index) eq 'SEPARATOR';
+        next unless $chain->field($index) & $SEPARATORS{LEFT_PAREN};
+
+        # Avoid '(of'.
+        my $index2 = $index + 1;
+        next if ($chain->category($index2) eq 'SINGLETON' &&
+            $chain->field($index2) eq 'PARTICLE' &&
+            $chain->value($index2) eq 'Of');
+
+        my $chain2 = $chain->split_on($index+1);
+        splice(@$chains, $chain_no+1, 0, $chain2);
+
+        # Look for ')' in the new chain.
+        # It would be a bug if we started out with (3) (of 7),
+        # as we would find the first and not the second right paren.
+        while ($index2 <= $chain2->last() &&
+            ($chain2->category($index2) ne 'SEPARATOR' ||
+             ($chain2->field($index2) & $SEPARATORS{RIGHT_PAREN}) == 0))
+        {
+          $index2++;
+        }
+        last if $index2 > $chain->last();
+
+        my $chain3 = $chain2->split_on($index2+1);
+        splice(@$chains, $chain_no+1, 0, $chain3);
+        $chain_no++;
         last;
       }
     }
@@ -646,8 +762,12 @@ sub process_event
   my ($chains_ref, $solved_ref, $chains) = @_;
 
   kill_studied(\@{$chains_ref->{0}});
+
   split_on_kill($chains);
   split_on_singleton($chains);
+  split_on_dash_space($chains);
+  split_on_most_parens($chains);
+  split_on_some_iters($chains);
 
   # Split on a dash with a space to its left and/or right.
   # This seems quite reliable.

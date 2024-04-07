@@ -272,6 +272,7 @@ sub is_separator
 {
   my ($part, $study_ref, $token) = @_;
 
+  # TODO Could shift to Separators.pm
   if ($part =~ /^\s+$/)
   {
     $study_ref->{CATEGORY} = 'SEPARATOR';
@@ -546,7 +547,12 @@ sub study_part
       my $token2 = Token->new();
       $token2->set_origin($i, $part);
       $chain->append($token2);
-      $token2->set_singleton('GENDER', 'Women');
+      $token2->set_separator('VIRTUAL');
+
+      my $token3 = Token->new();
+      $token3->set_origin($i, $part);
+      $chain->append($token3);
+      $token3->set_singleton('GENDER', 'Women');
     }
     else
     {

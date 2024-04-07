@@ -16,6 +16,7 @@ use Cookbook;
 # - LAST: Number of the last token (for convenience)
 # - BINDING: A list of the binding strength of each token to the
 #   following one.  So there is one fewer than the number of tokens.
+# - Precursor: If present, a token that must be a SEPARATOR.
 # - SENTINEL: If present, a token that must be a SEPARATOR.
 
 sub new
@@ -96,6 +97,8 @@ sub clean_separators
   # one.  There could still be separators at the beginning or end
   # of the chain.  There are no bindings or sentinels yet.
   
+  return unless $self->{LAST} >= 0;
+
   my ($first, $last);
   $first = 0;
 
@@ -107,6 +110,27 @@ sub clean_separators
     splice(@{$self->{LIST}}, $first+1, $last-$first);
     $self->{LAST} = $#{$self->{LIST}};
     $first++;
+  }
+
+  # Don't start with a separator.
+  if ($self->{LIST}[0]->category() eq 'SEPARATOR')
+  {
+    $self->{PRECURSOR} = $self->{LIST}[0];
+    splice(@{$self->{LIST}}, 0, 1);
+    $self->{LAST} = $#{$self->{LIST}};
+    $self->{STATUS} = 'COMPLETE' if ($self->{LAST} == -1);
+  }
+
+  # Don't end with a separator.
+  $last =$self->{LAST};
+  return if $last == -1;
+
+  if ($self->{LIST}[$last]->category() eq 'SEPARATOR')
+  {
+    $self->{SENTINEL} = $self->{LIST}[$last];
+    splice(@{$self->{LIST}}, $last);
+    $self->{LAST} = $#{$self->{LIST}};
+    $self->{STATUS} = 'COMPLETE' if ($self->{LAST} == -1);
   }
 }
 
@@ -142,6 +166,20 @@ sub value
 }
 
 
+sub text
+{
+  my($self) = @_;
+  return join('|', map { $_->text() } @{$self->{LIST}});
+}
+
+
+sub catcat
+{
+  my($self) = @_;
+  return join('|', map { $_->category() } @{$self->{LIST}});
+}
+
+
 sub last
 {
   my ($self) = @_;
@@ -170,6 +208,15 @@ sub copy_from
     $chain2->{SENTINEL} = $self->{SENTINEL};
     delete $self->{SENTINEL};
     $self->{LAST}--;
+    return;
+  }
+
+  my $last = $chain2->{LAST};
+  if ($chain2->{LIST}[$last]->category() eq 'SEPARATOR')
+  {
+    $chain2->{SENTINEL} = $chain2->{LIST}[$last];
+    splice( @{$chain2->{LIST}}, $last);
+    $chain2->{LAST}--;
   }
 }
 
