@@ -178,8 +178,14 @@ sub match_aspect
         return 1;
       }
     }
+    # Nothing matched.
+    return 0;
   }
-  return 0;
+  else
+  {
+    # Nothing to match.
+    return 1;
+  }
 }
 
 
@@ -192,10 +198,10 @@ sub match
   # If set, the list elements may be 'undef' which means that 
   # the corresponding token field must not be defined.
 
-  return 1 if $self->match_aspect($hash, 'CATEGORY');
-  return 1 if $self->match_aspect($hash, 'FIELD');
-  return 1 if $self->match_aspect($hash, 'VALUE');
-  return 0;
+  return 0 unless $self->match_aspect($hash, 'CATEGORY');
+  return 0 unless $self->match_aspect($hash, 'FIELD');
+  return 0 unless $self->match_aspect($hash, 'VALUE');
+  return 1;
 }
 
 

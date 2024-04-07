@@ -320,7 +320,7 @@ sub index_match
   for my $p (0 .. $plen)
   {
     return 0 unless 
-      $self->{LIST}[$index]->match($index + $p, $pattern->[$p]);
+      $self->{LIST}[$index+$p]->match($pattern->[$p]);
   }
   return 1;
 }

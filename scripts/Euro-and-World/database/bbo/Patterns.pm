@@ -9,7 +9,7 @@ use open ':std', ':encoding(UTF-8)';
 package Patterns;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(process_patterns);
+our @EXPORT = qw(process_patterns process_patterns_new);
 
 use lib '.';
 use lib '..';
@@ -29,13 +29,15 @@ my @PATTERNS_NEW =
   # 5. 1 if we split after the back.
   [
     [
-      { CATEGORY => [qw(NUMERAL ORDINAL)] },
+      { CATEGORY => [qw(SINGLETON)],
+        FIELD => [qw(NUMERAL ORDINAL)] },
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(SINGLETON)], 
-        FIELD => [qw(Particle)],
+        FIELD => [qw(PARTICLE)],
         VALUE => [qw(Of)] },
       { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(NUMERAL)] }
+      { CATEGORY => [qw(SINGLETON)],
+        FIELD => [qw(NUMERAL)] }
     ],
     'ANY',
     0,
@@ -436,7 +438,7 @@ sub process_patterns_new
 
           if ($split_back && $match < $chain->last())
           {
-            my $chain2 = $chain->split_on($match + $plen + 2);
+            my $chain2 = $chain->split_on($match + 2);
             $chain->complete_if_one();
             $chain2->complete_if_one();
             splice(@$chains, $chain_no+1, 0, $chain2);
@@ -451,6 +453,7 @@ sub process_patterns_new
           }
         }
       }
+      $chain_no++;
     }
   }
 }

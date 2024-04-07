@@ -58,7 +58,7 @@ while ($line = <$fh>)
     }
     else
     {
-      if ($chunk{BBONO} == 2317)
+      if ($chunk{BBONO} == 249)
       {
         print "HERE\n";
       }
@@ -77,6 +77,8 @@ while ($line = <$fh>)
       process_event(\%event_chains, \%event_solved, \@chains);
 
       process_patterns(\%event_chains, \%event_solved);
+
+      process_patterns_new(\@chains);
 
       post_process_event(\%event_chains, \%event_solved);
 
