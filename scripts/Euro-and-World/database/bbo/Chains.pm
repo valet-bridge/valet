@@ -33,6 +33,7 @@ use Organizer;
 use Origin;
 use Scoring;
 use Sponsor;
+use Stage;
 use Tname;
 use Weekday;
 
@@ -49,6 +50,7 @@ $CATEGORIES{ORGANIZER} = Organizer->new();
 $CATEGORIES{ORIGIN} = Origin->new();
 $CATEGORIES{SCORING} = Scoring->new();
 $CATEGORIES{SPONSOR} = Sponsor->new();
+$CATEGORIES{STAGE} = Stage->new();
 $CATEGORIES{TNAME} = Tname->new();
 $CATEGORIES{WEEKDAY} = Weekday->new();
 
@@ -125,7 +127,6 @@ sub split_on_singleton
     {
       for my $index (0 .. $chain->last())
       {
-        next unless $index >= 2; # Don't split on front
         next unless $chain->category($index) eq 'SINGLETON';
 
         my $field = $chain->field($index);
@@ -137,10 +138,23 @@ sub split_on_singleton
           die "No SINGLETON $field, " . $chain->value->($index);
         }
 
-        my $chain2 = $chain->split_on($index);
-        $chain2->complete_if_last_is(0);
-
-        splice(@$chains, $chain_no+1, 0, $chain2);
+        if ($chain->last() == 0)
+        {
+          $chain->complete_if_last_is(0);
+        }
+        elsif ($index == 0)
+        {
+          my $chain2 = $chain->split_on(2);
+          $chain->complete_if_last_is(0);
+          $chain2->complete_if_last_is(0);
+          splice(@$chains, $chain_no+1, 0, $chain2);
+        }
+        else
+        {
+          my $chain2 = $chain->split_on($index);
+          $chain2->complete_if_last_is(0);
+          splice(@$chains, $chain_no+1, 0, $chain2);
+        }
         last;
       }
     }
