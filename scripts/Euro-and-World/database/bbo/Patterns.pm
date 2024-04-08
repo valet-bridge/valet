@@ -27,6 +27,11 @@ my @PATTERNS_NEW =
   # 3. The index of the method used to react.
   # 4. 1 if we split on the front.
   # 5. 1 if we split after the back.
+  # TODO Use field names?
+  # TODO Specify the last token that should survive, so
+  # Round 9: 2 
+
+  # 7 of 9
   [
     [
       { CATEGORY => [qw(SINGLETON)],
@@ -43,6 +48,49 @@ my @PATTERNS_NEW =
     0,
     0,
     1
+  ],
+
+  # 1_7, 2/9
+  [
+    [
+      { CATEGORY => [qw(SINGLETON)],
+        FIELD => [qw(NUMERAL)] },
+      { CATEGORY => [qw(SEPARATOR)], 
+        FIELD => [ (0x20, 0x80) ] }, # TODO Use Separators.pm
+      { CATEGORY => [qw(SINGLETON)],
+        FIELD => [qw(NUMERAL)] }
+    ],
+    'ANY',
+    1,
+    0,
+    1
+  ],
+
+  # Round 5
+  [
+    [
+      { CATEGORY => [qw(ITERATOR)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(SINGLETON)],
+        FIELD => [qw(NUMERAL)] }
+    ],
+    'END',
+    2,
+    1,
+    0
+  ],
+
+  # Round {COUNTER}
+  [
+    [
+      { CATEGORY => [qw(ITERATOR)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(COUNTER)] }
+    ],
+    'END',
+    3,
+    1,
+    0
   ]
 );
 
@@ -426,6 +474,27 @@ sub process_patterns_new
 
             my $token = $chain->check_out($match);
             $token->set_counter(\%hash);
+          }
+          elsif ($action == 1)
+          {
+            my %hash = ( 
+              BASE => $chain->value($match),
+              OF => $chain->value($match+2));
+
+            my $token = $chain->check_out($match);
+            $token->set_counter(\%hash);
+          }
+          elsif ($action == 2)
+          {
+            my %hash = (BASE => $chain->value($match+2));
+            my $token = $chain->check_out($match+2);
+            $token->set_counter(\%hash);
+
+            # TODO Actually have to mash them into the iterator
+          }
+          elsif ($action == 3)
+          {
+            # TODO Actually have to mash them into the iterator
           }
           else
           {
