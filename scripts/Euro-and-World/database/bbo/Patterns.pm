@@ -41,15 +41,12 @@ my @REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(SINGLETON)],
-        FIELD => [qw(NUMERAL ORDINAL)] },
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL ORDINAL)] },
       { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], 
-        FIELD => [qw(PARTICLE)],
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(PARTICLE)],
         VALUE => [qw(Of)] },
       { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)],
-        FIELD => [qw(NUMERAL)] }
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
@@ -62,12 +59,10 @@ my @REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(SINGLETON)],
-        FIELD => [qw(NUMERAL)] },
-      { CATEGORY => [qw(SEPARATOR)], 
-        FIELD => [ (0x20, 0x80) ] }, # TODO Use Separators.pm
-      { CATEGORY => [qw(SINGLETON)],
-        FIELD => [qw(NUMERAL)] }
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] },
+      # TODO Use Separators.pm
+      { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x20, 0x80) ] }, 
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
@@ -82,8 +77,7 @@ my @REDUCTIONS =
     [
       { CATEGORY => [qw(ITERATOR)] },
       { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)],
-        FIELD => [qw(NUMERAL)] }
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] }
     ],
     ANCHOR => 'END',
     KEEP_LAST => 2,
@@ -104,6 +98,21 @@ my @REDUCTIONS =
     KEEP_LAST => 2,
     METHOD => 3,
     SPLIT_FRONT => 1,
+    SPLIT_BACK => 0
+  },
+
+  # Final 2
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(STAGE)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] }
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 2,
+    METHOD => 99,
+    SPLIT_FRONT => 0,
     SPLIT_BACK => 0
   }
 );
@@ -507,6 +516,13 @@ sub process_patterns_new
           elsif ($reduction->{METHOD} == 3)
           {
             # TODO Actually have to mash them into the iterator
+          }
+          elsif ($reduction->{METHOD} == 99)
+          {
+            # Like method 2, but probably don't mash.
+            my %hash = (BASE => $chain->value($match+2));
+            my $token = $chain->check_out($match+2);
+            $token->set_counter(\%hash);
           }
           else
           {

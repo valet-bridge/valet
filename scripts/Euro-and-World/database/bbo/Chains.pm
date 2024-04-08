@@ -472,6 +472,8 @@ sub split_on_singleton
         }
 
         my $chain2 = $chain->split_on($index);
+        $chain2->complete_if_last_is(0);
+
         splice(@$chains, $chain_no+1, 0, $chain2);
         last;
       }

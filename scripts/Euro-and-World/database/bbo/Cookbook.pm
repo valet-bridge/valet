@@ -208,6 +208,12 @@ our %FIX_ALIASES =
     Final => [qw(fianl filnal fin finale finales finali ff
       ofinals finals finall finas fnal fnals fina f sinal 
       fýnal final!)],
+    "Semi-final" => [qw(semifinal semif semifinals semifinale semifinali
+      seminfinal semifinales semis semfin sfinal sfinals sf
+      semifianls semýfýnal sefi yf)],
+    Semi => [],
+    "Quarter-final" => [qw(quarterfinal quafin quarterf quarterfinals 
+      qfinal qfinals quaterfinal qf ottavi quarti)],
     Tiebreak => [qw(ot tie)],
     Playoff => [qw(po playoff playoffs)],
     Consolation => [qw(conso)],
@@ -402,12 +408,6 @@ our %FIX_ALIASES =
   {
     Rof => [],
 
-    "Quarter-final" => [qw(quarterfinal quafin quarterf quarterfinals 
-      qfinal qfinals quaterfinal qf ottavi quarti)],
-    "Semi-final" => [qw(semifinal semif semifinals semifinale semifinali
-      seminfinal semifinales semis semfin sfinal sfinals sf
-      semifianls semýfýnal sefi yf)],
-    Semi => [],
     Berth => [],
     Place => [qw(puesto lugar)],
     Top => [],
