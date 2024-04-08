@@ -19,20 +19,27 @@ use Chains;
 my @SIMPLE_LIST = qw(NUMERAL ORDINAL LETTER SEPARATOR);
 my %SIMPLE_CATEGORIES = map { $_ => 1} @SIMPLE_LIST;
 
-my @PATTERNS_NEW =
+# ANCHOR specifies where the pattern may match within a chain
+# (ANY, BEGIN, END, EXACT).
+#
+# KEEP_LAST is the last index, relative to the pattern, that is
+# kept.  Anything after that is collapsed in terms of origin.
+# If it is 0, then only the first element of pattern is kept.
+#
+# METHOD is a running counter.  
+# TODO Perhaps this will later be a method pointer.
+#
+# SPLIT_FRONT and SPLIT_BACK (binary) indicate whether the
+# chain should be split if possible before the first match and/or
+# after the last match.
+
+my @REDUCTIONS =
 (
   # 3 of 7 (anywhere).
-  # 1. The pattern.
-  # 2. The anchor.
-  # 3. The index of the method used to react.
-  # 4. 1 if we split on the front.
-  # 5. 1 if we split after the back.
-  # TODO Use field names?
-  # TODO Specify the last token that should survive, so
-  # Round 9: 2 
 
   # 7 of 9
-  [
+  {
+    PATTERN =>
     [
       { CATEGORY => [qw(SINGLETON)],
         FIELD => [qw(NUMERAL ORDINAL)] },
@@ -44,14 +51,16 @@ my @PATTERNS_NEW =
       { CATEGORY => [qw(SINGLETON)],
         FIELD => [qw(NUMERAL)] }
     ],
-    'ANY',
-    0,
-    0,
-    1
-  ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => 0,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 1
+  },
 
   # 1_7, 2/9
-  [
+  {
+    PATTERN =>
     [
       { CATEGORY => [qw(SINGLETON)],
         FIELD => [qw(NUMERAL)] },
@@ -60,38 +69,43 @@ my @PATTERNS_NEW =
       { CATEGORY => [qw(SINGLETON)],
         FIELD => [qw(NUMERAL)] }
     ],
-    'ANY',
-    1,
-    0,
-    1
-  ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => 1,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 1
+  },
 
   # Round 5
-  [
+  {
+    PATTERN =>
     [
       { CATEGORY => [qw(ITERATOR)] },
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(SINGLETON)],
         FIELD => [qw(NUMERAL)] }
     ],
-    'END',
-    2,
-    1,
-    0
-  ],
+    ANCHOR => 'END',
+    KEEP_LAST => 2,
+    METHOD => 2,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 0
+  },
 
   # Round {COUNTER}
-  [
+  {
+    PATTERN =>
     [
       { CATEGORY => [qw(ITERATOR)] },
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(COUNTER)] }
     ],
-    'END',
-    3,
-    1,
-    0
-  ]
+    ANCHOR => 'END',
+    KEEP_LAST => 2,
+    METHOD => 3,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 0
+  }
 );
 
 my @PATTERNS =
@@ -448,25 +462,23 @@ sub process_patterns_new
 {
   my ($chains) = @_;
 
-  for my $overall_pattern (@PATTERNS_NEW)
+  for my $reduction (@REDUCTIONS)
   {
-    my $pattern = $overall_pattern->[0];
-    my $anchor = $overall_pattern->[1];
-    my $action = $overall_pattern->[2];
-    my $split_front = $overall_pattern->[3];
-    my $split_back = $overall_pattern->[4];
-    my $plen = $#$pattern;
-
+    my $plen = $#{$reduction->{PATTERN}};
     my $chain_no = 0;
+
     while ($chain_no <= $#$chains)
     {
       my $chain = $chains->[$chain_no];
       if ($chain->status() eq 'OPEN')
       {
-        my $match = $chain->match($pattern, $anchor);
+        my $match = $chain->match(
+          $reduction->{PATTERN}, 
+          $reduction->{ANCHOR});
+
         if ($match >= 0)
         {
-          if ($action == 0)
+          if ($reduction->{METHOD} == 0)
           {
             my %hash = ( 
               BASE => $chain->value($match),
@@ -475,7 +487,7 @@ sub process_patterns_new
             my $token = $chain->check_out($match);
             $token->set_counter(\%hash);
           }
-          elsif ($action == 1)
+          elsif ($reduction->{METHOD} == 1)
           {
             my %hash = ( 
               BASE => $chain->value($match),
@@ -484,7 +496,7 @@ sub process_patterns_new
             my $token = $chain->check_out($match);
             $token->set_counter(\%hash);
           }
-          elsif ($action == 2)
+          elsif ($reduction->{METHOD} == 2)
           {
             my %hash = (BASE => $chain->value($match+2));
             my $token = $chain->check_out($match+2);
@@ -492,32 +504,41 @@ sub process_patterns_new
 
             # TODO Actually have to mash them into the iterator
           }
-          elsif ($action == 3)
+          elsif ($reduction->{METHOD} == 3)
           {
             # TODO Actually have to mash them into the iterator
           }
           else
           {
-            die "Unknown action $action";
+            die "Unknown action $reduction->{METHOD}";
           }
 
-          $chain->collapse_elements($match, $match + $plen);
-          $chain->delete($match+1, $match + $plen);
-          $chain->complete_if_one();
+          if ($reduction->{KEEP_LAST} < $plen)
+          {
+            $chain->collapse_elements(
+              $match + $reduction->{KEEP_LAST}, 
+              $match + $plen);
 
-          if ($split_back && $match < $chain->last())
+            $chain->delete(
+              $match + $reduction->{KEEP_LAST} + 1, 
+              $match + $plen);
+          }
+
+          $chain->complete_if_last_is($reduction->{KEEP_LAST});
+
+          if ($reduction->{SPLIT_BACK} && $match < $chain->last())
           {
             my $chain2 = $chain->split_on($match + 2);
-            $chain->complete_if_one();
-            $chain2->complete_if_one();
+            $chain->complete_if_last_is($reduction->{KEEP_LAST});
+            $chain2->complete_if_last_is(0);
             splice(@$chains, $chain_no+1, 0, $chain2);
           }
 
-          if ($split_front && $match > 0)
+          if ($reduction->{SPLIT_FRONT} && $match > 0)
           {
             my $chain2 = $chain->split_on($match);
-            $chain->complete_if_one();
-            $chain2->complete_if_one();
+            $chain->complete_if_last_is(0);
+            $chain2->complete_if_last_is($reduction->{KEEP_LAST});
             splice(@$chains, $chain_no+1, 0, $chain2);
           }
         }

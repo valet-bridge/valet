@@ -1,3 +1,5 @@
+825: Chain 0 is ood.
+
 Probably QF etc should also be STAGE, not ITERATOR.
 
 Reductions:
@@ -6,46 +8,17 @@ Reductions:
    SINGLETON, FIELD NUMERAL, 4 8 12 16 18 32 64 128
    -> SINGLETON, STAGE, could be QF, Rof12, ..., no value
 
-2. SINGLETON, PARTICLE, VALUE Of
-   SEPARATOR
-   SINGLETON, FIELD NUMERAL
-   -> ITERATOR, no field, the OF entry has NUMERAL set
-
-3. SINGLETON, NUMERAL
-   SEPARATOR, FIELD has SLASH
-   SINGLETON, NUMERAL (less than first one)
-   -> ITERATOR, no field, BASE NUMERAL and OF NUMERAL
-
-
-Tokens should use
-CATEGORY: ITERATOR, SINGLETON, KILL, AMBIGUOUS, SEPARATOR
-FIELD:    Round   , Date     , nth , nth      , nth
-VALUE:    nothing , 2023---  , nth , nth      , SPACE etc.
-
-Should be in Token already.
 In Cookbook, pick out the values and map to AMBIGUOUS in
-the big hash already.  That'
+the big hash already.
 
-
-1. Tokens creates one list of Token's
-2. A Chain is a list of Token's
 3. Two tokens like to combine with a binding strength 0-9
    that is specified in rules
-4. To begin with, tokens are quite simple, but in the case
-   of iterators, they can amass more information
 5. An ambiguous token perhaps only merges if there is only
    one possible merge.  Only later by strength if needed.
-6. Each Chain has an ending separator (the last one is artificial).
 7. Some cross-chain merges are possible, "4 (of 7)".
-8. A chain may be marked as done.
-9. A pair of tokens in a chain get marked with their merging strength.
-   When two tokens are merged, the merging strength of the new
-   token is updated.  (Chain may be complete at that point.)
 
 Maybe my chain reductions are too quick.
-- Split on all parentheses into chains
 - If no space at all, split on dash into chains
-- "1 of 2" becomes an unnamed COUNTER_SINGLE_OF.
 - "10 B" becomes an unamed COUNTER_DOUBLE.
 
 Then there is a reduction rule

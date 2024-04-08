@@ -251,7 +251,10 @@ our %FIX_ALIASES =
     Youngsters => [qw(yougerters youth young youngster)],
     Schools => [qw(school)],
     Girls => [qw(gir)],
-    Kids => []
+    Kids => [],
+    U28 => [],
+    U26 => [],
+    U21 => []
   },
 
   GENDER =>
@@ -412,7 +415,7 @@ our %FIX_ALIASES =
     Round => [qw(rounds rouns rueda ruond rd riund rnd rds ound ro
       tound tour runde runder rn rond ronda ronud roudn
       turno turul sr)],
-    Stanza => [qw(stanza stanzas stranza stsnza stan)],
+    Stanza => [qw(stanza stanzas stranza stsnza stan stanzaq)],
     Session => [qw(serssion sesion sesión sesj sesjon sess
       sessió sessión ses sesje sessie sesson sesssion sessions
       sessão devre segssion séance séan seans seansi)],

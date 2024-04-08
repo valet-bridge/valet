@@ -68,8 +68,8 @@ sub unteam
   my ($text, $team1, $team2) = @_;
 
   my $res = $text;
-  $res =~ s/\Q$team1\E// if defined $team1;
-  $res =~ s/\Q$team2\E// if defined $team2;
+  $res =~ s/\Q$team1\E// if defined $team1 && length($team1) > 1;
+  $res =~ s/\Q$team2\E// if defined $team2 && length($team2) > 1;
   return $res;
 }
 
@@ -92,13 +92,19 @@ sub split_on_known_words
     $hit = 0;
     for my $i (reverse 0 .. $#$list_ref)
     {
-      my $part = lc($list_ref->[$i]);
+      my $part = $list_ref->[$i];
       my $fix = $FIX_HASH{$part};
       next if defined $fix->{VALUE};
 
       if ($part =~ $FRONT_REGEX)
       {
         my ($front, $back) = ($1, $2);
+
+        # If letter-letter, then not lower-lower.
+        next if ($back =~ /^[a-z]/ && $front =~ /[a-z]$/);
+        next if ($back =~ /^[A-Z]/ && $front =~ /[A-Z]$/);
+        next if $part eq 'MatchPoint';
+
         splice(@$list_ref, $i, 0, ('') x 2);
         $list_ref->[$i  ] = $front;
         $list_ref->[$i+1] = '|';
@@ -112,6 +118,14 @@ sub split_on_known_words
       if ($part =~ $BACK_REGEX)
       {
         my ($front, $back) = ($1, $2);
+        if ($back =~ /^[a-z]/ && $front =~ /[a-z]$/ &&
+            $front ne '2e')
+        {
+          # If letter-letter, then not lower-lower.
+          next;
+        }
+        next if ($back =~ /^[A-Z]/ && $front =~ /[A-Z]$/);
+
         splice(@$list_ref, $i, 0, ('') x 2);
         $list_ref->[$i  ] = $front;
         $list_ref->[$i+1] = '|';
@@ -146,6 +160,7 @@ sub split_on_digit_groups
       elsif ($#a == 1 && $a[0] eq 'U' && $a[1] <= 31)
       {
         # Don't split U31 etc.
+        next;
       }
 
       my $add = 2 * $#a;

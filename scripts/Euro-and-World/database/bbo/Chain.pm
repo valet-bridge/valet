@@ -150,10 +150,10 @@ sub status
 }
 
 
-sub complete_if_one
+sub complete_if_last_is
 {
-  my ($self) = @_;
-  $self->{STATUS} = 'COMPLETE' if $self->{LAST} == 0;
+  my ($self, $last) = @_;
+  $self->{STATUS} = 'COMPLETE' if $self->{LAST} == $last;
 }
 
 
@@ -222,7 +222,6 @@ sub copy_from
   {
     $chain2->{SENTINEL} = $self->{SENTINEL};
     delete $self->{SENTINEL};
-    $self->{LAST}--;
     return;
   }
 

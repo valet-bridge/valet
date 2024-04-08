@@ -99,7 +99,7 @@ my %MERGE_ALIASES = (
     'yarý final', 'simi final', 'round of 4', 's.f.'],
   Quarterfinal => ['quarter final', 'quarter finals',
     'quarter-final', 'quet final', 'quartal final',
-    'quarti finale', 'qtr finals',
+    'quarti finale', 'qtr finals', 'q-final',
     'round of 8', 'r of 8', '1_4 finale'], 
     # Error-prone: "1st Quarter Final" can be either
   PreQF => ['pre qf', 'pr qf'],
