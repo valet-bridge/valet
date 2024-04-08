@@ -285,91 +285,67 @@ sub split_on_date
 
 sub is_separator
 {
-  my ($part, $study_ref, $token) = @_;
+  my ($part, $token) = @_;
 
   # TODO Could shift to Separators.pm
   if ($part =~ /^\s+$/)
   {
-    $study_ref->{CATEGORY} = 'SEPARATOR';
-    $study_ref->{VALUE} = 'SPACE';
     $token->set_separator('SPACE');
     return 1;
   }
   elsif ($part eq '.')
   {
-    $study_ref->{CATEGORY} = 'SEPARATOR';
-    $study_ref->{VALUE} = 'DOT';
     $token->set_separator('DOT');
     return 1;
   }
   elsif ($part eq ':')
   {
-    $study_ref->{CATEGORY} = 'SEPARATOR';
-    $study_ref->{VALUE} = 'COLON';
     $token->set_separator('COLON');
     return 1;
   }
   elsif ($part eq ';')
   {
-    $study_ref->{CATEGORY} = 'SEPARATOR';
-    $study_ref->{VALUE} = 'SEMICOLON';
     $token->set_separator('SEMICOLON');
     return 1;
   }
   elsif ($part eq '-')
   {
-    $study_ref->{CATEGORY} = 'SEPARATOR';
-    $study_ref->{VALUE} = 'DASH';
     $token->set_separator('DASH');
     return 1;
   }
   elsif ($part eq '_')
   {
-    $study_ref->{CATEGORY} = 'SEPARATOR';
-    $study_ref->{VALUE} = 'UNDERSCORE';
     $token->set_separator('UNDERSCORE');
     return 1;
   }
   elsif ($part eq '+')
   {
-    $study_ref->{CATEGORY} = 'SEPARATOR';
-    $study_ref->{VALUE} = 'PLUS';
     $token->set_separator('PLUS');
     return 1;
   }
   elsif ($part eq '/')
   {
-    $study_ref->{CATEGORY} = 'SEPARATOR';
-    $study_ref->{VALUE} = 'SLASH';
     $token->set_separator('SLASH');
     return 1;
   }
   elsif ($part eq '(')
   {
-    $study_ref->{CATEGORY} = 'SEPARATOR';
-    $study_ref->{VALUE} = 'LEFT_PAREN';
     $token->set_separator('LEFT_PAREN');
     return 1;
   }
   elsif ($part eq ')')
   {
-    $study_ref->{CATEGORY} = 'SEPARATOR';
-    $study_ref->{VALUE} = 'RIGHT_PAREN';
     $token->set_separator('RIGHT_PAREN');
     return 1;
   }
   elsif ($part eq '"')
   {
-    $study_ref->{CATEGORY} = 'SEPARATOR';
-    $study_ref->{VALUE} = 'QUOTE';
     $token->set_separator('QUOTE');
     return 1;
   }
   elsif ($part eq '|')
   {
     # Artificial separator made when unmashing.
-    $study_ref->{CATEGORY} = 'SEPARATOR';
-    $study_ref->{VALUE} = 'ARTIFICIAL';
     $token->set_separator('VIRTUAL');
     return 1;
   }
@@ -382,14 +358,12 @@ sub is_separator
 
 sub is_small_integer
 {
-  my ($part, $study_ref, $token) = @_;
+  my ($part, $token) = @_;
 
   # Up to 100
   if ($part =~ /^\d+$/ && $part >= 0 && $part < 100)
   {
-    $study_ref->{CATEGORY} = 'NUMERAL';
     $part =~ s/^0+//; # Remove leading zeroes
-    $study_ref->{VALUE} = $part;
     $token->set_singleton('NUMERAL', $part);
     return 1;
   }
@@ -399,8 +373,6 @@ sub is_small_integer
     my $n = $1;
     $n =~ s/^0+//; # Remove leading zeroes
 
-    $study_ref->{CATEGORY} = 'NUMERAL';
-    $study_ref->{VALUE} = $n;
     $token->set_singleton('NUMERAL', $n);
     return 1;
   }
@@ -438,15 +410,13 @@ sub is_small_ordinal
 
 sub fix_small_ordinal
 {
-  my ($part, $study_ref, $token) = @_;
+  my ($part, $token) = @_;
   if (my $ord = is_small_ordinal($part))
   {
     # We don't check whether the ending matches the number.
     if ($ord >= 0 && $ord < 100)
     {
-      $study_ref->{CATEGORY} = 'ORDINAL';
       $ord =~ s/^0+//; # Remove leading zeroes
-      $study_ref->{VALUE} = $ord;
       $token->set_singleton('ORDINAL', $ord);
       return 1;
     }
@@ -464,12 +434,10 @@ sub fix_small_ordinal
 
 sub is_letter
 {
-  my ($part, $study_ref, $token) = @_;
+  my ($part, $token) = @_;
 
   if ($part =~ /^[A-Za-z]$/)
   {
-    $study_ref->{CATEGORY} = 'LETTER';
-    $study_ref->{VALUE} = $part;
     $token->set_singleton('LETTER', $part);
     return 1;
   }
@@ -482,14 +450,12 @@ sub is_letter
 
 sub is_date
 {
-  my ($part, $study_ref, $token) = @_;
+  my ($part, $token) = @_;
 
   if ($part =~ /^\d\d\d\d$/)
   {
     if ($part >= 1900 && $part <= 2100)
     {
-      $study_ref->{CATEGORY} = 'YEAR';
-      $study_ref->{VALUE} = $part;
       $token->set_singleton('YEAR', $part);
       return 1;
     }
@@ -500,8 +466,6 @@ sub is_date
   }
   elsif ($part =~ /^\d\d\d\d-\d\d-\d\d$/)
   {
-    $study_ref->{CATEGORY} = 'DATE';
-    $study_ref->{VALUE} = $part;
     $token->set_singleton('DATE', $part);
     return 1;
   }
@@ -516,13 +480,13 @@ sub study_part
 {
   # Returns 1 if it is a kill.
 
-  my ($part, $cref, $study_ref, $i, $chain, $unknown_ref) = @_;
+  my ($part, $cref, $i, $chain, $unknown_ref) = @_;
 
   my $token = Token->new();
   $token->set_origin($i, $part);
   $chain->append($token);
 
-  return if is_separator($part, $study_ref, $token);
+  return if is_separator($part, $token);
 
   my $fix = $FIX_HASH{lc($part)};
   if (defined $fix->{CATEGORY})
@@ -534,28 +498,20 @@ sub study_part
     {
       # It could be that the country name is spelled differently
       # in EVENT and TEAMS.
-      $study_ref->{CATEGORY} = 'KILL';
-      $study_ref->{VALUE} = $fix->{VALUE};
       $token->set_kill($part);
     }
     elsif (exists $AMBIGUITIES{lc($part)})
     {
-      $study_ref->{CATEGORY} = $fix->{CATEGORY};
-      $study_ref->{VALUE} = $fix->{VALUE};
       $token->set_ambiguous(lc($part));
     }
     elsif ($fix->{CATEGORY} eq 'ITERATOR')
     {
-      $study_ref->{CATEGORY} = $fix->{CATEGORY};
-      $study_ref->{VALUE} = $fix->{VALUE};
       $token->set_iterator_field($fix->{VALUE});
     }
     elsif ($fix->{CATEGORY} eq 'AGE' &&
         $fix->{VALUE} eq 'Girls')
     {
       # Special case signifying both age and gender.
-      $study_ref->{CATEGORY} = $fix->{CATEGORY};
-      $study_ref->{VALUE} = 'Juniors'; # A bug, ignoring gender
 
       $token->set_singleton('AGE', 'Juniors');
 
@@ -571,22 +527,18 @@ sub study_part
     }
     else
     {
-      $study_ref->{CATEGORY} = $fix->{CATEGORY};
-      $study_ref->{VALUE} = $fix->{VALUE};
       $token->set_singleton($fix->{CATEGORY}, $fix->{VALUE});
     }
     return;
   }
 
-  return 0 if is_small_integer($part, $study_ref, $token);
-  return 0 if fix_small_ordinal($part, $study_ref, $token);
-  return 0 if is_letter($part, $study_ref, $token);
-  return 0 if is_date($part, $study_ref, $token);
+  return 0 if is_small_integer($part, $token);
+  return 0 if fix_small_ordinal($part, $token);
+  return 0 if is_letter($part, $token);
+  return 0 if is_date($part, $token);
 
   print "UNKNOWN $part\n";
   $$unknown_ref++;
-  $study_ref->{CATEGORY} = 'UNKNOWN';
-  $study_ref->{VALUE} = $part;
 
   $token->set_unknown($part);
   return 0;
@@ -595,7 +547,7 @@ sub study_part
 
 sub study_event
 {
-  my ($text, $cref, $chains_ref, $chain, $unknown_ref) = @_;
+  my ($text, $cref, $chain, $unknown_ref) = @_;
 
   if ($cref->{BBONO} >= 4790 && $cref->{BBONO} <= 4860 &&
       $cref->{TITLE} =~ /^Buffet/)
@@ -626,12 +578,7 @@ sub study_event
 
   for my $i (0 .. $#parts)
   {
-    $chains_ref->{0}[$i]{text} = $parts[$i];
-    $chains_ref->{0}[$i]{position_first} = $i;
-    $chains_ref->{0}[$i]{position_last} = $i;
-
-    study_part($parts[$i], $cref, 
-      \%{$chains_ref->{0}[$i]}, $i, $chain, $unknown_ref);
+    study_part($parts[$i], $cref, $i, $chain, $unknown_ref);
   }
 }
 
