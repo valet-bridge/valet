@@ -18,6 +18,7 @@ use lib '.';
 use lib '..';
 use Cookbook;
 use Token;
+use Separators;
 
 
 sub clean_team
@@ -283,79 +284,6 @@ sub split_on_date
 }
 
 
-sub is_separator
-{
-  my ($part, $token) = @_;
-
-  # TODO Could shift to Separators.pm
-  if ($part =~ /^\s+$/)
-  {
-    $token->set_separator('SPACE');
-    return 1;
-  }
-  elsif ($part eq '.')
-  {
-    $token->set_separator('DOT');
-    return 1;
-  }
-  elsif ($part eq ':')
-  {
-    $token->set_separator('COLON');
-    return 1;
-  }
-  elsif ($part eq ';')
-  {
-    $token->set_separator('SEMICOLON');
-    return 1;
-  }
-  elsif ($part eq '-')
-  {
-    $token->set_separator('DASH');
-    return 1;
-  }
-  elsif ($part eq '_')
-  {
-    $token->set_separator('UNDERSCORE');
-    return 1;
-  }
-  elsif ($part eq '+')
-  {
-    $token->set_separator('PLUS');
-    return 1;
-  }
-  elsif ($part eq '/')
-  {
-    $token->set_separator('SLASH');
-    return 1;
-  }
-  elsif ($part eq '(')
-  {
-    $token->set_separator('LEFT_PAREN');
-    return 1;
-  }
-  elsif ($part eq ')')
-  {
-    $token->set_separator('RIGHT_PAREN');
-    return 1;
-  }
-  elsif ($part eq '"')
-  {
-    $token->set_separator('QUOTE');
-    return 1;
-  }
-  elsif ($part eq '|')
-  {
-    # Artificial separator made when unmashing.
-    $token->set_separator('VIRTUAL');
-    return 1;
-  }
-  else
-  {
-    return 0;
-  }
-}
-
-
 sub is_small_integer
 {
   my ($part, $token) = @_;
@@ -486,7 +414,7 @@ sub study_part
   $token->set_origin($i, $part);
   $chain->append($token);
 
-  return if is_separator($part, $token);
+  return if Separators::set_token($part, $token);
 
   my $fix = $FIX_HASH{lc($part)};
   if (defined $fix->{CATEGORY})
