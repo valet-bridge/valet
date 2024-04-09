@@ -81,6 +81,15 @@ sub set_origin
 }
 
 
+sub copy_origin_from
+{
+  my ($self, $from) = @_;
+  $self->{position_first} = $from->{position_first};
+  $self->{position_last} = $from->{position_last};
+  $self->{text} = $from->{text};
+}
+
+
 sub set_iterator_field
 {
   my ($self, $field) = @_;

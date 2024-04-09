@@ -99,6 +99,33 @@ my @REDUCTIONS =
     SPLIT_BACK => 0
   },
 
+  # Open
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(TOURNAMENT)],
+        VALUE => [qw(Open)] },
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 0,
+    METHOD => 97,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0
+  },
+
+  # 1, 4th
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL ORDINAL)] }
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 0,
+    METHOD => 96,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0
+  },
+
   # 16 boards
   {
     PATTERN =>
@@ -424,6 +451,28 @@ sub process_patterns
           elsif ($reduction->{METHOD} == 3)
           {
             # TODO Actually have to mash them into the iterator
+          }
+          elsif ($reduction->{METHOD} == 96)
+            # Number, ordinal.
+          {
+            my %hash = (BASE => $chain->value(0));
+            my $token = $chain->check_out(0);
+            $token->set_counter(\%hash);
+          }
+          elsif ($reduction->{METHOD} == 97)
+          {
+            # Open
+            my $token = $chain->check_out(0);
+            $token->set_singleton('GENDER', 'Open');
+
+            my $token2 = Token->new();
+            $token2->copy_origin_from($token);
+            $token2->set_singleton('AGE', 'Open');
+
+            my $chain2 = Chain->new();
+            $chain2->append($token2);
+            $chain2->complete_if_last_is(0);
+            splice(@$chains, $chain_no+1, 0, $chain2);
           }
           elsif ($reduction->{METHOD} == 98)
           {
