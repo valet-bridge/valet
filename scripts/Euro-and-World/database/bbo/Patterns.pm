@@ -530,6 +530,42 @@ sub process_open_exact
 }
 
 
+sub process_no_exact
+{
+  # Number or ordinal.
+  my ($chain, $match) = @_;
+
+  my %hash = (BASE => $chain->value(0));
+  my $token = $chain->check_out(0);
+  $token->set_counter(\%hash);
+}
+
+
+sub process_no_iter_exact
+{
+  # Number or ordinal with iterator, such as 16 boards.
+  # Swap them around.  Could mash.
+  my ($chain, $match) = @_;
+
+  my %hash = (BASE => $chain->value($match));
+  my $token = $chain->check_out($match);
+  $token->set_counter(\%hash);
+            
+  $chain->swap($match, $match+2);
+}
+
+
+sub process_stage_n_exact
+{
+  # Final 2.
+  my ($chain, $match) = @_;
+
+  my %hash = (BASE => $chain->value($match+2));
+  my $token = $chain->check_out($match+2);
+  $token->set_counter(\%hash);
+}
+
+
 sub process_patterns
 {
   my ($chains) = @_;
@@ -584,28 +620,16 @@ sub process_patterns
             process_open_exact($chain, $chains, $chain_no, $match);
           }
           elsif ($reduction->{METHOD} == 96)
-            # Number, ordinal.
           {
-            my %hash = (BASE => $chain->value(0));
-            my $token = $chain->check_out(0);
-            $token->set_counter(\%hash);
+            process_no_exact($chain, $match);
           }
           elsif ($reduction->{METHOD} == 98)
           {
-            # 16 boards (numeral/iterator).
-            # Like method 2, but probably don't mash.
-            my %hash = (BASE => $chain->value($match));
-            my $token = $chain->check_out($match);
-            $token->set_counter(\%hash);
-            
-            $chain->swap($match, $match+2);
+            process_no_iter_exact($chain, $match);
           }
           elsif ($reduction->{METHOD} == 99)
-          {
-            # Like method 2, but probably don't mash.
-            my %hash = (BASE => $chain->value($match+2));
-            my $token = $chain->check_out($match+2);
-            $token->set_counter(\%hash);
+          {          
+            process_stage_n_exact($chain, $match);
           }
           else
           {
