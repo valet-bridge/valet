@@ -86,6 +86,62 @@ sub split_on_kill
 }
 
 
+sub merge_counter_on_virtual
+{
+  my ($chains) = @_;
+
+  # Tightly coupled, e.g. "2B" surrounded by non-virtual separators.
+
+  my $chain_no = 0;
+  while ($chain_no <= $#$chains)
+  {
+    my $chain = $chains->[$chain_no];
+    if ($chain->last() < 2)
+    {
+      $chain_no++;
+      next;
+    }
+
+    my $index = 0;
+    while ($index <= $chain->last()-2)
+    {
+      if ($chain->category($index) ne 'SINGLETON' ||
+          $chain->field($index) ne 'NUMERAL' ||
+          $chain->category($index+1) ne 'SEPARATOR' ||
+          $chain->field($index+1) != $SEPARATORS{VIRTUAL} ||
+          $chain->category($index+2) ne 'SINGLETON' ||
+          $chain->field($index+2) ne 'LETTER')
+      {
+        $index++;
+        next;
+      }
+
+      if ($index > 0 &&
+         ($chain->category($index-1) ne 'SEPARATOR' ||
+          $chain->field($index-1) == $SEPARATORS{VIRTUAL}))
+      {
+        $index++;
+        next;
+      }
+
+      if ($index < $chain->last()-2 &&
+         ($chain->category($index+1) ne 'SEPARATOR' ||
+          $chain->field($index+1) == $SEPARATORS{VIRTUAL}))
+      {
+        $index++;
+        next;
+      }
+
+      $chain->collapse_elements($index, $index+2);
+      $chain->delete($index+1, $index+2);
+
+      $index++;
+    }
+    $chain_no++;
+  }
+}
+
+
 sub split_on_some_iters
 {
   my ($chains) = @_;
@@ -255,6 +311,7 @@ sub process_event
   my ($chains) = @_;
 
   split_on_kill($chains);
+  merge_counter_on_virtual($chains);
   split_on_singleton($chains);
   split_on_dash_space($chains);
   split_on_most_parens($chains);
