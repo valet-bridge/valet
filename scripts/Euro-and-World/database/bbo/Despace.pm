@@ -119,6 +119,7 @@ my %MERGE_ALIASES = (
   'Knockout' => ['knock out', 'knock-out'],
 
   # Misc.
+  'untitled' => ['untitled segment'],
   'Open RR' => ['orr'],
   'Women RR' => ['wrr'],
   'First half' => ['1mt', '1emt', 'andata'],

@@ -54,7 +54,7 @@ while ($line = <$fh>)
     }
     else
     {
-      if ($chunk{BBONO} == 508)
+      if ($chunk{BBONO} == 676)
       {
         print "HERE\n";
       }

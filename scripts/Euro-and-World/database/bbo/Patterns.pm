@@ -69,6 +69,22 @@ my @REDUCTIONS =
     SPLIT_BACK => 1
   },
 
+  # 1st half
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(ORDINAL)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(ITERATOR)] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 2,
+    METHOD => 4, # TODO Reorder
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 1
+  },
+
+
   # Round 5
   {
     PATTERN =>
@@ -98,6 +114,7 @@ my @REDUCTIONS =
     SPLIT_FRONT => 1,
     SPLIT_BACK => 0
   },
+
 
   # Open
   {
@@ -452,6 +469,15 @@ sub process_patterns
           {
             # TODO Actually have to mash them into the iterator
           }
+          elsif ($reduction->{METHOD} == 4)
+          {
+            # 1st half.  Kind of the same as 98.
+            my %hash = (BASE => $chain->value($match));
+            my $token = $chain->check_out($match);
+            $token->set_counter(\%hash);
+            
+            $chain->swap($match, $match+2);
+          }
           elsif ($reduction->{METHOD} == 96)
             # Number, ordinal.
           {
@@ -507,11 +533,14 @@ sub process_patterns
               $match + $plen);
           }
 
+          # This is probably the same as match == 0.
           $chain->complete_if_last_is($reduction->{KEEP_LAST});
 
-          if ($reduction->{SPLIT_BACK} && $match < $chain->last())
+          if ($reduction->{SPLIT_BACK} && 
+              $match + $reduction->{KEEP_LAST} < $chain->last())
           {
-            my $chain2 = $chain->split_on($match + 2);
+            my $chain2 = $chain->split_on(
+              $match + $reduction->{KEEP_LAST} + 2);
             $chain->complete_if_last_is($reduction->{KEEP_LAST});
             $chain2->complete_if_last_is(0);
             splice(@$chains, $chain_no+1, 0, $chain2);

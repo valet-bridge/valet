@@ -75,6 +75,31 @@ sub unteam
 }
 
 
+sub undate
+{
+  my ($text, $date_ref) = @_;
+
+  if ($text =~ /(\d\d\d\d)(\d\d)(\d\d)0(\d)/)
+  {
+    my ($year, $month, $day, $r) = ($1, $2, $3, $4);
+    $$date_ref = "$year-$month-$day";
+    $text =~ s/\d\d\d\d\d\d\d\d0\d/Round $r /;
+  }
+  elsif ($text =~ /(\d\d\d\d-\d\d-\d\d)/)
+  {
+    $$date_ref = $1;
+    $text =~ s/\d\d\d\d-\d\d-\d\d/ /;
+  }
+  elsif ($text =~ /(\d\d\d\d)\.(\d\d)\.(\d\d)/)
+  {
+    my ($year, $month, $day) = ($1, $2, $3);
+    $$date_ref = "$year-$month-$day";
+    $text =~ s/\d\d\d\d\.\d\d\.\d\d/ /;
+  }
+  return $text;
+}
+
+
 sub split_on_known_words
 {
   my ($list_ref) = @_;
@@ -255,35 +280,6 @@ sub split_on_tournament_group
 }
 
 
-sub split_on_date
-{
-  my ($list_ref) = @_;
-
-  for my $i (reverse 0 .. $#$list_ref)
-  {
-    my $part = $list_ref->[$i];
-
-    next unless $part =~ /^\d+$/ && $part > 19000000;
-
-    if ($part =~ /^(\d\d\d\d)(\d\d)(\d\d)0(\d)$/)
-    {
-      # Only really used once.
-      my ($year, $month, $day, $r) = ($1, $2, $3, $4);
-      splice(@$list_ref, $i, 0, ('') x 4);
-      $list_ref->[$i  ] = "$year-$month-$day";
-      $list_ref->[$i+1] = '|';
-      $list_ref->[$i+2] = "Round";
-      $list_ref->[$i+3] = '|';
-      $list_ref->[$i+4] = $r;
-    }
-    else
-    {
-      die "Probably a date? $part";
-    }
-  }
-}
-
-
 sub is_small_integer
 {
   my ($part, $token) = @_;
@@ -376,7 +372,7 @@ sub is_letter
 }
 
 
-sub is_date
+sub is_year
 {
   my ($part, $token) = @_;
 
@@ -391,11 +387,6 @@ sub is_date
     {
       die "Not a year? $part";
     }
-  }
-  elsif ($part =~ /^\d\d\d\d-\d\d-\d\d$/)
-  {
-    $token->set_singleton('DATE', $part);
-    return 1;
   }
   else
   {
@@ -463,7 +454,7 @@ sub study_part
   return 0 if is_small_integer($part, $token);
   return 0 if fix_small_ordinal($part, $token);
   return 0 if is_letter($part, $token);
-  return 0 if is_date($part, $token);
+  return 0 if is_year($part, $token);
 
   print "UNKNOWN $part\n";
   $$unknown_ref++;
@@ -487,6 +478,10 @@ sub study_event
   # First remove team names that are entirely duplicated.
   my $mashed = unteam($text, $cref->{TEAM1}, $cref->{TEAM2});
 
+  # Extract a date in certain formats.
+  my $date = '';
+  $mashed = undate($mashed, \$date);
+
   # Split on separators.
   my @parts = grep {$_ ne ''} split /([.\-\+_:;"\/\(\)]|\s+)/, $mashed;
 
@@ -499,14 +494,19 @@ sub study_event
   # Split some known words + A or B at the end.
   split_on_tournament_group(\@parts);
 
-  # Split on ISO date.
-  split_on_date(\@parts);
-
   # Make a semantic, studied version of the event.
 
   for my $i (0 .. $#parts)
   {
     study_part($parts[$i], $cref, $i, $chain, $unknown_ref);
+  }
+
+  if ($date ne '')
+  {
+    my $token = Token->new();
+    $token->set_origin($#parts+1, $date);
+    $token->set_singleton('DATE', $date);
+    $chain->append($token);
   }
 }
 
