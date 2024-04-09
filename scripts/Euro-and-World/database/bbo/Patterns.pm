@@ -9,7 +9,7 @@ use open ':std', ':encoding(UTF-8)';
 package Patterns;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(process_patterns process_patterns_new);
+our @EXPORT = qw(process_patterns);
 
 use lib '.';
 use lib '..';
@@ -35,8 +35,6 @@ my %SIMPLE_CATEGORIES = map { $_ => 1} @SIMPLE_LIST;
 
 my @REDUCTIONS =
 (
-  # 3 of 7 (anywhere).
-
   # 7 of 9
   {
     PATTERN =>
@@ -105,7 +103,7 @@ my @REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] },
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL ORDINAL)] },
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(ITERATOR)] }
     ],
@@ -134,52 +132,6 @@ my @REDUCTIONS =
 
 my @PATTERNS =
 (
-  # Segment 3 of 7 (anywhere)
-  [
-    [
-      { CATEGORY => [qw(ITERATOR)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(NUMERAL ORDINAL)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(PARTICLE)], VALUE => [qw(Of)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(NUMERAL)] }
-    ],
-    # Argument list:
-    # (0) The Tchar type
-    # (1) The pattern element whose category and value are used in Tchar
-    # (2,3), (4,5) etc. The arguments passed to Tchar
-    #          (0)        (1)(2)   (3)   (4)   (5)
-    [ 'COUNTER_SINGLE_OF', 0, 2, 'VALUE', 6, 'VALUE'],
-    'ANY'
-  ],
-
-  # Segment 3/7 or 3_7 (anywhere)
-  [
-    [
-      { CATEGORY => [qw(ITERATOR TABLE)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(NUMERAL)] },
-      { CATEGORY => [qw(SEPARATOR)], VALUE => [qw(SLASH UNDERSCORE)] },
-      { CATEGORY => [qw(NUMERAL)] }
-    ],
-    [ 'COUNTER_SINGLE_OF', 0, 2, 'VALUE', 4, 'VALUE'],
-    'ANY'
-  ],
-
-  # RR3_3 (anywhere)
-  [
-    [
-      { CATEGORY => [qw(ITERATOR)] },
-      { CATEGORY => [qw(SEPARATOR)], VALUE => [qw(ARTIFICIAL)] },
-      { CATEGORY => [qw(NUMERAL)] },
-      { CATEGORY => [qw(SEPARATOR)], VALUE => [qw(UNDERSCORE)] },
-      { CATEGORY => [qw(NUMERAL)] }
-    ],
-    [ 'COUNTER_SINGLE_OF', 0, 2, 'VALUE', 4, 'VALUE'],
-    'ANY'
-  ],
-
   # 7 February 2004 (anywhere)
   [
     [
@@ -424,65 +376,6 @@ sub index_match
 
 
 sub process_patterns
-{
-  my ($chains_ref, $solved_ref) = @_;
-
-  my $chain_no = 0;
-  my $chain_max = -1 + scalar keys %$chains_ref;
-
-  do
-  {
-    my $chain = $chains_ref->{$chain_no};
-    # TODO Skip over empty chain -- how?
-
-    for my $pattern (@PATTERNS)
-    {
-      my $plen = $#{$pattern->[0]};
-      my $anchor = $pattern->[2];
-
-      if ($anchor eq 'ANY')
-      {
-        my $start_index = 0;
-        while ($start_index + $plen <= $#$chain)
-        {
-          index_match($chain, $start_index, $pattern, $plen,
-            $chains_ref, $chain_no, \$chain_max, $solved_ref);
-
-          $start_index += 2;
-        }
-      }
-      elsif ($anchor eq 'BEGIN')
-      {
-        if ($plen <= $#$chain)
-        {
-          index_match($chain, 0, $pattern, $plen,
-            $chains_ref, $chain_no, \$chain_max, $solved_ref);
-        }
-      }
-      elsif ($anchor eq 'END')
-      {
-        if ($plen <= $#$chain)
-        {
-          index_match($chain, $#$chain - $plen, $pattern, $plen,
-            $chains_ref, $chain_no, \$chain_max, $solved_ref);
-        }
-      }
-      elsif ($anchor eq 'EXACT')
-      {
-        if ($plen == $#$chain)
-        {
-          index_match($chain, 0, $pattern, $plen,
-            $chains_ref, $chain_no, \$chain_max, $solved_ref);
-        }
-      }
-    }
-    $chain_no++;
-  }
-  while ($chain_no <= $chain_max);
-}
-
-
-sub process_patterns_new
 {
   my ($chains) = @_;
 

@@ -132,6 +132,12 @@ sub merge_counter_on_virtual
         next;
       }
 
+      my %hash = (
+        BASE_NUMBER => $chain->value($index),
+        BASE_LETTER => $chain->value($index+2));
+      my $token = $chain->check_out($index);
+      $token->set_counter(\%hash);
+
       $chain->collapse_elements($index, $index+2);
       $chain->delete($index+1, $index+2);
 
@@ -248,6 +254,7 @@ sub split_on_dash_space
           die "Should not happen" if $index > $chain->last();
 
           my $chain2 = $chain->split_on($index);
+          $chain2->complete_if_last_is(0);
           splice(@$chains, $chain_no+1, 0, $chain2);
           last;
         }

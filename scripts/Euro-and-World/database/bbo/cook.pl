@@ -70,9 +70,7 @@ while ($line = <$fh>)
 
       process_event(\@chains);
 
-      # process_patterns(\%event_chains, \%event_solved);
-
-      process_patterns_new(\@chains);
+      process_patterns(\@chains);
 
       # post_process_event(\%event_chains, \%event_solved);
 
