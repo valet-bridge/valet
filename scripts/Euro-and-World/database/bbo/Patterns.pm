@@ -84,6 +84,21 @@ my @REDUCTIONS =
     SPLIT_BACK => 1
   },
 
+  # Group A
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(ITERATOR)], FIELD => [qw(Group)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 2,
+    METHOD => 5, # TODO Reorder
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 1
+  },
+
 
   # Round 5
   {
@@ -419,6 +434,102 @@ sub index_match
 }
 
 
+sub process_no_of_n_any
+{
+  # 7 of 9, 7th of 9: Mash into one counter.
+  my ($chain, $match) = @_;
+
+  my %hash = (BASE => $chain->value($match),
+    OF => $chain->value($match+4));
+
+  my $token = $chain->check_out($match);
+  $token->set_counter(\%hash);
+}
+
+
+sub process_n_n_any
+{
+  # 7_9, 7/9: Mash into one counter.
+  # TODO Effectively the same as the previous method (with an arg).
+  my ($chain, $match) = @_;
+
+  my %hash = (BASE => $chain->value($match),
+    OF => $chain->value($match+2));
+
+  my $token = $chain->check_out($match);
+  $token->set_counter(\%hash);
+}
+
+
+sub process_ord_iter_any
+{
+  # 1st half: Swap them.
+  # TODO Could mash into the iterator.
+  my ($chain, $match) = @_;
+
+  my %hash = (BASE => $chain->value($match));
+
+  my $token = $chain->check_out($match);
+  $token->set_counter(\%hash);
+  
+  $chain->swap($match, $match+2);
+}
+
+
+sub process_group_letter_any
+{
+  # Group A.
+  # TODO Could mash into the iterator.
+  my ($chain, $match) = @_;
+
+  my %hash = (BASE => $chain->value($match+2));
+
+  my $token = $chain->check_out($match+2);
+  $token->set_counter(\%hash);
+}
+
+
+sub process_iter_n_end
+{
+  # Round 5.
+  # TODO Could mash into the iterator.
+  # TODO Same as previous method.
+  my ($chain, $match) = @_;
+
+  my %hash = (BASE => $chain->value($match+2));
+
+  my $token = $chain->check_out($match+2);
+  $token->set_counter(\%hash);
+}
+
+
+sub process_iter_counter_end
+{
+  # Round {counter}: Nothing to do.
+  # TODO Could mash into the iterator.
+}
+
+
+sub process_open_exact
+{
+  # Exactly the entry 'Open'.
+  # Take it to mean open gender, open age.
+  my ($chain, $chains, $chain_no, $match) = @_;
+
+  my $token = $chain->check_out(0);
+  $token->set_singleton('GENDER', 'Open');
+
+  my $token2 = Token->new();
+  $token2->copy_origin_from($token);
+  $token2->set_singleton('AGE', 'Open');
+
+  my $chain2 = Chain->new();
+  $chain2->append($token2);
+  $chain2->complete_if_last_is(0);
+  splice(@$chains, $chain_no+1, 0, $chain2);
+}
+
+
 sub process_patterns
 {
   my ($chains) = @_;
@@ -431,6 +542,10 @@ sub process_patterns
     while ($chain_no <= $#$chains)
     {
       my $chain = $chains->[$chain_no];
+
+      # TODO
+      # do .. while change was effected.
+      # Only then increase the chain number.
       if ($chain->status() eq 'OPEN')
       {
         my $match = $chain->match(
@@ -441,42 +556,32 @@ sub process_patterns
         {
           if ($reduction->{METHOD} == 0)
           {
-            my %hash = ( 
-              BASE => $chain->value($match),
-              OF => $chain->value($match+4));
-
-            my $token = $chain->check_out($match);
-            $token->set_counter(\%hash);
+            process_no_of_n_any($chain, $match);
           }
           elsif ($reduction->{METHOD} == 1)
           {
-            my %hash = ( 
-              BASE => $chain->value($match),
-              OF => $chain->value($match+2));
-
-            my $token = $chain->check_out($match);
-            $token->set_counter(\%hash);
-          }
-          elsif ($reduction->{METHOD} == 2)
-          {
-            my %hash = (BASE => $chain->value($match+2));
-            my $token = $chain->check_out($match+2);
-            $token->set_counter(\%hash);
-
-            # TODO Actually have to mash them into the iterator
-          }
-          elsif ($reduction->{METHOD} == 3)
-          {
-            # TODO Actually have to mash them into the iterator
+            process_n_n_any($chain, $match);
           }
           elsif ($reduction->{METHOD} == 4)
           {
-            # 1st half.  Kind of the same as 98.
-            my %hash = (BASE => $chain->value($match));
-            my $token = $chain->check_out($match);
-            $token->set_counter(\%hash);
-            
-            $chain->swap($match, $match+2);
+            process_ord_iter_any($chain, $match);
+          }
+          elsif ($reduction->{METHOD} == 5)
+          {
+            process_group_letter_any($chain, $match);
+          }
+          elsif ($reduction->{METHOD} == 2)
+          {
+            process_iter_n_end($chain, $match);
+          }
+          elsif ($reduction->{METHOD} == 3)
+          {
+            process_iter_counter_end($chain, $match);
+          }
+
+          elsif ($reduction->{METHOD} == 97)
+          {
+            process_open_exact($chain, $chains, $chain_no, $match);
           }
           elsif ($reduction->{METHOD} == 96)
             # Number, ordinal.
@@ -484,21 +589,6 @@ sub process_patterns
             my %hash = (BASE => $chain->value(0));
             my $token = $chain->check_out(0);
             $token->set_counter(\%hash);
-          }
-          elsif ($reduction->{METHOD} == 97)
-          {
-            # Open
-            my $token = $chain->check_out(0);
-            $token->set_singleton('GENDER', 'Open');
-
-            my $token2 = Token->new();
-            $token2->copy_origin_from($token);
-            $token2->set_singleton('AGE', 'Open');
-
-            my $chain2 = Chain->new();
-            $chain2->append($token2);
-            $chain2->complete_if_last_is(0);
-            splice(@$chains, $chain_no+1, 0, $chain2);
           }
           elsif ($reduction->{METHOD} == 98)
           {
