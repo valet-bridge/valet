@@ -101,6 +101,21 @@ my @REDUCTIONS =
     SPLIT_BACK => 0
   },
 
+  # 16 boards
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(ITERATOR)] }
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 2,
+    METHOD => 98,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0
+  },
+
   # Final 2
   {
     PATTERN =>
@@ -516,6 +531,16 @@ sub process_patterns_new
           elsif ($reduction->{METHOD} == 3)
           {
             # TODO Actually have to mash them into the iterator
+          }
+          elsif ($reduction->{METHOD} == 98)
+          {
+            # 16 boards (numeral/iterator).
+            # Like method 2, but probably don't mash.
+            my %hash = (BASE => $chain->value($match));
+            my $token = $chain->check_out($match);
+            $token->set_counter(\%hash);
+            
+            $chain->swap($match, $match+2);
           }
           elsif ($reduction->{METHOD} == 99)
           {

@@ -44,6 +44,17 @@ sub check_out
 }
 
 
+sub swap
+{
+  my ($self, $index1, $index2) = @_;
+  die "Index $index1 out of bounds" unless $index1 <= $self->{LAST};
+  die "Index $index2 out of bounds" unless $index2 <= $self->{LAST};
+  my $tmp = $self->{LIST}[$index1];
+  $self->{LIST}[$index1] = $self->{LIST}[$index2];
+  $self->{LIST}[$index2] = $tmp;
+}
+
+
 sub collapse_elements
 {
   my ($self, $first, $last) = @_;

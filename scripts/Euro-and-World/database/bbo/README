@@ -1,10 +1,27 @@
-Probably QF etc should also be STAGE, not ITERATOR.
+Split Tokenize:
+EventBBO?
+TeamBBO?
+TeamBBO splits on vs.
+It should always be a list of 2.
+Or it could be a chain as well to begin with.
+We recognize the countries.
+There are some that instead inform tournament form.
 
-Reductions:
-1. ITERATOR, FIELD Rof
-   SEPARATOR
-   SINGLETON, FIELD NUMERAL, 4 8 12 16 18 32 64 128
-   -> SINGLETON, STAGE, could be QF, Rof12, ..., no value
+If Seg2 Oct 2004, probably split on the real space and 
+not the virtual one.  Do this in general in Chains.
+But Match 5B Stanza 1B would then split in lots of places...
+So maybe the thing to do is to bind 1B surrounded by spaces
+into a counter always.  To begin with.
+
+DATE, LOCATION, SESSION always empty.
+Scoring should be easy.
+
+2938
+2nd Match 1st Half
+ORDINAL|SEP|ITER -> ITER with counter quashed in
+
+5872
+ITER|SEP|NUMERAL Rd 11 at end
 
 In Cookbook, pick out the values and map to AMBIGUOUS in
 the big hash already.
@@ -17,7 +34,7 @@ the big hash already.
 
 Maybe my chain reductions are too quick.
 - If no space at all, split on dash into chains
-- "10 B" becomes an unamed COUNTER_DOUBLE.
+- "10 B" becomes an unnamed COUNTER_DOUBLE.
 
 Then there is a reduction rule
 Round 7 B of 9

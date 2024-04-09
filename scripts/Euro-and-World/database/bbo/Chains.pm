@@ -128,6 +128,7 @@ sub split_on_singleton
       for my $index (0 .. $chain->last())
       {
         next unless $chain->category($index) eq 'SINGLETON';
+        $chain->complete_if_last_is(0);
 
         my $field = $chain->field($index);
         my $obj = $CATEGORIES{$field};
@@ -140,7 +141,7 @@ sub split_on_singleton
 
         if ($chain->last() == 0)
         {
-          $chain->complete_if_last_is(0);
+          # Nothing more.
         }
         elsif ($index == 0)
         {
