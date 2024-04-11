@@ -87,11 +87,29 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
+  # 2A/B (only turns the data into a counter).
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] },
+      { CATEGORY => [qw(SEPARATOR)], FIELD => [ 0x800 ] }, # TODO Virtual
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
+        VALUE => [qw(A B C D)] },
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&process_nl_exact,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
+    COMPLETION => 0
+  },
+
+
   # Group A
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(ITERATOR)], FIELD => [qw(Group)] },
+      { CATEGORY => [qw(ITERATOR)], FIELD => [qw(Group Match)] },
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)] }
     ],
@@ -134,6 +152,22 @@ my @REDUCTIONS =
     SPLIT_FRONT => 1,
     SPLIT_BACK => 0,
     COMPLETION => 1
+  },
+
+  # Letter 2 (only turns the number into a counter).
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] }
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 2,
+    METHOD => \&process_letter_n_exact,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
+    COMPLETION => 0
   },
 
 
@@ -214,22 +248,6 @@ my @REDUCTIONS =
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
-  },
-
-  # Letter 2 (only turns the number into a counter).
-  {
-    PATTERN =>
-    [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] }
-    ],
-    ANCHOR => 'EXACT',
-    KEEP_LAST => 2,
-    METHOD => \&process_letter_n_exact,
-    SPLIT_FRONT => 0,
-    SPLIT_BACK => 0,
-    COMPLETION => 0
   },
 
   # Letter 2A/B (only turns the data into a counter).
@@ -473,6 +491,17 @@ sub process_letter_n_exact
 
   my %hash = (BASE => $chain->value($match+2));
   my $token = $chain->check_out($match+2);
+  $token->set_counter(\%hash);
+}
+
+
+sub process_nl_exact
+{
+  # R 3A
+  my ($chain, $match) = @_;
+
+  my %hash = (BASE => $chain->value($match) . $chain->value($match+2));
+  my $token = $chain->check_out($match);
   $token->set_counter(\%hash);
 }
 
