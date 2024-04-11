@@ -216,7 +216,7 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
-  # R 2 (only turns the number into a counter).
+  # Letter 2 (only turns the number into a counter).
   {
     PATTERN =>
     [
@@ -232,7 +232,26 @@ my @REDUCTIONS =
     COMPLETION => 0
   },
 
-  # R 2 (only turns the number into a counter).
+  # Letter 2A/B (only turns the data into a counter).
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
+        VALUE => [qw(A B C D)] },
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 2,
+    METHOD => \&process_letter_nl_exact,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
+    COMPLETION => 0
+  },
+
+  # R counter (finishes, too).
   {
     PATTERN =>
     [
@@ -453,6 +472,17 @@ sub process_letter_n_exact
   my ($chain, $match) = @_;
 
   my %hash = (BASE => $chain->value($match+2));
+  my $token = $chain->check_out($match+2);
+  $token->set_counter(\%hash);
+}
+
+
+sub process_letter_nl_exact
+{
+  # R 3A
+  my ($chain, $match) = @_;
+
+  my %hash = (BASE => $chain->value($match+2) . $chain->value($match+4));
   my $token = $chain->check_out($match+2);
   $token->set_counter(\%hash);
 }
