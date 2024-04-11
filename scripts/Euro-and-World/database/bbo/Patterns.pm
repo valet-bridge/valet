@@ -48,7 +48,7 @@ my @REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
-    METHOD => 0,
+    METHOD => \&process_no_of_n_any,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 1
   },
@@ -64,7 +64,7 @@ my @REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
-    METHOD => 1,
+    METHOD => \&process_n_n_any,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 1
   },
@@ -79,7 +79,7 @@ my @REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 2,
-    METHOD => 4, # TODO Reorder
+    METHOD => \&process_ord_iter_any,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1
   },
@@ -94,7 +94,7 @@ my @REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 2,
-    METHOD => 5, # TODO Reorder
+    METHOD => \&process_group_letter_any,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1
   },
@@ -110,7 +110,7 @@ my @REDUCTIONS =
     ],
     ANCHOR => 'END',
     KEEP_LAST => 2,
-    METHOD => 2,
+    METHOD => \&process_iter_n_end,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 0
   },
@@ -125,7 +125,7 @@ my @REDUCTIONS =
     ],
     ANCHOR => 'END',
     KEEP_LAST => 2,
-    METHOD => 3,
+    METHOD => \&process_iter_counter_end,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 0
   },
@@ -140,9 +140,9 @@ my @REDUCTIONS =
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,
-    METHOD => 97,
+    METHOD => \&process_open_exact,
     SPLIT_FRONT => 0,
-    SPLIT_BACK => 0
+    SPLIT_BACK => 1
   },
 
   # 1, 4th
@@ -153,7 +153,7 @@ my @REDUCTIONS =
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,
-    METHOD => 96,
+    METHOD => \&process_no_exact,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0
   },
@@ -168,7 +168,7 @@ my @REDUCTIONS =
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 2,
-    METHOD => 98,
+    METHOD => \&process_no_iter_exact,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0
   },
@@ -183,7 +183,7 @@ my @REDUCTIONS =
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 2,
-    METHOD => 99,
+    METHOD => \&process_stage_n_exact,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0
   },
@@ -200,7 +200,7 @@ my @REDUCTIONS =
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 2,
-    METHOD => 100,
+    METHOD => \&process_iter_n_n_exact,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0
   }
@@ -359,19 +359,21 @@ sub process_open_exact
 {
   # Exactly the entry 'Open'.
   # Take it to mean open gender, open age.
-  my ($chain, $chains, $chain_no, $match) = @_;
+  my ($chain, $match) = @_;
 
   my $token = $chain->check_out(0);
   $token->set_singleton('GENDER', 'Open');
 
   my $token2 = Token->new();
   $token2->copy_origin_from($token);
-  $token2->set_singleton('AGE', 'Open');
+  $token2->set_separator('VIRTUAL');
+  $chain->append($token2);
 
-  my $chain2 = Chain->new();
-  $chain2->append($token2);
-  $chain2->complete_if_last_is(0);
-  splice(@$chains, $chain_no+1, 0, $chain2);
+  my $token3 = Token->new();
+  $token3->copy_origin_from($token);
+  $token3->set_singleton('AGE', 'Open');
+
+  $chain->append($token3);
 }
 
 
@@ -459,55 +461,7 @@ sub process_patterns
 
         if ($match >= 0)
         {
-          if ($reduction->{METHOD} == 0)
-          {
-            process_no_of_n_any($chain, $match);
-          }
-          elsif ($reduction->{METHOD} == 1)
-          {
-            process_n_n_any($chain, $match);
-          }
-          elsif ($reduction->{METHOD} == 4)
-          {
-            process_ord_iter_any($chain, $match);
-          }
-          elsif ($reduction->{METHOD} == 5)
-          {
-            process_group_letter_any($chain, $match);
-          }
-          elsif ($reduction->{METHOD} == 2)
-          {
-            process_iter_n_end($chain, $match);
-          }
-          elsif ($reduction->{METHOD} == 3)
-          {
-            process_iter_counter_end($chain, $match);
-          }
-
-          elsif ($reduction->{METHOD} == 97)
-          {
-            process_open_exact($chain, $chains, $chain_no, $match);
-          }
-          elsif ($reduction->{METHOD} == 96)
-          {
-            process_no_exact($chain, $match);
-          }
-          elsif ($reduction->{METHOD} == 98)
-          {
-            process_no_iter_exact($chain, $match);
-          }
-          elsif ($reduction->{METHOD} == 99)
-          {          
-            process_stage_n_exact($chain, $match);
-          }
-          elsif ($reduction->{METHOD} == 100)
-          {
-            process_iter_n_n_exact($chain, $match);
-          }
-          else
-          {
-            die "Unknown action $reduction->{METHOD}";
-          }
+          $reduction->{METHOD}->($chain, $match);
 
           if ($reduction->{KEEP_LAST} < $plen)
           {
