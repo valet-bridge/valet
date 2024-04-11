@@ -100,6 +100,15 @@ sub set_iterator_field
 }
 
 
+sub reset_iterator_field
+{
+  my ($self, $field) = @_;
+  $self->{CATEGORY} = 'ITERATOR';
+  $self->{FIELD} = $field;
+  delete $self->{VALUE} if exists $self->{VALUE};
+}
+
+
 sub set_counter
 {
   my ($self, $hash) = @_;

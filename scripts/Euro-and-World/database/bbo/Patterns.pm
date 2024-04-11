@@ -50,7 +50,8 @@ my @REDUCTIONS =
     KEEP_LAST => 0,
     METHOD => \&process_no_of_n_any,
     SPLIT_FRONT => 0,
-    SPLIT_BACK => 1
+    SPLIT_BACK => 1,
+    COMPLETION => 1
   },
 
   # 1_7, 2/9
@@ -66,7 +67,8 @@ my @REDUCTIONS =
     KEEP_LAST => 0,
     METHOD => \&process_n_n_any,
     SPLIT_FRONT => 0,
-    SPLIT_BACK => 1
+    SPLIT_BACK => 1,
+    COMPLETION => 1
   },
 
   # 1st half
@@ -81,7 +83,8 @@ my @REDUCTIONS =
     KEEP_LAST => 2,
     METHOD => \&process_ord_iter_any,
     SPLIT_FRONT => 1,
-    SPLIT_BACK => 1
+    SPLIT_BACK => 1,
+    COMPLETION => 1
   },
 
   # Group A
@@ -96,7 +99,8 @@ my @REDUCTIONS =
     KEEP_LAST => 2,
     METHOD => \&process_group_letter_any,
     SPLIT_FRONT => 1,
-    SPLIT_BACK => 1
+    SPLIT_BACK => 1,
+    COMPLETION => 1
   },
 
 
@@ -112,7 +116,8 @@ my @REDUCTIONS =
     KEEP_LAST => 2,
     METHOD => \&process_iter_n_end,
     SPLIT_FRONT => 1,
-    SPLIT_BACK => 0
+    SPLIT_BACK => 0,
+    COMPLETION => 1
   },
 
   # Round {COUNTER}
@@ -127,7 +132,8 @@ my @REDUCTIONS =
     KEEP_LAST => 2,
     METHOD => \&process_iter_counter_end,
     SPLIT_FRONT => 1,
-    SPLIT_BACK => 0
+    SPLIT_BACK => 0,
+    COMPLETION => 1
   },
 
 
@@ -142,7 +148,8 @@ my @REDUCTIONS =
     KEEP_LAST => 0,
     METHOD => \&process_open_exact,
     SPLIT_FRONT => 0,
-    SPLIT_BACK => 1
+    SPLIT_BACK => 1,
+    COMPLETION => 1
   },
 
   # 1, 4th
@@ -155,7 +162,8 @@ my @REDUCTIONS =
     KEEP_LAST => 0,
     METHOD => \&process_no_exact,
     SPLIT_FRONT => 0,
-    SPLIT_BACK => 0
+    SPLIT_BACK => 0,
+    COMPLETION => 1
   },
 
   # 16 boards
@@ -170,7 +178,8 @@ my @REDUCTIONS =
     KEEP_LAST => 2,
     METHOD => \&process_no_iter_exact,
     SPLIT_FRONT => 0,
-    SPLIT_BACK => 0
+    SPLIT_BACK => 0,
+    COMPLETION => 1
   },
 
   # Final 2
@@ -185,7 +194,8 @@ my @REDUCTIONS =
     KEEP_LAST => 2,
     METHOD => \&process_stage_n_exact,
     SPLIT_FRONT => 0,
-    SPLIT_BACK => 0
+    SPLIT_BACK => 0,
+    COMPLETION => 1
   },
 
   # Boards 19-21
@@ -202,8 +212,43 @@ my @REDUCTIONS =
     KEEP_LAST => 2,
     METHOD => \&process_iter_n_n_exact,
     SPLIT_FRONT => 0,
-    SPLIT_BACK => 0
-  }
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
+  # R 2 (only turns the number into a counter).
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] }
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 2,
+    METHOD => \&process_letter_n_exact,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
+    COMPLETION => 0
+  },
+
+  # R 2 (only turns the number into a counter).
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
+        VALUE => [qw(R)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 2,
+    METHOD => \&process_r_counter_exact,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
 );
 
 
@@ -402,6 +447,27 @@ sub process_no_iter_exact
 }
 
 
+sub process_letter_n_exact
+{
+  # R 3
+  my ($chain, $match) = @_;
+
+  my %hash = (BASE => $chain->value($match+2));
+  my $token = $chain->check_out($match+2);
+  $token->set_counter(\%hash);
+}
+
+
+sub process_r_counter_exact
+{
+  # R 3
+  my ($chain, $match) = @_;
+
+  my $token = $chain->check_out($match);
+  $token->reset_iterator_field('ROUND');
+}
+
+
 sub process_stage_n_exact
 {
   # Final 2.
@@ -475,14 +541,16 @@ sub process_patterns
           }
 
           # This is probably the same as match == 0.
-          $chain->complete_if_last_is($reduction->{KEEP_LAST});
+          $chain->complete_if_last_is($reduction->{KEEP_LAST}) if
+            $reduction->{COMPLETION};
 
           if ($reduction->{SPLIT_BACK} && 
               $match + $reduction->{KEEP_LAST} < $chain->last())
           {
             my $chain2 = $chain->split_on(
               $match + $reduction->{KEEP_LAST} + 2);
-            $chain->complete_if_last_is($reduction->{KEEP_LAST});
+            $chain->complete_if_last_is($reduction->{KEEP_LAST}) if
+              $reduction->{COMPLETION};
             $chain2->complete_if_last_is(0);
             splice(@$chains, $chain_no+1, 0, $chain2);
           }
@@ -491,7 +559,8 @@ sub process_patterns
           {
             my $chain2 = $chain->split_on($match);
             $chain->complete_if_last_is(0);
-            $chain2->complete_if_last_is($reduction->{KEEP_LAST});
+            $chain2->complete_if_last_is($reduction->{KEEP_LAST}) if
+              $reduction->{COMPLETION};
             splice(@$chains, $chain_no+1, 0, $chain2);
           }
         }
