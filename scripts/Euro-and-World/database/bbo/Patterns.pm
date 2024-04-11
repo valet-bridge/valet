@@ -260,10 +260,10 @@ my @REDUCTIONS =
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
     ],
-    ANCHOR => 'EXACT',
+    ANCHOR => 'END',
     KEEP_LAST => 2,
     METHOD => \&process_r_counter_exact,
-    SPLIT_FRONT => 0,
+    SPLIT_FRONT => 1,
     SPLIT_BACK => 0,
     COMPLETION => 1
   },
@@ -546,53 +546,46 @@ sub process_patterns
     {
       my $chain = $chains->[$chain_no];
 
-      # TODO
-      # do .. while change was effected.
-      # Only then increase the chain number.
-      if ($chain->status() eq 'OPEN')
-      {
-        my $match = $chain->match(
+      while ($chain->status() eq 'OPEN' &&
+        (my $match = $chain->match(
           $reduction->{PATTERN}, 
-          $reduction->{ANCHOR});
+          $reduction->{ANCHOR})) >= 0)
+      {
+        $reduction->{METHOD}->($chain, $match);
 
-        if ($match >= 0)
+        if ($reduction->{KEEP_LAST} < $plen)
         {
-          $reduction->{METHOD}->($chain, $match);
+          $chain->collapse_elements(
+            $match + $reduction->{KEEP_LAST}, 
+            $match + $plen);
 
-          if ($reduction->{KEEP_LAST} < $plen)
-          {
-            $chain->collapse_elements(
-              $match + $reduction->{KEEP_LAST}, 
-              $match + $plen);
+          $chain->delete(
+            $match + $reduction->{KEEP_LAST} + 1, 
+            $match + $plen);
+        }
 
-            $chain->delete(
-              $match + $reduction->{KEEP_LAST} + 1, 
-              $match + $plen);
-          }
+        # This is probably the same as match == 0.
+        $chain->complete_if_last_is($reduction->{KEEP_LAST}) if
+          $reduction->{COMPLETION};
 
-          # This is probably the same as match == 0.
+        if ($reduction->{SPLIT_BACK} && 
+            $match + $reduction->{KEEP_LAST} < $chain->last())
+        {
+          my $chain2 = $chain->split_on(
+            $match + $reduction->{KEEP_LAST} + 2);
           $chain->complete_if_last_is($reduction->{KEEP_LAST}) if
             $reduction->{COMPLETION};
+          $chain2->complete_if_last_is(0);
+          splice(@$chains, $chain_no+1, 0, $chain2);
+        }
 
-          if ($reduction->{SPLIT_BACK} && 
-              $match + $reduction->{KEEP_LAST} < $chain->last())
-          {
-            my $chain2 = $chain->split_on(
-              $match + $reduction->{KEEP_LAST} + 2);
-            $chain->complete_if_last_is($reduction->{KEEP_LAST}) if
-              $reduction->{COMPLETION};
-            $chain2->complete_if_last_is(0);
-            splice(@$chains, $chain_no+1, 0, $chain2);
-          }
-
-          if ($reduction->{SPLIT_FRONT} && $match > 0)
-          {
-            my $chain2 = $chain->split_on($match);
-            $chain->complete_if_last_is(0);
-            $chain2->complete_if_last_is($reduction->{KEEP_LAST}) if
-              $reduction->{COMPLETION};
-            splice(@$chains, $chain_no+1, 0, $chain2);
-          }
+        if ($reduction->{SPLIT_FRONT} && $match > 0)
+        {
+          my $chain2 = $chain->split_on($match);
+          $chain->complete_if_last_is(0);
+          $chain2->complete_if_last_is($reduction->{KEEP_LAST}) if
+            $reduction->{COMPLETION};
+          splice(@$chains, $chain_no+1, 0, $chain2);
         }
       }
       $chain_no++;
