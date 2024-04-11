@@ -186,8 +186,27 @@ my @REDUCTIONS =
     METHOD => 99,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0
+  },
+
+  # Boards 19-21
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [ qw(ITERATOR)] },
+      { CATEGORY => [ qw(SEPARATOR)] },
+      { CATEGORY => [ qw(SINGLETON) ], FIELD => [ qw(NUMERAL)] },
+      { CATEGORY => [ qw(SEPARATOR) ], FIELD => [ 0x10 ] }, # TODO Dash
+      { CATEGORY => [ qw(SINGLETON) ], FIELD => [ qw(NUMERAL)] }
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 2,
+    METHOD => 100,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0
   }
 );
+
+
 
 my @PATTERNS =
 (
@@ -218,17 +237,6 @@ my @PATTERNS =
   ],
 
 
-  # 7th Match (from the front)
-  [
-    [
-      { CATEGORY => [qw(ORDINAL)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(ITERATOR)] },
-    ],
-    [ 'COUNTER_SINGLE', 2, 0, 'VALUE'],
-    'BEGIN'
-  ],
-
   # Final 2 (from the end)
   [
     [
@@ -258,17 +266,6 @@ my @PATTERNS =
     'EXACT'
   ],
 
-  # 3_4 (exact)
-  [
-    [
-      { CATEGORY => [qw(NUMERAL)] },
-      { CATEGORY => [qw(SEPARATOR)], VALUE => [qw(UNDERSCORE)] },
-      { CATEGORY => [qw(NUMERAL)] }
-    ],
-    [ 'COUNTER_GENERIC_OF', 0, 0, 'VALUE', 2, 'VALUE'],
-    'EXACT'
-  ],
-
   # 3 Round (exact)
   [
     [
@@ -279,159 +276,7 @@ my @PATTERNS =
     [ 'COUNTER_SINGLE', 2, 0, 'VALUE'],
     'EXACT'
   ],
-
-  # 2 of 4 (exact)
-  [
-    [
-      { CATEGORY => [qw(NUMERAL ORDINAL)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(PARTICLE)], VALUE => [qw(Of)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(NUMERAL)] }
-    ],
-    [ 'COUNTER_GENERIC_OF', 0, 0, 'VALUE', 4, 'VALUE'],
-    'EXACT'
-  ],
-
-  # 2/4 (exact)
-  [
-    [
-      { CATEGORY => [qw(NUMERAL)] },
-      { CATEGORY => [qw(SEPARATOR)], VALUE => [qw(SLASH)] },
-      { CATEGORY => [qw(NUMERAL)] }
-    ],
-    [ 'COUNTER_GENERIC_OF', 0, 0, 'VALUE', 2, 'VALUE'],
-    'EXACT'
-  ],
 );
-
-
-sub pattern_elem_match
-{
-  my ($chain_elem, $pattern_elem) = @_;
-
-  my $category = $chain_elem->{CATEGORY};
-
-  my $hit = 0;
-  for my $cand (@{$pattern_elem->{CATEGORY}})
-  {
-    if ($category eq $cand)
-    {
-      $hit = 1;
-      last;
-    }
-  }
-
-  return 0 unless $hit;
-  return 1 unless defined $pattern_elem->{VALUE};
-
-  my $value = $chain_elem->{VALUE};
-
-  for my $cand (@{$pattern_elem->{VALUE}})
-  {
-    if ($value eq $cand)
-    {
-      return 1;
-    }
-  }
-  return 0;
-}
-
-
-sub pattern_match
-{
-  my ($chain, $start_index, $elem_pattern, $plen) = @_;
-
-  for my $p (0 .. $plen)
-  {
-    return 0 unless pattern_elem_match(
-        $chain->[$start_index + $p], $elem_pattern->[$p]);
-  }
-  return 1;
-}
-
-
-sub collapse_elements
-{
-  my ($elem, $chain, $start_index, $anchor_count, $plen) = @_;
-
-  # Before we splice out the matched elements, we keep some
-  # information from them.
-
-  $elem->{CATEGORY} = $chain->[$start_index + $anchor_count]{CATEGORY};
-  $elem->{VALUE} = $chain->[$start_index + $anchor_count]{VALUE};
-
-  for my $p (1 .. $plen)
-  {
-    $elem->{text} .= $chain->[$start_index + $p]{text};
-  }
-
-  $elem->{position_last} = $chain->[$start_index + $plen]{position_last};
-}
-
-
-sub make_arg_list
-{
-  my ($chain, $start_index, $reaction, $arg_list_ref) = @_;
-
-  for (my $r = 2; $r <= $#$reaction; $r += 2)
-  {
-    my $pos = $start_index + $reaction->[$r];
-    push @$arg_list_ref, $chain->[$pos]{$reaction->[$r+1]};
-  }
-}
-
-
-sub index_match
-{
-  my ($chain, $index, $pattern, $plen, 
-    $chains_ref, $chain_no, $chain_max_ref, $solved_ref) = @_;
-
-  return unless pattern_match($chain, $index, $pattern->[0], $plen);
-
-  if ($pattern->[1][0] eq 'KILL')
-  {
-    # Special case.
-    my $elem = $chain->[$index];
-    splice(@$chain, $index+1, $plen);
-    split_chain_on($chains_ref, $chain_no, $chain_max_ref, $elem, $index);
-    return;
-  }
-
-  my $cat;
-  if ($pattern->[1][0] =~ /^COUNTER_GENERIC/)
-  {
-    # Make a unique extension if needed.
-    my $cat0 = $pattern->[1][0];
-    $cat = $cat0;
-    my $try = 1;
-    while (exists $solved_ref->{$cat})
-    {
-      $cat = $cat0 . "_$try";
-      $try++;
-    }
-  }
-  else
-  {
-    $cat = $chain->[$index + $pattern->[1][1]]{VALUE};
-  }
-
-  $solved_ref->{$cat} = Tchar->new() unless exists $solved_ref->{$cat};
-
-  my $reaction = $pattern->[1];
-
-  my @arg_list;
-  make_arg_list($chain, $index, $reaction, \@arg_list);
-
-  my $elem = $chain->[$index];
-  collapse_elements($elem, $chain, $index, $reaction->[1], $plen);
-
-  splice(@$chain, $index+1, $plen);
-
-  $solved_ref->{$cat}->set($reaction->[0], $elem, @arg_list);
-
-  split_chain_on($chains_ref, $chain_no, $chain_max_ref, $elem, $index);
-}
 
 
 sub process_no_of_n_any
@@ -566,6 +411,30 @@ sub process_stage_n_exact
 }
 
 
+sub process_iter_n_n_exact
+{
+  # Boards 19-21.
+  my ($chain, $match) = @_;
+
+  my $n1 = $chain->value($match+2);
+  my $n2 = $chain->value($match+4);
+
+  my %hash;
+  if ($n1 <= $n2)
+  {
+    # Heuristic, may not be true.
+    my %hash = (BASE => $n1, TO => $n2);
+  }
+  else
+  {
+    my %hash = (MAJOR => $n1, MINOR => $n2);
+  }
+
+  my $token = $chain->check_out($match+2);
+  $token->set_counter(\%hash);
+}
+
+
 sub process_patterns
 {
   my ($chains) = @_;
@@ -630,6 +499,10 @@ sub process_patterns
           elsif ($reduction->{METHOD} == 99)
           {          
             process_stage_n_exact($chain, $match);
+          }
+          elsif ($reduction->{METHOD} == 100)
+          {
+            process_iter_n_n_exact($chain, $match);
           }
           else
           {
