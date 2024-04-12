@@ -163,8 +163,8 @@ sub status
 
 sub complete_if_last_is
 {
-  my ($self, $last) = @_;
-  $self->{STATUS} = 'COMPLETE' if $self->{LAST} == $last;
+  my ($self, $last, $status) = @_;
+  $self->{STATUS} = $status if $self->{LAST} == $last;
 }
 
 

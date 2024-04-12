@@ -32,6 +32,8 @@ my %SIMPLE_CATEGORIES = map { $_ => 1} @SIMPLE_LIST;
 # SPLIT_FRONT and SPLIT_BACK (binary) indicate whether the
 # chain should be split if possible before the first match and/or
 # after the last match.
+#
+# COMPLETION regulates whether to try to complete the chain.
 
 my @REDUCTIONS =
 (
@@ -116,6 +118,25 @@ my @REDUCTIONS =
     ANCHOR => 'ANY',
     KEEP_LAST => 2,
     METHOD => \&process_group_letter_any,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
+  # 2v3 (destroy, anywhere)
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(SINGLETON)], FIELD => [ qw(ROMAN) ],
+        VALUE => [ 5 ] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 4,
+    METHOD => \&process_kill,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -305,20 +326,6 @@ my @PATTERNS =
     'ANY'
   ],
 
-  # 2v3 (destroy, anywhere)
-  [
-    [
-      { CATEGORY => [qw(NUMERAL )] },
-      { CATEGORY => [qw(SEPARATOR)], VALUE => [qw(ARTIFICIAL)] },
-      { CATEGORY => [qw(ROMAN)], VALUE => [qw(5)] },
-      { CATEGORY => [qw(SEPARATOR)], VALUE => [qw(ARTIFICIAL)] },
-      { CATEGORY => [qw(NUMERAL)] }
-    ],
-    [ 'KILL', 0],
-    'ANY'
-  ],
-
-
   # Final 2 (from the end)
   [
     [
@@ -434,6 +441,11 @@ sub process_iter_counter_end
 {
   # Round {counter}: Nothing to do.
   # TODO Could mash into the iterator.
+}
+
+
+sub process_kill
+{
 }
 
 
@@ -582,6 +594,16 @@ sub process_patterns
       {
         $reduction->{METHOD}->($chain, $match);
 
+        my $cstatus;
+        if ($reduction->{METHOD} eq \&process_kill)
+        {
+          $cstatus = 'KILLED';
+        }
+        else
+        {
+          $cstatus = 'COMPLETE';
+        }
+
         if ($reduction->{KEEP_LAST} < $plen)
         {
           $chain->collapse_elements(
@@ -594,7 +616,7 @@ sub process_patterns
         }
 
         # This is probably the same as match == 0.
-        $chain->complete_if_last_is($reduction->{KEEP_LAST}) if
+        $chain->complete_if_last_is($reduction->{KEEP_LAST}, $cstatus) if
           $reduction->{COMPLETION};
 
         if ($reduction->{SPLIT_BACK} && 
@@ -602,18 +624,18 @@ sub process_patterns
         {
           my $chain2 = $chain->split_on(
             $match + $reduction->{KEEP_LAST} + 2);
-          $chain->complete_if_last_is($reduction->{KEEP_LAST}) if
+          $chain->complete_if_last_is($reduction->{KEEP_LAST}, $cstatus) if
             $reduction->{COMPLETION};
-          $chain2->complete_if_last_is(0);
+          $chain2->complete_if_last_is(0, 'COMPLETE');
           splice(@$chains, $chain_no+1, 0, $chain2);
         }
 
         if ($reduction->{SPLIT_FRONT} && $match > 0)
         {
           my $chain2 = $chain->split_on($match);
-          $chain->complete_if_last_is(0);
-          $chain2->complete_if_last_is($reduction->{KEEP_LAST}) if
-            $reduction->{COMPLETION};
+          $chain->complete_if_last_is(0, 'COMPLETE');
+          $chain2->complete_if_last_is($reduction->{KEEP_LAST}, $cstatus) 
+            if $reduction->{COMPLETION};
           splice(@$chains, $chain_no+1, 0, $chain2);
         }
       }
