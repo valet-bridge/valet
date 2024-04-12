@@ -35,8 +35,40 @@ my %SIMPLE_CATEGORIES = map { $_ => 1} @SIMPLE_LIST;
 #
 # COMPLETION regulates whether to try to complete the chain.
 
+my %MONTHS = (
+  'January' => '01',
+  'February' => '02',
+  'March' => '03',
+  'April' => '04',
+  'May' => '05',
+  'June' => '06',
+  'July' => '07',
+  'August' => '08',
+  'September' => '09',
+  'October' => '10',
+  'November' => '11',
+  'December' => '12');
+
+
 my @REDUCTIONS =
 (
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL ORDINAL)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(MONTH)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(YEAR)] }
+    ],
+    ANCHOR => 'BEGIN',
+    KEEP_LAST => 0,
+    METHOD => \&process_date_any,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
   # 7 of 9
   {
     PATTERN =>
@@ -203,7 +235,67 @@ my @REDUCTIONS =
     KEEP_LAST => 0,
     METHOD => \&process_open_exact,
     SPLIT_FRONT => 0,
-    SPLIT_BACK => 1,
+    SPLIT_BACK => 1, # Split one Open from the other
+    COMPLETION => 1
+  },
+
+  # O
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
+        VALUE => [qw(O)] },
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 0,
+    METHOD => \&process_open_exact,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 1, # Split one Open from the other
+    COMPLETION => 1
+  },
+
+  # W
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
+        VALUE => [qw(W)] },
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 0,
+    METHOD => \&process_women_exact,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
+  # J
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
+        VALUE => [qw(J)] },
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 0,
+    METHOD => \&process_juniors_exact,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
+  # Y
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
+        VALUE => [qw(Y)] },
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 0,
+    METHOD => \&process_youngsters_exact,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
     COMPLETION => 1
   },
 
@@ -310,62 +402,22 @@ my @REDUCTIONS =
 );
 
 
+sub process_date_any
+{
+  # 13 December 2004.
+  my ($chain, $match) = @_;
 
-my @PATTERNS =
-(
-  # 7 February 2004 (anywhere)
-  [
-    [
-      { CATEGORY => [qw(NUMERAL ORDINAL)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(MONTH)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(YEAR)] }
-    ],
-    [ 'DATE', 0, 0, 'VALUE', 2, 'VALUE', 4, 'VALUE'],
-    'ANY'
-  ],
+  my $month = $chain->value($match+2);
+  die "$month not a month" unless defined $MONTHS{$month};
 
-  # Final 2 (from the end)
-  [
-    [
-      { CATEGORY => [qw(ITERATOR TABLE)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(NUMERAL)] }
-    ],
-    [ 'COUNTER_SINGLE', 0, 2, 'VALUE'],
-    'END'
-  ],
+  my $day = $chain->value($match);
+  $day = '0' . $day if $day < 10;
 
-  # Final (exact; so an iterator without a value)
-  [
-    [
-      { CATEGORY => [qw(ITERATOR)] }
-    ],
-    [ 'COUNTER_NONE', 0],
-    'EXACT'
-  ],
+  my $str = $chain->value($match+4) . '-' . $MONTHS{$month} . '-' . $day;
 
-  # Number (exact)
-  [
-    [
-      { CATEGORY => [qw(NUMERAL ORDINAL)] }
-    ],
-    [ 'COUNTER_GENERIC', 0, 0, 'VALUE'],
-    'EXACT'
-  ],
-
-  # 3 Round (exact)
-  [
-    [
-      { CATEGORY => [qw(NUMERAL ORDINAL)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(ITERATOR)] }
-    ],
-    [ 'COUNTER_SINGLE', 2, 0, 'VALUE'],
-    'EXACT'
-  ],
-);
+  my $token = $chain->check_out($match);
+  $token->set_singleton('DATE', $str);
+}
 
 
 sub process_no_of_n_any
@@ -468,6 +520,36 @@ sub process_open_exact
   $token3->set_singleton('AGE', 'Open');
 
   $chain->append($token3);
+}
+
+
+sub process_women_exact
+{
+  # Exactly the entry 'W'.
+  my ($chain, $match) = @_;
+
+  my $token = $chain->check_out(0);
+  $token->set_singleton('GENDER', 'Women');
+}
+
+
+sub process_juniors_exact
+{
+  # Exactly the entry 'J'.
+  my ($chain, $match) = @_;
+
+  my $token = $chain->check_out(0);
+  $token->set_singleton('AGE', 'Juniors');
+}
+
+
+sub process_youngsters_exact
+{
+  # Exactly the entry 'Y'.
+  my ($chain, $match) = @_;
+
+  my $token = $chain->check_out(0);
+  $token->set_singleton('AGE', 'Youngsters');
 }
 
 
