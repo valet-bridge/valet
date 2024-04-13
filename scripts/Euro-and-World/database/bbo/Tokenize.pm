@@ -288,7 +288,8 @@ sub is_small_integer
   if ($part =~ /^\d+$/ && $part >= 0 && $part < 100)
   {
     $part =~ s/^0+//; # Remove leading zeroes
-    $token->set_singleton('NUMERAL', $part);
+    # $token->set_singleton('NUMERAL', $part);
+    $token->set_numeral_counter($part);
     return 1;
   }
   elsif ($part =~ /^#(\d+)$/ && $1 >= 0 && $1 < 100)
@@ -297,7 +298,8 @@ sub is_small_integer
     my $n = $1;
     $n =~ s/^0+//; # Remove leading zeroes
 
-    $token->set_singleton('NUMERAL', $n);
+    # $token->set_singleton('NUMERAL', $n);
+    $token->set_numeral_counter($n);
     return 1;
   }
   else
@@ -341,7 +343,8 @@ sub fix_small_ordinal
     if ($ord >= 0 && $ord < 100)
     {
       $ord =~ s/^0+//; # Remove leading zeroes
-      $token->set_singleton('ORDINAL', $ord);
+      # $token->set_singleton('ORDINAL', $ord);
+      $token->set_ordinal_counter($ord);
       return 1;
     }
     else
@@ -360,7 +363,13 @@ sub is_letter
 {
   my ($part, $token) = @_;
 
-  if ($part =~ /^[A-Za-z]$/)
+  my $lc = lc($part);
+  if ($lc =~ /^[abcdefh]$/)
+  {
+    $token->set_letter_counter($part);
+    return 1;
+  }
+  elsif ($lc =~ /^[a-z]$/)
   {
     $token->set_singleton('LETTER', $part);
     return 1;
@@ -443,6 +452,14 @@ sub study_part
       $token3->set_origin($i, $part);
       $chain->append($token3);
       $token3->set_singleton('GENDER', 'Women');
+    }
+    elsif ($fix->{CATEGORY} eq 'NUMERAL')
+    {
+      $token->set_numeral_counter($fix->{VALUE});
+    }
+    elsif ($fix->{CATEGORY} eq 'ORDINAL')
+    {
+      $token->set_ordinal_counter($fix->{VALUE});
     }
     else
     {

@@ -109,10 +109,39 @@ sub reset_iterator_field
 }
 
 
+sub set_numeral_counter
+{
+  my ($self, $value) = @_;
+  $self->{CATEGORY} = 'COUNTER';
+  $self->{FIELD} = 'NUMERAL';
+  $self->{VALUE} = $value;
+}
+
+
+sub set_ordinal_counter
+{
+  my ($self, $value) = @_;
+  $self->{CATEGORY} = 'COUNTER';
+  $self->{FIELD} = 'ORDINAL';
+  $self->{VALUE} = $value;
+}
+
+
+sub set_letter_counter
+{
+  my ($self, $value) = @_;
+  $self->{CATEGORY} = 'COUNTER';
+  $self->{FIELD} = 'LETTER';
+  $self->{VALUE} = $value;
+}
+
+
 sub set_counter
 {
   my ($self, $hash) = @_;
   $self->{CATEGORY} = 'COUNTER';
+  $self->{FIELD} = 'COMPLEX';
+  delete $self->{VALUE} if exists $self->{VALUE};
   $self->{$_} = $hash->{$_} for keys %$hash;
 }
 

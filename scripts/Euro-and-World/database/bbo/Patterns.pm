@@ -9,7 +9,7 @@ use open ':std', ':encoding(UTF-8)';
 package Patterns;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(process_patterns);
+our @EXPORT = qw(process_patterns @RMATCH);
 
 use lib '.';
 use lib '..';
@@ -49,6 +49,7 @@ my %MONTHS = (
   'November' => '11',
   'December' => '12');
 
+our @RMATCH;
 
 my @REDUCTIONS =
 (
@@ -56,7 +57,7 @@ my @REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL ORDINAL)] },
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL ORDINAL)] },
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(SINGLETON)], FIELD => [qw(MONTH)] },
       { CATEGORY => [qw(SEPARATOR)] },
@@ -74,12 +75,12 @@ my @REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL ORDINAL)] },
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL ORDINAL)] },
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(SINGLETON)], FIELD => [qw(PARTICLE)],
         VALUE => [qw(Of)] },
       { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] }
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
@@ -93,15 +94,14 @@ my @REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] },
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
       { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
-        VALUE => [qw(A B C D)] },
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(LETTER)] },
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(SINGLETON)], FIELD => [qw(PARTICLE)],
         VALUE => [qw(Of)] },
       { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] }
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
@@ -115,10 +115,10 @@ my @REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] },
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
       # TODO Use Separators.pm
       { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x20, 0x80) ] }, 
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] }
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
@@ -132,12 +132,11 @@ my @REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] },
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
       { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
-        VALUE => [qw(A B C D)] },
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(LETTER)] },
       { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x20, 0x80) ] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] }
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
@@ -151,7 +150,7 @@ my @REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(ORDINAL)] },
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(ORDINAL)] },
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(ITERATOR)] }
     ],
@@ -167,17 +166,16 @@ my @REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] },
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
       { CATEGORY => [qw(SEPARATOR)], FIELD => [ 0x800 ] }, # TODO Virtual
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
-        VALUE => [qw(A B C D)] },
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(LETTER)] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
     METHOD => \&process_nl_exact,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
-    COMPLETION => 0
+    COMPLETION => 1
   },
 
 
@@ -187,7 +185,7 @@ my @REDUCTIONS =
     [
       { CATEGORY => [qw(ITERATOR)], FIELD => [qw(Group Match)] },
       { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)] }
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(LETTER)] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 2,
@@ -201,12 +199,12 @@ my @REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] },
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(SINGLETON)], FIELD => [ qw(ROMAN) ],
         VALUE => [ 5 ] },
       { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] }
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 4,
@@ -223,7 +221,7 @@ my @REDUCTIONS =
     [
       { CATEGORY => [qw(ITERATOR)] },
       { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] }
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
     ],
     ANCHOR => 'END',
     KEEP_LAST => 2,
@@ -253,9 +251,9 @@ my @REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)] },
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(LETTER)] },
       { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] }
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 2,
@@ -345,7 +343,7 @@ my @REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL ORDINAL)] }
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL ORDINAL)] }
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,
@@ -359,7 +357,7 @@ my @REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL ORDINAL)] },
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL ORDINAL)] },
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(ITERATOR)] }
     ],
@@ -377,7 +375,7 @@ my @REDUCTIONS =
     [
       { CATEGORY => [qw(SINGLETON)], FIELD => [qw(STAGE)] },
       { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] }
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 2,
@@ -393,9 +391,9 @@ my @REDUCTIONS =
     [
       { CATEGORY => [ qw(ITERATOR)] },
       { CATEGORY => [ qw(SEPARATOR)] },
-      { CATEGORY => [ qw(SINGLETON) ], FIELD => [ qw(NUMERAL)] },
+      { CATEGORY => [ qw(COUNTER) ], FIELD => [ qw(NUMERAL)] },
       { CATEGORY => [ qw(SEPARATOR) ], FIELD => [ 0x10 ] }, # TODO Dash
-      { CATEGORY => [ qw(SINGLETON) ], FIELD => [ qw(NUMERAL)] }
+      { CATEGORY => [ qw(COUNTER) ], FIELD => [ qw(NUMERAL)] }
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 2,
@@ -411,10 +409,9 @@ my @REDUCTIONS =
     [
       { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)] },
       { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] },
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
       { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
-        VALUE => [qw(A B C D)] },
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(LETTER)] }
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 2,
@@ -431,24 +428,7 @@ my @REDUCTIONS =
       { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
         VALUE => [qw(J Q S W Y R)] },
       { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
-    ],
-    ANCHOR => 'END',
-    KEEP_LAST => 2,
-    METHOD => \&process_letter_counter_exact,
-    SPLIT_FRONT => 1,
-    SPLIT_BACK => 0,
-    COMPLETION => 1
-  },
-
-  # R/S/Q/... number (finishes, too).
-  {
-    PATTERN =>
-    [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
-        VALUE => [qw(J Q S W Y R)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] }
+      { CATEGORY => [qw(COUNTER)] }
     ],
     ANCHOR => 'END',
     KEEP_LAST => 2,
@@ -755,6 +735,7 @@ sub process_patterns
 {
   my ($chains) = @_;
 
+  my $rno = 0;
   for my $reduction (@REDUCTIONS)
   {
     my $plen = $#{$reduction->{PATTERN}};
@@ -769,6 +750,7 @@ sub process_patterns
           $reduction->{PATTERN}, 
           $reduction->{ANCHOR})) >= 0)
       {
+        $RMATCH[$rno]++;
         $reduction->{METHOD}->($chain, $match);
 
         my $cstatus;
@@ -818,6 +800,7 @@ sub process_patterns
       }
       $chain_no++;
     }
+    $rno++;
   }
 }
 

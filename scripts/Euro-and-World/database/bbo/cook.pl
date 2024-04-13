@@ -54,7 +54,7 @@ while ($line = <$fh>)
     }
     else
     {
-      if ($chunk{BBONO} == 3661)
+      if ($chunk{BBONO} == 11)
       {
         print "HERE\n";
       }
@@ -146,9 +146,15 @@ for my $i (0 .. $#chain_stats)
   printf("%6d%10d%10d%10d\n", $i, $h{OPEN}, $h{COMPLETE}, $h{KILLED});
 }
 print '-' x 36, "\n";
-printf("%6s%10d%10d%10d\n", "Sum",
+printf("%6s%10d%10d%10d\n\n", "Sum",
   $csum{OPEN}, $csum{COMPLETE}, $csum{KILLED});
 
+print "Reduction matches:\n";
+for my $i (0 .. $#RMATCH)
+{
+  next unless defined $RMATCH[$i];
+  printf("%6d%10d\n", $i, $RMATCH[$i]);
+}
 
 sub print_chunk
 {
