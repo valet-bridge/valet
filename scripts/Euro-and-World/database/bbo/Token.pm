@@ -162,6 +162,12 @@ sub merge_counters
       $self->{FIELD} = 'N_OF_N';
       $self->{VALUE} .= ' of ' . $token2->{VALUE};
     }
+    elsif ($sep eq ':')
+    {
+      # Something like 7-1 where we don't know their names.
+      $self->{FIELD} = 'MAJOR_MINOR';
+      $self->{VALUE} .= '+' . $token2->{VALUE};
+    }
     elsif ($sep eq '-')
     {
       if ($self->{VALUE} <= $token2->{VALUE})

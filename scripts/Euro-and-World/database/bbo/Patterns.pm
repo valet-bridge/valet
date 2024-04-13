@@ -170,6 +170,23 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
+  # 6:1
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
+      # TODO Use Separators.pm
+      { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x4) ] }, 
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&process_merge_0colon2,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
   # TODO 7-9 as 'to', but first fix 3-4-5-6-7 into a 'to' range
 
 
@@ -181,13 +198,28 @@ my @REDUCTIONS =
     PATTERN =>
     [
       { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
-        VALUE => [qw(R T)] },
+        VALUE => [qw(R)] },
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(COUNTER)] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 2,
-    METHOD => \&process_rt_counter,
+    METHOD => \&process_r_counter,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(ITERATOR)], FIELD => [qw(Table)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(COUNTER)] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 2,
+    METHOD => \&process_general,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -460,6 +492,16 @@ sub process_merge_0of2
 }
 
 
+sub process_merge_0colon2
+{
+  # 6:1.
+  my ($chain, $match) = @_;
+
+  my $token = $chain->check_out($match);
+  $token->merge_counters(':', $chain->check_out($match+2));
+}
+
+
 sub process_merge_0of4
 {
   # 7 of 9, 7th of 9: Mash into one counter.
@@ -495,9 +537,9 @@ sub process_kill
 }
 
 
-sub process_rt_counter
+sub process_r_counter
 {
-  # R/T counter.
+  # R counter.
   my ($chain, $match) = @_;
 
   my $token = $chain->check_out($match);
