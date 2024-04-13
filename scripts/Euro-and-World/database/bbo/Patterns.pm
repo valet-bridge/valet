@@ -71,11 +71,28 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
+  # 2A/B -> COUNTER
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
+      { CATEGORY => [qw(SEPARATOR)]},
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(LETTER)] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&process_nl_exact,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
+
   # 7 of 9, 7th of 9 -> COUNTER
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL ORDINAL)] },
+      { CATEGORY => [qw(COUNTER)]},
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(SINGLETON)], FIELD => [qw(PARTICLE)],
         VALUE => [qw(Of)] },
@@ -85,27 +102,6 @@ my @REDUCTIONS =
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
     METHOD => \&process_no_of_n_any,
-    SPLIT_FRONT => 0,
-    SPLIT_BACK => 1,
-    COMPLETION => 1
-  },
-
-  # 7 A of 9 -> COUNTER
-  {
-    PATTERN =>
-    [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(LETTER)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(PARTICLE)],
-        VALUE => [qw(Of)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
-    ],
-    ANCHOR => 'ANY',
-    KEEP_LAST => 0,
-    METHOD => \&process_n_letter_of_n_any,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -128,24 +124,6 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
-  # 1A_7, 2A/9 -> COUNTER
-  {
-    PATTERN =>
-    [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(LETTER)] },
-      { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x20, 0x80) ] },
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
-    ],
-    ANCHOR => 'ANY',
-    KEEP_LAST => 0,
-    METHOD => \&process_n_letter_n_any,
-    SPLIT_FRONT => 0,
-    SPLIT_BACK => 1,
-    COMPLETION => 1
-  },
-
   # 1st half -> Half 1 (ITER COUNTER)
   {
     PATTERN =>
@@ -159,22 +137,6 @@ my @REDUCTIONS =
     METHOD => \&process_ord_iter_any,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
-    COMPLETION => 1
-  },
-
-  # 2A/B -> COUNTER
-  {
-    PATTERN =>
-    [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
-      { CATEGORY => [qw(SEPARATOR)], FIELD => [ 0x800 ] }, # TODO Virtual
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(LETTER)] }
-    ],
-    ANCHOR => 'ANY',
-    KEEP_LAST => 0,
-    METHOD => \&process_nl_exact,
-    SPLIT_FRONT => 0,
-    SPLIT_BACK => 0,
     COMPLETION => 1
   },
 
@@ -260,7 +222,7 @@ my @REDUCTIONS =
     METHOD => \&process_letter_n_exact,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
-    COMPLETION => 0
+    COMPLETION => 1
   },
 
 
@@ -369,22 +331,6 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
-  # Final 2
-  {
-    PATTERN =>
-    [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(STAGE)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
-    ],
-    ANCHOR => 'EXACT',
-    KEEP_LAST => 2,
-    METHOD => \&process_stage_n_exact,
-    SPLIT_FRONT => 0,
-    SPLIT_BACK => 0,
-    COMPLETION => 1
-  },
-
   # Boards 19-21
   {
     PATTERN =>
@@ -401,24 +347,6 @@ my @REDUCTIONS =
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
-  },
-
-  # Letter 2A/B (only turns the data into a counter).
-  {
-    PATTERN =>
-    [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(LETTER)] }
-    ],
-    ANCHOR => 'EXACT',
-    KEEP_LAST => 2,
-    METHOD => \&process_letter_nl_exact,
-    SPLIT_FRONT => 0,
-    SPLIT_BACK => 0,
-    COMPLETION => 0
   },
 
   # R/S/Q/... counter (finishes, too).
@@ -463,102 +391,47 @@ sub process_no_of_n_any
   # 7 of 9, 7th of 9: Mash into one counter.
   my ($chain, $match) = @_;
 
-  my %hash = (BASE => $chain->value($match),
-    OF => $chain->value($match+4));
-
   my $token = $chain->check_out($match);
-  $token->set_counter(\%hash);
-}
-
-
-sub process_n_letter_of_n_any
-{
-  # 7 A of 9.
-  my ($chain, $match) = @_;
-
-  my %hash = (
-    BASE => $chain->value($match) . $chain->value($match+2),
-    OF => $chain->value($match+6));
-
-  my $token = $chain->check_out($match);
-  $token->set_counter(\%hash);
-}
-
-
-sub process_n_letter_n_any
-{
-  # 7 A / 9.
-  my ($chain, $match) = @_;
-
-  my %hash = (
-    BASE => $chain->value($match) . $chain->value($match+2),
-    OF => $chain->value($match+4));
-
-  my $token = $chain->check_out($match);
-  $token->set_counter(\%hash);
+  $token->merge_counters('of', $chain->check_out($match+4));
 }
 
 
 sub process_n_n_any
 {
   # 7_9, 7/9: Mash into one counter.
-  # TODO Effectively the same as the previous method (with an arg).
   my ($chain, $match) = @_;
 
-  my %hash = (BASE => $chain->value($match),
-    OF => $chain->value($match+2));
-
   my $token = $chain->check_out($match);
-  $token->set_counter(\%hash);
+  $token->merge_counters('of', $chain->check_out($match+2));
 }
 
 
 sub process_ord_iter_any
 {
   # 1st half: Swap them.
-  # TODO Could mash into the iterator.
   my ($chain, $match) = @_;
 
-  my %hash = (BASE => $chain->value($match));
-
-  my $token = $chain->check_out($match);
-  $token->set_counter(\%hash);
-  
   $chain->swap($match, $match+2);
 }
 
 
 sub process_group_letter_any
 {
-  # Group A.
-  # TODO Could mash into the iterator.
-  my ($chain, $match) = @_;
+  # Group A. Nothing to do.
 
-  my %hash = (BASE => $chain->value($match+2));
-
-  my $token = $chain->check_out($match+2);
-  $token->set_counter(\%hash);
 }
 
 
 sub process_iter_n_end
 {
-  # Round 5.
-  # TODO Could mash into the iterator.
-  # TODO Same as previous method.
-  my ($chain, $match) = @_;
+  # Round 5. Nothing to do.
 
-  my %hash = (BASE => $chain->value($match+2));
-
-  my $token = $chain->check_out($match+2);
-  $token->set_counter(\%hash);
 }
 
 
 sub process_iter_counter_end
 {
-  # Round {counter}: Nothing to do.
-  # TODO Could mash into the iterator.
+  # Nothing to do.
 }
 
 
@@ -624,9 +497,10 @@ sub process_no_exact
   # Number or ordinal.
   my ($chain, $match) = @_;
 
-  my %hash = (BASE => $chain->value(0));
-  my $token = $chain->check_out(0);
-  $token->set_counter(\%hash);
+  # my %hash = (BASE => $chain->value(0));
+  # my $token = $chain->check_out(0);
+  # $token->set_counter(\%hash);
+  # Already a counter
 }
 
 
@@ -636,9 +510,10 @@ sub process_no_iter_exact
   # Swap them around.  Could mash.
   my ($chain, $match) = @_;
 
-  my %hash = (BASE => $chain->value($match));
-  my $token = $chain->check_out($match);
-  $token->set_counter(\%hash);
+  # my %hash = (BASE => $chain->value($match));
+  # my $token = $chain->check_out($match);
+  # $token->set_counter(\%hash);
+  # Already a counter
             
   $chain->swap($match, $match+2);
 }
@@ -649,9 +524,10 @@ sub process_letter_n_exact
   # R 3
   my ($chain, $match) = @_;
 
-  my %hash = (BASE => $chain->value($match+2));
-  my $token = $chain->check_out($match+2);
-  $token->set_counter(\%hash);
+  # my %hash = (BASE => $chain->value($match+2));
+  # my $token = $chain->check_out($match+2);
+  # $token->set_counter(\%hash);
+  # Nothing to do
 }
 
 
@@ -660,20 +536,8 @@ sub process_nl_exact
   # R 3A
   my ($chain, $match) = @_;
 
-  my %hash = (BASE => $chain->value($match) . $chain->value($match+2));
   my $token = $chain->check_out($match);
-  $token->set_counter(\%hash);
-}
-
-
-sub process_letter_nl_exact
-{
-  # R 3A
-  my ($chain, $match) = @_;
-
-  my %hash = (BASE => $chain->value($match+2) . $chain->value($match+4));
-  my $token = $chain->check_out($match+2);
-  $token->set_counter(\%hash);
+  $token->merge_counters('', $chain->check_out($match+2));
 }
 
 
@@ -696,38 +560,30 @@ sub process_letter_counter_exact
 }
 
 
-sub process_stage_n_exact
-{
-  # Final 2.
-  my ($chain, $match) = @_;
-
-  my %hash = (BASE => $chain->value($match+2));
-  my $token = $chain->check_out($match+2);
-  $token->set_counter(\%hash);
-}
-
-
 sub process_iter_n_n_exact
 {
   # Boards 19-21.
   my ($chain, $match) = @_;
 
-  my $n1 = $chain->value($match+2);
-  my $n2 = $chain->value($match+4);
-
-  my %hash;
-  if ($n1 <= $n2)
-  {
-    # Heuristic, may not be true.
-    my %hash = (BASE => $n1, TO => $n2);
-  }
-  else
-  {
-    my %hash = (MAJOR => $n1, MINOR => $n2);
-  }
-
   my $token = $chain->check_out($match+2);
-  $token->set_counter(\%hash);
+  $token->merge_counters('-', $chain->check_out($match+4));
+
+  # my $n1 = $chain->value($match+2);
+  # my $n2 = $chain->value($match+4);
+
+  # my %hash;
+  # if ($n1 <= $n2)
+  # {
+    # # Heuristic, may not be true.
+    # my %hash = (BASE => $n1, TO => $n2);
+  # }
+  # else
+  # {
+    # my %hash = (MAJOR => $n1, MINOR => $n2);
+  # }
+
+  # my $token = $chain->check_out($match+2);
+  # $token->set_counter(\%hash);
 }
 
 

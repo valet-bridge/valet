@@ -136,13 +136,52 @@ sub set_letter_counter
 }
 
 
-sub set_counter
+sub merge_counters
 {
-  my ($self, $hash) = @_;
-  $self->{CATEGORY} = 'COUNTER';
-  $self->{FIELD} = 'COMPLEX';
-  delete $self->{VALUE} if exists $self->{VALUE};
-  $self->{$_} = $hash->{$_} for keys %$hash;
+  my ($self, $sep, $token2) = @_;
+  die "Not a counter" unless $self->{CATEGORY} eq 'COUNTER';
+  die "Not a counter" unless $token2->{CATEGORY} eq 'COUNTER';
+
+  if ($self->{FIELD} eq 'NUMERAL' &&
+      $token2->{FIELD} eq 'LETTER')
+  {
+    $self->{FIELD} = 'NL';
+    $self->{VALUE} .= $token2->{VALUE};
+  }
+  elsif ($self->{FIELD} eq 'LETTER' &&
+      $token2->{FIELD} eq 'NUMERAL')
+  {
+    $self->{FIELD} = 'L';
+    $self->{VALUE} .= $token2->{VALUE};
+  }
+  elsif ($self->{FIELD} eq 'NUMERAL' &&
+      $token2->{FIELD} eq 'NUMERAL')
+  {
+    if ($sep eq '/' || $sep eq '_' || $sep eq 'of')
+    {
+      $self->{FIELD} = 'N_OF_N';
+      $self->{VALUE} .= ' of ' . $token2->{VALUE};
+    }
+    elsif ($sep eq '-')
+    {
+      if ($self->{VALUE} <= $token2->{VALUE})
+      {
+        # Heuristic, may not be true.
+        $self->{FIELD} = 'N_TO_N';
+        $self->{VALUE} .= '-' . $token2->{VALUE};
+      }
+      else
+      {
+        # Something like 7-1 where we don't know their names.
+        $self->{FIELD} = 'MAJOR_MINOR';
+        $self->{VALUE} .= '+' . $token2->{VALUE};
+      }
+    }
+    else
+    {
+      die;
+    }
+  }
 }
 
 
