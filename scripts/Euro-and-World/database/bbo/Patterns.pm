@@ -37,6 +37,7 @@ my %SIMPLE_CATEGORIES = map { $_ => 1} @SIMPLE_LIST;
 
 my %MONTHS = (
   'January' => '01',
+  'Jan' => '01',
   'February' => '02',
   'March' => '03',
   'April' => '04',
@@ -53,25 +54,52 @@ our @RMATCH;
 
 my @REDUCTIONS =
 (
-  # |Day Month Year -> DATE
+  # Get the bulky, global ones out of the way.
+  # ------------------------------------------
+
+  # 2v3 (kill)
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL ORDINAL)] },
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
       { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(MONTH)] },
+      { CATEGORY => [qw(SINGLETON)], FIELD => [ qw(ROMAN) ],
+        VALUE => [ 5 ] },
       { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(YEAR)] }
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
     ],
-    ANCHOR => 'BEGIN',
-    KEEP_LAST => 0,
-    METHOD => \&process_date_any,
-    SPLIT_FRONT => 0,
+    ANCHOR => 'ANY',
+    KEEP_LAST => 4,
+    METHOD => \&process_kill,
+    SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
     COMPLETION => 1
   },
 
-  # 2A/B -> COUNTER
+  # 2vs3 (kill)
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(PARTICLE)],
+        VALUE => [qw(vs)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 4,
+    METHOD => \&process_kill,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
+
+  # Merge the simple counters (digits, letters).
+  # --------------------------------------------
+
+  # 2 A
   {
     PATTERN =>
     [
@@ -81,14 +109,14 @@ my @REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
-    METHOD => \&process_nl_exact,
+    METHOD => \&process_merge_02,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
   },
 
 
-  # 7 of 9, 7th of 9 -> COUNTER
+  # 7 of 9
   {
     PATTERN =>
     [
@@ -101,28 +129,72 @@ my @REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
-    METHOD => \&process_no_of_n_any,
+    METHOD => \&process_merge_0of4,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 1,
     COMPLETION => 1
   },
 
-  # 1_7, 2/9 -> COUNTER
+  # 7_9, 7/9, 7A_9, 7A/9
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL NL)] },
       # TODO Use Separators.pm
       { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x20, 0x80) ] }, 
       { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
-    METHOD => \&process_n_n_any,
+    METHOD => \&process_merge_0of2,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 1,
     COMPLETION => 1
   },
+
+  # TODO 7-9 as 'to', but first fix 3-4-5-6-7 into a 'to' range
+
+
+  # By here, R (round) and T (table) followed by counter should be clean.
+  # And we should be able to take some sequences as dates.
+  # ---------------------------------------------------------------------
+
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
+        VALUE => [qw(R T)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(COUNTER)] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 2,
+    METHOD => \&process_rt_counter,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
+  # |Day Month Year -> DATE
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL ORDINAL)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(MONTH)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(YEAR)] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&process_date_any,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
+
+
 
   # 1st half -> Half 1 (ITER COUNTER)
   {
@@ -134,7 +206,7 @@ my @REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 2,
-    METHOD => \&process_ord_iter_any,
+    METHOD => \&process_swap,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -152,25 +224,6 @@ my @REDUCTIONS =
     ANCHOR => 'ANY',
     KEEP_LAST => 2,
     METHOD => \&process_general,
-    SPLIT_FRONT => 1,
-    SPLIT_BACK => 1,
-    COMPLETION => 1
-  },
-
-  # 2v3 (destroy, anywhere)
-  {
-    PATTERN =>
-    [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [ qw(ROMAN) ],
-        VALUE => [ 5 ] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
-    ],
-    ANCHOR => 'ANY',
-    KEEP_LAST => 4,
-    METHOD => \&process_kill,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -295,7 +348,7 @@ my @REDUCTIONS =
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 2,
-    METHOD => \&process_no_iter_exact,
+    METHOD => \&process_swap,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -313,7 +366,7 @@ my @REDUCTIONS =
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 2,
-    METHOD => \&process_iter_n_n_exact,
+    METHOD => \&process_merge_2dash4,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -338,6 +391,12 @@ my @REDUCTIONS =
 );
 
 
+sub process_general
+{
+  # Nothing to do.
+}
+
+
 sub process_date_any
 {
   # 13 December 2004.
@@ -356,17 +415,24 @@ sub process_date_any
 }
 
 
-sub process_no_of_n_any
+sub process_swap
 {
-  # 7 of 9, 7th of 9: Mash into one counter.
   my ($chain, $match) = @_;
-
-  my $token = $chain->check_out($match);
-  $token->merge_counters('of', $chain->check_out($match+4));
+  $chain->swap($match, $match+2);
 }
 
 
-sub process_n_n_any
+sub process_merge_02
+{
+  # R 3A
+  my ($chain, $match) = @_;
+
+  my $token = $chain->check_out($match);
+  $token->merge_counters('', $chain->check_out($match+2));
+}
+
+
+sub process_merge_0of2
 {
   # 7_9, 7/9: Mash into one counter.
   my ($chain, $match) = @_;
@@ -376,22 +442,51 @@ sub process_n_n_any
 }
 
 
-sub process_ord_iter_any
+sub process_merge_0of4
 {
-  # 1st half: Swap them.
+  # 7 of 9, 7th of 9: Mash into one counter.
   my ($chain, $match) = @_;
 
-  $chain->swap($match, $match+2);
+  my $token = $chain->check_out($match);
+  $token->merge_counters('of', $chain->check_out($match+4));
 }
 
 
-sub process_general
+sub process_merge_2dash4
 {
+  # Boards 19-21.
+  my ($chain, $match) = @_;
+
+  my $token = $chain->check_out($match+2);
+  $token->merge_counters('-', $chain->check_out($match+4));
 }
 
 
 sub process_kill
 {
+}
+
+
+sub process_rt_counter
+{
+  # R/T counter.
+  my ($chain, $match) = @_;
+
+  my $token = $chain->check_out($match);
+  my $letter = uc($token->value());
+
+  if ($letter eq 'R')
+  {
+    $token->reset_iterator_field('ROUND');
+  }
+  elsif ($letter eq 'T')
+  {
+    $token->reset_iterator_field('TABLE');
+  }
+  else
+  {
+    die "Unexpected letter $letter";
+  }
 }
 
 
@@ -423,6 +518,7 @@ sub process_letter_exact
 
   my $token = $chain->check_out(0);
   my $letter = uc($token->value());
+
   if ($letter eq 'J')
   {
     $token->set_singleton('AGE', 'Juniors');
@@ -442,32 +538,13 @@ sub process_letter_exact
 }
 
 
-sub process_no_iter_exact
-{
-  # Number or ordinal with iterator, such as 16 boards.
-  # Swap them around.
-  my ($chain, $match) = @_;
-  $chain->swap($match, $match+2);
-}
-
-
-sub process_nl_exact
-{
-  # R 3A
-  my ($chain, $match) = @_;
-
-  my $token = $chain->check_out($match);
-  $token->merge_counters('', $chain->check_out($match+2));
-}
-
-
 sub process_letter_counter_exact
 {
   # R 3
   my ($chain, $match) = @_;
 
   my $token = $chain->check_out($match);
-  my $letter = uc($token->value($match));
+  my $letter = uc($token->value());
 
   if ($letter eq 'R')
   {
@@ -477,16 +554,6 @@ sub process_letter_counter_exact
   {
     $token->reset_iterator_field($letter);
   }
-}
-
-
-sub process_iter_n_n_exact
-{
-  # Boards 19-21.
-  my ($chain, $match) = @_;
-
-  my $token = $chain->check_out($match+2);
-  $token->merge_counters('-', $chain->check_out($match+4));
 }
 
 

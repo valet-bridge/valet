@@ -116,7 +116,7 @@ my %MERGE_ALIASES = (
   'Second half' => ['second ha'],
   Bronze => ['small final'],
   'Session 1' => ['única sesión'],
-  'Knockout' => ['knock out', 'knock-out'],
+  'Knockout' => ['knock out', 'knock-out', 'k o'],
 
   # Misc.
   'untitled' => ['untitled segment'],
