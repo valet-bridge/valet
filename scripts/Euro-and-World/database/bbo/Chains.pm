@@ -306,6 +306,9 @@ sub split_on_most_parens
 
         my $chain3 = $chain2->split_on($index2+1);
         splice(@$chains, $chain_no+1, 0, $chain3);
+
+        $chain2->complete_if_last_is(0, 'COMPLETE');
+
         $chain_no++;
         last;
       }

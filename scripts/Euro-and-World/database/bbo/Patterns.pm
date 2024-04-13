@@ -115,7 +115,6 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
-
   # 7 of 9
   {
     PATTERN =>
@@ -132,6 +131,25 @@ my @REDUCTIONS =
     METHOD => \&process_merge_0of4,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
+  # 7 and/to 9
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(PARTICLE)],
+        VALUE => [qw(And To)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&process_merge_0dash4,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
     COMPLETION => 1
   },
 
@@ -449,6 +467,16 @@ sub process_merge_0of4
 
   my $token = $chain->check_out($match);
   $token->merge_counters('of', $chain->check_out($match+4));
+}
+
+
+sub process_merge_0dash4
+{
+  # 19-21.
+  my ($chain, $match) = @_;
+
+  my $token = $chain->check_out($match);
+  $token->merge_counters('-', $chain->check_out($match+4));
 }
 
 

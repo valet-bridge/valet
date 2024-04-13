@@ -509,7 +509,7 @@ sub merge_on_digit_runs
     $chain->delete($left_index+1, $right_index);
   }
 
-  $chain->check_out($left_index)->set_singleton('PARTICLE', 'to');
+  $chain->check_out($left_index)->set_singleton('PARTICLE', 'To');
 }
 
 
