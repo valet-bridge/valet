@@ -151,7 +151,7 @@ my @REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 2,
-    METHOD => \&process_group_letter_any,
+    METHOD => \&process_general,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -187,7 +187,7 @@ my @REDUCTIONS =
     ],
     ANCHOR => 'END',
     KEEP_LAST => 2,
-    METHOD => \&process_iter_n_end,
+    METHOD => \&process_general,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -203,7 +203,7 @@ my @REDUCTIONS =
     ],
     ANCHOR => 'END',
     KEEP_LAST => 2,
-    METHOD => \&process_iter_counter_end,
+    METHOD => \&process_general,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -219,7 +219,7 @@ my @REDUCTIONS =
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 2,
-    METHOD => \&process_letter_n_exact,
+    METHOD => \&process_general,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -256,46 +256,16 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
-  # W
+  # W, J, Y
   {
     PATTERN =>
     [
       { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
-        VALUE => [qw(W)] },
+        VALUE => [qw(W J Y)] },
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,
-    METHOD => \&process_women_exact,
-    SPLIT_FRONT => 0,
-    SPLIT_BACK => 0,
-    COMPLETION => 1
-  },
-
-  # J
-  {
-    PATTERN =>
-    [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
-        VALUE => [qw(J)] },
-    ],
-    ANCHOR => 'EXACT',
-    KEEP_LAST => 0,
-    METHOD => \&process_juniors_exact,
-    SPLIT_FRONT => 0,
-    SPLIT_BACK => 0,
-    COMPLETION => 1
-  },
-
-  # Y
-  {
-    PATTERN =>
-    [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
-        VALUE => [qw(Y)] },
-    ],
-    ANCHOR => 'EXACT',
-    KEEP_LAST => 0,
-    METHOD => \&process_youngsters_exact,
+    METHOD => \&process_letter_exact,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -309,7 +279,7 @@ my @REDUCTIONS =
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,
-    METHOD => \&process_no_exact,
+    METHOD => \&process_general,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -415,23 +385,8 @@ sub process_ord_iter_any
 }
 
 
-sub process_group_letter_any
+sub process_general
 {
-  # Group A. Nothing to do.
-
-}
-
-
-sub process_iter_n_end
-{
-  # Round 5. Nothing to do.
-
-}
-
-
-sub process_iter_counter_end
-{
-  # Nothing to do.
 }
 
 
@@ -462,72 +417,37 @@ sub process_open_exact
 }
 
 
-sub process_women_exact
+sub process_letter_exact
 {
-  # Exactly the entry 'W'.
   my ($chain, $match) = @_;
 
   my $token = $chain->check_out(0);
-  $token->set_singleton('GENDER', 'Women');
-}
-
-
-sub process_juniors_exact
-{
-  # Exactly the entry 'J'.
-  my ($chain, $match) = @_;
-
-  my $token = $chain->check_out(0);
-  $token->set_singleton('AGE', 'Juniors');
-}
-
-
-sub process_youngsters_exact
-{
-  # Exactly the entry 'Y'.
-  my ($chain, $match) = @_;
-
-  my $token = $chain->check_out(0);
-  $token->set_singleton('AGE', 'Youngsters');
-}
-
-
-sub process_no_exact
-{
-  # Number or ordinal.
-  my ($chain, $match) = @_;
-
-  # my %hash = (BASE => $chain->value(0));
-  # my $token = $chain->check_out(0);
-  # $token->set_counter(\%hash);
-  # Already a counter
+  my $letter = uc($token->value());
+  if ($letter eq 'J')
+  {
+    $token->set_singleton('AGE', 'Juniors');
+  }
+  elsif ($letter eq 'Y')
+  {
+    $token->set_singleton('AGE', 'Youngsters');
+  }
+  elsif ($letter eq 'W')
+  {
+    $token->set_singleton('GENDER', 'Women');
+  }
+  else
+  {
+    die "Unexpected letter $letter";
+  }
 }
 
 
 sub process_no_iter_exact
 {
   # Number or ordinal with iterator, such as 16 boards.
-  # Swap them around.  Could mash.
+  # Swap them around.
   my ($chain, $match) = @_;
-
-  # my %hash = (BASE => $chain->value($match));
-  # my $token = $chain->check_out($match);
-  # $token->set_counter(\%hash);
-  # Already a counter
-            
   $chain->swap($match, $match+2);
-}
-
-
-sub process_letter_n_exact
-{
-  # R 3
-  my ($chain, $match) = @_;
-
-  # my %hash = (BASE => $chain->value($match+2));
-  # my $token = $chain->check_out($match+2);
-  # $token->set_counter(\%hash);
-  # Nothing to do
 }
 
 
@@ -567,23 +487,6 @@ sub process_iter_n_n_exact
 
   my $token = $chain->check_out($match+2);
   $token->merge_counters('-', $chain->check_out($match+4));
-
-  # my $n1 = $chain->value($match+2);
-  # my $n2 = $chain->value($match+4);
-
-  # my %hash;
-  # if ($n1 <= $n2)
-  # {
-    # # Heuristic, may not be true.
-    # my %hash = (BASE => $n1, TO => $n2);
-  # }
-  # else
-  # {
-    # my %hash = (MAJOR => $n1, MINOR => $n2);
-  # }
-
-  # my $token = $chain->check_out($match+2);
-  # $token->set_counter(\%hash);
 }
 
 
