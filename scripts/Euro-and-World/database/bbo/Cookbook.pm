@@ -461,7 +461,7 @@ our %FIX_ALIASES =
       am afternoon night soir barriere best delayed us
       combined for only alle int titan silver gold vp sm
       è no n° =), 
-      '#', '?', 'one!', 'ab', 'a&b', ']']
+      '?', 'one!', 'ab', 'a&b', ']']
   }
 );
 

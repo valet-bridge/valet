@@ -35,6 +35,7 @@ use Scoring;
 use Sponsor;
 use Stage;
 use Tname;
+use Twords;
 use Weekday;
 
 our %CATEGORIES;
@@ -52,6 +53,7 @@ $CATEGORIES{SCORING} = Scoring->new();
 $CATEGORIES{SPONSOR} = Sponsor->new();
 $CATEGORIES{STAGE} = Stage->new();
 $CATEGORIES{TNAME} = Tname->new();
+$CATEGORIES{TOURNAMENT} = Twords->new();
 $CATEGORIES{WEEKDAY} = Weekday->new();
 
 

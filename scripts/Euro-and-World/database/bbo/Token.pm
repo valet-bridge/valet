@@ -166,7 +166,7 @@ sub merge_counters
     {
       if ($self->{VALUE} <= $token2->{VALUE})
       {
-        # Heuristic, may not be true.
+        # Heuristic, may not be true.  Could also be e.g. 'of'.
         $self->{FIELD} = 'N_TO_N';
         $self->{VALUE} .= '-' . $token2->{VALUE};
       }

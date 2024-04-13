@@ -31,8 +31,8 @@ my %MERGE_ALIASES = (
   Ruiagold => ['ruia gold', 'ruia gols'],
   Ruiasilver => ['ruia silver'],
   Serdikacup => ['serdika cup'],
-  Superleague => 
-    ['super league', 'sup league', 'sup l', 'super leahue', 'sup leg'],
+  Superleague => ['super league', 'sup league', 'sup l', 'sup-l',
+    'super leahue', 'sup leg', 's l'],
   VAKM => ['vest-agder km', 'vest - agder'],
   Vitoteams => ['vito teams'],
 
@@ -55,7 +55,7 @@ my %MERGE_ALIASES = (
   # MOVEMENT
   Roundrobin => ['round robin', 'roun robin', 'round bobin',
     'round-robin', 'r_robin', 'r robin', 'round roubin', 'rrobin',
-    'round ronin', 'grup maçlari', 'r_r_', 'r_r'],
+    'round ronin', 'grup maçlari', 'r_r_', 'r_r', 'rrr'],
 
   # ORIGIN
   Interclub => ['inter club', 'inter-club', 'inter-clubs'],
