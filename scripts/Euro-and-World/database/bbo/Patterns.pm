@@ -52,7 +52,7 @@ my %MONTHS = (
 
 my @REDUCTIONS =
 (
-  # Day Month Year
+  # |Day Month Year -> DATE
   {
     PATTERN =>
     [
@@ -70,7 +70,7 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
-  # 7 of 9
+  # 7 of 9, 7th of 9 -> COUNTER
   {
     PATTERN =>
     [
@@ -89,7 +89,7 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
-  # 7 A of 9
+  # 7 A of 9 -> COUNTER
   {
     PATTERN =>
     [
@@ -111,7 +111,7 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
-  # 1_7, 2/9
+  # 1_7, 2/9 -> COUNTER
   {
     PATTERN =>
     [
@@ -128,7 +128,7 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
-  # 1A_7, 2A/9
+  # 1A_7, 2A/9 -> COUNTER
   {
     PATTERN =>
     [
@@ -147,7 +147,7 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
-  # 1st half
+  # 1st half -> Half 1 (ITER COUNTER)
   {
     PATTERN =>
     [
@@ -163,7 +163,7 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
-  # 2A/B (only turns the data into a counter).
+  # 2A/B -> COUNTER
   {
     PATTERN =>
     [
@@ -217,7 +217,7 @@ my @REDUCTIONS =
   },
 
 
-  # Round 5
+  # Round 5 -> ITER COUNTER
   {
     PATTERN =>
     [
@@ -249,7 +249,7 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
-  # Letter 2 (only turns the number into a counter).
+  # Letter 2 -> COUNTER
   {
     PATTERN =>
     [

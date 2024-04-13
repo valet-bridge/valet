@@ -1,3 +1,15 @@
+Find a way to count how many times each rule is triggered.
+
+Table or T probably takes exactly one number
+
+Number counter
+15 2_2
+3 2_2
+16 19_25
+21 23_23
+7 9_23
+17 8_10
+
 Are AMBIGUITIES actually used?
 
 Split Tokenize:
