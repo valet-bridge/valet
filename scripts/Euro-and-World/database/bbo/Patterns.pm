@@ -52,6 +52,7 @@ my %MONTHS = (
 
 my @REDUCTIONS =
 (
+  # Day Month Year
   {
     PATTERN =>
     [
@@ -88,6 +89,28 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
+  # 7 A of 9
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
+        VALUE => [qw(A B C D)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(PARTICLE)],
+        VALUE => [qw(Of)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&process_n_letter_of_n_any,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
   # 1_7, 2/9
   {
     PATTERN =>
@@ -100,6 +123,25 @@ my @REDUCTIONS =
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
     METHOD => \&process_n_n_any,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
+  # 1A_7, 2A/9
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
+        VALUE => [qw(A B C D)] },
+      { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x20, 0x80) ] },
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&process_n_letter_n_any,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -382,23 +424,39 @@ my @REDUCTIONS =
     COMPLETION => 0
   },
 
-  # R counter (finishes, too).
+  # R/S/Q/... counter (finishes, too).
   {
     PATTERN =>
     [
       { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
-        VALUE => [qw(R)] },
+        VALUE => [qw(J Q S W Y R)] },
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
     ],
     ANCHOR => 'END',
     KEEP_LAST => 2,
-    METHOD => \&process_r_counter_exact,
+    METHOD => \&process_letter_counter_exact,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 0,
     COMPLETION => 1
   },
 
+  # R/S/Q/... number (finishes, too).
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
+        VALUE => [qw(J Q S W Y R)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(NUMERAL)] }
+    ],
+    ANCHOR => 'END',
+    KEEP_LAST => 2,
+    METHOD => \&process_letter_counter_exact,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  }
 );
 
 
@@ -426,6 +484,34 @@ sub process_no_of_n_any
   my ($chain, $match) = @_;
 
   my %hash = (BASE => $chain->value($match),
+    OF => $chain->value($match+4));
+
+  my $token = $chain->check_out($match);
+  $token->set_counter(\%hash);
+}
+
+
+sub process_n_letter_of_n_any
+{
+  # 7 A of 9.
+  my ($chain, $match) = @_;
+
+  my %hash = (
+    BASE => $chain->value($match) . $chain->value($match+2),
+    OF => $chain->value($match+6));
+
+  my $token = $chain->check_out($match);
+  $token->set_counter(\%hash);
+}
+
+
+sub process_n_letter_n_any
+{
+  # 7 A / 9.
+  my ($chain, $match) = @_;
+
+  my %hash = (
+    BASE => $chain->value($match) . $chain->value($match+2),
     OF => $chain->value($match+4));
 
   my $token = $chain->check_out($match);
@@ -611,13 +697,22 @@ sub process_letter_nl_exact
 }
 
 
-sub process_r_counter_exact
+sub process_letter_counter_exact
 {
   # R 3
   my ($chain, $match) = @_;
 
   my $token = $chain->check_out($match);
-  $token->reset_iterator_field('ROUND');
+  my $letter = uc($token->value($match));
+
+  if ($letter eq 'R')
+  {
+    $token->reset_iterator_field('ROUND');
+  }
+  else
+  {
+    $token->reset_iterator_field($letter);
+  }
 }
 
 
