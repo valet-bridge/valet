@@ -173,9 +173,9 @@ sub merge_counters
       $self->{FIELD} = 'N_OF_N';
       $self->{VALUE} .= ' of ' . $token2->{VALUE};
     }
-    elsif ($sep eq ':')
+    elsif ($sep eq ':' || $sep eq ' ')
     {
-      # Something like 7-1 where we don't know their names.
+      # Something like 7:1 where we don't know their names.
       $self->{FIELD} = 'MAJOR_MINOR';
       $self->{VALUE} .= '+' . $token2->{VALUE};
     }
@@ -206,6 +206,11 @@ sub merge_counters
     {
       $self->{FIELD} = 'NL_OF_N';
       $self->{VALUE} .= ' of ' . $token2->{VALUE};
+    }
+    elsif ($sep eq '-' || $sep eq ' ')
+    {
+      $self->{FIELD} = 'MAJOR_MINOR';
+      $self->{VALUE} .= '+' . $token2->{VALUE};
     }
     else
     {
@@ -266,12 +271,33 @@ sub merge_counters
       die;
     }
   }
+  elsif ($self->{FIELD} eq 'ROMAN' &&
+      ($token2->{FIELD} eq 'NUMERAL' ||
+       $token2->{FIELD} eq 'NL' ||
+       $token2->{FIELD} eq 'LETTER' ||
+       $token2->{FIELD} eq 'N_OF_N'))
+  {
+    $self->{FIELD} = 'MAJOR_MINOR';
+    $self->{VALUE} .= '+' . $token2->{VALUE};
+  }
   elsif ($self->{FIELD} eq 'ORDINAL' &&
       ($token2->{FIELD} eq 'NUMERAL' ||
        $token2->{FIELD} eq 'ORDINAL'))
   {
-    $self->{FIELD} = 'N_OF_N';
-    $self->{VALUE} .= ' of ' . $token2->{VALUE};
+    if ($sep eq 'of' || $sep eq '_' || $token2->{FIELD} eq 'ORDINAL')
+    {
+      $self->{FIELD} = 'N_OF_N';
+      $self->{VALUE} .= ' of ' . $token2->{VALUE};
+    }
+    elsif ($sep eq ' ')
+    {
+      $self->{FIELD} = 'MAJOR_MINOR';
+      $self->{VALUE} .= '+' . $token2->{VALUE};
+    }
+    else
+    {
+      die;
+    }
   }
   elsif ($self->{FIELD} eq 'NUMERAL' &&
       $token2->{FIELD} eq 'N_OF_N')
@@ -286,6 +312,24 @@ sub merge_counters
     {
       $self->{FIELD} = 'N_TO_N_OF_N';
       $self->{VALUE} .= '-' . $token2->{VALUE};
+    }
+  }
+  elsif ($self->{FIELD} eq 'ORDINAL' &&
+      $token2->{FIELD} eq 'N_OF_N')
+  {
+    if ($sep eq ' ')
+    {
+      $self->{FIELD} = 'MAJOR_MINOR';
+      $self->{VALUE} .= '+' . $token2->{VALUE};
+    }
+    elsif ($sep eq '_')
+    {
+      $self->{FIELD} = 'N_TO_N_OF_N';
+      $self->{VALUE} .= '-' . $token2->{VALUE};
+    }
+    else
+    {
+      die;
     }
   }
   elsif ($self->{FIELD} eq 'LETTER' &&

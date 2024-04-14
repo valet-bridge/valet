@@ -99,6 +99,22 @@ my @REDUCTIONS =
   # Merge the simple counters (digits, letters).
   # --------------------------------------------
 
+  # Ordinal ordinal
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(ORDINAL)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(ORDINAL)] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&process_merge_0of2,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
   # 7 and/to 9
   {
     PATTERN =>
@@ -230,7 +246,7 @@ my @REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
-    METHOD => \&process_merge_0dash2,
+    METHOD => \&process_merge_0sep2,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -253,19 +269,53 @@ my @REDUCTIONS =
   },
 
   # Number or Number-letter with space or dash, then N_OF_N.
-  # Note that N-N_N is gone in the previous pattern.
+  # Note that N-N and N-N_N is gone in the previous patterns.
   {
     PATTERN =>
     [
       { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL NL)] },
       { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x01, 0x10) ] }, # TODO Dash
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(N_OF_N)] }
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL N_OF_N)] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
-    METHOD => \&process_merge_0dash2,
+    METHOD => \&process_merge_0sep2,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
+  # Ordinal followed by N_OF_N.
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(ORDINAL)] },
+      { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x01, 0x20) ] }, 
+      # TODO Space or underscore
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL N_OF_N)] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&process_merge_0sep2,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
+  # Roman dash/space counter.
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(ROMAN)] },
+      { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x01, 0x10) ] }, 
+      # TODO Space or dash
+      { CATEGORY => [qw(COUNTER)] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&process_merge_0sep2,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
     COMPLETION => 1
   },
 
@@ -441,7 +491,7 @@ my @REDUCTIONS =
     PATTERN =>
     [
       { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
-        VALUE => [qw(J Q S W Y R)] },
+        VALUE => [qw(J Q S s W Y R)] },
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(COUNTER)] }
     ],
@@ -450,22 +500,6 @@ my @REDUCTIONS =
     METHOD => \&process_letter_counter_exact,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 0,
-    COMPLETION => 1
-  },
-
-  # Ordinal ordinal
-  {
-    PATTERN =>
-    [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(ORDINAL)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(ORDINAL)] }
-    ],
-    ANCHOR => 'ANY',
-    KEEP_LAST => 0,
-    METHOD => \&process_merge_0of2,
-    SPLIT_FRONT => 1,
-    SPLIT_BACK => 1,
     COMPLETION => 1
   },
 
@@ -750,13 +784,33 @@ sub process_merge_0of4
 }
 
 
-sub process_merge_0dash2
+sub process_merge_0sep2
 {
   # 19-21 with a dash.
   my ($chain, $match) = @_;
 
   my $token = $chain->check_out($match);
-  $token->merge_counters('-', $chain->check_out($match+2));
+
+  my $sep_field = $chain->field($match+1);
+  my $sep;
+  if ($sep_field == 0x1)
+  {
+    $sep = ' ';
+  }
+  elsif ($sep_field == 0x10)
+  {
+    $sep = '-';
+  }
+  elsif ($sep_field == 0x20)
+  {
+    $sep = '_';
+  }
+  else
+  {
+    die "Unknown separator field in this context: $sep_field";
+  }
+
+  $token->merge_counters($sep, $chain->check_out($match+2));
 }
 
 
