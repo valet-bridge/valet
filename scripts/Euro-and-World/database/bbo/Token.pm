@@ -218,6 +218,12 @@ sub merge_counters
     }
   }
   elsif ($self->{FIELD} eq 'NL' &&
+      $token2->{FIELD} eq 'NL')
+  {
+    $self->{FIELD} = 'MAJOR_MINOR';
+    $self->{VALUE} .= '+' . $token2->{VALUE};
+  }
+  elsif ($self->{FIELD} eq 'NL' &&
       $token2->{FIELD} eq 'N_OF_N')
   {
     if ($sep eq ' ' || $sep eq '-')

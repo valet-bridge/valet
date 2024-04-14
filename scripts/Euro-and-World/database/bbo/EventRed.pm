@@ -11,6 +11,7 @@ package EventRed;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(@EVENT_REDUCTIONS);
 
+
 # ANCHOR specifies where the pattern may match within a chain
 # (ANY, BEGIN, END, EXACT).
 #
@@ -19,7 +20,6 @@ our @EXPORT = qw(@EVENT_REDUCTIONS);
 # If it is 0, then only the first element of pattern is kept.
 #
 # METHOD is a running counter.  
-# TODO Perhaps this will later be a method pointer.
 #
 # SPLIT_FRONT and SPLIT_BACK (binary) indicate whether the
 # chain should be split if possible before the first match and/or
@@ -32,16 +32,15 @@ our @EVENT_REDUCTIONS =
   # Get the bulky, global ones out of the way.
   # ------------------------------------------
 
-  # 2v3 (kill)
+  # 2v3.  These is probably the seeding numbers -- kill.
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)], FIELD => [ qw(ROMAN) ],
-        VALUE => [ 5 ] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
+      { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL'] },
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => ['COUNTER'], FIELD => ['ROMAN'], VALUE => [5] },
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL'] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 4,
@@ -51,16 +50,15 @@ our @EVENT_REDUCTIONS =
     COMPLETION => 1
   },
 
-  # 2vs3 (kill)
+  # 2vs3.  These is probably the seeding numbers -- kill.
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(PARTICLE)],
-        VALUE => [qw(vs)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
+      { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL'] },
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => ['SINGLETON'], FIELD => ['PARTICLE'], VALUE => ['vs']},
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL'] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 4,
@@ -78,9 +76,9 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(ORDINAL)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(ORDINAL)] }
+      { CATEGORY => ['COUNTER'], FIELD => ['ORDINAL'] },
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => ['COUNTER'], FIELD => ['ORDINAL'] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
@@ -94,12 +92,12 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(PARTICLE)],
+      { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL'] },
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => ['SINGLETON'], FIELD => ['PARTICLE'],
         VALUE => [qw(And To)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL'] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
@@ -113,9 +111,9 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
-      { CATEGORY => [qw(SEPARATOR)]},
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(LETTER)] }
+      { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL'] },
+      { CATEGORY => ['SEPARATOR']},
+      { CATEGORY => ['COUNTER'], FIELD => ['LETTER'] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
@@ -145,7 +143,8 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL NL N_TO_N ORDINAL)] },
+      { CATEGORY => [qw(COUNTER)], 
+        FIELD => [qw(NUMERAL NL N_TO_N ORDINAL)] },
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(SINGLETON)], FIELD => [qw(PARTICLE)],
         VALUE => [qw(Of)] },
@@ -227,46 +226,15 @@ our @EVENT_REDUCTIONS =
     COMPLETION => 1
   },
 
-  # 5-7_9 (where the 'of' is already established).
-  {
-    PATTERN =>
-    [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
-      { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x10) ] }, # TODO Dash
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(N_OF_N)] }
-    ],
-    ANCHOR => 'ANY',
-    KEEP_LAST => 0,
-    METHOD => \&Patterns::process_merge_0of2,
-    SPLIT_FRONT => 0,
-    SPLIT_BACK => 1,
-    COMPLETION => 1
-  },
-
   # Number or Number-letter with space or dash, then N_OF_N.
   # Note that N-N and N-N_N is gone in the previous patterns.
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL NL)] },
-      { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x01, 0x10) ] }, # TODO Dash
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL N_OF_N)] }
-    ],
-    ANCHOR => 'ANY',
-    KEEP_LAST => 0,
-    METHOD => \&Patterns::process_merge_0sep2,
-    SPLIT_FRONT => 0,
-    SPLIT_BACK => 1,
-    COMPLETION => 1
-  },
-
-  # Ordinal followed by N_OF_N.
-  {
-    PATTERN =>
-    [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(ORDINAL)] },
-      { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x01, 0x20) ] }, 
-      # TODO Space or underscore
+      { CATEGORY => [qw(COUNTER)], 
+        FIELD => [qw(NUMERAL ORDINAL ROMAN NL)] },
+      { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x01, 0x10, 0x20) ] }, 
+      # TODO Space, Dash, Underscore
       { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL N_OF_N)] }
     ],
     ANCHOR => 'ANY',
@@ -282,9 +250,9 @@ our @EVENT_REDUCTIONS =
     PATTERN =>
     [
       { CATEGORY => [qw(COUNTER)], FIELD => [qw(ROMAN)] },
-      { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x01, 0x10) ] }, 
+      { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x01, 0x10, 0x20) ] }, 
       # TODO Space or dash
-      { CATEGORY => [qw(COUNTER)] }
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(ROMAN LETTER NL)] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
@@ -383,7 +351,6 @@ our @EVENT_REDUCTIONS =
     COMPLETION => 1
   },
 
-
   # Group A
   {
     PATTERN =>
@@ -401,6 +368,9 @@ our @EVENT_REDUCTIONS =
   },
 
 
+  # Some specific locations
+  # -----------------------
+
   # Open and Girls
   {
     PATTERN =>
@@ -412,11 +382,11 @@ our @EVENT_REDUCTIONS =
     KEEP_LAST => 0,
     METHOD => \&Patterns::process_og_front,
     SPLIT_FRONT => 0,
-    SPLIT_BACK => 1, # Split one from the other
+    SPLIT_BACK => 1, # Split one Open from the other
     COMPLETION => 1
   },
 
-  # As this generates a leading Age singleton, we fix this too.
+  # As the previous one  makes a leading Age singleton, we fix this too.
   {
     PATTERN =>
     [
@@ -429,9 +399,6 @@ our @EVENT_REDUCTIONS =
     SPLIT_BACK => 1,
     COMPLETION => 1
   },
-
-
-
 
   # Round {COUNTER}
   {
@@ -449,22 +416,9 @@ our @EVENT_REDUCTIONS =
     COMPLETION => 1
   },
 
-  # Letter 2 -> COUNTER
-  {
-    PATTERN =>
-    [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(LETTER)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
-    ],
-    ANCHOR => 'EXACT',
-    KEEP_LAST => 2,
-    METHOD => \&Patterns::process_general,
-    SPLIT_FRONT => 0,
-    SPLIT_BACK => 0,
-    COMPLETION => 1
-  },
 
+  # Clean-up of length 3
+  # --------------------
 
   # 1, 4th
   {
@@ -513,10 +467,6 @@ our @EVENT_REDUCTIONS =
     COMPLETION => 1
   },
 
-
-  # Clean-up of length 3
-  # --------------------
-
   # Day Month
   {
     PATTERN =>
@@ -544,22 +494,6 @@ our @EVENT_REDUCTIONS =
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,
     METHOD => \&Patterns::process_month_year,
-    SPLIT_FRONT => 0,
-    SPLIT_BACK => 0,
-    COMPLETION => 1
-  },
-
-  # Roman Roman
-  {
-    PATTERN =>
-    [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(ROMAN)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(ROMAN)] }
-    ],
-    ANCHOR => 'EXACT',
-    KEEP_LAST => 0,
-    METHOD => \&Patterns::process_merge_0of2,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
