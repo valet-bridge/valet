@@ -172,7 +172,7 @@ sub merge_num_num
   }
   else
   {
-    die "merge_num_num: Unknown separator";
+    die "merge_num_num: Unknown separator $sep";
   }
 }
 
@@ -193,7 +193,23 @@ sub merge_nl_num
   }
   else
   {
-    die "merge_nl_num: Unknown separator";
+    die "merge_nl_num: Unknown separator $sep";
+  }
+}
+
+
+sub merge_nl_of
+{
+  my ($self, $sep, $token2) = @_;
+
+  if ($sep eq ' ' || $sep eq '-')
+  {
+    $self->{FIELD} = 'MAJOR_MINOR';
+    $self->{VALUE} .= '+' . $token2->{VALUE};
+  }
+  else
+  {
+    die "merge_nl_of: Unknown separator $sep";
   }
 }
 
@@ -263,6 +279,45 @@ sub merge_ordinal_n_or_o
 }
 
 
+sub merge_numeral_of
+{
+  my ($self, $sep, $token2) = @_;
+
+  if ($sep eq ':')
+  {
+    # Something like 10:3 of 9.
+    $self->{FIELD} = 'MAJOR_MINOR';
+    $self->{VALUE} .= '+' . $token2->{VALUE};
+  }
+  else
+  {
+    $self->{FIELD} = 'N_TO_N_OF_N';
+    $self->{VALUE} .= '-' . $token2->{VALUE};
+  }
+}
+
+
+sub merge_ordinal_of
+{
+  my ($self, $sep, $token2) = @_;
+
+  if ($sep eq ' ')
+  {
+    $self->{FIELD} = 'MAJOR_MINOR';
+    $self->{VALUE} .= '+' . $token2->{VALUE};
+  }
+  elsif ($sep eq '_')
+  {
+    $self->{FIELD} = 'N_TO_N_OF_N';
+    $self->{VALUE} .= '-' . $token2->{VALUE};
+  }
+  else
+  {
+    die "merge_ordinal_of: Unknown separator $sep";
+  }
+}
+
+
 sub merge_counters
 {
   my ($self, $sep, $token2) = @_;
@@ -302,15 +357,7 @@ sub merge_counters
   elsif ($self->{FIELD} eq 'NL' &&
       $token2->{FIELD} eq 'N_OF_N')
   {
-    if ($sep eq ' ' || $sep eq '-')
-    {
-      $self->{FIELD} = 'MAJOR_MINOR';
-      $self->{VALUE} .= '+' . $token2->{VALUE};
-    }
-    else
-    {
-      die;
-    }
+    $self->merge_nl_of($sep, $token2);
   }
   elsif ($self->{FIELD} eq 'NUMERAL' &&
       $token2->{FIELD} eq 'NL')
@@ -335,35 +382,12 @@ sub merge_counters
   elsif ($self->{FIELD} eq 'NUMERAL' &&
       $token2->{FIELD} eq 'N_OF_N')
   {
-    if ($sep eq ':')
-    {
-      # Something like 10:3 of 9.
-      $self->{FIELD} = 'MAJOR_MINOR';
-      $self->{VALUE} .= '+' . $token2->{VALUE};
-    }
-    else
-    {
-      $self->{FIELD} = 'N_TO_N_OF_N';
-      $self->{VALUE} .= '-' . $token2->{VALUE};
-    }
+    $self->merge_numeral_of($sep, $token2);
   }
   elsif ($self->{FIELD} eq 'ORDINAL' &&
       $token2->{FIELD} eq 'N_OF_N')
   {
-    if ($sep eq ' ')
-    {
-      $self->{FIELD} = 'MAJOR_MINOR';
-      $self->{VALUE} .= '+' . $token2->{VALUE};
-    }
-    elsif ($sep eq '_')
-    {
-      $self->{FIELD} = 'N_TO_N_OF_N';
-      $self->{VALUE} .= '-' . $token2->{VALUE};
-    }
-    else
-    {
-      die;
-    }
+    $self->merge_ordinal_of($sep, $token2);
   }
   elsif ($self->{FIELD} eq 'LETTER' &&
       $token2->{FIELD} eq 'N_OF_N')
@@ -623,7 +647,7 @@ sub str
   }
   elsif ($category eq 'UNKNOWN')
   {
-    $str = str_unknowns();
+    $str = str_unknown();
   }
   else
   {

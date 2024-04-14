@@ -1,7 +1,7 @@
 - Code to clean:
-  Token (sub-methods)
   Tokenize
   cook
+
 
 - A particle should probably be a separator?
 
@@ -11,6 +11,7 @@ TeamBBO?
 
 DATE, LOCATION, SESSION always empty.
 Scoring should be easy.
+Token string methods.
 
 Make something called Region.pm with Kepri in it
 
