@@ -6,7 +6,6 @@
 - A particle should probably be a separator?
 
 Split Tokenize:
-EventBBO?
 TeamBBO?
 
 DATE, LOCATION, SESSION always empty.

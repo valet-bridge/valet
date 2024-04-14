@@ -13,6 +13,7 @@ use Despace;
 use Tokenize;
 use Chains;
 use Chain;
+use EventBBO;
 use EventRed;
 use Patterns;
 
@@ -68,6 +69,8 @@ while ($line = <$fh>)
       my $chain = Chain->new();
       my @chains;
       push @chains, $chain;
+
+      $mashed = unteam($mashed, $chunk{TEAM1}, $chunk{TEAM2});
 
       study_event($mashed, \%chunk, $chain, \$unknown);
 
