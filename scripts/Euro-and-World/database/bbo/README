@@ -1,5 +1,4 @@
 - Clean up Token method (sub-methods)
-- Delete code in Chains
 - Get rid of BINDING
 - A particle should probably be a separator?
 - Are AMBIGUITIES actually used?
