@@ -134,6 +134,22 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
+  # A2 (with only virtual in between).
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(LETTER)] },
+      { CATEGORY => [qw(SEPARATOR)], FIELD => [(0x800)] },
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&process_merge_02,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
   # 7 of 9
   {
     PATTERN =>
@@ -175,7 +191,6 @@ my @REDUCTIONS =
     PATTERN =>
     [
       { CATEGORY => [qw(COUNTER)], FIELD => [qw(LETTER)] },
-      # TODO Use Separators.pm
       { CATEGORY => [qw(SEPARATOR)] }, 
       { CATEGORY => [qw(COUNTER)], FIELD => [qw(N_OF_N)] }
     ],
@@ -187,14 +202,14 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
-  # 6:1
+  # 6:1, 6:1B
   {
     PATTERN =>
     [
       { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
       # TODO Use Separators.pm
       { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x4) ] }, 
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL NL)] }
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL NL N_OF_N)] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
@@ -306,9 +321,6 @@ my @REDUCTIONS =
     SPLIT_BACK => 1,
     COMPLETION => 1
   },
-
-
-
 
   # 1st half -> Half 1 (ITER COUNTER)
   {

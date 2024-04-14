@@ -160,8 +160,8 @@ sub merge_counters
   elsif ($self->{FIELD} eq 'LETTER' &&
       $token2->{FIELD} eq 'NUMERAL')
   {
-    $self->{FIELD} = 'L';
-    $self->{VALUE} .= $token2->{VALUE};
+    $self->{FIELD} = 'NL';
+    $self->{VALUE} = $token2->{VALUE} . $self->{VALUE};
   }
   elsif (($self->{FIELD} eq 'NUMERAL' &&
       $token2->{FIELD} eq 'NUMERAL') ||
@@ -263,8 +263,17 @@ sub merge_counters
   elsif ($self->{FIELD} eq 'NUMERAL' &&
       $token2->{FIELD} eq 'N_OF_N')
   {
-    $self->{FIELD} = 'N_TO_N_OF_N';
-    $self->{VALUE} .= '-' . $token2->{VALUE};
+    if ($sep eq ':')
+    {
+      # Something like 10:3 of 9.
+      $self->{FIELD} = 'MAJOR_MINOR';
+      $self->{VALUE} .= '+' . $token2->{VALUE};
+    }
+    else
+    {
+      $self->{FIELD} = 'N_TO_N_OF_N';
+      $self->{VALUE} .= '-' . $token2->{VALUE};
+    }
   }
   elsif ($self->{FIELD} eq 'LETTER' &&
       $token2->{FIELD} eq 'N_OF_N')
