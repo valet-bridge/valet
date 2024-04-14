@@ -153,13 +153,13 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
-  # 7_9, 7/9, 7A_9, 7A/9
+  # 7_9, 7/9, 7A_9, 7A/9.  Also underscore with space
   {
     PATTERN =>
     [
       { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL NL)] },
       # TODO Use Separators.pm
-      { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x20, 0x80) ] }, 
+      { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x20, 0x21, 0x80) ] }, 
       { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL NL)] }
     ],
     ANCHOR => 'ANY',
@@ -263,6 +263,21 @@ my @REDUCTIONS =
     PATTERN =>
     [
       { CATEGORY => [qw(ITERATOR)], FIELD => [qw(Table Match)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(COUNTER)] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 2,
+    METHOD => \&process_general,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(EXPANSION)] },
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(COUNTER)] }
     ],
