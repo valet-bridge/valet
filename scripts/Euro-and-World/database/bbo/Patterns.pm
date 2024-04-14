@@ -170,6 +170,23 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
+  # A-7_9 (where the 'of' is already established).
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(LETTER)] },
+      # TODO Use Separators.pm
+      { CATEGORY => [qw(SEPARATOR)] }, 
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(N_OF_N)] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&process_merge_0of2,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
   # 6:1
   {
     PATTERN =>
@@ -205,43 +222,40 @@ my @REDUCTIONS =
   },
 
 
-  # TODO 7-9 as 'to', but first fix 3-4-5-6-7 into a 'to' range
-
-
   # By here, R (round) and T (table) followed by counter should be clean.
   # And we should be able to take some sequences as dates.
   # ---------------------------------------------------------------------
 
-  # {
-    # PATTERN =>
-    # [
-      # { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
-        # VALUE => [qw(R r)] },
-      # { CATEGORY => [qw(SEPARATOR)] },
-      # { CATEGORY => [qw(COUNTER)] }
-    # ],
-    # ANCHOR => 'ANY',
-    # KEEP_LAST => 2,
-    # METHOD => \&process_r_counter,
-    # SPLIT_FRONT => 1,
-    # SPLIT_BACK => 1,
-    # COMPLETION => 1
-  # },
-# 
-  # {
-    # PATTERN =>
-    # [
-      # { CATEGORY => [qw(ITERATOR)], FIELD => [qw(Table Match)] },
-      # { CATEGORY => [qw(SEPARATOR)] },
-      # { CATEGORY => [qw(COUNTER)] }
-    # ],
-    # ANCHOR => 'ANY',
-    # KEEP_LAST => 2,
-    # METHOD => \&process_general,
-    # SPLIT_FRONT => 1,
-    # SPLIT_BACK => 1,
-    # COMPLETION => 1
-  # },
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
+        VALUE => [qw(R r)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(COUNTER)] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 2,
+    METHOD => \&process_r_counter,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(ITERATOR)], FIELD => [qw(Table Match)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(COUNTER)] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 2,
+    METHOD => \&process_general,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
 
   # Day Month Year -> DATE
   {
