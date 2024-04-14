@@ -273,8 +273,10 @@ our %FIX_ALIASES =
   COUNTRY =>
   {
     Bulgaria => [],
-    'Czech Republic' => [],
+    'Czech Republic' => ['czech'],
+    Denmark => [],
     England => [qw(eng)],
+    Estonia => [],
     Finland => [],
     France => [qw(fra)],
     Hungary => [],

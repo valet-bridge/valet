@@ -1,12 +1,7 @@
 - Code to clean:
-  Tokenize
   cook
 
-
 - A particle should probably be a separator?
-
-Split Tokenize:
-TeamBBO?
 
 DATE, LOCATION, SESSION always empty.
 Scoring should be easy.

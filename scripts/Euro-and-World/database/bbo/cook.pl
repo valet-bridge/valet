@@ -22,26 +22,19 @@ use Patterns;
 # ./reader -I ... -Q 9=4=0=0 -v 63
 # especially w.r.t. EVENT
 
-
-my @FIELDS = qw(BBONO TITLE MONIKER DATE LOCATION EVENT 
-  SEGMENT ROUND COUNTER
-  RESTRICTION_ORIGIN FORM GENDER AGE
-  SESSION SCORING TEAMS TEAM1 TEAM2);
-
 die "perl cook.pl raw.txt" unless $#ARGV == 0;
 
-my $file = $ARGV[0];
+my @RAW_FIELDS = qw(BBONO TITLE EVENT SCORING TEAMS);
 
+my $file = $ARGV[0];
 open my $fh, '<', $file or die "Cannot read tfile: $!";
 
 my %chunk;
 my $line;
+
 my $lno = 0;
 my $unknown = 0;
-
 my @chain_stats;
-my $time1 = 0;
-
 my @reduction_stats;
 
 while ($line = <$fh>)
@@ -50,75 +43,55 @@ while ($line = <$fh>)
   $line =~ s///g;
   $lno++;
 
-  if ($line =~ /^\s*$/)
-  {
-    if (defined $chunk{Input} || ! defined $chunk{BBONO})
-    {
-      %chunk = ();
-      next;
-    }
-    else
-    {
-      if ($chunk{BBONO} == 28588)
-      {
-        print "HERE\n";
-      }
-
-      my %result;
-      study_teams($chunk{TEAMS}, \%result);
-
-      # Fix some space-related issues.
-      my $mashed = despace($chunk{EVENT});
-      $mashed = unteam($mashed, \%result);
-
-      my $chain = Chain->new();
-      my @chains;
-      push @chains, $chain;
-
-      study_event($mashed, \%chunk, \%result, $chain, \$unknown);
-
-      process_event(\@chains);
-
-      process_patterns(\@EVENT_REDUCTIONS, \@chains, \@reduction_stats);
-
-      # post_process_event(\%event_chains, \%event_solved);
-
-      my $open_flag = 0;
-      for my $chain (@chains)
-      {
-        my $status = $chain->status();
-        $chain_stats[$chain->last()+1]{$status}++;
-        $open_flag = 1 if $status eq 'OPEN';
-      }
-
-      if ($open_flag)
-      {
-        print_chunk(\%chunk);
-
-        for my $chain_no (0 .. $#chains)
-        {
-          printf("Chain %d %2d %8s: %s\n",
-            $chain_no,
-            $chains[$chain_no]->last()+1,
-            $chains[$chain_no]->status(),
-            $chains[$chain_no]->text());
-          printf("Chain %d %2d %8s: %s\n",
-            $chain_no,
-            $chains[$chain_no]->last()+1,
-            $chains[$chain_no]->status(),
-            $chains[$chain_no]->catcat());
-        }
-        printf "\n";
-      }
-    }
-  }
-  elsif ($line =~ /^([A-Za-z]+)\s+(.*)$/)
+  if ($line =~ /^([A-Za-z]+)\s+(.*)$/)
   {
     $chunk{$1} = $2;
+    next;
   }
-  else
+  elsif ($line !~ /^\s*$/)
   {
     print "$lno: CAN'T PARSE $line\n";
+    next;
+  }
+
+  if (defined $chunk{Input} || ! defined $chunk{BBONO})
+  {
+    %chunk = ();
+    next;
+  }
+
+  if ($chunk{BBONO} == 28588)
+  {
+    print "HERE\n";
+  }
+
+  my %result;
+  study_teams($chunk{TEAMS}, \%result);
+
+  # Fix some space-related issues.
+  my $mashed = despace($chunk{EVENT});
+  $mashed = unteam($mashed, \%result);
+
+  my $chain = Chain->new();
+  my @chains;
+  push @chains, $chain;
+
+  study_event($mashed, \%chunk, \%result, $chain, \$unknown);
+  process_event(\@chains);
+  process_patterns(\@EVENT_REDUCTIONS, \@chains, \@reduction_stats);
+
+  my $open_flag = 0;
+  for my $chain (@chains)
+  {
+    my $status = $chain->status();
+    $chain_stats[$chain->last()+1]{$status}++;
+    $open_flag = 1 if $status eq 'OPEN';
+  }
+
+  if ($open_flag)
+  {
+    print_chunk(\%chunk);
+    print_chains(\@chains);
   }
 }
 
@@ -156,11 +129,12 @@ for my $i (0 .. $#reduction_stats)
   printf("%6d%10d\n", $i, $reduction_stats[$i]);
 }
 
+
 sub print_chunk
 {
   my $cref = pop;
 
-  for my $field (@FIELDS)
+  for my $field (@RAW_FIELDS)
   {
     if (defined $cref->{$field} && $cref->{$field} ne '')
     {
@@ -168,5 +142,27 @@ sub print_chunk
     }
   }
   print "\n";
+}
+
+
+sub print_chains
+{
+  my $chains = pop;
+
+  for my $chain_no (0 .. $#$chains)
+  {
+    my $chain = $chains->[$chain_no];
+    printf("Chain %d %2d %8s: %s\n",
+      $chain_no,
+      $chain->last()+1,
+      $chain->status(),
+      $chain->text());
+      printf("Chain %d %2d %8s: %s\n",
+      $chain_no,
+      $chain->last()+1,
+      $chain->status(),
+      $chain->catcat());
+  }
+  printf "\n";
 }
 
