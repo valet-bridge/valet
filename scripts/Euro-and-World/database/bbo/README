@@ -1,4 +1,3 @@
-- Look at rules for order and sense
 - Symbolic names for numerical separators
 - Clean up Token method (sub-methods)
 - Delete code in Chains

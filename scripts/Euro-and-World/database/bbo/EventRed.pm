@@ -8,6 +8,9 @@ use open ':std', ':encoding(UTF-8)';
 
 package EventRed;
 
+use lib '.';
+use Separators;
+
 our @ISA = qw(Exporter);
 our @EXPORT = qw(@EVENT_REDUCTIONS);
 
@@ -127,9 +130,9 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(LETTER)] },
-      { CATEGORY => [qw(SEPARATOR)], FIELD => [(0x800)] },
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
+      { CATEGORY => ['COUNTER'], FIELD => ['LETTER'] },
+      { CATEGORY => ['SEPARATOR'], FIELD => [$SEPARATORS{VIRTUAL}] },
+      { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL'] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
@@ -143,13 +146,12 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(COUNTER)], 
+      { CATEGORY => ['COUNTER'], 
         FIELD => [qw(NUMERAL NL N_TO_N ORDINAL)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(PARTICLE)],
-        VALUE => [qw(Of)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL NL)] }
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => ['SINGLETON'], FIELD => ['PARTICLE'], VALUE => ['Of']},
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => ['COUNTER'], FIELD => [qw(NUMERAL NL)] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
@@ -163,10 +165,12 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL NL)] },
-      # TODO Use Separators.pm
-      { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x20, 0x21, 0x80) ] }, 
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL NL)] }
+      { CATEGORY => ['COUNTER'], FIELD => [qw(NUMERAL NL)] },
+      { CATEGORY => ['SEPARATOR'], 
+        FIELD => [$SEPARATORS{UNDERSCORE}, 
+                  $SEPARATORS{UNDERSCORE} | $SEPARATORS{SPACE},
+                  $SEPARATORS{SLASH}] }, 
+      { CATEGORY => ['COUNTER'], FIELD => [qw(NUMERAL NL)] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
@@ -180,9 +184,9 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(LETTER)] },
-      { CATEGORY => [qw(SEPARATOR)] }, 
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(N_OF_N)] }
+      { CATEGORY => ['COUNTER'], FIELD => ['LETTER'] },
+      { CATEGORY => ['SEPARATOR'] }, 
+      { CATEGORY => ['COUNTER'], FIELD => ['N_OF_N'] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
@@ -196,10 +200,9 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
-      # TODO Use Separators.pm
-      { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x4) ] }, 
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL NL N_OF_N)] }
+      { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL'] },
+      { CATEGORY => ['SEPARATOR'], FIELD => [$SEPARATORS{COLON}] }, 
+      { CATEGORY => ['COUNTER'], FIELD => [qw(NUMERAL NL N_OF_N)] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
@@ -213,10 +216,9 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
-      # TODO Use Separators.pm
-      { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x10) ] }, # TODO Dash
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL NL)] }
+      { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL'] },
+      { CATEGORY => ['SEPARATOR'], FIELD => [$SEPARATORS{DASH}] },
+      { CATEGORY => ['COUNTER'], FIELD => [qw(NUMERAL NL)] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
