@@ -392,6 +392,75 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
+  # Clean-up of length 3
+  # --------------------
+
+  # Day Month
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL ORDINAL)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(MONTH)] }
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 0,
+    METHOD => \&process_day_month,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
+  # Month Year
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(MONTH)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(YEAR)] }
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 0,
+    METHOD => \&process_month_year,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
+  # Roman Roman
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(ROMAN)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(ROMAN)] }
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 0,
+    METHOD => \&process_merge_0of2,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
+  # Roman iterator
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(ROMAN)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(ITERATOR)] }
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 0,
+    METHOD => \&process_swap,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
+
+
   # Clean-up of length 1
   # --------------------
 
@@ -495,9 +564,7 @@ my @REDUCTIONS =
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
-  },
-
-
+  }
 );
 
 
@@ -522,6 +589,39 @@ sub process_date_any
 
   my $token = $chain->check_out($match);
   $token->set_singleton('DATE', $str);
+}
+
+
+sub process_day_month
+{
+  # 13 December 2004.
+  my ($chain, $match) = @_;
+
+  my $month = $chain->value($match+2);
+  die "$month not a month" unless defined $MONTHS{$month};
+
+  my $day = $chain->value($match);
+  $day = '0' . $day if $day < 10;
+
+  my $str = $MONTHS{$month} . '-' . $day;
+
+  my $token = $chain->check_out($match);
+  $token->set_singleton('MONTH_DAY', $str);
+}
+
+
+sub process_month_year
+{
+  # December 2004.
+  my ($chain, $match) = @_;
+
+  my $month = $chain->value($match);
+  die "$month not a month" unless defined $MONTHS{$month};
+
+  my $str = $chain->value($match+2) . '-' . $MONTHS{$month};
+
+  my $token = $chain->check_out($match);
+  $token->set_singleton('YEAR_MONTH', $str);
 }
 
 
