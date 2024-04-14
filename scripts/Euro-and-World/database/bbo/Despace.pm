@@ -112,7 +112,7 @@ my %MERGE_ALIASES = (
     'rd of 16', 'r.of 16', 'r of 16', 'rd of 16', 'rn of 16'],
   Rof12 => ['phase a 12'],
   Tiebreak => ['extra boards', 'extra time', 'extra stanza', 
-    'semifinals extra', 'tie break', 'tie reak', 'tiebreak'],
+    'semifinals extra', 'tie break', 'tie reak', 'tiebreak', 'o_t'],
   'Second half' => ['second ha'],
   Bronze => ['small final'],
   'Session 1' => ['única sesión'],
@@ -124,6 +124,9 @@ my %MERGE_ALIASES = (
   'Women RR' => ['wrr'],
   'First half' => ['1mt', '1emt', 'andata'],
   'Second half' => ['2mt', '2emt', 'ritorno', 'retur'],
+  'Second' => ['2e'],
+  'Third' => ['3e'],
+  'Fourth' => ['4e'],
   'vs ni' => ['vni'],
   '()' => ['(\+2)'] # Uninteresting
 );

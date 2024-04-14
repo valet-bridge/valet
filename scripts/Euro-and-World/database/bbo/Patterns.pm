@@ -99,41 +99,6 @@ my @REDUCTIONS =
   # Merge the simple counters (digits, letters).
   # --------------------------------------------
 
-  # 2 A
-  {
-    PATTERN =>
-    [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
-      { CATEGORY => [qw(SEPARATOR)]},
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(LETTER)] }
-    ],
-    ANCHOR => 'ANY',
-    KEEP_LAST => 0,
-    METHOD => \&process_merge_02,
-    SPLIT_FRONT => 0,
-    SPLIT_BACK => 0,
-    COMPLETION => 1
-  },
-
-  # 7 of 9
-  {
-    PATTERN =>
-    [
-      { CATEGORY => [qw(COUNTER)]},
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(PARTICLE)],
-        VALUE => [qw(Of)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
-    ],
-    ANCHOR => 'ANY',
-    KEEP_LAST => 0,
-    METHOD => \&process_merge_0of4,
-    SPLIT_FRONT => 0,
-    SPLIT_BACK => 1,
-    COMPLETION => 1
-  },
-
   # 7 and/to 9
   {
     PATTERN =>
@@ -148,6 +113,41 @@ my @REDUCTIONS =
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
     METHOD => \&process_merge_0dash4,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
+  # 7 of 9
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL NL)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(PARTICLE)],
+        VALUE => [qw(Of)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&process_merge_0of4,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
+  # 2 A
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
+      { CATEGORY => [qw(SEPARATOR)]},
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(LETTER)] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&process_merge_02,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -194,7 +194,7 @@ my @REDUCTIONS =
       { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
       # TODO Use Separators.pm
       { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x4) ] }, 
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL NL)] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
@@ -312,22 +312,6 @@ my @REDUCTIONS =
   },
 
 
-  # Round 5 -> ITER COUNTER
-  {
-    PATTERN =>
-    [
-      { CATEGORY => [qw(ITERATOR)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
-    ],
-    ANCHOR => 'END',
-    KEEP_LAST => 2,
-    METHOD => \&process_general,
-    SPLIT_FRONT => 1,
-    SPLIT_BACK => 0,
-    COMPLETION => 1
-  },
-
   # Round {COUNTER}
   {
     PATTERN =>
@@ -360,21 +344,6 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
-
-  # Open
-  {
-    PATTERN =>
-    [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(TOURNAMENT)],
-        VALUE => [qw(Open)] },
-    ],
-    ANCHOR => 'EXACT',
-    KEEP_LAST => 0,
-    METHOD => \&process_open_exact,
-    SPLIT_FRONT => 0,
-    SPLIT_BACK => 1, # Split one Open from the other
-    COMPLETION => 1
-  },
 
   # O
   {
@@ -431,24 +400,6 @@ my @REDUCTIONS =
     ANCHOR => 'EXACT',
     KEEP_LAST => 2,
     METHOD => \&process_swap,
-    SPLIT_FRONT => 0,
-    SPLIT_BACK => 0,
-    COMPLETION => 1
-  },
-
-  # Boards 19-21
-  {
-    PATTERN =>
-    [
-      { CATEGORY => [ qw(ITERATOR)] },
-      { CATEGORY => [ qw(SEPARATOR)] },
-      { CATEGORY => [ qw(COUNTER) ], FIELD => [ qw(NUMERAL)] },
-      { CATEGORY => [ qw(SEPARATOR) ], FIELD => [ 0x10 ] }, # TODO Dash
-      { CATEGORY => [ qw(COUNTER) ], FIELD => [ qw(NUMERAL)] }
-    ],
-    ANCHOR => 'EXACT',
-    KEEP_LAST => 2,
-    METHOD => \&process_merge_2dash4,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1

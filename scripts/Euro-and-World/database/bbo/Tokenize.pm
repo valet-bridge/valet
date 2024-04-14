@@ -96,6 +96,12 @@ sub undate
     $$date_ref = "$year-$month-$day";
     $text =~ s/\d\d\d\d\.\d\d\.\d\d/ /;
   }
+  elsif ($text =~ /(\d\d\d\d)_(\d\d)_(\d\d)/)
+  {
+    my ($year, $month, $day) = ($1, $2, $3);
+    $$date_ref = "$year-$month-$day";
+    $text =~ s/\d\d\d\d_\d\d_\d\d/ /;
+  }
   return $text;
 }
 
