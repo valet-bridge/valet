@@ -140,6 +140,129 @@ sub set_letter_counter
 }
 
 
+sub merge_num_num
+{
+  my ($self, $sep, $token2) = @_;
+
+  if ($sep eq '/' || $sep eq '_' || $sep eq 'of')
+  {
+    $self->{FIELD} = 'N_OF_N';
+    $self->{VALUE} .= ' of ' . $token2->{VALUE};
+  }
+  elsif ($sep eq ':' || $sep eq ' ')
+  {
+    # Something like 7:1 where we don't know their names.
+    $self->{FIELD} = 'MAJOR_MINOR';
+    $self->{VALUE} .= '+' . $token2->{VALUE};
+  }
+  elsif ($sep eq '-')
+  {
+    if ($self->{VALUE} <= $token2->{VALUE})
+    {
+      # Heuristic, may not be true.  Could also be e.g. 'of'.
+      $self->{FIELD} = 'N_TO_N';
+      $self->{VALUE} .= '-' . $token2->{VALUE};
+    }
+    else
+    {
+      # Something like 7-1 where we don't know their names.
+      $self->{FIELD} = 'MAJOR_MINOR';
+      $self->{VALUE} .= '+' . $token2->{VALUE};
+    }
+  }
+  else
+  {
+    die "merge_num_num: Unknown separator";
+  }
+}
+
+
+sub merge_nl_num
+{
+  my ($self, $sep, $token2) = @_;
+
+  if ($sep eq '/' || $sep eq '_' || $sep eq 'of')
+  {
+    $self->{FIELD} = 'NL_OF_N';
+    $self->{VALUE} .= ' of ' . $token2->{VALUE};
+  }
+  elsif ($sep eq '-' || $sep eq ' ')
+  {
+    $self->{FIELD} = 'MAJOR_MINOR';
+    $self->{VALUE} .= '+' . $token2->{VALUE};
+  }
+  else
+  {
+    die "merge_nl_num: Unknown separator";
+  }
+}
+
+
+sub merge_num_nl
+{
+  my ($self, $sep, $token2) = @_;
+
+  if ($sep eq '/' || $sep eq '_' || $sep eq 'of')
+  {
+    $self->{FIELD} = 'NL_OF_N';
+
+    # Break apart the 'NL'.
+    $token2->{VALUE} =~ /^(\d+)(\w)$/;
+    $self->{VALUE} .= $2 . ' of ' . $1;
+  }
+  elsif ($sep eq ':')
+  {
+    # Something like 10:1A.
+    $self->{FIELD} = 'MAJOR_MINOR';
+    $self->{VALUE} .= '+' . $token2->{VALUE};
+  }
+  elsif ($sep eq '-')
+  {
+    # Break apart the 'NL'.
+    $token2->{VALUE} =~ /^(\d+)(\w)$/;
+    my ($n, $l) = ($1, $2);
+
+    if ($self->{VALUE} <= $n)
+    {
+      # Heuristic, may not be true.  Could also be e.g. 'of'.
+      $self->{FIELD} = 'NL_TO_N';
+      $self->{VALUE} .= $l . ' to ' . $n;
+    }
+    else
+    {
+      # Something like 7-1 where we don't know their names.
+      $self->{FIELD} = 'MAJOR_MINOR';
+      $self->{VALUE} .= '+' . $token2->{VALUE};
+    }
+  }
+  else
+  {
+    die "merge_num_nl: Unknown separator $sep";
+  }
+}
+
+
+sub merge_ordinal_n_or_o
+{
+  my ($self, $sep, $token2) = @_;
+
+  if ($sep eq 'of' || $sep eq '_' || $token2->{FIELD} eq 'ORDINAL')
+  {
+    $self->{FIELD} = 'N_OF_N';
+    $self->{VALUE} .= ' of ' . $token2->{VALUE};
+  }
+  elsif ($sep eq ' ')
+  {
+    $self->{FIELD} = 'MAJOR_MINOR';
+    $self->{VALUE} .= '+' . $token2->{VALUE};
+  }
+  else
+  {
+    die "merge_ordinal_n_or_o: Unknown separator $sep";
+  }
+}
+
+
 sub merge_counters
 {
   my ($self, $sep, $token2) = @_;
@@ -163,54 +286,12 @@ sub merge_counters
       ($self->{FIELD} eq 'ROMAN' &&
       $token2->{FIELD} eq 'ROMAN'))
   {
-    if ($sep eq '/' || $sep eq '_' || $sep eq 'of')
-    {
-      $self->{FIELD} = 'N_OF_N';
-      $self->{VALUE} .= ' of ' . $token2->{VALUE};
-    }
-    elsif ($sep eq ':' || $sep eq ' ')
-    {
-      # Something like 7:1 where we don't know their names.
-      $self->{FIELD} = 'MAJOR_MINOR';
-      $self->{VALUE} .= '+' . $token2->{VALUE};
-    }
-    elsif ($sep eq '-')
-    {
-      if ($self->{VALUE} <= $token2->{VALUE})
-      {
-        # Heuristic, may not be true.  Could also be e.g. 'of'.
-        $self->{FIELD} = 'N_TO_N';
-        $self->{VALUE} .= '-' . $token2->{VALUE};
-      }
-      else
-      {
-        # Something like 7-1 where we don't know their names.
-        $self->{FIELD} = 'MAJOR_MINOR';
-        $self->{VALUE} .= '+' . $token2->{VALUE};
-      }
-    }
-    else
-    {
-      die;
-    }
+    $self->merge_num_num($sep, $token2);
   }
   elsif ($self->{FIELD} eq 'NL' &&
       $token2->{FIELD} eq 'NUMERAL')
   {
-    if ($sep eq '/' || $sep eq '_' || $sep eq 'of')
-    {
-      $self->{FIELD} = 'NL_OF_N';
-      $self->{VALUE} .= ' of ' . $token2->{VALUE};
-    }
-    elsif ($sep eq '-' || $sep eq ' ')
-    {
-      $self->{FIELD} = 'MAJOR_MINOR';
-      $self->{VALUE} .= '+' . $token2->{VALUE};
-    }
-    else
-    {
-      die;
-    }
+    $self->merge_nl_num($sep, $token2);
   }
   elsif ($self->{FIELD} eq 'NL' &&
       $token2->{FIELD} eq 'NL')
@@ -234,43 +315,7 @@ sub merge_counters
   elsif ($self->{FIELD} eq 'NUMERAL' &&
       $token2->{FIELD} eq 'NL')
   {
-    if ($sep eq '/' || $sep eq '_' || $sep eq 'of')
-    {
-      $self->{FIELD} = 'NL_OF_N';
-
-      # Break apart the 'NL'.
-      $token2->{VALUE} =~ /^(\d+)(\w)$/;
-      $self->{VALUE} .= $2 . ' of ' . $1;
-    }
-    elsif ($sep eq ':')
-    {
-      # Something like 10:1A.
-      $self->{FIELD} = 'MAJOR_MINOR';
-      $self->{VALUE} .= '+' . $token2->{VALUE};
-    }
-    elsif ($sep eq '-')
-    {
-      # Break apart the 'NL'.
-      $token2->{VALUE} =~ /^(\d+)(\w)$/;
-      my ($n, $l) = ($1, $2);
-
-      if ($self->{VALUE} <= $n)
-      {
-        # Heuristic, may not be true.  Could also be e.g. 'of'.
-        $self->{FIELD} = 'NL_TO_N';
-        $self->{VALUE} .= $l . ' to ' . $n;
-      }
-      else
-      {
-        # Something like 7-1 where we don't know their names.
-        $self->{FIELD} = 'MAJOR_MINOR';
-        $self->{VALUE} .= '+' . $token2->{VALUE};
-      }
-    }
-    else
-    {
-      die;
-    }
+    $self->merge_num_nl($sep, $token2);
   }
   elsif ($self->{FIELD} eq 'ROMAN' &&
       ($token2->{FIELD} eq 'NUMERAL' ||
@@ -285,20 +330,7 @@ sub merge_counters
       ($token2->{FIELD} eq 'NUMERAL' ||
        $token2->{FIELD} eq 'ORDINAL'))
   {
-    if ($sep eq 'of' || $sep eq '_' || $token2->{FIELD} eq 'ORDINAL')
-    {
-      $self->{FIELD} = 'N_OF_N';
-      $self->{VALUE} .= ' of ' . $token2->{VALUE};
-    }
-    elsif ($sep eq ' ')
-    {
-      $self->{FIELD} = 'MAJOR_MINOR';
-      $self->{VALUE} .= '+' . $token2->{VALUE};
-    }
-    else
-    {
-      die;
-    }
+    $self->merge_ordinal_n_or_o($sep, $token2);
   }
   elsif ($self->{FIELD} eq 'NUMERAL' &&
       $token2->{FIELD} eq 'N_OF_N')
@@ -350,7 +382,7 @@ sub merge_counters
   }
   else
   {
-    die;
+    die "merge_counters: Unknown merge";
   }
 }
 

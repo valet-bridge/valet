@@ -14,9 +14,7 @@ use Cookbook;
 # - LIST of Token's
 # - STATUS: OPEN, COMPLETE or KILLED
 # - LAST: Number of the last token (for convenience)
-# - BINDING: A list of the binding strength of each token to the
-#   following one.  So there is one fewer than the number of tokens.
-# - Precursor: If present, a token that must be a SEPARATOR.
+# - PRECURSOR: If present, a token that must be a SEPARATOR.
 # - SENTINEL: If present, a token that must be a SEPARATOR.
 
 sub new
@@ -240,12 +238,6 @@ sub copy_from
   $chain2->{LAST} = $#{$chain2->{LIST}};
   $chain2->{STATUS} = 'OPEN';
 
-  if (exists $self->{BINDING})
-  {
-    @{$chain2->{BINDING}} = 
-      @{$self->{BINDING}[$index ..  $#{$self->{BINDING}}]};
-  }
-
   if (exists $self->{SENTINEL})
   {
     $chain2->{SENTINEL} = $self->{SENTINEL};
@@ -276,9 +268,6 @@ sub truncate_before
 
   splice @{$self->{LIST}}, $index-1, $self->{LAST};
   $self->{LAST} = $index-2;
-
-  split @{$self->{BINDING}}, $index-2, $#{$self->{BINDING}} if
-    exists $self->{BINDING};
 }
 
 

@@ -1,5 +1,8 @@
-- Clean up Token method (sub-methods)
-- Get rid of BINDING
+- Code to clean:
+  Token (sub-methods)
+  Tokenize
+  cook
+
 - A particle should probably be a separator?
 
 Split Tokenize:
