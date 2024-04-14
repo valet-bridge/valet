@@ -23,6 +23,7 @@ our @EXPORT = qw(
 
 use Age;
 use City;
+use Color;
 use Country;
 use Date;
 use Form;
@@ -41,6 +42,7 @@ use Weekday;
 our %CATEGORIES;
 $CATEGORIES{AGE} = Age->new();
 $CATEGORIES{CITY} = City->new();
+$CATEGORIES{COLOR} = Color->new();
 $CATEGORIES{COUNTRY} = Country->new();
 $CATEGORIES{DATE} = Date->new();
 $CATEGORIES{FORM} = Form->new();

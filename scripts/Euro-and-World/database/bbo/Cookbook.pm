@@ -191,7 +191,7 @@ our %FIX_ALIASES =
       qr qulification prelim preliminary pre pelim
       clasificacion clasificatoria)],
 
-    'Round-robin' => [qw(rrobin roundrobin rr)],
+    'Round-robin' => [qw(rrobin roundrobin rr rrr)],
 
     PreQF => [qw(pqf)],
 
@@ -454,14 +454,15 @@ our %FIX_ALIASES =
   KILL =>
   {
     Kill => [qw(
-      untitled bbo bbvg bbovg vg vmg bridge dup man mandarin pabfc
+      untitled bbo1 bbo2 bbo3 bbo4 bbvg bbovg vg vmg 
+      bridge dup man pabfc
       daskalakis robinso stern hol
-      fluff reloaded missed this train tren ch mac ore oam le friendly
+      fluff reloaded missed train tren ch mac ore friendly mandarin
       game series npc rank tpatkawan patkawan phase tadkov friendship
       am afternoon night soir barriere best delayed us
       combined for only alle int titan silver gold vp sm
       è no n° =), 
-      '?', 'one!', 'ab', 'a&b', ']']
+      '?', 'one!', 'ab', 'a&b', ']', 'mandarin table']
   }
 );
 

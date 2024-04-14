@@ -160,7 +160,7 @@ my @REDUCTIONS =
       { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL NL)] },
       # TODO Use Separators.pm
       { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x20, 0x80) ] }, 
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL NL)] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
@@ -187,6 +187,24 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
+  # 2-3, 2-3A, 2A-3
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
+      # TODO Use Separators.pm
+      { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x10) ] }, # TODO Dash
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL NL)] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&process_merge_0dash2,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
+
   # TODO 7-9 as 'to', but first fix 3-4-5-6-7 into a 'to' range
 
 
@@ -194,38 +212,38 @@ my @REDUCTIONS =
   # And we should be able to take some sequences as dates.
   # ---------------------------------------------------------------------
 
-  {
-    PATTERN =>
-    [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
-        VALUE => [qw(R)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)] }
-    ],
-    ANCHOR => 'ANY',
-    KEEP_LAST => 2,
-    METHOD => \&process_r_counter,
-    SPLIT_FRONT => 1,
-    SPLIT_BACK => 1,
-    COMPLETION => 1
-  },
+  # {
+    # PATTERN =>
+    # [
+      # { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
+        # VALUE => [qw(R r)] },
+      # { CATEGORY => [qw(SEPARATOR)] },
+      # { CATEGORY => [qw(COUNTER)] }
+    # ],
+    # ANCHOR => 'ANY',
+    # KEEP_LAST => 2,
+    # METHOD => \&process_r_counter,
+    # SPLIT_FRONT => 1,
+    # SPLIT_BACK => 1,
+    # COMPLETION => 1
+  # },
+# 
+  # {
+    # PATTERN =>
+    # [
+      # { CATEGORY => [qw(ITERATOR)], FIELD => [qw(Table Match)] },
+      # { CATEGORY => [qw(SEPARATOR)] },
+      # { CATEGORY => [qw(COUNTER)] }
+    # ],
+    # ANCHOR => 'ANY',
+    # KEEP_LAST => 2,
+    # METHOD => \&process_general,
+    # SPLIT_FRONT => 1,
+    # SPLIT_BACK => 1,
+    # COMPLETION => 1
+  # },
 
-  {
-    PATTERN =>
-    [
-      { CATEGORY => [qw(ITERATOR)], FIELD => [qw(Table)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)] }
-    ],
-    ANCHOR => 'ANY',
-    KEEP_LAST => 2,
-    METHOD => \&process_general,
-    SPLIT_FRONT => 1,
-    SPLIT_BACK => 1,
-    COMPLETION => 1
-  },
-
-  # |Day Month Year -> DATE
+  # Day Month Year -> DATE
   {
     PATTERN =>
     [
@@ -238,7 +256,7 @@ my @REDUCTIONS =
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
     METHOD => \&process_date_any,
-    SPLIT_FRONT => 0,
+    SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
     COMPLETION => 1
   },
@@ -512,9 +530,19 @@ sub process_merge_0of4
 }
 
 
+sub process_merge_0dash2
+{
+  # 19-21 with a dash.
+  my ($chain, $match) = @_;
+
+  my $token = $chain->check_out($match);
+  $token->merge_counters('-', $chain->check_out($match+2));
+}
+
+
 sub process_merge_0dash4
 {
-  # 19-21.
+  # 19-21 with a particle.
   my ($chain, $match) = @_;
 
   my $token = $chain->check_out($match);

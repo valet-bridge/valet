@@ -189,6 +189,11 @@ sub split_on_digit_groups
         # Don't split U31 etc.
         next;
       }
+      elsif ($#a == 1 && $a[0] eq 'BBO' && $a[1] <= 4)
+      {
+        # Don't split BBO2 etc.
+        next;
+      }
 
       my $add = 2 * $#a;
       splice(@$list_ref, $i, 0, ('') x $add);

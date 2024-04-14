@@ -108,7 +108,7 @@ my %MERGE_ALIASES = (
   Rof64 => ['round of 64'],
   Rof32 => ['round of 32', 'r of 32'],
   Rof18 => ['phase a 18'],
-  Rof16 => ['round of 16', 'phase a 16', 
+  Rof16 => ['round of 16', 'phase a 16', '1_8e de finale',
     'rd of 16', 'r.of 16', 'r of 16', 'rd of 16', 'rn of 16'],
   Rof12 => ['phase a 12'],
   Tiebreak => ['extra boards', 'extra time', 'extra stanza', 
