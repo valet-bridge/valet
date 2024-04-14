@@ -233,11 +233,12 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(COUNTER)], 
-        FIELD => [qw(NUMERAL ORDINAL ROMAN NL)] },
-      { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x01, 0x10, 0x20) ] }, 
-      # TODO Space, Dash, Underscore
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL N_OF_N)] }
+      { CATEGORY => ['COUNTER'], FIELD => [qw(NUMERAL ORDINAL ROMAN NL)] },
+      { CATEGORY => ['SEPARATOR'], 
+        FIELD => [$SEPARATORS{SPACE},
+                  $SEPARATORS{DASH},
+                  $SEPARATORS{UNDERSCORE}] },
+      { CATEGORY => ['COUNTER'], FIELD => [qw(NUMERAL N_OF_N)] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
@@ -251,10 +252,12 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(ROMAN)] },
-      { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x01, 0x10, 0x20) ] }, 
-      # TODO Space or dash
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(ROMAN LETTER NL)] }
+      { CATEGORY => ['COUNTER'], FIELD => ['ROMAN'] },
+      { CATEGORY => ['SEPARATOR'], 
+        FIELD => [$SEPARATORS{SPACE},
+                  $SEPARATORS{DASH},
+                  $SEPARATORS{UNDERSCORE}] }, 
+      { CATEGORY => ['COUNTER'], FIELD => [qw(ROMAN LETTER NL)] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
@@ -274,10 +277,10 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
+      { CATEGORY => ['SINGLETON'], FIELD => ['LETTER'],
         VALUE => [qw(R r)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)] }
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => ['COUNTER'] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 2,
@@ -291,9 +294,9 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(ITERATOR)], FIELD => [qw(Table Match)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)] }
+      { CATEGORY => ['ITERATOR'], FIELD => [qw(Table Match)] },
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => ['COUNTER'] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 2,
@@ -307,9 +310,9 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(EXPANSION)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)] }
+      { CATEGORY => ['SINGLETON'], FIELD => ['EXPANSION'] },
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => ['COUNTER'] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 2,
@@ -319,15 +322,15 @@ our @EVENT_REDUCTIONS =
     COMPLETION => 1
   },
 
-  # Day Month Year -> DATE
+  # Day Month Year
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL ORDINAL)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(MONTH)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(YEAR)] }
+      { CATEGORY => ['COUNTER'], FIELD => [qw(NUMERAL ORDINAL)] },
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => ['SINGLETON'], FIELD => ['MONTH'] },
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => ['SINGLETON'], FIELD => ['YEAR'] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
@@ -341,9 +344,9 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(ORDINAL)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(ITERATOR)] }
+      { CATEGORY => ['COUNTER'], FIELD => ['ORDINAL'] },
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => ['ITERATOR'] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 2,
@@ -357,9 +360,9 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(ITERATOR)], FIELD => [qw(Group Match)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER SINGLETON)], FIELD => [qw(LETTER)] }
+      { CATEGORY => ['ITERATOR'], FIELD => [qw(Group Match)] },
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => [qw(COUNTER SINGLETON)], FIELD => ['LETTER'] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 2,
@@ -377,7 +380,7 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
+      { CATEGORY => ['SINGLETON'], FIELD => ['LETTER'],
         VALUE => [qw(O G o g)] },
     ],
     ANCHOR => 'BEGIN',
@@ -392,7 +395,7 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(AGE)] },
+      { CATEGORY => ['SINGLETON'], FIELD => ['AGE'] },
     ],
     ANCHOR => 'BEGIN',
     KEEP_LAST => 0,
@@ -406,9 +409,9 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(ITERATOR)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)] }
+      { CATEGORY => ['ITERATOR'] },
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => ['COUNTER'] }
     ],
     ANCHOR => 'END',
     KEEP_LAST => 2,
@@ -426,7 +429,7 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL ORDINAL)] }
+      { CATEGORY => ['COUNTER'], FIELD => [qw(NUMERAL ORDINAL)] }
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,
@@ -440,9 +443,9 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL ORDINAL)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(ITERATOR)] }
+      { CATEGORY => ['COUNTER'], FIELD => [qw(NUMERAL ORDINAL)] },
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => ['ITERATOR'] }
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 2,
@@ -456,10 +459,10 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
+      { CATEGORY => ['SINGLETON'], FIELD => ['LETTER'],
         VALUE => [qw(J Q S s W Y R)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)] }
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => ['COUNTER'] }
     ],
     ANCHOR => 'END',
     KEEP_LAST => 2,
@@ -473,9 +476,9 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL ORDINAL)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(MONTH)] }
+      { CATEGORY => ['COUNTER'], FIELD => [qw(NUMERAL ORDINAL)] },
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => ['SINGLETON'], FIELD => ['MONTH'] }
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,
@@ -489,9 +492,9 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(MONTH)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(YEAR)] }
+      { CATEGORY => ['SINGLETON'], FIELD => ['MONTH'] },
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => ['SINGLETON'], FIELD => ['YEAR'] }
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,
@@ -505,9 +508,9 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(ROMAN)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(ITERATOR)] }
+      { CATEGORY => ['COUNTER'], FIELD => ['ROMAN'] },
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => ['ITERATOR'] }
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,
@@ -525,7 +528,7 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(ITERATOR)] }
+      { CATEGORY => ['ITERATOR'] }
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,
@@ -539,7 +542,7 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(ROMAN)], VALUE => [ 5 ] }
+      { CATEGORY => ['COUNTER'], FIELD => ['ROMAN'], VALUE => [5] }
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,
@@ -553,7 +556,7 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(LETTER)], 
+      { CATEGORY => ['COUNTER'], FIELD => ['LETTER'], 
         VALUE => [ qw(A B C D a b c d) ] }
     ],
     ANCHOR => 'EXACT',
@@ -568,7 +571,7 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)], 
+      { CATEGORY => ['SINGLETON'], FIELD => ['LETTER'], 
         VALUE => [ qw(Q R S q r s) ] }
     ],
     ANCHOR => 'EXACT',
@@ -583,7 +586,7 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
+      { CATEGORY => ['SINGLETON'], FIELD => ['LETTER'],
         VALUE => [qw(W J Y K)] },
     ],
     ANCHOR => 'EXACT',
@@ -598,7 +601,7 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(SINGLETON)] },
+      { CATEGORY => ['SINGLETON'] },
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,

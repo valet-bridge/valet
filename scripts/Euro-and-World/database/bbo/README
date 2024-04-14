@@ -1,7 +1,5 @@
-- Symbolic names for numerical separators
 - Clean up Token method (sub-methods)
 - Delete code in Chains
-- In Patterns, split out the patterns into PatternsEvent, as argument
 - Get rid of BINDING
 - A particle should probably be a separator?
 - Are AMBIGUITIES actually used?
