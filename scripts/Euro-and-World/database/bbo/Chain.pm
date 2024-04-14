@@ -36,6 +36,23 @@ sub append
 }
 
 
+sub insert_at
+{
+  my ($self, $index, $token) = @_;
+  die "Index $index out of bounds" unless $index <= $self->{LAST}+1;
+  if ($index > $self->{LAST})
+  {
+    $self->append($token);
+  }
+  else
+  {
+    splice @{$self->{LIST}}, $index, 0, $token;
+  }
+  $self->{LAST} = $#{$self->{LIST}};
+  $self->{STATUS} = 'OPEN';
+}
+
+
 sub check_out
 {
   my ($self, $index) = @_;

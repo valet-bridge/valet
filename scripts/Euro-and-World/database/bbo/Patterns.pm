@@ -325,6 +325,7 @@ my @REDUCTIONS =
   # And we should be able to take some sequences as dates.
   # ---------------------------------------------------------------------
 
+  # R/r counter
   {
     PATTERN =>
     [
@@ -341,6 +342,7 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
+  # Table/Match counter
   {
     PATTERN =>
     [
@@ -356,6 +358,7 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
+  # Expansion counter
   {
     PATTERN =>
     [
@@ -412,7 +415,7 @@ my @REDUCTIONS =
     [
       { CATEGORY => [qw(ITERATOR)], FIELD => [qw(Group Match)] },
       { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(LETTER)] }
+      { CATEGORY => [qw(COUNTER SINGLETON)], FIELD => [qw(LETTER)] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 2,
@@ -421,6 +424,38 @@ my @REDUCTIONS =
     SPLIT_BACK => 1,
     COMPLETION => 1
   },
+
+
+  # Open and Girls
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
+        VALUE => [qw(O G o g)] },
+    ],
+    ANCHOR => 'BEGIN',
+    KEEP_LAST => 0,
+    METHOD => \&process_og_front,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 1, # Split one from the other
+    COMPLETION => 1
+  },
+
+  # As this generates a leading Age singleton, we fix this too.
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(AGE)] },
+    ],
+    ANCHOR => 'BEGIN',
+    KEEP_LAST => 0,
+    METHOD => \&process_general,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
+
 
 
   # Round {COUNTER}
@@ -571,6 +606,20 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
+  # Open and Girls followed by a counter, presumably
+  # {
+    # PATTERN =>
+    # [
+      # { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
+        # VALUE => [qw(O G o g)] },
+    # ],
+    # ANCHOR => 'BEGIN',
+    # KEEP_LAST => 0,
+    # METHOD => \&process_general,
+    # SPLIT_FRONT => 0,
+    # SPLIT_BACK => 1, # Split so it can be processed below
+    # COMPLETION => 0
+  # },
 
 
   # Clean-up of length 1
@@ -604,22 +653,7 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
-  # Open and Girls
-  {
-    PATTERN =>
-    [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
-        VALUE => [qw(O G o g)] },
-    ],
-    ANCHOR => 'EXACT',
-    KEEP_LAST => 0,
-    METHOD => \&process_og_exact,
-    SPLIT_FRONT => 0,
-    SPLIT_BACK => 1, # Split one from the other
-    COMPLETION => 1
-  },
-
-  # ABC
+  # ABCD
   {
     PATTERN =>
     [
@@ -862,7 +896,7 @@ sub process_r_counter
 }
 
 
-sub process_og_exact
+sub process_og_front
 {
   # Exactly the entry 'Open' or 'G' for Girls.
   # Take it to mean open gender, open age / juniors.
@@ -876,7 +910,7 @@ sub process_og_exact
   my $token2 = Token->new();
   $token2->copy_origin_from($token);
   $token2->set_separator('VIRTUAL');
-  $chain->append($token2);
+  $chain->insert_at(1, $token2);
 
   my $token3 = Token->new();
   $token3->copy_origin_from($token);
@@ -894,7 +928,7 @@ sub process_og_exact
     die "Unknown OG";
   }
 
-  $chain->append($token3);
+  $chain->insert_at(2, $token3);
 }
 
 

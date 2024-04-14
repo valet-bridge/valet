@@ -388,7 +388,7 @@ sub is_letter
   my ($part, $token) = @_;
 
   my $lc = lc($part);
-  if ($lc =~ /^[abcdefh]$/)
+  if ($lc =~ /^[abcdefhuv]$/)
   {
     $token->set_letter_counter($part);
     return 1;

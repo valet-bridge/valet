@@ -1,120 +1,19 @@
-- Do the dash patterns
-- Check any long chains remaining
-- Reactivate the two patterns
-
-
-7: 21
-10 would work with N sep half
-
-Singletons odd:
-S
-S.F.
-Q
-Segment (single chain)
-Match
-
-N half (end) pattern
-
-A particle should probably be a separator?
-
-Are AMBIGUITIES actually used?
+- Look at rules for order and sense
+- Symbolic names for numerical separators
+- Clean up Token method (sub-methods)
+- Delete code in Chains
+- In Patterns, split out the patterns into PatternsEvent, as argument
+- Get rid of BINDING
+- A particle should probably be a separator?
+- Are AMBIGUITIES actually used?
 
 Split Tokenize:
 EventBBO?
 TeamBBO?
-TeamBBO splits on vs.
-It should always be a list of 2.
-Or it could be a chain as well to begin with.
-We recognize the countries.
-There are some that instead inform tournament form.
-
-If Seg2 Oct 2004, probably split on the real space and 
-not the virtual one.  Do this in general in Chains.
-But Match 5B Stanza 1B would then split in lots of places...
-So maybe the thing to do is to bind 1B surrounded by spaces
-into a counter always.  To begin with.
 
 DATE, LOCATION, SESSION always empty.
 Scoring should be easy.
 
-2938
-2nd Match 1st Half
-ORDINAL|SEP|ITER -> ITER with counter quashed in
-
-5872
-ITER|SEP|NUMERAL Rd 11 at end
-
-In Cookbook, pick out the values and map to AMBIGUOUS in
-the big hash already.
-
-3. Two tokens like to combine with a binding strength 0-9
-   that is specified in rules
-5. An ambiguous token perhaps only merges if there is only
-   one possible merge.  Only later by strength if needed.
-7. Some cross-chain merges are possible, "4 (of 7)".
-
-Maybe my chain reductions are too quick.
-- If no space at all, split on dash into chains
-- "10 B" becomes an unnamed COUNTER_DOUBLE.
-
-Then there is a reduction rule
-Round 7 B of 9
-7 B -> generic counter_double
-any counter without of + "of N" -> generic counter_double_of
-any ^ iterator + generic_counter_double_of = specific_counter_double_of
-So these rules can bubble up
-Each reduction rule can have a score.
-"of" + "8" = "of 8" binds very strongly.
-2 B binds strongly as well.
-
-
-Qletter, dash, Final (ITER-SEP-ITER), merge to QF
-2 B (NUM-SEP-LETTER)
-2:1 (NUM-SEP-NUM with colon), round and segment?
-
-
-When KILL'ing, also preserve the text of the surrounding separators.
-
 Make something called Region.pm with Kepri in it
 
-Binary coding of the ~ 30 categories?
-Categories:
-
-TNAME
-SPONSOR
-MEMORIAL
-ORGANIZER
-TOURNAMENT
-MOVEMENT
-ORIGIN
-FORM
-SCORING
-
-ITERATOR
-
-AGE
-GENDER
-
-GROUP
-COLOR
-TABLE
-BOARDS
-
-COUNTRY
-REGION
-GEOCOVER
-CITY
-
-YEAR
-MONTH
-DATE
-WEEKDAY
-TEMPORAL
-
-ORDINAL
-NUMERAL
-ROMAN
-
-PARTICLE
-
-KILL
+R16, R32 recognize later.
