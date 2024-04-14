@@ -40,6 +40,8 @@ my $unknown = 0;
 my @chain_stats;
 my $time1 = 0;
 
+my @reduction_stats;
+
 while ($line = <$fh>)
 {
   chomp $line;
@@ -71,7 +73,7 @@ while ($line = <$fh>)
 
       process_event(\@chains);
 
-      process_patterns(\@EVENT_REDUCTIONS, \@chains);
+      process_patterns(\@EVENT_REDUCTIONS, \@chains, \@reduction_stats);
 
       # post_process_event(\%event_chains, \%event_solved);
 
@@ -151,10 +153,10 @@ printf("%6s%10d%10d%10d\n\n", "Sum",
   $csum{OPEN}, $csum{COMPLETE}, $csum{KILLED});
 
 print "Reduction matches:\n";
-for my $i (0 .. $#RMATCH)
+for my $i (0 .. $#reduction_stats)
 {
-  next unless defined $RMATCH[$i];
-  printf("%6d%10d\n", $i, $RMATCH[$i]);
+  next unless defined $reduction_stats[$i];
+  printf("%6d%10d\n", $i, $reduction_stats[$i]);
 }
 
 sub print_chunk

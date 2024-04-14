@@ -361,7 +361,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
-    METHOD => \&Patterns::process_date_any,
+    METHOD => \&Patterns::process_date,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
     COMPLETION => 1

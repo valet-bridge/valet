@@ -12,24 +12,10 @@ our @ISA = qw(Exporter);
 our @EXPORT = qw(process_patterns @RMATCH);
 
 use lib '.';
+use lib '..';
 
-
-my %MONTHS = (
-  'January' => '01',
-  'Jan' => '01',
-  'February' => '02',
-  'March' => '03',
-  'April' => '04',
-  'May' => '05',
-  'June' => '06',
-  'July' => '07',
-  'August' => '08',
-  'September' => '09',
-  'October' => '10',
-  'November' => '11',
-  'December' => '12');
-
-our @RMATCH;
+use Month;
+my $month = Month->new();
 
 
 sub process_general
@@ -38,18 +24,20 @@ sub process_general
 }
 
 
-sub process_date_any
+sub process_date
 {
   # 13 December 2004.
   my ($chain, $match) = @_;
 
-  my $month = $chain->value($match+2);
-  die "$month not a month" unless defined $MONTHS{$month};
+  my $month_val = $chain->value($match+2);
+  die "$month_val not a month" unless $month->valid($month_val);
 
   my $day = $chain->value($match);
   $day = '0' . $day if $day < 10;
 
-  my $str = $chain->value($match+4) . '-' . $MONTHS{$month} . '-' . $day;
+  my $str = $chain->value($match+4) . '-' . 
+    $month->number($month_val) . '-' . 
+    $day;
 
   my $token = $chain->check_out($match);
   $token->set_singleton('DATE', $str);
@@ -58,16 +46,16 @@ sub process_date_any
 
 sub process_day_month
 {
-  # 13 December 2004.
+  # 13 December.
   my ($chain, $match) = @_;
 
-  my $month = $chain->value($match+2);
-  die "$month not a month" unless defined $MONTHS{$month};
+  my $month_val = $chain->value($match+2);
+  die "$month_val not a month" unless $month->valid($month_val);
 
   my $day = $chain->value($match);
   $day = '0' . $day if $day < 10;
 
-  my $str = $MONTHS{$month} . '-' . $day;
+  my $str = $month->number($month_val) . '-' . $day;
 
   my $token = $chain->check_out($match);
   $token->set_singleton('MONTH_DAY', $str);
@@ -79,10 +67,10 @@ sub process_month_year
   # December 2004.
   my ($chain, $match) = @_;
 
-  my $month = $chain->value($match);
-  die "$month not a month" unless defined $MONTHS{$month};
+  my $month_val = $chain->value($match);
+  die "$month_val not a month" unless $month->valid($month_val);
 
-  my $str = $chain->value($match+2) . '-' . $MONTHS{$month};
+  my $str = $chain->value($match+2) . '-' . $month->number($month_val);
 
   my $token = $chain->check_out($match);
   $token->set_singleton('YEAR_MONTH', $str);
@@ -108,7 +96,7 @@ sub process_merge_02
 
 sub process_merge_0of2
 {
-  # 7_9, 7/9: Mash into one counter.
+  # 7_9, 7/9
   my ($chain, $match) = @_;
 
   my $token = $chain->check_out($match);
@@ -118,7 +106,7 @@ sub process_merge_0of2
 
 sub process_merge_0colon2
 {
-  # 6:1.
+  # 6:1
   my ($chain, $match) = @_;
 
   my $token = $chain->check_out($match);
@@ -128,7 +116,7 @@ sub process_merge_0colon2
 
 sub process_merge_0of4
 {
-  # 7 of 9, 7th of 9: Mash into one counter.
+  # 7 of 9, 7th of 9
   my ($chain, $match) = @_;
 
   my $token = $chain->check_out($match);
@@ -138,7 +126,7 @@ sub process_merge_0of4
 
 sub process_merge_0sep2
 {
-  # 19-21 with a dash.
+  # 19-21.  Use the native separator.
   my ($chain, $match) = @_;
 
   my $token = $chain->check_out($match);
@@ -301,7 +289,7 @@ sub process_letter_counter_exact
 
 sub process_patterns
 {
-  my ($reductions, $chains) = @_;
+  my ($reductions, $chains, $rstats) = @_;
 
   my $rno = 0;
   for my $reduction (@$reductions)
@@ -318,7 +306,7 @@ sub process_patterns
           $reduction->{PATTERN}, 
           $reduction->{ANCHOR})) >= 0)
       {
-        $RMATCH[$rno]++;
+        $rstats->[$rno]++;
         $reduction->{METHOD}->($chain, $match);
 
         my $cstatus;
