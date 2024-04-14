@@ -13,6 +13,7 @@ use Despace;
 use Tokenize;
 use Chains;
 use Chain;
+use EventRed;
 use Patterns;
 
 # Parse the raw output of
@@ -70,7 +71,7 @@ while ($line = <$fh>)
 
       process_event(\@chains);
 
-      process_patterns(\@chains);
+      process_patterns(\@EVENT_REDUCTIONS, \@chains);
 
       # post_process_event(\%event_chains, \%event_solved);
 
