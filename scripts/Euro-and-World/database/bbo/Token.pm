@@ -127,6 +127,15 @@ sub set_ordinal_counter
 }
 
 
+sub set_roman_counter
+{
+  my ($self, $value) = @_;
+  $self->{CATEGORY} = 'COUNTER';
+  $self->{FIELD} = 'ROMAN';
+  $self->{VALUE} = $value;
+}
+
+
 sub set_letter_counter
 {
   my ($self, $value) = @_;

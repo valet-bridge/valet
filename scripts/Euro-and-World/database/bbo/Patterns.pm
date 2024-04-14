@@ -63,7 +63,7 @@ my @REDUCTIONS =
     [
       { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
       { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [ qw(ROMAN) ],
+      { CATEGORY => [qw(COUNTER)], FIELD => [ qw(ROMAN) ],
         VALUE => [ 5 ] },
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
@@ -118,25 +118,6 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
-  # 7 of 9
-  {
-    PATTERN =>
-    [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL NL)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(PARTICLE)],
-        VALUE => [qw(Of)] },
-      { CATEGORY => [qw(SEPARATOR)] },
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] }
-    ],
-    ANCHOR => 'ANY',
-    KEEP_LAST => 0,
-    METHOD => \&process_merge_0of4,
-    SPLIT_FRONT => 0,
-    SPLIT_BACK => 1,
-    COMPLETION => 1
-  },
-
   # 2 A
   {
     PATTERN =>
@@ -150,6 +131,25 @@ my @REDUCTIONS =
     METHOD => \&process_merge_02,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
+  # 7 of 9
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL NL N_TO_N)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(PARTICLE)],
+        VALUE => [qw(Of)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL NL)] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&process_merge_0of4,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 1,
     COMPLETION => 1
   },
 
@@ -345,36 +345,6 @@ my @REDUCTIONS =
   },
 
 
-  # O
-  {
-    PATTERN =>
-    [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
-        VALUE => [qw(O)] },
-    ],
-    ANCHOR => 'EXACT',
-    KEEP_LAST => 0,
-    METHOD => \&process_open_exact,
-    SPLIT_FRONT => 0,
-    SPLIT_BACK => 1, # Split one Open from the other
-    COMPLETION => 1
-  },
-
-  # W, J, Y
-  {
-    PATTERN =>
-    [
-      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
-        VALUE => [qw(W J Y)] },
-    ],
-    ANCHOR => 'EXACT',
-    KEEP_LAST => 0,
-    METHOD => \&process_letter_exact,
-    SPLIT_FRONT => 0,
-    SPLIT_BACK => 0,
-    COMPLETION => 1
-  },
-
   # 1, 4th
   {
     PATTERN =>
@@ -420,7 +390,114 @@ my @REDUCTIONS =
     SPLIT_FRONT => 1,
     SPLIT_BACK => 0,
     COMPLETION => 1
-  }
+  },
+
+  # Clean-up of length 1
+  # --------------------
+
+  # Just an iterator
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(ITERATOR)] }
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 0,
+    METHOD => \&process_general,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
+  # Just a v (probably left over from a team1 v team2)
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(ROMAN)], VALUE => [ 5 ] }
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 0,
+    METHOD => \&process_kill,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
+  # Open and Girls
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
+        VALUE => [qw(O G o g)] },
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 0,
+    METHOD => \&process_og_exact,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 1, # Split one from the other
+    COMPLETION => 1
+  },
+
+  # ABC
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(LETTER)], 
+        VALUE => [ qw(A B C D a b c d) ] }
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 0,
+    METHOD => \&process_kill,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
+  # QRS
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)], 
+        VALUE => [ qw(Q R S q r s) ] }
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 0,
+    METHOD => \&process_general,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
+  # WJYK
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)], FIELD => [qw(LETTER)],
+        VALUE => [qw(W J Y K)] },
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 0,
+    METHOD => \&process_letter_exact,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
+  # TEMPORAL and YEAR, I guess.
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(SINGLETON)] },
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 0,
+    METHOD => \&process_general,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
+
 );
 
 
@@ -553,13 +630,15 @@ sub process_r_counter
 }
 
 
-sub process_open_exact
+sub process_og_exact
 {
-  # Exactly the entry 'Open'.
-  # Take it to mean open gender, open age.
+  # Exactly the entry 'Open' or 'G' for Girls.
+  # Take it to mean open gender, open age / juniors.
   my ($chain, $match) = @_;
 
   my $token = $chain->check_out(0);
+  my $letter = uc($token->value());
+
   $token->set_singleton('GENDER', 'Open');
 
   my $token2 = Token->new();
@@ -569,7 +648,19 @@ sub process_open_exact
 
   my $token3 = Token->new();
   $token3->copy_origin_from($token);
-  $token3->set_singleton('AGE', 'Open');
+
+  if ($letter eq 'O')
+  {
+    $token3->set_singleton('AGE', 'Open');
+  }
+  elsif ($letter eq 'G')
+  {
+    $token3->set_singleton('AGE', 'Juniors');
+  }
+  else
+  {
+    die "Unknown OG";
+  }
 
   $chain->append($token3);
 }
@@ -589,6 +680,10 @@ sub process_letter_exact
   elsif ($letter eq 'Y')
   {
     $token->set_singleton('AGE', 'Youngsters');
+  }
+  elsif ($letter eq 'K')
+  {
+    $token->set_singleton('AGE', 'Kids');
   }
   elsif ($letter eq 'W')
   {

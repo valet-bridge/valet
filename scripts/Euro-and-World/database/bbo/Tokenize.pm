@@ -581,6 +581,10 @@ sub study_part
     {
       $token->set_ordinal_counter($fix->{VALUE});
     }
+    elsif ($fix->{CATEGORY} eq 'ROMAN')
+    {
+      $token->set_roman_counter($fix->{VALUE});
+    }
     else
     {
       $token->set_singleton($fix->{CATEGORY}, $fix->{VALUE});
