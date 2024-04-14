@@ -138,7 +138,7 @@ my @REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL NL N_TO_N)] },
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL NL N_TO_N ORDINAL)] },
       { CATEGORY => [qw(SEPARATOR)] },
       { CATEGORY => [qw(SINGLETON)], FIELD => [qw(PARTICLE)],
         VALUE => [qw(Of)] },
@@ -220,6 +220,23 @@ my @REDUCTIONS =
     SPLIT_BACK => 1,
     COMPLETION => 1
   },
+
+  # 5-7_9 (where the 'of' is already established).
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL)] },
+      { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x10) ] }, # TODO Dash
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(N_OF_N)] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&process_merge_0of2,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
 
 
   # By here, R (round) and T (table) followed by counter should be clean.
@@ -391,6 +408,23 @@ my @REDUCTIONS =
     SPLIT_BACK => 0,
     COMPLETION => 1
   },
+
+  # Ordinal ordinal
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(ORDINAL)] },
+      { CATEGORY => [qw(SEPARATOR)] },
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(ORDINAL)] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&process_merge_0of2,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
 
   # Clean-up of length 3
   # --------------------

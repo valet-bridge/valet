@@ -163,8 +163,10 @@ sub merge_counters
     $self->{FIELD} = 'L';
     $self->{VALUE} .= $token2->{VALUE};
   }
-  elsif ($self->{FIELD} eq 'NUMERAL' &&
-      $token2->{FIELD} eq 'NUMERAL')
+  elsif (($self->{FIELD} eq 'NUMERAL' &&
+      $token2->{FIELD} eq 'NUMERAL') ||
+      ($self->{FIELD} eq 'ROMAN' &&
+      $token2->{FIELD} eq 'ROMAN'))
   {
     if ($sep eq '/' || $sep eq '_' || $sep eq 'of')
     {
@@ -196,6 +198,92 @@ sub merge_counters
     {
       die;
     }
+  }
+  elsif ($self->{FIELD} eq 'NL' &&
+      $token2->{FIELD} eq 'NUMERAL')
+  {
+    if ($sep eq '/' || $sep eq '_' || $sep eq 'of')
+    {
+      $self->{FIELD} = 'NL_OF_N';
+      $self->{VALUE} .= ' of ' . $token2->{VALUE};
+    }
+    else
+    {
+      die;
+    }
+  }
+  elsif ($self->{FIELD} eq 'NUMERAL' &&
+      $token2->{FIELD} eq 'NL')
+  {
+    if ($sep eq '/' || $sep eq '_' || $sep eq 'of')
+    {
+      $self->{FIELD} = 'NL_OF_N';
+
+      # Break apart the 'NL'.
+      $token2->{VALUE} =~ /^(\d+)(\w)$/;
+      $self->{VALUE} .= $2 . ' of ' . $1;
+    }
+    elsif ($sep eq ':')
+    {
+      # Something like 10:1A.
+      $self->{FIELD} = 'MAJOR_MINOR';
+      $self->{VALUE} .= '+' . $token2->{VALUE};
+    }
+    elsif ($sep eq '-')
+    {
+      # Break apart the 'NL'.
+      $token2->{VALUE} =~ /^(\d+)(\w)$/;
+      my ($n, $l) = ($1, $2);
+
+      if ($self->{VALUE} <= $n)
+      {
+        # Heuristic, may not be true.  Could also be e.g. 'of'.
+        $self->{FIELD} = 'NL_TO_N';
+        $self->{VALUE} .= $l . ' to ' . $n;
+      }
+      else
+      {
+        # Something like 7-1 where we don't know their names.
+        $self->{FIELD} = 'MAJOR_MINOR';
+        $self->{VALUE} .= '+' . $token2->{VALUE};
+      }
+    }
+    else
+    {
+      die;
+    }
+  }
+  elsif ($self->{FIELD} eq 'ORDINAL' &&
+      ($token2->{FIELD} eq 'NUMERAL' ||
+       $token2->{FIELD} eq 'ORDINAL'))
+  {
+    $self->{FIELD} = 'N_OF_N';
+    $self->{VALUE} .= ' of ' . $token2->{VALUE};
+  }
+  elsif ($self->{FIELD} eq 'NUMERAL' &&
+      $token2->{FIELD} eq 'N_OF_N')
+  {
+    $self->{FIELD} = 'N_TO_N_OF_N';
+    $self->{VALUE} .= '-' . $token2->{VALUE};
+  }
+  elsif ($self->{FIELD} eq 'LETTER' &&
+      $token2->{FIELD} eq 'N_OF_N')
+  {
+    $self->{FIELD} = 'NL_OF_N';
+
+    # Break apart the 'of'.
+    $token2->{VALUE} =~ /^(\d+) of (\d+)$/;
+    $self->{VALUE} = $1 . $self->{VALUE} . ' of ' . $2;
+  }
+  elsif ($self->{FIELD} eq 'N_TO_N' &&
+      $token2->{FIELD} eq 'NUMERAL')
+  {
+    $self->{FIELD} = 'N_TO_N_OF_N';
+    $self->{VALUE} .= ' of ' . $token2->{VALUE};
+  }
+  else
+  {
+    die;
   }
 }
 
