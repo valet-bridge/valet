@@ -252,6 +252,23 @@ my @REDUCTIONS =
     COMPLETION => 1
   },
 
+  # Number or Number-letter with space or dash, then N_OF_N.
+  # Note that N-N_N is gone in the previous pattern.
+  {
+    PATTERN =>
+    [
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(NUMERAL NL)] },
+      { CATEGORY => [qw(SEPARATOR)], FIELD => [ (0x01, 0x10) ] }, # TODO Dash
+      { CATEGORY => [qw(COUNTER)], FIELD => [qw(N_OF_N)] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&process_merge_0dash2,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
 
 
   # By here, R (round) and T (table) followed by counter should be clean.
