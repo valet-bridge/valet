@@ -33,10 +33,6 @@ use Separators;
 #   such as a space or a comma, but it can also be multiple
 #   separators that have been combined, or it can be a virtual
 #   separator as in "round1".
-# - AMBIGUOUS.  Some text snippet could be more than one thing,
-#   and it takes context to make a guess.  An example is "J"
-#   (a group or "Juniors") or "v" (Roman five, or "vs.", or
-#   perhaps just a letter).
 # - KILL.  This just means that the token is marked for removal,
 #   mostly because it's extraneous or perhaps not recognized.
 # - UNKNOWN.
@@ -46,7 +42,6 @@ use Separators;
 # - A SINGLETON has the name, such as "Date".
 # - A SEPARATOR has "COMMA" etc., but also "COMPOSITE" and
 #   "VIRTUAL".
-# - AMBIGUOUS has an empty field.
 # - KILL doesn't really have a field.
 #
 # A token may also have a VALUE.
@@ -369,14 +364,6 @@ sub set_singleton
 }
 
 
-sub set_ambiguous
-{
-  my ($self, $value) = @_;
-  $self->{CATEGORY} = 'AMBIGUOUS';
-  $self->{VALUE} = $value;
-}
-
-
 sub set_separator
 {
   my ($self, $field) = @_;
@@ -593,10 +580,6 @@ sub str
   elsif ($category eq 'SINGLETON')
   {
     $str = str_singleton();
-  }
-  elsif ($category eq 'AMBIGUOUS')
-  {
-    $str = str_ambiguous();
   }
   elsif ($category eq 'SEPARATOR')
   {

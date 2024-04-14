@@ -548,10 +548,6 @@ sub study_part
       # in EVENT and TEAMS.
       $token->set_kill($part);
     }
-    elsif (exists $AMBIGUITIES{lc($part)})
-    {
-      $token->set_ambiguous(lc($part));
-    }
     elsif ($fix->{CATEGORY} eq 'ITERATOR')
     {
       $token->set_iterator_field($fix->{VALUE});

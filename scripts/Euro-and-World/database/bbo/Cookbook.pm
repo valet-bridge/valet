@@ -12,7 +12,6 @@ our @ISA = qw(Exporter);
 our @EXPORT = qw(
   %SINGLETONS
   %ITERATORS
-  %AMBIGUITIES
 
   %FIX_HASH
 
@@ -466,63 +465,6 @@ our %FIX_ALIASES =
   }
 );
 
-my %AMBIGUITIES =
-(
-  '1_2' => [ 
-    ['ITERATOR', 'BASE', 'NUMERAL', 1, 'OF', 'NUMERAL', 2],
-    ['ITERATOR', 'FIELD', 'Semi'] ],
-  '1_4' => [ 
-    ['ITERATOR', 'BASE', 'NUMERAL', 1, 'OF', 'NUMERAL', 4],
-    ['ITERATOR', 'FIELD', 'Quarter'] ],
-  'f' => [
-    ['SINGLETON', 'LETTER', 'F'],
-    ['ITERATOR', 'FIELD', 'Final'] ],
-  'g' => [
-    ['SINGLETON', 'LETTER', 'G'],
-    ['SINGLETON', 'GENDER', 'Girls', 'SINGLETON', 'AGE', 'U26'],
-    ['ITERATOR', 'FIELD', 'Group'] ],
-  'j' => [
-    ['SINGLETON', 'LETTER', 'J'],
-    ['SINGLETON', 'AGE', 'U26'] ],
-  'm' => [
-    ['SINGLETON', 'LETTER', 'M'],
-    ['SINGLETON', 'GENDER', 'Men'],
-    ['ITERATOR', 'FIELD', 'Match'] ],
-  'o' => [
-    ['SINGLETON', 'LETTER', 'O'],
-    ['SINGLETON', 'GENDER', 'Open'],
-    ['SINGLETON', 'AGE', 'Open'],
-    ['SINGLETON', 'GENDER', 'Open', 'SINGLETON', 'AGE', 'Open'] ],
-  's' => [
-    ['SINGLETON', 'LETTER', 'S'],
-    ['SINGLETON', 'AGE', 'Seniors'],
-    ['ITERATOR', 'FIELD', 'Segment'],
-    ['ITERATOR', 'FIELD', 'Semi'] ],
-  't' => [
-    ['SINGLETON', 'LETTER', 'T'],
-    ['ITERATOR', 'FIELD', 'Table'] ],
-  'q' => [
-    ['SINGLETON', 'LETTER', 'Q'],
-    ['ITERATOR', 'FIELD', 'Quarter'],
-    ['ITERATOR', 'FIELD', 'Qualifying'] ],
-  'v' => [
-    ['SINGLETON', 'ROMAN', 5],
-    ['SINGLETON', 'LETTER', 'V'],
-    ['SINGLETON', 'PARTICLE', 'vs'] ],
-  'w' => [
-    ['SINGLETON', 'LETTER', 'W'],
-    ['SINGLETON', 'GENDER', 'Women'] ],
-  'open' => [
-    ['SINGLETON', 'GENDER', 'Open'],
-    ['SINGLETON', 'AGE', 'Open'],
-    ['SINGLETON', 'GENDER', 'Open', 'SINGLETON', 'AGE', 'Open'] ],
-  'swiss' => [
-    ['SINGLETON', 'MOVEMENT', 'Swiss'],
-    ['SINGLETON', 'COUNTRY', 'Switzerland'] ],
-  'danish' => [
-    ['SINGLETON', 'MOVEMENT', 'Danish'],
-    ['SINGLETON', 'COUNTRY', 'Denmark'] ]
-);
 
 my @PEEL_FRONT = qw(teams match maych rr segment
   semifinal stanza swiss vs juniors);

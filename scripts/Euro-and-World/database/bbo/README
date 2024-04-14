@@ -1,7 +1,6 @@
 - Clean up Token method (sub-methods)
 - Get rid of BINDING
 - A particle should probably be a separator?
-- Are AMBIGUITIES actually used?
 
 Split Tokenize:
 EventBBO?

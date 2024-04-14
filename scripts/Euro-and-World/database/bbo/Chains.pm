@@ -12,7 +12,6 @@ package Chains;
 use lib '.';
 use lib '..';
 
-use Tchar;
 use Separators;
 
 our @ISA = qw(Exporter);
@@ -137,8 +136,8 @@ sub merge_counter_on_virtual
       }
 
       my %hash = (
-        BASE_NUMBER => $chain->value($index),
-        BASE_LETTER => $chain->value($index+2));
+        NUMBER => $chain->value($index),
+        LETTER => $chain->value($index+2));
       my $token = $chain->check_out($index);
       $token->set_counter(\%hash);
 
