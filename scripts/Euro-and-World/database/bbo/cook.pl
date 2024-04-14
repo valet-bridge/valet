@@ -10,9 +10,10 @@ use Time::HiRes qw(time);
 use lib '.';
 
 use Despace;
-use Tokenize;
 use Chains;
 use Chain;
+
+use TeamBBO;
 use EventBBO;
 use EventRed;
 use Patterns;
@@ -63,16 +64,18 @@ while ($line = <$fh>)
         print "HERE\n";
       }
 
+      my %result;
+      study_teams($chunk{TEAMS}, \%result);
+
       # Fix some space-related issues.
       my $mashed = despace($chunk{EVENT});
+      $mashed = unteam($mashed, \%result);
 
       my $chain = Chain->new();
       my @chains;
       push @chains, $chain;
 
-      $mashed = unteam($mashed, $chunk{TEAM1}, $chunk{TEAM2});
-
-      study_event($mashed, \%chunk, $chain, \$unknown);
+      study_event($mashed, \%chunk, \%result, $chain, \$unknown);
 
       process_event(\@chains);
 
@@ -109,22 +112,13 @@ while ($line = <$fh>)
       }
     }
   }
+  elsif ($line =~ /^([A-Za-z]+)\s+(.*)$/)
+  {
+    $chunk{$1} = $2;
+  }
   else
   {
-    if ($line !~ /^([A-Za-z]+)\s+(.*)$/)
-    {
-      print "$lno: CAN'T PARSE $line\n";
-      next;
-    }
-
-    if ($1 eq 'TEAMS')
-    {
-      parse_teams($2, \%chunk);
-    }
-    else
-    {
-      $chunk{$1} = $2;
-    }
+    print "$lno: CAN'T PARSE $line\n";
   }
 }
 

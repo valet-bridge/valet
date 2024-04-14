@@ -6,16 +6,13 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package Tokenize;
+package TeamBBO;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(
-  parse_teams
-  unteam
-);
+our @EXPORT = qw(study_teams unteam);
 
 use lib '.';
-use lib '..';
+
 use Cookbook;
 use Token;
 use Separators;
@@ -39,9 +36,11 @@ sub clean_team
 }
 
 
-sub parse_teams
+sub study_teams
 {
-  my ($text, $cref) = @_;
+  my ($text, $result) = @_;
+
+  return unless defined $text;
 
   $text =~ s/\- npc//g;
   $text =~ s/\(npc\)//g;
@@ -49,13 +48,13 @@ sub parse_teams
   if ($text =~ /(.*) vs\. (.*)/)
   {
     my ($team1, $team2) = ($1, $2);
-    $cref->{TEAM1} = clean_team($team1);
-    $cref->{TEAM2} = clean_team($team2);
+    $result->{TEAM1} = clean_team($team1);
+    $result->{TEAM2} = clean_team($team2);
   }
   elsif ($text =~ /^\s*$/ || $text =~ /^\s*vs\.\s*$/)
   {
-    $cref->{TEAM1} = '';
-    $cref->{TEAM2} = '';
+    $result->{TEAM1} = '';
+    $result->{TEAM2} = '';
   }
   else
   {
@@ -66,13 +65,15 @@ sub parse_teams
 
 sub unteam
 {
-  my ($text, $team1, $team2) = @_;
+  my ($text, $result) = @_;
 
   my $res = $text;
+  my $team1 = $result->{TEAM1};
+  my $team2 = $result->{TEAM2};
+
   $res =~ s/\Q$team1\E// if defined $team1 && length($team1) > 1;
   $res =~ s/\Q$team2\E// if defined $team2 && length($team2) > 1;
   return $res;
 }
-
 
 1;

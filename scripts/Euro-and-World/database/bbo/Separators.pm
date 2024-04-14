@@ -8,7 +8,6 @@ use Exporter;
 use v5.10;
 
 use lib '.';
-use Token;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(%SEPARATORS set_token);

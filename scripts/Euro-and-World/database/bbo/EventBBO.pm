@@ -472,7 +472,7 @@ sub study_part
 {
   # Returns 1 if it is a kill.
 
-  my ($part, $cref, $i, $chain, $unknown_ref) = @_;
+  my ($part, $result, $i, $chain, $unknown_ref) = @_;
 
   my $token = Token->new();
   $token->set_origin($i, $part);
@@ -485,8 +485,8 @@ sub study_part
   {
     if ($fix->{CATEGORY} eq 'KILL' ||
        ($fix->{CATEGORY} eq 'COUNTRY' &&
-       ($fix->{VALUE} eq $cref->{TEAM1} ||
-        $fix->{VALUE} eq $cref->{TEAM2})))
+       ((exists $result->{TEAM1} && $fix->{VALUE} eq $result->{TEAM1}) ||
+        (exists $result->{TEAM2} && $fix->{VALUE} eq $result->{TEAM2}))))
     {
       # It could be that the country name is spelled differently
       # in EVENT and TEAMS.
@@ -547,7 +547,7 @@ sub study_part
 
 sub study_event
 {
-  my ($text, $cref, $chain, $unknown_ref) = @_;
+  my ($text, $cref, $result, $chain, $unknown_ref) = @_;
 
   if ($cref->{BBONO} >= 4790 && $cref->{BBONO} <= 4860 &&
       $cref->{TITLE} =~ /^Buffet/)
@@ -576,7 +576,7 @@ sub study_event
 
   for my $i (0 .. $#parts)
   {
-    study_part($parts[$i], $cref, $i, $chain, $unknown_ref);
+    study_part($parts[$i], $result, $i, $chain, $unknown_ref);
   }
 
   # Merge on digit runs (3-4-5-6-7).
