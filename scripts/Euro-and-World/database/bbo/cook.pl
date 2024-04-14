@@ -96,38 +96,14 @@ while ($line = <$fh>)
 }
 
 close $fh;
+
 print "TOTAL $unknown\n\n";
 
-my %csum;
-print "Chain stats\n\n";
-printf("%6s%10s%10s%10s\n", "", "OPEN", "COMPLETE", "KILLED");
-for my $i (0 .. $#chain_stats)
-{
-  my %h;
-  for my $key (qw(OPEN COMPLETE KILLED))
-  {
-    if (exists $chain_stats[$i]{$key})
-    {
-      $h{$key} = $chain_stats[$i]{$key};
-    }
-    else
-    {
-      $h{$key} = 0;
-    }
-    $csum{$key} += $h{$key};
-  }
-  printf("%6d%10d%10d%10d\n", $i, $h{OPEN}, $h{COMPLETE}, $h{KILLED});
-}
-print '-' x 36, "\n";
-printf("%6s%10d%10d%10d\n\n", "Sum",
-  $csum{OPEN}, $csum{COMPLETE}, $csum{KILLED});
+print_chain_stats(\@chain_stats);
 
-print "Reduction matches:\n";
-for my $i (0 .. $#reduction_stats)
-{
-  next unless defined $reduction_stats[$i];
-  printf("%6d%10d\n", $i, $reduction_stats[$i]);
-}
+print_reduction_stats(\@reduction_stats);
+
+exit;
 
 
 sub print_chunk
@@ -164,5 +140,50 @@ sub print_chains
       $chain->catcat());
   }
   printf "\n";
+}
+
+
+sub print_chain_stats
+{
+  my $chain_stats = pop;
+
+  my %csum;
+  print "Chain stats\n\n";
+  printf("%6s%10s%10s%10s\n", "", "OPEN", "COMPLETE", "KILLED");
+
+  for my $i (0 .. $#$chain_stats)
+  {
+    my %h;
+    for my $key (qw(OPEN COMPLETE KILLED))
+    {
+      if (exists $chain_stats->[$i]{$key})
+      {
+        $h{$key} = $chain_stats->[$i]{$key};
+      }
+      else
+      {
+        $h{$key} = 0;
+      }
+      $csum{$key} += $h{$key};
+    }
+    printf("%6d%10d%10d%10d\n", $i, $h{OPEN}, $h{COMPLETE}, $h{KILLED});
+  }
+
+  print '-' x 36, "\n";
+  printf("%6s%10d%10d%10d\n\n", "Sum",
+    $csum{OPEN}, $csum{COMPLETE}, $csum{KILLED});
+}
+
+
+sub print_reduction_stats
+{
+  my $reduction_stats = pop;
+
+  print "Reduction matches:\n";
+  for my $i (0 .. $#$reduction_stats)
+  {
+    next unless defined $reduction_stats->[$i];
+    printf("%6d%10d\n", $i, $reduction_stats->[$i]);
+  }
 }
 

@@ -1,12 +1,54 @@
-- Code to clean:
-  cook
+- Switch TeamBBO to use ../Country?
+- Parse teams more fully, 
+  Some info about FORM, SCORING, TABLE
+
+  PAIRS vs. TOURNAMENT
+  Team 1 vs. Team 2
+  HOME vs. AWAY
+  A vs. B
+  Pair 1 vs. Pair 2
+  Team A vs. Team B
+  (empty)
+  NS vs. EW
+  Pair1 vs. Pair2
+  Team1 vs. Team2
+  Home vs. Visiting
+  PAIR EVENT vs. PAIR EVENT
+  Pair A vs. Pair B
+  No teams vs. IMP pairs
+  N-S vs. E-W
+  Pairs vs. Pairs
+  Pair NS vs. Pair EW
+  PAIRS vs. MATCHPOINTS
+  No teams vs. No teams
+  1 vs. 2
+  pair 1 vs. pair 2
+  pair1 vs. pair2
+  WOMEN'S vs. TRIALS
+  X vs. Y
+  Team Red vs. Team White
+  x vs. y
+  a vs. b
+  No Teams vs. IMP Pairs
+  NS vs. EO
+  Table 1 vs. Table 2
+  TABLE8HOM vs. TABLEVIS
+  PAIRS vs. EVENT
+  T12-HOME vs. T11-VISIT
+  T12-HOME vs. T12-VISIT
+  Pair Tournament vs. Pair Tournament
+  PAIRS TOURNAMENT vs. MATCHPOINTS
+  Not teams vs. Butler scoring
+  H_pair1 vs. H_pair2
+  G_pair1 vs. G_pair2
+  F_pair1 vs. F_pair2
+  D_pair1 vs. D_Pair2
+  D_Pair1 vs. pair2
+  and so on
 
 - A particle should probably be a separator?
 
-DATE, LOCATION, SESSION always empty.
-Scoring should be easy.
 Token string methods.
-
+Scoring should be easy.
 Make something called Region.pm with Kepri in it
-
 R16, R32 recognize later.
