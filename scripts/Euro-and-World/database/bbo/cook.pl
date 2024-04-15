@@ -65,9 +65,12 @@ while ($line = <$fh>)
     print "HERE\n";
   }
 
+  my $chain1 = Chain->new();
+  my $chain2 = Chain->new();
   my %result;
-  study_teams($chunk{TEAMS}, \%result);
+  study_teams($chunk{TEAMS}, \%result, $chain1, $chain2);
 
+=pod
   # Fix some space-related issues.
   my $mashed = despace($chunk{EVENT});
   $mashed = unteam($mashed, \%result);
@@ -93,15 +96,18 @@ while ($line = <$fh>)
     print_chunk(\%chunk);
     print_chains(\@chains);
   }
+=cut
 }
 
 close $fh;
 
-print "TOTAL $unknown\n\n";
+print_team_stats();
 
-print_chain_stats(\@chain_stats);
+# print "TOTAL $unknown\n\n";
 
-print_reduction_stats(\@reduction_stats);
+# print_chain_stats(\@chain_stats);
+
+# print_reduction_stats(\@reduction_stats);
 
 exit;
 
