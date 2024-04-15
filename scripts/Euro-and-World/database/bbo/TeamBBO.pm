@@ -16,34 +16,101 @@ use lib '.';
 use Country;
 use Cookbook;
 use Token;
+
 use Separators;
+use Age;
+use Gender;
+
+# Only if it is a complete team entry.
+my @TEAMS_SUGGESTORS = (
+  'team 1', 'team 2',
+  'team1', 'team2',
+  'team a', 'team b',
+  'home', 'away', 'visiting',
+  'table 1', 'table 2',
+  'table8hom', 'table8vis',
+  'table9hom', 'table9vis',
+  't11-home', 't11-visit', 't12-home', 't12-visit'
+);
+
+# Only if it is a complete team entry.
+my @PAIRS_SUGGESTORS = (
+  'pairs', 'pair 1', 'pair 2', 'pair1', 'pair2', 'pair event',
+  'pair a', 'pair b', 'no teams', 'not teams',
+  'pair ns', 'pair ew', 'pairs a', 'pairs b',
+  'pairs 1', 'pairs 2', 'pair tournament', 'pairs tournament',
+  'a_pair1', 'a_pair2', 'b_pair1', 'b_pair2',
+  'c_pair1', 'c_pair2', 'd_pair1', 'd_pair2',
+  'f_pair1', 'f_pair2', 'g_pair1', 'g_pair2',
+  'h_pair1', 'h_pair2'
+);
+
+# Only if it is a complete team entry.
+my @INDIVIDUAL_SUGGESTORS = (
+  'individual'
+);
+
+# Only if it is a complete team entry.
+my @NEUTRAL_SUGGESTORS = (
+  'tournament', 'event',
+  'a', 'b', 'x', 'y',
+  'ns', 'ew', 'n-s', 'e-w', 'eo', 'north - south', 'east - west',
+  1, 2
+);
 
 
 
-# TODO Ireland single word, Northern Ireland two
-# Irelnd, Irelsnd, Ire, Irelana
-#   North, Northertn, N
-#   Rep, Rep. of Ireland, Reublic
-# Neth Antilles
-# New Zealand, Zealans, Zeland, NwZealand
-# Bosnia and Herz. | Bosnia&Herzegovina, Bosnia-Herzegovina
-# Serbia&Mon, Serbia/Mont
-# Chinese Taipei, Chinese Tai, Chinese Taipae, Chi Taipei, Taipei
-# Chinese Tapei, Ch. Taipei, Chainese Taipei
-# China Hong Kong, China HongKong
-# Hong Kong, Honk Kong, Hongkong
-# China Macau
-# French Guyana, French Guiana, French Polynesia
-# The Netherlands
-# Czec | Rep, CZR
-# Faroe: Isl Island Islands
-# SA (South Africa?)
-# San Marino
-# Macedonia: North?
-# Trinidad and Tobago: & with or without spaces
-# G Britain
-# DK, NL
-#
+# Where the order is important.  These do not have to be whole words.
+my %TYPOS_FIRST =
+(
+  'Chinese ' => ['ch.'],
+  'Republic ' => ['rep.'],
+  'Netherlands ' => ['neth.'],
+);
+
+# These have to be whole words.
+my %TYPOS_SECOND =
+(
+  'Chinese ' => ['chi', 'chainese'],
+  Czech => ['czec'],
+  Ireland => ['irelnd', 'irelsnd', 'ire'],
+  Netherlands => ['net'],
+  Northern => ['northertn'],
+  Republic => ['rep', 'reublic'],
+  Taipei => ['taipae', 'tapei'],
+  Zealand => ['zealans', 'zeland'],
+);
+
+# Whenever these match, they also yield a field of the
+# corresponding singleton without further ado.
+my %MULTI_WORD_ALIASES =
+(
+  COUNTRY =>
+  {
+    'Bosnia & Herzegovina' => ['bosnia-herzegovina',
+      'bosnia&herzegovina', 'bosnia and herz.'],
+    'Chinese Taipei' => ['chinese tai'],
+    'Czech Republic' => ['czr'],
+    'Faroe Islands' => ['faroe_islands', 'faroe island'],
+    'French Polynesia' => [],
+    'Great Britain' => ['g.britain'],
+    Guyana => ['french guiana', 'french guyana'],
+    'Hong Kong' => ['china hong kong', 'china hongkong', 
+      'china honk kong'],
+    Macau => ['china macau'],
+    'Netherlands' => ['the netherlands', 'nl'],
+    'Netherlands Antilles' => [],
+    'New Zealand' => ['nwzealand'],
+    'North Macedonia' => ['macedonia'],
+    'Republic of Ireland' => [],
+    'San Marino' => [],
+    'Serbia and Montenegro' => ['serbia/mont', 'serbia&mon.'],
+    'Trinidad and Tobago' => ['trinidad & tobago', 'trinidad&tobago'],
+  },
+);
+
+
+# TODO 
 # Eng Bridge Union -> EBU
 # Split on \ *
 # Add Guernsey, United Kingdom, Jersey, Isle of Man
@@ -58,7 +125,7 @@ my %COUNTRY_FIX_ALIASES =
     Argentina => ['argenting', 'argentýna'],
     Australia => ['austrlia', 'australian', 'oz'],
     Austria => ['austra'],
-    Brasil => ['brazil'],
+    Brazil => ['brasil'],
     Canada => ['kanada'],
     Colombia => ['columbia'],
     Denmark => ['danmark', 'danemark', 'denmarrk'],
@@ -196,6 +263,9 @@ for my $captain (@VALID_CAPTAINS)
 
 
 my $country = Country->new();
+my $gender = Gender->new();
+my $age = Age->new();
+
 my $total = 0;
 my $found = 0;
 
@@ -237,7 +307,6 @@ sub study_team
     $total++;
     if ($country->valid_lc($part))
     {
-      # OK
       $found++;
     }
     elsif (defined $COUNTRY_FIX_HASH{lc($part)})
@@ -250,17 +319,26 @@ sub study_team
     }
     elsif (set_token($part, $token))
     {
-      # OK
       $found++;
     }
     elsif ($part =~ /^19\d\d$/ || $part =~ /^20\d\d$/)
     {
-      # OK
       $found++;
     }
     elsif ($part =~ /^\d+$/ && $part >= 0 && $part < 100)
     {
-      # OK
+      $found++;
+    }
+    elsif ($part =~ /^open$/i)
+    {
+      $found++;
+    }
+    elsif ($age->valid_lc($part))
+    {
+      $found++;
+    }
+    elsif ($gender->valid_lc($part))
+    {
       $found++;
     }
     else

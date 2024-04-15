@@ -15,6 +15,8 @@ my %AGES = map { $_ => 1} @AGE_LIST;
 
 my %WIDER_AGES = map { $_ => 1} @AGE_LIST, @WIDER_LIST;
 
+my %WIDER_AGES_LC = map { lc($_) => 1} @AGE_LIST, @WIDER_LIST;
+
 my %GUESSES =
 (
   Juniors => 'U26',
@@ -35,6 +37,13 @@ sub valid
 {
   my ($self, $text) = @_;
   return exists $WIDER_AGES{$text} ? 1 : 0;
+}
+
+
+sub valid_lc
+{
+  my ($self, $text) = @_;
+  return exists $WIDER_AGES_LC{lc($text)} ? 1 : 0;
 }
 
 
