@@ -20,51 +20,7 @@ use Token;
 use Separators;
 use Age;
 use Gender;
-
-# Only if it is a complete team entry.
-my @TEAMS_SUGGESTORS = (
-  'team 1', 'team 2',
-  'team1', 'team2',
-  'team a', 'team b',
-  'home', 'away', 'visiting',
-  'table 1', 'table 2',
-  'table8hom', 'table8vis',
-  'table9hom', 'table9vis',
-  't11-home', 't11-visit', 't12-home', 't12-visit'
-);
-
-my %TEAMS_SUGGESTORS_HASH = map {$_ => 1} @TEAMS_SUGGESTORS;
-
-# Only if it is a complete team entry.
-my @PAIRS_SUGGESTORS = (
-  'pairs', 'pair 1', 'pair 2', 'pair1', 'pair2', 'pair event',
-  'pair a', 'pair b', 'no teams', 'not teams',
-  'pair ns', 'pair ew', 'pairs a', 'pairs b',
-  'pairs 1', 'pairs 2', 'pair tournament', 'pairs tournament',
-  'a_pair1', 'a_pair2', 'b_pair1', 'b_pair2',
-  'c_pair1', 'c_pair2', 'd_pair1', 'd_pair2',
-  'f_pair1', 'f_pair2', 'g_pair1', 'g_pair2',
-  'h_pair1', 'h_pair2'
-);
-
-my %PAIRS_SUGGESTORS_HASH = map {$_ => 1} @PAIRS_SUGGESTORS;
-
-# Only if it is a complete team entry.
-my @INDIVIDUAL_SUGGESTORS = (
-  'individual'
-);
-
-my %INDIVIDUAL_SUGGESTORS_HASH = map {$_ => 1} @INDIVIDUAL_SUGGESTORS;
-
-# Only if it is a complete team entry.
-my @NEUTRAL_SUGGESTORS = (
-  'tournament', 'event',
-  'a', 'b', 'x', 'y',
-  'ns', 'ew', 'n-s', 'e-w', 'eo', 'north - south', 'east - west',
-  1, 2
-);
-
-my %NEUTRAL_SUGGESTORS_HASH = map {$_ => 1} @NEUTRAL_SUGGESTORS;
+use Suggestors;
 
 
 # Where the order is important.  These do not have to be whole words,
@@ -249,7 +205,6 @@ for my $category (keys %SINGLE_WORD_ALIASES)
 
 # TODO 
 # Eng Bridge Union -> EBU
-# Split on \ *
 # Add Guernsey, United Kingdom, Jersey, Isle of Man
 # Mali
 # Check
@@ -383,29 +338,92 @@ sub clean_team
 }
 
 
+sub split_on_trailing_digits
+{
+  my ($list_ref) = @_;
+
+  for my $i (reverse 0 .. $#$list_ref)
+  {
+    my $part = $list_ref->[$i];
+    next unless $part =~ /^([a-z]+)(\d+)$/i;
+
+    my ($letters, $digits) = ($1, $2);
+    next if $letters eq 'U' || $letters eq 'D';
+
+    splice(@$list_ref, $i, 0, ('') x 2);
+    $list_ref->[$i] = $letters;
+    $list_ref->[$i+1] = '|';
+    $list_ref->[$i+2] = $digits;
+  }
+}
+
+
+sub study_part
+{
+  my ($part, $i, $chain) = @_;
+
+  my $token = Token->new();
+  $token->set_origin($i, $part);
+  $chain->append($token);
+
+  $HIT_STATS{TOTAL}++;
+
+  # Turn the artificial separator back into a space.
+  $part =~ s/~/ /g;
+
+  my $fix = $SINGLE_WORD_HASH{lc($part)};
+
+  if (defined $fix->{CATEGORY})
+  {
+    $token->set_singleton($fix->{CATEGORY}, $fix->{VALUE});
+    $HIT_STATS{SINGLE_WORD}++;
+  }
+  elsif ($country->valid_lc(lc($part)))
+  {
+    $HIT_STATS{COUNTRY_CLASS}++;
+  }
+  elsif (defined $CAPTAIN_FIX_HASH{lc($part)})
+  {
+    $HIT_STATS{CAPTAIN}++;
+  }
+  elsif (set_token($part, $token))
+  {
+    $HIT_STATS{SEPARATOR}++;
+  }
+  elsif ($part =~ /^19\d\d$/ || $part =~ /^20\d\d$/)
+  {
+    $HIT_STATS{YEAR}++;
+  }
+  elsif ($part =~ /^\d+$/ && $part >= 0 && $part < 100)
+  {
+    $HIT_STATS{INTEGER}++;
+  }
+  elsif ($part =~ /^open$/i)
+  {
+    $HIT_STATS{OPEN}++;
+  }
+  elsif ($age->valid_lc($part))
+  {
+    $HIT_STATS{AGE}++;
+  }
+  elsif ($gender->valid_lc($part))
+  {
+    $HIT_STATS{GENDER}++;
+  }
+  else
+  {
+    $HIT_STATS{UNMATCHED}++;
+    print $part, "\n";
+  }
+}
+
+
 sub study_team
 {
   my ($text, $chain) = @_;
 
-  if (exists $TEAMS_SUGGESTORS_HASH{lc($text)})
+  if (suggest_form($text, \%FORM_SCORES))
   {
-    # Make this per BBO file.
-    $FORM_SCORES{teams}++;
-    return;
-  }
-  elsif (exists $PAIRS_SUGGESTORS_HASH{lc($text)})
-  {
-    $FORM_SCORES{pairs}++;
-    return;
-  }
-  elsif (exists $INDIVIDUAL_SUGGESTORS_HASH{lc($text)})
-  {
-    $FORM_SCORES{individual}++;
-    return;
-  }
-  elsif (exists $NEUTRAL_SUGGESTORS_HASH{lc($text)})
-  {
-    $FORM_SCORES{neutral}++;
     return;
   }
 
@@ -421,60 +439,14 @@ sub study_team
   # Split on separators.
   my @parts = grep {$_ ne ''} split /([.\-\+_:;"\/\(\)]|\s+)/, $text;
 
-  my $token = Token->new();
+  split_on_trailing_digits(\@parts);
 
-  for my $part (@parts)
+  for my $i (0 .. $#parts)
   {
-    $HIT_STATS{TOTAL}++;
-
-    # Turn the artificial separator back into a space.
-    $part =~ s/~/ /g;
-
-    my $fix = $SINGLE_WORD_HASH{$part};
-    if (defined $fix && $fix->{CATEGORY} eq 'COUNTRY')
-    {
-      die unless $country->valid_lc($fix->{VALUE});
-      $HIT_STATS{COUNTRY_CLASS}++;
-    }
-    elsif ($country->valid_lc(lc($part)))
-    {
-      $HIT_STATS{COUNTRY_CLASS}++;
-    }
-    elsif (defined $CAPTAIN_FIX_HASH{lc($part)})
-    {
-      $HIT_STATS{CAPTAIN}++;
-    }
-    elsif (set_token($part, $token))
-    {
-      $HIT_STATS{SEPARATOR}++;
-    }
-    elsif ($part =~ /^19\d\d$/ || $part =~ /^20\d\d$/)
-    {
-      $HIT_STATS{YEAR}++;
-    }
-    elsif ($part =~ /^\d+$/ && $part >= 0 && $part < 100)
-    {
-      $HIT_STATS{INTEGER}++;
-    }
-    elsif ($part =~ /^open$/i)
-    {
-      $HIT_STATS{OPEN}++;
-    }
-    elsif ($age->valid_lc($part))
-    {
-      $HIT_STATS{AGE}++;
-    }
-    elsif ($gender->valid_lc($part))
-    {
-      $HIT_STATS{GENDER}++;
-    }
-    else
-    {
-      $HIT_STATS{UNMATCHED}++;
-      print $part, "\n";
-    }
+    study_part($parts[$i], $i, $chain);
   }
 }
+
 
 sub print_team_stats
 {
