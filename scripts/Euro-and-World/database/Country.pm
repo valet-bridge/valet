@@ -29,7 +29,8 @@ my %COUNTRIES = (
   Canada => "CAN", CAN => "CAN",
   Chile => "CHI", CHI => "CHI", # Not standard
   China => "CHN", CHN => "CHN",
-  "Chinese Taipei" => "TPE", TPE => "TPE", # Not standard (Taiwan)
+  "Chinese Taipei" => "TPE", TPE => "TPE", 
+    "Taiwan" => "TPE",
   Colombia => "COL", COL => "COL",
   "Costa Rica" => "CRC", CRC => "CRC",
   Croatia => "CRO", CRO => "CRO", # Not standard
@@ -58,7 +59,7 @@ my %COUNTRIES = (
   India => "IND", IND => "IND",
   Indonesia => "INA", INA => "INA", # Not standard
   Iran => "IRN", IRN => "IRN",
-  Ireland => "IRL", IRL => "IRL",
+  Ireland => "IRL", "Republic of Ireland" => "IRL", IRL => "IRL",
   Israel => "ISR", ISR => "ISR",
   Italy => "ITA", ITA => "ITA",
   "Ivory Coast" => "CIV", CIV => "CIV",

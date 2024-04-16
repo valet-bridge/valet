@@ -33,6 +33,8 @@ my @TEAMS_SUGGESTORS = (
   't11-home', 't11-visit', 't12-home', 't12-visit'
 );
 
+my %TEAMS_SUGGESTORS_HASH = map {$_ => 1} @TEAMS_SUGGESTORS;
+
 # Only if it is a complete team entry.
 my @PAIRS_SUGGESTORS = (
   'pairs', 'pair 1', 'pair 2', 'pair1', 'pair2', 'pair event',
@@ -45,10 +47,14 @@ my @PAIRS_SUGGESTORS = (
   'h_pair1', 'h_pair2'
 );
 
+my %PAIRS_SUGGESTORS_HASH = map {$_ => 1} @PAIRS_SUGGESTORS;
+
 # Only if it is a complete team entry.
 my @INDIVIDUAL_SUGGESTORS = (
   'individual'
 );
+
+my %INDIVIDUAL_SUGGESTORS_HASH = map {$_ => 1} @INDIVIDUAL_SUGGESTORS;
 
 # Only if it is a complete team entry.
 my @NEUTRAL_SUGGESTORS = (
@@ -58,22 +64,41 @@ my @NEUTRAL_SUGGESTORS = (
   1, 2
 );
 
+my %NEUTRAL_SUGGESTORS_HASH = map {$_ => 1} @NEUTRAL_SUGGESTORS;
 
 
-# Where the order is important.  These do not have to be whole words.
+# Where the order is important.  These do not have to be whole words,
+# so we can't do a hash lookup.
 my %TYPOS_FIRST =
 (
   'Chinese ' => ['ch.'],
   'Republic ' => ['rep.'],
   'Netherlands ' => ['neth.'],
+  'Serbia~and~Montenegro' => ['serbia&mon.']
 );
+
+my %TYPOS_FIRST_HASH;
+for my $key (keys %TYPOS_FIRST)
+{
+  for my $alias (@{$TYPOS_FIRST{$key}})
+  {
+    $TYPOS_FIRST_HASH{lc($alias)} = $key;
+  }
+}
+
+my $TYPOS_FIRST_PATTERN = 
+  join('|', map { quotemeta } keys %TYPOS_FIRST_HASH);
+
+my $TYPOS_FIRST_REGEX = qr/($TYPOS_FIRST_PATTERN)/i;
+
 
 # These have to be whole words.
 my %TYPOS_SECOND =
 (
   'Chinese ' => ['chi', 'chainese'],
   Czech => ['czec'],
-  Ireland => ['irelnd', 'irelsnd', 'ire'],
+  Ireland => ['irelnd', 'irelsnd', 'irlande', 'irelend', 
+    'irelena', 'ire'],
   Netherlands => ['net'],
   Northern => ['northertn'],
   Republic => ['rep', 'reublic'],
@@ -81,33 +106,145 @@ my %TYPOS_SECOND =
   Zealand => ['zealans', 'zeland'],
 );
 
+my %TYPOS_SECOND_HASH;
+for my $key (keys %TYPOS_SECOND)
+{
+  for my $alias (@{$TYPOS_SECOND{$key}})
+  {
+    $TYPOS_SECOND_HASH{lc($alias)} = $key;
+  }
+}
+
+my $TYPOS_SECOND_PATTERN = 
+  join('|', map { quotemeta } keys %TYPOS_SECOND_HASH);
+
+my $TYPOS_SECOND_REGEX = qr/\b($TYPOS_SECOND_PATTERN)\b/i;
+
+
 # Whenever these match, they also yield a field of the
-# corresponding singleton without further ado.
+# corresponding singleton without further ado.  Only multi-word
+# entries in the lists are included, as the single-word ones
+# are done later by hash.
 my %MULTI_WORD_ALIASES =
 (
   COUNTRY =>
   {
-    'Bosnia & Herzegovina' => ['bosnia-herzegovina',
-      'bosnia&herzegovina', 'bosnia and herz.'],
-    'Chinese Taipei' => ['chinese tai'],
-    'Czech Republic' => ['czr'],
-    'Faroe Islands' => ['faroe_islands', 'faroe island'],
-    'French Polynesia' => [],
-    'Great Britain' => ['g.britain'],
+    'Bosnia~&~Herzegovina' => ['bosnia & herzegovina',
+      'bosnia-herzegovina', 'bosnia&herzegovina', 'bosnia and herz.'],
+    'Chinese~Taipei' => ['chinese taipei', 'chinese tai',
+      'chinese taipe'],
+    'Czech~Republic' => ['czech republic'],
+    'Faroe~Islands' => ['faroe islands', 'faroe_islands', 
+      'faroe island'],
+    'French~Polynesia' => ['french polynesia'],
+    'Great~Britain' => ['great britain', 'g.britain'],
     Guyana => ['french guiana', 'french guyana'],
-    'Hong Kong' => ['china hong kong', 'china hongkong', 
-      'china honk kong'],
+    'Hong~Kong' => ['china hong kong', 'china hongkong', 
+      'china honk kong', 'hong kong'],
     Macau => ['china macau'],
-    'Netherlands' => ['the netherlands', 'nl'],
-    'Netherlands Antilles' => [],
-    'New Zealand' => ['nwzealand'],
-    'North Macedonia' => ['macedonia'],
-    'Republic of Ireland' => [],
-    'San Marino' => [],
-    'Serbia and Montenegro' => ['serbia/mont', 'serbia&mon.'],
-    'Trinidad and Tobago' => ['trinidad & tobago', 'trinidad&tobago'],
+    'Netherlands' => ['the netherlands'],
+    'Netherlands~Antilles' => ['netherlands antilles'],
+    'New~Zealand' => ['new zealand', 'new zeland'],
+    'North~Macedonia' => ['north macedonia', 'macedonia'],
+    'Republic~of~Ireland' => ['republic of ireland'],
+    'San~Marino' => ['san marino'],
+    'Serbia~and~Montenegro' => ['serbia and montenegro', 'serbia/mont', 
+      'serbia&mon'],
+    'Trinidad~and~Tobago' => ['trinidad and tobago', 'trinidad & tobago', 
+      'trinidad&tobago'],
   },
 );
+
+my %MULTI_WORD_HASH;
+for my $category (keys %MULTI_WORD_ALIASES)
+{
+  for my $key (keys %{$MULTI_WORD_ALIASES{$category}})
+  {
+    for my $alias (@{$MULTI_WORD_ALIASES{$category}{$key}})
+    {
+      $MULTI_WORD_HASH{lc($alias)} = $key;
+    }
+  }
+}
+
+my $MULTI_WORD_PATTERN = 
+  join('|', map { quotemeta } keys %MULTI_WORD_HASH);
+
+my $MULTI_WORD_REGEX = qr/\b($MULTI_WORD_PATTERN)\b/i;
+
+
+my %SINGLE_WORD_ALIASES =
+(
+  COUNTRY =>
+  {
+    Argentina => ['argenting', 'argentýna'],
+    Australia => ['austrlia', 'oz'],
+    Austria => ['austra'],
+    Brazil => ['brasil'],
+    Canada => ['kanada'],
+    'Czech Republic' => ['czr'],
+    Colombia => ['columbia'],
+    Croatia => ['croatie'],
+    Denmark => ['danmark', 'danemark', 'denmarrk'],
+    Estonia => ['estonie'],
+    Finland => ['finnland'],
+    Germany => ['deutschland'],
+    Hungary => ['hungar'],
+    Ireland => ['roireland'],
+    Italy => ['italia'],
+    Israel => ['isreal', 'israil', 'isarel', 'israël'],
+    Latvia => ['lavtia', 'latvija'],
+    Luxembourg => ['luxemburg'],
+    Madagascar => ['madagaskar'],
+    Monaco => ['nonaco'],
+    Netherlands => ['nederlands', 'netherland', 'nrtherlands', 
+      'netherlans', 'netherlnd', 'neth', 'nl'],
+    'New Zealand' => ['nwzealand'],
+    'North Macedonia' => ['macedonia'],
+    'Northern Ireland' => ['nireland'],
+    Norway => ['norge', 'norges', 'norwegen'],
+    Palestine => ['palastine'],
+    Philippines => ['philipppines'],
+    Poland => ['polen'],
+    Reunion => ['réunion'],
+    'Sri Lanka' => ['srilanka'],
+    Switzerland => ['suitzerland', 'switserland'],
+    Tunisia => ['tunisie']
+  },
+
+  NATIONALITY =>
+  {
+    Australia => ['australian'],
+    Bulgaria => ['bulgarian', 'blugarian'],
+    Croatia => ['croatian'],
+    'Czech Republic' => ['czech'],
+    Estonia => ['estonian'],
+    France => ['french'],
+    Germany => ['german'],
+    Greece => ['greek'],
+    Hungary => ['hungar'],
+    India => ['indian'],
+    Indonesia => ['indonesian'],
+    Israel => ['israeli'],
+    Netherlands => ['dutch'],
+    Norway => ['norwegian'],
+    Poland => ['polish'],
+    Sweden => ['swedish'],
+    Tunisia => ['tunisie']
+  }
+);
+
+my %SINGLE_WORD_HASH;
+for my $category (keys %SINGLE_WORD_ALIASES)
+{
+  for my $key (keys %{$SINGLE_WORD_ALIASES{$category}})
+  {
+    for my $alias (@{$SINGLE_WORD_ALIASES{$category}{$key}})
+    {
+      $SINGLE_WORD_HASH{$alias} = { CATEGORY => $category, KEY => $key };
+    }
+  }
+}
 
 
 # TODO 
@@ -117,42 +254,6 @@ my %MULTI_WORD_ALIASES =
 # Mali
 # Check
 # DenmarS, Deutsch, Indýa, Sweeden, CBAI, Brasilia
-
-my %COUNTRY_FIX_ALIASES =
-(
-  COUNTRY =>
-  {
-    Argentina => ['argenting', 'argentýna'],
-    Australia => ['austrlia', 'australian', 'oz'],
-    Austria => ['austra'],
-    Brazil => ['brasil'],
-    Canada => ['kanada'],
-    Colombia => ['columbia'],
-    Denmark => ['danmark', 'danemark', 'denmarrk'],
-    Estonia => ['estonian', 'estonie'],
-    Finland => ['finnland'],
-    France => ['french'],
-    Germany => ['deutschland', 'german'],
-    Greece => ['greek'],
-    Hungary => ['hungar', 'hungarian'],
-    India => ['indian'],
-    Indonesia => ['indonesian'],
-    Italy => ['italia'],
-    Israel => ['isreal', 'israeli', 'israil'],
-    Latvia => ['lavtia', 'latvija'],
-    Luxembourg => ['luxemburg'],
-    Madagascar => ['madagaskar'],
-    Netherlands => ['nederlands', 'netherland', 'nrtherlands', 
-      'netherlans', 'netherlnd', 'neth', 'dutch'],
-    Norway => ['norge', 'norges', 'norwegen', 'norwegian'],
-    Palestine => ['palastine'],
-    Philippines => ['philipppines'],
-    Poland => ['polish', 'polen'],
-    Sweden => ['swedish'],
-    Switzerland => ['suitzerland', 'switserland'],
-    Tunisia => ['tunisie', 'tunisian']
-  }
-);
 
 my @VALID_CAPTAINS = qw(
   Bertens Bessis
@@ -235,17 +336,6 @@ my %CAPTAIN_FIX_ALIASES =
     'zimerman', 'zmmermann']
 );
 
-my %COUNTRY_FIX_HASH;
-for my $category (keys %COUNTRY_FIX_ALIASES)
-{
-  for my $value (keys %{$COUNTRY_FIX_ALIASES{$category}})
-  {
-    for my $fix (@{$COUNTRY_FIX_ALIASES{$category}{$value}})
-    {
-      $COUNTRY_FIX_HASH{$fix} = { CATEGORY => $category, VALUE => $value };
-    }
-  }
-}
 
 my %CAPTAIN_FIX_HASH;
 for my $key (keys %CAPTAIN_FIX_ALIASES)
@@ -266,8 +356,8 @@ my $country = Country->new();
 my $gender = Gender->new();
 my $age = Age->new();
 
-my $total = 0;
-my $found = 0;
+my %HIT_STATS;
+my %FORM_SCORES;
 
 
 
@@ -297,6 +387,37 @@ sub study_team
 {
   my ($text, $chain) = @_;
 
+  if (exists $TEAMS_SUGGESTORS_HASH{lc($text)})
+  {
+    # Make this per BBO file.
+    $FORM_SCORES{teams}++;
+    return;
+  }
+  elsif (exists $PAIRS_SUGGESTORS_HASH{lc($text)})
+  {
+    $FORM_SCORES{pairs}++;
+    return;
+  }
+  elsif (exists $INDIVIDUAL_SUGGESTORS_HASH{lc($text)})
+  {
+    $FORM_SCORES{individual}++;
+    return;
+  }
+  elsif (exists $NEUTRAL_SUGGESTORS_HASH{lc($text)})
+  {
+    $FORM_SCORES{neutral}++;
+    return;
+  }
+
+  # Ignore word boundaries.
+  $text =~ s/$TYPOS_FIRST_REGEX/$TYPOS_FIRST_HASH{lc($1)}/ge;
+
+  # Consider word boundaries.
+  $text =~ s/$TYPOS_SECOND_REGEX/$TYPOS_SECOND_HASH{lc($1)}/ge;
+
+  # Match multi-word patterns, using ~ as an artificial separator.
+  $text =~ s/$MULTI_WORD_REGEX/$MULTI_WORD_HASH{lc($1)}/ge;
+
   # Split on separators.
   my @parts = grep {$_ ne ''} split /([.\-\+_:;"\/\(\)]|\s+)/, $text;
 
@@ -304,45 +425,52 @@ sub study_team
 
   for my $part (@parts)
   {
-    $total++;
-    if ($country->valid_lc($part))
+    $HIT_STATS{TOTAL}++;
+
+    # Turn the artificial separator back into a space.
+    $part =~ s/~/ /g;
+
+    my $fix = $SINGLE_WORD_HASH{$part};
+    if (defined $fix && $fix->{CATEGORY} eq 'COUNTRY')
     {
-      $found++;
+      die unless $country->valid_lc($fix->{VALUE});
+      $HIT_STATS{COUNTRY_CLASS}++;
     }
-    elsif (defined $COUNTRY_FIX_HASH{lc($part)})
+    elsif ($country->valid_lc(lc($part)))
     {
-      $found++;
+      $HIT_STATS{COUNTRY_CLASS}++;
     }
     elsif (defined $CAPTAIN_FIX_HASH{lc($part)})
     {
-      $found++;
+      $HIT_STATS{CAPTAIN}++;
     }
     elsif (set_token($part, $token))
     {
-      $found++;
+      $HIT_STATS{SEPARATOR}++;
     }
     elsif ($part =~ /^19\d\d$/ || $part =~ /^20\d\d$/)
     {
-      $found++;
+      $HIT_STATS{YEAR}++;
     }
     elsif ($part =~ /^\d+$/ && $part >= 0 && $part < 100)
     {
-      $found++;
+      $HIT_STATS{INTEGER}++;
     }
     elsif ($part =~ /^open$/i)
     {
-      $found++;
+      $HIT_STATS{OPEN}++;
     }
     elsif ($age->valid_lc($part))
     {
-      $found++;
+      $HIT_STATS{AGE}++;
     }
     elsif ($gender->valid_lc($part))
     {
-      $found++;
+      $HIT_STATS{GENDER}++;
     }
     else
     {
+      $HIT_STATS{UNMATCHED}++;
       print $part, "\n";
     }
   }
@@ -350,9 +478,17 @@ sub study_team
 
 sub print_team_stats
 {
-  printf("Total team words: %6d\n", $total);
-  printf("Total team found: %6d\n", $found);
-  printf("Total team open : %6d\n", $total -$found);
+  for my $key (sort keys %HIT_STATS)
+  {
+    printf("%-20s %6d\n", $key, $HIT_STATS{$key});
+  }
+
+  print "\n";
+
+  for my $key (sort keys %FORM_SCORES)
+  {
+    printf("%-20s %6d\n", $key, $FORM_SCORES{$key});
+  }
 }
 
 
