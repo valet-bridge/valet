@@ -1,0 +1,130 @@
+#!perl
+
+use strict;
+use warnings;
+use v5.10;
+use utf8;
+use open ':std', ':encoding(UTF-8)';
+
+package TeamCountry;
+
+our @ISA = qw(Exporter);
+our @EXPORT = qw(set_hashes_team_country);
+
+use lib '.';
+use TeamBBO;
+
+my @MULTI_WORDS =
+(
+  'Bosnia & Herzegovina',
+  'Chinese Taipei',
+  'Czech Republic',
+  'Faroe Islands',
+  'French Polynesia',
+  'Great Britain',
+  'Hong Kong',
+  'Isle of Man',
+  'Netherlands Antilles',
+  'New Zealand',
+  'North Macedonia',
+  'Republic of Ireland',
+  'San Marino',
+  'Serbia and Montenegro',
+  'Trinidad and Tobago'
+);
+
+my %MULTI_TYPOS =
+(
+  'Bosnia & Herzegovina' => ['bosnia-herzegovina', 
+    'bosnia&herzegovina', 'bosnia and herz.'],
+  'Chinese Taipei' => ['chinese tai', 'chinese taipe', 
+    'ch.taipei', 'china taipei', 'chinese  taipei', 'taipei'],
+  'Faroe Islands' => ['faroe_islands', 'faroe island'],
+  'Great Britain' => ['g.britain'],
+  'Hong Kong' => ['china hong kong', 'china hongkong', 'china honk kong'],
+  'Isle of Man' => ['isle of man'],
+  'New Zealand' => ['new zeland'],
+  'North Macedonia' => ['macedonia'],
+  'Serbia and Montenegro' => ['serbia/mont', 'serbia&mon'],
+  'Trinidad and Tobago' => ['trinidad & tobago', 'trinidad&tobago'],
+);
+
+my @SINGLE_WORDS = qw(
+  Argentina 
+  Australia 
+  Austria 
+  Brazil 
+  Canada 
+  Colombia 
+  Croatia 
+  Denmark 
+  Estonia 
+  Finland 
+  Germany 
+  Hungary 
+  Ireland 
+  Italy 
+  Israel 
+  Latvia 
+  Luxembourg 
+  Madagascar 
+  Monaco 
+  Netherlands 
+  Norway 
+  Palestine 
+  Philippines 
+  Poland 
+  Reunion 
+  Switzerland 
+  Tunisia
+);
+
+my %SINGLE_TYPOS =
+(
+  Argentina => ['argenting', 'argentýna'],
+  Australia => ['austrlia', 'oz'],
+  Austria => ['austra'],
+  Brazil => ['brasil'],
+  Canada => ['kanada'],
+  'Czech Republic' => ['czr'],
+  Colombia => ['columbia'],
+  Croatia => ['croatie'],
+  Denmark => ['danmark', 'danemark', 'denmarrk'],
+  Estonia => ['estonie'],
+  Finland => ['finnland'],
+  Germany => ['deutschland'],
+  Guyana => ['french guiana', 'french guyana'],
+  Hungary => ['hungar'],
+  Ireland => ['roireland'],
+  Italy => ['italia'],
+  Israel => ['isreal', 'israil', 'isarel', 'israël'],
+  Latvia => ['lavtia', 'latvija'],
+  Luxembourg => ['luxemburg'],
+  Macau => ['china macau'],
+  Madagascar => ['madagaskar'],
+  Netherlands => ['the netherlands', 'nederlands', 'netherland', 
+    'nrtherlands', 'netherlans', 'netherlnd', 'neth', 'nl'],
+  Monaco => ['nonaco'],
+  'New Zealand' => ['nwzealand'],
+  'North Macedonia' => ['macedonia'],
+  'Northern Ireland' => ['nireland'],
+  Norway => ['norge', 'norges', 'norwegen'],
+  Palestine => ['palastine'],
+  Philippines => ['philipppines'],
+  Poland => ['polen'],
+  Reunion => ['réunion'],
+  'Sri Lanka' => ['srilanka'],
+  Switzerland => ['suitzerland', 'switserland'],
+  Tunisia => ['tunisie']
+);
+
+
+sub set_hashes_team_country
+{
+  my ($key) = @_;
+
+  TeamBBO::set_overall_hashes(\@MULTI_WORDS, \%MULTI_TYPOS,
+    \@SINGLE_WORDS, \%SINGLE_TYPOS, $key);
+}
+
+1;

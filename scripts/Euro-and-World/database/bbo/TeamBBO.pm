@@ -25,8 +25,13 @@ use Suggestors;
 
 use TeamFun;
 use TeamCity;
+use TeamSponsor;
 use TeamUniversity;
+use TeamClub;
+use TeamOrganization;
 use TeamCaptain;
+use TeamCountry;
+use TeamRegion;
 
 my (%MULTI_WORDS, %MULTI_TYPOS, %MULTI_REGEX, 
   %SINGLE_WORDS, %SINGLE_TYPOS);
@@ -89,176 +94,9 @@ my $TYPOS_SECOND_PATTERN =
 my $TYPOS_SECOND_REGEX = qr/\b($TYPOS_SECOND_PATTERN)\b/i;
 
 
-# Whenever these match, they also yield a field of the
-# corresponding singleton without further ado.  Only multi-word
-# entries in the lists are included, as the single-word ones
-# are done later by hash.
-my %MULTI_WORD_ALIASES =
-(
-  COUNTRY =>
-  {
-    'Bosnia~&~Herzegovina' => ['bosnia & herzegovina',
-      'bosnia-herzegovina', 'bosnia&herzegovina', 'bosnia and herz.'],
-    'Chinese~Taipei' => ['chinese taipei', 'chinese tai',
-      'chinese taipe', 'ch.taipei', 'china taipei', 'chinese  taipei',
-      'taipei'],
-    'Czech~Republic' => ['czech republic'],
-    'Faroe~Islands' => ['faroe islands', 'faroe_islands', 
-      'faroe island'],
-    'French~Polynesia' => ['french polynesia'],
-    'Great~Britain' => ['great britain', 'g.britain'],
-    Guyana => ['french guiana', 'french guyana'],
-    'Hong~Kong' => ['china hong kong', 'china hongkong', 
-      'china honk kong', 'hong kong'],
-    'Isle~of~Man' => ['isle of man'],
-    Macau => ['china macau'],
-    'Netherlands' => ['the netherlands'],
-    'Netherlands~Antilles' => ['netherlands antilles'],
-    'New~Zealand' => ['new zealand', 'new zeland'],
-    'North~Macedonia' => ['north macedonia', 'macedonia'],
-    'Republic~of~Ireland' => ['republic of ireland'],
-    'San~Marino' => ['san marino'],
-    'Serbia~and~Montenegro' => ['serbia and montenegro', 'serbia/mont', 
-      'serbia&mon'],
-    'Trinidad~and~Tobago' => ['trinidad and tobago', 'trinidad & tobago', 
-      'trinidad&tobago'],
-  },
-
-  REGION =>
-  {
-    'Western~Australia' => ['wa']
-  },
-
-  SPONSOR =>
-  {
-    'Beijing~Hull~Technology' => ['beijing hull tech'],
-    'Beijing~Liuhe'=> ['beijing liuhe'],
-    'Beijing~Dazhong'=> ['beijing dazhong'],
-    'Darles~Santerm' => ['darles santerm'],
-    'Dongfeng' => ['dongfeng automobile'],
-    'Grant~Thornton' => ['grant thornton', 'grant thonrton',
-      'grantt thornton', 'bg thornton'],
-    'J.~Pereira~de~Sousa' => ['j. pereira de sousa'],
-    'Novi~Kod' => ['novi kod'],
-    'Palma~Karya~Mandiri' => ['palma karya mandiri'],
-    'Paulo~G.~Pereira' => ['paulo g. pereira', 'p g pereira',
-      'p. g. pereira', 'pg pereira', 'p.g.pereira'],
-    'Phoenix~TV' => ['phoenix tv'],
-    'Unia~Leszno' => ['unia leszno'],
-    'Unia~Winkhaus' => ['unia winkhaus', 'winkhaus unia',
-      'winkhaus-unia'],
-    'Zhongshan~Jiegao' => ['zhong shan jie gao']
-  },
-
-  ORGANIZATION =>
-  {
-    EBU => ['eng bridge union'],
-  },
-
-  CLUB =>
-  {
-    'ABA~Mumbai' => ['aba - mumbai', 'aba-mumbai'],
-    'Altay~GSKD' => ['altay gskd', 'altay gsk', 'altay sdgskd', 'altay sk'],
-    'Altay~Genclik' => ['altay genclik'],
-    'Bamberger~Reiter' => ['bamberger reiter'],
-    'Diyarbakýr~Sur~BSK' => ['diyarbakýr sur bsk', 
-      'diyarbakir bs', 'diyarbakir bsbs', 'dýyarbakir sur. b.b', 
-      'diyarbakir sur sk', 'sur belediye sk',
-      'sur belediye', 'd.bakýr sur', 'd.bakir sur'],
-    'Drammen~Arbeiderparti' => ['drammen arbeiderparti', 'drammen arb'],
-    'Kota~Club' => ['kota club'],
-    'Mike~Lawrence~Club' => ['mike lawrence club'],
-    'Nancy~Darville' => ['nancy jarville'],
-    'Phoenix~Oltenita' => ['phoenix oltenita'],
-    'Qingnian~Qiche' => ['qingnian qiche'],
-    'Van~Bric~SK' => ['van bric sk']
-  }
-);
-
-my %MULTI_WORD_HASH;
-for my $category (keys %MULTI_WORD_ALIASES)
-{
-  for my $key (keys %{$MULTI_WORD_ALIASES{$category}})
-  {
-    for my $alias (@{$MULTI_WORD_ALIASES{$category}{$key}})
-    {
-      $MULTI_WORD_HASH{lc($alias)} = $key;
-    }
-  }
-}
-
-my $MULTI_WORD_PATTERN = 
-  join('|', map { quotemeta } keys %MULTI_WORD_HASH);
-
-my $MULTI_WORD_REGEX = qr/\b($MULTI_WORD_PATTERN)\b/i;
-
 
 my %SINGLE_WORD_ALIASES =
 (
-  COUNTRY =>
-  {
-    Argentina => ['argenting', 'argentýna'],
-    Australia => ['austrlia', 'oz'],
-    Austria => ['austra'],
-    Brazil => ['brasil'],
-    Canada => ['kanada'],
-    'Czech Republic' => ['czr'],
-    Colombia => ['columbia'],
-    Croatia => ['croatie'],
-    Denmark => ['danmark', 'danemark', 'denmarrk'],
-    Estonia => ['estonie'],
-    Finland => ['finnland'],
-    Germany => ['deutschland'],
-    Hungary => ['hungar'],
-    Ireland => ['roireland'],
-    Italy => ['italia'],
-    Israel => ['isreal', 'israil', 'isarel', 'israël'],
-    Latvia => ['lavtia', 'latvija'],
-    Luxembourg => ['luxemburg'],
-    Madagascar => ['madagaskar'],
-    Monaco => ['nonaco'],
-    Netherlands => ['nederlands', 'netherland', 'nrtherlands', 
-      'netherlans', 'netherlnd', 'neth', 'nl'],
-    'New Zealand' => ['nwzealand'],
-    'North Macedonia' => ['macedonia'],
-    'Northern Ireland' => ['nireland'],
-    Norway => ['norge', 'norges', 'norwegen'],
-    Palestine => ['palastine'],
-    Philippines => ['philipppines'],
-    Poland => ['polen'],
-    Reunion => ['réunion'],
-    'Sri Lanka' => ['srilanka'],
-    Switzerland => ['suitzerland', 'switserland'],
-    Tunisia => ['tunisie']
-  },
-
-  REGION => 
-  {
-    Bali => [],
-    Florida => [],
-    Kedungwaru => [],
-    Lumajang => [],
-    Ratchaburi => [],
-    Victoria => [],
-    'Western Australia' => []
-  },
-
-  SPONSOR =>
-  {
-    COMAL => [],
-    CONSUS => [],
-    Dongfeng => [],
-    Enterprise => [],
-    Sagaplast => []
-  },
-
-  CLUB =>
-  {
-    'ABA Mumbai' => ['aba'],
-    'Diyarbakýr Sur BSK' => [],
-    Sakura => []
-  },
-
   NATIONALITY =>
   {
     Australia => ['australian'],
@@ -326,8 +164,13 @@ sub init_hashes
 {
   set_hashes_team_fun('TEAM_FUN');
   set_hashes_team_city('TEAM_CITY');
+  set_hashes_team_sponsor('TEAM_SPONSOR');
   set_hashes_team_university('TEAM_UNIVERSITY');
+  set_hashes_team_club('TEAM_CLUB');
+  set_hashes_team_organization('TEAM_ORGANIZATION');
   set_hashes_team_captain('TEAM_CAPTAIN');
+  set_hashes_team_country('TEAM_COUNTRY');
+  set_hashes_team_region('TEAM_REGION');
 }
 
 
@@ -437,7 +280,8 @@ sub study_part
   $part =~ s/~/ /g;
 
   # Try the new hash set-up.
-  for my $tag (qw(TEAM_FUN TEAM_CITY TEAM_UNIVERSITY TEAM_CAPTAIN))
+  for my $tag (qw(TEAM_FUN TEAM_CITY TEAM_COUNTRY TEAM_REGION
+    TEAM_SPONSOR TEAM_UNIVERSITY TEAM_CLUB TEAM_ORGANIZATION TEAM_CAPTAIN))
   {
     my $fix = $SINGLE_WORDS{$tag}{lc($part)};
     if (defined $fix->{CATEGORY})
@@ -538,10 +382,8 @@ sub study_team
   # Consider word boundaries.
   $text =~ s/$TYPOS_SECOND_REGEX/$TYPOS_SECOND_HASH{lc($1)}/ge;
 
-  # Match multi-word patterns, using ~ as an artificial separator.
-  # $text =~ s/$MULTI_WORD_REGEX/$MULTI_WORD_HASH{lc($1)}/ge;
-
-  for my $tag (qw(TEAM_FUN TEAM_CITY TEAM_UNIVERSITY TEAM_CAPTAIN))
+  for my $tag (qw(TEAM_FUN TEAM_CITY TEAM_COUNTRY TEAM_REGION
+    TEAM_SPONSOR TEAM_UNIVERSITY TEAM_CLUB TEAM_ORGANIZATION TEAM_CAPTAIN))
   {
     $text =~ s/$MULTI_REGEX{$tag}/$MULTI_WORDS{$tag}{lc($1)}/ge;
   }
