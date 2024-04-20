@@ -25,6 +25,7 @@ use Suggestors;
 
 use TeamFun;
 use TeamCity;
+use TeamUniversity;
 
 my (%MULTI_WORDS, %MULTI_TYPOS, %MULTI_REGEX, 
   %SINGLE_WORDS, %SINGLE_TYPOS);
@@ -200,27 +201,6 @@ my %MULTI_WORD_ALIASES =
     'Phoenix~Oltenita' => ['phoenix oltenita'],
     'Qingnian~Qiche' => ['qingnian qiche'],
     'Van~Bric~SK' => ['van bric sk']
-  },
-
-  UNIVERSITY =>
-  {
-    'Anadolu~University' => ['unit anadolu'],
-    'Bilkent~University' => ['bilkent uni.'],
-    'Gunadurma' => ['guna darma'],
-    'ITS~IKOMA' => ['its ikoma'],
-    'ITÜ~Vakfi' => ['itu vakfi'],
-    'Koc~University' => ['koc university bk', 'koc university'],
-    'KwaZulu~Natal' => ['kwazulu natal'],
-    'University~of~California~at~Berkeley' => ['cal berkeley',
-      'cal-berkeley', 'uc berkeley', 'berkeley'],
-    'University~of~Chicago' => ['u chicago'],
-    'University~of~Gdansk' => ['uni gdansk', 'gdank univ poland',
-      'gdansk univ poland'],
-    'University~of~Illonois' => ['u of illinois'],
-    'University~of~North~Carolina' => ['u n. carolina'],
-    'University~of~Warsaw' => ['uni warsaw'],
-    'University~of~Wroclaw' => ['uni wroclaw'],
-    'Universität~Potsdam' => ['uni potsdam']
   }
 );
 
@@ -464,6 +444,7 @@ sub init_hashes
 {
   set_hashes_team_fun('TEAM_FUN');
   set_hashes_team_city('TEAM_CITY');
+  set_hashes_team_university('TEAM_UNIVERSITY');
 }
 
 
@@ -573,7 +554,7 @@ sub study_part
   $part =~ s/~/ /g;
 
   # Try the new hash set-up.
-  for my $tag (qw(TEAM_FUN TEAM_CITY))
+  for my $tag (qw(TEAM_FUN TEAM_CITY TEAM_UNIVERSITY))
   {
     my $fix = $SINGLE_WORDS{$tag}{lc($part)};
     if (defined $fix->{CATEGORY})
@@ -677,7 +658,7 @@ sub study_team
   # Match multi-word patterns, using ~ as an artificial separator.
   # $text =~ s/$MULTI_WORD_REGEX/$MULTI_WORD_HASH{lc($1)}/ge;
 
-  for my $tag (qw(TEAM_FUN TEAM_CITY))
+  for my $tag (qw(TEAM_FUN TEAM_CITY TEAM_UNIVERSITY))
   {
     $text =~ s/$MULTI_REGEX{$tag}/$MULTI_WORDS{$tag}{lc($1)}/ge;
   }
