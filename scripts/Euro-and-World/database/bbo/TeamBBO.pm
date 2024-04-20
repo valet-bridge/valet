@@ -34,66 +34,10 @@ use TeamCountry;
 use TeamNationality;
 use TeamRegion;
 
-my (%MULTI_WORDS, %MULTI_TYPOS, %MULTI_REGEX, 
-  %SINGLE_WORDS, %SINGLE_TYPOS);
+my (%MULTI_WORDS, %MULTI_REGEX, %SINGLE_WORDS);
 
 my $CITIES_NAME = "../../../../../../bboD/../../cities/cities.txt";
 my (%CITIES, %CITIES_LC);
-
-
-# Where the order is important.  These do not have to be whole words,
-# so we can't do a hash lookup.
-my %TYPOS_FIRST =
-(
-  'Chinese ' => ['ch.'],
-  'Republic ' => ['rep.'],
-  'Netherlands ' => ['neth.'],
-  'Serbia~and~Montenegro' => ['serbia&mon.']
-);
-
-my %TYPOS_FIRST_HASH;
-for my $key (keys %TYPOS_FIRST)
-{
-  for my $alias (@{$TYPOS_FIRST{$key}})
-  {
-    $TYPOS_FIRST_HASH{lc($alias)} = $key;
-  }
-}
-
-my $TYPOS_FIRST_PATTERN = 
-  join('|', map { quotemeta } keys %TYPOS_FIRST_HASH);
-
-my $TYPOS_FIRST_REGEX = qr/($TYPOS_FIRST_PATTERN)/i;
-
-
-# These have to be whole words.
-my %TYPOS_SECOND =
-(
-  'Chinese ' => ['chi', 'chainese'],
-  Czech => ['czec'],
-  Ireland => ['irelnd', 'irelsnd', 'irlande', 'irelend', 
-    'irelena', 'ire'],
-  Netherlands => ['net'],
-  Northern => ['northertn'],
-  Republic => ['rep', 'reublic'],
-  Taipei => ['taipae', 'tapei'],
-  Zealand => ['zealans', 'zeland'],
-);
-
-my %TYPOS_SECOND_HASH;
-for my $key (keys %TYPOS_SECOND)
-{
-  for my $alias (@{$TYPOS_SECOND{$key}})
-  {
-    $TYPOS_SECOND_HASH{lc($alias)} = $key;
-  }
-}
-
-my $TYPOS_SECOND_PATTERN = 
-  join('|', map { quotemeta } keys %TYPOS_SECOND_HASH);
-
-my $TYPOS_SECOND_REGEX = qr/\b($TYPOS_SECOND_PATTERN)\b/i;
-
 
 
 sub read_cities
@@ -321,12 +265,6 @@ sub study_team
   {
     return;
   }
-
-  # Ignore word boundaries.
-  $text =~ s/$TYPOS_FIRST_REGEX/$TYPOS_FIRST_HASH{lc($1)}/ge;
-
-  # Consider word boundaries.
-  $text =~ s/$TYPOS_SECOND_REGEX/$TYPOS_SECOND_HASH{lc($1)}/ge;
 
   for my $tag (qw(TEAM_FUN TEAM_CITY TEAM_COUNTRY TEAM_NATIONALITY
     TEAM_REGION TEAM_SPONSOR TEAM_UNIVERSITY TEAM_CLUB 
