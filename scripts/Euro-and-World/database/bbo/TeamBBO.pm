@@ -31,6 +31,7 @@ use TeamClub;
 use TeamOrganization;
 use TeamCaptain;
 use TeamCountry;
+use TeamNationality;
 use TeamRegion;
 
 my (%MULTI_WORDS, %MULTI_TYPOS, %MULTI_REGEX, 
@@ -95,43 +96,6 @@ my $TYPOS_SECOND_REGEX = qr/\b($TYPOS_SECOND_PATTERN)\b/i;
 
 
 
-my %SINGLE_WORD_ALIASES =
-(
-  NATIONALITY =>
-  {
-    Australia => ['australian'],
-    Bulgaria => ['bulgarian', 'blugarian'],
-    Croatia => ['croatian'],
-    'Czech Republic' => ['czech'],
-    Estonia => ['estonian'],
-    France => ['french'],
-    Germany => ['german'],
-    Greece => ['greek'],
-    Hungary => ['hungar'],
-    India => ['indian'],
-    Indonesia => ['indonesian'],
-    Israel => ['israeli'],
-    Netherlands => ['dutch'],
-    Norway => ['norwegian'],
-    Poland => ['polish'],
-    Sweden => ['swedish'],
-    Tunisia => ['tunisie']
-  }
-);
-
-my %SINGLE_WORD_HASH;
-for my $category (keys %SINGLE_WORD_ALIASES)
-{
-  for my $key (keys %{$SINGLE_WORD_ALIASES{$category}})
-  {
-    $SINGLE_WORD_HASH{lc($key)} = { CATEGORY => $category, KEY => $key };
-    for my $alias (@{$SINGLE_WORD_ALIASES{$category}{$key}})
-    {
-      $SINGLE_WORD_HASH{$alias} = { CATEGORY => $category, KEY => $key };
-    }
-  }
-}
-
 sub read_cities
 {
   my () = @_;
@@ -149,7 +113,7 @@ sub read_cities
 
 
 # TODO 
-# Add Guernsey, United Kingdom, Jersey, Isle of Man, Mali
+# Add Guernsey, United Kingdom, Jersey, Mali
 # DenmarS, Deutsch, Indýa, Sweeden, CBAI, Brasilia
 
 my $country = Country->new();
@@ -170,6 +134,7 @@ sub init_hashes
   set_hashes_team_organization('TEAM_ORGANIZATION');
   set_hashes_team_captain('TEAM_CAPTAIN');
   set_hashes_team_country('TEAM_COUNTRY');
+  set_hashes_team_nationality('TEAM_NATIONALITY');
   set_hashes_team_region('TEAM_REGION');
 }
 
@@ -280,8 +245,9 @@ sub study_part
   $part =~ s/~/ /g;
 
   # Try the new hash set-up.
-  for my $tag (qw(TEAM_FUN TEAM_CITY TEAM_COUNTRY TEAM_REGION
-    TEAM_SPONSOR TEAM_UNIVERSITY TEAM_CLUB TEAM_ORGANIZATION TEAM_CAPTAIN))
+  for my $tag (qw(TEAM_FUN TEAM_CITY TEAM_COUNTRY TEAM_NATIONALITY
+    TEAM_REGION TEAM_SPONSOR TEAM_UNIVERSITY TEAM_CLUB TEAM_ORGANIZATION 
+    TEAM_CAPTAIN))
   {
     my $fix = $SINGLE_WORDS{$tag}{lc($part)};
     if (defined $fix->{CATEGORY})
@@ -290,16 +256,6 @@ sub study_part
       $HIT_STATS{$fix->{CATEGORY}}++;
       return;
     }
-  }
-
-
-  my $fix = $SINGLE_WORD_HASH{lc($part)};
-
-  if (defined $fix->{CATEGORY})
-  {
-    $token->set_singleton($fix->{CATEGORY}, $fix->{VALUE});
-    $HIT_STATS{$fix->{CATEGORY}}++;
-    return;
   }
 
   my $fix_event = $FIX_HASH{lc($part)};
@@ -314,7 +270,7 @@ sub study_part
         $category eq 'SCORING' || $category eq 'SPONSOR' ||
         $category eq 'TOURNAMENT')
     {
-      $token->set_singleton($category, $fix->{VALUE});
+      $token->set_singleton($category, $fix_event->{VALUE});
       $HIT_STATS{$category}++;
       return;
     }
@@ -324,32 +280,22 @@ sub study_part
 
   if (set_token($part, $token))
   {
-    $token->set_singleton('SEPARATOR', $fix->{VALUE});
+    $token->set_singleton('SEPARATOR', $part);
     $HIT_STATS{SEPARATOR}++;
   }
   elsif ($country->valid_lc(lc($part)))
   {
-    $token->set_singleton('COUNTRY', $fix->{VALUE});
+    $token->set_singleton('COUNTRY', $part);
     $HIT_STATS{COUNTRY}++;
   }
-  # elsif (defined $CAPTAIN_FIX_HASH{lc($part)})
-  # {
-    # $token->set_singleton('CAPTAIN', $fix->{VALUE});
-    # $HIT_STATS{CAPTAIN}++;
-  # }
-  # elsif (exists $CITIES_LC{lc($part)})
-  # {
-    # print "ZZZ $part\n";
-    # $tmp_global = 1;
-  # }
   elsif ($part =~ /^19\d\d$/ || $part =~ /^20\d\d$/)
   {
-    $token->set_singleton('YEAR', $fix->{VALUE});
+    $token->set_singleton('YEAR', $part);
     $HIT_STATS{YEAR}++;
   }
   elsif ($part =~ /^\d+$/ && $part >= 0 && $part < 100)
   {
-    $token->set_numeral_counter($fix->{VALUE});
+    $token->set_numeral_counter($part);
     $HIT_STATS{INTEGER}++;
   }
 
@@ -382,8 +328,9 @@ sub study_team
   # Consider word boundaries.
   $text =~ s/$TYPOS_SECOND_REGEX/$TYPOS_SECOND_HASH{lc($1)}/ge;
 
-  for my $tag (qw(TEAM_FUN TEAM_CITY TEAM_COUNTRY TEAM_REGION
-    TEAM_SPONSOR TEAM_UNIVERSITY TEAM_CLUB TEAM_ORGANIZATION TEAM_CAPTAIN))
+  for my $tag (qw(TEAM_FUN TEAM_CITY TEAM_COUNTRY TEAM_NATIONALITY
+    TEAM_REGION TEAM_SPONSOR TEAM_UNIVERSITY TEAM_CLUB 
+    TEAM_ORGANIZATION TEAM_CAPTAIN))
   {
     $text =~ s/$MULTI_REGEX{$tag}/$MULTI_WORDS{$tag}{lc($1)}/ge;
   }
@@ -430,6 +377,7 @@ sub study_teams
 
   return unless defined $text;
 
+  # TODO Put this to clean_team, and don't remove it yet
   $text =~ s/\- npc//g;
   $text =~ s/\(npc\)//g;
 
