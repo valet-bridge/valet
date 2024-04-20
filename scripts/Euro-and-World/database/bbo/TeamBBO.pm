@@ -9,7 +9,8 @@ use open ':std', ':encoding(UTF-8)';
 package TeamBBO;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(read_cities study_teams unteam print_team_stats);
+our @EXPORT = qw(read_cities study_teams unteam print_team_stats
+  set_overall_hashes init_hashes);
 
 use lib '.';
 
@@ -21,6 +22,11 @@ use Separators;
 use Age;
 use Gender;
 use Suggestors;
+
+use TeamFun;
+
+my (%MULTI_WORDS, %MULTI_TYPOS, %MULTI_REGEX, 
+  %SINGLE_WORDS, %SINGLE_TYPOS);
 
 my $CITIES_NAME = "../../../../../../bboD/../../cities/cities.txt";
 my (%CITIES, %CITIES_LC);
@@ -414,7 +420,7 @@ my %MULTI_WORD_ALIASES =
     'Top~Ruff' => ['top ruff'],
     'Tre~hunker~en~babe' => ['tre hunker en babe'],
     'Tre sang' => ['tre sang'],
-    'Troll~i~eske' => ['troll i eske', 'tre troll i eske',
+    'Troll~i~eske' => ['tre troll i eske', 'troll i eske',
       'tre troll ...'],
     'TXECS~Reus~Rubiés' => ['txecs-reus-rubiés', 'txecs-reus-rubies',
       'txecs-reus rubiés', 'txec-reus rubiés', 'txec-reus rubies',
@@ -786,6 +792,60 @@ my %HIT_STATS;
 my %FORM_SCORES;
 
 
+sub init_hashes
+{
+  set_hashes_team_fun('TEAM_FUN');
+}
+
+
+sub set_overall_hashes
+{
+  my ($multi_words, $multi_typos, $single_words, $single_typos, $key) = @_;
+
+  # The words themselves.
+  for my $multi (@$multi_words)
+  {
+    my $tilded = $multi =~ s/ /\~/gr;
+    $MULTI_WORDS{$key}{lc($multi)} = $tilded;
+    $SINGLE_WORDS{$key}{lc($multi)} = 
+      { CATEGORY => $key, VALUE => $multi };
+  }
+
+  # Any typos.
+  for my $multi (keys %$multi_typos)
+  {
+    my $tilded = $multi =~ s/ /\~/gr;
+    for my $typo (@{$multi_typos->{$multi}})
+    {
+      $MULTI_WORDS{$key}{lc($typo)} = $tilded;
+      $SINGLE_WORDS{$key}{lc($multi)} = 
+        { CATEGORY => $key, VALUE => $multi };
+    }
+  }
+
+  my $multi_pattern = join('|', map { quotemeta }
+    keys %{$MULTI_WORDS{$key}});
+
+  $MULTI_REGEX{$key} = qr/\b($multi_pattern)\b/i;
+
+
+  # Similarly for the single words.
+  for my $single (@$single_words)
+  {
+    $SINGLE_WORDS{$key}{lc($single)} = 
+      { CATEGORY => $key, VALUE => $single };
+  }
+
+  for my $single (keys %$single_typos)
+  {
+    for my $typo (@{$single_typos->{$single}})
+    {
+      $SINGLE_WORDS{$key}{lc($typo)} = 
+        { CATEGORY => $key, VALUE => $single };
+    }
+  }
+}
+
 
 sub clean_team
 {
@@ -842,6 +902,19 @@ sub study_part
 
   # Turn the artificial separator back into a space.
   $part =~ s/~/ /g;
+
+  # Try the new hash set-up.
+  for my $tag (qw(TEAM_FUN))
+  {
+    my $fix = $SINGLE_WORDS{$tag}{lc($part)};
+    if (defined $fix->{CATEGORY})
+    {
+      $token->set_singleton($fix->{CATEGORY}, $fix->{VALUE});
+      $HIT_STATS{$fix->{CATEGORY}}++;
+      return;
+    }
+  }
+
 
   my $fix = $SINGLE_WORD_HASH{lc($part)};
 
@@ -938,7 +1011,12 @@ sub study_team
   $text =~ s/$TYPOS_SECOND_REGEX/$TYPOS_SECOND_HASH{lc($1)}/ge;
 
   # Match multi-word patterns, using ~ as an artificial separator.
-  $text =~ s/$MULTI_WORD_REGEX/$MULTI_WORD_HASH{lc($1)}/ge;
+  # $text =~ s/$MULTI_WORD_REGEX/$MULTI_WORD_HASH{lc($1)}/ge;
+
+  for my $tag (qw(TEAM_FUN))
+  {
+    $text =~ s/$MULTI_REGEX{$tag}/$MULTI_WORDS{$tag}{lc($1)}/ge;
+  }
 
   # Split on separators.
   my @parts = grep {$_ ne ''} split /([.\-\+_:;"\/\(\)]|\s+)/, $text;

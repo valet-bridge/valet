@@ -26,6 +26,8 @@ die "perl cook.pl raw.txt" unless $#ARGV == 0;
 
 my @RAW_FIELDS = qw(BBONO TITLE EVENT SCORING TEAMS);
 
+init_hashes();
+
 read_cities();
 
 my $file = $ARGV[0];
@@ -62,7 +64,7 @@ while ($line = <$fh>)
     next;
   }
 
-  if ($chunk{BBONO} == 25012)
+  if ($chunk{BBONO} == 18423)
   {
     print "HERE\n";
   }
