@@ -24,6 +24,7 @@ use Gender;
 use Suggestors;
 
 use TeamFun;
+use TeamCity;
 
 my (%MULTI_WORDS, %MULTI_TYPOS, %MULTI_REGEX, 
   %SINGLE_WORDS, %SINGLE_TYPOS);
@@ -119,19 +120,6 @@ my %MULTI_WORD_ALIASES =
       'serbia&mon'],
     'Trinidad~and~Tobago' => ['trinidad and tobago', 'trinidad & tobago', 
       'trinidad&tobago'],
-  },
-
-  CITY =>
-  {
-    'Belo~Horizonte' => ['belo horizonte'],
-    'Ping~An' => ['ping an'],
-    'Kota~Bandung' => ['kota bandung'],
-    'Kota~Bekasi' => ['kota bekasi'],
-    'Kota~Bogor' => ['kota bogor'],
-    'Kota~Mataram' => ['kota mataram'],
-    'Ningbo' => ['ning bo'],
-    'Novi~Sad' => ['novi sad'],
-    'Silesia~Gliwice' => ['silesia gliwice', 'silezia gliwice']
   },
 
   REGION =>
@@ -333,17 +321,6 @@ my %SINGLE_WORD_ALIASES =
     Sakura => []
   },
 
-  CITY =>
-  {
-    'Belo Horizonte' => [],
-    'Kota Mataram' => [],
-    'Krakow' => ['kraków'],
-    'Munich' => ['münchen'],
-    'Novi Sad' => [],
-    'Silesia Gliwice' => [],
-    'Tarnów' => ['Tarnow']
-  },
-
   NATIONALITY =>
   {
     Australia => ['australian'],
@@ -468,64 +445,10 @@ my @VALID_CAPTAINS = qw(
   Zagorin Zaleski Zia Zimmermann
 );
 
-my @VALID_CITIES = qw(
-  Aalborg Adana Adelaide Ahmedabad Akhisar Alexandria Alytus 
-  Amarillo Ambon Amsterdam Ankara Antalya Antony Antwerpen
-  Asenovgrad Assis Athens Auckland Augsburg Ayacucho
-  Balikpapan Bamberg Bandung Bangkok Banjarmasin Barcelona 
-  Bath Batman Batu Bekasi Belgrade Bengkulu Bergen Berlin Bhubaneshwar
-  Bielefeld Bitung Blitar Bogor Bologna Bonn Bordeaux Borivli
-  Bremen Brisbane Bucharest Budapest Bursa Burdur Bytom
-  Caen Cairns Canberra Caracas Catania Changzhou Chelsea 
-  Chengdu Chennai Chicago Chongqing Chumphon Cimahi Clichy 
-  Coventry Cuenca
-  Dalian Dalls Daqing Darmstadt Debrecen Delft Delhi Denizli 
-  Dimitrovgrad Dobrich Dombivli Dongguan Düsseldorf
-  Eastbourne Edirne Esbjerg Essen
-  Fethiye
-  Gdynia Gent Glidice Gorontalo Gölcük Gresik Guangzhou Guayaquil
-  Hamburg Hangzhou Hannover Helsinki Huangshi Hyderabad
-  Isparta
-  Jaipur Jakarta Jember Jiamusi Jiangyou Jilin Jinchang Jincheng Jinjiang
-  Kadirli Kalisz Kalyani Kanpur Karachi Karlsruhe Kastamonu Katowice
-  Kediri Kiel Kielce Kiev Köln Krakow Kristiansand 
-  Kudus Kunshan Kuopio Kütahya
-  Leiden Leszno Leuven Leverkusen Lhokseumawe Lille Lima Lincoln
-  Ljubljana London Lubin Lublin Lumajang
-  Maastricht Madrid Makassar Malmö Manado Manchester Manisa Mannheim
-  Marbella Martapura Malatya Mataram Medan Melbourne
-  Midyat Milan Minsk Miskolc Montpellier Mumbai Munich
-  Nagpur Nagykanizsa Nanning Narita Nazilli Nijmegen Ningbo Nürnberg
-  Odense Oldenburg Orhangazi Oslo Oxford
-  Padang Padova Palembang Palermo Palma Palu Pariaman Paris 
-  Pekanbaru Pelotas Pernik Perth Pesaro Pescara 
-  Randers Rayong Reims Riga Rijeka Rimini Rome
-  Pisa Pleven Plovdiv Pontianak Potsdam Prague Pula Pune Puri
-  Saarbrücken Salerno Samarinda Samsun Santiago Sanya Sarpsborg 
-  Secunderabad Semarang Serang Shanghai Shaoguan Shenyang Shenzhen
-  Sibiu Sidoarjo Skien Skopje Sleman Sliven Sofia Split
-  Stavanger Stuttgart Surabaya Suzhou Sydney Szeged
-  Taizhou Takayama Tallinn Täby Temuco Tianjin Tokyo Toulouse 
-  Trieste Trondheim Tromsø
-  Udaipur Uppsala Utrecht
-  Varese Varna Vejle Vilnius
-  Xiamen Xinghua Xinyi
-  Warsaw Wellington Worcester Wuhan
-  Yambol Yibin Yokohama Yogyakarta
-  Zagreb Zhenjiang Zhongshan Zhuzhou Zigong
-);
-
 my %CAPTAIN_FIX_HASH;
 for my $captain (@VALID_CAPTAINS)
 {
   $CAPTAIN_FIX_HASH{lc($captain)} = $captain;
-}
-
-
-my %CITY_FIX_HASH;
-for my $city (@VALID_CITIES)
-{
-  $CITY_FIX_HASH{lc($city)} = $city;
 }
 
 
@@ -540,6 +463,7 @@ my %FORM_SCORES;
 sub init_hashes
 {
   set_hashes_team_fun('TEAM_FUN');
+  set_hashes_team_city('TEAM_CITY');
 }
 
 
@@ -649,7 +573,7 @@ sub study_part
   $part =~ s/~/ /g;
 
   # Try the new hash set-up.
-  for my $tag (qw(TEAM_FUN))
+  for my $tag (qw(TEAM_FUN TEAM_CITY))
   {
     my $fix = $SINGLE_WORDS{$tag}{lc($part)};
     if (defined $fix->{CATEGORY})
@@ -705,11 +629,6 @@ sub study_part
     $token->set_singleton('CAPTAIN', $fix->{VALUE});
     $HIT_STATS{CAPTAIN}++;
   }
-  elsif (defined $CITY_FIX_HASH{lc($part)})
-  {
-    $token->set_singleton('CITY', $fix->{VALUE});
-    $HIT_STATS{CITY}++;
-  }
   # elsif (exists $CITIES_LC{lc($part)})
   # {
     # print "ZZZ $part\n";
@@ -758,7 +677,7 @@ sub study_team
   # Match multi-word patterns, using ~ as an artificial separator.
   # $text =~ s/$MULTI_WORD_REGEX/$MULTI_WORD_HASH{lc($1)}/ge;
 
-  for my $tag (qw(TEAM_FUN))
+  for my $tag (qw(TEAM_FUN TEAM_CITY))
   {
     $text =~ s/$MULTI_REGEX{$tag}/$MULTI_WORDS{$tag}{lc($1)}/ge;
   }
