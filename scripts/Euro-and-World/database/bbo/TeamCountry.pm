@@ -49,7 +49,7 @@ my %MULTI_TYPOS =
   'New Zealand' => ['new zeland', 'new zealans', 'new zeland'],
   'North Macedonia' => ['macedonia'],
   'Northern Ireland' => ['northertn irelsnd'],
-  'Republic of Ireland' => ['rep. of ireland', 'rep of ireland'],
+  'Republic of Ireland' => ['rep. of ireland', 'rep of ireland', 'roi'],
   'Serbia and Montenegro' => ['serbia/mont', 'serbia&mon'],
   'Trinidad and Tobago' => ['trinidad & tobago', 'trinidad&tobago'],
 );
@@ -63,6 +63,7 @@ my @SINGLE_WORDS = qw(
   Colombia 
   Croatia 
   Denmark 
+  England
   Estonia 
   Finland 
   Germany 
@@ -73,15 +74,21 @@ my @SINGLE_WORDS = qw(
   Latvia 
   Luxembourg 
   Madagascar 
+  Malta
   Monaco 
   Netherlands 
   Norway 
+  Pakistan
   Palestine 
   Philippines 
   Poland 
   Reunion 
+  Scotland
   Switzerland 
   Tunisia
+  Turkey
+  USA
+  Wales
 );
 
 my %SINGLE_TYPOS =
@@ -96,8 +103,10 @@ my %SINGLE_TYPOS =
   Colombia => ['columbia'],
   Croatia => ['croatie'],
   Denmark => ['danmark', 'danemark', 'denmarrk'],
+  England => ['eng'],
   Estonia => ['estonie'],
   Finland => ['finnland'],
+  France => ['fra'],
   Germany => ['deutschland'],
   Guyana => ['french guiana', 'french guyana'],
   Hungary => ['hungar'],
@@ -115,14 +124,15 @@ my %SINGLE_TYPOS =
   'New Zealand' => ['nwzealand'],
   'North Macedonia' => ['macedonia'],
   'Northern Ireland' => ['nireland'],
-  Norway => ['norge', 'norges', 'norwegen'],
+  Norway => ['norge', 'norges', 'norwegen', 'nor'],
   Palestine => ['palastine'],
   Philippines => ['philipppines'],
   Poland => ['polen'],
   Reunion => ['réunion'],
   'Sri Lanka' => ['srilanka'],
   Switzerland => ['suitzerland', 'switserland'],
-  Tunisia => ['tunisie']
+  Tunisia => ['tunisie'],
+  Turkey => ['tur']
 );
 
 

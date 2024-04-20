@@ -46,7 +46,9 @@ my @SINGLE_WORDS = qw(
   COMAL CONSUS
   Dongfeng
   Enterprise
-  Sagaplast
+  Lavazza
+  Sagaplast Solakoglu
+  Vito
 );
 
 my %SINGLE_TYPOS =

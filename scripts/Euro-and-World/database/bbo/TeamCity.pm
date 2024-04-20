@@ -37,8 +37,8 @@ my @SINGLE_WORDS = qw(
   Amarillo Ambon Amsterdam Ankara Antalya Antony Antwerpen
   Asenovgrad Assis Athens Auckland Augsburg Ayacucho
   Balikpapan Bamberg Bandung Bangkok Banjarmasin Barcelona
-  Bath Batman Batu Bekasi Belgrade Bengkulu Bergen Berlin Bhubaneshwar
-  Bielefeld Bitung Blitar Bogor Bologna Bonn Bordeaux Borivli
+  Bath Batman Batu Beijing Bekasi Belgrade Bengkulu Bergen Berlin 
+  Bhubaneshwar Bielefeld Bitung Blitar Bogor Bologna Bonn Bordeaux Borivli
   Bremen Brisbane Bucharest Budapest Bursa Burdur Bytom
   Caen Cairns Canberra Caracas Catania Changzhou Chelsea
   Chengdu Chennai Chicago Chongqing Chumphon Cimahi Clichy
@@ -49,10 +49,10 @@ my @SINGLE_WORDS = qw(
   Fethiye
   Gdynia Gent Glidice Gorontalo Gölcük Gresik Guangzhou Guayaquil
   Hamburg Hangzhou Hannover Helsinki Huangshi Hyderabad
-  Isparta
+  Isparta Izmir
   Jaipur Jakarta Jember Jiamusi Jiangyou Jilin Jinchang Jincheng Jinjiang
   Kadirli Kalisz Kalyani Kanpur Karachi Karlsruhe Kastamonu Katowice
-  Kediri Kiel Kielce Kiev Köln Krakow Kristiansand
+  Kediri Kiel Kielce Kiev Kolkata Köln Krakow Kristiansand
   Kudus Kunshan Kuopio Kütahya
   Leiden Leszno Leuven Leverkusen Lhokseumawe Lille Lima Lincoln
   Ljubljana London Lubin Lublin Lumajang
@@ -63,7 +63,7 @@ my @SINGLE_WORDS = qw(
   Odense Oldenburg Orhangazi Oslo Oxford
   Padang Padova Palembang Palermo Palma Palu Pariaman Paris
   Pekanbaru Pelotas Pernik Perth Pesaro Pescara
-  Randers Rayong Reims Riga Rijeka Rimini Rome
+  Radkov Randers Rayong Reims Riga Rijeka Rimini Rome
   Pisa Pleven Plovdiv Pontianak Potsdam Prague Pula Pune Puri
   Saarbrücken Salerno Samarinda Samsun Santiago Sanya Sarpsborg
   Secunderabad Semarang Serang Shanghai Shaoguan Shenyang Shenzhen
@@ -76,14 +76,16 @@ my @SINGLE_WORDS = qw(
   Xiamen Xinghua Xinyi
   Warsaw Wellington Worcester Wuhan
   Yambol Yibin Yokohama Yogyakarta
-  Zagreb Zhenjiang Zhongshan Zhuzhou Zigong
+  Zagreb Zhenjiang Zhongshan Zhuzhou Zigong Zurich
 );
 
 my %SINGLE_TYPOS =
 (
+  'Izmir' => ['ýzmir'],
+  'Kolkata' => ['calcutta'],
   'Krakow' => ['kraków'],
   'Munich' => ['münchen'],
-  'Tarnów' => ['Tarnow']
+  'Tarnów' => ['tarnow']
 );
 
 

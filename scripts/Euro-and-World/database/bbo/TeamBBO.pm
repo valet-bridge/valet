@@ -24,15 +24,28 @@ use Gender;
 use Suggestors;
 
 use TeamFun;
-use TeamCity;
 use TeamSponsor;
-use TeamUniversity;
-use TeamClub;
 use TeamOrganization;
-use TeamCaptain;
 use TeamCountry;
-use TeamNationality;
 use TeamRegion;
+use TeamCity;
+use TeamClub;
+use TeamCaptain;
+use TeamNationality;
+use TeamUniversity;
+
+my @TAG_ORDER = qw(
+  TEAM_FUN 
+  TEAM_SPONSOR 
+  TEAM_ORGANIZATION 
+  TEAM_COUNTRY 
+  TEAM_REGION 
+  TEAM_CITY 
+  TEAM_CLUB 
+  TEAM_CAPTAIN
+  TEAM_NATIONALITY
+  TEAM_UNIVERSITY 
+);
 
 my (%MULTI_WORDS, %MULTI_REGEX, %SINGLE_WORDS);
 
@@ -71,6 +84,7 @@ my %FORM_SCORES;
 sub init_hashes
 {
   set_hashes_team_fun('TEAM_FUN');
+  set_hashes_team_region('TEAM_REGION');
   set_hashes_team_city('TEAM_CITY');
   set_hashes_team_sponsor('TEAM_SPONSOR');
   set_hashes_team_university('TEAM_UNIVERSITY');
@@ -79,7 +93,6 @@ sub init_hashes
   set_hashes_team_captain('TEAM_CAPTAIN');
   set_hashes_team_country('TEAM_COUNTRY');
   set_hashes_team_nationality('TEAM_NATIONALITY');
-  set_hashes_team_region('TEAM_REGION');
 }
 
 
@@ -189,9 +202,7 @@ sub study_part
   $part =~ s/~/ /g;
 
   # Try the new hash set-up.
-  for my $tag (qw(TEAM_FUN TEAM_CITY TEAM_COUNTRY TEAM_NATIONALITY
-    TEAM_REGION TEAM_SPONSOR TEAM_UNIVERSITY TEAM_CLUB TEAM_ORGANIZATION 
-    TEAM_CAPTAIN))
+  for my $tag (@TAG_ORDER)
   {
     my $fix = $SINGLE_WORDS{$tag}{lc($part)};
     if (defined $fix->{CATEGORY})
@@ -207,13 +218,17 @@ sub study_part
   if (defined $fix_event->{CATEGORY})
   {
     my $category = $fix_event->{CATEGORY};
-    if ($category eq 'AGE' || $category eq 'CITY' ||
-        $category eq 'COUNTRY' || $category eq 'FORM' || 
+    if ($category eq 'AGE' ||
+        $category eq 'FORM' || 
         $category eq 'GENDER' || $category eq 'MONTH' || 
         $category eq 'NUMERAL' || $category eq 'ROMAN' ||
-        $category eq 'SCORING' || $category eq 'SPONSOR' ||
+        $category eq 'SCORING' ||
         $category eq 'TOURNAMENT')
     {
+if ($category eq 'GENDER')
+{
+  print "CCC $part\n";
+}
       $token->set_singleton($category, $fix_event->{VALUE});
       $HIT_STATS{$category}++;
       return;
@@ -266,9 +281,7 @@ sub study_team
     return;
   }
 
-  for my $tag (qw(TEAM_FUN TEAM_CITY TEAM_COUNTRY TEAM_NATIONALITY
-    TEAM_REGION TEAM_SPONSOR TEAM_UNIVERSITY TEAM_CLUB 
-    TEAM_ORGANIZATION TEAM_CAPTAIN))
+  for my $tag (@TAG_ORDER)
   {
     $text =~ s/$MULTI_REGEX{$tag}/$MULTI_WORDS{$tag}{lc($1)}/ge;
   }
