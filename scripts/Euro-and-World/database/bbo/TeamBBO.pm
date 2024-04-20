@@ -26,6 +26,7 @@ use Suggestors;
 use TeamFun;
 use TeamCity;
 use TeamUniversity;
+use TeamCaptain;
 
 my (%MULTI_WORDS, %MULTI_TYPOS, %MULTI_REGEX, 
   %SINGLE_WORDS, %SINGLE_TYPOS);
@@ -154,36 +155,6 @@ my %MULTI_WORD_ALIASES =
     EBU => ['eng bridge union'],
   },
 
-  CAPTAIN =>
-  {
-    'Bareket' => ['bareket ilan'],
-    'David~Birman' => ['birman david', 'david birman', 'birman d.'],
-    'Della~Monta' => ['della monta'],
-    'Ginossar' => ['eldad ginossar'],
-    'Jorge~Cruzeiro' => ['jorge cruzeiro'],
-    'Palma~Carlos' => ['palma carlos'],
-    'Paul~Van~Goor' => ['paul van goor'],
-    'Pontiac~7' => ['pontiac7'],
-    'Rui~Santos' => ['rui santos'],
-    'Shashi~Gupta' => ['shashi gupta'],
-    'Sinan~Abi' => ['sinan abi'],
-    'Sinan~Göksu' => ['sinan goksu'],
-    'van~Prooijen'=> ['van prooijen', 'van proojen'],
-    'Van~Cleeff' => ['van cleeff'],
-    'Van~de~Walle~' => ['van de walle'],
-    'Van~den~Bos' => ['van den bos', 'van des bos'],
-    'Van~den~Cleff' => ['van den cleff'],
-    'Van~der~Vlugt' => ['van der vlugt'],
-    'Van~Elsuwé' => ['van elsuwé'],
-    'Van~Gestel' => ['van gestel'],
-    'Van~Helsing' => ['van helsing'],
-    'Van~Hoof' => ['van hoof'],
-    'Vang~Larsen' => ['vang larsen', 'van larsen', 'vang-larsen'],
-    'Van~Riel' => ['van riel'],
-    'Van~Zwol' => ['van zwol'],
-    'Yao~Ke' => ['yao ke'],
-  },
-
   CLUB =>
   {
     'ABA~Mumbai' => ['aba - mumbai', 'aba-mumbai'],
@@ -281,19 +252,6 @@ my %SINGLE_WORD_ALIASES =
     Sagaplast => []
   },
 
-  CAPTAIN =>
-  {
-    Gartaganis => ['gartaginas'],
-    Markowicz => ['markovics', 'markowitz'],
-    Milner => ['millner'],
-    "O'Rourke" => ['o_rouke'],
-    Teltscher => ['teltsher'],
-    Wigoder => ['wigodor'],
-    Zaleski => ['zalesky'],
-    Zimmermann => ['zimmmermann', 'zimmerman', 'zimermann',
-      'zimerman', 'zmmermann']
-  },
-
   CLUB =>
   {
     'ABA Mumbai' => ['aba'],
@@ -356,82 +314,6 @@ sub read_cities
 # Add Guernsey, United Kingdom, Jersey, Isle of Man, Mali
 # DenmarS, Deutsch, Indýa, Sweeden, CBAI, Brasilia
 
-my @VALID_CAPTAINS = qw(
-  Altay Ames Anderson Appleton
-  Baki Bello Bellosta Bertens Bessis Bo
-  Carmichael Campos Charlotte Cole Compton Cope Courtney
-  Deva Drijver Dyke
-  Eggeling Elinescu
-  Fantoni Ferrara Fleisher Fredin Freed
-  Garvey Gartaganis Gary Gaviard Gawrys
-  Gillis Ginossar Gitelman 
-  Goldberg Goldman Goldstein Gordon Gosney Gotard
-  Greenberg Gromov Gromova Grue
-  Gumby Gupta
-  Hauge
-  Hackett Hamman Hampson Hampton Hans Hansen Harper Harris Harrison
-  Helness
-  Hillman Hinden Hirst
-  Hoffman Horwitz
-  Hughes Hung
-  Irens Iversen
-  Jacobs Jagniewski Jain Jansma Janssen Jassem
-  Kamil Kamras Kaplan Kasle Katz
-  Kent Klinger Koistinen Kosti
-  Kranyak Kriegel
-  Lall Lambardi Larsen
-  Lee Levi Levin Levine Levy Lewis Lhuissier
-  Liggins Lilley
-  Lund Lynch
-  Mahaffey Markey Markowicz Martin Marquardsen
-  McIntoch McKellar McManus
-  Meckstroth Mendoza Mesbur Meltzer
-  Mills Milne Milner Mittelman Miura
-  Mooney Moran Morath
-  Morbey Morgan Morris Morrison Morse Moss Mossop Mott Mouiel
-  Nader Nagy
-  Neill Newell Nickell Nielsen Nilsland Nilsson
-  Nunes Nunn Nystrom
-  Oliveira
-  O'Rourke
-  Onstein Onstott
-  Palmer Passell
-  Penfold Pereira
-  Piekarek
-  Platt
-  Pollack
-  Quantin
-  Rao Ravenna
-  Richardson Rigal Rimstedt
-  Robinson Robles Rogoff Rombaut Rosen Rosetta Rosenthal Rubin Rubio
-  Sadek Saelensminde Sandqvist Santos
-  Schaltz Schermer Schneider Schwartz
-  Shugart Sime Simson Sinclair Smith Sorkin Soulet
-  Spangenberg Spector
-  Stamatov Stansby Stephenson Stern Sternberg Stevens 
-  Stoichkov Street Strul Sundelin
-  Sylvan
-  Tamburrini Tarsus Taylor Teixeira Teltscher
-  Thomsen Thomson
-  Una Upmark
-  Venkatesh Ventin
-  Viana Vinciguerra Vitas Volcker
-  Weingold Weinstein
-  Welland Werdelin Westheimer Westra
-  Whibley
-  Wigoder Wildavsky Wilkinson Willenken Williams Witte
-  Wold Wolfarth Wolff Wolfson Wolpert Woodruff Woolsey
-  Wrang
-  Zagorin Zaleski Zia Zimmermann
-);
-
-my %CAPTAIN_FIX_HASH;
-for my $captain (@VALID_CAPTAINS)
-{
-  $CAPTAIN_FIX_HASH{lc($captain)} = $captain;
-}
-
-
 my $country = Country->new();
 my $gender = Gender->new();
 my $age = Age->new();
@@ -445,6 +327,7 @@ sub init_hashes
   set_hashes_team_fun('TEAM_FUN');
   set_hashes_team_city('TEAM_CITY');
   set_hashes_team_university('TEAM_UNIVERSITY');
+  set_hashes_team_captain('TEAM_CAPTAIN');
 }
 
 
@@ -554,7 +437,7 @@ sub study_part
   $part =~ s/~/ /g;
 
   # Try the new hash set-up.
-  for my $tag (qw(TEAM_FUN TEAM_CITY TEAM_UNIVERSITY))
+  for my $tag (qw(TEAM_FUN TEAM_CITY TEAM_UNIVERSITY TEAM_CAPTAIN))
   {
     my $fix = $SINGLE_WORDS{$tag}{lc($part)};
     if (defined $fix->{CATEGORY})
@@ -605,11 +488,11 @@ sub study_part
     $token->set_singleton('COUNTRY', $fix->{VALUE});
     $HIT_STATS{COUNTRY}++;
   }
-  elsif (defined $CAPTAIN_FIX_HASH{lc($part)})
-  {
-    $token->set_singleton('CAPTAIN', $fix->{VALUE});
-    $HIT_STATS{CAPTAIN}++;
-  }
+  # elsif (defined $CAPTAIN_FIX_HASH{lc($part)})
+  # {
+    # $token->set_singleton('CAPTAIN', $fix->{VALUE});
+    # $HIT_STATS{CAPTAIN}++;
+  # }
   # elsif (exists $CITIES_LC{lc($part)})
   # {
     # print "ZZZ $part\n";
@@ -658,7 +541,7 @@ sub study_team
   # Match multi-word patterns, using ~ as an artificial separator.
   # $text =~ s/$MULTI_WORD_REGEX/$MULTI_WORD_HASH{lc($1)}/ge;
 
-  for my $tag (qw(TEAM_FUN TEAM_CITY TEAM_UNIVERSITY))
+  for my $tag (qw(TEAM_FUN TEAM_CITY TEAM_UNIVERSITY TEAM_CAPTAIN))
   {
     $text =~ s/$MULTI_REGEX{$tag}/$MULTI_WORDS{$tag}{lc($1)}/ge;
   }
