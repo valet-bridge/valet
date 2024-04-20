@@ -53,7 +53,7 @@ my @NEUTRAL_SUGGESTORS = (
   'tournament', 'event',
   'a', 'b', 'x', 'y',
   'ns', 'ew', 'n-s', 'e-w', 'eo', 'north - south', 'east - west',
-  1, 2
+  'none', 'none 1', 'none 2', 1, 2
 );
 
 my %NEUTRAL_SUGGESTORS_HASH = map {$_ => 1} @NEUTRAL_SUGGESTORS;

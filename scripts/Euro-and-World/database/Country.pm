@@ -60,6 +60,7 @@ my %COUNTRIES = (
   Indonesia => "INA", INA => "INA", # Not standard
   Iran => "IRN", IRN => "IRN",
   Ireland => "IRL", "Republic of Ireland" => "IRL", IRL => "IRL",
+  "Isle of Man" => "IMN", IMN => "IMN",
   Israel => "ISR", ISR => "ISR",
   Italy => "ITA", ITA => "ITA",
   "Ivory Coast" => "CIV", CIV => "CIV",
