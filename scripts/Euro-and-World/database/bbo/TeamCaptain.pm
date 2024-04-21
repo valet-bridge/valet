@@ -53,80 +53,110 @@ my %MULTI_TYPOS =
   'Sinan Göksu' => ['sinan goksu'],
   'van Prooijen'=> ['van proojen'],
   'Van den Bos' => ['van des bos'],
-  'Vang Larsen' => ['van larsen', 'vang-larsen']
+  'Vang Larsen' => ['van larsen', 'vang-larsen', 'vanglarsen']
 );
 
 my @SINGLE_WORDS = qw(
-  Altay Ames Anderson Appleton
-  Baki Bello Bellosta Bertens Bessis Bo
-  Carmichael Campos Charlotte Cole Compton Cope Courtney
-  Deva Drijver Dyke
-  Eggeling Elinescu
-  Fantoni Ferrara Fleisher Fredin Freed
-  Garvey Gartaganis Gary Gaviard Gawrys
-  Gillis Ginossar Gitelman
+  Aagaard Abecassis Adams Adamsen Agarwal Agostini 
+  Aker Allegra Allfrey Allison Altay Altshuler
+  Ames Amoils Anderson Andreoli Angelini Appleton Apteker 
+  Aranha Armstrong Arun
+  Ashton Ashwin Askgaard Assael Auken Austberg
+  Babsch Baker Bakhshi Baki Bakkeren Banerjee Barton Bathurst Baze
+  Becker Beauchamp Bello Bellosta Berkowitz Bernstein 
+  Bertens Bertheau Bessis 
+  Bilde Binderkrantz Bird Blakset Blanchard Bloom Blumental 
+  Bo Bocchi Bohnhorst Bohnsack Boldt Bompis Bourke Bowles
+  Brachman Brady Braithwaite Bramley Branco Braun
+  Brightling Brink Brock Brockwell Brogeland Brown Brum Bruun
+  Buchen Buras Burgay Burke Byrne
+  Cappeller Caldwell Callaghan Caprera Campos Carmichael Carruthers 
+  Carvalho Castelbranco Castner Cayne
+  Chagas Chang Charlotte Charlsen Chatterji Chemla Cheng Chuang
+  Cilleborg Clemmensen Cohen Cohler Cole Collins
+  Compton Cook Cooper Cope Coren Courtney Coutts
+  Cronier Crouch Cuevas
+  Dahl Dahlberg Damiani Davies Dehaye Delfour Deva 
+  Drijver Dumbovich Dunitz Dunn Dyke
+  Eden Edgtton Eggeling Eidi Eisenberg Ekeblad Elinescu Erichsen Ewart
+  Fagerlund Faigenbaum Fantoni Ferrara Fireman Fischer 
+  Fleisher Ford Fordham Forrester Frances Franchi Fraser
+  Fredin Freed Friedland Fritsche Fu Fucik
+  Gabrial Gardiner Garvey Gartaganis Gary Gaviard Gawrys
+  Gillis Ginossar Gitelman Gladysh Glasson
   Goldberg Goldman Goldstein Gordon Gosney Gotard
   Greenberg Gromov Gromova Grue
   Gumby Gupta
-  Hauge
-  Hackett Hamman Hampson Hampton Hans Hansen Harper Harris Harrison
-  Helness
+  Hauge Hackett Hamman Hampson Hampton Hans Hansen Hanlon
+  Harding Harley Harper Harris Harrison Harsanyi Haughie
+  Helgemo Helms Helness Hemant Henner Herbst
   Hillman Hinden Hirst
-  Hoffman Horwitz
-  Hughes Hung
+  Hopfenheit Hoffman Horwitz Howard Howe
+  Hughes Hugony Hung
   Irens Iversen
   Jacobs Jagniewski Jain Jansma Janssen Jassem
-  Kamil Kamras Kaplan Kasle Katz
-  Kent Klinger Koistinen Kosti
-  Kranyak Kriegel
-  Lall Lambardi Larsen
+  Jepsen Jian Jiang  Johansen Johnson Jokisch Jones Jourdain
+  Kalita Kamil Kamras Kaplan Kasle Katz Kay
+  Kent Kirilenko Klinger Koistinen Kolata Kolesnik Konow Korbel Kosti
+  Kranyak Kriegel Kriftner Kristensen Kwiecien
+  Lall Lambardi Larsen Lauria
   Lee Levi Levin Levine Levy Lewis Lhuissier
-  Liggins Lilley
-  Lund Lynch
-  Mahaffey Markey Markowicz Martin Marquardsen
-  McIntoch McKellar McManus
-  Meckstroth Mendoza Mesbur Meltzer
-  Mills Milne Milner Mittelman Miura
-  Mooney Moran Morath
-  Morbey Morgan Morris Morrison Morse Moss Mossop Mott Mouiel
+  Liggins Lilley Lindqvist Lombard Lorentz Lorenzini
+  Lund Lusky Lynch
+  Madsen Mahaffey Maksymetz Mancuso Mari Markey Markowicz Marston
+  Martens Martin Marquardsen Matheson Mavridis Maybach
+  McAllister McGann McIntosh McKellar McKinnon McManus
+  Meckstroth Mello Mendoza Mesbur Meltzer
+  Michaud Milgrim Mills Milne Milner Mittelman Miura
+  Mooney Moran Morath Morbey Morgan Morris Morrison Morse 
+  Mortensen Moss Mossop Mott Mouiel
+  Multon Munksgaard Munson Murray 
   Nader Nagy
   Neill Newell Nickell Nielsen Nilsland Nilsson
+  Nowosadzki
   Nunes Nunn Nystrom
   Oliveira
   O'Rourke
   Onstein Onstott
-  Palmer Passell
+  Palmer Passell Pattinson Paulissen
   Penfold Pereira
-  Piekarek
+  Piedra Piekarek Piganeau Pilon
   Platt
-  Pollack
+  Pollack Polowan
   Quantin
-  Rao Ravenna
+  Rao Raulund Ravenna Reynolds
   Richardson Rigal Rimstedt
-  Robinson Robles Rogoff Rombaut Rosen Rosetta Rosenthal Rubin Rubio
+  Robertson Robinson Robles Rogoff Rohowsky Rombaut Rosen Rosetta 
+  Rosenkrantz Rosenthal Rothfield Rourke
+  Rubin Rubio
   Sadek Saelensminde Sandqvist Santos
-  Schaltz Schermer Schneider Schwartz
-  Shugart Sime Simson Sinclair Smith Sorkin Soulet
-  Spangenberg Spector
-  Stamatov Stansby Stephenson Stern Sternberg Stevens
-  Stoichkov Street Strul Sundelin
+  Schaltz Schermer Schlicker Schneider Schoolmann Schou 
+  Schreckenberger Schwartz Schwerdt
+  Shugart Silverstone Sime Simonsen Simpson Simson Sinclair 
+  Skorchev Smith Sorkin Soulet
+  Spangenberg Spector Sprung
+  Stamatov Stansby Steiner Stephenson Stern Sternberg Stevens Stewart
+  Stoichkov Street Stretz Strul Svendsen Sundelin
   Sylvan
   Tamburrini Tarsus Taylor Teixeira Teltscher
-  Thomsen Thomson
+  Thomsen Thompson Thomson Thoresen Thurston Townsend Turner
   Una Upmark
-  Venkatesh Ventin
-  Viana Vinciguerra Vitas Volcker
+  Venkatesh Ventin Verhees Versace
+  Viana Vinciguerra Vitas Volcker Vriend
   Weingold Weinstein
   Welland Werdelin Westheimer Westra
   Whibley
   Wigoder Wildavsky Wilkinson Willenken Williams Witte
   Wold Wolfarth Wolff Wolfson Wolpert Woodruff Woolsey
   Wrang
-  Zagorin Zaleski Zia Zimmermann
+  Zagorin Zaleski Zhong Zia Zimmermann
 );
 
 my %SINGLE_TYPOS =
 (
+  Allfrey => ['alfrey'],
+  Altshuler => ['altschuler', 'altshuller'],
+  Beauchamp => ['bauchamp', 'beachamp'],
   Gartaganis => ['gartaginas'],
   Markowicz => ['markovics', 'markowitz'],
   Milner => ['millner'],

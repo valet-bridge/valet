@@ -211,7 +211,14 @@ sub process_og_front
   my $token = $chain->check_out(0);
   my $letter = uc($token->value());
 
-  $token->set_singleton('GENDER', 'Open');
+  if ($letter eq 'O')
+  {
+    $token->set_singleton('GENDER', 'Open');
+  }
+  else
+  {
+    $token->set_singleton('GENDER', 'Women');
+  }
 
   my $token2 = Token->new();
   $token2->copy_origin_from($token);

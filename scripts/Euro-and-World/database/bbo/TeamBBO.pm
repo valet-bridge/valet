@@ -33,6 +33,10 @@ use TeamClub;
 use TeamCaptain;
 use TeamNationality;
 use TeamUniversity;
+use TeamGender;
+use TeamAge;
+use TeamScoring;
+use TeamForm;
 
 my @TAG_ORDER = qw(
   TEAM_FUN 
@@ -45,6 +49,10 @@ my @TAG_ORDER = qw(
   TEAM_CAPTAIN
   TEAM_NATIONALITY
   TEAM_UNIVERSITY 
+  TEAM_GENDER
+  TEAM_AGE
+  TEAM_SCORING
+  TEAM_FORM
 );
 
 my (%MULTI_WORDS, %MULTI_REGEX, %SINGLE_WORDS);
@@ -93,6 +101,10 @@ sub init_hashes
   set_hashes_team_captain('TEAM_CAPTAIN');
   set_hashes_team_country('TEAM_COUNTRY');
   set_hashes_team_nationality('TEAM_NATIONALITY');
+  set_hashes_team_gender('TEAM_GENDER');
+  set_hashes_team_age('TEAM_AGE');
+  set_hashes_team_scoring('TEAM_SCORING');
+  set_hashes_team_form('TEAM_FORM');
 }
 
 
@@ -121,11 +133,17 @@ sub set_overall_hashes
     }
   }
 
-  my $multi_pattern = join('|', map { quotemeta }
-    keys %{$MULTI_WORDS{$key}});
+  if (keys %{$MULTI_WORDS{$key}})
+  {
+    my $multi_pattern = join('|', map { quotemeta }
+      keys %{$MULTI_WORDS{$key}});
 
-  $MULTI_REGEX{$key} = qr/\b($multi_pattern)\b/i;
-
+    $MULTI_REGEX{$key} = qr/\b($multi_pattern)\b/i;
+  }
+  else
+  {
+    $MULTI_REGEX{$key} = '';
+  }
 
   # Similarly for the single words.
   for my $single (@$single_words)
@@ -186,6 +204,7 @@ sub split_on_trailing_digits
   }
 }
 
+
 my $tmp_global;
 
 sub study_part
@@ -201,6 +220,20 @@ sub study_part
   # Turn the artificial separator back into a space.
   $part =~ s/~/ /g;
 
+  if (set_token($part, $token))
+  {
+    $token->set_singleton('SEPARATOR', $part);
+    $HIT_STATS{SEPARATOR}++;
+    return;
+  }
+  elsif ($country->valid_lc(lc($part)))
+  {
+    $token->set_singleton('TEAM_COUNTRY', $part);
+    $HIT_STATS{TEAM_COUNTRY}++;
+    return;
+  }
+
+
   # Try the new hash set-up.
   for my $tag (@TAG_ORDER)
   {
@@ -209,6 +242,36 @@ sub study_part
     {
       $token->set_singleton($fix->{CATEGORY}, $fix->{VALUE});
       $HIT_STATS{$fix->{CATEGORY}}++;
+
+      if ($fix->{CATEGORY} eq 'TEAM_GENDER' &&
+          $fix->{VALUE} eq 'Open')
+      {
+        # Special case: Add two more tokens.
+        my $token2 = Token->new();
+        $token2->copy_origin_from($token);
+        $token2->set_separator('VIRTUAL');
+        $chain->append($token2);
+
+        my $token3 = Token->new();
+        $token3->copy_origin_from($token);
+        $token3->set_singleton('TEAM_AGE', 'Open');
+        $HIT_STATS{'TEAM_AGE'}++;
+      }
+      elsif ($fix->{CATEGORY} eq 'TEAM_AGE' &&
+          $fix->{VALUE} eq 'Girls')
+      {
+        # Special case: Add two more tokens.
+        my $token2 = Token->new();
+        $token2->copy_origin_from($token);
+        $token2->set_separator('VIRTUAL');
+        $chain->append($token2);
+
+        my $token3 = Token->new();
+        $token3->copy_origin_from($token);
+        $token3->set_singleton('TEAM_GENDER', 'Women');
+        $HIT_STATS{'TEAM_GENDER'}++;
+      }
+
       return;
     }
   }
@@ -218,14 +281,12 @@ sub study_part
   if (defined $fix_event->{CATEGORY})
   {
     my $category = $fix_event->{CATEGORY};
-    if ($category eq 'AGE' ||
-        $category eq 'FORM' || 
-        $category eq 'GENDER' || $category eq 'MONTH' || 
+    if (
+        $category eq 'MONTH' || 
         $category eq 'NUMERAL' || $category eq 'ROMAN' ||
-        $category eq 'SCORING' ||
         $category eq 'TOURNAMENT')
     {
-if ($category eq 'GENDER')
+if ($category eq 'FORM')
 {
   print "CCC $part\n";
 }
@@ -237,17 +298,7 @@ if ($category eq 'GENDER')
     # TODO Can print "ZZZ UNKNOWN $part\n";
   }
 
-  if (set_token($part, $token))
-  {
-    $token->set_singleton('SEPARATOR', $part);
-    $HIT_STATS{SEPARATOR}++;
-  }
-  elsif ($country->valid_lc(lc($part)))
-  {
-    $token->set_singleton('COUNTRY', $part);
-    $HIT_STATS{COUNTRY}++;
-  }
-  elsif ($part =~ /^19\d\d$/ || $part =~ /^20\d\d$/)
+  if ($part =~ /^19\d\d$/ || $part =~ /^20\d\d$/)
   {
     $token->set_singleton('YEAR', $part);
     $HIT_STATS{YEAR}++;
@@ -256,11 +307,6 @@ if ($category eq 'GENDER')
   {
     $token->set_numeral_counter($part);
     $HIT_STATS{INTEGER}++;
-  }
-
-  elsif ($part =~ /^open$/i)
-  {
-    $HIT_STATS{OPEN}++;
   }
   else
   {
@@ -283,7 +329,8 @@ sub study_team
 
   for my $tag (@TAG_ORDER)
   {
-    $text =~ s/$MULTI_REGEX{$tag}/$MULTI_WORDS{$tag}{lc($1)}/ge;
+    $text =~ s/$MULTI_REGEX{$tag}/$MULTI_WORDS{$tag}{lc($1)}/ge
+      if $MULTI_REGEX{$tag} ne '';
   }
 
   # Split on separators.
