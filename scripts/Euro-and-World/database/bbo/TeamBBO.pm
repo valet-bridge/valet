@@ -232,6 +232,20 @@ sub study_part
     $HIT_STATS{TEAM_COUNTRY}++;
     return;
   }
+  elsif ($part =~ /^\d+$/)
+  {
+    if ($part >= 1900 && $part < 2100)
+    {
+      $token->set_singleton('TEAM_YEAR', $part);
+      $HIT_STATS{TEAM_YEAR}++;
+    }
+    else
+    {
+      $token->set_numeral_counter($part);
+      $HIT_STATS{TEAM_INTEGER}++;
+    }
+    return;
+  }
 
 
   # Try the new hash set-up.
@@ -283,10 +297,11 @@ sub study_part
     my $category = $fix_event->{CATEGORY};
     if (
         $category eq 'MONTH' || 
-        $category eq 'NUMERAL' || $category eq 'ROMAN' ||
+        $category eq 'NUMERAL' || 
+        $category eq 'ROMAN' ||
         $category eq 'TOURNAMENT')
     {
-if ($category eq 'FORM')
+if ($category eq 'MONTH')
 {
   print "CCC $part\n";
 }
@@ -298,23 +313,10 @@ if ($category eq 'FORM')
     # TODO Can print "ZZZ UNKNOWN $part\n";
   }
 
-  if ($part =~ /^19\d\d$/ || $part =~ /^20\d\d$/)
-  {
-    $token->set_singleton('YEAR', $part);
-    $HIT_STATS{YEAR}++;
-  }
-  elsif ($part =~ /^\d+$/ && $part >= 0 && $part < 100)
-  {
-    $token->set_numeral_counter($part);
-    $HIT_STATS{INTEGER}++;
-  }
-  else
-  {
-    $token->set_unknown($part);
-    $HIT_STATS{UNMATCHED}++;
-    print $part, "\n";
-    $tmp_global = 1;
-  }
+  $token->set_unknown($part);
+  $HIT_STATS{UNMATCHED}++;
+  print $part, "\n";
+  $tmp_global = 1;
 }
 
 
