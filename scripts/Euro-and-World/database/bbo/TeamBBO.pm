@@ -301,7 +301,7 @@ sub study_part
         $category eq 'ROMAN' ||
         $category eq 'TOURNAMENT')
     {
-if ($category eq 'MONTH')
+if ($category eq 'TOURNAMENT')
 {
   print "CCC $part\n";
 }

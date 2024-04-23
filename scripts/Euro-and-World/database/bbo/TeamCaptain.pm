@@ -20,6 +20,7 @@ my @MULTI_WORDS =
   'David Birman',
   'Della Monta',
   'Ginossar',
+  'Jan Jansma',
   'Jorge Cruzeiro',
   'Palma Carlos',
   'Paul Van Goor',
@@ -48,6 +49,7 @@ my %MULTI_TYPOS =
 (
   'Bareket' => ['bareket ilan'],
   'David Birman' => ['birman david', 'birman d.'],
+  'Edgtton' => ['a edgtton', 'a.edgtton'],
   'Ginossar' => ['eldad ginossar'],
   'Pontiac 7' => ['pontiac7'],
   'Sinan Göksu' => ['sinan goksu'],

@@ -16,11 +16,13 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'Vest Agder',
   'Western Australia'
 );
 
 my %MULTI_TYPOS =
 (
+  'Vest Agder' => ['vest-agder'],
   'Western Australia' => ['wa']
 );
 
