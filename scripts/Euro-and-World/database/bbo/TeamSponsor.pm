@@ -16,16 +16,25 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'Baltic Express',
+  'Bangur Cement',
   'Beijing Hull Technology',
   'Beijing Liuhe',
   'Beijing Dazhong',
   'Darles Santerm',
   'Grant Thornton',
+  'Indian Railways',
   'J. Pereira de Sousa',
+  'Lögfræðiskrifstofa Islands',
+  'Lögfræðistofa Bjarna',
   'Novi Kod',
   'Palma Karya Mandiri',
   'Paulo G. Pereira',
+  'Poddar Developers',
+  'Poddar Housing',
   'Phoenix TV',
+  'Shree Cement',
+  'Trambak Rubber',
   'Unia Leszno',
   'Unia Winkhaus',
   'Zhongshan Jiegao'
@@ -33,11 +42,20 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'Baltic Express' => ['baltic expres'],
+  'Bangur Cement' => ['bangur cements', 'bangur cment'],
   'Beijing Hull Technology' => ['beijing hull tech'],
   'Dongfeng' => ['dongfeng automobile'],
   'Grant Thornton' => ['grant thonrton', 'grantt thornton', 'bg thornton'],
+  'Indian Railways' => ['indianrailways'],
+  'Lögfræðiskrifstofa Islands' => ['lögfr.stofa íslands', 'lögfr.íslands', 
+    'lögfrst. íslands', 'lögfrst.íslands', 'lögfræðisk. ísl.',
+    'lögfræðiskrifst. ís', 'lögfræðist. ísl.',
+    'lögfræðist. íslands', 'lögfræðist.íslands',
+    'lögfræðistofa ísl', 'lögfræðistofa ísl.'],
   'Paulo G. Pereira' => ['p g pereira', 'p. g. pereira', 
     'pg pereira', 'p.g.pereira'],
+  'Poddar Developers' => ['poddar development'],
   'Unia Winkhaus' => ['winkhaus unia', 'winkhaus-unia'],
   'Zhongshan Jiegao' => ['zhong shan jie gao']
 );

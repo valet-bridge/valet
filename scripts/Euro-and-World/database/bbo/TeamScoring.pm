@@ -20,6 +20,7 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  IMP => ['butler scoring']
 );
 
 my @SINGLE_WORDS = qw(

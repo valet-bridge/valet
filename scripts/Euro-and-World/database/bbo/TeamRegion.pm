@@ -16,18 +16,24 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'Central Java',
+  'East Java',
   'Vest Agder',
+  'West Borneo',
+  'West Java',
+  'West Sumatra',
   'Western Australia'
 );
 
 my %MULTI_TYPOS =
 (
   'Vest Agder' => ['vest-agder'],
+  'West Sumatra' => ['west sumatera'],
   'Western Australia' => ['wa']
 );
 
 my @SINGLE_WORDS = qw(
-  Bali
+  Bali Bornholm
   Florida
   Kepri
   Kedungwaru

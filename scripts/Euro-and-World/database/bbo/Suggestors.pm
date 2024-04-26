@@ -17,7 +17,7 @@ use lib '.';
 my @TEAMS_SUGGESTORS = (
   'team 1', 'team 2', 'team1', 'team2', 'team one', 'team two',
   'team a', 'team b',
-  'home', 'away', 'visiting',
+  'home', 'away', 'visiting', 'away team',
   'table 1', 'table 2',
   'table8hom', 'table8vis',
   'table9hom', 'table9vis',
@@ -32,6 +32,7 @@ my @PAIRS_SUGGESTORS = (
   'pair a', 'pair b', 'no teams', 'not teams',
   'pair ns', 'pair ew', 'pairs a', 'pairs b',
   'pairs 1', 'pairs 2', 'pair tournament', 'pairs tournament',
+  'pairs event',
   'a_pair1', 'a_pair2', 'b_pair1', 'b_pair2',
   'c_pair1', 'c_pair2', 'd_pair1', 'd_pair2',
   'f_pair1', 'f_pair2', 'g_pair1', 'g_pair2',

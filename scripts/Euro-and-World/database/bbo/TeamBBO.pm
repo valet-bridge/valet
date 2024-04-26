@@ -10,7 +10,8 @@ package TeamBBO;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(read_cities study_teams unteam print_team_stats
-  set_overall_hashes init_hashes);
+  set_overall_hashes init_hashes   is_captain);
+# TODO is_captain to remove again
 
 use lib '.';
 
@@ -414,6 +415,22 @@ sub unteam
   $res =~ s/\Q$team1\E// if defined $team1 && length($team1) > 1;
   $res =~ s/\Q$team2\E// if defined $team2 && length($team2) > 1;
   return $res;
+}
+
+
+sub is_captain
+{
+  my ($text) = @_;
+
+  my $fix = $SINGLE_WORDS{TEAM_CAPTAIN}{lc($text)};
+  if (defined $fix->{CATEGORY})
+  {
+    return 1;
+  }
+  else
+  {
+    return 0;
+  }
 }
 
 1;

@@ -28,16 +28,17 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  'Ningbo' => ['ning bo'],
+  Istanbul => ['ýstanbul'],
+  Ningbo => ['ning bo'],
   'Silesia Gliwice' => ['silezia gliwice']
 );
 
 my @SINGLE_WORDS = qw(
-  Aalborg Adana Adelaide Ahmedabad Akhisar Alexandria Alytus
+  Aabenraa Aalborg Adana Adelaide Ahmedabad Akhisar Alexandria Alytus
   Amarillo Ambon Amsterdam Ankara Antalya Antony Antwerpen
   Asenovgrad Assis Athens Auckland Augsburg Ayacucho
-  Balikpapan Bamberg Bandung Bangkok Banjarmasin Barcelona
-  Bath Batman Batu Beijing Bekasi Belgrade Bengkulu Bergen Berlin 
+  Balikpapan Bamberg Bandung Bangalore Bangkok Banjarmasin Barcelona
+  Bath Batman Batu Beijing Bekasi Belgrade Bengkulu Beograd Bergen Berlin 
   Bhubaneshwar Bielefeld Bitung Blitar Bogor Bologna Bonn Bordeaux Borivli
   Bremen Brisbane Bucharest Budapest Bursa Burdur Bytom
   Caen Cairns Canberra Caracas Catania Changzhou Chelsea
@@ -46,10 +47,10 @@ my @SINGLE_WORDS = qw(
   Dalian Dalls Daqing Darmstadt Debrecen Delft Delhi Denizli
   Dimitrovgrad Dobrich Dombivli Dongguan Düsseldorf
   Eastbourne Edirne Esbjerg Essen
-  Fethiye
+  Fethiye Firenze
   Gdynia Gent Glidice Gorontalo Gölcük Gresik Guangzhou Guayaquil
-  Hamburg Hangzhou Hannover Helsinki Huangshi Hyderabad
-  Isparta Izmir
+  Hamburg Hangzhou Hannover Helsinki Hornbæk Huangshi Hyderabad
+  Isparta Istanbul Izmir
   Jaipur Jakarta Jember Jiamusi Jiangyou Jilin Jinchang Jincheng Jinjiang
   Kadirli Kalisz Kalyani Kanpur Karachi Karlsruhe Kastamonu Katowice
   Kediri Kiel Kielce Kiev Kolkata Köln Krakow Kristiansand
@@ -65,6 +66,7 @@ my @SINGLE_WORDS = qw(
   Pekanbaru Pelotas Pernik Perth Pesaro Pescara
   Radkov Randers Rayong Reims Riga Rijeka Rimini Rome
   Pisa Pleven Plovdiv Pontianak Potsdam Prague Pula Pune Puri
+  Rødovre
   Saarbrücken Salerno Samarinda Samsun Santiago Sanya Sarpsborg
   Secunderabad Semarang Serang Shanghai Shaoguan Shenyang Shenzhen
   Sibiu Sidoarjo Skien Skopje Sleman Sliven Sofia Split
@@ -81,11 +83,13 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  'Izmir' => ['ýzmir'],
-  'Kolkata' => ['calcutta'],
-  'Krakow' => ['kraków'],
-  'Munich' => ['münchen'],
-  'Tarnów' => ['tarnow']
+  Antwerpen => ['antwerp'],
+  Bangalore => ["b'lore", 'banglore'],
+  Izmir => ['ýzmir'],
+  Kolkata => ['calcutta'],
+  Krakow => ['kraków'],
+  Munich => ['münchen'],
+  Tarnów => ['tarnow']
 );
 
 

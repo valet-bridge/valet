@@ -16,14 +16,32 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  '3 Frakkar',
+  '3 Idiots + 1',
+  '3..2..1..Meins!',
+  '4 Hjerter',
+  '4 Jacks',
+  '4 Trèfles',
+  '40-Årskrisa',
+  '6 Notrump',
+  '6 Spades',
   'ABA Nuno Paz',
   'Aces & Deuces',
+  'Air Traffic Management',
   'Alex is Beautiful',
   'Almost Famous',
+  'Also Changes',
+  'Alzheimer Aces',
   'Angel of Harlem',
+  'Angels & Demons',
+  'Angry Birds',
+  'Annas Fans',
   'April 30',
+  'Arctic Farmers',
   'Arctic Powerchicks',
+  "Asha's 4",
   'Aso Pika',
+  'Atomic Bridge',
   'Awesome Avengers',
   'Babes Amazones',
   'Bad Beat',
@@ -156,6 +174,7 @@ my @MULTI_WORDS =
   'Not the Empire',
   'Novi Tim',
   'Oddskongen med rese',
+  'Olavs udvalgte',
   'One Hundred Eighty',
   'One More!',
   'Opp og ned',
@@ -273,11 +292,18 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  '3 Idiots + 1' => ['3 idiots +1', '3 idiots + i'],
+  '4 Trèfles' => ['4 trefles 1', '4 trefles1', '4 trefles ii',
+    '4trèfles'],
+  '6 Notrump' => ['6 no trump'],
   'ABA Nuno Paz' => ['ABA - Nuno Paz', 'ABA-Nuno Paz'],
+  'Air Traffic Management' => ['air traffic managem'],
   'Alex is Beautiful' => ['alex is beatiful'],
+  'Atomic Bridge' => ['atomic'],
   'Babes Amazones' => ['babes-amazones'],
   'Beverly Hillbillies' => ['beverly hillbillie'],
   'Big Guns' => ['big gun'],
+  'Californian Aces' => ['california aces'],
   "Chairman's Choice" => ["chairman's team"],
   'Croatian Pirates' => ['cro pirates'],
   'Desperate Bridge Wives' => ['desperate bw', 'desparate bridgewi'],
@@ -317,21 +343,24 @@ my %MULTI_TYPOS =
   'Victorious Secret' => ['victorius secret']
 );
 
-my @SINGLE_WORDS =
-(
-  'Aurora',
-  'Dallas',
-  'Fenghuang',
-  'Formosa',
-  'Hollywood',
-  'Jupiter',
-  'Lira',
-  'Saga',
-  'Sakurai'
+my @SINGLE_WORDS = qw(
+   Adventure Aurora Alternativlos Anglophones
+   Bananasplit Bridgeministeriet
+   Cogito
+   Dallas 
+   Fenghuang Formidables Formosa Francophones
+   Hollywood Honeymoon
+   Jupiter
+   Lira
+   Saga
+   Sakurai 
 );
 
 my %SINGLE_TYPOS =
 (
+  Formidables => ['formidable', 'formidabble', 'formidabels',
+    'formiddable', 'formiddables', 'formadibles', 'formadeble',
+    'formadables']
 );
 
 

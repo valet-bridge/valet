@@ -16,30 +16,43 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'Aachener BC',
   'ABA Mumbai',
   'Akademisk Bridgeklub',
   'Altay GSKD',
   'Altay Genclik',
   'Annecy BC',
-  'BC Bamberger Reiter',
+  'Ballerup Bridgeklub',
+  'Blakset Klubberne',
+  'BC 52 Berlin',
   "BC 't Onstein",
   'BC Allegra',
+  'BC Bamberger Reiter',
+  'BC Barcelona',
+  'BC Bielefeld',
   'BC Bonn',
+  'BC Brasov',
   'BC Bremen',
   'BC Burghausen',
+  'BC Clichy',
   'BC Darmstadt Alert',
+  'BC Garches',
   'BC Grant Thornton',
   'BC Ketsch',
   'BC Kiel',
+  'BC Lille',
   'BC Mannheim',
+  'BC Modalfa',
   'BC München',
   'BC Nürnberg',
   'BC Oldenburg',
   'BC Saarbrücken 1984',
   'BC Schwäbisch Hall',
   'BC Stuttgart',
+  'BC Universität Mannheim',
   'BK 1936',
   'BK 83 Slagelse',
+  'BK Lavec Smile',
   'BK Nord Aalborg',
   'Diyarbakýr Sur BSK',
   'Drammen Arbeiderparti',
@@ -61,13 +74,19 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'Aachener BC' => ['aachener bc 1953'],
   'ABA Mumbai' => ['aba - mumbai', 'aba-mumbai'],
   'Akademisk Bridgeklub' => ['akademisk bk'],
   'Altay GSKD' => ['altay gsk', 'altay sdgskd', 'altay sk'],
+  'Ballerup Bridgeklub' => ['ballerup bc'],
+  'Blakset Klubberne' => ['blakset-klubberne'],
+  "BC 't Onstein" => ["bc 't onsten"],
   'BC Bamberger Reiter' => ['bc bamberg', 'bamberger reiter',
     'bv bamberger reiter', 'bamberg rider', 'bamberg cavaliers',
-    'bamberger germany', 'bamberger welle'],
+    'bamberger germany', 'bamberger welle', 'bamberg riders'],
   'BC Grant Thornton' => ['bc grant-thornton'],
+  'BC Universität Mannheim' => ['bc uni mannheim'],
+  'BK Lavec Smile' => ['bk lavec - smile', 'bk lavek smile'],
   'Diyarbakýr Sur BSK' => ['diyarbakir bs', 'diyarbakir bsbs', 
     'dýyarbakir sur. b.b', 'diyarbakir sur sk', 'sur belediye sk',
     'sur belediye', 'd.bakýr sur', 'd.bakir sur'],
@@ -78,6 +97,7 @@ my %MULTI_TYPOS =
     'köln-lindenthaler', 'köln-lindenthaler b'],
   'One Eyed Jacks' => ['one-eyed jacks'],
   'Tromsø BK' => ['tromso', 'tromsoe bk'],
+  'Åkirkeby Bridgeklub' => ['aakirkeby bk'],
   'Århus Bridgeklub'=> ['århus bk', 'Aarhus BK',
     'Aarhus Bridgeklub']
 );
@@ -90,7 +110,9 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  'ABA Mumbai' => ['aba']
+  'ABA Mumbai' => ['aba'],
+  'Akademisk Bridgeklub' => ['akademisk'],
+  'BC Bamberger Reiter' => ['bamberger']
 );
 
 

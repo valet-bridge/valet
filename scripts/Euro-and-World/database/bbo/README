@@ -1,20 +1,4 @@
-TeamFun.pm
-Things to fill out:
-%MULTI_WORD_ALIASES{TEAM_FUN}
-- There's a list with spaces and capitalization
-- Derive the lower-case versions and the tilded ones
-- MULTI_WORD_ALIASES{'The~Good'} => ['the good']
-- There's a list of typos for multi-word.
-  They get sorted from long to short
-- Similarly for single-word: SINGLE_WORD_ALIASES
-- Similarly for typos
-- Here we also add the final-form multi-words without tildes
-
-
-
-Each hit of TEAMS, PAIRS, INDIV gives +1 to that one.
-And the content disappears.
-
+More than one Edgtton
 
 - Switch TeamBBO to use ../Country?
 - Parse teams more fully, 

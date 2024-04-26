@@ -49,7 +49,8 @@ my %MULTI_TYPOS =
   'New Zealand' => ['new zeland', 'new zealans', 'new zeland'],
   'North Macedonia' => ['macedonia'],
   'Northern Ireland' => ['northertn irelsnd'],
-  'Republic of Ireland' => ['rep. of ireland', 'rep of ireland', 'roi'],
+  'Republic of Ireland' => ['rep. of ireland', 'rep of ireland', 'roi',
+    'rep ire', 'rep ireland', 'republic of irelend', 'reublic of ireland'],
   'Serbia and Montenegro' => ['serbia/mont', 'serbia&mon'],
   'Trinidad and Tobago' => ['trinidad & tobago', 'trinidad&tobago'],
 );
@@ -123,7 +124,7 @@ my %SINGLE_TYPOS =
   Monaco => ['nonaco'],
   'New Zealand' => ['nwzealand'],
   'North Macedonia' => ['macedonia'],
-  'Northern Ireland' => ['nireland'],
+  'Northern Ireland' => ['nireland', 'n irelena', 'n. ireland'],
   Norway => ['norge', 'norges', 'norwegen', 'nor'],
   Palestine => ['palastine'],
   Philippines => ['philipppines'],
