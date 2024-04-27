@@ -23,14 +23,17 @@ my @MULTI_WORDS =
   'Kota Bogor',
   'Kota Mataram',
   'Novi Sad',
-  'Silesia Gliwice'
+  'Silesia Gliwice',
+  'Villa Fabbriche'
 );
 
 my %MULTI_TYPOS =
 (
   Istanbul => ['ýstanbul'],
   Ningbo => ['ning bo'],
-  'Silesia Gliwice' => ['silezia gliwice']
+  'Silesia Gliwice' => ['silezia gliwice'],
+  'Villa Fabbriche' => ['v.fabbr.', 'villa fabb.', 'v. fabbriche',
+    'v.fabbriche']
 );
 
 my @SINGLE_WORDS = qw(

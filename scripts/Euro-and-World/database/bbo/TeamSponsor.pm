@@ -22,6 +22,7 @@ my @MULTI_WORDS =
   'Beijing Liuhe',
   'Beijing Dazhong',
   'Darles Santerm',
+  'Djarum Black',
   'Grant Thornton',
   'Indian Railways',
   'J. Pereira de Sousa',
