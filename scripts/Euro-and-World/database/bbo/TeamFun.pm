@@ -199,6 +199,7 @@ my @MULTI_WORDS =
   'Salten rundt',
   'Seven Eleven',
   'Siderkongen og kidz',
+  'Silver Eagle',
   'Sivves straffdubbl',
   'Six Diamonds',
   'Six Samurai',

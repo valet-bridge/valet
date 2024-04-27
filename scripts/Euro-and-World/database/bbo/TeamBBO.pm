@@ -32,6 +32,7 @@ use TeamRegion;
 use TeamCity;
 use TeamClub;
 use TeamCaptain;
+use TeamBot;
 use TeamNationality;
 use TeamUniversity;
 use TeamGender;
@@ -48,6 +49,7 @@ my @TAG_ORDER = qw(
   TEAM_CITY 
   TEAM_CLUB 
   TEAM_CAPTAIN
+  TEAM_BOT
   TEAM_NATIONALITY
   TEAM_UNIVERSITY 
   TEAM_GENDER
@@ -100,6 +102,7 @@ sub init_hashes
   set_hashes_team_club('TEAM_CLUB');
   set_hashes_team_organization('TEAM_ORGANIZATION');
   set_hashes_team_captain('TEAM_CAPTAIN');
+  set_hashes_team_bot('TEAM_BOT');
   set_hashes_team_country('TEAM_COUNTRY');
   set_hashes_team_nationality('TEAM_NATIONALITY');
   set_hashes_team_gender('TEAM_GENDER');
@@ -422,15 +425,16 @@ sub is_captain
 {
   my ($text) = @_;
 
-  my $fix = $SINGLE_WORDS{TEAM_CAPTAIN}{lc($text)};
-  if (defined $fix->{CATEGORY})
+  my $lt = lc($text);
+  my $fix = $SINGLE_WORDS{TEAM_CAPTAIN}{$lt};
+  return 1 if defined $fix->{CATEGORY};
+
+  if ($lt =~ /$MULTI_REGEX{TEAM_CAPTAIN}/)
   {
     return 1;
   }
-  else
-  {
-    return 0;
-  }
+
+  return 0;
 }
 
 1;
