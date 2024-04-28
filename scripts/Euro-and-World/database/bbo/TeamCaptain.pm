@@ -20,6 +20,7 @@ my @MULTI_WORDS =
   'Adam Edgtton',
   'Ajay Vaish',
   'Alvares Ribeiro',
+  'Anders Johansson',
   'Anita Sinclair',
   'Antonio Maria Campos',
   'Arun Bapat',
@@ -28,6 +29,8 @@ my @MULTI_WORDS =
   'Bareket',
   'Benedicte Cronier',
   'C.V. Rao',
+  'Carlo Bossi',
+  'Carlos Gonçalves',
   'David Birman',
   'De Blasi',
   'de Botton',
@@ -43,6 +46,8 @@ my @MULTI_WORDS =
   "Del'Monte",
   "D'Orsi",
   'El Baz',
+  'Emil Thomsen',
+  'Erla Sigurjónsdóttir',
   'Flemming Dahl',
   'Ginossar',
   'H.C. Nielsen',
@@ -124,13 +129,16 @@ my %MULTI_TYPOS =
 (
   'Acacio Figueiredo' => ['acacio f.'],
   'Adam Edgtton' => ['a edgtton', 'a.edgtton'],
+  'Alok Daga' => ["alok daga's iv"],
   'Alvensleben' => ['v.alvensleben', 'v. alvensleben'],
   'Antonio Maria Campos' => ['antonio m campos', 'antonio maria campo'],
   'Arun Jain' => ['arunjain'],
-  'A.K. Bose' => ["a.k.bose's iv", "a.k.bose'iv", "a k bose's 4"],
+  'A.K. Bose' => ["a.k.bose's iv", "a.k.bose'iv", "a k bose's 4",
+    "a k bose's IV"],
   'Bareket' => ['bareket ilan'],
   'Benedicte Cronier' => ['mme cronier'],
   'C.V. Rao' => ['c v rao', 'c. v. rao', 'c.v.rao', 'c.v.rao.'],
+  'Carlos Gonçalves' => ['carlos goncalves'],
   'David Birman' => ['birman david', 'birman d.'],
   'de Botton' => ['janet de botton', 'j de botton',
     'de botten', 'de bottom', 'debotton'],
@@ -138,6 +146,7 @@ my %MULTI_TYPOS =
   'de Knijff' => ['deknijff', 'di knijff'],
   "D'Orsi" => ['d orsi'],
   'El Baz' => ['baz'],
+  'Erla Sigurjónsdóttir' => ['erla sigurjónsdótti'],
   'Flemming Dahl' => ['dahl'],
   'Ginossar' => ['eldad ginossar'],
   'H.C. Nielsen' => ['hc nielsen'],
@@ -175,7 +184,8 @@ my %MULTI_TYPOS =
   'van Prooijen'=> ['van proojen'],
   'Van den Bos' => ['van des bos'],
   'Vang Larsen' => ['van larsen', 'vang-larsen', 'vanglarsen'],
-  'Ward Platt' => ['ward-platt', 'world platt', 'ward pratt'],
+  'Ward Platt' => ['ward-platt', 'world platt', 'ward pratt',
+    'ward-pratt'],
   'Wei Sender' => ['wei-sender']
 );
 
@@ -221,7 +231,8 @@ my @SINGLE_WORDS = qw(
   Cassini Carrasco Carruthers Carvalho Casabona Casadei Castelbranco 
   Castner Cattani Cayne Cengiz Cernat Cernato Cesati
   Chadwick Chagas Chai Chambers Chan Chang Charletoux Charlotte Charlsen 
-  Chassagne Chatterji Chauvelot Chediak Chemla Chen Cheng Chizzoli Chuang
+  Chassagne Chatterji Chauvelot Chediak Cheek Chemla Chen Cheng Chizzoli 
+  Chuang
   Cichocki Cilleborg Cimon Ciopettini Clair Clark Clement Clemmensen 
   Coenraets Coglitore Cohen Cohler Coldea Cole Collett Collins Combes 
   Combescure Compton Connie Conti Cook Cooke Cooper Cope 
@@ -263,7 +274,7 @@ my @SINGLE_WORDS = qw(
   Giangkos Giannessi Gidman Gierulski Gigliotti Gill Ginnan Ginossar 
   Gioia Gitelman Giura Gladiator Gladysh Glasson Glopson
   Goded Goldberg Goldenfield Goldman Goldstein Golebiowski 
-  Gomerov Gomes Gonçalves Goodman
+  Gomerov Gomes Goodman
   Gordon Goren Gosney Gotard Gottlieb Goyal Göthe
   Grabel Grabowska Gradignan Gradovsky Grainger Gramberg Green 
   Greenberg Greenwood Grenside Grenthe Griffey Griffin Griffoni Griffiths 
@@ -288,8 +299,8 @@ my @SINGLE_WORDS = qw(
   Jacob Jacobs Jagger Jagniewski Jagroop Jain Jalowka Jamieson
   Janicki Jankova Janiszewski Janowski 
   Jansma Janssen Jarlot Jarov Jassem Jawell Jayganesh 
-  Jedrychowski Jensen Jepsen Jessheim Jian Jiang 
-  Joel Johansen Johansson Johnson Jonsson Jokisch Jones Jourdain
+  Jedrychowski Jeng Jensen Jepsen Jessheim Jian Jiang 
+  Joel Johansen Johansson Johnson Jolly Jonsson Jokisch Jones Jourdain
 
   Kachchu Kahyaoglu Kaiser Kalita Kalish Kallsberg Kallunki Kalma Kalmin 
   Kamal Kamil Kaminaris Kaminski Kamras Kannavos Kandemir Kane Kanetkar 
@@ -445,7 +456,7 @@ my %SINGLE_TYPOS =
   Gartaganis => ['gartaginas'],
   Gladysh => ['gladysch'],
   Golebiowski => ['golembiowski'],
-  Gonçalves => ['goncalves', 'gonsalves', 'gonçalv', 'gonçalve'],
+  'Carlos Gonçalves' => ['goncalves', 'gonsalves', 'gonçalv', 'gonçalve'],
   Greenwood => ['greenwod'],
   Gromöller => ['gromoeller', 'gromuller'],
   Günther => ['guenther'],

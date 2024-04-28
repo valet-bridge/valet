@@ -18,7 +18,9 @@ my @MULTI_WORDS =
 (
   'Australian Central Territory',
   'Central Celebes',
+  'Central Gauteng',
   'Central Java',
+  'East Borneo',
   'East Java',
   'New Caledonia',
   'New South Wales',

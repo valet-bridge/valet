@@ -17,6 +17,9 @@ use TeamBBO;
 my @MULTI_WORDS =
 (
   'Agsar Paints',
+  'Alfa Romeo',
+  'APRA Clothing',
+  'Apreo Logistic Poland',
   'Baltic Express',
   'Bangur Cement',
   'Beijing Capital',
@@ -27,6 +30,11 @@ my @MULTI_WORDS =
   'Beijing Liuhe',
   'Beijing Trinergy',
   'Beijing Dazhong',
+  'bridge24.pl',
+  'China Evertrust',
+  'China Finance',
+  'China Global Times',
+  'China Trinergy',
   'Darles Santerm',
   'Dhampur Sugar Mills',
   'Djarum Black',
@@ -35,6 +43,8 @@ my @MULTI_WORDS =
   'Garðar & Vélar',
   'Garðs Apotek',
   'Geely Automobile',
+  'Geologi Timah',
+  'Guangzhou Pearl River',
   'India Glycols',
   'Indian Medical',
   'Indian Oil',
@@ -68,14 +78,20 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   'Agsar Paints' => ['agsar pints'],
+  'Apreo Logistic Poland' => ['apreo logistic pol', 'apreo logistic pola'],
   'Baltic Express' => ['baltic expres'],
   'Bangur Cement' => ['bangur cements', 'bangur cment'],
   'Beijing Hull Technology' => ['beijing hull tech'],
+  'Beijing Trinergy' => ['beijing trinergyy'],
+  'bridge24.pl' => ['bridge 24'],
+  'China Global Times' => ['chinal global times'],
   'Dhampur Sugar Mills' => ['dhampur sugar', 'dhampur sugars'],
   'Dongfeng' => ['dongfeng automobile'],
   'Garðar & Vélar' => ['garðar & vélar ehf.', 'garðar og vélar'],
   'Garðs Apotek' => ['garðs apótek', 'garðs apoótek'],
-  'Geely Automobile' => ['geely auto'],
+  'Geely Automobile' => ['geely auto', 'gely auto'],
+  'Geologi Timah' => ['geo timah', 'geo tima'],
+  'Guangzhou Pearl River' => ['gz pearl river'],
   'India Glycols' => ['india glycol', 'india glycols ltd.',
     'india glyclos', 'indian glycols'],
   'Indian Medical' => ['indian medical asso'],
@@ -111,6 +127,7 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  'bridge24.pl' => ['bridge24'],
   Computerland => ['computerlan']
 );
 

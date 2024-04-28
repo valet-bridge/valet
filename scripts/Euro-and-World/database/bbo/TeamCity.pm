@@ -79,20 +79,22 @@ my @SINGLE_WORDS = qw(
   Udaipur Uppsala Utrecht
   Varese Varna Vejle Vilnius
   Xiamen Xinghua Xinyi
-  Warsaw Wellington Worcester Wuhan
+  Warsaw Wellington Worcester Wroclaw Wuhan
   Yambol Yibin Yokohama Yogyakarta
   Zagreb Zhenjiang Zhongshan Zhuzhou Zigong Zurich
 );
 
 my %SINGLE_TYPOS =
 (
+  Adelaide => ['adeliade'],
   Antwerpen => ['antwerp'],
   Bangalore => ["b'lore", 'banglore'],
   Izmir => ['ýzmir'],
   Kolkata => ['calcutta'],
   Krakow => ['kraków'],
   Munich => ['münchen'],
-  Tarnów => ['tarnow']
+  Tarnów => ['tarnow'],
+  Warsaw => ['warsow']
 );
 
 
