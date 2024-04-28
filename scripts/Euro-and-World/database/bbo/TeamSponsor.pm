@@ -16,10 +16,16 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'Agsar Paints',
   'Baltic Express',
   'Bangur Cement',
+  'Beijing Capital',
+  'Beijing Cartoon',
+  'Beijing Evertrust',
   'Beijing Hull Technology',
+  'Beijing Lawyers',
   'Beijing Liuhe',
+  'Beijing Trinergy',
   'Beijing Dazhong',
   'Darles Santerm',
   'Dhampur Sugar Mills',
@@ -42,17 +48,26 @@ my @MULTI_WORDS =
   'Paulo G. Pereira',
   'Poddar Developers',
   'Poddar Housing',
+  'Red Bull',
+  'Red Cotton',
   'Phoenix TV',
+  'Shanghai Automobile',
+  'Shanghai Financial',
   'Shree Cement',
+  'Société Générale',
+  'Team PharmaService',
+  'Thai Oil',
   'Tolani Shipping',
   'Trambak Rubber',
   'Unia Leszno',
   'Unia Winkhaus',
+  'Viego Regnskap',
   'Zhongshan Jiegao'
 );
 
 my %MULTI_TYPOS =
 (
+  'Agsar Paints' => ['agsar pints'],
   'Baltic Express' => ['baltic expres'],
   'Bangur Cement' => ['bangur cements', 'bangur cment'],
   'Beijing Hull Technology' => ['beijing hull tech'],
@@ -78,8 +93,10 @@ my %MULTI_TYPOS =
     'pg pereira', 'p.g.pereira'],
   'Poddar Developers' => ['poddar development'],
   'Shree Cement' => ['shre cement', 'shree cements'],
+  'Société Générale' => ['societe generale', 'societè general'],
   'Tolani Shipping' => ['tolani shipping ltd'],
   'Unia Winkhaus' => ['winkhaus unia', 'winkhaus-unia'],
+  'Viego Regnskap' => ['viego regnskap as'],
   'Zhongshan Jiegao' => ['zhong shan jie gao']
 );
 

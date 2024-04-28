@@ -31,6 +31,7 @@ my @MULTI_WORDS =
   'Republic of Ireland',
   'San Marino',
   'Serbia and Montenegro',
+  'South Africa',
   'Trinidad and Tobago'
 );
 
@@ -46,6 +47,7 @@ my %MULTI_TYPOS =
   'Great Britain' => ['g.britain'],
   'Hong Kong' => ['china hong kong', 'china hongkong', 'china honk kong'],
   'Isle of Man' => ['isle of man'],
+  'Netherlands' => ['team orange', 'the netherlands'],
   'New Zealand' => ['new zeland', 'new zealans', 'new zeland'],
   'North Macedonia' => ['macedonia'],
   'Northern Ireland' => ['northertn irelsnd'],
@@ -60,6 +62,7 @@ my @SINGLE_WORDS = qw(
   Australia 
   Austria 
   Brazil 
+  Bulgaria
   Canada 
   Colombia 
   Croatia 
@@ -98,6 +101,7 @@ my %SINGLE_TYPOS =
   Australia => ['austrlia', 'oz'],
   Austria => ['austra'],
   Brazil => ['brasil'],
+  Bulgaria => ['bg'],
   Canada => ['kanada'],
   'Czech Republic' => ['czr'],
   'Chinese Taipei' => ['taipei'],

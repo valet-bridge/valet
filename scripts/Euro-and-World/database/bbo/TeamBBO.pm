@@ -37,6 +37,7 @@ use TeamNationality;
 use TeamUniversity;
 use TeamGender;
 use TeamAge;
+use TeamColor;
 use TeamScoring;
 use TeamForm;
 
@@ -54,6 +55,7 @@ my @TAG_ORDER = qw(
   TEAM_UNIVERSITY 
   TEAM_GENDER
   TEAM_AGE
+  TEAM_COLOR
   TEAM_SCORING
   TEAM_FORM
 );
@@ -82,7 +84,7 @@ sub read_cities
 
 # TODO 
 # Add Guernsey, United Kingdom, Jersey, Mali
-# DenmarS, Deutsch, Indýa, Sweeden, CBAI, Brasilia
+# DenmarS, Indýa, CBAI, Brasilia
 
 my $country = Country->new();
 my $gender = Gender->new();
@@ -107,6 +109,7 @@ sub init_hashes
   set_hashes_team_nationality('TEAM_NATIONALITY');
   set_hashes_team_gender('TEAM_GENDER');
   set_hashes_team_age('TEAM_AGE');
+  set_hashes_team_color('TEAM_COLOR');
   set_hashes_team_scoring('TEAM_SCORING');
   set_hashes_team_form('TEAM_FORM');
 }

@@ -20,24 +20,37 @@ my @MULTI_WORDS =
   'Central Celebes',
   'Central Java',
   'East Java',
+  'New Caledonia',
+  'New South Wales',
   'North Sulawesi',
+  'Northern Gauteng',
+  'South Australia',
+  'South Celebes',
+  'South East Celebes',
   'South Sulawesi',
   'South Sumatra',
+  'South Sweden',
   'Vest Agder',
+  'Vest Finnmark',
   'West Bengal',
   'West Borneo',
   'West Java',
   'West Sumatra',
-  'Western Australia'
+  'Western Australia',
+  'Western Province'
 );
 
 my %MULTI_TYPOS =
 (
-  'North Sulawesi' => ['notth sulawesi'],
+  'North Sulawesi' => ['notth sulawesi', 'north sulawsei'],
   'Vest Agder' => ['vest-agder'],
   'West Sumatra' => ['west sumatera'],
+  'South Africa' => ['south frica'],
+  'Vest Agder' => ['vest-agder'],
   'South Sumatra' => ['south sumatera'],
-  'Western Australia' => ['wa']
+  'Vest Finnmark' => ['vest-finnmark'],
+  'Western Australia' => ['wa'],
+  'West Bengal' => ['west bengla', 'westbengal']
 );
 
 my @SINGLE_WORDS = qw(
@@ -46,6 +59,7 @@ my @SINGLE_WORDS = qw(
   Kepri
   Kedungwaru
   Lumajang
+  Queensland
   Ratchaburi
   Victoria
 );
@@ -53,6 +67,8 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   'Australian Central Territory' => ['act'],
+  'New South Wales' => ['nsw'],
+  Queensland => ['qld'],
   'Victoria' => ['vic']
 );
 
