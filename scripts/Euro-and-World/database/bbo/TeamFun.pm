@@ -184,7 +184,7 @@ my @MULTI_WORDS =
   'Lawrence Allstars',
   'Lawrence of Arabia',
   'La Vista',
-  'Le romain boys',
+  'Leromain boys',
   'Les Girafes',
   'Les Zähringers',
   'Lisbeth og gutta',
@@ -384,7 +384,7 @@ my %MULTI_TYPOS =
   'Kick Back' => ['kick-back'],
   'Lawrence of Arabia' => ['lawrence of arab'],
   'La Vista' => ['la vista team'],
-  'Le romain boys' => ["leroumain's boys"],
+  'Leromain boys' => ["leroumain's boys"],
   'Lucky 13' => ['lucky13'],
   'Man Harr det man har' => ['man harr det man ha'],
   'Manchester United' => ['man u', 'man utd'],
@@ -409,7 +409,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
    Adventure Aurora Alternativlos Anglophones
-   Bananasplit Bridgeministeriet
+   Bananasplit Bhinneka Bridgeministeriet
    Cogito
    Dallas 
    Fenghuang Formidables Formosa Francophones
@@ -422,6 +422,7 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  Bhinneka => ['bhineka', 'bhinneke'],
   Formidables => ['formidable', 'formidabble', 'formidabels',
     'formiddable', 'formiddables', 'formadibles', 'formadeble',
     'formadables']

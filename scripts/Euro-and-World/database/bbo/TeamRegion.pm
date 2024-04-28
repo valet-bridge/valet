@@ -16,6 +16,7 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'Australian Central Territory',
   'Central Celebes',
   'Central Java',
   'East Java',
@@ -50,6 +51,8 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  'Australian Central Territory' => ['act'],
+  'Victoria' => ['vic']
 );
 
 

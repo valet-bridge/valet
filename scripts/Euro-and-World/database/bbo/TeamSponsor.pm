@@ -26,7 +26,6 @@ my @MULTI_WORDS =
   'Electric Center',
   'Fisk Seafood',
   'Geely Automobile',
-  'Grant Thornton',
   'India Glycols',
   'Indian Medical',
   'Indian Oil',
@@ -55,7 +54,6 @@ my %MULTI_TYPOS =
   'Beijing Hull Technology' => ['beijing hull tech'],
   'Dongfeng' => ['dongfeng automobile'],
   'Geely Automobile' => ['geely auto'],
-  'Grant Thornton' => ['grant thonrton', 'grantt thornton', 'bg thornton'],
   'India Glycols' => ['india glycol', 'india glycols ltd.',
     'india glyclos', 'indian glycols'],
   'Indian Medical' => ['indian medical asso'],
@@ -77,7 +75,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  COMAL CONSUS
+  COMAL Computerland CONSUS
   Dongfeng
   Enterprise
   Lavazza
@@ -87,6 +85,7 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  Computerland => ['computerlan']
 );
 
 

@@ -297,6 +297,12 @@ sub study_part
     }
     return;
   }
+  elsif ($part =~ /^[A-D]$/)
+  {
+    $token->set_letter_counter($part);
+    $HIT_STATS{TEAM_LETTER}++;
+    return;
+  }
 
 
   # Try the new hash set-up.
