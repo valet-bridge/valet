@@ -16,8 +16,12 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'Central Celebes',
   'Central Java',
   'East Java',
+  'North Sulawesi',
+  'South Sulawesi',
+  'South Sumatra',
   'Vest Agder',
   'West Borneo',
   'West Java',
@@ -27,8 +31,10 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'North Sulawesi' => ['notth sulawesi'],
   'Vest Agder' => ['vest-agder'],
   'West Sumatra' => ['west sumatera'],
+  'South Sumatra' => ['south sumatera'],
   'Western Australia' => ['wa']
 );
 

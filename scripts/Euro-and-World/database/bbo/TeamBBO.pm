@@ -167,11 +167,58 @@ sub set_overall_hashes
 }
 
 
+sub fix_some_parentheses
+{
+  my ($team_ref) = @_;
+
+  return unless $$team_ref =~ /\((.*)\)/;
+  my $t = $1;
+
+  my $fix = $SINGLE_WORDS{TEAM_AGE}{lc($t)};
+  if (defined $fix->{CATEGORY})
+  {
+    $$team_ref =~ s/\($t\)/$fix->{CATEGORY}/;
+    return;
+  }
+
+  $fix = $SINGLE_WORDS{TEAM_GENDER}{lc($t)};
+  if (defined $fix->{CATEGORY})
+  {
+    $$team_ref =~ s/\($t\)/$fix->{CATEGORY}/;
+    return;
+  }
+
+  if ($t eq 'O')
+  {
+    $$team_ref = 'Open';
+  }
+  elsif ($t eq 'W')
+  {
+    $$team_ref = 'Women';
+  }
+  elsif ($t eq 'S')
+  {
+    $$team_ref = 'Seniors';
+  }
+  elsif ($t eq 'L')
+  {
+    $$team_ref = 'Ladies';
+  }
+  elsif ($t eq 'J')
+  {
+    $$team_ref = 'Juniors';
+  }
+}
+
+
 sub clean_team
 {
   my $team = pop;
-  $team =~ s/\s*\(\d+\)\s*$//; # (69)
+  $team =~ s/\(\d+\)\s*$//; # (69)
   $team =~ s/^\s+|\s+$//g; # Leading and trailing space
+
+  # Fix some parentheses with age and gender.
+  fix_some_parentheses(\$team);
 
   my $fix = $FIX_HASH{lc($team)};
   if (defined $fix && $fix->{CATEGORY} eq 'COUNTRY')
@@ -340,7 +387,7 @@ sub study_team
   }
 
   # Split on separators.
-  my @parts = grep {$_ ne ''} split /([.\-\+_:;"\/\(\)]|\s+)/, $text;
+  my @parts = grep {$_ ne ''} split /([\-\+_:;"\/\(\)]|\s+)/, $text;
 
   split_on_trailing_digits(\@parts);
 
