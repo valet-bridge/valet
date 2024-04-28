@@ -24,6 +24,7 @@ my @MULTI_WORDS =
   'South Sulawesi',
   'South Sumatra',
   'Vest Agder',
+  'West Bengal',
   'West Borneo',
   'West Java',
   'West Sumatra',

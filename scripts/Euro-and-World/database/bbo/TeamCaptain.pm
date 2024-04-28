@@ -36,14 +36,18 @@ my @MULTI_WORDS =
   "Del'Monte",
   "D'Orsi",
   'El Baz',
+  'Flemming Dahl',
   'Ginossar',
   'H.C. Nielsen',
-  'Hecht-Johansen',
+  'Hecht Johansen',
+  'Hemant Jalan',
   'J.C. Henriques',
   'J.E. Skjanni',
   'J.P. Goenka',
   'Jan Jansma',
+  'Jay Ganesh',
   'Jeroo Mango',
+  'Jessica Hayman',
   'João Fanha',
   'John Holland',
   'Jorge Cruzeiro',
@@ -71,8 +75,11 @@ my @MULTI_WORDS =
   'Rui Santos',
   'Sally Brock',
   'Shashi Gupta',
+  'Signe Thomsen',
+  'Simon Gillis',
   'Sinan Abi',
   'Sinan Göksu',
+  'Sunil Machhar',
   'van Prooijen',
   'Van Cleeff',
   'Van de Walle',
@@ -108,11 +115,14 @@ my %MULTI_TYPOS =
   'de Knijff' => ['deknijff', 'di knijff'],
   "D'Orsi" => ['d orsi'],
   'El Baz' => ['baz'],
+  'Flemming Dahl' => ['dahl'],
   'Ginossar' => ['eldad ginossar'],
   'H.C. Nielsen' => ['hc nielsen'],
-  'Hecht-Johansen' => ['hecht'],
-  'J.C. Henriques' => ['j.c.henriques'],
-  'J.E. Skjanni' => ['j.e.skanni', 'j.e.skjanni'],
+  'Hecht Johansen' => ['hecht-johansen'],
+  'J.C. Henriques' => ['j.c.henriques', 'j c henriques',
+    'j. c. henriques', 'j. carlos henriques', 'jose c. henriques',
+    'josé c. henriques', 'josé henriques'],
+  'J.E. Skjanni' => ['j.e.skanni', 'j.e.skjanni', 'je skjanni'],
   'J.P. Goenka' => ['j.p.goenka'],
   'João Fanha' => ['j.fanha', 'joao fanha'],
   'John Holland' => ['j holland'],
@@ -137,6 +147,7 @@ my %MULTI_TYPOS =
   'Rui Pinto' => ['ruin pinto', 'r.pinto'],
   'Sally Brock' => ['s brock'],
   'Sinan Göksu' => ['sinan goksu'],
+  'Sunil Machhar' => ['sunil machar'],
   'van Prooijen'=> ['van proojen'],
   'Van den Bos' => ['van des bos'],
   'Vang Larsen' => ['van larsen', 'vang-larsen', 'vanglarsen'],
@@ -195,7 +206,7 @@ my @SINGLE_WORDS = qw(
   Creet Crestey Chrichton Crompton Cronier Crouch 
   Cuevas Cullin Cummings Cuper Çýloðlu
 
-  Dabrowka Dahl Dahlberg Dalecki Dalia Dalley Damaso Damiani 
+  Dabrowka Dahlberg Dalecki Dalia Dalley Damaso Damiani 
   Dancewicz Dantan Dao Darak Das Daskalakis 
   Daugava Dauvergne Davies Dawson
   Debolina Debonnaire Debus Dechelette Degla Dehaye Deik Delfour 
@@ -206,7 +217,7 @@ my @SINGLE_WORDS = qw(
   Duong Dupraz Dupuis Durisotto Dutilloy Dyke
 
   Eaton Eber Ebery Economou Eden Edgtton 
-  Efremov Efthimiou Ege Eggeling Eidi Einarsson Eisenberg 
+  Efremov Efthimiou Eggeling Eidi Einarsson Eisenberg 
   Ekeblad Eksi Ellestad Engel Elinescu Enrique 
   Ergil Erichsen Eriksson Erk Esterson Esteruelas Evans Ewart Eykt
 
@@ -225,7 +236,7 @@ my @SINGLE_WORDS = qw(
   Gabrial Gaede Gaglietto Gardiner Galinsky Gallus Gandoglia Ganzer Garbosi 
   Garvey Garner Gartaganis Gary Gaspar Gaviard Gawel Gawrys
   Genc Generosi Georgescu Gerli Gero Geyer Gezer
-  Giangkos Giannessi Gidman Gierulski Gigliotti Gill Gillis Ginnan Ginossar 
+  Giangkos Giannessi Gidman Gierulski Gigliotti Gill Ginnan Ginossar 
   Gioia Gitelman Giura Gladiator Gladysh Glasson Glopson
   Goded Goldberg Goldenfield Goldman Goldstein Golebiowski 
   Gomerov Gomes Gonçalves Goodman
@@ -328,7 +339,7 @@ my @SINGLE_WORDS = qw(
 
   Quail Quantin Quinn
 
-  Rabinowitz Radisic Radkov Rankin Rao Raulund Ravenna Rayner
+  Rabinowitz Radisic Rankin Rao Raulund Ravenna Rayner
   Rehder Rekstad Renouard Reynolds
   Ricard Ricci Richardson Richman Riedel Riehm Rigal Rigaud 
   Rimstedt Rios Rivers Rizzo
@@ -413,6 +424,7 @@ my %SINGLE_TYPOS =
   Greenwood => ['greenwod'],
   Gromöller => ['gromoeller', 'gromuller'],
   Günther => ['guenther'],
+  'Hecht Johansen' => ['hecht'],
   'J.E. Skjanni' => ['skjanni'],
   'J.P. Goenka' => ['goenka', 'jpgoenka'],
   Jedrychowski => ['jedrychowsky'],
@@ -437,6 +449,7 @@ my %SINGLE_TYPOS =
   'Peirão' => ['peirao'],
   'Procter' => ['proctor'],
   'Sally Brock' => ['brock'],
+  'Simon Gillis' => ['gillis'],
   Teltscher => ['teltsher'],
   Venkatesh => ['venky'],
   Vinciguerra => ['vinci'],

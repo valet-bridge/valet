@@ -370,6 +370,7 @@ my %MULTI_TYPOS =
   'En myra tre elefanter' => ['en myra tre elefant'],
   'Fast and Furious' => ['fast & furious'],
   'Flora and Friends' => ['flora && friend'],
+  'Fuglen har fløyet' => ['Foglen har fløyet'],
   'Freak City' => ['freak-city'],
   "Gary's Boys" => ['garys boys', 'gary´s boys'],
   'Good Men' => ['good man'],
