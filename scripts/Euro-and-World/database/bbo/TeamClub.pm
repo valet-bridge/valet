@@ -172,7 +172,7 @@ my %MULTI_TYPOS =
     'ýzmir b.s. belediye', 'ýzmir bsb', 'ýzmir bþb', 
     'izmir bilimsel', 'izmir buyuksehir', 'izmir b.b.s.k',
     'izmir b.s. belediye', 'Izmir BSB/Turkiye', 'izmir bsbs',
-    'izmir.b.b.', 'izmir bbsk', 'izmir b.b.', 'izmir b.b.s.k'],
+    'izmir bbsk', 'izmir b.b.', 'izmir b.b.s.k'],
   'Karlsruher BSC' => ['karlsruher bc'],
   'Köln Lindenthal BC' => ['köln lindenthal', 'köln-lindenthal',
     'köln-lindenthaler', 'köln-lindenthaler b'],
@@ -209,7 +209,8 @@ my %SINGLE_TYPOS =
   'Akademisk Bridgeklub' => ['akademisk'],
   'BC Bamberger Reiter' => ['bamberger'],
   'BK 2000' => ['bk2000'],
-  'Heimdal BK' => ['heimdal']
+  'Heimdal BK' => ['heimdal'],
+  'Izmir BSB' =>['izmir.b.b.']
 );
 
 

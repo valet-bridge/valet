@@ -1,13 +1,7 @@
-One problem is that we split 246.5 Meters on \.
-Basically if ~ then don't split?
-
 The detection of (O) results in (TEAM_AGE)...
 
-More than one Edgtton
-
 - Switch TeamBBO to use ../Country?
-- Parse teams more fully, 
-  Some info about FORM, SCORING, TABLE
+- Some info about FORM, SCORING, TABLE
 
 - A particle should probably be a separator?
 

@@ -17,6 +17,7 @@ use TeamBBO;
 my @MULTI_WORDS =
 (
   'Anadolu University',
+  'Ankara University',
   'Bilkent University',
   'Gunadurma',
   'ITS IKOMA',
@@ -37,6 +38,7 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   'Anadolu University' => ['uni. anadolu'],
+  'Ankara University' => ['ankara uni.'],
   'Bilkent University' => ['bilkent uni.'],
   'Gunadurma' => ['guna darma'],
   'ITÜ Vakfi' => ['itu vakfi'],

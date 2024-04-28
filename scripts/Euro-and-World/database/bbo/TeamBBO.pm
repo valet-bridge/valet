@@ -180,14 +180,14 @@ sub fix_some_parentheses
   my $fix = $SINGLE_WORDS{TEAM_AGE}{lc($t)};
   if (defined $fix->{CATEGORY})
   {
-    $$team_ref =~ s/\($t\)/$fix->{CATEGORY}/;
+    $$team_ref =~ s/\($t\)/$fix->{VALUE}/;
     return;
   }
 
   $fix = $SINGLE_WORDS{TEAM_GENDER}{lc($t)};
   if (defined $fix->{CATEGORY})
   {
-    $$team_ref =~ s/\($t\)/$fix->{CATEGORY}/;
+    $$team_ref =~ s/\($t\)/$fix->{VALUE}/;
     return;
   }
 
@@ -259,6 +259,56 @@ sub split_on_trailing_digits
 }
 
 
+sub team_specific_hashes
+{
+  my ($part, $token, $chain) = @_;
+
+  for my $tag (@TAG_ORDER)
+  {
+    my $fix = $SINGLE_WORDS{$tag}{lc($part)};
+    if (defined $fix->{CATEGORY})
+    {
+      $token->set_singleton($fix->{CATEGORY}, $fix->{VALUE});
+      $HIT_STATS{$fix->{CATEGORY}}++;
+
+      if ($fix->{CATEGORY} eq 'TEAM_GENDER' &&
+          $fix->{VALUE} eq 'Open')
+      {
+        # Special case: Add two more tokens.
+        my $token2 = Token->new();
+        $token2->copy_origin_from($token);
+        $token2->set_separator('VIRTUAL');
+        $chain->append($token2);
+
+        my $token3 = Token->new();
+        $token3->copy_origin_from($token);
+        $token3->set_singleton('TEAM_AGE', 'Open');
+        $chain->append($token3);
+        $HIT_STATS{'TEAM_AGE'}++;
+      }
+      elsif ($fix->{CATEGORY} eq 'TEAM_AGE' &&
+          $fix->{VALUE} eq 'Girls')
+      {
+        # Special case: Add two more tokens.
+        my $token2 = Token->new();
+        $token2->copy_origin_from($token);
+        $token2->set_separator('VIRTUAL');
+        $chain->append($token2);
+
+        my $token3 = Token->new();
+        $token3->copy_origin_from($token);
+        $token3->set_singleton('TEAM_GENDER', 'Women');
+        $chain->append($token3);
+        $HIT_STATS{'TEAM_GENDER'}++;
+      }
+
+      return 1;
+    }
+  }
+  return 0;
+}
+
+
 my $tmp_global;
 
 sub study_part
@@ -271,8 +321,17 @@ sub study_part
 
   $HIT_STATS{TOTAL}++;
 
-  # Turn the artificial separator back into a space.
-  $part =~ s/~/ /g;
+  if ($part =~ /~/)
+  {
+    # Turn the artificial separator back into a space.
+    $part =~ s/~/ /g;
+
+    # Bit of a kludge: Remove trailing dot.
+    $part =~ s/\.$//;
+
+    return if team_specific_hashes($part, $token, $chain);
+    die "Should not happen $part";
+  }
 
   if (set_token($part, $token))
   {
@@ -309,45 +368,9 @@ sub study_part
 
 
   # Try the new hash set-up.
-  for my $tag (@TAG_ORDER)
+  if (team_specific_hashes($part, $token, $chain))
   {
-    my $fix = $SINGLE_WORDS{$tag}{lc($part)};
-    if (defined $fix->{CATEGORY})
-    {
-      $token->set_singleton($fix->{CATEGORY}, $fix->{VALUE});
-      $HIT_STATS{$fix->{CATEGORY}}++;
-
-      if ($fix->{CATEGORY} eq 'TEAM_GENDER' &&
-          $fix->{VALUE} eq 'Open')
-      {
-        # Special case: Add two more tokens.
-        my $token2 = Token->new();
-        $token2->copy_origin_from($token);
-        $token2->set_separator('VIRTUAL');
-        $chain->append($token2);
-
-        my $token3 = Token->new();
-        $token3->copy_origin_from($token);
-        $token3->set_singleton('TEAM_AGE', 'Open');
-        $HIT_STATS{'TEAM_AGE'}++;
-      }
-      elsif ($fix->{CATEGORY} eq 'TEAM_AGE' &&
-          $fix->{VALUE} eq 'Girls')
-      {
-        # Special case: Add two more tokens.
-        my $token2 = Token->new();
-        $token2->copy_origin_from($token);
-        $token2->set_separator('VIRTUAL');
-        $chain->append($token2);
-
-        my $token3 = Token->new();
-        $token3->copy_origin_from($token);
-        $token3->set_singleton('TEAM_GENDER', 'Women');
-        $HIT_STATS{'TEAM_GENDER'}++;
-      }
-
-      return;
-    }
+    return;
   }
 
   my $fix_event = $FIX_HASH{lc($part)};
@@ -395,8 +418,25 @@ sub study_team
       if $MULTI_REGEX{$tag} ne '';
   }
 
-  # Split on separators.
-  my @parts = grep {$_ ne ''} split /([\-\+_:;"\/\(\)]|\s+)/, $text;
+  # Split on separators.  $sep excludes \s+.
+  my $sep = qr/[\-\+_;"\/\(\)\|]/;
+  my $min = qr/[\-;"\/\(\)\|]/; # Minimal set with tildes
+  my @initial_parts = split(/\s+/, $text);
+  my @parts;
+
+  foreach my $part (@initial_parts)
+  {
+    if ($part =~ /~/)
+    {
+      push @parts, grep { $_ ne '' } split(/$min/, $part);
+    }
+    else
+    {
+      push @parts, grep { $_ ne '' } split(/$sep/, $part);
+    }
+  }
+
+  # my @parts = grep {$_ ne ''} split /([\-\+_:;"\/\(\)]|\s+)/, $text;
 
   split_on_trailing_digits(\@parts);
 
