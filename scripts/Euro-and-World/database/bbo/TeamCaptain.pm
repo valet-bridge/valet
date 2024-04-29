@@ -19,10 +19,12 @@ my @MULTI_WORDS =
   'Acacio Figueiredo',
   'Adam Edgtton',
   'Ajay Vaish',
+  'Alain Lévy',
   'Alvares Ribeiro',
   'Anders Johansson',
   'Anita Sinclair',
   'Antonio Maria Campos',
+  'Artur S. Silva',
   'Arun Bapat',
   'Arun Jain',
   'A.K. Bose',
@@ -92,8 +94,12 @@ my @MULTI_WORDS =
   'Peter de Vries',
   'Peter Schaltz',
   'Poul Clemmensen',
+  'Qing Gong',
+  'R.K. Sinha',
+  'R.L. Kejriwal',
   'Rui Pinto',
   'Rui Santos',
+  'Rúnar Einarsson',
   'Sally Brock',
   'Shashi Gupta',
   'Signe Thomsen',
@@ -129,9 +135,12 @@ my %MULTI_TYPOS =
 (
   'Acacio Figueiredo' => ['acacio f.'],
   'Adam Edgtton' => ['a edgtton', 'a.edgtton'],
+  'Alain Lévy' => ['alain levy'],
+  'Alain Lévy' => ['levy', 'lévy'],
   'Alok Daga' => ["alok daga's iv"],
   'Alvensleben' => ['v.alvensleben', 'v. alvensleben'],
   'Antonio Maria Campos' => ['antonio m campos', 'antonio maria campo'],
+  'Artur S. Silva' => ['artur s silva'],
   'Arun Jain' => ['arunjain'],
   'A.K. Bose' => ["a.k.bose's iv", "a.k.bose'iv", "a k bose's 4",
     "a k bose's IV"],
@@ -139,7 +148,7 @@ my %MULTI_TYPOS =
   'Benedicte Cronier' => ['mme cronier'],
   'C.V. Rao' => ['c v rao', 'c. v. rao', 'c.v.rao', 'c.v.rao.'],
   'Carlos Gonçalves' => ['carlos goncalves'],
-  'David Birman' => ['birman david', 'birman d.'],
+  'David Birman' => ['birman david', 'birman d'],
   'de Botton' => ['janet de botton', 'j de botton',
     'de botten', 'de bottom', 'debotton'],
   'de Bruyne' => ['de Bruyune'],
@@ -176,11 +185,15 @@ my %MULTI_TYPOS =
   'Patanè' => ["patane'"],
   'Paul Hackett' => ['p hackett'],
   'Paulo Rocha Pinto' => ['paulo pinto', 'rocha pinto'],
+  'R.K. Sinha' => ["r k sinha'siv", "r k sinha's lv"],
+  'R.L. Kejriwal' => ['r l kejriwal', 'r l kejriwaal', 'r.l.kejriwal mc'],
   'Rui Pinto' => ['ruin pinto', 'r.pinto'],
+  'Rúnar Einarsson' => ['einarsson'],
   'Sally Brock' => ['s brock'],
   'Shashi Gupta' => ["shashi gupta's 6"],
   'Sinan Göksu' => ['sinan goksu'],
-  'Sunil Machhar' => ['sunil machar'],
+  'Sunil Machhar' => ['sunil machar', 'sunil macchar',
+    'sunal macchar', 'sunil maccher'],
   'van Prooijen'=> ['van proojen'],
   'Van den Bos' => ['van des bos'],
   'Vang Larsen' => ['van larsen', 'vang-larsen', 'vanglarsen'],
@@ -252,7 +265,7 @@ my @SINGLE_WORDS = qw(
   Duong Dupraz Dupuis Durisotto Dutilloy Dyke
 
   Eaton Eber Ebery Economou Eden Edgtton 
-  Efremov Efthimiou Eggeling Eidi Einarsson Eisenberg 
+  Efremov Efthimiou Eggeling Eidi Eisenberg 
   Ekeblad Eksi Ellestad Engel Elinescu Enrique 
   Ergil Erichsen Eriksson Erk Esterson Esteruelas Evans Ewart Eykt
 
@@ -320,7 +333,7 @@ my @SINGLE_WORDS = qw(
   Larsen Larssen Lasserre Latteria Lauria Lavín Lavings Law Lawy Lazer
   Lebatteux Lebel Lebowitz Lechtman Lehtinen Lee Leenhardt Legras Lena 
   Lennart Leptirici Lerner Lesniewski Lester 
-  Levi Levinger Lévy Levin Levine Levski Levy Lew Lewis Lhuissier
+  Levi Levinger Levin Levine Levski Lew Lewis Lhuissier
   Lie Liggins Lilienstein Lillevik Lilley Limmen Lindner Lindstedt
   Lindqvist Llopart
   Locatelli Lockwood Lombard Longinotti Lorentz Lorenzini Loreto Lowe
@@ -427,7 +440,7 @@ my @SINGLE_WORDS = qw(
 
   Xatzimpalis
 
-  Yamada Yates Yezerski Yilankiran Yilmaz Yoleri Yule
+  Yamada Yarington Yates Yezerski Yilankiran Yilmaz Yoleri Yule
 
   Zabunoglu Zagor Zagorin Zaleski Zanalda Zarkesch Zawada Zeeberg Zenari 
   Zhan Zhong Zimmermann Zollo Zorlu Zozis Zotos
@@ -436,6 +449,7 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   Aagaard => ['aagard'],
+  'Alain Lévy' => ['levy', 'lévy'],
   Allfrey => ['alfrey'],
   Altshuler => ['altschuler', 'altshuller'],
   'A.K. Bose' => ['a.k.bose'],

@@ -20,10 +20,12 @@ my @MULTI_WORDS =
   'Central Celebes',
   'Central Gauteng',
   'Central Java',
+  'Central Sulawesi',
   'East Borneo',
   'East Java',
   'New Caledonia',
   'New South Wales',
+  'North Celebes',
   'North Sulawesi',
   'Northern Gauteng',
   'South Australia',
@@ -44,15 +46,23 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  'North Sulawesi' => ['notth sulawesi', 'north sulawsei'],
+  'Central Java' => ['jawa tengah'],
+  'Central Sulawesi' => ['sulawesi tengah'],
+  'East Java' => ['jawa timur'],
+  'North Sulawesi' => ['notth sulawesi', 'north sulawsei',
+    'sulawesi utara', 'sulawasi utara'],
+  'North Sumatra' => ['sumatera utara'],
   'Vest Agder' => ['vest-agder'],
   'West Sumatra' => ['west sumatera'],
   'South Africa' => ['south frica'],
   'Vest Agder' => ['vest-agder'],
-  'South Sumatra' => ['south sumatera'],
+  'South Sulawesi' => ['sulawesi selatan'],
+  'South Sumatra' => ['south sumatera', 'sumatera selatan'],
   'Vest Finnmark' => ['vest-finnmark'],
+  'West Sumatra' => ['sumatera barat'],
   'Western Australia' => ['wa'],
-  'West Bengal' => ['west bengla', 'westbengal']
+  'West Bengal' => ['west bengla', 'westbengal'],
+  'West Java' => ['jawa barat'],
 );
 
 my @SINGLE_WORDS = qw(

@@ -20,6 +20,7 @@ my @MULTI_WORDS =
   'Ankara University',
   'Bilkent University',
   'Cornell University',
+  'École Polytechnique',
   'Gunadurma',
   'ITS IKOMA',
   'ITÜ Vakfi',
@@ -38,9 +39,10 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  'Anadolu University' => ['uni. anadolu'],
+  'Anadolu University' => ['uni. anadolu', 'anadolu uni'],
   'Ankara University' => ['ankara uni.'],
-  'Bilkent University' => ['bilkent uni.'],
+  'Bilkent University' => ['bilkent uni'],
+  'École Polytechnique' => ['paris polytechnix', 'ecole polytech'],
   'Gunadurma' => ['guna darma'],
   'ITÜ Vakfi' => ['itu vakfi'],
   'Koc University' => ['koc university bk', 'koç üniversitesi'],
@@ -61,6 +63,7 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  'École Polytechnique' => ['polytech'],
   'University of California at Berkeley' => ['berkeley']
 );
 

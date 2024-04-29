@@ -60,8 +60,8 @@ my @SINGLE_WORDS = qw(
   Kudus Kunshan Kuopio Kütahya
   Leiden Leszno Leuven Leverkusen Lhokseumawe Lille Lima Lincoln
   Ljubljana London Lubin Lublin Lumajang
-  Maastricht Madrid Makassar Malmö Manado Manchester Manisa Mannheim
-  Marbella Martapura Malatya Mataram Medan Melbourne
+  Maastricht Madrid Makassar Malmö Manahasa Manado Manchester 
+  Manisa Mannheim Marbella Martapura Malatya Mataram Medan Melbourne
   Midyat Milan Minsk Miskolc Montpellier Mumbai Munich
   Nagpur Nagykanizsa Nanning Narita Nazilli Nijmegen Ningbo Nürnberg
   Odense Oldenburg Orhangazi Oslo Oxford
@@ -90,8 +90,10 @@ my %SINGLE_TYPOS =
   Antwerpen => ['antwerp'],
   Bangalore => ["b'lore", 'banglore'],
   Izmir => ['ýzmir'],
+  Jakarta => ['dki'],
   Kolkata => ['calcutta'],
   Krakow => ['kraków'],
+  Manahasa => ['mnhasa'],
   Munich => ['münchen'],
   Tarnów => ['tarnow'],
   Warsaw => ['warsow']

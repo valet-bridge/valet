@@ -75,6 +75,7 @@ my @MULTI_WORDS =
   'Bo Gulasch',
   'Boas disipler',
   'Boogie Knights',
+  'Boye B Fan Club',
   "Boys'n' Girls'",
   'British Lions',
   'Brødrene & co',
@@ -186,7 +187,7 @@ my @MULTI_WORDS =
   'Klicks Dream Team',
   'Kurt quo vadis',
   'Kvalen og nis(s)ene',
-  'Lady Da es ses Boys',
+  'Lady Da et ses Boys',
   'Langt mer enn ivrig',
   'Lawrence Allstars',
   'Lawrence of Arabia',
@@ -248,6 +249,7 @@ my @MULTI_WORDS =
   'Plejans Plöjare',
   "Pradeep's Four",
   'Precision Marathon',
+  'Quattro Bruxas',
   'Queen of Hearts',
   'Red Ash',
   'Red Pork Cutlet',
@@ -383,7 +385,6 @@ my %MULTI_TYPOS =
   'ABA Nuno Paz' => ['ABA - Nuno Paz', 'ABA-Nuno Paz'],
   'Air Traffic Management' => ['air traffic managem'],
   'Alex is Beautiful' => ['alex is beatiful'],
-  'Atomic Bridge' => ['atomic'],
   'Babes Amazones' => ['babes-amazones'],
   'Best uten kort' => ['best uden kort'],
   'Beverly Hillbillies' => ['beverly hillbillie'],
@@ -453,6 +454,7 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  'Atomic Bridge' => ['atomic'],
   Bhinneka => ['bhineka', 'bhinneke'],
   Formidables => ['formidable', 'formidabble', 'formidabels',
     'formiddable', 'formiddables', 'formadibles', 'formadeble',

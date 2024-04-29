@@ -16,12 +16,15 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'Abadi Adimulia',
   'Agsar Paints',
   'Alfa Romeo',
   'APRA Clothing',
   'Apreo Logistic Poland',
   'Baltic Express',
   'Bangur Cement',
+  'Bank Indonesia',
+  'Bank Mandiri',
   'Beijing Capital',
   'Beijing Cartoon',
   'Beijing Evertrust',
@@ -31,6 +34,7 @@ my @MULTI_WORDS =
   'Beijing Trinergy',
   'Beijing Dazhong',
   'bridge24.pl',
+  'Bridge Winners',
   'China Evertrust',
   'China Finance',
   'China Global Times',
@@ -58,6 +62,7 @@ my @MULTI_WORDS =
   'Paulo G. Pereira',
   'Poddar Developers',
   'Poddar Housing',
+  'Quik Tea',
   'Red Bull',
   'Red Cotton',
   'Phoenix TV',
@@ -77,6 +82,7 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'Abadi Adimulia' => ['abadi adi mulia', 'abadi adimulya'],
   'Agsar Paints' => ['agsar pints'],
   'Apreo Logistic Poland' => ['apreo logistic pol', 'apreo logistic pola'],
   'Baltic Express' => ['baltic expres'],
@@ -84,6 +90,7 @@ my %MULTI_TYPOS =
   'Beijing Hull Technology' => ['beijing hull tech'],
   'Beijing Trinergy' => ['beijing trinergyy'],
   'bridge24.pl' => ['bridge 24'],
+  'Bridge Winners' => ['bridge winner'],
   'China Global Times' => ['chinal global times'],
   'Dhampur Sugar Mills' => ['dhampur sugar', 'dhampur sugars'],
   'Dongfeng' => ['dongfeng automobile'],
@@ -107,7 +114,10 @@ my %MULTI_TYPOS =
     'lögfr.stofa ´bjarna'],
   'Paulo G. Pereira' => ['p g pereira', 'p. g. pereira', 
     'pg pereira', 'p.g.pereira'],
-  'Poddar Developers' => ['poddar development'],
+  'Pertamina' => ['pertamina ep', 'pertamina ft', 'pertamina field', 
+    'pertamina ge', 'pertamina indonesia'],
+  'Poddar Developers' => ['poddar development', 'poddar dev',
+    'podder dev', 'podder developers', 'poddar devekopers'],
   'Shree Cement' => ['shre cement', 'shree cements'],
   'Société Générale' => ['societe generale', 'societè general'],
   'Tolani Shipping' => ['tolani shipping ltd'],
@@ -121,6 +131,7 @@ my @SINGLE_WORDS = qw(
   Dongfeng
   Enterprise
   Lavazza
+  Pertamina
   Sagaplast Solakoglu
   Vito
 );
