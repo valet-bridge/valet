@@ -98,6 +98,7 @@ my @MULTI_WORDS =
   'Fjends BK',
   'Førde BK',
   'Grant Thornton',
+  'Haderslev BC',
   'Hanseatic Hamburg BC',
   'Harplinge BK',
   'Harstad BK',
