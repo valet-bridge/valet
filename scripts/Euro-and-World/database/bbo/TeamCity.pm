@@ -23,6 +23,7 @@ my @MULTI_WORDS =
   'Kota Bogor',
   'Kota Mataram',
   'Novi Sad',
+  'Reggio Emilia',
   'Silesia Gliwice',
   'Villa Fabbriche'
 );
@@ -44,7 +45,7 @@ my @SINGLE_WORDS = qw(
   Bath Batman Batu Beijing Bekasi Belgrade Bengkulu Beograd Bergen Berlin 
   Bhubaneshwar Bielefeld Bitung Blitar Bogor Bologna Bonn Bordeaux Borivli
   Bremen Brisbane Bucharest Budapest Bursa Burdur Bytom
-  Caen Cairns Canberra Caracas Catania Changzhou Chelsea
+  Caen Cairns Canberra Caracas Catania Çayyolu Cerkezkoy Changzhou Chelsea
   Chengdu Chennai Chicago Chongqing Chumphon Cimahi Clichy
   Coventry Cuenca
   Dalian Dalls Daqing Darmstadt Debrecen Delft Delhi Denizli
@@ -52,7 +53,7 @@ my @SINGLE_WORDS = qw(
   Eastbourne Edirne Esbjerg Essen
   Fethiye Firenze
   Gdynia Gent Glidice Gorontalo Gölcük Gresik Guangzhou Guayaquil
-  Hamburg Hangzhou Hannover Helsinki Hornbæk Huangshi Hyderabad
+  Hamburg Hangzhou Hannover Hegyvidék Helsinki Hornbæk Huangshi Hyderabad
   Isparta Istanbul Izmir
   Jaipur Jakarta Jember Jiamusi Jiangyou Jilin Jinchang Jincheng Jinjiang
   Kadirli Kalisz Kalyani Kanpur Karachi Karlsruhe Kastamonu Katowice
@@ -66,18 +67,18 @@ my @SINGLE_WORDS = qw(
   Nagpur Nagykanizsa Nanning Narita Nazilli Nijmegen Ningbo Nürnberg
   Odense Oldenburg Orhangazi Oslo Oxford
   Padang Padova Palembang Palermo Palma Palu Pariaman Paris
-  Pekanbaru Pelotas Pernik Perth Pesaro Pescara
+  Pekanbaru Pelotas Pernik Perth Pesaro Pescara Posillipo
   Radkov Randers Rayong Reims Riga Rijeka Rimini Rome
   Pisa Pleven Plovdiv Pontianak Potsdam Prague Pula Pune Puri
   Rødovre
   Saarbrücken Salerno Samarinda Samsun Santiago Sanya Sarpsborg
   Secunderabad Semarang Serang Shanghai Shaoguan Shenyang Shenzhen
-  Sibiu Sidoarjo Skien Skopje Sleman Sliven Sofia Split
+  Shihua Sibiu Sidoarjo Skien Skopje Sleman Sliven Sofia Split
   Stavanger Stuttgart Surabaya Suzhou Sydney Szeged
   Taizhou Takayama Tallinn Tarnów Täby Temuco Tianjin Tokyo Toulouse
   Trieste Trondheim Tromsø
   Udaipur Uppsala Utrecht
-  Varese Varna Vejle Vilnius
+  Varese Varna Vejle Vilnius Vraca
   Xiamen Xinghua Xinyi
   Warsaw Wellington Worcester Wroclaw Wuhan
   Yambol Yibin Yokohama Yogyakarta
@@ -89,10 +90,12 @@ my %SINGLE_TYPOS =
   Adelaide => ['adeliade'],
   Antwerpen => ['antwerp'],
   Bangalore => ["b'lore", 'banglore'],
+  Çayyolu => ['cayyolu'],
   Izmir => ['ýzmir'],
   Jakarta => ['dki'],
   Kolkata => ['calcutta'],
   Krakow => ['kraków'],
+  Makassar => ['makasar'],
   Manahasa => ['mnhasa'],
   Munich => ['münchen'],
   Tarnów => ['tarnow'],

@@ -1,6 +1,6 @@
-The detection of (O) results in (TEAM_AGE)...
+Deal properly with npc
+Maybe split off trailing single digits before MULTI match
 
-- Switch TeamBBO to use ../Country?
 - Some info about FORM, SCORING, TABLE
 
 - A particle should probably be a separator?

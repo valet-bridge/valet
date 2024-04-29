@@ -127,6 +127,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  Bajaj
   COMAL Computerland CONSUS
   Dongfeng
   Enterprise

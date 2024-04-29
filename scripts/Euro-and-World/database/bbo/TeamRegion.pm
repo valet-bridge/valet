@@ -56,7 +56,7 @@ my %MULTI_TYPOS =
   'West Sumatra' => ['west sumatera'],
   'South Africa' => ['south frica'],
   'Vest Agder' => ['vest-agder'],
-  'South Sulawesi' => ['sulawesi selatan'],
+  'South Sulawesi' => ['sulawesi selatan', 'sulsel'],
   'South Sumatra' => ['south sumatera', 'sumatera selatan'],
   'Vest Finnmark' => ['vest-finnmark'],
   'West Sumatra' => ['sumatera barat'],
@@ -68,6 +68,7 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   Bali Bornholm
   Florida
+  Hebei
   Kepri
   Kedungwaru
   Lumajang

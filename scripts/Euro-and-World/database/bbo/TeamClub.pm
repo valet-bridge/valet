@@ -88,6 +88,8 @@ my @MULTI_WORDS =
   'Bornova BSK',
   'Calcutta Bridge Club',
   'Canakkale BSK',
+  'Çayyolu BC',
+  'Cerkezkoy Dinamik BSK',
   'Diyarbakýr Sur BSK',
   'Drammen Arbeiderparti',
   'Ege BSK',
@@ -129,6 +131,7 @@ my @MULTI_WORDS =
   'One Eyed Jacks',
   'Østfold og Follo',
   'Øvre Ottadalen',
+  'Pescara Bridge',
   'Phoenix Oltenita',
   'Qi Zhong Club',
   'Qin Lian Club',
@@ -187,6 +190,8 @@ my %MULTI_TYPOS =
   'Calcutta Bridge Club' => ['calcutta bridgeclub'],
   'Canakkale BSK' => ['canakkale b.s.k', 'canakkale beld',
     'canakkale beledýye', 'canakkale bld.spor', 'çanakkale briç sk'],
+  'Çayyolu BC' => ['cayyolu bc'],
+  'Cerkezkoy Dinamik BSK' => ['Cerkezkoy BS', 'Cerkezkoy BSK'],
   'Diyarbakýr Sur BSK' => ['diyarbakir bs', 'diyarbakir bsbs', 
     'dýyarbakir sur. b.b', 'diyarbakir sur sk', 'sur belediye sk',
     'sur belediye', 'd.bakýr sur', 'd.bakir sur'],
@@ -233,7 +238,10 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  Botev
+  Debrecen
   Hordaland
+  Miskolc
   Sakura
   Østerdal
 );
@@ -244,6 +252,7 @@ my %SINGLE_TYPOS =
   'Akademisk Bridgeklub' => ['akademisk'],
   'BC Bamberger Reiter' => ['bamberger'],
   'BK 2000' => ['bk2000'],
+  'Cerkezkoy Dinamik BSK' => ['Cerkezkoy'],
   'Heimdal BK' => ['heimdal'],
   'Izmir BSB' =>['izmir.b.b.']
 );
