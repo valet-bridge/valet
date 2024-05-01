@@ -40,6 +40,7 @@ my @MULTI_WORDS =
   'bridge24.pl',
   'Bridge Winners',
   'Century Insurance',
+  'Chateau Rossenovo',
   'China Evertrust',
   'China Finance',
   'China Global Times',
@@ -87,6 +88,8 @@ my @MULTI_WORDS =
   'SPS Construction',
   'Sunchime Cartoon',
   'Sunchime Fund',
+  'Syabas Energy',
+  'Taste of Goa',
   'Team PharmaService',
   'Thai Oil',
   'Tolani Shipping Ltd',
@@ -110,6 +113,8 @@ my %MULTI_TYPOS =
   'Breki Jarðverk' => ['breki jarðverk ehf'],
   'bridge24.pl' => ['bridge 24'],
   'Bridge Winners' => ['bridge winner', 'bridgewinners.com'],
+  'Chateau Rossenovo' => ['chatteau rossenovo', 'chatteu rossenovo',
+    'chaetou rosenovo'],
   'China Global Times' => ['chinal global times'],
   'Dhampur Sugar' => ['dhampur sugar mills', 'dhampur sugars', 
     'dhampur suger mills'],
@@ -147,6 +152,7 @@ my %MULTI_TYPOS =
   'Sparisjóður Siglufjarðar' => ['sparisjóður sigl',
     'sparisjóður sigluf', 'sparisjóður siglufj', 'sparisj. siglufjarð'],
   'Spasso Food' => ['spassofood'],
+  'Syabas Energy' => ['syabas energi', 'syabas e'],
   'Tolani Shipping Ltd' => ['tolani shipping'],
   'Unia Winkhaus' => ['winkhaus unia', 'winkhaus-unia'],
   'Viego Regnskap' => ['viego regnskap as'],
@@ -159,6 +165,7 @@ my @SINGLE_WORDS = qw(
   COMAL Computerland CONSUS
   Dongfeng
   Enterprise
+  GAMAX
   Lavazza
   Pertamina
   Sagaplast Solakoglu

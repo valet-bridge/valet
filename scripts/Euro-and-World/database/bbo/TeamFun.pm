@@ -176,6 +176,7 @@ my @MULTI_WORDS =
   'Gyllene Prag',
   'Hands and Hearts',
   'Hannover Four',
+  'Hansen Hurricanes',
   'Happy Bridge',
   'Happy Couples',
   'Hare Krishna',
