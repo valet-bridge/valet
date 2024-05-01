@@ -17,12 +17,16 @@ use TeamBBO;
 my @MULTI_WORDS =
 (
   'Australian Central Territory',
+  'Boeven Digoel',
+  'Bone Bolango',
   'Central Celebes',
   'Central Gauteng',
   'Central Java',
   'Central Sulawesi',
   'East Borneo',
+  'East Jakarta',
   'East Java',
+  'Kepulauan Riau',
   'New Caledonia',
   'New South Wales',
   'North Celebes',
@@ -31,6 +35,7 @@ my @MULTI_WORDS =
   'South Australia',
   'South Celebes',
   'South East Celebes',
+  'South Jakarta',
   'South Sulawesi',
   'South Sumatra',
   'South Sweden',
@@ -48,6 +53,7 @@ my %MULTI_TYPOS =
 (
   'Central Java' => ['jawa tengah'],
   'Central Sulawesi' => ['sulawesi tengah'],
+  'East Jakarta' => ['jakarta timur'],
   'East Java' => ['jawa timur'],
   'North Sulawesi' => ['notth sulawesi', 'north sulawsei',
     'sulawesi utara', 'sulawasi utara'],
@@ -56,6 +62,7 @@ my %MULTI_TYPOS =
   'West Sumatra' => ['west sumatera'],
   'South Africa' => ['south frica'],
   'Vest Agder' => ['vest-agder'],
+  'South Jakarta' => ['jakarta selatan'],
   'South Sulawesi' => ['sulawesi selatan', 'sulsel'],
   'South Sumatra' => ['south sumatera', 'sumatera selatan'],
   'Vest Finnmark' => ['vest-finnmark'],
@@ -66,20 +73,22 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Bali Bornholm
+  Anhui
+  Bali Bornholm Buskerud
   Florida
   Hebei
-  Kepri
-  Kedungwaru
+  Karimun Kepri Kedungwaru
   Lumajang
   Queensland
-  Ratchaburi
+  Ratchaburi Rogaland
   Victoria
+  Zhejiang
 );
 
 my %SINGLE_TYPOS =
 (
   'Australian Central Territory' => ['act'],
+  'Kepulauan Riau' => ['riau', 'kepri'],
   'New South Wales' => ['nsw'],
   Queensland => ['qld'],
   'Victoria' => ['vic']

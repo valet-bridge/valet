@@ -16,6 +16,9 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'Aix en Provence',
+  'Banda Aceh',
+  'Bandar Lampung',
   'Belo Horizonte',
   'Ping An',
   'Kota Bandung',
@@ -32,45 +35,50 @@ my %MULTI_TYPOS =
 (
   Istanbul => ['ýstanbul'],
   Ningbo => ['ning bo'],
+  'Reggio Emilia' => ['r.e.', 'reggio e'],
   'Silesia Gliwice' => ['silezia gliwice'],
   'Villa Fabbriche' => ['v.fabbr.', 'villa fabb.', 'v. fabbriche',
     'v.fabbriche']
 );
 
 my @SINGLE_WORDS = qw(
-  Aabenraa Aalborg Adana Adelaide Ahmedabad Akçeşme Akhisar Alexandria 
-  Altay Alytus Amarillo Ambon Amsterdam Anadolu Ankara Annecy Antalya 
-  Antony Antwerpen Asenovgrad Assis Athens Auckland Augsburg Ayacucho
-  Balikpapan Ballerup Bamberg Bandung Bangalore Bangkok 
-  Banjarmasin Barcelona
-  Bath Batman Batu Beijing Bekasi Belgrade Bengkulu Beograd Bergen Berlin 
-  Bhubaneshwar Bielefeld Bitung Blitar Bogazici Bogor Bologna Bonn 
-  Bordum Bordeaux Borivli Bornova
+  Aabenraa Aalborg Adana Adelaide Agresar Ahmedabad Akçeşme 
+  Akdeniz Akhisar Alexandria Allahabad Altay Alytus Amarillo Ambon 
+  Amsterdam Anadolu Ankara Annecy Antalya Antony Antwerpen 
+  Asenovgrad Assis Atakoy Athens Auckland Augsburg Ayacucho Ayvalik
+
+  Balcova Balikpapan Balisekir Ballerup Bamberg Bandung 
+  Bangalore Bangkok Banjarmasin Baragnon Barcelona Batam Bath Batman Batu 
+  Beijing Bekasi Belgrade Bengkalis Bengkulu Beograd Bergen Bergues Berlin 
+  Bhubaneshwar Bielefeld Bitung Blitar Bodrum Bodø Bogazici 
+  Bogor Bologna Bonn 
+  Bordeaux Borivli Bornova Bozdogan
   Braila Brasov Bremen Brisbane Brotteaux 
-  Bucharest Budapest Burghausen Bursa Burdur Bytom
+  Buca Bucharest Budapest Burghausen Bursa Burdur Bytom
+
   Caen Cairns Canakkale Canberra Caracas Catania Çayyolu 
   Cerkezkoy Changzhou Chelsea Chengdu Chennai Chicago Chongqing 
-  Chumphon Cimahi Clichy Courseulles Coventry Cuenca
+  Chumphon Cimahi Clichy Corlu Courseulles Coventry Cuenca
   Dalian Dalls Daqing Darmstadt Debrecen Delft Delhi Denizli
   Dimitrovgrad Dobrich Dombivli Dongguan Düsseldorf
   Eastbourne Edirne Ege Esbjerg Essen
   Fethiye Firenze
   Garches Gdynia Gent Glidice Gorontalo Gölcük Gresik Guangzhou Guayaquil
   Haderslev Hamburg Hangzhou Hannover Harplinge Harstad 
-  Hegyvidék Heimdal Helsinki Hillerød
-  Hornbæk Huangshi Hyderabad
+  Hegyvidék Heimdal Helsinki Herning Hillerød
+  Hornbæk Hosguru Huangshi Hyderabad
   Iasi Isparta Istanbul Izmir
   Jaipur Jakarta Jember Jessheim Jiamusi Jiangyou Jilin Jinchang 
   Jincheng Jinjiang
   Kadirli Kalisz Kalyani Kanpur Karachi Karlsruhe Kastamonu Katowice
-  Kediri Ketsch Kiel Kielce Kiev Kolkata Köln Krakow Kristiansand
-  Kudus Kunshan Kuopio Kütahya
+  Kaylaka Kediri Ketsch Kiel Kielce Kiev Kolkata Konak Köln 
+  Krakow Kristiansand Kudus Kunshan Kuopio Kütahya
   Leiden Leszno Leuven Leverkusen Lhokseumawe Lille Lima Lincoln
   Ljubljana London Lubin Lublin Lumajang
   Maastricht Madrid Makassar Malmö Manahasa Manado Manchester 
   Manisa Mannheim Marbella Martapura Malatya Massy Mataram 
-  Medan Melbourne Mersin Midyat Milan Minsk Miskolc Montpellier 
-  Mumbai Munich
+  Medan Melbourne Mersin Midyat Milan Minsk Miskolc 
+  Montpellier Moradabad Mumbai Munich
   Nagpur Nagykanizsa Nanning Narita Nazilli Näsby 
   Nijmegen Ningbo Niski Norrøna Nürnberg Næstved
   Odense Oldenburg Orhangazi Oslo Oxford
@@ -78,10 +86,10 @@ my @SINGLE_WORDS = qw(
   Pekanbaru Pelotas Pernik Perth Pesaro Pescara Posillipo
   Radkov Randers Rayong Reims Riga Rijeka Rimini Rome
   Pisa Pleven Plovdiv Pontianak Potsdam Prague Pula Pune Puri
-  Rødovre
+  Rajasthan Rødovre
   Saarbrücken Salerno Samarinda Samsun Santiago Sanya Sarpsborg
   Secunderabad Semarang Serang Shanghai Shaoguan Shenyang Shenzhen
-  Shihua Sibiu Sidoarjo Skien Skopje Sleman Sliven Sofia Split
+  Shihua Sibiu Sidoarjo Skien Skopje Sleman Sliven Sofia Sortland Split
   Stavanger Stuttgart Sunndalsøra Surabaya Suzhou Sydney Szeged
   Taizhou Takayama Tallinn Tarnów Täby Temuco Tianjin Tokyo Toulouse
   Trieste Trondheim Tromsø
@@ -97,9 +105,19 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   Adelaide => ['adeliade'],
+  Akçeşme => ['akcesme'],
+  Akdeniz =>['akdenýz'],
   Antwerpen => ['antwerp'],
+  Auckland => ['akarana'],
+  Ayvalik => ['aivali'],
+  Balisekir => ['balikesýr'],
+  Balkova => ['balçova'],
   Bangalore => ["b'lore", 'banglore'],
+  Borivli => ['borivali'],
+  Canakkale => ['çanakkale'],
   Çayyolu => ['cayyolu'],
+  Cerkezkoy => ['çerkezköy'],
+  Corlu => ['çorlu'],
   Izmir => ['ýzmir'],
   Jakarta => ['dki'],
   Kolkata => ['calcutta'],
@@ -108,13 +126,13 @@ my %SINGLE_TYPOS =
   Manahasa => ['mnhasa'],
   Munich => ['münchen'],
   Prague => ['praha'],
-  Radkov => ['radkow'],
+  Radkov => ['radkow', 'kadkov'],
   Sunndalsøra => ['sundalsora'],
   Tarnów => ['tarnow'],
   Tromsø => ['tromso', 'tromsoe'],
   Warsaw => ['warsow'],
   Åkirkeby => ['aakirkeby'],
-  Århus => ['aarhus']
+  Århus => ['aarhus', 'arhus']
 );
 
 

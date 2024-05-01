@@ -30,8 +30,11 @@ my @MULTI_WORDS =
   'Northern Ireland',
   'Republic of Ireland',
   'San Marino',
+  'Saudia Arabia',
   'Serbia and Montenegro',
   'South Africa',
+  'South Korea',
+  'Sri Lanka',
   'Trinidad and Tobago'
 );
 
@@ -52,7 +55,8 @@ my %MULTI_TYPOS =
   'North Macedonia' => ['macedonia'],
   'Northern Ireland' => ['northertn irelsnd'],
   'Republic of Ireland' => ['rep. of ireland', 'rep of ireland', 'roi',
-    'rep ire', 'rep ireland', 'republic of irelend', 'reublic of ireland'],
+    'rep ire', 'rep ireland', 'republic of irelend', 'reublic of ireland',
+    'r of ireland'],
   'Serbia and Montenegro' => ['serbia/mont', 'serbia&mon.'],
   'Trinidad and Tobago' => ['trinidad & tobago', 'trinidad&tobago'],
 );
@@ -71,6 +75,7 @@ my @SINGLE_WORDS = qw(
   Estonia 
   Finland 
   Germany 
+  Guyana
   Hungary 
   Ireland 
   Italy 
@@ -113,7 +118,7 @@ my %SINGLE_TYPOS =
   Finland => ['finnland'],
   France => ['fra'],
   Germany => ['deutschland'],
-  Guyana => ['french guiana', 'french guyana'],
+  Guyana => ['french guiana', 'french guyana', 'french guayana'],
   Hungary => ['hungar'],
   Ireland => ['roireland', 'irelnd', 'irelsnd', 'irlande',
     'irelend', 'irelena', 'ire'],

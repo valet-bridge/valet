@@ -439,8 +439,6 @@ sub study_team
     }
   }
 
-  # my @parts = grep {$_ ne ''} split /([\-\+_:;"\/\(\)]|\s+)/, $text;
-
   split_on_trailing_digits(\@parts);
 
   my $one_tmp = 0;

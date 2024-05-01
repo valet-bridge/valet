@@ -17,6 +17,7 @@ use TeamBBO;
 my @MULTI_WORDS =
 (
   'Aachener',
+  'Acol Praha',
   'Akademisk',
   'Altay Genclik',
   'Augsburg Atlanta',
@@ -97,13 +98,12 @@ my %MULTI_TYPOS =
     'adana bsb sk', 'adana buyuksehir', 'adana b.s.k', 
     'adana bric sk', 'adana bsbkisk', 'adana sk', 'adana bþbký'],
   'Akademisk Bridgeklub' => ['akademisk bk'],
-  'Akçeşme SK' => ['akcesme spor kulubu', 'akçeþme spor kulübü'],
   'Alexandria Sporting Club' => ["alexandria sport' c"],
   'Antalya BSK' => ['antalya b.s.k'],
   'Aydin 1923 BBSK' => ['aydin 1923 sk', 'aydin bbsk',
     'aydin bilimsel bsk', 'aydinspor 1923'],
   'Bergen Akademiske' => ['bergen ak', 'bergen akad', 'bergen akadem',
-    'bergen akademiske bk'],
+    'bergen akademiske bk', 'bergen abk'],
   'Blakset Klubberne' => ['blakset-klubberne'],
   'BC Bamberger Reiter' => ['bc bamberg', 'bamberger reiter',
     'bv bamberger reiter', 'bamberg rider', 'bamberg cavaliers',
@@ -121,8 +121,6 @@ my %MULTI_TYPOS =
     'bordum bric sk'],
   'Bogazici BSK' => ['bogaz ici bsk', 'boðazici bsk', 'boðazýçý bsk',
     'boðazýçý s.k.'],
-  'Canakkale BSK' => ['canakkale b.s.k', 'canakkale beld',
-    'canakkale beledýye', 'canakkale bld.spor', 'çanakkale briç sk'],
   'Cerkezkoy Dinamik BSK' => ['Cerkezkoy BS', 'Cerkezkoy BSK'],
   'Diyarbakýr Sur BSK' => ['diyarbakir bs', 'diyarbakir bsbs', 
     'dýyarbakir sur. b.b', 'diyarbakir sur sk', 'sur belediye sk',
@@ -156,9 +154,13 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  Acol
   Botev
   Debrecen
+  Fosnavåg
   Hordaland
+  Kløverknekt 
+  Locomotiva
   Miskolc
   Sakura
   Østerdal
@@ -170,7 +172,9 @@ my %SINGLE_TYPOS =
   'BC Bamberger Reiter' => ['bamberger'],
   'BK 2000' => ['bk2000'],
   'Cerkezkoy Dinamik BSK' => ['Cerkezkoy'],
-  'Izmir BSB' =>['izmir.b.b.']
+  'Izmir BSB' => ['izmir.b.b.'],
+  Kløverknekt => ['kloverknekt'],
+  Locomotiva => ['loco']
 );
 
 

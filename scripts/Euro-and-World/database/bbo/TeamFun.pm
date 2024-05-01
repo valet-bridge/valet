@@ -58,6 +58,7 @@ my @MULTI_WORDS =
   'Baltic Club',
   'Bara bruder',
   'Barny Army',
+  'Bauhinia',
   'Bela e os Monstros',
   'Best i baren',
   'Best uten kort',
@@ -66,6 +67,7 @@ my @MULTI_WORDS =
   'Big Boss',
   'Big Chef',
   'Big Guns',
+  'Big Makie',
   'Black Hole',
   'Black Knife',
   'Black Label',
@@ -103,6 +105,7 @@ my @MULTI_WORDS =
   'De kontorsanställda',
   'De uovervinnelige',
   'Dead Pig Nerds',
+  'Deccan Chargers',
   'DELTA 2',
   'Den gyldne omvei',
   'Den maskerte hevner',
@@ -169,6 +172,7 @@ my @MULTI_WORDS =
   'Good Oxygen',
   'Green Eyes',
   'Green Lines',
+  'Gutta på tur',
   'Gyllene Prag',
   'Hands and Hearts',
   'Hannover Four',
@@ -184,12 +188,17 @@ my @MULTI_WORDS =
   'Hvor er mine babes',
   'Ikke akkurat kjedelig',
   'Il Fante di Fiori',
+  'India Blues',
+  'Indian Mavericks',
   'Inverted Minors',
   'Isolated Menaces',
   'Jane Doe',
   'Jorunns disipler',
   'Josef and Cards',
   'Juniors Disipler',
+  'Karachi Aces',
+  "Karl's Silence",
+  'Karlstads vänner',
   'Kasimirs Dream Team',
   'Keep Walking',
   "Keni's Dream",
@@ -250,6 +259,7 @@ my @MULTI_WORDS =
   'North Star',
   'Not the Empire',
   'Novi Tim',
+  'Næsten Junior',
   'Oddskongen med rese',
   'Olavs utvalgte',
   'Om het hoekie',
@@ -261,9 +271,11 @@ my @MULTI_WORDS =
   'Papa & Rabbits',
   'Papa and Rabids',
   'Papas & Puppies',
+  'Pearl of the Orient',
   'Piger og drenger',
   'Pink Panter',
   'Pinot Noir',
+  'Plan B',
   'Pontiac 7',
   'Powerpuff Pinglorna',
   'Plejans Plöjare',
@@ -271,16 +283,22 @@ my @MULTI_WORDS =
   'Precision Marathon',
   'Quattro Bruxas',
   'Queen of Hearts',
+  'Radio Communication',
+  'Randers 2.0',
+  'Randers 4.0',
   'Red Ash',
   'Red Pork Cutlet',
   'Red Sea Festival',
   'Red Soles',
   'Reidar reiser snart',
+  'Renons Rimstedt',
   'Rising Star',
   'Robin Hood',
   'Royal Flush',
   'Rubb og stubb',
   'Rudderless Ship',
+  'Ruter 7',
+  'Ruter 9',
   'Saint Titus',
   'Sakurai',
   'Salten rundt',
@@ -288,29 +306,37 @@ my @MULTI_WORDS =
   'Schall und Rauch',
   'Seths vänner',
   'Seven Eleven',
+  'Shining Pig',
+  'Shooting',
+  'Shy Ant',
   'Siderkongen og kidz',
   'Silver Eagle',
   'Simple Minds',
   'Sivves straffdubbl',
   'Six Diamonds',
   'Six Samurai',
+  'Skitur',
   'Slam Hunters',
   'Smoking Guns',
   'Smooth Duck',
   'Småsamen med døler',
+  'South Zone',
   'Space Mutants',
   'Spade Ace',
   'Spiders from Mars',
-  'Spiel mir das Lid',
+  'Spiel mir das Lied',
   'Spjett Spjong',
   'Spring Foursomes',
+  'Stabby with Youngsters',
   'Stis Multivariant',
   'Stone Cutters',
   'Storm Riders',
   'Strawberry Fields',
+  'Super Pineapples',
   'Svag klöver',
   'Svenske og ulykke',
   'Sweet Is Middle',
+  'Syntax Error',
   'Team Bo a berg',
   'Texan Aces',
   'Texan and Turks',
@@ -368,6 +394,7 @@ my @MULTI_WORDS =
   'Tre sang',
   'Troll i eske',
   'Unholy Alliance',
+  'Vegetable Hotpot',
   'Verden rundt',
   'Very Mixed',
   'Vickys Vikings',
@@ -413,6 +440,7 @@ my %MULTI_TYPOS =
   'Best uten kort' => ['best uden kort'],
   'Beverly Hillbillies' => ['beverly hillbillie'],
   'Big Guns' => ['big gun'],
+  'Big Makie' => ['big makie och co'],
   'Californian Aces' => ['california aces'],
   "Chairman's Choice" => ["chairman's team"],
   'Croatian Pirates' => ['cro pirates'],
@@ -432,8 +460,10 @@ my %MULTI_TYPOS =
   "Hell's Angels" => ['hells angels'],
   'Hopp i sang' => ['hoppa i sang'],
   'Hurlumhei' => ['hurlumhei..'],
-  'Hvalen og tjukkasene' => ['hvalen og tjukkasne', 'hvalen & trukkasene'],
+  'Hvalen og tjukkasene' => ['hvalen og tjukkasne', 'hvalen & tjukkasene'],
   'Ikke akkurat kjedelig' => ['ikke akkurat kjedel'],
+  'India Blues' => ['indian blues'],
+  'Indian Mavericks' => ['india mavericks', 'indian mavricks'],
   'Kasimirs Dream Team' => ['kasimirs dreamteam'],
   'Kent Romeos venner' => ['kent romeos veenner'],
   'Kick Back' => ['kick-back'],
@@ -449,6 +479,7 @@ my %MULTI_TYPOS =
   'Nice and Monsters' => ['nice monsters'],
   'Nilslands Slowfoxes' => ['nilslands slowfoxers', 'nilsland slowfoxes'],
   "Pradeep's Four" => ["pradeep's 4"],
+  'Saint Titus' => ['st titus', 'st. titus'],
   'Sakurai' => ['japan sakurai'],
   'Sivves straffdubbl' => ['sivves straffdubbl.', 'sivves straffdbl',
      'sivves...'],
@@ -456,6 +487,7 @@ my %MULTI_TYPOS =
   'Six Samurai' => ['six samurais'],
   'Slam Hunters' => ['slam hunter'],
   'Spring Foursomes' => ['spring 4s', 'spring fours', "spring 4's"],
+  'Stabby with Youngsters' => ['stabby with youngst'],
   'Texan Aces' => ['texa aces', 'texaan aces'],
   'The Four Guys' => ['the 4 guys'],
   'The Clown' => ['the_clown'],
@@ -466,16 +498,17 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-   Adventure Aurora Alternativlos Anglophones
-   Bananasplit Bhinneka Bridgeministeriet
-   Cogito
-   Dallas 
-   Fenghuang Formidables Formosa Francophones
-   Hollywood Honeymoon
-   Jupiter
-   Lira
-   Saga
-   Sakurai 
+   adventure aditya aggressor aurora alternativlos anglophones
+   bananasplit beniaminek bhinneka blondie blueberry bridgeministeriet
+   cogito
+   dallas 
+   fenghuang formidables formosa francophones
+   hollywood honeymoon
+   jupiter
+   lira
+   movember
+   saga
+   sakurai 
 );
 
 my %SINGLE_TYPOS =

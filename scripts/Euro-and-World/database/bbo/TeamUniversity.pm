@@ -16,6 +16,7 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'AGH Krakow',
   'Anadolu University',
   'Ankara University',
   'Bilkent University',
