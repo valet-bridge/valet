@@ -38,34 +38,41 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Aabenraa Aalborg Adana Adelaide Ahmedabad Akhisar Alexandria 
-  Altay Alytus Amarillo Ambon Amsterdam Anadolu Ankara Antalya 
+  Aabenraa Aalborg Adana Adelaide Ahmedabad Akçeşme Akhisar Alexandria 
+  Altay Alytus Amarillo Ambon Amsterdam Anadolu Ankara Annecy Antalya 
   Antony Antwerpen Asenovgrad Assis Athens Auckland Augsburg Ayacucho
   Balikpapan Ballerup Bamberg Bandung Bangalore Bangkok 
   Banjarmasin Barcelona
   Bath Batman Batu Beijing Bekasi Belgrade Bengkulu Beograd Bergen Berlin 
-  Bhubaneshwar Bielefeld Bitung Blitar Bogor Bologna Bonn Bordeaux Borivli
-  Bremen Brisbane Bucharest Budapest Bursa Burdur Bytom
-  Caen Cairns Canberra Caracas Catania Çayyolu Cerkezkoy Changzhou Chelsea
-  Chengdu Chennai Chicago Chongqing Chumphon Cimahi Clichy
-  Coventry Cuenca
+  Bhubaneshwar Bielefeld Bitung Blitar Bogazici Bogor Bologna Bonn 
+  Bordum Bordeaux Borivli Bornova
+  Braila Brasov Bremen Brisbane Brotteaux 
+  Bucharest Budapest Burghausen Bursa Burdur Bytom
+  Caen Cairns Canakkale Canberra Caracas Catania Çayyolu 
+  Cerkezkoy Changzhou Chelsea Chengdu Chennai Chicago Chongqing 
+  Chumphon Cimahi Clichy Courseulles Coventry Cuenca
   Dalian Dalls Daqing Darmstadt Debrecen Delft Delhi Denizli
   Dimitrovgrad Dobrich Dombivli Dongguan Düsseldorf
   Eastbourne Edirne Ege Esbjerg Essen
   Fethiye Firenze
-  Gdynia Gent Glidice Gorontalo Gölcük Gresik Guangzhou Guayaquil
-  Hamburg Hangzhou Hannover Hegyvidék Helsinki Hornbæk Huangshi Hyderabad
-  Isparta Istanbul Izmir
-  Jaipur Jakarta Jember Jiamusi Jiangyou Jilin Jinchang Jincheng Jinjiang
+  Garches Gdynia Gent Glidice Gorontalo Gölcük Gresik Guangzhou Guayaquil
+  Haderslev Hamburg Hangzhou Hannover Harplinge Harstad 
+  Hegyvidék Heimdal Helsinki Hillerød
+  Hornbæk Huangshi Hyderabad
+  Iasi Isparta Istanbul Izmir
+  Jaipur Jakarta Jember Jessheim Jiamusi Jiangyou Jilin Jinchang 
+  Jincheng Jinjiang
   Kadirli Kalisz Kalyani Kanpur Karachi Karlsruhe Kastamonu Katowice
-  Kediri Kiel Kielce Kiev Kolkata Köln Krakow Kristiansand
+  Kediri Ketsch Kiel Kielce Kiev Kolkata Köln Krakow Kristiansand
   Kudus Kunshan Kuopio Kütahya
   Leiden Leszno Leuven Leverkusen Lhokseumawe Lille Lima Lincoln
   Ljubljana London Lubin Lublin Lumajang
   Maastricht Madrid Makassar Malmö Manahasa Manado Manchester 
-  Manisa Mannheim Marbella Martapura Malatya Mataram Medan Melbourne
-  Midyat Milan Minsk Miskolc Montpellier Mumbai Munich
-  Nagpur Nagykanizsa Nanning Narita Nazilli Näsby Nijmegen Ningbo Nürnberg
+  Manisa Mannheim Marbella Martapura Malatya Massy Mataram 
+  Medan Melbourne Mersin Midyat Milan Minsk Miskolc Montpellier 
+  Mumbai Munich
+  Nagpur Nagykanizsa Nanning Narita Nazilli Näsby 
+  Nijmegen Ningbo Niski Norrøna Nürnberg Næstved
   Odense Oldenburg Orhangazi Oslo Oxford
   Padang Padova Palembang Palermo Palma Palu Pariaman Paris
   Pekanbaru Pelotas Pernik Perth Pesaro Pescara Posillipo
@@ -75,7 +82,7 @@ my @SINGLE_WORDS = qw(
   Saarbrücken Salerno Samarinda Samsun Santiago Sanya Sarpsborg
   Secunderabad Semarang Serang Shanghai Shaoguan Shenyang Shenzhen
   Shihua Sibiu Sidoarjo Skien Skopje Sleman Sliven Sofia Split
-  Stavanger Stuttgart Surabaya Suzhou Sydney Szeged
+  Stavanger Stuttgart Sunndalsøra Surabaya Suzhou Sydney Szeged
   Taizhou Takayama Tallinn Tarnów Täby Temuco Tianjin Tokyo Toulouse
   Trieste Trondheim Tromsø
   Udaipur Uppsala Utrecht
@@ -84,6 +91,7 @@ my @SINGLE_WORDS = qw(
   Warsaw Wellington Worcester Wroclaw Wuhan
   Yambol Yibin Yokohama Yogyakarta
   Zagreb Zhenjiang Zhongshan Zhuzhou Zigong Zurich
+  Åkirkeby Århus
 );
 
 my %SINGLE_TYPOS =
@@ -99,9 +107,14 @@ my %SINGLE_TYPOS =
   Makassar => ['makasar'],
   Manahasa => ['mnhasa'],
   Munich => ['münchen'],
+  Prague => ['praha'],
   Radkov => ['radkow'],
+  Sunndalsøra => ['sundalsora'],
   Tarnów => ['tarnow'],
-  Warsaw => ['warsow']
+  Tromsø => ['tromso', 'tromsoe'],
+  Warsaw => ['warsow'],
+  Åkirkeby => ['aakirkeby'],
+  Århus => ['aarhus']
 );
 
 
