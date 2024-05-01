@@ -27,6 +27,7 @@ use Suggestors;
 use TeamFun;
 use TeamSponsor;
 use TeamOrganization;
+use TeamAbbr;
 use TeamCountry;
 use TeamRegion;
 use TeamCity;
@@ -45,6 +46,7 @@ my @TAG_ORDER = qw(
   TEAM_FUN 
   TEAM_SPONSOR 
   TEAM_ORGANIZATION 
+  TEAM_ABBR 
   TEAM_COUNTRY 
   TEAM_REGION 
   TEAM_CITY 
@@ -103,6 +105,7 @@ sub init_hashes
   set_hashes_team_university('TEAM_UNIVERSITY');
   set_hashes_team_club('TEAM_CLUB');
   set_hashes_team_organization('TEAM_ORGANIZATION');
+  set_hashes_team_abbr('TEAM_ABBR');
   set_hashes_team_captain('TEAM_CAPTAIN');
   set_hashes_team_bot('TEAM_BOT');
   set_hashes_team_country('TEAM_COUNTRY');

@@ -38,10 +38,11 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Aabenraa Aalborg Adana Adelaide Ahmedabad Akhisar Alexandria Alytus
-  Amarillo Ambon Amsterdam Ankara Antalya Antony Antwerpen
-  Asenovgrad Assis Athens Auckland Augsburg Ayacucho
-  Balikpapan Bamberg Bandung Bangalore Bangkok Banjarmasin Barcelona
+  Aabenraa Aalborg Adana Adelaide Ahmedabad Akhisar Alexandria 
+  Altay Alytus Amarillo Ambon Amsterdam Anadolu Ankara Antalya 
+  Antony Antwerpen Asenovgrad Assis Athens Auckland Augsburg Ayacucho
+  Balikpapan Ballerup Bamberg Bandung Bangalore Bangkok 
+  Banjarmasin Barcelona
   Bath Batman Batu Beijing Bekasi Belgrade Bengkulu Beograd Bergen Berlin 
   Bhubaneshwar Bielefeld Bitung Blitar Bogor Bologna Bonn Bordeaux Borivli
   Bremen Brisbane Bucharest Budapest Bursa Burdur Bytom
@@ -50,7 +51,7 @@ my @SINGLE_WORDS = qw(
   Coventry Cuenca
   Dalian Dalls Daqing Darmstadt Debrecen Delft Delhi Denizli
   Dimitrovgrad Dobrich Dombivli Dongguan Düsseldorf
-  Eastbourne Edirne Esbjerg Essen
+  Eastbourne Edirne Ege Esbjerg Essen
   Fethiye Firenze
   Gdynia Gent Glidice Gorontalo Gölcük Gresik Guangzhou Guayaquil
   Hamburg Hangzhou Hannover Hegyvidék Helsinki Hornbæk Huangshi Hyderabad
@@ -64,7 +65,7 @@ my @SINGLE_WORDS = qw(
   Maastricht Madrid Makassar Malmö Manahasa Manado Manchester 
   Manisa Mannheim Marbella Martapura Malatya Mataram Medan Melbourne
   Midyat Milan Minsk Miskolc Montpellier Mumbai Munich
-  Nagpur Nagykanizsa Nanning Narita Nazilli Nijmegen Ningbo Nürnberg
+  Nagpur Nagykanizsa Nanning Narita Nazilli Näsby Nijmegen Ningbo Nürnberg
   Odense Oldenburg Orhangazi Oslo Oxford
   Padang Padova Palembang Palermo Palma Palu Pariaman Paris
   Pekanbaru Pelotas Pernik Perth Pesaro Pescara Posillipo
@@ -98,6 +99,7 @@ my %SINGLE_TYPOS =
   Makassar => ['makasar'],
   Manahasa => ['mnhasa'],
   Munich => ['münchen'],
+  Radkov => ['radkow'],
   Tarnów => ['tarnow'],
   Warsaw => ['warsow']
 );
