@@ -28,7 +28,8 @@ my @MULTI_WORDS =
   'Novi Sad',
   'Reggio Emilia',
   'Silesia Gliwice',
-  'Villa Fabbriche'
+  'Villa Fabbriche',
+  'Vrnjacka Banja'
 );
 
 my %MULTI_TYPOS =
@@ -36,6 +37,8 @@ my %MULTI_TYPOS =
   Istanbul => ['ýstanbul'],
   Ningbo => ['ning bo'],
   'Reggio Emilia' => ['r.e.', 'reggio e'],
+  Pudong => ['pu dong'],
+  Qingdao => ['qing dao'],
   'Silesia Gliwice' => ['silezia gliwice'],
   'Villa Fabbriche' => ['v.fabbr.', 'villa fabb.', 'v. fabbriche',
     'v.fabbriche']
@@ -64,9 +67,11 @@ my @SINGLE_WORDS = qw(
   Eastbourne Edirne Ege Esbjerg Essen
   Fethiye Firenze
   Garches Gdynia Gent Glidice Gorontalo Gölcük Gresik Guangzhou Guayaquil
+
   Haderslev Hamburg Hangzhou Hannover Harplinge Harstad 
   Hegyvidék Heimdal Helsinki Herning Hillerød
   Hornbæk Hosguru Huangshi Hyderabad
+
   Iasi Isparta Istanbul Izmir
   Jaipur Jakarta Jember Jessheim Jiamusi Jiangyou Jilin Jinchang 
   Jincheng Jinjiang
@@ -80,23 +85,33 @@ my @SINGLE_WORDS = qw(
   Medan Melbourne Mersin Midyat Milan Minsk Miskolc 
   Montpellier Moradabad Mumbai Munich
   Nagpur Nagykanizsa Nanning Narita Nazilli Näsby 
-  Nijmegen Ningbo Niski Norrøna Nürnberg Næstved
+  Nijmegen Ningbo Niski Norrøna Nürnberg Nyon Nærbø Næstved
+
   Odense Oldenburg Orhangazi Oslo Oxford
-  Padang Padova Palembang Palermo Palma Palu Pariaman Paris
+
+  Padang Padova Palembang Palermo Palma Palu Pamukkale Pariaman 
+  Paris Pärnu
   Pekanbaru Pelotas Pernik Perth Pesaro Pescara Posillipo
+  Pula
+
+  Qingdao
+
   Radkov Randers Rayong Reims Riga Rijeka Rimini Rome
-  Pisa Pleven Plovdiv Pontianak Potsdam Prague Pula Pune Puri
+  Pisa Pleven Plovdiv Pontianak Potsdam Prague Pudong Pula Pune Puri
+
   Rajasthan Rødovre
   Saarbrücken Salerno Samarinda Samsun Santiago Sanya Sarpsborg
   Secunderabad Semarang Serang Shanghai Shaoguan Shenyang Shenzhen
   Shihua Sibiu Sidoarjo Skien Skopje Sleman Sliven Sofia Sortland Split
   Stavanger Stuttgart Sunndalsøra Surabaya Suzhou Sydney Szeged
-  Taizhou Takayama Tallinn Tarnów Täby Temuco Tianjin Tokyo Toulouse
-  Trieste Trondheim Tromsø
+  Taizhou Takayama Tallinn Tarnów Täby Temuco Tianjin Tianya
+  Tokyo Toulouse Trieste Trondheim Tromsø
   Udaipur Uppsala Utrecht
   Varese Varna Vejle Vilnius Vraca
   Xiamen Xinghua Xinyi
-  Warsaw Wellington Worcester Wroclaw Wuhan
+
+  Warsaw Wellington Worcester Wratislavia Wroclaw Wuhan
+
   Yambol Yibin Yokohama Yogyakarta
   Zagreb Zhenjiang Zhongshan Zhuzhou Zigong Zurich
   Åkirkeby Århus
@@ -119,12 +134,13 @@ my %SINGLE_TYPOS =
   Cerkezkoy => ['çerkezköy'],
   Corlu => ['çorlu'],
   Izmir => ['ýzmir'],
-  Jakarta => ['dki'],
+  Jakarta => ['dki', 'jakar', 'jkt'],
   Kolkata => ['calcutta'],
   Krakow => ['kraków'],
   Makassar => ['makasar'],
   Manahasa => ['mnhasa'],
   Munich => ['münchen'],
+  Pamukkale => ['pamuk'],
   Prague => ['praha'],
   Radkov => ['radkow', 'kadkov'],
   Sunndalsøra => ['sundalsora'],

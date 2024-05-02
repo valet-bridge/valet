@@ -29,6 +29,7 @@ my @MULTI_WORDS =
   'Kepulauan Riau',
   'New Caledonia',
   'New South Wales',
+  'North Minahasa',
   'North Celebes',
   'North Sulawesi',
   'Northern Gauteng',
@@ -36,6 +37,7 @@ my @MULTI_WORDS =
   'South Celebes',
   'South East Celebes',
   'South Jakarta',
+  'South Minahasa',
   'South Sulawesi',
   'South Sumatra',
   'South Sweden',
@@ -57,12 +59,14 @@ my %MULTI_TYPOS =
   'East Java' => ['jawa timur'],
   'North Sulawesi' => ['notth sulawesi', 'north sulawsei',
     'sulawesi utara', 'sulawasi utara'],
+  'North Minahasa' => ['minahasa Utara'],
   'North Sumatra' => ['sumatera utara'],
   'Vest Agder' => ['vest-agder'],
   'West Sumatra' => ['west sumatera'],
   'South Africa' => ['south frica'],
   'Vest Agder' => ['vest-agder'],
   'South Jakarta' => ['jakarta selatan'],
+  'South Minahasa' => ['minahasa selatan', 'minsel'],
   'South Sulawesi' => ['sulawesi selatan', 'sulsel'],
   'South Sumatra' => ['south sumatera', 'sumatera selatan'],
   'Vest Finnmark' => ['vest-finnmark'],
@@ -80,6 +84,7 @@ my @SINGLE_WORDS = qw(
   Karimun Kepri Kedungwaru
   Lumajang
   Queensland
+  Punjab
   Ratchaburi Rogaland
   Victoria
   Zhejiang

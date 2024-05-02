@@ -66,7 +66,11 @@ my @MULTI_WORDS =
   'J. Pereira de Sousa',
   'Lögfræðiskrifstofa Islands',
   'Lögfræðistofa Bjarna',
+  'Mitra Buana',
   'Novi Kod',
+  'PD Real Estate',
+  'PD Times',
+  'PD Transnational',
   'Palma Karya Mandiri',
   'Paulo G. Pereira',
   'Poddar Developers',
@@ -75,6 +79,7 @@ my @MULTI_WORDS =
   'Red Bull',
   'Red Cotton',
   'Phoenix TV',
+  'Polarman Regnskap',
   'Shanghai Automobile',
   'Shanghai Financial',
   'Shenzhen Electronic City',
@@ -137,12 +142,15 @@ my %MULTI_TYPOS =
     'lögfræðistofa ísl', 'lögfræðistofa ísl.'],
   'Lögfræðistofa Bjarna' => ['lögfr.st bjarna', 'lögfr.stofa bjarna',
     'lögfr.stofa ´bjarna'],
+  'PD Times' => ['p d times'],
   'Paulo G. Pereira' => ['p g pereira', 'p. g. pereira', 
     'pg pereira', 'p.g.pereira'],
   'Pertamina' => ['pertamina ep', 'pertamina ft', 'pertamina field', 
     'pertamina ge', 'pertamina indonesia'],
   'Poddar Developers' => ['poddar development', 'poddar dev',
-    'podder dev', 'podder developers', 'poddar devekopers'],
+    'podder dev', 'podder developers', 'poddar devekopers',
+    'poddar dovelopers'],
+  Pufa => ['pu fa'],
   'Shree Cement' => ['shre cement', 'shree cements', 'sree cement',
     'sri cements'],
   'Société Générale' => ['societe generale', 'societè general'],
@@ -167,7 +175,7 @@ my @SINGLE_WORDS = qw(
   Enterprise
   GAMAX
   Lavazza
-  Pertamina
+  Pertamina Pufa
   Sagaplast Solakoglu
   Vito
 );

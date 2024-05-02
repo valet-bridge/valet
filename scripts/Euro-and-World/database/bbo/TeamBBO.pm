@@ -329,11 +329,13 @@ sub study_part
     # Turn the artificial separator back into a space.
     $part =~ s/~/ /g;
 
+    return if team_specific_hashes($part, $token, $chain);
+
     # Bit of a kludge: Remove trailing dot.
     $part =~ s/\.$//;
-
     return if team_specific_hashes($part, $token, $chain);
-    die "Should not happen $part";
+
+    warn "Should not happen $part";
   }
 
   if (set_token($part, $token))

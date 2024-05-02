@@ -20,6 +20,9 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  U20 => ['u 20', 'u-20'],
+  U25 => ['u 25'],
+  U26 => ['u-26']
 );
 
 my @SINGLE_WORDS = qw(

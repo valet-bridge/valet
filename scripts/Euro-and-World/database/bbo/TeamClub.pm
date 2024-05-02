@@ -58,7 +58,9 @@ my @MULTI_WORDS =
   'El Rabwa Club',
   'Fjends BK',
   'Førde BK',
+  'Gabrial UI',
   'Grant Thornton',
+  'Greve Strand',
   'Hanseatic Hamburg BC',
   'Hindusthan Club',
   'Hok Studiecentrum',
@@ -67,6 +69,7 @@ my @MULTI_WORDS =
   'Kota Club',
   'Köln Lindenthal',
   'Kultcamp Rieneck',
+  'Majör Boğaziçi',
   'Midt Trøndelag',
   'Mike Lawrence Club',
   'Moss BK',
@@ -87,6 +90,7 @@ my @MULTI_WORDS =
   'Semen Padang',
   'Studentenes',
   'Van Bric',
+  'Wadi Degla',
   'Young Sharks'
 );
 
@@ -127,6 +131,7 @@ my %MULTI_TYPOS =
     'sur belediye', 'd.bakýr sur', 'd.bakir sur'],
   'Drammen Arbeiderparti' => ['drammen arb'],
   'El Ahly'  => ['el ahly club', 'el-ahly club', 'el-ahly'],
+  'Gabrial UI' => ['gabrial-ui', 'gabrial - ui'],
   'Grant Thornton' => ['bc grant thornton', 'bc grant-thornton', 
     'bg thornton', 'grant thonrton', 'grantt thornton'],
   'Hanseatic Hamburg BC' => ['hanseatic bc', 'hanseatic hamburg'],
@@ -138,9 +143,9 @@ my %MULTI_TYPOS =
   'Karlsruher BSC' => ['karlsruher bc'],
   'Köln Lindenthal BC' => ['köln lindenthal', 'köln-lindenthal',
     'köln-lindenthaler', 'köln-lindenthaler b'],
-  'Mersin BSK' => ['mersin b.b.k.', 'mersin b.b.k.', 'mersin b.s.b',
-    'mersn ybsk'],
-  'Midt Trøndelag' => ['midt trondelag', 'midt-trøndelag'],
+  'Majör Boğaziçi' => ['major b', 'major bogazici'],
+  'Midt Trøndelag' => ['midt trondelag', 'midt-trøndelag',
+    'midt-trondelag'],
   'Nord Trøndelag' => ['nord -trøndelag', 'nord-trøndelag',
     'nord-trløndelag'],
   'OBK Kløverknekt' => ['obk kloverknekt', 'obk/kløverknekt'],
@@ -172,9 +177,11 @@ my %SINGLE_TYPOS =
   'BC Bamberger Reiter' => ['bamberger'],
   'BK 2000' => ['bk2000'],
   'Cerkezkoy Dinamik BSK' => ['Cerkezkoy'],
+  'Gabrial UI' => ['gabrial'],
   'Izmir BSB' => ['izmir.b.b.'],
   Kløverknekt => ['kloverknekt'],
-  Locomotiva => ['loco']
+  Locomotiva => ['loco'],
+  'Majör Boğaziçi' => ['majorbogazici']
 );
 
 

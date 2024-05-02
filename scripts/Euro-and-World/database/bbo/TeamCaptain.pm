@@ -47,6 +47,7 @@ my @MULTI_WORDS =
   'de Lombard',
   'de Monval',
   'De Muller',
+  'de Tessieres',
   'der Kinderen',
   'Defranchi',
   'Della Monta',
@@ -57,7 +58,11 @@ my @MULTI_WORDS =
   'Emil Thomsen',
   'Erla Sigurjónsdóttir',
   'Flemming Dahl',
+  'Gabriel Chagas',
   'Ginossar',
+  'Gunnlaugur Sævarsson',
+  'Gunnar Sjökvist',
+  'Gylfi Baldursson',
   'H.C. Nielsen',
   'Hecht Johansen',
   'Hemant Jalan',
@@ -119,6 +124,7 @@ my @MULTI_WORDS =
   'Peter Schaltz',
   'Poul Clemmensen',
   'Prakash Bandhari',
+  'Promila Saraf',
   'Qing Gong',
   'R.K. Sinha',
   'R.L. Kejriwal',
@@ -189,11 +195,13 @@ my %MULTI_TYPOS =
     'de botten', 'de bottom', 'debotton'],
   'de Bruyne' => ['de Bruyune'],
   'de Knijff' => ['deknijff', 'di knijff'],
+  'de Tessieres' => ['de tessiere', 'de tessier', 'de tessie'],
   "D'Orsi" => ['d orsi'],
   'El Baz' => ['baz'],
   'Erla Sigurjónsdóttir' => ['erla sigurjónsdótti'],
   'Flemming Dahl' => ['dahl'],
   'Ginossar' => ['eldad ginossar', 'ginossar eldad'],
+  'Gunnlaugur Sævarsson' => ['gunnlaugur sævars'],
   'H.C. Nielsen' => ['hc nielsen'],
   'Hecht Johansen' => ['hecht-johansen', 'hect johansen'],
   'Hermann Friðriksson' => ['Hermann Fridriksson'],
@@ -227,7 +235,7 @@ my %MULTI_TYPOS =
   'Nabil Chaker' => ['chaker'],
   'Nabil Edgtton' => ['n edgtton', 'n.edgtton'],
   'Patanè' => ["patane'"],
-  'Paul Hackett' => ['p hackett'],
+  'Paul Hackett' => ['p hackett', 'pd hackett'],
   'Paulo Rocha Pinto' => ['paulo pinto', 'rocha pinto'],
   'Pedro Morbey' => ['p. morbey'],
   'R.K. Sinha' => ["r k sinha'siv", "r k sinha's lv"],
@@ -267,7 +275,7 @@ my @SINGLE_WORDS = qw(
   Avci Avcioglu Avon Awad Aydin
 
   Babacan Babsch Bagge Bailey Baker Bakhshi Baki Bakkeren Baldini 
-  Baldursson Baleal Balkanski Ballebo Banerjee Bang
+  Baleal Balkanski Ballebo Banerjee Bang
   Barat Barbosa Bareket Barel Bartnes Barton Basabe Baseggio Basile Bassini
   Bathurst Batov Bauch Bavaresco Bayes Baze
   Bäckström Beauchamp Beale Beatty Becker Bello Bellosta Belonogov
@@ -295,7 +303,7 @@ my @SINGLE_WORDS = qw(
   Caldwell Callaghan Caprera Cambiaghi Campos Caracci Carbonnier Carmichael 
   Casen Cassini Carrasco Carruthers Carvalho Casabona Casadei 
   Castelbranco Castner Cattani Cayne Cengiz Cernat Cernato Cesati
-  Chadwick Chagas Chai Chambers Chan Chang Charletoux Charlotte Charlsen 
+  Chadwick Chai Chambers Chan Chang Charletoux Charlotte Charlsen 
   Chassagne Chatterji Chauvelot Chediak Cheek Chemla Chen Cheng Chizzoli 
   Chottin Chuang
   Cichocki Cilleborg Cimon Ciopettini Clair Clark Clement Clemmensen 
@@ -473,7 +481,7 @@ my @SINGLE_WORDS = qw(
   Tebha Teltscher Teodorescu Teramoto Terraneo Tesla Tez
   Thapa Thomsen Thompson Thomson Thoresen Thuillez Thurston 
   Ticha Tishler Tislevoll Todd Toffier Toivonen Tokay Tosi Townsend 
-  Travis Troberg Tubiska Tucker Tudor Tulin Tuomi Turner Tuszynski 
+  Travis Troberg Tubiska Tucker Tudor Tulin Tully Tuomi Turner Tuszynski 
   Tuwanakotta Tyradelli
   þorfinnsson
 
@@ -484,9 +492,10 @@ my @SINGLE_WORDS = qw(
   Viana Videv Vigil Vihtilä Vinay Vinciguerra Virvidakis Vitas 
   Vogt Volcker Vorobei Vriend Vroustis
 
-  Walsh Wang Wasik Waterlow Waters Watts Weingarten Weingold 
-  Weinstein Weisinger Welland Werdelin Westerlund Westheimer Westra
-  Westwood Whibley Wigoder Wijma Wikstrom Wildavsky Wilkinson 
+  Wademark Walsh Wang Ware Warne Wasik Waterlow Waters Watts 
+  Weingarten Weingold Weinstein Weisinger Welland Werdelin 
+  Westerlund Westheimer Westra Westwood Whibley Wigoder Wijma 
+  Wikstrom Wildavsky Wilkinson 
   Willenken Williams Willis Wiltshire Witek Wittes
   Wold Wolfarth Wolff Wolfson Wolpert Woodruff Woolsey
   Worm Wortel Wrang Wyer
@@ -520,6 +529,7 @@ my %SINGLE_TYPOS =
   Czímer => ['czimer'],
   'David Birman' => ['birman'],
   'de Livera' => ['delivera'],
+  'de Tessieres' => ['tessieres'],
   Debonnaire => ['debonaire'],
   "Del'Monte" => ['delmonte'],
   Demirbas => ['Demirbaþ'],
@@ -527,6 +537,7 @@ my %SINGLE_TYPOS =
   Eisenberg => ['einsenberg'],
   Karadeniz => ['karadenýz'],
   'Lotan Fisher' => ['fisher'],
+  'Gabriel Chagas' => ['chagas'],
   Gartaganis => ['gartaginas'],
   Gladysh => ['gladysch'],
   Golebiowski => ['golembiowski'],
@@ -535,6 +546,7 @@ my %SINGLE_TYPOS =
   Gromöller => ['gromoeller', 'gromuller'],
   Giura => ['guira'],
   Günther => ['guenther'],
+  'Gylfi Baldursson' => ['baldursson'],
   Haughie => ['huaghie'],
   'Hecht Johansen' => ['hecht'],
   'Hong NIU' => ['hongniu'],
@@ -557,6 +569,7 @@ my %SINGLE_TYPOS =
   Mahaffey => ['mahafey', 'mahaffee'],
   Manyawar => ['manyvar'],
   Markowicz => ['markovics', 'markowitz'],
+  McLeish => ['mc. leish'],
   'Maxim Henbest' => ['henbest'],
   Mesbur => ['mesbor'],
   'Miguel Teixeira' => ['teixeira'],
@@ -569,6 +582,7 @@ my %SINGLE_TYPOS =
   'Pedro Morbey' => ['morbey'],
   'Peirão' => ['peirao'],
   'Procter' => ['proctor'],
+  Quantin => ['quentin'],
   'Sally Brock' => ['brock'],
   'Sanjay Bhattacharya' => ['bhattacharya'],
   'Simon Gillis' => ['gillis'],

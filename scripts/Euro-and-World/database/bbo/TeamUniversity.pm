@@ -43,9 +43,9 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  'Anadolu University' => ['uni. anadolu', 'anadolu uni'],
+  'Anadolu University' => ['uni. anadolu', 'anadolu uni.'],
   'Ankara University' => ['ankara uni.'],
-  'Bilkent University' => ['bilkent uni'],
+  'Bilkent University' => ['bilkent uni.'],
   'Budapest University' => ['budapest uni'],
   'École Polytechnique' => ['paris polytechnix', 'ecole polytech'],
   'Gunadurma' => ['guna darma'],

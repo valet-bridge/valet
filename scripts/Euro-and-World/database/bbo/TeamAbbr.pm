@@ -35,7 +35,7 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  'Bridge Club' => [qw(aba absk ahm
+  'Bridge Club' => [qw(aba absk ahm assn
     bþb bþbký bsbkisk belediye beledýye buyuksehir ybsk
     bbsk bc bcn bjk bk bld bmsk bridgeclub bridgeklub 
     bs bsb bsc bsk bskd

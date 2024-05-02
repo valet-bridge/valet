@@ -240,6 +240,8 @@ my @MULTI_WORDS =
   'Master Minds',
   'Männer mit ELAN',
   'Meins bleibt meins',
+  'Minas Trith',
+  'Missão Impossivel',
   'Moo York Nix',
   'Mostly Harmless',
   'Ms. Guggenheim',
@@ -282,7 +284,8 @@ my @MULTI_WORDS =
   'Plejans Plöjare',
   "Pradeep's Four",
   'Precision Marathon',
-  'Quattro Bruxas',
+  'Quatro Bruxas',
+  'Queen and Knights',
   'Queen of Hearts',
   'Radio Communication',
   'Randers 2.0',
@@ -310,6 +313,7 @@ my @MULTI_WORDS =
   'Shining Pig',
   'Shooting',
   'Shy Ant',
+  'Si Fu Te',
   'Siderkongen og kidz',
   'Silver Eagle',
   'Simple Minds',
@@ -414,6 +418,7 @@ my @MULTI_WORDS =
   'Well Wise',
   'Whisky Team',
   'Winter Is Coming',
+  'Yitang QIAO',
   'Young Guns',
   'Young Sharks',
   'Young Warriors',
@@ -476,10 +481,12 @@ my %MULTI_TYPOS =
   'Man Harr det man har' => ['man harr det man ha'],
   'Manchester United' => ['man u', 'man utd'],
   'Ms. Guggenheim' => ['ms. gugenheim'],
+  'Murphys lag' => ['murpyhs lag'],
   'Mystery Foursome' => ['mystery 4some'],
   'Nice and Monsters' => ['nice monsters'],
   'Nilslands Slowfoxes' => ['nilslands slowfoxers', 'nilsland slowfoxes'],
   "Pradeep's Four" => ["pradeep's 4"],
+  'Queen and Knights' => ["queen's & knight"],
   'Saint Titus' => ['st titus', 'st. titus'],
   'Sakurai' => ['japan sakurai'],
   'Sivves straffdubbl' => ['sivves straffdubbl.', 'sivves straffdbl',
@@ -495,7 +502,8 @@ my %MULTI_TYPOS =
   'The Palookas' => ['the_palookas'],
   'Tre rette og en vrang' => ['tre rette og en vra'],
   'Troll i eske' => ['tre troll i eske', 'tre troll ...'],
-  'Victorious Secret' => ['victorius secret']
+  'Victorious Secret' => ['victorius secret'],
+  'Yitang QIAO' => ['qiao yi tang']
 );
 
 my @SINGLE_WORDS = qw(
