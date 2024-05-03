@@ -36,7 +36,8 @@ my %SINGLE_TYPOS =
   Juniors => [qw(juniiors juniores junior yuniors yunior jun)],
   Youngsters => [qw(youngster young youth genclik)],
   Schools => [qw(school)],
-  U20 => [qw(u20s)]
+  U20 => [qw(u20s)],
+  Girls => [qw(qirl)]
 );
 
 

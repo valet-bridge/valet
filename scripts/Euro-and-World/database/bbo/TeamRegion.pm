@@ -45,7 +45,9 @@ my @MULTI_WORDS =
   'Vest Finnmark',
   'West Bengal',
   'West Borneo',
+  'West District',
   'West Java',
+  'West Kalimantan',
   'West Sumatra',
   'Western Australia',
   'Western Province'

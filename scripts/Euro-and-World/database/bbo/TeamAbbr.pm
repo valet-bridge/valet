@@ -25,6 +25,7 @@ my %MULTI_TYPOS =
   'Bridge Club' => ['b.b.k.', 'b.s.b', 'b.seh bel', 'b. shr bld',
     'bld.spor', 'bric klb', 'bric kulubu', 'bric sk', 'briç sk', 
     'brýç sk', 'bric sk', 'briç sk', 'bric sk', 'briç ýsk', 
+    'bridge clu',
     'bric kulubu', 'bridz klub', 'b.b.s.k', 'bsb bk', 
     'kontrat bsk', 'spor kulubu', 'spor kulübü'],
   'Sporting Club' => ["sport' c", 'sports c', 'spor kb', 's c']

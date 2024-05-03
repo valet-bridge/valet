@@ -91,6 +91,8 @@ my @MULTI_WORDS =
   'Studentenes',
   'Van Bric',
   'Wadi Degla',
+  'Wampon Bodi Papua',
+  'WCG Mumbai',
   'Young Sharks'
 );
 
@@ -155,7 +157,8 @@ my %MULTI_TYPOS =
   'Qin Lian Club' => ['qin lian'],
   'Østfold og Follo' => ['østfold/follo'],
   'Øvre Ottadalen' => ['øvre ottadal'],
-  'Studentenes BK' => ['studentene bk']
+  'Studentenes BK' => ['studentene bk'],
+  'WCG Mumbai' => ['wcg (mum)', 'wcg-mumbai']
 );
 
 my @SINGLE_WORDS = qw(

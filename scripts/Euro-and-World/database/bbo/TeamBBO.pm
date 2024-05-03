@@ -332,8 +332,10 @@ sub study_part
     return if team_specific_hashes($part, $token, $chain);
 
     # Bit of a kludge: Remove trailing dot.
-    $part =~ s/\.$//;
-    return if team_specific_hashes($part, $token, $chain);
+    if ($part =~ s/\.$//)
+    {
+      return if team_specific_hashes($part, $token, $chain);
+    }
 
     warn "Should not happen $part";
   }

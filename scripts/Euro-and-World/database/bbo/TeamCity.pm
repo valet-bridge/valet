@@ -29,11 +29,13 @@ my @MULTI_WORDS =
   'Reggio Emilia',
   'Silesia Gliwice',
   'Villa Fabbriche',
-  'Vrnjacka Banja'
+  'Vrnjacka Banja',
+  'Xin Zhu'
 );
 
 my %MULTI_TYPOS =
 (
+  'City of Helsinki' => ['helsinki'],
   Istanbul => ['ýstanbul'],
   Ningbo => ['ning bo'],
   'Reggio Emilia' => ['r.e.', 'reggio e'],
@@ -47,7 +49,7 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   Aabenraa Aalborg Adana Adelaide Agresar Ahmedabad Akçeşme 
   Akdeniz Akhisar Alexandria Allahabad Altay Alytus Amarillo Ambon 
-  Amsterdam Anadolu Ankara Annecy Antalya Antony Antwerpen 
+  Amsterdam Anadolu Ankara Annecy Antalya Antony Antwerpen Arendal
   Asenovgrad Assis Atakoy Athens Auckland Augsburg Ayacucho Ayvalik
 
   Balcova Balikpapan Balisekir Ballerup Bamberg Bandung 
@@ -62,6 +64,7 @@ my @SINGLE_WORDS = qw(
   Caen Cairns Canakkale Canberra Caracas Catania Çayyolu 
   Cerkezkoy Changzhou Chelsea Chengdu Chennai Chicago Chongqing 
   Chumphon Cimahi Clichy Corlu Courseulles Coventry Cuenca
+
   Dalian Dalls Daqing Darmstadt Debrecen Delft Delhi Denizli
   Dimitrovgrad Dobrich Dombivli Dongguan Düsseldorf
   Eastbourne Edirne Ege Esbjerg Essen
@@ -100,14 +103,19 @@ my @SINGLE_WORDS = qw(
   Pisa Pleven Plovdiv Pontianak Potsdam Prague Pudong Pula Pune Puri
 
   Rajasthan Rødovre
+
   Saarbrücken Salerno Samarinda Samsun Santiago Sanya Sarpsborg
   Secunderabad Semarang Serang Shanghai Shaoguan Shenyang Shenzhen
   Shihua Sibiu Sidoarjo Skien Skopje Sleman Sliven Sofia Sortland Split
   Stavanger Stuttgart Sunndalsøra Surabaya Suzhou Sydney Szeged
+
   Taizhou Takayama Tallinn Tarnów Täby Temuco Tianjin Tianya
   Tokyo Toulouse Trieste Trondheim Tromsø
+
   Udaipur Uppsala Utrecht
-  Varese Varna Vejle Vilnius Vraca
+
+  Varese Varna Vejle Vienna Vilnius Vraca
+
   Xiamen Xinghua Xinyi
 
   Warsaw Wellington Worcester Wratislavia Wroclaw Wuhan
@@ -120,9 +128,10 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   Adelaide => ['adeliade'],
-  Akçeşme => ['akcesme'],
+  Akçeşme => ['akcesme', 'akçeþme'],
   Akdeniz =>['akdenýz'],
   Antwerpen => ['antwerp'],
+  Arendal => ['arendals'],
   Auckland => ['akarana'],
   Ayvalik => ['aivali'],
   Balisekir => ['balikesýr'],
@@ -137,15 +146,18 @@ my %SINGLE_TYPOS =
   Jakarta => ['dki', 'jakar', 'jkt'],
   Kolkata => ['calcutta'],
   Krakow => ['kraków'],
+  Kristiansand => ['kristiansands'],
   Makassar => ['makasar'],
   Manahasa => ['mnhasa'],
   Munich => ['münchen'],
   Pamukkale => ['pamuk'],
   Prague => ['praha'],
   Radkov => ['radkow', 'kadkov'],
+  Rome => ['roma'],
   Sunndalsøra => ['sundalsora'],
   Tarnów => ['tarnow'],
   Tromsø => ['tromso', 'tromsoe'],
+  Vienna => ['wien'],
   Warsaw => ['warsow'],
   Åkirkeby => ['aakirkeby'],
   Århus => ['aarhus', 'arhus']

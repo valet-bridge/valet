@@ -18,8 +18,10 @@ my @MULTI_WORDS =
 (
   'Bosnia & Herzegovina',
   'Chinese Taipei',
+  'Costa Rica',
   'Czech Republic',
   'Faroe Islands',
+  'French Guyana',
   'French Polynesia',
   'Great Britain',
   'Hong Kong',
@@ -41,19 +43,21 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   'Bosnia & Herzegovina' => ['bosnia-herzegovina', 
-    'bosnia&herzegovina', 'bosnia and herz.'],
+    'bosnia&herzegovina', 'bosnia and herz'],
   'Chinese Taipei' => ['chinese tai', 'chinese taipe', 'chinese tapei',
     'chinese taipae', 'chi taipei', 'chainese taipei', 'ch.taipei', 
     'china taipei'],
-  'Czech Republic' => ['czec republic', 'czech rep'],
-  'Faroe Islands' => ['faroe_islands', 'faroe island'],
+  'Czech Republic' => ['czec republic', 'czech rep', 'czech_rep',
+    'czech_republic'],
+  'Faroe Islands' => ['faroe_islands', 'faroe island', 'faroe_isl'],
   'Great Britain' => ['g.britain'],
   'Hong Kong' => ['china hong kong', 'china hongkong', 'china honk kong'],
   'Isle of Man' => ['isle of man'],
-  'Netherlands' => ['team orange', 'the netherlands'],
+  'Netherlands' => ['team orange', 'the netherlands', 'pays-bas'],
   'New Zealand' => ['new zeland', 'new zealans', 'new zeland'],
   'North Macedonia' => ['macedonia'],
-  'Northern Ireland' => ['northertn irelsnd'],
+  'Northern Ireland' => ['northertn irelsnd', 'n irelena', 'n. ireland',
+    'n ire', 'north ire', 'northern irelnd'],
   'Republic of Ireland' => ['rep. of ireland', 'rep of ireland', 'roi',
     'rep ire', 'rep ireland', 'republic of irelend', 'reublic of ireland',
     'r of ireland'],
@@ -75,7 +79,7 @@ my @SINGLE_WORDS = qw(
   Estonia 
   Finland 
   Germany 
-  Guyana
+  Guernsey
   Hungary 
   Ireland 
   Italy 
@@ -112,13 +116,14 @@ my %SINGLE_TYPOS =
   'Chinese Taipei' => ['taipei'],
   Colombia => ['columbia'],
   Croatia => ['croatie'],
-  Denmark => ['danmark', 'danemark', 'denmarrk'],
+  Denmark => ['danmark', 'danemark', 'denmarrk', 'den'],
   England => ['eng'],
   Estonia => ['estonie'],
   Finland => ['finnland'],
   France => ['fra'],
   Germany => ['deutschland'],
-  Guyana => ['french guiana', 'french guyana', 'french guayana'],
+  'French Guyana' => ['guyana'],
+  'Hong Kong' => ['hk', 'hongkong'],
   Hungary => ['hungar'],
   Indonesia => ['timnas'],
   Ireland => ['roireland', 'irelnd', 'irelsnd', 'irlande',
@@ -129,13 +134,12 @@ my %SINGLE_TYPOS =
   Luxembourg => ['luxemburg'],
   Macau => ['china macau'],
   Madagascar => ['madagaskar'],
-  Netherlands => ['the netherlands', 'nederlands', 'netherland', 
-    'nrtherlands', 'netherlans', 'netherlnd', 'neth', 'nl', 'net',
-    'pays-bas'],
+  Netherlands => ['nederlands', 'netherland', 'nrtherlands', 
+    'netherlans', 'netherlnd', 'neth', 'nl', 'net'],
   Monaco => ['nonaco'],
   'New Zealand' => ['nwzealand'],
   'North Macedonia' => ['macedonia'],
-  'Northern Ireland' => ['nireland', 'n irelena', 'n. ireland'],
+  'Northern Ireland' => ['nireland'],
   Norway => ['norge', 'norges', 'norwegen', 'nor'],
   Palestine => ['palastine'],
   Philippines => ['philipppines'],
