@@ -26,6 +26,7 @@ my @MULTI_WORDS =
   'East Borneo',
   'East Jakarta',
   'East Java',
+  'East Kalimantan',
   'Kepulauan Riau',
   'New Caledonia',
   'New South Wales',
@@ -33,14 +34,19 @@ my @MULTI_WORDS =
   'North Celebes',
   'North Sulawesi',
   'Northern Gauteng',
+  'South America',
   'South Australia',
   'South Celebes',
   'South East Celebes',
   'South Jakarta',
+  'South Kalimantan',
   'South Minahasa',
   'South Sulawesi',
   'South Sumatra',
   'South Sweden',
+  'Troms og Ofoten',
+  'Uttar Pradesh',
+  'Val di Magra',
   'Vest Agder',
   'Vest Finnmark',
   'West Bengal',
@@ -55,23 +61,27 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  'Central Java' => ['jawa tengah'],
+  'Central Java' => ['jawa tengah', 'jateng'],
   'Central Sulawesi' => ['sulawesi tengah'],
   'East Jakarta' => ['jakarta timur'],
-  'East Java' => ['jawa timur'],
+  'East Java' => ['jawa timur', 'jatim'],
+  'East Kalimantan' => ['kalimantan timur'],
   'North Sulawesi' => ['notth sulawesi', 'north sulawsei',
-    'sulawesi utara', 'sulawasi utara'],
-  'North Minahasa' => ['minahasa Utara'],
+    'sulawesi utara', 'sulawasi utara', 'sulut'],
+  'North Minahasa' => ['minahasa utara'],
   'North Sumatra' => ['sumatera utara'],
   'Vest Agder' => ['vest-agder'],
   'West Sumatra' => ['west sumatera'],
   'South Africa' => ['south frica'],
   'Vest Agder' => ['vest-agder'],
   'South Jakarta' => ['jakarta selatan'],
+  'South Kalimantan' => ['kalimantan selatan', 'kalsel'],
   'South Minahasa' => ['minahasa selatan', 'minsel'],
   'South Sulawesi' => ['sulawesi selatan', 'sulsel'],
-  'South Sumatra' => ['south sumatera', 'sumatera selatan'],
+  'South Sumatra' => ['south sumatera', 'sumatera selatan', 'sumsel'],
+  'Val di Magra' => ['val magra'],
   'Vest Finnmark' => ['vest-finnmark'],
+  'West Kalimantan' => ['kalimantan barat'],
   'West Sumatra' => ['sumatera barat', 'west sumatera'],
   'Western Australia' => ['wa'],
   'West Bengal' => ['west bengla', 'westbengal'],
@@ -81,13 +91,17 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   Anhui
   Bali Bornholm Buskerud
+  Eurasia
   Florida
-  Hebei
+  Haugaland Hebei
   Karimun Kepri Kedungwaru
   Lumajang
+  Mjøsa
+  Norrland
   Queensland
   Punjab
-  Ratchaburi Rogaland
+  Ratchaburi Rogaland Rosfjord
+  Telemark
   Victoria
   Zhejiang
 );
@@ -95,6 +109,7 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   'Australian Central Territory' => ['act'],
+  Eurasia => ['avrasya'],
   'Kepulauan Riau' => ['riau', 'kepri'],
   'New South Wales' => ['nsw'],
   Queensland => ['qld'],

@@ -25,6 +25,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   EBU
+  GABSI
 );
 
 my %SINGLE_TYPOS =
