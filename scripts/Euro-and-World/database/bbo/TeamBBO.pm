@@ -146,9 +146,10 @@ sub set_overall_hashes
   if (keys %{$MULTI_WORDS{$key}})
   {
     my $multi_pattern = join('|', map { quotemeta }
-      keys %{$MULTI_WORDS{$key}});
+      sort { length($b) <=> length($a) } keys %{$MULTI_WORDS{$key}});
 
-    $MULTI_REGEX{$key} = qr/\b($multi_pattern)\b/i;
+    $MULTI_REGEX{$key} = qr/\b($multi_pattern)(?=\P{L}|\z)/i;
+    # $MULTI_REGEX{$key} = qr/\b($multi_pattern)\b/i;
   }
   else
   {
@@ -249,7 +250,7 @@ sub split_on_trailing_digits
   for my $i (reverse 0 .. $#$list_ref)
   {
     my $part = $list_ref->[$i];
-    next unless $part =~ /^([a-z]+)(\d+)$/i;
+    next unless $part =~ /^(.*[a-z])(\d+)$/i;
 
     my ($letters, $digits) = ($1, $2);
     next if $letters eq 'U' || $letters eq 'D';
@@ -426,7 +427,7 @@ sub study_team
   }
 
   # Split on separators.  $sep excludes \s+.
-  my $sep = qr/[\-\+_;"\/\(\)\|]/;
+  my $sep = qr/[\-\+\._;"\/\(\)\|]/;
   my $min = qr/[\-;"\/\(\)\|]/; # Minimal set with tildes
   my @initial_parts = split(/\s+/, $text);
   my @parts;

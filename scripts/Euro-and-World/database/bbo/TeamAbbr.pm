@@ -22,8 +22,11 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  'Bridge Club' => ['a.s.d',
-    'b.b.k.', 'b.s.b', 'b.seh bel', 'b. shr bld',
+  'Bridge Club' => [
+    'a.s.', 'a.s.d.',
+    'b.b.', 'b.b.k.', 'b.b.s.',
+
+    'b.s.b', 'b.seh bel', 'b. shr bld',
     'bld.spor', 'bric klb', 'bric kulubu', 'bric sk', 'briç sk', 
     'brýç sk', 'bric sk', 'briç sk', 'bric sk', 'briç ýsk', 
     'bridge clu',
