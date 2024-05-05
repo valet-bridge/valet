@@ -74,6 +74,7 @@ my @MULTI_WORDS =
   'Mike Lawrence Club',
   'Moss BK',
   'Møre og Romsdal',
+  'Nachteulen Leverkusen',
   'Nancy Jarville',
   'Nord Trøndelag',
   'OBK Kloverknekt',
@@ -88,6 +89,7 @@ my @MULTI_WORDS =
   'Quantum BC',
   'Royal Selangor Club',
   'Semen Padang',
+  'Shou Chuang',
   'Studentenes',
   'Van Bric',
   'Wadi Degla',
@@ -148,6 +150,7 @@ my %MULTI_TYPOS =
   'Majör Boğaziçi' => ['major b', 'major bogazici'],
   'Midt Trøndelag' => ['midt trondelag', 'midt-trøndelag',
     'midt-trondelag'],
+  'Nachteulen Leverkusen' => ['nachteulen leverk'],
   'Nord Trøndelag' => ['nord -trøndelag', 'nord-trøndelag',
     'nord-trløndelag'],
   'OBK Kløverknekt' => ['obk kloverknekt', 'obk/kløverknekt'],
@@ -162,29 +165,40 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Acol
+  Acol Airmadidi Akceþme Amisos Asenovec Auguri
   Botev
   Debrecen
   Fosnavåg
+  Galatasaray
   Hordaland
+  Hosgoru
   Kløverknekt 
+  Laksamana
   Locomotiva
   Miskolc
   Sakura
   Østerdal
+  Örebridgen
 );
 
 my %SINGLE_TYPOS =
 (
   'Akademisk Bridgeklub' => ['akademisk'],
-  'BC Bamberger Reiter' => ['bamberger'],
+  Asenovec => ['asenovets'],
+  Auguri => ['Augurý'],
+  'Banda Aceh' => ['aceh'],
+  'BC Bamberger Reiter' => ['bamberger', 'amberger'],
   'BK 2000' => ['bk2000'],
   'Cerkezkoy Dinamik BSK' => ['Cerkezkoy'],
+  'El Ahly' => ['ahly'],
   'Gabrial UI' => ['gabrial'],
+  Hordaland => ['hordland'],
+  Hosgoru => ['hoþgörü'],
   'Izmir BSB' => ['izmir.b.b.'],
   Kløverknekt => ['kloverknekt'],
   Locomotiva => ['loco'],
-  'Majör Boğaziçi' => ['majorbogazici']
+  'Majör Boğaziçi' => ['majorbogazici'],
+  Örebridgen => ['Örebridge'],
 );
 
 

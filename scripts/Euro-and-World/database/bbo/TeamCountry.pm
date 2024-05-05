@@ -32,12 +32,13 @@ my @MULTI_WORDS =
   'Northern Ireland',
   'Republic of Ireland',
   'San Marino',
-  'Saudia Arabia',
+  'Saudi Arabia',
   'Serbia and Montenegro',
   'South Africa',
   'South Korea',
   'Sri Lanka',
-  'Trinidad and Tobago'
+  'Trinidad and Tobago',
+  'United Kingdom'
 );
 
 my %MULTI_TYPOS =
@@ -54,21 +55,21 @@ my %MULTI_TYPOS =
   'Hong Kong' => ['china hong kong', 'china hongkong', 'china honk kong'],
   'Isle of Man' => ['isle of man'],
   'Netherlands' => ['team orange', 'the netherlands', 'pays-bas'],
-  'New Zealand' => ['new zeland', 'new zealans', 'new zeland'],
+  'New Zealand' => ['new zeland', 'new zealans', 'new zeland',
+    'aotearoa', 'aotearoq'],
   'North Macedonia' => ['macedonia'],
   'Northern Ireland' => ['northertn irelsnd', 'n irelena', 'n. ireland',
     'n ire', 'north ire', 'northern irelnd'],
   'Republic of Ireland' => ['rep. of ireland', 'rep of ireland', 'roi',
     'rep ire', 'rep ireland', 'republic of irelend', 'reublic of ireland',
     'r of ireland'],
+  'San Marino' => ['san_marino'],
   'Serbia and Montenegro' => ['serbia/mont', 'serbia&mon.'],
   'Trinidad and Tobago' => ['trinidad & tobago', 'trinidad&tobago'],
 );
 
 my @SINGLE_WORDS = qw(
-  Argentina 
-  Australia 
-  Austria 
+  Andorra Angora Argentina Australia Austria 
   Brazil 
   Bulgaria
   Canada 
@@ -116,7 +117,7 @@ my %SINGLE_TYPOS =
   'Chinese Taipei' => ['taipei'],
   Colombia => ['columbia'],
   Croatia => ['croatie'],
-  Denmark => ['danmark', 'danemark', 'denmarrk', 'den'],
+  Denmark => ['danmark', 'danemark', 'denmarrk', 'den', 'dk'],
   England => ['eng'],
   Estonia => ['estonie'],
   Finland => ['finnland'],
@@ -125,7 +126,7 @@ my %SINGLE_TYPOS =
   'French Guyana' => ['guyana'],
   'Hong Kong' => ['hk', 'hongkong'],
   Hungary => ['hungar'],
-  Indonesia => ['timnas'],
+  Indonesia => ['timnas', 'ind'],
   Ireland => ['roireland', 'irelnd', 'irelsnd', 'irlande',
     'irelend', 'irelena', 'ire'],
   Italy => ['italia'],

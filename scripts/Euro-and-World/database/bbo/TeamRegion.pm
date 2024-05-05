@@ -89,7 +89,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Anhui
+  Angkaew Anhui Ayrshire
   Bali Bornholm Buskerud
   Eurasia
   Florida

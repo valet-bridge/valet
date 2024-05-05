@@ -34,12 +34,16 @@ my @MULTI_WORDS =
   '60 y 20',
   'ABA Nuno Paz',
   'Aces & Deuces',
+  'Adams Family',
   'AG laget',
   'Air Traffic Management',
   'Alex is Beautiful',
+  'Alizee',
+  'Alle presidentens menn',
   'Almost Famous',
   'Almost Juniors',
   'Also Changes',
+  'Alunand Plus',
   'Alzheimer Aces',
   'Andre boller',
   'Angel of Harlem',
@@ -48,12 +52,15 @@ my @MULTI_WORDS =
   'Annas Fans',
   'Anti Revenge',
   'April 30',
+  'Apollo Soyuz',
   'Arctic Farmers',
   'Arctic Powerchicks',
   "Asha's 4",
   'Aso Pika',
   'Atomic Bridge',
+  'Avesta',
   'Awesome Avengers',
+  'Aylan Kurdý',
   'Babes Amazones',
   'Bad Beat',
   'Bad Man',
@@ -205,10 +212,12 @@ my @MULTI_WORDS =
   'Hvor er mine babes',
   'Ikke akkurat kjedelig',
   'Il Fante di Fiori',
+  'Ilhas & Aredores',
   'India Blues',
   'Indian Mavericks',
   'Inverted Minors',
   'Isolated Menaces',
+  'Jamm & Co',
   'Jane Doe',
   'Jorunns disipler',
   'Josef and Cards',
@@ -284,6 +293,7 @@ my @MULTI_WORDS =
   'Næsten Junior',
   'Oddskongen med rese',
   'Ohne Respekt Crew',
+  'Ojasta Ahoon',
   'Olavs utvalgte',
   'Om het hoekie',
   'One Hundred Eighty',
@@ -326,8 +336,10 @@ my @MULTI_WORDS =
   'Saint Titus',
   'Sakurai',
   'Salten rundt',
+  'Samfund Slingers',
   'Saras Friends',
   'Schall und Rauch',
+  'Semangat Baru',
   'Seths vänner',
   'Seven Eleven',
   'Shining Pig',
@@ -345,6 +357,7 @@ my @MULTI_WORDS =
   'Smoking Guns',
   'Smooth Duck',
   'Småsamen med døler',
+  "Soalitt`s disipler",
   'South Zone',
   'Space Mutants',
   'Spade Ace',
@@ -362,6 +375,7 @@ my @MULTI_WORDS =
   'Svenske og ulykke',
   'Sweet Is Middle',
   'Syntax Error',
+  'Søta bror',
   'Team Bo a berg',
   'Texan Aces',
   'Texan and Turks',
@@ -418,12 +432,19 @@ my @MULTI_WORDS =
   'Tre rette og en vrang',
   'Tre sang',
   'Troll i eske',
+  'Tupac Amaru',
+  'Tut tut',
+  'Ucurtma Avcisi',
   'Unholy Alliance',
+  'Usaklig Deigræv',
+  'Vaddo Gliders',
+  'Valar Morghulis',
   'Vegetable Hotpot',
   'Verden rundt',
   'Very Mixed',
   'Vickys Vikings',
   'Victorious Secret',
+  'Vierde van links',
   'Vi bygger stikk!',
   'Vi fyra',
   'Vi i femman',
@@ -438,16 +459,19 @@ my @MULTI_WORDS =
   'Well Done',
   'Well Fitted',
   'Well Wise',
+  'What the Heck',
   'Whisky Team',
   'White Bears',
   'Winter Is Coming',
   'XiBu VIP',
   'Xin Yuan',
+  'Yarralumla Yabbies',
   'Yitang QIAO',
   'Young Guns',
   'Young Sharks',
   'Young Warriors',
   'Young Driver',
+  'Your name?',
   'Zen Ho',
   'Zia and Friends',
   'Ziemlich gut',
@@ -467,6 +491,7 @@ my %MULTI_TYPOS =
   'AG laget' => ['ag-laget'],
   'Air Traffic Management' => ['air traffic managem'],
   'Alex is Beautiful' => ['alex is beatiful'],
+  'Arnab' => ["arnab's"],
   'Babes Amazones' => ['babes-amazones'],
   'Best uten kort' => ['best uden kort'],
   'Beverly Hillbillies' => ['beverly hillbillie'],
@@ -522,6 +547,7 @@ my %MULTI_TYPOS =
   'Queen and Knights' => ["queen's & knight"],
   'Saint Titus' => ['st titus', 'st. titus'],
   'Sakurai' => ['japan sakurai'],
+  'Semangat Baru' => ['semangat br'],
   'Sivves straffdubbl' => ['sivves straffdubbl.', 'sivves straffdbl',
      'sivves...'],
   'Six Diamonds' => ['six diamond'],
@@ -535,12 +561,18 @@ my %MULTI_TYPOS =
   'The Palookas' => ['the_palookas'],
   'Tre rette og en vrang' => ['tre rette og en vra'],
   'Troll i eske' => ['tre troll i eske', 'tre troll ...'],
+  'Valar Morghulis' => ['valar morgulis'],
   'Victorious Secret' => ['victorius secret'],
+  'What the Heck' => ['whattheheck'],
   'Yitang QIAO' => ['qiao yi tang']
 );
 
 my @SINGLE_WORDS = qw(
-   adventure aditya aggressor aurora alternativlos anglophones
+   Acolvik Adventure Aditya Aggressor Ahmetizm Ahornet Akenobo Akinom
+   Alfredo Alioth Allam Alliansen Alpha Amrapali Amul Aurora Alternativlos 
+   Ambassador Andrzejki Anglophones Appellkameratene Arangan Armani Arnab 
+   Arno Aspe Augerne Autostrada Avagard Avalanche Aytalus
+
    bananasplit beniaminek bhinneka blondie blueberry bridgeministeriet
    cogito
    dallas 
@@ -551,16 +583,26 @@ my @SINGLE_WORDS = qw(
    movember
    saga
    sakurai 
+   úlfurinn
 );
 
 my %SINGLE_TYPOS =
 (
+  Acolvik => ['acolvick'],
+  'Adams Family' => ['adamsfamily'],
+  Aditya => ['aaditya'],
+  Alizee => ['alize'],
+  'Alunand Plus' => ['alunand'],
+  Ambassador => ['ambassadors', 'ambassdor'],
+  'Apollo Soyuz' => ['apollosoyuz', 'apollosoyouz'],
+  Appellkameratene => ['apellkameratene'],
   'Atomic Bridge' => ['atomic'],
   Bhinneka => ['bhineka', 'bhinneke'],
   Formidables => ['formidable', 'formidabble', 'formidabels',
     'formiddable', 'formiddables', 'formadibles', 'formadeble',
     'formadables'],
-  'Pontiac 7' => ['pontiac7']
+  'Pontiac 7' => ['pontiac7'],
+  'Wei De' => ['weide']
 
 );
 

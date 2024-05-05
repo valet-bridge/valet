@@ -18,11 +18,13 @@ my @MULTI_WORDS =
 (
   '101 Fasteignasala',
   'Abadi Adimulia',
+  'Adaro Energy',
   'Agsar Paints',
   'AJ Diament',
   'Alfa Romeo',
   'APRA Clothing',
   'Apreo Logistic Poland',
+  'Asindo Prima',
   'Baltic Express',
   'Bangur Cement',
   'Bank Indonesia',
@@ -62,6 +64,7 @@ my @MULTI_WORDS =
   'Hotel Senator',
   'Hotell Strand',
   'Hreint ehf',
+  'Inci Ayakkabi',
   'India Glycols',
   'Indian Medical',
   'Indian Oil',
@@ -210,8 +213,10 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  ABAX Abnegat
-  Bajaj
+  ABAX Abnegat Actavis Akaylar Aklindo Arboned Argento Arkas Arma 
+  Asindo Ayýntab
+
+  Bajaj Banpu
   COMAL Cimentas Computerland CONSUS
   Dongfeng
   Enterprise
@@ -220,16 +225,19 @@ my @SINGLE_WORDS = qw(
   Pertamina Pufa
   Sagaplast Solakoglu
   Vito
+  Wellwise
 );
 
 my %SINGLE_TYPOS =
 (
+  'Adaro Energy' => ['adaro'],
   'Agsar Paints' => ['agsar'],
   'bridge24.pl' => ['bridge24'],
   Computerland => ['computerlan'],
   'Dhampur Sugar' => ['dhampur'],
   'Indian Railways' => ['railways'],
-  'SPS Construction' => ['sps']
+  'SPS Construction' => ['sps'],
+  Wellwise => ['wellwiss']
 );
 
 
