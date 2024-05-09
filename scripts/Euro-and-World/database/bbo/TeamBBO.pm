@@ -410,6 +410,46 @@ if ($category eq 'TOURNAMENT')
 }
 
 
+sub split_on_multi
+{
+  my ($text, $parts, $tags) = @_;
+
+  @$parts = ($text);
+  @$tags = (0);
+
+  for my $tag (@TAG_ORDER)
+  {
+    next if $MULTI_REGEX{$tag} eq '';
+    for my $i (reverse 0 .. $#$parts)
+    {
+      my @a = grep { $_ ne '' } split /$MULTI_REGEX{$tag}/, $parts->[$i];
+
+      if ($#a == 0)
+      {
+        # Optimize for this frequent special case.
+        if (exists $MULTI_WORDS{$tag}{lc($a[0])})
+        {
+          $tags->[$i] = $tag;
+        }
+      }
+      else
+      {
+        splice(@$parts, $i, 1, @a);
+        splice(@$tags, $i, 1, (0) x ($#a+1));
+
+        for my $j ($i .. $i + $#a)
+        {
+          if (exists $MULTI_WORDS{$tag}{lc($parts->[$j])})
+          {
+            $tags->[$j] = $tag;
+          }
+        }
+      }
+    }
+  }
+}
+
+
 sub study_team
 {
   my ($text, $chain) = @_;
@@ -423,36 +463,7 @@ sub study_team
 
   my @parts_direct = ($text);
   my @multi_match = (0);
-  for my $tag (@TAG_ORDER)
-  {
-    next if $MULTI_REGEX{$tag} eq '';
-    for my $i (reverse 0 .. $#parts_direct)
-    {
-      my @a = grep { $_ ne '' }
-        split /$MULTI_REGEX{$tag}/, $parts_direct[$i];
-
-      if ($#a == 0)
-      {
-        # Optimize for this frequent special case.
-        if (exists $MULTI_WORDS{$tag}{lc($a[0])})
-        {
-          $multi_match[$i] = $tag;
-        }
-      }
-      else
-      {
-        splice(@parts_direct, $i, 1, @a);
-        splice(@multi_match, $i, 1, (0) x ($#a+1));
-        for my $j ($i .. $i + $#a)
-        {
-          if (exists $MULTI_WORDS{$tag}{lc($parts_direct[$j])})
-          {
-            $multi_match[$j] = $tag;
-          }
-        }
-      }
-    }
-  }
+  split_on_multi($text, \@parts_direct, \@multi_match);
 
   # Split on separators.
   my $sep = qr/[\s+\-\+\._;"\/\(\)\|]/;
