@@ -63,7 +63,6 @@ my @TAG_ORDER = qw(
 );
 
 my (%MULTI_WORDS, %MULTI_REGEX, %SINGLE_WORDS);
-my (%MULTI_WORDS_DIRECT, %MULTI_REGEX_DIRECT);
 
 my $CITIES_NAME = "../../../../../../bboD/../../cities/cities.txt";
 my (%CITIES, %CITIES_LC);
@@ -127,8 +126,7 @@ sub set_overall_hashes
   for my $multi (@$multi_words)
   {
     my $tilded = $multi =~ s/ /\~/gr;
-    $MULTI_WORDS{$key}{lc($multi)} = $tilded;
-    $MULTI_WORDS_DIRECT{$key}{lc($multi)} = $multi;
+    $MULTI_WORDS{$key}{lc($multi)} = $multi;
     $SINGLE_WORDS{$key}{lc($multi)} = 
       { CATEGORY => $key, VALUE => $multi };
   }
@@ -139,8 +137,7 @@ sub set_overall_hashes
     my $tilded = $multi =~ s/ /\~/gr;
     for my $typo (@{$multi_typos->{$multi}})
     {
-      $MULTI_WORDS{$key}{lc($typo)} = $tilded;
-      $MULTI_WORDS_DIRECT{$key}{lc($typo)} = $multi;
+      $MULTI_WORDS{$key}{lc($typo)} = $multi;
       $SINGLE_WORDS{$key}{lc($multi)} = 
         { CATEGORY => $key, VALUE => $multi };
     }
@@ -148,19 +145,14 @@ sub set_overall_hashes
 
   if (keys %{$MULTI_WORDS{$key}})
   {
-    my $multi_pattern = join('|', map { quotemeta }
-      sort { length($b) <=> length($a) } keys %{$MULTI_WORDS{$key}});
     my $multi_pattern_direct = join('|', map { quotemeta }
-      sort { length($b) <=> length($a) } keys %{$MULTI_WORDS_DIRECT{$key}});
+      sort { length($b) <=> length($a) } keys %{$MULTI_WORDS{$key}});
 
-    $MULTI_REGEX{$key} = qr/\b($multi_pattern)(?=\P{L}|\z)/i;
-    $MULTI_REGEX_DIRECT{$key} = qr/\b($multi_pattern_direct)(?=\P{L}|\z)/i;
-    # $MULTI_REGEX{$key} = qr/\b($multi_pattern)\b/i;
+    $MULTI_REGEX{$key} = qr/\b($multi_pattern_direct)(?=\P{L}|\z)/i;
   }
   else
   {
     $MULTI_REGEX{$key} = '';
-    $MULTI_REGEX_DIRECT{$key} = '';
   }
 
   # Similarly for the single words.
@@ -433,16 +425,16 @@ sub study_team
   my @multi_match = (0);
   for my $tag (@TAG_ORDER)
   {
-    next if $MULTI_REGEX_DIRECT{$tag} eq '';
+    next if $MULTI_REGEX{$tag} eq '';
     for my $i (reverse 0 .. $#parts_direct)
     {
       my @a = grep { $_ ne '' }
-        split /$MULTI_REGEX_DIRECT{$tag}/, $parts_direct[$i];
+        split /$MULTI_REGEX{$tag}/, $parts_direct[$i];
 
       if ($#a == 0)
       {
         # Optimize for this frequent special case.
-        if (exists $MULTI_WORDS_DIRECT{$tag}{lc($a[0])})
+        if (exists $MULTI_WORDS{$tag}{lc($a[0])})
         {
           $multi_match[$i] = $tag;
         }
@@ -453,7 +445,7 @@ sub study_team
         splice(@multi_match, $i, 1, (0) x ($#a+1));
         for my $j ($i .. $i + $#a)
         {
-          if (exists $MULTI_WORDS_DIRECT{$tag}{lc($parts_direct[$j])})
+          if (exists $MULTI_WORDS{$tag}{lc($parts_direct[$j])})
           {
             $multi_match[$j] = $tag;
           }
