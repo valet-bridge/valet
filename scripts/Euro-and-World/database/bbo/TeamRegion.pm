@@ -30,6 +30,7 @@ my @MULTI_WORDS =
   'Kepulauan Riau',
   'New Caledonia',
   'New South Wales',
+  'Nord-Norge Omegn',
   'North Minahasa',
   'North Celebes',
   'North Sulawesi',
@@ -99,6 +100,7 @@ my @SINGLE_WORDS = qw(
   Mjøsa
   Norrland
   Queensland
+  Oberloiben
   Punjab
   Ratchaburi Rogaland Rosfjord
   Telemark

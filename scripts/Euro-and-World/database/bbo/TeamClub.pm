@@ -170,10 +170,10 @@ my @SINGLE_WORDS = qw(
   Debrecen
   Fosnavåg
   Galatasaray
-  Hordaland
+  Hercules Hordaland
   Hosgoru
   Kløverknekt 
-  Laksamana
+  Lavec Laksamana
   Locomotiva
   Miskolc
   Sakura
@@ -198,7 +198,7 @@ my %SINGLE_TYPOS =
   Kløverknekt => ['kloverknekt'],
   Locomotiva => ['loco'],
   'Majör Boğaziçi' => ['majorbogazici'],
-  Örebridgen => ['Örebridge'],
+  Örebridgen => ['Örebridge', 'orebridgen'],
 );
 
 

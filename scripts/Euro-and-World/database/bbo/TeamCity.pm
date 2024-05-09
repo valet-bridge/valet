@@ -190,8 +190,10 @@ my %SINGLE_TYPOS =
   Tekýrdag => ['tekirdað'],
   Thessaloniki => ['salonica'],
   Tromsø => ['tromso', 'tromsoe'],
+  Trondheim => ['trondhei'],
   Vienna => ['wien'],
   Warsaw => ['warsow'],
+  Yogyakarta => ['jogjakarta'],
   Åkirkeby => ['aakirkeby'],
   Århus => ['aarhus', 'arhus']
 );

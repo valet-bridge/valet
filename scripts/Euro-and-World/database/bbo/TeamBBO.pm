@@ -450,6 +450,33 @@ sub split_on_multi
 }
 
 
+sub study_component
+{
+  my ($part, $chain, $token_no, $unsolved_flag) = @_;
+
+  # Split on trailing digits.
+  $tmp_global = 0;
+  if ($part =~ /^(.*[a-z])(\d+)$/i &&
+      $1 ne 'U' && $1 ne 'D')
+  {
+    my ($letters, $digits) = ($1, $2);
+
+    study_part($letters, $token_no, $chain);
+    $$token_no++;
+
+    study_part($digits, $token_no, $chain);
+    $$token_no++;
+  }
+  else
+  {
+    study_part($part, $token_no, $chain);
+    $$token_no++;
+  }
+
+  $$unsolved_flag = 1 if ($tmp_global);
+}
+
+
 sub study_team
 {
   my ($text, $chain) = @_;
@@ -461,69 +488,38 @@ sub study_team
     return;
   }
 
-  my @parts_direct = ($text);
-  my @multi_match = (0);
-  split_on_multi($text, \@parts_direct, \@multi_match);
+  my @parts = ($text);
+  my @tags = (0);
+  split_on_multi($text, \@parts, \@tags);
 
   # Split on separators.
   my $sep = qr/[\s+\-\+\._;"\/\(\)\|]/;
 
   my $token_no = 0;
-  my $one_tmp = 0;
+  my $unsolved_flag = 0;
 
-  for my $i (0 .. $#parts_direct)
+  for my $i (0 .. $#parts)
   {
-    if ($multi_match[$i] ne '0')
+    if ($tags[$i] ne '0')
     {
+      # We had a multi-word hit.
       my $token = Token->new();
-      $token->set_origin($i, $parts_direct[$i]);
-      $token->set_singleton($multi_match[$i], $parts_direct[$i]);
+      $token->set_origin($i, $parts[$i]);
+      $token->set_singleton($tags[$i], $parts[$i]);
       $chain->append($token);
       $token_no++;
     }
     else
     {
-      my @a = grep { $_ ne '' } split(/$sep/, $parts_direct[$i]);
+      my @a = grep { $_ ne '' } split(/$sep/, $parts[$i]);
       foreach my $part (@a)
       {
-        # Split on trailing digits.
-        $tmp_global = 0;
-        if ($part =~ /^(.*[a-z])(\d+)$/i)
-        {
-          my ($letters, $digits) = ($1, $2);
-          next if $letters eq 'U' || $letters eq 'D';
-
-          study_part($letters, $token_no, $chain);
-          $token_no++;
-
-          if ($tmp_global)
-          {
-            $one_tmp = 1;
-          }
-
-          study_part($digits, $token_no, $chain);
-          $token_no++;
-
-          if ($tmp_global)
-          {
-            $one_tmp = 1;
-          }
-        }
-        else
-        {
-          study_part($part, $token_no, $chain);
-          $token_no++;
-
-          if ($tmp_global)
-          {
-            $one_tmp = 1;
-          }
-        }
+        study_component($part, $chain, \$token_no, \$unsolved_flag);
       }
     }
   }
 
-  print "UUU $text\n" if ($one_tmp && $chain->last() > 0);
+  print "UUU $text\n" if ($unsolved_flag && $chain->last() > 0);
 }
 
 

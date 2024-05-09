@@ -51,6 +51,7 @@ my %MULTI_TYPOS =
   'Czech Republic' => ['czec republic', 'czech rep', 'czech_rep',
     'czech_republic'],
   'Faroe Islands' => ['faroe_islands', 'faroe island', 'faroe_isl'],
+  'French Guyana' => ['french guayana', 'french guiana'],
   'Great Britain' => ['g.britain'],
   'Hong Kong' => ['china hong kong', 'china hongkong', 'china honk kong'],
   'Isle of Man' => ['isle of man'],

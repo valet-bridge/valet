@@ -17,7 +17,8 @@ use TeamBBO;
 my @MULTI_WORDS =
 (
   'Bridge Baron',
-  'Bridge +'
+  'Bridge +',
+  'Wbridge5' # A single word, but here due to the trailing digit
 );
 
 my %MULTI_TYPOS =
@@ -26,7 +27,6 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Jack
-  Wbridge5
 );
 
 my %SINGLE_TYPOS =
