@@ -63,6 +63,7 @@ my @TAG_ORDER = qw(
 );
 
 my (%MULTI_WORDS, %MULTI_REGEX, %SINGLE_WORDS);
+my (%MULTI_WORDS_DIRECT, %MULTI_REGEX_DIRECT);
 
 my $CITIES_NAME = "../../../../../../bboD/../../cities/cities.txt";
 my (%CITIES, %CITIES_LC);
@@ -127,6 +128,7 @@ sub set_overall_hashes
   {
     my $tilded = $multi =~ s/ /\~/gr;
     $MULTI_WORDS{$key}{lc($multi)} = $tilded;
+    $MULTI_WORDS_DIRECT{$key}{lc($multi)} = $multi;
     $SINGLE_WORDS{$key}{lc($multi)} = 
       { CATEGORY => $key, VALUE => $multi };
   }
@@ -138,6 +140,7 @@ sub set_overall_hashes
     for my $typo (@{$multi_typos->{$multi}})
     {
       $MULTI_WORDS{$key}{lc($typo)} = $tilded;
+      $MULTI_WORDS_DIRECT{$key}{lc($typo)} = $multi;
       $SINGLE_WORDS{$key}{lc($multi)} = 
         { CATEGORY => $key, VALUE => $multi };
     }
@@ -147,13 +150,17 @@ sub set_overall_hashes
   {
     my $multi_pattern = join('|', map { quotemeta }
       sort { length($b) <=> length($a) } keys %{$MULTI_WORDS{$key}});
+    my $multi_pattern_direct = join('|', map { quotemeta }
+      sort { length($b) <=> length($a) } keys %{$MULTI_WORDS_DIRECT{$key}});
 
     $MULTI_REGEX{$key} = qr/\b($multi_pattern)(?=\P{L}|\z)/i;
+    $MULTI_REGEX_DIRECT{$key} = qr/\b($multi_pattern_direct)(?=\P{L}|\z)/i;
     # $MULTI_REGEX{$key} = qr/\b($multi_pattern)\b/i;
   }
   else
   {
     $MULTI_REGEX{$key} = '';
+    $MULTI_REGEX_DIRECT{$key} = '';
   }
 
   # Similarly for the single words.
@@ -415,49 +422,105 @@ sub study_team
 {
   my ($text, $chain) = @_;
 
+  return if $text eq '';
+
   if (suggest_form($text, \%FORM_SCORES))
   {
     return;
   }
 
+  my @parts_direct = ($text);
+  my @multi_match = (0);
   for my $tag (@TAG_ORDER)
   {
-    $text =~ s/$MULTI_REGEX{$tag}/$MULTI_WORDS{$tag}{lc($1)}/ge
-      if $MULTI_REGEX{$tag} ne '';
+    next if $MULTI_REGEX_DIRECT{$tag} eq '';
+    for my $i (reverse 0 .. $#parts_direct)
+    {
+      my @a = grep { $_ ne '' }
+        split /$MULTI_REGEX_DIRECT{$tag}/, $parts_direct[$i];
+
+      if ($#a == 0)
+      {
+        # Optimize for this frequent special case.
+        if (exists $MULTI_WORDS_DIRECT{$tag}{lc($a[0])})
+        {
+          $multi_match[$i] = $tag;
+        }
+      }
+      else
+      {
+        splice(@parts_direct, $i, 1, @a);
+        splice(@multi_match, $i, 1, (0) x ($#a+1));
+        for my $j ($i .. $i + $#a)
+        {
+          if (exists $MULTI_WORDS_DIRECT{$tag}{lc($parts_direct[$j])})
+          {
+            $multi_match[$j] = $tag;
+          }
+        }
+      }
+    }
   }
 
-  # Split on separators.  $sep excludes \s+.
-  my $sep = qr/[\-\+\._;"\/\(\)\|]/;
-  my $min = qr/[\-;"\/\(\)\|]/; # Minimal set with tildes
-  my @initial_parts = split(/\s+/, $text);
-  my @parts;
+  # Split on separators.
+  my $sep = qr/[\s+\-\+\._;"\/\(\)\|]/;
 
-  foreach my $part (@initial_parts)
+  my $token_no = 0;
+  my $one_tmp = 0;
+
+  for my $i (0 .. $#parts_direct)
   {
-    if ($part =~ /~/)
+    if ($multi_match[$i] ne '0')
     {
-      push @parts, grep { $_ ne '' } split(/$min/, $part);
+      my $token = Token->new();
+      $token->set_origin($i, $parts_direct[$i]);
+      $token->set_singleton($multi_match[$i], $parts_direct[$i]);
+      $chain->append($token);
+      $token_no++;
     }
     else
     {
-      push @parts, grep { $_ ne '' } split(/$sep/, $part);
+      my @a = grep { $_ ne '' } split(/$sep/, $parts_direct[$i]);
+      foreach my $part (@a)
+      {
+        # Split on trailing digits.
+        $tmp_global = 0;
+        if ($part =~ /^(.*[a-z])(\d+)$/i)
+        {
+          my ($letters, $digits) = ($1, $2);
+          next if $letters eq 'U' || $letters eq 'D';
+
+          study_part($letters, $token_no, $chain);
+          $token_no++;
+
+          if ($tmp_global)
+          {
+            $one_tmp = 1;
+          }
+
+          study_part($digits, $token_no, $chain);
+          $token_no++;
+
+          if ($tmp_global)
+          {
+            $one_tmp = 1;
+          }
+        }
+        else
+        {
+          study_part($part, $token_no, $chain);
+          $token_no++;
+
+          if ($tmp_global)
+          {
+            $one_tmp = 1;
+          }
+        }
+      }
     }
   }
 
-  split_on_trailing_digits(\@parts);
-
-  my $one_tmp = 0;
-  for my $i (0 .. $#parts)
-  {
-    $tmp_global = 0;
-    study_part($parts[$i], $i, $chain);
-    if ($tmp_global)
-    {
-      # print "TTT $text\n";
-      $one_tmp = 1;
-    }
-  }
-  print "UUU $text\n" if ($one_tmp && $#parts > 0);
+  print "UUU $text\n" if ($one_tmp && $chain->last() > 0);
 }
 
 
