@@ -42,6 +42,7 @@ my %MULTI_TYPOS =
 (
   'City of Helsinki' => ['helsinki'],
   Istanbul => ['ýstanbul'],
+  Jakarta => ['jak-tim', 'jakarta pusat', 'jakarta utara'],
   Nangang => ['nan gang'],
   Ningbo => ['ning bo'],
   'Reggio Emilia' => ['r.e.', 'reggio e'],
@@ -97,7 +98,7 @@ my @SINGLE_WORDS = qw(
   Kirklarelý Kocaeli Kocamustafapasa Kolkata Konak Kosice Koycegiz Köln 
   Krakow Kristiansand Kucukcekmece Kudus Kunshan Kuopio Kusadasi Kütahya
 
-  Leiden Leszno Leuven Leverkusen Lhokseumawe Lille Lima Lincoln
+  Langkat Leiden Leszno Leuven Leverkusen Lhokseumawe Lille Lima Lincoln
   Ljubljana London Lozenets Lubin Lublin Luleburgaz Lumajang
 
   Maastricht Madrid Makassar Malatya Malmö Manahasa Manado Manchester 
@@ -117,7 +118,7 @@ my @SINGLE_WORDS = qw(
   Pekanbaru Pelotas Pernik Perth Pesaro Pescara Posillipo
   Pula
 
-  Qingdao
+  Qiaoxie Qingdao
 
   Radkov Randers Rayong Reims Riga Rijeka Rimini Rome
   Pisa Pleven Plovdiv Pontianak Potsdam Prague Pudong Pula Pune Puri

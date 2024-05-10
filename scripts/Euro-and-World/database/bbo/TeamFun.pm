@@ -105,12 +105,14 @@ my @MULTI_WORDS =
   'Circle the World',
   "Colonel's Team",
   'Cheap Tricks',
+  'City Bridge',
   'Cold Light',
   'Contact 1',
   'Counter Strike',
   'Country Boys',
   'Croatian Pirates',
   'Curry Eaters',
+  'D-MaTK',
   'Danish Guns',
   'Dark Blues',
   'Das Autobahn',
@@ -218,11 +220,22 @@ my @MULTI_WORDS =
   'Indian Mavericks',
   'Inverted Minors',
   'Isolated Menaces',
+  'Jai Ganesh',
+  'Jaipur Jewels',
   'Jamm & Co',
   'Jane Doe',
+  'Japan SARA',
+  'Japan SAYN',
+  'Jarum LA',
+  'Jenny-Chang',
+  'Jie Fang He Ji',
+  'Jiu Jiu',
   'Jorunns disipler',
   'Josef and Cards',
+  'JT2',
   'Juniors Disipler',
+  'Juras Ezi',
+  'Juzz-Pete',
   'Karachi Aces',
   "Karl's Silence",
   'Karlstads vänner',
@@ -238,6 +251,7 @@ my @MULTI_WORDS =
   'Kronisk kusma',
   'Kurt quo vadis',
   'Kvalen og nissene',
+  'KM AT',
   'Lady Da et ses Boys',
   'Langt mer enn ivrig',
   'Last Minute',
@@ -345,6 +359,7 @@ my @MULTI_WORDS =
   'Saevar Karl',
   'Salten rundt',
   'Samfund Slingers',
+  'Sang ae',
   'Saras Friends',
   'Schall und Rauch',
   'Semangat Baru',
@@ -480,6 +495,7 @@ my @MULTI_WORDS =
   'Xin Yuan',
   'Yarralumla Yabbies',
   'Yitang QIAO',
+  'YOI Returns',
   'Young Guns',
   'Young Sharks',
   'Young Warriors',
@@ -540,6 +556,7 @@ my %MULTI_TYPOS =
   'Ikke akkurat kjedelig' => ['ikke akkurat kjedel'],
   'India Blues' => ['indian blues'],
   'Indian Mavericks' => ['india mavericks', 'indian mavricks'],
+  'Jamm & Co' => ['jamm & co.', 'jamm && co.'],
   'Kasimirs Dream Team' => ['kasimirs dreamteam'],
   'Kent Romeos venner' => ['kent romeos veenner'],
   'Kick Back' => ['kick-back'],
@@ -595,7 +612,7 @@ my @SINGLE_WORDS = qw(
    balti bananasplit bauhinia beniaminek bhinneka blondie blueberry 
    bridgeministeriet
    censored cogito
-   dallas 
+   dallas dingyuan
    fenghuang formidables formosa francophones
    guests
    hollywood honeymoon
@@ -603,8 +620,7 @@ my @SINGLE_WORDS = qw(
    lira
    moritz movember
    naturalists neduk nemesis neverclaim
-   saga
-   sakurai scientists skalman skitur starmen
+   saga sakurai scientists sindbad skalman skitur starmen
    winkiboy
    úlfurinn
    zeerob zugzwang
@@ -622,14 +638,17 @@ my %SINGLE_TYPOS =
   Appellkameratene => ['apellkameratene'],
   'Atomic Bridge' => ['atomic'],
   Bhinneka => ['bhineka', 'bhinneke'],
+  Dingyuan => ['dinyuan'],
   Formidables => ['formidable', 'formidabble', 'formidabels',
     'formiddable', 'formiddables', 'formadibles', 'formadeble',
     'formadables'],
+  'Jamm & Co' => ['jamm'],
   'Naturalists' => ['nature'],
   'Pontiac 7' => ['pontiac7'],
   'Scientists' => ['science'],
   'Vegetable Hotpot' => ['vegetable'],
-  'Wei De' => ['weide']
+  'Wei De' => ['weide'],
+  'YOI Returns' => ['yoi']
 
 );
 

@@ -87,6 +87,7 @@ my @SINGLE_WORDS = qw(
   Ireland 
   Italy 
   Israel 
+  Jordan
   Latvia 
   Luxembourg 
   Madagascar 
@@ -126,8 +127,8 @@ my %SINGLE_TYPOS =
   Estonia => ['estonie', 'est'],
   Finland => ['finnland'],
   France => ['fra'],
-  Germany => ['deutschland'],
   'French Guyana' => ['guyana'],
+  Germany => ['deutschland'],
   'Hong Kong' => ['hk', 'hongkong'],
   Hungary => ['hungar'],
   Indonesia => ['timnas', 'ind'],
@@ -135,6 +136,7 @@ my %SINGLE_TYPOS =
     'irelend', 'irelena', 'ire'],
   Italy => ['italia'],
   Israel => ['isreal', 'israil', 'isarel', 'israël'],
+  Jordan => ['jor'],
   Latvia => ['lavtia', 'latvija'],
   Luxembourg => ['luxemburg'],
   Macau => ['china macau'],

@@ -44,7 +44,10 @@ my @MULTI_WORDS =
   'Brigitta Fischer',
   'C.V. Rao',
   'Carlo Bossi',
+  'Carlos Ferreira',
   'Carlos Gonçalves',
+  'Carlos Luiz',
+  'Carlos Teixeira',
   'David Birman',
   'De Blasi',
   'de Botton',
@@ -89,22 +92,33 @@ my @MULTI_WORDS =
   'Hong NIU',
   'Ilan Herbst',
   'Inocencio Almeida Araujo',
+  'J. Brigido',
+  'J. Pinheiro',
   'J.C. Henriques',
   'J.E. Skjanni',
   'J.P. Goenka',
   'Jan Jansma',
+  'Janak Shah',
   'Jay Ganesh',
   'Jean le Poder',
+  'Jennifer de Winter',
   'Jeroo Mango',
+  'Jesper Buus Thomsen',
   'Jessica Hayman',
   'João Fanha',
   'John Holland',
   'Jón Ásbjörnsson',
   'Jorge Alexandre',
+  'Jorge Castanheira',
   'Jorge Cruzeiro',
+  'Jorge Monteiro Dos Santos',
+  'José Dias',
   'José Moraes',
   'Jozef Pochron',
   'Jörg Fritsche',
+  'Jörgen Lindqvist',
+  'Juan Valdez',
+  'Juliano Barbosa',
   'Júlíus Sigurjónsson',
   'Kamal Kumar Nagori',
   'Karl Sigurhjartarson',
@@ -119,6 +133,8 @@ my @MULTI_WORDS =
   'Lotan Fisher',
   'Majka Cilleborg Bilde',
   'Marc ter Laare',
+  'Manuel Capucho',
+  'Manuel Neto',
   'Manuel Oliveira',
   'Manuela Mouttet',
   'Mark Gordon',
@@ -140,7 +156,9 @@ my @MULTI_WORDS =
   'Møller Jepsen',
   'Nabil Chaker',
   'Nabil Edgtton',
+  'Nuno Damaso',
   'Nuno Matos',
+  'Nuno Paz',
   'Nuno Sousa',
   'Ómar Freyr',
   'Omar Sharif',
@@ -152,10 +170,12 @@ my @MULTI_WORDS =
   'Paul Van Goor',
   'Paula Lima',
   'Paulo Dias',
+  'Paulo G Pereira',
   'Paulo Roberto Brum',
   'Paulo Rocha Pinto',
   'Pedro Madeira',
   'Pedro Morbey',
+  'Pedro Pratas',
   'Peter de Vries',
   'Peter Schaltz',
   'Poul Clemmensen',
@@ -168,7 +188,7 @@ my @MULTI_WORDS =
   'Raul Guerreiro',
   'Rodrigo Suares',
   'Rui Pinto',
-  'Rui Santos',
+  'Rui Silva Santos',
   'Rúnar Einarsson',
   'Sally Brock',
   'Sanjay Bhattacharya',
@@ -185,6 +205,7 @@ my @MULTI_WORDS =
   'Sveinn Ericsson',
   'Sverrir Þórisson',
   'Tor Helness',
+  'Toshiro Nose',
   'van Prooijen',
   'Van Cleeff',
   'Van de Walle',
@@ -255,14 +276,23 @@ my %MULTI_TYPOS =
   'J.C. Henriques' => ['j.c.henriques', 'j c henriques',
     'j. c. henriques', 'j. carlos henriques', 'jose c. henriques',
     'josé c. henriques', 'josé henriques', 'ze carlos henriques',
-    'zé carlos henriques'],
-  'J.E. Skjanni' => ['j.e.skanni', 'j.e.skjanni', 'je skjanni'],
+    'zé carlos henriques', 'jc henriques', 'josé c henriques'],
+  'J.E. Skjanni' => ['j.e.skanni', 'j.e.skjanni', 'je skjanni',
+    'je skjanni ehf'],
   'J.P. Goenka' => ['j.p.goenka'],
   'Jean le Poder' => ['le poder'],
-  'João Fanha' => ['j.fanha', 'joao fanha'],
+  'Jennifer de Winter' => ['jen de winther', 'jen de winter',
+    'jan de winter'],
+  'Jesper Buus Thomsen' => ['jb thomsen'],
+  'João Fanha' => ['j.fanha', 'joao fanha', 'j. fanha'],
   'John Holland' => ['j holland'],
   'Jón Ásbjörnsson' => ['ásbjörnsson'],
+  'Jorge Castanheira' => ['jorel8'],
   'Jozef Pochron' =>['j pochron'],
+  'Jörgen Lindqvist' => ['jörgen lindqvist cr'],
+  'Juan Valdez' => ['juan valdes'],
+  'Jr. Yilankiran' => ['j.yilankiran', 'jr.yilankiran',
+    'jr. yilankiran', 'jr.  yilankiran'],
   'Kamal Kumar Nagori' => ['kamal naguri'],
   'Karl Sigurhjartarson' => ['karl sigurhjartar', 'karl sigurhjartars',
     'karl sigurhjartarso', 'karl sigurhjartarss'],
@@ -303,6 +333,7 @@ my %MULTI_TYPOS =
   'R.S. Mishra' => ['r. s. mishra'],
   'Rui Pinto' => ['ruin pinto', 'r.pinto'],
   'Rúnar Einarsson' => ['einarsson'],
+  'Salim Yilankiran' => ['yilankiran'],
   'Sally Brock' => ['s brock'],
   'Shashi Gupta' => ["shashi gupta's 6"],
   'Sinan Göksu' => ['sinan goksu'],
@@ -336,7 +367,7 @@ my @SINGLE_WORDS = qw(
 
   Babacan Babsch Bagge Bailey Baker Bakhshi Baki Bakkeren Baldini 
   Baleal Balkanski Ballebo Bang
-  Barat Barbosa Barel Bartnes Barton Basabe Baseggio Basile Bassini
+  Barat Barel Bartnes Barton Basabe Baseggio Basile Bassini
   Bathurst Batov Bauch Bavaresco Bayes Baze
   Bäckström Beauchamp Beale Beatty Becker Bello Bellosta Belonogov
   Bennett Berdichevsky Berg Berger Bergheimer Berkowitz Berktas 
@@ -375,7 +406,7 @@ my @SINGLE_WORDS = qw(
   Creet Crestey Chrichton Crompton Cronier Crouch 
   Cuevas Cullin Cummings Cuper Çýloðlu Czímer
 
-  Dabrowka Dahlberg Dalecki Dalia Dalley Damaso Damiani 
+  Dabrowka Dahlberg Dalecki Dalia Dalley Damiani 
   Dancewicz Dantan Dao Darak Das Daskalakis 
   Daugava Dauvergne Davies Dawson
   Debolina Debonnaire Debus Dechelette Degla Dehaye Deik Delfour 
@@ -394,7 +425,7 @@ my @SINGLE_WORDS = qw(
   Fabbri Fagerlund Faidas Faigenbaum Failla Falk Fallenius Fallon 
   Fang Fantonakis Fantoni Farholt Faria Farwell Favard
   Federighi Fegarty Feiler Feng Fernando Ferramosca Ferrara 
-  Ferrari Ferreira Fettes
+  Ferrari Fettes
   Fici Figlus Figueiredo Filios Filip Finikiotis Fioretti Fireman Firestone 
   Fleisher Fleury Flierl Flock Flora 
   Ford Fordham Fornaciari Forrester Fortini Fout Fox
@@ -520,7 +551,7 @@ my @SINGLE_WORDS = qw(
   Rubin Rubio Rueda Ryman
 
   Sabbatini Sadek Saelensminde Saesseli Saina Sairanen Sakr Salliere
-  Salman Sandqvist Santos Sansom Sapounakis Savelli Savorani 
+  Salman Sandqvist Sansom Sapounakis Savelli Savorani 
   Sawicki Saydi Sayer Sayilkan Sbarigia
   Scerri Schaltz Schermer Schlicker Schneider Schnetzer Schonning
   Schoolmann Schou Schulz Schüller Schroeder Scoltock Schreckenberger 
@@ -565,7 +596,7 @@ my @SINGLE_WORDS = qw(
 
   Xatzimpalis
 
-  Yamada Yarington Yates Yezerski Yilankiran Yilmaz Yoleri Yuen Yule
+  Yamada Yarington Yates Yezerski Yilmaz Yoleri Yuen Yule
 
   Zabunoglu Zagor Zagorin Zaleski Zanalda Zarkesch Zawada Zeeberg Zenari 
   Zhan Zhao Zhong Zimmermann Zollo Zorlu Zozis Zotos
@@ -652,6 +683,7 @@ my %SINGLE_TYPOS =
   'Özbey' => ['ozbey'],
   'Patanè' => ['patane'],
   'Patrick Jourdain' => ['jourdain'],
+  'Paulo G Pereira' => ['pgp'],
   'Pedro Morbey' => ['morbey'],
   'Peirão' => ['peirao'],
   'Procter' => ['proctor'],
@@ -664,6 +696,7 @@ my %SINGLE_TYPOS =
   Teltscher => ['teltsher'],
   Thuillez => ['tuillez'],
   'Tor Helness' => ['helness'],
+  'Toshiro Nose' => ['nose'],
   Venkatesh => ['venky'],
   Vinciguerra => ['vinci'],
   Wigoder => ['wigodor'],

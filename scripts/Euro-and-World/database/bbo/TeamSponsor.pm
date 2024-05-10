@@ -77,6 +77,11 @@ my @MULTI_WORDS =
   'Indian Railways',
   'Indonesian Power',
   'J. Pereira de Sousa',
+  'Jasa Marga Jakarta',
+  'Jiang You',
+  'Jin Rong',
+  'Jin Jing',
+  'Jing Tie',
   'Kuncheng Group',
   'Lögfræðiskrifstofa Islands',
   'Lögfræðistofa Bjarna',
@@ -189,6 +194,7 @@ my %MULTI_TYPOS =
   'Indian Railways' => ['indianrailways', 'indian railyaws',
     'indin railways', 'indian railway', 'indian rail', 'indians railways'],
   'Indonesian Power' => ['indo power', 'indonesia power'],
+  'Jasa Marga Jakarta' => ['jasa marga'],
   'Kuncheng Group' => ['kucheng group'],
   'Lögfræðiskrifstofa Islands' => ['lögfr.stofa íslands', 'lögfr.íslands', 
     'lögfrst. íslands', 'lögfrst.íslands', 'lögfræðisk. ísl.',
@@ -237,6 +243,7 @@ my %MULTI_TYPOS =
   'Unia Winkhaus' => ['winkhaus unia', 'winkhaus-unia'],
   'Viego Regnskap' => ['viego regnskap as'],
   'Xiao Ying' => ['xiao ying inn'],
+  'Yalu Group' => ['js yalu'],
   'Yeh Bros' => ['yeh brothers', 'yer bros', "yeh's bros", 'yehs bros',
     'yer bros', 'yeoh bros'],
   'Yibin China Resources' => ['yibin cr gas', 'yibin china resourc'],
@@ -254,8 +261,12 @@ my @SINGLE_WORDS = qw(
   Dongfeng
   Enterprise
   GAMAX
-  Lavazza
+  Hana
+  IMAX
+  JHS
+  Lavazza Longjiangfu
   Pertamina Pufa
+  Qiaoyou
   Sagaplast Solakoglu
   Vito
   Wellwise

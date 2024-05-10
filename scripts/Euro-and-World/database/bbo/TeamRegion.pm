@@ -45,6 +45,7 @@ my @MULTI_WORDS =
   'South Sulawesi',
   'South Sumatra',
   'South Sweden',
+  'Taihu Lake',
   'Troms og Ofoten',
   'Uttar Pradesh',
   'Val di Magra',
@@ -67,6 +68,7 @@ my %MULTI_TYPOS =
   'East Jakarta' => ['jakarta timur'],
   'East Java' => ['jawa timur', 'jatim'],
   'East Kalimantan' => ['kalimantan timur'],
+  Jiangsu => ['jiang su'],
   'North Sulawesi' => ['notth sulawesi', 'north sulawsei',
     'sulawesi utara', 'sulawasi utara', 'sulut'],
   'North Minahasa' => ['minahasa utara'],
@@ -86,7 +88,7 @@ my %MULTI_TYPOS =
   'West Sumatra' => ['sumatera barat', 'west sumatera'],
   'Western Australia' => ['wa'],
   'West Bengal' => ['west bengla', 'westbengal'],
-  'West Java' => ['jawa barat'],
+  'West Java' => ['jawa barat', 'jabar'],
 );
 
 my @SINGLE_WORDS = qw(
@@ -96,7 +98,8 @@ my @SINGLE_WORDS = qw(
   Florida
   Gorontalo
   Haugaland Hebei
-  Karimun Kepri Kedungwaru
+  Jiangsu
+  Kansai Karimun Kepri Kedungwaru
   Lumajang
   Maharashtra Mjøsa
   Norrland
@@ -114,6 +117,7 @@ my %SINGLE_TYPOS =
 (
   'Australian Central Territory' => ['act'],
   Eurasia => ['avrasya'],
+  Kansai => ['kinki'],
   'Kepulauan Riau' => ['riau', 'kepri'],
   'New South Wales' => ['nsw'],
   Queensland => ['qld'],

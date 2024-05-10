@@ -30,6 +30,7 @@ my @MULTI_WORDS =
   'Gunadurma',
   'ITS IKOMA',
   'ITÜ Vakfi',
+  'Jiangsu Tianyi',
   'Kocaeli University',
   'Koc University',
   'KU Leuven',

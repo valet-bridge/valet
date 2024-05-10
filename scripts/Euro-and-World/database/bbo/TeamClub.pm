@@ -65,6 +65,16 @@ my @MULTI_WORDS =
   'Hanseatic Hamburg BC',
   'Hindusthan Club',
   'Hok Studiecentrum',
+  'Jakarta BBG',
+  'Jia Zhou Ai Qiao',
+  'Jian Hua',
+  'Jili Qiche',
+  'Jin Ying',
+  'Jin Fu',
+  'Jin Hui',
+  'Jin Mei',
+  'Jing Fan',
+  'JZD Liban',
   'Karlsruher BSC',
   'Klør 10 Vejle',
   'Kota Club',
@@ -148,6 +158,11 @@ my %MULTI_TYPOS =
     'izmir bilimsel', 'izmir buyuksehir', 'izmir b.b.s.k',
     'izmir b.s. belediye', 'Izmir BSB/Turkiye', 'izmir bsbs',
     'izmir bbsk'],
+  Jeofizik => ['jeofýzýk'],
+  'Jian Hua' => ['jian hua club'],
+  'Jili Qiche' => ['ji li'],
+  'Jin Ying' => ['jin ying club'],
+  'Jing Fan' => ['jing fan club', 'jin fan'],
   'Karlsruher BSC' => ['karlsruher bc'],
   'Köln Lindenthal BC' => ['köln lindenthal', 'köln-lindenthal',
     'köln-lindenthaler', 'köln-lindenthaler b'],
@@ -176,6 +191,7 @@ my @SINGLE_WORDS = qw(
   Galatasaray
   Hercules Hordaland
   Hosgoru
+  Jeofizik
   Kløverknekt 
   Lavec Laksamana
   Locomotiva
