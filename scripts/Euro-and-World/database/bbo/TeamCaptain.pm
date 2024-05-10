@@ -106,12 +106,14 @@ my @MULTI_WORDS =
   'Jozef Pochron',
   'Jörg Fritsche',
   'Júlíus Sigurjónsson',
+  'Kamal Kumar Nagori',
   'Karl Sigurhjartarson',
   'Kasper Konow',
   'Knud Harries',
   'Kristian Tylvad',
   'Krzysztof Strykier',
   'Kumar Vijay Anand',
+  'Kurniadi Djauhari',
   "L'Écuyer",
   'Lauge Pedersen',
   'Lotan Fisher',
@@ -140,6 +142,7 @@ my @MULTI_WORDS =
   'Nabil Edgtton',
   'Nuno Matos',
   'Nuno Sousa',
+  'Ómar Freyr',
   'Omar Sharif',
   'Palma Carlos',
   'Pankaj Mehta',
@@ -171,6 +174,7 @@ my @MULTI_WORDS =
   'Sanjay Bhattacharya',
   'Shashi Gupta',
   'Shekhar Banerjee',
+  'Shree Priya',
   'Signe Thomsen',
   'Simon Gillis',
   'Símon Símonarson',
@@ -259,15 +263,17 @@ my %MULTI_TYPOS =
   'John Holland' => ['j holland'],
   'Jón Ásbjörnsson' => ['ásbjörnsson'],
   'Jozef Pochron' =>['j pochron'],
+  'Kamal Kumar Nagori' => ['kamal naguri'],
   'Karl Sigurhjartarson' => ['karl sigurhjartar', 'karl sigurhjartars',
     'karl sigurhjartarso', 'karl sigurhjartarss'],
   'Krzysztof Strykier' => ['k.strykier'],
   'Kumar Vijay Anand' => ['kr. vijay anand', 'kr. vijayanand'],
+  'Kurniadi Djauhari' => ['dee jee'],
   "L'Écuyer" => ["l'ecuyer", 'lecuyer', 'l ecuyer', 'l"ecuyer'],
   'Lauge Pedersen' => ['lauge-pedersen'],
   'Lotan Fisher' => ['fisher lotan'],
   'Alvares Ribeiro' => ['luis alvares ribeiro', 'luis a ribeiro',
-    'luis a. ribeiro'],
+    'luis a. ribeiro', 'álvares ribeiro'],
   'Manuel Oliveira' => ['manuel oliveia', 'm.oliveira', 'm. oliveira',
     'm oliveira'],
   'Manuela Mouttet' => ['mme mouttet'],
@@ -301,7 +307,7 @@ my %MULTI_TYPOS =
   'Shashi Gupta' => ["shashi gupta's 6"],
   'Sinan Göksu' => ['sinan goksu'],
   'Sunil Machhar' => ['sunil machar', 'sunil macchar',
-    'sunal macchar', 'sunil maccher'],
+    'sunal macchar', 'sunil maccher', 'sunil.macchar'],
   'Sverrir Þórisson' => ['sverrir þ'],
   'van Prooijen'=> ['van proojen'],
   'Van den Bos' => ['van des bos'],
@@ -389,7 +395,7 @@ my @SINGLE_WORDS = qw(
   Fang Fantonakis Fantoni Farholt Faria Farwell Favard
   Federighi Fegarty Feiler Feng Fernando Ferramosca Ferrara 
   Ferrari Ferreira Fettes
-  Fici Figueiredo Filios Filip Finikiotis Fioretti Fireman Firestone 
+  Fici Figlus Figueiredo Filios Filip Finikiotis Fioretti Fireman Firestone 
   Fleisher Fleury Flierl Flock Flora 
   Ford Fordham Fornaciari Forrester Fortini Fout Fox
   Frances Franchi Fraser Frazer Frazzetto Frencken Fredin Freed 
@@ -485,7 +491,8 @@ my @SINGLE_WORDS = qw(
   Natale Navneet
   Neale Negrin Neill Nencini Netto Neuhauser Neulinger Neve 
   Newell Newman Nickell Nielsen Nieminen Nikolenkov Nilsland 
-  Nilsson Ninos Nixon Noble Nowosadzki Nørgaard Nunes Nunn Nystrom
+  Nilsson Nimhauser Ninos Nixon Noble Nowosadzki Nørgaard 
+  Nunes Nunn Nystrom
   
   O'Brien O'Gorman Ohno Ohrysko Oikonomopoulos
   Olanski Oliveira Olsen Omran Oncu O'Rourke Ortega

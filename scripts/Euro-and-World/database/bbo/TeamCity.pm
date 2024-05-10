@@ -28,6 +28,8 @@ my @MULTI_WORDS =
   'Kota Mataram',
   'Novi Sad',
   'Reggio Emilia',
+  'Semburat Jingga',
+  'Siddha Eden Lakeville',
   'Silesia Gliwice',
   'Val de Seine',
   'Villa Fabbriche',
@@ -39,10 +41,12 @@ my %MULTI_TYPOS =
 (
   'City of Helsinki' => ['helsinki'],
   Istanbul => ['ýstanbul'],
+  Nangang => ['nan gang'],
   Ningbo => ['ning bo'],
   'Reggio Emilia' => ['r.e.', 'reggio e'],
   Pudong => ['pu dong'],
   Qingdao => ['qing dao'],
+  'Siddha Eden Lakeville' => ['siddha eden', 'sidhha eden', 'siddha-eden'],
   'Silesia Gliwice' => ['silezia gliwice'],
   'Villa Fabbriche' => ['v.fabbr.', 'villa fabb.', 'v. fabbriche',
     'v.fabbriche']
@@ -93,18 +97,19 @@ my @SINGLE_WORDS = qw(
   Krakow Kristiansand Kucukcekmece Kudus Kunshan Kuopio Kusadasi Kütahya
 
   Leiden Leszno Leuven Leverkusen Lhokseumawe Lille Lima Lincoln
-  Ljubljana London Lubin Lublin Luleburgaz Lumajang
+  Ljubljana London Lozenets Lubin Lublin Luleburgaz Lumajang
 
   Maastricht Madrid Makassar Malatya Malmö Manahasa Manado Manchester 
   Manisa Mannheim Marbella Martapura Malatya Massy Mataram 
   Medan Melbourne Mersin Midyat Milan Minsk Miskolc 
   Montpellier Moradabad Mumbai Munich Muratpasa
 
-  Nagbagan Nagpur Nagykanizsa Namsos Nanning Narita Narlidere 
+  Nagbagan Nagpur Nagykanizsa Namsos Nangang Nanning 
+  Narita Narlidere Narvik
   Nazilli Näsby Nijmegen Ningbo Niski Norrøna Nusantara Nürnberg 
   Nyon Nærbø Næstved Nøtterøy
 
-  Odense Ogndal Oldenburg Orhangazi Oslo Oxford
+  Odense Ogndal Oldenburg Orhangazi Oslo Oxford Överum
 
   Padang Padova Palembang Palermo Palma Palu Pamukkale Pariaman 
   Paris Pärnu
@@ -133,7 +138,7 @@ my @SINGLE_WORDS = qw(
   Udaipur Uppsala Usak Utrecht
 
   Varese Varna Vasa Västervik Vejle Vestfold Vestvågøy Vienna 
-  Vikersund Vilnius Vraca
+  Vikersund Vilnius Viþnelik Vraca
 
   Xiamen Xinghua Xinyi
 
@@ -166,13 +171,14 @@ my %SINGLE_TYPOS =
   Çayyolu => ['cayyolu'],
   Cerkezkoy => ['çerkezköy'],
   Corlu => ['çorlu'],
-  Izmir => ['ýzmir'],
+  Izmir => ['ýzmir', 'ýzmýr'],
   Jakarta => ['dki', 'jakar', 'jkt'],
   Karsiyaka => ['Karþiyaka'],
   Kocaeli => ['Kocaelý'],
   Kolkata => ['calcutta'],
   Krakow => ['kraków'],
   Kristiansand => ['kristiansands'],
+  Lozenets => ['lozenec'],
   Makassar => ['makasar'],
   Manahasa => ['mnhasa'],
   Mumbai => ['mum'],

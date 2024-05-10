@@ -20,11 +20,12 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  EBU => ['eng bridge union']
+  EBU => ['eng bridge union'],
 );
 
 my @SINGLE_WORDS = qw(
   EBU
+  NIBU
   GABSI
 );
 

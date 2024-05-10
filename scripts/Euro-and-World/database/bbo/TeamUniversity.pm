@@ -57,6 +57,7 @@ my @MULTI_WORDS =
   'Universität Potsdam',
   'Valahia University',
   'Warsaw University of Technology',
+  'Yildiz Technical University',
   'Zagreb University'
 );
 
@@ -99,7 +100,8 @@ my %MULTI_TYPOS =
   'University of Wroclaw' => ['uni wroclaw'],
   'University of Tanjungpura' => ['untan'],
   'Universität Potsdam' => ['uni potsdam'],
-  'Warsaw University of Technology' => ['warsaw ut']
+  'Warsaw University of Technology' => ['warsaw ut'],
+  'Yildiz Technical University' => ['ýtü']
 );
 
 my @SINGLE_WORDS = qw(

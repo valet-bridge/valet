@@ -24,17 +24,19 @@ my %MULTI_TYPOS =
 (
   'Bridge Club' => [
     'a.s.', 'a.s.d.', 'ass. br.',
-    'b.b.', 'b.c.', 'b.c',
-    'b.b.k.', 'b.b.s.', 'b.b.s.k.', 'b.s.', 'b.s.b.',
-    'b.seh bel', 'b. shr bld', 'bld.spor', 
+    'b.akd', 'b.b.', 'b.c.', 'b.c',
+    'b.b.k.', 'b.b.s.', 'b.b.s.k.', 'b.s.', 'b.s.b.', 'b.þ. bld.',
+    'b.seh bel', 'b. shr bld', 'bld', 'bld.', 'bld sk', 'bld sp',
+    'bld.sp', 'bld.spor', 'bld. gsk',
     'br.', 'bric iht.', 'bric klb', 'bric kulubu', 
-    'bridge clu', 'bridz klub', 'bsb bk', 
+    'bridge clu', 'bridz klub', 'brýç spor', 'bsb bk', 
     'c. br.',
     'gr.sp.ass.', 'g.s.b.',
-    'kontrat bsk'],
+    'kontrat bsk',
+    'y.þehýr bld'],
 
   'Sporting Club' => [
-    'bric sk', 'briç sk', 'briç skd',
+    'bric sk', 'briç sk', 'briç skd', 'bric spor kl',
     'briç ýsk', 'brýç sk', 'brýç spor', 'spor bric', 
     "sport' c", 'sports c', 'spor kb', 's c',
     's.k.', 'spor kulubu', 'spor kulübü',
@@ -42,6 +44,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  Vakfi
 );
 
 my %SINGLE_TYPOS =
@@ -57,7 +60,8 @@ my %SINGLE_TYPOS =
     nbi nbcbl
     obk 
     sbc sc sdgskd sk spor
-    tbc tc)]
+    tbc tc)],
+  'Sporting Club' => ['sporting', 'sprting'],
 );
 
 

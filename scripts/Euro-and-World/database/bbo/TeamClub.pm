@@ -45,6 +45,7 @@ my @MULTI_WORDS =
   'BK Everfresh',
   'BK Fyris Skalman',
   'BK Grand',
+  'Crvena Zwezda',
   'Herkules',
   'Lavec Smile',
   'Nord Aalborg',
@@ -130,6 +131,7 @@ my %MULTI_TYPOS =
   'Bogazici BSK' => ['bogaz ici bsk', 'boðazici bsk', 'boðazýçý bsk',
     'boðazýçý s.k.'],
   'Cerkezkoy Dinamik BSK' => ['Cerkezkoy BS', 'Cerkezkoy BSK'],
+  'Crvena Zwezda' => ['zrvena zwezda'],
   'Diyarbakýr Sur BSK' => ['diyarbakir bs', 'diyarbakir bsbs', 
     'dýyarbakir sur. b.b', 'diyarbakir sur sk', 'sur belediye sk',
     'sur belediye', 'd.bakýr sur', 'd.bakir sur'],
@@ -154,7 +156,7 @@ my %MULTI_TYPOS =
   'Nord Trøndelag' => ['nord -trøndelag', 'nord-trøndelag',
     'nord-trløndelag'],
   'OBK Kløverknekt' => ['obk kloverknekt', 'obk/kløverknekt'],
-  'One Eyed Jacks' => ['one-eyed jacks'],
+  'One Eyed Jacks' => ['one-eyed jacks', 'one.eyed jacks'],
   'Quantum BC' => ['bc quantum'],
   'Qi Zhong Club' => ['qi zhong'],
   'Qin Lian Club' => ['qin lian'],
@@ -179,6 +181,7 @@ my @SINGLE_WORDS = qw(
   Sakura
   Østerdal
   Örebridgen
+  Åsane
 );
 
 my %SINGLE_TYPOS =

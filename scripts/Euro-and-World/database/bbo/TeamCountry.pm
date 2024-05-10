@@ -60,13 +60,14 @@ my %MULTI_TYPOS =
     'aotearoa', 'aotearoq'],
   'North Macedonia' => ['macedonia'],
   'Northern Ireland' => ['northertn irelsnd', 'n irelena', 'n. ireland',
-    'n ire', 'north ire', 'northern irelnd'],
+    'n.ireland', 'n ire', 'north ire', 'northern irelnd'],
   'Republic of Ireland' => ['rep. of ireland', 'rep of ireland', 'roi',
     'rep ire', 'rep ireland', 'republic of irelend', 'reublic of ireland',
     'r of ireland'],
   'San Marino' => ['san_marino'],
   'Serbia and Montenegro' => ['serbia/mont', 'serbia&mon.'],
   'Trinidad and Tobago' => ['trinidad & tobago', 'trinidad&tobago'],
+  USA => ['u.s.a.']
 );
 
 my @SINGLE_WORDS = qw(
@@ -119,8 +120,9 @@ my %SINGLE_TYPOS =
   Colombia => ['columbia'],
   Croatia => ['croatie'],
   Denmark => ['danmark', 'danemark', 'denmarrk', 'den', 'dk'],
+  Egypt => ['egy'],
   England => ['eng'],
-  Estonia => ['estonie'],
+  Estonia => ['estonie', 'est'],
   Finland => ['finnland'],
   France => ['fra'],
   Germany => ['deutschland'],

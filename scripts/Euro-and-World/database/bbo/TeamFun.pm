@@ -132,6 +132,7 @@ my @MULTI_WORDS =
   'Die vier vom Rhein',
   'Disco Ninjas',
   'Djarum Super',
+  'DK Notus',
   'Do You Fire?',
   'Double R',
   'Down Under',
@@ -210,6 +211,7 @@ my @MULTI_WORDS =
   'Hurlumhei',
   'Hvalen og tjukkasene', 
   'Hvor er mine babes',
+  'I Doctors',
   'Ikke akkurat kjedelig',
   'Il Fante di Fiori',
   'Ilhas & Aredores',
@@ -243,6 +245,7 @@ my @MULTI_WORDS =
   'Lawrence Allstars',
   'Lawrence of Arabia',
   'La Vista',
+  'Le Colonial',
   'Leromain boys',
   'Les Girafes',
   'Les Zähringers',
@@ -260,6 +263,7 @@ my @MULTI_WORDS =
   'Lucky Seven',
   'Lucky Star',
   'Lucky 13',
+  'Ma-Cartoon',
   'Magic Eyes',
   'Man Harr det man har',
   'Manchester United',
@@ -303,6 +307,8 @@ my @MULTI_WORDS =
   'Opp og ned',
   'Ottos Lotto',
   'Over stokk og stein',
+  'Ööklubi Strand',
+  'Øst-Vest',
   'Papa & Rabbits',
   'Papa and Rabids',
   'Papas & Puppies',
@@ -344,7 +350,6 @@ my @MULTI_WORDS =
   'Semangat Baru',
   'Seths vänner',
   'Seven Eleven',
-  'Scientists',
   'Shining Pig',
   'Shooting',
   'Shy Ant',
@@ -357,6 +362,7 @@ my @MULTI_WORDS =
   'Six Samurai',
   'Skitur',
   'Slam Hunters',
+  'slaveykov.bg',
   'Smoking Guns',
   'Smooth Duck',
   'Småsamen med døler',
@@ -429,6 +435,7 @@ my @MULTI_WORDS =
   'Thick Toast',
   'Thread & Needles',
   'Three Nations',
+  'Tre knekter og ett S',
   'To gamle og to gode',
   'Tommys tigre',
   'Top Ruff',
@@ -452,6 +459,7 @@ my @MULTI_WORDS =
   'Vi bygger stikk!',
   'Vi fyra',
   'Vi i femman',
+  'Visoki Napon',
   'Volatile Company',
   'Walking Dead',
   'www guts com',
@@ -496,6 +504,7 @@ my %MULTI_TYPOS =
   'AG laget' => ['ag-laget'],
   'Air Traffic Management' => ['air traffic managem'],
   'Alex is Beautiful' => ['alex is beatiful'],
+  'Alle presidentens menn' => ['alle presidentens'],
   'Arnab' => ["arnab's"],
   'Babes Amazones' => ['babes-amazones'],
   'Best uten kort' => ['best uden kort'],
@@ -554,18 +563,19 @@ my %MULTI_TYPOS =
   'Saint Titus' => ['st titus', 'st. titus'],
   'Sakurai' => ['japan sakurai'],
   'Semangat Baru' => ['semangat br'],
-  'Scientists' => ['science'],
   'Sivves straffdubbl' => ['sivves straffdubbl.', 'sivves straffdbl',
      'sivves...'],
   'Six Diamonds' => ['six diamond'],
   'Six Samurai' => ['six samurais'],
   'Slam Hunters' => ['slam hunter'],
+  'slaveykov.bg' => ['slaveikov.bg'],
   'Spring Foursomes' => ['spring 4s', 'spring fours', "spring 4's"],
   'Stabby with Youngsters' => ['stabby with youngst'],
   'Texan Aces' => ['texa aces', 'texaan aces'],
   'The Four Guys' => ['the 4 guys'],
   'The Clown' => ['the_clown'],
   'The Palookas' => ['the_palookas'],
+  'Tre knekter og ett S' => ['tre knekter og etts'],
   'Tre rette og en vrang' => ['tre rette og en vra'],
   'Troll i eske' => ['tre troll i eske', 'tre troll ...'],
   'Valar Morghulis' => ['valar morgulis'],
@@ -580,17 +590,22 @@ my @SINGLE_WORDS = qw(
    Ambassador Andrzejki Anglophones Appellkameratene Arangan Armani Arnab 
    Arno Aspe Augerne Autostrada Avagard Avalanche Aytalus
 
-   bananasplit beniaminek bhinneka blondie blueberry bridgeministeriet
-   cogito
+   balti bananasplit beniaminek bhinneka blondie blueberry 
+   bridgeministeriet
+   censored cogito
    dallas 
    fenghuang formidables formosa francophones
+   guests
    hollywood honeymoon
    jupiter
    lira
-   movember
+   moritz movember
+   naturalists neduk nemesis neverclaim
    saga
-   sakurai 
+   sakurai scientists starmen
+   winkiboy
    úlfurinn
+   zeerob zugzwang
 );
 
 my %SINGLE_TYPOS =
@@ -608,7 +623,10 @@ my %SINGLE_TYPOS =
   Formidables => ['formidable', 'formidabble', 'formidabels',
     'formiddable', 'formiddables', 'formadibles', 'formadeble',
     'formadables'],
+  'Naturalists' => ['nature'],
   'Pontiac 7' => ['pontiac7'],
+  'Scientists' => ['science'],
+  'Vegetable Hotpot' => ['vegetable'],
   'Wei De' => ['weide']
 
 );
