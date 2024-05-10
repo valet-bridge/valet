@@ -31,6 +31,7 @@ my @MULTI_WORDS =
   'Semburat Jingga',
   'Siddha Eden Lakeville',
   'Silesia Gliwice',
+  'Stara Zagora',
   'Val de Seine',
   'Villa Fabbriche',
   'Vrnjacka Banja',
@@ -93,7 +94,7 @@ my @SINGLE_WORDS = qw(
 
   Kadirli Kalisz Kalyani Kanpur Karachi Karlsruhe Kartal Karsiyaka
   Kastamonu Katowice Kaylaka Kediri Ketsch Kiel Kielce Kiev 
-  Kirklarelý Kocaeli Kocamustafapasa Kolkata Konak Koycegiz Köln 
+  Kirklarelý Kocaeli Kocamustafapasa Kolkata Konak Kosice Koycegiz Köln 
   Krakow Kristiansand Kucukcekmece Kudus Kunshan Kuopio Kusadasi Kütahya
 
   Leiden Leszno Leuven Leverkusen Lhokseumawe Lille Lima Lincoln
@@ -111,7 +112,7 @@ my @SINGLE_WORDS = qw(
 
   Odense Ogndal Oldenburg Orhangazi Oslo Oxford Överum
 
-  Padang Padova Palembang Palermo Palma Palu Pamukkale Pariaman 
+  Padang Padova Palembang Palermo Palma Palu Pamukkale Panzhihua Pariaman 
   Paris Pärnu
   Pekanbaru Pelotas Pernik Perth Pesaro Pescara Posillipo
   Pula
@@ -185,6 +186,7 @@ my %SINGLE_TYPOS =
   Munich => ['münchen'],
   Narlidere => ['narlýdere'],
   Pamukkale => ['pamuk'],
+  Panzhihua => ['panzhihuabc'],
   Prague => ['praha'],
   Radkov => ['radkow', 'kadkov'],
   Rome => ['roma'],

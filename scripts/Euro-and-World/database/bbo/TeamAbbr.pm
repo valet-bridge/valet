@@ -31,6 +31,7 @@ my %MULTI_TYPOS =
     'br.', 'bric iht.', 'bric klb', 'bric kulubu', 
     'bridge clu', 'bridz klub', 'brýç spor', 'bsb bk', 
     'c. br.',
+    'card club',
     'gr.sp.ass.', 'g.s.b.',
     'kontrat bsk',
     'y.þehýr bld'],

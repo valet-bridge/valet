@@ -100,6 +100,7 @@ my @SINGLE_WORDS = qw(
   Poland 
   Reunion 
   Scotland
+  Slovakia
   Switzerland 
   Tunisia
   Turkey

@@ -568,7 +568,7 @@ my @SINGLE_WORDS = qw(
   Yamada Yarington Yates Yezerski Yilankiran Yilmaz Yoleri Yuen Yule
 
   Zabunoglu Zagor Zagorin Zaleski Zanalda Zarkesch Zawada Zeeberg Zenari 
-  Zhan Zhong Zimmermann Zollo Zorlu Zozis Zotos
+  Zhan Zhao Zhong Zimmermann Zollo Zorlu Zozis Zotos
 );
 
 my %SINGLE_TYPOS =

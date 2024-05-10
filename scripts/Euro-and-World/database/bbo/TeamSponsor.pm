@@ -129,6 +129,10 @@ my @MULTI_WORDS =
   'Team Audita',
   'Team PharmaService',
   'Team Secure',
+  'Telkom Indonesia',
+  'Telkom Speedy',
+  'Telkom UseeTV',
+  'Telkom@wifi.id',
   'Thai Oil',
   'Tolani Shipping Ltd',
   'Trambak Rubber',
@@ -226,6 +230,8 @@ my %MULTI_TYPOS =
   'Syabas Energy' => ['syabas energi', 'syabas e'],
   'Synergia Lublin' => ['synergia lubin'],
   'Team PharmaService' => ['pharma service', 'pharmaservice'],
+  'Telkom Indonesia' => ['telkom ind indihome', 'telkom indonesia'],
+  'Telkom Speedy' => ['telkom speedy bpn'],
   'Tolani Shipping Ltd' => ['tolani shipping'],
   'Trambak Rubber' => ['trumpak rubber'],
   'Unia Winkhaus' => ['winkhaus unia', 'winkhaus-unia'],
@@ -235,6 +241,7 @@ my %MULTI_TYPOS =
     'yer bros', 'yeoh bros'],
   'Yibin China Resources' => ['yibin cr gas', 'yibin china resourc'],
   'Yunnan Dikuang Resources' => ['yunnan dikuang', 'yun nan'],
+  'Zhejiang Huamen' => ['zhe jiang hua men'],
   'Zhongshan Jiegao' => ['zhong shan jie gao']
 );
 

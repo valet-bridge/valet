@@ -45,7 +45,7 @@ my @MULTI_WORDS =
   'BK Everfresh',
   'BK Fyris Skalman',
   'BK Grand',
-  'Crvena Zwezda',
+  'Crvena Zvezda',
   'Herkules',
   'Lavec Smile',
   'Nord Aalborg',
@@ -89,6 +89,7 @@ my @MULTI_WORDS =
   'Qingnian Qiche',
   'Quantum BC',
   'Royal Selangor Club',
+  'Samadhan Academy',
   'Semen Padang',
   'Shou Chuang',
   'Studentenes',
@@ -96,7 +97,8 @@ my @MULTI_WORDS =
   'Wadi Degla',
   'Wampon Bodi Papua',
   'WCG Mumbai',
-  'Young Sharks'
+  'Young Sharks',
+  'Zurich Enge'
 );
 
 my %MULTI_TYPOS =
@@ -131,7 +133,7 @@ my %MULTI_TYPOS =
   'Bogazici BSK' => ['bogaz ici bsk', 'boðazici bsk', 'boðazýçý bsk',
     'boðazýçý s.k.'],
   'Cerkezkoy Dinamik BSK' => ['Cerkezkoy BS', 'Cerkezkoy BSK'],
-  'Crvena Zwezda' => ['zrvena zwezda'],
+  'Crvena Zvezda' => ['zrvena zwezda'],
   'Diyarbakýr Sur BSK' => ['diyarbakir bs', 'diyarbakir bsbs', 
     'dýyarbakir sur. b.b', 'diyarbakir sur sk', 'sur belediye sk',
     'sur belediye', 'd.bakýr sur', 'd.bakir sur'],
@@ -179,6 +181,7 @@ my @SINGLE_WORDS = qw(
   Locomotiva
   Miskolc
   Sakura
+  Uppsalabridgen
   Østerdal
   Örebridgen
   Åsane
@@ -201,6 +204,8 @@ my %SINGLE_TYPOS =
   Kløverknekt => ['kloverknekt'],
   Locomotiva => ['loco'],
   'Majör Boğaziçi' => ['majorbogazici'],
+  'Samadhan Academy' => ['samadhan'],
+  Uppsalabridgen => ['ippsalabridgen'],
   Örebridgen => ['Örebridge', 'orebridgen'],
 );
 

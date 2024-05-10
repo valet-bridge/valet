@@ -67,7 +67,6 @@ my @MULTI_WORDS =
   'Baltic Club',
   'Bara brudar',
   'Barny Army',
-  'Bauhinia',
   'BBO Lovers',
   'Bea & Family',
   'Bela e os Monstros',
@@ -334,6 +333,7 @@ my @MULTI_WORDS =
   'Red Soles',
   'Reidar reiser snart',
   'Renons Rimstedt',
+  'Rimstedt Power!',
   'Rising Star',
   'Robin Hood',
   'Royal Flush',
@@ -342,7 +342,7 @@ my @MULTI_WORDS =
   'Ruter 7',
   'Ruter 9',
   'Saint Titus',
-  'Sakurai',
+  'Saevar Karl',
   'Salten rundt',
   'Samfund Slingers',
   'Saras Friends',
@@ -360,7 +360,6 @@ my @MULTI_WORDS =
   'Sivves straffdubbl',
   'Six Diamonds',
   'Six Samurai',
-  'Skitur',
   'Slam Hunters',
   'slaveykov.bg',
   'Smoking Guns',
@@ -393,6 +392,7 @@ my @MULTI_WORDS =
   'Team Awesome',
   'Team Mayhem',
   'Team Yoda',
+  'Tempo-Knektene',
   'The Four Guys',
   'The A Team',
   'The Alliance',
@@ -435,6 +435,7 @@ my @MULTI_WORDS =
   'Thick Toast',
   'Thread & Needles',
   'Three Nations',
+  'Tinutuan Manado',
   'Tre knekter og ett S',
   'To gamle og to gode',
   'Tommys tigre',
@@ -571,6 +572,7 @@ my %MULTI_TYPOS =
   'slaveykov.bg' => ['slaveikov.bg'],
   'Spring Foursomes' => ['spring 4s', 'spring fours', "spring 4's"],
   'Stabby with Youngsters' => ['stabby with youngst'],
+  'Tempo-Knektene' => ['tempo-knehtene'],
   'Texan Aces' => ['texa aces', 'texaan aces'],
   'The Four Guys' => ['the 4 guys'],
   'The Clown' => ['the_clown'],
@@ -590,7 +592,7 @@ my @SINGLE_WORDS = qw(
    Ambassador Andrzejki Anglophones Appellkameratene Arangan Armani Arnab 
    Arno Aspe Augerne Autostrada Avagard Avalanche Aytalus
 
-   balti bananasplit beniaminek bhinneka blondie blueberry 
+   balti bananasplit bauhinia beniaminek bhinneka blondie blueberry 
    bridgeministeriet
    censored cogito
    dallas 
@@ -602,7 +604,7 @@ my @SINGLE_WORDS = qw(
    moritz movember
    naturalists neduk nemesis neverclaim
    saga
-   sakurai scientists starmen
+   sakurai scientists skalman skitur starmen
    winkiboy
    úlfurinn
    zeerob zugzwang

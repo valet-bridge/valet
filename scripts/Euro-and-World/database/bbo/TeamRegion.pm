@@ -94,15 +94,17 @@ my @SINGLE_WORDS = qw(
   Bali Bornholm Buskerud
   Eurasia
   Florida
+  Gorontalo
   Haugaland Hebei
   Karimun Kepri Kedungwaru
   Lumajang
-  Mjøsa
+  Maharashtra Mjøsa
   Norrland
   Queensland
   Oberloiben
   Punjab
   Ratchaburi Rogaland Rosfjord
+  Sichuan
   Telemark
   Victoria
   Zhejiang
