@@ -46,9 +46,14 @@ my @MULTI_WORDS =
   'Crvena Zvezda',
   'Cerkezkoy Dinamik BSK',
   'Darmstadt Alert',
+  'DBK Dalom',
+  'Debrecen DEAC',
+  'Deccan Club',
   'Delhi Gymkhana Club',
   'Diyarbakýr Sur BSK',
+  'Dorost Havirov',
   'Drammen Arbeiderparti',
+  'Dýcle Gençlýk',
   'El Ahly',
   'El Rabwa Club',
   'El Shams Club',
@@ -149,6 +154,7 @@ my %MULTI_TYPOS =
     'boðazýçý s.k.'],
   'Cerkezkoy Dinamik BSK' => ['Cerkezkoy BS', 'Cerkezkoy BSK'],
   'Crvena Zvezda' => ['zrvena zwezda'],
+  'Debrecen DEAC' => ['debrecen-deac'],
   'Diyarbakýr Sur BSK' => ['diyarbakir bs', 'diyarbakir bsbs', 
     'dýyarbakir sur. b.b', 'diyarbakir sur sk', 'sur belediye sk',
     'sur belediye', 'd.bakýr sur', 'd.bakir sur'],
@@ -176,6 +182,7 @@ my %MULTI_TYPOS =
   'Majör Boğaziçi' => ['major b', 'major bogazici'],
   'Midt Trøndelag' => ['midt trondelag', 'midt-trøndelag',
     'midt-trondelag'],
+  'Miskolc DEAC' => ['deac-miskolc'],
   'Nachteulen Leverkusen' => ['nachteulen leverk'],
   'Nord Trøndelag' => ['nord -trøndelag', 'nord-trøndelag',
     'nord-trløndelag'],
@@ -193,7 +200,7 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   Acol Airmadidi Akceþme Amisos Asenovec Auguri
   Botev
-  Debrecen
+  Debrecen Dragao
   Fosnavåg
   Galatasaray
   Hercules Hordaland

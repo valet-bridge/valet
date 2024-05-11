@@ -113,6 +113,11 @@ my @MULTI_WORDS =
   'Croatian Pirates',
   'Curry Eaters',
   'D-MaTK',
+  "D'Coup",
+  'D POK',
+  'Dalian ABC',
+  'Dalian BA',
+  'Dalian Hong',
   'Danish Guns',
   'Dark Blues',
   'Das Autobahn',
@@ -136,22 +141,35 @@ my @MULTI_WORDS =
   'Denmark Baby',
   'Der Untergang',
   'Der wilde Süden',
+  'Dersim38',
   'Desert Warriors',
   'Desperate Bridge Wives',
   'Det nappar på kroke',
+  'Deutsche Senioren',
   'Die Schönen und di',
   'Die vier vom Rhein',
+  'Diren Noname',
   'Disco Ninjas',
   'DK Notus',
+  'DK Nationalchampion',
+  'DK-Tworzywa',
+  'DKI Maesa',
   'Do You Fire?',
   'domwaluty.pl',
+  'Don Julio',
+  'Don Revival',
+  'Dongfang Tairong',
+  'Dong Ming',
+  'Dong Qi 9',
   'Double R',
   'Down Under',
+  'Dr. Gittipatq',
   'Dracula 2',
   'Dragon Cartoon',
   'Dragon Kiddies',
   'Dragon Piggies',
   'Dream Team',
+  'DS 1',
   'Ege & Besli Major',
   'Eiydes discipler',
   'El Gezira',
@@ -248,6 +266,7 @@ my @MULTI_WORDS =
   'Jai Ganesh',
   'Jaipur Jewels',
   'Jamm & Co',
+  'Jan Wellem',
   'Jane Doe',
   'Japan SARA',
   'Japan SAYN',
@@ -261,6 +280,9 @@ my @MULTI_WORDS =
   'Juniors Disipler',
   'Juras Ezi',
   'Juzz-Pete',
+  'K1',
+  'K2',
+  'K4',
   'Karachi Aces',
   "Karl's Silence",
   'Karlstads vänner',
@@ -270,6 +292,7 @@ my @MULTI_WORDS =
   "Keni's Team",
   'Kent Romeos venner',
   'Kick Back',
+  'Kippe et al',
   'Klara färdiga slam',
   'Klicks Dream Team',
   'Kløver 5',
@@ -564,11 +587,13 @@ my %MULTI_TYPOS =
   'Desperate Bridge Wives' => ['desperate bw', 'desperate bridgewi'],
   'Down Under' => ['doun under'],
   'Dragon Kiddies' => ['dragon kiddie'],
+  DSM => ['d s m'],
   'Eiydes discipler' => ['eiydes disciple'],
   'El Gezira' => ['el-gezira'],
   'Elses Fanklubb' => ["elze`s fanklubb"],
   'En myra tre elefanter' => ['en myra tre elefant'],
   'England and Pharon' => ['england plus pharon'],
+  'Equator 1771' => ['equator1771'],
   'Esso-sveitin' => ['esso - sveitin', 'esso -sveitin'],
   'Et par sama og 2 ens' => ['et par sama og 2 en'],
   'Fast and Furious' => ['fast & furious'],
@@ -589,6 +614,7 @@ my %MULTI_TYPOS =
   'India Blues' => ['indian blues'],
   'Indian Mavericks' => ['india mavericks', 'indian mavricks'],
   'Jamm & Co' => ['jamm & co.', 'jamm && co.'],
+  'Jan Wellem' => ['jan wel'],
   'Kasimirs Dream Team' => ['kasimirs dreamteam'],
   'Kent Romeos venner' => ['kent romeos veenner'],
   'Kick Back' => ['kick-back'],
@@ -641,22 +667,23 @@ my @SINGLE_WORDS = qw(
    Ambassador Andrzejki Anglophones Appellkameratene Arangan Armani Arnab 
    Arno Aspe Augerne Autostrada Avagard Avalanche Aytalus
 
-   balti bananasplit bauhinia beniaminek bhinneka blondie blueberry 
-   bridgeministeriet
-   censored cogito
-   dallas dingyuan
-   ekoap epsilon everest
-   fenghuang formidables formosa francophones
-   guests
-   hollywood honeymoon
-   jupiter
-   lira
-   moritz movember
-   naturalists neduk nemesis neverclaim
-   saga sakurai scientists sindbad skalman skitur starmen
-   winkiboy
-   úlfurinn
-   zeerob zugzwang
+   Balti Bananasplit Bauhinia Beniaminek Bhinneka Blondie Blueberry 
+   Bridgeministeriet
+   Censored Cogito
+   Dallas Dingyuan DSM
+   Ekoap Epsilon Everest
+   Fenghuang Formidables Formosa Francophones
+   Guests
+   Hollywood Honeymoon
+   Jupiter
+   Kings
+   Lira
+   Moritz Movember
+   Naturalists Neduk Nemesis Neverclaim
+   Saga Sakurai Scientists Sindbad Skalman Skitur Starmen
+   Winkiboy
+   Úlfurinn
+   Zeerob Zugzwang
 );
 
 my %SINGLE_TYPOS =
@@ -672,7 +699,6 @@ my %SINGLE_TYPOS =
   'Atomic Bridge' => ['atomic'],
   Bhinneka => ['bhineka', 'bhinneke'],
   Dingyuan => ['dinyuan'],
-  'Equator 1771' => ['equator1771'],
   Formidables => ['formidable', 'formidabble', 'formidabels',
     'formiddable', 'formiddables', 'formadibles', 'formadeble',
     'formadables'],

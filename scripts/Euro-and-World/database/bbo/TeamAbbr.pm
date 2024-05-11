@@ -27,7 +27,7 @@ my %MULTI_TYPOS =
     'b.akd', 'b.b.', 'b.c.', 'b.c',
     'b.b.k.', 'b.b.s.', 'b.b.s.k.', 'b.s.', 'b.s.b.', 'bld', 'bld.',
     'b.s.k.', 'b.seh bel', 'b. shr bld', 'b.k', 'b.k.', 
-    'bld sk', 'bld sp',
+    'bld sk', 'bld sp', 'b.bld.sk',
     'bld.sp', 'bld.spor', 'bld. gsk',
     'br.', 'bric iht.', 'bric klb', 'bric kulubu', 
     'bridge clu', 'bridz klub', 'brýç spor', 'brýç s.k.', 'bsb bk', 

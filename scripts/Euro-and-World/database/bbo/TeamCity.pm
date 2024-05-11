@@ -42,12 +42,16 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  Aceh => ['di aceh'],
   'City of Helsinki' => ['helsinki'],
   Diyarbakir => ['d.baki', 'd.bakir', 'd.bakýr', 'd.baki b.þ',
     'd.bakir b.þ.', 'd.bakir y.þehýr', 'd.bakir yenýþehýr',
-    'd.bakýr b.þehir'],
+    'd.bakýr b.þehir', 'd.bakir sur', 'd.bakýr sur',
+    'd.bakýr dicle'],
   Istanbul => ['ýstanbul'],
-  Jakarta => ['jak-tim', 'jakarta pusat', 'jakarta utara'],
+  Jakarta => ['jak-tim', 'jakarta pusat', 'jakarta utara',
+    'dki jaya'],
+  Kristiansand => ['kr.sand'],
   Nangang => ['nan gang'],
   Ningbo => ['ning bo'],
   'Reggio Emilia' => ['r.e.', 'reggio e'],
@@ -56,7 +60,8 @@ my %MULTI_TYPOS =
   'Siddha Eden Lakeville' => ['siddha eden', 'sidhha eden', 'siddha-eden'],
   'Silesia Gliwice' => ['silezia gliwice'],
   'Villa Fabbriche' => ['v.fabbr.', 'villa fabb.', 'v. fabbriche',
-    'v.fabbriche']
+    'v.fabbriche'],
+  Yogyakarta => ['di jogjakarta']
 );
 
 my @SINGLE_WORDS = qw(
@@ -79,7 +84,7 @@ my @SINGLE_WORDS = qw(
   Cerkezkoy Changzhou Chelsea Chengdu Chennai Chicago Chongqing 
   Chumphon Cimahi Clichy Corlu Courseulles Coventry Cuenca
 
-  Dalian Dalls Daqing Darmstadt Debrecen Delft Delhi Denizli
+  Dalian Dalls Daqing Darmstadt Datca Debrecen Delft Delhi Denizli
   Diyarbakir Dimitrovgrad Dobrich Dombivli Dongguan Düsseldorf
 
   Eastbourne Edirne Ege Esbjerg Eskisehir Essen
@@ -104,7 +109,7 @@ my @SINGLE_WORDS = qw(
   Krakow Kristiansand Kucukcekmece Kudus Kunshan Kuopio Kusadasi Kütahya
 
   Langkat Leiden Leszno Leuven Leverkusen Lhokseumawe Lille Lima Lincoln
-  Ljubljana London Lozenets Lubin Lublin Luleburgaz Lumajang
+  Ljubljana London Lowicz Lozenets Lubin Lublin Luleburgaz Lumajang
 
   Maastricht Madrid Makassar Malatya Malmö Manahasa Manado Manchester 
   Manisa Mannheim Marbella Martapura Malatya Massy Mataram 
@@ -151,7 +156,7 @@ my @SINGLE_WORDS = qw(
 
   Warsaw Wellington Worcester Wratislavia Wroclaw Wuhan
 
-  Yalikavak Yambol Yibin Yildirim Yokohama Yogyakarta
+  Yalikavak Yambol Yarimada Yibin Yildirim Yokohama Yogyakarta
 
   Zagreb Zhenjiang Zhongshan Zhuzhou Zigong Zurich Zyrardow
 
@@ -178,6 +183,7 @@ my %SINGLE_TYPOS =
   Çayyolu => ['cayyolu'],
   Cerkezkoy => ['çerkezköy'],
   Corlu => ['çorlu'],
+  Diyarbakir => ['Dýyarbakir'],
   Izmir => ['ýzmir', 'ýzmýr'],
   Jakarta => ['dki', 'jakar', 'jkt'],
   Karsiyaka => ['Karþiyaka'],
@@ -207,7 +213,7 @@ my %SINGLE_TYPOS =
   Trondheim => ['trondhei'],
   Vienna => ['wien'],
   Warsaw => ['warsow'],
-  Yogyakarta => ['jogjakarta'],
+  Yogyakarta => ['jogjakarta', 'diy'],
   Åkirkeby => ['aakirkeby'],
   Århus => ['aarhus', 'arhus']
 );

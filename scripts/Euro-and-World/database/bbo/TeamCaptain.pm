@@ -36,18 +36,21 @@ my @MULTI_WORDS =
   'Arun Jain',
   'Arunas Jankauskas',
   'Ashish Malhotra',
+  'Ashwin Mehta',
   'A.K. Bose',
   'Ilan Bareket',
   'Benedicte Cronier',
   'Bimal Sicka',
   'Birkir Jonsson',
   'Brigitta Fischer',
+  'Buddy Shah',
   'C.V. Rao',
   'Carlo Bossi',
   'Carlos Ferreira',
   'Carlos Gonçalves',
   'Carlos Luiz',
   'Carlos Teixeira',
+  'Da Silva',
   'David Birman',
   'De Blasi',
   'de Botton',
@@ -64,14 +67,20 @@ my @MULTI_WORDS =
   'de Monval',
   'De Muller',
   'de Tessieres',
+  'Deepak Poddar',
   'der Kinderen',
   'Defranchi',
   'Della Monta',
   "Del'Monte",
   'Dennis Bilde',
   'di Franco',
+  'Dian Wang',
+  'Ding Yuan',
+  'Djordje Dunjic',
   "D'Orsi",
+  'Dr. Anand',
   'Dr. Ashwani Mehta',
+  'Duronto Rajshahi',
   'Efrat Oren',
   'El Ahmady',
   'El Baz',
@@ -99,6 +108,7 @@ my @MULTI_WORDS =
   'J.C. Henriques',
   'J.E. Skjanni',
   'J.P. Goenka',
+  'Jaggy Shivdasani',
   'Jan Jansma',
   'Janak Shah',
   'Jay Ganesh',
@@ -122,7 +132,9 @@ my @MULTI_WORDS =
   'Juan Valdez',
   'Juliano Barbosa',
   'Júlíus Sigurjónsson',
+  'Kalpana Misra',
   'Kamal Kumar Nagori',
+  'Kamlesh Gupta',
   'Karl Sigurhjartarson',
   'Kasper Konow',
   'Knud Harries',
@@ -245,6 +257,7 @@ my %MULTI_TYPOS =
   'Artur S. Silva' => ['artur s silva'],
   'Arun Jain' => ['arunjain'],
   'Arunas Jankauskas' => ['arünas jankauskas'],
+  'Ashwin Mehta' => ['dr.ashwin meheta'],
   'A.K. Bose' => ["a.k.bose's iv", "a.k.bose'iv", "a k bose's 4",
     "a k bose's IV"],
   'Ilan Bareket' => ['bareket ilan'],
@@ -261,7 +274,9 @@ my %MULTI_TYPOS =
   'de Bruyne' => ['de Bruyune'],
   'de Knijff' => ['deknijff', 'di knijff'],
   'de Tessieres' => ['de tessiere', 'de tessier', 'de tessie'],
+  Desai => ['desai 5'],
   "D'Orsi" => ['d orsi'],
+  'Dr. Anand' => ["dr. anand's"],
   'Efrat Oren' => ['oren efrat'],
   'El Baz' => ['baz'],
   'Ellena Moskovsky' => ['e.moskovsky'],
@@ -296,13 +311,15 @@ my %MULTI_TYPOS =
   'Jón Ásbjörnsson' => ['ásbjörnsson'],
   'Jorge Castanheira' => ['jorel8'],
   'Joshi Sanghi' => ['dr.joshi', "dr.sanghi'siv", 'dr. joshi sanghi',
-    "dr. joshi's - sangl", "dr. sanghvi's  vi"],
+    "dr. joshi's - sangl", "dr. sanghvi's  vi", 'dr. joshi sangli'],
   'Jozef Pochron' =>['j pochron'],
   'Jörgen Lindqvist' => ['jörgen lindqvist cr'],
   'Juan Valdez' => ['juan valdes'],
   'Jr. Yilankiran' => ['j.yilankiran', 'jr.yilankiran',
     'jr. yilankiran', 'jr.  yilankiran'],
+  'Kalpana Misra' => ['kalpana mishra'],
   'Kamal Kumar Nagori' => ['kamal naguri'],
+  'Kamlesh Gupta' => ['kamalesh gupta'],
   'Karl Sigurhjartarson' => ['karl sigurhjartar', 'karl sigurhjartars',
     'karl sigurhjartarso', 'karl sigurhjartarss'],
   'Krzysztof Strykier' => ['k.strykier'],
@@ -421,7 +438,7 @@ my @SINGLE_WORDS = qw(
   Dancewicz Dantan Dao Darak Das Daskalakis 
   Daugava Dauvergne Davies Dawson
   Debolina Debonnaire Debus Dechelette Degla Dehaye Deik Delfour 
-  Dellecavakis Delimpaltadakis DeMartino Demirbas Denning Deniz
+  Dellecavakis Delimpaltadakis DeMartino Demirbas Denning Deniz Desai
   Deutsch Deva Dexter Dhir Dhondy Diamond Dinkin Dixon Djurovic
   Dobbels Dobes Dobroiu Doecke Dolla Donatella Donciu Dossena 
   Doub Doussot Doxiadis 
@@ -489,7 +506,8 @@ my @SINGLE_WORDS = qw(
   Kondoch Kopecky Koppel
   Korbel Kordov Korkut Korth Kosaka Kosti Kotányi Koumetz Kovacs Kovachev 
   Kovacich Kowalski Kozikowski
-  Kranyak Krausova Krawczyk Krekorian Kriegel Kriftner Kristensen Krochmalik
+  Kranyak Krajewski Krausova Krawczyk Krekorian Kriegel Kriftner 
+  Kristensen Krochmalik
   Kuang Kubac Kuokkanen Kvangraven Kwiatkowski Kwiecien Kyriakidou
 
   Laan Lachowicz Laffineur Lagrange Lall Lambardi Lanciano 
@@ -635,6 +653,7 @@ my %SINGLE_TYPOS =
   'Brigitta Fischer' => ['fischer'],
   Combescure => ['combescur'],
   Czímer => ['czimer'],
+  Dabrowka => ['d¹brówka'],
   'David Birman' => ['birman'],
   'de Livera' => ['delivera'],
   'de Tessieres' => ['tessieres'],
@@ -664,6 +683,7 @@ my %SINGLE_TYPOS =
   'Ilan Herbst' => ['herbst'],
   'J.E. Skjanni' => ['skjanni'],
   'J.P. Goenka' => ['goenka', 'jpgoenka'],
+  'Jaggy Shivdasani' => ['jaggy'],
   Jedrychowski => ['jedrychowsky'],
   'Jeroo Mango' => ['mango'],
   'José Moraes' => ['moraes'],

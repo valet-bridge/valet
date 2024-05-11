@@ -241,6 +241,7 @@ sub eliminate_districts
 {
   my ($team_ref) = @_;
 
+my $old = $$team_ref;
   if ($$team_ref =~ s/district \d+//i)
   {
     return ($$team_ref =~ /^\s*$/ ? 1 : 0);
@@ -249,7 +250,15 @@ sub eliminate_districts
   {
     return ($$team_ref =~ /^\s*$/ ? 1 : 0);
   }
-  elsif ($$team_ref =~ s/D\d+//)
+  elsif ($$team_ref =~ s/\bD\d+\b//)
+  {
+    return ($$team_ref =~ /^\s*$/ ? 1 : 0);
+  }
+  elsif ($$team_ref =~ s/\bnpc\b//i)
+  {
+    return ($$team_ref =~ /^\s*$/ ? 1 : 0);
+  }
+  elsif ($$team_ref =~ s/\bpc\b//i)
   {
     return ($$team_ref =~ /^\s*$/ ? 1 : 0);
   }
@@ -509,7 +518,7 @@ sub study_team
   split_on_multi($text, \@parts, \@tags);
 
   # Split on separators.
-  my $sep = qr/[\s+\-\+\._;"\/\(\)\|]/;
+  my $sep = qr/[\s+\-\+\._;&"\/\(\)\|]/;
 
   my $token_no = 0;
   my $unsolved_flag = 0;

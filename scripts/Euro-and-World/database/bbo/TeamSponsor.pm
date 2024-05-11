@@ -53,10 +53,16 @@ my @MULTI_WORDS =
   'China Resources',
   'China Trinergy',
   'Consus Oil',
+  'Dalian Dichan',
+  'Dama Kupa',
   'Darles Santerm',
   'Data Steel',
+  'Dauna Winaza',
   'Dhampur Sugar',
+  'Dian Zi Cheng',
   'Djarum Black',
+  'Dobre Zegary',
+  'Doga Naturale',
   'e-bridge',
   'E-Service',
   'Eko-Al',
@@ -184,7 +190,9 @@ my %MULTI_TYPOS =
   'Dhampur Sugar' => ['dhampur sugar mills', 'dhampur sugars', 
     'dhampur suger mills', 'dhampor sugar mills', 'dhampu sugar mills'],
   'Djarum Black' => ['djarum black capp', 'djarum black mild'],
-  Dongfeng => ['dongfeng automobile'],
+  Djarum => ['djarum la', 'djarum mld'],
+  'Dobre Zegary' => ['dobre_zegary'],
+  Dongfeng => ['dongfeng automobile', 'dong feng', 'dongfeng qiche'],
   'Eden Realty Kolkata' => ['eden city', 'eden city kolkata',
     'eden reality kolkat'],
   'Eko-Al' => ['eko al', 'eko_al'],
@@ -268,7 +276,7 @@ my @SINGLE_WORDS = qw(
 
   Bajaj Banpu
   COMAL Cimentas Computerland CONSUS
-  DISKI Djarum Dongfeng
+  Denizgucu Derofe DISKI Djarum Dongfeng Druva
   Effcontrol Eksprompt Elastron Enterprise
   GAMAX
   Hana
@@ -288,7 +296,6 @@ my %SINGLE_TYPOS =
   'Agsar Paints' => ['agsar'],
   Computerland => ['computerlan'],
   'Dhampur Sugar' => ['dhampur'],
-  Djarum => ['djarum la', 'djarum mld'],
   DISKI => ['dsi'],
   Eksprompt => ['ekspromt'],
   'Elektrik P3B' => ['elektrik', 'electric'],
