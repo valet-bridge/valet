@@ -75,12 +75,14 @@ my @MULTI_WORDS =
   'Efrat Oren',
   'El Ahmady',
   'El Baz',
+  'Ellena Moskovsky',
   'Emil Thomsen',
   'Erikas Vainikonis',
   'Erla Sigurjónsdóttir',
   'Espinosa Paz',
   'Flemming Dahl',
   'Gabriel Chagas',
+  'Gila Emody',
   'Ginossar',
   'Gunnlaugur Sævarsson',
   'Gunnar Sjökvist',
@@ -249,8 +251,10 @@ my %MULTI_TYPOS =
   'Benedicte Cronier' => ['mme cronier'],
   'Bimal Sicka' => ['bimal sikka'],
   'Birkir Jonsson' => ['birkir j jonsson'],
+  Boaz => ['dr. boaz', "dr. boaz's"],
   'C.V. Rao' => ['c v rao', 'c. v. rao', 'c.v.rao', 'c.v.rao.', 'cv rao'],
   'Carlos Gonçalves' => ['carlos goncalves'],
+  Cladius => ['dr. cladius'],
   'David Birman' => ['birman david', 'birman d'],
   'de Botton' => ['janet de botton', 'j de botton',
     'de botten', 'de bottom', 'debotton'],
@@ -260,16 +264,19 @@ my %MULTI_TYPOS =
   "D'Orsi" => ['d orsi'],
   'Efrat Oren' => ['oren efrat'],
   'El Baz' => ['baz'],
+  'Ellena Moskovsky' => ['e.moskovsky'],
   'Erikas Vainikonis' => ['vainikonis e'],
   'Erla Sigurjónsdóttir' => ['erla sigurjónsdótti'],
   'Espinosa Paz' => ['espinoza paz'],
   'Flemming Dahl' => ['dahl'],
   'Francisco Costa Cabral' => ['f. costa cabral', 'f. costa-cabral',
     'francisco c. cabral', 'francisco costa cab'],
+  'Gila Emody' => ['emody gila'],
   'Ginossar' => ['eldad ginossar', 'ginossar eldad'],
   'Gunnlaugur Sævarsson' => ['gunnlaugur sævars'],
   'H.C. Nielsen' => ['hc nielsen'],
   'Hecht Johansen' => ['hecht-johansen', 'hect johansen'],
+  Helekar => ['dr. helekar', 'dr.helekar'],
   'Hermann Friðriksson' => ['Hermann Fridriksson'],
   'Ilan Herbst' => ['herbst i', 'herbst ilan'],
   'Inocencio Almeida Araujo' => ['inocencio arauj'],
@@ -288,6 +295,8 @@ my %MULTI_TYPOS =
   'John Holland' => ['j holland'],
   'Jón Ásbjörnsson' => ['ásbjörnsson'],
   'Jorge Castanheira' => ['jorel8'],
+  'Joshi Sanghi' => ['dr.joshi', "dr.sanghi'siv", 'dr. joshi sanghi',
+    "dr. joshi's - sangl", "dr. sanghvi's  vi"],
   'Jozef Pochron' =>['j pochron'],
   'Jörgen Lindqvist' => ['jörgen lindqvist cr'],
   'Juan Valdez' => ['juan valdes'],
@@ -340,6 +349,8 @@ my %MULTI_TYPOS =
   'Sunil Machhar' => ['sunil machar', 'sunil macchar',
     'sunal macchar', 'sunil maccher', 'sunil.macchar'],
   'Sverrir Þórisson' => ['sverrir þ'],
+  Vahalia => ['dr.vahalia'],
+  Vithaya => ['dr.vithaya'],
   'van Prooijen'=> ['van proojen'],
   'Van den Bos' => ['van des bos'],
   'Vang Larsen' => ['van larsen', 'vang-larsen', 'vanglarsen'],
@@ -397,8 +408,8 @@ my @SINGLE_WORDS = qw(
   Chadwick Chai Chambers Chan Chang Charletoux Charlotte Charlsen 
   Chassagne Chatterji Chauvelot Chediak Cheek Chemla Chen Cheng Chizzoli 
   Chottin Chuang
-  Cichocki Cilleborg Cimon Ciopettini Clair Clark Clement Clemmensen 
-  Close
+  Cichocki Cilleborg Cimon Ciopettini Cladius Clair Clark 
+  Clement Clemmensen Close
   Coenraets Coglitore Cohen Cohler Colarossi Coldea Cole Collett 
   Collins Combes Combescure Compton Connie Conti Cook Cooke Cooper Cope 
   Coren Coridakis Corlateanu Cormack Corssen Cotton
@@ -454,7 +465,7 @@ my @SINGLE_WORDS = qw(
   Hampson Hampton Hanna Hans Hansen Hanlon Hantveit
   Harangozo Harding Harley Harper Harries Harris Harrison Harsanyi 
   Hasenson Hassett Hauge Haughie Häusler Havas Hayman
-  Helgemo Helle Helmich Helms Heng Henneberg Henner 
+  Helekar Helgemo Helle Helmich Helms Heng Henneberg Henner 
   Herman Heskje Hillman Hinden Hirst Hliapas
   Hoffa Hoffman Hollands Hollman Honti Hopfenheit Hornibrook Horton Horwitz 
   Howard Howe Høyland
@@ -581,9 +592,9 @@ my @SINGLE_WORDS = qw(
 
   Ueland Uggeri Una Upmark Uskali Utter Uysal
 
-  Vainikonis Valeanu Valio Valta
+  Vahalia Vainikonis Valeanu Valio Valta
   Veloni Venkatesh Ventin Verbeek Verhees Versace Versluis
-  Viana Videv Vigil Vihtilä Vinay Vinciguerra Virvidakis Vitas 
+  Viana Videv Vigil Vihtilä Vinay Vinciguerra Virvidakis Vitas Vithaya
   Vogt Volcker Vorobei Vriend Vroustis
 
   Wademark Walsh Wang Ware Warne Wasik Waterlow Waters Watts 
@@ -634,8 +645,7 @@ my %SINGLE_TYPOS =
   Dumbovich => ['dumbovic'],
   Eisenberg => ['einsenberg'],
   'El Ahmady' => ['elahmady'],
-  Karadeniz => ['karadenýz'],
-  'Lotan Fisher' => ['fisher'],
+  Failla => ['faill'],
   'Gabriel Chagas' => ['chagas'],
   Gartaganis => ['gartaginas'],
   Gladysh => ['gladysch'],
@@ -662,9 +672,11 @@ my %SINGLE_TYPOS =
   Kandemir => ['kandemýr', 'kandermir'],
   Kannavos => ['kanavos'],
   'Kapagiannides' => ['kapagiannides'],
+  Karadeniz => ['karadenýz'],
   'Kasper Konow' => ['konow'],
   Kazik => ['kazic'],
   Kotányi => ['kotanyi'],
+  'Lotan Fisher' => ['fisher'],
   Lubinski => ['lubinsky'],
   Lyngen => ['lyn'],
   'Maria João Lara' => ['lara'],

@@ -20,6 +20,8 @@ my @MULTI_WORDS =
   'Banda Aceh',
   'Bandar Lampung',
   'Belo Horizonte',
+  'El-Karma',
+  'El-Maadi',
   'Gjøvik og Vardal',
   'Ping An',
   'Kota Bandung',
@@ -41,6 +43,9 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   'City of Helsinki' => ['helsinki'],
+  Diyarbakir => ['d.baki', 'd.bakir', 'd.bakýr', 'd.baki b.þ',
+    'd.bakir b.þ.', 'd.bakir y.þehýr', 'd.bakir yenýþehýr',
+    'd.bakýr b.þehir'],
   Istanbul => ['ýstanbul'],
   Jakarta => ['jak-tim', 'jakarta pusat', 'jakarta utara'],
   Nangang => ['nan gang'],
@@ -115,7 +120,7 @@ my @SINGLE_WORDS = qw(
 
   Padang Padova Palembang Palermo Palma Palu Pamukkale Panzhihua Pariaman 
   Paris Pärnu
-  Pekanbaru Pelotas Pernik Perth Pesaro Pescara Posillipo
+  Pekanbaru Pelotas Pernik Perth Pesaro Pescara Posillipo Poznan
   Pula
 
   Qiaoxie Qingdao

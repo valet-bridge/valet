@@ -27,6 +27,7 @@ my @MULTI_WORDS =
   'East Jakarta',
   'East Java',
   'East Kalimantan',
+  'Eastern Cape',
   'Kepulauan Riau',
   'New Caledonia',
   'New South Wales',

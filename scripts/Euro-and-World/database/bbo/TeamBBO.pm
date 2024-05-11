@@ -83,11 +83,6 @@ sub read_cities
   close $fh;
 }
 
-
-# TODO 
-# Add Guernsey, United Kingdom, Jersey, Mali
-# DenmarS, Indýa, CBAI, Brasilia
-
 my $country = Country->new();
 my $gender = Gender->new();
 my $age = Age->new();
@@ -238,6 +233,29 @@ sub clean_team
   else
   {
     return $team;
+  }
+}
+
+
+sub eliminate_districts
+{
+  my ($team_ref) = @_;
+
+  if ($$team_ref =~ s/district \d+//i)
+  {
+    return ($$team_ref =~ /^\s*$/ ? 1 : 0);
+  }
+  elsif ($$team_ref =~ s/\(D\d+\)//)
+  {
+    return ($$team_ref =~ /^\s*$/ ? 1 : 0);
+  }
+  elsif ($$team_ref =~ s/D\d+//)
+  {
+    return ($$team_ref =~ /^\s*$/ ? 1 : 0);
+  }
+  else
+  {
+    return 0;
   }
 }
 
@@ -482,11 +500,9 @@ sub study_team
   my ($text, $chain) = @_;
 
   return if $text eq '';
+  return if suggest_form($text, \%FORM_SCORES);
 
-  if (suggest_form($text, \%FORM_SCORES))
-  {
-    return;
-  }
+  return if eliminate_districts(\$text);
 
   my @parts = ($text);
   my @tags = (0);

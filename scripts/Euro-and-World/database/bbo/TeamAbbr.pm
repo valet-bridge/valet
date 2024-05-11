@@ -25,9 +25,9 @@ my %MULTI_TYPOS =
   'Bridge Club' => [
     'a.s.', 'a.s.d.', 'ass. br.',
     'b.akd', 'b.b.', 'b.c.', 'b.c',
-    'b.b.k.', 'b.b.s.', 'b.b.s.k.', 'b.s.', 'b.s.b.', 'b.þ. bld.',
+    'b.b.k.', 'b.b.s.', 'b.b.s.k.', 'b.s.', 'b.s.b.', 'bld', 'bld.',
     'b.s.k.', 'b.seh bel', 'b. shr bld', 'b.k', 'b.k.', 
-    'bld', 'bld.', 'bld sk', 'bld sp',
+    'bld sk', 'bld sp',
     'bld.sp', 'bld.spor', 'bld. gsk',
     'br.', 'bric iht.', 'bric klb', 'bric kulubu', 
     'bridge clu', 'bridz klub', 'brýç spor', 'brýç s.k.', 'bsb bk', 
@@ -56,7 +56,7 @@ my %SINGLE_TYPOS =
     br bridgeclub bridgeklub 
     bs bsb bsc bsk bskd bþb bþbký bsbkisk buyuksehir ybsk bsbs btsc 
     cfr club 
-    dbc dbk dgc eibc fbc
+    dbc dbk dgc ebc eibc fbc
     gsk gskd gtbc
     klubben klubberne ks ksb ksk
     nbi nbcbl

@@ -25,6 +25,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  AZS
   EBU
   JBA
   NIBU

@@ -58,8 +58,13 @@ my @MULTI_WORDS =
   'Dhampur Sugar',
   'Djarum Black',
   'e-bridge',
+  'E-Service',
+  'Eko-Al',
   'Eden Realty Kolkata',
+  'eDOT Goa',
+  'Euro Agro',
   'Electric Center',
+  'Elektrik P3B',
   'Fisk Seafood',
   'Garðar & Vélar',
   'Garðs Apotek',
@@ -177,10 +182,14 @@ my %MULTI_TYPOS =
   'China Global Times' => ['chinal global times'],
   'Data Steel' => ['datta steel'],
   'Dhampur Sugar' => ['dhampur sugar mills', 'dhampur sugars', 
-    'dhampur suger mills', 'dhampor sugar mills', 'dhampu sugar hills'],
-  'Dongfeng' => ['dongfeng automobile'],
+    'dhampur suger mills', 'dhampor sugar mills', 'dhampu sugar mills'],
+  'Djarum Black' => ['djarum black capp', 'djarum black mild'],
+  Dongfeng => ['dongfeng automobile'],
   'Eden Realty Kolkata' => ['eden city', 'eden city kolkata',
     'eden reality kolkat'],
+  'Eko-Al' => ['eko al', 'eko_al'],
+  Elastron => ['elastron (taurus)'],
+  'Elektrik P3B' => ['elektrik merapi', 'electric merapi'],
   'Garðar & Vélar' => ['garðar & vélar ehf.', 'garðar og vélar',
     'gardar og velar'],
   'Garðs Apotek' => ['garðs apótek', 'garðs apoótek', 'gards apótek'],
@@ -193,7 +202,8 @@ my %MULTI_TYPOS =
   'Indian Medical' => ['indian medical asso'],
   'Indian Railways' => ['indianrailways', 'indian railyaws',
     'indin railways', 'indian railway', 'indian rail', 'indians railways'],
-  'Indonesian Power' => ['indo power', 'indonesia power'],
+  'Indonesian Power' => ['indo power', 'indonesia power',
+    'elektrika ind power', 'elektrika bc'],
   'Jasa Marga Jakarta' => ['jasa marga'],
   'Kuncheng Group' => ['kucheng group'],
   'Lögfræðiskrifstofa Islands' => ['lögfr.stofa íslands', 'lögfr.íslands', 
@@ -258,8 +268,8 @@ my @SINGLE_WORDS = qw(
 
   Bajaj Banpu
   COMAL Cimentas Computerland CONSUS
-  Dongfeng
-  Enterprise
+  DISKI Djarum Dongfeng
+  Effcontrol Eksprompt Elastron Enterprise
   GAMAX
   Hana
   IMAX
@@ -278,6 +288,10 @@ my %SINGLE_TYPOS =
   'Agsar Paints' => ['agsar'],
   Computerland => ['computerlan'],
   'Dhampur Sugar' => ['dhampur'],
+  Djarum => ['djarum la', 'djarum mld'],
+  DISKI => ['dsi'],
+  Eksprompt => ['ekspromt'],
+  'Elektrik P3B' => ['elektrik', 'electric'],
   'Indian Railways' => ['railways'],
   'Málning hf' => ['málning'],
   'SPS Construction' => ['sps'],

@@ -98,7 +98,7 @@ my %MULTI_TYPOS =
   'University of North Carolina' => ['u n. carolina'],
   'University of Rijeka' => ['uni of rijeka'],
   'University of Warsaw' => ['uni warsaw'],
-  'University of Wroclaw' => ['uni wroclaw'],
+  'University of Wroclaw' => ['uni wroclaw', 'Politechnika Wrocławska'],
   'University of Tanjungpura' => ['untan'],
   'Universität Potsdam' => ['uni potsdam'],
   'Warsaw University of Technology' => ['warsaw ut'],
@@ -113,6 +113,7 @@ my %SINGLE_TYPOS =
   'Andalas University' => ['unand'],
   'École Polytechnique' => ['polytech'],
   'University of California at Berkeley' => ['berkeley'],
+  'University of Wroclaw' => ['pwr'],
   'Valahia University' => ['valahia']
 );
 
