@@ -41,6 +41,7 @@ use TeamAge;
 use TeamColor;
 use TeamScoring;
 use TeamForm;
+use TeamDestroy;
 
 my @TAG_ORDER = qw(
   TEAM_FUN 
@@ -60,6 +61,7 @@ my @TAG_ORDER = qw(
   TEAM_COLOR
   TEAM_SCORING
   TEAM_FORM
+  TEAM_DESTROY
 );
 
 my (%MULTI_WORDS, %MULTI_REGEX, %SINGLE_WORDS);
@@ -110,6 +112,7 @@ sub init_hashes
   set_hashes_team_color('TEAM_COLOR');
   set_hashes_team_scoring('TEAM_SCORING');
   set_hashes_team_form('TEAM_FORM');
+  set_hashes_team_destroy('TEAM_DESTROY');
 }
 
 
@@ -251,14 +254,6 @@ my $old = $$team_ref;
     return ($$team_ref =~ /^\s*$/ ? 1 : 0);
   }
   elsif ($$team_ref =~ s/\bD\d+\b//)
-  {
-    return ($$team_ref =~ /^\s*$/ ? 1 : 0);
-  }
-  elsif ($$team_ref =~ s/\bnpc\b//i)
-  {
-    return ($$team_ref =~ /^\s*$/ ? 1 : 0);
-  }
-  elsif ($$team_ref =~ s/\bpc\b//i)
   {
     return ($$team_ref =~ /^\s*$/ ? 1 : 0);
   }
@@ -571,8 +566,8 @@ sub study_teams
   return unless defined $text;
 
   # TODO Put this to clean_team, and don't remove it yet
-  $text =~ s/\- npc//g;
-  $text =~ s/\(npc\)//g;
+  # $text =~ s/\- npc//g;
+  # $text =~ s/\(npc\)//g;
 
   if ($text =~ /(.*) vs\. (.*)/)
   {

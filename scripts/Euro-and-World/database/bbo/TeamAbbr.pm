@@ -52,13 +52,14 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   'Bridge Club' => [qw(aba abk abi absk ahm asd ass assn asso assoc azs
-    bbgsk bbs bbsk bc bcn belediye beledýye bilimsel bjk bk bld bmsk 
+    bbgsk bbs bbsk bc bcn belediye beledýye belediyespor
+    bilimsel bjk bk bld bmsk 
     br bridgeclub bridgeklub 
-    bs bsb bsc bsk bskd bþb bþbký bsbkisk buyuksehir ybsk bsbs btsc 
+    bs bsb bsc bsk bskd bþb bþbký bsbkisk bssk buyuksehir ybsk bsbs btsc 
     cfr club 
     dbc dbk dgc ebc eibc fbc
-    gsk gskd gtbc
-    klubben klubberne ks ksb ksk
+    gençlik gsk gskd gtbc
+    kcb kdi klubben klubberne ks ksb ksk
     nbi nbcbl
     obk 
     sbc sc sdgskd sk spor

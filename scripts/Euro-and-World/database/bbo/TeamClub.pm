@@ -23,6 +23,7 @@ my @MULTI_WORDS =
   'Alert Mannheim',
   'Allegra Torino',
   'Altay Genclik',
+  'Ankara Kontrat',
   'Augsburg Atlanta',
   'Avalanche BC',
   'Aydin 1923 BBSK',
@@ -43,6 +44,7 @@ my @MULTI_WORDS =
   'BK Fyris Skalman',
   'BK Grand',
   'BK Lavec Smile',
+  'Cracovia 1906',
   'Crvena Zvezda',
   'Cerkezkoy Dinamik BSK',
   'Darmstadt Alert',
@@ -55,6 +57,7 @@ my @MULTI_WORDS =
   'Drammen Arbeiderparti',
   'Dýcle Gençlýk',
   'El Ahly',
+  'El-Karma',
   'El Rabwa Club',
   'El Shams Club',
   'Eskisehir Adalar',
@@ -79,7 +82,10 @@ my @MULTI_WORDS =
   'Jin Mei',
   'Jing Fan',
   'JZD Liban',
+  'Kao Hsiung Club',
+  'Kapakli Sýte',
   'Karlsruher BSC',
+  'Ke Bi Ya Club',
   'Klør 10 Vejle',
   'Kota Club',
   'Köln Lindenthal',
@@ -176,7 +182,9 @@ my %MULTI_TYPOS =
   'Jili Qiche' => ['ji li'],
   'Jin Ying' => ['jin ying club'],
   'Jing Fan' => ['jing fan club', 'jin fan'],
+  'Kapakli Sýte' => ['kapaklý sýte'],
   'Karlsruher BSC' => ['karlsruher bc'],
+  'Ke Bi Ya Club' => ['ke bi ya'],
   'Köln Lindenthal BC' => ['köln lindenthal', 'köln-lindenthal',
     'köln-lindenthaler', 'köln-lindenthaler b'],
   'Majör Boğaziçi' => ['major b', 'major bogazici'],
@@ -206,7 +214,7 @@ my @SINGLE_WORDS = qw(
   Hercules Hordaland
   Hosgoru
   Jeofizik
-  Kløverknekt 
+  Karagümrük Kløverknekt 
   Lavec Laksamana
   Locomotiva
   Miskolc
@@ -220,6 +228,7 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   'Akademisk Bridgeklub' => ['akademisk'],
+  'Ankara Kontrat' => ['kontrat'],
   Asenovec => ['asenovets'],
   Auguri => ['Augurý'],
   'Banda Aceh' => ['aceh'],
@@ -229,10 +238,12 @@ my %SINGLE_TYPOS =
   'Cerkezkoy Dinamik BSK' => ['Cerkezkoy'],
   'Delhi Gymkhana Club' => ['dgc'],
   'El Ahly' => ['ahly'],
+  'El-Karma' => ['karma'],
   'Gabrial UI' => ['gabrial'],
   Hordaland => ['hordland'],
   Hosgoru => ['hoþgörü'],
   'Izmir BSB' => ['izmir.b.b.'],
+  Karagümrük => ['karagumruk'],
   Kløverknekt => ['kloverknekt'],
   Locomotiva => ['loco'],
   'Majör Boğaziçi' => ['majorbogazici'],

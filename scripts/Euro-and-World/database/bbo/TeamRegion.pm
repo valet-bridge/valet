@@ -17,17 +17,21 @@ use TeamBBO;
 my @MULTI_WORDS =
 (
   'Australian Central Territory',
+  'Bekasi Regency',
   'Boeven Digoel',
+  'Bogor Regency',
   'Bone Bolango',
   'Central Celebes',
   'Central Gauteng',
   'Central Java',
   'Central Sulawesi',
+  'Cianjur Regency',
   'East Borneo',
   'East Jakarta',
   'East Java',
   'East Kalimantan',
   'Eastern Cape',
+  'Garut Regency',
   'Kepulauan Riau',
   'Lower Silesia',
   'New Caledonia',
@@ -65,13 +69,18 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'Bekasi Regency' => ['kab.bekasi', 'kab. bekasi'],
   'Central Java' => ['jawa tengah', 'jateng'],
+  'Bogor Regency' => ['kab bogor', 'kab.bogor pa'],
   'Central Sulawesi' => ['sulawesi tengah'],
+  'Cianjur Regency' => ['kab. cianjur', 'kab.cianjur'],
   'East Jakarta' => ['jakarta timur'],
   'East Java' => ['jawa timur', 'jatim'],
   'East Kalimantan' => ['kalimantan timur'],
+  'Garut Regency' => ['kab. garut'],
   Jiangsu => ['jiang su'],
   'Lower Silesia' => ['dolny slask'],
+  Marmara => ['g.marm'],
   'North Sulawesi' => ['notth sulawesi', 'north sulawsei',
     'sulawesi utara', 'sulawasi utara', 'sulut'],
   'North Minahasa' => ['minahasa utara'],
@@ -102,9 +111,9 @@ my @SINGLE_WORDS = qw(
   Gorontalo
   Haugaland Hebei
   Jiangsu
-  Kansai Karimun Kepri Kedungwaru
+  Kansai Karimun Kawanua Kepri Kedungwaru
   Lumajang
-  Maharashtra Mjøsa
+  Maharashtra Marmara Mjøsa
   Norrland
   Queensland
   Oberloiben

@@ -283,19 +283,32 @@ my @MULTI_WORDS =
   'K1',
   'K2',
   'K4',
+  'Kacho Fugetsu',
+  'KaiCheng RL',
+  'Kapten Krok Crew',
   'Karachi Aces',
   "Karl's Silence",
   'Karlstads vänner',
   'Kasimirs Dream Team',
+  'Katt-Bridge',
+  'Ke Da',
   'Keep Walking',
   "Keni's Dream",
   "Keni's Team",
   'Kent Romeos venner',
   'Kick Back',
+  'Kipp O`Hoi',
   'Kippe et al',
+  'KL 4',
   'Klara färdiga slam',
   'Klicks Dream Team',
+  'K(l)ukken',
   'Kløver 5',
+  'KM 23',
+  'K-O',
+  'KOC67',
+  'Koridor 10',
+  'Kozyrnye Oleni',
   'Kronisk kusma',
   'Kurt quo vadis',
   'Kvalen og nissene',
@@ -615,9 +628,11 @@ my %MULTI_TYPOS =
   'Indian Mavericks' => ['india mavericks', 'indian mavricks'],
   'Jamm & Co' => ['jamm & co.', 'jamm && co.'],
   'Jan Wellem' => ['jan wel'],
+  K1 => ['k01', 'k-1'],
   'Kasimirs Dream Team' => ['kasimirs dreamteam'],
   'Kent Romeos venner' => ['kent romeos veenner'],
   'Kick Back' => ['kick-back'],
+  'KM 23' => ['km23'],
   'Lawrence of Arabia' => ['lawrence of arab'],
   'La Vista' => ['la vista team'],
   'Leromain boys' => ["leroumain's boys"],
@@ -676,7 +691,7 @@ my @SINGLE_WORDS = qw(
    Guests
    Hollywood Honeymoon
    Jupiter
-   Kings
+   Kings KMC
    Lira
    Moritz Movember
    Naturalists Neduk Nemesis Neverclaim

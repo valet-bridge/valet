@@ -153,6 +153,7 @@ my %SINGLE_TYPOS =
   Poland => ['polen'],
   Reunion => ['réunion'],
   'Serbia and Montenegro' => ['serbia&mon'],
+  'South Korea' => ['korea'],
   'Sri Lanka' => ['srilanka'],
   Switzerland => ['suitzerland', 'switserland'],
   Tunisia => ['tunisie'],

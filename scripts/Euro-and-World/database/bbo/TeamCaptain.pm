@@ -164,6 +164,7 @@ my @MULTI_WORDS =
   'Miguel Silva',
   'Miguel Sousa Guedes',
   'Miguel Teixeira',
+  'Modi Kenigsberg',
   'Mohit Mehta',
   'Mohsen Kamel',
   'Morten Jepsen',
@@ -318,10 +319,12 @@ my %MULTI_TYPOS =
   'Jr. Yilankiran' => ['j.yilankiran', 'jr.yilankiran',
     'jr. yilankiran', 'jr.  yilankiran'],
   'Kalpana Misra' => ['kalpana mishra'],
-  'Kamal Kumar Nagori' => ['kamal naguri'],
-  'Kamlesh Gupta' => ['kamalesh gupta'],
+  'Kamal Kumar Nagori' => ['kamal naguri', "kamal naguri's"],
+  'Kamlesh Gupta' => ['kamalesh gupta', 'k gupta iv'],
   'Karl Sigurhjartarson' => ['karl sigurhjartar', 'karl sigurhjartars',
     'karl sigurhjartarso', 'karl sigurhjartarss'],
+  'Modi Kenigsberg' => ['kenigsberg modi'],
+  Kishan => ["kishan's iv"],
   'Krzysztof Strykier' => ['k.strykier'],
   'Kumar Vijay Anand' => ['kr. vijay anand', 'kr. vijayanand'],
   'Kurniadi Djauhari' => ['dee jee'],
@@ -452,7 +455,7 @@ my @SINGLE_WORDS = qw(
 
   Fabbri Fagerlund Faidas Faigenbaum Failla Falk Fallenius Fallon 
   Fang Fantonakis Fantoni Farholt Faria Farwell Favard
-  Federighi Fegarty Feiler Feng Fernando Ferramosca Ferrara 
+  Federighi Fegarty Feiler Feng Fent Fernando Ferramosca Ferrara 
   Ferrari Fettes
   Fici Figlus Figueiredo Filios Filip Finikiotis Fioretti Fireman Firestone 
   Fleisher Fleury Flierl Flock Flora 
@@ -498,17 +501,17 @@ my @SINGLE_WORDS = qw(
 
   Kachchu Kahyaoglu Kaiser Kalita Kalish Kallsberg Kallunki Kalma Kalmin 
   Kamal Kamil Kaminaris Kaminski Kamras Kannavos Kandemir Kane Kanetkar 
-  Kapadia Kapagiannidis Kaplan Kaptan
-  Karadeniz Karamanlis Karavil Karl Karpouzelis Kasday Kasle Kasler Kastel
+  Kapadia Kapagiannidis Kaplan Kaptan Karadeniz Karamanlis 
+  Karavil Karayel Karl Karpouzelis Kasday Kasle Kasler Kastel
   Katz Kaushik Kay Kazik Kendrick Kenny Kent Keremida Kersey
-  King Kiran Kirilenko Kirin Kizikli Klinger Klofa Klukowski Knap Knight
-  Kocak Koch Koistinen Koivula Kokkes Kokten Kolankaya Kolata Kolesnik 
-  Kondoch Kopecky Koppel
+  King Kiran Kirilenko Kirin Kishan Kizikli Klinger Klofa Klukowski 
+  Knap Knight Kocak Koch Koistinen Koivula Kokkes Kokten Kolankaya 
+  Kolata Kolesnik Kondoch Koneru Kopecky Koppel
   Korbel Kordov Korkut Korth Kosaka Kosti Kotányi Koumetz Kovacs Kovachev 
   Kovacich Kowalski Kozikowski
   Kranyak Krajewski Krausova Krawczyk Krekorian Kriegel Kriftner 
   Kristensen Krochmalik
-  Kuang Kubac Kuokkanen Kvangraven Kwiatkowski Kwiecien Kyriakidou
+  Kuang Kubac Kuokkanen Kurbalija Kvangraven Kwiatkowski Kwiecien Kyriakidou
 
   Laan Lachowicz Laffineur Lagrange Lall Lambardi Lanciano 
   Landry Lantaron Lanzarotti 
@@ -587,7 +590,7 @@ my @SINGLE_WORDS = qw(
   Scudder Schwartz Schwerdt
   Sealy Sebbane Seguineau Selberg Selcuk Seligman Serenella Serf 
   Serpoi Sesyilmaz 
-  Shadyro Sharif Shiels Shimamura Shimizu Shirogane Short Shugart 
+  Shadyro Sharif Shields Shiels Shimamura Shimizu Shirogane Short Shugart 
   Silver Silverstein Silverstone Sime Simonsen Simpson Simson Sinclair 
   Skaanning Skelton Skorchev Small Smart Smilgajs Smith Smirnov Smolanko 
   Snashall Snellers 
@@ -696,6 +699,7 @@ my %SINGLE_TYPOS =
   'Kasper Konow' => ['konow'],
   Kazik => ['kazic'],
   Kotányi => ['kotanyi'],
+  Kurbalija => ['kuribalija'],
   'Lotan Fisher' => ['fisher'],
   Lubinski => ['lubinsky'],
   Lyngen => ['lyn'],

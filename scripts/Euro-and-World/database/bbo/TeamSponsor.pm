@@ -93,7 +93,20 @@ my @MULTI_WORDS =
   'Jin Rong',
   'Jin Jing',
   'Jing Tie',
+  'K H Power',
+  'Kare Dam',
+  'Kaushik Hyderabad',
+  "Kini's Bangalore",
+  "Kini's Goa",
+  'Klika Murcki',
+  'Kombi Tondano',
+  'Kong Chou',
+  'Konga-Väster',
+  'KONKRET Chelmno',
+  'konkurs.no',
+  'Kosmos Delhi',
   'Kuncheng Group',
+  'Kurt-Royce',
   'Lögfræðiskrifstofa Islands',
   'Lögfræðistofa Bjarna',
   'Lupo Veloce',
@@ -213,6 +226,10 @@ my %MULTI_TYPOS =
   'Indonesian Power' => ['indo power', 'indonesia power',
     'elektrika ind power', 'elektrika bc'],
   'Jasa Marga Jakarta' => ['jasa marga'],
+  'Kaushik Hyderabad' => ['kaushik hyd.'],
+  "Kini's Bangalore" => ["kini's bengalore"],
+  "Kini's Goa" => ["keni's goa"],
+  'KONKRET Chelmno' => ['konkret che³mno'],
   'Kuncheng Group' => ['kucheng group'],
   'Lögfræðiskrifstofa Islands' => ['lögfr.stofa íslands', 'lögfr.íslands', 
     'lögfrst. íslands', 'lögfrst.íslands', 'lögfræðisk. ísl.',
@@ -285,9 +302,11 @@ my @SINGLE_WORDS = qw(
   Lavazza Longjiangfu
   Pertamina Pufa
   Qiaoyou
+  Ráðgjöf
   Sagaplast Solakoglu
   Vito
   Wellwise
+  Zhonghai
 );
 
 my %SINGLE_TYPOS =

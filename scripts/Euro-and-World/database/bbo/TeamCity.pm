@@ -20,10 +20,11 @@ my @MULTI_WORDS =
   'Banda Aceh',
   'Bandar Lampung',
   'Belo Horizonte',
-  'El-Karma',
   'El-Maadi',
   'Gjøvik og Vardal',
   'Ping An',
+  'Kansas City',
+  'Kashi Goa',
   'Kota Bandung',
   'Kota Bekasi',
   'Kota Bogor',
@@ -103,10 +104,10 @@ my @SINGLE_WORDS = qw(
   Jaipur Jakarta Jember Jessheim Jiamusi Jiangyou Jilin Jinchang 
   Jincheng Jinjiang Jomtien
 
-  Kadirli Kalisz Kalyani Kanpur Karachi Karlsruhe Kartal Karsiyaka
-  Kastamonu Katowice Kaylaka Kediri Ketsch Kiel Kielce Kiev 
-  Kirklarelý Kocaeli Kocamustafapasa Kolkata Konak Kosice Koycegiz Köln 
-  Krakow Kristiansand Kucukcekmece Kudus Kunshan Kuopio Kusadasi Kütahya
+  Kadikoy Kadirli Kalisz Kalyani Kanpur Karachi Karlsruhe Kartal Karsiyaka
+  Kastamonu Katowice Kaylaka Kediri Ketsch Kiel Kielce Kiev Kirklarelý 
+  Kocaeli Kocamustafapasa Kolkata Konak Korwin Kosice Koycegiz Köln Krakow 
+  Kristiansand Kucukcekmece Kudus Kunshan Kuopio Kusadasi Küp Kütahya
 
   Langkat Leiden Leszno Leuven Leverkusen Lhokseumawe Lille Lima Lincoln
   Ljubljana London Lowicz Lozenets Lubin Lublin Luleburgaz Lumajang
@@ -144,7 +145,7 @@ my @SINGLE_WORDS = qw(
   Szeged Sørreisa
 
   Taizhou Takayama Tallinn Targoviste Tarnów Täby Tekýrdag Temuco 
-  Thessaloniki Tianjin Tianya Timisoara Tire Tokyo Toulouse 
+  Thessaloniki Tianjin Tianya Timisoara Tingling Tire Tokyo Toulouse 
   Trieste Trondheim Tromsø
 
   Udaipur Uppsala Usak Utrecht
@@ -189,8 +190,10 @@ my %SINGLE_TYPOS =
   Karsiyaka => ['Karþiyaka'],
   Kocaeli => ['Kocaelý'],
   Kolkata => ['calcutta'],
+  Koycegiz => ['köyceðýz'],
   Krakow => ['kraków'],
   Kristiansand => ['kristiansands'],
+  Küp => ['kup'],
   Lozenets => ['lozenec'],
   Makassar => ['makasar'],
   Manahasa => ['mnhasa'],
