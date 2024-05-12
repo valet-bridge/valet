@@ -110,7 +110,7 @@ my @SINGLE_WORDS = qw(
   Kristiansand Kucukcekmece Kudus Kunshan Kuopio Kusadasi Küp Kütahya
 
   Langkat Leiden Leszno Leuven Leverkusen Lhokseumawe Lille Lima Lincoln
-  Ljubljana London Lowicz Lozenets Lubin Lublin Luleburgaz Lumajang
+  Ljubljana London Losari Lowicz Lozenets Lubin Lublin Luleburgaz Lumajang
 
   Maastricht Madrid Makassar Malatya Malmö Manahasa Manado Manchester 
   Manisa Mannheim Marbella Martapura Malatya Massy Mataram 
@@ -197,6 +197,7 @@ my %SINGLE_TYPOS =
   Lozenets => ['lozenec'],
   Makassar => ['makasar'],
   Manahasa => ['mnhasa'],
+  Mersin => ['mersýn'],
   Mumbai => ['mum'],
   Munich => ['münchen'],
   Narlidere => ['narlýdere'],

@@ -69,6 +69,7 @@ my @MULTI_WORDS =
   'de Tessieres',
   'Deepak Poddar',
   'der Kinderen',
+  'Derek Zen',
   'Defranchi',
   'Della Monta',
   "Del'Monte",
@@ -253,6 +254,8 @@ my %MULTI_TYPOS =
   'Ajay Bagaria' => ['a.bagaria'],
   'Alain Lévy' => ['alain levy'],
   'Alok Daga' => ["alok daga's iv"],
+  'Alvares Ribeiro' => ['luis alvares ribeiro', 'luis a ribeiro',
+    'luis a. ribeiro', 'álvares ribeiro'],
   'Alvensleben' => ['v.alvensleben', 'v. alvensleben'],
   'Antonio Maria Campos' => ['antonio m campos', 'antonio maria campo'],
   'Artur S. Silva' => ['artur s silva'],
@@ -331,18 +334,19 @@ my %MULTI_TYPOS =
   "L'Écuyer" => ["l'ecuyer", 'lecuyer', 'l ecuyer', 'l"ecuyer'],
   'Lauge Pedersen' => ['lauge-pedersen'],
   'Lotan Fisher' => ['fisher lotan'],
-  'Alvares Ribeiro' => ['luis alvares ribeiro', 'luis a ribeiro',
-    'luis a. ribeiro', 'álvares ribeiro'],
+  'Majka Cilleborg Bilde' => ['majka bilde'],
+  'Manuel Capucho' => ['m capucho'],
   'Manuel Oliveira' => ['manuel oliveia', 'm.oliveira', 'm. oliveira',
     'm oliveira'],
   'Manuela Mouttet' => ['mme mouttet'],
   'Marc ter Laare' => ['ter laare'],
   'Maria João Lara' => ['maria joao lara', 'm joão lara',
     'm joao lara', 'm. j. lara', 'm.j.lara', 'mj.lara',
-    'maria j.lara', 'm.joão lara', 'mª joão lara'],
+    'maria j.lara', 'm.joão lara', 'mª joão lara', 'm. joão lara'],
   'Mariana Leitão' =>['mariana leitao'],
   'Maxim Henbest' => ['m.henbest'],
   'Maya Meera' => ['maya meera sneha', 'maya mira'],
+  McLeish => ['mc. leish'],
   'Miguel S. Guedes' => ['miguel s guedes'],
   'Miguel Teixeira' => ['miguel teixeira', 'm. teixeira'],
   'Mohit Mehta' => ['mohit mehata'],
@@ -504,7 +508,8 @@ my @SINGLE_WORDS = qw(
   Kapadia Kapagiannidis Kaplan Kaptan Karadeniz Karamanlis 
   Karavil Karayel Karl Karpouzelis Kasday Kasle Kasler Kastel
   Katz Kaushik Kay Kazik Kendrick Kenny Kent Keremida Kersey
-  King Kiran Kirilenko Kirin Kishan Kizikli Klinger Klofa Klukowski 
+  Kilvington King Kiran Kirilenko Kirin Kishan Kizikli Klinger 
+  Klofa Klukowski 
   Knap Knight Kocak Koch Koistinen Koivula Kokkes Kokten Kolankaya 
   Kolata Kolesnik Kondoch Koneru Kopecky Koppel
   Korbel Kordov Korkut Korth Kosaka Kosti Kotányi Koumetz Kovacs Kovachev 
@@ -708,7 +713,6 @@ my %SINGLE_TYPOS =
   'Majka Cilleborg Bilde' => ['majka'],
   Manyawar => ['manyvar'],
   Markowicz => ['markovics', 'markowitz'],
-  McLeish => ['mc. leish'],
   'Maxim Henbest' => ['henbest'],
   Mesbur => ['mesbor'],
   'Miguel Teixeira' => ['teixeira'],
