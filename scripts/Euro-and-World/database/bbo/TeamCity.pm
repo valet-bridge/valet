@@ -170,6 +170,7 @@ my %SINGLE_TYPOS =
   Akçeşme => ['akcesme', 'akçeþme'],
   Akdeniz =>['akdenýz'],
   Akhisar => ['Akhýsar'],
+  Allahabad => ['alahabad'],
   Ankara => ['ancyra'],
   Antwerpen => ['antwerp'],
   Arendal => ['arendals'],

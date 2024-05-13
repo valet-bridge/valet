@@ -144,7 +144,7 @@ my %SINGLE_TYPOS =
   Netherlands => ['nederlands', 'netherland', 'nrtherlands', 
     'netherlans', 'netherlnd', 'neth', 'nl', 'net'],
   Monaco => ['nonaco'],
-  'New Zealand' => ['nwzealand'],
+  'New Zealand' => ['nwzealand', 'nz'],
   'North Macedonia' => ['macedonia'],
   'Northern Ireland' => ['nireland'],
   Norway => ['norge', 'norges', 'norwegen', 'nor'],
