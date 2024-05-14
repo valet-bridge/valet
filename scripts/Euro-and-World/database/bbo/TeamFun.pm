@@ -95,6 +95,7 @@ my @MULTI_WORDS =
   'Brian Is Beautiful',
   'British Lions',
   'Brødrene & co',
+  'Brødrene Dal',
   'Ca. et halvt tonn',
   'Californian Aces',
   'Captain Blood',
@@ -276,6 +277,7 @@ my @MULTI_WORDS =
   'Jiu Jiu',
   'Jorunns disipler',
   'Josef and Cards',
+  'Joy Division',
   'JT2',
   'Juniors Disipler',
   'Juras Ezi',
@@ -384,6 +386,7 @@ my @MULTI_WORDS =
   'One Hundred Eighty',
   'One More!',
   'Opp og ned',
+  'Orange Dynamite',
   'Ottos Lotto',
   'Over stokk og stein',
   'Ööklubi Strand',
@@ -441,6 +444,7 @@ my @MULTI_WORDS =
   'Sivves straffdubbl',
   'Six Diamonds',
   'Six Samurai',
+  'Slam Dunk',
   'Slam Hunters',
   'slaveykov.bg',
   'Smoking Guns',
@@ -556,6 +560,7 @@ my @MULTI_WORDS =
   'What the Heck',
   'Whisky Team',
   'White Bears',
+  'Wild Griffins',
   'Winter Is Coming',
   'XiBu VIP',
   'Xin Yuan',
@@ -684,27 +689,38 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-   Acolvik Adventure Aditya Aggressor Ahmetizm Ahornet Akenobo Akinom
-   Alfredo Alioth Allam Alliansen Alpha Amrapali Amul Aurora Alternativlos 
-   Ambassador Andrzejki Anglophones Appellkameratene Arangan Armani Arnab 
-   Arno Aspe Augerne Autostrada Avagard Avalanche Aytalus
+   Aces Acolvik Adventure Aditya Aggressor Ahmetizm Ahornet 
+   Akenobo Akinom Alfredo Alioth Allam Alliansen Allstars Alpha 
+   Amrapali Amul Aurora Alternativlos Ambassador Andrzejki 
+   Anglophones Appellkameratene Arangan Armani Arnab 
+   Arno Aspe Asparagus Augerne Autostrada Avagard Avalanche Aytalus
 
-   Balti Bananasplit Bauhinia Beniaminek Bhinneka Blondie Blueberry 
-   Bridgeministeriet
-   Censored Cogito
-   Dallas Dingyuan DSM
-   Ekoap Epsilon Everest
-   Fenghuang Formidables Formosa Francophones
-   Guests
-   Hollywood Honeymoon
-   Jupiter
-   Kings KMC
-   Lira
-   Moritz Movember
-   Naturalists Neduk Nemesis Neverclaim
-   Saga Sakurai Scientists Sindbad Skalman Skitur Starmen
+   Balti Bananasplit Barracuda Bauhinia Beniaminek Bhinneka 
+   Blondie Blueberry Bridgebutikken Bridgeministeriet Brudarna 
+   Bubba Buddies
+   Censored Challengers Cogito Crash
+   Dallas Danger Dingyuan Dragon DSM Dyret
+   Eagles Ekoap Enigma Epsilon Everest
+   Farmers Fenghuang Filosofene Fisk Formidables Formosa 
+   Francophones Freak
+   GloryGlory Giants Goldcat Guests Gunsmoke
+   Harlequins Hästpojkarna Holders Hollywood Honeymoon
+   Imponderables Israbel Isrmany
+   Journalists Jupiter
+   Kings KMC Kuhmilch
+   Lazy Lebron Lira
+   Masters Moritz Movember
+   Naturalists Neduk Nemesis Neverclaim Nightingale
+   Octopussy Olrudbanden Olsenbanden Omega Outsiders Overivrig
+   Pegasus Polirish Preempters
+   Quasar
+   Rampage Reklamtrion Robocop
+   Saga Sakurai Saladmasters Sapphire Scientists Sigma Silverfox Sindbad 
+   Skalman Skip Skitur Starmen Storeslemmen Strategen Studentene SweDanes
+   Titans Torpedo Tsunami
+   Úlfurinn Ulvene Underdogs Ungdomslaget
+   Victory
    Winkiboy
-   Úlfurinn
    Zeerob Zugzwang
 );
 
@@ -719,18 +735,29 @@ my %SINGLE_TYPOS =
   'Apollo Soyuz' => ['apollosoyuz', 'apollosoyouz'],
   Appellkameratene => ['apellkameratene'],
   'Atomic Bridge' => ['atomic'],
+  Barracuda => ['barakuda', 'baracuda'],
   Bhinneka => ['bhineka', 'bhinneke'],
   Dingyuan => ['dinyuan'],
   Formidables => ['formidable', 'formidabble', 'formidabels',
     'formiddable', 'formiddables', 'formadibles', 'formadeble',
-    'formadables'],
+    'formadables', 'fromidables'],
+  'Green Eyes' => ['greeneyes'],
+  Gunsmoke => ['gunnsmoke'],
+  Hästpojkarna => ['hastpojkarna'],
+  'India Blues' => ['indiablues'],
   'Jamm & Co' => ['jamm'],
+  'Joy Division' => ['joydivision'],
   'Naturalists' => ['nature'],
   'Pontiac 7' => ['pontiac7'],
+  Preempters => ['preemptors'],
   Scientists => ['science'],
   Starmen => ['starman'],
+  Strategen => ['stratagen'],
+  'Texan Aces' => ['texanaces'],
+  Titans => ['titan'],
   'Vegetable Hotpot' => ['vegetable'],
   'Wei De' => ['weide'],
+  'Wild Griffins' => ['wildgriffin', 'wildgriffins'],
   'YOI Returns' => ['yoi']
 
 );

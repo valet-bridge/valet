@@ -540,6 +540,7 @@ sub study_team
   }
 
   print "UUU $text\n" if ($unsolved_flag && $chain->last() > 0);
+  print "\n" if $unsolved_flag;
 }
 
 

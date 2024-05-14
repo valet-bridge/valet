@@ -26,6 +26,7 @@ my @SINGLE_WORDS = qw(
   bric
   GD GLPD
   KB KDK KRS
+  Mr
   npc
   pc
 );

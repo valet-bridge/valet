@@ -37,6 +37,7 @@ my @MULTI_WORDS =
   'New Caledonia',
   'New South Wales',
   'Nord-Norge Omegn',
+  'North America',
   'North Minahasa',
   'North Celebes',
   'North Sulawesi',
@@ -106,13 +107,14 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   Angkaew Anhui Ayrshire
   Bali Bornholm Buskerud
-  Eurasia
+  Corsica
+  Eurasia Europe
   Florida
-  Gorontalo
+  Global Gorontalo
   Haugaland Hebei
   Jiangsu
   Kansai Karimun Kawanua Kepri Kedungwaru
-  Lumajang
+  Lombok Lumajang
   Maharashtra Marmara Mjøsa
   Norrland
   Queensland

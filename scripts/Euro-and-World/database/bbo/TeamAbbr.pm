@@ -62,7 +62,7 @@ my %SINGLE_TYPOS =
     kcb kdi klubben klubberne ks ksb ksk
     nbi nbcbl
     obk 
-    sbc sc sdgskd sk spor
+    sb sbc sc sdgskd sk spor
     tbc tc)],
   'Sporting Club' => ['sporting', 'sprting'],
 );

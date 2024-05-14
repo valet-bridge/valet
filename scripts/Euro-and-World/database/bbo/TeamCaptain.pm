@@ -266,6 +266,7 @@ my @MULTI_WORDS =
   'Van Riel',
   'Van Zwol',
   'Vijay Anand Singh',
+  'Villas Boas',
   'Vincent LI',
   'Ward Platt',
   'Wei Sender',
@@ -390,7 +391,7 @@ my %MULTI_TYPOS =
   'Mariana Leitão' =>['mariana leitao'],
   'Marius Bartnes' => ['dr. bartnes'],
   'Maxim Henbest' => ['m.henbest'],
-  'Maya Meera Sneha' => ['maya meera', 'maya mira'],
+  'Maya Meera Sneha' => ['maya meera', 'maya mira', 'maya mira snera'],
   McLeish => ['mc. leish'],
   'Migry Zur-Campanile' => ['zur-campanile'],
   'Miguel S. Guedes' => ['miguel s guedes'],
@@ -399,7 +400,7 @@ my %MULTI_TYPOS =
   'N. Chakraborty' => ["n.c hakraborty's iv"],
   'Nabil Chaker' => ['chaker'],
   'Nabil Edgtton' => ['n edgtton', 'n.edgtton'],
-  "O'Rourke" => ['o rourke', 'o;rourke'],
+  "O'Rourke" => ['o rourke', 'o;rourke', "o'rouke"],
   'Ofek Tal' => ['ofel tak'],
   'Olivier Bessis' => ['bessis.o.'],
   'Patanè' => ["patane'"],
@@ -506,8 +507,8 @@ my @SINGLE_WORDS = qw(
   Daugava Dauvergne Davies Dawson
   Debolina Debonnaire Debus Dechelette Degla Dehaye Deik Delfour 
   Dellecavakis Delimpaltadakis DeMartino Demirbas Denning Deniz Desai
-  Deutsch Deva Dexter Dhir Dhondy Diamond Dinkin Dixon Djurovic
-  Dobbels Dobes Dobroiu Doecke Dolla Donatella Donciu Dossena 
+  Deutsch Deva Dexter Dhir Dhondy Diamond Dionosypoulus Dinkin Dixon 
+  Djurovic Dobbels Dobes Dobroiu Doecke Dolla Donatella Donciu Dossena 
   Doub Doussot Doxiadis 
   Drijver Dubini Duguet Duman Dumbovich Dunitz Dunn 
   Duong Dupraz Dupuis Dupuy Durisotto Dutilloy Dyke
@@ -523,7 +524,7 @@ my @SINGLE_WORDS = qw(
   Ferrari Fettes
   Fici Figlus Figueiredo Filios Filip Finikiotis Fioretti Fireman Firestone 
   Fleisher Fleury Flierl Flock Flora 
-  Ford Fordham Fornaciari Forrester Fortini Fout Fox
+  Ford Fordham Fornaciari Forrester Fortini Foster Fout Fox
   Frances Franchi Fraser Frazer Frazzetto Frencken Fredin Freed 
   Fridriksson Friedland Friedlander Friis
   Frosztega Fruewirth Frukacz Frutos
@@ -536,7 +537,7 @@ my @SINGLE_WORDS = qw(
   Gioia Gitelman Giura Gladiator Gladysh Glanger Glasson Glopson
   Goded Goldberg Goldenfield Goldman Goldstein Golebiowski 
   Gomerov Gomes Goodman
-  Goren Gosney Gotard Gottlieb Goyal Göthe
+  Gordon Goren Gosney Gotard Gottlieb Goyal Göthe
   Grabel Grabowska Gradignan Gradovsky Grainger Gramberg Green 
   Greenberg Greenwood Grenside Grenthe Griffey Griffin Griffoni Griffiths 
   Grimeton Grigoriu Grimaldi Grisho Groemenboom
@@ -567,9 +568,9 @@ my @SINGLE_WORDS = qw(
   Kamal Kamil Kaminaris Kaminski Kamras Kannavos Kandemir Kane Kanetkar 
   Kapadia Kapagiannidis Kaplan Kaptan Karadeniz Karamanlis 
   Karavil Karayel Karl Karpouzelis Kasday Kasle Kasler Kastel
-  Katz Kaushik Kay Kazik Kendrick Kenny Kent Keremida Kersey
-  Kilvington King Kiran Kirilenko Kirin Kishan Kizikli Klinger 
-  Klofa Klukowski 
+  Katz Kaushik Kay Kaye Kazik Kendrick Kenny Kent Keremida Kersey
+  Khandelwal Kilvington King Kiran Kirilenko Kirin Kishan Kizikli 
+  Klinger Klofa Klukowski 
   Knap Knight Kocak Koch Koistinen Koivula Kokkes Kokten Kolankaya 
   Kolata Kolesnik Kondoch Koneru Kopecky Koppel
   Korbel Kordov Korkut Korth Kosaka Kosti Kotányi Koumetz Kovacs Kovachev 
@@ -625,27 +626,28 @@ my @SINGLE_WORDS = qw(
   
   O'Brien O'Gorman Ohno Ohrysko Oikonomopoulos
   Olanski Olsen Omran Oncu O'Rourke Ortega
-  Onstott Osaulenko Osofsky Oursel Ozarar Ozbey Ozdil Ozenir
+  Onstott Osaulenko Osofsky Otvosi Oursel Ozarar Ozbey Ozdil Ozenir
   Östberg Özbey
 
   Pacault Paganus Paiva Pajak Palma Palmeira Palmer Palmund Palau 
   Panagaki Papaxatzis Parker Parviainen Passaro Passell Pattinson Pattison
-  Paulissen Pauncz Payen Pazur
+  Paulissen Pauncz Pavlicek Payen Pazur
   Peake Pedzinski Peirão Pekkinen Peksen Penfold Percario Peres
   Periasamy Petculescu Petrucci Pettersson
   Phelan Piasecki Piedra Piekarek Pietraszek Piganeau Pilon Piper
   Pitt Platt Plaut Pollack Pollak Polowan Pont Popescu Popova Potier 
-  Poulat Pownall Prescott Priano Proukakis Procter Prusa Pryor Puczynski
-  Pszczola
+  Potts Poulat Pownall Prescott Priano Proukakis Procter Prusa 
+  Pryor Puczynski Pszczola
 
   Quail Quantin Quinn
 
-  Rabinowitz Radcliffe Radisic Rankin Ranson Rao Raulund Ravenna Rayner
-  Rees Rehder Reid Rekstad Renouard Revaz Rew Reynolds Rhodes
+  Rabinowitz Radcliffe Radisic Ramondt Rankin Ranson Rao Raulund 
+  Ravenna Rayner Rees Rehder Reid Rekstad Renouard Revaz Rew 
+  Reynolds Rhodes
   Ribera Ricard Ricci Richardson Richman Riedel Riehm Rigal Rigaud 
   Rimstedt Rios Rivers Rizzo
   Robert Robertson Robinson Robles Robson Rocafort Rocca Rodwell
-  Rogoff Rohowsky Roll Rombaut Rosen Rosendorff Rosetta 
+  Rogoff Rohowsky Roll Rombaut Rosen Rosenberg Rosendorff Rosetta 
   Rosenkrantz Rosenthal Rossard Rossi Rothfield Roussoglou Roussos
   Rubin Rubio Rueda Ryman
 
@@ -653,24 +655,24 @@ my @SINGLE_WORDS = qw(
   Salliere Salman Sandqvist Sansom Saporta Sapounakis Savelli Savorani 
   Sawicki Saydi Sayer Sayilkan Sbarigia
   Scerri Schaltz Schermer Schlicker Schneider Schnetzer Schonning
-  Schoolmann Schou Schulz Schüller Schroeder Scoltock Schreckenberger 
-  Scudder Schwartz Schwerdt
+  Schoolmann Schou Schuett Schulz Schüller Schroeder Scoltock 
+  Schreckenberger Scudder Schwartz Schwerdt
   Sealy Sebbane Seguineau Selberg Selcuk Seligman Serenella Serf 
   Serpoi Sesyilmaz 
   Shadyro Sharif Sherman Shields Shiels Shimamura Shimizu 
   Shirogane Short Shugart Silver Silverstein Silverstone Sime 
-  Simonsen Simpson Simson Sinclair Skaanning Skelton Skoglund 
-  Skorchev Small Smart Smilgajs 
+  Simonsen Simpson Simson Sinclair Skaanning Skelton Skjønnemann
+  Skoglund Skorchev Small Smart Smilgajs 
   Smith Smirnov Smolanko Snashall Snellers 
   Sohlin Soldati Solodar Sonsini Sorkin Soukup Soulet Soumitra Sowter
   Spangenberg Spector Spooner Sprung Squires
   Stabell Stamatov Stankovic Stansby Stark Stavrinos
   Steel Steiner Stephenson Stern 
-  Sternberg Stevens Stewart Stienen
+  Steinberg Sternberg Stevens Stewart Stienen
   Stoichkov Street Stretz Strul Strøm Stuart
-  Sveindal Sveinsson Svendsen 
-  Sugino Summers Sundelin Sundsten Suresh Suwik
-  Syl Sylvan Szalay Szots
+  Sulgrove Sveindal Sveinsson Svendsen 
+  Sugino Summers Sundelin Sundsten Suresh Sutherlin Suwik
+  Syl Sylvan Symons Szalay Szots
 
   Tajima Takayama Tamburrini Tan Tanaka Tarhan Tarsus Taylor 
   Tebha Tedd Teltscher Teodorescu Teramoto Terraneo Tesla Tez
@@ -686,7 +688,7 @@ my @SINGLE_WORDS = qw(
   Viana Videv Vigil Vihtilä Vinay Vinciguerra Virvidakis Vitas Vithaya
   Vogt Volcker Vorobei Vriend Vroustis
 
-  Wademark Walsh Wang Ware Warne Wasik Waterlow Waters Watts 
+  Wademark Walsh Wang Ware Warne Wasik Waterlow Waters Watkins Watts 
   Weed Weingarten Weingold Weinstein Weisinger Welland Werdelin 
   Westerlund Westheimer Westra Westwood Whibley Wigoder Wijma 
   Wikstrom Wildavsky Wilkinson 
@@ -767,6 +769,7 @@ my %SINGLE_TYPOS =
   Karadeniz => ['karadenýz'],
   'Kasper Konow' => ['konow'],
   Kazik => ['kazic'],
+  Kilvington => ['kilvigton'],
   Kotányi => ['kotanyi'],
   Kurbalija => ['kuribalija'],
   'Lotan Fisher' => ['fisher'],
@@ -776,11 +779,13 @@ my %SINGLE_TYPOS =
   'Maria João Lara' => ['lara'],
   Mahaffey => ['mahafey', 'mahaffee'],
   'Majka Cilleborg Bilde' => ['majka'],
+  'Manuel Capucho' => ['capucho'],
   Manyawar => ['manyvar'],
   'Marius Bartnes' => ['bartnes'],
   Markowicz => ['markovics', 'markowitz'],
   'Maxim Henbest' => ['henbest'],
   Mesbur => ['mesbor'],
+  Meltzer => ['metzler'],
   'Miguel Teixeira' => ['teixeira'],
   Milner => ['millner'],
   'Nuno Damaso' => ['damaso'],
@@ -791,12 +796,15 @@ my %SINGLE_TYPOS =
   Patanè => ['patane'],
   'Patrick Jourdain' => ['jourdain'],
   'Paulo Goncalves Pereira' => ['pgp'],
+  'Paulo Roberto Brum' => ['brum'],
+  'Pedro Madeira' => ['pmadeira'],
   'Pedro Morbey' => ['morbey'],
   'Pedro Pratas' => ['pratas'],
   Peirão => ['peirao'],
   Procter => ['proctor'],
   Pszczola => ['pepsi'],
   Quantin => ['quentin'],
+  Rosenkrantz => ['rosenkranz'],
   'Sally Brock' => ['brock'],
   'Salvatore Luceno' => ['lucenò'],
   'Sanjay Bhattacharya' => ['bhattacharya'],
@@ -808,7 +816,9 @@ my %SINGLE_TYPOS =
   Thuillez => ['tuillez'],
   'Tor Helness' => ['helness'],
   'Toshiro Nose' => ['nose'],
+  Townsend => ['towsend'],
   Venkatesh => ['venky'],
+  'Villas Boas' => ['villasboas'],
   Vinciguerra => ['vinci'],
   Wigoder => ['wigodor'],
   'Xavier Michaud Larivière' => ['lariviere'],

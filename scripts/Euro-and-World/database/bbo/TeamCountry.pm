@@ -92,6 +92,7 @@ my @SINGLE_WORDS = qw(
   Luxembourg 
   Madagascar 
   Malta
+  Malaysia
   Monaco 
   Netherlands 
   Norway 
@@ -150,7 +151,7 @@ my %SINGLE_TYPOS =
   Norway => ['norge', 'norges', 'norwegen', 'nor'],
   Palestine => ['palastine'],
   Philippines => ['philipppines'],
-  Poland => ['polen'],
+  Poland => ['polen', 'pologne'],
   Reunion => ['réunion'],
   'Serbia and Montenegro' => ['serbia&mon'],
   'South Korea' => ['korea'],

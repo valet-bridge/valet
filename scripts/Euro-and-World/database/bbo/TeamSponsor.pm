@@ -107,6 +107,7 @@ my @MULTI_WORDS =
   'Kosmos Delhi',
   'Kuncheng Group',
   'Kurt-Royce',
+  'Lag os',
   'Lögfræðiskrifstofa Islands',
   'Lögfræðistofa Bjarna',
   'Lupo Veloce',
@@ -199,6 +200,7 @@ my %MULTI_TYPOS =
   'Chateau Rossenovo' => ['chatteau rossenovo', 'chatteu rossenovo',
     'chaetou rosenovo', 'shato rosenovo', 'shato rossenovo'],
   'China Global Times' => ['chinal global times'],
+  'China Trinergy' => ['chinatrinergy'],
   'Data Steel' => ['datta steel'],
   'Dhampur Sugar' => ['dhampur sugar mills', 'dhampur sugars', 
     'dhampur suger mills', 'dhampor sugar mills', 'dhampu sugar mills'],
@@ -239,6 +241,8 @@ my %MULTI_TYPOS =
   'Lögfræðistofa Bjarna' => ['lögfr.st bjarna', 'lögfr.stofa bjarna',
     'lögfr.stofa ´bjarna'],
   'Málning hf' => ['målning hf'],
+  'Mutiara Energy' => ['mutiara energy indo', 'mutiara energi indo',
+    'mutiara energi p.', 'mutiara energi.p'],
   'PD Times' => ['p d times'],
   'Pan China Construction' => ['pan-china const', 'pan china construct'],
   'Pan China Group' => ['pan-china group'],
@@ -291,14 +295,15 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  ABAX Abnegat Actavis Akaylar Aklindo Arboned Argento Arkas Arma 
-  Asindo Ayýntab
+  ABAX Abnegat Accenture Actavis Akaylar Aklindo Arboned 
+  Argento Arkas Arma Asindo Ayýntab
 
   Bajaj Banpu
   COMAL Cimentas Computerland CONSUS
   Denizgucu Derofe DISKI Djarum Dongfeng Druva
-  Effcontrol Eksprompt Elastron Enterprise
-  GAMAX
+  Effcontrol Eksprompt Elastron Enterprise Everfresh
+  Funbridge
+  GAMAX Gevalia
   Hana
   IMAX
   JHS
@@ -323,6 +328,7 @@ my %SINGLE_TYPOS =
   'Elektrik P3B' => ['elektrik', 'electric'],
   'Indian Railways' => ['railways'],
   'Málning hf' => ['málning'],
+  'Shree Cement' => ['shreecement'],
   'SPS Construction' => ['sps'],
   Wellwise => ['wellwiss']
 );

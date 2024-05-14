@@ -26,14 +26,19 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   AZS
+  CBAI
   EBU
-  JBA
-  NIBU
   GABSI
+  JBA
+  MCBA
+  NIBU
+  SBU
+  WBU
 );
 
 my %SINGLE_TYPOS =
 (
+  CBAI => ['cabi']
 );
 
 

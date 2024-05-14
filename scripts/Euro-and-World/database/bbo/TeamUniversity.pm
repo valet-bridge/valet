@@ -110,6 +110,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  Brandeis
 );
 
 my %SINGLE_TYPOS =

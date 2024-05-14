@@ -29,6 +29,7 @@ my @MULTI_WORDS =
   'Kota Bekasi',
   'Kota Bogor',
   'Kota Mataram',
+  'Kuala Lumpur',
   'Novi Sad',
   'Reggio Emilia',
   'Semburat Jingga',
@@ -83,7 +84,7 @@ my @SINGLE_WORDS = qw(
 
   Caen Cairns Canakkale Canberra Caracas Catania Çayyolu 
   Cerkezkoy Changzhou Chelsea Chengdu Chennai Chicago Chongqing 
-  Chumphon Cimahi Clichy Corlu Courseulles Coventry Cuenca
+  Chumphon Cimahi Clichy Copenhagen Corlu Courseulles Coventry Cuenca
 
   Dalian Dalls Daqing Darmstadt Datca Debrecen Delft Delhi Denizli
   Diyarbakir Dimitrovgrad Dobrich Dombivli Dongguan Düsseldorf
@@ -92,7 +93,7 @@ my @SINGLE_WORDS = qw(
 
   Fethiye Firenze Flekkefjord Førde
 
-  Garches Gdynia Gent Glidice Gorontalo Gölcük Gresik 
+  Garches Gdansk Gdynia Gent Glidice Gorontalo Gölcük Gresik 
   Guangzhou Guayaquil Gudbrandsdal
 
   Haderslev Hamburg Hangzhou Hannover Harplinge Harstad 
@@ -114,7 +115,7 @@ my @SINGLE_WORDS = qw(
 
   Maastricht Madrid Makassar Malatya Malmö Manahasa Manado Manchester 
   Manisa Mannheim Marbella Martapura Malatya Massy Mataram 
-  Medan Melbourne Mersin Midyat Milan Minsk Miskolc 
+  Medan Melbourne Mersin Meski Midyat Milan Milas Minsk Miskolc 
   Montpellier Moradabad Mumbai Munich Muratpasa
 
   Nagbagan Nagpur Nagykanizsa Namsos Nangang Nanning 
@@ -184,8 +185,10 @@ my %SINGLE_TYPOS =
   Canakkale => ['çanakkale'],
   Çayyolu => ['cayyolu'],
   Cerkezkoy => ['çerkezköy'],
+  Copenhagen => ['kopenhagen'],
   Corlu => ['çorlu'],
   Diyarbakir => ['Dýyarbakir'],
+  Düsseldorf => ['duesseldorf'],
   Izmir => ['ýzmir', 'ýzmýr'],
   Jakarta => ['dki', 'jakar', 'jkt'],
   Karsiyaka => ['Karþiyaka'],
@@ -194,19 +197,23 @@ my %SINGLE_TYPOS =
   Koycegiz => ['köyceðýz'],
   Krakow => ['kraków'],
   Kristiansand => ['kristiansands'],
+  'Kuala Lumpur' => ['kl'],
   Küp => ['kup'],
   Lozenets => ['lozenec'],
   Makassar => ['makasar'],
   Manahasa => ['mnhasa'],
   Mersin => ['mersýn'],
+  Milas => ['minas'],
   Mumbai => ['mum'],
   Munich => ['münchen'],
   Narlidere => ['narlýdere'],
   Pamukkale => ['pamuk'],
   Panzhihua => ['panzhihuabc'],
+  Potsdam => ['postdam'],
   Prague => ['praha'],
   Radkov => ['radkow', 'kadkov'],
   Rome => ['roma'],
+  Saarbrücken => ['saarbruecken'],
   Storsjöbygden => ['storsjöbygdens'],
   Söke => ['soke'],
   Sunndalsøra => ['sundalsora'],
