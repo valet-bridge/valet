@@ -61,6 +61,7 @@ my @MULTI_WORDS =
   'Avesta',
   'Awesome Avengers',
   'Aylan Kurdý',
+  'Azure Hooda',
   'Babes Amazones',
   'Bad Beat',
   'Bad Man',
@@ -251,6 +252,7 @@ my @MULTI_WORDS =
   'Hare Krishna',
   'Heldige Olav',
   "Hell's Angels",
+  'Hi Charli',
   'Hillbilly Help Suit',
   'Hopp i sang',
   'Hurlumhei',
@@ -459,6 +461,7 @@ my @MULTI_WORDS =
   'Spiel mir das Lied',
   'Spjett Spjong',
   'Spring Foursomes',
+  'Sree Priya',
   'Stabby with Youngsters',
   'Stis Multivariant',
   'Stone Cutters',
@@ -466,6 +469,7 @@ my @MULTI_WORDS =
   'Strawberry Fields',
   'Super Pineapples',
   'Svag klöver',
+  'Svanslös Skalman',
   'Svenske og ulykke',
   'Sweet Is Middle',
   'Syntax Error',
@@ -674,6 +678,7 @@ my %MULTI_TYPOS =
   'slaveykov.bg' => ['slaveikov.bg'],
   'Spring Foursomes' => ['spring 4s', 'spring fours', "spring 4's"],
   'Stabby with Youngsters' => ['stabby with youngst'],
+  'Svanslös Skalman' => ['svanslos skalman'],
   'Tempo-Knektene' => ['tempo-knehtene'],
   'Texan Aces' => ['texa aces', 'texaan aces'],
   'The Four Guys' => ['the 4 guys'],
@@ -689,38 +694,42 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+   2Q2K
    Aces Acolvik Adventure Aditya Aggressor Ahmetizm Ahornet 
    Akenobo Akinom Alfredo Alioth Allam Alliansen Allstars Alpha 
    Amrapali Amul Aurora Alternativlos Ambassador Andrzejki 
    Anglophones Appellkameratene Arangan Armani Arnab 
-   Arno Aspe Asparagus Augerne Autostrada Avagard Avalanche Aytalus
+   Arno Aspe Asparagus Augerne Autostrada Avagard Avalanche Aytalus Azure
 
    Balti Bananasplit Barracuda Bauhinia Beniaminek Bhinneka 
    Blondie Blueberry Bridgebutikken Bridgeministeriet Brudarna 
-   Bubba Buddies
-   Censored Challengers Cogito Crash
-   Dallas Danger Dingyuan Dragon DSM Dyret
+   Bubba Buddies Bulldozer
+   Cardtossers Censored Challengers Claim Cogito Contra Corner
+   Counterstrike Crash
+   Dallas Danger DenmarS Dingyuan Dragon DSM Dvizhenie Dyret
    Eagles Ekoap Enigma Epsilon Everest
-   Farmers Fenghuang Filosofene Fisk Formidables Formosa 
+   Farmers Fenghuang Filosofene Fisk Formidables Formosa Fortuna
    Francophones Freak
-   GloryGlory Giants Goldcat Guests Gunsmoke
+   Galaxy GloryGlory Giants Goldcat Guests Gunsmoke
    Harlequins Hästpojkarna Holders Hollywood Honeymoon
    Imponderables Israbel Isrmany
-   Journalists Jupiter
-   Kings KMC Kuhmilch
-   Lazy Lebron Lira
-   Masters Moritz Movember
+   JoJo Journalists Jupiter JuuTools
+   Kings KMC Kompisarna Kratos Kuhmilch
+   LatSwe Lazy Lebron Lira Lirarna
+   Malmölaget Masters Mirage Moritz Movember
    Naturalists Neduk Nemesis Neverclaim Nightingale
-   Octopussy Olrudbanden Olsenbanden Omega Outsiders Overivrig
-   Pegasus Polirish Preempters
-   Quasar
-   Rampage Reklamtrion Robocop
-   Saga Sakurai Saladmasters Sapphire Scientists Sigma Silverfox Sindbad 
-   Skalman Skip Skitur Starmen Storeslemmen Strategen Studentene SweDanes
-   Titans Torpedo Tsunami
+   Octopussy Okay Olrudbanden Olsenbanden Omega Outsiders Overivrig
+   Pegasus Polirish Potteplante Preempters Pretendents Prijatelj Pusten
+   Quantum Quasar
+   Rampage Reklamtrion Robocop Royston
+   Saga Sakurai Saladmasters Salokin Sapphire Scientists 
+   Sigma Silverfox Sindbad Sjøsamen Skalman Skip Skitur Starmen 
+   Storeslemmen Strategen Studentene Stålfarfar SweDanes SweNor
+   Titans Torpedo Trøndermøringen Tsunami
    Úlfurinn Ulvene Underdogs Ungdomslaget
-   Victory
+   Victory Vietcong Vilttiketju Vintage Vytas
    Winkiboy
+   Yogakshema Yokozuna
    Zeerob Zugzwang
 );
 
@@ -737,6 +746,7 @@ my %SINGLE_TYPOS =
   'Atomic Bridge' => ['atomic'],
   Barracuda => ['barakuda', 'baracuda'],
   Bhinneka => ['bhineka', 'bhinneke'],
+  Bulldozer => ['buldozer'],
   Dingyuan => ['dinyuan'],
   Formidables => ['formidable', 'formidabble', 'formidabels',
     'formiddable', 'formiddables', 'formadibles', 'formadeble',
@@ -758,6 +768,7 @@ my %SINGLE_TYPOS =
   'Vegetable Hotpot' => ['vegetable'],
   'Wei De' => ['weide'],
   'Wild Griffins' => ['wildgriffin', 'wildgriffins'],
+  'Winkiboy' => ['winkyboy'],
   'YOI Returns' => ['yoi']
 
 );

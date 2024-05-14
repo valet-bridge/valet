@@ -53,6 +53,7 @@ my @MULTI_WORDS =
   'South Sumatra',
   'South Sweden',
   'Taihu Lake',
+  'Tamil Nadu',
   'Troms og Ofoten',
   'Uttar Pradesh',
   'Val di Magra',
@@ -110,19 +111,20 @@ my @SINGLE_WORDS = qw(
   Corsica
   Eurasia Europe
   Florida
-  Global Gorontalo
+  Global Gorontalo Gujarat
   Haugaland Hebei
   Jiangsu
-  Kansai Karimun Kawanua Kepri Kedungwaru
+  Kansai Karimun Kawanua Kedungwaru Kepri Kerala
   Lombok Lumajang
   Maharashtra Marmara Mjøsa
   Norrland
   Queensland
   Oberloiben
   Punjab
-  Ratchaburi Rogaland Rosfjord
+  Rajputana Ratchaburi Rogaland Rosfjord
   Sichuan
   Telemark
+  Uttarakhand
   Victoria
   Zhejiang
 );
@@ -135,6 +137,8 @@ my %SINGLE_TYPOS =
   'Kepulauan Riau' => ['riau', 'kepri'],
   'New South Wales' => ['nsw'],
   Queensland => ['qld'],
+  'Tamil Nadu' => ['tamilnadu'],
+  Uttarakhand => ['uttaranchal'],
   'Victoria' => ['vic']
 );
 

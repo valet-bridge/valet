@@ -52,6 +52,7 @@ my @MULTI_WORDS =
   'China Global Times',
   'China Resources',
   'China Trinergy',
+  'Consus Carbon',
   'Consus Oil',
   'Dalian Dichan',
   'Dama Kupa',
@@ -112,6 +113,7 @@ my @MULTI_WORDS =
   'Lögfræðistofa Bjarna',
   'Lupo Veloce',
   'Málning hf',
+  'Mega-Tech',
   'Mitra Buana',
   'Mutiara Energy',
   'Nordfyns Finans',
@@ -216,7 +218,8 @@ my %MULTI_TYPOS =
   'Garðar & Vélar' => ['garðar & vélar ehf.', 'garðar og vélar',
     'gardar og velar'],
   'Garðs Apotek' => ['garðs apótek', 'garðs apoótek', 'gards apótek'],
-  'Geely Automobile' => ['geely auto', 'gely auto', 'chaina geely'],
+  'Geely Automobile' => ['geely auto', 'gely auto', 'chaina geely',
+    'china geely'],
   'Geologi Timah' => ['geo timah', 'geo tima'],
   'Guangzhou Pearl River' => ['gz pearl river', 
     'guangzhou pearl river development'],
@@ -295,12 +298,12 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  ABAX Abnegat Accenture Actavis Akaylar Aklindo Arboned 
-  Argento Arkas Arma Asindo Ayýntab
+  ABAX Abnegat Accenture Actavis Akaylar Aklindo Aquatrans
+  Arboned Argento Arkas Arma Asindo Ayýntab
 
   Bajaj Banpu
   COMAL Cimentas Computerland CONSUS
-  Denizgucu Derofe DISKI Djarum Dongfeng Druva
+  Datasteel Denizgucu Derofe DISKI Djarum Dongfeng Druva
   Effcontrol Eksprompt Elastron Enterprise Everfresh
   Funbridge
   GAMAX Gevalia
@@ -308,10 +311,11 @@ my @SINGLE_WORDS = qw(
   IMAX
   JHS
   Lavazza Longjiangfu
-  Pertamina Pufa
+  Paulaner Pertamina Pufa
   Qiaoyou
   Ráðgjöf
-  Sagaplast Solakoglu
+  Sagaplast Shouchuang Solakoglu
+  Tryggingamiðstöðin
   Vito
   Wellwise
   Zhonghai

@@ -72,6 +72,7 @@ my %MULTI_TYPOS =
   'Ankara University' => ['ankara uni'],
   'Bilkent University' => ['bilkent uni'],
   'Budapest University' => ['budapest uni'],
+  'Cornell University' => ['cornell'],
   'École Polytechnique' => ['paris polytechnix', 'ecole polytech'],
   'Ege University' => ['ege uni'],
   'Gunadurma' => ['guna darma'],

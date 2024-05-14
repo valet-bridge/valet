@@ -30,6 +30,7 @@ my @MULTI_WORDS =
   'Kota Bogor',
   'Kota Mataram',
   'Kuala Lumpur',
+  'La Chaux-de-Fonds',
   'Novi Sad',
   'Reggio Emilia',
   'Semburat Jingga',
@@ -77,7 +78,7 @@ my @SINGLE_WORDS = qw(
   Bangkok Banjarmasin Baragnon Barcelona Batam Bath Batman Batu Bayrampaþa
   Begues Beijing Bekasi Belgrade Bengkalis Bengkulu Beograd 
   Bergen Bergues Berlin 
-  Bhubaneshwar Bielefeld Bitung Blitar Bodrum Bodø Bogazici 
+  Bhubaneshwar Bielefeld Bikaner Bitung Blitar Bodrum Bodø Bogazici 
   Bogor Bologna Bonn Bordeaux Borivli Bornova Bozdogan
   Braila Brasov Bremen Brisbane Brotteaux 
   Buca Bucharest Budapest Burghausen Bursa Burdur Bytom
@@ -91,9 +92,9 @@ my @SINGLE_WORDS = qw(
 
   Eastbourne Edirne Ege Esbjerg Eskisehir Essen
 
-  Fethiye Firenze Flekkefjord Førde
+  Fethiye Firenze Flekkefjord Frankfurt Førde
 
-  Garches Gdansk Gdynia Gent Glidice Gorontalo Gölcük Gresik 
+  Garches Gdansk Gdynia Genoa Gent Glidice Gorontalo Gölcük Gresik 
   Guangzhou Guayaquil Gudbrandsdal
 
   Haderslev Hamburg Hangzhou Hannover Harplinge Harstad 
@@ -110,23 +111,24 @@ my @SINGLE_WORDS = qw(
   Kocaeli Kocamustafapasa Kolkata Konak Korwin Kosice Koycegiz Köln Krakow 
   Kristiansand Kucukcekmece Kudus Kunshan Kuopio Kusadasi Küp Kütahya
 
-  Langkat Leiden Leszno Leuven Leverkusen Lhokseumawe Lille Lima Lincoln
-  Ljubljana London Losari Lowicz Lozenets Lubin Lublin Luleburgaz Lumajang
+  Langkat Leiden Leszno Leuven Leverkusen Lhokseumawe Lille Lima 
+  Lincoln Lindesberg Ljubljana London Losari Lowicz Lozenets 
+  Lubin Lublin Luleburgaz Lumajang
 
   Maastricht Madrid Makassar Malatya Malmö Manahasa Manado Manchester 
   Manisa Mannheim Marbella Martapura Malatya Massy Mataram 
   Medan Melbourne Mersin Meski Midyat Milan Milas Minsk Miskolc 
   Montpellier Moradabad Mumbai Munich Muratpasa
 
-  Nagbagan Nagpur Nagykanizsa Namsos Nangang Nanning 
+  Nagbagan Nagpur Nagykanizsa Namsos Nangang Nanning Napoli
   Narita Narlidere Narvik
   Nazilli Näsby Nijmegen Ningbo Niski Norrøna Nusantara Nürnberg 
   Nyon Nærbø Næstved Nøtterøy
 
-  Odense Ogndal Oldenburg Orhangazi Oslo Oxford Överum
+  Odense Ogndal Oldenburg Orhangazi Oslo Ottadalen Oxford Överum
 
   Padang Padova Palembang Palermo Palma Palu Pamukkale Panzhihua Pariaman 
-  Paris Pärnu
+  Parioli Paris Pärnu
   Pekanbaru Pelotas Pernik Perth Pesaro Pescara Posillipo Poznan
   Pula
 
@@ -181,6 +183,7 @@ my %SINGLE_TYPOS =
   Balisekir => ['balikesýr'],
   Balkova => ['balçova'],
   Bangalore => ["b'lore", 'banglore'],
+  Beijing => ['peking'],
   Borivli => ['borivali'],
   Canakkale => ['çanakkale'],
   Çayyolu => ['cayyolu'],
@@ -189,6 +192,7 @@ my %SINGLE_TYPOS =
   Corlu => ['çorlu'],
   Diyarbakir => ['Dýyarbakir'],
   Düsseldorf => ['duesseldorf'],
+  Genoa => ['genova'],
   Izmir => ['ýzmir', 'ýzmýr'],
   Jakarta => ['dki', 'jakar', 'jkt'],
   Karsiyaka => ['Karþiyaka'],
@@ -206,6 +210,7 @@ my %SINGLE_TYPOS =
   Milas => ['minas'],
   Mumbai => ['mum'],
   Munich => ['münchen'],
+  Napoli => ['naples'],
   Narlidere => ['narlýdere'],
   Pamukkale => ['pamuk'],
   Panzhihua => ['panzhihuabc'],

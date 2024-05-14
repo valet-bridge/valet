@@ -107,6 +107,7 @@ my @MULTI_WORDS =
   'One Eyed Jacks',
   'Østfold og Follo',
   'Øvre Ottadalen',
+  'Paris Sud',
   'Pescara Bridge',
   'Phoenix Oltenita',
   'Qi Zhong Club',
@@ -120,6 +121,7 @@ my @MULTI_WORDS =
   'St:Erik Hella',
   'St:Erik Morot',
   'Studentenes',
+  'Torino Allegra',
   'Van Bric',
   'Wadi Degla',
   'Wampon Bodi Papua',
@@ -205,14 +207,16 @@ my %MULTI_TYPOS =
   'Østfold og Follo' => ['østfold/follo'],
   'Øvre Ottadalen' => ['øvre ottadal'],
   'Studentenes BK' => ['studentene bk'],
+  'Torino Allegra' => ['bridge allegra', 'allegra to',
+    'allegra - to', 'gs allegra'],
   'WCG Mumbai' => ['wcg (mum)', 'wcg-mumbai']
 );
 
 my @SINGLE_WORDS = qw(
   Acol Airmadidi Akceþme Amisos Asenovec Auguri
-  Botev
+  Bonsist Botev
   Debrecen Dragao
-  Fosnavåg
+  Fanfulla Fenerbahce Fosnavåg
   Galatasaray
   Hercules Hordaland
   Hosgoru
@@ -220,8 +224,9 @@ my @SINGLE_WORDS = qw(
   Karagümrük Kløverknekt 
   Lavec Laksamana
   Locomotiva
-  Miskolc
-  Sakura
+  Miskolc Mragowia
+  Sakura Spojnia
+  TGR
   Uppsalabridgen
   Østerdal
   Örebridgen
@@ -239,6 +244,7 @@ my %SINGLE_TYPOS =
   'BK 2000' => ['bk2000'],
   'BK Lavec Smile' => ['smile'],
   'Cerkezkoy Dinamik BSK' => ['Cerkezkoy'],
+  'Cracovia 1906' => ['cracovia'],
   'Delhi Gymkhana Club' => ['dgc'],
   'El Ahly' => ['ahly'],
   'El-Karma' => ['karma'],
@@ -251,6 +257,8 @@ my %SINGLE_TYPOS =
   Locomotiva => ['loco'],
   'Majör Boğaziçi' => ['majorbogazici'],
   'Samadhan Academy' => ['samadhan'],
+  Spojnia => ['Spójnia'],
+  TGR => ['tgrs'],
   Uppsalabridgen => ['ippsalabridgen'],
   Örebridgen => ['Örebridge', 'orebridgen'],
 );

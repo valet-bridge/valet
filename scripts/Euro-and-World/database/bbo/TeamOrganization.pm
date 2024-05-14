@@ -32,6 +32,7 @@ my @SINGLE_WORDS = qw(
   JBA
   MCBA
   NIBU
+  PTBA
   SBU
   WBU
 );
