@@ -121,6 +121,7 @@ my @MULTI_WORDS =
   'St:Erik Hella',
   'St:Erik Morot',
   'Studentenes',
+  'Tennis Club Parioli',
   'Torino Allegra',
   'Van Bric',
   'Wadi Degla',
@@ -221,12 +222,13 @@ my @SINGLE_WORDS = qw(
   Hercules Hordaland
   Hosgoru
   Jeofizik
-  Karagümrük Kløverknekt 
+  Karagümrük Karlsruher Kløverknekt 
   Lavec Laksamana
   Locomotiva
   Miskolc Mragowia
+  Romana
   Sakura Spojnia
-  TGR
+  TGR Tofas
   Uppsalabridgen
   Østerdal
   Örebridgen
@@ -256,8 +258,10 @@ my %SINGLE_TYPOS =
   Kløverknekt => ['kloverknekt'],
   Locomotiva => ['loco'],
   'Majör Boğaziçi' => ['majorbogazici'],
+  Mragowia => ['mragovia'],
   'Samadhan Academy' => ['samadhan'],
   Spojnia => ['Spójnia'],
+  'Tennis Club Parioli' => ['tcp'],
   TGR => ['tgrs'],
   Uppsalabridgen => ['ippsalabridgen'],
   Örebridgen => ['Örebridge', 'orebridgen'],

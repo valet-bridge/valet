@@ -128,6 +128,7 @@ my @MULTI_WORDS =
   'Jay Ganesh',
   'Jean le Poder',
   'Jennifer de Winter',
+  'Jeovani Salomao',
   'Jeroo Mango',
   'Jerzy Zaremba',
   'Jesper Buus Thomsen',
@@ -165,6 +166,8 @@ my @MULTI_WORDS =
   'Luis Oliveira',
   'Majka Cilleborg Bilde',
   'Marc ter Laare',
+  'Marc Kerlero de Rosbo',
+  'Manoel Peirao',
   'Manuel Capucho',
   'Manuel Neto',
   'Manuel Oliveira',
@@ -464,8 +467,8 @@ my @SINGLE_WORDS = qw(
   Avci Avcioglu Avon Awad Ayda Aydin
 
   Babacan Babsch Bagge Bailey Baker Bakhshi Baki Bakkeren Baldini 
-  Baleal Balkanski Ballebo Bang Baran
-  Barat Barel Barton Basabe Baseggio Basile Bassini
+  Baleal Balkanski Ballebo Bang Banikas Baran
+  Barat Barbone Barel Barton Basabe Baseggio Basile Bassini
   Bathurst Batov Bauch Bavaresco Bayes Baze
   Bäckström Beauchamp Beale Beatty Becker Bello Bellosta Belonogov
   Bennett Berdichevsky Berg Berger Bergheimer Berkowitz Berktas 
@@ -482,13 +485,14 @@ my @SINGLE_WORDS = qw(
   Boro Boss Bossi Bostanci Bostosusz
   Boucher Boughey Bourke Bouscat 
   Bowdery Bowles Boylson Bozempergk Bozzo
-  Brachman Brady Brake Braithwaite Bramley Branco Brantsma Braun Brenner
+  Brachman Brady Brake Braithwaite Bramley Branco Brantsma Braun 
+  Brede Brenner
   Brightling Brink Brockwell Brod Brogeland Brown Brotteaux Brunet
   Bruun Brunzell
   Buch Buchen Buchlev Buras Burgay Burke Buscaglia Buse 
   Busse Butland Butts Byrne
 
-  Calandra Caldarelli Camacho Camberos Caplan Cappelli Cappeller 
+  Caggese Calandra Caldarelli Camacho Camberos Caplan Cappelli Cappeller 
   Caldwell Callaghan Caprera Cambiaghi Campos Caracci Carbonnier Carmichael 
   Casen Cassini Carrasco Carruthers Carvalho Casabona Casadei 
   Castelbranco Castner Cattani Cayne Cengiz Cernat Cernato Cesati
@@ -501,7 +505,7 @@ my @SINGLE_WORDS = qw(
   Collins Combes Combescure Compton Connie Conti Cook Cooke Cooper Cope 
   Coren Coridakis Corlateanu Cormack Corssen Cotton
   Courtney Coutts Coyne
-  Creet Crestey Chrichton Crompton Cronier Crouch 
+  Creet Crestey Creuheras Chrichton Crompton Cronier Crouch 
   Cuevas Cullin Cummings Cuper Çýloðlu Czímer
 
   Dabrowka Dahlberg Dalecki Dalia Dalley Damiani 
@@ -518,10 +522,10 @@ my @SINGLE_WORDS = qw(
 
   Eaton Eber Ebery Economou Eden Edgtton 
   Efremov Efthimiou Eggeling Eidi Eisenberg 
-  Ekeblad Eksi Ellestad Engel Elinescu Enrique 
+  Ekeblad Eksi Ellestad Ellia Engel Elinescu Enrique 
   Ergil Erichsen Eriksson Erk Esterson Esteruelas Evans Ewart Eykt
 
-  Fabbri Fagerlund Faidas Faigenbaum Failla Falk Fallenius Fallon 
+  Fabbri Fagerlund Faidas Faigenbaum Failla Falciai Falk Fallenius Fallon 
   Fang Fantonakis Fantoni Farholt Faria Farwell Favard
   Federighi Fegarty Feiler Feng Fent Fernando Ferramosca Ferrara 
   Ferrari Fettes
@@ -533,9 +537,10 @@ my @SINGLE_WORDS = qw(
   Frosztega Fruewirth Frukacz Frutos
   Fu Fucik Fuglestad Fuller Furunes Furuta Fyrun
 
-  Gabrial Gaede Gaglietto Gardiner Galinsky Gallus Gandoglia Ganzer Garbosi 
-  Garvey Garner Gartaganis Gary Gaspar Gaviard Gawel Gawrys
-  Genc Generosi Georgescu Gerli Gero Geyer Gezer
+  Gabrial Gaede Garliardi Gaglietto Gardiner Galinsky Gallus 
+  Gandoglia Ganzer Garateguy Garbosi Garvey Garner Gartaganis 
+  Gary Gaspar Gaviard Gawel Gawrys
+  Geller Genc Generosi Georgescu Gerli Gero Geyer Gezer
   Giangkos Giannessi Gidman Gierulski Gigliotti Gill Ginnan Ginossar 
   Gioia Gitelman Giura Gladiator Gladysh Glanger Glasson Glopson
   Goded Goldberg Goldenfield Goldman Goldstein Golebiowski 
@@ -555,9 +560,9 @@ my @SINGLE_WORDS = qw(
   Harangozo Harari Harasimowicz Harding Harley Harper Harries Harris 
   Harrison Harsanyi 
   Hasenson Hassett Hauge Haughie Häusler Havas Hayman
-  Helekar Helgemo Helle Helmich Helms Heng Henneberg 
+  Hegedus Helekar Helgemo Helle Helmich Helms Heng Henneberg 
   Herman Heskje Hillman Hinden Hinge Hiraki Hirst Hliapas
-  Hoffa Hoffman Hollands Hollman Honti Hopfenheit 
+  Hoff Hoffa Hoffman Hollands Hollman Honti Hopfenheit 
   Hornibrook Horowitz Horton Horwitz 
   Howard Howe Høyland
   Hu Huang Hughes Hugon Hugony Hult Hung Hupe
@@ -565,15 +570,15 @@ my @SINGLE_WORDS = qw(
   Ichilcik Ingielewicz Iommi Iontzeff Irens Ivatury Iversen Ivrig Izisel
 
   Jacob Jacobs Jagger Jagniewski Jagroop Jain Jalowka Jamieson
-  Janicki Jankova Janiszewski Janowski 
+  Janicki Janik Jankova Janiszewski Janowski 
   Jansma Janssen Jarlot Jarov Jassem Jawell Jayganesh 
   Jedrychowski Jeng Jensen Jepsen Jessheim Jian Jiang 
-  Joel Johansen Johansson Johnson Jolly Jonsson Jokisch Jones 
+  Joel Johansen Johansson Johnson Jolly Jonsson Jokisch Jones Jotcham
 
   Kachchu Kahyaoglu Kaiser Kalita Kalish Kallsberg Kallunki Kalma Kalmin 
   Kamal Kamil Kaminaris Kaminski Kamras Kannavos Kandemir Kane Kanetkar 
   Kapadia Kapagiannidis Kaplan Kaptan Karadeniz Karamanlis 
-  Karavil Karayel Karl Karpouzelis Kasday Kasle Kasler Kastel
+  Karavil Karayel Karl Karlaftis Karpouzelis Kasday Kasle Kasler Kastel
   Katz Kaushik Kay Kaye Kazik Kazmierczak Kendrick Kenny Kent 
   Keremida Kersey Khandelwal Kilvington King Kiran Kirilenko 
   Kirin Kishan Kizikli Klinger Klofa Klukowski 
@@ -584,7 +589,7 @@ my @SINGLE_WORDS = qw(
   Kranyak Krajewski Krausova Krawczyk Krekorian Kriegel Kriftner 
   Kristensen Krochmalik
   Kuang Kubac Kujawa Kuokkanen Kurbalija Kvangraven 
-  Kwiatkowski Kwiecien Kyriakidou
+  Kwiatkowski Kwiecien Kyriakidou Kyrilenko
 
   Laan Labaere Lachowicz Laffineur Lagrange Lagree Lall Lambardi Lanciano 
   Landry Lantaron Lanzarotti 
@@ -599,9 +604,9 @@ my @SINGLE_WORDS = qw(
   Lüßmann Lynch Lyngdal Lyngen
 
   Maas MacDonald Macedo Machado Madsen Magee Maggio Maglietta Mahaffey 
-  Maiolani Malarme Maksymetz 
-  Malaczynski Malavasi Maluish Mancuso Mane Manfield Manglik Manni Mannix
-  Manyawar
+  Maia Maiolani Malarme Maksymetz 
+  Malaczynski Malavasi Maluish Manara Mancuso Mane Manfield Manganella
+  Manglik Manni Mannix Manyawar
   Marashev Marchioni Marek Margarida Margiotta Mari Marill Marina 
   Marincho Marinescu Marino
   Markey Markowicz Marks Marmonti Marquardsen Marsonis Marston
@@ -612,13 +617,13 @@ my @SINGLE_WORDS = qw(
   McIntosh McKellar McLeish McLeod McKinnon McLeish
   McManus McMahon McMullin McNamara
   Meckstroth Medugno Medved Mejane Mello Mendez Mendoza 
-  Meltzer Merah Merapi Merblum Mersin Mesbur Mestres 
-  Metselaar Meyer Meyers Meyouhas
+  Meltzer Merah Merapi Merblum Mersin Mesbur Messika Mestres 
+  Metselaar Meyer Meyers Meyouhas Mezei
   Mickiewicz Miles Milgrim Mill Millar Miller Mills Milne Milner 
-  Minahasa Miozzi Mira Miroglio Mitra Mittelman 
+  Mina Minahasa Miner Miozzi Mira Miroglio Mitra Mittelman 
   Mirali Miura Mizrak 
   Mohtashami Molenaar Molenda Molina Monachan Moni Monsegur Montanari
-  Mooney Moran Morath Morawski Morgan Moritsch Morot
+  Mooney Moran Morath Morawski Moreira Morgan Moritsch Morot
   Morris Morrison Morse Moskovsky Mønsted
   Mortensen Moss Mossop Mott Mouiel
   Mucha Mueller Mullamphy Muller Multon Mundell Munksgaard 
@@ -637,34 +642,35 @@ my @SINGLE_WORDS = qw(
   Ozarar Ozbey Ozdil Ozenir Östberg Özbey
 
   Pacault Paganus Paiva Pajak Palma Palmeira Palmer Palmund Palau 
-  Panagaki Papakyriakopoulos Papaxatzis Parker Parviainen Passaro 
-  Passell Pattinson Pattison Paulissen Pauncz Pavlicek Payen Pazur
+  Panagaki Papakyriakopoulos Papaxatzis Parker Parviainen Passarinho
+  Passaro Passell Pattinson Pattison Paulissen Pauncz Pavlicek 
+  Payen Pazur
   Peake Pedzinski Peirão Pekkinen Peksen Penfold Percario Peres
-  Periasamy Petculescu Petrucci Pettersson
+  Periasamy Persiani Petculescu Petrucci Pettersson
   Phelan Piasecki Piedra Piekarek Pietraszek Piganeau Pilon Piper
   Pitt Platt Plaut Pollack Pollak Polowan Pont Popescu Popova Potier 
-  Potts Poulat Pownall Prescott Priano Proukakis Procter Prusa 
-  Pryor Puczynski Pszczola
+  Potts Poulat Pownall Prescott Priano Proukakis Procter Prohorov
+  Prusa Pryor Puczynski Pszczola
 
   Quail Quantin Quinn
 
-  Rabinowitz Radcliffe Radisic Ramondt Rankin Ranson Rao Raulund 
+  Rabinowitz Radcliffe Radisic Ramondt Rankin Ranson Rao Rapp Raulund 
   Ravenna Rayner Rees Reess Rehder Reid Rekstad Renouard Revaz Rew 
   Reynolds Rhodes
   Ribera Ricard Ricci Richardson Richman Riedel Riehm Rigal Rigaud 
   Rimstedt Rios Rivers Rizzo
   Robert Robertson Robinson Robles Robson Rocafort Rocca Rodwell
-  Rogoff Rohowsky Roll Rombaut Rosen Rosenberg Rosendorff Rosetta 
+  Rogoff Rohowsky Roll Romanin Rombaut Rosen Rosenberg Rosendorff Rosetta 
   Rosenkrantz Rosenthal Rossard Rossi Rothfield Roussoglou Roussos
-  Rubin Rubio Rueda Ryman
+  Rubin Rubio Rueda Russo Ryman
 
   Sabbatini Sadek Saelensminde Saesseli Saina Sairanen Sakr Salisbury
-  Salliere Salman Sandqvist Sansom Saporta Sapounakis Savelli Savorani 
-  Sawicki Saydi Sayer Sayilkan Sbarigia
+  Salliere Salman Sandqvist Sansom Saporta Sapounakis Sarten
+  Savelli Savorani Sawicki Saydi Sayer Sayilkan Sbarigia
   Scerri Schaltz Schermer Schlicker Schneider Schnetzer Schonning
   Schoolmann Schou Schuett Schulle Schulz Schüller Schroeder Scoltock 
   Schreckenberger Scudder Schwartz Schwerdt
-  Sealy Sebbane Seguineau Selberg Selcuk Seligman Serenella Serf 
+  Sealy Sebbane Seguineau Selberg Selcuk Seligman Sen Serenella Serf 
   Serpoi Sesyilmaz 
   Shadyro Sharif Sherman Shields Shiels Shimamura Shimizu 
   Shirogane Short Shugart Silver Silverstein Silverstone Sime 
@@ -676,12 +682,12 @@ my @SINGLE_WORDS = qw(
   Stabell Stamatov Stankovic Stansby Stark Stavrinos
   Steel Steiner Stephenson Stern 
   Steinberg Sternberg Stevens Stewart Stienen
-  Stoichkov Street Stretz Strul Strøm Stuart
+  Stoichkov Stoppa Street Stretz Strul Strøm Stuart
   Sulgrove Sveindal Sveinsson Svendsen 
   Sugino Summers Sundelin Sundsten Suresh Sutherlin Suwik
   Syl Sylvan Symons Szalay Szots Szymanowski Sørensen
 
-  Tajima Takayama Tamburrini Tan Tanaka Tarhan Tarsus Taylor 
+  Tajima Takayama Tamburi Tamburrini Tan Tanaka Tarhan Tarsus Taylor 
   Tebha Tedd Teltscher Teodorescu Teramoto Terraneo Tesla Tez
   Thapa Thomsen Thompson Thomson Thoresen Thuillez Thurston 
   Ticha Timoteo Tishler Tislevoll Todd Toffier Toivonen Tokay Tosi 
@@ -691,7 +697,7 @@ my @SINGLE_WORDS = qw(
   Ueland Uggeri Una Upmark Uskali Uskela Utter Uysal
 
   Vahalia Vainikonis Valeanu Valio Valta
-  Veloni Venkatesh Ventin Verbeek Verhees Versace Versluis
+  Veloni Venkatesh Ventin Verbeek Verhees Versace Versluis Viale
   Viana Videv Vigil Vihtilä Vinay Vinciguerra Virvidakis Vitas Vithaya
   Vogt Volcker Vorobei Vriend Vroustis Vucic
 
@@ -700,7 +706,7 @@ my @SINGLE_WORDS = qw(
   Weed Weingarten Weingold Weinstein Weisinger Welland Werdelin 
   Westerlund Westheimer Westra Westwood Whibley Wigoder Wijma 
   Wikstrom Wildavsky Wilkinson 
-  Willenken Williams Willis Wilson Wiltshire Witek Wittes
+  Willenken Williams Willis Wilson Wiltshire Wit Witek Wittes
   Wold Wolfarth Wolff Wolfson Wolpert Woodruff Woolsey
   Worm Wortel Wrang Wu Wyer
 
@@ -708,8 +714,9 @@ my @SINGLE_WORDS = qw(
 
   Yamada Yarington Yates Yezerski Yilmaz Yoleri Yuen Yule
 
-  Zabunoglu Zagor Zagorin Zaleski Zanalda Zarkesch Zatorski Zawada 
-  Zeeberg Zenari Zhan Zhao Zhong Zimmermann Zipovski Zollo Zolotov 
+  Zabunoglu Zago Zagor Zagorin Zaleski Zanalda Zaninotti
+  Zarkesch Zatorski Zawada 
+  Zeeberg Zenari Zhan Zhao Zhong Zimmermann Zipovski Zobu Zollo Zolotov 
   Zorlu Zozis Zotos
 );
 
@@ -768,7 +775,9 @@ my %SINGLE_TYPOS =
   'J.P. Goenka' => ['goenka', 'jpgoenka'],
   'Jaggy Shivdasani' => ['jaggy'],
   Jedrychowski => ['jedrychowsky'],
+  'Jeovani Salomao' => ['jeovani'],
   'Jeroo Mango' => ['mango'],
+  'John Holland' => ['j holland'],
   'José Moraes' => ['moraes'],
   'Jörg Fritsche' => ['fritsche', 'joefri'],
   Kaminski => ['kaminsky'],
@@ -788,9 +797,11 @@ my %SINGLE_TYPOS =
   'Maria João Lara' => ['lara'],
   Mahaffey => ['mahafey', 'mahaffee'],
   'Majka Cilleborg Bilde' => ['majka'],
+  'Manoel Peirao' => ['manoel'],
   'Manuel Capucho' => ['capucho'],
   Manyawar => ['manyvar'],
   'Marius Bartnes' => ['bartnes'],
+  'Marc Kerlero de Rosbo' => ['kerlero'],
   Markowicz => ['markovics', 'markowitz'],
   'Maxim Henbest' => ['henbest'],
   Mesbur => ['mesbor'],
@@ -798,6 +809,7 @@ my %SINGLE_TYPOS =
   'Miguel Teixeira' => ['teixeira'],
   Milner => ['millner'],
   'Mohsen Kamel' => ['mohsenkamel'],
+  Novosadzki => ['novosad'],
   'Nuno Damaso' => ['damaso'],
   "O'Rourke" => ['o_rouke'],
   Olanski => ['olansk'],

@@ -310,10 +310,11 @@ my @SINGLE_WORDS = qw(
   Hana
   IMAX
   JHS
-  Lavazza Longjiangfu
+  Lacznosc Lavazza Longjiangfu
+  NALCO
   Paulaner Pertamina Pufa
   Qiaoyou
-  Ráðgjöf
+  Ráðgjöf Relpol
   Sagaplast Shouchuang Solakoglu
   Tryggingamiðstöðin
   Vito

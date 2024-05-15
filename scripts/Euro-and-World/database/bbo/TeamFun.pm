@@ -503,6 +503,7 @@ my @MULTI_WORDS =
   'The Jets',
   'The Latin',
   'The Lions',
+  'The Lombard',
   'The Ninjas',
   'The Palookas',
   'The Patron',
@@ -702,30 +703,30 @@ my @SINGLE_WORDS = qw(
    Arno Aspe Asparagus Augerne Autostrada Avagard Avalanche Aytalus Azure
 
    Balti Bananasplit Barracuda Bauhinia Beniaminek Bhinneka 
-   Blondie Blueberry Bridgebutikken Bridgeministeriet Brudarna 
+   Blondie Blueberry BOVE Breno Bridgebutikken Bridgeministeriet Brudarna 
    Bubba Buddies Bulldozer
    Cardtossers Censored Challengers Claim Cogito Contra Corner
    Counterstrike Crash
    Dallas Danger DenmarS Dingyuan Dragon DSM Dvizhenie Dyret
    Eagles Ekoap Enigma Epsilon Everest
    Farmers Fenghuang Filosofene Fisk Formidables Formosa Fortuna
-   Francophones Freak
+   Francophones Freak Frivolt
    Galaxy GloryGlory Giants Goldcat Guests Gunsmoke
    Harlequins Hästpojkarna Holders Hollywood Honeymoon
    Imponderables Israbel Isrmany
    JoJo Journalists Jupiter JuuTools
    Kings KMC Kompisarna Kratos Kuhmilch
-   LatSwe Lazy Lebron Lira Lirarna
-   Malmölaget Masters Mirage Moritz Movember
+   LatSwe Lazy Lebron Liggeunderlaget Lira Lirarna
+   Malmölaget Marianne Masters Mirage Moritz Movember
    Naturalists Neduk Nemesis Neverclaim Nightingale
    Octopussy Okay Olrudbanden Olsenbanden Omega Outsiders Overivrig
    Pegasus Polirish Potteplante Preempters Pretendents Prijatelj Pusten
    Quantum Quasar
    Rampage Reklamtrion Robocop Royston
    Saga Sakurai Saladmasters Salokin Sapphire Scientists 
-   Sigma Silverfox Sindbad Sjøsamen Skalman Skip Skitur Starmen 
+   Sigma Silbersee Silverfox Sindbad Sjøsamen Skalman Skip Skitur Starmen 
    Storeslemmen Strategen Studentene Stålfarfar SweDanes SweNor
-   Titans Torpedo Trøndermøringen Tsunami
+   Titans Tohundre Torpedo Trøndermøringen Tsunami
    Úlfurinn Ulvene Underdogs Ungdomslaget
    Victory Vietcong Vilttiketju Vintage Vytas
    Winkiboy

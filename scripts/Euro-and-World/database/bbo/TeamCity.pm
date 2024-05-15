@@ -117,15 +117,15 @@ my @SINGLE_WORDS = qw(
 
   Maastricht Madrid Makassar Malatya Malmö Manahasa Manado Manchester 
   Manisa Mannheim Marbella Martapura Malatya Massy Mataram 
-  Medan Melbourne Mersin Meski Midyat Milan Milas Minsk Miskolc 
-  Montpellier Moradabad Mumbai Munich Muratpasa
+  Medan Melbourne Mersin Meski Michalovce Midyat Milan Milas 
+  Minsk Miskolc Montpellier Moradabad Mumbai Munich Muratpasa
 
   Nagbagan Nagpur Nagykanizsa Namsos Nangang Nanning Napoli
   Narita Narlidere Narvik
   Nazilli Näsby Nijmegen Ningbo Niski Norrøna Nusantara Nürnberg 
   Nyon Nærbø Næstved Nøtterøy
 
-  Odense Ogndal Oldenburg Orhangazi Oslo Ottadalen Oxford Överum
+  Odense Ogndal Oldenburg Olgiata Orhangazi Oslo Ottadalen Oxford Överum
 
   Padang Padova Palembang Palermo Palma Palu Pamukkale Panzhihua Pariaman 
   Parioli Paris Pärnu
@@ -193,11 +193,13 @@ my %SINGLE_TYPOS =
   Diyarbakir => ['Dýyarbakir'],
   Düsseldorf => ['duesseldorf'],
   Genoa => ['genova'],
+  Heimdal => ['heimdalbc'],
   Izmir => ['ýzmir', 'ýzmýr'],
   Jakarta => ['dki', 'jakar', 'jkt'],
   Karsiyaka => ['Karþiyaka'],
   Kocaeli => ['Kocaelý'],
   Kolkata => ['calcutta'],
+  Kosice => ['cassovia'],
   Koycegiz => ['köyceðýz'],
   Krakow => ['kraków'],
   Kristiansand => ['kristiansands'],
@@ -212,8 +214,10 @@ my %SINGLE_TYPOS =
   Munich => ['münchen'],
   Napoli => ['naples'],
   Narlidere => ['narlýdere'],
+  Olgiata => ['ola'],
   Pamukkale => ['pamuk'],
   Panzhihua => ['panzhihuabc'],
+  Parioli => ['paroli'],
   Potsdam => ['postdam'],
   Prague => ['praha'],
   Radkov => ['radkow', 'kadkov'],
@@ -230,6 +234,7 @@ my %SINGLE_TYPOS =
   Trondheim => ['trondhei'],
   Vienna => ['wien'],
   Warsaw => ['warsow'],
+  Wroclaw => ['wr'],
   Yogyakarta => ['jogjakarta', 'diy'],
   Åkirkeby => ['aakirkeby'],
   Århus => ['aarhus', 'arhus']

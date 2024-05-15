@@ -82,6 +82,7 @@ my @SINGLE_WORDS = qw(
   Estonia 
   Finland 
   Germany 
+  Guadeloupe
   Guernsey
   Hungary 
   Ireland 
@@ -130,6 +131,7 @@ my %SINGLE_TYPOS =
   France => ['fra'],
   'French Guyana' => ['guyana'],
   Germany => ['deutschland'],
+  Guadeloupe => ['guadelupe'],
   'Hong Kong' => ['hk', 'hongkong'],
   Hungary => ['hungar'],
   Indonesia => ['timnas', 'ind'],

@@ -42,7 +42,7 @@ my %MULTI_TYPOS =
     'briç ýsk', 'brýç sk', 'brýç spor', 'spor bric', 
     "sport' c", 'sports c', 'spor kb', 's c',
     's.k.', 'spor kulubu', 'spor kulübü',
-    'tennis club']
+    't.c.', 'tennis club']
 );
 
 my @SINGLE_WORDS = qw(
