@@ -107,7 +107,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Angkaew Anhui Ayrshire
-  Bali Bornholm Buskerud
+  Bali Banten Bornholm Buskerud
   Corsica
   Eurasia Europe
   Florida

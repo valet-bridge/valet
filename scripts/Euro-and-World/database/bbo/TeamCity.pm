@@ -95,7 +95,7 @@ my @SINGLE_WORDS = qw(
   Fethiye Firenze Flekkefjord Frankfurt Førde
 
   Garches Gdansk Gdynia Genoa Gent Glidice Gorontalo Gölcük Gresik 
-  Guangzhou Guayaquil Gudbrandsdal
+  Guangzhou Guayaquil Gudbrandsdal Gyor
 
   Haderslev Hamburg Hangzhou Hannover Harplinge Harstad 
   Hegyvidék Heimdal Helsinki Herning Hillerød
@@ -134,7 +134,7 @@ my @SINGLE_WORDS = qw(
 
   Qiaoxie Qingdao
 
-  Radkov Randers Rayong Reims Riga Rijeka Rimini Rome
+  Radkov Rakvere Randers Rayong Reims Riga Rijeka Rimini Rome
   Pisa Pleven Plovdiv Pontianak Potsdam Prague Pudong Pula Pune Puri
 
   Rajasthan Rødovre

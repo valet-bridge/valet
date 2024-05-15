@@ -23,6 +23,7 @@ my @MULTI_WORDS =
   'Ajit Mahadar',
   'Akin Ucar',
   'Alain Lévy',
+  'Aline Biondillo',
   'Alvares Ribeiro',
   'Amedian Bross',
   'Ana Tadeu',
@@ -124,6 +125,7 @@ my @MULTI_WORDS =
   'J.P. Goenka',
   'Jaggy Shivdasani',
   'Jan Jansma',
+  'Jan-Olov Andersson',
   'Janak Shah',
   'Jay Ganesh',
   'Jean le Poder',
@@ -506,7 +508,7 @@ my @SINGLE_WORDS = qw(
   Coren Coridakis Corlateanu Cormack Corssen Cotton
   Courtney Coutts Coyne
   Creet Crestey Creuheras Chrichton Crompton Cronier Crouch 
-  Cuevas Cullin Cummings Cuper Çýloðlu Czímer
+  Cuevas Cullin Cummings Cuper Curo Çýloðlu Czímer
 
   Dabrowka Dahlberg Dalecki Dalia Dalley Damiani 
   Dancewicz Dantan Dao Darak Das Daskalakis 
@@ -537,7 +539,7 @@ my @SINGLE_WORDS = qw(
   Frosztega Fruewirth Frukacz Frutos
   Fu Fucik Fuglestad Fuller Furunes Furuta Fyrun
 
-  Gabrial Gaede Garliardi Gaglietto Gardiner Galinsky Gallus 
+  Gabrial Gaede Garliardi Gagliardi Gaglietto Gardiner Galinsky Gallus 
   Gandoglia Ganzer Garateguy Garbosi Garvey Garner Gartaganis 
   Gary Gaspar Gaviard Gawel Gawrys
   Geller Genc Generosi Georgescu Gerli Gero Geyer Gezer
@@ -642,7 +644,7 @@ my @SINGLE_WORDS = qw(
   Ozarar Ozbey Ozdil Ozenir Östberg Özbey
 
   Pacault Paganus Paiva Pajak Palma Palmeira Palmer Palmund Palau 
-  Panagaki Papakyriakopoulos Papaxatzis Parker Parviainen Passarinho
+  Panagaki Panto Papakyriakopoulos Papaxatzis Parker Parviainen Passarinho
   Passaro Passell Pattinson Pattison Paulissen Pauncz Pavlicek 
   Payen Pazur
   Peake Pedzinski Peirão Pekkinen Peksen Penfold Percario Peres
@@ -682,7 +684,7 @@ my @SINGLE_WORDS = qw(
   Stabell Stamatov Stankovic Stansby Stark Stavrinos
   Steel Steiner Stephenson Stern 
   Steinberg Sternberg Stevens Stewart Stienen
-  Stoichkov Stoppa Street Stretz Strul Strøm Stuart
+  Stoichkov Stoltz Stoppa Street Stretz Strul Strøm Stuart
   Sulgrove Sveindal Sveinsson Svendsen 
   Sugino Summers Sundelin Sundsten Suresh Sutherlin Suwik
   Syl Sylvan Symons Szalay Szots Szymanowski Sørensen
@@ -726,6 +728,7 @@ my %SINGLE_TYPOS =
   Agarwal => ['agarwals'],
   Akgul => ['akgül'],
   'Alain Lévy' => ['levy', 'lévy'],
+  'Aline Biondillo' => ['aline'],
   'Ajay Bagaria' => ['bagaria'],
   Allfrey => ['alfrey'],
   Altshuler => ['altschuler', 'altshuller'],
@@ -740,8 +743,10 @@ my %SINGLE_TYPOS =
   Bertheau => ['berthau'],
   Blumental => ['blummental'],
   'Brigitta Fischer' => ['fischer'],
+  Brogeland => ['broge'],
   'Christal Henner-Welland' => ['henner'],
   Combescure => ['combescur'],
+  Curo => ['curò'],
   Czímer => ['czimer'],
   Dabrowka => ['d¹brówka'],
   'David Birman' => ['birman'],
@@ -774,6 +779,7 @@ my %SINGLE_TYPOS =
   'J.E. Skjanni' => ['skjanni'],
   'J.P. Goenka' => ['goenka', 'jpgoenka'],
   'Jaggy Shivdasani' => ['jaggy'],
+  'Jan-Olov Andersson' => ['joa'],
   Jedrychowski => ['jedrychowsky'],
   'Jeovani Salomao' => ['jeovani'],
   'Jeroo Mango' => ['mango'],
@@ -815,6 +821,7 @@ my %SINGLE_TYPOS =
   Olanski => ['olansk'],
   Oursel => ['ousel'],
   Özbey => ['ozbey'],
+  'Palma Carlos' => ['pcarlos'],
   Patanè => ['patane'],
   'Patrick Jourdain' => ['jourdain'],
   'Paulo Goncalves Pereira' => ['pgp'],

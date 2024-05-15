@@ -42,8 +42,10 @@ my @MULTI_WORDS =
   'National Chiao Tung University',
   'National Chung Hsing University',
   'National Taiwan University',
+  'Northwestern University',
   'Osmangazi University',
   'Selçuk University',
+  'Soochow University',
   'Tarsus American College',
   'Trakya University',
   'Umeå University',
@@ -120,6 +122,8 @@ my %SINGLE_TYPOS =
   'Andalas University' => ['unand'],
   'École Polytechnique' => ['polytech'],
   'National Taiwan University' => ['ntu'], # Also Nanyang Tech. Uni...
+  'Northwestern University' => ['northwestern'],
+  'Soochow University' => ['scu'],
   'University of California at Berkeley' => ['berkeley'],
   'University of Wroclaw' => ['pwr'],
   'Valahia University' => ['valahia']

@@ -56,6 +56,7 @@ my @MULTI_WORDS =
   'Arctic Farmers',
   'Arctic Powerchicks',
   "Asha's 4",
+  'Asketické samice',
   'Aso Pika',
   'Atomic Bridge',
   'Avesta',
@@ -94,6 +95,7 @@ my @MULTI_WORDS =
   'Boye B Fan Club',
   "Boys'n' Girls'",
   'Brian Is Beautiful',
+  'Bridgerama Milan',
   'British Lions',
   'Brødrene & co',
   'Brødrene Dal',
@@ -255,6 +257,7 @@ my @MULTI_WORDS =
   'Hi Charli',
   'Hillbilly Help Suit',
   'Hopp i sang',
+  'Hungarian Olympic',
   'Hurlumhei',
   'Hvalen og tjukkasene', 
   'Hvor er mine babes',
@@ -323,6 +326,7 @@ my @MULTI_WORDS =
   'Lawrence Allstars',
   'Lawrence of Arabia',
   'La Vista',
+  'Late S.S. Jain',
   'Le Colonial',
   'Leromain boys',
   'Les Girafes',
@@ -396,6 +400,7 @@ my @MULTI_WORDS =
   'Papa & Rabbits',
   'Papa and Rabids',
   'Papas & Puppies',
+  'Park Bridge',
   'Pearl of the Orient',
   'Piger og drenger',
   'Pink Panter',
@@ -406,6 +411,7 @@ my @MULTI_WORDS =
   'Plejans Plöjare',
   "Pradeep's Four",
   'Precision Marathon',
+  "President's Team",
   'Quatro Bruxas',
   'Queen and Knights',
   'Queen of Hearts',
@@ -433,6 +439,7 @@ my @MULTI_WORDS =
   'Sang ae',
   'Saras Friends',
   'Schall und Rauch',
+  'Scottish President',
   'Semangat Baru',
   'Seths vänner',
   'Seven Eleven',
@@ -463,6 +470,7 @@ my @MULTI_WORDS =
   'Spring Foursomes',
   'Sree Priya',
   'Stabby with Youngsters',
+  'Stall Dieden',
   'Stis Multivariant',
   'Stone Cutters',
   'Storm Riders',
@@ -605,6 +613,7 @@ my %MULTI_TYPOS =
   'Big Guns' => ['big gun'],
   'Big Makie' => ['big makie och co'],
   'Brian Is Beautiful' => ['brian is beatiful'],
+  'Bridgerama Milan' => ['bridgerama mi'],
   'Ca. et halvt tonn' => ['ca et halvt tonn'],
   'Californian Aces' => ['california aces'],
   "Chairman's Choice" => ["chairman's team"],
@@ -636,6 +645,8 @@ my %MULTI_TYPOS =
   'Heldige Olav' => ['heldige olav :)'],
   "Hell's Angels" => ['hells angels'],
   'Hopp i sang' => ['hoppa i sang'],
+  'Hungarian Olympic' => ['hungar olimp', 'hungarian olimp',
+    'hungar olimpics'],
   'Hurlumhei' => ['hurlumhei..'],
   'Hvalen og tjukkasene' => ['hvalen og tjukkasne', 'hvalen & tjukkasene'],
   'Ikke akkurat kjedelig' => ['ikke akkurat kjedel'],
@@ -648,6 +659,7 @@ my %MULTI_TYPOS =
   'Kent Romeos venner' => ['kent romeos veenner'],
   'Kick Back' => ['kick-back'],
   'KM 23' => ['km23'],
+  'Late S.S. Jain' => ['late ss jain', 'lss jain', 'l s s jain'],
   'Lawrence of Arabia' => ['lawrence of arab'],
   'La Vista' => ['la vista team'],
   'Leromain boys' => ["leroumain's boys"],
@@ -667,7 +679,9 @@ my %MULTI_TYPOS =
     'nilsland slowfoxers'],
   "No He Isn't" => ['no he isnt'],
   "Pradeep's Four" => ["pradeep's 4"],
+  "President's Team" => ["president's", 'presidents teams'],
   'Queen and Knights' => ["queen's & knight"],
+  'Saevar Karl' => ['svaer karl'],
   'Saint Titus' => ['st titus', 'st. titus'],
   'Sakurai' => ['japan sakurai'],
   'Semangat Baru' => ['semangat br'],
@@ -700,37 +714,64 @@ my @SINGLE_WORDS = qw(
    Akenobo Akinom Alfredo Alioth Allam Alliansen Allstars Alpha 
    Amrapali Amul Aurora Alternativlos Ambassador Andrzejki 
    Anglophones Appellkameratene Arangan Armani Arnab 
-   Arno Aspe Asparagus Augerne Autostrada Avagard Avalanche Aytalus Azure
+   Arno Aspe Asparagus Augerne Autostrada Avagard Avalanche Aytalus 
+   Azure Azures
 
-   Balti Bananasplit Barracuda Bauhinia Beniaminek Bhinneka 
+   Balti Bananasplit Barracuda Bauhinia Ben Beniaminek Bhinneka 
    Blondie Blueberry BOVE Breno Bridgebutikken Bridgeministeriet Brudarna 
    Bubba Buddies Bulldozer
-   Cardtossers Censored Challengers Claim Cogito Contra Corner
+
+   Cabriole Cardtossers Censored Challengers Claim Cogito Contra Corner
    Counterstrike Crash
-   Dallas Danger DenmarS Dingyuan Dragon DSM Dvizhenie Dyret
+
+   Dallas DanFar Danger DenmarS Deppo Dingyuan Dragon DSM Dvizhenie Dyret
+
    Eagles Ekoap Enigma Epsilon Everest
+
    Farmers Fenghuang Filosofene Fisk Formidables Formosa Fortuna
-   Francophones Freak Frivolt
-   Galaxy GloryGlory Giants Goldcat Guests Gunsmoke
-   Harlequins Hästpojkarna Holders Hollywood Honeymoon
-   Imponderables Israbel Isrmany
+   Frirond Francophones Freak Frivolt
+
+   Galaxy GloryGlory Giants Goldcat Grand Guests Gunsmoke
+
+   Harlequins Hästpojkarna Helgeness Holders Hollywood Honeymoon
+
+   IBE Imponderables Israbel Isrmany
+
    JoJo Journalists Jupiter JuuTools
-   Kings KMC Kompisarna Kratos Kuhmilch
+
+   Kings KMC Kompisarna Konga Kratos Kuhmilch
+
    LatSwe Lazy Lebron Liggeunderlaget Lira Lirarna
+
    Malmölaget Marianne Masters Mirage Moritz Movember
-   Naturalists Neduk Nemesis Neverclaim Nightingale
+
+   Naturalists Neduk Nemesis Neverclaim Nightingale NMRT Nula
+
    Octopussy Okay Olrudbanden Olsenbanden Omega Outsiders Overivrig
-   Pegasus Polirish Potteplante Preempters Pretendents Prijatelj Pusten
+   Oyzum
+
+   Paulette Pegasus Polirish Potteplante Preempters Pretendents 
+   Prijatelj Pusten
+
    Quantum Quasar
+
    Rampage Reklamtrion Robocop Royston
-   Saga Sakurai Saladmasters Salokin Sapphire Scientists 
-   Sigma Silbersee Silverfox Sindbad Sjøsamen Skalman Skip Skitur Starmen 
-   Storeslemmen Strategen Studentene Stålfarfar SweDanes SweNor
-   Titans Tohundre Torpedo Trøndermøringen Tsunami
+
+   Saga Sakurai Saladmasters Salokin Sapphire Scientists Sigma 
+   Silbersee Silverfox Sindbad Sjøsamen Skalman Skip Skitur Spartans
+   Stampede Starmen Storeslemmen Strategen Studentene 
+   Stålfarfar SweDanes SweNor
+
+   Titans Tohundre Torpedo Trøndermøringen Tsunami Tvist
+
    Úlfurinn Ulvene Underdogs Ungdomslaget
+
    Victory Vietcong Vilttiketju Vintage Vytas
+
    Winkiboy
+
    Yogakshema Yokozuna
+
    Zeerob Zugzwang
 );
 
@@ -761,7 +802,10 @@ my %SINGLE_TYPOS =
   'Naturalists' => ['nature'],
   'Pontiac 7' => ['pontiac7'],
   Preempters => ['preemptors'],
+  "President's Team" => ['president', 'presidents'],
   Scientists => ['science'],
+  Spartans => ['spartan'],
+  'Stall Dieden' => ['dieden'],
   Starmen => ['starman'],
   Strategen => ['stratagen'],
   'Texan Aces' => ['texanaces'],

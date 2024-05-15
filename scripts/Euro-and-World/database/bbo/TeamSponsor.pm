@@ -116,6 +116,7 @@ my @MULTI_WORDS =
   'Mega-Tech',
   'Mitra Buana',
   'Mutiara Energy',
+  'Nanguang Power',
   'Nordfyns Finans',
   'Nordic Security',
   'Novi Kod',
@@ -303,13 +304,13 @@ my @SINGLE_WORDS = qw(
 
   Bajaj Banpu
   COMAL Cimentas Computerland CONSUS
-  Datasteel Denizgucu Derofe DISKI Djarum Dongfeng Druva
+  Datasteel Denizgucu Derofe Dianwang DISKI Djarum Dongfeng Druva
   Effcontrol Eksprompt Elastron Enterprise Everfresh
   Funbridge
   GAMAX Gevalia
-  Hana
+  Hana Huayuan
   IMAX
-  JHS
+  JHS Jinfan
   Lacznosc Lavazza Longjiangfu
   NALCO
   Paulaner Pertamina Pufa
@@ -318,7 +319,7 @@ my @SINGLE_WORDS = qw(
   Sagaplast Shouchuang Solakoglu
   Tryggingamiðstöðin
   Vito
-  Wellwise
+  Wellknit Wellwise
   Zhonghai
 );
 

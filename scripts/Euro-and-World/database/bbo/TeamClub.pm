@@ -34,6 +34,7 @@ my @MULTI_WORDS =
   'BC de Lille',
   'BC Saarbrücken 1984',
   'BC Schwäbisch Hall',
+  'BC Star',
   'BC Universität Mannheim',
   'BCN Almirall',
   'BK 2000',
@@ -44,6 +45,7 @@ my @MULTI_WORDS =
   'BK Fyris Skalman',
   'BK Grand',
   'BK Lavec Smile',
+  'BK Lyx',
   'Cracovia 1906',
   'Crvena Zvezda',
   'Cerkezkoy Dinamik BSK',
@@ -173,6 +175,7 @@ my %MULTI_TYPOS =
   'El Ahly'  => ['el ahly club', 'el-ahly club', 'el-ahly'],
   'Eskisehir Adalar' => ['eskisehir adalarbsb', 'eskisehir adalarbsk'],
   'Eskisehir Baðlar' => ['Eskýþehýr Baðlar'],
+  'Fanfulla' => ['fanfulla lo'],
   'Gabrial UI' => ['gabrial-ui', 'gabrial - ui'],
   'Grant Thornton' => ['bc grant thornton', 'bc grant-thornton', 
     'bg thornton', 'grant thonrton', 'grantt thornton'],
@@ -225,7 +228,7 @@ my @SINGLE_WORDS = qw(
   Karagümrük Karlsruher Kløverknekt 
   Lavec Laksamana
   Locomotiva
-  Miskolc Mragowia
+  Miskolc Mo Mragowia
   Romana
   Sakura Spojnia
   TGR Tofas
