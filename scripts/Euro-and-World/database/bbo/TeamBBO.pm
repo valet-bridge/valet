@@ -146,7 +146,8 @@ sub set_overall_hashes
     my $multi_pattern_direct = join('|', map { quotemeta }
       sort { length($b) <=> length($a) } keys %{$MULTI_WORDS{$key}});
 
-    $MULTI_REGEX{$key} = qr/\b($multi_pattern_direct)(?=\P{L}|\z)/i;
+    # $MULTI_REGEX{$key} = qr/\b($multi_pattern_direct)(?=\P{L}|\z)/i;
+    $MULTI_REGEX{$key} = qr/(?<!\p{L})($multi_pattern_direct)(?=\P{L}|\z)/i;
   }
   else
   {

@@ -646,7 +646,7 @@ my %MULTI_TYPOS =
   "Hell's Angels" => ['hells angels'],
   'Hopp i sang' => ['hoppa i sang'],
   'Hungarian Olympic' => ['hungar olimp', 'hungarian olimp',
-    'hungar olimpics'],
+    'hungar olimpics', 'hungar olimpic'],
   'Hurlumhei' => ['hurlumhei..'],
   'Hvalen og tjukkasene' => ['hvalen og tjukkasne', 'hvalen & tjukkasene'],
   'Ikke akkurat kjedelig' => ['ikke akkurat kjedel'],
@@ -715,7 +715,7 @@ my @SINGLE_WORDS = qw(
    Amrapali Amul Aurora Alternativlos Ambassador Andrzejki 
    Anglophones Appellkameratene Arangan Armani Arnab 
    Arno Aspe Asparagus Augerne Autostrada Avagard Avalanche Aytalus 
-   Azure Azures
+   Azores Azure
 
    Balti Bananasplit Barracuda Bauhinia Ben Beniaminek Bhinneka 
    Blondie Blueberry BOVE Breno Bridgebutikken Bridgeministeriet Brudarna 
@@ -731,9 +731,9 @@ my @SINGLE_WORDS = qw(
    Farmers Fenghuang Filosofene Fisk Formidables Formosa Fortuna
    Frirond Francophones Freak Frivolt
 
-   Galaxy GloryGlory Giants Goldcat Grand Guests Gunsmoke
+   Galaxy GloryGlory Giants Goldcat Grand Gudok Guests Gunsmoke
 
-   Harlequins Hästpojkarna Helgeness Holders Hollywood Honeymoon
+   Harlequins Hästpojkarna Helgeness HeSa Holders Hollywood Honeymoon
 
    IBE Imponderables Israbel Isrmany
 
@@ -741,11 +741,13 @@ my @SINGLE_WORDS = qw(
 
    Kings KMC Kompisarna Konga Kratos Kuhmilch
 
-   LatSwe Lazy Lebron Liggeunderlaget Lira Lirarna
+   Lahjattomat LatSwe Lazy Lebron Liggeunderlaget Lira Lirarna
+   Liverbird
 
    Malmölaget Marianne Masters Mirage Moritz Movember
 
-   Naturalists Neduk Nemesis Neverclaim Nightingale NMRT Nula
+   Naturalists Neduk Nemesis Neverclaim Nightingale Nikotiimi 
+   NMRT Norsu Nula
 
    Octopussy Okay Olrudbanden Olsenbanden Omega Outsiders Overivrig
    Oyzum
@@ -757,9 +759,9 @@ my @SINGLE_WORDS = qw(
 
    Rampage Reklamtrion Robocop Royston
 
-   Saga Sakurai Saladmasters Salokin Sapphire Scientists Sigma 
-   Silbersee Silverfox Sindbad Sjøsamen Skalman Skip Skitur Spartans
-   Stampede Starmen Storeslemmen Strategen Studentene 
+   Saga Sakurai Saladmasters Salokin Sapphire Scientists Senaattorit
+   Sigma Silbersee Silverfox Sindbad Sjøsamen Skalman Skip Skitur 
+   Spartans Stampede Starmen Storeslemmen Strategen Studentene 
    Stålfarfar SweDanes SweNor
 
    Titans Tohundre Torpedo Trøndermøringen Tsunami Tvist

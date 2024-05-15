@@ -75,9 +75,11 @@ my @MULTI_WORDS =
   'Fisk Seafood',
   'Garðar & Vélar',
   'Garðs Apotek',
+  'Garsu Pasaulis',
   'Geely Automobile',
   'Geologi Timah',
   'Guangzhou Pearl River',
+  'Heng Yuan Xiang',
   'Hotel Senator',
   'Hotell Strand',
   'Hreint ehf',
@@ -140,6 +142,7 @@ my @MULTI_WORDS =
   'Semangat Baru Makassar',
   'Shanghai Automobile',
   'Shanghai Financial',
+  'Shanghai Municipal Engineering Group',
   'Shenzhen Electronic City',
   'Shree Cement',
   'Shree Radhey',
@@ -303,7 +306,7 @@ my @SINGLE_WORDS = qw(
   Arboned Argento Arkas Arma Asindo Ayýntab
 
   Bajaj Banpu
-  COMAL Cimentas Computerland CONSUS
+  COMAL Copia Cimentas Computerland CONSUS
   Datasteel Denizgucu Derofe Dianwang DISKI Djarum Dongfeng Druva
   Effcontrol Eksprompt Elastron Enterprise Everfresh
   Funbridge
@@ -312,11 +315,12 @@ my @SINGLE_WORDS = qw(
   IMAX
   JHS Jinfan
   Lacznosc Lavazza Longjiangfu
+  Myndform
   NALCO
   Paulaner Pertamina Pufa
   Qiaoyou
   Ráðgjöf Relpol
-  Sagaplast Shouchuang Solakoglu
+  Sagaplast Shouchuang Signity Skeljungur Solakoglu
   Tryggingamiðstöðin
   Vito
   Wellknit Wellwise
@@ -334,6 +338,7 @@ my %SINGLE_TYPOS =
   'Elektrik P3B' => ['elektrik', 'electric'],
   'Indian Railways' => ['railways'],
   'Málning hf' => ['málning'],
+  'Shanghai Municipal Engineering Group' => ['smeg'],
   'Shree Cement' => ['shreecement'],
   'SPS Construction' => ['sps'],
   Wellwise => ['wellwiss']

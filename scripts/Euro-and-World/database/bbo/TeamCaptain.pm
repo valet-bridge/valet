@@ -488,7 +488,7 @@ my @SINGLE_WORDS = qw(
   Boucher Boughey Bourke Bouscat 
   Bowdery Bowles Boylson Bozempergk Bozzo
   Brachman Brady Brake Braithwaite Bramley Branco Brantsma Braun 
-  Brede Brenner
+  Brede Brenner Bretagne Brifman
   Brightling Brink Brockwell Brod Brogeland Brown Brotteaux Brunet
   Bruun Brunzell
   Buch Buchen Buchlev Buras Burgay Burke Buscaglia Buse 
@@ -501,7 +501,7 @@ my @SINGLE_WORDS = qw(
   Chadwick Chai Chambers Chan Chang Charletoux Charlotte Charlsen 
   Chassagne Chatterji Chauvelot Chediak Cheek Chemla Chen Cheng Chizzoli 
   Chottin Chuang Chubukov
-  Cichocki Cilleborg Cimon Ciopettini Cladius Clair Clark 
+  Cichocki Cilleborg Cimon Cintra Ciopettini Cladius Clair Clark 
   Clement Clemmensen Close
   Coenraets Coglitore Cohen Cohler Colarossi Coldea Cole Collett 
   Collins Combes Combescure Compton Connie Conti Cook Cooke Cooper Cope 
@@ -542,7 +542,7 @@ my @SINGLE_WORDS = qw(
   Gabrial Gaede Garliardi Gagliardi Gaglietto Gardiner Galinsky Gallus 
   Gandoglia Ganzer Garateguy Garbosi Garvey Garner Gartaganis 
   Gary Gaspar Gaviard Gawel Gawrys
-  Geller Genc Generosi Georgescu Gerli Gero Geyer Gezer
+  Geller Genc Generosi Georgescu Gerber Gerli Gero Geyer Gezer
   Giangkos Giannessi Gidman Gierulski Gigliotti Gill Ginnan Ginossar 
   Gioia Gitelman Giura Gladiator Gladysh Glanger Glasson Glopson
   Goded Goldberg Goldenfield Goldman Goldstein Golebiowski 
@@ -553,7 +553,7 @@ my @SINGLE_WORDS = qw(
   Grimeton Grigoriu Grimaldi Grisho Groemenboom
   Gromov Gromova Gross Grosset Gromöller 
   Gronaldo Grue Gruia Grunt Gruschow Grzelak
-  Guariglia Gudkov Gue Gueglio Guerreiro Guglietto Guillaumin 
+  Gu Guariglia Gudkov Gue Gueglio Guerreiro Guglietto Guillaumin 
   Gula Guldberg Gumby Guo Gupta Gurley Gursel Gustawsson Gutmark 
   Guy Günther
 
@@ -563,7 +563,7 @@ my @SINGLE_WORDS = qw(
   Harrison Harsanyi 
   Hasenson Hassett Hauge Haughie Häusler Havas Hayman
   Hegedus Helekar Helgemo Helle Helmich Helms Heng Henneberg 
-  Herman Heskje Hillman Hinden Hinge Hiraki Hirst Hliapas
+  Herman Heskje Hillman Hinden Hinge Hiraki Hirchwald Hirst Hliapas
   Hoff Hoffa Hoffman Hollands Hollman Honti Hopfenheit 
   Hornibrook Horowitz Horton Horwitz 
   Howard Howe Høyland
@@ -607,8 +607,8 @@ my @SINGLE_WORDS = qw(
 
   Maas MacDonald Macedo Machado Madsen Magee Maggio Maglietta Mahaffey 
   Maia Maiolani Malarme Maksymetz 
-  Malaczynski Malavasi Maluish Manara Mancuso Mane Manfield Manganella
-  Manglik Manni Mannix Manyawar
+  Malaczynski Malavasi Maluish Manara Mancuso Mandecka Mane 
+  Manfield Manganella Manglik Manni Mannix Manyawar
   Marashev Marchioni Marek Margarida Margiotta Mari Marill Marina 
   Marincho Marinescu Marino
   Markey Markowicz Marks Marmonti Marquardsen Marsonis Marston
@@ -627,7 +627,7 @@ my @SINGLE_WORDS = qw(
   Mohtashami Molenaar Molenda Molina Monachan Moni Monsegur Montanari
   Mooney Moran Morath Morawski Moreira Morgan Moritsch Morot
   Morris Morrison Morse Moskovsky Mønsted
-  Mortensen Moss Mossop Mott Mouiel
+  Mortensen Moses Moss Mossop Mott Mouiel
   Mucha Mueller Mullamphy Muller Multon Mundell Munksgaard 
   Munson Munteanu Muriel Murray Mus Mutiara Mæsel
 
@@ -656,7 +656,7 @@ my @SINGLE_WORDS = qw(
 
   Quail Quantin Quinn
 
-  Rabinowitz Radcliffe Radisic Ramondt Rankin Ranson Rao Rapp Raulund 
+  Rabinowitz Radcliffe Radisic Ramondt Rankin Ranson Rao Rapp Rau Raulund 
   Ravenna Rayner Rees Reess Rehder Reid Rekstad Renouard Revaz Rew 
   Reynolds Rhodes
   Ribera Ricard Ricci Richardson Richman Riedel Riehm Rigal Rigaud 
@@ -666,8 +666,8 @@ my @SINGLE_WORDS = qw(
   Rosenkrantz Rosenthal Rossard Rossi Rothfield Roussoglou Roussos
   Rubin Rubio Rueda Russo Ryman
 
-  Sabbatini Sadek Saelensminde Saesseli Saina Sairanen Sakr Salisbury
-  Salliere Salman Sandqvist Sansom Saporta Sapounakis Sarten
+  Sabbatini Sadek Saelensminde Saesseli Saina Sairanen Sakr Salama
+  Salisbury Salliere Salman Sandqvist Sansom Saporta Sapounakis Sarten
   Savelli Savorani Sawicki Saydi Sayer Sayilkan Sbarigia
   Scerri Schaltz Schermer Schlicker Schneider Schnetzer Schonning
   Schoolmann Schou Schuett Schulle Schulz Schüller Schroeder Scoltock 
@@ -687,7 +687,7 @@ my @SINGLE_WORDS = qw(
   Stoichkov Stoltz Stoppa Street Stretz Strul Strøm Stuart
   Sulgrove Sveindal Sveinsson Svendsen 
   Sugino Summers Sundelin Sundsten Suresh Sutherlin Suwik
-  Syl Sylvan Symons Szalay Szots Szymanowski Sørensen
+  Syl Sylvan Symons Szalay Szigethy Szots Szymanowski Sørensen
 
   Tajima Takayama Tamburi Tamburrini Tan Tanaka Tarhan Tarsus Taylor 
   Tebha Tedd Teltscher Teodorescu Teramoto Terraneo Tesla Tez
@@ -698,7 +698,7 @@ my @SINGLE_WORDS = qw(
 
   Ueland Uggeri Una Upmark Uskali Uskela Utter Uysal
 
-  Vahalia Vainikonis Valeanu Valio Valta
+  Vahalia Vainikonis Valeanu Valio Valta Vasarhelyi
   Veloni Venkatesh Ventin Verbeek Verhees Versace Versluis Viale
   Viana Videv Vigil Vihtilä Vinay Vinciguerra Virvidakis Vitas Vithaya
   Vogt Volcker Vorobei Vriend Vroustis Vucic

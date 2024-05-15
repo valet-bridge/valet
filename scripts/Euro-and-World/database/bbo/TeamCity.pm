@@ -31,12 +31,15 @@ my @MULTI_WORDS =
   'Kota Mataram',
   'Kuala Lumpur',
   'La Chaux-de-Fonds',
+  'Meilin Qingcheng',
+  'Monte Carlo',
   'Novi Sad',
   'Reggio Emilia',
   'Semburat Jingga',
   'Siddha Eden Lakeville',
   'Silesia Gliwice',
   'Stara Zagora',
+  'Tanjung Pinang',
   'Val de Seine',
   'Villa Fabbriche',
   'Vrnjacka Banja',
@@ -113,7 +116,7 @@ my @SINGLE_WORDS = qw(
 
   Langkat Leiden Leszno Leuven Leverkusen Lhokseumawe Lille Lima 
   Lincoln Lindesberg Ljubljana London Losari Lowicz Lozenets 
-  Lubin Lublin Luleburgaz Lumajang
+  Lubin Lublin Lucignano Luleburgaz Lumajang
 
   Maastricht Madrid Makassar Malatya Malmö Manahasa Manado Manchester 
   Manisa Mannheim Marbella Martapura Malatya Massy Mataram 
@@ -140,15 +143,16 @@ my @SINGLE_WORDS = qw(
   Rajasthan Rødovre
 
   Saarbrücken Sakarya Salerno Samarinda Samsun Sandefjord 
-  Santiago Sanya Sarpsborg Secunderabad Seferihisar Semarang 
+  Santiago Sanya Sarniak Sarpsborg Secunderabad Seferihisar Semarang 
   Senayan Serang Shanghai Shaoguan Shenyang 
-  Shenzhen Shihua Sibiu Sidoarjo Skara Skien Skopje Sleman Sliven 
+  Shenzhen Shihua Sibiu Sidoarjo Siena Skara Skien Skopje Sleman Sliven 
   Sofia Solok Sortland Söke Split Stavanger Steinkjer 
   Storsjöbygden Stuttgart Sunndalsøra Surabaya Suzhou Sydney 
   Szeged Sørreisa
 
   Taizhou Takayama Tallinn Targoviste Tarnów Täby Tekýrdag Temuco 
-  Thessaloniki Tianjin Tianya Timisoara Tingling Tire Tokyo Toulouse 
+  Thessaloniki Tianjin Tianya Timisoara Tingling Tire Tokyo Torino
+  Toulouse 
   Trieste Trondheim Tromsø
 
   Udaipur Uppsala Usak Utrecht

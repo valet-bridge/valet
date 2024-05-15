@@ -92,6 +92,7 @@ my @MULTI_WORDS =
   'Kota Club',
   'Köln Lindenthal',
   'Kultcamp Rieneck',
+  'Lindesbergs BC',
   'Majör Boğaziçi',
   'Makassar Utama',
   'Midt Trøndelag',
@@ -104,6 +105,7 @@ my @MULTI_WORDS =
   'Nancy Jarville',
   'Nord Aalborg',
   'Nord Trøndelag',
+  'Norrorts Bridge',
   'Nürnberg Museum',
   'OBK Kloverknekt',
   'One Eyed Jacks',
@@ -112,6 +114,7 @@ my @MULTI_WORDS =
   'Paris Sud',
   'Pescara Bridge',
   'Phoenix Oltenita',
+  'Rabwa Club',
   'Qi Zhong Club',
   'Qin Lian Club',
   'Qingnian Qiche',
@@ -119,6 +122,8 @@ my @MULTI_WORDS =
   'Royal Selangor Club',
   'Samadhan Academy',
   'Semen Padang',
+  'Sharja Club',
+  'Shemokh Club',
   'Shou Chuang',
   'St:Erik Hella',
   'St:Erik Morot',
@@ -229,12 +234,14 @@ my @SINGLE_WORDS = qw(
   Lavec Laksamana
   Locomotiva
   Miskolc Mo Mragowia
+  Qizhong
   Romana
   Sakura Spojnia
-  TGR Tofas
-  Uppsalabridgen
+  TGR Tofas Trifolium
+  Uddevalla Uppsalabridgen
   Østerdal
   Örebridgen
+  Zmrzlina
   Åsane
 );
 
@@ -262,6 +269,7 @@ my %SINGLE_TYPOS =
   Locomotiva => ['loco'],
   'Majör Boğaziçi' => ['majorbogazici'],
   Mragowia => ['mragovia'],
+  'Norrorts Bridge' => ['norrort'],
   'Samadhan Academy' => ['samadhan'],
   Spojnia => ['Spójnia'],
   'Tennis Club Parioli' => ['tcp'],
