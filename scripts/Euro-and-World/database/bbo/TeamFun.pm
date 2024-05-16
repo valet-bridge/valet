@@ -223,6 +223,7 @@ my @MULTI_WORDS =
   'Full Moon',
   'Full Spectrum',
   'Game Over',
+  'Gan Bei',
   'Gang of Wyk',
   "Gary's Boys",
   'Ghost of Red',
@@ -768,7 +769,8 @@ my @SINGLE_WORDS = qw(
    Starsbridge Statusquo Storeslemmen 
    Strategen Studentene Stålfarfar SweDanes SweNor
 
-   Tally Titans Tohundre Torpedo Totoro Trøndermøringen Tsunami Tvist
+   Tally Titans Tohundre Tongxin Torpedo Totoro Trøndermøringen 
+   Tsunami Tvist
 
    Úlfurinn Ulvene Underdogs Ungdomslaget
 

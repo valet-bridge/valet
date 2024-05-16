@@ -84,6 +84,8 @@ my %MULTI_TYPOS =
   'East Java' => ['jawa timur', 'jatim'],
   'East Kalimantan' => ['kalimantan timur'],
   'Garut Regency' => ['kab. garut'],
+  Guangdong => ['guang dong'],
+  Hubei => ['hu bei'],
   Jiangsu => ['jiang su'],
   'Lower Silesia' => ['dolny slask'],
   Marmara => ['g.marm'],
@@ -91,19 +93,19 @@ my %MULTI_TYPOS =
     'sulawesi utara', 'sulawasi utara', 'sulut'],
   'North Minahasa' => ['minahasa utara'],
   'North Sumatra' => ['sumatera utara'],
-  'Vest Agder' => ['vest-agder'],
-  'West Sumatra' => ['west sumatera'],
+  Sichuan => ['si chuan'],
   'South Africa' => ['south frica'],
-  'Vest Agder' => ['vest-agder'],
   'South Jakarta' => ['jakarta selatan'],
   'South Kalimantan' => ['kalimantan selatan', 'kalsel'],
   'South Minahasa' => ['minahasa selatan', 'minsel'],
   'South Sulawesi' => ['sulawesi selatan', 'sulsel'],
   'South Sumatra' => ['south sumatera', 'sumatera selatan', 'sumsel'],
+  'Taihu Lake' => ['suzhou taihu'],
+  'Vest Agder' => ['vest-agder'],
   'Val di Magra' => ['val magra'],
   'Vest Finnmark' => ['vest-finnmark'],
   'West Kalimantan' => ['kalimantan barat'],
-  'West Sumatra' => ['sumatera barat', 'west sumatera'],
+  'West Sumatra' => ['west sumatera', 'sumatera barat', 'west sumatera'],
   'Western Australia' => ['wa'],
   'West Bengal' => ['west bengla', 'westbengal'],
   'West Java' => ['jawa barat', 'jabar'],
@@ -115,9 +117,9 @@ my @SINGLE_WORDS = qw(
   Corsica
   Eurasia Europe
   Florida
-  Global Gorontalo Gujarat
-  Haugaland Hebei
-  Jiangsu
+  Gansu Global Gorontalo Guangdong Gujarat
+  Hainan Haugaland Hebei Huangshi Hubei Hunan
+  Jiangsu Jilin
   Kansai Karimun Karnataka Kawanua Kedungwaru Kepri Kerala
   Lombok Lumajang
   Maharashtra Marmara Midtsjælland Mjøsa
@@ -130,6 +132,7 @@ my @SINGLE_WORDS = qw(
   Telemark
   Uttarakhand
   Victoria
+  Yunnan
   Zhejiang
 );
 

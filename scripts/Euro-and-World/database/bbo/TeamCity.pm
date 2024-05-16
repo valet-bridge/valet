@@ -37,6 +37,7 @@ my @MULTI_WORDS =
   'Reggio Emilia',
   'San Giorgio del Sannio',
   'Semburat Jingga',
+  'Shanghai Yangpu',
   'Siddha Eden Lakeville',
   'Silesia Gliwice',
   'Stara Zagora',
@@ -69,6 +70,9 @@ my %MULTI_TYPOS =
     's.giorgio sannio', 'san giorgio del san'],
   'Siddha Eden Lakeville' => ['siddha eden', 'sidhha eden', 'siddha-eden'],
   'Silesia Gliwice' => ['silezia gliwice'],
+  Taicang => ['tai cang'],
+  Taihu => ['tai hu'],
+  Tainan => ['tai nan'],
   'Villa Fabbriche' => ['v.fabbr.', 'villa fabb.', 'v. fabbriche',
     'v.fabbriche'],
   Yogyakarta => ['di jogjakarta']
@@ -154,10 +158,9 @@ my @SINGLE_WORDS = qw(
   Stavanger Steinkjer Storsjöbygden Stuttgart Sunndalsøra 
   Surabaya Suzhou Sydney Szeged Sørreisa
 
-  Taizhou Takayama Tallinn Targoviste Tarnów Täby Tekýrdag Temuco 
-  Thessaloniki Tianjin Tianya Timisoara Tingling Tire Tokyo Torino
-  Toulouse 
-  Trieste Trondheim Tromsø
+  Taicang Taihu Tainan Taizhou Takayama Tallinn Targoviste Tarnów Täby 
+  Tekýrdag Temuco Thessaloniki Tianjin Tianya Timisoara Tingling 
+  Tire Tokyo Torino Toulouse Trieste Trondheim Tromsø
 
   Udaipur Uppsala Usak Utrecht
 

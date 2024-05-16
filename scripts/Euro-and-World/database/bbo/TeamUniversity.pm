@@ -45,6 +45,7 @@ my @MULTI_WORDS =
   'Northwestern University',
   'Osmangazi University',
   'Selçuk University',
+  'Shenyang Ligong',
   'Soochow University',
   'Tarsus American College',
   'Trakya University',

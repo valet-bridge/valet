@@ -16,6 +16,7 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'Jilin Sheng Qiaopa'
 );
 
 my %MULTI_TYPOS =
@@ -41,7 +42,8 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   APBF => ['PABF'],
-  CBAI => ['cabi']
+  CBAI => ['cabi'],
+  'Jilin Sheng Qiaopa' => ['jilinshengqiaopa']
 );
 
 
