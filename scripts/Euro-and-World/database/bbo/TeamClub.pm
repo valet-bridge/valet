@@ -46,6 +46,7 @@ my @MULTI_WORDS =
   'BK Grand',
   'BK Lavec Smile',
   'BK Lyx',
+  'BK Nord',
   'Cracovia 1906',
   'Crvena Zvezda',
   'Cerkezkoy Dinamik BSK',
@@ -65,6 +66,7 @@ my @MULTI_WORDS =
   'Eskisehir Adalar',
   'Eskisehir Baðlar',
   'Essen 86',
+  'Fire Club',
   'Fjends BK',
   'Førde BK',
   'Gabrial UI',
@@ -92,7 +94,7 @@ my @MULTI_WORDS =
   'Kota Club',
   'Köln Lindenthal',
   'Kultcamp Rieneck',
-  'Lindesbergs BC',
+  'Lindesbergs BS',
   'Majör Boğaziçi',
   'Makassar Utama',
   'Midt Trøndelag',
@@ -133,6 +135,7 @@ my @MULTI_WORDS =
   'Van Bric',
   'Wadi Degla',
   'Wampon Bodi Papua',
+  'Witte Huis',
   'WCG Mumbai',
   'Young Sharks',
   'Zurich Enge'
@@ -218,7 +221,8 @@ my %MULTI_TYPOS =
   'Studentenes BK' => ['studentene bk'],
   'Torino Allegra' => ['bridge allegra', 'allegra to',
     'allegra - to', 'gs allegra'],
-  'WCG Mumbai' => ['wcg (mum)', 'wcg-mumbai']
+  'WCG Mumbai' => ['wcg (mum)', 'wcg-mumbai'],
+  'Witte Huis' => ['het witte huis', 'white house', 'the white house']
 );
 
 my @SINGLE_WORDS = qw(
@@ -227,8 +231,7 @@ my @SINGLE_WORDS = qw(
   Debrecen Dragao
   Fanfulla Fenerbahce Fosnavåg
   Galatasaray
-  Hercules Hordaland
-  Hosgoru
+  Hercules Hoppklubbene Hordaland Hosgoru
   Jeofizik
   Karagümrük Karlsruher Kløverknekt 
   Lavec Laksamana
@@ -261,6 +264,7 @@ my %SINGLE_TYPOS =
   'El Ahly' => ['ahly'],
   'El-Karma' => ['karma'],
   'Gabrial UI' => ['gabrial'],
+  'Hok Studiecentrum' => ['hok ts'],
   Hordaland => ['hordland'],
   Hosgoru => ['hoþgörü'],
   'Izmir BSB' => ['izmir.b.b.'],
@@ -268,7 +272,7 @@ my %SINGLE_TYPOS =
   Kløverknekt => ['kloverknekt'],
   Locomotiva => ['loco'],
   'Majör Boğaziçi' => ['majorbogazici'],
-  Mragowia => ['mragovia'],
+  Mragowia => ['mragovia', 'mrogowia'],
   'Norrorts Bridge' => ['norrort'],
   'Samadhan Academy' => ['samadhan'],
   Spojnia => ['Spójnia'],

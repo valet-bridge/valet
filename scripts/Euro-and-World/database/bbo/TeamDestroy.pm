@@ -28,6 +28,7 @@ my @SINGLE_WORDS = qw(
   KB KDK KRS
   Mr
   npc
+  Opponent Opponents
   pc
 );
 

@@ -60,7 +60,7 @@ my %SINGLE_TYPOS =
     bþb bþbký bsbkisk bssk buyuksehir ybsk bsbs btsc 
     cfr club 
     dbc dbk dgc ebc eibc fbc
-    gençlik gsk gskd gtbc
+    gençlik gsb gsk gskd gtbc
     kcb kdi klubben klubberne ks ksb ksk
     nbi nbcbl
     obk 

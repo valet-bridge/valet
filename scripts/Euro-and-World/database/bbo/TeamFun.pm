@@ -356,6 +356,7 @@ my @MULTI_WORDS =
   'Max-Nat',
   'Männer mit ELAN',
   'Meins bleibt meins',
+  'Meng Qing Xin',
   'Minas Trith',
   'Missão Impossivel',
   'Mo i Raneran',
@@ -724,22 +725,24 @@ my @SINGLE_WORDS = qw(
    Cabriole Cardtossers Censored Challengers Claim Cogito Contra Corner
    Counterstrike Crash
 
-   Dallas DanFar Danger DenmarS Deppo Dingyuan Dragon DSM Dvizhenie Dyret
+   Dallas DanFar Danger DenmarS Deppo Dialect Dingyuan Dragon 
+   DSM Dvizhenie Dyret
 
-   Eagles Ekoap Enigma Epsilon Everest
+   Eagles Ekoap Elektrownia Enigma Epsilon Everest
 
    Farmers Fenghuang Filosofene Fisk Formidables Formosa Fortuna
    Frirond Francophones Freak Frivolt
 
-   Galaxy GloryGlory Giants Goldcat Grand Gudok Guests Gunsmoke
+   Galaxy Gentle GloryGlory Giants Goldcat Grand Gudok Guests Gunsmoke
 
-   Harlequins Hästpojkarna Helgeness HeSa Holders Hollywood Honeymoon
+   Harlequins Hästpojkarna Helgeness HengSha HeSa Holders 
+   Hollywood Honeymoon
 
    IBE Imponderables Israbel Isrmany
 
-   JoJo Journalists Jupiter JuuTools
+   JoJo Journalists Juls Jupiter JuuTools
 
-   Kings KMC Kompisarna Konga Kratos Kuhmilch
+   Kinga Kings Klasik KMC Kompisarna Konga Kratos Kuhmilch
 
    Lahjattomat LatSwe Lazy Lebron Liggeunderlaget Lira Lirarna
    Liverbird
@@ -752,27 +755,28 @@ my @SINGLE_WORDS = qw(
    Octopussy Okay Olrudbanden Olsenbanden Omega Outsiders Overivrig
    Oyzum
 
-   Paulette Pegasus Polirish Potteplante Preempters Pretendents 
-   Prijatelj Pusten
+   Paulette Pegasus Perjuangan Polirish Pontiac Potteplante Preempters 
+   Pretendents Prijatelj Pusten
 
    Quantum Quasar
 
    Rampage Reklamtrion Robocop Royston
 
    Saga Sakurai Saladmasters Salokin Sapphire Scientists Senaattorit
-   Sigma Silbersee Silverfox Sindbad Sjøsamen Skalman Skip Skitur 
-   Spartans Stampede Starmen Storeslemmen Strategen Studentene 
-   Stålfarfar SweDanes SweNor
+   Sigma Silbersee Silverfox Sindbad Sivves Sjøsamen Skalman Skip Skitur 
+   Skotii Slappfisker Spartans Spring Stampede Starmen 
+   Starsbridge Statusquo Storeslemmen 
+   Strategen Studentene Stålfarfar SweDanes SweNor
 
-   Titans Tohundre Torpedo Trøndermøringen Tsunami Tvist
+   Tally Titans Tohundre Torpedo Totoro Trøndermøringen Tsunami Tvist
 
    Úlfurinn Ulvene Underdogs Ungdomslaget
 
-   Victory Vietcong Vilttiketju Vintage Vytas
+   Veegees Victory Vietcong Vilttiketju Vintage Vytas
 
    Winkiboy
 
-   Yogakshema Yokozuna
+   Ybs Yogakshema Yokozuna
 
    Zeerob Zugzwang
 );
@@ -801,11 +805,15 @@ my %SINGLE_TYPOS =
   'India Blues' => ['indiablues'],
   'Jamm & Co' => ['jamm'],
   'Joy Division' => ['joydivision'],
+  Juls => ['julst'],
+  'Meng Qing Xin' => ['mengqingxin'],
   'Naturalists' => ['nature'],
   'Pontiac 7' => ['pontiac7'],
   Preempters => ['preemptors'],
   "President's Team" => ['president', 'presidents'],
+  Quantum => ['qantum'],
   Scientists => ['science'],
+  Skotii => ['skoti'],
   Spartans => ['spartan'],
   'Stall Dieden' => ['dieden'],
   Starmen => ['starman'],
@@ -816,6 +824,7 @@ my %SINGLE_TYPOS =
   'Wei De' => ['weide'],
   'Wild Griffins' => ['wildgriffin', 'wildgriffins'],
   'Winkiboy' => ['winkyboy'],
+  'Xin Yuan' => ['xinyuan'],
   'YOI Returns' => ['yoi']
 
 );

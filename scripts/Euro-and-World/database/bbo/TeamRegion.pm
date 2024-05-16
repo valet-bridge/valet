@@ -18,6 +18,7 @@ my @MULTI_WORDS =
 (
   'Australian Central Territory',
   'Bekasi Regency',
+  'Bisma Semarang',
   'Boeven Digoel',
   'Bogor Regency',
   'Bone Bolango',
@@ -34,6 +35,8 @@ my @MULTI_WORDS =
   'Garut Regency',
   'Kepulauan Riau',
   'Lower Silesia',
+  'Midt Trøndelag',
+  'Møre Romsdal',
   'New Caledonia',
   'New South Wales',
   'Nord-Norge Omegn',
@@ -66,7 +69,8 @@ my @MULTI_WORDS =
   'West Kalimantan',
   'West Sumatra',
   'Western Australia',
-  'Western Province'
+  'Western Province',
+  'Østfold Follo'
 );
 
 my %MULTI_TYPOS =
@@ -114,15 +118,15 @@ my @SINGLE_WORDS = qw(
   Global Gorontalo Gujarat
   Haugaland Hebei
   Jiangsu
-  Kansai Karimun Kawanua Kedungwaru Kepri Kerala
+  Kansai Karimun Karnataka Kawanua Kedungwaru Kepri Kerala
   Lombok Lumajang
-  Maharashtra Marmara Mjøsa
+  Maharashtra Marmara Midtsjælland Mjøsa
   Norrland
   Queensland
   Oberloiben
   Punjab
   Rajputana Ratchaburi Rogaland Rosfjord
-  Sichuan
+  Salten Sichuan
   Telemark
   Uttarakhand
   Victoria
@@ -135,11 +139,14 @@ my %SINGLE_TYPOS =
   Eurasia => ['avrasya'],
   Kansai => ['kinki'],
   'Kepulauan Riau' => ['riau', 'kepri'],
+  'Midt Trøndelag' => ['midttrøndelag'],
+  'Møre Romsdal' => ['moreromsdal'],
   'New South Wales' => ['nsw'],
   Queensland => ['qld'],
   'Tamil Nadu' => ['tamilnadu'],
   Uttarakhand => ['uttaranchal'],
-  'Victoria' => ['vic']
+  'Victoria' => ['vic'],
+  'Østfold Follo' => ['ostfoldfollo']
 );
 
 

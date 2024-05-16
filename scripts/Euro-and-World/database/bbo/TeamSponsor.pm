@@ -66,9 +66,11 @@ my @MULTI_WORDS =
   'Doga Naturale',
   'e-bridge',
   'E-Service',
-  'Eko-Al',
   'Eden Realty Kolkata',
   'eDOT Goa',
+  'Eko-Al',
+  'Eko-Al',
+  'Elektromonta¯',
   'Euro Agro',
   'Electric Center',
   'Elektrik P3B',
@@ -79,6 +81,7 @@ my @MULTI_WORDS =
   'Geely Automobile',
   'Geologi Timah',
   'Guangzhou Pearl River',
+  'Haerbin Bingxue',
   'Heng Yuan Xiang',
   'Hotel Senator',
   'Hotell Strand',
@@ -306,22 +309,24 @@ my @SINGLE_WORDS = qw(
   Arboned Argento Arkas Arma Asindo Ayýntab
 
   Bajaj Banpu
-  COMAL Copia Cimentas Computerland CONSUS
+  Candyland Chemikartel Chlodnia Cimentas COMAL Copia Computerland 
+  CONSUS
   Datasteel Denizgucu Derofe Dianwang DISKI Djarum Dongfeng Druva
-  Effcontrol Eksprompt Elastron Enterprise Everfresh
+  Effcontrol Eksprompt Elastron Enterprise Everfresh Evertrust
   Funbridge
   GAMAX Gevalia
   Hana Huayuan
   IMAX
   JHS Jinfan
+  Kadimex
   Lacznosc Lavazza Longjiangfu
   Myndform
   NALCO
-  Paulaner Pertamina Pufa
+  Paulaner Pertamina Praterm Primabridge Pufa
   Qiaoyou
-  Ráðgjöf Relpol
+  Ráðgjöf Ravebo Relpol
   Sagaplast Shouchuang Signity Skeljungur Solakoglu
-  Tryggingamiðstöðin
+  Topeko Tryggingamiðstöðin
   Vito
   Wellknit Wellwise
   Zhonghai
@@ -336,11 +341,13 @@ my %SINGLE_TYPOS =
   DISKI => ['dsi'],
   Eksprompt => ['ekspromt'],
   'Elektrik P3B' => ['elektrik', 'electric'],
+  'Haerbin Bingxue' => ['harbin bingxue'],
   'Indian Railways' => ['railways'],
   'Málning hf' => ['málning'],
   'Shanghai Municipal Engineering Group' => ['smeg'],
   'Shree Cement' => ['shreecement'],
   'SPS Construction' => ['sps'],
+  'Viego Regnskap' => ['viego'],
   Wellwise => ['wellwiss']
 );
 

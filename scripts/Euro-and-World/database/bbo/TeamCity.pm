@@ -35,6 +35,7 @@ my @MULTI_WORDS =
   'Monte Carlo',
   'Novi Sad',
   'Reggio Emilia',
+  'San Giorgio del Sannio',
   'Semburat Jingga',
   'Siddha Eden Lakeville',
   'Silesia Gliwice',
@@ -43,7 +44,8 @@ my @MULTI_WORDS =
   'Val de Seine',
   'Villa Fabbriche',
   'Vrnjacka Banja',
-  'Xin Zhu'
+  'Xin Zhu',
+  'Zhong Jian'
 );
 
 my %MULTI_TYPOS =
@@ -60,9 +62,11 @@ my %MULTI_TYPOS =
   Kristiansand => ['kr.sand'],
   Nangang => ['nan gang'],
   Ningbo => ['ning bo'],
-  'Reggio Emilia' => ['r.e.', 'reggio e'],
+  'Reggio Emilia' => ['r.e.', 'reggio e', 'r. emilia', 'reg. emilia'],
   Pudong => ['pu dong'],
   Qingdao => ['qing dao'],
+  'San Giorgio del Sannio' => ['sg del sannio', 's.g.sannio',
+    's.giorgio sannio', 'san giorgio del san'],
   'Siddha Eden Lakeville' => ['siddha eden', 'sidhha eden', 'siddha-eden'],
   'Silesia Gliwice' => ['silezia gliwice'],
   'Villa Fabbriche' => ['v.fabbr.', 'villa fabb.', 'v. fabbriche',
@@ -145,10 +149,10 @@ my @SINGLE_WORDS = qw(
   Saarbrücken Sakarya Salerno Samarinda Samsun Sandefjord 
   Santiago Sanya Sarniak Sarpsborg Secunderabad Seferihisar Semarang 
   Senayan Serang Shanghai Shaoguan Shenyang 
-  Shenzhen Shihua Sibiu Sidoarjo Siena Skara Skien Skopje Sleman Sliven 
-  Sofia Solok Sortland Söke Split Stavanger Steinkjer 
-  Storsjöbygden Stuttgart Sunndalsøra Surabaya Suzhou Sydney 
-  Szeged Sørreisa
+  Shenzhen Shihua Sibiu Sidoarjo Siena Singsås Skara Skien Skopje 
+  Slagelse Sleman Sliven Sofia Solok Sortland Söke Split 
+  Stavanger Steinkjer Storsjöbygden Stuttgart Sunndalsøra 
+  Surabaya Suzhou Sydney Szeged Sørreisa
 
   Taizhou Takayama Tallinn Targoviste Tarnów Täby Tekýrdag Temuco 
   Thessaloniki Tianjin Tianya Timisoara Tingling Tire Tokyo Torino
@@ -157,7 +161,7 @@ my @SINGLE_WORDS = qw(
 
   Udaipur Uppsala Usak Utrecht
 
-  Varese Varna Vasa Västervik Vejle Vestfold Vestvågøy Vienna 
+  Varbergshus Varese Varna Vasa Västervik Vejle Vestfold Vestvågøy Vienna 
   Vikersund Vilnius Viþnelik Vraca
 
   Xiamen Xinghua Xinyi
@@ -225,6 +229,7 @@ my %SINGLE_TYPOS =
   Potsdam => ['postdam'],
   Prague => ['praha'],
   Radkov => ['radkow', 'kadkov'],
+  'Reggio Emilia' => ['re'],
   Rome => ['roma'],
   Saarbrücken => ['saarbruecken'],
   Storsjöbygden => ['storsjöbygdens'],
@@ -240,6 +245,7 @@ my %SINGLE_TYPOS =
   Warsaw => ['warsow'],
   Wroclaw => ['wr'],
   Yogyakarta => ['jogjakarta', 'diy'],
+  'Zhong Jian' => ['zhongjian'],
   Åkirkeby => ['aakirkeby'],
   Århus => ['aarhus', 'arhus']
 );
