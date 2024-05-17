@@ -48,6 +48,7 @@ my @MULTI_WORDS =
   'BK Lavec Smile',
   'BK Lyx',
   'BK Nord',
+  'Brussels Bridge Club',
   'Cracovia 1906',
   'Crvena Zvezda',
   'Cerkezkoy Dinamik BSK',
@@ -123,6 +124,7 @@ my @MULTI_WORDS =
   'Qingnian Qiche',
   'Quantum BC',
   'Royal Selangor Club',
+  'Ruch SA',
   'Samadhan Academy',
   'San Sac',
   'Semen Padang',
@@ -234,7 +236,7 @@ my @SINGLE_WORDS = qw(
   Debrecen Dragao
   Fanfulla Fenerbahce Fosnavåg
   Galatasaray
-  Hercules Hoppklubbene Hordaland Hosgoru
+  Hercules Hoppklubbene Hordaland Hosgoru Houchetou
   Jeofizik
   Karagümrük Karlsruher Kløverknekt 
   Lavec Laksamana
@@ -242,7 +244,7 @@ my @SINGLE_WORDS = qw(
   Miskolc Mo Mragowia
   Qizhong
   Romana
-  Sakura Spojnia
+  Sakura Solli Spojnia
   TGR Tofas Trifolium
   Uddevalla Uppsalabridgen
   Østerdal
@@ -261,6 +263,7 @@ my %SINGLE_TYPOS =
   'BC Bamberger Reiter' => ['bamberger', 'amberger'],
   'BK 2000' => ['bk2000'],
   'BK Lavec Smile' => ['smile'],
+  'Brussels Bridge Club' => ['bcob'],
   'Cerkezkoy Dinamik BSK' => ['Cerkezkoy'],
   'Cracovia 1906' => ['cracovia'],
   'Delhi Gymkhana Club' => ['dgc'],

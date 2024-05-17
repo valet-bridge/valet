@@ -123,7 +123,7 @@ my @SINGLE_WORDS = qw(
   Kansai Karimun Karnataka Kawanua Kedungwaru Kepri Kerala
   Lombok Lumajang
   Maharashtra Marmara Midtsjælland Mjøsa
-  Norrland
+  Norden Norrland
   Queensland
   Oberloiben
   Punjab
@@ -132,6 +132,7 @@ my @SINGLE_WORDS = qw(
   Telemark
   Uttarakhand
   Victoria
+  Waikato
   Yunnan
   Zhejiang
 );
@@ -146,6 +147,7 @@ my %SINGLE_TYPOS =
   'Møre Romsdal' => ['moreromsdal'],
   'New South Wales' => ['nsw'],
   Queensland => ['qld'],
+  'South Australia' => ['sa'],
   'Tamil Nadu' => ['tamilnadu'],
   Uttarakhand => ['uttaranchal'],
   'Victoria' => ['vic'],

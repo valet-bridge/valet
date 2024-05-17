@@ -132,9 +132,8 @@ my @SINGLE_WORDS = qw(
   Minsk Miskolc Montpellier Moradabad Mumbai Munich Muratpasa
 
   Nagbagan Nagpur Nagykanizsa Namsos Nangang Nanning Napoli
-  Narita Narlidere Narvik
-  Nazilli Näsby Nijmegen Ningbo Niski Norrøna Nusantara Nürnberg 
-  Nyon Nærbø Næstved Nøtterøy
+  Narita Narlidere Narvik Nazilli Näsby Nijmegen Ningbo Niski 
+  Norrbyskär Norrøna Nusantara Nürnberg Nyon Nærbø Næstved Nøtterøy
 
   Odense Ogndal Oldenburg Olgiata Orhangazi Oslo Ottadalen Oxford Överum
 
@@ -162,7 +161,7 @@ my @SINGLE_WORDS = qw(
   Tarnów Täby Tekýrdag Temuco Thessaloniki Tianjin Tianya Timisoara 
   Tingling Tire Tokyo Torino Toulouse Trieste Trondheim Tromsø
 
-  Udaipur Uppsala Usak Utrecht
+  Uccle Udaipur Uppsala Usak Utrecht
 
   Varbergshus Varese Varna Vasa Västervik Vejle Vestfold Vestvågøy Vienna 
   Vikersund Vilnius Viþnelik Vraca
@@ -225,6 +224,7 @@ my %SINGLE_TYPOS =
   Munich => ['münchen'],
   Napoli => ['naples'],
   Narlidere => ['narlýdere'],
+  Norrbyskär => ['norrbyskar'],
   Olgiata => ['ola'],
   Pamukkale => ['pamuk'],
   Panzhihua => ['panzhihuabc'],

@@ -57,6 +57,7 @@ my @MULTI_WORDS =
   'Cai Fu Zheng Quan',
   'Century Insurance',
   'Chateau Rossenovo',
+  'Chennai Online',
   'China Evertrust',
   'China Finance',
   'China Global Times',
@@ -181,6 +182,7 @@ my @MULTI_WORDS =
   'San Yutian',
   'Sanya Jiguan',
   'Sanya Tianze',
+  'SD Associates',
   'Semangat Baru Makassar',
   'Shan Hai',
   'Shanghai Automobile',
@@ -413,31 +415,52 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  ABAX Abnegat Accenture Actavis Akaylar Aklindo Aquatrans
-  Arboned Argento Arkas Arma Asindo Ayýntab
+  ABAX Abnegat Accenture Actavis Akaylar Aklindo Allianz
+  Aquatrans Arboned Argento Arkas Arma Asindo Ayýntab
 
   Bajaj Banpu
+
   Candyland Changyu Chemikartel Chlodnia Chuanmei Cimentas COMAL Copia 
-  Computerland CONSUS
+  Computerland CONSUS Cosmos
+
   Datasteel Denizgucu Derofe Dianwang DISKI Djarum Dongfeng Druva
-  Effcontrol Eksprompt Elastron Enterprise Everfresh Evertrust
+
+  Effcontrol Eksprompt Elastron Elektrika Enorma Enterprise 
+  Everfresh Evertrust
+
   Funbridge
+
   GAMAX Gevalia
+
   Hana Huayuan
+
   IMAX
+
   JHS Jinfan
+
   Kadimex
-  Lacznosc Lavazza Longjiangfu
-  Myndform
-  NALCO Nanyuan
-  Paulaner Pertamina POLFA Praterm Primabridge Pufa
+
+  Lacznosc Laima Lavazza Longjiangfu
+
+  Meikuang Myndform
+
+  NALCO Nanyuan Nefka Näkösoppi
+
+  Paulaner Pealinn Pertamina POLFA Praterm Primabridge Pufa
+
   Qiaoyou
-  Ráðgjöf Ravebo Relpol
-  Sagaplast Samtronic Scania Shouchuang Signity 
+
+  Ráðgjöf Ravebo Relpol Rofoi
+
+  Sagaplast Samtronic Scania Sevtopolis Shimuzu Shouchuang Signity 
   Skeljungur Solakoglu Stiga Synective
+
   Topeko Transearly Tryggingamiðstöðin Tsingtao
-  Vito
-  Wellknit Wellwise
+
+  Vinabær Vito
+
+  Wellknit Wellwise Winbridge
+
   Zhonghai
 );
 
@@ -447,6 +470,7 @@ my %SINGLE_TYPOS =
   'Agsar Paints' => ['agsar'],
   'Beijing Longxin' => ['beijinglongxin'],
   'China Ping An' => ['chinapingan', 'zhongguopingan'],
+  'Chennai Online' => ['chennaionline'],
   Computerland => ['computerlan'],
   'Dhampur Sugar' => ['dhampur'],
   DISKI => ['dsi'],
@@ -458,12 +482,14 @@ my %SINGLE_TYPOS =
   'Haerbin Bingxue' => ['harbin bingxue'],
   'Indian Railways' => ['railways'],
   'Jilin Dingyuan' => ['jilindingyuan'],
+  'Jin Rong' => ['jinrongjia'],
   'Lianzhong Shi Jie' => ['lianzhongshijie'],
   'Málning hf' => ['málning'],
   'Meilin Qing Cheng' => ['meilinqingcheng'],
   'Nanning Yalun' => ['nanning yalun'],
   'San Chen' => ['sanchen'],
   'Sanya Jiguan' => ['sanyajiguan'],
+  'SD Associates' => ['sdassociates'],
   'Shanghai Automobile' => ['shangqi'],
   'Shanghai Municipal Engineering Group' => ['smeg'],
   'Shenzhen Lanpu' => ['lanpu'],

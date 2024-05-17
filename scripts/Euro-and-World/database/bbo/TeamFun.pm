@@ -192,6 +192,7 @@ my @MULTI_WORDS =
   'En påse nötter',
   'Endless Highway',
   'England and Pharon',
+  'England Swings',
   'Equator 1771',
   'Erdal Abi',
   'Erdal Tekin',
@@ -719,11 +720,11 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
    2Q2K
-   Aces Acolvik Adventure Aditya Aggressor Ahmetizm Ahornet 
+   Aces Acolvik Adventure Aditya Agressor Ahmetizm Ahornet 
    Akenobo Akinom Alfredo Alioth Allam Alliansen Allstars Alpha 
    Amrapali Amul Aurora Alternativlos Ambassador Andromeda Andrzejki 
    Anglers Anglophones Appellkameratene Arangan Armani Arnab 
-   Arno Aspe Asparagus Augerne Autostrada Avagard Avalanche Aytalus 
+   Arno Aspe Asparagus Augerne AUTBUL Autostrada Avagard Avalanche Aytalus 
    Azores Azure
 
    Balti Bananasplit Barracuda Bauhinia Ben Beniaminek Bhinneka 
@@ -731,60 +732,66 @@ my @SINGLE_WORDS = qw(
    Bubba Buddies Bulldozer
 
    Cabriole Cardtossers Censored Challengers Claim Coaches
-   Cogito Contra Corner Counterstrike Crash
+   Cogito Commandos Contra Corner Counterstrike Crash Cremaster
 
    Dallas DanFar Danger Debutantes Deceptive DenmarS Deppo Dialect 
-   Dingyuan Dragon DSM Duros Dvizhenie Dyret
+   Dingyuan Dinos Dragon DSM Duros Dvizhenie Dyret
 
-   Eagles Ekoap Elektrownia Enigma Epsilon Eric Everest
+   Eagles Ekoap Elektrownia Ellen Emre Enigma Epsilon Eric Everest
 
-   Farmers Fenghuang Filosofene Fisk Formidables Formosa Fortuna
-   FOS Frirond Francophones Freak Frivolt
+   Fakel Farmen Farmers Fenghuang Filosofene Fisk Formidables 
+   Formosa Fortuna FOS Frirond Francophones Freak Frivolt
 
-   Gabrisem Galaxy Gamma Gentle GloryGlory Giants Goldcat 
+   Gabrisem Galaxy Galim Gamma Gentle GloryGlory Giants Goldcat 
    Grand Gudok Guests Gunsmoke
 
-   Harlequins Hayet Hästpojkarna Helgeness HengSha HeSa Holders 
+   Hansa Harlequins Hayet Hästpojkarna Helgeness HengSha HeSa Holders 
    Hollywood Honeymoon
 
-   IBE Imponderables Israbel Isrmany
+   IBE IMAN Imponderables Israbel Isrmany
 
-   JoJo Journalists Juls Jupiter JuuTools
+   Jagg JoJo Journalists Juls Juniorklubben Jupiter Justplay JuuTools
 
-   Kinga Kingkong Kings Klasik KMC Kompisarna Konga Kratos Kuhmilch
+   Kasiyahan Kinga Kingkong Kings Klasik KMC Kompisarna Konga Kratos 
+   Kuhmilch
 
-   Lahjattomat LatSwe Lazy Lebron Liggeunderlaget Lira Lirarna
-   Liverbird
+   Lahjattomat Laplanders LatSwe Lazy Lebron Liggeunderlaget Lira 
+   Lirarna Liverbird Löparn
 
-   Malmölaget Marianne Masters Mirage Moritz Movember Måsen
+   Malmölaget Marianne Masters Mikke Mirage Moritz Movember Måsen
 
-   Naturalists Neduk Nemesis Neverclaim Nightingale Nikotiimi 
+   Naturalists Neduk Nemesis Neverclaim Nightingale Niko Nikotiimi 
    NMRT Norsu Nula
 
    Octopussy Okay Olrudbanden Olsenbanden Omega Orthodoxi Orthodox
    Outsiders Overivrig Oyzum
 
    Paulette Pegasus Perjuangan Polirish Pontiac Potteplante Preempters 
-   Pretendents Prijatelj Pusten
+   Pretendents Prijatelj Pusten Pyton
 
    Quantum Quasar
 
-   Rampage Real Reklamtrion Ribitas Robocop Royston
+   Rampage Raskasammen Real Reklamtrion Ribitas Robertinho
+   Robocop Royston
 
-   Saga Sakurai Saladmasters Salokin SANY Sapphire Scientists Senaattorit
-   Sigma Silbersee Silverfox Simple Sindbad Sivves Sjøsamen Skalman 
-   Skip Skitur Skotii Slappfisker Spartans Spring Stampede Star Starmen 
-   Starsbridge Statusquo Storeslemmen 
-   Strategen Studentene Stålfarfar SweDanes SweNor Sømnakameratene
+   Saga Sakurai Saladmasters Salokin SANY Sapphire Sarp
+   Scientists Senaattorit Seniorit Shona Sigma Silbersee Silverfox 
+   Simple Sindbad Sivves Sjøsamen Skalman Skip Skitur Skotii 
+   Slappfisker Spartans Spring Stampede Star Starmen 
+   Starsbridge Statusquo Storeslemmen Strategen Studentene 
+   Stålfarfar Sue SweDanes SweNor Sømnakameratene
 
-   Tally Task Titans Tohundre Tongxin Torpedo Totoro Trøndermøringen 
-   Tsunami Tvist
+   Tally Tannlegene Task Titans Tohundre Tongxin Torpedo 
+   Totani Totoro Trøndermøringen Tsunami Tvist
 
    Úlfurinn Ulvene Underdogs Ungdomslaget
 
-   Vega* Veegees Victory Vietcong Vilttiketju Vintage Vytas
+   Valen Vega* Veegees Veggen Victory Vietcong Vilttiketju Vintage 
+   Vürst Vytas
 
-   Wael WDP Winkiboy
+   Wael Wala Waldi WDP Winkiboy
+
+   Xtrouble
 
    Ybs Yansimasiz Yelena Yogakshema Yokozuna
 
@@ -796,6 +803,7 @@ my %SINGLE_TYPOS =
   Acolvik => ['acolvick'],
   'Adams Family' => ['adamsfamily'],
   Aditya => ['aaditya'],
+  Agressor => ['aggressor'],
   Alizee => ['alize'],
   'Alunand Plus' => ['alunand'],
   Ambassador => ['ambassadors', 'ambassdor'],
@@ -807,6 +815,7 @@ my %SINGLE_TYPOS =
   Bhinneka => ['bhineka', 'bhinneke'],
   Bulldozer => ['buldozer'],
   Dingyuan => ['dinyuan'],
+  'England Swings' => ['englandswings'],
   Formidables => ['formidable', 'formidabble', 'formidabels',
     'formiddable', 'formiddables', 'formadibles', 'formadeble',
     'formadables', 'fromidables'],
@@ -817,6 +826,7 @@ my %SINGLE_TYPOS =
   'Jamm & Co' => ['jamm'],
   'Joy Division' => ['joydivision'],
   Juls => ['julst'],
+  Löparn => ['loparn'],
   'Meng Qing Xin' => ['mengqingxin'],
   'Naturalists' => ['nature'],
   'Pontiac 7' => ['pontiac7'],
@@ -834,6 +844,7 @@ my %SINGLE_TYPOS =
   'Texan Aces' => ['texanaces'],
   Titans => ['titan'],
   'Vegetable Hotpot' => ['vegetable'],
+  Vürst => ['vuerst'],
   'Wei De' => ['weide'],
   'Wild Griffins' => ['wildgriffin', 'wildgriffins'],
   'Winkiboy' => ['winkyboy'],
