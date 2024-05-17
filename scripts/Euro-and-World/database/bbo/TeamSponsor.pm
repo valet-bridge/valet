@@ -47,10 +47,12 @@ my @MULTI_WORDS =
   'Beijing Yue Ze',
   'Beijing Yindi',
   'Bokadirekt SE',
+  'Bozzetto Azzurro',
   'Breki Jarðverk',
   'Bridge i Norge',
   'bridge24.pl',
   'BridgeBertheau.com',
+  'Bridgefélag Reykjavíkur',
   'BridgeYes.com',
   'Bridge Winners',
   'Brink Plast',
@@ -88,12 +90,14 @@ my @MULTI_WORDS =
   'Electric Center',
   'Elektrik P3B',
   'Fanhua Jituan',
+  'Ferðaskrifstofa Vesturlands',
   'Fisk Seafood',
   'Garðar & Vélar',
   'Garðs Apotek',
   'Garsu Pasaulis',
   'Geely Automobile',
   'Geologi Timah',
+  'Geoportal Kutai Kartanegara',
   'Gong Hang Jin Ying',
   'Guangzhou Hongmian',
   'Guangzhou Huachu Chemicals',
@@ -149,6 +153,7 @@ my @MULTI_WORDS =
   'Lupo Veloce',
   'Mai Zi Fu Shi',
   'Málning hf',
+  'Mandiri Minahasa',
   'Mega-Tech',
   'Mei Kuang',
   'Meilin Qing Cheng',
@@ -182,7 +187,9 @@ my @MULTI_WORDS =
   'San Yutian',
   'Sanya Jiguan',
   'Sanya Tianze',
+  'SAPW Poland',
   'SD Associates',
+  'SD Enterprises',
   'Semangat Baru Makassar',
   'Shan Hai',
   'Shanghai Automobile',
@@ -221,6 +228,7 @@ my @MULTI_WORDS =
   'Sparisjóður Siglufjarðar',
   'Spasso Food',
   'SPS Construction',
+  'SR Group',
   'Sunchime Cartoon',
   'Sunchime Fund',
   'Suzhou Youtong',
@@ -242,6 +250,7 @@ my @MULTI_WORDS =
   'Tricon Infotech',
   'Unia Leszno',
   'Unia Winkhaus',
+  'VBS Fjárfestingarbanki hf.',
   'Vestel',
   'Vidbot ehf',
   'Viego Regnskap',
@@ -285,6 +294,7 @@ my %MULTI_TYPOS =
   'Beijing Yue Ze' => ['bei jing yue ze'],
   'Breki Jarðverk' => ['breki jarðverk ehf'],
   'bridge24.pl' => ['bridge 24', 'bridge24'],
+  'Bridgefélag Reykjavíkur' => ['bridgefélag Reykjav'],
   'Bridge Winners' => ['bridge winner', 'bridgewinners.com'],
   'Cai Fu Zheng Quan' => ['cai fu'],
   'China Finance' => ['china finance ba'],
@@ -297,7 +307,8 @@ my %MULTI_TYPOS =
   'China Trinergy' => ['chinatrinergy'],
   'Data Steel' => ['datta steel'],
   'Dhampur Sugar' => ['dhampur sugar mills', 'dhampur sugars', 
-    'dhampur suger mills', 'dhampor sugar mills', 'dhampu sugar mills'],
+    'dhampur suger mills', 'dhampor sugar mills', 'dhampu sugar mills',
+    'sugar mills'],
   'Djarum Black' => ['djarum black capp', 'djarum black mild'],
   Djarum => ['djarum la', 'djarum mld'],
   'Dobre Zegary' => ['dobre_zegary'],
@@ -308,12 +319,15 @@ my %MULTI_TYPOS =
   Elastron => ['elastron (taurus)'],
   'Elektrik P3B' => ['elektrik merapi', 'electric merapi'],
   'Fanhua Jituan' => ['fan hua'],
+  'Ferðaskrifstofa Vesturlands' => ['ferðask. vesturl.',
+    'ferðaskrifstofa ves'],
   'Garðar & Vélar' => ['garðar & vélar ehf.', 'garðar og vélar',
     'gardar og velar'],
   'Garðs Apotek' => ['garðs apótek', 'garðs apoótek', 'gards apótek'],
   'Geely Automobile' => ['geely auto', 'gely auto', 'chaina geely',
     'china geely', 'jili'],
   'Geologi Timah' => ['geo timah', 'geo tima'],
+  'Geoportal Kutai Kartanegara' => ['geo gutai gartanega'],
   'Gong Hang Jin Ying' => ['gonghang jinying'],
   'Guangzhou Huachu Chemicals' => ['gz huachu chem'],
   'Guangzhou Pearl River' => ['gz pearl river', 
@@ -363,6 +377,7 @@ my %MULTI_TYPOS =
   'Ryan Express' => ['ryan_express'],
   'Samtronic Constanta' => ['samtronic ct'],
   'Sanya Tianze' => ['san ya tian ze'],
+  'SAPW Poland' => ['sapw-poland'],
   'Semangat Baru Makassar' => ['semangat baru mks', 'semangat baru mks.'],
   'Shanghai Automobile' => ['shanghai automoblie', 'sh  qiche',
     'sh qiche'],
@@ -415,13 +430,13 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  ABAX Abnegat Accenture Actavis Akaylar Aklindo Allianz
+  ABAX Abnegat Accenture Actavis AIA Akaylar Aklindo Allianz
   Aquatrans Arboned Argento Arkas Arma Asindo Ayýntab
 
   Bajaj Banpu
 
   Candyland Changyu Chemikartel Chlodnia Chuanmei Cimentas COMAL Copia 
-  Computerland CONSUS Cosmos
+  Computerland CONSUS Continental Cosmos
 
   Datasteel Denizgucu Derofe Dianwang DISKI Djarum Dongfeng Druva
 
@@ -434,30 +449,30 @@ my @SINGLE_WORDS = qw(
 
   Hana Huayuan
 
-  IMAX
+  IMAX Inteligent
 
-  JHS Jinfan
+  Jetox JHS Jinfan
 
   Kadimex
 
-  Lacznosc Laima Lavazza Longjiangfu
+  Lacznosc Laima Lavazza Longjiangfu Lyfjaver
 
-  Meikuang Myndform
+  Manyavar Meikuang Morgunblaðið Myndform
 
   NALCO Nanyuan Nefka Näkösoppi
 
-  Paulaner Pealinn Pertamina POLFA Praterm Primabridge Pufa
+  Paulaner Pealinn Penline Pertamina POLFA Praterm Primabridge Pufa
 
   Qiaoyou
 
   Ráðgjöf Ravebo Relpol Rofoi
 
   Sagaplast Samtronic Scania Sevtopolis Shimuzu Shouchuang Signity 
-  Skeljungur Solakoglu Stiga Synective
+  Skeljungur Solakoglu Sparisjóður Stiga Synective
 
   Topeko Transearly Tryggingamiðstöðin Tsingtao
 
-  Vinabær Vito
+  Vilmar Vinabær Vito
 
   Wellknit Wellwise Winbridge
 
@@ -477,6 +492,7 @@ my %SINGLE_TYPOS =
   Eksprompt => ['ekspromt'],
   'Elektrik P3B' => ['elektrik', 'electric'],
   'Fanhua Jituan' => ['fanhua'],
+  'Geoportal Kutai Kartanegara' => ['geokutaikartanegara'],
   'Guangzhou Hongmian' => ['guangzhouhongmian', 'hongmian'],
   'Guangzhou Pearl River' => ['guangzhoupearlriver', 'guangzhouperalriver'],
   'Haerbin Bingxue' => ['harbin bingxue'],
@@ -489,12 +505,15 @@ my %SINGLE_TYPOS =
   'Nanning Yalun' => ['nanning yalun'],
   'San Chen' => ['sanchen'],
   'Sanya Jiguan' => ['sanyajiguan'],
+  'SAPW Poland' => ['sapw'],
   'SD Associates' => ['sdassociates'],
+  'SD Enterprises' => ['sdenterprises', 'sdenterprizes'],
   'Shanghai Automobile' => ['shangqi'],
   'Shanghai Municipal Engineering Group' => ['smeg'],
   'Shenzhen Lanpu' => ['lanpu'],
   'Shiji Changda' => ['changda'],
   'Shree Cement' => ['shreecement'],
+  'Sparisjóður' => ['sparisjodur'],
   'SPS Construction' => ['sps'],
   Tsingtao => ['tsingthao'],
   'Viego Regnskap' => ['viego'],

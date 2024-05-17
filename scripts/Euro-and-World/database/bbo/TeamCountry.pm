@@ -102,6 +102,7 @@ my @SINGLE_WORDS = qw(
   Philippines 
   Poland 
   Reunion 
+  Romania
   Scotland
   Slovakia
   Switzerland 
@@ -156,6 +157,7 @@ my %SINGLE_TYPOS =
   Philippines => ['philipppines'],
   Poland => ['polen', 'pologne', 'polska'],
   Reunion => ['réunion'],
+  Romania => ['rumania'],
   'Serbia and Montenegro' => ['serbia&mon'],
   'South Korea' => ['korea'],
   'Sri Lanka' => ['srilanka'],

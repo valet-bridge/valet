@@ -102,6 +102,7 @@ my @MULTI_WORDS =
   'Fatih Yayla',
   'Fernando Matos',
   'Flemming Dahl',
+  'Frímann Stefánsson',
   'Gabriel Chagas',
   'Gila Emody',
   'Ginossar',
@@ -213,6 +214,7 @@ my @MULTI_WORDS =
   'Ómar Freyr',
   'Omar Sharif',
   'Palma Carlos',
+  'Pankaj Kapadia',
   'Pankaj Mehta',
   'Patrick Choy',
   'Patrick Jourdain',
@@ -249,6 +251,7 @@ my @MULTI_WORDS =
   'Satish Modi',
   'Shashi Gupta',
   'Shekhar Banerjee',
+  'Shlomo Netzer',
   'Shree Priya',
   'Signe Thomsen',
   'Sigurdur Vilhjalmsson',
@@ -420,7 +423,7 @@ my %MULTI_TYPOS =
   'Nabil Chaker' => ['chaker'],
   'Nabil Edgtton' => ['n edgtton', 'n.edgtton'],
   "O'Rourke" => ['o rourke', 'o;rourke', "o'rouke"],
-  'Ofek Tal' => ['ofel tak'],
+  'Ofek Tal' => ['ofel tal'],
   'Olivier Bessis' => ['bessis.o.', 'bessis.o'],
   'Patanè' => ["patane'"],
   'Paul Hackett' => ['p hackett', 'pd hackett', 'hackett p'],
@@ -446,6 +449,7 @@ my %MULTI_TYPOS =
   'Salim Yilankiran' => ['yilankiran'],
   'Sally Brock' => ['s brock'],
   'Shashi Gupta' => ["shashi gupta's 6"],
+  'Shlomo Netzer' => ['netzer shlomo'],
   'Sigurdur Vilhjalmsson' => ['sigurður vilhjálmss'],
   'Sinan Göksu' => ['sinan goksu'],
   'Sofia Costa Pessoa' => ['s.pessoa'],
@@ -457,6 +461,7 @@ my %MULTI_TYPOS =
   'van Prooijen'=> ['van proojen'],
   'Van den Bos' => ['van des bos'],
   'Vang Larsen' => ['van larsen', 'vang-larsen', 'vanglarsen'],
+  'Waleed El Ahmady' => ['el ahmady'],
   'Ward Platt' => ['ward-platt', 'world platt', 'ward pratt',
     'ward-pratt'],
   'Wei Sender' => ['wei-sender'],
@@ -504,12 +509,12 @@ my @SINGLE_WORDS = qw(
   Brede Brenner Bretagne Brifman
   Brightling Brink Brockwell Brod Brogeland Brown Brotteaux Brunet
   Bruun Brunzell
-  Buch Buchen Buchlev Buras Burgay Burke Buscaglia Buse 
+  Buch Buchen Buchlev Buras Burrows Burgay Burke Buscaglia Buse 
   Busse Butland Butts Byrne
 
   Caggese Calandra Caldarelli Camacho Camberos Caplan Cappelli Cappeller 
   Caldwell Callaghan Caprera Cambiaghi Campos Capitani Caracci 
-  Carbonnier Carmichael 
+  Carbonnier Carcy Carmichael 
   Casen Cassini Carrasco Carruthers Carvalho Casabona Casadei 
   Castelbranco Castner Cattani Cayne Cengiz Cernat Cernato Cernatovo
   Cesati Chadwick Chai Chambers Chan Chang Charletoux Charlotte Charlsen 
@@ -594,10 +599,10 @@ my @SINGLE_WORDS = qw(
   Karadeniz Karamanlis Karavil Karayel Karl Karlaftis Karpouzelis 
   Kasday Kasle Kasler Kastel Kater Katz Kaushik Kay Kaya Kaye 
   Kazik Kazmierczak Kendrick Kennedy Kenny Kent Keremida Kersey 
-  Khandelwal Kilvington King Kiran Kirilenko 
+  Khandelwal Khazanov Kilvington King Kiran Kirilenko 
   Kirin Kishan Kizikli Klapper Klimacki Klinger Klofa Klukowski 
   Knap Knight Kocak Koch Koistinen Koivula Kokkes Kokten Kolankaya 
-  Kolata Kolesnik Kollnes Kondoch Koneru Kopecky Koppel
+  Kolata Kolesnik Kollnes Kolonkaya Kondoch Koneru Kopecky Koppel
   Korbel Kordov Korkut Korth Kosaka Kosti Kotányi Koumetz Kovacs Kovachev 
   Kovacich Kowalski Kozikowski
   Kranyak Krajewski Krausova Krawczyk Krekorian Kriegel Kriftner 
@@ -614,7 +619,7 @@ my @SINGLE_WORDS = qw(
   Li Libman Lie Lien Liu Liggins Lilienstein Lillevik Lilley Limmen 
   Linczmayer Lindner Lindstedt Lindqvist Llopart
   Locatelli Lockwood Lombard Longinotti Lorentz Lorenzini Loreto 
-  Louchart Lowe Lubinski Ludewig Lund Luppi Lusk Lusky 
+  Lormant Louchart Lowe Lubinski Ludewig Lund Luppi Lusk Lusky 
   Lüßmann Lynch Lyngdal Lyngen
 
   Maas MacDonald Macedo Machado Madsen Magee Maggio Maglietta Mahaffey 
@@ -665,14 +670,14 @@ my @SINGLE_WORDS = qw(
   Phelan Piasecki Piedra Piekarek Pietraszek Piganeau Pilon Piper
   Pitt Platt Plaut Poizat Pollack Pollak Polowan Pont Popescu 
   Popova Potier Potts Poulat Pownall Prescott Priano Proukakis 
-  Procter Prohorov Prusa Pryor Puczynski Purkarthofer Pszczola
+  Procter Prohorov Prusa Pryor Puczynski Pulkrab Purkarthofer Pszczola
 
   Quail Quantin Queran Quinn
 
   Rabinowitz Radcliffe Radin Radisic Ramondt Rankin Ranson Rao Rapp 
   Rau Raulund Ravenna Rayner Rees Reess Rehder Reid Rekstad 
   Renouard Reps Revaz Rew Reynolds Rhodes Ribera Ricard Ricci 
-  Richardson Richman Riedel Riehm Rigal Rigaud Rimstedt Riolo Rios 
+  Richardson Richman Riedel Riehm Rigal Rigaud Riisnæs Rimstedt Riolo Rios 
   Rivers Rizzo Robert Robertson Robinson Robles Robson Rocafort 
   Rocca Rodwell Rogoff Rohowsky Roll Romanin Rombaut Rosen 
   Rosenberg Rosendorff Rosetta Rosenkrantz Rosenthal Rossard 
@@ -701,9 +706,9 @@ my @SINGLE_WORDS = qw(
   Sundsten Suñol Suresh Sutherlin Suwik Svindahl Sykioti Syl 
   Sylvan Symons Szalay Szigethy Szots Szymanowski Sørensen
 
-  Tajima Takayama Tamburi Tamburrini Tan Tanaka Tarhan Tarsus Taylor 
-  Tebha Tedd Teltscher Teodorescu Teramoto Terraneo Tesla Tez
-  Thapa Thomsen Thompson Thomson Thoresen Thuillez Thurston 
+  Tajima Takayama Tamburi Tamburrini Tan Tanaka Tarhan Tarnovski
+  Tarsus Taylor Tebha Tedd Teltscher Teodorescu Teramoto Terraneo 
+  Tesla Tez Thapa Thomsen Thompson Thomson Thoresen Thuillez Thurston 
   Ticha Timoteo Tishler Tislevoll Todd Toffier Toivonen Tokay Tosi 
   Townsend Trabucchi Travis Tritt Troberg Tubiska Tucker Tudor Tulin Tully 
   Tuomi Turner Tuszynski Tuwanakotta Tyradelli
@@ -728,8 +733,8 @@ my @SINGLE_WORDS = qw(
 
   Yadlin Yamada Yarington Yates Yezerski Yilmaz Yoleri Yuen Yule
 
-  Zabunoglu Zago Zagor Zagorin Zaleski Zanalda Zaninotti
-  Zarkesch Zatorski Zawada Zawislak Zeeberg Zenari Zhan Zhao 
+  Zabunoglu Zago Zagor Zagorin Zajac Zaleski Zanalda Zaninotti
+  Zaremba Zarkesch Zatorski Zawada Zawislak Zeeberg Zenari Zhan Zhao 
   Zhong Zimmermann Zipovski Zobu Zollo Zolotov Zorlu Zozis Zotos
 );
 
@@ -770,7 +775,7 @@ my %SINGLE_TYPOS =
   'Dr. Ashwani Mehta' => ['ashwani'],
   Dumbovich => ['dumbovic'],
   Eisenberg => ['einsenberg'],
-  'Waleed El Ahmady' => ['elahmady', 'elhamady', 'el ahmady'],
+  'Waleed El Ahmady' => ['elahmady', 'elhamady'],
   Failla => ['faill'],
   'Gabriel Chagas' => ['chagas'],
   Gartaganis => ['gartaginas'],
@@ -783,6 +788,7 @@ my %SINGLE_TYPOS =
   Giura => ['guira'],
   Günther => ['guenther'],
   'Gylfi Baldursson' => ['baldursson'],
+  Hackett => ['hakett'],
   Haughie => ['huaghie'],
   'Hecht Johansen' => ['hecht'],
   'Hong NIU' => ['hongniu'],
@@ -851,6 +857,7 @@ my %SINGLE_TYPOS =
   Prusa => ['prusa m'],
   Pszczola => ['pepsi'],
   Quantin => ['quentin'],
+  Riisnæs => ['riisnes'],
   Rosenkrantz => ['rosenkranz'],
   Rosenthal => ['rosentahl'],
   Rubin => ['rugin'],

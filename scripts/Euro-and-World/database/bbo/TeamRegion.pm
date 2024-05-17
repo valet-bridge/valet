@@ -121,7 +121,7 @@ my @SINGLE_WORDS = qw(
   Hainan Haugaland Hebei Huangshi Hubei Hunan
   Jiangsu Jilin
   Kansai Karimun Karnataka Kawanua Kedungwaru Kepri Kerala
-  Lombok Lumajang
+  Liaoning Lombok Lumajang
   Maharashtra Marmara Midtsjælland Mjøsa
   Norden Norrland
   Queensland

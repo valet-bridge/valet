@@ -68,6 +68,7 @@ my %MULTI_TYPOS =
   Qingdao => ['qing dao'],
   'San Giorgio del Sannio' => ['sg del sannio', 's.g.sannio',
     's.giorgio sannio', 'san giorgio del san'],
+  Shenzhen => ['shen zhen'],
   'Siddha Eden Lakeville' => ['siddha eden', 'sidhha eden', 'siddha-eden'],
   'Silesia Gliwice' => ['silezia gliwice'],
   Taicang => ['tai cang'],
@@ -90,7 +91,7 @@ my @SINGLE_WORDS = qw(
   Begues Beijing Bekasi Belgrade Bengkalis Bengkulu Beograd 
   Bergen Bergues Berlin 
   Bhubaneshwar Bielefeld Bikaner Bitung Blitar Bodrum Bodø Bogazici 
-  Bogor Bologna Bonn Bordeaux Borivli Bornova Bozdogan
+  Bogor Bologna Bonn Bordeaux Borivli Bormali Bornova Bozdogan
   Braila Brasov Bremen Brisbane Brotteaux 
   Buca Bucharest Budapest Burghausen Bursa Burdur Bytom
 
@@ -121,9 +122,10 @@ my @SINGLE_WORDS = qw(
   Kastamonu Katowice Kaylaka Kediri Ketsch Kiel Kielce Kiev Kirklarelý 
   Kocaeli Kocamustafapasa Kolkata Konak Korwin Kosice Koycegiz Köln Krakow 
   Kristiansand Kucukcekmece Kudus Kunshan Kuopio Kusadasi Küp Kütahya
+  Kverndalen
 
   Langkat Leiden Leszno Leuven Leverkusen Lhokseumawe Lille Lima 
-  Lincoln Lindesberg Ljubljana London Losari Lowicz Lozenets 
+  Lincoln Lindesberg Ljubljana Lodz London Losari Lowicz Lozenets 
   Lubin Lublin Lucignano Luleburgaz Lumajang
 
   Maastricht Madrid Makassar Malatya Malmö Manahasa Manado Manchester 
@@ -154,14 +156,15 @@ my @SINGLE_WORDS = qw(
   Senayan Serang Shanghai Shaoguan Shenyang 
   Shenzhen Shihua Sibiu Sidoarjo Siena Singsås Skara Skien Skopje 
   Slagelse Sleman Sliven Sofia Solok Sortland Söke Split 
-  Stavanger Steinkjer Storsjöbygden Stuttgart Sunndalsøra 
+  Stavanger Steinkjer Storsjöbygden Stureby Stuttgart Sunndalsøra 
   Surabaya Suzhou Sydney Szeged Sørreisa
 
   Täfteå Taicang Taihu Tainan Taizhou Takayama Tallinn Targoviste 
-  Tarnów Täby Tekýrdag Temuco Thessaloniki Tianjin Tianya Timisoara 
-  Tingling Tire Tokyo Torino Toulouse Trieste Trondheim Tromsø
+  Tarnów Täby Tekýrdag Temuco Tequendama Thessaloniki Tianjin 
+  Tianya Timisoara Tingling Tire Tokyo Torino Toulouse Trieste 
+  Trondheim Tromsø
 
-  Uccle Udaipur Uppsala Usak Utrecht
+  Uccle Udaipur Unia Unaós Uppsala Usak Utrecht
 
   Varbergshus Varese Varna Vasa Västervik Vejle Vestfold Vestvågøy Vienna 
   Vikersund Vilnius Viþnelik Vraca
@@ -173,6 +176,8 @@ my @SINGLE_WORDS = qw(
   Yalikavak Yambol Yarimada Yibin Yildirim Yokohama Yogyakarta
 
   Zagreb Zhenjiang Zhongshan Zhuzhou Zigong Zurich Zyrardow
+
+  Ørland
 
   Åkirkeby Århus
 );
@@ -203,6 +208,8 @@ my %SINGLE_TYPOS =
   Diyarbakir => ['Dýyarbakir'],
   Düsseldorf => ['duesseldorf'],
   Genoa => ['genova'],
+  Guangzhou => ['gz', 'gaungzhou'],
+  Hegyvidék  => ['hegyvidek'],
   Heimdal => ['heimdalbc'],
   Izmir => ['ýzmir', 'ýzmýr'],
   Jakarta => ['dki', 'jakar', 'jkt'],
@@ -219,6 +226,7 @@ my %SINGLE_TYPOS =
   Makassar => ['makasar'],
   Manahasa => ['mnhasa'],
   Mersin => ['mersýn'],
+  Milan => ['milano'],
   Milas => ['minas'],
   Mumbai => ['mum'],
   Munich => ['münchen'],

@@ -24,16 +24,22 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   bric
+  Challenger
   GD GLPD
   KB KDK KRS
+  Leaders
   Mr
   npc
-  Opponent Opponents
+  Opponent Opponents Others
   pc
+  Tricks
+  Various
 );
 
 my %SINGLE_TYPOS =
 (
+  Challengers => ['chalengers'],
+  Leaders => ['leader', 'leders']
 );
 
 

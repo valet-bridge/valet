@@ -39,6 +39,8 @@ my @MULTI_WORDS =
   'Air Traffic Management',
   'Alex is Beautiful',
   'Alizee',
+  'All In',
+  'All Lions',
   'All Stars',
   'Alle presidentens menn',
   'Almost Famous',
@@ -96,6 +98,7 @@ my @MULTI_WORDS =
   'Boye B Fan Club',
   "Boys'n' Girls'",
   'Brian Is Beautiful',
+  'Bridge Friends',
   'Bridgerama Milan',
   'British Lions',
   'Brødrene & co',
@@ -344,6 +347,7 @@ my @MULTI_WORDS =
   'Los Feos',
   'Los Malos',
   'Lovende ung',
+  'Loy Krathong',
   'Lucky 4',
   'Lucky Losers',
   'Lucky Seven',
@@ -433,6 +437,7 @@ my @MULTI_WORDS =
   'Rimstedt Power!',
   'Rising Star',
   'Robin Hood',
+  'Roheline Lammas',
   'Royal Flush',
   'Rubb og stubb',
   'Rudderless Ship',
@@ -552,6 +557,7 @@ my @MULTI_WORDS =
   'Tupac Amaru',
   'Tut tut',
   'Ucurtma Avcisi',
+  'Umisen Yamasen',
   'Unholy Alliance',
   'Usaklig Deigræv',
   'Vaddo Gliders',
@@ -719,7 +725,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-   2Q2K
+   2Q2K 6L
    Aces Acolvik Adventure Aditya Agressor Ahmetizm Ahornet 
    Akenobo Akinom Alfredo Alioth Allam Alliansen Allstars Alpha 
    Amrapali Amul Aurora Alternativlos Ambassador Andromeda Andrzejki 
@@ -728,70 +734,74 @@ my @SINGLE_WORDS = qw(
    Azores Azure
 
    Balti Bananasplit Barracuda Bauhinia Ben Beniaminek Bhinneka 
-   Blondie Blueberry BOVE Breno Bridgebutikken Bridgeministeriet Brudarna 
-   Bubba Buddies Bulldozer
+   Blondie Blueberry Boek BOVE Breno Bridgebutikken 
+   Bridgeministeriet Brudarna Bubba Buddies Bunnies Bulldozer
 
-   Cabriole Cardtossers Censored Challengers Claim Coaches
-   Cogito Commandos Contra Corner Counterstrike Crash Cremaster
+   Cabriole Cardtossers Censored Challengers Chicks Claim Coaches
+   Cogito Commandos Contact Contra Corner Counterstrike Crash Cremaster
 
-   Dallas DanFar Danger Debutantes Deceptive DenmarS Deppo Dialect 
-   Dingyuan Dinos Dragon DSM Duros Dvizhenie Dyret
+   Dallas DanFar Danger Daniel Debonecos Debutantes Deceptive 
+   DenmarS Deppo Dialect Diego Dilligaf Dingyuan Dinos Dragon DSM Duros 
+   Dvizhenie Dyret
 
-   Eagles Ekoap Elektrownia Ellen Emre Enigma Epsilon Eric Everest
+   Eagles Ekoap Elektrownia Eliza Ellen Emre Enigma Epsilon Eric Everest
+   Ewa
 
-   Fakel Farmen Farmers Fenghuang Filosofene Fisk Formidables 
+   Fakel Farmen Farmers Fenghuang Fenix Filosofene Filur Fisk Formidables 
    Formosa Fortuna FOS Frirond Francophones Freak Frivolt
 
-   Gabrisem Galaxy Galim Gamma Gentle GloryGlory Giants Goldcat 
-   Grand Gudok Guests Gunsmoke
+   Gabrisem Galaxy Galim Gamma Garry Gentle Geysir GloryGlory 
+   Giants Gjesp Goldcat Grand Gudok Guests Gunsmoke
 
    Hansa Harlequins Hayet Hästpojkarna Helgeness HengSha HeSa Holders 
-   Hollywood Honeymoon
+   Hollywood Honeymoon Hurra
 
-   IBE IMAN Imponderables Israbel Isrmany
+   IBE Ijseide IMAN Imponderables Iris Israbel Isrmany
 
-   Jagg JoJo Journalists Juls Juniorklubben Jupiter Justplay JuuTools
+   Jagg Jelena JoJo Journalists Juice Juls Juniorklubben Jupiter 
+   Justplay JuuTools
 
-   Kasiyahan Kinga Kingkong Kings Klasik KMC Kompisarna Konga Kratos 
-   Kuhmilch
+   Kamikaze Kasiyahan Kenji Kinga Kingkong Kings Klasik KMC Kompisarna 
+   Konga Koukouselis Kratos Kuhmilch
 
-   Lahjattomat Laplanders LatSwe Lazy Lebron Liggeunderlaget Lira 
+   Lahjattomat Laplanders Lasse LatSwe Lazy Lebron Liggeunderlaget Lira 
    Lirarna Liverbird Löparn
 
-   Malmölaget Marianne Masters Mikke Mirage Moritz Movember Måsen
+   Malmölaget Marianne Masters Matrix Mats Mikke Miguel Milady
+   Mirage Moritz Movember Munawar Måsen
 
-   Naturalists Neduk Nemesis Neverclaim Nightingale Niko Nikotiimi 
-   NMRT Norsu Nula
+   Naturalists Neduk Nemesis Neverclaim Nightingale Nikitopoulos
+   Niko Nikotiimi NMRT Norsu Nula
 
-   Octopussy Okay Olrudbanden Olsenbanden Omega Orthodoxi Orthodox
-   Outsiders Overivrig Oyzum
+   Octopussy Okay Olrudbanden Olsenbanden Omega Orakulas 
+   Orthodoxi Orthodox Outsiders Overivrig Oyzum
 
-   Paulette Pegasus Perjuangan Polirish Pontiac Potteplante Preempters 
-   Pretendents Prijatelj Pusten Pyton
+   Pasanci Passé Paulette Pegasus Perjuangan Pia Polirish Pontiac 
+   Potteplante Preempters Pretendents Prijatelj Pusten Pyton
 
    Quantum Quasar
 
    Rampage Raskasammen Real Reklamtrion Ribitas Robertinho
    Robocop Royston
 
-   Saga Sakurai Saladmasters Salokin SANY Sapphire Sarp
-   Scientists Senaattorit Seniorit Shona Sigma Silbersee Silverfox 
-   Simple Sindbad Sivves Sjøsamen Skalman Skip Skitur Skotii 
-   Slappfisker Spartans Spring Stampede Star Starmen 
+   Sabres Saga Sakurai Saladmasters Salokin SANY Sapphire Sarp
+   Scientists Senaattorit Sherdils Shona Sigma Silbersee Silverfox 
+   Simple Simpleksas Sindbad Sirius Sivves Sjøsamen Skalman Skip 
+   Skitur Skotii Slappfisker Soho Spartans Spring Stampede Star Starmen 
    Starsbridge Statusquo Storeslemmen Strategen Studentene 
-   Stålfarfar Sue SweDanes SweNor Sømnakameratene
+   Stålfarfar Sue SweDanes SweNor Syttisju Sømnakameratene
 
    Tally Tannlegene Task Titans Tohundre Tongxin Torpedo 
-   Totani Totoro Trøndermøringen Tsunami Tvist
+   Totani Totoro Trøndermøringen Tsunami Tulip Tvist
 
    Úlfurinn Ulvene Underdogs Ungdomslaget
 
-   Valen Vega* Veegees Veggen Victory Vietcong Vilttiketju Vintage 
-   Vürst Vytas
+   Valen Varoslu Vega* Veegees Veggen Victory Vietcong Vilttiketju 
+   Vintage Vürst Vytas
 
    Wael Wala Waldi WDP Winkiboy
 
-   Xtrouble
+   Xatzopoulos Xtrouble
 
    Ybs Yansimasiz Yelena Yogakshema Yokozuna
 
@@ -814,6 +824,7 @@ my %SINGLE_TYPOS =
   Barracuda => ['barakuda', 'baracuda'],
   Bhinneka => ['bhineka', 'bhinneke'],
   Bulldozer => ['buldozer'],
+  Dilligaf => ['dilligraf'],
   Dingyuan => ['dinyuan'],
   'England Swings' => ['englandswings'],
   Formidables => ['formidable', 'formidabble', 'formidabels',
@@ -826,6 +837,7 @@ my %SINGLE_TYPOS =
   'Jamm & Co' => ['jamm'],
   'Joy Division' => ['joydivision'],
   Juls => ['julst'],
+  'Loy Krathong' => ['longkatong'],
   Löparn => ['loparn'],
   'Meng Qing Xin' => ['mengqingxin'],
   'Naturalists' => ['nature'],
