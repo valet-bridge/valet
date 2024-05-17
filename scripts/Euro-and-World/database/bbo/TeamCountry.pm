@@ -64,7 +64,7 @@ my %MULTI_TYPOS =
   'Republic of Ireland' => ['rep. of ireland', 'rep of ireland', 'roi',
     'rep ire', 'rep ireland', 'republic of irelend', 'reublic of ireland',
     'r of ireland'],
-  'San Marino' => ['san_marino'],
+  'San Marino' => ['san_marino', 'san  marino'],
   'Serbia and Montenegro' => ['serbia/mont', 'serbia&mon.'],
   'Trinidad and Tobago' => ['trinidad & tobago', 'trinidad&tobago'],
   USA => ['u.s.a.']
@@ -142,7 +142,7 @@ my %SINGLE_TYPOS =
   Israel => ['isreal', 'israil', 'isarel', 'israël'],
   Jordan => ['jor'],
   Latvia => ['lavtia', 'latvija'],
-  Luxembourg => ['luxemburg'],
+  Luxembourg => ['luxemburg', 'luxembourgh'],
   Macau => ['china macau'],
   Madagascar => ['madagaskar'],
   Netherlands => ['nederlands', 'netherland', 'nrtherlands', 

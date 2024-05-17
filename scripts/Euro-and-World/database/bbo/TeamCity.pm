@@ -158,9 +158,9 @@ my @SINGLE_WORDS = qw(
   Stavanger Steinkjer Storsjöbygden Stuttgart Sunndalsøra 
   Surabaya Suzhou Sydney Szeged Sørreisa
 
-  Taicang Taihu Tainan Taizhou Takayama Tallinn Targoviste Tarnów Täby 
-  Tekýrdag Temuco Thessaloniki Tianjin Tianya Timisoara Tingling 
-  Tire Tokyo Torino Toulouse Trieste Trondheim Tromsø
+  Täfteå Taicang Taihu Tainan Taizhou Takayama Tallinn Targoviste 
+  Tarnów Täby Tekýrdag Temuco Thessaloniki Tianjin Tianya Timisoara 
+  Tingling Tire Tokyo Torino Toulouse Trieste Trondheim Tromsø
 
   Udaipur Uppsala Usak Utrecht
 
@@ -240,6 +240,7 @@ my %SINGLE_TYPOS =
   Sunndalsøra => ['sundalsora'],
   Targoviste => ['tg'],
   Tarnów => ['tarnow'],
+  Täfteå => ['taftea'],
   Tekýrdag => ['tekirdað'],
   Thessaloniki => ['salonica'],
   Tromsø => ['tromso', 'tromsoe'],

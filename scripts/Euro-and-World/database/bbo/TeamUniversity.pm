@@ -50,6 +50,7 @@ my @MULTI_WORDS =
   'Tarsus American College',
   'Trakya University',
   'Umeå University',
+  'UBC Hamburg',
   'University of Airlangga',
   'University of Bung Hatta',
   'University of California at Berkeley',

@@ -48,6 +48,7 @@ my @MULTI_WORDS =
   'Beijing Yindi',
   'Bokadirekt SE',
   'Breki Jarðverk',
+  'Bridge i Norge',
   'bridge24.pl',
   'BridgeBertheau.com',
   'BridgeYes.com',
@@ -155,6 +156,7 @@ my @MULTI_WORDS =
   'Nanfang Dianwang',
   'Nanguang Power',
   'Nanning Yalun',
+  'Nimbusz',
   'Nong Fa Hang',
   'Nordfyns Finans',
   'Nordic Security',
@@ -428,11 +430,12 @@ my @SINGLE_WORDS = qw(
   Lacznosc Lavazza Longjiangfu
   Myndform
   NALCO Nanyuan
-  Paulaner Pertamina Praterm Primabridge Pufa
+  Paulaner Pertamina POLFA Praterm Primabridge Pufa
   Qiaoyou
   Ráðgjöf Ravebo Relpol
-  Sagaplast Shouchuang Signity Skeljungur Solakoglu
-  Topeko Tryggingamiðstöðin Tsingtao
+  Sagaplast Samtronic Scania Shouchuang Signity 
+  Skeljungur Solakoglu Stiga Synective
+  Topeko Transearly Tryggingamiðstöðin Tsingtao
   Vito
   Wellknit Wellwise
   Zhonghai

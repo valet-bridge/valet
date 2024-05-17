@@ -39,6 +39,7 @@ my @MULTI_WORDS =
   'Air Traffic Management',
   'Alex is Beautiful',
   'Alizee',
+  'All Stars',
   'Alle presidentens menn',
   'Almost Famous',
   'Almost Juniors',
@@ -216,6 +217,7 @@ my @MULTI_WORDS =
   'Flora and Friends',
   'Flying Dutchess',
   'Four Aces',
+  'Frankie Holidays',
   'Freak City',
   'Friends of Lalit',
   'Fuglen har fløyet',
@@ -348,6 +350,7 @@ my @MULTI_WORDS =
   'Lucky 13',
   'Ma-Cartoon',
   'Magic Eyes',
+  'Mal - Phi',
   'Malatya Basket',
   'Man Harr det man har',
   'Manchester United',
@@ -482,6 +485,7 @@ my @MULTI_WORDS =
   'Svanslös Skalman',
   'Svenske og ulykke',
   'Sweet Is Middle',
+  'Syabas Gabrial UI',
   'Syntax Error',
   'Søta bror',
   'Team Bo a berg',
@@ -638,7 +642,9 @@ my %MULTI_TYPOS =
   'Fast and Furious' => ['fast & furious'],
   "Flint's Crew" => ["flint`s crew"],
   'Flora and Friends' => ['flora && friend'],
+  'FOS' => ['f o s'],
   'Fuglen har fløyet' => ['Foglen har fløyet'],
+  'Frankie Holidays' => ['frankie hollydays'],
   'Freak City' => ['freak-city'],
   "Gary's Boys" => ['garys boys', 'gary´s boys'],
   'Good Men' => ['good man'],
@@ -696,6 +702,7 @@ my %MULTI_TYPOS =
   'Spring Foursomes' => ['spring 4s', 'spring fours', "spring 4's"],
   'Stabby with Youngsters' => ['stabby with youngst'],
   'Svanslös Skalman' => ['svanslos skalman'],
+  'Syabas Gabrial UI' => ['syabas gabrial-ui', 'syabas gabrial - ui'],
   'Tempo-Knektene' => ['tempo-knehtene'],
   'Texan Aces' => ['texa aces', 'texaan aces'],
   'The Four Guys' => ['the 4 guys'],
@@ -714,8 +721,8 @@ my @SINGLE_WORDS = qw(
    2Q2K
    Aces Acolvik Adventure Aditya Aggressor Ahmetizm Ahornet 
    Akenobo Akinom Alfredo Alioth Allam Alliansen Allstars Alpha 
-   Amrapali Amul Aurora Alternativlos Ambassador Andrzejki 
-   Anglophones Appellkameratene Arangan Armani Arnab 
+   Amrapali Amul Aurora Alternativlos Ambassador Andromeda Andrzejki 
+   Anglers Anglophones Appellkameratene Arangan Armani Arnab 
    Arno Aspe Asparagus Augerne Autostrada Avagard Avalanche Aytalus 
    Azores Azure
 
@@ -723,62 +730,63 @@ my @SINGLE_WORDS = qw(
    Blondie Blueberry BOVE Breno Bridgebutikken Bridgeministeriet Brudarna 
    Bubba Buddies Bulldozer
 
-   Cabriole Cardtossers Censored Challengers Claim Cogito Contra Corner
-   Counterstrike Crash
+   Cabriole Cardtossers Censored Challengers Claim Coaches
+   Cogito Contra Corner Counterstrike Crash
 
-   Dallas DanFar Danger DenmarS Deppo Dialect Dingyuan Dragon 
-   DSM Dvizhenie Dyret
+   Dallas DanFar Danger Debutantes Deceptive DenmarS Deppo Dialect 
+   Dingyuan Dragon DSM Duros Dvizhenie Dyret
 
-   Eagles Ekoap Elektrownia Enigma Epsilon Everest
+   Eagles Ekoap Elektrownia Enigma Epsilon Eric Everest
 
    Farmers Fenghuang Filosofene Fisk Formidables Formosa Fortuna
-   Frirond Francophones Freak Frivolt
+   FOS Frirond Francophones Freak Frivolt
 
-   Galaxy Gentle GloryGlory Giants Goldcat Grand Gudok Guests Gunsmoke
+   Gabrisem Galaxy Gamma Gentle GloryGlory Giants Goldcat 
+   Grand Gudok Guests Gunsmoke
 
-   Harlequins Hästpojkarna Helgeness HengSha HeSa Holders 
+   Harlequins Hayet Hästpojkarna Helgeness HengSha HeSa Holders 
    Hollywood Honeymoon
 
    IBE Imponderables Israbel Isrmany
 
    JoJo Journalists Juls Jupiter JuuTools
 
-   Kinga Kings Klasik KMC Kompisarna Konga Kratos Kuhmilch
+   Kinga Kingkong Kings Klasik KMC Kompisarna Konga Kratos Kuhmilch
 
    Lahjattomat LatSwe Lazy Lebron Liggeunderlaget Lira Lirarna
    Liverbird
 
-   Malmölaget Marianne Masters Mirage Moritz Movember
+   Malmölaget Marianne Masters Mirage Moritz Movember Måsen
 
    Naturalists Neduk Nemesis Neverclaim Nightingale Nikotiimi 
    NMRT Norsu Nula
 
-   Octopussy Okay Olrudbanden Olsenbanden Omega Outsiders Overivrig
-   Oyzum
+   Octopussy Okay Olrudbanden Olsenbanden Omega Orthodoxi Orthodox
+   Outsiders Overivrig Oyzum
 
    Paulette Pegasus Perjuangan Polirish Pontiac Potteplante Preempters 
    Pretendents Prijatelj Pusten
 
    Quantum Quasar
 
-   Rampage Reklamtrion Robocop Royston
+   Rampage Real Reklamtrion Ribitas Robocop Royston
 
-   Saga Sakurai Saladmasters Salokin Sapphire Scientists Senaattorit
-   Sigma Silbersee Silverfox Sindbad Sivves Sjøsamen Skalman Skip Skitur 
-   Skotii Slappfisker Spartans Spring Stampede Starmen 
+   Saga Sakurai Saladmasters Salokin SANY Sapphire Scientists Senaattorit
+   Sigma Silbersee Silverfox Simple Sindbad Sivves Sjøsamen Skalman 
+   Skip Skitur Skotii Slappfisker Spartans Spring Stampede Star Starmen 
    Starsbridge Statusquo Storeslemmen 
-   Strategen Studentene Stålfarfar SweDanes SweNor
+   Strategen Studentene Stålfarfar SweDanes SweNor Sømnakameratene
 
-   Tally Titans Tohundre Tongxin Torpedo Totoro Trøndermøringen 
+   Tally Task Titans Tohundre Tongxin Torpedo Totoro Trøndermøringen 
    Tsunami Tvist
 
    Úlfurinn Ulvene Underdogs Ungdomslaget
 
-   Veegees Victory Vietcong Vilttiketju Vintage Vytas
+   Vega* Veegees Victory Vietcong Vilttiketju Vintage Vytas
 
-   Winkiboy
+   Wael WDP Winkiboy
 
-   Ybs Yogakshema Yokozuna
+   Ybs Yansimasiz Yelena Yogakshema Yokozuna
 
    Zeerob Zugzwang
 );
@@ -791,6 +799,7 @@ my %SINGLE_TYPOS =
   Alizee => ['alize'],
   'Alunand Plus' => ['alunand'],
   Ambassador => ['ambassadors', 'ambassdor'],
+  Anglers => ['anglelers'],
   'Apollo Soyuz' => ['apollosoyuz', 'apollosoyouz'],
   Appellkameratene => ['apellkameratene'],
   'Atomic Bridge' => ['atomic'],
@@ -813,6 +822,7 @@ my %SINGLE_TYPOS =
   'Pontiac 7' => ['pontiac7'],
   Preempters => ['preemptors'],
   "President's Team" => ['president', 'presidents'],
+  Pretendents => ['pretendentas'],
   Quantum => ['qantum'],
   Scientists => ['science'],
   Skotii => ['skoti'],
@@ -820,6 +830,7 @@ my %SINGLE_TYPOS =
   'Stall Dieden' => ['dieden'],
   Starmen => ['starman'],
   Strategen => ['stratagen'],
+  'Syabas Gabrial UI' => ['syabas'],
   'Texan Aces' => ['texanaces'],
   Titans => ['titan'],
   'Vegetable Hotpot' => ['vegetable'],

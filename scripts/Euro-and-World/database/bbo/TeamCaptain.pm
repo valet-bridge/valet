@@ -481,7 +481,7 @@ my @SINGLE_WORDS = qw(
   Atalay Atabey Atay Attaguile Auerbach Auken Aust Austberg 
   Avci Avcioglu Avon Awad Ayda Aydin
 
-  Babacan Babsch Bagge Bailey Baker Bakhshi Baki Bakkeren Baldini 
+  Babacan Babsch Bagge Baiche Bailey Baker Bakhshi Baki Bakkeren Baldini 
   Baleal Balkanski Ballebo Bang Banikas Baran
   Barat Barbone Barel Barton Basabe Baseggio Basile Bassini
   Bathurst Batov Bauch Bavaresco Bayes Baze
@@ -496,8 +496,8 @@ my @SINGLE_WORDS = qw(
   Blanco Blandin Bley Bloom Blumental 
   Bo Boaz Bocchi Bock Bogach Bogacki Bohnhorst Bohnsack Bojoh 
   Boldt Bolling Bolognini
-  Bombardieri Bomber Bompis Bongiovanni Bonori Booth Bordallo Bornova 
-  Boro Boss Bossi Bostanci Bostosusz
+  Bombardieri Bomber Bompis Bongiovanni Bonis Bonori Booth Bordallo 
+  Bornova Boro Boss Bossi Bostanci Bostosusz
   Boucher Boughey Bourke Bouscat 
   Bowdery Bowles Boylson Bozempergk Bozzo
   Brachman Brady Brake Braithwaite Bramley Branco Brantsma Braun 
@@ -514,7 +514,7 @@ my @SINGLE_WORDS = qw(
   Castelbranco Castner Cattani Cayne Cengiz Cernat Cernato Cesati
   Chadwick Chai Chambers Chan Chang Charletoux Charlotte Charlsen 
   Chassagne Chatterji Chauvelot Chediak Cheek Chemla Chen Cheng Chizzoli 
-  Chottin Chuang Chubukov
+  Chopin Chottin Chuang Chubukov
   Cichocki Cilleborg Cimon Cintra Ciopettini Cladius Clair Clark 
   Clement Clemmensen Close
   Coenraets Coglitore Cohen Cohler Cohner Colarossi Coldea Cole Collett 
@@ -598,7 +598,7 @@ my @SINGLE_WORDS = qw(
   Karavil Karayel Karl Karlaftis Karpouzelis Kasday Kasle Kasler Kastel
   Katz Kaushik Kay Kaye Kazik Kazmierczak Kendrick Kenny Kent 
   Keremida Kersey Khandelwal Kilvington King Kiran Kirilenko 
-  Kirin Kishan Kizikli Klinger Klofa Klukowski 
+  Kirin Kishan Kizikli Klimacki Klinger Klofa Klukowski 
   Knap Knight Kocak Koch Koistinen Koivula Kokkes Kokten Kolankaya 
   Kolata Kolesnik Kollnes Kondoch Koneru Kopecky Koppel
   Korbel Kordov Korkut Korth Kosaka Kosti Kotányi Koumetz Kovacs Kovachev 
@@ -609,10 +609,9 @@ my @SINGLE_WORDS = qw(
   Kwiatkowski Kwiecien Kyriakidou Kyrilenko
 
   Laan Labaere Lachowicz Laffineur Lagrange Lagree Lall Lambardi Lanciano 
-  Landry Lantaron Lanzarotti 
-  Larsen Larssen Lasserre Latteria Lauria Lavín Lavings Law Lawy Lazer
-  Lazkar
-  Lebatteux Lebel Lebowitz Leca Lechtman Lehtinen Lee Leenhardt Legras Lena 
+  Landry Lantaron Lanzarotti Larsen Larssen Lasserre Latteria Lauria 
+  Lavín Lavings Law Lawy Lazer Lazkar Lebatteux Lebel Lebowitz 
+  Leca Lechtman Lehtinen Lee Leenhardt Legras Leiro Lena 
   Lennart Leptirici Lerner Lesniewski Lester 
   Lev Levi Levinger Levin Levine Levski Lew Lewis Lhuissier
   Li Libman Lie Liggins Lilienstein Lillevik Lilley Limmen 
@@ -636,7 +635,7 @@ my @SINGLE_WORDS = qw(
   McManus McMahon McMullin McNamara
   Meckstroth Medugno Medved Mejane Mello Mendez Mendoza 
   Meltzer Merah Merapi Merblum Mersin Mesbur Messika Mestres 
-  Metselaar Meyer Meyers Meyouhas Mezei
+  Metselaar Meyer Meyers Meyouhas Mezei Michaud
   Mickiewicz Miles Milgrim Mill Millar Miller Mills Milne Milner 
   Mina Minahasa Miner Miozzi Mira Miroglio Mitra Mittelman 
   Mirali Miura Mizrak 
@@ -667,11 +666,11 @@ my @SINGLE_WORDS = qw(
   Peake Pedzinski Peirão Pekkinen Peksen Penfold Percario Peres
   Periasamy Persiani Petculescu Petrucci Pettersson
   Phelan Piasecki Piedra Piekarek Pietraszek Piganeau Pilon Piper
-  Pitt Platt Plaut Pollack Pollak Polowan Pont Popescu Popova Potier 
-  Potts Poulat Pownall Prescott Priano Proukakis Procter Prohorov
-  Prusa Pryor Puczynski Pszczola
+  Pitt Platt Plaut Poizat Pollack Pollak Polowan Pont Popescu 
+  Popova Potier Potts Poulat Pownall Prescott Priano Proukakis 
+  Procter Prohorov Prusa Pryor Puczynski Pszczola
 
-  Quail Quantin Quinn
+  Quail Quantin Queran Quinn
 
   Rabinowitz Radcliffe Radisic Ramondt Rankin Ranson Rao Rapp Rau Raulund 
   Ravenna Rayner Rees Reess Rehder Reid Rekstad Renouard Reps Revaz Rew 
@@ -703,14 +702,14 @@ my @SINGLE_WORDS = qw(
   Steinberg Sternberg Stevens Stewart Stienen
   Stoichkov Stoltz Stoppa Street Stretz Strul Strøm Stuart
   Sulgrove Sveindal Sveinsson Svendsen 
-  Sugino Summers Sundelin Sundsten Suresh Sutherlin Suwik
+  Sugino Summers Sundelin Sundsten Suñol Suresh Sutherlin Suwik
   Svindahl Syl Sylvan Symons Szalay Szigethy Szots Szymanowski Sørensen
 
   Tajima Takayama Tamburi Tamburrini Tan Tanaka Tarhan Tarsus Taylor 
   Tebha Tedd Teltscher Teodorescu Teramoto Terraneo Tesla Tez
   Thapa Thomsen Thompson Thomson Thoresen Thuillez Thurston 
   Ticha Timoteo Tishler Tislevoll Todd Toffier Toivonen Tokay Tosi 
-  Townsend Trabucchi Travis Troberg Tubiska Tucker Tudor Tulin Tully 
+  Townsend Trabucchi Travis Tritt Troberg Tubiska Tucker Tudor Tulin Tully 
   Tuomi Turner Tuszynski Tuwanakotta Tyradelli
 
   Ueland Uggeri Una Upmark Uskali Uskela Utter Uysal
@@ -724,8 +723,8 @@ my @SINGLE_WORDS = qw(
   Watkins Watts 
   Weed Weingarten Weingold Weinstein Weisinger Welland Werdelin 
   Westerlund Westheimer Westra Westwood Whibley Wigoder Wijma 
-  Wikstrom Wildavsky Wilkinson 
-  Willenken Williams Willis Wilson Wiltshire Wit Witek Wittes
+  Wikstrom Wildavsky Wilkinson Willenken Williams Willis Wilson 
+  Wiltshire Winciorek Wit Witek Wittes
   Wold Wolfarth Wolff Wolfson Wolpert Woodruff Woolsey
   Worm Wortel Wrang Wu Wyer
 
@@ -734,7 +733,7 @@ my @SINGLE_WORDS = qw(
   Yadlin Yamada Yarington Yates Yezerski Yilmaz Yoleri Yuen Yule
 
   Zabunoglu Zago Zagor Zagorin Zaleski Zanalda Zaninotti
-  Zarkesch Zatorski Zawada 
+  Zarkesch Zatorski Zawada Zawislak
   Zeeberg Zenari Zhan Zhao Zhong Zimmermann Zipovski Zobu Zollo Zolotov 
   Zorlu Zozis Zotos
 );
@@ -776,7 +775,7 @@ my %SINGLE_TYPOS =
   'Dr. Ashwani Mehta' => ['ashwani'],
   Dumbovich => ['dumbovic'],
   Eisenberg => ['einsenberg'],
-  'Waleed El Ahmady' => ['elahmady', 'elhamady'],
+  'Waleed El Ahmady' => ['elahmady', 'elhamady', 'el ahmady'],
   Failla => ['faill'],
   'Gabriel Chagas' => ['chagas'],
   Gartaganis => ['gartaginas'],
