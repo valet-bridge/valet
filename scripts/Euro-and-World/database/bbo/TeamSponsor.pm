@@ -19,6 +19,7 @@ my @MULTI_WORDS =
   '101 Fasteignasala',
   'Abadi Adimulia',
   'Adaro Energy',
+  'Advisor Revisjon Norge',
   'Agsar Paints',
   'AJ Diament',
   'Alfa Romeo',
@@ -430,8 +431,9 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  ABAX Abnegat Accenture Actavis AIA Akaylar Aklindo Allianz
-  Aquatrans Arboned Argento Arkas Arma Asindo Ayýntab
+  ABAX Abnegat Accenture Actavis Aerospace AIA Akaylar Akebono
+  Aklindo Allianz Aquatrans Arboned Argento Arkas Arma Artotec
+  Asindo Ayýntab
 
   Bajaj Banpu
 
@@ -470,13 +472,16 @@ my @SINGLE_WORDS = qw(
   Sagaplast Samtronic Scania Sevtopolis Shimuzu Shouchuang Signity 
   Skeljungur Solakoglu Sparisjóður Stiga Synective
 
-  Topeko Transearly Tryggingamiðstöðin Tsingtao
+  Tekser Termoavion Termochem Topeko Transearly Tricon Tridaya 
+  Triton Tryggingamiðstöðin Tsingtao Tundem Tyco Tzilis
 
-  Vilmar Vinabær Vito
+  Underberg Unibet
+
+  Velbazhd Velbujd Vilmar Vinabær Visoft Vito Voff
 
   Wellknit Wellwise Winbridge
 
-  Zhonghai
+  Zaraz Zhonghai Zolza Zweili
 );
 
 my %SINGLE_TYPOS =
@@ -501,6 +506,7 @@ my %SINGLE_TYPOS =
   'Indian Railways' => ['railways'],
   'Jilin Dingyuan' => ['jilindingyuan'],
   'Jin Rong' => ['jinrongjia'],
+  'Kosmos Delhi' => ['kosmos'],
   'Lianzhong Shi Jie' => ['lianzhongshijie'],
   'Málning hf' => ['málning'],
   'Meilin Qing Cheng' => ['meilinqingcheng'],
@@ -517,6 +523,7 @@ my %SINGLE_TYPOS =
   'Shree Cement' => ['shreecement'],
   'Sparisjóður' => ['sparisjodur'],
   'SPS Construction' => ['sps'],
+  'Team Audita' => ['teamaudita'],
   Tsingtao => ['tsingthao'],
   'Viego Regnskap' => ['viego'],
   Wellwise => ['wellwiss'],

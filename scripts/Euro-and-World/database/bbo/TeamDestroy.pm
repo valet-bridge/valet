@@ -29,7 +29,7 @@ my @SINGLE_WORDS = qw(
   KB KDK KRS
   Leaders
   Mr
-  npc
+  NONAME npc
   Opponent Opponents Others
   pc
   Tricks

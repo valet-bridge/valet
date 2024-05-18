@@ -63,6 +63,7 @@ my %MULTI_TYPOS =
   Kristiansand => ['kr.sand'],
   Nangang => ['nan gang'],
   Ningbo => ['ning bo'],
+  'Novi Sad' => ['nowe sady'],
   'Reggio Emilia' => ['r.e.', 'reggio e', 'r. emilia', 'reg. emilia'],
   Pudong => ['pu dong'],
   Qingdao => ['qing dao'],
@@ -89,22 +90,23 @@ my @SINGLE_WORDS = qw(
   Balcova Balikesir Balikpapan Ballerup Bamberg Bandung Bangalore 
   Bangkok Banjarmasin Baragnon Barcelona Batam Bath Batman Batu Bayrampaþa
   Begues Beijing Bekasi Belgrade Bengkalis Bengkulu Beograd 
-  Bergen Bergues Berlin 
-  Bhubaneshwar Bielefeld Bikaner Bitung Blitar Bodrum Bodø Bogazici 
-  Bogor Bologna Bonn Bordeaux Borivli Bormali Bornova Bozdogan
-  Braila Brandbu Brasilia Brasov Bremen Brisbane Bromölla Brotteaux 
-  Buca Bucharest Budapest Buitenhof Burghausen Bursa Burdur Bytom
+  Bergen Bergues Berlin Bhubaneshwar Bielefeld Bieniewo Bikaner 
+  Bitung Blitar Bodrum Bodø Bogazici Bogor Bologna Bonn Bordeaux 
+  Borivli Bormali Bornova Bozdogan Braila Brandbu Brasilia Brasov 
+  Bremen Brisbane Bromölla Brotteaux Buca Bucharest Budapest 
+  Buitenhof Burghausen Bursa Burdur Bytom
 
-  Caen Cairns Canakkale Canberra Caracas Catania Çayyolu 
-  Cerkezkoy Changzhou Chelsea Chengdu Chennai Chicago Chongqing 
-  Chumphon Cimahi Clichy Copenhagen Corlu Courseulles Coventry Cuenca
+  Caen Cairns Canakkale Canberra Caracas Cascais Catania Çayyolu 
+  Cerkezkoy Changzhou Chaville Chelsea Chengdu Chennai Chicago 
+  Chislehurst Chongqing Chumphon Cimahi Clichy Copenhagen Corlu 
+  Courseulles Coventry Cuenca
 
   Dalian Dalls Daqing Darmstadt Datca Debrecen Delft Delhi Denizli
-  Diyarbakir Dimitrovgrad Dobrich Dombivli Dongguan Düsseldorf
+  Derpt Diyarbakir Dimitrovgrad Dobrich Dombivli Dongguan Düsseldorf
 
   Eastbourne Edirne Ege Esbjerg Esenkent Eskisehir Essen Eyjafjallajokull
 
-  Farsund Fethiye Firenze Flekkefjord Frankfurt Førde
+  Farsund Farta Fethiye Firenze Flekkefjord Frankfurt Førde
 
   Garches Gdansk Gdynia Genoa Gent Glidice Gorontalo Gölcük Gresik 
   Guangzhou Guayaquil Gudbrandsdal Gyor
@@ -115,53 +117,56 @@ my @SINGLE_WORDS = qw(
 
   Iasi Iskenderun Isparta Istanbul Izmir
 
-  Jaipur Jakarta Jember Jessheim Jiamusi Jiangyou Jilin Jinchang 
-  Jincheng Jinjiang Jomtien
+  Jagodina Jaipur Jakarta Jember Jessheim Jiamusi Jiangyou Jilin 
+  Jinchang Jincheng Jinjiang Jomtien
 
-  Kadikoy Kadirli Kalisz Kalyani Kanpur Karachi Karlsruhe Kartal Karsiyaka
-  Kastamonu Katowice Kaylaka Kediri Ketsch Kiel Kielce Kiev Kirklarelý 
-  Kocaeli Kocamustafapasa Kolkata Konak Korwin Kosice Koycegiz Köln Krakow 
-  Kristiansand Kucukcekmece Kudus Kunshan Kuopio Kusadasi Küp Kütahya
-  Kverndalen
+  Kadikoy Kadirli Kalisz Kalyani Kanpur Karachi Karlsruhe Kartal 
+  Karsiyaka Kastamonu Katok Katowice Kaylaka Kediri Kesten Ketsch 
+  Kiel Kielce Kiev Kirkeby Kirklarelý Kocaeli Kocamustafapasa 
+  Kolkata Konak Korwin Kosice Koycegiz Köln Krakow Kristiansand 
+  Kucukcekmece Kudus Kunshan Kuopio Kusadasi Küp Kütahya Kverndalen
+  Kølabånn
 
-  Langkat Leiden Leszno Leuven Leverkusen Lhokseumawe Lille Lima 
-  Lincoln Lindesberg Ljubljana Lodz London Losari Lowicz Lozenets 
-  Lubin Lublin Lucignano Luleburgaz Lumajang
+  Langkat Lappee Leiden Lemvourgeio Leszno Leuven Leverkusen 
+  Lhokseumawe Lille Lima Lincoln Lindesberg Ljubljana Lodz London 
+  Losari Lowicz Lozenets Lubin Lublin Lucignano Luleburgaz Lumajang
 
-  Maastricht Madrid Makassar Malatya Malmö Manahasa Manado Manchester 
-  Manisa Mannheim Marbella Martapura Malatya Massy Mataram 
-  Medan Melbourne Mersin Meski Michalovce Midyat Milan Milas 
-  Minsk Miskolc Montpellier Moradabad Mumbai Munich Muratpasa
+  Maadi Maastricht Madrid Makassar Makus Malatya Malkia Malmö 
+  Manahasa Manado Manchester Manisa Mannheim Marbella Martapura 
+  Massy Mataram Männiku Medan Melbourne Mersin Meski Michalovce 
+  Midyat Milan Milas Minsk Miskolc Montpellier Moradabad Morud
+  Moudania Mumbai Munich Muratpasa
 
   Nagbagan Nagpur Nagykanizsa Namsos Nangang Nanning Napoli
   Narita Narlidere Narvik Nazilli Näsby Nijmegen Ningbo Niski 
   Norrbyskär Norrøna Nusantara Nürnberg Nyon Nærbø Næstved Nøtterøy
 
-  Odense Ogndal Oldenburg Olgiata Orhangazi Oslo Ottadalen Oxford Överum
+  Odense Ogndal Oldenburg Olgiata Orhangazi Oslo Ottadalen Otepää
+  Oxford Överum
 
-  Padang Padova Palembang Palermo Palma Palu Pamukkale Panzhihua Pariaman 
-  Parioli Paris Pärnu
-  Pekanbaru Pelotas Pernik Perth Pesaro Pescara Posillipo Poznan
-  Pula
+  Padang Padova Palembang Palermo Palma Palu Pamukkale Pancevo
+  Panzhihua Pariaman Parioli Paris Pärnu Pasham Pattaya Pekanbaru 
+  Pelotas Pernik Perth Perula Pesaro Pescara Peterfield Piloni
+  Pinarbasi Polonezkoy Poncol Popovo Posillipo Poznan Pula
 
   Qiaoxie Qingdao
 
-  Radkov Rakvere Randers Rayong Reims Riga Rijeka Rimini Rome
+  Radkov Rakvere Randers Rayong Recoleta Reims Riga Rijeka Rimini Rome
   Pisa Pleven Plovdiv Pontianak Potsdam Prague Pudong Pula Pune Puri
 
   Rajasthan Rødovre
 
   Saarbrücken Sakarya Salerno Samarinda Samsun Sandefjord 
   Santiago Sanya Sarniak Sarpsborg Secunderabad Seferihisar Semarang 
-  Senayan Serang Shanghai Shaoguan Shenyang 
-  Shenzhen Shihua Sibiu Sidoarjo Siena Singsås Skara Skien Skopje 
-  Slagelse Sleman Sliven Sofia Solok Sortland Söke Split 
-  Stavanger Steinkjer Storsjöbygden Stureby Stuttgart Sunndalsøra 
-  Surabaya Suzhou Sydney Szeged Sørreisa
+  Senayan Serang Serdika Shanghai Shaoguan Shenyang 
+  Shenzhen Shihua Sibiu Sidoarjo Siena Sindi Singsås Skara Skien Skopje 
+  Slagelse Slaska Sleman Sliven Sofia Solok Sortland Söke Split 
+  Sredec Stavanger Steinkjer Storsjöbygden Stureby Stuttgart 
+  Sukma Sunndalsøra Surabaya Suzhou Sydney Szeged Sørreisa
 
   Täfteå Taicang Taihu Tainan Taizhou Takayama Tallinn Targoviste 
   Tarnów Täby Tekýrdag Temuco Tequendama Thessaloniki Tianjin 
-  Tianya Timisoara Tingling Tire Tokyo Torino Toulouse Trieste 
+  Tianya Timisoara Tingling Tire Tokyo Tomohon Torino Toulouse Trieste 
   Trondheim Tromsø
 
   Uccle Udaipur Unia Unaós Uppsala Usak Utrecht
@@ -229,11 +234,13 @@ my %SINGLE_TYPOS =
   Milan => ['milano'],
   Milas => ['minas'],
   'Monte Carlo' => ['montecarlo'],
+  Moudania => ['moydania'],
   Mumbai => ['mum'],
   Munich => ['münchen'],
   Napoli => ['naples'],
   Narlidere => ['narlýdere'],
   Norrbyskär => ['norrbyskar'],
+  'Novi Sad' => ['nowewsady'],
   Olgiata => ['ola'],
   Pamukkale => ['pamuk'],
   Panzhihua => ['panzhihuabc'],
@@ -255,6 +262,7 @@ my %SINGLE_TYPOS =
   Thessaloniki => ['salonica'],
   Tromsø => ['tromso', 'tromsoe'],
   Trondheim => ['trondhei'],
+  Udaipir => ['udaypur'],
   Vienna => ['wien'],
   Warsaw => ['warsow'],
   Wroclaw => ['wr'],

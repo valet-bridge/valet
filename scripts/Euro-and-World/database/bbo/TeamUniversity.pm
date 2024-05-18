@@ -142,6 +142,7 @@ my %SINGLE_TYPOS =
   'National Taiwan University' => ['ntu'], # Also Nanyang Tech. Uni...
   'National Tsing Hua University' => ['nthu'],
   'Northwestern University' => ['northwestern'],
+  'Osmangazi University' => ['osmangazi'],
   'Soochow University' => ['scu'],
   'University of California at Berkeley' => ['berkeley'],
   'University of Wroclaw' => ['pwr'],

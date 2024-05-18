@@ -37,6 +37,7 @@ my @MULTI_WORDS =
   'Lower Silesia',
   'Midt Trøndelag',
   'Møre Romsdal',
+  'Nakhon Nayok',
   'New Caledonia',
   'New South Wales',
   'Nord-Norge Omegn',
@@ -122,10 +123,11 @@ my @SINGLE_WORDS = qw(
   Gansu Global Gorontalo Guangdong Guizhou Gujarat
   Hainan Haugaland Hebei Huangshi Hubei Hunan
   Jharkhand Jiangsu Jilin
-  Kansai Karimun Karnataka Kawanua Kedungwaru Kepri Kerala
+  Kansai Karimun Karnataka Kawanua Kedungwaru Kepri Kerala Krabi
   Liaoning Lombok Lumajang
-  Maharashtra Marmara Midtsjælland Mjøsa
-  Norden Norrland
+  Maharashtra Marmara Matopos Mercosur Midtsjælland Mjøsa 
+  Muallim Munzur Mysia
+  Nordafjells Norden Norrland
   Queensland
   Oberloiben
   Patagonia Punjab
@@ -148,6 +150,7 @@ my %SINGLE_TYPOS =
   'Kepulauan Riau' => ['riau', 'kepri'],
   'Midt Trøndelag' => ['midttrøndelag'],
   'Møre Romsdal' => ['moreromsdal'],
+  'Nakhon Nayok' => ['nakhonnayok'],
   'New South Wales' => ['nsw'],
   Patagonia => ['patagonya'],
   Queensland => ['qld'],

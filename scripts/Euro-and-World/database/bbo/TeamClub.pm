@@ -73,6 +73,7 @@ my @MULTI_WORDS =
   'Fjends BK',
   'Førde BK',
   'Gabrial UI',
+  'Geyve Sports',
   'Grant Thornton',
   'Greve Strand',
   'Hanseatic Hamburg BC',
@@ -240,13 +241,13 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   Acol Airmadidi Akceþme Amisos Asenovec Auguri
   Bonsist Botev
-  Debrecen Dragao
+  Debrecen Dragao Drienerlo
   Fanfulla Fenerbahce Fosnavåg
-  Galatasaray
+  Galata Galatasaray 
   Hercules Hoppklubbene Hordaland Hosgoru Houchetou
   Jeofizik
   Karagümrük Karlsruher Kløverknekt 
-  Lavec Laksamana
+  Lavec Laksamana LÜKSAD
   Locomotiva
   Miskolc Mo Mragowia
   Qizhong
@@ -254,6 +255,7 @@ my @SINGLE_WORDS = qw(
   Sakura Solli Spojnia
   TGR Tofas Trifolium
   Uddevalla Uppsalabridgen
+  Vestri
   Østerdal
   Örebridgen
   Zmrzlina
@@ -278,11 +280,13 @@ my %SINGLE_TYPOS =
   'El-Karma' => ['karma'],
   'Fjends BK' => ['fjends'],
   'Gabrial UI' => ['gabrial'],
+  'Geyve Sports' => ['geyvespor'],
   'Hok Studiecentrum' => ['hok'],
   Hordaland => ['hordland'],
   Hosgoru => ['hoþgörü'],
   Houchetou => ['huochetou'],
   'Izmir BSB' => ['izmir.b.b.'],
+  'Jin Ying' => ['jinying'],
   Karagümrük => ['karagumruk'],
   Kløverknekt => ['kloverknekt'],
   Locomotiva => ['loco'],
@@ -298,6 +302,7 @@ my %SINGLE_TYPOS =
   'Tennis Club Parioli' => ['tcp'],
   TGR => ['tgrs'],
   Uppsalabridgen => ['ippsalabridgen'],
+  'Witte Huis' => ['whitehouse'],
   Zmrzlina => ['zmerzlina'],
   Örebridgen => ['Örebridge', 'orebridgen'],
   'Østfold og Follo' => ['ostfoldfollo']

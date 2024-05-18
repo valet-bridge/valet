@@ -333,6 +333,7 @@ my @MULTI_WORDS =
   'Lawrence Allstars',
   'Lawrence of Arabia',
   'La Vista',
+  'Last Arrival',
   'Late S.S. Jain',
   'Le Colonial',
   'Leromain boys',
@@ -410,6 +411,7 @@ my @MULTI_WORDS =
   'Papa & Rabbits',
   'Papa and Rabids',
   'Papas & Puppies',
+  'Paris Match',
   'Park Bridge',
   'Pearl of the Orient',
   'Piger og drenger',
@@ -761,39 +763,56 @@ my @SINGLE_WORDS = qw(
    FOS Foundation Franz Frenemies Friends Frirond Francophones Freak 
    Frivolt Fundacja
 
-   Gabrisem Galaxy Galim Gamma Garry Gentle Geysir GloryGlory 
-   Giants Gjesp Goldcat Grand Gudok Guests Gunsmoke
+   Gabrisem Galaxy Galim Gamma Garry Gelim Gentle Geriatrix Geysir 
+   GloryGlory Giants Gjesp Goldcat Gosho Grand Guayacos Gudok 
+   Guests Gulce Gulebjorn Gullberg Gunsmoke Gürsel
 
-   Hansa Harlequins Hayet Hästpojkarna Helgeness HengSha HeSa Holders 
-   Hollywood Honeymoon Hurra
+   Hangarounds Hansa Harlequins Hawks Hayet Hästpojkarna Helgeness 
+   Heliopolis HengSha HERZdame HeSa Hey Hilda Hobbits Holders Holifera
+   Hollywood Honeymoon Hopfenkönig Hridhaan Huispaus Hurra
 
-   IBE Ijseide IMAN Imponderables Iris Israbel Isrmany
+   IBE Ida Ijseide Ikarus IMAN Imanual Imponderables Instructor
+   Invicta Iris Israbel Isrmany IVAR
 
-   Jagg Jelena JoJo Journalists Juice Juls Juniorklubben Jupiter 
-   Justplay JuuTools
+   Jagg Jaiganesh Janko Javel Jelena Jernbaneverket Jessica Jóannes
+   JoJo Joker Journalists Juanval Juice Juls Juniorklubben Jupiter 
+   Justplay Justyna Justynka JuubilarJuuTools
 
-   Kamikaze Kasiyahan Kenji Kinga Kingkong Kings Klasik KMC Kompisarna 
-   Konga Koukouselis Kratos Kuhmilch
+   Kaardivägi Kalkarn Kamelåså Kamikaze Kangaroo Kanin Karin Kasiyahan 
+   Kasty Katipunan Kenji Kenlong Kerasus Kibe Kinga Kingkong Kings 
+   KISS Kjelskos Klasik KMC Knösel Kokoelma Kolbasti Komleposs
+   Kompisarna Konga Korsikalý Koukouselis Kratos Kris Kriston
+   Krisztina Ksenia Kuglana Kuhmilch
 
-   Lahjattomat Laplanders Lasse LatSwe Lazy Lebron Liggeunderlaget Lira 
-   Lirarna Liverbird Löparn
+   Lahjattomat Langy Laplanders Laplas Lasse Lataka Lateria LatSwe 
+   Lazy Lebensohl Lebron Lema Lemanus Liggeunderlaget Lillebaluba Lions
+   Ljónin Lira Lirarna Liverbird LNWers Lolly Loloc Lowel Löparn Løwene
 
-   Malmölaget Marianne Masters Matrix Mats Mikke Miguel Milady
-   Mirage Moritz Movember Munawar Måsen
+   Madhav Maestroi Magister Maharaja Majority Malmölaget Manashda
+   Margitta Marianne Marosamitawa Mars Marynarz Masdjävlar Masters 
+   Matilde Matrix Mats Matujona Mayamira Mercury Mesna Midas Mihai
+   Mikke Miguel Milady Mirage Mismatch Mjøskameratne Moritz Movember 
+   Mölnlycke Munawar Myoni Måsen
 
-   Naturalists Neduk Nemesis Neverclaim Nightingale Nikitopoulos
-   Niko Nikotiimi NMRT Norsu Nula
+   Narbisk Narre Natalia Naturalists Neduk Nemesis Neverclaim 
+   Nightingale Nikita Nikitopoulos Niko Nikotiimi Nislije NMRT 
+   Noctis Noralia Norsu NTiosagutta Nula
 
-   Octopussy Okay Olrudbanden Olsenbanden Omega Orakulas 
-   Orthodoxi Orthodox Outsiders Overivrig Oyzum
+   Obezit Octopussy Okay Olena Olrudbanden Olsenbanden Omega Onyx
+   Oprosti Orakulas Orthodoxi Orthodox OSMO Otters Outsiders 
+   Overivrig Oyzum Ozbiljni
 
-   Pasanci Passé Paulette Pegasus Perjuangan Pia Polirish Pontiac 
-   Potteplante Preempters Pretendents Prijatelj Pusten Pyton
+   Pacers Palukas Panteros Paradigma Pasanci Passé Patron Paulette 
+   Paulina Paulistas Pegasus Perestrojka Perjuangan Petra Pia Piryoli 
+   Piter Pjäxa Pleyada Plia Pojat Polirish Pompapompa Pontiac 
+   Potlimit Potteplante Preempters Pretendents Prijatelj Proteus 
+   Pusten Pyon Pyton Påskevennene
 
-   Quantum Quasar
+   Quantum Quasar Quattro Quinze
 
-   Rampage Raskasammen Real Reklamtrion Ribitas Robertinho
-   Robocop Royston
+   Radhey Rafael Raifles Rampage Raskasammen Real Recaptan Regeldur
+   Reklamtrion Reloaded Ribitas Robertinho Robi Robocop Rovers 
+   Royston Rozle Rylai Rylal
 
    Sabina Sabres Saga Sakurai Saladmasters Salokin Salvo Sansouci
    SANY Sapphire Sara Sarp Saturn Scapros Scientists Secure Senaattorit 
@@ -862,15 +881,22 @@ my %SINGLE_TYPOS =
   'Green Eyes' => ['greeneyes'],
   Gunsmoke => ['gunnsmoke'],
   Hästpojkarna => ['hastpojkarna'],
+  Hridhaan => ['hridhan'],
+  Imponderables => ['impoderables'],
   'India Blues' => ['indiablues'],
   'Jamm & Co' => ['jamm'],
   'Joy Division' => ['joydivision'],
   Juls => ['julst'],
+  'Last Arrival' => ['lastarrival'],
   'Late S.S. Jain' => ['lssjain'],
   'Loy Krathong' => ['longkatong'],
   Löparn => ['loparn'],
+  Maharaja => ['maharaj'],
   'Meng Qing Xin' => ['mengqingxin'],
-  'Naturalists' => ['nature'],
+  Mismatch => ['missmatch'],
+  Naturalists => ['nature'],
+  'Paris Match' => ['parismatch', 'parimatch'],
+  Paulistas => ['paulistanas'],
   'Pontiac 7' => ['pontiac7'],
   Preempters => ['preemptors'],
   "President's Team" => ['president', 'presidents'],
