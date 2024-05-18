@@ -72,43 +72,24 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Andorra Angora Argentina Australia Austria 
-  Brazil 
-  Bulgaria
-  Canada 
-  Colombia 
-  Croatia 
+  Belarus Brazil Bulgaria
+  Canada Colombia Croatia 
   Denmark 
-  England
-  Estonia 
+  Egypt England Estonia 
   Finland 
-  Germany 
-  Guadeloupe
-  Guernsey
+  Germany Guadeloupe Guernsey
   Hungary 
-  Ireland 
-  Italy 
-  Israel 
-  Jordan
+  Ireland Israel Italy
+  Jersey Jordan
   Latvia 
-  Luxembourg 
-  Madagascar 
-  Malta
-  Malaysia
-  Monaco 
-  Netherlands 
-  Norway 
-  Pakistan
-  Palestine 
-  Philippines 
-  Poland 
-  Reunion 
-  Romania
-  Scotland
-  Slovakia
-  Switzerland 
-  Tunisia
-  Turkey
-  USA
+  Lichtenstein Luxembourg 
+  Madagascar Malta Malaysia Monaco 
+  Netherlands Norway 
+  Pakistan Palestine Philippines Poland 
+  Reunion Romania
+  Scotland Slovakia Switzerland 
+  Tunisia Turkey
+  Uganda USA
   Wales
 );
 
@@ -117,20 +98,22 @@ my %SINGLE_TYPOS =
   Argentina => ['argenting', 'argentýna'],
   Australia => ['austrlia', 'oz'],
   Austria => ['austra'],
+  Belarus => ['bielarus'],
   Brazil => ['brasil'],
-  Bulgaria => ['bg'],
+  Bulgaria => ['bg', 'bulgarya'],
   Canada => ['kanada'],
   'Czech Republic' => ['czr', 'czech republic.'],
   'Chinese Taipei' => ['taipei'],
   Colombia => ['columbia'],
   Croatia => ['croatie'],
-  Denmark => ['danmark', 'danemark', 'denmarrk', 'den', 'dk'],
-  Egypt => ['egy'],
+  Denmark => ['danmark', 'danemark', 'denmarrk', 'den', 'dk',
+    'denmark*'],
+  Egypt => ['egy', 'egytp'],
   England => ['eng'],
   Estonia => ['estonie', 'est'],
   Finland => ['finnland'],
   France => ['fra', 'fnc', 'frandce'],
-  'French Guyana' => ['guyana'],
+  'French Guyana' => ['guyana', 'guayana', 'guayana'],
   Germany => ['deutschland'],
   Guadeloupe => ['guadelupe'],
   'Hong Kong' => ['hk', 'hongkong'],
@@ -138,7 +121,7 @@ my %SINGLE_TYPOS =
   Iceland => ['ice'],
   Indonesia => ['timnas', 'ind'],
   Ireland => ['roireland', 'irelnd', 'irelsnd', 'irlande',
-    'irelend', 'irelena', 'ire'],
+    'irelend', 'irelena', 'ire', 'eire'],
   Italy => ['italia'],
   Israel => ['isreal', 'israil', 'isarel', 'israël'],
   Jordan => ['jor'],
@@ -159,12 +142,14 @@ my %SINGLE_TYPOS =
   Reunion => ['réunion'],
   Romania => ['rumania'],
   'Serbia and Montenegro' => ['serbia&mon'],
+  Scotland => ['scotlsnd'],
   'South Korea' => ['korea'],
   'Sri Lanka' => ['srilanka'],
   Sweden => ['swe'],
   Switzerland => ['suitzerland', 'switserland'],
   Tunisia => ['tunisie'],
-  Turkey => ['tur']
+  Turkey => ['tur'],
+  'United Kingdom' => ['uk']
 );
 
 

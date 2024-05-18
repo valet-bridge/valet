@@ -45,6 +45,7 @@ my @MULTI_WORDS =
   'North Celebes',
   'North Sulawesi',
   'Northern Gauteng',
+  'Samut Prakan',
   'South America',
   'South Australia',
   'South Celebes',
@@ -55,6 +56,7 @@ my @MULTI_WORDS =
   'South Sulawesi',
   'South Sumatra',
   'South Sweden',
+  'Suphan Buri',
   'Taihu Lake',
   'Tamil Nadu',
   'Troms og Ofoten',
@@ -113,23 +115,23 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Angkaew Anhui Ayrshire
-  Bali Banten Bornholm Buskerud
-  Corsica
+  Bali Banten Belitung Bornholm Buskerud
+  Cappadocia Corsica
   Eurasia Europe
   Florida
-  Gansu Global Gorontalo Guangdong Gujarat
+  Gansu Global Gorontalo Guangdong Guizhou Gujarat
   Hainan Haugaland Hebei Huangshi Hubei Hunan
-  Jiangsu Jilin
+  Jharkhand Jiangsu Jilin
   Kansai Karimun Karnataka Kawanua Kedungwaru Kepri Kerala
   Liaoning Lombok Lumajang
   Maharashtra Marmara Midtsjælland Mjøsa
   Norden Norrland
   Queensland
   Oberloiben
-  Punjab
-  Rajputana Ratchaburi Rogaland Rosfjord
-  Salten Sichuan
-  Telemark
+  Patagonia Punjab
+  Rajputana Ratchaburi Rogaland Rosfjord 
+  Salten Shanxi Siberia Sichuan Silesia Silla Skåne Sydvest
+  Tasmania Telemark Tigris
   Uttarakhand
   Victoria
   Waikato
@@ -140,14 +142,18 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   'Australian Central Territory' => ['act'],
+  Cappadocia => ['kapadokya'],
   Eurasia => ['avrasya'],
   Kansai => ['kinki'],
   'Kepulauan Riau' => ['riau', 'kepri'],
   'Midt Trøndelag' => ['midttrøndelag'],
   'Møre Romsdal' => ['moreromsdal'],
   'New South Wales' => ['nsw'],
+  Patagonia => ['patagonya'],
   Queensland => ['qld'],
+  'Samut Prakan' => ['samutprakan'],
   'South Australia' => ['sa'],
+  'Suphan Buri' => ['suphanburi'],
   'Tamil Nadu' => ['tamilnadu'],
   Uttarakhand => ['uttaranchal'],
   'Victoria' => ['vic'],

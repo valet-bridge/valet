@@ -674,7 +674,8 @@ my %MULTI_TYPOS =
   'Kent Romeos venner' => ['kent romeos veenner'],
   'Kick Back' => ['kick-back'],
   'KM 23' => ['km23'],
-  'Late S.S. Jain' => ['late ss jain', 'lss jain', 'l s s jain'],
+  'Late S.S. Jain' => ['late ss jain', 'lss jain', 'l s s jain',
+     'late sssk jain'],
   'Lawrence of Arabia' => ['lawrence of arab'],
   'La Vista' => ['la vista team'],
   'Leromain boys' => ["leroumain's boys"],
@@ -725,30 +726,40 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-   2Q2K 6L
-   Aces Acolvik Adventure Aditya Agressor Ahmetizm Ahornet 
-   Akenobo Akinom Alfredo Alioth Allam Alliansen Allstars Alpha 
-   Amrapali Amul Aurora Alternativlos Ambassador Andromeda Andrzejki 
-   Anglers Anglophones Appellkameratene Arangan Armani Arnab 
-   Arno Aspe Asparagus Augerne AUTBUL Autostrada Avagard Avalanche Aytalus 
-   Azores Azure
+   2Q2K 6L 10CC 7heart
+   Aces Acolvik Adventure Aditya Agamemnon Agressor Ahmetizm Ahornet 
+   Akenobo Akinom Alertplus Alfredo Ali Alioth Allam Alliansen Allstars 
+   Alpha Amrapali Amul Aurora Alternativlos Ambassador Andromeda Anglian
+   Andrzejki Anglers Anglophones Anna Anuj Apples Appellkameratene 
+   Aquarius Arangan Archies Aristos Armani Arnab Arno Aspe Asparagus 
+   Atom Augerne AUTBUL AUTHOL Autostrada Avagard Avalanche Avatar
+   Aytalus Azores Azure
 
-   Balti Bananasplit Barracuda Bauhinia Ben Beniaminek Bhinneka 
-   Blondie Blueberry Boek BOVE Breno Bridgebutikken 
-   Bridgeministeriet Brudarna Bubba Buddies Bunnies Bulldozer
+   Badger Badminton Balti Bananasplit Baneet Barracuda Baryton Bato
+   Bauhinia Begigütje Ben Beniaminek Berik Bhinneka Bilal Bingbang Binkie
+   Biriceri Blackwood Blandat Bling Blondie Blueberry Boek Bolero
+   Boogies Boomz Boriana Borko BOVE Breno Bricklayer Bridgebutikken 
+   Bridgekameratene Bridgeministeriet Brudarna Buaigh Bubba Bubu Buddies 
+   Bumerangas Bunnies Bulldozer
 
-   Cabriole Cardtossers Censored Challengers Chicks Claim Coaches
-   Cogito Commandos Contact Contra Corner Counterstrike Crash Cremaster
+   Cabriole Cancan Cardtossers Cargo Cartoon Casuals Cathy Cavelieri
+   Censored Center Challengers Changes Chicks Chokladmåndag Claim Coaches
+   Cogito Colorado Commandos Comrade Concurrrent Conie Contact Contra 
+   Corner Counterstrike Couples Crash Cremaster Czteropak
 
-   Dallas DanFar Danger Daniel Debonecos Debutantes Deceptive 
-   DenmarS Deppo Dialect Diego Dilligaf Dingyuan Dinos Dragon DSM Duros 
-   Dvizhenie Dyret
+   Dada Dadya Dallas DanEng DanFar Danger Daniel Debonecos Debutantes 
+   Deceptive DenmarS Deppo Desperados Dialect Diana Dido Diego Dieter
+   Dilligaf Dingyuan Dinos Doki Donjulio Dracula Dragon DSM Duros 
+   Dusteforbundet Dvizhenie Dyret
 
-   Eagles Ekoap Elektrownia Eliza Ellen Emre Enigma Epsilon Eric Everest
-   Ewa
+   Eagles Edi Eikka Ekoap Elektrownia Eliminator Eliza Ellen Emerald 
+   Emre Engelen Engineers Enigma Epsilon Equator Era Eric Erikas 
+   Esperanza Everest Evil Ewa
 
-   Fakel Farmen Farmers Fenghuang Fenix Filosofene Filur Fisk Formidables 
-   Formosa Fortuna FOS Frirond Francophones Freak Frivolt
+   Fakel Fantasia Fant4stic Farmen Farmers Felix Fenghuang Fenix Ferfi
+   Feszek Filosofene Filur Fisk Forfot Formidables Formosa Fortuna 
+   FOS Foundation Franz Frenemies Friends Frirond Francophones Freak 
+   Frivolt Fundacja
 
    Gabrisem Galaxy Galim Gamma Garry Gentle Geysir GloryGlory 
    Giants Gjesp Goldcat Grand Gudok Guests Gunsmoke
@@ -784,28 +795,40 @@ my @SINGLE_WORDS = qw(
    Rampage Raskasammen Real Reklamtrion Ribitas Robertinho
    Robocop Royston
 
-   Sabres Saga Sakurai Saladmasters Salokin SANY Sapphire Sarp
-   Scientists Senaattorit Sherdils Shona Sigma Silbersee Silverfox 
-   Simple Simpleksas Sindbad Sirius Sivves Sjøsamen Skalman Skip 
-   Skitur Skotii Slappfisker Soho Spartans Spring Stampede Star Starmen 
-   Starsbridge Statusquo Storeslemmen Strategen Studentene 
-   Stålfarfar Sue SweDanes SweNor Syttisju Sømnakameratene
+   Sabina Sabres Saga Sakurai Saladmasters Salokin Salvo Sansouci
+   SANY Sapphire Sara Sarp Saturn Scapros Scientists Secure Senaattorit 
+   Senator Shavaz Sherdils Shona Shrikant Siddheshwar Sigdonnemann Sigma 
+   Sigrid Silbersee Silverfox Simonetta Simple Simpleksas Sindbad 
+   Sirius Sivves Siyabend Sjøsamen Skalman Skaronga Skip Skitur 
+   Skotii Slappfisker Slostria Slufsa Småveitjan Snapper Snipers
+   Soho Sonata Spartans Specialist Spektr Spring Stafana Stampede 
+   Star Starmen Starsbridge Statusquo Stayman Steinlager Steliana
+   Stifinnern Storeslemmen Strategen Streamline Studentene 
+   Stålfarfar Sucharek Sue Sunshine Svetla SweDanes SweNor 
+   Syttisju Sømnakameratene Såpeopera
 
-   Tally Tannlegene Task Titans Tohundre Tongxin Torpedo 
-   Totani Totoro Trøndermøringen Tsunami Tulip Tvist
+   Tadeu Take Takeoff Takk Takým Tally Tamae Tannlegene Task 
+   Tempo Tibetmunkene Tigers Titanik Titans Todremor Tohundre Tolerant
+   Tongxin Torpedo Tosca Totani Totoro Tömör Troll Trøndermøringen 
+   Tsunami Tulip Tulipano Turuncu Tushar Tutu Tvist
 
-   Úlfurinn Ulvene Underdogs Ungdomslaget
+   Udarnik Ugh Úlfurinn Ulvene Underdogs Unexpected Ungdomslaget
 
-   Valen Varoslu Vega* Veegees Veggen Victory Vietcong Vilttiketju 
-   Vintage Vürst Vytas
+   Vakrandi Valen Varoslu Vasallid Västanfläkten Vega* Veegees 
+   Veggen Vibrant Vicho Vicky Victor Victory Vietcong Villmarksgutta
+   Vilttiketju Vilttiukko Viña Vintage Virginia Vivi Vucko Vurgun
+   Vürst Vytas
 
-   Wael Wala Waldi WDP Winkiboy
+   Wael Wala Waldi Walpurga WDP Winatalya Winkiboy Winterfell Wizards
 
    Xatzopoulos Xtrouble
 
-   Ybs Yansimasiz Yelena Yogakshema Yokozuna
+   Ybs Yaðmur Yamata Yansimasiz Yelena Yogakshema Yokozuna
 
-   Zeerob Zugzwang
+   Zeerob Zeyno Ziggy Zimmkonis Zlatan Zombi Zorro Zozoura Zugzwang
+   Zurzits Zvanger
+
+   Øssur
 );
 
 my %SINGLE_TYPOS =
@@ -823,10 +846,16 @@ my %SINGLE_TYPOS =
   'Atomic Bridge' => ['atomic'],
   Barracuda => ['barakuda', 'baracuda'],
   Bhinneka => ['bhineka', 'bhinneke'],
+  Bilal => ['balil'],
+  Boriana => ['boryana'],
+  Buaigh => ['buaijh'],
   Bulldozer => ['buldozer'],
   Dilligaf => ['dilligraf'],
   Dingyuan => ['dinyuan'],
   'England Swings' => ['englandswings'],
+  Erikas => ['ericas'],
+  Fant4stic => ['fant4stc'],
+  Feszek => ['Fészek'],
   Formidables => ['formidable', 'formidabble', 'formidabels',
     'formiddable', 'formiddables', 'formadibles', 'formadeble',
     'formadables', 'fromidables'],
@@ -837,6 +866,7 @@ my %SINGLE_TYPOS =
   'Jamm & Co' => ['jamm'],
   'Joy Division' => ['joydivision'],
   Juls => ['julst'],
+  'Late S.S. Jain' => ['lssjain'],
   'Loy Krathong' => ['longkatong'],
   Löparn => ['loparn'],
   'Meng Qing Xin' => ['mengqingxin'],
@@ -847,12 +877,16 @@ my %SINGLE_TYPOS =
   Pretendents => ['pretendentas'],
   Quantum => ['qantum'],
   Scientists => ['science'],
+  Shrikant => ['srikant'],
+  Sigdonnemann => ['sigdonneman'],
   Skotii => ['skoti'],
   Spartans => ['spartan'],
   'Stall Dieden' => ['dieden'],
   Starmen => ['starman'],
+  'Stone Cutters' => ['stonecutters'],
   Strategen => ['stratagen'],
   'Syabas Gabrial UI' => ['syabas'],
+  Syttisju => ['sytti7'],
   'Texan Aces' => ['texanaces'],
   Titans => ['titan'],
   'Vegetable Hotpot' => ['vegetable'],
@@ -861,7 +895,8 @@ my %SINGLE_TYPOS =
   'Wild Griffins' => ['wildgriffin', 'wildgriffins'],
   'Winkiboy' => ['winkyboy'],
   'Xin Yuan' => ['xinyuan'],
-  'YOI Returns' => ['yoi']
+  'YOI Returns' => ['yoi'],
+  Zvanger => ['zvunger']
 
 );
 

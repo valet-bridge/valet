@@ -81,7 +81,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Aabenraa Aalborg Adalar Adana Adelaide Agresar Ahmedabad Akaylar
-  Akçeşme Akdeniz Akhisar Akkad Alexandria Aliaga Allahabad Altay 
+  Akçeşme Akdeniz Akhisar Akkad Alexandria Albena Aliaga Allahabad Altay 
   Altrincham Alytus Amanora Amarillo Ambon Amsterdam Anadolu Ankara 
   Annecy Antalya Antony Antwerpen Arendal Arjasa Asenovgrad Assis 
   Atakoy Atakum Athens Auckland Augsburg Avren Ayacucho Ayan Ayvalik
@@ -92,8 +92,8 @@ my @SINGLE_WORDS = qw(
   Bergen Bergues Berlin 
   Bhubaneshwar Bielefeld Bikaner Bitung Blitar Bodrum Bodø Bogazici 
   Bogor Bologna Bonn Bordeaux Borivli Bormali Bornova Bozdogan
-  Braila Brasov Bremen Brisbane Brotteaux 
-  Buca Bucharest Budapest Burghausen Bursa Burdur Bytom
+  Braila Brandbu Brasilia Brasov Bremen Brisbane Bromölla Brotteaux 
+  Buca Bucharest Budapest Buitenhof Burghausen Bursa Burdur Bytom
 
   Caen Cairns Canakkale Canberra Caracas Catania Çayyolu 
   Cerkezkoy Changzhou Chelsea Chengdu Chennai Chicago Chongqing 
@@ -102,16 +102,16 @@ my @SINGLE_WORDS = qw(
   Dalian Dalls Daqing Darmstadt Datca Debrecen Delft Delhi Denizli
   Diyarbakir Dimitrovgrad Dobrich Dombivli Dongguan Düsseldorf
 
-  Eastbourne Edirne Ege Esbjerg Eskisehir Essen
+  Eastbourne Edirne Ege Esbjerg Esenkent Eskisehir Essen Eyjafjallajokull
 
-  Fethiye Firenze Flekkefjord Frankfurt Førde
+  Farsund Fethiye Firenze Flekkefjord Frankfurt Førde
 
   Garches Gdansk Gdynia Genoa Gent Glidice Gorontalo Gölcük Gresik 
   Guangzhou Guayaquil Gudbrandsdal Gyor
 
   Haderslev Hamburg Hangzhou Hannover Harplinge Harstad 
   Hegyvidék Heimdal Helsinki Herning Hillerød
-  Hornbæk Hosguru Huangshi Hyderabad
+  Hornbæk Hosguru Huangshi Huldretråkket Hyderabad
 
   Iasi Iskenderun Isparta Istanbul Izmir
 
@@ -171,9 +171,9 @@ my @SINGLE_WORDS = qw(
 
   Xiamen Xinghua Xinyi
 
-  Warsaw Wellington Worcester Wratislavia Wroclaw Wuhan
+  Warsaw Wellington Worcester Wratislavia Wróble Wroclaw Wuhan
 
-  Yalikavak Yambol Yarimada Yibin Yildirim Yokohama Yogyakarta
+  Yalikavak Yambol Yarimada Yenisehir Yibin Yildirim Yokohama Yogyakarta
 
   Zagreb Zhenjiang Zhongshan Zhuzhou Zigong Zurich Zyrardow
 
@@ -228,6 +228,7 @@ my %SINGLE_TYPOS =
   Mersin => ['mersýn'],
   Milan => ['milano'],
   Milas => ['minas'],
+  'Monte Carlo' => ['montecarlo'],
   Mumbai => ['mum'],
   Munich => ['münchen'],
   Napoli => ['naples'],
@@ -243,9 +244,10 @@ my %SINGLE_TYPOS =
   'Reggio Emilia' => ['re'],
   Rome => ['roma'],
   Saarbrücken => ['saarbruecken'],
+  Singsås => ['singsaas'],
   Storsjöbygden => ['storsjöbygdens'],
   Söke => ['soke'],
-  Sunndalsøra => ['sundalsora'],
+  Sunndalsøra => ['sundalsora',' sunndalsora'],
   Targoviste => ['tg'],
   Tarnów => ['tarnow'],
   Täfteå => ['taftea'],

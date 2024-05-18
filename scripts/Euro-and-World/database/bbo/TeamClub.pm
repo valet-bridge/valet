@@ -134,6 +134,7 @@ my @MULTI_WORDS =
   'Sharja Club',
   'Shemokh Club',
   'Shou Chuang',
+  'Smedstadens BK',
   'SPG Club',
   'St:Erik Hella',
   'St:Erik Morot',
@@ -226,7 +227,8 @@ my %MULTI_TYPOS =
   'Quantum BC' => ['bc quantum'],
   'Qi Zhong Club' => ['qi zhong'],
   'Qin Lian Club' => ['qin lian'],
-  'Østfold og Follo' => ['østfold/follo'],
+  'Østfold og Follo' => ['østfold/follo', 'østfold follo',
+    'østfold&follo'],
   'Øvre Ottadalen' => ['øvre ottadal'],
   'Studentenes BK' => ['studentene bk'],
   'Torino Allegra' => ['bridge allegra', 'allegra to',
@@ -274,6 +276,7 @@ my %SINGLE_TYPOS =
   'Delhi Gymkhana Club' => ['dgc'],
   'El Ahly' => ['ahly'],
   'El-Karma' => ['karma'],
+  'Fjends BK' => ['fjends'],
   'Gabrial UI' => ['gabrial'],
   'Hok Studiecentrum' => ['hok'],
   Hordaland => ['hordland'],
@@ -289,11 +292,15 @@ my %SINGLE_TYPOS =
   'Norrorts Bridge' => ['norrort'],
   'Rumah Sakit Umum Daerah' => ['rsud'],
   'Samadhan Academy' => ['samadhan'],
+  'Smedstadens BK' => ['smedstadens'],
   Spojnia => ['Spójnia'],
+  "'t Onstein" => ['onstein'],
   'Tennis Club Parioli' => ['tcp'],
   TGR => ['tgrs'],
   Uppsalabridgen => ['ippsalabridgen'],
+  Zmrzlina => ['zmerzlina'],
   Örebridgen => ['Örebridge', 'orebridgen'],
+  'Østfold og Follo' => ['ostfoldfollo']
 );
 
 

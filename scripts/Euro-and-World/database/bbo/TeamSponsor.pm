@@ -484,14 +484,16 @@ my %SINGLE_TYPOS =
   'Adaro Energy' => ['adaro'],
   'Agsar Paints' => ['agsar'],
   'Beijing Longxin' => ['beijinglongxin'],
-  'China Ping An' => ['chinapingan', 'zhongguopingan'],
+  'Chateau Rossenovo' => ['rossenovo', 'rosenovo'],
   'Chennai Online' => ['chennaionline'],
+  'China Ping An' => ['chinapingan', 'zhongguopingan'],
   Computerland => ['computerlan'],
   'Dhampur Sugar' => ['dhampur'],
   DISKI => ['dsi'],
   Eksprompt => ['ekspromt'],
   'Elektrik P3B' => ['elektrik', 'electric'],
   'Fanhua Jituan' => ['fanhua'],
+  'Garðs Apotek' => ['garðsapótek'],
   'Geoportal Kutai Kartanegara' => ['geokutaikartanegara'],
   'Guangzhou Hongmian' => ['guangzhouhongmian', 'hongmian'],
   'Guangzhou Pearl River' => ['guangzhoupearlriver', 'guangzhouperalriver'],
@@ -517,7 +519,8 @@ my %SINGLE_TYPOS =
   'SPS Construction' => ['sps'],
   Tsingtao => ['tsingthao'],
   'Viego Regnskap' => ['viego'],
-  Wellwise => ['wellwiss']
+  Wellwise => ['wellwiss'],
+  'Yeh Bros' => ['yeh']
 );
 
 

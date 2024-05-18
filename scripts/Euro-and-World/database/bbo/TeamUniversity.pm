@@ -22,6 +22,7 @@ my @MULTI_WORDS =
   'Andalas University',
   'Ankara University',
   'Bilkent University',
+  'Brawijaya University',
   'Budapest University',
   'Chang Gung University',
   'Chung Hua University',
@@ -79,7 +80,7 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  'Akdeniz University' => ['akdenýz üný'],
+  'Akdeniz University' => ['akdenýz üný', 'akdeniz uni.'],
   'Anadolu University' => ['uni. anadolu', 'anadolu uni'],
   'Ankara University' => ['ankara uni'],
   'Bilkent University' => ['bilkent uni'],
@@ -110,7 +111,7 @@ my %MULTI_TYPOS =
   'University of Chicago' => ['u chicago'],
   'University of Gdansk' => ['uni gdansk', 'gdank univ poland',
     'gdansk univ poland'],
-  'University of Illinois' => ['u of illinois'],
+  'University of Illinois' => ['u of illinois', 'u illinois uc'],
   'University of Jember' => ['univ jember'],
   'University of North Carolina' => ['u n. carolina'],
   'University of Rijeka' => ['uni of rijeka'],
@@ -124,11 +125,13 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Brandeis
+  Gunadarma
 );
 
 my %SINGLE_TYPOS =
 (
   'Andalas University' => ['unand'],
+  'Brawijaya University' => ['brawijaya'],
   'Chang Gung University' => ['cgu'],
   'Chung Hua University' => ['chu'],
   'École Polytechnique' => ['polytech'],
