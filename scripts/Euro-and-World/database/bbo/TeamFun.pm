@@ -70,10 +70,12 @@ my @MULTI_WORDS =
   'Bad Beat',
   'Bad Man',
   'Baltic Club',
+  'Banteng Selatan',
   'Bara brudar',
   'Barny Army',
   'BBO Lovers',
   'Bea & Family',
+  'Beer Card',
   'Bela e os Monstros',
   'Best i baren',
   'Best uten kort',
@@ -91,24 +93,29 @@ my @MULTI_WORDS =
   'Black Sea',
   'Black Swan',
   'Blanda drops',
+  'Bleu Lights',
   'Blue Chip Swedes',
   'Bo Gulasch',
   'Boas disipler',
+  'Bob Bob',
   'Boogie Knights',
   'Boye B Fan Club',
   "Boys'n' Girls'",
   'Brian Is Beautiful',
+  'Bridge am Grün',
   'Bridge Friends',
   'Bridgerama Milan',
   'British Lions',
   'Brødrene & co',
   'Brødrene Dal',
   'Ca. et halvt tonn',
+  "Cai's Bird",
   'Californian Aces',
   'Captain Blood',
   'Card Warriors',
   'Casino Floor',
   'Cat Daddy',
+  'Cemara Putra',
   "Chairman's Choice",
   'Circle the World',
   "Colonel's Team",
@@ -116,11 +123,14 @@ my @MULTI_WORDS =
   'City Bridge',
   'Cold Light',
   'Contact 1',
+  'Cookie Potter',
   'Counter Strike',
   'Country Boys',
   'Croatian Pirates',
   'Curry Eaters',
+  'Curt-Lennart',
   'D-MaTK',
+  "D'Artagnan",
   "D'Coup",
   'D POK',
   'Dalian ABC',
@@ -264,6 +274,7 @@ my @MULTI_WORDS =
   'Hi Charli',
   'Hillbilly Help Suit',
   'Hopp i sang',
+  'Horten-14',
   'Hungarian Olympic',
   'Hurlumhei',
   'Hvalen og tjukkasene', 
@@ -275,6 +286,7 @@ my @MULTI_WORDS =
   'India Blues',
   'Indian Mavericks',
   'Inverted Minors',
+  'Isen Mulang',
   'Isolated Menaces',
   'Jai Ganesh',
   'Jaipur Jewels',
@@ -313,6 +325,7 @@ my @MULTI_WORDS =
   'Kick Back',
   'Kipp O`Hoi',
   'Kippe et al',
+  "Kitty's",
   'KL 4',
   'Klara färdiga slam',
   'Klicks Dream Team',
@@ -354,6 +367,7 @@ my @MULTI_WORDS =
   'Lucky Seven',
   'Lucky Star',
   'Lucky 13',
+  'Lucy-Ellena',
   'Ma-Cartoon',
   'Magic Eyes',
   'Mal - Phi',
@@ -373,6 +387,7 @@ my @MULTI_WORDS =
   'Moo York Nix',
   'Mostly Harmless',
   'Ms. Guggenheim',
+  'Mumbai Indians',
   'Murphys lag',
   'My Friends',
   'My Way',
@@ -387,7 +402,9 @@ my @MULTI_WORDS =
   "No He Isn't",
   'No Limit',
   'No Problem',
+  'Noe Rusk',
   'Non Problem',
+  'Nord og Syd',
   'Norrlands guld',
   'North Pole',
   'North Star',
@@ -395,7 +412,9 @@ my @MULTI_WORDS =
   'Novi Tim',
   'Næsten Junior',
   'Oceans4',
+  'odd-å-vi',
   'Oddskongen med rese',
+  'Oh Ya!',
   'Ohne Respekt Crew',
   'Ojasta Ahoon',
   'Olavs utvalgte',
@@ -418,6 +437,7 @@ my @MULTI_WORDS =
   'Pink Panter',
   'Pinot Noir',
   'Plan B',
+  'Pola-Pola',
   'Pontiac 7',
   'Powerpuff Pinglorna',
   'Plejans Plöjare',
@@ -438,8 +458,10 @@ my @MULTI_WORDS =
   'Renons Rimstedt',
   'Rimstedt Power!',
   'Rising Star',
+  'River Friend',
   'Robin Hood',
   'Roheline Lammas',
+  'Rotseknots Ernst',
   'Royal Flush',
   'Rubb og stubb',
   'Rudderless Ship',
@@ -486,6 +508,7 @@ my @MULTI_WORDS =
   'Stall Dieden',
   'Stis Multivariant',
   'Stone Cutters',
+  'Storm Gutta',
   'Storm Riders',
   'Strawberry Fields',
   'Super Pineapples',
@@ -552,6 +575,7 @@ my @MULTI_WORDS =
   'To gamle og to gode',
   'Tommys tigre',
   'Top Ruff',
+  "Tor Ivar's",
   'Tre hunkar en babe',
   'Tre rette og en vrang',
   'Tre sang',
@@ -573,6 +597,7 @@ my @MULTI_WORDS =
   'Vi bygger stikk!',
   'Vi fyra',
   'Vi i femman',
+  'Viking Club',
   'Visoki Napon',
   'Volatile Company',
   'Walking Dead',
@@ -621,18 +646,22 @@ my %MULTI_TYPOS =
   'Air Traffic Management' => ['air traffic managem'],
   'Alex is Beautiful' => ['alex is beatiful'],
   'Alle presidentens menn' => ['alle presidentens'],
-  'Arnab' => ["arnab's"],
+  Arnab => ["arnab's"],
+  Azores => ['açores team'],
+  Ayan => ["ayan's"],
   'Babes Amazones' => ['babes-amazones'],
   'Best uten kort' => ['best uden kort'],
   'Beverly Hillbillies' => ['beverly hillbillie'],
   'Big Guns' => ['big gun'],
   'Big Makie' => ['big makie och co'],
   'Brian Is Beautiful' => ['brian is beatiful'],
+  'Bridge am Grün' => ['bridge am gruen'],
   'Bridgerama Milan' => ['bridgerama mi'],
   'Ca. et halvt tonn' => ['ca et halvt tonn'],
   'Californian Aces' => ['california aces'],
   "Chairman's Choice" => ["chairman's team"],
   'Croatian Pirates' => ['cro pirates'],
+  'Curry Eaters' => ['curry  eaters'],
   'Deceptive AHM' => ['deceptive  ahm'],
   'Delhi Gym Aces' => ['d g aces', 'dgc aces'],
   'Den gyldne omvei' => ['den gylne omvei'],
@@ -658,6 +687,7 @@ my %MULTI_TYPOS =
   "Gary's Boys" => ['garys boys', 'gary´s boys'],
   'Good Men' => ['good man'],
   "Hagen's Heroes" => ["hagen`s heroes"],
+  Hammershark => ['hammershark deluxe'],
   'Hands and Hearts' => ['hands & hearts'],
   'Heldige Olav' => ['heldige olav :)'],
   "Hell's Angels" => ['hells angels'],
@@ -729,123 +759,138 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
    2Q2K 6L 10CC 7heart
-   Aces Acolvik Adventure Aditya Agamemnon Agressor Ahmetizm Ahornet 
-   Akenobo Akinom Alertplus Alfredo Ali Alioth Allam Alliansen Allstars 
-   Alpha Amrapali Amul Aurora Alternativlos Ambassador Andromeda Anglian
-   Andrzejki Anglers Anglophones Anna Anuj Apples Appellkameratene 
-   Aquarius Arangan Archies Aristos Armani Arnab Arno Aspe Asparagus 
-   Atom Augerne AUTBUL AUTHOL Autostrada Avagard Avalanche Avatar
+
+   AABC Aces Acolvik Adventure Aditya Agamemnon Agressor Ahmetizm 
+   Ahornet Aida Akenobo Akinom Alertplus Alex Alfredo Ali Alioth 
+   Allam Alliance Alliansen Allstars Alpha Alternativlos Ambassador 
+   Amrapali Amul Andromeda Anglian Andrzejki Anglers Anglophones 
+   Aniket Anna Anuj Apaçý Appellkameratene Apples Aquarius Arachfobia 
+   Arangan Archies Aristos Armani Arnab Arno Arunas Aslanli Aspe 
+   Asparagus Astro Astronotlar Atlantic Atom Atrium Augerne Auni 
+   Aurora AUTBUL AUTHOL Autostrada Avagard Avalanche Avatar Ayan
    Aytalus Azores Azure
 
-   Badger Badminton Balti Bananasplit Baneet Barracuda Baryton Bato
-   Bauhinia Begigütje Ben Beniaminek Berik Bhinneka Bilal Bingbang Binkie
-   Biriceri Blackwood Blandat Bling Blondie Blueberry Boek Bolero
-   Boogies Boomz Boriana Borko BOVE Breno Bricklayer Bridgebutikken 
-   Bridgekameratene Bridgeministeriet Brudarna Buaigh Bubba Bubu Buddies 
-   Bumerangas Bunnies Bulldozer
+   Bacch Bachelor Bade Badger Badminton Bajozero Balti Bananasplit 
+   Baneet BARP Barracuda Baryton Bato Bauhinia Beauty Begigütje 
+   Begijntje Ben Beniaminek Berik Beton Bhinneka Bilal Bingbang 
+   Binkie Biriceri Blackwood Blandat Bling Blondie Blueberry Boek 
+   Bolero Boogies Boomz Boriana Borko BOVE Breno Bricklayer 
+   Bridgebutikken Bridgekameratene Bridgeministeriet Brother
+   Brudarna Buaigh Bubba Bubu Buddies Bumerangas Bunnies Bulldozer
 
    Cabriole Cancan Cardtossers Cargo Cartoon Casuals Cathy Cavelieri
    Censored Center Challengers Changes Chicks Chokladmåndag Claim Coaches
-   Cogito Colorado Commandos Comrade Concurrrent Conie Contact Contra 
+   Cogito Colorado Commandos Comrade Concurrent Conie Contact Contra 
    Corner Counterstrike Couples Crash Cremaster Czteropak
 
-   Dada Dadya Dallas DanEng DanFar Danger Daniel Debonecos Debutantes 
-   Deceptive DenmarS Deppo Desperados Dialect Diana Dido Diego Dieter
-   Dilligaf Dingyuan Dinos Doki Donjulio Dracula Dragon DSM Duros 
-   Dusteforbundet Dvizhenie Dyret
+   Dada Dadya Dallas DanEng DanFar Danger Daniel Dash Dauna Dawn 
+   Debonecos Debutantes Deceptive DenmarS Deppo Desperados 
+   Destroyers Dialect Diana Dido Diego Dieter Dilligaf Dingyuan 
+   Dinos Doctors Doki Donjulio Donvito Dracula Dragon DSM DuckNDales 
+   Duros Dusteforbundet Dvizhenie Dyret
 
-   Eagles Edi Eikka Ekoap Elektrownia Eliminator Eliza Ellen Emerald 
-   Emre Engelen Engineers Enigma Epsilon Equator Era Eric Erikas 
-   Esperanza Everest Evil Ewa
+   Eagles Ece Econ Edi Egesarpdoruk Eikka Ekoap Elektrownia 
+   Eliminator Eliza Ellen Emerald Emre Engelen Engineers Enigma 
+   Enjoy Epsilon Equator Era Eren Eric Erikas Esperanza Everest Evil 
+   Ewa
 
    Fakel Fantasia Fant4stic Farmen Farmers Felix Fenghuang Fenix Ferfi
-   Feszek Filosofene Filur Fisk Forfot Formidables Formosa Fortuna 
-   FOS Foundation Franz Frenemies Friends Frirond Francophones Freak 
-   Frivolt Fundacja
+   Feszek Fifi Filosofene Filur Finest Fisk Forfot Formidables 
+   Formosa Fortuna FOS Foundation Frank Franz Frenemies Friends 
+   Frirond Francophones Freak Frivolt Frusci Fundacja
 
-   Gabrisem Galaxy Galim Gamma Garry Gelim Gentle Geriatrix Geysir 
-   GloryGlory Giants Gjesp Goldcat Gosho Grand Guayacos Gudok 
-   Guests Gulce Gulebjorn Gullberg Gunsmoke Gürsel
+   Gabrisem Galaxy Galim Gamma Garry Gelim Gentle George Geriatrix 
+   Geysir GloryGlory Giants Gjesp Goldcat Gosho Grand Guayacos Gudok 
+   Guests Gulce Gulebjorn Gullberg Gullvi Gunsmoke Gürsel
 
-   Hangarounds Hansa Harlequins Hawks Hayet Hästpojkarna Helgeness 
-   Heliopolis HengSha HERZdame HeSa Hey Hilda Hobbits Holders Holifera
-   Hollywood Honeymoon Hopfenkönig Hridhaan Huispaus Hurra
+   Hade Hanan Hangarounds Hansa Harlequins Hawks Hayet Hästpojkarna 
+   Helgeness Heliopolis HengSha HERZdame HeSa Hey Hiiimmm Hilda 
+   Hobbits Holders Holifera Hollywood Honeymoon Hopfenkönig Hridhaan 
+   Huhu Huispaus Hurra
 
    IBE Ida Ijseide Ikarus IMAN Imanual Imponderables Instructor
    Invicta Iris Israbel Isrmany IVAR
 
-   Jagg Jaiganesh Janko Javel Jelena Jernbaneverket Jessica Jóannes
+   Jagg Jaiganesh Janko JASS Javel Jelena Jernbaneverket Jessica Jóannes
    JoJo Joker Journalists Juanval Juice Juls Juniorklubben Jupiter 
-   Justplay Justyna Justynka JuubilarJuuTools
+   Justplay Justyna Justynka Jutek Juubilar JuuTools
 
-   Kaardivägi Kalkarn Kamelåså Kamikaze Kangaroo Kanin Karin Kasiyahan 
-   Kasty Katipunan Kenji Kenlong Kerasus Kibe Kinga Kingkong Kings 
+   Kaardivägi Kagama Kalbar Kalkarn Kaltim Kamelåså Kamikaze Kamyk
+   Kangaroo Kanin Karaarslan Karin Karo Kartel Kasiyahan Kasty Kasuang
+   Katipunan Keni Kenji Kenlong Kerasus Kibe Kinga Kingkong Kings 
    KISS Kjelskos Klasik KMC Knösel Kokoelma Kolbasti Komleposs
    Kompisarna Konga Korsikalý Koukouselis Kratos Kris Kriston
-   Krisztina Ksenia Kuglana Kuhmilch
+   Krisztina Ksenia Kuglana Kuhmilch Kultur
 
-   Lahjattomat Langy Laplanders Laplas Lasse Lataka Lateria LatSwe 
-   Lazy Lebensohl Lebron Lema Lemanus Liggeunderlaget Lillebaluba Lions
-   Ljónin Lira Lirarna Liverbird LNWers Lolly Loloc Lowel Löparn Løwene
+   Lahjattomat Langy Laplanders Laplas Larry Lasse Lataka Lateria LatSwe 
+   Lazy Lebensohl Lebron Lema Lemanus Liggeunderlaget Lili Lillebaluba 
+   Lions Lipa Ljónin Lira Lirarna Liverbird LNWers Lolly Loloc 
+   Lowel Löparn Lucky Løwene
 
-   Madhav Maestroi Magister Maharaja Majority Malmölaget Manashda
-   Margitta Marianne Marosamitawa Mars Marynarz Masdjävlar Masters 
-   Matilde Matrix Mats Matujona Mayamira Mercury Mesna Midas Mihai
-   Mikke Miguel Milady Mirage Mismatch Mjøskameratne Moritz Movember 
-   Mölnlycke Munawar Myoni Måsen
+   Madhav Mads Maestroi Magic Magister Maharaja Major Majorn Majority 
+   Malmölaget Manashda Manu Margitta Marianne Marosamitawa Mars 
+   Marynarz Masdjävlar Masters Matilde Matrix Mats Matujona Maven Mavs 
+   Mayamira Maxi Mercury Mesna Meta Mia Midas Mihai Mikke Miguel 
+   Milady Minut Mirage Miro Mismatch Mixarna Mjøskameratne Moritz 
+   Mostingan Movember Mölnlycke Munawar Myoni Møremix Måsen
 
-   Narbisk Narre Natalia Naturalists Neduk Nemesis Neverclaim 
-   Nightingale Nikita Nikitopoulos Niko Nikotiimi Nislije NMRT 
-   Noctis Noralia Norsu NTiosagutta Nula
+   Nadide Narbisk Narre Natalia Natural Naturalists Neduk Nemesis 
+   Neverclaim Nico Nightingale Nikita Nikitopoulos Niko Nikos 
+   Nikotiimi Nis Nislije NMRT Noctis Noralia Noriko Norsu NTiosagutta 
+   Nula
 
-   Obezit Octopussy Okay Olena Olrudbanden Olsenbanden Omega Onyx
-   Oprosti Orakulas Orthodoxi Orthodox OSMO Otters Outsiders 
-   Overivrig Oyzum Ozbiljni
+   Obezit Octopussy Okay Olavsfestdagene Olena Olrudbanden Olsenbanden 
+   Omega Onyx Opal Opera Oprosti Orakulas Orthodoxi Orthodox OSMO Otters 
+   Outsiders Overivrig Oyzum Ozbiljni
 
-   Pacers Palukas Panteros Paradigma Pasanci Passé Patron Paulette 
-   Paulina Paulistas Pegasus Perestrojka Perjuangan Petra Pia Piryoli 
-   Piter Pjäxa Pleyada Plia Pojat Polirish Pompapompa Pontiac 
-   Potlimit Potteplante Preempters Pretendents Prijatelj Proteus 
-   Pusten Pyon Pyton Påskevennene
+   Pacers Paco Palukas Panteros Paoli Paradigma Pasanci Passé Patron 
+   Paulette Paulina Paulistas Pegasus Perestrojka Perjuangan Peter Petra 
+   Pia Piryoli Piter Pjäxa Pleyada Plia Pojat Polirish Pompapompa Pontiac 
+   Potlimit Potteplante Prasetya Preempters Pretendents Prijatelj 
+   Proteus Proto Pusten Pyon Pyton Påskevennene
 
    Quantum Quasar Quattro Quinze
 
-   Radhey Rafael Raifles Rampage Raskasammen Real Recaptan Regeldur
-   Reklamtrion Reloaded Ribitas Robertinho Robi Robocop Rovers 
-   Royston Rozle Rylai Rylal
+   Radhey Rafael Raifles Ramkumar Rampage Raskasammen Real Recaptan 
+   Regeldur Reklamtrion Reloaded Rene Rob Ribitas Robertinho Robi 
+   Robocop Rovers Royston Rozle Rylai Rylal
 
    Sabina Sabres Saga Sakurai Saladmasters Salokin Salvo Sansouci
-   SANY Sapphire Sara Sarp Saturn Scapros Scientists Secure Senaattorit 
-   Senator Shavaz Sherdils Shona Shrikant Siddheshwar Sigdonnemann Sigma 
-   Sigrid Silbersee Silverfox Simonetta Simple Simpleksas Sindbad 
+   SANY Sapphire Sara Sarp Saturn Scapros Schneewittchen Scientists 
+   Scot Secure Senaattorit Senator Sevil Shane Shavaz Sherdils 
+   Shona Show Shrikant Siddheshwar Sigdonnemann Sigma Sigrid 
+   Silbersee Silverfox Simonetta Simple Simpleksas Sindbad Sindhu 
    Sirius Sivves Siyabend Sjøsamen Skalman Skaronga Skip Skitur 
-   Skotii Slappfisker Slostria Slufsa Småveitjan Snapper Snipers
-   Soho Sonata Spartans Specialist Spektr Spring Stafana Stampede 
-   Star Starmen Starsbridge Statusquo Stayman Steinlager Steliana
-   Stifinnern Storeslemmen Strategen Streamline Studentene 
-   Stålfarfar Sucharek Sue Sunshine Svetla SweDanes SweNor 
-   Syttisju Sømnakameratene Såpeopera
+   Skotii Slappfisker Slostria Slufsa Småveitjan Snapper Snipers 
+   Sogn Soho Solo Sonata Soumitra Spark Spartans Specialist Spektr 
+   Spring Squeeze Stafana Stampede Star Starmen Starsbridge 
+   Statusquo Stayman Steinars Steinlager Steliana Stifinnern 
+   Storeslemmen Strata Strategen Streamline Studentene Stålfarfar 
+   Sucharek Sue Sunshine Svetla SweDanes SweNor Syttisju 
+   Sømnakameratene Såpeopera
 
-   Tadeu Take Takeoff Takk Takým Tally Tamae Tannlegene Task 
+   Tadeu Take Takeoff Takk Takým Tally Tamae Tannlegene Task Tbone
    Tempo Tibetmunkene Tigers Titanik Titans Todremor Tohundre Tolerant
-   Tongxin Torpedo Tosca Totani Totoro Tömör Troll Trøndermøringen 
+   Tongxin Torpedo Tosca Totani Totoro Tömör Triks Troll Trøndermøringen 
    Tsunami Tulip Tulipano Turuncu Tushar Tutu Tvist
 
-   Udarnik Ugh Úlfurinn Ulvene Underdogs Unexpected Ungdomslaget
+   Udarnik UFO Ugh Úlfurinn Ulvene Underdogs Unexpected Ungdomslaget
+   Upplyfting UTU
 
    Vakrandi Valen Varoslu Vasallid Västanfläkten Vega* Veegees 
    Veggen Vibrant Vicho Vicky Victor Victory Vietcong Villmarksgutta
-   Vilttiketju Vilttiukko Viña Vintage Virginia Vivi Vucko Vurgun
-   Vürst Vytas
+   Vilttiketju Vilttiukko Viña Vintage Virginia Vivi Vucko Vulcano
+   Vurgun Vürst Vytas
 
-   Wael Wala Waldi Walpurga WDP Winatalya Winkiboy Winterfell Wizards
+   Wael Wafa Wala Waldi Walpurga WDP Winatalya Windrunners Winkiboy 
+   Winterfell Wizards
 
-   Xatzopoulos Xtrouble
+   Xatzopoulos Xman Xtrouble
 
    Ybs Yaðmur Yamata Yansimasiz Yelena Yogakshema Yokozuna
 
-   Zeerob Zeyno Ziggy Zimmkonis Zlatan Zombi Zorro Zozoura Zugzwang
-   Zurzits Zvanger
+   Zeerob Zen Zeyno Ziggy Zimmkonis Zlatan Zombi Zorro Zozoura 
+   Zugzwang Zurzits Zvanger
 
    Øssur
 );
@@ -865,6 +910,7 @@ my %SINGLE_TYPOS =
   'Atomic Bridge' => ['atomic'],
   Barracuda => ['barakuda', 'baracuda'],
   Bhinneka => ['bhineka', 'bhinneke'],
+  'Bleu Lights' => ['bleulights'],
   Bilal => ['balil'],
   Boriana => ['boryana'],
   Buaigh => ['buaijh'],
@@ -881,7 +927,7 @@ my %SINGLE_TYPOS =
   'Green Eyes' => ['greeneyes'],
   Gunsmoke => ['gunnsmoke'],
   Hästpojkarna => ['hastpojkarna'],
-  Hridhaan => ['hridhan'],
+  Hridhaan => ['hridhan', 'haridhaan', 'hrridhaan', 'hrridhaan'],
   Imponderables => ['impoderables'],
   'India Blues' => ['indiablues'],
   'Jamm & Co' => ['jamm'],
@@ -889,12 +935,16 @@ my %SINGLE_TYPOS =
   Juls => ['julst'],
   'Last Arrival' => ['lastarrival'],
   'Late S.S. Jain' => ['lssjain'],
+  Lebensohl => ['lebenshol'],
   'Loy Krathong' => ['longkatong'],
   Löparn => ['loparn'],
-  Maharaja => ['maharaj'],
+  Maharaja => ['maharaj', 'maharaaj'],
   'Meng Qing Xin' => ['mengqingxin'],
   Mismatch => ['missmatch'],
-  Naturalists => ['nature'],
+  Mjøskameratne => ['Mjöskameratene'],
+  Måsen => ['Måsan'],
+  Naturalists => ['nature', 'naturalistene'],
+  Onyx => ['onix'],
   'Paris Match' => ['parismatch', 'parimatch'],
   Paulistas => ['paulistanas'],
   'Pontiac 7' => ['pontiac7'],
@@ -902,11 +952,14 @@ my %SINGLE_TYPOS =
   "President's Team" => ['president', 'presidents'],
   Pretendents => ['pretendentas'],
   Quantum => ['qantum'],
+  'River Friend' => ['riverfriend'],
   Scientists => ['science'],
   Shrikant => ['srikant'],
   Sigdonnemann => ['sigdonneman'],
   Skotii => ['skoti'],
+  Soumitra => ['soumtra'],
   Spartans => ['spartan'],
+  Squeeze => ['squeze'],
   'Stall Dieden' => ['dieden'],
   Starmen => ['starman'],
   'Stone Cutters' => ['stonecutters'],

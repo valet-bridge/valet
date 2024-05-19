@@ -46,6 +46,7 @@ my @MULTI_WORDS =
   'Villa Fabbriche',
   'Vrnjacka Banja',
   'Xin Zhu',
+  'Yedi Eylul',
   'Zhong Jian'
 );
 
@@ -84,22 +85,22 @@ my @SINGLE_WORDS = qw(
   Aabenraa Aalborg Adalar Adana Adelaide Agresar Ahmedabad Akaylar
   Akçeşme Akdeniz Akhisar Akkad Alexandria Albena Aliaga Allahabad Altay 
   Altrincham Alytus Amanora Amarillo Ambon Amsterdam Anadolu Ankara 
-  Annecy Antalya Antony Antwerpen Arendal Arjasa Asenovgrad Assis 
+  Annecy Antalya Antony Antwerpen Aral Arendal Arjasa Asenovgrad Assis 
   Atakoy Atakum Athens Auckland Augsburg Avren Ayacucho Ayan Ayvalik
 
-  Balcova Balikesir Balikpapan Ballerup Bamberg Bandung Bangalore 
-  Bangkok Banjarmasin Baragnon Barcelona Batam Bath Batman Batu Bayrampaþa
-  Begues Beijing Bekasi Belgrade Bengkalis Bengkulu Beograd 
-  Bergen Bergues Berlin Bhubaneshwar Bielefeld Bieniewo Bikaner 
-  Bitung Blitar Bodrum Bodø Bogazici Bogor Bologna Bonn Bordeaux 
-  Borivli Bormali Bornova Bozdogan Braila Brandbu Brasilia Brasov 
-  Bremen Brisbane Bromölla Brotteaux Buca Bucharest Budapest 
-  Buitenhof Burghausen Bursa Burdur Bytom
+  Balcova Bahcesehir Balikesir Balikpapan Ballerup Bamberg Bandung 
+  Bangalore Bangkok Banjarmasin Bansi Baragnon Barcelona Batam Bath 
+  Batman Batu Bayrampaþa Begues Beijing Bekasi Belgrade Bengkalis 
+  Bengkulu Beograd Bereket Bergen Bergues Berlin Bhubaneshwar 
+  Bielefeld Bieniewo Bikaner Bitung Blitar Bodrum Bodø Bogazici 
+  Bogor Bologna Bonn Bordeaux Borivli Bormali Bornova Bozdogan 
+  Braila Brandbu Brasilia Brasov Bremen Brisbane Bromölla Brotteaux 
+  Buca Bucharest Budapest Buitenhof Burghausen Bursa Burdur Bytom
 
-  Caen Cairns Canakkale Canberra Caracas Cascais Catania Çayyolu 
-  Cerkezkoy Changzhou Chaville Chelsea Chengdu Chennai Chicago 
-  Chislehurst Chongqing Chumphon Cimahi Clichy Copenhagen Corlu 
-  Courseulles Coventry Cuenca
+  Caen Cairns Canakkale Canberra Canterbury Caracas Cascais Catania 
+  Çayyolu Cerkezkoy Changzhou Chaville Chelsea Chengdu Chennai 
+  Chicago Chislehurst Chongqing Chumphon Cimahi Clichy Copenhagen 
+  Corlu Courseulles Coventry Cuenca
 
   Dalian Dalls Daqing Darmstadt Datca Debrecen Delft Delhi Denizli
   Derpt Diyarbakir Dimitrovgrad Dobrich Dombivli Dongguan Düsseldorf
@@ -139,7 +140,8 @@ my @SINGLE_WORDS = qw(
 
   Nagbagan Nagpur Nagykanizsa Namsos Nangang Nanning Napoli
   Narita Narlidere Narvik Nazilli Näsby Nijmegen Ningbo Niski 
-  Norrbyskär Norrøna Nusantara Nürnberg Nyon Nærbø Næstved Nøtterøy
+  Norrbyskär Norrorts Norrøna Nusantara Nürnberg Nyon Nærbø Næstved 
+  Nøtterøy
 
   Odense Ogndal Oldenburg Olgiata Orhangazi Oslo Ottadalen Otepää
   Oxford Överum
@@ -156,7 +158,7 @@ my @SINGLE_WORDS = qw(
 
   Rajasthan Rødovre
 
-  Saarbrücken Sakarya Salerno Samarinda Samsun Sandefjord 
+  Saarbrücken Sabadel Sakarya Salerno Samarinda Samsun Sandefjord 
   Santiago Sanya Sarniak Sarpsborg Secunderabad Seferihisar Semarang 
   Senayan Serang Serdika Shanghai Shaoguan Shenyang 
   Shenzhen Shihua Sibiu Sidoarjo Siena Sindi Singsås Skara Skien Skopje 
@@ -200,9 +202,11 @@ my %SINGLE_TYPOS =
   Atakoy => ['ataköy'],
   Auckland => ['akarana'],
   Ayvalik => ['aivali'],
+  Bahcesehir => ['bahçeþehýr'],
   Balisekir => ['balikesýr'],
   Balkova => ['balçova'],
   Bangalore => ["b'lore", 'banglore'],
+  Bansi => ["bansi's"],
   Beijing => ['peking'],
   Borivli => ['borivali'],
   Canakkale => ['çanakkale'],
@@ -214,6 +218,7 @@ my %SINGLE_TYPOS =
   Düsseldorf => ['duesseldorf'],
   Genoa => ['genova'],
   Guangzhou => ['gz', 'gaungzhou'],
+  Harplinge => ['harpling'],
   Hegyvidék  => ['hegyvidek'],
   Heimdal => ['heimdalbc'],
   Izmir => ['ýzmir', 'ýzmýr'],
@@ -249,6 +254,7 @@ my %SINGLE_TYPOS =
   Prague => ['praha'],
   Radkov => ['radkow', 'kadkov'],
   'Reggio Emilia' => ['re'],
+  Reykjavik => ['reykjavikur'],
   Rome => ['roma'],
   Saarbrücken => ['saarbruecken'],
   Singsås => ['singsaas'],
@@ -264,7 +270,7 @@ my %SINGLE_TYPOS =
   Trondheim => ['trondhei'],
   Udaipir => ['udaypur'],
   Vienna => ['wien'],
-  Warsaw => ['warsow'],
+  Warsaw => ['warsow', 'warszawa'],
   Wroclaw => ['wr'],
   Yogyakarta => ['jogjakarta', 'diy'],
   'Zhong Jian' => ['zhongjian'],

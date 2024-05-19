@@ -46,6 +46,7 @@ my @MULTI_WORDS =
   'North Celebes',
   'North Sulawesi',
   'Northern Gauteng',
+  'Nusa Tenggara Barat',
   'Samut Prakan',
   'South America',
   'South Australia',
@@ -116,7 +117,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Angkaew Anhui Ayrshire
-  Bali Banten Belitung Bornholm Buskerud
+  Bali Banten Belitung Bihar Bornholm Bungo Buskerud
   Cappadocia Corsica
   Eurasia Europe
   Florida

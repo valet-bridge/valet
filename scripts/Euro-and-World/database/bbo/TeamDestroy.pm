@@ -25,21 +25,28 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   bric
   Challenger
+  European
   GD GLPD
+  International
   KB KDK KRS
   Leaders
   Mr
-  NONAME npc
-  Opponent Opponents Others
-  pc
-  Tricks
+  National NONAME npc
+  og Opponent Opponents Others
+  Pacific pc Players
+  Selected Stars
+  Table Tennis Tricks
+  United
   Various
 );
 
 my %SINGLE_TYPOS =
 (
   Challengers => ['chalengers'],
-  Leaders => ['leader', 'leders']
+  International => ['internat', 'internationa'],
+  Leaders => ['leader', 'leders'],
+  National => ['nasional'],
+  Pacific => ['pacyfic']
 );
 
 

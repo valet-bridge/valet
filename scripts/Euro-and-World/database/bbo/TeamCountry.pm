@@ -126,6 +126,7 @@ my %SINGLE_TYPOS =
   Israel => ['isreal', 'israil', 'isarel', 'israël'],
   Jordan => ['jor'],
   Latvia => ['lavtia', 'latvija'],
+  Lithuania => ['lithuana'],
   Luxembourg => ['luxemburg', 'luxembourgh'],
   Macau => ['china macau'],
   Madagascar => ['madagaskar'],
@@ -141,15 +142,16 @@ my %SINGLE_TYPOS =
   Poland => ['polen', 'pologne', 'polska'],
   Reunion => ['réunion'],
   Romania => ['rumania'],
-  'Serbia and Montenegro' => ['serbia&mon'],
-  Scotland => ['scotlsnd'],
+  'Serbia and Montenegro' => ['serbia&mon', 'srbija'],
+  Scotland => ['scotlsnd', 'scotlands', 'scotlans'],
   'South Korea' => ['korea'],
   'Sri Lanka' => ['srilanka'],
-  Sweden => ['swe'],
+  Sweden => ['swe', 'swedem', 'schweden', 'sweeden'],
   Switzerland => ['suitzerland', 'switserland'],
   Tunisia => ['tunisie'],
   Turkey => ['tur'],
-  'United Kingdom' => ['uk']
+  'United Kingdom' => ['uk'],
+  USA => ['america']
 );
 
 
