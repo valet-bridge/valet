@@ -54,10 +54,12 @@ my @MULTI_WORDS =
   'bridge24.pl',
   'BridgeBertheau.com',
   'Bridgefélag Reykjavíkur',
+  'Bridgemagasiner.no',
   'BridgeYes.com',
   'Bridge Winners',
   'Brink Plast',
   'Cai Fu Zheng Quan',
+  'Carlo Bossi',
   'Century Insurance',
   'Chateau Rossenovo',
   'Chennai Online',
@@ -111,6 +113,7 @@ my @MULTI_WORDS =
   'Heng Yuan Xiang',
   'Hengsha Haijiu',
   'Hengsha Ke Ji',
+  'HF Verðbréf',
   'Hotel Senator',
   'Hotell Strand',
   'Hreint ehf',
@@ -155,6 +158,7 @@ my @MULTI_WORDS =
   'Mai Zi Fu Shi',
   'Málning hf',
   'Mandiri Minahasa',
+  'Magpa-Grup',
   'Mega-Tech',
   'Mei Kuang',
   'Meilin Qing Cheng',
@@ -163,6 +167,7 @@ my @MULTI_WORDS =
   'Nanfang Dianwang',
   'Nanguang Power',
   'Nanning Yalun',
+  'Nest Inn',
   'Nimbusz',
   'Nong Fa Hang',
   'Nordfyns Finans',
@@ -173,6 +178,7 @@ my @MULTI_WORDS =
   'PD Transnational',
   'Palma Karya Mandiri',
   'Pan China Construction',
+  'Pharma Plus',
   'Poddar Developers',
   'Poddar Housing',
   'PRI Investment',
@@ -223,6 +229,7 @@ my @MULTI_WORDS =
   'Siwik Intertrade',
   'Société Générale',
   'Sölufélag Garðyrkjumanna',
+  'Son Dakika',
   'Sparisjóður Keflavik',
   'Sparisjóður Norðurland',
   'Sparisjóður Norðfjörður',
@@ -286,6 +293,7 @@ my %MULTI_TYPOS =
   'Apreo Logistic Poland' => ['apreo logistic pol', 'apreo logistic pola'],
   'Baltic Express' => ['baltic expres'],
   'Bangur Cement' => ['bangur cements', 'bangur cment'],
+  'Beidike' => ['bei di ke'],
   'Beijing Wan Jia' => ['bei jing wan jia'],
   'Beijing Huayuan' => ['beijing hua yuan', 'beijing huayuan property'],
   'Beijing Hull Technology' => ['beijing hull tech'],
@@ -326,7 +334,7 @@ my %MULTI_TYPOS =
     'gardar og velar'],
   'Garðs Apotek' => ['garðs apótek', 'garðs apoótek', 'gards apótek'],
   'Geely Automobile' => ['geely auto', 'gely auto', 'chaina geely',
-    'china geely', 'jili'],
+    'china geely', 'jili', 'china geely auto'],
   'Geologi Timah' => ['geo timah', 'geo tima'],
   'Geoportal Kutai Kartanegara' => ['geo gutai gartanega'],
   'Gong Hang Jin Ying' => ['gonghang jinying'],
@@ -358,6 +366,7 @@ my %MULTI_TYPOS =
     'lögfræðistofa ísl', 'lögfræðistofa ísl.'],
   'Lögfræðistofa Bjarna' => ['lögfr.st bjarna', 'lögfr.stofa bjarna',
     'lögfr.stofa ´bjarna'],
+  'Magpa-Grup' => ['magma-grup'],
   'Málning hf' => ['målning hf'],
   'Mutiara Energy' => ['mutiara energy indo', 'mutiara energi indo',
     'mutiara energi p.', 'mutiara energi.p'],
@@ -435,42 +444,46 @@ my @SINGLE_WORDS = qw(
   Aklindo Allianz Aquatrans Arboned Argento Arkas Arma Artotec
   Asindo Ayýntab
 
-  Bajaj Banpu
+  Bajaj Banpu Beidike
 
-  Candyland Changyu Chemikartel Chlodnia Chuanmei Cimentas COMAL Copia 
-  Computerland CONSUS Continental Cosmos
+  Cable Candyland Changyu Chemikartel Chlodnia Chuanmei Cimentas 
+  COMAL Compensa Computerland CONSUS Continental Copia Cosmos
 
   Datasteel Denizgucu Derofe Dianwang DISKI Djarum Dongfeng Druva
 
-  Effcontrol Eksprompt Elastron Elektrika Enorma Enterprise 
+  Effcontrol Eimskip Eksprompt Elastron Elektrika Energetyk
+  Enorma Enterprise 
   Everfresh Evertrust
 
-  Funbridge
+  Frissan Funbridge
 
-  GAMAX Gevalia
+  GAMAX Gevalia Gillette Gözgöz
 
-  Hana Huayuan
+  Hana Haustak Honesta Huayuan
 
-  IMAX Inteligent
+  IMAX Impress Inteligent Interface
 
-  Jetox JHS Jinfan
+  Jetox JHS Jinfan Junibacken
 
-  Kadimex
+  Kadimex Kancelaria Kilogrupp KONKRET Konstanta
 
-  Lacznosc Laima Lavazza Longjiangfu Lyfjaver
+  Lancia Lacznosc Laima Lavazza Likom Longjiangfu Lukomorie Lyfjaver
 
-  Manyavar Meikuang Morgunblaðið Myndform
+  Manyavar Meikuang Mitrabuana Morgunblaðið Myndform
 
-  NALCO Nanyuan Nefka Näkösoppi
+  NALCO Nanyuan Navachaitanya Navayuga Nefka Niewiem Norco Näkösoppi
 
-  Paulaner Pealinn Penline Pertamina POLFA Praterm Primabridge Pufa
+  Ozyuva
+
+  P2TEL Paulaner Pealinn Penline Pertamina Pexis Petro Pharon Pimara
+  POLFA Praterm Primabridge Printerikeskus Pufa Pusula
 
   Qiaoyou
 
-  Ráðgjöf Ravebo Relpol Rofoi
+  Radex Ráðgjöf Ravebo Relpol Rofoi
 
-  Sagaplast Samtronic Scania Sevtopolis Shimuzu Shouchuang Signity 
-  Skeljungur Solakoglu Sparisjóður Stiga Synective
+  Sagaplast Samsung Samtronic Scania Sekans Sevtopolis Shimuzu 
+  Shouchuang Signity Skeljungur Solakoglu Solox Sparisjóður Stiga Synective
 
   Tekser Termoavion Termochem Topeko Transearly Tricon Tridaya 
   Triton Tryggingamiðstöðin Tsingtao Tundem Tyco Tzilis
@@ -489,6 +502,7 @@ my %SINGLE_TYPOS =
   'Adaro Energy' => ['adaro'],
   'Agsar Paints' => ['agsar'],
   'Beijing Longxin' => ['beijinglongxin'],
+  'Carlo Bossi' => ['carlobossi'],
   'Chateau Rossenovo' => ['rossenovo', 'rosenovo'],
   'Chennai Online' => ['chennaionline'],
   'China Ping An' => ['chinapingan', 'zhongguopingan'],
@@ -500,6 +514,9 @@ my %SINGLE_TYPOS =
   'Fanhua Jituan' => ['fanhua'],
   'Garðs Apotek' => ['garðsapótek'],
   'Geoportal Kutai Kartanegara' => ['geokutaikartanegara'],
+  Gevalia => ['gevalía'],
+  Gillette => ['gilette'],
+  Gözgöz => ['gozgoz'],
   'Guangzhou Hongmian' => ['guangzhouhongmian', 'hongmian'],
   'Guangzhou Pearl River' => ['guangzhoupearlriver', 'guangzhouperalriver'],
   'Haerbin Bingxue' => ['harbin bingxue'],
@@ -508,6 +525,7 @@ my %SINGLE_TYPOS =
   'Jin Rong' => ['jinrongjia'],
   'Kosmos Delhi' => ['kosmos'],
   'Lianzhong Shi Jie' => ['lianzhongshijie'],
+  'Magpa-Grup' => ['magpa'],
   'Málning hf' => ['málning'],
   'Meilin Qing Cheng' => ['meilinqingcheng'],
   'Nanning Yalun' => ['nanning yalun'],
@@ -521,9 +539,10 @@ my %SINGLE_TYPOS =
   'Shenzhen Lanpu' => ['lanpu'],
   'Shiji Changda' => ['changda'],
   'Shree Cement' => ['shreecement'],
+  'Son Dakika' => ['sondakika'],
   'Sparisjóður' => ['sparisjodur'],
   'SPS Construction' => ['sps'],
-  'Team Audita' => ['teamaudita'],
+  'Team Audita' => ['teamaudita', 'audita'],
   Tsingtao => ['tsingthao'],
   'Viego Regnskap' => ['viego'],
   Wellwise => ['wellwiss'],
