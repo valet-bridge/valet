@@ -350,12 +350,16 @@ my @MULTI_WORDS =
   'Kurt quo vadis',
   'Kvalen og nissene',
   'KM AT',
+  "L'Orange",
+  'La Bomba',
+  'La Vista',
   'Lady Da et ses Boys',
+  'Lakk & Lær',
   'Langt mer enn ivrig',
+  'Las Olas',
   'Last Minute',
   'Lawrence Allstars',
   'Lawrence of Arabia',
-  'La Vista',
   'Last Arrival',
   'Late S.S. Jain',
   'Le Colonial',
@@ -370,6 +374,7 @@ my @MULTI_WORDS =
   'Little Meck',
   'Los Feos',
   'Los Malos',
+  'Los Tollos',
   'Lovende ung',
   'Loy Krathong',
   'Lucky 4',
@@ -378,12 +383,14 @@ my @MULTI_WORDS =
   'Lucky Star',
   'Lucky 13',
   'Lucy-Ellena',
+  "M' Orange",
   'Ma-Cartoon',
   'Magic Eyes',
   'Mal - Phi',
   'Malatya Basket',
   'Man Harr det man har',
   'Manchester United',
+  'Manny Herrings',
   'Many Hands',
   'Master Minds',
   'Max 100',
@@ -404,6 +411,8 @@ my @MULTI_WORDS =
   'Mystery Foursome',
   'Møllers Team',
   "Narcotic's What?",
+  'Nav Chaitanya',
+  'Nazar Boncugu',
   'Nice and Monsters',
   'Nilslands Crew',
   'Nilslands Slowfoxes',
@@ -422,17 +431,21 @@ my @MULTI_WORDS =
   'Novi Tim',
   'Næsten Junior',
   'Oceans4',
+  'Occupy Taksim',
   'odd-å-vi',
+  'Odd Tore',
   'Oddskongen med rese',
   'Oh Ya!',
   'Ohne Respekt Crew',
   'Ojasta Ahoon',
   'Olavs utvalgte',
+  'Old Sports Jarov',
   'Om het hoekie',
   'One Hundred Eighty',
   'One More!',
   'Opp og ned',
   'Orange Dynamite',
+  'Oruva Eesti',
   'Ottos Lotto',
   'Over stokk og stein',
   'Ööklubi Strand',
@@ -722,6 +735,7 @@ my %MULTI_TYPOS =
      'late sssk jain'],
   'Lawrence of Arabia' => ['lawrence of arab'],
   'La Vista' => ['la vista team'],
+  'Lakk & Lær' => ['lakk og lær', 'lek & lær', 'lokk & lur'],
   'Leromain boys' => ["leroumain's boys"],
   'Lindenthal und Freunde' => ['lindenthal und fre'],
   'Lucky 13' => ['lucky13'],
@@ -848,25 +862,28 @@ my @SINGLE_WORDS = qw(
    Kvazar
 
    Lahjattomat Langy Laplanders Laplas Larry Lasse Lataka Lateria LatSwe 
-   Lazy Lebensohl Lebron Lema Lemanus Liggeunderlaget Lili Lillebaluba 
-   Lions Lipa Ljónin Lira Lirarna Liverbird LNWers Lolly Loloc 
-   Lowel Löparn Lucky Løwene
+   Lazy Lebensohl Lebron Legeanka Lema Lemanus Leta Letve Leveni
+   Lianas Liggeunderlaget Lili Lillebaluba Lions Lipa Lira Livius 
+   Lirarna Liverbird Ljónin LNWers Logos Lolly Loloc Lowel Löparn 
+   Lucky LVBridgeBums Lyubcho Løwene
 
-   Madhav Mads Maestroi Magic Magister Maharaja Major Majorn Majority 
-   Malmölaget Manashda Manu Margitta Marianne Marosamitawa Mars 
-   Marynarz Masdjävlar Masters Matilde Matrix Mats Matujona Maven Mavs 
-   Mayamira Maxi Mercury Mesna Meta Mia Midas Mihai Mikke Miguel 
-   Milady Minut Mirage Miro Mismatch Mixarna Mjøskameratne Moritz 
-   Mostingan Movember Mölnlycke Munawar Myoni Møremix Måsen
+   Mach Madhav Mads Maestroi Magic Magister Maharaja Maija Major MajorB
+   Majorn Majority Malinka Malmölaget Manashda Manena Mano Manu Manywar
+   Margitta Marianne Marosamitawa Mars Marvelous Marynarz Masdjävlar 
+   Masters Matilde Matrix Mats Matujona Maven Mavs Mayamira Maxi 
+   Mercury Mesna Meta Mia Midas Mihai Mikke Miguel Milady Minut 
+   Mirage Miro Mismatch Mixarna Mjøskameratne Mochu Monaconf
+   Moritz Mostingan Movember Mölnlycke Munawar Mýna Myoni Møremix Måsen
 
-   Nadide Narbisk Narre Natalia Natural Naturalists Neduk Nemesis 
-   Neverclaim Nico Nightingale Nikita Nikitopoulos Niko Nikos 
-   Nikotiimi Nis Nislije NMRT Noctis Noralia Noriko Norsu NTiosagutta 
-   Nula
+   Nabil Nadide Narbisk Narre Natalia Nathans Natural Naturalists Neduk 
+   Nemesis Nessuno Neverclaim Nico Nightingale Nikita Nikitopoulos Niko 
+   Nikos Nikotiimi Nis Nislije NMRT Noctis Noralia Noriko Norsu 
+   NTiosagutta Nula
 
-   Obezit Octopussy Okay Olavsfestdagene Olena Olrudbanden Olsenbanden 
-   Omega Onyx Opal Opera Oprosti Orakulas Orthodoxi Orthodox OSMO Otters 
-   Outsiders Overivrig Oyzum Ozbiljni
+   Obezit Octopussy Ognisty Okay Oksijen Olavsfestdagene Olena 
+   Olrudbanden Olsenbanden Omega Omelas Onirepsou Onnela Onu Onyx 
+   Opal Opera Oprosti Orakulas Orthodoxi Orthodox Osam OSMO Osss
+   Oto Otters Outsiders Overivrig Oyzum Ozbiljni
 
    Pacers Paco Palukas Panteros Paoli Paradigma Pasanci Passé Patron 
    Paulette Paulina Paulistas Pegasus Perestrojka Perjuangan Peter Petra 
@@ -974,6 +991,8 @@ my %SINGLE_TYPOS =
   Mjøskameratne => ['Mjöskameratene'],
   Måsen => ['Måsan'],
   Naturalists => ['nature', 'naturalistene'],
+  'Nav Chaitanya' => ['navchaitanya'],
+  'Occupy Taksim' => ['occupytaksim'],
   Onyx => ['onix'],
   'Paris Match' => ['parismatch', 'parimatch'],
   Paulistas => ['paulistanas'],

@@ -53,6 +53,7 @@ my @MULTI_WORDS =
   'Bridgeclub Oog',
   'Brussels Bridge Club',
   'Buca Sports',
+  'Cercle Tourangeau',
   'Cracovia 1906',
   'Crvena Zvezda',
   'Cerkezkoy Dinamik BSK',
@@ -81,6 +82,8 @@ my @MULTI_WORDS =
   'Førde BK',
   'Gabrial UI',
   'Geyve Sports',
+  'Goztepe Hilal SK',
+  'Göktürk SK',
   'Grant Thornton',
   'Greve Strand',
   'Hamar BK',
@@ -108,6 +111,7 @@ my @MULTI_WORDS =
   'Köln Lindenthal',
   'Kultcamp Rieneck',
   'Lindesbergs BS',
+  'Major Hosgoru',
   'Majör Boğaziçi',
   'Makassar Utama',
   'Manna Bridge Club',
@@ -257,7 +261,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Acol Airmadidi Akceþme Amisos Asenovec Auguri AVGP
-  Bonsist Botev
+  Benfica Bonsist Botev
   Debrecen Dragao Drienerlo
   Fanfulla Fenerbahce Fosnavåg
   Galata Galatasaray 

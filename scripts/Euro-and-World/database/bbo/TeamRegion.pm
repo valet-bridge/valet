@@ -36,12 +36,14 @@ my @MULTI_WORDS =
   'Garut Regency',
   'Kepulauan Riau',
   'Lower Silesia',
+  'Madhya Pradesh',
   'Midt Trøndelag',
   'Møre Romsdal',
   'Nakhon Nayok',
   'New Caledonia',
   'New South Wales',
   'Nord-Norge Omegn',
+  'Norte Ilhas',
   'North America',
   'North Minahasa',
   'North Celebes',
@@ -127,15 +129,15 @@ my @SINGLE_WORDS = qw(
   Hainan Haugaland Hebei Huangshi Hubei Hunan
   Jharkhand Jiangsu Jilin
   Kansai Karimun Karnataka Kawanua Kedungwaru Kepri Kerala Krabi
-  Liaoning Lombok Lumajang
-  Maharashtra Marmara Matopos Mercosur Midtsjælland Mjøsa 
+  Lebak Liaoning Liguria Lombok Lumajang
+  Maharashtra Marmara Masal Matopos Mercosur Midtsjælland Mjøsa 
   Muallim Munzur Mysia
   Nordafjells Norden Norrland
   Queensland
-  Oberloiben
+  Oberloiben Orontes Otago
   Patagonia Porong Punjab
   Rajputana Ratchaburi Rogaland Rosfjord 
-  Salten Shanxi Siberia Sichuan Silesia Silla Skåne Sydvest
+  Salten Shanxi Siberia Sichuan Silesia Silla Skåne Southland Sydvest
   Tasmania Telemark Tigris
   Uttarakhand
   Victoria

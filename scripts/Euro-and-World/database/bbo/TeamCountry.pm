@@ -83,7 +83,7 @@ my @SINGLE_WORDS = qw(
   Jersey Jordan
   Latvia 
   Lichtenstein Luxembourg 
-  Madagascar Malta Malaysia Monaco 
+  Madagascar Malta Malaysia Monaco Morocco
   Netherlands Norway 
   Pakistan Palestine Philippines Poland 
   Reunion Romania
@@ -131,13 +131,14 @@ my %SINGLE_TYPOS =
   Luxembourg => ['luxemburg', 'luxembourgh'],
   Macau => ['china macau'],
   Madagascar => ['madagaskar'],
+  Morocco => ['maroc'],
   Netherlands => ['nederlands', 'netherland', 'nrtherlands', 
     'netherlans', 'netherlnd', 'neth', 'nl', 'net', 'holland'],
   Monaco => ['nonaco'],
   'New Zealand' => ['nwzealand', 'nz'],
   'North Macedonia' => ['macedonia'],
   'Northern Ireland' => ['nireland'],
-  Norway => ['norge', 'norges', 'norwegen', 'nor'],
+  Norway => ['norge', 'norges', 'norwegen', 'nor', 'norja'],
   Palestine => ['palastine'],
   Philippines => ['philipppines'],
   Poland => ['polen', 'pologne', 'polska'],

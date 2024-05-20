@@ -205,6 +205,7 @@ my @MULTI_WORDS =
   'Miguel Silva',
   'Miguel Sousa Guedes',
   'Miguel Teixeira',
+  'Mikud Mannid',
   'Modi Kenigsberg',
   'Mohamed Manaf Saleh',
   'Mohit Mehta',
@@ -447,6 +448,7 @@ my %MULTI_TYPOS =
   'Migry Zur-Campanile' => ['zur-campanile'],
   'Miguel S. Guedes' => ['miguel s guedes'],
   'Miguel Teixeira' => ['miguel teixeira', 'm. teixeira'],
+  'Mikud Mannid' => ['mikud-mannid'],
   'Mohit Mehta' => ['mohit mehata', 'mohit meheta'],
   'N. Chakraborty' => ["n.c hakraborty's iv"],
   'Nabil Chaker' => ['chaker'],
@@ -649,33 +651,34 @@ my @SINGLE_WORDS = qw(
   Libbrecht Libman Lie Lien Liu Liggins Lilienstein Lillevik Lilley 
   Limmen Limor Linczmayer Lindner Lindstedt Lindqvist Llopart 
   Locatelli Lockwood Lombard Longinotti Lorentz Lorenzini Loreto 
-  Lormant Louchart Lowe Lubinski Ludewig Lund Luppi Lusk Lusky 
+  Lormant Louchart Lovrecz Lowe Lubinski Ludewig Lund Luppi Lusk Lusky 
   Lüßmann Lynch Lyngdal Lyngen
 
   Maas MacDonald Macedo Machado Madsen Magee Maggio Maglietta Mahaffey 
   Maia Maiolani Malarme Maksymetz Malaczynski Malani Malavasi 
   Maluish Mamidaki Manara Mancuso Mandecka Mandelot Mane 
-  Manfield Manganella Manglik Manni Mannix Manyawar Marani Marashev 
-  Marchioni Marek Margarida Margiotta Mari Marill Marina Marincho 
-  Marinescu Marino Markey Markowicz Marks Marmonti Marquardsen 
-  Marsonis Marston Marta Martel Martellini Martens Martin Marupe Masana
-  Masini Mason Matei Matheson Matisons Matteucci Matushko Matunga 
-  Mauberquez Mavridis Mayorga Mazurkiewicz Maybach Mäkikangas Märsylä
-  McAllister McCance McDonald McGann McGinley McGowan McGrath
-  McIntosh McKellar McLeish McLeod McKinnon McLeish
-  McManus McMahon McMullin McNamara Meckstroth Medugno Medved 
-  Mehech Mejane Mello Mendez Mendoza Meltzer Merah Merapi Merblum 
-  Mersin Mesbur Messika Mestres Metselaar Meyer Meyers Meyouhas 
-  Mezei Michaud Michealakis Mickiewicz Miles Milgrim Mill Millar 
-  Miller Mills Milne Milner Mina Minahasa Miner Minzli Miozzi Mira 
-  Miroglio Miszewska Mitra Mittelman Mirali Miura Mizel Mizrak Mohota
+  Manfield Manganella Manglik Manni Mannix Mantica Manyawar Maoilani
+  Marani Marashev Marchioni Marek Margarida Margiotta Mari Marill 
+  Marina Marincho Marinescu Marino Markey Markowicz Marks Marmonti 
+  Marquardsen Marsonis Marston Marta Martel Martellini Martens Martin 
+  Martini Martins Marupe Masana Masini Mason Matei Matheson 
+  Matisons Matteucci Matushko Matunga Mauberquez Mavridis Mayorga 
+  Mazurkiewicz Maybach Mäkikangas Märsylä McAllister McCance 
+  McDonald McGann McGinley McGowan McGrath McIntosh McKellar 
+  McLeish McLeod McKinnon McLeish McManus McMahon McMullin 
+  McNamara Meckstroth Medugno Medved Mehech Mejane Mello Mendez 
+  Mendoza Meltzer Merah Merapi Merblum Mersin Mesbur Messika 
+  Mestres Metselaar Meyer Meyers Meyouhas Mezei Michaud Michealakis 
+  Mickiewicz Miles Milgrim Mill Millar Miller Mills Milne 
+  Milner Mina Minahasa Miner Minzli Miozzi Mira Miroglio 
+  Miszewska Mitra Mittelman Mirali Miura Mizel Mizrak Mohota 
   Mohtashami Molenaar Molenda Molina Molva Monachan Moni Monsegur 
   Montanari Mooney Moran Morath Morawski Moreira Morelli Morgan 
   Moritsch Morot Morris Morrison Morse Mortensen 
-  Moses Moskovsky Moss Mossop Mott Mouiel Mpampou Mpompolakis 
-  Mucha Mueller Mullamphy Muller Multon Mundell Munksgaard 
-  Munson Munteanu Muntz Muriel Murray Mus Mutiara Muzzio Mýzrak
-  Mæsel Mønsted
+  Moses Moskovsky Moss Mossop Mott Mouiel Mpampou Mpanikas 
+  Mpompolakis Mucha Mueller Mullamphy Muller Multon Mundell 
+  Munksgaard Munson Munteanu Muntz Muriel Murray Mus Mutiara 
+  Muzzio Mýzrak Mæsel Mønsted
 
   Nab Nadar Nader Naels Nagy Nahmias Naimuddin Naito Naniwada
   Narasimhan Naqvi Narasinham Nardullo Natale Navneet Neale Negrin 
@@ -685,7 +688,7 @@ my @SINGLE_WORDS = qw(
   Nuñez Nørgaard Nunes Nunn Nussbaum Nyshchyi Nystrom
   
   O'Brien O'Gorman Ohno Ohrysko Oikonomou Oikonomopoulos
-  Olanski Ollikkala Olofsson Olsen Omran Oncu O'Rourke Ortega
+  Olanski Olker Ollikkala Olofsson Olsen Omran Oncu O'Rourke Ortega
   Onstott Orhan Osaulenko Osofsky Oteyza Otvosi Oursel Outred 
   Ozarar Ozbey Ozdil Ozenir Ozge Ozlen Ozturk Östberg Özbey
 
@@ -887,6 +890,7 @@ my %SINGLE_TYPOS =
   Krochmalik => ['krockmalik'],
   Kurbalija => ['kuribalija'],
   Lantaron => ['lantarón'],
+  Lauria => ['laurýa'],
   'Lotan Fisher' => ['fisher'],
   'Luis Oliveira' => ['oliveira'],
   Lyngen => ['lyn'],
@@ -966,6 +970,7 @@ my %SINGLE_TYPOS =
   Sörvoll => ['sorvoll'],
   Stephenson => ['stephenso'],
   'Saumitra Basu' => ['saumitra'],
+  'Sunil Machhar' => ['macchar'],
   Svendsen => ['svends'],
   Svindahl => ['svindhal'],
   Szenberg => ['szpenberg'],

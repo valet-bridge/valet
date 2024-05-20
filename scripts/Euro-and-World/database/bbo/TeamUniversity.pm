@@ -26,6 +26,7 @@ my @MULTI_WORDS =
   'Budapest University',
   'Chang Gung University',
   'Chung Hua University',
+  'Chung Hwa Medical and Pharmaceutical University',
   'Columbia University',
   'Cornell University',
   'École Polytechnique',
@@ -126,6 +127,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Brandeis
+  CCUB
   Gunadarma
 );
 
@@ -135,6 +137,7 @@ my %SINGLE_TYPOS =
   'Brawijaya University' => ['brawijaya'],
   'Chang Gung University' => ['cgu'],
   'Chung Hua University' => ['chu'],
+  'Chung Hwa Medical and Pharmaceutical University' => ['cmu'],
   'École Polytechnique' => ['polytech'],
   'Fu Jen Catholic University' => ['fju'],
   'National Chung Cheng University' => ['ccu'],

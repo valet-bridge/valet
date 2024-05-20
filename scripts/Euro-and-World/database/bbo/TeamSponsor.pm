@@ -62,8 +62,10 @@ my @MULTI_WORDS =
   'BridgeYes.com',
   'Bridge Winners',
   'Brink Plast',
+  'Bústólpi ehf',
   'Cai Fu Zheng Quan',
   'Carlo Bossi',
+  'Central Secretariat',
   'Century Insurance',
   'Chateau Rossenovo',
   'Chennai Online',
@@ -74,6 +76,7 @@ my @MULTI_WORDS =
   'China Renshou',
   'China Resources',
   'China Trinergy',
+  'Construction Kielce',
   'Consus Carbon',
   'Consus Oil',
   'Dalian Dichan',
@@ -166,6 +169,7 @@ my @MULTI_WORDS =
   'Málning hf',
   'Mandiri Minahasa',
   'Magpa-Grup',
+  'Mayur Renergy',
   'Mega-Tech',
   'Mei Kuang',
   'Meilin Qing Cheng',
@@ -180,6 +184,8 @@ my @MULTI_WORDS =
   'Nordfyns Finans',
   'Nordic Security',
   'Novi Kod',
+  'OCI Copper',
+  'OICO Maesa',
   'PD Real Estate',
   'PD Times',
   'PD Transnational',
@@ -248,6 +254,7 @@ my @MULTI_WORDS =
   'Spasso Food',
   'SPS Construction',
   'SR Group',
+  'Statu Denizcilik',
   'Sunchime Cartoon',
   'Sunchime Fund',
   'Suzhou Youtong',
@@ -359,6 +366,7 @@ my %MULTI_TYPOS =
     'guangzhou pearl river development'],
   'Hengsha Haijiu' => ['hengsha jiuhai'],
   'Hengsha Ke Ji' => ['heng sha ke ji'],
+  'HF Verðbréf' => ['h.f. verðbréf'],
   Huayuan => ['hua yuan'],
   'Hubei Dongfeng' => ['hb dongfeng', 'hu bei dong feng'],
   'Hunan Tou Zhan' => ['hn  touzhan'],
@@ -464,34 +472,37 @@ my @SINGLE_WORDS = qw(
   Aklindo Allianz Alfa Aquatrans Arboned Argento Arkas Arma Artotec
   Asindo Ayýntab
 
-  Bajaj Banpu Beidike
+  Bajaj Banpu Baykar Beidike Bnerg
 
   Cable Candyland Changyu Chemikartel Chlodnia Chuanmei Cimentas 
-  COMAL Compensa Computerland CONSUS Continental Copia Cosmos
+  COMAL Compensa Computerland CONSUS Constellation Continental Copia 
+  Cosmos
 
-  Datasteel Denizgucu Derofe Dianwang DISKI Djarum Dongfeng Druva
+  Datasteel Denizgucu Dermika Derofe Dianwang DISKI Djarum Dongfeng 
+  Dostlar Druva
 
   Effcontrol Eimskip Eksprompt Elastron Elektrika Energetyk
-  Enorma Enterprise 
-  Everfresh Evertrust
+  Enorma Enterprise Everfresh Evertrust
 
-  Frissan Funbridge
+  Forta Frissan Funbridge
 
-  GAMAX Gazprom Gevalia Gillette Gözgöz
+  GAMAX Gazprom Genkad Gevalia Gillette Gomad Gözgöz
 
-  Hana Haustak Honesta Huayuan
+  Hana Harke Haustak Honesta Huayuan
 
-  IMAX Impress Inteligent Interface
+  IMAX Impress Inteligent Interface Interkala
 
   Jetox JHS Jinfan Junibacken
 
   Kadimex Kancelaria Kilogrupp KONKRET Konstanta Kvika
 
-  Lancia Lacznosc Laima Lavazza Likom Longjiangfu Lukomorie Lyfjaver
+  Lancia Lacznosc Laima Lavazza Likom Logos Longjiangfu Lukomorie 
+  Lyfjaver
 
-  Manyavar Meikuang Mitrabuana Morgunblaðið Myndform
+  Manyavar Meikuang Mireo Mitrabuana Morgunblaðið Myndform
 
-  NALCO Nanyuan Navachaitanya Navayuga Nefka Niewiem Norco Näkösoppi
+  NALCO Nanyuan Navachaitanya Navayuga Nefka Niewiem Nongken Norco 
+  Nortemp Näkösoppi
 
   Ozyuva
 
@@ -557,6 +568,7 @@ my %SINGLE_TYPOS =
   'Málning hf' => ['málning'],
   'Meilin Qing Cheng' => ['meilinqingcheng'],
   'Nanning Yalun' => ['nanning yalun'],
+  'Nest Inn' => ['nestinn'],
   'Perbankan Jatim' => ['perbankan'],
   'Pro Consul' => ['proconsul'],
   'San Chen' => ['sanchen'],
