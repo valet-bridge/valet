@@ -596,21 +596,21 @@ my @SINGLE_WORDS = qw(
   Grabel Grabowska Gradignan Gradovsky Grainger Gramberg Granda
   Green Greenberg Greenwood Grenside Grenthe Griffey Griffin Griffoni 
   Griffiths Grimeton Grigoriu Grimaldi Grisho Groemenboom Gromov Gromova 
-  Gross Grosset Gromöller Gronaldo Grue Gruia Grunt Gruschow Grzelak
-  Gu Guariglia Gudkov Gue Gueglio Guermani Guerreiro Guglietto 
-  Guillaumin Gula Guldberg Guler Gumby Guo Gupta Gurley Gursel 
-  Gustawsson Gutmark Guy Günther Gyimesi
+  Gross Grosset Gromöller Gronaldo Grue Gruia Grunt Gruschow 
+  Gruszczynski Grzelak Gu Guariglia Gudkov Gue Gueglio Guermani 
+  Guerreiro Guglietto Guillaumin Gula Guldberg Guler Gumby Guo 
+  Gupta Gurley Gursel Gustawsson Gutmark Guy Günther Gyimesi
 
   Hackett Hadjibalis Haffer Hagenberg Haidorfer Hallen Hallongren
   Hamman Hampson Hampton Hanna Hans Hansen Hanlon Hantveit
   Harangozo Harari Harasimowicz Harding Harley Harper Harries Harris 
   Harrison Harsanyi Hasenson Hassett Hauge Haughie Häusler Havas Hayman
-  Hegedus Helekar Helgemo Helle Helman Helmich Helms Henclik Heng 
-  Hennault Henneberg Henriques Herman Herrera Heskje Hill Hillman 
-  Hinden Hinge Hiraki Hirchwald Hirst Hitti Hliapas Hobeika Hoff Hoffa 
-  Hoffman Hollands Hollman Honti Hooda Hopfenheit Hornibrook 
-  Horowitz Horton Horwitz Howard Howe Hu Huang Hughes Hugon Hugony 
-  Hult Hung Hupe Hurworth Høgis Høyland 
+  Hegedus Helekar Helgemo Helle Helman Helmer Helmich Helms Henault
+  Henclik Heng Hennault Henneberg Henriques Herman Herrera Heskje 
+  Hill Hillman Hinden Hindon Hinge Hiraki Hirchwald Hirst Hitti 
+  Hliapas Hobeika Hoff Hoffa Hoffman Hollands Hollman Honti Hooda 
+  Hopfenheit Hornibrook Horowitz Horton Horwitz Howard Howe Hu 
+  Huang Hughes Hugon Hugony Hult Hung Hupe Hurworth Høgis Høyland 
 
   Iacapraro Ichilcik Ilczuk Ilmez Indemini Ingielewicz Iommi 
   Iontzeff Irens Ishidaya Ivatury Iversen Ivrig Iyer Izisel
@@ -622,23 +622,23 @@ my @SINGLE_WORDS = qw(
   Jolly Jonsson Jokisch Jones Jotcham Junqueira Jussila Juutilainen
 
   Kabra Kachchu Kageling Kahyaoglu Kahn Kaiser Kalida Kalita Kalish 
-  Kallifronas Kallsberg Kallunki Kalma Kalmin Kamal Kambancho Kamil 
-  Kaminaris Kaminski Kamras Kannavos Kandemir Kane Kanetkar Kang
-  Kapadia Kapagiannidis Kaplan Kaptan Karadeniz Karamanlis Karavil 
-  Karayel Karl Karlaftis Karpouzelis Kasapoglu Kasday Kasle Kasler 
-  Kastel Kater Katsareli Katz Kaushik Kay Kaya Kaye Kazik Kazmierczak 
-  Keegan Kendrick Kenigsberg
-  Kennedy Kenny Kent Keremida Kersey Kesgin Khandelwal Khazanov 
-  Khyuppenen Kilvington King Kiran Kiriakidoy Kirilenko Kirin Kishan 
-  Kizikli Klapper Klimacki Klimentowska Klinger Klofa Klukowski Knap 
-  Knight Kocak Koch Koistinen Koivula Kokkes Koken Kokten Kolankaya 
-  Kolata Kolesnik Kollnes Kolonkaya Kondoch Koneru Kopecky Koppel 
-  Korbel Kordov Korkmaz Korkut Korth Kosaka Kosti Kotányi Kotinas 
-  Kotronarou Koumetz Kovacs Kovachev Kovacich Kowalski Kozikowski 
-  Kökten Kranyak Krajewski Krausova Krawczyk Krekorian Kriegel 
-  Kriftner Kristensen Kroch Krochmalik Krolikowski Kuang Kubac 
-  Kujawa Kuokkanen Kurbalija Kutner Kvangraven Kwiatkowski Kwiecien 
-  Kyriakidou Kyrilenko
+  Kallifronas Kallsberg Kallunki Kalma Kalmin Kamal Kamat Kambancho 
+  Kamil Kaminaris Kaminski Kamras Kannavos Kandemir Kane Kanetkar 
+  Kang Kapadia Kapagiannidis Kaplan Kaptan Karadeniz Karamanlis 
+  Karavil Karayel Karl Karlaftis Karpouzelis Kasapoglu Kasday Kasle 
+  Kasler Kastel Kater Katsareli Katsutake Katz Kaushik Kay Kaya 
+  Kaye Kazik Kazmierczak Keegan Kendrick Kenigsberg Kennedy Kenny 
+  Kent Keremida Kersey Kesgin Khandelwal Khazanov Khyuppenen 
+  Kilvington King Kiran Kiriakidoy Kirilenko Kirin Kishan Kizikli 
+  Klapper Klimacki Klimentowska Klinger Klofa Klukowski Knap Knight 
+  Kocak Koch Koistinen Koivula Kokkes Koken Kokten Kolankaya 
+  Kolata Kolesnik Kollnes Kolonkaya Konckier Kondoch Konefal Koneru 
+  Kopecky Koppel Korbel Kordov Korkmaz Korkut Korth Kosaka Kosti 
+  Kotányi Kotinas Kotronarou Koumetz Kovacs Kovachev Kovacich 
+  Kowalski Kozikowski Kökten Kranyak Krajewski Krausova Krawczyk 
+  Krekorian Kriegel Kriftner Kristensen Kroch Krochmalik 
+  Krolikowski Kuang Kubac Kujawa Kuokkanen Kurbalija Kutenik
+  Kutner Kvangraven Kwiatkowski Kwiecien Kyriakidou Kyrilenko
 
   Laan Labaere Lachowicz Laffineur Lagrange Lagree Lall Lambardi Lanciano 
   Landry Lane Langer Lantaron Lanzarotti Larsen Larssen Lasserre 

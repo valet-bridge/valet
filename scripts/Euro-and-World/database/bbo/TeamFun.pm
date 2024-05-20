@@ -247,7 +247,9 @@ my @MULTI_WORDS =
   'Game Over',
   'Gan Bei',
   'Gang of Wyk',
+  'Garuda Sakti',
   "Gary's Boys",
+  'Gerganin Izvor',
   'Ghost of Red',
   'Global Mix',
   'Glomma Raiders',
@@ -268,6 +270,7 @@ my @MULTI_WORDS =
   'Grefstad and co',
   'Gutta på tur',
   'Gyllene Prag',
+  'Gøta-Hesten',
   "Hagen's Heroes",
   'Hands and Hearts',
   'Hannover Four',
@@ -291,6 +294,7 @@ my @MULTI_WORDS =
   'Ilhas & Aredores',
   'India Blues',
   'Indian Mavericks',
+  'Ingen Bagge',
   'Inverted Minors',
   'Isen Mulang',
   'Isolated Menaces',
@@ -699,6 +703,7 @@ my %MULTI_TYPOS =
   'Heldige Olav' => ['heldige olav :)'],
   "Hell's Angels" => ['hells angels'],
   'Hopp i sang' => ['hoppa i sang'],
+  Huamen => ['hua men'],
   'Hungarian Olympic' => ['hungar olimp', 'hungarian olimp',
     'hungar olimpics', 'hungar olimpic'],
   'Hurlumhei' => ['hurlumhei..'],
@@ -811,28 +816,36 @@ my @SINGLE_WORDS = qw(
    Franz Frenemies Frieolt Friends Frirond Francophones Freak 
    Frivolt Frusci Fundacja
 
-   Gabrisem Galaxy Galim Gamma Garry Gelim Gentle George Geriatrix 
-   Geysir GloryGlory Giants Gjesp Goldcat Gosho Grand Guayacos Gudok 
-   Guests Gulce Gulebjorn Gullberg Gullvi Gunsmoke Gürsel
+   Gabrisem Galaxy Galim Gambitas Gamma Garry Garuda Gata Gelim 
+   Gelin Gentle George Geriatrix Gewanna Geysir Gesi Giants Gibs 
+   Gjesp Gkobra GloryGlory Goldcat Goroco Gosho Grand Greecoura 
+   Grup Guayacos Gudok Guests Gulce Gulebjorn Gullberg Gullvi 
+   Gunsmoke Guptas Gürsel
 
-   Hade Hanan Hangarounds Hansa Harlequins Hawks Hayet Hästpojkarna 
-   Helgeness Heliopolis HengSha HERZdame HeSa Hey Hiiimmm Hilda 
-   Hobbits Holders Holifera Hollywood Honeymoon Hopfenkönig Hridhaan 
-   Huhu Huispaus Hurra
+   Hade Hanan Hande Hangarounds Hansa Harlequins Havin Hawks HayirlisI
+   Hayet Hästpojkarna Heis Hel Helgeness Hellé Heliopolis HengSha 
+   HERZdame HeSa Hey Hiiimmm Hilda Hobbits Holders Holifera Hollywood 
+   Holport Honeymoon Hopfenkönig Hridhaan Huamen Hubsi Huhu Hunaja
+   Huispaus Hurra
 
-   IBE Ida Ijseide Ikarus IMAN Imanual Imponderables Instructor
-   Invicta Iris Israbel Isrmany IVAR
+   IBE Ida Ijseide Ikarus Ilya IMAN Imanual Imponderables InFran
+   Instructor Invicta Iris Irukangi Ismo Israbel Isrmany Itnoraunz 
+   IVAR
 
-   Jagg Jaiganesh Janko JASS Javel Jelena Jernbaneverket Jessica Jóannes
-   JoJo Joker Journalists Juanval Juice Juls Juniorklubben Jupiter 
-   Justplay Justyna Justynka Jutek Juubilar JuuTools
+   Jagg Jaiganesh Janko Jans JAPCAN JAS JASS Jassica Javel Jelena 
+   Jernbaneverket Jessi Jessica Jirin Jiujiu Jóannes Job Jocker
+   JoJo Joker Journalists Juanval Jugermaister Juice Juls 
+   Juniorklubben Jupiter Juste Justplay Justyna Justynka Jutek 
+   Juubilar JuuTools
 
-   Kaardivägi Kagama Kalbar Kalkarn Kaltim Kamelåså Kamikaze Kamyk
-   Kangaroo Kanin Karaarslan Karin Karo Kartel Kasiyahan Kasty Kasuang
-   Katipunan Keni Kenji Kenlong Kerasus Kibe Kinga Kingkong Kings 
-   KISS Kjelskos Klasik KMC Knösel Kokoelma Kolbasti Komleposs
-   Kompisarna Konga Korsikalý Koukouselis Kratos Kris Kriston
-   Krisztina Ksenia Kuglana Kuhmilch Kultur
+   Kaardivägi Kagama Kalbar Kalka Kalkarn Kaltim Kamelåså Kamikaze 
+   Kamlakars Kamyk Kangaroo Kanin Karaarslan Karin Karo Kartel 
+   Kasiyahan Kasty Kasuang Katipunan Kebiya Keni Kenji Kenlong 
+   Kerasus Kibe Kinga Kingkong Kings KISS Kjelskos Klasik Klio
+   KMC Knösel Kodin Koiraperhe Kokoelma Kolbasti Komleposs
+   Kompisarna Konga Kordam Korsikalý Kortai Koukouselis KrASK Kratos 
+   Krem Kris Kriston Krisztina Ksenia Kuglana Kuhmilch Kultur
+   Kvazar
 
    Lahjattomat Langy Laplanders Laplas Larry Lasse Lataka Lateria LatSwe 
    Lazy Lebensohl Lebron Lema Lemanus Liggeunderlaget Lili Lillebaluba 
@@ -939,6 +952,7 @@ my %SINGLE_TYPOS =
   Formidables => ['formidable', 'formidabble', 'formidabels',
     'formiddable', 'formiddables', 'formadibles', 'formadeble',
     'formadables', 'fromidables'],
+  Gelin => ['gelýn'],
   'Green Eyes' => ['greeneyes'],
   Gunsmoke => ['gunnsmoke'],
   Hästpojkarna => ['hastpojkarna'],

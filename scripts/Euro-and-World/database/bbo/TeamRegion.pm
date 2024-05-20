@@ -123,7 +123,7 @@ my @SINGLE_WORDS = qw(
   Druts
   Eurasia Europe
   Florida
-  Gansu Global Gorontalo Guangdong Guizhou Gujarat
+  Ganges Gansu Global Gorontalo Guangdong Guangxi Guizhou Gujarat
   Hainan Haugaland Hebei Huangshi Hubei Hunan
   Jharkhand Jiangsu Jilin
   Kansai Karimun Karnataka Kawanua Kedungwaru Kepri Kerala Krabi
