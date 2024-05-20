@@ -50,6 +50,7 @@ my @MULTI_WORDS =
   'North Sulawesi',
   'Northern Gauteng',
   'Nusa Tenggara Barat',
+  'Pearl River',
   'Samut Prakan',
   'South America',
   'South Australia',

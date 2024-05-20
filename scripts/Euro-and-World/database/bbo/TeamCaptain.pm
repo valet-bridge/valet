@@ -267,6 +267,7 @@ my @MULTI_WORDS =
   'Rui Pinto',
   'Rui Silva Santos',
   'Rúnar Einarsson',
+  'Rusen Abi',
   'Sadek Radwan',
   'Sally Brock',
   'Salvatore Luceno',
@@ -698,36 +699,37 @@ my @SINGLE_WORDS = qw(
   Passarinho Passaro Passell Pastore Pattinson Pattison Paulissen 
   Pauncz Pavlicek Payen Pazur Peake Pedzinski Peirão Pekkinen Peksen 
   Penfold Percario Peres Periasamy Perisic Persiani Petculescu 
-  Petrucci Pettersson Phelan Piasecki Piedra Piekarek Pietraszek 
-  Piganeau Pilon Pinguello Piper Pisak Pisani Pitt Platt Plaut 
-  Poizat Pollack Pollak Polledro Polowan Pont Popescu Popova Potier 
-  Potts Poulat Pownall Pozzi Pradhan Prescott Previde Priano Proukakis 
-  Procter Prohorov Prusa Pryor Puczynski Pulkrab Purkarthofer Pszczola
+  Petrescu Petrucci Pettersson Phelan Piasecki Piedra Piekarek 
+  Pietraszek Piganeau Pilon Pinguello Piper Pisak Pisani Pitt Platt 
+  Plaut Poizat Pollack Pollak Polledro Polowan Pont Popescu Popova 
+  Potier Potts Poulat Pownall Pozzi Pradhan Prescott Previde 
+  Priano Proukakis Procter Prohorov Prusa Pryor Puczynski Pulkrab 
+  Purkarthofer Pszczola
 
   Quail Quantin Queran Quinn
 
-  Rabinowitz Radcliffe Radin Radisic Rajagopal Ramamurthy Ramondt 
-  Rankin Ranklin Ranson Rao Rapp Rau Raulund Ravenna Rayner Rees 
-  Reess Rehder Reid Reimer Reinholdt Reiplinger Rekstad Renouard 
-  Reps Revaz Rew Reynolds Rheingold Rhodes Ribera Ribery Ricard Ricci 
-  Richardson Richman Riedel Riehm Rietvink Rieusset Rigal Rigaud 
-  Riisnæs Rimstedt Riolo Rios Ritmeijer Rivers Rizzo Robb Robert 
-  Robertson Robinson Robles Robson Rocafort Rocca Rodwell Rogoff 
-  Rohowsky Roll Romanin Romanski Rombaut Ronin Rosen Rosenberg 
-  Rosendorff Rosetta Rosenkrantz Rosenthal Rossard Rossi Rosti 
-  Rothfield Rothstein Roussoglou Roussos Rubin Rubins Rubio Rueda 
-  Russo Ryman
+  Rabinowitz Radcliffe Radin Radisic Rajagopal Ramamurthy Ramchandran
+  Ramondt Rankin Ranklin Ranson Rao Rapp Rau Raulund Ravenna Rayner 
+  Rebecchi Rees Reess Rehder Reid Reimer Reinholdt Reiplinger 
+  Rekstad Renouard Reps Revaz Rew Reynolds Rheingold Rhodes Ribera 
+  Ribery Ricard Ricci Richardson Richman Ridgway Riedel Riehm 
+  Rietvink Rieusset Rigal Rigaud Riisnæs Rimstedt Riolo Rios 
+  Ritmeijer Rivers Rizzo Robb Robert Robertson Robinson Robles 
+  Robson Rocafort Rocca Rodwell Rogoff Rohowsky Roll Romanin 
+  Romanski Rombaut Ronin Rosen Rosenberg Rosendorff Rosetta 
+  Rosenkrantz Rosenthal Rossard Rossi Rosti Rothfield Rothstein 
+  Roussoglou Roussos Rubin Rubins Rubio Rueda Ruia Russo Ryman
 
   Sabbag Sabbatini Sadek Saelensminde Saesseli Sahin Saina Sairanen 
   Sakirler Sakr Salama Salisbury Salliere Salman Salvador Sancaktar
-  Sandberg Sanden Sandqvist Sanghi Sansom Saporta Sapounakis Sargos
-  Sarten Sarundajang Savchenko Savelli Savorani Savski Sawicki 
-  Sayaca Saydi Sayer Sayilkan Sbarigia Scanavino Scerri Schaltz 
-  Schermer Schlicker Schneider Schnetzer Schonning Schoolmann Schou 
-  Schuett Schulle Schulz Schüller Schroeder Scoltock Schreckenberger 
-  Scudder Scullin Schwartz Schwerdt Sealy Sebbane Seguineau Selberg 
-  Selcuk Seligman Semenov Semerci Sen Serenella Serf Serifoglu Serpoi 
-  Sesyilmaz Sezginsoy Shadyro Sharif Sharp Sher Sherman Shezifi 
+  Sandberg Sanden Sandqvist Sanghi Sankichi Sansom Saporta Sapounakis 
+  Sargos Sarten Sarundajang Savchenko Savelli Savorani Savski Sawicki 
+  Sayaca Saydi Sayer Sayilkan Sayýlkan Sbarigia Scanavino Scerri Schaltz 
+  Schermer Schlicker Schneider Schnetzer Scholes Schonning Schoolmann 
+  Schou Schuett Schulle Schulz Schüller Schroeder Schreckenberger 
+  Scoltock Scudder Scullin Schwartz Schwerdt Sealy Sebbane Seguineau 
+  Selberg Selcuk Seligman Semenov Semerci Sen Serenella Serf Serifoglu 
+  Serpoi Sesyilmaz Sezginsoy Shadyro Sharif Sharp Sher Sherman Shezifi 
   Shields Shiels Shimamura Shimizu Shirogane Short Shudnev Shugart 
   Shunta Silver Silverstein Silverstone Sime Simonsen Simpson Simson 
   Sinclair Sivrioglu Sjodal Skaanning Skelton Skjønnemann Skoglund 
@@ -745,11 +747,11 @@ my @SINGLE_WORDS = qw(
 
   Tachev Tajima Takayama Talpur Tamburi Tamburrini Tan Tanaka Taner 
   Tardy Tarhan Tarkunde Tarnovski Tarsus Taylor Tebha Tedd Teltscher 
-  Tembouret Teodorescu Teramoto Terraneo Tesla Tez Thapa Thomsen 
+  Tembouret Tencer Teodorescu Teramoto Terraneo Tesla Tez Thapa Thomsen 
   Thompson Thomson Thoresen Thuillez Thurston Ticha Timoteo Tishler 
   Tislevoll Todd Toffier Toivonen Tokay Torielli Tosi Townsend Trabucchi 
   Travis Tritt Troberg Tsang Tubiska Tucker Tudor Tulin Tully Tuomi 
-  Turner Tuszynski Tuwanakotta Tyradelli Tøndel
+  Turner Tuszynski Tuwanakotta Türkoðlu Tyradelli Tøndel
 
   Ucar Ueland Uggeri Ultav Una Upmark Uskali Uskela Usluduran Utter 
   Uysal
@@ -764,11 +766,11 @@ my @SINGLE_WORDS = qw(
   Wademark Waledzik Walker Walsh Wang Ware Warne Wasik Watawe 
   Waterlow Waters Watkins Watts Watve Weber Weed Weiler Weingarten 
   Weingold Weinhold Weinstein Weisinger Welland Weltzer Werdelin 
-  Wesolowska Westerlund Westheimer Westra Westwood Whibley Wiankowski
-  Wigoder Wijma Wikstrom Wildavsky Willcox Wilkinson Willenken 
-  Williams Willis Wilson Wiltshire Winciorek Wit Witek Wittes
-  Wold Wolfarth Wolff Wolfson Wolpert Woodruff Woolsey Worm Wortel 
-  Wrang Wu Wyer
+  Wesolowska Westerlund Westheimer Westra Westwood Whibley Whiting
+  Wiankowski Wigoder Wijma Wikstrom Wildavsky Willcox Wilkinson 
+  Willenken Williams Willis Wilson Wiltshire Winciorek Wit Witek 
+  Wittes Wold Wolfarth Wolff Wolfson Wolpert Woodruff Woolsey Worm 
+  Wortel Wrang Wu Wyer
 
   Xatzimpalis
 
@@ -779,6 +781,8 @@ my @SINGLE_WORDS = qw(
   Zaremba Zarkesch Zatorski Zawada Zawislak Zeeberg Zenari Zhan Zhao 
   Zhong Zhukov Zimmermann Zipovski Zobu Zollo Zolotov Zorlu Zotti
   Zozis Zotos Zwart
+
+  Özþahin
 );
 
 my %SINGLE_TYPOS =
@@ -954,6 +958,8 @@ my %SINGLE_TYPOS =
   Rosenthal => ['rosentahl'],
   Roussos => ['rousos'],
   Rubin => ['rugin'],
+  'Rusen Abi' => ['rusen'],
+  Ruia => ['ruya'],
   'Sally Brock' => ['brock'],
   'Salvatore Luceno' => ['lucenò'],
   'Sanjay Bhattacharya' => ['bhattacharya'],
@@ -965,6 +971,7 @@ my %SINGLE_TYPOS =
   Schwartz => ['schwarz'],
   Selcuk => ['Selçuk'],
   'Simon Gillis' => ['gillis'],
+  Sinclair => ['sýnclaýr'],
   Smilgajs => ['smilgais'],
   'Sofia Costa Pessoa' => ['pessoa'],
   Sörvoll => ['sorvoll'],

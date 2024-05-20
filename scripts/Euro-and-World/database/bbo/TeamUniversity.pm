@@ -53,6 +53,7 @@ my @MULTI_WORDS =
   'National Tsing Hua University',
   'Northwestern University',
   'Osmangazi University',
+  'Paris ECE',
   'Selçuk University',
   'Shenyang Ligong',
   'Soochow University',
@@ -129,6 +130,7 @@ my @SINGLE_WORDS = qw(
   Brandeis
   CCUB
   Gunadarma
+  Radboud
 );
 
 my %SINGLE_TYPOS =

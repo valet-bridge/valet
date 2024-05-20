@@ -271,6 +271,7 @@ my @SINGLE_WORDS = qw(
   Lavec Laksamana LÜKSAD
   Locomotiva
   Miskolc Mo Mragowia
+  Pamukspor Pelatnas
   Qizhong
   Romana
   Sakura Solli Spojnia

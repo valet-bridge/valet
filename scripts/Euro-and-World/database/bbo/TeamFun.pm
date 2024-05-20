@@ -460,6 +460,7 @@ my @MULTI_WORDS =
   'Pink Panter',
   'Pinot Noir',
   'Plan B',
+  'Poismenon Vaari',
   'Pola-Pola',
   'Pontiac 7',
   'Powerpuff Pinglorna',
@@ -471,6 +472,8 @@ my @MULTI_WORDS =
   'Queen and Knights',
   'Queen of Hearts',
   'Radio Communication',
+  "Rajjan's",
+  'Ram Charan',
   'Randers 2.0',
   'Randers 4.0',
   'Red Ash',
@@ -534,6 +537,7 @@ my @MULTI_WORDS =
   'Storm Gutta',
   'Storm Riders',
   'Strawberry Fields',
+  'Stø pluss',
   'Super Pineapples',
   'Svag klöver',
   'Svanslös Skalman',
@@ -752,7 +756,7 @@ my %MULTI_TYPOS =
   'Nilslands Slowfoxes' => ['nilslands slowfoxers', 'nilsland slowfoxes',
     'nilsland slowfoxers'],
   "No He Isn't" => ['no he isnt'],
-  "Pradeep's Four" => ["pradeep's 4"],
+  "Pradeep's Four" => ["pradeep's 4", "Pradeep's Team"],
   "President's Team" => ["president's", 'presidents teams'],
   'Queen and Knights' => ["queen's & knight"],
   'Saevar Karl' => ['svaer karl'],
@@ -885,36 +889,40 @@ my @SINGLE_WORDS = qw(
    Opal Opera Oprosti Orakulas Orthodoxi Orthodox Osam OSMO Osss
    Oto Otters Outsiders Overivrig Oyzum Ozbiljni
 
-   Pacers Paco Palukas Panteros Paoli Paradigma Pasanci Passé Patron 
-   Paulette Paulina Paulistas Pegasus Perestrojka Perjuangan Peter Petra 
-   Pia Piryoli Piter Pjäxa Pleyada Plia Pojat Polirish Pompapompa Pontiac 
-   Potlimit Potteplante Prasetya Preempters Pretendents Prijatelj 
-   Proteus Proto Pusten Pyon Pyton Påskevennene
+   Pacers Paco Pagonia Palukas Panteros Paoli Paradigma Partizan
+   Pasanci Passé Patron Paulette Paulina Paulistas Pegasus 
+   Perestrojka Perjuangan Peter Petra Pia Piast Piryoli Piter 
+   Pjäxa Pleschi Pleyada Plia Pojat Polirish Pompapompa Pontiac 
+   Potlimit Potteplante Powerchicks Prapar Prasetya Preempters 
+   Pretendents Prijatelj Prosan Proteus Proto Ptacol Pude Pusten 
+   Pyon Pyton Påskevennene
 
    Quantum Quasar Quattro Quinze
 
-   Radhey Rafael Raifles Ramkumar Rampage Raskasammen Real Recaptan 
-   Regeldur Reklamtrion Reloaded Rene Rob Ribitas Robertinho Robi 
-   Robocop Rovers Royston Rozle Rylai Rylal
+   Radhey Rafael Raifles Rakinnett Ramkumar Rampage Raskasammen 
+   Real Recaptan Regeldur Reklamtrion Reloaded Rene Rob Ribitas 
+   Rima Robertinho Robi Robocop Rosajora Rovers Royston Rozle Rylai 
+   Rylal
 
-   Sabina Sabres Saga Sakurai Saladmasters Salokin Salvo Sansouci
-   SANY Sapphire Sara Sarp Saturn Scapros Schneewittchen Scientists 
-   Scot Secure Senaattorit Senator Sevil Shane Shavaz Sherdils 
-   Shona Show Shrikant Siddheshwar Sigdonnemann Sigma Sigrid 
-   Silbersee Silverfox Simonetta Simple Simpleksas Sindbad Sindhu 
-   Sirius Sivves Siyabend Sjøsamen Skalman Skaronga Skip Skitur 
-   Skotii Slappfisker Slostria Slufsa Småveitjan Snapper Snipers 
-   Sogn Soho Solo Sonata Soumitra Spark Spartans Specialist Spektr 
-   Spring Squeeze Stafana Stampede Star Starmen Starsbridge 
-   Statusquo Stayman Steinars Steinlager Steliana Stifinnern 
-   Storeslemmen Strata Strategen Streamline Studentene Stålfarfar 
-   Sucharek Sue Sunshine Svetla SweDanes SweNor Syttisju 
-   Sømnakameratene Såpeopera
+   Sabari Sabina Sabres Saga Sakurai Saladmasters Salokin Salvo 
+   Sansouci SANY Sapphire Sara Sarp Saturn Sbambi Scapros 
+   Schneewittchen Scientists Scot Secure Senaattorit Senator Severin
+   Sevil Shane Shavaz Sherdils Shona Show Shrikant Siddheshwar 
+   Sigdonnemann Sigma Sigrid Silbersee Silverfox Simonetta Simple 
+   Simpleksas Sindbad Sindhu Sirius Sivves Siyabend Sjøsamen 
+   Skalman Skaronga Skip Skitur Skotii Þlem Slappfisker Slostria 
+   Slufsa Småveitjan Snapper Snipers Sogn Soho Solo Sonata Soumitra 
+   Spark Spartans Specialist Spektr Spring Squeeze Stafana Stagge
+   Stampede Star Starmen Starsbridge Statusquo Stayman Steinars 
+   Steinlager Steliana Stifinnern Storeslemmen Strata Strategen 
+   Streamline Studentene Stålfarfar Sucharek Sue Sunshine Svetla 
+   SweDanes SweNor Syttisju Sømnakameratene Såpeopera
 
-   Tadeu Take Takeoff Takk Takým Tally Tamae Tannlegene Task Tbone
-   Tempo Tibetmunkene Tigers Titanik Titans Todremor Tohundre Tolerant
-   Tongxin Torpedo Tosca Totani Totoro Tömör Triks Troll Trøndermøringen 
-   Tsunami Tulip Tulipano Turuncu Tushar Tutu Tvist
+   Tadeu Take Takeoff Takk Takým Taksim Tally Tamae Tannlegene Task 
+   Taurus Tbone Tempo Tibetmunkene Tigers Titanik Titans Todremor 
+   Tohundre Tolerant Tongxin Torpedo Tosca Totani Totoro Tömör 
+   Triks Troll Trøndermøringen Tsunami Tulip Tulipano Turuncu 
+   Tushar Tutu Tvist
 
    Udarnik UFO Ugh Úlfurinn Ulvene Underdogs Unexpected Ungdomslaget
    Upplyfting UTU
@@ -924,8 +932,8 @@ my @SINGLE_WORDS = qw(
    Vilttiketju Vilttiukko Viña Vintage Virginia Vivi Vucko Vulcano
    Vurgun Vürst Vytas
 
-   Wael Wafa Wala Waldi Walpurga WDP Winatalya Windrunners Winkiboy 
-   Winterfell Wizards
+   Wael Wafa Wala Waldi Walpurga WBack WDP Wengens Winatalya 
+   Windrunners Winkiboy Winterfell Wizards
 
    Xatzopoulos Xman Xtrouble
 
@@ -1000,6 +1008,7 @@ my %SINGLE_TYPOS =
   Preempters => ['preemptors'],
   "President's Team" => ['president', 'presidents'],
   Pretendents => ['pretendentas'],
+  'Ram Charan' => ['ramcharan'],
   Quantum => ['qantum'],
   'River Friend' => ['riverfriend'],
   Scientists => ['science'],
@@ -1023,6 +1032,7 @@ my %SINGLE_TYPOS =
   'Wild Griffins' => ['wildgriffin', 'wildgriffins'],
   'Winkiboy' => ['winkyboy'],
   'Xin Yuan' => ['xinyuan'],
+  Yogakshema => ['yogakhema', 'yogakshem'],
   'YOI Returns' => ['yoi'],
   Zvanger => ['zvunger']
 

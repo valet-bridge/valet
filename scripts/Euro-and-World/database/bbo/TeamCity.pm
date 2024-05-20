@@ -151,17 +151,17 @@ my @SINGLE_WORDS = qw(
   Odense Ogndal Oldenburg Olgiata Orhangazi Oslo Ottadalen Otepää
   Oxford Överum
 
-  Padang Padova Palembang Palermo Palma Palu Pamukkale Pancevo
-  Panzhihua Pariaman Parioli Paris Pärnu Pasham Pattaya Pekanbaru 
-  Pelotas Pernik Perth Perula Pesaro Pescara Peterfield Piloni
-  Pinarbasi Polonezkoy Poncol Popovo Posillipo Poznan Pula
+  Padang Padova Paimado Palembang Palermo Palma Palu Pamukkale 
+  Pancevo Panzhihua Pariaman Parioli Paris Pärnu Pasham Pattaya 
+  Pekanbaru Pelotas Pernik Perth Perula Pesaro Pescara Peterfield 
+  Piloni Pinarbasi Polonezkoy Poncol Popovo Posillipo Poznan Pula
 
   Qiaoxie Qingdao
 
   Radkov Rakvere Randers Rayong Recoleta Reims Riga Rijeka Rimini Rome
   Pisa Pleven Plovdiv Pontianak Potsdam Prague Pudong Pula Pune Puri
 
-  Rajasthan Rødovre
+  Rajasthan Ravnkilde Rzeszow Rødovre
 
   Saarbrücken Sabadel Sakarya Salerno Samarinda Samsun Sandefjord 
   Santiago Sanya Sarniak Sarpsborg Secunderabad Seferihisar Semarang 

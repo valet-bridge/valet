@@ -26,6 +26,7 @@ my @SINGLE_WORDS = qw(
   Blue
   Green
   Orange
+  Purple
   Red
   White
   Yellow

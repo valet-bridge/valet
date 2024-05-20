@@ -203,7 +203,10 @@ my @MULTI_WORDS =
   'Phoenix TV',
   'Polarman Regnskap',
   'Pro Consul',
+  'Rigainvites.lv',
+  'Rio-Sampa',
   'Ronke Camping',
+  'Rosa dei Venti',
   'Ryan Express',
   'Samtronic Constanta',
   'San Chen',
@@ -409,7 +412,7 @@ my %MULTI_TYPOS =
   'Phoenix TV' => ['feng huang wei shi'],
   'Poddar Developers' => ['poddar development', 'poddar dev',
     'podder dev', 'podder developers', 'poddar devekopers',
-    'poddar dovelopers'],
+    'poddar dovelopers', 'poddar'],
   Pufa => ['pu fa'],
   'Ryan Express' => ['ryan_express'],
   'Samtronic Constanta' => ['samtronic ct'],
@@ -506,12 +509,13 @@ my @SINGLE_WORDS = qw(
 
   Ozyuva
 
-  P2TEL Paulaner Pealinn Penline Pertagas Pertamina Pexis Petro 
-  Pharon Pimara POLFA Praterm Primabridge Printerikeskus Pufa Pusula
+  P2TEL Paulaner Pealinn Penline Pertagas Pertamina Petroconas Pexis 
+  Petro Pharon Pimara POLFA Praterm Primabridge Printerikeskus Pufa 
+  Pusula
 
   Qiaoyou
 
-  Radex Ráðgjöf Ravebo Relpol Rofoi
+  Raam Radex Ráðgjöf Ravebo Relpol Rofoi Ryka
 
   Sagaplast Samsung Samtronic Scania Sekans Sevtopolis Shimuzu 
   Shouchuang Signity Skeljungur Solakoglu Solox Sparisjóður Stiga Synective
@@ -571,6 +575,7 @@ my %SINGLE_TYPOS =
   'Nest Inn' => ['nestinn'],
   'Perbankan Jatim' => ['perbankan'],
   'Pro Consul' => ['proconsul'],
+  'Rigainvites.lv' => ['rigainvites'],
   'San Chen' => ['sanchen'],
   'Sanya Jiguan' => ['sanyajiguan'],
   'SAPW Poland' => ['sapw'],
