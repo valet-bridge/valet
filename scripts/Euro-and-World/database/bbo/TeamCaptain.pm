@@ -236,6 +236,7 @@ my @MULTI_WORDS =
   'Paulo Goncalves Pereira',
   'Paulo Roberto Brum',
   'Paulo Rocha Pinto',
+  'Pearl Mehta',
   'Pedro Madeira',
   'Pedro Morbey',
   'Pedro Pratas',
@@ -256,6 +257,7 @@ my @MULTI_WORDS =
   'R.S. Mishra',
   'Raghavendra Rajkumar',
   'Rahul Ravichandran',
+  'Raja Brawijaya',
   'Ralitsa Mihaylova Mircheva',
   'Raul Guerreiro',
   'Rita Choksi',
@@ -456,7 +458,7 @@ my %MULTI_TYPOS =
   'Paul Hackett' => ['p hackett', 'pd hackett', 'hackett p'],
   'Paulo Goncalves Pereira' => ['paulo g pereira', 'paulo goncalves per',
     'paulo gonçalves', 'p g pereira', 'p. g. pereira', 'pg pereira',
-      'p.g.pereira', 'paulo gp'],
+      'p.g.pereira', 'paulo gp', 'paulo g. pereira'],
   'Paulo Roberto Brum' => ['brum p', 'brum.p.', 'paulo brum', 'p brum'],
   'Paulo Rocha Pinto' => ['paulo pinto', 'rocha pinto'],
   'Pedro Madeira' => ['p. madeira', 'p madeira'],
@@ -528,7 +530,7 @@ my @SINGLE_WORDS = qw(
   Bohnhorst Bohnsack Bokk Bojoh Boldt Bolling Bolognini Bombardieri 
   Bomber Bompis Bongiovanni Bonis Bonori Booth Bordallo Bornova 
   Boro Bos Boss Bossi Bostanci Bostosusz Botto Boucher Boughey 
-  Bourke Bouscat Bowdery Bowles Boylson Bozempergk Bozzo
+  Bourke Bouscat Bowdery Bowles Boylson Bozempergk Bottetto Bozzo
   Brachman Brady Brake Braithwaite Bramley Branco Brantsma Branzoiu
   Braun Brede Brenner Bretagne Brifman Brightling Brink Brockwell 
   Brod Brogeland Brown Brotteaux Brunet Bruun Brunzell Buch Buchen 
@@ -537,32 +539,33 @@ my @SINGLE_WORDS = qw(
 
   Cabiati Caggese Calandra Caldarelli Caley Caldwell Callaghan Callander
   Camacho Camberos Cambiaghi Campos Capayianides Capitani Caplan 
-  Cappelli Cappeller Caprera Capriata Caracci Cardine Carbonnier 
-  Carcy Carmichael Carrasco Carruthers Carvalho Casabona Casadei 
-  Casen Cassini Castelbranco Castelli Castells Castner Cattani 
-  Cayne Cengiz Cernat Cernato Cernatovo Cerreto Cesati Chadwick 
-  Chai Chambers Chan Chang Charletoux Charlotte Charlsen Chassagne 
-  Chatterji Chauvelot Chediak Cheek Chemla Chen Cheng Chinchak 
-  Chizzoli Chopin Chottin Chuang Chubukov Ciccarelli Cichocki 
-  Ciechomski Cilleborg Cimon Cintra Ciopettini Civale Cladius Clair 
-  Claret Clark Clarke Clausen Clement Clemmensen Close Coenraets 
-  Coglitore Cohen Cohler Cohner Colarossi Coldea Cole Coletta Collett 
-  Collins Combes Combescure Compton Connie Conti Cook Cooke Cooper 
-  Cooreman Cope Coren Coridakis Corlateanu Cormack 
-  Corssen Cotton Courtney Coutts Coyne Creet Crestey Creuheras 
-  Crichton Crompton Cronier Crouch Crzejdziak Cuevas Cullin Cummings 
-  Cuper Curo Çýloðlu Czímer
+  Caposiena Cappelli Cappeller Caprera Capriata Caracci Caramalli
+  Cardine Carbonnier Carcy Carmichael Carrasco Carruthers Carvalho 
+  Casabona Casadei Casen Cassini Castelblanco Castelli Castells 
+  Castner Cattani Cavalieri Cayne Cengiz Cernat Cernato Cernatovo 
+  Cerreto Cesati Chadwick Chai Chambers Chan Chang Charletoux 
+  Charlotte Charlsen Chassagne Chatterji Chauvelot Chediak Cheek 
+  Chemla Chen Cheng Chinchak Chizzoli Chopin Chottin Chrapot Chuang 
+  Chubukov Ciccarelli Cichocki Ciechomski Cilleborg Cimon Cintra 
+  Ciopettini Civale Cladius Clair Claret Clark Clarke Clausen 
+  Clement Clemmensen Close Coenraets Coglitore Cohen Cohler Cohner 
+  Colarossi Coldea Cole Coletta Collett Collins Combes Combescure 
+  Compton Connie Conti Cook Cooke Cooper Cooreman Cope Coren 
+  Coridakis Corlateanu Cormack Corssen Cossutta Cotton Courtney 
+  Coutts Coyne Creet Crestey Creuheras Crichton Crompton Cronier 
+  Crouch Crzejdziak Cuevas Cullin Cummings Cuper Curo Çýloðlu Czímer
 
-  Dabrowka Dahlberg Dalecki Dalia Dalley Damiani Dancewicz Danta Dantan 
-  Dao Darak Das Daskalakis Daugava Dauvergne Davies Dawson Debolina 
-  Debonnaire Debus Dechelette Degla Dehaye Deik Deleeuw Delfino 
-  Delfour Delibaltadakis Dellecavakis Delimpaltadakis Delpiano DeMartino 
-  Demir Demirbas Demme Denning Deniz Desai Deutsch Deva Dexter Dexterzy
-  Dialinas Dionysopoulos Dhir Dhondy Dialynas Diamond Dionosypoulus 
-  Dinkin Dixon Djurovic Dobbels Dobes Dobroiu Doecke Doksiadis 
-  Dolla Donatella Donciu Donn Donzi Dossena Dovell Doub Doussot 
-  Doxiadis Drijver Driver Dubini Duguet Duman Dumbovich Dumitrasciuc
-  Dunitz Dunn Duong Dupraz Dupuis Dupuy Durisotto Dutilloy Dworan Dyke
+  Dabrowka Dahlberg Dalecki Dalia Dalley Damiani Damkor Dancewicz 
+  Danta Dantan Dao Darak Das Daskalakis Daugava Dauvergne Davies 
+  Dawson Debolina Debonnaire Debus Dechelette Degla Dehaye Deik 
+  Deleeuw Delfino Delfour Delibaltadakis Dellecavakis 
+  Delimpaltadakis Delpiano DeMartino Demir Demirbas Demme Denning 
+  Deniz Desai Deutsch Deva Dexter Dexterzy Dialinas Dionysopoulos 
+  Dhir Dhondy Dialynas Diamond Dilks Dionosypoulus Dinkin Dixon 
+  Djurovic Dobbels Dobes Dobroiu Doecke Doksiadis Dolla Donatella 
+  Donciu Donn Donzi Dossena Dovell Doub Doussot Doxiadis Drijver 
+  Driver Dubini Duguet Duman Dumbovich Dumitrasciuc Dunitz Dunn 
+  Duong Dupraz Dupuis Dupuy Durisotto Dutilloy Dworan Dyke
 
   Eaton Eber Ebery Economou Eden Edgtton Efremov Efthimiou Eggeling 
   Eide Eidi Eidingsen Eisenberg Ekeblad Eksi Elbaz Ellestad Ellia 

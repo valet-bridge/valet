@@ -22,6 +22,7 @@ my @MULTI_WORDS =
   'Boeven Digoel',
   'Bogor Regency',
   'Bone Bolango',
+  'Central Districts',
   'Central Celebes',
   'Central Gauteng',
   'Central Java',
@@ -119,6 +120,7 @@ my @SINGLE_WORDS = qw(
   Angkaew Anhui Ayrshire
   Bali Banten Belitung Bihar Bornholm Bungo Buskerud
   Cappadocia Corsica
+  Druts
   Eurasia Europe
   Florida
   Gansu Global Gorontalo Guangdong Guizhou Gujarat
@@ -131,7 +133,7 @@ my @SINGLE_WORDS = qw(
   Nordafjells Norden Norrland
   Queensland
   Oberloiben
-  Patagonia Punjab
+  Patagonia Porong Punjab
   Rajputana Ratchaburi Rogaland Rosfjord 
   Salten Shanxi Siberia Sichuan Silesia Silla Skåne Sydvest
   Tasmania Telemark Tigris

@@ -302,7 +302,7 @@ my %MULTI_TYPOS =
 (
   'Abadi Adimulia' => ['abadi adi mulia', 'abadi adimulya'],
   'Agsar Paints' => ['agsar pints'],
-  'AJ Diament' => ['aj diamonds'],
+  'AJ Diament' => ['aj diamonds', 'diament'],
   'Apreo Logistic Poland' => ['apreo logistic pol', 'apreo logistic pola'],
   'Asko-Tech' => ['asco tech'],
   'Baltic Express' => ['baltic expres'],
@@ -447,6 +447,7 @@ my %MULTI_TYPOS =
   'Trambak Rubber' => ['trumpak rubber'],
   'Unia Winkhaus' => ['winkhaus unia', 'winkhaus-unia'],
   'Viego Regnskap' => ['viego regnskap as'],
+  'Wuhan Dongfang' => ['dongfang'],
   'Xiao Ying' => ['xiao ying inn'],
   'Yalu Group' => ['js yalu'],
   'Yeh Bros' => ['yeh brothers', 'yer bros', "yeh's bros", 'yehs bros',

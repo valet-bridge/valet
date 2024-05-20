@@ -73,6 +73,8 @@ my @MULTI_WORDS =
   'Banteng Selatan',
   'Bara brudar',
   'Barny Army',
+  'Bate Tot',
+  'BBE Hungary',
   'BBO Lovers',
   'Bea & Family',
   'Beer Card',
@@ -104,6 +106,7 @@ my @MULTI_WORDS =
   'Brian Is Beautiful',
   'Bridge am Grün',
   'Bridge Friends',
+  'Bridge Plus',
   'Bridgerama Milan',
   'British Lions',
   'Brødrene & co',
@@ -118,6 +121,7 @@ my @MULTI_WORDS =
   'Cemara Putra',
   "Chairman's Choice",
   'Circle the World',
+  'Cliff Wake',
   "Colonel's Team",
   'Cheap Tricks',
   'City Bridge',
@@ -215,9 +219,11 @@ my @MULTI_WORDS =
   'Etna Bridge',
   'EU oder so',
   'European Aces',
+  'Eviza Plambata',
   'Eye of the Tiger',
   'f.d. Fröken Michiel',
   'Fairy Tale',
+  'Fallega Folked',
   'Fast and Furious',
   'Four Aces',
   'Fem på nya äventyr',
@@ -677,6 +683,7 @@ my %MULTI_TYPOS =
   'Equator 1771' => ['equator1771'],
   'Esso-sveitin' => ['esso - sveitin', 'esso -sveitin'],
   'Et par sama og 2 ens' => ['et par sama og 2 en'],
+  'Eviza Plambata' => ['evita_plambata'],
   'Fast and Furious' => ['fast & furious'],
   "Flint's Crew" => ["flint`s crew"],
   'Flora and Friends' => ['flora && friend'],
@@ -760,7 +767,7 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
    2Q2K 6L 10CC 7heart
 
-   AABC Aces Acolvik Adventure Aditya Agamemnon Agressor Ahmetizm 
+   AABC Aces Acolvik Adventure Aditya Aeras Agamemnon Agressor Ahmetizm 
    Ahornet Aida Akenobo Akinom Alertplus Alex Alfredo Ali Alioth 
    Allam Alliance Alliansen Allstars Alpha Alternativlos Ambassador 
    Amrapali Amul Andromeda Anglian Andrzejki Anglers Anglophones 
@@ -770,34 +777,39 @@ my @SINGLE_WORDS = qw(
    Aurora AUTBUL AUTHOL Autostrada Avagard Avalanche Avatar Ayan
    Aytalus Azores Azure
 
-   Bacch Bachelor Bade Badger Badminton Bajozero Balti Bananasplit 
-   Baneet BARP Barracuda Baryton Bato Bauhinia Beauty Begigütje 
-   Begijntje Ben Beniaminek Berik Beton Bhinneka Bilal Bingbang 
-   Binkie Biriceri Blackwood Blandat Bling Blondie Blueberry Boek 
-   Bolero Boogies Boomz Boriana Borko BOVE Breno Bricklayer 
-   Bridgebutikken Bridgekameratene Bridgeministeriet Brother
-   Brudarna Buaigh Bubba Bubu Buddies Bumerangas Bunnies Bulldozer
+   Bacch Bachelor Bade Badger Badminton Bager Baias Bajozero Balti 
+   Bananasplit Baneet BarDeZi BARP Barracuda Baryton Bato Bauhinia 
+   BBO Beauty Begigütje Begijntje Ben Beniaminek Berik Beton Bhinneka 
+   Biachite Bilal Bingbang Binkie Biriceri Blackwood Blandat Bling 
+   Blondie Blueberry Boek Bolero Boogies Boomz Boriana Borko BOVE 
+   Breno Bricklayer Bridgebutikken Bridgekameratene Bridgeministeriet 
+   Brother Brudarna Buaigh Bubba Bubu Buddies Bumerangas Bunnies 
+   Bulldozer Busiaki
 
-   Cabriole Cancan Cardtossers Cargo Cartoon Casuals Cathy Cavelieri
-   Censored Center Challengers Changes Chicks Chokladmåndag Claim Coaches
-   Cogito Colorado Commandos Comrade Concurrent Conie Contact Contra 
-   Corner Counterstrike Couples Crash Cremaster Czteropak
+   Cabal Cabriole Calaca Cammello Canadonia Cancan Canukusa 
+   Cardtossers Cargo Cartoon Casuals Cathy Cavelieri Censored 
+   Center Challengers Changes Chass Chicks Chime Chiranjeev 
+   Chokladmåndag Claim Claudili Coaches Cogito Colorado Commandos 
+   Comrade Concurrent Conie Contact Contra Coopers Corner 
+   Costantina Counterstrike Couples Crash Cremaster Croanglopol
+   Crockfords Crossfatek Czteropak
 
    Dada Dadya Dallas DanEng DanFar Danger Daniel Dash Dauna Dawn 
-   Debonecos Debutantes Deceptive DenmarS Deppo Desperados 
-   Destroyers Dialect Diana Dido Diego Dieter Dilligaf Dingyuan 
-   Dinos Doctors Doki Donjulio Donvito Dracula Dragon DSM DuckNDales 
-   Duros Dusteforbundet Dvizhenie Dyret
+   Debonecos Debutantes Deceptive Defne Demony DenmarS Deppo 
+   Desperados Destroyers Dialect Diana Dido Diego Dieter Dilligaf 
+   Dimmat Dingyuan Dinos Doctors Doki Donjulio Donvito Dracula Dragon 
+   DSM DuckNDales Dukens Duros Dusteforbundet Dvizhenie Dyret
 
-   Eagles Ece Econ Edi Egesarpdoruk Eikka Ekoap Elektrownia 
-   Eliminator Eliza Ellen Emerald Emre Engelen Engineers Enigma 
-   Enjoy Epsilon Equator Era Eren Eric Erikas Esperanza Everest Evil 
-   Ewa
+   Eagles Ece Econ Edi Efsane Egesarpdoruk Eikka Ekenboda Ekoap 
+   Elektrownia Elio Eliminator Elips Eliza Ellen Emerald Emre Engelen 
+   Engineers Enigma Enjoy Ephesus Epsilon Equator Era Eren Eric 
+   Erikas Ertým Esperanza Everest Evil Ewa
 
-   Fakel Fantasia Fant4stic Farmen Farmers Felix Fenghuang Fenix Ferfi
-   Feszek Fifi Filosofene Filur Finest Fisk Forfot Formidables 
-   Formosa Fortuna FOS Foundation Frank Franz Frenemies Friends 
-   Frirond Francophones Freak Frivolt Frusci Fundacja
+   Fakel Fantasia Fant4stic Farmen Farmers Felix Fenghuang Fenia 
+   Fenix Ferfi Feszek Fharon Fifi Fil Filosofene Filur Finest Fisk 
+   Forfot Formidables Formosa Fortuna FOS Foundation Francest Frank 
+   Franz Frenemies Frieolt Friends Frirond Francophones Freak 
+   Frivolt Frusci Fundacja
 
    Gabrisem Galaxy Galim Gamma Garry Gelim Gentle George Geriatrix 
    Geysir GloryGlory Giants Gjesp Goldcat Gosho Grand Guayacos Gudok 
@@ -913,10 +925,13 @@ my %SINGLE_TYPOS =
   'Bleu Lights' => ['bleulights'],
   Bilal => ['balil'],
   Boriana => ['boryana'],
+  Bridgekameratene => ['bridgekam'],
   Buaigh => ['buaijh'],
   Bulldozer => ['buldozer'],
   Dilligaf => ['dilligraf'],
   Dingyuan => ['dinyuan'],
+  Eikka => ['eikkaa'],
+  'El Gezira' => ['elgezira'],
   'England Swings' => ['englandswings'],
   Erikas => ['ericas'],
   Fant4stic => ['fant4stc'],
@@ -927,7 +942,8 @@ my %SINGLE_TYPOS =
   'Green Eyes' => ['greeneyes'],
   Gunsmoke => ['gunnsmoke'],
   Hästpojkarna => ['hastpojkarna'],
-  Hridhaan => ['hridhan', 'haridhaan', 'hrridhaan', 'hrridhaan'],
+  Hridhaan => ['hridhan', 'haridhaan', 'hrridhaan', 'hrridhaan',
+    'hridaan'],
   Imponderables => ['impoderables'],
   'India Blues' => ['indiablues'],
   'Jamm & Co' => ['jamm'],
