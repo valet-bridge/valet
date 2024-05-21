@@ -34,8 +34,8 @@ my @SINGLE_WORDS = qw(
   National NONAME npc
   og Opponent Opponents Others
   Pacific pc Players
-  Selected Stars
-  Table Tennis Tricks
+  Selected Squad Stars
+  Table Tennis Tournament Tricks
   United
   Various
 );
@@ -46,7 +46,8 @@ my %SINGLE_TYPOS =
   International => ['internat', 'internationa'],
   Leaders => ['leader', 'leders'],
   National => ['nasional'],
-  Pacific => ['pacyfic']
+  Pacific => ['pacyfic'],
+  Tournament => ['tounament']
 );
 
 

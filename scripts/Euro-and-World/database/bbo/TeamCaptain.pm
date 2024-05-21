@@ -320,6 +320,7 @@ my @MULTI_WORDS =
   'Yaacov (Jacob) Mintz',
   'Yao Ke',
   'Ye Jun',
+  'Yolluk Bostanci',
   'Yu Yi',
   'Yuval Lubinski',
   'Zack Yaniv',
@@ -733,10 +734,10 @@ my @SINGLE_WORDS = qw(
   Shields Shiels Shimamura Shimizu Shirogane Short Shudnev Shugart 
   Shunta Silver Silverstein Silverstone Sime Simonsen Simpson Simson 
   Sinclair Sivrioglu Sjodal Skaanning Skelton Skjønnemann Skoglund 
-  Skorchev Skwark Small Smart Smilgajs Smith Smirnov Smolanko 
+  Skorchev Skurec Skwark Small Smart Smilgajs Smith Smirnov Smolanko 
   Snashall Snellers Snow Socha Sohlin Soldati Solheim Solodar 
   Sonsini Soriano Sorkin Sosler Soukup Soulet Soumitra Sowter 
-  Sörvoll Spangenberg Spector Spelmans 
+  Sörvoll Spangenberg Spector Spelmans Spirodonescu
   Spitalnick Spooner Sprung Squires Stabell Stamatov Stankovic 
   Stansby Stark Stavrinos Steel Stegaroiu Steiner Stensson Stephenson 
   Stern Steinberg Sternberg Stevens Stewart Stienen Stilling
@@ -746,12 +747,13 @@ my @SINGLE_WORDS = qw(
   Sylvan Symons Szalay Szenberg Szigethy Szots Szymanowski Sørensen
 
   Tachev Tajima Takayama Talpur Tamburi Tamburrini Tan Tanaka Taner 
-  Tardy Tarhan Tarkunde Tarnovski Tarsus Taylor Tebha Tedd Teltscher 
-  Tembouret Tencer Teodorescu Teramoto Terraneo Tesla Tez Thapa Thomsen 
-  Thompson Thomson Thoresen Thuillez Thurston Ticha Timoteo Tishler 
-  Tislevoll Todd Toffier Toivonen Tokay Torielli Tosi Townsend Trabucchi 
-  Travis Tritt Troberg Tsang Tubiska Tucker Tudor Tulin Tully Tuomi 
-  Turner Tuszynski Tuwanakotta Türkoðlu Tyradelli Tøndel
+  Tardy Tarhan Tarkunde Tarnovski Tarsus Tasman Taylor Tebha Tedd 
+  Teltscher Tembouret Tencer Teodorescu Teramoto Terraneo Tesla Tez 
+  Thapa Thomsen Thompson Thomson Thoresen Thuillez Thurston Ticha 
+  Timoteo Tishler Tislevoll Todd Toffier Toivonen Tokay Torielli 
+  Tosi Townsend Trabucchi Travis Tritt Troberg Tsang Tsilis Tubiska 
+  Tucker Tudor Tulin Tully Tuomi Turner Tuszynski Tuwanakotta 
+  Türkoðlu Tyradelli Tøndel
 
   Ucar Ueland Uggeri Ultav Una Upmark Uskali Uskela Usluduran Utter 
   Uysal
@@ -779,8 +781,8 @@ my @SINGLE_WORDS = qw(
 
   Zabunoglu Zago Zagor Zagorin Zajac Zaleski Zanalda Zambonini Zaninotti
   Zaremba Zarkesch Zatorski Zawada Zawislak Zeeberg Zenari Zhan Zhao 
-  Zhong Zhukov Zimmermann Zipovski Zobu Zollo Zolotov Zorlu Zotti
-  Zozis Zotos Zwart
+  Zhong Zhukov Zielinski Zimmermann Zipovski Zobu Zollo Zolotov Zorlu 
+  Zotti Zozis Zotos Zwart
 
   Özþahin
 );
@@ -970,7 +972,9 @@ my %SINGLE_TYPOS =
   Schüller => ['schueller'],
   Schwartz => ['schwarz'],
   Selcuk => ['Selçuk'],
+  Senior => ['serior'],
   'Simon Gillis' => ['gillis'],
+  Simson => ['simso'],
   Sinclair => ['sýnclaýr'],
   Smilgajs => ['smilgais'],
   'Sofia Costa Pessoa' => ['pessoa'],
@@ -990,7 +994,7 @@ my %SINGLE_TYPOS =
   'Toshiro Nose' => ['nose'],
   Townsend => ['towsend'],
   Ucar => ['uçar'],
-  Vasarhelyi => ['vasarhely'],
+  Vasarhelyi => ['vasarhely', 'vasrahely'],
   Venkatesh => ['venky'],
   'Villas Boas' => ['villasboas'],
   Vinciguerra => ['vinci'],

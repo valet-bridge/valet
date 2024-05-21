@@ -214,10 +214,12 @@ my @MULTI_WORDS =
   'Sanya Jiguan',
   'Sanya Tianze',
   'SAPW Poland',
+  'Sarunta Waya',
   'Scania Bridgekonsul',
   'SD Associates',
   'SD Enterprises',
   'Semangat Baru Makassar',
+  'Semen Gresik',
   'Shan Hai',
   'Shanghai Automobile',
   'Shanghai Chuangyu',
@@ -264,6 +266,7 @@ my @MULTI_WORDS =
   'Syabas Energy',
   'Sygnity',
   'Synergia Lublin',
+  'Tannlege Kvaran',
   'Taste of Goa',
   'Team Audita',
   'Team PharmaService',
@@ -271,6 +274,7 @@ my @MULTI_WORDS =
   'Telkom Groovia',
   'Telkom Indonesia',
   'Telkom Jabar',
+  'Telkom Jakarta',
   'Telkom Speedy',
   'Telkom UseeTV',
   'Telkom@wifi.id',
@@ -281,6 +285,7 @@ my @MULTI_WORDS =
   'Tricon Infotech',
   'Unia Leszno',
   'Unia Winkhaus',
+  'Unia Sygnitas',
   'VBS Fjárfestingarbanki hf.',
   'Vestel',
   'Vidbot ehf',
@@ -447,7 +452,7 @@ my %MULTI_TYPOS =
   'Sparisjóður Siglufjarðar' => ['sparisjóður sigl',
     'sparisjóður sigluf', 'sparisjóður siglufj', 'sparisj. siglufjarð',
     'spariisj.siglufjar', 'sparisj.siglufj', 'sparisj.siglufjarð',
-    'sparisj.siglufjarða'],
+    'sparisj.siglufjarða', 'sarpisj.siglufjarð', 'spariisj.siglufjarð'],
   'Spasso Food' => ['spassofood'],
   'Syabas Energy' => ['syabas energi', 'syabas e'],
   'Synergia Lublin' => ['synergia lubin'],
@@ -456,6 +461,7 @@ my %MULTI_TYPOS =
   'Telkom Speedy' => ['telkom speedy bpn'],
   'Tolani Shipping Ltd' => ['tolani shipping'],
   'Trambak Rubber' => ['trumpak rubber'],
+  'Unia Sygnitas' => ['unia-sygnitas'],
   'Unia Winkhaus' => ['winkhaus unia', 'winkhaus-unia'],
   'Viego Regnskap' => ['viego regnskap as'],
   'Wuhan Dongfang' => ['dongfang'],
@@ -518,12 +524,13 @@ my @SINGLE_WORDS = qw(
   Raam Radex Ráðgjöf Ravebo Relpol Rofoi Ryka
 
   Sagaplast Samsung Samtronic Scania Sekans Sevtopolis Shimuzu 
-  Shouchuang Signity Skeljungur Solakoglu Solox Sparisjóður Stiga Synective
+  Shouchuang Signity Skeljungur Solakoglu Solox Sparisjóður Srenniw
+  Stalgast Stiga Synective
 
   Tekser Termika Termoavion Termochem Topeko Transearly Tricon Tridaya 
   Triton Tryggingamiðstöðin Tsingtao Tundem Tyco Tzilis
 
-  Underberg Unibet
+  Underberg Unibet Unicat
 
   Velbazhd Velbujd Vilmar Vinabær Visoft Vito Voff
 
@@ -586,6 +593,7 @@ my %SINGLE_TYPOS =
   'Shenzhen Lanpu' => ['lanpu'],
   'Shiji Changda' => ['changda'],
   'Shree Cement' => ['shreecement'],
+  'Siwik Holiday Mragowo' => ['siwik'],
   'Son Dakika' => ['sondakika'],
   'Sparisjóður' => ['sparisjodur'],
   'SPS Construction' => ['sps'],

@@ -22,7 +22,6 @@ my @MULTI_WORDS =
   'Akademisk',
   'Akceþme Spor',
   'Alert Mannheim',
-  'Allegra Torino',
   'Altay Genclik',
   'Ankara Kontrat',
   'Augsburg Atlanta',
@@ -143,6 +142,7 @@ my @MULTI_WORDS =
   'Royal Selangor Club',
   'Ruch SA',
   'Rumah Sakit Umum Daerah',
+  'Salmun BC',
   'Samadhan Academy',
   'San Sac',
   'Semen Padang',
@@ -192,11 +192,13 @@ my %MULTI_TYPOS =
     'bc bamberger reite', 'bridgeclub bamberge'],
   'BC Universität Mannheim' => ['bc uni mannheim'],
   'BCN Almirall' => ['bcn-almirall', 'bcn - almirall'],
+  'BK Fyris Skalman' => ['skalman bk fyris'],
   'BK Herkules' => ['bc hercules'],
   'BK Lavec Smile' => ['bk lavec - smile', 'lavec smile',
     'smile bk lavec', 'bk lavek smile', 'bk lavec', 'enjoy bk lavec'],
   'BC Alert Mannheim' => ['bc mannheim', 'alert mannheim'],
-  'St:Erik' => ['bk s.t erik', 'bk st erik', 'st erik', 'st erýk'],
+  'St:Erik' => ['bk s.t erik', 'bk st erik', 'st erik', 'st erýk',
+    'st erik'],
   'St:Erik Bahaj' => ['s:t erik bahaj', 's:t erik - bahaj'],
   'St:Erik Hella' => ['bk st erik hella', 'bk st.erik hella'],
   'St:Erik Morot' => ['bk st erik morot', 'bk st.erik morot',
@@ -253,8 +255,9 @@ my %MULTI_TYPOS =
     'østfold&follo'],
   'Øvre Ottadalen' => ['øvre ottadal'],
   'Studentenes BK' => ['studentene bk'],
+  'Tennis Club Parioli' => ['tc pariori'],
   'Torino Allegra' => ['bridge allegra', 'allegra to',
-    'allegra - to', 'gs allegra'],
+    'allegra - to', 'gs allegra', 'torino alegra', 'allegra torino'],
   'WCG Mumbai' => ['wcg (mum)', 'wcg-mumbai'],
   'Witte Huis' => ['het witte huis', 'white house', 'the white house']
 );
@@ -274,8 +277,8 @@ my @SINGLE_WORDS = qw(
   Pamukspor Pelatnas
   Qizhong
   Romana
-  Sakura Solli Spojnia
-  TGR Tofas Trifolium
+  Sakura Sivasspor Solli Spojnia
+  TGR Tofas Tonyaspor Trifolium
   Uddevalla Uppsalabridgen
   Vestri
   Østerdal
@@ -299,6 +302,7 @@ my %SINGLE_TYPOS =
   'Buca Sports' => ['bucaspor'],
   'Cerkezkoy Dinamik BSK' => ['Cerkezkoy'],
   'Cracovia 1906' => ['cracovia'],
+  'Crvena Zvezda' => ['zvezda'],
   'Delhi Gymkhana Club' => ['dgc'],
   'El Ahly' => ['ahly'],
   'El-Karma' => ['karma'],
@@ -321,8 +325,9 @@ my %SINGLE_TYPOS =
     'mr¥gowia'],
   'Norrorts Bridge' => ['norrort'],
   'Rumah Sakit Umum Daerah' => ['rsud'],
-  'Samadhan Academy' => ['samadhan'],
+  'Samadhan Academy' => ['samadhan', 'samadgan'],
   'Smedstadens BK' => ['smedstadens'],
+  'SPG Club' => ['spg'],
   Spojnia => ['Spójnia'],
   'St:Erik Bahaj' => ['bahaj'],
   "'t Onstein" => ['onstein'],

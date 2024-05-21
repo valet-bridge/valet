@@ -33,6 +33,7 @@ my @MULTI_WORDS =
   'East Java',
   'East Kalimantan',
   'Eastern Cape',
+  'Gabungan Malaku',
   'Garut Regency',
   'Kepulauan Riau',
   'Lower Silesia',
@@ -52,6 +53,7 @@ my @MULTI_WORDS =
   'Nusa Tenggara Barat',
   'Pearl River',
   'Samut Prakan',
+  'Samut Sakhon',
   'South America',
   'South Australia',
   'South Celebes',
@@ -139,9 +141,9 @@ my @SINGLE_WORDS = qw(
   Patagonia Porong Punjab
   Rajputana Ratchaburi Rogaland Rosfjord 
   Salten Shanxi Siberia Sichuan Silesia Silla Skåne Southland Sydvest
-  Tasmania Telemark Tigris
+  Tasmania Telemark Tigris Tuncelý
   Uttarakhand
-  Victoria
+  Victoria Vojvodina
   Waikato
   Yunnan
   Zhejiang
@@ -151,7 +153,9 @@ my %SINGLE_TYPOS =
 (
   'Australian Central Territory' => ['act'],
   Cappadocia => ['kapadokya'],
+  'Central Sulawesi' => ['sulteng'],
   Eurasia => ['avrasya'],
+  'Gabungan Malaku' => ['gabmo'],
   Kansai => ['kinki'],
   'Kepulauan Riau' => ['riau', 'kepri'],
   'Midt Trøndelag' => ['midttrøndelag'],
@@ -161,11 +165,14 @@ my %SINGLE_TYPOS =
   Patagonia => ['patagonya'],
   Queensland => ['qld'],
   'Samut Prakan' => ['samutprakan'],
+  'Samut Sakhon' => ['samutsakhon'],
+  Silesia => ['slask'],
   'South Australia' => ['sa'],
   'Suphan Buri' => ['suphanburi'],
   'Tamil Nadu' => ['tamilnadu'],
   Uttarakhand => ['uttaranchal'],
   'Victoria' => ['vic'],
+  Vojvodina => ['voj'],
   'Østfold Follo' => ['ostfoldfollo']
 );
 

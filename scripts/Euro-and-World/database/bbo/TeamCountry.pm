@@ -87,7 +87,7 @@ my @SINGLE_WORDS = qw(
   Netherlands Norway 
   Pakistan Palestine Philippines Poland 
   Reunion Romania
-  Scotland Slovakia Switzerland 
+  Scotland Slovenia Slovakia Switzerland 
   Tunisia Turkey
   Uganda USA
   Wales
@@ -146,6 +146,7 @@ my %SINGLE_TYPOS =
   Romania => ['rumania', 'rum'],
   'Serbia and Montenegro' => ['serbia&mon', 'srbija'],
   Scotland => ['scotlsnd', 'scotlands', 'scotlans'],
+  Slovenia => ['sovenia'],
   'South Korea' => ['korea'],
   'Sri Lanka' => ['srilanka'],
   Sweden => ['swe', 'swedem', 'schweden', 'sweeden'],

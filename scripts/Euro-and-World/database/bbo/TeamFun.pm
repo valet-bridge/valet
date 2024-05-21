@@ -904,43 +904,47 @@ my @SINGLE_WORDS = qw(
    Rima Robertinho Robi Robocop Rosajora Rovers Royston Rozle Rylai 
    Rylal
 
-   Sabari Sabina Sabres Saga Sakurai Saladmasters Salokin Salvo 
-   Sansouci SANY Sapphire Sara Sarp Saturn Sbambi Scapros 
-   Schneewittchen Scientists Scot Secure Senaattorit Senator Severin
-   Sevil Shane Shavaz Sherdils Shona Show Shrikant Siddheshwar 
-   Sigdonnemann Sigma Sigrid Silbersee Silverfox Simonetta Simple 
-   Simpleksas Sindbad Sindhu Sirius Sivves Siyabend Sjøsamen 
-   Skalman Skaronga Skip Skitur Skotii Þlem Slappfisker Slostria 
-   Slufsa Småveitjan Snapper Snipers Sogn Soho Solo Sonata Soumitra 
-   Spark Spartans Specialist Spektr Spring Squeeze Stafana Stagge
-   Stampede Star Starmen Starsbridge Statusquo Stayman Steinars 
-   Steinlager Steliana Stifinnern Storeslemmen Strata Strategen 
-   Streamline Studentene Stålfarfar Sucharek Sue Sunshine Svetla 
-   SweDanes SweNor Syttisju Sømnakameratene Såpeopera
+   Sabari Sabina Sabres Saga Sailor Sakurai Saladmasters Salokin Salost
+   Salvo Sansouci SANY Sapphire Sara Sarp Saturn Sbambi Scapros 
+   Schmuckles Schneewittchen Scientists Scot Secure Selin Senaattorit 
+   Senator Severin Sevil Shane Shavaz Sherdils Shona Show Shrikant 
+   Shushi Siddheshwar Sigdonnemann Sigma Sigrid Silbersee Silverfox 
+   Simonetta Simple Simpleksas Sindbad Sindhu Sirius SISU Sivves 
+   Siyabend Sjøsamen Skalman Skaronga Skip Skitur Skotii Þlem 
+   Slappfisker Slostria Slufsa Småveitjan SNAP Snapper Snipers 
+   Sober Sobers Sogn Soho Solo Sonata Sonchel Soumitra Spamirs
+   Spandan Spark Spartans Specialist Spekkhogger Spektr Spring 
+   Squeeze Srimapuna Srykeir Stafani Stagge Stampede Star Starmen 
+   Starsbridge Statusquo Stayman Steinars Steinlager Steliana 
+   Stifinnern Storeslemmen Strata Strategen Streamline Studentene 
+   Stålfarfar Sucharek Sue Sunshine Suz Svetla Swanand SweDanes 
+   SweNor Swest Syly Syttisju Sømnakameratene Sør Såpeopera
 
-   Tadeu Take Takeoff Takk Takým Taksim Tally Tamae Tannlegene Task 
-   Taurus Tbone Tempo Tibetmunkene Tigers Titanik Titans Todremor 
-   Tohundre Tolerant Tongxin Torpedo Tosca Totani Totoro Tömör 
-   Triks Troll Trøndermøringen Tsunami Tulip Tulipano Turuncu 
+   Tadeu Take Takeoff Takk Takým Taksim Tally Tamae Tangra Tannlegene 
+   Task Taurus Tbone Tefo Tempo Tibetmunkene Tigers Tiglatpalasar
+   Tihkur Titanik Titans Tiz Toar Todremor Tofi Tohundre Tolerant 
+   Tollemache Toma Tongxin Topozero Torpedo Tosca Totani Totoro Tömör 
+   Traker Triks Troll Trøndermøringen Tsunami Tulip Tulipano Turuncu 
    Tushar Tutu Tvist
 
    Udarnik UFO Ugh Úlfurinn Ulvene Underdogs Unexpected Ungdomslaget
-   Upplyfting UTU
+   Upplyfting Utkantnorge UTU
 
-   Vakrandi Valen Varoslu Vasallid Västanfläkten Vega* Veegees 
-   Veggen Vibrant Vicho Vicky Victor Victory Vietcong Villmarksgutta
-   Vilttiketju Vilttiukko Viña Vintage Virginia Vivi Vucko Vulcano
-   Vurgun Vürst Vytas
+   Vahakabinetti Vakrandi Valen Valentino Valyo Vanko Varan Varoslu 
+   Vasallid Västanfläkten Veegees Vega* Veggen Verder Verons Vibrant 
+   Vicho Vicky Victor Victory Vietcong Villmarksgutta
+   Vilttiketju Vilttiukko Viña Vintage Virginia Vivi Volta Vucko 
+   Vulcano Vurgun Vürst Vytas
 
    Wael Wafa Wala Waldi Walpurga WBack WDP Wengens Winatalya 
    Windrunners Winkiboy Winterfell Wizards
 
    Xatzopoulos Xman Xtrouble
 
-   Ybs Yaðmur Yamata Yansimasiz Yelena Yogakshema Yokozuna
+   Ybs Yaðmur Yamata Yansimasiz Yelena Ylajai Yogakshema Yokozuna
 
-   Zeerob Zen Zeyno Ziggy Zimmkonis Zlatan Zombi Zorro Zozoura 
-   Zugzwang Zurzits Zvanger
+   Zabavljaci Zamek Zana Zeerob Zen Zeyno Ziggy Zimmkonis Zivac
+   Zlatan Zombi Zorro Zozoura Zugzwang Zurzits Zvanger
 
    Øssur
 );

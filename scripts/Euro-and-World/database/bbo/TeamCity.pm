@@ -41,8 +41,11 @@ my @MULTI_WORDS =
   'Shanghai Yangpu',
   'Siddha Eden Lakeville',
   'Silesia Gliwice',
+  'St Louis',
   'Stara Zagora',
   'Tanjung Pinang',
+  'The Hague',
+  'Udon Thani',
   'Val de Seine',
   'Villa Fabbriche',
   'Vrnjacka Banja',
@@ -164,10 +167,10 @@ my @SINGLE_WORDS = qw(
   Rajasthan Ravnkilde Rzeszow Rødovre
 
   Saarbrücken Sabadel Sakarya Salerno Samarinda Samsun Sandefjord 
-  Santiago Sanya Sarniak Sarpsborg Secunderabad Seferihisar Semarang 
-  Senayan Serang Serdika Shanghai Shaoguan Shenyang 
-  Shenzhen Shihua Sibiu Sidoarjo Siena Sindi Singsås Skara Skien Skopje 
-  Slagelse Slaska Sleman Sliven Sofia Solok Sortland Söke Split 
+  Sansar Santiago Sanya Sarniak Sarpsborg Secunderabad Seferihisar 
+  Semarang Senayan Serang Serdika Shanghai Shaoguan Shenyang 
+  Shenzhen Shihua Sibiu Sidoarjo Siena Simal Sindi Singsås Skara Skien 
+  Skopje Slagelse Slaska Sleman Sliven Sofia Solok Sortland Söke Split 
   Sredec Stavanger Steinkjer Storsjöbygden Stureby Stuttgart 
   Sukma Suleymanpasa Sunndalsøra Surabaya Suzhou Sydney Szeged Sørreisa
 
@@ -188,7 +191,8 @@ my @SINGLE_WORDS = qw(
   Yalikavak Yambol Yarimada Yatagan Yenisehir Yibin Yildirim Yokohama 
   Yogyakarta
 
-  Zagreb Zhenjiang Zhongshan Zhuzhou Zigong Zurich Zyrardow
+  Zagreb Zeugma Zhenjiang Zhongshan Zhujiang Zhuzhou Zigong Zurich 
+  Zyrardow
 
   Ørland
 
@@ -282,6 +286,7 @@ my %SINGLE_TYPOS =
   Tromsø => ['tromso', 'tromsoe'],
   Trondheim => ['trondhei'],
   Udaipir => ['udaypur'],
+  'Udon Thani' => ['udonthani'],
   Vienna => ['wien'],
   Warsaw => ['warsow', 'warszawa'],
   Wroble => ['wróble'],
