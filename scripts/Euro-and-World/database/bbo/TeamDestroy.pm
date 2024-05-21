@@ -16,14 +16,17 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'Bridge Team',
+  'No Name'
 );
 
 my %MULTI_TYPOS =
 (
+  'Bridge Team' => ['bridge tem', 'bridge tea']
 );
 
 my @SINGLE_WORDS = qw(
-  bric
+  Bridge
   Challenger
   European
   GD GLPD
@@ -42,10 +45,12 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  Bridge => ['bric'],
   Challengers => ['chalengers'],
   International => ['internat', 'internationa'],
   Leaders => ['leader', 'leders'],
   National => ['nasional'],
+  'No Name' => ['noname'],
   Pacific => ['pacyfic'],
   Squad => ['squadra'],
   Tournament => ['tounament']

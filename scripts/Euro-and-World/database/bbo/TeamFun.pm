@@ -69,6 +69,7 @@ my @MULTI_WORDS =
   'Babes Amazones',
   'Bad Beat',
   'Bad Man',
+  'Balkanski Minior',
   'Baltic Club',
   'Banteng Selatan',
   'Bara brudar',
@@ -102,15 +103,17 @@ my @MULTI_WORDS =
   'Bob Bob',
   'Boogie Knights',
   'Boye B Fan Club',
-  "Boys'n' Girls'",
+  "Boys'n' Girls",
   'Brian Is Beautiful',
   'Bridge am Grün',
   'Bridge Friends',
+  'Bridge Lovers',
   'Bridge Plus',
   'Bridgerama Milan',
   'British Lions',
   'Brødrene & co',
   'Brødrene Dal',
+  'Buyur Teyze',
   'Ca. et halvt tonn',
   "Cai's Bird",
   'Californian Aces',
@@ -473,7 +476,7 @@ my @MULTI_WORDS =
   'Queen and Knights',
   'Queen of Hearts',
   'Radio Communication',
-  "Rajjan's",
+  'Rajjan',
   'Ram Charan',
   'Randers 2.0',
   'Randers 4.0',
@@ -503,7 +506,6 @@ my @MULTI_WORDS =
   'Saruntawaya Minahas',
   'Schall und Rauch',
   'Scottish President',
-  'Semangat Baru',
   'Sengkol Lombok',
   'Seths vänner',
   'Seven Eleven',
@@ -613,6 +615,7 @@ my @MULTI_WORDS =
   'To gamle og to gode',
   'Tommys tigre',
   'Top Ruff',
+  'Topbridge of course',
   "Tor Ivar's",
   'Tre hunkar en babe',
   'Tre rette og en vrang',
@@ -663,6 +666,7 @@ my @MULTI_WORDS =
   'Young Sharks',
   'Young Warriors',
   'Young Driver',
+  'Young Swedes',
   'Your name?',
   "Yttakjær`s",
   'Yura Taschit',
@@ -754,7 +758,8 @@ my %MULTI_TYPOS =
      'late sssk jain'],
   'Lawrence of Arabia' => ['lawrence of arab'],
   'La Vista' => ['la vista team'],
-  'Lakk & Lær' => ['lakk og lær', 'lek & lær', 'lokk & lur'],
+  'Lakk & Lær' => ['lakk og lær', 'lek & lær', 'lokk & lur',
+    'litt lakk og lær', 'lakk lær'],
   'Leromain boys' => ["leroumain's boys"],
   'Lindenthal und Freunde' => ['lindenthal und fre'],
   'Lucky 13' => ['lucky13'],
@@ -774,10 +779,10 @@ my %MULTI_TYPOS =
   "Pradeep's Four" => ["pradeep's 4", "Pradeep's Team"],
   "President's Team" => ["president's", 'presidents teams'],
   'Queen and Knights' => ["queen's & knight"],
+  'Rajjan' => ["rajjan's"],
   'Saevar Karl' => ['svaer karl'],
   'Saint Titus' => ['st titus', 'st. titus'],
   'Sakurai' => ['japan sakurai'],
-  'Semangat Baru' => ['semangat br'],
   'Sivves straffdubbl' => ['sivves straffdubbl.', 'sivves straffdbl',
      'sivves...'],
   'Six Diamonds' => ['six diamond'],
@@ -803,7 +808,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-   2Q2K 6L 10CC 7heart
+   2Q2K 3D 6L 10CC 7heart
 
    AABC Aces Acolvik Adventure Aditya Aeras Agamemnon Agressor Ahmetizm 
    Ahornet Aida Akenobo Akinom Alertplus Alex Alfredo Ali Alioth 
@@ -816,13 +821,14 @@ my @SINGLE_WORDS = qw(
    Aytalus Azores Azure
 
    Bacch Bachelor Bade Badger Badminton Bager Baias Bajozero Balti 
-   Bananasplit Baneet BarDeZi BARP Barracuda Baryton BAST Bato Bauhinia 
-   BBO Beauty Begigütje Begijntje Ben Beniaminek Berik Beton Bhinneka 
-   Biachite Bilal Bingbang Binkie Biriceri Blackwood Blandat Bling 
-   Blondie Blueberry Boek Bolero Boogies Boomz Boriana Borko BOVE 
-   Breno Bricklayer Bridgebutikken Bridgekameratene Bridgeministeriet 
-   Brother Brudarna Buaigh Bubba Bubu Buddies Bumerangas Bunnies 
-   Bulldozer Busiaki Butler
+   Bananasplit Baneet BarDeZi BARC BARP Barracuda Baryton BAST Bato 
+   Bauhinia 
+   BBO Beauty Begigütje Begijntje BELSPA Ben Beniaminek Berik Beton 
+   BHDM Bhinneka Biachite Bilal Bingbang Binkie Biriceri Blackwood 
+   Blandat Bling Blondie Blueberry BMP Boek Bolero Boogies Boomz Boriana 
+   Borko BOVE Breno Bricklayer Bridgebutikken Bridgekameratene 
+   Bridgeministeriet Brother Brudarna Buaigh Bubba Bubu Buddies 
+   Bumerangas Bunnies Bulldozer Busiaki Butler
 
    Cabal Cabriole Calaca Cammello Canadonia Cancan Canukusa 
    Cardtossers Cargo Cartoon Casuals Cathy Cavelieri Censored 
@@ -884,9 +890,10 @@ my @SINGLE_WORDS = qw(
    LatSwe Lazy Lebensohl Lebron Legeanka Lema Lemanus Leta Letve 
    Leveni Lianas Liggeunderlaget Lili Lillebaluba Lions Lipa Lira Livius 
    Lirarna Liverbird Ljónin LNWers Logos Lolly Loloc Lowel Löparn 
-   Lucky LVBridgeBums Lyubcho Løwene
+   LPMS Lucky LVBridgeBums Lyubcho Løwene
 
-   Mach Madhav Mads Maestroi Magic Magister Maharaja Maija Major MajorB
+   Mach Madhav Mads Maestroi Magi Magic Magister Maharaja Maija Major 
+   MajorB
    Majorn Majority Malinka Malmölaget Manashda Manena Mano Manu Manywar
    Margitta Marianne Marosamitawa Mars Marvelous Marynarz Masdjävlar 
    Masters Matilde Matrix Mats Matujona Maven Mavs Mayamira Maxi 
@@ -907,7 +914,7 @@ my @SINGLE_WORDS = qw(
    Pacers Paco Pagonia Palukas Panteros Paoli Paradigma Partizan
    Pasanci Passé Patron Paulette Paulina Paulistas Pegasus Pennant
    Perestrojka Perjuangan Peter Petra Pia Piast Piryoli Piter 
-   Pjäxa Pleschi Pleyada Plia Pojat Polirish Pompapompa Pontiac 
+   Pjäxa Pleschi Pleyada Plia PMS Pojat Polirish Pompapompa Pontiac 
    Potlimit Potteplante Powerchicks Prapar Prasetya Preempters 
    Pretendents Prijatelj Prosan Proteus Proto Ptacol Pude Pusten 
    Pyon Pyton Påskevennene
@@ -923,7 +930,8 @@ my @SINGLE_WORDS = qw(
    Salvo Sansouci SANY Sapphire Sara Sarp SaTu Saturn Sbamby Scapros 
    Schmuckles Schneewittchen Scientists Scot Secure Selin Senaattorit 
    Senator Severin Sevil Shane Shavaz Sherdils Shona Show Shrikant 
-   Shushi Siddheshwar Sigdonnemann Sigma Sigrid Silbersee Silverfox 
+   Shushi Siddheshwar Sigdonnemann Sigma Sigrid Sihai Silbersee 
+   Silverfox 
    Simonetta Simple Simpleksas Sindbad Sindhu Sirius SISU Sivves 
    Siyabend Sjøsamen Skalman Skaronga Skip Skitur Skotii Þlem 
    Slappfisker Slostria Slufsa Småveitjan SNAP Snapper Snipers 

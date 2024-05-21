@@ -17,6 +17,7 @@ use TeamBBO;
 my @MULTI_WORDS =
 (
   '101 Fasteignasala',
+  "A-Media Sieradz",
   'Abadi Adimulia',
   'Adaro Energy',
   'Advisor Revisjon Norge',
@@ -27,7 +28,6 @@ my @MULTI_WORDS =
   'APRA Clothing',
   'Apreo Logistic Poland',
   'Asindo Prima',
-  'Asko-Tech',
   'Astro A/S',
   'Balcova Termal',
   'Baltic Express',
@@ -320,7 +320,7 @@ my %MULTI_TYPOS =
   'Agsar Paints' => ['agsar pints'],
   'AJ Diament' => ['aj diamonds', 'diament'],
   'Apreo Logistic Poland' => ['apreo logistic pol', 'apreo logistic pola'],
-  'Asko-Tech' => ['asco tech'],
+  'Asko-Tech' => ['asco tech', 'asko tech'],
   'Baltic Express' => ['baltic expres'],
   'Bangur Cement' => ['bangur cements', 'bangur cment'],
   'Bank Tabungan Negara' => ['bank btn'],
@@ -424,7 +424,9 @@ my %MULTI_TYPOS =
   'Samtronic Constanta' => ['samtronic ct'],
   'Sanya Tianze' => ['san ya tian ze'],
   'SAPW Poland' => ['sapw-poland'],
-  'Semangat Baru Makassar' => ['semangat baru mks', 'semangat baru mks.'],
+  'Semangat Baru Makassar' => ['semangat baru mks', 'semangat baru mks.',
+    'semangat br', 'semangat baru', 'semangat baru mksr',
+    'makassar semangat b'],
   'Shanghai Automobile' => ['shanghai automoblie', 'sh  qiche',
     'sh qiche'],
   'Shanghai Changyu' => ['sh chuangyu'],
@@ -458,7 +460,8 @@ my %MULTI_TYPOS =
   'Syabas Energy' => ['syabas energi', 'syabas e'],
   'Synergia Lublin' => ['synergia lubin'],
   'Team PharmaService' => ['pharma service', 'pharmaservice'],
-  'Telkom Indonesia' => ['telkom ind indihome', 'telkom indonesia'],
+  'Telkom Indonesia' => ['telkom ind indihome', 'telkom indonesia',
+    'telkom wifi.id', 'telkom wifi. id'],
   'Telkom Speedy' => ['telkom speedy bpn'],
   'Tolani Shipping Ltd' => ['tolani shipping'],
   'Trambak Rubber' => ['trumpak rubber'],
@@ -526,7 +529,7 @@ my @SINGLE_WORDS = qw(
 
   Sagaplast Samsung Samtronic Scania Sekans Sevtopolis Shimuzu 
   Shouchuang Signity Skeljungur Solakoglu Solox Sparisjóður Srenniw
-  Stalgast Stiga Synective
+  SSDA Stalgast Stiga Synective
 
   Tekser Termika Termoavion Termochem Topeko Transearly Tricon Tridaya 
   Triton Tryggingamiðstöðin Tsingtao Tundem Tyco Tzilis

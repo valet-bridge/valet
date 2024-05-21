@@ -21,6 +21,7 @@ my @MULTI_WORDS =
   'Anadolu University',
   'Andalas University',
   'Ankara University',
+  'Asko Tech University',
   'Bilkent University',
   'Brawijaya University',
   'Budapest University',
@@ -63,6 +64,7 @@ my @MULTI_WORDS =
   'Stanford University',
   'Soochow University',
   'Tarsus American College',
+  'Telkom University',
   'Trakya University',
   'Umeå University',
   'UBC Hamburg',
@@ -94,6 +96,7 @@ my %MULTI_TYPOS =
   'Anadolu University' => ['uni. anadolu', 'anadolu uni',
     'uni anadolu'],
   'Ankara University' => ['ankara uni'],
+  'Asko Tech University' => ['asko-tech', 'asco tech', 'asko tech'],
   'Bilkent University' => ['bilkent uni'],
   'Budapest University' => ['budapest uni'],
   'Cornell University' => ['cornell'],
@@ -133,7 +136,8 @@ my %MULTI_TYPOS =
   'Universität Potsdam' => ['uni potsdam'],
   'Warsaw University of Technology' => ['warsaw ut'],
   'Wroclaw University of Science and Technology' => 
-    ['Politechnika Wroclawska'],
+    ['Politechnika Wroclawska', 'polit wroclaw', 'polite wroclaw',
+    'polit wr', 'politechnika wr', 'azs pw'],
   'Yildiz Technical University' => ['ýtü']
 );
 
@@ -147,6 +151,7 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   'Andalas University' => ['unand'],
+  'Asko Tech University' => ['atu'],
   'Brawijaya University' => ['brawijaya'],
   'Chang Gung University' => ['cgu'],
   'Chung Hua University' => ['chu'],

@@ -130,7 +130,7 @@ my @SINGLE_WORDS = qw(
   Eurasia Europe
   Florida
   Ganges Gansu Global Goa Gorontalo Guangdong Guangxi Guizhou Gujarat
-  Hainan Haugaland Hebei Huangshi Hubei Hunan
+  Hainan Haixing Haugaland Hebei Huangshi Hubei Hunan
   Jharkhand Jiangsu Jilin
   Kansai Karimun Karnataka Kawanua Kedungwaru Kepri Kerala Krabi
   Lebak Liaoning Liguria Lombok Lumajang
@@ -157,8 +157,10 @@ my %SINGLE_TYPOS =
   'Central Sulawesi' => ['sulteng'],
   Eurasia => ['avrasya'],
   'Gabungan Malaku' => ['gabmo'],
+  Ganges => ['genges'],
   Kansai => ['kinki'],
   'Kepulauan Riau' => ['riau', 'kepri'],
+  Marmara => ['marmar'],
   'Midt Trøndelag' => ['midttrøndelag'],
   'Møre Romsdal' => ['moreromsdal'],
   'Nakhon Nayok' => ['nakhonnayok'],
