@@ -196,6 +196,7 @@ my @MULTI_WORDS =
   'Poddar Developers',
   'Poddar Housing',
   'PRI Investment',
+  'PU Bitung',
   'PU Minsel',
   'Quik Tea',
   'Red Bull',
@@ -365,7 +366,7 @@ my %MULTI_TYPOS =
     'gardar og velar'],
   'Garðs Apotek' => ['garðs apótek', 'garðs apoótek', 'gards apótek'],
   'Geely Automobile' => ['geely auto', 'gely auto', 'chaina geely',
-    'china geely', 'jili', 'china geely auto'],
+    'china geely', 'jili', 'china geely auto', 'jili qiche'],
   'Geologi Timah' => ['geo timah', 'geo tima'],
   'Geoportal Kutai Kartanegara' => ['geo gutai gartanega'],
   'Gong Hang Jin Ying' => ['gonghang jinying'],
@@ -414,7 +415,7 @@ my %MULTI_TYPOS =
   'PD Times' => ['pd shidai', 'pd  shidai'],
   'Pertamina' => ['pertamina ep', 'pertamina ft', 'pertamina field', 
     'pertamina ge', 'pertamina indonesia'],
-  'Phoenix TV' => ['feng huang wei shi'],
+  'Phoenix TV' => ['feng huang wei shi', 'fenghuang tv'],
   'Poddar Developers' => ['poddar development', 'poddar dev',
     'podder dev', 'podder developers', 'poddar devekopers',
     'poddar dovelopers', 'poddar'],
@@ -484,8 +485,8 @@ my @SINGLE_WORDS = qw(
   Bajaj Banpu Baykar Beidike Bnerg
 
   Cable Candyland Changyu Chemikartel Chlodnia Chuanmei Cimentas 
-  COMAL Compensa Computerland CONSUS Constellation Continental Copia 
-  Cosmos
+  COMAL Compensa Computerland CONNECTOR CONSUS Constellation 
+  Continental Copia Cosmos
 
   Datasteel Denizgucu Dermika Derofe Dianwang DISKI Djarum Dongfeng 
   Dostlar Druva
@@ -549,12 +550,13 @@ my %SINGLE_TYPOS =
   'Bank Tabungan Negara' => ['btn'],
   'Beijing Longxin' => ['beijinglongxin'],
   'Beijing Trinergy' => ['beijingtrinergy'],
-  'BridgeBertheau.com' => ['bridgebertheau'],
+  'BridgeBertheau.com' => ['bridgebertheau', 'bridgeberteau'],
   'Carlo Bossi' => ['carlobossi'],
   'Chateau Rossenovo' => ['rossenovo', 'rosenovo'],
   'Chennai Online' => ['chennaionline'],
   'China Ping An' => ['chinapingan', 'zhongguopingan'],
   Computerland => ['computerlan'],
+  CONNECTOR => ['conector'],
   'Dhampur Sugar' => ['dhampur'],
   DISKI => ['dsi'],
   Eksprompt => ['ekspromt'],

@@ -47,6 +47,7 @@ my %SINGLE_TYPOS =
   Leaders => ['leader', 'leders'],
   National => ['nasional'],
   Pacific => ['pacyfic'],
+  Squad => ['squadra'],
   Tournament => ['tounament']
 );
 

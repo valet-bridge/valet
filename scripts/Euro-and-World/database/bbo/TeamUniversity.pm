@@ -83,6 +83,7 @@ my @MULTI_WORDS =
   'Universität Potsdam',
   'Valahia University',
   'Warsaw University of Technology',
+  'Wroclaw University of Science and Technology',
   'Yildiz Technical University',
   'Zagreb University'
 );
@@ -117,7 +118,8 @@ my %MULTI_TYPOS =
   'University of Brawijaya' => ['univ brawijaya'],
   'University of Bung Hatta' => ['univ bung hatta', 'univ. bung hatta'],
   'University of California at Berkeley' => ['cal berkeley',
-    'u calif berkeley', 'cal-berkeley', 'uc berkeley', 'u berkeley'],
+    'u calif berkeley', 'cal-berkeley', 'uc berkeley', 'u berkeley',
+    'u cal berkeley'],
   'University of Chicago' => ['u chicago'],
   'University of Gdansk' => ['uni gdansk', 'gdank univ poland',
     'gdansk univ poland'],
@@ -130,6 +132,8 @@ my %MULTI_TYPOS =
   'University of Tanjungpura' => ['untan'],
   'Universität Potsdam' => ['uni potsdam'],
   'Warsaw University of Technology' => ['warsaw ut'],
+  'Wroclaw University of Science and Technology' => 
+    ['Politechnika Wroclawska'],
   'Yildiz Technical University' => ['ýtü']
 );
 
@@ -167,7 +171,8 @@ my %SINGLE_TYPOS =
   'University of Porto' => ['cdup'],
   'University of Surabaya' => ['ubaya'],
   'University of Wroclaw' => ['pwr'],
-  'Valahia University' => ['valahia']
+  'Valahia University' => ['valahia'],
+  'Wroclaw University of Science and Technology' => ['pwr']
 );
 
 

@@ -251,6 +251,7 @@ my @MULTI_WORDS =
   "Gary's Boys",
   'Gerganin Izvor',
   'Ghost of Red',
+  'Girls and Boys',
   'Global Mix',
   'Glomma Raiders',
   'Glory Box',
@@ -499,11 +500,14 @@ my @MULTI_WORDS =
   'Samfund Slingers',
   'Sang ae',
   'Saras Friends',
+  'Saruntawaya Minahas',
   'Schall und Rauch',
   'Scottish President',
   'Semangat Baru',
+  'Sengkol Lombok',
   'Seths vänner',
   'Seven Eleven',
+  'Sham Sharma',
   'Shining Pig',
   'Shooting',
   'Shy Ant',
@@ -511,12 +515,15 @@ my @MULTI_WORDS =
   'Siderkongen og kidz',
   'Silver Eagle',
   'Simple Minds',
+  'Sing-Sunn',
   'Sivves straffdubbl',
   'Six Diamonds',
   'Six Samurai',
+  'Sjiraffen Erik',
   'Slam Dunk',
   'Slam Hunters',
   'slaveykov.bg',
+  'Sliven Haiduci',
   'Smoking Guns',
   'Smooth Duck',
   'Småsamen med døler',
@@ -546,6 +553,7 @@ my @MULTI_WORDS =
   'Syabas Gabrial UI',
   'Syntax Error',
   'Søta bror',
+  'Såpjohansen & co',
   'Team Bo a berg',
   'Texan Aces',
   'Texan and Turks',
@@ -554,6 +562,7 @@ my @MULTI_WORDS =
   'Team Mayhem',
   'Team Yoda',
   'Tempo-Knektene',
+  'Teyzenin Yeri',
   'The Four Guys',
   'The A Team',
   'The Alliance',
@@ -581,6 +590,7 @@ my @MULTI_WORDS =
   'The Patron',
   'The Pirates',
   'The Real Team',
+  'The Reco',
   'The Red Devils',
   'The Revokers',
   'The Sharks',
@@ -597,6 +607,7 @@ my @MULTI_WORDS =
   'Thick Toast',
   'Thread & Needles',
   'Three Nations',
+  'Til Valhall',
   'Tinutuan Manado',
   'Tre knekter og ett S',
   'To gamle og to gode',
@@ -611,6 +622,7 @@ my @MULTI_WORDS =
   'Tut tut',
   'Ucurtma Avcisi',
   'Umisen Yamasen',
+  'Umut Baris',
   'Unholy Alliance',
   'Usaklig Deigræv',
   'Vaddo Gliders',
@@ -652,6 +664,8 @@ my @MULTI_WORDS =
   'Young Warriors',
   'Young Driver',
   'Your name?',
+  "Yttakjær`s",
+  'Yura Taschit',
   'Zara Bridge',
   'Zen Ho',
   'Zia and Friends',
@@ -688,6 +702,7 @@ my %MULTI_TYPOS =
   'Californian Aces' => ['california aces'],
   "Chairman's Choice" => ["chairman's team"],
   'Croatian Pirates' => ['cro pirates'],
+  Crossfatek => ['cross fatek'],
   'Curry Eaters' => ['curry  eaters'],
   'Deceptive AHM' => ['deceptive  ahm'],
   'Delhi Gym Aces' => ['d g aces', 'dgc aces'],
@@ -801,13 +816,13 @@ my @SINGLE_WORDS = qw(
    Aytalus Azores Azure
 
    Bacch Bachelor Bade Badger Badminton Bager Baias Bajozero Balti 
-   Bananasplit Baneet BarDeZi BARP Barracuda Baryton Bato Bauhinia 
+   Bananasplit Baneet BarDeZi BARP Barracuda Baryton BAST Bato Bauhinia 
    BBO Beauty Begigütje Begijntje Ben Beniaminek Berik Beton Bhinneka 
    Biachite Bilal Bingbang Binkie Biriceri Blackwood Blandat Bling 
    Blondie Blueberry Boek Bolero Boogies Boomz Boriana Borko BOVE 
    Breno Bricklayer Bridgebutikken Bridgekameratene Bridgeministeriet 
    Brother Brudarna Buaigh Bubba Bubu Buddies Bumerangas Bunnies 
-   Bulldozer Busiaki
+   Bulldozer Busiaki Butler
 
    Cabal Cabriole Calaca Cammello Canadonia Cancan Canukusa 
    Cardtossers Cargo Cartoon Casuals Cathy Cavelieri Censored 
@@ -856,7 +871,7 @@ my @SINGLE_WORDS = qw(
    Juniorklubben Jupiter Juste Justplay Justyna Justynka Jutek 
    Juubilar JuuTools
 
-   Kaardivägi Kagama Kalbar Kalka Kalkarn Kaltim Kamelåså Kamikaze 
+   Kaardivägi Kagama Kalbar Kalca Kalkarn Kaltim Kamelåså Kamikaze 
    Kamlakars Kamyk Kangaroo Kanin Karaarslan Karin Karo Kartel 
    Kasiyahan Kasty Kasuang Katipunan Kebiya Keni Kenji Kenlong 
    Kerasus Kibe Kinga Kingkong Kings KISS Kjelskos Klasik Klio
@@ -865,9 +880,9 @@ my @SINGLE_WORDS = qw(
    Krem Kris Kriston Krisztina Ksenia Kuglana Kuhmilch Kultur
    Kvazar
 
-   Lahjattomat Langy Laplanders Laplas Larry Lasse Lataka Lateria LatSwe 
-   Lazy Lebensohl Lebron Legeanka Lema Lemanus Leta Letve Leveni
-   Lianas Liggeunderlaget Lili Lillebaluba Lions Lipa Lira Livius 
+   Lahjattomat LAKT Langy Laplanders Laplas Larry Lasse Lataka Lateria 
+   LatSwe Lazy Lebensohl Lebron Legeanka Lema Lemanus Leta Letve 
+   Leveni Lianas Liggeunderlaget Lili Lillebaluba Lions Lipa Lira Livius 
    Lirarna Liverbird Ljónin LNWers Logos Lolly Loloc Lowel Löparn 
    Lucky LVBridgeBums Lyubcho Løwene
 
@@ -875,13 +890,13 @@ my @SINGLE_WORDS = qw(
    Majorn Majority Malinka Malmölaget Manashda Manena Mano Manu Manywar
    Margitta Marianne Marosamitawa Mars Marvelous Marynarz Masdjävlar 
    Masters Matilde Matrix Mats Matujona Maven Mavs Mayamira Maxi 
-   Mercury Mesna Meta Mia Midas Mihai Mikke Miguel Milady Minut 
+   Mercury Mesna Meta Mia Midas Mihai Mikke Miguel Milady Milo Minut 
    Mirage Miro Mismatch Mixarna Mjøskameratne Mochu Monaconf
    Moritz Mostingan Movember Mölnlycke Munawar Mýna Myoni Møremix Måsen
 
    Nabil Nadide Narbisk Narre Natalia Nathans Natural Naturalists Neduk 
-   Nemesis Nessuno Neverclaim Nico Nightingale Nikita Nikitopoulos Niko 
-   Nikos Nikotiimi Nis Nislije NMRT Noctis Noralia Noriko Norsu 
+   Nemesis Nessuno Neverclaim Nico Nightingale Nik Nikita Nikitopoulos 
+   Niko Nikos Nikotiimi Nis Nislije NMRT Noctis Noralia Noriko Norsu 
    NTiosagutta Nula
 
    Obezit Octopussy Ognisty Okay Oksijen Olavsfestdagene Olena 
@@ -890,7 +905,7 @@ my @SINGLE_WORDS = qw(
    Oto Otters Outsiders Overivrig Oyzum Ozbiljni
 
    Pacers Paco Pagonia Palukas Panteros Paoli Paradigma Partizan
-   Pasanci Passé Patron Paulette Paulina Paulistas Pegasus 
+   Pasanci Passé Patron Paulette Paulina Paulistas Pegasus Pennant
    Perestrojka Perjuangan Peter Petra Pia Piast Piryoli Piter 
    Pjäxa Pleschi Pleyada Plia Pojat Polirish Pompapompa Pontiac 
    Potlimit Potteplante Powerchicks Prapar Prasetya Preempters 
@@ -905,7 +920,7 @@ my @SINGLE_WORDS = qw(
    Rylal
 
    Sabari Sabina Sabres Saga Sailor Sakurai Saladmasters Salokin Salost
-   Salvo Sansouci SANY Sapphire Sara Sarp Saturn Sbambi Scapros 
+   Salvo Sansouci SANY Sapphire Sara Sarp SaTu Saturn Sbamby Scapros 
    Schmuckles Schneewittchen Scientists Scot Secure Selin Senaattorit 
    Senator Severin Sevil Shane Shavaz Sherdils Shona Show Shrikant 
    Shushi Siddheshwar Sigdonnemann Sigma Sigrid Silbersee Silverfox 
@@ -992,6 +1007,7 @@ my %SINGLE_TYPOS =
   'Jamm & Co' => ['jamm'],
   'Joy Division' => ['joydivision'],
   Juls => ['julst'],
+  Jupiter => ['jupitor'],
   'Last Arrival' => ['lastarrival'],
   'Late S.S. Jain' => ['lssjain'],
   Lebensohl => ['lebenshol'],
@@ -1016,6 +1032,7 @@ my %SINGLE_TYPOS =
   Quantum => ['qantum'],
   'River Friend' => ['riverfriend'],
   Scientists => ['science'],
+  'Sham Sharma' => ['shamsharma'],
   Shrikant => ['srikant'],
   Sigdonnemann => ['sigdonneman'],
   Skotii => ['skoti'],
@@ -1030,6 +1047,7 @@ my %SINGLE_TYPOS =
   Syttisju => ['sytti7'],
   'Texan Aces' => ['texanaces'],
   Titans => ['titan'],
+  Valyo => ['valýo'],
   'Vegetable Hotpot' => ['vegetable'],
   Vürst => ['vuerst'],
   'Wei De' => ['weide'],

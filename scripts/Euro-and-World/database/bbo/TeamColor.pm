@@ -38,7 +38,7 @@ my %SINGLE_TYPOS =
   Green => ['verde'],
   Red => ['rouge', 'rød', 'rood'],
   White => ['putih', 'hvid'],
-  Yellow => ['kuning']
+  Yellow => ['kuning', 'beyaz']
 );
 
 

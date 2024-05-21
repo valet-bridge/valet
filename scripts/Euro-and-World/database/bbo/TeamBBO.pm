@@ -245,7 +245,6 @@ sub eliminate_districts
 {
   my ($team_ref) = @_;
 
-my $old = $$team_ref;
   if ($$team_ref =~ s/district \d+//i)
   {
     return ($$team_ref =~ /^\s*$/ ? 1 : 0);

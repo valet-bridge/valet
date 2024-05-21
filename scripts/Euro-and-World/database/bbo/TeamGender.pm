@@ -30,9 +30,10 @@ my %SINGLE_TYPOS =
 (
   Open => [qw(libre libres terbuka)],
   Men => [qw(mens men's men`s putra pa homme hommes)],
-  Women => [qw(woman wemen womans women's womens lady ladies ladies's
+  Women => [qw(woman wemen womans women's womens 
+    lady ladies ladie ladies's
     femme femmes damas dames damer putri pi wo)],
-  Mixed => [qw(mix mixte)]
+  Mixed => [qw(mix mixte mýx)]
 );
 
 

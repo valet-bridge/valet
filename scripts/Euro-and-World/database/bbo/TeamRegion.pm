@@ -103,6 +103,7 @@ my %MULTI_TYPOS =
     'sulawesi utara', 'sulawasi utara', 'sulut'],
   'North Minahasa' => ['minahasa utara'],
   'North Sumatra' => ['sumatera utara'],
+  'Pearl River' => ['pearl riv', 'pearl r'],
   Sichuan => ['si chuan'],
   'South Africa' => ['south frica'],
   'South Jakarta' => ['jakarta selatan'],
@@ -128,7 +129,7 @@ my @SINGLE_WORDS = qw(
   Druts
   Eurasia Europe
   Florida
-  Ganges Gansu Global Gorontalo Guangdong Guangxi Guizhou Gujarat
+  Ganges Gansu Global Goa Gorontalo Guangdong Guangxi Guizhou Gujarat
   Hainan Haugaland Hebei Huangshi Hubei Hunan
   Jharkhand Jiangsu Jilin
   Kansai Karimun Karnataka Kawanua Kedungwaru Kepri Kerala Krabi
@@ -152,7 +153,7 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   'Australian Central Territory' => ['act'],
-  Cappadocia => ['kapadokya'],
+  Cappadocia => ['kapadokya', 'kapodokya'],
   'Central Sulawesi' => ['sulteng'],
   Eurasia => ['avrasya'],
   'Gabungan Malaku' => ['gabmo'],
