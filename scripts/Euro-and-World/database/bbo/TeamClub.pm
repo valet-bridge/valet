@@ -24,6 +24,7 @@ my @MULTI_WORDS =
   'Alert Mannheim',
   'Altay Genclik',
   'Ankara Kontrat',
+  'Atletik Basket',
   'Augsburg Augusta',
   'Avalanche BC',
   'Aydin 1923 BBSK',
@@ -34,6 +35,7 @@ my @MULTI_WORDS =
   'BC 52 Berlin',
   'BC de Lille',
   'BC Garches',
+  'BC Milano',
   'BC Rennais',
   'BC Saarbrücken 1984',
   'BC Schwäbisch Hall',
@@ -77,6 +79,7 @@ my @MULTI_WORDS =
   'Eskisehir Baðlar',
   'Eskisehir Sports',
   'Essen 86',
+  'Fakultas Teknik Bridge Club',
   'Fatih Karagumruk',
   'Fire Club',
   'Fjends BK',
@@ -128,6 +131,7 @@ my @MULTI_WORDS =
   'Nord Aalborg',
   'Nord Trøndelag',
   'Norrorts Bridge',
+  'NS-1',
   'Nürnberg Museum',
   'OBK Kloverknekt',
   'Ocean BC',
@@ -150,7 +154,6 @@ my @MULTI_WORDS =
   'Salmun BC',
   'Samadhan Academy',
   'San Sac',
-  'Semangat Baru Makassar',
   'Semen Padang',
   'Sharja Club',
   'Shemokh Club',
@@ -168,6 +171,7 @@ my @MULTI_WORDS =
   'Top Bridge BC',
   'Torino Allegra',
   'Van Bric',
+  'Vefa SK',
   'Wadi Degla',
   'Wampon Bodi Papua',
   'Wan Jian Club',
@@ -198,27 +202,22 @@ my %MULTI_TYPOS =
     'bamberger germany', 'bamberger welle', 'bamberg riders',
     'bc bamberger reite', 'bridgeclub bamberge'],
   'BC Garches' => ['b.c de garches'],
+  'BC Milano' => ['bc mi', 'bc. mi'],
   'BC Universität Mannheim' => ['bc uni mannheim'],
   'BCN Almirall' => ['bcn-almirall', 'bcn - almirall'],
   'BK Fyris Skalman' => ['skalman bk fyris'],
   'BK Herkules' => ['bc hercules'],
   'BK Lavec Smile' => ['bk lavec - smile', 'lavec smile',
-  'BC Rennais' => ['b.c. rennais', 'b.c rennais'],
     'smile bk lavec', 'bk lavek smile', 'bk lavec', 'enjoy bk lavec'],
+  'BC Rennais' => ['b.c. rennais', 'b.c rennais'],
   'BC Alert Mannheim' => ['bc mannheim', 'alert mannheim'],
   'Bridge Tunas Cahaya' => ['btc jatim'],
-  'St:Erik' => ['bk s.t erik', 'bk st erik', 'st erik', 'st erýk',
-    'st erik'],
-  'St:Erik Bahaj' => ['s:t erik bahaj', 's:t erik - bahaj'],
-  'St:Erik Hella' => ['bk st erik hella', 'bk st.erik hella'],
-  'St:Erik Morot' => ['bk st erik morot', 'bk st.erik morot',
-    'bk sterik morot', 'morot bk st erik'],
   'Bodrum BSK' => ['bodrum b.s.k.', 'bodrum bric kulubu',
     'bordum bric sk'],
   'Bogazici BSK' => ['bogaz ici bsk', 'boðazici bsk', 'boðazýçý bsk',
     'boðazýçý s.k.'],
   'Cerkezkoy Dinamik BSK' => ['Cerkezkoy BS', 'Cerkezkoy BSK'],
-  'Crvena Zvezda' => ['zrvena zwezda'],
+  'Crvena Zvezda' => ['zrvena zwezda', 'zrvena zvezda'],
   'Debrecen DEAC' => ['debrecen-deac'],
   'Diyarbakýr Sur BSK' => ['diyarbakir bs', 'diyarbakir bsbs', 
     'dýyarbakir sur. b.b', 'diyarbakir sur sk', 'sur belediye sk',
@@ -230,6 +229,7 @@ my %MULTI_TYPOS =
   'Eskisehir Baðlar' => ['Eskýþehýr Baðlar'],
   'Fanfulla' => ['fanfulla lo'],
   'Gabrial UI' => ['gabrial-ui', 'gabrial - ui'],
+  'Goztepe Hilal SK' => ['goztepe hilal'],
   'Grant Thornton' => ['bc grant thornton', 'bc grant-thornton', 
     'bg thornton', 'grant thonrton', 'grantt thornton'],
   'Hanseatic Hamburg BC' => ['hanseatic bc', 'hanseatic hamburg'],
@@ -263,10 +263,15 @@ my %MULTI_TYPOS =
   'Qi Zhong Club' => ['qi zhong'],
   'Qin Lian Club' => ['qin lian'],
   'RAL Poznan' => ['ral poznañ'],
-  'Semangat Baru Makassar' => ['semangat baru mksr',
-    'makassar semangat b', 'semangat baru mks'],
+  'St:Erik' => ['bk s.t erik', 'bk st erik', 'st erik', 'st erýk',
+    'st erik'],
+  'St:Erik Bahaj' => ['s:t erik bahaj', 's:t erik - bahaj'],
+  'St:Erik Hella' => ['bk st erik hella', 'bk st.erik hella'],
+  'St:Erik Morot' => ['bk st erik morot', 'bk st.erik morot',
+    'bk sterik morot', 'morot bk st erik'],
   'Studentenes BK' => ['studentene bk'],
-  'Tennis Club Parioli' => ['tc pariori'],
+  "'t Onstein" => ["'t onsten"],
+  'Tennis Club Parioli' => ['tc pariori', 'tcp rm', 'tennis rm'],
   'Tonyaspor' => ['tonya spor'],
   'Top Bridge BC' => ['topbridge bc', 'top bridge', 'topbridge bk',
     'bk topbridge'],
@@ -281,16 +286,17 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Acol Airmadidi Akceþme Amisos Asenovec Auguri AVGP
-  Benfica Bonsist Botev
+  Benfica Besiktas Bonsist Botev BTBK
   Debrecen Dragao Drienerlo
   Fanfulla Fenerbahce Fosnavåg
-  Galata Galatasaray 
+  Galata Galatasaray Gauteng
   Hercules Hoppklubbene Hordaland Hosgoru Houchetou
   Jeofizik
   Karagümrük Karlsruher Kløverknekt 
   Lavec Laksamana LÜKSAD
   Locomotiva
   Miskolc Mo Mragowia
+  NBK
   Pamukspor Pelatnas
   Qizhong
   Romana
@@ -300,6 +306,7 @@ my @SINGLE_WORDS = qw(
   Vestri
   Østerdal
   Örebridgen
+  Yildirimspor
   Zmrzlina
   Åsane
 );
@@ -313,6 +320,7 @@ my %SINGLE_TYPOS =
   'Banda Aceh' => ['aceh'],
   'BC Bamberger Reiter' => ['bamberger', 'amberger'],
   'BC Garches' => ['garches'],
+  'BC Milano' => ['bcmi'],
   'BK 2000' => ['bk2000'],
   'BK Lavec Smile' => ['smile'],
   'Bridge Tunas Cahaya' => ['btc'],
@@ -326,6 +334,7 @@ my %SINGLE_TYPOS =
   'El Ahly' => ['ahly'],
   'El-Karma' => ['karma'],
   'Eskisehir Sports' => ['eskisehirspor'],
+  'Fakultas Teknik Bridge Club' => ['ftbc'],
   'Fatih Karagumruk' => ['fatihkaragumruk'],
   'Fjends BK' => ['fjends'],
   'Gabrial UI' => ['gabrial'],
@@ -351,7 +360,7 @@ my %SINGLE_TYPOS =
   Spojnia => ['Spójnia'],
   'St:Erik Bahaj' => ['bahaj'],
   "'t Onstein" => ['onstein'],
-  'Tennis Club Parioli' => ['tcp'],
+  'Tennis Club Parioli' => ['tcp', 'rm'],
   TGR => ['tgrs'],
   'The West End Mumbai' => ['twem'],
   'Top Bridge BC' => ['topbridge'],

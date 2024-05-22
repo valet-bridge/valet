@@ -20,6 +20,7 @@ my @MULTI_WORDS =
   'Banda Aceh',
   'Bandar Lampung',
   'Belo Horizonte',
+  'Boven Digoel',
   'El-Maadi',
   'Gjøvik og Vardal',
   'Ping An',
@@ -31,6 +32,8 @@ my @MULTI_WORDS =
   'Kota Mataram',
   'Kuala Lumpur',
   'La Chaux-de-Fonds',
+  'Le Bouscat',
+  'Mandobo Bodi',
   'Meilin Qingcheng',
   'Mitra Vihar',
   'Monte Carlo',
@@ -38,6 +41,7 @@ my @MULTI_WORDS =
   'Reggio Emilia',
   'San Giorgio del Sannio',
   'Semburat Jingga',
+  'Seulawah Agam',
   'Shanghai Yangpu',
   'Siddha Eden Lakeville',
   'Silesia Gliwice',
@@ -49,6 +53,7 @@ my @MULTI_WORDS =
   'Val de Seine',
   'Villa Fabbriche',
   'Vrnjacka Banja',
+  'Wampon Bodi',
   'Xin Zhu',
   'Yedi Eylul',
   'Zhong Jian'
@@ -57,6 +62,7 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   Aceh => ['di aceh'],
+  Akhisar => ['akhisar belediyesi'],
   'City of Helsinki' => ['helsinki'],
   Diyarbakir => ['d.baki', 'd.bakir', 'd.bakýr', 'd.baki b.þ',
     'd.bakir b.þ.', 'd.bakir y.þehýr', 'd.bakir yenýþehýr',
@@ -106,11 +112,11 @@ my @SINGLE_WORDS = qw(
   Caen Cairns Canakkale Canberra Canterbury Caracas Cascais Catania 
   Çayyolu Cerkezkoy Cesme Changzhou Chaville Chelmno Chelsea Chengdu 
   Chennai Chicago Chislehurst Chongqing Chumphon Cimahi Clichy 
-  Copenhagen Corlu Courseulles Coventry Cuenca Cuneo
+  Cluj Copenhagen Corlu Courseulles Coventry Cuenca Cuneo
 
-  Dalian Dalls Daqing Darmstadt Datca Debrecen Delft Delhi Denizli
-  Derpt Dersým Diyarbakir Dimitrovgrad Dobrich Dombivli Dongguan 
-  Düsseldorf
+  Dabrowa Dalian Dalls Daqing Darmstadt Datca Debrecen Delft Delhi 
+  Denizli Derpt Dersým Diyarbakir Dimitrovgrad Dobrich Dombivli 
+  Dongguan Düsseldorf
 
   Eastbourne Edirne Ege Elblag Esbjerg Esenkent Eskisehir Essen 
   Eyjafjallajokull
@@ -189,8 +195,8 @@ my @SINGLE_WORDS = qw(
 
   Warsaw Wellington Wisla Worcester Wratislavia Wroble Wroclaw Wuhan
 
-  Yalikavak Yambol Yarimada Yatagan Yenisehir Yibin Yildirim Yokohama 
-  Yogyakarta
+  Yalikavak Yambol Yarimada Yarýmca Yatagan Yenisehir Yibin Yildirim 
+  Yokohama Yogyakarta
 
   Zagreb Zeugma Zhenjiang Zhongshan Zhujiang Zhuzhou Zigong Zurich 
   Zyrardow
@@ -294,6 +300,7 @@ my %SINGLE_TYPOS =
   Wroble => ['wróble'],
   Wroclaw => ['wr'],
   Yogyakarta => ['jogjakarta', 'diy'],
+  Zagreb => ['zgb', 'zg'],
   'Zhong Jian' => ['zhongjian'],
   Åkirkeby => ['aakirkeby'],
   Århus => ['aarhus', 'arhus']

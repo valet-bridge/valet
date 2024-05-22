@@ -109,7 +109,7 @@ my %MULTI_TYPOS =
   'South Africa' => ['south frica'],
   'South Jakarta' => ['jakarta selatan'],
   'South Kalimantan' => ['kalimantan selatan', 'kalsel'],
-  'South Minahasa' => ['minahasa selatan', 'minsel'],
+  'South Minahasa' => ['minahasa selatan'],
   'South Sulawesi' => ['sulawesi selatan', 'sulsel'],
   'South Sumatra' => ['south sumatera', 'sumatera selatan', 'sumsel'],
   'Taihu Lake' => ['suzhou taihu'],
@@ -141,9 +141,10 @@ my @SINGLE_WORDS = qw(
   Nordafjells Norden Norrland
   Queensland
   Oberloiben Orontes Otago
-  Patagonia Porong Punjab
+  Papua Patagonia Porong Punjab
   Rajputana Ratchaburi Rogaland Rosfjord 
-  Salten Shanxi Siberia Sichuan Silesia Silla Skåne Southland Sydvest
+  Salten Shanxi Siberia Sichuan Silesia Silla Sintang Skåne 
+  Southland Sydvest
   Tasmania Telemark Tigris Tuncelý
   Uttarakhand
   Victoria Vojvodina
@@ -175,6 +176,7 @@ my %SINGLE_TYPOS =
   'South Australia' => ['sa'],
   'Suphan Buri' => ['suphanburi'],
   'Tamil Nadu' => ['tamilnadu'],
+  'Uttar Pradesh' => ['up', 'upba'],
   Uttarakhand => ['uttaranchal'],
   'Victoria' => ['vic'],
   Vojvodina => ['voj'],

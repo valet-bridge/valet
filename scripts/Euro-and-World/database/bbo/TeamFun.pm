@@ -108,6 +108,7 @@ my @MULTI_WORDS =
   "Boys'n' Girls",
   'Brian Is Beautiful',
   'Bridge am Grün',
+  'Bridge Fan',
   'Bridge Friends',
   'Bridge Lovers',
   'Bridge Plus',
@@ -127,6 +128,7 @@ my @MULTI_WORDS =
   "Chairman's Choice",
   'Circle the World',
   'Cliff Wake',
+  'Coca Joja',
   "Colonel's Team",
   'Cheap Tricks',
   'City Bridge',
@@ -185,7 +187,6 @@ my @MULTI_WORDS =
   'domwaluty.pl',
   'Don Julio',
   'Don Revival',
-  'Dongfang Tairong',
   'Dong Ming',
   'Dong Qi 9',
   'Double R',
@@ -262,6 +263,7 @@ my @MULTI_WORDS =
   'Glory Box',
   'Glory Mandarin',
   'Goan Curry',
+  'Gobbi San Siro',
   'Gogo Fans',
   'Gold Cup',
   'Golden Bombers',
@@ -296,6 +298,7 @@ my @MULTI_WORDS =
   'Hvalen og tjukkasene', 
   'Hvor er mine babes',
   'I Doctors',
+  'Idea Bridge',
   'Ikke akkurat kjedelig',
   'Il Fante di Fiori',
   'Ilhas & Aredores',
@@ -380,6 +383,7 @@ my @MULTI_WORDS =
   'Lindenthal und Freunde',
   'Lisbeth og gutta',
   'Lisbeths lakeier',
+  "Lise (i)DA",
   'Little Meck',
   'Los Feos',
   'Los Malos',
@@ -399,6 +403,7 @@ my @MULTI_WORDS =
   'Malatya Basket',
   'Man Harr det man har',
   'Manchester United',
+  'Manna Bridge Club',
   'Manny Herrings',
   'Many Hands',
   'Marki-Macki',
@@ -419,6 +424,7 @@ my @MULTI_WORDS =
   'My Friends',
   'My Way',
   'Mystery Foursome',
+  'myvatnhotel.is',
   'Møllers Team',
   "'n Vidar & Andersen",
   "Narcotic's What?",
@@ -482,6 +488,7 @@ my @MULTI_WORDS =
   'Quatro Bruxas',
   'Queen and Knights',
   'Queen of Hearts',
+  'Ra Ma Ra Him',
   'Raag Brigeshwari',
   'Radio Communication',
   'Rajjan',
@@ -566,6 +573,7 @@ my @MULTI_WORDS =
   'Søta bror',
   'Såpjohansen & co',
   'Team Bo a berg',
+  'Team Zang',
   'Texan Aces',
   'Texan and Turks',
   'Texan and Yanks',
@@ -623,6 +631,7 @@ my @MULTI_WORDS =
   'Tre knekter og ett S',
   'To gamle og to gode',
   'Tommys tigre',
+  'Top Flight',
   'Top Ruff',
   'Topbridge of course',
   "Tor Ivar's",
@@ -754,6 +763,7 @@ my %MULTI_TYPOS =
     'hungar olimpics', 'hungar olimpic'],
   'Hurlumhei' => ['hurlumhei..'],
   'Hvalen og tjukkasene' => ['hvalen og tjukkasne', 'hvalen & tjukkasene'],
+  'Idea Bridge' => ['idea br.'],
   'Ikke akkurat kjedelig' => ['ikke akkurat kjedel'],
   'India Blues' => ['indian blues'],
   'Indian Mavericks' => ['india mavericks', 'indian mavricks'],
@@ -794,6 +804,7 @@ my %MULTI_TYPOS =
   'Saevar Karl' => ['svaer karl'],
   'Saint Titus' => ['st titus', 'st. titus'],
   'Sakurai' => ['japan sakurai'],
+  'Silver Eagle' => ['silver  eagle'],
   'Sivves straffdubbl' => ['sivves straffdubbl.', 'sivves straffdbl',
      'sivves...'],
   'Six Diamonds' => ['six diamond'],
@@ -838,8 +849,8 @@ my @SINGLE_WORDS = qw(
    BHDM Bhinneka Biachite Bilal BIN Bingbang Binkie Biriceri Blackwood 
    Blandat Bling Blondie Blueberry BMP Boek Bolero Boogies Boomz Boriana 
    Borko BOVE Breno Bricklayer Bridgebutikken Bridgekameratene 
-   Bridgeministeriet Brother Brudarna Buaigh Bubba Bubu Buddies 
-   Bumerangas Bunnies Bulldozer Busiaki Butler
+   Bridgeministeriet Brigida Brother Brudarna Buaigh Bubba Bubu 
+   Buddies Bumerangas Bunnies Bulldozer Busiaki Butler
 
    Cabal Cabriole Calaca Cammello Canadonia Cancan Canukusa 
    Cardtossers Cargo Cartoon Casuals Cathy Cavelieri Censored 
@@ -852,7 +863,7 @@ my @SINGLE_WORDS = qw(
    Dada Dadya Dallas DanEng DanFar Danger Daniel Dash Dauna Dawn 
    Debonecos Debutantes Deceptive Defne Demony DenmarS Deppo 
    Desperados Destroyers Dialect Diana Dido Diego Dieter Dilligaf 
-   Dimmat Dingyuan Dinos Doctors Doki Donjulio Donvito Dracula Dragon 
+   Dimmat Dingyuan Dino Dinos Doctors Doki Donjulio Donvito Dracula Dragon 
    DSM DuckNDales Dukens Duros Dusteforbundet Dvizhenie Dyret
 
    Eagles Ece Econ Edi Efsane Egesarpdoruk Eikka Ekenboda Ekoap 
@@ -868,13 +879,15 @@ my @SINGLE_WORDS = qw(
 
    Gabrisem Galaxy Galim Gambitas Gamma Garry Garuda Gata Gelim 
    Gelin Gentle George Geriatrix Gewanna Geysir Gesi Giants Gibs 
-   Gjesp Gkobra GloryGlory Goldcat Goroco Gosho Grand Greecoura 
-   Grup Guayacos Gudok Guests Gulce Gulebjorn Gullberg Gullvi 
-   Gunsmoke Guptas Gürsel
+   Gjesp Gkobra GloryGlory Goldcat Goroco Gosho Grand Grads
+   Greecoura Grup Guayacos Gudok Guests Gulce Gulebjorn Gullberg 
+   Gullvi Gunsmoke Guptas Gürsel
 
-   Hade Hanan Hande Hangarounds Hansa Harlequins Havin Hawks HayirlisI
+   Hade Hanan Hande Hangarounds Hansa Harlequins Harvin Havin Hawks 
+   HayirlisI
    Hayet Hästpojkarna Heis Hel Helgeness Hellé Heliopolis HengSha 
-   HERZdame HeSa Hey Hiiimmm Hilda Hobbits Holders Holifera Hollywood 
+   HERZdame HeSa Hey Hiiimmm Hilda Hjerterdamer Hobbits Holders 
+   Holifera Hollywood 
    Holport Honeymoon Hopfenkönig Hornet Hridhaan Huamen Hubsi Huhu 
    Hunaja Huispaus Hurra
 
@@ -910,12 +923,13 @@ my @SINGLE_WORDS = qw(
    Masters Matilde Matrix Mats Matujona Maven Mavi Mavs Mayamira Maxi 
    Mercury Mesna Meta Mia Midas Mihai Mikke Miguel Milady Milo Minut 
    Mirage Miro Mismatch Mixarna Mjøskameratne Mochu Monaconf
-   Moritz Mostingan Movember Mölnlycke Munawar Mýna Myoni Møremix Måsen
+   Moritz Mostingan Movember Mölnlycke Munawar Mustang Mýna Myoni 
+   Møremix Måsen
 
    Nabil Nadide Narbisk Narre Natalia Nathans Natural Naturalists Neduk 
    Nemesis Nessuno Neverclaim Nico Nightingale Nik Nikita Nikitopoulos 
    Niko Nikos Nikotiimi Nis Nislije NMRT Noctis Noralia Noriko Norsu 
-   NTiosagutta Nula
+   NOS NTiosagutta Nula
 
    Obezit Octopussy OEI Ognisty Okay Oksijen Olavsfestdagene Olena 
    Olrudbanden Olsenbanden Omega Omelas Onirepsou Onnela Onu Onyx 

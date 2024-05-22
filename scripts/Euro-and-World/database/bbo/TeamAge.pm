@@ -23,7 +23,7 @@ my %MULTI_TYPOS =
   U20 => ['u 20', 'u-20'],
   U21 => ['u 21', 'u-21'],
   U25 => ['u 25'],
-  U26 => ['u-26']
+  U26 => ['u-26', 'under 26']
 );
 
 my @SINGLE_WORDS = qw(
@@ -35,12 +35,12 @@ my %SINGLE_TYPOS =
 (
   Seniors => [qw(senior senior's senioren seniori seniorit 
     senjoorid sr)],
-  Juniors => [qw(juniiors juniores junior yuniors yunior juniorit jun
-    frs juniorerna)],
+  Juniors => [qw(juniiors juniores junior jrs 
+    yuniors yunior juniorit jun frs juniorerna)],
   Youngsters => [qw(youngster young youth genclik)],
   Schools => [qw(school)],
   U20 => [qw(u20s)],
-  Girls => [qw(girl)]
+  Girls => [qw(girl jenter)]
 );
 
 

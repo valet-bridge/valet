@@ -89,6 +89,7 @@ my @MULTI_WORDS =
   'Djarum Black',
   'Dobre Zegary',
   'Doga Naturale',
+  'Dongfang Tairong',
   'e-bridge',
   'E-Service',
   'Eden Realty Kolkata',
@@ -210,6 +211,7 @@ my @MULTI_WORDS =
   'Ronke Camping',
   'Rosa dei Venti',
   'Ryan Express',
+  'SAIC VW',
   'Samtronic Constanta',
   'San Chen',
   'San Yutian',
@@ -411,11 +413,10 @@ my %MULTI_TYPOS =
   'Nanfang Dianwang' => ['nan fang dian wang', 'dian wang'],
   'Nanguang Power' => ['nangang dongli'],
   'Nanyuan' => ['nan-yuan'],
-  'PD Times' => ['p d times'],
+  'PD Times' => ['p d times', 'pd shidai', 'pd  shidai'],
   'Pan China Construction' => ['pan-china const', 'pan china construct'],
   'Pan China Group' => ['pan-china group'],
   'Perbankan Jatim' => ['perbankan_jatim'],
-  'PD Times' => ['pd shidai', 'pd  shidai'],
   'Pertamina' => ['pertamina ep', 'pertamina ft', 'pertamina field', 
     'pertamina ge', 'pertamina indonesia'],
   'Phoenix TV' => ['feng huang wei shi', 'fenghuang tv'],
@@ -542,7 +543,7 @@ my @SINGLE_WORDS = qw(
 
   Velbazhd Velbujd Vilmar Vinabær Virnet Visoft Vito Voff
 
-  Wellknit Wellwise Winbridge
+  Wellknit Wellwise Winbridge Wise
 
   Yuetao
 
@@ -592,7 +593,9 @@ my %SINGLE_TYPOS =
   'Perbankan Jatim' => ['perbankan'],
   'Poddar Developers' => ['poddar'],
   'Pro Consul' => ['proconsul'],
+  'PU Minsel' => ['minsel'],
   'Rigainvites.lv' => ['rigainvites'],
+  'SAIC VW' => ['saic'],
   'San Chen' => ['sanchen'],
   'Sanya Jiguan' => ['sanyajiguan'],
   'SAPW Poland' => ['sapw'],
