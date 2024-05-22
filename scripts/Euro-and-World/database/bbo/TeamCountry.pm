@@ -38,6 +38,7 @@ my @MULTI_WORDS =
   'South Korea',
   'Sri Lanka',
   'Trinidad and Tobago',
+  'United Arab Emirates',
   'United Kingdom'
 );
 
@@ -112,7 +113,7 @@ my %SINGLE_TYPOS =
   Egypt => ['egy', 'egytp'],
   England => ['eng', 'english'],
   Estonia => ['estonie', 'est'],
-  Finland => ['finnland'],
+  Finland => ['finnland', 'fi'],
   France => ['fra', 'fnc', 'frandce'],
   'French Guyana' => ['guyana', 'guayana', 'guayana'],
   Germany => ['deutschland'],
@@ -133,7 +134,7 @@ my %SINGLE_TYPOS =
   Macau => ['china macau'],
   Madagascar => ['madagaskar'],
   Morocco => ['maroc'],
-  Netherlands => ['nederlands', 'netherland', 'nrtherlands', 
+  Netherlands => ['nederlands', 'netherland', 'nrtherlands', 'hol',
     'netherlans', 'netherlnd', 'neth', 'nl', 'net', 'holland'],
   Monaco => ['nonaco'],
   'New Zealand' => ['nwzealand', 'nz'],
@@ -156,6 +157,7 @@ my %SINGLE_TYPOS =
   Thailand => ['thai'],
   Tunisia => ['tunisie'],
   Turkey => ['tur', 'turkish'],
+  'United Arab Emirates' => ['u.a.e.'],
   'United Kingdom' => ['uk'],
   USA => ['america']
 );

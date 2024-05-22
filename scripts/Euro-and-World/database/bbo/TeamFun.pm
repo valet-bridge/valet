@@ -26,6 +26,7 @@ my @MULTI_WORDS =
   '3..2..1..Meins!',
   '4 Hjerter',
   '4 Jacks',
+  '4 Nat',
   '4 Trèfles',
   '40 Årskrisa',
   '5 Ess',
@@ -127,6 +128,7 @@ my @MULTI_WORDS =
   'Cemara Putra',
   "Chairman's Choice",
   'Circle the World',
+  'Cim Bom Bom',
   'Cliff Wake',
   'Coca Joja',
   "Colonel's Team",
@@ -245,6 +247,7 @@ my @MULTI_WORDS =
   'Four Aces',
   'Frankie Holidays',
   'Freak City',
+  'Friends of Academy',
   'Friends of Lalit',
   'Fuglen har fløyet',
   'Full House',
@@ -403,7 +406,6 @@ my @MULTI_WORDS =
   'Malatya Basket',
   'Man Harr det man har',
   'Manchester United',
-  'Manna Bridge Club',
   'Manny Herrings',
   'Many Hands',
   'Marki-Macki',
@@ -516,6 +518,7 @@ my @MULTI_WORDS =
   'Saevar Karl',
   'Salten rundt',
   'Samfund Slingers',
+  'San3PDX',
   'Sang ae',
   'Saras Friends',
   'Saruntawaya Minahas',
@@ -567,6 +570,7 @@ my @MULTI_WORDS =
   'Svag klöver',
   'Svanslös Skalman',
   'Svenske og ulykke',
+  'Swami Samarth',
   'Sweet Is Middle',
   'Syabas Gabrial UI',
   'Syntax Error',
@@ -747,6 +751,7 @@ my %MULTI_TYPOS =
   "Flint's Crew" => ["flint`s crew"],
   'Flora and Friends' => ['flora && friend'],
   'FOS' => ['f o s'],
+  'Friends of Academy' => ['friends of akademy'],
   'Fuglen har fløyet' => ['Foglen har fløyet'],
   'Frankie Holidays' => ['frankie hollydays'],
   'Freak City' => ['freak-city'],
@@ -836,7 +841,8 @@ my @SINGLE_WORDS = qw(
    Ahornet Aida Akenobo Akinom Alertplus Alex Alfredo Ali Alioth 
    Allam Alliance Alliansen Allstars Alpha Alternativlos Ambassador 
    Amrapali Amul Andromeda Anglian Andrzejki Anglers Anglophones 
-   Aniket Anna Anni Anuj Apaçý Appellkameratene Apples Aquarius Arachfobia 
+   Aniket Anna Anni Anuj Apaçý Appellkameratene Apples Apply
+   Aquarius Arachfobia 
    Arangan Archies Aristos Armani Arnab Arno Arunas Aslanli Aspe 
    Asparagus Astro Astronotlar Atlantic Atom Atrium Augerne Auni 
    Aurora AUTBUL AUTHOL Autostrada Avagard Avalanche Avatar Ayan
@@ -844,7 +850,7 @@ my @SINGLE_WORDS = qw(
 
    Bacch Bachelor Bade Badger Badminton Bager BAK Baias Bajozero Balti 
    Bananasplit Baneet BarDeZi BARC BARP Barracuda Baryton BAST Bato 
-   Bauhinia 
+   Batusida Bauhinia 
    BBO Beauty Begigütje Begijntje BELSPA Ben Beniaminek Berik Beton 
    BHDM Bhinneka Biachite Bilal BIN Bingbang Binkie Biriceri Blackwood 
    Blandat Bling Blondie Blueberry BMP Boek Bolero Boogies Boomz Boriana 
@@ -869,7 +875,7 @@ my @SINGLE_WORDS = qw(
    Eagles Ece Econ Edi Efsane Egesarpdoruk Eikka Ekenboda Ekoap 
    Elektrownia Elio Eliminator Elips Eliza Ellen Emerald Emre Engelen 
    Engineers Enigma Enjoy Ephesus Epsilon Equator Era Eren Eric 
-   Erikas Ertým Esperanza Everest Evil Ewa
+   Erikas Ertým Eses Esesss Esperanza Everest Evil Ewa
 
    Fakel Fantasia Fant4stic Farmen Farmers Felix Fenghuang Fenia 
    Fenix Ferfi Feszek Fharon Fifi Fil Filosofene Filur Finest Fisk 
@@ -884,8 +890,8 @@ my @SINGLE_WORDS = qw(
    Gullvi Gunsmoke Guptas Gürsel
 
    Hade Hanan Hande Hangarounds Hansa Harlequins Harvin Havin Hawks 
-   HayirlisI
-   Hayet Hästpojkarna Heis Hel Helgeness Hellé Heliopolis HengSha 
+   HayirlisI Hayet Hästpojkarna Heino Heis Hel Helgeness Hellé 
+   Heliopolis HengSha 
    HERZdame HeSa Hey Hiiimmm Hilda Hjerterdamer Hobbits Holders 
    Holifera Hollywood 
    Holport Honeymoon Hopfenkönig Hornet Hridhaan Huamen Hubsi Huhu 
@@ -906,7 +912,8 @@ my @SINGLE_WORDS = qw(
    Kasiyahan Kasty Kasuang Katipunan Kebiya Keni Kenji Kenlong 
    Kerasus Kibe Kinga Kingkong Kings KISS Kjelskos Klasik Klio
    KMC Knösel Kodin Koiraperhe Kokoelma Kolbasti Komleposs
-   Kompisarna Konga Kordam Korsikalý Kortai Koukouselis KrASK Kratos 
+   Kompisarna Konga Kordam Korsikalý Kortai Koru Koukouselis KrASK 
+   Kratos 
    Krem Kris Kriston Krisztina Ksenia Kuglana Kuhmilch Kultur
    Kvazar
 
@@ -917,11 +924,11 @@ my @SINGLE_WORDS = qw(
    LPMS Lucky LVBridgeBums Lyubcho Løwene
 
    Mach Madhav Mads Maestroi Magi Magic Magister Maharaja Maija Major 
-   MajorB
-   Majorn Majority Malinka Malmölaget Manashda Manena Mano Manu Manywar
-   Margitta Marianne Marosamitawa Mars Marvelous Marynarz Masdjävlar 
-   Masters Matilde Matrix Mats Matujona Maven Mavi Mavs Mayamira Maxi 
-   Mercury Mesna Meta Mia Midas Mihai Mikke Miguel Milady Milo Minut 
+   MajorB Majorn Majority Malinka Malmölaget Manashda Manena Mano 
+   Manu Manywar Margitta Marianne Mark Marosamitawa Mars Marvelous 
+   Marynarz Masdjävlar Masters Matilde Matrix Mats Matujona Maven 
+   Mavi Mavs Mayamira Maxi 
+   Mer Mercury Mesna Meta Mia Midas Mihai Mikke Miguel Milady Milo Minut 
    Mirage Miro Mismatch Mixarna Mjøskameratne Mochu Monaconf
    Moritz Mostingan Movember Mölnlycke Munawar Mustang Mýna Myoni 
    Møremix Måsen
@@ -933,16 +940,16 @@ my @SINGLE_WORDS = qw(
 
    Obezit Octopussy OEI Ognisty Okay Oksijen Olavsfestdagene Olena 
    Olrudbanden Olsenbanden Omega Omelas Onirepsou Onnela Onu Onyx 
-   Opal Opera Opps Oprosti Orakulas Orthodoxi Orthodox Osam OSMO Osss
-   Oto Otters Outsiders Overivrig Oyzum Ozbiljni
+   Opal Opera Opps Oprosti Optimus Orakulas Orthodoxi Orthodox Osam 
+   OSMO Osss Oto Otters Outsiders Overivrig Oyzum Ozbiljni
 
    Pacers Paco Pagonia Palukas Panteros Paoli Paradigma Partizan
    Pasanci Passé Patron Paulette Paulina Paulistas Pegasus Pennant
    Perestrojka Perjuangan Peter Petra Pia Piast Piryoli Piter 
-   Pjäxa Pleschi Pleyada Plia PMS Pojat Polirish Pompapompa Pontiac 
-   Potlimit Potteplante Powerchicks Prapar Prasetya Preempters 
-   Pretendents Prijatelj Prosan Proteus Proto Ptacol Pude Pusten 
-   Pyon Pyton Påskevennene
+   Pjäxa Pleschi Pleyada Plia PMS Pojat Polirish Polus Pompapompa 
+   Pontiac Potlimit Potteplante Powerchicks Prapar Prasetya 
+   Preempters Pretendents Prijatelj Prosan Proteus Proto Ptacol 
+   Pude Pusten Pyon Pyton Påskevennene
 
    Quantum Quasar Quattro Quinze
 
@@ -961,7 +968,7 @@ my @SINGLE_WORDS = qw(
    Siyabend Sjøsamen Skalman Skaronga Skip Skitur Skotii Þlem 
    Slappfisker Slostria Slufsa Småveitjan SNAP Snapper Snipers 
    Sober Sobers Sogn Soho Solo Sonata Sonchel Soumitra Spamirs
-   Spandan Spark Spartans Specialist Spekkhogger Spektr Spring 
+   Spandan Spark Spartans Specialist Spekkhogger Spektr Spin Spring 
    Squeeze Srimapuna Srykeir Stafani Stagge Stampede Star Starmen 
    Starsbridge Statusquo Stayman Steinars Steinlager Steliana 
    Stifinnern Storeslemmen Strata Strategen Streamline Studentene 
@@ -987,9 +994,10 @@ my @SINGLE_WORDS = qw(
    Wael Wafa Wala Waldi Walpurga WBack WBGO WDP Wengens Winatalya 
    Windrunners Winkiboy Winterfell Wizards
 
-   Xatzopoulos Xman Xtrouble
+   Xatzopoulos Xman Xtrouble XXX XXXL XXXSL XXXXXYXY
 
    Ybs Yaðmur Yamata Yansimasiz Yelena Ylajai Yogakshema Yokozuna
+   YYY
 
    Zabavljaci Zamek Zana Zeerob Zen Zeyno Ziggy Zimmkonis Zivac
    Zlatan Zombi Zorro Zozoura Zugzwang Zurzits Zvanger

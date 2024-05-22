@@ -37,7 +37,7 @@ my @SINGLE_WORDS = qw(
   Mr
   National NONAME npc
   og Opponent Opponents Others
-  Pacific pc Players Plus PON Prima
+  Pacific pc Players Plus PON Prima Pusat
   Selected Squad Stars
   Table Tennis Tournament Tricks
   United

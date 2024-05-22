@@ -24,6 +24,7 @@ my @MULTI_WORDS =
   'Alert Mannheim',
   'Altay Genclik',
   'Ankara Kontrat',
+  'Ankara Sistematik',
   'Atletik Basket',
   'Augsburg Augusta',
   'Avalanche BC',
@@ -191,6 +192,7 @@ my %MULTI_TYPOS =
   'Akademisk Bridgeklub' => ['akademisk bk'],
   'Akceþme Spor' => ['akceþmespor'],
   'Alexandria Sporting Club' => ["alexandria sport' c"],
+  'Ankara Sistematik' => ['sistematik bk'],
   'Antalya BSK' => ['antalya b.s.k'],
   'Aydin 1923 BBSK' => ['aydin 1923 sk', 'aydin bbsk',
     'aydin bilimsel bsk', 'aydinspor 1923'],
@@ -211,11 +213,12 @@ my %MULTI_TYPOS =
     'smile bk lavec', 'bk lavek smile', 'bk lavec', 'enjoy bk lavec'],
   'BC Rennais' => ['b.c. rennais', 'b.c rennais'],
   'BC Alert Mannheim' => ['bc mannheim', 'alert mannheim'],
-  'Bridge Tunas Cahaya' => ['btc jatim'],
   'Bodrum BSK' => ['bodrum b.s.k.', 'bodrum bric kulubu',
     'bordum bric sk'],
   'Bogazici BSK' => ['bogaz ici bsk', 'boðazici bsk', 'boðazýçý bsk',
     'boðazýçý s.k.'],
+  'Bridge Tunas Cahaya' => ['btc jatim'],
+  'Bridgeclub Oog' => ['bc oog in al'],
   'Cerkezkoy Dinamik BSK' => ['Cerkezkoy BS', 'Cerkezkoy BSK'],
   'Crvena Zvezda' => ['zrvena zwezda', 'zrvena zvezda'],
   'Debrecen DEAC' => ['debrecen-deac'],
@@ -251,6 +254,7 @@ my %MULTI_TYPOS =
     'köln-lindenthaler', 'köln-lindenthaler b'],
   'Majör Boğaziçi' => ['major b', 'major bogazici',
     'majör boðaziçi'],
+   Malatyagücü => ['malatya gucu', 'malatya gücü'],
   'Midt Trøndelag' => ['midt trondelag', 'midt-trøndelag',
     'midt-trondelag'],
   'Miskolc DEAC' => ['deac-miskolc'],
@@ -295,7 +299,7 @@ my @SINGLE_WORDS = qw(
   Karagümrük Karlsruher Kløverknekt 
   Lavec Laksamana LÜKSAD
   Locomotiva
-  Miskolc Mo Mragowia
+  Malatyagücü Miskolc Mo Mragowia
   NBK
   Pamukspor Pelatnas
   Qizhong

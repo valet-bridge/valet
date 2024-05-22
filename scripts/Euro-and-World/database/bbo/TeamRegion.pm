@@ -129,7 +129,7 @@ my @SINGLE_WORDS = qw(
   Cappadocia Corsica
   Druts
   Eurasia Europe
-  Florida
+  Florida Fukien
   Gabmin Ganges Gansu Global Goa Gorontalo Guangdong Guangxi Guizhou 
   Gujarat
   Hainan Haixing Haugaland Hebei Huangshi Hubei Hunan

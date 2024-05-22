@@ -176,7 +176,8 @@ my @SINGLE_WORDS = qw(
   Saarbrücken Sabadel Sakarya Salerno Samarinda Samsun Sandefjord 
   Sansar Santiago Sanya Sarniak Sarpsborg Secunderabad Seferihisar 
   Semarang Senayan Serang Serdika Shanghai Shaoguan Shenyang 
-  Shenzhen Shihua Sibiu Sidoarjo Siena Simal Sindi Singsås Skara Skien 
+  Shenzhen Shihua Sibiu Sidoarjo Siena Simal Sindi Singsås Sirinyer
+  Skara Skien 
   Skopje Slagelse Slaska Sleman Sliven Sofia Solok Sortland Söke Split 
   Sredec Stavanger Steinkjer Storsjöbygden Stureby Stuttgart 
   Sukma Suleymanpasa Sunndalsøra Surabaya Suzhou Sydney Szeged Sørreisa
@@ -220,7 +221,7 @@ my %SINGLE_TYPOS =
   Auckland => ['akarana'],
   Ayvalik => ['aivali'],
   Bahcesehir => ['bahçeþehýr'],
-  Balisekir => ['balikesýr'],
+  Balisekir => ['balikesýr', 'balýkesir',],
   Balkova => ['balçova'],
   Bangalore => ["b'lore", 'banglore'],
   Bansi => ["bansi's"],

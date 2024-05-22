@@ -23,7 +23,7 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   'Bridge Club' => [
-    'a.s.', 'a.s.d.', 'ass. br.',
+    'a.s.', 'a.s.d.', 'ass. br.', 'athletic c.',
     'b.akd', 'b.b.', 'b.c.', 'b.c',
     'b.b.k.', 'b.b.s.', 'b.b.s.k.', 'b.s.', 'b.s.b.', 'bld', 'bld.',
     'b.s.k.', 'b.s.k', 'b.seh bel', 'b. shr bld', 'b.k', 'b.k.', 
@@ -41,7 +41,7 @@ my %MULTI_TYPOS =
     'bric sk', 'briç sk', 'briç skd', 'bric spor kl',
     'briç ýsk', 'brýç sk', 'brýç spor', 'spor bric', 
     "sport' c", 'sports c', 'spor kb', 's c',
-    's.k.', 'spor kulubu', 'spor kulübü', 's.s.',
+    's.k.', 'spor kulubu', 'spor kulübü', 's.s.', 'sports club',
     't.c.', 'tennis club', 't.c.p.']
 );
 
