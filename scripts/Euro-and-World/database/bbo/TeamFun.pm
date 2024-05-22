@@ -32,6 +32,7 @@ my @MULTI_WORDS =
   '6 Notrump',
   '6 Spades',
   '60 y 20',
+  'A Takimi',
   'ABA Nuno Paz',
   'Aces & Deuces',
   'Adams Family',
@@ -49,6 +50,7 @@ my @MULTI_WORDS =
   'Alunand Plus',
   'Alzheimer Aces',
   'Andre boller',
+  'Andrea L.',
   'Angel of Harlem',
   'Angels & Demons',
   'Angry Birds',
@@ -269,6 +271,7 @@ my @MULTI_WORDS =
   'Good Ball',
   'Good Men',
   'Good Oxygen',
+  'Goyancho Sayeba',
   'Green Eyes',
   'Green Lines',
   'Grefstad and co',
@@ -370,8 +373,10 @@ my @MULTI_WORDS =
   'Leromain boys',
   'Les Girafes',
   'Les Zähringers',
+  'Lew Lodzki',
   'Light Blues',
   'Light Cast',
+  'Limo Puzzi',
   'Lindenthal und Freunde',
   'Lisbeth og gutta',
   'Lisbeths lakeier',
@@ -396,6 +401,7 @@ my @MULTI_WORDS =
   'Manchester United',
   'Manny Herrings',
   'Many Hands',
+  'Marki-Macki',
   'Master Minds',
   'Max 100',
   'Max-Nat',
@@ -414,6 +420,7 @@ my @MULTI_WORDS =
   'My Way',
   'Mystery Foursome',
   'Møllers Team',
+  "'n Vidar & Andersen",
   "Narcotic's What?",
   'Nav Chaitanya',
   'Nazar Boncugu',
@@ -475,6 +482,7 @@ my @MULTI_WORDS =
   'Quatro Bruxas',
   'Queen and Knights',
   'Queen of Hearts',
+  'Raag Brigeshwari',
   'Radio Communication',
   'Rajjan',
   'Ram Charan',
@@ -510,6 +518,7 @@ my @MULTI_WORDS =
   'Seths vänner',
   'Seven Eleven',
   'Sham Sharma',
+  'Shegoestobadat8',
   'Shining Pig',
   'Shooting',
   'Shy Ant',
@@ -705,6 +714,7 @@ my %MULTI_TYPOS =
   'Ca. et halvt tonn' => ['ca et halvt tonn'],
   'Californian Aces' => ['california aces'],
   "Chairman's Choice" => ["chairman's team"],
+  "Colonel's Team" => ["colonen's  team"],
   'Croatian Pirates' => ['cro pirates'],
   Crossfatek => ['cross fatek'],
   'Curry Eaters' => ['curry  eaters'],
@@ -754,6 +764,7 @@ my %MULTI_TYPOS =
   'Kent Romeos venner' => ['kent romeos veenner'],
   'Kick Back' => ['kick-back'],
   'KM 23' => ['km23'],
+  "L'Orange" => ["l' orange"],
   'Late S.S. Jain' => ['late ss jain', 'lss jain', 'l s s jain',
      'late sssk jain'],
   'Lawrence of Arabia' => ['lawrence of arab'],
@@ -814,17 +825,17 @@ my @SINGLE_WORDS = qw(
    Ahornet Aida Akenobo Akinom Alertplus Alex Alfredo Ali Alioth 
    Allam Alliance Alliansen Allstars Alpha Alternativlos Ambassador 
    Amrapali Amul Andromeda Anglian Andrzejki Anglers Anglophones 
-   Aniket Anna Anuj Apaçý Appellkameratene Apples Aquarius Arachfobia 
+   Aniket Anna Anni Anuj Apaçý Appellkameratene Apples Aquarius Arachfobia 
    Arangan Archies Aristos Armani Arnab Arno Arunas Aslanli Aspe 
    Asparagus Astro Astronotlar Atlantic Atom Atrium Augerne Auni 
    Aurora AUTBUL AUTHOL Autostrada Avagard Avalanche Avatar Ayan
    Aytalus Azores Azure
 
-   Bacch Bachelor Bade Badger Badminton Bager Baias Bajozero Balti 
+   Bacch Bachelor Bade Badger Badminton Bager BAK Baias Bajozero Balti 
    Bananasplit Baneet BarDeZi BARC BARP Barracuda Baryton BAST Bato 
    Bauhinia 
    BBO Beauty Begigütje Begijntje BELSPA Ben Beniaminek Berik Beton 
-   BHDM Bhinneka Biachite Bilal Bingbang Binkie Biriceri Blackwood 
+   BHDM Bhinneka Biachite Bilal BIN Bingbang Binkie Biriceri Blackwood 
    Blandat Bling Blondie Blueberry BMP Boek Bolero Boogies Boomz Boriana 
    Borko BOVE Breno Bricklayer Bridgebutikken Bridgekameratene 
    Bridgeministeriet Brother Brudarna Buaigh Bubba Bubu Buddies 
@@ -864,8 +875,8 @@ my @SINGLE_WORDS = qw(
    Hade Hanan Hande Hangarounds Hansa Harlequins Havin Hawks HayirlisI
    Hayet Hästpojkarna Heis Hel Helgeness Hellé Heliopolis HengSha 
    HERZdame HeSa Hey Hiiimmm Hilda Hobbits Holders Holifera Hollywood 
-   Holport Honeymoon Hopfenkönig Hridhaan Huamen Hubsi Huhu Hunaja
-   Huispaus Hurra
+   Holport Honeymoon Hopfenkönig Hornet Hridhaan Huamen Hubsi Huhu 
+   Hunaja Huispaus Hurra
 
    IBE Ida Ijseide Ikarus Ilya IMAN Imanual Imponderables InFran
    Instructor Invicta Iris Irukangi Ismo Israbel Isrmany Itnoraunz 
@@ -896,7 +907,7 @@ my @SINGLE_WORDS = qw(
    MajorB
    Majorn Majority Malinka Malmölaget Manashda Manena Mano Manu Manywar
    Margitta Marianne Marosamitawa Mars Marvelous Marynarz Masdjävlar 
-   Masters Matilde Matrix Mats Matujona Maven Mavs Mayamira Maxi 
+   Masters Matilde Matrix Mats Matujona Maven Mavi Mavs Mayamira Maxi 
    Mercury Mesna Meta Mia Midas Mihai Mikke Miguel Milady Milo Minut 
    Mirage Miro Mismatch Mixarna Mjøskameratne Mochu Monaconf
    Moritz Mostingan Movember Mölnlycke Munawar Mýna Myoni Møremix Måsen
@@ -906,9 +917,9 @@ my @SINGLE_WORDS = qw(
    Niko Nikos Nikotiimi Nis Nislije NMRT Noctis Noralia Noriko Norsu 
    NTiosagutta Nula
 
-   Obezit Octopussy Ognisty Okay Oksijen Olavsfestdagene Olena 
+   Obezit Octopussy OEI Ognisty Okay Oksijen Olavsfestdagene Olena 
    Olrudbanden Olsenbanden Omega Omelas Onirepsou Onnela Onu Onyx 
-   Opal Opera Oprosti Orakulas Orthodoxi Orthodox Osam OSMO Osss
+   Opal Opera Opps Oprosti Orakulas Orthodoxi Orthodox Osam OSMO Osss
    Oto Otters Outsiders Overivrig Oyzum Ozbiljni
 
    Pacers Paco Pagonia Palukas Panteros Paoli Paradigma Partizan
@@ -945,7 +956,7 @@ my @SINGLE_WORDS = qw(
 
    Tadeu Take Takeoff Takk Takým Taksim Tally Tamae Tangra Tannlegene 
    Task Taurus Tbone Tefo Tempo Tibetmunkene Tigers Tiglatpalasar
-   Tihkur Titanik Titans Tiz Toar Todremor Tofi Tohundre Tolerant 
+   Tihkur Tita Titanik Titans Tiz Toar Todremor Tofi Tohundre Tolerant 
    Tollemache Toma Tongxin Topozero Torpedo Tosca Totani Totoro Tömör 
    Traker Triks Troll Trøndermøringen Tsunami Tulip Tulipano Turuncu 
    Tushar Tutu Tvist
@@ -959,7 +970,7 @@ my @SINGLE_WORDS = qw(
    Vilttiketju Vilttiukko Viña Vintage Virginia Vivi Volta Vucko 
    Vulcano Vurgun Vürst Vytas
 
-   Wael Wafa Wala Waldi Walpurga WBack WDP Wengens Winatalya 
+   Wael Wafa Wala Waldi Walpurga WBack WBGO WDP Wengens Winatalya 
    Windrunners Winkiboy Winterfell Wizards
 
    Xatzopoulos Xman Xtrouble
@@ -1030,6 +1041,7 @@ my %SINGLE_TYPOS =
   'Nav Chaitanya' => ['navchaitanya'],
   'Occupy Taksim' => ['occupytaksim'],
   Onyx => ['onix'],
+  Opps => ['opsy'],
   'Paris Match' => ['parismatch', 'parimatch'],
   Paulistas => ['paulistanas'],
   'Pontiac 7' => ['pontiac7'],

@@ -198,6 +198,7 @@ my @MULTI_WORDS =
   'PRI Investment',
   'PU Bitung',
   'PU Minsel',
+  'PU Sulut',
   'Quik Tea',
   'Red Bull',
   'Red Cotton',
@@ -219,6 +220,7 @@ my @MULTI_WORDS =
   'Scania Bridgekonsul',
   'SD Associates',
   'SD Enterprises',
+  'See Fah/Thai',
   'Semangat Baru Makassar',
   'Semen Gresik',
   'Shan Hai',
@@ -250,6 +252,7 @@ my @MULTI_WORDS =
   'Shree Radhey',
   'Siwik Holiday Mragowo',
   'Siwik Intertrade',
+  'Skinney-Þinganes',
   'Société Générale',
   'Sölufélag Garðyrkjumanna',
   'Son Dakika',
@@ -405,7 +408,7 @@ my %MULTI_TYPOS =
   'Málning hf' => ['målning hf'],
   'Mutiara Energy' => ['mutiara energy indo', 'mutiara energi indo',
     'mutiara energi p.', 'mutiara energi.p'],
-  'Nanfang Dianwang' => ['nan fang dian wang'],
+  'Nanfang Dianwang' => ['nan fang dian wang', 'dian wang'],
   'Nanguang Power' => ['nangang dongli'],
   'Nanyuan' => ['nan-yuan'],
   'PD Times' => ['p d times'],
@@ -418,12 +421,13 @@ my %MULTI_TYPOS =
   'Phoenix TV' => ['feng huang wei shi', 'fenghuang tv'],
   'Poddar Developers' => ['poddar development', 'poddar dev',
     'podder dev', 'podder developers', 'poddar devekopers',
-    'poddar dovelopers', 'poddar'],
+    'poddar dovelopers', 'deepak podder'],
   Pufa => ['pu fa'],
   'Ryan Express' => ['ryan_express'],
   'Samtronic Constanta' => ['samtronic ct'],
   'Sanya Tianze' => ['san ya tian ze'],
   'SAPW Poland' => ['sapw-poland'],
+  'See Fah/Thai' => ['seefa/thai'],
   'Semangat Baru Makassar' => ['semangat baru mks', 'semangat baru mks.',
     'semangat br', 'semangat baru', 'semangat baru mksr',
     'makassar semangat b'],
@@ -495,7 +499,7 @@ my @SINGLE_WORDS = qw(
   Dostlar Druva
 
   Effcontrol Eimskip Eksprompt Elastron Elektrika Energetyk
-  Enorma Enterprise Everfresh Evertrust
+  Enorma Enterprise ESSO Everfresh Evertrust
 
   Forta Frissan Funbridge
 
@@ -531,12 +535,12 @@ my @SINGLE_WORDS = qw(
   Shouchuang Signity Skeljungur Solakoglu Solox Sparisjóður Srenniw
   SSDA Stalgast Stiga Synective
 
-  Tekser Termika Termoavion Termochem Topeko Transearly Tricon Tridaya 
-  Triton Tryggingamiðstöðin Tsingtao Tundem Tyco Tzilis
+  Tekser Telkom Termika Termoavion Termochem Topeko Transearly 
+  Tricon Tridaya Triton Tryggingamiðstöðin Tsingtao Tundem Tyco Tzilis
 
   Underberg Unibet Unicat
 
-  Velbazhd Velbujd Vilmar Vinabær Visoft Vito Voff
+  Velbazhd Velbujd Vilmar Vinabær Virnet Visoft Vito Voff
 
   Wellknit Wellwise Winbridge
 
@@ -586,6 +590,7 @@ my %SINGLE_TYPOS =
   'Nanning Yalun' => ['nanning yalun'],
   'Nest Inn' => ['nestinn'],
   'Perbankan Jatim' => ['perbankan'],
+  'Poddar Developers' => ['poddar'],
   'Pro Consul' => ['proconsul'],
   'Rigainvites.lv' => ['rigainvites'],
   'San Chen' => ['sanchen'],

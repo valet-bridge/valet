@@ -17,7 +17,8 @@ use TeamBBO;
 my @MULTI_WORDS =
 (
   'Bridge Team',
-  'No Name'
+  'No Name',
+  'Pra PON'
 );
 
 my %MULTI_TYPOS =
@@ -36,7 +37,7 @@ my @SINGLE_WORDS = qw(
   Mr
   National NONAME npc
   og Opponent Opponents Others
-  Pacific pc Players
+  Pacific pc Players Plus PON Prima
   Selected Squad Stars
   Table Tennis Tournament Tricks
   United
@@ -52,6 +53,7 @@ my %SINGLE_TYPOS =
   National => ['nasional'],
   'No Name' => ['noname'],
   Pacific => ['pacyfic'],
+  'Pra PON' => ['prapon', 'pon'],
   Squad => ['squadra'],
   Tournament => ['tounament']
 );

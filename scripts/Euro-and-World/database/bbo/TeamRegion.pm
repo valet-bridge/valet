@@ -93,6 +93,7 @@ my %MULTI_TYPOS =
   'East Jakarta' => ['jakarta timur'],
   'East Java' => ['jawa timur', 'jatim'],
   'East Kalimantan' => ['kalimantan timur'],
+  Gabmin => ['gabungan minasaha'],
   'Garut Regency' => ['kab. garut'],
   Guangdong => ['guang dong'],
   Hubei => ['hu bei'],
@@ -129,7 +130,8 @@ my @SINGLE_WORDS = qw(
   Druts
   Eurasia Europe
   Florida
-  Ganges Gansu Global Goa Gorontalo Guangdong Guangxi Guizhou Gujarat
+  Gabmin Ganges Gansu Global Goa Gorontalo Guangdong Guangxi Guizhou 
+  Gujarat
   Hainan Haixing Haugaland Hebei Huangshi Hubei Hunan
   Jharkhand Jiangsu Jilin
   Kansai Karimun Karnataka Kawanua Kedungwaru Kepri Kerala Krabi
