@@ -112,6 +112,7 @@ my @MULTI_WORDS =
   'Flemming Dahl',
   'Francisco Costa-Cabral',
   'Frímann Stefánsson',
+  'G. Limmen',
   'Gabriel Chagas',
   'Gila Emody',
   'Ginossar',
@@ -300,6 +301,7 @@ my @MULTI_WORDS =
   'Sveinn Ericsson',
   'Sverrir Þórisson',
   'Teixeira-Reus',
+  'Teresa Kay',
   'Tiago Canelas',
   'Tomi Gotard',
   'Tor Helness',
@@ -392,6 +394,7 @@ my %MULTI_TYPOS =
   'Flemming Dahl' => ['dahl'],
   'Francisco Costa Cabral' => ['f. costa cabral', 'f. costa-cabral',
     'francisco c. cabral', 'francisco costa cab'],
+  'G. Limmen' => ['g.limmen'],
   'Gabriel Chagas' => ['chagas.g'],
   'Gila Emody' => ['emody gila'],
   'Ginossar' => ['eldad ginossar', 'ginossar eldad'],
@@ -514,6 +517,7 @@ my %MULTI_TYPOS =
     'sunal macchar', 'sunil maccher', 'sunil.macchar', 's machhar'],
   'Sverrir Þórisson' => ['sverrir þ'],
   'Teixeira-Reus' => ['txecs-reus', 'txec-reus'],
+  'Teresa Kay' => ['t.kay'],
   Vahalia => ['dr.vahalia'],
   Vithaya => ['dr.vithaya'],
   'van Prooijen'=> ['van proojen'],
@@ -679,7 +683,7 @@ my @SINGLE_WORDS = qw(
   Leiro Lena Lennart Leptirici Lerner Lesniewski Lesnik Lester Lev 
   Levi Levinger Levin Levine Levoy Levski Lew Lewis Lhuissier Li Lian
   Libbrecht Libman Lie Lien Liu Liggins Lilienstein Lillevik Lilley 
-  Limmen Limor Linczmayer Lindner Lindstedt Lindqvist Llopart 
+  Limor Linczmayer Lindner Lindstedt Lindqvist Llopart 
   Locatelli Lockwood Lombard Longinotti Lorentz Lorenzini Loreto 
   Lormant Louchart Lovrecz Lowe Lubinski Ludewig Lund Luppi Lusk Lusky 
   Lüßmann Lynch Lyngdal Lyngen
@@ -763,7 +767,7 @@ my @SINGLE_WORDS = qw(
   Shunta Silver Silverstein Silverstone Sime Simonsen Simpson Simson 
   Sinclair Sivrioglu Sjodal Skaanning Skelton Skjønnemann Skoglund 
   Skorchev Skurec Skwark Small Smart Smilgajs Smith Smirnov Smolanko 
-  Snashall Snellers Snow Socha Sohlin Soldati Solheim Solodar 
+  Snashall Snellers Snow Socha Sohlin Soldati Solheim Solimando Solodar 
   Sonsini Soriano Sorkin Sosler Soukup Soulet Soumitra Sowter 
   Sörvoll Spangenberg Spector Spelmans Spirodonescu
   Spitalnick Spooner Sprung Squires Stabell Stamatov Stankovic 
@@ -804,7 +808,7 @@ my @SINGLE_WORDS = qw(
 
   Xatzimpalis
 
-  Yadlin Yamada Yang Yalankiran Yarington Yates Yezerski Yilmaz 
+  Yadlin Yalman Yamada Yang Yalankiran Yarington Yates Yezerski Yilmaz 
   Ying Yoleri Yuen Yule
 
   Zabunoglu Zago Zagor Zagorin Zajac Zaleski Zanalda Zambonini Zaninotti
@@ -872,6 +876,7 @@ my %SINGLE_TYPOS =
   'Waleed El Ahmady' => ['elahmady', 'elhamady'],
   Failla => ['faill'],
   'Francisco Costa-Cabral' => ['cabral'],
+  'G. Limmen' => ['limmen'],
   'Gabriel Chagas' => ['chagas'],
   Gartaganis => ['gartaginas'],
   Garoufalis => ['garoufallis'],
@@ -974,6 +979,7 @@ my %SINGLE_TYPOS =
   'Phailin Nimityongskul' => ['phailin'],
   'Pobsit Kamolvej' => ['pobsit'],
   'Pony Nehmert' => ['pony'],
+  'Pramual Angkaew' => ['pramual'],
   Prescott => ['prescot'],
   Procter => ['proctor'],
   Pszczola => ['pepsi'],

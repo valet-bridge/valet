@@ -63,6 +63,7 @@ my @MULTI_WORDS =
   'Apollo Soyuz',
   'Arctic Farmers',
   'Arctic Powerchicks',
+  "Archie's",
   "Asha's 4",
   'Asketické samice',
   'Aso Pika',
@@ -98,6 +99,7 @@ my @MULTI_WORDS =
   'Big Guns',
   'Big Makie',
   'Big Mi?',
+  'Bimal Sicca',
   'Black Hole',
   'Black Knife',
   'Black Label',
@@ -123,6 +125,7 @@ my @MULTI_WORDS =
   'British Lions',
   'Brødrene & co',
   'Brødrene Dal',
+  'Bullgalian All Star',
   'Buyur Teyze',
   'Ca. et halvt tonn',
   "Cai's Bird",
@@ -149,6 +152,7 @@ my @MULTI_WORDS =
   'Croatian Pirates',
   'Curry Eaters',
   'Curt-Lennart',
+  'Czarna Owca',
   'D-MaTK',
   "D'Artagnan",
   "D'Coup",
@@ -239,6 +243,7 @@ my @MULTI_WORDS =
   'f.d. Fröken Michiel',
   'Fairy Tale',
   'Fallega Folked',
+  'Fanta 4',
   'Fast and Furious',
   'Four Aces',
   'Fem på nya äventyr',
@@ -384,10 +389,11 @@ my @MULTI_WORDS =
   'Langt mer enn ivrig',
   'Las Olas',
   'Last Minute',
-  'Lawrence Allstars',
-  'Lawrence of Arabia',
+  'Las Overum',
   'Last Arrival',
   'Late S.S. Jain',
+  'Lawrence Allstars',
+  'Lawrence of Arabia',
   'L.C. is Beautiful',
   'Le Colonial',
   'Le Romain boys',
@@ -447,6 +453,7 @@ my @MULTI_WORDS =
   "Narcotic's What?",
   'Nav Chaitanya',
   'Nazar Boncugu',
+  'Nazionale Cantanti',
   'Nice and Monsters',
   'Nilslands Crew',
   'Nilslands Slowfoxes',
@@ -572,6 +579,7 @@ my @MULTI_WORDS =
   'Smoking Guns',
   'Smooth Duck',
   'Småsamen med døler',
+  'So-Va',
   "Soalitt`s disipler",
   'South Zone',
   'Space Mutants',
@@ -599,6 +607,7 @@ my @MULTI_WORDS =
   'Syntax Error',
   'Søta bror',
   'Såpjohansen & co',
+  'Tasher Desh',
   'Team Bo a berg',
   'Team Zang',
   'Texan Aces',
@@ -789,6 +798,7 @@ my %MULTI_TYPOS =
   'Hands and Hearts' => ['hands & hearts'],
   'Heldige Olav' => ['heldige olav :)'],
   "Hell's Angels" => ['hells angels'],
+  'Holmenkollen' => ['h-kollen'],
   'Hopp i sang' => ['hoppa i sang'],
   Huamen => ['hua men'],
   'Hum Paanch' => ['hum paach'],
@@ -896,18 +906,19 @@ my @SINGLE_WORDS = qw(
    Buddies Bulldozer Bumerangas Bunnies Busiaki Butler
 
    Cabal Cabriole Calaca Cammello Canadonia Cancan Canukusa 
-   Cardtossers Cargo Cartoon Casuals Cathy Cavelieri Censored 
-   Center Challengers Changes Chass Chicks Chime Chiranjeev 
-   Chokladmåndag Claim Claudili Coaches Cogito Colorado Commandos 
+   Cardtossers Cargo Cartoon Casuals Cask Cathy Cavelieri Censored 
+   Center Challengers Changes Chass Chateau Chicks Chime Chiranjeev 
+   Chokladmåndag Chuanpit Claim Claudili Coaches Cogito Colorado Commandos 
    Comrade Concurrent Conie Contact Contra Coopers Corner 
    Costantina Counterstrike Couples Crash Cremaster Croanglopol
    Crockfords Crossfatek Czteropak
 
    Dada Dadya Dallas DanEng DanFar Danger Daniel Dash Dauna Dawn 
-   Debonecos Debutantes Deceptive DeeJee Defne Demony DenmarS Deppo 
+   Debonecos Debutantes Deceptive DeeJee Defne Demony Demýrbaþ
+   DenmarS Deppo 
    Desperados Destroyers Dialect Diana Dido Diego Dieter Dilligaf 
    Dimmat Dingyuan Dino Dinos DJB Doctors Doki Donjulio Donvito 
-   Dracula Dragon 
+   Dora Dracula Dragon 
    DSM DuckNDales Dukens Duros Dusteforbundet Dvizhenie Dyret
 
    Eagles Ece Econ Edi Efsane Egesarpdoruk Eikka Ekenboda Ekoap 
@@ -923,7 +934,7 @@ my @SINGLE_WORDS = qw(
 
    Gabrisem Galaxy Galim Gambitas Gamma Garry Garuda Gata Gelim 
    Gelin Gentle George Geriatrix Gewanna Geysir Gesi Giants Gibs 
-   Gjesp Gkobra GloryGlory Goldcat Goroco Gosho Grand Grads
+   Gjesp Gkobra GloryGlory Goldcat Goroco Gosho Göktürk Grand Grads
    Greecoura Greta Grup Guayacos Gudok Guests Gulce Gulebjorn Gullberg 
    Gullvi Gunsmoke Guptas Gürsel
 
@@ -931,11 +942,11 @@ my @SINGLE_WORDS = qw(
    HayirlisI Hayet Hästpojkarna Hebat Heino Heis Hel Helgeness Hellé 
    Heliopolis HengSha 
    HERZdame HeSa Hey Hiiimmm Hilda Hist Hjerterdamer HKES Hobbits Holders 
-   Holifera Hollywood 
+   Holifera Hollywood Holmenkollen
    Holport Honeymoon Hopfenkönig Hornet Hridhaan Huamen Hubsi Huhu 
    Hunaja Huispaus Hurra Hybrid
 
-   IBE Ida Ijseide Ikarus Ilya IMAN Imanual Imponderables InFran
+   IBE Ida Ijseide Ikarus Ilya IMAN Imanual IMLUK Imponderables InFran
    Instructor Invicta Iris Irukangi Ismo Israbel Isrmany Itnoraunz 
    ITS IVAR
 
@@ -947,7 +958,7 @@ my @SINGLE_WORDS = qw(
    Juubilar JuuTools
 
    Kaardivägi Kagama Kalbar Kalca Kalkarna Kaltim Kamelåså Kamikaze 
-   Kamlakars Kamyk Kangaroo Kanin Karaarslan Karin Karo Kartel 
+   Kamlakars Kamyk Kangaroo Kanin Karaarslan Karin Kark Karo Kartel 
    Kasiyahan Kasty Kasuang Kat Katipunan Kebiya Keni Kenji Kenlong 
    Kerasus Kibe Kinga Kingkong Kings KISS Kitty Kjelskos KKKQ
    Klasik Klio
@@ -958,14 +969,15 @@ my @SINGLE_WORDS = qw(
    Kvazar
 
    Lahjattomat LAKT Langy Laplanders Laplas Larry Lasse Lataka Lateria 
-   LatSwe Lazy Lebensohl Lebron Legeanka Lema Lemanus Leta Letve 
+   LatSwe Lazy Lebensohl Lebron Legeanka Lema Lemanus Leszek Leta Letve 
    Leveni Lianas Liggeunderlaget Lili Lillebaluba Lions Lipa Lira Livius 
-   Lirarna Liverbird Ljónin LNWers Lo Logos Lolly Loloc LOS Lowel 
+   Lirarna Liverbird Ljónin LNWers Lo Logos Lolly Loloc Loreng LOS Lowel 
    Löparn LPMS Lucky LVBridgeBums Lyubcho Løwene
 
-   Mach Madhav Mads Maestroi Magi Magic Magister Maharaja Maija Maj
-   Major MajorB Majorn Majority Malinka Malmölaget Manashda Manena 
-   Manno Mano 
+   Mach Madhav Mads Maestroi Magi Magic Magister Magnus Maharaja 
+   MAHÝR ÞENOL Maija Maj
+   Major MajorB Majorn Majority Makara Mali Malinka Malmölaget 
+   Manashda Manena Manno Mano 
    Manu Manywar Margitta Marianne Mark Marosamitawa Mars Marvelous 
    Marynarz Masdjävlar Masters Matilde Matrix Mats Matujona Maven 
    Mavi Mavs Mayamira Maxi 
@@ -1010,7 +1022,7 @@ my @SINGLE_WORDS = qw(
    Senator Severin Sevil SFG Shane Shavaz Sherdils Shona Show Shrikant 
    Shushi Siddheshwar Sigdonnemann Sigma Sigrid Sihai Silbersee 
    Silence Silverfox 
-   Simonetta Simple Simpleksas Sindbad Sindhu Sirius SISU Sivves 
+   Simonetta Simple Simpleksas Sindbad Sindhu Singapole Sirius SISU Sivves 
    Siyabend Sjøsamen Skalman Skaronga Skip Skitur Skotii Þlem 
    Slappfisker Slostria Slufsa Småveitjan SNAP Snapper Snipers 
    Sober Sobers Sogn Soho Solo Sonata Sonchel Soumitra Spamirs
@@ -1018,7 +1030,7 @@ my @SINGLE_WORDS = qw(
    Squeeze Srimapuna Srykeir Stafani Stagge Stampede Star Starmen 
    Starsbridge Statusquo Stayman Stefany Steinars Steinlager Steliana 
    Steve Stifinnern Storeslemmen Strata Strategen Streamline 
-   Studentene Stålfarfar Sucharek Sue Sunset Sunshine Suz Svetla 
+   Studentene StZ Stålfarfar Sucharek Sue Sunset Sunshine Suz Svetla 
    Swanand SweDanes 
    SweNor Swest Syabas Syly Syttisju Sømnakameratene Sør Såpeopera
 
@@ -1085,6 +1097,7 @@ my %SINGLE_TYPOS =
     'formiddable', 'formiddables', 'formadibles', 'formadeble',
     'formadables', 'fromidables'],
   Gelin => ['gelýn'],
+  Göktürk => ['gokturk'],
   'Green Eyes' => ['greeneyes'],
   Gunsmoke => ['gunnsmoke'],
   Hästpojkarna => ['hastpojkarna'],

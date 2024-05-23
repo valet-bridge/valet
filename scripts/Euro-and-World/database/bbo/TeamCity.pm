@@ -32,6 +32,7 @@ my @MULTI_WORDS =
   'Kota Mataram',
   'Kuala Lumpur',
   'La Chaux-de-Fonds',
+  'La Marina',
   'Le Bouscat',
   'Mandobo Bodi',
   'Meilin Qingcheng',
@@ -100,12 +101,12 @@ my @SINGLE_WORDS = qw(
   Annecy Antalya Antony Antwerpen Aral Arendal Arjasa Asenovgrad Assis 
   Atakoy Atakum Athens Auckland Augsburg Avren Ayacucho Ayan Ayvalik
 
-  Balcova Bahcesehir Balikesir Balikpapan Ballerup Bamberg 
+  Bahce Balcova Bahcesehir Balikesir Balikpapan Ballerup Bamberg 
   Bandung 
   Bangalore Bangkok Banjarmasin Bansi Baragnon Barcelona Batam Bath 
   Batman Batu Bayrampaþa Begues Beijing Bekasi Belgrade Bengkalis 
   Bengkulu Beograd Bereket Bergen Bergues Berlin Beroe Bhilwara
-  Bhubaneshwar Bielefeld Bieniewo Bikaner Blitar Bodrum 
+  Bhubaneshwar Bielefeld Bieniewo Bikaner Bitung Blitar Bodrum 
   Bodø Bogazici Bogor Bologna Bonn Bordeaux Borivli Bormali 
   Bornova Bozdogan Braila Brandbu Brasilia Brasov Bremen Brisbane 
   Bromölla Brotteaux Buca Bucharest Budapest Buitenhof Burghausen 
@@ -139,9 +140,10 @@ my @SINGLE_WORDS = qw(
 
   Kadikoy Kadirli Kalisz Kalundborg Kalyani Kanpur Karachi Kardelen
   Karlsruhe Kartal Karsiyaka Kastamonu Katok Katowice Kaylaka Kediri 
-  Kesten Ketsch Kiel Kielce Kiev Kirkeby Kirklarelý Kocaeli 
+  Kesten Ketsch Kiel Kielce Kiev Kirkeby Kirklarelý Klabat Kocaeli 
   Kocamustafapasa 
-  Kolbotn Kolkata Konak Korwin Kosice Koycegiz Köln Krakow Kristiansand 
+  Kolbotn Kolkata Konak Kornik Korwin Kosice Koycegiz Köln Krakow 
+  Kristiansand 
   Kucukcekmece Kudus Kunshan Kuopio Kusadasi Küp Kütahya Kverndalen
   Kølabånn
 
@@ -151,7 +153,7 @@ my @SINGLE_WORDS = qw(
   Lumajang
 
   Maadi Maastricht Madrid Makaliwe Makassar Makus Malatya Malkia Malmö 
-  Manahasa Manado Manchester Manisa Mannheim Marbella Martapura 
+  Manahasa Manado Manchester Manisa Manna Mannheim Marbella Martapura 
   Massy Mataram Männiku Medan Melbourne Mersin Meski Michalovce 
   Midyat Milan Milas Minsk Miskolc Montpellier Moradabad Morud
   Moudania Mrzenci Mumbai Munich Muratpasa
@@ -166,8 +168,9 @@ my @SINGLE_WORDS = qw(
 
   Padang Padova Paimado Palembang Palermo Palma Palu Pamukkale 
   Pancevo Panzhihua Pariaman Parioli Paris Pärnu Pasham Pattaya 
-  Pecs Pekanbaru Pelotas Pernik Perth Perula Pesaro Pescara Peterfield 
-  Piloni Pinarbasi Polonezkoy Poncol Popovo Posillipo Poznan Pula
+  Pecs Pekanbaru Pelotas Penajam Pernik Perth Perula Pesaro Pescara 
+  Peterfield Piloni Pinarbasi Polonezkoy Poncol Popovo Posillipo 
+  Poznan Pula
 
   Qiaoxie Qingdao
 
@@ -197,7 +200,8 @@ my @SINGLE_WORDS = qw(
 
   Xiamen Xinghua Xinyi
 
-  Warsaw Wellington Wisla Worcester Wratislavia Wroble Wroclaw Wuhan
+  Wadas Warsaw Wellington Wisla Worcester Wratislavia Wroble 
+  Wroclaw Wuhan
 
   Yalikavak Yambol Yarimada Yarýmca Yatagan Yenisehir Yibin Yildirim 
   Yokohama Yogyakarta
@@ -243,6 +247,7 @@ my %SINGLE_TYPOS =
   Harplinge => ['harpling'],
   Hegyvidék  => ['hegyvidek'],
   Heimdal => ['heimdalbc'],
+  Iskenderun => ['iskendurun'],
   Izmir => ['ýzmir', 'ýzmýr'],
   Jakarta => ['dki', 'jakar', 'jkt'],
   Kalundborg => ['kallundborg'],
@@ -255,6 +260,7 @@ my %SINGLE_TYPOS =
   Kristiansand => ['kristiansands'],
   'Kuala Lumpur' => ['kl'],
   Küp => ['kup'],
+  'La Marina' => ['lamarina'],
   Lhokseumawe => ['lhoeksemawe'],
   Lozenets => ['lozenec'],
   Makassar => ['makasar'],
@@ -262,7 +268,7 @@ my %SINGLE_TYPOS =
   Mersin => ['mersýn'],
   Milan => ['milano'],
   Milas => ['minas'],
-  'Mitra Vihar' => ['mitra vihar'],
+  'Mitra Vihar' => ['mitravihar'],
   'Monte Carlo' => ['montecarlo'],
   Moudania => ['moydania'],
   Mumbai => ['mum'],
@@ -280,7 +286,7 @@ my %SINGLE_TYPOS =
   Potsdam => ['postdam'],
   Poznan => ['poz'],
   Prague => ['praha'],
-  Radkov => ['radkow', 'kadkov'],
+  Radkov => ['radkow', 'kadkov', 'rxdkov'],
   'Reggio Emilia' => ['re'],
   Reykjavik => ['reykjavikur', 'reykjavitur'],
   Rome => ['roma'],

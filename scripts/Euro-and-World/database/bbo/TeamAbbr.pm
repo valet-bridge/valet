@@ -44,7 +44,8 @@ my %MULTI_TYPOS =
     'bric sk', 'briç sk', 'briç skd', 'bric spor kl',
     'briç ýsk', 'brýç sk', 'brýç spor', 'spor bric', 
     "sport' c", 'sports c', 'spor kb', 's c',
-    's.k.', 'spor kulubu', 'spor kulübü', 's.s.', 'sports club',
+    's.k.', 'spor kulubu', 'spor kulübü', 's.s.', 's.s.d.',
+    'sports club',
     't.c.', 'tennis club', 't.c.p.'],
 
   'University Club' => ['ü.m.d']
@@ -59,7 +60,7 @@ my %SINGLE_TYPOS =
   'Bridge Club' => [qw(aba abk abi absk ak ahm 
     asb asd ass assn asso assoc azs
     ba bbgsk bbs bbsk bc bcn belediye beledýye belediyespor
-    bilimsel bjk bk bld bmsk 
+    bilimsel bjk bk bld bmsk bps
     br brýç bridgeclub bridgeklub 
     bs bsb bsc bsk bskd bt
     bþb bþbký bsbkisk bssk buyuksehir ybsk bsbs btsc 
@@ -71,7 +72,7 @@ my %SINGLE_TYPOS =
     kcb kdi klubben klubberne ks ksb ksk
     mbc
     nbi nbcbl
-    obk 
+    oaza obk 
     sb sbc sc sdgskd sk spor ss ssd
     tbc tc
     ýbmsk ýbsk)],

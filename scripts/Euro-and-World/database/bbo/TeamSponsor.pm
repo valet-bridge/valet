@@ -25,6 +25,7 @@ my @MULTI_WORDS =
   'AJ Diament',
   'Alfa Romeo',
   'Aliaga Kyme',
+  'Ant Teknik',
   'APRA Clothing',
   'Apreo Logistic Poland',
   'Asindo Prima',
@@ -190,6 +191,7 @@ my @MULTI_WORDS =
   'Novi Kod',
   'OCI Copper',
   'OICO Maesa',
+  'Oly-Star',
   'PD Real Estate',
   'PD Times',
   'PD Transnational',
@@ -545,14 +547,15 @@ my @SINGLE_WORDS = qw(
 
   Sagaplast Samsung Samtronic Scania Sekans Sevtopolis Shimuzu 
   Shouchuang Signity Skeljungur Solakoglu Solox Sparisjóður Srenniw
-  SSDA Stalgast Stiga Synective
+  SSDA Stalgast Stiga Struma Synective
 
   Tekser Telkom Termika Termoavion Termochem Topeko Transearly 
   Tricon Tridaya Triton Tryggingamiðstöðin Tsingtao Tundem Tyco Tzilis
 
   Underberg Unibet Unicat
 
-  Vale Velbazhd Velbujd Vilmar Vinabær Virnet Visoft Vito Voff
+  Vale Velbazhd Velbujd Vilmar Vinabær Virnet VÍS Visoft Vito Voff
+  Vyceska
 
   Wellknit Wellwise Winbridge Wise
 
@@ -575,6 +578,7 @@ my %SINGLE_TYPOS =
   'Chennai Online' => ['chennaionline'],
   'China Ping An' => ['chinapingan', 'zhongguopingan'],
   'China National Petroleum Corporation' => ['cnpc'],
+  Cimentas => ['çimentaþ'],
   Computerland => ['computerlan'],
   CONNECTOR => ['conector'],
   'Dhampur Sugar' => ['dhampur'],
