@@ -36,13 +36,13 @@ my @SINGLE_WORDS = qw(
   Best Bridge
   Center Challenger City Commercial Commune
   Development Dist
-  Earth European Festival
+  Earth ENC European Festival
   GD GLPD Group Groupe
   Home Host
   Indi Inter International Invit Invitational
   KB KDK KRS
   Leaders
-  Match Mates Mr
+  Match Mates Milli Mr
   National NC No NONAME npc nr
   og Opponent Opponents Other Others
   Pacific pc PairNo Players Plus Point PON Prima Pusat

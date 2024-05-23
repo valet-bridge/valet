@@ -189,8 +189,9 @@ my @SINGLE_WORDS = qw(
   Sredec Stavanger Steinkjer Storsjöbygden Stureby Stuttgart 
   Sukma Suleymanpasa Sunndalsøra Surabaya Suzhou Sydney Szeged Sørreisa
 
-  Taicang Taihu Tainan Taizhou Takayama Tallinn Targoviste Tarnów 
-  Taskopru Täby Täfteå Tekýrdag Temuco Tequendama Thessaloniki Tianjin 
+  Taicang Taihu Tainan Taizhou Takayama Tallinn Tambun Targoviste 
+  Tarnów Taskopru Täby Täfteå Tekýrdag Temuco Tequendama 
+  Thessaloniki Tianjin 
   Tianya Timisoara Tingling Tire Tokyo Tomohon Torino Toulouse Trieste 
   Trondheim Tromsø
 

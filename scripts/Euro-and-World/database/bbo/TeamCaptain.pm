@@ -570,7 +570,7 @@ my @SINGLE_WORDS = qw(
   Blackstock Blakeman Blakset Blanchard Blanco Blandin Bley 
   Bloom Blum Blumental Bo Boaz Bocchi Bock Bogach Bogacki 
   Bohnhorst Bohnsack Bokk Bojoh Boldt Bolling Bolognini Bombardieri 
-  Bomber Bompis Bongiovanni Bonis Bonori Booth Bordallo Bornova 
+  Bomber Bompis Bongiovanni Bonis Bonori Bontas Booth Bordallo Bornova 
   Boro Bos Boss Bossi Bostanci Bostosusz Botto Boucher Boughey 
   Bourke Bouscat Bowdery Bowles Boylson Bozempergk Bottetto Bozzetto
   Bozzo
@@ -780,7 +780,7 @@ my @SINGLE_WORDS = qw(
   Skorchev Skurec Skwark Small Smart Smilgajs Smith Smirnov Smolanko 
   Snashall Snellers Snow Socha Sohlin Soldati Solheim Solimando Solodar 
   Sonsini Soriano Sorkin Sosler Soukup Soulet Soumitra Sowter 
-  Sörvoll Spangenberg Spector Spelmans Spirodonescu
+  Sörvoll Spangenberg Spector Spelmans Spiridonescu
   Spitalnick Spooner Sprung Squires Stabell Stamatov Stankovic 
   Stansby Stark Stavrinos Steel Stegaroiu Steiner Stensson Stephenson 
   Stern Steinberg Sternberg Stevens Stewart Stienen Stilling
@@ -1009,6 +1009,7 @@ my %SINGLE_TYPOS =
   Roussos => ['rousos'],
   Rubiés => ['rubies', 'rubie'],
   Rubin => ['rugin'],
+  'Rui Silva Santos' => ['rss'],
   'Rusen Abi' => ['rusen'],
   Ruia => ['ruya'],
   'Sally Brock' => ['brock'],

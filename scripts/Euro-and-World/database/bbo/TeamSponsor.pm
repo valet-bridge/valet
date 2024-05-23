@@ -224,6 +224,7 @@ my @MULTI_WORDS =
   'Ryan Express',
   'SAIC VW',
   'Samtronic Constanta',
+  'San-Sac',
   'San Chen',
   'San Yutian',
   'Sanya Jiguan',
