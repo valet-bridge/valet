@@ -104,7 +104,7 @@ my @SINGLE_WORDS = qw(
   Bangalore Bangkok Banjarmasin Bansi Baragnon Barcelona Batam Bath 
   Batman Batu Bayrampaþa Begues Beijing Bekasi Belgrade Bengkalis 
   Bengkulu Beograd Bereket Bergen Bergues Berlin Beroe Bhilwara
-  Bhubaneshwar Bielefeld Bieniewo Bikaner Bitung Blitar Bodrum 
+  Bhubaneshwar Bielefeld Bieniewo Bikaner Blitar Bodrum 
   Bodø Bogazici Bogor Bologna Bonn Bordeaux Borivli Bormali 
   Bornova Bozdogan Braila Brandbu Brasilia Brasov Bremen Brisbane 
   Bromölla Brotteaux Buca Bucharest Budapest Buitenhof Burghausen 
@@ -136,9 +136,10 @@ my @SINGLE_WORDS = qw(
   Jagodina Jaipur Jakarta Jember Jessheim Jiamusi Jiangyou Jilin 
   Jinchang Jincheng Jinjiang Jomtien
 
-  Kadikoy Kadirli Kalisz Kalundborg Kalyani Kanpur Karachi Karlsruhe 
-  Kartal Karsiyaka Kastamonu Katok Katowice Kaylaka Kediri Kesten 
-  Ketsch Kiel Kielce Kiev Kirkeby Kirklarelý Kocaeli Kocamustafapasa 
+  Kadikoy Kadirli Kalisz Kalundborg Kalyani Kanpur Karachi Kardelen
+  Karlsruhe Kartal Karsiyaka Kastamonu Katok Katowice Kaylaka Kediri 
+  Kesten Ketsch Kiel Kielce Kiev Kirkeby Kirklarelý Kocaeli 
+  Kocamustafapasa 
   Kolbotn Kolkata Konak Korwin Kosice Koycegiz Köln Krakow Kristiansand 
   Kucukcekmece Kudus Kunshan Kuopio Kusadasi Küp Kütahya Kverndalen
   Kølabånn
@@ -154,7 +155,7 @@ my @SINGLE_WORDS = qw(
   Midyat Milan Milas Minsk Miskolc Montpellier Moradabad Morud
   Moudania Mrzenci Mumbai Munich Muratpasa
 
-  Nagbagan Nagpur Nagykanizsa Namsos Nangang Nanning Napoli
+  Nagbagan Nagpur Nagykanizsa Namsos Nanning Napoli
   Narita Narlidere Narvik Nazilli Näsby Nijmegen Ningbo Niski 
   Norrbyskär Norrorts Norrøna Nusantara Nürnberg Nyon Nærbø Næstved 
   Nøtterøy
@@ -178,7 +179,7 @@ my @SINGLE_WORDS = qw(
   Sansar Santiago Sanya Sarniak Sarpsborg Secunderabad Seferihisar 
   Semarang Senayan Serang Serdika Shanghai Shaoguan Shenyang 
   Shenzhen Shihua Sibiu Sidoarjo Siena Simal Sindi Singsås Sirinyer
-  Skara Skien 
+  Skara Skawina Skien 
   Skopje Slagelse Slaska Sleman Sliven Sofia Solok Sortland Söke Split 
   Sredec Stavanger Steinkjer Storsjöbygden Stureby Stuttgart 
   Sukma Suleymanpasa Sunndalsøra Surabaya Suzhou Sydney Szeged Sørreisa
@@ -266,7 +267,6 @@ my %SINGLE_TYPOS =
   Mumbai => ['mum'],
   Munich => ['münchen'],
   Nagpur => ['nagpor'],
-  Nangang => ['nanggang'],
   Napoli => ['naples'],
   Narlidere => ['narlýdere'],
   Ningbo => ['ningpo'],
@@ -284,6 +284,7 @@ my %SINGLE_TYPOS =
   Reykjavik => ['reykjavikur', 'reykjavitur'],
   Rome => ['roma'],
   Saarbrücken => ['saarbruecken'],
+  Skawina => ['skawia'],
   Singsås => ['singsaas'],
   Storsjöbygden => ['storsjöbygdens'],
   Söke => ['soke'],
@@ -301,6 +302,7 @@ my %SINGLE_TYPOS =
   Warsaw => ['warsow', 'warszawa'],
   Wroble => ['wróble'],
   Wroclaw => ['wr'],
+  Yildirim => ['yýldýrým'],
   Yogyakarta => ['jogjakarta', 'diy'],
   Zagreb => ['zgb', 'zg'],
   'Zhong Jian' => ['zhongjian'],

@@ -18,6 +18,7 @@ my @MULTI_WORDS =
 (
   '0% Eriksson',
   '2 Generations',
+  '2 over 1',
   '246.5 Meters',
   '3 Baritona',
   '3 Frakkar',
@@ -57,6 +58,7 @@ my @MULTI_WORDS =
   'Angry Birds',
   'Annas Fans',
   'Anti Revenge',
+  'Applied Math',
   'April 30',
   'Apollo Soyuz',
   'Arctic Farmers',
@@ -74,10 +76,12 @@ my @MULTI_WORDS =
   'Bad Man',
   'Balkanski Minior',
   'Baltic Club',
+  'Bandhav Samity',
   'Banteng Selatan',
   'Bara brudar',
   'Barny Army',
   'Bate Tot',
+  'Batterfly with HK',
   'BBE Hungary',
   'BBO Lovers',
   'Bea & Family',
@@ -87,6 +91,7 @@ my @MULTI_WORDS =
   'Best uten kort',
   'Beto BO',
   'Beverly Hillbillies',
+  'B.I.G.',
   'Big Bang',
   'Big Boss',
   'Big Chef',
@@ -300,6 +305,7 @@ my @MULTI_WORDS =
   'Hopp i sang',
   'Horten-14',
   'Hum Paanch',
+  'Hummer & Kanari',
   'Hungarian Olympic',
   'Hurlumhei',
   'Hvalen og tjukkasene', 
@@ -384,7 +390,7 @@ my @MULTI_WORDS =
   'Late S.S. Jain',
   'L.C. is Beautiful',
   'Le Colonial',
-  'Leromain boys',
+  'Le Romain boys',
   'Les Girafes',
   'Les Zähringers',
   'Lew Lodzki',
@@ -471,9 +477,11 @@ my @MULTI_WORDS =
   'Om het hoekie',
   'One Hundred Eighty',
   'One More!',
+  'OPF Meets Nepal',
   'Opp og ned',
   'Orange Dynamite',
   'Oruva Eesti',
+  'os.se',
   'Ottos Lotto',
   'Over stokk og stein',
   'Ööklubi Strand',
@@ -502,6 +510,7 @@ my @MULTI_WORDS =
   'Queen of Hearts',
   'Ra Ma Ra Him',
   'Raag Brigeshwari',
+  'Radik-Medik',
   'Radio Communication',
   'Rajjan',
   'Ram Charan',
@@ -517,11 +526,14 @@ my @MULTI_WORDS =
   'Rising Star',
   'River Friend',
   'Robin Hood',
+  'Rodos Suns',
   'Roheline Lammas',
   'Rotseknots Ernst',
   'Royal Flush',
+  'RPB Leader',
   'Rubb og stubb',
   'Rudderless Ship',
+  'R.U.F.F.',
   'Ruter 7',
   'Ruter 9',
   'Saint Titus',
@@ -641,6 +653,7 @@ my @MULTI_WORDS =
   'Three Nations',
   'Til Valhall',
   'Tinutuan Manado',
+  'Tre Kn og en D',
   'Tre knekter og ett S',
   'To gamle og to gode',
   'Tommys tigre',
@@ -713,7 +726,7 @@ my %MULTI_TYPOS =
 (
   '3 Idiots + 1' => ['3 idiots +1', '3 idiots + i'],
   '4 Trèfles' => ['4 trefles 1', '4 trefles1', '4 trefles ii',
-    '4trèfles', '4 treffles'],
+    '4trèfles', '4 treffles', '4trèfle'],
   '40 Årskrisa' => ['40-Årskrisa'],
   '5 Ess' => ['5-ess'],
   '6 Notrump' => ['6 no trump'],
@@ -721,12 +734,14 @@ my %MULTI_TYPOS =
   'AG laget' => ['ag-laget'],
   'Air Traffic Management' => ['air traffic managem'],
   'Alex is Beautiful' => ['alex is beatiful'],
+  'All Stars' => ['all-stars', 'all star'],
   'Alle presidentens menn' => ['alle presidentens'],
   Arnab => ["arnab's"],
   Azores => ['açores team'],
   Ayan => ["ayan's"],
   'Babes Amazones' => ['babes-amazones'],
   'Best uten kort' => ['best uden kort'],
+  'Beto BO' => ['beto b o'],
   'Beverly Hillbillies' => ['beverly hillbillie'],
   'Big Guns' => ['big gun'],
   'Big Makie' => ['big makie och co'],
@@ -756,7 +771,7 @@ my %MULTI_TYPOS =
   'Equator 1771' => ['equator1771'],
   'Esso-sveitin' => ['esso - sveitin', 'esso -sveitin'],
   'Et par sama og 2 ens' => ['et par sama og 2 en'],
-  'Eviza Plambata' => ['evita_plambata'],
+  'Eviza Plambata' => ['eviza_plambata'],
   'Fast and Furious' => ['fast & furious'],
   "Flint's Crew" => ["flint`s crew"],
   'Flora and Friends' => ['flora && friend'],
@@ -783,7 +798,7 @@ my %MULTI_TYPOS =
   'India Blues' => ['indian blues'],
   'Indian Mavericks' => ['india mavericks', 'indian mavricks'],
   'Institute of Chemical Technology' => ['inst.of.chem.techn.',
-    'inst.of.chem.tech.'],
+    'inst.of.chem.tech.', 'inst.of chem.tech.', 'inst.of chem.techn.'],
   'Itinérants du bridge' => ['iti du bridge', 'itin du bridge'],
   'Jamm & Co' => ['jamm & co.', 'jamm && co.'],
   'Jan Wellem' => ['jan wel'],
@@ -800,7 +815,7 @@ my %MULTI_TYPOS =
   'Lakk & Lær' => ['lakk og lær', 'lek & lær', 'lokk & lur',
     'litt lakk og lær', 'lakk lær'],
   'L.C. is Beautiful' => ['l.c.is beautiful'],
-  'Leromain boys' => ["leroumain's boys"],
+  'Le Romain boys' => ["leroumain's boys", 'le romain'],
   'Lindenthal und Freunde' => ['lindenthal und fre'],
   'Lucky 13' => ['lucky13'],
   'Magic Eyes' => ['majic eyes'],
@@ -816,7 +831,7 @@ my %MULTI_TYPOS =
   'Nilslands Slowfoxes' => ['nilslands slowfoxers', 'nilsland slowfoxes',
     'nilsland slowfoxers'],
   "No He Isn't" => ['no he isnt'],
-  Polýsgücü => ['polýs gücü s'],
+  Polýsgücü => ['polýs gücü s', 'polis gucu', 'polisgucu'],
   "Pradeep's Four" => ["pradeep's 4", "Pradeep's Team"],
   "President's Team" => ["president's", 'presidents teams'],
   'Queen and Knights' => ["queen's & knight"],
@@ -835,7 +850,8 @@ my %MULTI_TYPOS =
   'Stabby with Youngsters' => ['stabby with youngst'],
   'Svanslös Skalman' => ['svanslos skalman'],
   'Tempo-Knektene' => ['tempo-knehtene'],
-  'Texan Aces' => ['texa aces', 'texaan aces'],
+  'Texan Aces' => ['texa aces', 'texaan aces', 'texan  aces',
+    'tn aces'],
   'The Four Guys' => ['the 4 guys'],
   'The Clown' => ['the_clown'],
   'The Palookas' => ['the_palookas'],
@@ -864,14 +880,14 @@ my @SINGLE_WORDS = qw(
    Aytalus Azores Azure
 
    Bacch Bachelor Bade Badger Badminton Bager BAK Baias Bajozero Balti 
-   Bananasplit Baneet BarDeZi BARC BARP Barracuda Baryton BAST Bat Bato 
-   Batusida Bauhinia 
+   Banana Bananasplit Baneet BarDeZi BARC BARP Barracuda Baryton BAST 
+   Bat Batmix Bato Batusida Bauhinia 
    BBO Beauty Begigütje Begijntje BELSPA Ben Beniaminek Berik Beton 
    BHDM Bhinneka Biachite Bilal BIN Bingbang Binkie Biriceri Blackwood 
    Blandat Bling Blondie Blueberry BMP Boek Bolero Boogies Boomz Boriana 
    Borko BOVE Breno Bricklayer Bridgebutikken Bridgekameratene 
    Bridgeministeriet Brigada Brigida Brother Brudarna Buaigh Bubba Bubu 
-   Buddies Bumerangas Bunnies Bulldozer Busiaki Butler
+   Buddies Bulldozer Bumerangas Bunnies Busiaki Butler
 
    Cabal Cabriole Calaca Cammello Canadonia Cancan Canukusa 
    Cardtossers Cargo Cartoon Casuals Cathy Cavelieri Censored 
@@ -893,10 +909,10 @@ my @SINGLE_WORDS = qw(
    Engineers Enigma Enjoy Ephesus Epsilon Equator Era Eren Eric 
    Erikas Ertým Eses Esesss Esperanza Everest Evil Ewa
 
-   F16 Fakel Fantasia Fant4stic Farmen Farmers Felix Fenghuang Fenia 
+   F16 Fakel FAM² Fantasia Fant4stic Farmen Farmers Felix Fenghuang Fenia 
    Fenix Ferfi Feszek Fharon Fifi Fil Filosofene Filur Finest Fisk 
-   Forfot Formidables Formosa Fortuna FOS Foundation Francest Frank 
-   Franz Frenemies Frieolt Friends Frirond Francophones Freak 
+   FNCC Forfot Formidables Formosa Fortuna Fortune FOS Foundation Francest 
+   Frank Franz Frenemies Frieolt Friends Frirond Francophones Freak 
    Frivolt Frusci Fundacja
 
    Gabrisem Galaxy Galim Gambitas Gamma Garry Garuda Gata Gelim 
@@ -923,10 +939,10 @@ my @SINGLE_WORDS = qw(
    Juniorklubben Jupiter Juste Justplay Justyna Justynka Jutek 
    Juubilar JuuTools
 
-   Kaardivägi Kagama Kalbar Kalca Kalkarn Kaltim Kamelåså Kamikaze 
+   Kaardivägi Kagama Kalbar Kalca Kalkarna Kaltim Kamelåså Kamikaze 
    Kamlakars Kamyk Kangaroo Kanin Karaarslan Karin Karo Kartel 
    Kasiyahan Kasty Kasuang Kat Katipunan Kebiya Keni Kenji Kenlong 
-   Kerasus Kibe Kinga Kingkong Kings KISS Kjelskos Klasik Klio
+   Kerasus Kibe Kinga Kingkong Kings KISS Kitty Kjelskos Klasik Klio
    KMC Knösel Kodin Koiraperhe Kokoelma Kolbasti Komleposs
    Kompisarna Konga Kordam Korsikalý Kortai Koru Koukouselis KrASK 
    Kratos 
@@ -936,7 +952,7 @@ my @SINGLE_WORDS = qw(
    Lahjattomat LAKT Langy Laplanders Laplas Larry Lasse Lataka Lateria 
    LatSwe Lazy Lebensohl Lebron Legeanka Lema Lemanus Leta Letve 
    Leveni Lianas Liggeunderlaget Lili Lillebaluba Lions Lipa Lira Livius 
-   Lirarna Liverbird Ljónin LNWers Logos Lolly Loloc Lowel Löparn 
+   Lirarna Liverbird Ljónin LNWers Lo Logos Lolly Loloc Lowel Löparn 
    LPMS Lucky LVBridgeBums Lyubcho Løwene
 
    Mach Madhav Mads Maestroi Magi Magic Magister Maharaja Maija Maj
@@ -947,7 +963,7 @@ my @SINGLE_WORDS = qw(
    Mavi Mavs Mayamira Maxi 
    Mer Mercury Mesna Meta Mia Michal Midas Mihai Mikke Miguel Milady 
    Milo Minut 
-   Mirage Miro Mismatch Mixarna Mjøskameratne Mochu Monaconf
+   Mirage Miro Mismatch Mixarna Mjøskameratne MMMM Mochu Monaconf Mongos
    Moritz Mostingan Movember Mölnlycke Munawar Mustang Mýna Myoni 
    Møremix Måsen
 
@@ -963,7 +979,8 @@ my @SINGLE_WORDS = qw(
    OSMO Osss Oto Otters Outsiders Overivrig Oyzum Ozbiljni
 
    Pacers Paco Pagonia Pal Palukas Panteros Paoli Paradigma Partizan
-   Pasanci Passé Patron Paulette Paulina Paulistas Pegasus Pennant
+   Pasanci Passé Patriot Patron Paulette Paulina Paulistas PDC
+   Pegasus Pennant
    Perestrojka Perjuangan Pero Peter Petra Pia Piast Piryoli Piter 
    Pjäxa PK3 Pleschi Pleyada Plia PMS Pojat Polirish Polus Polýsgücü
    Pompapompa 
@@ -973,12 +990,13 @@ my @SINGLE_WORDS = qw(
 
    Quantum Quasar Quattro Quinze
 
-   Radhey Rafael Raifles Rakinnett Ramkumar Rampage Rapid Raskasammen 
-   Real Recaptan Regeldur Reklamtrion Reloaded Rene Rob Ribitas 
-   Rima Robertinho Robi Robocop Rollers Rosajora Rovers Royston Rozle Rylai 
-   Rylal
+   Radhey Radikk Rafael Raifles Rakinnett RAM Ramkumar Rampage 
+   Rapid RASH Raskasammen Real Recaptan Regeldur Reklamtrion Reloaded 
+   Rene Rob Ribitas Rima Robertinho Robi Robocop Rollers Rosajora 
+   Rovers Royston Rozle Rylai Rylal
 
-   Sabari Sabina Sabres Saga Sailor Sakurai Saladmasters Salokin Salost
+   Sabari Sabina Sabres Saga SAGG Sailor Sakurai Saladmasters Salokin 
+   Salost
    Salvo Sansouci SANY Sapphire Sara Sarp SaTu Saturn Sbamby Scapros 
    Schmuckles Schneewittchen Scientists Scot Secure Selin Senaattorit 
    Senator Severin Sevil SFG Shane Shavaz Sherdils Shona Show Shrikant 
@@ -990,17 +1008,18 @@ my @SINGLE_WORDS = qw(
    Sober Sobers Sogn Soho Solo Sonata Sonchel Soumitra Spamirs
    Spandan Spark Spartans Specialist Spekkhogger Spektr Spin Spring 
    Squeeze Srimapuna Srykeir Stafani Stagge Stampede Star Starmen 
-   Starsbridge Statusquo Stayman Steinars Steinlager Steliana Steve
-   Stifinnern Storeslemmen Strata Strategen Streamline Studentene 
-   Stålfarfar Sucharek Sue Sunset Sunshine Suz Svetla Swanand SweDanes 
+   Starsbridge Statusquo Stayman Stefany Steinars Steinlager Steliana 
+   Steve Stifinnern Storeslemmen Strata Strategen Streamline 
+   Studentene Stålfarfar Sucharek Sue Sunset Sunshine Suz Svetla 
+   Swanand SweDanes 
    SweNor Swest Syabas Syly Syttisju Sømnakameratene Sør Såpeopera
 
    Tadeu Take Takeoff Takk Takým Taksim Tally Tamae Tangra Tannlegene 
    Task Taurus Tbone Tefo Tempo Tibetmunkene Tigers Tiglatpalasar
    Tihkur Tita Titanik Titans Tiz Toar Todremor Tofi Tohundre Tolerant 
    Tollemache Toma Tongxin Topozero Torpedo Tosca Totani Totoro Tömör 
-   Traker Triks Troll Trøndermøringen Tsunami Tulip Tulipano Turuncu 
-   Tushar Tutu Tvist
+   Traker Trèfles Triks Troll Trøndermøringen Tsunami Tulip Tulipano 
+   Turuncu Tushar Tutu Tvist
 
    Udarnik UFO Ugh Úlfurinn Ulvene Underdogs Unexpected Ungdomslaget
    Upplyfting Utkantnorge UTU
@@ -1016,11 +1035,11 @@ my @SINGLE_WORDS = qw(
 
    Xatzopoulos Xman Xtrouble XXX XXXL XXXSL XXXXXYXY
 
-   Ybs Yaðmur Yamata Yansimasiz Yelena Ylajai Yogakshema Yokozuna
+   Ybs YBM Yaðmur Yamata Yansimasiz Yelena Ylajai Yogakshema Yokozuna
    YYY
 
-   Zabavljaci Zamek Zana Zeerob Zen Zeyno Zhihaole Ziggy Zimmkonis 
-   Zivac Zlatan Zombi Zorro Zozoura Zugzwang Zurzits Zvanger
+   Zabavljaci Zamek Zana Zara Zeerob Zen Zeyno Zhihaole Ziggy 
+   Zimmkonis Zivac Zlatan Zombi Zorro Zozoura Zugzwang Zurzits Zvanger
 
    Øssur
 );
@@ -1073,6 +1092,7 @@ my %SINGLE_TYPOS =
   'Last Arrival' => ['lastarrival'],
   'Late S.S. Jain' => ['lssjain'],
   Lebensohl => ['lebenshol'],
+  'Le Romain boys' => ['leromain'],
   'Loy Krathong' => ['longkatong'],
   Löparn => ['loparn'],
   Maharaja => ['maharaj', 'maharaaj'],
@@ -1086,6 +1106,7 @@ my %SINGLE_TYPOS =
   'Occupy Taksim' => ['occupytaksim'],
   Onyx => ['onix'],
   Opps => ['opsy'],
+  Pagonia => ['pagonya'],
   'Paris Match' => ['parismatch', 'parimatch'],
   Paulistas => ['paulistanas'],
   'Pontiac 7' => ['pontiac7'],
@@ -1109,7 +1130,7 @@ my %SINGLE_TYPOS =
   Strategen => ['stratagen'],
   Syabas => ['syabhas'],
   Syttisju => ['sytti7'],
-  'Texan Aces' => ['texanaces'],
+  'Texan Aces' => ['texanaces', 'tnaces'],
   Titans => ['titan'],
   Valyo => ['valýo'],
   'Vegetable Hotpot' => ['vegetable'],

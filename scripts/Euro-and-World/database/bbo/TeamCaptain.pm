@@ -299,6 +299,7 @@ my @MULTI_WORDS =
   'Sunil Machhar',
   'Sveinn Ericsson',
   'Sverrir Þórisson',
+  'Teixeira-Reus',
   'Tiago Canelas',
   'Tomi Gotard',
   'Tor Helness',
@@ -378,7 +379,7 @@ my %MULTI_TYPOS =
   'de Knijff' => ['deknijff', 'di knijff'],
   'de Tessieres' => ['de tessiere', 'de tessier', 'de tessie'],
   'D Banerjee' => ['prof d banerjee'],
-  "D'Orsi" => ['d orsi', "d´orsi"],
+  "D'Orsi" => ['d orsi', "d´orsi", "d`orsi", "d' orsi"],
   Desai => ['desai 5'],
   'Dr. Anand' => ["dr. anand's"],
   'Efrat Oren' => ['oren efrat'],
@@ -480,7 +481,7 @@ my %MULTI_TYPOS =
   'Paul Hackett' => ['p hackett', 'pd hackett', 'hackett p'],
   'Paulo Goncalves Pereira' => ['paulo g pereira', 'paulo goncalves per',
     'paulo gonçalves', 'p g pereira', 'p. g. pereira', 'pg pereira',
-      'p.g.pereira', 'paulo gp', 'paulo g. pereira'],
+      'p.g.pereira', 'paulo gp', 'paulo g. pereira', 'p.g.p.'],
   'Paulo Roberto Brum' => ['brum p', 'brum.p.', 'paulo brum', 'p brum'],
   'Paulo Rocha Pinto' => ['paulo pinto', 'rocha pinto'],
   'Pedro Madeira' => ['p. madeira', 'p madeira'],
@@ -512,6 +513,7 @@ my %MULTI_TYPOS =
   'Sunil Machhar' => ['sunil machar', 'sunil macchar', 's macchar',
     'sunal macchar', 'sunil maccher', 'sunil.macchar', 's machhar'],
   'Sverrir Þórisson' => ['sverrir þ'],
+  'Teixeira-Reus' => ['txecs-reus', 'txec-reus'],
   Vahalia => ['dr.vahalia'],
   Vithaya => ['dr.vithaya'],
   'van Prooijen'=> ['van proojen'],
@@ -743,7 +745,7 @@ my @SINGLE_WORDS = qw(
   Robson Rocafort Rocca Rodwell Rogoff Rohowsky Roll Romanin 
   Romanski Rombaut Ronin Rosen Rosenberg Rosendorff Rosetta 
   Rosenkrantz Rosenthal Rossard Rossi Rosti Rothfield Rothstein 
-  Roussoglou Roussos Rubin Rubins Rubio Rueda Ruia Russo Ryman
+  Roussoglou Roussos Rubiés Rubin Rubins Rubio Rueda Ruia Russo Ryman
 
   Sabbag Sabbatini Sadek Saelensminde Saesseli Sahin Saina Sairanen 
   Sakirler Sakr Salama Salisbury Salliere Salman Salvador Sancaktar
@@ -985,6 +987,7 @@ my %SINGLE_TYPOS =
   Rosenkrantz => ['rosenkranz'],
   Rosenthal => ['rosentahl'],
   Roussos => ['rousos'],
+  Rubiés => ['rubies', 'rubie'],
   Rubin => ['rugin'],
   'Rusen Abi' => ['rusen'],
   Ruia => ['ruya'],
@@ -1018,6 +1021,7 @@ my %SINGLE_TYPOS =
   'Tor Helness' => ['helness'],
   'Toshiro Nose' => ['nose'],
   Townsend => ['towsend'],
+  'Teixeira-Reus' => ['txecreus'],
   Ucar => ['uçar'],
   Vasarhelyi => ['vasarhely', 'vasrahely'],
   Venkatesh => ['venky'],

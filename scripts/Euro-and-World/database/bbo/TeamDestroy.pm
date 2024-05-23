@@ -16,6 +16,7 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  '>',
   'ÀA¬ü',
   'Bridge Team',
   'nat. champio',
@@ -29,23 +30,26 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Any
-  Bridge
-  Center Challenger City Commune
+  and Any Away
+  Best Bridge
+  Center Challenger City Commercial Commune
   Development
-  European Festival
-  GD GLPD Groupe
-  Host
-  Inter International Invitational
+  Earth European Festival
+  GD GLPD Group Groupe
+  Home Host
+  Indi Inter International Invitational
   KB KDK KRS
   Leaders
   Mates Mr
-  National NONAME npc
+  National NC No NONAME npc nr
   og Opponent Opponents Others
-  Pacific pc Players Plus Point PON Prima Pusat
-  Section Selected Sponsor Squad Stars
-  Table Tennis Test Tournament Tricks
+  Pacific pc PairNo Players Plus Point PON Prima Pusat
+  Rank River
+  Section Selected Sponsor Squad Stars Sunday
+  Table Tennis Test Times Tournament Tricks
   United
+  Visit
+  World
   Various
 );
 

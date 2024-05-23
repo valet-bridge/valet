@@ -16,7 +16,8 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
-  'Jilin Sheng Qiaopa'
+  'Jilin Sheng Qiaopa',
+  'Shanghai Contract Bridge Association'
 );
 
 my %MULTI_TYPOS =
@@ -44,7 +45,9 @@ my %SINGLE_TYPOS =
 (
   APBF => ['PABF'],
   CBAI => ['cabi'],
-  'Jilin Sheng Qiaopa' => ['jilinshengqiaopa']
+  FMB => ['fm'],
+  'Jilin Sheng Qiaopa' => ['jilinshengqiaopa'],
+  'Shanghai Contract Bridge Association' => ['scba']
 );
 
 

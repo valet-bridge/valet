@@ -125,7 +125,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Angkaew Anhui Ayrshire
-  Bali Banten Belitung Bihar Bornholm Bungo Buskerud
+  Bali Banten Belitung Bengkayang Bihar Bornholm Bungo Buskerud
   Cappadocia Corsica
   Druts
   Eurasia Europe
@@ -134,8 +134,8 @@ my @SINGLE_WORDS = qw(
   Gujarat
   Hainan Haixing Haugaland Hebei Huangshi Hubei Hunan
   Jharkhand Jiangsu Jilin
-  Kansai Karimun Karnataka Kawanua Kedungwaru Kepri Kerala Kinali
-  Krabi
+  Kansai Karimun Karnataka Kawanua Kayong Kedungwaru Kepri Kerala 
+  Kinali Krabi
   Lebak Liaoning Liguria Lombok Lumajang
   Maharashtra Marmara Masal Matopos Mercosur Midtsjælland Mjøsa 
   Muallim Munzur Mysia

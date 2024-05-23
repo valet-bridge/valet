@@ -17,6 +17,7 @@ use TeamBBO;
 my @MULTI_WORDS =
 (
   'Bridge Club',
+  'Polo Club',
   'Sporting Club'
 );
 
@@ -25,12 +26,14 @@ my %MULTI_TYPOS =
   'Bridge Club' => [
     'a.s.', 'a.s.d.', 'ass. br.', 'athletic c.',
     'b.akd', 'b.b.', 'b.c.', 'b.c',
-    'b.b.k.', 'b.b.s.', 'b.b.s.k.', 'b.s.', 'b.s.b.', 'bld', 'bld.',
+    'b.s.b', 'b.b.k.', 'b.b.s.', 'b.b.s.k.', 'b.s.', 'b.s.b.', 
+    'bld', 'bld.',
     'b.s.k.', 'b.s.k', 'b.seh bel', 'b. shr bld', 'b.k', 'b.k.', 
     'bld sk', 'bld sp', 'b.bld.sk',
     'bld.sp', 'bld.spor', 'bld. gsk',
     'br.', 'bric iht.', 'bric klb', 'bric kulubu', 
-    'bridge clu', 'bridz klub', 'brýç spor', 'brýç s.k.', 'bsb bk', 
+    'bridge clu', 'bridge cl', 'bridz klub', 'brýç spor', 
+    'brýç s.k.', 'bsb bk', 
     'c. br.',
     'card club',
     'gr.sp.ass.', 'g.s.b.', 'g.s.b', 'g.s.',
@@ -57,18 +60,21 @@ my %SINGLE_TYPOS =
     asb asd ass assn asso assoc azs
     ba bbgsk bbs bbsk bc bcn belediye beledýye belediyespor
     bilimsel bjk bk bld bmsk 
-    br bridgeclub bridgeklub 
+    br brýç bridgeclub bridgeklub 
     bs bsb bsc bsk bskd bt
     bþb bþbký bsbkisk bssk buyuksehir ybsk bsbs btsc 
-    cfr club 
-    dbc dbk dgc ebc eibc fbc
+    cbc cfr club csb
+    dbc dbk dgc 
+    ebc eibc 
+    fbc fc
     gençlik gsb gsk gskd gtbc
     kcb kdi klubben klubberne ks ksb ksk
     mbc
     nbi nbcbl
     obk 
     sb sbc sc sdgskd sk spor ss
-    tbc tc)],
+    tbc tc
+    ýbmsk ýbsk)],
   'Sporting Club' => ['sporting', 'sprting'],
 );
 

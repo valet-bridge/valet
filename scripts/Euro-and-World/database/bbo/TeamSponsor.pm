@@ -72,6 +72,7 @@ my @MULTI_WORDS =
   'China Evertrust',
   'China Finance',
   'China Global Times',
+  'China National Petroleum Corporation',
   'China Ping An',
   'China Renshou',
   'China Resources',
@@ -172,6 +173,7 @@ my @MULTI_WORDS =
   'Mandiri Minahasa',
   'Magpa-Grup',
   'Mayur Renergy',
+  'Mech-Ok',
   'Mega-Tech',
   'Mei Kuang',
   'Meilin Qing Cheng',
@@ -251,6 +253,7 @@ my @MULTI_WORDS =
   'Shenzhen Nangang',
   'Shenzhen Ping An',
   'Shenzhen Qiayao',
+  'Shenzhen Topone Car',
   'Shi He Dong Li',
   'Shiji Changda',
   'Shree Cement',
@@ -373,7 +376,8 @@ my %MULTI_TYPOS =
     'ferðaskrifstofa ves'],
   'Garðar & Vélar' => ['garðar & vélar ehf.', 'garðar og vélar',
     'gardar og velar'],
-  'Garðs Apotek' => ['garðs apótek', 'garðs apoótek', 'gards apótek'],
+  'Garðs Apotek' => ['garðs apótek', 'garðs apoótek', 'gards apótek',
+    'garps apótek'],
   'Geely Automobile' => ['geely auto', 'gely auto', 'chaina geely',
     'china geely', 'jili', 'china geely auto', 'jili qiche'],
   'Geologi Timah' => ['geo timah', 'geo tima'],
@@ -446,8 +450,10 @@ my %MULTI_TYPOS =
   'Shanghai Qi Zhong' => ['shang hai qi zhong'],
   'Shanghai Zhongfu' => ['shang hai zhong fu'],
   'Shanxi Qinlian' => ['shan xi qin lian', 'shanxi qinlian'],
-  'Shenzhen Nangang' => ['shen zhen nan gang', 'shenzen nangang'],
+  'Shenzhen Nangang' => ['shen zhen nan gang', 'shenzen nangang',
+    's.z. nangang power'],
   'Shenzhen Ping An' => ['shen zhen ping an', 'shenzhen pingan'],
+  'Shenzhen Topone Car' => ['shenzhen topone', 'sz topone car'],
   'Shiji Changda' => ['chang da', 'shijichangda', 'shi ji chang da'],
   'Shree Cement' => ['shre cement', 'shree cements', 'sree cement',
     'sri cements'],
@@ -516,7 +522,7 @@ my @SINGLE_WORDS = qw(
 
   Jetox JHS Jinfan Junibacken
 
-  Kadimex Kancelaria Kilogrupp KONKRET Konstanta Kvika
+  Kadimex Kancelaria Kideko Kilogrupp KONKRET Konstanta Kvika
 
   Lancia Lacznosc Laima Lavazza Likom Logos Longjiangfu Lukomorie 
   Lyfjaver
@@ -524,7 +530,7 @@ my @SINGLE_WORDS = qw(
   Manyavar Meikuang Mireo Mitrabuana Morgunblaðið Myndform
 
   NALCO Nanyuan Navachaitanya Navayuga Nefka Niewiem Nongken Norco 
-  Nortemp Näkösoppi
+  Nortemp NOTUS Näkösoppi
 
   Ozyuva
 
@@ -545,7 +551,7 @@ my @SINGLE_WORDS = qw(
 
   Underberg Unibet Unicat
 
-  Velbazhd Velbujd Vilmar Vinabær Virnet Visoft Vito Voff
+  Vale Velbazhd Velbujd Vilmar Vinabær Virnet Visoft Vito Voff
 
   Wellknit Wellwise Winbridge Wise
 
@@ -567,6 +573,7 @@ my %SINGLE_TYPOS =
   'Chateau Rossenovo' => ['rossenovo', 'rosenovo'],
   'Chennai Online' => ['chennaionline'],
   'China Ping An' => ['chinapingan', 'zhongguopingan'],
+  'China National Petroleum Corporation' => ['cnpc'],
   Computerland => ['computerlan'],
   CONNECTOR => ['conector'],
   'Dhampur Sugar' => ['dhampur'],
