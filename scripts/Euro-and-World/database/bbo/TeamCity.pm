@@ -81,6 +81,7 @@ my %MULTI_TYPOS =
   Qingdao => ['qing dao'],
   'San Giorgio del Sannio' => ['sg del sannio', 's.g.sannio',
     's.giorgio sannio', 'san giorgio del san'],
+  Shanghai => ['shang hai'],
   Shenzhen => ['shen zhen'],
   'Siddha Eden Lakeville' => ['siddha eden', 'sidhha eden', 'siddha-eden'],
   'Silesia Gliwice' => ['silezia gliwice'],
@@ -110,9 +111,9 @@ my @SINGLE_WORDS = qw(
   Bursa Burdur Bytom
 
   Caen Cairns Canakkale Canberra Canterbury Caracas Cascais Catania 
-  Çayyolu Cerkezkoy Cesme Changzhou Chaville Chelmno Chelsea Chengdu 
-  Chennai Chicago Chislehurst Chongqing Chumphon Cimahi Clichy 
-  Cluj Copenhagen Corlu Courseulles Coventry Cuenca Cuneo
+  Çayyolu Cemara Cerkezkoy Cesme Changzhou Chaville Chelmno Chelsea 
+  Chengdu Chennai Chicago Chislehurst Chongqing Chumphon Cimahi 
+  Clichy Cluj Copenhagen Corlu Courseulles Coventry Cuenca Cuneo
 
   Dabrowa Dalian Dalls Daqing Darmstadt Datca Debrecen Delft Delhi 
   Denizli Derpt Dersým Diyarbakir Dimitrovgrad Dobrich Dombivli 
@@ -123,7 +124,7 @@ my @SINGLE_WORDS = qw(
 
   Farsund Farta Fethiye Firenze Flekkefjord Frankfurt Freidorf Førde
 
-  Garches Gdansk Gdynia Genoa Gent Glidice Gnesta Gorontalo Gorzow
+  Gdansk Gdynia Genoa Gent Glidice Gnesta Gorontalo Gorzow
   Gölcük Gresik Guangzhou Guayaquil Gudbrandsdal Gundogan Gyor
 
   Haderslev Hamburg Hangzhou Hannover Harplinge Harstad 
@@ -142,7 +143,7 @@ my @SINGLE_WORDS = qw(
   Kucukcekmece Kudus Kunshan Kuopio Kusadasi Küp Kütahya Kverndalen
   Kølabånn
 
-  Langkat Lappee Leiden Lemvourgeio Lerum Leszno Leuven Leverkusen 
+  Langkat Lappee Leiden Leilem Lemvourgeio Lerum Leszno Leuven Leverkusen 
   Lhokseumawe Lille Lima Lincoln Lindesberg Ljubljana Lodz Lokotok
   London Losari Lowicz Lozenets Lubin Lublin Lucignano Luleburgaz 
   Lumajang

@@ -134,7 +134,8 @@ my @SINGLE_WORDS = qw(
   Gujarat
   Hainan Haixing Haugaland Hebei Huangshi Hubei Hunan
   Jharkhand Jiangsu Jilin
-  Kansai Karimun Karnataka Kawanua Kedungwaru Kepri Kerala Krabi
+  Kansai Karimun Karnataka Kawanua Kedungwaru Kepri Kerala Kinali
+  Krabi
   Lebak Liaoning Liguria Lombok Lumajang
   Maharashtra Marmara Masal Matopos Mercosur Midtsjælland Mjøsa 
   Muallim Munzur Mysia
@@ -161,6 +162,7 @@ my %SINGLE_TYPOS =
   Eurasia => ['avrasya'],
   'Gabungan Malaku' => ['gabmo'],
   Ganges => ['genges'],
+  Hunan => ['hunnan'],
   Kansai => ['kinki'],
   'Kepulauan Riau' => ['riau', 'kepri'],
   Marmara => ['marmar'],

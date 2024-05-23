@@ -16,7 +16,9 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'ÀA¬ü',
   'Bridge Team',
+  'nat. champio',
   'No Name',
   'Pra PON'
 );
@@ -27,19 +29,22 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  Any
   Bridge
-  Challenger
-  European
-  GD GLPD
-  International
+  Center Challenger City Commune
+  Development
+  European Festival
+  GD GLPD Groupe
+  Host
+  Inter International Invitational
   KB KDK KRS
   Leaders
-  Mr
+  Mates Mr
   National NONAME npc
   og Opponent Opponents Others
-  Pacific pc Players Plus PON Prima Pusat
-  Selected Squad Stars
-  Table Tennis Tournament Tricks
+  Pacific pc Players Plus Point PON Prima Pusat
+  Section Selected Sponsor Squad Stars
+  Table Tennis Test Tournament Tricks
   United
   Various
 );
@@ -47,6 +52,7 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   Bridge => ['bric'],
+  Center => ['merkezi'],
   Challengers => ['chalengers'],
   International => ['internat', 'internationa'],
   Leaders => ['leader', 'leders'],

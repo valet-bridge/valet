@@ -76,6 +76,7 @@ my @MULTI_WORDS =
   'China Renshou',
   'China Resources',
   'China Trinergy',
+  'Chinese Hailian',
   'Construction Kielce',
   'Consus Carbon',
   'Consus Oil',
@@ -511,7 +512,7 @@ my @SINGLE_WORDS = qw(
 
   Hana Harke Haustak Honesta Huayuan
 
-  IMAX Impress Inteligent Interface Interkala
+  IMAX Impress Indoarsip Inteligent Interface Interkala
 
   Jetox JHS Jinfan Junibacken
 
@@ -582,7 +583,9 @@ my %SINGLE_TYPOS =
   'Guangzhou Hongmian' => ['guangzhouhongmian', 'hongmian'],
   'Guangzhou Pearl River' => ['guangzhoupearlriver', 'guangzhouperalriver'],
   'Haerbin Bingxue' => ['harbin bingxue'],
+  'Heng Yuan Xiang' => ['hyx'],
   'Indian Railways' => ['railways'],
+  Indoarsip => ['indoarship'],
   'Jilin Dingyuan' => ['jilindingyuan'],
   'Jin Rong' => ['jinrongjia'],
   'KH Power' => ['khpower'],
@@ -599,6 +602,7 @@ my %SINGLE_TYPOS =
   'Pro Consul' => ['proconsul'],
   'PU Minsel' => ['minsel'],
   'Perusahaan Listrik Negara' => ['pln'],
+  'PU Bitung' => ['bitung pu'],
   'Rigainvites.lv' => ['rigainvites'],
   'SAIC VW' => ['saic'],
   'San Chen' => ['sanchen'],

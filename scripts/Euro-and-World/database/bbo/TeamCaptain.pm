@@ -118,6 +118,7 @@ my @MULTI_WORDS =
   'Grzegorz Darkiewicz-Moniuszko',
   'Guang Zhong',
   'Gudmundur S. Hermannsson',
+  'Gunnar Björn Helgason',
   'Gunnlaugur Sævarsson',
   'Gunnar Sjökvist',
   'Gylfi Baldursson',
@@ -250,6 +251,7 @@ my @MULTI_WORDS =
   'Peter Schaltz',
   'Peteris Bethers',
   'Phailin Nimityongskul',
+  'Piedade C. Real',
   'Pobsit Kamolvej',
   'Pony Nehmert',
   'Poul Clemmensen',
@@ -393,6 +395,7 @@ my %MULTI_TYPOS =
   'Gila Emody' => ['emody gila'],
   'Ginossar' => ['eldad ginossar', 'ginossar eldad'],
   'Gudmundur S. Hermannsson' => ['guðmundur sv. h'],
+  'Gunnar Björn Helgason' => ['gunnar björn h', 'gunnar björn'],
   'Gunnlaugur Sævarsson' => ['gunnlaugur sævars', 'Gunnlaugur Sævarsso'],
   'H.C. Nielsen' => ['hc nielsen'],
   'Hana Shezifi' => ['shezifi hana'],
@@ -423,6 +426,7 @@ my %MULTI_TYPOS =
   'John Holland' => ['j holland'],
   'Jón Ásbjörnsson' => ['ásbjörnsson'],
   'Jorge Castanheira' => ['jorel8', 'castanheira'],
+  'José Moraes' => ['josé morae'],
   'Joshi Sanghi' => ['dr.joshi', "dr.sanghi'siv", 'dr. joshi sanghi',
     "dr. joshi's - sangl", "dr. sanghvi's  vi", 'dr. joshi sangli'],
   'Jozef Pochron' =>['j pochron'],
@@ -443,6 +447,7 @@ my %MULTI_TYPOS =
   "L'Écuyer" => ["l'ecuyer", 'lecuyer', 'l ecuyer', 'l"ecuyer',
     "l'equyer"],
   'Lauge Pedersen' => ['lauge-pedersen'],
+  Lhuissier => ["l'huissier"],
   'Lotan Fisher' => ['fisher lotan'],
   'Luis Oliveira' => ['luís oliveira'],
   'Majka Cilleborg Bilde' => ['majka bilde'],
@@ -480,6 +485,7 @@ my %MULTI_TYPOS =
   'Paulo Rocha Pinto' => ['paulo pinto', 'rocha pinto'],
   'Pedro Madeira' => ['p. madeira', 'p madeira'],
   'Pedro Morbey' => ['p. morbey'],
+  'Piedade C. Real' => ['piedade c.real'],
   'Prakash Bandhari' => ['prakash bhandari'],
   'Promila Saraf' => ['promila soraf', 'promila sorof'],
   Prusa => ['prusa m'],
@@ -544,7 +550,7 @@ my @SINGLE_WORDS = qw(
   Berman Bernard Bernasconi Bernstein Berrettini Bertens Bertheau 
   Bertolucci Bessis Bettini Beyer Bhalchandra Bhattacharya Biagiotti 
   Bilal Bilde Bilski Binderkrantz Bingol Biondillo Biondo Bird 
-  Birin Bittner Bitran Bizer Bjarnarson Bjerkan Bjornlund 
+  Birin Bittner Bitran Bizer Bjarnarson Bjerkan Bjornlund Black
   Blackstock Blakeman Blakset Blanchard Blanco Blandin Bley 
   Bloom Blum Blumental Bo Boaz Bocchi Bock Bogach Bogacki 
   Bohnhorst Bohnsack Bokk Bojoh Boldt Bolling Bolognini Bombardieri 
@@ -722,8 +728,8 @@ my @SINGLE_WORDS = qw(
   Pietraszek Piganeau Pilon Pinguello Piper Pisak Pisani Pitt Platt 
   Plaut Poizat Pollack Pollak Polledro Polowan Pont Popescu Popova 
   Potier Potts Poulat Pownall Pozzi Pradhan Prescott Previde 
-  Priano Proukakis Procter Prohorov Prusa Pryor Puczynski Pulkrab 
-  Purkarthofer Pszczola
+  Priano Paimavera Proukakis Procter Prohorov Prusa Pryor Puczynski 
+  Pulkrab Purkarthofer Pszczola
 
   Quail Quantin Queran Quinn
 
@@ -896,7 +902,7 @@ my %SINGLE_TYPOS =
   'Jeroo Mango' => ['mango'],
   'Joao Silva Neto' => ['silvaneto'],
   'John Holland' => ['j holland'],
-  'José Moraes' => ['moraes', 'josé morae'],
+  'José Moraes' => ['moraes'],
   'Jörg Fritsche' => ['fritsche', 'joefri'],
   Kaminski => ['kaminsky'],
   Kandemir => ['kandemýr', 'kandermir'],
@@ -917,6 +923,7 @@ my %SINGLE_TYPOS =
   Kurbalija => ['kuribalija'],
   Lantaron => ['lantarón'],
   Lauria => ['laurýa'],
+  Lombard => ['lomard'],
   'Lotan Fisher' => ['fisher'],
   'Luis Oliveira' => ['oliveira'],
   Lyngen => ['lyn'],
