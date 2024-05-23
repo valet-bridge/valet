@@ -67,12 +67,12 @@ my %SINGLE_TYPOS =
     dbc dbk dgc 
     ebc eibc 
     fbc fc
-    gençlik gsb gsk gskd gtbc
+    gençlik gkk gsb gsk gskd gtbc
     kcb kdi klubben klubberne ks ksb ksk
     mbc
     nbi nbcbl
     obk 
-    sb sbc sc sdgskd sk spor ss
+    sb sbc sc sdgskd sk spor ss ssd
     tbc tc
     ýbmsk ýbsk)],
   'Sporting Club' => ['sporting', 'sprting'],

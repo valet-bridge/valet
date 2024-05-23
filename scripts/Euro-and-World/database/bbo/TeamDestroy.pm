@@ -33,7 +33,7 @@ my @SINGLE_WORDS = qw(
   and Any Away
   Best Bridge
   Center Challenger City Commercial Commune
-  Development
+  Development Dist
   Earth European Festival
   GD GLPD Group Groupe
   Home Host
@@ -42,7 +42,7 @@ my @SINGLE_WORDS = qw(
   Leaders
   Mates Mr
   National NC No NONAME npc nr
-  og Opponent Opponents Others
+  og Opponent Opponents Other Others
   Pacific pc PairNo Players Plus Point PON Prima Pusat
   Rank River
   Section Selected Sponsor Squad Stars Sunday

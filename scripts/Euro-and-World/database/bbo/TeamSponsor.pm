@@ -258,6 +258,7 @@ my @MULTI_WORDS =
   'Shiji Changda',
   'Shree Cement',
   'Shree Radhey',
+  'Sichuan Dahe',
   'Siwik Holiday Mragowo',
   'Siwik Intertrade',
   'Skinney-Þinganes',
@@ -497,8 +498,8 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   ABAX Abnegat Accenture Actavis Aerospace AIA Akaylar Akebono
-  Aklindo Allianz Alfa Aquatrans Arboned Argento Arkas Arma Artotec
-  Asindo Ayýntab
+  Aklindo Allianz Alfa Altinay Aquatrans Arboned Argento Arkas Arma 
+  Artotec Asindo Ayýntab
 
   Bajaj Banpu Baykar Beidike Bnerg
 
@@ -622,6 +623,7 @@ my %SINGLE_TYPOS =
   'Shenzhen Lanpu' => ['lanpu'],
   'Shiji Changda' => ['changda'],
   'Shree Cement' => ['shreecement'],
+  'Sichuan Dahe' => ['sichuandahe'],
   'Siwik Holiday Mragowo' => ['siwik'],
   'Son Dakika' => ['sondakika'],
   'Sparisjóður' => ['sparisjodur'],

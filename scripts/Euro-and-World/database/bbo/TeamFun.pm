@@ -475,6 +475,7 @@ my @MULTI_WORDS =
   'Olavs utvalgte',
   'Old Sports Jarov',
   'Om het hoekie',
+  'One + Khuching Tree',
   'One Hundred Eighty',
   'One More!',
   'OPF Meets Nepal',
@@ -505,6 +506,7 @@ my @MULTI_WORDS =
   "Pradeep's Four",
   'Precision Marathon',
   "President's Team",
+  'P.S.',
   'Quatro Bruxas',
   'Queen and Knights',
   'Queen of Hearts',
@@ -789,6 +791,7 @@ my %MULTI_TYPOS =
   "Hell's Angels" => ['hells angels'],
   'Hopp i sang' => ['hoppa i sang'],
   Huamen => ['hua men'],
+  'Hum Paanch' => ['hum paach'],
   'Hungarian Olympic' => ['hungar olimp', 'hungarian olimp',
     'hungar olimpics', 'hungar olimpic'],
   'Hurlumhei' => ['hurlumhei..'],
@@ -815,7 +818,8 @@ my %MULTI_TYPOS =
   'Lakk & Lær' => ['lakk og lær', 'lek & lær', 'lokk & lur',
     'litt lakk og lær', 'lakk lær'],
   'L.C. is Beautiful' => ['l.c.is beautiful'],
-  'Le Romain boys' => ["leroumain's boys", 'le romain'],
+  'Le Romain boys' => ["leroumain's boys", 'le romain',
+    'le roumains'],
   'Lindenthal und Freunde' => ['lindenthal und fre'],
   'Lucky 13' => ['lucky13'],
   'Magic Eyes' => ['majic eyes'],
@@ -834,6 +838,7 @@ my %MULTI_TYPOS =
   Polýsgücü => ['polýs gücü s', 'polis gucu', 'polisgucu'],
   "Pradeep's Four" => ["pradeep's 4", "Pradeep's Team"],
   "President's Team" => ["president's", 'presidents teams'],
+  'P.S.' => ['p. s.'],
   'Queen and Knights' => ["queen's & knight"],
   'Rajjan' => ["rajjan's"],
   'Saevar Karl' => ['svaer karl'],
@@ -884,7 +889,8 @@ my @SINGLE_WORDS = qw(
    Bat Batmix Bato Batusida Bauhinia 
    BBO Beauty Begigütje Begijntje BELSPA Ben Beniaminek Berik Beton 
    BHDM Bhinneka Biachite Bilal BIN Bingbang Binkie Biriceri Blackwood 
-   Blandat Bling Blondie Blueberry BMP Boek Bolero Boogies Boomz Boriana 
+   Blandat Bling Blondie Blund Blueberry BMP Boek Bolero Boogies 
+   Boomz Boriana 
    Borko BOVE Breno Bricklayer Bridgebutikken Bridgekameratene 
    Bridgeministeriet Brigada Brigida Brother Brudarna Buaigh Bubba Bubu 
    Buddies Bulldozer Bumerangas Bunnies Busiaki Butler
@@ -907,7 +913,7 @@ my @SINGLE_WORDS = qw(
    Eagles Ece Econ Edi Efsane Egesarpdoruk Eikka Ekenboda Ekoap 
    Elektrownia Elio Eliminator Elips Eliza Ellen Emerald Emre Engelen 
    Engineers Enigma Enjoy Ephesus Epsilon Equator Era Eren Eric 
-   Erikas Ertým Eses Esesss Esperanza Everest Evil Ewa
+   Erikas Erla Ertým Eses Esesss Esperanza Everest Evil Ewa
 
    F16 Fakel FAM² Fantasia Fant4stic Farmen Farmers Felix Fenghuang Fenia 
    Fenix Ferfi Feszek Fharon Fifi Fil Filosofene Filur Finest Fisk 
@@ -921,8 +927,8 @@ my @SINGLE_WORDS = qw(
    Greecoura Greta Grup Guayacos Gudok Guests Gulce Gulebjorn Gullberg 
    Gullvi Gunsmoke Guptas Gürsel
 
-   Hade Hanan Hande Hangarounds Hansa Harlequins Harvin Havin Hawks 
-   HayirlisI Hayet Hästpojkarna Heino Heis Hel Helgeness Hellé 
+   Hade Hakl Hanan Hande Hangarounds Hansa Harlequins Harvin Havin Hawks 
+   HayirlisI Hayet Hästpojkarna Hebat Heino Heis Hel Helgeness Hellé 
    Heliopolis HengSha 
    HERZdame HeSa Hey Hiiimmm Hilda Hist Hjerterdamer HKES Hobbits Holders 
    Holifera Hollywood 
@@ -933,16 +939,18 @@ my @SINGLE_WORDS = qw(
    Instructor Invicta Iris Irukangi Ismo Israbel Isrmany Itnoraunz 
    ITS IVAR
 
-   Jagg Jaiganesh Janko Jans JAPCAN JAS JASS Jassica Javel Jelena 
+   Jagg Jaiganesh Janko Jans JAPCAN JAS JASS Jassica Javel Jaya
+   Jelena 
    Jernbaneverket Jessi Jessica Jirin Jiujiu JJJ Jóannes Job Jocker
-   JoJo Joker Journalists Juanval Jugermaister Juice Juls 
+   JoJo Joker Jonathan Journalists Juanval Jugermaister Juice Juls 
    Juniorklubben Jupiter Juste Justplay Justyna Justynka Jutek 
    Juubilar JuuTools
 
    Kaardivägi Kagama Kalbar Kalca Kalkarna Kaltim Kamelåså Kamikaze 
    Kamlakars Kamyk Kangaroo Kanin Karaarslan Karin Karo Kartel 
    Kasiyahan Kasty Kasuang Kat Katipunan Kebiya Keni Kenji Kenlong 
-   Kerasus Kibe Kinga Kingkong Kings KISS Kitty Kjelskos Klasik Klio
+   Kerasus Kibe Kinga Kingkong Kings KISS Kitty Kjelskos KKKQ
+   Klasik Klio
    KMC Knösel Kodin Koiraperhe Kokoelma Kolbasti Komleposs
    Kompisarna Konga Kordam Korsikalý Kortai Koru Koukouselis KrASK 
    Kratos 
@@ -952,8 +960,8 @@ my @SINGLE_WORDS = qw(
    Lahjattomat LAKT Langy Laplanders Laplas Larry Lasse Lataka Lateria 
    LatSwe Lazy Lebensohl Lebron Legeanka Lema Lemanus Leta Letve 
    Leveni Lianas Liggeunderlaget Lili Lillebaluba Lions Lipa Lira Livius 
-   Lirarna Liverbird Ljónin LNWers Lo Logos Lolly Loloc Lowel Löparn 
-   LPMS Lucky LVBridgeBums Lyubcho Løwene
+   Lirarna Liverbird Ljónin LNWers Lo Logos Lolly Loloc LOS Lowel 
+   Löparn LPMS Lucky LVBridgeBums Lyubcho Løwene
 
    Mach Madhav Mads Maestroi Magi Magic Magister Maharaja Maija Maj
    Major MajorB Majorn Majority Malinka Malmölaget Manashda Manena 
@@ -961,8 +969,8 @@ my @SINGLE_WORDS = qw(
    Manu Manywar Margitta Marianne Mark Marosamitawa Mars Marvelous 
    Marynarz Masdjävlar Masters Matilde Matrix Mats Matujona Maven 
    Mavi Mavs Mayamira Maxi 
-   Mer Mercury Mesna Meta Mia Michal Midas Mihai Mikke Miguel Milady 
-   Milo Minut 
+   Mer Mercury Mesna Meta MGTH Mia Michal Midas Mihai Mikke Miguel 
+   Milady Milo Minut 
    Mirage Miro Mismatch Mixarna Mjøskameratne MMMM Mochu Monaconf Mongos
    Moritz Mostingan Movember Mölnlycke Munawar Mustang Mýna Myoni 
    Møremix Måsen
@@ -1015,11 +1023,11 @@ my @SINGLE_WORDS = qw(
    SweNor Swest Syabas Syly Syttisju Sømnakameratene Sør Såpeopera
 
    Tadeu Take Takeoff Takk Takým Taksim Tally Tamae Tangra Tannlegene 
-   Task Taurus Tbone Tefo Tempo Tibetmunkene Tigers Tiglatpalasar
+   Task Taurus Tbone Tefo Tempo Theme Tibetmunkene Tigers Tiglatpalasar
    Tihkur Tita Titanik Titans Tiz Toar Todremor Tofi Tohundre Tolerant 
    Tollemache Toma Tongxin Topozero Torpedo Tosca Totani Totoro Tömör 
    Traker Trèfles Triks Troll Trøndermøringen Tsunami Tulip Tulipano 
-   Turuncu Tushar Tutu Tvist
+   Turuncu Tushar Tusio Tutu Tvist
 
    Udarnik UFO Ugh Úlfurinn Ulvene Underdogs Unexpected Ungdomslaget
    Upplyfting Utkantnorge UTU
@@ -1082,10 +1090,10 @@ my %SINGLE_TYPOS =
   Hästpojkarna => ['hastpojkarna'],
   Hridhaan => ['hridhan', 'haridhaan', 'hrridhaan', 'hrridhaan',
     'hridaan'],
-  'Hum Paanch' => ['hum paach'],
   Imponderables => ['impoderables'],
   'India Blues' => ['indiablues'],
   'Jamm & Co' => ['jamm'],
+  Jonathan => ['joanthan'],
   'Joy Division' => ['joydivision'],
   Juls => ['julst'],
   Jupiter => ['jupitor'],
@@ -1128,7 +1136,7 @@ my %SINGLE_TYPOS =
   Starmen => ['starman'],
   'Stone Cutters' => ['stonecutters'],
   Strategen => ['stratagen'],
-  Syabas => ['syabhas'],
+  Syabas => ['syabhas', 'syahbas'],
   Syttisju => ['sytti7'],
   'Texan Aces' => ['texanaces', 'tnaces'],
   Titans => ['titan'],

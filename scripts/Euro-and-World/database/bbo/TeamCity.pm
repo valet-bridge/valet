@@ -100,7 +100,8 @@ my @SINGLE_WORDS = qw(
   Annecy Antalya Antony Antwerpen Aral Arendal Arjasa Asenovgrad Assis 
   Atakoy Atakum Athens Auckland Augsburg Avren Ayacucho Ayan Ayvalik
 
-  Balcova Bahcesehir Balikesir Balikpapan Ballerup Bamberg Bandung 
+  Balcova Bahcesehir Balikesir Balikpapan Ballerup Bamberg 
+  Bandung 
   Bangalore Bangkok Banjarmasin Bansi Baragnon Barcelona Batam Bath 
   Batman Batu Bayrampaþa Begues Beijing Bekasi Belgrade Bengkalis 
   Bengkulu Beograd Bereket Bergen Bergues Berlin Beroe Bhilwara
@@ -165,7 +166,7 @@ my @SINGLE_WORDS = qw(
 
   Padang Padova Paimado Palembang Palermo Palma Palu Pamukkale 
   Pancevo Panzhihua Pariaman Parioli Paris Pärnu Pasham Pattaya 
-  Pekanbaru Pelotas Pernik Perth Perula Pesaro Pescara Peterfield 
+  Pecs Pekanbaru Pelotas Pernik Perth Perula Pesaro Pescara Peterfield 
   Piloni Pinarbasi Polonezkoy Poncol Popovo Posillipo Poznan Pula
 
   Qiaoxie Qingdao

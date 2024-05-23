@@ -132,7 +132,7 @@ my @SINGLE_WORDS = qw(
   Florida Fukien
   Gabmin Ganges Gansu Global Goa Gorontalo Guangdong Guangxi Guizhou 
   Gujarat
-  Hainan Haixing Haugaland Hebei Huangshi Hubei Hunan
+  Hainan Haixing Hatay Haugaland Hebei Huangshi Hubei Hunan
   Jharkhand Jiangsu Jilin
   Kansai Karimun Karnataka Kawanua Kayong Kedungwaru Kepri Kerala 
   Kinali Krabi

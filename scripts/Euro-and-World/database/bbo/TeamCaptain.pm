@@ -544,7 +544,8 @@ my @SINGLE_WORDS = qw(
 
   Babacan Babsch Bagge Baiche Baietto Bailey Bajraj Baker Bakhshi 
   Baki Bakkeren Baldini Baldysz Baleal Balkanski Ballebo Bang 
-  Banikas Baran Barat Barbone Barel Barion Baris Baron Bart Barton 
+  Banikas Baran Barat Barbone Barbosa Barel Barion Baris Baron Bart 
+  Barton 
   Basabe Baseggio Basile Bassini Bathurst Batov Bauch Bavaresco 
   Baybarut Bayes Baze Bäckström Beauchamp Beale Beatty Beaumier
   Beauvillain Becker Bell Bello Bellosta Belonogov Benassi Bennett 
@@ -670,7 +671,8 @@ my @SINGLE_WORDS = qw(
   Krolikowski Kuang Kubac Kujawa Kuokkanen Kurbalija Kutenik
   Kutner Kvangraven Kwiatkowski Kwiecien Kyriakidou Kyrilenko
 
-  Laan Labaere Lachowicz Laffineur Lagrange Lagree Lall Lambardi Lanciano 
+  Laan Labaere Lachowicz Laffineur Lagrange Lagree Lalanne Lall 
+  Lambardi Lanciano 
   Landry Lane Langer Lantaron Lanzarotti Larsen Larssen Lasserre 
   Lauria Lavín Lavings Law Lawy Lay Lazer Lazkar Lebatteux 
   Lebel Lebi Lebowitz Leca Lechtman Lehtinen Lee Leenhardt Legras 
@@ -730,7 +732,7 @@ my @SINGLE_WORDS = qw(
   Pietraszek Piganeau Pilon Pinguello Piper Pisak Pisani Pitt Platt 
   Plaut Poizat Pollack Pollak Polledro Polowan Pont Popescu Popova 
   Potier Potts Poulat Pownall Pozzi Pradhan Prescott Previde 
-  Priano Paimavera Proukakis Procter Prohorov Prusa Pryor Puczynski 
+  Priano Primavera Proukakis Procter Prohorov Prusa Pryor Puczynski 
   Pulkrab Purkarthofer Pszczola
 
   Quail Quantin Queran Quinn
@@ -784,7 +786,7 @@ my @SINGLE_WORDS = qw(
   Ucar Ueland Uggeri Ultav Una Upmark Uskali Uskela Usluduran Utter 
   Uysal
 
-  Vahaboglu Vahalia Vainikonis Valeanu Valio Valta Varadi Varenne 
+  Vahaboglu Vahalia Vainikonis Valeanu Valio Valta Vanchev Varadi Varenne 
   Vasarhelyi Veloni Venetina Venkatesh Ventin Verbeek Verhees 
   Vernay Versace Versluis Viale Viana Vidigal Viennois Vidalat
   Videv Vigil Vihtilä Vilella Villegas Vinay Vincent Vinciguerra 
