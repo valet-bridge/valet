@@ -19,8 +19,10 @@ my @MULTI_WORDS =
   '>',
   'ÀA¬ü',
   'Bridge Team',
+  'City of',
   'nat. champio',
   'No Name',
+  'Premier League',
   'Pra PON'
 );
 
@@ -37,10 +39,10 @@ my @SINGLE_WORDS = qw(
   Earth European Festival
   GD GLPD Group Groupe
   Home Host
-  Indi Inter International Invitational
+  Indi Inter International Invit Invitational
   KB KDK KRS
   Leaders
-  Mates Mr
+  Match Mates Mr
   National NC No NONAME npc nr
   og Opponent Opponents Other Others
   Pacific pc PairNo Players Plus Point PON Prima Pusat
@@ -65,7 +67,7 @@ my %SINGLE_TYPOS =
   Pacific => ['pacyfic'],
   'Pra PON' => ['prapon', 'pon'],
   Squad => ['squadra'],
-  Tournament => ['tounament']
+  Tournament => ['tounament', 'tourney']
 );
 
 

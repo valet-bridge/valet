@@ -97,7 +97,7 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   Aabenraa Aalborg Adalar Adana Adelaide Agresar Ahmedabad Akaylar
   Akçeşme Akdeniz Akhisar Akkad Alexandria Albena Aliaga Allahabad Altay 
-  Altrincham Alytus Amanora Amarillo Ambon Amsterdam Anadolu Ankara 
+  Altrincham Alytus Amanora Amarillo Ambon Amsterdam Ankara 
   Annecy Antalya Antony Antwerpen Aral Arendal Arjasa Asenovgrad Assis 
   Atakoy Atakum Athens Auckland Augsburg Avren Ayacucho Ayan Ayvalik
 
@@ -138,7 +138,8 @@ my @SINGLE_WORDS = qw(
   Jagodina Jaipur Jakarta Jember Jessheim Jiamusi Jiangyou Jilin 
   Jinchang Jincheng Jinjiang Jomtien
 
-  Kadikoy Kadirli Kalisz Kalundborg Kalyani Kanpur Karachi Kardelen
+  Kadikoy Kadirli Kalisz Kalundborg Kalyani Kanpur Karaçay Karachi
+  Kardelen
   Karlsruhe Kartal Karsiyaka Kastamonu Katok Katowice Kaylaka Kediri 
   Kesten Ketsch Kiel Kielce Kiev Kirkeby Kirklarelý Klabat Kocaeli 
   Kocamustafapasa 

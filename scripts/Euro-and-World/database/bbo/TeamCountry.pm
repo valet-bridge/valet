@@ -69,6 +69,7 @@ my %MULTI_TYPOS =
   'San Marino' => ['san_marino', 'san  marino'],
   'Serbia and Montenegro' => ['serbia/mont', 'serbia&mon.'],
   'Trinidad and Tobago' => ['trinidad & tobago', 'trinidad&tobago'],
+  'United Arab Emirates' => ['u.a.e.'],
   USA => ['u.s.a.']
 );
 
@@ -157,7 +158,6 @@ my %SINGLE_TYPOS =
   Thailand => ['thai'],
   Tunisia => ['tunisie', 'tunisian'],
   Turkey => ['tur', 'turkish'],
-  'United Arab Emirates' => ['u.a.e.'],
   'United Kingdom' => ['uk'],
   USA => ['america']
 );

@@ -40,6 +40,7 @@ my @MULTI_WORDS =
   'Adams Family',
   'AG laget',
   'Air Traffic Management',
+  'Aka Maru',
   'Alex is Beautiful',
   'Alizee',
   'All In',
@@ -79,6 +80,7 @@ my @MULTI_WORDS =
   'Baltic Club',
   'Bandhav Samity',
   'Banteng Selatan',
+  'Banteng Sitaro',
   'Bara brudar',
   'Barny Army',
   'Bate Tot',
@@ -92,6 +94,7 @@ my @MULTI_WORDS =
   'Best uten kort',
   'Beto BO',
   'Beverly Hillbillies',
+  'Bez Nazwy',
   'B.I.G.',
   'Big Bang',
   'Big Boss',
@@ -136,6 +139,7 @@ my @MULTI_WORDS =
   'Cat Daddy',
   'Cemara Putra',
   "Chairman's Choice",
+  'Czarna Papuga Plus',
   'Chicho Itsi',
   'Circle the World',
   'Cim Bom Bom',
@@ -247,6 +251,7 @@ my @MULTI_WORDS =
   'Fast and Furious',
   'Four Aces',
   'Fem på nya äventyr',
+  'Figo-Fago',
   'Filips Fanclub',
   'Finnmark Flyers',
   'Finways Sappers',
@@ -316,6 +321,7 @@ my @MULTI_WORDS =
   'Hvalen og tjukkasene', 
   'Hvor er mine babes',
   'I Doctors',
+  'I Win',
   'Idea Bridge',
   'IGB sports.com',
   'Ikke akkurat kjedelig',
@@ -410,6 +416,7 @@ my @MULTI_WORDS =
   'Little Meck',
   'Los Feos',
   'Los Malos',
+  'Los Salgado',
   'Los Tollos',
   'Lovende ung',
   'Loy Krathong',
@@ -552,9 +559,11 @@ my @MULTI_WORDS =
   'San3PDX',
   'Sang ae',
   'Saras Friends',
+  'Sarunta Toar',
   'Saruntawaya Minahas',
   'Schall und Rauch',
   'Scottish President',
+  'Sektion UDV',
   'Sengkol Lombok',
   'Seths vänner',
   'Seven Eleven',
@@ -677,7 +686,9 @@ my @MULTI_WORDS =
   'Tre sang',
   'Troll i eske',
   'Tupac Amaru',
+  'Turk Kahvesi',
   'Tut tut',
+  'Tzoko-Mokko',
   'Ucurtma Avcisi',
   'Umisen Yamasen',
   'Umut Baris',
@@ -747,6 +758,7 @@ my %MULTI_TYPOS =
   'Alex is Beautiful' => ['alex is beatiful'],
   'All Stars' => ['all-stars', 'all star'],
   'Alle presidentens menn' => ['alle presidentens'],
+  'Applied Math' => ['aplied math'],
   Arnab => ["arnab's"],
   Azores => ['açores team'],
   Ayan => ["ayan's"],
@@ -884,7 +896,7 @@ my @SINGLE_WORDS = qw(
 
    AABC Aces Acolvik ACR Adventure Aditya Aeras Agamemnon Agressor 
    Ahmetizm 
-   Ahornet Aida Akenobo Akinom Alertplus Alex Alfredo Ali Alioth 
+   Ahornet Aida Akenobo Akinom Alertplus Alex Alf Alfredo Ali Alioth 
    Allam Alliance Alliansen Allstars Alpha Alternativlos Ambassador 
    Amrapali Amul Andromeda Anglian Andrzejki Anglers Anglophones 
    Aniket Anna Anni Anuj Apaçý Appellkameratene Apples Apply
@@ -898,9 +910,9 @@ my @SINGLE_WORDS = qw(
    Banana Bananasplit Baneet BarDeZi BARC BARP Barracuda Baryton BAST 
    Bat Batmix Bato Batusida Bauhinia 
    BBO Beauty Begigütje Begijntje BELSPA Ben Beniaminek Berik Beton 
-   BHDM Bhinneka Biachite Bilal BIN Bingbang Binkie Biriceri Blackwood 
-   Blandat Bling Blondie Blund Blueberry BMP Boek Bolero Boogies 
-   Boomz Boriana 
+   BHDM Bhide Bhinneka Biachite Bilal BIN Bingbang Binkie Biriceri 
+   Blackwood Blandat Bling Blondie Blund Blueberry BMP Boek Bolero 
+   Boogies Boomz Boriana 
    Borko BOVE Breno Bricklayer Bridgebutikken Bridgekameratene 
    Bridgeministeriet Brigada Brigida Brother Brudarna Buaigh Bubba Bubu 
    Buddies Bulldozer Bumerangas Bunnies Busiaki Butler
@@ -924,7 +936,7 @@ my @SINGLE_WORDS = qw(
    Eagles Ece Econ Edi Efsane Egesarpdoruk Eikka Ekenboda Ekoap 
    Elektrownia Elio Eliminator Elips Eliza Ellen Emerald Emre Engelen 
    Engineers Enigma Enjoy Ephesus Epsilon Equator Era Eren Eric 
-   Erikas Erla Ertým Eses Esesss Esperanza Everest Evil Ewa
+   Erikas Erla Ertým ErUS Eses Esesss Esperanza Everest Evil Ewa
 
    F16 Fakel FAM² Fantasia Fant4stic Farmen Farmers Felix Fenghuang Fenia 
    Fenix Ferfi Feszek Fharon Fifi Fil Filosofene Filur Finest Fisk 
@@ -946,14 +958,15 @@ my @SINGLE_WORDS = qw(
    Holport Honeymoon Hopfenkönig Hornet Hridhaan Huamen Hubsi Huhu 
    Hunaja Huispaus Hurra Hybrid
 
-   IBE Ida Ijseide Ikarus Ilya IMAN Imanual IMLUK Imponderables InFran
-   Instructor Invicta Iris Irukangi Ismo Israbel Isrmany Itnoraunz 
-   ITS IVAR
+   IBE Ida Iff Ijseide Ikarus Ilya IMAN Imanual IMLUK Imponderables 
+   InFran Instructor Invicta Iris Irukangi Ismo Israbel Isrmany 
+   Itnoraunz ITS IVAR
 
    Jagg Jaiganesh Janko Jans JAPCAN JAS JASS Jassica Javel Jaya
-   Jelena 
-   Jernbaneverket Jessi Jessica Jirin Jiujiu JJJ Jóannes Job Jocker
-   JoJo Joker Jonathan Journalists Juanval Jugermaister Juice Juls 
+   Jelena Jernbaneverket Jessi Jessica Jecization Jirin Jiujiu 
+   JJJ Jóannes Job Jocker
+   JoJo Joker Jonathan Joter Journalists Juanval Jugermaister Juice 
+   Juls 
    Juniorklubben Jupiter Juste Justplay Justyna Justynka Jutek 
    Juubilar JuuTools
 
@@ -971,8 +984,8 @@ my @SINGLE_WORDS = qw(
    Lahjattomat LAKT Langy Laplanders Laplas Larry Lasse Lataka Lateria 
    LatSwe Lazy Lebensohl Lebron Legeanka Lema Lemanus Leszek Leta Letve 
    Leveni Lianas Liggeunderlaget Lili Lillebaluba Lions Lipa Lira Livius 
-   Lirarna Liverbird Ljónin LNWers Lo Logos Lolly Loloc Loreng LOS Lowel 
-   Löparn LPMS Lucky LVBridgeBums Lyubcho Løwene
+   Lirarna Liverbird Ljónin LNWers Lo Loaknath Logos Lolly Loloc 
+   Loreng LOS Lowel Löparn LPMS Lucky LVBridgeBums Lyubcho Løwene
 
    Mach Madhav Mads Maestroi Magi Magic Magister Magnus Maharaja 
    MAHÝR ÞENOL Maija Maj
@@ -989,14 +1002,16 @@ my @SINGLE_WORDS = qw(
 
    Nabil Nadide Narbisk Narre Natalia Nathans Natural Naturalists Neduk 
    Nemesis Nessuno Neverclaim Nico Nightingale Nik Nikita Nikitopoulos 
-   Niko Nikos Nikotiimi Nis Nislije NMRT Noctis Noralia Noriko Norsu 
-   NOS NTiosagutta Nula
+   Niko Nikos Nikotiimi Nina Nis Nislije NMRT Noctis Noralia Noriko 
+   Norsu NOS NTiosagutta Nula
 
    Obezit Octopussy OEI Ognisty Okay Oksijen Olavsfestdagene Olena 
-   Olimp
-   Olrudbanden Olsenbanden Omega Omelas Onirepsou Onnela Onu Onyx 
-   Opal Opera Opps Oprosti Optimus Orakulas Orthodoxi Orthodox Osam 
-   OSMO Osss Oto Otters Outsiders Overivrig Oyzum Ozbiljni
+   Olimp Olrudbanden Olsenbanden OMC Omega Omelas Onirepsou Onnela 
+   Onu Onyx Opal Opera Opps Oprosti Optimus Orakulas Orthodoxi 
+   Orthodox Osam OSMO Osss Oto Otters Outsiders Overivrig Oyzum 
+   Ozbiljni
+
+   Öncü
 
    Pacers Paco Pagonia Pal Palukas Panteros Paoli Paradigma Partizan
    Pasanci Passé Patriot Patron Paulette Paulina Paulistas PDC
@@ -1004,7 +1019,7 @@ my @SINGLE_WORDS = qw(
    Perestrojka Perjuangan Pero Peter Petra Pia Piast Piryoli Piter 
    Pjäxa PK3 Pleschi Pleyada Plia PMS Pojat Polirish Polus Polýsgücü
    Pompapompa 
-   Pontiac Potlimit Potteplante Powerchicks Prapar Prasetya 
+   Pontiac Poss Potlimit Potteplante Powerchicks Prapar Prasetya 
    Preempters Pretendents Prijatelj Prosan Proteus Proto Ptacol 
    Pude Pusten Pyon Pyton Påskevennene
 
@@ -1017,14 +1032,16 @@ my @SINGLE_WORDS = qw(
 
    Sabari Sabina Sabres Saga SAGG Sailor Sakurai Saladmasters Salokin 
    Salost
-   Salvo Sansouci SANY Sapphire Sara Sarp SaTu Saturn Sbamby Scapros 
+   Salvo Sansouci SANY Sapphire Sara Sarp SaTu Saturn Sbamby Sbanda
+   Scapros 
    Schmuckles Schneewittchen Scientists Scot Secure Selin Senaattorit 
-   Senator Severin Sevil SFG Shane Shavaz Sherdils Shona Show Shrikant 
+   Senator Severin Sevil SFG Shane Shaoshen Shavaz Sherdils Shona 
+   Show Shrikant 
    Shushi Siddheshwar Sigdonnemann Sigma Sigrid Sihai Silbersee 
    Silence Silverfox 
    Simonetta Simple Simpleksas Sindbad Sindhu Singapole Sirius SISU Sivves 
    Siyabend Sjøsamen Skalman Skaronga Skip Skitur Skotii Þlem 
-   Slappfisker Slostria Slufsa Småveitjan SNAP Snapper Snipers 
+   Slappfisker Slostria Slufsa SMBC Småveitjan SNAP Snapper Snipers 
    Sober Sobers Sogn Soho Solo Sonata Sonchel Soumitra Spamirs
    Spandan Spark Spartans Specialist Spekkhogger Spektr Spin Spring 
    Squeeze Srimapuna Srykeir Stafani Stagge Stampede Star Starmen 
@@ -1050,7 +1067,7 @@ my @SINGLE_WORDS = qw(
    Vilttiketju Vilttiukko Viña Vintage Virginia Vivi Volta Vucko 
    Vulcano Vurgun Vürst Vytas
 
-   Wael Wafa Wala Waldi Walpurga WBack WBGO WDP Wengens Winatalya 
+   Wael Wafa Wala Waldi Walpurga WBack WBFIT WBGO WDP Wengens Winatalya 
    Windrunners Winkiboy Winterfell Wizards
 
    Xatzopoulos Xman Xtrouble XXX XXXL XXXSL XXXXXYXY
@@ -1058,7 +1075,7 @@ my @SINGLE_WORDS = qw(
    Ybs YBM Yaðmur Yamata Yansimasiz Yelena Ylajai Yogakshema Yokozuna
    YYY
 
-   Zabavljaci Zamek Zana Zara Zeerob Zen Zeyno Zhihaole Ziggy 
+   Zabavljaci Zamek Zana Zara Zen Zeyno Zhihaole Ziggy 
    Zimmkonis Zivac Zlatan Zombi Zorro Zozoura Zugzwang Zurzits Zvanger
 
    Øssur
@@ -1137,6 +1154,7 @@ my %SINGLE_TYPOS =
   'Ram Charan' => ['ramcharan'],
   Quantum => ['qantum'],
   'River Friend' => ['riverfriend'],
+  'Sarunta Toar' => ['sarunta'],
   Scientists => ['science'],
   'Sham Sharma' => ['shamsharma'],
   Shrikant => ['srikant'],

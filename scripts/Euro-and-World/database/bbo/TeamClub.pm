@@ -39,6 +39,7 @@ my @MULTI_WORDS =
   'Blakset Klubberne',
   'BC 52 Berlin',
   'BC de Lille',
+  'DB de Zeerob',
   'BC Garches',
   'BC Milano',
   'BC Rennais',
@@ -63,6 +64,7 @@ my @MULTI_WORDS =
   'Bridgeclub Oog',
   'Brussels Bridge Club',
   'Buca Sports',
+  'BUKS Bytom',
   'Centrum Kultury i Sportu',
   'Cercle Tourangeau',
   'Cracovia 1906',
@@ -168,6 +170,7 @@ my @MULTI_WORDS =
   'Sharja Club',
   'Shemokh Club',
   'Shou Chuang',
+  'Siwo Persatuan Wartawan Indonesia',
   'Ski BK',
   'Smedstadens BK',
   'SPG Club',
@@ -202,6 +205,7 @@ my %MULTI_TYPOS =
   'Akademisk Bridgeklub' => ['akademisk bk'],
   'Akceþme Spor' => ['akceþmespor'],
   'Alexandria Sporting Club' => ["alexandria sport' c"],
+  Anadolu => ['anadolu briç'],
   'Ankara Sistematik' => ['sistematik bk'],
   'Antalya BSK' => ['antalya b.s.k'],
   'Aydin 1923 BBSK' => ['aydin 1923 sk', 'aydin bbsk',
@@ -231,6 +235,7 @@ my %MULTI_TYPOS =
   'Bridge Académie' => ['b.academie', 'bridge academie'],
   'Bridge Tunas Cahaya' => ['btc jatim'],
   'Bridgeclub Oog' => ['bc oog in al'],
+  'BUKS Bytom' => ['buks ii bytom'],
   'Cerkezkoy Dinamik BSK' => ['Cerkezkoy BS', 'Cerkezkoy BSK'],
   'Crvena Zvezda' => ['zrvena zwezda', 'zrvena zvezda'],
   'Debrecen DEAC' => ['debrecen-deac'],
@@ -258,6 +263,7 @@ my %MULTI_TYPOS =
   'Jian Hua' => ['jian hua club'],
   'Jili Qiche' => ['ji li'],
   'Jing Fan' => ['jing fan club', 'jin fan'],
+  'Jin Ying Club' => ['jin ying'],
   'Kapakli Sýte' => ['kapaklý sýte'],
   'Karlsruher BSC' => ['karlsruher bc'],
   'Ke Bi Ya Club' => ['ke bi ya'],
@@ -301,7 +307,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Acol Airmadidi Akceþme Amisos Asenovec Auguri AVGP
+  Acol Airmadidi Akceþme Amisos Anadolu Asenovec Auguri AVGP
   Benfica Besiktas Bonsist Botev BTBK
   Debrecen Dragao Drienerlo
   Fanfulla Fenerbahce Fosnavåg
@@ -329,6 +335,7 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  'Ada Briç SK' => ['ada'],
   'Akademisk Bridgeklub' => ['akademisk'],
   'Ankara Kontrat' => ['kontrat'],
   Asenovec => ['asenovets'],
@@ -336,6 +343,7 @@ my %SINGLE_TYPOS =
   'Banda Aceh' => ['aceh'],
   'Bangkok Bridge Club' => ['bbc'],
   'BC Bamberger Reiter' => ['bamberger', 'amberger'],
+  'DB de Zeerob' => ['zeerob'],
   'BC Garches' => ['garches'],
   'BC Milano' => ['bcmi'],
   'BC Rennais' => ['rennais'],
@@ -364,6 +372,7 @@ my %SINGLE_TYPOS =
   Hosgoru => ['hoþgörü'],
   Houchetou => ['huochetou'],
   'Jin Ying Club' => ['jinying'],
+  'Jing Fan' => ['jingfan'],
   Karagümrük => ['karagumruk'],
   Kløverknekt => ['kloverknekt'],
   Locomotiva => ['loco'],
@@ -374,6 +383,7 @@ my %SINGLE_TYPOS =
   'Ruch AZS' => ['ruch'],
   'Rumah Sakit Umum Daerah' => ['rsud'],
   'Samadhan Academy' => ['samadhan', 'samadgan'],
+  'Siwo Persatuan Wartawan Indonesia' => ['pwi'],
   'Smedstadens BK' => ['smedstadens'],
   'SPG Club' => ['spg'],
   Spojnia => ['Spójnia'],

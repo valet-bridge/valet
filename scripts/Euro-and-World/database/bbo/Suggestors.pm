@@ -35,6 +35,7 @@ my @PAIRS_SUGGESTORS = (
   'pairs event',
   'a_pair1', 'a_pair2', 'b_pair1', 'b_pair2',
   'c_pair1', 'c_pair2', 'd_pair1', 'd_pair2',
+  'e_pair1', 'e_pair2',
   'f_pair1', 'f_pair2', 'g_pair1', 'g_pair2',
   'h_pair1', 'h_pair2'
 );

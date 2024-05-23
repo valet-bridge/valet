@@ -139,6 +139,7 @@ my @MULTI_WORDS =
   'J. Brigido',
   'J. Pereira de Sousa',
   'J. Pinheiro',
+  'J. Tomljenovic',
   'J.C. Henriques',
   'J.E. Skjanni',
   'J.P. Goenka',
@@ -259,6 +260,7 @@ my @MULTI_WORDS =
   'Prakash Bandhari',
   'Pramod Joshi',
   'Pramual Angkaew',
+  'Prashant Desai',
   'Promila Saraf',
   'Qing Gong',
   'R.K. Sinha',
@@ -300,12 +302,14 @@ my @MULTI_WORDS =
   'Sunil Machhar',
   'Sveinn Ericsson',
   'Sverrir Þórisson',
+  'T.V. Joshi',
   'Teixeira-Reus',
   'Teresa Kay',
   'Tiago Canelas',
   'Tomi Gotard',
   'Tor Helness',
   'Toshiro Nose',
+  'Uri Gilboa',
   'Urmil Agarwal',
   'van Prooijen',
   'Van Cleeff',
@@ -381,7 +385,7 @@ my %MULTI_TYPOS =
   'de Knijff' => ['deknijff', 'di knijff'],
   'de Tessieres' => ['de tessiere', 'de tessier', 'de tessie'],
   'D Banerjee' => ['prof d banerjee'],
-  "D'Orsi" => ['d orsi', "d´orsi", "d`orsi", "d' orsi"],
+  "D'Orsi" => ['d orsi', "d´orsi", "d`orsi", "d' orsi", "d 'orsi"],
   Desai => ['desai 5'],
   'Dr. Anand' => ["dr. anand's"],
   'Efrat Oren' => ['oren efrat'],
@@ -411,8 +415,10 @@ my %MULTI_TYPOS =
   'Hermann Friðriksson' => ['Hermann Fridriksson'],
   'Hiroki Yokoi' => ['yokoi hiroki'],
   'Ilan Herbst' => ['herbst i', 'herbst ilan'],
-  'Inocencio Almeida Araujo' => ['inocencio arauj', 'inocêncio araújo'],
+  'Inocencio Almeida Araujo' => ['inocencio arauj', 'inocêncio araújo',
+    'inocencio'],
   'Inon Liran' => ['liran inon'],
+  'J. Tomljenovic' => ['jtomljenovic'],
   'J.C. Henriques' => ['j.c.henriques', 'j c henriques',
     'j. c. henriques', 'j. carlos henriques', 'jose c. henriques',
     'josé c. henriques', 'josé henriques', 'ze carlos henriques',
@@ -491,6 +497,7 @@ my %MULTI_TYPOS =
   'Pedro Morbey' => ['p. morbey'],
   'Piedade C. Real' => ['piedade c.real'],
   'Prakash Bandhari' => ['prakash bhandari'],
+  'Prashant Desai' => ["prashant desai's"],
   'Promila Saraf' => ['promila soraf', 'promila sorof'],
   Prusa => ['prusa m'],
   'R.K. Sinha' => ["r k sinha'siv", "r k sinha's lv", 'r k sinha'],
@@ -516,8 +523,10 @@ my %MULTI_TYPOS =
   'Sunil Machhar' => ['sunil machar', 'sunil macchar', 's macchar',
     'sunal macchar', 'sunil maccher', 'sunil.macchar', 's machhar'],
   'Sverrir Þórisson' => ['sverrir þ'],
+  'T.V. Joshi' => ['t v joshi'],
   'Teixeira-Reus' => ['txecs-reus', 'txec-reus'],
   'Teresa Kay' => ['t.kay'],
+  'Uri Gilboa' => ['gilboa uri', 'gillboa uri'],
   Vahalia => ['dr.vahalia'],
   Vithaya => ['dr.vithaya'],
   'van Prooijen'=> ['van proojen'],
@@ -640,7 +649,8 @@ my @SINGLE_WORDS = qw(
   Harangozo Harari Harasimowicz Harding Harley Harper Harries Harris 
   Harrison Harsanyi Hasenson Hassett Hauge Haughie Häusler Havas Hayman
   Hegedus Heifer Helekar Helgemo Helle Helman Helmer Helmich Helms Henault
-  Henclik Heng Hennault Henneberg Henriques Herman Herrera Heskje 
+  Henclik Heng Hennault Henneberg Henriques Herman Herrera Herscap
+  Heskje 
   Hill Hillman Hinden Hindon Hinge Hiraki Hirchwald Hirst Hitti 
   Hliapas Hobeika Hoff Hoffa Hoffman Hollands Hollman Honti Hooda 
   Hopfenheit Hornibrook Horowitz Horton Horwitz Howard Howe Hu 
@@ -731,9 +741,9 @@ my @SINGLE_WORDS = qw(
   Papahatzis Papakyriakopoulos Papaxatzis Parker Partearroyo Parviainen 
   Passarinho Passaro Passell Pastore Pattinson Pattison Paulissen 
   Pauncz Pavlicek Payen Pazur Peake Pedzinski Peirão Pekkinen Peksen 
-  Penfold Percario Peres Periasamy Perisic Persiani Petculescu 
+  Penfold Percario Pereira Peres Periasamy Perisic Persiani Petculescu 
   Petrescu Petrucci Pettersson Phelan Piasecki Piedra Piekarek 
-  Pietraszek Piganeau Pilon Pinguello Piper Pisak Pisani Pitt Platt 
+  Pietraszek Piganeau Pilon Pinguello Pinto Piper Pisak Pisani Pitt Platt 
   Plaut Poizat Pollack Pollak Polledro Polowan Pont Popescu Popova 
   Potier Potts Poulat Pownall Pozzi Pradhan Prescott Previde 
   Priano Primavera Proukakis Procter Prohorov Prusa Pryor Puczynski 
@@ -755,7 +765,8 @@ my @SINGLE_WORDS = qw(
 
   Sabbag Sabbatini Sadek Saelensminde Saesseli Sahin Saina Sairanen 
   Sakirler Sakr Salama Salisbury Salliere Salman Salvador Sancaktar
-  Sandberg Sanden Sandqvist Sanghi Sankichi Sansom Saporta Sapounakis 
+  Sandberg Sanden Sandqvist Sanghi Sankichi Sansom Santos
+  Saporta Sapounakis 
   Sargos Sarten Sarundajang Savchenko Savelli Savorani Savski Sawicki 
   Sayaca Saydi Sayer Sayilkan Sayýlkan Sbarigia Scanavino Scerri Schaltz 
   Schermer Schlicker Schneider Schnetzer Scholes Schonning Schoolmann 
@@ -808,8 +819,9 @@ my @SINGLE_WORDS = qw(
 
   Xatzimpalis
 
-  Yadlin Yalman Yamada Yang Yalankiran Yarington Yates Yezerski Yilmaz 
-  Ying Yoleri Yuen Yule
+  Yadlin Yalman Yamada Yang Yalankiran Yarington Yates Yergýn
+  Yezerski Yilmaz 
+  Ying Yokoi Yoleri Yuen Yule
 
   Zabunoglu Zago Zagor Zagorin Zajac Zaleski Zanalda Zambonini Zaninotti
   Zaremba Zarkesch Zatorski Zawada Zawislak Zeeberg Zenari Zhan Zhao 

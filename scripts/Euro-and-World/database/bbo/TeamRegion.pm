@@ -136,7 +136,7 @@ my @SINGLE_WORDS = qw(
   Jharkhand Jiangsu Jilin
   Kansai Karimun Karnataka Kawanua Kayong Kedungwaru Kepri Kerala 
   Kinali Krabi
-  Lebak Liaoning Liguria Lombok Lumajang
+  Lampung Lebak Liaoning Liguria Lombok Lumajang
   Maharashtra Marmara Masal Matopos Mercosur Midtsjælland Mjøsa 
   Muallim Munzur Mysia
   Nordafjells Norden Norrland
@@ -170,6 +170,7 @@ my %SINGLE_TYPOS =
   'Møre Romsdal' => ['moreromsdal'],
   'Nakhon Nayok' => ['nakhonnayok'],
   'New South Wales' => ['nsw'],
+  'North Sumatra' => ['sumut'],
   Patagonia => ['patagonya'],
   Queensland => ['qld'],
   'Samut Prakan' => ['samutprakan'],

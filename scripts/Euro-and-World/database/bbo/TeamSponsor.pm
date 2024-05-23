@@ -25,6 +25,7 @@ my @MULTI_WORDS =
   'AJ Diament',
   'Alfa Romeo',
   'Aliaga Kyme',
+  'Andromeda Baroda',
   'Ant Teknik',
   'APRA Clothing',
   'Apreo Logistic Poland',
@@ -35,7 +36,9 @@ my @MULTI_WORDS =
   'Bangur Cement',
   'Bank Indonesia',
   'Bank Mandiri',
+  'Bank Negara Indonesia',
   'Bank Tabungan Negara',
+  'Baroda Bank',
   'Beijing Capital',
   'Beijing Cartoon',
   'Beijing Dazhong',
@@ -107,11 +110,11 @@ my @MULTI_WORDS =
   'Fanhua Jituan',
   'Ferðaskrifstofa Vesturlands',
   'Fisk Seafood',
+  'Fora Lastik',
   'Garðar & Vélar',
   'Garðs Apotek',
   'Garsu Pasaulis',
   'Geely Automobile',
-  'Geologi Timah',
   'Geoportal Kutai Kartanegara',
   'Gong Hang Jin Ying',
   'Guangzhou Hongmian',
@@ -140,6 +143,7 @@ my @MULTI_WORDS =
   'Indian Oil',
   'Indian Railways',
   'Indonesian Power',
+  'Interbud Plock',
   'Jasa Marga Jakarta',
   'Jiang You',
   'Jilin Dingyuan',
@@ -274,6 +278,7 @@ my @MULTI_WORDS =
   'Spasso Food',
   'SPS Construction',
   'SR Group',
+  'Staryi Master',
   'Statu Denizcilik',
   'Sunchime Cartoon',
   'Sunchime Fund',
@@ -339,6 +344,7 @@ my %MULTI_TYPOS =
   'Baltic Express' => ['baltic expres'],
   'Bangur Cement' => ['bangur cements', 'bangur cment'],
   'Bank Tabungan Negara' => ['bank btn'],
+  'Baroda Bank' => ['baroda bang'],
   'Beidike' => ['bei di ke'],
   'Beijing Wan Jia' => ['bei jing wan jia'],
   'Beijing Huayuan' => ['beijing hua yuan', 'beijing huayuan property'],
@@ -383,7 +389,6 @@ my %MULTI_TYPOS =
     'garps apótek'],
   'Geely Automobile' => ['geely auto', 'gely auto', 'chaina geely',
     'china geely', 'jili', 'china geely auto', 'jili qiche'],
-  'Geologi Timah' => ['geo timah', 'geo tima'],
   'Geoportal Kutai Kartanegara' => ['geo gutai gartanega'],
   'Gong Hang Jin Ying' => ['gonghang jinying'],
   'Guangzhou Huachu Chemicals' => ['gz huachu chem'],
@@ -512,16 +517,16 @@ my @SINGLE_WORDS = qw(
   Datasteel Denizgucu Dermika Derofe Dianwang DISKI Djarum Dongfeng 
   Dostlar Druva
 
-  Effcontrol Eimskip Eksprompt Elastron Elektrika Energetyk
-  Enorma Enterprise ESSO Everfresh Evertrust
+  Effcontrol Eimskip Eksprompt Elastron Elektrika Elektrociepl
+  Energetyk Enorma Enterprise ESSO Everfresh Evertrust
 
   Forta Frissan Funbridge
 
-  GAMAX Gazprom Genkad Gevalia Gillette Gomad Gözgöz
+  GAMAX Gazprom Geologi Genkad Gevalia Gillette Gomad Gözgöz
 
   Hana Harke Haustak Honesta Huayuan
 
-  IMAX Impress Indoarsip Inteligent Interface Interkala
+  IBM IMAX Impress Indoarsip Inteligent Interface Interkala
 
   Jetox JHS Jinfan Junibacken
 
@@ -549,7 +554,7 @@ my @SINGLE_WORDS = qw(
   Shouchuang Signity Skeljungur Solakoglu Solox Sparisjóður Srenniw
   SSDA Stalgast Stiga Struma Synective
 
-  Tekser Telkom Termika Termoavion Termochem Topeko Transearly 
+  Tekser Telkom Termika Termoavion Termochem Timah Topeko Transearly 
   Tricon Tridaya Triton Tryggingamiðstöðin Tsingtao Tundem Tyco Tzilis
 
   Underberg Unibet Unicat
@@ -569,6 +574,7 @@ my %SINGLE_TYPOS =
   'Adaro Energy' => ['adaro'],
   'Agsar Paints' => ['agsar'],
   'Aliaga Kyme' => ['kyme'],
+  'Bank Negara Indonesia' => ['bni'],
   'Bank Tabungan Negara' => ['btn'],
   'Beijing Longxin' => ['beijinglongxin'],
   'Beijing Trinergy' => ['beijingtrinergy'],
@@ -588,6 +594,7 @@ my %SINGLE_TYPOS =
   Elektrika => ['elektric'],
   'Fanhua Jituan' => ['fanhua'],
   'Garðs Apotek' => ['garðsapótek'],
+  Geologi => ['geo'],
   'Geoportal Kutai Kartanegara' => ['geokutaikartanegara'],
   Gevalia => ['gevalía'],
   Gillette => ['gilette'],
@@ -598,6 +605,7 @@ my %SINGLE_TYPOS =
   'Heng Yuan Xiang' => ['hyx'],
   'Indian Railways' => ['railways'],
   Indoarsip => ['indoarship'],
+  'Jasa Marga Jakarta' => ['jasamarga'],
   'Jilin Dingyuan' => ['jilindingyuan'],
   'Jin Rong' => ['jinrongjia'],
   'KH Power' => ['khpower'],
@@ -633,6 +641,7 @@ my %SINGLE_TYPOS =
   'Sparisjóður' => ['sparisjodur'],
   'SPS Construction' => ['sps'],
   'Team Audita' => ['teamaudita', 'audita'],
+  'Timah' => ['tima'],
   Tsingtao => ['tsingthao'],
   'Viego Regnskap' => ['viego'],
   Wellwise => ['wellwiss'],
