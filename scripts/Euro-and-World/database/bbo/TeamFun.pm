@@ -711,6 +711,7 @@ my @MULTI_WORDS =
   'Viking Club',
   'Visoki Napon',
   'Volatile Company',
+  'VP (b)anker IMP',
   'Walking Dead',
   'www guts com',
   'War of Roses',
@@ -910,26 +911,29 @@ my @SINGLE_WORDS = qw(
    Aurora AUTBUL AUTHOL Autostrada Avagard Avalanche Avatar Ayan
    Aytalus Azores Azure
 
-   Bacch Bachelor Bade Badger Badminton Bager BAK Baias Bajozero Balti 
+   BABK Bacch Bachelor Bade Badger Badminton Bager BAK Baias Bajozero 
+   Balti Baltic
    Banana Bananasplit Baneet BarDeZi BARC BARP Barracuda Baryton BAST 
    Bat Batmix Bato Batusida Bauhinia 
    BBO Beauty Begigütje Begijntje BELSPA Ben Beniaminek Berik Beton 
    BHDM Bhide Bhinneka Biachite Bilal BIN Bingbang Binkie Biriceri 
-   Blackwood Blandat Bling Blondie Blund Blueberry BMP Boek Bolero 
+   Blackwood Blandat Bling Blondie Blund Blueberry BMP BOC Boek Bolero 
    Boogies Boomz Boriana 
    Borko BOVE Breno Bricklayer Bridgebutikken Bridgekameratene 
-   Bridgeministeriet Brigada Brigida Brother Brudarna Buaigh Bubba Bubu 
+   Bridgeministeriet Brigada Brigida BRK Brother Brudarna Buaigh 
+   Bubba Bubu 
    Buddies Bulldozer Bumerangas Bunnies Busiaki Butler
 
    Cabal Cabriole Calaca Cammello Canadonia Cancan Canukusa 
    Cardtossers Cargo Cartoon Casuals Cask Cathy Cavelieri Censored 
    Center Challengers Changes Chass Chateau Chicks Chime Chiranjeev 
-   Chokladmåndag Chuanpit Claim Claudili Coaches Cogito Colorado Commandos 
+   Chokladmåndag Chuanpit Cité Claim Claudili Coaches Cogito 
+   Colorado Commandos 
    Comrade Concurrent Conie Contact Contra Coopers Corner 
    Costantina Counterstrike Couples Crash Cremaster Croanglopol
    Crockfords Crossfatek Czteropak
 
-   Dada Dadya Dallas DanEng DanFar Danger Daniel Dash Dauna Dawn 
+   Dada Dadya Dahsyat Dallas DanEng DanFar Danger Daniel Dash Dauna Dawn 
    Debonecos Debutantes Deceptive DeeJee Defne Demony Demýrbaþ
    DenmarS Deppo 
    Desperados Destroyers Dialect Diana Dido Diego Dieter Dilligaf 
@@ -986,21 +990,23 @@ my @SINGLE_WORDS = qw(
    Kvazar
 
    Lahjattomat LAKT Langy Laplanders Laplas Larry Lasse Lataka Lateria 
-   LatSwe Lazy Lebensohl Lebron Legeanka Lema Lemanus Leszek Leta Letve 
+   LatSwe Lazy LBC Lebensohl Lebron Legeanka Lema Lemanus Leszek 
+   Leta Letve 
    Leveni Lianas Liggeunderlaget Lili Lillebaluba Lions Lipa Lira Livius 
    Lirarna Liverbird Ljónin LNWers Lo Loaknath Logos Lolly Loloc 
    Loreng LOS Lowel Löparn LPMS Lucky LVBridgeBums Lyubcho Løwene
 
    Mach Madhav Mads Maestroi Magi Magic Magister Magnus Maharaja 
    MAHÝR ÞENOL Maija Maj
-   Major MajorB Majorn Majority Makara Mali Malinka Malmölaget 
+   Major MajorB Majorn Majority Makara Makriköy Mali Malinka Malmölaget 
    Manashda Manena Manno Mano 
    Manu Manywar Margitta Marianne Mark Marosamitawa Mars Marvelous 
    Marynarz Masdjävlar Masters Matilde Matrix Mats Matujona Maven 
    Mavi Mavs Mayamira Maxi 
    Mer Mercury Mesna Meta MGTH Mia Michal Midas Mihai Mikke Miguel 
    Milady Milo Minut 
-   Mirage Miro Mismatch Mixarna Mjøskameratne MMMM Mochu Monaconf Mongos
+   Mirage Miro Mismatch Mixarna Mjøskameratne MMMM MMRMC
+   Mochu Monaconf Mongos
    Moritz Mostingan Movember Mölnlycke Munawar Mustang Mýna Myoni 
    Møremix Måsen
 
@@ -1031,7 +1037,7 @@ my @SINGLE_WORDS = qw(
 
    Radhey Radikk Rafael Raifles Rakinnett RAM Ramkumar Rampage 
    Rapid RASH Raskasammen Real Recaptan Regeldur Reklamtrion Reloaded 
-   Rene Rob Ribitas Rima Robertinho Robi Robocop Rollers Rosajora 
+   Rene Rob Ribitas Rima RKK Robertinho Robi Robocop Rollers Rosajora 
    Rovers Royston Rozle Rylai Rylal
 
    Sabari Sabina Sabres Saga SAGG Sailor Sakurai Saladmasters Salokin 
@@ -1046,11 +1052,11 @@ my @SINGLE_WORDS = qw(
    Simonetta Simple Simpleksas Sindbad Sindhu Singapole Sirius SISU Sivves 
    Siyabend Sjøsamen Skalman Skaronga Skip Skitur Skotii Þlem 
    Slappfisker Slostria Slufsa SMBC Småveitjan SNAP Snapper Snipers 
-   Sober Sobers Sogn Soho Solo Sonata Sonchel Soumitra Spamirs
+   Soba Sober Sobers Sogn Soho Solo Sonata Sonchel Soumitra Spamirs
    Spandan Spark Spartans Specialist Spekkhogger Spektr Spin Spring 
    Squeeze Srimapuna Srykeir Stafani Stagge Stampede Star Starmen 
-   Starsbridge Statusquo Stayman Stefany Steinars Steinlager Steliana 
-   Steve Stifinnern Storeslemmen Strata Strategen Streamline 
+   Starsbridge Statusquo Stayman STB Stefany Steinars Steinlager 
+   Steliana Steve Stifinnern Storeslemmen Strata Strategen Streamline 
    Studentene StZ Stålfarfar Sucharek Sue Sunset Sunshine Suz Svetla 
    Swanand SweDanes 
    SweNor Swest Syabas Syly Syttisju Sømnakameratene Sør Såpeopera
@@ -1059,11 +1065,11 @@ my @SINGLE_WORDS = qw(
    Task Taurus Tbone Tefo Tempo Theme Tibetmunkene Tigers Tiglatpalasar
    Tihkur Tita Titanik Titans Tiz Toar Todremor Tofi Tohundre Tolerant 
    Tollemache Toma Tongxin Topozero Torpedo Tosca Totani Totoro Tömör 
-   Traker Trèfles Triks Troll Trøndermøringen Tsunami Tulip Tulipano 
-   Turuncu Tushar Tusio Tutu Tvist
+   Traker Trèfles Triks Troll Trøndermøringen Tsunami Tuason
+   Tulip Tulipano Turuncu Tushar Tusio Tutu Tvist
 
    Udarnik UFO Ugh Úlfurinn Ulvene Underdogs Unexpected Ungdomslaget
-   Upplyfting Utkantnorge UTU
+   Unlu Upplyfting Utkantnorge UTU
 
    Vahakabinetti Vakrandi Valen Valentino Valyo Vanko Varan Varoslu 
    Vasallid Västanfläkten Veegees Vega* Veggen Verder Verons Vibrant 

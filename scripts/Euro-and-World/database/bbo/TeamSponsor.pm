@@ -285,6 +285,7 @@ my @MULTI_WORDS =
   'Sunchime Fund',
   'Sung Tao',
   'Suzhou Youtong',
+  'Swara Kita',
   'Syabas Energy',
   'Sygnity',
   'Synergia Lublin',
@@ -305,6 +306,7 @@ my @MULTI_WORDS =
   'Tolani Shipping Ltd',
   'Trambak Rubber',
   'Tricon Infotech',
+  'TVS Tread',
   'Unia Leszno',
   'Unia Winkhaus',
   'Unia Sygnitas',
@@ -407,7 +409,7 @@ my %MULTI_TYPOS =
   'Indian Railways' => ['indianrailways', 'indian railyaws',
     'indin railways', 'indian railway', 'indian rail', 'indians railways'],
   'Indonesian Power' => ['indo power', 'indonesia power',
-    'elektrika ind power', 'elektrika bc'],
+    'elektrika ind power', 'elektrika bc', 'i p'],
   'Jasa Marga Jakarta' => ['jasa marga'],
   'Kaushik Hyderabad' => ['kaushik hyd.'],
   "Kini's Bangalore" => ["kini's bengalore"],
@@ -573,6 +575,7 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   'Adaro Energy' => ['adaro'],
+  'Advisor Revisjon Norge' => ['advisor'],
   'Agsar Paints' => ['agsar'],
   'Aliaga Kyme' => ['kyme'],
   'Bank Negara Indonesia' => ['bni'],

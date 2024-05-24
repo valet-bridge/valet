@@ -328,6 +328,7 @@ my @MULTI_WORDS =
   'Vijay Anand Singh',
   'Villas Boas',
   'Vincent LI',
+  'Visalakshi Narayanan Ramamoorthy',
   'Wang Yuan Wei',
   'Ward Platt',
   'Wei Sender',
@@ -743,7 +744,8 @@ my @SINGLE_WORDS = qw(
   Pauncz Pavlicek Payen Pazur Peake Pedzinski Peirão Pekkinen Peksen 
   Penfold Percario Pereira Peres Periasamy Perisic Persiani Petculescu 
   Petrescu Petrucci Pettersson Phelan Piasecki Piedra Piekarek 
-  Pietraszek Piganeau Pilon Pinguello Pinto Piper Pisak Pisani Pitt Platt 
+  Pietraszek Piganeau Pilon Pineles Pinguello Pinto Piper Pisak 
+  Pisani Pitt Platt 
   Plaut Poizat Pollack Pollak Polledro Polowan Pont Popescu Popova 
   Potier Potts Poulat Pownall Pozzi Pradhan Prescott Previde 
   Priano Primavera Proukakis Procter Prohorov Prusa Pryor Puczynski 
@@ -855,6 +857,7 @@ my %SINGLE_TYPOS =
   Beale => ['beatle'],
   Beauchamp => ['bauchamp', 'beachamp'],
   Bertheau => ['berthau'],
+  Bessis => ['bes'],
   Blumental => ['blummental'],
   Bocchi => ['norby'],
   'Brigitta Fischer' => ['fischer'],
@@ -974,6 +977,7 @@ my %SINGLE_TYPOS =
   "O'Rourke" => ['o_rouke'],
   Olanski => ['olansk'],
   Oursel => ['ousel'],
+  Ozdil => ['odzil'],
   Özbey => ['ozbey'],
   Pacareu => ['pacareau'],
   'Palma Carlos' => ['pcarlos'],
@@ -1048,6 +1052,7 @@ my %SINGLE_TYPOS =
   Venkatesh => ['venky'],
   'Villas Boas' => ['villasboas'],
   Vinciguerra => ['vinci'],
+  'Visalakshi Narayanan Ramamoorthy' => ['vnr', "vnr's"],
   'Wang Yuan Wei' => ['wangyuanwei'],
   Wigoder => ['wigodor'],
   Wolfson => ['wolson'],

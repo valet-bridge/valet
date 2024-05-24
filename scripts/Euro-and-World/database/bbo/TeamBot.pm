@@ -17,8 +17,7 @@ use TeamBBO;
 my @MULTI_WORDS =
 (
   'Bridge Baron',
-  'Bridge +',
-  'Wbridge5' # A single word, but here due to the trailing digit
+  'Bridge +'
 );
 
 my %MULTI_TYPOS =
@@ -28,10 +27,12 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   GIB
   Jack
+  Wbridge5
 );
 
 my %SINGLE_TYPOS =
 (
+  Wbridge5 => ['wbridge']
 );
 
 

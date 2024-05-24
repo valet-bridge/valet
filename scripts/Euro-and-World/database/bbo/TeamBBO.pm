@@ -182,14 +182,14 @@ sub fix_some_parentheses
   my $fix = $SINGLE_WORDS{TEAM_AGE}{lc($t)};
   if (defined $fix->{CATEGORY})
   {
-    $$team_ref =~ s/\($t\)/$fix->{VALUE}/;
+    $$team_ref =~ s/\($t\)/($fix->{VALUE})/;
     return;
   }
 
   $fix = $SINGLE_WORDS{TEAM_GENDER}{lc($t)};
   if (defined $fix->{CATEGORY})
   {
-    $$team_ref =~ s/\($t\)/$fix->{VALUE}/;
+    $$team_ref =~ s/\($t\)/($fix->{VALUE})/;
     return;
   }
 

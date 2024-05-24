@@ -33,6 +33,7 @@ my @MULTI_WORDS =
   'Kuala Lumpur',
   'La Chaux-de-Fonds',
   'La Marina',
+  'Las Flores',
   'Le Bouscat',
   'Mandobo Bodi',
   'Meilin Qingcheng',
@@ -54,7 +55,6 @@ my @MULTI_WORDS =
   'Val de Seine',
   'Villa Fabbriche',
   'Vrnjacka Banja',
-  'Wampon Bodi',
   'Xin Zhu',
   'Yedi Eylul',
   'Zhong Jian'
@@ -187,7 +187,8 @@ my @SINGLE_WORDS = qw(
   Skara Skawina Skien 
   Skopje Slagelse Slaska Sleman Sliven Sofia Solok Sortland Söke Split 
   Sredec Stavanger Steinkjer Storsjöbygden Stureby Stuttgart 
-  Sukma Suleymanpasa Sunndalsøra Surabaya Suzhou Sydney Szeged Sørreisa
+  Sukma Suleymanpasa Sunndalsøra Surabaya Suralaya Suzhou Sydney 
+  Szeged Sørreisa
 
   Taicang Taihu Tainan Taizhou Takayama Tallinn Tambun Targoviste 
   Tarnów Taskopru Täby Täfteå Tekýrdag Temuco Tequendama 

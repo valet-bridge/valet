@@ -28,10 +28,10 @@ my %MULTI_TYPOS =
     'b.akd', 'b.b.', 'b.c.', 'b.c',
     'b.s.b', 'b.b.k.', 'b.b.s.', 'b.b.s.k.', 'b.s.', 'b.s', 'b.s.b.', 
     'bld', 'bld.',
-    'b.s.k.', 'b.s.k', 'b.seh bel', 'b. shr bld', 'b.k', 'b.k.', 
+    'b.s.k.', 'b.s.k', 'b.seh bel', 'b. shr bld', 'b.k', 'b.k.', 'b.t',
     'bld sk', 'bld sp', 'b.bld.sk',
     'bld.sp', 'bld.spor', 'bld. gsk',
-    'br.', 'bric iht.', 'bric klb', 'bric kulubu', 
+    'bric iht.', 'bric klb', 'bric kulubu', 
     'bridge clu', 'bridge cl', 'bridz klub', 'brýç spor', 
     'brýç s.k.', 'bsb bk', 
     'c. br.',
@@ -64,7 +64,7 @@ my %SINGLE_TYPOS =
     br brýç bridgeclub bridgeklub 
     bs bsb bsc bsk bskd bsp bt
     bþb bþbký bsbkisk bssk buyuksehir ybsk bsbs btsc 
-    cbc cfr club csb
+    cbc cbe cfr club csb
     dbc dbk dgc 
     ebc eibc 
     fbc fc

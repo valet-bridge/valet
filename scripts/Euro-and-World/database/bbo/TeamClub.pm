@@ -39,7 +39,7 @@ my @MULTI_WORDS =
   'Blakset Klubberne',
   'BC 52 Berlin',
   'BC de Lille',
-  'DB de Zeerob',
+  'BC de Zeerob',
   'BC Garches',
   'BC Milano',
   'BC Rennais',
@@ -151,6 +151,7 @@ my @MULTI_WORDS =
   'Øvre Ottadalen',
   'Paris Sud',
   'Pescara Bridge',
+  'Petroleum Mining Club',
   'Phoenix Oltenita',
   'Rabwa Club',
   'Resegone LC',
@@ -299,6 +300,7 @@ my %MULTI_TYPOS =
     'bk topbridge'],
   'Torino Allegra' => ['bridge allegra', 'allegra to',
     'allegra - to', 'gs allegra', 'torino alegra', 'allegra torino'],
+  'Wampon Bodi Papua' => ['wampon bodi', 'wambon bodi papua'],
   'WCG Mumbai' => ['wcg (mum)', 'wcg-mumbai'],
   'Witte Huis' => ['het witte huis', 'white house', 'the white house'],
   'Østfold og Follo' => ['østfold/follo', 'østfold follo',
@@ -322,7 +324,7 @@ my @SINGLE_WORDS = qw(
   Pamukspor Pelatnas
   Qizhong
   Romana
-  Sakura Sivasspor Solli Spojnia
+  Sakura Sivasspor Solli Spezia Spojnia
   TGR Tofas Tonyaspor Trifolium
   Uddevalla Uppsalabridgen
   Vestri
@@ -380,6 +382,7 @@ my %SINGLE_TYPOS =
   Mragowia => ['mragovia', 'mrogowia', 'mrangowia', 'mr¹gowia',
     'mr¥gowia'],
   'Norrorts Bridge' => ['norrort'],
+  'Petroleum Mining Club' => ['pmc'],
   'Ruch AZS' => ['ruch'],
   'Rumah Sakit Umum Daerah' => ['rsud'],
   'Samadhan Academy' => ['samadhan', 'samadgan'],

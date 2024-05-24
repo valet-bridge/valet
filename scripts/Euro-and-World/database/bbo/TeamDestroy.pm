@@ -36,22 +36,23 @@ my @SINGLE_WORDS = qw(
   Best Bridge
   Center Challenger City Commercial Commune
   Development Dist
-  Earth ENC European Festival
+  Earth East ENC European Festival
+  Field
   GD GLPD Group Groupe
   Home Host
   Indi Inter International Invit Invitational
   KB KDK KRS
   Leaders
   Match Mates Milli Mr
-  National NC No NONAME npc nr
+  National NC No NONAME North npc nr
   og Opponent Opponents Other Others
   Pacific pc PairNo Players Plus Point PON Prima Pusat
   Rank River
-  Section Selected Sponsor Squad Stars Sunday
-  Table Tennis Test Times Tournament Tricks
+  Section Selected South Sponsor Squad Stars Sunday
+  Table Tennis Test Times Top Tournament Tricks
   United
   Visit
-  World
+  West World
   Various
 );
 
