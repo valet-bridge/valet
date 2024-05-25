@@ -49,7 +49,7 @@ my @SINGLE_WORDS = qw(
   og Opponent Opponents Other Others
   Pacific pc PairNo Players Plus Point PON Prima Pusat
   Rank River
-  Section Selected South Sponsor Squad Stars Sunday Swiss
+  Section Selected South Sponsor Squad Standard Stars Sunday Swiss
   Table Tennis Test Times Top Tournament Tricks
   United
   Visit

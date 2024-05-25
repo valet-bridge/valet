@@ -411,6 +411,7 @@ my @MULTI_WORDS =
   'L.C. is Beautiful',
   'Le Colonial',
   'Le Romain boys',
+  'Leonardonun Robotu',
   'Les Girafes',
   'Les Zähringers',
   'Lew Lodzki',
@@ -437,6 +438,7 @@ my @MULTI_WORDS =
   "M' Orange",
   'Ma-Cartoon',
   'Magic Eyes',
+  'MAJB Lommorna',
   'Mal - Phi',
   'Malatya Basket',
   'Man Harr det man har',
@@ -580,6 +582,7 @@ my @MULTI_WORDS =
   'Saruntawaya Minahas',
   'Schall und Rauch',
   'Scottish President',
+  'Seckin C',
   'Sektion UDV',
   'Sengkol Lombok',
   'Seths vänner',
@@ -594,6 +597,7 @@ my @MULTI_WORDS =
   'Silver Eagle',
   'Simple Minds',
   'Sing-Sunn',
+  'Sir Bhalchandra',
   'Sivves straffdubbl',
   'Six Diamonds',
   'Six Samurai',
@@ -728,6 +732,7 @@ my @MULTI_WORDS =
   'Viking Club',
   'Villi Jr.',
   'Visoki Napon',
+  'Vitamin',
   'Volatile Company',
   'VP (b)anker IMP',
   'Walking Dead',
@@ -842,7 +847,7 @@ my %MULTI_TYPOS =
     'hungar olimpics', 'hungar olimpic'],
   'Hurlumhei' => ['hurlumhei..'],
   'Hvalen og tjukkasene' => ['hvalen og tjukkasne', 'hvalen & tjukkasene'],
-  'Idea Bridge Torino' => ['idea br.', 'gs idea br. to'],
+  'Idea Bridge Torino' => ['idea br.', 'gs idea br. to', 'idea bridge'],
   'Ikke akkurat kjedelig' => ['ikke akkurat kjedel'],
   'India Blues' => ['indian blues'],
   'Indian Mavericks' => ['india mavericks', 'indian mavricks'],
@@ -940,7 +945,8 @@ my @SINGLE_WORDS = qw(
    Bat Batmix Bato Batusida Bauhinia 
    BBE BBO Beauty Begigütje Begijntje BELSPA Ben Beniaminek Berik Beton 
    BHDM Bhide Bhinneka Biachite Bilal BIN Bingbang Binkie Biriceri 
-   Blackwood Blandat Bling Blondie Blund Blueberry BMP BNMR BNS
+   Blackwood Blandat Bling Blondie Blues Blund Blueberry Blues
+   BMP BNMR BNS
    BOC Boek 
    Bolero 
    Boogies Boomz Boriana 
@@ -952,9 +958,9 @@ my @SINGLE_WORDS = qw(
    Cabal Cabriole Calaca Cammello Canadonia Cancan Canukusa 
    Cardtossers Cargo Cartoon Casuals Cask Cathy Cavelieri Cavendish
    Censored 
-   Center Cerkez Challengers Changes Chass Chateau Chicks Chime Chiranjeev 
-   Chokladmåndag Chuanpit Cité Claim Claudili Coaches Cogito 
-   Colorado Commandos 
+   Center Cerkez Challengers Changes Chass Chateau Chicks Chime 
+   Chiranjeev Chokladmåndag CHPIK Chuanpit Cité Claim Claudili 
+   Coaches Cogito Colorado Commandos 
    Comrade Concurrent Conie Contact Contra Coopers Corner 
    Costantina Counterstrike Couples Crash Cremaster Croanglopol
    Crockfords Crossfatek CSTO Czteropak
@@ -963,7 +969,7 @@ my @SINGLE_WORDS = qw(
    Debonecos Debutantes Deceptive DeeJee Defne Demony Demýrbaþ
    DenmarS Deppo 
    Desperados Destroyers Dialect Diana Dido Diego Dieter Dilligaf 
-   Dimmat Dingyuan Dino Dinos DJB Doctors Doki Donjulio Donvito 
+   Dimmat Dingyuan Dino Dinos Dion DJB Doctors Doki Donjulio Donvito 
    Dora Dracula Dragon 
    DSM DuckNDales Dukens Duros Dusteforbundet Dvizhenie Dyret
 
@@ -995,7 +1001,7 @@ my @SINGLE_WORDS = qw(
    Hunaja Huispaus Hunhun Hurra Hybrid
 
    IBE Ida Iff Ijseide Ikarus Ilya IMAN Imanual IMLUK Imponderables 
-   InFran Instructor Invicta Iris Irukangi Ismo Israbel Isrmany 
+   InFran Instructor Iris Irukangi Ismo Israbel Isrmany 
    Itnoraunz ITS IVAR
 
    Jagg Jaiganesh Janko Jans JAPCAN JAS JASS Jassica Javel Jaya
@@ -1050,8 +1056,8 @@ my @SINGLE_WORDS = qw(
    Obezit Octopussy OEI Ognisty Okay Oksijen Olavsfestdagene Olena 
    Olimp Olrudbanden Olsenbanden OMC Omega Omelas Onirepsou Onnela 
    Onu Onyx Opal Opera Opps Oprosti Optimus Orakulas Orthodoxi 
-   Orthodox OSA Osam OSMO Osss Oto Otters Outsiders Overivrig Oyzum 
-   Ozbiljni
+   Orthodox OSA Osam OSMO Osss Oto Otters Outsiders Overivrig 
+   Oyku Oyzum Ozbiljni
 
    Öncü
 
@@ -1065,15 +1071,15 @@ my @SINGLE_WORDS = qw(
    Preempters Pretendents Prijatelj Prim Prosan Proteus Proto Ptacol 
    Pude Pusten Pyon Pyton PZIM Påskevennene
 
-   Quantum Quasar Quattro Quinze
+   Quantum Quasar Quattro Quintet Quinze
 
    Radhey Radikk Rafael RAG Raifles Rakinnett RAM Ramkumar Rampage 
    Rapid RASH Raskasammen Real Recaptan Regeldur Reklamtrion Reloaded 
-   Rene Rob Ribitas Rima RKK Robertinho Robi Robocop Rollers Rosajora 
+   Rene Rob Ribitas Rike Rima RKK Robertinho Robi Robocop Rollers Rosajora 
    Rovers Royston Rozle Rylai Rylal Ryo
 
    Sabari Sabina Sabres Saga SAGG Sailor Sakurai Saladmasters Salokin 
-   Salost Salvo Sansouci SANY Sapphire Sara Sarp SaTu Saturn Sbamby 
+   Salost Salvo Sansouci SANY Sapphire Sara Sargam Sarp SaTu Saturn Sbamby 
    Sbanda Scapros Schmuckles Schneewittchen Scientists Scot SDK 
    Secure Selin Senaattorit Senator Severin Sevil SFG Shan Shane 
    Shaoshen Shavaz Sherdils SHHG Shona Show Shrikant Shuai
@@ -1115,8 +1121,7 @@ my @SINGLE_WORDS = qw(
    Xatzopoulos Xinhai Xman Xtrouble XXX XXXL XXXSL XXXXXYXY
 
    Ybs YBM Yaðmur Yamata Yansimasiz YeJun Yelena Yichuang Ylajai 
-   Yogakshema Yokozuna
-   YYY
+   Yogakshema Yokozuna YSD YYD YYY
 
    Zabavljaci Zamek Zana Zara Zen Zeyno Zhihaole Ziggy 
    Zimmkonis Zivac Zlatan Zmaj Zombi Zorro Zozoura Zugzwang Zurzits 
@@ -1193,6 +1198,7 @@ my %SINGLE_TYPOS =
   'Paris Match' => ['parismatch', 'parimatch'],
   Paulistas => ['paulistanas'],
   'Pontiac 7' => ['pontiac7'],
+  Prasetya => ['prasetia'],
   Preempters => ['preemptors'],
   "President's Team" => ['president', 'presidents'],
   Pretendents => ['pretendentas'],

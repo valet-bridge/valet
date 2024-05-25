@@ -131,7 +131,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Agder Angkaew Anhui Ayrshire
-  Bali Banten Belitung Bengkayang Bihar Bornholm Bungo Buskerud
+  Bali Balkan Banten Belitung Bengkayang Bihar Bornholm Bungo Buskerud
   Cappadocia Corsica
   Druts
   Eurasia Europe
@@ -155,7 +155,7 @@ my @SINGLE_WORDS = qw(
   Tasmania Telemark Tigris Tuncelý
   Uttarakhand
   Victoria Vojvodina
-  Waikato
+  Waikato Wujin
   Yongjia Yunnan
   Zhejiang
 );

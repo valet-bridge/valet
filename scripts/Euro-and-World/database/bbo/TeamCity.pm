@@ -17,6 +17,7 @@ use TeamBBO;
 my @MULTI_WORDS =
 (
   'Aix en Provence',
+  'Al-Rabwa',
   'Banda Aceh',
   'Bandar Lampung',
   'Belo Horizonte',
@@ -66,6 +67,7 @@ my %MULTI_TYPOS =
 (
   Aceh => ['di aceh'],
   Akhisar => ['akhisar belediyesi'],
+  'Al-Rabwa' => ['rl-rabwa'],
   'City of Helsinki' => ['helsinki'],
   Diyarbakir => ['d.baki', 'd.bakir', 'd.bakýr', 'd.baki b.þ',
     'd.bakir b.þ.', 'd.bakir y.þehýr', 'd.bakir yenýþehýr',
@@ -107,7 +109,7 @@ my @SINGLE_WORDS = qw(
   Bahce Balcova Bahcesehir Balikesir Balikpapan Ballerup Bamberg 
   Bandung 
   Bangalore Bangkok Banjarmasin Bansi Baragnon Barcelona Batam Bath 
-  Batman Batu Bayrampaþa Begues Beijing Bekasi Belgrade
+  Batu Bayrampaþa Begues Beijing Bekasi Belgrade
   Bengkulu Beograd Bereket Bergen Bergues Berlin Beroe Bhilwara
   Bhubaneshwar Bielefeld Bieniewo Bikaner Bitung Blitar Bodrum 
   Bodø Bogazici Bogor Bologna Bonn Bordeaux Borivli Bormali 
@@ -127,8 +129,8 @@ my @SINGLE_WORDS = qw(
   Eastbourne Edirne Ege Elblag Esbjerg Esenkent Eskisehir Essen 
   Eyjafjallajokull
 
-  Farsund Farta Fatih Fethiye Firenze Flekkefjord Frankfurt Freidorf 
-  Førde
+  Farsund Farta Fatih Fethiye Firenze Flekkefjord Foca
+  Frankfurt Freidorf Førde
 
   Gdansk Gdynia Genoa Gent Geyve Glidice Gnesta Gorontalo Gorzow
   Gölcük Gresik Guangzhou Guayaquil Gudbrandsdal Gundogan Gyor
@@ -137,7 +139,7 @@ my @SINGLE_WORDS = qw(
   Hegyvidék Heimdal Heledia Helsinki Herning Hillerød
   Hornbæk Hosguru Huangshi Huldretråkket Hyderabad
 
-  Iasi Iskenderun Isparta Istanbul Izmir
+  Iasi Iskenderun Istanbul Izmir
 
   Jagodina Jaipur Jakarta Jember Jessheim Jiamusi Jiangyou Jilin 
   Jinchang Jincheng Jinjiang Jiujiang Jomtien
@@ -161,7 +163,7 @@ my @SINGLE_WORDS = qw(
   Manahasa Manado Manchester Manisa Manna Mannheim Marbella Martapura 
   Massy Mataram Männiku Medan Melbourne Mersin Meski Michalovce 
   Midyat Milan Milas Minsk Miskolc Montpellier Moradabad Morud
-  Moudania Mrzenci Mumbai Munich Muratpasa
+  Moudania Mrzenci Muðla Mumbai Munich Muratpasa
 
   Nagbagan Nagpur Nagykanizsa Namsos Nanchang Nanning Napoli
   Narita Narlidere Narvik Nazilli Näsby Nijmegen Ningbo Niski 
@@ -187,7 +189,8 @@ my @SINGLE_WORDS = qw(
   Saarbrücken Sabadel Sakarya Salerno Samarinda Samsun Sandefjord 
   Sansar Santiago Sanya Sarniak Sarpsborg Secunderabad Seferihisar 
   Semarang Senayan Serang Serdika Shanghai Shaoguan Shenyang 
-  Shenzhen Shihua Sibiu Sidoarjo Siena Simal Sindi Singsås Sirinyer
+  Shenzhen Shihua Shijiazhuang Sibiu Sidoarjo Siena Simal Sindi 
+  Singsås Sirinyer
   Skara Skawina Skien 
   Skopje Slagelse Slaska Sleman Sliven Sofia Solok Sortland Söke Split 
   Sredec Stavanger Steinkjer Storsjöbygden Stureby Stuttgart 
@@ -228,6 +231,7 @@ my %SINGLE_TYPOS =
   Akdeniz =>['akdenýz'],
   Akhisar => ['Akhýsar'],
   Allahabad => ['alahabad'],
+  'Al-Rabwa' => ['rabwa'],
   Ankara => ['ancyra'],
   Antwerpen => ['antwerp'],
   Arendal => ['arendals'],
@@ -296,6 +300,7 @@ my %SINGLE_TYPOS =
   Panzhihua => ['panzhihuabc'],
   Parioli => ['paroli'],
   'Piatra Neamt' => ['neamt'],
+  Porto => ['invicta', 'cidade invicta'],
   Potsdam => ['postdam'],
   Poznan => ['poz'],
   Prague => ['praha'],

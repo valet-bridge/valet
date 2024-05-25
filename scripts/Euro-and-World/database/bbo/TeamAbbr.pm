@@ -33,7 +33,7 @@ my %MULTI_TYPOS =
     'bld.sp', 'bld.spor', 'bld. gsk',
     'bric iht.', 'bric klb', 'bric kulubu', 
     'bridge clu', 'bridge cl', 'bridz klub', 'brýç spor', 
-    'brýç s.k.', 'brýç sk', 'bsb bk', 
+    'brýç s.k.', 'brýç sk', 'brýc sk', 'bsb bk', 
     'c. br.',
     'card club',
     'gr.sp.ass.', 'g.s.b.', 'g.s.b', 'g.s.',
@@ -69,7 +69,7 @@ my %SINGLE_TYPOS =
     dbc dbk dgc 
     ebc eibc 
     fbc fc
-    gençlik gkk gsb gsk gskd gtbc
+    gençlik gkk gsb gsk gks gskd gtbc
     hesk
     ihs
     kcb kdi klubben klubberne ks ksb ksk

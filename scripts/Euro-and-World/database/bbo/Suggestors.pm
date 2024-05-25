@@ -28,6 +28,7 @@ my %TEAMS_SUGGESTORS_HASH = map {$_ => 1} @TEAMS_SUGGESTORS;
 
 # Only if it is a complete team entry.
 my @PAIRS_SUGGESTORS = (
+  'cross-imps', 'cross/imps', 'no imps',
   'pairs', 'pair 1', 'pair 2', 'pair1', 'pair2', 'pair event',
   'pair a', 'pair b', 'no teams', 'not teams',
   'pair ns', 'pair ew', 'pairs a', 'pairs b',

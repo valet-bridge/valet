@@ -41,6 +41,7 @@ my %SINGLE_TYPOS =
   Schools => [qw(school)],
   U16 => ['boys'],
   U20 => [qw(u20s)],
+  U26 => ['students'],
   Girls => [qw(girl jenter)]
 );
 

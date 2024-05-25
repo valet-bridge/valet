@@ -224,6 +224,7 @@ my @MULTI_WORDS =
   'Phoenix TV',
   'Polarman Regnskap',
   'Pro Consul',
+  'PT Bayu Buana Gemilang',
   'Rigainvites.lv',
   'Rio-Sampa',
   'Ronke Camping',
@@ -462,6 +463,7 @@ my %MULTI_TYPOS =
   'Poddar Developers' => ['poddar development', 'poddar dev',
     'podder dev', 'podder developers', 'poddar devekopers',
     'poddar dovelopers', 'deepak podder'],
+  'PT Bayu Buana Gemilang' => ['pt bbg'],
   Pufa => ['pu fa'],
   'Ryan Express' => ['ryan_express'],
   'Samtronic Constanta' => ['samtronic ct'],
@@ -564,7 +566,7 @@ my @SINGLE_WORDS = qw(
 
   Manyavar Meikuang Mireo Mitrabuana Morgunblaðið Myndform
 
-  NALCO Nanyuan Navachaitanya Navayuga Nefka Niewiem Nongken Norco 
+  NALCO Nanyuan Navachaitanya Navayuga Nazwa Nefka Niewiem Nongken Norco 
   Nortemp NOTUS Näkösoppi
 
   Ozyuva
@@ -641,6 +643,7 @@ my %SINGLE_TYPOS =
   'Jilin Dingyuan' => ['jilindingyuan'],
   'Jin Rong' => ['jinrongjia'],
   'KH Power' => ['khpower'],
+  'Kideko' => ['kideco'],
   'Kosmos Delhi' => ['kosmos'],
   'Lianzhong Shi Jie' => ['lianzhongshijie'],
   'Magpa-Grup' => ['magpa'],
@@ -654,6 +657,7 @@ my %SINGLE_TYPOS =
   'Pro Consul' => ['proconsul'],
   'PU Minsel' => ['minsel'],
   'Perusahaan Listrik Negara' => ['pln'],
+  'PT Bayu Buana Gemilang' => ['bbg'],
   'PU Bitung' => ['bitung pu'],
   'Rigainvites.lv' => ['rigainvites'],
   'SAIC VW' => ['saic'],

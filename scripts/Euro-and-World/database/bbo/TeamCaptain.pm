@@ -55,13 +55,14 @@ my @MULTI_WORDS =
   'Carlo Bossi',
   'Carlos Ferreira',
   'Carlos Gonçalves',
-  'Carlos Luiz',
+  'Carlos Luis',
   'Carlos Santos',
   'Carlos Teixeira',
   'Chalermpol Wongwaiwit',
   'Choo Wai Wong',
   'Christal Henner-Welland',
   'Corte-Real',
+  'C.V. Rao',
   'D Banerjee',
   "D'Avossa",
   'Da Silva',
@@ -149,6 +150,7 @@ my @MULTI_WORDS =
   'Jan Jansma',
   'Jan-Olov Andersson',
   'Janak Shah',
+  'Javed Ahmed Miran',
   'Jay Ganesh',
   'Jean le Poder',
   'Jennifer de Winter',
@@ -479,7 +481,8 @@ my %MULTI_TYPOS =
   'Marc ter Laare' => ['ter laare'],
   'Maria João Lara' => ['maria joao lara', 'm joão lara',
     'm joao lara', 'm. j. lara', 'm.j.lara', 'mj.lara',
-    'maria j.lara', 'm.joão lara', 'mª joão lara', 'm. joão lara'],
+    'maria j.lara', 'm.joão lara', 'mª joão lara', 'm. joão lara',
+    'm.j. lara'],
   'Mariana Leitão' =>['mariana leitao'],
   'Marius Bartnes' => ['dr. bartnes'],
   'Maxim Henbest' => ['m.henbest'],
@@ -501,7 +504,8 @@ my %MULTI_TYPOS =
   'Paul Hackett' => ['p hackett', 'pd hackett', 'hackett p'],
   'Paulo Goncalves Pereira' => ['paulo g pereira', 'paulo goncalves per',
     'paulo gonçalves', 'p g pereira', 'p. g. pereira', 'pg pereira',
-      'p.g.pereira', 'paulo gp', 'paulo g. pereira', 'p.g.p.'],
+      'p.g.pereira', 'paulo gp', 'paulo g. pereira', 'p.g.p.',
+      'paulo goncalves perreira'],
   'Paulo Roberto Brum' => ['brum p', 'brum.p.', 'paulo brum', 'p brum'],
   'Paulo Rocha Pinto' => ['paulo pinto', 'rocha pinto'],
   'Pedro Madeira' => ['p. madeira', 'p madeira'],
@@ -671,7 +675,7 @@ my @SINGLE_WORDS = qw(
   Hopfenheit Hornibrook Horowitz Horton Horwitz Howard Howe Hu 
   Huang Hughes Hugon Hugony Hult Hung Hupe Hurworth Høgis Høyland 
 
-  Iacapraro Ichilcik Ilczuk Ilmez Indemini Ingielewicz Iommi 
+  Iacapraro Ichilcik Ilczuk Ilmez Ince Indemini Ingielewicz Iommi 
   Iontzeff Irens Ishidaya Ivatury Iversen Ivrig Iyer Izisel
 
   Jacob Jacobs Jagger Jagniewski Jagroop Jain Jalowka Jamieson
@@ -843,6 +847,7 @@ my @SINGLE_WORDS = qw(
 
   Zabunoglu Zago Zagor Zagorin Zajac Zaleski Zanalda Zambonini Zaninotti
   Zaremba Zarkesch Zatorski Zawada Zawislak Zeeberg Zenari Zhan Zhao 
+  Zhaoheng
   Zhong Zhukov Zielinski Zimmermann Zipovski Zobu Zollo Zolotov Zorlu 
   Zotti Zozis Zotos Zwart
 
@@ -886,6 +891,7 @@ my %SINGLE_TYPOS =
   Ciechomski => ['ciechomek'],
   Combescure => ['combescur'],
   Curo => ['curò'],
+  'C.V. Rao' => ['cvrao'],
   Czímer => ['czimer'],
   Dabrowka => ['d¹brówka'],
   'David Birman' => ['birman'],
@@ -937,6 +943,7 @@ my %SINGLE_TYPOS =
   'Jaggy Shivdasani' => ['jaggy'],
   'Jan-Olov Andersson' => ['joa'],
   Jansma => ['jansa'],
+  'Javed Ahmed Miran' => ['miran'],
   Jedrychowski => ['jedrychowsky'],
   'Jeovani Salomao' => ['jeovani'],
   'Jeroo Mango' => ['mango'],
