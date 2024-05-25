@@ -317,6 +317,7 @@ my @MULTI_WORDS =
   'Hi Charli',
   'Hillbilly Help Suit',
   'HKHZ Connection',
+  'Hong Chou',
   'Hopp i sang',
   'Horten-14',
   'Hum Paanch',
@@ -328,7 +329,7 @@ my @MULTI_WORDS =
   'HZ Connection',
   'I Doctors',
   'I Win',
-  'Idea Bridge',
+  'Idea Bridge Torino',
   'IGB sports.com',
   'Ikke akkurat kjedelig',
   'Il Fante di Fiori',
@@ -387,6 +388,7 @@ my @MULTI_WORDS =
   'KM 23',
   'K-O',
   'KOC67',
+  'Kong Chou',
   'Koridor 10',
   'Kozyrnye Oleni',
   'Kronisk kusma',
@@ -508,8 +510,8 @@ my @MULTI_WORDS =
   'os.se',
   'Ottos Lotto',
   'Over stokk og stein',
+  'Oze Ckis',
   'Ööklubi Strand',
-  'Øst-Vest',
   'Paak Festival',
   'Papa & Rabbits',
   'Papa and Rabids',
@@ -531,6 +533,7 @@ my @MULTI_WORDS =
   'Precision Marathon',
   "President's Team",
   'P.S.',
+  'PT.Bumi Siak Pusako',
   'Pur Pur',
   'Quatro Bruxas',
   'Queen and Knights',
@@ -687,6 +690,7 @@ my @MULTI_WORDS =
   'Thread & Needles',
   'Three Nations',
   'Til Valhall',
+  'Tim Team',
   'Tinutuan Manado',
   'Tre Kn og en D',
   'Tre knekter og ett S',
@@ -715,13 +719,14 @@ my @MULTI_WORDS =
   'Vegetable Hotpot',
   'Verden rundt',
   'Very Mixed',
-  'Vickys Vikings',
-  'Victorious Secret',
-  'Vierde van links',
   'Vi bygger stikk!',
   'Vi fyra',
   'Vi i femman',
+  'Vickys Vikings',
+  'Victorious Secret',
+  'Vierde van links',
   'Viking Club',
+  'Villi Jr.',
   'Visoki Napon',
   'Volatile Company',
   'VP (b)anker IMP',
@@ -757,6 +762,7 @@ my @MULTI_WORDS =
   'Zen Ho',
   'Zia and Friends',
   'Ziemlich gut',
+  'Øst-Vest',
   '50 med omnejd',
   '50 shades of cards'
 );
@@ -836,7 +842,7 @@ my %MULTI_TYPOS =
     'hungar olimpics', 'hungar olimpic'],
   'Hurlumhei' => ['hurlumhei..'],
   'Hvalen og tjukkasene' => ['hvalen og tjukkasne', 'hvalen & tjukkasene'],
-  'Idea Bridge' => ['idea br.'],
+  'Idea Bridge Torino' => ['idea br.', 'gs idea br. to'],
   'Ikke akkurat kjedelig' => ['ikke akkurat kjedel'],
   'India Blues' => ['indian blues'],
   'Indian Mavericks' => ['india mavericks', 'indian mavricks'],
@@ -853,6 +859,7 @@ my %MULTI_TYPOS =
   "L'Orange" => ["l' orange"],
   'Late S.S. Jain' => ['late ss jain', 'lss jain', 'l s s jain',
      'late sssk jain'],
+  'Lawrence Allstars' => ['ml allstars'],
   'Lawrence of Arabia' => ['lawrence of arab'],
   'La Vista' => ['la vista team'],
   'Lakk & Lær' => ['lakk og lær', 'lek & lær', 'lokk & lur',
@@ -876,6 +883,7 @@ my %MULTI_TYPOS =
   'Nilslands Slowfoxes' => ['nilslands slowfoxers', 'nilsland slowfoxes',
     'nilsland slowfoxers'],
   "No He Isn't" => ['no he isnt'],
+  'Oh Ya!' => ['oh ya'],
   Polýsgücü => ['polýs gücü s', 'polis gucu', 'polisgucu'],
   "Pradeep's Four" => ["pradeep's 4", "Pradeep's Team"],
   "President's Team" => ["president's", 'presidents teams'],
@@ -944,12 +952,12 @@ my @SINGLE_WORDS = qw(
    Cabal Cabriole Calaca Cammello Canadonia Cancan Canukusa 
    Cardtossers Cargo Cartoon Casuals Cask Cathy Cavelieri Cavendish
    Censored 
-   Center Challengers Changes Chass Chateau Chicks Chime Chiranjeev 
+   Center Cerkez Challengers Changes Chass Chateau Chicks Chime Chiranjeev 
    Chokladmåndag Chuanpit Cité Claim Claudili Coaches Cogito 
    Colorado Commandos 
    Comrade Concurrent Conie Contact Contra Coopers Corner 
    Costantina Counterstrike Couples Crash Cremaster Croanglopol
-   Crockfords Crossfatek Czteropak
+   Crockfords Crossfatek CSTO Czteropak
 
    Dada Dadya Dahsyat Dallas DanEng DanFar Danger Daniel Dash Dauna Dawn 
    Debonecos Debutantes Deceptive DeeJee Defne Demony Demýrbaþ
@@ -968,12 +976,13 @@ my @SINGLE_WORDS = qw(
    Fenix Ferfi Feszek Fharon Fifi Fil Filosofene Filur Finest Fisk 
    FNCC Forfot Formidables Formosa Fortuna Fortune FOS Foundation Francest 
    Frank Franz Frenemies Frieolt Friends Frirond Francophones Freak 
-   Frivolt Frusci Fundacja
+   Frivolt Frusci Fundacja FWK
 
    Gabrisem Galaxy Galim Gambitas Gamma Garry Garp Garuda Gata Gelim 
    Gelin Gentle George Geriatrix Gewanna Geysir Gesi Giants Gibs 
    Gjesp Gkobra GloryGlory Goldcat Goroco Gosho Göktürk GP Grand Grads
-   Greecoura Greta Grup Guayacos Gudok Guests Gulce Gulebjorn Gullberg 
+   Greecoura Greta GRNC Grup Guayacos Gudok Guests Gulce Gulebjorn 
+   Gullberg 
    Gullvi Gunsmoke Guptas Gürsel
 
    Hade Hai Hakl Hanan Hande Hangarounds Hansa Harlequins Harvin 
@@ -982,7 +991,7 @@ my @SINGLE_WORDS = qw(
    Heliopolis HengSha 
    HERZdame HeSa Hey Hiiimmm Hilda Hist Hjerterdamer HKES Hobbits Holders 
    Holifera Hollywood Holmenkollen
-   Holport Honeymoon Hopfenkönig Hornet Hridhaan Hubsi Huhu 
+   Holport Honeymoon Hopfenkönig Hornet House Hridhaan Hubsi Huhu 
    Hunaja Huispaus Hunhun Hurra Hybrid
 
    IBE Ida Iff Ijseide Ikarus Ilya IMAN Imanual IMLUK Imponderables 
@@ -1003,7 +1012,8 @@ my @SINGLE_WORDS = qw(
    Kerasus Kibe Kinga Kingkong Kings KISS Kitty Kjelskos KKKQ
    Klasik Klio
    KMC Knösel Kodin Koiraperhe Kokoelma Kolbasti Komleposs
-   Kompisarna Konga Kordam Korsikalý Kortai Koru Koukouselis KrASK 
+   Kompisarna Konga Kordam Korsikalý Kortai Koru Koukouselis KPPM
+   KrASK 
    Kratos 
    Krem Kris Kriston Krisztina Ksenia Kuglana Kuhmilch Kultur
    Kvazar Kwiecisty
@@ -1026,12 +1036,13 @@ my @SINGLE_WORDS = qw(
    Mer Mercury Mesna Meta MGTH Mia Michal Midas Mihai Mikke Miguel 
    Milady Milo Minut 
    Mirage Miro Mismatch Mixarna Mjøskameratne MMMM MMRMC
-   Mochu Monaconf Mongos
+   Mochu Moki Monaconf Mongos
    Moritz Mostingan Movember Mölnlycke Munawar Mustang Muumio 
    Mýna Myoni 
    Møremix Måsen
 
-   Nabil Nadide Narbisk Narre Natalia Nathans Natural Naturalists Neduk 
+   Nabil Nadide Narbisk Narre Natalia Nathans Natural Naturalists 
+   NBB Neduk 
    Nemesis Nessuno Neverclaim Nico Nightingale Nik Nikita Nikitopoulos 
    Niko Nikos Nikotiimi Nina Nis Nislije NMRT Noctis Noralia Noriko 
    Norsu NOS NTiosagutta Nula
@@ -1039,7 +1050,7 @@ my @SINGLE_WORDS = qw(
    Obezit Octopussy OEI Ognisty Okay Oksijen Olavsfestdagene Olena 
    Olimp Olrudbanden Olsenbanden OMC Omega Omelas Onirepsou Onnela 
    Onu Onyx Opal Opera Opps Oprosti Optimus Orakulas Orthodoxi 
-   Orthodox Osam OSMO Osss Oto Otters Outsiders Overivrig Oyzum 
+   Orthodox OSA Osam OSMO Osss Oto Otters Outsiders Overivrig Oyzum 
    Ozbiljni
 
    Öncü
@@ -1051,7 +1062,7 @@ my @SINGLE_WORDS = qw(
    Pjäxa PK3 Pleschi Pleyada Plia PMS Pojat Polirish Polus Polýsgücü
    Pompapompa 
    Pontiac Poss Potlimit Potteplante Powerchicks Prapar Prasetya 
-   Preempters Pretendents Prijatelj Prosan Proteus Proto Ptacol 
+   Preempters Pretendents Prijatelj Prim Prosan Proteus Proto Ptacol 
    Pude Pusten Pyon Pyton PZIM Påskevennene
 
    Quantum Quasar Quattro Quinze
@@ -1059,20 +1070,17 @@ my @SINGLE_WORDS = qw(
    Radhey Radikk Rafael RAG Raifles Rakinnett RAM Ramkumar Rampage 
    Rapid RASH Raskasammen Real Recaptan Regeldur Reklamtrion Reloaded 
    Rene Rob Ribitas Rima RKK Robertinho Robi Robocop Rollers Rosajora 
-   Rovers Royston Rozle Rylai Rylal
+   Rovers Royston Rozle Rylai Rylal Ryo
 
    Sabari Sabina Sabres Saga SAGG Sailor Sakurai Saladmasters Salokin 
-   Salost
-   Salvo Sansouci SANY Sapphire Sara Sarp SaTu Saturn Sbamby Sbanda
-   Scapros 
-   Schmuckles Schneewittchen Scientists Scot Secure Selin Senaattorit 
-   Senator Severin Sevil SFG Shan Shane Shaoshen Shavaz Sherdils 
-   SHHG Shona 
-   Show Shrikant Shuai
+   Salost Salvo Sansouci SANY Sapphire Sara Sarp SaTu Saturn Sbamby 
+   Sbanda Scapros Schmuckles Schneewittchen Scientists Scot SDK 
+   Secure Selin Senaattorit Senator Severin Sevil SFG Shan Shane 
+   Shaoshen Shavaz Sherdils SHHG Shona Show Shrikant Shuai
    Shushi Siddheshwar Sigdonnemann Sigma Sigrid Sihai Silbersee 
    Silence Silverfox 
    Simonetta Simple Simpleksas Sindbad Sindhu Singapole Sirius SISU Sivves 
-   Siyabend Sjøsamen Skalman Skaronga Skip Skitur Skotii Þlem 
+   Siyabend Sjøsamen Skalman Skaronga Skip Skitur Skotii SKR Þlem 
    Slappfisker Slostria Slufsa SMBC Småveitjan SNAP Snapper Snipers 
    Soba Sober Sobers Sogn Soho Solo Sonata Sonchel Soumitra Spamirs
    Spandan Spark Spartans Specialist Spekkhogger Spektr Spin Spring 
@@ -1080,9 +1088,9 @@ my @SINGLE_WORDS = qw(
    Starsbridge Statusquo Stayman STB Stefany Steinars Steinlager 
    Steliana Steve Stifinnern Storeslemmen Strata Strategen Streamline 
    Studentene StZ Stålfarfar Sucharek Sue SuHuQiaoYou
-   Sunset Sunshine Suz Svetla 
-   Swanand SweDanes 
-   SweNor Swest Syabas Syly Syttisju Sømnakameratene Sør Såpeopera
+   Sunset Sunshine Suz Svetla Swanand SweDanes 
+   SweNor Swest Syabas Syly Syttisju SZPAK SZPAR Sømnakameratene 
+   Sør Såpeopera
 
    Tadeu Take Takeoff Takk Takým Taksim Tally Tamae Tangra Tannlegene 
    Task Taurus Tbone Tefo Tempo Theme Tibetmunkene Tigers Tiglatpalasar

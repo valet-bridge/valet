@@ -107,7 +107,7 @@ my @SINGLE_WORDS = qw(
   Bahce Balcova Bahcesehir Balikesir Balikpapan Ballerup Bamberg 
   Bandung 
   Bangalore Bangkok Banjarmasin Bansi Baragnon Barcelona Batam Bath 
-  Batman Batu Bayrampaþa Begues Beijing Bekasi Belgrade Bengkalis 
+  Batman Batu Bayrampaþa Begues Beijing Bekasi Belgrade
   Bengkulu Beograd Bereket Bergen Bergues Berlin Beroe Bhilwara
   Bhubaneshwar Bielefeld Bieniewo Bikaner Bitung Blitar Bodrum 
   Bodø Bogazici Bogor Bologna Bonn Bordeaux Borivli Bormali 
@@ -127,9 +127,10 @@ my @SINGLE_WORDS = qw(
   Eastbourne Edirne Ege Elblag Esbjerg Esenkent Eskisehir Essen 
   Eyjafjallajokull
 
-  Farsund Farta Fethiye Firenze Flekkefjord Frankfurt Freidorf Førde
+  Farsund Farta Fatih Fethiye Firenze Flekkefjord Frankfurt Freidorf 
+  Førde
 
-  Gdansk Gdynia Genoa Gent Glidice Gnesta Gorontalo Gorzow
+  Gdansk Gdynia Genoa Gent Geyve Glidice Gnesta Gorontalo Gorzow
   Gölcük Gresik Guangzhou Guayaquil Gudbrandsdal Gundogan Gyor
 
   Haderslev Hamburg Hangzhou Hannover Harplinge Harstad 
@@ -210,7 +211,7 @@ my @SINGLE_WORDS = qw(
   Wroclaw Wuhan
 
   Yalikavak Yambol Yarimada Yarýmca Yatagan Yenisehir Yibin Yildirim 
-  Yizhuang Yokohama Yogyakarta
+  Yizhuang Yokohama Yogyakarta Yuquan
 
   Zagreb Zeugma Zhenjiang Zhongshan Zhujiang Zhuzhou Zigong Zurich 
   Zyrardow
@@ -248,6 +249,7 @@ my %SINGLE_TYPOS =
   Diyarbakir => ['dýyarbakir', 'diyarbakýr'],
   Dongguan => ['dongguang'],
   Düsseldorf => ['duesseldorf'],
+  Fatih => ['fatýh'],
   Genoa => ['genova'],
   Guangzhou => ['gz', 'gaungzhou'],
   Harplinge => ['harpling'],
@@ -271,6 +273,7 @@ my %SINGLE_TYPOS =
   Lhokseumawe => ['lhoeksemawe'],
   Lozenets => ['lozenec'],
   Makassar => ['makasar'],
+  Manado => ['menado'],
   Manahasa => ['mnhasa'],
   Mersin => ['mersýn'],
   Milan => ['milano'],

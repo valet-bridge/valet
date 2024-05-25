@@ -29,11 +29,11 @@ my %MULTI_TYPOS =
     'b.s.b', 'b.b.k.', 'b.b.s.', 'b.b.s.k.', 'b.s.', 'b.s', 'b.s.b.', 
     'bld', 'bld.',
     'b.s.k.', 'b.s.k', 'b.seh bel', 'b. shr bld', 'b.k', 'b.k.', 'b.t',
-    'bld sk', 'bld sp', 'b.bld.sk',
+    'bld sk', 'bld sp', 'bld. sp', 'b.bld.sk',
     'bld.sp', 'bld.spor', 'bld. gsk',
     'bric iht.', 'bric klb', 'bric kulubu', 
     'bridge clu', 'bridge cl', 'bridz klub', 'brýç spor', 
-    'brýç s.k.', 'bsb bk', 
+    'brýç s.k.', 'brýç sk', 'bsb bk', 
     'c. br.',
     'card club',
     'gr.sp.ass.', 'g.s.b.', 'g.s.b', 'g.s.',
@@ -59,9 +59,10 @@ my %SINGLE_TYPOS =
 (
   'Bridge Club' => [qw(aba abk abi absk ak ahm 
     asb asd ass assn asso assoc azs
-    ba bbgsk bbs bbsk bc bcm bcn belediye beledýye belediyespor
-    bilimsel bjk bk bld bmsk bps
-    br brýç bridgeclub bridgeklub 
+    ba bbgsk bbs bbsgk bbsk bc bcm bcn belediye beledýye belediyesi
+    belediyespor bgsk
+    bilimsel bisk biskd bjk bk bld bmsk bps
+    br bri brýç bridgeclub bridgeklub 
     bs bsb bsc bsk bskd bsp bt
     bþb bþbký bsbkisk bssk buyuksehir ybsk bsbs btsc 
     cbc cbe cfr club csb
@@ -69,8 +70,10 @@ my %SINGLE_TYPOS =
     ebc eibc 
     fbc fc
     gençlik gkk gsb gsk gskd gtbc
+    hesk
+    ihs
     kcb kdi klubben klubberne ks ksb ksk
-    mbc
+    maesa mbc
     nbi nbcbl
     oaza obk 
     sb sbc sc sdgskd sk spor ss ssd

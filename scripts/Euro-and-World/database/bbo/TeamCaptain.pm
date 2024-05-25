@@ -305,6 +305,7 @@ my @MULTI_WORDS =
   'Sofia Costa Pessoa',
   'Stefán Jóhannsson',
   'Sunil Machhar',
+  'Susanne Bohnsack',
   'Sveinn Ericsson',
   'Sverrir Þórisson',
   'T.V. Joshi',
@@ -602,6 +603,7 @@ my @SINGLE_WORDS = qw(
   Charlotte Charlsen Chassagne Chatterji Chauvelot Chediak Cheek 
   Chemla Chen Cheng Chinchak Chizzoli Chopin Chottin Chrapot Chuang 
   Chubukov Ciccarelli Cichocki Ciechomski Cilleborg Cimon Cintra 
+  Cionca
   Ciopettini Civale Cladius Clair Claret Clark Clarke Clausen 
   Clement Clemmensen Close Coenraets Coglitore Cohen Cohler Cohner 
   Colarossi Coldea Cole Coletta Collett Collins Combes Combescure 
@@ -703,7 +705,7 @@ my @SINGLE_WORDS = qw(
   Landry Lane Langer Lantaron Lanzarotti Larsen Larssen Lasserre 
   Lauria Lavín Lavings Law Lawy Lay Lazer Lazkar Lebatteux 
   Lebel Lebi Lebowitz Leca Lechtman Lehtinen Lee Leenhardt Legras 
-  Leiro Lena Lennart Leptirici Lerner Lesniewski Lesnik Lester Lev 
+  Leiro Lena Lengy Lennart Leptirici Lerner Lesniewski Lesnik Lester Lev 
   Levi Levinger Levin Levine Levoy Levski Lew Lewis Lhuissier Li Lian
   Libbrecht Libman Lie Lien Liu Liggins Lilienstein Lillevik Lilley 
   Limor Linczmayer Lindner Lindstedt Lindqvist Llopart 
@@ -740,7 +742,7 @@ my @SINGLE_WORDS = qw(
   Nab Nadar Nader Naels Nagy Nahmias Naimuddin Naito Naniwada
   Narasimhan Naqvi Narasinham Nardullo Natale Navneet Neale Negrin 
   Neill Nencini Netto Neuhauser Neulinger Neve Newell Newman 
-  Nickell Nielsen Nieminen Nikolenkov Nikolov Nilsland Nilsson 
+  Ng Nickell Nielsen Nieminen Nikolenkov Nikolov Nilsland Nilsson 
   Nimhauser Ninos Nixon Nobel Noble Nordby Novoski Nowicki Nowosadzki 
   Nuñez Nørgaard Nunes Nunn Nussbaum Nyshchyi Nystrom
   
@@ -836,7 +838,7 @@ my @SINGLE_WORDS = qw(
   Xatzimpalis
 
   Yadlin Yalman Yamada Yang Yalankiran Yarington Yates Yergýn
-  Yezerski Yilmaz 
+  Yezerski Yildiz Yilmaz 
   Ying Yokoi Yoleri Yuen Yule
 
   Zabunoglu Zago Zagor Zagorin Zajac Zaleski Zanalda Zambonini Zaninotti
