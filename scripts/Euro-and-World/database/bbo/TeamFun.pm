@@ -37,9 +37,11 @@ my @MULTI_WORDS =
   'A.z.f.e.n.a',
   'A Takimi',
   'ABA Nuno Paz',
+  'ABB Tomas',
   'Aces & Deuces',
   'Adams Family',
   'AG laget',
+  'Ai Bait',
   'Air Traffic Management',
   'Aka Maru',
   'Alex is Beautiful',
@@ -134,6 +136,7 @@ my @MULTI_WORDS =
   'Ca. et halvt tonn',
   "Cai's Bird",
   'Californian Aces',
+  'Can Aren',
   'Captain Blood',
   'Card Warriors',
   'Casino Floor',
@@ -250,8 +253,8 @@ my @MULTI_WORDS =
   'Fallega Folked',
   'Fanta 4',
   'Fast and Furious',
-  'Four Aces',
   'Fem på nya äventyr',
+  'FF 69',
   'Figo-Fago',
   'Filips Fanclub',
   'Finnmark Flyers',
@@ -313,6 +316,7 @@ my @MULTI_WORDS =
   "Hell's Angels",
   'Hi Charli',
   'Hillbilly Help Suit',
+  'HKHZ Connection',
   'Hopp i sang',
   'Horten-14',
   'Hum Paanch',
@@ -321,6 +325,7 @@ my @MULTI_WORDS =
   'Hurlumhei',
   'Hvalen og tjukkasene', 
   'Hvor er mine babes',
+  'HZ Connection',
   'I Doctors',
   'I Win',
   'Idea Bridge',
@@ -437,6 +442,7 @@ my @MULTI_WORDS =
   'Manny Herrings',
   'Many Hands',
   'Marki-Macki',
+  'Massachusetts Association',
   'Master Minds',
   'Max 100',
   'Max-Nat',
@@ -800,6 +806,7 @@ my %MULTI_TYPOS =
   'Et par sama og 2 ens' => ['et par sama og 2 en'],
   'Eviza Plambata' => ['eviza_plambata'],
   'Fast and Furious' => ['fast & furious'],
+  'FF 69' => ['ff  69'],
   "Flint's Crew" => ["flint`s crew"],
   'Flora and Friends' => ['flora && friend'],
   'FOS' => ['f o s'],
@@ -851,6 +858,7 @@ my %MULTI_TYPOS =
   'Magic Eyes' => ['majic eyes', 'm e'],
   'Man Harr det man har' => ['man harr det man ha'],
   'Manchester United' => ['man u', 'man utd'],
+  'Massachusetts Association' => ['massachussets assoc'],
   'Missão Impossivel' => ['missão impossível'],
   'Mo i Raneran' => ['mo i raneran :)'],
   'Ms. Guggenheim' => ['ms. gugenheim'],
@@ -899,7 +907,7 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
    2Q2K 3D 6L 10CC 7heart
 
-   AABC Aces Acolvik ACR Adventure Aditya Aeras Agamemnon Agressor 
+   AABC ABC Aces Acolvik ACR Adventure Aditya Aeras Agamemnon Agressor 
    Ahmetizm 
    Ahornet Aida Akenobo Akinom Alertplus Alex Alf Alfredo Ali Alioth 
    Allam Alliance Alliansen Allstars Alpha Alternativlos Ambassador 
@@ -925,7 +933,8 @@ my @SINGLE_WORDS = qw(
    Buddies Bulldozer Bumerangas Bunnies Busiaki Butler
 
    Cabal Cabriole Calaca Cammello Canadonia Cancan Canukusa 
-   Cardtossers Cargo Cartoon Casuals Cask Cathy Cavelieri Censored 
+   Cardtossers Cargo Cartoon Casuals Cask Cathy Cavelieri Cavendish
+   Censored 
    Center Challengers Changes Chass Chateau Chicks Chime Chiranjeev 
    Chokladmåndag Chuanpit Cité Claim Claudili Coaches Cogito 
    Colorado Commandos 
@@ -944,7 +953,7 @@ my @SINGLE_WORDS = qw(
    Eagles Ece Econ Edi Efsane Egesarpdoruk Eikka Ekenboda Ekoap 
    Elektrownia Elio Eliminator Elips Eliza Ellen Emerald Emre Engelen 
    Engineers Enigma Enjoy Ephesus Epsilon Equator Era Eren Eric 
-   Erikas Erla Ertým ErUS Eses Esesss Esperanza Everest Evil Ewa
+   Erikas Erla Ertým ErUS ESA Eses Esesss Esperanza Everest Evil Ewa
 
    F16 Fakel FAM² Fantasia Fant4stic Farmen Farmers Felix Fenghuang Fenia 
    Fenix Ferfi Feszek Fharon Fifi Fil Filosofene Filur Finest Fisk 
@@ -952,26 +961,27 @@ my @SINGLE_WORDS = qw(
    Frank Franz Frenemies Frieolt Friends Frirond Francophones Freak 
    Frivolt Frusci Fundacja
 
-   Gabrisem Galaxy Galim Gambitas Gamma Garry Garuda Gata Gelim 
+   Gabrisem Galaxy Galim Gambitas Gamma Garry Garp Garuda Gata Gelim 
    Gelin Gentle George Geriatrix Gewanna Geysir Gesi Giants Gibs 
    Gjesp Gkobra GloryGlory Goldcat Goroco Gosho Göktürk Grand Grads
    Greecoura Greta Grup Guayacos Gudok Guests Gulce Gulebjorn Gullberg 
    Gullvi Gunsmoke Guptas Gürsel
 
-   Hade Hakl Hanan Hande Hangarounds Hansa Harlequins Harvin Havin Hawks 
+   Hade Hai Hakl Hanan Hande Hangarounds Hansa Harlequins Harvin 
+   Havin Hawks 
    HayirlisI Hayet Hästpojkarna Hebat Heino Heis Hel Helgeness Hellé 
    Heliopolis HengSha 
    HERZdame HeSa Hey Hiiimmm Hilda Hist Hjerterdamer HKES Hobbits Holders 
    Holifera Hollywood Holmenkollen
    Holport Honeymoon Hopfenkönig Hornet Hridhaan Huamen Hubsi Huhu 
-   Hunaja Huispaus Hurra Hybrid
+   Hunaja Huispaus Hunhun Hurra Hybrid
 
    IBE Ida Iff Ijseide Ikarus Ilya IMAN Imanual IMLUK Imponderables 
    InFran Instructor Invicta Iris Irukangi Ismo Israbel Isrmany 
    Itnoraunz ITS IVAR
 
    Jagg Jaiganesh Janko Jans JAPCAN JAS JASS Jassica Javel Jaya
-   Jelena Jernbaneverket Jessi Jessica Jecization Jirin Jiujiu 
+   Jelena Jernbaneverket Jessi Jessica Jecization Jinjing Jirin Jiujiu 
    JJJ Jóannes Job Jocker
    JoJo Joker Jonathan Joter Journalists Juanval Jugermaister Juice 
    Juls 
@@ -994,6 +1004,7 @@ my @SINGLE_WORDS = qw(
    Leta Letve 
    Leveni Lianas Liggeunderlaget Lili Lillebaluba Lions Lipa Lira Livius 
    Lirarna Liverbird Ljónin LNWers Lo Loaknath Logos Lolly Loloc 
+   Longzhu
    Loreng LOS Lowel Löparn LPMS Lucky LVBridgeBums Lyubcho Løwene
 
    Mach Madhav Mads Maestroi Magi Magic Magister Magnus Maharaja 
@@ -1024,7 +1035,7 @@ my @SINGLE_WORDS = qw(
    Öncü
 
    Pacers Paco Pagonia Pal Palukas Panteros Paoli Paradigma Partizan
-   Pasanci Passé Patriot Patron Paulette Paulina Paulistas PDC
+   Pasam Pasanci Passé Patriot Patron Paulette Paulina Paulistas PDC
    Pegasus Pennant
    Perestrojka Perjuangan Pero Peter Petra Pia Piast Piryoli Piter 
    Pjäxa PK3 Pleschi Pleyada Plia PMS Pojat Polirish Polus Polýsgücü
@@ -1045,8 +1056,9 @@ my @SINGLE_WORDS = qw(
    Salvo Sansouci SANY Sapphire Sara Sarp SaTu Saturn Sbamby Sbanda
    Scapros 
    Schmuckles Schneewittchen Scientists Scot Secure Selin Senaattorit 
-   Senator Severin Sevil SFG Shane Shaoshen Shavaz Sherdils Shona 
-   Show Shrikant 
+   Senator Severin Sevil SFG Shan Shane Shaoshen Shavaz Sherdils 
+   SHHG Shona 
+   Show Shrikant Shuai
    Shushi Siddheshwar Sigdonnemann Sigma Sigrid Sihai Silbersee 
    Silence Silverfox 
    Simonetta Simple Simpleksas Sindbad Sindhu Singapole Sirius SISU Sivves 
@@ -1054,10 +1066,11 @@ my @SINGLE_WORDS = qw(
    Slappfisker Slostria Slufsa SMBC Småveitjan SNAP Snapper Snipers 
    Soba Sober Sobers Sogn Soho Solo Sonata Sonchel Soumitra Spamirs
    Spandan Spark Spartans Specialist Spekkhogger Spektr Spin Spring 
-   Squeeze Srimapuna Srykeir Stafani Stagge Stampede Star Starmen 
+   Squeeze Srimapuna Srykeir SSBC Stafani Stagge Stampede Star Starmen 
    Starsbridge Statusquo Stayman STB Stefany Steinars Steinlager 
    Steliana Steve Stifinnern Storeslemmen Strata Strategen Streamline 
-   Studentene StZ Stålfarfar Sucharek Sue Sunset Sunshine Suz Svetla 
+   Studentene StZ Stålfarfar Sucharek Sue SuHuQiaoYou
+   Sunset Sunshine Suz Svetla 
    Swanand SweDanes 
    SweNor Swest Syabas Syly Syttisju Sømnakameratene Sør Såpeopera
 
@@ -1077,12 +1090,14 @@ my @SINGLE_WORDS = qw(
    Vilttiketju Vilttiukko Viña Vintage Virginia Vivi Volta Vucko 
    Vulcano Vurgun Vürst Vytas
 
-   Wael Wafa Wala Waldi Walpurga WBack WBFIT WBGO WDP Wengens Winatalya 
-   Windrunners Winkiboy Winterfell Wizards
+   Wael Wafa Wala Waldi Walpurga Wanghong WBack WBFIT WBGO WDP 
+   Weiqun Wengens Winatalya Windrunners Winkiboy Winterfell Wizards
+   Wolf
 
    Xatzopoulos Xman Xtrouble XXX XXXL XXXSL XXXXXYXY
 
-   Ybs YBM Yaðmur Yamata Yansimasiz Yelena Ylajai Yogakshema Yokozuna
+   Ybs YBM Yaðmur Yamata Yansimasiz Yelena Yichuang Ylajai 
+   Yogakshema Yokozuna
    YYY
 
    Zabavljaci Zamek Zana Zara Zen Zeyno Zhihaole Ziggy 
@@ -1130,6 +1145,7 @@ my %SINGLE_TYPOS =
   Hästpojkarna => ['hastpojkarna'],
   Hridhaan => ['hridhan', 'haridhaan', 'hrridhaan', 'hrridhaan',
     'hridaan'],
+  'HZ Connection' => ['hzconnection'],
   Imponderables => ['impoderables'],
   'India Blues' => ['indiablues'],
   'Jamm & Co' => ['jamm'],

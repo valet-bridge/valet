@@ -39,6 +39,7 @@ my @MULTI_WORDS =
   'Meilin Qingcheng',
   'Mitra Vihar',
   'Monte Carlo',
+  'Muara Bungo',
   'Novi Sad',
   'Reggio Emilia',
   'San Giorgio del Sannio',
@@ -56,6 +57,7 @@ my @MULTI_WORDS =
   'Villa Fabbriche',
   'Vrnjacka Banja',
   'Xin Zhu',
+  'Ye Shi',
   'Yedi Eylul',
   'Zhong Jian'
 );
@@ -74,7 +76,6 @@ my %MULTI_TYPOS =
   Jakarta => ['jak-tim', 'jakarta pusat', 'jakarta utara',
     'dki jaya'],
   Kristiansand => ['kr.sand'],
-  Nangang => ['nan gang'],
   Ningbo => ['ning bo'],
   'Novi Sad' => ['nowe sady'],
   'Reggio Emilia' => ['r.e.', 'reggio e', 'r. emilia', 'reg. emilia'],
@@ -136,7 +137,7 @@ my @SINGLE_WORDS = qw(
   Iasi Iskenderun Isparta Istanbul Izmir
 
   Jagodina Jaipur Jakarta Jember Jessheim Jiamusi Jiangyou Jilin 
-  Jinchang Jincheng Jinjiang Jomtien
+  Jinchang Jincheng Jinjiang Jiujiang Jomtien
 
   Kadikoy Kadirli Kalisz Kalundborg Kalyani Kanpur Karaçay Karachi
   Kardelen
@@ -146,7 +147,7 @@ my @SINGLE_WORDS = qw(
   Kolbotn Kolkata Konak Kornik Korwin Kosice Koycegiz Köln Krakow 
   Kristiansand 
   Kucukcekmece Kudus Kunshan Kuopio Kusadasi Küp Kütahya Kverndalen
-  Kølabånn
+  Kwok Kølabånn
 
   Langkat Lappee Leiden Leilem Lemvourgeio Lerum Leszno Leuven Leverkusen 
   Lhokseumawe Lille Lima Lincoln Lindesberg Ljubljana Lodz Lokotok
@@ -159,13 +160,13 @@ my @SINGLE_WORDS = qw(
   Midyat Milan Milas Minsk Miskolc Montpellier Moradabad Morud
   Moudania Mrzenci Mumbai Munich Muratpasa
 
-  Nagbagan Nagpur Nagykanizsa Namsos Nanning Napoli
+  Nagbagan Nagpur Nagykanizsa Namsos Nanchang Nanning Napoli
   Narita Narlidere Narvik Nazilli Näsby Nijmegen Ningbo Niski 
   Norrbyskär Norrorts Norrøna Nusantara Nürnberg Nyon Nærbø Næstved 
   Nøtterøy
 
-  Odense Ogndal Oldenburg Olgiata Orhangazi Oslo Ottadalen Otepää
-  Oxford Överum
+  Odense Ogndal Oldenburg Olgiata Olsztyn Orhangazi Oslo Ottadalen 
+  Otepää Oxford Överum
 
   Padang Padova Paimado Palembang Palermo Palma Palu Pamukkale 
   Pancevo Panzhihua Pariaman Parioli Paris Pärnu Pasham Pattaya 
@@ -230,7 +231,7 @@ my %SINGLE_TYPOS =
   Atakoy => ['ataköy'],
   Auckland => ['akarana'],
   Ayvalik => ['aivali'],
-  Bahcesehir => ['bahçeþehýr'],
+  Bahcesehir => ['bahçeþehýr', 'bahcesehýr'],
   Balisekir => ['balikesýr', 'balýkesir',],
   Balkova => ['balçova'],
   Bangalore => ["b'lore", 'banglore'],
@@ -277,12 +278,14 @@ my %SINGLE_TYPOS =
   Mumbai => ['mum'],
   Munich => ['münchen'],
   Nagpur => ['nagpor'],
+  Nanchang => ['nancang'],
   Napoli => ['naples'],
   Narlidere => ['narlýdere'],
   Ningbo => ['ningpo'],
   Norrbyskär => ['norrbyskar'],
   'Novi Sad' => ['nowewsady'],
   Olgiata => ['ola'],
+  Olsztyn => ['olo'],
   Pamukkale => ['pamuk'],
   Panzhihua => ['panzhihuabc'],
   Parioli => ['paroli'],
@@ -294,6 +297,7 @@ my %SINGLE_TYPOS =
   Reykjavik => ['reykjavikur', 'reykjavitur'],
   Rome => ['roma'],
   Saarbrücken => ['saarbruecken'],
+  Shenzhen => ['sz'],
   Skawina => ['skawia'],
   Singsås => ['singsaas'],
   Storsjöbygden => ['storsjöbygdens'],

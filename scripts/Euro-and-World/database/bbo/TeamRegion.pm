@@ -36,6 +36,7 @@ my @MULTI_WORDS =
   'Gabungan Malaku',
   'Garut Regency',
   'Kepulauan Riau',
+  'Kutai Kartanegara',
   'Lower Silesia',
   'Madhya Pradesh',
   'Midt Trøndelag',
@@ -98,6 +99,7 @@ my %MULTI_TYPOS =
   Guangdong => ['guang dong'],
   Hubei => ['hu bei'],
   Jiangsu => ['jiang su'],
+  'Kutai Kartanegara' => ['kutai kartanega'],
   'Lower Silesia' => ['dolny slask'],
   Marmara => ['g.marm'],
   'North Sulawesi' => ['notth sulawesi', 'north sulawsei',
@@ -124,7 +126,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Angkaew Anhui Ayrshire
+  Agder Angkaew Anhui Ayrshire
   Bali Banten Belitung Bengkayang Bihar Bornholm Bungo Buskerud
   Cappadocia Corsica
   Druts
@@ -150,7 +152,7 @@ my @SINGLE_WORDS = qw(
   Uttarakhand
   Victoria Vojvodina
   Waikato
-  Yunnan
+  Yongjia Yunnan
   Zhejiang
 );
 

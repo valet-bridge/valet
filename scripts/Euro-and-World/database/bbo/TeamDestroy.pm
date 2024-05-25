@@ -36,8 +36,8 @@ my @SINGLE_WORDS = qw(
   Best Bridge
   Center Challenger City Commercial Commune
   Development Dist
-  Earth East ENC European Festival
-  Field
+  Earth East ENC European Event
+  Festival Field
   GD GLPD Group Groupe
   Home Host
   Indi Inter International Invit Invitational
@@ -48,7 +48,7 @@ my @SINGLE_WORDS = qw(
   og Opponent Opponents Other Others
   Pacific pc PairNo Players Plus Point PON Prima Pusat
   Rank River
-  Section Selected South Sponsor Squad Stars Sunday
+  Section Selected South Sponsor Squad Stars Sunday Swiss
   Table Tennis Test Times Top Tournament Tricks
   United
   Visit

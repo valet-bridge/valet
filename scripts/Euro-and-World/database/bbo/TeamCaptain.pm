@@ -59,6 +59,7 @@ my @MULTI_WORDS =
   'Carlos Santos',
   'Carlos Teixeira',
   'Chalermpol Wongwaiwit',
+  'Choo Wai Wong',
   'Christal Henner-Welland',
   'D Banerjee',
   "D'Avossa",
@@ -182,6 +183,7 @@ my @MULTI_WORDS =
   'Krzysztof Strykier',
   'Kumar Vijay Anand',
   'Kurniadi Djauhari',
+  'Kwok-Fai Mak',
   "L'Écuyer",
   'Lauge Pedersen',
   'Li Shu Yuan',
@@ -377,6 +379,7 @@ my %MULTI_TYPOS =
   'C.V. Rao' => ['c v rao', 'c. v. rao', 'c.v.rao', 'c.v.rao.', 'cv rao'],
   'Carlos Gonçalves' => ['carlos goncalves', 'c goncalves',
     'carlos gonçalve', 'carlos gonçalv'],
+  'Choo Wai Wong' => ['int choowai'],
   'Christal Henner-Welland' => ['welland-h', 'henner-we'],
   Cladius => ['dr. cladius'],
   'David Birman' => ['birman david', 'birman d'],
@@ -455,6 +458,7 @@ my %MULTI_TYPOS =
   'Krzysztof Strykier' => ['k.strykier'],
   'Kumar Vijay Anand' => ['kr. vijay anand', 'kr. vijayanand'],
   'Kurniadi Djauhari' => ['dee jee'],
+  'Kwok-Fai Mak' => ['kf mak'],
   "L'Écuyer" => ["l'ecuyer", 'lecuyer', 'l ecuyer', 'l"ecuyer',
     "l'equyer"],
   'Lauge Pedersen' => ['lauge-pedersen'],
@@ -565,7 +569,8 @@ my @SINGLE_WORDS = qw(
   Beauvillain Becker Bell Bello Bellosta Belonogov Benassi Bennett 
   Berdichevsky Berg Berger Bergheimer Berkowitz Berktas Berlinski 
   Berman Bernard Bernasconi Bernstein Berrettini Bertens Bertheau 
-  Bertolucci Bessis Bettini Beyer Bhalchandra Bhattacharya Biagiotti 
+  Bertolucci Besiris Bessis Bettini Beyer Bhalchandra Bhattacharya 
+  Biagiotti 
   Bilal Bilde Bilski Binderkrantz Bingol Biondillo Biondo Bird 
   Birin Bittner Bitran Bizer Bjarnarson Bjerkan Bjornlund Black
   Blackstock Blakeman Blakset Blanchard Blanco Blandin Bley 
@@ -634,7 +639,7 @@ my @SINGLE_WORDS = qw(
   Gelberg Geller Genc Generosi Gentili Georgescu Gerber Gerli 
   Gero Gerrard Geyer Gezer Ghionis Giangkos Giannessi Gidman 
   Gierulski Gigliotti Gilboa Gill Ginnan Ginossar Gioia Gitelman 
-  Giura Gladiator Gladysh Glanger Glasson Glopson Goded Gold 
+  Giura Gladiator Gladysh Glanger Glasson Glopson Gobbi Goded Gold 
   Goldberg Goldenfield Goldman Goldstein Golebiowski Gomerov Gomes 
   Goodman Goraco Gordon Goren Gosney Gotard Gottlieb Goyal Göthe 
   Grabel Grabowska Gradignan Gradovsky Grainger Gramberg Granda
@@ -712,14 +717,14 @@ my @SINGLE_WORDS = qw(
   McDonald McGann McGinley McGowan McGrath McIntosh McKellar 
   McLeish McLeod McKinnon McLeish McManus McMahon McMullin 
   McNamara Meckstroth Medugno Medved Mehech Mejane Mello Mendez 
-  Mendoza Meltzer Merah Merapi Merblum Mersin Mesbur Messika 
+  Mendoza Meltzer Merah Merapi Merblum Mesbur Messika 
   Mestres Metselaar Meyer Meyers Meyouhas Mezei Michaud Michealakis 
   Mickiewicz Miles Milgrim Mill Millar Miller Mills Milne 
   Milner Mina Minahasa Miner Minzli Miozzi Mira Miroglio 
   Miszewska Mitra Mittelman Mirali Miura Mizel Mizrak Mohota 
   Mohtashami Molenaar Molenda Molina Molva Monachan Moni Monsegur 
   Montanari Mooney Moran Morath Morawski Moreira Morelli Morgan 
-  Moritsch Morot Morris Morrison Morse Mortensen 
+  Mori Moritsch Morot Morris Morrison Morse Mortensen 
   Moses Moskovsky Moss Mossop Mott Mouiel Mpampou Mpanikas 
   Mpompolakis Mucha Mueller Mullamphy Muller Multon Mundell 
   Munksgaard Munson Munteanu Muntz Muriel Murray Mus Mutiara 
@@ -740,6 +745,7 @@ my @SINGLE_WORDS = qw(
   Pacareu Pacault Pacini Paganus Paiva Pajak Paladino Palau Palma 
   Palmeira Palmer Palmund Pals Panagaki Panto Panopoulos 
   Papahatzis Papakyriakopoulos Papaxatzis Parker Partearroyo Parviainen 
+  Pasquarè
   Passarinho Passaro Passell Pastore Pattinson Pattison Paulissen 
   Pauncz Pavlicek Payen Pazur Peake Pedzinski Peirão Pekkinen Peksen 
   Penfold Percario Pereira Peres Periasamy Perisic Persiani Petculescu 
@@ -771,6 +777,7 @@ my @SINGLE_WORDS = qw(
   Saporta Sapounakis 
   Sargos Sarten Sarundajang Savchenko Savelli Savorani Savski Sawicki 
   Sayaca Saydi Sayer Sayilkan Sayýlkan Sbarigia Scanavino Scerri Schaltz 
+  Scherders
   Schermer Schlicker Schneider Schnetzer Scholes Schonning Schoolmann 
   Schou Schuett Schulle Schulz Schüller Schroeder Schreckenberger 
   Scoltock Scudder Scullin Schwartz Schwerdt Sealy Sebbane Seguineau 
