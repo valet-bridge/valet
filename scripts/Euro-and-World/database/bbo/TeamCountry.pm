@@ -67,7 +67,7 @@ my %MULTI_TYPOS =
     'rep ire', 'rep ireland', 'republic of irelend', 'reublic of ireland',
     'r of ireland'],
   'San Marino' => ['san_marino', 'san  marino'],
-  'Serbia and Montenegro' => ['serbia/mont', 'serbia&mon.'],
+  'Serbia and Montenegro' => ['serbia/mont', 'serbia&mon.', 's&mn'],
   'Trinidad and Tobago' => ['trinidad & tobago', 'trinidad&tobago'],
   'United Arab Emirates' => ['u.a.e.'],
   USA => ['u.s.a.']

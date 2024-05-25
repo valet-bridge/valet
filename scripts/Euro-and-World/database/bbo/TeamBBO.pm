@@ -501,7 +501,7 @@ sub study_component
 
 sub study_team
 {
-  my ($text, $chain) = @_;
+  my ($text, $chain, $bbono) = @_;
 
   return if $text eq '';
   return if suggest_form($text, \%FORM_SCORES);
@@ -539,7 +539,7 @@ sub study_team
     }
   }
 
-  print "UUU $text\n" if ($unsolved_flag && $chain->last() > 0);
+  print "UUU $bbono: $text\n" if ($unsolved_flag && $chain->last() > 0);
   print "\n" if $unsolved_flag;
 }
 
@@ -562,7 +562,7 @@ sub print_team_stats
 
 sub study_teams
 {
-  my ($text, $result, $chain1, $chain2) = @_;
+  my ($text, $result, $chain1, $chain2, $bbono) = @_;
 
   return unless defined $text;
 
@@ -587,8 +587,8 @@ sub study_teams
     die "Can't parse team line $text\n";
   }
 
-  study_team($result->{TEAM1}, $chain1);
-  study_team($result->{TEAM2}, $chain2);
+  study_team($result->{TEAM1}, $chain1, $bbono);
+  study_team($result->{TEAM2}, $chain2, $bbono);
 }
 
 

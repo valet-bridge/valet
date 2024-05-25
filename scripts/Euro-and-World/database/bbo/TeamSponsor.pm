@@ -329,9 +329,11 @@ my @MULTI_WORDS =
   'Yeh Bros',
   'Yibin China Resources',
   'Yi Tong',
+  'YOU Singapore',
   'Yufeng Electric',
   'Yunnan Dikuang Resources',
   'Yunnan Tongya',
+  'zagraj.pl',
   'Z-Tech',
   'Zhe Da Wang Xin',
   'Zhejiang Hanbang',
@@ -371,7 +373,8 @@ my %MULTI_TYPOS =
   'Cai Fu Zheng Quan' => ['cai fu'],
   'Caretta International' => ['caretta int'],
   'China Finance' => ['china finance ba'],
-  'China Ping An' => ['zg pingan', 'zg  pingan', 'china pingan'],
+  'China Ping An' => ['zg pingan', 'zg  pingan', 'china pingan',
+    'ping an'],
   'China Resources' => ['china resources power', 'cr power',
     'china res. power', 'cr enterprise'],
   'Chateau Rossenovo' => ['chatteau rossenovo', 'chatteu rossenovo',
@@ -516,6 +519,7 @@ my %MULTI_TYPOS =
     'yer bros', 'yeoh bros'],
   'Yibin China Resources' => ['yibin cr gas', 'yibin china resourc'],
   'Yunnan Dikuang Resources' => ['yunnan dikuang', 'yun nan'],
+  'zagraj.pl' => ['zagraj pl'],
   'Zhejiang Huamen' => ['zhe jiang hua men'],
   'Zhejiang Jingfan' => ['zj jingfan'],
   'Zhongshan Jiegao' => ['zhong shan jie gao'],
@@ -579,7 +583,7 @@ my @SINGLE_WORDS = qw(
 
   Underberg Unibet Unicat
 
-  Vale Velbazhd Velbujd Vilmar Vinabær Virnet VÍS Visoft Vito Voff
+  Vale Velbazhd Velbujd Vico Vilmar Vinabær Virnet VÍS Visoft Vito Voff
   Vyceska
 
   Wellknit Wellwise Winbridge Wise
@@ -603,7 +607,7 @@ my %SINGLE_TYPOS =
   'Carlo Bossi' => ['carlobossi'],
   'Chateau Rossenovo' => ['rossenovo', 'rosenovo'],
   'Chennai Online' => ['chennaionline'],
-  'China Ping An' => ['chinapingan', 'zhongguopingan'],
+  'China Ping An' => ['chinapingan', 'zhongguopingan', 'pingan'],
   'China National Petroleum Corporation' => ['cnpc'],
   Cimentas => ['çimentaþ'],
   Computerland => ['computerlan'],

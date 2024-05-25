@@ -72,7 +72,9 @@ while ($line = <$fh>)
   my $chain1 = Chain->new();
   my $chain2 = Chain->new();
   my %result;
-  study_teams($chunk{TEAMS}, \%result, $chain1, $chain2);
+  study_teams($chunk{TEAMS}, \%result, $chain1, $chain2,
+    # tmp
+    $chunk{BBONO});
 
 =pod
   # Fix some space-related issues.

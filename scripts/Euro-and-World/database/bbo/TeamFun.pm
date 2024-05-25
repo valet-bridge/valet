@@ -530,6 +530,7 @@ my @MULTI_WORDS =
   'Precision Marathon',
   "President's Team",
   'P.S.',
+  'Pur Pur',
   'Quatro Bruxas',
   'Queen and Knights',
   'Queen of Hearts',
@@ -1001,7 +1002,7 @@ my @SINGLE_WORDS = qw(
    Kompisarna Konga Kordam Korsikalý Kortai Koru Koukouselis KrASK 
    Kratos 
    Krem Kris Kriston Krisztina Ksenia Kuglana Kuhmilch Kultur
-   Kvazar
+   Kvazar Kwiecisty
 
    Lahjattomat LAKT Langy Laplanders Laplas Larry Lasse Lataka Lateria 
    LatSwe Lazy LBC Lebensohl Lebron Legeanka Lema Lemanus Leszek 
@@ -1011,7 +1012,7 @@ my @SINGLE_WORDS = qw(
    Longzhu
    Loreng LOS Lowel Löparn LPMS Lucky LVBridgeBums Lyubcho Løwene
 
-   Mach Madhav Mads Maestroi Magi Magic Magister Magnus Maharaja 
+   Macak Mach Madhav Mads Maestroi Magi Magic Magister Magnus Maharaja 
    MAHÝR ÞENOL Maija Maj
    Major MajorB Majorn Majority Makara Makriköy Mali Malinka Malmölaget 
    Manashda Manena Manno Mano 
@@ -1022,7 +1023,8 @@ my @SINGLE_WORDS = qw(
    Milady Milo Minut 
    Mirage Miro Mismatch Mixarna Mjøskameratne MMMM MMRMC
    Mochu Monaconf Mongos
-   Moritz Mostingan Movember Mölnlycke Munawar Mustang Mýna Myoni 
+   Moritz Mostingan Movember Mölnlycke Munawar Mustang Muumio 
+   Mýna Myoni 
    Møremix Måsen
 
    Nabil Nadide Narbisk Narre Natalia Nathans Natural Naturalists Neduk 
@@ -1046,7 +1048,7 @@ my @SINGLE_WORDS = qw(
    Pompapompa 
    Pontiac Poss Potlimit Potteplante Powerchicks Prapar Prasetya 
    Preempters Pretendents Prijatelj Prosan Proteus Proto Ptacol 
-   Pude Pusten Pyon Pyton Påskevennene
+   Pude Pusten Pyon Pyton PZIM Påskevennene
 
    Quantum Quasar Quattro Quinze
 

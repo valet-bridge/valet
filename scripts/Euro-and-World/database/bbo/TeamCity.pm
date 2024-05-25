@@ -23,7 +23,6 @@ my @MULTI_WORDS =
   'Boven Digoel',
   'El-Maadi',
   'Gjøvik og Vardal',
-  'Ping An',
   'Kansas City',
   'Kashi Goa',
   'Kota Bandung',
@@ -210,7 +209,7 @@ my @SINGLE_WORDS = qw(
   Wroclaw Wuhan
 
   Yalikavak Yambol Yarimada Yarýmca Yatagan Yenisehir Yibin Yildirim 
-  Yokohama Yogyakarta
+  Yizhuang Yokohama Yogyakarta
 
   Zagreb Zeugma Zhenjiang Zhongshan Zhujiang Zhuzhou Zigong Zurich 
   Zyrardow
