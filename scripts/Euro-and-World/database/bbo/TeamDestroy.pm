@@ -62,6 +62,7 @@ my %SINGLE_TYPOS =
   Bridge => ['bric'],
   Center => ['merkezi'],
   Challengers => ['chalengers'],
+  Group => ['istis'],
   International => ['internat', 'internationa'],
   Leaders => ['leader', 'leders'],
   National => ['nasional'],

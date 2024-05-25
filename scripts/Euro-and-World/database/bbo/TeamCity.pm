@@ -76,6 +76,7 @@ my %MULTI_TYPOS =
   Jakarta => ['jak-tim', 'jakarta pusat', 'jakarta utara',
     'dki jaya'],
   Kristiansand => ['kr.sand'],
+  Lozenets => ['vs lozenec', 'vv lozenets'],
   Ningbo => ['ning bo'],
   'Novi Sad' => ['nowe sady'],
   'Piatra Neamt' => ['p. neamt', 'p.neamt'],

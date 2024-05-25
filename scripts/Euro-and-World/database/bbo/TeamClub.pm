@@ -282,6 +282,7 @@ my %MULTI_TYPOS =
   'Majör Boğaziçi' => ['major b', 'major bogazici',
     'majör boðaziçi'],
    Malatyagücü => ['malatya gucu', 'malatya gücü'],
+   Matunga => ['matunga gym'],
    'Mersin Club' => ['mersin bsb', 'mersin bþb', 'mersin bsbs',
      'mersin ybsk', 'mersin bbs', 'mersin bsb sk', 'mersin bb'],
   'Midt Trøndelag' => ['midt trondelag', 'midt-trøndelag',
@@ -330,7 +331,7 @@ my @SINGLE_WORDS = qw(
   Karagümrük Karlsruher Kløverknekt 
   Lavec Laksamana LÜKSAD
   Locomotiva
-  Malatyagücü Miskolc Mo Mragowia
+  Malatyagücü Matunga Miskolc Mo Mragowia
   NBK
   Pamukspor Pelatnas
   Qizhong

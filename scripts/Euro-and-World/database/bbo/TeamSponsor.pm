@@ -292,6 +292,7 @@ my @MULTI_WORDS =
   'Sung Tao',
   'Suzhou Youtong',
   'Swara Kita',
+  'SY Sheng Yutain',
   'Syabas Energy',
   'Sygnity',
   'Synergia Lublin',
@@ -501,6 +502,7 @@ my %MULTI_TYPOS =
     'spariisj.siglufjar', 'sparisj.siglufj', 'sparisj.siglufjarð',
     'sparisj.siglufjarða', 'sarpisj.siglufjarð', 'spariisj.siglufjarð'],
   'Spasso Food' => ['spassofood'],
+  'SY Sheng Yutain' => ['s.y. shengyutain'],
   'Syabas Energy' => ['syabas energi', 'syabas e'],
   'Synergia Lublin' => ['synergia lubin'],
   'Team PharmaService' => ['pharma service', 'pharmaservice'],
@@ -520,7 +522,7 @@ my %MULTI_TYPOS =
   'Yibin China Resources' => ['yibin cr gas', 'yibin china resourc'],
   'Yunnan Dikuang Resources' => ['yunnan dikuang', 'yun nan'],
   'zagraj.pl' => ['zagraj pl'],
-  'Zhejiang Huamen' => ['zhe jiang hua men'],
+  'Zhejiang Huamen' => ['zhe jiang hua men', 'hua men'],
   'Zhejiang Jingfan' => ['zj jingfan'],
   'Zhongshan Jiegao' => ['zhong shan jie gao'],
   'Zhongtong Jiangsu' => ['zhongtong js']
@@ -581,7 +583,7 @@ my @SINGLE_WORDS = qw(
   Tekser Telkom Termika Termoavion Termochem Timah Topeko Transearly 
   Tricon Tridaya Triton Tryggingamiðstöðin Tsingtao Tundem Tyco Tzilis
 
-  Underberg Unibet Unicat
+  UMW Underberg Unibet Unicat
 
   Vale Velbazhd Velbujd Vico Vilmar Vinabær Virnet VÍS Visoft Vito Voff
   Vyceska
@@ -674,7 +676,8 @@ my %SINGLE_TYPOS =
   Tsingtao => ['tsingthao'],
   'Viego Regnskap' => ['viego'],
   Wellwise => ['wellwiss'],
-  'Yeh Bros' => ['yeh']
+  'Yeh Bros' => ['yeh'],
+  'Zhejiang Huamen' => ['huamen']
 );
 
 

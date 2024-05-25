@@ -274,6 +274,7 @@ my @MULTI_WORDS =
   'Raja Brawijaya',
   'Ralitsa Mihaylova Mircheva',
   'Raul Guerreiro',
+  'Reinaldo Timoteo',
   'Rita Choksi',
   'Rita Russo',
   'Rodrigo Suares',
@@ -313,6 +314,7 @@ my @MULTI_WORDS =
   'Tomi Gotard',
   'Tor Helness',
   'Toshiro Nose',
+  'Udi Friedlander',
   'Uri Gilboa',
   'Urmil Agarwal',
   'van Prooijen',
@@ -534,6 +536,7 @@ my %MULTI_TYPOS =
   'T.V. Joshi' => ['t v joshi'],
   'Teixeira-Reus' => ['txecs-reus', 'txec-reus'],
   'Teresa Kay' => ['t.kay'],
+  'Udi Friedlander' => ['friedlander udi'],
   'Uri Gilboa' => ['gilboa uri', 'gillboa uri'],
   Vahalia => ['dr.vahalia'],
   Vithaya => ['dr.vithaya'],
@@ -716,7 +719,7 @@ my @SINGLE_WORDS = qw(
   Marina Marincho Marinescu Marino Markey Markowicz Marks Marmonti 
   Marquardsen Marsonis Marston Marta Martel Martellini Martens Martin 
   Martini Martins Marupe Masana Masini Mason Matei Matheson 
-  Matisons Matteucci Matushko Matunga Mauberquez Mavridis Mayorga 
+  Matisons Matteucci Matushko Mauberquez Mavridis Mayorga 
   Mazurkiewicz Maybach Mäkikangas Märsylä McAllister McCance 
   McDonald McGann McGinley McGowan McGrath McIntosh McKellar 
   McLeish McLeod McKinnon McLeish McManus McMahon McMullin 
@@ -738,7 +741,7 @@ my @SINGLE_WORDS = qw(
   Narasimhan Naqvi Narasinham Nardullo Natale Navneet Neale Negrin 
   Neill Nencini Netto Neuhauser Neulinger Neve Newell Newman 
   Nickell Nielsen Nieminen Nikolenkov Nikolov Nilsland Nilsson 
-  Nimhauser Ninos Nixon Nobel Noble Nordby Novoski Nowosadzki 
+  Nimhauser Ninos Nixon Nobel Noble Nordby Novoski Nowicki Nowosadzki 
   Nuñez Nørgaard Nunes Nunn Nussbaum Nyshchyi Nystrom
   
   O'Brien O'Gorman Ohno Ohrysko Oikonomou Oikonomopoulos
@@ -806,7 +809,7 @@ my @SINGLE_WORDS = qw(
   Tardy Tarhan Tarkunde Tarnovski Tarsus Tasman Taylor Tebha Tedd 
   Teltscher Tembouret Tencer Teodorescu Teramoto Terraneo Tesla Tez 
   Thapa Thomsen Thompson Thomson Thoresen Thuillez Thurston Ticha 
-  Timoteo Tishler Tislevoll Todd Toffier Toivonen Tokay Torielli Toro
+  Tishler Tislevoll Todd Toffier Toivonen Tokay Torielli Toro
   Tosi Townsend Trabucchi Travis Tritt Troberg Tsang Tsilis Tubiska 
   Tucker Tudor Tulin Tully Tuomi Turner Tuszynski Tuwanakotta 
   Türkoðlu Tyradelli Tøndel
@@ -1017,6 +1020,7 @@ my %SINGLE_TYPOS =
   'Rahul Ravichandran' => ['ravichandran'],
   'Ralitsa Mihaylova Mircheva' => ['ralitsa'],
   Ramamurthy => ['ramamurthi'],
+  'Reinaldo Timoteo' => ['timoteo'],
   Richardson => ['rchardson'],
   Rietvink => ['reitvink'],
   Riisnæs => ['riisnes'],

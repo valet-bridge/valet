@@ -444,6 +444,7 @@ sub split_on_multi
     next if $MULTI_REGEX{$tag} eq '';
     for my $i (reverse 0 .. $#$parts)
     {
+      next if $tags->[$i] ne '0';
       my @a = grep { $_ ne '' } split /$MULTI_REGEX{$tag}/, $parts->[$i];
 
       if ($#a == 0)

@@ -23,6 +23,8 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   EBU => ['eng bridge union'],
+  GABSI => ['gabungan bridge seluruh indonesia'],
+  IBWI => ['ikatan bridge wanita indonesia'],
   JBA => ['j.b.a.'],
 );
 
@@ -33,6 +35,7 @@ my @SINGLE_WORDS = qw(
   EBU
   FMB
   GABSI
+  IBWI
   JBA
   MCBA
   NIBU

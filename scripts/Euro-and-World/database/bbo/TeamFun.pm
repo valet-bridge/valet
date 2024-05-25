@@ -484,6 +484,7 @@ my @MULTI_WORDS =
   'North Star',
   'Not the Empire',
   'Novi Tim',
+  'NT-iosa-gutta',
   'Næsten Junior',
   'Oceans4',
   'Occupy Taksim',
@@ -543,6 +544,7 @@ my @MULTI_WORDS =
   'Randers 2.0',
   'Randers 4.0',
   'Red Ash',
+  'Red Beach',
   'Red Pork Cutlet',
   'Red Sea Festival',
   'Red Soles',
@@ -783,6 +785,7 @@ my %MULTI_TYPOS =
   'Beverly Hillbillies' => ['beverly hillbillie'],
   'Big Guns' => ['big gun'],
   'Big Makie' => ['big makie och co'],
+  BNMR => ['b n m r'],
   'Brian Is Beautiful' => ['brian is beatiful'],
   'Bridge am Grün' => ['bridge am gruen'],
   'Bridgerama Milan' => ['bridgerama mi'],
@@ -828,7 +831,6 @@ my %MULTI_TYPOS =
   "Hell's Angels" => ['hells angels'],
   'Holmenkollen' => ['h-kollen'],
   'Hopp i sang' => ['hoppa i sang'],
-  Huamen => ['hua men'],
   'Hum Paanch' => ['hum paach'],
   'Hungarian Olympic' => ['hungar olimp', 'hungarian olimp',
     'hungar olimpics', 'hungar olimpic'],
@@ -924,13 +926,15 @@ my @SINGLE_WORDS = qw(
    Aurora AUTBUL AUTHOL Autostrada Avagard Avalanche Avatar Ayan
    Aytalus Azores Azure
 
-   BABK Bacch Bachelor Bade Badger Badminton Bager BAK Baias Bajozero 
-   Balti Baltic
+   BAB BABK Bacch Bachelor Bade Badger Badminton Bager BAK Baias 
+   Bajozero Balti Baltic
    Banana Bananasplit Baneet BarDeZi BARC BARP Barracuda Baryton BAST 
    Bat Batmix Bato Batusida Bauhinia 
-   BBO Beauty Begigütje Begijntje BELSPA Ben Beniaminek Berik Beton 
+   BBE BBO Beauty Begigütje Begijntje BELSPA Ben Beniaminek Berik Beton 
    BHDM Bhide Bhinneka Biachite Bilal BIN Bingbang Binkie Biriceri 
-   Blackwood Blandat Bling Blondie Blund Blueberry BMP BOC Boek Bolero 
+   Blackwood Blandat Bling Blondie Blund Blueberry BMP BNMR BNS
+   BOC Boek 
+   Bolero 
    Boogies Boomz Boriana 
    Borko BOVE Breno Bricklayer Bridgebutikken Bridgekameratene 
    Bridgeministeriet Brigada Brigida BRK Brother Brudarna Buaigh 
@@ -968,7 +972,7 @@ my @SINGLE_WORDS = qw(
 
    Gabrisem Galaxy Galim Gambitas Gamma Garry Garp Garuda Gata Gelim 
    Gelin Gentle George Geriatrix Gewanna Geysir Gesi Giants Gibs 
-   Gjesp Gkobra GloryGlory Goldcat Goroco Gosho Göktürk Grand Grads
+   Gjesp Gkobra GloryGlory Goldcat Goroco Gosho Göktürk GP Grand Grads
    Greecoura Greta Grup Guayacos Gudok Guests Gulce Gulebjorn Gullberg 
    Gullvi Gunsmoke Guptas Gürsel
 
@@ -978,7 +982,7 @@ my @SINGLE_WORDS = qw(
    Heliopolis HengSha 
    HERZdame HeSa Hey Hiiimmm Hilda Hist Hjerterdamer HKES Hobbits Holders 
    Holifera Hollywood Holmenkollen
-   Holport Honeymoon Hopfenkönig Hornet Hridhaan Huamen Hubsi Huhu 
+   Holport Honeymoon Hopfenkönig Hornet Hridhaan Hubsi Huhu 
    Hunaja Huispaus Hunhun Hurra Hybrid
 
    IBE Ida Iff Ijseide Ikarus Ilya IMAN Imanual IMLUK Imponderables 
@@ -1052,7 +1056,7 @@ my @SINGLE_WORDS = qw(
 
    Quantum Quasar Quattro Quinze
 
-   Radhey Radikk Rafael Raifles Rakinnett RAM Ramkumar Rampage 
+   Radhey Radikk Rafael RAG Raifles Rakinnett RAM Ramkumar Rampage 
    Rapid RASH Raskasammen Real Recaptan Regeldur Reklamtrion Reloaded 
    Rene Rob Ribitas Rima RKK Robertinho Robi Robocop Rollers Rosajora 
    Rovers Royston Rozle Rylai Rylal
@@ -1098,16 +1102,17 @@ my @SINGLE_WORDS = qw(
 
    Wael Wafa Wala Waldi Walpurga Wanghong WBack WBFIT WBGO WDP 
    Weiqun Wengens Winatalya Windrunners Winkiboy Winterfell Wizards
-   Wolf
+   WLKP Wolf WSWT
 
-   Xatzopoulos Xman Xtrouble XXX XXXL XXXSL XXXXXYXY
+   Xatzopoulos Xinhai Xman Xtrouble XXX XXXL XXXSL XXXXXYXY
 
    Ybs YBM Yaðmur Yamata Yansimasiz YeJun Yelena Yichuang Ylajai 
    Yogakshema Yokozuna
    YYY
 
    Zabavljaci Zamek Zana Zara Zen Zeyno Zhihaole Ziggy 
-   Zimmkonis Zivac Zlatan Zombi Zorro Zozoura Zugzwang Zurzits Zvanger
+   Zimmkonis Zivac Zlatan Zmaj Zombi Zorro Zozoura Zugzwang Zurzits 
+   Zvanger
 
    Øssur
 );
