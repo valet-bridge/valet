@@ -153,7 +153,8 @@ my %MULTI_TYPOS =
   'Warsaw University of Technology' => ['warsaw ut'],
   'Wroclaw University of Science and Technology' => 
     ['Politechnika Wroclawska', 'polit wroclaw', 'polite wroclaw',
-    'polit wr', 'politechnika wr', 'azs pw', 'politehnica cluj'],
+    'polit wr', 'politechnika wr', 'azs pw', 'politehnica cluj',
+    'poli cluj'],
   'Yildiz Technical University' => ['ýtü']
 );
 

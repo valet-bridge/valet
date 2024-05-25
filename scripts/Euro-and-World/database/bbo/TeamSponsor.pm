@@ -118,6 +118,7 @@ my @MULTI_WORDS =
   'Geely Automobile',
   'Geoportal Kutai Kartanegara',
   'Gong Hang Jin Ying',
+  'Guangdong Huachu Chemicals',
   'Guangzhou Hongmian',
   'Guangzhou Huachu Chemicals',
   'Guangzhou Pearl River',
@@ -377,6 +378,7 @@ my %MULTI_TYPOS =
     'chaetou rosenovo', 'shato rosenovo', 'shato rossenovo'],
   'China Global Times' => ['chinal global times', 'huan qiu Shi bao'],
   'China Trinergy' => ['chinatrinergy'],
+  'CONNECTOR' => ['aj-connector'],
   'Data Steel' => ['datta steel'],
   'Dhampur Sugar' => ['dhampur sugar mills', 'dhampur sugars', 
     'dhampur suger mills', 'dhampor sugar mills', 'dhampu sugar mills',
@@ -404,6 +406,7 @@ my %MULTI_TYPOS =
   'Geoportal Kutai Kartanegara' => ['geo gutai gartanega'],
   'Gong Hang Jin Ying' => ['gonghang jinying', 'jin ying club',
     'jin ying', 'gonghang jinying'],
+  'Guangdong Huachu Chemicals' => ['g.d. huach'],
   'Guangzhou Huachu Chemicals' => ['gz huachu chem'],
   'Guangzhou Pearl River' => ['gz pearl river', 
     'guangzhou pearl river development'],
@@ -474,7 +477,7 @@ my %MULTI_TYPOS =
   'Shanxi Qinlian' => ['shan xi qin lian', 'shanxi qinlian',
     'qin lian club', 'qin lian'],
   'Shenzhen Nangang' => ['shen zhen nan gang', 'shenzen nangang',
-    's.z. nangang power', 'nangang dongli', 'shenzeh nangang'],
+    's.z. nangang power', 'nangang dongli', 'shenzeh nangang', 'nan gang'],
   'Shenzhen Ping An' => ['shen zhen ping an', 'shenzhen pingan'],
   'Shenzhen Topone Car' => ['shenzhen topone', 'sz topone car'],
   'Shiji Changda' => ['chang da', 'shijichangda', 'shi ji chang da'],
@@ -566,7 +569,7 @@ my @SINGLE_WORDS = qw(
 
   Raam Radex Ráðgjöf Ravebo Relpol Rofoi Ryka
 
-  Sagaplast Samsung Samtronic Scania Sekans Sevtopolis Shichuang
+  Sagaplast Samsung Samtronic Scania Sehati Sekans Sevtopolis Shichuang
   Shimuzu 
   Shouchuang Signity Skeljungur Solakoglu Solox Sparisjóður Srenniw
   SSDA Stalgast Stiga Struma Synective

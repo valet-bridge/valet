@@ -61,6 +61,7 @@ my @MULTI_WORDS =
   'Chalermpol Wongwaiwit',
   'Choo Wai Wong',
   'Christal Henner-Welland',
+  'Corte-Real',
   'D Banerjee',
   "D'Avossa",
   'Da Silva',
@@ -283,6 +284,7 @@ my @MULTI_WORDS =
   'Sadek Radwan',
   'Sally Brock',
   'Salvatore Luceno',
+  'Sanat Roy',
   'Sandip Chatterji',
   'Sandra Batista',
   'Sanjay Bhattacharya',
@@ -345,6 +347,7 @@ my @MULTI_WORDS =
   'Yu Yi',
   'Yuval Lubinski',
   'Zack Yaniv',
+  'Zelal Su',
   'Zhang De Zhong',
   'Zhang Xiao Feng',
   'Zia Mahmood',
@@ -573,7 +576,7 @@ my @SINGLE_WORDS = qw(
   Biagiotti 
   Bilal Bilde Bilski Binderkrantz Bingol Biondillo Biondo Bird 
   Birin Bittner Bitran Bizer Bjarnarson Bjerkan Bjornlund Black
-  Blackstock Blakeman Blakset Blanchard Blanco Blandin Bley 
+  Blackstock Blakeman Blakset Blanchard Blandin Bley 
   Bloom Blum Blumental Bo Boaz Bocchi Bock Bogach Bogacki 
   Bohnhorst Bohnsack Bokk Bojoh Boldt Bolling Bolognini Bombardieri 
   Bomber Bompis Bongiovanni Bonis Bonori Bontas Booth Bordallo Bornova 
@@ -740,7 +743,7 @@ my @SINGLE_WORDS = qw(
   O'Brien O'Gorman Ohno Ohrysko Oikonomou Oikonomopoulos
   Olanski Olker Ollikkala Olofsson Olsen Omran Oncu O'Rourke Ortega
   Onstott Orhan Osaulenko Osofsky Oteyza Otvosi Oursel Outred 
-  Ozarar Ozbey Ozdil Ozenir Ozge Ozlen Ozturk Östberg Özbey
+  Ozarar Ozbey Ozdil Ozenir Ozge Ozlen Ozsahin Ozturk Östberg Özbey
 
   Pacareu Pacault Pacini Paganus Paiva Pajak Paladino Palau Palma 
   Palmeira Palmer Palmund Pals Panagaki Panto Panopoulos 
@@ -760,7 +763,7 @@ my @SINGLE_WORDS = qw(
   Quail Quantin Queran Quinn
 
   Rabinowitz Radcliffe Radin Radisic Rajagopal Ramamurthy Ramchandran
-  Ramondt Rankin Ranklin Ranson Rao Rapp Rau Raulund Ravenna Rayner 
+  Ramondt Rankin Ranklin Ranson Rao Rapp Rashti Rau Raulund Ravenna Rayner 
   Rebecchi Rees Reess Rehder Reid Reimer Reinholdt Reiplinger 
   Rekstad Renouard Reps Revaz Rew Reynolds Rheingold Rhodes Ribera 
   Ribery Ricard Ricci Richardson Richman Ridgway Riedel Riehm 
@@ -954,6 +957,7 @@ my %SINGLE_TYPOS =
   Kurbalija => ['kuribalija'],
   Lantaron => ['lantarón'],
   Lauria => ['laurýa'],
+  Llopart =>['lllopar'],
   Lombard => ['lomard'],
   'Lotan Fisher' => ['fisher'],
   'Luis Oliveira' => ['oliveira'],
@@ -985,6 +989,7 @@ my %SINGLE_TYPOS =
   Olanski => ['olansk'],
   Oursel => ['ousel'],
   Ozdil => ['odzil'],
+  Ozturk => ['öztürk'],
   Özbey => ['ozbey'],
   Pacareu => ['pacareau'],
   'Palma Carlos' => ['pcarlos'],

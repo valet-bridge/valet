@@ -139,7 +139,7 @@ my @SINGLE_WORDS = qw(
   Kansai Karimun Karnataka Kawanua Kayong Kedungwaru Kepri Kerala 
   Kinali Krabi
   Lampung Lebak Liaoning Liguria Lombok Lumajang
-  Maharashtra Marmara Masal Matopos Mercosur Midtsjælland Mjøsa 
+  Maharashtra Maluku Marmara Masal Matopos Mercosur Midtsjælland Mjøsa 
   Muallim Munzur Mysia
   Nordafjells Norden Norrland
   Queensland
@@ -161,6 +161,7 @@ my %SINGLE_TYPOS =
   'Australian Central Territory' => ['act'],
   Cappadocia => ['kapadokya', 'kapodokya'],
   'Central Sulawesi' => ['sulteng'],
+  Corsica => ['korsikali'],
   Eurasia => ['avrasya'],
   'Gabungan Malaku' => ['gabmo'],
   Ganges => ['genges'],

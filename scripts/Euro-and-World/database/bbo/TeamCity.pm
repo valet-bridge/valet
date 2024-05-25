@@ -41,6 +41,7 @@ my @MULTI_WORDS =
   'Monte Carlo',
   'Muara Bungo',
   'Novi Sad',
+  'Piatra Neamt',
   'Reggio Emilia',
   'San Giorgio del Sannio',
   'Semburat Jingga',
@@ -78,8 +79,9 @@ my %MULTI_TYPOS =
   Kristiansand => ['kr.sand'],
   Ningbo => ['ning bo'],
   'Novi Sad' => ['nowe sady'],
-  'Reggio Emilia' => ['r.e.', 'reggio e', 'r. emilia', 'reg. emilia'],
+  'Piatra Neamt' => ['p. neamt', 'p.neamt'],
   Pudong => ['pu dong'],
+  'Reggio Emilia' => ['r.e.', 'reggio e', 'r. emilia', 'reg. emilia'],
   Qingdao => ['qing dao'],
   'San Giorgio del Sannio' => ['sg del sannio', 's.g.sannio',
     's.giorgio sannio', 'san giorgio del san'],
@@ -179,7 +181,7 @@ my @SINGLE_WORDS = qw(
   Radkov Rakvere Randers Rayong Recoleta Reims Riga Rijeka Rimini Rome
   Pisa Pleven Plovdiv Pontianak Potsdam Prague Pudong Pula Pune Puri
 
-  Rajasthan Ravnkilde Rzeszow Rødovre
+  Rajasthan Ravnkilde Ridabu Rzeszow Rødovre
 
   Saarbrücken Sabadel Sakarya Salerno Samarinda Samsun Sandefjord 
   Sansar Santiago Sanya Sarniak Sarpsborg Secunderabad Seferihisar 
@@ -192,7 +194,7 @@ my @SINGLE_WORDS = qw(
   Szeged Sørreisa
 
   Taicang Taihu Tainan Taizhou Takayama Tallinn Tambun Targoviste 
-  Tarnów Taskopru Täby Täfteå Tekýrdag Temuco Tequendama 
+  Tarnów Taskopru Täby Täfteå Tekýrdag Temuco Tengah Tequendama 
   Thessaloniki Tianjin 
   Tianya Timisoara Tingling Tire Tokyo Tomohon Torino Toulouse Trieste 
   Trondheim Tromsø
@@ -254,6 +256,7 @@ my %SINGLE_TYPOS =
   Iskenderun => ['iskendurun'],
   Izmir => ['ýzmir', 'ýzmýr'],
   Jakarta => ['dki', 'jakar', 'jkt'],
+  Kadikoy => ['kadiköy'],
   Kalundborg => ['kallundborg'],
   Karsiyaka => ['Karþiyaka'],
   Kocaeli => ['Kocaelý'],
@@ -289,6 +292,7 @@ my %SINGLE_TYPOS =
   Pamukkale => ['pamuk'],
   Panzhihua => ['panzhihuabc'],
   Parioli => ['paroli'],
+  'Piatra Neamt' => ['neamt'],
   Potsdam => ['postdam'],
   Poznan => ['poz'],
   Prague => ['praha'],

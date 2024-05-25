@@ -415,7 +415,7 @@ sub study_part
     {
 if ($category eq 'TOURNAMENT')
 {
-  print "CCC $part\n";
+  # print "CCC $part\n";
 }
       $token->set_singleton($category, $fix_event->{VALUE});
       $HIT_STATS{$category}++;

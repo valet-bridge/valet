@@ -521,6 +521,7 @@ my @MULTI_WORDS =
   'Pinot Noir',
   'Plan B',
   'Poismenon Vaari',
+  'POL-CH',
   'Pola-Pola',
   'Pontiac 7',
   'Powerpuff Pinglorna',
@@ -548,7 +549,9 @@ my @MULTI_WORDS =
   'Renons Rimstedt',
   'Rimstedt Power!',
   'Rising Star',
+  'River Blanco',
   'River Friend',
+  'River Rojo',
   'Robin Hood',
   'Rodos Suns',
   'Roheline Lammas',
@@ -657,6 +660,7 @@ my @MULTI_WORDS =
   'The Latin',
   'The Lions',
   'The Lombard',
+  "The Naising's",
   'The Ninjas',
   'The Palookas',
   'The Patron',
@@ -1096,7 +1100,7 @@ my @SINGLE_WORDS = qw(
 
    Xatzopoulos Xman Xtrouble XXX XXXL XXXSL XXXXXYXY
 
-   Ybs YBM Yaðmur Yamata Yansimasiz Yelena Yichuang Ylajai 
+   Ybs YBM Yaðmur Yamata Yansimasiz YeJun Yelena Yichuang Ylajai 
    Yogakshema Yokozuna
    YYY
 
@@ -1187,6 +1191,7 @@ my %SINGLE_TYPOS =
   Sigdonnemann => ['sigdonneman'],
   Skotii => ['skoti'],
   Soumitra => ['soumtra'],
+  Spamirs => ['spamýrs'],
   Spartans => ['spartan'],
   Squeeze => ['squeze'],
   'Stall Dieden' => ['dieden'],

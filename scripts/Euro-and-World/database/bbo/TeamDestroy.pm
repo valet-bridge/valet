@@ -32,6 +32,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  1st 2nd 3rd 4th 5th 6th 7th 24th
   and Any Away
   Best Bridge
   Center Challenger City Commercial Commune
@@ -65,9 +66,11 @@ my %SINGLE_TYPOS =
   Leaders => ['leader', 'leders'],
   National => ['nasional'],
   'No Name' => ['noname'],
+  North => ['nord'],
   Pacific => ['pacyfic'],
   'Pra PON' => ['prapon', 'pon'],
-  Squad => ['squadra'],
+  South => ['syd'],
+  Squad => ['squadra', 'takim'],
   Tournament => ['tounament', 'tourney']
 );
 
