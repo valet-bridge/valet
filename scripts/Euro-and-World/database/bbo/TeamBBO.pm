@@ -275,6 +275,7 @@ sub split_on_trailing_digits
 
     my ($letters, $digits) = ($1, $2);
     next if $letters eq 'U' || $letters eq 'D';
+    next if $digits > 50;
 
     splice(@$list_ref, $i, 0, ('') x 2);
     $list_ref->[$i] = $letters;

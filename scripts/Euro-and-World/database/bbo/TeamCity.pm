@@ -139,14 +139,14 @@ my @SINGLE_WORDS = qw(
   Gdansk Gdynia Genoa Gent Geyve Glidice Gnesta Gorontalo Gorzow
   Gölcük Gresik Guangzhou Guayaquil Gudbrandsdal Gundogan Gyor
 
-  Haderslev Hamburg Hangzhou Hannover Harplinge Harstad 
+  Haderslev Hamburg Hangzhou Hannover Harplinge 
   Hegyvidék Heimdal Heledia Helsinki Herning Hillerød
   Hornbæk Hosguru Huangshi Huldretråkket Hyderabad
 
   Iasi Iskenderun Istanbul Izmir
 
-  Jagodina Jaipur Jakarta Jember Jessheim Jiamusi Jiangyou Jilin 
-  Jinchang Jincheng Jinjiang Jiujiang Jomtien
+  Jagodina Jaipur Jakarta Jember Jessheim Jiamusi Jianshe Jiangyou 
+  Jilin Jinchang Jincheng Jinjiang Jiujiang Jomtien
 
   Kadikoy Kadirli Kalisz Kalundborg Kalyani Kanpur Karaçay Karachi
   Kardelen
@@ -267,6 +267,7 @@ my %SINGLE_TYPOS =
   Iskenderun => ['iskendurun'],
   Izmir => ['ýzmir', 'ýzmýr'],
   Jakarta => ['dki', 'jakar', 'jkt'],
+  Jianshe => ['js'],
   Kadikoy => ['kadiköy'],
   Kalundborg => ['kallundborg'],
   Karsiyaka => ['Karþiyaka'],

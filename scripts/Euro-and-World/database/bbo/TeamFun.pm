@@ -474,6 +474,7 @@ my @MULTI_WORDS =
   'myvatnhotel.is',
   'Møllers Team',
   "'n Vidar & Andersen",
+  'N.O.Seniori',
   "Narcotic's What?",
   'Nat-Max',
   'Nav Chaitanya',
@@ -532,6 +533,7 @@ my @MULTI_WORDS =
   'Pink Panter',
   'Pinot Noir',
   'Plan B',
+  'PO & JBGood Team',
   'Poismenon Vaari',
   'POL-CH',
   'Pola-Pola',
@@ -542,7 +544,6 @@ my @MULTI_WORDS =
   'Precision Marathon',
   "President's Team",
   'P.S.',
-  'PT.Bumi Siak Pusako',
   'Pur Pur',
   'Quatro Bruxas',
   'Queen and Knights',
@@ -898,6 +899,7 @@ my %MULTI_TYPOS =
   'Murphys lag' => ['murpyhs lag'],
   'Mystery Foursome' => ['mystery 4some'],
   'Møllers Team' => ['møllers t'],
+  NAD => ['n a d'],
   'Nice and Monsters' => ['nice monsters'],
   'Nilslands Slowfoxes' => ['nilslands slowfoxers', 'nilsland slowfoxes',
     'nilsland slowfoxers'],
@@ -983,7 +985,7 @@ my @SINGLE_WORDS = qw(
    Coaches Cogito Colorado Commandos 
    Comrade Concurrent Conie Contact Contra Coopers Coor Corner 
    Costantina Counterstrike Couples Crash Cremaster Croanglopol
-   Crockfords Crossfatek CSTO Czteropak
+   Crockfords Crossfatek CS CSTO Czteropak
 
    Dada Dadya Dahsyat Dallas DanEng DanFar Danger Daniel Dash Dauna Dawn 
    Debonecos Debutantes Deceptive DeeJee Defne Demony Demýrbaþ
@@ -999,9 +1001,9 @@ my @SINGLE_WORDS = qw(
    Erikas Erla Ertým ErUS ESA Eses Esesss Esperanza Everest Evil Ewa
 
    F16 Fakel FAM² FAMA Fantasia Fant4stic Farmen Farmers Felix 
-   Fenghuang Fenia 
-   Fenix Ferfi Feszek Fharon Fifi Fil Filosofene Filur Finest Fisk 
-   FNCC Forfot Formidables Formosa Fortuna Fortune FOS Foundation Francest 
+   Fenghuang Fenia Fenix Ferfi Feszek Fharon Fifi Fil Filosofene 
+   Filur Finest Fisk Flagship FNCC Forfot Formidables Formosa 
+   Fortuna Fortune FOS Foundation Francest 
    Frank Franz Frenemies Frieolt Friends Frirond Francophones Freak 
    Frivolt Frusci Fundacja FWK
 
@@ -1069,7 +1071,7 @@ my @SINGLE_WORDS = qw(
    Mýna Myoni 
    Møremix Måsen
 
-   Nabil Nadide Narbisk Narre Natalia Nathans Natural Naturalists 
+   Nabil NAD Nadide Narbisk Narre Natalia Nathans Natural Naturalists 
    NBB Neduk 
    Nemesis Nessuno Neverclaim Nico Nightingale Nik Nikita Nikitopoulos 
    Niko Nikos Nikotiimi Nina Nis Nislije NMRT Noctis Noralia Noriko 
@@ -1085,10 +1087,9 @@ my @SINGLE_WORDS = qw(
 
    Pacers Paco Pagonia Pal Palukas Panteros Paoli Paradigma Partizan
    Pasam Pasanci Passé Patriot Patron Paulette Paulina Paulistas 
-   PBL PCBA PDC
-   Pegasus Pennant
-   Perestrojka Perjuangan Pero Peter Petra Pia Piast Piryoli Piter 
-   Pjäxa PKBS PK3 Pleschi Pleyada Plia PMS Pojat Polirish Polus Polýsgücü
+   PBL PCBA PDC Pegasus Pennant Perestrojka Perjuangan Pero Peter 
+   Petra Pia Piast Piryoli Piter Pjäxa PKBS PK3 PKM Pleschi Pleyada 
+   Plia PMS Pojat Polirish Polus Polýsgücü
    Pompapompa 
    Pontiac Poss Potlimit Potteplante Powerchicks Prapar Prasetya 
    Preempters Pretendents Prijatelj Prim Prosan Proteus Proto Ptacol 
@@ -1122,7 +1123,7 @@ my @SINGLE_WORDS = qw(
    Steliana Steve Stifinnern Storeslemmen Strata Strategen Streamline 
    Studentene StZ Stålfarfar St?vel Sucharek Sue SuHuQiaoYou
    Sunset Sunshine Suz Svetla Swanand SweDanes 
-   SweNor Swest Syabas Syly Syttisju SZPAK SZPAR Sømnakameratene 
+   SweNor Swest Syabas SYL Syly SYT Syttisju SZPAK SZPAR Sømnakameratene 
    Sør Såpeopera
 
    TAC Tadeu Take Takeoff Takk Takým Taksim Tally Tamae Tangra Tannlegene 
@@ -1132,7 +1133,7 @@ my @SINGLE_WORDS = qw(
    Traker Trèfles Triks Troll Trøndermøringen Tsunami Tuason
    Tulip Tulipano Turuncu Tushar Tusio Tutu Tvist
 
-   Udarnik UFO Ugh Úlfurinn Ulvene Underdogs Unexpected Ungdomslaget
+   UAB Udarnik UFO Ugh Úlfurinn Ulvene Underdogs Unexpected Ungdomslaget
    Unlu Upplyfting Utkantnorge UTU
 
    Vahakabinetti Vakrandi Valen Valentino Valyo Vanko Varan Varoslu 
@@ -1145,7 +1146,8 @@ my @SINGLE_WORDS = qw(
    Weiqun Wengens Winatalya Windrunners Winkiboy Winterfell Wizards
    WLKP Wolf WSWT
 
-   Xatzopoulos Xinhai Xman Xtrouble XXX XXXL XXXSL XXXXXYXY
+   Xatzopoulos XC XFIP Xinhai Xman XMing Xtrouble XXX XXXL XXXSL 
+   XXXXXYXY
 
    Ybs YBM Yaðmur Yamata Yansimasiz YeJun Yelena Yichuang Ylajai 
    Yogakshema Yokozuna YSD YYD YYY

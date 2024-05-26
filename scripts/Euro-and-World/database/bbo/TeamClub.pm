@@ -75,6 +75,7 @@ my @MULTI_WORDS =
   'Cedýt Ilica Sports',
   'Centrum Kultury i Sportu',
   'Cercle Tourangeau',
+  'CFT Bridge',
   'Circolo Nautico Posillipo',
   'Cracovia 1906',
   'Crvena Zvezda',
@@ -114,6 +115,8 @@ my @MULTI_WORDS =
   'Hamar BK',
   'Hamra Club',
   'Hanseatic Hamburg BC',
+  'Harstad S&B',
+  'Hendek Kazimiye',
   'Herkules',
   'Heybeliada SK',
   'Hindusthan Club',
@@ -226,6 +229,7 @@ my %MULTI_TYPOS =
     'adana bric sk', 'adana bsbkisk', 'adana sk', 'adana bþbký'],
   'Akademisk Bridgeklub' => ['akademisk bk'],
   'Akceþme Spor' => ['akceþmespor'],
+  'Aklindo Musi 88' => ['musi 88'],
   'Alexandria Sporting Club' => ["alexandria sport' c"],
   Anadolu => ['anadolu briç'],
   'Ankara Sistematik' => ['sistematik bk'],
@@ -265,8 +269,10 @@ my %MULTI_TYPOS =
   'Bridgeclub Oog' => ['bc oog in al'],
   'Brussels Bridge Club' => ['b.c.o.b.'],
   'BUKS Bytom' => ['buks ii bytom'],
+  Canakkale => ['çanakkale', 'canakkale beld.'],
   'Cedýt Ilica Sports' => ['cedýt ilica spor'],
   'Cerkezkoy Dinamik BSK' => ['Cerkezkoy BS', 'Cerkezkoy BSK'],
+  'CFT Bridge' => ['cft b'],
   'Circolo Nautico Posillipo' => ['c. n. posillipo', 'posillipo'],
   'Crvena Zvezda' => ['zrvena zwezda', 'zrvena zvezda'],
   'Debrecen DEAC' => ['debrecen-deac'],
@@ -310,6 +316,7 @@ my %MULTI_TYPOS =
   'Midt Trøndelag' => ['midt trondelag', 'midt-trøndelag',
     'midt-trondelag'],
   'Miskolc DEAC' => ['deac-miskolc'],
+  Mragowia => ['mragowia si'],
   'Nachteulen Leverkusen' => ['nachteulen leverk'],
   'Nilüber Bld. BSK' => ['nilufer belediyesi'],
   'Nord Trøndelag' => ['nord -trøndelag', 'nord-trøndelag',
@@ -348,6 +355,7 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   Acol Airmadidi Akceþme Amisos Anadolu Asenovec Auguri AVGP
   Benfica Besiktas Bonsist Botev BTBK
+  Canakkale
   Debrecen Dragao Drienerlo
   Fanfulla Fenerbahce Fosnavåg
   Galata Galatasaray Gauteng
@@ -397,6 +405,7 @@ my %SINGLE_TYPOS =
   'Brussels Bridge Club' => ['bcob'],
   'Buca Sports' => ['bucaspor'],
   'Camlica Sports' => ['camspor'],
+  Canakkale => ['çanakkale'],
   'Centrum Kultury i Sportu' => ['ckis'],
   'Cerkezkoy Dinamik BSK' => ['Cerkezkoy'],
   'Cracovia 1906' => ['cracovia'],
@@ -412,6 +421,7 @@ my %SINGLE_TYPOS =
   'Geologi Bridge Club' => ['geologi'],
   'Geyve Sports' => ['geyvespor'],
   'Hamra Club' => ['hamra'],
+  'Harstad S&B' => ['harstad'],
   'Hok Studiecentrum' => ['hok'],
   Hordaland => ['hordland'],
   Hosgoru => ['hoþgörü'],

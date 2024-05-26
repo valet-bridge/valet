@@ -23,12 +23,21 @@ my @MULTI_WORDS =
   'nat. champio',
   'No Name',
   'Premier League',
-  'Pra PON'
+  'Pra PON',
+  'Undecipherable Team',
 );
 
 my %MULTI_TYPOS =
 (
-  'Bridge Team' => ['bridge tem', 'bridge tea']
+  'Bridge Team' => ['bridge tem', 'bridge tea'],
+  'Undecipherable Team' => ['a-hvv', 'a-srr', 'b-srk', 'g-dkr', 
+    'i-aaa', 'i-vvu', 't-dbi', 't-rsb', 'v-ivi', 'v-jgd', 'y-ivz',
+    'dhzhy', 'dhzy', 'gdcd', 'gzzj', 'hssqx', 'jy', 'kj', 'kjy', 
+    'lqsw', 'ly', 'lylw', 
+    'mktx', 'qc', 'qy', 'scdhzy', 'scmy', 'sdlsjy', 'sft', 'sjcd', 'sjsd', 
+    'sxsdlsjy', 'szqy',
+    'xdsjjt', 'xhld', 'xmxv', 'xnmf', 'ycd', 'yy', 'zkwx', 'zqjk'
+    ]
 );
 
 my @SINGLE_WORDS = qw(

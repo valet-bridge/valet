@@ -21,7 +21,8 @@ my @TEAMS_SUGGESTORS = (
   'table 1', 'table 2',
   'table8hom', 'table8vis',
   'table9hom', 'table9vis',
-  't11-home', 't11-visit', 't12-home', 't12-visit'
+  't1-home', 't1-visit', 't2-home', 't2-visit',
+  't11-home', 't11-visit', 't12-home', 't12-visit',
 );
 
 my %TEAMS_SUGGESTORS_HASH = map {$_ => 1} @TEAMS_SUGGESTORS;
