@@ -98,7 +98,7 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   Argentina => ['argenting', 'argentýna'],
-  Australia => ['austrlia', 'oz'],
+  Australia => ['austrlia', 'oz', 'australla'],
   Austria => ['austra'],
   Belarus => ['bielarus', 'blr'],
   Brazil => ['brasil'],

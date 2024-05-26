@@ -35,7 +35,7 @@ my %SINGLE_TYPOS =
 (
   Seniors => [qw(senior senior's senioren seniori seniorit 
     senjoorid senyor sr)],
-  Juniors => [qw(juniiors juniores junior jrs jt
+  Juniors => [qw(juniiors juniores junior jrs jr jt
     yuniors yunior juniorit jun frs juniorerna)],
   Youngsters => [qw(youngster young youth genclik)],
   Schools => [qw(school)],

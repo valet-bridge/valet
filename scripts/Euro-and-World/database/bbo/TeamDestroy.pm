@@ -36,7 +36,7 @@ my %MULTI_TYPOS =
     'kj', 'kjy', 'lqsw', 'ly', 'lylw', 'mktx', 'qc', 'qy', 'pn',
     'scdhzy', 'scmy', 'sdlsjy', 'sey', 'sft', 'sjcd', 'sjsd', 
     'sxsdlsjy', 'szqy',
-    'xdsjjt', 'xhld', 'xmxv', 'xnmf', 'ycd', 'yy', 'zkwx', 'zqjk',
+    'xdsjjt', 'xhld', 'xmxv', 'xnmf', 'xnwy', 'ycd', 'yy', 'zkwx', 'zqjk',
     'abc_n', 'cd', 'jj', 'jk', 'm', 'pk', 'sv', 't',
     'ÄÏÄþÑÅÂ×', 'ÉîÛÚÁª²©', 'ÊÀ¼Í³©´ï', 'º£ÄÏÊÓ´°', 'ÖÐ¹úÆ½°²',
     '¥æ¤j', 'ªþ¾ô±¡¸', 'µæ', '§N¥ú', '°¨¥d³q', '¥©§J¤O', '¶Rµæ'
@@ -49,9 +49,9 @@ my @SINGLE_WORDS = qw(
   a and as Alumni Any Away
   Best Bridge
   Center Challenger City Commercial Commune
-  Development Dist
+  Development Dist Ds Dw dwii
   Earth East ENC European Event
-  Festival Field
+  Fans Festival Field
   GD GLPD Group Groupe
   Home Host
   Indi Inter International Invit Invitational

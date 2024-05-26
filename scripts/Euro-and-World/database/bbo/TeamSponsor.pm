@@ -174,6 +174,7 @@ my @MULTI_WORDS =
   'Lag os',
   'Latteria TS Rzepin',
   'Lianzhong Shi Jie',
+  'Logi Smart',
   'Lögfræðiskrifstofa Islands',
   'Lögfræðistofa Bjarna',
   'Lu Cheng',
@@ -186,6 +187,7 @@ my @MULTI_WORDS =
   'Magpa-Grup',
   'Maksoy-Deniz',
   'Mayur Renergy',
+  'MB-Transit',
   'Mech-Ok',
   'Meditepe Tip',
   'Mega-Tech',
@@ -240,6 +242,7 @@ my @MULTI_WORDS =
   'San-Sac',
   'San Chen',
   'San Yutian',
+  'Sanliurfa Tarim',
   'Sanya Jiguan',
   'Sanya Tianze',
   'SAPW Poland',
@@ -305,6 +308,7 @@ my @MULTI_WORDS =
   'Syabas Energy',
   'Sygnity',
   'Synergia Lublin',
+  'TAM Dabrowa',
   'Tannlege Kvaran',
   'Taste of Goa',
   'Team Audita',
@@ -321,6 +325,7 @@ my @MULTI_WORDS =
   'Thai Oil',
   'Tielu Jixie',
   'Tin Fok',
+  'TJ Jabung Brt',
   'Tolani Shipping Ltd',
   'Trambak Rubber',
   'Tricon Infotech',
@@ -394,7 +399,7 @@ my %MULTI_TYPOS =
     'chaetou rosenovo', 'shato rosenovo', 'shato rossenovo'],
   'China Global Times' => ['chinal global times', 'huan qiu Shi bao'],
   'China Trinergy' => ['chinatrinergy'],
-  'CONNECTOR' => ['aj-connector'],
+  'CONNECTOR' => ['aj-connector', 'aj connector'],
   'Data Steel' => ['datta steel'],
   'Dhampur Sugar' => ['dhampur sugar mills', 'dhampur sugars', 
     'dhampur suger mills', 'dhampor sugar mills', 'dhampu sugar mills',
@@ -419,7 +424,7 @@ my %MULTI_TYPOS =
     'garps apótek'],
   'Geely Automobile' => ['geely auto', 'gely auto', 'chaina geely',
     'china geely', 'jili', 'china geely auto', 'jili qiche'],
-  Geologi => ['badan geologi', 'geo coal'],
+  Geologi => ['badan geologi', 'geo coal', 'geo tanito harum'],
   'Geoportal Kutai Kartanegara' => ['geo gutai gartanega'],
   'Gong Hang Jin Ying' => ['gonghang jinying', 'jin ying club',
     'jin ying', 'gonghang jinying'],
@@ -445,7 +450,7 @@ my %MULTI_TYPOS =
   'Jasa Marga Jakarta' => ['jasa marga'],
   'Kaushik Hyderabad' => ['kaushik hyd.'],
   "Kini's Bangalore" => ["kini's bengalore"],
-  "Kini's Goa" => ["keni's goa"],
+  "Kini's Goa" => ["keni's goa", 'p.keni goa'],
   'KONKRET Chelmno' => ['konkret che³mno'],
   'Kuncheng Group' => ['kucheng group'],
   'Latteria TS Rzepin' => ['Latteria ts rzeppin',
@@ -469,7 +474,8 @@ my %MULTI_TYPOS =
   'Pan China Group' => ['pan-china group'],
   'Perbankan Jatim' => ['perbankan_jatim'],
   'Pertamina' => ['pertamina ep', 'pertamina ft', 'pertamina field', 
-    'pertamina ge', 'pertamina indonesia'],
+    'pertamina ge', 'pertamina indonesia', 'pertamina l.',
+    'pertamina field tmb'],
   'Phoenix TV' => ['feng huang wei shi', 'fenghuang tv'],
   'Poddar Developers' => ['poddar development', 'poddar dev',
     'podder dev', 'podder developers', 'poddar devekopers',
@@ -481,6 +487,7 @@ my %MULTI_TYPOS =
   Pufa => ['pu fa'],
   'Ryan Express' => ['ryan_express'],
   'Samtronic Constanta' => ['samtronic ct'],
+  'Sanliurfa Tarim' => ['urfa tarim'],
   'Sanya Tianze' => ['san ya tian ze'],
   'SAPW Poland' => ['sapw-poland'],
   'See Fah/Thai' => ['seefa/thai'],
@@ -553,7 +560,7 @@ my @SINGLE_WORDS = qw(
   Aklindo Allianz Alfa Altinay Aquatrans Arboned Argento Arkas Arma 
   Artotec Asindo Ayýntab
 
-  Bajaj Banpu Baykar Beibao Beidike Bnerg
+  Bajaj Banpu Baykar Beibao Beidike Bnerg BridgePlus
 
   Cable Candyland Cempaka Changyu Chemikartel Chlodnia Chuanmei Cimentas 
   COMAL Compensa Computerland CONNECTOR CONSUS Constellation 
@@ -593,7 +600,7 @@ my @SINGLE_WORDS = qw(
 
   Qiaoyou
 
-  Raam Radex Ráðgjöf Ravebo Relpol Rofoi Ryka
+  Raam Radex Ráðgjöf Ravebo Relpol Rofoi Ruyi Ryka
 
   Sagaplast Samsung Samtronic Scandic Scania Sehati Sevtopolis Shichuang
   Shimuzu 

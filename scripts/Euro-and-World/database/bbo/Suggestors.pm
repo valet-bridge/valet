@@ -23,6 +23,7 @@ my @TEAMS_SUGGESTORS = (
   'table9hom', 'table9vis',
   't1-home', 't1-visit', 't2-home', 't2-visit',
   't11-home', 't11-visit', 't12-home', 't12-visit',
+  'ev sahibi takým'
 );
 
 my %TEAMS_SUGGESTORS_HASH = map {$_ => 1} @TEAMS_SUGGESTORS;

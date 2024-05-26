@@ -36,6 +36,7 @@ my %MULTI_TYPOS =
     'brýç s.k.', 'brýç sk', 'brýc sk', 'brýç ý. s.k', 'bsb bk', 
     'c. br.', 'card club',
     'genclik s', 'gr.sp.ass.', 'g.s.b.', 'g.s.b', 'g.s.', 'gsd briç',
+    'genç. hýz',
     'kontrat bsk',
     'y.þehýr bld'],
 
@@ -60,7 +61,7 @@ my %SINGLE_TYPOS =
     asb asd ass assn asso assoc azs
     ba bbgsk bbs bbsgk bbsk bc bcm bcn belediye beledýye belediyesi
     belediyespor bgsk
-    bilimsel bisk biskd bjk bk bld bmsk bps
+    bilimsel bisk biskd bjk bk bld bmsk bp bps
     br bri brýç bridgeclub bridgeklub 
     bs bsb bsc bsk bskd bsp bt
     bþb bþbký bsbkisk bssk buyuksehir ybsk bsbs btsc 

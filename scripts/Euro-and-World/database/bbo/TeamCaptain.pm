@@ -101,6 +101,7 @@ my @MULTI_WORDS =
   'Dr. Anand',
   'Dr. Ashwani Mehta',
   'Duronto Rajshahi',
+  'Edmund Tse',
   'Efrat Oren',
   'Waleed El Ahmady',
   'El Baz',
@@ -714,7 +715,7 @@ my @SINGLE_WORDS = qw(
   Laan Labaere Lachowicz Laffineur Lagrange Lagree Lalanne Lall 
   Lambardi Lanciano 
   Landry Lane Langer Lantaron Lanzarotti Larsen Larssen Lasserre 
-  Lauria Lavín Lavings Law Lawy Lay Lazer Lazkar Lebatteux 
+  Lauria Lavín Lavings Law Lawy Lay Lazer Lazkar Leao Lebatteux 
   Lebel Lebi Lebowitz Leca Lechtman Lehtinen Lee Leenhardt Legras 
   Leiro Lena Lengy Lennart Leptirici Lerner Lesniewski Lesnik Lester Lev 
   Levi Levinger Levin Levine Levoy Levski Lew Lewis Lhuissier Li Lian
@@ -816,7 +817,7 @@ my @SINGLE_WORDS = qw(
   Stoichkov Stoltz Stoppa Street Stretz Strul Strøm Stuart
   Sulgrove Sveindal Sveinsson Svendsen Suarez Sugino Summers Sundelin 
   Sundsten Sung Suñol Suresh Sutherlin Suwik Sütmen Svindahl 
-  Sweidan Sykioti Syl 
+  Swarup Sweidan Sykioti Syl 
   Sylvan Symons Szalay Szenberg Szigethy Szots Szymanowski Sørensen
 
   Tachev Tajima Takayama Talpur Tamburi Tamburrini Tan Tanaka Taner 
@@ -917,7 +918,9 @@ my %SINGLE_TYPOS =
   'Dr. Ashwani Mehta' => ['ashwani'],
   Dumbovich => ['dumbovic'],
   Eisenberg => ['einsenberg'],
+  Eksi => ['ekþý'],
   Elbaz => ['elbas'],
+  'Edmund Tse' => ['tse'],
   'Erlend Skjetne' => ['erlendskjetne'],
   'Waleed El Ahmady' => ['elahmady', 'elhamady'],
   Failla => ['faill'],
@@ -1000,6 +1003,7 @@ my %SINGLE_TYPOS =
   Mesbur => ['mesbor'],
   Meltzer => ['metzler'],
   'Miguel Teixeira' => ['teixeira'],
+  Milne => ['mlne'],
   Milner => ['millner'],
   'Mohamed Manaf Saleh' => ['manaf'],
   'Mohsen Kamel' => ['mohsenkamel'],
@@ -1090,6 +1094,7 @@ my %SINGLE_TYPOS =
   Vinciguerra => ['vinci'],
   'Visalakshi Narayanan Ramamoorthy' => ['vnr', "vnr's"],
   'Wang Yuan Wei' => ['wangyuanwei'],
+  Watawe => ['watave'],
   Wigoder => ['wigodor'],
   Wolfson => ['wolson'],
   'Xavier Michaud Larivière' => ['lariviere'],

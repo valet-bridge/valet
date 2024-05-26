@@ -164,7 +164,7 @@ my @SINGLE_WORDS = qw(
 
   Langkat Lanzhou Lappee Leiden Leilem Lemvourgeio Lerum Leszno Leuven 
   Leverkusen 
-  Lhokseumawe Lille Lima Lincoln Lindesberg Ljubljana Lodz Lokotok
+  Lhokseumawe Lille Lima Lincoln Lindesberg Liushu Ljubljana Lodz Lokotok
   London Losari Lowicz Lozenets Lubin Lublin Lucignano Luleburgaz 
   Lumajang
 
@@ -249,13 +249,13 @@ my %SINGLE_TYPOS =
   Bahcesehir => ['bahçeþehýr', 'bahcesehýr', 'bahçesehir'],
   Balisekir => ['balikesýr', 'balýkesir',],
   Balkova => ['balçova'],
-  Bangalore => ["b'lore", 'banglore'],
+  Bangalore => ["b'lore", 'banglore', 'bengalore'],
   Bansi => ["bansi's"],
   Beijing => ['peking'],
   Borivli => ['borivali'],
   Canakkale => ['çanakkale'],
   Çayyolu => ['cayyolu'],
-  Cerkezkoy => ['çerkezköy'],
+  Cerkezkoy => ['çerkezköy', 'cerk'],
   Copenhagen => ['kopenhagen'],
   Corlu => ['çorlu'],
   Diyarbakir => ['dýyarbakir', 'diyarbakýr'],
@@ -308,6 +308,7 @@ my %SINGLE_TYPOS =
   'Novi Sad' => ['nowewsady'],
   Olgiata => ['ola'],
   Olsztyn => ['olo'],
+  Palembang => ['plg'],
   Pamukkale => ['pamuk'],
   Panzhihua => ['panzhihuabc'],
   Parioli => ['paroli'],
@@ -329,6 +330,7 @@ my %SINGLE_TYPOS =
   Sunndalsøra => ['sundalsora', 'sunndalsora'],
   Targoviste => ['tg'],
   Tarnów => ['tarnow'],
+  Taskopru => ['tasköprü'],
   Täfteå => ['taftea'],
   Tekýrdag => ['tekirdað'],
   Thane => ['tane'],
