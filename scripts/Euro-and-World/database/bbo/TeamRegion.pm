@@ -132,7 +132,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Agder Angkaew Anhui Ayrshire
+  Agder Angkaew Anhui ASEAN Ayrshire
   Bali Balkan Banten Belitung Bengkayang Bihar Bornholm Bungo Buskerud
   Cappadocia Corsica
   Druts

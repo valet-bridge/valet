@@ -74,7 +74,7 @@ my %SINGLE_TYPOS =
     ihs
     kcb kdi klubben klubberne ks ksb ksk
     maesa mbc
-    nbi nbcbl
+    nbc nbi nbcbl
     oaza obk 
     sb sbc sc sdgskd sk spor ss ssd
     tbc tc

@@ -44,6 +44,7 @@ my @MULTI_WORDS =
   'Novi Sad',
   'Piatra Neamt',
   'Reggio Emilia',
+  'Saint Petersburg',
   'San Giorgio del Sannio',
   'Semburat Jingga',
   'Seulawah Agam',
@@ -79,6 +80,7 @@ my %MULTI_TYPOS =
   Istanbul => ['ýstanbul'],
   Jakarta => ['jak-tim', 'jak-sel', 'jakarta pusat', 'jakarta utara',
     'dki jaya'],
+  Kalyani => ["kalyani's"],
   Kristiansand => ['kr.sand'],
   Lozenets => ['vs lozenec', 'vv lozenets'],
   Ningbo => ['ning bo'],
@@ -100,6 +102,7 @@ my %MULTI_TYPOS =
   Tainan => ['tai nan'],
   'Villa Fabbriche' => ['v.fabbr.', 'villa fabb.', 'v. fabbriche',
     'v.fabbriche'],
+  'Vrnjacka Banja' => ['vrnjacka banja - al'],
   Wuhan => ['wu han'],
   Yogyakarta => ['di jogjakarta']
 );
@@ -204,7 +207,7 @@ my @SINGLE_WORDS = qw(
 
   Taicang Taihu Tainan Taizhou Takayama Tallinn Tambun Targoviste 
   Tarnów Taskopru Täby Täfteå Tekýrdag Temuco Tengah Tequendama 
-  Thessaloniki Tianjin 
+  Thanjavur Thessaloniki Tianjin 
   Tianya Timisoara Tingling Tire Tokyo Tomohon Torino Toulouse Trieste 
   Trondheim Tromsø
 
@@ -218,8 +221,8 @@ my @SINGLE_WORDS = qw(
   Wadas Warsaw Wellington Wisla Worcester Wratislavia Wroble 
   Wroclaw Wuhan
 
-  Yalikavak Yambol Yarimada Yarýmca Yatagan Yenisehir Yibin Yildirim 
-  Yizhuang Yokohama Yogyakarta Yuquan
+  Yalikavak Yambol Yanshi Yarimada Yarýmca Yatagan Yenisehir Yibin 
+  Yildirim Yizhuang Yokohama Yogyakarta Yuquan
 
   Zagreb Zhaoqing Zhenjiang Zhongshan Zhujiang Zhuzhou Zigong Zurich 
   Zyrardow
@@ -317,6 +320,7 @@ my %SINGLE_TYPOS =
   Reykjavik => ['reykjavikur', 'reykjavitur'],
   Rome => ['roma'],
   Saarbrücken => ['saarbruecken'],
+  'Saint Petersburg' => ['spb'],
   Shenzhen => ['sz'],
   Skawina => ['skawia'],
   Singsås => ['singsaas'],
@@ -327,6 +331,7 @@ my %SINGLE_TYPOS =
   Tarnów => ['tarnow'],
   Täfteå => ['taftea'],
   Tekýrdag => ['tekirdað'],
+  Thanjavur => ["tanjorian's"],
   Thessaloniki => ['salonica'],
   Tromsø => ['tromso', 'tromsoe'],
   Trondheim => ['trondhei'],

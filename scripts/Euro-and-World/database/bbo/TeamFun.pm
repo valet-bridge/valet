@@ -719,6 +719,7 @@ my @MULTI_WORDS =
   'Tinutuan Manado',
   'Tre Kn og en D',
   'Tre knekter og ett S',
+  'TRK - V',
   'To gamle og to gode',
   'Tommys tigre',
   'Top Flight',
@@ -964,10 +965,10 @@ my @SINGLE_WORDS = qw(
    Ahornet Aida Akenobo Akinom Alertplus Alex Alf Alfredo Ali Alioth 
    Allam Alliance Alliansen Allstars Alpha Alternativlos Ambassador 
    Amrapali Amul Andromeda Anglian Andrzejki Anglers Anglophones 
-   Aniket Anna Anni Anuj Apaçý Appellkameratene Apples Apply
+   Aniket Anna Anni Anuj Apaçý Apek Appellkameratene Apples Apply
    Aquarius Arachfobia 
    Arangan Archies Aristos Armani Arnab Arno Arunas ASDBB Aslanli Aspe 
-   Asparagus Astra Astro Astronotlar Atlantic Atom Atrium Augerne Auni 
+   Asparagus Astra Astro Astronotlar Asya Atlantic Atom Atrium Augerne Auni 
    Aurora AUTBUL AUTHOL Autostrada Avagard Avalanche Avatar Ayan
    Aytalus Azores Azure
 
@@ -977,7 +978,7 @@ my @SINGLE_WORDS = qw(
    Baryton BAST 
    Bat Batmix Bato Batusida Bauhinia 
    BBE BBO BCBR Beauty Begigütje Begijntje BEIH BELSPA Ben Beniaminek 
-   Berik Beton 
+   BeRe Berik Beton 
    BHDM Bhide Bhinneka Biachite Bilal BIN Bingbang Binkie Biriceri 
    BKSE
    Blackwood Blandat Bling Blondie Blues Blund Blueberry Blues
@@ -992,7 +993,8 @@ my @SINGLE_WORDS = qw(
 
    Cabal Cabriole Calaca Cammello Camrose Canadonia Cancan Canukusa 
    Cardtossers Cargo Carlitos Cartoon Casuals Cask Cathy Cavelieri 
-   Cavendish Cem Censored Center Cerkez Challengers Changes Chass 
+   Cavendish Cem Cendrawasih Censored Center Cerkez Challengers 
+   Changes Chass 
    Chateau Chicks Chime Chiranjeev Chokladmåndag CHPIK Chuanpit 
    Cité Claim Claudili CMN Coaches Cogito Colorado Commandos 
    Comrade Concurrent Conie Contact Contra Coopers Coor Corner 
@@ -1036,7 +1038,7 @@ my @SINGLE_WORDS = qw(
    Holport Honeymoon Hopfenkönig Hornet House Hridhaan Hubsi Huhu 
    Hunaja Huispaus Hunhun Hurra Hybrid
 
-   IBE Ida Iff Ijseide Ikarus Ilya IMAN Imanual IMLUK Imponderables 
+   IBE Ida Iff Ijseide Ikarus Ilya IMAN Imanuel IMLUK Imponderables 
    InFran Instructor Iris Irukangi Ismo Israbel Isrmany ITB
    Itnoraunz ITS IVAR
 
@@ -1061,12 +1063,14 @@ my @SINGLE_WORDS = qw(
    Kvazar Kwiecisty
 
    Lahjattomat LAKT Langy Laplanders Laplas Larry Lasse Lataka Lateria 
-   LatSwe Lazy LBC LBSK LCF Lebensohl Lebron Legeanka Lema Lemanus Leszek 
+   LatSwe Lazy LBC LBSK LCF Lebensohl Lebron Legeanka Lema Lemanus 
+   Lenz Leszek 
    Leta Letve 
-   Leveni Lianas Liggeunderlaget Lili Lillebaluba Lions Lipa Lira Livius 
+   Leveni Lianas Liggeunderlaget Lili Lillebaluba Lion
+   Lions Lipa Lira Livius 
    Lirarna Liverbird Ljónin LNWers Lo Loaknath Logos Lolly Loloc 
    Longzhu
-   Loreng LOS Lowel Löparn LPMS Lucky LVBridgeBums Lyubcho Løwene
+   Loreng LOS Lowel Löparn LPMS Lucky LVBridgeBums LXA Lyubcho Løwene
 
    Macak Mach Madhav Mads Maestroi Magi Magic Magister Magnus Maharaja 
    MAHÝR ÞENOL Maija Maj
@@ -1092,7 +1096,7 @@ my @SINGLE_WORDS = qw(
    Obezit Octopussy OEI Ognisty Okay Oksijen Olavsfestdagene Olena 
    Olimp Olrudbanden Olsenbanden OMC Omega Omelas Onirepsou Onnela 
    Onu Onyx Opal Opera Opps Oprosti Optimus Orakulas Orthodoxi 
-   Orthodox OSA Osam OSMO Osss Oto Otters Outsiders Overivrig 
+   Orthodox OSA Osam OSMO Osss Oto Otta Outsiders Overivrig 
    Oyku Oyzum Ozbiljni
 
    Öncü
@@ -1112,7 +1116,7 @@ my @SINGLE_WORDS = qw(
 
    Radhey Radikk Rafael RAG Raifles Rakinnett RAM Ramkumar Rampage 
    Rapid RASH Raskasammen RBP Real Recaptan Regeldur Reklamtrion 
-   Reloaded Rene Rob Ribitas Rike Rima RKK Robertinho Robi Robocop 
+   Reloaded Rem Rene Rob Ribitas Rike Rima RKK Robertinho Robi Robocop 
    Rollers Rosajora Rovers Royston Rozle RS Rylai Rylal Ryo
 
    Sabari Sabina Sabres Saga SAGG Sailor Sakurai Saladmasters Salokin 
@@ -1221,8 +1225,9 @@ my %SINGLE_TYPOS =
   Jupiter => ['jupitor'],
   'Last Arrival' => ['lastarrival'],
   'Late S.S. Jain' => ['lssjain'],
-  Lebensohl => ['lebenshol'],
   'Le Romain boys' => ['leromain'],
+  Lebensohl => ['lebenshol'],
+  Leveni => ['levini'],
   'Loy Krathong' => ['longkatong'],
   Löparn => ['loparn'],
   Maharaja => ['maharaj', 'maharaaj'],
@@ -1262,7 +1267,7 @@ my %SINGLE_TYPOS =
   'Stone Cutters' => ['stonecutters'],
   Strategen => ['stratagen'],
   Syabas => ['syabhas', 'syahbas'],
-  Syttisju => ['sytti7'],
+  Syttisju => ['sytti7', 'sytti'],
   'Texan Aces' => ['texanaces', 'tnaces'],
   Titans => ['titan'],
   Valyo => ['valýo'],

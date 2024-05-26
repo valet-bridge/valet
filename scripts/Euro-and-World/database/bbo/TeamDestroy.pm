@@ -56,14 +56,14 @@ my @SINGLE_WORDS = qw(
   Home Host
   Indi Inter International Invit Invitational
   KB KDK KRS
-  Leaders
-  Match Mates Milli Mr
+  LD Leaders
+  Match Mates Milli min Mr
   National NC No NONAME North npc nr NS
   og Opponent Opponents Other Others
   Pacific pc PairNo Platinum Players Plus Point PON Prima Pusat
   Rank River
   Section Selected South Sponsor Squad Standard Stars Sunday Swiss
-  Table Tennis Test Times Top Tournament Tricks
+  Table Tennis Test TH Times Top Tournament Tricks
   United
   Visit
   West World
@@ -86,7 +86,7 @@ my %SINGLE_TYPOS =
   Pacific => ['pacyfic'],
   'Pra PON' => ['prapon', 'pon'],
   South => ['syd'],
-  Squad => ['squadra', 'takim'],
+  Squad => ['squadra', 'takim', 'tim'],
   Tournament => ['tounament', 'tourney', 'trn', 'trnaway', 'trnhome'],
   World => ['worldteam']
 );

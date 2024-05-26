@@ -253,6 +253,7 @@ my @MULTI_WORDS =
   'Shanghai Automobile',
   'Shanghai Chuangyu',
   'Shanghai Financial',
+  'Shanghai Gaohe',
   'Shanghai Jiahua',
   'Shanghai Ling Mu',
   'Shanghai Municipal Engineering Group',
@@ -471,6 +472,7 @@ my %MULTI_TYPOS =
   'Poddar Developers' => ['poddar development', 'poddar dev',
     'podder dev', 'podder developers', 'poddar devekopers',
     'poddar dovelopers', 'deepak podder'],
+  'POLFA' => ['polfa wzbs'],
   'PT Bayu Buana Gemilang' => ['pt bbg'],
   'PT Bumi Siak Pusako' => ['pt.bumi siak pusako',
     'bumi siak pusako', 'pt bsp'],
@@ -486,6 +488,7 @@ my %MULTI_TYPOS =
   'Shanghai Automobile' => ['shanghai automoblie', 'sh  qiche',
     'sh qiche'],
   'Shanghai Changyu' => ['sh chuangyu'],
+  'Shanghai Gaohe' => ['shanghai gaowe'],
   'Shanghai Jiahua' => ['shanghai jia hua'],
   'Shanghai Ling Mu' => ['ling mu'],
   'Shanghai Qiche' => ['shanghai qi che'],
@@ -549,7 +552,7 @@ my @SINGLE_WORDS = qw(
 
   Bajaj Banpu Baykar Beibao Beidike Bnerg
 
-  Cable Candyland Changyu Chemikartel Chlodnia Chuanmei Cimentas 
+  Cable Candyland Cempaka Changyu Chemikartel Chlodnia Chuanmei Cimentas 
   COMAL Compensa Computerland CONNECTOR CONSUS Constellation 
   Continental Copia Cosmos
 
@@ -665,7 +668,6 @@ my %SINGLE_TYPOS =
   'Penajam PU' => ['penajan'],
   'Perbankan Jatim' => ['perbankan'],
   'Poddar Developers' => ['poddar'],
-  'POLFA' => ['polfa wzbs'],
   'Pro Consul' => ['proconsul'],
   'PU Minsel' => ['minsel'],
   'Perusahaan Listrik Negara' => ['pln'],

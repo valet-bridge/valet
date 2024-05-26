@@ -782,7 +782,7 @@ my @SINGLE_WORDS = qw(
   Rebecchi Rees Reess Rehder Reid Reimer Reinholdt Reiplinger 
   Rekstad Renouard Reps Revaz Rew Reynolds Rheingold Rhodes Ribera 
   Ribery Ricard Ricci Richardson Richman Ridgway Riedel Riehm 
-  Rietvink Rieusset Rigal Rigaud Riisnæs Rimstedt Riolo Rios 
+  Rietvink Rieusset Rigal Rigaud Riisnæs Rimstedt Ringuet Riolo Rios 
   Ritmeijer Rivers Rizzo Robb Robert Robertson Robinson Robles 
   Robson Rocafort Rocca Rodwell Rogoff Rohowsky Roll Romanin 
   Romanski Rombaut Ronin Rosen Rosenberg Rosendorff Rosetta 
@@ -813,7 +813,8 @@ my @SINGLE_WORDS = qw(
   Stern Steinberg Sternberg Stevens Stewart Stienen Stilling
   Stoichkov Stoltz Stoppa Street Stretz Strul Strøm Stuart
   Sulgrove Sveindal Sveinsson Svendsen Suarez Sugino Summers Sundelin 
-  Sundsten Sung Suñol Suresh Sutherlin Suwik Sütmen Svindahl Sykioti Syl 
+  Sundsten Sung Suñol Suresh Sutherlin Suwik Sütmen Svindahl 
+  Sweidan Sykioti Syl 
   Sylvan Symons Szalay Szenberg Szigethy Szots Szymanowski Sørensen
 
   Tachev Tajima Takayama Talpur Tamburi Tamburrini Tan Tanaka Taner 
@@ -1053,6 +1054,7 @@ my %SINGLE_TYPOS =
   Sapounakis => ['sapounaki'],
   Schaltz => ['schalz', 'shaltz'],
   Schneider => ['scheinder'],
+  Schou => ['shhou'],
   Schüller => ['schueller'],
   Schwartz => ['schwarz'],
   Selcuk => ['Selçuk'],
