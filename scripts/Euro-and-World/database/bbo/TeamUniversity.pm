@@ -126,7 +126,7 @@ my %MULTI_TYPOS =
   'National Chengchi University' => ['nccu'],
   'National Chiao Tung University' => ['nctu'],
   'National Chung Hsing University' => ['nchu'],
-  'National Taiwan University' => ['abc_e'],
+  'National Taiwan University' => ['abc_e', 'btu-p', 'btu-u'],
   'Osmangazi University' => ['osmangazi uni'],
   'Selçuk University' =>['selçuk uni'],
   'Senior High School' => ['sekolah menengah atas', 'sma kimia'],
@@ -155,7 +155,7 @@ my %MULTI_TYPOS =
   'Wroclaw University of Science and Technology' => 
     ['Politechnika Wroclawska', 'polit wroclaw', 'polite wroclaw',
     'polit wr', 'politechnika wr', 'azs pw', 'politehnica cluj',
-    'poli cluj'],
+    'poli cluj', 'poli'],
   'Yildiz Technical University' => ['ýtü']
 );
 

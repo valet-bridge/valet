@@ -579,7 +579,7 @@ my @SINGLE_WORDS = qw(
 
   Raam Radex Ráðgjöf Ravebo Relpol Rofoi Ryka
 
-  Sagaplast Samsung Samtronic Scania Sehati Sekans Sevtopolis Shichuang
+  Sagaplast Samsung Samtronic Scandic Scania Sehati Sevtopolis Shichuang
   Shimuzu 
   Shouchuang Signity Skeljungur Solakoglu Solox Sparisjóður Srenniw
   SSDA Stalgast Stiga Struma Synective

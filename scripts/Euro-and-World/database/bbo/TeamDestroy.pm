@@ -33,7 +33,8 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   1st 2nd 3rd 4th 5th 6th 7th 24th
-  and Any Away
+  2a 5a 7a 8a 9a
+  a and Any Away
   Best Bridge
   Center Challenger City Commercial Commune
   Development Dist
@@ -47,13 +48,15 @@ my @SINGLE_WORDS = qw(
   Match Mates Milli Mr
   National NC No NONAME North npc nr
   og Opponent Opponents Other Others
-  Pacific pc PairNo Players Plus Point PON Prima Pusat
+  Pacific pc PairNo Platinum Players Plus Point PON Prima Pusat
   Rank River
   Section Selected South Sponsor Squad Standard Stars Sunday Swiss
   Table Tennis Test Times Top Tournament Tricks
   United
   Visit
   West World
+  XY
+  ZW
   Various
 );
 
@@ -64,7 +67,7 @@ my %SINGLE_TYPOS =
   Challengers => ['chalengers'],
   Group => ['istis'],
   International => ['internat', 'internationa'],
-  Leaders => ['leader', 'leders'],
+  Leaders => ['leader', 'leders', 'winners'],
   National => ['nasional'],
   'No Name' => ['noname'],
   North => ['nord'],
@@ -72,7 +75,8 @@ my %SINGLE_TYPOS =
   'Pra PON' => ['prapon', 'pon'],
   South => ['syd'],
   Squad => ['squadra', 'takim'],
-  Tournament => ['tounament', 'tourney']
+  Tournament => ['tounament', 'tourney', 'trn', 'trnaway', 'trnhome'],
+  World => ['worldteam']
 );
 
 

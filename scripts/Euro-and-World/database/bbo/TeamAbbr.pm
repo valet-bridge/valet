@@ -36,7 +36,7 @@ my %MULTI_TYPOS =
     'brýç s.k.', 'brýç sk', 'brýc sk', 'bsb bk', 
     'c. br.',
     'card club',
-    'gr.sp.ass.', 'g.s.b.', 'g.s.b', 'g.s.',
+    'gr.sp.ass.', 'g.s.b.', 'g.s.b', 'g.s.', 'gsd briç',
     'kontrat bsk',
     'y.þehýr bld'],
 

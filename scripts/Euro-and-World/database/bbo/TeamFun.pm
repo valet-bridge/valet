@@ -158,6 +158,7 @@ my @MULTI_WORDS =
   'Counter Strike',
   'Country Boys',
   'Croatian Pirates',
+  "Crockford's Cup",
   'Curry Eaters',
   'Curt-Lennart',
   'Czarna Owca',
@@ -397,6 +398,7 @@ my @MULTI_WORDS =
   'KM AT',
   "L'Orange",
   'La Bomba',
+  'LA Light',
   'La Vista',
   'Lady Da et ses Boys',
   'Lakk & Lær',
@@ -459,6 +461,7 @@ my @MULTI_WORDS =
   'Monte Carlos',
   'Moo York Nix',
   'Mostly Harmless',
+  'Mountain Sea',
   'Ms. Guggenheim',
   'Mumbai Indians',
   'Murphys lag',
@@ -469,6 +472,7 @@ my @MULTI_WORDS =
   'Møllers Team',
   "'n Vidar & Andersen",
   "Narcotic's What?",
+  'Nat-Max',
   'Nav Chaitanya',
   'Nazar Boncugu',
   'Nazionale Cantanti',
@@ -580,6 +584,7 @@ my @MULTI_WORDS =
   'Saras Friends',
   'Sarunta Toar',
   'Saruntawaya Minahas',
+  'S.B.F.',
   'Schall und Rauch',
   'Scottish President',
   'Seckin C',
@@ -898,6 +903,7 @@ my %MULTI_TYPOS =
   'Saevar Karl' => ['svaer karl'],
   'Saint Titus' => ['st titus', 'st. titus'],
   'Sakurai' => ['japan sakurai'],
+  'S.B.F.' => ['s.b.f'],
   'Sektion UDV' => ['section udv'],
   'Silver Eagle' => ['silver  eagle'],
   'Sivves straffdubbl' => ['sivves straffdubbl.', 'sivves straffdbl',
@@ -925,7 +931,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-   2Q2K 3D 6L 10CC 7heart
+   1den1e 2Q2K 3D 6L 10CC 7heart
 
    AABC ABC Aces Acolvik ACR Adventure Aditya Aeras Agamemnon Agressor 
    Ahmetizm 
@@ -943,8 +949,10 @@ my @SINGLE_WORDS = qw(
    Bajozero Balti Baltic
    Banana Bananasplit Baneet BarDeZi BARC BARP Barracuda Baryton BAST 
    Bat Batmix Bato Batusida Bauhinia 
-   BBE BBO Beauty Begigütje Begijntje BELSPA Ben Beniaminek Berik Beton 
+   BBE BBO BCBR Beauty Begigütje Begijntje BEIH BELSPA Ben Beniaminek 
+   Berik Beton 
    BHDM Bhide Bhinneka Biachite Bilal BIN Bingbang Binkie Biriceri 
+   BKSE
    Blackwood Blandat Bling Blondie Blues Blund Blueberry Blues
    BMP BNMR BNS
    BOC Boek 
@@ -955,11 +963,12 @@ my @SINGLE_WORDS = qw(
    Bubba Bubu 
    Buddies Bulldozer Bumerangas Bunnies Busiaki Butler
 
-   Cabal Cabriole Calaca Cammello Canadonia Cancan Canukusa 
-   Cardtossers Cargo Cartoon Casuals Cask Cathy Cavelieri Cavendish
+   Cabal Cabriole Calaca Cammello Camrose Canadonia Cancan Canukusa 
+   Cardtossers Cargo Carlitos Cartoon Casuals Cask Cathy Cavelieri Cavendish
    Censored 
    Center Cerkez Challengers Changes Chass Chateau Chicks Chime 
    Chiranjeev Chokladmåndag CHPIK Chuanpit Cité Claim Claudili 
+   CMN
    Coaches Cogito Colorado Commandos 
    Comrade Concurrent Conie Contact Contra Coopers Corner 
    Costantina Counterstrike Couples Crash Cremaster Croanglopol
@@ -968,17 +977,18 @@ my @SINGLE_WORDS = qw(
    Dada Dadya Dahsyat Dallas DanEng DanFar Danger Daniel Dash Dauna Dawn 
    Debonecos Debutantes Deceptive DeeJee Defne Demony Demýrbaþ
    DenmarS Deppo 
-   Desperados Destroyers Dialect Diana Dido Diego Dieter Dilligaf 
+   Desperados Destroyers Dialect Diana Didi Dido Diego Dieter Dilligaf 
    Dimmat Dingyuan Dino Dinos Dion DJB Doctors Doki Donjulio Donvito 
    Dora Dracula Dragon 
    DSM DuckNDales Dukens Duros Dusteforbundet Dvizhenie Dyret
 
    Eagles Ece Econ Edi Efsane Egesarpdoruk Eikka Ekenboda Ekoap 
-   Elektrownia Elio Eliminator Elips Eliza Ellen Emerald Emre Engelen 
+   Elektrownia Elio Eliminator Elips Eliza Ellen EMA Emerald Emre Engelen 
    Engineers Enigma Enjoy Ephesus Epsilon Equator Era Eren Eric 
    Erikas Erla Ertým ErUS ESA Eses Esesss Esperanza Everest Evil Ewa
 
-   F16 Fakel FAM² Fantasia Fant4stic Farmen Farmers Felix Fenghuang Fenia 
+   F16 Fakel FAM² FAMA Fantasia Fant4stic Farmen Farmers Felix 
+   Fenghuang Fenia 
    Fenix Ferfi Feszek Fharon Fifi Fil Filosofene Filur Finest Fisk 
    FNCC Forfot Formidables Formosa Fortuna Fortune FOS Foundation Francest 
    Frank Franz Frenemies Frieolt Friends Frirond Francophones Freak 
@@ -986,7 +996,7 @@ my @SINGLE_WORDS = qw(
 
    Gabrisem Galaxy Galim Gambitas Gamma Garry Garp Garuda Gata Gelim 
    Gelin Gentle George Geriatrix Gewanna Geysir Gesi Giants Gibs 
-   Gjesp Gkobra GloryGlory Goldcat Goroco Gosho Göktürk GP Grand Grads
+   Gjesp Gkobra GloryGlory GMM Goldcat Goroco Gosho Göktürk GP Grand Grads
    Greecoura Greta GRNC Grup Guayacos Gudok Guests Gulce Gulebjorn 
    Gullberg 
    Gullvi Gunsmoke Guptas Gürsel
@@ -1001,7 +1011,7 @@ my @SINGLE_WORDS = qw(
    Hunaja Huispaus Hunhun Hurra Hybrid
 
    IBE Ida Iff Ijseide Ikarus Ilya IMAN Imanual IMLUK Imponderables 
-   InFran Instructor Iris Irukangi Ismo Israbel Isrmany 
+   InFran Instructor Iris Irukangi Ismo Israbel Isrmany ITB
    Itnoraunz ITS IVAR
 
    Jagg Jaiganesh Janko Jans JAPCAN JAS JASS Jassica Javel Jaya
@@ -1014,7 +1024,7 @@ my @SINGLE_WORDS = qw(
 
    Kaardivägi Kagama Kalbar Kalca Kalkarna Kaltim Kamelåså Kamikaze 
    Kamlakars Kamyk Kangaroo Kanin Karaarslan Karin Kark Karo Kartel 
-   Kasiyahan Kasty Kasuang Kat Katipunan Kebiya Keni Kenji Kenlong 
+   Kasiyahan Kasty Kasuang Kat Katipunan KBA KBC Kebiya Keni Kenji Kenlong 
    Kerasus Kibe Kinga Kingkong Kings KISS Kitty Kjelskos KKKQ
    Klasik Klio
    KMC Knösel Kodin Koiraperhe Kokoelma Kolbasti Komleposs
@@ -1025,7 +1035,7 @@ my @SINGLE_WORDS = qw(
    Kvazar Kwiecisty
 
    Lahjattomat LAKT Langy Laplanders Laplas Larry Lasse Lataka Lateria 
-   LatSwe Lazy LBC Lebensohl Lebron Legeanka Lema Lemanus Leszek 
+   LatSwe Lazy LBC LBSK LCF Lebensohl Lebron Legeanka Lema Lemanus Leszek 
    Leta Letve 
    Leveni Lianas Liggeunderlaget Lili Lillebaluba Lions Lipa Lira Livius 
    Lirarna Liverbird Ljónin LNWers Lo Loaknath Logos Lolly Loloc 
@@ -1039,11 +1049,11 @@ my @SINGLE_WORDS = qw(
    Manu Manywar Margitta Marianne Mark Marosamitawa Mars Marvelous 
    Marynarz Masdjävlar Masters Matilde Matrix Mats Matujona Maven 
    Mavi Mavs Mayamira Maxi 
-   Mer Mercury Mesna Meta MGTH Mia Michal Midas Mihai Mikke Miguel 
+   Mer Mercury Mesna Meta MGM MGTH Mia Michal Midas Mihai Mikke Miguel 
    Milady Milo Minut 
    Mirage Miro Mismatch Mixarna Mjøskameratne MMMM MMRMC
    Mochu Moki Monaconf Mongos
-   Moritz Mostingan Movember Mölnlycke Munawar Mustang Muumio 
+   Moritz Mostingan Movember Mölnlycke MPEC Munawar Mustang Muumio 
    Mýna Myoni 
    Møremix Måsen
 
@@ -1062,34 +1072,38 @@ my @SINGLE_WORDS = qw(
    Öncü
 
    Pacers Paco Pagonia Pal Palukas Panteros Paoli Paradigma Partizan
-   Pasam Pasanci Passé Patriot Patron Paulette Paulina Paulistas PDC
+   Pasam Pasanci Passé Patriot Patron Paulette Paulina Paulistas 
+   PBL PCBA PDC
    Pegasus Pennant
    Perestrojka Perjuangan Pero Peter Petra Pia Piast Piryoli Piter 
-   Pjäxa PK3 Pleschi Pleyada Plia PMS Pojat Polirish Polus Polýsgücü
+   Pjäxa PKBS PK3 Pleschi Pleyada Plia PMS Pojat Polirish Polus Polýsgücü
    Pompapompa 
    Pontiac Poss Potlimit Potteplante Powerchicks Prapar Prasetya 
    Preempters Pretendents Prijatelj Prim Prosan Proteus Proto Ptacol 
+   PTT
    Pude Pusten Pyon Pyton PZIM Påskevennene
 
    Quantum Quasar Quattro Quintet Quinze
 
    Radhey Radikk Rafael RAG Raifles Rakinnett RAM Ramkumar Rampage 
-   Rapid RASH Raskasammen Real Recaptan Regeldur Reklamtrion Reloaded 
+   Rapid RASH Raskasammen RBP Real Recaptan Regeldur Reklamtrion Reloaded 
    Rene Rob Ribitas Rike Rima RKK Robertinho Robi Robocop Rollers Rosajora 
    Rovers Royston Rozle Rylai Rylal Ryo
 
    Sabari Sabina Sabres Saga SAGG Sailor Sakurai Saladmasters Salokin 
    Salost Salvo Sansouci SANY Sapphire Sara Sargam Sarp SaTu Saturn Sbamby 
    Sbanda Scapros Schmuckles Schneewittchen Scientists Scot SDK 
-   Secure Selin Senaattorit Senator Severin Sevil SFG Shan Shane 
+   Secure Selin Senaattorit Senator Severin Sevil SFG SGG Shan Shane 
    Shaoshen Shavaz Sherdils SHHG Shona Show Shrikant Shuai
    Shushi Siddheshwar Sigdonnemann Sigma Sigrid Sihai Silbersee 
    Silence Silverfox 
    Simonetta Simple Simpleksas Sindbad Sindhu Singapole Sirius SISU Sivves 
-   Siyabend Sjøsamen Skalman Skaronga Skip Skitur Skotii SKR Þlem 
-   Slappfisker Slostria Slufsa SMBC Småveitjan SNAP Snapper Snipers 
+   Siyabend Sjøsamen Skalman Skaronga SKB SKBS Skip Skitur Skotii SKR Þlem 
+   Slappfisker Slostria Slufsa SMBC SMJ Småveitjan SNAP Snapper Snipers 
+   SNP
    Soba Sober Sobers Sogn Soho Solo Sonata Sonchel Soumitra Spamirs
-   Spandan Spark Spartans Specialist Spekkhogger Spektr Spin Spring 
+   Spandan Spark Spartak Spartans Specialist Spekkhogger Spektr Spin 
+   Spring 
    Squeeze Srimapuna Srykeir SSBC Stafani Stagge Stampede Star Starmen 
    Starsbridge Statusquo Stayman STB Stefany Steinars Steinlager 
    Steliana Steve Stifinnern Storeslemmen Strata Strategen Streamline 
@@ -1098,7 +1112,7 @@ my @SINGLE_WORDS = qw(
    SweNor Swest Syabas Syly Syttisju SZPAK SZPAR Sømnakameratene 
    Sør Såpeopera
 
-   Tadeu Take Takeoff Takk Takým Taksim Tally Tamae Tangra Tannlegene 
+   TAC Tadeu Take Takeoff Takk Takým Taksim Tally Tamae Tangra Tannlegene 
    Task Taurus Tbone Tefo Tempo Theme Tibetmunkene Tigers Tiglatpalasar
    Tihkur Tita Titanik Titans Tiz Toar Todremor Tofi Tohundre Tolerant 
    Tollemache Toma Tongxin Topozero Torpedo Tosca Totani Totoro Tömör 
@@ -1124,7 +1138,7 @@ my @SINGLE_WORDS = qw(
    Yogakshema Yokozuna YSD YYD YYY
 
    Zabavljaci Zamek Zana Zara Zen Zeyno Zhihaole Ziggy 
-   Zimmkonis Zivac Zlatan Zmaj Zombi Zorro Zozoura Zugzwang Zurzits 
+   Zimmkonis Zivac ZKS Zlatan Zmaj Zombi Zorro Zozoura Zugzwang Zurzits 
    Zvanger
 
    Øssur

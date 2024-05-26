@@ -561,7 +561,8 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   Aagaard Abecassis Adad Adams Adamsen Adde Adem Adrei Adriano Adrilla
   Agarwal Agica Agnihotri Agostini Akama Akem Aker Akgul Akgun Akhun 
-  Akkab Akkoyunlu Akuzum Alami Alegre Alela Alfonsin Alineo Allana 
+  Akkab Akkoyunlu Akuzum Alami Alegre Alegrio Alela Alfonsin Alineo 
+  Allana 
   Allegaert Allegra Allfrey Allison Allix Alloul Almirall Alocchi Aloi 
   Alonso Altan Altay Alti Altinis Altshuler Alujas Alvensleben Amadori 
   Amaral Ames Amoedo Amoils Amol Andersen Anderson Andersson 

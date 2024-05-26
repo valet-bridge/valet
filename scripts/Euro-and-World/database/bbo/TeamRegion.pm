@@ -189,7 +189,7 @@ my %SINGLE_TYPOS =
   'Tamil Nadu' => ['tamilnadu'],
   'Uttar Pradesh' => ['up', 'upba'],
   Uttarakhand => ['uttaranchal'],
-  'Victoria' => ['vic'],
+  'Victoria' => ['vic', 'viic'],
   Vojvodina => ['voj'],
   'Østfold Follo' => ['ostfoldfollo']
 );

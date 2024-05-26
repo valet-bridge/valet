@@ -82,6 +82,7 @@ my %MULTI_TYPOS =
   Ningbo => ['ning bo'],
   'Novi Sad' => ['nowe sady'],
   'Piatra Neamt' => ['p. neamt', 'p.neamt'],
+  Porto => ['invicta', 'cidade invicta'],
   Pudong => ['pu dong'],
   'Reggio Emilia' => ['r.e.', 'reggio e', 'r. emilia', 'reg. emilia'],
   Qingdao => ['qing dao'],
@@ -152,7 +153,7 @@ my @SINGLE_WORDS = qw(
   Kolbotn Kolkata Konak Kornik Korwin Kosice Koycegiz Köln Krakow 
   Kristiansand 
   Kucukcekmece Kudus Kunshan Kuopio Kusadasi Küp Kütahya Kverndalen
-  Kwok Kølabånn
+  Kwok Kyustendil Kølabånn
 
   Langkat Lappee Leiden Leilem Lemvourgeio Lerum Leszno Leuven Leverkusen 
   Lhokseumawe Lille Lima Lincoln Lindesberg Ljubljana Lodz Lokotok
@@ -238,7 +239,7 @@ my %SINGLE_TYPOS =
   Atakoy => ['ataköy'],
   Auckland => ['akarana'],
   Ayvalik => ['aivali'],
-  Bahcesehir => ['bahçeþehýr', 'bahcesehýr'],
+  Bahcesehir => ['bahçeþehýr', 'bahcesehýr', 'bahçesehir'],
   Balisekir => ['balikesýr', 'balýkesir',],
   Balkova => ['balçova'],
   Bangalore => ["b'lore", 'banglore'],
@@ -273,6 +274,7 @@ my %SINGLE_TYPOS =
   Kristiansand => ['kristiansands'],
   'Kuala Lumpur' => ['kl'],
   Küp => ['kup'],
+  Kyustendil => ['kjustend'],
   'La Marina' => ['lamarina'],
   Lhokseumawe => ['lhoeksemawe'],
   Lozenets => ['lozenec'],
@@ -300,7 +302,6 @@ my %SINGLE_TYPOS =
   Panzhihua => ['panzhihuabc'],
   Parioli => ['paroli'],
   'Piatra Neamt' => ['neamt'],
-  Porto => ['invicta', 'cidade invicta'],
   Potsdam => ['postdam'],
   Poznan => ['poz'],
   Prague => ['praha'],
