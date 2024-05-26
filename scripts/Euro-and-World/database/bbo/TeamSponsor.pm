@@ -186,6 +186,7 @@ my @MULTI_WORDS =
   'Maksoy-Deniz',
   'Mayur Renergy',
   'Mech-Ok',
+  'Meditepe Tip',
   'Mega-Tech',
   'Mei Kuang',
   'Meilin Qing Cheng',
@@ -410,6 +411,7 @@ my %MULTI_TYPOS =
     'garps apótek'],
   'Geely Automobile' => ['geely auto', 'gely auto', 'chaina geely',
     'china geely', 'jili', 'china geely auto', 'jili qiche'],
+  Geologi => ['badan geologi'],
   'Geoportal Kutai Kartanegara' => ['geo gutai gartanega'],
   'Gong Hang Jin Ying' => ['gonghang jinying', 'jin ying club',
     'jin ying', 'gonghang jinying'],
@@ -449,6 +451,7 @@ my %MULTI_TYPOS =
     'lögfr.stofa ´bjarna'],
   'Magpa-Grup' => ['magma-grup'],
   'Málning hf' => ['målning hf'],
+  'Meditepe Tip' => ['medýtepe tip', 'meditepe týp'],
   'Mutiara Energy' => ['mutiara energy indo', 'mutiara energi indo',
     'mutiara energi p.', 'mutiara energi.p'],
   'Nanfang Dianwang' => ['nan fang dian wang', 'dian wang'],
@@ -549,13 +552,13 @@ my @SINGLE_WORDS = qw(
   Effcontrol Eimskip Eksprompt Elastron Elektrika Elektrociepl
   Energetyk Enorma Enterprise ESSO Everfresh Evertrust
 
-  Forta Frissan Funbridge
+  Fatek Forta Frissan Funbridge
 
   GAMAX Gazprom Geologi Genkad Gevalia Gillette Gomad Gözgöz GSE
 
-  Hana Hanbang Harke Haustak Honesta Huayuan
+  Hana Hanbang Harke Haustak HNA Honesta Huayuan
 
-  IBM IMAX Impress Indoarsip Inteligent Interface Interkala
+  IBM IMAX Impress Indoarsip Intan Inteligent Interface Interkala
 
   Jetox Jiegao JHS Jinfan Junibacken
 

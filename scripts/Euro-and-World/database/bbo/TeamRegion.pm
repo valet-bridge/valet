@@ -119,6 +119,7 @@ my %MULTI_TYPOS =
   'South Sulawesi' => ['sulawesi selatan', 'sulsel'],
   'South Sumatra' => ['south sumatera', 'sumatera selatan', 'sumsel'],
   'Taihu Lake' => ['suzhou taihu'],
+  'Uttar Pradesh' => ['u.p.'],
   'Vest Agder' => ['vest-agder'],
   'Val di Magra' => ['val magra'],
   'Vest Finnmark' => ['vest-finnmark'],

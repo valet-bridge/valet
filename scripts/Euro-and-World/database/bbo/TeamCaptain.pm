@@ -24,6 +24,7 @@ my @MULTI_WORDS =
   'Akin Ucar',
   'Alain Lévy',
   'Aline Biondillo',
+  'Alok Daga',
   'Alvares Ribeiro',
   'Amedian Bross',
   'Amiya Ranjan Das',
@@ -497,6 +498,7 @@ my %MULTI_TYPOS =
   'N. Chakraborty' => ["n.c hakraborty's iv"],
   'Nabil Chaker' => ['chaker'],
   'Nabil Edgtton' => ['n edgtton', 'n.edgtton'],
+  'Nuno Paz' => ['n paz'],
   "O'Rourke" => ['o rourke', 'o;rourke', "o'rouke"],
   'Ofek Tal' => ['ofel tal'],
   'Olivier Bessis' => ['bessis.o.', 'bessis.o'],
@@ -589,7 +591,7 @@ my @SINGLE_WORDS = qw(
   Bloom Blum Blumental Bo Boaz Bocchi Bock Bogach Bogacki 
   Bohnhorst Bohnsack Bokk Bojoh Boldt Bolling Bolognini Bombardieri 
   Bomber Bompis Bongiovanni Bonis Bonori Bontas Booth Bordallo Bornova 
-  Boro Bos Boss Bossi Bostanci Bostosusz Botto Boucher Boughey 
+  Boro Bos Bose Boss Bossi Bostanci Bostosusz Botto Boucher Boughey 
   Bourke Bouscat Bowdery Bowles Boylson Bozempergk Bottetto Bozzetto
   Bozzo
   Brachman Brady Brake Braithwaite Bramley Branco Brantsma Branzoiu
@@ -813,7 +815,7 @@ my @SINGLE_WORDS = qw(
   Sylvan Symons Szalay Szenberg Szigethy Szots Szymanowski Sørensen
 
   Tachev Tajima Takayama Talpur Tamburi Tamburrini Tan Tanaka Taner 
-  Tardy Tarhan Tarkunde Tarnovski Tarsus Tasman Taylor Tebha Tedd 
+  Tardy Tarhan Tarkunde Tarnovski Tasman Taylor Tebha Tedd 
   Teltscher Tembouret Tencer Teodorescu Teramoto Terraneo Tesla Tez 
   Thapa Thomsen Thompson Thomson Thoresen Thuillez Thurston Ticha 
   Tishler Tislevoll Todd Toffier Toivonen Tokay Torielli Toro

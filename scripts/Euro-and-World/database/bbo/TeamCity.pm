@@ -23,6 +23,7 @@ my @MULTI_WORDS =
   'Belo Horizonte',
   'Boven Digoel',
   'El-Maadi',
+  'Gaziantep Zeugma',
   'Gjøvik og Vardal',
   'Kansas City',
   'Kashi Goa',
@@ -73,9 +74,10 @@ my %MULTI_TYPOS =
     'd.bakir b.þ.', 'd.bakir y.þehýr', 'd.bakir yenýþehýr',
     'd.bakýr b.þehir', 'd.bakir sur', 'd.bakýr sur',
     'd.bakýr dicle'],
+  'Gaziantep Zeugma' => ['g.antep zeugma'],
   Guangzhou => ['guang zhou'],
   Istanbul => ['ýstanbul'],
-  Jakarta => ['jak-tim', 'jakarta pusat', 'jakarta utara',
+  Jakarta => ['jak-tim', 'jak-sel', 'jakarta pusat', 'jakarta utara',
     'dki jaya'],
   Kristiansand => ['kr.sand'],
   Lozenets => ['vs lozenec', 'vv lozenets'],
@@ -97,6 +99,7 @@ my %MULTI_TYPOS =
   Tainan => ['tai nan'],
   'Villa Fabbriche' => ['v.fabbr.', 'villa fabb.', 'v. fabbriche',
     'v.fabbriche'],
+  Wuhan => ['wu han'],
   Yogyakarta => ['di jogjakarta']
 );
 
@@ -177,7 +180,7 @@ my @SINGLE_WORDS = qw(
   Padang Padova Paimado Palembang Palermo Palma Palu Pamukkale 
   Pancevo Panzhihua Pariaman Parioli Paris Pärnu Pasham Pattaya 
   Pecs Pekanbaru Pelotas Penajam Pernik Perth Perula Pesaro Pescara 
-  Peterfield Piloni Pinarbasi Polonezkoy Poncol Popovo Posillipo 
+  Peterfield Piloni Pinarbasi Polonezkoy Poncol Popovo 
   Poznan Pula
 
   Qiaoxie Qingdao
@@ -217,7 +220,7 @@ my @SINGLE_WORDS = qw(
   Yalikavak Yambol Yarimada Yarýmca Yatagan Yenisehir Yibin Yildirim 
   Yizhuang Yokohama Yogyakarta Yuquan
 
-  Zagreb Zeugma Zhenjiang Zhongshan Zhujiang Zhuzhou Zigong Zurich 
+  Zagreb Zhenjiang Zhongshan Zhujiang Zhuzhou Zigong Zurich 
   Zyrardow
 
   Ørland
@@ -255,6 +258,7 @@ my %SINGLE_TYPOS =
   Dongguan => ['dongguang'],
   Düsseldorf => ['duesseldorf'],
   Fatih => ['fatýh'],
+  'Gaziantep Zeugma' => ['zeugma'],
   Genoa => ['genova'],
   Guangzhou => ['gz', 'gaungzhou'],
   Harplinge => ['harpling'],
@@ -276,6 +280,7 @@ my %SINGLE_TYPOS =
   Küp => ['kup'],
   Kyustendil => ['kjustend'],
   'La Marina' => ['lamarina'],
+  Langkat => ['lankat'],
   Lhokseumawe => ['lhoeksemawe'],
   Lozenets => ['lozenec'],
   Makassar => ['makasar'],

@@ -115,6 +115,7 @@ my @MULTI_WORDS =
   'Blanda drops',
   'Bleu Lights',
   'Blue Chip Swedes',
+  'BMW J',
   'Bo Gulasch',
   'Boas disipler',
   'Bob Bob',
@@ -437,6 +438,7 @@ my @MULTI_WORDS =
   'Lucky Star',
   'Lucky 13',
   'Lucy-Ellena',
+  'M.O.',
   "M' Orange",
   'Ma-Cartoon',
   'Magic Eyes',
@@ -463,6 +465,7 @@ my @MULTI_WORDS =
   'Mostly Harmless',
   'Mountain Sea',
   'Ms. Guggenheim',
+  'Multi Gen Indonesia',
   'Mumbai Indians',
   'Murphys lag',
   'My Friends',
@@ -552,6 +555,7 @@ my @MULTI_WORDS =
   'Ram Charan',
   'Randers 2.0',
   'Randers 4.0',
+  'Rapan & Jezus',
   'Red Ash',
   'Red Beach',
   'Red Pork Cutlet',
@@ -644,13 +648,16 @@ my @MULTI_WORDS =
   'Såpjohansen & co',
   'Tasher Desh',
   'Team Bo a berg',
+  'Team Bru',
   'Team Zang',
   'Texan Aces',
   'Texan and Turks',
   'Texan and Yanks',
   'Team Awesome',
+  'Team Lanka',
   'Team Mayhem',
   'Team Yoda',
+  'Team Z',
   'Tempo-Knektene',
   'Teyzenin Yeri',
   'The Four Guys',
@@ -796,6 +803,7 @@ my %MULTI_TYPOS =
   Azores => ['açores team'],
   Ayan => ["ayan's"],
   'Babes Amazones' => ['babes-amazones'],
+  Baneet => ["Baneet's IV"],
   'Best uten kort' => ['best uden kort'],
   'Beto BO' => ['beto b o'],
   'Beverly Hillbillies' => ['beverly hillbillie'],
@@ -886,6 +894,7 @@ my %MULTI_TYPOS =
   'Missão Impossivel' => ['missão impossível'],
   'Mo i Raneran' => ['mo i raneran :)'],
   'Ms. Guggenheim' => ['ms. gugenheim'],
+  'Multi Gen Indonesia' => ['multi gen ina'],
   'Murphys lag' => ['murpyhs lag'],
   'Mystery Foursome' => ['mystery 4some'],
   'Møllers Team' => ['møllers t'],
@@ -900,6 +909,7 @@ my %MULTI_TYPOS =
   'P.S.' => ['p. s.'],
   'Queen and Knights' => ["queen's & knight"],
   'Rajjan' => ["rajjan's"],
+  'Rapan & Jezus' => ['rapan and ezis'],
   'Saevar Karl' => ['svaer karl'],
   'Saint Titus' => ['st titus', 'st. titus'],
   'Sakurai' => ['japan sakurai'],
@@ -947,7 +957,8 @@ my @SINGLE_WORDS = qw(
 
    BAB BABK Bacch Bachelor Bade Badger Badminton Bager BAK Baias 
    Bajozero Balti Baltic
-   Banana Bananasplit Baneet BarDeZi BARC BARP Barracuda Baryton BAST 
+   Banana Bananasplit Baneet BarDeZi BARC BARP Barracuda Barsss
+   Baryton BAST 
    Bat Batmix Bato Batusida Bauhinia 
    BBE BBO BCBR Beauty Begigütje Begijntje BEIH BELSPA Ben Beniaminek 
    Berik Beton 
@@ -970,7 +981,7 @@ my @SINGLE_WORDS = qw(
    Chiranjeev Chokladmåndag CHPIK Chuanpit Cité Claim Claudili 
    CMN
    Coaches Cogito Colorado Commandos 
-   Comrade Concurrent Conie Contact Contra Coopers Corner 
+   Comrade Concurrent Conie Contact Contra Coopers Coor Corner 
    Costantina Counterstrike Couples Crash Cremaster Croanglopol
    Crockfords Crossfatek CSTO Czteropak
 
@@ -996,8 +1007,9 @@ my @SINGLE_WORDS = qw(
 
    Gabrisem Galaxy Galim Gambitas Gamma Garry Garp Garuda Gata Gelim 
    Gelin Gentle George Geriatrix Gewanna Geysir Gesi Giants Gibs 
-   Gjesp Gkobra GloryGlory GMM Goldcat Goroco Gosho Göktürk GP Grand Grads
-   Greecoura Greta GRNC Grup Guayacos Gudok Guests Gulce Gulebjorn 
+   Gjesp Gkobra GloryGlory GMM Goldcat Goroco Gosho Göktürk GP 
+   Grand Grads Greecoura Greta Gris GRNC Grup Guayacos Gudok Guests 
+   Gulce Gulebjorn 
    Gullberg 
    Gullvi Gunsmoke Guptas Gürsel
 
@@ -1047,7 +1059,7 @@ my @SINGLE_WORDS = qw(
    Major MajorB Majorn Majority Makara Makriköy Mali Malinka Malmölaget 
    Manashda Manena Manno Mano 
    Manu Manywar Margitta Marianne Mark Marosamitawa Mars Marvelous 
-   Marynarz Masdjävlar Masters Matilde Matrix Mats Matujona Maven 
+   Marynarz Masdjävlar Mask Masters Matilde Matrix Mats Matujona Maven 
    Mavi Mavs Mayamira Maxi 
    Mer Mercury Mesna Meta MGM MGTH Mia Michal Midas Mihai Mikke Miguel 
    Milady Milo Minut 
@@ -1104,10 +1116,11 @@ my @SINGLE_WORDS = qw(
    Soba Sober Sobers Sogn Soho Solo Sonata Sonchel Soumitra Spamirs
    Spandan Spark Spartak Spartans Specialist Spekkhogger Spektr Spin 
    Spring 
-   Squeeze Srimapuna Srykeir SSBC Stafani Stagge Stampede Star Starmen 
+   Squeeze Srimapuna Srykeir SSBC SSSR Stafani Stagge Stampede Star 
+   Starmen 
    Starsbridge Statusquo Stayman STB Stefany Steinars Steinlager 
    Steliana Steve Stifinnern Storeslemmen Strata Strategen Streamline 
-   Studentene StZ Stålfarfar Sucharek Sue SuHuQiaoYou
+   Studentene StZ Stålfarfar St?vel Sucharek Sue SuHuQiaoYou
    Sunset Sunshine Suz Svetla Swanand SweDanes 
    SweNor Swest Syabas Syly Syttisju SZPAK SZPAR Sømnakameratene 
    Sør Såpeopera
