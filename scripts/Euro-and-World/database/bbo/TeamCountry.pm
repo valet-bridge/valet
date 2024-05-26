@@ -117,6 +117,7 @@ my %SINGLE_TYPOS =
   France => ['fra', 'fnc', 'frandce'],
   'French Guyana' => ['guyana', 'guayana', 'guayana'],
   Germany => ['deutschland'],
+  'Great Britain' => ['gb'],
   Guadeloupe => ['guadelupe'],
   'Hong Kong' => ['hk', 'hongkong'],
   Hungary => ['hungar'],

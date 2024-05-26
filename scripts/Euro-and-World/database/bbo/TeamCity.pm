@@ -207,7 +207,7 @@ my @SINGLE_WORDS = qw(
 
   Taicang Taihu Tainan Taizhou Takayama Tallinn Tambun Targoviste 
   Tarnów Taskopru Täby Täfteå Tekýrdag Temuco Tengah Tequendama 
-  Thanjavur Thessaloniki Tianjin 
+  Thane Thanjavur Thessaloniki Tianjin 
   Tianya Timisoara Tingling Tire Tokyo Tomohon Torino Toulouse Trieste 
   Trondheim Tromsø
 
@@ -331,6 +331,7 @@ my %SINGLE_TYPOS =
   Tarnów => ['tarnow'],
   Täfteå => ['taftea'],
   Tekýrdag => ['tekirdað'],
+  Thane => ['tane'],
   Thanjavur => ["tanjorian's"],
   Thessaloniki => ['salonica'],
   Tromsø => ['tromso', 'tromsoe'],
@@ -341,6 +342,7 @@ my %SINGLE_TYPOS =
   Warsaw => ['warsow', 'warszawa'],
   Wroble => ['wróble'],
   Wroclaw => ['wr'],
+  Yarýmca => ['yarimca'],
   Yildirim => ['yýldýrým'],
   Yogyakarta => ['jogjakarta', 'diy'],
   Zagreb => ['zgb', 'zg'],

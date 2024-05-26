@@ -45,8 +45,8 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   1st 2nd 3rd 4th 5th 6th 7th 24th
-  1z 2a 5a 6a 7a 8a 9a u2
-  a and Alumni Any Away
+  1z 2a 5a 6a 7a 8a 9a u2 z1
+  a and as Alumni Any Away
   Best Bridge
   Center Challenger City Commercial Commune
   Development Dist
@@ -58,7 +58,7 @@ my @SINGLE_WORDS = qw(
   KB KDK KRS
   LD Leaders
   Match Mates Milli min Mr
-  National NC No NONAME North npc nr NS
+  National NC NK No NONAME North npc nr NS
   og Opponent Opponents Other Others
   Pacific pc PairNo Platinum Players Plus Point PON Prima Pusat
   Rank River
@@ -68,6 +68,7 @@ my @SINGLE_WORDS = qw(
   Visit
   West World
   XY
+  YZ
   ZW
   Various
 );

@@ -458,6 +458,7 @@ my @MULTI_WORDS =
   'Max 100',
   'Max-Nat',
   'Männer mit ELAN',
+  'MC Toss',
   'Meins bleibt meins',
   'Meng Qing Xin',
   'Minas Trith',
@@ -960,8 +961,8 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
    1den1e 2Q2K 3D 6L 10CC 7heart
 
-   AABC ABC Aces Acolvik ACR Adventure Aditya Aeras Agamemnon Agressor 
-   Ahmetizm 
+   AABC ABBKI ABC Aces Acolvik ACR Adventure Aditya Aeras Agamemnon 
+   Agressor Ahmetizm 
    Ahornet Aida Akenobo Akinom Alertplus Alex Alf Alfredo Ali Alioth 
    Allam Alliance Alliansen Allstars Alpha Alternativlos Ambassador 
    Amrapali Amul Andromeda Anglian Andrzejki Anglers Anglophones 
@@ -977,12 +978,12 @@ my @SINGLE_WORDS = qw(
    Banana Bananasplit Baneet BarDeZi BARC BARP Barracuda Barsss
    Baryton BAST 
    Bat Batmix Bato Batusida Bauhinia 
-   BBE BBO BCBR Beauty Begigütje Begijntje BEIH BELSPA Ben Beniaminek 
+   BBE BBN BBO BCBR Beauty Begigütje Begijntje BEIH BELSPA Ben Beniaminek 
    BeRe Berik Beton 
    BHDM Bhide Bhinneka Biachite Bilal BIN Bingbang Binkie Biriceri 
    BKSE
    Blackwood Blandat Bling Blondie Blues Blund Blueberry Blues
-   BMAL BMP BNMR BNS
+   BMAL BMP BNMR BNS BNT
    BOC Boek 
    Bolero 
    Boogies Boomz Boriana 
@@ -992,7 +993,7 @@ my @SINGLE_WORDS = qw(
    Buddies Bulldozer Bumerangas Bunnies Busiaki Butler
 
    Cabal Cabriole Calaca Cammello Camrose Canadonia Cancan Canukusa 
-   Cardtossers Cargo Carlitos Cartoon Casuals Cask Cathy Cavelieri 
+   Cardtossers Cargo Carlitos Carsi Cartoon Casuals Cask Cathy Cavelieri 
    Cavendish Cem Cendrawasih Censored Center Cerkez Challengers 
    Changes Chass 
    Chateau Chicks Chime Chiranjeev Chokladmåndag CHPIK Chuanpit 
@@ -1038,7 +1039,7 @@ my @SINGLE_WORDS = qw(
    Holport Honeymoon Hopfenkönig Hornet House Hridhaan Hubsi Huhu 
    Hunaja Huispaus Hunhun Hurra Hybrid
 
-   IBE Ida Iff Ijseide Ikarus Ilya IMAN Imanuel IMLUK Imponderables 
+   IBBSK IBE Ida Iff Ijseide Ikarus Ilya IMAN Imanuel IMLUK Imponderables 
    InFran Instructor Iris Irukangi Ismo Israbel Isrmany ITB
    Itnoraunz ITS IVAR
 
@@ -1088,9 +1089,10 @@ my @SINGLE_WORDS = qw(
    Møremix Måsen
 
    Nabil NAD Nadide Narbisk Narre Natalia Nathans Natural Naturalists 
-   NBB Neduk 
+   NBB Necos Neduk 
    Nemesis Nessuno Neverclaim Nico Nightingale Nik Nikita Nikitopoulos 
-   Niko Nikos Nikotiimi Nina Nis Nislije NMRT Noctis Noralia Noriko 
+   Niko Nikos Nikotiimi Nina Nis Nislije NMRT Noctis NoNed
+   Noralia Noriko 
    Norsu NOS NTiosagutta Nula
 
    Obezit Octopussy OEI Ognisty Okay Oksijen Olavsfestdagene Olena 
@@ -1116,8 +1118,8 @@ my @SINGLE_WORDS = qw(
 
    Radhey Radikk Rafael RAG Raifles Rakinnett RAM Ramkumar Rampage 
    Rapid RASH Raskasammen RBP Real Recaptan Regeldur Reklamtrion 
-   Reloaded Rem Rene Rob Ribitas Rike Rima RKK Robertinho Robi Robocop 
-   Rollers Rosajora Rovers Royston Rozle RS Rylai Rylal Ryo
+   Reloaded Rem Rene Rica Rob Ribitas Rike Rima RKK Robertinho Robi 
+   Robocop Rollers Rosajora Rovers Royston Rozle RS Rylai Rylal Ryo
 
    Sabari Sabina Sabres Saga SAGG Sailor Sakurai Saladmasters Salokin 
    Salost Salvo Sansouci SANY Sapphire Sara Sargam Sarp SaTu Saturn Sbamby 
@@ -1125,7 +1127,7 @@ my @SINGLE_WORDS = qw(
    Secure Selin Senaattorit Senator Severin Sevil SFG SGG Shan Shane 
    Shankars
    Shaoshen Shavaz Sherdils SHHG Shona Show Shrikant Shuai
-   Shushi Siddheshwar Sigdonnemann Sigma Sigrid Sihai Silbersee 
+   Shushi Sid Siddheshwar Sigdonnemann Sigma Sigrid Sihai Silbersee 
    Silence Silverfox 
    Simonetta Simple Simpleksas Sindbad Sindhu Singapole Sirius SISU Sivves 
    Siyabend Sjøsamen Skalman Skaronga SKB SKBS Skip Skitur Skotii SKR Þlem 
@@ -1222,6 +1224,7 @@ my %SINGLE_TYPOS =
   Jonathan => ['joanthan'],
   'Joy Division' => ['joydivision'],
   Juls => ['julst'],
+  Kibe => ['kýbe'],
   Jupiter => ['jupitor'],
   'Last Arrival' => ['lastarrival'],
   'Late S.S. Jain' => ['lssjain'],

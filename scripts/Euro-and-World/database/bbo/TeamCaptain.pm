@@ -256,6 +256,7 @@ my @MULTI_WORDS =
   'Pedro Madeira',
   'Pedro Morbey',
   'Pedro Pratas',
+  'Pedro Russo',
   'Peter de Vries',
   'Peter Schaltz',
   'Peteris Bethers',
@@ -514,6 +515,7 @@ my %MULTI_TYPOS =
   'Paulo Rocha Pinto' => ['paulo pinto', 'rocha pinto'],
   'Pedro Madeira' => ['p. madeira', 'p madeira'],
   'Pedro Morbey' => ['p. morbey'],
+  'Pedro Russo' => ['russo p'],
   'Piedade C. Real' => ['piedade c.real'],
   'Prakash Bandhari' => ['prakash bhandari'],
   'Prashant Desai' => ["prashant desai's"],
@@ -634,9 +636,9 @@ my @SINGLE_WORDS = qw(
   Duong Dupraz Dupuis Dupuy Durisotto Dutilloy Dworan Dyke
 
   Eaton Eber Ebery Economou Eden Edgtton Efremov Efthimiou Eggeling 
-  Eide Eidi Eidingsen Eisenberg Ekeblad Eksi Elbaz Ellestad Ellia 
-  Engel Elinescu Enrique Ergil Erhart Erichsen Eriksson Erk Erkel Ekþi
-  Espiasse Esterson Esteruelas Evans Ewart Eykt
+  Eide Eidi Eidingsen Eisenberg Ekeblad Eksi Elbaz Elias Ellestad 
+  Ellia Engel Elinescu Enrique Ergil Erhart Erichsen Eriksson Erk 
+  Erkel Ekþi Espiasse Esterson Esteruelas Evans Ewart Eykt
 
   Fabbri Fagerlund Faidas Faigenbaum Failla Falay Falciai Falk 
   Fallenius Fallon Fang Fantonakis Fantoni Farholt Faria Farias 
@@ -906,6 +908,7 @@ my %SINGLE_TYPOS =
   'de Tessieres' => ['tessieres', 'tessiere'],
   Debonnaire => ['debonaire'],
   "Del'Monte" => ['delmonte', 'ish'],
+  Delimpaltadakis => ['delim'],
   Demirbas => ['Demirbaþ'],
   'Deniz Ruzgar Akyurek' => ['ruzgar'],
   'Diana Damyanova' => ['dianadamyanova'],
