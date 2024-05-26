@@ -813,7 +813,7 @@ my @SINGLE_WORDS = qw(
   Stern Steinberg Sternberg Stevens Stewart Stienen Stilling
   Stoichkov Stoltz Stoppa Street Stretz Strul Strøm Stuart
   Sulgrove Sveindal Sveinsson Svendsen Suarez Sugino Summers Sundelin 
-  Sundsten Suñol Suresh Sutherlin Suwik Sütmen Svindahl Sykioti Syl 
+  Sundsten Sung Suñol Suresh Sutherlin Suwik Sütmen Svindahl Sykioti Syl 
   Sylvan Symons Szalay Szenberg Szigethy Szots Szymanowski Sørensen
 
   Tachev Tajima Takayama Talpur Tamburi Tamburrini Tan Tanaka Taner 

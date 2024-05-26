@@ -252,6 +252,7 @@ my @MULTI_WORDS =
   'European Aces',
   'Eviza Plambata',
   'Eye of the Tiger',
+  'F16',
   'f.d. Fröken Michiel',
   'Fairy Tale',
   'Fallega Folked',
@@ -482,6 +483,7 @@ my @MULTI_WORDS =
   'Nav Chaitanya',
   'Nazar Boncugu',
   'Nazionale Cantanti',
+  'NBS Lind',
   'Nice and Monsters',
   'Nilslands Crew',
   'Nilslands Slowfoxes',
@@ -511,6 +513,7 @@ my @MULTI_WORDS =
   'Olavs utvalgte',
   'Old Sports Jarov',
   'Om het hoekie',
+  'One I S',
   'One + Khuching Tree',
   'One Hundred Eighty',
   'One More!',
@@ -589,6 +592,7 @@ my @MULTI_WORDS =
   'Samfund Slingers',
   'San3PDX',
   'Sang ae',
+  'Sanghi Tivoli',
   'Saras Friends',
   'Sarunta Toar',
   'Saruntawaya Minahas',
@@ -601,6 +605,7 @@ my @MULTI_WORDS =
   'Seths vänner',
   'Seven Eleven',
   'Sham Sharma',
+  'SHE-D',
   'Shegoestobadat8',
   'Shining Pig',
   'Shooting',
@@ -912,7 +917,7 @@ my %MULTI_TYPOS =
     'nilsland slowfoxers'],
   "No He Isn't" => ['no he isnt'],
   'Oh Ya!' => ['oh ya'],
-  Polýsgücü => ['polýs gücü s', 'polis gucu', 'polisgucu'],
+  Polýsgücü => ['polýs gücü s', 'polýs gücü', 'polis gucu', 'polisgucu'],
   "Pradeep's Four" => ["pradeep's 4", "Pradeep's Team"],
   "President's Team" => ["president's", 'presidents teams'],
   "Priya's Four" => ["priya's iv", "priya's4"],
@@ -961,13 +966,13 @@ my @SINGLE_WORDS = qw(
    Amrapali Amul Andromeda Anglian Andrzejki Anglers Anglophones 
    Aniket Anna Anni Anuj Apaçý Appellkameratene Apples Apply
    Aquarius Arachfobia 
-   Arangan Archies Aristos Armani Arnab Arno Arunas Aslanli Aspe 
+   Arangan Archies Aristos Armani Arnab Arno Arunas ASDBB Aslanli Aspe 
    Asparagus Astra Astro Astronotlar Atlantic Atom Atrium Augerne Auni 
    Aurora AUTBUL AUTHOL Autostrada Avagard Avalanche Avatar Ayan
    Aytalus Azores Azure
 
-   BAB BABK Bacch Bachelor Bade Badger Badminton Bager BAK Baias 
-   Bajozero Balti Baltic
+   BAB BABK Bacch Bachelor Bade Badger Badminton Bager BAHABAWI
+   BAK Baias Bajozero Balti Baltic
    Banana Bananasplit Baneet BarDeZi BARC BARP Barracuda Barsss
    Baryton BAST 
    Bat Batmix Bato Batusida Bauhinia 
@@ -986,12 +991,10 @@ my @SINGLE_WORDS = qw(
    Buddies Bulldozer Bumerangas Bunnies Busiaki Butler
 
    Cabal Cabriole Calaca Cammello Camrose Canadonia Cancan Canukusa 
-   Cardtossers Cargo Carlitos Cartoon Casuals Cask Cathy Cavelieri Cavendish
-   Censored 
-   Center Cerkez Challengers Changes Chass Chateau Chicks Chime 
-   Chiranjeev Chokladmåndag CHPIK Chuanpit Cité Claim Claudili 
-   CMN
-   Coaches Cogito Colorado Commandos 
+   Cardtossers Cargo Carlitos Cartoon Casuals Cask Cathy Cavelieri 
+   Cavendish Cem Censored Center Cerkez Challengers Changes Chass 
+   Chateau Chicks Chime Chiranjeev Chokladmåndag CHPIK Chuanpit 
+   Cité Claim Claudili CMN Coaches Cogito Colorado Commandos 
    Comrade Concurrent Conie Contact Contra Coopers Coor Corner 
    Costantina Counterstrike Couples Crash Cremaster Croanglopol
    Crockfords Crossfatek CS CSTO Czteropak
@@ -1009,7 +1012,7 @@ my @SINGLE_WORDS = qw(
    Engineers Enigma Enjoy Ephesus Epsilon Equator Era Eren Eric 
    Erikas Erla Ertým ErUS ESA Eses Esesss Esperanza Everest Evil Ewa
 
-   F16 Fakel FAM² FAMA Fantasia Fant4stic Farmen Farmers Felix 
+   Fakel FAM² FAMA Fantasia Fant4stic Farmen Farmers Felix 
    Fenghuang Fenia Fenix Ferfi Feszek Fharon Fifi Fil Filosofene 
    Filur Finest Fisk Flagship FNCC Forfot Formidables Formosa 
    Fortuna Fortune FOS Foundation Francest 
@@ -1038,8 +1041,8 @@ my @SINGLE_WORDS = qw(
    Itnoraunz ITS IVAR
 
    Jagg Jaiganesh Janko Jans JAPCAN JAS JASS Jassica Javel Jaya
-   Jelena Jernbaneverket Jessi Jessica Jecization Jinjing Jirin Jiujiu 
-   JJJ Jóannes Job Jocker
+   Jelena Jernbaneverket Jessi Jessica Jecization JHIC Jinjing 
+   Jirin Jiujiu JJJ Jóannes Job Jocker
    JoJo Joker Jonathan Joter Journalists Juanval Jugermaister Juice 
    Juls 
    Juniorklubben Jupiter Juste Justplay Justyna Justynka Jutek 
@@ -1076,7 +1079,7 @@ my @SINGLE_WORDS = qw(
    Milady Milo Minut 
    Mirage Miro Mismatch Mixarna Mjøskameratne MMMM MMRMC
    Mochu Moki Monaconf Mongos
-   Moritz Mostingan Movember Mölnlycke MPEC Munawar Mustang Muumio 
+   Moritz Mostingan Movember Mölnlycke MPEC MRSMC Munawar Mustang Muumio 
    Mýna Myoni 
    Møremix Måsen
 
@@ -1097,7 +1100,7 @@ my @SINGLE_WORDS = qw(
    Pacers Paco Pagonia Pal Palukas Panteros Paoli Paradigma Partizan
    Pasam Pasanci Passé Patriot Patron Paulette Paulina Paulistas 
    PBL PCBA PDC Pegasus Pennant Perestrojka Perjuangan Pero Peter 
-   Petra Pia Piast Piryoli Piter Pjäxa PKBS PK3 PKM Pleschi Pleyada 
+   Petra Pia Piast Piryoli Piter Pjäxa PKB PKBS PK3 PKM Pleschi Pleyada 
    Plia PMS Pojat Polirish Polus Polýsgücü
    Pompapompa 
    Pontiac Poss Potlimit Potteplante Powerchicks Prapar Prasetya 
@@ -1105,17 +1108,18 @@ my @SINGLE_WORDS = qw(
    PTT
    Pude Pusten Pyon Pyton PZIM Påskevennene
 
-   Quantum Quasar Quattro Quintet Quinze
+   QLJB Quantum Quasar Quattro Quintet Quinze
 
    Radhey Radikk Rafael RAG Raifles Rakinnett RAM Ramkumar Rampage 
-   Rapid RASH Raskasammen RBP Real Recaptan Regeldur Reklamtrion Reloaded 
-   Rene Rob Ribitas Rike Rima RKK Robertinho Robi Robocop Rollers Rosajora 
-   Rovers Royston Rozle Rylai Rylal Ryo
+   Rapid RASH Raskasammen RBP Real Recaptan Regeldur Reklamtrion 
+   Reloaded Rene Rob Ribitas Rike Rima RKK Robertinho Robi Robocop 
+   Rollers Rosajora Rovers Royston Rozle RS Rylai Rylal Ryo
 
    Sabari Sabina Sabres Saga SAGG Sailor Sakurai Saladmasters Salokin 
    Salost Salvo Sansouci SANY Sapphire Sara Sargam Sarp SaTu Saturn Sbamby 
    Sbanda Scapros Schmuckles Schneewittchen Scientists Scot SDK 
    Secure Selin Senaattorit Senator Severin Sevil SFG SGG Shan Shane 
+   Shankars
    Shaoshen Shavaz Sherdils SHHG Shona Show Shrikant Shuai
    Shushi Siddheshwar Sigdonnemann Sigma Sigrid Sihai Silbersee 
    Silence Silverfox 

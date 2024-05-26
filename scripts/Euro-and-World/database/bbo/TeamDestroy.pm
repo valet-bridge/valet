@@ -33,12 +33,13 @@ my %MULTI_TYPOS =
   'Undecipherable Team' => ['a-hvv', 'a-srr', 'b-srk', 'g-dkr', 
     'i-aaa', 'i-vvu', 't-dbi', 't-rsb', 'v-dkm', 'v-ivi', 'v-jgd', 'y-ivz',
     'dhzhy', 'dhzy', 'fx', 'gdcd', 'gzzj', 'hssqx', 'jn', 'jy', 
-    'kj', 'kjy', 'lqsw', 'ly', 'lylw', 'mktx', 'qc', 'qy', 
-    'scdhzy', 'scmy', 'sdlsjy', 'sft', 'sjcd', 'sjsd', 'sxsdlsjy', 'szqy',
+    'kj', 'kjy', 'lqsw', 'ly', 'lylw', 'mktx', 'qc', 'qy', 'pn',
+    'scdhzy', 'scmy', 'sdlsjy', 'sey', 'sft', 'sjcd', 'sjsd', 
+    'sxsdlsjy', 'szqy',
     'xdsjjt', 'xhld', 'xmxv', 'xnmf', 'ycd', 'yy', 'zkwx', 'zqjk',
-    'abc_n', 'cd', 'jj', 'm', 'pk', 't',
+    'abc_n', 'cd', 'jj', 'jk', 'm', 'pk', 'sv', 't',
     'ÄÏÄþÑÅÂ×', 'ÉîÛÚÁª²©', 'ÊÀ¼Í³©´ï', 'º£ÄÏÊÓ´°', 'ÖÐ¹úÆ½°²',
-    '¥æ¤j', 'ªþ¾ô±¡¸', 'µæ', '§N¥ú', '°¨¥d³q'
+    '¥æ¤j', 'ªþ¾ô±¡¸', 'µæ', '§N¥ú', '°¨¥d³q', '¥©§J¤O', '¶Rµæ'
     ]
 );
 

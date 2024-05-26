@@ -94,6 +94,7 @@ my %MULTI_TYPOS =
   Shenzhen => ['shen zhen'],
   'Siddha Eden Lakeville' => ['siddha eden', 'sidhha eden', 'siddha-eden'],
   'Silesia Gliwice' => ['silezia gliwice'],
+  Slask => ['l¹sk'],
   Taicang => ['tai cang'],
   Taihu => ['tai hu'],
   Tainan => ['tai nan'],
@@ -158,7 +159,8 @@ my @SINGLE_WORDS = qw(
   Kucukcekmece Kudus Kunshan Kuopio Kusadasi Küp Kütahya Kverndalen
   Kwok Kyustendil Kølabånn
 
-  Langkat Lappee Leiden Leilem Lemvourgeio Lerum Leszno Leuven Leverkusen 
+  Langkat Lanzhou Lappee Leiden Leilem Lemvourgeio Lerum Leszno Leuven 
+  Leverkusen 
   Lhokseumawe Lille Lima Lincoln Lindesberg Ljubljana Lodz Lokotok
   London Losari Lowicz Lozenets Lubin Lublin Lucignano Luleburgaz 
   Lumajang
@@ -194,12 +196,11 @@ my @SINGLE_WORDS = qw(
   Sansar Santiago Sanya Sarniak Sarpsborg Secunderabad Seferihisar 
   Semarang Senayan Serang Serdika Shanghai Shaoguan Shenyang 
   Shenzhen Shihua Shijiazhuang Sibiu Sidoarjo Siena Simal Sindi 
-  Singsås Sirinyer
-  Skara Skawina Skien 
-  Skopje Slagelse Slaska Sleman Sliven Sofia Solok Sortland Söke Split 
-  Sredec Stavanger Steinkjer Storsjöbygden Stureby Stuttgart 
-  Sukma Suleymanpasa Sunndalsøra Surabaya Suralaya Suzhou Sydney 
-  Szeged Sørreisa
+  Singsås Sirinyer Skara Skawina Skien Skopje Slagelse Slask Slaska 
+  Sleman Sliven Sofia Solok Sortland Söke Split Sredec Stavanger 
+  Steinkjer Storsjöbygden Stureby Stuttgart Sukma Sukomoro 
+  Suleymanpasa Sunndalsøra Surabaya Suralaya Suzhou Sydney Szeged 
+  Sørreisa
 
   Taicang Taihu Tainan Taizhou Takayama Tallinn Tambun Targoviste 
   Tarnów Taskopru Täby Täfteå Tekýrdag Temuco Tengah Tequendama 
@@ -220,7 +221,7 @@ my @SINGLE_WORDS = qw(
   Yalikavak Yambol Yarimada Yarýmca Yatagan Yenisehir Yibin Yildirim 
   Yizhuang Yokohama Yogyakarta Yuquan
 
-  Zagreb Zhenjiang Zhongshan Zhujiang Zhuzhou Zigong Zurich 
+  Zagreb Zhaoqing Zhenjiang Zhongshan Zhujiang Zhuzhou Zigong Zurich 
   Zyrardow
 
   Ørland

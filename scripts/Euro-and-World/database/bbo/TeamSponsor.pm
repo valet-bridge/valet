@@ -127,6 +127,7 @@ my @MULTI_WORDS =
   'Haerbin Bingxue',
   'Hai Long',
   'Hainan Shichuang',
+  'Hainan Window',
   'Hangzhou Jingjiang',
   'Heilongjiang Tea',
   'Heng Yuan Xiang',
@@ -225,6 +226,7 @@ my @MULTI_WORDS =
   'Phoenix TV',
   'Polarman Regnskap',
   'Pro Consul',
+  'PLN Suluttenggo',
   'PT Bayu Buana Gemilang',
   'PT Bumi Siak Pusako',
   'Rigainvites.lv',
@@ -307,6 +309,7 @@ my @MULTI_WORDS =
   'Team PharmaService',
   'Team Secure',
   'Telkom Groovia',
+  'Telkom IndiSchool',
   'Telkom Indonesia',
   'Telkom Jabar',
   'Telkom Jakarta',
@@ -372,6 +375,7 @@ my %MULTI_TYPOS =
   'Beijing ShouChuang' => ['beijing capital group', 'bj shouchuang'],
   'Beijing Trinergy' => ['beijing trinergyy'],
   'Beijing Yue Ze' => ['bei jing yue ze'],
+  'PU Bitung' => ['bitung pu'],
   'Breki Jarðverk' => ['breki jarðverk ehf'],
   'bridge24.pl' => ['bridge 24', 'bridge24', 'bridge24pl'],
   'Bridgefélag Reykjavíkur' => ['bridgefélag Reykjav'],
@@ -559,7 +563,7 @@ my @SINGLE_WORDS = qw(
 
   GAMAX Gazprom Geologi Genkad Gevalia Gillette Gomad Gözgöz GSE
 
-  Hana Hanbang Harke Haustak HNA Honesta Huachu Huayuan
+  Hana Hanbang Harke Haustak HNA Honesta Hongyu Huachu Huayuan
 
   IBM IMAX Impress Indoarsip Intan Inteligent Interface Interkala
 
@@ -657,14 +661,15 @@ my %SINGLE_TYPOS =
   'Meilin Qing Cheng' => ['meilinqingcheng'],
   'Nanning Yalun' => ['nanning yalun'],
   'Nest Inn' => ['nestinn'],
+  'Oly-Star' => ['olyster'],
   'Penajam PU' => ['penajan'],
   'Perbankan Jatim' => ['perbankan'],
   'Poddar Developers' => ['poddar'],
+  'POLFA' => ['polfa wzbs'],
   'Pro Consul' => ['proconsul'],
   'PU Minsel' => ['minsel'],
   'Perusahaan Listrik Negara' => ['pln'],
   'PT Bayu Buana Gemilang' => ['bbg'],
-  'PU Bitung' => ['bitung pu'],
   'Rigainvites.lv' => ['rigainvites'],
   'SAIC VW' => ['saic'],
   'San Chen' => ['sanchen'],
@@ -687,6 +692,7 @@ my %SINGLE_TYPOS =
   'Team Audita' => ['teamaudita', 'audita'],
   'Timah' => ['tima'],
   Tsingtao => ['tsingthao'],
+  Velbazhd => ['velbuzhd'],
   'Viego Regnskap' => ['viego'],
   Wellwise => ['wellwiss'],
   'Yeh Bros' => ['yeh'],

@@ -51,6 +51,7 @@ my @MULTI_WORDS =
   'BC Star',
   'BC Universität Mannheim',
   'BCN Almirall',
+  'Besli Major',
   'Bielski Klub Brydżowy GOK cards',
   'BK 2000',
   'BK 1936',
@@ -193,6 +194,7 @@ my @MULTI_WORDS =
   'Shou Chuang',
   'Siwo Persatuan Wartawan Indonesia',
   'Sirinyer Sports',
+  'Site Sports',
   'Ski BK',
   'Slem Bric SK',
   'Smedstadens BK',
@@ -227,9 +229,10 @@ my %MULTI_TYPOS =
   'Adana BSB' => ['adana b. shr bld', 'adana b.seh bel',
     'adana bsb sk', 'adana buyuksehir', 'adana b.s.k', 
     'adana bric sk', 'adana bsbkisk', 'adana sk', 'adana bþbký'],
+  AGBC => ['a g b c'],
   'Akademisk Bridgeklub' => ['akademisk bk'],
   'Akceþme Spor' => ['akceþmespor'],
-  'Aklindo Musi 88' => ['musi 88'],
+  'Aklindo Musi 88' => ['musi 88', 'musi88'],
   'Alexandria Sporting Club' => ["alexandria sport' c"],
   Anadolu => ['anadolu briç'],
   'Ankara Sistematik' => ['sistematik bk'],
@@ -353,7 +356,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Acol Airmadidi Akceþme Amisos Anadolu Asenovec Auguri AVGP
+  Acol Airmadidi AGBC Akceþme Amisos Anadolu Asenovec Auguri AVGP
   Benfica Besiktas Bonsist Botev BTBK
   Canakkale
   Debrecen Dragao Drienerlo
@@ -384,7 +387,6 @@ my %SINGLE_TYPOS =
 (
   'Ada Briç SK' => ['ada'],
   'Akademisk Bridgeklub' => ['akademisk'],
-  'Aklindo Musi 88' => ['musi88'],
   'Altinay SK' => ['altinay', 'altýnaysk'],
   'Ankara Kontrat' => ['kontrat'],
   Asenovec => ['asenovets'],
@@ -445,6 +447,7 @@ my %SINGLE_TYPOS =
   'Samadhan Academy' => ['samadhan', 'samadgan'],
   'Siwo Persatuan Wartawan Indonesia' => ['pwi'],
   'Sirinyer Sports' => ['sirinyerspor'],
+  'Site Sports' => ['sitespor'],
   'Smedstadens BK' => ['smedstadens'],
   'SPG Club' => ['spg'],
   Spojnia => ['Spójnia'],
