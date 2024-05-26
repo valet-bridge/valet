@@ -559,7 +559,7 @@ my @SINGLE_WORDS = qw(
 
   GAMAX Gazprom Geologi Genkad Gevalia Gillette Gomad Gözgöz GSE
 
-  Hana Hanbang Harke Haustak HNA Honesta Huayuan
+  Hana Hanbang Harke Haustak HNA Honesta Huachu Huayuan
 
   IBM IMAX Impress Indoarsip Intan Inteligent Interface Interkala
 

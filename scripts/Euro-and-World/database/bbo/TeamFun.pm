@@ -34,6 +34,7 @@ my @MULTI_WORDS =
   '6 Notrump',
   '6 Spades',
   '60 y 20',
+  'A.C.L.A.',
   'A.z.f.e.n.a',
   'A Takimi',
   'ABA Nuno Paz',
@@ -139,6 +140,7 @@ my @MULTI_WORDS =
   'Californian Aces',
   'Can Aren',
   'Captain Blood',
+  "Captain's Four",
   'Card Warriors',
   'Casino Floor',
   'Cat Daddy',
@@ -543,6 +545,7 @@ my @MULTI_WORDS =
   "Pradeep's Four",
   'Precision Marathon',
   "President's Team",
+  "Priya's Four",
   'P.S.',
   'Pur Pur',
   'Quatro Bruxas',
@@ -763,8 +766,10 @@ my @MULTI_WORDS =
   'White Bears',
   'Wild Griffins',
   'Winter Is Coming',
+  'X.D.X.J',
   'XiBu VIP',
   'Xin Yuan',
+  'Y.Y.Y.D.',
   'Yarralumla Yabbies',
   'Yitang QIAO',
   'YOI Returns',
@@ -816,6 +821,7 @@ my %MULTI_TYPOS =
   'Bridgerama Milan' => ['bridgerama mi'],
   'Ca. et halvt tonn' => ['ca et halvt tonn'],
   'Californian Aces' => ['california aces'],
+  "Captain's Four" => ['captains 4'],
   "Chairman's Choice" => ["chairman's team", "chairman's"],
   'Chicho Itsi' => ['chicho ici'],
   "Colonel's Team" => ["colonel's  team"],
@@ -886,6 +892,7 @@ my %MULTI_TYPOS =
   'L.C. is Beautiful' => ['l.c.is beautiful'],
   'Le Romain boys' => ["leroumain's boys", 'le romain',
     'le roumains'],
+  'Lew Lodzki' => ['new lodzki'],
   'Lindenthal und Freunde' => ['lindenthal und fre'],
   'Lucky 13' => ['lucky13'],
   'Magic Eyes' => ['majic eyes', 'm e'],
@@ -908,6 +915,7 @@ my %MULTI_TYPOS =
   Polýsgücü => ['polýs gücü s', 'polis gucu', 'polisgucu'],
   "Pradeep's Four" => ["pradeep's 4", "Pradeep's Team"],
   "President's Team" => ["president's", 'presidents teams'],
+  "Priya's Four" => ["priya's iv", "priya's4"],
   'P.S.' => ['p. s.'],
   'Queen and Knights' => ["queen's & knight"],
   'Rajjan' => ["rajjan's"],
@@ -924,6 +932,7 @@ my %MULTI_TYPOS =
   'Six Samurai' => ['six samurais'],
   'Slam Hunters' => ['slam hunter'],
   'slaveykov.bg' => ['slaveikov.bg'],
+  SMBC => ['s m b c'],
   'Spring Foursomes' => ['spring 4s', 'spring fours', "spring 4's"],
   'Stabby with Youngsters' => ['stabby with youngst'],
   'Svanslös Skalman' => ['svanslos skalman'],
@@ -967,7 +976,7 @@ my @SINGLE_WORDS = qw(
    BHDM Bhide Bhinneka Biachite Bilal BIN Bingbang Binkie Biriceri 
    BKSE
    Blackwood Blandat Bling Blondie Blues Blund Blueberry Blues
-   BMP BNMR BNS
+   BMAL BMP BNMR BNS
    BOC Boek 
    Bolero 
    Boogies Boomz Boriana 
@@ -1142,7 +1151,7 @@ my @SINGLE_WORDS = qw(
    Vilttiketju Vilttiukko Viña Vintage Virginia Vivi Volta Vucko 
    Vulcano Vurgun Vürst Vytas
 
-   Wael Wafa Wala Waldi Walpurga Wanghong WBack WBFIT WBGO WDP 
+   Wael Wafa Wala Waldi Walpurga Wanghong WBack WBBA WBFIT WBGO WDP 
    Weiqun Wengens Winatalya Windrunners Winkiboy Winterfell Wizards
    WLKP Wolf WSWT
 

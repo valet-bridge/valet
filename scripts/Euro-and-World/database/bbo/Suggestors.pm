@@ -16,7 +16,7 @@ use lib '.';
 # Only if it is a complete team entry.
 my @TEAMS_SUGGESTORS = (
   'team 1', 'team 2', 'team1', 'team2', 'team one', 'team two',
-  'team a', 'team b',
+  'team a', 'team b', 'teama1',
   'home', 'away', 'visiting', 'away team',
   'table 1', 'table 2',
   'table8hom', 'table8vis',
