@@ -21,6 +21,7 @@ my @MULTI_WORDS =
   'Anadolu University',
   'Andalas University',
   'Ankara University',
+  'Antalya Halk Egitim',
   'Asko Tech University',
   'Bandung Institute of Technology',
   'Bilkent University',

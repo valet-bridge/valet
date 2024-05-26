@@ -37,6 +37,7 @@ my @MULTI_WORDS =
   'Eastern Cape',
   'Gabungan Malaku',
   'Garut Regency',
+  'Java Bali',
   'Kepulauan Riau',
   'Kutai Kartanegara',
   'Lower Silesia',
@@ -56,6 +57,7 @@ my @MULTI_WORDS =
   'Northern Territory',
   'Nusa Tenggara Barat',
   'Pearl River',
+  'Ren Shou',
   'Samut Prakan',
   'Samut Sakhon',
   'South America',
@@ -152,7 +154,7 @@ my @SINGLE_WORDS = qw(
   Oberloiben Orontes Otago
   Papua Patagonia Porong Punjab
   Rajputana Ratchaburi Rogaland Rosfjord 
-  Salten Shanxi Siberia Sichuan Silesia Silla Sintang Skåne 
+  Salten Shanxi Siberia Sichuan Silesia Silla Sindh Sintang Skåne 
   Southland Sydvest
   Tasmania Telemark Tigris Tuncelý
   Uttarakhand
@@ -172,6 +174,7 @@ my %SINGLE_TYPOS =
   'Gabungan Malaku' => ['gabmo'],
   Ganges => ['genges'],
   Hunan => ['hunnan'],
+  'Java Bali' => ['jb'],
   Kansai => ['kinki'],
   'Kepulauan Riau' => ['riau', 'kepri'],
   Marmara => ['marmar'],

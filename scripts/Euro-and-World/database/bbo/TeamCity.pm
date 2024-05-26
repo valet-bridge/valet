@@ -125,7 +125,7 @@ my @SINGLE_WORDS = qw(
   Bromölla Brotteaux Buca Bucharest Budapest Buitenhof Burghausen 
   Bursa Burdur Bytom
 
-  Caen Cairns Canakkale Canberra Canterbury Caracas Cascais Catania 
+  Caen Cairns Canberra Canterbury Caracas Cascais Catania 
   Çayyolu Cemara Cerkezkoy Cesme Changzhou Chaville Chelmno Chelsea 
   Chengdu Chennai Chicago Chislehurst Chongqing Chumphon Cimahi 
   Clichy Cluj Copenhagen Corlu Courseulles Coventry Cuenca Cuneo
@@ -175,7 +175,7 @@ my @SINGLE_WORDS = qw(
   Moudania Mrzenci Muðla Mumbai Munich Muratpasa
 
   Nagbagan Nagpur Nagykanizsa Namsos Nanchang Nanning Napoli
-  Narita Narlidere Narvik Nazilli Näsby Nijmegen Ningbo Niski 
+  Narita Narlidere Narvik Nashik Nazilli Näsby Nijmegen Ningbo Niski 
   Norrbyskär Norrorts Norrøna Nusantara Nürnberg Nyon Nærbø Næstved 
   Nøtterøy
 
@@ -253,7 +253,6 @@ my %SINGLE_TYPOS =
   Bansi => ["bansi's"],
   Beijing => ['peking'],
   Borivli => ['borivali'],
-  Canakkale => ['çanakkale'],
   Çayyolu => ['cayyolu'],
   Cerkezkoy => ['çerkezköy', 'cerk'],
   Copenhagen => ['kopenhagen'],
@@ -303,6 +302,7 @@ my %SINGLE_TYPOS =
   Nanchang => ['nancang'],
   Napoli => ['naples'],
   Narlidere => ['narlýdere'],
+  Nashik => ['nasik'],
   Ningbo => ['ningpo'],
   Norrbyskär => ['norrbyskar'],
   'Novi Sad' => ['nowewsady'],

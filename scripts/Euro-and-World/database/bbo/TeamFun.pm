@@ -73,6 +73,7 @@ my @MULTI_WORDS =
   'Asketické samice',
   'Aso Pika',
   'Atomic Bridge',
+  'AV Maria',
   'Avesta',
   'Awesome Avengers',
   'Aylan Kurdý',
@@ -145,6 +146,7 @@ my @MULTI_WORDS =
   'Card Warriors',
   'Casino Floor',
   'Cat Daddy',
+  'CC&FC',
   'Cemara Putra',
   "Chairman's Choice",
   'Czarna Papuga Plus',
@@ -432,6 +434,7 @@ my @MULTI_WORDS =
   'Lisbeths lakeier',
   "Lise (i)DA",
   'Little Meck',
+  'Logos GPS',
   'Los Feos',
   'Los Malos',
   'Los Salgado',
@@ -444,6 +447,7 @@ my @MULTI_WORDS =
   'Lucky Star',
   'Lucky 13',
   'Lucy-Ellena',
+  'LV 2014',
   'M.O.',
   "M' Orange",
   'Ma-Cartoon',
@@ -533,6 +537,8 @@ my @MULTI_WORDS =
   'Oze Ckis',
   'Ööklubi Strand',
   'Paak Festival',
+  "Pai's",
+  "Pal's Four",
   'Papa & Rabbits',
   'Papa and Rabids',
   'Papas & Puppies',
@@ -555,6 +561,7 @@ my @MULTI_WORDS =
   "President's Team",
   "Priya's Four",
   'P.S.',
+  'PS CZ',
   'Pu De',
   'Pur Pur',
   'Quatro Bruxas',
@@ -562,7 +569,6 @@ my @MULTI_WORDS =
   'Queen of Hearts',
   'Ra Ma Ra Him',
   'Raag Brigeshwari',
-  'Radik-Medik',
   'Radio Communication',
   'Rajjan',
   'Ram Charan',
@@ -908,6 +914,7 @@ my %MULTI_TYPOS =
     'le roumains'],
   'Lew Lodzki' => ['new lodzki'],
   'Lindenthal und Freunde' => ['lindenthal und fre'],
+  'Logos GPS' => ['logos gpg'],
   'Lucky 13' => ['lucky13'],
   'Magic Eyes' => ['majic eyes', 'm e'],
   'Man Harr det man har' => ['man harr det man ha'],
@@ -926,6 +933,7 @@ my %MULTI_TYPOS =
     'nilsland slowfoxers'],
   "No He Isn't" => ['no he isnt'],
   'Oh Ya!' => ['oh ya'],
+  "Pal's Four" => ["pal's"],
   Polýsgücü => ['polýs gücü s', 'polýs gücü', 'polis gucu', 'polisgucu'],
   "Pradeep's Four" => ["pradeep's 4", "Pradeep's Team"],
   "President's Team" => ["president's", 'presidents teams'],
@@ -987,7 +995,8 @@ my @SINGLE_WORDS = qw(
    Banana Bananasplit Baneet BarDeZi BARC BARP Barracuda Barsss
    Baryton BAST 
    Bat Batmix Bato Batusida Bauhinia 
-   BBE BBN BBO BCBR Beauty Begigütje Begijntje BEIH BELSPA Ben Beniaminek 
+   BBE BBN BBO BCBR Beauty Begigütje Begijntje BEIH BELSPA Bem
+   Ben Beniaminek 
    BeRe Berik Beton 
    BHDM Bhide Bhinneka Biachite Bilal BIN Bingbang Binkie Biriceri 
    BKSE
@@ -1050,7 +1059,7 @@ my @SINGLE_WORDS = qw(
 
    IBBSK IBE Ida Iff Ijseide Ikarus Ilya IMAN Imanuel IMLUK Imponderables 
    InFran Instructor Iris Irukangi Ismo Israbel Isrmany ITB
-   Itnoraunz ITS IVAR
+   Itnoraunz ITS IVAR Iza
 
    Jagg Jaiganesh Janko Jans JanTC JAPCAN JAS JASS Jassica Javel Jaya
    Jelena Jernbaneverket Jessi Jessica Jecization JHIC Jinjing 
@@ -1066,7 +1075,7 @@ my @SINGLE_WORDS = qw(
    Kerasus Kibe Kinga Kingkong Kings KISS Kitty Kjelskos KKKQ
    Klasik Klio
    KMC Knösel Kodin Koiraperhe Kokoelma Kolbasti Komleposs
-   Kompisarna Konga Kordam Korsikalý Kortai Koru Koukouselis KPPM
+   Kompisarna Konga Kordam Korsikalý Kortai Koukouselis KPPM
    KrASK 
    Kratos 
    Krem Kris Kriston Krisztina Ksenia KSOS Kuglana Kuhmilch Kultur
@@ -1076,7 +1085,7 @@ my @SINGLE_WORDS = qw(
    Lateria LatSwe Lazy LBC LBSK LCF Lebensohl Lebron Legeanka Lema 
    Lemanus Lenz Leszek Leta Letve Leveni Lianas Liggeunderlaget Lili 
    Lillebaluba Lion Lions Lipa Lira Livius Lirarna Liverbird Ljónin 
-   LNWers Lo Loaknath Logos Lolly Loloc Longzhu Loreng LOS Lowel 
+   LNWers Lo Loaknath Lolly Loloc Longzhu Loreng LOS Lowel 
    Löparn LPMS Lucky LVBridgeBums LXA Lyubcho Løwene
 
    Macak Mach Madhav Mads Maestroi Magi Magic Magister Magnus Maharaja 
@@ -1085,7 +1094,7 @@ my @SINGLE_WORDS = qw(
    Manashda Manena Manno Mano 
    Manu Manywar Margitta Marianne Mark Marosamitawa Mars Marvelous 
    Marynarz Masdjävlar Mask Masters Matilde Matrix Mats Matujona Maven 
-   Mavi Mavs Mayamira Maxi 
+   Mavi Mavs Mayamira Maxi Medik
    Mer Mercury Mesna Meta MGM MGTH Mia Michal Midas Mihai Mikke Miguel 
    Milady Milo Minut 
    Mirage Miro Mismatch Mixarna Mjøskameratne MMMM MMRMC
@@ -1100,13 +1109,13 @@ my @SINGLE_WORDS = qw(
    Nemesis Nessuno Neverclaim Nico Nightingale Nik Nikita Nikitopoulos 
    Niko Nikos Nikotiimi Nina Nis Nislije NMRT Noctis NoNed
    Noralia Noriko 
-   Norsu NOS NTiosagutta Nula
+   Norsu NOS Noto NTiosagutta Nula
 
-   Obezit Octopussy OEI Ognisty Okay Oksijen Olavsfestdagene Olena 
-   Olimp Olrudbanden Olsenbanden OMC Omega Omelas Onirepsou Onnela 
-   Onu Onyx Opal Opera Opps Oprosti Optimus Orakulas Orthodoxi 
-   Orthodox OSA Osam OSMO Osss Oto Otta Outsiders Overivrig 
-   Oyku Oyzum Ozbiljni
+   Obezit Octopussy OEI Ognisty Oguzhan Okay Oksijen Olavsfestdagene 
+   Olena Olimp Olrudbanden Olsenbanden OMC Omega Omelas Onirepsou 
+   Onnela Onu Onyx Opal Opera Opps Oprosti Optimus Orakulas Orthodoxi 
+   Orthodox OSA Osam OSMO Osss Oto Otta Outsiders Overivrig Oyku 
+   Oyzum Ozbiljni
 
    Öncü
 
@@ -1123,7 +1132,8 @@ my @SINGLE_WORDS = qw(
 
    QLJB Quantum Quasar Quattro Quintet Quinze
 
-   Radhey Radikk Rafael RAG Raifles Rakinnett RAM Ramkumar Rampage 
+   Radeks Radhey Radikk Rafael RAG Raifles Rakinnett RAM 
+   Ramkumar Rampage 
    Rapid RASH Raskasammen RBP Real Recaptan Regeldur Reklamtrion 
    Reloaded Rem Rene Rica Rob Ribitas Rike Rima RKK Robertinho Robi 
    Robocop Rollers Rosajora Rovers Royston Rozle RS Rüya Rylai Rylal 
@@ -1177,8 +1187,8 @@ my @SINGLE_WORDS = qw(
    Xatzopoulos XC XFIP Xinhai Xman XMing Xtrouble XXX XXXL XXXSL 
    XXXXXYXY
 
-   Ybs YBM Yaðmur Yamata Yansimasiz YeJun Yelena Yichuang Ylajai 
-   Yogakshema Yokozuna YSD YYD YYY
+   Ybs YBM Yaðmur Yamata Yansimasiz YeJun Yelena Yichuang Yildizlar
+   Ylajai Yogakshema Yokozuna YSD YYD YYY
 
    Zabavljaci Zamek Zana Zara Zen Zeyno Zhihaole Ziggy 
    Zimmkonis Zivac ZKS Zlatan Zmaj Zombi Zorro Zozoura Zugzwang Zurzits 
@@ -1242,6 +1252,7 @@ my %SINGLE_TYPOS =
   'Le Romain boys' => ['leromain'],
   Lebensohl => ['lebenshol'],
   Leveni => ['levini'],
+  'Logos GPS' => ['logos'],
   'Loy Krathong' => ['longkatong'],
   Löparn => ['loparn'],
   Maharaja => ['maharaj', 'maharaaj'],
@@ -1265,6 +1276,7 @@ my %SINGLE_TYPOS =
   Pretendents => ['pretendentas'],
   'Ram Charan' => ['ramcharan'],
   Quantum => ['qantum'],
+  Radikk => ['radekk', 'radik'],
   'River Friend' => ['riverfriend'],
   'Sarunta Toar' => ['sarunta'],
   Scientists => ['science'],

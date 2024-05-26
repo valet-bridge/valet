@@ -64,8 +64,8 @@ my %SINGLE_TYPOS =
     bilimsel bisk biskd bjk bk bld bmsk bp bps
     br bri brýç bridgeclub bridgeklub 
     bs bsb bsc bsk bskd bsp bt
-    bþb bþbký bsbkisk bssk buyuksehir ybsk bsbs btsc 
-    cbc cbe cfr club csb
+    bþb bþbký bsbkisk bssk buyuksehir ybsk bsbs btsc býskd
+    cbc cbe cfr ck club csb
     dbc dbk dgc 
     ebc eibc 
     fbc fc
@@ -74,7 +74,7 @@ my %SINGLE_TYPOS =
     ihs
     kcb kdi klubben klubberne ks ksb ksk
     maesa mbc
-    nbc nbi nbcbl
+    nbc nbi nbcbl ndbac
     oaza obk 
     sb sbc sc sdgskd sk spor ss ssd
     tbc tc

@@ -300,6 +300,7 @@ my @MULTI_WORDS =
   'Saumitra Basu',
   'Shashi Gupta',
   'Shekhar Banerjee',
+  'Shih Yeh',
   'Shlomo Netzer',
   'Shree Priya',
   'Signe Thomsen',
@@ -538,6 +539,7 @@ my %MULTI_TYPOS =
   'Sally Brock' => ['s brock'],
   'Satish Diwanji' => ['col. diwanji'],
   'Shashi Gupta' => ["shashi gupta's 6"],
+  'Shih Yeh' => ['yeh shih'],
   'Shlomo Netzer' => ['netzer shlomo'],
   'Sigurdur Vilhjalmsson' => ['sigurður vilhjálmss'],
   'Sinan Göksu' => ['sinan goksu'],
@@ -720,10 +722,10 @@ my @SINGLE_WORDS = qw(
   Leiro Lena Lengy Lennart Leptirici Lerner Lesniewski Lesnik Lester Lev 
   Levi Levinger Levin Levine Levoy Levski Lew Lewis Lhuissier Li Lian
   Libbrecht Libman Lie Lien Liu Liggins Lilienstein Lillevik Lilley 
-  Limor Linczmayer Lindner Lindstedt Lindqvist Llopart 
-  Locatelli Lockwood Lombard Longinotti Lorentz Lorenzini Loreto 
-  Lormant Louchart Lovrecz Lowe Lubinski Ludewig Lund Luppi Lusk Lusky 
-  Lüßmann Lynch Lyngdal Lyngen
+  Limor Linczmayer Lindner Lindstedt Lindqvist Llopart Locatelli 
+  Lockwood Lombard Longinotti Lorentz Lorenzini Loreto Lormant 
+  Louchart Lovrecz Lowe Lubinski Lucchesi Ludewig Lund Luppi Lusk 
+  Lusky Lüßmann Lynch Lyngdal Lyngen
 
   Maas MacDonald Macedo Machado Madsen Magee Maggio Maglietta Mahaffey 
   Maia Maiolani Malarme Maksymetz Malaczynski Malani Malavasi 
@@ -1006,6 +1008,7 @@ my %SINGLE_TYPOS =
   Milne => ['mlne'],
   Milner => ['millner'],
   'Mohamed Manaf Saleh' => ['manaf'],
+  Mohota => ['mohata'],
   'Mohsen Kamel' => ['mohsenkamel'],
   'Moni Diba' => ['monidiba'],
   'Møller Jepsen' => ['møllerjepsen'],

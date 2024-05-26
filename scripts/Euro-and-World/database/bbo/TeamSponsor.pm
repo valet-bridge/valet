@@ -358,6 +358,7 @@ my @MULTI_WORDS =
   'Zhejiang Jinjian',
   'Zhejiang Xinxiang',
   'Zhong Guo Ren Bao',
+  'Zhong Liang Y LW',
   'Zhong Yuan',
   'Zhongshan Jiegao',
   'Zhongtong Jiangsu',
@@ -437,7 +438,8 @@ my %MULTI_TYPOS =
   'Hengsha Ke Ji' => ['heng sha ke ji'],
   'HF Verðbréf' => ['h.f. verðbréf'],
   Huayuan => ['hua yuan'],
-  'Hubei Dongfeng' => ['hb dongfeng', 'hu bei dong feng'],
+  'Hubei Dongfeng' => ['hb dongfeng', 'hu bei dong feng',
+    'hu bei dong feng qi'],
   'Hunan Tou Zhan' => ['hn  tuozhan', 'hn tuozhan'],
   Lavazza => ['il bridge - lavazza'],
   'India Glycols' => ['india glycol', 'india glycols ltd.',
@@ -473,9 +475,9 @@ my %MULTI_TYPOS =
   'Pan China Construction' => ['pan-china const', 'pan china construct'],
   'Pan China Group' => ['pan-china group'],
   'Perbankan Jatim' => ['perbankan_jatim'],
-  'Pertamina' => ['pertamina ep', 'pertamina ft', 'pertamina field', 
-    'pertamina ge', 'pertamina indonesia', 'pertamina l.',
-    'pertamina field tmb'],
+  'Pertamina' => ['pertamina ep', 'p-ep', 'pertamina ft', 
+    'pertamina field', 'pertamina ge', 'pertamina indonesia', 
+    'pertamina l.', 'pertamina field tmb'],
   'Phoenix TV' => ['feng huang wei shi', 'fenghuang tv'],
   'Poddar Developers' => ['poddar development', 'poddar dev',
     'podder dev', 'podder developers', 'poddar devekopers',
@@ -584,7 +586,7 @@ my @SINGLE_WORDS = qw(
 
   Kadimex Kancelaria Kideko Kilogrupp KONKRET Konstanta Kvika
 
-  Lancia Lacznosc Laima Lavazza LCG Lianbo Likom Logos 
+  Lancia Lacznosc Laima Lavazza LCG Lianbo Likom
   Longjiangfu Lukomorie Lyfjaver
 
   Manyavar Meikuang Mireo Mitrabuana Morgunblaðið Myndform
@@ -643,7 +645,7 @@ my %SINGLE_TYPOS =
   Computerland => ['computerlan'],
   CONNECTOR => ['conector'],
   'Dhampur Sugar' => ['dhampur'],
-  DISKI => ['dsi'],
+  DISKI => ['dsi', 'dsý',],
   Eksprompt => ['ekspromt'],
   'Elektrik P3B' => ['elektrik', 'electric'],
   Elektrika => ['elektric'],
@@ -678,7 +680,7 @@ my %SINGLE_TYPOS =
   'Penajam PU' => ['penajan'],
   'Perbankan Jatim' => ['perbankan'],
   'Poddar Developers' => ['poddar'],
-  'Pro Consul' => ['proconsul'],
+  'Pro Consul' => ['proconsul', 'consul'],
   'PU Minsel' => ['minsel'],
   'Perusahaan Listrik Negara' => ['pln'],
   'PT Bayu Buana Gemilang' => ['bbg'],
