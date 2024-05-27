@@ -575,8 +575,8 @@ my @SINGLE_WORDS = qw(
   Avci Avcioglu Avon Awad Ayda Aydin
 
   Babacan Babsch Baiche Baietto Bailey Bajraj Baker Bakhshi 
-  Baki Bakkeren Baldini Baldysz Baleal Balkanski Ballebo 
-  Banikas Baran Barat Barbone Barbosa Barel Barion Baris Baron Bart 
+  Bakkeren Baldini Baldysz Baleal Ballebo 
+  Banikas Baran Barbone Barbosa Barel Barion Baris Baron Bart 
   Barton Basabe Baseggio Basile Bassini Bathurst Batov Bauch Bavaresco 
   Baybarut Bayes Baze Bäckström Beauchamp Beale Beatty Beaumier
   Beauvillain Becker Bell Bello Bellosta Belonogov Benassi Bennett 
@@ -590,10 +590,10 @@ my @SINGLE_WORDS = qw(
   Bokk Bojoh Boldt Bolling Bolognini Bombardieri Bomber Bompis 
   Bongiovanni Bonis Bonori Bontas Booth Bordallo Boro Bos 
   Bose Boss Bostosusz Botto Boucher Boughey Bourke 
-  Bouscat Bowdery Bowles Boylson Bozempergk Bottetto Bozzetto Bozzo
+  Bowdery Bowles Boylson Bozempergk Bozzetto Bozzo
   Brachman Brady Brake Braithwaite Bramley Branco Brantsma Branzoiu
   Braun Brede Brenner Bretagne Brifman Brightling Brink Brockwell 
-  Brod Brogeland Brown Brotteaux Brunet Bruun Brunzell Buch Buchen 
+  Brod Brogeland Brown Brunet Bruun Brunzell Buch Buchen 
   Buchlev Budkin Bujoh Buras Burrows Burgay Burke Buscaglia Buse 
   Busse Butland Butts Byrne Bytskevich Börgesson
 
@@ -605,23 +605,23 @@ my @SINGLE_WORDS = qw(
   Castner Cattani Cavalieri Cayne Cengiz Cernat Cernato Cernatovo 
   Cerreto Cesati Chadwick Chai Chambers Chan Chang Charletoux 
   Charlotte Charlsen Chassagne Chauvelot Chediak Cheek 
-  Chemla Chen Cheng Chinchak Chizzoli Chopin Chottin Chrapot Chuang 
+  Chemla Cheng Chinchak Chizzoli Chopin Chottin Chrapot 
   Chubukov Ciccarelli Cichocki Ciechomski Cilleborg Cimon Cintra 
   Cionca Ciopettini Civale Cladius Clair Claret Clark Clarke Clausen 
   Clement Clemmensen Close Coenraets Coglitore Cohen Cohler Cohner 
   Colarossi Coldea Cole Coletta Collett Collins Combes Combescure 
   Compton Connie Conti Cook Cooke Cooper Cooreman Cope Coren 
-  Coridakis Corlateanu Cormack Corssen Cossutta Cotton Counil Courtney 
+  Coridakis Corlateanu Cormack Corssen Cossutta Counil Courtney 
   Coutts Coyne Creet Crestey Creuheras Crichton Crompton Cronier 
   Crouch Crzejdziak Cuevas Cullin Cummings Cuper Curo Çýloðlu Czímer
 
   Dabrowka Dahlberg Dalecki Dalia Dalley Damiani Damkor Dancewicz 
-  Danta Dantan Dao Darak Daskalakis Daugava Dauvergne Davies 
+  Danta Dantan Darak Daskalakis Daugava Dauvergne Davies 
   Dawson Debolina Debonnaire Debus Dechelette Degla Dehaye Deik 
   Deleeuw Delfino Delfour Delibaltadakis Dellecavakis 
   Delimpaltadakis Delpiano DeMartino Demir Demirbas Demme Denning 
   Deniz Desai Deutsch Deva Dexter Dexterzy Dialinas Dionysopoulos 
-  Dhir Dhondy Dialynas Diamond Dilks Dionosypoulus Dinkin Dixon 
+  Dhir Dhondy Dialynas Diamond Dilks Dinkin Dixon 
   Djurovic Dobbels Dobes Dobroiu Doecke Doksiadis Dolla Donatella 
   Donciu Donn Donzi Dossena Dovell Doub Doussot Doxiadis Drijver 
   Driver Dubini Duguet Duman Dumbovich Dumitrasciuc Dunitz Dunn 
@@ -644,7 +644,7 @@ my @SINGLE_WORDS = qw(
   Fruewirth Frukacz Frutos Fu Fucik Fuglestad Fuller Fung Furunes 
   Furuta Fyrun
 
-  Gabrial Gaede Gagliardi Gaglietto Gardiner Galinsky Gallus 
+  Gaede Gagliardi Gaglietto Gardiner Galinsky Gallus 
   Gana Gandoglia Ganzer Garateguy Garbosi Garg Garoufalis Garrido 
   Garrone Garvey Garner Gartaganis Gary Gaspar Gaviard Gawel Gawrys 
   Gelberg Geller Genc Generosi Gentili Georgescu Gerber Gerli 
@@ -658,7 +658,7 @@ my @SINGLE_WORDS = qw(
   Griffiths Grimeton Grigoriu Grimaldi Grisho Groenenboom Gromov Gromova 
   Gross Grosset Gromöller Gronaldo Grue Gruia Grunt Gruschow 
   Gruszczynski Grzelak Gu Guariglia Gudkov Gue Gueglio Guermani 
-  Guerreiro Guglietto Guillaumin Gula Guldberg Guler Gumby 
+  Guglietto Guillaumin Gula Guldberg Guler Gumby 
   Gupta Gurley Gursel Gustawsson Gutmark Günther Gyimesi
 
   Hackett Hadjibalis Haffer Hagenberg Haidorfer Hallen Hallongren
@@ -675,21 +675,21 @@ my @SINGLE_WORDS = qw(
   Iacapraro Ichilcik Ilczuk Ilmez Ince Indemini Ingielewicz Iommi 
   Iontzeff Irens Ishidaya Ivatury Iversen Ivrig Iyer Izisel
 
-  Jacob Jacobs Jagger Jagniewski Jagroop Jain Jalowka Jamieson
+  Jacob Jacobs Jagger Jagniewski Jagroop Jalowka Jamieson
   Janicki Janik Jankova Janiszewski Janowski Jansma Janssen Jarlot 
   Jassem Jawell Jayganesh Jedrychowski Jeng Jensen Jepsen 
-  Jezioro Jian Jiang Joel Johansson Johnson 
-  Jolly Jonsson Jokisch Jones Jotcham Junqueira Jussila Juutilainen
+  Jezioro Joel Johansson Johnson 
+  Jolly Jokisch Jones Jotcham Junqueira Jussila Juutilainen
 
   Kabra Kachchu Kageling Kahyaoglu Kahn Kaiser Kalida Kalita Kalish 
   Kallifronas Kallsberg Kallunki Kalma Kalmin Kamat Kambancho 
   Kamil Kaminaris Kaminski Kamras Kannavos Kandemir Kane Kanetkar 
   Kang Kapagiannidis Kaplan Kaptan Karadeniz Karamanlis 
-  Karavil Karayel Karl Karlaftis Karpouzelis Kasapoglu Kasday Kasle 
+  Karavil Karayel Karlaftis Karpouzelis Kasapoglu Kasday Kasle 
   Kasler Kastel Kater Katsareli Katsutake Katz Kaushik Kay Kaya 
   Kaye Kazik Kazmierczak Keegan Kendrick Kenigsberg Kennedy Kenny 
   Kent Keremida Kersey Kesgin Khandelwal Khazanov Khyuppenen 
-  Kilani Kilvington King Kiran Kiriakidoy Kirilenko Kirin Kishan 
+  Kilani Kilvington King Kiran Kiriakidoy Kirilenko Kishan 
   Kizikli Klapper Klimacki Klimentowska Klinger Klofa Klukowski 
   Knap Knight Kocak Koch Koistinen Koivula Kokkes Koken Kokten 
   Kolankaya Kolata Kolesnik Kollnes Kolonkaya Konckier Kondoch 
@@ -697,14 +697,14 @@ my @SINGLE_WORDS = qw(
   Kosaka Kosti Kotányi Kotinas Kotronarou Koumetz Kovacs Kovachev 
   Kovacich Kowalski Kozikowski Kökten Kranyak Krajewski Krausova 
   Krawczyk Krekorian Kriegel Kriftner Kristensen Kroch Krochmalik 
-  Krolikowski Kuang Kubac Kujawa Kuokkanen Kurbalija Kutenik
+  Krolikowski Kubac Kujawa Kuokkanen Kurbalija Kutenik
   Kutner Kvangraven Kwiatkowski Kwiecien Kyriakidou Kyrilenko
 
   Laan Labaere Lachowicz Laffineur Lagrange Lagree Lalanne Lall 
   Lambardi Lanciano Landry Lane Langer Lantaron Lanzarotti Larsen 
   Larssen Lasserre Lauria Lavín Lavings Law Lawy Lay Lazer Lazkar 
   Leao Lebatteux Lebel Lebi Lebowitz Leca Lechtman Lehtinen Lee 
-  Leenhardt Legras Leiro Lena Lengy Lennart Leptirici Lerner 
+  Leenhardt Legras Leiro Lena Lengy Leptirici Lerner 
   Lesniewski Lesnik Lester Lev Levi Levinger Levin Levine Levoy 
   Levski Lewis Lhuissier Li Lian Libbrecht Libman Lien 
   Liu Liggins Lilienstein Lillevik Lilley Limor Linczmayer Lindner 
@@ -861,7 +861,6 @@ my %SINGLE_TYPOS =
   Angelini => ['angelýný'],
   'Aniket Sanghvi' => ['aniket'],
   'Antonio Frances' => ['frances', 'francés'],
-  Araujo => ['araújo'],
   Arcieri => ['arceri'],
   'Arunas Jankauskas' => ['arünas'],
   Avcioglu => ['avcýoðlu', 'avcioðlu'],
@@ -883,7 +882,6 @@ my %SINGLE_TYPOS =
   Combescure => ['combescur'],
   Curo => ['curò'],
   'C.V. Rao' => ['cvrao'],
-  Czímer => ['czimer'],
   Dabrowka => ['d¹brówka'],
   'David Birman' => ['birman'],
   'de Falco' => ['defalco'],
@@ -897,7 +895,6 @@ my %SINGLE_TYPOS =
   'Diana Damyanova' => ['dianadamyanova'],
   'Dmitri Marchessini' => ['dmitri'],
   "D'Orsi" => ['dorsi'],
-  'Dr. Ashwani Mehta' => ['ashwani'],
   Dumbovich => ['dumbovic'],
   Eisenberg => ['einsenberg'],
   Eksi => ['ekþý'],
@@ -912,15 +909,13 @@ my %SINGLE_TYPOS =
   Garoufalis => ['garoufallis'],
   Gladysh => ['gladysch'],
   Golebiowski => ['golembiowski'],
-  'Carlos Gonçalves' => ['goncalves', 'gonsalves', 'gonçalv', 'gonçalve',
-    'gonçalves'],
+  'Carlos Gonçalves' => ['gonsalves', 'gonçalves'],
   Greenwood => ['greenwod'],
   'Grzegorz Darkiewicz-Moniuszko' => ['moniuszko'],
   Grenthe => ['grent', 'grenth'],
   Gromöller => ['gromoeller', 'gromuller', 'gro'],
   Giura => ['guira'],
   Günther => ['guenther'],
-  'Gylfi Baldursson' => ['baldursson'],
   Hackett => ['hakett'],
   Harangozo => ['harangozó'],
   Hassett => ['hasett'],
@@ -972,12 +967,10 @@ my %SINGLE_TYPOS =
   Maas => ['mass'],
   'Maria João Lara' => ['lara'],
   Mahaffey => ['mahafey', 'mahaffee'],
-  'Majka Cilleborg Bilde' => ['majka'],
   Mane => ['mané'],
   'Manoel Peirao' => ['manoel'],
   'Manuel Capucho' => ['capucho'],
   Manyawar => ['manyvar'],
-  'Marius Bartnes' => ['bartnes'],
   'Marc Kerlero de Rosbo' => ['kerlero'],
   Markowicz => ['markovics', 'markowitz'],
   'Maxim Henbest' => ['henbest'],
@@ -1038,7 +1031,6 @@ my %SINGLE_TYPOS =
   Ruia => ['ruya'],
   'Sally Brock' => ['brock'],
   'Salvatore Luceno' => ['lucenò'],
-  'Sanjay Bhattacharya' => ['bhattacharya'],
   Sapounakis => ['sapounaki'],
   Schaltz => ['schalz', 'shaltz'],
   Schneider => ['scheinder'],

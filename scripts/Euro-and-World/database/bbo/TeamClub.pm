@@ -57,7 +57,6 @@ my @MULTI_WORDS =
   'Besli Major',
   'BH Koru BK',
   'Bielski Klub Brydżowy GOK cards',
-  'BK 2000',
   'BK 1936',
   'BK 83 Slagelse',
   'BK Björken',
@@ -137,7 +136,6 @@ my @MULTI_WORDS =
   'Jia Zhou Ai Qiao',
   'Jian Hua',
   'Jili Qiche',
-  'Jin Ying Club',
   'Jin Fu',
   'Jin Hui',
   'Jin Mei',
@@ -169,7 +167,6 @@ my @MULTI_WORDS =
   'Nachteulen Leverkusen',
   'Nancy Jarville',
   'Nilüfer Bld. BSK',
-  'Nord Aalborg',
   'Nord Trøndelag',
   'Norrorts Bridge',
   'NS-1',
@@ -232,7 +229,6 @@ my @MULTI_WORDS =
   'Wan Jian Club',
   'Witte Huis',
   'WCG Mumbai',
-  'Young Sharks',
   'Zurich Enge'
 );
 
@@ -258,50 +254,46 @@ my %MULTI_TYPOS =
   'Balai Pelaksanaan Jalan Nasional' => ['bpjn xi'],
   'Batman Genclik' => ['batman gençlýk'],
   'Bergen Akademiske' => ['bergen ak', 'bergen akad', 'bergen akadem',
-    'bergen akademiske bk', 'bergen abk', 'begen ak'],
+    'bergen abk', 'begen ak'],
   Besiktas => ['besiktas jk'],
   'Blakset Klubberne' => ['blakset-klubberne'],
   'BC Bamberger Reiter' => ['bc bamberg', 'bamberger reiter',
-    'bv bamberger reiter', 'bamberg rider', 'bamberg cavaliers',
-    'bamberger germany', 'bamberger welle', 'bamberg riders',
-    'bc bamberger reite', 'bridgeclub bamberge'],
+    'bamberg cavaliers', 'bamberger germany', 'bamberger welle', 
+    'bamberg riders', 'bc bamberger reite', 'bridgeclub bamberge'],
   'BC Garches' => ['b.c de garches'],
-  'BC Milano' => ['bc mi', 'bc. mi', 'b.c. mi'],
+  'BC Milano' => ['bc mi', 'bc. mi'],
   'BC Universität Mannheim' => ['bc uni mannheim'],
   'BCN Almirall' => ['bcn-almirall', 'bcn - almirall'],
   'Bielski Klub Brydżowy GOK cards' => ['gok-cards bielsk',
     'gok-ard bielsk'],
   'BK Fyris Skalman' => ['skalman bk fyris'],
-  'BK Herkules' => ['bc hercules'],
   'BK Lavec Smile' => ['bk lavec - smile', 'lavec smile',
     'smile bk lavec', 'bk lavek smile', 'bk lavec', 'enjoy bk lavec'],
   'BC Rennais' => ['b.c. rennais', 'b.c rennais'],
   'BC Alert Mannheim' => ['bc mannheim', 'alert mannheim'],
-  'Bodrum BSK' => ['bodrum b.s.k.', 'bodrum bric kulubu',
-    'bordum bric sk'],
+  'Bodrum BSK' => ['bodrum b.s.k.', 'bodrum bric kulubu'],
   'Bogazici BSK' => ['bogaz ici bsk', 'boðazici bsk', 'boðazýçý bsk',
     'boðazýçý s.k.'],
   'Bridge Académie' => ['b.academie', 'bridge academie'],
   'Bridge House' => ['b.house', 'b. house'],
   'Bridge Turó' => ['b. turó', 'b.turó', 'b.turo'],
-  'Bridge Tunas Cahaya' => ['btc jatim'],
   'Bridgeclub Oog' => ['bc oog in al'],
   'Brussels Bridge Club' => ['b.c.o.b.'],
   'BUKS Bytom' => ['buks ii bytom'],
   Canakkale => ['çanakkale', 'canakkale beld.', 'canakkale tarim sp'],
   'Cedýt Ilica Sports' => ['cedýt ilica spor'],
-  'Cerkezkoy Dinamik BSK' => ['Cerkezkoy BS', 'Cerkezkoy BSK',
+  'Cerkezkoy Dinamik BSK' => ['cerkezkoy bs', 'cerkezkoy bsk',
     'cerkezkoy dinamik'],
   'CFT Bridge' => ['cft b'],
   'Circolo del Bridge Cannareggio' => ['c.lo cann.'],
   'Circolo del Bridge N. Ditto Reggio Calabria' => ['n. ditto rc'],
   'Circolo del Bridge Venezia' => ['c.lo ve'],
   'Circolo Nautico Posillipo' => ['c. n. posillipo', 'posillipo'],
-  'Crvena Zvezda' => ['zrvena zwezda', 'zrvena zvezda'],
+  'Crvena Zvezda' => ['zrvena zvezda'],
   'Debrecen DEAC' => ['debrecen-deac'],
   'Diyarbakýr Sur BSK' => ['diyarbakir bs', 'diyarbakir bsbs', 
     'dýyarbakir sur. b.b', 'diyarbakir sur sk', 'sur belediye sk',
-    'sur belediye', 'd.bakýr sur', 'd.bakir sur'],
+    'sur belediye'],
   'Drammen Arbeiderparti' => ['drammen arb'],
   'El Ahly'  => ['el ahly club', 'el-ahly club', 'el-ahly'],
   'El-Karma' => ['al-karma', 'al karma'],
@@ -309,11 +301,11 @@ my %MULTI_TYPOS =
   'Eskisehir Baðlar' => ['eskýþehýr baðlar'],
   'Fanfulla' => ['fanfulla lo'],
   'Fatih Karagumruk' => ['f karagumruk', 'fatýh karagümrük s.'],
-  'Gabrial UI' => ['gabrial-ui', 'gabrial - ui', 'gabriel - ui',
+  'Gabrial UI' => ['gabrial-ui', 'gabriel - ui',
     'gabrial ui-y g', 'gabrial ui yg'],
   'Gereja Masehi Injili di Minahasa' => ['pkbs gmim sulut'],
   'Goztepe Hilal SK' => ['goztepe hilal'],
-  'Grant Thornton' => ['bc grant thornton', 'bc grant-thornton', 
+  'Grant Thornton' => ['bc grant thornton',
     'bg thornton', 'grant thonrton', 'grantt thornton'],
   'Hanseatic Hamburg BC' => ['hanseatic bc', 'hanseatic hamburg'],
   'Hok Studiecentrum' => ['hok ts', 'hoc studiecentrum'],
@@ -322,7 +314,7 @@ my %MULTI_TYPOS =
     'ýzmir b.s. belediye', 'ýzmir bsb', 'ýzmir bþb', 
     'izmir bilimsel', 'izmir buyuksehir', 'izmir b.b.s.k',
     'izmir b.s. belediye', 'izmir bsb/turkiye', 'izmir bsbs',
-    'izmir bbsk', 'izmir.b.b.', 'izmir buyuk sehir b'],
+    'izmir bbsk', 'izmir buyuk sehir b'],
   Jeofizik => ['jeofýzýk'],
   'Jian Hua' => ['jian hua club'],
   'Jili Qiche' => ['ji li'],
@@ -339,8 +331,7 @@ my %MULTI_TYPOS =
    Matunga => ['matunga gym'],
    'Mersin Club' => ['mersin bsb', 'mersin bþb', 'mersin bsbs',
      'mersin ybsk', 'mersin bbs', 'mersin bsb sk', 'mersin bb'],
-  'Midt Trøndelag' => ['midt trondelag', 'midt-trøndelag',
-    'midt-trondelag'],
+  'Midt Trøndelag' => ['midt-trøndelag', 'midt-trondelag'],
   'Miskolc DEAC' => ['deac-miskolc'],
   Mragowia => ['mragowia si'],
   'Nachteulen Leverkusen' => ['nachteulen leverk'],
@@ -358,34 +349,32 @@ my %MULTI_TYPOS =
   'SM BTC' => ['sm-btc'],
   'St:Erik' => ['bk s.t erik', 'bk st erik', 'st erik', 'st erýk',
     'st erik'],
-  'St:Erik Bahaj' => ['s:t erik bahaj', 's:t erik - bahaj'],
+  'St:Erik Bahaj' => ['s:t erik - bahaj'],
   'St:Erik Hella' => ['bk st erik hella', 'bk st.erik hella'],
   'St:Erik Morot' => ['bk st erik morot', 'bk st.erik morot',
     'bk sterik morot', 'morot bk st erik'],
   'Studentenes BK' => ['studentene bk'],
-  "'t Onstein" => ["'t onsten", "bc't onsten"],
+  "'t Onstein" => ["bc't onsten"],
   'Tekirdað Club' => ['tekirdað belediye s', 'tekýrdah beledýye'],
   'Tennis Club Parioli' => ['tc pariori', 'tcp rm', 'tennis rm',
     't.c.p.'],
   'Tonyaspor' => ['tonya spor'],
-  'Top Bridge BC' => ['topbridge bc', 'top bridge', 'topbridge bk',
-    'bk topbridge'],
+  'Top Bridge BC' => ['topbridge bc', 'top bridge', 'topbridge bk'],
   'Torino Allegra' => ['bridge allegra', 'allegra to',
     'allegra - to', 'gs allegra', 'g.s. allegra', 'torino alegra', 
     'allegra torino', 'g.s.allegra'],
-  'Wampon Bodi Papua' => ['wampon bodi', 'wambon bodi papua'],
+  'Wampon Bodi Papua' => ['wambon bodi papua'],
   'WCG Mumbai' => ['wcg (mum)', 'wcg-mumbai'],
   'Witte Huis' => ['het witte huis', 'white house', 'the white house'],
-  'Østfold og Follo' => ['østfold/follo', 'østfold follo',
-    'østfold&follo'],
+  'Østfold og Follo' => ['østfold/follo', 'østfold&follo'],
   'Øvre Ottadalen' => ['øvre ottadal']
 );
 
 my @SINGLE_WORDS = qw(
-  Acol Airmadidi AGBC Akceþme Amisos Anadolu Asenovec Auguri AVGP
+  Acol Airmadidi AGBC Amisos Anadolu Asenovec Auguri AVGP
   Benfica Besiktas Bonsist Botev BTBK
   Canakkale
-  Debrecen Dragao Drienerlo
+  Dragao Drienerlo
   Fanfulla Fenerbahce Fosnavåg
   Galata Galatasaray Gauteng
   Hercules Hoppklubbene Hordaland Hosgoru Houchetou
@@ -393,7 +382,7 @@ my @SINGLE_WORDS = qw(
   Karagümrük Karlsruher Kløverknekt 
   Lavec Laksamana LÜKSAD
   Locomotiva
-  Malatyagücü Matunga Miskolc Mo Mragowia
+  Malatyagücü Matunga Mo Mragowia
   NBK
   Pamukspor Pelatnas
   Qizhong
@@ -413,12 +402,11 @@ my %SINGLE_TYPOS =
 (
   'Ada Briç SK' => ['ada'],
   'Akademisk Bridgeklub' => ['akademisk'],
-  'Altinay SK' => ['altinay', 'altýnaysk'],
+  'Altinay SK' => ['altýnaysk'],
   'Ankara Kontrat' => ['kontrat'],
   'ASA University of Tel Aviv' => ['asa'],
   Asenovec => ['asenovets'],
   Auguri => ['Augurý'],
-  'Banda Aceh' => ['aceh'],
   'Bangkok Bridge Club' => ['bbc'],
   'Baþkent Sekans BSK' => ['sekans'],
   'Batman Genclik' => ['batman'],
@@ -426,9 +414,7 @@ my %SINGLE_TYPOS =
   'DB de Zeerob' => ['zeerob'],
   'BC Garches' => ['garches'],
   'BC Milano' => ['bcmi'],
-  'BC Rennais' => ['rennais'],
   'BH Koru BK' => ['koru'],
-  'BK 2000' => ['bk2000'],
   'BK Lavec Smile' => ['smile'],
   'Bridge Tunas Cahaya' => ['btc'],
   'Bridgeclub Oog' => ['bco'],
@@ -437,7 +423,6 @@ my %SINGLE_TYPOS =
   'Camlica Sports' => ['camspor'],
   Canakkale => ['çanakkale'],
   'Centrum Kultury i Sportu' => ['ckis'],
-  'Cerkezkoy Dinamik BSK' => ['Cerkezkoy'],
   'Cracovia 1906' => ['cracovia'],
   'Crvena Zvezda' => ['zvezda'],
   'Delhi Gymkhana Club' => ['dgc', 'dg'],
@@ -459,7 +444,6 @@ my %SINGLE_TYPOS =
   'Istanbul Sports' => ['istanbulspor'],
   'Jing Fan' => ['jingfan'],
   Karagümrük => ['karagumruk'],
-  Kløverknekt => ['kloverknekt'],
   Locomotiva => ['loco'],
   'Majör Boğaziçi' => ['majorbogazici'],
   Mragowia => ['mragovia', 'mrogowia', 'mrangowia', 'mr¹gowia',
@@ -474,7 +458,6 @@ my %SINGLE_TYPOS =
   'Ruch AZS' => ['ruch'],
   'Rumah Sakit Umum Daerah' => ['rsud'],
   'Samadhan Academy' => ['samadhan', 'samadgan'],
-  'Siwo Persatuan Wartawan Indonesia' => ['pwi'],
   'Sirinyer Sports' => ['sirinyerspor'],
   'Site Sports' => ['sitespor'],
   'Smedstadens BK' => ['smedstadens'],
@@ -491,8 +474,7 @@ my %SINGLE_TYPOS =
   Uppsalabridgen => ['ippsalabridgen'],
   'Witte Huis' => ['whitehouse'],
   Zmrzlina => ['zmerzlina'],
-  Örebridgen => ['Örebridge', 'orebridgen'],
-  'Østfold og Follo' => ['ostfoldfollo']
+  Örebridgen => ['Örebridge', 'orebridgen']
 );
 
 
