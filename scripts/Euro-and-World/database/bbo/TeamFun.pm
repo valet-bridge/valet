@@ -553,7 +553,6 @@ my @MULTI_WORDS =
   'Poismenon Vaari',
   'POL-CH',
   'Pola-Pola',
-  'Pontiac 7',
   'Powerpuff Pinglorna',
   'Plejans Plöjare',
   "Pradeep's Four",
@@ -809,7 +808,7 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   '3 Idiots + 1' => ['3 idiots +1', '3 idiots + i'],
-  '4 Trèfles' => ['4 trefles 1', '4 trefles1', '4 trefles ii',
+  '4 Trèfles' => ['4 trefles 1', '4 trefles1',
     '4trèfles', '4 treffles', '4trèfle'],
   '40 Årskrisa' => ['40-Årskrisa'],
   '5 Ess' => ['5-ess'],
@@ -818,7 +817,7 @@ my %MULTI_TYPOS =
   'AG laget' => ['ag-laget'],
   'Air Traffic Management' => ['air traffic managem'],
   'Alex is Beautiful' => ['alex is beatiful'],
-  'All Stars' => ['all-stars', 'all star'],
+  'All Stars' => ['all-stars'],
   'Alle presidentens menn' => ['alle presidentens'],
   'Applied Math' => ['aplied math'],
   Arnab => ["arnab's"],
@@ -885,12 +884,12 @@ my %MULTI_TYPOS =
     'hungar olimpics', 'hungar olimpic'],
   'Hurlumhei' => ['hurlumhei..'],
   'Hvalen og tjukkasene' => ['hvalen og tjukkasne', 'hvalen & tjukkasene'],
-  'Idea Bridge Torino' => ['idea br.', 'gs idea br. to', 'idea bridge'],
+  'Idea Bridge Torino' => ['gs idea br. to', 'idea bridge'],
   'Ikke akkurat kjedelig' => ['ikke akkurat kjedel'],
   'India Blues' => ['indian blues'],
   'Indian Mavericks' => ['india mavericks', 'indian mavricks'],
-  'Institute of Chemical Technology' => ['inst.of.chem.techn.',
-    'inst.of.chem.tech.', 'inst.of chem.tech.', 'inst.of chem.techn.'],
+  'Institute of Chemical Technology' => ['inst.of chem.tech.', 
+    'inst.of chem.techn.'],
   'Itinérants du bridge' => ['iti du bridge', 'itin du bridge'],
   'Jamm & Co' => ['jamm & co.', 'jamm && co.'],
   'Jan Wellem' => ['jan wel'],
@@ -928,14 +927,13 @@ my %MULTI_TYPOS =
   'Møllers Team' => ['møllers t'],
   NAD => ['n a d'],
   'Nice and Monsters' => ['nice monsters'],
-  'Nilslands Slowfoxes' => ['nilslands slowfoxers', 'nilsland slowfoxes',
-    'nilsland slowfoxers'],
+  'Nilslands Slowfoxes' => ['nilsland slowfoxes', 'nilsland slowfoxers'],
   "No He Isn't" => ['no he isnt'],
   'Oh Ya!' => ['oh ya'],
   "Pal's Four" => ["pal's"],
   Polýsgücü => ['polýs gücü s', 'polýs gücü', 'polis gucu', 'polisgucu'],
   "Pradeep's Four" => ["pradeep's 4", "Pradeep's Team"],
-  "President's Team" => ["president's", 'presidents teams'],
+  "President's Team" => ["president's"],
   "Priya's Four" => ["priya's iv", "priya's4"],
   'P.S.' => ['p. s.'],
   'Queen and Knights' => ["queen's & knight"],
@@ -976,7 +974,7 @@ my @SINGLE_WORDS = qw(
    1den1e 2Q2K 3D 6L 10CC 7heart
 
    AABC ABBK ABBKI ABC Aces Acolvik ACR Adventure Aditya Aeras 
-   Agamemnon Agressor Ahmetizm Ahornet Aida Akenobo Akinom Alertplus 
+   Agamemnon Agressor Ahmetizm Ahornet Aida Akinom Alertplus 
    Alex Alf Alfredo Ali Alioth Allam Alliance Alliansen Allstars 
    Alpha Alternativlos Ambassador Amrapali Amul Andromeda Anglian 
    Andrzejki Anglers Anglophones Anna Anni Anol Anuj Apaçý 
@@ -995,12 +993,12 @@ my @SINGLE_WORDS = qw(
    Blackwood Blandat Bling Blondie Blues Blund Blueberry Blues
    BMAL BMP BNMR BNS BNT BOC Boek Bolero Boogies Boomz Boriana 
    Borko BOVE Breno Bricklayer Bridgebutikken Bridgekameratene 
-   Bridgeministeriet Brigada Brigida BRK Brother Brudarna Buaigh 
+   Bridgeministeriet Brigada BRK Brother Brudarna Buaigh 
    Bubba Bubu Buddies Bulldozer Bumerangas Bunnies Busiaki Butler
 
    Cabal Cabriole Calaca Cammello Camrose Canadonia Cancan Canukusa 
    Cardtossers Cargo Carlitos Carsi Cartoon Casuals Cask Cathy Catz
-   Cavelieri Cavendish CBLTI Cem Cendrawasih Censored Center Cerkez 
+   Cavendish CBLTI Cem Cendrawasih Censored Center Cerkez 
    Challengers Changes Chass Chateau Chicks Chime Chiranjeev 
    Chokladmåndag CHPIK Chuanpit Cité Claim Claudili CMN Coaches 
    Cogito Colorado Commandos Comrade Concurrent Conie Contact 
@@ -1022,14 +1020,14 @@ my @SINGLE_WORDS = qw(
    Evil Ewa
 
    Fakel FAM² FAMA Fantasia Fant4stic Farmen Farmers Felix 
-   Fenghuang Fenia Fenix Ferfi Feszek Fharon Fifi Fil Filosofene 
+   Fenia Fenix Ferfi Feszek Fharon Fifi Fil Filosofene 
    Filur Finest Fisk Flagship FNCC Forfot Formidables Formosa 
    Fortuna Fortune FOS Foundation Francest Frank Franz Frenemies 
    Frieolt Friends Frirond Francophones Freak Frivolt Frusci 
    Fundacja FWK
 
-   Gabrisem Galaxy Galim Gambitas Gamma Garry Garp Garuda Gata Gelim 
-   Gelin Gentle George Geriatrix Gewanna Geysir Gesi Gezi Giants Gibs 
+   Gabrisem Galaxy Galim Gambitas Gamma Garry Garp Garuda Gata 
+   Gelin Gentle George Geriatrix Gewanna Geysir Gezi Giants Gibs 
    Gjesp Gkobra GloryGlory GMM Goldcat Goroco Gosho Göktürk GP 
    Grand Grads Greecoura Greta Gris GRNC Grup Guayacos Gudok Guests 
    Gulce Gulebjorn Gullberg Gullvi Gunsmoke Guptas Gürsel
@@ -1068,7 +1066,7 @@ my @SINGLE_WORDS = qw(
    Löparn LPMS Lucky LVBridgeBums LXA Lyubcho Løwene
 
    Macak Mach Madhav Mads Maestroi Magi Magic Magister Magnus Maharaja 
-   MAHÝR ÞENOL Maija Maj Major MajorB Majorn Majority Makara Makriköy 
+   Maija Maj Major MajorB Majorn Majority Makara Makriköy 
    Mali Malinka Malmölaget Manashda Manena Manno Mano Manu Manywar 
    Margitta Marianne Mark Marosamitawa Mars Marvelous Marynarz 
    Masdjävlar Mask Masters Matilde Matrix Mats Matujona Maven Mavi 
@@ -1094,7 +1092,7 @@ my @SINGLE_WORDS = qw(
    Pacers Paco Pagonia Pal Palukas Panteros Paoli Paradigma Partizan
    Pasam Pasanci Passé Patriot Patron Paulette Paulina Paulistas 
    PBL PCBA PDC Pegasus Pennant Perestrojka Perjuangan Pero Peter 
-   Petra Pia Piast Piryoli Piter Pjäxa PKB PKBS PK3 PKM Pleschi Pleyada 
+   Petra Pia Piast Piryoli Piter Pjäxa PKB PKM Pleschi Pleyada 
    Plia PMS Pojat Polirish Polus Polýsgücü Pompapompa Pontiac 
    Poss Potlimit Potteplante Powerchicks Prapar Prasetya Preempters 
    Pretendents Prijatelj Prim Prosan Proteus Proto Ptacol PTT
@@ -1152,7 +1150,7 @@ my @SINGLE_WORDS = qw(
    Xatzopoulos XC XFIP Xinhai Xman XMing Xtrouble XXX XXXL XXXSL 
    XXXXXYXY
 
-   Ybs YBM Yaðmur Yamata Yansimasiz YeJun Yelena Yichuang Yildizlar
+   Ybs YBM Yaðmur Yamata Yansimasiz YeJun Yelena Yildizlar
    Ylajai Yogakshema Yokozuna YSD YYD YYY
 
    Zabavljaci Zamek Zana Zara Zen Zeyno Zhihaole Ziggy Zimmkonis 
@@ -1166,7 +1164,6 @@ my %SINGLE_TYPOS =
   Acolvik => ['acolvick'],
   'Adams Family' => ['adamsfamily'],
   Aditya => ['aaditya'],
-  Agressor => ['aggressor'],
   Alizee => ['alize'],
   'Alunand Plus' => ['alunand'],
   Ambassador => ['ambassadors', 'ambassdor'],
@@ -1175,7 +1172,6 @@ my %SINGLE_TYPOS =
   Appellkameratene => ['apellkameratene'],
   'Atomic Bridge' => ['atomic'],
   Barracuda => ['barakuda', 'baracuda'],
-  Begijntje => ['begijnt'],
   Bhinneka => ['bhineka', 'bhinneke'],
   'Bleu Lights' => ['bleulights'],
   Bilal => ['balil'],
@@ -1233,7 +1229,6 @@ my %SINGLE_TYPOS =
   Pagonia => ['pagonya'],
   'Paris Match' => ['parismatch', 'parimatch'],
   Paulistas => ['paulistanas'],
-  'Pontiac 7' => ['pontiac7'],
   Prasetya => ['prasetia'],
   Preempters => ['preemptors'],
   "President's Team" => ['president', 'presidents'],
@@ -1256,8 +1251,8 @@ my %SINGLE_TYPOS =
   Starmen => ['starman'],
   'Stone Cutters' => ['stonecutters'],
   Strategen => ['stratagen'],
-  Syabas => ['syabhas', 'syahbas'],
-  Syttisju => ['sytti7', 'sytti'],
+  Syabas => ['syahbas'],
+  Syttisju => ['sytti'],
   'Texan Aces' => ['texanaces', 'tnaces'],
   Titans => ['titan'],
   Valyo => ['valýo'],

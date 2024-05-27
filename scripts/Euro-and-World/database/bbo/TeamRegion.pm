@@ -66,7 +66,6 @@ my @MULTI_WORDS =
   'South East Celebes',
   'South Jakarta',
   'South Kalimantan',
-  'South Minahasa',
   'South Sulawesi',
   'South Sumatra',
   'South Sweden',
@@ -100,9 +99,7 @@ my %MULTI_TYPOS =
   'East Jakarta' => ['jakarta timur'],
   'East Java' => ['jawa timur', 'jatim'],
   'East Kalimantan' => ['kalimantan timur'],
-  Gabmin => ['gabungan minasaha'],
   'Garut Regency' => ['kab. garut'],
-  Guangdong => ['guang dong'],
   Hubei => ['hu bei'],
   Jiangsu => ['jiang su'],
   'Kutai Kartanegara' => ['kutai kartanega'],
@@ -118,7 +115,6 @@ my %MULTI_TYPOS =
   'South Africa' => ['south frica'],
   'South Jakarta' => ['jakarta selatan'],
   'South Kalimantan' => ['kalimantan selatan', 'kalsel'],
-  'South Minahasa' => ['minahasa selatan'],
   'South Sulawesi' => ['sulawesi selatan', 'sulsel'],
   'South Sumatra' => ['south sumatera', 'sumatera selatan', 'sumsel'],
   'Taihu Lake' => ['suzhou taihu'],
@@ -134,7 +130,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Agder Angkaew Anhui ASEAN Ayrshire
+  Agder Anhui ASEAN Ayrshire
   Bali Balkan Banten Belitung Bengkayang Bihar Bornholm Bungo Buskerud
   Cappadocia Corsica
   Druts
@@ -142,13 +138,13 @@ my @SINGLE_WORDS = qw(
   Florida Fukien
   Gabmin Ganges Gansu Global Goa Gorontalo Guangdong Guangxi Guizhou 
   Gujarat
-  Hainan Haixing Hatay Haugaland Hebei Huangshi Hubei Hunan
+  Hainan Haixing Hatay Haugaland Hebei Hubei Hunan
   Jharkhand Jiangsu Jilin
   Kansai Karimun Karnataka Kawanua Kayong Kedungwaru Kepri Kerala 
   Kinali Krabi
   Lampung Lebak Liaoning Liguria Lombok Lumajang
-  Maharashtra Maluku Marmara Masal Matopos Mercosur Midtsjælland Mjøsa 
-  Muallim Munzur Mysia
+  Maharashtra Maluku Marmara Masal Matopos Mercosur Midtsjælland 
+  Minahasa Mjøsa Muallim Munzur Mysia
   Nordafjells Norden Norrland
   Queensland
   Oberloiben Orontes Otago

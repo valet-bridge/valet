@@ -728,7 +728,7 @@ my @SINGLE_WORDS = qw(
   Mendoza Meltzer Merah Merblum Mesbur Messika 
   Mestres Metselaar Meyer Meyers Meyouhas Mezei Michaud Michealakis 
   Mickiewicz Miles Milgrim Mill Millar Miller Milne 
-  Milner Mina Minahasa Miner Minzli Miozzi Miroglio 
+  Milner Mina Miner Minzli Miozzi Miroglio 
   Miszewska Mitra Mittelman Mirali Miura Mizel Mizrak Mohota 
   Mohtashami Molenaar Molenda Molina Molva Monachan Moni Monsegur 
   Montanari Mooney Moran Morath Morawski Moreira Morelli Morgan 
