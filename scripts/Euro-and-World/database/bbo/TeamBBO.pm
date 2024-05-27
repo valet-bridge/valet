@@ -10,8 +10,7 @@ package TeamBBO;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(read_cities study_teams unteam print_team_stats
-  set_overall_hashes init_hashes   is_captain);
-# TODO is_captain to remove again
+  set_overall_hashes init_hashes);
 
 use lib '.';
 
@@ -146,7 +145,6 @@ sub set_overall_hashes
     my $multi_pattern_direct = join('|', map { quotemeta }
       sort { length($b) <=> length($a) } keys %{$MULTI_WORDS{$key}});
 
-    # $MULTI_REGEX{$key} = qr/\b($multi_pattern_direct)(?=\P{L}|\z)/i;
     $MULTI_REGEX{$key} = qr/(?<!\p{L})($multi_pattern_direct)(?=\P{L}|\z)/i;
   }
   else
@@ -335,33 +333,15 @@ sub team_specific_hashes
 }
 
 
-my $tmp_global;
-
 sub study_part
 {
-  my ($part, $i, $chain) = @_;
+  my ($part, $i, $chain, $unknown_part_flag) = @_;
 
   my $token = Token->new();
   $token->set_origin($i, $part);
   $chain->append($token);
 
   $HIT_STATS{TOTAL}++;
-
-  if ($part =~ /~/)
-  {
-    # Turn the artificial separator back into a space.
-    $part =~ s/~/ /g;
-
-    return if team_specific_hashes($part, $token, $chain);
-
-    # Bit of a kludge: Remove trailing dot.
-    if ($part =~ s/\.$//)
-    {
-      return if team_specific_hashes($part, $token, $chain);
-    }
-
-    warn "Should not happen $part";
-  }
 
   if (set_token($part, $token))
   {
@@ -396,40 +376,27 @@ sub study_part
     return;
   }
 
+  # The general solution.
+  return if team_specific_hashes($part, $token, $chain);
 
-  # Try the new hash set-up.
-  if (team_specific_hashes($part, $token, $chain))
-  {
-    return;
-  }
-
+  # Some use of other hashes.
   my $fix_event = $FIX_HASH{lc($part)};
 
   if (defined $fix_event->{CATEGORY})
   {
     my $category = $fix_event->{CATEGORY};
-    if (
-        $category eq 'MONTH' || 
-        $category eq 'NUMERAL' || 
-        $category eq 'ROMAN' ||
-        $category eq 'TOURNAMENT')
+    if ($category eq 'NUMERAL' || $category eq 'ROMAN')
     {
-if ($category eq 'TOURNAMENT')
-{
-  # print "CCC $part\n";
-}
-      $token->set_singleton($category, $fix_event->{VALUE});
-      $HIT_STATS{$category}++;
+      $token->set_singleton('TEAM_' . $category, $fix_event->{VALUE});
+      $HIT_STATS{'TEAM_' . $category}++;
       return;
     }
-
-    # TODO Can print "ZZZ UNKNOWN $part\n";
   }
 
   $token->set_unknown($part);
   $HIT_STATS{UNMATCHED}++;
   print $part, "\n";
-  $tmp_global = 1;
+  $$unknown_part_flag = 1;
 }
 
 
@@ -473,31 +440,30 @@ sub split_on_multi
   }
 }
 
-
 sub study_component
 {
   my ($part, $chain, $token_no, $unsolved_flag) = @_;
 
   # Split on trailing digits.
-  $tmp_global = 0;
+  my $unknown_part_flag = 0;
   if ($part =~ /^(.*[a-z])(\d+)$/i &&
       $1 ne 'U' && $1 ne 'D')
   {
     my ($letters, $digits) = ($1, $2);
 
-    study_part($letters, $token_no, $chain);
+    study_part($letters, $token_no, $chain, \$unknown_part_flag);
     $$token_no++;
 
-    study_part($digits, $token_no, $chain);
+    study_part($digits, $token_no, $chain, \$unknown_part_flag);
     $$token_no++;
   }
   else
   {
-    study_part($part, $token_no, $chain);
+    study_part($part, $token_no, $chain, \$unknown_part_flag);
     $$token_no++;
   }
 
-  $$unsolved_flag = 1 if ($tmp_global);
+  $$unsolved_flag = 1 if $unknown_part_flag;
 }
 
 
@@ -568,10 +534,6 @@ sub study_teams
 
   return unless defined $text;
 
-  # TODO Put this to clean_team, and don't remove it yet
-  # $text =~ s/\- npc//g;
-  # $text =~ s/\(npc\)//g;
-
   if ($text =~ /(.*) vs\. (.*)/)
   {
     my ($team1, $team2) = ($1, $2);
@@ -610,6 +572,7 @@ sub unteam
 
 sub is_captain
 {
+  # Not used.  Maybe for other data sources again.
   my ($text) = @_;
 
   my $lt = lc($text);

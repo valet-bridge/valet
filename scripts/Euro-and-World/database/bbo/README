@@ -1,14 +1,1 @@
-
-Skip 33842: 34,6,3 
-
-Deal properly with npc
-Maybe split off trailing single digits before MULTI match
-
-- Some info about FORM, SCORING, TABLE
-
-- A particle should probably be a separator?
-
-Token string methods.
-Scoring should be easy.
-Make something called Region.pm with Kepri in it
-R16, R32 recognize later.
+2024-05-27
