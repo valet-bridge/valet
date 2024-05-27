@@ -29,8 +29,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  APBF
-  AZS
+  APBF AZS
   CBAI CBLT
   EBU
   FMB

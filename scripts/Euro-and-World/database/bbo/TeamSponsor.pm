@@ -564,8 +564,8 @@ my @SINGLE_WORDS = qw(
 
   Bajaj Banpu Baykar Beibao Beidike Bnerg BridgePlus
 
-  Cable Candyland Cempaka Changyu Chemikartel Chlodnia Chuanmei Cimentas 
-  COMAL Compensa Computerland CONNECTOR CONSUS Constellation 
+  Cable Candyland Cempaka Changyu Chemikartel Chlodnia Chuanmei 
+  Cimentas COMAL Compensa Computerland CONNECTOR CONSUS Constellation 
   Continental Copia Cosmos
 
   Datang Datasteel Denizgucu Dermika Derofe Dianwang DISKI Djarum 
@@ -591,8 +591,8 @@ my @SINGLE_WORDS = qw(
 
   Manyavar Meikuang Mireo Mitrabuana Morgunblaðið Myndform
 
-  NALCO Nanyuan Navachaitanya Navayuga Nazwa Nefka Niewiem Nongken Norco 
-  Nortemp NOTUS Näkösoppi
+  NALCO Nanyuan Navachaitanya Navayuga Nazwa Nefka Niewiem Nongken 
+  Norco Nortemp NOTUS Näkösoppi
 
   Ozyuva
 
@@ -658,7 +658,8 @@ my %SINGLE_TYPOS =
   'Gong Hang Jin Ying' => ['jinying'],
   Gözgöz => ['gozgoz'],
   'Guangzhou Hongmian' => ['guangzhouhongmian', 'hongmian'],
-  'Guangzhou Pearl River' => ['guangzhoupearlriver', 'guangzhouperalriver'],
+  'Guangzhou Pearl River' => ['guangzhoupearlriver', 
+    'guangzhouperalriver'],
   'Haerbin Bingxue' => ['harbin bingxue'],
   'Heng Yuan Xiang' => ['hyx'],
   'Hong Zhu' => ['hongzhu'],

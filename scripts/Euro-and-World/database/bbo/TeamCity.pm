@@ -109,15 +109,14 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Aabenraa Aalborg Adalar Adana Adelaide Agresar Ahmedabad Akaylar
-  Akçeşme Akdeniz Akhisar Akkad Alexandria Albena Aliaga Allahabad Altay 
-  Altrincham Alytus Amanora Amarillo Ambon Amsterdam Ankara 
+  Akçeşme Akdeniz Akhisar Akkad Alexandria Albena Aliaga Allahabad 
+  Altay Altrincham Alytus Amanora Amarillo Ambon Amsterdam Ankara 
   Annecy Antalya Antony Antwerpen Aral Arendal Arjasa Asenovgrad Assis 
   Atakoy Atakum Athens Auckland Augsburg Avren Ayacucho Ayan Ayvalik
 
   Bahce Balcova Bahcesehir Balikesir Balikpapan Ballerup Bamberg 
-  Bandung 
-  Bangalore Bangkok Banjarmasin Bansi Baragnon Barcelona Batam Bath 
-  Batu Bayrampaþa Begues Beijing Bekasi Belgrade
+  Bandung Bangalore Bangkok Banjarmasin Bansi Baragnon Barcelona 
+  Batam Bath Batu Bayrampaþa Begues Beijing Bekasi Belgrade
   Bengkulu Beograd Bereket Bergen Bergues Berlin Beroe Bhilwara
   Bhubaneshwar Bielefeld Bieniewo Bikaner Bitung Blitar Bodrum 
   Bodø Bogazici Bogor Bologna Bonn Bordeaux Borivli Bormali 
@@ -143,9 +142,9 @@ my @SINGLE_WORDS = qw(
   Gdansk Gdynia Genoa Gent Geyve Glidice Gnesta Gorontalo Gorzow
   Gölcük Gresik Guangzhou Guayaquil Gudbrandsdal Gundogan Gyor
 
-  Haderslev Hamburg Hangzhou Hannover Harplinge 
-  Hegyvidék Heimdal Heledia Helsinki Herning Hillerød
-  Hornbæk Hosguru Huangshi Huldretråkket Hyderabad
+  Haderslev Hamburg Hangzhou Hannover Harplinge Hegyvidék Heimdal 
+  Heledia Helsinki Herning Hillerød Hornbæk Hosguru Huangshi 
+  Huldretråkket Hyderabad
 
   Iasi Iskenderun Istanbul Izmir
 
@@ -153,20 +152,17 @@ my @SINGLE_WORDS = qw(
   Jilin Jinchang Jincheng Jinjiang Jiujiang Jomtien
 
   Kadikoy Kadirli Kalisz Kalundborg Kalyani Kanpur Karaçay Karachi
-  Kardelen
-  Karlsruhe Kartal Karsiyaka Kastamonu Katok Katowice Kaylaka Kediri 
-  Kesten Ketsch Kiel Kielce Kiev Kirkeby Kirklarelý Klabat Kocaeli 
-  Kocamustafapasa 
-  Kolbotn Kolkata Konak Kornik Korwin Kosice Koycegiz Köln Krakow 
-  Kristiansand 
-  Kucukcekmece Kudus Kunshan Kuopio Kusadasi Küp Kütahya Kverndalen
-  Kwok Kyustendil Kølabånn
+  Kardelen Karlsruhe Kartal Karsiyaka Kastamonu Katok Katowice 
+  Kaylaka Kediri Kesten Ketsch Kiel Kielce Kiev Kirkeby Kirklarelý 
+  Klabat Kocaeli Kocamustafapasa Kolbotn Kolkata Konak Kornik 
+  Korwin Kosice Koycegiz Köln Krakow Kristiansand Kucukcekmece 
+  Kudus Kunshan Kuopio Kusadasi Küp Kütahya Kverndalen Kwok 
+  Kyustendil Kølabånn
 
   Langkat Lanzhou Lappee Leiden Leilem Lemvourgeio Lerum Leszno Leuven 
-  Leverkusen 
-  Lhokseumawe Lille Lima Lincoln Lindesberg Liushu Ljubljana Lodz Lokotok
-  London Losari Lowicz Lozenets Lubin Lublin Lucignano Luleburgaz 
-  Lumajang
+  Leverkusen Lhokseumawe Lille Lima Lincoln Lindesberg Liushu 
+  Ljubljana Lodz Lokotok London Losari Lowicz Lozenets Lubin Lublin 
+  Lucignano Luleburgaz Lumajang
 
   Maadi Maastricht Madrid Makaliwe Makassar Makus Malatya Malkia Malmö 
   Manahasa Manado Manchester Manisa Manna Mannheim Marbella Martapura 
@@ -207,14 +203,13 @@ my @SINGLE_WORDS = qw(
 
   Taicang Taihu Tainan Taizhou Takayama Tallinn Tambun Targoviste 
   Tarnów Taskopru Täby Täfteå Tekýrdag Temuco Tengah Tequendama 
-  Thane Thanjavur Thessaloniki Tianjin 
-  Tianya Timisoara Tingling Tire Tokyo Tomohon Torino Toulouse Trieste 
-  Trondheim Tromsø
+  Thane Thanjavur Thessaloniki Tianjin Tianya Timisoara Tingling 
+  Tire Tokyo Tomohon Torino Toulouse Trieste Trondheim Tromsø
 
   Uccle Udaipur Unia Unaós Uppsala Usak Utrecht
 
-  Van Varbergshus Varese Varna Vasa Västervik Vejle Vestfold Vestvågøy 
-  Vienna Vikersund Vilnius Viþnelik Vraca
+  Van Varbergshus Varese Varna Vasa Västervik Vejle Vestfold 
+  Vestvågøy Vienna Vikersund Vilnius Viþnelik Vraca
 
   Xiamen Xinghua Xinyi
 

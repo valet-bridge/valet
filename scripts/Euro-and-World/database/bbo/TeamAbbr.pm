@@ -24,29 +24,36 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   'Bridge Club' => [
-    'a.s.', 'a.s.d.', 'ass. br.', 'as. b.', 'athletic c.',
+    'a.s.', 'a.s.d.', 'as. b.', 'ass. br.', 
     'b.akd', 'b.b.', 'b.c.', 'b.c',
-    'b.s.b', 'b.b.k.', 'b.b.s.', 'b.b.s.k.', 'b.s.', 'b.s', 'b.s.b.', 
-    'bld', 'bld.',
-    'b.s.k.', 'b.s.k', 'b.seh bel', 'b. shr bld', 'b.k', 'b.k.', 'b.t',
-    'bld sk', 'bld sp', 'bld. sp', 'b.bld.sk',
-    'bld.sp', 'bld.spor', 'bld. gsk',
+    'b.b.k.', 'b.b.s.', 'b.b.s.k.', 
+    'b.k', 'b.k.', 
+    'b.s.', 'b.s', 'b.s.b.', 'b.s.b', 'b.s.k.', 'b.s.k', 'b.t',
+    'b.bld.sk', 'b.seh bel', 'b. shr bld', 
+    'bld.', 'bld', 'bld sk', 'bld. sp', 'bld sp', 'bld.sp', 
+    'bld.spor', 'bld. gsk',
     'bric iht', 'bric klb', 'bric kulubu', 
-    'bridge clu', 'bridge cl', 'bridz klub', 'brýç spor', 
-    'brýç s.k.', 'brýç sk', 'brýc sk', 'brýç ý. s.k', 'bsb bk', 
+    'bridge cl', 'bridge clu', 
+    'bridz klub', 
+    'brýc sk', 'brýç sk', 'brýç s.k.', 'brýç spor', 'brýç ý. s.k', 
+    'bsb bk', 
     'c. br.', 'card club',
-    'genclik s', 'gr.sp.ass.', 'g.s.b.', 'g.s.b', 'g.s.', 'gsd briç',
-    'genç. hýz',
-    'kontrat bsk',
-    'y.þehýr bld'],
+    'genclik s', 'genç. hýz',
+    'gr.sp.ass.', 
+    'g.s.', 'g.s.b.', 'g.s.b', 
+    'gsd briç', 'kontrat bsk', 'y.þehýr bld'
+  ],
 
   'Sporting Club' => [
-    'bric sk', 'briç sk', 'briç skd', 'bric spor kl',
-    'briç ýsk', 'brýç sk', 'brýç spor', 'spor bric', 
-    "sport' c", 'sports c', 'spor kb', 's c',
-    's.k.', 'spor kulubu', 'spor kulübü', 's.s.', 's.s.d.',
-    'sports club', 'spor k.',
-    't.c.', 'tennis club', 't.c.p.'],
+    'athletic c.',
+    'bric sk', 'bric spor kl',
+    'briç sk', 'briç skd', 'briç ýsk', 
+    'brýç sk', 'brýç spor', 
+    'spor bric', 'spor k.', 'spor kb', 'spor kulubu', 'spor kulübü', 
+    "sport' c", 'sports c', 
+    'sports club', 
+    's c', 's.k.', 's.s.', 's.s.d.',
+    't.c.', 't.c.p.', 'tennis club'],
 
   'University Club' => ['ü.m.d']
 );
@@ -57,28 +64,29 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  'Bridge Club' => [qw(aba abk abi absk ak ahm 
-    asb asd ass assn asso assoc azs
-    ba bbgsk bbs bbsgk bbsk bc bcm bcn belediye beledýye belediyesi
-    belediyespor bgsk
-    bilimsel bisk biskd bjk bk bld bmsk bp bps
+  'Bridge Club' => [qw(
+    aba abi abk absk ahm ak asb asd ass assn asso assoc azs
+    ba bbgsk bbs bbsgk bbsk bc bcm bcn 
+    belediye beledýye belediyesi belediyespor 
+    bgsk bilimsel bisk biskd bjk 
+    bk bld bmsk bp bps
     br bri brýç bridgeclub bridgeklub 
-    bs bsb bsc bsk bskd bsp bt
-    bþb bþbký bsbkisk bssk buyuksehir ybsk bsbs btsc býskd
+    bs bsb bsbkisk bsbs bsc bsk bskd bsp bssk bt btsc 
+    bþb bþbký buyuksehir býskd
     cbc cbe cfr ck club csb
     dbc dbk dgc 
     ebc eibc 
     fbc fc
-    gençlik gkk gsb gsk gsmks gks gskd gtbc
+    gençlik gkk gks gsb gsk gskd gsmks gtbc
     hesk
     ihs
     kcb kdi klubben klubberne ks ksb ksk
     maesa mbc
-    nbc nbi nbcbl ndbac
+    nbc nbcbl ndbac nbi
     oaza obk 
     sb sbc sc sdgskd sk spor ss ssd
     tbc tc
-    ýbmsk ýbsk)],
+    ybsk ýbsk ýbmsk)],
   'Sporting Club' => ['sporting', 'sprting'],
 );
 

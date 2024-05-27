@@ -571,36 +571,33 @@ my @SINGLE_WORDS = qw(
   Aagaard Abecassis Adad Adams Adamsen Adde Adem Adrei Adriano Adrilla
   Agarwal Agica Agnihotri Agostini Akama Akem Aker Akgul Akgun Akhun 
   Akkab Akkoyunlu Akuzum Alami Alegre Alegrio Alela Alfonsin Alineo 
-  Allana 
-  Allegaert Allegra Allfrey Allison Allix Alloul Almirall Alocchi Aloi 
-  Alonso Altan Altay Alti Altinis Altshuler Alujas Alvensleben Amadori 
-  Amaral Ames Amoedo Amoils Amol Andersen Anderson Andersson 
-  Andrasi Andrea Andreoli Andrew Angeleri Angelini Antas Antmen Antoniou 
-  Ao Apfel Appleton Apteker Aranha Araszkiewicz Araujo Arcieri Arle 
-  Aroix Armstrong Arun Asakoshi Ash Ashworth Ashton Ashwin Askgaard 
-  Asmeniadis Assael Assemi Assis Atalay Atabey Atay Attaguile 
-  Auerbach Auken Aust Austberg Avci Avcioglu Avon Awad Ayda Aydin
+  Allana Allegaert Allegra Allfrey Allison Allix Alloul Almirall 
+  Alocchi Aloi Alonso Altan Altay Alti Altinis Altshuler Alujas 
+  Alvensleben Amadori Amaral Ames Amoedo Amoils Amol Andersen 
+  Anderson Andersson Andrasi Andrea Andreoli Andrew Angeleri 
+  Angelini Antas Antmen Antoniou Ao Apfel Appleton Apteker Aranha 
+  Araszkiewicz Araujo Arcieri Arle Aroix Armstrong Arun Asakoshi 
+  Ash Ashworth Ashton Ashwin Askgaard Asmeniadis Assael Assemi 
+  Assis Atalay Atabey Atay Attaguile Auerbach Auken Aust Austberg 
+  Avci Avcioglu Avon Awad Ayda Aydin
 
   Babacan Babsch Bagge Baiche Baietto Bailey Bajraj Baker Bakhshi 
   Baki Bakkeren Baldini Baldysz Baleal Balkanski Ballebo Bang 
   Banikas Baran Barat Barbone Barbosa Barel Barion Baris Baron Bart 
-  Barton 
-  Basabe Baseggio Basile Bassini Bathurst Batov Bauch Bavaresco 
+  Barton Basabe Baseggio Basile Bassini Bathurst Batov Bauch Bavaresco 
   Baybarut Bayes Baze Bäckström Beauchamp Beale Beatty Beaumier
   Beauvillain Becker Bell Bello Bellosta Belonogov Benassi Bennett 
   Berdichevsky Berg Berger Bergheimer Berkowitz Berktas Berlinski 
   Berman Bernard Bernasconi Bernstein Berrettini Bertens Bertheau 
   Bertolucci Besiris Bessis Bettini Beyer Bhalchandra Bhattacharya 
-  Biagiotti 
-  Bilal Bilde Bilski Binderkrantz Bingol Biondillo Biondo Bird 
-  Birin Bittner Bitran Bizer Bjarnarson Bjerkan Bjornlund Black
-  Blackstock Blakeman Blakset Blanchard Blandin Bley 
-  Bloom Blum Blumental Bo Boaz Bocchi Bock Bogach Bogacki 
-  Bohnhorst Bohnsack Bokk Bojoh Boldt Bolling Bolognini Bombardieri 
-  Bomber Bompis Bongiovanni Bonis Bonori Bontas Booth Bordallo Bornova 
-  Boro Bos Bose Boss Bossi Bostanci Bostosusz Botto Boucher Boughey 
-  Bourke Bouscat Bowdery Bowles Boylson Bozempergk Bottetto Bozzetto
-  Bozzo
+  Biagiotti Bilal Bilde Bilski Binderkrantz Bingol Biondillo Biondo 
+  Bird Birin Bittner Bitran Bizer Bjarnarson Bjerkan Bjornlund Black
+  Blackstock Blakeman Blakset Blanchard Blandin Bley Bloom Blum 
+  Blumental Bo Boaz Bocchi Bock Bogach Bogacki Bohnhorst Bohnsack 
+  Bokk Bojoh Boldt Bolling Bolognini Bombardieri Bomber Bompis 
+  Bongiovanni Bonis Bonori Bontas Booth Bordallo Bornova Boro Bos 
+  Bose Boss Bossi Bostanci Bostosusz Botto Boucher Boughey Bourke 
+  Bouscat Bowdery Bowles Boylson Bozempergk Bottetto Bozzetto Bozzo
   Brachman Brady Brake Braithwaite Bramley Branco Brantsma Branzoiu
   Braun Brede Brenner Bretagne Brifman Brightling Brink Brockwell 
   Brod Brogeland Brown Brotteaux Brunet Bruun Brunzell Buch Buchen 
@@ -617,8 +614,7 @@ my @SINGLE_WORDS = qw(
   Charlotte Charlsen Chassagne Chatterji Chauvelot Chediak Cheek 
   Chemla Chen Cheng Chinchak Chizzoli Chopin Chottin Chrapot Chuang 
   Chubukov Ciccarelli Cichocki Ciechomski Cilleborg Cimon Cintra 
-  Cionca
-  Ciopettini Civale Cladius Clair Claret Clark Clarke Clausen 
+  Cionca Ciopettini Civale Cladius Clair Claret Clark Clarke Clausen 
   Clement Clemmensen Close Coenraets Coglitore Cohen Cohler Cohner 
   Colarossi Coldea Cole Coletta Collett Collins Combes Combescure 
   Compton Connie Conti Cook Cooke Cooper Cooreman Cope Coren 
@@ -657,8 +653,7 @@ my @SINGLE_WORDS = qw(
 
   Gabrial Gaede Garliardi Gagliardi Gaglietto Gardiner Galinsky Gallus 
   Gana Gandoglia Ganzer Garateguy Garbosi Garg Garoufalis Garrido 
-  Garrone
-  Garvey Garner Gartaganis Gary Gaspar Gaviard Gawel Gawrys 
+  Garrone Garvey Garner Gartaganis Gary Gaspar Gaviard Gawel Gawrys 
   Gelberg Geller Genc Generosi Gentili Georgescu Gerber Gerli 
   Gero Gerrard Geyer Gezer Ghionis Giangkos Giannessi Gidman 
   Gierulski Gigliotti Gilboa Gill Ginnan Ginossar Gioia Gitelman 
@@ -679,8 +674,7 @@ my @SINGLE_WORDS = qw(
   Harrison Harsanyi Hasenson Hassett Hauge Haughie Häusler Havas Hayman
   Hegedus Heifer Helekar Helgemo Helle Helman Helmer Helmich Helms Henault
   Henclik Heng Hennault Henneberg Henriques Herman Herrera Herscap
-  Heskje 
-  Hill Hillman Hinden Hindon Hinge Hiraki Hirchwald Hirst Hitti 
+  Heskje Hill Hillman Hinden Hindon Hinge Hiraki Hirchwald Hirst Hitti 
   Hliapas Hobeika Hoff Hoffa Hoffman Hollands Hollman Honti Hooda 
   Hopfenheit Hornibrook Horowitz Horton Horwitz Howard Howe Hu 
   Huang Hughes Hugon Hugony Hult Hung Hupe Hurworth Høgis Høyland 
@@ -703,33 +697,31 @@ my @SINGLE_WORDS = qw(
   Kaye Kazik Kazmierczak Keegan Kendrick Kenigsberg Kennedy Kenny 
   Kent Keremida Kersey Kesgin Khandelwal Khazanov Khyuppenen 
   Kilani Kilvington King Kiran Kiriakidoy Kirilenko Kirin Kishan 
-  Kizikli 
-  Klapper Klimacki Klimentowska Klinger Klofa Klukowski Knap Knight 
-  Kocak Koch Koistinen Koivula Kokkes Koken Kokten Kolankaya 
-  Kolata Kolesnik Kollnes Kolonkaya Konckier Kondoch Konefal Koneru 
-  Kopecky Koppel Korbel Kordov Korkmaz Korkut Korth Kosaka Kosti 
-  Kotányi Kotinas Kotronarou Koumetz Kovacs Kovachev Kovacich 
-  Kowalski Kozikowski Kökten Kranyak Krajewski Krausova Krawczyk 
-  Krekorian Kriegel Kriftner Kristensen Kroch Krochmalik 
+  Kizikli Klapper Klimacki Klimentowska Klinger Klofa Klukowski 
+  Knap Knight Kocak Koch Koistinen Koivula Kokkes Koken Kokten 
+  Kolankaya Kolata Kolesnik Kollnes Kolonkaya Konckier Kondoch 
+  Konefal Koneru Kopecky Koppel Korbel Kordov Korkmaz Korkut Korth 
+  Kosaka Kosti Kotányi Kotinas Kotronarou Koumetz Kovacs Kovachev 
+  Kovacich Kowalski Kozikowski Kökten Kranyak Krajewski Krausova 
+  Krawczyk Krekorian Kriegel Kriftner Kristensen Kroch Krochmalik 
   Krolikowski Kuang Kubac Kujawa Kuokkanen Kurbalija Kutenik
   Kutner Kvangraven Kwiatkowski Kwiecien Kyriakidou Kyrilenko
 
   Laan Labaere Lachowicz Laffineur Lagrange Lagree Lalanne Lall 
-  Lambardi Lanciano 
-  Landry Lane Langer Lantaron Lanzarotti Larsen Larssen Lasserre 
-  Lauria Lavín Lavings Law Lawy Lay Lazer Lazkar Leao Lebatteux 
-  Lebel Lebi Lebowitz Leca Lechtman Lehtinen Lee Leenhardt Legras 
-  Leiro Lena Lengy Lennart Leptirici Lerner Lesniewski Lesnik Lester Lev 
-  Levi Levinger Levin Levine Levoy Levski Lew Lewis Lhuissier Li Lian
-  Libbrecht Libman Lie Lien Liu Liggins Lilienstein Lillevik Lilley 
-  Limor Linczmayer Lindner Lindstedt Lindqvist Llopart Locatelli 
-  Lockwood Lombard Longinotti Lorentz Lorenzini Loreto Lormant 
-  Louchart Lovrecz Lowe Lubinski Lucchesi Ludewig Lund Luppi Lusk 
-  Lusky Lüßmann Lynch Lyngdal Lyngen
+  Lambardi Lanciano Landry Lane Langer Lantaron Lanzarotti Larsen 
+  Larssen Lasserre Lauria Lavín Lavings Law Lawy Lay Lazer Lazkar 
+  Leao Lebatteux Lebel Lebi Lebowitz Leca Lechtman Lehtinen Lee 
+  Leenhardt Legras Leiro Lena Lengy Lennart Leptirici Lerner 
+  Lesniewski Lesnik Lester Lev Levi Levinger Levin Levine Levoy 
+  Levski Lew Lewis Lhuissier Li Lian Libbrecht Libman Lie Lien 
+  Liu Liggins Lilienstein Lillevik Lilley Limor Linczmayer Lindner 
+  Lindstedt Lindqvist Llopart Locatelli Lockwood Lombard Longinotti 
+  Lorentz Lorenzini Loreto Lormant Louchart Lovrecz Lowe Lubinski 
+  Lucchesi Ludewig Lund Luppi Lusk Lusky Lüßmann Lynch Lyngdal Lyngen
 
-  Maas MacDonald Macedo Machado Madsen Magee Maggio Maglietta Mahaffey 
-  Maia Maiolani Malarme Maksymetz Malaczynski Malani Malavasi 
-  Maluish Mamidaki Manara Mancuso Mandecka Mandelot Mane 
+  Maas MacDonald Macedo Machado Madsen Magee Maggio Maglietta 
+  Mahaffey Maia Maiolani Malarme Maksymetz Malaczynski Malani 
+  Malavasi Maluish Mamidaki Manara Mancuso Mandecka Mandelot Mane 
   Manfield Manganella Manglik Manni Mannix Mantica Manyawar Maoilani
   Marani Marashev Marchioni Marek Margarida Margiotta Mari Marill 
   Marina Marincho Marinescu Marino Markey Markowicz Marks Marmonti 
@@ -766,25 +758,23 @@ my @SINGLE_WORDS = qw(
   Ozarar Ozbey Ozdil Ozenir Ozge Ozlen Ozsahin Ozturk Östberg Özbey
 
   Pacareu Pacault Pacini Paganus Paiva Pajak Paladino Palau Palma 
-  Palmeira Palmer Palmund Pals Panagaki Panto Panopoulos 
-  Papahatzis Papakyriakopoulos Papaxatzis Parker Partearroyo Parviainen 
-  Pasquarè
+  Palmeira Palmer Palmund Pals Panagaki Panto Panopoulos Papahatzis 
+  Papakyriakopoulos Papaxatzis Parker Partearroyo Parviainen Pasquarè
   Passarinho Passaro Passell Pastore Pattinson Pattison Paulissen 
   Pauncz Pavlicek Payen Pazur Peake Pedzinski Peirão Pekkinen Peksen 
   Penfold Percario Pereira Peres Periasamy Perisic Persiani Petculescu 
   Petrescu Petrucci Pettersson Phelan Piasecki Piedra Piekarek 
   Pietraszek Piganeau Pilon Pineles Pinguello Pinto Piper Pisak 
-  Pisani Pitt Platt 
-  Plaut Poizat Pollack Pollak Polledro Polowan Pont Popescu Popova 
-  Potier Potts Poulat Pownall Pozzi Pradhan Prescott Previde 
-  Priano Primavera Proukakis Procter Prohorov Prusa Pryor Puczynski 
-  Pulkrab Purkarthofer Pszczola
+  Pisani Pitt Platt Plaut Poizat Pollack Pollak Polledro Polowan 
+  Pont Popescu Popova Potier Potts Poulat Pownall Pozzi Pradhan 
+  Prescott Previde Priano Primavera Proukakis Procter Prohorov 
+  Prusa Pryor Puczynski Pulkrab Purkarthofer Pszczola
 
   Quail Quantin Queran Quinn
 
   Rabinowitz Radcliffe Radin Radisic Rajagopal Ramamurthy Ramchandran
-  Ramondt Rankin Ranklin Ranson Rao Rapp Rashti Rau Raulund Ravenna Rayner 
-  Rebecchi Rees Reess Rehder Reid Reimer Reinholdt Reiplinger 
+  Ramondt Rankin Ranklin Ranson Rao Rapp Rashti Rau Raulund Ravenna 
+  Rayner Rebecchi Rees Reess Rehder Reid Reimer Reinholdt Reiplinger 
   Rekstad Renouard Reps Revaz Rew Reynolds Rheingold Rhodes Ribera 
   Ribery Ricard Ricci Richardson Richman Ridgway Riedel Riehm 
   Rietvink Rieusset Rigal Rigaud Riisnæs Rimstedt Ringuet Riolo Rios 
@@ -796,31 +786,30 @@ my @SINGLE_WORDS = qw(
 
   Sabbag Sabbatini Sadek Saelensminde Saesseli Sahin Saina Sairanen 
   Sakirler Sakr Salama Salisbury Salliere Salman Salvador Sancaktar
-  Sandberg Sanden Sandqvist Sanghi Sankichi Sansom Santos
-  Saporta Sapounakis 
-  Sargos Sarten Sarundajang Savchenko Savelli Savorani Savski Sawicki 
-  Sayaca Saydi Sayer Sayilkan Sayýlkan Sbarigia Scanavino Scerri Schaltz 
-  Scherders
-  Schermer Schlicker Schneider Schnetzer Scholes Schonning Schoolmann 
-  Schou Schuett Schulle Schulz Schüller Schroeder Schreckenberger 
-  Scoltock Scudder Scullin Schwartz Schwerdt Sealy Sebbane Seguineau 
-  Selberg Selcuk Seligman Semenov Semerci Sen Serenella Serf Serifoglu 
-  Serpoi Sesyilmaz Sezginsoy Shadyro Sharif Sharp Sher Sherman Shezifi 
+  Sandberg Sanden Sandqvist Sanghi Sankichi Sansom Santos Saporta 
+  Sapounakis Sargos Sarten Sarundajang Savchenko Savelli Savorani 
+  Savski Sawicki Sayaca Saydi Sayer Sayilkan Sayýlkan Sbarigia 
+  Scanavino Scerri Schaltz Scherders Schermer Schlicker Schneider 
+  Schnetzer Scholes Schonning Schoolmann Schou Schuett Schulle 
+  Schulz Schüller Schroeder Schreckenberger Scoltock Scudder 
+  Scullin Schwartz Schwerdt Sealy Sebbane Seguineau Selberg Selcuk 
+  Seligman Semenov Semerci Sen Serenella Serf Serifoglu Serpoi 
+  Sesyilmaz Sezginsoy Shadyro Sharif Sharp Sher Sherman Shezifi 
   Shields Shiels Shimamura Shimizu Shirogane Short Shudnev Shugart 
   Shunta Silver Silverstein Silverstone Sime Simonsen Simpson Simson 
   Sinclair Sivrioglu Sjodal Skaanning Skelton Skjønnemann Skoglund 
   Skorchev Skurec Skwark Small Smart Smilgajs Smith Smirnov Smolanko 
   Snashall Snellers Snow Socha Sohlin Soldati Solheim Solimando Solodar 
   Sonsini Soriano Sorkin Sosler Soukup Soulet Soumitra Sowter 
-  Sörvoll Spangenberg Spector Spelmans Spiridonescu
-  Spitalnick Spooner Sprung Squires Stabell Stamatov Stankovic 
-  Stansby Stark Stavrinos Steel Stegaroiu Steiner Stensson Stephenson 
-  Stern Steinberg Sternberg Stevens Stewart Stienen Stilling
-  Stoichkov Stoltz Stoppa Street Stretz Strul Strøm Stuart
-  Sulgrove Sveindal Sveinsson Svendsen Suarez Sugino Summers Sundelin 
-  Sundsten Sung Suñol Suresh Sutherlin Suwik Sütmen Svindahl 
-  Swarup Sweidan Sykioti Syl 
-  Sylvan Symons Szalay Szenberg Szigethy Szots Szymanowski Sørensen
+  Sörvoll Spangenberg Spector Spelmans Spiridonescu Spitalnick 
+  Spooner Sprung Squires Stabell Stamatov Stankovic Stansby Stark 
+  Stavrinos Steel Stegaroiu Steiner Stensson Stephenson Stern 
+  Steinberg Sternberg Stevens Stewart Stienen Stilling Stoichkov 
+  Stoltz Stoppa Street Stretz Strul Strøm Stuart Sulgrove Sveindal 
+  Sveinsson Svendsen Suarez Sugino Summers Sundelin Sundsten Sung 
+  Suñol Suresh Sutherlin Suwik Sütmen Svindahl Swarup Sweidan 
+  Sykioti Syl Sylvan Symons Szalay Szenberg Szigethy Szots 
+  Szymanowski Sørensen
 
   Tachev Tajima Takayama Talpur Tamburi Tamburrini Tan Tanaka Taner 
   Tardy Tarhan Tarkunde Tarnovski Tasman Taylor Tebha Tedd 
@@ -834,8 +823,8 @@ my @SINGLE_WORDS = qw(
   Ucar Ueland Uggeri Ultav Una Upmark Uskali Uskela Usluduran Utter 
   Uysal
 
-  Vahaboglu Vahalia Vainikonis Valeanu Valio Valta Vanchev Varadi Varenne 
-  Vasarhelyi Veloni Venetina Venkatesh Ventin Verbeek Verhees 
+  Vahaboglu Vahalia Vainikonis Valeanu Valio Valta Vanchev Varadi 
+  Varenne Vasarhelyi Veloni Venetina Venkatesh Ventin Verbeek Verhees 
   Vernay Versace Versluis Viale Viana Vidigal Viennois Vidalat
   Videv Vigil Vihtilä Vilella Villegas Vinay Vincent Vinciguerra 
   Virvidakis Vitas Vithaya Vogt Voinescu Volcker Vorobei Vriend 
@@ -853,14 +842,12 @@ my @SINGLE_WORDS = qw(
   Xatzimpalis
 
   Yadlin Yalman Yamada Yang Yalankiran Yarington Yates Yergýn
-  Yezerski Yildiz Yilmaz 
-  Ying Yokoi Yoleri Yuen Yule
+  Yezerski Yildiz Yilmaz Ying Yokoi Yoleri Yuen Yule
 
-  Zabunoglu Zago Zagor Zagorin Zajac Zaleski Zanalda Zambonini Zaninotti
-  Zaremba Zarkesch Zatorski Zawada Zawislak Zeeberg Zenari Zhan Zhao 
-  Zhaoheng
-  Zhong Zhukov Zielinski Zimmermann Zipovski Zobu Zollo Zolotov Zorlu 
-  Zotti Zozis Zotos Zwart
+  Zabunoglu Zago Zagor Zagorin Zajac Zaleski Zanalda Zambonini 
+  Zaninotti Zaremba Zarkesch Zatorski Zawada Zawislak Zeeberg Zenari 
+  Zhan Zhao Zhaoheng Zhong Zhukov Zielinski Zimmermann Zipovski 
+  Zobu Zollo Zolotov Zorlu Zotti Zozis Zotos Zwart
 
   Özþahin
 );

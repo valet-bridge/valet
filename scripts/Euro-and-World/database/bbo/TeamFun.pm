@@ -977,38 +977,27 @@ my @SINGLE_WORDS = qw(
    1den1e 2Q2K 3D 6L 10CC 7heart
 
    AABC ABBK ABBKI ABC Aces Acolvik ACR Adventure Aditya Aeras 
-   Agamemnon 
-   Agressor Ahmetizm 
-   Ahornet Aida Akenobo Akinom Alertplus Alex Alf Alfredo Ali Alioth 
-   Allam Alliance Alliansen Allstars Alpha Alternativlos Ambassador 
-   Amrapali Amul Andromeda Anglian Andrzejki Anglers Anglophones 
-   Aniket Anna Anni Anol Anuj Apaçý Apek Appellkameratene Apples Apply
-   Aquarius Arachfobia 
-   Arangan Archies Aristos Armani Arnab Arno Arunas ASDBB Aslanli Aspe 
+   Agamemnon Agressor Ahmetizm Ahornet Aida Akenobo Akinom Alertplus 
+   Alex Alf Alfredo Ali Alioth Allam Alliance Alliansen Allstars 
+   Alpha Alternativlos Ambassador Amrapali Amul Andromeda Anglian 
+   Andrzejki Anglers Anglophones Aniket Anna Anni Anol Anuj Apaçý 
+   Apek Appellkameratene Apples Apply Aquarius Arachfobia Arangan 
+   Archies Aristos Armani Arnab Arno Arunas ASDBB Aslanli Aspe 
    Asparagus Astra Astro Astronotlar Asya Atlantic Atom Atrium 
-   AUE Augerne Auni 
-   Aurora AUTBUL AUTHOL Autostrada Avagard Avalanche Avatar Ayan
-   Aytalus Azores Azure
+   AUE Augerne Auni Aurora AUTBUL AUTHOL Autostrada Avagard 
+   Avalanche Avatar Ayan Aytalus Azores Azure
 
    BAB BABK Bacch Bachelor Bade Badger Badminton Bager BAHABAWI
-   Baias Bajm Bajozero BAK Balti Baltic
-   Banana Bananasplit Baneet BarDeZi BARC BARP Barracuda Barsss
-   Baryton BAST 
-   Bat Batmix Bato Batusida Bauhinia 
-   BBE BBN BBO BCBR Beauty Begigütje Begijntje BEIH BELSPA Bem
-   Ben Beniaminek 
-   BeRe Berik Beton 
-   BHDM Bhide Bhinneka Biachite Bilal BIN Bingbang Binkie Biriceri 
-   BKSE
+   Baias Bajm Bajozero BAK Balti Baltic Banana Bananasplit Baneet 
+   BarDeZi BARC BARP Barracuda Barsss Baryton BAST Bat Batmix Bato 
+   Batusida Bauhinia BBE BBN BBO BCBR Beauty Begigütje Begijntje 
+   BEIH BELSPA Bem Ben Beniaminek BeRe Berik Beton BHDM Bhide 
+   Bhinneka Biachite Bilal BIN Bingbang Binkie Biriceri BKSE
    Blackwood Blandat Bling Blondie Blues Blund Blueberry Blues
-   BMAL BMP BNMR BNS BNT
-   BOC Boek 
-   Bolero 
-   Boogies Boomz Boriana 
+   BMAL BMP BNMR BNS BNT BOC Boek Bolero Boogies Boomz Boriana 
    Borko BOVE Breno Bricklayer Bridgebutikken Bridgekameratene 
    Bridgeministeriet Brigada Brigida BRK Brother Brudarna Buaigh 
-   Bubba Bubu 
-   Buddies Bulldozer Bumerangas Bunnies Busiaki Butler
+   Bubba Bubu Buddies Bulldozer Bumerangas Bunnies Busiaki Butler
 
    Cabal Cabriole Calaca Cammello Camrose Canadonia Cancan Canukusa 
    Cardtossers Cargo Carlitos Carsi Cartoon Casuals Cask Cathy Catz
@@ -1020,66 +1009,57 @@ my @SINGLE_WORDS = qw(
    Crash Cremaster Croanglopol Crockfords Crossfatek CS CSTO 
    Czteropak
 
-   Dada Dadya Dahsyat Dallas DanEng DanFar Danger Daniel Dash Dauna Dawn 
-   Debonecos Debutantes Deceptive DeeJee Defne Demony Demýrbaþ
-   DenmarS Deppo 
-   Desperados Destroyers Dialect Diana Didi Dido Diego Dieter Dilligaf 
-   Dimmat Dingyuan Dino Dinos Dion DJB Doctors Doki Donjulio Donvito 
-   Dora Dracula Dragon 
-   DSM DuckNDales Dukens Duros Dusteforbundet Dvizhenie Dyret
+   Dada Dadya Dahsyat Dallas DanEng DanFar Danger Daniel Dash Dauna 
+   Dawn Debonecos Debutantes Deceptive DeeJee Defne Demony Demýrbaþ
+   DenmarS Deppo Desperados Destroyers Dialect Diana Didi Dido Diego 
+   Dieter Dilligaf Dimmat Dingyuan Dino Dinos Dion DJB Doctors Doki 
+   Donjulio Donvito Dora Dracula Dragon DSM DuckNDales Dukens Duros 
+   Dusteforbundet Dvizhenie Dyret
 
    Eagles Ece Econ Edi Efsane Egesarpdoruk Eikka Ekenboda Ekoap 
-   Elektrownia Elio Eliminator Elips Eliza Ellen EMA Emerald Emre Engelen 
-   Engineers Enigma Enjoy Ephesus Epsilon Equator Era Eren Eric 
-   Erikas Erla Ertým ErUS ESA Eses Esesss Esperanza Everest Evil Ewa
+   Elektrownia Elio Eliminator Elips Eliza Ellen EMA Emerald Emre 
+   Engelen Engineers Enigma Enjoy Ephesus Epsilon Equator Era Eren 
+   Eric Erikas Erla Ertým ErUS ESA Eses Esesss Esperanza Everest 
+   Evil Ewa
 
    Fakel FAM² FAMA Fantasia Fant4stic Farmen Farmers Felix 
    Fenghuang Fenia Fenix Ferfi Feszek Fharon Fifi Fil Filosofene 
    Filur Finest Fisk Flagship FNCC Forfot Formidables Formosa 
-   Fortuna Fortune FOS Foundation Francest 
-   Frank Franz Frenemies Frieolt Friends Frirond Francophones Freak 
-   Frivolt Frusci Fundacja FWK
+   Fortuna Fortune FOS Foundation Francest Frank Franz Frenemies 
+   Frieolt Friends Frirond Francophones Freak Frivolt Frusci 
+   Fundacja FWK
 
    Gabrisem Galaxy Galim Gambitas Gamma Garry Garp Garuda Gata Gelim 
    Gelin Gentle George Geriatrix Gewanna Geysir Gesi Gezi Giants Gibs 
    Gjesp Gkobra GloryGlory GMM Goldcat Goroco Gosho Göktürk GP 
    Grand Grads Greecoura Greta Gris GRNC Grup Guayacos Gudok Guests 
-   Gulce Gulebjorn 
-   Gullberg 
-   Gullvi Gunsmoke Guptas Gürsel
+   Gulce Gulebjorn Gullberg Gullvi Gunsmoke Guptas Gürsel
 
    Hade Hai Hakl Hanan Hande Hangarounds Hansa Harlequins Harvin 
-   Havin Hawks 
-   HayirlisI Hayet Hästpojkarna Hebat Heino Heis Hel Helgeness Hellé 
-   Heliopolis HengSha 
-   HERZdame HeSa Hey Hiiimmm Hilda Hist Hjerterdamer HKES Hobbits Holders 
-   Holifera Hollywood Holmenkollen
-   Holport Honeymoon Hopfenkönig Hornet House Hridhaan Hubsi Huhu 
-   Hunaja Huispaus Hunhun Hurra Hybrid
+   Havin Hawks HayirlisI Hayet Hästpojkarna Hebat Heino Heis Hel 
+   Helgeness Hellé Heliopolis HengSha HERZdame HeSa Hey Hiiimmm 
+   Hilda Hist Hjerterdamer HKES Hobbits Holders Holifera Hollywood 
+   Holmenkollen Holport Honeymoon Hopfenkönig Hornet House Hridhaan 
+   Hubsi Huhu Hunaja Huispaus Hunhun Hurra Hybrid
 
-   IBBSK IBE Ida Iff Ijseide Ikarus Ilya IMAN Imanuel IMLUK Imponderables 
-   InFran Instructor Iris Irukangi Ismo Israbel Isrmany ITB
-   Itnoraunz ITS IVAR Iza
+   IBBSK IBE Ida Iff Ijseide Ikarus Ilya IMAN Imanuel IMLUK 
+   Imponderables InFran Instructor Iris Irukangi Ismo Israbel 
+   Isrmany ITB Itnoraunz ITS IVAR Iza
 
-   Jagg Jaiganesh Janko Jans JanTC JAPCAN JAS JASS Jassica Javel Jaya
-   Jelena Jernbaneverket Jessi Jessica Jecization JHIC Jinjing 
-   Jirin Jiujiu JJJ Jóannes Job Jocker
-   JoJo Joker Jonathan Joter Journalists Juanval Jugermaister Juice 
-   Juls 
-   Juniorklubben Jupiter Juste Justplay Justyna Justynka Jutek 
-   Juubilar JuuTools
+   Jagg Jaiganesh Janko Jans JanTC JAPCAN JAS JASS Jassica Javel 
+   Jaya Jelena Jernbaneverket Jessi Jessica Jecization JHIC Jinjing 
+   Jirin Jiujiu JJJ Jóannes Job Jocker JoJo Joker Jonathan Joter 
+   Journalists Juanval Jugermaister Juice Juls Juniorklubben 
+   Jupiter Juste Justplay Justyna Justynka Jutek Juubilar JuuTools
 
    Kaardivägi Kagama Kalbar Kalca Kalkarna Kaltim Kamelåså Kamikaze 
    Kamlakars Kamyk Kangaroo Kanin Karaarslan Karin Kark Karo Kartel 
-   Kasiyahan Kasty Kasuang Kat Katipunan KBA KBC Kebiya Keni Kenji Kenlong 
-   Kerasus Kibe Kinga Kingkong Kings KISS Kitty Kjelskos KKKQ
-   Klasik Klio
-   KMC Knösel Kodin Koiraperhe Kokoelma Kolbasti Komleposs
-   Kompisarna Konga Kordam Korsikalý Kortai Koukouselis KPPM
-   KrASK 
-   Kratos 
-   Krem Kris Kriston Krisztina Ksenia KSOS Kuglana Kuhmilch Kultur
-   Kvazar Kwiecisty
+   Kasiyahan Kasty Kasuang Kat Katipunan KBA KBC Kebiya Keni Kenji 
+   Kenlong Kerasus Kibe Kinga Kingkong Kings KISS Kitty Kjelskos KKKQ
+   Klasik Klio KMC Knösel Kodin Koiraperhe Kokoelma Kolbasti 
+   Komleposs Kompisarna Konga Kordam Korsikalý Kortai Koukouselis 
+   KPPM KrASK Kratos Krem Kris Kriston Krisztina Ksenia KSOS Kuglana 
+   Kuhmilch Kultur Kvazar Kwiecisty
 
    Lahjattomat LAKT Laleler Langy Laplanders Laplas Larry Lasse Lataka 
    Lateria LatSwe Lazy LBC LBSK LCF Lebensohl Lebron Legeanka Lema 
@@ -1089,27 +1069,20 @@ my @SINGLE_WORDS = qw(
    Löparn LPMS Lucky LVBridgeBums LXA Lyubcho Løwene
 
    Macak Mach Madhav Mads Maestroi Magi Magic Magister Magnus Maharaja 
-   MAHÝR ÞENOL Maija Maj
-   Major MajorB Majorn Majority Makara Makriköy Mali Malinka Malmölaget 
-   Manashda Manena Manno Mano 
-   Manu Manywar Margitta Marianne Mark Marosamitawa Mars Marvelous 
-   Marynarz Masdjävlar Mask Masters Matilde Matrix Mats Matujona Maven 
-   Mavi Mavs Mayamira Maxi Medik
-   Mer Mercury Mesna Meta MGM MGTH Mia Michal Midas Mihai Mikke Miguel 
-   Milady Milo Minut 
-   Mirage Miro Mismatch Mixarna Mjøskameratne MMMM MMRMC
-   Mochu Moki Monaconf Mongos
-   Moritz Mostingan Movember Mölnlycke MPEC MRSMC Multivariant
-   Munawar Mustang Muumio 
-   Mýna Myoni 
-   Møremix Måsen
+   MAHÝR ÞENOL Maija Maj Major MajorB Majorn Majority Makara Makriköy 
+   Mali Malinka Malmölaget Manashda Manena Manno Mano Manu Manywar 
+   Margitta Marianne Mark Marosamitawa Mars Marvelous Marynarz 
+   Masdjävlar Mask Masters Matilde Matrix Mats Matujona Maven Mavi 
+   Mavs Mayamira Maxi Medik Mer Mercury Mesna Meta MGM MGTH Mia 
+   Michal Midas Mihai Mikke Miguel Milady Milo Minut Mirage Miro 
+   Mismatch Mixarna Mjøskameratne MMMM MMRMC Mochu Moki Monaconf 
+   Mongos Moritz Mostingan Movember Mölnlycke MPEC MRSMC Multivariant
+   Munawar Mustang Muumio Mýna Myoni Møremix Måsen
 
    Nabil NAD Nadide Narbisk Narre Natalia Nathans Natural Naturalists 
-   NBB Necos Neduk 
-   Nemesis Nessuno Neverclaim Nico Nightingale Nik Nikita Nikitopoulos 
-   Niko Nikos Nikotiimi Nina Nis Nislije NMRT Noctis NoNed
-   Noralia Noriko 
-   Norsu NOS Noto NTiosagutta Nula
+   NBB Necos Neduk Nemesis Nessuno Neverclaim Nico Nightingale Nik 
+   Nikita Nikitopoulos Niko Nikos Nikotiimi Nina Nis Nislije NMRT 
+   Noctis NoNed Noralia Noriko Norsu NOS Noto NTiosagutta Nula
 
    Obezit Octopussy OEI Ognisty Oguzhan Okay Oksijen Olavsfestdagene 
    Olena Olimp Olrudbanden Olsenbanden OMC Omega Omelas Onirepsou 
@@ -1123,56 +1096,49 @@ my @SINGLE_WORDS = qw(
    Pasam Pasanci Passé Patriot Patron Paulette Paulina Paulistas 
    PBL PCBA PDC Pegasus Pennant Perestrojka Perjuangan Pero Peter 
    Petra Pia Piast Piryoli Piter Pjäxa PKB PKBS PK3 PKM Pleschi Pleyada 
-   Plia PMS Pojat Polirish Polus Polýsgücü
-   Pompapompa 
-   Pontiac Poss Potlimit Potteplante Powerchicks Prapar Prasetya 
-   Preempters Pretendents Prijatelj Prim Prosan Proteus Proto Ptacol 
-   PTT
+   Plia PMS Pojat Polirish Polus Polýsgücü Pompapompa Pontiac 
+   Poss Potlimit Potteplante Powerchicks Prapar Prasetya Preempters 
+   Pretendents Prijatelj Prim Prosan Proteus Proto Ptacol PTT
    Pude Pusten Pyon Pyton PZIM Påskevennene
 
    QLJB Quantum Quasar Quattro Quintet Quinze
 
-   Radeks Radhey Radikk Rafael RAG Raifles Rakinnett RAM 
-   Ramkumar Rampage 
-   Rapid RASH Raskasammen RBP Real Recaptan Regeldur Reklamtrion 
-   Reloaded Rem Rene Rica Rob Ribitas Rike Rima RKK Robertinho Robi 
-   Robocop Rollers Rosajora Rovers Royston Rozle RS Rüya Rylai Rylal 
-   Ryo
+   Radeks Radhey Radikk Rafael RAG Raifles Rakinnett RAM Ramkumar 
+   Rampage Rapid RASH Raskasammen RBP Real Recaptan Regeldur 
+   Reklamtrion Reloaded Rem Rene Rica Rob Ribitas Rike Rima RKK 
+   Robertinho Robi Robocop Rollers Rosajora Rovers Royston Rozle RS 
+   Rüya Rylai Rylal Ryo
 
    Sabari Sabina Sabres Saga SAGG Sailor Sakurai Saladmasters Salokin 
    Salost Salvo Sansouci SANY Sapphire Sara Sargam Sarp SaTu Saturn 
    Saty Sbamby Sbanda Scapros Schmuckles Schneewittchen Scientists 
    Scot SDK Secure Selin Senaattorit Senator Severin Sevil SFG SGG 
-   Shan Shane Shankars
-   Shaoshen Shavaz Sherdils SHHG Shona Show Shrikant Shuai
-   Shushi Sid Siddheshwar Sigdonnemann Sigma Sigrid Sihai Silbersee 
-   Silence Silverfox 
-   Simonetta Simple Simpleksas Sindbad Sindhu Singapole Sirius SISU Sivves 
-   Siyabend Sjøsamen Skalman Skaronga SKB SKBS Skip Skitur Skotii SKR Þlem 
-   Slappfisker Slostria Slufsa SMBC SMJ SMK Småveitjan SNAP Snapper 
-   Snipers 
-   SNP
-   Soba Sober Sobers Sogn Soho Solo Sonata Sonchel Soumitra Spamirs
-   Spandan Spark Spartak Spartans Specialist Spekkhogger Spektr Spin 
-   Spring 
-   Squeeze Srimapuna Srykeir SSBC SSSR Stafani Stagge Stampede Star 
-   Starmen 
-   Starsbridge Statusquo Stayman STB Stefany Steinars Steinlager 
-   Steliana Steve Stifinnern Storeslemmen Strata Strategen Streamline 
-   Studentene StZ Stålfarfar St?vel Sucharek Sue SuHuQiaoYou
-   Sunset Sunshine Suz Svetla Swanand SweDanes 
-   SweNor Swest Syabas SYL Syly SYT Syttisju SZPAK SZPAR Sømnakameratene 
-   Sør Såpeopera
+   Shan Shane Shankars Shaoshen Shavaz Sherdils SHHG Shona Show 
+   Shrikant Shuai Shushi Sid Siddheshwar Sigdonnemann Sigma Sigrid 
+   Sihai Silbersee Silence Silverfox Simonetta Simple Simpleksas 
+   Sindbad Sindhu Singapole Sirius SISU Sivves Siyabend Sjøsamen 
+   Skalman Skaronga SKB SKBS Skip Skitur Skotii SKR Þlem Slappfisker 
+   Slostria Slufsa SMBC SMJ SMK Småveitjan SNAP Snapper Snipers 
+   SNP Soba Sober Sobers Sogn Soho Solo Sonata Sonchel Soumitra 
+   Spamirs Spandan Spark Spartak Spartans Specialist Spekkhogger 
+   Spektr Spin Spring Squeeze Srimapuna Srykeir SSBC SSSR Stafani 
+   Stagge Stampede Star Starmen Starsbridge Statusquo Stayman STB 
+   Stefany Steinars Steinlager Steliana Steve Stifinnern 
+   Storeslemmen Strata Strategen Streamline Studentene StZ 
+   Stålfarfar St?vel Sucharek Sue SuHuQiaoYou Sunset Sunshine Suz 
+   Svetla Swanand SweDanes SweNor Swest Syabas SYL Syly SYT 
+   Syttisju SZPAK SZPAR Sømnakameratene Sør Såpeopera
 
-   TAC Tadeu Take Takeoff Takk Takým Taksim Tally Tamae Tangra Tannlegene 
-   Task Taurus Tbone Tefo Tempo Theme Tibetmunkene Tigers Tiglatpalasar
-   Tihkur Tita Titanik Titans Tiz Toar Todremor Tofi Tohundre Tolerant 
-   Tollemache Toma Tongxin Topozero Torpedo Tosca Totani Totoro Tömör 
-   TPI Traker Trèfles Triks Troll Trøndermøringen Tsunami Tuason
-   Tulip Tulipano Turuncu Tushar Tusio Tutu Tvist
+   TAC Tadeu Take Takeoff Takk Takým Taksim Tally Tamae Tangra 
+   Tannlegene Task Taurus Tbone Tefo Tempo Theme Tibetmunkene 
+   Tigers Tiglatpalasar Tihkur Tita Titanik Titans Tiz Toar Todremor 
+   Tofi Tohundre Tolerant Tollemache Toma Tongxin Topozero Torpedo 
+   Tosca Totani Totoro Tömör TPI Traker Trèfles Triks Troll 
+   Trøndermøringen Tsunami Tuason Tulip Tulipano Turuncu Tushar 
+   Tusio Tutu Tvist
 
-   UAB Udarnik UFO Ugh Úlfurinn Ulvene Underdogs Unexpected Ungdomslaget
-   Unlu Upplyfting Utkantnorge UTU
+   UAB Udarnik UFO Ugh Úlfurinn Ulvene Underdogs Unexpected 
+   Ungdomslaget Unlu Upplyfting Utkantnorge UTU
 
    Vahakabinetti Vakrandi Valen Valentino Valyo Vanko Varan Varoslu 
    Vasallid Västanfläkten Veegees Vega* Veggen Verder Verons Vibrant 
@@ -1190,9 +1156,8 @@ my @SINGLE_WORDS = qw(
    Ybs YBM Yaðmur Yamata Yansimasiz YeJun Yelena Yichuang Yildizlar
    Ylajai Yogakshema Yokozuna YSD YYD YYY
 
-   Zabavljaci Zamek Zana Zara Zen Zeyno Zhihaole Ziggy 
-   Zimmkonis Zivac ZKS Zlatan Zmaj Zombi Zorro Zozoura Zugzwang Zurzits 
-   Zvanger
+   Zabavljaci Zamek Zana Zara Zen Zeyno Zhihaole Ziggy Zimmkonis 
+   Zivac ZKS Zlatan Zmaj Zombi Zorro Zozoura Zugzwang Zurzits Zvanger
 
    Øssur
 );
