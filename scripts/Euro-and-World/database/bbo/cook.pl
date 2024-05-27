@@ -109,6 +109,8 @@ close $fh;
 
 print_team_stats();
 
+all_used();
+
 # print "TOTAL $unknown\n\n";
 
 # print_chain_stats(\@chain_stats);

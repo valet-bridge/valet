@@ -649,7 +649,6 @@ my @MULTI_WORDS =
   'Spiel mir das Lied',
   'Spjett Spjong',
   'Spring Foursomes',
-  'Sree Priya',
   'Stabby with Youngsters',
   'Stall Dieden',
   'Stone Cutters',
@@ -980,7 +979,7 @@ my @SINGLE_WORDS = qw(
    Agamemnon Agressor Ahmetizm Ahornet Aida Akenobo Akinom Alertplus 
    Alex Alf Alfredo Ali Alioth Allam Alliance Alliansen Allstars 
    Alpha Alternativlos Ambassador Amrapali Amul Andromeda Anglian 
-   Andrzejki Anglers Anglophones Aniket Anna Anni Anol Anuj Apaçý 
+   Andrzejki Anglers Anglophones Anna Anni Anol Anuj Apaçý 
    Apek Appellkameratene Apples Apply Aquarius Arachfobia Arangan 
    Archies Aristos Armani Arnab Arno Arunas ASDBB Aslanli Aspe 
    Asparagus Astra Astro Astronotlar Asya Atlantic Atom Atrium 

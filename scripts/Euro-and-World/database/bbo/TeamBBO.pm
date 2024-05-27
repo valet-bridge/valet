@@ -10,7 +10,7 @@ package TeamBBO;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(read_cities study_teams unteam print_team_stats
-  set_overall_hashes init_hashes);
+  set_overall_hashes init_hashes   all_used);
 
 use lib '.';
 
@@ -62,6 +62,9 @@ my @TAG_ORDER = qw(
   TEAM_FORM
   TEAM_DESTROY
 );
+
+# TODO
+my (%MULTI_HITS, %SINGLE_HITS);
 
 my (%MULTI_WORDS, %MULTI_REGEX, %SINGLE_WORDS);
 
@@ -292,6 +295,10 @@ sub team_specific_hashes
     my $fix = $SINGLE_WORDS{$tag}{lc($part)};
     if (defined $fix->{CATEGORY})
     {
+my $w = $fix->{VALUE};
+$MULTI_HITS{$tag}{lc($part)}++;
+$MULTI_HITS{$tag}{lc($w)}++;
+
       $token->set_singleton($fix->{CATEGORY}, $fix->{VALUE});
       $HIT_STATS{$fix->{CATEGORY}}++;
 
@@ -421,6 +428,9 @@ sub split_on_multi
         if (exists $MULTI_WORDS{$tag}{lc($a[0])})
         {
           $tags->[$i] = $tag;
+my $w = $MULTI_WORDS{$tag}{lc($a[0])};
+$MULTI_HITS{$tag}{lc($a[0])}++;
+$MULTI_HITS{$tag}{lc($w)}++;
         }
       }
       else
@@ -433,6 +443,9 @@ sub split_on_multi
           if (exists $MULTI_WORDS{$tag}{lc($parts->[$j])})
           {
             $tags->[$j] = $tag;
+my $w = $MULTI_WORDS{$tag}{lc($parts->[$j])};
+$MULTI_HITS{$tag}{lc($parts->[$j])}++;
+$MULTI_HITS{$tag}{lc($w)}++;
           }
         }
       }
@@ -585,6 +598,35 @@ sub is_captain
   }
 
   return 0;
+}
+
+
+sub all_used
+{
+  print "Multis:\n\n";
+  for my $key (@TAG_ORDER)
+  {
+    for my $entry (sort keys %{$MULTI_WORDS{$key}})
+    {
+      if (! defined $MULTI_HITS{$key}{$entry})
+      {
+        print "$key: $entry\n";
+      }
+    }
+  }
+
+  print "Singles\n\n";
+  for my $key (@TAG_ORDER)
+  {
+    for my $entry (sort keys %{$SINGLE_WORDS{$key}})
+    {
+      if (! defined $MULTI_HITS{$key}{$entry})
+      {
+        print "$key: $entry\n";
+      }
+    }
+  }
+
 }
 
 1;

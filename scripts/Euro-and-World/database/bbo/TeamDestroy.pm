@@ -32,7 +32,7 @@ my %MULTI_TYPOS =
   'Bridge Team' => ['bridge tem', 'bridge tea'],
   'Undecipherable Team' => ['a-hvv', 'a-srr', 'b-srk', 'g-dkr', 
     'i-aaa', 'i-vvu', 't-dbi', 't-rsb', 'v-dkm', 'v-ivi', 'v-jgd', 'y-ivz',
-    'dhzhy', 'dhzy', 'fx', 'gdcd', 'gzzj', 'hssqx', 'jn', 'jy', 
+    'dhzhy', 'dhzy', 'fx', 'gdcd', 'gzzj', 'hssqx', 'jy', 
     'kj', 'kjy', 'lqsw', 'ly', 'lylw', 'mktx', 'qc', 'qy', 'pn',
     'scdhzy', 'scmy', 'sdlsjy', 'sey', 'sft', 'sjcd', 'sjsd', 
     'sxsdlsjy', 'szqy',

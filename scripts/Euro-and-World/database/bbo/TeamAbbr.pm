@@ -25,23 +25,19 @@ my %MULTI_TYPOS =
 (
   'Bridge Club' => [
     'a.s.', 'a.s.d.', 'as. b.', 'ass. br.', 
-    'b.akd', 'b.b.', 'b.c.', 'b.c',
+    'b.akd', 'b.b.', 'b.c.',
     'b.b.k.', 'b.b.s.', 'b.b.s.k.', 
     'b.k', 'b.k.', 
     'b.s.', 'b.s', 'b.s.b.', 'b.s.b', 'b.s.k.', 'b.s.k', 'b.t',
-    'b.bld.sk', 'b.seh bel', 'b. shr bld', 
+    'b.bld.sk',
     'bld.', 'bld', 'bld sk', 'bld. sp', 'bld sp', 'bld.sp', 
     'bld.spor', 'bld. gsk',
     'bric iht', 'bric klb', 'bric kulubu', 
     'bridge cl', 'bridge clu', 
     'bridz klub', 
     'brýc sk', 'brýç sk', 'brýç s.k.', 'brýç spor', 'brýç ý. s.k', 
-    'bsb bk', 
     'c. br.', 'card club',
-    'genclik s', 'genç. hýz',
-    'gr.sp.ass.', 
-    'g.s.', 'g.s.b.', 'g.s.b', 
-    'gsd briç', 'kontrat bsk', 'y.þehýr bld'
+    'genclik s', 'genç. hýz', 'gr.sp.ass.', 'g.s.b', 'gsd briç'
   ],
 
   'Sporting Club' => [
@@ -50,10 +46,10 @@ my %MULTI_TYPOS =
     'briç sk', 'briç skd', 'briç ýsk', 
     'brýç sk', 'brýç spor', 
     'spor bric', 'spor k.', 'spor kb', 'spor kulubu', 'spor kulübü', 
-    "sport' c", 'sports c', 
+    'sports c', 
     'sports club', 
     's c', 's.k.', 's.s.', 's.s.d.',
-    't.c.', 't.c.p.', 'tennis club'],
+    't.c.', 'tennis club'],
 
   'University Club' => ['ü.m.d']
 );
