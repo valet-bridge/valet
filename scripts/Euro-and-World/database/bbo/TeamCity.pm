@@ -71,10 +71,9 @@ my %MULTI_TYPOS =
   Akhisar => ['akhisar belediyesi'],
   'Al-Rabwa' => ['rl-rabwa'],
   'City of Helsinki' => ['helsinki'],
-  Diyarbakir => ['d.baki', 'd.bakir', 'd.bakýr', 'd.baki b.þ',
-    'd.bakir b.þ.', 'd.bakir y.þehýr', 'd.bakir yenýþehýr',
-    'd.bakýr b.þehir', 'd.bakir sur', 'd.bakýr sur',
-    'd.bakýr dicle'],
+  Diyarbakir => ['d.baki b.þ', 'd.bakir b.þ.', 'd.bakir y.þehýr', 
+    'd.bakir yenýþehýr', 'd.bakýr b.þehir', 'd.bakir sur', 
+    'd.bakýr sur', 'd.bakýr dicle'],
   'Gaziantep Zeugma' => ['g.antep zeugma'],
   Guangzhou => ['guang zhou'],
   Istanbul => ['ýstanbul'],
@@ -84,7 +83,6 @@ my %MULTI_TYPOS =
   Kristiansand => ['kr.sand'],
   Lozenets => ['vs lozenec', 'vv lozenets'],
   Ningbo => ['ning bo'],
-  'Novi Sad' => ['nowe sady'],
   'Piatra Neamt' => ['p. neamt', 'p.neamt'],
   Porto => ['invicta', 'cidade invicta'],
   Pudong => ['pu dong'],
@@ -92,8 +90,6 @@ my %MULTI_TYPOS =
   Qingdao => ['qing dao'],
   'San Giorgio del Sannio' => ['sg del sannio', 's.g.sannio',
     's.giorgio sannio', 'san giorgio del san'],
-  Shanghai => ['shang hai'],
-  Shenzhen => ['shen zhen'],
   'Siddha Eden Lakeville' => ['siddha eden', 'sidhha eden', 'siddha-eden'],
   'Silesia Gliwice' => ['silezia gliwice'],
   Slask => ['l¹sk'],
@@ -108,11 +104,11 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Aabenraa Aalborg Adalar Adana Adelaide Agresar Ahmedabad Akaylar
-  Akçeşme Akdeniz Akhisar Akkad Alexandria Albena Aliaga Allahabad 
+  Aabenraa Aalborg Adalar Adana Adelaide Agresar Ahmedabad 
+  Akçeşme Akdeniz Akhisar Akkad Alexandria Albena Allahabad 
   Altay Altrincham Alytus Amanora Amarillo Ambon Amsterdam Ankara 
   Annecy Antalya Antony Antwerpen Aral Arendal Arjasa Asenovgrad Assis 
-  Atakoy Atakum Athens Auckland Augsburg Avren Ayacucho Ayan Ayvalik
+  Atakoy Atakum Athens Auckland Avren Ayacucho Ayvalik
 
   Bahce Balcova Bahcesehir Balikesir Balikpapan Ballerup Bamberg 
   Bandung Bangalore Bangkok Banjarmasin Bansi Baragnon Barcelona 
@@ -122,14 +118,14 @@ my @SINGLE_WORDS = qw(
   Bodø Bogazici Bogor Bologna Bonn Bordeaux Borivli Bormali 
   Bornova Bozdogan Braila Brandbu Brasilia Brasov Bremen Brisbane 
   Bromölla Brotteaux Buca Bucharest Budapest Buitenhof Burghausen 
-  Bursa Burdur Bytom
+  Bursa Burdur 
 
   Caen Cairns Canberra Canterbury Caracas Cascais Catania 
   Çayyolu Cemara Cerkezkoy Cesme Changzhou Chaville Chelmno Chelsea 
-  Chengdu Chennai Chicago Chislehurst Chongqing Chumphon Cimahi 
+  Chengdu Chennai Chicago Chislehurst Chongqing Chumphon 
   Clichy Cluj Copenhagen Corlu Courseulles Coventry Cuenca Cuneo
 
-  Dabrowa Dalian Dalls Daqing Darmstadt Datca Debrecen Delft Delhi 
+  Dalian Darmstadt Datca Delft Delhi 
   Denizli Derpt Dersým Diyarbakir Dimitrovgrad Dobrich Dombivli 
   Dongguan Düsseldorf
 
@@ -137,21 +133,20 @@ my @SINGLE_WORDS = qw(
   Eyjafjallajokull
 
   Farsund Farta Fatih Fethiye Firenze Flekkefjord Foca
-  Frankfurt Freidorf Førde
+  Frankfurt Freidorf 
 
-  Gdansk Gdynia Genoa Gent Geyve Glidice Gnesta Gorontalo Gorzow
+  Gdansk Gdynia Genoa Gent Geyve Gnesta Gorzow
   Gölcük Gresik Guangzhou Guayaquil Gudbrandsdal Gundogan Gyor
 
   Haderslev Hamburg Hangzhou Hannover Harplinge Hegyvidék Heimdal 
-  Heledia Helsinki Herning Hillerød Hornbæk Hosguru Huangshi 
-  Huldretråkket Hyderabad
+  Heledia Helsinki Herning Hillerød Hornbæk Huldretråkket 
 
   Iasi Iskenderun Istanbul Izmir
 
-  Jagodina Jaipur Jakarta Jember Jessheim Jiamusi Jianshe Jiangyou 
-  Jilin Jinchang Jincheng Jinjiang Jiujiang Jomtien
+  Jagodina Jakarta Jember Jessheim Jiamusi Jianshe Jiangyou 
+  Jinchang Jincheng Jinjiang Jiujiang Jomtien
 
-  Kadikoy Kadirli Kalisz Kalundborg Kalyani Kanpur Karaçay Karachi
+  Kadikoy Kadirli Kalisz Kalundborg Kalyani Kanpur Karaçay 
   Kardelen Karlsruhe Kartal Karsiyaka Kastamonu Katok Katowice 
   Kaylaka Kediri Kesten Ketsch Kiel Kielce Kiev Kirkeby Kirklarelý 
   Klabat Kocaeli Kocamustafapasa Kolbotn Kolkata Konak Kornik 
@@ -160,14 +155,14 @@ my @SINGLE_WORDS = qw(
   Kyustendil Kølabånn
 
   Langkat Lanzhou Lappee Leiden Leilem Lemvourgeio Lerum Leszno Leuven 
-  Leverkusen Lhokseumawe Lille Lima Lincoln Lindesberg Liushu 
-  Ljubljana Lodz Lokotok London Losari Lowicz Lozenets Lubin Lublin 
-  Lucignano Luleburgaz Lumajang
+  Leverkusen Lhokseumawe Lille Lima Lincoln Liushu 
+  Ljubljana Lodz Lokotok London Losari Lowicz Lozenets 
+  Lucignano Luleburgaz 
 
   Maadi Maastricht Madrid Makaliwe Makassar Makus Malatya Malkia Malmö 
-  Manahasa Manado Manchester Manisa Manna Mannheim Marbella Martapura 
-  Massy Mataram Männiku Medan Melbourne Mersin Meski Michalovce 
-  Midyat Milan Milas Minsk Miskolc Montpellier Moradabad Morud
+  Manahasa Manado Manchester Manisa Mannheim Marbella Martapura 
+  Massy Männiku Medan Melbourne Mersin Meski Michalovce 
+  Midyat Milan Milas Minsk Montpellier Moradabad Morud
   Moudania Mrzenci Muðla Mumbai Munich Muratpasa
 
   Nagbagan Nagpur Nagykanizsa Namsos Nanchang Nanning Napoli
@@ -186,7 +181,7 @@ my @SINGLE_WORDS = qw(
 
   Qiaoxie Qingdao
 
-  Radkov Rakvere Randers Rayong Recoleta Reims Riga Rijeka Rimini Rome
+  Radkov Rakvere Rayong Recoleta Reims Riga Rijeka Rimini Rome
   Pisa Pleven Plovdiv Pontianak Potsdam Prague Pudong Pula Pune Puri
 
   Rajasthan Ravnkilde Ridabu Rzeszow Rødovre
@@ -196,7 +191,7 @@ my @SINGLE_WORDS = qw(
   Semarang Senayan Serang Serdika Shanghai Shaoguan Shenyang 
   Shenzhen Shihua Shijiazhuang Sibiu Sidoarjo Siena Simal Sindi 
   Singsås Sirinyer Skara Skawina Skien Skopje Slagelse Slask Slaska 
-  Sleman Sliven Sofia Solok Sortland Söke Split Sredec Stavanger 
+  Sleman Sofia Solok Sortland Söke Split Sredec Stavanger 
   Steinkjer Storsjöbygden Stureby Stuttgart Sukma Sukomoro 
   Suleymanpasa Sunndalsøra Surabaya Suralaya Suzhou Sydney Szeged 
   Sørreisa
@@ -208,18 +203,18 @@ my @SINGLE_WORDS = qw(
 
   Uccle Udaipur Unia Unaós Uppsala Usak Utrecht
 
-  Van Varbergshus Varese Varna Vasa Västervik Vejle Vestfold 
+  Van Varbergshus Varese Varna Vasa Västervik Vestfold 
   Vestvågøy Vienna Vikersund Vilnius Viþnelik Vraca
 
-  Xiamen Xinghua Xinyi
+  Xinyi
 
   Wadas Warsaw Wellington Wisla Worcester Wratislavia Wroble 
   Wroclaw Wuhan
 
-  Yalikavak Yambol Yanshi Yarimada Yarýmca Yatagan Yenisehir Yibin 
+  Yalikavak Yambol Yanshi Yarimada Yarýmca Yatagan Yenisehir 
   Yildirim Yizhuang Yokohama Yogyakarta Yuquan
 
-  Zagreb Zhaoqing Zhenjiang Zhongshan Zhujiang Zhuzhou Zigong Zurich 
+  Zagreb Zhaoqing Zhongshan Zhujiang Zhuzhou Zigong 
   Zyrardow
 
   Ørland
@@ -231,7 +226,6 @@ my %SINGLE_TYPOS =
 (
   Adelaide => ['adeliade'],
   Akçeşme => ['akcesme', 'akçeþme'],
-  Akdeniz =>['akdenýz'],
   Akhisar => ['Akhýsar'],
   Allahabad => ['alahabad'],
   'Al-Rabwa' => ['rabwa'],
@@ -243,7 +237,6 @@ my %SINGLE_TYPOS =
   Ayvalik => ['aivali'],
   Bahcesehir => ['bahçeþehýr', 'bahcesehýr', 'bahçesehir'],
   Balisekir => ['balikesýr', 'balýkesir',],
-  Balkova => ['balçova'],
   Bangalore => ["b'lore", 'banglore', 'bengalore'],
   Bansi => ["bansi's"],
   Beijing => ['peking'],
@@ -251,7 +244,6 @@ my %SINGLE_TYPOS =
   Çayyolu => ['cayyolu'],
   Cerkezkoy => ['çerkezköy', 'cerk'],
   Copenhagen => ['kopenhagen'],
-  Corlu => ['çorlu'],
   Diyarbakir => ['dýyarbakir', 'diyarbakýr'],
   Dongguan => ['dongguang'],
   Düsseldorf => ['duesseldorf'],
@@ -263,7 +255,7 @@ my %SINGLE_TYPOS =
   Hegyvidék  => ['hegyvidek'],
   Heimdal => ['heimdalbc'],
   Iskenderun => ['iskendurun'],
-  Izmir => ['ýzmir', 'ýzmýr'],
+  Izmir => ['ýzmýr'],
   Jakarta => ['dki', 'jakar', 'jkt'],
   Jianshe => ['js'],
   Kadikoy => ['kadiköy'],
@@ -281,7 +273,6 @@ my %SINGLE_TYPOS =
   'La Marina' => ['lamarina'],
   Langkat => ['lankat'],
   Lhokseumawe => ['lhoeksemawe'],
-  Lozenets => ['lozenec'],
   Makassar => ['makasar'],
   Manado => ['menado'],
   Manahasa => ['mnhasa'],
@@ -295,7 +286,6 @@ my %SINGLE_TYPOS =
   Munich => ['münchen'],
   Nagpur => ['nagpor'],
   Nanchang => ['nancang'],
-  Napoli => ['naples'],
   Narlidere => ['narlýdere'],
   Nashik => ['nasik'],
   Ningbo => ['ningpo'],
@@ -322,12 +312,11 @@ my %SINGLE_TYPOS =
   Singsås => ['singsaas'],
   Storsjöbygden => ['storsjöbygdens'],
   Söke => ['soke'],
-  Sunndalsøra => ['sundalsora', 'sunndalsora'],
+  Sunndalsøra => ['sunndalsora'],
   Targoviste => ['tg'],
   Tarnów => ['tarnow'],
   Taskopru => ['tasköprü'],
   Täfteå => ['taftea'],
-  Tekýrdag => ['tekirdað'],
   Thane => ['tane'],
   Thanjavur => ["tanjorian's"],
   Thessaloniki => ['salonica'],
@@ -341,7 +330,7 @@ my %SINGLE_TYPOS =
   Wroclaw => ['wr'],
   Yarýmca => ['yarimca'],
   Yildirim => ['yýldýrým'],
-  Yogyakarta => ['jogjakarta', 'diy'],
+  Yogyakarta => ['diy'],
   Zagreb => ['zgb', 'zg'],
   'Zhong Jian' => ['zhongjian'],
   Åkirkeby => ['aakirkeby'],

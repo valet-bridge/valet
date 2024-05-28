@@ -221,6 +221,13 @@ sub catcat
 }
 
 
+sub fields
+{
+  my($self) = @_;
+  return join('|', map { $_->field() } @{$self->{LIST}});
+}
+
+
 sub last
 {
   my ($self) = @_;

@@ -1,2 +1,11 @@
 2024-05-27
-Find unused Team entries
+Look at the Team chains for plausibility
+
+Reductions:
+- Punctuation?
+- City has a country
+- Region has a country
+- Organization has a country
+- Sponsor has a country
+
+Move to Team::Gender somehow? In a directory?

@@ -76,6 +76,23 @@ while ($line = <$fh>)
     # tmp
     $chunk{BBONO});
 
+  $chain_stats[$chain1->last()+1]++;
+  $chain_stats[$chain2->last()+1]++;
+
+  if ($chain1->last() > 2)
+  {
+    print $chunk{BBONO}, ":\n";
+    print $chain1->text(), "\n";
+    print $chain1->fields(), "\n\n";
+  }
+
+  if ($chain2->last() > 2)
+  {
+    print $chunk{BBONO}, ":\n";
+    print $chain2->text(), "\n";
+    print $chain2->fields(), "\n\n";
+  }
+
 =pod
   # Fix some space-related issues.
   my $mashed = despace($chunk{EVENT});
@@ -109,7 +126,11 @@ close $fh;
 
 print_team_stats();
 
-all_used();
+print "\nChain stats\n\n";
+for my $i (0 .. $#chain_stats)
+{
+  printf ("%4d %6d\n", $i, $chain_stats[$i]);
+}
 
 # print "TOTAL $unknown\n\n";
 

@@ -63,10 +63,8 @@ my @TAG_ORDER = qw(
   TEAM_DESTROY
 );
 
-# TODO
-my (%MULTI_HITS, %SINGLE_HITS);
-
 my (%MULTI_WORDS, %MULTI_REGEX, %SINGLE_WORDS);
+my (%MULTI_HITS);
 
 my $CITIES_NAME = "../../../../../../bboD/../../cities/cities.txt";
 my (%CITIES, %CITIES_LC);
@@ -295,9 +293,9 @@ sub team_specific_hashes
     my $fix = $SINGLE_WORDS{$tag}{lc($part)};
     if (defined $fix->{CATEGORY})
     {
-my $w = $fix->{VALUE};
-$MULTI_HITS{$tag}{lc($part)}++;
-$MULTI_HITS{$tag}{lc($w)}++;
+      # my $w = $fix->{VALUE};
+      # $MULTI_HITS{$tag}{lc($part)}++;
+      # $MULTI_HITS{$tag}{lc($w)}++;
 
       $token->set_singleton($fix->{CATEGORY}, $fix->{VALUE});
       $HIT_STATS{$fix->{CATEGORY}}++;
@@ -428,9 +426,9 @@ sub split_on_multi
         if (exists $MULTI_WORDS{$tag}{lc($a[0])})
         {
           $tags->[$i] = $tag;
-my $w = $MULTI_WORDS{$tag}{lc($a[0])};
-$MULTI_HITS{$tag}{lc($a[0])}++;
-$MULTI_HITS{$tag}{lc($w)}++;
+          # my $w = $MULTI_WORDS{$tag}{lc($a[0])};
+          # $MULTI_HITS{$tag}{lc($a[0])}++;
+          # $MULTI_HITS{$tag}{lc($w)}++;
         }
       }
       else
@@ -443,9 +441,9 @@ $MULTI_HITS{$tag}{lc($w)}++;
           if (exists $MULTI_WORDS{$tag}{lc($parts->[$j])})
           {
             $tags->[$j] = $tag;
-my $w = $MULTI_WORDS{$tag}{lc($parts->[$j])};
-$MULTI_HITS{$tag}{lc($parts->[$j])}++;
-$MULTI_HITS{$tag}{lc($w)}++;
+            # my $w = $MULTI_WORDS{$tag}{lc($parts->[$j])};
+            # $MULTI_HITS{$tag}{lc($parts->[$j])}++;
+            # $MULTI_HITS{$tag}{lc($w)}++;
           }
         }
       }
@@ -615,7 +613,7 @@ sub all_used
     }
   }
 
-  print "Singles\n\n";
+  print "\nSingles\n\n";
   for my $key (@TAG_ORDER)
   {
     for my $entry (sort keys %{$SINGLE_WORDS{$key}})
