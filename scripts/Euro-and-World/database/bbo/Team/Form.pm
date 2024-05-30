@@ -6,18 +6,16 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package TeamBot;
+package Team::Form;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(set_hashes_team_bot);
+our @EXPORT = qw(set_hashes_team_form);
 
 use lib '.';
 use TeamBBO;
 
 my @MULTI_WORDS =
 (
-  'Bridge Baron',
-  'Bridge +'
 );
 
 my %MULTI_TYPOS =
@@ -25,18 +23,17 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  GIB
-  Jack
-  Wbridge5
+  Teams Pairs Individual
 );
 
 my %SINGLE_TYPOS =
 (
-  Wbridge5 => ['wbridge']
+  Teams => [qw(team equipos lag)],
+  Pairs => [qw(pair)]
 );
 
 
-sub set_hashes_team_bot
+sub set_hashes_team_form
 {
   my ($key) = @_;
 

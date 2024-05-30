@@ -6,7 +6,7 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package TeamRegion;
+package Team::Region;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes_team_region);
@@ -130,15 +130,15 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Agder Anhui ASEAN Ayrshire
+  Agder Akdeniz Akkad Altay Anhui ASEAN Ayrshire
   Bali Balkan Banten Belitung Bengkayang Bihar Bornholm Bungo Buskerud
   Cappadocia Corsica
-  Druts
-  Eurasia Europe
+  Dersým Druts
+  Eurasia Europe Eyjafjallajokull
   Florida Fukien
   Gabmin Ganges Gansu Global Goa Gorontalo Guangdong Guangxi Guizhou 
   Gujarat
-  Hainan Haixing Hatay Haugaland Hebei Hubei Hunan
+  Hainan Haixing Hatay Haugaland Hebei Hegyvidék Hubei Hunan
   Jharkhand Jiangsu Jilin
   Kansai Karimun Karnataka Kawanua Kayong Kedungwaru Kepri Kerala 
   Kinali Krabi
@@ -149,7 +149,7 @@ my @SINGLE_WORDS = qw(
   Queensland
   Oberloiben Orontes Otago
   Papua Patagonia Porong Punjab
-  Rajputana Ratchaburi Rogaland Rosfjord 
+  Rajasthan Rajputana Ratchaburi Rogaland Rosfjord 
   Salten Shanxi Siberia Sichuan Silesia Silla Sindh Sintang Skåne 
   Southland Sydvest
   Tasmania Telemark Tigris Tuncelý
@@ -169,6 +169,7 @@ my %SINGLE_TYPOS =
   Eurasia => ['avrasya'],
   'Gabungan Malaku' => ['gabmo'],
   Ganges => ['genges'],
+  Hegyvidék  => ['hegyvidek'],
   Hunan => ['hunnan'],
   'Java Bali' => ['jb'],
   Kansai => ['kinki'],

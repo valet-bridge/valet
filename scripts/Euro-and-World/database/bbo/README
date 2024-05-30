@@ -1,11 +1,11 @@
 2024-05-27
 Look at the Team chains for plausibility
+Split on destroy
+Split but don't destroy on form, gender, age
+Lone numeral goes
 
 Reductions:
 - Punctuation?
-- City has a country
-- Region has a country
-- Organization has a country
-- Sponsor has a country
+- City, Club, Org, Region, Sponsor, Uni have countries for sure
+- Club probably has city as well
 
-Move to Team::Gender somehow? In a directory?

@@ -13,6 +13,7 @@ our @EXPORT = qw(read_cities study_teams unteam print_team_stats
   set_overall_hashes init_hashes   all_used);
 
 use lib '.';
+use lib './Team';
 
 use Country;
 use Cookbook;
@@ -23,24 +24,25 @@ use Age;
 use Gender;
 use Suggestors;
 
-use TeamFun;
-use TeamSponsor;
-use TeamOrganization;
-use TeamAbbr;
-use TeamCountry;
-use TeamRegion;
-use TeamCity;
-use TeamClub;
-use TeamCaptain;
-use TeamBot;
-use TeamNationality;
-use TeamUniversity;
-use TeamGender;
-use TeamAge;
-use TeamColor;
-use TeamScoring;
-use TeamForm;
-use TeamDestroy;
+use Team::Fun;
+use Team::Sponsor;
+use Team::Organization;
+use Team::Abbr;
+use Team::Country;
+use Team::Region;
+use Team::Quarter;
+use Team::City;
+use Team::Club;
+use Team::Captain;
+use Team::Bot;
+use Team::Nationality;
+use Team::University;
+use Team::Gender;
+use Team::Age;
+use Team::Color;
+use Team::Scoring;
+use Team::Form;
+use Team::Destroy;
 
 my @TAG_ORDER = qw(
   TEAM_FUN 
@@ -48,8 +50,9 @@ my @TAG_ORDER = qw(
   TEAM_ORGANIZATION 
   TEAM_COUNTRY 
   TEAM_REGION 
-  TEAM_CITY 
   TEAM_CLUB 
+  TEAM_QUARTER 
+  TEAM_CITY 
   TEAM_ABBR 
   TEAM_CAPTAIN
   TEAM_BOT
@@ -98,6 +101,7 @@ sub init_hashes
   set_hashes_team_fun('TEAM_FUN');
   set_hashes_team_region('TEAM_REGION');
   set_hashes_team_city('TEAM_CITY');
+  set_hashes_team_quarter('TEAM_QUARTER');
   set_hashes_team_sponsor('TEAM_SPONSOR');
   set_hashes_team_university('TEAM_UNIVERSITY');
   set_hashes_team_club('TEAM_CLUB');
@@ -303,31 +307,21 @@ sub team_specific_hashes
       if ($fix->{CATEGORY} eq 'TEAM_GENDER' &&
           $fix->{VALUE} eq 'Open')
       {
-        # Special case: Add two more tokens.
+        # Special case: Add an extra token.
         my $token2 = Token->new();
         $token2->copy_origin_from($token);
-        $token2->set_separator('VIRTUAL');
+        $token2->set_singleton('TEAM_AGE', 'Open');
         $chain->append($token2);
-
-        my $token3 = Token->new();
-        $token3->copy_origin_from($token);
-        $token3->set_singleton('TEAM_AGE', 'Open');
-        $chain->append($token3);
         $HIT_STATS{'TEAM_AGE'}++;
       }
       elsif ($fix->{CATEGORY} eq 'TEAM_AGE' &&
           $fix->{VALUE} eq 'Girls')
       {
-        # Special case: Add two more tokens.
+        # Special case: Add an extra token.
         my $token2 = Token->new();
         $token2->copy_origin_from($token);
-        $token2->set_separator('VIRTUAL');
+        $token2->set_singleton('TEAM_GENDER', 'Women');
         $chain->append($token2);
-
-        my $token3 = Token->new();
-        $token3->copy_origin_from($token);
-        $token3->set_singleton('TEAM_GENDER', 'Women');
-        $chain->append($token3);
         $HIT_STATS{'TEAM_GENDER'}++;
       }
 
@@ -354,12 +348,12 @@ sub study_part
     $HIT_STATS{SEPARATOR}++;
     return;
   }
-  elsif ($country->valid_lc(lc($part)))
-  {
-    $token->set_singleton('TEAM_COUNTRY', $part);
-    $HIT_STATS{TEAM_COUNTRY}++;
-    return;
-  }
+  # elsif ($country->valid_lc(lc($part)))
+  # {
+    # $token->set_singleton('TEAM_COUNTRY', $part);
+    # $HIT_STATS{TEAM_COUNTRY}++;
+    # return;
+  # }
   elsif ($part =~ /^\d+$/)
   {
     if ($part >= 1900 && $part < 2100)

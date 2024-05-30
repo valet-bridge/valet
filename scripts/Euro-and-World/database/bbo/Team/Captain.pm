@@ -6,7 +6,7 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package TeamCaptain;
+package Team::Captain;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes_team_captain);
@@ -182,6 +182,7 @@ my @MULTI_WORDS =
   'Kamlesh Gupta',
   'Karl Sigurhjartarson',
   'Kasper Konow',
+  'Ken Ford',
   'Knud Harries',
   'Kristian Tylvad',
   'Krzysztof Strykier',
@@ -659,7 +660,7 @@ my @SINGLE_WORDS = qw(
   Gross Grosset Gromöller Gronaldo Grue Gruia Grunt Gruschow 
   Gruszczynski Grzelak Gu Guariglia Gudkov Gue Gueglio Guermani 
   Guglietto Guillaumin Gula Guldberg Guler Gumby 
-  Gupta Gurley Gursel Gustawsson Gutmark Günther Gyimesi
+  Gupta Gurley Gursel Gustawsson Gutmark Guy Günther Gyimesi
 
   Hackett Hadjibalis Haffer Hagenberg Haidorfer Hallen Hallongren
   Hamman Hampson Hampton Hanna Hans Hansen Hanlon Hantveit
@@ -698,7 +699,7 @@ my @SINGLE_WORDS = qw(
   Kovacich Kowalski Kozikowski Kökten Kranyak Krajewski Krausova 
   Krawczyk Krekorian Kriegel Kriftner Kristensen Kroch Krochmalik 
   Krolikowski Kubac Kujawa Kuokkanen Kurbalija Kutenik
-  Kutner Kvangraven Kwiatkowski Kwiecien Kyriakidou Kyrilenko
+  Kutner Kvangraven Kwiatkowski Kwiecien Kwok Kyriakidou Kyrilenko
 
   Laan Labaere Lachowicz Laffineur Lagrange Lagree Lalanne Lall 
   Lambardi Lanciano Landry Lane Langer Lantaron Lanzarotti Larsen 
@@ -706,7 +707,7 @@ my @SINGLE_WORDS = qw(
   Leao Lebatteux Lebel Lebi Lebowitz Leca Lechtman Lehtinen Lee 
   Leenhardt Legras Leiro Lena Lengy Leptirici Lerner 
   Lesniewski Lesnik Lester Lev Levi Levinger Levin Levine Levoy 
-  Levski Lewis Lhuissier Li Lian Libbrecht Libman Lien 
+  Levski Lewis Lhuissier Li Lian Libbrecht Libman Lie Lien 
   Liu Liggins Lilienstein Lillevik Lilley Limor Linczmayer Lindner 
   Lindstedt Llopart Locatelli Lockwood Lombard Longinotti 
   Lorentz Lorenzini Loreto Lormant Louchart Lovrecz Lowe Lubinski 

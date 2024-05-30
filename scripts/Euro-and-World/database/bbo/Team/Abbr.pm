@@ -6,7 +6,7 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package TeamAbbr;
+package Team::Abbr;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes_team_abbr);
@@ -27,6 +27,7 @@ my %MULTI_TYPOS =
     'a.s.', 'a.s.d.', 'as. b.', 'ass. br.', 
     'b.akd', 'b.b.', 'b.c.',
     'b.b.k.', 'b.b.s.', 'b.b.s.k.', 
+    'bel. spor',
     'b.k', 'b.k.', 
     'b.s.', 'b.s', 'b.s.b.', 'b.s.b', 'b.s.k.', 'b.s.k', 'b.t',
     'b.bld.sk',
@@ -36,12 +37,13 @@ my %MULTI_TYPOS =
     'bridge cl', 'bridge clu', 
     'bridz klub', 
     'brýc sk', 'brýç sk', 'brýç s.k.', 'brýç spor', 'brýç ý. s.k', 
-    'c. br.', 'card club',
+    'c. br.', 'card club', 'c b c',
     'genclik s', 'genç. hýz', 'gr.sp.ass.', 'g.s.b', 'gsd briç'
   ],
 
   'Sporting Club' => [
     'athletic c.',
+    'bel',
     'bric sk', 'bric spor kl',
     'briç sk', 'briç skd', 'briç ýsk', 
     'brýç sk', 'brýç spor', 

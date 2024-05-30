@@ -6,10 +6,10 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package TeamScoring;
+package Team::Color;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(set_hashes_team_scoring);
+our @EXPORT = qw(set_hashes_team_color);
 
 use lib '.';
 use TeamBBO;
@@ -20,21 +20,29 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  IMP => ['butler scoring']
 );
 
 my @SINGLE_WORDS = qw(
-  MP IMP BAM Patton
+  Blue
+  Green
+  Orange
+  Purple
+  Red
+  White
+  Yellow
 );
 
 my %SINGLE_TYPOS =
 (
-  MP => [qw(matchpoints)],
-  IMP => [qw(ýmp)],
+  Blue => ['blauw', 'biru'],
+  Green => ['verde'],
+  Red => ['rouge', 'rød', 'rood'],
+  White => ['putih', 'hvid'],
+  Yellow => ['kuning', 'beyaz']
 );
 
 
-sub set_hashes_team_scoring
+sub set_hashes_team_color
 {
   my ($key) = @_;
 

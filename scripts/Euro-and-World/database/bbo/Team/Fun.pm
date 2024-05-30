@@ -6,7 +6,7 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package TeamFun;
+package Team::Fun;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes_team_fun);
@@ -17,6 +17,7 @@ use TeamBBO;
 my @MULTI_WORDS =
 (
   '0% Eriksson',
+  '1 1/2',
   '2 Generations',
   '2 over 1',
   '246.5 Meters',
@@ -34,6 +35,7 @@ my @MULTI_WORDS =
   '6 Notrump',
   '6 Spades',
   '60 y 20',
+  '8-5-0-0',
   'A.C.L.A.',
   'A.z.f.e.n.a',
   'A Takimi',
@@ -95,6 +97,7 @@ my @MULTI_WORDS =
   'Bea & Family',
   'Beer Card',
   'Bela e os Monstros',
+  'Bes-Can',
   'Best i baren',
   'Best uten kort',
   'Beto BO',
@@ -412,6 +415,7 @@ my @MULTI_WORDS =
   'Lady Da et ses Boys',
   'Lakk & Lær',
   'Langt mer enn ivrig',
+  'Las Flores',
   'Las Olas',
   'Last Minute',
   'Las Overum',
@@ -503,6 +507,7 @@ my @MULTI_WORDS =
   'No Problem',
   'Noe Rusk',
   'Non Problem',
+  'Noname Can Can',
   'Nord og Syd',
   'Norrlands guld',
   'North Pole',
@@ -1019,7 +1024,7 @@ my @SINGLE_WORDS = qw(
    Eric Erikas Erla Ertým ErUS ESA Eses Esesss Esperanza Everest 
    Evil Ewa
 
-   Fakel FAM² FAMA Fantasia Fant4stic Farmen Farmers Felix 
+   Fakel FAM² FAMA Fantasia Fant4stic Farmen Farmers Farta Felix 
    Fenia Fenix Ferfi Feszek Fharon Fifi Fil Filosofene 
    Filur Finest Fisk Flagship FNCC Forfot Formidables Formosa 
    Fortuna Fortune FOS Foundation Francest Frank Franz Frenemies 

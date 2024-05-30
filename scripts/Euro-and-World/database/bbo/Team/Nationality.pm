@@ -6,7 +6,7 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package TeamNationality;
+package Team::Nationality;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes_team_nationality);
@@ -45,6 +45,7 @@ my %SINGLE_TYPOS =
   Bulgaria => ['bulgarian', 'blugarian'],
   Croatia => ['croatian'],
   'Czech Republic' => ['czech'],
+  England => ['english'],
   Estonia => ['estonian'],
   France => ['french'],
   Germany => ['german'],

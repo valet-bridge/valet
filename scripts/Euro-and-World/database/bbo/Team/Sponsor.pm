@@ -6,7 +6,7 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package TeamSponsor;
+package Team::Sponsor;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes_team_sponsor);
@@ -117,6 +117,11 @@ my @MULTI_WORDS =
   'Garðs Apotek',
   'Garsu Pasaulis',
   'Geely Automobile',
+  'Geo Kideco',
+  'Geo Pertamina',
+  'Geo Timah',
+  'Geo Vale',
+  'Geologi Banpu',
   'Geoportal Kutai Kartanegara',
   'Gong Hang Jin Ying',
   'Guangdong Huachu Chemicals',
@@ -365,6 +370,7 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   'Abadi Adimulia' => ['abadi adi mulia', 'abadi adimulya'],
+  'Adaro Energy' => ['geo adaro'],
   'Agsar Paints' => ['agsar pints'],
   'AJ Diament' => ['aj diamonds', 'diament'],
   'Apreo Logistic Poland' => ['apreo logistic pol', 'apreo logistic pola'],
@@ -419,7 +425,9 @@ my %MULTI_TYPOS =
   'Garðs Apotek' => ['garðs apótek', 'garðs apoótek', 'garps apótek'],
   'Geely Automobile' => ['geely auto', 'gely auto', 'chaina geely',
     'china geely', 'jili', 'china geely auto', 'jili qiche'],
+  'Geo Timah' => ['geo tima'],
   Geologi => ['badan geologi', 'geo coal', 'geo tanito harum'],
+  'Geologi Banpu' => ['geo banpu'],
   'Gong Hang Jin Ying' => ['gonghang jinying', 'jin ying club',
     'jin ying', 'gonghang jinying'],
   'Guangdong Huachu Chemicals' => ['g.d. huach', 'guang dong hua chu'],
@@ -553,7 +561,7 @@ my @SINGLE_WORDS = qw(
   Aklindo Allianz Alfa Altinay Aquatrans Arboned Argento Arkas Arma 
   Artotec Asindo Ayýntab
 
-  Bajaj Banpu Baykar Beibao Beidike Bnerg BridgePlus
+  Bajaj Baykar Beibao Beidike Bnerg BridgePlus
 
   Cable Candyland Cempaka Changyu Chemikartel Chlodnia Chuanmei 
   Cimentas COMAL Compensa Computerland CONNECTOR CONSUS Constellation 
@@ -575,12 +583,12 @@ my @SINGLE_WORDS = qw(
 
   Jetox Jiegao JHS Jinfan Junibacken
 
-  Kadimex Kancelaria Kideko Kilogrupp KONKRET Konstanta Kvika
+  Kadimex Kancelaria Kilogrupp KONKRET Konstanta Kvika
 
   Lancia Lacznosc Laima Lavazza LCG Lianbo Likom
   Longjiangfu Lukomorie Lyfjaver
 
-  Manyavar Meikuang Mireo Mitrabuana Morgunblaðið Myndform
+  Makus Malkia Manyavar Meikuang Mireo Mitrabuana Morgunblaðið Myndform
 
   NALCO Nanyuan Navachaitanya Navayuga Nazwa Nefka Niewiem Nongken 
   Norco Nortemp NOTUS Näkösoppi
@@ -605,7 +613,7 @@ my @SINGLE_WORDS = qw(
 
   UMW Underberg Unibet Unicat
 
-  Vale Velbazhd Velbujd Vico Vilmar Vinabær Virnet VÍS Visoft Vito Voff
+  Velbazhd Velbujd Vico Vilmar Vinabær Virnet VÍS Visoft Vito Voff
   Vyceska
 
   Wellknit Wellwise Winbridge Wise
@@ -640,7 +648,9 @@ my %SINGLE_TYPOS =
   Elektrika => ['elektric'],
   'Fanhua Jituan' => ['fanhua'],
   'Garðs Apotek' => ['garðsapótek'],
-  'Geoportal Kutai Kartanegara' => ['geokutaikartanegara'],
+  Geologi => ['geo'],
+  'Geoportal Kutai Kartanegara' => ['geokutaikartanegara',
+    'geo kutai kartanegra'],
   Gevalia => ['gevalía'],
   Gillette => ['gilette'],
   'Gong Hang Jin Ying' => ['jinying'],

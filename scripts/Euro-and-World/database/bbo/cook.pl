@@ -64,7 +64,7 @@ while ($line = <$fh>)
     next;
   }
 
-  if ($chunk{BBONO} == 99999)
+  if ($chunk{BBONO} == 1145)
   {
     print "HERE\n";
   }
@@ -79,17 +79,19 @@ while ($line = <$fh>)
   $chain_stats[$chain1->last()+1]++;
   $chain_stats[$chain2->last()+1]++;
 
-  if ($chain1->last() > 2)
+  if ($chain1->last() > 10)
   {
     print $chunk{BBONO}, ":\n";
     print $chain1->text(), "\n";
+    print $chain1->catcat(), "\n";
     print $chain1->fields(), "\n\n";
   }
 
-  if ($chain2->last() > 2)
+  if ($chain2->last() > 10)
   {
     print $chunk{BBONO}, ":\n";
     print $chain2->text(), "\n";
+    print $chain2->catcat(), "\n";
     print $chain2->fields(), "\n\n";
   }
 

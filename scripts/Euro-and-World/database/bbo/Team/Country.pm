@@ -6,7 +6,7 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package TeamCountry;
+package Team::Country;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes_team_country);
@@ -46,6 +46,7 @@ my %MULTI_TYPOS =
 (
   'Bosnia & Herzegovina' => ['bosnia-herzegovina', 
     'bosnia&herzegovina', 'bosnia and herz'],
+  China => ['pan china', 'pan-china'],
   'Chinese Taipei' => ['chinese tai', 'chinese taipe', 'chinese tapei',
     'chinese taipae', 'chi taipei', 'chainese taipei', 'ch.taipei', 
     'china taipei', 'ch. taipei'],
@@ -75,60 +76,69 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Andorra Angora Argentina Australia Austria 
-  Belarus Brazil Bulgaria
-  Canada Colombia Croatia 
+  Albania Andorra Angora Argentina Australia Austria 
+  Bahrain Bangladesh Barbados Belarus Belgium Bermuda Bosnia Botswana 
+  Brazil Bulgaria
+  Canada Chile Colombia Croatia Cyprus
   Denmark 
-  Egypt England Estonia 
+  Ecuador Egypt England Estonia 
   Finland 
-  Germany Guadeloupe Guernsey
+  Germany Georgia Guadeloupe Guernsey
   Hungary 
-  Ireland Israel Italy
-  Jersey Jordan
-  Latvia Lebanon Lichtenstein Luxembourg 
-  Madagascar Malta Malaysia Monaco Morocco
+  Iceland Ireland Israel Italy
+  Japan Jersey Jordan
+  Kenya Kuwait
+  Latvia Lebanon Lichtenstein Lithuania Luxembourg 
+  Macau Madagascar Malta Malaysia Mauritius Mexico 
+  Monaco Mongolia Montenegro Morocco
   Netherlands Norway 
-  Pakistan Palestine Philippines Poland 
-  Reunion Romania
-  Scotland Slovenia Slovakia Switzerland 
-  Thailand Tunisia Turkey
-  Uganda USA
+  Pakistan Palestine Peru Philippines Poland Portugal
+  Qatar
+  Reunion Romania Russia
+  Scotland Serbia Singapore Slovenia Slovakia Spain Switzerland Syria
+  Taiwan Tanzania Thailand Tunisia Turkey
+  Uganda Ukraine Uruguay USA
+  Venezuela
   Wales
+  Yugoslavia
+  Zimbabwe
 );
 
 my %SINGLE_TYPOS =
 (
-  Argentina => ['argenting', 'argentýna'],
-  Australia => ['austrlia', 'oz', 'australla'],
-  Austria => ['austra'],
+  Argentina => ['argenting', 'argentýna', 'arg'],
+  Australia => ['austrlia', 'oz', 'australla', 'aus'],
+  Austria => ['austra', 'aut'],
   Belarus => ['bielarus', 'blr'],
+  'Bosnia & Herzegovina' => ['bih'],
   Brazil => ['brasil'],
-  Bulgaria => ['bg', 'bulgarya'],
+  Bulgaria => ['bg', 'bulgarya', 'bul'],
   Canada => ['kanada'],
   'Czech Republic' => ['czr', 'czech republic.'],
   'Chinese Taipei' => ['taipei'],
   Colombia => ['columbia'],
-  Croatia => ['croatie'],
+  Croatia => ['croatie', 'cro'],
   Denmark => ['danmark', 'danemark', 'denmarrk', 'den', 'dk',
     'denmark*'],
   Egypt => ['egy', 'egytp'],
-  England => ['eng', 'english'],
+  England => ['eng'],
   Estonia => ['estonie', 'est'],
-  Finland => ['finnland', 'fi'],
+  Finland => ['finnland', 'fi', 'fin'],
   France => ['fra', 'fnc', 'frandce'],
   'French Guyana' => ['guyana', 'guayana', 'guayana'],
-  Germany => ['deutschland'],
+  Germany => ['deutschland', 'ger'],
   'Great Britain' => ['gb'],
+  Greece => ['gre'],
   Guadeloupe => ['guadelupe'],
   'Hong Kong' => ['hk', 'hongkong'],
-  Hungary => ['hungar'],
+  Hungary => ['hungar', 'hun'],
   Iceland => ['ice', 'islande'],
   India => ['indýa'],
-  Indonesia => ['timnas', 'ind'],
+  Indonesia => ['timnas', 'ind', 'ina'],
   Ireland => ['roireland', 'irelnd', 'irelsnd', 'irlande',
     'irelend', 'irelena', 'ire', 'eire'],
-  Italy => ['italia', 'it'],
-  Israel => ['isreal', 'israil', 'isarel', 'israël'],
+  Italy => ['italia', 'it', 'ita'],
+  Israel => ['isreal', 'israil', 'isarel', 'israël', 'isr'],
   Jordan => ['jor'],
   Latvia => ['lavtia', 'latvija', 'lat'],
   Lebanon => ['leb'],
@@ -138,7 +148,7 @@ my %SINGLE_TYPOS =
   Madagascar => ['madagaskar'],
   Morocco => ['maroc'],
   Netherlands => ['nederlands', 'netherland', 'nrtherlands', 'hol',
-    'netherlans', 'netherlnd', 'neth', 'nl', 'net', 'holland'],
+    'netherlans', 'netherlnd', 'neth', 'nl', 'net', 'holland', 'ned'],
   Monaco => ['nonaco'],
   'New Zealand' => ['nwzealand', 'nz'],
   'North Macedonia' => ['macedonia'],
@@ -146,21 +156,26 @@ my %SINGLE_TYPOS =
   Norway => ['norge', 'norges', 'norwegen', 'nor', 'norja'],
   Palestine => ['palastine'],
   Philippines => ['philipppines', 'phillipina'],
-  Poland => ['polen', 'pologne', 'polska'],
+  Poland => ['polen', 'pologne', 'polska', 'pol'],
+  Portugal => ['por'],
   Reunion => ['réunion'],
-  Romania => ['rumania', 'rum'],
-  Russia => ['russian'],
+  Romania => ['rumania', 'rum', 'rom'],
+  Russia => ['russian', 'rus'],
+  'Saudi Arabia' => ['ksa'],
   'Serbia and Montenegro' => ['serbia&mon', 'srbija'],
   Scotland => ['scotlsnd', 'scotlands', 'scotlans'],
   Slovenia => ['sovenia'],
   'South Korea' => ['korea'],
+  Spain => ['esp'],
   'Sri Lanka' => ['srilanka'],
   Sweden => ['swe', 'swedem', 'schweden', 'sweeden'],
   Switzerland => ['suitzerland', 'switserland'],
   Thailand => ['thai'],
   Tunisia => ['tunisie', 'tunisian'],
-  Turkey => ['tur', 'turkish'],
+  Turkey => ['tur', 'turkish', 'turkiye'],
+  'United Arab Emirates' => ['uae'],
   'United Kingdom' => ['uk'],
+  Uruguay => ['uru'],
   USA => ['america']
 );
 

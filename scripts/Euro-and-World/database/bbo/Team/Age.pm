@@ -6,7 +6,7 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package TeamAge;
+package Team::Age;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes_team_age);

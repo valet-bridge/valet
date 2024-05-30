@@ -6,7 +6,7 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package TeamClub;
+package Team::Club;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes_team_club);
@@ -66,6 +66,7 @@ my @MULTI_WORDS =
   'BK Lavec Smile',
   'BK Lyx',
   'BK Nord',
+  'Bornova BSK',
   'Brans BS',
   'Bridge Académie',
   'Bridge House',
@@ -83,7 +84,9 @@ my @MULTI_WORDS =
   'Cercle Tourangeau',
   'CFT Bridge',
   'Circolo del Bridge Cannareggio',
+  'Circolo del Bridge Firenze',
   'Circolo del Bridge N. Ditto Reggio Calabria',
+  'Circolo del Tennis Palermo',
   'Circolo del Bridge Venezia',
   'Circolo Nautico Posillipo',
   'Cracovia 1906',
@@ -274,6 +277,7 @@ my %MULTI_TYPOS =
   'Bodrum BSK' => ['bodrum b.s.k.', 'bodrum bric kulubu'],
   'Bogazici BSK' => ['bogaz ici bsk', 'boðazici bsk', 'boðazýçý bsk',
     'boðazýçý s.k.'],
+  'Bornova BSK' => ['bornova bel. spor', 'bornova bbsk'],
   'Bridge Académie' => ['b.academie', 'bridge academie'],
   'Bridge House' => ['b.house', 'b. house'],
   'Bridge Turó' => ['b. turó', 'b.turó', 'b.turo'],
@@ -286,8 +290,10 @@ my %MULTI_TYPOS =
     'cerkezkoy dinamik'],
   'CFT Bridge' => ['cft b'],
   'Circolo del Bridge Cannareggio' => ['c.lo cann.'],
+  'Circolo del Bridge Firenze' => ['c.lo br. firenze'],
   'Circolo del Bridge N. Ditto Reggio Calabria' => ['n. ditto rc'],
   'Circolo del Bridge Venezia' => ['c.lo ve'],
+  'Circolo del Tennis Palermo' => ['c.lo tennis palermo'],
   'Circolo Nautico Posillipo' => ['c. n. posillipo', 'posillipo'],
   'Crvena Zvezda' => ['zrvena zvezda'],
   'Debrecen DEAC' => ['debrecen-deac'],
