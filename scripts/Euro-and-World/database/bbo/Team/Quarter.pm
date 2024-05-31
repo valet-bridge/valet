@@ -23,6 +23,8 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   Lozenets => ['vs lozenec', 'vv lozenets'],
+  Pudong => ['pu dong'],
+  Taihu => ['tai hu']
 );
 
 my @SINGLE_WORDS = qw(
@@ -37,14 +39,21 @@ my @SINGLE_WORDS = qw(
   Kadikoy Karaçay Kardelen Kartal Karsiyaka Katok Kaylaka
   Kocamustafapasa Konak Korwin Kucukcekmece Küp
   Lappee Leilem Lemvourgeio Losari Lozenets
-  Maadi Makaliwe Manahasa Männiku Meski Moudania Mrzenci
-  Nagbagan
-  Parioli
-  Pinarbasi
-  Polonezkoy
-  Muratpasa
+  Maadi Makaliwe Manahasa Männiku Meski Moudania Mrzenci Muratpasa
+  Nagbagan Narlidere Niski Norrorts
+  Olgiata
+  Pamukkale Parioli Piloni Pinarbasi Polonezkoy Poncol Pudong
+  Qiaoxie
   Pasham
-  Sansar
+  Radkov Recoleta Ridabu
+  Sabadel Sansar Sarniak Senayan Serdika Shihua Simal Sirinyer
+  Slaska Sredec Sukomoro Suleymanpasa Suralaya
+  Taihu
+  Unaós
+  Varbergshus Viþnelik
+  Wadas Wratislavia Wroble
+  Yalikavak Yarimada Yarýmca Yenisehir Yizhuang Yildirim Yuquan
+  Zhujiang
 );
 
 my %SINGLE_TYPOS =
@@ -60,7 +69,13 @@ my %SINGLE_TYPOS =
   Küp => ['kup'],
   Manahasa => ['mnhasa'],
   Moudania => ['moydania'],
-  Parioli => ['paroli']
+  Narlidere => ['narlýdere'],
+  Olgiata => ['ola'],
+  Pamukkale => ['pamuk'],
+  Parioli => ['paroli'],
+  Wroble => ['wróble'],
+  Yarýmca => ['yarimca'],
+  Yildirim => ['yýldýrým']
 );
 
 

@@ -5,7 +5,21 @@ Split but don't destroy on form, gender, age
 Lone numeral goes
 
 Reductions:
-- Punctuation?
-- City, Club, Org, Region, Sponsor, Uni have countries for sure
-- Club probably has city as well
+- City + Abbr could be club, etc.
 
+
+Reduce to country:
+Club
+Org
+Quarter
+Region
+Sponsor
+University
+
+Reduce to city:
+Club
+Sponsor?
+University
+
+Split Region into
+Zone?

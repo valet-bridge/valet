@@ -145,15 +145,16 @@ my @SINGLE_WORDS = qw(
   Lampung Lebak Liaoning Liguria Lombok Lumajang
   Maharashtra Maluku Marmara Masal Matopos Mercosur Midtsjælland 
   Minahasa Mjøsa Muallim Munzur Mysia
-  Nordafjells Norden Norrland
+  Nordafjells Norden Norrland Nusantara
   Queensland
   Oberloiben Orontes Otago
   Papua Patagonia Porong Punjab
   Rajasthan Rajputana Ratchaburi Rogaland Rosfjord 
   Salten Shanxi Siberia Sichuan Silesia Silla Sindh Sintang Skåne 
-  Southland Sydvest
-  Tasmania Telemark Tigris Tuncelý
-  Uttarakhand
+  Slask Southland Sydvest
+  Tambun Taskopru Tasmania Telemark Tengah Tequendama Tianya
+  Tigris Tinglin Tuncelý
+  Uccle Unia Uttarakhand
   Victoria Vojvodina
   Waikato Wujin
   Yongjia Yunnan
@@ -186,13 +187,17 @@ my %SINGLE_TYPOS =
   Queensland => ['qld'],
   'Samut Prakan' => ['samutprakan'],
   'Samut Sakhon' => ['samutsakhon'],
+  Slask => ['l¹sk'],
   'South Australia' => ['sa'],
   'Suphan Buri' => ['suphanburi'],
   'Tamil Nadu' => ['tamilnadu'],
+  Taskopru => ['tasköprü'],
+  Tinglin => ['tingling'],
   'Uttar Pradesh' => ['up', 'upba'],
   Uttarakhand => ['uttaranchal'],
   'Victoria' => ['vic', 'viic'],
   Vojvodina => ['voj'],
+  Wroble => ['wróble'],
   'Østfold Follo' => ['ostfoldfollo']
 );
 
