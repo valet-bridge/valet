@@ -409,6 +409,7 @@ my %SINGLE_TYPOS =
 (
   'Ada Briç SK' => ['ada'],
   'Akademisk Bridgeklub' => ['akademisk'],
+  'Altay Genclik' => ['altay'],
   'Altinay SK' => ['altýnaysk'],
   'Ankara Kontrat' => ['kontrat'],
   'ASA University of Tel Aviv' => ['asa'],

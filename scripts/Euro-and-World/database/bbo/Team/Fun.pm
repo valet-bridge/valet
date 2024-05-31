@@ -1074,8 +1074,8 @@ my @SINGLE_WORDS = qw(
    Maija Maj Major MajorB Majorn Majority Makara Makriköy 
    Mali Malinka Malmölaget Manashda Manena Manno Mano Manu Manywar 
    Margitta Marianne Mark Marosamitawa Mars Marvelous Marynarz 
-   Masdjävlar Mask Masters Matilde Matrix Mats Matujona Maven Mavi 
-   Mavs Mayamira Maxi Medik Mer Mercury Mesna Meta MGM MGTH Mia 
+   Masal Masdjävlar Mask Masters Matilde Matrix Mats Matujona Maven 
+   Mavi Mavs Mayamira Maxi Medik Mer Mercury Mesna Meta MGM MGTH Mia 
    Michal Midas Mihai Mikke Miguel Milady Milo Minut Mirage Miro 
    Mismatch Mixarna Mjøskameratne MMMM MMRMC Mochu Moki Monaconf 
    Mongos Moritz Mostingan Movember Mölnlycke MPEC MRSMC Multivariant
@@ -1095,10 +1095,10 @@ my @SINGLE_WORDS = qw(
    Öncü
 
    Pacers Paco Pagonia Pal Palukas Panteros Paoli Paradigma Partizan
-   Pasam Pasanci Passé Patriot Patron Paulette Paulina Paulistas 
-   PBL PCBA PDC Pegasus Pennant Perestrojka Perjuangan Pero Peter 
-   Petra Pia Piast Piryoli Piter Pjäxa PKB PKM Pleschi Pleyada 
-   Plia PMS Pojat Polirish Polus Polýsgücü Pompapompa Pontiac 
+   Pasam Pasanci Passé Patagonia Patriot Patron Paulette Paulina 
+   Paulistas PBL PCBA PDC Pegasus Pennant Perestrojka Perjuangan 
+   Pero Peter Petra Pia Piast Piryoli Piter Pjäxa PKB PKM Pleschi 
+   Pleyada Plia PMS Pojat Polirish Polus Polýsgücü Pompapompa Pontiac 
    Poss Potlimit Potteplante Powerchicks Prapar Prasetya Preempters 
    Pretendents Prijatelj Prim Prosan Proteus Proto Ptacol PTT
    Pude Pusten Pyon Pyton PZIM Påskevennene
@@ -1233,6 +1233,7 @@ my %SINGLE_TYPOS =
   Opps => ['opsy'],
   Pagonia => ['pagonya'],
   'Paris Match' => ['parismatch', 'parimatch'],
+  Patagonia => ['patagonya'],
   Paulistas => ['paulistanas'],
   Prasetya => ['prasetia'],
   Preempters => ['preemptors'],

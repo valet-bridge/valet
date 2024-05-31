@@ -30,6 +30,7 @@ use Team::Organization;
 use Team::Abbr;
 use Team::Country;
 use Team::Region;
+use Team::Zone;
 use Team::Quarter;
 use Team::City;
 use Team::Club;
@@ -50,6 +51,7 @@ my @TAG_ORDER = qw(
   TEAM_ORGANIZATION 
   TEAM_COUNTRY 
   TEAM_REGION 
+  TEAM_ZONE 
   TEAM_CLUB 
   TEAM_QUARTER 
   TEAM_CITY 
@@ -100,6 +102,7 @@ sub init_hashes
 {
   set_hashes_team_fun('TEAM_FUN');
   set_hashes_team_region('TEAM_REGION');
+  set_hashes_team_zone('TEAM_ZONE');
   set_hashes_team_city('TEAM_CITY');
   set_hashes_team_quarter('TEAM_QUARTER');
   set_hashes_team_sponsor('TEAM_SPONSOR');

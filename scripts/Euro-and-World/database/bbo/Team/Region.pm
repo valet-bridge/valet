@@ -130,25 +130,25 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Agder Akdeniz Akkad Altay Anhui ASEAN Ayrshire
+  Agder Akdeniz Akkad Anhui ASEAN Ayrshire
   Bali Balkan Banten Belitung Bengkayang Bihar Bornholm Bungo Buskerud
   Cappadocia Corsica
   Dersým Druts
   Eurasia Europe Eyjafjallajokull
   Florida Fukien
-  Gabmin Ganges Gansu Global Goa Gorontalo Guangdong Guangxi Guizhou 
+  Ganges Gansu Global Goa Gorontalo Guangdong Guangxi Guizhou 
   Gujarat
   Hainan Haixing Hatay Haugaland Hebei Hegyvidék Hubei Hunan
   Jharkhand Jiangsu Jilin
   Kansai Karimun Karnataka Kawanua Kayong Kedungwaru Kepri Kerala 
   Kinali Krabi
   Lampung Lebak Liaoning Liguria Lombok Lumajang
-  Maharashtra Maluku Marmara Masal Matopos Mercosur Midtsjælland 
+  Maharashtra Maluku Marmara Matopos Mercosur Midtsjælland 
   Minahasa Mjøsa Muallim Munzur Mysia
   Nordafjells Norden Norrland Nusantara
   Queensland
   Oberloiben Orontes Otago
-  Papua Patagonia Porong Punjab
+  Papua Porong Punjab
   Rajasthan Rajputana Ratchaburi Rogaland Rosfjord 
   Salten Shanxi Siberia Sichuan Silesia Silla Sindh Sintang Skåne 
   Slask Southland Sydvest
@@ -168,7 +168,7 @@ my %SINGLE_TYPOS =
   'Central Sulawesi' => ['sulteng'],
   Corsica => ['korsikali'],
   Eurasia => ['avrasya'],
-  'Gabungan Malaku' => ['gabmo'],
+  'Gabungan Malaku' => ['gabmin', 'gabmo'],
   Ganges => ['genges'],
   Hegyvidék  => ['hegyvidek'],
   Hunan => ['hunnan'],
@@ -183,7 +183,6 @@ my %SINGLE_TYPOS =
   'North Sulawesi' => ['sulut'],
   'North Sumatra' => ['sumut'],
   'Northern Territory' => ['nt'],
-  Patagonia => ['patagonya'],
   Queensland => ['qld'],
   'Samut Prakan' => ['samutprakan'],
   'Samut Sakhon' => ['samutsakhon'],

@@ -288,11 +288,66 @@ my %COUNTRY_TO_QUARTER =
 
 my %COUNTRY_TO_REGION =
 (
+  Australia => ['australian central territory', 'new south wales',
+    'northern territory', 'queensland', 'south australia', 
+    'tasmania', 'victoria', 'western australia'],
+  Austria => ['oberloiben'],
+  Belarus => ['druts'],
+  China => ['anhui', 'fukien', 'gansu', 'guangdong', 'guangxi',
+    'guizhou', 'hainan', 'haixing', 'hebei', 'hunan', 'jiangsu',
+    'jilin', 'liaoning', 'pearl river', 'ren shou', 'shanxi', 
+    'sichuan', 'taihu lake', 'tianya', 'tinglin', 'wujin', 'yongjia',
+    'yunnan', 'zhejiang'],
+  Colombia => ['tequendama'],
+  Denmark => ['bornholm', 'midtsjælland', 'sydvest'],
+  France => ['corsica', 'new caledonia'],
   Iceland => ['eyjafjallajokull'],
-  India => ['nagbagan', 'rajasthan'],
-  Indonesia => ['nusantara'],
-  Poland => ['slask'],
-  Sweden => ['norrorts']
+  Hungary => ['hegyvidék'],
+  India => ['bihar', 'ganges', 'goa', 'gujarat', 'jharkhand',
+    'karnataka', 'kerala', 'madhya pradesh', 'maharashtra', 'nagbagan', 
+    'punjab', 'rajasthan', 'rajputana', 'tamil nadu', 'uttar pradesh', 
+    'uttarakhand', 'west bengal'],
+  Indonesia => ['bali', 'banten', 'bekasi regency', 'belitung',
+    'bengkayang', 'bisma semarang', 'boeven digoel', 'bogor regency', 
+    'bone bolango', 'bungo', 'central celebes', 'central java', 
+    'central sulawesi', 'cianjur regency', 'east borneo', 'east jakarta', 
+    'east java', 'east kalimantan', 'gabungan malaku', 'garut regency', 
+    'gorontalo', 'java bali', 'karimun', 'kawanua', 'kayong',
+    'kedungwaru', 'kepri', 'kepulauan riau', 'kutai kartanegara', 
+    'lampung', 'lebak', 'lombok', 'lumajang', 'malaku', 'minahasa',
+    'north minahasa', 'north celebes', 'north sulawesi', 
+    'nusa tenggara barat', 'nusantara', 'papua', 'porong', 'sintang',
+    'south celebes', 'south east celebes', 'south jakarta',
+    'south kalimantan', 'south sulawesi', 'south sumatra', 'tambun',
+    'west borneo', 'west java', 'west kalimantan', 'west sumatra'],
+  Iraq => ['akkad'],
+  Italy => ['liguria', 'val di magra'],
+  Japan => ['kansai'],
+  'New Zealand' => ['central districts', 'otago', 'southland', 'waikato'],
+  Norway => ['agder', 'buskerud', 'haugaland', 'midt trøndelag', 
+    'mjøsa', 'møre romsdal', 'nord-norge omegn', 'nordafjells', 
+    'rogaland', 'rosfjord', 'salten', 'telemark', 'troms og ofoten', 
+    'vest agder', 'vest finnmark', 'østfold follo'],
+  Pakistan => ['sindh'],
+  'Papua New Guinea' => ['western province'],
+  Poland => ['lower silesia', 'silesia', 'slask'],
+  Portugal => ['norte ilhas'],
+  Russia => ['siberia'],
+  Scotland => ['ayrshire'],
+  Serbia => ['vojvodina'],
+  Singapore => ['tengah'],
+  'South Africa' => ['central gauteng', 'eastern cape',
+    'northern gauteng'],
+  'South Korea' => ['silla'],
+  Sweden => ['norrland', 'norrorts', 'skåne', 'south sweden'],
+  Taiwan => ['west district'],
+  Thailand => ['krabi', 'nakhon nayok', 'ratchaburi', 'samut prakan', 
+    'samut sakhon', 'suphan buri'],
+  Turkey => ['akdeniz', 'cappadocia', 'central anatolia', 'dersým',
+    'hatay', 'kinali', 'marmara', 'muallim', 'munzur', 'mysia',
+    'orontes', 'taskopru', 'tigris', 'tuncelý'],
+  USA => ['district of columbia', 'florida'],
+  Zimbabwe => ['matopos']
 );
 
 
@@ -398,10 +453,3 @@ sub set_matrix
 1;
 
 
-  'Senior High School',
-
-
-  Brandeis
-  CCUB
-  Gunadarma
-  Radboud
