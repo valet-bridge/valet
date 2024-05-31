@@ -35,7 +35,8 @@ my @SINGLE_WORDS = qw(
   Ege Esenkent
   Fatih
   Gundogan
-  Jomtien
+  Huochetou
+  Jarville Jomtien
   Kadikoy Karaçay Kardelen Kartal Karsiyaka Katok Kaylaka
   Kocamustafapasa Konak Korwin Kucukcekmece Küp
   Lappee Leilem Lemvourgeio Losari Lozenets

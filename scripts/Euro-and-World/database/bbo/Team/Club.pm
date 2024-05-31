@@ -29,6 +29,7 @@ my @MULTI_WORDS =
   'Ankara Kontrat',
   'Ankara Sistematik',
   'Antalya BSK',
+  'Antalya Tabip Odasi',
   'ASA University of Tel Aviv',
   'Atletik Basket',
   'ATU Bucharest',
@@ -80,6 +81,7 @@ my @MULTI_WORDS =
   'Bucak Bel.',
   'BUKS Bytom',
   'Camlica Sports',
+  'Canakkale Tarim',
   'Cedýt Ilica Sports',
   'Centrum Kultury i Sportu',
   'Cercle Tourangeau',
@@ -124,7 +126,6 @@ my @MULTI_WORDS =
   'Goztepe Hilal SK',
   'Göktürk SK',
   'Grant Thornton',
-  'Greve Strand',
   'Hamar BK',
   'Hamra Club',
   'Hanseatic Hamburg BC',
@@ -169,14 +170,14 @@ my @MULTI_WORDS =
   'Møre og Romsdal',
   'NDC Den Hommel',
   'Nachteulen Leverkusen',
-  'Nancy Jarville',
+  'Nancy Jarville BC',
   'Nilüfer Bld. BSK',
   'Nord Trøndelag',
   'Norrorts Bridge',
   'NS-1',
   'Núcleo De Bridge Do Círculo',
   'Nürnberg Museum',
-  'OBK Kloverknekt',
+  'OBK Kløverknekt',
   'Ocean BC',
   'Odisha Secretariat Recreation Club',
   'One Eyed Jacks',
@@ -219,7 +220,6 @@ my @MULTI_WORDS =
   'St:Erik Hella',
   'St:Erik Morot',
   'Studentenes',
-  'Tabip Odasi',
   'Tekirdað Club',
   'Tennis Club Parioli',
   'The West End Mumbai',
@@ -285,7 +285,7 @@ my %MULTI_TYPOS =
   'Bridgeclub Oog' => ['bc oog in al'],
   'Brussels Bridge Club' => ['b.c.o.b.'],
   'BUKS Bytom' => ['buks ii bytom'],
-  Canakkale => ['çanakkale', 'canakkale beld.', 'canakkale tarim sp'],
+  'Canakkale Tarim' => ['canakkale tarim sp'],
   'Cedýt Ilica Sports' => ['cedýt ilica spor'],
   'Cerkezkoy Dinamik BSK' => ['cerkezkoy bs', 'cerkezkoy bsk',
     'cerkezkoy dinamik'],
@@ -378,13 +378,13 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Acol Airmadidi AGBC Amisos Anadolu Asenovec Auguri AVGP
+  Acol AGBC Amisos Anadolu Asenovec Auguri AVGP
   Benfica Besiktas Bonsist Botev BTBK
   Canakkale
   Dragao Drienerlo
-  Fanfulla Fenerbahce Fosnavåg
+  Fanfulla Fenerbahce
   Galata Galatasaray Gauteng
-  Hercules Hoppklubbene Hordaland Hosgoru Houchetou
+  Hercules Hoppklubbene Hosgoru 
   Jeofizik
   Karagümrük Karlsruher Kløverknekt 
   Lavec Laksamana LÜKSAD
@@ -396,7 +396,7 @@ my @SINGLE_WORDS = qw(
   Romana
   Sakura Sivasspor Solli Spezia Spojnia
   TGR Tofas Tonyaspor Trifolium
-  Uddevalla Uppsalabridgen
+  Uppsalabridgen
   Vestri
   Østerdal
   Örebridgen
@@ -446,9 +446,7 @@ my %SINGLE_TYPOS =
   'Hamra Club' => ['hamra'],
   'Harstad S&B' => ['harstad'],
   'Hok Studiecentrum' => ['hok'],
-  Hordaland => ['hordland'],
   Hosgoru => ['hoþgörü'],
-  Houchetou => ['huochetou'],
   'Isparta Club' => ['isparta'],
   'Istanbul Sports' => ['istanbulspor'],
   'Jing Fan' => ['jingfan'],
@@ -459,6 +457,7 @@ my %SINGLE_TYPOS =
     'mr¥gowia'],
   'Norrorts Bridge' => ['norrort'],
   'Núcleo De Bridge Do Círculo' => ['nbcbl'],
+  'OBK Kløverknekt' => ['kløverknekt'],
   'Odisha Secretariat Recreation Club' => ['osrc'],
   'Otters Club' => ['otters'],
   'Petroleum Mining Club' => ['pmc'],

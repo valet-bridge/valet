@@ -27,6 +27,7 @@ my @MULTI_WORDS =
   'El-Maadi',
   'Gaziantep Zeugma',
   'Gjøvik og Vardal',
+  'Greve Strand',
   'Kansas City',
   'Kota Bandung',
   'Kota Bekasi',
@@ -120,23 +121,24 @@ my @SINGLE_WORDS = qw(
   Brasilia Brasov Bremen Brisbane Bromölla Brussels Bucharest Budapest 
   Burghausen Bursa Burdur 
 
-  Caen Cairns Cairo Canberra Canterbury Caracas Cascais Catania Cerkezkoy 
-  Cesme Changhua Changzhou Chaville Chelmno Chengdu Chennai Chiayi
-  Chicago Chongqing Chumphon Cirebon Clichy Cluj Copenhagen Corlu 
-  Coventry Cuenca Cuneo
+  Caen Cairns Cairo Canakkale Canberra Canterbury Caracas Cascais 
+  Catania Cerkezkoy Cesme Changhua Changzhou Chaville Chelmno Chengdu 
+  Chennai Chiayi Chicago Chongqing Chumphon Cirebon Clichy Cluj 
+  Copenhagen Corlu Coventry Cuenca Cuneo
 
   Dalian Darmstadt Datca Delft Delhi Denizli Depok Derpt Diyarbakir 
   Dimitrovgrad Dobrich Dombivli Dongguan Durban Düsseldorf
 
   Eastbourne Edirne Elblag Esbjerg Eskisehir Essen Evanston
 
-  Farsund Fethiye Firenze Flekkefjord Foca Frankfurt Freidorf 
+  Farsund Fethiye Firenze Flekkefjord Foca Fosnavåg Frankfurt Freidorf 
 
   Gdansk Gdynia Genoa Gent Gevgelija Geyve Gnesta Gorzow Gölcük Gresik 
   Guangzhou Guayaquil Gudbrandsdal Gyor
 
   Haderslev Hamar Hamburg Hangzhou Hannover Harplinge Hatay Heimdal 
-  Heledia Helsinki Herning Hillerød Hornbæk Hsinchu Huldretråkket 
+  Heledia Helsinki Herning Hillerød Hordaland Hornbæk Hsinchu 
+  Huldretråkket 
 
   Iasi Iskenderun Istanbul Ithaca Izmir
 
@@ -158,7 +160,7 @@ my @SINGLE_WORDS = qw(
   Mersin Miaoli Michalovce Midyat Milan Milas Minsk Monticiano Montpellier 
   Moradabad Morud Muðla Mumbai Munich 
 
-  Nagpur Nagykanizsa Namsos Nanchang Nanning Napoli Narita Narvik 
+  Nagpur Nagykanizsa Namsos Nanchang Nancy Nanning Napoli Narita Narvik 
   Nashik Nazilli Näsby Nicosia Nijmegen Ningbo Niš Norrbyskär Norrøna 
   Nürnberg Nyon Nærbø Næstved Nøtterøy
 
@@ -189,7 +191,7 @@ my @SINGLE_WORDS = qw(
   Timisoara Tire Tokyo Tomohon Torino Toulouse Trieste Trondheim Tromsø
   Tyoyuan
 
-  Udaipur Umeå Uppsala Usak Utrecht
+  Udaipur Uddevalla Umeå Uppsala Usak Utrecht
 
   Van Varberg Varese Varna Vasa Västervik Vestfold Vestvågøy 
   Vienna Vikersund Vilnius Vraca
@@ -222,6 +224,7 @@ my %SINGLE_TYPOS =
   Bangalore => ["b'lore", 'banglore', 'bengalore'],
   Bansi => ["bansi's"],
   Beijing => ['peking'],
+  Canakkale => ['çanakkale'],
   Cerkezkoy => ['çerkezköy', 'cerk'],
   Copenhagen => ['kopenhagen'],
   Diyarbakir => ['dýyarbakir', 'diyarbakýr'],
@@ -232,6 +235,7 @@ my %SINGLE_TYPOS =
   Guangzhou => ['gz', 'gaungzhou'],
   Harplinge => ['harpling'],
   Heimdal => ['heimdalbc'],
+  Hordaland => ['hordland'],
   Iskenderun => ['iskendurun'],
   Izmir => ['ýzmýr'],
   Jakarta => ['dki', 'jakar', 'jkt'],
