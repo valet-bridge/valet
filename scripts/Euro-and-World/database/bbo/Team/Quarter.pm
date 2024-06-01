@@ -41,7 +41,7 @@ my @SINGLE_WORDS = qw(
   Kocamustafapasa Konak Korwin Kucukcekmece Küp
   Lappee Leilem Lemvourgeio Losari Lozenets
   Maadi Makaliwe Manahasa Männiku Meski Moudania Mrzenci Muratpasa
-  Nagbagan Narlidere Niski Norrorts
+  Nagbagan Narlidere Norrorts
   Olgiata
   Pamukkale Parioli Piloni Pinarbasi Polonezkoy Poncol Pudong
   Qiaoxie

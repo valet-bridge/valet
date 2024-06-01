@@ -47,6 +47,7 @@ my @MULTI_WORDS =
   'Ai Bait',
   'Air Traffic Management',
   'Aka Maru',
+  'Aklindo Musi 88',
   'Alex is Beautiful',
   'Alizee',
   'All In',
@@ -98,6 +99,7 @@ my @MULTI_WORDS =
   'Beer Card',
   'Bela e os Monstros',
   'Bes-Can',
+  'Besli Major',
   'Best i baren',
   'Best uten kort',
   'Beto BO',
@@ -127,6 +129,7 @@ my @MULTI_WORDS =
   'Boogie Knights',
   'Boye B Fan Club',
   "Boys'n' Girls",
+  'Brans BS',
   'Brian Is Beautiful',
   'Bridge am Grün',
   'Bridge Fan',
@@ -270,6 +273,7 @@ my @MULTI_WORDS =
   'Filips Fanclub',
   'Finnmark Flyers',
   'Finways Sappers',
+  'Fire Club',
   'Fjoll uten fisk',
   'Fjords of Norway',
   'Flatt kjedelig',
@@ -364,7 +368,12 @@ my @MULTI_WORDS =
   'Japan SAYN',
   'Jarum LA',
   'Jenny-Chang',
+  'Jia Zhou Ai Qiao',
+  'Jian Hua Club',
   'Jie Fang He Ji',
+  'Jin Fu',
+  'Jin Hui',
+  'Jin Mei',
   'Jiu Jiu',
   'Jorunns disipler',
   'Josef and Cards',
@@ -472,6 +481,7 @@ my @MULTI_WORDS =
   'MC Toss',
   'Meins bleibt meins',
   'Meng Qing Xin',
+  'Mike Lawrence Club',
   'Minas Trith',
   'Missão Impossivel',
   'Mo i Raneran',
@@ -539,7 +549,6 @@ my @MULTI_WORDS =
   'os.se',
   'Ottos Lotto',
   'Over stokk og stein',
-  'Oze Ckis',
   'Ööklubi Strand',
   'Paak Festival',
   "Pai's",
@@ -606,6 +615,7 @@ my @MULTI_WORDS =
   'Saevar Karl',
   'Salten rundt',
   'Samfund Slingers',
+  'San Sac',
   'San3PDX',
   'Sang ae',
   'Sanghi Tivoli',
@@ -640,6 +650,7 @@ my @MULTI_WORDS =
   'Slam Hunters',
   'slaveykov.bg',
   'Sliven Haiduci',
+  'SM BTC',
   'Smoking Guns',
   'Smooth Duck',
   'Småsamen med døler',
@@ -649,6 +660,7 @@ my @MULTI_WORDS =
   'Space Mutants',
   'Spade Ace',
   'Spar K',
+  'SPG Club',
   'Spiders from Mars',
   'Spiel mir das Lied',
   'Spjett Spjong',
@@ -749,6 +761,7 @@ my @MULTI_WORDS =
   'Tut tut',
   'Tzoko-Mokko',
   'Ucurtma Avcisi',
+  'UKS Olimpia',
   'Umisen Yamasen',
   'Umut Baris',
   'Unelmien Piina',
@@ -773,6 +786,7 @@ my @MULTI_WORDS =
   'VP (b)anker IMP',
   'Walking Dead',
   'www guts com',
+  'Wan Jian Club',
   'War of Roses',
   'We Are Bye',
   'We Are 6',
@@ -821,6 +835,7 @@ my %MULTI_TYPOS =
   'ABA Nuno Paz' => ['ABA - Nuno Paz', 'ABA-Nuno Paz'],
   'AG laget' => ['ag-laget'],
   'Air Traffic Management' => ['air traffic managem'],
+  'Aklindo Musi 88' => ['musi 88', 'musi88'],
   'Alex is Beautiful' => ['alex is beatiful'],
   'All Stars' => ['all-stars'],
   'Alle presidentens menn' => ['alle presidentens'],
@@ -898,8 +913,10 @@ my %MULTI_TYPOS =
   'Itinérants du bridge' => ['iti du bridge', 'itin du bridge'],
   'Jamm & Co' => ['jamm & co.', 'jamm && co.'],
   'Jan Wellem' => ['jan wel'],
+  'Jian Hua Club' => ['jian hua'],
   K1 => ['k01', 'k-1'],
   'Kasimirs Dream Team' => ['kasimirs dreamteam'],
+  Kebiya => ['ke bi ya', 'ke bi ya club'],
   "Keni's Dream" => ["keni's"],
   'Kent Romeos venner' => ['kent romeos veenner'],
   'Kick Back' => ['kick-back'],
@@ -957,6 +974,7 @@ my %MULTI_TYPOS =
   'Slam Hunters' => ['slam hunter'],
   'slaveykov.bg' => ['slaveikov.bg'],
   SMBC => ['s m b c'],
+  'SM BTC' => ['sm-btc'],
   'Spring Foursomes' => ['spring 4s', 'spring fours', "spring 4's"],
   'Stabby with Youngsters' => ['stabby with youngst'],
   'Svanslös Skalman' => ['svanslos skalman'],
@@ -989,7 +1007,7 @@ my @SINGLE_WORDS = qw(
    AUE Augerne Auni Aurora AUTBUL AUTHOL Autostrada Avagard 
    Avalanche Avatar Ayan Aytalus Azores Azure
 
-   BAB BABK Bacch Bachelor Bade Badger Badminton Bager BAHABAWI
+   BAB BABK Bacch Bachelor Bade Badger Badminton Bager BAHABAWI Bahaj
    Baias Bajm Bajozero BAK Balti Baltic Banana Bananasplit Baneet 
    BarDeZi BARC BARP Barracuda Barsss Baryton BAST Bat Batmix Bato 
    Batusida Bauhinia BBE BBN BBO BCBR Beauty Begigütje Begijntje 
@@ -1039,7 +1057,7 @@ my @SINGLE_WORDS = qw(
 
    Hade Hai Hakl Hanan Hande Hangarounds Hansa Harlequins Harvin 
    Havin Hawks HayirlisI Hayet Hästpojkarna Hebat Heino Heis Hel 
-   Helgeness Hellé Heliopolis HengSha HERZdame HeSa Hey Hiiimmm 
+   Helgeness Hella Hellé Heliopolis HengSha HERZdame HeSa Hey Hiiimmm 
    Hilda Hist Hjerterdamer HKES Hobbits Holders Holifera Hollywood 
    Holmenkollen Holport Honeymoon Hopfenkönig Hornet House Hridhaan 
    Hubsi Huhu Hunaja Huispaus Hunhun Hurra Hybrid
@@ -1065,8 +1083,8 @@ my @SINGLE_WORDS = qw(
 
    Lahjattomat LAKT Laleler Langy Laplanders Laplas Larry Lasse Lataka 
    Lateria LatSwe Lazy LBC LBSK LCF Lebensohl Lebron Legeanka Lema 
-   Lemanus Lenz Leszek Leta Letve Leveni Lianas Liggeunderlaget Lili 
-   Lillebaluba Lion Lions Lipa Lira Livius Lirarna Liverbird Ljónin 
+   Lemanus Lenz Leszek Leta Letve Leveni Lianas Liban Liggeunderlaget 
+   Lili Lillebaluba Lion Lions Lipa Lira Livius Lirarna Liverbird Ljónin 
    LNWers Lo Loaknath Lolly Loloc Longzhu Loreng LOS Lowel 
    Löparn LPMS Lucky LVBridgeBums LXA Lyubcho Løwene
 
@@ -1078,8 +1096,8 @@ my @SINGLE_WORDS = qw(
    Mavi Mavs Mayamira Maxi Medik Mer Mercury Mesna Meta MGM MGTH Mia 
    Michal Midas Mihai Mikke Miguel Milady Milo Minut Mirage Miro 
    Mismatch Mixarna Mjøskameratne MMMM MMRMC Mochu Moki Monaconf 
-   Mongos Moritz Mostingan Movember Mölnlycke MPEC MRSMC Multivariant
-   Munawar Mustang Muumio Mýna Myoni Møremix Måsen
+   Mongos Moritz Morot Mostingan Movember Mölnlycke MPEC MRSMC 
+   Multivariant Munawar Mustang Muumio Mýna Myoni Møremix Måsen
 
    Nabil NAD Nadide Narbisk Narre Natalia Nathans Natural Naturalists 
    NBB Necos Neduk Nemesis Nessuno Neverclaim Nico Nightingale Nik 
@@ -1098,10 +1116,10 @@ my @SINGLE_WORDS = qw(
    Pasam Pasanci Passé Patagonia Patriot Patron Paulette Paulina 
    Paulistas PBL PCBA PDC Pegasus Pennant Perestrojka Perjuangan 
    Pero Peter Petra Pia Piast Piryoli Piter Pjäxa PKB PKM Pleschi 
-   Pleyada Plia PMS Pojat Polirish Polus Polýsgücü Pompapompa Pontiac 
-   Poss Potlimit Potteplante Powerchicks Prapar Prasetya Preempters 
-   Pretendents Prijatelj Prim Prosan Proteus Proto Ptacol PTT
-   Pude Pusten Pyon Pyton PZIM Påskevennene
+   Pleyada Plia PMC PMS Pojat Polirish Polus Polýsgücü Pompapompa 
+   Pontiac Poss Potlimit Potteplante Powerchicks Prapar Prasetya 
+   Preempters Pretendents Prijatelj Prim Prosan Proteus Proto Ptacol 
+   PTT Pude Pusten Pyon Pyton PZIM Påskevennene
 
    QLJB Quantum Quasar Quattro Quintet Quinze
 
@@ -1111,21 +1129,21 @@ my @SINGLE_WORDS = qw(
    Robertinho Robi Robocop Rollers Rosajora Rovers Royston Rozle RS 
    Rüya Rylai Rylal Ryo
 
-   Sabari Sabina Sabres Saga SAGG Sailor Sakurai Saladmasters Salokin 
-   Salost Salvo Sansouci SANY Sapphire Sara Sargam Sarp SaTu Saturn 
-   Saty Sbamby Sbanda Scapros Schmuckles Schneewittchen Scientists 
-   Scot SDK Secure Selin Senaattorit Senator Severin Sevil SFG SGG 
-   Shan Shane Shankars Shaoshen Shavaz Sherdils SHHG Shona Show 
-   Shrikant Shuai Shushi Sid Siddheshwar Sigdonnemann Sigma Sigrid 
+   Sabari Sabina Sabres Saga SAGG Sailor Sakura Sakurai Saladmasters 
+   Salokin Salost Salvo Sansouci SANY Sapphire Sara Sargam Sarp SaTu 
+   Saturn Saty Sbamby Sbanda Scapros Schmuckles Schneewittchen 
+   Scientists Scot SDK Secure Selin Senaattorit Senator Severin Sevil 
+   SFG SGG Shan Shane Shankars Shaoshen Shavaz Sherdils SHHG Shona 
+   Show Shrikant Shuai Shushi Sid Siddheshwar Sigdonnemann Sigma Sigrid 
    Sihai Silbersee Silence Silverfox Simonetta Simple Simpleksas 
-   Sindbad Sindhu Singapole Sirius SISU Sivves Siyabend Sjøsamen 
-   Skalman Skaronga SKB SKBS Skip Skitur Skotii SKR Þlem Slappfisker 
-   Slostria Slufsa SMBC SMJ SMK Småveitjan SNAP Snapper Snipers 
-   SNP Soba Sober Sobers Sogn Soho Solo Sonata Sonchel Soumitra 
-   Spamirs Spandan Spark Spartak Spartans Specialist Spekkhogger 
-   Spektr Spin Spring Squeeze Srimapuna Srykeir SSBC SSSR Stafani 
-   Stagge Stampede Star Starmen Starsbridge Statusquo Stayman STB 
-   Stefany Steinars Steinlager Steliana Steve Stifinnern 
+   Sindbad Sindhu Singapole Sirius SISU Sitespor Sivves Siyabend 
+   Sjøsamen Skalman Skaronga SKB SKBS Skip Skitur Skotii SKR Þlem 
+   Slappfisker Slostria Slufsa SMBC SMJ SMK Småveitjan SNAP Snapper 
+   Snipers SNP Soba Sober Sobers Sogn Soho Solo Sonata Sonchel 
+   Soumitra Spamirs Spandan Spark Spartak Spartans Specialist 
+   Spekkhogger Spektr Spin Spring Squeeze Srimapuna Srykeir SSBC 
+   SSSR Stafani Stagge Stampede Star Starmen Starsbridge Statusquo 
+   Stayman STB Stefany Steinars Steinlager Steliana Steve Stifinnern 
    Storeslemmen Strata Strategen Streamline Studentene StZ 
    Stålfarfar St?vel Sucharek Sue SuHuQiaoYou Sunset Sunshine Suz 
    Svetla Swanand SweDanes SweNor Swest Syabas SYL Syly SYT 
@@ -1252,6 +1270,7 @@ my %SINGLE_TYPOS =
   Soumitra => ['soumtra'],
   Spamirs => ['spamýrs'],
   Spartans => ['spartan'],
+  'SPG Club' => ['spg'],
   Squeeze => ['squeze'],
   'Stall Dieden' => ['dieden'],
   Starmen => ['starman'],

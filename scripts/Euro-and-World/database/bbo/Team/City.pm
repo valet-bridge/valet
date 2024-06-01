@@ -111,7 +111,8 @@ my @SINGLE_WORDS = qw(
   Aabenraa Aalborg Adana Adelaide Agresar Ahmedabad Airmadidi Akhisar 
   Alexandria Allahabad Altrincham Alytus Amanora Amarillo Ambon 
   Amsterdam Ankara Annecy Antalya Antony Antwerpen Aral Arendal 
-  Asenovgrad Assis Atakum Athens Auckland Ayacucho Aydin Ayvalik
+  Asenovec Asenovgrad Assis Atakum Athens Auckland Ayacucho Aydin 
+  Ayvalik
 
   Baghdad Balchik Balikesir Balikpapan Ballerup Bamberg Bandung 
   Bangalore Bangkok Banjarmasin Bansi Barcelona Batam Bath Batu Begues 
@@ -148,8 +149,8 @@ my @SINGLE_WORDS = qw(
   Kadirli Kalisz Kalundborg Kalyani Kanpur Karlsruhe Kashi Kastamonu 
   Katowice Kayseri Kediri Kedungwaru Keelung Kesten Ketsch Kiel Kielce 
   Kiev Kirkeby Kirklarelý Kirsehir Klabat Kocaeli Kolbotn Kolkata Konya
-  Kornik Kosice Koycegiz Köln Krakow Kristiansand Kudus Kunshan Kuopio 
-  Kusadasi Kütahya Kverndalen Kyustendil Kølabånn
+  Kornik Kosice Kota Koycegiz Köln Krakow Kristiansand Kudus Kunshan 
+  Kuopio Kusadasi Kütahya Kverndalen Kyustendil Kølabånn
 
   Langkat Lanzhou Lappeenranta Leiden Lerum Leszno Leuven Leverkusen 
   Lhokseumawe Lille Lima Lincoln Liushu Ljubljana Lodz Lokotok London 
@@ -181,7 +182,7 @@ my @SINGLE_WORDS = qw(
   Saarbrücken Sabadell Sakarya Salerno Samarinda Samsun Sandefjord 
   Santiago Sanya Sarpsborg Secunderabad Seferihisar Semarang Serang 
   Shanghai Shaoguan Shenyang Shenzhen Shijiazhuang Sibiu Sidoarjo Siena 
-  Sindi Singsås Skara Skawina Skien Skopje Slagelse Sleman Sofia Solok 
+  Sindi Singsås Skara Skien Skopje Slagelse Sleman Sofia Solok 
   Sortland Söke Split Stanford Stavanger Steinkjer Storsjöbygden Stureby 
   Stuttgart Sukma Sukomoro Sumedang Sunndalsøra Surabaya Suzhou Sydney 
   Szeged Sørreisa
@@ -218,6 +219,7 @@ my %SINGLE_TYPOS =
   Ankara => ['ancyra'],
   Antwerpen => ['antwerp'],
   Arendal => ['arendals'],
+  Asenovec => ['asenovets'],
   Auckland => ['akarana'],
   Ayvalik => ['aivali'],
   Balisekir => ['balikesýr', 'balýkesir',],
@@ -267,6 +269,7 @@ my %SINGLE_TYPOS =
   Nanchang => ['nancang'],
   Nashik => ['nasik'],
   Ningbo => ['ningpo'],
+  Niš => ['niski'],
   Norrbyskär => ['norrbyskar'],
   'Novi Sad' => ['nowewsady'],
   Olsztyn => ['olo'],
@@ -285,7 +288,6 @@ my %SINGLE_TYPOS =
   Saarbrücken => ['saarbruecken'],
   'Saint Petersburg' => ['spb'],
   Shenzhen => ['sz'],
-  Skawina => ['skawia'],
   Singsås => ['singsaas'],
   Storsjöbygden => ['storsjöbygdens'],
   Söke => ['soke'],

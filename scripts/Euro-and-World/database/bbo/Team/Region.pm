@@ -40,6 +40,7 @@ my @MULTI_WORDS =
   'Java Bali',
   'Kepulauan Riau',
   'Kutai Kartanegara',
+  'KwaZulu Natal',
   'Lower Silesia',
   'Madhya Pradesh',
   'Midt Trøndelag',
@@ -136,8 +137,8 @@ my @SINGLE_WORDS = qw(
   Dersým Druts
   Eurasia Europe Eyjafjallajokull
   Florida Fukien
-  Ganges Gansu Global Goa Gorontalo Guangdong Guangxi Guizhou 
-  Gujarat
+  Ganges Gansu Gauteng Global Goa Gorontalo Guangdong Guangxi 
+  Guizhou Gujarat
   Hainan Haixing Hatay Haugaland Hebei Hegyvidék Hubei Hunan
   Jharkhand Jiangsu Jilin
   Kansai Karimun Karnataka Kawanua Kayong Kedungwaru Kepri Kerala 

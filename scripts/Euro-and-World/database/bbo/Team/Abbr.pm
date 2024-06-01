@@ -64,7 +64,7 @@ my %SINGLE_TYPOS =
 (
   'Bridge Club' => [qw(
     aba abk absk ak asb asd ass assn 
-    ba bbgsk bbsgk bbsk bc bcm bcn belediye beledýye belediyespor 
+    ba bbgsk bbsgk bbsk bc bcm bcn beld belediye beledýye belediyespor 
     bgsk bilimsel bisk biskd bjk bk bld bmsk bp bps
     br bri brýç bridgeclub bridgeklub bs bsb bsc bsk bskd bsp bssk 
     bt btsc bþb buyuksehir býskd

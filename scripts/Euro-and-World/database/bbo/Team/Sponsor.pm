@@ -226,6 +226,7 @@ my @MULTI_WORDS =
   'PU Minsel',
   'PU Sulut',
   'Perusahaan Listrik Negara',
+  'Qingnian Qiche',
   'Quik Tea',
   'Red Bull',
   'Red Cotton',
@@ -242,6 +243,7 @@ my @MULTI_WORDS =
   'Rosa dei Venti',
   'Ryan Express',
   'SAIC VW',
+  'Samadhan Academy',
   'Samtronic Constanta',
   'San-Sac',
   'San Chen',
@@ -424,7 +426,7 @@ my %MULTI_TYPOS =
     'gardar og velar'],
   'Garðs Apotek' => ['garðs apótek', 'garðs apoótek', 'garps apótek'],
   'Geely Automobile' => ['geely auto', 'gely auto', 'chaina geely',
-    'china geely', 'jili', 'china geely auto', 'jili qiche'],
+    'china geely', 'jili', 'china geely auto', 'jili qiche', 'ji li'],
   'Geo Timah' => ['geo tima'],
   Geologi => ['badan geologi', 'geo coal', 'geo tanito harum'],
   'Geologi Banpu' => ['geo banpu'],
@@ -551,7 +553,8 @@ my %MULTI_TYPOS =
   'Yunnan Dikuang Resources' => ['yunnan dikuang', 'yun nan'],
   'zagraj.pl' => ['zagraj pl'],
   'Zhejiang Huamen' => ['zhe jiang hua men', 'hua men'],
-  'Zhejiang Jingfan' => ['zj jingfan'],
+  'Zhejiang Jingfan' => ['zj jingfan', 'jing fan club', 'jin fan',
+    'jing fan'],
   'Zhongshan Jiegao' => ['zhong shan jie gao'],
   'Zhongtong Jiangsu' => ['zhongtong js']
 );
@@ -588,7 +591,8 @@ my @SINGLE_WORDS = qw(
   Lancia Lacznosc Laima Lavazza LCG Lianbo Likom
   Longjiangfu Lukomorie Lyfjaver
 
-  Makus Malkia Manyavar Meikuang Mireo Mitrabuana Morgunblaðið Myndform
+  Makus Malkia Manyavar Meikuang Mireo Mitrabuana Modalfa
+  Morgunblaðið Myndform
 
   NALCO Nanyuan Navachaitanya Navayuga Nazwa Nefka Niewiem Nongken 
   Norco Nortemp NOTUS Näkösoppi
@@ -683,6 +687,7 @@ my %SINGLE_TYPOS =
   'PT Bayu Buana Gemilang' => ['bbg'],
   'Rigainvites.lv' => ['rigainvites'],
   'SAIC VW' => ['saic'],
+  'Samadhan Academy' => ['samadhan', 'samadgan'],
   'San Chen' => ['sanchen'],
   'SD Associates' => ['sdassociates'],
   'SD Enterprises' => ['sdenterprises', 'sdenterprizes'],
@@ -705,7 +710,8 @@ my %SINGLE_TYPOS =
   'Viego Regnskap' => ['viego'],
   Wellwise => ['wellwiss'],
   'Yeh Bros' => ['yeh'],
-  'Zhejiang Huamen' => ['huamen']
+  'Zhejiang Huamen' => ['huamen'],
+  'Zhejiang Jingfan' => ['jingfan']
 );
 
 
