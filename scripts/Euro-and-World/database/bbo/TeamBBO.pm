@@ -25,6 +25,7 @@ use Gender;
 use Suggestors;
 
 use Team::Fun;
+use Team::Other;
 use Team::Sponsor;
 use Team::Organization;
 use Team::Abbr;
@@ -47,6 +48,7 @@ use Team::Destroy;
 
 my @TAG_ORDER = qw(
   TEAM_FUN 
+  TEAM_OTHER 
   TEAM_SPONSOR 
   TEAM_ORGANIZATION 
   TEAM_COUNTRY 
@@ -101,6 +103,7 @@ my %FORM_SCORES;
 sub init_hashes
 {
   set_hashes_team_fun('TEAM_FUN');
+  set_hashes_team_other('TEAM_OTHER');
   set_hashes_team_region('TEAM_REGION');
   set_hashes_team_zone('TEAM_ZONE');
   set_hashes_team_city('TEAM_CITY');
