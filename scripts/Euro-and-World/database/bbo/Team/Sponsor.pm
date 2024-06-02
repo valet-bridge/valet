@@ -24,6 +24,7 @@ my @MULTI_WORDS =
   'Agsar Paints',
   'AJ Diament',
   'Alfa Romeo',
+  'Alfa-Compensa Gdynia',
   'Aliaga Kyme',
   'Andromeda Baroda',
   'Ant Teknik',
@@ -98,11 +99,9 @@ my @MULTI_WORDS =
   'Dobre Zegary',
   'Doga Naturale',
   'Dongfang Tairong',
-  'e-bridge',
   'E-Service',
   'Eden Realty Kolkata',
   'eDOT Goa',
-  'Eko-Al',
   'Eko-Al',
   'Elektromonta¯',
   'Euro Agro',
@@ -139,6 +138,7 @@ my @MULTI_WORDS =
   'Hengsha Haijiu',
   'Hengsha Ke Ji',
   'HF Verðbréf',
+  'Hong Kong Vico',
   'Hong Zhu',
   'Hotel Senator',
   'Hotell Strand',
@@ -161,7 +161,6 @@ my @MULTI_WORDS =
   'Jin Rong',
   'Jin Jing',
   'Jing Tie',
-  'K H Power',
   'Kare Dam',
   'Kaushik Hyderabad',
   'KH Power',
@@ -228,8 +227,6 @@ my @MULTI_WORDS =
   'Perusahaan Listrik Negara',
   'Qingnian Qiche',
   'Quik Tea',
-  'Red Bull',
-  'Red Cotton',
   'Phoenix TV',
   'Polarman Regnskap',
   'Ponar Unia',
@@ -237,6 +234,8 @@ my @MULTI_WORDS =
   'PLN Suluttenggo',
   'PT Bayu Buana Gemilang',
   'PT Bumi Siak Pusako',
+  'Red Bull',
+  'Red Cotton',
   'Rigainvites.lv',
   'Rio-Sampa',
   'Ronke Camping',
@@ -375,6 +374,7 @@ my %MULTI_TYPOS =
   'Adaro Energy' => ['geo adaro'],
   'Agsar Paints' => ['agsar pints'],
   'AJ Diament' => ['aj diamonds', 'diament'],
+  'Alfa-Compensa Gdynia' => ['alfa gdynia'],
   'Apreo Logistic Poland' => ['apreo logistic pol', 'apreo logistic pola'],
   'Asko-Tech' => ['asco tech', 'asko tech', 'asko-tech'],
   'Baltic Express' => ['baltic expres'],
@@ -453,6 +453,7 @@ my %MULTI_TYPOS =
     'elektrika ind power', 'elektrika bc', 'i p'],
   'Jasa Marga Jakarta' => ['jasa marga'],
   'Kaushik Hyderabad' => ['kaushik hyd.'],
+  'KH Power' => ['k h power'],
   "Kini's Bangalore" => ["kini's bengalore"],
   "Kini's Goa" => ['p.keni goa'],
   'KONKRET Chelmno' => ['konkret che³mno'],
@@ -561,7 +562,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   ABAX Abnegat Accenture Actavis Aerospace AIA Akaylar Akebono
-  Aklindo Allianz Alfa Altinay Aquatrans Arboned Argento Arkas Arma 
+  Aklindo Allianz Altinay Aquatrans Arboned Argento Arkas Arma 
   Artotec Asindo Ayýntab
 
   Bajaj Baykar Beibao Beidike Bnerg BridgePlus
@@ -570,11 +571,11 @@ my @SINGLE_WORDS = qw(
   Cimentas COMAL Compensa Computerland CONNECTOR CONSUS Constellation 
   Continental Copia Cosmos
 
-  Datang Datasteel Denizgucu Dermika Derofe Dianwang DISKI Djarum 
+  Datang Denizgucu Dermika Derofe Dianwang DISKI Djarum 
   Dongfeng Dostlar Druva
 
   Effcontrol Eimskip Eksprompt Elastron Elektrika Elektrociepl
-  Energetyk Enorma Enterprise ESSO Everfresh Evertrust
+  Energetyk Enorma Enterprise ESSO Evertrust
 
   Fatek Forta Frissan Funbridge
 
@@ -586,13 +587,12 @@ my @SINGLE_WORDS = qw(
 
   Jetox Jiegao JHS Jinfan Junibacken
 
-  Kadimex Kancelaria Kilogrupp KONKRET Konstanta Kvika
+  Kadimex Kancelaria Kilogrupp Konstanta Kvika
 
-  Lancia Lacznosc Laima Lavazza LCG Lianbo Likom
-  Longjiangfu Lukomorie Lyfjaver
+  Lacznosc Laima Lavazza LCG Lianbo Likom Longjiangfu Lukomorie 
+  Lyfjaver
 
-  Makus Malkia Manyavar Meikuang Mireo Mitrabuana Modalfa
-  Morgunblaðið Myndform
+  Makus Malkia Manyavar Mireo Modalfa Morgunblaðið Myndform
 
   NALCO Nanyuan Navachaitanya Navayuga Nazwa Nefka Niewiem Nongken 
   Norco Nortemp NOTUS Näkösoppi
@@ -600,31 +600,28 @@ my @SINGLE_WORDS = qw(
   Ozyuva
 
   P2TEL Paulaner Pealinn Penline Pertagas Pertamina Petroconas Pexis 
-  Petro Pharon Pimara POLFA Praterm Primabridge Printerikeskus Pufa 
-  Pusula
+  Petro Pharon Pimara POLFA Praterm Printerikeskus Pufa Pusula
 
   Qiaoyou
 
-  Raam Radex Ráðgjöf Ravebo Relpol Rofoi Ruyi Ryka
+  Raam Radex Ráðgjöf Ravebo Relpol Ruyi Ryka
 
-  Sagaplast Samsung Samtronic Scandic Scania Sehati Sevtopolis Shichuang
-  Shimuzu 
+  Sagaplast Samsung Scandic Scania Sehati Sevtopolis Shichuang Shimuzu 
   Shouchuang Signity Skeljungur Solakoglu Solox Sparisjóður Srenniw
   SSDA Stalgast Stiga Struma Synective
 
   Tekser Telkom Termika Termoavion Termochem Timah Topeko Transearly 
-  Tricon Tridaya Triton Tryggingamiðstöðin Tsingtao Tundem Tyco Tzilis
+  Tricon Tridaya Tryggingamiðstöðin Tsingtao Tundem Tyco Tzilis
 
-  UMW Underberg Unibet Unicat
+  UMW Unibet Unicat
 
-  Velbazhd Velbujd Vico Vilmar Vinabær Virnet VÍS Visoft Vito Voff
-  Vyceska
+  Velbazhd Velbujd Vinabær Virnet VÍS Visoft Vito Vyceska
 
-  Wellknit Wellwise Winbridge Wise
+  Wellknit Wellwise Wise
 
   Yuetao
 
-  Zaraz Zhaoeng Zhonghai Zolza Zweili
+  Zhaoeng Zhonghai Zolza
 );
 
 my %SINGLE_TYPOS =
@@ -632,6 +629,7 @@ my %SINGLE_TYPOS =
   'Adaro Energy' => ['adaro'],
   'Advisor Revisjon Norge' => ['advisor'],
   'Agsar Paints' => ['agsar'],
+  'Alfa-Compensa Gdynia' => ['compensa'],
   'Bank Negara Indonesia' => ['bni'],
   'Bank Tabungan Negara' => ['btn'],
   'Beijing Trinergy' => ['beijingtrinergy'],
@@ -645,6 +643,7 @@ my %SINGLE_TYPOS =
   Cimentas => ['çimentaþ'],
   Computerland => ['computerlan'],
   CONNECTOR => ['conector'],
+  'Data Steel' => ['datasteel'],
   'Dhampur Sugar' => ['dhampur'],
   DISKI => ['dsi', 'dsý',],
   Eksprompt => ['ekspromt'],
@@ -663,6 +662,7 @@ my %SINGLE_TYPOS =
   'Guangzhou Pearl River' => ['guangzhoupearlriver', 
     'guangzhouperalriver'],
   'Heng Yuan Xiang' => ['hyx'],
+  'Hong Kong Vico' => ['vico'],
   'Hong Zhu' => ['hongzhu'],
   'Indian Railways' => ['railways'],
   Indoarsip => ['indoarship'],
@@ -671,11 +671,14 @@ my %SINGLE_TYPOS =
   'Jin Rong' => ['jinrongjia'],
   'KH Power' => ['khpower'],
   'Kideko' => ['kideco'],
+  'KONKRET Chelmno' => ['konkret'],
   'Kosmos Delhi' => ['kosmos'],
   'Lianzhong Shi Jie' => ['lianzhongshijie'],
   'Magpa-Grup' => ['magpa'],
   'Málning hf' => ['málning'],
   'Meilin Qing Cheng' => ['meilinqingcheng'],
+  'Mei Kuang' => ['meikuang'],
+  'Mitra Buana' => ['mitrabuana'],
   'Nanning Yalun' => ['nanning yalun'],
   'Nest Inn' => ['nestinn'],
   'Oly-Star' => ['olyster'],
@@ -688,6 +691,7 @@ my %SINGLE_TYPOS =
   'Rigainvites.lv' => ['rigainvites'],
   'SAIC VW' => ['saic'],
   'Samadhan Academy' => ['samadhan', 'samadgan'],
+  'Samtronic Constanta' => ['samtronic'],
   'San Chen' => ['sanchen'],
   'SD Associates' => ['sdassociates'],
   'SD Enterprises' => ['sdenterprises', 'sdenterprizes'],
@@ -705,6 +709,7 @@ my %SINGLE_TYPOS =
   'SPS Construction' => ['sps'],
   'Team Audita' => ['teamaudita', 'audita'],
   'Timah' => ['tima'],
+  'Tricon Infotech' => ['tricon'],
   Tsingtao => ['tsingthao'],
   Velbazhd => ['velbuzhd'],
   'Viego Regnskap' => ['viego'],

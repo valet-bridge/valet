@@ -232,6 +232,7 @@ my @MULTI_WORDS =
   'Dragon Piggies',
   'Dream Team',
   'DS 1',
+  'e-bridge',
   'Ege & Besli Major',
   'Eiydes discipler',
   'El Gezira',
@@ -1081,12 +1082,12 @@ my @SINGLE_WORDS = qw(
    KPPM KrASK Kratos Krem Kris Kriston Krisztina Ksenia KSOS Kuglana 
    Kuhmilch Kultur Kvazar Kwiecisty
 
-   Lahjattomat LAKT Laleler Langy Laplanders Laplas Larry Lasse Lataka 
-   Lateria LatSwe Lazy LBC LBSK LCF Lebensohl Lebron Legeanka Lema 
-   Lemanus Lenz Leszek Leta Letve Leveni Lianas Liban Liggeunderlaget 
-   Lili Lillebaluba Lion Lions Lipa Lira Livius Lirarna Liverbird Ljónin 
-   LNWers Lo Loaknath Lolly Loloc Longzhu Loreng LOS Lowel 
-   Löparn LPMS Lucky LVBridgeBums LXA Lyubcho Løwene
+   Lahjattomat LAKT Laleler Lancia Langy Laplanders Laplas Larry Lasse 
+   Lataka Lateria LatSwe Lazy LBC LBSK LCF Lebensohl Lebron Legeanka 
+   Lema Lemanus Lenz Leszek Leta Letve Leveni Lianas Liban 
+   Liggeunderlaget Lili Lillebaluba Lion Lions Lipa Lira Livius 
+   Lirarna Liverbird Ljónin LNWers Lo Loaknath Lolly Loloc Longzhu 
+   Loreng LOS Lowel Löparn LPMS Lucky LVBridgeBums LXA Lyubcho Løwene
 
    Macak Mach Madhav Mads Maestroi Magi Magic Magister Magnus Maharaja 
    Maija Maj Major MajorB Majorn Majority Makara Makriköy 
@@ -1118,16 +1119,16 @@ my @SINGLE_WORDS = qw(
    Pero Peter Petra Pia Piast Piryoli Piter Pjäxa PKB PKM Pleschi 
    Pleyada Plia PMC PMS Pojat Polirish Polus Polýsgücü Pompapompa 
    Pontiac Poss Potlimit Potteplante Powerchicks Prapar Prasetya 
-   Preempters Pretendents Prijatelj Prim Prosan Proteus Proto Ptacol 
-   PTT Pude Pusten Pyon Pyton PZIM Påskevennene
+   Preempters Pretendents Prijatelj Prim Primabridge Prosan Proteus 
+   Proto Ptacol PTT Pude Pusten Pyon Pyton PZIM Påskevennene
 
    QLJB Quantum Quasar Quattro Quintet Quinze
 
    Radeks Radhey Radikk Rafael RAG Raifles Rakinnett RAM Ramkumar 
    Rampage Rapid RASH Raskasammen RBP Real Recaptan Regeldur 
    Reklamtrion Reloaded Rem Rene Rica Rob Ribitas Rike Rima RKK 
-   Robertinho Robi Robocop Rollers Rosajora Rovers Royston Rozle RS 
-   Rüya Rylai Rylal Ryo
+   Robertinho Robi Robocop Rofoi Rollers Rosajora Rovers Royston Rozle 
+   RS Rüya Rylai Rylal Ryo
 
    Sabari Sabina Sabres Saga SAGG Sailor Sakura Sakurai Saladmasters 
    Salokin Salost Salvo Sansouci SANY Sapphire Sara Sargam Sarp SaTu 
@@ -1153,22 +1154,22 @@ my @SINGLE_WORDS = qw(
    Tannlegene Task Taurus Tbone Tefo Tempo Theme Tibetmunkene 
    Tigers Tiglatpalasar Tihkur Tita Titanik Titans Tiz Toar Todremor 
    Tofi Tohundre Tolerant Tollemache Toma Tongxin Topozero Torpedo 
-   Tosca Totani Totoro Tömör TPI Traker Trèfles Triks Troll 
+   Tosca Totani Totoro Tömör TPI Traker Trèfles Triks Triton Troll 
    Trøndermøringen Tsunami Tuason Tulip Tulipano Turuncu Tushar 
    Tusio Tutu Tvist
 
-   UAB Udarnik UFO Ugh Úlfurinn Ulvene Underdogs Unexpected 
+   UAB Udarnik UFO Ugh Úlfurinn Ulvene Underberg Underdogs Unexpected 
    Ungdomslaget Unlu Upplyfting Utkantnorge UTU
 
    Vahakabinetti Vakrandi Valen Valentino Valyo Vanko Varan Varoslu 
    Vasallid Västanfläkten Veegees Vega* Veggen Verder Verons Vibrant 
-   Vicho Vicky Victor Victory Vietcong Viking Villmarksgutta
-   Vilttiketju Vilttiukko Viña Vintage Virginia Vivi Volta Vucko 
+   Vicho Vicky Victor Victory Vietcong Viking Villmarksgutta Vilmar
+   Vilttiketju Vilttiukko Viña Vintage Virginia Vivi Voff Volta Vucko 
    Vulcano Vurgun Vürst Vytas
 
    Wael Wafa Wala Waldi Walpurga Wanghong WBack WBBA WBFIT WBGO WDP 
-   Weiqun Wengens Winatalya Windrunners Winkiboy Winterfell Wizards
-   WLKP Wolf WSWT
+   Weiqun Wengens Winatalya WinBridge Windrunners Winkiboy Winterfell 
+   Wizards WLKP Wolf WSWT
 
    Xatzopoulos XC XFIP Xinhai Xman XMing Xtrouble XXX XXXL XXXSL 
    XXXXXYXY
@@ -1176,8 +1177,9 @@ my @SINGLE_WORDS = qw(
    Ybs YBM Yaðmur Yamata Yansimasiz YeJun Yelena Yildizlar
    Ylajai Yogakshema Yokozuna YSD YYD YYY
 
-   Zabavljaci Zamek Zana Zara Zen Zeyno Zhihaole Ziggy Zimmkonis 
+   Zabavljaci Zamek Zana Zara Zaraz Zen Zeyno Zhihaole Ziggy Zimmkonis 
    Zivac ZKS Zlatan Zmaj Zombi Zorro Zozoura Zugzwang Zurzits Zvanger
+   Zweili
 
    Øssur
 );
