@@ -25,7 +25,6 @@ my @MULTI_WORDS =
   'Air Traffic Management',
   'Aka Maru',
   'Aklindo Musi 88',
-  'Alizee',
   'Alunand Plus',
   'Andrea L.',
   "Archie's",
@@ -411,138 +410,116 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
    1den1e
 
-   AABC ABBK ABBKI ABC Acolvik ACR Aditya Aeras Ahmetizm Akinom 
-   Alertplus Alex Alf Alfredo Ali Alioth Allam Alpha Amrapali Amul 
-   Andrzejki Anna Anni Anol Anuj Apaçý Apek Arangan Arnab Arno 
-   Arunas ASDBB Aslanli Aspe Asya Atrium AUE Augerne Auni Aurora 
-   AUTBUL AUTHOL Avagard Ayan Aytalus Azores Azure
+   AABC ABBK ABBKI ABC Acolvik ACR Aeras Alertplus Alioth Alpha 
+   ASDBB Aslanli Aspe Asya Atrium AUE Augerne Aurora AUTBUL AUTHOL 
+   Avagard Aytalus Azores Azure
 
-   BAB BABK Bacch Bade BAHABAWI Bahaj Baias Bajm Bajozero BAK Balti 
-   Baltic Baneet BARC BARP BAST Bat Batmix Bato Batusida Bauhinia 
-   BBE BBN BBO BCBR Begigütje Begijntje BEIH BELSPA Bem Ben 
-   Beniaminek Berik Beton BHDM Bhide Bhinneka Biachite Bilal BIN 
-   Biriceri BKSE Blandat Blund BMAL BMP BNMR BNS BNT BOC Boek Boriana 
-   Borko Breno Bridgebutikken BRK Buaigh Bubu Busiaki Butler
+   BAB BABK Bacch Bade BAHABAWI Bahaj Baias Bajm Bajozero BAK Balti
+   Baltic BARC BARP BAST Bat Batmix Bato Batusida BBE BBN BBO BCBR
+   Begigütje Begijntje BEIH BELSPA Bem Beton BHDM Bhide Bhinneka
+   Biachite BIN Biriceri BKSE Blandat Blund BMAL BMP BNMR BNS BNT
+   BOC Boek Boriana Borko Bridgebutikken BRK Buaigh Bubu Busiaki Butler
 
-   Cabal Cabriole Calaca Cammello Camrose Canadonia Canukusa Carlitos 
-   Carsi Cask Cathy Catz Cavendish CBLTI Cem Cendrawasih Center Cerkez 
-   Chass Chateau Chime Chiranjeev CHPIK Chuanpit Cité Claudili CMN 
-   Colorado Concurrent Conie Coopers Coor Costantina Couples 
-   Croanglopol Crockfords Crossfatek CS CSTO Czteropak
+   Cabal Cabriole Calaca Cammello Camrose Canadonia Canukusa
+   Carsi Cask Catz Cavendish CBLTI Cendrawasih Center Cerkez
+   Chass Chateau Chime CHPIK Chuanpit Cité CMN Colorado Concurrent
+   Coopers Coor Costantina Couples Croanglopol Crockfords Crossfatek
+   CS CSTO Czteropak
 
-   Dada Dadya Dahsyat Dallas DanEng DanFar Daniel Dash Dauna Dawn 
-   Debonecos DeeJee Defne Demony Demýrbaþ DenmarS Deppo Diana Didi 
-   Dido Diego Dieter Dilligaf Dimmat Dingyuan Dino Dinos Dion DJB 
-   Doki Dora DSM Dukens Duros Dvizhenie 
+   Dallas DanEng DanFar Dash Debonecos DeeJee Defne Demony Demýrbaþ 
+   DenmarS Deppo Dilligaf Dimmat Dingyuan Dino Dinos DJB Doki DSM 
+   Duros Dvizhenie 
 
-   Ece Econ Edi Efsane Egesarpdoruk Eikka Ekenboda Ekoap Elektrownia 
-   Elio Elips Eliza Ellen EMA Emre Engelen Ephesus Epsilon Equator 
-   Era Eren Eric Erikas Erla Ertým ErUS ESA Eses Esesss Esperanza 
-   Ewa
+   Econ Efsane Egesarpdoruk Eikka Ekenboda Ekoap Elektrownia 
+   Elio Elips EMA Engelen Ephesus Epsilon Equator Era Ertým ErUS 
+   ESA Eses Esesss Esperanza 
 
-   Fakel FAM² FAMA Farta Felix Fenia Fenix Ferfi Feszek Fharon Fifi 
-   Fil Filur Flagship FNCC Formosa Fortuna Fortune FOS Foundation 
-   Francest Frank Franz Frieolt Frirond Frusci Fundacja FWK
+   Fakel FAM² FAMA Farta Fenix Ferfi Feszek Fil Filur Flagship 
+   FNCC Formosa Fortuna Fortune FOS Foundation Francest Frieolt 
+   Frirond Frusci Fundacja FWK
 
-   Gabrisem Galim Gambitas Gamma Garry Garp Garuda Gata Gelin George 
+   Gabrisem Galim Gambitas Gamma Garp Garuda Gata Gelin 
    Gewanna Gezi Gibs Gjesp Gkobra GMM Goroco Gosho Göktürk GP 
-   Greecoura Greta GRNC Grup Guayacos Gudok Gulce Gullberg Gullvi 
-   Guptas Gürsel
+   Greecoura GRNC Grup Guayacos Gudok Gullberg Gullvi 
 
-   Hade Hai Hakl Hanan Hande Hansa Harvin Havin HayirlisI Hayet 
-   Hebat Heino Heis Hel Helgeness Hella Hellé Heliopolis HengSha 
-   Hilda Hist HKES Holders Holifera Holport House Hridhaan Hubsi 
-   Hunaja Huispaus 
+   Hade Hai Hakl Hansa HayirlisI Hebat Helgeness Hellé Heliopolis 
+   HengSha Hist HKES Holders Holifera Holport House Huispaus 
 
-   IBBSK IBE Ida Iff Ijseide Ilya IMAN Imanuel IMLUK InFran Iris 
-   Irukangi Ismo Israbel Isrmany ITB Itnoraunz ITS IVAR Iza
+   IBBSK IBE Iff Ijseide IMAN IMLUK InFran Irukangi Ismo Israbel 
+   Isrmany ITB Itnoraunz ITS IVAR Iza
 
-   Jagg Jaiganesh Janko Jans JanTC JAPCAN JAS JASS Jassica Javel 
-   Jaya Jelena Jessi Jessica Jecization JHIC Jinjing Jirin Jiujiu 
-   Jóannes Jonathan Joter Juanval Juls Juniorklubben Juste Justplay 
-   Justyna Justynka Jutek JuuTools
+   JanTC JAPCAN JAS JASS Jassica Javel Jaya Jecization JHIC Jinjing 
+   Jirin Jiujiu Joter Juanval Juls Juniorklubben Juste Justplay 
+   Jutek JuuTools
 
-   Kaardivägi Kagama Kalbar Kalca Kalkarna Kaltim Kamlakars Kamyk 
-   Karaarslan Karin Kark Kasiyahan Kasty Kasuang Katipunan KBA KBC 
-   Kebiya Keni Kenji Kenlong Kerasus Kibe Kinga Kitty Kjelskos
-   Klasik Klio KMC Knösel Kodin Koiraperhe Kokoelma Kolbasti 
+   Kaardivägi Kagama Kalbar Kalca Kalkarna Kaltim Kamyk Karaarslan 
+   Kark Kasty Kasuang Katipunan KBA KBC Kebiya Kenlong Kerasus Kibe 
+   Kjelskos Klasik Klio KMC Knösel Kodin Koiraperhe Kokoelma Kolbasti 
    Komleposs Konga Kordam Korsikalý Kortai Koukouselis KPPM KrASK 
-   Kratos Krem Kris Kriston Krisztina Ksenia KSOS Kuglana Kultur 
-   Kvazar Kwiecisty
+   Kratos Krem Ksenia KSOS Kuglana Kultur Kvazar Kwiecisty
 
-   Lahjattomat LAKT Laleler Lancia Langy Laplas Larry Lasse Lataka 
-   Lateria LatSwe LBC LBSK LCF Lebron Legeanka Lema Lemanus Lenz 
-   Leszek Leta Letve Leveni Lianas Liban Lili Lillebaluba Lipa 
-   Lira Livius Ljónin LNWers Lo Loaknath Lolly Loloc Longzhu 
-   Loreng LOS Lowel Löparn LPMS LXA Lyubcho 
+   Lahjattomat LAKT Laleler Lancia Langy Laplas Lataka Lateria 
+   LatSwe LBC LBSK LCF Legeanka Lema Lemanus Lenz Letve Leveni 
+   Lianas Liban Lillebaluba Lipa Lira Livius Ljónin LNWers Lo 
+   Loaknath Lolly Longzhu Loreng LOS Lowel Löparn LPMS LXA Lyubcho 
 
-   Macak Mach Madhav Mads Magnus Maija Maj Makara Makriköy Mali 
-   Malinka Malmölaget Manashda Manena Manno Mano Manu Manywar Margitta 
-   Marianne Mark Marosamitawa Marynarz Masal Matilde Mats Matujona 
-   Mavi Mavs Mayamira Medik Mer Mesna MGM MGTH Mia Michal Mihai Mikke 
-   Miguel Milo Minut Miro MMRMC Mochu Moki Monaconf Moritz Morot 
-   Mostingan Movember Mölnlycke MPEC MRSMC Munawar Muumio Mýna 
-   Myoni Møremix 
+   Makara Makriköy Malmölaget Marosamitawa Marynarz Masal Matujona 
+   Mavi Mavs Mayamira Medik Mer Mesna MGM MGTH Minut MMRMC Mochu 
+   Moki Monaconf Morot Mostingan Movember Mölnlycke MPEC MRSMC Muumio 
+   Mýna Møremix 
 
-   Nabil NAD Nadide Narbisk Narre Natalia Nathans NBB Necos Neduk 
-   Nessuno Nico Nik Nikita Nikitopoulos Niko Nikos Nikotiimi Nina Nis 
-   Nislije NMRT NoNed Noralia Noriko Norsu NOS Noto NTiosagutta Nula
+   NAD Nadide Narbisk Narre NBB Necos Neduk Nessuno Nikotiimi 
+   Nislije NMRT NoNed Noralia Norsu NOS Noto NTiosagutta Nula
 
-   Obezit OEI Ognisty Oguzhan Oksijen Olena Olimp OMC Omega Omelas 
-   Onirepsou Onnela Onu Oprosti Orakulas OSA Osam OSMO Oto Otta Oyku 
-   Oyzum Ozbiljni
+   Obezit OEI Ognisty Oksijen Olimp OMC Omega Omelas Onnela Onu 
+   Oprosti Orakulas OSA Osam OSMO Oto Otta Oyzum Ozbiljni
 
    Öncü
 
-   Paco Pagonia Pal Palukas Panteros Paoli Pasam Pasanci Passé 
-   Patagonia Paulette Paulina Paulistas PBL PCBA PDC Pennant Perjuangan 
-   Pero Peter Petra Pia Piast Piryoli Piter Pjäxa PKB PKM Pleschi 
+   Pagonia Palukas Panteros Pasam Pasanci Passé Patagonia Paulistas 
+   PBL PCBA PDC Pennant Perjuangan Piast Piryoli Pjäxa PKB PKM Pleschi 
    Pleyada Plia PMC PMS Pojat Polirish Polus Polýsgücü Pompapompa 
    Poss Prapar Prasetya Prijatelj Prim Primabridge Prosan Proto Ptacol 
    PTT Pude Pyon Pyton PZIM 
 
    QLJB Quantum 
 
-   Radeks Radhey Radikk Rafael RAG Raifles Rakinnett RAM Ramkumar RASH 
-   Raskasammen RBP Recaptan Regeldur Rem Rene Rica Rob Ribitas Rike 
-   Rima RKK Robertinho Robi Rofoi Rosajora Royston Rozle RS Rüya 
-   Rylai Rylal Ryo
+   Radeks Radhey Radikk RAG Raifles Rakinnett RAM RASH Raskasammen 
+   RBP Recaptan Regeldur Rem Ribitas RKK Rofoi Rosajora Royston Rozle 
+   RS Rüya Rylai Rylal Ryo
 
-   Sabari Sabina SAGG Salost Salvo Sansouci SANY Sara Sargam Sarp 
-   SaTu Saty Sbamby Sbanda Scapros Schmuckles Scot SDK Selin 
-   Senaattorit Severin Sevil SFG SGG Shan Shane Shankars Shaoshen 
-   Shavaz Sherdils SHHG Shona Shrikant Shuai Shushi Sid Siddheshwar 
-   Sigdonnemann Sigma Sigrid Sihai Silbersee Simonetta Simpleksas 
-   Sindhu SISU Sitespor Sivves Siyabend Skalman Skaronga SKB SKBS 
-   Skotii SKR Þlem Slostria SMBC SMJ SMK SNAP SNP Soba Sober Sobers 
-   Sogn Solo Sonchel Soumitra Spamirs Spandan Spartak Spektr Spin 
-   Spring Srimapuna Srykeir SSBC SSSR Stafani Stagge Starsbridge 
-   STB Stefany Steinars Steinlager Steliana Steve Strata Studentene 
-   StZ St?vel Sucharek Sue SuHuQiaoYou Suz Svetla Swanand SweDanes 
-   SweNor Swest Syabas SYL Syly SYT SZPAK SZPAR Sør 
+   Sabari SAGG Salost Salvo Sansouci SANY Sargam SaTu Saty Sbamby 
+   Sbanda Scapros Schmuckles Scot SDK Senaattorit SFG SGG Shan 
+   Shaoshen Sherdils SHHG Sigdonnemann Sigma Sihai Silbersee 
+   Simpleksas SISU Sitespor Sivves Siyabend Skalman Skaronga SKB 
+   SKBS Skotii SKR Þlem Slostria SMBC SMJ SMK SNAP SNP Soba Sober 
+   Sobers Sogn Solo Sonchel Soumitra Spamirs Spandan Spartak Spektr 
+   Spin Spring Srimapuna Srykeir SSBC SSSR Stafani Stagge Starsbridge 
+   STB Steinars Steinlager Strata Studentene StZ St?vel Sucharek 
+   SuHuQiaoYou SweDanes SweNor Swest Syabas SYL Syly SYT SZPAK 
+   SZPAR Sør 
 
-   TAC Tadeu Take Takk Takým Taksim Tally Tamae Tangra Task Tefo 
-   Tiglatpalasar Tihkur Tita Tiz Toar Todremor Tofi Tollemache 
-   Toma Tongxin Topozero Totani Totoro Tömör TPI Traker Triks Troll 
-   Trøndermøringen Tuason Tulipano Turuncu Tushar Tusio Tvist
+   TAC Take Takk Takým Taksim Tally Tangra Task Tefo Tiglatpalasar 
+   Tihkur Tiz Toar Todremor Tollemache Tongxin Topozero Totani 
+   Totoro Tömör TPI Traker Triks Troll Trøndermøringen Tuason 
+   Tulipano Turuncu Tusio Tvist
 
-   UAB Udarnik Úlfurinn Underberg Unlu UTU
+   UAB Udarnik Úlfurinn Underberg UTU
 
-   Vahakabinetti Vakrandi Valen Valentino Valyo Vanko Varan Varoslu 
-   Vasallid Västanfläkten Veegees Vega* Veggen Verder Verons 
-   Vicho Vicky Victor Vilmar Vilttiketju Vilttiukko Viña Virginia 
-   Vivi Voff Volta Vucko Vurgun Vürst Vytas
+   Vahakabinetti Vakrandi Valen Valyo Vanko Varan Varoslu Vasallid 
+   Västanfläkten Veegees Vega* Veggen Verder Verons Vicho Vilmar 
+   Vilttiketju Vilttiukko Viña Voff Volta Vucko Vurgun Vürst Vytas
 
-   Wael Wafa Wala Waldi Wanghong WBack WBBA WBFIT WBGO WDP 
-   Weiqun Wengens Winatalya WinBridge Winterfell WLKP Wolf WSWT
+   Wanghong WBack WBBA WBFIT WBGO WDP Weiqun Wengens Winatalya 
+   WinBridge Winterfell WLKP Wolf WSWT
 
    Xatzopoulos XC XFIP Xinhai XMing 
 
-   Ybs YBM Yaðmur Yamata Yansimasiz YeJun Yelena Yildizlar
-   Ylajai Yogakshema Yokozuna YSD YYD YYY
+   Ybs YBM Yaðmur Yamata Yansimasiz YeJun Yildizlar Yogakshema 
+   Yokozuna YSD YYD YYY
 
-   Zabavljaci Zamek Zana Zara Zaraz Zen Zeyno Zhihaole Ziggy Zimmkonis 
-   Zivac ZKS Zlatan Zmaj Zozoura Zurzits Zvanger Zweili
+   Zabavljaci Zamek Zana Zaraz Zeyno Zhihaole Zimmkonis Zivac 
+   ZKS Zmaj Zozoura Zurzits Zvanger Zweili
 
    Øssur
 );
@@ -550,13 +527,10 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   Acolvik => ['acolvick'],
-  Aditya => ['aaditya'],
-  Alizee => ['alize'],
   'Alunand Plus' => ['alunand'],
   Ambassador => ['ambassadors', 'ambassdor'],
 
   Bhinneka => ['bhineka', 'bhinneke'],
-  Bilal => ['balil'],
   Boriana => ['boryana'],
   Buaigh => ['buaijh'],
 
@@ -565,20 +539,14 @@ my %SINGLE_TYPOS =
 
   Eikka => ['eikkaa'],
   'El Gezira' => ['elgezira'],
-  Erikas => ['ericas'],
 
   Feszek => ['Fészek'],
 
   Gelin => ['gelýn'],
   Göktürk => ['gokturk'],
 
-  Hridhaan => ['hridhan', 'haridhaan', 'hrridhaan', 'hrridhaan',
-    'hridaan'],
   'HZ Connection' => ['hzconnection'],
 
-  Imanuel => ['imanual'],
-
-  Jonathan => ['joanthan'],
   Juls => ['julst'],
 
   Kibe => ['kýbe'],
@@ -592,7 +560,6 @@ my %SINGLE_TYPOS =
 
   'Meng Qing Xin' => ['mengqingxin'],
 
-  Natalia => ['nataliya'],
   'Nav Chaitanya' => ['navchaitanya'],
 
   Pagonia => ['pagonya'],
@@ -608,7 +575,6 @@ my %SINGLE_TYPOS =
 
   'Sarunta Toar' => ['sarunta'],
   'Sham Sharma' => ['shamsharma'],
-  Shrikant => ['srikant'],
   Sigdonnemann => ['sigdonneman'],
   Skotii => ['skoti'],
   Soumitra => ['soumtra'],
