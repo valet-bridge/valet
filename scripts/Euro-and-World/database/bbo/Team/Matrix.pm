@@ -63,7 +63,7 @@ my %COUNTRY_TO_REGION =
   Russia => ['siberia'],
   Scotland => ['ayrshire'],
   Serbia => ['vojvodina'],
-  Singapore => ['tengah', 'Tyco', 'YOU Singapore'],
+  Singapore => ['tengah'],
   'South Africa' => ['central gauteng', 'eastern cape',
     'kwazulu natal', 'northern gauteng', 'western province'],
   'South Korea' => ['silla'],
@@ -134,6 +134,7 @@ my %COUNTRY_TO_CITY =
     'potsdam', 'saarbrücken', 'stuttgart'],
   Greece => ['athens', 'nea moudania', 'thessaloniki'],
   Hungary => ['budapest', 'gyor', 'nagykanizsa', 'pecs', 'szeged'],
+  Iceland => ['reykjavik'],
   India => [
     'ahmedabad', 'allahabad', 'ambon', 'bangalore', 'bansi', 'bhilwara', 
     'bhubaneshwar', 'bikaner', 'chennai', 'dombivli', 'kalyani', 
@@ -155,12 +156,11 @@ my %COUNTRY_TO_CITY =
     'thane', 'thanjavur', 'tomohon', 'yogyakarta'],
   Iraq => ['baghdad'],
   Italy => [
-    'bologna', 'catania', 'cuneo', 'fabbriche', 'firenze', 'genoa',
-    'lucignano', 'milan', 'monticiano', 'napoli', 'padova', 'palermo', 
-    'pesaro',
-    'pescara', 'pisa', 'reggio emilia', 'rimini', 'rome', 
-    'salerno', 'san giorgio del sannio', 'siena', 'torino', 'trieste',
-    'varese'],
+    'bologna', 'catania', 'cuneo', 'firenze', 'genoa', 'lucignano', 
+    'milan', 'monticiano', 'napoli', 'padova', 'palermo', 'pesaro',
+    'pescara', 'pisa', 'reggio emilia', 'rimini', 'rome', 'salerno', 
+    'san giorgio del sannio', 'siena', 'torino', 'trieste',
+    'varese', 'villa fabbriche'],
   Japan => ['narita', 'takayama', 'tokyo', 'yokohama'],
   Kazakhstan => ['aral'],
   Latvia => ['riga'],
@@ -596,6 +596,7 @@ my %CITY_TO_CLUB =
   Søborg => ['Blakset Klubberne'],
   Tekýrdag => ['Cerkezkoy Dinamik BSK', 'Kapakli Sýte', 'Tekirdað Club'],
   'Tel Aviv' => ['ASA University of Tel Aviv'],
+  Tomohon => ['Sekolah Bridge Tonaas Wangko'],
   Tonya => ['Tonyaspor'],
   Torino => ['Torino Allegra'],
   Tours => ['Cercle Tourangeau'],
@@ -760,6 +761,7 @@ my %COUNTRY_TO_SPONSOR =
     'Samtronic Constanta'],
   Russia => ['Gazprom', 'Lukomorie', 'Staryi Master'],
   Serbia => ['Novi Kod'],
+  Singapore => ['Tyco', 'YOU Singapore'],
   Slovenia => ['Triglav Osiguranje'],
   Sweden => ['artotec', 'Bokadirekt SE', 'Brink Plast',
     'BridgeBertheau.com', 'Frissan', 'Hotell Strand', 'Konga-Väster',
@@ -781,8 +783,6 @@ my %COUNTRY_TO_SPONSOR =
 
 sub set_matrix
 {
-  my ($key) = @_;
-
   TeamBBO::set_link_matrix(\%COUNTRY_TO_REGION, 
     'TEAM_COUNTRY', 'TEAM_REGION');
   TeamBBO::set_link_matrix(\%COUNTRY_TO_CITY, 

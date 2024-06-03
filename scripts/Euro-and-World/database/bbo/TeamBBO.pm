@@ -146,7 +146,7 @@ sub set_link_matrix
   {
     for my $entry (@{$link->{$key}})
     {
-      $mlink->{$entry} = $key;
+      $mlink->{lc($entry)} = $key;
     }
   }
 }
@@ -204,6 +204,66 @@ sub set_overall_hashes
         { CATEGORY => $key, VALUE => $single };
     }
   }
+}
+
+
+sub check_consistency_pair
+{
+  my ($text, $bbono, $record, $from, $to) = @_;
+
+  if (exists $record->{$from})
+  {
+    if (exists $record->{$to})
+    {
+      my $c = $MATRIX{$from}{$to}{lc($record->{$from})};
+      if (! defined $c)
+      {
+        print "$bbono, $text, $to: ",
+          "$record->{$from} not in matrix ($from, $to)\n";
+      }
+      elsif ($c ne $record->{$to})
+      {
+        print "$bbono, $text, $to: ",
+          "$record->{$to} vs $c\n";
+      }
+    }
+  }
+}
+
+
+sub check_consistency
+{
+  my ($text, $chain, $bbono) = @_;
+
+  my %record;
+  for my $i (0 .. $chain->last())
+  {
+    my $token = $chain->check_out($i);
+    my $field = $token->field();
+    my $val = $token->value();
+
+    if (! exists $record{$field})
+    {
+      $record{$field} = $val;
+    }
+    elsif ($record{$field} ne $val)
+    {
+      print "$bbono, $text, $i: $record{$field} vs $val\n";
+    }
+  }
+
+  check_consistency_pair($text, $bbono, \%record,
+    'TEAM_REGION', 'TEAM_COUNTRY');
+  check_consistency_pair($text, $bbono, \%record,
+    'TEAM_CITY', 'TEAM_COUNTRY');
+  check_consistency_pair($text, $bbono, \%record,
+    'TEAM_QUARTER', 'TEAM_CITY');
+  check_consistency_pair($text, $bbono, \%record,
+    'TEAM_UNIVERSITY', 'TEAM_CITY');
+  check_consistency_pair($text, $bbono, \%record,
+    'TEAM_CLUB', 'TEAM_CITY');
+  check_consistency_pair($text, $bbono, \%record,
+    'TEAM_SPONSOR', 'TEAM_COUNTRY');
 }
 
 
@@ -451,6 +511,7 @@ sub split_on_multi
         # Optimize for this frequent special case.
         if (exists $MULTI_WORDS{$tag}{lc($a[0])})
         {
+          $parts->[$i] = $MULTI_WORDS{$tag}{lc($a[0])};
           $tags->[$i] = $tag;
           # my $w = $MULTI_WORDS{$tag}{lc($a[0])};
           # $MULTI_HITS{$tag}{lc($a[0])}++;
@@ -466,6 +527,7 @@ sub split_on_multi
         {
           if (exists $MULTI_WORDS{$tag}{lc($parts->[$j])})
           {
+            $parts->[$j] = $MULTI_WORDS{$tag}{lc($parts->[$j])};
             $tags->[$j] = $tag;
             # my $w = $MULTI_WORDS{$tag}{lc($parts->[$j])};
             # $MULTI_HITS{$tag}{lc($parts->[$j])}++;
@@ -590,6 +652,9 @@ sub study_teams
 
   study_team($result->{TEAM1}, $chain1, $bbono);
   study_team($result->{TEAM2}, $chain2, $bbono);
+
+  check_consistency($result->{TEAM1}, $chain1, $bbono);
+  check_consistency($result->{TEAM2}, $chain2, $bbono);
 }
 
 

@@ -239,7 +239,7 @@ my %MULTI_TYPOS =
   'Balai Pelaksanaan Jalan Nasional' => ['bpjn xi'],
   'Batman Genclik' => ['batman gençlýk'],
   'Bergen Akademiske' => ['bergen ak', 'bergen akad', 'bergen akadem',
-    'bergen abk', 'begen ak'],
+    'bergen akademisk', 'bergen abk', 'begen ak'],
   Besiktas => ['besiktas jk'],
   'Blakset Klubberne' => ['blakset-klubberne'],
   'BC Bamberger Reiter' => ['bc bamberg', 'bamberger reiter',
