@@ -305,54 +305,6 @@ my %CITY_TO_QUARTER =
 );
 
 
-# Redundant.
-my %COUNTRY_TO_QUARTER =
-(
-  Argentina => ['recoleta'],
-  Belgium => ['uccle'],
-  Brazil => ['unaós'],
-  Bulgaria => ['albena', 'avren', 'beroe', 'kaylaka', 'lozenets',
-    'serdika', 'sredec'],
-  'Czech Republic' => ['radkov'],
-  China => ['pudong', 'qiaoxie', 'shihua', 'taihu', 'tianya',
-    'yizhuang', 'yuquan', 'zhujiang'],
-  Colombia => ['tequendama'],
-  Cyprus => ['katok'],
-  Egypt => ['maadi'],
-  England => ['chelsea', 'chislehurst'],
-  Estonia => ['männiku'],
-  Finland => ['lappee'],
-  France => ['baragnon', 'brotteaux', 'courseulles'],
-  Germany => ['freidorf'],
-  Greece => ['lemvourgeio', 'moudania'],
-  India => ['amanora', 'borivli'],
-  Indonesia => ['arjasa', 'cemara', 'leilem', 'losari', 'makaliwe',
-    'manahasa', 'poncol', 'senayan', 'simal', 'sukomoro', 'sumedang',
-    'tambun', 'wadas'],
-  Iraq => ['akkad'],
-  Italy => ['olgiata', 'parioli', 'piloni'],
-  Mexico => ['perula'],
-  Netherlands => ['buitenhof'],
-  'North Macedonia' => ['mrzenci'],
-  Norway => ['ridabu'],
-  Poland => ['bieniewo', 'korwin', 'sarniak', 'slaska', 'unia',
-    'wratislavia', 'wroble'],
-  Serbia => ['niski'],
-  Singapore => ['tengah'],
-  Spain => ['sabadel'],
-  Sweden => ['varbergshus'],
-  Thailand => ['jomtien'],
-  Turkey => ['akçeşme', 'atakoy', 'bahce', 'bahcesehir', 'balcova',
-    'bayrampaþa', 'bogazici', 'bormali', 'bornova', 'bozdogan', 'buca',
-    'çayyolu', 'ege', 'esenkent', 'fatih', 'gundogan', 'kadikoy',
-    'karaçay', 'kardelen', 'karsiyaka', 'kartal', 'kocamustafapasa', 
-    'konak', 'kucukcekmece', 'küp', 'meski', 'muratpasa', 'narlidere',
-    'pamukkale', 'pasham', 'pinarbasi', 'polonezkoy', 'sansar',
-    'sirinyer', 'suleymanpasa', 'suralaya', 'taskopru', 'viþnelik',
-    'yalikavak', 'yarimada', 'yarýmca', 'yenisehir', 'yildirim']
-);
-
-
 my %CITY_TO_UNIVERSITY =
 (
   Airmadidi => ['Airmadidi Senior High School'],
