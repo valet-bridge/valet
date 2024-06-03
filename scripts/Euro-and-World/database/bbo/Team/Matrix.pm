@@ -15,6 +15,71 @@ use lib '.';
 use TeamBBO;
 
 
+my %COUNTRY_TO_REGION =
+(
+  Australia => ['australian central territory', 'new south wales',
+    'northern territory', 'queensland', 'south australia', 
+    'tasmania', 'victoria', 'western australia'],
+  Austria => ['oberloiben'],
+  Belarus => ['druts'],
+  China => ['anhui', 'fukien', 'gansu', 'guangdong', 'guangxi',
+    'guizhou', 'hainan', 'haixing', 'hebei', 'hunan', 'jiangsu',
+    'jilin', 'liaoning', 'pearl river', 'ren shou', 'shanxi', 
+    'sichuan', 'taihu lake', 'tianya', 'tinglin', 'wujin', 'yongjia',
+    'yunnan', 'zhejiang'],
+  Colombia => ['tequendama'],
+  Denmark => ['bornholm', 'midtsjælland', 'sydvest'],
+  France => ['corsica', 'new caledonia'],
+  Iceland => ['eyjafjallajokull'],
+  Hungary => ['hegyvidék'],
+  India => ['bihar', 'ganges', 'goa', 'gujarat', 'jharkhand',
+    'karnataka', 'kerala', 'madhya pradesh', 'maharashtra', 'nagbagan', 
+    'punjab', 'rajasthan', 'rajputana', 'tamil nadu', 'uttar pradesh', 
+    'uttarakhand', 'west bengal'],
+  Indonesia => ['bali', 'banten', 'bekasi regency', 'belitung',
+    'bengkayang', 'bisma semarang', 'boeven digoel', 'bogor regency', 
+    'bone bolango', 'bungo', 'central celebes', 'central java', 
+    'central sulawesi', 'cianjur regency', 'east borneo', 'east jakarta', 
+    'east java', 'east kalimantan', 'gabungan malaku', 'garut regency', 
+    'gorontalo', 'java bali', 'karimun', 'kawanua', 'kayong',
+    'kedungwaru', 'kepri', 'kepulauan riau', 'kutai kartanegara', 
+    'lampung', 'lebak', 'lombok', 'lumajang', 'malaku', 'minahasa',
+    'north minahasa', 'north celebes', 'north sulawesi', 
+    'nusa tenggara barat', 'nusantara', 'papua', 'porong', 'sintang',
+    'south celebes', 'south east celebes', 'south jakarta',
+    'south kalimantan', 'south sulawesi', 'south sumatra', 'tambun',
+    'west borneo', 'west java', 'west kalimantan', 'west sumatra'],
+  Iraq => ['akkad'],
+  Italy => ['liguria', 'val di magra'],
+  Japan => ['kansai'],
+  'New Zealand' => ['central districts', 'otago', 'southland', 'waikato'],
+  Norway => ['agder', 'buskerud', 'haugaland', 'midt trøndelag', 
+    'mjøsa', 'møre romsdal', 'nord-norge omegn', 'nordafjells', 
+    'rogaland', 'rosfjord', 'salten', 'telemark', 'troms og ofoten', 
+    'vest agder', 'vest finnmark', 'østfold follo'],
+  Pakistan => ['sindh'],
+  Poland => ['lower silesia', 'silesia', 'slask'],
+  Portugal => ['norte ilhas'],
+  Russia => ['siberia'],
+  Scotland => ['ayrshire'],
+  Serbia => ['vojvodina'],
+  Singapore => ['tengah', 'Tyco', 'YOU Singapore'],
+  'South Africa' => ['central gauteng', 'eastern cape',
+    'kwazulu natal', 'northern gauteng', 'western province'],
+  'South Korea' => ['silla'],
+  Sweden => ['norrland', 'norrorts', 'skåne', 'south sweden'],
+  Taiwan => ['west district'],
+  Thailand => ['krabi', 'nakhon nayok', 'ratchaburi', 'samut prakan', 
+    'samut sakhon', 'suphan buri'],
+  Turkey => ['akdeniz', 'cappadocia', 'central anatolia', 'dersým',
+    'hatay', 'kinali', 'marmara', 'muallim', 'munzur', 'mysia',
+    'orontes', 'taskopru', 'tigris', 'tuncelý'],
+  USA => ['Bridge Winners', 'district of columbia', 'florida',
+    'PRI Investment'],
+  Zimbabwe => ['matopos']
+);
+
+
 my %COUNTRY_TO_CITY =
 (
   Argentina => ['buenos aires', 'san luis'],
@@ -133,7 +198,7 @@ my %COUNTRY_TO_CITY =
   Slovenia => ['ljubljana'],
   Spain => ['barcelona', 'begues', 'cuenca', 'madrid', 'marbella',
     'palma', 'sabadell'],
-  South Africa => ['durban'],
+  'South Africa' => ['durban'],
   Sweden => [
     'bromölla', 'gnesta', 'harplinge', 'lerum', 'malmö', 'näsby', 
     'norrbyskär', 'norrøna', 'storsjöbygden', 'stureby', 'skara', 
@@ -285,71 +350,6 @@ my %COUNTRY_TO_QUARTER =
     'pamukkale', 'pasham', 'pinarbasi', 'polonezkoy', 'sansar',
     'sirinyer', 'suleymanpasa', 'suralaya', 'taskopru', 'viþnelik',
     'yalikavak', 'yarimada', 'yarýmca', 'yenisehir', 'yildirim']
-);
-
-
-my %COUNTRY_TO_REGION =
-(
-  Australia => ['australian central territory', 'new south wales',
-    'northern territory', 'queensland', 'south australia', 
-    'tasmania', 'victoria', 'western australia'],
-  Austria => ['oberloiben'],
-  Belarus => ['druts'],
-  China => ['anhui', 'fukien', 'gansu', 'guangdong', 'guangxi',
-    'guizhou', 'hainan', 'haixing', 'hebei', 'hunan', 'jiangsu',
-    'jilin', 'liaoning', 'pearl river', 'ren shou', 'shanxi', 
-    'sichuan', 'taihu lake', 'tianya', 'tinglin', 'wujin', 'yongjia',
-    'yunnan', 'zhejiang'],
-  Colombia => ['tequendama'],
-  Denmark => ['bornholm', 'midtsjælland', 'sydvest'],
-  France => ['corsica', 'new caledonia'],
-  Iceland => ['eyjafjallajokull'],
-  Hungary => ['hegyvidék'],
-  India => ['bihar', 'ganges', 'goa', 'gujarat', 'jharkhand',
-    'karnataka', 'kerala', 'madhya pradesh', 'maharashtra', 'nagbagan', 
-    'punjab', 'rajasthan', 'rajputana', 'tamil nadu', 'uttar pradesh', 
-    'uttarakhand', 'west bengal'],
-  Indonesia => ['bali', 'banten', 'bekasi regency', 'belitung',
-    'bengkayang', 'bisma semarang', 'boeven digoel', 'bogor regency', 
-    'bone bolango', 'bungo', 'central celebes', 'central java', 
-    'central sulawesi', 'cianjur regency', 'east borneo', 'east jakarta', 
-    'east java', 'east kalimantan', 'gabungan malaku', 'garut regency', 
-    'gorontalo', 'java bali', 'karimun', 'kawanua', 'kayong',
-    'kedungwaru', 'kepri', 'kepulauan riau', 'kutai kartanegara', 
-    'lampung', 'lebak', 'lombok', 'lumajang', 'malaku', 'minahasa',
-    'north minahasa', 'north celebes', 'north sulawesi', 
-    'nusa tenggara barat', 'nusantara', 'papua', 'porong', 'sintang',
-    'south celebes', 'south east celebes', 'south jakarta',
-    'south kalimantan', 'south sulawesi', 'south sumatra', 'tambun',
-    'west borneo', 'west java', 'west kalimantan', 'west sumatra'],
-  Iraq => ['akkad'],
-  Italy => ['liguria', 'val di magra'],
-  Japan => ['kansai'],
-  'New Zealand' => ['central districts', 'otago', 'southland', 'waikato'],
-  Norway => ['agder', 'buskerud', 'haugaland', 'midt trøndelag', 
-    'mjøsa', 'møre romsdal', 'nord-norge omegn', 'nordafjells', 
-    'rogaland', 'rosfjord', 'salten', 'telemark', 'troms og ofoten', 
-    'vest agder', 'vest finnmark', 'østfold follo'],
-  Pakistan => ['sindh'],
-  Poland => ['lower silesia', 'silesia', 'slask'],
-  Portugal => ['norte ilhas'],
-  Russia => ['siberia'],
-  Scotland => ['ayrshire'],
-  Serbia => ['vojvodina'],
-  Singapore => ['tengah', 'Tyco', 'YOU Singapore'],
-  'South Africa' => ['central gauteng', 'eastern cape',
-    'kwazulu natal', 'northern gauteng', 'western province'],
-  'South Korea' => ['silla'],
-  Sweden => ['norrland', 'norrorts', 'skåne', 'south sweden'],
-  Taiwan => ['west district'],
-  Thailand => ['krabi', 'nakhon nayok', 'ratchaburi', 'samut prakan', 
-    'samut sakhon', 'suphan buri'],
-  Turkey => ['akdeniz', 'cappadocia', 'central anatolia', 'dersým',
-    'hatay', 'kinali', 'marmara', 'muallim', 'munzur', 'mysia',
-    'orontes', 'taskopru', 'tigris', 'tuncelý'],
-  USA => ['Bridge Winners', 'district of columbia', 'florida',
-    'PRI Investment'],
-  Zimbabwe => ['matopos']
 );
 
 
@@ -615,7 +615,7 @@ my %CITY_TO_CLUB =
   Ålesund => ['BK Grand', 'Møre og Romsdal']
 );
 
-my %SPONSOR_TO_COUNTRY =
+my %COUNTRY_TO_SPONSOR =
 (
   Australia => ['Derofe', 'Penline'],
   Austria => ['Lupo Veloce'],
@@ -783,9 +783,18 @@ sub set_matrix
 {
   my ($key) = @_;
 
-  TeamBBO::set_matrix(\%COUNTRY_TO_REGION, 'TEAM_COUNTRY', 'TEAM_REGION');
-  TeamBBO::set_matrix(\%COUNTRY_TO_CITY, 'TEAM_COUNTRY', 'TEAM_CITY');
-  TeamBBO::set_matrix(\%CITY_TO_QUARTER, 'TEAM_CITY', 'TEAM_QUARTER');
+  TeamBBO::set_link_matrix(\%COUNTRY_TO_REGION, 
+    'TEAM_COUNTRY', 'TEAM_REGION');
+  TeamBBO::set_link_matrix(\%COUNTRY_TO_CITY, 
+    'TEAM_COUNTRY', 'TEAM_CITY');
+  TeamBBO::set_link_matrix(\%CITY_TO_QUARTER, 
+    'TEAM_CITY', 'TEAM_QUARTER');
+  TeamBBO::set_link_matrix(\%CITY_TO_UNIVERSITY, 
+    'TEAM_CITY', 'TEAM_UNIVERSITY');
+  TeamBBO::set_link_matrix(\%CITY_TO_CLUB, 
+    'TEAM_CITY', 'TEAM_CLUB');
+  TeamBBO::set_link_matrix(\%COUNTRY_TO_SPONSOR, 
+    'TEAM_COUNTRY', 'TEAM_SPONSOR');
 }
 
 1;

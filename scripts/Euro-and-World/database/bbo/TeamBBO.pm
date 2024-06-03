@@ -47,6 +47,8 @@ use Team::Scoring;
 use Team::Form;
 use Team::Destroy;
 
+use Team::Matrix;
+
 my @TAG_ORDER = qw(
   TEAM_FUN 
   TEAM_FIRST 
@@ -77,6 +79,9 @@ my (%MULTI_HITS);
 
 my $CITIES_NAME = "../../../../../../bboD/../../cities/cities.txt";
 my (%CITIES, %CITIES_LC);
+
+# Links between different tags, e.g. club to city.
+my %MATRIX;
 
 
 sub read_cities
@@ -126,6 +131,24 @@ sub init_hashes
   set_hashes_team_scoring('TEAM_SCORING');
   set_hashes_team_form('TEAM_FORM');
   set_hashes_team_destroy('TEAM_DESTROY');
+
+  set_matrix();
+}
+
+
+sub set_link_matrix
+{
+  # 'to' might be TEAM_COUNTRY, 'from' might be TEAM_REGION.
+  my ($link, $to, $from) = @_;
+
+  my $mlink = \%{$MATRIX{$from}{$to}};
+  for my $key (keys %$link)
+  {
+    for my $entry (@{$link->{$key}})
+    {
+      $mlink->{$entry} = $key;
+    }
+  }
 }
 
 

@@ -1,12 +1,21 @@
-2024-05-27
+2024-06-03
+
+Matrix checks:
+# Every city -> fixed city must have a country
+# Every quarter -> quarter must have a city
+# Region -> country
+# University -> city
+# Club -> city
+# Sponsor -> country
+
+Effectively flatten each chain: No conflict, consistent duplication
+(Probably some tags occur several times and that's OK?)
+
 Look at the Team chains for plausibility
+
 Split on destroy
 Split but don't destroy on form, gender, age
 Lone numeral goes
 
 Reductions:
 - City + Abbr could be club, etc.
-
-
-Reduce to country:
-Org
