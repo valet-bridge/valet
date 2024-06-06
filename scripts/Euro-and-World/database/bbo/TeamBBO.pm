@@ -48,6 +48,7 @@ use Team::Form;
 use Team::Destroy;
 
 use Team::Matrix;
+use Team::Repeats;
 
 my @TAG_ORDER = qw(
   TEAM_FUN 
@@ -82,6 +83,9 @@ my (%CITIES, %CITIES_LC);
 
 # Links between different tags, e.g. club to city.
 my %MATRIX;
+
+# BBOVG numbers for which repeated, but different fields are OK.
+my %REPEATS;
 
 
 sub read_cities
@@ -133,6 +137,7 @@ sub init_hashes
   set_hashes_team_destroy('TEAM_DESTROY');
 
   set_matrix();
+  set_repeats(\%REPEATS);
 }
 
 
@@ -235,6 +240,19 @@ sub check_consistency
 {
   my ($text, $chain, $bbono) = @_;
 
+  return if exists $REPEATS{$bbono};
+
+  if ($chain->last() == 1 &&
+      $chain->check_out(0)->field() eq $chain->check_out(1)->field())
+  {
+    # TODO Probably generalize: Split chains on DESTROY.
+    if ($chain->check_out(0)->field() eq 'NUMERAL' ||
+        $chain->check_out(0)->field() eq 'TEAM_DESTROY')
+    {
+      return;
+    }
+  }
+
   my %record;
   for my $i (0 .. $chain->last())
   {
@@ -248,7 +266,7 @@ sub check_consistency
     }
     elsif ($record{$field} ne $val)
     {
-      print "$bbono, $text, $i: $record{$field} vs $val\n";
+      print "$bbono, $text, $field: $record{$field} vs $val\n";
     }
   }
 

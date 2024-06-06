@@ -184,6 +184,7 @@ my @MULTI_WORDS =
   'Kasper Konow',
   'Ken Ford',
   'Knud Harries',
+  'Koch-Palmund',
   'Kristian Tylvad',
   'Krzysztof Strykier',
   'Kumar Vijay Anand',
@@ -392,7 +393,8 @@ my %MULTI_TYPOS =
   'Carlos Gonçalves' => ['carlos goncalves', 'c goncalves',
     'carlos gonçalve', 'carlos gonçalv'],
   'Choo Wai Wong' => ['int choowai'],
-  'Christal Henner-Welland' => ['welland-h', 'henner-we'],
+  'Christal Henner-Welland' => ['welland-h', 'henner-we',
+    'henner-welland'],
   Cladius => ['dr. cladius'],
   'David Birman' => ['birman david', 'birman d'],
   'de Botton' => ['janet de botton', 'j de botton',
@@ -752,7 +754,7 @@ my @SINGLE_WORDS = qw(
   Ozarar Ozbey Ozdil Ozenir Ozge Ozlen Ozsahin Ozturk Östberg Özbey
 
   Pacareu Pacault Pacini Paganus Paiva Pajak Paladino Palau 
-  Palmeira Palmer Palmund Pals Panagaki Panto Panopoulos Papahatzis 
+  Palmeira Palmer Pals Panagaki Panto Panopoulos Papahatzis 
   Papakyriakopoulos Papaxatzis Parker Partearroyo Parviainen Pasquarè
   Passarinho Passaro Passell Pastore Pattinson Pattison Paulissen 
   Pauncz Pavlicek Payen Pazur Peake Pedzinski Peirão Pekkinen Peksen 

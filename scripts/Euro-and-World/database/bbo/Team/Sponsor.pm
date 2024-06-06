@@ -427,7 +427,7 @@ my %MULTI_TYPOS =
   'Garðs Apotek' => ['garðs apótek', 'garðs apoótek', 'garps apótek'],
   'Geely Automobile' => ['geely auto', 'gely auto', 'chaina geely',
     'china geely', 'jili', 'china geely auto', 'jili qiche', 'ji li'],
-  'Geo Timah' => ['geo tima'],
+  'Geo Timah' => ['geo tima', 'geologi timah'],
   Geologi => ['badan geologi', 'geo coal', 'geo tanito harum'],
   'Geologi Banpu' => ['geo banpu'],
   'Gong Hang Jin Ying' => ['gonghang jinying', 'jin ying club',

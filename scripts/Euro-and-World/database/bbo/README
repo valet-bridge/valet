@@ -1,12 +1,6 @@
 2024-06-03
 
-Matrix checks:
-# Every city -> fixed city must have a country
-# Every quarter -> quarter must have a city
-# Region -> country
-# University -> city
-# Club -> city
-# Sponsor -> country
+TEAM_ABBR: Bridge Club + Sporting Club = Sporting Club
 
 Effectively flatten each chain: No conflict, consistent duplication
 (Probably some tags occur several times and that's OK?)

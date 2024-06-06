@@ -18,6 +18,7 @@ my @MULTI_WORDS =
 (
   '0% Eriksson',
   '1 1/2',
+  '1-2-1',
   '2 Generations',
   '2 over 1',
   '246.5 Meters',
@@ -97,6 +98,7 @@ my @MULTI_WORDS =
   'Boas disipler',
   'Bob Bob',
   'Boogie Knights',
+  'Boro Boss',
   'Boye B Fan Club',
   "Boys'n' Girls",
   'Brian Is Beautiful',

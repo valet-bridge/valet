@@ -35,7 +35,7 @@ my @SINGLE_WORDS = qw(
   Ege Esenkent
   Fatih
   Gundogan
-  Huochetou
+  Heimdal Huochetou
   Jarville Jomtien
   Kadikoy Karaçay Kardelen Kartal Karsiyaka Katok Kaylaka
   Kocamustafapasa Konak Korwin Kucukcekmece Küp
@@ -45,7 +45,7 @@ my @SINGLE_WORDS = qw(
   Olgiata
   Pamukkale Parioli Piloni Pinarbasi Polonezkoy Poncol Pudong
   Qiaoxie
-  Pasham
+  Palaiseau Pasham
   Radkov Recoleta Ridabu
   Sabadel Sansar Sarniak Senayan Serdika Shihua Simal Sirinyer
   Slaska Sredec Sukomoro Suleymanpasa Suralaya

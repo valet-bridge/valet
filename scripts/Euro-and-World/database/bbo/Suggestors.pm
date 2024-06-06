@@ -89,6 +89,34 @@ sub suggest_form
     $form_scores->{neutral}++;
     return 1;
   }
+  elsif ($text =~ /^Pair/ || $text =~ /^Team/)
+  {
+    my @a = grep { $_ ne '' } split(/[\s\+\/\-]/, $text);
+    my $tag;
+    if ($a[0] eq 'Pair' || $a[0] eq 'PairNo' || $a[0] eq 'Pairs')
+    {
+      $tag = 'pairs';
+    }
+    elsif ($a[0] eq 'Team')
+    {
+      $tag = 'teams';
+    }
+    else
+    {
+      return 0;
+    }
+
+    for my $i (1 .. $#a)
+    {
+      my $e = $a[$i];
+      next if $e =~ /^\d+$/ || $e =~ /^\d+th$/;
+      next if $e eq 'nr' || $e eq 'Rank';
+      return 0;
+    }
+
+    $form_scores->{$tag}++;
+    return 1;
+  }
   else
   {
     return 0;

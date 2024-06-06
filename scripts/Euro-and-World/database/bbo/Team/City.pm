@@ -78,6 +78,7 @@ my %MULTI_TYPOS =
   Aceh => ['di aceh'],
   Akhisar => ['akhisar belediyesi'],
   'Al-Rabwa' => ['rl-rabwa'],
+  Banjarmasin => ['ksa banjarmasin'],
   'City of Helsinki' => ['helsinki'],
   Diyarbakir => ['d.baki b.þ', 'd.bakir b.þ.', 'd.bakir y.þehýr', 
     'd.bakir yenýþehýr', 'd.bakýr b.þehir', 'd.bakir sur', 
@@ -137,7 +138,7 @@ my @SINGLE_WORDS = qw(
   Gdansk Gdynia Genoa Gent Gevgelija Geyve Gnesta Gorzow Gölcük Gresik 
   Guangzhou Guayaquil Gudbrandsdal Gyor
 
-  Haderslev Hamar Hamburg Hangzhou Hannover Harplinge Hatay Heimdal 
+  Haderslev Hamar Hamburg Hangzhou Hannover Harplinge Hatay 
   Heledia Helsinki Herning Hillerød Hordaland Hornbæk Hsinchu 
   Huldretråkket 
 
@@ -168,7 +169,7 @@ my @SINGLE_WORDS = qw(
   Odense Ogndal Oldenburg Olsztyn Orhangazi Oslo Ottadalen Otepää 
   Oxford Överum
 
-  Padang Padova Paimado Palaiseau Palembang Palermo Palma Palu Pancevo 
+  Padang Padova Paimado Palembang Palermo Palma Palu Pancevo 
   Panzhihua Pariaman Paris Pärnu Pattaya Pecs Pekanbaru Pelotas 
   Penajam Pernik Perth Perula Pesaro Pescara Petersfield Pisa Pleven 
   Plovdiv Pontianak Popovo Porto Potsdam Poznan Prague Pula Pune Puri
