@@ -1,15 +1,16 @@
 2024-06-03
 
-TEAM_ABBR: Bridge Club + Sporting Club = Sporting Club
+Consistent duplication
+* TEAM_ABBR: Bridge Club + Sporting Club = Sporting Club (destroy one)
+* Orange + Color = Netherlands + Color
+* Split on destroy, form, gender, age (both before and after)
+* Destroy up to two numerals
+* A city in a country + Country-Pan: Destroy the Pan
+* Remove temp code in check_consistency
 
-Effectively flatten each chain: No conflict, consistent duplication
-(Probably some tags occur several times and that's OK?)
+Flatten each chain
 
 Look at the Team chains for plausibility
-
-Split on destroy
-Split but don't destroy on form, gender, age
-Lone numeral goes
 
 Reductions:
 - City + Abbr could be club, etc.

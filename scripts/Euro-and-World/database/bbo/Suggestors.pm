@@ -110,7 +110,8 @@ sub suggest_form
     {
       my $e = $a[$i];
       next if $e =~ /^\d+$/ || $e =~ /^\d+th$/;
-      next if $e eq 'nr' || $e eq 'Rank';
+      next if $e =~ /^[a-d]$/i;
+      next if $e eq 'nr' || lc($e) eq 'rank';
       return 0;
     }
 

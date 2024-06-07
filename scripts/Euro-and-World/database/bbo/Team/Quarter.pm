@@ -41,7 +41,7 @@ my @SINGLE_WORDS = qw(
   Kocamustafapasa Konak Korwin Kucukcekmece Küp
   Lappee Leilem Lemvourgeio Losari Lozenets
   Maadi Makaliwe Manahasa Männiku Meski Moudania Mrzenci Muratpasa
-  Nagbagan Narlidere Norrorts
+  Nagbagan Narita Narlidere Norrorts
   Olgiata
   Pamukkale Parioli Piloni Pinarbasi Polonezkoy Poncol Pudong
   Qiaoxie
@@ -65,6 +65,7 @@ my %SINGLE_TYPOS =
   Borivli => ['borivali'],
   Çayyolu => ['cayyolu'],
   Fatih => ['fatýh'],
+  Heimdal => ['heimdalbc'],
   Kadikoy => ['kadiköy'],
   Karsiyaka => ['Karþiyaka'],
   Küp => ['kup'],

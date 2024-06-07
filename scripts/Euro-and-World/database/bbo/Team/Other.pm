@@ -43,11 +43,11 @@ my @MULTI_WORDS =
   'Banteng Sitaro',
   'Bate Tot',
   'Batterfly with HK',
-  'BBE Hungary',
   'Bes-Can',
   'Besli Major',
   'Beto BO',
   'Bez Nazwy',
+  'Bhinneka Garuda',
   'Bimal Sicca',
   'BMW J',
   'Brans BS',
@@ -319,6 +319,7 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   'ABA Nuno Paz' => ['ABA - Nuno Paz', 'ABA-Nuno Paz'],
+  'AIC' => ['a i c'],
   'Air Traffic Management' => ['air traffic managem'],
   'Aklindo Musi 88' => ['musi 88', 'musi88'],
   'Alex is Beautiful' => ['alex is beatiful'],
@@ -332,6 +333,7 @@ my %MULTI_TYPOS =
   Baneet => ["Baneet's IV"],
   Begijntje => ['begijnt je'],
   'Beto BO' => ['beto b o'],
+  'Bhinneka Garuda' => ['bhineka garuda'],
   BNMR => ['b n m r'],
   'Bridgerama Milan' => ['bridgerama mi'],
   'Butterfly from HK' => ['babochka s hk'],
@@ -380,6 +382,7 @@ my %MULTI_TYPOS =
   'Logos GPS' => ['logos gpg'],
 
   'Massachusetts Association' => ['massachussets assoc'],
+  MMRMC => ['mmrmc(pkb)'],
   'Mo i Raneran' => ['mo i raneran :)'],
   'Multi Gen Indonesia' => ['multi gen ina'],
   'Møllers Team' => ['møllers t'],
@@ -410,12 +413,12 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
    1den1e
 
-   AABC ABBK ABBKI ABC Acolvik ACR Aeras Alertplus Alioth Alpha 
+   AABC ABBK ABBKI ABC Acolvik ACR Aeras AIC Alertplus Alioth Alpha 
    ASDBB Aslanli Aspe Asya Atrium AUE Augerne Aurora AUTBUL AUTHOL 
    Avagard Aytalus Azores Azure
 
    BAB BABK Bacch Bade BAHABAWI Bahaj Baias Bajm Bajozero BAK Balti
-   Baltic BARC BARP BAST Bat Batmix Bato Batusida BBE BBN BBO BCBR
+   Baltic BARC BARP BAST Bat Batmix Bato Batusida BBN BBO BCBR
    Begigütje Begijntje BEIH BELSPA Bem Beton BHDM Bhide Bhinneka
    Biachite BIN Biriceri BKSE Blandat Blund BMAL BMP BNMR BNS BNT
    BOC Boek Boriana Borko Bridgebutikken BRK Buaigh Bubu Busiaki Butler
@@ -464,7 +467,7 @@ my @SINGLE_WORDS = qw(
    Loaknath Lolly Longzhu Loreng LOS Lowel Löparn LPMS LXA Lyubcho 
 
    Makara Makriköy Malmölaget Marosamitawa Marynarz Masal Matujona 
-   Mavi Mavs Mayamira Medik Mer Mesna MGM MGTH Minut MMRMC Mochu 
+   Mavi Mavs Mayamira Mer Mesna MGM MGTH Minut MMRMC Mochu 
    Moki Monaconf Morot Mostingan Movember Mölnlycke MPEC MRSMC Muumio 
    Mýna Møremix 
 
@@ -484,7 +487,7 @@ my @SINGLE_WORDS = qw(
 
    QLJB Quantum 
 
-   Radeks Radhey Radikk RAG Raifles Rakinnett RAM RASH Raskasammen 
+   Radeks Radhey RAG Raifles Rakinnett RAM RASH Raskasammen 
    RBP Recaptan Regeldur Rem Ribitas RKK Rofoi Rosajora Royston Rozle 
    RS Rüya Rylai Rylal Ryo
 
@@ -571,7 +574,6 @@ my %SINGLE_TYPOS =
   Quantum => ['qantum'],
 
   'Ram Charan' => ['ramcharan'],
-  Radikk => ['radekk', 'radik'],
 
   'Sarunta Toar' => ['sarunta'],
   'Sham Sharma' => ['shamsharma'],

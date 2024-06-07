@@ -44,6 +44,7 @@ my @MULTI_WORDS =
   'Fakultas Teknik Bridge Club Universitas Tanjungpura',
   'Fu Jen Catholic University',
   'Gunadurma',
+  'Institut Teknologi Bandung',
   'ITS IKOMA',
   'ITÜ Vakfi',
   'Jember Senior High School',
@@ -134,6 +135,7 @@ my %MULTI_TYPOS =
   'Fakultas Teknik Bridge Club Universitas Tanjungpura' => 
     ['ftbc untan'],
   'Gunadurma' => ['guna darma'],
+  'Institut Teknologi Bandung' => ['uab itb'],
   'ITÜ Vakfi' => ['itu vakfi'],
   'Jember Senior High School' => ['sman 1 jember', 'sman i jember',
     'sman arjasa', 'sma nbc jember'],
@@ -207,6 +209,7 @@ my %SINGLE_TYPOS =
   'École Polytechnique' => ['polytech'],
   'Fakultas Teknik Bridge Club Universitas Tanjungpura' => ['ftbc'],
   'Fu Jen Catholic University' => ['fju'],
+  'Institut Teknologi Bandung' => ['itb'],
   'Koc University' => ['koc'],
   'Makassar University' => ['mu'],
   'Manado State University' => ['unima'],

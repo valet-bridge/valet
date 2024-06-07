@@ -29,6 +29,7 @@ my @MULTI_WORDS =
   'Central Java',
   'Central Sulawesi',
   'Cianjur Regency',
+  'Datca Yarimada',
   'District of Columbia',
   'East Borneo',
   'East Jakarta',
@@ -71,7 +72,6 @@ my @MULTI_WORDS =
   'South Sumatra',
   'South Sweden',
   'Suphan Buri',
-  'Taihu Lake',
   'Tamil Nadu',
   'Troms og Ofoten',
   'Uttar Pradesh',
@@ -83,6 +83,7 @@ my @MULTI_WORDS =
   'West District',
   'West Java',
   'West Kalimantan',
+  'West Nusa Tenggara',
   'West Sumatra',
   'Western Australia',
   'Western Province',
@@ -118,12 +119,12 @@ my %MULTI_TYPOS =
   'South Kalimantan' => ['kalimantan selatan', 'kalsel'],
   'South Sulawesi' => ['sulawesi selatan', 'sulsel'],
   'South Sumatra' => ['south sumatera', 'sumatera selatan', 'sumsel'],
-  'Taihu Lake' => ['suzhou taihu'],
   'Uttar Pradesh' => ['u.p.'],
   'Vest Agder' => ['vest-agder'],
   'Val di Magra' => ['val magra'],
   'Vest Finnmark' => ['vest-finnmark'],
   'West Kalimantan' => ['kalimantan barat'],
+  'West Nusa Tenggara' => ['lombok tengah'],
   'West Sumatra' => ['west sumatera', 'sumatera barat', 'west sumatera'],
   'Western Australia' => ['wa'],
   'West Bengal' => ['west bengla', 'westbengal'],
@@ -141,9 +142,9 @@ my @SINGLE_WORDS = qw(
   Guizhou Gujarat
   Hainan Haixing Hatay Haugaland Hebei Hegyvidék Hubei Hunan
   Jharkhand Jiangsu Jilin
-  Kansai Karimun Karnataka Kawanua Kayong Kedungwaru Kepri Kerala 
+  Kansai Karnataka Kawanua Kayong Kedungwaru Kepri Kerala 
   Kinali Krabi
-  Lampung Lebak Liaoning Liguria Lombok Lumajang
+  Lampung Lebak Liaoning Liguria Lombok 
   Maharashtra Maluku Marmara Matopos Mercosur Midtsjælland 
   Minahasa Mjøsa Muallim Munzur Mysia
   Nordafjells Norden Norrland Nusantara
@@ -151,9 +152,9 @@ my @SINGLE_WORDS = qw(
   Oberloiben Orontes Otago
   Papua Porong Punjab
   Rajasthan Rajputana Ratchaburi Rogaland Rosfjord 
-  Salten Shanxi Siberia Sichuan Silesia Silla Sindh Sintang Skåne 
-  Slask Southland Sydvest
-  Tambun Taskopru Tasmania Telemark Tengah Tequendama Tianya
+  Sakarya Salten Shanxi Siberia Sichuan Silesia Silla Sindh Sintang 
+  Skåne Slask Southland Sydvest
+  Tambun Taskopru Tasmania Telemark Tengah Tianya
   Tigris Tinglin Tuncelý
   Uccle Unia Uttarakhand
   Victoria Vojvodina

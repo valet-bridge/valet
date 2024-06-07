@@ -85,6 +85,7 @@ my @MULTI_WORDS =
   'Big Guns',
   'Big Makie',
   'Big Mi?',
+  'Black Gold',
   'Black Hole',
   'Black Knife',
   'Black Label',
@@ -162,6 +163,7 @@ my @MULTI_WORDS =
   'Dragon Piggies',
   'Dream Team',
 
+  'Ege2/1',
   'Eiydes discipler',
   'Elses Fanklubb',
   'Elusive 52',
@@ -604,6 +606,7 @@ my %MULTI_TYPOS =
   'Big Guns' => ['big gun'],
   'Big Makie' => ['big makie och co'],
   BNMR => ['b n m r'],
+  'Boro Boss' => ['boro-boss'],
   'Brian Is Beautiful' => ['brian is beatiful'],
   'Bridge am Grün' => ['bridge am gruen'],
   'Butterfly from HK' => ['babochka s hk'],
@@ -715,10 +718,10 @@ my @SINGLE_WORDS = qw(
    2Q2K 3D 6L 10CC 7heart
 
    Aces Adventure Agamemnon Agressor Ahornet Aida Alliance Alliansen 
-   Allstars Alternativlos Ambassador Andromeda Anglian Anglers 
-   Anglophones Appellkameratene Apples Apply Aquarius Arachfobia 
-   Archies Aristos Armani Asparagus Astra Astro Astronotlar Atlantic 
-   Atom Autostrada Avalanche Avatar 
+   Allstars Alternativlos Amarillo Ambassador Andromeda Anglian 
+   Anglers Anglophones Appellkameratene Apples Apply Aquarius 
+   Arachfobia Archies Aristos Armani Asparagus Astra Astro 
+   Astronotlar Atlantic Atom Autostrada Avalanche Avatar 
 
    Bachelor Badger Badminton Bager Banana Bananasplit BarDeZi 
    Barracuda Barsss Baryton Beauty BeRe Bingbang Binkie Blackwood 
@@ -785,9 +788,9 @@ my @SINGLE_WORDS = qw(
    Statusquo Stayman Stifinnern Storeslemmen Strategen Streamline 
    Stålfarfar Sunset Sunshine Syttisju Sømnakameratene Såpeopera
 
-   Takeoff Tannlegene Taurus Tbone Tempo Theme Tibetmunkene Tigers 
-   Titanik Titans Tohundre Tolerant Torpedo Tosca Trèfles Triton 
-   Tsunami Tulip Tusio Tutu Tvist
+   Takeoff Tannlegene Taurus Tbone Tempo Tequendama Theme Tibetmunkene 
+   Tigers Titanik Titans Tohundre Tolerant Torpedo Tosca Trèfles 
+   Triton Tsunami Tulip Tusio Tutu Tvist
 
    UFO Ugh Ulvene Underdogs Unexpected Ungdomslaget Upplyfting 
    Utkantnorge 

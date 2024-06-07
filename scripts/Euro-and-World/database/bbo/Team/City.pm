@@ -59,6 +59,7 @@ my @MULTI_WORDS =
   'Singapore City',
   'St Louis',
   'Stara Zagora',
+  'Taihu Lake',
   'Tanjung Pinang',
   'Taipei City',
   'The Hague',
@@ -100,6 +101,7 @@ my %MULTI_TYPOS =
   'Siddha Eden Lakeville' => ['siddha eden', 'sidhha eden', 'siddha-eden'],
   'Silesia Gliwice' => ['silezia gliwice'],
   Taicang => ['tai cang'],
+  'Taihu Lake' => ['suzhou taihu'],
   Tainan => ['tai nan'],
   'Villa Fabbriche' => ['v.fabbr.', 'villa fabb.', 'v. fabbriche',
     'v.fabbriche'],
@@ -110,7 +112,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Aabenraa Aalborg Adana Adelaide Agresar Ahmedabad Airmadidi Akhisar 
-  Alexandria Allahabad Altrincham Alytus Amanora Amarillo Ambon 
+  Alexandria Allahabad Altrincham Alytus Amanora Ambon 
   Amsterdam Ankara Annecy Antalya Antony Antwerpen Aral Arendal 
   Asenovec Asenovgrad Assis Atakum Athens Auckland Ayacucho Aydin 
   Ayvalik
@@ -125,7 +127,7 @@ my @SINGLE_WORDS = qw(
 
   Caen Cairns Cairo Canakkale Canberra Canterbury Caracas Cascais 
   Catania Cerkezkoy Cesme Changhua Changzhou Chaville Chelmno Chengdu 
-  Chennai Chiayi Chicago Chongqing Chumphon Cirebon Clichy Cluj 
+  Chennai Chiayi Chicago Chongqing Chumphon Clichy Cluj 
   Copenhagen Corlu Coventry Cuenca Cuneo
 
   Dalian Darmstadt Datca Delft Delhi Denizli Depok Derpt Diyarbakir 
@@ -139,7 +141,7 @@ my @SINGLE_WORDS = qw(
   Guangzhou Guayaquil Gudbrandsdal Gyor
 
   Haderslev Hamar Hamburg Hangzhou Hannover Harplinge Hatay 
-  Heledia Helsinki Herning Hillerød Hordaland Hornbæk Hsinchu 
+  Heledia Helsinki Hendek Herning Hillerød Hordaland Hornbæk Hsinchu 
   Huldretråkket 
 
   Iasi Iskenderun Istanbul Ithaca Izmir
@@ -147,22 +149,22 @@ my @SINGLE_WORDS = qw(
   Jagodina Jakarta Jalisco Jember Jessheim Jiamusi Jiangsu Jiangyou 
   Jianshe Jinchang Jincheng Jinjiang Jiujiang 
 
-  Kadirli Kalisz Kalundborg Kalyani Kanpur Karlsruhe Kashi Kastamonu 
-  Katowice Kayseri Kediri Kedungwaru Keelung Kesten Ketsch Kiel Kielce 
-  Kiev Kirkeby Kirklarelý Kirsehir Klabat Kocaeli Kolbotn Kolkata Konya
-  Kornik Kosice Kota Koycegiz Köln Krakow Kristiansand Kudus Kunshan 
-  Kuopio Kusadasi Kütahya Kverndalen Kyustendil Kølabånn
+  Kadirli Kalisz Kalundborg Kalyani Kanpur Karimun Karlsruhe Kashi 
+  Kastamonu Katowice Kayseri Kediri Kedungwaru Keelung Kesten Ketsch 
+  Kiel Kielce Kiev Kirkeby Kirklarelý Kirsehir Klabat Kocaeli Kolbotn 
+  Kolkata Konya Kornik Kosice Kota Koycegiz Köln Krakow Kristiansand 
+  Kudus Kunshan Kuopio Kusadasi Kütahya Kverndalen Kyustendil Kølabånn
 
   Langkat Lanzhou Lappeenranta Leiden Lerum Leszno Leuven Leverkusen 
   Lhokseumawe Lille Lima Lincoln Liushu Ljubljana Lodz Lokotok London 
-  Lowicz Lublin Lucignano Luleburgaz Lumajang Lyon
+  Lowicz Lublin Luleburgaz Lumajang Lyon
 
   Maastricht Madrid Magetan Makassar Malang Malatya Malmö Manado 
   Manchester Manisa Mannheim Marbella Martapura Massy Medan Melbourne 
   Mersin Miaoli Michalovce Midyat Milan Milas Minsk Monticiano Montpellier 
   Moradabad Morud Muðla Mumbai Munich 
 
-  Nagpur Nagykanizsa Namsos Nanchang Nancy Nanning Napoli Narita Narvik 
+  Nagpur Nagykanizsa Namsos Nanchang Nancy Nanning Napoli Narvik 
   Nashik Nazilli Näsby Nicosia Nijmegen Ningbo Niš Norrbyskär Norrøna 
   Nürnberg Nyon Nærbø Næstved Nøtterøy
 
@@ -180,7 +182,7 @@ my @SINGLE_WORDS = qw(
 
   Ravnkilde Rzeszow Rødovre
 
-  Saarbrücken Sabadell Sakarya Salerno Samarinda Samsun Sandefjord 
+  Saarbrücken Sabadell Salerno Samarinda Samsun Sandefjord 
   Santiago Sanya Sarpsborg Secunderabad Seferihisar Semarang Serang 
   Shanghai Shaoguan Shenyang Shenzhen Shijiazhuang Sibiu Sidoarjo Siena 
   Sindi Singsås Skara Skien Skopje Slagelse Sleman Sofia Solok 
@@ -237,7 +239,6 @@ my %SINGLE_TYPOS =
   Genoa => ['genova'],
   Guangzhou => ['gz', 'gaungzhou'],
   Harplinge => ['harpling'],
-  Heimdal => ['heimdalbc'],
   Hordaland => ['hordland'],
   Iskenderun => ['iskendurun'],
   Izmir => ['ýzmýr'],

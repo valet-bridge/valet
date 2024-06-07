@@ -30,6 +30,7 @@ my @MULTI_WORDS =
   'Amiya Ranjan Das',
   'Ana Tadeu',
   'Anders Johansson',
+  'Andrea Landry',
   'Aniket Sanghvi',
   'Anita Sinclair',
   'Anoop Dhawan',
@@ -90,6 +91,7 @@ my @MULTI_WORDS =
   'Della Monta',
   "Del'Monte",
   'Dennis Bilde',
+  'Dexter Morgan',
   'di Franco',
   'Diana Damyanova',
   'Ding Yuan',
@@ -113,6 +115,7 @@ my @MULTI_WORDS =
   'Espinosa Paz',
   'Fatih Yayla',
   'Fernando Matos',
+  'Filippo Palma',
   'Flemming Dahl',
   'Francisco Costa-Cabral',
   'Frímann Stefánsson',
@@ -228,6 +231,7 @@ my @MULTI_WORDS =
   'Mohit Mehta',
   'Mohsen Kamel',
   'Moni Diba',
+  'Morris Chang',
   'Morten Jepsen',
   'Møller Jepsen',
   'N. Chakraborty',
@@ -272,6 +276,7 @@ my @MULTI_WORDS =
   'Pramual Angkaew',
   'Prashant Desai',
   'Promila Saraf',
+  'Quentin Robert',
   'Qing Gong',
   'R.K. Sinha',
   'R.L. Kejriwal',
@@ -376,6 +381,7 @@ my %MULTI_TYPOS =
     'álvares ribeiro'],
   'Alvensleben' => ['v.alvensleben', 'v. alvensleben'],
   'Amiya Ranjan Das' => ['a r dass'],
+  'Andrea Landry'=> ['landry andrea'],
   'Antonio Falcao' => ['falcão'],
   'Antonio Maria Campos' => ['antonio m campos', 'antonio maria campo'],
   'Artur S. Silva' => ['artur s silva'],
@@ -623,7 +629,7 @@ my @SINGLE_WORDS = qw(
   Dawson Debolina Debonnaire Debus Dechelette Degla Dehaye Deik 
   Deleeuw Delfino Delfour Delibaltadakis Dellecavakis 
   Delimpaltadakis Delpiano DeMartino Demir Demirbas Demme Denning 
-  Deniz Desai Deutsch Deva Dexter Dexterzy Dialinas Dionysopoulos 
+  Deniz Desai Deutsch Deva Dexterzy Dialinas Dionysopoulos 
   Dhir Dhondy Dialynas Diamond Dilks Dinkin Dixon 
   Djurovic Dobbels Dobes Dobroiu Doecke Doksiadis Dolla Donatella 
   Donciu Donn Donzi Dossena Dovell Doub Doussot Doxiadis Drijver 
@@ -704,7 +710,7 @@ my @SINGLE_WORDS = qw(
   Kutner Kvangraven Kwiatkowski Kwiecien Kwok Kyriakidou Kyrilenko
 
   Laan Labaere Lachowicz Laffineur Lagrange Lagree Lalanne Lall 
-  Lambardi Lanciano Landry Lane Langer Lantaron Lanzarotti Larsen 
+  Lambardi Lanciano Lane Langer Lantaron Lanzarotti Larsen 
   Larssen Lasserre Lauria Lavín Lavings Law Lawy Lay Lazer Lazkar 
   Leao Lebatteux Lebel Lebi Lebowitz Leca Lechtman Lehtinen Lee 
   Leenhardt Legras Leiro Lena Lengy Leptirici Lerner 
@@ -713,7 +719,8 @@ my @SINGLE_WORDS = qw(
   Liu Liggins Lilienstein Lillevik Lilley Limor Linczmayer Lindner 
   Lindstedt Llopart Locatelli Lockwood Lombard Longinotti 
   Lorentz Lorenzini Loreto Lormant Louchart Lovrecz Lowe Lubinski 
-  Lucchesi Ludewig Lund Luppi Lusk Lusky Lüßmann Lynch Lyngdal Lyngen
+  Lucchesi Lucignano Ludewig Lund Luppi Lusk Lusky Lüßmann Lynch 
+  Lyngdal Lyngen
 
   Maas MacDonald Macedo Machado Madsen Magee Maggio Maglietta 
   Mahaffey Maia Maiolani Malarme Maksymetz Malaczynski Malani 
@@ -727,7 +734,7 @@ my @SINGLE_WORDS = qw(
   Mazurkiewicz Maybach Mäkikangas Märsylä McAllister McCance 
   McDonald McGann McGinley McGowan McGrath McIntosh McKellar 
   McLeish McLeod McKinnon McLeish McManus McMahon McMullin 
-  McNamara Meckstroth Medugno Medved Mehech Mejane Mello 
+  McNamara Meckstroth Medik Medugno Medved Mehech Mejane Mello 
   Mendoza Meltzer Merah Merblum Mesbur Messika 
   Mestres Metselaar Meyer Meyers Meyouhas Mezei Michaud Michealakis 
   Mickiewicz Miles Milgrim Mill Millar Miller Milne 
@@ -768,13 +775,13 @@ my @SINGLE_WORDS = qw(
 
   Quail Quantin Queran Quinn
 
-  Rabinowitz Radcliffe Radin Radisic Rajagopal Ramamurthy Ramchandran
-  Ramondt Rankin Ranklin Ranson Rapp Rashti Rau Raulund Ravenna 
-  Rayner Rebecchi Rees Reess Rehder Reid Reimer Reinholdt Reiplinger 
-  Rekstad Renouard Reps Revaz Rew Reynolds Rheingold Rhodes Ribera 
-  Ribery Ricard Ricci Richardson Richman Ridgway Riedel Riehm 
+  Rabinowitz Radcliffe Radikk Radin Radisic Rajagopal Ramamurthy 
+  Ramchandran Ramondt Rankin Ranklin Ranson Rapp Rashti Rau Raulund 
+  Ravenna Rayner Rebecchi Rees Reess Rehder Reid Reimer Reinholdt 
+  Reiplinger Rekstad Renouard Reps Revaz Rew Reynolds Rheingold Rhodes 
+  Ribera Ribery Ricard Ricci Richardson Richman Ridgway Riedel Riehm 
   Rietvink Rieusset Rigal Rigaud Riisnæs Rimstedt Ringuet Riolo Rios 
-  Ritmeijer Rivers Rizzo Robb Robert Robertson Robinson Robles 
+  Ritmeijer Rivers Rizzo Robb Robertson Robinson Robles 
   Robson Rocafort Rocca Rodwell Rogoff Rohowsky Roll Romanin 
   Romanski Rombaut Ronin Rosen Rosenberg Rosendorff Rosetta 
   Rosenkrantz Rosenthal Rossard Rossi Rosti Rothfield Rothstein 
@@ -1015,7 +1022,8 @@ my %SINGLE_TYPOS =
   Prescott => ['prescot'],
   Procter => ['proctor'],
   Pszczola => ['pepsi'],
-  Quantin => ['quentin'],
+  'Quentin Robert' => ['robert'],
+  Radikk => ['radekk', 'radik'],
   'Raghavendra Rajkumar' => ['raghvendra'],
   'Rahul Ravichandran' => ['ravichandran'],
   'Ralitsa Mihaylova Mircheva' => ['ralitsa'],
