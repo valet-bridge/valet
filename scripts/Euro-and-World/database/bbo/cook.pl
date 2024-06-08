@@ -8,26 +8,29 @@ use open ':std', ':encoding(UTF-8)';
 use Time::HiRes qw(time);
 
 use lib '.';
+use lib './Event';
 
-use Despace;
 use Chains;
 use Chain;
 
 use TeamBBO;
 use EventBBO;
-use EventRed;
-use Patterns;
+
+use Event::Despace;
+use Event::Patterns;
+use Event::Reductions;
+
 
 # Parse the raw output of
 # ./reader -I ... -Q 9=4=0=0 -v 63
-# especially w.r.t. EVENT
 
 die "perl cook.pl raw.txt" unless $#ARGV == 0;
+
+my $do_events = 1; # 1 if we parse EVENT
 
 my @RAW_FIELDS = qw(BBONO TITLE EVENT SCORING TEAMS);
 
 init_hashes();
-
 read_cities();
 
 my $file = $ARGV[0];
@@ -37,9 +40,8 @@ my %chunk;
 my $line;
 
 my $lno = 0;
-my $unknown = 0;
-my @chain_team_stats;
-my @reduction_stats;
+my (@chain_team_stats, @chain_event_stats, @reduction_event_stats);
+my $unknown_events = 0;
 
 while ($line = <$fh>)
 {
@@ -69,6 +71,8 @@ while ($line = <$fh>)
     print "HERE\n";
   }
 
+  # TEAMS
+
   my $chain_team1 = Chain->new();
   my $chain_team2 = Chain->new();
   my %result;
@@ -79,50 +83,36 @@ while ($line = <$fh>)
   update_chain_team_stats($chain_team2, \@chain_team_stats);
 
 
-=pod
-  # Fix some space-related issues.
-  my $mashed = despace($chunk{EVENT});
-  $mashed = unteam($mashed, \%result);
-
-  my $chain = Chain->new();
-  my @chains;
-  push @chains, $chain;
-
-  study_event($mashed, \%chunk, \%result, $chain, \$unknown);
-  process_event(\@chains);
-  process_patterns(\@EVENT_REDUCTIONS, \@chains, \@reduction_stats);
-
-  my $open_flag = 0;
-  for my $chain (@chains)
+  if ($do_events)
   {
-    my $status = $chain->status();
-    $chain_stats[$chain->last()+1]{$status}++;
-    $open_flag = 1 if $status eq 'OPEN';
-  }
+    # EVENT: Fix some space-related issues.
+    my $mashed = despace($chunk{EVENT});
+    $mashed = unteam($mashed, \%result);
 
-  if ($open_flag)
-  {
-    print_chunk(\%chunk);
-    print_chains(\@chains);
+    my $chain_event = Chain->new();
+    my @chains_event;
+    push @chains_event, $chain_event;
+
+    study_event($mashed, \%chunk, \%result, $chain_event, \$unknown_events);
+    process_event(\@chains_event);
+    process_patterns(\@EVENT_REDUCTIONS, \@chains_event, 
+      \@reduction_event_stats);
+
+  update_chain_event_stats(\%chunk, \@chains_event, \@chain_event_stats);
   }
-=cut
 }
 
 close $fh;
 
 print_team_stats();
+print_team_chain_stats(\@chain_team_stats);
 
-print "\nTeam chain stats\n\n";
-for my $i (0 .. $#chain_team_stats)
+if ($do_events)
 {
-  printf ("%4d %6d\n", $i, $chain_team_stats[$i]);
+  print_event_chain_stats(\@chain_event_stats);
+  print_event_reduction_stats(\@reduction_event_stats);
+  print "\nTotal unknown events: $unknown_events\n\n";
 }
-
-# print "TOTAL $unknown\n\n";
-
-# print_chain_stats(\@chain_stats);
-
-# print_reduction_stats(\@reduction_stats);
 
 exit;
 
@@ -180,12 +170,43 @@ sub update_chain_team_stats
 }
 
 
-sub print_chain_stats
+sub update_chain_event_stats
+{
+  my ($chunk, $chains, $chain_event_stats) = @_;
+
+  my $open_flag = 0;
+  for my $chain (@$chains)
+  {
+    my $status = $chain->status();
+    $chain_event_stats->[$chain->last()+1]{$status}++;
+    $open_flag = 1 if $status eq 'OPEN';
+  }
+
+  if ($open_flag)
+  {
+    print_chunk($chunk);
+    print_chains($chains);
+  }
+}
+
+sub print_team_chain_stats
+{
+  my ($chain_team_stats) = @_;
+
+  print "\nTeam chain stats\n\n";
+  for my $i (0 .. $#$chain_team_stats)
+  {
+    printf ("%4d %6d\n", $i, $chain_team_stats->[$i]);
+  }
+}
+
+
+sub print_event_chain_stats
 {
   my $chain_stats = pop;
 
   my %csum;
-  print "Chain stats\n\n";
+  print "\nEvent chain stats\n\n";
   printf("%6s%10s%10s%10s\n", "", "OPEN", "COMPLETE", "KILLED");
 
   for my $i (0 .. $#$chain_stats)
@@ -212,11 +233,11 @@ sub print_chain_stats
 }
 
 
-sub print_reduction_stats
+sub print_event_reduction_stats
 {
   my $reduction_stats = pop;
 
-  print "Reduction matches:\n";
+  print "Event reduction matches\n\n";
   for my $i (0 .. $#$reduction_stats)
   {
     next unless defined $reduction_stats->[$i];

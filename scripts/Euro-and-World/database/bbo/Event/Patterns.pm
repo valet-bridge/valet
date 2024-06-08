@@ -6,13 +6,12 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package Patterns;
+package Event::Patterns;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(process_patterns @RMATCH);
 
-use lib '.';
-use lib '..';
+use lib '../..';
 
 use Month;
 my $month = Month->new();

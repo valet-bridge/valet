@@ -13,10 +13,12 @@ our @EXPORT = qw(study_event);
 
 use lib '.';
 use lib '..';
+use lib 'Event';
 
-use Cookbook;
 use Separators;
 use Token;
+
+use Event::Cookbook;
 
 
 sub undate

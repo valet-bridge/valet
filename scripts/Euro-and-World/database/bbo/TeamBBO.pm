@@ -13,16 +13,20 @@ our @EXPORT = qw(read_cities study_teams unteam print_team_stats
   set_overall_hashes init_hashes   all_used);
 
 use lib '.';
+use lib '..';
 use lib './Team';
+use lib './Event';
 
 use Country;
-use Cookbook;
 use Token;
+
+use Event::Cookbook;
 
 use Separators;
 use Age;
 use Gender;
-use Suggestors;
+
+use Team::Suggestors;
 
 use Team::Fun;
 use Team::First;
@@ -478,12 +482,6 @@ sub study_part
     $HIT_STATS{SEPARATOR}++;
     return;
   }
-  # elsif ($country->valid_lc(lc($part)))
-  # {
-    # $token->set_singleton('TEAM_COUNTRY', $part);
-    # $HIT_STATS{TEAM_COUNTRY}++;
-    # return;
-  # }
   elsif ($part =~ /^\d+$/)
   {
     if ($part >= 1900 && $part < 2100)
@@ -655,7 +653,15 @@ sub study_team
   my ($text, $chain, $bbono) = @_;
 
   return if $text eq '';
-  return if suggest_form($text, \%FORM_SCORES);
+  if (my $s = suggest_form($text, \%FORM_SCORES))
+  {
+    my $token = Token->new();
+    $token->set_origin(0, $text);
+    $token->set_singleton('TEAM_FORM', $s);
+    $chain->append($token);
+    $HIT_STATS{TEAM_FORM}++;
+    return;
+  }
 
   return if eliminate_districts(\$text);
 
@@ -741,6 +747,10 @@ sub study_teams
 
   check_consistency($result->{TEAM1}, $chain1, $bbono);
   check_consistency($result->{TEAM2}, $chain2, $bbono);
+
+  # Kludge for event matches.
+  $result->{TEAM1} =~ s/\s*- npc$//;
+  $result->{TEAM2} =~ s/\s*- npc$//;
 }
 
 

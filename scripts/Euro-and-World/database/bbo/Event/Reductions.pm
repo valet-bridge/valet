@@ -6,9 +6,10 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package EventRed;
+package Event::Reductions;
 
-use lib '.';
+use lib '..';
+
 use Separators;
 
 our @ISA = qw(Exporter);
@@ -47,7 +48,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 4,
-    METHOD => \&Patterns::process_kill,
+    METHOD => \&Event::Patterns::process_kill,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -65,7 +66,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 4,
-    METHOD => \&Patterns::process_kill,
+    METHOD => \&Event::Patterns::process_kill,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -85,7 +86,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
-    METHOD => \&Patterns::process_merge_0of2,
+    METHOD => \&Event::Patterns::process_merge_0of2,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -104,7 +105,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
-    METHOD => \&Patterns::process_merge_0dash4,
+    METHOD => \&Event::Patterns::process_merge_0dash4,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -120,7 +121,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
-    METHOD => \&Patterns::process_merge_02,
+    METHOD => \&Event::Patterns::process_merge_02,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -136,7 +137,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
-    METHOD => \&Patterns::process_merge_02,
+    METHOD => \&Event::Patterns::process_merge_02,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -155,7 +156,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
-    METHOD => \&Patterns::process_merge_0of4,
+    METHOD => \&Event::Patterns::process_merge_0of4,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -174,7 +175,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
-    METHOD => \&Patterns::process_merge_0of2,
+    METHOD => \&Event::Patterns::process_merge_0of2,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -190,7 +191,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
-    METHOD => \&Patterns::process_merge_0of2,
+    METHOD => \&Event::Patterns::process_merge_0of2,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -206,7 +207,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
-    METHOD => \&Patterns::process_merge_0colon2,
+    METHOD => \&Event::Patterns::process_merge_0colon2,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -222,7 +223,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
-    METHOD => \&Patterns::process_merge_0sep2,
+    METHOD => \&Event::Patterns::process_merge_0sep2,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -242,7 +243,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
-    METHOD => \&Patterns::process_merge_0sep2,
+    METHOD => \&Event::Patterns::process_merge_0sep2,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -261,7 +262,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
-    METHOD => \&Patterns::process_merge_0sep2,
+    METHOD => \&Event::Patterns::process_merge_0sep2,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -284,7 +285,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 2,
-    METHOD => \&Patterns::process_r_counter,
+    METHOD => \&Event::Patterns::process_r_counter,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -300,7 +301,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 2,
-    METHOD => \&Patterns::process_general,
+    METHOD => \&Event::Patterns::process_general,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -316,7 +317,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 2,
-    METHOD => \&Patterns::process_general,
+    METHOD => \&Event::Patterns::process_general,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -334,7 +335,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
-    METHOD => \&Patterns::process_date,
+    METHOD => \&Event::Patterns::process_date,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -350,7 +351,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 2,
-    METHOD => \&Patterns::process_swap,
+    METHOD => \&Event::Patterns::process_swap,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -366,7 +367,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 2,
-    METHOD => \&Patterns::process_general,
+    METHOD => \&Event::Patterns::process_general,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -385,7 +386,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'BEGIN',
     KEEP_LAST => 0,
-    METHOD => \&Patterns::process_og_front,
+    METHOD => \&Event::Patterns::process_og_front,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 1, # Split one Open from the other
     COMPLETION => 1
@@ -399,7 +400,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'BEGIN',
     KEEP_LAST => 0,
-    METHOD => \&Patterns::process_general,
+    METHOD => \&Event::Patterns::process_general,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -415,7 +416,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'END',
     KEEP_LAST => 2,
-    METHOD => \&Patterns::process_general,
+    METHOD => \&Event::Patterns::process_general,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -433,7 +434,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,
-    METHOD => \&Patterns::process_general,
+    METHOD => \&Event::Patterns::process_general,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -449,7 +450,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 2,
-    METHOD => \&Patterns::process_swap,
+    METHOD => \&Event::Patterns::process_swap,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -466,7 +467,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'END',
     KEEP_LAST => 2,
-    METHOD => \&Patterns::process_letter_counter_exact,
+    METHOD => \&Event::Patterns::process_letter_counter_exact,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -482,7 +483,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,
-    METHOD => \&Patterns::process_day_month,
+    METHOD => \&Event::Patterns::process_day_month,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -498,7 +499,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,
-    METHOD => \&Patterns::process_month_year,
+    METHOD => \&Event::Patterns::process_month_year,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -514,7 +515,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,
-    METHOD => \&Patterns::process_swap,
+    METHOD => \&Event::Patterns::process_swap,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -532,7 +533,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,
-    METHOD => \&Patterns::process_general,
+    METHOD => \&Event::Patterns::process_general,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -546,7 +547,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,
-    METHOD => \&Patterns::process_kill,
+    METHOD => \&Event::Patterns::process_kill,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -561,7 +562,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,
-    METHOD => \&Patterns::process_kill,
+    METHOD => \&Event::Patterns::process_kill,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -576,7 +577,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,
-    METHOD => \&Patterns::process_general,
+    METHOD => \&Event::Patterns::process_general,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -591,7 +592,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,
-    METHOD => \&Patterns::process_letter_exact,
+    METHOD => \&Event::Patterns::process_letter_exact,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -605,7 +606,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,
-    METHOD => \&Patterns::process_general,
+    METHOD => \&Event::Patterns::process_general,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1

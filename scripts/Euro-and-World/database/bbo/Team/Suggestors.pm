@@ -6,12 +6,10 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package Suggestors;
+package Team::Suggestors;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(suggest_form);
-
-use lib '.';
 
 # Only if it is a complete team entry.
 my @TEAMS_SUGGESTORS = (
@@ -72,22 +70,22 @@ sub suggest_form
   {
     # Make this per BBO file.
     $form_scores->{teams}++;
-    return 1;
+    return 'Teams';
   }
   elsif (exists $PAIRS_SUGGESTORS_HASH{lc($text)})
   {
     $form_scores->{pairs}++;
-    return 1;
+    return 'Pairs';
   }
   elsif (exists $INDIVIDUAL_SUGGESTORS_HASH{lc($text)})
   {
     $form_scores->{individual}++;
-    return 1;
+    return 'Individual';
   }
   elsif (exists $NEUTRAL_SUGGESTORS_HASH{lc($text)})
   {
     $form_scores->{neutral}++;
-    return 1;
+    return 'Neutral';
   }
   elsif ($text =~ /^Pair/ || $text =~ /^Team/)
   {
@@ -95,11 +93,11 @@ sub suggest_form
     my $tag;
     if ($a[0] eq 'Pair' || $a[0] eq 'PairNo' || $a[0] eq 'Pairs')
     {
-      $tag = 'pairs';
+      $tag = 'Pairs';
     }
     elsif ($a[0] eq 'Team')
     {
-      $tag = 'teams';
+      $tag = 'Teams';
     }
     else
     {
@@ -115,8 +113,8 @@ sub suggest_form
       return 0;
     }
 
-    $form_scores->{$tag}++;
-    return 1;
+    $form_scores->{lc($tag)}++;
+    return $tag;
   }
   else
   {

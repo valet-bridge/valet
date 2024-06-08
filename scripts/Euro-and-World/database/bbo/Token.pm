@@ -8,8 +8,11 @@ use Exporter;
 use v5.10;
 
 use lib '.';
-use Cookbook;
+use lib './Event';
+
 use Separators;
+
+use Event::Cookbook;
 
 # A Token has some basic information about its origin:
 # - text is (close to) the text snippet that gave rise to it,

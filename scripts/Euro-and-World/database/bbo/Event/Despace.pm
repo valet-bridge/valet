@@ -6,7 +6,7 @@ use utf8;
 use open ':std', ':encoding(UTF-8)';
 use Exporter;
 
-package Despace;
+package Event::Despace;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(despace);
