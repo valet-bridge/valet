@@ -16,26 +16,39 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'Baltic Bowl',
+  'Baltic Cup',
   'Buffett Cup',
   "d'Orsi",
   'Junior Camrose',
+  'McConnell Cup',
   'Senior Camrose',
-  'Vanderbilt Fantasy Challenge'
+  'Spring Fours',
+  'Spring of Cracow',
+  'Spring Nationals',
+  'Vanderbilt Fantasy Challenge',
+  'Venice Cup'
 );
 
 my %MULTI_TYPOS =
 (
-  'Buffett Cup' => ['buffet cup'],
+  'Buffett Cup' => ['buffet cup', 'bufett cup'],
   Camrose => ['camrose trophy'],
   "d'Orsi" => ["d'orsi senior bowl", "d´orsi"],
   'Junior Camrose' => ['juniior camrose'],
+  'McConnell Cup' => ['mc connell'],
   'Senior Camrose' => ['seniors camrose'],
+  'Spring Fours' => ['spring 4s', 'spring foursomes'],
+  'Spring Nationals' => ['spring nat', 'spring national'],
   Vanderbilt => ['vanderbilt teams', 'vanderbilt ko teams'],
+  'Venice Cup' => ['<venive <cup'],
   Wagar => ['wagar teams', "wagar women's", "wagar women's ko"]
 );
 
 my @SINGLE_WORDS = qw(
   Camrose Cavendish
+  Reisinger
+  Rosenblum
   Spingold
   Vanderbilt
   Wagar
@@ -43,12 +56,17 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  "Buffett Cup" => ['buffett'],
+  "Buffett Cup" => ['buffett', 'buffet'],
   Camrose => ['camroae', 'ccmrose'],
   Cavendish => ['cavendiish', 'caavendish', 'cavemdish', 'cavendiosh',
     'cavendsh', 'cavvendish'],
   "d'Orsi" => ['dorsi'],
-  Vanderbilt => ['vanderbuilt']
+  'Junior Camrose' => ['juniorcamrose', 'juniorcmrose'],
+  'McConnell Cup' => ['mcconnell'],
+  Qualifying => ['qualification', 'qualifications', 'qualif',
+    'qualifier'],
+  Reisinger => ['reisiger'],
+  Vanderbilt => ['vanderbuilt', 'vanderebilt', 'vandebilt']
 );
 
 

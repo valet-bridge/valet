@@ -16,7 +16,17 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
-  'Grand Prix'
+  'Business League',
+  'Grand Prix',
+  'Junior League',
+  'Lady Milne Trophy',
+  'National Club League',
+  'National League',
+  'Peggy Bayer',
+  'Premier Pairs',
+  'Premier League',
+  'Second League',
+  'Super League'
 );
 
 my %MULTI_TYPOS =
@@ -24,6 +34,12 @@ my %MULTI_TYPOS =
   Championship => ["ch'ship", "ch'ships", 'ch.ship', "cha'ships",
     "c'ship", "c'ships", "champion's", "champions'",
     "championship's", "chmpionship's"],
+  'Lady Milne Trophy' => ['lady milne'],
+  'Premier League' => ['premiere league', 'premier leaugue',
+    'premier leauge', 'premier lge', '1st league', 'premie league',
+    'prremier league', 'premieer league'],
+  'Second League' => ['2 league'],
+  'Super League' => ['sup league']
 );
 
 my @SINGLE_WORDS = qw(
@@ -48,8 +64,13 @@ my %SINGLE_TYPOS =
     'chamapionship', 'champiosnhip', 'cship',
     'championnat', 'þampýyonasi',
     'champinship', 'campeonato', 'campionati', 'campionato'],
+  Congress => ['kongres', 'kongresowy'],
   Cup => ['cuo', 'cupn', 'cups', 'copa', 'coppa', 'coppie', 'coupe'],
-  Festival => ['fest', 'festiva', 'festivan', 'festval', 'festývalý'],
+  Festival => ['fest', 'festiva', 'festivan', 'festval', 'festývalý',
+    'festivali', 'festivals', 'festivalul', 'bridgefestival'],
+  'Peggy Bayer' => ['peggybayer'],
+  'Premier League' => ['premieleague'],
+  'Super League' => ['superleague'],
   Tournament => ['torunament', 'toruney', 'torurnament', 'torurney',
     'tourament', 'tourn', 'tourname', 'tournamnet', 'tournement',
     'tournet', 'tourney', 'turnament', 'tourmanent', 'tourna',
@@ -58,7 +79,8 @@ my %SINGLE_TYPOS =
   Training => ['træning', 'practice'],
   Trial => ['trials', 'trail', 'trails',
     'selection', 'seleccion', 'selección', 'select', 'selectiontrials',
-    'selections', 'selekction', 'selelection'],
+    'selections', 'selekction', 'selelection', 'sélection',
+    'séléction'],
   Trophy => ['trofeo', 'trohy', 'trpohy', 'troph']
 );
 

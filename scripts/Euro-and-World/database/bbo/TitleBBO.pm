@@ -36,6 +36,7 @@ use Team::Age;
 
 use Title::Tname;
 use Title::Tword;
+use Title::Stage;
 
 my @TAG_ORDER = qw(
   TITLE_ORGANIZATION 
@@ -51,6 +52,7 @@ my @TAG_ORDER = qw(
   TITLE_AGE
   TITLE_TNAME
   TITLE_TWORD
+  TITLE_STAGE
 );
 
 my (%MULTI_WORDS, %MULTI_REGEX, %SINGLE_WORDS);
@@ -77,6 +79,7 @@ sub init_hashes
 
   Title::Tname::set_hashes($method, 'TITLE_TNAME');
   Title::Tword::set_hashes($method, 'TITLE_TWORD');
+  Title::Stage::set_hashes($method, 'TITLE_STAGE');
 }
 
 
@@ -301,6 +304,28 @@ sub study_part
 }
 
 
+sub split_on_capitals
+{
+  my ($text) = @_;
+
+  my @words = split(/\s+/, $text);
+  my @result;
+
+  foreach my $word (@words) 
+  {
+    if ($word =~ /^[a-zA-Z]+$/ && $word !~ /[A-Z](?:[a-z]{0,1}[A-Z]|\z)/)
+    {
+      $word =~ s/(?<=[a-z])(?=[A-Z])/ /g;
+    }
+
+    # Do not split if the word contains a sub-word of length < 3
+    push @result, $word;
+  }
+
+  return join(" ", @result);
+}
+
+
 sub split_on_multi
 {
   my ($text, $parts, $tags) = @_;
@@ -382,12 +407,14 @@ sub study_title
 
   return if $text eq '';
 
-  my @parts = ($text);
+  my $stext = split_on_capitals($text);
+
+  my @parts = ();
   my @tags = (0);
-  split_on_multi($text, \@parts, \@tags);
+  split_on_multi($stext, \@parts, \@tags);
 
   # Split on separators.
-  my $sep = qr/[\s+\-\+\._;&"\/\(\)\|]/;
+  my $sep = qr/[\s+\-\+\._:;&"\/\(\)\|]/;
 
   my $token_no = 0;
   my $unsolved_flag = 0;
