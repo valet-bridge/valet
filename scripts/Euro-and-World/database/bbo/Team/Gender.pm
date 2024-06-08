@@ -28,11 +28,11 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  Open => [qw(libre libres terbuka opn)],
+  Open => [qw(libre libres terbuka opn åben)],
   Men => [qw(mens men's men`s putra pa homme hommes)],
   Women => [qw(woman wemen womans women's womens 
     lady ladies ladie ladies's
-    femme femmes damas dames damer putri pi wo)],
+    femme femmes damas dames damer dame damen putri pi wo)],
   Mixed => [qw(mix mixte mýx mixen mixt)]
 );
 

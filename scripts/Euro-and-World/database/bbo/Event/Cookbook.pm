@@ -397,7 +397,16 @@ our %FIX_ALIASES =
     '9' => [qw(ix)],
     '10' => [qw(x)],
     '11' => [qw(xi)],
-    '12' => [qw(xii)]
+    '12' => [qw(xii),
+    '13' => [qw(xiii)],
+    '14' => [qw(xiv)],
+    '15' => [qw(xv)],
+    '16' => [qw(xvi)],
+    '17' => [qw(xvii)],
+    '18' => [qw(xviii)],
+    '19' => [qw(xix)],
+    '19' => [qw(xix)],
+    ]
   },
 
   PARTICLE =>

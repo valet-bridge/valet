@@ -19,10 +19,8 @@ my @MULTI_WORDS =
   'Business League',
   'Grand Prix',
   'Junior League',
-  'Lady Milne Trophy',
   'National Club League',
   'National League',
-  'Peggy Bayer',
   'Premier Pairs',
   'Premier League',
   'Second League',
@@ -34,7 +32,6 @@ my %MULTI_TYPOS =
   Championship => ["ch'ship", "ch'ships", 'ch.ship', "cha'ships",
     "c'ship", "c'ships", "champion's", "champions'",
     "championship's", "chmpionship's"],
-  'Lady Milne Trophy' => ['lady milne'],
   'Premier League' => ['premiere league', 'premier leaugue',
     'premier leauge', 'premier lge', '1st league', 'premie league',
     'prremier league', 'premieer league'],
@@ -45,7 +42,9 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   Championship Congress Cup
   Festival
+  Invitational
   Tournament Training Trial Trophy
+  University
 );
 
 my %SINGLE_TYPOS =
@@ -63,12 +62,15 @@ my %SINGLE_TYPOS =
     'championhips', 'champions', 'chaionships',
     'chamapionship', 'champiosnhip', 'cship',
     'championnat', 'þampýyonasi',
+    'meisterschaft', 'meistershaft',
     'champinship', 'campeonato', 'campionati', 'campionato'],
   Congress => ['kongres', 'kongresowy'],
   Cup => ['cuo', 'cupn', 'cups', 'copa', 'coppa', 'coppie', 'coupe'],
   Festival => ['fest', 'festiva', 'festivan', 'festval', 'festývalý',
     'festivali', 'festivals', 'festivalul', 'bridgefestival'],
-  'Peggy Bayer' => ['peggybayer'],
+  Invitational => ['invitacion', 'invitacional', 'invitación',
+    'invitasi', 'invitatatinal', 'invitatioanal', 'invitation',
+    'invites', 'invitional'],
   'Premier League' => ['premieleague'],
   'Super League' => ['superleague'],
   Tournament => ['torunament', 'toruney', 'torurnament', 'torurney',
@@ -77,11 +79,12 @@ my %SINGLE_TYPOS =
     'tournamnt',
     'torneo', 'tournoi', 'turniej', 'trniej', 'turno', 'trng'],
   Training => ['træning', 'practice'],
-  Trial => ['trials', 'trail', 'trails',
+  Trial => ['trials', 'trail', 'trails', 'triaals',
     'selection', 'seleccion', 'selección', 'select', 'selectiontrials',
     'selections', 'selekction', 'selelection', 'sélection',
     'séléction'],
-  Trophy => ['trofeo', 'trohy', 'trpohy', 'troph']
+  Trophy => ['trofeo', 'trohy', 'trpohy', 'troph'],
+  University => ['unibridge', 'uni', 'universities']
 );
 
 

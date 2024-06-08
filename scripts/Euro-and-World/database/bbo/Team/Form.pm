@@ -20,16 +20,21 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  Pairs => ["pair's"]
 );
 
 my @SINGLE_WORDS = qw(
-  Teams Pairs Individual
+  Individual
+  Pairs
+  Teams
 );
 
 my %SINGLE_TYPOS =
 (
-  Teams => [qw(team equipos lag)],
-  Pairs => [qw(pair)]
+  Individual => ['indyvidual', 'individuals', 'indiv'],
+  Teams => [qw(team teamów teamow teamc teamevent
+    teamy équipes equipas equipos ecgipe lag)],
+  Pairs => [qw(pair par paires)]
 );
 
 

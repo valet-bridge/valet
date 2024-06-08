@@ -171,6 +171,8 @@ my %SINGLE_TYPOS =
   'Central Sulawesi' => ['sulteng'],
   Corsica => ['korsikali'],
   Eurasia => ['avrasya'],
+  Europe => ['european', 'euroregion', 'euro', 'europ_',
+    'europeqn'],
   'Gabungan Malaku' => ['gabmin', 'gabmo'],
   Ganges => ['genges'],
   Hegyvidék  => ['hegyvidek'],
