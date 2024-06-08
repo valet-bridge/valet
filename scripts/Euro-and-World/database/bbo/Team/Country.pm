@@ -9,7 +9,7 @@ use open ':std', ':encoding(UTF-8)';
 package Team::Country;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(set_hashes_team_country);
+our @EXPORT = qw(set_hashes_team_country set_hashes);
 
 use lib '.';
 use TeamBBO;
@@ -44,6 +44,7 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  Argentina => ['argentine republic'],
   'Bosnia & Herzegovina' => ['bosnia-herzegovina', 
     'bosnia&herzegovina', 'bosnia and herz'],
   China => ['pan china', 'pan-china'],
@@ -107,13 +108,14 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  Argentina => ['argenting', 'argentýna', 'arg'],
+  Argentina => ['argenting', 'argentýna', 'arg', 'argetina'],
   Australia => ['austrlia', 'oz', 'australla', 'aus'],
   Austria => ['austra', 'aut'],
   Belarus => ['bielarus', 'blr'],
+  Bermuda => ['bemruda'],
   'Bosnia & Herzegovina' => ['bih'],
   Brazil => ['brasil'],
-  Bulgaria => ['bg', 'bulgarya', 'bul'],
+  Bulgaria => ['bg', 'bulgarya', 'bul', 'bulgar', 'bulgari'],
   Canada => ['kanada'],
   'Czech Republic' => ['czr', 'czech republic.'],
   'Chinese Taipei' => ['taipei'],
@@ -121,8 +123,8 @@ my %SINGLE_TYPOS =
   Croatia => ['croatie', 'cro'],
   Denmark => ['danmark', 'danemark', 'denmarrk', 'den', 'dk',
     'denmark*'],
-  Egypt => ['egy', 'egytp'],
-  England => ['eng'],
+  Egypt => ['egy', 'egytp', 'egypte'],
+  England => ['eng', 'angleterre'],
   Estonia => ['estonie', 'est'],
   Finland => ['finnland', 'fi', 'fin'],
   France => ['fra', 'fnc', 'frandce'],
@@ -134,7 +136,7 @@ my %SINGLE_TYPOS =
   'Hong Kong' => ['hk', 'hongkong'],
   Hungary => ['hungar', 'hun'],
   Iceland => ['ice', 'islande'],
-  India => ['indýa'],
+  India => ['indýa', 'hindusthan', 'hidusthan'],
   Indonesia => ['timnas', 'ind', 'ina'],
   Ireland => ['roireland', 'irelnd', 'irelsnd', 'irlande',
     'irelend', 'irelena', 'ire', 'eire'],
@@ -166,7 +168,7 @@ my %SINGLE_TYPOS =
   Scotland => ['scotlsnd', 'scotlands', 'scotlans'],
   Slovenia => ['sovenia'],
   'South Korea' => ['korea'],
-  Spain => ['esp'],
+  Spain => ['esp', 'españa'],
   'Sri Lanka' => ['srilanka'],
   Sweden => ['swe', 'swedem', 'schweden', 'sweeden'],
   Switzerland => ['suitzerland', 'switserland'],
@@ -185,6 +187,15 @@ sub set_hashes_team_country
   my ($key) = @_;
 
   TeamBBO::set_overall_hashes(\@MULTI_WORDS, \%MULTI_TYPOS,
+    \@SINGLE_WORDS, \%SINGLE_TYPOS, $key);
+}
+
+
+sub set_hashes
+{
+  my ($method, $key) = @_;
+
+  $method->(\@MULTI_WORDS, \%MULTI_TYPOS,
     \@SINGLE_WORDS, \%SINGLE_TYPOS, $key);
 }
 

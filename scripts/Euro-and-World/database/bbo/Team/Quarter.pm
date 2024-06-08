@@ -34,7 +34,7 @@ my @SINGLE_WORDS = qw(
   Çayyolu Cemara Chelsea Chislehurst Courseulles
   Ege Esenkent
   Fatih
-  Gundogan
+  Gardermoen Gundogan
   Heimdal Huochetou
   Jarville Jomtien
   Kadikoy Karaçay Kardelen Kartal Karsiyaka Katok Kaylaka

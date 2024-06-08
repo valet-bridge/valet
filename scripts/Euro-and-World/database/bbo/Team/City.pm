@@ -9,7 +9,7 @@ use open ':std', ':encoding(UTF-8)';
 package Team::City;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(set_hashes_team_city);
+our @EXPORT = qw(set_hashes_team_city set_hashes);
 
 use lib '.';
 use TeamBBO;
@@ -49,6 +49,7 @@ my @MULTI_WORDS =
   'Novi Sad',
   'Piatra Neamt',
   'Reggio Emilia',
+  'Rio de Janeiro',
   'Saint Petersburg',
   'San Giorgio del Sannio',
   'São Paulo',
@@ -117,37 +118,40 @@ my @SINGLE_WORDS = qw(
   Asenovec Asenovgrad Assis Atakum Athens Auckland Ayacucho Aydin 
   Ayvalik
 
-  Baghdad Balchik Balikesir Balikpapan Ballerup Bamberg Bandung 
-  Bangalore Bangkok Banjarmasin Bansi Barcelona Batam Bath Batu Begues 
-  Beijing Bekasi Belgrade Bengkulu Beograd Bereket Bergen Bergues 
-  Berkeley Berlin Bhilwara Bhubaneshwar Bielefeld Bikaner Bitung 
-  Blitar Bodrum Bodø Bogor Bogotá Bologna Bonn Bordeaux Braila Brandbu 
-  Brasilia Brasov Bremen Brisbane Bromölla Brussels Bucharest Budapest 
-  Burghausen Bursa Burdur 
+  Baghdad Balchik Balaton Balatonföldvár Balikesir Balikpapan Ballerup 
+  Bamberg Bandung Bangalore Bangkok Banjarmasin Bansi Barcelona Batam 
+  Bath Batu Begues Beijing Bekasi Belgrade Bengkulu Beograd 
+  Bereket Bergen Bergues Berkeley Berlin Bhilwara Bhubaneshwar Biarritz 
+  Bielefeld Bikaner Bitung Blitar Bodrum Bodø Bogor Bogotá Bologna 
+  Bonn Bordeaux Braila Brandbu Brasilia Brasov Bremen Brisbane 
+  Bromölla Bruges Brussels Bucharest Budapest Burghausen Bursa Burdur 
 
-  Caen Cairns Cairo Canakkale Canberra Canterbury Caracas Cascais 
-  Catania Cerkezkoy Cesme Changhua Changzhou Chaville Chelmno Chengdu 
-  Chennai Chiayi Chicago Chongqing Chumphon Clichy Cluj 
+  Caen Cairns Cairo Canakkale Canberra Canterbury Caracas Casablanca
+  Cascais Catania Cerkezkoy Cesme Changhua Changzhou Chaville Chelmno 
+  Chengdu Chennai Chiayi Chicago Chongqing Chumphon Clichy Cluj 
   Copenhagen Corlu Coventry Cuenca Cuneo
 
-  Dalian Darmstadt Datca Delft Delhi Denizli Depok Derpt Diyarbakir 
-  Dimitrovgrad Dobrich Dombivli Dongguan Durban Düsseldorf
+  Dalian Darmstadt Datca Deauville Delft Delhi Denizli Depok Derpt 
+  Diyarbakir Dimitrovgrad Dobrich Dombivli Dongguan Durban Düsseldorf
 
-  Eastbourne Edirne Elblag Esbjerg Eskisehir Essen Evanston
+  Eastbourne Edinburgh Edirne Elblag Esbjerg Eskisehir Essen Estoril
+  Evanston
 
-  Farsund Fethiye Firenze Flekkefjord Foca Fosnavåg Frankfurt Freidorf 
+  Farsund Fethiye Firenze Flekkefjord Foca Fosnavåg Frankfurt Fredrikstad
+  Freidorf 
 
-  Gdansk Gdynia Genoa Gent Gevgelija Geyve Gnesta Gorzow Gölcük Gresik 
-  Guangzhou Guayaquil Gudbrandsdal Gyor
+  Gdansk Gdynia Gelibolu Genoa Gent Gevgelija Geyve Glasgow Gnesta 
+  Gniezno Gorzow Gölcük Göteborg Gresik Guangzhou Guayaquil 
+  Gudbrandsdal Gyor
 
-  Haderslev Hamar Hamburg Hangzhou Hannover Harplinge Hatay 
+  Haderslev Hamar Hamburg Hammamet Hangzhou Hannover Harplinge Hatay 
   Heledia Helsinki Hendek Herning Hillerød Hordaland Hornbæk Hsinchu 
-  Huldretråkket 
+  Huldretråkket Hyderabad
 
   Iasi Iskenderun Istanbul Ithaca Izmir
 
-  Jagodina Jakarta Jalisco Jember Jessheim Jiamusi Jiangsu Jiangyou 
-  Jianshe Jinchang Jincheng Jinjiang Jiujiang 
+  Jagodina Jaipur Jakarta Jalisco Jember Jessheim Jiamusi Jiangsu 
+  Jiangyou Jianshe Jinchang Jincheng Jinjiang Jiujiang 
 
   Kadirli Kalisz Kalundborg Kalyani Kanpur Karimun Karlsruhe Kashi 
   Kastamonu Katowice Kayseri Kediri Kedungwaru Keelung Kesten Ketsch 
@@ -156,39 +160,40 @@ my @SINGLE_WORDS = qw(
   Kudus Kunshan Kuopio Kusadasi Kütahya Kverndalen Kyustendil Kølabånn
 
   Langkat Lanzhou Lappeenranta Leiden Lerum Leszno Leuven Leverkusen 
-  Lhokseumawe Lille Lima Lincoln Liushu Ljubljana Lodz Lokotok London 
-  Lowicz Lublin Luleburgaz Lumajang Lyon
+  Lhokseumawe Lille Lima Lincoln Linköping Lisbon Liushu Ljubljana Lodz 
+  Lokotok London Lowicz Lublin Luleburgaz Lumajang Lyon
 
-  Maastricht Madrid Magetan Makassar Malang Malatya Malmö Manado 
-  Manchester Manisa Mannheim Marbella Martapura Massy Medan Melbourne 
-  Mersin Miaoli Michalovce Midyat Milan Milas Minsk Monticiano Montpellier 
-  Moradabad Morud Muðla Mumbai Munich 
+  Maastricht Madrid Madras Magetan Makassar Malang Malatya Malmö Manado 
+  Manchester Manisa Mannheim Marbella Marrakech Martapura Massy Mautern
+  Medan Medellin Melbourne Mersin Miaoli Michalovce Midyat Milan Milas 
+  Minsk Monticiano Montpellier Moradabad Morud Muðla Mumbai Munich 
 
   Nagpur Nagykanizsa Namsos Nanchang Nancy Nanning Napoli Narvik 
   Nashik Nazilli Näsby Nicosia Nijmegen Ningbo Niš Norrbyskär Norrøna 
   Nürnberg Nyon Nærbø Næstved Nøtterøy
 
-  Odense Ogndal Oldenburg Olsztyn Orhangazi Oslo Ottadalen Otepää 
-  Oxford Överum
+  Odense Ogndal Oldenburg Olrud Olsztyn Opatija Orhangazi Oslo Ostend
+  Ottadalen Otepää Oxford Överum
 
   Padang Padova Paimado Palembang Palermo Palma Palu Pancevo 
   Panzhihua Pariaman Paris Pärnu Pattaya Pecs Pekanbaru Pelotas 
-  Penajam Pernik Perth Perula Pesaro Pescara Petersfield Pisa Pleven 
-  Plovdiv Pontianak Popovo Porto Potsdam Poznan Prague Pula Pune Puri
+  Penajam Pernik Perth Perula Pesaro Pescara Petersfield Philadelphia
+  Pisa Pleven Plovdiv Pontianak Popovo Porto Potsdam Poznan Prague 
+  Pula Pune Puri
 
   Qingdao
 
   Radkov Rakvere Rayong Reims Riga Rijeka Rimini Rome 
 
-  Ravnkilde Rzeszow Rødovre
+  Ravnkilde Reykjavik Rzeszow Rødovre
 
   Saarbrücken Sabadell Salerno Samarinda Samsun Sandefjord 
   Santiago Sanya Sarpsborg Secunderabad Seferihisar Semarang Serang 
   Shanghai Shaoguan Shenyang Shenzhen Shijiazhuang Sibiu Sidoarjo Siena 
   Sindi Singsås Skara Skien Skopje Slagelse Sleman Sofia Solok 
-  Sortland Söke Split Stanford Stavanger Steinkjer Storsjöbygden Stureby 
-  Stuttgart Sukma Sukomoro Sumedang Sunndalsøra Surabaya Suzhou Sydney 
-  Szeged Sørreisa
+  Sortland Söke Split Stanford Stavanger Steinkjer Stockholm
+  Storsjöbygden Stureby Stuttgart Sukma Sukomoro Sumedang Sunndalsøra 
+  Surabaya Suzhou Sydney Szeged Sørreisa
 
   Taicang Taichung Tainan Taizhou Takayama Tallinn Targoviste Tarnów 
   Täby Täfteå Tekýrdag Temuco Thane Thanjavur Thessaloniki Tianjin 
@@ -200,13 +205,13 @@ my @SINGLE_WORDS = qw(
   Van Varberg Varese Varna Vasa Västervik Vestfold Vestvågøy 
   Vienna Vikersund Vilnius Vraca
 
-  Waltham Warsaw Wellington Wisla Worcester Wroclaw Wuhan Wuxi
+  Waltham Warsaw Wellington Wisla Worcester Wroclaw Wronie Wuhan Wuxi
 
   Xinyi
 
   Yambol Yanshi Yarýmca Yatagan Yizhuang Yokohama Yogyakarta Yuquan
 
-  Zagreb Zhaoqing Zhongshan Zhuzhou Zigong Zyrardow
+  Zagreb Zhaoqing Zhongshan Zhuzhou Zigong Zürich Zyrardow
 
   Ørland
 
@@ -216,6 +221,7 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   Adelaide => ['adeliade'],
+  Ahmedabad => ['ahemadabad'],
   Akhisar => ['Akhýsar'],
   Allahabad => ['alahabad'],
   'Al-Rabwa' => ['rabwa'],
@@ -226,17 +232,24 @@ my %SINGLE_TYPOS =
   Auckland => ['akarana'],
   Ayvalik => ['aivali'],
   Balisekir => ['balikesýr', 'balýkesir',],
-  Bangalore => ["b'lore", 'banglore', 'bengalore'],
+  Bangalore => ["b'lore", 'banglore', 'bengalore', 'bangaluru',
+    'benglore', 'bengluru', 'bengalu'],
   Bansi => ["bansi's"],
-  Beijing => ['peking'],
+  Beijing => ['peking', 'pekin', 'pékin'],
   Canakkale => ['çanakkale'],
+  Canberra => ['canbera'],
   Cerkezkoy => ['çerkezköy', 'cerk'],
   Copenhagen => ['kopenhagen'],
+  Deauville => ['deauille'],
   Diyarbakir => ['dýyarbakir', 'diyarbakýr'],
   Dongguan => ['dongguang'],
   Düsseldorf => ['duesseldorf'],
+  Estoril => ['estoral'],
+  Fredrikstad => ['ftrediklstad'],
   'Gaziantep Zeugma' => ['zeugma'],
+  Gdansk => ['gdañsk'],
   Genoa => ['genova'],
+  Göteborg => ['goteborg', 'gothenburg'],
   Guangzhou => ['gz', 'gaungzhou'],
   Harplinge => ['harpling'],
   Hordaland => ['hordland'],
@@ -247,17 +260,19 @@ my %SINGLE_TYPOS =
   Kalundborg => ['kallundborg'],
   Karsiyaka => ['Karþiyaka'],
   Kocaeli => ['Kocaelý'],
-  Kolkata => ['calcutta'],
+  Kolkata => ['calcutta', 'kolkta'],
   Kosice => ['cassovia'],
   Koycegiz => ['köyceðýz'],
-  Krakow => ['kraków'],
+  Krakow => ['kraków', 'cracow'],
   Kristiansand => ['kristiansands'],
   'Kuala Lumpur' => ['kl'],
   Kyustendil => ['kjustend'],
   'La Marina' => ['lamarina'],
   Langkat => ['lankat'],
   Lhokseumawe => ['lhoeksemawe'],
+  Linköping => ['linkoping'],
   Makassar => ['makasar'],
+  Malmö => ['malmo', 'malmoe'],
   Manado => ['menado'],
   Manahasa => ['mnhasa'],
   Mersin => ['mersýn'],
@@ -265,7 +280,7 @@ my %SINGLE_TYPOS =
   Milas => ['minas'],
   'Mitra Vihar' => ['mitravihar'],
   'Monte Carlo' => ['montecarlo'],
-  Mumbai => ['mum'],
+  Mumbai => ['mum', 'bombay', 'bomay'],
   Munich => ['münchen'],
   Nagpur => ['nagpor'],
   Nanchang => ['nancang'],
@@ -275,6 +290,7 @@ my %SINGLE_TYPOS =
   Norrbyskär => ['norrbyskar'],
   'Novi Sad' => ['nowewsady'],
   Olsztyn => ['olo'],
+  Ostend => ['ostende'],
   Palembang => ['plg'],
   Pamukkale => ['pamuk'],
   Panzhihua => ['panzhihuabc'],
@@ -285,7 +301,7 @@ my %SINGLE_TYPOS =
   Prague => ['praha'],
   Radkov => ['radkow', 'kadkov', 'rxdkov'],
   'Reggio Emilia' => ['re'],
-  Reykjavik => ['reykjavikur', 'reykjavitur'],
+  Reykjavik => ['reykjavikur', 'reykjavitur', 'reykavik'],
   Rome => ['roma'],
   Saarbrücken => ['saarbruecken'],
   'Saint Petersburg' => ['spb'],
@@ -293,6 +309,7 @@ my %SINGLE_TYPOS =
   Singsås => ['singsaas'],
   Storsjöbygden => ['storsjöbygdens'],
   Söke => ['soke'],
+  Stockholm => ['stockholms'],
   Sunndalsøra => ['sunndalsora'],
   'Taipei City' => ['taipei'],
   Targoviste => ['tg'],
@@ -301,17 +318,19 @@ my %SINGLE_TYPOS =
   Tekýrdag => ['tekirdağ'],
   Thane => ['tane'],
   Thanjavur => ["tanjorian's"],
+  'The Hague' => ['hague'],
   Thessaloniki => ['salonica'],
   Tromsø => ['tromso', 'tromsoe'],
   Trondheim => ['trondhei'],
   Udaipir => ['udaypur'],
   'Udon Thani' => ['udonthani'],
   Vienna => ['wien'],
-  Warsaw => ['warsow', 'warszawa'],
+  Warsaw => ['warsow', 'warszawa', 'warszawy'],
   Wroclaw => ['wr'],
   Yildirim => ['yýldýrým'],
   Yogyakarta => ['diy'],
   Zagreb => ['zgb', 'zg'],
+  Zürich => ['zurich'],
   'Zhong Jian' => ['zhongjian'],
   Åkirkeby => ['aakirkeby'],
   Århus => ['aarhus', 'arhus']
@@ -323,6 +342,15 @@ sub set_hashes_team_city
   my ($key) = @_;
 
   TeamBBO::set_overall_hashes(\@MULTI_WORDS, \%MULTI_TYPOS,
+    \@SINGLE_WORDS, \%SINGLE_TYPOS, $key);
+}
+
+
+sub set_hashes
+{
+  my ($method, $key) = @_;
+
+  $method->(\@MULTI_WORDS, \%MULTI_TYPOS,
     \@SINGLE_WORDS, \%SINGLE_TYPOS, $key);
 }
 

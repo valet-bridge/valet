@@ -16,6 +16,7 @@ use Chain;
 use TeamBBO;
 use EventBBO;
 use ScoringBBO;
+use TitleBBO;
 
 use Event::Despace;
 use Event::Patterns;
@@ -28,11 +29,14 @@ use Event::Reductions;
 die "perl cook.pl raw.txt" unless $#ARGV == 0;
 
 my $do_events = 0; # 1 if we parse EVENT
+my $do_tournaments = 1; # 1 if we parse TITLE
 
 my @RAW_FIELDS = qw(BBONO TITLE EVENT SCORING TEAMS);
 
-init_hashes();
+TeamBBO::init_hashes();
 read_cities();
+
+TitleBBO::init_hashes();
 
 my $file = $ARGV[0];
 open my $fh, '<', $file or die "Cannot read tfile: $!";
@@ -41,8 +45,10 @@ my %chunk;
 my $line;
 
 my $lno = 0;
-my (@chain_team_stats, @chain_event_stats, @reduction_event_stats);
+my (@chain_team_stats, @chain_event_stats, @chain_title_stats);
+my @reduction_event_stats;
 my $unknown_events = 0;
+my $unknown_titles = 0;
 
 while ($line = <$fh>)
 {
@@ -99,11 +105,23 @@ while ($line = <$fh>)
     process_patterns(\@EVENT_REDUCTIONS, \@chains_event, 
       \@reduction_event_stats);
 
-    update_chain_event_stats(\%chunk, \@chains_event, \@chain_event_stats);
+    update_chain_stats(\%chunk, \@chains_event, \@chain_event_stats);
   }
 
   my $scoring;
   study_scoring($chunk{SCORING}, \%result, $chunk{BBONO});
+
+  if ($do_tournaments)
+  {
+    my $chain_title = Chain->new();
+    my @chains_title;
+    push @chains_title, $chain_title;
+
+    study_title($chunk{TITLE}, $chain_title, \$unknown_titles, 
+      $chunk{BBONO});
+
+    update_chain_stats(\%chunk, \@chains_title, \@chain_title_stats);
+  }
 }
 
 close $fh;
@@ -113,9 +131,16 @@ print_team_chain_stats(\@chain_team_stats);
 
 if ($do_events)
 {
-  print_event_chain_stats(\@chain_event_stats);
+  print_chain_stats("Event", \@chain_event_stats);
   print_event_reduction_stats(\@reduction_event_stats);
   print "\nTotal unknown events: $unknown_events\n\n";
+}
+
+if ($do_tournaments)
+{
+  print_title_stats();
+  print_chain_stats("Title", \@chain_title_stats);
+  print "\nTotal unknown titles $unknown_events\n\n";
 }
 
 exit;
@@ -174,15 +199,15 @@ sub update_chain_team_stats
 }
 
 
-sub update_chain_event_stats
+sub update_chain_stats
 {
-  my ($chunk, $chains, $chain_event_stats) = @_;
+  my ($chunk, $chains, $chain_stats) = @_;
 
   my $open_flag = 0;
   for my $chain (@$chains)
   {
     my $status = $chain->status();
-    $chain_event_stats->[$chain->last()+1]{$status}++;
+    $chain_stats->[$chain->last()+1]{$status}++;
     $open_flag = 1 if $status eq 'OPEN';
   }
 
@@ -205,12 +230,12 @@ sub print_team_chain_stats
 }
 
 
-sub print_event_chain_stats
+sub print_chain_stats
 {
-  my $chain_stats = pop;
+  my ($header ,$chain_stats) = @_;
 
   my %csum;
-  print "\nEvent chain stats\n\n";
+  print "\n$header chain stats\n\n";
   printf("%6s%10s%10s%10s\n", "", "OPEN", "COMPLETE", "KILLED");
 
   for my $i (0 .. $#$chain_stats)

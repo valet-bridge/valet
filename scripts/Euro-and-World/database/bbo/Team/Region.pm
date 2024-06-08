@@ -9,7 +9,7 @@ use open ':std', ':encoding(UTF-8)';
 package Team::Region;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(set_hashes_team_region);
+our @EXPORT = qw(set_hashes_team_region set_hashes);
 
 use lib '.';
 use TeamBBO;
@@ -134,7 +134,7 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   Agder Akdeniz Akkad Anhui ASEAN Ayrshire
   Bali Balkan Banten Belitung Bengkayang Bihar Bornholm Bungo Buskerud
-  Cappadocia Corsica
+  Cappadocia Catalonia Corsica
   Dersým Druts
   Eurasia Europe Eyjafjallajokull
   Florida Fukien
@@ -145,8 +145,8 @@ my @SINGLE_WORDS = qw(
   Kansai Karnataka Kawanua Kayong Kedungwaru Kepri Kerala 
   Kinali Krabi
   Lampung Lebak Liaoning Liguria Lombok 
-  Maharashtra Maluku Marmara Matopos Mercosur Midtsjælland 
-  Minahasa Mjøsa Muallim Munzur Mysia
+  Madeira Maharashtra Maluku Marmara Matopos Mercosur Midtsjælland 
+  Minahasa Missouri Mjøsa Muallim Munzur Mysia
   Nordafjells Norden Norrland Nusantara
   Queensland
   Oberloiben Orontes Otago
@@ -158,7 +158,7 @@ my @SINGLE_WORDS = qw(
   Tigris Tinglin Tuncelý
   Uccle Unia Uttarakhand
   Victoria Vojvodina
-  Waikato Wujin
+  Wachau Waikato Wujin
   Yongjia Yunnan
   Zhejiang
 );
@@ -167,6 +167,7 @@ my %SINGLE_TYPOS =
 (
   'Australian Central Territory' => ['act'],
   Cappadocia => ['kapadokya', 'kapodokya'],
+  Catalonia => ['catalunya', 'cataluña'],
   'Central Sulawesi' => ['sulteng'],
   Corsica => ['korsikali'],
   Eurasia => ['avrasya'],
@@ -186,6 +187,7 @@ my %SINGLE_TYPOS =
   'North Sumatra' => ['sumut'],
   'Northern Territory' => ['nt'],
   Queensland => ['qld'],
+  Rajasthan => ['rajsthan'],
   'Samut Prakan' => ['samutprakan'],
   'Samut Sakhon' => ['samutsakhon'],
   Slask => ['l¹sk'],
@@ -208,6 +210,15 @@ sub set_hashes_team_region
   my ($key) = @_;
 
   TeamBBO::set_overall_hashes(\@MULTI_WORDS, \%MULTI_TYPOS,
+    \@SINGLE_WORDS, \%SINGLE_TYPOS, $key);
+}
+
+
+sub set_hashes
+{
+  my ($method, $key) = @_;
+
+  $method->(\@MULTI_WORDS, \%MULTI_TYPOS,
     \@SINGLE_WORDS, \%SINGLE_TYPOS, $key);
 }
 
