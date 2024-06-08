@@ -212,26 +212,71 @@ sub set_overall_hashes
 }
 
 
+sub make_field_record
+{
+  my ($text, $chain, $bbono, $record, $dupl_flag) = @_;
+
+  for my $i (0 .. $chain->last())
+  {
+    my $token = $chain->check_out($i);
+    my $field = $token->field();
+    my $val = $token->value();
+
+    if (! exists $record->{$field})
+    {
+      $record->{$field} = $val;
+    }
+    elsif ($dupl_flag && 
+        $field ne 'TEAM_DESTROY' && 
+        $record->{$field} ne $val)
+    {
+      print "$bbono, $text, $field: $record->{$field} vs $val\n";
+    }
+  }
+}
+
+
+sub make_complete_field_record
+{
+  my ($text, $chain, $bbono, $record) = @_;
+
+  for my $i (0 .. $chain->last())
+  {
+    my $token = $chain->check_out($i);
+    my $field = $token->field();
+    my $val = $token->value();
+
+    push @{$record->{$field}}, $val;
+  }
+}
+
+
 sub check_consistency_pair
 {
   my ($text, $bbono, $record, $from, $to) = @_;
 
-  if (exists $record->{$from})
+  return unless exists $record->{$from};
+  return unless exists $record->{$to};
+
+  my $c = $MATRIX{$from}{$to}{lc($record->{$from})};
+  if (! defined $c)
   {
-    if (exists $record->{$to})
-    {
-      my $c = $MATRIX{$from}{$to}{lc($record->{$from})};
-      if (! defined $c)
-      {
-        print "$bbono, $text, $to: ",
-          "$record->{$from} not in matrix ($from, $to)\n";
-      }
-      elsif ($c ne $record->{$to})
-      {
-        print "$bbono, $text, $to: ",
-          "$record->{$to} vs $c\n";
-      }
-    }
+    print "$bbono, $text, $to: ",
+      "$record->{$from} not in matrix ($from, $to)\n";
+  }
+  elsif ($c eq $record->{$to})
+  {
+    return;
+  }
+  elsif ($from eq 'TEAM_CLUB' && $to eq 'TEAM_CITY' && $c =~ /-Pan$/)
+  {
+    # Special case.
+    return;
+  }
+  else
+  {
+    print "$bbono, $text, $to: ",
+      "$record->{$to} vs $c\n";
   }
 }
 
@@ -242,33 +287,8 @@ sub check_consistency
 
   return if exists $REPEATS{$bbono};
 
-  if ($chain->last() == 1 &&
-      $chain->check_out(0)->field() eq $chain->check_out(1)->field())
-  {
-    # TODO Probably generalize: Split chains on DESTROY.
-    if ($chain->check_out(0)->field() eq 'NUMERAL' ||
-        $chain->check_out(0)->field() eq 'TEAM_DESTROY')
-    {
-      return;
-    }
-  }
-
   my %record;
-  for my $i (0 .. $chain->last())
-  {
-    my $token = $chain->check_out($i);
-    my $field = $token->field();
-    my $val = $token->value();
-
-    if (! exists $record{$field})
-    {
-      $record{$field} = $val;
-    }
-    elsif ($record{$field} ne $val)
-    {
-      print "$bbono, $text, $field: $record{$field} vs $val\n";
-    }
-  }
+  make_field_record($text, $chain, $bbono, \%record, 1);
 
   check_consistency_pair($text, $bbono, \%record,
     'TEAM_REGION', 'TEAM_COUNTRY');
@@ -584,6 +604,52 @@ sub study_component
 }
 
 
+sub fix_heuristics
+{
+  my ($text, $chain, $bbono) = @_;
+
+  my %record;
+  make_complete_field_record($text, $chain, $bbono, \%record);
+
+  # Destroy Bridge Club if there is also Sporting Club.
+  if (exists $record{TEAM_ABBR} && $#{$record{TEAM_ABBR}} == 1)
+  {
+    for my $i (0 .. $chain->last())
+    {
+      my $token = $chain->check_out($i);
+      if ($token->field() eq 'TEAM_ABBR' &&
+          $token->value() eq 'Bridge Club')
+      {
+        $token->set_singleton('TEAM_DESTROY', 'Bridge Club');
+      }
+    }
+  }
+
+  # Turn Orange White into Netherlands White.
+  if (exists $record{TEAM_COLOR} && $#{$record{TEAM_COLOR}} == 1)
+  {
+    my $token = $chain->check_out(0);
+    if (lc($token->value()) eq 'orange')
+    {
+      $token->set_singleton('TEAM_COUNTRY', 'Netherlands');
+    }
+  }
+
+  # Destroy two numerals.
+  if (exists $record{NUMERAL} && $#{$record{NUMERAL}} == 1)
+  {
+    for my $i (0 .. $chain->last())
+    {
+      my $token = $chain->check_out($i);
+      if ($token->field() eq 'NUMERAL')
+      {
+        $token->set_singleton('TEAM_DESTROY', $token->value());
+      }
+    }
+  }
+}
+
+
 sub study_team
 {
   my ($text, $chain, $bbono) = @_;
@@ -626,6 +692,8 @@ sub study_team
 
   print "UUU $bbono: $text\n" if ($unsolved_flag && $chain->last() > 0);
   print "\n" if $unsolved_flag;
+
+  fix_heuristics($text, $chain, $bbono);
 }
 
 

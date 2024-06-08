@@ -1,16 +1,6 @@
-2024-06-03
+2024-06-08
 
-Consistent duplication
-* TEAM_ABBR: Bridge Club + Sporting Club = Sporting Club (destroy one)
-* Orange + Color = Netherlands + Color
-* Split on destroy, form, gender, age (both before and after)
-* Destroy up to two numerals
-* A city in a country + Country-Pan: Destroy the Pan
-* Remove temp code in check_consistency
+Look at tag names in events
+Move event code to Event
 
-Flatten each chain
-
-Look at the Team chains for plausibility
-
-Reductions:
-- City + Abbr could be club, etc.
+Start on Scoring

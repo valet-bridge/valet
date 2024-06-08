@@ -38,7 +38,7 @@ my $line;
 
 my $lno = 0;
 my $unknown = 0;
-my @chain_stats;
+my @chain_team_stats;
 my @reduction_stats;
 
 while ($line = <$fh>)
@@ -64,36 +64,20 @@ while ($line = <$fh>)
     next;
   }
 
-  if ($chunk{BBONO} == 38973)
+  if ($chunk{BBONO} == 99999)
   {
     print "HERE\n";
   }
 
-  my $chain1 = Chain->new();
-  my $chain2 = Chain->new();
+  my $chain_team1 = Chain->new();
+  my $chain_team2 = Chain->new();
   my %result;
-  study_teams($chunk{TEAMS}, \%result, $chain1, $chain2,
-    # tmp
-    $chunk{BBONO});
+  study_teams($chunk{TEAMS}, \%result, 
+    $chain_team1, $chain_team2, $chunk{BBONO});
 
-  $chain_stats[$chain1->last()+1]++;
-  $chain_stats[$chain2->last()+1]++;
+  update_chain_team_stats($chain_team1, \@chain_team_stats);
+  update_chain_team_stats($chain_team2, \@chain_team_stats);
 
-  if ($chain1->last() > 10)
-  {
-    print $chunk{BBONO}, ":\n";
-    print $chain1->text(), "\n";
-    print $chain1->catcat(), "\n";
-    print $chain1->fields(), "\n\n";
-  }
-
-  if ($chain2->last() > 10)
-  {
-    print $chunk{BBONO}, ":\n";
-    print $chain2->text(), "\n";
-    print $chain2->catcat(), "\n";
-    print $chain2->fields(), "\n\n";
-  }
 
 =pod
   # Fix some space-related issues.
@@ -128,10 +112,10 @@ close $fh;
 
 print_team_stats();
 
-print "\nChain stats\n\n";
-for my $i (0 .. $#chain_stats)
+print "\nTeam chain stats\n\n";
+for my $i (0 .. $#chain_team_stats)
 {
-  printf ("%4d %6d\n", $i, $chain_stats[$i]);
+  printf ("%4d %6d\n", $i, $chain_team_stats[$i]);
 }
 
 # print "TOTAL $unknown\n\n";
@@ -177,6 +161,22 @@ sub print_chains
       $chain->catcat());
   }
   printf "\n";
+}
+
+
+sub update_chain_team_stats
+{
+  my ($chain, $chain_team_stats) = @_;
+
+  $chain_team_stats->[$chain->last()+1]++;
+
+  if ($chain->last() > 100)
+  {
+    print $chunk{BBONO}, ":\n";
+    print $chain->text(), "\n";
+    print $chain->catcat(), "\n";
+    print $chain->fields(), "\n\n";
+  }
 }
 
 
