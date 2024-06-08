@@ -57,6 +57,7 @@ my %SINGLE_TYPOS =
   'Czech Republic' => ['czech'],
   England => ['english'],
   Estonia => ['estonian'],
+  Finland => ['finnish'],
   France => ['french', 'francaise', 'française'],
   Germany => ['german'],
   Greece => ['greek'],

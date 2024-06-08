@@ -16,6 +16,7 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'Grand Prix'
 );
 
 my %MULTI_TYPOS =
@@ -26,7 +27,9 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Championship
+  Championship Congress Cup
+  Festival
+  Tournament Training Trial Trophy
 );
 
 my %SINGLE_TYPOS =
@@ -42,13 +45,21 @@ my %SINGLE_TYPOS =
     'champonship', 'champship', 'champsionship', 'chamrionship',
     'chanpionship', 'chapionship', 'chapmionship', 'chmpionship',
     'championhips', 'champions', 'chaionships',
-    'chamapionship', 'champiosnhip',
+    'chamapionship', 'champiosnhip', 'cship',
     'championnat', 'þampýyonasi',
     'champinship', 'campeonato', 'campionati', 'campionato'],
+  Cup => ['cuo', 'cupn', 'cups', 'copa', 'coppa', 'coppie', 'coupe'],
+  Festival => ['fest', 'festiva', 'festivan', 'festval', 'festývalý'],
   Tournament => ['torunament', 'toruney', 'torurnament', 'torurney',
     'tourament', 'tourn', 'tourname', 'tournamnet', 'tournement',
-    'tournet', 'tourney', 'turnament',
-    'torneo', 'tournoi', 'turniej']
+    'tournet', 'tourney', 'turnament', 'tourmanent', 'tourna',
+    'tournamnt',
+    'torneo', 'tournoi', 'turniej', 'trniej', 'turno', 'trng'],
+  Training => ['træning', 'practice'],
+  Trial => ['trials', 'trail', 'trails',
+    'selection', 'seleccion', 'selección', 'select', 'selectiontrials',
+    'selections', 'selekction', 'selelection'],
+  Trophy => ['trofeo', 'trohy', 'trpohy', 'troph']
 );
 
 

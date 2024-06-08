@@ -28,11 +28,13 @@ use Team::Country;
 use Team::Nationality;
 use Team::Region;
 use Team::City;
+use Team::Quarter;
 use Team::University;
 use Team::Sponsor;
 use Team::Gender;
 use Team::Age;
 
+use Title::Tname;
 use Title::Tword;
 
 my @TAG_ORDER = qw(
@@ -42,10 +44,12 @@ my @TAG_ORDER = qw(
   TITLE_NATIONALITY
   TITLE_REGION 
   TITLE_CITY 
+  TITLE_QUARTER 
   TITLE_UNIVERSITY 
   TITLE_SPONSOR 
   TITLE_GENDER
   TITLE_AGE
+  TITLE_TNAME
   TITLE_TWORD
 );
 
@@ -65,11 +69,13 @@ sub init_hashes
   Team::Nationality::set_hashes($method, 'TITLE_NATIONALITY');
   Team::Region::set_hashes($method, 'TITLE_REGION');
   Team::City::set_hashes($method, 'TITLE_CITY');
+  Team::Quarter::set_hashes($method, 'TITLE_QUARTER');
   Team::University::set_hashes($method, 'TITLE_UNIVERSITY');
   Team::Sponsor::set_hashes($method, 'TITLE_SPONSOR');
   Team::Gender::set_hashes($method, 'TITLE_GENDER');
   Team::Age::set_hashes($method, 'TITLE_AGE');
 
+  Title::Tname::set_hashes($method, 'TITLE_TNAME');
   Title::Tword::set_hashes($method, 'TITLE_TWORD');
 }
 
