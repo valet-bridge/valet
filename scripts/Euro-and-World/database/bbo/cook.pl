@@ -15,6 +15,7 @@ use Chain;
 
 use TeamBBO;
 use EventBBO;
+use ScoringBBO;
 
 use Event::Despace;
 use Event::Patterns;
@@ -26,7 +27,7 @@ use Event::Reductions;
 
 die "perl cook.pl raw.txt" unless $#ARGV == 0;
 
-my $do_events = 1; # 1 if we parse EVENT
+my $do_events = 0; # 1 if we parse EVENT
 
 my @RAW_FIELDS = qw(BBONO TITLE EVENT SCORING TEAMS);
 
@@ -98,8 +99,11 @@ while ($line = <$fh>)
     process_patterns(\@EVENT_REDUCTIONS, \@chains_event, 
       \@reduction_event_stats);
 
-  update_chain_event_stats(\%chunk, \@chains_event, \@chain_event_stats);
+    update_chain_event_stats(\%chunk, \@chains_event, \@chain_event_stats);
   }
+
+  my $scoring;
+  study_scoring($chunk{SCORING}, \%result, $chunk{BBONO});
 }
 
 close $fh;
