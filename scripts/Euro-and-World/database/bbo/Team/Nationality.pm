@@ -39,7 +39,6 @@ my @SINGLE_WORDS = qw(
   Tunisia
 );
 
-# Mostly not really typos.
 my %SINGLE_TYPOS =
 (
   Argentina => ['argentinian', 'argentino'],
@@ -55,7 +54,8 @@ my %SINGLE_TYPOS =
   Chile => ['chilean'],
   Croatia => ['croatian'],
   'Czech Republic' => ['czech'],
-  England => ['english'],
+  Egypt => ['egyptian'],
+  England => ['english', 'engish', 'enlish', 'englush'],
   Estonia => ['estonian'],
   Finland => ['finnish'],
   France => ['french', 'francaise', 'française'],
@@ -68,17 +68,22 @@ my %SINGLE_TYPOS =
   Ireland => ['irish'],
   Israel => ['israeli', 'israli'],
   Italy => ['italian', 'italiano'],
+  Latvia => ['latvian'],
+  Lebanon => ['lebanese'],
   Lithuania => ['lithianin', 'lithuanian'],
   Netherlands => ['dutch'],
   Norway => ['norwegian', 'norvegian', 'norwegain', 'norwgian',
-    'norwigian'],
-  Poland => ['polish'],
+    'norwigian', 'norewegian'],
+  Poland => ['polish', 'poish', 'polski'],
   Portugal => ['portuguese'],
   Romania => ['romanian'],
   Scotland => ['scottish'],
   Serbia => ['serbian'],
+  'South Africa' => ['south african'],
   Spain => ['spanish'],
   Sweden => ['swedish', 'swdish', 'swedis', 'swesish'],
+  Taiwan => ['taiwanese'],
+  Turkish => ['turkis', 'turkýsh'],
   Tunisia => ['tunisie']
 );
 

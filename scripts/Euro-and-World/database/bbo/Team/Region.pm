@@ -16,6 +16,7 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'Aegean Sea',
   'Australian Central Territory',
   'Bekasi Regency',
   'Bisma Semarang',
@@ -165,6 +166,7 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  'Aegean Sea' => ['aegean'],
   'Australian Central Territory' => ['act'],
   Cappadocia => ['kapadokya', 'kapodokya'],
   Catalonia => ['catalunya', 'cataluña'],

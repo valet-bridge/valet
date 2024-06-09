@@ -70,6 +70,7 @@ my @MULTI_WORDS =
   'Brink Plast',
   'Bústólpi ehf',
   'Cai Fu Zheng Quan',
+  'Cap Gemini',
   'Caretta International',
   'Carlo Bossi',
   'Central Secretariat',
@@ -536,6 +537,7 @@ my %MULTI_TYPOS =
     'sparisj.siglufj', 'sparisj.siglufjarð',
     'sparisj.siglufjarða', 'sarpisj.siglufjarð', 'spariisj.siglufjarð'],
   'Spasso Food' => ['spassofood'],
+  SportAccord => ['sport accord'],
   'SY Sheng Yutain' => ['s.y. shengyutain'],
   'Syabas Energy' => ['syabas energi', 'syabas e'],
   'Synergia Lublin' => ['synergia lubin'],
@@ -569,7 +571,7 @@ my @SINGLE_WORDS = qw(
   Aklindo Allianz Altinay Aquatrans Arboned Argento Arkas Arma 
   Artotec Asindo Ayýntab
 
-  Bajaj Baykar Beibao Beidike Bnerg BridgePlus
+  Bajaj Baykar Beibao Beidike Bnerg BridgePlus Budimex
 
   Cable Candyland Cempaka Changyu Chemikartel Chlodnia Chuanmei 
   Cimentas COMAL Compensa Computerland CONNECTOR CONSUS Constellation 
@@ -583,7 +585,8 @@ my @SINGLE_WORDS = qw(
 
   Fatek Forta Frissan Funbridge
 
-  GAMAX Gazprom Geologi Genkad Gevalia Gillette Gomad Gözgöz GSE
+  GAMAX Gazprom Generali Geologi Genkad Gevalia Gillette Gomad 
+  Gözgöz GSE
 
   Hana Harke Haustak HNA Honesta Hongyu Huachu Huayuan
 
@@ -596,9 +599,9 @@ my @SINGLE_WORDS = qw(
   Lacznosc Laima Lavazza LCG Lianbo Likom Longjiangfu Lukomorie 
   Lyfjaver
 
-  Makus Malkia Manyavar Mireo Modalfa Morgunblaðið Myndform
+  Makus Malkia Manyavar Mireo Modalfa Morgunblaðið Multicoms Myndform
 
-  NALCO Nanyuan Navachaitanya Navayuga Nazwa Nefka Niewiem Nongken 
+  NALCO Nanyuan Navachaitanya Navayuga Nazwa NEC Nefka Niewiem Nongken 
   Norco Nortemp NOTUS Näkösoppi
 
   Ozyuva
@@ -611,8 +614,8 @@ my @SINGLE_WORDS = qw(
   Raam Radex Ráðgjöf Ravebo Relpol Ruyi Ryka
 
   Sagaplast Samsung Scandic Scania Sehati Sevtopolis Shichuang Shimuzu 
-  Shouchuang Signity Skeljungur Solakoglu Solox Sparisjóður Srenniw
-  SSDA Stalgast Stiga Struma Synective
+  Shouchuang Signity Skeljungur Solakoglu Solox Sparisjóður 
+  SportAccord Srenniw SSDA Stalgast Stiga Struma Synective
 
   Tekser Telkom Termika Termoavion Termochem Timah Topeko Transearly 
   Tricon Tridaya Tryggingamiðstöðin Tsingtao Tundem Tyco Tzilis
@@ -683,6 +686,7 @@ my %SINGLE_TYPOS =
   'Meilin Qing Cheng' => ['meilinqingcheng'],
   'Mei Kuang' => ['meikuang'],
   'Mitra Buana' => ['mitrabuana'],
+  Multicoms => ['multicom'],
   'Nanning Yalun' => ['nanning yalun'],
   'Nest Inn' => ['nestinn'],
   'Oly-Star' => ['olyster'],
@@ -718,7 +722,7 @@ my %SINGLE_TYPOS =
   Velbazhd => ['velbuzhd'],
   'Viego Regnskap' => ['viego'],
   Wellwise => ['wellwiss'],
-  'Yeh Bros' => ['yeh'],
+  'Yeh Bros' => ['yeh', 'yehbros'],
   'Zhejiang Huamen' => ['huamen'],
   'Zhejiang Jingfan' => ['jingfan']
 );

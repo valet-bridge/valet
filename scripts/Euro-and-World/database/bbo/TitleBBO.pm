@@ -30,6 +30,7 @@ use Team::Region;
 use Team::City;
 use Team::Quarter;
 use Team::University;
+use Team::Form;
 use Team::Sponsor;
 use Team::Gender;
 use Team::Age;
@@ -47,6 +48,7 @@ my @TAG_ORDER = qw(
   TITLE_CITY 
   TITLE_QUARTER 
   TITLE_UNIVERSITY 
+  TITLE_FORM 
   TITLE_SPONSOR 
   TITLE_GENDER
   TITLE_AGE
@@ -73,6 +75,7 @@ sub init_hashes
   Team::City::set_hashes($method, 'TITLE_CITY');
   Team::Quarter::set_hashes($method, 'TITLE_QUARTER');
   Team::University::set_hashes($method, 'TITLE_UNIVERSITY');
+  Team::Form::set_hashes($method, 'TITLE_FORM');
   Team::Sponsor::set_hashes($method, 'TITLE_SPONSOR');
   Team::Gender::set_hashes($method, 'TITLE_GENDER');
   Team::Age::set_hashes($method, 'TITLE_AGE');
@@ -414,7 +417,7 @@ sub study_title
   split_on_multi($stext, \@parts, \@tags);
 
   # Split on separators.
-  my $sep = qr/[\s+\-\+\._:;&"\/\(\)\|]/;
+  my $sep = qr/[\s+\-\+\._:;&@"\/\(\)\|]/;
 
   my $token_no = 0;
   my $unsolved_flag = 0;

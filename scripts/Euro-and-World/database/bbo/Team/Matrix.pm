@@ -73,7 +73,7 @@ my %COUNTRY_TO_REGION =
   Thailand => ['krabi', 'nakhon nayok', 'ratchaburi', 'samut prakan', 
     'samut sakhon', 'suphan buri'],
   Tunisia => ['hammamet'],
-  Turkey => ['akdeniz', 'cappadocia', 'central anatolia', 
+  Turkey => ['aegean', 'akdeniz', 'cappadocia', 'central anatolia', 
     'datca yarimada', 'dersým', 'hatay', 'kinali', 'marmara', 'muallim', 
     'munzur', 'mysia', 'orontes', 'sakarya', 'taskopru', 'tigris', 
     'tuncelý'],

@@ -37,7 +37,8 @@ my %SINGLE_TYPOS =
     senjoorid senyor sr)],
   Juniors => [qw(juniiors juniores junior jrs jr jt
     yuniors yunior juniorit jun frs juniorerna)],
-  Youngsters => [qw(youngster young youth genclik)],
+  Youngsters => [qw(youngster young youth yoth youht younth
+    yongster genclik)],
   Schools => [qw(school)],
   U16 => ['boys'],
   U20 => [qw(u20s)],

@@ -16,6 +16,7 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'Round-robin',
 );
 
 my %MULTI_TYPOS =
@@ -24,6 +25,7 @@ my %MULTI_TYPOS =
   Quarterfinal => ['quarter final', 'quarter finals', 
     'quarter-final', 'quarter-finals', 
     'quater final', 'quater finals'],
+  'Round-robin' => ['round robin', 'raound robin'],
   Semifinal => ['semi final', 'semi finals',
     'semi-final', 'semi-finals'],
 );
