@@ -20,6 +20,7 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  Seniors => ['over 60'],
   U16 => ['u 16', 'u-16'],
   U20 => ['u 20', 'u-20', 'junior u20'],
   U21 => ['u 21', 'u-21', 'under 21'],

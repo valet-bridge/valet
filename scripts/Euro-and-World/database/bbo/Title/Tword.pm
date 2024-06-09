@@ -27,14 +27,16 @@ my @MULTI_WORDS =
   'Premier League',
   'Pro-Am',
   'Second League',
-  'Super League'
+  'Super League',
+  'Winter Nationals',
+  'Winter Open Teams'
 );
 
 my %MULTI_TYPOS =
 (
   Championship => ["ch'ship", "ch'ships", 'ch.ship', "cha'ships",
     "c'ship", "c'ships", "champion's", "champions'",
-    "championship's", "chmpionship's"],
+    "championship's", "chmpionship's", 'champion ship'],
   'Division Nationale' => ['division natonale', 'division ntionale'],
   'First Division' => ['1_ division', '1st division'],
   'Intercity' => ['inter-city', 'inter city'],
@@ -49,7 +51,8 @@ my %MULTI_TYPOS =
     'premier legue'],
   'Second League' => ['2 league'],
   'Super League' => ['sup league', 'super legue'],
-  Training => ['practice session', 'training match', 'practice match']
+  Training => ['practice session', 'training match', 'practice match'],
+  Trial => ['prueba de seleccion']
 );
 
 my @SINGLE_WORDS = qw(
@@ -111,7 +114,7 @@ my %SINGLE_TYPOS =
   Trial => ['trials', 'trail', 'trails', 'triaals',
     'selection', 'seleccion', 'selección', 'select', 'selectiontrials',
     'selections', 'selekction', 'selelection', 'sélection',
-    'séléction'],
+    'séléction', 'entrainement'],
   Trophy => ['trofeo', 'trohy', 'trpohy', 'troph'],
   University => ['unibridge', 'uni', 'universities', 'univeristies']
 );

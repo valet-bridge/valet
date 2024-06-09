@@ -44,7 +44,9 @@ my %MULTI_TYPOS =
   DBV => ['deutscher bridge-verband'],
   EBL => ['european bridge league'],
   EBU => ['eng bridge union'],
+  EUSA => ['european university sports association'],
   FIGB => ['italian bridge federation'],
+  FISU => ['international university sports federation'],
   FFB => ['fédération francaise de bridge'],
   FMB => ['fédération monegasque de bridge'],
   FSB => ['fédération suisse de bridge'],
@@ -59,6 +61,7 @@ my %MULTI_TYPOS =
   NBF => ['norsk bridgeforbund'],
   NIBU => ['northern ireland bridge union'],
   ÖBV => ['austrian bridge federation'],
+  PRBA => ['Pune Region Bridge Association'],
   PZBS => ['polish bridge union'],
   PTBA => ['philippine tournament bridge association'],
   SBF => ['svenska bridgeförbundet'],
@@ -83,7 +86,7 @@ my @SINGLE_WORDS = qw(
   MCBA
   NBB NBF NIBU
   ÖBV
-  PZBS PTBA
+  PRBA PZBS PTBA
   SBF SBU
   TBF
   USBF

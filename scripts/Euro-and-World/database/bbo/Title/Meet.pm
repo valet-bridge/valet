@@ -42,6 +42,7 @@ my @MULTI_WORDS =
   'Pula Bridge Festival',
   'Reykjavik Bridge Festival',
   'Serdika Bridge Festival',
+  'Sivrioglu Festival',
   'Stara Zagora Bridge Festival',
   'Tallinn Bridge Festival',
   'Varna Bridge Festival',

@@ -82,6 +82,7 @@ my %MULTI_TYPOS =
   'Al-Rabwa' => ['rl-rabwa'],
   Banjarmasin => ['ksa banjarmasin'],
   'City of Helsinki' => ['helsinki'],
+  Delhi => ['new delhi'],
   Diyarbakir => ['d.baki b.þ', 'd.bakir b.þ.', 'd.bakir y.þehýr', 
     'd.bakir yenýþehýr', 'd.bakýr b.þehir', 'd.bakir sur', 
     'd.bakýr sur', 'd.bakýr dicle'],
@@ -116,8 +117,8 @@ my @SINGLE_WORDS = qw(
   Aabenraa Aalborg Adana Adelaide Agresar Ahmedabad Airmadidi Akhisar 
   Alexandria Allahabad Altrincham Alytus Amanora Ambon Amman
   Amsterdam Ankara Annecy Antalya Antony Antwerpen Aral Arendal 
-  Asenovec Asenovgrad Assis Atakum Athens Auckland Ayacucho Aydin 
-  Ayvalik
+  Asenovec Asenovgrad Assis Atakum Athens Atlanta Auckland Ayacucho 
+  Aydin Ayvalik
 
   Baghdad Balchik Balaton Balatonföldvár Balikesir Balikpapan Ballerup 
   Bamberg Bandung Bangalore Bangkok Banjarmasin Bansi Barcelona Batam 
@@ -149,7 +150,7 @@ my @SINGLE_WORDS = qw(
   Heledia Helsinki Hendek Herning Hillerød Hordaland Hornbæk Hsinchu 
   Huldretråkket Hyderabad
 
-  Iasi Iskenderun Istanbul Ithaca Izmir
+  Iasi Indore Iskenderun Istanbul Ithaca Izmir
 
   Jagodina Jaipur Jakarta Jalisco Jember Jessheim Jiamusi Jiangsu 
   Jiangyou Jianshe Jinchang Jincheng Jinjiang Jiujiang 
@@ -161,8 +162,8 @@ my @SINGLE_WORDS = qw(
   Kudus Kunshan Kuopio Kusadasi Kütahya Kverndalen Kyustendil Kølabånn
 
   Langkat Lanzhou Lappeenranta Leiden Lerum Leszno Leuven Leverkusen 
-  Lhokseumawe Lille Lima Lincoln Linköping Lisbon Liushu Ljubljana Lodz 
-  Lokotok London Lowicz Lublin Luleburgaz Lumajang Lyon
+  Lhokseumawe Liepaja Lille Lima Lincoln Linköping Lisbon Liushu 
+  Ljubljana Lodz Lokotok London Lowicz Lublin Luleburgaz Lumajang Lyon
 
   Maastricht Madrid Madras Magetan Makassar Malang Malatya Malmö Manado 
   Manchester Manisa Mannheim Marbella Marrakech Martapura Massy Mautern
@@ -190,11 +191,11 @@ my @SINGLE_WORDS = qw(
 
   Saarbrücken Sabadell Salerno Samarinda Samsun Sandefjord 
   Santiago Sanya Sarpsborg Secunderabad Seferihisar Semarang Serang 
-  Shanghai Shaoguan Shenyang Shenzhen Shijiazhuang Sibiu Sidoarjo Siena 
-  Sindi Singsås Skara Skien Skopje Slagelse Sleman Sofia Solok 
+  Shanghai Shaoguan Shenyang Shenzhen Shijiazhuang Shumen Sibiu Sidoarjo 
+  Siena Sindi Singsås Skara Skien Skopje Slagelse Sleman Sofia Solok 
   Sortland Söke Split Stanford Stavanger Steinkjer Stockholm
   Storsjöbygden Stureby Stuttgart Sukma Sukomoro Sumedang Sunndalsøra 
-  Surabaya Suzhou Sydney Szeged Sørreisa
+  Surabaya Suzhou Sydney Szczyrk Szeged Sørreisa
 
   Taicang Taichung Tainan Taizhou Takayama Tallinn Targoviste Tarnów 
   Täby Täfteå Tekýrdag Temuco Thane Thanjavur Thessaloniki Tianjin 
