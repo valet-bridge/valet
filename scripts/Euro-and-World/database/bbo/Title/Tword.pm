@@ -20,6 +20,7 @@ my @MULTI_WORDS =
   'Division Nationale',
   'First Division',
   'Grand Prix',
+  'Invitational Bridge Meeting',
   'Junior League',
   'National Club League',
   'National League',
@@ -28,6 +29,7 @@ my @MULTI_WORDS =
   'Pro-Am',
   'Second League',
   'Super League',
+  'Women Elite Tournament',
   'Winter Nationals',
   'Winter Open Teams'
 );

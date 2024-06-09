@@ -27,7 +27,7 @@ my %MULTI_TYPOS =
   Quarterfinal => ['quarter final', 'quarter finals', 
     'quarter-final', 'quarter-finals', 
     'quater final', 'quater finals', 'round of 8', 'rd of 8', 'r of 8',
-    'æwieræfina³y'],
+    'æwieræfina³y', 'qtr finals'],
   Playoff => ['play offs', 'play-off', 'play off'],
   Rof6 => ['round of 6'],
   Rof12 => ['round of 12'],
@@ -37,7 +37,7 @@ my %MULTI_TYPOS =
   'Round-robin' => ['round robin', 'raound robin'],
   Semifinal => ['semi final', 'semi finals',
     'semi-final', 'semi-finals', 'round of 4', 'round-of-four',
-    'demi-final', 'demi-finale'],
+    'demi-final', 'demi-finale', 'half final', 's-final'],
 );
 
 my @SINGLE_WORDS = qw(
@@ -57,7 +57,7 @@ my %SINGLE_TYPOS =
     'finales', 'finall', 'finar', 'finas', 'finat', 'finsl', 
     'finais', 'finalns', 'fina³', 'fianal', 'fianl', 'fianls', 
     'fiinal', 'fina', 'fýnal'],
-  'Knock-out' => ['knockour', 'knockout'],
+  'Knock-out' => ['knockour', 'knockout', 'ko'],
   Playoff => ['playoffs', 'po'],
   Rof12 => ['r12a', 'r12b'],
   Rof16 => ['r16a', 'r16b', 'r16c', 'r16d'],

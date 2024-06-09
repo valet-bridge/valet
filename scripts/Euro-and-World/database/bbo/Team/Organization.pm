@@ -41,6 +41,7 @@ my %MULTI_TYPOS =
   CrBF => ['croatian bridge federation'],
   CSB => ['south american bridge federation'],
   CTCBA => ['chinese taipei contract bridge association'],
+  DBF => ['danish bridge federation'],
   DBV => ['deutscher bridge-verband'],
   EBL => ['european bridge league'],
   EBU => ['eng bridge union'],
@@ -76,7 +77,7 @@ my @SINGLE_WORDS = qw(
   ACBL AfBF APBF AuBF AZS
   BFAME BFI BuBF
   CBAI CBF CBLT CCBA CrBF CSB CTCBA
-  DBV
+  DBF DBV
   EBL EBU
   FIGB FFB FMB FSB
   GABSI

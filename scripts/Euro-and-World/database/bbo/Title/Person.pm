@@ -19,6 +19,7 @@ my @MULTI_WORDS =
   'Ashok Kapur',
   'Boris Schapiro',
   'Brahmin Sabha',
+  'Dainik Navjyoti',
   'Dr. Tolani',
   'Jaap Kokkes',
   'Janiny Wielkoszewskiej',
@@ -32,11 +33,13 @@ my @MULTI_WORDS =
   'Mrs Jaya Jain',
   'Nandu Oke',
   'Narayan Bhojwani',
+  'Necmettin Sunget',
   'Özgecan Aslan',
   'Prashant Desai',
   'Prince Albert II',
   'Prince Takamatsu',
   'PSN Sarma',
+  'R N Bagla',
   'R R Gupta',
   'Salvador Assael'
 );
@@ -56,7 +59,8 @@ my %MULTI_TYPOS =
     'mohon lal bhararia', 'mohanlal bhartiya'],
   'Mrs Jaya Jain' => ['mrs_ jaya jain'],
   'Narayan Bhojwani' => ['narain bhojwani'],
-  'Özgecan Aslan' => ['ozgecan aslan']
+  'Özgecan Aslan' => ['ozgecan aslan'],
+  'R N Bagla' => ['rn bagla', 'r_nbagla', 'r_n_bagla'],
 );
 
 my @SINGLE_WORDS = qw(
@@ -68,6 +72,7 @@ my %SINGLE_TYPOS =
   'Dr. Tolani' => ['tolani'],
   'Maharaja Yeshwantrao Holkar' => ['holkar'],
   'Mohanlal Bhartia' => ['bhartia', 'bhartiya'],
+  'R N Bagla' => ['bagla'],
   'Salvador Assael' => ['assael']
 );
 

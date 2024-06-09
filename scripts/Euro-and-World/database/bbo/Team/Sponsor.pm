@@ -32,6 +32,7 @@ my @MULTI_WORDS =
   'Apreo Logistic Poland',
   'Asindo Prima',
   'Astro A/S',
+  'Atlantic Trade',
   'Balcova Termal',
   'Baltic Express',
   'Bangkok Bank',
@@ -111,6 +112,7 @@ my @MULTI_WORDS =
   'Elektrik P3B',
   'Falck Medical',
   'Fanhua Jituan',
+  'Fantoni Vacations',
   'Ferðaskrifstofa Vesturlands',
   'Fisk Seafood',
   'Fora Lastik',
@@ -125,6 +127,7 @@ my @MULTI_WORDS =
   'Geo Vale',
   'Geologi Banpu',
   'Geoportal Kutai Kartanegara',
+  'Godfrey Phillips',
   'Gong Hang Jin Ying',
   'Guangdong Huachu Chemicals',
   'Guangzhou Hongmian',
@@ -354,9 +357,11 @@ my @MULTI_WORDS =
   'Vidbot ehf',
   'Viego Regnskap',
   'Viru Valge',
+  'VVE Beheer',
   'Wuhan Dongfang',
   'Xiamen Xiashun',
   'Xiao Ying',
+  'XP Digital',
   'Yalu Group',
   'Yeh Bros',
   'Yibin China Resources',
@@ -389,6 +394,7 @@ my %MULTI_TYPOS =
   'Alfa-Compensa Gdynia' => ['alfa gdynia'],
   'Apreo Logistic Poland' => ['apreo logistic pol', 'apreo logistic pola'],
   'Asko-Tech' => ['asco tech', 'asko tech', 'asko-tech'],
+  'Atlantic Trade' => ['atlantic grupa'],
   'Baltic Express' => ['baltic expres'],
   'Bangur Cement' => ['bangur cements', 'bangur cment'],
   'Bank Tabungan Negara' => ['bank btn'],
@@ -442,6 +448,7 @@ my %MULTI_TYPOS =
   'Geo Timah' => ['geo tima', 'geologi timah'],
   Geologi => ['badan geologi', 'geo coal', 'geo tanito harum'],
   'Geologi Banpu' => ['geo banpu'],
+  'Godfrey Phillips' => ['gofrey phillips'],
   'Gong Hang Jin Ying' => ['gonghang jinying', 'jin ying club',
     'jin ying', 'gonghang jinying'],
   'Guangdong Huachu Chemicals' => ['g.d. huach', 'guang dong hua chu'],
@@ -563,6 +570,7 @@ my %MULTI_TYPOS =
   'Unia Sygnitas' => ['unia-sygnitas'],
   'Unia Winkhaus' => ['winkhaus unia', 'winkhaus-unia'],
   'Viego Regnskap' => ['viego regnskap as'],
+  'VVE Beheer' => ['vve-beheer'],
   'Wuhan Dongfang' => ['dongfang'],
   'Xiao Ying' => ['xiao ying inn'],
   'Yalu Group' => ['js yalu'],
@@ -611,7 +619,8 @@ my @SINGLE_WORDS = qw(
   Lacznosc Laima Lavazza LCG Lianbo Likom Longjiangfu Lukomorie 
   Lyfjaver
 
-  Makus Malkia Manyavar Mireo Modalfa Morgunblaðið Multicoms Myndform
+  Makus Malkia Manyavar Melchemie Mireo Modalfa Morgunblaðið 
+  Multicoms Myndform
 
   NALCO Nanyuan Navachaitanya Navayuga Nazwa NEC Nefka Niewiem Nongken 
   Norco Nortemp NOTUS Näkösoppi

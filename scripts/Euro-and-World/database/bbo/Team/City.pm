@@ -93,9 +93,10 @@ my %MULTI_TYPOS =
     'dki jaya'],
   Kalyani => ["kalyani's"],
   Kristiansand => ['kr.sand'],
+  'Monte Carlo' => ['monte-carlo'],
   Ningbo => ['ning bo'],
   'Piatra Neamt' => ['p. neamt', 'p.neamt'],
-  Porto => ['invicta', 'cidade invicta'],
+  Porto => ['cidade invicta'],
   'Reggio Emilia' => ['r.e.', 'reggio e', 'r. emilia', 'reg. emilia'],
   Qingdao => ['qing dao'],
   'San Giorgio del Sannio' => ['sg del sannio', 's.g.sannio',
@@ -189,7 +190,7 @@ my @SINGLE_WORDS = qw(
 
   Ravnkilde Reykjavik Rzeszow Rødovre
 
-  Saarbrücken Sabadell Salerno Samarinda Samsun Sandefjord 
+  Saarbrücken Sabadell Salerno Samarinda Samobor Samsun Sandefjord 
   Santiago Sanya Sarpsborg Secunderabad Seferihisar Semarang Serang 
   Shanghai Shaoguan Shenyang Shenzhen Shijiazhuang Shumen Sibiu Sidoarjo 
   Siena Sindi Singsås Skara Skien Skopje Slagelse Sleman Sofia Solok 
@@ -197,19 +198,19 @@ my @SINGLE_WORDS = qw(
   Storsjöbygden Stureby Stuttgart Sukma Sukomoro Sumedang Sunndalsøra 
   Surabaya Suzhou Sydney Szczyrk Szeged Sørreisa
 
-  Taicang Taichung Tainan Taizhou Takayama Tallinn Targoviste Tarnów 
-  Täby Täfteå Tekýrdag Temuco Thane Thanjavur Thessaloniki Tianjin 
+  Taicang Taichung Tainan Taizhou Takayama Tallinn Tarakan Targoviste 
+  Tarnów Täby Täfteå Tekýrdag Temuco Thane Thanjavur Thessaloniki Tianjin 
   Timisoara Tire Tokyo Tomohon Torino Toulouse Trieste Trondheim Tromsø
   Tyoyuan
 
   Udaipur Uddevalla Umeå Uppsala Usak Utrecht
 
-  Van Varberg Varese Varna Vasa Västervik Vestfold Vestvågøy 
+  Van Varberg Varese Varna Vasa Västervik Verona Vestfold Vestvågøy 
   Vienna Vikersund Vilnius Vraca
 
   Waltham Warsaw Wellington Wisla Worcester Wroclaw Wronie Wuhan Wuxi
 
-  Xinyi
+  Xiantao Xinyi
 
   Yambol Yanshi Yarýmca Yatagan Yizhuang Yokohama Yogyakarta Yuquan
 
@@ -298,6 +299,7 @@ my %SINGLE_TYPOS =
   Panzhihua => ['panzhihuabc'],
   Petersfield => ['peterfield'],
   'Piatra Neamt' => ['neamt'],
+  Porto => ['invicta', 'oporto'],
   Potsdam => ['postdam'],
   Poznan => ['poz'],
   Prague => ['praha'],
