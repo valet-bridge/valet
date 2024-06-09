@@ -114,6 +114,7 @@ my @MULTI_WORDS =
   'Ferðaskrifstofa Vesturlands',
   'Fisk Seafood',
   'Fora Lastik',
+  'FX Securities',
   'Garðar & Vélar',
   'Garðs Apotek',
   'Garsu Pasaulis',
@@ -164,6 +165,7 @@ my @MULTI_WORDS =
   'Jin Rong',
   'Jin Jing',
   'Jing Tie',
+  'JP Morgan',
   'Kare Dam',
   'Kaushik Hyderabad',
   'KH Power',
@@ -201,6 +203,7 @@ my @MULTI_WORDS =
   'Mei Kuang',
   'Meilin Qing Cheng',
   'Mitra Buana',
+  'Moscow Sunday Times',
   'Mutiara Energy',
   'Nanfang Dianwang',
   'Nanguang Power',
@@ -448,6 +451,7 @@ my %MULTI_TYPOS =
   'Hengsha Haijiu' => ['hengsha jiuhai'],
   'Hengsha Ke Ji' => ['heng sha ke ji'],
   'HF Verðbréf' => ['h.f. verðbréf'],
+  'HNA' => ["hna's"],
   Huayuan => ['hua yuan'],
   'Hubei Dongfeng' => ['hb dongfeng', 'hu bei dong feng qi'],
   'Hunan Tou Zhan' => ['hn  tuozhan'],
@@ -594,7 +598,7 @@ my @SINGLE_WORDS = qw(
   GAMAX Gazprom Generali Geologi Genkad Gevalia Gillette Gomad 
   Gözgöz GSE
 
-  Hana Harke Haustak HNA Honesta Hongyu Huachu Huayuan
+  Hana Harke Haustak HCL HNA Honesta Hongyu Huachu Huayuan
 
   IBM IMAX Impress Indoarsip Intan Inteligent Interface Interkala
 

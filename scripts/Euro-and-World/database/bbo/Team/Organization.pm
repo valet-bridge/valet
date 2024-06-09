@@ -52,6 +52,7 @@ my %MULTI_TYPOS =
   HKCBA => ['hong kong contract bridge association'],
   IBF => ['israel bridge federation'],
   IBWI => ['ikatan bridge wanita indonesia'],
+  IBU => ['irish bridge union'],
   JBA => ['j.b.a.', 'jordan bridge federation'],
   MCBA => ['macau contract bridge association'],
   NBB => ['dutch bridge federation'],
@@ -77,7 +78,7 @@ my @SINGLE_WORDS = qw(
   FIGB FFB FMB FSB
   GABSI
   HKCBA
-  IBF IBWI
+  IBF IBU IBWI
   JBA
   MCBA
   NBB NBF NIBU

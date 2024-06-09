@@ -49,7 +49,7 @@ my %MULTI_TYPOS =
     'premier legue'],
   'Second League' => ['2 league'],
   'Super League' => ['sup league', 'super legue'],
-  Training => ['practice session', 'training match']
+  Training => ['practice session', 'training match', 'practice match']
 );
 
 my @SINGLE_WORDS = qw(
@@ -59,7 +59,7 @@ my @SINGLE_WORDS = qw(
   Interuniversity Invitational
   Memorial
   National
-  Session
+  Segment Session
   Tournament Training Trial Trophy
   University
 );
@@ -86,7 +86,7 @@ my %SINGLE_TYPOS =
     'champinship', 'campeonato', 'campionati', 'campionato'],
   Club => ['clubs', 'clut', 'clybs'],
   Cup => ['cuo', 'cupn', 'cups', 'copa', 'coppa', 'coppie', 'coupe'],
-  'Division Nationale' => ['divisionnationale'],
+  'Division Nationale' => ['divisionnationale', 'dn'],
   Intercity => ['intecity'],
   Interclub => ['interclubs'],
   International => ['internacional', 'internationals',
@@ -100,6 +100,7 @@ my %SINGLE_TYPOS =
     'ntionale', 'natinal', 'natinale', 'natioanal', 'nationaals',
     'nationald', "national's", 'naational', 'nacional', 'nasional', 'nat'],
   'Premier League' => ['premieleague'],
+  Segment => ['seg'],
   'Super League' => ['superleague'],
   Tournament => ['torunament', 'toruney', 'torurnament', 'torurney',
     'tourament', 'tourn', 'tourname', 'tournamnet', 'tournement',

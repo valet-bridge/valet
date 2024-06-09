@@ -21,9 +21,13 @@ my @MULTI_WORDS =
   'Brahmin Sabha',
   'Dr. Tolani',
   'Jaap Kokkes',
+  'Janiny Wielkoszewskiej',
+  'Janos Levai',
   'Justice JM Lal',
+  'Lalit Mohanka',
   'Maharaja Yeshwant Rao Holkar',
   'Mohanlal Bhartia',
+  'Mrs Jaya Jain',
   'Nandu Oke',
   'Narayan Bhojwani',
   'Özgecan Aslan',
@@ -44,6 +48,7 @@ my %MULTI_TYPOS =
     'yashawantrao holkar', 'yashwant rao holkar'],
   'Mohanlal Bhartia' => ['mohanlal bharatia', 'mohanlal bharatiya', 
     'mohon lal bhararia', 'mohanlal bhartiya'],
+  'Mrs Jaya Jain' => ['mrs_ jaya jain'],
   'Narayan Bhojwani' => ['narain bhojwani'],
   'Özgecan Aslan' => ['ozgecan aslan']
 );
