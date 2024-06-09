@@ -27,7 +27,7 @@ my %MULTI_TYPOS =
   Quarterfinal => ['quarter final', 'quarter finals', 
     'quarter-final', 'quarter-finals', 
     'quater final', 'quater finals', 'round of 8', 'rd of 8', 'r of 8',
-    'æwieræfina³y', 'qtr finals'],
+    'æwieræfina³y', 'qtr finals', 'phase à 8'],
   Playoff => ['play offs', 'play-off', 'play off'],
   Rof6 => ['round of 6'],
   Rof12 => ['round of 12'],

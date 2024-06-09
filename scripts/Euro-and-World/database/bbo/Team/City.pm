@@ -194,7 +194,7 @@ my @SINGLE_WORDS = qw(
   Santiago Sanya Sarpsborg Secunderabad Seferihisar Semarang Serang 
   Shanghai Shaoguan Shenyang Shenzhen Shijiazhuang Shumen Sibiu Sidoarjo 
   Siena Sindi Singsås Skara Skien Skopje Slagelse Sleman Sofia Solok 
-  Sortland Söke Split Stanford Stavanger Steinkjer Stockholm
+  Solot Sortland Söke Split Stanford Stavanger Steinkjer Stockholm
   Storsjöbygden Stureby Stuttgart Sukma Sukomoro Sumedang Sunndalsøra 
   Surabaya Suzhou Sydney Szczyrk Szeged Sørreisa
 
@@ -205,8 +205,8 @@ my @SINGLE_WORDS = qw(
 
   Udaipur Uddevalla Umeå Uppsala Usak Utrecht
 
-  Van Varberg Varese Varna Vasa Västervik Verona Vestfold Vestvågøy 
-  Vienna Vikersund Vilnius Vraca
+  Van Varanasi Varberg Varese Varna Vasa Västervik Verona Vestfold 
+  Vestvågøy Vienna Vikersund Vilnius Vraca
 
   Waltham Warsaw Wellington Wisla Worcester Wroclaw Wronie Wuhan Wuxi
 
@@ -328,6 +328,7 @@ my %SINGLE_TYPOS =
   Trondheim => ['trondhei'],
   Udaipir => ['udaypur'],
   'Udon Thani' => ['udonthani'],
+  Varanasi => ['baranasi'],
   Vienna => ['wien'],
   Warsaw => ['warsow', 'warszawa', 'warszawy'],
   Wroclaw => ['wr'],

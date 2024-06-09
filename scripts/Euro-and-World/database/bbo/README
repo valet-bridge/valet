@@ -1,5 +1,6 @@
-2024-06-08
+2024-06-09
 
-Look at tag names in events
-
-Start on Scoring
+Maybe start to split chains in that order
+- In front, ROMAN or ORDINAL (and possibly trailing th etc.)
+- Single TNAME or MEET or SPONSOR
+- YEAR in front or back
