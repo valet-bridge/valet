@@ -47,7 +47,8 @@ my %MULTI_TYPOS =
     'prremier league', 'premieer league', 'premier legaue',
     'premier legue'],
   'Second League' => ['2 league'],
-  'Super League' => ['sup league', 'super legue']
+  'Super League' => ['sup league', 'super legue'],
+  Training => ['practice session']
 );
 
 my @SINGLE_WORDS = qw(
@@ -58,6 +59,7 @@ my @SINGLE_WORDS = qw(
   Interuniversity Invitational
   Memorial
   National
+  Session
   Tournament Training Trial Trophy
   University
 );

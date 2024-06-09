@@ -99,6 +99,7 @@ my %MULTI_TYPOS =
   Qingdao => ['qing dao'],
   'San Giorgio del Sannio' => ['sg del sannio', 's.g.sannio',
     's.giorgio sannio', 'san giorgio del san'],
+  'São Paulo' => ['sao paulo', 's o paulo', 'sap paulo'],
   'Siddha Eden Lakeville' => ['siddha eden', 'sidhha eden', 'siddha-eden'],
   'Silesia Gliwice' => ['silezia gliwice'],
   Taicang => ['tai cang'],
@@ -176,7 +177,7 @@ my @SINGLE_WORDS = qw(
   Ottadalen Otepää Oxford Överum
 
   Padang Padova Paimado Palembang Palermo Palma Palu Pancevo 
-  Panzhihua Pariaman Paris Pärnu Pattaya Pecs Pekanbaru Pelotas 
+  Panzhihua Pariaman Paris Pärnu Pattaya Pau Pecs Pekanbaru Pelotas 
   Penajam Pernik Perth Perula Pesaro Pescara Petersfield Philadelphia
   Pisa Pleven Plovdiv Pontianak Popovo Porto Potsdam Poznan Prague 
   Pula Pune Puri

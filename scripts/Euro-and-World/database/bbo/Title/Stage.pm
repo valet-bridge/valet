@@ -24,15 +24,23 @@ my %MULTI_TYPOS =
   Qualifying => ['qualification for', 'qualification to'],
   Quarterfinal => ['quarter final', 'quarter finals', 
     'quarter-final', 'quarter-finals', 
-    'quater final', 'quater finals'],
+    'quater final', 'quater finals', 'round of 8'],
+  Playoff => ['play offs', 'play-off', 'play off'],
+  Rof6 => ['round of 6'],
+  Rof12 => ['round of 12'],
+  Rof16 => ['round of 16'],
+  Rof32 => ['round of 32'],
+  Rof64 => ['round of 64'],
   'Round-robin' => ['round robin', 'raound robin'],
   Semifinal => ['semi final', 'semi finals',
-    'semi-final', 'semi-finals'],
+    'semi-final', 'semi-finals', 'round of 4', 'round-of-four'],
 );
 
 my @SINGLE_WORDS = qw(
-  Qualifying
-  Quarterfinal
+  Final
+  Playoff
+  Rof6 Rof12 Rof16 Rof32 Rof64
+  Qualifying Quarterfinal
   Semifinal
 );
 
@@ -40,7 +48,9 @@ my %SINGLE_TYPOS =
 (
   Final => ['finala', 'finalds', 'finale', 'finali', 'finals',
     'finales', 'finall', 'finar', 'finas', 'finat', 'finsl', 
-    'fina', 'fýnal'],
+    'finais', 'finalns', 'fina³', 'fianal', 'fianl', 'fianls', 
+    'fiinal', 'fina', 'fýnal'],
+  Playoff => ['playoffs'],
   Qualifying => ['qualification', 'qualifications', 'qualif',
     'qualifier'],
   Quarterfinal => ['quarterfinals', 'quarterf', 'qualterfinal',
