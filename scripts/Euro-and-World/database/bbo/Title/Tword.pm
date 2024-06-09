@@ -49,7 +49,7 @@ my %MULTI_TYPOS =
     'premier legue'],
   'Second League' => ['2 league'],
   'Super League' => ['sup league', 'super legue'],
-  Training => ['practice session']
+  Training => ['practice session', 'training match']
 );
 
 my @SINGLE_WORDS = qw(
