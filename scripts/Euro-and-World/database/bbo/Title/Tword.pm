@@ -25,6 +25,7 @@ my @MULTI_WORDS =
   'National League',
   'Premier Pairs',
   'Premier League',
+  'Pro-Am',
   'Second League',
   'Super League'
 );
@@ -53,8 +54,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Bridge
-  Championship Club Congress Cup
-  Festival
+  Championship Club Cup
   Interclub Intercity International Interprovince Interstate 
   Interuniversity Invitational
   Memorial
@@ -68,6 +68,7 @@ my %SINGLE_TYPOS =
 (
   Bridge => ['brdige', 'briag', 'bric', 'bridg', 'bride', 'bridgee',
     'brýç'],
+  'Business League' => ['blb'],
   Championship => ['campionship', 'champ', 'champion', 'champions', 
     'championshi', 'championshio', 'championships', 'championsihp', 
     'champioship', 'champioships', 'champoinsihp', 'champs', 'chams', 
@@ -84,12 +85,8 @@ my %SINGLE_TYPOS =
     'meisterschaft', 'meistershaft',
     'champinship', 'campeonato', 'campionati', 'campionato'],
   Club => ['clubs', 'clut', 'clybs'],
-  Congress => ['kongres', 'kongresowy'],
   Cup => ['cuo', 'cupn', 'cups', 'copa', 'coppa', 'coppie', 'coupe'],
   'Division Nationale' => ['divisionnationale'],
-  Festival => ['fest', 'festiva', 'festivan', 'festval', 'festývalý',
-    'festivali', 'festivals', 'festivalul', 'bridgefestival',
-    'festiwal'],
   Intercity => ['intecity'],
   Interclub => ['interclubs'],
   International => ['internacional', 'internationals',

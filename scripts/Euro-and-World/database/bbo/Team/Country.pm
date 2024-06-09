@@ -136,7 +136,7 @@ my %SINGLE_TYPOS =
   'Hong Kong' => ['hk', 'hongkong'],
   Hungary => ['hungar', 'hun'],
   Iceland => ['ice', 'islande'],
-  India => ['indýa', 'hindusthan', 'hidusthan', 'indiaa'],
+  India => ['indýa', 'hindusthan', 'hidusthan', 'indiaa', 'aindia'],
   Indonesia => ['timnas', 'ind', 'ina'],
   Ireland => ['roireland', 'irelnd', 'irelsnd', 'irlande',
     'irelend', 'irelena', 'ire', 'eire'],

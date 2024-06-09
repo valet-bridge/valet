@@ -16,6 +16,7 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'Saint Honoré',
   'Shanghai Yangpu',
   'Villa Fabbriche'
 );
@@ -29,8 +30,8 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Adalar Agresar Akçeşme Albena Amanora Arjasa Atakoy Atakum Avren
-  Bahce Bahcesehir Balcova Baragnon Bayrampaþa Beroe Bieniewo Bogazici
-  Borivli Bormali Bornova Bozdogan Brotteaux Buca Buitenhof
+  Bahce Bahcesehir Balcova Baragnon Barrière Bayrampaþa Beroe Bieniewo 
+  Bogazici Borivli Bormali Bornova Bozdogan Brotteaux Buca Buitenhof
   Çayyolu Cemara Chelsea Chislehurst Courseulles
   Ege Esenkent
   Fatih
@@ -62,6 +63,7 @@ my %SINGLE_TYPOS =
   Akçeşme => ['akcesme', 'akçeþme'],
   Atakoy => ['ataköy'],
   Bahcesehir => ['bahçeþehýr', 'bahcesehýr', 'bahçesehir'],
+  Barrière => ['barriere'],
   Borivli => ['borivali'],
   Çayyolu => ['cayyolu'],
   Fatih => ['fatýh'],

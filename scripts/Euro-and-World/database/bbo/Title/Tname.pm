@@ -16,10 +16,15 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'Altman Swiss Pairs',
+  'ASEAN Club Championship',
+  'Australian National Open Teams',
   'Baltic Bowl',
   'Baltic Cup',
+  'Baze Senior Knock-out',
   'Bermuda Bowl',
   'Bermuda Triangle Cup',
+  'British Gold Cup',
   'Buffett Cup',
   "Champions' Cup",
   'Codan Cup',
@@ -51,6 +56,7 @@ my @MULTI_WORDS =
   'Spring of Cracow',
   'Spring Nationals',
   'Teltscher Trophy',
+  'United States Bridge Championship',
   'Vanderbilt Fantasy Challenge',
   'Venice Cup',
   'Victorian Pennant',
@@ -68,8 +74,18 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'ASEAN Club Championship' => ["asean bridge club c'ship",
+    'asean bridge club championship', "asean bridge c'ship",
+    'asean bridge club', 'asean bridge club championships',
+    'asean bridge cship', 'asean bridge championship',
+    'asean bridge club open championships',
+    'asean bridg club championship', 'asean bridge championships',
+    'asean club championships'],
+  'Baze Senior Knock-out' => ['baze senior ko', 'baze sr_ ko',
+    'base sr ko', 'baze sr_ ko'],
   'Bermuda Bowl' => ['world team championships'],
   'Bermuda Triangle Cup' => ['bermuda triangle teams cup'],
+  'British Gold Cup' => ['gold cup'],
   'Buffett Cup' => ['buffet cup', 'bufett cup'],
   Camrose => ['camrose trophy'],
   "Champions' Cup" => ['champions cup', "champion's cup", 'chamions cup', 
@@ -107,7 +123,7 @@ my %MULTI_TYPOS =
   'Senior Camrose' => ['seniors camrose'],
   'Silver Jubilee' => ['siver jubliee'],
   'South Zone Championship' => ['southzone championship'],
-  'Spring Fours' => ['spring 4s', 'spring foursomes'],
+  'Spring Fours' => ['spring 4s', 'spring foursomes', 'schapirosfs'],
   'Spring Nationals' => ['spring nat', 'spring national'],
   'Teltscher Trophy' => ['teltcher trophy'],
   Vanderbilt => ['vanderbilt teams', 'vanderbilt ko teams'],
@@ -119,7 +135,7 @@ my %MULTI_TYPOS =
     'world masters'],
   'World Mind Games' => ['world mind game', 'word mind games'],
   'World Team Olympiad' => ['world bridge team olympiad',
-    'world bridge olympiad'],
+    'world bridge olympiad', 'bridge olympiad'],
   'World University Championship' => [
     'world university bridge championship',
     'world university bridge championships',
@@ -138,6 +154,9 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  'ASEAN Club Championship' => ['abcc'],
+  'Australian National Open Teams' => ['anot'],
+  'Bermuda Bowl' => ['bb'],
   "Buffett Cup" => ['buffett', 'buffet'],
   Camrose => ['camroae', 'ccmrose'],
   Cavendish => ['cavendiish', 'caavendish', 'cavemdish', 'cavendiosh',
@@ -153,8 +172,10 @@ my %SINGLE_TYPOS =
     'qualifier'],
   Reisinger => ['reisiger', 'resisinger'],
   'Teltscher Trophy' => ['teltschertrophy'],
+  'United States Bridge Championship' => ['usbc'],
   Vanderbilt => ['vanderbuilt', 'vanderebilt', 'vandebilt'],
   'Victorian Pennant' => ['pennant'],
+  'World Team Olympiad' => ['olympiad', 'olympiads'],
   'World Youth Open Bridge Championship' => ['wyobc', 'wboyc']
 );
 

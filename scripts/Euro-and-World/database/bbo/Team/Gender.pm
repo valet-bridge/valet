@@ -20,6 +20,8 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  Men => ["men's", "men`s"],
+  Women => ["ladies's", "woman's"],
 );
 
 my @SINGLE_WORDS = qw(
@@ -28,11 +30,11 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  Open => [qw(libre libres terbuka opn åben)],
-  Men => [qw(mens men's men`s putra pa homme hommes)],
-  Women => [qw(woman wemen womans women's womens 
-    lady ladies ladie ladies's
-    femme femmes damas dames damer dame damen putri pi wo)],
+  Open => [qw(libre libres terbuka opn åben acik)],
+  Men => [qw(mens putra pa homme hommes)],
+  Women => [qw(woman wemen womans women's womens womvn
+    lady ladies ladie femme femmes damas dames damer dame damen 
+    putri pi wo)],
   Mixed => [qw(mix mixte mýx mixen mixt)]
 );
 

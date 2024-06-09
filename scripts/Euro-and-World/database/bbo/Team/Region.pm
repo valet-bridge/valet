@@ -152,7 +152,7 @@ my @SINGLE_WORDS = qw(
   Queensland
   Oberloiben Orontes Otago
   Papua Porong Punjab
-  Rajasthan Rajputana Ratchaburi Rogaland Rosfjord 
+  Rajasthan Rajputana Ratchaburi Rhodes Rogaland Rosfjord 
   Sakarya Salten Shanxi Siberia Sichuan Silesia Silla Sindh Sintang 
   Skåne Slask Southland Sydvest
   Tambun Taskopru Tasmania Telemark Tengah Tianya

@@ -16,48 +16,59 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
-  'Round-robin',
+  'Knock-out',
+  'Round-robin'
 );
 
 my %MULTI_TYPOS =
 (
+  'Knock-out' => ['knock-outs', 'knock - out'],
   Qualifying => ['qualification for', 'qualification to'],
   Quarterfinal => ['quarter final', 'quarter finals', 
     'quarter-final', 'quarter-finals', 
-    'quater final', 'quater finals', 'round of 8'],
+    'quater final', 'quater finals', 'round of 8', 'rd of 8', 'r of 8',
+    'æwieræfina³y'],
   Playoff => ['play offs', 'play-off', 'play off'],
   Rof6 => ['round of 6'],
   Rof12 => ['round of 12'],
-  Rof16 => ['round of 16'],
-  Rof32 => ['round of 32'],
-  Rof64 => ['round of 64'],
+  Rof16 => ['round of 16', 'rd of 16'],
+  Rof32 => ['round of 32', 'rd of 32'],
+  Rof64 => ['round of 64', 'rd of 64'],
   'Round-robin' => ['round robin', 'raound robin'],
   Semifinal => ['semi final', 'semi finals',
     'semi-final', 'semi-finals', 'round of 4', 'round-of-four'],
 );
 
 my @SINGLE_WORDS = qw(
+  Elimination
   Final
   Playoff
   Rof6 Rof12 Rof16 Rof32 Rof64
   Qualifying Quarterfinal
+  Repechage
   Semifinal
 );
 
 my %SINGLE_TYPOS =
 (
+  Elimination => ['eliminations'],
   Final => ['finala', 'finalds', 'finale', 'finali', 'finals',
     'finales', 'finall', 'finar', 'finas', 'finat', 'finsl', 
     'finais', 'finalns', 'fina³', 'fianal', 'fianl', 'fianls', 
     'fiinal', 'fina', 'fýnal'],
+  'Knock-out' => ['knockour', 'knockout'],
   Playoff => ['playoffs'],
+  Rof12 => ['r12a', 'r12b'],
+  Rof16 => ['r16a', 'r16b', 'r16c', 'r16d'],
   Qualifying => ['qualification', 'qualifications', 'qualif',
     'qualifier'],
   Quarterfinal => ['quarterfinals', 'quarterf', 'qualterfinal',
     'quaterfinal', 'quaterfinals',
     'quartetfinal', 'qurterfinal', 'qfinal', 'qf'],
+  Repechage => ['repcharge', 'repercharge'],
+  'Round-robin' => ['rr'],
   Semifinal => ['semifinals', 'semifinale', 'semifimals', 'semifi',
-    'semif', 'semis', 'sf']
+    'semif', 'semis', 'sf', 'sfa', 'sfb']
 );
 
 

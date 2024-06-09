@@ -18,6 +18,7 @@ use TitleBBO;
 
 my @MULTI_WORDS =
 (
+  'Bridge Great Britain',
   'Jilin Sheng Qiaopa',
   'Shanghai Contract Bridge Association'
 );
@@ -30,6 +31,7 @@ my %MULTI_TYPOS =
   AuBF => ['australian bridge federation'],
   AZS => ['university sports association of poland'],
   BFAME => ['bridge federation of asia & the middle east'],
+  BGB => ['Bridge Great Britain'],
   BFI => ['bridge federation of india'],
   BuBF => ['bulgarian bridge federation'],
   CBAI => ['contract bridge association of ireland'],

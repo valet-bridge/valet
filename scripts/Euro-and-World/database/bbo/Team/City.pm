@@ -114,7 +114,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Aabenraa Aalborg Adana Adelaide Agresar Ahmedabad Airmadidi Akhisar 
-  Alexandria Allahabad Altrincham Alytus Amanora Ambon 
+  Alexandria Allahabad Altrincham Alytus Amanora Ambon Amman
   Amsterdam Ankara Annecy Antalya Antony Antwerpen Aral Arendal 
   Asenovec Asenovgrad Assis Atakum Athens Auckland Ayacucho Aydin 
   Ayvalik
@@ -236,7 +236,7 @@ my %SINGLE_TYPOS =
   Bangalore => ["b'lore", 'banglore', 'bengalore', 'bangaluru',
     'benglore', 'bengluru', 'bengalu'],
   Bansi => ["bansi's"],
-  Beijing => ['peking', 'pekin', 'pékin'],
+  Beijing => ['peking', 'pekin', 'pékin', 'bijing'],
   Canakkale => ['çanakkale'],
   Canberra => ['canbera'],
   Cerkezkoy => ['çerkezköy', 'cerk'],

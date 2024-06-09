@@ -35,6 +35,8 @@ use Team::Sponsor;
 use Team::Gender;
 use Team::Age;
 
+use Title::Meet;
+use Title::Person;
 use Title::Tname;
 use Title::Tword;
 use Title::Stage;
@@ -52,6 +54,8 @@ my @TAG_ORDER = qw(
   TITLE_SPONSOR 
   TITLE_GENDER
   TITLE_AGE
+  TITLE_MEET
+  TITLE_PERSON
   TITLE_TNAME
   TITLE_TWORD
   TITLE_STAGE
@@ -80,6 +84,8 @@ sub init_hashes
   Team::Gender::set_hashes($method, 'TITLE_GENDER');
   Team::Age::set_hashes($method, 'TITLE_AGE');
 
+  Title::Meet::set_hashes($method, 'TITLE_MEET');
+  Title::Person::set_hashes($method, 'TITLE_PERSON');
   Title::Tname::set_hashes($method, 'TITLE_TNAME');
   Title::Tword::set_hashes($method, 'TITLE_TWORD');
   Title::Stage::set_hashes($method, 'TITLE_STAGE');
@@ -180,6 +186,57 @@ sub make_complete_field_record
     push @{$record->{$field}}, $val;
   }
 }
+
+
+sub is_small_ordinal
+{
+  my $part = pop;
+  if
+     ($part =~ /^(\d+)th$/i ||
+      $part =~ /^(\d+)rth$/i ||
+      $part =~ /^(\d+)st$/i ||
+      $part =~ /^(\d+)rst$/i ||
+      $part =~ /^(\d+)rd$/i ||
+      $part =~ /^(\d+)er$/i ||
+      $part =~ /^(\d+)eme$/i ||
+      $part =~ /^(\d+)°$/i ||
+      $part =~ /^(\d+)º$/i ||
+      $part =~ /^(\d+)ª$/i ||
+      $part =~ /^(\d+)nd$/i)
+  {
+    return $1;
+  }
+  else
+  {
+    return 0;
+  }
+}
+
+
+sub fix_small_ordinal
+{
+  my ($part, $token) = @_;
+  if (my $ord = is_small_ordinal($part))
+  {
+    # We don't check whether the ending matches the number.
+    if ($ord >= 0 && $ord < 100)
+    {
+      $ord =~ s/^0+//; # Remove leading zeroes
+      # $token->set_singleton('ORDINAL', $ord);
+      $token->set_ordinal_counter($ord);
+      return 1;
+    }
+    else
+    {
+      die "Large ordinal? $part";
+    }
+  }
+  else
+  {
+    return 0;
+  }
+}
+
 
 sub split_on_trailing_digits
 {
@@ -282,6 +339,11 @@ sub study_part
     $HIT_STATS{TITLE_LETTER}++;
     return;
   }
+  elsif (fix_small_ordinal($part, $token))
+  {
+    $HIT_STATS{TITLE_ORDINAL}++;
+    return;
+  }
 
   # The general solution.
   return if title_specific_hashes($part, $token, $chain);
@@ -304,6 +366,18 @@ sub study_part
   $HIT_STATS{UNMATCHED}++;
   print "QQQ ", $part, "\n";
   $$unknown_part_flag = 1;
+}
+
+
+sub split_on_some_numbers
+{
+  my ($text) = @_;
+
+  $text =~ s/(20\d\d)/ $1 /g;
+  $text =~ s/'(9\d)/19$1/g;
+  $text =~ s/'(0\d)/20$1/g;
+
+  return $text;
 }
 
 
@@ -410,7 +484,9 @@ sub study_title
 
   return if $text eq '';
 
-  my $stext = split_on_capitals($text);
+  my $ntext = split_on_some_numbers($text);
+
+  my $stext = split_on_capitals($ntext);
 
   my @parts = ();
   my @tags = (0);
