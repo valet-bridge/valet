@@ -108,7 +108,7 @@ my %COUNTRY_TO_CITY =
     'liushu', 'meilin qingcheng', 'nanchang', 'nanning', 'ningbo',
     'panzhihua', 'qingdao', 'sanya', 'shanghai', 'shaoguan', 'shenyang',
     'shenzhen', 'shijiazhuang', 'suzhou', 'taicang', 'taihu lake',
-    'taizhou', 'tianjin', 'wuhan', 'wuxi', 'xin zhu', 'xiantao',
+    'taizhou', 'tianjin', 'wuhan', 'wuxi', 'xin zhu', 'xian', 'xiantao',
     'xinyi', 'yanshi', 'ye chi', 'zhaoqing', 'zhong jian', 'zhongshan', 
     'zhuzhou', 'zigong'],
   Colombia => ['bogotá', 'medellin'],

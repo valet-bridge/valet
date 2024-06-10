@@ -16,8 +16,8 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'All China Games',
   'Azores Festival',
-  'Greek Islands Festival',
   'Amman Bridge Festival',
   'Australian National Championships',
   'Balkan Friendship Festival',
@@ -29,6 +29,7 @@ my @MULTI_WORDS =
   'Danish Bridge Festival',
   'Estoril Bridge Festival',
   'Gold Coast Congress',
+  'Greek Islands Festival',
   'Iceland Bridge Festival',
   'Israel International Festival',
   'Jordan Bridge Festival',
@@ -53,6 +54,7 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'All China Games' => ['all-china games'],
   'Azores Festival' => ['azores festival bridge',
     'festival azores bridge', 'azores festiva'],
   'Balkan Friendship Festival' => ['balkan bridge festival',
@@ -65,7 +67,7 @@ my %MULTI_TYPOS =
   'Gold Coast Congress' => ['gold coast'],
   'Greek Islands Festival' => ['greek bridge festival',
     'greek island festival', 'athens bridge festival', 
-    'greek islands festivals'],
+    'greek islands festivals', 'greek festival islands'],
   'Iceland Bridge Festival' => ['iceland bridgefestival',
     'iceland express bridge festival',
     'icelandic express bridge festival'],

@@ -39,10 +39,16 @@ use Title::Meet;
 use Title::Person;
 use Title::Tname;
 use Title::Tword;
+use Title::Club;
 use Title::Stage;
 use Title::Destroy;
 
 my @TAG_ORDER = qw(
+  TITLE_TNAME
+  TITLE_MEET
+  TITLE_CLUB
+  TITLE_DESTROY
+
   TITLE_ORGANIZATION 
   TITLE_ZONE 
   TITLE_COUNTRY 
@@ -56,12 +62,9 @@ my @TAG_ORDER = qw(
   TITLE_GENDER
   TITLE_AGE
   TITLE_SCORING
-  TITLE_MEET
   TITLE_PERSON
-  TITLE_TNAME
   TITLE_TWORD
   TITLE_STAGE
-  TITLE_DESTROY
 );
 
 my (%MULTI_WORDS, %MULTI_REGEX, %SINGLE_WORDS);
@@ -92,6 +95,7 @@ sub init_hashes
   Title::Person::set_hashes($method, 'TITLE_PERSON');
   Title::Tname::set_hashes($method, 'TITLE_TNAME');
   Title::Tword::set_hashes($method, 'TITLE_TWORD');
+  Title::Club::set_hashes($method, 'TITLE_CLUB');
   Title::Stage::set_hashes($method, 'TITLE_STAGE');
   Title::Destroy::set_hashes($method, 'TITLE_DESTROY');
 }

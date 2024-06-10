@@ -210,7 +210,7 @@ my @SINGLE_WORDS = qw(
 
   Waltham Warsaw Wellington Wisla Worcester Wroclaw Wronie Wuhan Wuxi
 
-  Xiantao Xinyi
+  Xian Xiantao Xinyi
 
   Yambol Yanshi Yarýmca Yatagan Yizhuang Yokohama Yogyakarta Yuquan
 

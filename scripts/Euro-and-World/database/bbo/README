@@ -1,5 +1,7 @@
 2024-06-09
 
+Peel off leading digits.
+
 Maybe start to split chains in that order
 - In front, ROMAN or ORDINAL (and possibly trailing th etc.)
 - Single TNAME or MEET or SPONSOR

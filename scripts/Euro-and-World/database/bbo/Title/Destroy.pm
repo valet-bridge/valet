@@ -16,6 +16,7 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'for Pau'
 );
 
 my %MULTI_TYPOS =
@@ -23,7 +24,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  BBO
+  BBO *BBO
 );
 
 my %SINGLE_TYPOS =
