@@ -295,7 +295,10 @@ sub process_letter_counter_exact
 
 sub process_patterns
 {
-  my ($reductions, $chains, $rstats) = @_;
+  # sep_flag is 1 if there are alternating separators,
+  # 0 otherwise.
+
+  my ($reductions, $chains, $sep_flag, $rstats) = @_;
 
   my $rno = 0;
   for my $reduction (@$reductions)
@@ -343,18 +346,34 @@ sub process_patterns
         if ($reduction->{SPLIT_BACK} && 
             $match + $reduction->{KEEP_LAST} < $chain->last())
         {
-          my $chain2 = $chain->split_on(
-            $match + $reduction->{KEEP_LAST} + 2);
+          my $chain2;
+          if ($sep_flag)
+          {
+            $chain2 = $chain->split_on(
+              $match + $reduction->{KEEP_LAST} + 2);
+
+            $chain2->complete_if_last_is(0, 'COMPLETE');
+          }
+          else
+          {
+            $chain2 = $chain->split_directly_on(
+              $match + $reduction->{KEEP_LAST} + 1);
+          }
+
           $chain->complete_if_last_is($reduction->{KEEP_LAST}, $cstatus) if
             $reduction->{COMPLETION};
-          $chain2->complete_if_last_is(0, 'COMPLETE');
           splice(@$chains, $chain_no+1, 0, $chain2);
         }
 
         if ($reduction->{SPLIT_FRONT} && $match > 0)
         {
           my $chain2 = $chain->split_on($match);
-          $chain->complete_if_last_is(0, 'COMPLETE');
+
+          if ($sep_flag)
+          {
+            $chain->complete_if_last_is(0, 'COMPLETE');
+          }
+
           $chain2->complete_if_last_is($reduction->{KEEP_LAST}, $cstatus) 
             if $reduction->{COMPLETION};
           splice(@$chains, $chain_no+1, 0, $chain2);

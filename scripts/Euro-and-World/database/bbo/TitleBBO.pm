@@ -231,8 +231,8 @@ sub fix_small_ordinal
     if ($ord >= 0 && $ord < 100)
     {
       $ord =~ s/^0+//; # Remove leading zeroes
-      # $token->set_singleton('ORDINAL', $ord);
-      $token->set_ordinal_counter($ord);
+      $token->set_singleton('TITLE_ORDINAL', $ord);
+      # $token->set_ordinal_counter($ord);
       return 1;
     }
     else
@@ -337,14 +337,16 @@ sub study_part
     }
     else
     {
-      $token->set_numeral_counter($part);
+      # $token->set_numeral_counter($part);
+      $token->set_singleton('TITLE_INTEGER', $part);
       $HIT_STATS{TITLE_INTEGER}++;
     }
     return;
   }
   elsif ($part =~ /^[A-D]$/)
   {
-    $token->set_letter_counter($part);
+    # $token->set_letter_counter($part);
+    $token->set_singleton('TITLE_LETTER', $part);
     $HIT_STATS{TITLE_LETTER}++;
     return;
   }
@@ -371,7 +373,7 @@ sub study_part
     }
   }
 
-  $token->set_unknown($part);
+  $token->set_unknown_full($part);
   $HIT_STATS{UNMATCHED}++;
   print "QQQ ", $part, "\n";
   $$unknown_part_flag = 1;

@@ -448,6 +448,15 @@ sub set_unknown
 }
 
 
+sub set_unknown_full
+{
+  my ($self, $text) = @_;
+  $self->{CATEGORY} = 'UNKNOWN';
+  $self->{VALUE} = $text;
+  $self->{FIELD} = '';
+}
+
+
 sub merge_origin
 {
   my ($self, $token2) = @_;

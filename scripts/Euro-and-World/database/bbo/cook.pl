@@ -22,6 +22,8 @@ use Event::Despace;
 use Event::Patterns;
 use Event::Reductions;
 
+use Title::Reductions;
+
 
 # Parse the raw output of
 # ./reader -I ... -Q 9=4=0=0 -v 63
@@ -46,7 +48,7 @@ my $line;
 
 my $lno = 0;
 my (@chain_team_stats, @chain_event_stats, @chain_title_stats);
-my @reduction_event_stats;
+my (@reduction_event_stats, @reduction_title_stats);
 my $unknown_events = 0;
 my $unknown_titles = 0;
 
@@ -73,7 +75,7 @@ while ($line = <$fh>)
     next;
   }
 
-  if ($chunk{BBONO} == 23402)
+  if ($chunk{BBONO} == 103)
   {
     print "HERE\n";
   }
@@ -102,8 +104,8 @@ while ($line = <$fh>)
 
     study_event($mashed, \%chunk, \%result, $chain_event, \$unknown_events);
     process_event(\@chains_event);
-    process_patterns(\@EVENT_REDUCTIONS, \@chains_event, 
-      \@reduction_event_stats);
+    Event::Patterns::process_patterns(\@EVENT_REDUCTIONS, \@chains_event, 
+      1, \@reduction_event_stats);
 
     update_chain_stats(\%chunk, \@chains_event, \@chain_event_stats);
   }
@@ -119,6 +121,8 @@ while ($line = <$fh>)
 
     study_title($chunk{TITLE}, $chain_title, \$unknown_titles, 
       $chunk{BBONO});
+    Event::Patterns::process_patterns(\@TITLE_REDUCTIONS, \@chains_title, 
+      0, \@reduction_title_stats);
 
     update_chain_stats(\%chunk, \@chains_title, \@chain_title_stats);
   }
@@ -132,7 +136,7 @@ print_team_chain_stats(\@chain_team_stats);
 if ($do_events)
 {
   print_chain_stats("Event", \@chain_event_stats);
-  print_event_reduction_stats(\@reduction_event_stats);
+  print_reduction_stats("Event", \@reduction_event_stats);
   print "\nTotal unknown events: $unknown_events\n\n";
 }
 
@@ -183,6 +187,33 @@ sub print_chains
 }
 
 
+sub print_chains_full
+{
+  my $chains = pop;
+
+  for my $chain_no (0 .. $#$chains)
+  {
+    my $chain = $chains->[$chain_no];
+    printf("Chain %d %2d %8s: %s\n",
+      $chain_no,
+      $chain->last()+1,
+      $chain->status(),
+      $chain->text());
+      printf("Chain %d %2d %8s: %s\n",
+      $chain_no,
+      $chain->last()+1,
+      $chain->status(),
+      $chain->catcat());
+      printf("Chain %d %2d %8s: %s\n",
+      $chain_no,
+      $chain->last()+1,
+      $chain->status(),
+      $chain->fields());
+  }
+  printf "\n";
+}
+
+
 sub update_chain_team_stats
 {
   my ($chain, $chain_team_stats) = @_;
@@ -214,7 +245,7 @@ sub update_chain_stats
   if ($open_flag)
   {
     print_chunk($chunk);
-    print_chains($chains);
+    print_chains_full($chains);
   }
 }
 
@@ -232,7 +263,7 @@ sub print_team_chain_stats
 
 sub print_chain_stats
 {
-  my ($header ,$chain_stats) = @_;
+  my ($header, $chain_stats) = @_;
 
   my %csum;
   print "\n$header chain stats\n\n";
@@ -262,11 +293,11 @@ sub print_chain_stats
 }
 
 
-sub print_event_reduction_stats
+sub print_reduction_stats
 {
-  my $reduction_stats = pop;
+  my ($header, $reduction_stats) = @_;
 
-  print "Event reduction matches\n\n";
+  print "$header reduction matches\n\n";
   for my $i (0 .. $#$reduction_stats)
   {
     next unless defined $reduction_stats->[$i];

@@ -296,6 +296,33 @@ sub split_on
 }
 
 
+sub truncate_directly_before
+{
+  my ($self, $index) = @_;
+
+  # The old chain gets truncated one before the index.
+
+  splice @{$self->{LIST}}, $index, $self->{LAST};
+  $self->{LAST} = $index-1;
+}
+
+
+sub split_directly_on
+{
+  # Without separators.
+  my ($self, $index) = @_;
+  die "Index $index out of bounds" unless $index <= $self->{LAST};
+  die "Splitting on front" if $index == 0;
+
+  my $chain2 = Chain->new();
+
+  $self->copy_from($index, $chain2);
+  $self->truncate_directly_before($index);
+
+  return $chain2;
+}
+
+
 sub kill_on
 {
   my ($self, $index) = @_;
