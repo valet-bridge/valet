@@ -22,6 +22,7 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'Elimination' => ['head to head'],
   'Knock-out' => ['knock-outs', 'knock - out'],
   Qualifying => ['qualification for', 'qualification to'],
   Quarterfinal => ['quarter final', 'quarter finals', 

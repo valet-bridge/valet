@@ -125,14 +125,14 @@ my @SINGLE_WORDS = qw(
   Bamberg Bandung Bangalore Bangkok Banjarmasin Bansi Barcelona Batam 
   Bath Batu Begues Beijing Bekasi Belgrade Bengkulu Beograd 
   Bereket Bergen Bergues Berkeley Berlin Bhilwara Bhubaneshwar Biarritz 
-  Bielefeld Bikaner Bitung Blitar Bodrum Bodø Bogor Bogotá Bologna 
-  Bonn Bordeaux Braila Brandbu Brasilia Brasov Bremen Brisbane 
+  Bielefeld Bikaner Bitung Blitar Bodrum Bodø Bogor Bogotá Boleslawiec
+  Bologna Bonn Bordeaux Braila Brandbu Brasilia Brasov Bremen Brisbane 
   Bromölla Bruges Brussels Bucharest Budapest Burghausen Bursa Burdur 
 
   Caen Cairns Cairo Canakkale Canberra Canterbury Caracas Casablanca
   Cascais Catania Cerkezkoy Cesme Changhua Changzhou Chaville Chelmno 
-  Chengdu Chennai Chiayi Chicago Chongqing Chumphon Clichy Cluj 
-  Copenhagen Corlu Coventry Cuenca Cuneo
+  Chengdu Chennai Chepelare Chiayi Chicago Chongqing Chumphon Clichy 
+  Cluj Copenhagen Corlu Coventry Cuenca Cuneo
 
   Dalian Darmstadt Datca Deauville Delft Delhi Denizli Depok Derpt 
   Diyarbakir Dimitrovgrad Dobrich Dombivli Dongguan Durban Düsseldorf
@@ -200,8 +200,8 @@ my @SINGLE_WORDS = qw(
 
   Taicang Taichung Tainan Taizhou Takayama Tallinn Tarakan Targoviste 
   Tarnów Täby Täfteå Tekýrdag Temuco Thane Thanjavur Thessaloniki Tianjin 
-  Timisoara Tire Tokyo Tomohon Torino Toulouse Trieste Trondheim Tromsø
-  Tyoyuan
+  Timisoara Tire Tofta Tokyo Tomohon Torino Toulouse Trieste Trondheim 
+  Tromsø Tyoyuan
 
   Udaipur Uddevalla Umeå Uppsala Usak Utrecht
 

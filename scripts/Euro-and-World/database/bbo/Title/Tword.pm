@@ -17,6 +17,7 @@ use TeamBBO;
 my @MULTI_WORDS =
 (
   'Business League',
+  "Chairman's Cup",
   'Division Nationale',
   'First Division',
   'Grand Prix',
@@ -24,6 +25,7 @@ my @MULTI_WORDS =
   'Junior League',
   'National Club League',
   'National League',
+  'National Student Championship',
   'Premier Pairs',
   'Premier League',
   'Pro-Am',
@@ -36,6 +38,7 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  "Chairman's Cup" => ['chairmans cup'],
   Championship => ["ch'ship", "ch'ships", 'ch.ship', "cha'ships",
     "c'ship", "c'ships", "champion's", "champions'",
     "championship's", "chmpionship's", 'champion ship'],

@@ -55,8 +55,10 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   'All China Games' => ['all-china games'],
-  'Azores Festival' => ['azores festival bridge',
-    'festival azores bridge', 'azores festiva'],
+  'Azores Festival' => ['azores festival bridge', 'azores bridge open',
+    'azores bridge teams', 'azores team', 'azores teams',
+    'azores team festval', 'festival azores bridge', 'azores festiva', 
+    'festival azores'],
   'Balkan Friendship Festival' => ['balkan bridge festival',
     'balkan festival', 'balcan friendship festival',
     'balcan frienship festival', 'balkan frienship festival'],

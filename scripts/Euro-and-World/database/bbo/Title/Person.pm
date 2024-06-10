@@ -28,7 +28,9 @@ my @MULTI_WORDS =
   'Justice JM Lal',
   'Lalit Mohanka',
   'LC Sunil Rajendra',
+  'Leszek Kwiatkowski',
   'Maharaja Yeshwant Rao Holkar',
+  'Marit Sveaas',
   'Mohanlal Bhartia',
   'Mrs Jaya Jain',
   'Nandu Oke',
@@ -59,6 +61,7 @@ my %MULTI_TYPOS =
     'mohon lal bhararia', 'mohanlal bhartiya'],
   'Mrs Jaya Jain' => ['mrs_ jaya jain'],
   'Narayan Bhojwani' => ['narain bhojwani'],
+  'Necmettin Sunget' => ['necmettin sünget'],
   'Özgecan Aslan' => ['ozgecan aslan'],
   'R N Bagla' => ['rn bagla', 'r_nbagla', 'r_n_bagla'],
 );
