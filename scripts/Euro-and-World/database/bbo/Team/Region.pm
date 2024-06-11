@@ -151,7 +151,7 @@ my @SINGLE_WORDS = qw(
   Minahasa Missouri Mjøsa Muallim Munzur Mysia
   Nordafjells Norden Norrland Nusantara
   Queensland
-  Oberloiben Orontes Otago
+  Oberloiben Olona Orontes Otago
   Papua Porong Punjab
   Rajasthan Rajputana Ratchaburi Rhodes Rogaland Rosfjord 
   Sakarya Salten Shanxi Siberia Sichuan Silesia Silla Sindh Sintang 

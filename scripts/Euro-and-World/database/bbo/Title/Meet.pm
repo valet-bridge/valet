@@ -50,6 +50,7 @@ my @MULTI_WORDS =
   'Sivrioglu Festival',
   'Stara Zagora Bridge Festival',
   'Tallinn Bridge Festival',
+  'Umea Bridgefestival',
   'Varna Bridge Festival',
   'VVE Beheer Bridge Week',
   'Wachauer Bridge Festival',

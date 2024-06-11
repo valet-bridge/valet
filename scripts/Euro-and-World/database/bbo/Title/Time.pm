@@ -23,6 +23,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  Christmas
   Day
   Tuesday Saturday Sunday
   Week Weekend

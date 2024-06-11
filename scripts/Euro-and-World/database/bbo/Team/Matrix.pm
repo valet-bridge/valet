@@ -32,6 +32,7 @@ my %COUNTRY_TO_REGION =
   Greece => ['rhodes'],
   Iceland => ['eyjafjallajokull'],
   Hungary => ['hegyvidék'],
+  Italy => ['olona'],
   India => ['bihar', 'ganges', 'goa', 'gujarat', 'jaipur', 'jharkhand',
     'karnataka', 'kerala', 'madhya pradesh', 'maharashtra', 'nagbagan', 
     'punjab', 'rajasthan', 'rajputana', 'tamil nadu', 'uttar pradesh', 

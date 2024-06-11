@@ -34,6 +34,7 @@ my %MULTI_TYPOS =
   BGB => ['Bridge Great Britain'],
   BFI => ['bridge federation of india'],
   BuBF => ['bulgarian bridge federation'],
+  CACBF => ['central american and caribbean bridge federation'],
   CBAI => ['contract bridge association of ireland'],
   CBF => ['canadian bridge federation'],
   CBLT => ['contract bridge league of thailand'],
@@ -77,7 +78,7 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   ACBL AfBF APBF AuBF AZS
   BFAME BFI BuBF
-  CBAI CBF CBLT CCBA CrBF CSB CTCBA
+  CACBF CBAI CBF CBLT CCBA CrBF CSB CTCBA
   DBF DBV
   EBL EBU
   FIGB FFB FMB FSB

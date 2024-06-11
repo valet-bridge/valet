@@ -16,20 +16,24 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'Closed Room',
   'Knock-out',
+  'Open Room',
   'Round-robin'
 );
 
 my %MULTI_TYPOS =
 (
+  'Closed Room' => ['closed rm'],
   'Elimination' => ['head to head'],
   'Knock-out' => ['knock-outs', 'knock - out'],
+  'Open Room' => ['open rm', 'room 1'],
+  Playoff => ['play offs', 'play-off', 'play off'],
   Qualifying => ['qualification for', 'qualification to'],
   Quarterfinal => ['quarter final', 'quarter finals', 
     'quarter-final', 'quarter-finals', 
     'quater final', 'quater finals', 'round of 8', 'rd of 8', 'r of 8',
     'æwieræfina³y', 'qtr finals', 'phase à 8'],
-  Playoff => ['play offs', 'play-off', 'play off'],
   Rof6 => ['round of 6'],
   Rof12 => ['round of 12'],
   Rof16 => ['round of 16', 'rd of 16', 'phase à 16', 'phase à16',
@@ -48,9 +52,9 @@ my @SINGLE_WORDS = qw(
   Match
   Playoff
   Rof6 Rof12 Rof16 Rof32 Rof64 Round
-  Qualifying Quarterfinal
+  Qualifying Quarter Quarterfinal
   Repechage
-  Semifinal
+  Section Semifinal Stage
   Table
 );
 
@@ -67,6 +71,7 @@ my %SINGLE_TYPOS =
   Rof16 => ['r16a', 'r16b', 'r16c', 'r16d'],
   Qualifying => ['qualification', 'qualifications', 'qualif',
     'qualifier', 'qalifyng', 'qualy', 'qualifikation', 'qual'],
+  Quarter => ['qtr'],
   Quarterfinal => ['quarterfinals', 'quarterf', 'qualterfinal',
     'quarterfinala', 'quarterfinalb', 'quarterfinalc', 'quarterfinald',
     'quaterfinal', 'quaterfinals',
@@ -76,7 +81,8 @@ my %SINGLE_TYPOS =
   Round => ['ronda', 'runde', 'runda', 'rundy', 'rnd', 'r'],
   'Round-robin' => ['rr'],
   Semifinal => ['semifinals', 'semifinale', 'semifimals', 'semifi',
-    'semif', 'semis', 'sf', 'sfa', 'sfb'],
+    'semif', 'semis', 'sf', 'sfa', 'sfb', 'semi'],
+  Stage => ['stg'],
   Table => ['t']
 );
 

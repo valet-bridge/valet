@@ -21,6 +21,7 @@ my @MULTI_WORDS =
   'Business League',
   "Chairman's Cup",
   'Challenge Match',
+  'Exhibition Match',
   'Fantasy Challenge Match',
   'Club League',
   'Club Teams Championship',
@@ -51,7 +52,7 @@ my %MULTI_TYPOS =
   Charity => ['the longest day charity match on the shortest day',
     'the longest day charity on the shortest day'],
   'Division Nationale' => ['division natonale', 'division ntionale',
-    'division natinale', 'divison nationale'],
+    'division natinale', 'divison nationale', 'french dn1'],
   'First Division' => ['1_ division', '1st division'],
   'Intercity' => ['inter-city', 'inter city'],
   'Interclub' => ['inter-club', 'inter-clubs', 'inter club'],
@@ -74,10 +75,12 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   Bridge
   Championship Charity Club Cup
+  Group
   Interclub Intercity International Interprovince Interstate 
   Interuniversity Invitational
   Memorial
   National
+  Pool
   Segment Session
   Tournament Training Trial Trophy
   University
@@ -106,6 +109,7 @@ my %SINGLE_TYPOS =
   Club => ['clubs', 'clut', 'clybs'],
   Cup => ['cuo', 'cupn', 'cups', 'copa', 'coppa', 'coppie', 'coupe'],
   'Division Nationale' => ['divisionnationale', 'dn'],
+  'Exhibition Match' => ['exhibition', 'exhibiton'],
   Intercity => ['intecity'],
   Interclub => ['interclubs'],
   International => ['internacional', 'internationals',
@@ -120,6 +124,7 @@ my %SINGLE_TYPOS =
     'nationald', "national's", 'naational', 'nacional', 'nasional', 'nat'],
   'Premier League' => ['premieleague'],
   Segment => ['seg'],
+  Session => ['sesje'],
   'Super League' => ['superleague', 'superlige', 'superlig©',
     'superligê'],
   Tournament => ['torunament', 'toruney', 'torurnament', 'torurney',

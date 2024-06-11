@@ -31,6 +31,7 @@ my @MULTI_WORDS =
   'Leszek Kwiatkowski',
   'Maharaja Yeshwant Rao Holkar',
   'Marit Sveaas',
+  'Marsha May Sternberg',
   'Mohanlal Bhartia',
   'Mrs Jaya Jain',
   'Nandu Oke',
@@ -44,6 +45,7 @@ my @MULTI_WORDS =
   'R N Bagla',
   'R R Gupta',
   'R Ratnam',
+  'Rai Bahadur Modi',
   'Salvador Assael'
 );
 
@@ -77,6 +79,7 @@ my %SINGLE_TYPOS =
   'Maharaja Yeshwantrao Holkar' => ['holkar'],
   'Mohanlal Bhartia' => ['bhartia', 'bhartiya'],
   'R N Bagla' => ['bagla'],
+  'Rai Bahadur Modi' => ['rai bahadur'],
   'Salvador Assael' => ['assael']
 );
 
