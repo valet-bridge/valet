@@ -6,7 +6,7 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package Title::Destroy;
+package Title::Time;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes);
@@ -16,12 +16,6 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
-  'Around 52 cards in 80 years by',
-  'BBO1', 'BBO2', 'BBO3', 'BBO4', 'BBO5', 'BBO6', 'BBO7', 'BBO8', 'BBO9',
-  'for Pau',
-  'in the',
-  'the 80 grand challenge',
-  'Welcome to'
 );
 
 my %MULTI_TYPOS =
@@ -29,7 +23,9 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  BBO *BBO
+  Day
+  Tuesday Saturday Sunday
+  Week Weekend
 );
 
 my %SINGLE_TYPOS =

@@ -234,6 +234,7 @@ my %SINGLE_TYPOS =
   Asenovec => ['asenovets'],
   Auckland => ['akarana'],
   Ayvalik => ['aivali'],
+  Balatonföldvár => ['balatonfoldvar'],
   Balisekir => ['balikesýr', 'balýkesir',],
   Bangalore => ["b'lore", 'banglore', 'bengalore', 'bangaluru',
     'benglore', 'bengluru', 'bengalu'],

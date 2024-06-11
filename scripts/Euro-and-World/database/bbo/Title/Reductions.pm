@@ -36,6 +36,7 @@ our @TITLE_REDUCTIONS =
   # Get the bulky, global ones out of the way.
   # ------------------------------------------
 
+  # A leading roman numeral or ordinal.
   {
     PATTERN =>
     [
@@ -48,7 +49,81 @@ our @TITLE_REDUCTIONS =
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
     COMPLETION => 1
-  }
+  },
+
+  # Lots of fields anywhere:
+  # - TNAME, TWORD, MEET, SPONSOR, PERSON, CLUB
+  # - Also YEAR
+  # - ZONE, COUNTRY, NATIONALITY, REGION, CITY, QUARTER
+  # - GENDER, AGE
+  # - ORGANIZATION
+  # - SCORING
+  {
+    PATTERN =>
+    [
+      { CATEGORY => ['SINGLETON'], 
+        FIELD => ['TITLE_TNAME', 'TITLE_TWORD',
+          'TITLE_MEET', 'TITLE_SPONSOR', 'TITLE_PERSON',
+          'TITLE_CLUB',
+          'TITLE_YEAR',
+          'TITLE_ZONE', 'TITLE_COUNTRY', 'TITLE_NATIONALITY',
+          'TITLE_REGION', 'TITLE_CITY', 'TITLE_QUARTER',
+          'TITLE_GENDER', 'TITLE_AGE',
+          'TITLE_ORGANIZATION', 'TITLE_SCORING'] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&Event::Patterns::process_general,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
+  # A destruction.
+  {
+    PATTERN =>
+    [
+      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_DESTROY'] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&Event::Patterns::process_kill,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
+  # A single stage (without a number).
+  # Also a form.
+  {
+    PATTERN =>
+    [
+      { CATEGORY => ['SINGLETON'],
+        FIELD => ['TITLE_STAGE', 'TITLE_FORM'] }
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 0,
+    METHOD => \&Event::Patterns::process_general,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
+  # A stage followed by a letter or an integer at the end.
+  {
+    PATTERN =>
+    [
+      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_STAGE'] },
+      { CATEGORY => ['SINGLETON'], 
+        FIELD => ['TITLE_LETTER', 'TITLE_INTEGER'] },
+    ],
+    ANCHOR => 'END',
+    KEEP_LAST => 1,
+    METHOD => \&Event::Patterns::process_general,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
 
 );
 

@@ -32,7 +32,8 @@ my %MULTI_TYPOS =
   Playoff => ['play offs', 'play-off', 'play off'],
   Rof6 => ['round of 6'],
   Rof12 => ['round of 12'],
-  Rof16 => ['round of 16', 'rd of 16', 'phase à 16', 'phase à16'],
+  Rof16 => ['round of 16', 'rd of 16', 'phase à 16', 'phase à16',
+    'rd 0f 16'],
   Rof32 => ['round of 32', 'rd of 32'],
   Rof64 => ['round of 64', 'rd of 64'],
   'Round-robin' => ['round robin', 'raound robin'],
@@ -44,11 +45,13 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   Elimination
   Final
+  Match
   Playoff
-  Rof6 Rof12 Rof16 Rof32 Rof64
+  Rof6 Rof12 Rof16 Rof32 Rof64 Round
   Qualifying Quarterfinal
   Repechage
   Semifinal
+  Table
 );
 
 my %SINGLE_TYPOS =
@@ -70,9 +73,11 @@ my %SINGLE_TYPOS =
     'quartetfinal', 'qurterfinal', 'qfinal', 
     'qf', 'qfa', 'qfb', 'qfc', 'qfd'],
   Repechage => ['repcharge', 'repercharge'],
+  Round => ['ronda', 'runde', 'runda', 'rundy', 'rnd', 'r'],
   'Round-robin' => ['rr'],
   Semifinal => ['semifinals', 'semifinale', 'semifimals', 'semifi',
-    'semif', 'semis', 'sf', 'sfa', 'sfb']
+    'semif', 'semis', 'sf', 'sfa', 'sfb'],
+  Table => ['t']
 );
 
 

@@ -50,7 +50,7 @@ my %SINGLE_TYPOS =
   Bolivia => ['bolivariano', 'bolivarian'],
   Brazil => ['brazilian', 'brasilian'],
   Bulgaria => ['bulgarian', 'blugarian', 'bugarian'],
-  Canada => ['canadian', 'candian', 'caniadian'],
+  Canada => ['canadian', 'candian', 'caniadian', 'cdn'],
   Chile => ['chilean'],
   Croatia => ['croatian'],
   'Czech Republic' => ['czech'],
@@ -85,7 +85,8 @@ my %SINGLE_TYPOS =
   Sweden => ['swedish', 'swdish', 'swedis', 'swesish'],
   Taiwan => ['taiwanese'],
   Turkish => ['turkis', 'turkýsh'],
-  Tunisia => ['tunisie']
+  Tunisia => ['tunisie'],
+  Wales => ['welsh']
 );
 
 

@@ -367,11 +367,15 @@ sub process_patterns
 
         if ($reduction->{SPLIT_FRONT} && $match > 0)
         {
-          my $chain2 = $chain->split_on($match);
-
+          my $chain2;
           if ($sep_flag)
           {
+            $chain2 = $chain->split_on($match);
             $chain->complete_if_last_is(0, 'COMPLETE');
+          }
+          else
+          {
+            $chain2 = $chain->split_directly_on($match);
           }
 
           $chain2->complete_if_last_is($reduction->{KEEP_LAST}, $cstatus) 

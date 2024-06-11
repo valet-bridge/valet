@@ -16,8 +16,14 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'Bridge League',
+  'Bridge Meeting',
   'Business League',
   "Chairman's Cup",
+  'Challenge Match',
+  'Fantasy Challenge Match',
+  'Club League',
+  'Club Teams Championship',
   'Division Nationale',
   'First Division',
   'Grand Prix',
@@ -42,7 +48,10 @@ my %MULTI_TYPOS =
   Championship => ["ch'ship", "ch'ships", 'ch.ship', "cha'ships",
     "c'ship", "c'ships", "champion's", "champions'",
     "championship's", "chmpionship's", 'champion ship'],
-  'Division Nationale' => ['division natonale', 'division ntionale'],
+  Charity => ['the longest day charity match on the shortest day',
+    'the longest day charity on the shortest day'],
+  'Division Nationale' => ['division natonale', 'division ntionale',
+    'division natinale', 'divison nationale'],
   'First Division' => ['1_ division', '1st division'],
   'Intercity' => ['inter-city', 'inter city'],
   'Interclub' => ['inter-club', 'inter-clubs', 'inter club'],
@@ -54,15 +63,17 @@ my %MULTI_TYPOS =
     'premier leauge', 'premier lge', '1st league', 'premie league',
     'prremier league', 'premieer league', 'premier legaue',
     'premier legue'],
-  'Second League' => ['2 league'],
+  'Second League' => ['2 league', 'div b'],
   'Super League' => ['sup league', 'super legue'],
-  Training => ['practice session', 'training match', 'practice match'],
-  Trial => ['prueba de seleccion']
+  Training => ['practice session', 'training match', 'practice match',
+    'test match', 'tes match'],
+  Trial => ['prueba de seleccion'],
+  'Women Elite Tournament' => ["women's elite tournament"]
 );
 
 my @SINGLE_WORDS = qw(
   Bridge
-  Championship Club Cup
+  Championship Charity Club Cup
   Interclub Intercity International Interprovince Interstate 
   Interuniversity Invitational
   Memorial
@@ -102,14 +113,15 @@ my %SINGLE_TYPOS =
   Interprovince => ['interprovincal', 'interprovincials'],
   Invitational => ['invitacion', 'invitacional', 'invitación',
     'invitasi', 'invitatatinal', 'invitatioanal', 'invitation',
-    'invites', 'invitional'],
+    'invites', 'invitional', 'inivitational', 'invitatational'],
   Memorial => ['memorials', 'menorial', 'memoral', 'memrial'],
   National => ['natioanl', 'nationale', 'nationals', 'natonale',
     'ntionale', 'natinal', 'natinale', 'natioanal', 'nationaals',
     'nationald', "national's", 'naational', 'nacional', 'nasional', 'nat'],
   'Premier League' => ['premieleague'],
   Segment => ['seg'],
-  'Super League' => ['superleague'],
+  'Super League' => ['superleague', 'superlige', 'superlig©',
+    'superligê'],
   Tournament => ['torunament', 'toruney', 'torurnament', 'torurney',
     'tourament', 'tourn', 'tourname', 'tournamnet', 'tournement',
     'tournet', 'tourney', 'turnament', 'tourmanent', 'tourna',

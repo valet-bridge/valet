@@ -431,6 +431,7 @@ my %MULTI_TYPOS =
   Djarum => ['djarum la', 'djarum mld'],
   'Dobre Zegary' => ['dobre_zegary', 'dobrezegary.pl'],
   Dongfeng => ['dongfeng automobile', 'dong feng', 'dongfeng qiche'],
+  EcoSoft => ['eco soft'],
   'Eden Realty Kolkata' => ['eden city', 'eden city kolkata',
     'eden reality kolkat'],
   'Eko-Al' => ['eko al', 'eko_al'],
@@ -600,7 +601,7 @@ my @SINGLE_WORDS = qw(
   Datang Denizgucu Dermika Derofe Dianwang DISKI Djarum 
   Dongfeng Dostlar Druva
 
-  Effcontrol Eimskip Eksprompt Elastron Elektrika Elektrociepl
+  EcoSoft Effcontrol Eimskip Eksprompt Elastron Elektrika Elektrociepl
   Energetyk Enorma Enterprise ESSO Evertrust
 
   Fatek Forta Frissan Funbridge

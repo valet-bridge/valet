@@ -43,6 +43,7 @@ my @MULTI_WORDS =
   'PSN Sarma',
   'R N Bagla',
   'R R Gupta',
+  'R Ratnam',
   'Salvador Assael'
 );
 

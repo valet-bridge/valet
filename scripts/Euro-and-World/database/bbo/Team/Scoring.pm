@@ -16,11 +16,13 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'IMPs Across the Field'
 );
 
 my %MULTI_TYPOS =
 (
-  IMP => ['butler scoring', "IMP's"]
+  IMP => ['butler scoring', "IMP's"],
+  'IMPs Across the Field' => ["imp's across the field"]
 );
 
 my @SINGLE_WORDS = qw(
