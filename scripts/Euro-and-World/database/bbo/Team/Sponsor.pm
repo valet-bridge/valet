@@ -439,6 +439,7 @@ my %MULTI_TYPOS =
   'Elektrik P3B' => ['elektrik merapi', 'electric merapi'],
   'Falck Medical' => ['falck med'],
   'Fanhua Jituan' => ['fan hua'],
+  'Fantoni Vacations' => ['fantoni vacation'],
   'Ferðaskrifstofa Vesturlands' => ['ferðask. vesturl.',
     'ferðaskrifstofa ves'],
   'Garðar & Vélar' => ['garðar & vélar ehf.', 'garðar og vélar',

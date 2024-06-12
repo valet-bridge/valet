@@ -46,7 +46,8 @@ my @MULTI_WORDS =
   'R R Gupta',
   'R Ratnam',
   'Rai Bahadur Modi',
-  'Salvador Assael'
+  'Salvador Assael',
+  'Willy Brown'
 );
 
 my %MULTI_TYPOS =

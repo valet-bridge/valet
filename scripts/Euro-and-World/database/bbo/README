@@ -1,6 +1,7 @@
 2024-06-11
 
-Peel off leading digits.
+- Integer 03 = 2003, '10 = 2010
+- Peel off leading digits.
 
 There are several forms of teams.
 Should we try to get at it after the multi-match and before the split?

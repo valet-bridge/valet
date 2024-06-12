@@ -27,6 +27,7 @@ my @MULTI_WORDS =
   'Club Teams Championship',
   'Division Nationale',
   'First Division',
+  'Gold Swiss Pairs',
   'Grand Prix',
   'Invitational Bridge Meeting',
   'Junior League',

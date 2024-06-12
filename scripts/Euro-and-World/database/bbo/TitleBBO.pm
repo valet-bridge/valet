@@ -34,6 +34,7 @@ use Team::Form;
 use Team::Sponsor;
 use Team::Gender;
 use Team::Age;
+use Team::Captain;
 
 use Title::Meet;
 use Title::Person;
@@ -60,6 +61,7 @@ my @TAG_ORDER = qw(
   TITLE_UNIVERSITY 
   TITLE_FORM 
   TITLE_SPONSOR 
+  TITLE_CAPTAIN 
   TITLE_GENDER
   TITLE_AGE
   TITLE_SCORING
@@ -89,12 +91,15 @@ sub init_hashes
   Team::University::set_hashes($method, 'TITLE_UNIVERSITY');
   Team::Form::set_hashes($method, 'TITLE_FORM');
   Team::Sponsor::set_hashes($method, 'TITLE_SPONSOR');
+
+  Title::Person::set_hashes($method, 'TITLE_PERSON');
+
+  Team::Captain::set_hashes($method, 'TITLE_CAPTAIN');
   Team::Gender::set_hashes($method, 'TITLE_GENDER');
   Team::Age::set_hashes($method, 'TITLE_AGE');
   Team::Scoring::set_hashes($method, 'TITLE_SCORING');
 
   Title::Meet::set_hashes($method, 'TITLE_MEET');
-  Title::Person::set_hashes($method, 'TITLE_PERSON');
   Title::Tname::set_hashes($method, 'TITLE_TNAME');
   Title::Tword::set_hashes($method, 'TITLE_TWORD');
   Title::Club::set_hashes($method, 'TITLE_CLUB');
