@@ -46,10 +46,10 @@ use Title::Time;
 use Title::Destroy;
 
 my @TAG_ORDER = qw(
+  TITLE_DESTROY
   TITLE_TNAME
   TITLE_MEET
   TITLE_CLUB
-  TITLE_DESTROY
 
   TITLE_ORGANIZATION 
   TITLE_ZONE 

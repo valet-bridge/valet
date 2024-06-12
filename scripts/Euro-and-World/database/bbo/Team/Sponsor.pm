@@ -246,6 +246,7 @@ my @MULTI_WORDS =
   'PLN Suluttenggo',
   'PT Bayu Buana Gemilang',
   'PT Bumi Siak Pusako',
+  'Ragn Sells',
   'Red Bull',
   'Red Cotton',
   'Rigainvites.lv',
@@ -519,6 +520,7 @@ my %MULTI_TYPOS =
   'PT Bumi Siak Pusako' => ['pt.bumi siak pusako',
     'bumi siak pusako', 'pt bsp'],
   Pufa => ['pu fa'],
+  'Ragn Sells' => ['ragn-sells'],
   'Ryan Express' => ['ryan_express'],
   'Samtronic Constanta' => ['samtronic ct'],
   'Sanliurfa Tarim' => ['urfa tarim'],
@@ -644,7 +646,8 @@ my @SINGLE_WORDS = qw(
   SportAccord Srenniw SSDA Stalgast Stiga Struma Synective
 
   Tekser Telkom Termika Termoavion Termochem Timah Topeko Transearly 
-  Tricon Tridaya Tryggingamiðstöðin Tsingtao Tundem Tyco Tzilis
+  Tricon Tridaya Tryggingamiðstöðin Tsingtao Tundem Twentebelt
+  Tyco Tzilis
 
   UMW Unibet Unicat
 

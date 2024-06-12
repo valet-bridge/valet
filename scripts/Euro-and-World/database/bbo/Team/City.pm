@@ -100,6 +100,7 @@ my %MULTI_TYPOS =
   Porto => ['cidade invicta'],
   'Reggio Emilia' => ['r.e.', 'reggio e', 'r. emilia', 'reg. emilia'],
   Qingdao => ['qing dao'],
+  Rome => ['città di roma'],
   'San Giorgio del Sannio' => ['sg del sannio', 's.g.sannio',
     's.giorgio sannio', 'san giorgio del san'],
   'São Paulo' => ['sao paulo', 's o paulo', 'sap paulo'],
@@ -165,12 +166,14 @@ my @SINGLE_WORDS = qw(
 
   Langkat Lanzhou Lappeenranta Leiden Lerum Leszno Leuven Leverkusen 
   Lhokseumawe Liepaja Lille Lima Lincoln Linköping Lisbon Liushu 
-  Ljubljana Lodz Lokotok London Lowicz Lublin Luleburgaz Lumajang Lyon
+  Ljubljana Lodz Lojdy Lokotok London Lowicz Lublin Luleburgaz Lumajang 
+  Lyon
 
   Maastricht Madrid Madras Magetan Makassar Malang Malatya Malmö Manado 
   Manchester Manisa Mannheim Marbella Marrakech Martapura Massy Mautern
   Medan Medellin Melbourne Mersin Miaoli Michalovce Midyat Milan Milas 
-  Minsk Monticiano Montpellier Moradabad Morud Muðla Mumbai Munich 
+  Minsk Monticiano Montpellier Moradabad Morud Muðla Mulund Mumbai 
+  Munich 
 
   Nagpur Nagykanizsa Namsos Nanchang Nancy Nanning Napoli Narvik 
   Nashik Nazilli Näsby Nicosia Nijmegen Ningbo Niš Norrbyskär Norrøna 
@@ -183,7 +186,7 @@ my @SINGLE_WORDS = qw(
   Panzhihua Pariaman Paris Pärnu Pattaya Pau Pecs Pekanbaru Pelotas 
   Penajam Pernik Perth Perula Pesaro Pescara Petersfield Philadelphia
   Pisa Pleven Plovdiv Pontianak Popovo Porto Potsdam Poznan Prague 
-  Pula Pune Puri
+  Pula Pulawy Pune Puri Pushkar
 
   Qingdao
 
@@ -194,8 +197,8 @@ my @SINGLE_WORDS = qw(
   Saarbrücken Sabadell Salerno Samarinda Samobor Samsun Sandefjord 
   Santiago Sanya Sarpsborg Secunderabad Seferihisar Semarang Serang 
   Shanghai Shaoguan Shenyang Shenzhen Shijiazhuang Shumen Sibiu Sidoarjo 
-  Siena Sindi Singsås Skara Skien Skopje Slagelse Sleman Sofia Solok 
-  Solot Sortland Söke Split Stanford Stavanger Steinkjer Stockholm
+  Siena Sindi Singsås Skara Skien Skopje Slagelse Slawa Sleman Sofia 
+  Solok Sopot Sortland Söke Split Stanford Stavanger Steinkjer Stockholm
   Storsjöbygden Stureby Stuttgart Sukma Sukomoro Sumedang Sunndalsøra 
   Surabaya Suzhou Sydney Szczyrk Szeged Sørreisa
 
@@ -313,6 +316,7 @@ my %SINGLE_TYPOS =
   'Saint Petersburg' => ['spb'],
   Shenzhen => ['sz'],
   Singsås => ['singsaas'],
+  Slawa => ['s£awa', 's³awa'],
   Storsjöbygden => ['storsjöbygdens'],
   Söke => ['soke'],
   Stockholm => ['stockholms'],

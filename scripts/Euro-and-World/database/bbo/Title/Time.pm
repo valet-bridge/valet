@@ -26,6 +26,7 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   Christmas
   Day
+  July
   Tuesday Saturday Summer Sunday
   Week Weekend
 );

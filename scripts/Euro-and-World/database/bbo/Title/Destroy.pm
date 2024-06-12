@@ -17,9 +17,9 @@ use TeamBBO;
 my @MULTI_WORDS =
 (
   'Around 52 cards in 80 years by',
-  'before bermuda bowl',
+  'before bermuda bowl', 'by joe pochron',
   'BBO1', 'BBO2', 'BBO3', 'BBO4', 'BBO5', 'BBO6', 'BBO7', 'BBO8', 'BBO9',
-  'di vigraph',
+  'de vigraph',
   'eng comment', 'eng comments', 'eng comment in',
   'for Pau',
   'in the',
