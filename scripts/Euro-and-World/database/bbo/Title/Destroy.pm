@@ -18,8 +18,10 @@ my @MULTI_WORDS =
 (
   'Around 52 cards in 80 years by',
   'BBO1', 'BBO2', 'BBO3', 'BBO4', 'BBO5', 'BBO6', 'BBO7', 'BBO8', 'BBO9',
+  'eng comment', 'eng comments', 'eng comment in',
   'for Pau',
   'in the',
+  'swe comment', 'sw comment', 'sw comments',
   'the 80 grand challenge',
   'Welcome to'
 );

@@ -29,6 +29,7 @@ my @MULTI_WORDS =
   'Crete Bridge Festival',
   'Danish Bridge Festival',
   'Estoril Bridge Festival',
+  'Fes Festival',
   'Gold Coast Congress',
   'Greek Islands Festival',
   'Iceland Bridge Festival',
@@ -37,6 +38,7 @@ my @MULTI_WORDS =
   'Israel International Festival',
   'Israel Teams Cup',
   'Jordan Bridge Festival',
+  'Lozenets Bridge Festival',
   'Mar del Plata Festival',
   'Marmara Festival',
   'Mautern Bridge Festival',
@@ -72,6 +74,8 @@ my %MULTI_TYPOS =
     'international bridge festival brasov'],
   'Crete Bridge Festival' => ['crete b_ festival'],
   'Estoril Bridge Festival' => ['estoril festival'],
+  'Fes Festival' => ['fes bridge international festival',
+    'festival fes', 'festival de fes'],
   'Gold Coast Congress' => ['gold coast'],
   'Greek Islands Festival' => ['greek bridge festival',
     'greek island festival', 'athens bridge festival', 
@@ -87,6 +91,7 @@ my %MULTI_TYPOS =
   'Israel Teams Cup' => ['israel national team cup',
     'israel team cup', 'israel team of four cup'],
   'Jordan Bridge Festival' => ['jordab festival', 'jordan b_ festival'],
+  'Lozenets Bridge Festival' => ['bridge festival lozenets'],
   'Mar del Plata Festival' => [ 'mar del plata international festival',
     'mar del plata international bridge festival'],
   'Marmara Festival' => ['festival marmara'],
@@ -108,6 +113,7 @@ my %MULTI_TYPOS =
   'Tallinn Bridge Festival' => ['talinn festival', 'tallin festival',
     'tallinns festival'],
   'Varna Bridge Festival' => ['international bridge festival varna'],
+  'VVE Beheer Bridge Week' => ['vve-beheer bridgeweek'],
   'Wachauer Bridge Festival' => ['wachauer bridgefestival']
 );
 

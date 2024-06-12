@@ -38,6 +38,7 @@ my @MULTI_WORDS =
   'Premier League',
   'Pro-Am',
   'Second League',
+  'Summer Bridge Festival',
   'Super League',
   'Women Elite Tournament',
   'Winter Nationals',
