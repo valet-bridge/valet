@@ -58,6 +58,7 @@ my %MULTI_TYPOS =
   IBWI => ['ikatan bridge wanita indonesia'],
   IBU => ['irish bridge union'],
   JBA => ['j.b.a.', 'jordan bridge federation'],
+  KSBA => ['karnataka state bridge association'],
   MCBA => ['macau contract bridge association'],
   NBB => ['dutch bridge federation'],
   NBF => ['norsk bridgeforbund'],
@@ -66,6 +67,7 @@ my %MULTI_TYPOS =
   PRBA => ['Pune Region Bridge Association'],
   PZBS => ['polish bridge union'],
   PTBA => ['philippine tournament bridge association'],
+  SABF => ['south african bridge federation'],
   SBF => ['svenska bridgeförbundet'],
   SBU => ['scottish bridge union'],
   SPBF => ['south pacific bridge federation', 'zone 7'],
@@ -86,6 +88,7 @@ my @SINGLE_WORDS = qw(
   HKCBA
   IBF IBU IBWI
   JBA
+  KSBA
   MCBA
   NBB NBF NIBU
   ÖBV

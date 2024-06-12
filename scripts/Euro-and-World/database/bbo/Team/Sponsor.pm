@@ -356,6 +356,7 @@ my @MULTI_WORDS =
   'Vestel',
   'Vidbot ehf',
   'Viego Regnskap',
+  'Vinex Preslav',
   'Viru Valge',
   'VVE Beheer',
   'Wuhan Dongfang',

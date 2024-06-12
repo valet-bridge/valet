@@ -36,23 +36,22 @@ our @TITLE_REDUCTIONS =
   # Get the bulky, global ones out of the way.
   # ------------------------------------------
 
-  # A leading roman numeral or ordinal.
+  # A destruction.
   {
     PATTERN =>
     [
-      { CATEGORY => ['SINGLETON'], 
-        FIELD => ['TITLE_ROMAN', 'TITLE_ORDINAL'] }
+      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_DESTROY'] }
     ],
-    ANCHOR => 'BEGIN',
+    ANCHOR => 'ANY',
     KEEP_LAST => 0,
-    METHOD => \&Event::Patterns::process_general,
+    METHOD => \&Event::Patterns::process_kill,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
     COMPLETION => 1
   },
 
   # Lots of fields anywhere:
-  # - TNAME, TWORD, MEET, SPONSOR, PERSON, CLUB
+  # - TNAME, TWORD, MEET, SPONSOR, PERSON, CLUB, CAPTAIN
   # - Also YEAR
   # - ZONE, COUNTRY, NATIONALITY, REGION, CITY, QUARTER
   # - GENDER, AGE
@@ -63,7 +62,7 @@ our @TITLE_REDUCTIONS =
     [
       { CATEGORY => ['SINGLETON'], 
         FIELD => ['TITLE_TNAME', 'TITLE_TWORD',
-          'TITLE_MEET', 'TITLE_SPONSOR', 'TITLE_PERSON',
+          'TITLE_MEET', 'TITLE_SPONSOR', 'TITLE_PERSON', 'TITLE_CAPTAIN',
           'TITLE_CLUB',
           'TITLE_YEAR',
           'TITLE_ZONE', 'TITLE_COUNTRY', 'TITLE_NATIONALITY',
@@ -79,15 +78,16 @@ our @TITLE_REDUCTIONS =
     COMPLETION => 1
   },
 
-  # A destruction.
+  # A leading roman numeral, ordinal or letter.
   {
     PATTERN =>
     [
-      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_DESTROY'] }
+      { CATEGORY => ['SINGLETON'], 
+        FIELD => ['TITLE_ROMAN', 'TITLE_ORDINAL', 'TITLE_LETTER'] }
     ],
-    ANCHOR => 'ANY',
+    ANCHOR => 'BEGIN',
     KEEP_LAST => 0,
-    METHOD => \&Event::Patterns::process_kill,
+    METHOD => \&Event::Patterns::process_general,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
     COMPLETION => 1
