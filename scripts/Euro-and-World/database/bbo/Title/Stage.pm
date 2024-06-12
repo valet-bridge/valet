@@ -26,6 +26,7 @@ my %MULTI_TYPOS =
 (
   'Closed Room' => ['closed rm'],
   'Elimination' => ['head to head'],
+  'Final' => ['gran final'],
   'Knock-out' => ['knock-outs', 'knock - out'],
   'Open Room' => ['open rm', 'room 1'],
   Playoff => ['play offs', 'play-off', 'play off'],
@@ -45,7 +46,8 @@ my %MULTI_TYPOS =
   'Round-robin' => ['round robin', 'raound robin'],
   Semifinal => ['semi final', 'semi finals', 'semi-fiinal',
     'semi-final', 'semi-finals', 'round of 4', 'round-of-four',
-    'demi-final', 'demi-finale', 'demi-finales', 'half final', 's-final'],
+    'demi-final', 'demi-finale', 'demi-finales', 'half final', 's-final',
+    'meia final', 'meias finais', 'yf'],
 );
 
 my @SINGLE_WORDS = qw(

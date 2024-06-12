@@ -32,6 +32,7 @@ my @MULTI_WORDS =
   'Cianjur Regency',
   'Datca Yarimada',
   'District of Columbia',
+  'Dogu Akdeniz',
   'East Borneo',
   'East Jakarta',
   'East Java',

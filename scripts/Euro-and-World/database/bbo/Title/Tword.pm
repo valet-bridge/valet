@@ -31,8 +31,11 @@ my @MULTI_WORDS =
   'Gold Swiss Pairs',
   'Grand National Teams',
   'Grand Prix',
+  'International Grand Tournament',
+  'International Team Trials',
   'Invitational Bridge Meeting',
   'Junior League',
+  'Midsummer Juniors',
   'National Club League',
   'National League',
   'National Student Championship',
@@ -66,10 +69,16 @@ my %MULTI_TYPOS =
     'division natinale', 'divison nationale', 'french dn1'],
   'First Division' => ['1_ division', '1st division'],
   'Grand National Teams' => ['gnt'],
-  'Grand Prix' => ['grand pix', 'grand peix'],
+  'Grand Prix' => ['grand pix', 'grand peix', 'grad prix',
+    'gran prix'],
+  'Grand Tournament' => ['grand torurnament', 'grand torunament',
+    'grand tourney', 'grant toruney', 'grand torurney',
+    'grand tournet'],
   Intercity => ['inter-city', 'inter city'],
   Interclub => ['inter-club', 'inter-clubs', 'inter club',
     "de l'interclub"],
+  'International Grand Tournament' => ['intl_ gran tournament',
+    'intl_ grand tournament'],
   Interprovincial => ['inter provincials', 'inter province',
     'inter=provincial', 'inter-provincial'],
   Interstate => ['inter-state', 'inter state'],
@@ -103,7 +112,7 @@ my @SINGLE_WORDS = qw(
   Group
   Interclub Intercity International Interport Interprovince Interstate 
   Interuniversity Invitational
-  Memorial
+  Match Memorial
   National
   Pool
   Segment Session
@@ -139,12 +148,14 @@ my %SINGLE_TYPOS =
   Interclub => ['interclubs'],
   International => ['internacional', 'internationals',
     'internazionale'],
+  'International Team Trials' => ['itt'],
   Interport => ['inter-port'],
   Interprovince => ['interprovincal', 'interprovincials'],
   Invitational => ['invitacion', 'invitacional', 'invitación',
     'invitasi', 'invitatatinal', 'invitatioanal', 'invitation',
     'invites', 'invitional', 'inivitational', 'invitatational',
     'invis'],
+  Match => ['mecz'],
   Memorial => ['memorials', 'menorial', 'memoral', 'memrial'],
   National => ['natioanl', 'nationale', 'nationals', 'natonale',
     'ntionale', 'natinal', 'natinale', 'natioanal', 'nationaals',

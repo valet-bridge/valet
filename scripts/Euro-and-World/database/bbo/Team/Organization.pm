@@ -19,6 +19,7 @@ use TitleBBO;
 my @MULTI_WORDS =
 (
   'Bridge Great Britain',
+  'Indonesian Ministry of Youth and Sports',
   'Jilin Sheng Qiaopa',
   'Shanghai Contract Bridge Association'
 );
@@ -106,6 +107,7 @@ my %SINGLE_TYPOS =
   CBAI => ['cabi'],
   FMB => ['fm'],
   GABSI => ['iba'],
+  'Indonesian Ministry of Youth and Sports' => ['menpora'],
   'Jilin Sheng Qiaopa' => ['jilinshengqiaopa'],
   'Shanghai Contract Bridge Association' => ['scba']
 );
