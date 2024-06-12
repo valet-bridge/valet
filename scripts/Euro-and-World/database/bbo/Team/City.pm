@@ -38,6 +38,7 @@ my @MULTI_WORDS =
   'La Marina',
   'Le Bouscat',
   'Mandobo Bodi',
+  'Mar del Plata',
   'Meilin Qingcheng',
   'Mitra Vihar',
   'Monte Carlo',

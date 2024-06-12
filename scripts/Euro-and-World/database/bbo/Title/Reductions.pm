@@ -125,6 +125,21 @@ our @TITLE_REDUCTIONS =
     COMPLETION => 1
   },
 
+  # A time indication followed by an integer at the end.
+  {
+    PATTERN =>
+    [
+      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_TIME'] },
+      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_INTEGER'] },
+    ],
+    ANCHOR => 'END',
+    KEEP_LAST => 1,
+    METHOD => \&Event::Patterns::process_general,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
 );
 
 1;

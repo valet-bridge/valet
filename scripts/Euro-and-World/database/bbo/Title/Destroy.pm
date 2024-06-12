@@ -17,21 +17,28 @@ use TeamBBO;
 my @MULTI_WORDS =
 (
   'Around 52 cards in 80 years by',
+  'before bermuda bowl',
   'BBO1', 'BBO2', 'BBO3', 'BBO4', 'BBO5', 'BBO6', 'BBO7', 'BBO8', 'BBO9',
+  'di vigraph',
   'eng comment', 'eng comments', 'eng comment in',
   'for Pau',
   'in the',
-  'swe comment', 'sw comment', 'sw comments',
+  'swe comment', 'swe comments', 'sw comment', 'sw comments',
   'the 80 grand challenge',
   'Welcome to'
 );
 
 my %MULTI_TYPOS =
 (
+  'for Pau' => ['pour pau'],
 );
 
 my @SINGLE_WORDS = qw(
   BBO *BBO
+  compared
+  étoile
+  popular
+  retour
 );
 
 my %SINGLE_TYPOS =

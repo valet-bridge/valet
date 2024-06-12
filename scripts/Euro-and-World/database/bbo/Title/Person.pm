@@ -16,6 +16,7 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'Andrzej Wilkosz',
   'Ashok Kapur',
   'B L Rao',
   'Boris Schapiro',
@@ -53,6 +54,8 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'Andrzej Wilkosz' => ['a_ wilkosz'],
+  'Ashok Kapur' => ['ashok kapoor'],
   'B L Rao' => ['b_l_rao'],
   'Brahmin Sabha' => ['brhman sabha'],
   'Dr. Tolani' => ['dr_ tolani', 'dr_tolani', 'dr tolani'],
@@ -62,7 +65,8 @@ my %MULTI_TYPOS =
   'LC Sunil Rajendra' => ['l_c_sunil rajendra'],
   'Maharaja Yeshwantrao Holkar' => ['m yeshwantrao holkar',
     'maharaja yeshwantrao holkar', 'maharaja holkar',
-    'yashawantrao holkar', 'yashwant rao holkar'],
+    'yashawantrao holkar', 'yashwant rao holkar',
+    'maharaja yashwantrao holkar'],
   'Mohanlal Bhartia' => ['mohanlal bharatia', 'mohanlal bharatiya', 
     'mohon lal bhararia', 'mohanlal bhartiya'],
   'Mrs Jaya Jain' => ['mrs_ jaya jain'],

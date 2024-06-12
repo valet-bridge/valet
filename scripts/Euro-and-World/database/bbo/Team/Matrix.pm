@@ -87,7 +87,7 @@ my %COUNTRY_TO_REGION =
 
 my %COUNTRY_TO_CITY =
 (
-  Argentina => ['buenos aires', 'san luis'],
+  Argentina => ['buenos aires', 'mar del plata', 'san luis'],
   Australia => [
     'adelaide', 'brisbane', 'cairns', 'canberra',
     'melbourne', 'perth', 'sydney'],
@@ -730,8 +730,8 @@ my %COUNTRY_TO_SPONSOR =
     'Construction Kielce', 'CONSUS', 'Consus Carbon', 'Consus Oil',
     'Darles Santerm', 'Dermika', 'Dobre Zegary', 'E-Service',
     'Effcontrol', 'Eko-Al', 'Elektrociepl', 'Elektromonta¯',
-    'Euro Agro', 'Energetyk', 'Falck Medical', 'Forta', 'Gomad',
-    'Honesta', 'Hotel Senator', 'Interbud Plock', 'Kadimex',
+    'Euro Agro', 'Energetyk', 'Falck Medical', 'Forta', 'forumbridge.pl',
+    'Gomad', 'Honesta', 'Hotel Senator', 'Interbud Plock', 'Kadimex',
     'Kancelaria', 'Klika Murcki', 'KONKRET Chelmno', 'Konstanta',
     'Kurt-Royce', 'Lacznosc', 'Latteria TS Rzepin', 'Mega-Tech',
     'Nazwa', 'Niewiem', 'NOTUS', 'Petro', 'POLFA', 'Ponar Unia',

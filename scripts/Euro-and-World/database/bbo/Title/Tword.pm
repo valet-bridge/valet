@@ -35,6 +35,7 @@ my @MULTI_WORDS =
   'National Club League',
   'National League',
   'National Student Championship',
+  'National Team Championship',
   'Neighbor Challenge',
   'Premier Pairs',
   'Premier League',
@@ -59,22 +60,27 @@ my %MULTI_TYPOS =
     'division natinale', 'divison nationale', 'french dn1'],
   'First Division' => ['1_ division', '1st division'],
   'Grand National Teams' => ['gnt'],
-  'Intercity' => ['inter-city', 'inter city'],
-  'Interclub' => ['inter-club', 'inter-clubs', 'inter club'],
-  'Interprovincial' => ['inter provincials', 'inter province',
+  Intercity => ['inter-city', 'inter city'],
+  Interclub => ['inter-club', 'inter-clubs', 'inter club',
+    "de l'interclub"],
+  Interprovincial => ['inter provincials', 'inter province',
     'inter=provincial', 'inter-provincial'],
-  'Interstate' => ['inter-state', 'inter state'],
-  'Interuniversity' => ['inter-university', 'inter-universities'],
+  Interstate => ['inter-state', 'inter state'],
+  Interuniversity => ['inter-university', 'inter-universities'],
+  Invitational => ['invitase terbatas'],
+  Memorial => ['pro memoriam'],
+  'National Team Championship' => ['campeonato nacional de equipas'],
   'Neighbor Challenge' => ['neighbour challenge',
     'neighbourhood challange'],
   'Premier League' => ['premiere league', 'premier leaugue',
     'premier leauge', 'premier lge', '1st league', 'premie league',
     'prremier league', 'premieer league', 'premier legaue',
     'premier legue'],
+  'Pro-Am' => ['play against the stars'],
   'Second League' => ['2 league', 'div b'],
   'Super League' => ['sup league', 'super legue'],
   Training => ['practice session', 'training match', 'practice match',
-    'test match', 'tes match'],
+    'test match', 'tes match', 'practise match'],
   Trial => ['prueba de seleccion'],
   'Women Elite Tournament' => ["women's elite tournament"]
 );
@@ -83,7 +89,7 @@ my @SINGLE_WORDS = qw(
   Bridge
   Championship Charity Club Cup
   Group
-  Interclub Intercity International Interprovince Interstate 
+  Interclub Intercity International Interport Interprovince Interstate 
   Interuniversity Invitational
   Memorial
   National
@@ -121,10 +127,12 @@ my %SINGLE_TYPOS =
   Interclub => ['interclubs'],
   International => ['internacional', 'internationals',
     'internazionale'],
+  Interport => ['inter-port'],
   Interprovince => ['interprovincal', 'interprovincials'],
   Invitational => ['invitacion', 'invitacional', 'invitación',
     'invitasi', 'invitatatinal', 'invitatioanal', 'invitation',
-    'invites', 'invitional', 'inivitational', 'invitatational'],
+    'invites', 'invitional', 'inivitational', 'invitatational',
+    'invis'],
   Memorial => ['memorials', 'menorial', 'memoral', 'memrial'],
   National => ['natioanl', 'nationale', 'nationals', 'natonale',
     'ntionale', 'natinal', 'natinale', 'natioanal', 'nationaals',

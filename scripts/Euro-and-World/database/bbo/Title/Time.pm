@@ -20,17 +20,19 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  Summer => ['summer time']
 );
 
 my @SINGLE_WORDS = qw(
   Christmas
   Day
-  Tuesday Saturday Sunday
+  Tuesday Saturday Summer Sunday
   Week Weekend
 );
 
 my %SINGLE_TYPOS =
 (
+  Sunday => ['sønd']
 );
 
 
