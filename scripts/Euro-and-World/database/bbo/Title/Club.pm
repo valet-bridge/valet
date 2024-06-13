@@ -27,6 +27,7 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  "'t Onstein" => ['at onstein', 't onstein'],
   'Bombay Gymkhana Club' => ['bombay gym', 'bomay gym'],
   'Delhi Gymkhana Club' => ['delhi gymkhana'],
   'Madras Gymkhana Club' => ['madras gymkhana', 'madras gumkhana',

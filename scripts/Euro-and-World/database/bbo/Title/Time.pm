@@ -26,13 +26,15 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   Christmas
   Day
-  July
+  May July September
   Tuesday Saturday Summer Sunday
   Week Weekend
 );
 
 my %SINGLE_TYPOS =
 (
+  May => ['mayo'],
+  September => ['settembre'],
   Sunday => ['sønd']
 );
 

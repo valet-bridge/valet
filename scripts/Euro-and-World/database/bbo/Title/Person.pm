@@ -33,6 +33,7 @@ my @MULTI_WORDS =
   'LC Sunil Rajendra',
   'Leszek Kwiatkowski',
   'Maharaja Yeshwant Rao Holkar',
+  'M Keni',
   'Marit Sveaas',
   'Marsha May Sternberg',
   'Mohanlal Bhartia',
@@ -51,6 +52,7 @@ my @MULTI_WORDS =
   'Rade Antic',
   'Rai Bahadur Modi',
   'Salvador Assael',
+  'Staszek Wybranowski',
   'Willy Brown'
 );
 
@@ -66,6 +68,7 @@ my %MULTI_TYPOS =
   'Justice JM Lal' => ['justice j m lal', 'j m lal', 'justice lal',
     'justice j_m_lal'],
   'LC Sunil Rajendra' => ['l_c_sunil rajendra'],
+  'M Keni' => ['m keny'],
   'Maharaja Yeshwantrao Holkar' => ['m yeshwantrao holkar',
     'maharaja yeshwantrao holkar', 'maharaja holkar',
     'yashawantrao holkar', 'yashwant rao holkar',
@@ -78,6 +81,7 @@ my %MULTI_TYPOS =
   'Necmettin Sunget' => ['necmettin sünget'],
   'Özgecan Aslan' => ['ozgecan aslan'],
   'R N Bagla' => ['rn bagla', 'r_nbagla', 'r_n_bagla'],
+  'Staszek Wybranowski' => ['Staszka Wybranowskiego'],
 );
 
 my @SINGLE_WORDS = qw(
@@ -87,6 +91,7 @@ my %SINGLE_TYPOS =
 (
   'Boris Schapiro' => ['schapiro'],
   'Dr. Tolani' => ['tolani'],
+  'M Keni' => ['mkeni', 'keni'],
   'Maharaja Yeshwantrao Holkar' => ['holkar', 'holkars'],
   'Mohanlal Bhartia' => ['bhartia', 'bhartiya'],
   'R N Bagla' => ['bagla'],

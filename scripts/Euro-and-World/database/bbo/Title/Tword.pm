@@ -42,6 +42,7 @@ my @MULTI_WORDS =
   'National Pairs Championship',
   'National Team Championship',
   'Neighbor Challenge',
+  "New Year's Teams",
   'Premier Pairs',
   'Premier League',
   'Pro-Am',
@@ -53,7 +54,8 @@ my @MULTI_WORDS =
   'Third Place',
   'Women Elite Tournament',
   'Winter Nationals',
-  'Winter Open Teams'
+  'Winter Open Teams',
+  'Youth Triathlon Pairs'
 );
 
 my %MULTI_TYPOS =
@@ -74,7 +76,7 @@ my %MULTI_TYPOS =
   'Grand Tournament' => ['grand torurnament', 'grand torunament',
     'grand tourney', 'grant toruney', 'grand torurney',
     'grand tournet'],
-  Intercity => ['inter-city', 'inter city'],
+  Intercity => ['inter-city', 'inter city', 'land inter-city'],
   Interclub => ['inter-club', 'inter-clubs', 'inter club',
     "de l'interclub"],
   'International Grand Tournament' => ['intl_ gran tournament',
@@ -86,10 +88,11 @@ my %MULTI_TYPOS =
   Invitational => ['invitase terbatas'],
   Memorial => ['pro memoriam'],
   'National Pairs Championship' => ["nacional pares por imp's",
-    'nacional pares imps'],
+    'nacional pares imps', 'nacional pares por imps'],
   'National Team Championship' => ['campeonato nacional de equipas'],
   'Neighbor Challenge' => ['neighbour challenge',
-    'neighbourhood challange'],
+    'neighbourhood challange', 'neighbour challange'],
+  "New Year's Teams" => ['new year greet tm'],
   'Premier League' => ['premiere league', 'premier leaugue',
     'premier leauge', 'premier lge', '1st league', 'premie league',
     'prremier league', 'premieer league', 'premier legaue',
@@ -115,7 +118,7 @@ my @SINGLE_WORDS = qw(
   Match Memorial
   National
   Pool
-  Segment Session
+  Segment Session Simultaneous
   Tournament Training Trial Trophy
   University
 );
@@ -163,6 +166,7 @@ my %SINGLE_TYPOS =
   'Premier League' => ['premieleague'],
   Segment => ['seg'],
   Session => ['sesje'],
+  Simultaneous => ['simultaneo'],
   'Super League' => ['superleague', 'superlige', 'superlig©',
     'superligê'],
   Tournament => ['torunament', 'toruney', 'torurnament', 'torurney',
@@ -176,7 +180,8 @@ my %SINGLE_TYPOS =
     'selections', 'selekction', 'selelection', 'sélection',
     'séléction', 'entrainement', 'slection'],
   Trophy => ['trofeo', 'trohy', 'trpohy', 'troph'],
-  University => ['unibridge', 'uni', 'universities', 'univeristies']
+  University => ['unibridge', 'uni', 'universities', 'univeristies'],
+  'Youth Triathlon Pairs' => ['youth triathalon']
 );
 
 

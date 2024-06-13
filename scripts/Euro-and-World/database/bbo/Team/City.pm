@@ -170,14 +170,14 @@ my @SINGLE_WORDS = qw(
   Lyon
 
   Maastricht Madrid Madras Magetan Makassar Malang Malatya Malmö Manado 
-  Manchester Manisa Mannheim Marbella Marrakech Martapura Massy Mautern
-  Medan Medellin Melbourne Mersin Miaoli Michalovce Midyat Milan Milas 
-  Minsk Monticiano Montpellier Moradabad Morud Muðla Mulund Mumbai 
-  Munich 
+  Manchester Manisa Mannheim Marbella Mardin Marrakech Martapura Massy 
+  Mautern Medan Medellin Melbourne Mersin Miaoli Michalovce Midyat 
+  Milan Milas Minsk Monticiano Montpellier Moradabad Morud Muðla 
+  Mulund Mumbai Munich 
 
   Nagpur Nagykanizsa Namsos Nanchang Nancy Nanning Napoli Narvik 
-  Nashik Nazilli Näsby Nicosia Nijmegen Ningbo Niš Norrbyskär Norrøna 
-  Nürnberg Nyon Nærbø Næstved Nøtterøy
+  Nashik Nazilli Näsby Nicosia Nijmegen Ningbo Niš Noida Norrbyskär 
+  Norrøna Nürnberg Nyon Nærbø Næstved Nøtterøy
 
   Odense Ogndal Oldenburg Olrud Olsztyn Opatija Orhangazi Oslo Ostend
   Ottadalen Otepää Oxford Överum
@@ -268,7 +268,7 @@ my %SINGLE_TYPOS =
   Kalundborg => ['kallundborg'],
   Karsiyaka => ['Karþiyaka'],
   Kocaeli => ['Kocaelý'],
-  Kolkata => ['calcutta', 'kolkta'],
+  Kolkata => ['calcutta', 'kolkta', 'kolktata'],
   Kosice => ['cassovia'],
   Koycegiz => ['köyceðýz'],
   Krakow => ['kraków', 'cracow'],
@@ -335,6 +335,7 @@ my %SINGLE_TYPOS =
   Udaipir => ['udaypur'],
   'Udon Thani' => ['udonthani'],
   Varanasi => ['baranasi'],
+  Verona => ['veron'],
   Vienna => ['wien'],
   Warsaw => ['warsow', 'warszawa', 'warszawy'],
   Wroclaw => ['wr'],

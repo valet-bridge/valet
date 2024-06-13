@@ -147,8 +147,9 @@ my %COUNTRY_TO_CITY =
     'ahmedabad', 'allahabad', 'ambon', 'bangalore', 'bansi',
     'bhilwara', 'bhubaneshwar', 'bikaner', 'chennai', 'dombivli', 
     'hyderabad', 'indore', 'kalyani', 'kanpur', 'kashi', 'kolkata', 
-    'kota', 'madras', 'mitra vihar', 'mulund', 'mumbai', 'nagpur', 
-    'nashik', 'pune', 'puri', 'pushkar', 'sukma', 'udaipur', 'varanasi'],
+    'kota', 'madras', 'mardin', 'mitra vihar', 'mulund', 'mumbai', 
+    'nagpur', 'nashik', 'noida', 'pune', 'puri', 'pushkar', 'sukma', 
+    'udaipur', 'varanasi'],
   Indonesia => [ 
     'airmadidi', 'balikpapan', 'banda aceh', 'bandar lampung', 'bandung',
     'banjarmasin', 'batam', 'batu', 'bekasi', 'bengkulu', 'bitung', 
