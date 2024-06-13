@@ -60,6 +60,7 @@ my @MULTI_WORDS =
   'Varna Bridge Festival',
   'VVE Beheer Bridge Week',
   'Wachauer Bridge Festival',
+  'West Java Regional',
   'Red Sea International Festival',
   'The Hague Bridge Festival'
 );
@@ -124,7 +125,9 @@ my %MULTI_TYPOS =
     'tallinns festival'],
   'Varna Bridge Festival' => ['international bridge festival varna'],
   'VVE Beheer Bridge Week' => ['vve-beheer bridgeweek'],
-  'Wachauer Bridge Festival' => ['wachauer bridgefestival']
+  'Wachauer Bridge Festival' => ['wachauer bridgefestival'],
+  'West Java Regional' => ['west java regional sport games',
+    'west java regional games'],
 );
 
 my @SINGLE_WORDS = qw(

@@ -30,7 +30,8 @@ my %MULTI_TYPOS =
   'Knock-out' => ['knock-outs', 'knock - out'],
   'Open Room' => ['open rm', 'room 1'],
   Playoff => ['play offs', 'play-off', 'play off'],
-  Qualifying => ['qualification for', 'qualification to'],
+  Qualifying => ['qualification for', 'qualification to',
+    'wbg qualification'],
   Quarterfinal => ['quarter final', 'quarter finals', 
     'quarter-final', 'quarter-finals', 
     'quater final', 'quater finals', 'round of 8', 'rd of 8', 'r of 8',
@@ -58,7 +59,7 @@ my @SINGLE_WORDS = qw(
   Rof6 Rof12 Rof16 Rof32 Rof64 Round
   Qualifying Quarter Quarterfinal
   Repechage
-  Section Semifinal Stage
+  Section Semifinal Session Stage
   Table
 );
 
@@ -88,6 +89,7 @@ my %SINGLE_TYPOS =
   'Round-robin' => ['rr'],
   Semifinal => ['semifinals', 'semifinale', 'semifimals', 'semifi',
     'semif', 'semis', 'sf', 'sfa', 'sfb', 'semi'],
+  Session => ['seesion'],
   Stage => ['stg'],
   Table => ['t', 'tisch']
 );

@@ -97,7 +97,7 @@ my %MULTI_TYPOS =
     'premier leauge', 'premier lge', '1st league', 'premie league',
     'prremier league', 'premieer league', 'premier legaue',
     'premier legue'],
-  'Pro-Am' => ['play against the stars'],
+  'Pro-Am' => ['play against the stars', 'play with the champs'],
   'Second Half' => ['2nd half'],
   'Second League' => ['2 league', 'div b'],
   'Second Place' => ['segundo lugar'],

@@ -80,6 +80,7 @@ my %MULTI_TYPOS =
   'Narayan Bhojwani' => ['narain bhojwani'],
   'Necmettin Sunget' => ['necmettin sünget'],
   'Özgecan Aslan' => ['ozgecan aslan'],
+  'Rai Bahadur Modi' => ['rai bahadur'],
   'R N Bagla' => ['rn bagla', 'r_nbagla', 'r_n_bagla'],
   'Staszek Wybranowski' => ['Staszka Wybranowskiego'],
 );

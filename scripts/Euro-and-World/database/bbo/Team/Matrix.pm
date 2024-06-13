@@ -217,8 +217,8 @@ my %COUNTRY_TO_CITY =
   Sweden => [
     'bromölla', 'fredrikstad', 'gnesta', 'göteborg', 'harplinge', 
     'lerum', 'linköping', 'malmö', 'näsby', 'norrbyskär', 'norrøna', 
-    'stockholm', 'storsjöbygden', 'stureby', 'skara', 'täby', 'täfteå', 
-    'tofta', 'uppsala', 'varberg', 'västervik', 'överum'],
+    'stockholm', 'storsjöbygden', 'stureby', 'skara', 'snåsa', 'täby', 
+    'täfteå', 'tofta', 'uppsala', 'varberg', 'västervik', 'överum'],
   Switzerland => ['la chaux-de-fonds', 'nyon', 'zürich'],
   Taiwan => ['changhua', 'chiayi', 'hsinchu', 'jiangyou', 'keelung', 
     'miaoli', 'taichung', 'tainan', 'taipei city', 'new taipei city'],

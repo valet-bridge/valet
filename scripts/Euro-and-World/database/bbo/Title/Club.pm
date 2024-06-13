@@ -32,7 +32,7 @@ my %MULTI_TYPOS =
   'Delhi Gymkhana Club' => ['delhi gymkhana'],
   'Madras Gymkhana Club' => ['madras gymkhana', 'madras gumkhana',
     'maras gymkhana'],
-  'Willingdon Sports Club' => ['the willingdon sports club']
+  'Willingdon Sports Club' => ['the willingdon sports club', 'wcg']
 );
 
 my @SINGLE_WORDS = qw(

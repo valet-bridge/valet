@@ -16,16 +16,20 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  '1v4', '2v3', '3x12', '4x12', '4v5', '#7836 teams', '#8405 teams',
+  '3way match 3-1a', '3way match 3-1b',
   'Around 52 cards in 80 years by',
   'before bermuda bowl', 'by joe pochron',
   'BBO1', 'BBO2', 'BBO3', 'BBO4', 'BBO5', 'BBO6', 'BBO7', 'BBO8', 'BBO9',
+  '*BBO1', '*BBO2', '*BBO3', '*BBO4',
   'de vigraph',
   'eng comment', 'eng comments', 'eng comment in',
   'for Pau',
   'in the',
+  'royale',
   'swe comment', 'swe comments', 'sw comment', 'sw comments',
   'the 80 grand challenge',
-  'Welcome to'
+  'warm up', 'Welcome to'
 );
 
 my %MULTI_TYPOS =
@@ -34,7 +38,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  BBO *BBO
+  BBO
   compared
   étoile
   popular

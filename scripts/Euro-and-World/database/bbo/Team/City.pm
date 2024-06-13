@@ -197,10 +197,10 @@ my @SINGLE_WORDS = qw(
   Saarbrücken Sabadell Salerno Samarinda Samobor Samsun Sandefjord 
   Santiago Sanya Sarpsborg Secunderabad Seferihisar Semarang Serang 
   Shanghai Shaoguan Shenyang Shenzhen Shijiazhuang Shumen Sibiu Sidoarjo 
-  Siena Sindi Singsås Skara Skien Skopje Slagelse Slawa Sleman Sofia 
-  Solok Sopot Sortland Söke Split Stanford Stavanger Steinkjer Stockholm
-  Storsjöbygden Stureby Stuttgart Sukma Sukomoro Sumedang Sunndalsøra 
-  Surabaya Suzhou Sydney Szczyrk Szeged Sørreisa
+  Siena Sindi Singsås Skara Skien Skopje Slagelse Slawa Sleman Snåsa
+  Sofia Solok Sopot Sortland Söke Split Stanford Stavanger Steinkjer 
+  Stockholm Storsjöbygden Stureby Stuttgart Sukma Sukomoro Sumedang 
+  Sunndalsøra Surabaya Suzhou Sydney Szczyrk Szeged Sørreisa
 
   Taicang Taichung Tainan Taizhou Takayama Tallinn Tarakan Targoviste 
   Tarnów Täby Täfteå Tekýrdag Temuco Thane Thanjavur Thessaloniki Tianjin 
