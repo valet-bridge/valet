@@ -20,6 +20,7 @@ my @MULTI_WORDS =
 (
   'Bridge Great Britain',
   'Indonesian Ministry of Youth and Sports',
+  JBA => ['j_b_a', 'j_ba'],
   'Jilin Sheng Qiaopa',
   'Shanghai Contract Bridge Association'
 );

@@ -104,7 +104,6 @@ my @MULTI_WORDS =
   'Duronto Rajshahi',
   'Edmund Tse',
   'Efrat Oren',
-  'Waleed El Ahmady',
   'El Baz',
   'Ellena Moskovsky',
   'Emil Thomsen',
@@ -113,6 +112,7 @@ my @MULTI_WORDS =
   'Erla Sigurjónsdóttir',
   'Erlend Skjetne',
   'Espinosa Paz',
+  'Evgueni Gladysh',
   'Fatih Yayla',
   'Fernando Matos',
   'Filippo Palma',
@@ -350,6 +350,7 @@ my @MULTI_WORDS =
   'Villas Boas',
   'Vincent LI',
   'Visalakshi Narayanan Ramamoorthy',
+  'Waleed El Ahmady',
   'Wang Yuan Wei',
   'Ward Platt',
   'Wei Sender',
@@ -426,6 +427,7 @@ my %MULTI_TYPOS =
   'Gabriel Chagas' => ['chagas.g'],
   'Gila Emody' => ['emody gila'],
   'Ginossar' => ['eldad ginossar', 'ginossar eldad'],
+  'Evgueni Gladysh' => ['e_gladysh', 'e_gladysh_'],
   'Gudmundur S. Hermannsson' => ['guðmundur sv. h'],
   'Gunnar Björn Helgason' => ['gunnar björn h', 'gunnar björn'],
   'Gunnlaugur Sævarsson' => ['gunnlaugur sævars', 'Gunnlaugur Sævarsso'],
@@ -659,7 +661,7 @@ my @SINGLE_WORDS = qw(
   Gelberg Geller Genc Generosi Gentili Georgescu Gerber Gerli 
   Gero Gerrard Geyer Gezer Ghionis Giangkos Giannessi Gidman 
   Gierulski Gigliotti Gilboa Gill Ginnan Ginossar Gioia Gitelman 
-  Giura Gladiator Gladysh Glanger Glasson Glopson Gobbi Goded Gold 
+  Giura Gladiator Glanger Glasson Glopson Gobbi Goded Gold 
   Goldberg Goldenfield Goldman Goldstein Golebiowski Gomerov Gomes 
   Goodman Goraco Gordon Goren Gosney Gotard Gottlieb Goyal Göthe 
   Grabel Grabowska Gradignan Gradovsky Grainger Gramberg Granda
@@ -917,7 +919,7 @@ my %SINGLE_TYPOS =
   'Gabriel Chagas' => ['chagas'],
   Gartaganis => ['gartaginas'],
   Garoufalis => ['garoufallis'],
-  Gladysh => ['gladysch'],
+  'Evgueni Gladysh' => ['gladysch', 'gladysh'],
   Golebiowski => ['golembiowski'],
   'Carlos Gonçalves' => ['gonsalves', 'gonçalves'],
   Greenwood => ['greenwod'],

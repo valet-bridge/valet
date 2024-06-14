@@ -17,6 +17,8 @@ use TeamBBO;
 my @MULTI_WORDS =
 (
   '1v4', '2v3', '3x12', '4x12', '4v5', '#7836 teams', '#8405 teams',
+  's5r38t2', 's5r40t2', 's5r4t2', 's5r43_t2', 's5r42t2', 's5r45t2',
+  's1r7', 's2r1', 'k-8',
   '3way match 3-1a', '3way match 3-1b',
   'Around 52 cards in 80 years',
   'before bermuda bowl', 'by joe pochron',
@@ -25,6 +27,7 @@ my @MULTI_WORDS =
   'de vigraph',
   'eng comment', 'eng comments', 'eng comment in',
   'for Pau',
+  'g_m_',
   'in the',
   'royale',
   'swe comment', 'swe comments', 'sw comment', 'sw comments',
