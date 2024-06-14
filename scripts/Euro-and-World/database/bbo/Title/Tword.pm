@@ -16,6 +16,7 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'Autumn National Open Teams',
   'Bridge League',
   'Bridge Meeting',
   'Business League',
@@ -40,6 +41,7 @@ my @MULTI_WORDS =
   'National Club League',
   'National League',
   'National Student Championship',
+  'National Open Teams',
   'National Pairs Championship',
   'National Team Championship',
   'Neighbor Challenge',
@@ -70,7 +72,7 @@ my %MULTI_TYPOS =
   'Commercial Pairs' => ['comeriacial pairs'],,
   'Division Nationale' => ['division natonale', 'division ntionale',
     'division natinale', 'divison nationale', 'french dn1'],
-  'First Division' => ['1_ division', '1st division'],
+  'First Division' => ['1_ division', '1st division', 'd1'],
   'Grand National Teams' => ['gnt'],
   'Grand Prix' => ['grand pix', 'grand peix', 'grad prix',
     'gran prix'],
@@ -82,6 +84,7 @@ my %MULTI_TYPOS =
     "de l'interclub"],
   'International Grand Tournament' => ['intl_ gran tournament',
     'intl_ grand tournament'],
+  Interport => ['inter-port'],
   Interprovincial => ['inter provincials', 'inter province',
     'inter=provincial', 'inter-provincial'],
   Interstate => ['inter-state', 'inter state'],
@@ -129,6 +132,7 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  'Autumn National Open Teams' => ['anot'],
   Barometer => ['barometr'],
   Bridge => ['brdige', 'briag', 'bric', 'bridg', 'bride', 'bridgee',
     'brýç'],
@@ -158,7 +162,6 @@ my %SINGLE_TYPOS =
   International => ['internacional', 'internationals',
     'internazionale'],
   'International Team Trials' => ['itt'],
-  Interport => ['inter-port'],
   Interprovince => ['interprovincal', 'interprovincials'],
   Invitational => ['invitacion', 'invitacional', 'invitación',
     'invitasi', 'invitatatinal', 'invitatioanal', 'invitation',
@@ -169,6 +172,7 @@ my %SINGLE_TYPOS =
   National => ['natioanl', 'nationale', 'nationals', 'natonale',
     'ntionale', 'natinal', 'natinale', 'natioanal', 'nationaals',
     'nationald', "national's", 'naational', 'nacional', 'nasional', 'nat'],
+  'National Open Teams' => ['not'],
   'Premier League' => ['premieleague'],
   Segment => ['seg'],
   Session => ['sesje'],
@@ -184,7 +188,7 @@ my %SINGLE_TYPOS =
   Trial => ['trials', 'trail', 'trails', 'triaals',
     'selection', 'seleccion', 'selección', 'select', 'selectiontrials',
     'selections', 'selekction', 'selelection', 'sélection',
-    'séléction', 'entrainement', 'slection'],
+    'séléction', 'entrainement', 'slection', 'prueba'],
   Trophy => ['trofeo', 'trohy', 'trpohy', 'troph'],
   University => ['unibridge', 'uni', 'universities', 'univeristies'],
   'Youth Triathlon Pairs' => ['youth triathalon']

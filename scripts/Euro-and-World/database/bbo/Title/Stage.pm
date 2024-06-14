@@ -45,7 +45,7 @@ my %MULTI_TYPOS =
   Rof32 => ['round of 32', 'rd of 32'],
   Rof64 => ['round of 64', 'rd of 64'],
   'Round-robin' => ['round robin', 'raound robin'],
-  Semifinal => ['semi final', 'semi finals', 'semi-fiinal',
+  Semifinal => ['semi final', 'semi finals', 'semi-fiinal', 's_f',
     'semi-final', 'semi-finals', 'round of 4', 'round-of-four',
     'demi-final', 'demi-finale', 'demi-finales', 'half final', 's-final',
     'meia final', 'meias finais', 'yf', 'demi-nale'],
@@ -69,7 +69,7 @@ my %SINGLE_TYPOS =
   Final => ['finala', 'finalds', 'finale', 'finali', 'finals',
     'finales', 'finall', 'finar', 'finas', 'finat', 'finsl', 
     'finais', 'finalns', 'fina³', 'fianal', 'fianl', 'fianls',
-    'fiinal', 'fina', 'fýnal', 'finalleri',
+    'fiinal', 'fina', 'fýnal', 'finalleri', 'fina³y',
     'slutspil', 'slutspillet'],
   'Knock-out' => ['knockour', 'knockout', 'ko'],
   Playoff => ['playoffs', 'po'],
@@ -89,7 +89,7 @@ my %SINGLE_TYPOS =
   'Round-robin' => ['rr'],
   Semifinal => ['semifinals', 'semifinale', 'semifimals', 'semifi',
     'semif', 'semis', 'sf', 'sfa', 'sfb', 'semi'],
-  Session => ['seesion'],
+  Session => ['seesion', 'part', 'sesja'],
   Stage => ['stg'],
   Table => ['t', 'tisch']
 );

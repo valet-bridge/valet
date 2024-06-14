@@ -17,6 +17,7 @@ use TeamBBO;
 my @MULTI_WORDS =
 (
   "'t Onstein",
+  'Alumni Club Chennai',
   'Bombay Gymkhana Club',
   'Calcutta Cricket & Football Club',
   'Delhi Gymkhana Club',

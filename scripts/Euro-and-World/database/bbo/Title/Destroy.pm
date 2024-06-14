@@ -30,7 +30,8 @@ my @MULTI_WORDS =
   'g_m_',
   'in the',
   'royale',
-  'swe comment', 'swe comments', 'sw comment', 'sw comments',
+  'sports event', 'swe comment', 'swe comments', 'sw comment', 
+  'sw comments',
   'the 80 grand challenge',
   'warm up', 'Welcome to'
 );
@@ -49,6 +50,7 @@ my @SINGLE_WORDS = qw(
   popular
   retour
   te tn tv
+  und
 );
 
 my %SINGLE_TYPOS =

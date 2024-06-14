@@ -21,6 +21,7 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  BAM => ['board-a-match'],
   IMP => ['butler scoring', "IMP's"],
   'IMPs Across the Field' => ["imp's across the field"]
 );

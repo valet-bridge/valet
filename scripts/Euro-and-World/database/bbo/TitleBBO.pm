@@ -351,7 +351,7 @@ sub study_part
     }
     return;
   }
-  elsif ($part =~ /^[A-H]$/)
+  elsif ($part =~ /^[A-Ha-h]$/)
   {
     # $token->set_letter_counter($part);
     $token->set_singleton('TITLE_LETTER', $part);

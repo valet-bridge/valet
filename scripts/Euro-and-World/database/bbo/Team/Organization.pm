@@ -20,7 +20,6 @@ my @MULTI_WORDS =
 (
   'Bridge Great Britain',
   'Indonesian Ministry of Youth and Sports',
-  JBA => ['j_b_a', 'j_ba'],
   'Jilin Sheng Qiaopa',
   'Shanghai Contract Bridge Association'
 );
@@ -59,7 +58,7 @@ my %MULTI_TYPOS =
   IBF => ['israel bridge federation'],
   IBWI => ['ikatan bridge wanita indonesia'],
   IBU => ['irish bridge union'],
-  JBA => ['j.b.a.', 'jordan bridge federation'],
+  JBA => ['j.b.a.', 'jordan bridge federation', 'j_b_a', 'j_ba'],
   KSBA => ['karnataka state bridge association'],
   MBA => ['maharashtra bridge association'],
   MCBA => ['macau contract bridge association'],

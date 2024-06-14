@@ -25,7 +25,7 @@ my %MULTI_TYPOS =
   U20 => ['u 20', 'u-20', 'junior u20'],
   U21 => ['u 21', 'u-21', 'under 21'],
   U25 => ['u 25'],
-  U26 => ['u-26', 'under 26'],
+  U26 => ['u-26', 'under 26', 'undar 26'],
   U28 => ['under 28']
 );
 
