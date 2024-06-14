@@ -18,6 +18,7 @@ my @MULTI_WORDS =
 (
   "'t Onstein",
   'Bombay Gymkhana Club',
+  'Calcutta Cricket & Football Club',
   'Delhi Gymkhana Club',
   'Madras Gymkhana Club',
   'White House',
@@ -29,6 +30,7 @@ my %MULTI_TYPOS =
 (
   "'t Onstein" => ['at onstein', 't onstein'],
   'Bombay Gymkhana Club' => ['bombay gym', 'bomay gym'],
+  'Calcutta Cricket & Football Club' => ['cc&fc', 'cc & fc'],
   'Delhi Gymkhana Club' => ['delhi gymkhana'],
   'Madras Gymkhana Club' => ['madras gymkhana', 'madras gumkhana',
     'maras gymkhana'],

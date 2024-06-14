@@ -97,7 +97,8 @@ my %MULTI_TYPOS =
     'premier leauge', 'premier lge', '1st league', 'premie league',
     'prremier league', 'premieer league', 'premier legaue',
     'premier legue'],
-  'Pro-Am' => ['play against the stars', 'play with the champs'],
+  'Pro-Am' => ['play against the stars', 'play with the champs',
+    'pro_am'],
   'Second Half' => ['2nd half'],
   'Second League' => ['2 league', 'div b'],
   'Second Place' => ['segundo lugar'],
@@ -106,13 +107,14 @@ my %MULTI_TYPOS =
   Training => ['practice session', 'training match', 'practice match',
     'test match', 'tes match', 'practise match'],
   Trial => ['prueba de seleccion'],
+  'Winter Open Teams' => ['wýnter team cs', 'winter open teams cs'],
   'Women Elite Tournament' => ["women's elite tournament"]
 );
 
 my @SINGLE_WORDS = qw(
-  Bridge
+  Barometer Bridge
   Championship Charity Club Cup
-  Group
+  Goulash Group
   Interclub Intercity International Interport Interprovince Interstate 
   Interuniversity Invitational
   Match Memorial
@@ -125,6 +127,7 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  Barometer => ['barometr'],
   Bridge => ['brdige', 'briag', 'bric', 'bridg', 'bride', 'bridgee',
     'brýç'],
   'Business League' => ['blb'],
@@ -147,6 +150,7 @@ my %SINGLE_TYPOS =
   Cup => ['cuo', 'cupn', 'cups', 'copa', 'coppa', 'coppie', 'coupe'],
   'Division Nationale' => ['divisionnationale', 'dn'],
   'Exhibition Match' => ['exhibition', 'exhibiton'],
+  Goulash => ['goullash', 'goulyash'],
   Intercity => ['intecity'],
   Interclub => ['interclubs'],
   International => ['internacional', 'internationals',

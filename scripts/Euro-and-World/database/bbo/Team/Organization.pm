@@ -60,6 +60,7 @@ my %MULTI_TYPOS =
   IBU => ['irish bridge union'],
   JBA => ['j.b.a.', 'jordan bridge federation'],
   KSBA => ['karnataka state bridge association'],
+  MBA => ['maharashtra bridge association'],
   MCBA => ['macau contract bridge association'],
   NBB => ['dutch bridge federation'],
   NBF => ['norsk bridgeforbund'],
@@ -90,7 +91,7 @@ my @SINGLE_WORDS = qw(
   IBF IBU IBWI
   JBA
   KSBA
-  MCBA
+  MBA MCBA
   NBB NBF NIBU
   ÖBV
   PRBA PZBS PTBA

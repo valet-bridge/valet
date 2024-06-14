@@ -261,6 +261,7 @@ my %SINGLE_TYPOS =
   Guangzhou => ['gz', 'gaungzhou'],
   Harplinge => ['harpling'],
   Hordaland => ['hordland'],
+  Indore => ['indor'],
   Iskenderun => ['iskendurun'],
   Izmir => ['ýzmýr'],
   Jakarta => ['dki', 'jakar', 'jkt'],

@@ -33,6 +33,7 @@ my %SINGLE_TYPOS =
 (
   MP => [qw(matchpoints)],
   IMP => [qw(ýmp imps impy)],
+  'IMPs Across the Field' => ['iaf']
 );
 
 

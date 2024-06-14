@@ -48,7 +48,7 @@ my %MULTI_TYPOS =
   Semifinal => ['semi final', 'semi finals', 'semi-fiinal',
     'semi-final', 'semi-finals', 'round of 4', 'round-of-four',
     'demi-final', 'demi-finale', 'demi-finales', 'half final', 's-final',
-    'meia final', 'meias finais', 'yf'],
+    'meia final', 'meias finais', 'yf', 'demi-nale'],
 );
 
 my @SINGLE_WORDS = qw(

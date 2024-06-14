@@ -18,7 +18,7 @@ my @MULTI_WORDS =
 (
   '1v4', '2v3', '3x12', '4x12', '4v5', '#7836 teams', '#8405 teams',
   '3way match 3-1a', '3way match 3-1b',
-  'Around 52 cards in 80 years by',
+  'Around 52 cards in 80 years',
   'before bermuda bowl', 'by joe pochron',
   'BBO1', 'BBO2', 'BBO3', 'BBO4', 'BBO5', 'BBO6', 'BBO7', 'BBO8', 'BBO9',
   '*BBO1', '*BBO2', '*BBO3', '*BBO4',
@@ -38,11 +38,14 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  BBO
+  aa as av
+  BBO bt bv
   compared
   étoile
+  het
   popular
   retour
+  te tn tv
 );
 
 my %SINGLE_TYPOS =
