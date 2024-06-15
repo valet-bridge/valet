@@ -24,6 +24,7 @@ my @MULTI_WORDS =
   'Baltic Congress',
   'Bangkok Bridge Festival',
   'Banten Sports Week',
+  'Bodrum Peninsula Festival',
   'Brasov Festival',
   'Cairo Bridge Festival',
   'Cappadocia Fairy Chimneys Festival',
@@ -31,6 +32,7 @@ my @MULTI_WORDS =
   'Danish Bridge Festival',
   'Estoril Bridge Festival',
   'Fes Festival',
+  'Festival della Matematica',
   'Gold Coast Congress',
   'Greek Islands Festival',
   'Iceland Bridge Festival',
@@ -51,18 +53,20 @@ my @MULTI_WORDS =
   'Plovdiv Bridge Festival',
   'Poznan Bridge Festival',
   'Pula Bridge Festival',
+  'Red Sea International Festival',
   'Reykjavik Bridge Festival',
   'Serdika Bridge Festival',
   'Sivrioglu Festival',
   'Stara Zagora Bridge Festival',
   'Tallinn Bridge Festival',
+  'The Hague Bridge Festival',
   'Umea Bridgefestival',
+  'Vanke Cup',
   'Varna Bridge Festival',
   'VVE Beheer Bridge Week',
   'Wachauer Bridge Festival',
   'West Java Regional',
-  'Red Sea International Festival',
-  'The Hague Bridge Festival'
+  'Winter Bridge Festival'
 );
 
 my %MULTI_TYPOS =
@@ -77,6 +81,7 @@ my %MULTI_TYPOS =
     'balcan frienship festival', 'balkan frienship festival'],
   'Baltic Congress' => ['baltic bridge congress',
     'international baltic congress'],
+  'Bodrum Peninsula Festival' => ['bodrum yarýmada bric festivali'],
   'Brasov Festival' => ['festival brasov', 'festival bridge brasov',
     'international bridge festival brasov',
     'festivalul international de bridge brasov'],
@@ -115,7 +120,8 @@ my %MULTI_TYPOS =
   'Pula Bridge Festival' => ['international festival pula'],
   'Red Sea International Festival' => ['red see international festival',
     'read beach festival', 'red beach festival', 'red sea festival',
-    'red sea bridge festival', 'red see int_ bridge festival'],
+    'red sea bridge festival', 'red see int_ bridge festival',
+    'red sea int_ festival'],
   'Reykjavik Bridge Festival' => ['reykjavikbridgefestival'],
   'Serdika Bridge Festival' => ['bridge festival - serdika',
     'bridge festival serdika'],
@@ -144,6 +150,7 @@ my %SINGLE_TYPOS =
   Festival => ['fest', 'festiva', 'festivan', 'festval', 'festývalý',
     'festivali', 'festivals', 'festivalul', 'bridgefestival',
     'festiwal'],
+  'Gold Coast Congress' => ['gc', 'gcc']
 );
 
 

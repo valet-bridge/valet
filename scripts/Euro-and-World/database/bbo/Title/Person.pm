@@ -53,6 +53,7 @@ my @MULTI_WORDS =
   'Rai Bahadur Modi',
   'Salvador Assael',
   'Staszek Wybranowski',
+  'Vasil Levski',
   'Willy Brown'
 );
 
@@ -74,7 +75,7 @@ my %MULTI_TYPOS =
     'maharaja yeshwantrao holkar', 'maharaja holkar',
     'yashawantrao holkar', 'yashwant rao holkar',
     'maharaja yashwantrao holkar', 'maharaja holakar',
-    'maharaja holar'],
+    'maharaja holar', 'maharaja yashwant rao holkar'],
   'Mohanlal Bhartia' => ['mohanlal bharatia', 'mohanlal bharatiya', 
     'mohon lal bharatia', 'mohanlal bhartiya', 'mohanlal bharia'],
   'Mrs Jaya Jain' => ['mrs_ jaya jain'],

@@ -21,6 +21,7 @@ my @MULTI_WORDS =
   'Bridge Great Britain',
   'Indonesian Ministry of Youth and Sports',
   'Jilin Sheng Qiaopa',
+  'Rajasthan Bridge Association',
   'Shanghai Contract Bridge Association'
 );
 

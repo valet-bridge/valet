@@ -48,12 +48,12 @@ my %MULTI_TYPOS =
   Semifinal => ['semi final', 'semi finals', 'semi-fiinal', 's_f',
     'semi-final', 'semi-finals', 'round of 4', 'round-of-four',
     'demi-final', 'demi-finale', 'demi-finales', 'half final', 's-final',
-    'meia final', 'meias finais', 'yf', 'demi-nale'],
+    'meia final', 'meias finais', 'yf', 'demi-nale', 'dsemi final'],
 );
 
 my @SINGLE_WORDS = qw(
   Elimination
-  Final
+  Final Flight
   Match
   Playoff
   Rof6 Rof12 Rof16 Rof32 Rof64 Round
@@ -69,8 +69,9 @@ my %SINGLE_TYPOS =
   Final => ['finala', 'finalds', 'finale', 'finali', 'finals',
     'finales', 'finall', 'finar', 'finas', 'finat', 'finsl', 
     'finais', 'finalns', 'fina³', 'fianal', 'fianl', 'fianls',
-    'fiinal', 'fina', 'fýnal', 'finalleri', 'fina³y',
+    'fiinal', 'fina', 'fýnal', 'finalleri', 'fina³y', 'fn',
     'slutspil', 'slutspillet'],
+  Flight => ['flt'],
   'Knock-out' => ['knockour', 'knockout', 'ko'],
   Playoff => ['playoffs', 'po'],
   Rof12 => ['r12a', 'r12b'],

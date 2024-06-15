@@ -33,6 +33,7 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  Christmas => ['xmas'],
   May => ['mayo'],
   September => ['settembre'],
   Sunday => ['sønd']

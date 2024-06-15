@@ -23,7 +23,8 @@ my %MULTI_TYPOS =
   Men => ["men's", "men`s"],
   Mixed => ['cat mixtas'],
   Seniors => ["seniors'"],
-  Women => ["ladies's", "ladies'", "woman's", "women's", 'for ladies'],
+  Women => ["ladies's", "ladies'", "woman's", "women's", 'for ladies',
+    'womwn'],
 );
 
 my @SINGLE_WORDS = qw(

@@ -26,12 +26,12 @@ my @MULTI_WORDS =
   '*BBO1', '*BBO2', '*BBO3', '*BBO4',
   'de vigraph',
   'eng comment', 'eng comments', 'eng comment in',
-  'for Pau',
+  'for 3rd pair', 'for pau', 'for the',
   'g_m_',
   'in the',
   'royale',
-  'sports event', 'swe comment', 'swe comments', 'sw comment', 
-  'sw comments',
+  'sede', 'special tournament', 'sports event', 'swe comment', 
+  'swe comments', 'sw comment', 'sw comments',
   'the 80 grand challenge',
   'warm up', 'Welcome to'
 );
@@ -42,13 +42,16 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  aa as av
-  BBO bt bv
+  aa anniversary as av
+  BBO bt bv by
   compared
-  étoile
+  étoile eve
+  from
   het
+  im
   popular
   retour
+  show
   te tn tv
   und
 );
