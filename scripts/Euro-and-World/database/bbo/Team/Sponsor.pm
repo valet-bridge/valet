@@ -160,6 +160,7 @@ my @MULTI_WORDS =
   'India Glycols',
   'Indian Medical',
   'Indian Oil',
+  'Indian Overseas Bank',
   'Indian Railways',
   'Indonesian Power',
   'ING Bank',
@@ -627,7 +628,7 @@ my @SINGLE_WORDS = qw(
 
   Jetox Jiegao JHS Jinfan Junibacken
 
-  Kadimex Kancelaria Kilogrupp Konstanta Kvika
+  Kadimex Kancelaria Kayseria Kilogrupp Konstanta Kvika
 
   Lacznosc Laima Lavazza LCG Lianbo Likom Longjiangfu Lukomorie 
   Lyfjaver
@@ -706,6 +707,7 @@ my %SINGLE_TYPOS =
   'Heng Yuan Xiang' => ['hyx'],
   'Hong Kong Vico' => ['vico'],
   'Hong Zhu' => ['hongzhu'],
+  'Indian Overseas Bank' => ['iob'],
   'Indian Railways' => ['railways'],
   Indoarsip => ['indoarship'],
   'Jasa Marga Jakarta' => ['jasamarga'],
@@ -746,7 +748,7 @@ my %SINGLE_TYPOS =
   'Shenzhen Nangang' => ['nangangdongli', 'nanggang', 'nangang'],
   'Shi You' => ['shiyou'],
   'Shiji Changda' => ['changda'],
-  'Shree Cement' => ['shreecement'],
+  'Shree Cement' => ['shreecement', 'shree'],
   'Sichuan Dahe' => ['sichuandahe'],
   'Siwik Holiday Mragowo' => ['siwik'],
   'Son Dakika' => ['sondakika'],

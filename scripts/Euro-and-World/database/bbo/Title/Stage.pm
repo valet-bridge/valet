@@ -59,7 +59,7 @@ my @SINGLE_WORDS = qw(
   Rof6 Rof12 Rof16 Rof32 Rof64 Round
   Qualifying Quarter Quarterfinal
   Repechage
-  Section Semifinal Session Stage Stanza
+  Section Semifinal Series Session Stage Stanza
   Table
 );
 
@@ -70,7 +70,7 @@ my %SINGLE_TYPOS =
     'finales', 'finall', 'finar', 'finas', 'finat', 'finsl', 
     'finais', 'finalns', 'fina³', 'fianal', 'fianl', 'fianls',
     'fiinal', 'fina', 'fýnal', 'finalleri', 'fina³y', 'fn',
-    'slutspil', 'slutspillet'],
+    'slutspil', 'slutspillet', 'superfinal'],
   Flight => ['flt'],
   'Knock-out' => ['knockour', 'knockout', 'ko'],
   Playoff => ['playoffs', 'po'],
@@ -91,7 +91,8 @@ my %SINGLE_TYPOS =
   'Round-robin' => ['rr'],
   Semifinal => ['semifinals', 'semifinale', 'semifimals', 'semifi',
     'semif', 'semis', 'sf', 'sfa', 'sfb', 'semi'],
-  Session => ['seesion', 'part', 'sesja'],
+  Series => ['seria'],
+  Session => ['seesion', 'part', 'sesja', 'sess'],
   Stage => ['stg'],
   Table => ['t', 'tisch']
 );

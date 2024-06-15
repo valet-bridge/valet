@@ -52,6 +52,7 @@ my @MULTI_WORDS =
   'Monaco International Festival',
   'Pärnu Festival',
   'Plovdiv Bridge Festival',
+  'Polish Youth Olympiad',
   'Poznan Bridge Festival',
   'Pula Bridge Festival',
   'Red Sea International Festival',
@@ -61,6 +62,7 @@ my @MULTI_WORDS =
   'Stara Zagora Bridge Festival',
   'Tallinn Bridge Festival',
   'Thailand National Games',
+  'Turkish-Greek Friendship Festival',
   'The Hague Bridge Festival',
   'Umea Bridgefestival',
   'Vanke Cup',
@@ -68,7 +70,8 @@ my @MULTI_WORDS =
   'VVE Beheer Bridge Week',
   'Wachauer Bridge Festival',
   'West Java Regional',
-  'Winter Bridge Festival'
+  'Winter Bridge Festival',
+  'Zulawski Congress'
 );
 
 my %MULTI_TYPOS =
@@ -100,7 +103,7 @@ my %MULTI_TYPOS =
   'Iceland Bridge Festival' => ['iceland bridgefestival',
     'iceland express bridge festival',
     'icelandic express bridge festival'],
-  'Indonesian National Sports Weeks' => ['indonesia week'],
+  'Indonesian National Sports Weeks' => ['indonesia week', 'pra pon'],
   'Israel Grand Prix' => ['israeli grand prix',
     'israeli grand prize'],
   'Israel International Festival' => ['israel int_ festival',
@@ -118,6 +121,7 @@ my %MULTI_TYPOS =
   'Monaco International Festival' => ['festival international de monaco'],
   'Plovdiv Bridge Festival' => ['international festival - plovdiv',
     'international festival plovdiv'],
+  'Polish Youth Olympiad' => ['oom'],
   'Poznan Bridge Festival' => ['poznanski kongres brydzowy',
     'kongres poznanski', 'bridge meeting poznan'],
   'Pula Bridge Festival' => ['international festival pula'],
@@ -138,6 +142,8 @@ my %MULTI_TYPOS =
   'Wachauer Bridge Festival' => ['wachauer bridgefestival'],
   'West Java Regional' => ['west java regional sport games',
     'west java regional games', 'west java regional spots event'],
+  'Zulawski Congress' => ['mityng zulawski', "kongres \"zulawski\"",
+    'kongres zulawski', "mityng \"zulawski\""]
 );
 
 my @SINGLE_WORDS = qw(

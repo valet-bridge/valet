@@ -21,7 +21,7 @@ my @MULTI_WORDS =
   's1r7', 's2r1', 'k-8',
   '3way match 3-1 a', '3way match 3-1 b',
   'Around 52 cards in 80 years',
-  'before bermuda bowl', 'by joe pochron',
+  'before bermuda bowl', 'bridge master champion', 'by joe pochron',
   'BBO1', 'BBO2', 'BBO3', 'BBO4', 'BBO5', 'BBO6', 'BBO7', 'BBO8', 'BBO9',
   '*BBO1', '*BBO2', '*BBO3', '*BBO4',
   'de vigraph',

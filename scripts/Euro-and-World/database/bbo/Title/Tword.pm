@@ -27,6 +27,7 @@ my @MULTI_WORDS =
   'Elite Tournament',
   'Exhibition Match',
   'Fantasy Challenge Match',
+  'Friendly match',
   'Club League',
   'Club Teams Championship',
   'Division Nationale',
@@ -37,9 +38,11 @@ my @MULTI_WORDS =
   'Grand Prix',
   'International Grand Tournament',
   'International Team Trials',
+  'International Seniors',
   'Invitational Bridge Meeting',
   'Junior League',
   'Midsummer Juniors',
+  'Mike Lawrence Exhibition',
   'Mixed Teams',
   'National Club League',
   'National League',
@@ -70,6 +73,7 @@ my @MULTI_WORDS =
   'Women Elite Tournament',
   'Winter Nationals',
   'Winter Open Teams',
+  'Youth Game',
   'Youth Triathlon Pairs'
 );
 
@@ -86,6 +90,8 @@ my %MULTI_TYPOS =
     'division natinale', 'divison nationale', 'french dn1'],
   'Elite Tournament' => ['elites tournament'],
   'First Division' => ['1_ division', '1st division', 'd1'],
+  'First Half' => ['1st half'],
+  'Friendly match' => ['match amical', 'friendly tm'],
   'Four Nations Cup' => ['4 nations cupn'],
   'Grand National Teams' => ['gnt'],
   'Grand Prix' => ['grand pix', 'grand peix', 'grad prix',
@@ -98,6 +104,7 @@ my %MULTI_TYPOS =
     "de l'interclub"],
   'International Grand Tournament' => ['intl_ gran tournament',
     'intl_ grand tournament', 'intl grand tournament'],
+  'International Seniors' => ['int_ seniors'],
   Interport => ['inter-port'],
   Interprovincial => ['inter provincials', 'inter province',
     'inter=provincial', 'inter-provincial'],
@@ -123,13 +130,14 @@ my %MULTI_TYPOS =
   'Second League' => ['2 league', 'div b'],
   'Second Place' => ['segundo lugar'],
   'Super League' => ['sup league', 'super legue'],
-  'Swiss Pairs' => ['parejas suizas', 'sw2iss pairs'],
+  'Swiss Pairs' => ['parejas suizas', 'sw2iss pairs', 'swiis pairs'],
   'Third Place' => ['3rd place'],
   Training => ['practice session', 'training match', 'practice match',
     'test match', 'tes match', 'practise match'],
   Trial => ['prueba de seleccion'],
   'Winter Open Teams' => ['wýnter team cs', 'winter open teams cs'],
-  'Women Elite Tournament' => ["women's elite tournament"]
+  'Women Elite Tournament' => ["women's elite tournament"],
+  'Youth Game' => ['youth games'],
 );
 
 my @SINGLE_WORDS = qw(
@@ -173,7 +181,9 @@ my %SINGLE_TYPOS =
   Cup => ['cuo', 'cupn', 'cups', 'copa', 'coppa', 'coppie', 'coupe'],
   'Division Nationale' => ['divisionnationale', 'dn'],
   'Exhibition Match' => ['exhibition', 'exhibiton'],
+  'Friendly match' => ['friendly'],
   Goulash => ['goullash', 'goulyash'],
+  'Grand Prix' => ['gp'],
   Intercity => ['intecity'],
   Interclub => ['interclubs'],
   International => ['internacional', 'internationals',

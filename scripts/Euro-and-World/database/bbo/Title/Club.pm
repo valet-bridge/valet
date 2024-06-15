@@ -22,7 +22,10 @@ my @MULTI_WORDS =
   'Bombay Gymkhana Club',
   'Calcutta Cricket & Football Club',
   'Delhi Gymkhana Club',
+  'Gabrial University of Indonesia',
+  'Jubilee Hills International Centre',
   'Madras Gymkhana Club',
+  'Otters Club',
   'White House',
   'Royal Airforce Club',
   'Ruch AZS',
@@ -36,8 +39,12 @@ my %MULTI_TYPOS =
   'Bombay Gymkhana Club' => ['bombay gym', 'bomay gym'],
   'Calcutta Cricket & Football Club' => ['cc&fc', 'cc & fc', 'cc &fc'],
   'Delhi Gymkhana Club' => ['delhi gymkhana'],
+  'Gabrial University of Indonesia' => ['gabrial ui', 'gaberial ui',
+    'gabrial-ui', 'gabrial - ui'],
+  'Jubilee Hills International Centre' => ['jhic'],
   'Madras Gymkhana Club' => ['madras gymkhana', 'madras gumkhana',
     'maras gymkhana'],
+  'Otters Club' => ["otters' club", "otter's club", "otter's"],
   'Willingdon Sports Club' => ['the willingdon sports club', 'wcg']
 );
 
@@ -49,6 +56,7 @@ my %SINGLE_TYPOS =
   'AVI Club Noida' => ['avi'],
   'Delhi Gymkhana Club' => ['dgc'],
   'Madras Gymkhana Club' => ['mgc'],
+  'Otters Club' => ['otters'],
   'Royal Airforce Club' => ['rac'],
   'Ruch AZS' => ['ruch']
 );

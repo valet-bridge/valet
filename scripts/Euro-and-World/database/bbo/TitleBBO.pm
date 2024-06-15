@@ -402,6 +402,10 @@ sub split_on_some_numbers
   $text =~ s/^([01]\d)([A-SU-Z])/20$1 $2/; # Kludge, avoid th
   $text =~ s/\b([1-9])([A-D])\b/$1 $2/gi;
   $text =~ s/\b(\d)of(\d)\b/$1 of $2/g;
+
+  # Doesn't really belong here.
+  $text =~ s/pokal([a-z])/pokal $1/i;
+
   return $text;
 }
 

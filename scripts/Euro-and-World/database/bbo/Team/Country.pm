@@ -126,7 +126,7 @@ my %SINGLE_TYPOS =
   Denmark => ['danmark', 'danemark', 'denmarrk', 'den', 'dk',
     'denmark*'],
   Egypt => ['egy', 'egytp', 'egypte'],
-  England => ['eng', 'angleterre'],
+  England => ['eng', 'angleterre', 'englnd'],
   Estonia => ['estonie', 'est'],
   Finland => ['finnland', 'fi', 'fin'],
   France => ['fra', 'fnc', 'frandce'],

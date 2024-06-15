@@ -133,7 +133,7 @@ my %MULTI_TYPOS =
   'École Polytechnique' => ['paris polytechnix', 'ecole polytech'],
   'Ege University' => ['ege uni'],
   'Fakultas Teknik Bridge Club Universitas Tanjungpura' => 
-    ['ftbc untan'],
+    ['ftbc untan', 'ftbc university tanjungpura'],
   'Gunadurma' => ['guna darma'],
   'Institut Teknologi Bandung' => ['uab itb'],
   'ITÜ Vakfi' => ['itu vakfi'],
