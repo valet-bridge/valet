@@ -25,6 +25,7 @@ my @MULTI_WORDS =
   'Madras Gymkhana Club',
   'White House',
   'Royal Airforce Club',
+  'Ruch AZS',
   'Willingdon Sports Club'
 );
 
@@ -49,6 +50,7 @@ my %SINGLE_TYPOS =
   'Delhi Gymkhana Club' => ['dgc'],
   'Madras Gymkhana Club' => ['mgc'],
   'Royal Airforce Club' => ['rac'],
+  'Ruch AZS' => ['ruch']
 );
 
 

@@ -20,6 +20,7 @@ my @MULTI_WORDS =
   'Azores Festival',
   'Amman Bridge Festival',
   'Australian National Championships',
+  'Australian Summer Festival',
   'Balkan Friendship Festival',
   'Baltic Congress',
   'Bangkok Bridge Festival',
@@ -59,6 +60,7 @@ my @MULTI_WORDS =
   'Sivrioglu Festival',
   'Stara Zagora Bridge Festival',
   'Tallinn Bridge Festival',
+  'Thailand National Games',
   'The Hague Bridge Festival',
   'Umea Bridgefestival',
   'Vanke Cup',
@@ -72,6 +74,7 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   'All China Games' => ['all-china games'],
+  'Australian Summer Festival' => ['sfob'],
   'Azores Festival' => ['azores festival bridge', 'azores bridge open',
     'azores bridge teams', 'azores team', 'azores teams',
     'azores team festval', 'festival azores bridge', 'azores festiva', 
@@ -134,7 +137,7 @@ my %MULTI_TYPOS =
   'VVE Beheer Bridge Week' => ['vve-beheer bridgeweek'],
   'Wachauer Bridge Festival' => ['wachauer bridgefestival'],
   'West Java Regional' => ['west java regional sport games',
-    'west java regional games'],
+    'west java regional games', 'west java regional spots event'],
 );
 
 my @SINGLE_WORDS = qw(

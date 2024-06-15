@@ -178,7 +178,7 @@ my @SINGLE_WORDS = qw(
 
   Nagpur Nagykanizsa Namsos Nanchang Nancy Nanning Napoli Narvik 
   Nashik Nazilli Näsby Nicosia Nijmegen Ningbo Niš Noida Norrbyskär 
-  Norrøna Nürnberg Nyon Nærbø Næstved Nøtterøy
+  Norrøna Nürnberg Nyon Nysa Nærbø Næstved Nøtterøy
 
   Odense Ogndal Oldenburg Olrud Olsztyn Opatija Orhangazi Oslo Ostend
   Ottadalen Otepää Oxford Överum
@@ -304,6 +304,7 @@ my %SINGLE_TYPOS =
   Palembang => ['plg'],
   Pamukkale => ['pamuk'],
   Panzhihua => ['panzhihuabc'],
+  Pau => ['puau'],
   Petersfield => ['peterfield'],
   'Piatra Neamt' => ['neamt'],
   Porto => ['invicta', 'oporto'],

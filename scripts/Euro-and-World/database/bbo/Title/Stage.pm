@@ -55,11 +55,11 @@ my @SINGLE_WORDS = qw(
   Elimination
   Final Flight
   Match
-  Playoff
+  Playoff Pool
   Rof6 Rof12 Rof16 Rof32 Rof64 Round
   Qualifying Quarter Quarterfinal
   Repechage
-  Section Semifinal Session Stage
+  Section Semifinal Session Stage Stanza
   Table
 );
 
@@ -74,6 +74,7 @@ my %SINGLE_TYPOS =
   Flight => ['flt'],
   'Knock-out' => ['knockour', 'knockout', 'ko'],
   Playoff => ['playoffs', 'po'],
+  Pool => ['poule'],
   Rof12 => ['r12a', 'r12b'],
   Rof16 => ['r16a', 'r16b', 'r16c', 'r16d'],
   Qualifying => ['qualification', 'qualifications', 'qualif',

@@ -29,6 +29,7 @@ my @MULTI_WORDS =
   'for 3rd pair', 'for pau', 'for the',
   'g_m_',
   'in the',
+  'main event',
   'royale',
   'sede', 'special tournament', 'sports event', 'swe comment', 
   'swe comments', 'sw comment', 'sw comments',
@@ -42,10 +43,10 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  aa abd aft afternoon anniversary annual as av
-  BBO bboz bt bv by
-  compared
-  étoile eve
+  aa abd aft afternoon anniversary annual as at av
+  b! BBO bboz bt bv by
+  centenary celebrations compared
+  étoile eve evening extra
   from
   het
   im
@@ -58,6 +59,7 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  centenary => ['cetenary']
 );
 
 

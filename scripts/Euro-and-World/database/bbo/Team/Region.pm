@@ -104,6 +104,7 @@ my %MULTI_TYPOS =
   'East Java' => ['jawa timur', 'jatim'],
   'East Kalimantan' => ['kalimantan timur'],
   'Garut Regency' => ['kab. garut'],
+  Guangdong => ['guangdong province'],
   Hubei => ['hu bei'],
   Jiangsu => ['jiang su'],
   'Kutai Kartanegara' => ['kutai kartanega'],

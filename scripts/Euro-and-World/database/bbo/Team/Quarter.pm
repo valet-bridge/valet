@@ -16,6 +16,7 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'Poiana Brasov',
   'Saint Honoré',
   'Shanghai Yangpu',
   'Villa Fabbriche'
@@ -77,6 +78,7 @@ my %SINGLE_TYPOS =
   Olgiata => ['ola'],
   Pamukkale => ['pamuk'],
   Parioli => ['paroli'],
+  Serdika => ['serdica'],
   Wroble => ['wróble'],
   Yarýmca => ['yarimca'],
   Yildirim => ['yýldýrým']

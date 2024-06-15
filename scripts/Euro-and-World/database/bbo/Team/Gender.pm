@@ -22,6 +22,7 @@ my %MULTI_TYPOS =
 (
   Men => ["men's", "men`s"],
   Mixed => ['cat mixtas'],
+  Open => ['open´s'],
   Seniors => ["seniors'"],
   Women => ["ladies's", "ladies'", "woman's", "women's", 'for ladies',
     'womwn'],
@@ -34,7 +35,7 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   Open => [qw(libre libres terbuka opn åben acik offene)],
-  Men => [qw(mens putra pa homme hommes)],
+  Men => [qw(mens putra pa homme hommes varones)],
   Women => [qw(woman wemen womans womens womvn
     lady ladies ladie femme femmes damas dames damer dame damen 
     putri pi wo womvn)],
