@@ -47,20 +47,24 @@ my @SINGLE_WORDS = qw(
   aa abd aft afternoon anniversary annual as at av
   b! BBO bboz bt bv by
   centenary celebrations compared
+  duplicate duplicato
   étoile eve evening extra
   from
   het
   im
+  naturalists nature
   popular
-  retour
-  show
+  retour retur
+  science scientists show
   te teh the tn trn ts tv
   und
 );
 
 my %SINGLE_TYPOS =
 (
-  centenary => ['cetenary']
+  centenary => ['cetenary'],
+  naturalists => ['nauralists'],
+  scientists => ['scientist']
 );
 
 

@@ -145,7 +145,7 @@ my %MULTI_TYPOS =
   'Women Elite Tournament' => ["women's elite tournament"],
   'Youth Game' => ['youth games'],
   'Youth Triathlon' => ['youth triathalon'],
-  'Youth Triathlon Individual' => ['yough tri individual']
+  'Youth Triathlon Individual' => ['youth tri individual']
 );
 
 my @SINGLE_WORDS = qw(
@@ -223,7 +223,7 @@ my %SINGLE_TYPOS =
     'tournet', 'tourney', 'turnament', 'tourmanent', 'tourna',
     'tournamnt', 'toernooi', 'turneringen',
     'torneo', 'tournoi', 'turniej', 'trniej', 'turno', 'trng'],
-  Training => ['træning', 'practice'],
+  Training => ['træning', 'practice', 'allenamento'],
   Trial => ['trials', 'trail', 'trails', 'triaals',
     'selection', 'seleccion', 'selección', 'select', 'selectiontrials',
     'selections', 'selekction', 'selelection', 'sélection',
