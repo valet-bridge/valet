@@ -93,7 +93,7 @@ my %MULTI_TYPOS =
   'Gold Coast Congress' => ['gold coast'],
   'Greek Islands Festival' => ['greek bridge festival',
     'greek island festival', 'athens bridge festival', 
-    'greek islands festivals', 'greek festival islands'],
+    'greek islands festivals', 'greek festival islands', 'greek islands'],
   'Iceland Bridge Festival' => ['iceland bridgefestival',
     'iceland express bridge festival',
     'icelandic express bridge festival'],

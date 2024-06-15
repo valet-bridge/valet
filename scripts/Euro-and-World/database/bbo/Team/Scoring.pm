@@ -33,7 +33,7 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   MP => [qw(matchpoints)],
-  IMP => [qw(ýmp imps impy)],
+  IMP => [qw(ýmp imps impy ims)],
   'IMPs Across the Field' => ['iaf']
 );
 

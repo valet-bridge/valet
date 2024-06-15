@@ -601,7 +601,7 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   ABAX Abnegat Accenture Actavis Aerospace AIA Akaylar Akebono
   Aklindo Allianz Altinay Aquatrans Arboned Argento Arkas Arma 
-  Artotec Asindo Ayýntab
+  Artotec Asindo Avia Ayýntab
 
   Bajaj Baykar Beibao Beidike Bnerg BridgePlus Budimex
 

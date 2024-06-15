@@ -18,6 +18,7 @@ my @MULTI_WORDS =
 (
   "'t Onstein",
   'Alumni Club Chennai',
+  'AVI Club Noida',
   'Bombay Gymkhana Club',
   'Calcutta Cricket & Football Club',
   'Delhi Gymkhana Club',
@@ -30,6 +31,7 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   "'t Onstein" => ['at onstein', 't onstein'],
+  'Alumni Club Chennai' => ['alumni club'],
   'Bombay Gymkhana Club' => ['bombay gym', 'bomay gym'],
   'Calcutta Cricket & Football Club' => ['cc&fc', 'cc & fc', 'cc &fc'],
   'Delhi Gymkhana Club' => ['delhi gymkhana'],
@@ -43,6 +45,7 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  'AVI Club Noida' => ['avi'],
   'Delhi Gymkhana Club' => ['dgc'],
   'Madras Gymkhana Club' => ['mgc'],
   'Royal Airforce Club' => ['rac'],

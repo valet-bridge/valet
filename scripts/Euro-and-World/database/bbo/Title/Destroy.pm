@@ -42,8 +42,8 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  aa abd anniversary annual as av
-  BBO bt bv by
+  aa abd aft afternoon anniversary annual as av
+  BBO bboz bt bv by
   compared
   étoile eve
   from
