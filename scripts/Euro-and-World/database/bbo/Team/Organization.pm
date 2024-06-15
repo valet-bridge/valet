@@ -75,6 +75,7 @@ my %MULTI_TYPOS =
   SBU => ['scottish bridge union'],
   SPBF => ['south pacific bridge federation', 'zone 7'],
   TBF => ['turkish bridge federation'],
+  TDBA => ['Thane District Bridge Association'],
   USBF => ['united states bridge federation'],
   WBF => ['world bridge federation'],
   WBU => ['welsh bridge union']
@@ -97,7 +98,7 @@ my @SINGLE_WORDS = qw(
   ÖBV
   PRBA PZBS PTBA
   SBF SBU SPBF
-  TBF
+  TBF TDBA
   USBF
   WBF
   WBU

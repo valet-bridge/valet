@@ -215,6 +215,7 @@ sub is_small_ordinal
       $part =~ /^(\d+)rst$/i ||
       $part =~ /^(\d+)rd$/i ||
       $part =~ /^(\d+)er$/i ||
+      $part =~ /^(\d+)e$/i ||
       $part =~ /^(\d+)eme$/i ||
       $part =~ /^(\d+)°$/i ||
       $part =~ /^(\d+)º$/i ||
@@ -395,7 +396,12 @@ sub split_on_some_numbers
   $text =~ s/(20\d\d)/ $1 /g;
   $text =~ s/'(9\d)/19$1/g;
   $text =~ s/'(0\d)/20$1/g;
-
+  $text =~ s/'(1\d)/201$1/g;
+  $text =~ s/^(\d+)th([a-z])/$1th $2/i;
+  $text =~ s/#\d+\s+vs*\s+#*\d+//;
+  $text =~ s/^([01]\d)([A-SU-Z])/20$1 $2/; # Kludge, avoid th
+  $text =~ s/\b([1-9])([A-D])\b/$1 $2/gi;
+  $text =~ s/\b(\d)of(\d)\b/$1 of $2/g;
   return $text;
 }
 

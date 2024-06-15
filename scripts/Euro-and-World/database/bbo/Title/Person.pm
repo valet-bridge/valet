@@ -79,7 +79,7 @@ my %MULTI_TYPOS =
   'Mohanlal Bhartia' => ['mohanlal bharatia', 'mohanlal bharatiya', 
     'mohon lal bharatia', 'mohanlal bhartiya', 'mohanlal bharia'],
   'Mrs Jaya Jain' => ['mrs_ jaya jain'],
-  'Narayan Bhojwani' => ['narain bhojwani'],
+  'Narayan Bhojwani' => ['narain bhojwani', 'n_ bhojwani'],
   'Necmettin Sunget' => ['necmettin sünget'],
   'Özgecan Aslan' => ['ozgecan aslan'],
   'Rai Bahadur Modi' => ['rai bahadur'],

@@ -31,7 +31,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Seniors Juniors Girls Youngsters Schools Kids
-  U28 U26 U25 U21 U20 U16 U15
+  U36 U28 U26 U25 U21 U20 U16 U15
 );
 
 my %SINGLE_TYPOS =

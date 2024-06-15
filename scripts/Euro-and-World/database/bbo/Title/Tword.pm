@@ -20,6 +20,7 @@ my @MULTI_WORDS =
   'Bridge League',
   'Bridge Meeting',
   'Business League',
+  'Butler Pairs',
   "Chairman's Cup",
   'Challenge Match',
   'Commercial Pairs',
@@ -91,7 +92,7 @@ my %MULTI_TYPOS =
     'inter=provincial', 'inter-provincial'],
   Interstate => ['inter-state', 'inter state'],
   Interuniversity => ['inter-university', 'inter-universities'],
-  Invitational => ['invitase terbatas'],
+  Invitational => ['invitasi terbatas'],
   Memorial => ['pro memoriam'],
   'Mixed Teams' => ['du 4 mixte'],
   'National Pairs Championship' => ["nacional pares por imp's",
@@ -120,7 +121,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Barometer Bridge
-  Championship Charity Club Cup
+  Championship Charity Club Commercial Cup
   Goulash Group
   Interclub Intercity International Interport Interprovince Interstate 
   Interuniversity Invitational

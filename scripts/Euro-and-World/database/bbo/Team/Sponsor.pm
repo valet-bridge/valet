@@ -656,7 +656,7 @@ my @SINGLE_WORDS = qw(
 
   UMW Unibet Unicat
 
-  Velbazhd Velbujd Vinabær Virnet VÍS Visoft Vito Vyceska
+  Velbazhd Velbujd Videocon Vinabær Virnet VÍS Visoft Vito Vyceska
 
   Wellknit Wellwise Wise
 
@@ -756,6 +756,7 @@ my %SINGLE_TYPOS =
   Tsingtao => ['tsingthao'],
   'UTI Bank' => ['utibank'],
   Velbazhd => ['velbuzhd'],
+  Videocon => ['videcon'],
   'Viego Regnskap' => ['viego'],
   'Vinex Preslav' => ['vinex'],
   Wellwise => ['wellwiss'],

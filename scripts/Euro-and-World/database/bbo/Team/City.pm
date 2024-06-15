@@ -128,8 +128,9 @@ my @SINGLE_WORDS = qw(
   Bath Batu Begues Beijing Bekasi Belgrade Bengkulu Beograd 
   Bereket Bergen Bergues Berkeley Berlin Bhilwara Bhubaneshwar Biarritz 
   Bielefeld Bikaner Bitung Blitar Bodrum Bodø Bogor Bogotá Boleslawiec
-  Bologna Bonn Bordeaux Braila Brandbu Brasilia Brasov Bremen Brisbane 
-  Bromölla Bruges Brussels Bucharest Budapest Burghausen Bursa Burdur 
+  Bologna Bonn Bordeaux Braila Brandbu Brasilia Brasov Bremen Brighton
+  Brisbane Bromölla Bruges Brussels Bucharest Budapest Burghausen 
+  Bursa Burdur Bydgoszcz
 
   Caen Cairns Cairo Canakkale Canberra Canterbury Caracas Casablanca
   Cascais Catania Cerkezkoy Cesme Changhua Changzhou Chaville Chelmno 
