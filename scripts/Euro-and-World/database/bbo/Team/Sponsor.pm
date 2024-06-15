@@ -257,6 +257,7 @@ my @MULTI_WORDS =
   'Rio-Sampa',
   'Ronke Camping',
   'Rosa dei Venti',
+  'Russian Sunday Times',
   'Ryan Express',
   'SAIC VW',
   'Samadhan Academy',

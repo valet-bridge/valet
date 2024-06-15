@@ -57,6 +57,7 @@ my @MULTI_WORDS =
   'Rai Bahadur Modi',
   'Salvador Assael',
   'Staszek Wybranowski',
+  'Thanos Kapayannidis',
   'Vasil Levski',
   'Willy Brown'
 );
@@ -90,6 +91,7 @@ my %MULTI_TYPOS =
   'Rai Bahadur Modi' => ['rai bahadur'],
   'R N Bagla' => ['rn bagla', 'r_nbagla', 'r_n_bagla'],
   'Staszek Wybranowski' => ['Staszka Wybranowskiego'],
+  'Thanos Kapayannidis' => ['thanos capayiannides']
 );
 
 my @SINGLE_WORDS = qw(

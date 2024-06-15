@@ -54,6 +54,7 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   Elimination
   Final Flight
+  Group
   Match
   Playoff Pool
   Rof6 Rof12 Rof16 Rof32 Rof64 Round
@@ -70,8 +71,9 @@ my %SINGLE_TYPOS =
     'finales', 'finall', 'finar', 'finas', 'finat', 'finsl', 
     'finais', 'finalns', 'fina³', 'fianal', 'fianl', 'fianls',
     'fiinal', 'fina', 'fýnal', 'finalleri', 'fina³y', 'fn',
-    'slutspil', 'slutspillet', 'superfinal'],
+    'slutspil', 'slutspillet', 'superfinal', 'finalen'],
   Flight => ['flt'],
+  Group => ['gruop'],
   'Knock-out' => ['knockour', 'knockout', 'ko'],
   Playoff => ['playoffs', 'po'],
   Pool => ['poule'],

@@ -100,6 +100,7 @@ my %MULTI_TYPOS =
   'Central Anatolia' => ['ic anadolu'],
   'Central Sulawesi' => ['sulawesi tengah'],
   'Cianjur Regency' => ['kab. cianjur', 'kab.cianjur'],
+  'Dogu Akdeniz' => ['akdeniz region'],
   'East Jakarta' => ['jakarta timur'],
   'East Java' => ['jawa timur', 'jatim'],
   'East Kalimantan' => ['kalimantan timur'],
@@ -154,7 +155,7 @@ my @SINGLE_WORDS = qw(
   Nordafjells Norden Norrland Nusantara
   Queensland
   Oberloiben Olona Orontes Otago
-  Papua Porong Punjab
+  Papua Pomerania Porong Punjab
   Rajasthan Rajputana Ratchaburi Rhodes Rogaland Rosfjord 
   Sakarya Salten Shanxi Siberia Sichuan Silesia Silla Sindh Sintang 
   Skåne Slask Southland Sydvest

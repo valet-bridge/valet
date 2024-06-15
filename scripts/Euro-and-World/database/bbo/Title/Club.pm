@@ -45,7 +45,8 @@ my %MULTI_TYPOS =
   'Madras Gymkhana Club' => ['madras gymkhana', 'madras gumkhana',
     'maras gymkhana'],
   'Otters Club' => ["otters' club", "otter's club", "otter's"],
-  'Willingdon Sports Club' => ['the willingdon sports club', 'wcg']
+  'Willingdon Sports Club' => ['the willingdon sports club', 'wcg'],
+  'White House' => ['witte huis', 'het witte huis']
 );
 
 my @SINGLE_WORDS = qw(
@@ -58,7 +59,8 @@ my %SINGLE_TYPOS =
   'Madras Gymkhana Club' => ['mgc'],
   'Otters Club' => ['otters'],
   'Royal Airforce Club' => ['rac'],
-  'Ruch AZS' => ['ruch']
+  'Ruch AZS' => ['ruch'],
+  'White House' => ['whitehouse']
 );
 
 

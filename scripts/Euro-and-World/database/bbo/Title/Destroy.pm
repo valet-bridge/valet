@@ -34,6 +34,7 @@ my @MULTI_WORDS =
   'sede', 'special tournament', 'sports event', 'swe comment', 
   'swe comments', 'sw comment', 'sw comments',
   'the 80 grand challenge',
+  'untitled match',
   'warm up', 'Welcome to'
 );
 
@@ -53,7 +54,7 @@ my @SINGLE_WORDS = qw(
   popular
   retour
   show
-  te teh the tn ts tv
+  te teh the tn trn ts tv
   und
 );
 

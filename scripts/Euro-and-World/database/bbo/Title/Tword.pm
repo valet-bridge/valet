@@ -43,6 +43,7 @@ my @MULTI_WORDS =
   'Junior League',
   'Midsummer Juniors',
   'Mike Lawrence Exhibition',
+  'Mini Swiss',
   'Mixed Teams',
   'National Club League',
   'National League',
@@ -70,10 +71,14 @@ my @MULTI_WORDS =
   'Super League',
   'Swiss Pairs',
   'Third Place',
+  'Top Individual',
+  'Top Pairs',
   'Women Elite Tournament',
   'Winter Nationals',
   'Winter Open Teams',
   'Youth Game',
+  'Youth Triathlon',
+  'Youth Triathlon Individual',
   'Youth Triathlon Pairs'
 );
 
@@ -132,18 +137,21 @@ my %MULTI_TYPOS =
   'Super League' => ['sup league', 'super legue'],
   'Swiss Pairs' => ['parejas suizas', 'sw2iss pairs', 'swiis pairs'],
   'Third Place' => ['3rd place'],
+  'Top Individual' => ['top indyvidual'],
   Training => ['practice session', 'training match', 'practice match',
     'test match', 'tes match', 'practise match'],
   Trial => ['prueba de seleccion'],
   'Winter Open Teams' => ['wýnter team cs', 'winter open teams cs'],
   'Women Elite Tournament' => ["women's elite tournament"],
   'Youth Game' => ['youth games'],
+  'Youth Triathlon' => ['youth triathalon'],
+  'Youth Triathlon Individual' => ['yough tri individual']
 );
 
 my @SINGLE_WORDS = qw(
   Barometer Bridge
   Championship Charity Club Commercial Cup
-  Goulash Group
+  Goulash
   Interclub Intercity International Interport Interprovince Interstate 
   Interuniversity Invitational
   Match Memorial
@@ -213,7 +221,7 @@ my %SINGLE_TYPOS =
   Tournament => ['torunament', 'toruney', 'torurnament', 'torurney',
     'tourament', 'tourn', 'tourname', 'tournamnet', 'tournement',
     'tournet', 'tourney', 'turnament', 'tourmanent', 'tourna',
-    'tournamnt', 'toernooi',
+    'tournamnt', 'toernooi', 'turneringen',
     'torneo', 'tournoi', 'turniej', 'trniej', 'turno', 'trng'],
   Training => ['træning', 'practice'],
   Trial => ['trials', 'trail', 'trails', 'triaals',
