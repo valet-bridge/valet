@@ -209,6 +209,7 @@ my @MULTI_WORDS =
   'Mega-Tech',
   'Mei Kuang',
   'Meilin Qing Cheng',
+  'Metropolitan Electricity Authority',
   'Mitra Buana',
   'Moscow Sunday Times',
   'Mutiara Energy',
@@ -244,8 +245,10 @@ my @MULTI_WORDS =
   'Quik Tea',
   'Phoenix TV',
   'Polarman Regnskap',
+  'Powszechna Kasa Oszczędności Bank Polski',
   'Ponar Unia',
   'Pro Consul',
+  'PLN Fortuga',
   'PLN Suluttenggo',
   'Prestige Development',
   'PT Bayu Buana Gemilang',
@@ -310,6 +313,7 @@ my @MULTI_WORDS =
   'Siwik Holiday Mragowo',
   'Siwik Intertrade',
   'Skinney-Þinganes',
+  'Smart Max',
   'Société Générale',
   'Sölufélag Garðyrkjumanna',
   'Son Dakika',
@@ -519,10 +523,12 @@ my %MULTI_TYPOS =
     'pertamina field', 'pertamina ge', 'pertamina indonesia', 
     'pertamina l.', 'pertamina field tmb'],
   'Phoenix TV' => ['feng huang wei shi', 'fenghuang tv'],
+  'PLN Fortuga' => ['pln - fortuga'],
   'Poddar Developers' => ['poddar development', 'poddar dev',
     'podder dev', 'podder developers', 'poddar devekopers',
     'poddar dovelopers'],
   'POLFA' => ['polfa wzbs'],
+  'Powszechna Kasa Oszczędności Bank Polski' => ['pko bp'],
   'PT Bayu Buana Gemilang' => ['pt bbg'],
   'PT Bumi Siak Pusako' => ['pt.bumi siak pusako',
     'bumi siak pusako', 'pt bsp'],
@@ -643,7 +649,7 @@ my @SINGLE_WORDS = qw(
   Ozyuva
 
   P2TEL Paulaner Pealinn Penline Pertagas Pertamina Petroconas Pexis 
-  Petro Pharon Pimara POLFA Praterm Printerikeskus Pufa Pusula
+  Petro Pharon Pimara POLFA Praterm Prokom Printerikeskus Pufa Pusula
 
   Qiaoyou
 
@@ -724,6 +730,7 @@ my %SINGLE_TYPOS =
   'Málning hf' => ['málning'],
   'Meilin Qing Cheng' => ['meilinqingcheng'],
   'Mei Kuang' => ['meikuang'],
+  'Metropolitan Electricity Authority' => ['mea'],
   'Mitra Buana' => ['mitrabuana'],
   Multicoms => ['multicom'],
   'Nanning Yalun' => ['nanning yalun'],

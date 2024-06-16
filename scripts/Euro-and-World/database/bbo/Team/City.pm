@@ -36,6 +36,7 @@ my @MULTI_WORDS =
   'Kuala Lumpur',
   'La Chaux-de-Fonds',
   'La Marina',
+  'Las Palmas',
   'Le Bouscat',
   'Mandobo Bodi',
   'Mar del Plata',
@@ -130,7 +131,7 @@ my @SINGLE_WORDS = qw(
   Bielefeld Bikaner Bitung Blitar Bodrum Bodø Bogor Bogotá Boleslawiec
   Bologna Bonn Bordeaux Braila Brandbu Brasilia Brasov Bremen Brighton
   Brisbane Bromölla Bruges Brussels Bucharest Budapest Burghausen 
-  Bursa Burdur Bydgoszcz
+  Bursa Burdur Buzios Bydgoszcz
 
   Caen Cairns Cairo Canakkale Canberra Canterbury Caracas Casablanca
   Cascais Catania Cerkezkoy Cesme Changhua Changzhou Chaville Chelmno 
@@ -196,12 +197,13 @@ my @SINGLE_WORDS = qw(
   Ravnkilde Reykjavik Rzeszow Rødovre
 
   Saarbrücken Sabadell Salerno Samarinda Samobor Samsun Sandefjord 
-  Santiago Sanya Sarpsborg Secunderabad Seferihisar Semarang Serang 
-  Shanghai Shaoguan Shenyang Shenzhen Shijiazhuang Shumen Sibiu Sidoarjo 
-  Siena Sindi Singsås Siofok Skara Skien Skopje Slagelse Slawa Sleman 
-  Snåsa Sofia Solok Sopot Sortland Söke Split Stanford Stavanger 
-  Steinkjer Stockholm Storsjöbygden Stureby Stuttgart Sukma Sukomoro 
-  Sumedang Sunndalsøra Surabaya Suzhou Sydney Szczyrk Szeged Sørreisa
+  Santiago Sanya Sarpsborg Secunderabad Seferihisar Semarang Senigallia
+  Serang Shanghai Shaoguan Shenyang Shenzhen Shijiazhuang Shumen 
+  Sibiu Sidoarjo Siena Sindi Singsås Siofok Skara Skien Skopje 
+  Slagelse Slawa Sleman Snåsa Sofia Solok Sopot Sortland Söke Split 
+  Stanford Stavanger Steinkjer Stockholm Storsjöbygden Stureby 
+  Stuttgart Sukma Sukomoro Sumedang Sunndalsøra Surabaya Suzhou 
+  Sydney Szczyrk Szeged Sørreisa
 
   Taicang Taichung Tainan Taizhou Takayama Tallinn Tarakan Targoviste 
   Tarnów Täby Täfteå Tekýrdag Temuco Thane Thanjavur Thessaloniki Tianjin 
@@ -245,6 +247,7 @@ my %SINGLE_TYPOS =
     'benglore', 'bengluru', 'bengalu'],
   Bansi => ["bansi's"],
   Beijing => ['peking', 'pekin', 'pékin', 'bijing'],
+  Buzius => ['bruzios'],
   Canakkale => ['çanakkale'],
   Canberra => ['canbera'],
   Cerkezkoy => ['çerkezköy', 'cerk'],

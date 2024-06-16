@@ -138,6 +138,8 @@ my %MULTI_TYPOS =
     'bridge festival-bulgaria-stara zagora'],
   'Tallinn Bridge Festival' => ['talinn festival', 'tallin festival',
     'tallinns festival'],
+  'Turkish-Greek Friendship Festival' => [
+    'greek-turkish friendship festival'],
   'Varna Bridge Festival' => ['international bridge festival varna'],
   'VVE Beheer Bridge Week' => ['vve-beheer bridgeweek'],
   'Wachauer Bridge Festival' => ['wachauer bridgefestival'],

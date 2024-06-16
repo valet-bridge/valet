@@ -24,13 +24,12 @@ my @MULTI_WORDS =
   'before bermuda bowl', 'bridge master champion', 'by joe pochron',
   'BBO1', 'BBO2', 'BBO3', 'BBO4', 'BBO5', 'BBO6', 'BBO7', 'BBO8', 'BBO9',
   '*BBO1', '*BBO2', '*BBO3', '*BBO4',
-  'de vigraph',
+  'de bridge', 'de vigraph',
   'eng comment', 'eng comments', 'eng comment in',
   'for 3rd pair', 'for pau', 'for the',
   'g_m_',
   'in the',
   'main event',
-  'royale',
   'sede', 'special tournament', 'sports event', 'swe comment', 
   'swe comments', 'sw comment', 'sw comments',
   'the 80 grand challenge',
@@ -40,29 +39,33 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'bridge master champion' => ['bridge master champions'],
   'for Pau' => ['pour pau'],
 );
 
 my @SINGLE_WORDS = qw(
   aa abd aft afternoon anniversary annual as at av
   b! BBO bboz bt bv by
-  centenary celebrations compared
-  duplicate duplicato
-  étoile eve evening extra
+  centenary celebrations combat compared
+  des du duplicate duplicato
+  eagles étoile eve evening extra
   from
-  het
-  im
+  hawks het
+  im in
+  multievent
   naturalists nature
   popular
   retour retur
   science scientists show
   te teh the tn trn ts tv
   und
+  vsa vsb
 );
 
 my %SINGLE_TYPOS =
 (
   centenary => ['cetenary'],
+  multievent => ['multieventof'],
   naturalists => ['nauralists'],
   scientists => ['scientist']
 );

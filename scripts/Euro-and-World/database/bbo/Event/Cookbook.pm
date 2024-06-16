@@ -396,7 +396,7 @@ our %FIX_ALIASES =
     '8' => ['viii'],
     '9' => ['ix'],
     '10' => ['x'],
-    '11' => ['xi'],
+    '11' => ['xi', 'xith'],
     '12' => ['xii'],
     '13' => ['xiii'],
     '14' => ['xiv'],
@@ -420,12 +420,13 @@ our %FIX_ALIASES =
     '32' => ['xxxii'],
     '33' => ['xxxiii'],
     '34' => ['xxxiv'],
-    '35' => ['xxxv'],
+    '35' => ['xxxv', 'xxxvth'],
     '36' => ['xxxvi'],
     '37' => ['xxxvii'],
     '38' => ['xxxviii'],
     '39' => ['xxxix'],
-    '40' => ['xl']
+    '40' => ['xl'],
+    '53' => ['liii']
   },
 
   PARTICLE =>

@@ -41,14 +41,15 @@ my %MULTI_TYPOS =
   Rof14 => ['phase à 14'],
   Rof16 => ['round of 16', 'rd of 16', 'phase à 16', 'phase à16',
     'rd 0f 16', 'phase 16'],
-  Rof28 => ['phase à 28'],
+  Rof28 => ['phase à 28', 'phase 28'],
   Rof32 => ['round of 32', 'rd of 32'],
   Rof64 => ['round of 64', 'rd of 64'],
   'Round-robin' => ['round robin', 'raound robin'],
   Semifinal => ['semi final', 'semi finals', 'semi-fiinal', 's_f',
     'semi-final', 'semi-finals', 'round of 4', 'round-of-four',
     'demi-final', 'demi-finale', 'demi-finales', 'half final', 's-final',
-    'meia final', 'meias finais', 'yf', 'demi-nale', 'dsemi final'],
+    'meia final', 'meias finais', 'yf', 'demi-nale', 'dsemi final',
+    'pó³fina³y'],
 );
 
 my @SINGLE_WORDS = qw(
@@ -56,7 +57,7 @@ my @SINGLE_WORDS = qw(
   Final Flight
   Group
   Match
-  Playoff Pool
+  Phase Playoff Pool
   Rof6 Rof12 Rof16 Rof32 Rof64 Round
   Qualifying Quarter Quarterfinal
   Repechage
@@ -75,6 +76,7 @@ my %SINGLE_TYPOS =
   Flight => ['flt'],
   Group => ['gruop'],
   'Knock-out' => ['knockour', 'knockout', 'ko'],
+  Phase => ['etap', 'fase'],
   Playoff => ['playoffs', 'po'],
   Pool => ['poule'],
   Qualifying => ['qualification', 'qualifications', 'qualif',

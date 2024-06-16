@@ -111,12 +111,14 @@ my %MULTI_TYPOS =
     'intl_ grand tournament', 'intl grand tournament'],
   'International Seniors' => ['int_ seniors'],
   Interport => ['inter-port'],
-  Interprovincial => ['inter provincials', 'inter province',
-    'inter=provincial', 'inter-provincial'],
+  Interprovince => ['inter provincials', 'inter province',
+    'inter provinces', 'inter=provincial', 'inter-provincial', 
+    'inter provice'],
   Interstate => ['inter-state', 'inter state'],
   Interuniversity => ['inter-university', 'inter-universities'],
   Invitational => ['invitasi terbatas'],
   Memorial => ['pro memoriam'],
+  'Mike Lawrence Exhibition' => ['m lawrence exhibiton'],
   'Mixed Teams' => ['du 4 mixte'],
   'National Pairs Championship' => ["nacional pares por imp's",
     'nacional pares imps', 'nacional pares por imps'],
@@ -125,6 +127,7 @@ my %MULTI_TYPOS =
     'neighbourhood challange', 'neighbour challange'],
   "New Year's Teams" => ['new year greet tm'],
   'North Open' => ['north championship', 'north bridge championship'],
+  'Opening Tournament' => ['opening tournement'],
   'Premier League' => ['premiere league', 'premier leaugue',
     'premier leauge', 'premier lge', '1st league', 'premie league',
     'prremier league', 'premieer league', 'premier legaue',
@@ -136,11 +139,11 @@ my %MULTI_TYPOS =
   'Second Place' => ['segundo lugar'],
   'Super League' => ['sup league', 'super legue'],
   'Swiss Pairs' => ['parejas suizas', 'sw2iss pairs', 'swiis pairs'],
-  'Third Place' => ['3rd place'],
+  'Third Place' => ['3rd place', 'bronze-finals'],
   'Top Individual' => ['top indyvidual'],
   Training => ['practice session', 'training match', 'practice match',
     'test match', 'tes match', 'practise match'],
-  Trial => ['prueba de seleccion'],
+  Trial => ['prueba de seleccion', 'test event'],
   'Winter Open Teams' => ['wýnter team cs', 'winter open teams cs'],
   'Women Elite Tournament' => ["women's elite tournament"],
   'Youth Game' => ['youth games'],
@@ -150,7 +153,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Barometer Bridge
-  Championship Charity Club Commercial Cup
+  Challenge Championship Charity Club Commercial Cup
   Goulash
   Interclub Intercity International Interport Interprovince Interstate 
   Interuniversity Invitational
@@ -170,6 +173,7 @@ my %SINGLE_TYPOS =
   Bridge => ['brdige', 'briag', 'bric', 'bridg', 'bride', 'bridgee',
     'brýç'],
   'Business League' => ['blb'],
+  Challenge => ['desafio', 'challengue', 'challenger'],
   Championship => ['campionship', 'champ', 'champion', 'champions', 
     'championshi', 'championshio', 'championships', 'championsihp', 
     'champioship', 'champioships', 'champoinsihp', 'champs', 'chams', 
@@ -197,7 +201,8 @@ my %SINGLE_TYPOS =
   International => ['internacional', 'internationals',
     'internazionale'],
   'International Team Trials' => ['itt'],
-  Interprovince => ['interprovincal', 'interprovincials'],
+  Interprovince => ['interprovincal', 'interprovincials',
+    'interprovincial'],
   Invitational => ['invitacion', 'invitacional', 'invitación',
     'invitasi', 'invitatatinal', 'invitatioanal', 'invitation',
     'invites', 'invitional', 'inivitational', 'invitatational',
@@ -223,7 +228,8 @@ my %SINGLE_TYPOS =
     'tournet', 'tourney', 'turnament', 'tourmanent', 'tourna',
     'tournamnt', 'toernooi', 'turneringen',
     'torneo', 'tournoi', 'turniej', 'trniej', 'turno', 'trng'],
-  Training => ['træning', 'practice', 'allenamento'],
+  Training => ['træning', 'practice', 'allenamento',
+    'entrenamiento'],
   Trial => ['trials', 'trail', 'trails', 'triaals',
     'selection', 'seleccion', 'selección', 'select', 'selectiontrials',
     'selections', 'selekction', 'selelection', 'sélection',

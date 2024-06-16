@@ -46,11 +46,11 @@ use Title::Time;
 use Title::Destroy;
 
 my @TAG_ORDER = qw(
-  TITLE_DESTROY
   TITLE_TNAME
   TITLE_TWORD
   TITLE_MEET
   TITLE_CLUB
+  TITLE_DESTROY
 
   TITLE_ORGANIZATION 
   TITLE_ZONE 
@@ -223,6 +223,14 @@ sub is_small_ordinal
       $part =~ /^(\d+)nd$/i)
   {
     return $1;
+  }
+  elsif (lc($part) eq 'first')
+  {
+    return 1;
+  }
+  elsif (lc($part) eq 'second')
+  {
+    return 2;
   }
   else
   {
