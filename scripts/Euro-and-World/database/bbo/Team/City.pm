@@ -151,7 +151,7 @@ my @SINGLE_WORDS = qw(
   Gniezno Gorzow Gölcük Göteborg Gresik Guangzhou Guayaquil 
   Gudbrandsdal Gyor
 
-  Haderslev Hamar Hamburg Hammamet Hangzhou Hannover Harplinge Hatay 
+  Haderslev Hamar Hamburg Hammamet Hangzhou Hanko Hannover Harplinge Hatay 
   Heledia Helsinki Hendek Herning Hillerød Hordaland Hornbæk Hsinchu 
   Huldretråkket Hyderabad
 

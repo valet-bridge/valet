@@ -27,6 +27,7 @@ my @MULTI_WORDS =
   'before bermuda bowl', 'bridge master champion', 'by joe pochron',
   'BBO1', 'BBO2', 'BBO3', 'BBO4', 'BBO5', 'BBO6', 'BBO7', 'BBO8', 'BBO9',
   '*BBO1', '*BBO2', '*BBO3', '*BBO4',
+  'champion of champions',
   'de bridge', 'de vigraph', 'div a retour', 'dno_4',
   'eng comment', 'eng comments', 'eng comment in',
   'for 3rd pair', 'for pau', 'for the',
@@ -50,7 +51,7 @@ my @SINGLE_WORDS = qw(
   aa abd aft afternoon anniversary annual as at av
   b! BBO bboz bt bv by
   centenary celebrations closed combat compared
-  des du duplicate duplicato
+  de des du duplicate duplicato
   eagles elite étoile eve evening ew extra
   from
   hawks het
@@ -62,9 +63,10 @@ my @SINGLE_WORDS = qw(
   popular
   retour retur
   science scientists show
-  te teh the tn transfer trn ts tv
+  tc te teh the tn transfer trn ts tv
   und
   vsa vsb
+  vw
 );
 
 my %SINGLE_TYPOS =

@@ -112,6 +112,7 @@ my %SINGLE_TYPOS =
   APBF => ['PABF', 'PABFs'],
   CBAI => ['cabi'],
   FMB => ['fm'],
+  HKBCA => ['hncba'],
   GABSI => ['iba'],
   'Indonesian Ministry of Youth and Sports' => ['menpora'],
   'Jilin Sheng Qiaopa' => ['jilinshengqiaopa'],

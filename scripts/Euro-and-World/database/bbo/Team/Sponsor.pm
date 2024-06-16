@@ -336,6 +336,7 @@ my @MULTI_WORDS =
   'Sygnity',
   'Synergia Lublin',
   'TAM Dabrowa',
+  'Tata Consulting Services',
   'Tannlege Kvaran',
   'Taste of Goa',
   'Team Audita',
@@ -658,8 +659,8 @@ my @SINGLE_WORDS = qw(
 
   Raam Radex Ráðgjöf Ravebo Relpol Ruyi Ryka
 
-  Sagaplast Samsung Scandic Scania Sehati Sevtopolis Shichuang Shimuzu 
-  Shouchuang Signity Skeljungur Solakoglu Solox Sparisjóður 
+  Sagaplast Samsung Saniva Scandic Scania Sehati Sevtopolis Shichuang 
+  Shimuzu Shouchuang Signity Skeljungur Solakoglu Solox Sparisjóður 
   SportAccord Srenniw SSDA Stalgast Stiga Struma Synective
 
   Tekser Telkom Termika Termoavion Termochem Timah Topeko Transearly 
@@ -766,6 +767,7 @@ my %SINGLE_TYPOS =
   'Son Dakika' => ['sondakika'],
   'Sparisjóður' => ['sparisjodur'],
   'SPS Construction' => ['sps'],
+  'Tata Consulting Services' => ['tcs'],
   'Team Audita' => ['teamaudita', 'audita'],
   'Timah' => ['tima'],
   'Tricon Infotech' => ['tricon'],

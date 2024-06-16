@@ -115,7 +115,8 @@ my %MULTI_TYPOS =
   'Israel Teams Cup' => ['israel national team cup',
     'israel team cup', 'israel team of four cup'],
   'Jordan Bridge Festival' => ['jordab festival', 'jordan b_ festival',
-    'jordan bridge f estival'],
+    'jordan bridge f estival', 'jordan bridge tournament spring festival',
+    'jordan bridge tournament (spring festival)'],
   'Lozenets Bridge Festival' => ['bridge festival lozenets'],
   'Luczniczka Meeting' => ['meeting luczniczka'],
   'Mar del Plata Festival' => [ 'mar del plata international festival',
@@ -148,7 +149,8 @@ my %MULTI_TYPOS =
   'VVE Beheer Bridge Week' => ['vve-beheer bridgeweek'],
   'Wachauer Bridge Festival' => ['wachauer bridgefestival'],
   'West Java Regional' => ['west java regional sport games',
-    'west java regional games', 'west java regional spots event'],
+    'west java regional games', 'west java regional spots event',
+    'regional west java'],
   'Zulawski Congress' => ['mityng zulawski', "kongres \"zulawski\"",
     'kongres zulawski', "mityng \"zulawski\""]
 );
