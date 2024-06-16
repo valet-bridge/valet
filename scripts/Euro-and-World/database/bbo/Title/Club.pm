@@ -20,6 +20,7 @@ my @MULTI_WORDS =
   'Alumni Club Chennai',
   'AVI Club Noida',
   'Bombay Gymkhana Club',
+  'BC Saint Honoré',
   'Calcutta Cricket & Football Club',
   'Delhi Gymkhana Club',
   'Gabrial University of Indonesia',
@@ -50,11 +51,14 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  Benfica
+  Sporting
 );
 
 my %SINGLE_TYPOS =
 (
   'AVI Club Noida' => ['avi'],
+  'BC Saint Honoré' => ['bcsh'],
   'Delhi Gymkhana Club' => ['dgc'],
   'Madras Gymkhana Club' => ['mgc'],
   'Otters Club' => ['otters'],

@@ -21,7 +21,7 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   Men => ["men's", "men`s"],
-  Mixed => ['cat mixtas'],
+  Mixed => ['cat mixtas', 'categorías mixtas'],
   Open => ['open´s'],
   Seniors => ["seniors'"],
   Women => ["ladies's", "ladies'", "woman's", "women's", 'for ladies',

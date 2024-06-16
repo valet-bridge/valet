@@ -407,12 +407,16 @@ sub split_on_some_numbers
   $text =~ s/'(1\d)/201$1/g;
   $text =~ s/^(\d+)th([a-z])/$1th $2/i;
   $text =~ s/#\d+\s+vs*\s+#*\d+//;
+  $text =~ s/tm\s+\d+\s+vs\s+tm\s+\d+//i;
   $text =~ s/^([01]\d)([A-SU-Z])/20$1 $2/; # Kludge, avoid th
   $text =~ s/\b([1-9])([A-D])\b/$1 $2/gi;
   $text =~ s/\b(\d)of(\d)\b/$1 of $2/g;
 
   # Doesn't really belong here.
   $text =~ s/pokal([a-z])/pokal $1/i;
+  $text =~ s/-th\b/th/g;
+  $text =~ s/(\d) th\b/$1th/g;
+  $text =~ s/2 nd\b/2nd/g;
 
   return $text;
 }

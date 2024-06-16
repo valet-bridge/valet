@@ -612,7 +612,7 @@ my @SINGLE_WORDS = qw(
   Aklindo Allianz Altinay Aquatrans Arboned Argento Arkas Arma 
   Artotec Asindo Avia Ayýntab
 
-  Bajaj Baykar Beibao Beidike Bnerg BridgePlus Budimex
+  Bajaj Baykar Beibao Beidike Belisol Bnerg BridgePlus Budimex
 
   Cable Candyland Cempaka Changyu Chemikartel Chlodnia Chuanmei 
   Cimentas COMAL Compensa Computerland CONNECTOR CONSUS Constellation 

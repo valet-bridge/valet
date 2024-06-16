@@ -84,7 +84,8 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  "Chairman's Cup" => ['chairmans cup'],
+  "Chairman's Cup" => ['chairmans cup', "chariman's cup",
+    "chairmans's cup"],
   Championship => ["ch'ship", "ch'ships", 'ch.ship', "cha'ships",
     "c'ship", "c'ships", "champion's", "champions'",
     "championship's", "chmpionship's", 'champion ship'],
@@ -92,7 +93,8 @@ my %MULTI_TYPOS =
     'the longest day charity on the shortest day'],
   'Commercial Pairs' => ['comeriacial pairs'],,
   'Division Nationale' => ['division natonale', 'division ntionale',
-    'division natinale', 'divison nationale', 'french dn1'],
+    'division natinale', 'divison nationale', 'french dn1',
+    'div_nat_'],
   'Elite Tournament' => ['elites tournament'],
   'First Division' => ['1_ division', '1st division', 'd1'],
   'First Half' => ['1st half'],
@@ -154,6 +156,7 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   Barometer Bridge
   Challenge Championship Charity Club Commercial Cup
+  Friendship
   Goulash
   Interclub Intercity International Interport Interprovince Interstate 
   Interuniversity Invitational
@@ -187,7 +190,7 @@ my %SINGLE_TYPOS =
     'championhips', 'champions', 'chaionships',
     'chamapionship', 'champiosnhip', 'cship',
     'championnat', 'þampýyonasi',
-    'meisterschaft', 'meistershaft',
+    'meisterschaft', 'meistershaft', 'cs',
     'champinship', 'campeonato', 'campionati', 'campionato'],
   Club => ['clubs', 'clut', 'clybs'],
   Cup => ['cuo', 'cupn', 'cups', 'copa', 'coppa', 'coppie', 'coupe'],

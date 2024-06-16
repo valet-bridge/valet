@@ -601,6 +601,7 @@ my %COUNTRY_TO_SPONSOR =
   Australia => ['Derofe', 'Penline'],
   Austria => ['Lupo Veloce'],
   Belarus => ['MB-Transit'],
+  Belgium => ['belisol'],
   Bermuda => ['Orbis Investment Management'],
   Brazil => ['Rio-Sampa'],
   Bulgaria => ['Chateau Rossenovo', 'Gillette', 'Impress', 'Malkia', 

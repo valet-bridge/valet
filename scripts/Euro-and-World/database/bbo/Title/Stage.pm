@@ -31,7 +31,7 @@ my %MULTI_TYPOS =
   'Open Room' => ['open rm', 'room 1'],
   Playoff => ['play offs', 'play-off', 'play off'],
   Qualifying => ['qualification for', 'qualification to',
-    'wbg qualification'],
+    'wbg qualification', 'qualification to'],
   Quarterfinal => ['quarter final', 'quarter finals', 
     'quarter-final', 'quarter-finals', 
     'quater final', 'quater finals', 'round of 8', 'rd of 8', 'r of 8',
@@ -49,7 +49,7 @@ my %MULTI_TYPOS =
     'semi-final', 'semi-finals', 'round of 4', 'round-of-four',
     'demi-final', 'demi-finale', 'demi-finales', 'half final', 's-final',
     'meia final', 'meias finais', 'yf', 'demi-nale', 'dsemi final',
-    'pó³fina³y'],
+    'pó³fina³y', 'semi and final', 'semis and finals'],
 );
 
 my @SINGLE_WORDS = qw(
@@ -92,7 +92,7 @@ my %SINGLE_TYPOS =
   Rof12 => ['r12a', 'r12b'],
   Rof16 => ['r16a', 'r16b', 'r16c', 'r16d'],
   Round => ['ronda', 'runde', 'runda', 'rundy', 'rnd', 'r', 'ound',
-    'dg'],
+    'dg', 'devre'],
   'Round-robin' => ['rr'],
   Semifinal => ['semifinals', 'semifinale', 'semifimals', 'semifi',
     'semif', 'semis', 'sf', 'sfa', 'sfb', 'semi'],

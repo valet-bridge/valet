@@ -17,6 +17,7 @@ use TeamBBO;
 my @MULTI_WORDS =
 (
   '1v4', '2v3', '3x12', '4x12', '4v5', '#7836 teams', '#8405 teams',
+  '4 bd', '40 boards',
   's5r38t2', 's5r40t2', 's5r4t2', 's5r43_t2', 's5r42t2', 's5r45t2',
   's1r7', 's2r1', 'k-8',
   '3way match 3-1 a', '3way match 3-1 b',
@@ -24,7 +25,7 @@ my @MULTI_WORDS =
   'before bermuda bowl', 'bridge master champion', 'by joe pochron',
   'BBO1', 'BBO2', 'BBO3', 'BBO4', 'BBO5', 'BBO6', 'BBO7', 'BBO8', 'BBO9',
   '*BBO1', '*BBO2', '*BBO3', '*BBO4',
-  'de bridge', 'de vigraph',
+  'de bridge', 'de vigraph', 'dno_4',
   'eng comment', 'eng comments', 'eng comment in',
   'for 3rd pair', 'for pau', 'for the',
   'g_m_',
@@ -46,7 +47,7 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   aa abd aft afternoon anniversary annual as at av
   b! BBO bboz bt bv by
-  centenary celebrations combat compared
+  centenary celebrations closed combat compared
   des du duplicate duplicato
   eagles étoile eve evening extra
   from
