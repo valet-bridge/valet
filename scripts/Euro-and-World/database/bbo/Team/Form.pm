@@ -20,7 +20,7 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  Pairs => ["pair's", 'de parejas'],
+  Pairs => ["pair's", 'de parejas', 'pairs royale'],
   Teams => ['de equipos', 'dörtlü takýmlar']
 );
 

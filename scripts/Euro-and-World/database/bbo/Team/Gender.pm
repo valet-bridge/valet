@@ -34,7 +34,7 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  Open => [qw(libre libres terbuka opn oprn åben acik offene)],
+  Open => [qw(libre libres terbuka opn oprn åben acik offene opena)],
   Men => [qw(mens putra pa homme hommes varones)],
   Women => [qw(woman wemen womans womens womvn
     lady ladies ladie femme femmes damas dames damer dame damen 

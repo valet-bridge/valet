@@ -160,11 +160,12 @@ my @SINGLE_WORDS = qw(
   Jagodina Jaipur Jakarta Jalisco Jember Jessheim Jiamusi Jiangsu 
   Jiangyou Jianshe Jinchang Jincheng Jinjiang Jiujiang 
 
-  Kadirli Kalisz Kalundborg Kalyani Kanpur Karimun Karlsruhe Kashi 
-  Kastamonu Katowice Kayseri Kediri Kedungwaru Keelung Kesten Ketsch 
-  Kiel Kielce Kiev Kirkeby Kirklarelý Kirsehir Klabat Kocaeli Kolbotn 
-  Kolkata Konya Kornik Kosice Kota Koycegiz Köln Krakow Kristiansand 
-  Kudus Kunshan Kuopio Kusadasi Kütahya Kverndalen Kyustendil Kølabånn
+  Kadirli Kalisz Kalundborg Kalyani Kanpur Karimun Karlovo 
+  Karlsruhe Kashi Kastamonu Katowice Kayseri Kediri Kedungwaru 
+  Keelung Kesten Ketsch Kiel Kielce Kiev Kirkeby Kirklarelý Kirsehir 
+  Klabat Kocaeli Kolbotn Kolkata Konya Kornik Kosice Kota Koycegiz 
+  Köln Krakow Kristiansand Kudus Kunshan Kuopio Kusadasi Kütahya 
+  Kverndalen Kyustendil Kølabånn
 
   Langkat Lanzhou Lappeenranta Leiden Lerum Leszno Leuven Leverkusen 
   Lhokseumawe Liepaja Lille Lima Lincoln Linköping Lisbon Liushu 

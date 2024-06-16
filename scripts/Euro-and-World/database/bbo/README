@@ -1,56 +1,16 @@
-2024-06-11
+Write output from C++ of #qx, #hands, range of board #s, lines
+Check the .ref files that modify qx against this
+
+URL scraper from .lin
+
+Some integers have leading zero.
+
+Ambiguous:
+- ABF
+- Q perhaps
+
+Round 2 of 3: Pattern
+Team vs Team
 
 - Integer 03 = 2003, '10 = 2010
   Also just 23.  So 90..99, 00..29 I guess.
-
-- Peel off leading digits.
-
-There are several forms of teams.
-Should we try to get at it after the multi-match and before the split?
-Alternatively at the end, when we have a single chain,
-before splitting into separate chains.
-
-34383: TITLE Polish Kids (U15) vs Coaches
-
-Four chains
-
-Chain 0  1 COMPLETE: Polish
-Chain 0  1 COMPLETE: SINGLETON
-Chain 0  1 COMPLETE: TITLE_NATIONALITY
-Chain 1  1 COMPLETE: Kids
-Chain 1  1 COMPLETE: SINGLETON
-Chain 1  1 COMPLETE: TITLE_AGE
-Chain 2  1 COMPLETE: U15
-Chain 2  1 COMPLETE: SINGLETON
-Chain 2  1 COMPLETE: TITLE_AGE
-Chain 3  2     OPEN: vs|Coaches
-Chain 3  2     OPEN: UNKNOWN|UNKNOWN
-Chain 3  2     OPEN: |
-
-Three chains
-
-33688: TITLE Netherlands vs Israel
-
-Chain 0  1 COMPLETE: Netherlands
-Chain 0  1 COMPLETE: SINGLETON
-Chain 0  1 COMPLETE: TITLE_COUNTRY
-Chain 1  1     OPEN: vs
-Chain 1  1     OPEN: UNKNOWN
-Chain 1  1     OPEN:
-Chain 2  1 COMPLETE: Israel
-Chain 2  1 COMPLETE: SINGLETON
-Chain 2  1 COMPLETE: TITLE_COUNTRY
-
-
-Two chains 
-
-33693: TITLE Domwaluty_pl  vs   Alfa-Compensa Gdynia
-Chain 0  3     OPEN: Domwaluty|pl|vs
-Chain 0  3     OPEN: UNKNOWN|UNKNOWN|UNKNOWN
-Chain 0  3     OPEN: ||
-Chain 1  1 COMPLETE: Alfa-Compensa Gdynia
-Chain 1  1 COMPLETE: SINGLETON
-Chain 1  1 COMPLETE: TITLE_SPONSOR
-
-44919: Australia U25 vs Open Training Match
-43372: FRANCE vs NL_DEN

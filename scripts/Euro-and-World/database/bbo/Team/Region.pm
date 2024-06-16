@@ -62,6 +62,7 @@ my @MULTI_WORDS =
   'Nusa Tenggara Barat',
   'Pearl River',
   'Ren Shou',
+  'Rio de Janeiro State',
   'Samut Prakan',
   'Samut Sakhon',
   'South America',
@@ -100,7 +101,7 @@ my %MULTI_TYPOS =
   'Central Anatolia' => ['ic anadolu'],
   'Central Sulawesi' => ['sulawesi tengah'],
   'Cianjur Regency' => ['kab. cianjur', 'kab.cianjur'],
-  'Dogu Akdeniz' => ['akdeniz region'],
+  'Dogu Akdeniz' => ['dogu akdeniz region', 'akdeniz region'],
   'East Jakarta' => ['jakarta timur'],
   'East Java' => ['jawa timur', 'jatim'],
   'East Kalimantan' => ['kalimantan timur'],
@@ -147,7 +148,7 @@ my @SINGLE_WORDS = qw(
   Guizhou Gujarat
   Hainan Haixing Hatay Haugaland Hebei Hegyvidék Hubei Hunan
   Jharkhand Jiangsu Jilin
-  Kansai Karnataka Kawanua Kayong Kedungwaru Kepri Kerala 
+  Kansai Kanto Karnataka Kawanua Kayong Kedungwaru Kepri Kerala 
   Kinali Krabi
   Lampung Lebak Liaoning Liguria Lombok 
   Madeira Maharashtra Maluku Marmara Matopos Mercosur Midtsjælland 

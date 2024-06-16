@@ -26,7 +26,7 @@ my %MULTI_TYPOS =
 (
   'Closed Room' => ['closed rm'],
   'Elimination' => ['head to head'],
-  'Final' => ['gran final'],
+  'Final' => ['gran final', 'super final'],
   'Knock-out' => ['knock-outs', 'knock - out'],
   'Open Room' => ['open rm', 'room 1'],
   Playoff => ['play offs', 'play-off', 'play off'],
@@ -92,7 +92,7 @@ my %SINGLE_TYPOS =
   Rof12 => ['r12a', 'r12b'],
   Rof16 => ['r16a', 'r16b', 'r16c', 'r16d'],
   Round => ['ronda', 'runde', 'runda', 'rundy', 'rnd', 'r', 'ound',
-    'dg', 'devre'],
+    'dg', 'devre', 'tour', 'rd'],
   'Round-robin' => ['rr'],
   Semifinal => ['semifinals', 'semifinale', 'semifimals', 'semifi',
     'semif', 'semis', 'sf', 'sfa', 'sfb', 'semi'],
