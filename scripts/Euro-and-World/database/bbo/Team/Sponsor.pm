@@ -457,6 +457,7 @@ my %MULTI_TYPOS =
   'Ferðaskrifstofa Vesturlands' => ['ferðask. vesturl.',
     'ferðaskrifstofa ves'],
   'forumbridge.pl' => ['forumbridge_pl'],
+  FullBridge => ['full bridge'],
   'Garðar & Vélar' => ['garðar & vélar ehf.', 'garðar og vélar',
     'gardar og velar'],
   'Garðs Apotek' => ['garðs apótek', 'garðs apoótek', 'garps apótek'],
@@ -624,7 +625,7 @@ my @SINGLE_WORDS = qw(
   EcoSoft Effcontrol Eimskip Eksprompt Elastron Elektrika Elektrociepl
   Energetyk Enorma Enterprise ESSO Evertrust
 
-  Fatek Forta Frissan Funbridge
+  Fatek Forta Frissan FullBridge Funbridge
 
   GAMAX Gazprom Generali Geologi Genkad Gevalia Gillette Gomad 
   Gözgöz GSE
@@ -766,6 +767,7 @@ my %SINGLE_TYPOS =
   'Timah' => ['tima'],
   'Tricon Infotech' => ['tricon'],
   Tsingtao => ['tsingthao'],
+  'TTK Healthcare' => ['ttk'],
   'UTI Bank' => ['utibank'],
   Velbazhd => ['velbuzhd'],
   Videocon => ['videcon'],

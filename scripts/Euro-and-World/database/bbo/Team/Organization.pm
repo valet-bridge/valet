@@ -19,6 +19,7 @@ use TitleBBO;
 my @MULTI_WORDS =
 (
   'Bridge Great Britain',
+  'CBA WZ',
   'Indonesian Ministry of Youth and Sports',
   'Jilin Sheng Qiaopa',
   'Rajasthan Bridge Association',

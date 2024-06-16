@@ -607,6 +607,7 @@ my %COUNTRY_TO_SPONSOR =
   Bulgaria => ['Chateau Rossenovo', 'Gillette', 'Impress', 'Malkia', 
     'Mech-Ok', 'Sevtopolis', 'Struma', 'Unicat', 'Velbazhd',
     'Velbujd', 'Vito'],
+  Chile => ['fullbridge'],
   China => ['Beibao', 'Beidike', 'Beijing Capital', 'Beijing Cartoon', 
     'Beijing Dazhong', 'Beijing Evertrust', 'Beijing Huayuan', 
     'Beijing Hull Technology', 'Beijing Jinghua', 'Beijing Lawyers', 

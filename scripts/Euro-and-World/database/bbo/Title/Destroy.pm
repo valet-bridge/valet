@@ -52,7 +52,7 @@ my @SINGLE_WORDS = qw(
   eagles étoile eve evening extra
   from
   hawks het
-  im in
+  im in interland
   multievent
   naturalists nature
   popular
