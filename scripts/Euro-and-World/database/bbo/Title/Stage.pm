@@ -54,15 +54,12 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Elimination
-  Final Flight
-  Group
-  Match
-  Phase Playoff Pool
-  Rof6 Rof12 Rof16 Rof32 Rof64 Round
-  Qualifying Quarter Quarterfinal
+  Final
+  Playoff Pool
+  Rof6 Rof12 Rof16 Rof32 Rof64
+  Qualifying Quarterfinal
   Repechage
-  Section Semifinal Series Session Stage Stanza
-  Table
+  Semifinal 
 );
 
 my %SINGLE_TYPOS =
@@ -73,17 +70,13 @@ my %SINGLE_TYPOS =
     'finais', 'finalns', 'fina³', 'fianal', 'fianl', 'fianls',
     'fiinal', 'fina', 'fýnal', 'finalleri', 'fina³y', 'fn',
     'slutspil', 'slutspillet', 'superfinal', 'finalen'],
-  Flight => ['flt'],
-  Group => ['gruop'],
   'Knock-out' => ['knockour', 'knockout', 'ko'],
-  Match => ['m'],
   Phase => ['etap', 'fase'],
   Playoff => ['playoffs', 'po'],
   Pool => ['poule'],
   Qualifying => ['qualification', 'qualifications', 'qualif',
     'qualifier', 'qalifyng', 'qualy', 'qualifikation', 'qual',
     'qualifyng', 'qualýfýcatýon'],
-  quarter => ['qtr'],
   Quarterfinal => ['quarterfinals', 'quarterf', 'qualterfinal',
     'quarterfinala', 'quarterfinalb', 'quarterfinalc', 'quarterfinald',
     'quaterfinal', 'quaterfinals',
@@ -92,15 +85,9 @@ my %SINGLE_TYPOS =
   Repechage => ['repcharge', 'repercharge'],
   Rof12 => ['r12a', 'r12b'],
   Rof16 => ['r16a', 'r16b', 'r16c', 'r16d'],
-  Round => ['ronda', 'runde', 'runda', 'rundy', 'rnd', 'r', 'ound',
-    'dg', 'devre', 'tour', 'rd'],
   'Round-robin' => ['rr'],
   Semifinal => ['semifinals', 'semifinale', 'semifimals', 'semifi',
     'semif', 'semis', 'sf', 'sfa', 'sfb', 'semi'],
-  Series => ['seria'],
-  Session => ['seesion', 'part', 'sesja', 'sess'],
-  Stage => ['stg'],
-  Table => ['t', 'tisch']
 );
 
 
