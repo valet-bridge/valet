@@ -41,6 +41,7 @@ use Title::Person;
 use Title::Tname;
 use Title::Tword;
 use Title::Club;
+use Title::Iterator;
 use Title::Stage;
 use Title::Time;
 use Title::Destroy;
@@ -67,6 +68,7 @@ my @TAG_ORDER = qw(
   TITLE_AGE
   TITLE_SCORING
   TITLE_PERSON
+  TITLE_ITERATOR
   TITLE_STAGE
   TITLE_TIME
 );
@@ -103,6 +105,7 @@ sub init_hashes
   Title::Tname::set_hashes($method, 'TITLE_TNAME');
   Title::Tword::set_hashes($method, 'TITLE_TWORD');
   Title::Club::set_hashes($method, 'TITLE_CLUB');
+  Title::Iterator::set_hashes($method, 'TITLE_ITERATOR');
   Title::Stage::set_hashes($method, 'TITLE_STAGE');
   Title::Time::set_hashes($method, 'TITLE_TIME');
   Title::Destroy::set_hashes($method, 'TITLE_DESTROY');

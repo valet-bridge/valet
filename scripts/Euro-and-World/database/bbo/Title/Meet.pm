@@ -116,6 +116,7 @@ my %MULTI_TYPOS =
     'israel team cup', 'israel team of four cup'],
   'Jordan Bridge Festival' => ['jordab festival', 'jordan b_ festival',
     'jordan bridge f estival', 'jordan bridge tournament spring festival',
+    'jordan bridge tournament ( spring festival)',
     'jordan bridge tournament (spring festival)'],
   'Lozenets Bridge Festival' => ['bridge festival lozenets'],
   'Luczniczka Meeting' => ['meeting luczniczka'],

@@ -99,7 +99,7 @@ our @TITLE_REDUCTIONS =
     PATTERN =>
     [
       { CATEGORY => ['SINGLETON'],
-        FIELD => ['TITLE_STAGE', 'TITLE_FORM'] }
+        FIELD => ['TITLE_ITERATOR', 'TITLE_STAGE', 'TITLE_FORM'] }
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,
@@ -113,7 +113,7 @@ our @TITLE_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_STAGE'] },
+      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_ITERATOR', 'TITLE_STAGE'] },
       { CATEGORY => ['SINGLETON'], 
         FIELD => ['TITLE_LETTER', 'TITLE_INTEGER'] },
     ],
