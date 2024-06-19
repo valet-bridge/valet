@@ -44,6 +44,7 @@ use Title::Club;
 use Title::Iterator;
 use Title::Stage;
 use Title::Time;
+use Title::Particle;
 use Title::Destroy;
 
 my @TAG_ORDER = qw(
@@ -71,6 +72,7 @@ my @TAG_ORDER = qw(
   TITLE_ITERATOR
   TITLE_STAGE
   TITLE_TIME
+  TITLE_PARTICLE
 );
 
 my (%MULTI_WORDS, %MULTI_REGEX, %SINGLE_WORDS);
@@ -108,6 +110,7 @@ sub init_hashes
   Title::Iterator::set_hashes($method, 'TITLE_ITERATOR');
   Title::Stage::set_hashes($method, 'TITLE_STAGE');
   Title::Time::set_hashes($method, 'TITLE_TIME');
+  Title::Particle::set_hashes($method, 'TITLE_PARTICLE');
   Title::Destroy::set_hashes($method, 'TITLE_DESTROY');
 }
 

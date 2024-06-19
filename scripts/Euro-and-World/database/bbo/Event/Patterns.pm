@@ -83,6 +83,16 @@ sub process_swap
 }
 
 
+sub process_merge_01
+{
+  # R 3A.  Like process_merge02, but without the separator.
+  my ($chain, $match) = @_;
+
+  my $token = $chain->check_out($match);
+  $token->merge_counters('', $chain->check_out($match+1));
+}
+
+
 sub process_merge_02
 {
   # R 3A
@@ -90,6 +100,16 @@ sub process_merge_02
 
   my $token = $chain->check_out($match);
   $token->merge_counters('', $chain->check_out($match+2));
+}
+
+
+sub process_merge_0of1
+{
+  # 7_9, 7/9.  Like process_merge_0of1, but without the separator.
+  my ($chain, $match) = @_;
+
+  my $token = $chain->check_out($match);
+  $token->merge_counters('of', $chain->check_out($match+1));
 }
 
 
