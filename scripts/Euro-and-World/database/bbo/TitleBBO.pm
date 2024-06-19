@@ -251,8 +251,8 @@ sub fix_small_ordinal
     if ($ord >= 0 && $ord < 100)
     {
       $ord =~ s/^0+//; # Remove leading zeroes
-      $token->set_singleton('TITLE_ORDINAL', $ord);
-      # $token->set_ordinal_counter($ord);
+      # $token->set_singleton('TITLE_ORDINAL', $ord);
+      $token->set_ordinal_counter($ord);
       return 1;
     }
     else
@@ -357,16 +357,16 @@ sub study_part
     }
     else
     {
-      # $token->set_numeral_counter($part);
-      $token->set_singleton('TITLE_INTEGER', $part);
+      $token->set_numeral_counter($part);
+      # $token->set_singleton('TITLE_INTEGER', $part);
       $HIT_STATS{TITLE_INTEGER}++;
     }
     return;
   }
   elsif ($part =~ /^[A-HJa-h]$/)
   {
-    # $token->set_letter_counter($part);
-    $token->set_singleton('TITLE_LETTER', $part);
+    $token->set_letter_counter($part);
+    # $token->set_singleton('TITLE_LETTER', $part);
     $HIT_STATS{TITLE_LETTER}++;
     return;
   }
@@ -385,10 +385,18 @@ sub study_part
   if (defined $fix_event->{CATEGORY})
   {
     my $category = $fix_event->{CATEGORY};
-    if ($category eq 'NUMERAL' || $category eq 'ROMAN')
+    if ($category eq 'NUMERAL')
     {
-      $token->set_singleton('TITLE_' . $category, $fix_event->{VALUE});
-      $HIT_STATS{'TITLE_' . $category}++;
+      $token->set_numeral_counter($fix_event->{VALUE});
+      # $token->set_singleton('TITLE_NUMERAL', $fix_event->{VALUE});
+      $HIT_STATS{TITLE_NUMERAL}++;
+      return;
+    }
+    elsif ($category eq 'ROMAN')
+    {
+      $token->set_roman_counter($fix_event->{VALUE});
+      # $token->set_singleton('TITLE_ROMAN', $fix_event->{VALUE});
+      $HIT_STATS{TITLE_ROMAN}++;
       return;
     }
   }

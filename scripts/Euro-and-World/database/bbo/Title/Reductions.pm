@@ -82,8 +82,8 @@ our @TITLE_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => ['SINGLETON'], 
-        FIELD => ['TITLE_ROMAN', 'TITLE_ORDINAL', 'TITLE_LETTER'] }
+      { CATEGORY => ['COUNTER'], 
+        FIELD => ['ROMAN', 'ORDINAL', 'LETTER'] }
     ],
     ANCHOR => 'BEGIN',
     KEEP_LAST => 0,
@@ -114,8 +114,8 @@ our @TITLE_REDUCTIONS =
     PATTERN =>
     [
       { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_ITERATOR'] },
-      { CATEGORY => ['SINGLETON'], 
-        FIELD => ['TITLE_LETTER', 'TITLE_INTEGER'] },
+      { CATEGORY => ['COUNTER'], 
+        FIELD => ['LETTER', 'NUMERAL'] },
     ],
     ANCHOR => 'END',
     KEEP_LAST => 1,
@@ -130,7 +130,7 @@ our @TITLE_REDUCTIONS =
     PATTERN =>
     [
       { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_TIME'] },
-      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_INTEGER'] },
+      { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL'] },
     ],
     ANCHOR => 'END',
     KEEP_LAST => 1,
