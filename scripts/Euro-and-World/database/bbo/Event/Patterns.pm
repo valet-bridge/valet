@@ -76,6 +76,17 @@ sub process_month_year
 }
 
 
+sub process_matchup
+{
+  # Team1 vs Team2.
+  my ($chain, $match) = @_;
+
+  # We may have interpreted 'v' as a Roman V.
+  my $token = $chain->check_out($match+1);
+  $token->set_singleton('TITLE_PARTICLE', 'vs');
+}
+
+
 sub process_swap
 {
   my ($chain, $match) = @_;

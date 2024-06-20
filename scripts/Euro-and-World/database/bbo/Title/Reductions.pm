@@ -50,25 +50,55 @@ our @TITLE_REDUCTIONS =
     COMPLETION => 1
   },
 
-  # Lots of fields anywhere:
-  # - TNAME, TWORD, MEET, SPONSOR, PERSON, CLUB, CAPTAIN
-  # - Also YEAR
-  # - ZONE, COUNTRY, NATIONALITY, REGION, CITY, QUARTER
-  # - GENDER, AGE
-  # - ORGANIZATION
-  # - SCORING
+  # Some preliminary splitting on fields that should not be part of
+  # stray team names in the title.
   {
     PATTERN =>
     [
       { CATEGORY => ['SINGLETON'], 
-        FIELD => ['TITLE_TNAME', 'TITLE_TWORD',
-          'TITLE_MEET', 'TITLE_SPONSOR', 'TITLE_PERSON', 'TITLE_CAPTAIN',
-          'TITLE_CLUB',
+        FIELD => ['TITLE_TNAME', 'TITLE_TWORD', 'TITLE_MEET', 
+          'TITLE_SPONSOR', 'TITLE_PERSON',
           'TITLE_YEAR',
-          'TITLE_ZONE', 'TITLE_COUNTRY', 'TITLE_NATIONALITY',
+          'TITLE_ZONE', 'TITLE_NATIONALITY',
           'TITLE_REGION', 'TITLE_CITY', 'TITLE_QUARTER',
           'TITLE_GENDER', 'TITLE_AGE',
           'TITLE_ORGANIZATION', 'TITLE_SCORING'] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&Event::Patterns::process_general,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
+  # Team match-ups that really shouldn't be in the title.
+  {
+    PATTERN =>
+    [
+      { CATEGORY => ['SINGLETON'], 
+        FIELD => ['TITLE_CAPTAIN', 'TITLE_CLUB', 'TITLE_COUNTRY'] },
+      { CATEGORY => ['SINGLETON', 'COUNTER'], 
+        FIELD => ['TITLE_PARTICLE', 'ROMAN'],
+        VALUE => ['vs', '5'] },
+      { CATEGORY => ['SINGLETON'], 
+        FIELD => ['TITLE_CAPTAIN', 'TITLE_CLUB', 'TITLE_COUNTRY'] }
+    ],
+    ANCHOR => 'END',
+    KEEP_LAST => 2,
+    METHOD => \&Event::Patterns::process_matchup,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
+
+  # Splitting on fields that could be part of stray team names.
+  {
+    PATTERN =>
+    [
+      { CATEGORY => ['SINGLETON'], 
+        FIELD => ['TITLE_CAPTAIN', 'TITLE_CLUB', 'TITLE_COUNTRY'] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
@@ -94,6 +124,7 @@ our @TITLE_REDUCTIONS =
   },
 
   # A single stage (without a number).
+  # - SCORING
   # Also a form.
   {
     PATTERN =>

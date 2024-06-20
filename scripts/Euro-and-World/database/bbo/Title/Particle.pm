@@ -24,6 +24,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   of
+  vs
 );
 
 my %SINGLE_TYPOS =
