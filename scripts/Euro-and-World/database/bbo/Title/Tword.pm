@@ -134,7 +134,6 @@ my %MULTI_TYPOS =
   Interuniversity => ['inter-university', 'inter-universities'],
   Invitational => ['invitasi terbatas'],
   'Junior/Pro' => ['jr/pro'],
-  Match => ['mecz o'],
   Memorial => ['pro memoriam'],
   'Mike Lawrence Exhibition' => ['m lawrence exhibiton'],
   'Mixed Swiss Teams' => ['mixed teams swiss'],
@@ -185,11 +184,11 @@ my @SINGLE_WORDS = qw(
   Goulash
   Interclub Intercity International Interport Interprovince Interstate 
   Interuniversity Invitational
-  Match Memorial
+  Memorial
   National
   Online
   Pool
-  Segment Session Simultaneous
+  Simultaneous
   Tournament Training Trial Trophy
   University
 );
@@ -245,9 +244,7 @@ my %SINGLE_TYPOS =
   'National Senior Teams' => ['nst'],
   'National Women Teams' => ['nwt'],
   'Premier League' => ['premieleague'],
-  Segment => ['seg'],
   'Senior High School' => ['shs'],
-  Session => ['sesje'],
   Simultaneous => ['simultaneo'],
   'Spring National Open Teams' => ['snot'],
   'Super League' => ['superleague', 'superlige', 'superlig©',

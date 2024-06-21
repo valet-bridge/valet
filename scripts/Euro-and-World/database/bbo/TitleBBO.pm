@@ -415,22 +415,48 @@ sub split_on_some_numbers
 {
   my ($text) = @_;
 
+  if ($text =~ /1[\/_](\d)\s+final/i)
+  {
+    my $n = $1;
+    warn "Haven't learned this yet: $text" unless $n == 2 || $n == 4;
+    $text =~ s/1\/4 finale*/quarterfinal/;
+    $text =~ s/1\/2 finale*/semifinal/;
+  }
+
+  # Years.
+  $text =~ s/20(\d\d)\/(\d\d)/20$1-20$2/;
   $text =~ s/(20\d\d)/ $1 /g;
   $text =~ s/'(9\d)/19$1/g;
   $text =~ s/'(0\d)/20$1/g;
-  $text =~ s/'(1\d)/201$1/g;
-  $text =~ s/^(\d+)th([a-z])/$1th $2/i;
+  $text =~ s/'(1\d)/20$1/g;
+  $text =~ s/\b(0\d)\b/20$1/g;
+
+  # Nameless teams.
   $text =~ s/#\d+\s+vs*\s+#*\d+//;
   $text =~ s/tm\s+\d+\s+vs\s+tm\s+\d+//i;
+  $text =~ s/team\s+\d+\s+vs\s+team\s+\d+//i;
+  $text =~ s/- \d+ v \d+//i;
+
+  $text =~ s/^(\d+)th([a-z])/$1th $2/i;
   $text =~ s/^([01]\d)([A-SU-Z])/20$1 $2/; # Kludge, avoid th
   $text =~ s/\b([1-9])([A-D])\b/$1 $2/gi;
   $text =~ s/\b(\d)of(\d)\b/$1 of $2/g;
+  $text =~ s/(\d)\/(\d)/$1 of $2/g;
+  
+  if ($text =~ /(\d+)_(\d+)/ && $1 <= $2)
+  {
+    $text =~ s/(\d+)_(\d+)/$1 of $2/;
+  }
+
+# my $t = $text;
+# print "XERE $t | $text\n" unless $t eq $text;
 
   # Doesn't really belong here.
   $text =~ s/pokal([a-z])/pokal $1/i;
   $text =~ s/-th\b/th/g;
   $text =~ s/(\d) th\b/$1th/g;
   $text =~ s/2 nd\b/2nd/g;
+  $text =~ s/\bUSA[12]/USA/g;
 
   return $text;
 }

@@ -57,8 +57,7 @@ our @TITLE_REDUCTIONS =
     [
       { CATEGORY => ['SINGLETON'], 
         FIELD => ['TITLE_TNAME', 'TITLE_TWORD', 'TITLE_MEET', 
-          'TITLE_SPONSOR', 'TITLE_PERSON',
-          'TITLE_YEAR',
+          'TITLE_PERSON', 'TITLE_YEAR',
           'TITLE_ZONE', 'TITLE_NATIONALITY',
           'TITLE_REGION', 'TITLE_CITY', 'TITLE_QUARTER',
           'TITLE_GENDER', 'TITLE_AGE',
@@ -77,12 +76,14 @@ our @TITLE_REDUCTIONS =
     PATTERN =>
     [
       { CATEGORY => ['SINGLETON'], 
-        FIELD => ['TITLE_CAPTAIN', 'TITLE_CLUB', 'TITLE_COUNTRY'] },
+        FIELD => ['TITLE_CAPTAIN', 'TITLE_CLUB', 'TITLE_COUNTRY',
+          'TITLE_SPONSOR'] },
       { CATEGORY => ['SINGLETON', 'COUNTER'], 
         FIELD => ['TITLE_PARTICLE', 'ROMAN'],
         VALUE => ['vs', '5'] },
       { CATEGORY => ['SINGLETON'], 
-        FIELD => ['TITLE_CAPTAIN', 'TITLE_CLUB', 'TITLE_COUNTRY'] }
+        FIELD => ['TITLE_CAPTAIN', 'TITLE_CLUB', 'TITLE_COUNTRY',
+          'TITLE_SPONSOR'] }
     ],
     ANCHOR => 'END',
     KEEP_LAST => 2,
@@ -92,13 +93,14 @@ our @TITLE_REDUCTIONS =
     COMPLETION => 1
   },
 
-
-  # Splitting on fields that could be part of stray team names.
+  # Splitting on other fields, including some that could be part of 
+  # stray team names.
   {
     PATTERN =>
     [
       { CATEGORY => ['SINGLETON'], 
-        FIELD => ['TITLE_CAPTAIN', 'TITLE_CLUB', 'TITLE_COUNTRY'] }
+        FIELD => ['TITLE_CAPTAIN', 'TITLE_CLUB', 'TITLE_COUNTRY',
+          'TITLE_SPONSOR', 'TITLE_FORM'] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
@@ -123,14 +125,46 @@ our @TITLE_REDUCTIONS =
     COMPLETION => 1
   },
 
+  # n of m
+  {
+    PATTERN =>
+    [
+      { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL', 'ORDINAL'] },
+      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_PARTICLE'],
+        VALUE => ['of'] },
+      { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL', 'ORDINAL'] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&Event::Patterns::process_merge_0of2,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
+
+  # A number followed by a letter at the end.
+  {
+    PATTERN =>
+    [
+      { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL'] },
+      { CATEGORY => ['COUNTER'], FIELD => ['LETTER'] },
+    ],
+    ANCHOR => 'END',
+    KEEP_LAST => 0,
+    METHOD => \&Event::Patterns::process_merge_01,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
   # A single stage (without a number).
   # - SCORING
   # Also a form.
   {
     PATTERN =>
     [
-      { CATEGORY => ['SINGLETON'],
-        FIELD => ['TITLE_STAGE', 'TITLE_FORM'] }
+      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_STAGE', 'TITLE_FORM'] }
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,
@@ -140,13 +174,14 @@ our @TITLE_REDUCTIONS =
     COMPLETION => 1
   },
 
-  # An iterator followed by a letter or an integer at the end.
+  # An iterator or stage followed by a letter or an integer at the end.
   {
     PATTERN =>
     [
-      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_ITERATOR'] },
+      { CATEGORY => ['SINGLETON'], 
+        FIELD => ['TITLE_ITERATOR', 'TITLE_STAGE'] },
       { CATEGORY => ['COUNTER'], 
-        FIELD => ['LETTER', 'NUMERAL'] },
+        FIELD => ['LETTER', 'NUMERAL', 'N_OF_N', 'NL'] },
     ],
     ANCHOR => 'END',
     KEEP_LAST => 1,
@@ -155,6 +190,38 @@ our @TITLE_REDUCTIONS =
     SPLIT_BACK => 0,
     COMPLETION => 1
   },
+
+  # Or the other way round, but with an ordinal.
+  {
+    PATTERN =>
+    [
+      { CATEGORY => ['COUNTER'], FIELD => ['ORDINAL'] },
+      { CATEGORY => ['SINGLETON'], 
+        FIELD => ['TITLE_ITERATOR', 'TITLE_STAGE'] },
+    ],
+    ANCHOR => 'END',
+    KEEP_LAST => 1,
+    METHOD => \&Event::Patterns::process_general,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
+  # A blank stage.
+  {
+    PATTERN =>
+    [
+      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_STAGE'] },
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 0,
+    METHOD => \&Event::Patterns::process_general,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
+
 
   # A time indication followed by an integer at the end.
   {
