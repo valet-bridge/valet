@@ -33,10 +33,13 @@ my @SINGLE_WORDS = qw(
   Quarter 
   Rof Round
   Room Rof
+  S
   Section Segment Series Session Set Stage Stanza
   Table Tempo Top
   Week Weekend
 );
+
+# S is either of several iterators to be disambiguated later.
 
 my %SINGLE_TYPOS =
 (

@@ -27,6 +27,7 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   Individual
   Pairs
+  Swiss
   Teams
 );
 

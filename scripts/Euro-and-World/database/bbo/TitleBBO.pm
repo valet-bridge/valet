@@ -457,6 +457,7 @@ sub split_on_some_numbers
   $text =~ s/(\d) th\b/$1th/g;
   $text =~ s/2 nd\b/2nd/g;
   $text =~ s/\bUSA[12]/USA/g;
+  $text =~ s/II-nd/2nd/g;
 
   return $text;
 }

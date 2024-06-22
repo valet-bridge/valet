@@ -3,14 +3,9 @@ Check the .ref files that modify qx against this
 
 URL scraper from .lin
 
-Some integers have leading zero.
-
 Ambiguous:
 - ABF
-- Q perhaps
 
-Round 2 of 3: Pattern
-Team vs Team
-
-- Integer 03 = 2003, '10 = 2010
-  Also just 23.  So 90..99, 00..29 I guess.
+Recognize 2007-07-09 as DATE
+DATE to DATE could become DATE_START DATE_END without 'to'
+II-nd -> 2nd
