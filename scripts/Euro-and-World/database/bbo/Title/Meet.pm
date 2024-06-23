@@ -147,7 +147,8 @@ my %MULTI_TYPOS =
   'Turkish-Greek Friendship Festival' => [
     'greek-turkish friendship festival'],
   'Varna Bridge Festival' => ['international bridge festival varna'],
-  'VVE Beheer Bridge Week' => ['vve-beheer bridgeweek'],
+  'VVE Beheer Bridge Week' => ['vve-beheer bridgeweek',
+    'vve-beheer bridge week'],
   'Wachauer Bridge Festival' => ['wachauer bridgefestival'],
   'West Java Regional' => ['west java regional sport games',
     'west java regional games', 'west java regional spots event',

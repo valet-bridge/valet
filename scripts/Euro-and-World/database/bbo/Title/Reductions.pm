@@ -94,13 +94,13 @@ our @TITLE_REDUCTIONS =
     [
       { CATEGORY => ['SINGLETON'], 
         FIELD => ['TITLE_CAPTAIN', 'TITLE_CLUB', 'TITLE_COUNTRY',
-          'TITLE_SPONSOR'] },
+          'TITLE_REGION', 'TITLE_CITY', 'TITLE_SPONSOR'] },
       { CATEGORY => ['SINGLETON', 'COUNTER'], 
         FIELD => ['TITLE_PARTICLE', 'ROMAN'],
         VALUE => ['vs', '5'] },
       { CATEGORY => ['SINGLETON'], 
         FIELD => ['TITLE_CAPTAIN', 'TITLE_CLUB', 'TITLE_COUNTRY',
-          'TITLE_SPONSOR'] }
+          'TITLE_REGION', 'TITLE_CITY', 'TITLE_SPONSOR'] }
     ],
     ANCHOR => 'END',
     KEEP_LAST => 2,
@@ -127,17 +127,17 @@ our @TITLE_REDUCTIONS =
     COMPLETION => 1
   },
 
-  # A leading roman numeral, ordinal or letter.
+  # A leading ordinal with an iterator following it.
   {
     PATTERN =>
     [
-      { CATEGORY => ['COUNTER'], 
-        FIELD => ['ROMAN', 'ORDINAL', 'LETTER'] }
+      { CATEGORY => ['COUNTER'], FIELD => ['ORDINAL'] },
+      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_ITERATOR'] }
     ],
     ANCHOR => 'BEGIN',
-    KEEP_LAST => 0,
+    KEEP_LAST => 1,
     METHOD => \&Event::Patterns::process_general,
-    SPLIT_FRONT => 1,
+    SPLIT_FRONT => 0,
     SPLIT_BACK => 1,
     COMPLETION => 1
   },
@@ -158,7 +158,6 @@ our @TITLE_REDUCTIONS =
     SPLIT_BACK => 1,
     COMPLETION => 1
   },
-
 
   # A number followed by a letter at the end.
   {
@@ -191,7 +190,23 @@ our @TITLE_REDUCTIONS =
     COMPLETION => 1
   },
 
-  # An iterator or stage followed by a letter or an integer at the end.
+  # A numeral or ordinal followed by an iterator/stage at the end.
+  {
+    PATTERN =>
+    [
+      { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL', 'ORDINAL'] },
+      { CATEGORY => ['SINGLETON'], 
+        FIELD => ['TITLE_ITERATOR', 'TITLE_STAGE'] },
+    ],
+    ANCHOR => 'END',
+    KEEP_LAST => 1,
+    METHOD => \&Event::Patterns::process_general,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
+  # An iterator or stage followed by a letter or an integer.
   {
     PATTERN =>
     [
@@ -208,19 +223,18 @@ our @TITLE_REDUCTIONS =
     COMPLETION => 1
   },
 
-  # Or the other way round, but with an ordinal.
+  # A leading roman numeral, ordinal or letter.
   {
     PATTERN =>
     [
-      { CATEGORY => ['COUNTER'], FIELD => ['ORDINAL'] },
-      { CATEGORY => ['SINGLETON'], 
-        FIELD => ['TITLE_ITERATOR', 'TITLE_STAGE'] },
+      { CATEGORY => ['COUNTER'], 
+        FIELD => ['ROMAN', 'ORDINAL', 'LETTER'] }
     ],
-    ANCHOR => 'END',
-    KEEP_LAST => 1,
+    ANCHOR => 'BEGIN',
+    KEEP_LAST => 0,
     METHOD => \&Event::Patterns::process_general,
     SPLIT_FRONT => 1,
-    SPLIT_BACK => 0,
+    SPLIT_BACK => 1,
     COMPLETION => 1
   },
 

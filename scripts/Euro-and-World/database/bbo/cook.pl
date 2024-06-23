@@ -75,7 +75,7 @@ while ($line = <$fh>)
     next;
   }
 
-  if ($chunk{BBONO} == 1206)
+  if ($chunk{BBONO} == 4227)
   {
     print "HERE\n";
   }

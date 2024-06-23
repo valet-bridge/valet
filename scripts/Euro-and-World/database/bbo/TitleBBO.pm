@@ -427,7 +427,6 @@ sub split_on_some_numbers
   }
 
   # Years.
-  $text =~ s/20(\d\d)[\/-](\d\d)/20$1-20$2/;
   $text =~ s/'(9\d)/19$1/g;
   $text =~ s/'(0\d)/20$1/g;
   $text =~ s/'(1\d)/20$1/g;
@@ -442,9 +441,8 @@ sub split_on_some_numbers
   $text =~ s/^([01]\d)([A-SU-Z])/20$1 $2/; # Kludge, avoid th
   $text =~ s/\b([1-9])([A-D])\b/$1 $2/gi;
   $text =~ s/\b(\d)of(\d)\b/$1 of $2/g;
-  $text =~ s/(\d)\/(\d)/$1 of $2/g;
   
-  if ($text =~ /(\d+)_(\d+)/ && $1 <= $2)
+  if ($text =~ /(\d+)_(\d+)/ && $1 <= $2 && $1 < 1990)
   {
     $text =~ s/(\d+)_(\d+)/$1 of $2/;
   }
@@ -490,32 +488,62 @@ sub split_on_multi
 {
   my ($text, $parts, $tags) = @_;
 
-  @$parts = grep { $_ ne '' } split /(\d\d\d\d-\d\d-\d\d)/, $text;
+  @$parts = split / - /, $text;
+  @$tags = (0) x (1 + $#$parts);
 
-  if ($#$parts > 0)
+  for my $i (reverse 0 .. $#$parts)
   {
-    for my $i (0 .. $#$parts)
+    my @date_parts = 
+      grep { $_ ne '' } split /(\d\d\d\d[-_]\d\d[-_]\d\d)/, $parts->[$i];
+
+    if ($#date_parts > 0)
     {
-      if ($parts->[$i] =~ /^\d\d\d\d-\d\d-\d\d$/)
+      splice(@$parts, $i+1, 0, (0) x $#date_parts);
+      splice(@$tags, $i+1, 0, (0) x $#date_parts);
+
+      for my $j (0 .. $#date_parts)
       {
-        $tags->[$i] = 'TITLE_DATE';
-        $HIT_STATS{TITLE_DATE}++;
-      }
-      else
-      {
-        # Couldn't do this sooner, as it would destroy the date.
-        $parts->[$i] =~ s/\b(0\d)\b/20$1/g;
-        $parts->[$i] =~ s/(20\d\d)/ $1 /g;
-        $tags->[$i] = 0;
+        if ($date_parts[$j] =~ /^\d\d\d\d-\d\d-\d\d$/)
+        {
+          $parts->[$i+$j] = $date_parts[$j];
+          $tags->[$i+$j] = 'TITLE_DATE';
+          $HIT_STATS{TITLE_DATE}++;
+        }
+        else
+        {
+          # Couldn't do this sooner, as it would destroy the date.
+          my $t = $date_parts[$j];
+
+          $t =~ s/20(\d\d)[\/-](\d\d)/20$1-20$2/;
+          $t =~ s/(\d)\/(\d)/$1 of $2/g;
+          $t =~ s/\b(0\d)\b/20$1/g;
+          $t =~ s/(20\d\d)/ $1 /g;
+
+          $parts->[$i+$j] = $t;
+          $tags->[$i+$j] = 0;
+        }
       }
     }
-  }
-  else
-  {
-    $text =~ s/\b(0\d)\b/20$1/g;
-    $text =~ s/(20\d\d)/ $1 /g;
-    $parts->[0] = $text;
-    $tags->[0] = 0;
+    else
+    {
+      my $t = $parts->[$i];
+
+      $t =~ s/20(\d\d)[\/-](\d\d)\b/20$1-20$2/;
+      $t =~ s/(\d)\/(\d)/$1 of $2/g;
+      $t =~ s/\b(0\d)\b/20$1/g;
+      $t =~ s/(20\d\d)/ $1 /g;
+
+      $parts->[$i] = $t;
+      $tags->[$i] = 0;
+    }
+
+    if ($i > 0)
+    {
+      # Make sure that elements on different sides of the ' - ' end up
+      # in different chains.
+      splice(@$parts, $i, 0, '');
+      splice(@$tags, $i, 0, 'TITLE_DESTROY');
+    }
   }
 
   for my $tag (@TAG_ORDER)
@@ -722,6 +750,34 @@ sub post_process_title
   my ($chains) = @_;
 
   post_process_first_numeral($chains);
+
+  for my $chain (@$chains)
+  {
+    next unless $chain->status() eq 'OPEN' && $chain->last() == 0;
+    my $token = $chain->check_out(0);
+    my $cat = $token->category();
+    my $field = $token->field();
+
+    if ($cat eq 'COUNTER' && 
+        ($field eq 'LETTER' || $field eq 'N_OF_N' || $field eq 'ROMAN'))
+    {
+      $chain->complete_if_last_is(0, 'DESTROY');
+    }
+    elsif ($cat eq 'SINGLETON' &&
+        ($field eq 'TITLE_TIME'))
+    {
+      $chain->complete_if_last_is(0, 'COMPLETE');
+    }
+    elsif ($cat eq 'SINGLETON' &&
+        ($field eq 'TITLE_AMBIGUOUS'))
+    {
+      $chain->complete_if_last_is(0, 'DESTROY');
+    }
+    else
+    {
+      print "ZZZ ", $token->category(), ", ", $token->field(), "\n";
+    }
+  }
 }
 
 1;

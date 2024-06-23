@@ -8,7 +8,15 @@ Deal with ambiguous Q, O, S, Q
 Nationality should be such, and in Matrix we map it to the country
 if we wish. (43275)
 
-
-Recognize 2007-07-09 as DATE
 DATE to DATE could become DATE_START DATE_END without 'to'
-II-nd -> 2nd
+
+---
+
+TITLE_ITERATOR as single token in chain
+- preceded by GENDER, AGE, FORM, DESTROY, TWORD, TNAME as last chain or
+  before DESTROY (element = KILLED chain)
+- COUNTER N_OF_N, LETTER should probably take (chain of 1 element)
+
+SINGLETON TITLE_PARTICLE
+Many vs complexes
+Leading VS some times
