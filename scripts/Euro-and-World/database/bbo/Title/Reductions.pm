@@ -206,12 +206,12 @@ our @TITLE_REDUCTIONS =
     COMPLETION => 1
   },
 
-  # An iterator or stage followed by a letter or an integer.
+  # An iterator, stage or ambiguous followed by a letter or an integer.
   {
     PATTERN =>
     [
       { CATEGORY => ['SINGLETON'], 
-        FIELD => ['TITLE_ITERATOR', 'TITLE_STAGE'] },
+        FIELD => ['TITLE_ITERATOR', 'TITLE_STAGE', 'TITLE_AMBIGUOUS'] },
       { CATEGORY => ['COUNTER'], 
         FIELD => ['LETTER', 'NUMERAL', 'N_OF_N', 'NL'] },
     ],

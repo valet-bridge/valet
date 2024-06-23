@@ -38,7 +38,7 @@ my %MULTI_TYPOS =
     'quater final', 'quater finals', 'round of 8', 'rd of 8', 'r of 8',
     'æwieræfina³y', 'qtr finals', 'phase à 8', 'quoter-finals'],
   Rof6 => ['round of 6'],
-  Rof12 => ['round of 12'],
+  Rof12 => ['round of 12', 'rnd of12'],
   Rof14 => ['phase à 14'],
   Rof16 => ['round of 16', 'rd of 16', 'phase à 16', 'phase à16',
     'rd 0f 16', 'phase 16', 'rnd of 16'],
