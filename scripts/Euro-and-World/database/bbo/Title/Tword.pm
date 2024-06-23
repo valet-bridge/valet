@@ -145,7 +145,7 @@ my %MULTI_TYPOS =
   Memorial => ['pro memoriam', 'memorial of'],
   'Mike Lawrence Exhibition' => ['m lawrence exhibiton'],
   'Mixed Swiss Teams' => ['mixed teams swiss'],
-  'Mixed Teams' => ['du 4 mixte'],
+  'Mixed Teams' => ['du 4 mixte', 'mixed/4'],
   'Mixed Tournament' => ['turniej kongresowy mixty'],
   'National Pairs Championship' => ["nacional pares por imp's",
     'nacional pares imps', 'nacional pares por imps'],

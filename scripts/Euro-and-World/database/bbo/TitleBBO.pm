@@ -745,11 +745,9 @@ sub post_process_first_numeral
 }
 
 
-sub post_process_title
+sub post_process_stand_alone_singles
 {
   my ($chains) = @_;
-
-  post_process_first_numeral($chains);
 
   for my $chain (@$chains)
   {
@@ -778,6 +776,47 @@ sub post_process_title
       print "ZZZ ", $token->category(), ", ", $token->field(), "\n";
     }
   }
+}
+
+
+sub post_process_stand_alone_doubles
+{
+  my ($chains) = @_;
+
+  # Check for a last chain with two numerals, of which the latter is
+  # 1 or 2 and the former is larger.
+  my $chain = $chains->[-1];
+  if ($chain->status() eq 'OPEN' && $chain->last() == 1)
+  {
+    my $token0 = $chain->check_out(0);
+    if ($token0->category() eq 'COUNTER' && $token0->field() eq 'NUMERAL')
+    {
+      my $token1 = $chain->check_out(1);
+      if ($token1->category() eq 'COUNTER' && $token1->field() eq 'NUMERAL')
+      {
+        if ($token0->value() > $token1->value() && $token1->value() < 3)
+        {
+          my $chain2 = Chain->new();
+          $chain->copy_from(1, $chain2);
+          $chain->truncate_directly_before(1);
+          $chain->complete_if_last_is(0, 'COMPLETE');
+          $chain2->complete_if_last_is(0, 'COMPLETE');
+          splice(@$chains, 1 + $#$chains, 0, $chain2);
+        }
+      }
+    }
+  }
+}
+
+
+sub post_process_title
+{
+  my ($chains) = @_;
+
+  post_process_first_numeral($chains);
+  post_process_stand_alone_singles($chains);
+  post_process_stand_alone_doubles($chains);
+
 }
 
 1;

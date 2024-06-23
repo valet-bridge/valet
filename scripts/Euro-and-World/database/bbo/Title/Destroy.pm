@@ -47,11 +47,12 @@ my %MULTI_TYPOS =
   'bridge master champion' => ['bridge master champions'],
   'extra' => ['extra match'],
   'for Pau' => ['pour pau'],
+  retour => ['match retour']
 );
 
 my @SINGLE_WORDS = qw(
   aa abd aft afternoon anniversary annual as at av
-  b! BBO bboz bt bv by
+  b! BBO bb05 bboz bt bv by
   centenary celebrations closed combat compared
   de des du duplicate duplicato
   eagles elite étoile eve evening ew extra
