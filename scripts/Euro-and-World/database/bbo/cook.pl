@@ -75,7 +75,7 @@ while ($line = <$fh>)
     next;
   }
 
-  if ($chunk{BBONO} == 4227)
+  if ($chunk{BBONO} == 10608)
   {
     print "HERE\n";
   }
@@ -121,6 +121,9 @@ while ($line = <$fh>)
 
     study_title($chunk{TITLE}, $chain_title, \$unknown_titles, 
       $chunk{BBONO});
+
+    pre_process_title(\@chains_title);
+
     Event::Patterns::process_patterns(\@TITLE_REDUCTIONS, \@chains_title, 
       0, \@reduction_title_stats);
 

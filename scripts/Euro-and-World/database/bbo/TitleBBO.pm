@@ -10,7 +10,8 @@ package TitleBBO;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(init_hashes set_overall_hashes 
-  study_title post_process_title print_title_stats   all_used);
+  study_title pre_process_title post_process_title print_title_stats   
+  all_used);
 
 use lib '.';
 use lib './Team';
@@ -696,6 +697,114 @@ sub all_used
       {
         print "$key: $entry\n";
       }
+    }
+  }
+}
+
+
+sub pre_process_title
+{
+  my ($chains) = @_;
+
+  # At this point there is a single chain.
+  # It's easier to solve for the team vs team chain here.
+
+  my $chain = $chains->[0];
+  return unless $chain->last() >= 2;
+  my $cno = 0;
+
+  my $token = $chain->check_out(0);
+  if ($token->category() eq 'SINGLETON' &&
+      $token->field() eq 'TITLE_PARTICLE' &&
+      $token->value() eq 'vs')
+  {
+    # A leading VS happens a few times.
+    my $chain2 = Chain->new();
+    $chain->copy_from(1, $chain2);
+    $chain->truncate_directly_before(1);
+    $chain->complete_if_last_is(0, 'DESTROY');
+    splice(@$chains, 1, 0, $chain2);
+
+    $cno = 1;
+    $chain = $chain2;
+    return unless $chain->last() >= 2;
+  }
+
+  for my $i (1 .. -1 + $chain->last())
+  {
+    my $token = $chain->check_out($i);
+    next unless $token->category() eq 'SINGLETON' &&
+      $token->field() eq 'TITLE_PARTICLE' &&
+      $token->value() eq 'vs';
+
+    # If the chain does not go all the way to the front, split.
+    my $first = $i;
+    for my $j (reverse 0 .. $i-1)
+    {
+      my $token0 = $chain->check_out($j);
+      my $cat = $token0->category();
+      my $field = $token0->field();
+      if ($cat eq 'SINGLETON' &&
+        ($field eq 'TITLE_COUNTRY' || $field eq 'TITLE_CITY' ||
+         $field eq 'TITLE_GENDER' || $field eq 'TITLE_AGE' ||
+         $field eq 'TITLE_CAPTAIN'))
+      {
+        $first = $j;
+      }
+      else
+      {
+        last;
+      }
+    }
+
+    # If the chain does not go all the way to the back, split.
+    my $last = $i;
+    for my $j ($i+1 .. $chain->last())
+    {
+      my $token1 = $chain->check_out($j);
+      my $cat = $token1->category();
+      my $field = $token1->field();
+      if ($cat eq 'SINGLETON' &&
+        ($field eq 'TITLE_COUNTRY' || $field eq 'TITLE_CITY' ||
+         $field eq 'TITLE_GENDER' || $field eq 'TITLE_AGE' ||
+         $field eq 'TITLE_CAPTAIN'))
+      {
+        $last = $j;
+      }
+      else
+      {
+        last;
+      }
+    }
+
+    if ($first < $i && $last > $i)
+    {
+      if ($first > 0)
+      {
+        my $chain1 = Chain->new();
+        $chain->copy_from($first, $chain1);
+        $chain->delete($first, $chain->last());
+        splice(@$chains, $cno+1, 0, $chain1);
+
+        $chain = $chain1;
+        $cno++;
+      }
+
+      if ($last < $chain->last())
+      {
+        my $chain2 = Chain->new();
+        $chain->copy_from($last+1, $chain2);
+        $chain->delete($last+1, $chain->last());
+        splice(@$chains, $cno+1, 0, $chain2);
+      }
+
+      $chain->complete_if_last_is($chain->last(), 'COMPLETE');
+      last;
+    }
+    else
+    {
+      # Probably surrounded by TITLE_DESTROY
+      # die "Don't know this yet";
     }
   }
 }
