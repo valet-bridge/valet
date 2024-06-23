@@ -27,6 +27,7 @@ my @MULTI_WORDS =
   'before bermuda bowl', 'bridge master champion', 'by joe pochron',
   'BBO1', 'BBO2', 'BBO3', 'BBO4', 'BBO5', 'BBO6', 'BBO7', 'BBO8', 'BBO9',
   '*BBO1', '*BBO2', '*BBO3', '*BBO4',
+  'BBO 1', 'BBO 2', 'BBO 3', 'BBO 4', 'BBO 5', 'BBO - 2',
   'champion of champions',
   'de bridge', 'de vigraph', 'div a retour', 'dno_4',
   'eng comment', 'eng comments', 'eng comment in',

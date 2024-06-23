@@ -75,7 +75,7 @@ while ($line = <$fh>)
     next;
   }
 
-  if ($chunk{BBONO} == 1581)
+  if ($chunk{BBONO} == 1206)
   {
     print "HERE\n";
   }
@@ -123,6 +123,8 @@ while ($line = <$fh>)
       $chunk{BBONO});
     Event::Patterns::process_patterns(\@TITLE_REDUCTIONS, \@chains_title, 
       0, \@reduction_title_stats);
+
+    post_process_title(\@chains_title);
 
     update_chain_stats(\%chunk, \@chains_title, \@chain_title_stats);
   }

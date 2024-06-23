@@ -54,6 +54,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  Bronze
   Elimination
   Final
   Playoff Pool

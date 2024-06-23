@@ -10,7 +10,7 @@ package TitleBBO;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(init_hashes set_overall_hashes 
-  study_title print_title_stats   all_used);
+  study_title post_process_title print_title_stats   all_used);
 
 use lib '.';
 use lib './Team';
@@ -45,6 +45,7 @@ use Title::Iterator;
 use Title::Stage;
 use Title::Time;
 use Title::Particle;
+use Title::Ambiguous;
 use Title::Destroy;
 
 my @TAG_ORDER = qw(
@@ -73,6 +74,7 @@ my @TAG_ORDER = qw(
   TITLE_STAGE
   TITLE_TIME
   TITLE_PARTICLE
+  TITLE_AMBIGUOUS
 );
 
 my (%MULTI_WORDS, %MULTI_REGEX, %SINGLE_WORDS);
@@ -111,6 +113,7 @@ sub init_hashes
   Title::Stage::set_hashes($method, 'TITLE_STAGE');
   Title::Time::set_hashes($method, 'TITLE_TIME');
   Title::Particle::set_hashes($method, 'TITLE_PARTICLE');
+  Title::Ambiguous::set_hashes($method, 'TITLE_AMBIGUOUS');
   Title::Destroy::set_hashes($method, 'TITLE_DESTROY');
 }
 
@@ -424,12 +427,10 @@ sub split_on_some_numbers
   }
 
   # Years.
-  $text =~ s/20(\d\d)\/(\d\d)/20$1-20$2/;
-  $text =~ s/(20\d\d)/ $1 /g;
+  $text =~ s/20(\d\d)[\/-](\d\d)/20$1-20$2/;
   $text =~ s/'(9\d)/19$1/g;
   $text =~ s/'(0\d)/20$1/g;
   $text =~ s/'(1\d)/20$1/g;
-  $text =~ s/\b(0\d)\b/20$1/g;
 
   # Nameless teams.
   $text =~ s/#\d+\s+vs*\s+#*\d+//;
@@ -489,8 +490,33 @@ sub split_on_multi
 {
   my ($text, $parts, $tags) = @_;
 
-  @$parts = ($text);
-  @$tags = (0);
+  @$parts = grep { $_ ne '' } split /(\d\d\d\d-\d\d-\d\d)/, $text;
+
+  if ($#$parts > 0)
+  {
+    for my $i (0 .. $#$parts)
+    {
+      if ($parts->[$i] =~ /^\d\d\d\d-\d\d-\d\d$/)
+      {
+        $tags->[$i] = 'TITLE_DATE';
+        $HIT_STATS{TITLE_DATE}++;
+      }
+      else
+      {
+        # Couldn't do this sooner, as it would destroy the date.
+        $parts->[$i] =~ s/\b(0\d)\b/20$1/g;
+        $parts->[$i] =~ s/(20\d\d)/ $1 /g;
+        $tags->[$i] = 0;
+      }
+    }
+  }
+  else
+  {
+    $text =~ s/\b(0\d)\b/20$1/g;
+    $text =~ s/(20\d\d)/ $1 /g;
+    $parts->[0] = $text;
+    $tags->[0] = 0;
+  }
 
   for my $tag (@TAG_ORDER)
   {
@@ -507,6 +533,7 @@ sub split_on_multi
         {
           $parts->[$i] = $MULTI_WORDS{$tag}{lc($a[0])};
           $tags->[$i] = $tag;
+
           # my $w = $MULTI_WORDS{$tag}{lc($a[0])};
           # $MULTI_HITS{$tag}{lc($a[0])}++;
           # $MULTI_HITS{$tag}{lc($w)}++;
@@ -523,6 +550,7 @@ sub split_on_multi
           {
             $parts->[$j] = $MULTI_WORDS{$tag}{lc($parts->[$j])};
             $tags->[$j] = $tag;
+
             # my $w = $MULTI_WORDS{$tag}{lc($parts->[$j])};
             # $MULTI_HITS{$tag}{lc($parts->[$j])}++;
             # $MULTI_HITS{$tag}{lc($w)}++;
@@ -642,7 +670,58 @@ sub all_used
       }
     }
   }
+}
 
+
+sub post_process_first_numeral
+{
+  my ($chains) = @_;
+
+  for my $chain (@$chains)
+  {
+    next if $chain->status() eq 'KILLED';
+    return if $chain->status() eq 'COMPLETE';
+    return if $chain->last() > 0;
+
+    my $token = $chain->check_out(0);
+    return unless $token->category() eq 'COUNTER';
+    return unless $token->field() eq 'NUMERAL';
+
+    # So now we have the first open chain, and it consists
+    # of one COUNTER which we turn into an ORDINAL and complete.
+
+    my $value = $token->value();
+    my $last = substr($value, -1);
+    if ($last == 1)
+    {
+      $value .= 'st';
+    }
+    elsif ($last == 2)
+    {
+      $value .= 'nd';
+    }
+    elsif ($last == 3)
+    {
+      $value .= 'rd';
+    }
+    else
+    {
+      $value .= 'th';
+    }
+
+    $token->set_ordinal_counter($value);
+    $chain->complete_if_last_is(0, 'COMPLETE');
+
+    return;
+  }
+}
+
+
+sub post_process_title
+{
+  my ($chains) = @_;
+
+  post_process_first_numeral($chains);
 }
 
 1;

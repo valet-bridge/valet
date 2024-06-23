@@ -16,6 +16,7 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  '0-1500 Spingold',
   'AfBF Zone 8 Championships',
   'ABPF Championships',
   'African Zonal Championship',
@@ -180,6 +181,7 @@ my @MULTI_WORDS =
   'Gardermoen Airport Hotel Cup',
   'Gelibolu Peace Cup',
   'German Club Cup',
+  'German Open Teams',
   'German Team Championship',
   'German Team Trophy',
   'German Women Pairs',
@@ -711,6 +713,7 @@ my %MULTI_TYPOS =
   'FullBridge International Teams' => ['internacional equipos full bridge',
     'internacional full bridge', 'internactional de equipos full bridge'],
   'German Club Cup' => ['german cup', 'vereinspokal'],
+  'German Open Teams' => ['offene team meisterschaft'],
   'German Team Championship' => ['deutsche teammeisterschaft'],
   'German Team Trophy' => ['german bridge team trophy',
     'dbv-pokal'],
@@ -1157,11 +1160,12 @@ my %SINGLE_TYPOS =
   'Gianarrigo Rona Trophy' => ['rona'],
   'Rondane Cup' => ['rondanecupen'],
   'Ruia Trophy' => ['ruia'],
+  'Scottish Cup' => ['scottishcupplate'],
   'Southeast Asian Games' => ['seagames'],
   'Summer Nationals' => ['summernationals'],
   'Swedish Elite Series' => ['elitserien'],
   'Takamatsu Cup' => ['takamatsu'],
-  'Teltscher Trophy' => ['teltschertrophy', 'teltscher'],
+  'Teltscher Trophy' => ['teltschertrophy', 'teltscher', 'telschertrophy'],
   'Tolani Grand Prix' => ['tolanigrandprix'],
   'Top Circuit' => ['topcircuit'],
   'Transnational Open Teams' => ['tnt', 'tnot'],

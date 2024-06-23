@@ -3,8 +3,11 @@ Check the .ref files that modify qx against this
 
 URL scraper from .lin
 
-Ambiguous:
-- ABF
+Deal with ambiguous Q, O, S, Q
+
+Nationality should be such, and in Matrix we map it to the country
+if we wish. (43275)
+
 
 Recognize 2007-07-09 as DATE
 DATE to DATE could become DATE_START DATE_END without 'to'
