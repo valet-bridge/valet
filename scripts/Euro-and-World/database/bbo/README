@@ -10,10 +10,21 @@ DATE to DATE could become DATE_START DATE_END without 'to'
 ---
 
 TITLE_ITERATOR as single token in chain
-- preceded by GENDER, AGE, FORM, DESTROY, TWORD, TNAME as last chain or
-  before DESTROY (element = KILLED chain)
-- COUNTER N_OF_N, LETTER should probably take (chain of 1 element)
+- KILLED when preceded in second-last chain by
+  TITLE_STAGE
+  TITLE_AGE
+  TITLE_GENDER
+  TITLE_FORM
+  TITLE_DESTROY
+  TITLE_TWORD
+  TITLE_TNAME
 
-SINGLETON TITLE_PARTICLE
-Many vs complexes
-Leading VS some times
+COUNTER, NUMERAL
+- TITLE_COUNTRY, counter, TITLE_TNAME: -> ordinal
+- Last chain: destroy
+  TITLE_TWORD, but 32 _ can be Rof32, 16 _ Rof16
+  TITLE_FORM
+  TITLE_COUNTRY
+  TITLE_CAPTAIN
+
+Ind may be TITLE_COUNTRY or TITLE_FORM !

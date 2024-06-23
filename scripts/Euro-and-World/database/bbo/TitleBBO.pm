@@ -58,6 +58,7 @@ my @TAG_ORDER = qw(
 
   TITLE_ORGANIZATION 
   TITLE_ZONE 
+  TITLE_SPONSOR 
   TITLE_COUNTRY 
   TITLE_NATIONALITY
   TITLE_REGION 
@@ -65,7 +66,6 @@ my @TAG_ORDER = qw(
   TITLE_QUARTER 
   TITLE_UNIVERSITY 
   TITLE_FORM 
-  TITLE_SPONSOR 
   TITLE_CAPTAIN 
   TITLE_GENDER
   TITLE_AGE
@@ -504,7 +504,7 @@ sub split_on_multi
 
       for my $j (0 .. $#date_parts)
       {
-        if ($date_parts[$j] =~ /^\d\d\d\d-\d\d-\d\d$/)
+        if ($date_parts[$j] =~ /^\d\d\d\d[-_]\d\d[-_]\d\d$/)
         {
           $parts->[$i+$j] = $date_parts[$j];
           $tags->[$i+$j] = 'TITLE_DATE';
@@ -515,7 +515,7 @@ sub split_on_multi
           # Couldn't do this sooner, as it would destroy the date.
           my $t = $date_parts[$j];
 
-          $t =~ s/20(\d\d)[\/-](\d\d)/20$1-20$2/;
+          $t =~ s/20(\d\d)[\/-_](\d\d)/20$1-20$2/;
           $t =~ s/(\d)\/(\d)/$1 of $2/g;
           $t =~ s/\b(0\d)\b/20$1/g;
           $t =~ s/(20\d\d)/ $1 /g;
@@ -529,7 +529,7 @@ sub split_on_multi
     {
       my $t = $parts->[$i];
 
-      $t =~ s/20(\d\d)[\/-](\d\d)\b/20$1-20$2/;
+      $t =~ s/20(\d\d)[\/-_](\d\d)\b/20$1-20$2/;
       $t =~ s/(\d)\/(\d)/$1 of $2/g;
       $t =~ s/\b(0\d)\b/20$1/g;
       $t =~ s/(20\d\d)/ $1 /g;
@@ -702,6 +702,87 @@ sub all_used
 }
 
 
+my %VS_VALID =
+(
+  TITLE_COUNTRY => 1,
+  TITLE_CITY => 1,
+  TITLE_GENDER => 1,
+  TITLE_AGE => 1,
+  TITLE_CAPTAIN => 1
+);
+
+my %VS_DESTROY =
+(
+  TITLE_DESTROY => 1
+);
+
+sub get_vs_extent
+{
+  my ($chain, $center, $hash, $first, $last) = @_;
+
+  # If the chain does not go all the way to the front, split.
+  $$first = $center;
+  for my $j (reverse 0 .. $center-1)
+  {
+    my $token0 = $chain->check_out($j);
+    my $cat = $token0->category();
+    my $field = $token0->field();
+    if ($cat eq 'SINGLETON' && exists $hash->{$field})
+    {
+      $$first = $j;
+    }
+    else
+    {
+      last;
+    }
+  }
+
+  # If the chain does not go all the way to the back, split.
+  $$last = $center;
+  for my $j ($center+1 .. $chain->last())
+  {
+    my $token1 = $chain->check_out($j);
+    my $cat = $token1->category();
+    my $field = $token1->field();
+    if ($cat eq 'SINGLETON' && exists $hash->{$field})
+    {
+      $$last = $j;
+    }
+    else
+    {
+      last;
+    }
+  }
+}
+
+
+sub process_vs_extent
+{
+  my ($chains, $chain, $cno, $first, $last, $completion) = @_;
+
+  if ($first > 0)
+  {
+    my $chain1 = Chain->new();
+    $chain->copy_from($first, $chain1);
+    $chain->delete($first, $chain->last());
+    splice(@$chains, $cno+1, 0, $chain1);
+
+    $chain = $chain1;
+    $cno++;
+  }
+
+  if ($last < $chain->last())
+  {
+    my $chain2 = Chain->new();
+    $chain->copy_from($last+1, $chain2);
+    $chain->delete($last+1, $chain->last());
+    splice(@$chains, $cno+1, 0, $chain2);
+  }
+
+  $chain->complete_if_last_is($chain->last(), $completion);
+}
+
+
 sub pre_process_title
 {
   my ($chains) = @_;
@@ -737,74 +818,21 @@ sub pre_process_title
       $token->field() eq 'TITLE_PARTICLE' &&
       $token->value() eq 'vs';
 
-    # If the chain does not go all the way to the front, split.
-    my $first = $i;
-    for my $j (reverse 0 .. $i-1)
-    {
-      my $token0 = $chain->check_out($j);
-      my $cat = $token0->category();
-      my $field = $token0->field();
-      if ($cat eq 'SINGLETON' &&
-        ($field eq 'TITLE_COUNTRY' || $field eq 'TITLE_CITY' ||
-         $field eq 'TITLE_GENDER' || $field eq 'TITLE_AGE' ||
-         $field eq 'TITLE_CAPTAIN'))
-      {
-        $first = $j;
-      }
-      else
-      {
-        last;
-      }
-    }
-
-    # If the chain does not go all the way to the back, split.
-    my $last = $i;
-    for my $j ($i+1 .. $chain->last())
-    {
-      my $token1 = $chain->check_out($j);
-      my $cat = $token1->category();
-      my $field = $token1->field();
-      if ($cat eq 'SINGLETON' &&
-        ($field eq 'TITLE_COUNTRY' || $field eq 'TITLE_CITY' ||
-         $field eq 'TITLE_GENDER' || $field eq 'TITLE_AGE' ||
-         $field eq 'TITLE_CAPTAIN'))
-      {
-        $last = $j;
-      }
-      else
-      {
-        last;
-      }
-    }
+    my ($first, $last);
+    get_vs_extent($chain, $i, \%VS_VALID, \$first, \$last);
 
     if ($first < $i && $last > $i)
     {
-      if ($first > 0)
-      {
-        my $chain1 = Chain->new();
-        $chain->copy_from($first, $chain1);
-        $chain->delete($first, $chain->last());
-        splice(@$chains, $cno+1, 0, $chain1);
-
-        $chain = $chain1;
-        $cno++;
-      }
-
-      if ($last < $chain->last())
-      {
-        my $chain2 = Chain->new();
-        $chain->copy_from($last+1, $chain2);
-        $chain->delete($last+1, $chain->last());
-        splice(@$chains, $cno+1, 0, $chain2);
-      }
-
-      $chain->complete_if_last_is($chain->last(), 'COMPLETE');
+      process_vs_extent($chains, $chain, $cno, $first, $last, 'COMPLETE');
       last;
     }
-    else
+
+    get_vs_extent($chain, $i, \%VS_DESTROY, \$first, \$last);
+
+    if ($first < $i && $last > $i)
     {
-      # Probably surrounded by TITLE_DESTROY
-      # die "Don't know this yet";
+      process_vs_extent($chains, $chain, $cno, $first, $last, 'KILLED');
+      last;
     }
   }
 }

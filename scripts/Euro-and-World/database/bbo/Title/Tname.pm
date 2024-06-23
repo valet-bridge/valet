@@ -295,7 +295,6 @@ my @MULTI_WORDS =
   'Pakistan Day Bridge Championship',
   'Palace Cup',
   'Pan Arab Inter-Club Championship',
-  'Pan China Construction Tournament',
   'Paris Youth Open Teams',
   'Park Hotell Swiss Teams',
   'Patton de Monaco',
@@ -862,8 +861,6 @@ my %MULTI_TYPOS =
   'Pan Arab Inter-Club Championship' => ['pan arab championship',
     'pan arab inter_club', 'pan arab interclub', 'pan arab inerclub',
     'pan arab inter-club', 'pan arab inter club', 'pan arab iner club'],
-  'Pan China Construction Tournament' => [
-    'pan china construction tourname'],
   'Patton de Monaco' => ["monaco's patton", 'patton international monaco',
     'patton international monte-carlo',
     'patton international monte carlo', 'patton monte carlo'],
