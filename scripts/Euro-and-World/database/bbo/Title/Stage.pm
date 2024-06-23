@@ -24,15 +24,19 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  Bronze => ['third place', '3rd place', 'bronze-finals', 
+    'bronze playoff', 'bronze match'],
   'Closed Room' => ['closed rm'],
   'Elimination' => ['head to head'],
-  'Final' => ['gran final', 'super final', 'final phase'],
+  'Final' => ['gran final', 'super final', 'final phase',
+    'playoff final', 'playoffs final'],
   'Knock-out' => ['knock-outs', 'knock out'],
   Match => ['mecz o'],
   'Open Room' => ['open rm', 'room 1'],
   Playoff => ['play offs', 'play-off', 'play off'],
   Qualifying => ['qualification for', 'qualification to',
-    'wbg qualification', 'qualification to', 'qualifying swiss'],
+    'wbg qualification', 'qualification to', 'qualifying swiss',
+    'playoff qual'],
   Quarterfinal => ['quarter final', 'quarter finals', 
     'quarter-final', 'quarter-finals', 
     'quater final', 'quater finals', 'round of 8', 'rd of 8', 'r of 8',
@@ -50,7 +54,9 @@ my %MULTI_TYPOS =
     'semi-final', 'semi-finals', 'round of 4', 'round-of-four',
     'demi-final', 'demi-finale', 'demi-finales', 'half final', 's-final',
     'meia final', 'meias finais', 'yf', 'demi-nale', 'dsemi final',
-    'pó³fina³y', 'semi and final', 'semis and finals'],
+    'pó³fina³y', 'semi and final', 'semis and finals',
+    'playoff semi-final', 'playoffs semi final',
+    'play-off semi-final'],
 );
 
 my @SINGLE_WORDS = qw(

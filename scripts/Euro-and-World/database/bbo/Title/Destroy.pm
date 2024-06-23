@@ -45,6 +45,7 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   'bridge master champion' => ['bridge master champions'],
+  'extra' => ['extra match'],
   'for Pau' => ['pour pau'],
 );
 

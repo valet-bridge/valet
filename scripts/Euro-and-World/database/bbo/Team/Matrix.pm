@@ -773,6 +773,55 @@ my %COUNTRY_TO_SPONSOR =
     'Vestel', 'Tundem']
 );
 
+my %COUNTRY_TO_NATIONALITY =
+(
+  Argentina => ['argentinian'],
+  Australia => ['australian'],
+  Austria => ['austrian'],
+  Belarus => ['belarusian'],
+  Belgium => ['belgian'],
+  Bolivia => ['bolivian'],
+  Brazil => ['brazilian'],
+  Bulgaria => ['bulgaria'],
+  Canada => ['canadian'],
+  Chile => ['chilean'],
+  Croatia => ['croatian'],
+  'Czech Republic' => ['czech'],
+  Egypt => ['egyptian'],
+  England => ['english'],
+  Estonia => ['estonian'],
+  'Faroe Islands' => ['faroese'],
+  Finland => ['finnish'],
+  France => ['french'],
+  Germany => ['german'],
+  Greece =>['greek'],
+  Hungary => ['hungarian'],
+  Iceland => ['icelandic'],
+  India => ['indian'],
+  Indonesia => ['indonesian'],
+  Ireland => ['irish'],
+  Israel => ['israeli'],
+  Italy => ['italian'],
+  Japan => ['japanese'],
+  Latvia => ['latvia'],
+  Lebanon => ['lebanese'],
+  Lithuania => ['lithuanian'],
+  Netherlands => ['dutch'],
+  Norway => ['norwegian'],
+  Poland => ['polish'],
+  Portugal => ['portuguese'],
+  Romania => ['romanian'],
+  Scotland => ['scottish'],
+  Serbia => ['serbian'],
+  'South Africa' => ['south african'],
+  Spain => ['spanish'],
+  Sweden => ['swedish'],
+  Taiwan => ['taiwanese'],
+  Turkey => ['turkey'],
+  Tunisia => ['tunisian'],
+  Wales => ['welsh']
+);
+
 
 sub set_matrix
 {
@@ -788,6 +837,8 @@ sub set_matrix
     'TEAM_CITY', 'TEAM_CLUB');
   TeamBBO::set_link_matrix(\%COUNTRY_TO_SPONSOR, 
     'TEAM_COUNTRY', 'TEAM_SPONSOR');
+  TeamBBO::set_link_matrix(\%COUNTRY_TO_NATIONALITY, 
+    'TEAM_COUNTRY', 'TEAM_NATIONALITY');
 }
 
 1;

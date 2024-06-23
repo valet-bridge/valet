@@ -86,10 +86,10 @@ my @SINGLE_WORDS = qw(
   Canada Chile Colombia Croatia Cyprus
   Denmark 
   Ecuador Egypt England Estonia 
-  Finland 
-  Germany Georgia Guadeloupe Guernsey
+  Finland France
+  Germany Georgia Greece Guadeloupe Guernsey
   Hungary 
-  Iceland Ireland Israel Italy
+  Iceland Indonesia Ireland Israel Italy
   Japan Jersey Jordan
   Kenya Kuwait
   Latvia Lebanon Lichtenstein Lithuania Luxembourg 
@@ -99,7 +99,7 @@ my @SINGLE_WORDS = qw(
   Pakistan Palestine Peru Philippines Poland Portugal
   Qatar
   Reunion Romania Russia
-  Scotland Serbia Singapore Slovenia Slovakia Spain Switzerland Syria
+  Scotland Serbia Singapore Slovenia Slovakia Spain Sweden Switzerland Syria
   Taiwan Tanzania Thailand Tunisia Turkey
   Uganda Ukraine Uruguay USA
   Venezuela

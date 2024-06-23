@@ -5,9 +5,6 @@ URL scraper from .lin
 
 Deal with ambiguous Q, O, S, Q
 
-Nationality should be such, and in Matrix we map it to the country
-if we wish. (43275)
-
 DATE to DATE could become DATE_START DATE_END without 'to'
 
 ---

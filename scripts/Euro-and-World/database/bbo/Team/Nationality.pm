@@ -16,77 +16,59 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
-  'Czech Republic'
+  'South African'
 );
 
 my %MULTI_TYPOS =
 (
-  'Faroe Islands' => ['faroese']
 );
 
 my @SINGLE_WORDS = qw(
-  Australia
-  Bulgaria
-  Croatia
-  Estonia
-  France
-  Germany Greece
-  Hungary
-  India Indonesia Israel
-  Netherlands Norway
-  Poland
-  Sweden
-  Tunisia
+  Belarusian Belgian Bolivian Brazilian Bulgarian
+  Argentinian Australian Austrian
+  Canadian Chilean Croatian Czech
+  Dutch
+  Egyptian English Estonian
+  Faroese Finnish French
+  German Greek
+  Hungarian
+  Icelandic Indian Indonesian Irish Israeli Italian
+  Japanese
+  Latvian Lebanese Lithuanian
+  Norwegian 
+  Polish Portuguese
+  Romanian
+  Scottish Serbian Spanish Swedish 
+  Taiwanese Turkish Tunisian
+  Welsh
 );
 
 my %SINGLE_TYPOS =
 (
-  Argentina => ['argentinian', 'argentino'],
-  Australia => ['australian', 'aussie', 'austalian', 'austarlian',
-    'australain'],
-  Austria => ['austrian'],
-  Belarus => ['belarusian'],
-  Belgium => ['belgian', 'begian'],
-  Bolivia => ['bolivariano', 'bolivarian'],
-  Brazil => ['brazilian', 'brasilian'],
-  Bulgaria => ['bulgarian', 'blugarian', 'bugarian'],
-  Canada => ['canadian', 'candian', 'caniadian', 'cdn'],
-  Chile => ['chilean'],
-  Croatia => ['croatian'],
-  'Czech Republic' => ['czech'],
-  Egypt => ['egyptian'],
-  England => ['english', 'engish', 'enlish', 'englush'],
-  Estonia => ['estonian'],
-  Finland => ['finnish'],
-  France => ['french', 'francaise', 'française'],
-  Germany => ['german', 'deutsch', 'deutsche'],
-  Greece => ['greek', 'hellenic', 'helenic'],
-  Hungary => ['hungar', 'hungarian'],
-  Iceland => ['icelandic', 'icelandoc'],
-  India => ['indian'],
-  Indonesia => ['indonesian', 'indoneian', 'indonseian'],
-  Ireland => ['irish'],
-  Israel => ['israeli', 'israli'],
-  Italy => ['italian', 'italiano'],
-  Japan => ['japanese', 'jaqpanese', 'jaoanese'],
-  Latvia => ['latvian'],
-  Lebanon => ['lebanese'],
-  Lithuania => ['lithianin', 'lithuanian'],
-  Netherlands => ['dutch'],
-  Norway => ['norwegian', 'norvegian', 'norwegain', 'norwgian',
+  Argentinian => ['argentino'],
+  Australian => ['aussie', 'austalian', 'austarlian', 'australain'],
+  Belgian => ['begian'],
+  Bolivian => ['bolivariano', 'bolivarian'],
+  Brazilian => ['brasilian'],
+  Bulgarian => ['blugarian', 'bugarian'],
+  Canadian => ['candian', 'caniadian', 'cdn'],
+  English => ['engish', 'enlish', 'englush'],
+  French => ['francaise', 'française'],
+  German => ['deutsch', 'deutsche'],
+  Greek => ['hellenic', 'helenic'],
+  Hungarian => ['hungar'],
+  Icelandic => ['icelandoc'],
+  Indonesian => ['indoneian', 'indonseian'],
+  Israeli => ['israli'],
+  Italian => ['italiano'],
+  Japanese => ['jaqpanese', 'jaoanese'],
+  Lithuania => ['lithianin'],
+  Norwegian => ['norvegian', 'norwegain', 'norwgian',
     'norwigian', 'norewegian'],
-  Poland => ['polish', 'poish', 'polski'],
-  Portugal => ['portuguese'],
-  Romania => ['romanian'],
-  Scotland => ['scottish'],
-  Serbia => ['serbian'],
-  'South Africa' => ['south african'],
-  Spain => ['spanish'],
-  Sweden => ['swedish', 'swdish', 'swedis', 'swesish'],
-  Taiwan => ['taiwanese'],
+  Polish => ['poish', 'polski'],
+  Swedish => ['swdish', 'swedis', 'swesish'],
   Turkish => ['turkis', 'turkýsh'],
-  Tunisia => ['tunisie'],
-  Wales => ['welsh']
+  Tunisian => ['tunisie']
 );
 
 
