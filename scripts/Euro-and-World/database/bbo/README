@@ -9,16 +9,6 @@ DATE to DATE could become DATE_START DATE_END without 'to'
 
 ---
 
-TITLE_ITERATOR as single token in chain
-- KILLED when preceded in second-last chain by
-  TITLE_STAGE
-  TITLE_AGE
-  TITLE_GENDER
-  TITLE_FORM
-  TITLE_DESTROY
-  TITLE_TWORD
-  TITLE_TNAME
-
 COUNTER, NUMERAL
 - TITLE_COUNTRY, counter, TITLE_TNAME: -> ordinal
 - Last chain: destroy
@@ -28,3 +18,5 @@ COUNTER, NUMERAL
   TITLE_CAPTAIN
 
 Ind may be TITLE_COUNTRY or TITLE_FORM !
+
+More compact chain output when recognized

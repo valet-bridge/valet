@@ -882,6 +882,44 @@ sub post_process_first_numeral
 }
 
 
+my %NUM_VALID =
+(
+  TITLE_AGE => 1,
+  TITLE_GENDER => 1,
+  TITLE_FORM => 1,
+  TITLE_STAGE => 1,
+  TITLE_TNAME => 1,
+  TITLE_TWORD => 1,
+  TITLE_DESTROY => 1
+);
+
+sub post_process_last_iterator
+{
+  my ($chains) = @_;
+
+  # Check whether a lone iterator is preceded by certain tokens,
+  # in which case it is destroyed.
+  return unless $#$chains >= 1;
+  my $chain1 = $chains->[-1];
+  return unless $chain1->status() eq 'OPEN';
+  return unless $chain1->last() == 0;
+
+  my $token1 = $chain1->check_out(0);
+  return unless $token1->category() eq 'SINGLETON' &&
+    $token1->field() eq 'TITLE_ITERATOR';
+
+  my $chain0 = $chains->[-2];
+  my $token0 = $chain0->check_out($chain0->last());
+  my $cat = $token0->category();
+  my $field = $token0->field();
+
+  if ($cat eq 'SINGLETON' && exists $NUM_VALID{$field})
+  {
+    $chain1->complete_if_last_is(0, 'DESTROY');
+  }
+}
+
+
 sub post_process_stand_alone_singles
 {
   my ($chains) = @_;
@@ -951,6 +989,7 @@ sub post_process_title
   my ($chains) = @_;
 
   post_process_first_numeral($chains);
+  post_process_last_iterator($chains);
   post_process_stand_alone_singles($chains);
   post_process_stand_alone_doubles($chains);
 
