@@ -134,6 +134,16 @@ sub process_merge_0of2
 }
 
 
+sub process_merge_0to2
+{
+  # 7 to 9,
+  my ($chain, $match) = @_;
+
+  my $token = $chain->check_out($match);
+  $token->merge_counters('-', $chain->check_out($match+2));
+}
+
+
 sub process_merge_0colon2
 {
   # 6:1

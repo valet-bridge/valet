@@ -40,7 +40,7 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  Boards => ['board', 'brds', 'donnes', 'spil'],
+  Boards => ['board', 'bds', 'brds', 'donnes', 'spil'],
   Flight => ['flt'],
   Group => ['gruop', 'gr', 'grp', 'groups', 'pool', 'poule'],
   Half => ['hallf', 'halvleg', 'halv', 'lhf', 'mt', 'ha'],

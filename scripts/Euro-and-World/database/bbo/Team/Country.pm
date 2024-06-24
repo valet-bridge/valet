@@ -139,7 +139,7 @@ my %SINGLE_TYPOS =
   Hungary => ['hungar', 'hun'],
   Iceland => ['ice', 'islande'],
   India => ['indýa', 'hindusthan', 'hidusthan', 'indiaa', 'aindia'],
-  Indonesia => ['timnas', 'ind', 'ina'],
+  Indonesia => ['timnas', 'ina'],
   Ireland => ['roireland', 'irelnd', 'irelsnd', 'irlande',
     'irelend', 'irelena', 'ire', 'eire'],
   Italy => ['italia', 'it', 'ita'],

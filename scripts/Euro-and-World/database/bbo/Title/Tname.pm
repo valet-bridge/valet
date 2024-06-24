@@ -1091,7 +1091,8 @@ my %MULTI_TYPOS =
   'World Youth Teams Championship' => ['world youth team championships',
     'world youth teams'],
   'Yeh Bros Cup' => ['yehbros cup'],
-  'Young Chelsea Knock-out' => ['yc ko'],
+  'Young Chelsea Knock-out' => ['yc ko', 'young chelsea ko',
+    'young chelsea knockout'],
   'Zulawski Cup' => ['zulawski teams']
 );
 

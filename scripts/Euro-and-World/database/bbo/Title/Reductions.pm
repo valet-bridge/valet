@@ -142,11 +142,29 @@ our @TITLE_REDUCTIONS =
     COMPLETION => 1
   },
 
-  # n of m
+  # n to m
   {
     PATTERN =>
     [
       { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL', 'ORDINAL'] },
+      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_PARTICLE'],
+        VALUE => ['to'] },
+      { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL', 'ORDINAL', 'NL'] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&Event::Patterns::process_merge_0to2,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
+  # n of m
+  {
+    PATTERN =>
+    [
+      { CATEGORY => ['COUNTER'], 
+        FIELD => ['NUMERAL', 'ORDINAL', 'N_TO_N'] },
       { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_PARTICLE'],
         VALUE => ['of'] },
       { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL', 'ORDINAL'] }
@@ -196,7 +214,7 @@ our @TITLE_REDUCTIONS =
     [
       { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL', 'ORDINAL'] },
       { CATEGORY => ['SINGLETON'], 
-        FIELD => ['TITLE_ITERATOR', 'TITLE_STAGE'] },
+        FIELD => ['TITLE_ITERATOR'] },
     ],
     ANCHOR => 'END',
     KEEP_LAST => 1,
@@ -213,7 +231,8 @@ our @TITLE_REDUCTIONS =
       { CATEGORY => ['SINGLETON'], 
         FIELD => ['TITLE_ITERATOR', 'TITLE_STAGE', 'TITLE_AMBIGUOUS'] },
       { CATEGORY => ['COUNTER'], 
-        FIELD => ['LETTER', 'NUMERAL', 'N_OF_N', 'NL'] },
+        FIELD => ['LETTER', 'NUMERAL', 'N_OF_N', 
+          'N_TO_N', 'NL', 'N_TO_N_OF_N'] },
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 1,

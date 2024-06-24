@@ -457,6 +457,7 @@ sub split_on_some_numbers
   $text =~ s/(\d) th\b/$1th/g;
   $text =~ s/2 nd\b/2nd/g;
   $text =~ s/\bUSA[12]/USA/g;
+  $text =~ s/\bUSA 2\b/USA/g;
   $text =~ s/II-nd/2nd/g;
 
   return $text;
@@ -515,8 +516,9 @@ sub split_on_multi
           # Couldn't do this sooner, as it would destroy the date.
           my $t = $date_parts[$j];
 
-          $t =~ s/20(\d\d)[\/-_](\d\d)/20$1-20$2/;
+          $t =~ s/20(\d\d)[\/\-_](\d\d)/20$1-20$2/;
           $t =~ s/(\d)\/(\d)/$1 of $2/g;
+          $t =~ s/\b(\d)-(\d)/$1 to $2/g;
           $t =~ s/\b(0\d)\b/20$1/g;
           $t =~ s/(20\d\d)/ $1 /g;
 
@@ -529,8 +531,9 @@ sub split_on_multi
     {
       my $t = $parts->[$i];
 
-      $t =~ s/20(\d\d)[\/-_](\d\d)\b/20$1-20$2/;
+      $t =~ s/20(\d\d)[\/\-_](\d\d)\b/20$1-20$2/;
       $t =~ s/(\d)\/(\d)/$1 of $2/g;
+      $t =~ s/\b(\d)-(\d)/$1 to $2/g;
       $t =~ s/\b(0\d)\b/20$1/g;
       $t =~ s/(20\d\d)/ $1 /g;
 
@@ -783,12 +786,9 @@ sub process_vs_extent
 }
 
 
-sub pre_process_title
+sub pre_process_vs
 {
   my ($chains) = @_;
-
-  # At this point there is a single chain.
-  # It's easier to solve for the team vs team chain here.
 
   my $chain = $chains->[0];
   return unless $chain->last() >= 2;
@@ -835,6 +835,18 @@ sub pre_process_title
       last;
     }
   }
+}
+
+
+sub pre_process_title
+{
+  my ($chains) = @_;
+
+  # At this point there is a single chain.
+  # It's easier to solve for the team vs team chain here.
+
+  pre_process_vs($chains);
+
 }
 
 
@@ -917,6 +929,12 @@ sub post_process_last_iterator
   {
     $chain1->complete_if_last_is(0, 'DESTROY');
   }
+  elsif ($chain0->last() == 0 && $cat eq 'COUNTER')
+  {
+    $chain0->append($token1);
+    $chain0->complete_if_last_is(1, 'COMPLETE');
+    splice(@$chains, $#$chains, 1);
+  }
 }
 
 
@@ -934,7 +952,7 @@ sub post_process_stand_alone_singles
     if ($cat eq 'COUNTER' && 
         ($field eq 'LETTER' || $field eq 'N_OF_N' || $field eq 'ROMAN'))
     {
-      $chain->complete_if_last_is(0, 'DESTROY');
+      $chain->complete_if_last_is(0, 'COMPLETE');
     }
     elsif ($cat eq 'SINGLETON' &&
         ($field eq 'TITLE_TIME'))
@@ -946,11 +964,31 @@ sub post_process_stand_alone_singles
     {
       $chain->complete_if_last_is(0, 'DESTROY');
     }
+    elsif ($cat eq 'SINGLETON' &&
+        ($field eq 'TITLE_ITERATOR' &&
+        $token->value() eq 'Match'))
+    {
+      $token->set_singleton('TITLE_FORM', 'Teams');
+      $chain->complete_if_last_is(0, 'COMPLETE');
+    }
     else
     {
       print "ZZZ ", $token->category(), ", ", $token->field(), "\n";
     }
   }
+}
+
+
+sub post_process_split_two
+{
+  my ($chains, $chain) = @_;
+
+  my $chain2 = Chain->new();
+  $chain->copy_from(1, $chain2);
+  $chain->truncate_directly_before(1);
+  $chain->complete_if_last_is(0, 'COMPLETE');
+  $chain2->complete_if_last_is(0, 'COMPLETE');
+  splice(@$chains, 1 + $#$chains, 0, $chain2);
 }
 
 
@@ -961,25 +999,33 @@ sub post_process_stand_alone_doubles
   # Check for a last chain with two numerals, of which the latter is
   # 1 or 2 and the former is larger.
   my $chain = $chains->[-1];
-  if ($chain->status() eq 'OPEN' && $chain->last() == 1)
+  return unless $chain->status() eq 'OPEN' && $chain->last() == 1;
+
+  my $token0 = $chain->check_out(0);
+  my $token1 = $chain->check_out(1);
+
+  if ($token0->category() eq 'COUNTER' && $token0->field() eq 'NUMERAL')
   {
-    my $token0 = $chain->check_out(0);
-    if ($token0->category() eq 'COUNTER' && $token0->field() eq 'NUMERAL')
+    if ($token1->category() eq 'COUNTER' && $token1->field() eq 'NUMERAL')
     {
-      my $token1 = $chain->check_out(1);
-      if ($token1->category() eq 'COUNTER' && $token1->field() eq 'NUMERAL')
+      if ($token0->value() > $token1->value() && $token1->value() < 3)
       {
-        if ($token0->value() > $token1->value() && $token1->value() < 3)
-        {
-          my $chain2 = Chain->new();
-          $chain->copy_from(1, $chain2);
-          $chain->truncate_directly_before(1);
-          $chain->complete_if_last_is(0, 'COMPLETE');
-          $chain2->complete_if_last_is(0, 'COMPLETE');
-          splice(@$chains, 1 + $#$chains, 0, $chain2);
-        }
+        post_process_split_two($chains, $chain);
+        return;
       }
     }
+    print "YYY ", $token0->field(), ", ", $token1->field(), "\n";
+  }
+  elsif ($token0->field() eq 'TITLE_STAGE' || 
+      $token0->field() eq 'TITLE_TIME')
+  {
+    post_process_split_two($chains, $chain);
+    return;
+  }
+  else
+  {
+    # A bit radical.
+    $chain->complete_if_last_is(1, 'DESTROY');
   }
 }
 

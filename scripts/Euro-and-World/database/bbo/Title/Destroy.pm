@@ -25,7 +25,8 @@ my @MULTI_WORDS =
   'IIa',
   'Around 52 cards in 80 years',
   'before bermuda bowl', 'bridge master champion', 'by joe pochron',
-  'BBO1', 'BBO2', 'BBO3', 'BBO4', 'BBO5', 'BBO6', 'BBO7', 'BBO8', 'BBO9',
+  'BBO1', 'BBO2', 'BB02', 'BBO3', 'BBO4', 'BBO5', 'BB05',
+  'BBO6', 'BBO7', 'BBO8', 'BBO9',
   '*BBO1', '*BBO2', '*BBO3', '*BBO4',
   'BBO 1', 'BBO 2', 'BBO 3', 'BBO 4', 'BBO 5', 'BBO - 2',
   'champion of champions',
@@ -52,7 +53,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   aa abd aft afternoon anniversary annual as at av
-  b! BBO bb05 bboz bt bv by
+  b! BBO bboz bt bv by
   centenary celebrations closed combat compared
   de des du duplicate duplicato
   eagles elite étoile eve evening ew extra

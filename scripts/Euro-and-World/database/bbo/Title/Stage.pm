@@ -56,7 +56,7 @@ my %MULTI_TYPOS =
     'meia final', 'meias finais', 'yf', 'demi-nale', 'dsemi final',
     'pó³fina³y', 'semi and final', 'semis and finals',
     'playoff semi-final', 'playoffs semi final',
-    'play-off semi-final'],
+    'play-off semi-final', 'semi- final', 'semi finall'],
 );
 
 my @SINGLE_WORDS = qw(
