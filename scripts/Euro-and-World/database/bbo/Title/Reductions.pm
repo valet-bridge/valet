@@ -116,8 +116,8 @@ our @TITLE_REDUCTIONS =
     [
       { CATEGORY => ['SINGLETON'], 
         FIELD => ['TITLE_CAPTAIN', 'TITLE_CLUB', 'TITLE_COUNTRY',
-          'TITLE_REGION', 'TITLE_CITY',
-          'TITLE_SPONSOR', 'TITLE_UNIVERSITY', 'TITLE_FORM'] }
+          'TITLE_REGION', 'TITLE_CITY', 'TITLE_SPONSOR', 
+          'TITLE_UNIVERSITY', 'TITLE_FORM', 'TITLE_STAGE'] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
@@ -174,6 +174,22 @@ our @TITLE_REDUCTIONS =
     METHOD => \&Event::Patterns::process_merge_0of2,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
+  # A defective n of m: only "of m"
+  {
+    PATTERN =>
+    [
+      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_PARTICLE'],
+        VALUE => ['of'] },
+      { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL'] }
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 1,
+    METHOD => \&Event::Patterns::process_kill,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
     COMPLETION => 1
   },
 
@@ -257,22 +273,6 @@ our @TITLE_REDUCTIONS =
     COMPLETION => 1
   },
 
-  # A blank stage.
-  {
-    PATTERN =>
-    [
-      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_STAGE'] },
-    ],
-    ANCHOR => 'EXACT',
-    KEEP_LAST => 0,
-    METHOD => \&Event::Patterns::process_general,
-    SPLIT_FRONT => 0,
-    SPLIT_BACK => 0,
-    COMPLETION => 1
-  },
-
-
-
   # A time indication followed by an integer at the end.
   {
     PATTERN =>
@@ -293,21 +293,8 @@ our @TITLE_REDUCTIONS =
     PATTERN =>
     [
       { CATEGORY => ['COUNTER'], 
-        FIELD => ['NUMERAL', 'N_OF_N', 'ORDINAL', 'LETTER', 'ROMAN'] }
-    ],
-    ANCHOR => 'END',
-    KEEP_LAST => 0,
-    METHOD => \&Event::Patterns::process_general,
-    SPLIT_FRONT => 1,
-    SPLIT_BACK => 0,
-    COMPLETION => 1
-  },
-
-  # Certain counters at the ends of chains.
-  {
-    PATTERN =>
-    [
-      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_STAGE'] }
+        FIELD => ['NUMERAL', 'N_OF_N', 'ORDINAL', 'LETTER', 'ROMAN',
+          'NL', 'N_TO_N_OF_N'] }
     ],
     ANCHOR => 'END',
     KEEP_LAST => 0,
@@ -316,6 +303,7 @@ our @TITLE_REDUCTIONS =
     SPLIT_BACK => 0,
     COMPLETION => 1
   }
+
 );
 
 1;

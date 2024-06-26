@@ -33,7 +33,7 @@ my @PAIRS_SUGGESTORS = (
   'pair a', 'pair b', 'no teams', 'not teams',
   'pair ns', 'pair ew', 'pairs a', 'pairs b',
   'pairs 1', 'pairs 2', 'pair tournament', 'pairs tournament',
-  'pairs event',
+  'pairs event', 'swiss pairs event', 'swiss pairs',
   'a_pair1', 'a_pair2', 'b_pair1', 'b_pair2',
   'c_pair1', 'c_pair2', 'd_pair1', 'd_pair2',
   'e_pair1', 'e_pair2',

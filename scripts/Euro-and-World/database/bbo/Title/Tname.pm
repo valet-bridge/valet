@@ -674,7 +674,7 @@ my %MULTI_TYPOS =
   'European Mixed Junior Pairs' => ['em pairs junior mix',
     'junior em mix'],
   'European Open Bridge Championship' => ['eobc',
-    'euroepan open champ'],
+    'euroepan open champ', 'european open champ', 'europe open champ'],
   'European Small Federation Games' => ['ebl small federation trophy',
     'ebl small federations trophy', 'games of small federations',
     'european small federations games', 'small federation games',

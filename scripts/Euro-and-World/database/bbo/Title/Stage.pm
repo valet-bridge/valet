@@ -29,7 +29,7 @@ my %MULTI_TYPOS =
   'Closed Room' => ['closed rm'],
   'Elimination' => ['head to head'],
   'Final' => ['gran final', 'super final', 'final phase', 'fase final',
-    'playoff final', 'playoffs final'],
+    'playoff final', 'playoffs final', 'final poule'],
   'Knock-out' => ['knock-outs', 'knock out'],
   Match => ['mecz o'],
   'Open Room' => ['open rm', 'room 1'],

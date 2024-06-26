@@ -47,7 +47,8 @@ my %chunk;
 my $line;
 
 my $lno = 0;
-my (@chain_team_stats, @chain_event_stats, @chain_title_stats);
+my (@chain_team_stats, @chain_event_stats, @chain_title_stats,
+  @chain_title_num_stats);
 my (@reduction_event_stats, @reduction_title_stats);
 my $unknown_events = 0;
 my $unknown_titles = 0;
@@ -75,7 +76,7 @@ while ($line = <$fh>)
     next;
   }
 
-  if ($chunk{BBONO} == 19106)
+  if ($chunk{BBONO} == 99999)
   {
     print "HERE\n";
   }
@@ -130,6 +131,8 @@ while ($line = <$fh>)
     post_process_title(\@chains_title);
 
     update_chain_stats(\%chunk, \@chains_title, \@chain_title_stats);
+    update_num_chain_stats(\%chunk, 
+      \@chains_title, \@chain_title_num_stats);
   }
 }
 
@@ -148,7 +151,8 @@ if ($do_events)
 if ($do_tournaments)
 {
   print_title_stats();
-  print_chain_stats("Title", \@chain_title_stats);
+  print_chain_stats("Title chain lengths", \@chain_title_stats);
+  print_chain_stats("Title chain numbers", \@chain_title_num_stats);
   print "\nTotal unknown titles $unknown_events\n\n";
 }
 
@@ -253,6 +257,21 @@ sub update_chain_stats
     print_chains_full($chains);
   }
 }
+
+
+sub update_num_chain_stats
+{
+  my ($chunk, $chains, $chain_stats) = @_;
+
+  $chain_stats->[$#$chains+1]{COMPLETE}++;
+
+  if ($#$chains >= 99)
+  {
+    print_chunk($chunk);
+    print_chains_full($chains);
+  }
+}
+
 
 sub print_team_chain_stats
 {
