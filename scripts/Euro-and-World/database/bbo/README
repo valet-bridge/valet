@@ -9,9 +9,3 @@ DATE to DATE could become DATE_START DATE_END without 'to'
 
 More compact chain output when recognized
 
----
-
-If after LETTER, NUMERAL, ITERATOR N_OF_N: not sure
-otherwise DESTROY
-
-Combine with LETTER I think

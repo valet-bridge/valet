@@ -229,7 +229,7 @@ our @TITLE_REDUCTIONS =
     PATTERN =>
     [
       { CATEGORY => ['SINGLETON'], 
-        FIELD => ['TITLE_ITERATOR', 'TITLE_STAGE', 'TITLE_AMBIGUOUS'] },
+        FIELD => ['TITLE_ITERATOR', 'TITLE_AMBIGUOUS'] },
       { CATEGORY => ['COUNTER'], 
         FIELD => ['LETTER', 'NUMERAL', 'N_OF_N', 
           'N_TO_N', 'NL', 'N_TO_N_OF_N'] },
@@ -288,6 +288,34 @@ our @TITLE_REDUCTIONS =
     COMPLETION => 1
   },
 
+  # Certain counters at the ends of chains.
+  {
+    PATTERN =>
+    [
+      { CATEGORY => ['COUNTER'], 
+        FIELD => ['NUMERAL', 'N_OF_N', 'ORDINAL'] }
+    ],
+    ANCHOR => 'END',
+    KEEP_LAST => 0,
+    METHOD => \&Event::Patterns::process_general,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
+  # Certain counters at the ends of chains.
+  {
+    PATTERN =>
+    [
+      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_STAGE'] }
+    ],
+    ANCHOR => 'END',
+    KEEP_LAST => 0,
+    METHOD => \&Event::Patterns::process_general,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  }
 );
 
 1;

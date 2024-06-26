@@ -54,7 +54,7 @@ my %MULTI_TYPOS =
     'semi-final', 'semi-finals', 'round of 4', 'round-of-four',
     'demi-final', 'demi-finale', 'demi-finales', 'half final', 's-final',
     'meia final', 'meias finais', 'yf', 'demi-nale', 'dsemi final',
-    'pó³fina³y', 'semi and final', 'semis and finals',
+    'pó³fina³y', 'semi and final', 'semis and finals', 'semi f',
     'playoff semi-final', 'playoffs semi final',
     'play-off semi-final', 'semi- final', 'semi finall'],
 );
