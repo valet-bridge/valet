@@ -28,7 +28,7 @@ my %MULTI_TYPOS =
     'bronze playoff', 'bronze match'],
   'Closed Room' => ['closed rm'],
   'Elimination' => ['head to head'],
-  'Final' => ['gran final', 'super final', 'final phase',
+  'Final' => ['gran final', 'super final', 'final phase', 'fase final',
     'playoff final', 'playoffs final'],
   'Knock-out' => ['knock-outs', 'knock out'],
   Match => ['mecz o'],
@@ -55,7 +55,7 @@ my %MULTI_TYPOS =
     'demi-final', 'demi-finale', 'demi-finales', 'half final', 's-final',
     'meia final', 'meias finais', 'yf', 'demi-nale', 'dsemi final',
     'pó³fina³y', 'semi and final', 'semis and finals', 'semi f',
-    'playoff semi-final', 'playoffs semi final',
+    'playoff semi-final', 'playoffs semi final', 'semi finale',
     'play-off semi-final', 'semi- final', 'semi finall'],
 );
 

@@ -293,7 +293,7 @@ our @TITLE_REDUCTIONS =
     PATTERN =>
     [
       { CATEGORY => ['COUNTER'], 
-        FIELD => ['NUMERAL', 'N_OF_N', 'ORDINAL'] }
+        FIELD => ['NUMERAL', 'N_OF_N', 'ORDINAL', 'LETTER', 'ROMAN'] }
     ],
     ANCHOR => 'END',
     KEEP_LAST => 0,
