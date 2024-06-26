@@ -9,41 +9,11 @@ DATE to DATE could become DATE_START DATE_END without 'to'
 
 ---
 
-Check 49: Mixte/4 picked up?
+Trailing single digit:
+F1 -> Final 1? Which is then a stage
 
-COUNTER, NUMERAL (single number)
-- Sandwiched between -> ordinal
-  TITLE_COUNTRY
-  TITLE_TNAME
-
-- TITLE_TWORD
-  and (destroy
-  TITLE_CITY
-
-- LETTER
-  and (ordinal)
-  TITLE_REGION
-
-- DESTROY
-  and (ordinal)
-    TITLE_REGION
-
-- Random trailing digit, last chain, single token, after (destroy)
-  TITLE_GENDER
-  TITLE_TWORD
-  TITLE_FORM
-  TITLE_TNAME, but if >= 10, probably and ordinal?
-  TITLE_CAPTAIN
-  TITLE_COUNTRY
-  TITLE_CITY
-  TITLE_DESTROY
-  
-
-- Last chain: destroy
-  TITLE_TWORD, but 32 _ can be Rof32, 16 _ Rof16
-  TITLE_FORM
-  TITLE_COUNTRY
-  TITLE_CAPTAIN
+If after LETTER, NUMERAL, ITERATOR N_OF_N: not sure
+otherwise DESTROY
 
 
 More compact chain output when recognized

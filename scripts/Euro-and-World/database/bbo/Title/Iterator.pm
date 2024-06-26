@@ -53,7 +53,7 @@ my %SINGLE_TYPOS =
   Round => ['ronda', 'runde', 'runda', 'rundy', 'rnd', 'r', 'ound',
     'dg', 'devre', 'tour', 'rd', 'rounds', 'rouns', 'rueda', 'ruond',
     'rd', 'riund', 'rds', 'ound', 'ro', 'tound', 'tour', 'runder',
-    'rn',  'rond', 'ronud', 'roudn', 'turno', 'turul', 'sr'],
+    'rn',  'rond', 'ronud', 'roudn', 'turno', 'turul', 'sr', 'turno'],
   Section => ['seksjon', 'sektion'],
   Segment => ['seg', 'segm', 'segement', 'segemt', 'segmant',
     'segmen', 'segemnt', 'segmento', 'segments', 'segmetn', 'segmnet', 

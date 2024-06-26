@@ -51,10 +51,10 @@ use Title::Destroy;
 
 my @TAG_ORDER = qw(
   TITLE_TNAME
+  TITLE_DESTROY
   TITLE_TWORD
   TITLE_MEET
   TITLE_CLUB
-  TITLE_DESTROY
 
   TITLE_ORGANIZATION 
   TITLE_ZONE 
@@ -446,10 +446,8 @@ sub split_on_some_numbers
   if ($text =~ /(\d+)_(\d+)/ && $1 <= $2 && $1 < 1990)
   {
     $text =~ s/(\d+)_(\d+)/$1 of $2/;
+    $text =~ s/(\d+)&(\d+)/$1 to $2/;
   }
-
-# my $t = $text;
-# print "XERE $t | $text\n" unless $t eq $text;
 
   # Doesn't really belong here.
   $text =~ s/pokal([a-z])/pokal $1/i;
@@ -459,6 +457,11 @@ sub split_on_some_numbers
   $text =~ s/\bUSA[12]/USA/g;
   $text =~ s/\bUSA 2\b/USA/g;
   $text =~ s/II-nd/2nd/g;
+  $text =~ s/\b(\d\d) _$/Rof$1/g;
+  $text =~ s/\bF([12])\b/Final $1/g;
+
+# my $t = $text;
+# print "XERE $t | $text\n" unless $t eq $text;
 
   return $text;
 }
@@ -850,6 +853,31 @@ sub pre_process_title
 }
 
 
+sub ordinalize
+{
+  my ($value) = @_;
+
+  my $last = substr($value, -1);
+
+  if ($last == 1)
+  {
+    return $value . 'st';
+  }
+  elsif ($last == 2)
+  {
+    return $value . 'nd';
+  }
+  elsif ($last == 3)
+  {
+    return $value . 'rd';
+  }
+  else
+  {
+    return $value . 'th';
+  }
+}
+
+
 sub post_process_first_numeral
 {
   my ($chains) = @_;
@@ -867,25 +895,7 @@ sub post_process_first_numeral
     # So now we have the first open chain, and it consists
     # of one COUNTER which we turn into an ORDINAL and complete.
 
-    my $value = $token->value();
-    my $last = substr($value, -1);
-    if ($last == 1)
-    {
-      $value .= 'st';
-    }
-    elsif ($last == 2)
-    {
-      $value .= 'nd';
-    }
-    elsif ($last == 3)
-    {
-      $value .= 'rd';
-    }
-    else
-    {
-      $value .= 'th';
-    }
-
+    my $value = ordinalize($token->value());
     $token->set_ordinal_counter($value);
     $chain->complete_if_last_is(0, 'COMPLETE');
 
@@ -971,9 +981,54 @@ sub post_process_stand_alone_singles
       $token->set_singleton('TITLE_FORM', 'Teams');
       $chain->complete_if_last_is(0, 'COMPLETE');
     }
+  }
+}
+
+
+my %SANDWICH_LEFT_ORDINAL =
+(
+  TITLE_COUNTRY => 1,
+  TITLE_CLUB => 1,
+  LETTER => 1
+);
+
+my %SANDWICH_RIGHT_ORDINAL =
+(
+  TITLE_TNAME => 1,
+  TITLE_TWORD => 1,
+  TITLE_REGION => 1
+);
+
+sub post_process_sandwiched_singles
+{
+  my ($chains) = @_;
+
+  return unless $#$chains >= 2;
+  for my $cno (1 .. $#$chains-1)
+  {
+    my $chain1 = $chains->[$cno];
+    next unless $chain1->status() eq 'OPEN';
+    next unless $chain1->last() == 0;
+    my $token1 = $chain1->check_out(0);
+    return unless $token1->category() eq 'COUNTER' &&
+      $token1->field() eq 'NUMERAL';
+
+    my $chain0 = $chains->[$cno-1];
+    my $token0 = $chain0->check_out($chain0->last());
+
+    my $chain2 = $chains->[$cno+1];
+    my $token2 = $chain2->check_out(0);
+
+    if (exists $SANDWICH_LEFT_ORDINAL{$token0->field()} &&
+        exists $SANDWICH_RIGHT_ORDINAL{$token2->field()})
+    {
+      my $value = ordinalize($token1->value());
+      $token1->set_ordinal_counter($value);
+      $chain1->complete_if_last_is(0, 'COMPLETE');
+    }
     else
     {
-      print "ZZZ ", $token->category(), ", ", $token->field(), "\n";
+      $chain1->complete_if_last_is(0, 'DESTROY');
     }
   }
 }
@@ -1037,6 +1092,7 @@ sub post_process_title
   post_process_first_numeral($chains);
   post_process_last_iterator($chains);
   post_process_stand_alone_singles($chains);
+  post_process_sandwiched_singles($chains);
   post_process_stand_alone_doubles($chains);
 
 }
