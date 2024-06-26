@@ -17,8 +17,8 @@ use TeamBBO;
 my @MULTI_WORDS =
 (
   '1v4', '2v3', '3x12', '4x12', '4v5', '#7836 teams', '#8405 teams',
-  '4 bd', '40 boards', 'bds 1 to 18', 'bds 19 to 46', 'bds 31 to 60',
-  'eve 17 to 32',
+  '4 bd', '40 boards', 'bds 1 to 18', 'bds 19-46', 'bds 31-60',
+  'eve 17-32',
   's5r38t2', 's5r40t2', 's5r4t2', 's5r43_t2', 's5r42t2', 's5r45t2',
   's5r2t2',
   's1r7', 's2r1', 'k-8',

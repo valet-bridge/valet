@@ -443,7 +443,7 @@ sub split_on_some_numbers
   $text =~ s/\b([1-9])([A-D])\b/$1 $2/gi;
   $text =~ s/\b(\d)of(\d)\b/$1 of $2/g;
   
-  if ($text =~ /(\d+)_(\d+)/ && $1 <= $2 && $1 < 1990)
+  if ($text =~ /(\d+)[_&](\d+)/ && $1 <= $2 && $1 < 1990)
   {
     $text =~ s/(\d+)_(\d+)/$1 of $2/;
     $text =~ s/(\d+)&(\d+)/$1 to $2/;
@@ -904,6 +904,42 @@ sub post_process_first_numeral
 }
 
 
+my %LAST_NUM_DESTROY =
+(
+  TITLE_CAPTAIN => 1,
+  TITLE_CITY => 1,
+  TITLE_COUNTRY => 1,
+  TITLE_DESTROY => 1,
+  TITLE_FORM => 1,
+  TITLE_TNAME => 1,
+  TITLE_TWORD => 1,
+  TITLE_YEAR => 1
+);
+
+
+sub post_process_last_numeral
+{
+  my ($chains) = @_;
+
+  return unless $#$chains >= 1;
+  my $chain1 = $chains->[-1];
+  return unless $chain1->status() eq 'OPEN';
+  return unless $chain1->last() == 0;
+
+  my $token1 = $chain1->check_out(0);
+  return unless $token1->category() eq 'COUNTER' &&
+    $token1->field() eq 'NUMERAL';
+
+  my $chain0 = $chains->[-2];
+  my $token0 = $chain0->check_out($chain0->last());
+
+  if (exists $LAST_NUM_DESTROY{$token0->field()})
+  {
+    $chain1->complete_if_last_is(0, 'DESTROY');
+  }
+}
+
+
 my %NUM_VALID =
 (
   TITLE_AGE => 1,
@@ -1091,6 +1127,7 @@ sub post_process_title
 
   post_process_first_numeral($chains);
   post_process_last_iterator($chains);
+  post_process_last_numeral($chains);
   post_process_stand_alone_singles($chains);
   post_process_sandwiched_singles($chains);
   post_process_stand_alone_doubles($chains);

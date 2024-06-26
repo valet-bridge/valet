@@ -7,13 +7,11 @@ Deal with ambiguous Q, O, S, Q
 
 DATE to DATE could become DATE_START DATE_END without 'to'
 
----
+More compact chain output when recognized
 
-Trailing single digit:
-F1 -> Final 1? Which is then a stage
+---
 
 If after LETTER, NUMERAL, ITERATOR N_OF_N: not sure
 otherwise DESTROY
 
-
-More compact chain output when recognized
+Combine with LETTER I think
