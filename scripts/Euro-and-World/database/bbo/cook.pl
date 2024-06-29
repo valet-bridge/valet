@@ -30,8 +30,10 @@ use Title::Reductions;
 
 die "perl cook.pl raw.txt" unless $#ARGV == 0;
 
-my $do_events = 0; # 1 if we parse EVENT
+my $do_events = 1; # 1 if we parse EVENT
 my $do_tournaments = 1; # 1 if we parse TITLE
+
+my $print_chains = 1; # 1 if we dump results for further analysis
 
 my @RAW_FIELDS = qw(BBONO TITLE EVENT SCORING TEAMS);
 
@@ -76,10 +78,12 @@ while ($line = <$fh>)
     next;
   }
 
-  if ($chunk{BBONO} == 99999)
+  if ($chunk{BBONO} == 193)
   {
     print "HERE\n";
   }
+
+  print_chunk(\%chunk) if $print_chains;
 
   # TEAMS
 
@@ -91,6 +95,12 @@ while ($line = <$fh>)
 
   update_chain_team_stats($chain_team1, \@chain_team_stats);
   update_chain_team_stats($chain_team2, \@chain_team_stats);
+
+  if ($print_chains)
+  {
+    print_chain($chain_team1, 1, "");
+    print_chain($chain_team2, 2, "");
+  }
 
 
   if ($do_events)
@@ -109,10 +119,17 @@ while ($line = <$fh>)
       1, \@reduction_event_stats);
 
     update_chain_stats(\%chunk, \@chains_event, \@chain_event_stats);
+
+    print_chains_by_tag(\@chains_event, "EVENT") if $print_chains;
   }
 
   my $scoring;
   study_scoring($chunk{SCORING}, \%result, $chunk{BBONO});
+
+  if ($print_chains)
+  {
+    print "SCORING ", $chunk{SCORING}, "\n";
+  }
 
   if ($do_tournaments)
   {
@@ -133,7 +150,11 @@ while ($line = <$fh>)
     update_chain_stats(\%chunk, \@chains_title, \@chain_title_stats);
     update_num_chain_stats(\%chunk, 
       \@chains_title, \@chain_title_num_stats);
+
+    print_chains_by_tag(\@chains_title, "") if $print_chains;
   }
+
+  print "\n" if ($print_chains);
 }
 
 close $fh;
@@ -171,6 +192,76 @@ sub print_chunk
     }
   }
   print "\n";
+}
+
+
+sub print_chain
+{
+  my ($chain, $no, $prefix) = @_;
+
+  return if $chain->status() eq 'KILLED';
+
+  my $l = $chain->last();
+  return if $l == -1;
+
+  my $token = $chain->check_out(0);
+  if ($token->field() =~ /^TEAM_/)
+  {
+    # Can be just a team chain.
+    for my $i (0 .. $l)
+    {
+      my $t = $chain->check_out($i);
+      my $tag = $t->field();
+      $tag =~ s/^TEAM_/TEAM${no}_/;
+      print $tag, ' ', $t->value(), "\n";
+    }
+  }
+  elsif ($l == 0)
+  {
+    print $token->str(0, $prefix);
+  }
+  elsif ($prefix eq 'EVENT' && $l == 2)
+  {
+    my $token0 = $chain->check_out(0);
+    my $token2 = $chain->check_out(2);
+
+    if ($token0->category() eq 'ITERATOR' &&
+        $token2->category() eq 'COUNTER')
+    {
+      my $synth = Token->new();
+      $synth->set_singleton($token0->field(), $token2->value());
+      print $synth->str(0, $prefix);
+    }
+    else
+    {
+      print "Haven't learned this yet ($l):\n";
+      print "  ", $chain->text(), " # ", $chain->fields(), "\n";
+    }
+  }
+  elsif ($token->field() =~ /^TITLE_/ && $l == 1)
+  {
+    my $token0 = $chain->check_out(0);
+    my $token1 = $chain->check_out(1);
+
+    if ($token0->field() eq 'TITLE_ITERATOR' &&
+        $token1->category() eq 'COUNTER')
+    {
+      my $synth = Token->new();
+      $synth->set_singleton($token0->value(), $token1->value());
+      print $synth->str(0, $prefix);
+    }
+    else
+    {
+      print "Haven't learned this yet ($l):\n";
+      print "  ", $chain->text(), " # ", $chain->fields(), "\n";
+    }
+    
+  }
+  else
+  {
+    print "Haven't learned this yet ($l):\n";
+    print "  ", $chain->text(), " # ", $chain->fields(), "\n";
+  }
 }
 
 
@@ -220,6 +311,16 @@ sub print_chains_full
       $chain->fields());
   }
   printf "\n";
+}
+
+
+sub print_chains_by_tag
+{
+  my ($chains, $prefix) = @_;
+  for my $chain_no (0 .. $#$chains)
+  {
+    print_chain($chains->[$chain_no], 0, $prefix);
+  }
 }
 
 

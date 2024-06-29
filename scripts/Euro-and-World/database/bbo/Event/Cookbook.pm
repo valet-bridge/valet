@@ -27,6 +27,7 @@ our @EXPORT = qw(
 # Iterators are words/concepts that take parameters.
 # For example, "Round" can be "Round 4-5 of 8".
 
+# TODO Unify
 my @SINGLETON_LIST = qw(
   TNAME
   SPONSOR
@@ -43,7 +44,9 @@ my @SINGLETON_LIST = qw(
   COUNTRY
   CITY
   YEAR
+  YEAR_MONTH
   MONTH
+  MONTH_DAY
   DATE
   WEEKDAY
   TEMPORAL
@@ -54,6 +57,80 @@ my @SINGLETON_LIST = qw(
   LETTER
   PARTICLE
   KILL
+
+  MAJOR_MINOR
+  N_OF_N
+  N_TO_N
+  N_TO_N_OF_N
+  NL
+  NL_OF_N
+  NL_TO_N
+
+  EXPANSION
+
+  TITLE_TNAME
+  TITLE_DESTROY
+  TITLE_TWORD
+  TITLE_MEET
+  TITLE_CLUB
+
+  TITLE_ORGANIZATION
+  TITLE_ZONE
+  TITLE_SPONSOR
+  TITLE_COUNTRY
+  TITLE_NATIONALITY
+  TITLE_REGION
+  TITLE_CITY
+  TITLE_QUARTER
+  TITLE_UNIVERSITY
+  TITLE_FORM
+  TITLE_CAPTAIN
+  TITLE_GENDER
+  TITLE_AGE
+  TITLE_SCORING
+  TITLE_PERSON
+  TITLE_ITERATOR
+  TITLE_STAGE
+  TITLE_TIME
+  TITLE_YEAR
+  TITLE_PARTICLE
+  TITLE_AMBIGUOUS
+  TITLE_DATE
+
+  Berth
+  Day
+  Group
+  Flight
+  Half
+  Match
+  Quarter
+  Phase
+  Round
+  Segment
+  Series
+  Session
+  Set
+  Stage
+  Stanza
+  Table
+
+  Boards
+  J
+  Part
+  Place
+  Q
+  Rof
+  Room
+  ROUND
+  S
+  Section
+  TEAM_FORM
+  Tempo
+  Top
+  W
+  Week
+  Weekend
+  Y
 );
 
 our %SINGLETONS = map { $_ => 1 } @SINGLETON_LIST;

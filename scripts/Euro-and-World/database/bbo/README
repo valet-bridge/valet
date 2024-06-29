@@ -1,10 +1,35 @@
+Output all the cook results into a text file in compact format:
+- two team chains
+- event
+- scoring
+- title
+- use prefixes for each origin
+- a field can probably be a single or a list, { }
+
+Read in that same format
+
+Some things to do deal with:
+- Unify scoring
+- Teams, if present more than one time, should match, then simplify
+- Years can come out
+- TWORDs can be aggregated and clustered
+- List of actual TNAME profiles, also ordinal guidance,
+  24th was i 2013 etc, list of support points,
+  locations {2013: Lisbon}, display name
+
+
+
+Things to deal with in chains:
+- ambiguous Q, O, S, Q
+- DATE to DATE could become DATE_START DATE_END without 'to'
+- Maybe eliminate/compare team names and knowledge
+- Aggregate TWORD, compare against TNAME clusters
+
+More general stuff
+------------------
+
 Write output from C++ of #qx, #hands, range of board #s, lines
 Check the .ref files that modify qx against this
 
 URL scraper from .lin
 
-Deal with ambiguous Q, O, S, Q
-
-DATE to DATE could become DATE_START DATE_END without 'to'
-
-More compact chain output when recognized

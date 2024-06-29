@@ -570,9 +570,9 @@ sub str_full
 
 sub str_iterator
 {
-  my ($self) = @_;
+  my ($self, $prefix) = @_;
 
-  die "Haven't learned str_iterator yet";
+  return $self->str_singleton($prefix);
 }
 
 
@@ -586,16 +586,22 @@ sub str_counter
 
 sub str_singleton
 {
-  my ($self) = @_;
+  my ($self, $prefix) = @_;
 
   my $field = $self->{FIELD};
-  my $value = $self->{VALUE};
+  my $value = $self->{VALUE} || "(empty)";
 
   die "No field" unless defined $field;
-  die "No value" unless defined $value;
   die "Bad field $field" unless exists $SINGLETONS{$field};
 
-  return "$SINGLETONS{$field} $value";
+  if ($prefix ne '')
+  {
+    return "${prefix}_$field $value";
+  }
+  else
+  {
+    return "$field $value";
+  }
 }
 
 
@@ -631,7 +637,7 @@ sub str_unknown
 
 sub str
 {
-  my ($self, $full_flag) = @_;
+  my ($self, $full_flag, $prefix) = @_;
 
   my $category = $self->{CATEGORY};
   die "No category" unless defined $category;
@@ -639,34 +645,34 @@ sub str
   my $str;
   if ($category eq 'ITERATOR')
   {
-    $str = str_iterator();
+    $str = $self->str_iterator($prefix);
   }
   elsif ($category eq 'COUNTER')
   {
-    $str = str_iterator();
+    $str = $self->str_iterator($prefix);
   }
   elsif ($category eq 'SINGLETON')
   {
-    $str = str_singleton();
+    $str = $self->str_singleton($prefix);
   }
   elsif ($category eq 'SEPARATOR')
   {
-    $str = str_separator();
+    $str = $self->str_separator();
   }
   elsif ($category eq 'KILL')
   {
-    $str = str_kill();
+    $str = $self->str_kill();
   }
   elsif ($category eq 'UNKNOWN')
   {
-    $str = str_unknown();
+    $str = $self->str_unknown();
   }
   else
   {
     die "Unknown category $category";
   }
 
-  $str .= ' ' . str_full() if $full_flag;
+  $str .= ' ' . $self->str_full() if $full_flag;
   return $str . "\n";
 }
 
