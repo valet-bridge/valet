@@ -78,7 +78,7 @@ while ($line = <$fh>)
     next;
   }
 
-  if ($chunk{BBONO} == 193)
+  if ($chunk{BBONO} == 3032)
   {
     print "HERE\n";
   }
@@ -151,7 +151,7 @@ while ($line = <$fh>)
     update_num_chain_stats(\%chunk, 
       \@chains_title, \@chain_title_num_stats);
 
-    print_chains_by_tag(\@chains_title, "") if $print_chains;
+    print_chains_by_tag(\@chains_title, "TITLE") if $print_chains;
   }
 
   print "\n" if ($print_chains);
@@ -218,7 +218,8 @@ sub print_chain
   }
   elsif ($l == 0)
   {
-    print $token->str(0, $prefix);
+    my $p = ($prefix eq 'TITLE' ? '' : $prefix);
+    print $token->str(0, $p);
   }
   elsif ($prefix eq 'EVENT' && $l == 2)
   {
@@ -232,13 +233,28 @@ sub print_chain
       $synth->set_singleton($token0->field(), $token2->value());
       print $synth->str(0, $prefix);
     }
+    elsif ($token0->field() eq 'EXPANSION' &&
+        $token2->category() eq 'COUNTER')
+    {
+      my $synth = Token->new();
+      $synth->set_singleton($token0->field(), 
+        $token0->value() . ' ' . $token2->value());
+      print $synth->str(0, $prefix);
+    }
+    elsif ($token0->category() eq 'ITERATOR' &&
+        $token2->field() eq 'LETTER')
+    {
+      my $synth = Token->new();
+      $synth->set_singleton($token0->field(), $token2->value());
+      print $synth->str(0, $prefix);
+    }
     else
     {
-      print "Haven't learned this yet ($l):\n";
+      print "Haven't learned this yet (A $l):\n";
       print "  ", $chain->text(), " # ", $chain->fields(), "\n";
     }
   }
-  elsif ($token->field() =~ /^TITLE_/ && $l == 1)
+  elsif ($prefix eq 'TITLE' && $l == 1)
   {
     my $token0 = $chain->check_out(0);
     my $token1 = $chain->check_out(1);
@@ -248,18 +264,40 @@ sub print_chain
     {
       my $synth = Token->new();
       $synth->set_singleton($token0->value(), $token1->value());
+      print $synth->str(0, '');
+    }
+    elsif ($token0->category() eq 'COUNTER' &&
+        $token1->field() eq 'TITLE_ITERATOR')
+    {
+      my $synth = Token->new();
+      $synth->set_singleton($token1->value(), $token0->value());
+      print $synth->str(0, '');
+    }
+    elsif ($token0->field() eq 'ORDINAL' &&
+        $token1->field() eq 'TITLE_ITERATOR')
+    {
+      my $synth = Token->new();
+      $synth->set_singleton($token1->value(), $token0->value());
+      print $synth->str(0, $prefix);
+    }
+    elsif ($token0->field() eq 'TITLE_AMBIGUOUS' &&
+        $token1->category() eq 'COUNTER')
+    {
+      my $synth = Token->new();
+      $synth->set_singleton($token0->field(), 
+        $token0->value() . ' ' . $token1->value());
       print $synth->str(0, $prefix);
     }
     else
     {
-      print "Haven't learned this yet ($l):\n";
+      print "Haven't learned this yet (B $l):\n";
       print "  ", $chain->text(), " # ", $chain->fields(), "\n";
     }
     
   }
   else
   {
-    print "Haven't learned this yet ($l):\n";
+    print "Haven't learned this yet (C $l):\n";
     print "  ", $chain->text(), " # ", $chain->fields(), "\n";
   }
 }

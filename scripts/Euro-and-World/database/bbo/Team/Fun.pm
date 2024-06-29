@@ -39,7 +39,12 @@ my @MULTI_WORDS =
   '6 Spades',
   '60 y 20',
   '8-5-0-0',
+  '88 Loreng',
+  '88 Red',
+  '88 Senior',
 
+  'A Team',
+  'A2',
   'Aces & Deuces',
   'Adams Family',
   'AG laget',
@@ -66,6 +71,7 @@ my @MULTI_WORDS =
   'Atomic Bridge',
   'Awesome Avengers',
 
+  'B Team',
   'Babes Amazones',
   'Bad Beat',
   'Bad Man',
@@ -585,6 +591,7 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  '0% Eriksson' => ['0 eriksson'],
   '3 Idiots + 1' => ['3 idiots +1', '3 idiots + i'],
   '4 Trèfles' => ['4 trefles 1', '4 trefles1',
     '4trèfles', '4 treffles', '4trèfle'],
@@ -672,6 +679,7 @@ my %MULTI_TYPOS =
   'Magic Eyes' => ['majic eyes', 'm e'],
   'Man Harr det man har' => ['man harr det man ha'],
   'Manchester United' => ['man u', 'man utd'],
+  'Männer mit ELAN' => ['2 männer mit elan'],
   'Missão Impossivel' => ['missão impossível'],
   'Ms. Guggenheim' => ['ms. gugenheim'],
   'Murphys lag' => ['murpyhs lag'],
