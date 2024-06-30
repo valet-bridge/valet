@@ -304,6 +304,7 @@ my @MULTI_WORDS =
   'La Vista',
   'Lady Da et ses Boys',
   'Lakk & Lær',
+  'Lalit Mohanka Youth',
   'Langt mer enn ivrig',
   'Last Minute',
   'Last Arrival',

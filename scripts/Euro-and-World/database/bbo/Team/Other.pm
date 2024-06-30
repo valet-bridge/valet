@@ -56,7 +56,6 @@ my @MULTI_WORDS =
   'Buyur Teyze',
 
   'Can Aren',
-  'CC&FC',
   'Cemara Putra',
   "Chairman's Choice",
   'Czarna Papuga Plus',

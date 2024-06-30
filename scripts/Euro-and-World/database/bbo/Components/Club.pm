@@ -18,18 +18,21 @@ my @MULTI_WORDS =
 (
   "'t Onstein",
   'Alumni Club Chennai',
+  'Armando and Viviane Gonçalves Pereira',
   'AVI Club Noida',
   'Bombay Gymkhana Club',
   'BC Saint Honoré',
   'Calcutta Cricket & Football Club',
   'Delhi Gymkhana Club',
   'Gabrial University of Indonesia',
+  'Hindusthan Club',
   'Jubilee Hills International Centre',
   'Madras Gymkhana Club',
   'Otters Club',
-  'White House',
+  'Witte Huis',
   'Royal Airforce Club',
   'Ruch AZS',
+  'Samadhan Academy',
   'Willingdon Sports Club'
 );
 
@@ -46,8 +49,9 @@ my %MULTI_TYPOS =
   'Madras Gymkhana Club' => ['madras gymkhana', 'madras gumkhana',
     'maras gymkhana'],
   'Otters Club' => ["otters' club", "otter's club", "otter's"],
+  'Samadhan Academy' => ['samadhan', 'samadgan'],
   'Willingdon Sports Club' => ['the willingdon sports club', 'wcg'],
-  'White House' => ['witte huis', 'het witte huis']
+  'Witte Huis' => ['white house', 'het witte huis']
 );
 
 my @SINGLE_WORDS = qw(
@@ -57,6 +61,7 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  'Armando and Viviane Gonçalves Pereira' => ['avgp'],
   'AVI Club Noida' => ['avi'],
   'BC Saint Honoré' => ['bcsh'],
   'Delhi Gymkhana Club' => ['dgc'],
@@ -64,7 +69,7 @@ my %SINGLE_TYPOS =
   'Otters Club' => ['otters'],
   'Royal Airforce Club' => ['rac'],
   'Ruch AZS' => ['ruch'],
-  'White House' => ['whitehouse']
+  'Witte Huis' => ['whitehouse']
 );
 
 

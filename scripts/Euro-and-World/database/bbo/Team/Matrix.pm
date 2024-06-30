@@ -511,7 +511,7 @@ my %CITY_TO_CLUB =
   Lille => ['BC de Lille'],
   Lindesberg => ['Lindesbergs BS'],
   Linköping => ['Smedstadens BK'],
-  Lisbon => ['Associação Viviane Gonçalves Pereira',
+  Lisbon => ['Armando and Viviane Gonçalves Pereira',
     'Benfica', 'Núcleo De Bridge Do Círculo'],
   Lom => ['Øvre Ottadalen'],
   London => ['TGR'],

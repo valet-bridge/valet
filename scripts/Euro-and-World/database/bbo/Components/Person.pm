@@ -17,7 +17,6 @@ use TeamBBO;
 my @MULTI_WORDS =
 (
   'Andrzej Wilkosz',
-  'Armando and Viviane Goncalves Pereira',
   'Ashok Kapur',
   'B L Rao',
   'Boris Schapiro',
@@ -99,7 +98,6 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  'Armando and Viviane Goncalves Pereira' => ['avgp'],
   'Boris Schapiro' => ['schapiro'],
   'Dr. Tolani' => ['tolani'],
   'M Keni' => ['mkeni', 'keni'],

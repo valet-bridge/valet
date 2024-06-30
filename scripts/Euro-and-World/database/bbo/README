@@ -2,6 +2,9 @@ Output all the cook results into a text file in compact format:
 - a field can probably be a single or a list, { }
 
 Use the same Components
+- Club
+- Destroy
+
 Make Event same code structure as Title
 Maybe this simplifies printing as well
 
