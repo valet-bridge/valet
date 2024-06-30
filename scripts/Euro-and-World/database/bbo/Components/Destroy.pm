@@ -49,13 +49,13 @@ my %MULTI_TYPOS =
     'champion of champions', 'de bridge', 'de vigraph', 'div a retour', 
     'eng comment', 'eng comments', 'eng comment in',
     'extra match', 'for 3rd pair', 'for pau', 'for the', 'in the', 
-    'main event', 'match retour', 'pour pau',
+    'main event', 'match retour', 'no name', 'pour pau',
     'special tournament', 'sports event', 'swe comment', 
     'swe comments', 'sw comment', 'sw comments',
     'the 80 grand challenge', 'the combat of system',
     'untitled match', 'warm up', 'Welcome to'],
   'Generic Team' => ['bridge tem', 'bridge tea'],
-  'Undecipherable Team' => ['a-hvv', 'a-srr', 'b-srk', 'g-dkr',
+  'Undecipherable Team' => ['ÀA¬ü', 'a-hvv', 'a-srr', 'b-srk', 'g-dkr',
     'i-aaa', 'i-vvu', 't-dbi', 't-rsb', 'v-dkm', 'v-ivi', 'v-jgd', 'y-ivz',
     'dhzhy', 'dhzy', 'gdcd', 'gzzj', 'hssqx', 'jy',
     'kj', 'kjy', 'lqsw', 'ly', 'lylw', 'mktx', 'qc', 'qy', 'pn',
@@ -77,9 +77,6 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  naturalists => ['nauralists'],
-  scientists => ['scientist'],
-
   Fluff => ['aa', 'abd', 'aft', 'and', 'as', 'at', 'av',
     'b!', 'bbo', 'bboz', 'bt', 'bv', 'by',
     'de', 'des', 'ds', 'du', 'dw', 'dwii', 'enc', 'eve', 'ew', 'extra', 
@@ -98,15 +95,17 @@ my %SINGLE_TYPOS =
     'inter', 'interland',
     'leaders', 'leders', 
     'merkezi', 'mates', 'milli', 'multievent', 'multieventof',
-    'naturalists', 'nature', 'noname', 'nord', 'north',
+    'naturalists', 'nature', 'nauralists', 'noname', 'nord', 'north',
     'opponent', 'opponents', 'other', 'others',
     'pairno', 'platinum', 'players', 'plus', 'point', 'rank',
     'popular',
     'retour', 'retur',
-    'science', 'scientists', 'selected', 'show', 'south',
-    'syd',
-    'transfer',
-    'winners',
+    'science', 'scientist', 'scientists', 'selected', 'show', 'south', 
+    'sponsor', 'standard', 'stars', 'super', 'syd',
+    'tennis', 'test', 'times', 'top', 'tournament', 'tounament',
+    'tourney', 'trn', 'trnaway', 'trnhome', 'transfer', 'tricks',
+    'united', 'various',
+    'west', 'winners', 'world', 'worldteam'
     ]
 );
 

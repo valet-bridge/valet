@@ -17,10 +17,8 @@ use TeamBBO;
 my @MULTI_WORDS =
 (
   '>',
-  'ÀA¬ü',
   'City of',
   'nat. champio',
-  'No Name',
   'Premier League',
   'Pra PON',
   'Undecipherable Team',
@@ -44,12 +42,9 @@ my @SINGLE_WORDS = qw(
   National
   Olympiad
   Pacific PON Prima Pusat
-  Section Selection Sponsor Squad Standard Stars 
-  Sunday Super Swiss
-  Table Tennis Test Times Top Tournament Trials Tricks
-  United
-  West World
-  Various
+  Section Selection Squad 
+  Sunday Swiss
+  Table Trials Tricks
 );
 
 my %SINGLE_TYPOS =
@@ -57,12 +52,9 @@ my %SINGLE_TYPOS =
   Group => ['istis'],
   International => ['internat', 'internationa'],
   National => ['nasional'],
-  'No Name' => ['noname'],
   Pacific => ['pacyfic'],
   'Pra PON' => ['prapon', 'pon'],
   Squad => ['squadra', 'takim', 'tim'],
-  Tournament => ['tounament', 'tourney', 'trn', 'trnaway', 'trnhome'],
-  World => ['worldteam']
 );
 
 
