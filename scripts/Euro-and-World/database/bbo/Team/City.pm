@@ -114,7 +114,7 @@ my %MULTI_TYPOS =
     'v.fabbriche'],
   'Vrnjacka Banja' => ['vrnjacka banja - al'],
   Wuhan => ['wu han'],
-  Yogyakarta => ['di jogjakarta']
+  Yogyakarta => ['di jogjakarta', 'd i yogyakarta']
 );
 
 my @SINGLE_WORDS = qw(

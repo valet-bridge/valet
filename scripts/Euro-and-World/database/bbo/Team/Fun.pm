@@ -41,6 +41,7 @@ my @MULTI_WORDS =
   '8-5-0-0',
   '88 Loreng',
   '88 Red',
+  '88 Merah Senior',
   '88 Senior',
 
   'A Team',

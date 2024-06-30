@@ -1,10 +1,9 @@
 Output all the cook results into a text file in compact format:
-- two team chains
-- event
-- scoring
-- title
-- use prefixes for each origin
 - a field can probably be a single or a list, { }
+
+Use the same Components
+Make Event same code structure as Title
+Maybe this simplifies printing as well
 
 Read in that same format
 
@@ -14,14 +13,11 @@ Some things to do deal with:
 - Years can come out
 - TWORDs can be aggregated and clustered
 - List of actual TNAME profiles, also ordinal guidance,
-  24th was i 2013 etc, list of support points,
+  24th was in 2013 etc, list of support points,
   locations {2013: Lisbon}, display name
-
-
 
 Things to deal with in chains:
 - ambiguous Q, O, S, Q
-- DATE to DATE could become DATE_START DATE_END without 'to'
 - Maybe eliminate/compare team names and knowledge
 - Aggregate TWORD, compare against TNAME clusters
 

@@ -215,11 +215,13 @@ sub print_chain
       $tag =~ s/^TEAM_/TEAM${no}_/;
       print $tag, ' ', $t->value(), "\n";
     }
+    return;
   }
   elsif ($l == 0)
   {
     my $p = ($prefix eq 'TITLE' ? '' : $prefix);
     print $token->str(0, $p);
+    return;
   }
   elsif ($prefix eq 'EVENT' && $l == 2)
   {
@@ -253,6 +255,7 @@ sub print_chain
       print "Haven't learned this yet (A $l):\n";
       print "  ", $chain->text(), " # ", $chain->fields(), "\n";
     }
+    return;
   }
   elsif ($prefix eq 'TITLE' && $l == 1)
   {
@@ -293,13 +296,65 @@ sub print_chain
       print "Haven't learned this yet (B $l):\n";
       print "  ", $chain->text(), " # ", $chain->fields(), "\n";
     }
-    
+    return;
   }
-  else
+
+  if ($prefix eq 'TITLE' && $l >= 2)
   {
-    print "Haven't learned this yet (C $l):\n";
-    print "  ", $chain->text(), " # ", $chain->fields(), "\n";
+    my $found = 0;
+    my $pno;
+    for my $i (1 .. $l-1)
+    {
+      my $token = $chain->check_out($i);
+      if ($token->field() eq 'TITLE_PARTICLE' &&
+          $token->value() eq 'vs')
+      {
+        $found = 1;
+        $pno = $i;
+        last;
+      }
+    }
+
+    if ($found)
+    {
+      for my $i (0 .. $pno-1)
+      {
+        my $t = $chain->check_out($i);
+        my $tag = $t->field();
+        $tag =~ s/^TITLE_/TITLE_TEAM1_/;
+        print $tag, ' ', $t->value(), "\n";
+      }
+
+      for my $i ($pno+1 .. $l)
+      {
+        my $t = $chain->check_out($i);
+        my $tag = $t->field();
+        $tag =~ s/^TITLE_/TITLE_TEAM2_/;
+        print $tag, ' ', $t->value(), "\n";
+      }
+      return;
+    }
   }
+
+  if ($prefix eq 'TITLE' && $l == 2)
+  {
+    my $token0 = $chain->check_out(0);
+    my $token1 = $chain->check_out(1);
+    my $token2 = $chain->check_out(2);
+
+    if ($token0->field() eq 'TITLE_DATE' &&
+        $token1->field() eq 'TITLE_PARTICLE' &&
+        $token1->value() eq 'to' &&
+        $token2->field() eq 'TITLE_DATE')
+    {
+      print "TITLE_DATE_START ", $token0->value(), "\n";
+      print "TITLE_DATE_END ", $token2->value(), "\n";
+    }
+    return;
+  }
+
+  print "Haven't learned this yet (C $l):\n";
+  print "  ", $chain->text(), " # ", $chain->fields(), "\n";
 }
 
 

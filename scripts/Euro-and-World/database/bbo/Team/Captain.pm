@@ -398,7 +398,7 @@ my %MULTI_TYPOS =
   Boaz => ['dr. boaz', "dr. boaz's"],
   'C.V. Rao' => ['c v rao', 'c. v. rao', 'c.v.rao', 'c.v.rao.', 'cv rao'],
   'Carlos Gonçalves' => ['carlos goncalves', 'c goncalves',
-    'carlos gonçalve', 'carlos gonçalv'],
+    'c gonçalves', 'carlos gonçalve', 'carlos gonçalv'],
   'Choo Wai Wong' => ['int choowai'],
   'Christal Henner-Welland' => ['welland-h', 'henner-we',
     'henner-welland'],
