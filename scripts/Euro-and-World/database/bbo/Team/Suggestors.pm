@@ -13,8 +13,10 @@ our @EXPORT = qw(suggest_form);
 
 # Only if it is a complete team entry.
 my @TEAMS_SUGGESTORS = (
-  'team 1', 'team 2', 'team1', 'team2', 'team one', 'team two',
-  'team a', 'team b', 'teama1',
+  'team 1', 'team 2', 'team 2a', 'team1', 'team2', 
+  't1', 't2', 't3', 't5', 't7', 'team4', 'team6', 'team 6a', 
+  'team 7a', 'team8', 'team 8a', 'team 9a',
+  'team one', 'team two', 'team a', 'team b', 'teama1',
   'home', 'away', 'visiting', 'away team',
   'table 1', 'table 2',
   'table8hom', 'table8vis',
@@ -33,7 +35,8 @@ my @PAIRS_SUGGESTORS = (
   'pair a', 'pair b', 'no teams', 'not teams',
   'pair ns', 'pair ew', 'pairs a', 'pairs b',
   'pairs 1', 'pairs 2', 'pair tournament', 'pairs tournament',
-  'pairs event', 'swiss pairs event', 'swiss pairs',
+  'pairs event', 'pairs match', 'swiss pairs event', 'swiss pairs',
+  'imp pairs match',
   'a_pair1', 'a_pair2', 'b_pair1', 'b_pair2',
   'c_pair1', 'c_pair2', 'd_pair1', 'd_pair2',
   'e_pair1', 'e_pair2',

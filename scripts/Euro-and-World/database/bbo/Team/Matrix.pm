@@ -582,6 +582,7 @@ my %CITY_TO_CLUB =
   Toulouse => ['Bridge Académie'],
   Tours => ['Cercle Tourangeau'],
   Trondheim => ['Midt Trøndelag', 'Studentenes BK'],
+  Udaipur => ['field club udaipur'],
   Umeå => ['BK Björken'],
   Uppsala => ['BK Fyris Skalman', 'Uppsalabridgen'],
   Utrecht => ['BC Star', 'Bridgeclub Oog', 'NDC Den Hommel'],

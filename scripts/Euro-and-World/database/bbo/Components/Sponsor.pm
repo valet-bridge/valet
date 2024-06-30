@@ -524,6 +524,7 @@ my %MULTI_TYPOS =
   'Pertamina' => ['pertamina ep', 'p-ep', 'pertamina ft', 
     'pertamina field', 'pertamina ge', 'pertamina indonesia', 
     'pertamina l.', 'pertamina field tmb', 'pertamina ep field'],
+  'Perusahaan Listrik Negara' => ['pln pusat'],
   'Phoenix TV' => ['feng huang wei shi', 'fenghuang tv'],
   'PLN Fortuga' => ['pln - fortuga'],
   'Poddar Developers' => ['poddar development', 'poddar dev',

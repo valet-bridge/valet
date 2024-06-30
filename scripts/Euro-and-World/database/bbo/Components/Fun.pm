@@ -82,6 +82,7 @@ my @MULTI_WORDS =
   'Bea & Family',
   'Beer Card',
   'Bela e os Monstros',
+  'Bermuda Squad',
   'Best i baren',
   'Best uten kort',
   'Beverly Hillbillies',
@@ -195,6 +196,7 @@ my @MULTI_WORDS =
   'Fast and Furious',
   'Fem på nya äventyr',
   'FF 69',
+  'Field Tambun',
   'Filips Fanclub',
   'Finnmark Flyers',
   'Finways Sappers',
@@ -377,6 +379,7 @@ my @MULTI_WORDS =
   'Oh Ya!',
   'Ohne Respekt Crew',
   'Olavs utvalgte',
+  'Olympiad Gold',
   'Om het hoekie',
   'One I S',
   'One + Khuching Tree',
@@ -438,6 +441,7 @@ my @MULTI_WORDS =
   'Samfund Slingers',
   'Saras Friends',
   'Schall und Rauch',
+  'Section 26',
   'Sektion UDV',
   'Seths vänner',
   'Seven Eleven',
@@ -639,6 +643,7 @@ my %MULTI_TYPOS =
 
   'Fast and Furious' => ['fast & furious'],
   'FF 69' => ['ff  69'],
+  'Field Tambun' => ['field t'],
   "Flint's Crew" => ["flint`s crew"],
   'Flora and Friends' => ['flora && friend'],
   'Fuglen har fløyet' => ['Foglen har fløyet'],
@@ -779,12 +784,9 @@ my @SINGLE_WORDS = qw(
    Octopussy Okay Olavsfestdagene Olrudbanden Olsenbanden Onyx 
    Opal Opera Opps Optimus Orthodoxi Orthodox Osss Outsiders Overivrig 
 
-   Pacers Paradigma Partizan
-   Patriot Patron 
-   Pegasus Perestrojka 
-   Pontiac Potlimit Potteplante Powerchicks 
-   Preempters Pretendents Proteus 
-   Pusten Påskevennene
+   Pacers Pacific Paradigma Partizan Patriot Patron Pegasus Perestrojka 
+   Pontiac Potlimit Potteplante Powerchicks Preempters Pretendents 
+   Proteus Pusten Påskevennene
 
    Quasar Quattro Quintet Quinze
 
@@ -861,6 +863,7 @@ my %SINGLE_TYPOS =
   Onyx => ['onix'],
   Opps => ['opsy'],
 
+  Pacific => ['pacyfic'],
   'Paris Match' => ['parismatch', 'parimatch'],
   Preempters => ['preemptors'],
   Pretendents => ['pretendentas'],

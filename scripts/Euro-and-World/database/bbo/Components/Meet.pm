@@ -37,7 +37,8 @@ my @MULTI_WORDS =
   'Gold Coast Congress',
   'Greek Islands Festival',
   'Iceland Bridge Festival',
-  'Indonesian National Sports Weeks',
+  'Indonesian National Pre-Sports Week',
+  'Indonesian National Sports Week',
   'International Bridge Festival',
   'Israel Grand Prix',
   'Israel International Festival',
@@ -106,7 +107,9 @@ my %MULTI_TYPOS =
   'Iceland Bridge Festival' => ['iceland bridgefestival',
     'iceland express bridge festival',
     'icelandic express bridge festival'],
-  'Indonesian National Sports Weeks' => ['indonesia week', 'pra pon'],
+  'Indonesian National Pre-Sports Week' => ['pra pon'],
+  'Indonesian National Sports Week' => ['indonesia week',
+    'indonesian national sports weeks'],
   'International Bridge Festival' => ['int_ bridge festival'],
   'Israel Grand Prix' => ['israeli grand prix',
     'israeli grand prize'],
@@ -170,7 +173,9 @@ my %SINGLE_TYPOS =
   Festival => ['fest', 'festiva', 'festivan', 'festval', 'festývalý',
     'festivali', 'festivals', 'festivalul', 'bridgefestival',
     'festiwal'],
-  'Gold Coast Congress' => ['gc', 'gcc']
+  'Gold Coast Congress' => ['gc', 'gcc'],
+  'Indonesian National Pre-Sports Week' => ['prapon'],
+  'Indonesian National Sports Week' => ['indonesia week', 'pon']
 );
 
 

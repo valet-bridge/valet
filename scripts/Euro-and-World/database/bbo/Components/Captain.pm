@@ -383,6 +383,7 @@ my %MULTI_TYPOS =
   'Alvensleben' => ['v.alvensleben', 'v. alvensleben'],
   'Amiya Ranjan Das' => ['a r dass'],
   'Andrea Landry'=> ['landry andrea'],
+  Angelini => ['squadra angelýný', 'squadra angelini'],
   'Antonio Falcao' => ['falcão'],
   'Antonio Maria Campos' => ['antonio m campos', 'antonio maria campo'],
   'Artur S. Silva' => ['artur s silva'],

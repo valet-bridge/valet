@@ -42,7 +42,8 @@ my %SINGLE_TYPOS =
 (
   Boards => ['board', 'bds', 'brds', 'donnes', 'spil'],
   Flight => ['flt'],
-  Group => ['gruop', 'gr', 'grp', 'groups', 'pool', 'poule'],
+  Group => ['gruop', 'gr', 'grp', 'groups', 'groupe',
+    'istis', 'pool', 'poule'],
   Half => ['hallf', 'halvleg', 'halv', 'lhf', 'mt', 'ha'],
   Match => ['m', 'mathc', 'kamp', 'incontro', 'matxh', 'macth',
     'meci', 'matches', 'mo', 'maych', 'mecz'],

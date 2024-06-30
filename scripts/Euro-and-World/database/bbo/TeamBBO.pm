@@ -51,6 +51,9 @@ use Components::Color;
 use Components::Scoring;
 use Components::Form;
 
+use Components::Tword;
+use Components::Meet;
+
 use Components::Destroy;
 use Team::DestroyTeam;
 
@@ -79,6 +82,9 @@ my @TAG_ORDER = qw(
   TEAM_COLOR
   TEAM_SCORING
   TEAM_FORM
+  TEAM_TWORD
+  TEAM_MEET
+  TEAM_TIME
   TEAM_DESTROY
 );
 
@@ -139,6 +145,9 @@ sub init_hashes
   Components::Color::set_hashes($method, 'TEAM_COLOR');
   Components::Scoring::set_hashes($method, 'TEAM_SCORING');
   Components::Form::set_hashes($method, 'TEAM_FORM');
+  Components::Tword::set_hashes($method, 'TEAM_TWORD');
+  Components::Meet::set_hashes($method, 'TEAM_MEET');
+  Components::Time::set_hashes($method, 'TEAM_TIME');
 
   # TODO Goal is mainly to have one of these.
   Components::Destroy::set_hashes($method, 'TEAM_DESTROY');

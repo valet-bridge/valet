@@ -83,7 +83,7 @@ my %MULTI_TYPOS =
   Akhisar => ['akhisar belediyesi'],
   'Al-Rabwa' => ['rl-rabwa'],
   Banjarmasin => ['ksa banjarmasin'],
-  'City of Helsinki' => ['helsinki'],
+  Helsinki => ['city of helsinki'],
   Delhi => ['new delhi'],
   Diyarbakir => ['d.baki b.þ', 'd.bakir b.þ.', 'd.bakir y.þehýr', 
     'd.bakir yenýþehýr', 'd.bakýr b.þehir', 'd.bakir sur', 
