@@ -111,8 +111,7 @@ my (%MULTI_HITS);
 
 my %HIT_STATS;
 
-my $PREFIX = 'TITLE';
-our (%NEW_MULTI_WORDS, %NEW_MULTI_REGEX, %NEW_SINGLE_WORDS, %NEW_MULTI_HITS);
+my $PREFIX = 'TITLE_';
 
 
 sub init_hashes
@@ -328,39 +327,40 @@ sub split_on_trailing_digits
 
 sub title_specific_hashes
 {
-  my ($part, $token, $chain) = @_;
+  my ($whole, $part, $token, $chain) = @_;
 
-  for my $tag (@TAG_ORDER)
+  for my $tag (@NEW_TAG_ORDER)
   {
-    my $fix = $SINGLE_WORDS{$tag}{lc($part)};
+    my $fix = $whole->get_single($tag, lc($part));
     if (defined $fix->{CATEGORY})
     {
+      my $cat = $PREFIX . $fix->{CATEGORY};
+
       # my $w = $fix->{VALUE};
       # $MULTI_HITS{$tag}{lc($part)}++;
       # $MULTI_HITS{$tag}{lc($w)}++;
 
-      $token->set_singleton($fix->{CATEGORY}, $fix->{VALUE});
-      $HIT_STATS{$fix->{CATEGORY}}++;
+      $token->set_singleton($cat, $fix->{VALUE});
+      # $HIT_STATS{$fix->{CATEGORY}}++;
+      $HIT_STATS{$cat}++;
 
-      if ($fix->{CATEGORY} eq 'TITLE_GENDER' &&
-          $fix->{VALUE} eq 'Open')
+      if ($cat eq 'TITLE_GENDER' && $fix->{VALUE} eq 'Open')
       {
         # Special case: Add an extra token.
         my $token2 = Token->new();
         $token2->copy_origin_from($token);
-        $token2->set_singleton('TITLE_AGE', 'Open');
+        $token2->set_singleton($PREFIX . 'AGE', 'Open');
         $chain->append($token2);
-        $HIT_STATS{'TITLE_AGE'}++;
+        $HIT_STATS{$PREFIX . 'AGE'}++;
       }
-      elsif ($fix->{CATEGORY} eq 'TITLE_AGE' &&
-          $fix->{VALUE} eq 'Girls')
+      elsif ($cat eq 'TITLE_AGE' && $fix->{VALUE} eq 'Girls')
       {
         # Special case: Add an extra token.
         my $token2 = Token->new();
         $token2->copy_origin_from($token);
-        $token2->set_singleton('TITLE_GENDER', 'Women');
+        $token2->set_singleton($PREFIX . 'GENDER', 'Women');
         $chain->append($token2);
-        $HIT_STATS{'TITLE_GENDER'}++;
+        $HIT_STATS{$PREFIX . 'GENDER'}++;
       }
 
       return 1;
@@ -372,7 +372,7 @@ sub title_specific_hashes
 
 sub study_part
 {
-  my ($part, $i, $chain, $unknown_part_flag) = @_;
+  my ($whole, $part, $i, $chain, $unknown_part_flag) = @_;
 
   my $token = Token->new();
   $token->set_origin($i, $part);
@@ -415,7 +415,7 @@ sub study_part
   }
 
   # The general solution.
-  return if title_specific_hashes($part, $token, $chain);
+  return if title_specific_hashes($whole, $part, $token, $chain);
 
   # Some use of other hashes.
   my $fix_event = $FIX_HASH{lc($part)};
@@ -522,7 +522,7 @@ sub split_on_capitals
 
 sub split_on_multi
 {
-  my ($text, $parts, $tags) = @_;
+  my ($whole, $text, $parts, $tags) = @_;
 
   @$parts = split / - /, $text;
   @$tags = (0) x (1 + $#$parts);
@@ -586,11 +586,15 @@ sub split_on_multi
 
   for my $tag (@TAG_ORDER)
   {
-    next if $MULTI_REGEX{$tag} eq '';
+    my $core_tag = $tag;
+    $core_tag =~ s/^TITLE_//;
+    my $mregex = $whole->get_multi_regex($core_tag);
+
+    next if $mregex eq '';
     for my $i (reverse 0 .. $#$parts)
     {
       next if $tags->[$i] ne '0';
-      my @a = grep { $_ ne '' } split /$MULTI_REGEX{$tag}/, $parts->[$i];
+      my @a = grep { $_ ne '' } split /$mregex/, $parts->[$i];
 
       if ($#a == 0)
       {
@@ -629,7 +633,7 @@ sub split_on_multi
 
 sub study_component
 {
-  my ($part, $chain, $token_no, $unsolved_flag) = @_;
+  my ($whole, $part, $chain, $token_no, $unsolved_flag) = @_;
 
   # Split on trailing digits.
   my $unknown_part_flag = 0;
@@ -638,15 +642,15 @@ sub study_component
   {
     my ($letters, $digits) = ($1, $2);
 
-    study_part($letters, $token_no, $chain, \$unknown_part_flag);
+    study_part($whole, $letters, $token_no, $chain, \$unknown_part_flag);
     $$token_no++;
 
-    study_part($digits, $token_no, $chain, \$unknown_part_flag);
+    study_part($whole, $digits, $token_no, $chain, \$unknown_part_flag);
     $$token_no++;
   }
   else
   {
-    study_part($part, $token_no, $chain, \$unknown_part_flag);
+    study_part($whole, $part, $token_no, $chain, \$unknown_part_flag);
     $$token_no++;
   }
 
@@ -656,7 +660,7 @@ sub study_component
 
 sub study_title
 {
-  my ($text, $chain, $unknowns, $bbono) = @_;
+  my ($whole, $text, $chain, $unknowns, $bbono) = @_;
 
   return if $text eq '';
 
@@ -666,7 +670,7 @@ sub study_title
 
   my @parts = ();
   my @tags = (0);
-  split_on_multi($stext, \@parts, \@tags);
+  split_on_multi($whole, $stext, \@parts, \@tags);
 
   # Split on separators.
   my $sep = qr/[\s+\-\+\._:;&@"\/\(\)\|]/;
@@ -690,7 +694,7 @@ sub study_title
       my @a = grep { $_ ne '' } split(/$sep/, $parts[$i]);
       foreach my $part (@a)
       {
-        study_component($part, $chain, \$token_no, \$unsolved_flag);
+        study_component($whole, $part, $chain, \$token_no, \$unsolved_flag);
       }
     }
   }

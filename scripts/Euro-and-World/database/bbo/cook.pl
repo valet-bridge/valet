@@ -27,8 +27,8 @@ use Reductions::Title;
 
 use Whole;
 
-our (%NEW_MULTI_WORDS, %NEW_MULTI_REGEX, %NEW_SINGLE_WORDS, %NEW_MULTI_HITS);
-Whole::init_hashes();
+my $whole = Whole->new();
+$whole->init_hashes();
 
 
 # Parse the raw output of
@@ -84,7 +84,7 @@ while ($line = <$fh>)
     next;
   }
 
-  if ($chunk{BBONO} == 3032)
+  if ($chunk{BBONO} == 1)
   {
     print "HERE\n";
   }
@@ -143,7 +143,7 @@ while ($line = <$fh>)
     my @chains_title;
     push @chains_title, $chain_title;
 
-    study_title($chunk{TITLE}, $chain_title, \$unknown_titles, 
+    study_title($whole, $chunk{TITLE}, $chain_title, \$unknown_titles, 
       $chunk{BBONO});
 
     pre_process_title(\@chains_title);
@@ -528,4 +528,3 @@ sub print_reduction_stats
     printf("%6d%10d\n", $i, $reduction_stats->[$i]);
   }
 }
-

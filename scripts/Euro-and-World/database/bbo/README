@@ -1,4 +1,6 @@
-- Make a central Entirety of Components
+- Places where MULTI_WORDS occur in TitleBBO.pm:
+~ line 720
+around line 600, 4 times
 
 - Move Matrix to Connections/Matrix.pm or some such
 - In Title, see if we can split chains such that they print easily,

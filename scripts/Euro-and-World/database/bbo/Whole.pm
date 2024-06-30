@@ -1,15 +1,12 @@
 #!perl
 
+package Whole;
+
 use strict;
 use warnings;
 use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
-
-package Whole;
-
-our @ISA = qw(Exporter);
-our @EXPORT = qw(init_hashes);
 
 use lib './Components';
 
@@ -44,6 +41,7 @@ use Components::Tname;
 use Components::Tword;
 use Components::University;
 use Components::Zone;
+
 
 my %TAGS =
 (
@@ -81,30 +79,25 @@ my %TAGS =
 );
 
 
-our (%NEW_MULTI_WORDS, %NEW_MULTI_REGEX, %NEW_SINGLE_WORDS, %NEW_MULTI_HITS);
-
-
-sub init_hashes
+sub new
 {
-  my $callback_method = \&Whole::set_overall_hashes;
-
-  while (my ($key, $set_method) = each %TAGS)
-  {
-    $set_method->($callback_method, $key);
-  }
+  my $class = shift;
+  my $self = bless {}, $class;
+  return $self;
 }
 
 
 sub set_overall_hashes
 {
-  my ($multi_words, $multi_typos, $single_words, $single_typos, $key) = @_;
+  my ($self,
+    $multi_words, $multi_typos, $single_words, $single_typos, $key) = @_;
 
   # The words themselves.
   for my $multi (@$multi_words)
   {
     my $tilded = $multi =~ s/ /\~/gr;
-    $NEW_MULTI_WORDS{$key}{lc($multi)} = $multi;
-    $NEW_SINGLE_WORDS{$key}{lc($multi)} = 
+    $self->{MWORDS}{$key}{lc($multi)} = $multi;
+    $self->{SWORDS}{$key}{lc($multi)} = 
       { CATEGORY => $key, VALUE => $multi };
   }
 
@@ -114,29 +107,29 @@ sub set_overall_hashes
     my $tilded = $multi =~ s/ /\~/gr;
     for my $typo (@{$multi_typos->{$multi}})
     {
-      $NEW_MULTI_WORDS{$key}{lc($typo)} = $multi;
-      $NEW_SINGLE_WORDS{$key}{lc($multi)} = 
+      $self->{MWORDS}{$key}{lc($typo)} = $multi;
+      $self->{SWORDS}{$key}{lc($multi)} = 
         { CATEGORY => $key, VALUE => $multi };
     }
   }
 
-  if (keys %{$NEW_MULTI_WORDS{$key}})
+  if (keys %{$self->{MWORDS}{$key}})
   {
     my $multi_pattern_direct = join('|', map { quotemeta }
-      sort { length($b) <=> length($a) } keys %{$NEW_MULTI_WORDS{$key}});
+      sort { length($b) <=> length($a) } keys %{$self->{MWORDS}{$key}});
 
-    $NEW_MULTI_REGEX{$key} = 
+    $self->{MREGEX}{$key} = 
       qr/(?<!\p{L})($multi_pattern_direct)(?=\P{L}|\z)/i;
   }
   else
   {
-    $NEW_MULTI_REGEX{$key} = '';
+    $self->{MREGEX}{$key} = '';
   }
 
   # Similarly for the single words.
   for my $single (@$single_words)
   {
-    $NEW_SINGLE_WORDS{$key}{lc($single)} = 
+    $self->{SWORDS}{$key}{lc($single)} = 
       { CATEGORY => $key, VALUE => $single };
   }
 
@@ -144,10 +137,37 @@ sub set_overall_hashes
   {
     for my $typo (@{$single_typos->{$single}})
     {
-      $NEW_SINGLE_WORDS{$key}{lc($typo)} = 
+      $self->{SWORDS}{$key}{lc($typo)} = 
         { CATEGORY => $key, VALUE => $single };
     }
   }
 }
+
+
+sub init_hashes
+{
+  my ($self) = @_;
+  my $callback_method = sub { $self->set_overall_hashes(@_); };
+
+  while (my ($key, $set_method) = each %TAGS)
+  {
+    $set_method->($callback_method, $key);
+  }
+}
+
+
+sub get_single
+{
+  my ($self, $tag, $part) = @_;
+  return $self->{SWORDS}{$tag}{$part};
+}
+
+
+sub get_multi_regex
+{
+  my ($self, $tag) = @_;
+  return $self->{MREGEX}{$tag};
+}
+
 
 1;
