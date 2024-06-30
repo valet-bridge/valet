@@ -55,7 +55,6 @@ use Components::Tword;
 use Components::Meet;
 
 use Components::Destroy;
-use Team::DestroyTeam;
 
 use Team::Matrix;
 use Team::Repeats;
@@ -151,7 +150,6 @@ sub init_hashes
 
   # TODO Goal is mainly to have one of these.
   Components::Destroy::set_hashes($method, 'TEAM_DESTROY');
-  set_hashes_team_destroy('TEAM_DESTROY');
 
   set_matrix();
   set_repeats(\%REPEATS);

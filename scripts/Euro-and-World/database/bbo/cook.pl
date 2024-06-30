@@ -25,6 +25,11 @@ use Patterns::Chainify;
 use Reductions::Event;
 use Reductions::Title;
 
+use Whole;
+
+our (%NEW_MULTI_WORDS, %NEW_MULTI_REGEX, %NEW_SINGLE_WORDS, %NEW_MULTI_HITS);
+Whole::init_hashes();
+
 
 # Parse the raw output of
 # ./reader -I ... -Q 9=4=0=0 -v 63

@@ -1,4 +1,3 @@
-- Merge the two Destroy's as well as possible
 - Make a central Entirety of Components
 
 - Move Matrix to Connections/Matrix.pm or some such
