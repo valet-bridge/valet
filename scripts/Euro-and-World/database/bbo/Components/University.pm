@@ -6,10 +6,10 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package Team::University;
+package Components::University;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(set_hashes_team_university set_hashes);
+our @EXPORT = qw(set_hashes);
 
 use lib '.';
 use TeamBBO;
@@ -248,15 +248,6 @@ my %SINGLE_TYPOS =
   'Wroclaw University of Science and Technology' => ['pwr'],
   'Yildiz Technical University' => ['ýtü']
 );
-
-
-sub set_hashes_team_university
-{
-  my ($key) = @_;
-
-  TeamBBO::set_overall_hashes(\@MULTI_WORDS, \%MULTI_TYPOS,
-    \@SINGLE_WORDS, \%SINGLE_TYPOS, $key);
-}
 
 
 sub set_hashes

@@ -30,11 +30,11 @@ use Team::Nationality;
 use Team::Region;
 use Team::City;
 use Team::Quarter;
-use Team::University;
+use Components::University;
 use Team::Form;
-use Team::Sponsor;
-use Team::Gender;
-use Team::Age;
+use Components::Sponsor;
+use Components::Gender;
+use Components::Age;
 use Team::Captain;
 
 use Components::Meet;
@@ -95,15 +95,15 @@ sub init_hashes
   Team::Region::set_hashes($method, 'TITLE_REGION');
   Team::City::set_hashes($method, 'TITLE_CITY');
   Team::Quarter::set_hashes($method, 'TITLE_QUARTER');
-  Team::University::set_hashes($method, 'TITLE_UNIVERSITY');
+  Components::University::set_hashes($method, 'TITLE_UNIVERSITY');
   Team::Form::set_hashes($method, 'TITLE_FORM');
-  Team::Sponsor::set_hashes($method, 'TITLE_SPONSOR');
+  Components::Sponsor::set_hashes($method, 'TITLE_SPONSOR');
 
   Components::Person::set_hashes($method, 'TITLE_PERSON');
 
   Team::Captain::set_hashes($method, 'TITLE_CAPTAIN');
-  Team::Gender::set_hashes($method, 'TITLE_GENDER');
-  Team::Age::set_hashes($method, 'TITLE_AGE');
+  Components::Gender::set_hashes($method, 'TITLE_GENDER');
+  Components::Age::set_hashes($method, 'TITLE_AGE');
   Team::Scoring::set_hashes($method, 'TITLE_SCORING');
 
   Components::Meet::set_hashes($method, 'TITLE_MEET');
