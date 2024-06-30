@@ -6,7 +6,7 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package Reductions::TitleReductions;
+package Reductions::Title;
 
 use lib '..';
 

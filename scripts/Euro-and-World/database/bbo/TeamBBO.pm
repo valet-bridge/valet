@@ -51,7 +51,8 @@ use Components::Color;
 use Components::Scoring;
 use Components::Form;
 
-use Team::Destroy;
+use Components::Destroy;
+use Team::DestroyTeam;
 
 use Team::Matrix;
 use Team::Repeats;
@@ -139,6 +140,8 @@ sub init_hashes
   Components::Scoring::set_hashes($method, 'TEAM_SCORING');
   Components::Form::set_hashes($method, 'TEAM_FORM');
 
+  # TODO Goal is mainly to have one of these.
+  Components::Destroy::set_hashes($method, 'TEAM_DESTROY');
   set_hashes_team_destroy('TEAM_DESTROY');
 
   set_matrix();

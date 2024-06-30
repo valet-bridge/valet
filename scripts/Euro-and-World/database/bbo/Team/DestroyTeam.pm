@@ -6,7 +6,7 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package Team::Destroy;
+package Team::DestroyTeam;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes_team_destroy);
@@ -18,7 +18,6 @@ my @MULTI_WORDS =
 (
   '>',
   'ÀA¬ü',
-  'Bridge Team',
   'City of',
   'nat. champio',
   'No Name',
@@ -29,18 +28,7 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  'Bridge Team' => ['bridge tem', 'bridge tea'],
-  'Undecipherable Team' => ['a-hvv', 'a-srr', 'b-srk', 'g-dkr', 
-    'i-aaa', 'i-vvu', 't-dbi', 't-rsb', 'v-dkm', 'v-ivi', 'v-jgd', 'y-ivz',
-    'dhzhy', 'dhzy', 'fx', 'gdcd', 'gzzj', 'hssqx', 'jy', 
-    'kj', 'kjy', 'lqsw', 'ly', 'lylw', 'mktx', 'qc', 'qy', 'pn',
-    'scdhzy', 'scmy', 'sdlsjy', 'sey', 'sft', 'sjcd', 'sjsd', 
-    'sxsdlsjy', 'szqy',
-    'xdsjjt', 'xhld', 'xmxv', 'xnmf', 'xnwy', 'ycd', 'yy', 'zkwx', 'zqjk',
-    'abc_n', 'cd', 'jj', 'jk', 'm', 'pk', 'sv', 't',
-    'ÄÏÄþÑÅÂ×', 'ÉîÛÚÁª²©', 'ÊÀ¼Í³©´ï', 'º£ÄÏÊÓ´°', 'ÖÐ¹úÆ½°²',
-    '¥æ¤j', 'ªþ¾ô±¡¸', 'µæ', '§N¥ú', '°¨¥d³q', '¥©§J¤O', '¶Rµæ'
-    ]
+  'Undecipherable Team' => ['fx', 'm', 't'],
 );
 
 my @SINGLE_WORDS = qw(

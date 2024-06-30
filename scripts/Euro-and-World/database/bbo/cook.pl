@@ -22,8 +22,8 @@ use TitleBBO;
 use Event::Despace;
 use Patterns::Chainify;
 
-use Reductions::EventReductions;
-use Reductions::TitleReductions;
+use Reductions::Event;
+use Reductions::Title;
 
 
 # Parse the raw output of
