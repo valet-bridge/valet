@@ -524,11 +524,11 @@ our %FIX_ALIASES =
 
     Round => [qw(rounds rouns rueda ruond rd riund rnd rds ound ro
       tound tour runde runder rn rond ronda ronud roudn
-      turno turul sr)],
+      turno turul sr devre)],
     Stanza => [qw(stanza stanzas stranza stsnza stan stanzaq)],
     Session => [qw(serssion sesion sesión sesj sesjon sess
       sessió sessión ses sesje sessie sesson sesssion sessions
-      sessão devre segssion séance séan seans seansi)],
+      sessão segssion séance séan seans seansi)],
     Segment => [qw(seg segm segement segemt segmant segmen segemnt
       segmento segments segmetn segmnet segnment sgment segt sengemt 
       se eg), 'seg#'],

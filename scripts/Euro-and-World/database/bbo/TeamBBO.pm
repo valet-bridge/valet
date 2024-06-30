@@ -16,6 +16,7 @@ use lib '.';
 use lib '..';
 use lib './Team';
 use lib './Event';
+use lib './Components';
 
 use Country;
 use Token;
@@ -39,7 +40,7 @@ use Team::Region;
 use Team::Zone;
 use Team::Quarter;
 use Team::City;
-use Team::Club;
+use Components::Club;
 use Team::Captain;
 use Team::Bot;
 use Team::Nationality;
@@ -117,6 +118,8 @@ my %FORM_SCORES;
 
 sub init_hashes
 {
+  my $method = \&TeamBBO::set_overall_hashes;
+
   set_hashes_team_fun('TEAM_FUN');
   set_hashes_team_first('TEAM_FIRST');
   set_hashes_team_other('TEAM_OTHER');
@@ -126,7 +129,7 @@ sub init_hashes
   set_hashes_team_quarter('TEAM_QUARTER');
   set_hashes_team_sponsor('TEAM_SPONSOR');
   set_hashes_team_university('TEAM_UNIVERSITY');
-  set_hashes_team_club('TEAM_CLUB');
+  Components::Club::set_hashes($method, 'TEAM_CLUB');
   set_hashes_team_organization('TEAM_ORGANIZATION');
   set_hashes_team_abbr('TEAM_ABBR');
   set_hashes_team_captain('TEAM_CAPTAIN');

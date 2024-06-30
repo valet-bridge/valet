@@ -61,7 +61,7 @@ my %SINGLE_TYPOS =
   Series => ['seria'],
   Session => ['seesion', 'part', 'sesja', 'sess', 'serssion', 'sesion',
     'sesión', 'sesj', 'sesjon', 'sessió', 'sessión', 'ses', 'sesje',
-    'sessie', 'sesson', 'sesssion', 'sessions', 'sessão', 'devre',
+    'sessie', 'sesson', 'sesssion', 'sessions', 'sessão',
     'segssion', 'séance', 'séan', 'seans', 'seansi'],
   Set => ['sets'],
   Stage => ['stg'],
