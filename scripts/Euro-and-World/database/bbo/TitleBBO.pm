@@ -16,7 +16,7 @@ our @EXPORT = qw(init_hashes set_overall_hashes
 use lib '.';
 use lib './Team';
 use lib './Event';
-use lib './Title';
+use lib './Components';
 
 use Token;
 use Separators;
@@ -37,17 +37,17 @@ use Team::Gender;
 use Team::Age;
 use Team::Captain;
 
-use Title::Meet;
-use Title::Person;
-use Title::Tname;
-use Title::Tword;
-use Title::Club;
-use Title::Iterator;
-use Title::Stage;
-use Title::Time;
-use Title::Particle;
-use Title::Ambiguous;
-use Title::Destroy;
+use Components::Meet;
+use Components::Person;
+use Components::Tname;
+use Components::Tword;
+use Components::Club;
+use Components::Iterator;
+use Components::Stage;
+use Components::Time;
+use Components::Particle;
+use Components::Ambiguous;
+use Components::Destroy;
 
 my @TAG_ORDER = qw(
   TITLE_TNAME
@@ -99,23 +99,23 @@ sub init_hashes
   Team::Form::set_hashes($method, 'TITLE_FORM');
   Team::Sponsor::set_hashes($method, 'TITLE_SPONSOR');
 
-  Title::Person::set_hashes($method, 'TITLE_PERSON');
+  Components::Person::set_hashes($method, 'TITLE_PERSON');
 
   Team::Captain::set_hashes($method, 'TITLE_CAPTAIN');
   Team::Gender::set_hashes($method, 'TITLE_GENDER');
   Team::Age::set_hashes($method, 'TITLE_AGE');
   Team::Scoring::set_hashes($method, 'TITLE_SCORING');
 
-  Title::Meet::set_hashes($method, 'TITLE_MEET');
-  Title::Tname::set_hashes($method, 'TITLE_TNAME');
-  Title::Tword::set_hashes($method, 'TITLE_TWORD');
-  Title::Club::set_hashes($method, 'TITLE_CLUB');
-  Title::Iterator::set_hashes($method, 'TITLE_ITERATOR');
-  Title::Stage::set_hashes($method, 'TITLE_STAGE');
-  Title::Time::set_hashes($method, 'TITLE_TIME');
-  Title::Particle::set_hashes($method, 'TITLE_PARTICLE');
-  Title::Ambiguous::set_hashes($method, 'TITLE_AMBIGUOUS');
-  Title::Destroy::set_hashes($method, 'TITLE_DESTROY');
+  Components::Meet::set_hashes($method, 'TITLE_MEET');
+  Components::Tname::set_hashes($method, 'TITLE_TNAME');
+  Components::Tword::set_hashes($method, 'TITLE_TWORD');
+  Components::Club::set_hashes($method, 'TITLE_CLUB');
+  Components::Iterator::set_hashes($method, 'TITLE_ITERATOR');
+  Components::Stage::set_hashes($method, 'TITLE_STAGE');
+  Components::Time::set_hashes($method, 'TITLE_TIME');
+  Components::Particle::set_hashes($method, 'TITLE_PARTICLE');
+  Components::Ambiguous::set_hashes($method, 'TITLE_AMBIGUOUS');
+  Components::Destroy::set_hashes($method, 'TITLE_DESTROY');
 }
 
 

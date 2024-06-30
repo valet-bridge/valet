@@ -20,9 +20,9 @@ use TitleBBO;
 
 use Event::Despace;
 use Event::Patterns;
-use Event::Reductions;
 
-use Title::Reductions;
+use Reductions::EventReductions;
+use Reductions::TitleReductions;
 
 
 # Parse the raw output of

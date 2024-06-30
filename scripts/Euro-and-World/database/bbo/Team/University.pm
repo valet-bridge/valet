@@ -244,7 +244,6 @@ my %SINGLE_TYPOS =
   'University of Porto' => ['cdup'],
   'University of Surabaya' => ['ubaya'],
   'University of Warsaw' => ['uw'],
-  'University of Wroclaw' => ['pwr'],
   'Valahia University' => ['valahia'],
   'Wroclaw University of Science and Technology' => ['pwr'],
   'Yildiz Technical University' => ['ýtü']

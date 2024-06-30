@@ -6,7 +6,7 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package Title::Person;
+package Components::Person;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes);

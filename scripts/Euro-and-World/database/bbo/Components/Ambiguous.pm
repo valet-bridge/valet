@@ -6,7 +6,7 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package Title::Particle;
+package Components::Ambiguous;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes);
@@ -23,9 +23,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  of
-  to
-  vs
+  O Q S W
 );
 
 my %SINGLE_TYPOS =
