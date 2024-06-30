@@ -6,10 +6,10 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package Team::Zone;
+package Components::Zone;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(set_hashes_team_zone set_hashes);
+our @EXPORT = qw(set_hashes);
 
 use lib '.';
 use TeamBBO;
@@ -48,15 +48,6 @@ my %SINGLE_TYPOS =
   'South America' => ['southamerica', 'sudamericano',
     'southamerican', 'sudamerican']
 );
-
-
-sub set_hashes_team_zone
-{
-  my ($key) = @_;
-
-  TeamBBO::set_overall_hashes(\@MULTI_WORDS, \%MULTI_TYPOS,
-    \@SINGLE_WORDS, \%SINGLE_TYPOS, $key);
-}
 
 
 sub set_hashes

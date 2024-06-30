@@ -6,10 +6,10 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package Team::Country;
+package Components::Country;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(set_hashes_team_country set_hashes);
+our @EXPORT = qw(set_hashes);
 
 use lib '.';
 use TeamBBO;
@@ -182,15 +182,6 @@ my %SINGLE_TYPOS =
   Uruguay => ['uru'],
   USA => ['america']
 );
-
-
-sub set_hashes_team_country
-{
-  my ($key) = @_;
-
-  TeamBBO::set_overall_hashes(\@MULTI_WORDS, \%MULTI_TYPOS,
-    \@SINGLE_WORDS, \%SINGLE_TYPOS, $key);
-}
 
 
 sub set_hashes

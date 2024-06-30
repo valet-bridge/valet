@@ -24,12 +24,12 @@ use Separators;
 use Event::Cookbook;
 
 use Team::Organization;
-use Team::Zone;
-use Team::Country;
-use Team::Nationality;
-use Team::Region;
-use Team::City;
-use Team::Quarter;
+use Components::Zone;
+use Components::Country;
+use Components::Nationality;
+use Components::Region;
+use Components::City;
+use Components::Quarter;
 use Components::University;
 use Team::Form;
 use Components::Sponsor;
@@ -89,12 +89,12 @@ sub init_hashes
   my $method = \&TitleBBO::set_overall_hashes;
 
   Team::Organization::set_hashes($method, 'TITLE_ORGANIZATION');
-  Team::Zone::set_hashes($method, 'TITLE_ZONE');
-  Team::Country::set_hashes($method, 'TITLE_COUNTRY');
-  Team::Nationality::set_hashes($method, 'TITLE_NATIONALITY');
-  Team::Region::set_hashes($method, 'TITLE_REGION');
-  Team::City::set_hashes($method, 'TITLE_CITY');
-  Team::Quarter::set_hashes($method, 'TITLE_QUARTER');
+  Components::Zone::set_hashes($method, 'TITLE_ZONE');
+  Components::Country::set_hashes($method, 'TITLE_COUNTRY');
+  Components::Nationality::set_hashes($method, 'TITLE_NATIONALITY');
+  Components::Region::set_hashes($method, 'TITLE_REGION');
+  Components::City::set_hashes($method, 'TITLE_CITY');
+  Components::Quarter::set_hashes($method, 'TITLE_QUARTER');
   Components::University::set_hashes($method, 'TITLE_UNIVERSITY');
   Team::Form::set_hashes($method, 'TITLE_FORM');
   Components::Sponsor::set_hashes($method, 'TITLE_SPONSOR');
