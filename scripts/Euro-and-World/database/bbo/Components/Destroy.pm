@@ -69,17 +69,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   afternoon 
-  celebrations closed combat compared
-  duplicate duplicato
-  eagles elite étoile evening 
-  hawks 
-  interland
-  multievent
-  naturalists nature
-  popular
-  retour retur
-  science scientists show
-  transfer 
+  evening 
 
   Fluff
   Uninformative
@@ -87,7 +77,6 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  multievent => ['multieventof'],
   naturalists => ['nauralists'],
   scientists => ['scientist'],
 
@@ -100,9 +89,25 @@ my %SINGLE_TYPOS =
     'trn', 'ts', 'tv', 'und', 'vsa', 'vsb', 'vw','xy', 'yz', 'zw'],
   Uninformative => ['anniversary', 'annual', 'any', 'away',
     'best', 'bridge', 'bric', 'bdg',
-    'centenary', 'cetenary', 'center', 'merkezi',
-    'challenger', 'challengers', 'chalengers', 'champion', 'champions',
-    'city', 'commercial', 'commune']
+    'celebrations', 'centenary', 'cetenary', 'center', 'challenger', 
+    'challengers', 'chalengers', 'champion', 'champions', 'city', 
+    'closed', 'combat', 'commercial', 'commune', 'compared',
+    'dist', 'duplicate', 'duplicato', 
+    'earth', 'eagles', 'east', 'elite', 'étoile', 
+    'fans', 'hawks', 'home', 'host',
+    'inter', 'interland',
+    'leaders', 'leders', 
+    'merkezi', 'mates', 'milli', 'multievent', 'multieventof',
+    'naturalists', 'nature', 'noname', 'nord', 'north',
+    'opponent', 'opponents', 'other', 'others',
+    'pairno', 'platinum', 'players', 'plus', 'point', 'rank',
+    'popular',
+    'retour', 'retur',
+    'science', 'scientists', 'selected', 'show', 'south',
+    'syd',
+    'transfer',
+    'winners',
+    ]
 );
 
 

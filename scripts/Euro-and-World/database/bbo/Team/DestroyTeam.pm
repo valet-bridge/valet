@@ -35,20 +35,16 @@ my @SINGLE_WORDS = qw(
   1st 2nd 3rd 4th 5th 6th 7th 24th
   1z 2a 5a 6a 7a 8a 9a u2 
   a Alumni April
-  Dist 
-  Earth East European Event
-  Fans Festival Field
+  European Event
+  Festival Field
   Group Groupe
-  Home Host
   Indi Inter International Invit Invitational
   June
-  Leaders
-  Match Mates Milli
-  National NONAME North 
-  Olympiad Opponent Opponents Other Others
-  Pacific PairNo Platinum Players Plus Point PON Prima Pusat
-  Rank 
-  Section Selected Selection South Sponsor Squad Standard Stars 
+  Match
+  National
+  Olympiad
+  Pacific PON Prima Pusat
+  Section Selection Sponsor Squad Standard Stars 
   Sunday Super Swiss
   Table Tennis Test Times Top Tournament Trials Tricks
   United
@@ -60,13 +56,10 @@ my %SINGLE_TYPOS =
 (
   Group => ['istis'],
   International => ['internat', 'internationa'],
-  Leaders => ['leders', 'winners'],
   National => ['nasional'],
   'No Name' => ['noname'],
-  North => ['nord'],
   Pacific => ['pacyfic'],
   'Pra PON' => ['prapon', 'pon'],
-  South => ['syd'],
   Squad => ['squadra', 'takim', 'tim'],
   Tournament => ['tounament', 'tourney', 'trn', 'trnaway', 'trnhome'],
   World => ['worldteam']
