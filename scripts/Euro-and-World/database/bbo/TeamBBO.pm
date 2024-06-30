@@ -109,10 +109,6 @@ sub read_cities
   close $fh;
 }
 
-my $country = Country->new();
-my $gender = Gender->new();
-my $age = Age->new();
-
 my %HIT_STATS;
 my %FORM_SCORES;
 

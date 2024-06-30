@@ -1,8 +1,18 @@
+- Merge the two Destroy's as well as possible
+- Move Matrix to Connections/Matrix.pm or some such
+- In Title, see if we can split chains such that they print easily,
+  perhaps with more reductions or with post-processing
+- Make a ChainStats for length and number
+- Update it from Chains
+- Make a Chains::print()
+- In TitleBBO and TeamBBO, have an array of hashes
+  - The set_hashes are called from cook.pl
+  - 'TITLE_CAPTAIN' -> 'COMPONENTS_CAPTAIN'
+- Have SINGLETON, AMBIGUOUS, COUNTER, ITERATOR I guess
+
+
 Output all the cook results into a text file in compact format:
 - a field can probably be a single or a list, { }
-
-Use the same Components
-- Destroy
 
 Make Event same code structure as Title
 Maybe this simplifies printing as well

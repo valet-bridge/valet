@@ -44,7 +44,7 @@ our @TITLE_REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
-    METHOD => \&Event::Patterns::process_kill,
+    METHOD => \&Patterns::Chainify::process_kill,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -61,7 +61,7 @@ our @TITLE_REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 2,
-    METHOD => \&Event::Patterns::process_general,
+    METHOD => \&Patterns::Chainify::process_general,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -81,7 +81,7 @@ our @TITLE_REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
-    METHOD => \&Event::Patterns::process_general,
+    METHOD => \&Patterns::Chainify::process_general,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -103,7 +103,7 @@ our @TITLE_REDUCTIONS =
     ],
     ANCHOR => 'END',
     KEEP_LAST => 2,
-    METHOD => \&Event::Patterns::process_matchup,
+    METHOD => \&Patterns::Chainify::process_matchup,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -121,7 +121,7 @@ our @TITLE_REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
-    METHOD => \&Event::Patterns::process_general,
+    METHOD => \&Patterns::Chainify::process_general,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -136,7 +136,7 @@ our @TITLE_REDUCTIONS =
     ],
     ANCHOR => 'BEGIN',
     KEEP_LAST => 1,
-    METHOD => \&Event::Patterns::process_general,
+    METHOD => \&Patterns::Chainify::process_general,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -153,7 +153,7 @@ our @TITLE_REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
-    METHOD => \&Event::Patterns::process_merge_0to2,
+    METHOD => \&Patterns::Chainify::process_merge_0to2,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -171,7 +171,7 @@ our @TITLE_REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
-    METHOD => \&Event::Patterns::process_merge_0of2,
+    METHOD => \&Patterns::Chainify::process_merge_0of2,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -187,7 +187,7 @@ our @TITLE_REDUCTIONS =
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 1,
-    METHOD => \&Event::Patterns::process_kill,
+    METHOD => \&Patterns::Chainify::process_kill,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -202,7 +202,7 @@ our @TITLE_REDUCTIONS =
     ],
     ANCHOR => 'END',
     KEEP_LAST => 0,
-    METHOD => \&Event::Patterns::process_merge_01,
+    METHOD => \&Patterns::Chainify::process_merge_01,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -218,7 +218,7 @@ our @TITLE_REDUCTIONS =
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,
-    METHOD => \&Event::Patterns::process_general,
+    METHOD => \&Patterns::Chainify::process_general,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -234,7 +234,7 @@ our @TITLE_REDUCTIONS =
     ],
     ANCHOR => 'END',
     KEEP_LAST => 1,
-    METHOD => \&Event::Patterns::process_general,
+    METHOD => \&Patterns::Chainify::process_general,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -252,7 +252,7 @@ our @TITLE_REDUCTIONS =
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 1,
-    METHOD => \&Event::Patterns::process_general,
+    METHOD => \&Patterns::Chainify::process_general,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -267,7 +267,7 @@ our @TITLE_REDUCTIONS =
     ],
     ANCHOR => 'BEGIN',
     KEEP_LAST => 0,
-    METHOD => \&Event::Patterns::process_general,
+    METHOD => \&Patterns::Chainify::process_general,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
     COMPLETION => 1
@@ -282,7 +282,7 @@ our @TITLE_REDUCTIONS =
     ],
     ANCHOR => 'END',
     KEEP_LAST => 1,
-    METHOD => \&Event::Patterns::process_general,
+    METHOD => \&Patterns::Chainify::process_general,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 0,
     COMPLETION => 1
@@ -298,7 +298,7 @@ our @TITLE_REDUCTIONS =
     ],
     ANCHOR => 'END',
     KEEP_LAST => 0,
-    METHOD => \&Event::Patterns::process_general,
+    METHOD => \&Patterns::Chainify::process_general,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 0,
     COMPLETION => 1

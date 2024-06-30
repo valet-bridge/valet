@@ -6,10 +6,10 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package Event::Patterns;
+package Patterns::Chainify;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(process_patterns @RMATCH);
+our @EXPORT = qw(process @RMATCH);
 
 use lib '../..';
 
@@ -334,7 +334,7 @@ sub process_letter_counter_exact
 }
 
 
-sub process_patterns
+sub process
 {
   # sep_flag is 1 if there are alternating separators,
   # 0 otherwise.

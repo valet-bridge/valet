@@ -9,6 +9,7 @@ use Time::HiRes qw(time);
 
 use lib '.';
 use lib './Event';
+use lib './Patterns';
 
 use Chains;
 use Chain;
@@ -19,7 +20,7 @@ use ScoringBBO;
 use TitleBBO;
 
 use Event::Despace;
-use Event::Patterns;
+use Patterns::Chainify;
 
 use Reductions::EventReductions;
 use Reductions::TitleReductions;
@@ -115,7 +116,7 @@ while ($line = <$fh>)
 
     study_event($mashed, \%chunk, \%result, $chain_event, \$unknown_events);
     process_event(\@chains_event);
-    Event::Patterns::process_patterns(\@EVENT_REDUCTIONS, \@chains_event, 
+    Patterns::Chainify::process(\@EVENT_REDUCTIONS, \@chains_event, 
       1, \@reduction_event_stats);
 
     update_chain_stats(\%chunk, \@chains_event, \@chain_event_stats);
@@ -142,7 +143,7 @@ while ($line = <$fh>)
 
     pre_process_title(\@chains_title);
 
-    Event::Patterns::process_patterns(\@TITLE_REDUCTIONS, \@chains_title, 
+    Patterns::Chainify::process(\@TITLE_REDUCTIONS, \@chains_title, 
       0, \@reduction_title_stats);
 
     post_process_title(\@chains_title);
