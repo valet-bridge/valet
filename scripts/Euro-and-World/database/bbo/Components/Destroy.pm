@@ -68,11 +68,10 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  afternoon anniversary annual
-  centenary celebrations closed combat compared
+  afternoon 
+  celebrations closed combat compared
   duplicate duplicato
   eagles elite étoile evening 
-  Fluff
   hawks 
   interland
   multievent
@@ -81,11 +80,13 @@ my @SINGLE_WORDS = qw(
   retour retur
   science scientists show
   transfer 
+
+  Fluff
+  Uninformative
 );
 
 my %SINGLE_TYPOS =
 (
-  centenary => ['cetenary'],
   multievent => ['multieventof'],
   naturalists => ['nauralists'],
   scientists => ['scientist'],
@@ -96,7 +97,12 @@ my %SINGLE_TYPOS =
     'from', 'gd', 'glpd', 'het', 'im', 'in', 'jm', 'kb', 'kdk', 
     'krs', 'ktp', 'ld', 'min', 'mr', 'nc', 'nk', 'no', 'npc', 'nr', 'ns',
     'og', 'pc', 'se', 'sw', 'tc', 'te', 'teh', 'th', 'the', 'tn',
-    'trn', 'ts', 'tv', 'und', 'vsa', 'vsb', 'vw','xy', 'yz', 'zw']
+    'trn', 'ts', 'tv', 'und', 'vsa', 'vsb', 'vw','xy', 'yz', 'zw'],
+  Uninformative => ['anniversary', 'annual', 'any', 'away',
+    'best', 'bridge', 'bric', 'bdg',
+    'centenary', 'cetenary', 'center', 'merkezi',
+    'challenger', 'challengers', 'chalengers', 'champion', 'champions',
+    'city', 'commercial', 'commune']
 );
 
 

@@ -34,9 +34,7 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   1st 2nd 3rd 4th 5th 6th 7th 24th
   1z 2a 5a 6a 7a 8a 9a u2 
-  a Alumni Any April Away
-  Best Bridge
-  Center Challenger Champion Champions City Commercial Commune
+  a Alumni April
   Dist 
   Earth East European Event
   Fans Festival Field
@@ -60,9 +58,6 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  Bridge => ['bric', 'bdg'],
-  Center => ['merkezi'],
-  Challengers => ['chalengers'],
   Group => ['istis'],
   International => ['internat', 'internationa'],
   Leaders => ['leders', 'winners'],
