@@ -34,31 +34,27 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   1st 2nd 3rd 4th 5th 6th 7th 24th
   1z 2a 5a 6a 7a 8a 9a u2 
-  a and as Alumni Any April Away
+  a Alumni Any April Away
   Best Bridge
   Center Challenger Champion Champions City Commercial Commune
-  Dist Ds Dw dwii
-  Earth East ENC European Event
+  Dist 
+  Earth East European Event
   Fans Festival Field
-  GD GLPD Group Groupe
+  Group Groupe
   Home Host
   Indi Inter International Invit Invitational
   June
-  KB KDK KRS
-  LD Leaders
-  Match Mates Milli min Mr
-  National NC NK No NONAME North npc nr NS
-  og Olympiad Opponent Opponents Other Others
-  Pacific pc PairNo Platinum Players Plus Point PON Prima Pusat
+  Leaders
+  Match Mates Milli
+  National NONAME North 
+  Olympiad Opponent Opponents Other Others
+  Pacific PairNo Platinum Players Plus Point PON Prima Pusat
   Rank 
-  SE Section Selected Selection South Sponsor Squad Standard Stars 
-  Sunday Super SW Swiss
-  Table Tennis Test TH Times Top Tournament Trials Tricks
+  Section Selected Selection South Sponsor Squad Standard Stars 
+  Sunday Super Swiss
+  Table Tennis Test Times Top Tournament Trials Tricks
   United
   West World
-  XY
-  YZ
-  ZW
   Various
 );
 

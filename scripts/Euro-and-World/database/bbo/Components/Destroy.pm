@@ -16,6 +16,8 @@ use TeamBBO;
 
 my @MULTI_WORDS =
 (
+  'BBO Operator',
+  'Empty Words',
   'Generic Team',
   'Undecipherable Team',
   
@@ -30,29 +32,29 @@ my @MULTI_WORDS =
   'k-8',
   '3way match 3 to 1 a', '3way match 3 to 1 b',
   'IIa',
-  'Around 52 cards in 80 years',
-  'before bermuda bowl', 'bridge master champion', 'by joe pochron',
-  'BBO1', 'BBO2', 'BB02', 'BBO3', 'BBO4', 'BBO5', 'BB05',
-  'BBO6', 'BBO7', 'BBO8', 'BBO9',
-  '*BBO1', '*BBO2', '*BBO3', '*BBO4',
-  'BBO 1', 'BBO 2', 'BBO 3', 'BBO 4', 'BBO 5', 'BBO - 2',
-  'champion of champions',
-  'de bridge', 'de vigraph', 'div a retour', 'dno_4',
-  'eng comment', 'eng comments', 'eng comment in',
-  'for 3rd pair', 'for pau', 'for the',
+  'dno_4',
   'g_m_',
-  'in the',
-  'main event',
-  'sede', 'special tournament', 'sports event', 'swe comment', 
-  'swe comments', 'sw comment', 'sw comments',
-  'the 80 grand challenge', 'the combat of system',
-  'untitled match',
-  'warm up', 'Welcome to'
+  'sede', 
 );
 
 my %MULTI_TYPOS =
 (
-  'Generic Team Team' => ['bridge tem', 'bridge tea'],
+  'BBO Operator' => ['BBO1', 'BBO2', 'BB02', 'BBO3', 'BBO4', 
+    'BBO5', 'BB05', 'BBO6', 'BBO7', 'BBO8', 'BBO9',
+    '*BBO1', '*BBO2', '*BBO3', '*BBO4',
+    'BBO 1', 'BBO 2', 'BBO 3', 'BBO 4', 'BBO 5', 'BBO - 2'],
+  'Empty Words' => ['Around 52 cards in 80 years',
+    'before bermuda bowl', 'bridge master champion', 
+    'bridge master champions', 'by joe pochron',
+    'champion of champions', 'de bridge', 'de vigraph', 'div a retour', 
+    'eng comment', 'eng comments', 'eng comment in',
+    'extra match', 'for 3rd pair', 'for pau', 'for the', 'in the', 
+    'main event', 'match retour', 'pour pau',
+    'special tournament', 'sports event', 'swe comment', 
+    'swe comments', 'sw comment', 'sw comments',
+    'the 80 grand challenge', 'the combat of system',
+    'untitled match', 'warm up', 'Welcome to'],
+  'Generic Team' => ['bridge tem', 'bridge tea'],
   'Undecipherable Team' => ['a-hvv', 'a-srr', 'b-srk', 'g-dkr',
     'i-aaa', 'i-vvu', 't-dbi', 't-rsb', 'v-dkm', 'v-ivi', 'v-jgd', 'y-ivz',
     'dhzhy', 'dhzy', 'gdcd', 'gzzj', 'hssqx', 'jy',
@@ -62,34 +64,23 @@ my %MULTI_TYPOS =
     'xdsjjt', 'xhld', 'xmxv', 'xnmf', 'xnwy', 'ycd', 'yy', 'zkwx', 'zqjk',
     'abc_n', 'cd', 'jj', 'jk', 'pk', 'sv',
     'ÄÏÄþÑÅÂ×', 'ÉîÛÚÁª²©', 'ÊÀ¼Í³©´ï', 'º£ÄÏÊÓ´°', 'ÖÐ¹úÆ½°²',
-    '¥æ¤j', 'ªþ¾ô±¡¸', 'µæ', '§N¥ú', '°¨¥d³q', '¥©§J¤O', '¶Rµæ'],
-
-  'bridge master champion' => ['bridge master champions'],
-  'extra' => ['extra match'],
-  'for Pau' => ['pour pau'],
-  retour => ['match retour']
+    '¥æ¤j', 'ªþ¾ô±¡¸', 'µæ', '§N¥ú', '°¨¥d³q', '¥©§J¤O', '¶Rµæ']
 );
 
 my @SINGLE_WORDS = qw(
-  aa abd aft afternoon anniversary annual as at av
-  b! BBO bboz bt bv by
+  afternoon anniversary annual
   centenary celebrations closed combat compared
-  de des du duplicate duplicato
-  eagles elite étoile eve evening ew extra
-  from
-  hawks het
-  im in interland
-  jm
-  ktp
+  duplicate duplicato
+  eagles elite étoile evening 
+  Fluff
+  hawks 
+  interland
   multievent
   naturalists nature
   popular
   retour retur
   science scientists show
-  tc te teh the tn transfer trn ts tv
-  und
-  vsa vsb
-  vw
+  transfer 
 );
 
 my %SINGLE_TYPOS =
@@ -97,7 +88,15 @@ my %SINGLE_TYPOS =
   centenary => ['cetenary'],
   multievent => ['multieventof'],
   naturalists => ['nauralists'],
-  scientists => ['scientist']
+  scientists => ['scientist'],
+
+  Fluff => ['aa', 'abd', 'aft', 'and', 'as', 'at', 'av',
+    'b!', 'bbo', 'bboz', 'bt', 'bv', 'by',
+    'de', 'des', 'ds', 'du', 'dw', 'dwii', 'enc', 'eve', 'ew', 'extra', 
+    'from', 'gd', 'glpd', 'het', 'im', 'in', 'jm', 'kb', 'kdk', 
+    'krs', 'ktp', 'ld', 'min', 'mr', 'nc', 'nk', 'no', 'npc', 'nr', 'ns',
+    'og', 'pc', 'se', 'sw', 'tc', 'te', 'teh', 'th', 'the', 'tn',
+    'trn', 'ts', 'tv', 'und', 'vsa', 'vsb', 'vw','xy', 'yz', 'zw']
 );
 
 
