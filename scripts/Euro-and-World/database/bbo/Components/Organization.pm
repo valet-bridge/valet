@@ -6,10 +6,10 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package Team::Organization;
+package Components::Organization;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(set_hashes_team_organization set_hashes);
+our @EXPORT = qw(set_hashes);
 
 use lib '.';
 
@@ -118,15 +118,6 @@ my %SINGLE_TYPOS =
   'Jilin Sheng Qiaopa' => ['jilinshengqiaopa'],
   'Shanghai Contract Bridge Association' => ['scba']
 );
-
-
-sub set_hashes_team_organization
-{
-  my ($key) = @_;
-
-  TeamBBO::set_overall_hashes(\@MULTI_WORDS, \%MULTI_TYPOS,
-    \@SINGLE_WORDS, \%SINGLE_TYPOS, $key);
-}
 
 
 sub set_hashes

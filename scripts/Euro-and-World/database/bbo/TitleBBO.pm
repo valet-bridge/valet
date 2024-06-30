@@ -14,7 +14,6 @@ our @EXPORT = qw(init_hashes set_overall_hashes
   all_used);
 
 use lib '.';
-use lib './Team';
 use lib './Event';
 use lib './Components';
 
@@ -23,7 +22,7 @@ use Separators;
 
 use Event::Cookbook;
 
-use Team::Organization;
+use Components::Organization;
 use Components::Zone;
 use Components::Country;
 use Components::Nationality;
@@ -31,11 +30,11 @@ use Components::Region;
 use Components::City;
 use Components::Quarter;
 use Components::University;
-use Team::Form;
+use Components::Form;
 use Components::Sponsor;
 use Components::Gender;
 use Components::Age;
-use Team::Captain;
+use Components::Captain;
 
 use Components::Meet;
 use Components::Person;
@@ -88,7 +87,7 @@ sub init_hashes
 {
   my $method = \&TitleBBO::set_overall_hashes;
 
-  Team::Organization::set_hashes($method, 'TITLE_ORGANIZATION');
+  Components::Organization::set_hashes($method, 'TITLE_ORGANIZATION');
   Components::Zone::set_hashes($method, 'TITLE_ZONE');
   Components::Country::set_hashes($method, 'TITLE_COUNTRY');
   Components::Nationality::set_hashes($method, 'TITLE_NATIONALITY');
@@ -96,15 +95,15 @@ sub init_hashes
   Components::City::set_hashes($method, 'TITLE_CITY');
   Components::Quarter::set_hashes($method, 'TITLE_QUARTER');
   Components::University::set_hashes($method, 'TITLE_UNIVERSITY');
-  Team::Form::set_hashes($method, 'TITLE_FORM');
+  Components::Form::set_hashes($method, 'TITLE_FORM');
   Components::Sponsor::set_hashes($method, 'TITLE_SPONSOR');
 
   Components::Person::set_hashes($method, 'TITLE_PERSON');
 
-  Team::Captain::set_hashes($method, 'TITLE_CAPTAIN');
+  Components::Captain::set_hashes($method, 'TITLE_CAPTAIN');
   Components::Gender::set_hashes($method, 'TITLE_GENDER');
   Components::Age::set_hashes($method, 'TITLE_AGE');
-  Team::Scoring::set_hashes($method, 'TITLE_SCORING');
+  Components::Scoring::set_hashes($method, 'TITLE_SCORING');
 
   Components::Meet::set_hashes($method, 'TITLE_MEET');
   Components::Tname::set_hashes($method, 'TITLE_TNAME');

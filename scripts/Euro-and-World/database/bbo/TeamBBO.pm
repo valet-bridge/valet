@@ -29,27 +29,28 @@ use Gender;
 
 use Team::Suggestors;
 
-use Team::Fun;
-use Team::First;
-use Team::Other;
+use Components::Fun;
+use Components::First;
+use Components::Other;
 use Components::Sponsor;
-use Team::Organization;
-use Team::Abbr;
+use Components::Organization;
+use Components::Abbr;
 use Components::Country;
 use Components::Region;
 use Components::Zone;
 use Components::Quarter;
 use Components::City;
 use Components::Club;
-use Team::Captain;
-use Team::Bot;
+use Components::Captain;
+use Components::Bot;
 use Components::Nationality;
 use Components::University;
 use Components::Gender;
 use Components::Age;
-use Team::Color;
-use Team::Scoring;
-use Team::Form;
+use Components::Color;
+use Components::Scoring;
+use Components::Form;
+
 use Team::Destroy;
 
 use Team::Matrix;
@@ -120,9 +121,9 @@ sub init_hashes
 {
   my $method = \&TeamBBO::set_overall_hashes;
 
-  set_hashes_team_fun('TEAM_FUN');
-  set_hashes_team_first('TEAM_FIRST');
-  set_hashes_team_other('TEAM_OTHER');
+  Components::Fun::set_hashes($method, 'TEAM_FUN');
+  Components::First::set_hashes($method, 'TEAM_FIRST');
+  Components::Other::set_hashes($method, 'TEAM_OTHER');
   Components::Region::set_hashes($method, 'TEAM_REGION');
   Components::Zone::set_hashes($method, 'TEAM_ZONE');
   Components::City::set_hashes($method, 'TEAM_CITY');
@@ -130,17 +131,18 @@ sub init_hashes
   Components::Sponsor::set_hashes($method, 'TEAM_SPONSOR');
   Components::University::set_hashes($method, 'TEAM_UNIVERSITY');
   Components::Club::set_hashes($method, 'TEAM_CLUB');
-  set_hashes_team_organization('TEAM_ORGANIZATION');
-  set_hashes_team_abbr('TEAM_ABBR');
-  set_hashes_team_captain('TEAM_CAPTAIN');
-  set_hashes_team_bot('TEAM_BOT');
+  Components::Organization::set_hashes($method, 'TEAM_ORGANIZATION');
+  Components::Abbr::set_hashes($method, 'TEAM_ABBR');
+  Components::Captain::set_hashes($method, 'TEAM_CAPTAIN');
+  Components::Bot::set_hashes($method, 'TEAM_BOT');
   Components::Country::set_hashes($method, 'TEAM_COUNTRY');
   Components::Nationality::set_hashes($method, 'TEAM_NATIONALITY');
   Components::Gender::set_hashes($method, 'TEAM_GENDER');
   Components::Age::set_hashes($method, 'TEAM_AGE');
-  set_hashes_team_color('TEAM_COLOR');
-  set_hashes_team_scoring('TEAM_SCORING');
-  set_hashes_team_form('TEAM_FORM');
+  Components::Color::set_hashes($method, 'TEAM_COLOR');
+  Components::Scoring::set_hashes($method, 'TEAM_SCORING');
+  Components::Form::set_hashes($method, 'TEAM_FORM');
+
   set_hashes_team_destroy('TEAM_DESTROY');
 
   set_matrix();

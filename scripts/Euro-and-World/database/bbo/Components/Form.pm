@@ -6,10 +6,10 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package Team::Form;
+package Components::Form;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(set_hashes_team_form set_hashes);
+our @EXPORT = qw(set_hashes);
 
 use lib '.';
 use TeamBBO;
@@ -39,15 +39,6 @@ my %SINGLE_TYPOS =
     takimlar squadre kadra dörtlü)],
   Pairs => [qw(pair par paires parejas)]
 );
-
-
-sub set_hashes_team_form
-{
-  my ($key) = @_;
-
-  TeamBBO::set_overall_hashes(\@MULTI_WORDS, \%MULTI_TYPOS,
-    \@SINGLE_WORDS, \%SINGLE_TYPOS, $key);
-}
 
 
 sub set_hashes
