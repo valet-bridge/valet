@@ -12,14 +12,11 @@ our @ISA = qw(Exporter);
 our @EXPORT = qw(study print_title_stats);
 
 use lib '.';
-use lib './Event';
 
 use Token;
-use Separators;
-
-use Event::Cookbook;
 
 my @TAG_ORDER = qw(
+  ROMAN
   TNAME
   DESTROY
   TWORD
@@ -70,6 +67,11 @@ sub is_small_ordinal
       $part =~ /^(\d+)ª$/i ||
       $part =~ /^(\d+)nd$/i)
   {
+    my $ord = $1;
+    if ($ord < 0 || $ord >= 100)
+    {
+      die "Large ordinal? $ord";
+    }
     return $1;
   }
   elsif (lc($part) eq 'first')
@@ -79,33 +81,6 @@ sub is_small_ordinal
   elsif (lc($part) eq 'second')
   {
     return 2;
-  }
-  else
-  {
-    return 0;
-  }
-}
-
-
-sub fix_small_ordinal
-{
-  my ($part, $i, $chain) = @_;
-  if (my $ord = is_small_ordinal($part))
-  {
-    # We don't check whether the ending matches the number.
-    if ($ord >= 0 && $ord < 100)
-    {
-      $ord =~ s/^0+//; # Remove leading zeroes
-      my $token = Token->new();
-      $token->set_origin($i, $part);
-      $chain->append($token);
-      $token->set_ordinal_counter($ord);
-      return 1;
-    }
-    else
-    {
-      die "Large ordinal? $part";
-    }
   }
   else
   {
@@ -139,9 +114,9 @@ sub title_specific_hashes
 {
   my ($whole, $pos, $text, $chain) = @_;
 
-  for my $tag (@TAG_ORDER)
+  for my $core_tag (@TAG_ORDER)
   {
-    my $fix = $whole->get_single($tag, lc($text));
+    my $fix = $whole->get_single($core_tag, lc($text));
     next unless defined $fix->{CATEGORY};
 
     my $tag = $PREFIX . $fix->{CATEGORY};
@@ -171,19 +146,8 @@ sub study_part
 {
   my ($whole, $part, $i, $chain, $unknown_part_flag) = @_;
 
-  $HIT_STATS{TOTAL}++;
-
   my $token = Token->new();
-  if (set_token($part, $token))
-  {
-    $token->set_origin($i, $part);
-    $chain->append($token);
-
-    $token->set_singleton('SEPARATOR', $part);
-    $HIT_STATS{SEPARATOR}++;
-    return;
-  }
-  elsif ($part =~ /^\d+$/)
+  if ($part =~ /^\d+$/)
   {
     if ($part >= 1900 && $part < 2100)
     {
@@ -191,49 +155,24 @@ sub study_part
     }
     else
     {
-      $token->set_origin($i, $part);
-      $chain->append($token);
-      $token->set_numeral_counter($part);
-      $HIT_STATS{TITLE_INTEGER}++;
+      append_numeral($chain, $i, 'TITLE_INTEGER', $part, $part);
     }
     return;
   }
   elsif ($part =~ /^[A-HJa-h]$/)
   {
-    $token->set_origin($i, $part);
-    $chain->append($token);
-    $token->set_letter_counter($part);
-    $HIT_STATS{TITLE_LETTER}++;
+    append_letter($chain, $i, 'TITLE_LETTER', $part, $part);
     return;
   }
-  elsif (fix_small_ordinal($part, $i, $chain))
+  elsif (my $ord = is_small_ordinal($part))
   {
-    $HIT_STATS{TITLE_ORDINAL}++;
+    $ord =~ s/^0+//; # Remove leading zeroes
+    append_ordinal($chain, $i, 'TITLE_ORDINAL', $ord, $part);
     return;
   }
 
   # The general solution.
   return if title_specific_hashes($whole, $i, $part, $chain);
-
-  # Some use of other hashes.
-  my $fix_event = $FIX_HASH{lc($part)};
-
-  if (defined $fix_event->{CATEGORY})
-  {
-    my $category = $fix_event->{CATEGORY};
-    if ($category eq 'NUMERAL')
-    {
-      append_numeral($chain, $i, 'TITLE_NUMERAL', 
-        $fix_event->{VALUE}, $part);
-      return;
-    }
-    elsif ($category eq 'ROMAN')
-    {
-      append_roman($chain, $i, 'TITLE_ROMAN', 
-        $fix_event->{VALUE}, $part);
-      return;
-    }
-  }
 
   append_unknown($chain, $i, $part);
 
@@ -248,13 +187,14 @@ sub split_on_some_numbers
 
   if ($text =~ /1[\/_](\d)\s+final/i)
   {
+    # 1/4 final(e), 1/2 final(e).
     my $n = $1;
     warn "Haven't learned this yet: $text" unless $n == 2 || $n == 4;
     $text =~ s/1\/4 finale*/quarterfinal/;
     $text =~ s/1\/2 finale*/semifinal/;
   }
 
-  # Years.
+  # Years: '9x, '0x, '1x.
   $text =~ s/'(9\d)/19$1/g;
   $text =~ s/'(0\d)/20$1/g;
   $text =~ s/'(1\d)/20$1/g;
@@ -265,18 +205,20 @@ sub split_on_some_numbers
   $text =~ s/team\s+\d+\s+vs\s+team\s+\d+//i;
   $text =~ s/- \d+ v \d+//i;
 
+  # Add some spacing.
   $text =~ s/^(\d+)th([a-z])/$1th $2/i;
   $text =~ s/^([01]\d)([A-SU-Z])/20$1 $2/; # Kludge, avoid th
   $text =~ s/\b([1-9])([A-D])\b/$1 $2/gi;
   $text =~ s/\b(\d)of(\d)\b/$1 of $2/g;
   
+  # n_n (n of n), n&n (n to n).
   if ($text =~ /(\d+)[_&](\d+)/ && $1 <= $2 && $1 < 1990)
   {
     $text =~ s/(\d+)_(\d+)/$1 of $2/;
     $text =~ s/(\d+)&(\d+)/$1 to $2/;
   }
 
-  # Doesn't really belong here.
+  # A hodge-podge, mostly of spacing.
   $text =~ s/pokal([a-z])/pokal $1/i;
   $text =~ s/-th\b/th/g;
   $text =~ s/(\d) th\b/$1th/g;
@@ -287,8 +229,29 @@ sub split_on_some_numbers
   $text =~ s/\b(\d\d) _$/Rof$1/g;
   $text =~ s/\bF([12])\b/Final $1/g;
 
-# my $t = $text;
-# print "XERE $t | $text\n" unless $t eq $text;
+  return $text;
+}
+
+
+sub fix_post_date
+{
+  # Can only do this when it would no longer destroy a date.
+  my $text = pop;
+
+  # 20xx/yy, 20xx-yy, 20xx_yy -> 20xx-20yy.
+  $text =~ s/20(\d\d)[\/\-_](\d\d)\b/20$1-20$2/;
+
+  # x/y -> x of y.
+  $text =~ s/(\d)\/(\d)/$1 of $2/g;
+
+  # x-y -> x to y.
+  $text =~ s/\b(\d)-(\d)/$1 to $2/g;
+
+  # 0x -> 200x.
+  $text =~ s/\b(0\d)\b/20$1/g;
+
+  # 20xx -> add spaces on either side.
+  $text =~ s/(20\d\d)/ $1 /g;
 
   return $text;
 }
@@ -296,6 +259,7 @@ sub split_on_some_numbers
 
 sub split_on_capitals
 {
+  # Split on single capitals, assuming that each "word" has 3+ letters.
   my ($text) = @_;
 
   my @words = split(/\s+/, $text);
@@ -308,7 +272,7 @@ sub split_on_capitals
       $word =~ s/(?<=[a-z])(?=[A-Z])/ /g;
     }
 
-    # Do not split if the word contains a sub-word of length < 3
+    # Do not split if the word contains a sub-word of length < 3.
     push @result, $word;
   }
 
@@ -339,35 +303,17 @@ sub split_on_multi
         {
           $parts->[$i+$j] = $date_parts[$j];
           $tags->[$i+$j] = 'TITLE_DATE';
-          $HIT_STATS{TITLE_DATE}++;
         }
         else
         {
-          # Couldn't do this sooner, as it would destroy the date.
-          my $t = $date_parts[$j];
-
-          $t =~ s/20(\d\d)[\/\-_](\d\d)/20$1-20$2/;
-          $t =~ s/(\d)\/(\d)/$1 of $2/g;
-          $t =~ s/\b(\d)-(\d)/$1 to $2/g;
-          $t =~ s/\b(0\d)\b/20$1/g;
-          $t =~ s/(20\d\d)/ $1 /g;
-
-          $parts->[$i+$j] = $t;
+          $parts->[$i+$j] = fix_post_date($date_parts[$j]);
           $tags->[$i+$j] = 0;
         }
       }
     }
     else
     {
-      my $t = $parts->[$i];
-
-      $t =~ s/20(\d\d)[\/\-_](\d\d)\b/20$1-20$2/;
-      $t =~ s/(\d)\/(\d)/$1 of $2/g;
-      $t =~ s/\b(\d)-(\d)/$1 to $2/g;
-      $t =~ s/\b(0\d)\b/20$1/g;
-      $t =~ s/(20\d\d)/ $1 /g;
-
-      $parts->[$i] = $t;
+      $parts->[$i] = fix_post_date($parts->[$i]);
       $tags->[$i] = 0;
     }
 
@@ -451,12 +397,20 @@ sub append_singleton
 {
   my ($chain, $pos, $tag, $value, $text) = @_;
 
+  if ($tag eq 'TITLE_ROMAN')
+  {
+    # TODO Kludge.
+    append_roman($chain, $pos, $tag, $value, $text);
+    return;
+  }
+
   my $token = Token->new();
   $token->set_origin($pos, $text);
   $token->set_singleton($tag, $value);
   $chain->append($token);
 
   $HIT_STATS{$tag}++;
+  $HIT_STATS{TOTAL}++;
 }
 
 
@@ -470,6 +424,35 @@ sub append_numeral
   $chain->append($token);
 
   $HIT_STATS{$tag}++;
+  $HIT_STATS{TOTAL}++;
+}
+
+
+sub append_ordinal
+{
+  my ($chain, $pos, $tag, $value, $text) = @_;
+
+  my $token = Token->new();
+  $token->set_origin($pos, $text);
+  $token->set_ordinal_counter($value);
+  $chain->append($token);
+
+  $HIT_STATS{$tag}++;
+  $HIT_STATS{TOTAL}++;
+}
+
+
+sub append_letter
+{
+  my ($chain, $pos, $tag, $value, $text) = @_;
+
+  my $token = Token->new();
+  $token->set_origin($pos, $text);
+  $token->set_letter_counter($value);
+  $chain->append($token);
+
+  $HIT_STATS{$tag}++;
+  $HIT_STATS{TOTAL}++;
 }
 
 
@@ -483,6 +466,7 @@ sub append_roman
   $chain->append($token);
 
   $HIT_STATS{$tag}++;
+  $HIT_STATS{TOTAL}++;
 }
 
 
@@ -496,6 +480,7 @@ sub append_unknown
   $chain->append($token);
 
   $HIT_STATS{UNMATCHED}++;
+  $HIT_STATS{TOTAL}++;
 }
 
 

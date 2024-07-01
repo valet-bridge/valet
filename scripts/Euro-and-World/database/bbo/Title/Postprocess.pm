@@ -159,7 +159,8 @@ sub post_process_stand_alone_singles
     my $field = $token->field();
 
     if ($cat eq 'COUNTER' && 
-        ($field eq 'LETTER' || $field eq 'N_OF_N' || $field eq 'ROMAN'))
+        ($field eq 'LETTER' || $field eq 'N_OF_N' || 
+         $field eq 'TITLE_ROMAN'))
     {
       $chain->complete_if_last_is(0, 'COMPLETE');
     }

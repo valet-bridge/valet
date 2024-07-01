@@ -1,5 +1,9 @@
 12188 has an ambiguity, sometimes Uninformative, sometimes Fluff
 
+Title::Study:
+- Split split_on_multi into two
+- HIT_STATS into global Histo of strings, print() method
+
 Title:
 - Not sure we keep well track of text in Token (sometimes use part)
 - Clean up code in Preprocess, Study, Postprocess (TITLE_ in one place etc)
@@ -9,7 +13,7 @@ Title:
   else)
 - Have SINGLETON, AMBIGUOUS, COUNTER, ITERATOR I guess
 
-- Make a ChainStats for length and number
+- Make a ChainStats for length and number (ignore KILLED)
 - Update it from Chains
 - Make a Chains::print()
 

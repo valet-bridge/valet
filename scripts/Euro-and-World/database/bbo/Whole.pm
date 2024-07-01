@@ -33,6 +33,7 @@ use Tags::Particle;
 use Tags::Person;
 use Tags::Quarter;
 use Tags::Region;
+use Tags::Roman;
 use Tags::Scoring;
 use Tags::Sponsor;
 use Tags::Stage;
@@ -68,6 +69,7 @@ my %TAGS =
   PERSON => \&Tags::Person::set_hashes,
   QUARTER => \&Tags::Quarter::set_hashes,
   REGION => \&Tags::Region::set_hashes,
+  ROMAN => \&Tags::Roman::set_hashes,
   SCORING => \&Tags::Scoring::set_hashes,
   SPONSOR => \&Tags::Sponsor::set_hashes,
   STAGE => \&Tags::Stage::set_hashes,
