@@ -78,7 +78,7 @@ my %SINGLE_TYPOS =
     'from', 'gd', 'glpd', 'het', 'im', 'in', 'jm', 'kb', 'kdk', 
     'krs', 'ktp', 'ld', 'min', 'mr', 'nc', 'nk', 'no', 'npc', 'nr', 'ns',
     'og', 'pc', 'se', 'sw', 'tc', 'te', 'teh', 'th', 'the', 'tn',
-    'trn', 'ts', 'tv', 'und', 'vsa', 'vsb', 'vw','xy', 'yz', 'zw'],
+    'ts', 'tv', 'und', 'vsa', 'vsb', 'vw','xy', 'yz', 'zw'],
   Uninformative => ['alumni', 'anniversary', 'annual', 'any', 'away',
     'best', 'bridge', 'bric', 'bdg',
     'celebrations', 'centenary', 'cetenary', 'center', 'challenger', 
