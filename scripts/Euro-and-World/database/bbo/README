@@ -1,15 +1,19 @@
-- In Title, see if we can split chains such that they print easily,
-  perhaps with more reductions or with post-processing
-- 'TITLE_' in one place only in TitleBBO
+12188 has an ambiguity, sometimes Uninformative, sometimes Fluff
+
+Title:
+- Clean up code in Preprocess, Study, Postprocess (TITLE_ in one place etc)
+- In cook we split some more.  Do this already
+- Then they should print cleanly
+- Chains print should be in a new Chains (today's Chains is something
+  else)
+- Have SINGLETON, AMBIGUOUS, COUNTER, ITERATOR I guess
 
 - Make a ChainStats for length and number
 - Update it from Chains
 - Make a Chains::print()
 
-- Have SINGLETON, AMBIGUOUS, COUNTER, ITERATOR I guess
 - Make TeamBBO like TitleBBO (Whole)
 - Move Matrix to Connections/Matrix.pm or some such
-
 
 Output all the cook results into a text file in compact format:
 - a field can probably be a single or a list, { }

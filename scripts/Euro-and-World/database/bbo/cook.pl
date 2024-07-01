@@ -18,9 +18,10 @@ use Chain;
 use TeamBBO;
 use EventBBO;
 use ScoringBBO;
-use TitleBBO;
 
 use Title::Study;
+use Title::Preprocess;
+use Title::Postprocess;
 
 use Event::Despace;
 use Patterns::Chainify;
@@ -147,12 +148,12 @@ while ($line = <$fh>)
     Title::Study::study($whole, $chunk{BBONO}, $chunk{TITLE}, 
       $chain_title, \$unknown_titles);
 
-    pre_process_title(\@chains_title);
+    Title::Preprocess::pre_process(\@chains_title);
 
     Patterns::Chainify::process(\@TITLE_REDUCTIONS, \@chains_title, 
       0, \@reduction_title_stats);
 
-    post_process_title(\@chains_title);
+    Title::Postprocess::post_process(\@chains_title);
 
     update_chain_stats(\%chunk, \@chains_title, \@chain_title_stats);
     update_num_chain_stats(\%chunk, 

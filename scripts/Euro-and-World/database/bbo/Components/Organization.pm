@@ -14,7 +14,6 @@ our @EXPORT = qw(set_hashes);
 use lib '.';
 
 use TeamBBO;
-use TitleBBO;
 
 my @MULTI_WORDS =
 (
