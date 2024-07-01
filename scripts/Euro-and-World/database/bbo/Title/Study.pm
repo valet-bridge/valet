@@ -223,24 +223,19 @@ sub study_part
     my $category = $fix_event->{CATEGORY};
     if ($category eq 'NUMERAL')
     {
-      $token->set_origin($i, $part);
-      $chain->append($token);
-      $token->set_numeral_counter($fix_event->{VALUE});
-      $HIT_STATS{TITLE_NUMERAL}++;
+      append_numeral($chain, $i, 'TITLE_NUMERAL', 
+        $fix_event->{VALUE}, $part);
       return;
     }
     elsif ($category eq 'ROMAN')
     {
-      $token->set_origin($i, $part);
-      $chain->append($token);
-      $token->set_roman_counter($fix_event->{VALUE});
-      $HIT_STATS{TITLE_ROMAN}++;
+      append_roman($chain, $i, 'TITLE_ROMAN', 
+        $fix_event->{VALUE}, $part);
       return;
     }
   }
 
   append_unknown($chain, $i, $part);
-  $HIT_STATS{UNMATCHED}++;
 
   print "QQQ ", $part, "\n";
   $$unknown_part_flag = 1;
@@ -465,6 +460,32 @@ sub append_singleton
 }
 
 
+sub append_numeral
+{
+  my ($chain, $pos, $tag, $value, $text) = @_;
+
+  my $token = Token->new();
+  $token->set_origin($pos, $text);
+  $token->set_numeral_counter($value);
+  $chain->append($token);
+
+  $HIT_STATS{$tag}++;
+}
+
+
+sub append_roman
+{
+  my ($chain, $pos, $tag, $value, $text) = @_;
+
+  my $token = Token->new();
+  $token->set_origin($pos, $text);
+  $token->set_roman_counter($value);
+  $chain->append($token);
+
+  $HIT_STATS{$tag}++;
+}
+
+
 sub append_unknown
 {
   my ($chain, $pos, $value) = @_;
@@ -473,6 +494,8 @@ sub append_unknown
   $token->set_origin($pos, $value);
   $token->set_unknown_full($value);
   $chain->append($token);
+
+  $HIT_STATS{UNMATCHED}++;
 }
 
 
