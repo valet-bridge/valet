@@ -8,74 +8,74 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-use lib './Components';
+use lib './Tags';
 
-use Components::Abbr;
-use Components::Age;
-use Components::Ambiguous;
-use Components::Bot;
-use Components::Captain;
-use Components::City;
-use Components::Club;
-use Components::Color;
-use Components::Country;
-use Components::Destroy;
-use Components::First;
-use Components::Form;
-use Components::Fun;
-use Components::Gender;
-use Components::Iterator;
-use Components::Meet;
-use Components::Nationality;
-use Components::Organization;
-use Components::Other;
-use Components::Particle;
-use Components::Person;
-use Components::Quarter;
-use Components::Region;
-use Components::Scoring;
-use Components::Sponsor;
-use Components::Stage;
-use Components::Time;
-use Components::Tname;
-use Components::Tword;
-use Components::University;
-use Components::Zone;
+use Tags::Abbr;
+use Tags::Age;
+use Tags::Ambiguous;
+use Tags::Bot;
+use Tags::Captain;
+use Tags::City;
+use Tags::Club;
+use Tags::Color;
+use Tags::Country;
+use Tags::Destroy;
+use Tags::First;
+use Tags::Form;
+use Tags::Fun;
+use Tags::Gender;
+use Tags::Iterator;
+use Tags::Meet;
+use Tags::Nationality;
+use Tags::Organization;
+use Tags::Other;
+use Tags::Particle;
+use Tags::Person;
+use Tags::Quarter;
+use Tags::Region;
+use Tags::Scoring;
+use Tags::Sponsor;
+use Tags::Stage;
+use Tags::Time;
+use Tags::Tname;
+use Tags::Tword;
+use Tags::University;
+use Tags::Zone;
 
 
 my %TAGS =
 (
-  ABBR => \&Components::Abbr::set_hashes,
-  AGE => \&Components::Age::set_hashes,
-  AMBIGUOUS => \&Components::Ambiguous::set_hashes,
-  BOT => \&Components::Bot::set_hashes,
-  CAPTAIN => \&Components::Captain::set_hashes,
-  CITY => \&Components::City::set_hashes,
-  CLUB => \&Components::Club::set_hashes,
-  COLOR => \&Components::Color::set_hashes,
-  COUNTRY => \&Components::Country::set_hashes,
-  DESTROY => \&Components::Destroy::set_hashes,
-  FIRST => \&Components::First::set_hashes,
-  FORM => \&Components::Form::set_hashes,
-  FUN => \&Components::Fun::set_hashes,
-  GENDER => \&Components::Gender::set_hashes,
-  ITERATOR => \&Components::Iterator::set_hashes,
-  MEET => \&Components::Meet::set_hashes,
-  NATIONALITY => \&Components::Nationality::set_hashes,
-  ORGANIZATION => \&Components::Organization::set_hashes,
-  OTHER => \&Components::Other::set_hashes,
-  PARTICLE => \&Components::Particle::set_hashes,
-  PERSON => \&Components::Person::set_hashes,
-  QUARTER => \&Components::Quarter::set_hashes,
-  REGION => \&Components::Region::set_hashes,
-  SCORING => \&Components::Scoring::set_hashes,
-  SPONSOR => \&Components::Sponsor::set_hashes,
-  STAGE => \&Components::Stage::set_hashes,
-  TIME => \&Components::Time::set_hashes,
-  TNAME => \&Components::Tname::set_hashes,
-  TWORD => \&Components::Tword::set_hashes,
-  UNIVERSITY => \&Components::University::set_hashes,
-  ZONE => \&Components::Zone::set_hashes
+  ABBR => \&Tags::Abbr::set_hashes,
+  AGE => \&Tags::Age::set_hashes,
+  AMBIGUOUS => \&Tags::Ambiguous::set_hashes,
+  BOT => \&Tags::Bot::set_hashes,
+  CAPTAIN => \&Tags::Captain::set_hashes,
+  CITY => \&Tags::City::set_hashes,
+  CLUB => \&Tags::Club::set_hashes,
+  COLOR => \&Tags::Color::set_hashes,
+  COUNTRY => \&Tags::Country::set_hashes,
+  DESTROY => \&Tags::Destroy::set_hashes,
+  FIRST => \&Tags::First::set_hashes,
+  FORM => \&Tags::Form::set_hashes,
+  FUN => \&Tags::Fun::set_hashes,
+  GENDER => \&Tags::Gender::set_hashes,
+  ITERATOR => \&Tags::Iterator::set_hashes,
+  MEET => \&Tags::Meet::set_hashes,
+  NATIONALITY => \&Tags::Nationality::set_hashes,
+  ORGANIZATION => \&Tags::Organization::set_hashes,
+  OTHER => \&Tags::Other::set_hashes,
+  PARTICLE => \&Tags::Particle::set_hashes,
+  PERSON => \&Tags::Person::set_hashes,
+  QUARTER => \&Tags::Quarter::set_hashes,
+  REGION => \&Tags::Region::set_hashes,
+  SCORING => \&Tags::Scoring::set_hashes,
+  SPONSOR => \&Tags::Sponsor::set_hashes,
+  STAGE => \&Tags::Stage::set_hashes,
+  TIME => \&Tags::Time::set_hashes,
+  TNAME => \&Tags::Tname::set_hashes,
+  TWORD => \&Tags::Tword::set_hashes,
+  UNIVERSITY => \&Tags::University::set_hashes,
+  ZONE => \&Tags::Zone::set_hashes
 );
 
 
@@ -159,14 +159,32 @@ sub init_hashes
 sub get_single
 {
   my ($self, $tag, $part) = @_;
-  return $self->{SWORDS}{$tag}{$part};
+
+  my $res = $self->{SWORDS}{$tag}{$part};
+
+  if (exists $res->{CATEGORY})
+  {
+    $self->{HITS}{$tag}{$part}++;
+    $self->{HITS}{$tag}{$res->{VALUE}}++;
+  }
+
+  return $res;
 }
 
 
 sub get_multi
 {
   my ($self, $tag, $part) = @_;
-  return $self->{MWORDS}{$tag}{$part};
+
+  my $res = $self->{MWORDS}{$tag}{$part};
+
+  if (defined $res)
+  {
+    $self->{HITS}{$tag}{$part}++;
+    $self->{HITS}{$tag}{$res}++;
+  }
+
+  return $res;
 }
 
 
@@ -188,6 +206,31 @@ sub sorted_mwords
 {
   my ($self, $tag) = @_;
   return sort keys %{$self->{MWORDS}{$tag}};
+}
+
+
+sub print_misses
+{
+  my ($self) = @_;
+
+  print "Multi-word unused:\n\n";
+  for my $tag (sort keys %{$self->{MWORDS}})
+  {
+    for my $value ($self->sorted_mwords($tag))
+    {
+      print "$tag: $value\n" unless exists $self->{HITS}{$tag}{$value};
+    }
+  }
+
+  print "\nSingle-word unused:\n\n";
+  for my $tag (sort keys %{$self->{SWORDS}})
+  {
+    for my $value ($self->sorted_swords($tag))
+    {
+      print "$tag: $value\n" unless exists $self->{HITS}{$tag}{$value};
+    }
+  }
+  print "\n";
 }
 
 

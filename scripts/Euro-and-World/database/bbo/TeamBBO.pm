@@ -16,7 +16,7 @@ use lib '.';
 use lib '..';
 use lib './Team';
 use lib './Event';
-use lib './Components';
+use lib './Tags';
 
 use Country;
 use Token;
@@ -29,32 +29,32 @@ use Gender;
 
 use Team::Suggestors;
 
-use Components::Fun;
-use Components::First;
-use Components::Other;
-use Components::Sponsor;
-use Components::Organization;
-use Components::Abbr;
-use Components::Country;
-use Components::Region;
-use Components::Zone;
-use Components::Quarter;
-use Components::City;
-use Components::Club;
-use Components::Captain;
-use Components::Bot;
-use Components::Nationality;
-use Components::University;
-use Components::Gender;
-use Components::Age;
-use Components::Color;
-use Components::Scoring;
-use Components::Form;
+use Tags::Fun;
+use Tags::First;
+use Tags::Other;
+use Tags::Sponsor;
+use Tags::Organization;
+use Tags::Abbr;
+use Tags::Country;
+use Tags::Region;
+use Tags::Zone;
+use Tags::Quarter;
+use Tags::City;
+use Tags::Club;
+use Tags::Captain;
+use Tags::Bot;
+use Tags::Nationality;
+use Tags::University;
+use Tags::Gender;
+use Tags::Age;
+use Tags::Color;
+use Tags::Scoring;
+use Tags::Form;
 
-use Components::Tword;
-use Components::Meet;
+use Tags::Tword;
+use Tags::Meet;
 
-use Components::Destroy;
+use Tags::Destroy;
 
 use Team::Matrix;
 use Team::Repeats;
@@ -123,33 +123,33 @@ sub init_hashes
 {
   my $method = \&TeamBBO::set_overall_hashes;
 
-  Components::Fun::set_hashes($method, 'TEAM_FUN');
-  Components::First::set_hashes($method, 'TEAM_FIRST');
-  Components::Other::set_hashes($method, 'TEAM_OTHER');
-  Components::Region::set_hashes($method, 'TEAM_REGION');
-  Components::Zone::set_hashes($method, 'TEAM_ZONE');
-  Components::City::set_hashes($method, 'TEAM_CITY');
-  Components::Quarter::set_hashes($method, 'TEAM_QUARTER');
-  Components::Sponsor::set_hashes($method, 'TEAM_SPONSOR');
-  Components::University::set_hashes($method, 'TEAM_UNIVERSITY');
-  Components::Club::set_hashes($method, 'TEAM_CLUB');
-  Components::Organization::set_hashes($method, 'TEAM_ORGANIZATION');
-  Components::Abbr::set_hashes($method, 'TEAM_ABBR');
-  Components::Captain::set_hashes($method, 'TEAM_CAPTAIN');
-  Components::Bot::set_hashes($method, 'TEAM_BOT');
-  Components::Country::set_hashes($method, 'TEAM_COUNTRY');
-  Components::Nationality::set_hashes($method, 'TEAM_NATIONALITY');
-  Components::Gender::set_hashes($method, 'TEAM_GENDER');
-  Components::Age::set_hashes($method, 'TEAM_AGE');
-  Components::Color::set_hashes($method, 'TEAM_COLOR');
-  Components::Scoring::set_hashes($method, 'TEAM_SCORING');
-  Components::Form::set_hashes($method, 'TEAM_FORM');
-  Components::Tword::set_hashes($method, 'TEAM_TWORD');
-  Components::Meet::set_hashes($method, 'TEAM_MEET');
-  Components::Time::set_hashes($method, 'TEAM_TIME');
+  Tags::Fun::set_hashes($method, 'TEAM_FUN');
+  Tags::First::set_hashes($method, 'TEAM_FIRST');
+  Tags::Other::set_hashes($method, 'TEAM_OTHER');
+  Tags::Region::set_hashes($method, 'TEAM_REGION');
+  Tags::Zone::set_hashes($method, 'TEAM_ZONE');
+  Tags::City::set_hashes($method, 'TEAM_CITY');
+  Tags::Quarter::set_hashes($method, 'TEAM_QUARTER');
+  Tags::Sponsor::set_hashes($method, 'TEAM_SPONSOR');
+  Tags::University::set_hashes($method, 'TEAM_UNIVERSITY');
+  Tags::Club::set_hashes($method, 'TEAM_CLUB');
+  Tags::Organization::set_hashes($method, 'TEAM_ORGANIZATION');
+  Tags::Abbr::set_hashes($method, 'TEAM_ABBR');
+  Tags::Captain::set_hashes($method, 'TEAM_CAPTAIN');
+  Tags::Bot::set_hashes($method, 'TEAM_BOT');
+  Tags::Country::set_hashes($method, 'TEAM_COUNTRY');
+  Tags::Nationality::set_hashes($method, 'TEAM_NATIONALITY');
+  Tags::Gender::set_hashes($method, 'TEAM_GENDER');
+  Tags::Age::set_hashes($method, 'TEAM_AGE');
+  Tags::Color::set_hashes($method, 'TEAM_COLOR');
+  Tags::Scoring::set_hashes($method, 'TEAM_SCORING');
+  Tags::Form::set_hashes($method, 'TEAM_FORM');
+  Tags::Tword::set_hashes($method, 'TEAM_TWORD');
+  Tags::Meet::set_hashes($method, 'TEAM_MEET');
+  Tags::Time::set_hashes($method, 'TEAM_TIME');
 
   # TODO Goal is mainly to have one of these.
-  Components::Destroy::set_hashes($method, 'TEAM_DESTROY');
+  Tags::Destroy::set_hashes($method, 'TEAM_DESTROY');
 
   set_matrix();
   set_repeats(\%REPEATS);

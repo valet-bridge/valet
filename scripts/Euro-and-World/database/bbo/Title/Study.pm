@@ -1,15 +1,15 @@
 #!perl
 
+package Title::Study;
+
+use v5.10;
 use strict;
 use warnings;
-use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package Title::Study;
-
 our @ISA = qw(Exporter);
-our @EXPORT = qw(study print_title_stats all_used);
+our @EXPORT = qw(study print_title_stats);
 
 use lib '.';
 use lib './Event';
@@ -19,7 +19,7 @@ use Separators;
 
 use Event::Cookbook;
 
-my @NEW_TAG_ORDER = qw(
+my @TAG_ORDER = qw(
   TNAME
   DESTROY
   TWORD
@@ -48,7 +48,6 @@ my @NEW_TAG_ORDER = qw(
   AMBIGUOUS
 );
 
-my (%MULTI_HITS);
 my %HIT_STATS;
 
 my $PREFIX = 'TITLE_';
@@ -138,42 +137,36 @@ sub title_specific_hashes
 {
   my ($whole, $part, $token, $chain) = @_;
 
-  for my $tag (@NEW_TAG_ORDER)
+  for my $tag (@TAG_ORDER)
   {
     my $fix = $whole->get_single($tag, lc($part));
-    if (defined $fix->{CATEGORY})
+    next unless defined $fix->{CATEGORY};
+
+    my $cat = $PREFIX . $fix->{CATEGORY};
+
+    $token->set_singleton($cat, $fix->{VALUE});
+    $HIT_STATS{$cat}++;
+
+    if ($cat eq 'TITLE_GENDER' && $fix->{VALUE} eq 'Open')
     {
-      my $cat = $PREFIX . $fix->{CATEGORY};
-
-      # my $w = $fix->{VALUE};
-      # $MULTI_HITS{$tag}{lc($part)}++;
-      # $MULTI_HITS{$tag}{lc($w)}++;
-
-      $token->set_singleton($cat, $fix->{VALUE});
-      # $HIT_STATS{$fix->{CATEGORY}}++;
-      $HIT_STATS{$cat}++;
-
-      if ($cat eq 'TITLE_GENDER' && $fix->{VALUE} eq 'Open')
-      {
-        # Special case: Add an extra token.
-        my $token2 = Token->new();
-        $token2->copy_origin_from($token);
-        $token2->set_singleton($PREFIX . 'AGE', 'Open');
-        $chain->append($token2);
-        $HIT_STATS{$PREFIX . 'AGE'}++;
-      }
-      elsif ($cat eq 'TITLE_AGE' && $fix->{VALUE} eq 'Girls')
-      {
-        # Special case: Add an extra token.
-        my $token2 = Token->new();
-        $token2->copy_origin_from($token);
-        $token2->set_singleton($PREFIX . 'GENDER', 'Women');
-        $chain->append($token2);
-        $HIT_STATS{$PREFIX . 'GENDER'}++;
-      }
-
-      return 1;
+      # Special case: Add an extra token.
+      my $token2 = Token->new();
+      $token2->copy_origin_from($token);
+      $token2->set_singleton($PREFIX . 'AGE', 'Open');
+      $chain->append($token2);
+      $HIT_STATS{$PREFIX . 'AGE'}++;
     }
+    elsif ($cat eq 'TITLE_AGE' && $fix->{VALUE} eq 'Girls')
+    {
+      # Special case: Add an extra token.
+      my $token2 = Token->new();
+      $token2->copy_origin_from($token);
+      $token2->set_singleton($PREFIX . 'GENDER', 'Women');
+      $chain->append($token2);
+      $HIT_STATS{$PREFIX . 'GENDER'}++;
+    }
+
+    return 1;
   }
   return 0;
 }
@@ -205,7 +198,6 @@ sub study_part
     else
     {
       $token->set_numeral_counter($part);
-      # $token->set_singleton('TITLE_INTEGER', $part);
       $HIT_STATS{TITLE_INTEGER}++;
     }
     return;
@@ -213,7 +205,6 @@ sub study_part
   elsif ($part =~ /^[A-HJa-h]$/)
   {
     $token->set_letter_counter($part);
-    # $token->set_singleton('TITLE_LETTER', $part);
     $HIT_STATS{TITLE_LETTER}++;
     return;
   }
@@ -235,14 +226,12 @@ sub study_part
     if ($category eq 'NUMERAL')
     {
       $token->set_numeral_counter($fix_event->{VALUE});
-      # $token->set_singleton('TITLE_NUMERAL', $fix_event->{VALUE});
       $HIT_STATS{TITLE_NUMERAL}++;
       return;
     }
     elsif ($category eq 'ROMAN')
     {
       $token->set_roman_counter($fix_event->{VALUE});
-      # $token->set_singleton('TITLE_ROMAN', $fix_event->{VALUE});
       $HIT_STATS{TITLE_ROMAN}++;
       return;
     }
@@ -393,7 +382,7 @@ sub split_on_multi
     }
   }
 
-  for my $core_tag (@NEW_TAG_ORDER)
+  for my $core_tag (@TAG_ORDER)
   {
     my $tag = $PREFIX . $core_tag;
     my $mregex = $whole->get_multi_regex($core_tag);
@@ -412,10 +401,6 @@ sub split_on_multi
         {
           $parts->[$i] = $mp;
           $tags->[$i] = $tag;
-
-          # my $w = $MULTI_WORDS{$tag}{lc($a[0])};
-          # $MULTI_HITS{$tag}{lc($a[0])}++;
-          # $MULTI_HITS{$tag}{lc($w)}++;
         }
       }
       else
@@ -430,10 +415,6 @@ sub split_on_multi
           {
             $parts->[$j] = $mp;
             $tags->[$j] = $tag;
-
-            # my $w = $MULTI_WORDS{$tag}{lc($parts->[$j])};
-            # $MULTI_HITS{$tag}{lc($parts->[$j])}++;
-            # $MULTI_HITS{$tag}{lc($w)}++;
           }
         }
       }
@@ -468,6 +449,17 @@ sub study_component
 }
 
 
+sub append_token
+{
+  my ($chain, $pos, $tag, $value) = @_;
+
+  my $token = Token->new();
+  $token->set_origin($pos, $value);
+  $token->set_singleton($tag, $value);
+  $chain->append($token);
+}
+
+
 sub study
 {
   my ($whole, $bbono, $text, $chain, $unknowns) = @_;
@@ -493,10 +485,7 @@ sub study
     if ($tags[$i] ne '0')
     {
       # We had a multi-word hit.
-      my $token = Token->new();
-      $token->set_origin($i, $parts[$i]);
-      $token->set_singleton($tags[$i], $parts[$i]);
-      $chain->append($token);
+      append_token($chain, $i, $tags[$i], $parts[$i]);
       $token_no++;
     }
     else
@@ -522,36 +511,6 @@ sub print_title_stats
   }
 
   print "\n";
-}
-
-
-sub all_used
-{
-  my ($whole) = @_;
-
-  print "Multis:\n\n";
-  for my $key (@NEW_TAG_ORDER)
-  {
-    for my $entry ($whole->sorted_mwords())
-    {
-      if (! defined $MULTI_HITS{$key}{$entry})
-      {
-        print "$key: $entry\n";
-      }
-    }
-  }
-
-  print "\nSingles\n\n";
-  for my $key (@NEW_TAG_ORDER)
-  {
-    for my $entry ($whole->sorted_swords())
-    {
-      if (! defined $MULTI_HITS{$key}{$entry})
-      {
-        print "$key: $entry\n";
-      }
-    }
-  }
 }
 
 
