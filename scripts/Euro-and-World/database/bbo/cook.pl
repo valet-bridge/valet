@@ -31,8 +31,12 @@ use Reductions::Title;
 
 use Whole;
 
+use Histo;
+
 my $whole = Whole->new();
 $whole->init_hashes();
+
+my $histo_title = Histo->new();
 
 
 # Parse the raw output of
@@ -146,7 +150,7 @@ while ($line = <$fh>)
     push @chains_title, $chain_title;
 
     Title::Study::study($whole, $chunk{BBONO}, $chunk{TITLE}, 
-      $chain_title, \$unknown_titles);
+      $chain_title, $histo_title, \$unknown_titles);
 
     Title::Preprocess::pre_process(\@chains_title);
 

@@ -51,98 +51,6 @@ my %HIT_STATS;
 my $PREFIX = 'TITLE_';
 
 
-sub split_on_trailing_digits
-{
-  my ($list_ref) = @_;
-
-  for my $i (reverse 0 .. $#$list_ref)
-  {
-    my $part = $list_ref->[$i];
-    next unless $part =~ /^(.*[a-z])(\d+)$/i;
-
-    my ($letters, $digits) = ($1, $2);
-    next if $letters eq 'U' || $letters eq 'D';
-    next if $digits > 50;
-
-    splice(@$list_ref, $i, 0, ('') x 2);
-    $list_ref->[$i] = $letters;
-    $list_ref->[$i+1] = '|';
-    $list_ref->[$i+2] = $digits;
-  }
-}
-
-
-sub title_specific_hashes
-{
-  my ($whole, $pos, $text, $chain) = @_;
-
-  for my $core_tag (@TAG_ORDER)
-  {
-    my $fix = $whole->get_single($core_tag, lc($text));
-    next unless defined $fix->{CATEGORY};
-
-    my $tag = $PREFIX . $fix->{CATEGORY};
-
-    append_singleton($chain, $pos, $tag, $fix->{VALUE}, $text);
-
-    if ($tag eq 'TITLE_GENDER' && $fix->{VALUE} eq 'Open')
-    {
-      # Special case: Add an extra token.
-      $tag = $PREFIX . 'AGE';
-      append_singleton($chain, $pos, $tag, $fix->{VALUE},  $text);
-    }
-    elsif ($tag eq 'TITLE_AGE' && $fix->{VALUE} eq 'Girls')
-    {
-      # Special case: Add an extra token.
-      $tag = $PREFIX . 'GENDER';
-      append_singleton($chain, $pos, $tag, 'Women', $text);
-    }
-
-    return 1;
-  }
-  return 0;
-}
-
-
-sub study_part
-{
-  my ($whole, $part, $i, $chain, $unknown_part_flag) = @_;
-
-  my $token = Token->new();
-  if ($part =~ /^\d+$/)
-  {
-    if ($part >= 1900 && $part < 2100)
-    {
-      append_singleton($chain, $i, 'TITLE_YEAR', $part, $part);
-    }
-    else
-    {
-      append_numeral($chain, $i, 'TITLE_INTEGER', $part, $part);
-    }
-    return;
-  }
-  elsif ($part =~ /^[A-HJa-h]$/)
-  {
-    append_letter($chain, $i, 'TITLE_LETTER', $part, $part);
-    return;
-  }
-  elsif (my $ord = Util::ordinal_to_numeral($part))
-  {
-    $ord =~ s/^0+//; # Remove leading zeroes
-    append_ordinal($chain, $i, 'TITLE_ORDINAL', $ord, $part);
-    return;
-  }
-
-  # The general solution.
-  return if title_specific_hashes($whole, $i, $part, $chain);
-
-  append_unknown($chain, $i, $part);
-
-  print "QQQ ", $part, "\n";
-  $$unknown_part_flag = 1;
-}
-
-
 sub split_on_some_numbers
 {
   my ($text) = @_;
@@ -264,7 +172,7 @@ sub split_on_dates
         if ($date_parts[$j] =~ /^\d\d\d\d[-_]\d\d[-_]\d\d$/)
         {
           $parts->[$i+$j] = $date_parts[$j];
-          $tags->[$i+$j] = 'TITLE_DATE';
+          $tags->[$i+$j] = $PREFIX . 'DATE';
         }
         else
         {
@@ -284,7 +192,7 @@ sub split_on_dates
       # Make sure that elements on different sides of the ' - ' end up
       # in different chains.
       splice(@$parts, $i, 0, '');
-      splice(@$tags, $i, 0, 'TITLE_DESTROY');
+      splice(@$tags, $i, 0, $PREFIX . 'DESTROY');
     }
   }
 }
@@ -296,10 +204,10 @@ sub split_on_multi
 
   for my $core_tag (@TAG_ORDER)
   {
-    my $tag = $PREFIX . $core_tag;
     my $mregex = $whole->get_multi_regex($core_tag);
-
     next if $mregex eq '';
+
+    my $tag = $PREFIX . $core_tag;
     for my $i (reverse 0 .. $#$parts)
     {
       next if $tags->[$i] ne '0';
@@ -334,9 +242,85 @@ sub split_on_multi
   }
 }
 
+
+sub title_specific_hashes
+{
+  my ($whole, $pos, $text, $chain, $histo) = @_;
+
+  for my $core_tag (@TAG_ORDER)
+  {
+    my $fix = $whole->get_single($core_tag, lc($text));
+    next unless defined $fix->{CATEGORY};
+
+    my $tag = $PREFIX . $fix->{CATEGORY};
+
+    append_singleton($chain, $pos, $tag, $fix->{VALUE}, $text);
+
+    if ($tag eq $PREFIX . 'GENDER' && $fix->{VALUE} eq 'Open')
+    {
+      # Special case: Add an extra token.
+      $tag = $PREFIX . 'AGE';
+      append_singleton($chain, $pos, $tag, $fix->{VALUE},  $text);
+    }
+    elsif ($tag eq $PREFIX . 'AGE' && $fix->{VALUE} eq 'Girls')
+    {
+      # Special case: Add an extra token.
+      $tag = $PREFIX . 'GENDER';
+      append_singleton($chain, $pos, $tag, 'Women', $text);
+    }
+
+    return 1;
+  }
+  return 0;
+}
+
+
+sub study_part
+{
+  my ($whole, $part, $i, $chain, $histo, $unknown_part_flag) = @_;
+
+  my $token = Token->new();
+  if ($part =~ /^\d+$/)
+  {
+    if ($part >= 1900 && $part < 2100)
+    {
+      append_singleton($chain, $i, 
+        $PREFIX . 'YEAR', $part, $part);
+    }
+    else
+    {
+      append_numeral($chain, $i, 
+        $PREFIX . 'INTEGER', $part, $part);
+    }
+    return;
+  }
+  elsif ($part =~ /^[A-HJa-h]$/)
+  {
+    append_letter($chain, $i, 
+      $PREFIX . 'LETTER', $part, $part);
+    return;
+  }
+  elsif (my $ord = Util::ordinal_to_numeral($part))
+  {
+    $ord =~ s/^0+//; # Remove leading zeroes
+    append_ordinal($chain, $i, 
+      $PREFIX . 'ORDINAL', $ord, $part);
+    return;
+  }
+
+  # The general solution.
+  return if title_specific_hashes($whole, $i, $part, $chain, $histo);
+
+  append_unknown($chain, $i, $part);
+
+  print "QQQ ", $part, "\n";
+  $$unknown_part_flag = 1;
+}
+
+
 sub study_component
 {
-  my ($whole, $part, $chain, $token_no, $unsolved_flag) = @_;
+  my ($whole, $part, $chain, $token_no, $histo, $unsolved_flag) = @_;
 
   # Split on trailing digits.
   my $unknown_part_flag = 0;
@@ -345,15 +329,18 @@ sub study_component
   {
     my ($letters, $digits) = ($1, $2);
 
-    study_part($whole, $letters, $token_no, $chain, \$unknown_part_flag);
+    study_part($whole, $letters, $token_no, $chain, 
+      $histo, \$unknown_part_flag);
     $$token_no++;
 
-    study_part($whole, $digits, $token_no, $chain, \$unknown_part_flag);
+    study_part($whole, $digits, $token_no, $chain, 
+      $histo, \$unknown_part_flag);
     $$token_no++;
   }
   else
   {
-    study_part($whole, $part, $token_no, $chain, \$unknown_part_flag);
+    study_part($whole, $part, $token_no, $chain, 
+      $histo, \$unknown_part_flag);
     $$token_no++;
   }
 
@@ -454,7 +441,7 @@ sub append_unknown
 
 sub study
 {
-  my ($whole, $bbono, $text, $chain, $unknowns) = @_;
+  my ($whole, $bbono, $text, $chain, $histo, $unknowns) = @_;
 
   return if $text eq '';
 
@@ -486,13 +473,17 @@ sub study
       my @a = grep { $_ ne '' } split(/$sep/, $parts[$i]);
       foreach my $part (@a)
       {
-        study_component($whole, $part, $chain, \$token_no, \$unsolved_flag);
+        study_component($whole, $part, $chain, \$token_no, 
+          $histo, \$unsolved_flag);
       }
     }
   }
 
-  print "TTT $bbono: $text\n" if ($unsolved_flag && $chain->last() > 0);
-  print "\n" if $unsolved_flag;
+  if ($unsolved_flag)
+  {
+    print "TTT $bbono: $text\n" if $chain->last() > 0;
+    print "\n";
+  }
 }
 
 
