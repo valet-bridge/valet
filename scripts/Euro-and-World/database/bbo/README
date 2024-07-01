@@ -1,6 +1,7 @@
 12188 has an ambiguity, sometimes Uninformative, sometimes Fluff
 
 Title:
+- Not sure we keep well track of text in Token (sometimes use part)
 - Clean up code in Preprocess, Study, Postprocess (TITLE_ in one place etc)
 - In cook we split some more.  Do this already
 - Then they should print cleanly

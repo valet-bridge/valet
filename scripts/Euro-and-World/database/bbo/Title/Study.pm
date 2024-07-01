@@ -89,14 +89,16 @@ sub is_small_ordinal
 
 sub fix_small_ordinal
 {
-  my ($part, $token) = @_;
+  my ($part, $i, $chain) = @_;
   if (my $ord = is_small_ordinal($part))
   {
     # We don't check whether the ending matches the number.
     if ($ord >= 0 && $ord < 100)
     {
       $ord =~ s/^0+//; # Remove leading zeroes
-      # $token->set_singleton('TITLE_ORDINAL', $ord);
+      my $token = Token->new();
+      $token->set_origin($i, $part);
+      $chain->append($token);
       $token->set_ordinal_counter($ord);
       return 1;
     }
@@ -135,7 +137,7 @@ sub split_on_trailing_digits
 
 sub title_specific_hashes
 {
-  my ($whole, $part, $token, $chain) = @_;
+  my ($whole, $part, $i, $chain) = @_;
 
   for my $tag (@TAG_ORDER)
   {
@@ -144,14 +146,14 @@ sub title_specific_hashes
 
     my $cat = $PREFIX . $fix->{CATEGORY};
 
-    $token->set_singleton($cat, $fix->{VALUE});
+    append_singleton($chain, $i, $cat, $fix->{VALUE}, $part);
     $HIT_STATS{$cat}++;
 
     if ($cat eq 'TITLE_GENDER' && $fix->{VALUE} eq 'Open')
     {
       # Special case: Add an extra token.
       my $token2 = Token->new();
-      $token2->copy_origin_from($token);
+      $token2->set_origin($i, $part);
       $token2->set_singleton($PREFIX . 'AGE', 'Open');
       $chain->append($token2);
       $HIT_STATS{$PREFIX . 'AGE'}++;
@@ -160,7 +162,7 @@ sub title_specific_hashes
     {
       # Special case: Add an extra token.
       my $token2 = Token->new();
-      $token2->copy_origin_from($token);
+      $token2->set_origin($i, $part);
       $token2->set_singleton($PREFIX . 'GENDER', 'Women');
       $chain->append($token2);
       $HIT_STATS{$PREFIX . 'GENDER'}++;
@@ -176,14 +178,14 @@ sub study_part
 {
   my ($whole, $part, $i, $chain, $unknown_part_flag) = @_;
 
-  my $token = Token->new();
-  $token->set_origin($i, $part);
-  $chain->append($token);
-
   $HIT_STATS{TOTAL}++;
 
+  my $token = Token->new();
   if (set_token($part, $token))
   {
+    $token->set_origin($i, $part);
+    $chain->append($token);
+
     $token->set_singleton('SEPARATOR', $part);
     $HIT_STATS{SEPARATOR}++;
     return;
@@ -192,11 +194,13 @@ sub study_part
   {
     if ($part >= 1900 && $part < 2100)
     {
-      $token->set_singleton('TITLE_YEAR', $part);
+      append_singleton($chain, $i, 'TITLE_YEAR', $part, $part);
       $HIT_STATS{TITLE_YEAR}++;
     }
     else
     {
+      $token->set_origin($i, $part);
+      $chain->append($token);
       $token->set_numeral_counter($part);
       $HIT_STATS{TITLE_INTEGER}++;
     }
@@ -204,18 +208,20 @@ sub study_part
   }
   elsif ($part =~ /^[A-HJa-h]$/)
   {
+    $token->set_origin($i, $part);
+    $chain->append($token);
     $token->set_letter_counter($part);
     $HIT_STATS{TITLE_LETTER}++;
     return;
   }
-  elsif (fix_small_ordinal($part, $token))
+  elsif (fix_small_ordinal($part, $i, $chain))
   {
     $HIT_STATS{TITLE_ORDINAL}++;
     return;
   }
 
   # The general solution.
-  return if title_specific_hashes($whole, $part, $token, $chain);
+  return if title_specific_hashes($whole, $part, $i, $chain);
 
   # Some use of other hashes.
   my $fix_event = $FIX_HASH{lc($part)};
@@ -225,20 +231,25 @@ sub study_part
     my $category = $fix_event->{CATEGORY};
     if ($category eq 'NUMERAL')
     {
+      $token->set_origin($i, $part);
+      $chain->append($token);
       $token->set_numeral_counter($fix_event->{VALUE});
       $HIT_STATS{TITLE_NUMERAL}++;
       return;
     }
     elsif ($category eq 'ROMAN')
     {
+      $token->set_origin($i, $part);
+      $chain->append($token);
       $token->set_roman_counter($fix_event->{VALUE});
       $HIT_STATS{TITLE_ROMAN}++;
       return;
     }
   }
 
-  $token->set_unknown_full($part);
+  append_unknown($chain, $i, $part);
   $HIT_STATS{UNMATCHED}++;
+
   print "QQQ ", $part, "\n";
   $$unknown_part_flag = 1;
 }
@@ -449,13 +460,24 @@ sub study_component
 }
 
 
-sub append_token
+sub append_singleton
 {
-  my ($chain, $pos, $tag, $value) = @_;
+  my ($chain, $pos, $tag, $value, $text) = @_;
+
+  my $token = Token->new();
+  $token->set_origin($pos, $text);
+  $token->set_singleton($tag, $value);
+  $chain->append($token);
+}
+
+
+sub append_unknown
+{
+  my ($chain, $pos, $value) = @_;
 
   my $token = Token->new();
   $token->set_origin($pos, $value);
-  $token->set_singleton($tag, $value);
+  $token->set_unknown_full($value);
   $chain->append($token);
 }
 
@@ -485,7 +507,7 @@ sub study
     if ($tags[$i] ne '0')
     {
       # We had a multi-word hit.
-      append_token($chain, $i, $tags[$i], $parts[$i]);
+      append_singleton($chain, $i, $tags[$i], $parts[$i], $parts[$i]);
       $token_no++;
     }
     else
