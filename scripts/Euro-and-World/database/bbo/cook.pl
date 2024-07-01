@@ -8,6 +8,7 @@ use open ':std', ':encoding(UTF-8)';
 use Time::HiRes qw(time);
 
 use lib '.';
+use lib './Title';
 use lib './Event';
 use lib './Patterns';
 
@@ -18,6 +19,8 @@ use TeamBBO;
 use EventBBO;
 use ScoringBBO;
 use TitleBBO;
+
+use Title::Study;
 
 use Event::Despace;
 use Patterns::Chainify;
@@ -141,8 +144,8 @@ while ($line = <$fh>)
     my @chains_title;
     push @chains_title, $chain_title;
 
-    study_title($whole, $chunk{TITLE}, $chain_title, \$unknown_titles, 
-      $chunk{BBONO});
+    Title::Study::study($whole, $chunk{BBONO}, $chunk{TITLE}, 
+      $chain_title, \$unknown_titles);
 
     pre_process_title(\@chains_title);
 
