@@ -242,9 +242,9 @@ sub split_on_capitals
 }
 
 
-sub split_on_multi
+sub split_on_dates
 {
-  my ($whole, $text, $parts, $tags) = @_;
+  my ($text, $parts, $tags) = @_;
 
   @$parts = split / - /, $text;
   @$tags = (0) x (1 + $#$parts);
@@ -287,6 +287,12 @@ sub split_on_multi
       splice(@$tags, $i, 0, 'TITLE_DESTROY');
     }
   }
+}
+
+
+sub split_on_multi
+{
+  my ($whole, $parts, $tags) = @_;
 
   for my $core_tag (@TAG_ORDER)
   {
@@ -458,7 +464,8 @@ sub study
 
   my @parts = ();
   my @tags = (0);
-  split_on_multi($whole, $stext, \@parts, \@tags);
+  split_on_dates($stext, \@parts, \@tags);
+  split_on_multi($whole, \@parts, \@tags);
 
   # Split on separators.
   my $sep = qr/[\s+\-\+\._:;&@"\/\(\)\|]/;
