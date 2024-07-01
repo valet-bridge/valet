@@ -46,8 +46,6 @@ my @RAW_FIELDS = qw(BBONO TITLE EVENT SCORING TEAMS);
 TeamBBO::init_hashes();
 read_cities();
 
-TitleBBO::init_hashes();
-
 my $file = $ARGV[0];
 open my $fh, '<', $file or die "Cannot read tfile: $!";
 

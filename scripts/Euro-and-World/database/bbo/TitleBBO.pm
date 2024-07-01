@@ -15,67 +15,12 @@ our @EXPORT = qw(init_hashes set_overall_hashes
 
 use lib '.';
 use lib './Event';
-use lib './Components';
+# use lib './Components';
 
 use Token;
 use Separators;
 
 use Event::Cookbook;
-
-use Components::Organization;
-use Components::Zone;
-use Components::Country;
-use Components::Nationality;
-use Components::Region;
-use Components::City;
-use Components::Quarter;
-use Components::University;
-use Components::Form;
-use Components::Sponsor;
-use Components::Gender;
-use Components::Age;
-use Components::Captain;
-
-use Components::Meet;
-use Components::Person;
-use Components::Tname;
-use Components::Tword;
-use Components::Club;
-use Components::Iterator;
-use Components::Stage;
-use Components::Time;
-use Components::Particle;
-use Components::Ambiguous;
-use Components::Destroy;
-
-my @TAG_ORDER = qw(
-  TITLE_TNAME
-  TITLE_DESTROY
-  TITLE_TWORD
-  TITLE_MEET
-  TITLE_CLUB
-
-  TITLE_ORGANIZATION 
-  TITLE_ZONE 
-  TITLE_SPONSOR 
-  TITLE_COUNTRY 
-  TITLE_NATIONALITY
-  TITLE_REGION 
-  TITLE_CITY 
-  TITLE_QUARTER 
-  TITLE_UNIVERSITY 
-  TITLE_FORM 
-  TITLE_CAPTAIN 
-  TITLE_GENDER
-  TITLE_AGE
-  TITLE_SCORING
-  TITLE_PERSON
-  TITLE_ITERATOR
-  TITLE_STAGE
-  TITLE_TIME
-  TITLE_PARTICLE
-  TITLE_AMBIGUOUS
-);
 
 my @NEW_TAG_ORDER = qw(
   TNAME
@@ -106,104 +51,10 @@ my @NEW_TAG_ORDER = qw(
   AMBIGUOUS
 );
 
-my (%MULTI_WORDS, %MULTI_REGEX, %SINGLE_WORDS);
 my (%MULTI_HITS);
-
 my %HIT_STATS;
 
 my $PREFIX = 'TITLE_';
-
-
-sub init_hashes
-{
-  my $method = \&TitleBBO::set_overall_hashes;
-
-  Components::Organization::set_hashes($method, 'TITLE_ORGANIZATION');
-  Components::Zone::set_hashes($method, 'TITLE_ZONE');
-  Components::Country::set_hashes($method, 'TITLE_COUNTRY');
-  Components::Nationality::set_hashes($method, 'TITLE_NATIONALITY');
-  Components::Region::set_hashes($method, 'TITLE_REGION');
-  Components::City::set_hashes($method, 'TITLE_CITY');
-  Components::Quarter::set_hashes($method, 'TITLE_QUARTER');
-  Components::University::set_hashes($method, 'TITLE_UNIVERSITY');
-  Components::Form::set_hashes($method, 'TITLE_FORM');
-  Components::Sponsor::set_hashes($method, 'TITLE_SPONSOR');
-
-  Components::Person::set_hashes($method, 'TITLE_PERSON');
-
-  Components::Captain::set_hashes($method, 'TITLE_CAPTAIN');
-  Components::Gender::set_hashes($method, 'TITLE_GENDER');
-  Components::Age::set_hashes($method, 'TITLE_AGE');
-  Components::Scoring::set_hashes($method, 'TITLE_SCORING');
-
-  Components::Meet::set_hashes($method, 'TITLE_MEET');
-  Components::Tname::set_hashes($method, 'TITLE_TNAME');
-  Components::Tword::set_hashes($method, 'TITLE_TWORD');
-  Components::Club::set_hashes($method, 'TITLE_CLUB');
-  Components::Iterator::set_hashes($method, 'TITLE_ITERATOR');
-  Components::Stage::set_hashes($method, 'TITLE_STAGE');
-  Components::Time::set_hashes($method, 'TITLE_TIME');
-  Components::Particle::set_hashes($method, 'TITLE_PARTICLE');
-  Components::Ambiguous::set_hashes($method, 'TITLE_AMBIGUOUS');
-  Components::Destroy::set_hashes($method, 'TITLE_DESTROY');
-}
-
-
-
-
-sub set_overall_hashes
-{
-  my ($multi_words, $multi_typos, $single_words, $single_typos, $key) = @_;
-
-  # The words themselves.
-  for my $multi (@$multi_words)
-  {
-    my $tilded = $multi =~ s/ /\~/gr;
-    $MULTI_WORDS{$key}{lc($multi)} = $multi;
-    $SINGLE_WORDS{$key}{lc($multi)} = 
-      { CATEGORY => $key, VALUE => $multi };
-  }
-
-  # Any typos.
-  for my $multi (keys %$multi_typos)
-  {
-    my $tilded = $multi =~ s/ /\~/gr;
-    for my $typo (@{$multi_typos->{$multi}})
-    {
-      $MULTI_WORDS{$key}{lc($typo)} = $multi;
-      $SINGLE_WORDS{$key}{lc($multi)} = 
-        { CATEGORY => $key, VALUE => $multi };
-    }
-  }
-
-  if (keys %{$MULTI_WORDS{$key}})
-  {
-    my $multi_pattern_direct = join('|', map { quotemeta }
-      sort { length($b) <=> length($a) } keys %{$MULTI_WORDS{$key}});
-
-    $MULTI_REGEX{$key} = qr/(?<!\p{L})($multi_pattern_direct)(?=\P{L}|\z)/i;
-  }
-  else
-  {
-    $MULTI_REGEX{$key} = '';
-  }
-
-  # Similarly for the single words.
-  for my $single (@$single_words)
-  {
-    $SINGLE_WORDS{$key}{lc($single)} = 
-      { CATEGORY => $key, VALUE => $single };
-  }
-
-  for my $single (keys %$single_typos)
-  {
-    for my $typo (@{$single_typos->{$single}})
-    {
-      $SINGLE_WORDS{$key}{lc($typo)} = 
-        { CATEGORY => $key, VALUE => $single };
-    }
-  }
-}
 
 
 sub make_field_record
@@ -584,10 +435,9 @@ sub split_on_multi
     }
   }
 
-  for my $tag (@TAG_ORDER)
+  for my $core_tag (@NEW_TAG_ORDER)
   {
-    my $core_tag = $tag;
-    $core_tag =~ s/^TITLE_//;
+    my $tag = $PREFIX . $core_tag;
     my $mregex = $whole->get_multi_regex($core_tag);
 
     next if $mregex eq '';
@@ -599,9 +449,10 @@ sub split_on_multi
       if ($#a == 0)
       {
         # Optimize for this frequent special case.
-        if (exists $MULTI_WORDS{$tag}{lc($a[0])})
+        my $mp = $whole->get_multi($core_tag, lc($a[0]));
+        if (defined $mp)
         {
-          $parts->[$i] = $MULTI_WORDS{$tag}{lc($a[0])};
+          $parts->[$i] = $mp;
           $tags->[$i] = $tag;
 
           # my $w = $MULTI_WORDS{$tag}{lc($a[0])};
@@ -616,9 +467,10 @@ sub split_on_multi
 
         for my $j ($i .. $i + $#a)
         {
-          if (exists $MULTI_WORDS{$tag}{lc($parts->[$j])})
+          my $mp = $whole->get_multi($core_tag, lc($parts->[$j]));
+          if (defined $mp)
           {
-            $parts->[$j] = $MULTI_WORDS{$tag}{lc($parts->[$j])};
+            $parts->[$j] = $mp;
             $tags->[$j] = $tag;
 
             # my $w = $MULTI_WORDS{$tag}{lc($parts->[$j])};
@@ -717,10 +569,12 @@ sub print_title_stats
 
 sub all_used
 {
+  my ($whole) = @_;
+
   print "Multis:\n\n";
-  for my $key (@TAG_ORDER)
+  for my $key (@NEW_TAG_ORDER)
   {
-    for my $entry (sort keys %{$MULTI_WORDS{$key}})
+    for my $entry ($whole->sorted_mwords())
     {
       if (! defined $MULTI_HITS{$key}{$entry})
       {
@@ -730,9 +584,9 @@ sub all_used
   }
 
   print "\nSingles\n\n";
-  for my $key (@TAG_ORDER)
+  for my $key (@NEW_TAG_ORDER)
   {
-    for my $entry (sort keys %{$SINGLE_WORDS{$key}})
+    for my $entry ($whole->sorted_swords())
     {
       if (! defined $MULTI_HITS{$key}{$entry})
       {

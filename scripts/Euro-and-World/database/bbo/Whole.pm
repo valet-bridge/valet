@@ -163,10 +163,31 @@ sub get_single
 }
 
 
+sub get_multi
+{
+  my ($self, $tag, $part) = @_;
+  return $self->{MWORDS}{$tag}{$part};
+}
+
+
 sub get_multi_regex
 {
   my ($self, $tag) = @_;
   return $self->{MREGEX}{$tag};
+}
+
+
+sub sorted_swords
+{
+  my ($self, $tag) = @_;
+  return sort keys %{$self->{SWORDS}{$tag}};
+}
+
+
+sub sorted_mwords
+{
+  my ($self, $tag) = @_;
+  return sort keys %{$self->{MWORDS}{$tag}};
 }
 
 

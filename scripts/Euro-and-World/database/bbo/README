@@ -1,17 +1,14 @@
-- Places where MULTI_WORDS occur in TitleBBO.pm:
-~ line 720
-around line 600, 4 times
-
-- Move Matrix to Connections/Matrix.pm or some such
 - In Title, see if we can split chains such that they print easily,
   perhaps with more reductions or with post-processing
+- 'TITLE_' in one place only in TitleBBO
+
 - Make a ChainStats for length and number
 - Update it from Chains
 - Make a Chains::print()
-- In TitleBBO and TeamBBO, have an array of hashes
-  - The set_hashes are called from cook.pl
-  - 'TITLE_CAPTAIN' -> 'COMPONENTS_CAPTAIN'
+
 - Have SINGLETON, AMBIGUOUS, COUNTER, ITERATOR I guess
+- Make TeamBBO like TitleBBO (Whole)
+- Move Matrix to Connections/Matrix.pm or some such
 
 
 Output all the cook results into a text file in compact format:
