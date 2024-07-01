@@ -137,35 +137,28 @@ sub split_on_trailing_digits
 
 sub title_specific_hashes
 {
-  my ($whole, $part, $i, $chain) = @_;
+  my ($whole, $pos, $text, $chain) = @_;
 
   for my $tag (@TAG_ORDER)
   {
-    my $fix = $whole->get_single($tag, lc($part));
+    my $fix = $whole->get_single($tag, lc($text));
     next unless defined $fix->{CATEGORY};
 
-    my $cat = $PREFIX . $fix->{CATEGORY};
+    my $tag = $PREFIX . $fix->{CATEGORY};
 
-    append_singleton($chain, $i, $cat, $fix->{VALUE}, $part);
-    $HIT_STATS{$cat}++;
+    append_singleton($chain, $pos, $tag, $fix->{VALUE}, $text);
 
-    if ($cat eq 'TITLE_GENDER' && $fix->{VALUE} eq 'Open')
+    if ($tag eq 'TITLE_GENDER' && $fix->{VALUE} eq 'Open')
     {
       # Special case: Add an extra token.
-      my $token2 = Token->new();
-      $token2->set_origin($i, $part);
-      $token2->set_singleton($PREFIX . 'AGE', 'Open');
-      $chain->append($token2);
-      $HIT_STATS{$PREFIX . 'AGE'}++;
+      $tag = $PREFIX . 'AGE';
+      append_singleton($chain, $pos, $tag, $fix->{VALUE},  $text);
     }
-    elsif ($cat eq 'TITLE_AGE' && $fix->{VALUE} eq 'Girls')
+    elsif ($tag eq 'TITLE_AGE' && $fix->{VALUE} eq 'Girls')
     {
       # Special case: Add an extra token.
-      my $token2 = Token->new();
-      $token2->set_origin($i, $part);
-      $token2->set_singleton($PREFIX . 'GENDER', 'Women');
-      $chain->append($token2);
-      $HIT_STATS{$PREFIX . 'GENDER'}++;
+      $tag = $PREFIX . 'GENDER';
+      append_singleton($chain, $pos, $tag, 'Women', $text);
     }
 
     return 1;
@@ -195,7 +188,6 @@ sub study_part
     if ($part >= 1900 && $part < 2100)
     {
       append_singleton($chain, $i, 'TITLE_YEAR', $part, $part);
-      $HIT_STATS{TITLE_YEAR}++;
     }
     else
     {
@@ -221,7 +213,7 @@ sub study_part
   }
 
   # The general solution.
-  return if title_specific_hashes($whole, $part, $i, $chain);
+  return if title_specific_hashes($whole, $i, $part, $chain);
 
   # Some use of other hashes.
   my $fix_event = $FIX_HASH{lc($part)};
@@ -468,6 +460,8 @@ sub append_singleton
   $token->set_origin($pos, $text);
   $token->set_singleton($tag, $value);
   $chain->append($token);
+
+  $HIT_STATS{$tag}++;
 }
 
 
