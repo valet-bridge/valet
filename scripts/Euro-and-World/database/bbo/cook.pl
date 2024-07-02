@@ -37,6 +37,8 @@ use Histo;
 our $histo_title = Histo->new();
 
 use Stats;
+my $stats_team = Stats->new();
+my $stats_event = Stats->new();
 my $stats_title = Stats->new();
 
 
@@ -62,7 +64,7 @@ my %chunk;
 my $line;
 
 my $lno = 0;
-my (@chain_team_stats, @chain_event_stats);
+my (@chain_team_stats);
 my (@reduction_event_stats, @reduction_title_stats);
 my $unknown_events = 0;
 my $unknown_titles = 0;
@@ -105,8 +107,11 @@ while ($line = <$fh>)
   study_teams($chunk{TEAMS}, \%result, 
     $chain_team1, $chain_team2, $chunk{BBONO});
 
-  update_chain_team_stats($chain_team1, \@chain_team_stats);
-  update_chain_team_stats($chain_team2, \@chain_team_stats);
+  my @chains_team;
+  push @chains_team, $chain_team1;
+  push @chains_team, $chain_team2;
+
+  $stats_team->incr(\@chains_team);
 
   if ($print_chains)
   {
@@ -130,7 +135,7 @@ while ($line = <$fh>)
     Patterns::Chainify::process(\@EVENT_REDUCTIONS, \@chains_event, 
       1, \@reduction_event_stats);
 
-    update_chain_stats(\%chunk, \@chains_event, \@chain_event_stats);
+    $stats_event->incr(\@chains_event);
 
     print_chains_by_tag(\@chains_event, "EVENT") if $print_chains;
   }
@@ -170,11 +175,13 @@ while ($line = <$fh>)
 close $fh;
 
 print_team_stats();
-print_team_chain_stats(\@chain_team_stats);
+
+$stats_team->print("Team");
 
 if ($do_events)
 {
-  print_chain_stats("Event", \@chain_event_stats);
+  $stats_event->print("Event");
+
   print_reduction_stats("Event", \@reduction_event_stats);
   print "\nTotal unknown events: $unknown_events\n\n";
 }
@@ -183,7 +190,8 @@ if ($do_tournaments)
 {
   $histo_title->print();
   $stats_title->print("Title");
-  print "\nTotal unknown titles $unknown_events\n\n";
+  print_reduction_stats("Title", \@reduction_title_stats);
+  print "\nTotal unknown titles $unknown_titles\n\n";
 }
 
 # $whole->print_misses();
@@ -341,86 +349,6 @@ sub print_chains_by_tag
   {
     print_chain($chains->[$chain_no], 0, $prefix);
   }
-}
-
-
-sub update_chain_team_stats
-{
-  my ($chain, $chain_team_stats) = @_;
-
-  $chain_team_stats->[$chain->last()+1]++;
-
-  if ($chain->last() > 100)
-  {
-    print $chunk{BBONO}, ":\n";
-    print $chain->text(), "\n";
-    print $chain->catcat(), "\n";
-    print $chain->fields(), "\n\n";
-  }
-}
-
-
-sub update_chain_stats
-{
-  my ($chunk, $chains, $chain_stats) = @_;
-
-  my $open_flag = 0;
-  for my $chain (@$chains)
-  {
-    my $status = $chain->status();
-    $chain_stats->[$chain->last()+1]{$status}++;
-    $open_flag = 1 if $status eq 'OPEN';
-  }
-
-  if ($open_flag)
-  {
-    print_chunk($chunk);
-    print_chains_full($chains);
-  }
-}
-
-
-sub print_team_chain_stats
-{
-  my ($chain_team_stats) = @_;
-
-  print "\nTeam chain stats\n\n";
-  for my $i (0 .. $#$chain_team_stats)
-  {
-    printf ("%4d %6d\n", $i, $chain_team_stats->[$i]);
-  }
-}
-
-
-sub print_chain_stats
-{
-  my ($header, $chain_stats) = @_;
-
-  my %csum;
-  print "\n$header chain stats\n\n";
-  printf("%6s%10s%10s%10s\n", "", "OPEN", "COMPLETE", "KILLED");
-
-  for my $i (0 .. $#$chain_stats)
-  {
-    my %h;
-    for my $key (qw(OPEN COMPLETE KILLED))
-    {
-      if (exists $chain_stats->[$i]{$key})
-      {
-        $h{$key} = $chain_stats->[$i]{$key};
-      }
-      else
-      {
-        $h{$key} = 0;
-      }
-      $csum{$key} += $h{$key};
-    }
-    printf("%6d%10d%10d%10d\n", $i, $h{OPEN}, $h{COMPLETE}, $h{KILLED});
-  }
-
-  print '-' x 36, "\n";
-  printf("%6s%10d%10d%10d\n\n", "Sum",
-    $csum{OPEN}, $csum{COMPLETE}, $csum{KILLED});
 }
 
 
