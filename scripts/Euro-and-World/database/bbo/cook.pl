@@ -36,6 +36,9 @@ $whole->init_hashes();
 use Histo;
 our $histo_title = Histo->new();
 
+use Stats;
+my $stats_title = Stats->new();
+
 
 # Parse the raw output of
 # ./reader -I ... -Q 9=4=0=0 -v 63
@@ -59,8 +62,7 @@ my %chunk;
 my $line;
 
 my $lno = 0;
-my (@chain_team_stats, @chain_event_stats, @chain_title_stats,
-  @chain_title_num_stats);
+my (@chain_team_stats, @chain_event_stats);
 my (@reduction_event_stats, @reduction_title_stats);
 my $unknown_events = 0;
 my $unknown_titles = 0;
@@ -157,9 +159,7 @@ while ($line = <$fh>)
 
     Title::Postprocess::post_process(\@chains_title);
 
-    update_chain_stats(\%chunk, \@chains_title, \@chain_title_stats);
-    update_num_chain_stats(\%chunk, 
-      \@chains_title, \@chain_title_num_stats);
+    $stats_title->incr(\@chains_title);
 
     print_chains_by_tag(\@chains_title, "TITLE") if $print_chains;
   }
@@ -182,8 +182,7 @@ if ($do_events)
 if ($do_tournaments)
 {
   $histo_title->print();
-  print_chain_stats("Title chain lengths", \@chain_title_stats);
-  print_chain_stats("Title chain numbers", \@chain_title_num_stats);
+  $stats_title->print("Title");
   print "\nTotal unknown titles $unknown_events\n\n";
 }
 
@@ -374,20 +373,6 @@ sub update_chain_stats
   }
 
   if ($open_flag)
-  {
-    print_chunk($chunk);
-    print_chains_full($chains);
-  }
-}
-
-
-sub update_num_chain_stats
-{
-  my ($chunk, $chains, $chain_stats) = @_;
-
-  $chain_stats->[$#$chains+1]{COMPLETE}++;
-
-  if ($#$chains >= 99)
   {
     print_chunk($chunk);
     print_chains_full($chains);
