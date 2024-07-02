@@ -105,20 +105,21 @@ my @SINGLETON_LIST = qw(
   Group
   Flight
   Half
-  Match
+  Match MATCH
   Quarter
   Phase
   Round
-  Segment
-  Series
+  Segment SEGMENT
+  Series SERIES
   Session
   Set
   Stage
   Stanza
-  Table
+  Table TABLE
 
   Boards
   J
+  O
   Part
   Place
   Q

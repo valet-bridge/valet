@@ -674,6 +674,10 @@ sub str
   {
     $str = $self->str_kill();
   }
+  elsif ($category eq 'AMBIGUOUS')
+  {
+    $str = $self->str_singleton($prefix);
+  }
   elsif ($category eq 'UNKNOWN')
   {
     $str = $self->str_unknown();

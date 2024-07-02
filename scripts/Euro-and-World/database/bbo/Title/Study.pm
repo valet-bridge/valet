@@ -352,6 +352,11 @@ sub append_token
     # As Tag::Roman finds this, it appears as a SINGLETON.
     $category = 'COUNTER';
   }
+  elsif ($tag eq 'ITERATOR' || $tag eq 'AMBIGUOUS')
+  {
+    $category = $tag;
+    $tag = uc($value);
+  }
 
   $chain->append_general($category, $tag, $value, $text, $pos);
 

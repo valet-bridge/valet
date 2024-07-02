@@ -285,7 +285,7 @@ sub print_chain
     my $token0 = $chain->check_out(0);
     my $token1 = $chain->check_out(1);
 
-    if ($token0->field() eq 'ITERATOR' &&
+    if ($token0->category() eq 'ITERATOR' &&
         $token1->category() eq 'COUNTER')
     {
       my $synth = Token->new();
@@ -293,24 +293,24 @@ sub print_chain
       print $synth->str(0, '');
     }
     elsif ($token0->category() eq 'COUNTER' &&
-        $token1->field() eq 'ITERATOR')
+        $token1->category() eq 'ITERATOR')
     {
       my $synth = Token->new();
       $synth->set_singleton($token1->value(), $token0->value());
       print $synth->str(0, '');
     }
     elsif ($token0->field() eq 'ORDINAL' &&
-        $token1->field() eq 'ITERATOR')
+        $token1->category() eq 'ITERATOR')
     {
       my $synth = Token->new();
       $synth->set_singleton($token1->value(), $token0->value());
       print $synth->str(0, $prefix);
     }
-    elsif ($token0->field() eq 'AMBIGUOUS' &&
+    elsif ($token0->category() eq 'AMBIGUOUS' &&
         $token1->category() eq 'COUNTER')
     {
       my $synth = Token->new();
-      $synth->set_singleton($token0->field(), 
+      $synth->set_singleton($token0->category(), 
         $token0->value() . ' ' . $token1->value());
       print $synth->str(0, $prefix);
     }

@@ -1,17 +1,9 @@
-Title::Study:
-AMBIGUOUS, ITERATOR should be fished out in Chains::set_general
-as category, not tag.
-For ITERATOR, tag becomes the capitalized value I think.
-PREFIX only for book keeping, not in the actual Token.
-Fix Reductions accordingly.
-
 Title:
-- Clean up code in Preprocess, Study, Postprocess
+- Clean up code in Preprocess, Postprocess
 - In cook we split some more.  Do this already
 - Then they should print cleanly
 - Chains print should be in a new Chains (today's Chains is something
   else)
-- Have SINGLETON, AMBIGUOUS, COUNTER, ITERATOR I guess
 
 - Make a ChainStats for length and number (ignore KILLED)
 - Update it from Chains

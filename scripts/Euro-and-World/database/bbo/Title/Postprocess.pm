@@ -124,8 +124,7 @@ sub post_process_last_iterator
   return unless $chain1->last() == 0;
 
   my $token1 = $chain1->check_out(0);
-  return unless $token1->category() eq 'SINGLETON' &&
-    $token1->field() eq 'ITERATOR';
+  return unless $token1->category() eq 'ITERATOR';
 
   my $chain0 = $chains->[-2];
   my $token0 = $chain0->check_out($chain0->last());
@@ -167,14 +166,12 @@ sub post_process_stand_alone_singles
     {
       $chain->complete_if_last_is(0, 'COMPLETE');
     }
-    elsif ($cat eq 'SINGLETON' &&
-        ($field eq 'AMBIGUOUS'))
+    elsif ($cat eq 'AMBIGUOUS')
     {
       $chain->complete_if_last_is(0, 'DESTROY');
     }
-    elsif ($cat eq 'SINGLETON' &&
-        ($field eq 'ITERATOR' &&
-        $token->value() eq 'Match'))
+    elsif ($cat eq 'ITERATOR' &&
+        lc($token->value()) eq 'match')
     {
       $token->set_singleton('FORM', 'Teams');
       $chain->complete_if_last_is(0, 'COMPLETE');
