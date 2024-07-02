@@ -32,11 +32,11 @@ sub print
 
   for my $tag (sort keys %{$self->{TAGS}})
   {
-    printf("%-20s %6d\n", $tag, $self->{TAGS});
+    printf("%-20s %6d\n", $tag, $self->{TAGS}{$tag});
   }
 
   print "\n";
-  print '-' x 27;
+  print '-' x 27, "\n";
 
   printf("%-20s %6d\n\n", 'TOTAL', $self->{TOTAL});
 }

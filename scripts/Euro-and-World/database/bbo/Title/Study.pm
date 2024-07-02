@@ -9,7 +9,7 @@ use utf8;
 use open ':std', ':encoding(UTF-8)';
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(study print_title_stats);
+our @EXPORT = qw(study);
 
 use lib '.';
 
@@ -46,7 +46,7 @@ my @TAG_ORDER = qw(
   AMBIGUOUS
 );
 
-my %HIT_STATS;
+our $histo_title;
 
 my $PREFIX = 'TITLE_';
 
@@ -152,47 +152,52 @@ sub split_on_capitals
 
 sub split_on_dates
 {
-  my ($text, $parts, $tags) = @_;
+  my ($text, $tags, $values, $texts) = @_;
 
-  @$parts = split / - /, $text;
-  @$tags = (0) x (1 + $#$parts);
+  @$values = split / - /, $text;
+  @$tags = (0) x (1 + $#$values);
+  @$texts = @$values;
 
-  for my $i (reverse 0 .. $#$parts)
+  for my $i (reverse 0 .. $#$values)
   {
-    my @date_parts = 
-      grep { $_ ne '' } split /(\d\d\d\d[-_]\d\d[-_]\d\d)/, $parts->[$i];
+    my @date_values = 
+      grep { $_ ne '' } split /(\d\d\d\d[-_]\d\d[-_]\d\d)/, $values->[$i];
 
-    if ($#date_parts > 0)
+    if ($#date_values > 0)
     {
-      splice(@$parts, $i+1, 0, (0) x $#date_parts);
-      splice(@$tags, $i+1, 0, (0) x $#date_parts);
+      splice(@$values, $i+1, 0, (0) x $#date_values);
+      splice(@$tags, $i+1, 0, (0) x $#date_values);
 
-      for my $j (0 .. $#date_parts)
+      for my $j (0 .. $#date_values)
       {
-        if ($date_parts[$j] =~ /^\d\d\d\d[-_]\d\d[-_]\d\d$/)
+        if ($date_values[$j] =~ /^\d\d\d\d[-_]\d\d[-_]\d\d$/)
         {
-          $parts->[$i+$j] = $date_parts[$j];
           $tags->[$i+$j] = $PREFIX . 'DATE';
+          $values->[$i+$j] = $date_values[$j];
+          $texts->[$i+$j] = $date_values[$j];
         }
         else
         {
-          $parts->[$i+$j] = fix_post_date($date_parts[$j]);
           $tags->[$i+$j] = 0;
+          $values->[$i+$j] = fix_post_date($date_values[$j]);
+          $texts->[$i+$j] = $date_values[$j];
         }
       }
     }
     else
     {
-      $parts->[$i] = fix_post_date($parts->[$i]);
       $tags->[$i] = 0;
+      $values->[$i] = fix_post_date($values->[$i]);
+      $texts->[$i] = $values->[$i];
     }
 
     if ($i > 0)
     {
       # Make sure that elements on different sides of the ' - ' end up
       # in different chains.
-      splice(@$parts, $i, 0, '');
       splice(@$tags, $i, 0, $PREFIX . 'DESTROY');
+      splice(@$values, $i, 0, '');
+      splice(@$texts, $i, 0, '');
     }
   }
 }
@@ -200,7 +205,7 @@ sub split_on_dates
 
 sub split_on_multi
 {
-  my ($whole, $parts, $tags) = @_;
+  my ($whole, $tags, $values, $texts) = @_;
 
   for my $core_tag (@TAG_ORDER)
   {
@@ -208,10 +213,10 @@ sub split_on_multi
     next if $mregex eq '';
 
     my $tag = $PREFIX . $core_tag;
-    for my $i (reverse 0 .. $#$parts)
+    for my $i (reverse 0 .. $#$values)
     {
       next if $tags->[$i] ne '0';
-      my @a = grep { $_ ne '' } split /$mregex/, $parts->[$i];
+      my @a = grep { $_ ne '' } split /$mregex/, $values->[$i];
 
       if ($#a == 0)
       {
@@ -219,22 +224,23 @@ sub split_on_multi
         my $mp = $whole->get_multi($core_tag, lc($a[0]));
         if (defined $mp)
         {
-          $parts->[$i] = $mp;
           $tags->[$i] = $tag;
+          $values->[$i] = $mp;
         }
       }
       else
       {
-        splice(@$parts, $i, 1, @a);
         splice(@$tags, $i, 1, (0) x ($#a+1));
+        splice(@$values, $i, 1, @a);
+        splice(@$texts, $i, 1, @a);
 
         for my $j ($i .. $i + $#a)
         {
-          my $mp = $whole->get_multi($core_tag, lc($parts->[$j]));
+          my $mp = $whole->get_multi($core_tag, lc($values->[$j]));
           if (defined $mp)
           {
-            $parts->[$j] = $mp;
             $tags->[$j] = $tag;
+            $values->[$j] = $mp;
           }
         }
       }
@@ -275,76 +281,72 @@ sub title_specific_hashes
 }
 
 
-sub study_part
+sub study_value
 {
-  my ($whole, $part, $i, $chain, $histo, $unknown_part_flag) = @_;
+  my ($whole, $value, $pos, $chain, $histo, $unknown_value_flag) = @_;
 
   my $token = Token->new();
-  if ($part =~ /^\d+$/)
+  if ($value =~ /^\d+$/)
   {
-    if ($part >= 1900 && $part < 2100)
+    if ($value >= 1900 && $value < 2100)
     {
-      append_singleton($chain, $i, 
-        $PREFIX . 'YEAR', $part, $part);
+      append_singleton($chain, $pos, $PREFIX . 'YEAR', $value, $value);
     }
     else
     {
-      append_numeral($chain, $i, 
-        $PREFIX . 'INTEGER', $part, $part);
+      append_numeral($chain, $pos, $PREFIX . 'INTEGER', $value, $value);
     }
     return;
   }
-  elsif ($part =~ /^[A-HJa-h]$/)
+  elsif ($value =~ /^[A-HJa-h]$/)
   {
-    append_letter($chain, $i, 
-      $PREFIX . 'LETTER', $part, $part);
+    append_letter($chain, $pos, $PREFIX . 'LETTER', $value, $value);
     return;
   }
-  elsif (my $ord = Util::ordinal_to_numeral($part))
+  elsif (my $ord = Util::ordinal_to_numeral($value))
   {
     $ord =~ s/^0+//; # Remove leading zeroes
-    append_ordinal($chain, $i, 
-      $PREFIX . 'ORDINAL', $ord, $part);
+    append_ordinal($chain, $pos, $PREFIX . 'ORDINAL', $ord, $value);
     return;
   }
 
   # The general solution.
-  return if title_specific_hashes($whole, $i, $part, $chain, $histo);
+  return if title_specific_hashes($whole, $pos, $value, $chain, $histo);
 
-  append_unknown($chain, $i, $part);
+  append_unknown($chain, $pos, $value);
 
-  print "QQQ ", $part, "\n";
-  $$unknown_part_flag = 1;
+  print "QQQ ", $value, "\n";
+  $$unknown_value_flag = 1;
 }
 
 
 sub study_component
 {
-  my ($whole, $part, $chain, $token_no, $histo, $unsolved_flag) = @_;
+  my ($whole, $value, $chain, $token_no, $histo, $unsolved_flag) = @_;
 
   # Split on trailing digits.
-  my $unknown_part_flag = 0;
-  if ($part =~ /^(.*[a-z])(\d+)$/i &&
+  my $unknown_value_flag = 0;
+  if ($value =~ /^(.*[a-z])(\d+)$/i &&
       $1 ne 'U' && $1 ne 'D')
   {
     my ($letters, $digits) = ($1, $2);
 
-    study_part($whole, $letters, $token_no, $chain, 
-      $histo, \$unknown_part_flag);
+    study_value($whole, $letters, $token_no, $chain, 
+      $histo, \$unknown_value_flag);
     $$token_no++;
 
-    study_part($whole, $digits, $token_no, $chain, 
-      $histo, \$unknown_part_flag);
+    study_value($whole, $digits, $token_no, $chain, 
+      $histo, \$unknown_value_flag);
     $$token_no++;
   }
   else
   {
-    study_part($whole, $part, $token_no, $chain, 
-      $histo, \$unknown_part_flag);
+    study_value($whole, $value, $token_no, $chain, 
+      $histo, \$unknown_value_flag);
     $$token_no++;
   }
 
-  $$unsolved_flag = 1 if $unknown_part_flag;
+  $$unsolved_flag = 1 if $unknown_value_flag;
 }
 
 
@@ -364,8 +366,7 @@ sub append_singleton
   $token->set_singleton($tag, $value);
   $chain->append($token);
 
-  $HIT_STATS{$tag}++;
-  $HIT_STATS{TOTAL}++;
+  $main::histo_title->incr($tag);
 }
 
 
@@ -378,8 +379,7 @@ sub append_numeral
   $token->set_numeral_counter($value);
   $chain->append($token);
 
-  $HIT_STATS{$tag}++;
-  $HIT_STATS{TOTAL}++;
+  $main::histo_title->incr($tag);
 }
 
 
@@ -392,8 +392,7 @@ sub append_ordinal
   $token->set_ordinal_counter($value);
   $chain->append($token);
 
-  $HIT_STATS{$tag}++;
-  $HIT_STATS{TOTAL}++;
+  $main::histo_title->incr($tag);
 }
 
 
@@ -406,8 +405,7 @@ sub append_letter
   $token->set_letter_counter($value);
   $chain->append($token);
 
-  $HIT_STATS{$tag}++;
-  $HIT_STATS{TOTAL}++;
+  $main::histo_title->incr($tag);
 }
 
 
@@ -420,8 +418,7 @@ sub append_roman
   $token->set_roman_counter($value);
   $chain->append($token);
 
-  $HIT_STATS{$tag}++;
-  $HIT_STATS{TOTAL}++;
+  $main::histo_title->incr($tag);
 }
 
 
@@ -434,8 +431,7 @@ sub append_unknown
   $token->set_unknown_full($value);
   $chain->append($token);
 
-  $HIT_STATS{UNMATCHED}++;
-  $HIT_STATS{TOTAL}++;
+  $main::histo_title->incr('UNMATCHED');
 }
 
 
@@ -449,10 +445,11 @@ sub study
 
   my $stext = split_on_capitals($ntext);
 
-  my @parts = ();
   my @tags = (0);
-  split_on_dates($stext, \@parts, \@tags);
-  split_on_multi($whole, \@parts, \@tags);
+  my @values = ();
+  my @texts = ();
+  split_on_dates($stext, \@tags, \@values, \@texts);
+  split_on_multi($whole, \@tags, \@values, \@texts);
 
   # Split on separators.
   my $sep = qr/[\s+\-\+\._:;&@"\/\(\)\|]/;
@@ -460,20 +457,20 @@ sub study
   my $token_no = 0;
   my $unsolved_flag = 0;
 
-  for my $i (0 .. $#parts)
+  for my $i (0 .. $#values)
   {
     if ($tags[$i] ne '0')
     {
       # We had a multi-word hit.
-      append_singleton($chain, $i, $tags[$i], $parts[$i], $parts[$i]);
+      append_singleton($chain, $i, $tags[$i], $values[$i], $texts[$i]);
       $token_no++;
     }
     else
     {
-      my @a = grep { $_ ne '' } split(/$sep/, $parts[$i]);
-      foreach my $part (@a)
+      my @a = grep { $_ ne '' } split(/$sep/, $values[$i]);
+      foreach my $value (@a)
       {
-        study_component($whole, $part, $chain, \$token_no, 
+        study_component($whole, $value, $chain, \$token_no, 
           $histo, \$unsolved_flag);
       }
     }
@@ -484,17 +481,6 @@ sub study
     print "TTT $bbono: $text\n" if $chain->last() > 0;
     print "\n";
   }
-}
-
-
-sub print_title_stats
-{
-  for my $key (sort keys %HIT_STATS)
-  {
-    printf("%-20s %6d\n", $key, $HIT_STATS{$key});
-  }
-
-  print "\n";
 }
 
 

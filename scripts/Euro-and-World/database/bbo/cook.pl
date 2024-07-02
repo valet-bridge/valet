@@ -30,13 +30,11 @@ use Reductions::Event;
 use Reductions::Title;
 
 use Whole;
-
-use Histo;
-
 my $whole = Whole->new();
 $whole->init_hashes();
 
-my $histo_title = Histo->new();
+use Histo;
+our $histo_title = Histo->new();
 
 
 # Parse the raw output of
@@ -150,7 +148,7 @@ while ($line = <$fh>)
     push @chains_title, $chain_title;
 
     Title::Study::study($whole, $chunk{BBONO}, $chunk{TITLE}, 
-      $chain_title, $histo_title, \$unknown_titles);
+      $chain_title, \$unknown_titles);
 
     Title::Preprocess::pre_process(\@chains_title);
 
@@ -183,13 +181,14 @@ if ($do_events)
 
 if ($do_tournaments)
 {
-  print_title_stats();
+  $histo_title->print();
   print_chain_stats("Title chain lengths", \@chain_title_stats);
   print_chain_stats("Title chain numbers", \@chain_title_num_stats);
   print "\nTotal unknown titles $unknown_events\n\n";
 }
 
 # $whole->print_misses();
+
 
 exit;
 
