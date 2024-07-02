@@ -666,6 +666,10 @@ sub str
   {
     $str = $self->str_singleton($prefix);
   }
+  elsif ($category eq 'MARKER')
+  {
+    $str = $self->str_singleton($prefix);
+  }
   elsif ($category eq 'SEPARATOR')
   {
     $str = $self->str_separator();

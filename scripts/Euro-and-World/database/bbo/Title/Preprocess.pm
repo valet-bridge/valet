@@ -1,18 +1,18 @@
 #!perl
 
+package Title::Preprocess;
+
+use v5.10;
 use strict;
 use warnings;
-use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
-
-package Title::Preprocess;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(pre_process);
 
-use lib '.';
 
+# Fields that are commonly part of team names in title.
 
 my %VS_VALID =
 (
@@ -27,6 +27,7 @@ my %VS_DESTROY =
 (
   DESTROY => 1
 );
+
 
 sub get_vs_extent
 {

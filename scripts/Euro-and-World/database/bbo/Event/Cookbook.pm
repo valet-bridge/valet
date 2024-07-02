@@ -101,20 +101,20 @@ my @SINGLETON_LIST = qw(
   TITLE_ROMAN
 
   Berth
-  Day
-  Group
-  Flight
+  Day DAY
+  Group GROUP
+  Flight FLIGHT
   Half
   Match MATCH
   Quarter
-  Phase
+  Phase PHASE
   Round
   Segment SEGMENT
   Series SERIES
-  Session
+  Session SESSION
   Set
   Stage
-  Stanza
+  Stanza STANZA
   Table TABLE
 
   Boards
@@ -123,17 +123,17 @@ my @SINGLETON_LIST = qw(
   Part
   Place
   Q
-  Rof
+  Rof ROF
   Room
   ROUND
   S
-  Section
+  Section SECTION
   TEAM_FORM
   Tempo
   Top
   W
-  Week
-  Weekend
+  Week WEEK
+  Weekend WEEKEND
   Y
 );
 

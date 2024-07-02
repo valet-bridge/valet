@@ -264,7 +264,6 @@ sub post_process_stand_alone_doubles
         return;
       }
     }
-    print "YYY ", $token0->field(), ", ", $token1->field(), "\n";
   }
   elsif ($token0->field() eq 'STAGE' || 
       $token0->field() eq 'TIME')
@@ -280,6 +279,47 @@ sub post_process_stand_alone_doubles
 }
 
 
+sub post_process_markers
+{
+  my ($chains) = @_;
+
+  for my $chain (@$chains)
+  {
+    next unless $chain->status() eq 'COMPLETE';
+    next unless $chain->last() == 1;
+
+    my $token0 = $chain->check_out(0);
+    my $token1 = $chain->check_out(1);
+
+    if ($token0->category() eq 'ITERATOR' && 
+        $token1->category() eq 'COUNTER')
+    {
+      $token0->merge_origin($token1);
+      $token0->set_general('MARKER', $token0->field(), $token1->value());
+      $chain->delete(1, 1);
+      $chain->complete_if_last_is(0, 'COMPLETE');
+    }
+    elsif ($token0->category() eq 'COUNTER' && 
+        $token1->category() eq 'ITERATOR')
+    {
+      $token0->merge_origin($token1);
+      $token0->set_general('MARKER', $token1->field(), $token0->value());
+      $chain->delete(1, 1);
+      $chain->complete_if_last_is(0, 'COMPLETE');
+    }
+    elsif ($token0->category() eq 'AMBIGUOUS' && 
+        $token1->category() eq 'COUNTER')
+    {
+      $token0->merge_origin($token1);
+      $token0->set_general('MARKER', 'AMBIGUOUS', 
+        $token0->value() . ' ' . $token1->value());
+      $chain->delete(1, 1);
+      $chain->complete_if_last_is(0, 'COMPLETE');
+    }
+  }
+}
+
+
 sub post_process
 {
   my ($chains) = @_;
@@ -290,7 +330,7 @@ sub post_process
   post_process_stand_alone_singles($chains);
   post_process_sandwiched_singles($chains);
   post_process_stand_alone_doubles($chains);
-
+  post_process_markers($chains);
 }
 
 1;
