@@ -88,7 +88,7 @@ while ($line = <$fh>)
     next;
   }
 
-  if ($chunk{BBONO} == 1)
+  if ($chunk{BBONO} == 2335)
   {
     print "HERE\n";
   }
@@ -232,7 +232,17 @@ sub print_chain
   }
   elsif ($l == 0)
   {
-    my $p = ($prefix eq 'TITLE' ? '' : $prefix);
+    my $tag = $token->field();
+    my $p = $prefix;
+    if ($prefix eq 'TITLE' && 
+      ($tag eq 'NUMERAL' || $tag eq 'ORDINAL' || $tag eq 'N_OF_N' ||
+       $tag eq 'ROMAN' || $tag eq 'LETTER' || $tag eq 'NL' ||
+       $tag eq 'N_TO_N' || $tag eq 'N_TO_N_OF_N')) # TODO Just COUNTER?
+    {
+      # TODO Kludge for now.  What do I want?
+      $p = '';
+    }
+
     print $token->str(0, $p);
     return;
   }
@@ -275,7 +285,7 @@ sub print_chain
     my $token0 = $chain->check_out(0);
     my $token1 = $chain->check_out(1);
 
-    if ($token0->field() eq 'TITLE_ITERATOR' &&
+    if ($token0->field() eq 'ITERATOR' &&
         $token1->category() eq 'COUNTER')
     {
       my $synth = Token->new();
@@ -283,20 +293,20 @@ sub print_chain
       print $synth->str(0, '');
     }
     elsif ($token0->category() eq 'COUNTER' &&
-        $token1->field() eq 'TITLE_ITERATOR')
+        $token1->field() eq 'ITERATOR')
     {
       my $synth = Token->new();
       $synth->set_singleton($token1->value(), $token0->value());
       print $synth->str(0, '');
     }
     elsif ($token0->field() eq 'ORDINAL' &&
-        $token1->field() eq 'TITLE_ITERATOR')
+        $token1->field() eq 'ITERATOR')
     {
       my $synth = Token->new();
       $synth->set_singleton($token1->value(), $token0->value());
       print $synth->str(0, $prefix);
     }
-    elsif ($token0->field() eq 'TITLE_AMBIGUOUS' &&
+    elsif ($token0->field() eq 'AMBIGUOUS' &&
         $token1->category() eq 'COUNTER')
     {
       my $synth = Token->new();
@@ -319,7 +329,7 @@ sub print_chain
     for my $i (1 .. $l-1)
     {
       my $token = $chain->check_out($i);
-      if ($token->field() eq 'TITLE_PARTICLE' &&
+      if ($token->field() eq 'PARTICLE' &&
           $token->value() eq 'vs')
       {
         $found = 1;
@@ -333,16 +343,14 @@ sub print_chain
       for my $i (0 .. $pno-1)
       {
         my $t = $chain->check_out($i);
-        my $tag = $t->field();
-        $tag =~ s/^TITLE_/TITLE_TEAM1_/;
+        my $tag = 'TITLE_TEAM1_' . $t->field();
         print $tag, ' ', $t->value(), "\n";
       }
 
       for my $i ($pno+1 .. $l)
       {
         my $t = $chain->check_out($i);
-        my $tag = $t->field();
-        $tag =~ s/^TITLE_/TITLE_TEAM2_/;
+        my $tag = 'TITLE_TEAM2_' . $t->field();
         print $tag, ' ', $t->value(), "\n";
       }
       return;
@@ -355,10 +363,10 @@ sub print_chain
     my $token1 = $chain->check_out(1);
     my $token2 = $chain->check_out(2);
 
-    if ($token0->field() eq 'TITLE_DATE' &&
-        $token1->field() eq 'TITLE_PARTICLE' &&
+    if ($token0->field() eq 'DATE' &&
+        $token1->field() eq 'PARTICLE' &&
         $token1->value() eq 'to' &&
-        $token2->field() eq 'TITLE_DATE')
+        $token2->field() eq 'DATE')
     {
       print "TITLE_DATE_START ", $token0->value(), "\n";
       print "TITLE_DATE_END ", $token2->value(), "\n";

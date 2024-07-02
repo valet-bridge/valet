@@ -13,7 +13,6 @@ our @EXPORT = qw(study);
 
 use lib '.';
 
-use Token;
 use Util;
 
 my @TAG_ORDER = qw(
@@ -47,8 +46,6 @@ my @TAG_ORDER = qw(
 );
 
 our $histo_title;
-
-my $PREFIX = 'TITLE_';
 
 
 sub split_on_some_numbers
@@ -172,7 +169,7 @@ sub split_on_dates
       {
         if ($date_values[$j] =~ /^\d\d\d\d[-_]\d\d[-_]\d\d$/)
         {
-          $tags->[$i+$j] = $PREFIX . 'DATE';
+          $tags->[$i+$j] = 'DATE';
           $values->[$i+$j] = $date_values[$j];
           $texts->[$i+$j] = $date_values[$j];
         }
@@ -195,7 +192,7 @@ sub split_on_dates
     {
       # Make sure that elements on different sides of the ' - ' end up
       # in different chains.
-      splice(@$tags, $i, 0, $PREFIX . 'DESTROY');
+      splice(@$tags, $i, 0, 'DESTROY');
       splice(@$values, $i, 0, '');
       splice(@$texts, $i, 0, '');
     }
@@ -207,12 +204,11 @@ sub split_on_multi
 {
   my ($whole, $tags, $values, $texts) = @_;
 
-  for my $core_tag (@TAG_ORDER)
+  for my $tag (@TAG_ORDER)
   {
-    my $mregex = $whole->get_multi_regex($core_tag);
+    my $mregex = $whole->get_multi_regex($tag);
     next if $mregex eq '';
 
-    my $tag = $PREFIX . $core_tag;
     for my $i (reverse 0 .. $#$values)
     {
       next if $tags->[$i] ne '0';
@@ -221,7 +217,7 @@ sub split_on_multi
       if ($#a == 0)
       {
         # Optimize for this frequent special case.
-        my $mp = $whole->get_multi($core_tag, lc($a[0]));
+        my $mp = $whole->get_multi($tag, lc($a[0]));
         if (defined $mp)
         {
           $tags->[$i] = $tag;
@@ -236,7 +232,7 @@ sub split_on_multi
 
         for my $j ($i .. $i + $#a)
         {
-          my $mp = $whole->get_multi($core_tag, lc($values->[$j]));
+          my $mp = $whole->get_multi($tag, lc($values->[$j]));
           if (defined $mp)
           {
             $tags->[$j] = $tag;
@@ -258,21 +254,19 @@ sub title_specific_hashes
     my $fix = $whole->get_single($core_tag, lc($text));
     next unless defined $fix->{CATEGORY};
 
-    my $tag = $PREFIX . $fix->{CATEGORY};
+    my $tag = $fix->{CATEGORY};
 
     append_singleton($chain, $pos, $tag, $fix->{VALUE}, $text);
 
-    if ($tag eq $PREFIX . 'GENDER' && $fix->{VALUE} eq 'Open')
+    if ($tag eq 'GENDER' && $fix->{VALUE} eq 'Open')
     {
       # Special case: Add an extra token.
-      $tag = $PREFIX . 'AGE';
-      append_singleton($chain, $pos, $tag, $fix->{VALUE},  $text);
+      append_singleton($chain, $pos, 'AGE', $fix->{VALUE},  $text);
     }
-    elsif ($tag eq $PREFIX . 'AGE' && $fix->{VALUE} eq 'Girls')
+    elsif ($tag eq 'AGE' && $fix->{VALUE} eq 'Girls')
     {
       # Special case: Add an extra token.
-      $tag = $PREFIX . 'GENDER';
-      append_singleton($chain, $pos, $tag, 'Women', $text);
+      append_singleton($chain, $pos, 'GENDER', 'Women', $text);
     }
 
     return 1;
@@ -285,12 +279,11 @@ sub study_value
 {
   my ($whole, $value, $pos, $chain, $histo, $unknown_value_flag) = @_;
 
-  my $token = Token->new();
   if ($value =~ /^\d+$/)
   {
     if ($value >= 1900 && $value < 2100)
     {
-      append_singleton($chain, $pos, $PREFIX . 'YEAR', $value, $value);
+      append_singleton($chain, $pos, 'YEAR', $value, $value);
     }
     else
     {
@@ -356,14 +349,7 @@ sub append_token
 
   $chain->append_general($category, $tag, $value, $text, $pos);
 
-  if ($tag =~ /TITLE/)
-  {
-    $main::histo_title->incr($tag);
-  }
-  else
-  {
-    $main::histo_title->incr($PREFIX . $tag);
-  }
+  $main::histo_title->incr('TITLE_' . $tag);
 }
 
 
@@ -371,7 +357,7 @@ sub append_singleton
 {
   my ($chain, $pos, $tag, $value, $text) = @_;
 
-  if ($tag eq 'TITLE_ROMAN')
+  if ($tag eq 'ROMAN')
   {
     # TODO Kludge.
     append_token($chain, 'COUNTER', $tag, $value, $text, $pos);

@@ -40,7 +40,7 @@ our @TITLE_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_DESTROY'] }
+      { CATEGORY => ['SINGLETON'], FIELD => ['DESTROY'] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
@@ -54,10 +54,10 @@ our @TITLE_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_DATE'] },
-      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_PARTICLE'],
+      { CATEGORY => ['SINGLETON'], FIELD => ['DATE'] },
+      { CATEGORY => ['SINGLETON'], FIELD => ['PARTICLE'],
         VALUE => ['to'] },
-      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_DATE'] }
+      { CATEGORY => ['SINGLETON'], FIELD => ['DATE'] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 2,
@@ -73,11 +73,11 @@ our @TITLE_REDUCTIONS =
     PATTERN =>
     [
       { CATEGORY => ['SINGLETON'], 
-        FIELD => ['TITLE_TNAME', 'TITLE_TWORD', 'TITLE_MEET', 
-          'TITLE_PERSON', 'TITLE_YEAR', 'TITLE_DATE',
-          'TITLE_ZONE', 'TITLE_NATIONALITY',
-          'TITLE_QUARTER', 'TITLE_GENDER', 'TITLE_AGE',
-          'TITLE_ORGANIZATION', 'TITLE_SCORING'] }
+        FIELD => ['TNAME', 'TWORD', 'MEET', 
+          'PERSON', 'YEAR', 'DATE',
+          'ZONE', 'NATIONALITY',
+          'QUARTER', 'GENDER', 'AGE',
+          'ORGANIZATION', 'SCORING'] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
@@ -92,14 +92,14 @@ our @TITLE_REDUCTIONS =
     PATTERN =>
     [
       { CATEGORY => ['SINGLETON'], 
-        FIELD => ['TITLE_CAPTAIN', 'TITLE_CLUB', 'TITLE_COUNTRY',
-          'TITLE_REGION', 'TITLE_CITY', 'TITLE_SPONSOR'] },
+        FIELD => ['CAPTAIN', 'CLUB', 'COUNTRY',
+          'REGION', 'CITY', 'SPONSOR'] },
       { CATEGORY => ['SINGLETON', 'COUNTER'], 
-        FIELD => ['TITLE_PARTICLE', 'ROMAN'],
+        FIELD => ['PARTICLE', 'ROMAN'],
         VALUE => ['vs', '5'] },
       { CATEGORY => ['SINGLETON'], 
-        FIELD => ['TITLE_CAPTAIN', 'TITLE_CLUB', 'TITLE_COUNTRY',
-          'TITLE_REGION', 'TITLE_CITY', 'TITLE_SPONSOR'] }
+        FIELD => ['CAPTAIN', 'CLUB', 'COUNTRY',
+          'REGION', 'CITY', 'SPONSOR'] }
     ],
     ANCHOR => 'END',
     KEEP_LAST => 2,
@@ -115,9 +115,9 @@ our @TITLE_REDUCTIONS =
     PATTERN =>
     [
       { CATEGORY => ['SINGLETON'], 
-        FIELD => ['TITLE_CAPTAIN', 'TITLE_CLUB', 'TITLE_COUNTRY',
-          'TITLE_REGION', 'TITLE_CITY', 'TITLE_SPONSOR', 
-          'TITLE_UNIVERSITY', 'TITLE_FORM', 'TITLE_STAGE'] }
+        FIELD => ['CAPTAIN', 'CLUB', 'COUNTRY',
+          'REGION', 'CITY', 'SPONSOR', 
+          'UNIVERSITY', 'FORM', 'STAGE'] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
@@ -132,7 +132,7 @@ our @TITLE_REDUCTIONS =
     PATTERN =>
     [
       { CATEGORY => ['COUNTER'], FIELD => ['ORDINAL'] },
-      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_ITERATOR'] }
+      { CATEGORY => ['SINGLETON'], FIELD => ['ITERATOR'] }
     ],
     ANCHOR => 'BEGIN',
     KEEP_LAST => 1,
@@ -147,7 +147,7 @@ our @TITLE_REDUCTIONS =
     PATTERN =>
     [
       { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL', 'ORDINAL'] },
-      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_PARTICLE'],
+      { CATEGORY => ['SINGLETON'], FIELD => ['PARTICLE'],
         VALUE => ['to'] },
       { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL', 'ORDINAL', 'NL'] }
     ],
@@ -165,7 +165,7 @@ our @TITLE_REDUCTIONS =
     [
       { CATEGORY => ['COUNTER'], 
         FIELD => ['NUMERAL', 'ORDINAL', 'N_TO_N'] },
-      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_PARTICLE'],
+      { CATEGORY => ['SINGLETON'], FIELD => ['PARTICLE'],
         VALUE => ['of'] },
       { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL', 'ORDINAL'] }
     ],
@@ -181,7 +181,7 @@ our @TITLE_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_PARTICLE'],
+      { CATEGORY => ['SINGLETON'], FIELD => ['PARTICLE'],
         VALUE => ['of'] },
       { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL'] }
     ],
@@ -214,7 +214,7 @@ our @TITLE_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_STAGE', 'TITLE_FORM'] }
+      { CATEGORY => ['SINGLETON'], FIELD => ['STAGE', 'FORM'] }
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,
@@ -230,7 +230,7 @@ our @TITLE_REDUCTIONS =
     [
       { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL', 'ORDINAL'] },
       { CATEGORY => ['SINGLETON'], 
-        FIELD => ['TITLE_ITERATOR'] },
+        FIELD => ['ITERATOR'] },
     ],
     ANCHOR => 'END',
     KEEP_LAST => 1,
@@ -245,7 +245,7 @@ our @TITLE_REDUCTIONS =
     PATTERN =>
     [
       { CATEGORY => ['SINGLETON'], 
-        FIELD => ['TITLE_ITERATOR', 'TITLE_AMBIGUOUS'] },
+        FIELD => ['ITERATOR', 'AMBIGUOUS'] },
       { CATEGORY => ['COUNTER'], 
         FIELD => ['LETTER', 'NUMERAL', 'N_OF_N', 
           'N_TO_N', 'NL', 'N_TO_N_OF_N'] },
@@ -277,7 +277,7 @@ our @TITLE_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => ['SINGLETON'], FIELD => ['TITLE_TIME'] },
+      { CATEGORY => ['SINGLETON'], FIELD => ['TIME'] },
       { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL'] },
     ],
     ANCHOR => 'END',

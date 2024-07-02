@@ -13,8 +13,6 @@ our @EXPORT = qw(post_process);
 
 use lib '.';
 
-my $PREFIX = 'TITLE_';
-
 
 sub ordinalize
 {
@@ -69,14 +67,14 @@ sub post_process_first_numeral
 
 my %LAST_NUM_DESTROY =
 (
-  TITLE_CAPTAIN => 1,
-  TITLE_CITY => 1,
-  TITLE_COUNTRY => 1,
-  TITLE_DESTROY => 1,
-  TITLE_FORM => 1,
-  TITLE_TNAME => 1,
-  TITLE_TWORD => 1,
-  TITLE_YEAR => 1
+  CAPTAIN => 1,
+  CITY => 1,
+  COUNTRY => 1,
+  DESTROY => 1,
+  FORM => 1,
+  TNAME => 1,
+  TWORD => 1,
+  YEAR => 1
 );
 
 
@@ -105,13 +103,13 @@ sub post_process_last_numeral
 
 my %NUM_VALID =
 (
-  TITLE_AGE => 1,
-  TITLE_GENDER => 1,
-  TITLE_FORM => 1,
-  TITLE_STAGE => 1,
-  TITLE_TNAME => 1,
-  TITLE_TWORD => 1,
-  TITLE_DESTROY => 1
+  AGE => 1,
+  GENDER => 1,
+  FORM => 1,
+  STAGE => 1,
+  TNAME => 1,
+  TWORD => 1,
+  DESTROY => 1
 );
 
 sub post_process_last_iterator
@@ -127,7 +125,7 @@ sub post_process_last_iterator
 
   my $token1 = $chain1->check_out(0);
   return unless $token1->category() eq 'SINGLETON' &&
-    $token1->field() eq 'TITLE_ITERATOR';
+    $token1->field() eq 'ITERATOR';
 
   my $chain0 = $chains->[-2];
   my $token0 = $chain0->check_out($chain0->last());
@@ -160,25 +158,25 @@ sub post_process_stand_alone_singles
 
     if ($cat eq 'COUNTER' && 
         ($field eq 'LETTER' || $field eq 'N_OF_N' || 
-         $field eq 'TITLE_ROMAN'))
+         $field eq 'ROMAN'))
     {
       $chain->complete_if_last_is(0, 'COMPLETE');
     }
     elsif ($cat eq 'SINGLETON' &&
-        ($field eq 'TITLE_TIME'))
+        ($field eq 'TIME'))
     {
       $chain->complete_if_last_is(0, 'COMPLETE');
     }
     elsif ($cat eq 'SINGLETON' &&
-        ($field eq 'TITLE_AMBIGUOUS'))
+        ($field eq 'AMBIGUOUS'))
     {
       $chain->complete_if_last_is(0, 'DESTROY');
     }
     elsif ($cat eq 'SINGLETON' &&
-        ($field eq 'TITLE_ITERATOR' &&
+        ($field eq 'ITERATOR' &&
         $token->value() eq 'Match'))
     {
-      $token->set_singleton('TITLE_FORM', 'Teams');
+      $token->set_singleton('FORM', 'Teams');
       $chain->complete_if_last_is(0, 'COMPLETE');
     }
   }
@@ -187,16 +185,16 @@ sub post_process_stand_alone_singles
 
 my %SANDWICH_LEFT_ORDINAL =
 (
-  TITLE_COUNTRY => 1,
-  TITLE_CLUB => 1,
+  COUNTRY => 1,
+  CLUB => 1,
   LETTER => 1
 );
 
 my %SANDWICH_RIGHT_ORDINAL =
 (
-  TITLE_TNAME => 1,
-  TITLE_TWORD => 1,
-  TITLE_REGION => 1
+  TNAME => 1,
+  TWORD => 1,
+  REGION => 1
 );
 
 sub post_process_sandwiched_singles
@@ -271,8 +269,8 @@ sub post_process_stand_alone_doubles
     }
     print "YYY ", $token0->field(), ", ", $token1->field(), "\n";
   }
-  elsif ($token0->field() eq 'TITLE_STAGE' || 
-      $token0->field() eq 'TITLE_TIME')
+  elsif ($token0->field() eq 'STAGE' || 
+      $token0->field() eq 'TIME')
   {
     post_process_split_two($chains, $chain);
     return;

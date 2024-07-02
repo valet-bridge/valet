@@ -42,11 +42,11 @@ sub append_general
   $token->set_origin($pos, $text);
 
   # TODO So here the TITLE_ are stripped off?
-  if ($tag eq 'TITLE_ROMAN')
+  if ($tag eq 'ROMAN')
   {
     # This is detected by Title::Tag, not be manual inspection.
     # Therefore it appears here as a SINGLETON, though it is a COUNTER.
-    $token->set_general('COUNTER', 'ROMAN', $value);
+    $token->set_general('COUNTER', $tag, $value);
   }
   elsif ($tag eq 'NUMERAL' || $tag eq 'ORDINAL' || $tag eq 'LETTER')
   {

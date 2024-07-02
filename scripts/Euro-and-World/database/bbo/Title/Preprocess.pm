@@ -13,21 +13,19 @@ our @EXPORT = qw(pre_process);
 
 use lib '.';
 
-my $PREFIX = 'TITLE_';
-
 
 my %VS_VALID =
 (
-  TITLE_COUNTRY => 1,
-  TITLE_CITY => 1,
-  TITLE_GENDER => 1,
-  TITLE_AGE => 1,
-  TITLE_CAPTAIN => 1
+  COUNTRY => 1,
+  CITY => 1,
+  GENDER => 1,
+  AGE => 1,
+  CAPTAIN => 1
 );
 
 my %VS_DESTROY =
 (
-  TITLE_DESTROY => 1
+  DESTROY => 1
 );
 
 sub get_vs_extent
@@ -107,7 +105,7 @@ sub pre_process_vs
 
   my $token = $chain->check_out(0);
   if ($token->category() eq 'SINGLETON' &&
-      $token->field() eq 'TITLE_PARTICLE' &&
+      $token->field() eq 'PARTICLE' &&
       $token->value() eq 'vs')
   {
     # A leading VS happens a few times.
@@ -126,7 +124,7 @@ sub pre_process_vs
   {
     my $token = $chain->check_out($i);
     next unless $token->category() eq 'SINGLETON' &&
-      $token->field() eq 'TITLE_PARTICLE' &&
+      $token->field() eq 'PARTICLE' &&
       $token->value() eq 'vs';
 
     my ($first, $last);

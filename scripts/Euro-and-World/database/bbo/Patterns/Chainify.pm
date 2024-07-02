@@ -83,7 +83,7 @@ sub process_matchup
 
   # We may have interpreted 'v' as a Roman V.
   my $token = $chain->check_out($match+1);
-  $token->set_singleton('TITLE_PARTICLE', 'vs');
+  $token->set_singleton('PARTICLE', 'vs');
 }
 
 
