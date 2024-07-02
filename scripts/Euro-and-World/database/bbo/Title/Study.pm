@@ -347,6 +347,12 @@ sub append_token
 {
   my ($chain, $category, $tag, $value, $text, $pos) = @_;
 
+  if ($tag eq 'ROMAN')
+  {
+    # As Tag::Roman finds this, it appears as a SINGLETON.
+    $category = 'COUNTER';
+  }
+
   $chain->append_general($category, $tag, $value, $text, $pos);
 
   $main::histo_title->incr('TITLE_' . $tag);

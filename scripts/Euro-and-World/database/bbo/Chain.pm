@@ -40,31 +40,7 @@ sub append_general
 
   my $token = Token->new();
   $token->set_origin($pos, $text);
-
-  # TODO So here the TITLE_ are stripped off?
-  if ($tag eq 'ROMAN')
-  {
-    # This is detected by Title::Tag, not be manual inspection.
-    # Therefore it appears here as a SINGLETON, though it is a COUNTER.
-    $token->set_general('COUNTER', $tag, $value);
-  }
-  elsif ($tag eq 'NUMERAL' || $tag eq 'ORDINAL' || $tag eq 'LETTER')
-  {
-    $token->set_general('COUNTER', $tag, $value);
-  }
-  elsif ($category eq 'SINGLETON')
-  {
-    $token->set_general('SINGLETON', $tag, $value);
-  }
-  elsif ($category eq 'UNKNOWN')
-  {
-    $token->set_general('UNKNOWN', '', $value);
-  }
-  else
-  {
-   die "Strange $tag";
-  }
-
+  $token->set_general($category, $tag, $value);
   $self->append($token);
 }
 
