@@ -16,14 +16,14 @@ use Chains;
 use Chain;
 
 use TeamBBO;
-use EventBBO;
 use ScoringBBO;
+
+use Event::Study;
 
 use Title::Study;
 use Title::Preprocess;
 use Title::Postprocess;
 
-use Event::Despace;
 use Patterns::Chainify;
 
 use Reductions::Event;
@@ -122,15 +122,13 @@ while ($line = <$fh>)
 
   if ($do_events)
   {
-    # EVENT: Fix some space-related issues.
-    my $mashed = despace($chunk{EVENT});
-    $mashed = unteam($mashed, \%result);
-
     my $chain_event = Chain->new();
     my @chains_event;
     push @chains_event, $chain_event;
 
-    study_event($mashed, \%chunk, \%result, $chain_event, \$unknown_events);
+    Event::Study::study($whole, \%chunk, \%result, 
+      $chain_event, \$unknown_events);
+
     process_event(\@chains_event);
     Patterns::Chainify::process(\@EVENT_REDUCTIONS, \@chains_event, 
       1, \@reduction_event_stats);

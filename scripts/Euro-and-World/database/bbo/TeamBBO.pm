@@ -20,6 +20,7 @@ use lib './Tags';
 
 use Country;
 use Token;
+use Util;
 
 use Event::Cookbook;
 
@@ -762,20 +763,6 @@ sub study_teams
   # Kludge for event matches.
   $result->{TEAM1} =~ s/\s*- npc$//;
   $result->{TEAM2} =~ s/\s*- npc$//;
-}
-
-
-sub unteam
-{
-  my ($text, $result) = @_;
-
-  my $res = $text;
-  my $team1 = $result->{TEAM1};
-  my $team2 = $result->{TEAM2};
-
-  $res =~ s/\Q$team1\E// if defined $team1 && length($team1) > 1;
-  $res =~ s/\Q$team2\E// if defined $team2 && length($team2) > 1;
-  return $res;
 }
 
 

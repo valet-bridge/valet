@@ -247,7 +247,7 @@ sub split_on_multi
 
 sub title_specific_hashes
 {
-  my ($whole, $pos, $text, $chain, $histo) = @_;
+  my ($whole, $pos, $text, $chain) = @_;
 
   for my $core_tag (@TAG_ORDER)
   {
@@ -277,7 +277,7 @@ sub title_specific_hashes
 
 sub study_value
 {
-  my ($whole, $value, $pos, $chain, $histo, $unknown_value_flag) = @_;
+  my ($whole, $value, $pos, $chain, $unknown_value_flag) = @_;
 
   if ($value =~ /^\d+$/)
   {
@@ -304,7 +304,7 @@ sub study_value
   }
 
   # The general solution.
-  return if title_specific_hashes($whole, $pos, $value, $chain, $histo);
+  return if title_specific_hashes($whole, $pos, $value, $chain);
 
   append_token($chain, 'UNKNOWN', '', $value, $value, $pos);
 
@@ -315,7 +315,7 @@ sub study_value
 
 sub study_component
 {
-  my ($whole, $value, $chain, $token_no, $histo, $unsolved_flag) = @_;
+  my ($whole, $value, $chain, $token_no, $unsolved_flag) = @_;
 
   # Split on trailing digits.
   my $unknown_value_flag = 0;
@@ -324,18 +324,15 @@ sub study_component
   {
     my ($letters, $digits) = ($1, $2);
 
-    study_value($whole, $letters, $token_no, $chain, 
-      $histo, \$unknown_value_flag);
+    study_value($whole, $letters, $token_no, $chain, \$unknown_value_flag);
     $$token_no++;
 
-    study_value($whole, $digits, $token_no, $chain, 
-      $histo, \$unknown_value_flag);
+    study_value($whole, $digits, $token_no, $chain, \$unknown_value_flag);
     $$token_no++;
   }
   else
   {
-    study_value($whole, $value, $token_no, $chain, 
-      $histo, \$unknown_value_flag);
+    study_value($whole, $value, $token_no, $chain, \$unknown_value_flag);
     $$token_no++;
   }
 
@@ -366,7 +363,7 @@ sub append_token
 
 sub study
 {
-  my ($whole, $bbono, $text, $chain, $histo, $unknowns) = @_;
+  my ($whole, $bbono, $text, $chain, $unknowns) = @_;
 
   return if $text eq '';
 
@@ -401,7 +398,7 @@ sub study
       foreach my $value (@a)
       {
         study_component($whole, $value, $chain, \$token_no, 
-          $histo, \$unsolved_flag);
+          \$unsolved_flag);
       }
     }
   }

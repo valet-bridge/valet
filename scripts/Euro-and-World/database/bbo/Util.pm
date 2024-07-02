@@ -11,7 +11,7 @@ use open ':std', ':encoding(UTF-8)';
 use Exporter;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(ordinal_to_numeral ordinalize);
+our @EXPORT = qw(ordinal_to_numeral ordinalize unteam);
 
 
 sub ordinal_to_numeral
@@ -75,6 +75,20 @@ sub ordinalize
   {
     return $value . 'th';
   }
+}
+
+
+sub unteam
+{
+  my ($text, $result) = @_;
+
+  my $res = $text;
+  my $team1 = $result->{TEAM1};
+  my $team2 = $result->{TEAM2};
+
+  $res =~ s/\Q$team1\E// if defined $team1 && length($team1) > 1;
+  $res =~ s/\Q$team2\E// if defined $team2 && length($team2) > 1;
+  return $res;
 }
 
 1;

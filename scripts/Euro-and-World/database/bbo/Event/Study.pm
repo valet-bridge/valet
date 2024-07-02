@@ -1,23 +1,24 @@
 #!perl
 
+package Event::Study;
+
+use v5.10;
 use strict;
 use warnings;
-use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
-
-package EventBBO;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(study_event);
 
 use lib '.';
 use lib '..';
-use lib 'Event';
 
 use Separators;
 use Token;
+use Util;
 
+use Event::Despace;
 use Event::Cookbook;
 
 
@@ -547,16 +548,19 @@ sub study_part
 }
 
 
-sub study_event
+sub study
 {
-  my ($text, $cref, $result, $chain, $unknown_ref) = @_;
+  my ($whole, $chunk, $result, $chain, $histo, $unknowns) = @_;
 
-  if ($cref->{BBONO} >= 4790 && $cref->{BBONO} <= 4860 &&
-      $cref->{TITLE} =~ /^Buffet/)
+  if ($chunk->{BBONO} >= 4790 && $chunk->{BBONO} <= 4860 &&
+      $chunk->{TITLE} =~ /^Buffet/)
   {
     # I think we can discard these.  I don't understand what they mean.
     return;
   }
+
+  my $text = despace($chunk->{EVENT});
+  $text = unteam($text, $result);
 
   # Extract a date in certain formats.
   my $date = '';
@@ -578,7 +582,7 @@ sub study_event
 
   for my $i (0 .. $#parts)
   {
-    study_part($parts[$i], $result, $i, $chain, $unknown_ref);
+    study_part($parts[$i], $result, $i, $chain, $unknowns);
   }
 
   # Merge on digit runs (3-4-5-6-7).
