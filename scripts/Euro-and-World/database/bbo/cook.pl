@@ -217,6 +217,16 @@ sub print_chain
   my $l = $chain->last();
   return if $l == -1;
 
+  if ($prefix eq 'TITLE')
+  {
+    for my $i (0 .. $l)
+    {
+      my $token = $chain->check_out($i);
+      print $token->str(0, $prefix);
+    }
+    return;
+  }
+
   my $token = $chain->check_out(0);
   if ($token->field() =~ /^TEAM_/)
   {
@@ -268,47 +278,6 @@ sub print_chain
       print "  ", $chain->text(), " # ", $chain->fields(), "\n";
     }
     return;
-  }
-  elsif ($prefix eq 'TITLE' && $l == 1)
-  {
-    print "Haven't learned this yet (B $l):\n";
-    print "  ", $chain->text(), " # ", $chain->fields(), "\n";
-    return;
-  }
-
-  if ($prefix eq 'TITLE' && $l >= 2)
-  {
-    my $found = 0;
-    my $pno;
-    for my $i (1 .. $l-1)
-    {
-      my $token = $chain->check_out($i);
-      if ($token->field() eq 'PARTICLE' &&
-          $token->value() eq 'vs')
-      {
-        $found = 1;
-        $pno = $i;
-        last;
-      }
-    }
-
-    if ($found)
-    {
-      for my $i (0 .. $pno-1)
-      {
-        my $t = $chain->check_out($i);
-        my $tag = 'TITLE_TEAM1_' . $t->field();
-        print $tag, ' ', $t->value(), "\n";
-      }
-
-      for my $i ($pno+1 .. $l)
-      {
-        my $t = $chain->check_out($i);
-        my $tag = 'TITLE_TEAM2_' . $t->field();
-        print $tag, ' ', $t->value(), "\n";
-      }
-      return;
-    }
   }
 
   print "Haven't learned this yet (C $l):\n";

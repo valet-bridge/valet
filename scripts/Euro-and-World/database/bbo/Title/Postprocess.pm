@@ -353,6 +353,59 @@ sub post_process_date_range
 }
 
 
+sub post_process_vs
+{
+  my ($chains) = @_;
+
+  for my $cno (reverse 0 .. $#$chains)
+  {
+    my $chain = $chains->[$cno];
+    next unless $chain->status() eq 'COMPLETE';
+    next unless $chain->last() >= 2;
+
+    # Find the vs token if it is there.
+    my $l = $chain->last();
+    my $found = 0;
+    my $pno;
+    for my $i (1 .. $l-1)
+    {
+      my $token = $chain->check_out($i);
+      if ($token->field() eq 'PARTICLE' &&
+          $token->value() eq 'vs')
+      {
+        $found = 1;
+        $pno = $i;
+        last;
+      }
+    }
+
+    next unless $found;
+
+    # Identify the two chains.
+    for my $i (0 .. $pno-1)
+    {
+      my $token = $chain->check_out($i);
+      my $tag = 'TEAM1_' . $token->field();
+      $token->set_general($token->category(), $tag, $token->value());
+    }
+
+    for my $i ($pno+1 .. $l)
+    {
+      my $token = $chain->check_out($i);
+      my $tag = 'TEAM2_' . $token->field();
+      $token->set_general($token->category(), $tag, $token->value());
+    }
+
+    my $chain1 = Chain->new();
+    $chain->copy_from($pno+1, $chain1);
+    $chain->truncate_directly_before($pno);
+    $chain->complete_if_last_is($pno-1, 'COMPLETE');
+    $chain1->complete_if_last_is($l-$pno-1, 'COMPLETE');
+    splice(@$chains, $cno+1, 0, $chain1);
+  }
+}
+
+
 sub post_process
 {
   my ($chains) = @_;
@@ -365,6 +418,7 @@ sub post_process
   post_process_stand_alone_doubles($chains);
   post_process_markers($chains);
   post_process_date_range($chains);
+  post_process_vs($chains);
 }
 
 1;
