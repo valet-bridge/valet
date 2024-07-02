@@ -350,6 +350,15 @@ sub study_component
 }
 
 
+sub append_token
+{
+  my ($chain, $category, $tag, $value, $text, $pos) = @_;
+
+  $chain->append_general($category, $tag, $value, $text, $pos);
+  $main::histo_title->incr($tag);
+}
+
+
 sub append_singleton
 {
   my ($chain, $pos, $tag, $value, $text) = @_;
@@ -357,7 +366,7 @@ sub append_singleton
   if ($tag eq 'TITLE_ROMAN')
   {
     # TODO Kludge.
-    append_roman($chain, $pos, $tag, $value, $text);
+    append_token($chain, 'COUNTER', $tag, $value, $text, $pos);
     return;
   }
 
@@ -403,19 +412,6 @@ sub append_letter
   my $token = Token->new();
   $token->set_origin($pos, $text);
   $token->set_letter_counter($value);
-  $chain->append($token);
-
-  $main::histo_title->incr($tag);
-}
-
-
-sub append_roman
-{
-  my ($chain, $pos, $tag, $value, $text) = @_;
-
-  my $token = Token->new();
-  $token->set_origin($pos, $text);
-  $token->set_roman_counter($value);
   $chain->append($token);
 
   $main::histo_title->incr($tag);

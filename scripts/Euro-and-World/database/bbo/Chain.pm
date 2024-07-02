@@ -34,6 +34,26 @@ sub append
 }
 
 
+sub append_general
+{
+  my ($self, $category, $tag, $value, $text, $pos) = @_;
+
+  my $token = Token->new();
+  $token->set_origin($pos, $text);
+
+  if ($tag eq 'TITLE_ROMAN')
+  {
+    $token->set_general('COUNTER', 'ROMAN', $value); # TODO TITLE_ROMAN ?
+  }
+  else
+  {
+   die "Strange";
+  }
+
+  $self->append($token);
+}
+
+
 sub insert_at
 {
   my ($self, $index, $token) = @_;

@@ -107,6 +107,17 @@ sub reset_iterator_field
 }
 
 
+sub set_general
+{
+  # This does not to any checking!
+  #
+  my ($self, $category, $field, $value) = @_;
+  $self->{CATEGORY} = $category;
+  $self->{FIELD} = $field;
+  $self->{VALUE} = $value;
+}
+
+
 sub set_numeral_counter
 {
   my ($self, $value) = @_;
