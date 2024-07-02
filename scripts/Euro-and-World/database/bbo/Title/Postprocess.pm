@@ -320,6 +320,39 @@ sub post_process_markers
 }
 
 
+sub post_process_date_range
+{
+  my ($chains) = @_;
+
+  for my $cno (reverse 0 .. $#$chains)
+  {
+    my $chain = $chains->[$cno];
+    next unless $chain->status() eq 'COMPLETE';
+    next unless $chain->last() == 2;
+
+    my $token0 = $chain->check_out(0);
+    my $token1 = $chain->check_out(1);
+    my $token2 = $chain->check_out(2);
+
+    if ($token0->field() eq 'DATE' && 
+        $token1->field() eq 'PARTICLE' &&
+        $token1->value() eq 'to' &&
+        $token2->field() eq 'DATE')
+    {
+      $token0->set_general('SINGLETON', 'DATE_START', $token0->value());
+      $token2->set_general('SINGLETON', 'DATE_END', $token2->value());
+
+      my $chain2 = Chain->new();
+      $chain->copy_from(2, $chain2);
+      $chain->truncate_directly_before(1);
+      $chain->complete_if_last_is(0, 'COMPLETE');
+      $chain2->complete_if_last_is(0, 'COMPLETE');
+      splice(@$chains, $cno+1, 0, $chain2);
+    }
+  }
+}
+
+
 sub post_process
 {
   my ($chains) = @_;
@@ -331,6 +364,7 @@ sub post_process
   post_process_sandwiched_singles($chains);
   post_process_stand_alone_doubles($chains);
   post_process_markers($chains);
+  post_process_date_range($chains);
 }
 
 1;

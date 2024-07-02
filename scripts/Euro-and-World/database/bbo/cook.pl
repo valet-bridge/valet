@@ -232,18 +232,7 @@ sub print_chain
   }
   elsif ($l == 0)
   {
-    my $tag = $token->field();
-    my $p = $prefix;
-    if ($prefix eq 'TITLE' && 
-      ($tag eq 'NUMERAL' || $tag eq 'ORDINAL' || $tag eq 'N_OF_N' ||
-       $tag eq 'ROMAN' || $tag eq 'LETTER' || $tag eq 'NL' ||
-       $tag eq 'N_TO_N' || $tag eq 'N_TO_N_OF_N')) # TODO Just COUNTER?
-    {
-      # TODO Kludge for now.  What do I want?
-      $p = '';
-    }
-
-    print $token->str(0, $p);
+    print $token->str(0, $prefix);
     return;
   }
   elsif ($prefix eq 'EVENT' && $l == 2)
@@ -282,23 +271,8 @@ sub print_chain
   }
   elsif ($prefix eq 'TITLE' && $l == 1)
   {
-    my $token0 = $chain->check_out(0);
-    my $token1 = $chain->check_out(1);
-
-    if ($token0->category() eq 'AMBIGUOUS' &&
-        $token1->category() eq 'COUNTER')
-    {
-      die;
-      my $synth = Token->new();
-      $synth->set_singleton($token0->category(), 
-        $token0->value() . ' ' . $token1->value());
-      print $synth->str(0, $prefix);
-    }
-    else
-    {
-      print "Haven't learned this yet (B $l):\n";
-      print "  ", $chain->text(), " # ", $chain->fields(), "\n";
-    }
+    print "Haven't learned this yet (B $l):\n";
+    print "  ", $chain->text(), " # ", $chain->fields(), "\n";
     return;
   }
 
@@ -335,23 +309,6 @@ sub print_chain
       }
       return;
     }
-  }
-
-  if ($prefix eq 'TITLE' && $l == 2)
-  {
-    my $token0 = $chain->check_out(0);
-    my $token1 = $chain->check_out(1);
-    my $token2 = $chain->check_out(2);
-
-    if ($token0->field() eq 'DATE' &&
-        $token1->field() eq 'PARTICLE' &&
-        $token1->value() eq 'to' &&
-        $token2->field() eq 'DATE')
-    {
-      print "TITLE_DATE_START ", $token0->value(), "\n";
-      print "TITLE_DATE_END ", $token2->value(), "\n";
-    }
-    return;
   }
 
   print "Haven't learned this yet (C $l):\n";

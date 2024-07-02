@@ -102,6 +102,7 @@ my @SINGLETON_LIST = qw(
 
   Berth
   Day DAY
+  DATE_START DATE_END
   Group GROUP
   Flight FLIGHT
   Half
