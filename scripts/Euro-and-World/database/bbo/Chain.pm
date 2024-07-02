@@ -44,19 +44,13 @@ sub append_general
   # TODO So here the TITLE_ are stripped off?
   if ($tag eq 'TITLE_ROMAN')
   {
+    # This is detected by Title::Tag, not be manual inspection.
+    # Therefore it appears here as a SINGLETON, though it is a COUNTER.
     $token->set_general('COUNTER', 'ROMAN', $value);
   }
-  elsif ($tag eq 'NUMERAL')
+  elsif ($tag eq 'NUMERAL' || $tag eq 'ORDINAL' || $tag eq 'LETTER')
   {
-    $token->set_general('COUNTER', 'NUMERAL', $value);
-  }
-  elsif ($tag eq 'ORDINAL')
-  {
-    $token->set_general('COUNTER', 'ORDINAL', $value);
-  }
-  elsif ($tag eq 'LETTER')
-  {
-    $token->set_general('COUNTER', 'LETTER', $value);
+    $token->set_general('COUNTER', $tag, $value);
   }
   elsif ($category eq 'SINGLETON')
   {

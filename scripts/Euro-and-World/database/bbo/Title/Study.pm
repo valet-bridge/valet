@@ -313,7 +313,7 @@ sub study_value
   # The general solution.
   return if title_specific_hashes($whole, $pos, $value, $chain, $histo);
 
-  append_unknown($chain, $pos, '', $value, $value);
+  append_token($chain, 'UNKNOWN', '', $value, $value, $pos);
 
   print "QQQ ", $value, "\n";
   $$unknown_value_flag = 1;
@@ -380,14 +380,6 @@ sub append_singleton
   {
     append_token($chain, 'SINGLETON', $tag, $value, $text, $pos);
   }
-}
-
-
-sub append_unknown
-{
-  my ($chain, $pos, $tag, $value, $text) = @_;
-
-  append_token($chain, 'UNKNOWN', $tag, $value, $text, $pos);
 }
 
 

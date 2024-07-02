@@ -1,4 +1,9 @@
 Title::Study:
+AMBIGUOUS, ITERATOR should be fished out in Chains::set_general
+as category, not tag.
+For ITERATOR, tag becomes the capitalized value I think.
+PREFIX only for book keeping, not in the actual Token.
+Fix Reductions accordingly.
 
 Title:
 - Clean up code in Preprocess, Study, Postprocess (TITLE_ in one place etc)
