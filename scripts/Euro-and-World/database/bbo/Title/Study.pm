@@ -294,26 +294,26 @@ sub study_value
     }
     else
     {
-      append_numeral($chain, $pos, $PREFIX . 'INTEGER', $value, $value);
+      append_token($chain, 'COUNTER', 'NUMERAL', $value, $value, $pos);
     }
     return;
   }
   elsif ($value =~ /^[A-HJa-h]$/)
   {
-    append_letter($chain, $pos, $PREFIX . 'LETTER', $value, $value);
+    append_token($chain, 'COUNTER', 'LETTER', $value, $value, $pos);
     return;
   }
   elsif (my $ord = Util::ordinal_to_numeral($value))
   {
     $ord =~ s/^0+//; # Remove leading zeroes
-    append_ordinal($chain, $pos, $PREFIX . 'ORDINAL', $ord, $value);
+    append_token($chain, 'COUNTER', 'ORDINAL', $ord, $value, $pos);
     return;
   }
 
   # The general solution.
   return if title_specific_hashes($whole, $pos, $value, $chain, $histo);
 
-  append_unknown($chain, $pos, $value);
+  append_unknown($chain, $pos, '', $value, $value);
 
   print "QQQ ", $value, "\n";
   $$unknown_value_flag = 1;
@@ -355,7 +355,15 @@ sub append_token
   my ($chain, $category, $tag, $value, $text, $pos) = @_;
 
   $chain->append_general($category, $tag, $value, $text, $pos);
-  $main::histo_title->incr($tag);
+
+  if ($tag =~ /TITLE/)
+  {
+    $main::histo_title->incr($tag);
+  }
+  else
+  {
+    $main::histo_title->incr($PREFIX . $tag);
+  }
 }
 
 
@@ -367,67 +375,19 @@ sub append_singleton
   {
     # TODO Kludge.
     append_token($chain, 'COUNTER', $tag, $value, $text, $pos);
-    return;
   }
-
-  my $token = Token->new();
-  $token->set_origin($pos, $text);
-  $token->set_singleton($tag, $value);
-  $chain->append($token);
-
-  $main::histo_title->incr($tag);
-}
-
-
-sub append_numeral
-{
-  my ($chain, $pos, $tag, $value, $text) = @_;
-
-  my $token = Token->new();
-  $token->set_origin($pos, $text);
-  $token->set_numeral_counter($value);
-  $chain->append($token);
-
-  $main::histo_title->incr($tag);
-}
-
-
-sub append_ordinal
-{
-  my ($chain, $pos, $tag, $value, $text) = @_;
-
-  my $token = Token->new();
-  $token->set_origin($pos, $text);
-  $token->set_ordinal_counter($value);
-  $chain->append($token);
-
-  $main::histo_title->incr($tag);
-}
-
-
-sub append_letter
-{
-  my ($chain, $pos, $tag, $value, $text) = @_;
-
-  my $token = Token->new();
-  $token->set_origin($pos, $text);
-  $token->set_letter_counter($value);
-  $chain->append($token);
-
-  $main::histo_title->incr($tag);
+  else
+  {
+    append_token($chain, 'SINGLETON', $tag, $value, $text, $pos);
+  }
 }
 
 
 sub append_unknown
 {
-  my ($chain, $pos, $value) = @_;
+  my ($chain, $pos, $tag, $value, $text) = @_;
 
-  my $token = Token->new();
-  $token->set_origin($pos, $value);
-  $token->set_unknown_full($value);
-  $chain->append($token);
-
-  $main::histo_title->incr('UNMATCHED');
+  append_token($chain, 'UNKNOWN', $tag, $value, $text, $pos);
 }
 
 

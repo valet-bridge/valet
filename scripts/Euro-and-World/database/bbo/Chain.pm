@@ -41,13 +41,34 @@ sub append_general
   my $token = Token->new();
   $token->set_origin($pos, $text);
 
+  # TODO So here the TITLE_ are stripped off?
   if ($tag eq 'TITLE_ROMAN')
   {
-    $token->set_general('COUNTER', 'ROMAN', $value); # TODO TITLE_ROMAN ?
+    $token->set_general('COUNTER', 'ROMAN', $value);
+  }
+  elsif ($tag eq 'NUMERAL')
+  {
+    $token->set_general('COUNTER', 'NUMERAL', $value);
+  }
+  elsif ($tag eq 'ORDINAL')
+  {
+    $token->set_general('COUNTER', 'ORDINAL', $value);
+  }
+  elsif ($tag eq 'LETTER')
+  {
+    $token->set_general('COUNTER', 'LETTER', $value);
+  }
+  elsif ($category eq 'SINGLETON')
+  {
+    $token->set_general('SINGLETON', $tag, $value);
+  }
+  elsif ($category eq 'UNKNOWN')
+  {
+    $token->set_general('UNKNOWN', '', $value);
   }
   else
   {
-   die "Strange";
+   die "Strange $tag";
   }
 
   $self->append($token);
