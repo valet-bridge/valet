@@ -1,18 +1,4 @@
-Postprocess:
-- Chain of length 2, COMPLETED
-- The four cases from cook.pl line 300
-- New category MARKER which combines a COUNTER and an ITERATOR
-  - The ITERATOR goes in field (tag)
-  - The value is the combined values of the two
-  - Set up a set_general
-  - token->merge_origin(token2)
-
-Title:
-- Clean up code in Preprocess, Postprocess
-- In cook we split some more.  Do this already
-- Then they should print cleanly
-- Chains print should be in a new Chains (today's Chains is something
-  else)
+Chains print should be in a new Chains (today's Chains is something else)
 
 - Make a ChainStats for length and number (ignore KILLED)
 - Update it from Chains

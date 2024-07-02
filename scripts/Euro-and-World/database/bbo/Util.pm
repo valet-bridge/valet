@@ -11,7 +11,7 @@ use open ':std', ':encoding(UTF-8)';
 use Exporter;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(ordinal_to_numeral);
+our @EXPORT = qw(ordinal_to_numeral ordinalize);
 
 
 sub ordinal_to_numeral
@@ -52,5 +52,29 @@ sub ordinal_to_numeral
   }
 }
 
+
+sub ordinalize
+{
+  my ($value) = @_;
+
+  my $last = substr($value, -1);
+
+  if ($last == 1)
+  {
+    return $value . 'st';
+  }
+  elsif ($last == 2)
+  {
+    return $value . 'nd';
+  }
+  elsif ($last == 3)
+  {
+    return $value . 'rd';
+  }
+  else
+  {
+    return $value . 'th';
+  }
+}
 
 1;

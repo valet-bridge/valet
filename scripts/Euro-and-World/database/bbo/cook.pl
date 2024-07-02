@@ -231,6 +231,7 @@ sub print_chain
   if ($token->field() =~ /^TEAM_/)
   {
     # Can be just a team chain.
+    # TODO Probably the TEAM chains should be prefixed before they get here.
     for my $i (0 .. $l)
     {
       my $t = $chain->check_out($i);

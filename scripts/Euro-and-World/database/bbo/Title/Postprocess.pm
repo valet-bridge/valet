@@ -1,42 +1,19 @@
 #!perl
 
+package Title::Postprocess;
+
+use v5.10;
 use strict;
 use warnings;
-use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
-
-package Title::Postprocess;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(post_process);
 
 use lib '.';
 
-
-sub ordinalize
-{
-  my ($value) = @_;
-
-  my $last = substr($value, -1);
-
-  if ($last == 1)
-  {
-    return $value . 'st';
-  }
-  elsif ($last == 2)
-  {
-    return $value . 'nd';
-  }
-  elsif ($last == 3)
-  {
-    return $value . 'rd';
-  }
-  else
-  {
-    return $value . 'th';
-  }
-}
+use Util;
 
 
 sub post_process_first_numeral
@@ -76,7 +53,6 @@ my %LAST_NUM_DESTROY =
   TWORD => 1,
   YEAR => 1
 );
-
 
 sub post_process_last_numeral
 {
