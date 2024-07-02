@@ -6,7 +6,7 @@ PREFIX only for book keeping, not in the actual Token.
 Fix Reductions accordingly.
 
 Title:
-- Clean up code in Preprocess, Study, Postprocess (TITLE_ in one place etc)
+- Clean up code in Preprocess, Study, Postprocess
 - In cook we split some more.  Do this already
 - Then they should print cleanly
 - Chains print should be in a new Chains (today's Chains is something

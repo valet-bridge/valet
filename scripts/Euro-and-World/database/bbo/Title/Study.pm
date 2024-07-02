@@ -256,17 +256,17 @@ sub title_specific_hashes
 
     my $tag = $fix->{CATEGORY};
 
-    append_singleton($chain, $pos, $tag, $fix->{VALUE}, $text);
+    append_token($chain, 'SINGLETON', $tag, $fix->{VALUE}, $text, $pos);
 
     if ($tag eq 'GENDER' && $fix->{VALUE} eq 'Open')
     {
       # Special case: Add an extra token.
-      append_singleton($chain, $pos, 'AGE', $fix->{VALUE},  $text);
+      append_token($chain, 'SINGLETON', 'AGE', $fix->{VALUE}, $text, $pos);
     }
     elsif ($tag eq 'AGE' && $fix->{VALUE} eq 'Girls')
     {
       # Special case: Add an extra token.
-      append_singleton($chain, $pos, 'GENDER', 'Women', $text);
+      append_token($chain, 'SINGLETON', 'GENDER', 'Women', $text, $pos);
     }
 
     return 1;
@@ -283,7 +283,7 @@ sub study_value
   {
     if ($value >= 1900 && $value < 2100)
     {
-      append_singleton($chain, $pos, 'YEAR', $value, $value);
+      append_token($chain, 'SINGLETON', 'YEAR', $value, $value, $pos);
     }
     else
     {
@@ -359,22 +359,6 @@ sub append_token
 }
 
 
-sub append_singleton
-{
-  my ($chain, $pos, $tag, $value, $text) = @_;
-
-  if ($tag eq 'ROMAN')
-  {
-    # TODO Kludge.
-    append_token($chain, 'COUNTER', $tag, $value, $text, $pos);
-  }
-  else
-  {
-    append_token($chain, 'SINGLETON', $tag, $value, $text, $pos);
-  }
-}
-
-
 sub study
 {
   my ($whole, $bbono, $text, $chain, $histo, $unknowns) = @_;
@@ -402,7 +386,8 @@ sub study
     if ($tags[$i] ne '0')
     {
       # We had a multi-word hit.
-      append_singleton($chain, $i, $tags[$i], $values[$i], $texts[$i]);
+      append_token($chain, 'SINGLETON', $tags[$i], $values[$i], 
+        $texts[$i], $i);
       $token_no++;
     }
     else
