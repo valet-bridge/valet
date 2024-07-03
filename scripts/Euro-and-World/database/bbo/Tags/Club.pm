@@ -11,9 +11,6 @@ package Tags::Club;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes);
 
-use lib '.';
-use TeamBBO;
-
 my @MULTI_WORDS =
 (
   "'t Onstein",
@@ -494,15 +491,6 @@ my %SINGLE_TYPOS =
   Zmrzlina => ['zmerzlina'],
   Örebridgen => ['Örebridge', 'orebridgen']
 );
-
-
-sub set_hashes_team_club
-{
-  my ($key) = @_;
-
-  TeamBBO::set_overall_hashes(\@MULTI_WORDS, \%MULTI_TYPOS,
-    \@SINGLE_WORDS, \%SINGLE_TYPOS, $key);
-}
 
 
 sub set_hashes

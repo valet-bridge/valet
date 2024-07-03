@@ -21,6 +21,14 @@ use Util;
 use Event::Despace;
 use Event::Cookbook;
 
+my @TAG_ORDER = qw(
+  DESTROY
+  STAGE
+  AGE
+  ORGANIZATION
+  SCORING
+);
+
 
 sub undate
 {
@@ -55,7 +63,7 @@ sub undate
 
 sub split_on_known_words
 {
-  my ($list_ref) = @_;
+  my ($tags, $values, $texts) = @_;
 
   # Some entries may be mashed together.  It's easier to split them
   # out than to try to recognize them later.
@@ -69,32 +77,44 @@ sub split_on_known_words
   {
     $ctr++;
     $hit = 0;
-    for my $i (reverse 0 .. $#$list_ref)
+    for my $i (reverse 0 .. $#$values)
     {
-      my $part = $list_ref->[$i];
-      my $fix = $FIX_HASH{$part};
+      my $value = $values->[$i];
+      my $fix = $FIX_HASH{$value};
       next if defined $fix->{VALUE};
 
-      if ($part =~ $FRONT_REGEX)
+      if ($value =~ $FRONT_REGEX)
       {
         my ($front, $back) = ($1, $2);
 
         # If letter-letter, then not lower-lower.
         next if ($back =~ /^[a-z]/ && $front =~ /[a-z]$/);
         next if ($back =~ /^[A-Z]/ && $front =~ /[A-Z]$/);
-        next if $part eq 'MatchPoint';
+        next if $value eq 'MatchPoint';
 
-        splice(@$list_ref, $i, 0, ('') x 2);
-        $list_ref->[$i  ] = $front;
-        $list_ref->[$i+1] = '|';
-        $list_ref->[$i+2] = $back;
+        splice(@$tags, $i, 0, (0) x 2);
+        splice(@$values, $i, 0, ('') x 2);
+        splice(@$texts, $i, 0, ('') x 2);
+
+        $tags->[$i] = 0;
+        $values->[$i] = $front;
+        $texts->[$i] = $front;
+
+        $tags->[$i+1] = 'SEPARATOR';
+        $values->[$i+1] = '|';
+        $texts->[$i+1] = '';
+
+        $tags->[$i+2] = 0;
+        $values->[$i+2] = $back;
+        $texts->[$i+2] = $back;
+
         $hit = 1;
         last;
       }
 
       next if $hit;
 
-      if ($part =~ $BACK_REGEX)
+      if ($value =~ $BACK_REGEX)
       {
         my ($front, $back) = ($1, $2);
         if ($back =~ /^[a-z]/ && $front =~ /[a-z]$/ &&
@@ -105,10 +125,22 @@ sub split_on_known_words
         }
         next if ($back =~ /^[A-Z]/ && $front =~ /[A-Z]$/);
 
-        splice(@$list_ref, $i, 0, ('') x 2);
-        $list_ref->[$i  ] = $front;
-        $list_ref->[$i+1] = '|';
-        $list_ref->[$i+2] = $back;
+        splice(@$tags, $i, 0, (0) x 2);
+        splice(@$values, $i, 0, ('') x 2);
+        splice(@$texts, $i, 0, ('') x 2);
+
+        $tags->[$i] = 0;
+        $values->[$i] = $front;
+        $texts->[$i] = $front;
+
+        $tags->[$i+1] = 'SEPARATOR';
+        $values->[$i+1] = '|';
+        $texts->[$i+1] = '';
+
+        $tags->[$i+2] = 0;
+        $values->[$i+2] = $back;
+        $texts->[$i+2] = $back;
+
         $hit = 1;
         last;
       }
@@ -119,55 +151,38 @@ sub split_on_known_words
 
 sub split_on_digit_groups
 {
-  my ($list_ref) = @_;
+  my ($tags, $values, $texts) = @_;
 
-  for my $i (reverse 0 .. $#$list_ref)
+  for my $i (reverse 0 .. $#$values)
   {
-    my $part = $list_ref->[$i];
-    $part =~s/#(\d)/$1/g;
+    my $value = $values->[$i];
+    $value =~s/#(\d)/$1/g;
+    $value =~ s/(\d)([a-zA-Z])/$1 $2/g;
+    $value =~ s/([a-zA-Z])(\d)/$1 $2/g;
+    $value =~ s/(\d)\s+th/$1th /gi;
+    $value =~ s/(\d)\s+rth/$1rth /gi;
+    $value =~ s/(\d)\s+nd/$1nd /gi;
+    $value =~ s/(\d)\s+rd/$1rd /gi; # TODO One regex?
+    $value =~ s/(\d)\s+st(?=\b|_)/$1st /gi; # Either \b or _
+    $value =~ s/(\d)\s+er/$1th /gi;
+    $value =~ s/(\d)\s+eme/$1th /gi;
+    #$value =~ s/(\d)\s+st\b/$1st/gi;
 
-    if ($part =~ /\d/ && $part =~ /[^\d]/ &&
-      ! is_small_ordinal($part))
-    {
-      my @a = grep {$_ ne ''} split /(\d+)/, $part;
-      die "No real split: $part" unless $#a > 0;
-
-      if ($#a == 1 && $a[0] =~ /^rof$/i)
-      {
-        # Don't split Rof128 etc.
-        next;
-      }
-      elsif ($#a == 1 && $a[0] eq 'U' && $a[1] <= 31)
-      {
-        # Don't split U31 etc.
-        next;
-      }
-      elsif ($#a == 1 && $a[0] eq 'BBO' && $a[1] <= 4)
-      {
-        # Don't split BBO2 etc.
-        next;
-      }
-
-      my $add = 2 * $#a;
-      splice(@$list_ref, $i, 0, ('') x $add);
-      for my $j (0 .. $#a)
-      {
-        $list_ref->[$i + 2*$j] = $a[$j];
-        $list_ref->[$i + 2*$j + 1] = '|' unless $j == $#a;
-      }
-    }
+    $value =~ s/n°(\d)/ $1/gi;
+    $value =~ s/(\d)ª/${1}th /gi;
+    $value =~ s/(\d)°/${1}th /gi;
+    $values->[$i] = $value;
   }
 }
 
 
 sub split_on_pre_group
 {
-  my ($list_ref, $part, $i) = @_;
+  my ($tags, $values, $texts, $value, $pos) = @_;
 
-  if ($part =~ $PRE_GROUP_REGEX)
+  if ($value =~ $PRE_GROUP_REGEX)
   {
     my ($front, $back) = ($1, $2);
-    splice(@$list_ref, $i, 0, ('') x 2);
 
     my $fix = $FIX_HASH{lc($front)};
     if (! defined $fix->{VALUE})
@@ -175,9 +190,31 @@ sub split_on_pre_group
       die "No value for $front";
     }
 
-    $list_ref->[$i  ] = $fix->{VALUE};
-    $list_ref->[$i+1] = '|';
-    $list_ref->[$i+2] = $back;
+    $value =~ s/$front$back/$front $back/;
+    $values->[$pos] = $value;
+
+    # splice(@$tags, $pos, 0, (0) x 2);
+    # splice(@$values, $pos, 0, ('') x 2);
+    # splice(@$texts, $pos, 0, ('') x 2);
+
+    # my $fix = $FIX_HASH{lc($front)};
+    # if (! defined $fix->{VALUE})
+    # {
+      # die "No value for $front";
+    # }
+
+    # $tags->[$pos] = $fix->{CATEGORY};
+    # $values->[$pos] = $fix->{VALUE};
+    # $texts->[$pos] = $front;
+
+    # $tags->[$pos+1] = 'SEPARATOR';
+    # $values->[$pos+1] = '|';
+    # $texts->[$pos+1] = '';
+
+    # $tags->[$pos+2] = 0;
+    # $values->[$pos+2] = $back;
+    # $texts->[$pos+2] = $back;
+
     return 1;
   }
   return 0;
@@ -186,12 +223,15 @@ sub split_on_pre_group
 
 sub split_on_post_group
 {
-  my ($list_ref, $part, $i) = @_;
+  my ($tags, $values, $texts, $value, $pos) = @_;
 
-  if ($part =~ $POST_GROUP_REGEX)
+  if ($value =~ $POST_GROUP_REGEX)
   {
     my ($front, $back) = ($1, $2);
-    splice(@$list_ref, $i, 0, ('') x 2);
+
+    splice(@$tags, $pos, 0, (0) x 2);
+    splice(@$values, $pos, 0, ('') x 2);
+    splice(@$texts, $pos, 0, ('') x 2);
 
     my $fix = $FIX_HASH{lc($back)};
     if (! defined $fix->{VALUE})
@@ -199,55 +239,99 @@ sub split_on_post_group
       die "No value for $back";
     }
 
-    $list_ref->[$i  ] = ($front eq 'W' ? 'Women' : 'Open');
-    $list_ref->[$i+1] = '|';
-    $list_ref->[$i+2] = $fix->{VALUE};
+    $tags->[$pos] = 0;
+    $values->[$pos] = ($front eq 'W' ? 'Women' : 'Open');
+    $texts->[$pos] = $value;
+
+    $tags->[$pos+1] = 'SEPARATOR';
+    $values->[$pos+1] = '|';
+    $texts->[$pos+1] = $value;
+
+    $tags->[$pos+2] = 0;
+    $values->[$pos+2] = $fix->{VALUE};
+    $texts->[$pos+2] = $value;
+
     return 1;
   }
+
   return 0;
 }
 
 
 sub split_on_tournament_group
 {
-  my ($list_ref) = @_;
+  my ($tags, $values, $texts) = @_;
 
   # A number of words are commonly followed by A or B.
   
-  for my $i (reverse 0 .. $#$list_ref)
+  for my $i (reverse 0 .. $#$values)
   {
-    my $part = $list_ref->[$i];
+    my $value = $values->[$i];
 
-    next if split_on_pre_group($list_ref, $part, $i);
+    next if split_on_pre_group($tags, $values, $texts, $value, $i);
 
-    next if split_on_post_group($list_ref, $part, $i);
+    next if split_on_post_group($tags, $values, $texts, $value, $i);
 
     # Kludge.
-    if ($part eq 'OR')
+    if ($value eq 'OR')
     {
-      splice(@$list_ref, $i, 0, ('') x 2);
-      $list_ref->[$i  ] = 'Open';
-      $list_ref->[$i+1] = '|';
-      $list_ref->[$i+2] = 'Room';
-      
+      splice(@$tags, $i, 0, (0) x 2);
+      splice(@$values, $i, 0, ('') x 2);
+      splice(@$texts, $i, 0, ('') x 2);
+
+      $tags->[$i] = 0;
+      $values->[$i] = 'Open';
+      $texts->[$i] = 'OR';
+
+      $tags->[$i+1] = 'SEPARATOR';
+      $values->[$i+1] = '|';
+      $texts->[$i+1] = '';
+
+      $tags->[$i+2] = 0;
+      $values->[$i+2] = 'Room';
+      $texts->[$i+2] = 'OR';
     }
-    elsif ($part eq 'or')
+    elsif ($value eq 'or')
     {
-      $list_ref->[$i  ] = 'Of'; # Typically a typo
+      $tags->[$i] = 0;
+      $values->[$i] = 'Of'; # Typically a typo
+      $texts->[$i] = 'or';
     }
-    elsif ($part eq 'FO')
+    elsif ($value eq 'FO')
     {
-      splice(@$list_ref, $i, 0, ('') x 2);
-      $list_ref->[$i  ] = 'Final';
-      $list_ref->[$i+1] = '|';
-      $list_ref->[$i+2] = 'Open';
+      splice(@$tags, $i, 0, (0) x 2);
+      splice(@$values, $i, 0, ('') x 2);
+      splice(@$texts, $i, 0, ('') x 2);
+
+      $tags->[$i] = 0;
+      $values->[$i] = 'Final';
+      $texts->[$i] = 'FO';
+
+      $tags->[$i+1] = 'SEPARATOR';
+      $values->[$i+1] = '|';
+      $texts->[$i+1] = '';
+
+      $tags->[$i+2] = 0;
+      $values->[$i+2] = 'Open';
+      $texts->[$i+2] = 'FO';
     }
-    elsif ($part eq 'OF') # Probably
+    elsif ($value eq 'OF') # Probably
     {
-      splice(@$list_ref, $i, 0, ('') x 2);
-      $list_ref->[$i  ] = 'Open';
-      $list_ref->[$i+1] = '|';
-      $list_ref->[$i+2] = 'Final';
+      splice(@$tags, $i, 0, (0) x 2);
+      splice(@$values, $i, 0, ('') x 2);
+      splice(@$texts, $i, 0, ('') x 2);
+
+      $tags->[$i] = 0;
+      $values->[$i] = 'Open';
+      $texts->[$i] = 'OF';
+
+      $tags->[$i+1] = 'SEPARATOR';
+      $values->[$i+1] = '|';
+      $texts->[$i+1] = '';
+
+      $tags->[$i+2] = 0;
+      $values->[$i+2] = 'Final';
+      $texts->[$i+2] = 'OF';
     }
   }
 }
@@ -475,7 +559,7 @@ sub study_part
 {
   # Returns 1 if it is a kill.
 
-  my ($part, $result, $i, $chain, $unknown_ref) = @_;
+  my ($part, $result, $i, $chain, $unsolved_flag) = @_;
 
   my $token = Token->new();
   $token->set_origin($i, $part);
@@ -541,7 +625,7 @@ sub study_part
   return 0 if is_year($part, $token);
 
   print "UNKNOWN $part\n";
-  $$unknown_ref++;
+  $$unsolved_flag = 1;
 
   $token->set_unknown($part);
   return 0;
@@ -559,42 +643,87 @@ sub study
     return;
   }
 
-  my $text = despace($chunk->{EVENT});
-  $text = unteam($text, $result);
+  my $dtext = despace($chunk->{EVENT});
+  my $utext = unteam($dtext, $result);
+  my $ctext = split_on_capitals_new($utext);
+
+  my @tags = (0);
+  my @values = ();
+  my @texts = ();
+  split_on_dates_new($ctext, \@tags, \@values, \@texts);
 
   # Extract a date in certain formats.
-  my $date = '';
-  my $mashed = undate($text, \$date);
-
-  # Split on separators.
-  my @parts = grep {$_ ne ''} split /([.\-\+_:;"\/\(\)]|\s+)/, $mashed;
+  # my $date = '';
+  # my $mashed = undate($text, \$date);
 
   # Separate words that run into each other.
-  split_on_known_words(\@parts);
+  # split_on_known_words(\@tags, \@values, \@texts);
 
   # Split on groups of digits.
-  split_on_digit_groups(\@parts);
+  split_on_digit_groups(\@tags, \@values, \@texts);
 
   # Split some known words + A or B at the end.
-  split_on_tournament_group(\@parts);
+  split_on_tournament_group(\@tags, \@values, \@texts);
+
+  split_on_multi_new($whole, \@TAG_ORDER, 1, \@tags, \@values, \@texts);
+
+  # Split on separators.
+  my $sep = qr/([\s+\-\+._:;"\/\(\)\|])/;
+
+  my $token_no = 0;
+  my $unsolved_flag = 0;
 
   # Make a semantic, studied version of the event.
 
-  for my $i (0 .. $#parts)
+  for my $i (0 .. $#values)
   {
-    study_part($parts[$i], $result, $i, $chain, $unknowns);
+    if ($tags[$i] ne '0')
+    {
+      # We had a hit.
+      if ($tags[$i] eq 'SEPARATOR')
+      {
+        my $token = Token->new();
+        $token->set_origin($i, $values[$i]);
+        if (! Separators::set_token($values[$i], $token))
+        {
+          die "Not a separator after all?";
+        }
+        $chain->append($token);
+      }
+      else
+      {
+        $chain->append_general('SINGLETON', $tags[$i], $values[$i],
+          $texts[$i], $i);
+      }
+      $token_no++;
+    }
+    else
+    {
+      my @a = grep { $_ ne '' } split(/$sep/, $values[$i]);
+      foreach my $value (@a)
+      {
+        study_part($value, $result, $i, $chain, \$unsolved_flag);
+      }
+    }
   }
 
   # Merge on digit runs (3-4-5-6-7).
   merge_on_digit_runs($chain);
 
-  if ($date ne '')
+  if ($unsolved_flag)
   {
-    my $token = Token->new();
-    $token->set_origin($#parts+1, $date);
-    $token->set_singleton('DATE', $date);
-    $chain->append($token);
+    $$unknowns++;
+    print "WWW $chunk->{BBONO}: $chunk->{EVENT}\n" if $chain->last() > 0;
+    print "\n";
   }
+
+  # if ($date ne '')
+  # {
+    # my $token = Token->new();
+    # $token->set_origin($#parts+1, $date);
+    # $token->set_singleton('DATE', $date);
+    # $chain->append($token);
+  # }
 }
 
 1;

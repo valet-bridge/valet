@@ -406,6 +406,22 @@ our @EVENT_REDUCTIONS =
     COMPLETION => 1
   },
 
+  # A 3
+  {
+    PATTERN =>
+    [
+      { CATEGORY => ['COUNTER'], FIELD => ['LETTER'] },
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL'] }
+    ],
+    ANCHOR => 'END',
+    KEEP_LAST => 0,
+    METHOD => \&Patterns::Chainify::process_merge_02,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
   # Round {COUNTER}
   {
     PATTERN =>

@@ -405,6 +405,7 @@ sub study
 
   if ($unsolved_flag)
   {
+    $$unknowns++;
     print "TTT $bbono: $text\n" if $chain->last() > 0;
     print "\n";
   }

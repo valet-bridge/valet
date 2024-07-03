@@ -19,6 +19,8 @@ use TeamBBO;
 use ScoringBBO;
 
 use Event::Study;
+use Event::Preprocess;
+use Event::Postprocess;
 
 use Title::Study;
 use Title::Preprocess;
@@ -92,7 +94,7 @@ while ($line = <$fh>)
     next;
   }
 
-  if ($chunk{BBONO} == 218)
+  if ($chunk{BBONO} == 5581)
   {
     print "HERE\n";
   }
@@ -129,9 +131,13 @@ while ($line = <$fh>)
     Event::Study::study($whole, \%chunk, \%result, 
       $chain_event, \$unknown_events);
 
+    Event::Preprocess::pre_process(\@chains_event);
+
     process_event(\@chains_event);
     Patterns::Chainify::process(\@EVENT_REDUCTIONS, \@chains_event, 
       1, \@reduction_event_stats);
+
+    Event::Postprocess::post_process(\@chains_event);
 
     $stats_event->incr(\@chains_event);
 

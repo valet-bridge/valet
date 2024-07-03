@@ -39,6 +39,7 @@ sub print_count
   my ($self, $header) = @_;
 
   my $csum = 0;
+  my $cprod = 0;
   print "\n$header chain count stats\n\n";
   printf("%6s%10s\n", "", "Count");
 
@@ -47,10 +48,12 @@ sub print_count
     my $h = $self->{COUNT}[$i] || 0;
     printf("%6d%10d\n", $i, $h);
     $csum += $h;
+    $cprod += $h * $i;
   }
 
   print '-' x 16, "\n";
   printf("%6s%10d\n\n", "Sum", $csum);
+  printf("%6s%10d\n\n", "Count", $cprod);
 }
 
 

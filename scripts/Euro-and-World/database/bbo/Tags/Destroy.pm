@@ -11,9 +11,6 @@ package Tags::Destroy;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes);
 
-use lib '.';
-use TeamBBO;
-
 # TODO
 # Probably the uncategorized ones can be parsed as in Event
 

@@ -11,9 +11,6 @@ package Tags::Other;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes);
 
-use lib '.';
-use TeamBBO;
-
 my @MULTI_WORDS =
 (
   'A.C.L.A.',

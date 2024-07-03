@@ -120,6 +120,7 @@ my @SINGLETON_LIST = qw(
   Quarter
   Phase PHASE
   Round
+  Semifinal
   Segment SEGMENT
   Series SERIES
   Session SESSION
@@ -466,6 +467,7 @@ our %FIX_ALIASES =
 
   NUMERAL =>
   {
+    '0' => [qw(zero)],
     '1' => [qw(one !)],
     '2' => [qw(two)],
     '3' => [qw(three)],
@@ -559,7 +561,7 @@ our %FIX_ALIASES =
     Day => [],
 
     Group => [qw(gr grp groups pool)],
-    Table => [qw(t)],
+    Table => [qw(t ta tb)],
     Room => [qw(rm)],
     Boards => [qw(board brds donnes spil)],
     Weekend => [],
@@ -608,7 +610,7 @@ my @ROMAN = qw(i ii iii iv v vi vii viii ix x xi xii);
 my @PRE_GROUP = (qw(f group qf sf semi t open), @ROMAN);
 
 my $PRE_GROUP_PATTERN = join('|', map { quotemeta } @PRE_GROUP);
-our $PRE_GROUP_REGEX = qr/^($PRE_GROUP_PATTERN)([AB])$/i;
+our $PRE_GROUP_REGEX = qr/\b($PRE_GROUP_PATTERN)([AB])\b/i;
 
 my @POST_GROUP = qw(rr);
 

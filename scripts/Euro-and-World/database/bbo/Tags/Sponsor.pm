@@ -11,9 +11,6 @@ package Tags::Sponsor;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes);
 
-use lib '.';
-use TeamBBO;
-
 my @MULTI_WORDS =
 (
   '101 Fasteignasala',

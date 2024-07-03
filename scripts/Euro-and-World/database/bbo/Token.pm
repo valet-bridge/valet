@@ -160,8 +160,19 @@ sub merge_num_num
 
   if ($sep eq '/' || $sep eq '_' || $sep eq 'of')
   {
-    $self->{FIELD} = 'N_OF_N';
-    $self->{VALUE} .= ' of ' . $token2->{VALUE};
+    if ($self->{FIELD} eq 'NUMERAL' &&
+        $token2->{FIELD} eq 'NUMERAL' &&
+        $self->{VALUE} <= $token2->{VALUE})
+    {
+      $self->{FIELD} = 'N_OF_N';
+      $self->{VALUE} .= ' of ' . $token2->{VALUE};
+    }
+    else
+    {
+      # Override the apparent separator.
+      $self->{FIELD} = 'MAJOR_MINOR';
+      $self->{VALUE} .= '+' . $token2->{VALUE};
+    }
   }
   elsif ($sep eq ':' || $sep eq ' ')
   {

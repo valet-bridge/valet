@@ -11,9 +11,6 @@ package Tags::Age;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes);
 
-use lib '.';
-use TeamBBO;
-
 my @MULTI_WORDS =
 (
 );
@@ -26,8 +23,8 @@ my %MULTI_TYPOS =
   U20 => ['u 20', 'u-20', 'junior u20'],
   U21 => ['u 21', 'u-21', 'under 21'],
   U25 => ['u 25'],
-  U26 => ['u-26', 'under 26', 'undar 26'],
-  U28 => ['under 28'],
+  U26 => ['u-26', 'under 26', 'undar 26', 'u 26'],
+  U28 => ['under 28', 'u 28'],
   O55 => ['over 55']
 );
 

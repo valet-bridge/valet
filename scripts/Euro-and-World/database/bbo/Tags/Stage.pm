@@ -11,9 +11,6 @@ package Tags::Stage;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes);
 
-use lib '.';
-use TeamBBO;
-
 my @MULTI_WORDS =
 (
   'Closed Room',
@@ -32,28 +29,30 @@ my %MULTI_TYPOS =
     'playoff final', 'playoffs final', 'final poule'],
   'Knock-out' => ['knock-outs', 'knock out'],
   Match => ['mecz o'],
-  'Open Room' => ['open rm', 'room 1'],
+  'Open Room' => ['open rm', 'room 1', 'or'],
   Playoff => ['play offs', 'play-off', 'play off'],
   Qualifying => ['qualification for', 'qualification to',
     'wbg qualification', 'qualification to', 'qualifying swiss',
     'playoff qual'],
   Quarterfinal => ['quarter final', 'quarter finals', 
-    'quarter-final', 'quarter-finals', 
+    'quarter-final', 'quarter-finals', 'qua fin',
     'quater final', 'quater finals', 'round of 8', 'rd of 8', 'r of 8',
     'æwieræfina³y', 'qtr finals', 'phase à 8', 'quoter-finals'],
   Rof6 => ['round of 6'],
   Rof12 => ['round of 12', 'rnd of12'],
   Rof14 => ['phase à 14'],
   Rof16 => ['round of 16', 'rd of 16', 'phase à 16', 'phase à16',
-    'rd 0f 16', 'phase 16', 'rnd of 16'],
+    'rd 0f 16', 'phase 16', 'rnd of 16', 'rof 16'],
   Rof28 => ['phase à 28', 'phase 28'],
-  Rof32 => ['round of 32', 'rd of 32', 'rnd of 32'],
+  Rof32 => ['round of 32', 'rd of 32', 'rnd of 32', 'rof 32'],
   Rof64 => ['round of 64', 'rd of 64'],
+  Rof128 => ['round of 128', 'rof 128'],
   'Round-robin' => ['round robin', 'raound robin'],
   Semifinal => ['semi final', 'semi finals', 'semi-fiinal', 's_f',
     'semi-final', 'semi-finals', 'round of 4', 'round-of-four',
     'demi-final', 'demi-finale', 'demi-finales', 'half final', 's-final',
     'meia final', 'meias finais', 'yf', 'demi-nale', 'dsemi final',
+    'sem fin',
     'pó³fina³y', 'semi and final', 'semis and finals', 'semi f',
     'playoff semi-final', 'playoffs semi final', 'semi finale',
     'play-off semi-final', 'semi- final', 'semi finall'],

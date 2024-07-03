@@ -10,7 +10,8 @@ use Time::HiRes qw(time);
 package Chains;
 
 use lib '.';
-use lib '..';
+# use lib '..';
+# use lib './Tags';
 
 use Separators;
 
@@ -20,42 +21,42 @@ our @EXPORT = qw(
   post_process_event
   %CATEGORIES);
 
-use Age;
-use City;
-use Color;
-use Country;
-use Date;
-use Form;
-use Gender;
-use Memorial;
-use Movement;
-use Organizer;
-use Origin;
-use Scoring;
-use Sponsor;
-use Stage;
-use Tname;
-use Twords;
-use Weekday;
+# use Tags::Age;
+# use Tags::City;
+# use Tags::Color;
+# use Tags::Country;
+# use Tags::Date;
+# use Tags::Form;
+# use Tags::Gender;
+# use Tags::Person;
+# use Tags::Movement;
+# use Tags::Organization;
+# use Tags::Origin;
+# use Tags::Scoring;
+# use Tags::Sponsor;
+# use Tags::Stage;
+# use Tags::Tname;
+# use Tags::Tword;
+# use Tags::Weekday;
 
-our %CATEGORIES;
-$CATEGORIES{AGE} = Age->new();
-$CATEGORIES{CITY} = City->new();
-$CATEGORIES{COLOR} = Color->new();
-$CATEGORIES{COUNTRY} = Country->new();
-$CATEGORIES{DATE} = Date->new();
-$CATEGORIES{FORM} = Form->new();
-$CATEGORIES{GENDER} = Gender->new();
-$CATEGORIES{MEMORIAL} = Memorial->new();
-$CATEGORIES{MOVEMENT} = Movement->new();
-$CATEGORIES{ORGANIZER} = Organizer->new();
-$CATEGORIES{ORIGIN} = Origin->new();
-$CATEGORIES{SCORING} = Scoring->new();
-$CATEGORIES{SPONSOR} = Sponsor->new();
-$CATEGORIES{STAGE} = Stage->new();
-$CATEGORIES{TNAME} = Tname->new();
-$CATEGORIES{TOURNAMENT} = Twords->new();
-$CATEGORIES{WEEKDAY} = Weekday->new();
+# my %CATEGORIES;
+# $CATEGORIES{AGE} = Tags::Age->new();
+# $CATEGORIES{CITY} = Tags::City->new();
+# $CATEGORIES{COLOR} = Tags::Color->new();
+# $CATEGORIES{COUNTRY} = Tags::Country->new();
+# $CATEGORIES{DATE} = Tags::Date->new();
+# $CATEGORIES{FORM} = Tags::Form->new();
+# $CATEGORIES{GENDER} = Tags::Gender->new();
+# $CATEGORIES{PERSON} = Tags::Person->new();
+# $CATEGORIES{MOVEMENT} = Tags::Movement->new();
+# $CATEGORIES{ORGANIZATION} = Tags::Organization->new();
+# $CATEGORIES{ORIGIN} = Tags::Origin->new();
+# $CATEGORIES{SCORING} = Tags::Scoring->new();
+# $CATEGORIES{SPONSOR} = Tags::Sponsor->new();
+# $CATEGORIES{STAGE} = Tags::Stage->new();
+# $CATEGORIES{TNAME} = Tags::Tname->new();
+# $CATEGORIES{TWORD} = Tags::Tword->new();
+# $CATEGORIES{WEEKDAY} = Tags::Weekday->new();
 
 
 my @SIMPLE_LIST = qw(NUMERAL ORDINAL LETTER SEPARATOR);
@@ -75,7 +76,8 @@ sub split_on_kill
 
     for my $index (0 .. $chain->last())
     {
-      next unless $chain->category($index) eq 'KILL';
+      next unless $chain->category($index) eq 'KILL' ||
+        $chain->field($index) eq 'DESTROY';
 
       my $chain2 = $chain->kill_on($index);
       if (defined $chain2)
@@ -196,13 +198,13 @@ sub split_on_singleton
         $chain->complete_if_last_is(0, 'COMPLETE');
 
         my $field = $chain->field($index);
-        my $obj = $CATEGORIES{$field};
-        next unless defined $obj;
+        # my $obj = $CATEGORIES{$field};
+        # next unless defined $obj;
 
-        if (! $obj->valid($chain->value($index)))
-        {
-          die "No SINGLETON $field, " . $chain->value->($index);
-        }
+        # if (! $obj->valid($chain->value($index)))
+        # {
+          # die "No SINGLETON $field, " . $chain->value($index);
+        # }
 
         if ($chain->last() == 0)
         {

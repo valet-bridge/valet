@@ -11,10 +11,6 @@ package Tags::Organization;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes);
 
-use lib '.';
-
-use TeamBBO;
-
 my @MULTI_WORDS =
 (
   'Bridge Great Britain',
@@ -35,6 +31,7 @@ my %MULTI_TYPOS =
   BFAME => ['bridge federation of asia & the middle east'],
   BGB => ['Bridge Great Britain'],
   BFI => ['bridge federation of india'],
+  BrBaOn => ['bridge base online'],
   BuBF => ['bulgarian bridge federation'],
   CACBF => ['central american and caribbean bridge federation'],
   'CBA WZ' => ['Contract Bridge Association West Zone', 'cbz wz'],

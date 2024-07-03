@@ -11,9 +11,6 @@ package Tags::Scoring;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes);
 
-use lib '.';
-use TeamBBO;
-
 my @MULTI_WORDS =
 (
   'IMPs Across the Field'
@@ -23,7 +20,8 @@ my %MULTI_TYPOS =
 (
   BAM => ['board-a-match'],
   IMP => ['butler scoring', "IMP's"],
-  'IMPs Across the Field' => ["imp's across the field"]
+  'IMPs Across the Field' => ["imp's across the field"],
+  MP => ['match point'],
 );
 
 my @SINGLE_WORDS = qw(
