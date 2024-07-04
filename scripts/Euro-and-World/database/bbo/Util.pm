@@ -12,7 +12,8 @@ use Exporter;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(ordinal_to_numeral ordinalize 
-  unteam split_on_dates_new split_on_capitals_new split_on_multi_new);
+  unteam split_on_dates_new split_on_capitals_new split_on_multi_new
+  append_token_new title_specific_hashes_new);
 
 
 sub ordinal_to_numeral
@@ -227,7 +228,7 @@ sub split_on_capitals_new
     push @result, $word;
   }
 
-  return join(" ", @result);
+  return join('', @result);
 }
 
 
@@ -302,6 +303,67 @@ sub split_on_multi_new
       }
     }
   }
+}
+
+
+sub append_token_new
+{
+  my ($chain, $category, $tag, $value, $text, $pos) = @_;
+
+  if ($tag eq 'ROMAN')
+  {
+    # As Tag::Roman finds this, it appears as a SINGLETON.
+    $category = 'COUNTER';
+  }
+  elsif ($tag eq 'ITERATOR' || $tag eq 'AMBIGUOUS')
+  {
+    $category = $tag;
+    $tag = uc($value);
+  }
+
+  $chain->append_general($category, $tag, $value, $text, $pos);
+
+  # TODO Note that in the TITLE version, there is also histo_title! 
+}
+
+
+sub title_specific_hashes_new
+{
+  my ($whole, $tag_order, $pos, $text, $sep_flag, $chain) = @_;
+
+  for my $core_tag (@$tag_order)
+  {
+    my $fix = $whole->get_single($core_tag, lc($text));
+    next unless defined $fix->{CATEGORY};
+
+    my $tag = $fix->{CATEGORY};
+
+    append_token_new($chain, 'SINGLETON', $tag, $fix->{VALUE}, $text, $pos);
+
+    if ($tag eq 'GENDER' && $fix->{VALUE} eq 'Open')
+    {
+      # Special case: Add an extra token.
+      if ($sep_flag)
+      {
+        append_token_new($chain, 'SEPARATOR', 'VIRTUAL', '|', '', $pos);
+      }
+
+      append_token_new($chain, 'SINGLETON', 'AGE', $fix->{VALUE}, $text, $pos);
+    }
+    elsif ($tag eq 'AGE' && $fix->{VALUE} eq 'Girls')
+    {
+      # Special case: Add an extra token.
+      if ($sep_flag)
+      {
+        append_token_new($chain, 'SEPARATOR', 'VIRTUAL', '|', '', $pos);
+      }
+
+      append_token_new($chain, 'SINGLETON', 'GENDER', 'Women', $text, $pos);
+    }
+
+    return 1;
+  }
+  return 0;
 }
 
 1;

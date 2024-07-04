@@ -94,7 +94,7 @@ while ($line = <$fh>)
     next;
   }
 
-  if ($chunk{BBONO} == 5581)
+  if ($chunk{BBONO} == 4696)
   {
     print "HERE\n";
   }
@@ -131,7 +131,7 @@ while ($line = <$fh>)
     Event::Study::study($whole, \%chunk, \%result, 
       $chain_event, \$unknown_events);
 
-    Event::Preprocess::pre_process(\@chains_event);
+    # Event::Preprocess::pre_process(\@chains_event);
 
     process_event(\@chains_event);
     Patterns::Chainify::process(\@EVENT_REDUCTIONS, \@chains_event, 

@@ -23,6 +23,7 @@ use Event::Cookbook;
 
 my @TAG_ORDER = qw(
   DESTROY
+  ITERATOR
   STAGE
   AGE
   ORGANIZATION
@@ -156,6 +157,10 @@ sub split_on_digit_groups
   for my $i (reverse 0 .. $#$values)
   {
     my $value = $values->[$i];
+
+    # We want these coupled tightly, as the separator should be virtual.
+    next if ($value =~ /^[A-F]\d+$/ || $value =~ /^\d+[A-F]$/);
+
     $value =~s/#(\d)/$1/g;
     $value =~ s/(\d)([a-zA-Z])/$1 $2/g;
     $value =~ s/([a-zA-Z])(\d)/$1 $2/g;
@@ -166,7 +171,6 @@ sub split_on_digit_groups
     $value =~ s/(\d)\s+st(?=\b|_)/$1st /gi; # Either \b or _
     $value =~ s/(\d)\s+er/$1th /gi;
     $value =~ s/(\d)\s+eme/$1th /gi;
-    #$value =~ s/(\d)\s+st\b/$1st/gi;
 
     $value =~ s/n°(\d)/ $1/gi;
     $value =~ s/(\d)ª/${1}th /gi;
@@ -459,6 +463,29 @@ sub is_year
 }
 
 
+sub is_lettered_number
+{
+  my ($part, $token, $chain) = @_;
+
+  my ($number, $letter);
+  if ($part =~ /^(\d+)([A-F])$/)
+  {
+    ($number, $letter) = ($1, $2);
+  }
+  elsif ($part =~ /^([A-F])(\d+)$/)
+  {
+    ($number, $letter) = ($2, $1);
+  }
+  else
+  {
+    return 0;
+  }
+
+  $token->set_general('COUNTER', 'NL', $number . $letter);
+  return 1;
+}
+
+
 sub merge_on_digit_runs
 {
   my ($chain) = @_;
@@ -559,7 +586,10 @@ sub study_part
 {
   # Returns 1 if it is a kill.
 
-  my ($part, $result, $i, $chain, $unsolved_flag) = @_;
+  my ($whole, $part, $result, $i, $chain, $unsolved_flag) = @_;
+
+  return if title_specific_hashes_new($whole, \@TAG_ORDER, 
+    $i, $part, 1, $chain);
 
   my $token = Token->new();
   $token->set_origin($i, $part);
@@ -623,6 +653,7 @@ sub study_part
   return 0 if fix_small_ordinal($part, $token);
   return 0 if is_letter($part, $token);
   return 0 if is_year($part, $token);
+  return 0 if is_lettered_number($part, $token);
 
   print "UNKNOWN $part\n";
   $$unsolved_flag = 1;
@@ -702,7 +733,7 @@ sub study
       my @a = grep { $_ ne '' } split(/$sep/, $values[$i]);
       foreach my $value (@a)
       {
-        study_part($value, $result, $i, $chain, \$unsolved_flag);
+        study_part($whole, $value, $result, $i, $chain, \$unsolved_flag);
       }
     }
   }

@@ -1,9 +1,5 @@
-Event:
-21194, R17 11D
-Should not match 17 and 11, should match R(virtual)17(space)
-as R-17, similarly for 11D
-
-5880: 9th_9_1 should be 9 of 9, 1st weekend
+Clean up Event code
+Compare to old Event results
 
 Team chains should be set to complete (Team chain length stats)
 

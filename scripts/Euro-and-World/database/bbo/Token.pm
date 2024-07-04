@@ -466,6 +466,7 @@ sub set_unknown
 {
   my ($self, $text) = @_;
   $self->{CATEGORY} = 'UNKNOWN';
+  $self->{FIELD} = 'UNKNOWN';
   $self->{VALUE} = $text;
 }
 

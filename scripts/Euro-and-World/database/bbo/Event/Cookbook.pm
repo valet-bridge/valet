@@ -110,12 +110,12 @@ my @SINGLETON_LIST = qw(
   TEAM1_ORDINAL TEAM2_ORDINAL
   TEAM1_QUARTER TEAM2_QUARTER
   TEAM1_TWORD TEAM2_TWORD
-  Berth
+  Berth BERTH
   Day DAY
   DATE_START DATE_END
   Group GROUP
   Flight FLIGHT
-  Half
+  Half HALF
   Match MATCH
   Quarter
   Phase PHASE
@@ -124,19 +124,20 @@ my @SINGLETON_LIST = qw(
   Segment SEGMENT
   Series SERIES
   Session SESSION
-  Set
+  Set SET
   Stage
   Stanza STANZA
   Table TABLE
+  TEMPO
 
-  Boards
+  Boards BOARDS
   J
   O
-  Part
-  Place
+  Part PART
+  Place PLACE
   Q
   Rof ROF
-  Room
+  Room ROOM
   ROUND
   S
   Section SECTION

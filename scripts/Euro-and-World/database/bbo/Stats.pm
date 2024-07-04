@@ -52,7 +52,7 @@ sub print_count
   }
 
   print '-' x 16, "\n";
-  printf("%6s%10d\n\n", "Sum", $csum);
+  printf("%6s%10d\n", "Sum", $csum);
   printf("%6s%10d\n\n", "Count", $cprod);
 }
 
