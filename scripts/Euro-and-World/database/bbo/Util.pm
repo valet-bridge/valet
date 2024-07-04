@@ -34,6 +34,7 @@ sub ordinal_to_numeral
       $part =~ /^(\d+)nd$/i)
   {
     my $ord = $1;
+    $ord =~ s/^0+//; # Remove leading zeroes
     if ($ord < 0 || $ord >= 100)
     {
       die "Large ordinal? $ord";

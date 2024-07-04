@@ -348,30 +348,6 @@ sub is_small_integer
 }
 
 
-sub fix_small_ordinal
-{
-  my ($part, $token) = @_;
-  if (my $ord = ordinal_to_numeral($part))
-  {
-    # We don't check whether the ending matches the number.
-    if ($ord >= 0 && $ord < 100)
-    {
-      $ord =~ s/^0+//; # Remove leading zeroes
-      $token->set_ordinal_counter($ord);
-      return 1;
-    }
-    else
-    {
-      die "Large ordinal? $part";
-    }
-  }
-  else
-  {
-    return 0;
-  }
-}
-
-
 sub is_letter
 {
   my ($part, $token) = @_;
@@ -604,7 +580,11 @@ sub study_part
   }
 
   return 0 if is_small_integer($part, $token);
-  return 0 if fix_small_ordinal($part, $token);
+  if (my $ord = ordinal_to_numeral($part))
+  {
+    $token->set_ordinal_counter($ord);
+    return 0;
+  }
   return 0 if is_letter($part, $token);
   return 0 if is_year($part, $token);
   return 0 if is_lettered_number($part, $token);

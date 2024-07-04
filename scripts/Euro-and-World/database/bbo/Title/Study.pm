@@ -127,7 +127,6 @@ sub singleton_non_tag_matches
   }
   elsif (my $ord = Util::ordinal_to_numeral($value))
   {
-    $ord =~ s/^0+//; # Remove leading zeroes
     append_token($chain, 'COUNTER', 'ORDINAL', $ord, $value, 
       $pos, $main::histo_title, $PREFIX);
     return 1;
