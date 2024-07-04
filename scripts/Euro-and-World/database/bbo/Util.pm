@@ -176,10 +176,9 @@ sub split_on_dates_new
     else
     {
       $tags->[$i] = 0;
-      $values->[$i] = fix_post_date($values->[$i]);
       if ($post_fix_flag)
       {
-        $values->[$i] = fix_post_date($date_values[$i]);
+        $values->[$i] = fix_post_date($values->[$i]);
       }
       $texts->[$i] = $values->[$i];
     }
@@ -214,6 +213,7 @@ sub split_on_capitals_new
   my ($text) = @_;
 
   # my @words = split(/\s+/, $text);
+  $text =~ s/\s+/ /g;
   my @words = split(/([\s-])/, $text);
   my @result;
 
@@ -259,7 +259,7 @@ sub split_on_multi_new
       elsif ($sep_flag)
       {
         # Put separators between each element.
-        my $ad = 2 * ($#a + 1);
+        my $ad = 2 * ($#a + 1) - 1;
         splice(@$tags, $i, 1, (0) x $ad);
         splice(@$values, $i, 1, ('') x $ad);
         splice(@$texts, $i, 1, ('') x $ad);
@@ -280,9 +280,9 @@ sub split_on_multi_new
             $texts->[$j] = $a[$ai];
           }
 
-          $tags->[$j] = 'SEPARATOR';
-          $values->[$j] = '|';
-          $texts->[$j] = '';
+          $tags->[$j+1] = 'SEPARATOR';
+          $values->[$j+1] = '|';
+          $texts->[$j+1] = '';
         }
       }
       else
@@ -308,7 +308,7 @@ sub split_on_multi_new
 
 sub append_token_new
 {
-  my ($chain, $category, $tag, $value, $text, $pos) = @_;
+  my ($chain, $category, $tag, $value, $text, $pos, $histo, $prefix) = @_;
 
   if ($tag eq 'ROMAN')
   {
@@ -323,13 +323,14 @@ sub append_token_new
 
   $chain->append_general($category, $tag, $value, $text, $pos);
 
-  # TODO Note that in the TITLE version, there is also histo_title! 
+  $histo->incr($prefix . $tag);
 }
 
 
 sub title_specific_hashes_new
 {
-  my ($whole, $tag_order, $pos, $text, $sep_flag, $chain) = @_;
+  my ($whole, $tag_order, $pos, $text, $sep_flag, $chain,
+    $histo, $prefix) = @_;
 
   for my $core_tag (@$tag_order)
   {
@@ -338,27 +339,32 @@ sub title_specific_hashes_new
 
     my $tag = $fix->{CATEGORY};
 
-    append_token_new($chain, 'SINGLETON', $tag, $fix->{VALUE}, $text, $pos);
+    append_token_new($chain, 'SINGLETON', $tag, $fix->{VALUE}, $text, 
+      $pos, $histo, $prefix);
 
     if ($tag eq 'GENDER' && $fix->{VALUE} eq 'Open')
     {
       # Special case: Add an extra token.
       if ($sep_flag)
       {
-        append_token_new($chain, 'SEPARATOR', 'VIRTUAL', '|', '', $pos);
+        append_token_new($chain, 'SEPARATOR', 'VIRTUAL', '|', '', 
+          $pos, $histo, $prefix);
       }
 
-      append_token_new($chain, 'SINGLETON', 'AGE', $fix->{VALUE}, $text, $pos);
+      append_token_new($chain, 'SINGLETON', 'AGE', $fix->{VALUE}, $text, 
+        $pos, $histo, $prefix);
     }
     elsif ($tag eq 'AGE' && $fix->{VALUE} eq 'Girls')
     {
       # Special case: Add an extra token.
       if ($sep_flag)
       {
-        append_token_new($chain, 'SEPARATOR', 'VIRTUAL', '|', '', $pos);
+        append_token_new($chain, 'SEPARATOR', 'VIRTUAL', '|', '', 
+          $pos, $histo, $prefix);
       }
 
-      append_token_new($chain, 'SINGLETON', 'GENDER', 'Women', $text, $pos);
+      append_token_new($chain, 'SINGLETON', 'GENDER', 'Women', $text, 
+        $pos, $histo, $prefix);
     }
 
     return 1;

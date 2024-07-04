@@ -100,151 +100,6 @@ sub split_on_some_numbers
 }
 
 
-sub fix_post_date
-{
-  # Can only do this when it would no longer destroy a date.
-  my $text = pop;
-
-  # 20xx/yy, 20xx-yy, 20xx_yy -> 20xx-20yy.
-  $text =~ s/20(\d\d)[\/\-_](\d\d)\b/20$1-20$2/;
-
-  # x/y -> x of y.
-  $text =~ s/(\d)\/(\d)/$1 of $2/g;
-
-  # x-y -> x to y.
-  $text =~ s/\b(\d)-(\d)/$1 to $2/g;
-
-  # 0x -> 200x.
-  $text =~ s/\b(0\d)\b/20$1/g;
-
-  # 20xx -> add spaces on either side.
-  $text =~ s/(20\d\d)/ $1 /g;
-
-  return $text;
-}
-
-
-sub split_on_capitals
-{
-  # Split on single capitals, assuming that each "word" has 3+ letters.
-  my ($text) = @_;
-
-  my @words = split(/\s+/, $text);
-  my @result;
-
-  foreach my $word (@words) 
-  {
-    if ($word =~ /^[a-zA-Z]+$/ && $word !~ /[A-Z](?:[a-z]{0,1}[A-Z]|\z)/)
-    {
-      $word =~ s/(?<=[a-z])(?=[A-Z])/ /g;
-    }
-
-    # Do not split if the word contains a sub-word of length < 3.
-    push @result, $word;
-  }
-
-  return join(" ", @result);
-}
-
-
-sub split_on_dates
-{
-  my ($text, $tags, $values, $texts) = @_;
-
-  @$values = split / - /, $text;
-  @$tags = (0) x (1 + $#$values);
-  @$texts = @$values;
-
-  for my $i (reverse 0 .. $#$values)
-  {
-    my @date_values = 
-      grep { $_ ne '' } split /(\d\d\d\d[-_]\d\d[-_]\d\d)/, $values->[$i];
-
-    if ($#date_values > 0)
-    {
-      splice(@$values, $i+1, 0, (0) x $#date_values);
-      splice(@$tags, $i+1, 0, (0) x $#date_values);
-
-      for my $j (0 .. $#date_values)
-      {
-        if ($date_values[$j] =~ /^\d\d\d\d[-_]\d\d[-_]\d\d$/)
-        {
-          $tags->[$i+$j] = 'DATE';
-          $values->[$i+$j] = $date_values[$j];
-          $texts->[$i+$j] = $date_values[$j];
-        }
-        else
-        {
-          $tags->[$i+$j] = 0;
-          $values->[$i+$j] = fix_post_date($date_values[$j]);
-          $texts->[$i+$j] = $date_values[$j];
-        }
-      }
-    }
-    else
-    {
-      $tags->[$i] = 0;
-      $values->[$i] = fix_post_date($values->[$i]);
-      $texts->[$i] = $values->[$i];
-    }
-
-    if ($i > 0)
-    {
-      # Make sure that elements on different sides of the ' - ' end up
-      # in different chains.
-      splice(@$tags, $i, 0, 'DESTROY');
-      splice(@$values, $i, 0, '');
-      splice(@$texts, $i, 0, '');
-    }
-  }
-}
-
-
-sub split_on_multi
-{
-  my ($whole, $tags, $values, $texts) = @_;
-
-  for my $tag (@TAG_ORDER)
-  {
-    my $mregex = $whole->get_multi_regex($tag);
-    next if $mregex eq '';
-
-    for my $i (reverse 0 .. $#$values)
-    {
-      next if $tags->[$i] ne '0';
-      my @a = grep { $_ ne '' } split /$mregex/, $values->[$i];
-
-      if ($#a == 0)
-      {
-        # Optimize for this frequent special case.
-        my $mp = $whole->get_multi($tag, lc($a[0]));
-        if (defined $mp)
-        {
-          $tags->[$i] = $tag;
-          $values->[$i] = $mp;
-        }
-      }
-      else
-      {
-        splice(@$tags, $i, 1, (0) x ($#a+1));
-        splice(@$values, $i, 1, @a);
-        splice(@$texts, $i, 1, @a);
-
-        for my $j ($i .. $i + $#a)
-        {
-          my $mp = $whole->get_multi($tag, lc($values->[$j]));
-          if (defined $mp)
-          {
-            $tags->[$j] = $tag;
-            $values->[$j] = $mp;
-          }
-        }
-      }
-    }
-  }
-}
-
-
 sub title_specific_hashes
 {
   my ($whole, $pos, $text, $chain) = @_;
@@ -304,7 +159,9 @@ sub study_value
   }
 
   # The general solution.
-  return if title_specific_hashes($whole, $pos, $value, $chain);
+  # return if title_specific_hashes($whole, $pos, $value, $chain);
+  return if title_specific_hashes_new($whole, \@TAG_ORDER, $pos, $value, 
+    0, $chain, $main::histo_title, 'TITLE_');
 
   append_token($chain, 'UNKNOWN', '', $value, $value, $pos);
 
@@ -344,20 +201,8 @@ sub append_token
 {
   my ($chain, $category, $tag, $value, $text, $pos) = @_;
 
-  if ($tag eq 'ROMAN')
-  {
-    # As Tag::Roman finds this, it appears as a SINGLETON.
-    $category = 'COUNTER';
-  }
-  elsif ($tag eq 'ITERATOR' || $tag eq 'AMBIGUOUS')
-  {
-    $category = $tag;
-    $tag = uc($value);
-  }
-
-  $chain->append_general($category, $tag, $value, $text, $pos);
-
-  $main::histo_title->incr('TITLE_' . $tag);
+  append_token_new($chain, $category, $tag, $value, $text, $pos,
+    $main::histo_title, 'TITLE_');
 }
 
 
@@ -369,13 +214,13 @@ sub study
 
   my $ntext = split_on_some_numbers($text);
 
-  my $stext = split_on_capitals($ntext);
+  my $stext = split_on_capitals_new($ntext);
 
   my @tags = (0);
   my @values = ();
   my @texts = ();
-  split_on_dates($stext, \@tags, \@values, \@texts);
-  split_on_multi($whole, \@tags, \@values, \@texts);
+  split_on_dates_new($stext, \@tags, \@values, \@texts, 1);
+  split_on_multi_new($whole, \@TAG_ORDER, 0, \@tags, \@values, \@texts);
 
   # Split on separators.
   my $sep = qr/[\s+\-\+\._:;&@"\/\(\)\|]/;

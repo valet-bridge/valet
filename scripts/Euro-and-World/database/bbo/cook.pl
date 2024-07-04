@@ -37,6 +37,7 @@ $whole->init_hashes();
 
 use Histo;
 our $histo_title = Histo->new();
+our $histo_event = Histo->new();
 
 use Stats;
 my $stats_team = Stats->new();
@@ -94,7 +95,7 @@ while ($line = <$fh>)
     next;
   }
 
-  if ($chunk{BBONO} == 4696)
+  if ($chunk{BBONO} == 100)
   {
     print "HERE\n";
   }
@@ -184,8 +185,8 @@ $stats_team->print("Team");
 
 if ($do_events)
 {
+  $histo_event->print();
   $stats_event->print("Event");
-
   print_reduction_stats("Event", \@reduction_event_stats);
   print "\nTotal unknown events: $unknown_events\n\n";
 }

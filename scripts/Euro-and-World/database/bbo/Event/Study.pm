@@ -30,6 +30,8 @@ my @TAG_ORDER = qw(
   SCORING
 );
 
+our $histo_event;
+
 
 sub undate
 {
@@ -589,7 +591,7 @@ sub study_part
   my ($whole, $part, $result, $i, $chain, $unsolved_flag) = @_;
 
   return if title_specific_hashes_new($whole, \@TAG_ORDER, 
-    $i, $part, 1, $chain);
+    $i, $part, 1, $chain, $main::histo_event, 'EVENT_');
 
   my $token = Token->new();
   $token->set_origin($i, $part);
@@ -681,7 +683,7 @@ sub study
   my @tags = (0);
   my @values = ();
   my @texts = ();
-  split_on_dates_new($ctext, \@tags, \@values, \@texts);
+  split_on_dates_new($ctext, \@tags, \@values, \@texts, 0);
 
   # Extract a date in certain formats.
   # my $date = '';

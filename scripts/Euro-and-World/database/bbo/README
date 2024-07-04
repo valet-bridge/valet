@@ -1,3 +1,4 @@
+Use Util code in Title as well (don't call it _new anymore then)
 Clean up Event code
 Compare to old Event results
 
