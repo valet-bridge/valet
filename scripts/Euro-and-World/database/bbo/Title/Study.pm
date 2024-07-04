@@ -45,6 +45,7 @@ my @TAG_ORDER = qw(
   AMBIGUOUS
 );
 
+my $PREFIX = 'TITLE_';
 our $histo_title;
 
 
@@ -108,31 +109,36 @@ sub study_value
   {
     if ($value >= 1900 && $value < 2100)
     {
-      append_token($chain, 'SINGLETON', 'YEAR', $value, $value, $pos);
+      append_token($chain, 'SINGLETON', 'YEAR', $value, $value, 
+        $pos, $main::histo_title, $PREFIX);
     }
     else
     {
-      append_token($chain, 'COUNTER', 'NUMERAL', $value, $value, $pos);
+      append_token($chain, 'COUNTER', 'NUMERAL', $value, $value, 
+        $pos, $main::histo_title, $PREFIX);
     }
     return;
   }
   elsif ($value =~ /^[A-HJa-h]$/)
   {
-    append_token($chain, 'COUNTER', 'LETTER', $value, $value, $pos);
+    append_token($chain, 'COUNTER', 'LETTER', $value, $value, 
+      $pos, $main::histo_title, $PREFIX);
     return;
   }
   elsif (my $ord = Util::ordinal_to_numeral($value))
   {
     $ord =~ s/^0+//; # Remove leading zeroes
-    append_token($chain, 'COUNTER', 'ORDINAL', $ord, $value, $pos);
+    append_token($chain, 'COUNTER', 'ORDINAL', $ord, $value, 
+      $pos, $main::histo_title, $PREFIX);
     return;
   }
 
   # The general solution.
-  return if title_specific_hashes($whole, \@TAG_ORDER, $pos, $value, 
-    0, $chain, $main::histo_title, 'TITLE_');
+  return if singleton_tag_matches($whole, \@TAG_ORDER, $pos, $value, 
+    0, $chain, $main::histo_title, $PREFIX);
 
-  append_token($chain, 'UNKNOWN', '', $value, $value, $pos);
+  append_token($chain, 'UNKNOWN', '', $value, $value, 
+    $pos, $main::histo_title, $PREFIX);
 
   print "QQQ ", $value, "\n";
   $$unknown_value_flag = 1;
@@ -166,15 +172,6 @@ sub study_component
 }
 
 
-sub append_token
-{
-  my ($chain, $category, $tag, $value, $text, $pos) = @_;
-
-  append_token_new($chain, $category, $tag, $value, $text, $pos,
-    $main::histo_title, 'TITLE_');
-}
-
-
 sub study
 {
   my ($whole, $bbono, $text, $chain, $unknowns) = @_;
@@ -204,7 +201,7 @@ sub study
     {
       # We had a multi-word hit.
       append_token($chain, 'SINGLETON', $tags[$i], $values[$i], 
-        $texts[$i], $i);
+        $texts[$i], $i, $main::histo_title, $PREFIX);
       $token_no++;
     }
     else

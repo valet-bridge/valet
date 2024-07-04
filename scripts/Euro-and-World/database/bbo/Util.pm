@@ -11,9 +11,9 @@ use open ':std', ':encoding(UTF-8)';
 use Exporter;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(ordinal_to_numeral ordinalize 
-  unteam split_on_dates split_on_capitals split_on_multi
-  append_token_new title_specific_hashes);
+our @EXPORT = qw(ordinal_to_numeral ordinalize unteam 
+  split_on_dates split_on_capitals split_on_multi
+  append_token singleton_tag_matches);
 
 
 sub ordinal_to_numeral
@@ -306,7 +306,7 @@ sub split_on_multi
 }
 
 
-sub append_token_new
+sub append_token
 {
   my ($chain, $category, $tag, $value, $text, $pos, $histo, $prefix) = @_;
 
@@ -327,7 +327,7 @@ sub append_token_new
 }
 
 
-sub title_specific_hashes
+sub singleton_tag_matches
 {
   my ($whole, $tag_order, $pos, $text, $sep_flag, $chain,
     $histo, $prefix) = @_;
@@ -339,7 +339,7 @@ sub title_specific_hashes
 
     my $tag = $fix->{CATEGORY};
 
-    append_token_new($chain, 'SINGLETON', $tag, $fix->{VALUE}, $text, 
+    append_token($chain, 'SINGLETON', $tag, $fix->{VALUE}, $text, 
       $pos, $histo, $prefix);
 
     if ($tag eq 'GENDER' && $fix->{VALUE} eq 'Open')
@@ -347,11 +347,11 @@ sub title_specific_hashes
       # Special case: Add an extra token.
       if ($sep_flag)
       {
-        append_token_new($chain, 'SEPARATOR', 'VIRTUAL', '|', '', 
+        append_token($chain, 'SEPARATOR', 'VIRTUAL', '|', '', 
           $pos, $histo, $prefix);
       }
 
-      append_token_new($chain, 'SINGLETON', 'AGE', $fix->{VALUE}, $text, 
+      append_token($chain, 'SINGLETON', 'AGE', $fix->{VALUE}, $text, 
         $pos, $histo, $prefix);
     }
     elsif ($tag eq 'AGE' && $fix->{VALUE} eq 'Girls')
@@ -359,11 +359,11 @@ sub title_specific_hashes
       # Special case: Add an extra token.
       if ($sep_flag)
       {
-        append_token_new($chain, 'SEPARATOR', 'VIRTUAL', '|', '', 
+        append_token($chain, 'SEPARATOR', 'VIRTUAL', '|', '', 
           $pos, $histo, $prefix);
       }
 
-      append_token_new($chain, 'SINGLETON', 'GENDER', 'Women', $text, 
+      append_token($chain, 'SINGLETON', 'GENDER', 'Women', $text, 
         $pos, $histo, $prefix);
     }
 

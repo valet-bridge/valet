@@ -590,7 +590,7 @@ sub study_part
 
   my ($whole, $part, $result, $i, $chain, $unsolved_flag) = @_;
 
-  return if title_specific_hashes($whole, \@TAG_ORDER, 
+  return if singleton_tag_matches($whole, \@TAG_ORDER, 
     $i, $part, 1, $chain, $main::histo_event, 'EVENT_');
 
   my $token = Token->new();
