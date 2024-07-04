@@ -100,36 +100,6 @@ sub split_on_some_numbers
 }
 
 
-sub title_specific_hashes
-{
-  my ($whole, $pos, $text, $chain) = @_;
-
-  for my $core_tag (@TAG_ORDER)
-  {
-    my $fix = $whole->get_single($core_tag, lc($text));
-    next unless defined $fix->{CATEGORY};
-
-    my $tag = $fix->{CATEGORY};
-
-    append_token($chain, 'SINGLETON', $tag, $fix->{VALUE}, $text, $pos);
-
-    if ($tag eq 'GENDER' && $fix->{VALUE} eq 'Open')
-    {
-      # Special case: Add an extra token.
-      append_token($chain, 'SINGLETON', 'AGE', $fix->{VALUE}, $text, $pos);
-    }
-    elsif ($tag eq 'AGE' && $fix->{VALUE} eq 'Girls')
-    {
-      # Special case: Add an extra token.
-      append_token($chain, 'SINGLETON', 'GENDER', 'Women', $text, $pos);
-    }
-
-    return 1;
-  }
-  return 0;
-}
-
-
 sub study_value
 {
   my ($whole, $value, $pos, $chain, $unknown_value_flag) = @_;
@@ -159,8 +129,7 @@ sub study_value
   }
 
   # The general solution.
-  # return if title_specific_hashes($whole, $pos, $value, $chain);
-  return if title_specific_hashes_new($whole, \@TAG_ORDER, $pos, $value, 
+  return if title_specific_hashes($whole, \@TAG_ORDER, $pos, $value, 
     0, $chain, $main::histo_title, 'TITLE_');
 
   append_token($chain, 'UNKNOWN', '', $value, $value, $pos);
@@ -214,13 +183,14 @@ sub study
 
   my $ntext = split_on_some_numbers($text);
 
-  my $stext = split_on_capitals_new($ntext);
+  my $stext = split_on_capitals($ntext);
 
   my @tags = (0);
   my @values = ();
   my @texts = ();
-  split_on_dates_new($stext, \@tags, \@values, \@texts, 1);
-  split_on_multi_new($whole, \@TAG_ORDER, 0, \@tags, \@values, \@texts);
+  split_on_dates($stext, \@tags, \@values, \@texts, 1);
+
+  split_on_multi($whole, \@TAG_ORDER, 0, \@tags, \@values, \@texts);
 
   # Split on separators.
   my $sep = qr/[\s+\-\+\._:;&@"\/\(\)\|]/;

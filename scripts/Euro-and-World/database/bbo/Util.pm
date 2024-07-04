@@ -12,8 +12,8 @@ use Exporter;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(ordinal_to_numeral ordinalize 
-  unteam split_on_dates_new split_on_capitals_new split_on_multi_new
-  append_token_new title_specific_hashes_new);
+  unteam split_on_dates split_on_capitals split_on_multi
+  append_token_new title_specific_hashes);
 
 
 sub ordinal_to_numeral
@@ -118,7 +118,7 @@ sub fix_post_date
 }
 
 
-sub split_on_dates_new
+sub split_on_dates
 {
   my ($text, $tags, $values, $texts, $post_fix_flag) = @_;
 
@@ -207,7 +207,7 @@ sub split_on_dates_new
 }
 
 
-sub split_on_capitals_new
+sub split_on_capitals
 {
   # Split on single capitals, assuming that each "word" has 3+ letters.
   my ($text) = @_;
@@ -232,7 +232,7 @@ sub split_on_capitals_new
 }
 
 
-sub split_on_multi_new
+sub split_on_multi
 {
   my ($whole, $tag_order, $sep_flag, $tags, $values, $texts) = @_;
 
@@ -327,7 +327,7 @@ sub append_token_new
 }
 
 
-sub title_specific_hashes_new
+sub title_specific_hashes
 {
   my ($whole, $tag_order, $pos, $text, $sep_flag, $chain,
     $histo, $prefix) = @_;

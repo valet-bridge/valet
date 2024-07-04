@@ -590,7 +590,7 @@ sub study_part
 
   my ($whole, $part, $result, $i, $chain, $unsolved_flag) = @_;
 
-  return if title_specific_hashes_new($whole, \@TAG_ORDER, 
+  return if title_specific_hashes($whole, \@TAG_ORDER, 
     $i, $part, 1, $chain, $main::histo_event, 'EVENT_');
 
   my $token = Token->new();
@@ -678,19 +678,12 @@ sub study
 
   my $dtext = despace($chunk->{EVENT});
   my $utext = unteam($dtext, $result);
-  my $ctext = split_on_capitals_new($utext);
+  my $ctext = split_on_capitals($utext);
 
   my @tags = (0);
   my @values = ();
   my @texts = ();
-  split_on_dates_new($ctext, \@tags, \@values, \@texts, 0);
-
-  # Extract a date in certain formats.
-  # my $date = '';
-  # my $mashed = undate($text, \$date);
-
-  # Separate words that run into each other.
-  # split_on_known_words(\@tags, \@values, \@texts);
+  split_on_dates($ctext, \@tags, \@values, \@texts, 0);
 
   # Split on groups of digits.
   split_on_digit_groups(\@tags, \@values, \@texts);
@@ -698,7 +691,7 @@ sub study
   # Split some known words + A or B at the end.
   split_on_tournament_group(\@tags, \@values, \@texts);
 
-  split_on_multi_new($whole, \@TAG_ORDER, 1, \@tags, \@values, \@texts);
+  split_on_multi($whole, \@TAG_ORDER, 1, \@tags, \@values, \@texts);
 
   # Split on separators.
   my $sep = qr/([\s+\-\+._:;"\/\(\)\|])/;
@@ -749,14 +742,6 @@ sub study
     print "WWW $chunk->{BBONO}: $chunk->{EVENT}\n" if $chain->last() > 0;
     print "\n";
   }
-
-  # if ($date ne '')
-  # {
-    # my $token = Token->new();
-    # $token->set_origin($#parts+1, $date);
-    # $token->set_singleton('DATE', $date);
-    # $chain->append($token);
-  # }
 }
 
 1;

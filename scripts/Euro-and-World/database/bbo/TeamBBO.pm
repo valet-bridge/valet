@@ -539,7 +539,7 @@ sub study_part
 }
 
 
-sub split_on_multi
+sub split_on_multi_old
 {
   my ($text, $parts, $tags) = @_;
 
@@ -679,7 +679,7 @@ sub study_team
 
   my @parts = ($text);
   my @tags = (0);
-  split_on_multi($text, \@parts, \@tags);
+  split_on_multi_old($text, \@parts, \@tags);
 
   # Split on separators.
   my $sep = qr/[\s+\-\+\._;&"\/\(\)\|]/;
