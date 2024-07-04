@@ -9,7 +9,7 @@ use utf8;
 use open ':std', ':encoding(UTF-8)';
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(study_event);
+our @EXPORT = qw(study);
 
 use lib '.';
 use lib '..';
@@ -199,28 +199,6 @@ sub split_on_pre_group
     $value =~ s/$front$back/$front $back/;
     $values->[$pos] = $value;
 
-    # splice(@$tags, $pos, 0, (0) x 2);
-    # splice(@$values, $pos, 0, ('') x 2);
-    # splice(@$texts, $pos, 0, ('') x 2);
-
-    # my $fix = $FIX_HASH{lc($front)};
-    # if (! defined $fix->{VALUE})
-    # {
-      # die "No value for $front";
-    # }
-
-    # $tags->[$pos] = $fix->{CATEGORY};
-    # $values->[$pos] = $fix->{VALUE};
-    # $texts->[$pos] = $front;
-
-    # $tags->[$pos+1] = 'SEPARATOR';
-    # $values->[$pos+1] = '|';
-    # $texts->[$pos+1] = '';
-
-    # $tags->[$pos+2] = 0;
-    # $values->[$pos+2] = $back;
-    # $texts->[$pos+2] = $back;
-
     return 1;
   }
   return 0;
@@ -370,41 +348,15 @@ sub is_small_integer
 }
 
 
-sub is_small_ordinal
-{
-  my $part = pop;
-  if
-     ($part =~ /^(\d+)th$/i ||
-      $part =~ /^(\d+)rth$/i ||
-      $part =~ /^(\d+)st$/i ||
-      $part =~ /^(\d+)rst$/i ||
-      $part =~ /^(\d+)rd$/i ||
-      $part =~ /^(\d+)er$/i ||
-      $part =~ /^(\d+)eme$/i ||
-      $part =~ /^(\d+)°$/i ||
-      $part =~ /^(\d+)º$/i ||
-      $part =~ /^(\d+)ª$/i ||
-      $part =~ /^(\d+)nd$/i)
-  {
-    return $1;
-  }
-  else
-  {
-    return 0;
-  }
-}
-
-
 sub fix_small_ordinal
 {
   my ($part, $token) = @_;
-  if (my $ord = is_small_ordinal($part))
+  if (my $ord = ordinal_to_numeral($part))
   {
     # We don't check whether the ending matches the number.
     if ($ord >= 0 && $ord < 100)
     {
       $ord =~ s/^0+//; # Remove leading zeroes
-      # $token->set_singleton('ORDINAL', $ord);
       $token->set_ordinal_counter($ord);
       return 1;
     }
