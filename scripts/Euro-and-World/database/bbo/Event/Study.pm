@@ -23,8 +23,12 @@ use Event::Cookbook;
 
 my @TAG_ORDER = qw(
   DESTROY
+  ROMAN
+  TWORD
   ITERATOR
+  COUNTRY
   STAGE
+  GENDER
   AGE
   ORGANIZATION
   SCORING
@@ -32,37 +36,6 @@ my @TAG_ORDER = qw(
 
 my $PREFIX = 'EVENT_';
 our $histo_event;
-
-
-sub undate
-{
-  my ($text, $date_ref) = @_;
-
-  if ($text =~ /(\d\d\d\d)(\d\d)(\d\d)0(\d)/)
-  {
-    my ($year, $month, $day, $r) = ($1, $2, $3, $4);
-    $$date_ref = "$year-$month-$day";
-    $text =~ s/\d\d\d\d\d\d\d\d0\d/Round $r /;
-  }
-  elsif ($text =~ /(\d\d\d\d-\d\d-\d\d)/)
-  {
-    $$date_ref = $1;
-    $text =~ s/\d\d\d\d-\d\d-\d\d/ /;
-  }
-  elsif ($text =~ /(\d\d\d\d)\.(\d\d)\.(\d\d)/)
-  {
-    my ($year, $month, $day) = ($1, $2, $3);
-    $$date_ref = "$year-$month-$day";
-    $text =~ s/\d\d\d\d\.\d\d\.\d\d/ /;
-  }
-  elsif ($text =~ /(\d\d\d\d)_(\d\d)_(\d\d)/)
-  {
-    my ($year, $month, $day) = ($1, $2, $3);
-    $$date_ref = "$year-$month-$day";
-    $text =~ s/\d\d\d\d_\d\d_\d\d/ /;
-  }
-  return $text;
-}
 
 
 sub split_on_known_words
@@ -335,11 +308,13 @@ sub is_letter
   my $lc = lc($part);
   if ($lc =~ /^[abcdefhuv]$/)
   {
+print "XXX8 $part\n";
     $token->set_letter_counter($part);
     return 1;
   }
   elsif ($lc =~ /^[a-z]$/)
   {
+print "XXX9 $part\n";
     $token->set_singleton('LETTER', $part);
     return 1;
   }
@@ -498,42 +473,21 @@ sub study_value
       # It could be that the country name is spelled differently
       # in EVENT and TEAMS.
       $token->set_kill($value);
-    }
-    elsif ($fix->{CATEGORY} eq 'ITERATOR')
-    {
-      $token->set_iterator_field($fix->{VALUE});
-    }
-    elsif ($fix->{CATEGORY} eq 'AGE' &&
-        $fix->{VALUE} eq 'Girls')
-    {
-      # Special case signifying both age and gender.
-
-      $token->set_singleton('AGE', 'Juniors');
-
-      my $token2 = Token->new();
-      $token2->set_origin($$pos, $value);
-      $chain->append($token2);
-      $token2->set_separator('VIRTUAL');
-
-      my $token3 = Token->new();
-      $token3->set_origin($$pos, $value);
-      $chain->append($token3);
-      $token3->set_singleton('GENDER', 'Women');
+print "XXX1 $value\n";
     }
     elsif ($fix->{CATEGORY} eq 'NUMERAL')
     {
+print "XXX4 $value\n";
       $token->set_numeral_counter($fix->{VALUE});
     }
     elsif ($fix->{CATEGORY} eq 'ORDINAL')
     {
+print "XXX5 $value\n";
       $token->set_ordinal_counter($fix->{VALUE});
-    }
-    elsif ($fix->{CATEGORY} eq 'ROMAN')
-    {
-      $token->set_roman_counter($fix->{VALUE});
     }
     else
     {
+print "XXX7 $value\n";
       $token->set_singleton($fix->{CATEGORY}, $fix->{VALUE});
     }
     return;
@@ -614,7 +568,7 @@ sub study
   }
 
   # Merge on digit runs (3-4-5-6-7).
-  merge_on_digit_runs($chain);
+  # merge_on_digit_runs($chain);
 
   if ($unsolved_flag)
   {

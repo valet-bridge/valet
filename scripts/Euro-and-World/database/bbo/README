@@ -1,4 +1,22 @@
-Use Util code in Title as well (don't call it _new anymore then)
+Make a Tags/Ordinal with first and second from Util/ordinal_to_numeral,
+also 
+ Eighth
+ Fir
+ Fourth
+ LAST
+ Last
+ Primera
+ Sec
+ Segunda
+ Segundo
+ Tercer
+ Third
+ ULTIMO
+ eighth
+ fifth
+ fourth
+
+
 Clean up Event code
 Compare to old Event results
 
