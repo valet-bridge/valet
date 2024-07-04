@@ -583,13 +583,13 @@ our %FIX_ALIASES =
   KILL =>
   {
     Kill => [qw(
-      untitled bbo1 bbo2 bbo3 bbo4 bbvg bbovg vg vmg 
-      bridge dup man pabfc
+      vg vmg 
+      man pabfc
       daskalakis robinso stern hol
-      fluff reloaded missed train tren ch mac ore friendly mandarin
-      game series npc rank tpatkawan patkawan phase tadkov friendship
-      am afternoon night soir barriere best delayed us
-      combined for only alle int titan silver gold vp sm
+      fluff train tren ch mac ore friendly mandarin
+      game rank tpatkawan patkawan tadkov friendship
+      am afternoon night soir barriere delayed us
+      for int titan silver gold vp sm
       è no n° =), 
       '?', 'one!', 'ab', 'a&b', ']', 'mandarin table']
   }
