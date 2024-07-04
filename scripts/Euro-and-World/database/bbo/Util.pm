@@ -13,7 +13,8 @@ use Exporter;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(ordinal_to_numeral ordinalize unteam 
   split_on_dates split_on_capitals split_on_multi
-  append_token singleton_tag_matches);
+  append_token 
+  singleton_non_tag_matches_new singleton_tag_matches);
 
 
 sub ordinal_to_numeral
@@ -325,6 +326,41 @@ sub append_token
   $chain->append_general($category, $tag, $value, $text, $pos);
 
   $histo->incr($prefix . $tag);
+}
+
+
+sub singleton_non_tag_matches_new
+{
+  my ($value, $pos, $chain, $histo, $prefix) = @_;
+
+  if ($value =~ /^\d+$/)
+  {
+    if ($value >= 1900 && $value < 2100)
+    {
+      append_token($chain, 'SINGLETON', 'YEAR', $value, $value,
+        $pos, $histo, $prefix);
+    }
+    else
+    {
+      $value =~ s/^0+// unless $value == 0;
+      append_token($chain, 'COUNTER', 'NUMERAL', $value, $value,
+        $pos, $histo, $prefix);
+    }
+    return 1;
+  }
+  elsif ($value =~ /^[A-EHa-eh]$/)
+  {
+    append_token($chain, 'COUNTER', 'LETTER', $value, $value,
+      $pos, $histo, $prefix);
+    return 1;
+  }
+  elsif (my $ord = Util::ordinal_to_numeral($value))
+  {
+    append_token($chain, 'COUNTER', 'ORDINAL', $ord, $value,
+      $pos, $histo, $prefix);
+    return 1;
+  }
+  return 0;
 }
 
 

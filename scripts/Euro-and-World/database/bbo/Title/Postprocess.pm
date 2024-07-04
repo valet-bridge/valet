@@ -144,7 +144,7 @@ sub post_process_stand_alone_singles
     }
     elsif ($cat eq 'AMBIGUOUS')
     {
-      $chain->complete_if_last_is(0, 'DESTROY');
+      # $chain->complete_if_last_is(0, 'DESTROY');
     }
     elsif ($cat eq 'ITERATOR' &&
         lc($token->value()) eq 'match')
@@ -290,6 +290,19 @@ sub post_process_markers
       $token0->set_general('MARKER', 'AMBIGUOUS', 
         $token0->value() . ' ' . $token1->value());
       $chain->delete(1, 1);
+      $chain->complete_if_last_is(0, 'COMPLETE');
+    }
+  }
+
+  for my $chain (@$chains)
+  {
+    next unless $chain->status() eq 'OPEN';
+    next unless $chain->last() == 0;
+
+    my $token0 = $chain->check_out(0);
+    if ($token0->category() eq 'AMBIGUOUS')
+    {
+      $token0->set_general('MARKER', 'AMBIGUOUS', $token0->value());
       $chain->complete_if_last_is(0, 'COMPLETE');
     }
   }

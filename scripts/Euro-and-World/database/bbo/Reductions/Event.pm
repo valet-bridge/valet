@@ -291,11 +291,27 @@ our @EVENT_REDUCTIONS =
     COMPLETION => 1
   },
 
+  # 1st half -> Half 1 (ITER COUNTER), initially anchored.
+  {
+    PATTERN =>
+    [
+      { CATEGORY => ['COUNTER'], FIELD => ['ORDINAL'] },
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => ['ITERATOR'] }
+    ],
+    ANCHOR => 'BEGIN',
+    KEEP_LAST => 2,
+    METHOD => \&Patterns::Chainify::process_swap,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
   # Table/Match counter
   {
     PATTERN =>
     [
-      { CATEGORY => ['ITERATOR'], FIELD => [qw(Table Match)] },
+      { CATEGORY => ['ITERATOR'], FIELD => [qw(Table Match ROUND)] },
       { CATEGORY => ['SEPARATOR'] },
       { CATEGORY => ['COUNTER'] }
     ],

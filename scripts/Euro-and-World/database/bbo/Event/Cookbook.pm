@@ -131,6 +131,7 @@ my @SINGLETON_LIST = qw(
   TEMPO
 
   Boards BOARDS
+  F G
   J
   O
   Part PART

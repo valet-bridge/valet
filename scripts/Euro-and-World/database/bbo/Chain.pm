@@ -45,6 +45,20 @@ sub append_general
 }
 
 
+sub append_separator
+{
+  my ($self, $value, $text, $pos) = @_;
+
+  my $token = Token->new();
+  $token->set_origin($pos, $text);
+  if (! Separators::set_token($value, $token))
+  {
+    die "Not really a separator";
+  }
+  $self->append($token);
+}
+
+
 sub insert_at
 {
   my ($self, $index, $token) = @_;

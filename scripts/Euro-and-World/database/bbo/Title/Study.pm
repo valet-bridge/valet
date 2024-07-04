@@ -139,7 +139,9 @@ sub study_value
 {
   my ($whole, $value, $pos, $chain, $unknown_value_flag) = @_;
 
-  return if singleton_non_tag_matches($value, $pos, $chain);
+  # return if singleton_non_tag_matches($value, $pos, $chain);
+  return if singleton_non_tag_matches_new($value, $pos, $chain,
+    $main::histo_title, $PREFIX);
 
   return if singleton_tag_matches($whole, \@TAG_ORDER, $pos, $value, 
     0, $chain, $main::histo_title, $PREFIX);
@@ -208,7 +210,7 @@ sub study
     {
       # We had a multi-word hit.
       append_token($chain, 'SINGLETON', $tags[$i], $values[$i], 
-        $texts[$i], $i, $main::histo_title, $PREFIX);
+        $texts[$i], $token_no, $main::histo_title, $PREFIX);
       $token_no++;
     }
     else
@@ -225,7 +227,7 @@ sub study
   if ($unsolved_flag)
   {
     $$unknowns++;
-    print "TTT $bbono: $text\n" if $chain->last() > 0;
+    print "SSS $bbono: $text\n" if $chain->last() > 0;
     print "\n";
   }
 }

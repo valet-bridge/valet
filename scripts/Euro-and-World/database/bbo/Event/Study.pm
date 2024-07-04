@@ -30,6 +30,7 @@ my @TAG_ORDER = qw(
   SCORING
 );
 
+my $PREFIX = 'EVENT_';
 our $histo_event;
 
 
@@ -330,6 +331,7 @@ sub is_small_integer
   {
     $part =~ s/^0+//; # Remove leading zeroes
     $token->set_numeral_counter($part);
+die;
     return 1;
   }
   elsif ($part =~ /^#(\d+)$/ && $1 >= 0 && $1 < 100)
@@ -339,6 +341,7 @@ sub is_small_integer
     $n =~ s/^0+//; # Remove leading zeroes
 
     $token->set_numeral_counter($n);
+die;
     return 1;
   }
   else
@@ -362,29 +365,6 @@ sub is_letter
   {
     $token->set_singleton('LETTER', $part);
     return 1;
-  }
-  else
-  {
-    return 0;
-  }
-}
-
-
-sub is_year
-{
-  my ($part, $token) = @_;
-
-  if ($part =~ /^\d\d\d\d$/)
-  {
-    if ($part >= 1900 && $part <= 2100)
-    {
-      $token->set_singleton('YEAR', $part);
-      return 1;
-    }
-    else
-    {
-      die "Not a year? $part";
-    }
   }
   else
   {
@@ -512,22 +492,25 @@ sub merge_on_digit_runs
 }
 
 
-sub study_part
+sub study_value
 {
   # Returns 1 if it is a kill.
 
-  my ($whole, $part, $result, $i, $chain, $unsolved_flag) = @_;
+  my ($whole, $value, $result, $pos, $chain, $unsolved_flag) = @_;
+
+  return if singleton_non_tag_matches_new($value, $$pos, $chain,
+    $main::histo_event, $PREFIX);
 
   return if singleton_tag_matches($whole, \@TAG_ORDER, 
-    $i, $part, 1, $chain, $main::histo_event, 'EVENT_');
+    $$pos, $value, 1, $chain, $main::histo_event, 'EVENT_');
 
   my $token = Token->new();
-  $token->set_origin($i, $part);
+  $token->set_origin($$pos, $value);
   $chain->append($token);
 
-  return if Separators::set_token($part, $token);
+  return if Separators::set_token($value, $token);
 
-  my $fix = $FIX_HASH{lc($part)};
+  my $fix = $FIX_HASH{lc($value)};
   if (defined $fix->{CATEGORY})
   {
     if ($fix->{CATEGORY} eq 'KILL' ||
@@ -537,7 +520,7 @@ sub study_part
     {
       # It could be that the country name is spelled differently
       # in EVENT and TEAMS.
-      $token->set_kill($part);
+      $token->set_kill($value);
     }
     elsif ($fix->{CATEGORY} eq 'ITERATOR')
     {
@@ -551,12 +534,12 @@ sub study_part
       $token->set_singleton('AGE', 'Juniors');
 
       my $token2 = Token->new();
-      $token2->set_origin($i, $part);
+      $token2->set_origin($$pos, $value);
       $chain->append($token2);
       $token2->set_separator('VIRTUAL');
 
       my $token3 = Token->new();
-      $token3->set_origin($i, $part);
+      $token3->set_origin($$pos, $value);
       $chain->append($token3);
       $token3->set_singleton('GENDER', 'Women');
     }
@@ -579,20 +562,13 @@ sub study_part
     return;
   }
 
-  return 0 if is_small_integer($part, $token);
-  if (my $ord = ordinal_to_numeral($part))
-  {
-    $token->set_ordinal_counter($ord);
-    return 0;
-  }
-  return 0 if is_letter($part, $token);
-  return 0 if is_year($part, $token);
-  return 0 if is_lettered_number($part, $token);
+  return 0 if is_letter($value, $token);
+  return 0 if is_lettered_number($value, $token);
 
-  print "UNKNOWN $part\n";
+  print "UNKNOWN $value\n";
   $$unsolved_flag = 1;
 
-  $token->set_unknown($part);
+  $token->set_unknown($value);
   return 0;
 }
 
@@ -640,13 +616,7 @@ sub study
       # We had a hit.
       if ($tags[$i] eq 'SEPARATOR')
       {
-        my $token = Token->new();
-        $token->set_origin($i, $values[$i]);
-        if (! Separators::set_token($values[$i], $token))
-        {
-          die "Not a separator after all?";
-        }
-        $chain->append($token);
+        $chain->append_separator($values[$i], $texts[$i], $token_no);
       }
       else
       {
@@ -660,7 +630,8 @@ sub study
       my @a = grep { $_ ne '' } split(/$sep/, $values[$i]);
       foreach my $value (@a)
       {
-        study_part($whole, $value, $result, $i, $chain, \$unsolved_flag);
+        study_value($whole, $value, $result, \$token_no, 
+          $chain, \$unsolved_flag);
       }
     }
   }
@@ -671,7 +642,7 @@ sub study
   if ($unsolved_flag)
   {
     $$unknowns++;
-    print "WWW $chunk->{BBONO}: $chunk->{EVENT}\n" if $chain->last() > 0;
+    print "EEE $chunk->{BBONO}: $chunk->{EVENT}\n" if $chain->last() > 0;
     print "\n";
   }
 }
