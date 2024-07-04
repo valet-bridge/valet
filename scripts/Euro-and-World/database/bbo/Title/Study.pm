@@ -101,9 +101,9 @@ sub split_on_some_numbers
 }
 
 
-sub study_value
+sub singleton_non_tag_matches
 {
-  my ($whole, $value, $pos, $chain, $unknown_value_flag) = @_;
+  my ($value, $pos, $chain) = @_;
 
   if ($value =~ /^\d+$/)
   {
@@ -117,23 +117,31 @@ sub study_value
       append_token($chain, 'COUNTER', 'NUMERAL', $value, $value, 
         $pos, $main::histo_title, $PREFIX);
     }
-    return;
+    return 1;
   }
   elsif ($value =~ /^[A-HJa-h]$/)
   {
     append_token($chain, 'COUNTER', 'LETTER', $value, $value, 
       $pos, $main::histo_title, $PREFIX);
-    return;
+    return 1;
   }
   elsif (my $ord = Util::ordinal_to_numeral($value))
   {
     $ord =~ s/^0+//; # Remove leading zeroes
     append_token($chain, 'COUNTER', 'ORDINAL', $ord, $value, 
       $pos, $main::histo_title, $PREFIX);
-    return;
+    return 1;
   }
+  return 0;
+}
 
-  # The general solution.
+
+sub study_value
+{
+  my ($whole, $value, $pos, $chain, $unknown_value_flag) = @_;
+
+  return if singleton_non_tag_matches($value, $pos, $chain);
+
   return if singleton_tag_matches($whole, \@TAG_ORDER, $pos, $value, 
     0, $chain, $main::histo_title, $PREFIX);
 
