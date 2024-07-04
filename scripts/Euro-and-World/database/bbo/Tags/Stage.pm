@@ -42,7 +42,7 @@ my %MULTI_TYPOS =
   Rof12 => ['round of 12', 'rnd of12'],
   Rof14 => ['phase à 14'],
   Rof16 => ['round of 16', 'rd of 16', 'phase à 16', 'phase à16',
-    'rd 0f 16', 'phase 16', 'rnd of 16', 'rof 16'],
+    'rd 0f 16', 'phase 16', 'rnd of 16', 'rof 16', '1_8e finale'],
   Rof28 => ['phase à 28', 'phase 28'],
   Rof32 => ['round of 32', 'rd of 32', 'rnd of 32', 'rof 32'],
   Rof64 => ['round of 64', 'rd of 64'],

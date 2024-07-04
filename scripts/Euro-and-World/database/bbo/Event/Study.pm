@@ -162,11 +162,13 @@ sub split_on_digit_groups
     my $value = $values->[$i];
 
     # We want these coupled tightly, as the separator should be virtual.
-    next if ($value =~ /^[A-F]\d+$/ || $value =~ /^\d+[A-F]$/);
+    # next if ($value =~ /^[A-F]\d+$/ || $value =~ /^\d+[A-F]$/);
 
     $value =~s/#(\d)/$1/g;
-    $value =~ s/(\d)([a-zA-Z])/$1 $2/g;
-    $value =~ s/([a-zA-Z])(\d)/$1 $2/g;
+    $value =~ s/(\d)([a-zA-Z]{2,})/$1 $2/g;
+    $value =~ s/([a-zA-Z]{2,})(\d)/$1 $2/g;
+    $value =~ s/(\d)([g-zG-Z])/$1 $2/g;
+    $value =~ s/([g-zG-Z])(\d)/$1 $2/g;
     $value =~ s/(\d)\s+th/$1th /gi;
     $value =~ s/(\d)\s+rth/$1rth /gi;
     $value =~ s/(\d)\s+nd/$1nd /gi;
@@ -178,6 +180,10 @@ sub split_on_digit_groups
     $value =~ s/n°(\d)/ $1/gi;
     $value =~ s/(\d)ª/${1}th /gi;
     $value =~ s/(\d)°/${1}th /gi;
+
+    $value =~ s/\bF(\d)([AB])\b/F $1$2/g;
+    $value =~ s/\bF(\d+)_(\d+)\b/F $1_$2/g;
+
     $values->[$i] = $value;
   }
 }
@@ -322,35 +328,6 @@ sub split_on_tournament_group
 }
 
 
-sub is_small_integer
-{
-  my ($part, $token) = @_;
-
-  # Up to 100
-  if ($part =~ /^\d+$/ && $part >= 0 && $part < 100)
-  {
-    $part =~ s/^0+//; # Remove leading zeroes
-    $token->set_numeral_counter($part);
-die;
-    return 1;
-  }
-  elsif ($part =~ /^#(\d+)$/ && $1 >= 0 && $1 < 100)
-  {
-    # #10
-    my $n = $1;
-    $n =~ s/^0+//; # Remove leading zeroes
-
-    $token->set_numeral_counter($n);
-die;
-    return 1;
-  }
-  else
-  {
-    return 0;
-  }
-}
-
-
 sub is_letter
 {
   my ($part, $token) = @_;
@@ -378,11 +355,11 @@ sub is_lettered_number
   my ($part, $token, $chain) = @_;
 
   my ($number, $letter);
-  if ($part =~ /^(\d+)([A-F])$/)
+  if ($part =~ /^(\d+)([A-Fa-f])$/)
   {
     ($number, $letter) = ($1, $2);
   }
-  elsif ($part =~ /^([A-F])(\d+)$/)
+  elsif ($part =~ /^([A-Fa-f])(\d+)$/)
   {
     ($number, $letter) = ($2, $1);
   }
