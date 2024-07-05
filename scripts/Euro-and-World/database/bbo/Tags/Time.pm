@@ -24,17 +24,23 @@ my @SINGLE_WORDS = qw(
   Christmas
   Afternoon Day Evening
   Fall
-  April May June July September
-  Tuesday Saturday Summer Sunday
+  January February April May June July September November December
+  Tuesday Friday Saturday Sunday
+  Summer 
   Week Weekend
 );
 
 my %SINGLE_TYPOS =
 (
   Christmas => ['xmas'],
+  December => ['dec'],
+  January => ['jan'],
+  Friday => ['freitag'],
   May => ['mayo'],
+  November => ['nov'],
+  Saturday => ['samstag'],
   September => ['settembre'],
-  Sunday => ['sønd']
+  Sunday => ['sønd', 'sonntag']
 );
 
 

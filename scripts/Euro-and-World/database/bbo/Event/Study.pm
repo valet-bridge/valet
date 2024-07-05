@@ -35,6 +35,7 @@ my @TAG_ORDER = qw(
   AGE
   ORGANIZATION
   SCORING
+  TIME
 );
 
 my $PREFIX = 'EVENT_';

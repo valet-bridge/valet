@@ -271,7 +271,7 @@ my %SINGLE_TYPOS =
     'entrenamiento'],
   Trial => ['trials', 'trail', 'trails', 'triaals',
     'selection', 'seleccion', 'selección', 'select', 'selectiontrials',
-    'selections', 'selekction', 'selelection', 'sélection',
+    'selections', 'selekction', 'selelection', 'sélection', 'selectio',
     'séléction', 'entrainement', 'slection', 'prueba'],
   Trophy => ['trofeo', 'trohy', 'trpohy', 'troph'],
   University => ['unibridge', 'uni', 'universities', 'univeristies'],
