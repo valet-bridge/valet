@@ -102,6 +102,7 @@ my %COUNTRY_TO_CITY =
     'dimitrovgrad', 'dobrich', 'karlovo', 'kesten', 'kyustendil', 
     'la marina', 'pelotas', 'pernik', 'pleven', 'plovdiv', 'popovo', 
     'shumen', 'sofia', 'stara zagora', 'varna', 'vraca', 'yambol'],
+  Canada => ['vancouver'],
   Chile => ['paimado', 'santiago', 'temuco'],
   China => [
     'beijing', 'changzhou', 'chengdu', 'chongqing', 'dalian', 'dongguan',
@@ -186,6 +187,7 @@ my %COUNTRY_TO_CITY =
     'nijmegen', 'the hague', 'utrecht'],
   'New Zealand' => ['auckland', 'wellington'],
   'North Macedonia' => ['gevgelija', 'skopje'],
+  'Northern Ireland' => ['ballymena'],
   Norway => [
     'arendal', 'bergen', 'bodø', 'brandbu', 'farsund', 'flekkefjord', 
     'gudbrandsdal', 'gjøvik og vardal', 'hamar',

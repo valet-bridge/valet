@@ -29,6 +29,7 @@ use Tags::Iterator;
 use Tags::Meet;
 use Tags::Month;
 use Tags::Nationality;
+use Tags::Numeral;
 use Tags::Ordinal;
 use Tags::Organization;
 use Tags::Other;
@@ -68,6 +69,7 @@ my %TAGS =
   MEET => \&Tags::Meet::set_hashes,
   MONTH => \&Tags::Month::set_hashes,
   NATIONALITY => \&Tags::Nationality::set_hashes,
+  NUMERAL => \&Tags::Numeral::set_hashes,
   ORDINAL => \&Tags::Ordinal::set_hashes,
   ORGANIZATION => \&Tags::Organization::set_hashes,
   OTHER => \&Tags::Other::set_hashes,

@@ -51,6 +51,8 @@ use Tags::Age;
 use Tags::Color;
 use Tags::Scoring;
 use Tags::Form;
+use Tags::Month;
+use Tags::Day;
 
 use Tags::Tword;
 use Tags::Meet;
@@ -85,6 +87,8 @@ my @TAG_ORDER = qw(
   TEAM_TWORD
   TEAM_MEET
   TEAM_TIME
+  TEAM_MONTH
+  TEAM_DAY
   TEAM_DESTROY
 );
 
@@ -148,6 +152,8 @@ sub init_hashes
   Tags::Tword::set_hashes($method, 'TEAM_TWORD');
   Tags::Meet::set_hashes($method, 'TEAM_MEET');
   Tags::Time::set_hashes($method, 'TEAM_TIME');
+  Tags::Month::set_hashes($method, 'TEAM_MONTH');
+  Tags::Day::set_hashes($method, 'TEAM_DAY');
 
   # TODO Goal is mainly to have one of these.
   Tags::Destroy::set_hashes($method, 'TEAM_DESTROY');

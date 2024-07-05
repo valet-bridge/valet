@@ -22,23 +22,30 @@ use Event::Despace;
 use Event::Cookbook;
 
 my @TAG_ORDER = qw(
-  DESTROY
   ROMAN
+  TNAME
+  DESTROY
   TWORD
+  CLUB
 
-  ITERATOR
+  ORGANIZATION
+  SPONSOR
   COUNTRY
   NATIONALITY
-  STAGE
+  CITY
   FORM
   GENDER
   AGE
-  ORGANIZATION
   SCORING
+  PERSON
+  ITERATOR
+  STAGE
   TIME
   MONTH
   DAY
+  NUMERAL
   ORDINAL
+  PARTICLE
 );
 
 my $PREFIX = 'EVENT_';
@@ -355,102 +362,6 @@ sub is_lettered_number
 }
 
 
-sub merge_on_digit_runs
-{
-  my ($chain) = @_;
-
-  my $N = 3;
-  return unless $chain->last() >= 2*($N-1);
-
-  my ($start_index, $end_index, $current_start, $current_count);
-  my $previous = undef;
-  my $found = 0;
-
-  for (my $index = 0; $index <= $chain->last(); $index++) 
-  {
-    my $token = $chain->check_out($index);
-
-    # A separator of space or dash is OK, others are not.
-    next if ($token->category() eq 'SEPARATOR' &&
-        ($token->field() eq $SEPARATORS{SPACE} || 
-         $token->field() eq $SEPARATORS{DASH}));
-
-    if ($token->category() ne 'COUNTER' ||
-        $token->field() ne 'NUMERAL')
-    {
-      # Interrupt the run.
-      $previous = undef;
-      next;
-    }
-
-    # Start a new sequence if needed
-    if (! defined $previous || 
-        $token->value() != $previous + 1) 
-    {
-      # Check if a valid sequence has been found and is long enough
-      if (defined $previous && 
-          defined $current_start && 
-          $current_count >= $N && 
-          ! $found) 
-      {
-        $start_index = $current_start;
-        $end_index = $index - 1;
-        $found = 1;
-        last;
-      }
-
-      # Start a new sequence
-      $current_start = $index;
-      $current_count = 1;
-    } 
-    else 
-    {
-      # Continue the sequence
-      $current_count++;
-    }
-
-    # Update previous
-    $previous = $token->value();
-  }
-
-  # Check for the case where the sequence might end at the last element
-  if (! $found && defined $current_start && $current_count >= $N) 
-  {
-    $start_index = $current_start;
-    $end_index = $chain->last();
-  }
-
-  return unless defined $start_index;
-
-  # Find the next numbered indices from each side.
-  my $left_index = $start_index+1;
-  while ($left_index < $end_index &&
-      ($chain->category($left_index) ne 'COUNTER' ||
-       $chain->field($left_index) ne 'NUMERAL'))
-  {
-    $left_index++;
-  }
-
-  my $right_index = $end_index-1;
-  while ($right_index > $start_index &&
-      ($chain->category($right_index) ne 'COUNTER' ||
-       $chain->field($right_index) ne 'NUMERAL'))
-  {
-    $right_index--;
-  }
-
-  die "Huh?" unless $left_index <= $right_index;
-
-  if ($left_index < $right_index)
-  {
-    $chain->collapse_elements($left_index, $right_index);
-    $chain->delete($left_index+1, $right_index);
-  }
-
-  $chain->check_out($left_index)->set_singleton('PARTICLE', 'To');
-}
-
-
 sub study_value
 {
   # Returns 1 if it is a kill.
@@ -472,29 +383,30 @@ sub study_value
   my $fix = $FIX_HASH{lc($value)};
   if (defined $fix->{CATEGORY})
   {
-    if ($fix->{CATEGORY} eq 'KILL' ||
-       ($fix->{CATEGORY} eq 'COUNTRY' &&
-       ((exists $result->{TEAM1} && $fix->{VALUE} eq $result->{TEAM1}) ||
-        (exists $result->{TEAM2} && $fix->{VALUE} eq $result->{TEAM2}))))
+    if ($fix->{CATEGORY} eq 'KILL')
     {
       # It could be that the country name is spelled differently
       # in EVENT and TEAMS.
       $token->set_kill($value);
 print "XXX1 $value\n";
     }
+    elsif ($fix->{CATEGORY} eq 'COUNTRY' &&
+       ((exists $result->{TEAM1} && $fix->{VALUE} eq $result->{TEAM1}) ||
+        (exists $result->{TEAM2} && $fix->{VALUE} eq $result->{TEAM2})))
+    {
+      # It could be that the country name is spelled differently
+      # in EVENT and TEAMS.
+      $token->set_kill($value);
+print "XXX2 $value\n";
+    }
     elsif ($fix->{CATEGORY} eq 'NUMERAL')
     {
-print "XXX4 $value\n";
+print "XXX3 $value\n";
       $token->set_numeral_counter($fix->{VALUE});
     }
-    # elsif ($fix->{CATEGORY} eq 'ORDINAL')
-    # {
-# print "XXX5 $value\n";
-      # $token->set_ordinal_counter($fix->{VALUE});
-    # }
     else
     {
-print "XXX7 $value\n";
+print "XXX4 $fix->{CATEGORY} $value\n";
       $token->set_singleton($fix->{CATEGORY}, $fix->{VALUE});
     }
     return;
@@ -573,9 +485,6 @@ sub study
       }
     }
   }
-
-  # Merge on digit runs (3-4-5-6-7).
-  # merge_on_digit_runs($chain);
 
   if ($unsolved_flag)
   {

@@ -701,6 +701,7 @@ my %SINGLE_TYPOS =
   'Elektrik P3B' => ['elektrik', 'electric'],
   Elektrika => ['elektric'],
   'Fanhua Jituan' => ['fanhua'],
+  'FX Securities' => ['fxsec'],
   'Garðs Apotek' => ['garðsapótek'],
   Geologi => ['geo'],
   'Geoportal Kutai Kartanegara' => ['geokutaikartanegara',

@@ -6,7 +6,7 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package Tags::Time;
+package Tags::Numeral;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes);
@@ -17,19 +17,14 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  Summer => ['summer time']
 );
 
 my @SINGLE_WORDS = qw(
-  Christmas
-  Afternoon Day Evening Night
-  Spring Summer Fall
-  Week Weekend
+  one two three four five six seven eight nine
 );
 
 my %SINGLE_TYPOS =
 (
-  Christmas => ['xmas'],
 );
 
 

@@ -60,6 +60,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Bronze
+  Consolation
   Elimination
   Final
   Playoff Pool
@@ -67,10 +68,12 @@ my @SINGLE_WORDS = qw(
   Qualifying Quarterfinal
   Repechage
   Semifinal 
+  Tiebreak
 );
 
 my %SINGLE_TYPOS =
 (
+  Consolation => ['conso'],
   Elimination => ['eliminations'],
   Final => ['finala', 'finalds', 'finale', 'finali', 'finals',
     'finales', 'finall', 'finar', 'finas', 'finat', 'finsl', 
@@ -78,7 +81,7 @@ my %SINGLE_TYPOS =
     'fiinal', 'fina', 'fýnal', 'finalleri', 'fina³y', 'fn',
     'filnal', 'fnal', 'fnals',
     'slutspil', 'slutspillet', 'superfinal', 'finalen'],
-  'Knock-out' => ['knockour', 'knockout', 'ko'],
+  'Knock-out' => ['knockour', 'knockout', 'ko', 'kostage', 'knockouts'],
   Phase => ['etap', 'fase'],
   Playoff => ['playoffs', 'po'],
   Pool => ['poule'],
@@ -86,20 +89,24 @@ my %SINGLE_TYPOS =
     'qualifier', 'qalifyng', 'qualy', 'qualifikation', 'qual',
     'qualifyng', 'qualýfýcatýon', 'qualification', 'qualifications', 
     'quailfy', 'qualf', 'qualfication', 'quali', 'qualify',
-    'quallification', 'qulification',
-    'qualif', 'qualifier', 'q'],
+    'quallification', 'qulification', 'quarti',
+    'qualif', 'qualifier', 'q',
+    'prelim', 'preliminary', 'pre', 'pelim',
+    'clasificacion', 'clasificatoria'],
   Quarterfinal => ['quarterfinals', 'quarterf', 'qualterfinal',
     'quarterfinala', 'quarterfinalb', 'quarterfinalc', 'quarterfinald',
     'quaterfinal', 'quaterfinals',
-    'quartetfinal', 'qurterfinal', 'qfinal', 'qfinals',
+    'quartetfinal', 'qurterfinal', 'qfinal', 'qfinals', 'ottavi',
     'qf', 'qfa', 'qfb', 'qfc', 'qfd', 'qr'],
   Repechage => ['repcharge', 'repercharge'],
   Rof12 => ['r12a', 'r12b'],
   Rof16 => ['r16a', 'r16b', 'r16c', 'r16d'],
   'Round-robin' => ['rr', 'roundrobin'],
   Semifinal => ['semifinals', 'semifinale', 'semifimals', 'semifi',
-    'semif', 'semis', 'sf', 'sfa', 'sfb', 'semi',
-    'semifinales', 'semifinali', 'seminfinal', 'sfinal', 'sinal'],
+    'semif', 'semis', 'sf', 'sfa', 'sfb', 'semi', 'semifianls',
+    'semýfýnal', 'sfinals', 'sefi', 'semifinales', 'semifinali', 
+    'seminfinal', 'sfinal', 'sinal'],
+  Tiebreak => ['ot', 'tie']
 );
 
 

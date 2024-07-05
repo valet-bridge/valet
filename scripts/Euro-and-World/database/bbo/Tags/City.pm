@@ -122,8 +122,8 @@ my @SINGLE_WORDS = qw(
   Aydin Ayvalik
 
   Baghdad Balchik Balaton Balatonföldvár Balikesir Balikpapan Ballerup 
-  Bamberg Bandung Bangalore Bangkok Banjarmasin Bansi Barcelona Batam 
-  Bath Batu Begues Beijing Bekasi Belgrade Bengkulu Beograd 
+  Ballymena Bamberg Bandung Bangalore Bangkok Banjarmasin Bansi Barcelona 
+  Batam Bath Batu Begues Beijing Bekasi Belgrade Bengkulu Beograd 
   Bereket Bergen Bergues Berkeley Berlin Bhilwara Bhubaneshwar Biarritz 
   Bielefeld Bikaner Bitung Blitar Bodrum Bodø Bogor Bogotá Boleslawiec
   Bologna Bonn Bordeaux Braila Brandbu Brasilia Brasov Bremen Brighton
@@ -210,8 +210,8 @@ my @SINGLE_WORDS = qw(
 
   Udaipur Uddevalla Umeå Uppsala Usak Utrecht
 
-  Van Varanasi Varberg Varese Varna Vasa Västervik Verona Vestfold 
-  Vestvågøy Vienna Vikersund Vilnius Vraca
+  Van Vancouver Varanasi Varberg Varese Varna Vasa Västervik Verona 
+  Vestfold Vestvågøy Vienna Vikersund Vilnius Vraca
 
   Waltham Warsaw Wellington Wisla Worcester Wroclaw Wronie Wuhan Wuxi
 
@@ -271,7 +271,7 @@ my %SINGLE_TYPOS =
   Kalundborg => ['kallundborg'],
   Karsiyaka => ['Karþiyaka'],
   Kocaeli => ['Kocaelý'],
-  Kolkata => ['calcutta', 'kolkta', 'kolktata'],
+  Kolkata => ['calcutta', 'kolkta', 'kolktata', 'kol'],
   Kosice => ['cassovia'],
   Koycegiz => ['köyceðýz'],
   Krakow => ['kraków', 'cracow'],

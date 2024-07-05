@@ -20,6 +20,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  and
   of
   to
   vs
@@ -27,6 +28,8 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  and => ['&'],
+  of => ['af', 'off', 'av', 'de', 'olf', 'pf', 'fo', 'from']
 );
 
 
