@@ -19,6 +19,7 @@ use Tags::City;
 use Tags::Club;
 use Tags::Color;
 use Tags::Country;
+use Tags::Day;
 use Tags::Destroy;
 use Tags::First;
 use Tags::Form;
@@ -26,7 +27,9 @@ use Tags::Fun;
 use Tags::Gender;
 use Tags::Iterator;
 use Tags::Meet;
+use Tags::Month;
 use Tags::Nationality;
+use Tags::Ordinal;
 use Tags::Organization;
 use Tags::Other;
 use Tags::Particle;
@@ -55,6 +58,7 @@ my %TAGS =
   CLUB => \&Tags::Club::set_hashes,
   COLOR => \&Tags::Color::set_hashes,
   COUNTRY => \&Tags::Country::set_hashes,
+  DAY => \&Tags::Day::set_hashes,
   DESTROY => \&Tags::Destroy::set_hashes,
   FIRST => \&Tags::First::set_hashes,
   FORM => \&Tags::Form::set_hashes,
@@ -62,7 +66,9 @@ my %TAGS =
   GENDER => \&Tags::Gender::set_hashes,
   ITERATOR => \&Tags::Iterator::set_hashes,
   MEET => \&Tags::Meet::set_hashes,
+  MONTH => \&Tags::Month::set_hashes,
   NATIONALITY => \&Tags::Nationality::set_hashes,
+  ORDINAL => \&Tags::Ordinal::set_hashes,
   ORGANIZATION => \&Tags::Organization::set_hashes,
   OTHER => \&Tags::Other::set_hashes,
   PARTICLE => \&Tags::Particle::set_hashes,

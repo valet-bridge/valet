@@ -1,24 +1,4 @@
-Make Month from Time
-Make Day from Time
-
-Make a Tags/Ordinal with first and second from Util/ordinal_to_numeral,
-also 
- Eighth
- Fir
- Fourth
- LAST
- Last
- Primera
- Sec
- Segunda
- Segundo
- Tercer
- Third
- ULTIMO
- eighth
- fifth
- fourth
-
+Get t5 and t6 closer, probably look at the Event reductions.
 
 Clean up Event code
 Compare to old Event results

@@ -36,6 +36,9 @@ my @TAG_ORDER = qw(
   ORGANIZATION
   SCORING
   TIME
+  MONTH
+  DAY
+  ORDINAL
 );
 
 my $PREFIX = 'EVENT_';
@@ -484,11 +487,11 @@ print "XXX1 $value\n";
 print "XXX4 $value\n";
       $token->set_numeral_counter($fix->{VALUE});
     }
-    elsif ($fix->{CATEGORY} eq 'ORDINAL')
-    {
-print "XXX5 $value\n";
-      $token->set_ordinal_counter($fix->{VALUE});
-    }
+    # elsif ($fix->{CATEGORY} eq 'ORDINAL')
+    # {
+# print "XXX5 $value\n";
+      # $token->set_ordinal_counter($fix->{VALUE});
+    # }
     else
     {
 print "XXX7 $value\n";

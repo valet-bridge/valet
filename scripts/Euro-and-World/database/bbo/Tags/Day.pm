@@ -6,7 +6,7 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package Tags::Time;
+package Tags::Day;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes);
@@ -21,16 +21,24 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Christmas
-  Afternoon Day Evening
-  Fall
-  Summer 
-  Week Weekend
+  Monday
+  Tuesday 
+  Wednesday
+  Thursdy
+  Friday 
+  Saturday 
+  Sunday
 );
 
 my %SINGLE_TYPOS =
 (
-  Christmas => ['xmas'],
+  Monday => ['mon'],
+  Tuesday => ['tue'],
+  Wednesday => ['wed'],
+  Thursday => ['thu'],
+  Friday => ['fri', 'freitag'],
+  Saturday => ['sat', 'samstag'],
+  Sunday => ['sun', 'sønd', 'sonntag']
 );
 
 

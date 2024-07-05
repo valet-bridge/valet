@@ -215,6 +215,7 @@ my @MULTI_WORDS =
   "Gary's Boys",
   'Ghost of Red',
   'Girls and Boys',
+  'GKS April',
   'Global Mix',
   'Glomma Raiders',
   'Glory Box',

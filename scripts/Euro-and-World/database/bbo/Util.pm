@@ -42,14 +42,14 @@ sub ordinal_to_numeral
     }
     return $1;
   }
-  elsif (lc($part) eq 'first')
-  {
-    return 1;
-  }
-  elsif (lc($part) eq 'second')
-  {
-    return 2;
-  }
+  # elsif (lc($part) eq 'first')
+  # {
+    # return 1;
+  # }
+  # elsif (lc($part) eq 'second')
+  # {
+    # return 2;
+  # }
   else
   {
     return 0;
@@ -312,7 +312,7 @@ sub append_token
 {
   my ($chain, $category, $tag, $value, $text, $pos, $histo, $prefix) = @_;
 
-  if ($tag eq 'ROMAN')
+  if ($tag eq 'ROMAN' || $tag eq 'ORDINAL')
   {
     # As Tag::Roman finds this, it appears as a SINGLETON.
     $category = 'COUNTER';
