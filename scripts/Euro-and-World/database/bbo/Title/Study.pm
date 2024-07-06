@@ -155,14 +155,13 @@ sub study
 
   return if $text eq '';
 
-  my $ntext = title_specific_inline($text);
-  my $stext = split_on_capitals($ntext);
+  my $stext = split_on_capitals($text);
+  my $ntext = title_specific_inline($stext);
 
   my @tags = (0);
   my @values = ();
   my @texts = ();
-  split_on_dates($stext, \@tags, \@values, \@texts, 1);
-
+  split_on_dates($ntext, \@tags, \@values, \@texts, 1);
   split_on_multi($whole, \@TAG_ORDER, 0, \@tags, \@values, \@texts);
 
   # Split on separators.

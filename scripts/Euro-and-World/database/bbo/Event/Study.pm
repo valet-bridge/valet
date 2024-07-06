@@ -118,44 +118,36 @@ sub sub_hard_fragments
 
 sub event_specific_inline
 {
-  my ($tags, $values, $texts) = @_;
+  my ($text) = @_;
 
-  for my $i (reverse 0 .. $#$values)
-  {
-    my $value = $values->[$i];
+  $text =~s/#(\d)/$1/g;
+  $text =~ s/(\d)([a-zA-Z]{2,})/$1 $2/g;
+  $text =~ s/([a-zA-Z]{2,})(\d)/$1 $2/g;
+  $text =~ s/(\d)([g-zG-Z])/$1 $2/g;
+  $text =~ s/([g-zG-Z])(\d)/$1 $2/g;
+  $text =~ s/(\d)\s+th/$1th /gi;
+  $text =~ s/(\d)\s+rth/$1rth /gi;
+  $text =~ s/(\d)\s+nd/$1nd /gi;
+  $text =~ s/(\d)\s+rd/$1rd /gi; # TODO One regex?
+  $text =~ s/(\d)\s+st(?=\b|_)/$1st /gi; # Either \b or _
+  $text =~ s/(\d)\s+er/$1th /gi;
+  $text =~ s/(\d)\s+eme/$1th /gi;
 
-    # We want these coupled tightly, as the separator should be virtual.
-    # next if ($value =~ /^[A-F]\d+$/ || $value =~ /^\d+[A-F]$/);
+  $text =~ s/n°(\d)/ $1/gi;
+  $text =~ s/(\d)ª/${1}th /gi;
+  $text =~ s/(\d)°/${1}th /gi;
 
-    $value =~s/#(\d)/$1/g;
-    $value =~ s/(\d)([a-zA-Z]{2,})/$1 $2/g;
-    $value =~ s/([a-zA-Z]{2,})(\d)/$1 $2/g;
-    $value =~ s/(\d)([g-zG-Z])/$1 $2/g;
-    $value =~ s/([g-zG-Z])(\d)/$1 $2/g;
-    $value =~ s/(\d)\s+th/$1th /gi;
-    $value =~ s/(\d)\s+rth/$1rth /gi;
-    $value =~ s/(\d)\s+nd/$1nd /gi;
-    $value =~ s/(\d)\s+rd/$1rd /gi; # TODO One regex?
-    $value =~ s/(\d)\s+st(?=\b|_)/$1st /gi; # Either \b or _
-    $value =~ s/(\d)\s+er/$1th /gi;
-    $value =~ s/(\d)\s+eme/$1th /gi;
+  $text =~ s/\bF(\d)([AB])\b/F $1$2/g;
+  $text =~ s/\bF(\d+)_(\d+)\b/F $1_$2/g;
 
-    $value =~ s/n°(\d)/ $1/gi;
-    $value =~ s/(\d)ª/${1}th /gi;
-    $value =~ s/(\d)°/${1}th /gi;
+  $text =~ s/\b([FQ])([ABRSabrs])\b/$1 $2/g;
+  $text =~ s/\bORR\b/Open RR/g;
+  $text =~ s/\bWRR\b/Women RR/g;
 
-    $value =~ s/\bF(\d)([AB])\b/F $1$2/g;
-    $value =~ s/\bF(\d+)_(\d+)\b/F $1_$2/g;
+  $text =~ s/^FO([\s-]|\z)/Final Open$1/;
+  $text =~ s/^OF([\s-]|\z)/Open Final$1/;
 
-    $value =~ s/\b([FQ])([ABRSabrs])\b/$1 $2/g;
-    $value =~ s/\bORR\b/Open RR/g;
-    $value =~ s/\bWRR\b/Women RR/g;
-
-    $value =~ s/^FO([\s-]|\z)/Final Open$1/;
-    $value =~ s/^OF([\s-]|\z)/Open Final$1/;
-
-    $values->[$i] = $value;
-  }
+  return $text;
 }
 
 
@@ -221,12 +213,12 @@ sub study
   my $utext = unteam($chunk->{EVENT}, $result);
   my $htext = sub_hard_fragments($utext);
   my $ctext = split_on_capitals($htext);
+  my $etext = event_specific_inline($ctext);
 
   my @tags = (0);
   my @values = ();
   my @texts = ();
-  split_on_dates($ctext, \@tags, \@values, \@texts, 0);
-  event_specific_inline(\@tags, \@values, \@texts);
+  split_on_dates($etext, \@tags, \@values, \@texts, 0);
   split_on_multi($whole, \@TAG_ORDER, 1, \@tags, \@values, \@texts);
 
   # Split on separators.
