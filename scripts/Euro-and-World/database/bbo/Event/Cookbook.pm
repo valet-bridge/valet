@@ -237,10 +237,6 @@ our %FIX_ALIASES =
 
   MEMORIAL =>
   {
-    "Maharaja Holkar" => [qw(holkar)],
-    "Mohan Sicka" => [qw(mohansicka)],
-    "Murat Kilercioglu" => [qw(muratkilercioglu)],
-    "P.C. Kalani" => [qw(kalani)]
   },
 
   ORGANIZER =>
@@ -248,8 +244,7 @@ our %FIX_ALIASES =
     "Bridge Club Saint Etoile" => [qw(bcsh)],
     "Bridge Base Online" => ["bridgebaseonline"],
     CBAI => [], # Don't map directly to Ireland; could be "Ireland 2"
-    EBL => [qw(ebl)],
-    'Guangdong Bridge Club' => [qw(guangdongbridgeclub)]
+    EBL => [qw(ebl)]
   },
     
   TOURNAMENT =>

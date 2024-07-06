@@ -87,6 +87,7 @@ my @MULTI_WORDS =
   'Swiss Pairs',
   'Swiss Teams',
   'Third Division',
+  'Varna Titan Teams',
   'Top Individual',
   'Top Pairs',
   'Women Elite Tournament',
@@ -183,6 +184,7 @@ my %MULTI_TYPOS =
     'test match', 'tes match', 'practise match', 'practice matche',
     'practice matches'],
   Trial => ['prueba de seleccion', 'test event'],
+  'Varna Titan Teams' => ['teams titan', 'team titan'],
   'Winter Open Teams' => ['wýnter team cs', 'winter open teams cs'],
   'Women Elite Tournament' => ["women's elite tournament"],
   'Youth Game' => ['youth games'],
@@ -195,14 +197,15 @@ my @SINGLE_WORDS = qw(
   Challenge Championship Charity Club Commercial Cup
   Friendship
   Goulash
-  Interclub Intercity International Interport Interprovince Interstate 
-  Interuniversity Invitational
+  Interclub Intercity International Interport Interprovince 
+  Interregion Interstate Interuniversity 
+  Invitational
   Memorial
   National
   Online
   Pool
   Simultaneous
-  Tournament Training Trial Trophy
+  Tournament Training Transnational Trial Trophy
   University
 );
 
@@ -239,7 +242,7 @@ my %SINGLE_TYPOS =
   Intercity => ['intecity'],
   Interclub => ['interclubs'],
   International => ['internacional', 'internationals',
-    'internazionale', 'internationa', 'internat'],
+    'internazionale', 'internationa', 'internat', 'int'],
   'International Team Trials' => ['itt'],
   Interprovince => ['interprovincal', 'interprovincials',
     'interprovincial', 'ip'],
@@ -256,18 +259,20 @@ my %SINGLE_TYPOS =
   'National Open Teams' => ['not'],
   'National Senior Teams' => ['nst'],
   'National Women Teams' => ['nwt'],
+  'Nations Cup' => ['nationscup'],
   'Premier League' => ['premieleague'],
   'Pro-Am' => ['proam'],
   'Senior High School' => ['shs'],
   Simultaneous => ['simultaneo'],
   'Spring National Open Teams' => ['snot'],
   'Super League' => ['superleague', 'superlige', 'superlig©',
-    'superligê'],
+    'superligê', 'sl'],
   Tournament => ['torunament', 'toruney', 'torurnament', 'torurney',
     'tourament', 'tourn', 'tourname', 'tournamnet', 'tournement',
     'tournet', 'tourney', 'turnament', 'tourmanent', 'tourna',
     'tournamnt', 'toernooi', 'turneringen', 'tounoi',
     'torneo', 'tournoi', 'turniej', 'trniej', 'trng'],
+  Transnational => ['trans', 'transnat', 'transnatio', 'transnation'],
   Training => ['træning', 'practice', 'allenamento',
     'entrenamiento'],
   Trial => ['trials', 'trail', 'trails', 'triaals',

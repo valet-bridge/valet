@@ -16,6 +16,7 @@ my @MULTI_WORDS =
   'Closed Room',
   'Knock-out',
   'Open Room',
+  'Pre-Quarterfinal',
   'Round-robin'
 );
 
@@ -81,7 +82,9 @@ my %SINGLE_TYPOS =
     'fiinal', 'fina', 'fýnal', 'finalleri', 'fina³y', 'fn',
     'filnal', 'fnal', 'fnals',
     'slutspil', 'slutspillet', 'superfinal', 'finalen'],
-  'Knock-out' => ['knockour', 'knockout', 'ko', 'kostage', 'knockouts'],
+  'Knock-out' => ['knockour', 'knockout', 'ko', 'kostage', 'knockouts',
+    'knock'],
+  Match => ['mac'],
   Phase => ['etap', 'fase'],
   Playoff => ['playoffs', 'po'],
   Pool => ['poule'],
@@ -98,6 +101,7 @@ my %SINGLE_TYPOS =
     'quaterfinal', 'quaterfinals',
     'quartetfinal', 'qurterfinal', 'qfinal', 'qfinals', 'ottavi',
     'qf', 'qfa', 'qfb', 'qfc', 'qfd', 'qr'],
+  'Pre-Quarterfinal' => ['pqf', 'preqf'],
   Repechage => ['repcharge', 'repercharge'],
   Rof12 => ['r12a', 'r12b'],
   Rof16 => ['r16a', 'r16b', 'r16c', 'r16d'],

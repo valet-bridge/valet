@@ -30,6 +30,7 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   Christmas => ['xmas'],
+  Evening => ['soir']
 );
 
 

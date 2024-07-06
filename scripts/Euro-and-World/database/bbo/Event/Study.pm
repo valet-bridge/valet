@@ -32,6 +32,7 @@ my @TAG_ORDER = qw(
   SPONSOR
   COUNTRY
   NATIONALITY
+  REGION
   CITY
   FORM
   GENDER
@@ -39,6 +40,7 @@ my @TAG_ORDER = qw(
   SCORING
   PERSON
   ITERATOR
+  COLOR
   STAGE
   TIME
   MONTH
@@ -140,6 +142,7 @@ sub split_on_known_words
 }
 
 
+# TODO Better name
 sub split_on_digit_groups
 {
   my ($tags, $values, $texts) = @_;
@@ -170,6 +173,8 @@ sub split_on_digit_groups
 
     $value =~ s/\bF(\d)([AB])\b/F $1$2/g;
     $value =~ s/\bF(\d+)_(\d+)\b/F $1_$2/g;
+
+    $value =~ s/\b([FQ])([ABRSabrs])\b/$1 $2/g;
 
     $values->[$i] = $value;
   }
@@ -383,32 +388,8 @@ sub study_value
   my $fix = $FIX_HASH{lc($value)};
   if (defined $fix->{CATEGORY})
   {
-    if ($fix->{CATEGORY} eq 'KILL')
-    {
-      # It could be that the country name is spelled differently
-      # in EVENT and TEAMS.
-      $token->set_kill($value);
-print "XXX1 $value\n";
-    }
-    elsif ($fix->{CATEGORY} eq 'COUNTRY' &&
-       ((exists $result->{TEAM1} && $fix->{VALUE} eq $result->{TEAM1}) ||
-        (exists $result->{TEAM2} && $fix->{VALUE} eq $result->{TEAM2})))
-    {
-      # It could be that the country name is spelled differently
-      # in EVENT and TEAMS.
-      $token->set_kill($value);
-print "XXX2 $value\n";
-    }
-    elsif ($fix->{CATEGORY} eq 'NUMERAL')
-    {
-print "XXX3 $value\n";
-      $token->set_numeral_counter($fix->{VALUE});
-    }
-    else
-    {
 print "XXX4 $fix->{CATEGORY} $value\n";
-      $token->set_singleton($fix->{CATEGORY}, $fix->{VALUE});
-    }
+    $token->set_singleton($fix->{CATEGORY}, $fix->{VALUE});
     return;
   }
 

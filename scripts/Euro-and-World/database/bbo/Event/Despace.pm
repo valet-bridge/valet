@@ -42,13 +42,10 @@ my %MERGE_ALIASES = (
   LYLaw => ['L&Y'],
 
   # MEMORIAL
-  Mohansicka => ['mohan sicka'],
-  Muratkilercioglu => ['murat kilercioglu'],
 
   # ORGANIZER
   EBL => ['e_b_l_'],
   BridgeBaseOnline => ['bridge base online'],
-  Guangdongbridgeclub => ['guangdong briagclub'],
 
   # TOURNAMENT: none
 

@@ -90,8 +90,8 @@ sub unteam
   my $team1 = $result->{TEAM1};
   my $team2 = $result->{TEAM2};
 
-  $res =~ s/\Q$team1\E// if defined $team1 && length($team1) > 1;
-  $res =~ s/\Q$team2\E// if defined $team2 && length($team2) > 1;
+  $res =~ s/\Q$team1\E//i if defined $team1 && length($team1) > 1;
+  $res =~ s/\Q$team2\E//i if defined $team2 && length($team2) > 1;
   return $res;
 }
 
