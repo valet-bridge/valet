@@ -52,7 +52,7 @@ my $PREFIX = 'TITLE_';
 our $histo_title;
 
 
-sub split_on_some_numbers
+sub title_specific_inline
 {
   my ($text) = @_;
 
@@ -104,46 +104,11 @@ sub split_on_some_numbers
 }
 
 
-sub singleton_non_tag_matches
-{
-  my ($value, $pos, $chain) = @_;
-
-  if ($value =~ /^\d+$/)
-  {
-    if ($value >= 1900 && $value < 2100)
-    {
-      append_token($chain, 'SINGLETON', 'YEAR', $value, $value, 
-        $pos, $main::histo_title, $PREFIX);
-    }
-    else
-    {
-      append_token($chain, 'COUNTER', 'NUMERAL', $value, $value, 
-        $pos, $main::histo_title, $PREFIX);
-    }
-    return 1;
-  }
-  elsif ($value =~ /^[A-HJa-h]$/)
-  {
-    append_token($chain, 'COUNTER', 'LETTER', $value, $value, 
-      $pos, $main::histo_title, $PREFIX);
-    return 1;
-  }
-  elsif (my $ord = Util::ordinal_to_numeral($value))
-  {
-    append_token($chain, 'COUNTER', 'ORDINAL', $ord, $value, 
-      $pos, $main::histo_title, $PREFIX);
-    return 1;
-  }
-  return 0;
-}
-
-
 sub study_value
 {
   my ($whole, $value, $pos, $chain, $unknown_value_flag) = @_;
 
-  # return if singleton_non_tag_matches($value, $pos, $chain);
-  return if singleton_non_tag_matches_new($value, $pos, $chain,
+  return if singleton_non_tag_matches($value, $pos, $chain,
     $main::histo_title, $PREFIX);
 
   return if singleton_tag_matches($whole, \@TAG_ORDER, $pos, $value, 
@@ -152,7 +117,7 @@ sub study_value
   append_token($chain, 'UNKNOWN', '', $value, $value, 
     $pos, $main::histo_title, $PREFIX);
 
-  print "QQQ ", $value, "\n";
+  print "SSS value $value \n";
   $$unknown_value_flag = 1;
 }
 
@@ -190,8 +155,7 @@ sub study
 
   return if $text eq '';
 
-  my $ntext = split_on_some_numbers($text);
-
+  my $ntext = title_specific_inline($text);
   my $stext = split_on_capitals($ntext);
 
   my @tags = (0);

@@ -14,7 +14,7 @@ our @ISA = qw(Exporter);
 our @EXPORT = qw(ordinal_to_numeral ordinalize unteam 
   split_on_dates split_on_capitals split_on_multi
   append_token 
-  singleton_non_tag_matches_new singleton_tag_matches);
+  singleton_non_tag_matches singleton_tag_matches);
 
 
 sub ordinal_to_numeral
@@ -329,7 +329,7 @@ sub append_token
 }
 
 
-sub singleton_non_tag_matches_new
+sub singleton_non_tag_matches
 {
   my ($value, $pos, $chain, $histo, $prefix) = @_;
 

@@ -116,8 +116,7 @@ sub sub_hard_fragments
 }
 
 
-# TODO Better name
-sub split_on_digit_groups
+sub event_specific_inline
 {
   my ($tags, $values, $texts) = @_;
 
@@ -185,11 +184,9 @@ sub is_lettered_number
 
 sub study_value
 {
-  # Returns 1 if it is a kill.
-
   my ($whole, $value, $result, $pos, $chain, $unsolved_flag) = @_;
 
-  return if singleton_non_tag_matches_new($value, $$pos, $chain,
+  return if singleton_non_tag_matches($value, $$pos, $chain,
     $main::histo_event, $PREFIX);
 
   return if singleton_tag_matches($whole, \@TAG_ORDER, 
@@ -203,11 +200,10 @@ sub study_value
 
   return 0 if is_lettered_number($value, $token);
 
-  print "UNKNOWN $value\n";
+  print "EEE value $value\n";
   $$unsolved_flag = 1;
 
   $token->set_unknown($value);
-  return 0;
 }
 
 
@@ -230,10 +226,7 @@ sub study
   my @values = ();
   my @texts = ();
   split_on_dates($ctext, \@tags, \@values, \@texts, 0);
-
-  # Split on groups of digits.
-  split_on_digit_groups(\@tags, \@values, \@texts);
-
+  event_specific_inline(\@tags, \@values, \@texts);
   split_on_multi($whole, \@TAG_ORDER, 1, \@tags, \@values, \@texts);
 
   # Split on separators.
