@@ -42,14 +42,6 @@ sub ordinal_to_numeral
     }
     return $1;
   }
-  # elsif (lc($part) eq 'first')
-  # {
-    # return 1;
-  # }
-  # elsif (lc($part) eq 'second')
-  # {
-    # return 2;
-  # }
   else
   {
     return 0;

@@ -35,6 +35,7 @@ my $whole = Whole->new();
 $whole->init_hashes();
 
 use Histo;
+our $histo_team = Histo->new();
 our $histo_title = Histo->new();
 our $histo_event = Histo->new();
 
@@ -226,26 +227,12 @@ sub print_chain
   my $l = $chain->last();
   return if $l == -1;
 
-  # if ($prefix eq 'TITLE' || $prefix eq 'EVENT')
-  # {
-    for my $i (0 .. $l)
-    {
-      my $token = $chain->check_out($i);
-      print $token->str(0, $prefix) unless 
-        $token->category() eq 'SEPARATOR';
-    }
-  # }
-  # elsif ($prefix eq 'TEAM')
-  # {
-    # TODO Probably the TEAM chains should be prefixed before they get here.
-    # for my $i (0 .. $l)
-    # {
-      # my $t = $chain->check_out($i);
-      # my $tag = $t->field();
-      # $tag =~ s/^TEAM_/TEAM${no}_/;
-      # print $tag, ' ', $t->value(), "\n";
-    # }
-  # }
+  for my $i (0 .. $l)
+  {
+    my $token = $chain->check_out($i);
+    print $token->str(0, $prefix) unless 
+      $token->category() eq 'SEPARATOR';
+  }
 }
 
 

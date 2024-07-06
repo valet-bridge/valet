@@ -10,7 +10,7 @@ package TeamBBO;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(read_cities study_teams unteam print_team_stats
-  set_overall_hashes init_hashes   all_used);
+  set_overall_hashes init_hashes);
 
 use lib '.';
 use lib '..';
@@ -359,7 +359,7 @@ sub check_consistency
 
 sub fix_some_parentheses
 {
-  my ($team_ref) = @_;
+  my ($whole, $team_ref) = @_;
 
   return unless $$team_ref =~ /\((.*)\)/;
   my $t = $1;
@@ -403,12 +403,12 @@ sub fix_some_parentheses
 
 sub clean_team
 {
-  my $team = pop;
+  my ($whole, $team) = @_;
   $team =~ s/\(\d+\)\s*$//; # (69)
   $team =~ s/^\s+|\s+$//g; # Leading and trailing space
 
   # Fix some parentheses with age and gender.
-  fix_some_parentheses(\$team);
+  fix_some_parentheses($whole, \$team);
 
   my $fix = $FIX_HASH{lc($team)};
   if (defined $fix && $fix->{CATEGORY} eq 'COUNTRY')
@@ -470,68 +470,26 @@ sub split_on_trailing_digits
 }
 
 
-sub team_specific_hashes
-{
-  my ($part, $token, $chain) = @_;
-
-  for my $tag (@TAG_ORDER_NEW)
-  {
-    my $fix = $SINGLE_WORDS{$tag}{lc($part)};
-    if (defined $fix->{CATEGORY})
-    {
-      # my $w = $fix->{VALUE};
-      # $MULTI_HITS{$tag}{lc($part)}++;
-      # $MULTI_HITS{$tag}{lc($w)}++;
-
-      $token->set_singleton($fix->{CATEGORY}, $fix->{VALUE});
-      $HIT_STATS{$fix->{CATEGORY}}++;
-
-      if ($fix->{CATEGORY} eq 'GENDER' &&
-          $fix->{VALUE} eq 'Open')
-      {
-        # Special case: Add an extra token.
-        my $token2 = Token->new();
-        $token2->copy_origin_from($token);
-        $token2->set_singleton('AGE', 'Open');
-        $chain->append($token2);
-        $HIT_STATS{'TEAM_AGE'}++;
-      }
-      elsif ($fix->{CATEGORY} eq 'AGE' &&
-          $fix->{VALUE} eq 'Girls')
-      {
-        # Special case: Add an extra token.
-        my $token2 = Token->new();
-        $token2->copy_origin_from($token);
-        $token2->set_singleton('GENDER', 'Women');
-        $chain->append($token2);
-        $HIT_STATS{'TEAM_GENDER'}++;
-      }
-
-      return 1;
-    }
-  }
-  return 0;
-}
-
-
 sub study_part
 {
-  my ($part, $i, $chain, $unknown_part_flag) = @_;
+  my ($whole, $part, $i, $chain, $unknown_part_flag) = @_;
 
   my $token = Token->new();
-  $token->set_origin($i, $part);
-  $chain->append($token);
 
   $HIT_STATS{TOTAL}++;
 
   if (set_token($part, $token))
   {
+    $token->set_origin($i, $part);
+    $chain->append($token);
     $token->set_singleton('SEPARATOR', $part);
     $HIT_STATS{SEPARATOR}++;
     return;
   }
   elsif ($part =~ /^\d+$/)
   {
+    $token->set_origin($i, $part);
+    $chain->append($token);
     if ($part >= 1900 && $part < 2100)
     {
       $token->set_singleton('YEAR', $part);
@@ -546,13 +504,20 @@ sub study_part
   }
   elsif ($part =~ /^[A-D]$/)
   {
+    $token->set_origin($i, $part);
+    $chain->append($token);
     $token->set_letter_counter($part);
     $HIT_STATS{TEAM_LETTER}++;
     return;
   }
 
   # The general solution.
-  return if team_specific_hashes($part, $token, $chain);
+
+  return if singleton_tag_matches($whole, \@TAG_ORDER_NEW, 
+    $i, $part, 0, $chain, $main::histo_team, 'TEAM_');
+
+  $token->set_origin($i, $part);
+  $chain->append($token);
 
   # Some use of other hashes.
   my $fix_event = $FIX_HASH{lc($part)};
@@ -577,7 +542,7 @@ sub study_part
 
 sub study_component
 {
-  my ($part, $chain, $token_no, $unsolved_flag) = @_;
+  my ($whole, $part, $chain, $token_no, $unsolved_flag) = @_;
 
   # Split on trailing digits.
   my $unknown_part_flag = 0;
@@ -586,15 +551,15 @@ sub study_component
   {
     my ($letters, $digits) = ($1, $2);
 
-    study_part($letters, $token_no, $chain, \$unknown_part_flag);
+    study_part($whole, $letters, $token_no, $chain, \$unknown_part_flag);
     $$token_no++;
 
-    study_part($digits, $token_no, $chain, \$unknown_part_flag);
+    study_part($whole, $digits, $token_no, $chain, \$unknown_part_flag);
     $$token_no++;
   }
   else
   {
-    study_part($part, $token_no, $chain, \$unknown_part_flag);
+    study_part($whole, $part, $token_no, $chain, \$unknown_part_flag);
     $$token_no++;
   }
 
@@ -692,7 +657,7 @@ sub study_team
       my @a = grep { $_ ne '' } split(/$sep/, $values[$i]);
       foreach my $part (@a)
       {
-        study_component($part, $chain, \$token_no, \$unsolved_flag);
+        study_component($whole, $part, $chain, \$token_no, \$unsolved_flag);
       }
     }
   }
@@ -729,8 +694,8 @@ sub study_teams
   if ($text =~ /(.*) vs\. (.*)/)
   {
     my ($team1, $team2) = ($1, $2);
-    $result->{TEAM1} = clean_team($team1);
-    $result->{TEAM2} = clean_team($team2);
+    $result->{TEAM1} = clean_team($whole, $team1);
+    $result->{TEAM2} = clean_team($whole, $team2);
   }
   elsif ($text =~ /^\s*$/ || $text =~ /^\s*vs\.\s*$/)
   {
@@ -754,51 +719,5 @@ sub study_teams
   $result->{TEAM2} =~ s/\s*- npc$//;
 }
 
-
-sub is_captain
-{
-  # Not used.  Maybe for other data sources again.
-  my ($text) = @_;
-
-  my $lt = lc($text);
-  my $fix = $SINGLE_WORDS{CAPTAIN}{$lt};
-  return 1 if defined $fix->{CATEGORY};
-
-  if ($lt =~ /$MULTI_REGEX{CAPTAIN}/)
-  {
-    return 1;
-  }
-
-  return 0;
-}
-
-
-sub all_used
-{
-  print "Multis:\n\n";
-  for my $key (@TAG_ORDER)
-  {
-    for my $entry (sort keys %{$MULTI_WORDS{$key}})
-    {
-      if (! defined $MULTI_HITS{$key}{$entry})
-      {
-        print "$key: $entry\n";
-      }
-    }
-  }
-
-  print "\nSingles\n\n";
-  for my $key (@TAG_ORDER)
-  {
-    for my $entry (sort keys %{$SINGLE_WORDS{$key}})
-    {
-      if (! defined $MULTI_HITS{$key}{$entry})
-      {
-        print "$key: $entry\n";
-      }
-    }
-  }
-
-}
 
 1;
