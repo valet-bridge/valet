@@ -133,7 +133,9 @@ my @SINGLETON_LIST = qw(
   Boards BOARDS
   F G
   J
+  K
   O
+  P
   Part PART
   Place PLACE
   Q
@@ -145,6 +147,7 @@ my @SINGLETON_LIST = qw(
   TEAM_FORM
   Tempo
   Top
+  U
   W
   Week WEEK
   Weekend WEEKEND

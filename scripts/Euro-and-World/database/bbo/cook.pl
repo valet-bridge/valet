@@ -95,7 +95,7 @@ while ($line = <$fh>)
     next;
   }
 
-  if ($chunk{BBONO} == 38135)
+  if ($chunk{BBONO} == 893)
   {
     print "HERE\n";
   }
@@ -118,8 +118,8 @@ while ($line = <$fh>)
 
   if ($print_chains)
   {
-    print_chain($chain_team1, 1, "");
-    print_chain($chain_team2, 2, "");
+    print_chain($chain_team1, 1, "TEAM");
+    print_chain($chain_team2, 2, "TEAM");
   }
 
 
@@ -238,11 +238,8 @@ sub print_chain
     }
     return;
   }
-
-  my $token = $chain->check_out(0);
-  if ($token->field() =~ /^TEAM_/)
+  elsif ($prefix eq 'TEAM')
   {
-    # Can be just a team chain.
     # TODO Probably the TEAM chains should be prefixed before they get here.
     for my $i (0 .. $l)
     {
@@ -253,8 +250,10 @@ sub print_chain
     }
     return;
   }
-  elsif ($l == 0)
+
+  if ($l == 0)
   {
+    my $token = $chain->check_out(0);
     print $token->str(0, $prefix);
     return;
   }
@@ -287,14 +286,18 @@ sub print_chain
     }
     else
     {
-      print "Haven't learned this yet (A $l):\n";
-      print "  ", $chain->text(), " # ", $chain->fields(), "\n";
+      print $token0->str(0, $prefix);
+      print $token2->str(0, $prefix);
     }
     return;
   }
 
-  print "Haven't learned this yet (C $l):\n";
-  print "  ", $chain->text(), " # ", $chain->fields(), "\n";
+  for my $i (0 .. $l)
+  {
+    my $token = $chain->check_out($i);
+    print $token->str(0, $prefix) unless $token->category() eq 'SEPARATOR';
+  }
+  return;
 }
 
 

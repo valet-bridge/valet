@@ -48,6 +48,7 @@ my @TAG_ORDER = qw(
   NUMERAL
   ORDINAL
   PARTICLE
+  AMBIGUOUS
 );
 
 my $PREFIX = 'EVENT_';
@@ -55,6 +56,7 @@ our $histo_event;
 
 my %HARD_SUBS =
 (
+  'Final Segment' => ['fs'],
   'First Half' => ['1emt', '1mt', 'andata'],
   'Second Half' => ['2emt', '2mt', 'ritorno', 'retur'],
   'Open Round Robin' => ['orr'],
@@ -208,8 +210,8 @@ sub split_on_digit_groups
     $value =~ s/\bORR\b/Open RR/g;
     $value =~ s/\bWRR\b/Women RR/g;
 
-    $value =~ s/^FO([\s-])/Final Open$1/;
-    $value =~ s/^OF([\s-])/Open Final$1/;
+    $value =~ s/^FO([\s-]|\z)/Final Open$1/;
+    $value =~ s/^OF([\s-]|\z)/Open Final$1/;
 
     $values->[$i] = $value;
   }
@@ -293,6 +295,7 @@ sub split_on_tournament_group
     # Kludge.
     if ($value eq 'OR')
     {
+  die;
       splice(@$tags, $i, 0, (0) x 2);
       splice(@$values, $i, 0, ('') x 2);
       splice(@$texts, $i, 0, ('') x 2);
@@ -311,12 +314,14 @@ sub split_on_tournament_group
     }
     elsif ($value eq 'or')
     {
+  die;
       $tags->[$i] = 0;
       $values->[$i] = 'Of'; # Typically a typo
       $texts->[$i] = 'or';
     }
     elsif ($value eq 'FO')
     {
+  die;
       splice(@$tags, $i, 0, (0) x 2);
       splice(@$values, $i, 0, ('') x 2);
       splice(@$texts, $i, 0, ('') x 2);
@@ -335,6 +340,7 @@ sub split_on_tournament_group
     }
     elsif ($value eq 'OF') # Probably
     {
+  die;
       splice(@$tags, $i, 0, (0) x 2);
       splice(@$values, $i, 0, ('') x 2);
       splice(@$texts, $i, 0, ('') x 2);
@@ -420,15 +426,15 @@ sub study_value
 
   return if Separators::set_token($value, $token);
 
-  my $fix = $FIX_HASH{lc($value)};
-  if (defined $fix->{CATEGORY})
-  {
-print "XXX4 $fix->{CATEGORY} $value\n";
-    $token->set_singleton($fix->{CATEGORY}, $fix->{VALUE});
-    return;
-  }
+  # my $fix = $FIX_HASH{lc($value)};
+  # if (defined $fix->{CATEGORY})
+  # {
+# print "XXX4 $fix->{CATEGORY} $value\n";
+    # $token->set_singleton($fix->{CATEGORY}, $fix->{VALUE});
+    # return;
+  # }
 
-  return 0 if is_letter($value, $token);
+  # return 0 if is_letter($value, $token);
   return 0 if is_lettered_number($value, $token);
 
   print "UNKNOWN $value\n";

@@ -15,7 +15,7 @@ use lib '..';
 use Separators;
 
 
-sub pre_process_tightly_bound
+sub pre_process_ambiguous_two
 {
   my ($chains) = @_;
 
@@ -69,7 +69,7 @@ sub pre_process
   # At this point there is a single chain.
   # It's easier to solve some issues here.
 
-  pre_process_tightly_bound($chains);
+  pre_process_ambiguous_two($chains);
 }
 
 1;

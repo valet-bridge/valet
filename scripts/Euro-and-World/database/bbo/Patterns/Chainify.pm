@@ -315,6 +315,52 @@ sub process_letter_exact
 }
 
 
+sub process_g_front
+{
+  # Exactly the entry 'G' for Girls.
+  my ($chain) = @_;
+
+  my $token0 = $chain->check_out(0);
+  my $letter = uc($token0->value());
+  die "Not G: $letter" unless $letter eq 'G';
+
+  $token0->set_singleton('GENDER', 'Women');
+
+  my $token1 = Token->new();
+  $token1->copy_origin_from($token0);
+  $token1->set_separator('VIRTUAL');
+  $chain->insert_at(1, $token1);
+
+  my $token2 = Token->new();
+  $token2->copy_origin_from($token0);
+  $token2->set_singleton('AGE', 'Juniors');
+  $chain->insert_at(2, $token2);
+}
+
+
+sub process_o_front
+{
+  # Exactly the entry 'O' for Open.
+  my ($chain) = @_;
+
+  my $token0 = $chain->check_out(0);
+  my $letter = uc($token0->value());
+  die "Not O" unless $letter eq 'O';
+
+  $token0->set_singleton('AGE', 'Open');
+
+  my $token1 = Token->new();
+  $token1->copy_origin_from($token0);
+  $token1->set_separator('VIRTUAL');
+  $chain->insert_at(1, $token1);
+
+  my $token2 = Token->new();
+  $token2->copy_origin_from($token0);
+  $token2->set_singleton('GENDER', 'Open');
+  $chain->insert_at(2, $token2);
+}
+
+
 sub process_letter_counter_exact
 {
   # R 3
@@ -323,13 +369,51 @@ sub process_letter_counter_exact
   my $token = $chain->check_out($match);
   my $letter = uc($token->value());
 
-  if ($letter eq 'R')
+  if ($letter eq 'F')
   {
-    $token->reset_iterator_field('ROUND');
+    $token->set_general('SINGLETON', 'STAGE', 'Final');
+  }
+  elsif ($letter eq 'G')
+  {
+    die "Not front" unless $match == 0;
+    process_g_front($chain);
+  }
+  elsif ($letter eq 'J')
+  {
+    $token->set_general('SINGLETON', 'AGE', 'Juniors');
+  }
+  elsif ($letter eq 'K')
+  {
+    $token->set_general('SINGLETON', 'AGE', 'Kids');
+  }
+  elsif ($letter eq 'O')
+  {
+    die "Not front" unless $match == 0;
+    process_o_front($chain);
+  }
+  elsif ($letter eq 'P' || $letter eq 'U')
+  {
+    $token->set_general('COUNTER', 'LETTER', $letter);
+  }
+  elsif ($letter eq 'Q')
+  {
+    $token->set_general('COUNTER', 'STAGE', 'Qualifying');
+  }
+  elsif ($letter eq 'S')
+  {
+    $token->set_general('ITERATOR', 'S', 'S');
+  }
+  elsif ($letter eq 'W')
+  {
+    $token->set_general('COUNTER', 'GENDER', 'Women');
+  }
+  elsif ($letter eq 'Y')
+  {
+    $token->set_general('COUNTER', 'AGE', 'Youngsters');
   }
   else
   {
-    $token->reset_iterator_field($letter);
+    warn "Letter '$letter' not implemented";
   }
 }
 

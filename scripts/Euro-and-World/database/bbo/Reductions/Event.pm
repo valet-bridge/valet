@@ -492,8 +492,7 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => ['SINGLETON'], FIELD => ['LETTER'],
-        VALUE => [qw(J Q S s W Y R)] },
+      { CATEGORY => ['AMBIGUOUS'] },
       { CATEGORY => ['SEPARATOR'] },
       { CATEGORY => ['COUNTER'] }
     ],

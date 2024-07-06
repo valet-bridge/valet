@@ -142,10 +142,6 @@ sub post_process_stand_alone_singles
     {
       $chain->complete_if_last_is(0, 'COMPLETE');
     }
-    elsif ($cat eq 'AMBIGUOUS')
-    {
-      # $chain->complete_if_last_is(0, 'DESTROY');
-    }
     elsif ($cat eq 'ITERATOR' &&
         lc($token->value()) eq 'match')
     {
