@@ -577,6 +577,8 @@ my @MULTI_WORDS =
   'Wild Griffins',
   'Winter Is Coming',
 
+  'X-Men',
+
   'Y.Y.Y.D.',
   'Yarralumla Yabbies',
   'YOI Returns',
@@ -724,7 +726,9 @@ my %MULTI_TYPOS =
 
   'Victorious Secret' => ['victorius secret'],
 
-  'What the Heck' => ['whattheheck']
+  'What the Heck' => ['whattheheck'],
+
+  'X-Men' => ['x men']
 );
 
 my @SINGLE_WORDS = qw(

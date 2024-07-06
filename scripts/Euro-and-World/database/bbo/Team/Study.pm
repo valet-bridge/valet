@@ -48,6 +48,7 @@ my @TAG_ORDER = qw(
   BOT
   NATIONALITY
   UNIVERSITY 
+  ROMAN
   GENDER
   AGE
   COLOR
@@ -58,6 +59,7 @@ my @TAG_ORDER = qw(
   TIME
   MONTH
   DAY
+  NUMERAL
   DESTROY
 );
 
@@ -333,26 +335,24 @@ sub study_value
   return if singleton_non_tag_matches($value, $$pos, $chain,
     $main::histo_team, $PREFIX);
 
+  return if singleton_tag_matches($whole, \@TAG_ORDER, 
+    $$pos, $value, 0, $chain, $main::histo_team, $PREFIX);
+
   my $token = Token->new();
+  $token->set_origin($$pos, $value);
+  $chain->append($token);
+  $$pos++;
+
+  return if Separators::set_token($value, $token);
 
   $HIT_STATS{TOTAL}++;
 
-  if (set_token($value, $token))
-  {
-    $token->set_origin($$pos, $value);
-    $chain->append($token);
-    $token->set_singleton('SEPARATOR', $value);
-    $HIT_STATS{SEPARATOR}++;
-    return;
-  }
-
-  # The general solution.
-
-  return if singleton_tag_matches($whole, \@TAG_ORDER, 
-    $$pos, $value, 0, $chain, $main::histo_team, 'TEAM_');
-
-  $token->set_origin($$pos, $value);
-  $chain->append($token);
+  # if (set_token($value, $token))
+  # {
+    # $token->set_singleton('SEPARATOR', $value);
+    # $HIT_STATS{SEPARATOR}++;
+    # return;
+  # }
 
   # Some use of other hashes.
   my $fix_event = $FIX_HASH{lc($value)};

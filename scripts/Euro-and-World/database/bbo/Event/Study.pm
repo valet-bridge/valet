@@ -185,7 +185,7 @@ sub study_value
     $main::histo_event, $PREFIX);
 
   return if singleton_tag_matches($whole, \@TAG_ORDER, 
-    $$pos, $value, 1, $chain, $main::histo_event, 'EVENT_');
+    $$pos, $value, 1, $chain, $main::histo_event, $PREFIX);
 
   my $token = Token->new();
   $token->set_origin($$pos, $value);
