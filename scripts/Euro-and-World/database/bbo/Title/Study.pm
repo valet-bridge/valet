@@ -128,24 +128,23 @@ sub study_component
 
   # Split on trailing digits.
   my $unknown_value_flag = 0;
+  my $digits = '';
   if ($value =~ /^(.*[a-z])(\d+)$/i &&
       $1 ne 'U' && $1 ne 'D')
   {
-    my ($letters, $digits) = ($1, $2);
-
-    study_value($whole, $letters, $token_no, $chain, \$unknown_value_flag);
-    $$token_no++;
-
-    study_value($whole, $digits, $token_no, $chain, \$unknown_value_flag);
-    $$token_no++;
+    ($value, $digits) = ($1, $2);
   }
-  else
+
+  study_value($whole, $value, $token_no, $chain, \$unsolved_flag);
+  $$token_no++;
+
+  if ($digits ne '')
   {
-    study_value($whole, $value, $token_no, $chain, \$unknown_value_flag);
+    # Add the digits if they exist.
+    singleton_numeral($digits, $token_no, $chain, 
+      $main::histo_title, $PREFIX);
     $$token_no++;
   }
-
-  $$unsolved_flag = 1 if $unknown_value_flag;
 }
 
 

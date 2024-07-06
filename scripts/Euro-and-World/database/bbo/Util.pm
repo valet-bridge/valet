@@ -14,7 +14,7 @@ our @ISA = qw(Exporter);
 our @EXPORT = qw(ordinal_to_numeral ordinalize unteam 
   split_on_dates split_on_capitals split_on_multi
   append_token 
-  singleton_non_tag_matches singleton_tag_matches);
+  singleton_numeral singleton_non_tag_matches singleton_tag_matches);
 
 
 sub ordinal_to_numeral
@@ -329,23 +329,32 @@ sub append_token
 }
 
 
+sub singleton_numeral
+{
+  # Doesn't check that value is a numeral.
+  my ($value, $pos, $chain, $histo, $prefix) = @_;
+
+  if ($value >= 1900 && $value < 2100)
+  {
+    append_token($chain, 'SINGLETON', 'YEAR', $value, $value,
+      $pos, $histo, $prefix);
+  }
+  else
+  {
+    $value =~ s/^0+// unless $value == 0;
+    append_token($chain, 'COUNTER', 'NUMERAL', $value, $value,
+      $pos, $histo, $prefix);
+  }
+}
+
+
 sub singleton_non_tag_matches
 {
   my ($value, $pos, $chain, $histo, $prefix) = @_;
 
   if ($value =~ /^\d+$/)
   {
-    if ($value >= 1900 && $value < 2100)
-    {
-      append_token($chain, 'SINGLETON', 'YEAR', $value, $value,
-        $pos, $histo, $prefix);
-    }
-    else
-    {
-      $value =~ s/^0+// unless $value == 0;
-      append_token($chain, 'COUNTER', 'NUMERAL', $value, $value,
-        $pos, $histo, $prefix);
-    }
+    singleton_numeral($value, $pos, $chain, $histo, $prefix);
     return 1;
   }
   elsif ($value =~ /^[A-EHa-eh]$/)
