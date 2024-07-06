@@ -70,17 +70,17 @@ sub title_specific_inline
   $text =~ s/'(0\d)/20$1/g;
   $text =~ s/'(1\d)/20$1/g;
 
-  # Nameless teams.
+  # Remove nameless teams.
   $text =~ s/#\d+\s+vs*\s+#*\d+//;
   $text =~ s/tm\s+\d+\s+vs\s+tm\s+\d+//i;
   $text =~ s/team\s+\d+\s+vs\s+team\s+\d+//i;
   $text =~ s/- \d+ v \d+//i;
 
   # Add some spacing.
-  $text =~ s/^(\d+)th([a-z])/$1th $2/i;
-  $text =~ s/^([01]\d)([A-SU-Z])/20$1 $2/; # Kludge, avoid th
-  $text =~ s/\b([1-9])([A-D])\b/$1 $2/gi;
-  $text =~ s/\b(\d)of(\d)\b/$1 of $2/g;
+  $text =~ s/^(\d+)th([a-z])/$1th $2/i; # 8th|letter
+  $text =~ s/^([01]\d)([A-SU-Z])/20$1 $2/; # Year. Avoid th
+  $text =~ s/\b([1-9])([A-D])\b/$1 $2/gi; # 1|A
+  $text =~ s/\b(\d)of(\d)\b/$1 of $2/g; # 1|of|2
   
   # n_n (n of n), n&n (n to n).
   if ($text =~ /(\d+)[_&](\d+)/ && $1 <= $2 && $1 < 1990)
@@ -90,15 +90,15 @@ sub title_specific_inline
   }
 
   # A hodge-podge, mostly of spacing.
-  $text =~ s/pokal([a-z])/pokal $1/i;
-  $text =~ s/-th\b/th/g;
-  $text =~ s/(\d) th\b/$1th/g;
-  $text =~ s/2 nd\b/2nd/g;
-  $text =~ s/\bUSA[12]/USA/g;
-  $text =~ s/\bUSA 2\b/USA/g;
-  $text =~ s/II-nd/2nd/g;
-  $text =~ s/\b(\d\d) _$/Rof$1/g;
-  $text =~ s/\bF([12])\b/Final $1/g;
+  $text =~ s/pokal([a-z])/pokal $1/i; # pokal|a
+  $text =~ s/-th\b/th/g; # 4-th
+  $text =~ s/(\d) th\b/$1th/g; # 4 th
+  $text =~ s/2 nd\b/2nd/g; #  2nd
+  $text =~ s/\bUSA[12]/USA/g; # USA1
+  $text =~ s/\bUSA 2\b/USA/g; # USA 2
+  $text =~ s/II-nd/2nd/g; # II-nd
+  $text =~ s/\b(\d\d) _$/Rof$1/g; # Line ending on 16 _
+  $text =~ s/\bF([12])\b/Final $1/g; # F1
 
   return $text;
 }

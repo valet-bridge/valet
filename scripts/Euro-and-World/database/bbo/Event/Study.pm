@@ -120,11 +120,14 @@ sub event_specific_inline
 {
   my ($text) = @_;
 
-  $text =~s/#(\d)/$1/g;
-  $text =~ s/(\d)([a-zA-Z]{2,})/$1 $2/g;
-  $text =~ s/([a-zA-Z]{2,})(\d)/$1 $2/g;
+  $text =~s/#(\d)/$1/g; # Remove hash
+
+  $text =~ s/(\d)([a-zA-Z]{2,})/$1 $2/g; # Digit, then 2+ letters
+  $text =~ s/([a-zA-Z]{2,})(\d)/$1 $2/g; # Other way round
   $text =~ s/(\d)([g-zG-Z])/$1 $2/g;
   $text =~ s/([g-zG-Z])(\d)/$1 $2/g;
+
+  # Various ordinals.
   $text =~ s/(\d)\s+th/$1th /gi;
   $text =~ s/(\d)\s+rth/$1rth /gi;
   $text =~ s/(\d)\s+nd/$1nd /gi;
@@ -187,6 +190,7 @@ sub study_value
   my $token = Token->new();
   $token->set_origin($$pos, $value);
   $chain->append($token);
+  $$pos++;
 
   return if Separators::set_token($value, $token);
 
