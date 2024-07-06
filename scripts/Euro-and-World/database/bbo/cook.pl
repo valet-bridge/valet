@@ -19,7 +19,6 @@ use TeamBBO;
 use ScoringBBO;
 
 use Event::Study;
-use Event::Preprocess;
 use Event::Postprocess;
 
 use Title::Study;
@@ -95,7 +94,7 @@ while ($line = <$fh>)
     next;
   }
 
-  if ($chunk{BBONO} == 893)
+  if ($chunk{BBONO} == 103)
   {
     print "HERE\n";
   }
@@ -131,8 +130,6 @@ while ($line = <$fh>)
 
     Event::Study::study($whole, \%chunk, \%result, 
       $chain_event, \$unknown_events);
-
-    # Event::Preprocess::pre_process(\@chains_event);
 
     process_event(\@chains_event);
     Patterns::Chainify::process(\@EVENT_REDUCTIONS, \@chains_event, 
@@ -262,33 +259,8 @@ sub print_chain
     my $token0 = $chain->check_out(0);
     my $token2 = $chain->check_out(2);
 
-    if ($token0->category() eq 'ITERATOR' &&
-        $token2->category() eq 'COUNTER')
-    {
-      my $synth = Token->new();
-      $synth->set_singleton($token0->field(), $token2->value());
-      print $synth->str(0, $prefix);
-    }
-    elsif ($token0->field() eq 'EXPANSION' &&
-        $token2->category() eq 'COUNTER')
-    {
-      my $synth = Token->new();
-      $synth->set_singleton($token0->field(), 
-        $token0->value() . ' ' . $token2->value());
-      print $synth->str(0, $prefix);
-    }
-    elsif ($token0->category() eq 'ITERATOR' &&
-        $token2->field() eq 'LETTER')
-    {
-      my $synth = Token->new();
-      $synth->set_singleton($token0->field(), $token2->value());
-      print $synth->str(0, $prefix);
-    }
-    else
-    {
-      print $token0->str(0, $prefix);
-      print $token2->str(0, $prefix);
-    }
+    print $token0->str(0, $prefix);
+    print $token2->str(0, $prefix);
     return;
   }
 

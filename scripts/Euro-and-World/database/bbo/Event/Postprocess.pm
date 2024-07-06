@@ -42,11 +42,44 @@ sub post_process_ordinal_nn
 }
 
 
+sub post_process_stand_alone_doubles
+{
+  my ($chains) = @_;
+
+  for my $chain (@$chains)
+  {
+    next unless $chain->last() == 2;
+
+    my $token0 = $chain->check_out(0);
+    my $token1 = $chain->check_out(1);
+    my $token2 = $chain->check_out(2);
+
+    die "Expected separator" unless $token1->category() eq 'SEPARATOR';
+
+    if ($token0->category() eq 'ITERATOR' &&
+        $token2->category() eq 'COUNTER')
+    {
+      $token0->set_singleton($token0->field(), $token2->value());
+      $chain->delete(1, 2);
+      $chain->complete_if_last_is(0, 'COMPLETE');
+    }
+    elsif ($token0->category() eq 'ITERATOR' &&
+        $token2->field() eq 'LETTER')
+    {
+      $token0->set_singleton($token0->field(), $token2->value());
+      $chain->delete(1, 2);
+      $chain->complete_if_last_is(0, 'COMPLETE');
+    }
+  }
+}
+
+
 sub post_process
 {
   my ($chains) = @_;
 
   post_process_ordinal_nn($chains);
+  post_process_stand_alone_doubles($chains);
 }
 
 1;
