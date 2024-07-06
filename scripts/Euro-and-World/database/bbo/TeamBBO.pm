@@ -10,7 +10,7 @@ package TeamBBO;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(read_cities study_teams unteam print_team_stats
-  set_overall_hashes init_hashes);
+  init_hashes);
 
 use lib '.';
 use lib '..';
@@ -27,69 +27,11 @@ use Separators;
 
 use Team::Suggestors;
 
-use Tags::Fun;
-use Tags::First;
-use Tags::Other;
-use Tags::Sponsor;
-use Tags::Organization;
-use Tags::Abbr;
-use Tags::Country;
-use Tags::Region;
-use Tags::Zone;
-use Tags::Quarter;
-use Tags::City;
-use Tags::Club;
-use Tags::Captain;
-use Tags::Bot;
-use Tags::Nationality;
-use Tags::University;
-use Tags::Gender;
-use Tags::Age;
-use Tags::Color;
-use Tags::Scoring;
-use Tags::Form;
-use Tags::Month;
-use Tags::Day;
-
-use Tags::Tword;
-use Tags::Meet;
-
-use Tags::Destroy;
 
 use Team::Matrix;
 use Team::Repeats;
 
 my @TAG_ORDER = qw(
-  TEAM_FUN 
-  TEAM_FIRST 
-  TEAM_SPONSOR 
-  TEAM_ORGANIZATION 
-  TEAM_COUNTRY 
-  TEAM_REGION 
-  TEAM_ZONE 
-  TEAM_CLUB 
-  TEAM_OTHER 
-  TEAM_QUARTER 
-  TEAM_CITY 
-  TEAM_ABBR 
-  TEAM_CAPTAIN
-  TEAM_BOT
-  TEAM_NATIONALITY
-  TEAM_UNIVERSITY 
-  TEAM_GENDER
-  TEAM_AGE
-  TEAM_COLOR
-  TEAM_SCORING
-  TEAM_FORM
-  TEAM_TWORD
-  TEAM_MEET
-  TEAM_TIME
-  TEAM_MONTH
-  TEAM_DAY
-  TEAM_DESTROY
-);
-
-my @TAG_ORDER_NEW = qw(
   FUN 
   FIRST 
   SPONSOR 
@@ -122,7 +64,6 @@ my @TAG_ORDER_NEW = qw(
 our $histo_team;
 
 
-my (%MULTI_WORDS, %MULTI_REGEX, %SINGLE_WORDS);
 my (%MULTI_HITS);
 
 my $CITIES_NAME = "../../../../../../bboD/../../cities/cities.txt";
@@ -156,38 +97,6 @@ my %FORM_SCORES;
 
 sub init_hashes
 {
-  my $method = \&TeamBBO::set_overall_hashes;
-
-  Tags::Fun::set_hashes($method, 'FUN');
-  Tags::First::set_hashes($method, 'FIRST');
-  Tags::Other::set_hashes($method, 'OTHER');
-  Tags::Region::set_hashes($method, 'REGION');
-  Tags::Zone::set_hashes($method, 'ZONE');
-  Tags::City::set_hashes($method, 'CITY');
-  Tags::Quarter::set_hashes($method, 'QUARTER');
-  Tags::Sponsor::set_hashes($method, 'SPONSOR');
-  Tags::University::set_hashes($method, 'UNIVERSITY');
-  Tags::Club::set_hashes($method, 'CLUB');
-  Tags::Organization::set_hashes($method, 'ORGANIZATION');
-  Tags::Abbr::set_hashes($method, 'ABBR');
-  Tags::Captain::set_hashes($method, 'CAPTAIN');
-  Tags::Bot::set_hashes($method, 'BOT');
-  Tags::Country::set_hashes($method, 'COUNTRY');
-  Tags::Nationality::set_hashes($method, 'NATIONALITY');
-  Tags::Gender::set_hashes($method, 'GENDER');
-  Tags::Age::set_hashes($method, 'AGE');
-  Tags::Color::set_hashes($method, 'COLOR');
-  Tags::Scoring::set_hashes($method, 'SCORING');
-  Tags::Form::set_hashes($method, 'FORM');
-  Tags::Tword::set_hashes($method, 'TWORD');
-  Tags::Meet::set_hashes($method, 'MEET');
-  Tags::Time::set_hashes($method, 'TIME');
-  Tags::Month::set_hashes($method, 'MONTH');
-  Tags::Day::set_hashes($method, 'DAY');
-
-  # TODO Goal is mainly to have one of these.
-  Tags::Destroy::set_hashes($method, 'DESTROY');
-
   set_matrix();
   set_repeats(\%REPEATS);
 }
@@ -204,61 +113,6 @@ sub set_link_matrix
     for my $entry (@{$link->{$key}})
     {
       $mlink->{lc($entry)} = $key;
-    }
-  }
-}
-
-
-sub set_overall_hashes
-{
-  my ($multi_words, $multi_typos, $single_words, $single_typos, $key) = @_;
-
-  # The words themselves.
-  for my $multi (@$multi_words)
-  {
-    my $tilded = $multi =~ s/ /\~/gr;
-    $MULTI_WORDS{$key}{lc($multi)} = $multi;
-    $SINGLE_WORDS{$key}{lc($multi)} = 
-      { CATEGORY => $key, VALUE => $multi };
-  }
-
-  # Any typos.
-  for my $multi (keys %$multi_typos)
-  {
-    my $tilded = $multi =~ s/ /\~/gr;
-    for my $typo (@{$multi_typos->{$multi}})
-    {
-      $MULTI_WORDS{$key}{lc($typo)} = $multi;
-      $SINGLE_WORDS{$key}{lc($multi)} = 
-        { CATEGORY => $key, VALUE => $multi };
-    }
-  }
-
-  if (keys %{$MULTI_WORDS{$key}})
-  {
-    my $multi_pattern_direct = join('|', map { quotemeta }
-      sort { length($b) <=> length($a) } keys %{$MULTI_WORDS{$key}});
-
-    $MULTI_REGEX{$key} = qr/(?<!\p{L})($multi_pattern_direct)(?=\P{L}|\z)/i;
-  }
-  else
-  {
-    $MULTI_REGEX{$key} = '';
-  }
-
-  # Similarly for the single words.
-  for my $single (@$single_words)
-  {
-    $SINGLE_WORDS{$key}{lc($single)} = 
-      { CATEGORY => $key, VALUE => $single };
-  }
-
-  for my $single (keys %$single_typos)
-  {
-    for my $typo (@{$single_typos->{$single}})
-    {
-      $SINGLE_WORDS{$key}{lc($typo)} = 
-        { CATEGORY => $key, VALUE => $single };
     }
   }
 }
@@ -364,14 +218,14 @@ sub fix_some_parentheses
   return unless $$team_ref =~ /\((.*)\)/;
   my $t = $1;
 
-  my $fix = $SINGLE_WORDS{AGE}{lc($t)};
+  my $fix = $whole->get_single('AGE', lc($t));
   if (defined $fix->{CATEGORY})
   {
     $$team_ref =~ s/\($t\)/($fix->{VALUE})/;
     return;
   }
 
-  $fix = $SINGLE_WORDS{GENDER}{lc($t)};
+  $fix = $whole->get_single('GENDER', lc($t));
   if (defined $fix->{CATEGORY})
   {
     $$team_ref =~ s/\($t\)/($fix->{VALUE})/;
@@ -513,7 +367,7 @@ sub study_part
 
   # The general solution.
 
-  return if singleton_tag_matches($whole, \@TAG_ORDER_NEW, 
+  return if singleton_tag_matches($whole, \@TAG_ORDER, 
     $i, $part, 0, $chain, $main::histo_team, 'TEAM_');
 
   $token->set_origin($i, $part);
@@ -633,7 +487,7 @@ sub study_team
   my @tags = (0);
   my @values = ($text);
   my @texts = ();
-  split_on_multi($whole, \@TAG_ORDER_NEW, 0, \@tags, \@values, \@texts);
+  split_on_multi($whole, \@TAG_ORDER, 0, \@tags, \@values, \@texts);
 
   # Split on separators.
   my $sep = qr/[\s+\-\+\._;&"\/\(\)\|]/;
