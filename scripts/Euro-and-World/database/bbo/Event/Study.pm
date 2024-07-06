@@ -18,7 +18,6 @@ use Separators;
 use Token;
 use Util;
 
-use Event::Despace;
 use Event::Cookbook;
 
 my @TAG_ORDER = qw(
@@ -56,10 +55,41 @@ our $histo_event;
 
 my %HARD_SUBS =
 (
+  'I A' => ['ia'],
+  'I B' => ['ib'],
+  'II A' => ['iia'],
+  'II B' => ['iib'],
+  'III A' => ['iiia'],
+  'III B' => ['iiib'],
+  'IV A' => ['iva'],
+  'IV B' => ['ivb'],
+  'V A' => ['va'],
+  'V B' => ['vb'],
+  'VI A' => ['via'],
+  'VI B' => ['vib'],
+  'VII A' => ['viia'],
+  'VII B' => ['viib'],
+  'VIII A' => ['viiia'],
+  'VIII B' => ['viiib'],
+  'IX A' => ['ixa'],
+  'IX B' => ['ixb'],
+
   'Final Segment' => ['fs'],
   'First Half' => ['1emt', '1mt', 'andata'],
-  'Second Half' => ['2emt', '2mt', 'ritorno', 'retur'],
+  'Group A' => ['groupa'],
+  'Group B' => ['groupb'],
+  'Open A' => ['opena'],
+  'Open B' => ['openb'],
   'Open Round Robin' => ['orr'],
+  'QF A' => ['qfa'],
+  'QF B' => ['qfb'],
+  'Second Half' => ['2emt', '2mt', 'ritorno', 'retur'],
+  'Semifinal A' => ['sfa'],
+  'Semifinal B' => ['sfb'],
+  'SF A' => ['semia'],
+  'SF B' => ['semib'],
+  'Table A' => ['ta'],
+  'Table B' => ['tb'],
   'Women Round Robin' => ['wrr']
 );
 
@@ -83,94 +113,6 @@ sub sub_hard_fragments
   my ($text) = @_;
   $text =~ s/$HARD_MREGEX/$FLAT_HARD_SUBS{lc($1)}/gi;
   return $text;
-}
-
-
-sub split_on_known_words
-{
-  my ($tags, $values, $texts) = @_;
-
-  # Some entries may be mashed together.  It's easier to split them
-  # out than to try to recognize them later.
-  # As there can be several layers of this, we do it recursively.
-  # Not very efficiently implemented: Don't have to reexamine elements
-  # that could not be split once.
-  
-  my $hit = 1;
-  my $ctr = 0;
-  while ($hit)
-  {
-    $ctr++;
-    $hit = 0;
-    for my $i (reverse 0 .. $#$values)
-    {
-      my $value = $values->[$i];
-      my $fix = $FIX_HASH{$value};
-      next if defined $fix->{VALUE};
-
-      if ($value =~ $FRONT_REGEX)
-      {
-        my ($front, $back) = ($1, $2);
-
-        # If letter-letter, then not lower-lower.
-        next if ($back =~ /^[a-z]/ && $front =~ /[a-z]$/);
-        next if ($back =~ /^[A-Z]/ && $front =~ /[A-Z]$/);
-        next if $value eq 'MatchPoint';
-
-        splice(@$tags, $i, 0, (0) x 2);
-        splice(@$values, $i, 0, ('') x 2);
-        splice(@$texts, $i, 0, ('') x 2);
-
-        $tags->[$i] = 0;
-        $values->[$i] = $front;
-        $texts->[$i] = $front;
-
-        $tags->[$i+1] = 'SEPARATOR';
-        $values->[$i+1] = '|';
-        $texts->[$i+1] = '';
-
-        $tags->[$i+2] = 0;
-        $values->[$i+2] = $back;
-        $texts->[$i+2] = $back;
-
-        $hit = 1;
-        last;
-      }
-
-      next if $hit;
-
-      if ($value =~ $BACK_REGEX)
-      {
-        my ($front, $back) = ($1, $2);
-        if ($back =~ /^[a-z]/ && $front =~ /[a-z]$/ &&
-            $front ne '2e')
-        {
-          # If letter-letter, then not lower-lower.
-          next;
-        }
-        next if ($back =~ /^[A-Z]/ && $front =~ /[A-Z]$/);
-
-        splice(@$tags, $i, 0, (0) x 2);
-        splice(@$values, $i, 0, ('') x 2);
-        splice(@$texts, $i, 0, ('') x 2);
-
-        $tags->[$i] = 0;
-        $values->[$i] = $front;
-        $texts->[$i] = $front;
-
-        $tags->[$i+1] = 'SEPARATOR';
-        $values->[$i+1] = '|';
-        $texts->[$i+1] = '';
-
-        $tags->[$i+2] = 0;
-        $values->[$i+2] = $back;
-        $texts->[$i+2] = $back;
-
-        $hit = 1;
-        last;
-      }
-    }
-  }
 }
 
 
@@ -218,173 +160,6 @@ sub split_on_digit_groups
 }
 
 
-sub split_on_pre_group
-{
-  my ($tags, $values, $texts, $value, $pos) = @_;
-
-  if ($value =~ $PRE_GROUP_REGEX)
-  {
-    my ($front, $back) = ($1, $2);
-
-    my $fix = $FIX_HASH{lc($front)};
-    if (! defined $fix->{VALUE})
-    {
-      die "No value for $front";
-    }
-
-    $value =~ s/$front$back/$front $back/;
-    $values->[$pos] = $value;
-
-    return 1;
-  }
-  return 0;
-}
-
-
-sub split_on_post_group
-{
-  my ($tags, $values, $texts, $value, $pos) = @_;
-
-  if ($value =~ $POST_GROUP_REGEX)
-  {
-    my ($front, $back) = ($1, $2);
-
-    splice(@$tags, $pos, 0, (0) x 2);
-    splice(@$values, $pos, 0, ('') x 2);
-    splice(@$texts, $pos, 0, ('') x 2);
-
-    my $fix = $FIX_HASH{lc($back)};
-    if (! defined $fix->{VALUE})
-    {
-      die "No value for $back";
-    }
-
-    $tags->[$pos] = 0;
-    $values->[$pos] = ($front eq 'W' ? 'Women' : 'Open');
-    $texts->[$pos] = $value;
-
-    $tags->[$pos+1] = 'SEPARATOR';
-    $values->[$pos+1] = '|';
-    $texts->[$pos+1] = $value;
-
-    $tags->[$pos+2] = 0;
-    $values->[$pos+2] = $fix->{VALUE};
-    $texts->[$pos+2] = $value;
-
-    return 1;
-  }
-
-  return 0;
-}
-
-
-sub split_on_tournament_group
-{
-  my ($tags, $values, $texts) = @_;
-
-  # A number of words are commonly followed by A or B.
-  
-  for my $i (reverse 0 .. $#$values)
-  {
-    my $value = $values->[$i];
-
-    next if split_on_pre_group($tags, $values, $texts, $value, $i);
-
-    next if split_on_post_group($tags, $values, $texts, $value, $i);
-
-    # Kludge.
-    if ($value eq 'OR')
-    {
-  die;
-      splice(@$tags, $i, 0, (0) x 2);
-      splice(@$values, $i, 0, ('') x 2);
-      splice(@$texts, $i, 0, ('') x 2);
-
-      $tags->[$i] = 0;
-      $values->[$i] = 'Open';
-      $texts->[$i] = 'OR';
-
-      $tags->[$i+1] = 'SEPARATOR';
-      $values->[$i+1] = '|';
-      $texts->[$i+1] = '';
-
-      $tags->[$i+2] = 0;
-      $values->[$i+2] = 'Room';
-      $texts->[$i+2] = 'OR';
-    }
-    elsif ($value eq 'or')
-    {
-  die;
-      $tags->[$i] = 0;
-      $values->[$i] = 'Of'; # Typically a typo
-      $texts->[$i] = 'or';
-    }
-    elsif ($value eq 'FO')
-    {
-  die;
-      splice(@$tags, $i, 0, (0) x 2);
-      splice(@$values, $i, 0, ('') x 2);
-      splice(@$texts, $i, 0, ('') x 2);
-
-      $tags->[$i] = 0;
-      $values->[$i] = 'Final';
-      $texts->[$i] = 'FO';
-
-      $tags->[$i+1] = 'SEPARATOR';
-      $values->[$i+1] = '|';
-      $texts->[$i+1] = '';
-
-      $tags->[$i+2] = 0;
-      $values->[$i+2] = 'Open';
-      $texts->[$i+2] = 'FO';
-    }
-    elsif ($value eq 'OF') # Probably
-    {
-  die;
-      splice(@$tags, $i, 0, (0) x 2);
-      splice(@$values, $i, 0, ('') x 2);
-      splice(@$texts, $i, 0, ('') x 2);
-
-      $tags->[$i] = 0;
-      $values->[$i] = 'Open';
-      $texts->[$i] = 'OF';
-
-      $tags->[$i+1] = 'SEPARATOR';
-      $values->[$i+1] = '|';
-      $texts->[$i+1] = '';
-
-      $tags->[$i+2] = 0;
-      $values->[$i+2] = 'Final';
-      $texts->[$i+2] = 'OF';
-    }
-  }
-}
-
-
-sub is_letter
-{
-  my ($part, $token) = @_;
-
-  my $lc = lc($part);
-  if ($lc =~ /^[abcdefhuv]$/)
-  {
-print "XXX8 $part\n";
-    $token->set_letter_counter($part);
-    return 1;
-  }
-  elsif ($lc =~ /^[a-z]$/)
-  {
-print "XXX9 $part\n";
-    $token->set_singleton('LETTER', $part);
-    return 1;
-  }
-  else
-  {
-    return 0;
-  }
-}
-
-
 sub is_lettered_number
 {
   my ($part, $token, $chain) = @_;
@@ -426,15 +201,6 @@ sub study_value
 
   return if Separators::set_token($value, $token);
 
-  # my $fix = $FIX_HASH{lc($value)};
-  # if (defined $fix->{CATEGORY})
-  # {
-# print "XXX4 $fix->{CATEGORY} $value\n";
-    # $token->set_singleton($fix->{CATEGORY}, $fix->{VALUE});
-    # return;
-  # }
-
-  # return 0 if is_letter($value, $token);
   return 0 if is_lettered_number($value, $token);
 
   print "UNKNOWN $value\n";
@@ -456,8 +222,6 @@ sub study
     return;
   }
 
-  # my $dtext = despace($chunk->{EVENT});
-  # my $utext = unteam($dtext, $result);
   my $utext = unteam($chunk->{EVENT}, $result);
   my $htext = sub_hard_fragments($utext);
   my $ctext = split_on_capitals($htext);
@@ -469,9 +233,6 @@ sub study
 
   # Split on groups of digits.
   split_on_digit_groups(\@tags, \@values, \@texts);
-
-  # Split some known words + A or B at the end.
-  split_on_tournament_group(\@tags, \@values, \@texts);
 
   split_on_multi($whole, \@TAG_ORDER, 1, \@tags, \@values, \@texts);
 
