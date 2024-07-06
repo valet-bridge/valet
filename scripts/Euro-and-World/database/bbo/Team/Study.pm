@@ -61,6 +61,7 @@ my @TAG_ORDER = qw(
   DESTROY
 );
 
+my $PREFIX = 'TEAM_';
 our $histo_team;
 
 
@@ -487,11 +488,8 @@ sub study_team
   return if $text eq '';
   if (my $s = suggest_form($text, \%FORM_SCORES))
   {
-    my $token = Token->new();
-    $token->set_origin(0, $text);
-    $token->set_singleton('FORM', $s);
-    $chain->append($token);
-    $HIT_STATS{TEAM_FORM}++;
+    append_token($chain, 'SINGLETON', 'FORM', $s, $text, 0,
+      $main::histo_team, $PREFIX);
     return;
   }
 

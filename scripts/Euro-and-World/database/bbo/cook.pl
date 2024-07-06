@@ -185,6 +185,8 @@ print_team_stats();
 
 $stats_team->print("Team");
 
+$histo_team->print();
+
 if ($do_events)
 {
   $histo_event->print();
