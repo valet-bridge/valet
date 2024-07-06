@@ -18,15 +18,12 @@ use lib './Team';
 use lib './Event';
 use lib './Tags';
 
-# use Country;
 use Token;
 use Util;
 
 use Event::Cookbook;
 
 use Separators;
-# use Age;
-# use Gender;
 
 use Team::Suggestors;
 
@@ -92,6 +89,39 @@ my @TAG_ORDER = qw(
   TEAM_DESTROY
 );
 
+my @TAG_ORDER_NEW = qw(
+  FUN 
+  FIRST 
+  SPONSOR 
+  ORGANIZATION 
+  COUNTRY 
+  REGION 
+  ZONE 
+  CLUB 
+  OTHER 
+  QUARTER 
+  CITY 
+  ABBR 
+  CAPTAIN
+  BOT
+  NATIONALITY
+  UNIVERSITY 
+  GENDER
+  AGE
+  COLOR
+  SCORING
+  FORM
+  TWORD
+  MEET
+  TIME
+  MONTH
+  DAY
+  DESTROY
+);
+
+our $histo_team;
+
+
 my (%MULTI_WORDS, %MULTI_REGEX, %SINGLE_WORDS);
 my (%MULTI_HITS);
 
@@ -128,35 +158,35 @@ sub init_hashes
 {
   my $method = \&TeamBBO::set_overall_hashes;
 
-  Tags::Fun::set_hashes($method, 'TEAM_FUN');
-  Tags::First::set_hashes($method, 'TEAM_FIRST');
-  Tags::Other::set_hashes($method, 'TEAM_OTHER');
-  Tags::Region::set_hashes($method, 'TEAM_REGION');
-  Tags::Zone::set_hashes($method, 'TEAM_ZONE');
-  Tags::City::set_hashes($method, 'TEAM_CITY');
-  Tags::Quarter::set_hashes($method, 'TEAM_QUARTER');
-  Tags::Sponsor::set_hashes($method, 'TEAM_SPONSOR');
-  Tags::University::set_hashes($method, 'TEAM_UNIVERSITY');
-  Tags::Club::set_hashes($method, 'TEAM_CLUB');
-  Tags::Organization::set_hashes($method, 'TEAM_ORGANIZATION');
-  Tags::Abbr::set_hashes($method, 'TEAM_ABBR');
-  Tags::Captain::set_hashes($method, 'TEAM_CAPTAIN');
-  Tags::Bot::set_hashes($method, 'TEAM_BOT');
-  Tags::Country::set_hashes($method, 'TEAM_COUNTRY');
-  Tags::Nationality::set_hashes($method, 'TEAM_NATIONALITY');
-  Tags::Gender::set_hashes($method, 'TEAM_GENDER');
-  Tags::Age::set_hashes($method, 'TEAM_AGE');
-  Tags::Color::set_hashes($method, 'TEAM_COLOR');
-  Tags::Scoring::set_hashes($method, 'TEAM_SCORING');
-  Tags::Form::set_hashes($method, 'TEAM_FORM');
-  Tags::Tword::set_hashes($method, 'TEAM_TWORD');
-  Tags::Meet::set_hashes($method, 'TEAM_MEET');
-  Tags::Time::set_hashes($method, 'TEAM_TIME');
-  Tags::Month::set_hashes($method, 'TEAM_MONTH');
-  Tags::Day::set_hashes($method, 'TEAM_DAY');
+  Tags::Fun::set_hashes($method, 'FUN');
+  Tags::First::set_hashes($method, 'FIRST');
+  Tags::Other::set_hashes($method, 'OTHER');
+  Tags::Region::set_hashes($method, 'REGION');
+  Tags::Zone::set_hashes($method, 'ZONE');
+  Tags::City::set_hashes($method, 'CITY');
+  Tags::Quarter::set_hashes($method, 'QUARTER');
+  Tags::Sponsor::set_hashes($method, 'SPONSOR');
+  Tags::University::set_hashes($method, 'UNIVERSITY');
+  Tags::Club::set_hashes($method, 'CLUB');
+  Tags::Organization::set_hashes($method, 'ORGANIZATION');
+  Tags::Abbr::set_hashes($method, 'ABBR');
+  Tags::Captain::set_hashes($method, 'CAPTAIN');
+  Tags::Bot::set_hashes($method, 'BOT');
+  Tags::Country::set_hashes($method, 'COUNTRY');
+  Tags::Nationality::set_hashes($method, 'NATIONALITY');
+  Tags::Gender::set_hashes($method, 'GENDER');
+  Tags::Age::set_hashes($method, 'AGE');
+  Tags::Color::set_hashes($method, 'COLOR');
+  Tags::Scoring::set_hashes($method, 'SCORING');
+  Tags::Form::set_hashes($method, 'FORM');
+  Tags::Tword::set_hashes($method, 'TWORD');
+  Tags::Meet::set_hashes($method, 'MEET');
+  Tags::Time::set_hashes($method, 'TIME');
+  Tags::Month::set_hashes($method, 'MONTH');
+  Tags::Day::set_hashes($method, 'DAY');
 
   # TODO Goal is mainly to have one of these.
-  Tags::Destroy::set_hashes($method, 'TEAM_DESTROY');
+  Tags::Destroy::set_hashes($method, 'DESTROY');
 
   set_matrix();
   set_repeats(\%REPEATS);
@@ -249,7 +279,7 @@ sub make_field_record
       $record->{$field} = $val;
     }
     elsif ($dupl_flag && 
-        $field ne 'TEAM_DESTROY' && 
+        $field ne 'DESTROY' && 
         $record->{$field} ne $val)
     {
       print "$bbono, $text, $field: $record->{$field} vs $val\n";
@@ -290,7 +320,7 @@ sub check_consistency_pair
   {
     return;
   }
-  elsif ($from eq 'TEAM_CLUB' && $to eq 'TEAM_CITY' && $c =~ /-Pan$/)
+  elsif ($from eq 'CLUB' && $to eq 'CITY' && $c =~ /-Pan$/)
   {
     # Special case.
     return;
@@ -313,17 +343,17 @@ sub check_consistency
   make_field_record($text, $chain, $bbono, \%record, 1);
 
   check_consistency_pair($text, $bbono, \%record,
-    'TEAM_REGION', 'TEAM_COUNTRY');
+    'REGION', 'COUNTRY');
   check_consistency_pair($text, $bbono, \%record,
-    'TEAM_CITY', 'TEAM_COUNTRY');
+    'CITY', 'COUNTRY');
   check_consistency_pair($text, $bbono, \%record,
-    'TEAM_QUARTER', 'TEAM_CITY');
+    'QUARTER', 'CITY');
   check_consistency_pair($text, $bbono, \%record,
-    'TEAM_UNIVERSITY', 'TEAM_CITY');
+    'UNIVERSITY', 'CITY');
   check_consistency_pair($text, $bbono, \%record,
-    'TEAM_CLUB', 'TEAM_CITY');
+    'CLUB', 'CITY');
   check_consistency_pair($text, $bbono, \%record,
-    'TEAM_SPONSOR', 'TEAM_COUNTRY');
+    'SPONSOR', 'COUNTRY');
 }
 
 
@@ -334,14 +364,14 @@ sub fix_some_parentheses
   return unless $$team_ref =~ /\((.*)\)/;
   my $t = $1;
 
-  my $fix = $SINGLE_WORDS{TEAM_AGE}{lc($t)};
+  my $fix = $SINGLE_WORDS{AGE}{lc($t)};
   if (defined $fix->{CATEGORY})
   {
     $$team_ref =~ s/\($t\)/($fix->{VALUE})/;
     return;
   }
 
-  $fix = $SINGLE_WORDS{TEAM_GENDER}{lc($t)};
+  $fix = $SINGLE_WORDS{GENDER}{lc($t)};
   if (defined $fix->{CATEGORY})
   {
     $$team_ref =~ s/\($t\)/($fix->{VALUE})/;
@@ -444,7 +474,7 @@ sub team_specific_hashes
 {
   my ($part, $token, $chain) = @_;
 
-  for my $tag (@TAG_ORDER)
+  for my $tag (@TAG_ORDER_NEW)
   {
     my $fix = $SINGLE_WORDS{$tag}{lc($part)};
     if (defined $fix->{CATEGORY})
@@ -456,23 +486,23 @@ sub team_specific_hashes
       $token->set_singleton($fix->{CATEGORY}, $fix->{VALUE});
       $HIT_STATS{$fix->{CATEGORY}}++;
 
-      if ($fix->{CATEGORY} eq 'TEAM_GENDER' &&
+      if ($fix->{CATEGORY} eq 'GENDER' &&
           $fix->{VALUE} eq 'Open')
       {
         # Special case: Add an extra token.
         my $token2 = Token->new();
         $token2->copy_origin_from($token);
-        $token2->set_singleton('TEAM_AGE', 'Open');
+        $token2->set_singleton('AGE', 'Open');
         $chain->append($token2);
         $HIT_STATS{'TEAM_AGE'}++;
       }
-      elsif ($fix->{CATEGORY} eq 'TEAM_AGE' &&
+      elsif ($fix->{CATEGORY} eq 'AGE' &&
           $fix->{VALUE} eq 'Girls')
       {
         # Special case: Add an extra token.
         my $token2 = Token->new();
         $token2->copy_origin_from($token);
-        $token2->set_singleton('TEAM_GENDER', 'Women');
+        $token2->set_singleton('GENDER', 'Women');
         $chain->append($token2);
         $HIT_STATS{'TEAM_GENDER'}++;
       }
@@ -504,7 +534,7 @@ sub study_part
   {
     if ($part >= 1900 && $part < 2100)
     {
-      $token->set_singleton('TEAM_YEAR', $part);
+      $token->set_singleton('YEAR', $part);
       $HIT_STATS{TEAM_YEAR}++;
     }
     else
@@ -532,7 +562,7 @@ sub study_part
     my $category = $fix_event->{CATEGORY};
     if ($category eq 'NUMERAL' || $category eq 'ROMAN')
     {
-      $token->set_singleton('TEAM_' . $category, $fix_event->{VALUE});
+      $token->set_singleton($category, $fix_event->{VALUE});
       $HIT_STATS{'TEAM_' . $category}++;
       return;
     }
@@ -544,54 +574,6 @@ sub study_part
   $$unknown_part_flag = 1;
 }
 
-
-sub split_on_multi_old
-{
-  my ($text, $parts, $tags) = @_;
-
-  @$parts = ($text);
-  @$tags = (0);
-
-  for my $tag (@TAG_ORDER)
-  {
-    next if $MULTI_REGEX{$tag} eq '';
-    for my $i (reverse 0 .. $#$parts)
-    {
-      next if $tags->[$i] ne '0';
-      my @a = grep { $_ ne '' } split /$MULTI_REGEX{$tag}/, $parts->[$i];
-
-      if ($#a == 0)
-      {
-        # Optimize for this frequent special case.
-        if (exists $MULTI_WORDS{$tag}{lc($a[0])})
-        {
-          $parts->[$i] = $MULTI_WORDS{$tag}{lc($a[0])};
-          $tags->[$i] = $tag;
-          # my $w = $MULTI_WORDS{$tag}{lc($a[0])};
-          # $MULTI_HITS{$tag}{lc($a[0])}++;
-          # $MULTI_HITS{$tag}{lc($w)}++;
-        }
-      }
-      else
-      {
-        splice(@$parts, $i, 1, @a);
-        splice(@$tags, $i, 1, (0) x ($#a+1));
-
-        for my $j ($i .. $i + $#a)
-        {
-          if (exists $MULTI_WORDS{$tag}{lc($parts->[$j])})
-          {
-            $parts->[$j] = $MULTI_WORDS{$tag}{lc($parts->[$j])};
-            $tags->[$j] = $tag;
-            # my $w = $MULTI_WORDS{$tag}{lc($parts->[$j])};
-            # $MULTI_HITS{$tag}{lc($parts->[$j])}++;
-            # $MULTI_HITS{$tag}{lc($w)}++;
-          }
-        }
-      }
-    }
-  }
-}
 
 sub study_component
 {
@@ -628,26 +610,26 @@ sub fix_heuristics
   make_complete_field_record($text, $chain, $bbono, \%record);
 
   # Destroy Bridge Club if there is also Sporting Club.
-  if (exists $record{TEAM_ABBR} && $#{$record{TEAM_ABBR}} == 1)
+  if (exists $record{ABBR} && $#{$record{ABBR}} == 1)
   {
     for my $i (0 .. $chain->last())
     {
       my $token = $chain->check_out($i);
-      if ($token->field() eq 'TEAM_ABBR' &&
+      if ($token->field() eq 'ABBR' &&
           $token->value() eq 'Bridge Club')
       {
-        $token->set_singleton('TEAM_DESTROY', 'Bridge Club');
+        $token->set_singleton('DESTROY', 'Bridge Club');
       }
     }
   }
 
   # Turn Orange White into Netherlands White.
-  if (exists $record{TEAM_COLOR} && $#{$record{TEAM_COLOR}} == 1)
+  if (exists $record{COLOR} && $#{$record{COLOR}} == 1)
   {
     my $token = $chain->check_out(0);
     if (lc($token->value()) eq 'orange')
     {
-      $token->set_singleton('TEAM_COUNTRY', 'Netherlands');
+      $token->set_singleton('COUNTRY', 'Netherlands');
     }
   }
 
@@ -659,7 +641,7 @@ sub fix_heuristics
       my $token = $chain->check_out($i);
       if ($token->field() eq 'NUMERAL')
       {
-        $token->set_singleton('TEAM_DESTROY', $token->value());
+        $token->set_singleton('DESTROY', $token->value());
       }
     }
   }
@@ -668,14 +650,14 @@ sub fix_heuristics
 
 sub study_team
 {
-  my ($text, $chain, $bbono) = @_;
+  my ($whole, $text, $chain, $bbono) = @_;
 
   return if $text eq '';
   if (my $s = suggest_form($text, \%FORM_SCORES))
   {
     my $token = Token->new();
     $token->set_origin(0, $text);
-    $token->set_singleton('TEAM_FORM', $s);
+    $token->set_singleton('FORM', $s);
     $chain->append($token);
     $HIT_STATS{TEAM_FORM}++;
     return;
@@ -683,9 +665,10 @@ sub study_team
 
   return if eliminate_districts(\$text);
 
-  my @parts = ($text);
   my @tags = (0);
-  split_on_multi_old($text, \@parts, \@tags);
+  my @values = ($text);
+  my @texts = ();
+  split_on_multi($whole, \@TAG_ORDER_NEW, 0, \@tags, \@values, \@texts);
 
   # Split on separators.
   my $sep = qr/[\s+\-\+\._;&"\/\(\)\|]/;
@@ -693,20 +676,20 @@ sub study_team
   my $token_no = 0;
   my $unsolved_flag = 0;
 
-  for my $i (0 .. $#parts)
+  for my $i (0 .. $#values)
   {
     if ($tags[$i] ne '0')
     {
       # We had a multi-word hit.
       my $token = Token->new();
-      $token->set_origin($i, $parts[$i]);
-      $token->set_singleton($tags[$i], $parts[$i]);
+      $token->set_origin($i, $values[$i]);
+      $token->set_singleton($tags[$i], $values[$i]);
       $chain->append($token);
       $token_no++;
     }
     else
     {
-      my @a = grep { $_ ne '' } split(/$sep/, $parts[$i]);
+      my @a = grep { $_ ne '' } split(/$sep/, $values[$i]);
       foreach my $part (@a)
       {
         study_component($part, $chain, \$token_no, \$unsolved_flag);
@@ -739,7 +722,7 @@ sub print_team_stats
 
 sub study_teams
 {
-  my ($text, $result, $chain1, $chain2, $bbono) = @_;
+  my ($whole, $text, $result, $chain1, $chain2, $bbono) = @_;
 
   return unless defined $text;
 
@@ -760,8 +743,8 @@ sub study_teams
     die "Can't parse team line $text\n";
   }
 
-  study_team($result->{TEAM1}, $chain1, $bbono);
-  study_team($result->{TEAM2}, $chain2, $bbono);
+  study_team($whole, $result->{TEAM1}, $chain1, $bbono);
+  study_team($whole, $result->{TEAM2}, $chain2, $bbono);
 
   check_consistency($result->{TEAM1}, $chain1, $bbono);
   check_consistency($result->{TEAM2}, $chain2, $bbono);
@@ -778,10 +761,10 @@ sub is_captain
   my ($text) = @_;
 
   my $lt = lc($text);
-  my $fix = $SINGLE_WORDS{TEAM_CAPTAIN}{$lt};
+  my $fix = $SINGLE_WORDS{CAPTAIN}{$lt};
   return 1 if defined $fix->{CATEGORY};
 
-  if ($lt =~ /$MULTI_REGEX{TEAM_CAPTAIN}/)
+  if ($lt =~ /$MULTI_REGEX{CAPTAIN}/)
   {
     return 1;
   }

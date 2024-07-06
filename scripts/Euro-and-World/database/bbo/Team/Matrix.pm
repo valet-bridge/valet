@@ -829,19 +829,19 @@ my %COUNTRY_TO_NATIONALITY =
 sub set_matrix
 {
   TeamBBO::set_link_matrix(\%COUNTRY_TO_REGION, 
-    'TEAM_COUNTRY', 'TEAM_REGION');
+    'COUNTRY', 'REGION');
   TeamBBO::set_link_matrix(\%COUNTRY_TO_CITY, 
-    'TEAM_COUNTRY', 'TEAM_CITY');
+    'COUNTRY', 'CITY');
   TeamBBO::set_link_matrix(\%CITY_TO_QUARTER, 
-    'TEAM_CITY', 'TEAM_QUARTER');
+    'CITY', 'QUARTER');
   TeamBBO::set_link_matrix(\%CITY_TO_UNIVERSITY, 
-    'TEAM_CITY', 'TEAM_UNIVERSITY');
+    'CITY', 'UNIVERSITY');
   TeamBBO::set_link_matrix(\%CITY_TO_CLUB, 
-    'TEAM_CITY', 'TEAM_CLUB');
+    'CITY', 'CLUB');
   TeamBBO::set_link_matrix(\%COUNTRY_TO_SPONSOR, 
-    'TEAM_COUNTRY', 'TEAM_SPONSOR');
+    'COUNTRY', 'SPONSOR');
   TeamBBO::set_link_matrix(\%COUNTRY_TO_NATIONALITY, 
-    'TEAM_COUNTRY', 'TEAM_NATIONALITY');
+    'COUNTRY', 'NATIONALITY');
 }
 
 1;

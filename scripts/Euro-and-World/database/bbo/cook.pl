@@ -94,7 +94,7 @@ while ($line = <$fh>)
     next;
   }
 
-  if ($chunk{BBONO} == 103)
+  if ($chunk{BBONO} == 1)
   {
     print "HERE\n";
   }
@@ -106,7 +106,7 @@ while ($line = <$fh>)
   my $chain_team1 = Chain->new();
   my $chain_team2 = Chain->new();
   my %result;
-  study_teams($chunk{TEAMS}, \%result, 
+  study_teams($whole, $chunk{TEAMS}, \%result, 
     $chain_team1, $chain_team2, $chunk{BBONO});
 
   my @chains_team;
@@ -117,8 +117,8 @@ while ($line = <$fh>)
 
   if ($print_chains)
   {
-    print_chain($chain_team1, 1, "TEAM");
-    print_chain($chain_team2, 2, "TEAM");
+    print_chain($chain_team1, 1, "TEAM1");
+    print_chain($chain_team2, 2, "TEAM2");
   }
 
 
@@ -226,26 +226,26 @@ sub print_chain
   my $l = $chain->last();
   return if $l == -1;
 
-  if ($prefix eq 'TITLE' || $prefix eq 'EVENT')
-  {
+  # if ($prefix eq 'TITLE' || $prefix eq 'EVENT')
+  # {
     for my $i (0 .. $l)
     {
       my $token = $chain->check_out($i);
       print $token->str(0, $prefix) unless 
         $token->category() eq 'SEPARATOR';
     }
-  }
-  elsif ($prefix eq 'TEAM')
-  {
+  # }
+  # elsif ($prefix eq 'TEAM')
+  # {
     # TODO Probably the TEAM chains should be prefixed before they get here.
-    for my $i (0 .. $l)
-    {
-      my $t = $chain->check_out($i);
-      my $tag = $t->field();
-      $tag =~ s/^TEAM_/TEAM${no}_/;
-      print $tag, ' ', $t->value(), "\n";
-    }
-  }
+    # for my $i (0 .. $l)
+    # {
+      # my $t = $chain->check_out($i);
+      # my $tag = $t->field();
+      # $tag =~ s/^TEAM_/TEAM${no}_/;
+      # print $tag, ' ', $t->value(), "\n";
+    # }
+  # }
 }
 
 
