@@ -226,14 +226,14 @@ sub print_chain
   my $l = $chain->last();
   return if $l == -1;
 
-  if ($prefix eq 'TITLE')
+  if ($prefix eq 'TITLE' || $prefix eq 'EVENT')
   {
     for my $i (0 .. $l)
     {
       my $token = $chain->check_out($i);
-      print $token->str(0, $prefix);
+      print $token->str(0, $prefix) unless 
+        $token->category() eq 'SEPARATOR';
     }
-    return;
   }
   elsif ($prefix eq 'TEAM')
   {
@@ -245,31 +245,7 @@ sub print_chain
       $tag =~ s/^TEAM_/TEAM${no}_/;
       print $tag, ' ', $t->value(), "\n";
     }
-    return;
   }
-
-  if ($l == 0)
-  {
-    my $token = $chain->check_out(0);
-    print $token->str(0, $prefix);
-    return;
-  }
-  elsif ($prefix eq 'EVENT' && $l == 2)
-  {
-    my $token0 = $chain->check_out(0);
-    my $token2 = $chain->check_out(2);
-
-    print $token0->str(0, $prefix);
-    print $token2->str(0, $prefix);
-    return;
-  }
-
-  for my $i (0 .. $l)
-  {
-    my $token = $chain->check_out($i);
-    print $token->str(0, $prefix) unless $token->category() eq 'SEPARATOR';
-  }
-  return;
 }
 
 
