@@ -70,6 +70,7 @@ my $line;
 my $lno = 0;
 my (@chain_team_stats);
 my (@reduction_event_stats, @reduction_title_stats);
+my $unknown_teams = 0;
 my $unknown_events = 0;
 my $unknown_titles = 0;
 
@@ -111,8 +112,10 @@ while ($line = <$fh>)
   my $chain_team1 = Chain->new();
   my $chain_team2 = Chain->new();
 
-  study_team($whole, $result{TEAM1}, $chain_team1, $chunk{BBONO});
-  study_team($whole, $result{TEAM2}, $chain_team2, $chunk{BBONO});
+  Team::Study::study($whole, $result{TEAM1}, $chain_team1, $chunk{BBONO},
+    \$unknown_teams);
+  Team::Study::study($whole, $result{TEAM2}, $chain_team2, $chunk{BBONO},
+    \$unknown_teams);
 
   my @chains_team;
   push @chains_team, $chain_team1;
@@ -181,11 +184,10 @@ while ($line = <$fh>)
 
 close $fh;
 
-print_team_stats();
-
-$stats_team->print("Team");
-
 $histo_team->print();
+$stats_team->print("Team");
+print "\nTotal unknown teams $unknown_events\n\n";
+
 
 if ($do_events)
 {

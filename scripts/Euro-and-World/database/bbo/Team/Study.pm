@@ -9,25 +9,19 @@ use open ':std', ':encoding(UTF-8)';
 package Team::Study;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(clean_teams study_team
+our @EXPORT = qw(clean_teams study
   print_team_stats init_hashes);
 
 use lib '.';
 use lib '..';
 use lib './Team';
-use lib './Event';
 use lib './Tags';
 
 use Token;
 use Util;
-
-use Event::Cookbook;
-
 use Separators;
 
 use Team::Suggestors;
-
-
 use Team::Matrix;
 use Team::Repeats;
 
@@ -74,6 +68,50 @@ my %MATRIX;
 
 # BBOVG numbers for which repeated, but different fields are OK.
 my %REPEATS;
+
+
+sub fix_some_parentheses
+{
+  my ($whole, $team_ref) = @_;
+
+  return unless $$team_ref =~ /\((.*)\)/;
+  my $t = $1;
+
+  my $fix = $whole->get_single('AGE', lc($t));
+  if (defined $fix->{CATEGORY})
+  {
+    $$team_ref =~ s/\($t\)/($fix->{VALUE})/;
+    return;
+  }
+
+  $fix = $whole->get_single('GENDER', lc($t));
+  if (defined $fix->{CATEGORY})
+  {
+    $$team_ref =~ s/\($t\)/($fix->{VALUE})/;
+    return;
+  }
+
+  if ($t eq 'O')
+  {
+    $$team_ref = 'Open';
+  }
+  elsif ($t eq 'W')
+  {
+    $$team_ref = 'Women';
+  }
+  elsif ($t eq 'S')
+  {
+    $$team_ref = 'Seniors';
+  }
+  elsif ($t eq 'L')
+  {
+    $$team_ref = 'Ladies';
+  }
+  elsif ($t eq 'J')
+  {
+    $$team_ref = 'Juniors';
+  }
+}
 
 
 sub clean_team
@@ -132,7 +170,6 @@ sub clean_teams
 
 
 
-my %HIT_STATS;
 my %FORM_SCORES;
 
 
@@ -252,50 +289,6 @@ sub check_consistency
 }
 
 
-sub fix_some_parentheses
-{
-  my ($whole, $team_ref) = @_;
-
-  return unless $$team_ref =~ /\((.*)\)/;
-  my $t = $1;
-
-  my $fix = $whole->get_single('AGE', lc($t));
-  if (defined $fix->{CATEGORY})
-  {
-    $$team_ref =~ s/\($t\)/($fix->{VALUE})/;
-    return;
-  }
-
-  $fix = $whole->get_single('GENDER', lc($t));
-  if (defined $fix->{CATEGORY})
-  {
-    $$team_ref =~ s/\($t\)/($fix->{VALUE})/;
-    return;
-  }
-
-  if ($t eq 'O')
-  {
-    $$team_ref = 'Open';
-  }
-  elsif ($t eq 'W')
-  {
-    $$team_ref = 'Women';
-  }
-  elsif ($t eq 'S')
-  {
-    $$team_ref = 'Seniors';
-  }
-  elsif ($t eq 'L')
-  {
-    $$team_ref = 'Ladies';
-  }
-  elsif ($t eq 'J')
-  {
-    $$team_ref = 'Juniors';
-  }
-}
-
-
 sub eliminate_districts
 {
   my ($team_ref) = @_;
@@ -304,27 +297,6 @@ sub eliminate_districts
   $$team_ref =~ s/\(D\d+\)//;
   $$team_ref =~ s/\bD\d+\b//;
   return ($$team_ref =~ /^\s*$/ ? 1 : 0);
-}
-
-
-sub split_on_trailing_digits
-{
-  my ($list_ref) = @_;
-
-  for my $i (reverse 0 .. $#$list_ref)
-  {
-    my $part = $list_ref->[$i];
-    next unless $part =~ /^(.*[a-z])(\d+)$/i;
-
-    my ($letters, $digits) = ($1, $2);
-    next if $letters eq 'U' || $letters eq 'D';
-    next if $digits > 50;
-
-    splice(@$list_ref, $i, 0, ('') x 2);
-    $list_ref->[$i] = $letters;
-    $list_ref->[$i+1] = '|';
-    $list_ref->[$i+2] = $digits;
-  }
 }
 
 
@@ -423,9 +395,9 @@ sub fix_heuristics
 }
 
 
-sub study_team
+sub study
 {
-  my ($whole, $text, $chain, $bbono) = @_;
+  my ($whole, $text, $chain, $bbono, $unknowns) = @_;
 
   return if $text eq '';
   if (my $s = suggest_form($text, \%FORM_SCORES))
@@ -470,6 +442,7 @@ sub study_team
 
   if ($unsolved_flag)
   {
+    $$unknowns++;
     print "UUU $bbono: $text\n" if $chain->last() > 0;
     print "\n";
   }
@@ -480,13 +453,6 @@ sub study_team
 
 sub print_team_stats
 {
-  for my $key (sort keys %HIT_STATS)
-  {
-    printf("%-20s %6d\n", $key, $HIT_STATS{$key});
-  }
-
-  print "\n";
-
   for my $key (sort keys %FORM_SCORES)
   {
     printf("%-20s %6d\n", $key, $FORM_SCORES{$key});

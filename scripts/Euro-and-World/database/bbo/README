@@ -1,7 +1,5 @@
 Team:
-- Make a Study
-- Study should only take one team as an argument at a time
-- Also offers a clean() method
+- Don't really need FORM_SCORES
 - Put some into Consistency
 
 Probably token_no and ++ is messed up in all cases.
@@ -14,7 +12,6 @@ Chains print should be in a new Chains (today's Chains is something else)
 - Update it from Chains
 - Make a Chains::print()
 
-- Make TeamBBO like TitleBBO (Whole)
 - Move Matrix to Connections/Matrix.pm or some such
 
 Output all the cook results into a text file in compact format:

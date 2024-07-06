@@ -127,7 +127,6 @@ sub study_component
   my ($whole, $value, $chain, $token_no, $unsolved_flag) = @_;
 
   # Split on trailing digits.
-  my $unknown_value_flag = 0;
   my $digits = '';
   if ($value =~ /^(.*[a-z])(\d+)$/i &&
       $1 ne 'U' && $1 ne 'D')
@@ -135,7 +134,7 @@ sub study_component
     ($value, $digits) = ($1, $2);
   }
 
-  study_value($whole, $value, $token_no, $chain, \$unsolved_flag);
+  study_value($whole, $value, $token_no, $chain, $unsolved_flag);
   $$token_no++;
 
   if ($digits ne '')
