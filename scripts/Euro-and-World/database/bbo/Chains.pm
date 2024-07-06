@@ -195,6 +195,7 @@ sub split_on_singleton
       for my $index (0 .. $chain->last())
       {
         next unless $chain->category($index) eq 'SINGLETON';
+        next if $chain->field($index) eq 'PARTICLE';
         $chain->complete_if_last_is(0, 'COMPLETE');
 
         my $field = $chain->field($index);

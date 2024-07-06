@@ -17,6 +17,7 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  of => ['out of', '0ff', '(of', '(0f', '(out of', '(or']
 );
 
 my @SINGLE_WORDS = qw(
@@ -29,7 +30,7 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   and => ['&'],
-  of => ['af', 'off', 'av', 'de', 'olf', 'pf', 'fo', 'from']
+  of => ['af', 'off', 'av', 'de', 'olf', 'pf', 'fo', 'from', '0f']
 );
 
 

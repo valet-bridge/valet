@@ -99,7 +99,7 @@ our @EVENT_REDUCTIONS =
       { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL'] },
       { CATEGORY => ['SEPARATOR'] },
       { CATEGORY => ['SINGLETON'], FIELD => ['PARTICLE'],
-        VALUE => [qw(And To)] },
+        VALUE => [qw(and to)] },
       { CATEGORY => ['SEPARATOR'] },
       { CATEGORY => ['COUNTER'], FIELD => ['NUMERAL'] }
     ],
@@ -150,7 +150,7 @@ our @EVENT_REDUCTIONS =
       { CATEGORY => ['COUNTER'], 
         FIELD => [qw(NUMERAL NL N_TO_N ORDINAL)] },
       { CATEGORY => ['SEPARATOR'] },
-      { CATEGORY => ['SINGLETON'], FIELD => ['PARTICLE'], VALUE => ['Of']},
+      { CATEGORY => ['SINGLETON'], FIELD => ['PARTICLE'], VALUE => ['of']},
       { CATEGORY => ['SEPARATOR'] },
       { CATEGORY => ['COUNTER'], FIELD => [qw(NUMERAL NL)] }
     ],

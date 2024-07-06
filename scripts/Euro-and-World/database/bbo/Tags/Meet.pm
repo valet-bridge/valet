@@ -172,7 +172,8 @@ my %SINGLE_TYPOS =
     'festiwal'],
   'Gold Coast Congress' => ['gc', 'gcc'],
   'Indonesian National Pre-Sports Week' => ['prapon'],
-  'Indonesian National Sports Week' => ['indonesia week', 'pon']
+  'Indonesian National Sports Week' => ['indonesia week', 'pon'],
+  'Israel Grand Prix' => ['isrgp']
 );
 
 

@@ -53,6 +53,36 @@ my @TAG_ORDER = qw(
 my $PREFIX = 'EVENT_';
 our $histo_event;
 
+my %HARD_SUBS =
+(
+  'First Half' => ['1emt', '1mt', 'andata'],
+  'Second Half' => ['2emt', '2mt', 'ritorno', 'retur'],
+  'Open Round Robin' => ['orr'],
+  'Women Round Robin' => ['wrr']
+);
+
+# This is like a tag substitution, but it is just a hard substitution
+# without the attachment of any tag, so it's rather direct and primitive.
+
+my %FLAT_HARD_SUBS;
+while (my ($key, $ref) = (each %HARD_SUBS))
+{
+  $FLAT_HARD_SUBS{$_} = $key for @$ref;
+}
+
+my $HARD_MREGEX_DIRECT = join('|', map { quotemeta }
+  sort { length($b) <=> length($a) } keys %FLAT_HARD_SUBS);
+
+my $HARD_MREGEX = qr/(?<!\p{L})($HARD_MREGEX_DIRECT)(?=\P{L}|\z)/i;
+
+
+sub sub_hard_fragments
+{
+  my ($text) = @_;
+  $text =~ s/$HARD_MREGEX/$FLAT_HARD_SUBS{lc($1)}/gi;
+  return $text;
+}
+
 
 sub split_on_known_words
 {
@@ -175,6 +205,11 @@ sub split_on_digit_groups
     $value =~ s/\bF(\d+)_(\d+)\b/F $1_$2/g;
 
     $value =~ s/\b([FQ])([ABRSabrs])\b/$1 $2/g;
+    $value =~ s/\bORR\b/Open RR/g;
+    $value =~ s/\bWRR\b/Women RR/g;
+
+    $value =~ s/^FO([\s-])/Final Open$1/;
+    $value =~ s/^OF([\s-])/Open Final$1/;
 
     $values->[$i] = $value;
   }
@@ -415,9 +450,11 @@ sub study
     return;
   }
 
-  my $dtext = despace($chunk->{EVENT});
-  my $utext = unteam($dtext, $result);
-  my $ctext = split_on_capitals($utext);
+  # my $dtext = despace($chunk->{EVENT});
+  # my $utext = unteam($dtext, $result);
+  my $utext = unteam($chunk->{EVENT}, $result);
+  my $htext = sub_hard_fragments($utext);
+  my $ctext = split_on_capitals($htext);
 
   my @tags = (0);
   my @values = ();
