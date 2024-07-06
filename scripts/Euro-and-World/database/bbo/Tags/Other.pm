@@ -13,6 +13,8 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  '07', 
+
   'A.C.L.A.',
   'A.z.f.e.n.a',
   'A Takimi',
@@ -197,6 +199,7 @@ my @MULTI_WORDS =
   'Mike Lawrence Club',
   'Minas Trith',
   'Mo i Raneran',
+  'Moki011',
   'Monte Carlos',
   'Multi Gen Indonesia',
   'Mumbai Indians',
@@ -464,7 +467,7 @@ my @SINGLE_WORDS = qw(
 
    Makara Makriköy Malmölaget Marosamitawa Marynarz Masal Matujona 
    Mavi Mavs Mayamira Mer Mesna MGM MGTH Minut MMRMC Mochu 
-   Moki Monaconf Morot Mostingan Movember Mölnlycke MPEC MRSMC Muumio 
+   Monaconf Morot Mostingan Movember Mölnlycke MPEC MRSMC Muumio 
    Mýna Møremix 
 
    NAD Nadide Narbisk Narre NBB Necos Neduk Nessuno Nikotiimi 

@@ -298,22 +298,10 @@ sub eliminate_districts
 {
   my ($team_ref) = @_;
 
-  if ($$team_ref =~ s/district \d+//i)
-  {
-    return ($$team_ref =~ /^\s*$/ ? 1 : 0);
-  }
-  elsif ($$team_ref =~ s/\(D\d+\)//)
-  {
-    return ($$team_ref =~ /^\s*$/ ? 1 : 0);
-  }
-  elsif ($$team_ref =~ s/\bD\d+\b//)
-  {
-    return ($$team_ref =~ /^\s*$/ ? 1 : 0);
-  }
-  else
-  {
-    return 0;
-  }
+  $$team_ref =~ s/district \d+//i;
+  $$team_ref =~ s/\(D\d+\)//;
+  $$team_ref =~ s/\bD\d+\b//;
+  return ($$team_ref =~ /^\s*$/ ? 1 : 0);
 }
 
 
@@ -338,57 +326,36 @@ sub split_on_trailing_digits
 }
 
 
-sub study_part
+sub study_value
 {
-  my ($whole, $part, $i, $chain, $unknown_part_flag) = @_;
+  my ($whole, $value, $pos, $chain, $unknown_part_flag) = @_;
+
+  return if singleton_non_tag_matches($value, $$pos, $chain,
+    $main::histo_team, $PREFIX);
 
   my $token = Token->new();
 
   $HIT_STATS{TOTAL}++;
 
-  if (set_token($part, $token))
+  if (set_token($value, $token))
   {
-    $token->set_origin($i, $part);
+    $token->set_origin($$pos, $value);
     $chain->append($token);
-    $token->set_singleton('SEPARATOR', $part);
+    $token->set_singleton('SEPARATOR', $value);
     $HIT_STATS{SEPARATOR}++;
-    return;
-  }
-  elsif ($part =~ /^\d+$/)
-  {
-    $token->set_origin($i, $part);
-    $chain->append($token);
-    if ($part >= 1900 && $part < 2100)
-    {
-      $token->set_singleton('YEAR', $part);
-      $HIT_STATS{TEAM_YEAR}++;
-    }
-    else
-    {
-      $token->set_numeral_counter($part);
-      $HIT_STATS{TEAM_INTEGER}++;
-    }
-    return;
-  }
-  elsif ($part =~ /^[A-D]$/)
-  {
-    $token->set_origin($i, $part);
-    $chain->append($token);
-    $token->set_letter_counter($part);
-    $HIT_STATS{TEAM_LETTER}++;
     return;
   }
 
   # The general solution.
 
   return if singleton_tag_matches($whole, \@TAG_ORDER, 
-    $i, $part, 0, $chain, $main::histo_team, 'TEAM_');
+    $$pos, $value, 0, $chain, $main::histo_team, 'TEAM_');
 
-  $token->set_origin($i, $part);
+  $token->set_origin($$pos, $value);
   $chain->append($token);
 
   # Some use of other hashes.
-  my $fix_event = $FIX_HASH{lc($part)};
+  my $fix_event = $FIX_HASH{lc($value)};
 
   if (defined $fix_event->{CATEGORY})
   {
@@ -401,9 +368,9 @@ sub study_part
     }
   }
 
-  $token->set_unknown($part);
+  $token->set_unknown($value);
   $HIT_STATS{UNMATCHED}++;
-  print $part, "\n";
+  print $value, "\n";
   $$unknown_part_flag = 1;
 }
 
@@ -419,15 +386,15 @@ sub study_component
   {
     my ($letters, $digits) = ($1, $2);
 
-    study_part($whole, $letters, $token_no, $chain, \$unknown_part_flag);
+    study_value($whole, $letters, \$token_no, $chain, \$unknown_part_flag);
     $$token_no++;
 
-    study_part($whole, $digits, $token_no, $chain, \$unknown_part_flag);
+    study_value($whole, $digits, \$token_no, $chain, \$unknown_part_flag);
     $$token_no++;
   }
   else
   {
-    study_part($whole, $part, $token_no, $chain, \$unknown_part_flag);
+    study_value($whole, $part, \$token_no, $chain, \$unknown_part_flag);
     $$token_no++;
   }
 
@@ -511,10 +478,8 @@ sub study_team
     if ($tags[$i] ne '0')
     {
       # We had a multi-word hit.
-      my $token = Token->new();
-      $token->set_origin($i, $values[$i]);
-      $token->set_singleton($tags[$i], $values[$i]);
-      $chain->append($token);
+      append_token($chain, 'SINGLETON', $tags[$i], $values[$i],
+        $texts[$i], $token_no, $main::histo_title, $PREFIX);
       $token_no++;
     }
     else
@@ -522,13 +487,17 @@ sub study_team
       my @a = grep { $_ ne '' } split(/$sep/, $values[$i]);
       foreach my $part (@a)
       {
-        study_component($whole, $part, $chain, \$token_no, \$unsolved_flag);
+        study_component($whole, $part, $chain, \$token_no, 
+          \$unsolved_flag);
       }
     }
   }
 
-  print "UUU $bbono: $text\n" if ($unsolved_flag && $chain->last() > 0);
-  print "\n" if $unsolved_flag;
+  if ($unsolved_flag)
+  {
+    print "UUU $bbono: $text\n" if $chain->last() > 0;
+    print "\n";
+  }
 
   fix_heuristics($text, $chain, $bbono);
 }
