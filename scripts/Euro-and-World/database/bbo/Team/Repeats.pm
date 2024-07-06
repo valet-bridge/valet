@@ -11,9 +11,6 @@ package Team::Repeats;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_repeats);
 
-use lib '.';
-use TeamBBO;
-
 # BBOVG numbers for which it's OK to have a field repeated with
 # different values.
 

@@ -6,11 +6,11 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package TeamBBO;
+package Team::Study;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(read_cities study_teams unteam print_team_stats
-  init_hashes);
+our @EXPORT = qw(clean_teams study_team
+  print_team_stats init_hashes);
 
 use lib '.';
 use lib '..';
@@ -66,9 +66,6 @@ our $histo_team;
 
 my (%MULTI_HITS);
 
-my $CITIES_NAME = "../../../../../../bboD/../../cities/cities.txt";
-my (%CITIES, %CITIES_LC);
-
 # Links between different tags, e.g. club to city.
 my %MATRIX;
 
@@ -76,20 +73,61 @@ my %MATRIX;
 my %REPEATS;
 
 
-sub read_cities
+sub clean_team
 {
-  my () = @_;
-  open my $fh, '<', $CITIES_NAME or die "Cannot read file $CITIES_NAME $!";
-  my $line;
-  while ($line = <$fh>)
+  my ($whole, $team) = @_;
+  $team =~ s/\(\d+\)\s*$//; # (69)
+  $team =~ s/^\s+|\s+$//g; # Leading and trailing space
+
+  # Fix some parentheses with age and gender.
+  fix_some_parentheses($whole, \$team);
+
+  # my $fix = $FIX_HASH{lc($team)};
+  my $fix = $whole->get_single('COUNTRY', lc($team));
+  # if (defined $fix && $fix->{CATEGORY} eq 'COUNTRY')
+  if (exists $fix->{VALUE})
   {
-    my @a = split '\|', $line;
-    die "City format: $line, $#a" unless $#a == 1;
-    $CITIES{$a[0]} = $a[1];
-    $CITIES_LC{lc($a[0])} = $a[1];
+    return $fix->{VALUE};
   }
-  close $fh;
+  elsif ($team =~ /^\s*$/)
+  {
+    return '';
+  }
+  else
+  {
+    return $team;
+  }
 }
+
+
+sub clean_teams
+{
+  my ($whole, $text, $result) = @_;
+
+  return unless defined $text;
+  if ($text =~ /(.*) vs\. (.*)/)
+  {
+    ($result->{TEAM1}, $result->{TEAM2}) = ($1, $2);
+    $result->{TEAM1} = clean_team($whole, $result->{TEAM1});
+    $result->{TEAM2} = clean_team($whole, $result->{TEAM2});
+
+    # Kludge for event matches.
+    $result->{TEAM1} =~ s/\s*- npc$//;
+    $result->{TEAM2} =~ s/\s*- npc$//;
+  }
+  elsif ($text =~ /^\s*$/ || $text =~ /^\s*vs\.\s*$/)
+  {
+    $result->{TEAM1} = '';
+    $result->{TEAM2} = '';
+    return;
+  }
+  else
+  {
+    die "Can't parse team line $text\n";
+  }
+}
+
+
 
 my %HIT_STATS;
 my %FORM_SCORES;
@@ -251,31 +289,6 @@ sub fix_some_parentheses
   elsif ($t eq 'J')
   {
     $$team_ref = 'Juniors';
-  }
-}
-
-
-sub clean_team
-{
-  my ($whole, $team) = @_;
-  $team =~ s/\(\d+\)\s*$//; # (69)
-  $team =~ s/^\s+|\s+$//g; # Leading and trailing space
-
-  # Fix some parentheses with age and gender.
-  fix_some_parentheses($whole, \$team);
-
-  my $fix = $FIX_HASH{lc($team)};
-  if (defined $fix && $fix->{CATEGORY} eq 'COUNTRY')
-  {
-    return $fix->{VALUE};
-  }
-  elsif ($team =~ /^\s*$/)
-  {
-    return '';
-  }
-  else
-  {
-    return $team;
   }
 }
 
@@ -536,41 +549,6 @@ sub print_team_stats
   {
     printf("%-20s %6d\n", $key, $FORM_SCORES{$key});
   }
-}
-
-
-sub study_teams
-{
-  my ($whole, $text, $result, $chain1, $chain2, $bbono) = @_;
-
-  return unless defined $text;
-
-  if ($text =~ /(.*) vs\. (.*)/)
-  {
-    my ($team1, $team2) = ($1, $2);
-    $result->{TEAM1} = clean_team($whole, $team1);
-    $result->{TEAM2} = clean_team($whole, $team2);
-  }
-  elsif ($text =~ /^\s*$/ || $text =~ /^\s*vs\.\s*$/)
-  {
-    $result->{TEAM1} = '';
-    $result->{TEAM2} = '';
-    return;
-  }
-  else
-  {
-    die "Can't parse team line $text\n";
-  }
-
-  study_team($whole, $result->{TEAM1}, $chain1, $bbono);
-  study_team($whole, $result->{TEAM2}, $chain2, $bbono);
-
-  check_consistency($result->{TEAM1}, $chain1, $bbono);
-  check_consistency($result->{TEAM2}, $chain2, $bbono);
-
-  # Kludge for event matches.
-  $result->{TEAM1} =~ s/\s*- npc$//;
-  $result->{TEAM2} =~ s/\s*- npc$//;
 }
 
 

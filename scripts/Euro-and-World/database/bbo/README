@@ -1,3 +1,9 @@
+Team:
+- Make a Study
+- Study should only take one team as an argument at a time
+- Also offers a clean() method
+- Put some into Consistency
+
 Team chains should be set to complete (Team chain length stats)
 
 Chains print should be in a new Chains (today's Chains is something else)
@@ -11,8 +17,6 @@ Chains print should be in a new Chains (today's Chains is something else)
 
 Output all the cook results into a text file in compact format:
 - a field can probably be a single or a list, { }
-
-Maybe this simplifies printing as well
 
 Read in that same format
 

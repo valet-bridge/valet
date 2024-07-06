@@ -8,6 +8,7 @@ use open ':std', ':encoding(UTF-8)';
 use Time::HiRes qw(time);
 
 use lib '.';
+use lib './Team';
 use lib './Title';
 use lib './Event';
 use lib './Patterns';
@@ -15,7 +16,8 @@ use lib './Patterns';
 use Chains;
 use Chain;
 
-use TeamBBO;
+use Team::Study;
+
 use ScoringBBO;
 
 use Event::Study;
@@ -57,8 +59,7 @@ my $print_chains = 1; # 1 if we dump results for further analysis
 
 my @RAW_FIELDS = qw(BBONO TITLE EVENT SCORING TEAMS);
 
-TeamBBO::init_hashes();
-read_cities();
+Team::Study::init_hashes();
 
 my $file = $ARGV[0];
 open my $fh, '<', $file or die "Cannot read tfile: $!";
@@ -104,11 +105,14 @@ while ($line = <$fh>)
 
   # TEAMS
 
+  my %result;
+  Team::Study::clean_teams($whole, $chunk{TEAMS}, \%result);
+
   my $chain_team1 = Chain->new();
   my $chain_team2 = Chain->new();
-  my %result;
-  study_teams($whole, $chunk{TEAMS}, \%result, 
-    $chain_team1, $chain_team2, $chunk{BBONO});
+
+  study_team($whole, $result{TEAM1}, $chain_team1, $chunk{BBONO});
+  study_team($whole, $result{TEAM2}, $chain_team2, $chunk{BBONO});
 
   my @chains_team;
   push @chains_team, $chain_team1;

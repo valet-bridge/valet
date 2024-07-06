@@ -12,7 +12,7 @@ our @ISA = qw(Exporter);
 our @EXPORT = qw(set_matrix);
 
 use lib '.';
-use TeamBBO;
+use Team::Study;
 
 
 my %COUNTRY_TO_REGION =
@@ -828,19 +828,19 @@ my %COUNTRY_TO_NATIONALITY =
 
 sub set_matrix
 {
-  TeamBBO::set_link_matrix(\%COUNTRY_TO_REGION, 
+  Team::Study::set_link_matrix(\%COUNTRY_TO_REGION, 
     'COUNTRY', 'REGION');
-  TeamBBO::set_link_matrix(\%COUNTRY_TO_CITY, 
+  Team::Study::set_link_matrix(\%COUNTRY_TO_CITY, 
     'COUNTRY', 'CITY');
-  TeamBBO::set_link_matrix(\%CITY_TO_QUARTER, 
+  Team::Study::set_link_matrix(\%CITY_TO_QUARTER, 
     'CITY', 'QUARTER');
-  TeamBBO::set_link_matrix(\%CITY_TO_UNIVERSITY, 
+  Team::Study::set_link_matrix(\%CITY_TO_UNIVERSITY, 
     'CITY', 'UNIVERSITY');
-  TeamBBO::set_link_matrix(\%CITY_TO_CLUB, 
+  Team::Study::set_link_matrix(\%CITY_TO_CLUB, 
     'CITY', 'CLUB');
-  TeamBBO::set_link_matrix(\%COUNTRY_TO_SPONSOR, 
+  Team::Study::set_link_matrix(\%COUNTRY_TO_SPONSOR, 
     'COUNTRY', 'SPONSOR');
-  TeamBBO::set_link_matrix(\%COUNTRY_TO_NATIONALITY, 
+  Team::Study::set_link_matrix(\%COUNTRY_TO_NATIONALITY, 
     'COUNTRY', 'NATIONALITY');
 }
 
