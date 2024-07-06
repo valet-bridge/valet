@@ -330,7 +330,7 @@ sub split_on_trailing_digits
 
 sub study_value
 {
-  my ($whole, $value, $pos, $chain, $unknown_part_flag) = @_;
+  my ($whole, $value, $pos, $chain, $unsolved_flag) = @_;
 
   return if singleton_non_tag_matches($value, $$pos, $chain,
     $main::histo_team, $PREFIX);
@@ -345,60 +345,35 @@ sub study_value
 
   return if Separators::set_token($value, $token);
 
-  $HIT_STATS{TOTAL}++;
-
-  # if (set_token($value, $token))
-  # {
-    # $token->set_singleton('SEPARATOR', $value);
-    # $HIT_STATS{SEPARATOR}++;
-    # return;
-  # }
-
-  # Some use of other hashes.
-  my $fix_event = $FIX_HASH{lc($value)};
-
-  if (defined $fix_event->{CATEGORY})
-  {
-    my $category = $fix_event->{CATEGORY};
-    if ($category eq 'NUMERAL' || $category eq 'ROMAN')
-    {
-      $token->set_singleton($category, $fix_event->{VALUE});
-      $HIT_STATS{'TEAM_' . $category}++;
-      return;
-    }
-  }
+  print "UUU value $value\n";
+  $$unsolved_flag = 1;
 
   $token->set_unknown($value);
-  $HIT_STATS{UNMATCHED}++;
-  print $value, "\n";
-  $$unknown_part_flag = 1;
 }
 
 
 sub study_component
 {
-  my ($whole, $part, $chain, $token_no, $unsolved_flag) = @_;
+  my ($whole, $value, $chain, $token_no, $unsolved_flag) = @_;
 
   # Split on trailing digits.
-  my $unknown_part_flag = 0;
-  if ($part =~ /^(.*[a-z])(\d+)$/i &&
+  my $digits = '';
+  if ($value =~ /^(.*[a-z])(\d+)$/i &&
       $1 ne 'U' && $1 ne 'D')
   {
-    my ($letters, $digits) = ($1, $2);
-
-    study_value($whole, $letters, \$token_no, $chain, \$unknown_part_flag);
-    $$token_no++;
-
-    study_value($whole, $digits, \$token_no, $chain, \$unknown_part_flag);
-    $$token_no++;
+    ($value, $digits) = ($1, $2);
   }
-  else
+
+  study_value($whole, $value, $token_no, $chain, $unsolved_flag);
+  $$token_no++;
+
+  if ($digits ne '')
   {
-    study_value($whole, $part, \$token_no, $chain, \$unknown_part_flag);
+    # Add the digits if they exist.
+    singleton_numeral($digits, $token_no, $chain,
+      $main::histo_team, $PREFIX);
     $$token_no++;
   }
-
-  $$unsolved_flag = 1 if $unknown_part_flag;
 }
 
 
