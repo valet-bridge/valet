@@ -91,7 +91,6 @@ my @MULTI_WORDS =
   'DK Nationalchampion',
   'DK-Tworzywa',
   'DKI Maesa',
-  'domwaluty.pl',
   'Dong Ming',
   'Dong Qi 9',
   'Dr. Gittipatq',
@@ -161,7 +160,6 @@ my @MULTI_WORDS =
   'Kacho Fugetsu',
   'KaiCheng RL',
   'Ke Da',
-  "Keni's Team",
   'Kent Romeos venner',
   "Kitty's",
   'KM 23',
@@ -311,8 +309,7 @@ my @MULTI_WORDS =
   'Yura Taschit',
 
   'Zara Bridge',
-  'Zen Ho',
-  'Zia and Friends'
+  'Zen Ho'
 );
 
 my %MULTI_TYPOS =
@@ -321,25 +318,16 @@ my %MULTI_TYPOS =
   'AIC' => ['a i c'],
   'Air Traffic Management' => ['air traffic managem'],
   'Aklindo Musi 88' => ['musi 88', 'musi88'],
-  'Alex is Beautiful' => ['alex is beatiful'],
-  'All Stars' => ['all-stars'],
-  'Alle presidentens menn' => ['alle presidentens'],
-  'Applied Math' => ['aplied math'],
   Arnab => ["arnab's"],
   Azores => ['açores team'],
   Ayan => ["ayan's"],
 
-  Baneet => ["Baneet's IV"],
-  Begijntje => ['begijnt je'],
   'Beto BO' => ['beto b o'],
   'Bhinneka Garuda' => ['bhineka garuda'],
-  BNMR => ['b n m r'],
   'Bridgerama Milan' => ['bridgerama mi'],
-  'Butterfly from HK' => ['babochka s hk'],
 
   "Chairman's Choice" => ["chairman's team", "chairman's"],
   'Chicho Itsi' => ['chicho ici'],
-  "Colonel's Team" => ["colonel's  team"],
 
   Crossfatek => ['cross fatek'],
 
@@ -353,7 +341,6 @@ my %MULTI_TYPOS =
   'Esso-sveitin' => ['esso - sveitin', 'esso -sveitin'],
   'Eviza Plambata' => ['eviza_plambata'],
 
-  "Flint's Crew" => ["flint`s crew"],
   'FOS' => ['f o s'],
   'Friends of Academy' => ['friends of akademy'],
   'Frankie Holidays' => ['frankie hollydays'],
@@ -418,8 +405,8 @@ my @SINGLE_WORDS = qw(
 
    BAB BABK Bacch Bade BAHABAWI Bahaj Baias Bajm Bajozero BAK Balti
    Baltic BARC BARP BAST Bat Batmix Bato Batusida BBN BBO BCBR
-   Begigütje Begijntje BEIH BELSPA Bem Beton BHDM Bhide Bhinneka
-   Biachite BIN Biriceri BKSE Blandat Blund BMAL BMP BNMR BNS BNT
+   Begigütje BEIH BELSPA Bem Beton BHDM Bhide Bhinneka
+   Biachite BIN Biriceri BKSE Blandat Blund BMAL BMP BNS BNT
    BOC Boek Boriana Borko Bridgebutikken BRK Buaigh Bubu Busiaki Butler
 
    Cabal Cabriole Calaca Cammello Camrose Canadonia Canukusa
@@ -441,7 +428,7 @@ my @SINGLE_WORDS = qw(
    Frirond Frusci Fundacja FWK
 
    Gabrisem Galim Gambitas Gamma Garp Garuda Gata Gelin 
-   Gewanna Gezi Gibs Gjesp Gkobra GMM Goroco Gosho Göktürk GP 
+   Gewanna Gezi Gibs Gjesp Gkobra GMM Goroco Göktürk GP 
    Greecoura GRNC Grup Guayacos Gudok Gullberg Gullvi 
 
    Hade Hai Hakl Hansa HayirlisI Hebat Helgeness Hellé Heliopolis 
@@ -450,7 +437,7 @@ my @SINGLE_WORDS = qw(
    IBBSK IBE Iff Ijseide IMAN IMLUK InFran Irukangi Ismo Israbel 
    Isrmany ITB Itnoraunz ITS IVAR Iza
 
-   JanTC JAPCAN JAS JASS Jassica Javel Jaya Jecization JHIC Jinjing 
+   JanTC JAPCAN JAS JASS Jassica Javel Jaya Jecization Jinjing 
    Jirin Jiujiu Joter Juanval Juls Juniorklubben Juste Justplay 
    Jutek JuuTools
 
@@ -458,19 +445,19 @@ my @SINGLE_WORDS = qw(
    Kark Kasty Kasuang Katipunan KBA KBC Kebiya Kenlong Kerasus Kibe 
    Kjelskos Klasik Klio KMC Knösel Kodin Koiraperhe Kokoelma Kolbasti 
    Komleposs Konga Kordam Korsikalý Kortai Koukouselis KPPM KrASK 
-   Kratos Krem Ksenia KSOS Kuglana Kultur Kvazar Kwiecisty
+   Kratos Krem Ksenia KSOS Kultur Kvazar Kwiecisty
 
    Lahjattomat LAKT Laleler Lancia Langy Laplas Lataka Lateria 
    LatSwe LBC LBSK LCF Legeanka Lema Lemanus Lenz Letve Leveni 
    Lianas Liban Lillebaluba Lipa Lira Livius Ljónin LNWers Lo 
-   Loaknath Lolly Longzhu Loreng LOS Lowel Löparn LPMS LXA Lyubcho 
+   Loaknath Lolly Longzhu LOS Lowel Löparn LPMS LXA Lyubcho 
 
    Makara Makriköy Malmölaget Marosamitawa Marynarz Masal Matujona 
    Mavi Mavs Mayamira Mer Mesna MGM MGTH Minut MMRMC Mochu 
    Monaconf Morot Mostingan Movember Mölnlycke MPEC MRSMC Muumio 
    Mýna Møremix 
 
-   NAD Nadide Narbisk Narre NBB Necos Neduk Nessuno Nikotiimi 
+   NAD Nadide Narbisk Narre Necos Neduk Nessuno Nikotiimi 
    Nislije NMRT NoNed Noralia Norsu NOS Noto NTiosagutta Nula
 
    Obezit OEI Ognisty Oksijen Olimp OMC Omega Omelas Onnela Onu 
@@ -479,7 +466,7 @@ my @SINGLE_WORDS = qw(
    Öncü
 
    Pagonia Palukas Panteros Pasam Pasanci Passé Patagonia Paulistas 
-   PBL PCBA PDC Pennant Perjuangan Piast Piryoli Pjäxa PKB PKM Pleschi 
+   PBL PCBA PDC Pennant Perjuangan Piast Piryoli Pjäxa PKM Pleschi 
    Pleyada Plia PMC PMS Pojat Polirish Polus Polýsgücü Pompapompa 
    Poss Prapar Prasetya Prijatelj Prim Primabridge Prosan Proto Ptacol 
    PTT Pude Pyon Pyton PZIM 
@@ -504,7 +491,7 @@ my @SINGLE_WORDS = qw(
    TAC Take Takk Takým Taksim Tally Tangra Task Tefo Tiglatpalasar 
    Tihkur Tiz Toar Todremor Tollemache Tongxin Topozero Totani 
    Totoro Tömör TPI Traker Triks Troll Trøndermøringen Tuason 
-   Tulipano Turuncu Tusio Tvist
+   Tulipano Turuncu 
 
    UAB Udarnik Úlfurinn Underberg UTU
 
@@ -530,11 +517,9 @@ my %SINGLE_TYPOS =
 (
   Acolvik => ['acolvick'],
   'Alunand Plus' => ['alunand'],
-  Ambassador => ['ambassadors', 'ambassdor'],
 
   Bhinneka => ['bhineka', 'bhinneke'],
   Boriana => ['boryana'],
-  Buaigh => ['buaijh'],
 
   Dilligaf => ['dilligraf'],
   Dingyuan => ['dinyuan'],
@@ -580,7 +565,6 @@ my %SINGLE_TYPOS =
   Skotii => ['skoti'],
   Soumitra => ['soumtra'],
   Spamirs => ['spamýrs'],
-  'SPG Club' => ['spg'],
   'Stall Dieden' => ['dieden'],
   Syabas => ['syahbas'],
 

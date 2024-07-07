@@ -226,6 +226,7 @@ sub print_misses
   print "Multi-word unused:\n\n";
   for my $tag (sort keys %{$self->{MWORDS}})
   {
+    next if $tag eq 'ORGANIZATION'; # Unused on purpose
     for my $value ($self->sorted_mwords($tag))
     {
       print "$tag: $value\n" unless exists $self->{HITS}{$tag}{lc($value)};
@@ -235,6 +236,7 @@ sub print_misses
   print "\nSingle-word unused:\n\n";
   for my $tag (sort keys %{$self->{SWORDS}})
   {
+    next if $tag eq 'ORGANIZATION'; # Unused on purpose
     for my $value ($self->sorted_swords($tag))
     {
       print "$tag: $value\n" unless exists $self->{HITS}{$tag}{lc($value)};
