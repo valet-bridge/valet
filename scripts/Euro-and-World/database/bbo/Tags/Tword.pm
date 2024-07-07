@@ -66,7 +66,6 @@ my @MULTI_WORDS =
   'Opening Tournament',
   'Premier Pairs',
   'Premier League',
-  'Pro-Am',
   'Regional Championship',
   'Second Half',
   'Second League',
@@ -120,20 +119,12 @@ my %MULTI_TYPOS =
   'Grand National Teams' => ['gnt'],
   'Grand Prix' => ['grand pix', 'grand peix', 'grad prix',
     'gran prix'],
-  Intercity => ['inter-city', 'inter city', 'land inter-city'],
-  Interclub => ['inter-club', 'inter-clubs', 'inter club',
-    "de l'interclub"],
   'International Grand Tournament' => ['intl_ grand tournament', 
     'intl grand tournament'],
   'International Seniors' => ['int_ seniors'],
   Interport => ['inter-port'],
-  Interprovince => ['inter provincials', 'inter province',
-    'inter provinces', 'inter=provincial', 'inter-provincial', 
-    'inter provice', 'inter-province', 'inter-provinces'],
-  Interregional => ['inter-regional', 'inter-region'],
   Interstate => ['inter-state', 'inter state', 'inter -state'],
   Interuniversity => ['inter-universities'],
-  Invitational => ['invitasi terbatas', 'the bridge club invitational t'],
   'Junior/Pro' => ['jr/pro'],
   Memorial => ['pro memoriam', 'memorial of'],
   'Mike Lawrence Exhibition' => ['m lawrence exhibiton'],
@@ -153,8 +144,6 @@ my %MULTI_TYPOS =
     'premier leauge', 'premier lge', 'premie league',
     'prremier league', 'premieer league', 'premier legaue',
     'premier legue'],
-  'Pro-Am' => ['play against the stars', 'play with the champs',
-    'pro_am', 'pro am'],
   'Regional Championship' => ['regional chship', 'regional champship'],
   'Second Half' => ['2nd half'],
   'Second League' => ['2 league', 'div b'],
@@ -192,16 +181,14 @@ my @SINGLE_WORDS = qw(
   Challenge Championship Charity Club Commercial Cup
   Friendship
   Goulash
-  Interclub Intercity International Interport Interprovince 
-  Interregional Interstate Interuniversity 
-  Invitational
+  International Interport
+  Interstate Interuniversity 
   Memorial
   National
   Online
   Pool
   Simultaneous
-  Tournament Training Transnational Trial Trophy
-  University
+  Tournament Training Trial Trophy
 );
 
 my %SINGLE_TYPOS =
@@ -227,16 +214,9 @@ my %SINGLE_TYPOS =
   'Friendly match' => ['friendly'],
   Goulash => ['goullash', 'goulyash'],
   'Grand Prix' => ['gp'],
-  Intercity => ['intecity'],
-  Interclub => ['interclubs'],
   International => ['internacional', 'internationals',
     'internazionale', 'internationa', 'internat', 'int'],
   'International Team Trials' => ['itt'],
-  Interprovince => ['interprovincal', 'interprovincials',
-    'interprovincial', 'ip'],
-  Invitational => ['invitacion', 'invitacional', 'invitación', 
-    'invitasi', 'invitatioanal', 'invitation', 'invitional', 'invis', 
-    'ivitational', 'invitatational'],
   'Junior High School' => ['jhs'],
   Memorial => ['memorials', 'menorial', 'memoral', 'memrial'],
   National => ['natioanl', 'nationale', 'nationals',
@@ -253,7 +233,6 @@ my %SINGLE_TYPOS =
   Tournament => ['tourn', 'tourname', 'tourney', 'turnament', 
     'tourmanent', 'tourna', 'tournamnt', 'toernooi', 'turneringen', 
     'tounoi', 'torneo', 'tournoi', 'turniej', 'trniej'],
-  Transnational => ['trans', 'transnat', 'transnatio', 'transnation'],
   Training => ['træning', 'practice', 'allenamento',
     'entrenamiento'],
   Trial => ['trials', 'trail', 'trails', 'triaals',
@@ -261,7 +240,6 @@ my %SINGLE_TYPOS =
     'selections', 'selekction', 'selelection', 'sélection', 'selectio',
     'séléction', 'entrainement', 'slection', 'prueba'],
   Trophy => ['trofeo'],
-  University => ['uni', 'universities', 'univeristies'],
   'Youth Triathlon Pairs' => ['youth triathalon']
 );
 

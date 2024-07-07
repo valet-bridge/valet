@@ -50,6 +50,7 @@ my @TAG_ORDER = qw(
   SCORING
   FORM
   TWORD
+  ORIGIN
   MEET
   TIME
   MONTH

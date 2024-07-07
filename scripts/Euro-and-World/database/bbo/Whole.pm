@@ -31,6 +31,7 @@ use Tags::Month;
 use Tags::Nationality;
 use Tags::Numeral;
 use Tags::Ordinal;
+use Tags::Origin;
 use Tags::Organization;
 use Tags::Other;
 use Tags::Particle;
@@ -71,6 +72,7 @@ my %TAGS =
   NATIONALITY => \&Tags::Nationality::set_hashes,
   NUMERAL => \&Tags::Numeral::set_hashes,
   ORDINAL => \&Tags::Ordinal::set_hashes,
+  ORIGIN => \&Tags::Origin::set_hashes,
   ORGANIZATION => \&Tags::Organization::set_hashes,
   OTHER => \&Tags::Other::set_hashes,
   PARTICLE => \&Tags::Particle::set_hashes,
