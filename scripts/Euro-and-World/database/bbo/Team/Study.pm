@@ -37,7 +37,7 @@ my @TAG_ORDER = qw(
   ZONE 
   CLUB 
   OTHER 
-  QUARTER 
+  LOCALITY 
   CITY 
   ABBR 
   CAPTAIN
@@ -163,7 +163,7 @@ sub check_consistency
   check_consistency_pair($text, $bbono, \%record,
     'CITY', 'COUNTRY');
   check_consistency_pair($text, $bbono, \%record,
-    'QUARTER', 'CITY');
+    'LOCALITY', 'CITY');
   check_consistency_pair($text, $bbono, \%record,
     'UNIVERSITY', 'CITY');
   check_consistency_pair($text, $bbono, \%record,

@@ -25,6 +25,7 @@ use Tags::Form;
 use Tags::Fun;
 use Tags::Gender;
 use Tags::Iterator;
+use Tags::Locality;
 use Tags::Meet;
 use Tags::Month;
 use Tags::Movement;
@@ -36,7 +37,6 @@ use Tags::Organization;
 use Tags::Other;
 use Tags::Particle;
 use Tags::Person;
-use Tags::Quarter;
 use Tags::Region;
 use Tags::Roman;
 use Tags::Scoring;
@@ -78,7 +78,7 @@ my %TAGS =
   OTHER => \&Tags::Other::set_hashes,
   PARTICLE => \&Tags::Particle::set_hashes,
   PERSON => \&Tags::Person::set_hashes,
-  QUARTER => \&Tags::Quarter::set_hashes,
+  LOCALITY => \&Tags::Locality::set_hashes,
   REGION => \&Tags::Region::set_hashes,
   ROMAN => \&Tags::Roman::set_hashes,
   SCORING => \&Tags::Scoring::set_hashes,

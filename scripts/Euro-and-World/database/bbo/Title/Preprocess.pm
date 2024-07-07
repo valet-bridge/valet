@@ -73,6 +73,14 @@ sub process_vs_extent
 {
   my ($chains, $chain, $cno, $first, $last, $completion) = @_;
 
+  if ($last < $chain->last())
+  {
+    my $chain2 = Chain->new();
+    $chain->copy_from($last+1, $chain2);
+    $chain->delete($last+1, $chain->last());
+    splice(@$chains, $cno+1, 0, $chain2);
+  }
+
   if ($first > 0)
   {
     my $chain1 = Chain->new();
@@ -82,14 +90,6 @@ sub process_vs_extent
 
     $chain = $chain1;
     $cno++;
-  }
-
-  if ($last < $chain->last())
-  {
-    my $chain2 = Chain->new();
-    $chain->copy_from($last+1, $chain2);
-    $chain->delete($last+1, $chain->last());
-    splice(@$chains, $cno+1, 0, $chain2);
   }
 
   $chain->complete_if_last_is($chain->last(), $completion);
@@ -139,7 +139,7 @@ sub pre_process_vs
 
     get_vs_extent($chain, $i, \%VS_DESTROY, \$first, \$last);
 
-    if ($first < $i && $last > $i)
+    if ($first == $i-1 && $last == $i+1)
     {
       process_vs_extent($chains, $chain, $cno, $first, $last, 'KILLED');
       last;

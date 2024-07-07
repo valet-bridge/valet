@@ -76,7 +76,7 @@ our @TITLE_REDUCTIONS =
         FIELD => ['TNAME', 'TWORD', 'MEET', 
           'PERSON', 'YEAR', 'DATE',
           'ZONE', 'NATIONALITY',
-          'QUARTER', 'GENDER', 'AGE',
+          'LOCALITY', 'GENDER', 'AGE',
           'ORGANIZATION', 'SCORING'] }
     ],
     ANCHOR => 'ANY',

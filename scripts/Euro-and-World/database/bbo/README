@@ -1,11 +1,7 @@
-QUARTER (of city) != Quarter (of match) !!
-WEEKDAY != Day 1
-
 Maybe really prune Tags unused to the end?
 
 Team:
 - Put some into Consistency
-- Numeral should be 1 not 'one'
 - token_no minus length of chain: Print at end of each.
   Probably token_no and ++ is messed up in all cases.
 

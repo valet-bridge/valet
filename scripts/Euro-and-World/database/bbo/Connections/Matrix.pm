@@ -246,7 +246,7 @@ my %COUNTRY_TO_CITY =
 );
 
 
-my %CITY_TO_QUARTER =
+my %CITY_TO_LOCALITY =
 (
   Ankara => ['çayyolu', 'kardelen', 'sansar'],
   Antalya => ['muratpasa'],
@@ -833,8 +833,8 @@ sub set_matrix
     'COUNTRY', 'REGION');
   Team::Study::set_link_matrix(\%COUNTRY_TO_CITY, 
     'COUNTRY', 'CITY');
-  Team::Study::set_link_matrix(\%CITY_TO_QUARTER, 
-    'CITY', 'QUARTER');
+  Team::Study::set_link_matrix(\%CITY_TO_LOCALITY, 
+    'CITY', 'LOCALITY');
   Team::Study::set_link_matrix(\%CITY_TO_UNIVERSITY, 
     'CITY', 'UNIVERSITY');
   Team::Study::set_link_matrix(\%CITY_TO_CLUB, 

@@ -370,14 +370,17 @@ sub post_process_vs
     for my $i (0 .. $pno-1)
     {
       my $token = $chain->check_out($i);
-      my $tag = 'TEAM1_' . $token->field();
+      my $field = $token->field();
+      my $tag = ($field eq 'DESTROY' ? '' : 'TEAM1_') . $field;
       $token->set_general($token->category(), $tag, $token->value());
     }
 
     for my $i ($pno+1 .. $l)
     {
       my $token = $chain->check_out($i);
-      my $tag = 'TEAM2_' . $token->field();
+      my $field = $token->field();
+      my $tag = ($field eq 'DESTROY' ? '' : 'TEAM2_') . $field;
+      $token->set_general($token->category(), $tag, $token->value());
       $token->set_general($token->category(), $tag, $token->value());
     }
 
