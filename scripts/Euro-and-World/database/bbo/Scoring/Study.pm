@@ -1,18 +1,19 @@
 #!perl
 
+package Scoring::Study;
+
+use v5.10;
 use strict;
 use warnings;
-use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package ScoringBBO;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(study_scoring);
+our @EXPORT = qw(study);
 
 
-sub study_scoring
+sub study
 {
   my ($text, $result, $bbono) = @_;
 

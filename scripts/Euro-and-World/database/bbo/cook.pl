@@ -17,8 +17,6 @@ use Team::Clean;
 use Team::Study;
 use Team::Preprocess;
 
-use ScoringBBO;
-
 use Title::Study;
 use Title::Preprocess;
 use Title::Postprocess;
@@ -26,6 +24,8 @@ use Title::Postprocess;
 use Event::Preprocess;
 use Event::Study;
 use Event::Postprocess;
+
+use Scoring::Study;
 
 use Patterns::Chainify;
 
@@ -150,7 +150,7 @@ while ($line = <$fh>)
   }
 
   my $scoring;
-  study_scoring($chunk{SCORING}, \%teams, $chunk{BBONO});
+  Scoring::Study::study($chunk{SCORING}, \%teams, $chunk{BBONO});
 
   if ($print_chains)
   {
