@@ -304,7 +304,7 @@ sub append_token
 {
   my ($chain, $category, $tag, $value, $text, $pos, $histo, $prefix) = @_;
 
-  if ($tag eq 'ROMAN' || $tag eq 'ORDINAL')
+  if ($tag eq 'NUMERAL' || $tag eq 'ROMAN' || $tag eq 'ORDINAL')
   {
     # As Tag::Roman finds this, it appears as a SINGLETON.
     $category = 'COUNTER';

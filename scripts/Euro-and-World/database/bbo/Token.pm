@@ -110,7 +110,7 @@ sub reset_iterator_field
 
 sub set_general
 {
-  # This does not to any checking!
+  # This does not do any checking!
   #
   my ($self, $category, $field, $value) = @_;
   $self->{CATEGORY} = $category;
@@ -621,12 +621,34 @@ sub str_iterator
 }
 
 
+sub str_marker
+{
+  my ($self, $prefix) = @_;
+
+  die "Marker: No or bad field $self->{FIELD}" unless 
+    (defined $self->{FIELD} && exists $ITERATOR_FIELDS{$self->{FIELD}});
+
+  return $self->str_common($prefix);
+}
+
+
 sub str_counter
 {
   my ($self, $prefix) = @_;
 
   die "Counter: No or bad field $self->{FIELD}" unless 
     (defined $self->{FIELD} && exists $COUNTER_FIELDS{$self->{FIELD}});
+
+  return $self->str_common($prefix);
+}
+
+
+sub str_ambiguous
+{
+  my ($self, $prefix) = @_;
+
+  die "Ambiguous: No or bad field $self->{FIELD}" unless 
+    (defined $self->{FIELD} && exists $AMBIGUOUS_FIELDS{$self->{FIELD}});
 
   return $self->str_common($prefix);
 }
@@ -685,15 +707,19 @@ sub str
   {
     $str = $self->str_iterator($prefix);
   }
+  elsif ($category eq 'MARKER')
+  {
+    $str = $self->str_marker($prefix);
+  }
   elsif ($category eq 'COUNTER')
   {
     $str = $self->str_counter($prefix);
   }
-  elsif ($category eq 'SINGLETON')
+  elsif ($category eq 'AMBIGUOUS')
   {
-    $str = $self->str_singleton($prefix);
+    $str = $self->str_ambiguous($prefix);
   }
-  elsif ($category eq 'MARKER')
+  elsif ($category eq 'SINGLETON')
   {
     $str = $self->str_singleton($prefix);
   }
@@ -704,10 +730,6 @@ sub str
   elsif ($category eq 'KILL')
   {
     $str = $self->str_kill();
-  }
-  elsif ($category eq 'AMBIGUOUS')
-  {
-    $str = $self->str_singleton($prefix);
   }
   elsif ($category eq 'UNKNOWN')
   {

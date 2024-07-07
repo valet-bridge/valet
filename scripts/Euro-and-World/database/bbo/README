@@ -1,11 +1,5 @@
 QUARTER (of city) != Quarter (of match) !!
-
-Turns out the tokens are not very well labeled...
-
-BBO 245: Should be COUNTER.  Why not?
-
-Cookbook:
-delete.
+WEEKDAY != Day 1
 
 Maybe really prune Tags unused to the end?
 

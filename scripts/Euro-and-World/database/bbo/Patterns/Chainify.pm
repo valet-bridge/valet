@@ -361,7 +361,7 @@ sub process_o_front
 }
 
 
-sub process_letter_counter_exact
+sub process_ambiguous_counter_exact
 {
   # R 3
   my ($chain, $match) = @_;
@@ -401,15 +401,15 @@ sub process_letter_counter_exact
   }
   elsif ($letter eq 'S')
   {
-    $token->set_general('ITERATOR', 'S', 'S');
+    $token->set_general('ITERATOR', 'AMBIGUOUS', 'S');
   }
   elsif ($letter eq 'W')
   {
-    $token->set_general('COUNTER', 'GENDER', 'Women');
+    $token->set_general('SINGLETON', 'GENDER', 'Women');
   }
   elsif ($letter eq 'Y')
   {
-    $token->set_general('COUNTER', 'AGE', 'Youngsters');
+    $token->set_general('SINGLETON', 'AGE', 'Youngsters');
   }
   else
   {

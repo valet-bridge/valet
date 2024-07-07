@@ -11,7 +11,8 @@ use open ':std', ':encoding(UTF-8)';
 use Exporter;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(%SINGLETON_FIELDS %COUNTER_FIELDS %ITERATOR_FIELDS);
+our @EXPORT = qw(%SINGLETON_FIELDS %COUNTER_FIELDS 
+  %ITERATOR_FIELDS %AMBIGUOUS_FIELDS);
 
 # Singletons are words imply a field and that don't have parameters.
 # For example, "EBL" is an ORGANIZER.
@@ -40,7 +41,6 @@ my @SINGLETON_LIST = qw(
   FORM
   FUN
   GENDER TEAM1_GENDER TEAM2_GENDER
-  ITERATOR
   MEET
   MONTH
   MOVEMENT
@@ -68,32 +68,9 @@ my @SINGLETON_LIST = qw(
   YEAR
   YEAR_MONTH
   MONTH_DAY
+);
 
-
-
-  BERTH
-  BOARDS
-  FLIGHT
-  GROUP
-  HALF
-  NUMERAL
-  MATCH
-  PART
-  PHASE
-  PLACE
-  ROF
-  ROOM
-  ROUND
-  SECTION
-  SEGMENT
-  SERIES
-  SESSION
-  SET
-  STANZA
-  TABLE
-  TEMPO
-  WEEK
-  WEEKEND
+my @AMBIGUOUS_LIST = qw(
   F G J K O P S U W Y
 );
 
@@ -109,10 +86,6 @@ my @COUNTER_LIST = qw(
   NL_OF_N
   NL_TO_N
   MAJOR_MINOR
-
-
-  AGE
-  GENDER
 );
 
 my @ITERATOR_LIST = qw(
@@ -141,9 +114,12 @@ my @ITERATOR_LIST = qw(
   TEMPO
   WEEK
   WEEKEND
+
+  AMBIGUOUS
 );
 
 our %SINGLETON_FIELDS = map { $_ => 1 } @SINGLETON_LIST;
+our %AMBIGUOUS_FIELDS = map { $_ => 1 } @AMBIGUOUS_LIST;
 our %COUNTER_FIELDS = map { $_ => 1 } @COUNTER_LIST;
 our %ITERATOR_FIELDS = map { $_ => 1 } @ITERATOR_LIST;
 

@@ -498,7 +498,7 @@ our @EVENT_REDUCTIONS =
     ],
     ANCHOR => 'END',
     KEEP_LAST => 2,
-    METHOD => \&Patterns::Chainify::process_letter_counter_exact,
+    METHOD => \&Patterns::Chainify::process_ambiguous_counter_exact,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 0,
     COMPLETION => 1

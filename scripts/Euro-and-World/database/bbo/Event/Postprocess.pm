@@ -59,14 +59,22 @@ sub post_process_stand_alone_doubles
     if ($token0->category() eq 'ITERATOR' &&
         $token2->category() eq 'COUNTER')
     {
-      $token0->set_singleton($token0->field(), $token2->value());
+      if ($token0->field() eq 'AMBIGUOUS')
+      {
+        $token0->set_general('MARKER', $token0->field(), 
+          $token0->value() . ' ' . $token2->value());
+      }
+      else
+      {
+        $token0->set_general('MARKER', $token0->field(), $token2->value());
+      }
       $chain->delete(1, 2);
       $chain->complete_if_last_is(0, 'COMPLETE');
     }
     elsif ($token0->category() eq 'ITERATOR' &&
         $token2->field() eq 'LETTER')
     {
-      $token0->set_singleton($token0->field(), $token2->value());
+      $token0->set_general('MARKER', $token0->field(), $token2->value());
       $chain->delete(1, 2);
       $chain->complete_if_last_is(0, 'COMPLETE');
     }
