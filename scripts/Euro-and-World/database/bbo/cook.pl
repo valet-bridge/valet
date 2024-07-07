@@ -17,6 +17,7 @@ use Chains;
 use Chain;
 
 use Team::Study;
+use Team::Preprocess;
 
 use ScoringBBO;
 
@@ -52,6 +53,7 @@ my $stats_title = Stats->new();
 
 die "perl cook.pl raw.txt" unless $#ARGV == 0;
 
+my $do_teams = 1; # 1 if we parse TEAMS
 my $do_events = 1; # 1 if we parse EVENT
 my $do_tournaments = 1; # 1 if we parse TITLE
 
@@ -97,38 +99,34 @@ while ($line = <$fh>)
     next;
   }
 
-  if ($chunk{BBONO} == 2274)
+  if ($chunk{BBONO} == 827)
   {
     print "HERE\n";
   }
 
   print_chunk(\%chunk) if $print_chains;
 
-  # TEAMS
+  my %teams;
+  Team::Study::clean_teams($whole, $chunk{TEAMS}, \%teams);
 
-  my %result;
-  Team::Study::clean_teams($whole, $chunk{TEAMS}, \%result);
-
-  my $chain_team1 = Chain->new();
-  my $chain_team2 = Chain->new();
-
-  Team::Study::study($whole, $result{TEAM1}, $chain_team1, $chunk{BBONO},
-    \$unknown_teams);
-  Team::Study::study($whole, $result{TEAM2}, $chain_team2, $chunk{BBONO},
-    \$unknown_teams);
-
-  my @chains_team;
-  push @chains_team, $chain_team1;
-  push @chains_team, $chain_team2;
-
-  $stats_team->incr(\@chains_team);
-
-  if ($print_chains)
+  if ($do_teams)
   {
-    print_chain($chain_team1, 1, "TEAM1");
-    print_chain($chain_team2, 2, "TEAM2");
-  }
+    for my $team (qw(TEAM1 TEAM2))
+    {
+      my $chain_team = Chain->new();
+      my @chains_team;
+      push @chains_team, $chain_team;
 
+      Team::Study::study($whole, $teams{$team}, 
+        $chain_team, $chunk{BBONO}, \$unknown_teams);
+
+      Team::Preprocess::pre_process(\@chains_team);
+
+      $stats_team->incr(\@chains_team);
+
+      print_chains_by_tag(\@chains_team, $team) if $print_chains;
+    }
+  }
 
   if ($do_events)
   {
@@ -136,7 +134,7 @@ while ($line = <$fh>)
     my @chains_event;
     push @chains_event, $chain_event;
 
-    Event::Study::study($whole, \%chunk, \%result, 
+    Event::Study::study($whole, \%chunk, \%teams, 
       $chain_event, \$unknown_events);
 
     process_event(\@chains_event);
@@ -151,7 +149,7 @@ while ($line = <$fh>)
   }
 
   my $scoring;
-  study_scoring($chunk{SCORING}, \%result, $chunk{BBONO});
+  study_scoring($chunk{SCORING}, \%teams, $chunk{BBONO});
 
   if ($print_chains)
   {

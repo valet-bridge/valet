@@ -67,27 +67,23 @@ my %NEUTRAL_SUGGESTORS_HASH = map {$_ => 1} @NEUTRAL_SUGGESTORS;
 
 sub suggest_form
 {
-  my ($text, $form_scores) = @_;
+  my ($text) = @_;
 
   if (exists $TEAMS_SUGGESTORS_HASH{lc($text)})
   {
     # Make this per BBO file.
-    $form_scores->{teams}++;
     return 'Teams';
   }
   elsif (exists $PAIRS_SUGGESTORS_HASH{lc($text)})
   {
-    $form_scores->{pairs}++;
     return 'Pairs';
   }
   elsif (exists $INDIVIDUAL_SUGGESTORS_HASH{lc($text)})
   {
-    $form_scores->{individual}++;
     return 'Individual';
   }
   elsif (exists $NEUTRAL_SUGGESTORS_HASH{lc($text)})
   {
-    $form_scores->{neutral}++;
     return 'Neutral';
   }
   elsif ($text =~ /^Pair/ || $text =~ /^Team/)
@@ -116,7 +112,6 @@ sub suggest_form
       return 0;
     }
 
-    $form_scores->{lc($tag)}++;
     return $tag;
   }
   else

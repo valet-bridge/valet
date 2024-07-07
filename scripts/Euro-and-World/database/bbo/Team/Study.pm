@@ -169,10 +169,6 @@ sub clean_teams
 }
 
 
-
-my %FORM_SCORES;
-
-
 sub init_hashes
 {
   set_matrix();
@@ -400,7 +396,7 @@ sub study
   my ($whole, $text, $chain, $bbono, $unknowns) = @_;
 
   return if $text eq '';
-  if (my $s = suggest_form($text, \%FORM_SCORES))
+  if (my $s = suggest_form($text))
   {
     append_token($chain, 'SINGLETON', 'FORM', $s, $text, 0,
       $main::histo_team, $PREFIX);
@@ -447,17 +443,7 @@ sub study
     print "\n";
   }
 
-  fix_heuristics($text, $chain, $bbono);
+  # fix_heuristics($text, $chain, $bbono);
 }
-
-
-sub print_team_stats
-{
-  for my $key (sort keys %FORM_SCORES)
-  {
-    printf("%-20s %6d\n", $key, $FORM_SCORES{$key});
-  }
-}
-
 
 1;

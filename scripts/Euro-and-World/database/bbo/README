@@ -1,6 +1,7 @@
 Team:
 - Don't really need FORM_SCORES
 - Put some into Consistency
+- Numeral should be 1 not 'one'
 
 Probably token_no and ++ is messed up in all cases.
 
