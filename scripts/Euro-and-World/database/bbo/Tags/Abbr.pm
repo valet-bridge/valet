@@ -62,24 +62,24 @@ my %SINGLE_TYPOS =
   'Bridge Club' => [qw(
     aba abk absk ak asb asd ass assn 
     ba bbgsk bbsgk bbsk bc bcm bcn beld belediye beledýye belediyespor 
-    bgsk bilimsel bisk biskd bjk bk bld bmsk bp bps
+    bgsk bilimsel bisk biskd bk bld bmsk bp bps
     br bri brýç bridgeclub bridgeklub bs bsb bsc bsk bskd bsp bssk 
     bt btsc bþb buyuksehir býskd
-    cbc cbe cfr ck club csb
+    cbc cbe cfr ck club 
     dbc 
     ebc eibc 
     fbc fc
-    gençlik gkk gks gsb gsk gskd gsmks gtbc
+    gençlik gkk gsb gsk gskd gsmks gtbc
     hesk
     ihs
     kcb kdi klubben ks ksb ksk
     maesa mbc
-    nbc ndbac nbi
-    oaza obk 
+    ndbac nbi
+    oaza 
     sb sbc sc sdgskd sk sp spor ss ssd
     tbc tc
     ýbsk ýbmsk)],
-  'Sporting Club' => ['sporting', 'sprting'],
+  'Sporting Club' => ['sprting'],
 );
 
 

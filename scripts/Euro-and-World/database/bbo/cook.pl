@@ -99,7 +99,7 @@ while ($line = <$fh>)
     next;
   }
 
-  if ($chunk{BBONO} == 827)
+  if ($chunk{BBONO} == 1086)
   {
     print "HERE\n";
   }
@@ -185,7 +185,7 @@ close $fh;
 
 $histo_team->print();
 $stats_team->print("Team");
-print "\nTotal unknown teams $unknown_events\n\n";
+print "\nTotal unknown teams: $unknown_events\n\n";
 
 
 if ($do_events)
@@ -204,7 +204,7 @@ if ($do_tournaments)
   print "\nTotal unknown titles $unknown_titles\n\n";
 }
 
-# $whole->print_misses();
+$whole->print_misses();
 
 
 exit;

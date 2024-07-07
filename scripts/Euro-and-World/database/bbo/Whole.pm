@@ -175,7 +175,7 @@ sub get_single
   if (exists $res->{CATEGORY})
   {
     $self->{HITS}{$tag}{$part}++;
-    $self->{HITS}{$tag}{$res->{VALUE}}++;
+    $self->{HITS}{$tag}{lc($res->{VALUE})}++;
   }
 
   return $res;
@@ -191,7 +191,7 @@ sub get_multi
   if (defined $res)
   {
     $self->{HITS}{$tag}{$part}++;
-    $self->{HITS}{$tag}{$res}++;
+    $self->{HITS}{$tag}{lc($res)}++;
   }
 
   return $res;
@@ -228,7 +228,7 @@ sub print_misses
   {
     for my $value ($self->sorted_mwords($tag))
     {
-      print "$tag: $value\n" unless exists $self->{HITS}{$tag}{$value};
+      print "$tag: $value\n" unless exists $self->{HITS}{$tag}{lc($value)};
     }
   }
 
@@ -237,7 +237,7 @@ sub print_misses
   {
     for my $value ($self->sorted_swords($tag))
     {
-      print "$tag: $value\n" unless exists $self->{HITS}{$tag}{$value};
+      print "$tag: $value\n" unless exists $self->{HITS}{$tag}{lc($value)};
     }
   }
   print "\n";

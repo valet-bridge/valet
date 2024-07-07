@@ -581,7 +581,7 @@ my @SINGLE_WORDS = qw(
   Araszkiewicz Araujo Arcieri Arle Aroix Armstrong Arun Asakoshi 
   Ash Ashworth Ashton Askgaard Asmeniadis Assael Assemi 
   Atalay Atabey Atay Attaguile Auerbach Auken Aust Austberg 
-  Avci Avcioglu Avon Awad Ayda Aydin
+  Avci Avcioglu Avon Awad Ayda 
 
   Babacan Babsch Baiche Baietto Bailey Bajraj Baker Bakhshi 
   Bakkeren Baldini Baldysz Baleal Ballebo 
@@ -597,8 +597,8 @@ my @SINGLE_WORDS = qw(
   Blackstock Blakeman Blakset Blanchard Blandin Bley Bloom Blum 
   Blumental Bo Boaz Bocchi Bock Bogach Bogacki Bohnhorst Bohnsack 
   Bokk Bojoh Boldt Bolling Bolognini Bombardieri Bomber Bompis 
-  Bongiovanni Bonis Bonori Bontas Booth Bordallo Boro Bos 
-  Bose Boss Bostosusz Botto Boucher Boughey Bourke 
+  Bongiovanni Bonis Bonori Bontas Booth Bordallo Bos 
+  Bose Bostosusz Botto Boucher Boughey Bourke 
   Bowdery Bowles Boylson Bozempergk Bozzetto Bozzo
   Brachman Brady Brake Braithwaite Bramley Branco Brantsma Branzoiu
   Braun Brede Brenner Bretagne Brifman Brightling Brink Brockwell 
@@ -700,7 +700,7 @@ my @SINGLE_WORDS = qw(
   Kent Keremida Kersey Kesgin Khandelwal Khazanov Khyuppenen 
   Kilani Kilvington King Kiran Kiriakidoy Kirilenko Kishan 
   Kizikli Klapper Klimacki Klimentowska Klinger Klofa Klukowski 
-  Knap Knight Kocak Koch Koistinen Koivula Kokkes Koken Kokten 
+  Knap Knight Kocak Koistinen Koivula Kokkes Koken Kokten 
   Kolankaya Kolata Kolesnik Kollnes Kolonkaya Konckier Kondoch 
   Konefal Koneru Kopecky Koppel Korbel Kordov Korkmaz Korkut Korth 
   Kosaka Kosti Kotányi Kotinas Kotronarou Koumetz Kovacs Kovachev 
@@ -742,7 +742,7 @@ my @SINGLE_WORDS = qw(
   Miszewska Mitra Mittelman Mirali Miura Mizel Mizrak Mohota 
   Mohtashami Molenaar Molenda Molina Molva Monachan Moni Monsegur 
   Montanari Mooney Moran Morath Morawski Moreira Morelli Morgan 
-  Mori Moritsch Morot Morris Morrison Morse Mortensen 
+  Mori Moritsch Morrison Morse Mortensen 
   Moses Moskovsky Moss Mossop Mott Mouiel Mpampou Mpanikas 
   Mpompolakis Mucha Mueller Mullamphy Muller Multon Mundell 
   Munksgaard Munson Munteanu Muntz Muriel Murray Mus Mutiara 
@@ -778,7 +778,7 @@ my @SINGLE_WORDS = qw(
   Rabinowitz Radcliffe Radikk Radin Radisic Rajagopal Ramamurthy 
   Ramchandran Ramondt Rankin Ranklin Ranson Rapp Rashti Rau Raulund 
   Ravenna Rayner Rebecchi Rees Reess Rehder Reid Reimer Reinholdt 
-  Reiplinger Rekstad Renouard Reps Revaz Rew Reynolds Rheingold Rhodes 
+  Reiplinger Rekstad Renouard Reps Revaz Rew Reynolds Rheingold 
   Ribera Ribery Ricard Ricci Richardson Richman Ridgway Riedel Riehm 
   Rietvink Rieusset Rigal Rigaud Riisnæs Rimstedt Ringuet Riolo Rios 
   Ritmeijer Rivers Rizzo Robb Robertson Robinson Robles 
@@ -868,7 +868,6 @@ my %SINGLE_TYPOS =
   Altshuler => ['altschuler', 'altshuller'],
   'Alvares Ribeiro' => ['luisaribeiro'],
   'Amiya Ranjan Das' => ['das'],
-  Angelini => ['angelýný'],
   'Aniket Sanghvi' => ['aniket'],
   'Antonio Frances' => ['frances', 'francés'],
   Arcieri => ['arceri'],
@@ -878,7 +877,6 @@ my %SINGLE_TYPOS =
   Beale => ['beatle'],
   Beauchamp => ['bauchamp', 'beachamp'],
   Bertheau => ['berthau'],
-  Bessis => ['bes'],
   Blumental => ['blummental'],
   Bocchi => ['norby'],
   'Brigitta Fischer' => ['fischer'],
@@ -1009,7 +1007,7 @@ my %SINGLE_TYPOS =
   'Patrick Jourdain' => ['jourdain'],
   'Paulo Goncalves Pereira' => ['pgp'],
   'Paulo Roberto Brum' => ['brum'],
-  'Pedro Madeira' => ['pmadeira', 'madeira'],
+  'Pedro Madeira' => ['pmadeira'],
   'Pedro Morbey' => ['morbey'],
   'Pedro Pratas' => ['pratas'],
   Peirão => ['peirao'],
