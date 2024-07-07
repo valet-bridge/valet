@@ -16,6 +16,7 @@ use lib './Patterns';
 use Chains;
 use Chain;
 
+use Team::Clean;
 use Team::Study;
 use Team::Preprocess;
 
@@ -107,7 +108,7 @@ while ($line = <$fh>)
   print_chunk(\%chunk) if $print_chains;
 
   my %teams;
-  Team::Study::clean_teams($whole, $chunk{TEAMS}, \%teams);
+  Team::Clean::clean_teams($whole, $chunk{TEAMS}, \%teams);
 
   if ($do_teams)
   {

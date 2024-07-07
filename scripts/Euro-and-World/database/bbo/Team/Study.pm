@@ -9,8 +9,7 @@ use open ':std', ':encoding(UTF-8)';
 package Team::Study;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(clean_teams study
-  print_team_stats init_hashes);
+our @EXPORT = qw(study print_team_stats init_hashes);
 
 use lib '.';
 use lib '..';
@@ -24,6 +23,8 @@ use Separators;
 use Team::Suggestors;
 use Team::Matrix;
 use Team::Repeats;
+
+# TODO More similar order to others?
 
 my @TAG_ORDER = qw(
   FUN 
@@ -70,105 +71,6 @@ my %MATRIX;
 my %REPEATS;
 
 
-sub fix_some_parentheses
-{
-  my ($whole, $team_ref) = @_;
-
-  return unless $$team_ref =~ /\((.*)\)/;
-  my $t = $1;
-
-  my $fix = $whole->get_single('AGE', lc($t));
-  if (defined $fix->{CATEGORY})
-  {
-    $$team_ref =~ s/\($t\)/($fix->{VALUE})/;
-    return;
-  }
-
-  $fix = $whole->get_single('GENDER', lc($t));
-  if (defined $fix->{CATEGORY})
-  {
-    $$team_ref =~ s/\($t\)/($fix->{VALUE})/;
-    return;
-  }
-
-  if ($t eq 'O')
-  {
-    $$team_ref = 'Open';
-  }
-  elsif ($t eq 'W')
-  {
-    $$team_ref = 'Women';
-  }
-  elsif ($t eq 'S')
-  {
-    $$team_ref = 'Seniors';
-  }
-  elsif ($t eq 'L')
-  {
-    $$team_ref = 'Ladies';
-  }
-  elsif ($t eq 'J')
-  {
-    $$team_ref = 'Juniors';
-  }
-}
-
-
-sub clean_team
-{
-  my ($whole, $team) = @_;
-  $team =~ s/\(\d+\)\s*$//; # (69)
-  $team =~ s/^\s+|\s+$//g; # Leading and trailing space
-
-  # Fix some parentheses with age and gender.
-  fix_some_parentheses($whole, \$team);
-
-  # my $fix = $FIX_HASH{lc($team)};
-  my $fix = $whole->get_single('COUNTRY', lc($team));
-  # if (defined $fix && $fix->{CATEGORY} eq 'COUNTRY')
-  if (exists $fix->{VALUE})
-  {
-    return $fix->{VALUE};
-  }
-  elsif ($team =~ /^\s*$/)
-  {
-    return '';
-  }
-  else
-  {
-    return $team;
-  }
-}
-
-
-sub clean_teams
-{
-  my ($whole, $text, $result) = @_;
-
-  return unless defined $text;
-  if ($text =~ /(.*) vs\. (.*)/)
-  {
-    ($result->{TEAM1}, $result->{TEAM2}) = ($1, $2);
-    $result->{TEAM1} = clean_team($whole, $result->{TEAM1});
-    $result->{TEAM2} = clean_team($whole, $result->{TEAM2});
-
-    # Kludge for event matches.
-    $result->{TEAM1} =~ s/\s*- npc$//;
-    $result->{TEAM2} =~ s/\s*- npc$//;
-  }
-  elsif ($text =~ /^\s*$/ || $text =~ /^\s*vs\.\s*$/)
-  {
-    $result->{TEAM1} = '';
-    $result->{TEAM2} = '';
-    return;
-  }
-  else
-  {
-    die "Can't parse team line $text\n";
-  }
-}
-
-
 sub init_hashes
 {
   set_matrix();
@@ -212,21 +114,6 @@ sub make_field_record
     {
       print "$bbono, $text, $field: $record->{$field} vs $val\n";
     }
-  }
-}
-
-
-sub make_complete_field_record
-{
-  my ($text, $chain, $bbono, $record) = @_;
-
-  for my $i (0 .. $chain->last())
-  {
-    my $token = $chain->check_out($i);
-    my $field = $token->field();
-    my $val = $token->value();
-
-    push @{$record->{$field}}, $val;
   }
 }
 
@@ -345,52 +232,6 @@ sub study_component
 }
 
 
-sub fix_heuristics
-{
-  my ($text, $chain, $bbono) = @_;
-
-  my %record;
-  make_complete_field_record($text, $chain, $bbono, \%record);
-
-  # Destroy Bridge Club if there is also Sporting Club.
-  if (exists $record{ABBR} && $#{$record{ABBR}} == 1)
-  {
-    for my $i (0 .. $chain->last())
-    {
-      my $token = $chain->check_out($i);
-      if ($token->field() eq 'ABBR' &&
-          $token->value() eq 'Bridge Club')
-      {
-        $token->set_singleton('DESTROY', 'Bridge Club');
-      }
-    }
-  }
-
-  # Turn Orange White into Netherlands White.
-  if (exists $record{COLOR} && $#{$record{COLOR}} == 1)
-  {
-    my $token = $chain->check_out(0);
-    if (lc($token->value()) eq 'orange')
-    {
-      $token->set_singleton('COUNTRY', 'Netherlands');
-    }
-  }
-
-  # Destroy two numerals.
-  if (exists $record{NUMERAL} && $#{$record{NUMERAL}} == 1)
-  {
-    for my $i (0 .. $chain->last())
-    {
-      my $token = $chain->check_out($i);
-      if ($token->field() eq 'NUMERAL')
-      {
-        $token->set_singleton('DESTROY', $token->value());
-      }
-    }
-  }
-}
-
-
 sub study
 {
   my ($whole, $text, $chain, $bbono, $unknowns) = @_;
@@ -442,8 +283,6 @@ sub study
     print "UUU $bbono: $text\n" if $chain->last() > 0;
     print "\n";
   }
-
-  # fix_heuristics($text, $chain, $bbono);
 }
 
 1;
