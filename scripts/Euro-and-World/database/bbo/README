@@ -1,3 +1,9 @@
+QUARTER (of city) != Quarter (of match) !!
+
+Turns out the tokens are not very well labeled...
+
+BBO 245: Should be COUNTER.  Why not?
+
 Cookbook:
 delete.
 
@@ -11,8 +17,6 @@ Team:
 
 Team chains should be set to complete (Team chain length stats).
 Probably split them properly.
-
-- Move Matrix to Connections/Matrix.pm or some such
 
 Output all the cook results into a text file in compact format:
 - a field can probably be a single or a list, { }
