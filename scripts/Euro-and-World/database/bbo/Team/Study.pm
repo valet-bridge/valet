@@ -56,7 +56,7 @@ my @TAG_ORDER = qw(
   MEET
   TIME
   MONTH
-  DAY
+  WEEKDAY
   NUMERAL
   DESTROY
 );

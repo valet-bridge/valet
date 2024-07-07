@@ -19,7 +19,6 @@ use Tags::City;
 use Tags::Club;
 use Tags::Color;
 use Tags::Country;
-use Tags::Day;
 use Tags::Destroy;
 use Tags::First;
 use Tags::Form;
@@ -47,6 +46,7 @@ use Tags::Time;
 use Tags::Tname;
 use Tags::Tword;
 use Tags::University;
+use Tags::Weekday;
 use Tags::Zone;
 
 
@@ -61,7 +61,6 @@ my %TAGS =
   CLUB => \&Tags::Club::set_hashes,
   COLOR => \&Tags::Color::set_hashes,
   COUNTRY => \&Tags::Country::set_hashes,
-  DAY => \&Tags::Day::set_hashes,
   DESTROY => \&Tags::Destroy::set_hashes,
   FIRST => \&Tags::First::set_hashes,
   FORM => \&Tags::Form::set_hashes,
@@ -89,6 +88,7 @@ my %TAGS =
   TNAME => \&Tags::Tname::set_hashes,
   TWORD => \&Tags::Tword::set_hashes,
   UNIVERSITY => \&Tags::University::set_hashes,
+  WEEKDAY => \&Tags::Weekday::set_hashes,
   ZONE => \&Tags::Zone::set_hashes
 );
 
