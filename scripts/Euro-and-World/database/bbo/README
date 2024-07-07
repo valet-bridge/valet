@@ -1,7 +1,5 @@
 Cookbook:
-Check that categories are similar to Tags.
-Check that tokens are only what they should be.
-Then delete.
+delete.
 
 Maybe really prune Tags unused to the end?
 

@@ -9,10 +9,11 @@ use v5.10;
 
 use lib '.';
 use lib './Event';
+use lib './Connections';
 
 use Separators;
 
-use Event::Cookbook;
+use Connections::Fields;
 
 # A Token has some basic information about its origin:
 # - text is (close to) the text snippet that gave rise to it,
@@ -591,31 +592,12 @@ sub str_full
 }
 
 
-sub str_iterator
-{
-  my ($self, $prefix) = @_;
-
-  return $self->str_singleton($prefix);
-}
-
-
-sub str_counter
-{
-  my ($self) = @_;
-
-  die "Haven't learned str_counter yet";
-}
-
-
-sub str_singleton
+sub str_common
 {
   my ($self, $prefix) = @_;
 
   my $field = $self->{FIELD};
   my $value = $self->{VALUE} || "(empty)";
-
-  die "No field" unless defined $field;
-  die "Bad field $field" unless exists $SINGLETONS{$field};
 
   if ($prefix ne '')
   {
@@ -625,6 +607,39 @@ sub str_singleton
   {
     return "$field $value";
   }
+}
+
+
+sub str_iterator
+{
+  my ($self, $prefix) = @_;
+
+  die "Iterator: No or bad field $self->{FIELD}" unless 
+    (defined $self->{FIELD} && exists $ITERATOR_FIELDS{$self->{FIELD}});
+
+  return $self->str_common($prefix);
+}
+
+
+sub str_counter
+{
+  my ($self, $prefix) = @_;
+
+  die "Counter: No or bad field $self->{FIELD}" unless 
+    (defined $self->{FIELD} && exists $COUNTER_FIELDS{$self->{FIELD}});
+
+  return $self->str_common($prefix);
+}
+
+
+sub str_singleton
+{
+  my ($self, $prefix) = @_;
+
+  die "Singleton: No or bad field $self->{FIELD}" unless 
+    (defined $self->{FIELD} && exists $SINGLETON_FIELDS{$self->{FIELD}});
+
+  return $self->str_common($prefix);
 }
 
 
@@ -672,7 +687,7 @@ sub str
   }
   elsif ($category eq 'COUNTER')
   {
-    $str = $self->str_iterator($prefix);
+    $str = $self->str_counter($prefix);
   }
   elsif ($category eq 'SINGLETON')
   {

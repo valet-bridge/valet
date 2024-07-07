@@ -2,13 +2,10 @@
 
 package Chain;
 
+use v5.10;
 use strict;
 use warnings;
 use Exporter;
-use v5.10;
-
-use lib '.';
-use Cookbook;
 
 # A Chain consists of:
 # - LIST of Token's

@@ -18,8 +18,6 @@ use Separators;
 use Token;
 use Util;
 
-use Event::Cookbook;
-
 my @TAG_ORDER = qw(
   ROMAN
   TNAME

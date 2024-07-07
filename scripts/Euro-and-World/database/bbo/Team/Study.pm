@@ -12,17 +12,18 @@ our @ISA = qw(Exporter);
 our @EXPORT = qw(study print_team_stats init_hashes);
 
 use lib '.';
-use lib '..';
 use lib './Team';
 use lib './Tags';
+use lib '../Connections';
 
 use Token;
 use Util;
 use Separators;
 
 use Team::Suggestors;
-use Team::Matrix;
 use Team::Repeats;
+
+use Connections::Matrix;
 
 # TODO More similar order to others?
 
@@ -73,7 +74,7 @@ my %REPEATS;
 
 sub init_hashes
 {
-  set_matrix();
+  Connections::Matrix::set_matrix();
   set_repeats(\%REPEATS);
 }
 
