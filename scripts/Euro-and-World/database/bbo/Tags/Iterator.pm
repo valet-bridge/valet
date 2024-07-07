@@ -23,8 +23,8 @@ my @SINGLE_WORDS = qw(
   Berth Boards
   Day
   Flight
-  Half
   Group
+  Half
   Match
   Part Phase Place
   Quarter 

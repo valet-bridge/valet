@@ -99,7 +99,7 @@ while ($line = <$fh>)
     next;
   }
 
-  if ($chunk{BBONO} == 1086)
+  if ($chunk{BBONO} == 2330)
   {
     print "HERE\n";
   }
@@ -204,7 +204,7 @@ if ($do_tournaments)
   print "\nTotal unknown titles $unknown_titles\n\n";
 }
 
-$whole->print_misses();
+# $whole->print_misses();
 
 
 exit;

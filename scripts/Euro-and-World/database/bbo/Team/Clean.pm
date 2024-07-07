@@ -65,9 +65,7 @@ sub clean_team
   # Fix some parentheses with age and gender.
   fix_some_parentheses($whole, \$team);
 
-  # my $fix = $FIX_HASH{lc($team)};
   my $fix = $whole->get_single('COUNTRY', lc($team));
-  # if (defined $fix && $fix->{CATEGORY} eq 'COUNTRY')
   if (exists $fix->{VALUE})
   {
     return $fix->{VALUE};
