@@ -137,14 +137,12 @@ sub study_component
   }
 
   study_value($whole, $value, $token_no, $chain, $unsolved_flag);
-  $$token_no++;
 
   if ($digits ne '')
   {
     # Add the digits if they exist.
     singleton_numeral($digits, $token_no, $chain, 
       $main::histo_title, $PREFIX);
-    $$token_no++;
   }
 }
 
@@ -176,8 +174,7 @@ sub study
     {
       # We had a multi-word hit.
       append_token($chain, 'SINGLETON', $tags[$i], $values[$i], 
-        $texts[$i], $token_no, $main::histo_title, $PREFIX);
-      $token_no++;
+        $texts[$i], \$token_no, $main::histo_title, $PREFIX);
     }
     else
     {
@@ -196,6 +193,9 @@ sub study
     print "SSS $bbono: $text\n" if $chain->last() > 0;
     print "\n";
   }
+
+  my $delta = $chain->last() - $token_no + 1;
+  print "DELTA TITLE $delta\n";
 }
 
 

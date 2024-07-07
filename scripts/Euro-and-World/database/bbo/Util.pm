@@ -315,7 +315,8 @@ sub append_token
     $tag = uc($value);
   }
 
-  $chain->append_general($category, $tag, $value, $text, $pos);
+  $chain->append_general($category, $tag, $value, $text, $$pos);
+  $$pos++;
 
   $histo->incr($prefix . $tag);
 }

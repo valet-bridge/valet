@@ -1,9 +1,8 @@
-Maybe really prune Tags unused to the end?
+Static consistency of Whole and Matrix
 
-Team:
-- Put some into Consistency
-- token_no minus length of chain: Print at end of each.
-  Probably token_no and ++ is messed up in all cases.
+Dynamic consistency of chains
+
+Maybe really prune Tags unused to the end?
 
 Team chains should be set to complete (Team chain length stats).
 Probably split them properly.

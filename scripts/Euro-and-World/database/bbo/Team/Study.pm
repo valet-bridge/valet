@@ -188,11 +188,11 @@ sub study_value
 {
   my ($whole, $value, $pos, $chain, $unsolved_flag) = @_;
 
-  return if singleton_non_tag_matches($value, $$pos, $chain,
+  return if singleton_non_tag_matches($value, $pos, $chain,
     $main::histo_team, $PREFIX);
 
   return if singleton_tag_matches($whole, \@TAG_ORDER, 
-    $$pos, $value, 0, $chain, $main::histo_team, $PREFIX);
+    $pos, $value, 0, $chain, $main::histo_team, $PREFIX);
 
   my $token = Token->new();
   $token->set_origin($$pos, $value);
@@ -221,14 +221,12 @@ sub study_component
   }
 
   study_value($whole, $value, $token_no, $chain, $unsolved_flag);
-  $$token_no++;
 
   if ($digits ne '')
   {
     # Add the digits if they exist.
     singleton_numeral($digits, $token_no, $chain,
       $main::histo_team, $PREFIX);
-    $$token_no++;
   }
 }
 
@@ -238,9 +236,11 @@ sub study
   my ($whole, $text, $chain, $bbono, $unknowns) = @_;
 
   return if $text eq '';
+
+  my $token_no = 0;
   if (my $s = suggest_form($text))
   {
-    append_token($chain, 'SINGLETON', 'FORM', $s, $text, 0,
+    append_token($chain, 'SINGLETON', 'FORM', $s, $text, \$token_no,
       $main::histo_team, $PREFIX);
     return;
   }
@@ -255,7 +255,6 @@ sub study
   # Split on separators.
   my $sep = qr/[\s+\-\+\._;&"\/\(\)\|]/;
 
-  my $token_no = 0;
   my $unsolved_flag = 0;
 
   for my $i (0 .. $#values)
@@ -264,8 +263,7 @@ sub study
     {
       # We had a multi-word hit.
       append_token($chain, 'SINGLETON', $tags[$i], $values[$i],
-        $texts[$i], $token_no, $main::histo_title, $PREFIX);
-      $token_no++;
+        $texts[$i], \$token_no, $main::histo_title, $PREFIX);
     }
     else
     {
@@ -284,6 +282,10 @@ sub study
     print "UUU $bbono: $text\n" if $chain->last() > 0;
     print "\n";
   }
+
+  my $delta = $chain->last() - $token_no + 1;
+  print "DELTA TEAM $delta\n";
+
 }
 
 1;

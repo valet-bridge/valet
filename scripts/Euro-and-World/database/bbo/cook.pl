@@ -99,7 +99,7 @@ while ($line = <$fh>)
     next;
   }
 
-  if ($chunk{BBONO} == 10608)
+  if ($chunk{BBONO} == 254)
   {
     print "HERE\n";
   }

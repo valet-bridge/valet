@@ -181,11 +181,11 @@ sub study_value
 {
   my ($whole, $value, $result, $pos, $chain, $unsolved_flag) = @_;
 
-  return if singleton_non_tag_matches($value, $$pos, $chain,
+  return if singleton_non_tag_matches($value, $pos, $chain,
     $main::histo_event, $PREFIX);
 
   return if singleton_tag_matches($whole, \@TAG_ORDER, 
-    $$pos, $value, 1, $chain, $main::histo_event, $PREFIX);
+    $pos, $value, 1, $chain, $main::histo_event, $PREFIX);
 
   my $token = Token->new();
   $token->set_origin($$pos, $value);
@@ -266,6 +266,10 @@ sub study
     print "EEE $chunk->{BBONO}: $chunk->{EVENT}\n" if $chain->last() > 0;
     print "\n";
   }
+
+  my $delta = $chain->last() - $token_no + 1;
+  print "DELTA EVENT $delta\n";
+
 }
 
 1;
