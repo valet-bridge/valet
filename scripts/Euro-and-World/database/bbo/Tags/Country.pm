@@ -78,17 +78,17 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Albania Andorra Angora Argentina Australia Austria 
-  Bahrain Bangladesh Barbados Belarus Belgium Bermuda Bosnia Botswana 
-  Brazil Bulgaria
+  Bahrain Bangladesh Barbados Belarus Belgium Bermuda 
+  Bolivia Bosnia Botswana Brazil Bulgaria
   Canada Chile Colombia Croatia Cyprus
   Denmark 
   Ecuador Egypt England Estonia 
   Finland France
   Germany Georgia Greece Guadeloupe Guernsey
   Hungary 
-  Iceland Indonesia Ireland Israel Italy
+  Iceland Indonesia Ireland Iraq Israel Italy
   Japan Jersey Jordan
-  Kenya Kuwait
+  Kazakhstan Kenya Kuwait
   Latvia Lebanon Lichtenstein Lithuania Luxembourg 
   Macau Madagascar Malta Malaysia Mauritius Mexico 
   Monaco Mongolia Montenegro Morocco
@@ -97,7 +97,7 @@ my @SINGLE_WORDS = qw(
   Qatar
   Reunion Romania Russia
   Scotland Serbia Singapore Slovenia Slovakia Spain Sweden Switzerland Syria
-  Taiwan Tanzania Thailand Tunisia Turkey
+  Taiwan Tanzania Thailand Tunisia Turkey Turkmenistan
   Uganda Ukraine Uruguay USA
   Venezuela
   Wales

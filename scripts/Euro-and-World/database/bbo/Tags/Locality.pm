@@ -32,15 +32,15 @@ my @SINGLE_WORDS = qw(
   Bogazici Borivli Bormali Bornova Bozdogan Brotteaux Buca Buitenhof
   Çayyolu Cemara Chelsea Chislehurst Courseulles
   Ege Esenkent
-  Fatih
+  Fatih Freidorf
   Gardermoen Gundogan
   Heimdal Huochetou
   Jarville Jomtien
   Kadikoy Karaçay Kardelen Kartal Karsiyaka Katok Kaylaka
   Kocamustafapasa Konak Korwin Kucukcekmece Küp
   Lappee Leilem Lemvourgeio Losari Lozenets
-  Maadi Makaliwe Manahasa Männiku Meski Moudania Mrzenci Muratpasa
-  Nagbagan Narita Narlidere Norrorts
+  Maadi Makaliwe Manahasa Männiku Meski Mrzenci Muratpasa
+  Nagbagan Narita Narlidere Niski
   Olgiata
   Pamukkale Parioli Piloni Pinarbasi Polonezkoy Poncol Pudong
   Qiaoxie
@@ -48,8 +48,8 @@ my @SINGLE_WORDS = qw(
   Radkov Recoleta Ridabu
   Sabadel Sansar Sarniak Senayan Serdika Shihua Simal Sirinyer
   Slaska Sredec Sukomoro Suleymanpasa Suralaya
-  Taihu
-  Unaós
+  Taihu Taskopru Tengah
+  Uccle Unaós
   Varbergshus Viþnelik
   Wadas Wratislavia Wroble
   Yalikavak Yarimada Yarýmca Yenisehir Yizhuang Yildirim Yuquan

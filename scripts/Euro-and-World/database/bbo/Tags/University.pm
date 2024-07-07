@@ -40,7 +40,7 @@ my @MULTI_WORDS =
   'Ege University',
   'Fakultas Teknik Bridge Club Universitas Tanjungpura',
   'Fu Jen Catholic University',
-  'Gunadurma',
+  'Gunadarma University',
   'Institut Teknologi Bandung',
   'ITS IKOMA',
   'ITÜ Vakfi',
@@ -71,6 +71,7 @@ my @MULTI_WORDS =
   'Northwestern University',
   'Osmangazi University',
   'Paris ECE',
+  'Radboud University',
   'Ren Da Fu Zhong',
   'Riau University',
   'Sam Ratulangi University',
@@ -187,8 +188,6 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Brandeis
-  Gunadarma
-  Radboud
 );
 
 my %SINGLE_TYPOS =
@@ -206,6 +205,7 @@ my %SINGLE_TYPOS =
   'École Polytechnique' => ['polytech'],
   'Fakultas Teknik Bridge Club Universitas Tanjungpura' => ['ftbc'],
   'Fu Jen Catholic University' => ['fju'],
+  'Gunadarma University' => ['gunadarma'],
   'Institut Teknologi Bandung' => ['itb'],
   'Koc University' => ['koc'],
   'Makassar University' => ['mu'],
@@ -220,6 +220,7 @@ my %SINGLE_TYPOS =
   'National Tsing Hua University' => ['nthu'],
   'Northwestern University' => ['northwestern'],
   'Osmangazi University' => ['osmangazi'],
+  'Radboud University' => ['radboud'],
   'Ren Da Fu Zhong' => ['rdfz'],
   'Riau University' => ['unri'],
   'Sam Ratulangi University' => ['unsrat'],

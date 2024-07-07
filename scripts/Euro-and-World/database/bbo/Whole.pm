@@ -109,7 +109,7 @@ sub set_overall_hashes
   # The words themselves.
   for my $multi (@$multi_words)
   {
-    my $tilded = $multi =~ s/ /\~/gr;
+    # my $tilded = $multi =~ s/ /\~/gr;
     $self->{MWORDS}{$key}{lc($multi)} = $multi;
     $self->{SWORDS}{$key}{lc($multi)} = 
       { CATEGORY => $key, VALUE => $multi };
@@ -118,7 +118,7 @@ sub set_overall_hashes
   # Any typos.
   for my $multi (keys %$multi_typos)
   {
-    my $tilded = $multi =~ s/ /\~/gr;
+    # my $tilded = $multi =~ s/ /\~/gr;
     for my $typo (@{$multi_typos->{$multi}})
     {
       $self->{MWORDS}{$key}{lc($typo)} = $multi;
@@ -167,6 +167,129 @@ sub init_hashes
   {
     $set_method->($callback_method, $key);
   }
+}
+
+
+sub set_matrix_link
+{
+  # 'to' might be TEAM_COUNTRY, 'from' might be TEAM_REGION.
+  my ($self, $link, $to, $from) = @_;
+
+  my $mlink = \%{$self->{MATRIX}{$from}{$to}};
+  for my $key (keys %$link)
+  {
+    for my $entry (@{$link->{$key}})
+    {
+      $mlink->{lc($entry)} = $key;
+    }
+  }
+}
+
+
+sub check_consistency_scalar
+{
+  my ($self, $tag_from, $tag_to, $value_from, $value_to, $errstr) = @_;
+
+  return unless defined $value_from;
+  return unless defined $value_to;
+
+  my $c = $self->{MATRIX}{$tag_from}{$tag_to}{lc($value_from)};
+  if (! defined $c)
+  {
+    print "$errstr: ",
+      "($value_from, $value_to) not in matrix ($tag_from, $tag_to)\n";
+  }
+  elsif ($c eq $value_to)
+  {
+    return;
+  }
+  elsif ($tag_from eq 'CLUB' && $tag_to eq 'CITY' && $c =~ /-Pan$/)
+  {
+    # Special case.
+    return;
+  }
+  else
+  {
+    print "$$errstr: $value_to vs lookup $c for ($tag_from, $tag_to)\n";
+  }
+}
+
+
+sub matrix_pair_is_in_tags
+{
+  my ($self, $m_from, $m_to) = @_;
+
+  # Example: (m_from, m_to) = (REGION, COUNTRY).
+  # Check that the country we look up is really a country.
+
+  for my $value_from (sort keys %{$self->{MATRIX}{$m_from}{$m_to}})
+  {
+    my $lcv = lc($value_from);
+    if (! exists $self->{SWORDS}{$m_from}{$lcv} &&
+        ! exists $self->{MWORDS}{$m_from}{$lcv})
+    {
+      print "($m_from, $m_to): $value_from is not in Tags ($m_from).\n";
+    }
+
+    my $c = $self->{MATRIX}{$m_from}{$m_to}{$lcv};
+
+    if (! exists $self->{SWORDS}{$m_to}{lc($c)} &&
+        ! exists $self->{MWORDS}{$m_to}{lc($c)})
+    {
+      print "($m_from, $m_to): $c (from $value_from) is not in Tags ($m_to).\n";
+    }
+  }
+}
+
+
+sub tag_is_in_matrix
+{
+  my ($self, $t_from, $t_to) = @_;
+
+  # Example: (m_from, m_to) = (REGION, COUNTRY).
+  # Check that every region in Tags is also in the matrix.
+
+  for my $value (sort keys %{$self->{MWORDS}{$t_from}})
+  {
+    my $cval = lc($self->{MWORDS}{$t_from}{lc($value)});
+    if (! exists $self->{MATRIX}{$t_from}{$t_to}{$cval})
+    {
+      print "($t_from, $t_to): Mwords $cval not in matrix.\n";
+    }
+  }
+
+  for my $value (sort keys %{$self->{SWORDS}{$t_from}})
+  {
+    my $cval = lc($self->{SWORDS}{$t_from}{lc($value)}{VALUE});
+    if (! exists $self->{MATRIX}{$t_from}{$t_to}{$cval})
+    {
+      print "($t_from, $t_to): Swords $cval not in matrix.\n";
+    }
+  }
+}
+
+
+sub check_static_consistency
+{
+  my ($self) = @_;
+
+  $self->matrix_pair_is_in_tags('REGION', 'COUNTRY');
+  $self->matrix_pair_is_in_tags('CITY', 'COUNTRY');
+  $self->matrix_pair_is_in_tags('SPONSOR', 'COUNTRY');
+  $self->matrix_pair_is_in_tags('NATIONALITY', 'COUNTRY');
+
+  $self->matrix_pair_is_in_tags('LOCALITY', 'CITY');
+  $self->matrix_pair_is_in_tags('UNIVERSITY', 'CITY');
+  $self->matrix_pair_is_in_tags('CLUB', 'CITY');
+
+  $self->tag_is_in_matrix('REGION', 'COUNTRY');
+  $self->tag_is_in_matrix('CITY', 'COUNTRY');
+  $self->tag_is_in_matrix('SPONSOR', 'COUNTRY');
+  $self->tag_is_in_matrix('NATIONALITY', 'COUNTRY');
+
+  $self->tag_is_in_matrix('LOCALITY', 'CITY');
+  $self->tag_is_in_matrix('UNIVERSITY', 'CITY');
+  $self->tag_is_in_matrix('CLUB', 'CITY');
 }
 
 

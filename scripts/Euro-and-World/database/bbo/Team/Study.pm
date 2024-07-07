@@ -65,33 +65,13 @@ my $PREFIX = 'TEAM_';
 our $histo_team;
 
 
-# Links between different tags, e.g. club to city.
-my %MATRIX;
-
 # BBOVG numbers for which repeated, but different fields are OK.
 my %REPEATS;
 
 
 sub init_hashes
 {
-  Connections::Matrix::set_matrix();
   set_repeats(\%REPEATS);
-}
-
-
-sub set_link_matrix
-{
-  # 'to' might be TEAM_COUNTRY, 'from' might be TEAM_REGION.
-  my ($link, $to, $from) = @_;
-
-  my $mlink = \%{$MATRIX{$from}{$to}};
-  for my $key (keys %$link)
-  {
-    for my $entry (@{$link->{$key}})
-    {
-      $mlink->{lc($entry)} = $key;
-    }
-  }
 }
 
 
@@ -126,6 +106,7 @@ sub check_consistency_pair
   return unless exists $record->{$from};
   return unless exists $record->{$to};
 
+my %MATRIX;
   my $c = $MATRIX{$from}{$to}{lc($record->{$from})};
   if (! defined $c)
   {

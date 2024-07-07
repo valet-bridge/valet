@@ -42,6 +42,7 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   Commonwealth => ['commomwealth'],
+  Europe => ['european', 'euroregion', 'euro', 'europ_', 'europeqn'],
   'South America' => ['southamerica', 'sudamericano',
     'southamerican', 'sudamerican']
 );

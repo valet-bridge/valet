@@ -63,6 +63,8 @@ my $print_chains = 1; # 1 if we dump results for further analysis
 my @RAW_FIELDS = qw(BBONO TITLE EVENT SCORING TEAMS);
 
 Team::Study::init_hashes();
+Connections::Matrix::set_matrix($whole);
+$whole->check_static_consistency();
 
 my $file = $ARGV[0];
 open my $fh, '<', $file or die "Cannot read tfile: $!";

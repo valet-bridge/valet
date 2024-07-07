@@ -199,7 +199,6 @@ my @MULTI_WORDS =
   'Ruch SA',
   'Rumah Sakit Umum Daerah Pelanbaru',
   'Salmun BC',
-  'Samadhan Academy',
   'Seferihisar Municipality',
   'Sekolah Bridge Tonaas Wangko',
   'Semen Padang',
@@ -400,7 +399,6 @@ my @SINGLE_WORDS = qw(
   TGR Tofas Tonyaspor Trifolium
   Uppsalabridgen
   Vestri
-  Østerdal
   Örebridgen
   Yildirimspor
   Zmrzlina
@@ -424,7 +422,6 @@ my %SINGLE_TYPOS =
   'AVI Club Noida' => ['avi'],
   'Bangkok Bridge Club' => ['bbc'],
   'Baþkent Sekans BSK' => ['sekans'],
-  'Batman Genclik' => ['batman'],
   'BC Bamberger Reiter' => ['bamberger', 'amberger'],
   'BC Garches' => ['garches'],
   'BC Herkules' => ['hercules', 'herkules'],
@@ -472,7 +469,6 @@ my %SINGLE_TYPOS =
   'RBSC Polo Club' => ['rbsc'],
   'Royal Airforce Club' => ['rac'],
   'Ruch AZS' => ['ruch'],
-  'Samadhan Academy' => ['samadhan', 'samadgan'],
   'Sekolah Bridge Tonaas Wangko' => ['sbtw'],
   'Sirinyer Sports' => ['sirinyerspor'],
   'Smedstadens BK' => ['smedstadens'],

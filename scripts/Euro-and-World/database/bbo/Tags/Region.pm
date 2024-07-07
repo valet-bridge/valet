@@ -139,25 +139,25 @@ my @SINGLE_WORDS = qw(
   Bali Balkan Banten Belitung Bengkayang Bihar Bornholm Bungo Buskerud
   Cappadocia Catalonia Corsica
   Dersým Druts
-  Eurasia Europe Eyjafjallajokull
-  Florida Fukien
+  Eurasia Eyjafjallajokull
+  Fjends Florida Fukien
   Ganges Gansu Gauteng Global Goa Gorontalo Guangdong Guangxi 
   Guizhou Gujarat
-  Hainan Haixing Hatay Haugaland Hebei Hegyvidék Hubei Hunan
-  Jharkhand Jiangsu Jilin
+  Hainan Haixing Hatay Haugaland Hebei Hedmark Hegyvidék Hubei Hunan
+  Jalisco Jharkhand Jiangsu Jilin
   Kansai Kanto Karnataka Kawanua Kayong Kedungwaru Kepri Kerala 
   Kinali Krabi
   Lampung Lebak Liaoning Liguria Lombok 
   Madeira Maharashtra Maluku Marmara Matopos Mercosur Midtsjælland 
   Minahasa Missouri Mjøsa Muallim Munzur Mysia
-  Nordafjells Norden Norrland Nusantara
+  Nordafjells Norden Norrland Norrorts Nusantara
   Queensland
   Oberloiben Olona Orontes Otago
   Papua Pomerania Porong Punjab
   Rajasthan Rajputana Ratchaburi Rhodes Rogaland Rosfjord 
   Sakarya Salten Shanxi Siberia Sichuan Silesia Silla Sindh Sintang 
   Skåne Slask Southland Sydvest
-  Tambun Taskopru Tasmania Telemark Tengah Tianya
+  Tambun Taskopru Tasmania Telemark Tianya
   Tigris Tinglin Tuncelý
   Uccle Unia Uttarakhand
   Victoria Vojvodina
@@ -175,8 +175,6 @@ my %SINGLE_TYPOS =
   'Central Sulawesi' => ['sulteng'],
   Corsica => ['korsikali'],
   Eurasia => ['avrasya'],
-  Europe => ['european', 'euroregion', 'euro', 'europ_',
-    'europeqn'],
   'Gabungan Malaku' => ['gabmin', 'gabmo'],
   Ganges => ['genges'],
   Hegyvidék  => ['hegyvidek'],
