@@ -1,17 +1,11 @@
 Team:
-- Don't really need FORM_SCORES
 - Put some into Consistency
 - Numeral should be 1 not 'one'
+- token_no minus length of chain: Print at end of each.
+  Probably token_no and ++ is messed up in all cases.
 
-Probably token_no and ++ is messed up in all cases.
-
-Team chains should be set to complete (Team chain length stats)
-
-Chains print should be in a new Chains (today's Chains is something else)
-
-- Make a ChainStats for length and number (ignore KILLED)
-- Update it from Chains
-- Make a Chains::print()
+Team chains should be set to complete (Team chain length stats).
+Probably split them properly.
 
 - Move Matrix to Connections/Matrix.pm or some such
 

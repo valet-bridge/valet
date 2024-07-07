@@ -1,8 +1,8 @@
 #!perl
 
+use v5.10;
 use strict;
 use warnings;
-use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 use Time::HiRes qw(time);
@@ -13,26 +13,26 @@ use lib './Title';
 use lib './Event';
 use lib './Patterns';
 
-use Chains;
-use Chain;
-
 use Team::Clean;
 use Team::Study;
 use Team::Preprocess;
 
 use ScoringBBO;
 
-use Event::Study;
-use Event::Postprocess;
-
 use Title::Study;
 use Title::Preprocess;
 use Title::Postprocess;
+
+use Event::Preprocess;
+use Event::Study;
+use Event::Postprocess;
 
 use Patterns::Chainify;
 
 use Reductions::Event;
 use Reductions::Title;
+
+use Chain;
 
 use Whole;
 my $whole = Whole->new();
@@ -71,7 +71,6 @@ my %chunk;
 my $line;
 
 my $lno = 0;
-my (@chain_team_stats);
 my (@reduction_event_stats, @reduction_title_stats);
 my $unknown_teams = 0;
 my $unknown_events = 0;
@@ -138,7 +137,8 @@ while ($line = <$fh>)
     Event::Study::study($whole, \%chunk, \%teams, 
       $chain_event, \$unknown_events);
 
-    process_event(\@chains_event);
+    Event::Preprocess::pre_process(\@chains_event);
+
     Patterns::Chainify::process(\@EVENT_REDUCTIONS, \@chains_event, 
       1, \@reduction_event_stats);
 
@@ -225,79 +225,12 @@ sub print_chunk
 }
 
 
-sub print_chain
-{
-  my ($chain, $no, $prefix) = @_;
-
-  return if $chain->status() eq 'KILLED';
-
-  my $l = $chain->last();
-  return if $l == -1;
-
-  for my $i (0 .. $l)
-  {
-    my $token = $chain->check_out($i);
-    print $token->str(0, $prefix) unless 
-      $token->category() eq 'SEPARATOR';
-  }
-}
-
-
-sub print_chains
-{
-  my $chains = pop;
-
-  for my $chain_no (0 .. $#$chains)
-  {
-    my $chain = $chains->[$chain_no];
-    printf("Chain %d %2d %8s: %s\n",
-      $chain_no,
-      $chain->last()+1,
-      $chain->status(),
-      $chain->text());
-      printf("Chain %d %2d %8s: %s\n",
-      $chain_no,
-      $chain->last()+1,
-      $chain->status(),
-      $chain->catcat());
-  }
-  printf "\n";
-}
-
-
-sub print_chains_full
-{
-  my $chains = pop;
-
-  for my $chain_no (0 .. $#$chains)
-  {
-    my $chain = $chains->[$chain_no];
-    printf("Chain %d %2d %8s: %s\n",
-      $chain_no,
-      $chain->last()+1,
-      $chain->status(),
-      $chain->text());
-      printf("Chain %d %2d %8s: %s\n",
-      $chain_no,
-      $chain->last()+1,
-      $chain->status(),
-      $chain->catcat());
-      printf("Chain %d %2d %8s: %s\n",
-      $chain_no,
-      $chain->last()+1,
-      $chain->status(),
-      $chain->fields());
-  }
-  printf "\n";
-}
-
-
 sub print_chains_by_tag
 {
   my ($chains, $prefix) = @_;
-  for my $chain_no (0 .. $#$chains)
+  for my $chain (@$chains)
   {
-    print_chain($chains->[$chain_no], 0, $prefix);
+    $chain->print($prefix);
   }
 }
 

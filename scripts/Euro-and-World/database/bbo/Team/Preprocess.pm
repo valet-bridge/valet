@@ -11,22 +11,8 @@ use open ':std', ':encoding(UTF-8)';
 our @ISA = qw(Exporter);
 our @EXPORT = qw(pre_process);
 
-
-sub make_record
-{
-  my ($chains, $record) = @_;
-
-  for my $chain (@$chains)
-  {
-    for my $i (0 .. $chain->last())
-    {
-      my $token = $chain->check_out($i);
-      my $field = $token->field();
-
-      push @{$record->{$field}}, $token->value();
-    }
-  }
-}
+use lib '..';
+use Util;
 
 
 sub pre_process_abbr

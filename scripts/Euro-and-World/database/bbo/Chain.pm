@@ -445,4 +445,23 @@ sub match
 }
 
 
+sub print
+{
+  my ($self, $prefix) = @_;
+
+  return if $self->status() eq 'KILLED';
+
+  my $l = $self->last();
+  return if $l == -1;
+
+  for my $i (0 .. $l)
+  {
+    my $token = $self->check_out($i);
+    print $token->str(0, $prefix) unless
+      $token->category() eq 'SEPARATOR';
+  }
+
+}
+
+
 1;

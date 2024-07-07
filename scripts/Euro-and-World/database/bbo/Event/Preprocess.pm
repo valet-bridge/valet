@@ -1,63 +1,20 @@
 #!perl
 
+package Event::Preprocess;
+
+use v5.10;
 use strict;
 use warnings;
-use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 use Time::HiRes qw(time);
 
-package Chains;
-
 use lib '.';
-# use lib '..';
-# use lib './Tags';
 
 use Separators;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(
-  process_event
-  post_process_event
-  %CATEGORIES);
-
-# use Tags::Age;
-# use Tags::City;
-# use Tags::Color;
-# use Tags::Country;
-# use Tags::Date;
-# use Tags::Form;
-# use Tags::Gender;
-# use Tags::Person;
-# use Tags::Movement;
-# use Tags::Organization;
-# use Tags::Origin;
-# use Tags::Scoring;
-# use Tags::Sponsor;
-# use Tags::Stage;
-# use Tags::Tname;
-# use Tags::Tword;
-# use Tags::Weekday;
-
-# my %CATEGORIES;
-# $CATEGORIES{AGE} = Tags::Age->new();
-# $CATEGORIES{CITY} = Tags::City->new();
-# $CATEGORIES{COLOR} = Tags::Color->new();
-# $CATEGORIES{COUNTRY} = Tags::Country->new();
-# $CATEGORIES{DATE} = Tags::Date->new();
-# $CATEGORIES{FORM} = Tags::Form->new();
-# $CATEGORIES{GENDER} = Tags::Gender->new();
-# $CATEGORIES{PERSON} = Tags::Person->new();
-# $CATEGORIES{MOVEMENT} = Tags::Movement->new();
-# $CATEGORIES{ORGANIZATION} = Tags::Organization->new();
-# $CATEGORIES{ORIGIN} = Tags::Origin->new();
-# $CATEGORIES{SCORING} = Tags::Scoring->new();
-# $CATEGORIES{SPONSOR} = Tags::Sponsor->new();
-# $CATEGORIES{STAGE} = Tags::Stage->new();
-# $CATEGORIES{TNAME} = Tags::Tname->new();
-# $CATEGORIES{TWORD} = Tags::Tword->new();
-# $CATEGORIES{WEEKDAY} = Tags::Weekday->new();
-
+our @EXPORT = qw(pre_process);
 
 my @SIMPLE_LIST = qw(NUMERAL ORDINAL LETTER SEPARATOR);
 my %SIMPLE_CATEGORIES = map { $_ => 1} @SIMPLE_LIST;
@@ -199,13 +156,6 @@ sub split_on_singleton
         $chain->complete_if_last_is(0, 'COMPLETE');
 
         my $field = $chain->field($index);
-        # my $obj = $CATEGORIES{$field};
-        # next unless defined $obj;
-
-        # if (! $obj->valid($chain->value($index)))
-        # {
-          # die "No SINGLETON $field, " . $chain->value($index);
-        # }
 
         if ($chain->last() == 0)
         {
@@ -322,7 +272,7 @@ sub split_on_most_parens
 }
 
 
-sub process_event
+sub pre_process
 {
   my ($chains) = @_;
 

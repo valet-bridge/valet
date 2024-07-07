@@ -62,8 +62,6 @@ my $PREFIX = 'TEAM_';
 our $histo_team;
 
 
-my (%MULTI_HITS);
-
 # Links between different tags, e.g. club to city.
 my %MATRIX;
 

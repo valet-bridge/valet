@@ -12,9 +12,9 @@ use Exporter;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(ordinal_to_numeral ordinalize unteam 
-  split_on_dates split_on_capitals split_on_multi
-  append_token 
-  singleton_numeral singleton_non_tag_matches singleton_tag_matches);
+  split_on_dates split_on_capitals split_on_multi append_token 
+  singleton_numeral singleton_non_tag_matches singleton_tag_matches
+  make_record);
 
 
 sub ordinal_to_numeral
@@ -408,6 +408,23 @@ sub singleton_tag_matches
     return 1;
   }
   return 0;
+}
+
+
+sub make_record
+{
+  my ($chains, $record) = @_;
+
+  for my $chain (@$chains)
+  {
+    for my $i (0 .. $chain->last())
+    {
+      my $token = $chain->check_out($i);
+      my $field = $token->field();
+
+      push @{$record->{$field}}, $token->value();
+    }
+  }
 }
 
 1;
