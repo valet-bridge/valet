@@ -31,13 +31,13 @@ my @SINGLE_WORDS = qw(
   Rof Round
   Room Rof
   Section Segment Series Session Set Stage Stanza
-  Table Tempo Top
+  Table Tempo
   Week Weekend
 );
 
 my %SINGLE_TYPOS =
 (
-  Boards => ['board', 'bds', 'brds', 'donnes', 'spil'],
+  Boards => ['board', 'brds', 'donnes', 'spil'],
   Flight => ['flt'],
   Group => ['gruop', 'gr', 'grp', 'groups', 'groupe',
     'istis', 'pool', 'poule'],
@@ -47,16 +47,16 @@ my %SINGLE_TYPOS =
   Part => ['parte'],
   Phase => ['etap', 'fase'],
   Place => ['puesto', 'lugar'],
-  Quarter => ['qtr', 'quater', 'quaerter'],
+  Quarter => ['qtr', 'quaerter'],
   Room => ['rm'],
   Round => ['ronda', 'runde', 'runda', 'rundy', 'rnd', 'r', 'ound',
     'dg', 'devre', 'tour', 'rd', 'rounds', 'rouns', 'rueda', 'ruond',
     'rd', 'riund', 'rds', 'ound', 'ro', 'tound', 'tour', 'runder',
-    'rn',  'rond', 'ronud', 'roudn', 'turno', 'turul', 'sr', 'turno'],
+    'rn',  'rond', 'ronud', 'roudn', 'turno', 'turul', 'turno'],
   Section => ['seksjon', 'sektion'],
   Segment => ['seg', 'segm', 'segement', 'segemt', 'segmant',
     'segmen', 'segemnt', 'segmento', 'segments', 'segmetn', 'segmnet', 
-    'segnment', 'sgment', 'segt', 'sengemt', 'se', 'eg', 'seg#'],
+    'segnment', 'sgment', 'segt', 'sengemt', 'se', 'eg'],
   Series => ['seria'],
   Session => ['seesion', 'part', 'sesja', 'sess', 'serssion', 'sesion',
     'sesión', 'sesj', 'sesjon', 'sessió', 'sessión', 'ses', 'sesje',

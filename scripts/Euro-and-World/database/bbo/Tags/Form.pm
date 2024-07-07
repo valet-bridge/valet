@@ -32,11 +32,10 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  Individual => ['indyvidual', 'individuals', 'indivual',
-    'indiv', 'indi', 'ind'],
+  Individual => ['individuals', 'indivual', 'indiv', 'indi', 'ind'],
   Swiss => ['suisse', 'swis', 'monrad'],
   Teams => [qw(team teamów teamow teamc teamevent takim tim
-    teamy équipes equipas equipos equipo equips echipe ecgipe lag
+    teamy équipes equipas equipos equipo lag
     takimlar squadre kadra dörtlü tm teamd terms)],
   Pairs => [qw(pair par paires parejas paýrs psirs)]
 );

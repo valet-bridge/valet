@@ -402,7 +402,6 @@ my @MULTI_WORDS =
   'Powerpuff Pinglorna',
   'Plejans Plöjare',
   'Precision Marathon',
-  "Priya's Four",
   'Pur Pur',
 
   'Quatro Bruxas',

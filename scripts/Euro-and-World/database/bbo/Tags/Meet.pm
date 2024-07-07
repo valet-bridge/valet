@@ -13,7 +13,6 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
-  'All China Games',
   'Azores Festival',
   'Amman Bridge Festival',
   'Australian National Championships',
@@ -167,13 +166,10 @@ my %SINGLE_TYPOS =
   'Australian National Championships' => ['anc'],
   'Bangkok Bridge Festival' => ['bbf', 'bff'],
   Congress => ['kongres', 'kongresowy'],
-  Festival => ['fest', 'festiva', 'festivan', 'festval', 'festývalý',
-    'festivali', 'festivals', 'festivalul', 'bridgefestival',
-    'festiwal'],
+  Festival => ['fest', 'festivan', 'festývalý', 'festivalul', 'festiwal'],
   'Gold Coast Congress' => ['gc', 'gcc'],
   'Indonesian National Pre-Sports Week' => ['prapon'],
-  'Indonesian National Sports Week' => ['indonesia week', 'pon'],
-  'Israel Grand Prix' => ['isrgp']
+  'Indonesian National Sports Week' => ['indonesia week', 'pon']
 );
 
 
