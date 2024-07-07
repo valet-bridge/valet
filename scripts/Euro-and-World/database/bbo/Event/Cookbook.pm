@@ -41,6 +41,7 @@ my @SINGLETON_LIST = qw(
   ITERATOR
   MEET
   MONTH
+  MOVEMENT
   NATIONALITY
   ORGANIZATION
   ORIGIN
@@ -106,54 +107,5 @@ my @SINGLETON_LIST = qw(
 );
 
 our %SINGLETONS = map { $_ => 1 } @SINGLETON_LIST;
-
-# This spell checker is run on the tokens.
-
-our %FIX_ALIASES = 
-(
-  MOVEMENT =>
-  {
-    Barometer => [],
-    Danish => [],
-    Goulash => [],
-    Monrad => [],
-    Swiss => [qw(sw swis suisse)],
-    Triangle => []
-  },
-
-  ORIGIN =>
-  {
-    World => [qw(mondial)],
-    Province => [qw(interprovince)],
-    Region => [qw(interregion)],
-    City => [qw(intercity)],
-    Club => [qw(interclub)],
-    University => [qw(university univ)],
-    Transnational => [qw(transnation trans transnatio transnat tn)],
-    Invitational => [],
-    Proam => [],
-  },
-
-  FORM =>
-  {
-    Teams => [qw(team equipos team's lag teamd terms tm)],
-    Pairs => [qw(pair paýrs psirs parejas)],
-    Individual => [qw(ind indiv indivual)]
-  },
-
-  NUMERAL =>
-  {
-    '0' => [qw(zero)],
-    '1' => [qw(one !)],
-    '2' => [qw(two)],
-    '3' => [qw(three)],
-    '4' => [qw(four)],
-    '5' => [qw(five)],
-    '6' => [qw(six)],
-    '7' => [qw(seven)],
-    '8' => [qw(eight)]
-  },
-
-);
 
 1;

@@ -35,6 +35,7 @@ my @TAG_ORDER = qw(
   REGION
   CITY
   FORM
+  MOVEMENT
   GENDER
   AGE
   SCORING

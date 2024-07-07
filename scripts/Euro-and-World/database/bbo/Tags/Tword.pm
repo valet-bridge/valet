@@ -177,10 +177,9 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Barometer Bridge
+  Bridge
   Challenge Championship Charity Club Commercial Cup
   Friendship
-  Goulash
   International Interport
   Interstate Interuniversity 
   Memorial
@@ -193,7 +192,6 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  Barometer => ['barometr'],
   Bridge => ['brdige', 'briag', 'bric', 'bridg', 'brýç'],
   'Business League' => ['blb'],
   Challenge => ['desafio', 'challengue', 'challenger'],
@@ -212,7 +210,6 @@ my %SINGLE_TYPOS =
   'Division Nationale' => ['dn', 'pokal'],
   'Exhibition Match' => ['exhibition'],
   'Friendly match' => ['friendly'],
-  Goulash => ['goullash', 'goulyash'],
   'Grand Prix' => ['gp'],
   International => ['internacional', 'internationals',
     'internazionale', 'internationa', 'internat', 'int'],

@@ -28,6 +28,7 @@ use Tags::Gender;
 use Tags::Iterator;
 use Tags::Meet;
 use Tags::Month;
+use Tags::Movement;
 use Tags::Nationality;
 use Tags::Numeral;
 use Tags::Ordinal;
@@ -69,6 +70,7 @@ my %TAGS =
   ITERATOR => \&Tags::Iterator::set_hashes,
   MEET => \&Tags::Meet::set_hashes,
   MONTH => \&Tags::Month::set_hashes,
+  MOVEMENT => \&Tags::Movement::set_hashes,
   NATIONALITY => \&Tags::Nationality::set_hashes,
   NUMERAL => \&Tags::Numeral::set_hashes,
   ORDINAL => \&Tags::Ordinal::set_hashes,
