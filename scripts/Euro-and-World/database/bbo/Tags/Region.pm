@@ -135,7 +135,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Agder Akdeniz Akkad Anhui ASEAN Ayrshire
+  Aceh Agder Akdeniz Akkad Anhui ASEAN Ayrshire
   Bali Balkan Banten Belitung Bengkayang Bihar Bornholm Bungo Buskerud
   Cappadocia Catalonia Corsica
   Dersým Druts
@@ -143,7 +143,8 @@ my @SINGLE_WORDS = qw(
   Fjends Florida Fukien
   Ganges Gansu Gauteng Global Goa Gorontalo Guangdong Guangxi 
   Guizhou Gujarat
-  Hainan Haixing Hatay Haugaland Hebei Hedmark Hegyvidék Hubei Hunan
+  Hainan Haixing Hatay Haugaland Hebei Hedmark Hegyvidék Hordaland
+  Hubei Hunan
   Jalisco Jharkhand Jiangsu Jilin
   Kansai Kanto Karnataka Kawanua Kayong Kedungwaru Kepri Kerala 
   Kinali Krabi
@@ -159,7 +160,7 @@ my @SINGLE_WORDS = qw(
   Skåne Slask Southland Sydvest
   Tambun Taskopru Tasmania Telemark Tianya
   Tigris Tinglin Tuncelý
-  Uccle Unia Uttarakhand
+  Uttarakhand
   Victoria Vojvodina
   Wachau Waikato Wujin
   Yongjia Yunnan
@@ -168,8 +169,10 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  Aceh => ['di aceh'],
   'Aegean Sea' => ['aegean'],
   'Australian Central Territory' => ['act'],
+  'Bekasi Regency' => ['bekasi'],
   Cappadocia => ['kapadokya', 'kapodokya'],
   Catalonia => ['catalunya', 'cataluña'],
   'Central Sulawesi' => ['sulteng'],
@@ -178,12 +181,14 @@ my %SINGLE_TYPOS =
   'Gabungan Malaku' => ['gabmin', 'gabmo'],
   Ganges => ['genges'],
   Hegyvidék  => ['hegyvidek'],
+  Hordaland => ['hordland'],
   Hunan => ['hunnan'],
   'Java Bali' => ['jb'],
   Kansai => ['kinki'],
   'Kepulauan Riau' => ['riau', 'kepri'],
   Marmara => ['marmar'],
   'Midt Trøndelag' => ['midttrøndelag'],
+  Minahasa => ['mnhasa'],
   'Møre Romsdal' => ['moreromsdal'],
   'Nakhon Nayok' => ['nakhonnayok'],
   'New South Wales' => ['nsw'],

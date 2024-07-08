@@ -121,6 +121,7 @@ my @MULTI_WORDS =
   'Eskisehir Baðlar',
   'Eskisehir Sports',
   'Essen 86',
+  'Fakultas Teknik Bridge Club Universitas Tanjungpura',
   'Fatih Karagumruk',
   'Field Club Udaipur',
   'Fjends BK',
@@ -398,7 +399,7 @@ my @SINGLE_WORDS = qw(
   Sivasspor Solli Spezia Spojnia Sporting
   TGR Tofas Tonyaspor Trifolium
   Uppsalabridgen
-  Vestri
+  Västeråsbridgen Vestri
   Örebridgen
   Yildirimspor
   Zmrzlina

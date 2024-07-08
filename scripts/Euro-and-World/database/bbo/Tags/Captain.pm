@@ -357,6 +357,7 @@ my @MULTI_WORDS =
   'Xavier Michaud Larivière',
   'Yaacov (Jacob) Mintz',
   'Yao Ke',
+  'Ye Shi',
   'Yolluk Bostanci',
   'Yu Yi',
   'Yuval Lubinski',

@@ -48,7 +48,7 @@ my @SINGLE_WORDS = qw(
   Radkov Recoleta Ridabu
   Sabadel Sansar Sarniak Senayan Serdika Shihua Simal Sirinyer
   Slaska Sredec Sukomoro Suleymanpasa Suralaya
-  Taihu Taskopru Tengah
+  Taihu Taskopru Tengah Tianya
   Uccle Unaós
   Varbergshus Viþnelik
   Wadas Wratislavia Wroble

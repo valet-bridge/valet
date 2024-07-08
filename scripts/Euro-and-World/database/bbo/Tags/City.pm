@@ -77,14 +77,12 @@ my @MULTI_WORDS =
   'Villa Fabbriche',
   'Vrnjacka Banja',
   'Xin Zhu',
-  'Ye Shi',
   'Yedi Eylul',
   'Zhong Jian'
 );
 
 my %MULTI_TYPOS =
 (
-  Aceh => ['di aceh'],
   Akhisar => ['akhisar belediyesi'],
   'Al-Rabwa' => ['rl-rabwa'],
   Banjarmasin => ['ksa banjarmasin'],
@@ -125,8 +123,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Aabenraa Aachen Aalborg Adana Adapazan Adelaide Agresar Ahmedabad 
-  Airmadidi 
-  Akhisar Alexandria Allahabad Altrincham Alytus Amanora Ambon Amman
+  Airmadidi Akhisar Alexandria Allahabad Altrincham Alytus Ambon Amman
   Amsterdam Ankara Annecy Antalya Antony Antwerpen Aral Arendal 
   Asenovec Asenovgrad Assis Atakum Athens Atlanta Auckland Augsburg
   Ayacucho Aydin Ayvalik
@@ -162,7 +159,7 @@ my @SINGLE_WORDS = qw(
 
   Haderslev Hamar Hamburg Hammamet Hangzhou Hanko Hannover Harplinge 
   Harstad Hatay Havirov Heledia Helsinki Hendek Herning Hillerød 
-  Hordaland Hornbæk Hsinchu Huldretråkket Hyderabad
+  Hornbæk Hsinchu Huldretråkket Hyderabad
 
   Iasi Indore Iskenderun Isparta Istanbul Ithaca Izmir
 
@@ -218,7 +215,7 @@ my @SINGLE_WORDS = qw(
   Taicang Taichung Tainan Taizhou Takayama Tallinn Tambun Tarakan 
   Targoviste Tarnów Täby Täfteå Tekýrdag Temuco Thane Thanjavur 
   Thessaloniki Tianjin Timisoara Tire Tofta Tokyo Tomohon Tonya
-  Torino Toulouse Tours Trieste Trondheim Tromsø Tyoyuan
+  Torino Toulouse Tours Trieste Trondheim Tromsø Taoyuan
 
   Udaipur Uddevalla Umeå Uppsala Usak Utrecht
 
@@ -253,12 +250,12 @@ my %SINGLE_TYPOS =
   Auckland => ['akarana'],
   Ayvalik => ['aivali'],
   Balatonföldvár => ['balatonfoldvar'],
-  Balisekir => ['balikesýr', 'balýkesir',],
+  Balikesir => ['balikesýr', 'balýkesir'],
   Bangalore => ["b'lore", 'banglore', 'bengalore', 'bangaluru',
     'benglore', 'bengluru', 'bengalu', 'bengaluru'],
   Bansi => ["bansi's"],
   Beijing => ['peking', 'pekin', 'pékin', 'bijing'],
-  Buzius => ['bruzios'],
+  Buzios => ['bruzios'],
   Canakkale => ['çanakkale'],
   Canberra => ['canbera'],
   Cerkezkoy => ['çerkezköy', 'cerk'],
@@ -299,7 +296,6 @@ my %SINGLE_TYPOS =
   Makassar => ['makasar'],
   Malmö => ['malmo', 'malmoe'],
   Manado => ['menado'],
-  Manahasa => ['mnhasa'],
   Mersin => ['mersýn'],
   Milan => ['milano'],
   Milas => ['minas'],
@@ -351,7 +347,7 @@ my %SINGLE_TYPOS =
   Thessaloniki => ['salonica'],
   Tromsø => ['tromso', 'tromsoe'],
   Trondheim => ['trondhei'],
-  Udaipir => ['udaypur'],
+  Udaipur => ['udaypur'],
   'Udon Thani' => ['udonthani'],
   Varanasi => ['baranasi'],
   Verona => ['veron'],
