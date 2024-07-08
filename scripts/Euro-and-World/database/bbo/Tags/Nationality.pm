@@ -59,7 +59,7 @@ my %SINGLE_TYPOS =
   Israeli => ['israli'],
   Italian => ['italiano'],
   Japanese => ['jaqpanese', 'jaoanese'],
-  Lithuania => ['lithianin'],
+  Lithuanian => ['lithianin'],
   Norwegian => ['norvegian', 'norwegain', 'norwgian',
     'norwigian', 'norewegian'],
   Polish => ['poish', 'polski'],

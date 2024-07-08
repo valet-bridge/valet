@@ -345,6 +345,7 @@ my @MULTI_WORDS =
   'Mountain Sea',
   'Ms. Guggenheim',
   'Murphys lag',
+  'Musi 88',
   'My Friends',
   'My Way',
   'Mystery Foursome',
@@ -562,7 +563,7 @@ my @MULTI_WORDS =
   'VP (b)anker IMP',
 
   'Walking Dead',
-  'www guts com',
+  'Wambon Bodi',
   'War of Roses',
   'We Are Bye',
   'We Are 6',
@@ -575,6 +576,7 @@ my @MULTI_WORDS =
   'White Bears',
   'Wild Griffins',
   'Winter Is Coming',
+  'www guts com',
 
   'X-Men',
 

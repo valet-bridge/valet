@@ -23,10 +23,12 @@ my @MULTI_WORDS =
   'Boven Digoel',
   'Chapel Hill',
   'Courseulles-sur-Mer',
+  'Czech-Pan',
   'El-Maadi',
   'Gaziantep Zeugma',
   'Gjøvik og Vardal',
   'Greve Strand',
+  'Indonesia-Pan',
   'Kansas City',
   'Kota Bandung',
   'Kota Bekasi',
@@ -122,11 +124,11 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Aabenraa Aachen Aalborg Adana Adapazan Adelaide Agresar Ahmedabad 
-  Airmadidi Akhisar Alexandria Allahabad Altrincham Alytus Ambon Amman
-  Amsterdam Ankara Annecy Antalya Antony Antwerpen Aral Arendal 
-  Asenovec Asenovgrad Assis Atakum Athens Atlanta Auckland Augsburg
-  Ayacucho Aydin Ayvalik
+  Aabenraa Aachen Aalborg Adalar Adana Adapazan Adelaide Agresar 
+  Ahmedabad Airmadidi Akhisar Alexandria Allahabad Altrincham Alytus 
+  Ambon Amman Amsterdam Ankara Annecy Antalya Antony Antwerpen Aral 
+  Arendal Asenovec Asenovgrad Assis Atakum Athens Atlanta Auckland 
+  Augsburg Ayacucho Aydin Ayvalik
 
   Baghdad Balchik Balaton Balatonföldvár Balikesir Balikpapan Ballerup 
   Ballymena Bamberg Bandung Bangalore Bangkok Banjarmasin Bansi Barcelona 
@@ -167,35 +169,36 @@ my @SINGLE_WORDS = qw(
   Jiangyou Jianshe Jinchang Jincheng Jinjiang Jiujiang 
 
   Kadirli Kalisz Kalundborg Kalyani Kanpur Kaohsiung Karimun Karlovo 
-  Karlsruhe Kashi Kastamonu Katowice Kayseri Kediri Kedungwaru 
-  Keelung Kesten Ketsch Kiel Kielce Kiev Kirkeby Kirklarelý Kirsehir 
-  Klabat Kocaeli Kolbotn Kolkata Konya Kornik Kosice Kota Koycegiz 
-  Köln Krakow Kristiansand Kudus Kunshan Kuopio Kusadasi Kütahya 
-  Kverndalen Kyustendil Kølabånn
+  Karlsruhe Karsiyaka Kashi Kastamonu Katowice Kayseri Kediri 
+  Kedungwaru Keelung Kesten Ketsch Kiel Kielce Kiev Kirkeby 
+  Kirklarelý Kirsehir Klabat Kocaeli Kolbotn Kolkata Konya Kornik 
+  Kosice Kota Koycegiz Köln Krakow Kristiansand Kudus Kunshan 
+  Kuopio Kusadasi Kütahya Kverndalen Kyustendil Kølabånn
 
   Langkat Lanzhou Lappeenranta Lecco Leiden Leksand Lerum Leszno Leuven 
   Leverkusen Lhokseumawe Liepaja Lille Lima Lincoln Lindesberg
   Linköping Lisbon Liushu Ljubljana Lodi Lodz Lojdy Lokotok Lom
   London Lowicz Lublin Luleburgaz Lumajang Lyon
 
-  Maastricht Madrid Madras Magetan Makassar Malang Malatya Malmö Manado 
+  Maastricht Madrid Magetan Makassar Malang Malatya Malmö Manado 
   Manchester Manisa Manna Mannheim Marbella Mardin Marrakech Marseille 
   Martapura Massy Mautern Medan Medellin Melbourne Mersin Miaoli 
-  Michalovce Midyat Milan Milas Minsk Monticiano Montpellier 
+  Michalovce Midyat Milan Milas Minsk Miskolc Monticiano Montpellier 
   Moradabad Morud Moscow Moss Mragowo Muðla Mulund Mumbai Munich 
 
   Nagpur Nagykanizsa Namsos Nanchang Nanchong Nancy Nanning Napoli 
-  Narvik Nashik Nazilli Näsby Nice Nicosia Nijmegen Ningbo Niš Noida 
-  Norrbyskär Norrøna Nürnberg Nyon Nysa Nærbø Næstved Nøtterøy
+  Narvik Nashik Nazilli Näsby Nice Nicosia Nijmegen Nilüfer Ningbo 
+  Niš Noida Norrbyskär Norrøna Nürnberg Nyon Nysa Nærbø Næstved 
+  Nøtterøy
 
   Odense Ogndal Oldenburg Olrud Olsztyn Oltenita Opatija Orhangazi 
-  Oslo Ostend Ottadalen Otepää Oxford Örebro Överum
+  Oslo Ostend Ottadalen Otepää Oxford Ozarow Örebro Överum
 
-  Padang Padova Paimado Palembang Palermo Palma Palu Pancevo 
+  Padang Padova Paimado Palembang Palermo Palma Palu Pamukkale Pancevo 
   Panzhihua Pariaman Paris Pärnu Pattaya Pau Pecs Pekanbaru Pelotas 
   Penajam Pernik Perth Perula Pesaro Pescara Petersfield Philadelphia
   Pisa Pleven Plovdiv Pontianak Popovo Porto Potsdam Poznan Prague 
-  Pula Pulawy Pune Puri Pushkar
+  Preslav Pula Pulawy Pune Puri Pushkar
 
   Qingdao
 
@@ -259,6 +262,7 @@ my %SINGLE_TYPOS =
   Canakkale => ['çanakkale'],
   Canberra => ['canbera'],
   Cerkezkoy => ['çerkezköy', 'cerk'],
+  Chennai => ['madras'],
   Copenhagen => ['kopenhagen'],
   Deauville => ['deauille'],
   Diyarbakir => ['dýyarbakir', 'diyarbakýr'],
@@ -272,7 +276,6 @@ my %SINGLE_TYPOS =
   Göteborg => ['goteborg', 'gothenburg'],
   Guangzhou => ['gz', 'gaungzhou'],
   Harplinge => ['harpling'],
-  Hordaland => ['hordland'],
   Indore => ['indor'],
   Iskenderun => ['iskendurun'],
   Izmir => ['ýzmýr', 'izmýr', 'ýzmir'],
@@ -313,6 +316,7 @@ my %SINGLE_TYPOS =
   'Novi Sad' => ['nowewsady'],
   Olsztyn => ['olo'],
   Ostend => ['ostende'],
+  Ozarow => ['ożarów'],
   Palembang => ['plg'],
   Pamukkale => ['pamuk'],
   Panzhihua => ['panzhihuabc'],
@@ -354,7 +358,6 @@ my %SINGLE_TYPOS =
   Vienna => ['wien'],
   Warsaw => ['warsow', 'warszawa', 'warszawy'],
   Wroclaw => ['wr'],
-  Yildirim => ['yýldýrým'],
   Yogyakarta => ['diy'],
   Zagreb => ['zgb', 'zg'],
   Zürich => ['zurich'],

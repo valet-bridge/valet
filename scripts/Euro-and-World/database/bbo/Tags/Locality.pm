@@ -14,9 +14,7 @@ our @EXPORT = qw(set_hashes);
 my @MULTI_WORDS =
 (
   'Poiana Brasov',
-  'Saint Honoré',
-  'Shanghai Yangpu',
-  'Villa Fabbriche'
+  'Saint Honoré'
 );
 
 my %MULTI_TYPOS =
@@ -27,7 +25,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Adalar Agresar Akçeşme Albena Amanora Arjasa Atakoy Atakum Avren
+  Akçeşme Albena Amanora Arjasa Atakoy Avren
   Bahce Bahcesehir Balcova Baragnon Barrière Bayrampaþa Beroe Bieniewo 
   Bogazici Borivli Bormali Bornova Bozdogan Brotteaux Buca Buitenhof
   Çayyolu Cemara Chelsea Chislehurst Courseulles
@@ -52,7 +50,7 @@ my @SINGLE_WORDS = qw(
   Uccle Unaós
   Varbergshus Viþnelik
   Wadas Wratislavia Wroble
-  Yalikavak Yarimada Yarýmca Yenisehir Yizhuang Yildirim Yuquan
+  Yalikavak Yangpu Yarýmca Yenisehir Yizhuang Yildirim Yuquan
   Zhujiang
 );
 
@@ -70,7 +68,6 @@ my %SINGLE_TYPOS =
   Karsiyaka => ['Karþiyaka'],
   Küp => ['kup'],
   Manahasa => ['mnhasa'],
-  Moudania => ['moydania'],
   Narlidere => ['narlýdere'],
   Olgiata => ['ola'],
   Pamukkale => ['pamuk'],

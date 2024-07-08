@@ -642,7 +642,7 @@ my @SINGLE_WORDS = qw(
 
   Jetox Jiegao JHS Jinfan Junibacken
 
-  Kadimex Kancelaria Kayseria Kilogrupp Konstanta Kvika
+  Kadimex Kancelaria Kayseria Kideko Kilogrupp Konstanta Kvika
 
   Lacznosc Laima Lavazza LCG Lianbo Likom Longjiangfu Lukomorie 
   Lyfjaver

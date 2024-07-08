@@ -25,6 +25,7 @@ my @MULTI_WORDS =
   'Isle of Man',
   'Netherlands Antilles',
   'New Zealand',
+  'North America',
   'North Macedonia',
   'Northern Ireland',
   'Republic of Ireland',
@@ -71,6 +72,7 @@ my %MULTI_TYPOS =
     'r of ireland'],
   'San Marino' => ['san_marino', 'san  marino'],
   'Serbia and Montenegro' => ['serbia/mont', 'serbia&mon.', 's&mn'],
+  'South Africa' => ['south frica'],
   'Trinidad and Tobago' => ['trinidad & tobago', 'trinidad&tobago'],
   'United Arab Emirates' => ['u.a.e.'],
   USA => ['u.s.a.']
@@ -78,7 +80,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Albania Andorra Angora Argentina Australia Austria 
-  Bahrain Bangladesh Barbados Belarus Belgium Bermuda 
+  Bahrain Balkan Bangladesh Barbados Belarus Belgium Bermuda 
   Bolivia Bosnia Botswana Brazil Bulgaria
   Canada Chile Colombia Croatia Cyprus
   Denmark 
@@ -92,7 +94,7 @@ my @SINGLE_WORDS = qw(
   Latvia Lebanon Lichtenstein Lithuania Luxembourg 
   Macau Madagascar Malta Malaysia Mauritius Mexico 
   Monaco Mongolia Montenegro Morocco
-  Netherlands Norway 
+  Netherlands Norden Norway 
   Pakistan Palestine Peru Philippines Poland Portugal
   Qatar
   Reunion Romania Russia

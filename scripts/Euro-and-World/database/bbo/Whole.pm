@@ -254,7 +254,8 @@ sub tag_is_in_matrix
     my $cval = lc($self->{MWORDS}{$t_from}{lc($value)});
     if (! exists $self->{MATRIX}{$t_from}{$t_to}{$cval})
     {
-      print "($t_from, $t_to): Mwords $cval not in matrix.\n";
+      print "($t_from, $t_to): Mwords $cval not in matrix.\n"
+       unless $cval =~ /-pan$/;
     }
   }
 
@@ -263,7 +264,8 @@ sub tag_is_in_matrix
     my $cval = lc($self->{SWORDS}{$t_from}{lc($value)}{VALUE});
     if (! exists $self->{MATRIX}{$t_from}{$t_to}{$cval})
     {
-      print "($t_from, $t_to): Swords $cval not in matrix.\n";
+      print "($t_from, $t_to): Swords $cval not in matrix.\n"
+       unless $cval =~ /-pan$/;
     }
   }
 }

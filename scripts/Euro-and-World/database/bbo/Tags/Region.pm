@@ -50,7 +50,6 @@ my @MULTI_WORDS =
   'New South Wales',
   'Nord-Norge Omegn',
   'Norte Ilhas',
-  'North America',
   'North Minahasa',
   'North Celebes',
   'North Sulawesi',
@@ -62,7 +61,6 @@ my @MULTI_WORDS =
   'Rio de Janeiro State',
   'Samut Prakan',
   'Samut Sakhon',
-  'South America',
   'South Australia',
   'South Celebes',
   'South East Celebes',
@@ -92,6 +90,7 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  Aceh => ['di aceh'],
   'Bekasi Regency' => ['kab.bekasi', 'kab. bekasi'],
   'Central Java' => ['jawa tengah', 'jateng'],
   'Bogor Regency' => ['kab bogor', 'kab.bogor pa'],
@@ -117,7 +116,6 @@ my %MULTI_TYPOS =
   'North Sumatra' => ['sumatera utara'],
   'Pearl River' => ['pearl riv', 'pearl r'],
   Sichuan => ['si chuan'],
-  'South Africa' => ['south frica'],
   'South Jakarta' => ['jakarta selatan'],
   'South Kalimantan' => ['kalimantan selatan', 'kalsel'],
   'South Sulawesi' => ['sulawesi selatan', 'sulsel'],
@@ -135,13 +133,13 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Aceh Agder Akdeniz Akkad Anhui ASEAN Ayrshire
-  Bali Balkan Banten Belitung Bengkayang Bihar Bornholm Bungo Buskerud
+  Aceh Agder Akdeniz Akkad Anhui Ayrshire
+  Bali Banten Belitung Bengkayang Bihar Bornholm Bungo Buskerud
   Cappadocia Catalonia Corsica
   Dersým Druts
-  Eurasia Eyjafjallajokull
+  Eyjafjallajokull
   Fjends Florida Fukien
-  Ganges Gansu Gauteng Global Goa Gorontalo Guangdong Guangxi 
+  Ganges Gansu Gauteng Goa Gorontalo Guangdong Guangxi 
   Guizhou Gujarat
   Hainan Haixing Hatay Haugaland Hebei Hedmark Hegyvidék Hordaland
   Hubei Hunan
@@ -149,9 +147,9 @@ my @SINGLE_WORDS = qw(
   Kansai Kanto Karnataka Kawanua Kayong Kedungwaru Kepri Kerala 
   Kinali Krabi
   Lampung Lebak Liaoning Liguria Lombok 
-  Madeira Maharashtra Maluku Marmara Matopos Mercosur Midtsjælland 
+  Madeira Maharashtra Maluku Marmara Matopos Midtsjælland 
   Minahasa Missouri Mjøsa Muallim Munzur Mysia
-  Nordafjells Norden Norrland Norrorts Nusantara
+  Nordafjells Norrland Norrorts Nusantara
   Queensland
   Oberloiben Olona Orontes Otago
   Papua Pomerania Porong Punjab
@@ -169,7 +167,6 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  Aceh => ['di aceh'],
   'Aegean Sea' => ['aegean'],
   'Australian Central Territory' => ['act'],
   'Bekasi Regency' => ['bekasi'],
@@ -177,7 +174,6 @@ my %SINGLE_TYPOS =
   Catalonia => ['catalunya', 'cataluña'],
   'Central Sulawesi' => ['sulteng'],
   Corsica => ['korsikali'],
-  Eurasia => ['avrasya'],
   'Gabungan Malaku' => ['gabmin', 'gabmo'],
   Ganges => ['genges'],
   Hegyvidék  => ['hegyvidek'],
@@ -209,7 +205,6 @@ my %SINGLE_TYPOS =
   Uttarakhand => ['uttaranchal'],
   'Victoria' => ['vic', 'viic'],
   Vojvodina => ['voj'],
-  Wroble => ['wróble'],
   'Østfold Follo' => ['ostfoldfollo']
 );
 
