@@ -222,7 +222,7 @@ sub study
   my @tags = (0);
   my @values = ();
   my @texts = ();
-  split_on_dates($etext, \@tags, \@values, \@texts, 0);
+  split_on_dates($etext, \@tags, \@values, \@texts, 1);
   split_on_multi($whole, \@TAG_ORDER, 1, \@tags, \@values, \@texts);
 
   # Split on separators.

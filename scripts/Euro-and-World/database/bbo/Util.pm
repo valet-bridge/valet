@@ -114,7 +114,7 @@ sub fix_post_date
 
 sub split_on_dates
 {
-  my ($text, $tags, $values, $texts, $post_fix_flag) = @_;
+  my ($text, $tags, $values, $texts, $sep_flag) = @_;
 
   $text =~ s/(\d{4})(\d{2})(\d{2})0(\d)/$1-$2-$3 Round $4 /g;
 
@@ -147,13 +147,13 @@ sub split_on_dates
         else
         {
           $tags->[$i+$j] = 0;
-          if ($post_fix_flag)
+          if ($sep_flag)
           {
-            $values->[$i+$j] = fix_post_date($date_values[$j]);
+            $values->[$i+$j] = $date_values[$j];
           }
           else
           {
-            $values->[$i+$j] = $date_values[$j];
+            $values->[$i+$j] = fix_post_date($date_values[$j]);
           }
           $texts->[$i+$j] = $date_values[$j];
         }
@@ -170,7 +170,7 @@ sub split_on_dates
     else
     {
       $tags->[$i] = 0;
-      if ($post_fix_flag)
+      if (! $sep_flag)
       {
         $values->[$i] = fix_post_date($values->[$i]);
       }
@@ -182,19 +182,17 @@ sub split_on_dates
       # Make sure that elements on different sides of the ' - ' end up
       # in different chains.
 
-      # TODO post_fix_flag really indicates TITLE and not EVENT.
-     
-      if ($post_fix_flag)
-      {
-        splice(@$tags, $i, 0, 'DESTROY');
-        splice(@$values, $i, 0, '');
-        splice(@$texts, $i, 0, '');
-      }
-      else
+      if ($sep_flag)
       {
         splice(@$tags, $i, 0, ('SEPARATOR', 'DESTROY', 'SEPARATOR'));
         splice(@$values, $i, 0, ('|', '', '|'));
         splice(@$texts, $i, 0, ('', '', ''));
+      }
+      else
+      {
+        splice(@$tags, $i, 0, 'DESTROY');
+        splice(@$values, $i, 0, '');
+        splice(@$texts, $i, 0, '');
       }
     }
   }

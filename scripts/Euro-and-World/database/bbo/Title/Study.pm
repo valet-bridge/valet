@@ -159,7 +159,7 @@ sub study
   my @tags = (0);
   my @values = ();
   my @texts = ();
-  split_on_dates($ntext, \@tags, \@values, \@texts, 1);
+  split_on_dates($ntext, \@tags, \@values, \@texts, 0);
   split_on_multi($whole, \@TAG_ORDER, 0, \@tags, \@values, \@texts);
 
   # Split on separators.
