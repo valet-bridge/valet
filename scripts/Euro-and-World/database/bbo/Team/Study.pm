@@ -25,8 +25,6 @@ use Team::Repeats;
 
 use Connections::Matrix;
 
-# TODO More similar order to others?
-
 my @TAG_ORDER = qw(
   FUN 
   FIRST 
@@ -39,6 +37,7 @@ my @TAG_ORDER = qw(
   OTHER 
   LOCALITY 
   CITY 
+
   ABBR 
   CAPTAIN
   BOT
@@ -72,85 +71,6 @@ my %REPEATS;
 sub init_hashes
 {
   set_repeats(\%REPEATS);
-}
-
-
-sub make_field_record
-{
-  my ($text, $chain, $bbono, $record, $dupl_flag) = @_;
-
-  for my $i (0 .. $chain->last())
-  {
-    my $token = $chain->check_out($i);
-    my $field = $token->field();
-    my $val = $token->value();
-
-    if (! exists $record->{$field})
-    {
-      $record->{$field} = $val;
-    }
-    elsif ($dupl_flag && 
-        $field ne 'DESTROY' && 
-        $record->{$field} ne $val)
-    {
-      print "$bbono, $text, $field: $record->{$field} vs $val\n";
-    }
-  }
-}
-
-
-sub check_consistency_pair
-{
-  my ($text, $bbono, $record, $from, $to) = @_;
-
-  return unless exists $record->{$from};
-  return unless exists $record->{$to};
-
-my %MATRIX;
-  my $c = $MATRIX{$from}{$to}{lc($record->{$from})};
-  if (! defined $c)
-  {
-    print "$bbono, $text, $to: ",
-      "$record->{$from} not in matrix ($from, $to)\n";
-  }
-  elsif ($c eq $record->{$to})
-  {
-    return;
-  }
-  elsif ($from eq 'CLUB' && $to eq 'CITY' && $c =~ /-Pan$/)
-  {
-    # Special case.
-    return;
-  }
-  else
-  {
-    print "$bbono, $text, $to: ",
-      "$record->{$to} vs $c\n";
-  }
-}
-
-
-sub check_consistency
-{
-  my ($text, $chain, $bbono) = @_;
-
-  return if exists $REPEATS{$bbono};
-
-  my %record;
-  make_field_record($text, $chain, $bbono, \%record, 1);
-
-  check_consistency_pair($text, $bbono, \%record,
-    'REGION', 'COUNTRY');
-  check_consistency_pair($text, $bbono, \%record,
-    'CITY', 'COUNTRY');
-  check_consistency_pair($text, $bbono, \%record,
-    'LOCALITY', 'CITY');
-  check_consistency_pair($text, $bbono, \%record,
-    'UNIVERSITY', 'CITY');
-  check_consistency_pair($text, $bbono, \%record,
-    'CLUB', 'CITY');
-  check_consistency_pair($text, $bbono, \%record,
-    'SPONSOR', 'COUNTRY');
 }
 
 

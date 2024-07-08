@@ -11,8 +11,6 @@ package Tags::Destroy;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes);
 
-# TODO
-# Probably the uncategorized ones can be parsed as in Event
 
 my @MULTI_WORDS =
 (

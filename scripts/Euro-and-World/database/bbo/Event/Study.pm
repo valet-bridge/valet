@@ -131,7 +131,7 @@ sub event_specific_inline
   $text =~ s/(\d)\s+th/$1th /gi;
   $text =~ s/(\d)\s+rth/$1rth /gi;
   $text =~ s/(\d)\s+nd/$1nd /gi;
-  $text =~ s/(\d)\s+rd/$1rd /gi; # TODO One regex?
+  $text =~ s/(\d)\s+rd/$1rd /gi;
   $text =~ s/(\d)\s+st(?=\b|_)/$1st /gi; # Either \b or _
   $text =~ s/(\d)\s+er/$1th /gi;
   $text =~ s/(\d)\s+eme/$1th /gi;
