@@ -49,6 +49,7 @@ sub init_tourneys
   $ANCHORS{'22Madeira'}     = '22Madeira/microSite/Asp/';
   $ANCHORS{'23tignes'}      = '23tignes/microSite/Asp/';
   $ANCHORS{'marrakech.23'}  = 'marrakech.23/microSite/Asp/';
+  $ANCHORS{'24Herning'}     = '24Herning/microSite/Asp/';
 
 
   my $t = 'Estoril.05';
@@ -377,6 +378,12 @@ sub init_tourneys
   @{$MAP[2352]} = ( $WORLDCOMP, $t, $d, 'Seniors', 1, 23, 1 );
   @{$MAP[2353]} = ( $WORLDCOMP, $t, $d, 'Mixed'  , 1, 23, 1 );
 
+  $t = '24Herning';
+  $d = '2024-Euro';
+  @{$MAP[2410]} = ( $EUROCOMP, $t, $d, 'Open'   , 1, 29, 1 );
+  @{$MAP[2411]} = ( $EUROCOMP, $t, $d, 'Women'  , , 21, 1 );
+  @{$MAP[2412]} = ( $EUROCOMP, $t, $d, 'Seniors', 1, 19, 1 );
+  @{$MAP[2413]} = ( $EUROCOMP, $t, $d, 'Mixed'  , 1, 23, 1 );
 }
 
 

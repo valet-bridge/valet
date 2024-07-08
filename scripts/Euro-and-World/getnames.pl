@@ -93,6 +93,7 @@ sub read_special_names_from_file
     chomp $line;
 
     if ($line =~ /people.person.asp/ || $line =~ /personpopup/ ||
+        ($line =~ /qryid=/ && $line =~ /person/) ||
         $line =~ /href=11111/) # Kludge for artificially set players.
     {
       add_player($line);

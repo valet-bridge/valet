@@ -9,7 +9,7 @@ use File::Fetch;
 use lib '.';
 use Tourneys;
 
-# perl getfiles3.pl 592
+# perl getfiles.pl 592
 # where 592 is a tournament number that we know about,
 # on either Eurobridge or Worldbridge.
 #

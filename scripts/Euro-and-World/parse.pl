@@ -39,6 +39,7 @@ for my $fname (@ARGV)
     chomp $line;
 
     if ($line =~ /people.person.asp/ || $line =~ /personpopup/ ||
+        ($line =~ /qryid=/ && $line =~ /person/) ||
         $line =~ /href=11111/) # Kludge for artificially set players.
     {
       die "Too many players" if ($players_seen == 8);
