@@ -22,7 +22,7 @@ my @MULTI_WORDS =
 
   'bds 1 to 18', 'bds 19-46', 'bds 31-60', 'eve 17-32', 'rundy 14-16',
   's5r38t2', 's5r40t2', 's5r4t2', 's5r43_t2', 's5r42t2', 's5r45t2',
-  's5r2t2', 's1r7', 's2r1'
+  's1r7', 's2r1'
 );
 
 my %MULTI_TYPOS =

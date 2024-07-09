@@ -24,7 +24,7 @@ my @SINGLE_WORDS = qw(
    Amul Andrzejki Anna Anni Anol Anuj Apaçý Apek Arangan Arnab Arno 
    Arunas Auni Ayan
 
-   Baneet Bauhinia Ben Beniaminek Berik Bilal Breno
+   Bauhinia Ben Beniaminek Berik Bilal Breno
 
    Carlitos Cathy Cem Chiranjeev Claudili Conie
 

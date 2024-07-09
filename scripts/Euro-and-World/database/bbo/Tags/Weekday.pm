@@ -17,7 +17,6 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  Summer => ['summer time']
 );
 
 my @SINGLE_WORDS = qw(

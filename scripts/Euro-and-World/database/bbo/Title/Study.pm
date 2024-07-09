@@ -193,9 +193,6 @@ sub study
     print "SSS $bbono: $text\n" if $chain->last() > 0;
     print "\n";
   }
-
-  my $delta = $chain->last() - $token_no + 1;
-  print "DELTA TITLE $delta\n";
 }
 
 

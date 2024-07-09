@@ -633,7 +633,7 @@ our @EVENT_REDUCTIONS =
   {
     PATTERN =>
     [
-      { CATEGORY => ['SINGLETON'] },
+      { CATEGORY => ['SINGLETON', 'COUNTER'] },
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,

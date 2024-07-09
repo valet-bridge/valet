@@ -51,7 +51,7 @@ my %SINGLE_TYPOS =
     'invitasi', 'invitatioanal', 'invitation', 'invitional', 'invis',
     'ivitational', 'invitatational'],
   Transnational => ['transnation', 'trans', 'transnatio',
-    'transnat', 'tn'],
+    'transnat'],
   University => ['uni', 'univ', 'universities', 'univeristies'],
   World => ['mondial']
 );

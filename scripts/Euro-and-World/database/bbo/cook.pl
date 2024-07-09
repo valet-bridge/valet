@@ -29,6 +29,7 @@ use Scoring::Study;
 
 use Patterns::Chainify;
 
+use Reductions::Team;
 use Reductions::Event;
 use Reductions::Title;
 
@@ -73,7 +74,7 @@ my %chunk;
 my $line;
 
 my $lno = 0;
-my (@reduction_event_stats, @reduction_title_stats);
+my (@reduction_team_stats, @reduction_event_stats, @reduction_title_stats);
 my $unknown_teams = 0;
 my $unknown_events = 0;
 my $unknown_titles = 0;
@@ -123,6 +124,9 @@ while ($line = <$fh>)
         $chain_team, $chunk{BBONO}, \$unknown_teams);
 
       Team::Preprocess::pre_process(\@chains_team);
+
+      Patterns::Chainify::process(\@TEAM_REDUCTIONS, \@chains_team, 
+        0, \@reduction_team_stats);
 
       $stats_team->incr(\@chains_team);
 
@@ -206,7 +210,8 @@ if ($do_tournaments)
   print "\nTotal unknown titles $unknown_titles\n\n";
 }
 
-$whole->print_misses();
+# Don't need to eliminate all of these.
+# $whole->print_misses();
 
 
 exit;

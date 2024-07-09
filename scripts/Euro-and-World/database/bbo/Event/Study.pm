@@ -266,10 +266,6 @@ sub study
     print "EEE $chunk->{BBONO}: $chunk->{EVENT}\n" if $chain->last() > 0;
     print "\n";
   }
-
-  my $delta = $chain->last() - $token_no + 1;
-  print "DELTA EVENT $delta\n";
-
 }
 
 1;

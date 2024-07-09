@@ -451,6 +451,11 @@ sub print
   my $l = $self->last();
   return if $l == -1;
 
+  if ($self->{STATUS} eq 'OPEN')
+  {
+    print "OPENCHAIN $prefix\n";
+  }
+
   for my $i (0 .. $l)
   {
     my $token = $self->check_out($i);

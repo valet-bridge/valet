@@ -22,9 +22,8 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Christmas
-  Afternoon Day Evening Night
+  Afternoon Evening Night
   Spring Summer Fall
-  Week Weekend
 );
 
 my %SINGLE_TYPOS =

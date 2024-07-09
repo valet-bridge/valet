@@ -744,7 +744,7 @@ my @SINGLE_WORDS = qw(
   Mohtashami Molenaar Molenda Molina Molva Monachan Moni Monsegur 
   Montanari Mooney Moran Morath Morawski Moreira Morelli Morgan 
   Mori Moritsch Morrison Morse Mortensen 
-  Moses Moskovsky Moss Mossop Mott Mouiel Mpampou Mpanikas 
+  Moses Moskovsky Mossop Mott Mouiel Mpampou Mpanikas 
   Mpompolakis Mucha Mueller Mullamphy Muller Multon Mundell 
   Munksgaard Munson Munteanu Muntz Muriel Murray Mus Mutiara 
   Muzzio Mýzrak Mæsel Mønsted

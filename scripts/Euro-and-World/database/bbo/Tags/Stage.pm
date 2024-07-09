@@ -95,7 +95,6 @@ my %SINGLE_TYPOS =
   'Knock-out' => ['knockour', 'knockout', 'ko', 'kostage', 'knockouts',
     'knock'],
   Match => ['mac'],
-  Phase => ['etap', 'fase'],
   Playoff => ['playoffs', 'po'],
   Pool => ['poule'],
   Qualifying => ['qualification', 'qualifications', 'qualif',

@@ -20,7 +20,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  F G J K O P Q S U W Y
+  F G J K O P S U W Y
 );
 
 my %SINGLE_TYPOS =
