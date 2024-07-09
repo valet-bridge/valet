@@ -358,7 +358,17 @@ sub print_misses
     next if $tag eq 'ORGANIZATION'; # Unused on purpose
     for my $value ($self->sorted_mwords($tag))
     {
-      print "$tag: $value\n" unless exists $self->{HITS}{$tag}{lc($value)};
+      next if exists $self->{HITS}{$tag}{lc($value)};
+      my $found = 0;
+      for my $tag2 (sort keys %{$self->{MATRIX}{$tag}})
+      {
+        if (exists $self->{MATRIX}{$tag}{$tag2}{lc($value)})
+        {
+          $found = 1;
+          last;
+        }
+      }
+      print "$tag: $value\n" unless $found;
     }
   }
 
@@ -368,7 +378,17 @@ sub print_misses
     next if $tag eq 'ORGANIZATION'; # Unused on purpose
     for my $value ($self->sorted_swords($tag))
     {
-      print "$tag: $value\n" unless exists $self->{HITS}{$tag}{lc($value)};
+      next if exists $self->{HITS}{$tag}{lc($value)};
+      my $found = 0;
+      for my $tag2 (sort keys %{$self->{MATRIX}{$tag}})
+      {
+        if (exists $self->{MATRIX}{$tag}{$tag2}{lc($value)})
+        {
+          $found = 1;
+          last;
+        }
+      }
+      print "$tag: $value\n" unless $found;
     }
   }
   print "\n";

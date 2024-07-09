@@ -206,7 +206,7 @@ if ($do_tournaments)
   print "\nTotal unknown titles $unknown_titles\n\n";
 }
 
-# $whole->print_misses();
+$whole->print_misses();
 
 
 exit;
