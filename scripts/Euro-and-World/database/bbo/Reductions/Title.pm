@@ -256,6 +256,21 @@ our @TITLE_REDUCTIONS =
     COMPLETION => 1
   },
 
+  # An iterator followed by an ambiguous letter.
+  {
+    PATTERN =>
+    [
+      { CATEGORY => ['ITERATOR'] },
+      { CATEGORY => ['AMBIGUOUS'] },
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 0,
+    METHOD => \&Patterns::Chainify::process_general,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
+    COMPLETION => 1
+  },
+
   # A leading roman numeral, ordinal or letter.
   {
     PATTERN =>

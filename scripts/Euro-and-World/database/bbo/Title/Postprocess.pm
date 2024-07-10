@@ -56,6 +56,7 @@ my %LAST_NUM_DESTROY =
 
 sub post_process_last_numeral
 {
+  # Destroy certain 1-element last chains.
   my ($chains) = @_;
 
   return unless $#$chains >= 1;
@@ -138,7 +139,7 @@ sub post_process_stand_alone_singles
       $chain->complete_if_last_is(0, 'COMPLETE');
     }
     elsif ($cat eq 'SINGLETON' &&
-        ($field eq 'TIME'))
+        ($field eq 'TIME' || $field eq 'MONTH'))
     {
       $chain->complete_if_last_is(0, 'COMPLETE');
     }
@@ -264,7 +265,8 @@ sub post_process_markers
     my $token1 = $chain->check_out(1);
 
     if ($token0->category() eq 'ITERATOR' && 
-        $token1->category() eq 'COUNTER')
+        ($token1->category() eq 'COUNTER' || 
+         $token1->category() eq 'AMBIGUOUS'))
     {
       $token0->merge_origin($token1);
       $token0->set_general('MARKER', $token0->field(), $token1->value());

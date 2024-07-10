@@ -139,7 +139,7 @@ sub pre_process_vs
 
     get_vs_extent($chain, $i, \%VS_DESTROY, \$first, \$last);
 
-    if ($first == $i-1 && $last == $i+1)
+    if ($first < $i && $last > $i)
     {
       process_vs_extent($chains, $chain, $cno, $first, $last, 'KILLED');
       last;

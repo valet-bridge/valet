@@ -453,7 +453,7 @@ sub print
 
   if ($self->{STATUS} eq 'OPEN')
   {
-    print "OPENCHAIN $prefix\n";
+    print "OPENCHAIN ", $l+1, ": $prefix\n";
   }
 
   for my $i (0 .. $l)
