@@ -40,7 +40,8 @@ my %MULTI_TYPOS =
   Quarterfinal => ['quarter final', 'quarter finals', 
     'quarter-final', 'quarter-finals', 'qua fin', 'q-final', 'q_f',
     'quater final', 'quater finals', 'round of 8', 'rd of 8', 'r of 8',
-    'æwieræfina³y', 'qtr finals', 'phase à 8', 'quoter-finals',
+    'æwieræfina³y', 'qtr finals', 'phase à 8', 'quoter-finals', 
+    '1/4 f', '1_4 f',
     'quet final', 'quarti finale', '1_4 finale', 'quartal final'],
   Rof6 => ['round of 6'],
   Rof12 => ['round of 12', 'rnd of12', 'phase a 12'],
@@ -63,7 +64,8 @@ my %MULTI_TYPOS =
     'meia final', 'meias finais', 'yf', 'demi-nale', 'dsemi final',
     'yarý final', 'sem fin', 'semi <final', 'simi final',
     'pó³fina³y', 'semi and final', 'semis and finals', 'semi f',
-    'playoff semi-final', 'playoffs semi final', 'semi finale',
+    'playoff semi-final', 'playoffs semi final', 'semi finale', 
+    '1/2 f', '1_2 f',
     'play-off semi-final', 'semi- final', 'semi finall'],
   Tiebreak => ['tie break', 'tie reak', 'extra boards', 'extra stanza',
     'extra match', 'o_t', 'extra time']
@@ -74,7 +76,7 @@ my @SINGLE_WORDS = qw(
   Consolation
   Elimination
   Final
-  Playoff Pool
+  Playoff
   Rof6 Rof12 Rof16 Rof32 Rof64
   Qualifying Quarterfinal
   Repechage
@@ -96,7 +98,6 @@ my %SINGLE_TYPOS =
     'knock'],
   Match => ['mac'],
   Playoff => ['playoffs', 'po'],
-  Pool => ['poule'],
   Qualifying => ['qualification', 'qualifications', 'qualif',
     'qualifier', 'qalifyng', 'qualy', 'qualifikation', 'qual',
     'qualifyng', 'qualýfýcatýon', 'qualification', 'qualifications', 

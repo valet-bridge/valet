@@ -185,7 +185,6 @@ my @SINGLE_WORDS = qw(
   Memorial
   National
   Online
-  Pool
   Simultaneous
   Tournament Training Trial Trophy
 );

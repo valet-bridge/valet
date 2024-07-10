@@ -1,15 +1,10 @@
 Chains should be set to complete (Team chain length stats).
 Probably split them properly.
 
-TITLE
-- One 2-length chain: Group J
-- Two 1-length: vs Goulash, and May / Las Palmas.
-
 EVENT:
-- Length 5: Pick off QF COUNTER end (esp w numeral?), AGE/GENDER front
-- Length 3: Quarter F (with COUNTER? 2086), why F and not ambiguous?
-  Group J G K
-- Length 1: If just a letter, look at chains before and after
+Did many of them.
+Careful with Fr = France
+O FR can be Open Final Round (Event/Study.pm)
 
 Dynamic consistency of chains: What occurs in raw.txt
 

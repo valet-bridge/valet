@@ -504,6 +504,20 @@ our @EVENT_REDUCTIONS =
     COMPLETION => 1
   },
 
+  # As the previous one may make a AGE/GENDER, we fix this too.
+  {
+    PATTERN =>
+    [
+      { CATEGORY => ['SINGLETON'], FIELD => ['AGE', 'GENDER'] },
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&Patterns::Chainify::process_general,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
   # Day Month
   {
     PATTERN =>
