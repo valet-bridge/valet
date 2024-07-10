@@ -59,6 +59,7 @@ my @MULTI_WORDS =
   'Chalermpol Wongwaiwit',
   'Choo Wai Wong',
   'Christal Henner-Welland',
+  'Christophe Grosset',
   'Corte-Real',
   'C.V. Rao',
   'D Banerjee',
@@ -401,6 +402,7 @@ my %MULTI_TYPOS =
   'Choo Wai Wong' => ['int choowai'],
   'Christal Henner-Welland' => ['welland-h', 'henner-we',
     'henner-welland'],
+  'Christophe Grosset' => ['grosset c'],
   Cladius => ['dr. cladius'],
   'David Birman' => ['birman david', 'birman d'],
   'de Botton' => ['janet de botton', 'j de botton',
@@ -666,7 +668,7 @@ my @SINGLE_WORDS = qw(
   Grabel Grabowska Gradignan Gradovsky Grainger Gramberg Granda
   Green Greenberg Greenwood Grenside Grenthe Griffey Griffin Griffoni 
   Griffiths Grimeton Grigoriu Grimaldi Grisho Groenenboom Gromov Gromova 
-  Gross Grosset Gromöller Gronaldo Grue Gruia Grunt Gruschow 
+  Gross Gromöller Gronaldo Grue Gruia Grunt Gruschow 
   Gruszczynski Grzelak Gu Guariglia Gudkov Gue Gueglio Guermani 
   Guglietto Guillaumin Gula Guldberg Guler Gumby 
   Gupta Gurley Gursel Gustawsson Gutmark Guy Günther Gyimesi
@@ -887,6 +889,7 @@ my %SINGLE_TYPOS =
   'Carlos Ferreira' => ['ferreira'],
   'Chalermpol Wongwaiwit' => ['chalermpol'],
   'Christal Henner-Welland' => ['henner'],
+  'Christophe Grosset' => ['grosset'],
   Ciechomski => ['ciechomek'],
   Combescure => ['combescur'],
   Curo => ['curò'],

@@ -43,7 +43,13 @@ sub post_process_single_numeral
     {
       # Get rid of the stray numeral.
       $chain->complete_if_last_is(0, 'KILLED');
-      return;
+    }
+    elsif ($token0->category() eq 'COUNTER' &&
+        $field0 eq 'LETTER' &&
+        ($token0->value() ge 'A' && $token0->value() le 'C'))
+    {
+      # Get rid of the stray A-C.
+      $chain->complete_if_last_is(0, 'KILLED');
     }
   }
 }
