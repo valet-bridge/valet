@@ -78,6 +78,14 @@ sub post_process_stand_alone_doubles
       $chain->delete(1, 2);
       $chain->complete_if_last_is(0, 'COMPLETE');
     }
+    elsif ($token0->category() eq 'ITERATOR' &&
+           $token0->field() eq 'GROUP' &&
+        $token2->category() eq 'AMBIGUOUS')
+    {
+      $token0->set_general('MARKER', $token0->field(), $token2->value());
+      $chain->delete(1, 2);
+      $chain->complete_if_last_is(0, 'COMPLETE');
+    }
   }
 }
 

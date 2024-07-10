@@ -74,6 +74,7 @@ my %HARD_SUBS =
   'IX A' => ['ixa'],
   'IX B' => ['ixb'],
 
+  'Final Round' => ['fr'],
   'Final Segment' => ['fs'],
   'First Half' => ['1emt', '1mt', 'andata'],
   'Group A' => ['groupa'],

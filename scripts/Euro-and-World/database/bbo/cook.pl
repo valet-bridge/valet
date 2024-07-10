@@ -53,7 +53,7 @@ my $stats_title = Stats->new();
 # Parse the raw output of
 # ./reader -I ... -Q 9=4=0=0 -v 63
 
-die "perl cook.pl raw.txt" unless $#ARGV == 0;
+die "perl cook.pl raw.txt [bbono]" unless ($#ARGV == 0 || $#ARGV == 1);
 
 my $do_teams = 1; # 1 if we parse TEAMS
 my $do_events = 1; # 1 if we parse EVENT
@@ -66,6 +66,14 @@ my @RAW_FIELDS = qw(BBONO TITLE EVENT SCORING TEAMS);
 Team::Study::init_hashes();
 Connections::Matrix::set_matrix($whole);
 $whole->check_static_consistency();
+
+my $debug_flag = 0;
+my $debug_bbono;
+if ($#ARGV == 1)
+{
+  $debug_flag = 1;
+  $debug_bbono = $ARGV[1];
+}
 
 my $file = $ARGV[0];
 open my $fh, '<', $file or die "Cannot read tfile: $!";
@@ -102,8 +110,9 @@ while ($line = <$fh>)
     next;
   }
 
-  if ($chunk{BBONO} == 1931)
+  if ($debug_flag)
   {
+    next unless $chunk{BBONO} == $debug_bbono;
     print "HERE\n";
   }
 
