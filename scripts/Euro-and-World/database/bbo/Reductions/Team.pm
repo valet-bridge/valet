@@ -53,9 +53,11 @@ our @TEAM_REDUCTIONS =
     PATTERN =>
     [
       { CATEGORY => ['SINGLETON'], 
-        FIELD => ['CAPTAIN', 'CLUB', 'COUNTRY',
-          'REGION', 'CITY', 'SPONSOR', 'FUN', 'OTHER',
-          'UNIVERSITY', 'FORM', 'STAGE'] }
+        FIELD => ['CAPTAIN', 'CLUB', 'ZONE', 'COUNTRY', 'NATIONALITY',
+          'LOCALITY', 'REGION', 'CITY', 'SPONSOR', 
+          'FUN', 'FIRST', 'OTHER',
+          'UNIVERSITY', 'FORM', 'STAGE', 'ORGANIZATION', 'COLOR',
+          'GENDER', 'AGE', 'ABBR'] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,

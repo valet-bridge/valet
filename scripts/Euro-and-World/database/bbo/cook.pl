@@ -16,6 +16,7 @@ use lib './Patterns';
 use Team::Clean;
 use Team::Study;
 use Team::Preprocess;
+use Team::Postprocess;
 
 use Title::Study;
 use Title::Preprocess;
@@ -136,6 +137,8 @@ while ($line = <$fh>)
 
       Patterns::Chainify::process(\@TEAM_REDUCTIONS, \@chains_team, 
         0, \@reduction_team_stats);
+
+      Team::Postprocess::post_process(\@chains_team);
 
       $stats_team->incr(\@chains_team);
 

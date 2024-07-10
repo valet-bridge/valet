@@ -19,7 +19,7 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  Lozenets => ['vs lozenec', 'vv lozenets'],
+  Lozenets => ['vs lozenec', 'vv lozenets', 'v v lozenets'],
   Pudong => ['pu dong'],
   Taihu => ['tai hu']
 );
