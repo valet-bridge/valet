@@ -212,6 +212,7 @@ my @MULTI_WORDS =
   'Game Over',
   'Gan Bei',
   'Gang of Wyk',
+  'Garp44',
   "Gary's Boys",
   'Ghost of Red',
   'Girls and Boys',
@@ -759,8 +760,8 @@ my @SINGLE_WORDS = qw(
    Fantasia Fant4stic Farmen Farmers Filosofene Finest Fisk Forfot 
    Formidables Frenemies Friends Francophones Freak Frivolt 
 
-   Galaxy Gentle Geriatrix Geysir Giants GloryGlory Goldcat Gosho 
-   Grand Grads Gris Guests Gulebjorn Gunsmoke 
+   Galaxy Gentle Geriatrix Geysir Giants GloryGlory Goldcat 
+   Gosho Grand Grads Gris Guests Gulebjorn Gunsmoke 
 
    Hangarounds Harlequins Hawks Hästpojkarna HERZdame HeSa Hey 
    Hiiimmm Hjerterdamer Hobbits Hollywood Holmenkollen Honeymoon 

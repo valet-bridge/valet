@@ -122,9 +122,6 @@ my %MULTI_TYPOS =
   'International Grand Tournament' => ['intl_ grand tournament', 
     'intl grand tournament'],
   'International Seniors' => ['int_ seniors'],
-  Interport => ['inter-port'],
-  Interstate => ['inter-state', 'inter state', 'inter -state'],
-  Interuniversity => ['inter-universities'],
   'Junior/Pro' => ['jr/pro'],
   Memorial => ['pro memoriam', 'memorial of'],
   'Mike Lawrence Exhibition' => ['m lawrence exhibiton'],
@@ -180,10 +177,7 @@ my @SINGLE_WORDS = qw(
   Bridge
   Challenge Championship Charity Club Commercial Cup
   Friendship
-  International Interport
-  Interstate Interuniversity 
   Memorial
-  National
   Online
   Simultaneous
   Tournament Training Trial Trophy
@@ -210,13 +204,9 @@ my %SINGLE_TYPOS =
   'Exhibition Match' => ['exhibition'],
   'Friendly match' => ['friendly'],
   'Grand Prix' => ['gp'],
-  International => ['internacional', 'internationals',
-    'internazionale', 'internationa', 'internat', 'int'],
   'International Team Trials' => ['itt'],
   'Junior High School' => ['jhs'],
   Memorial => ['memorials', 'menorial', 'memoral', 'memrial'],
-  National => ['natioanl', 'nationale', 'nationals',
-    'natinal', 'naational', 'nacional', 'nasional', 'nat'],
   'National Masters' => ['nationalmasters'],
   'National Open Teams' => ['not'],
   'National Senior Teams' => ['nst'],

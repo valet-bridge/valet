@@ -267,6 +267,7 @@ my %MULTI_TYPOS =
   'BCN Almirall' => ['bcn-almirall', 'bcn - almirall'],
   'Bielski Klub Brydżowy GOK cards' => ['gok-cards bielsk',
     'gok-ard bielsk'],
+  'BK 83 Slagelse' => ['bridge 83'],
   'BK Fyris Skalman' => ['skalman bk fyris'],
   'BK Lavec Smile' => ['bk lavec - smile', 'lavec smile',
     'smile bk lavec', 'bk lavek smile', 'bk lavec', 'enjoy bk lavec'],

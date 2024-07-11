@@ -54,8 +54,8 @@ our @TEAM_REDUCTIONS =
     [
       { CATEGORY => ['SINGLETON'], 
         FIELD => ['CAPTAIN', 'CLUB', 'ZONE', 'COUNTRY', 'NATIONALITY',
-          'LOCALITY', 'REGION', 'CITY', 'SPONSOR', 
-          'FUN', 'FIRST', 'OTHER',
+          'LOCALITY', 'REGION', 'CITY', 'SPONSOR', 'ORIGIN',
+          'FUN', 'FIRST', 'OTHER', 'BOT', 'SCORING',
           'UNIVERSITY', 'FORM', 'STAGE', 'ORGANIZATION', 'COLOR',
           'GENDER', 'AGE', 'ABBR'] }
     ],
@@ -64,6 +64,21 @@ our @TEAM_REDUCTIONS =
     METHOD => \&Patterns::Chainify::process_general,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
+  # Kill the stand-alone word 'bridge'.
+  {
+    PATTERN =>
+    [
+      { CATEGORY => ['SINGLETON'], FIELD => ['TWORD'],
+        VALUE => ['Bridge'] }
+    ],
+    ANCHOR => 'EXACT',
+    KEEP_LAST => 0,
+    METHOD => \&Patterns::Chainify::process_kill,
+    SPLIT_FRONT => 0,
+    SPLIT_BACK => 0,
     COMPLETION => 1
   }
 
