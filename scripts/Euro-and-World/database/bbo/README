@@ -1,10 +1,14 @@
 Chains should be set to complete (Team chain length stats).
 Probably split them properly.
 
-EVENT:
-Did many of them.
-Careful with Fr = France
-O FR can be Open Final Round (Event/Study.pm)
+Numerals that can't go:
+13675, Sansar 1905
+14936, BK2000
+14940
+33677, 1932 prefix
+33696, 1966 prefix
+34732, Samsun 1919
+39034, Aydin 1923
 
 Dynamic consistency of chains: What occurs in raw.txt
 

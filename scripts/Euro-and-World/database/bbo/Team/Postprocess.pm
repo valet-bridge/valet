@@ -39,7 +39,7 @@ sub post_process_single_numeral
 
     if ($token0->category() eq 'COUNTER' &&
         ($field0 eq 'NUMERAL' || $field0 eq 'ROMAN') &&
-        $token0->value() < 10)
+        ($token0->value() < 1900 || $token0->value() > 2100))
     {
       # Get rid of the stray numeral.
       $chain->complete_if_last_is(0, 'KILLED');

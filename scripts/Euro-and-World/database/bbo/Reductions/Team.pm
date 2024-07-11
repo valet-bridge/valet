@@ -55,7 +55,7 @@ our @TEAM_REDUCTIONS =
       { CATEGORY => ['SINGLETON'], 
         FIELD => ['CAPTAIN', 'CLUB', 'ZONE', 'COUNTRY', 'NATIONALITY',
           'LOCALITY', 'REGION', 'CITY', 'SPONSOR', 'ORIGIN',
-          'FUN', 'FIRST', 'OTHER', 'BOT', 'SCORING',
+          'FUN', 'FIRST', 'OTHER', 'BOT', 'SCORING', 'MEET',
           'UNIVERSITY', 'FORM', 'STAGE', 'ORGANIZATION', 'COLOR',
           'GENDER', 'AGE', 'ABBR'] }
     ],
@@ -72,7 +72,8 @@ our @TEAM_REDUCTIONS =
     PATTERN =>
     [
       { CATEGORY => ['SINGLETON'], FIELD => ['TWORD'],
-        VALUE => ['Bridge'] }
+        VALUE => ['Bridge', 'Challenge', 'Championship',
+          'Commercial', 'Sunday', 'Trial'] }
     ],
     ANCHOR => 'EXACT',
     KEEP_LAST => 0,
