@@ -44,12 +44,26 @@ sub post_process_single_numeral
       # Get rid of the stray numeral.
       $chain->complete_if_last_is(0, 'KILLED');
     }
+    elsif ($token0->field() eq 'YEAR')
+    {
+      my $v = $token0->value();
+      if ($v == 1919 || $v == 1923 || $v == 1966 || 
+          $v == 1990 || $v == 2000)
+      {
+        $chain->complete_if_last_is(0, 'KILLED');
+      }
+    }
     elsif ($token0->category() eq 'COUNTER' &&
         $field0 eq 'LETTER' &&
-        ($token0->value() ge 'A' && $token0->value() le 'C'))
+        ($token0->value() ge 'A' && $token0->value() le 'D'))
     {
       # Get rid of the stray A-C.
       $chain->complete_if_last_is(0, 'KILLED');
+    }
+    elsif ($token0->field() eq 'TWORD' &&
+        $token0->value() eq 'Premier League')
+    {
+      $chain->complete_if_last_is(0, 'COMPLETED');
     }
   }
 }
