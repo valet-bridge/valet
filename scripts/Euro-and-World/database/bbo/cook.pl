@@ -13,14 +13,15 @@ use lib './Title';
 use lib './Event';
 use lib './Patterns';
 
+use Title::Study;
+use Title::Preprocess;
+use Title::Postprocess;
+
 use Team::Clean;
 use Team::Study;
 use Team::Preprocess;
 use Team::Postprocess;
-
-use Title::Study;
-use Title::Preprocess;
-use Title::Postprocess;
+use Team::Interpret;
 
 use Event::Preprocess;
 use Event::Study;
@@ -137,30 +138,43 @@ while ($line = <$fh>)
   print_chains_by_tag(\@chains_title, "TITLE") if $print_chains;
 
 
-  # TEAMS
+  # SCORING
 
   my %teams;
+  my $scoring;
+  Scoring::Study::study($chunk{SCORING}, \%teams, $chunk{BBONO});
+
+  if ($print_chains)
+  {
+    print "SCORING ", $chunk{SCORING}, "\n";
+  }
+
+
+  # TEAMS
+
   Team::Clean::clean_teams($whole, $chunk{TEAMS}, \%teams);
 
+  my %chains_team;
   for my $team (qw(TEAM1 TEAM2))
   {
     my $chain_team = Chain->new();
-    my @chains_team;
-    push @chains_team, $chain_team;
+    push @{$chains_team{$team}}, $chain_team;
 
     Team::Study::study($whole, $teams{$team}, 
       $chain_team, $chunk{BBONO}, \$unknown_teams);
 
-    Team::Preprocess::pre_process(\@chains_team);
+    Team::Preprocess::pre_process(\@{$chains_team{$team}});
 
-    Patterns::Chainify::process(\@TEAM_REDUCTIONS, \@chains_team, 
+    Patterns::Chainify::process(\@TEAM_REDUCTIONS, \@{$chains_team{$team}}, 
       0, \@reduction_team_stats);
 
-    Team::Postprocess::post_process(\@chains_team);
+    Team::Postprocess::post_process(\@{$chains_team{$team}});
 
-    $stats_team->incr(\@chains_team);
+    Team::Interpret::interpret(\@{$chains_team{$team}}, $chunk{SCORING});
 
-    print_chains_by_tag(\@chains_team, $team) if $print_chains;
+    $stats_team->incr(\@{$chains_team{$team}});
+
+    print_chains_by_tag(\@{$chains_team{$team}}, $team) if $print_chains;
   }
 
 
@@ -183,17 +197,6 @@ while ($line = <$fh>)
   $stats_event->incr(\@chains_event);
 
   print_chains_by_tag(\@chains_event, "EVENT") if $print_chains;
-
-
-  # SCORING
-
-  my $scoring;
-  Scoring::Study::study($chunk{SCORING}, \%teams, $chunk{BBONO});
-
-  if ($print_chains)
-  {
-    print "SCORING ", $chunk{SCORING}, "\n";
-  }
 
 
   print "\n" if ($print_chains);

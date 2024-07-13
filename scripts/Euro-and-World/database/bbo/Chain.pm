@@ -446,14 +446,20 @@ sub print
 {
   my ($self, $prefix) = @_;
 
-  return if $self->status() eq 'KILLED';
+  my $status = $self->status();
+  return if $status eq 'KILLED';
 
   my $l = $self->last();
   return if $l == -1;
 
-  if ($self->{STATUS} eq 'OPEN')
+  if ($status eq 'OPEN')
   {
     print "OPENCHAIN ", $l+1, ": $prefix\n";
+  }
+  elsif ($status eq 'COMPLETE' && $prefix =~ /^TEAM/)
+  {
+    print "COMPLETE_CHAIN ", $l+1, ": $prefix, ",
+      $self->check_out(0)-> str(0, $prefix), "\n";
   }
 
   for my $i (0 .. $l)

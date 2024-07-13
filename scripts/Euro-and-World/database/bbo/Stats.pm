@@ -63,12 +63,13 @@ sub print_length
 
   my %csum;
   print "\n$header chain length stats\n\n";
-  printf("%6s%10s%10s%10s\n", "", "OPEN", "COMPLETE", "KILLED");
+  printf("%6s%10s%10s%10s%10s\n", "", 
+    "OPEN", "COMPLETE", "KILLED", "EXPLAINED");
 
   for my $i (0 .. $#{$self->{LENGTH}})
   {
     my %h;
-    for my $key (qw(OPEN COMPLETE KILLED))
+    for my $key (qw(OPEN COMPLETE KILLED EXPLAINED))
     {
       if (exists $self->{LENGTH}[$i]{$key})
       {
@@ -80,12 +81,13 @@ sub print_length
       }
       $csum{$key} += $h{$key};
     }
-    printf("%6d%10d%10d%10d\n", $i, $h{OPEN}, $h{COMPLETE}, $h{KILLED});
+    printf("%6d%10d%10d%10d%10d\n", $i, 
+      $h{OPEN}, $h{COMPLETE}, $h{KILLED}, $h{EXPLAINED});
   }
 
-  print '-' x 36, "\n";
-  printf("%6s%10d%10d%10d\n\n", "Sum",
-    $csum{OPEN}, $csum{COMPLETE}, $csum{KILLED});
+  print '-' x 46, "\n";
+  printf("%6s%10d%10d%10d%10d\n\n", "Sum",
+    $csum{OPEN}, $csum{COMPLETE}, $csum{KILLED}, $csum{EXPLAINED});
 }
 
 
