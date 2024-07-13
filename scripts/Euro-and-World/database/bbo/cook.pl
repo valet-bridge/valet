@@ -114,8 +114,6 @@ while ($line = <$fh>)
     print "HERE\n";
   }
 
-  print_chunk(\%chunk) if $print_chains;
-
 
   # TITLE
 
@@ -135,25 +133,17 @@ while ($line = <$fh>)
 
   $stats_title->incr(\@chains_title);
 
-  print_chains_by_tag(\@chains_title, "TITLE") if $print_chains;
-
 
   # SCORING
 
   my %teams;
-  my $scoring;
   Scoring::Study::study($chunk{SCORING}, \%teams, $chunk{BBONO});
 
-  if ($print_chains)
-  {
-    print "SCORING ", $chunk{SCORING}, "\n";
-  }
 
 
   # TEAMS
 
   Team::Clean::clean_teams($whole, $chunk{TEAMS}, \%teams);
-
   my %chains_team;
   for my $team (qw(TEAM1 TEAM2))
   {
@@ -170,11 +160,10 @@ while ($line = <$fh>)
 
     Team::Postprocess::post_process(\@{$chains_team{$team}});
 
-    Team::Interpret::interpret(\@{$chains_team{$team}}, $chunk{SCORING});
+    Team::Interpret::interpret($whole, \@{$chains_team{$team}}, 
+     \$chunk{SCORING});
 
     $stats_team->incr(\@{$chains_team{$team}});
-
-    print_chains_by_tag(\@{$chains_team{$team}}, $team) if $print_chains;
   }
 
 
@@ -196,10 +185,19 @@ while ($line = <$fh>)
 
   $stats_event->incr(\@chains_event);
 
-  print_chains_by_tag(\@chains_event, "EVENT") if $print_chains;
 
-
-  print "\n" if ($print_chains);
+  if ($print_chains)
+  {
+    print_chunk(\%chunk);
+    print_chains_by_tag(\@chains_title, "TITLE");
+    print "SCORING ", $chunk{SCORING}, "\n";
+    for my $team (qw(TEAM1 TEAM2))
+    {
+      print_chains_by_tag(\@{$chains_team{$team}}, $team);
+    }
+    print_chains_by_tag(\@chains_event, "EVENT");
+  }
+  print "\n";
 }
 
 close $fh;

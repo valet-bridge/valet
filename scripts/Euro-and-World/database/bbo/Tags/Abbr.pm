@@ -14,7 +14,6 @@ our @EXPORT = qw(set_hashes);
 my @MULTI_WORDS =
 (
   'Bridge Club',
-  'Polo Club',
   'Sporting Club'
 );
 
@@ -54,7 +53,6 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Vakfi
 );
 
 my %SINGLE_TYPOS =

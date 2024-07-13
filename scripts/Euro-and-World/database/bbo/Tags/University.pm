@@ -129,7 +129,7 @@ my %MULTI_TYPOS =
   'Ege University' => ['ege uni'],
   'Gunadurma' => ['guna darma'],
   'Institut Teknologi Bandung' => ['uab itb'],
-  'ITÜ Vakfi' => ['itu vakfi'],
+  'ITÜ Vakfi' => ['itu vakfi', 'ýtü vakfi'],
   'Jember Senior High School' => ['sman 1 jember', 'sman i jember',
     'sman arjasa', 'sma nbc jember'],
   'Kediri Senior High School' => ['sman 1 kediri', 'sma kediri',

@@ -11,6 +11,9 @@ use open ':std', ':encoding(UTF-8)';
 our @ISA = qw(Exporter);
 our @EXPORT = qw(interpret);
 
+use lib './Connections';
+use Connections::Matrix;
+
 my @ACCEPT_FIELDS = qw(AGE BOT CAPTAIN CITY CLUB COUNTRY FIRST
   FORM FUN GENDER LOCALITY NATIONALITY ORGANIZATION OTHER
   REGION SPONSOR UNIVERSITY ZONE);
@@ -39,6 +42,65 @@ sub post_process_single
     {
       $chain->complete_if_last_is(0, 'KILLED');
     }
+    elsif ($field0 eq 'MEET' && $token0->value() eq 'Festival')
+    {
+      $chain->complete_if_last_is(0, 'KILLED');
+    }
+  }
+}
+
+
+sub post_process_abbr
+{
+  my ($whole, $chains) = @_;
+
+  # One chain with a city, one with a club indicator.
+  my $found_city = 0;
+  my $city_cno;
+  my $city;
+
+  for my $cno (0 .. $#$chains)
+  {
+    my $chain = $chains->[$cno];
+    next if $chain->status() eq 'KILLED';
+    next unless $chain->last() == 0;
+
+    my $token = $chain->check_out(0);
+    my $field = $token->field();
+    next unless $field eq 'CITY';
+
+    $found_city = 1;
+    $city_cno = $cno;
+    $city = $token->value();
+    last;
+  }
+
+  return unless $found_city;
+
+  for my $cno (0 .. $#$chains)
+  {
+    my $chain = $chains->[$cno];
+    next if $chain->status() eq 'KILLED';
+    next unless $chain->last() == 0;
+
+    my $token = $chain->check_out(0);
+    my $field = $token->field();
+    next unless $field eq 'ABBR';
+
+    my $club_list = Connections::Matrix::get_city_club_list($city);
+    if (! defined $club_list)
+    {
+      print "MATRIX No club list for $city\n";
+    }
+    elsif ($#$club_list > 0)
+    {
+      print "MATRIX Multiple clubs in $city: ",
+        join ', ', @$club_list, "\n";
+    }
+    else
+    {
+      print "MATRIX Matching $city to ", $club_list->[0], "\n";
+    }
   }
 }
 
@@ -59,10 +121,16 @@ sub eliminate_scoring
 
     my $value0 = $token0->value();
 
-    if (($scoring eq 'I' && $value0 eq 'IMP') ||
-        ($scoring eq 'P' && $value0 eq 'MP') ||
-        ($scoring eq 'B' && $value0 eq 'BAM'))
+    if (($$scoring eq 'I' && $value0 eq 'IMP') ||
+        ($$scoring eq 'P' && $value0 eq 'MP') ||
+        ($$scoring eq 'B' && $value0 eq 'BAM'))
     {
+      $chain->complete_if_last_is(0, 'KILLED');
+    }
+    elsif ($$scoring ne 'P' && $value0 eq 'MP')
+    {
+      # Probably a few errors in data entry.
+      $$scoring = 'P';
       $chain->complete_if_last_is(0, 'KILLED');
     }
   }
@@ -71,9 +139,10 @@ sub eliminate_scoring
 
 sub interpret
 {
-  my ($chains, $scoring) = @_;
+  my ($whole, $chains, $scoring) = @_;
 
   post_process_single($chains);
+  post_process_abbr($whole, $chains);
   eliminate_scoring($chains, $scoring);
 }
 
