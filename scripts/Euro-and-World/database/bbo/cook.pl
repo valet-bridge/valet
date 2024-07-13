@@ -56,10 +56,6 @@ my $stats_title = Stats->new();
 
 die "perl cook.pl raw.txt [bbono]" unless ($#ARGV == 0 || $#ARGV == 1);
 
-my $do_teams = 1; # 1 if we parse TEAMS
-my $do_events = 1; # 1 if we parse EVENT
-my $do_tournaments = 1; # 1 if we parse TITLE
-
 my $print_chains = 1; # 1 if we dump results for further analysis
 
 my @RAW_FIELDS = qw(BBONO TITLE EVENT SCORING TEAMS);
@@ -119,53 +115,77 @@ while ($line = <$fh>)
 
   print_chunk(\%chunk) if $print_chains;
 
+
+  # TITLE
+
+  my $chain_title = Chain->new();
+  my @chains_title;
+  push @chains_title, $chain_title;
+
+  Title::Study::study($whole, $chunk{BBONO}, $chunk{TITLE}, 
+    $chain_title, \$unknown_titles);
+
+  Title::Preprocess::pre_process(\@chains_title);
+
+  Patterns::Chainify::process(\@TITLE_REDUCTIONS, \@chains_title, 
+    0, \@reduction_title_stats);
+
+  Title::Postprocess::post_process(\@chains_title);
+
+  $stats_title->incr(\@chains_title);
+
+  print_chains_by_tag(\@chains_title, "TITLE") if $print_chains;
+
+
+  # TEAMS
+
   my %teams;
   Team::Clean::clean_teams($whole, $chunk{TEAMS}, \%teams);
 
-  if ($do_teams)
+  for my $team (qw(TEAM1 TEAM2))
   {
-    for my $team (qw(TEAM1 TEAM2))
-    {
-      my $chain_team = Chain->new();
-      my @chains_team;
-      push @chains_team, $chain_team;
+    my $chain_team = Chain->new();
+    my @chains_team;
+    push @chains_team, $chain_team;
 
-      Team::Study::study($whole, $teams{$team}, 
-        $chain_team, $chunk{BBONO}, \$unknown_teams);
+    Team::Study::study($whole, $teams{$team}, 
+      $chain_team, $chunk{BBONO}, \$unknown_teams);
 
-      Team::Preprocess::pre_process(\@chains_team);
+    Team::Preprocess::pre_process(\@chains_team);
 
-      Patterns::Chainify::process(\@TEAM_REDUCTIONS, \@chains_team, 
-        0, \@reduction_team_stats);
+    Patterns::Chainify::process(\@TEAM_REDUCTIONS, \@chains_team, 
+      0, \@reduction_team_stats);
 
-      Team::Postprocess::post_process(\@chains_team);
+    Team::Postprocess::post_process(\@chains_team);
 
-      $stats_team->incr(\@chains_team);
+    $stats_team->incr(\@chains_team);
 
-      print_chains_by_tag(\@chains_team, $team) if $print_chains;
-    }
+    print_chains_by_tag(\@chains_team, $team) if $print_chains;
   }
 
-  if ($do_events)
-  {
-    my $chain_event = Chain->new();
-    my @chains_event;
-    push @chains_event, $chain_event;
 
-    Event::Study::study($whole, \%chunk, \%teams, 
-      $chain_event, \$unknown_events);
+  # EVENTS
 
-    Event::Preprocess::pre_process(\@chains_event);
+  my $chain_event = Chain->new();
+  my @chains_event;
+  push @chains_event, $chain_event;
 
-    Patterns::Chainify::process(\@EVENT_REDUCTIONS, \@chains_event, 
-      1, \@reduction_event_stats);
+  Event::Study::study($whole, \%chunk, \%teams, 
+    $chain_event, \$unknown_events);
 
-    Event::Postprocess::post_process(\@chains_event);
+  Event::Preprocess::pre_process(\@chains_event);
 
-    $stats_event->incr(\@chains_event);
+  Patterns::Chainify::process(\@EVENT_REDUCTIONS, \@chains_event, 
+    1, \@reduction_event_stats);
 
-    print_chains_by_tag(\@chains_event, "EVENT") if $print_chains;
-  }
+  Event::Postprocess::post_process(\@chains_event);
+
+  $stats_event->incr(\@chains_event);
+
+  print_chains_by_tag(\@chains_event, "EVENT") if $print_chains;
+
+
+  # SCORING
 
   my $scoring;
   Scoring::Study::study($chunk{SCORING}, \%teams, $chunk{BBONO});
@@ -175,26 +195,6 @@ while ($line = <$fh>)
     print "SCORING ", $chunk{SCORING}, "\n";
   }
 
-  if ($do_tournaments)
-  {
-    my $chain_title = Chain->new();
-    my @chains_title;
-    push @chains_title, $chain_title;
-
-    Title::Study::study($whole, $chunk{BBONO}, $chunk{TITLE}, 
-      $chain_title, \$unknown_titles);
-
-    Title::Preprocess::pre_process(\@chains_title);
-
-    Patterns::Chainify::process(\@TITLE_REDUCTIONS, \@chains_title, 
-      0, \@reduction_title_stats);
-
-    Title::Postprocess::post_process(\@chains_title);
-
-    $stats_title->incr(\@chains_title);
-
-    print_chains_by_tag(\@chains_title, "TITLE") if $print_chains;
-  }
 
   print "\n" if ($print_chains);
 }
@@ -205,22 +205,15 @@ $histo_team->print();
 $stats_team->print("Team");
 print "\nTotal unknown teams: $unknown_events\n\n";
 
+$histo_event->print();
+$stats_event->print("Event");
+print_reduction_stats("Event", \@reduction_event_stats);
+print "\nTotal unknown events: $unknown_events\n\n";
 
-if ($do_events)
-{
-  $histo_event->print();
-  $stats_event->print("Event");
-  print_reduction_stats("Event", \@reduction_event_stats);
-  print "\nTotal unknown events: $unknown_events\n\n";
-}
-
-if ($do_tournaments)
-{
-  $histo_title->print();
-  $stats_title->print("Title");
-  print_reduction_stats("Title", \@reduction_title_stats);
-  print "\nTotal unknown titles $unknown_titles\n\n";
-}
+$histo_title->print();
+$stats_title->print("Title");
+print_reduction_stats("Title", \@reduction_title_stats);
+print "\nTotal unknown titles $unknown_titles\n\n";
 
 # Don't need to eliminate all of these.
 # $whole->print_misses();

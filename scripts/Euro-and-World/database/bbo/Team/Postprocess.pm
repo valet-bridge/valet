@@ -47,8 +47,8 @@ sub post_process_single_numeral
     elsif ($token0->field() eq 'YEAR')
     {
       my $v = $token0->value();
-      if ($v == 1919 || $v == 1923 || $v == 1966 || 
-          $v == 1990 || $v == 2000)
+      if ($v == 1905 || 1919 || $v == 1923 || 
+          $v == 1966 || $v == 1990 || $v == 2000)
       {
         $chain->complete_if_last_is(0, 'KILLED');
       }

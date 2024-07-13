@@ -201,7 +201,6 @@ my @MULTI_WORDS =
   'Ruch SA',
   'Rumah Sakit Umum Daerah Pekanbaru',
   'Salmun BC',
-  'Sansar 1905',
   'Seferihisar Municipality',
   'Sekolah Bridge Tonaas Wangko',
   'Semen Padang',

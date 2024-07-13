@@ -1,14 +1,20 @@
-Chains should be set to complete (Team chain length stats).
-Probably split them properly.
+Global
+- Are the TEAM1, TEAM2 chains set up right in TITLE?
+- Can we get rid of TITLE_F, G, J (ambiguous)?
+- A global counter of what needs to be explained, what has been,
+  what is open
 
-Numerals that can't go:
-13675, Sansar 1905
-14936, BK2000
-14940
-33677, 1932 prefix
-33696, 1966 prefix
-34732, Samsun 1919
-39034, Aydin 1923
+In team chains
+- Accept BOT, CAPTAIN, CITY, CLUB, COUNTRY, FIRST, FUN, LOCALITY,
+  NATIONALITY, ORGANIZATION, OTHER, REGION, SPONSOR, UNIVERSITY
+- Check CITY/CLUB/COUNTRY/LOCALITY/NATIONALITY/REGION/SPONSOR/UNI
+  against Matrix
+- See if we can eliminate same from TITLE
+- Mark off chains that have been abstracted, maybe in the stats
+  class itself (matched, unmatched)
+
+
+
 
 Dynamic consistency of chains: What occurs in raw.txt
 

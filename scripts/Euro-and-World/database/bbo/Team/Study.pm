@@ -164,7 +164,7 @@ sub study
     {
       # We had a multi-word hit.
       append_token($chain, 'SINGLETON', $tags[$i], $values[$i],
-        $texts[$i], \$token_no, $main::histo_title, $PREFIX);
+        $texts[$i], \$token_no, $main::histo_team, $PREFIX);
     }
     else
     {
