@@ -180,6 +180,7 @@ my @MULTI_WORDS =
   'Kalpana Misra',
   'Kamal Kumar Nagori',
   'Kamlesh Gupta',
+  'Karl Christian Baumann',
   'Karl Sigurhjartarson',
   'Kasper Konow',
   'Ken Ford',
@@ -632,7 +633,7 @@ my @SINGLE_WORDS = qw(
   Dawson Debolina Debonnaire Debus Dechelette Dehaye Deik 
   Deleeuw Delfino Delfour Delibaltadakis Dellecavakis 
   Delimpaltadakis Delpiano DeMartino Demir Demirbas Demme Denning 
-  Deniz Desai Deutsch Deva Dexterzy Dialinas Dionysopoulos 
+  Deniz Desai Deutsch Dexterzy Dialinas Dionysopoulos 
   Dhir Dhondy Dialynas Diamond Dilks Dinkin Dixon 
   Djurovic Dobbels Dobes Dobroiu Doecke Doksiadis Dolla Donatella 
   Donciu Donn Donzi Dossena Dovell Doub Doussot Doxiadis Drijver 

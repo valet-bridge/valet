@@ -13,12 +13,14 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  'Fatih Karagümrük',
   'Poiana Brasov',
   'Saint Honoré'
 );
 
 my %MULTI_TYPOS =
 (
+  'Fatih Karagümrük' => ['fatih karagumruk', 'f karagumruk'],
   Lozenets => ['vs lozenec', 'vv lozenets', 'v v lozenets'],
   Pudong => ['pu dong'],
   Taihu => ['tai hu']
@@ -31,7 +33,7 @@ my @SINGLE_WORDS = qw(
   Çayyolu Cemara Chelsea Chislehurst Courseulles
   Ege Esenkent
   Fatih Freidorf
-  Gardermoen Gundogan
+  Gardermoen Göktürk Gundogan
   Heimdal Huochetou
   Jarville Jomtien
   Kadikoy Karaçay Kardelen Kartal Katok Kaylaka
@@ -44,8 +46,8 @@ my @SINGLE_WORDS = qw(
   Qiaoxie
   Palaiseau Pasham
   Radkov Recoleta Ridabu
-  Sabadel Sansar Sarniak Senayan Serdika Shihua Simal Sirinyer
-  Slaska Sredec Sukomoro Suleymanpasa Suralaya
+  Sabadel Sancaktar Sansar Sarniak Senayan Serdika Shihua Simal 
+  Sirinyer Slaska Sredec Sukomoro Suleymanpasa Suralaya
   Taihu Taskopru Tengah Tianya
   Uccle Unaós
   Varbergshus Viþnelik
@@ -63,6 +65,8 @@ my %SINGLE_TYPOS =
   Borivli => ['borivali'],
   Çayyolu => ['cayyolu'],
   Fatih => ['fatýh'],
+  'Fatih Karagümrük' => ['karagümrük'],
+  Göktürk => ['gokturk'],
   Heimdal => ['heimdalbc'],
   Kadikoy => ['kadiköy'],
   Küp => ['kup'],

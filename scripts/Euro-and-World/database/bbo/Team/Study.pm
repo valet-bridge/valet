@@ -26,6 +26,7 @@ use Team::Repeats;
 use Connections::Matrix;
 
 my @TAG_ORDER = qw(
+  CLUB 
   FUN 
   FIRST 
   SPONSOR 
@@ -33,7 +34,6 @@ my @TAG_ORDER = qw(
   COUNTRY 
   REGION 
   ZONE 
-  CLUB 
   OTHER 
   LOCALITY 
   CITY 

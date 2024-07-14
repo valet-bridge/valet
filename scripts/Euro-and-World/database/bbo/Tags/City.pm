@@ -147,8 +147,8 @@ my @SINGLE_WORDS = qw(
   Coventry Cuenca Cuneo
 
   Dalian Darmstadt Datca Deauville Debrecen Delft Delhi Denizli Depok 
-  Derpt Diyarbakir Dimitrovgrad Dobrich Doha Dombivli Dongguan Drammen 
-  Durban Düsseldorf
+  Derpt Deva Diyarbakir Dimitrovgrad Dobrich Doha Dombivli Dongguan 
+  Drammen Durban Düsseldorf
 
   Eastbourne Edinburgh Edirne Elblag Enschede Erzurum Esbjerg 
   Eskisehir Essen Estoril Evanston

@@ -31,7 +31,7 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  Blue => ['blauw', 'biru'],
+  Blue => ['blauw', 'biru', 'mavi'],
   Green => ['verde'],
   Red => ['rouge', 'rød', 'rood'],
   White => ['putih', 'hvid'],

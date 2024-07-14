@@ -75,6 +75,7 @@ my @MULTI_WORDS =
   'BC de Lille',
   'BC de Lombard',
   'BC de Zeerob',
+  'BC Deva',
   'BC Garches',
   'BC Herkules',
   'BC Iasi',
@@ -182,7 +183,7 @@ my @MULTI_WORDS =
   'Eskisehir Sports',
   'Essen 86',
   'Fakultas Teknik Bridge Club Universitas Tanjungpura',
-  'Fatih Karagumruk',
+  'Fatih Karagümrük SK',
   'Fethiye BSK',
   'Field Club Udaipur',
   'Fjends BK',
@@ -321,6 +322,7 @@ my @MULTI_WORDS =
   'Rødovre BK',
   'Salmun BC',
   'Samsun BK',
+  'Sancaktar GSK',
   'Seferihisar Municipality',
   'Sekolah Bridge Tonaas Wangko',
   'Semen Padang',
@@ -428,7 +430,8 @@ my %MULTI_TYPOS =
     'bergen akademisk', 'bergen abk', 'begen ak', 'bergen akadem bk',
     'bergen ak bk'],
   Besiktas => ['besiktas jk'],
-  'Bhinneka Bridge Club' => ['bhinneka bridge clu'],
+  'Bhinneka Bridge Club' => ['bhinneka bridge clu',
+    'bhineka bridge club', 'bhinneke bridge clu'],
   'Bielski Klub Brydżowy GOK cards' => ['gok-cards bielsk',
     'gok-ard bielsk'],
   'BK 83 Slagelse' => ['bridge 83'],
@@ -490,12 +493,13 @@ my %MULTI_TYPOS =
   'Fakultas Teknik Bridge Club Universitas Tanjungpura' =>
     ['ftbc untan', 'ftbc university tanjungpura'],
   'Fanfulla' => ['fanfulla lo'],
-  'Fatih Karagumruk' => ['f karagumruk', 'fatýh karagümrük s.'],
+  'Fatih Karagümrük SK' => ['fatýh karagümrük s.'],
   'Field Club Udaipur' => ['field club udaypur'],
   'Frankfurter TBC' => ['tbc frankfurt 1958'],
   'Gabrial University of Indonesia' => ['gabrial ui', 'gabrial-ui', 
     'gaberial ui', 'gabriel - ui', 'gabrial ui-y g', 'gabrial ui yg'],
   'Gereja Masehi Injili di Minahasa' => ['pkbs gmim sulut'],
+  'Göktürk SK' => ['gokturk sk'],
   'Goztepe Hilal SK' => ['goztepe hilal'],
   'Grant Thornton' => ['bc grant thornton',
     'bg thornton', 'grant thonrton', 'grantt thornton'],
@@ -598,7 +602,7 @@ my @SINGLE_WORDS = qw(
   Galata Galatasaray 
   Hoppklubbene Hosgoru 
   Jeofizik JZD
-  Karagümrük Karlsruher Kløverknekt 
+  Karlsruher Kløverknekt 
   Lavec Laksamana LÜKSAD
   Locomotiva
   Malatyagücü Matunga Mo Mragowia
@@ -658,7 +662,6 @@ my %SINGLE_TYPOS =
   'El-Karma' => ['karma'],
   'Eskisehir Sports' => ['eskisehirspor'],
   'Fakultas Teknik Bridge Club Universitas Tanjungpura' => ['ftbc'],
-  'Fatih Karagumruk' => ['fatihkaragumruk'],
   'Gabrial University of Indonesia' => ['gabrial', 'gabriel'],
   'Gala Tawa Bridge Club' => ['gtbc'],
   'Geyve Sports' => ['geyvespor'],
@@ -668,7 +671,7 @@ my %SINGLE_TYPOS =
   Hosgoru => ['hoþgörü'],
   'Isparta Club' => ['isparta'],
   'Istanbul Sports' => ['istanbulspor'],
-  Karagümrük => ['karagumruk'],
+  'KDI Moradabad' => ['kdi'],
   Locomotiva => ['loco'],
   'Madras Gymkhana Club' => ['mgc'],
   'Majör Boğaziçi' => ['majorbogazici'],

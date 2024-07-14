@@ -453,7 +453,7 @@ my @SINGLE_WORDS = qw(
    Loaknath Lolly Longzhu LOS Lowel Löparn LPMS LXA Lyubcho 
 
    Makara Makriköy Malmölaget Marosamitawa Marynarz Masal Matujona 
-   Mavi Mavs Mayamira Mer Mesna MGM MGTH Minut MMRMC Mochu 
+   Mavs Mayamira Mer Mesna MGM MGTH Minut MMRMC Mochu 
    Monaconf Morot Mostingan Movember Mölnlycke MPEC MRSMC Muumio 
    Mýna Møremix 
 
