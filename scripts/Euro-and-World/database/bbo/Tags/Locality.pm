@@ -34,7 +34,7 @@ my @SINGLE_WORDS = qw(
   Gardermoen Gundogan
   Heimdal Huochetou
   Jarville Jomtien
-  Kadikoy Karaçay Kardelen Kartal Karsiyaka Katok Kaylaka
+  Kadikoy Karaçay Kardelen Kartal Katok Kaylaka
   Kocamustafapasa Konak Korwin Kucukcekmece Küp
   Lappee Leilem Lemvourgeio Losari Lozenets
   Maadi Makaliwe Manahasa Männiku Meski Mrzenci Muratpasa
@@ -65,7 +65,6 @@ my %SINGLE_TYPOS =
   Fatih => ['fatýh'],
   Heimdal => ['heimdalbc'],
   Kadikoy => ['kadiköy'],
-  Karsiyaka => ['Karþiyaka'],
   Küp => ['kup'],
   Manahasa => ['mnhasa'],
   Narlidere => ['narlýdere'],

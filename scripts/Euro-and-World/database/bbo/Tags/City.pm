@@ -125,9 +125,9 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Aabenraa Aachen Aalborg Adalar Adana Adapazan Adelaide Agresar 
-  Ahmedabad Airmadidi Akhisar Alexandria Allahabad Altrincham Alytus 
-  Ambon Amman Amsterdam Ankara Annecy Antalya Antony Antwerpen Aral 
-  Arendal Asenovec Asenovgrad Assis Atakum Athens Atlanta Auckland 
+  Ahmedabad Airmadidi Akhisar Aladag Alexandria Allahabad Altrincham 
+  Alytus Ambon Amman Amsterdam Ankara Annecy Antalya Antony Antwerpen 
+  Aral Arendal Asenovec Asenovgrad Assis Atakum Athens Atlanta Auckland 
   Augsburg Ayacucho Aydin Ayvalik
 
   Baghdad Balchik Balaton Balatonföldvár Balikesir Balikpapan Ballerup 
@@ -202,7 +202,7 @@ my @SINGLE_WORDS = qw(
 
   Qingdao
 
-  Radkov Rakvere Rayong Reims Rennes Riga Rijeka Rimini Rome 
+  Radkov Rakvere Rayong Reims Rennes Riga Rijeka Rimini Romana Rome 
 
   Ravnkilde Reykjavik Rieneck Rzeszow Rødovre
 
