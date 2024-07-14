@@ -475,7 +475,6 @@ my @MULTI_WORDS =
   'Stø pluss',
   'Super Pineapples',
   'Svag klöver',
-  'Svanslös Skalman',
   'Svenske og ulykke',
   'Sweet Is Middle',
   'Syntax Error',
@@ -714,7 +713,6 @@ my %MULTI_TYPOS =
   'Six Samurai' => ['six samurais'],
   'Slam Hunters' => ['slam hunter'],
   'Stabby with Youngsters' => ['stabby with youngst'],
-  'Svanslös Skalman' => ['svanslos skalman'],
 
   'Tempo-Knektene' => ['tempo-knehtene'],
   'Texan Aces' => ['texa aces', 'texaan aces', 'texan  aces',
@@ -758,7 +756,7 @@ my @SINGLE_WORDS = qw(
    Eagles Eliminator Emerald Engineers Enigma Enjoy Everest Evil 
 
    Fantasia Fant4stic Farmen Farmers Filosofene Finest Fisk Forfot 
-   Formidables Frenemies Friends Francophones Freak Frivolt 
+   Formidables Frenemies Friends Francophones Freak Frirond Frivolt 
 
    Galaxy Gentle Geriatrix Geysir Giants GloryGlory Goldcat 
    Gosho Grand Grads Gris Guests Gulebjorn Gunsmoke 

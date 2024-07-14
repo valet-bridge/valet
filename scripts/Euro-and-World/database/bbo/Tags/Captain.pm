@@ -74,7 +74,6 @@ my @MULTI_WORDS =
   'de Krull',
   'de la Barrera',
   'de Livera',
-  'de Lombard',
   'de Mendez',
   'de Michelis',
   'de Miguel',
@@ -629,7 +628,7 @@ my @SINGLE_WORDS = qw(
 
   Dabrowka Dahlberg Dalecki Dalia Dalley Damiani Damkor Dancewicz 
   Danta Dantan Darak Daskalakis Daugava Dauvergne Davies 
-  Dawson Debolina Debonnaire Debus Dechelette Degla Dehaye Deik 
+  Dawson Debolina Debonnaire Debus Dechelette Dehaye Deik 
   Deleeuw Delfino Delfour Delibaltadakis Dellecavakis 
   Delimpaltadakis Delpiano DeMartino Demir Demirbas Demme Denning 
   Deniz Desai Deutsch Deva Dexterzy Dialinas Dionysopoulos 
@@ -720,7 +719,7 @@ my @SINGLE_WORDS = qw(
   Lesniewski Lesnik Lester Lev Levi Levinger Levin Levine Levoy 
   Levski Lewis Lhuissier Li Lian Libbrecht Libman Lie Lien 
   Liu Liggins Lilienstein Lillevik Lilley Limor Linczmayer Lindner 
-  Lindstedt Llopart Locatelli Lockwood Lombard Longinotti 
+  Lindstedt Llopart Locatelli Lockwood Longinotti 
   Lorentz Lorenzini Loreto Lormant Louchart Lovrecz Lowe Lubinski 
   Lucchesi Lucignano Ludewig Lund Luppi Lusk Lusky Lüßmann Lynch 
   Lyngdal Lyngen
@@ -972,7 +971,6 @@ my %SINGLE_TYPOS =
   Lantaron => ['lantarón'],
   Lauria => ['laurýa'],
   Llopart =>['lllopar', 'llopar'],
-  Lombard => ['lomard'],
   'Lotan Fisher' => ['fisher'],
   'Luis Oliveira' => ['oliveira'],
   Lyngen => ['lyn'],

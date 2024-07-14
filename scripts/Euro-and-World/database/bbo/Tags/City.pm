@@ -202,9 +202,8 @@ my @SINGLE_WORDS = qw(
 
   Qingdao
 
-  Radkov Rakvere Rayong Reims Rennes Riga Rijeka Rimini Romana Rome 
-
-  Ravnkilde Reykjavik Rieneck Rzeszow Rødovre
+  Radkov Rakvere Ravnkilde Rayong Reims Rennes Reykjavik Rieneck 
+  Riga Rijeka Rimini Romana Rome Rotterdam Rzeszow Rødovre
 
   Saarbrücken Sabadell Salerno Samarinda Samobor Samsun Sandefjord 
   Santiago Sanya Sarpsborg Secunderabad Seferihisar Semarang Senigallia
@@ -236,7 +235,7 @@ my @SINGLE_WORDS = qw(
 
   Ørland Østerdal
 
-  Åkirkeby Ålesund Århus
+  Åkirkeby Ålesund Århus Åsane
 );
 
 my %SINGLE_TYPOS =
@@ -257,6 +256,7 @@ my %SINGLE_TYPOS =
   Bangalore => ["b'lore", 'banglore', 'bengalore', 'bangaluru',
     'benglore', 'bengluru', 'bengalu', 'bengaluru'],
   Bansi => ["bansi's"],
+  Barcelona => ['bcn'],
   Beijing => ['peking', 'pekin', 'pékin', 'bijing'],
   Buzios => ['bruzios'],
   Canakkale => ['çanakkale'],

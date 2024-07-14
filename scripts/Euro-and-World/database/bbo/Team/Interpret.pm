@@ -92,23 +92,30 @@ sub post_process_abbr
     my $city;
     if (! ($city = find_field_in_chains($chains, 'CITY')))
     {
-      print "MATRIX No city\n";
+      my $club;
+      if (! ($club = find_field_in_chains($chains, 'CLUB')))
+      {
+        print "MATRIX No city or club\n";
+      }
       return;
     }
 
     my $club_list = Connections::Matrix::get_city_club_list($city);
-    if (! defined $club_list)
+    if (defined $club_list)
     {
-      print "MATRIX No club list for $city\n";
-    }
-    elsif ($#$club_list > 0)
-    {
-      print "MATRIX Multiple clubs in $city: ",
-        join ', ', @$club_list, "\n";
+      if ($#$club_list > 0)
+      {
+        print "MATRIX Multiple clubs in $city: ",
+          join(', ', @$club_list), "\n";
+      }
+      else
+      {
+        print "MATRIX Matching $city to ", $club_list->[0], "\n";
+      }
     }
     else
     {
-      print "MATRIX Matching $city to ", $club_list->[0], "\n";
+      print "MATRIX No club list\n";
     }
     return;
   }

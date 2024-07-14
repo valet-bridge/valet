@@ -425,7 +425,7 @@ my @SINGLE_WORDS = qw(
 
    Fakel FAM² FAMA Farta Fenix Ferfi Feszek Fil Filur Flagship 
    FNCC Formosa Fortuna Fortune FOS Foundation Francest Frieolt 
-   Frirond Frusci Fundacja FWK
+   Frusci Fundacja FWK
 
    Gabrisem Galim Gambitas Gamma Garp Garuda Gata Gelin 
    Gewanna Gezi Gibs Gjesp Gkobra GMM Goroco Göktürk GP 
