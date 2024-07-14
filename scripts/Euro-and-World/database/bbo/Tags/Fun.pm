@@ -450,6 +450,7 @@ my @MULTI_WORDS =
   'Shooting',
   'Shy Ant',
   'Siderkongen og kidz',
+  'Silence BC',
   'Silver Eagle',
   'Simple Minds',
   'Sivves straffdubbl',
@@ -745,7 +746,7 @@ my @SINGLE_WORDS = qw(
    Barracuda Barsss Baryton Beauty BeRe Bingbang Binkie Blackwood 
    Bling Blondie Blues Blueberry Blues Bolero Boogies Boomz 
    BOVE Bricklayer Bridgekameratene Bridgeministeriet Brigada Brother 
-   Brudarna Bubba Buddies Bulldozer Bumerangas Bunnies
+   Brudarna Bubba Buddies Bulk Bulldozer Bumerangas Bunnies
 
    Cancan Cardtossers Cargo Cartoon Casuals Censored Challengers 
    Changes Chicks Chokladmåndag Claim Coaches Cogito Commandos 
@@ -796,7 +797,7 @@ my @SINGLE_WORDS = qw(
    Rampage Rapid Real Reklamtrion Reloaded Robocop Rollers Rovers 
 
    Sabres Saga Sailor Sakura Sakurai Saladmasters Salokin Sapphire 
-   Saturn Schneewittchen Scientists Secure Senator Show Silence 
+   Saturn Schneewittchen Scientists Secure Senator Show
    Silverfox Simple Sindbad Singapole Sirius Sjøsamen Skip Skitur 
    Slappfisker Slufsa Småveitjan Snapper Snipers Soho Sonata Spark 
    Spartans Specialist Spekkhogger Squeeze Stampede Star Starmen 

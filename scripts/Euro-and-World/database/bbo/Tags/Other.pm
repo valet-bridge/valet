@@ -167,6 +167,7 @@ my @MULTI_WORDS =
   'Kong Chou',
   'Kozyrnye Oleni',
   'KM AT',
+  'KSK Deniz',
 
   'Las Flores',
   'Las Olas',
@@ -478,7 +479,7 @@ my @SINGLE_WORDS = qw(
    RS Rüya Rylai Rylal Ryo
 
    Sabari SAGG Salost Salvo Sansouci SANY Sargam SaTu Saty Sbamby 
-   Sbanda Scapros Schmuckles Scot SDK Senaattorit SFG SGG Shan 
+   Sbanda SBC Scapros Schmuckles Scot SDK Senaattorit SFG SGG Shan 
    Shaoshen Sherdils SHHG Sigdonnemann Sigma Sihai Silbersee 
    Simpleksas SISU Sitespor Sivves Siyabend Skalman Skaronga SKB 
    SKBS Skotii SKR Þlem Slostria SMBC SMJ SMK SNAP SNP Soba Sober 

@@ -61,7 +61,7 @@ my %SINGLE_TYPOS =
     aba absk ak asb asd ass assn 
     ba bbgsk bbsgk bbsk bc bcm beld belediye beledýye belediyespor 
     bgsk bilimsel bisk biskd bk bld bmsk bp bps
-    br bri brýç bridgeclub bridgeklub bs bsb bsc bsk bskd bsp bssk 
+    br bri brýç bridgeclub bridgeklub bs bsb bsc bsk bskd bssk 
     bt btsc bþb buyuksehir býskd
     cbc cbe cfr ck club 
     dbc 
@@ -70,13 +70,12 @@ my %SINGLE_TYPOS =
     gençlik gkk gsb gsk gskd gsmks gtbc
     hesk
     ihs
-    kcb kdi klubben ks ksb ksk
+    kcb kdi klubben ks ksb 
     maesa mbc
     ndbac nbi
     oaza 
-    sb sbc sc sdgskd sk sp spor ss ssd
-    tbc tc
-    ýbsk ýbmsk)]
+    sb sc sdgskd sk sp spor ss ssd
+    tbc tc)]
 );
 
 

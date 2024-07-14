@@ -120,6 +120,7 @@ my @MULTI_WORDS =
   'Garðs Apotek',
   'Garsu Pasaulis',
   'Geely Automobile',
+  'Geo BSP',
   'Geo Kideco',
   'Geo Pertamina',
   'Geo Timah',

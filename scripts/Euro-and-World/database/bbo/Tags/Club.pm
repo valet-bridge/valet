@@ -33,6 +33,7 @@ my @MULTI_WORDS =
   'Antalya Tabip Odasi',
   'Antony BC',
   'Arendals BK',
+  'Arkas SK',
   'Armando and Viviane Gonçalves Pereira',
   'ASA University of Tel Aviv',
   'ASB Salerno',
@@ -251,6 +252,7 @@ my @MULTI_WORDS =
   'Kunshan Qiaoxie',
   'Küp BSK',
   'Kusadasi BSK',
+  'Laksamana BSP',
   'Lindesbergs BS',
   'Madras Gymkhana Club',
   'Maesa Palu',
@@ -423,6 +425,7 @@ my %MULTI_TYPOS =
   'BC Bamberger Reiter' => ['bc bamberg', 'bamberger reiter',
     'bamberg cavaliers', 'bamberger germany', 'bamberger welle', 
     'bamberg riders', 'bc bamberger reite', 'bridgeclub bamberge'],
+  'BC Clichy' => ['clichy sbc'],
   'BC de Lombard' => ['the lombard', 'de lombard', 'lombard bc'],
   'BC Darmstadt Alert' => ['darmstadt alert'],
   'BC Garches' => ['b.c de garches'],
@@ -432,6 +435,7 @@ my %MULTI_TYPOS =
   'BC Rennais' => ['b.c. rennais', 'b.c rennais'],
   'BC Universität Mannheim' => ['bc uni mannheim'],
   'BCN Almirall' => ['bcn-almirall', 'bcn - almirall'],
+  'Bengkalis PT BSP' => ['pt bsp'],
   'Bergen Akademiske' => ['bergen ak', 'bergen akad', 'bergen akadem',
     'bergen akademisk', 'bergen abk', 'begen ak', 'bergen akadem bk',
     'bergen ak bk'],
@@ -517,7 +521,7 @@ my %MULTI_TYPOS =
   'Istanbul Sports' => ['istanbul bsk', 'ýstanbul briç sk',
     'istanbul bric sk', 'istanbul sk', 'ýstanbul brýç sk',
     'ýstanbul sk', 'ýstanbul brýç sk', 'ýstanbul bmsk',
-    'istanbul bmsk'],
+    'istanbul bmsk'], 
   'Izmir BSB' => ['ýzmýr býlýmsel bk', 'ýzmýt saraybahçe sk',
     'ýzmir b.s. belediye', 'ýzmir bsb', 'ýzmir bþb', 'izmir b.b.',
     'izmir bilimsel', 'izmir buyuksehir', 'izmir b.b.s.k',
@@ -612,7 +616,7 @@ my @SINGLE_WORDS = qw(
   Hoppklubbene Hosgoru 
   Jeofizik JZD
   Karlsruher Kløverknekt 
-  Lavec Laksamana LÜKSAD
+  Lavec LÜKSAD
   Locomotiva
   Malatyagücü Matunga Mo Mragowia
   NBK
@@ -680,7 +684,7 @@ my %SINGLE_TYPOS =
   'Hok Studiecentrum' => ['hok'],
   Hosgoru => ['hoþgörü'],
   'Isparta Club' => ['isparta'],
-  'Istanbul Sports' => ['istanbulspor'],
+  'Istanbul Sports' => ['istanbulspor', 'ýbsk', 'ýbmsk'],
   'KDI Moradabad' => ['kdi'],
   Locomotiva => ['loco'],
   'Madras Gymkhana Club' => ['mgc'],
