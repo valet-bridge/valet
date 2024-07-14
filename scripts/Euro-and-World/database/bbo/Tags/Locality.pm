@@ -50,7 +50,7 @@ my @SINGLE_WORDS = qw(
   Uccle Unaós
   Varbergshus Viþnelik
   Wadas Wratislavia Wroble
-  Yalikavak Yangpu Yarýmca Yenisehir Yizhuang Yildirim Yuquan
+  Yalikavak Yangpu Yarimca Yenisehir Yizhuang Yildirim Yuquan
   Zhujiang
 );
 
@@ -72,7 +72,7 @@ my %SINGLE_TYPOS =
   Parioli => ['paroli'],
   Serdika => ['serdica'],
   Wroble => ['wróble'],
-  Yarýmca => ['yarimca'],
+  Yarimca => ['Yarýmca'],
   Yildirim => ['yýldýrým']
 );
 

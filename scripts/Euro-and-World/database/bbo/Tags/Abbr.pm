@@ -14,7 +14,7 @@ our @EXPORT = qw(set_hashes);
 my @MULTI_WORDS =
 (
   'Bridge Club',
-  'Sporting Club'
+  'Sports Club'
 );
 
 my %MULTI_TYPOS =
@@ -34,10 +34,10 @@ my %MULTI_TYPOS =
     'bridz klub', 
     'brýç s.k.', 'brýç ý. s.k', 
     'c. br.', 'card club', 'c b c',
-    'genclik s', 'genç. hýz', 'gr.sp.ass.', 'g.s.b', 'gsd briç'
+    'genclik s', 'genç. hýz', 'gr.sp.ass.', 'g.s.b',
   ],
 
-  'Sporting Club' => [
+  'Sports Club' => [
     'athletic c.',
     'bel',
     'bric sk', 'bric spor kl',
@@ -58,8 +58,8 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   'Bridge Club' => [qw(
-    aba abk absk ak asb asd ass assn 
-    ba bbgsk bbsgk bbsk bc bcm bcn beld belediye beledýye belediyespor 
+    aba absk ak asb asd ass assn 
+    ba bbgsk bbsgk bbsk bc bcm beld belediye beledýye belediyespor 
     bgsk bilimsel bisk biskd bk bld bmsk bp bps
     br bri brýç bridgeclub bridgeklub bs bsb bsc bsk bskd bsp bssk 
     bt btsc bþb buyuksehir býskd
@@ -76,8 +76,7 @@ my %SINGLE_TYPOS =
     oaza 
     sb sbc sc sdgskd sk sp spor ss ssd
     tbc tc
-    ýbsk ýbmsk)],
-  'Sporting Club' => ['sprting'],
+    ýbsk ýbmsk)]
 );
 
 

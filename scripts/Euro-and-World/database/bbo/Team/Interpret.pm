@@ -94,6 +94,7 @@ sub post_process_abbr
     {
       if (find_field_in_chains($chains, 'CLUB') ||
           find_field_in_chains($chains, 'REGION') ||
+          find_field_in_chains($chains, 'LOCALITY') ||
           find_field_in_chains($chains, 'UNIVERSITY'))
       {
         return;
