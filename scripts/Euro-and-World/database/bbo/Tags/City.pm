@@ -331,6 +331,7 @@ my %SINGLE_TYPOS =
   Rome => ['roma'],
   Saarbrücken => ['saarbruecken'],
   'Saint Petersburg' => ['spb'],
+  Samsun => ['amisos'],
   Shenzhen => ['sz'],
   Singsås => ['singsaas'],
   Slawa => ['s£awa', 's³awa'],

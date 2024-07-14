@@ -50,14 +50,12 @@ sub post_process_single
 }
 
 
-sub post_process_abbr
+sub find_field_in_chains
 {
-  my ($whole, $chains) = @_;
+  my ($chains, $tag) = @_;
 
-  # One chain with a city, one with a club indicator.
-  my $found_city = 0;
-  my $city_cno;
-  my $city;
+  my $found = 0;
+  my $value;
 
   for my $cno (0 .. $#$chains)
   {
@@ -67,15 +65,19 @@ sub post_process_abbr
 
     my $token = $chain->check_out(0);
     my $field = $token->field();
-    next unless $field eq 'CITY';
+    next unless $field eq $tag;
 
-    $found_city = 1;
-    $city_cno = $cno;
-    $city = $token->value();
+    return $token->value();
     last;
   }
 
-  return unless $found_city;
+  return 0;
+}
+
+
+sub post_process_abbr
+{
+  my ($whole, $chains) = @_;
 
   for my $cno (0 .. $#$chains)
   {
@@ -86,6 +88,13 @@ sub post_process_abbr
     my $token = $chain->check_out(0);
     my $field = $token->field();
     next unless $field eq 'ABBR';
+
+    my $city;
+    if (! ($city = find_field_in_chains($chains, 'CITY')))
+    {
+      print "MATRIX No city\n";
+      return;
+    }
 
     my $club_list = Connections::Matrix::get_city_club_list($city);
     if (! defined $club_list)
@@ -101,6 +110,7 @@ sub post_process_abbr
     {
       print "MATRIX Matching $city to ", $club_list->[0], "\n";
     }
+    return;
   }
 }
 
