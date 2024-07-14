@@ -130,6 +130,7 @@ my @MULTI_WORDS =
   'Circle the World',
   'Cim Bom Bom',
   'Cheap Tricks',
+  'Club 7',
   'Cold Light',
   'Counter Strike',
   'Country Boys',

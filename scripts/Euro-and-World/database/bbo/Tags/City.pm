@@ -56,6 +56,7 @@ my @MULTI_WORDS =
   'Reggio Calabria',
   'Reggio Emilia',
   'Rio de Janeiro',
+  'Russia-Pan',
   'Saint Petersburg',
   'San Giorgio del Sannio',
   'San Luis',
@@ -127,17 +128,17 @@ my @SINGLE_WORDS = qw(
   Aabenraa Aachen Aalborg Adalar Adana Adapazan Adelaide Agresar 
   Ahmedabad Airmadidi Akhisar Aladag Alexandria Allahabad Altrincham 
   Alytus Ambon Amman Amsterdam Ankara Annecy Antalya Antony Antwerpen 
-  Aral Arendal Asenovec Asenovgrad Assis Atakum Athens Atlanta Auckland 
-  Augsburg Ayacucho Aydin Ayvalik
+  Aral Arendal Asenovec Asenovgrad Assis Atakum Athens Atlanta 
+  Auckland Augsburg Ayacucho Aydin Ayvalik
 
   Baghdad Balchik Balaton Balatonföldvár Balikesir Balikpapan Ballerup 
   Ballymena Bamberg Bandung Bangalore Bangkok Banjarmasin Bansi Barcelona 
-  Batam Bath Batman Batu Begues Beijing Beirut Belgrade Bengkulu Beograd 
-  Bereket Bergen Bergues Berkeley Berlin Bhilwara Bhubaneshwar Biarritz 
-  Bielefeld Bikaner Bitung Blitar Bodrum Bodø Bogor Bogotá Boleslawiec
-  Bologna Bonn Bordeaux Braila Brandbu Brasilia Brasov Bremen Brighton
-  Brisbane Bromölla Bruges Brussels Bucharest Budapest Burghausen 
-  Bursa Burdur Buzios Bydgoszcz Bytom
+  Batam Bath Batman Batu Begues Beijing Beirut Belgrade Bengkalis
+  Bengkulu Beograd Bereket Bergen Bergues Berkeley Berlin Bhilwara 
+  Bhubaneshwar Biarritz Bielefeld Bikaner Bitung Blitar Bodrum Bodø 
+  Bogor Bogotá Boleslawiec Bologna Bonn Bordeaux Braila Brandbu 
+  Brasilia Brasov Bremen Brighton Brisbane Bromölla Bruges Brussels 
+  Bucharest Budapest Burghausen Bursa Burdur Buzios Bydgoszcz Bytom
 
   Caen Cairns Cairo Canakkale Canberra Cannareggio Canterbury Caracas 
   Casablanca Cascais Catania Cerkezkoy Cesme Changhua Changzhou 
