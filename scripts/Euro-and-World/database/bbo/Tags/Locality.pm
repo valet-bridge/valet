@@ -40,7 +40,7 @@ my @SINGLE_WORDS = qw(
   Maadi Makaliwe Manahasa Männiku Meski Mrzenci Muratpasa
   Nagbagan Narita Narlidere Niski
   Olgiata
-  Pamukkale Parioli Piloni Pinarbasi Polonezkoy Poncol Pudong
+  Parioli Piloni Pinarbasi Polonezkoy Poncol Pudong
   Qiaoxie
   Palaiseau Pasham
   Radkov Recoleta Ridabu
@@ -69,7 +69,6 @@ my %SINGLE_TYPOS =
   Manahasa => ['mnhasa'],
   Narlidere => ['narlýdere'],
   Olgiata => ['ola'],
-  Pamukkale => ['pamuk'],
   Parioli => ['paroli'],
   Serdika => ['serdica'],
   Wroble => ['wróble'],

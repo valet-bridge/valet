@@ -92,11 +92,13 @@ sub post_process_abbr
     my $city;
     if (! ($city = find_field_in_chains($chains, 'CITY')))
     {
-      my $club;
-      if (! ($club = find_field_in_chains($chains, 'CLUB')))
+      if (find_field_in_chains($chains, 'CLUB') ||
+          find_field_in_chains($chains, 'REGION') ||
+          find_field_in_chains($chains, 'UNIVERSITY'))
       {
-        print "MATRIX No city or club\n";
+        return;
       }
+      print "MATRIX No city, region, club or university\n";
       return;
     }
 

@@ -130,6 +130,7 @@ my @MULTI_WORDS =
   'BUKS Bytom',
   'Bursa BSK',
   'Caen BC',
+  'Calcutta Bridge Club',
   'Calcutta Cricket & Football Club',
   'Camlica Sports',
   'Canakkale Tarim',
@@ -188,6 +189,7 @@ my @MULTI_WORDS =
   'Friedland BC',
   'Førde BK',
   'Gabrial University of Indonesia',
+  'Gala Tawa Bridge Club',
   'GB Cimahi',
   'Gereja Masehi Injili di Minahasa',
   'Geyve Sports',
@@ -288,7 +290,7 @@ my @MULTI_WORDS =
   'Orhangazi SK',
   'Otters Club',
   'Padova Bridge SS',
-  'Pamuk SK',
+  'Pamukkale SK',
   'Paris Bridge',
   'Paris Sud',
   'Pattaya BC',
@@ -438,18 +440,19 @@ my %MULTI_TYPOS =
   'Bridgeclub Oog' => ['bc oog in al'],
   'Brussels Bridge Club' => ['b.c.o.b.'],
   'BUKS Bytom' => ['buks ii bytom'],
+  'Calcutta Bridge Club' => ['c b c'],
   'Calcutta Cricket & Football Club' => ['cc&fc', 'cc & fc', 'cc &fc',
     'calcutta bridgeclub'],
   'Canakkale Tarim' => ['canakkale tarim sp'],
   'Çayyolu BK' => ['cayyolu bk', 'Çayyolu Briç SKD',
-    'Cayyolu Bridge Club'],
+    'Cayyolu Briç SKD', 'Cayyolu Bridge Club'],
   'Cedýt Ilica Sports' => ['cedýt ilica spor'],
   'Centrum Kultury i Sportu Oze' => ['oze ckis'],
   'Centrum Kultury i Sportu Skawina' => ['ckis skawina', 'ckis skawia'],
   'Cerkezkoy Dinamik BSK' => ['cerkezkoy bs', 'cerkezkoy bsk',
     'cerkezkoy dinamik'],
   'CFT Bridge' => ['cft b'],
-  'Cimentas Club' => ['cimentas sk'],
+  'Cimentas Club' => ['cimentas sk', 'cimentas bsk'],
   'Circolo del Bridge Cannareggio' => ['c.lo cann.'],
   'Circolo del Bridge Firenze' => ['c.lo br. firenze'],
   'Circolo del Bridge N. Ditto Reggio Calabria' => ['n. ditto rc',
@@ -521,6 +524,7 @@ my %MULTI_TYPOS =
   'Miskolc DEAC' => ['deac-miskolc'],
   Mragowia => ['mragowia si'],
   'Nachteulen Leverkusen' => ['nachteulen leverk'],
+  'Nazilli BBSK' => ['nazilli bsk'],
   'Nilüfer Bld. BSK' => ['nilufer belediyesi'],
   'Niski Bridge Club' => ['niski bridz club'],
   'Núcleo De Bridge Do Círculo' => ['nb-cbl'],
@@ -529,6 +533,7 @@ my %MULTI_TYPOS =
   'Odense BK' => ['odense bridgeklub'],
   'One Eyed Jacks' => ['one-eyed jacks', 'one.eyed jacks'],
   'Otters Club' => ["otters' club", "otter's club", "otter's"],
+  'Pamukkale SK' => ['pamuk sk', 'pamukkale bsk', 'pamukkale bric'],
   'Pudong Club' => ['pu dong club'],
   'Quantum BC' => ['bc quantum'],
   'Qi Zhong Club' => ['qi zhong'],
@@ -571,7 +576,7 @@ my @SINGLE_WORDS = qw(
   ABK Acol AGBC 
   Benfica Besiktas Bonsist Botev BTBK
   Dragao Drienerlo
-  Fanfulla Fenerbahce
+  EIBC Fanfulla Fenerbahce
   Galata Galatasaray 
   Hoppklubbene Hosgoru 
   Jeofizik JZD
@@ -580,7 +585,7 @@ my @SINGLE_WORDS = qw(
   Locomotiva
   Malatyagücü Matunga Mo Mragowia
   NBK
-  Pamukspor Pelatnas
+  Pelatnas
   Qizhong
   Sivasspor Solli Spezia Spojnia
   TGR Tonyaspor Trifolium
@@ -594,6 +599,7 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   'Aachener BC' => ['aachener'],
+  'ABA Mumbai' => ['aba'],
   'Acol Praha' => ['acol'],
   'Adapazan Briç SK' => ['ada'],
   'Agriculture Bridge Club' => ['agbc'],
@@ -623,6 +629,7 @@ my %SINGLE_TYPOS =
   'Bridgeclub Oog' => ['bco'],
   'Brussels Bridge Club' => ['bcob'],
   'Buca Sports' => ['bucaspor'],
+  'Calcutta Bridge Club' => ['cbc'],
   'Camlica Sports' => ['camspor'],
   'Cracovia 1906' => ['cracovia'],
   'Crvena Zvezda' => ['zvezda'],
@@ -634,6 +641,7 @@ my %SINGLE_TYPOS =
   'Fakultas Teknik Bridge Club Universitas Tanjungpura' => ['ftbc'],
   'Fatih Karagumruk' => ['fatihkaragumruk'],
   'Gabrial University of Indonesia' => ['gabrial', 'gabriel'],
+  'Gala Tawa Bridge Club' => ['gtbc'],
   'Geyve Sports' => ['geyvespor'],
   'Hamra Club' => ['hamra'],
   'Harstad S&B' => ['harstad'],
@@ -653,6 +661,7 @@ my %SINGLE_TYPOS =
   'OBK Kløverknekt' => ['kløverknekt'],
   'Odisha Secretariat Recreation Club' => ['osrc'],
   'Otters Club' => ['otters'],
+  'Pamukkale SK' => ['pamukspor'],
   'Porto Club' => ['cbp'],
   'RBSC Polo Club' => ['rbsc'],
   'Royal Air Force Club' => ['rac'],

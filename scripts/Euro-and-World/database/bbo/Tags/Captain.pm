@@ -395,6 +395,7 @@ my %MULTI_TYPOS =
   'Bimal Sicka' => ['bimal sikka'],
   'Birkir Jonsson' => ['birkir j jonsson'],
   Boaz => ['dr. boaz', "dr. boaz's"],
+  Brogeland => ['brogeland fc'],
   'C.V. Rao' => ['c v rao', 'c. v. rao', 'c.v.rao', 'c.v.rao.', 'cv rao'],
   'Carlos Gonçalves' => ['carlos goncalves', 'c goncalves',
     'c gonçalves', 'carlos gonçalve', 'carlos gonçalv'],

@@ -596,7 +596,8 @@ my %MULTI_TYPOS =
   'Trambak Rubber' => ['trumpak rubber'],
   'Triglav Osiguranje' => ['triglav osig.'],
   'Unia Sygnitas' => ['unia-sygnitas'],
-  'Unia Winkhaus' => ['winkhaus unia', 'winkhaus-unia'],
+  'Unia Winkhaus' => ['winkhaus unia', 'winkhaus-unia',
+    'ks winkhaus unia'],
   'Viego Regnskap' => ['viego regnskap as'],
   'VVE Beheer' => ['vve-beheer'],
   'Wuhan Dongfang' => ['dongfang'],
@@ -634,7 +635,7 @@ my @SINGLE_WORDS = qw(
   Fatek Forta Frissan FullBridge Funbridge
 
   GAMAX Gazprom Generali Geologi Genkad Gevalia Gillette Gomad 
-  Gözgöz GSE
+  Gözgöz GSD GSE
 
   Hana Harke Haustak HCL HNA Honesta Hongyu Huachu Huayuan
 
