@@ -762,7 +762,7 @@ my @SINGLE_WORDS = qw(
    Galaxy Gentle Geriatrix Geysir Giants GloryGlory Goldcat 
    Gosho Grand Grads Gris Guests Gulebjorn Gunsmoke 
 
-   Hangarounds Harlequins Hawks Hästpojkarna HERZdame HeSa Hey 
+   Hangarounds Hawks Hästpojkarna HERZdame HeSa Hey 
    Hiiimmm Hjerterdamer Hobbits Hollywood Holmenkollen Honeymoon 
    Hopfenkönig Hornet Huhu Hunhun Hurra Hybrid
 

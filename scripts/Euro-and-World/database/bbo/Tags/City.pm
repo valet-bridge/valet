@@ -23,6 +23,7 @@ my @MULTI_WORDS =
   'Boven Digoel',
   'Chapel Hill',
   'Courseulles-sur-Mer',
+  'Cherven Briag',
   'Czech-Pan',
   'El-Maadi',
   'Gaziantep Zeugma',
