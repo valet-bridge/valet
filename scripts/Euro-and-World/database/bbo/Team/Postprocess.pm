@@ -63,7 +63,7 @@ sub post_process_single_numeral
     elsif ($token0->field() eq 'TWORD' &&
         $token0->value() eq 'Premier League')
     {
-      $chain->complete_if_last_is(0, 'COMPLETE');
+      $chain->complete_if_last_is(0, 'EXPLAINED');
     }
   }
 }

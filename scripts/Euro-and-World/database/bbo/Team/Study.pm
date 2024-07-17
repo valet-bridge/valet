@@ -26,12 +26,13 @@ use Team::Repeats;
 use Connections::Matrix;
 
 my @TAG_ORDER = qw(
+  SPONSOR 
   CLUB 
   FUN 
   FIRST 
-  SPONSOR 
   ORGANIZATION 
   COUNTRY 
+  UNIVERSITY 
   REGION 
   ZONE 
   OTHER 
@@ -42,7 +43,6 @@ my @TAG_ORDER = qw(
   CAPTAIN
   BOT
   NATIONALITY
-  UNIVERSITY 
   ROMAN
   GENDER
   AGE

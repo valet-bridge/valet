@@ -34,7 +34,7 @@ my %MULTI_TYPOS =
     'bridz klub', 
     'brýç s.k.', 'brýç ý. s.k', 
     'c. br.', 'card club', 'c b c',
-    'genclik s', 'genç. hýz', 'gr.sp.ass.', 'g.s.b',
+    'hýz', 'gr.sp.ass.', 'g.s.b',
   ],
 
   'Sports Club' => [
@@ -47,9 +47,7 @@ my %MULTI_TYPOS =
     'sports c', 
     'sports club', 
     's c', 's.k.', 's.s.', 's.s.d.',
-    't.c.', 'tennis club'],
-
-  'University Club' => ['ü.m.d']
+    't.c.', 'tennis club']
 );
 
 my @SINGLE_WORDS = qw(
@@ -60,14 +58,13 @@ my %SINGLE_TYPOS =
   'Bridge Club' => [qw(
     aba absk ak asb asd ass assn 
     ba bbgsk bbsgk bbsk bc bcm beld belediye beledýye belediyespor 
-    bgsk bilimsel bisk biskd bk bld bmsk bp bps
+    bgsk bisk biskd bk bld bmsk bp bps
     br bri brýç bridgeclub bridgeklub bs bsb bsc bsk bskd bssk 
     bt btsc bþb buyuksehir býskd
     cbc cbe cfr ck club 
-    dbc 
     ebc eibc 
     fbc fc
-    gençlik gkk gsb gsk gskd gsmks gtbc
+    gkk gsb gsk gskd gsmks gtbc
     hesk
     ihs
     kcb kdi klubben ks ksb 

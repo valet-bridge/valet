@@ -142,14 +142,14 @@ my @SINGLE_WORDS = qw(
   Cappadocia Catalonia Corsica
   Dersým Druts
   Eyjafjallajokull
-  Fjends Florida Fukien
+  Fjends Florida
   Ganges Gansu Gauteng Goa Gorontalo Guangdong Guangxi 
   Guizhou Gujarat
   Hainan Haixing Hatay Haugaland Hebei Hedmark Hegyvidék Hordaland
   Hubei Hunan
   Jalisco Jharkhand Jiangsu Jilin
   Kansai Kanto Karnataka Kawanua Kayong Kedungwaru Kepri Kerala 
-  Kinali Krabi
+  Krabi
   Lampung Lebak Liaoning Liguria Lombok 
   Madeira Maharashtra Maluku Marmara Matopos Midtsjælland 
   Minahasa Missouri Mjøsa Muallim Munzur Mysia
@@ -160,7 +160,7 @@ my @SINGLE_WORDS = qw(
   Rajasthan Rajputana Ratchaburi Rhodes Rogaland Rosfjord 
   Sakarya Salten Shanxi Siberia Sichuan Silesia Silla Sindh Sintang 
   Skåne Slask Southland Sydvest
-  Tambun Taskopru Tasmania Telemark Tianya
+  Tambun Tasmania Telemark Tianya
   Tigris Tinglin Tuncelý
   Uttarakhand
   Victoria Vojvodina
@@ -203,7 +203,6 @@ my %SINGLE_TYPOS =
   'South Australia' => ['sa'],
   'Suphan Buri' => ['suphanburi'],
   'Tamil Nadu' => ['tamilnadu'],
-  Taskopru => ['tasköprü'],
   Tinglin => ['tingling'],
   'Uttar Pradesh' => ['up', 'upba'],
   Uttarakhand => ['uttaranchal'],

@@ -62,6 +62,8 @@ my $print_chains = 1; # 1 if we dump results for further analysis
 my @RAW_FIELDS = qw(BBONO TITLE EVENT SCORING TEAMS);
 
 Team::Study::init_hashes();
+Team::Interpret::init_hashes();
+
 Connections::Matrix::set_matrix($whole);
 $whole->check_static_consistency();
 
@@ -161,7 +163,7 @@ while ($line = <$fh>)
     Team::Postprocess::post_process(\@{$chains_team{$team}});
 
     Team::Interpret::interpret($whole, \@{$chains_team{$team}}, 
-     \$chunk{SCORING});
+     \$chunk{SCORING}, $chunk{BBONO});
 
     $stats_team->incr(\@{$chains_team{$team}});
   }

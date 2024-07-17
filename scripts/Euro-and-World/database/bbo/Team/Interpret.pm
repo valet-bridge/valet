@@ -12,13 +12,24 @@ our @ISA = qw(Exporter);
 our @EXPORT = qw(interpret);
 
 use lib './Connections';
+
 use Connections::Matrix;
+use Team::Cmatch;
 
 my @ACCEPT_FIELDS = qw(AGE BOT CAPTAIN CITY CLUB COUNTRY FIRST
   FORM FUN GENDER LOCALITY NATIONALITY ORGANIZATION OTHER
   REGION SPONSOR UNIVERSITY ZONE);
 
 my %ACCEPT = map { $_ => 1 } @ACCEPT_FIELDS;
+
+
+# BBOVG numbers for which repeated, but different fields are OK.
+my %CLUB_MATCHES;
+
+sub init_hashes
+{
+  Team::Cmatch::set_cmatch(\%CLUB_MATCHES);
+}
 
 
 sub post_process_single
@@ -52,7 +63,7 @@ sub post_process_single
 
 sub find_field_in_chains
 {
-  my ($chains, $tag) = @_;
+  my ($chains, $tag, $cno_found) = @_;
 
   my $found = 0;
   my $value;
@@ -67,6 +78,7 @@ sub find_field_in_chains
     my $field = $token->field();
     next unless $field eq $tag;
 
+    $$cno_found = $cno;
     return $token->value();
     last;
   }
@@ -77,7 +89,7 @@ sub find_field_in_chains
 
 sub post_process_abbr
 {
-  my ($whole, $chains) = @_;
+  my ($whole, $chains, $bbono) = @_;
 
   for my $cno (0 .. $#$chains)
   {
@@ -89,14 +101,31 @@ sub post_process_abbr
     my $field = $token->field();
     next unless $field eq 'ABBR';
 
-    my $city;
-    if (! ($city = find_field_in_chains($chains, 'CITY')))
+    my ($city, $cno_found);
+    if (! ($city = find_field_in_chains($chains, 'CITY', \$cno_found)))
     {
-      if (find_field_in_chains($chains, 'CLUB') ||
-          find_field_in_chains($chains, 'REGION') ||
-          find_field_in_chains($chains, 'LOCALITY') ||
-          find_field_in_chains($chains, 'UNIVERSITY'))
+      if (find_field_in_chains($chains, 'CLUB', \$cno_found))
       {
+        # It's already a club, so skip the extra club indicator.
+        $chain->complete_if_last_is(0, 'KILLED');
+        return;
+      }
+      elsif (find_field_in_chains($chains, 'REGION', \$cno_found))
+      {
+        # TODO Match these as well (add a city).
+        print "MATRIX with REGION\n";
+        return;
+      }
+      elsif (find_field_in_chains($chains, 'LOCALITY', \$cno_found))
+      {
+        # TODO Match these as well (add a city).
+        print "MATRIX with LOCALITY\n";
+        return;
+      }
+      elsif (find_field_in_chains($chains, 'UNIVERSITY', \$cno_found))
+      {
+        # Assume a university is always a club.
+        $chain->complete_if_last_is(0, 'KILLED');
         return;
       }
       print "MATRIX No city, region, club or university\n";
@@ -110,6 +139,13 @@ sub post_process_abbr
       {
         print "MATRIX Multiple clubs in $city: ",
           join(', ', @$club_list), "\n";
+      }
+      elsif (exists $CLUB_MATCHES{$bbono})
+      {
+        # Change the city to the single club there.
+        $token->set_general('SINGLETON', 'CLUB', $club_list->[0]);
+        $chain->complete_if_last_is(0, 'EXPLAINED');
+        $chains->[$cno_found]->complete_if_last_is(0, 'KILLED');
       }
       else
       {
@@ -157,13 +193,29 @@ sub eliminate_scoring
 }
 
 
+sub post_process_empty
+{
+  # Not quite sure how this happens.
+  my ($chains) = @_;
+
+  # Check for a last chain with only a numeral.
+  for my $chain (@$chains)
+  {
+    next if $chain->status() ne 'COMPLETE';
+    next unless $chain->last() == -1;
+      $chain->complete_if_last_is(-1, 'KILLED');
+  }
+}
+
+
 sub interpret
 {
-  my ($whole, $chains, $scoring) = @_;
+  my ($whole, $chains, $scoring, $bbono) = @_;
 
   post_process_single($chains);
-  post_process_abbr($whole, $chains);
+  post_process_abbr($whole, $chains, $bbono);
   eliminate_scoring($chains, $scoring);
+  post_process_empty($chains);
 }
 
 1;

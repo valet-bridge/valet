@@ -20,7 +20,8 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  'Fatih Karagümrük' => ['fatih karagumruk', 'f karagumruk'],
+  'Fatih Karagümrük' => ['fatih karagumruk', 'f karagumruk', 'fatih ksk',
+    'Fatýh KSK'],
   Lozenets => ['vs lozenec', 'vv lozenets', 'v v lozenets'],
   Pudong => ['pu dong'],
   Taihu => ['tai hu']
@@ -32,7 +33,7 @@ my @SINGLE_WORDS = qw(
   Bogazici Borivli Bormali Bornova Bozdogan Brotteaux Buca Buitenhof
   Çayyolu Cemara Chelsea Chislehurst Courseulles
   Ege Esenkent
-  Fatih Freidorf
+  Fatih Freidorf Fukien
   Gardermoen Göktürk Gundogan
   Heimdal Huochetou
   Jarville Jomtien
@@ -48,7 +49,7 @@ my @SINGLE_WORDS = qw(
   Radkov Recoleta Ridabu
   Sabadel Sancaktar Sansar Sarniak Senayan Serdika Shihua Simal 
   Sirinyer Slaska Sredec Sukomoro Suleymanpasa Suralaya
-  Taihu Taskopru Tengah Tianya
+  Taihu Tengah Tianya
   Uccle Unaós
   Varbergshus Viþnelik
   Wadas Wratislavia Wroble
@@ -65,7 +66,7 @@ my %SINGLE_TYPOS =
   Borivli => ['borivali'],
   Çayyolu => ['cayyolu'],
   Fatih => ['fatýh'],
-  'Fatih Karagümrük' => ['karagümrük'],
+  'Fatih Karagümrük' => ['karagümrük', 'karagumruk'],
   Göktürk => ['gokturk'],
   Heimdal => ['heimdalbc'],
   Kadikoy => ['kadiköy'],

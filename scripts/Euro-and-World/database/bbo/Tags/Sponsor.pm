@@ -330,7 +330,6 @@ my @MULTI_WORDS =
   'Sunchime Fund',
   'Sung Tao',
   'Suzhou Youtong',
-  'Swara Kita',
   'SY Sheng Yutain',
   'Syabas Energy',
   'Sygnity',
@@ -366,7 +365,6 @@ my @MULTI_WORDS =
   'Unia Sygnitas',
   'UTI Bank',
   'VBS Fjárfestingarbanki hf.',
-  'Vestel',
   'Vidbot ehf',
   'Viego Regnskap',
   'Vinex Preslav',
@@ -421,6 +419,7 @@ my %MULTI_TYPOS =
   'Beijing ShouChuang' => ['bj shouchuang'],
   'Beijing Trinergy' => ['beijing trinergyy'],
   'Beijing Yue Ze' => ['bei jing yue ze'],
+  'Bengkalis PT' => ['bengkalis pt bsp'],
   'PU Bitung' => ['bitung pu'],
   'Breki Jarðverk' => ['breki jarðverk ehf'],
   'bridge24.pl' => ['bridge 24', 'bridge24', 'bridge24pl', 'bridge24_pl'],
@@ -527,7 +526,8 @@ my %MULTI_TYPOS =
   'Perbankan Jatim' => ['perbankan_jatim'],
   'Pertamina' => ['pertamina ep', 'p-ep', 'pertamina ft', 
     'pertamina field', 'pertamina ge', 'pertamina indonesia', 
-    'pertamina l.', 'pertamina field tmb', 'pertamina ep field'],
+    'pertamina field t', 'pertamina l.', 'pertamina field tmb', 
+    'pertamina ep field'],
   'Perusahaan Listrik Negara' => ['pln pusat'],
   'Phoenix TV' => ['feng huang wei shi', 'fenghuang tv'],
   'PLN Fortuga' => ['pln - fortuga'],
@@ -549,7 +549,7 @@ my %MULTI_TYPOS =
   'See Fah/Thai' => ['seefa/thai'],
   'Semangat Baru Makassar' => ['semangat baru mks', 'semangat baru mks.',
     'semangat br', 'semangat baru', 'semangat baru mksr',
-    'makassar semangat b'],
+    'makassar semangat b', 'sb. sulsel'],
   'Shanghai Automobile' => ['shanghai automoblie', 'sh  qiche',
     'sh qiche'],
   'Shanghai Changyu' => ['sh chuangyu'],
@@ -636,7 +636,7 @@ my @SINGLE_WORDS = qw(
   Fatek Forta Frissan FullBridge Funbridge
 
   GAMAX Gazprom Generali Geologi Genkad Gevalia Gillette Gomad 
-  Gözgöz GSD GSE
+  Gözgöz GSE
 
   Hana Harke Haustak HCL HNA Honesta Hongyu Huachu Huayuan
 

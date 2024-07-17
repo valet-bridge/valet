@@ -660,7 +660,7 @@ my @SINGLE_WORDS = qw(
   Gaede Gagliardi Gaglietto Gardiner Galinsky Gallus 
   Gana Gandoglia Ganzer Garateguy Garbosi Garg Garoufalis Garrido 
   Garrone Garvey Garner Gartaganis Gary Gaspar Gaviard Gawel Gawrys 
-  Gelberg Geller Genc Generosi Gentili Georgescu Gerber Gerli 
+  Gelberg Geller Generosi Gentili Georgescu Gerber Gerli 
   Gero Gerrard Geyer Gezer Ghionis Giangkos Giannessi Gidman 
   Gierulski Gigliotti Gilboa Gill Ginnan Ginossar Gioia Gitelman 
   Giura Gladiator Glanger Glasson Glopson Gobbi Goded Gold 

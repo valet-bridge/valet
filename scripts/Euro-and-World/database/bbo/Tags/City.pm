@@ -29,6 +29,7 @@ my @MULTI_WORDS =
   'Gaziantep Zeugma',
   'Gjøvik og Vardal',
   'Greve Strand',
+  'Hong Kong City',
   'Indonesia-Pan',
   'Kansas City',
   'Kota Bandung',
@@ -158,7 +159,7 @@ my @SINGLE_WORDS = qw(
   Fredrikstad Førde
 
   Garches Gdansk Gdynia Gelibolu Genoa Gent Gevgelija Geyve Giza Glasgow 
-  Gnesta Gniezno Gorzow Gölcük Göteborg Gresik Groningen Guangzhou 
+  Gnesta Gniezno Gorzow Gölcük Göteborg Gresik Grogol Groningen Guangzhou 
   Guayaquil Gudbrandsdal Gyor
 
   Haderslev Hamar Hamburg Hammamet Hangzhou Hanko Hannover Harplinge 
@@ -172,7 +173,7 @@ my @SINGLE_WORDS = qw(
 
   Kadirli Kalisz Kalundborg Kalyani Kanpur Kaohsiung Karimun Karlovo 
   Karlsruhe Karsiyaka Kashi Kastamonu Katowice Kayseri Kediri 
-  Kedungwaru Keelung Kesten Ketsch Kiel Kielce Kiev Kirkeby 
+  Kedungwaru Keelung Kesten Ketsch Kiel Kielce Kiev Kinali Kirkeby 
   Kirklarelý Kirsehir Klabat Kocaeli Kolbotn Kolkata Konya Kornik 
   Kosice Kota Koycegiz Köln Krakow Kristiansand Kudus Kunshan 
   Kuopio Kusadasi Kütahya Kverndalen Kyustendil Kølabånn
@@ -217,9 +218,9 @@ my @SINGLE_WORDS = qw(
   Sunndalsøra Surabaya Suzhou Sydney Szczyrk Szeged Søborg Sørreisa
 
   Taicang Taichung Tainan Taizhou Takayama Tallinn Tambun Tarakan 
-  Targoviste Tarnów Täby Täfteå Tekýrdag Temuco Thane Thanjavur 
-  Thessaloniki Tianjin Timisoara Tire Tofta Tokyo Tomohon Tonya
-  Torino Toulouse Tours Trieste Trondheim Tromsø Taoyuan
+  Targoviste Tarnów Taskopru Täby Täfteå Tekýrdag Temuco Thane 
+  Thanjavur Thessaloniki Tianjin Timisoara Tire Tofta Tokyo Tomohon 
+  Tonya Torino Toulouse Tours Trieste Trondheim Tromsø Taoyuan
 
   Udaipur Uddevalla Umeå Uppsala Usak Utrecht
 
@@ -344,6 +345,7 @@ my %SINGLE_TYPOS =
   'Taipei City' => ['taipei'],
   Targoviste => ['tg'],
   Tarnów => ['tarnow'],
+  Taskopru => ['tasköprü'],
   Täfteå => ['taftea'],
   Tekýrdag => ['tekirdağ'],
   Thane => ['tane'],

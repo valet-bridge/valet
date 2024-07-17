@@ -1,22 +1,10 @@
 Global
 - TEAMS
-  - ABBR: There should be one CITY, nothing else
-  - Get list of clubs in city if any
-    - If none, call it City Bridge Club / ...
-    - If one, flag it, check manually, then fix automatically
-    - If more than one, flag it
   - MEET: If consistent with TITLE, move up and delete
-  - TWORD: Premier League is a valid Other team
   - ORIGIN: Not sure
 
 In team chains
-- Check CITY/CLUB/COUNTRY/LOCALITY/NATIONALITY/REGION/SPONSOR/UNI
-  against Matrix
 - See if we can eliminate same from TITLE
-- Mark off chains that have been abstracted, maybe in the stats
-  class itself (matched, unmatched)
-
-
 
 
 Dynamic consistency of chains: What occurs in raw.txt
