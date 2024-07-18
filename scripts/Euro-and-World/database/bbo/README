@@ -1,3 +1,6 @@
+3938: Events, expanding G, should then split on AGE and GENDER again
+Event::Postprocess, lines 125 and 151
+
 Global
 - TEAMS
   - MEET: If consistent with TITLE, move up and delete

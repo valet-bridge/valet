@@ -120,7 +120,7 @@ sub post_process_disambiguate
     }
     elsif ($letter eq 'G')
     {
-      $token0->set_general('SINGLETON', 'GENDER', 'Women');
+      $token0->set_general('SINGLETON', 'AGE', 'Juniors');
 
       # TODO Add a chain instead
       my $token1 = Token->new();
@@ -130,7 +130,7 @@ sub post_process_disambiguate
 
       my $token2 = Token->new();
       $token2->copy_origin_from($token0);
-      $token2->set_general('SINGLETON', 'AGE', 'Juniors');
+      $token2->set_general('SINGLETON', 'GENDER', 'Women');
       $chain->append($token2);
       $chain->complete_if_last_is(2, 'COMPLETE');
     }
@@ -146,7 +146,7 @@ sub post_process_disambiguate
     }
     elsif ($letter eq 'O')
     {
-      $token0->set_general('SINGLETON', 'GENDER', 'Open');
+      $token0->set_general('SINGLETON', 'AGE', 'Open');
 
       # TODO Add a chain instead
       my $token1 = Token->new();
@@ -156,7 +156,7 @@ sub post_process_disambiguate
 
       my $token2 = Token->new();
       $token2->copy_origin_from($token0);
-      $token2->set_general('SINGLETON', 'AGE', 'Open');
+      $token2->set_general('SINGLETON', 'GENDER', 'Open');
       $chain->append($token2);
       $chain->complete_if_last_is(2, 'COMPLETE');
     }

@@ -26,6 +26,7 @@ use Team::Interpret;
 use Event::Preprocess;
 use Event::Study;
 use Event::Postprocess;
+use Event::Interpret;
 
 use Scoring::Study;
 
@@ -45,6 +46,7 @@ use Histo;
 our $histo_team = Histo->new();
 our $histo_title = Histo->new();
 our $histo_event = Histo->new();
+my $histo_event_final = Histo->new();
 
 use Stats;
 my $stats_team = Stats->new();
@@ -63,6 +65,7 @@ my @RAW_FIELDS = qw(BBONO TITLE EVENT SCORING TEAMS);
 
 Team::Study::init_hashes();
 Team::Interpret::init_hashes();
+Event::Interpret::init_hashes();
 
 Connections::Matrix::set_matrix($whole);
 $whole->check_static_consistency();
@@ -185,6 +188,11 @@ while ($line = <$fh>)
 
   Event::Postprocess::post_process(\@chains_event);
 
+  Event::Interpret::interpret($whole, \@chains_event,
+   \$chunk{SCORING}, $chunk{BBONO});
+
+  refill_histo($histo_event_final, \@chains_event);
+
   $stats_event->incr(\@chains_event);
 
 
@@ -209,6 +217,10 @@ $stats_team->print("Team");
 print "\nTotal unknown teams: $unknown_events\n\n";
 
 $histo_event->print();
+
+print "\nHisto open part\n\n";
+$histo_event_final->print();
+
 $stats_event->print("Event");
 print_reduction_stats("Event", \@reduction_event_stats);
 print "\nTotal unknown events: $unknown_events\n\n";
@@ -223,6 +235,28 @@ print "\nTotal unknown titles $unknown_titles\n\n";
 
 
 exit;
+
+
+sub refill_histo
+{
+  my ($histo, $chains) = @_;
+  for my $chain (@$chains)
+  {
+    next if $chain->status() eq 'KILLED' ||
+      $chain->status() eq 'EXPLAINED';
+
+    for my $i (0 .. $chain->last())
+    {
+      my $token = $chain->check_out($i);
+      next if $token->category() eq 'SEPARATOR';
+if ($token->field() eq 'AGE')
+{
+  print "HERE\n";
+}
+      $histo->incr($token->field());
+    }
+  }
+}
 
 
 sub print_chunk

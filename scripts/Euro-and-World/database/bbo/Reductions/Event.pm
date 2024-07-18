@@ -408,7 +408,7 @@ our @EVENT_REDUCTIONS =
     COMPLETION => 1
   },
 
-  # As the previous one  makes a leading Age singleton, we fix this too.
+  # As the previous one makes a leading Age singleton, we fix this too.
   {
     PATTERN =>
     [

@@ -253,11 +253,11 @@ sub process_og_front
 
   if ($letter eq 'O')
   {
-    $token->set_singleton('GENDER', 'Open');
+    $token->set_singleton('AGE', 'Open');
   }
   else
   {
-    $token->set_singleton('GENDER', 'Women');
+    $token->set_singleton('AGE', 'Juniors');
   }
 
   my $token2 = Token->new();
@@ -270,11 +270,11 @@ sub process_og_front
 
   if ($letter eq 'O')
   {
-    $token3->set_singleton('AGE', 'Open');
+    $token3->set_singleton('GENDER', 'Open');
   }
   elsif ($letter eq 'G')
   {
-    $token3->set_singleton('AGE', 'Juniors');
+    $token3->set_singleton('GENDER', 'Women');
   }
   else
   {
@@ -324,7 +324,7 @@ sub process_g_front
   my $letter = uc($token0->value());
   die "Not G: $letter" unless $letter eq 'G';
 
-  $token0->set_singleton('GENDER', 'Women');
+  $token0->set_singleton('AGE', 'Juniors');
 
   my $token1 = Token->new();
   $token1->copy_origin_from($token0);
@@ -333,7 +333,7 @@ sub process_g_front
 
   my $token2 = Token->new();
   $token2->copy_origin_from($token0);
-  $token2->set_singleton('AGE', 'Juniors');
+  $token2->set_singleton('GENDER', 'Women');
   $chain->insert_at(2, $token2);
 }
 
