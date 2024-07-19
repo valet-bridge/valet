@@ -122,17 +122,16 @@ sub post_process_disambiguate
     {
       $token0->set_general('SINGLETON', 'AGE', 'Juniors');
 
-      # TODO Add a chain instead
-      my $token1 = Token->new();
-      $token1->copy_origin_from($token0);
-      $token1->set_separator('VIRTUAL');
-      $chain->append($token1);
-
       my $token2 = Token->new();
       $token2->copy_origin_from($token0);
       $token2->set_general('SINGLETON', 'GENDER', 'Women');
-      $chain->append($token2);
-      $chain->complete_if_last_is(2, 'COMPLETE');
+
+      my $chain2 = Chain->new();
+      $chain2->append($token2);
+      $chain->truncate_directly_before(1);
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+      $chain2->complete_if_last_is(0, 'EXPLAINED');
+      splice(@$chains, $cno+1, 0, $chain2);
     }
     elsif ($letter eq 'J')
     {
@@ -148,17 +147,16 @@ sub post_process_disambiguate
     {
       $token0->set_general('SINGLETON', 'AGE', 'Open');
 
-      # TODO Add a chain instead
-      my $token1 = Token->new();
-      $token1->copy_origin_from($token0);
-      $token1->set_separator('VIRTUAL');
-      $chain->append($token1);
-
       my $token2 = Token->new();
       $token2->copy_origin_from($token0);
-      $token2->set_general('SINGLETON', 'GENDER', 'Open');
-      $chain->append($token2);
-      $chain->complete_if_last_is(2, 'COMPLETE');
+      $token2->set_general('SINGLETON', 'GENDER', 'OPEN');
+
+      my $chain2 = Chain->new();
+      $chain2->append($token2);
+      $chain->truncate_directly_before(1);
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+      $chain2->complete_if_last_is(0, 'EXPLAINED');
+      splice(@$chains, $cno+1, 0, $chain2);
     }
     elsif ($letter eq 'P')
     {
