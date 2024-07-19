@@ -17,7 +17,7 @@ use Connections::Matrix;
 use Event::Ematch;
 
 my @ACCEPT_FIELDS = qw(AGE COLOR GENDER MOVEMENT 
-  PLACE WEEK WEEKDAY WEEKEND);
+  PLACE SCORING SECTION WEEK WEEKDAY WEEKEND);
 
 my @KILL_FIELDS = qw(ROOM);
 
@@ -56,6 +56,53 @@ sub post_process_single
     elsif (exists $KILL{$field0})
     {
       $chain->complete_if_last_is(0, 'KILLED');
+    }
+    elsif ($field0 eq 'BERTH' || $field0 eq 'DAY')
+    {
+      if ($token0->value() =~ /^\d+$/)
+      {
+        $chain->complete_if_last_is(0, 'EXPLAINED');
+      }
+      else
+      {
+        # Probably just 'Berth'.
+        $chain->complete_if_last_is(0, 'KILLED');
+      }
+    }
+    elsif ($field0 eq 'BOARDS')
+    {
+      if ($token0->value() =~ /^\d+-\d+$/)
+      {
+        $chain->complete_if_last_is(0, 'EXPLAINED');
+      }
+      else
+      {
+        # Probably just '16 boards'.
+        $chain->complete_if_last_is(0, 'KILLED');
+      }
+    }
+    elsif ($field0 eq 'PARTICLE')
+    {
+      if ($token0->value() =~ /^vs$/)
+      {
+        # Probably two teams that were recognized from TEAMS,
+        # leaving only the 'vs'.
+        $chain->complete_if_last_is(0, 'KILLED');
+      }
+    }
+    elsif ($field0 eq 'TIME')
+    {
+      if ($token0->value() eq 'Afternoon' ||
+          $token0->value() eq 'Evening' ||
+          $token0->value() eq 'Night')
+      {
+        $chain->complete_if_last_is(0, 'KILLED');
+      }
+      else
+      {
+        # Probably just '16 boards'.
+        $chain->complete_if_last_is(0, 'EXPLAINED');
+      }
     }
   }
 }

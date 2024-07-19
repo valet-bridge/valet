@@ -31,7 +31,7 @@ my @SINGLE_WORDS = qw(
   Rof Round
   Room Rof
   Section Segment Series Session Set Stage Stanza
-  Table Tempo
+  Table
   Week Weekend
 );
 
@@ -56,7 +56,7 @@ my %SINGLE_TYPOS =
   Section => ['seksjon', 'sektion'],
   Segment => ['seg', 'segm', 'segement', 'segemt', 'segmant',
     'segmen', 'segemnt', 'segmento', 'segments', 'segmetn', 'segmnet', 
-    'segnment', 'sgment', 'segt', 'sengemt', 'se', 'eg'],
+    'segnment', 'sgment', 'segt', 'sengemt', 'se', 'eg', 'tempo'],
   Series => ['seria'],
   Session => ['seesion', 'part', 'sesja', 'sess', 'serssion', 'sesion',
     'sesión', 'sesj', 'sesjon', 'sessió', 'sessión', 'ses', 'sesje',
