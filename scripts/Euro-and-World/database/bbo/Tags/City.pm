@@ -159,8 +159,8 @@ my @SINGLE_WORDS = qw(
   Fredrikstad Førde
 
   Garches Gdansk Gdynia Gelibolu Genoa Gent Gevgelija Geyve Giza Glasgow 
-  Gnesta Gniezno Gorzow Gölcük Göteborg Gresik Grogol Groningen Guangzhou 
-  Guayaquil Gudbrandsdal Gyor
+  Gnesta Gniezno Gorzow Gölcük Göteborg Gresik Grogol Groningen 
+  Guangdong Guangzhou Guayaquil Gudbrandsdal Gyor
 
   Haderslev Hamar Hamburg Hammamet Hangzhou Hanko Hannover Harplinge 
   Harstad Hatay Havirov Heledia Helsinki Hendek Herning Hillerød 

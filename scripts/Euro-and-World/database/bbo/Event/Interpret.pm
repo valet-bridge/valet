@@ -16,10 +16,15 @@ use lib './Connections';
 use Connections::Matrix;
 use Event::Ematch;
 
-my @ACCEPT_FIELDS = qw(AGE GENDER MOVEMENT);
+my @ACCEPT_FIELDS = qw(AGE COLOR GENDER MOVEMENT 
+  PLACE WEEK WEEKDAY WEEKEND);
+
+my @KILL_FIELDS = qw(ROOM);
+
 # ROUND SEGMENT SESSION STANZA TABLE
 
 my %ACCEPT = map { $_ => 1 } @ACCEPT_FIELDS;
+my %KILL = map { $_ => 1 } @KILL_FIELDS;
 
 
 # BBOVG numbers for which special occurrences are OK.
@@ -48,10 +53,10 @@ sub post_process_single
     {
       $chain->complete_if_last_is(0, 'EXPLAINED');
     }
-    # elsif ($field0 eq 'COLOR')
-    # {
-      # $chain->complete_if_last_is(0, 'KILLED');
-    # }
+    elsif (exists $KILL{$field0})
+    {
+      $chain->complete_if_last_is(0, 'KILLED');
+    }
   }
 }
 

@@ -501,14 +501,14 @@ our @EVENT_REDUCTIONS =
     METHOD => \&Patterns::Chainify::process_ambiguous_counter_exact,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 0,
-    COMPLETION => 1
+    COMPLETION => 0
   },
 
   # As the previous one may make a AGE/GENDER, we fix this too.
   {
     PATTERN =>
     [
-      { CATEGORY => ['SINGLETON'], FIELD => ['AGE', 'GENDER'] },
+      { CATEGORY => ['SINGLETON'], FIELD => ['AGE', 'GENDER'] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,

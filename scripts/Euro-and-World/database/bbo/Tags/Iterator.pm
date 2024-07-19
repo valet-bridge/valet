@@ -26,7 +26,7 @@ my @SINGLE_WORDS = qw(
   Group
   Half
   Match
-  Part Phase Place
+  Phase Place
   Quarter 
   Rof Round
   Room Rof
@@ -44,7 +44,6 @@ my %SINGLE_TYPOS =
   Half => ['hallf', 'hlf', 'halvleg', 'halv', 'lhf', 'mt', 'ha'],
   Match => ['m', 'mathc', 'kamp', 'incontro', 'matxh', 'macth',
     'meci', 'matches', 'mo', 'maych', 'mecz'],
-  Part => ['parte'],
   Phase => ['etap', 'fase'],
   Place => ['puesto', 'lugar'],
   Quarter => ['qtr', 'quaerter'],
@@ -52,7 +51,8 @@ my %SINGLE_TYPOS =
   Round => ['ronda', 'runde', 'runda', 'rundy', 'rnd', 'r', 'ound',
     'dg', 'devre', 'tour', 'rd', 'rounds', 'rouns', 'rueda', 'ruond',
     'rd', 'riund', 'rds', 'ound', 'ro', 'tound', 'tour', 'runder',
-    'rn',  'rond', 'ronud', 'roudn', 'turno', 'turul', 'turno'],
+    'rn',  'rond', 'ronud', 'roudn', 'turno', 'turul', 'turno',
+    'parte'],
   Section => ['seksjon', 'sektion'],
   Segment => ['seg', 'segm', 'segement', 'segemt', 'segmant',
     'segmen', 'segemnt', 'segmento', 'segments', 'segmetn', 'segmnet', 

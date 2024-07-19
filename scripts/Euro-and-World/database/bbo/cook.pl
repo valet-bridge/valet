@@ -249,7 +249,7 @@ sub refill_histo
     {
       my $token = $chain->check_out($i);
       next if $token->category() eq 'SEPARATOR';
-if ($token->field() eq 'AGE')
+if ($token->field() eq 'GENDER')
 {
   print "HERE\n";
 }

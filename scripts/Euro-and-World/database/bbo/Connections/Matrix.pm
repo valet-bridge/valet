@@ -108,7 +108,7 @@ my %COUNTRY_TO_CITY =
   Chile => ['paimado', 'santiago', 'temuco'],
   China => [
     'beijing', 'changzhou', 'chengdu', 'chongqing', 'dalian', 'dongguan',
-    'guangzhou', 'hangzhou', 'jiamusi', 'jianshe', 'jiangsu',
+    'guangdong', 'guangzhou', 'hangzhou', 'jiamusi', 'jianshe', 'jiangsu',
     'jinchang', 'jincheng', 'jinjiang', 'jiujiang', 'kunshan', 'lanzhou',
     'liushu', 'meilin qingcheng', 'nanchang', 'nanchong', 'nanning', 
     'ningbo', 'panzhihua', 'qingdao', 'sanya', 'shanghai', 'shaoguan', 
@@ -545,6 +545,7 @@ my %CITY_TO_CLUB =
   Gölcük => ['Gölcük Club'],
   Göteborg => ['BK Everfresh', 'BK Lyx'],
   Groningen => ['BC de Zeerob', 'Hok Studiecentrum'],
+  Guangdong => ['Guangdong Club'],
   Haderslev => ['Haderslev BC'],
   Hamar => ['Hamar BK'],
   Hamburg => ['Hanseatic Hamburg BC'],
