@@ -56,7 +56,7 @@ my %MULTI_TYPOS =
   Rof128 => ['round of 128', 'rof 128'],
   'Round-robin' => ['round robin', 'raound robin', 'r robin', 'r_robin',
     'roun robin', 'round roubin', 'round ronin', 'round bobin',
-    'r_r', 'grup maçlari'],
+    'r_r', 'grup maçlari', 'group stage'],
   Semifinal => ['semi final', 'semi finals', 'semi-fiinal', 
     's_f', 's.f.', 's f',
     'semi-final', 'semi-finals', 'round of 4', 'round-of-four',
