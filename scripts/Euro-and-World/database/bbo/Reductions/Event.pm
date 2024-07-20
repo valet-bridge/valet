@@ -73,6 +73,60 @@ our @EVENT_REDUCTIONS =
   },
 
 
+  # Dates also bind tightly.
+  # ------------------------
+
+  # Day Month Year
+  {
+    PATTERN =>
+    [
+      { CATEGORY => ['COUNTER'], FIELD => [qw(NUMERAL ORDINAL)] },
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => ['SINGLETON'], FIELD => ['MONTH'] },
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => ['SINGLETON'], FIELD => ['YEAR'] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&Patterns::Chainify::process_date,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
+  # Day Month
+  {
+    PATTERN =>
+    [
+      { CATEGORY => ['COUNTER'], FIELD => [qw(NUMERAL ORDINAL)] },
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => ['SINGLETON'], FIELD => ['MONTH'] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&Patterns::Chainify::process_day_month,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
+  # Month Year
+  {
+    PATTERN =>
+    [
+      { CATEGORY => ['SINGLETON'], FIELD => ['MONTH'] },
+      { CATEGORY => ['SEPARATOR'] },
+      { CATEGORY => ['SINGLETON'], FIELD => ['YEAR'] }
+    ],
+    ANCHOR => 'ANY',
+    KEEP_LAST => 0,
+    METHOD => \&Patterns::Chainify::process_month_year,
+    SPLIT_FRONT => 1,
+    SPLIT_BACK => 1,
+    COMPLETION => 1
+  },
+
+
   # Merge the simple counters (digits, letters).
   # --------------------------------------------
 
@@ -339,24 +393,6 @@ our @EVENT_REDUCTIONS =
     COMPLETION => 1
   },
 
-  # Day Month Year
-  {
-    PATTERN =>
-    [
-      { CATEGORY => ['COUNTER'], FIELD => [qw(NUMERAL ORDINAL)] },
-      { CATEGORY => ['SEPARATOR'] },
-      { CATEGORY => ['SINGLETON'], FIELD => ['MONTH'] },
-      { CATEGORY => ['SEPARATOR'] },
-      { CATEGORY => ['SINGLETON'], FIELD => ['YEAR'] }
-    ],
-    ANCHOR => 'ANY',
-    KEEP_LAST => 0,
-    METHOD => \&Patterns::Chainify::process_date,
-    SPLIT_FRONT => 1,
-    SPLIT_BACK => 1,
-    COMPLETION => 1
-  },
-
   # 1st half -> Half 1 (ITER COUNTER)
   {
     PATTERN =>
@@ -515,38 +551,6 @@ our @EVENT_REDUCTIONS =
     METHOD => \&Patterns::Chainify::process_general,
     SPLIT_FRONT => 1,
     SPLIT_BACK => 1,
-    COMPLETION => 1
-  },
-
-  # Day Month
-  {
-    PATTERN =>
-    [
-      { CATEGORY => ['COUNTER'], FIELD => [qw(NUMERAL ORDINAL)] },
-      { CATEGORY => ['SEPARATOR'] },
-      { CATEGORY => ['SINGLETON'], FIELD => ['MONTH'] }
-    ],
-    ANCHOR => 'EXACT',
-    KEEP_LAST => 0,
-    METHOD => \&Patterns::Chainify::process_day_month,
-    SPLIT_FRONT => 0,
-    SPLIT_BACK => 0,
-    COMPLETION => 1
-  },
-
-  # Month Year
-  {
-    PATTERN =>
-    [
-      { CATEGORY => ['SINGLETON'], FIELD => ['MONTH'] },
-      { CATEGORY => ['SEPARATOR'] },
-      { CATEGORY => ['SINGLETON'], FIELD => ['YEAR'] }
-    ],
-    ANCHOR => 'EXACT',
-    KEEP_LAST => 0,
-    METHOD => \&Patterns::Chainify::process_month_year,
-    SPLIT_FRONT => 0,
-    SPLIT_BACK => 0,
     COMPLETION => 1
   },
 

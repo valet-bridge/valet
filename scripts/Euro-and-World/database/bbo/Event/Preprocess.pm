@@ -154,7 +154,8 @@ sub split_on_singleton
         next unless $chain->category($index) eq 'SINGLETON';
 
         my $field = $chain->field($index);
-        next if ($field eq 'PARTICLE' || $field eq 'NUMERAL');
+        next if ($field eq 'PARTICLE' || $field eq 'NUMERAL' ||
+          $field eq 'MONTH' || $field eq 'YEAR');
         $chain->complete_if_last_is(0, 'COMPLETE');
 
 

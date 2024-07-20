@@ -124,6 +124,7 @@ sub split_on_dates
 
   my $regex1 = qr/(\d{4}[-._]\d{2}[-._]\d{2})/;
   my $regex2 = qr/(\d{4})[-._](\d{2})[-._](\d{2})/;
+  my $regex3 = qr/(\d{2})[-._](\d{2})[-._](\d{4})/;
 
   for my $i (reverse 0 .. $#$values)
   {
@@ -162,6 +163,14 @@ sub split_on_dates
     elsif ($values->[$i] =~ /^$regex2$/)
     {
       my ($year, $month, $day) = ($1, $2, $3);
+
+      $tags->[$i] = 'DATE';
+      $values->[$i] = "$year-$month-$day";
+      $texts->[$i] = $values->[$i];
+    }
+    elsif ($values->[$i] =~ /^$regex3$/)
+    {
+      my ($day, $month, $year) = ($1, $2, $3);
 
       $tags->[$i] = 'DATE';
       $values->[$i] = "$year-$month-$day";

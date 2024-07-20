@@ -151,6 +151,8 @@ sub event_specific_inline
   $text =~ s/^FO([\s-]|\z)/Final Open$1/;
   $text =~ s/^OF([\s-]|\z)/Open Final$1/;
 
+  $text =~ s/\s+/ /g;
+
   return $text;
 }
 
