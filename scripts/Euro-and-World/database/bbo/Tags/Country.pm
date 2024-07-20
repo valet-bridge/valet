@@ -28,7 +28,6 @@ my @MULTI_WORDS =
   'North America',
   'North Macedonia',
   'Northern Ireland',
-  'Republic of Ireland',
   'San Marino',
   'Saudi Arabia',
   'Serbia and Montenegro',
@@ -67,9 +66,9 @@ my %MULTI_TYPOS =
   'Northern Ireland' => ['northertn irelsnd', 'n irelena', 'n. ireland',
     'n.ireland', 'n ire', 'nor ire', 'north ire', 'northern irelnd',
     'n ireland'],
-  'Republic of Ireland' => ['rep. of ireland', 'rep of ireland', 'roi',
-    'rep ire', 'rep ireland', 'republic of irelend', 'reublic of ireland',
-    'r of ireland'],
+  Ireland => ['republic of ireland', 'rep. of ireland', 
+    'rep of ireland', 'roi', 'rep ire', 'rep ireland', 
+    'republic of irelend', 'reublic of ireland', 'r of ireland'],
   'San Marino' => ['san_marino', 'san  marino'],
   'Serbia and Montenegro' => ['serbia/mont', 'serbia&mon.', 's&mn'],
   'South Africa' => ['south frica'],
@@ -88,7 +87,7 @@ my @SINGLE_WORDS = qw(
   Finland France
   Germany Georgia Greece Guadeloupe Guernsey
   Hungary 
-  Iceland Indonesia Ireland Iraq Israel Italy
+  Iceland Indonesia Iraq Ireland Israel Italy
   Japan Jersey Jordan
   Kazakhstan Kenya Kuwait
   Latvia Lebanon Lichtenstein Lithuania Luxembourg 
@@ -139,8 +138,6 @@ my %SINGLE_TYPOS =
   Iceland => ['ice', 'islande'],
   India => ['indýa', 'hindusthan', 'hidusthan', 'indiaa'],
   Indonesia => ['timnas', 'ina'],
-  Ireland => ['roireland', 'irelnd', 'irelsnd', 'irlande',
-    'irelend', 'irelena', 'ire', 'eire'],
   Italy => ['italia', 'it', 'ita'],
   Israel => ['isreal', 'israil', 'isarel', 'israël', 'isr'],
   Jordan => ['jor'],
@@ -161,6 +158,8 @@ my %SINGLE_TYPOS =
   Philippines => ['philipppines', 'phillipina'],
   Poland => ['polen', 'pologne', 'polska', 'pol', 'polland'],
   Portugal => ['por', 'pl'],
+  Ireland => ['roireland', 'irelnd', 'irelsnd', 'irlande',
+    'irelend', 'irelena', 'ire', 'eire'],
   Reunion => ['réunion'],
   Romania => ['rumania', 'rum', 'rom'],
   Russia => ['russian', 'rus', 'rusia'],

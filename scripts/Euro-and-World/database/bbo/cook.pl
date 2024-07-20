@@ -150,6 +150,8 @@ while ($line = <$fh>)
 
   Team::Clean::clean_teams($whole, $chunk{TEAMS}, \%teams);
   my %chains_team;
+  my %team_countries = (TEAM1 => '', TEAM2 => '');
+
   for my $team (qw(TEAM1 TEAM2))
   {
     my $chain_team = Chain->new();
@@ -167,6 +169,8 @@ while ($line = <$fh>)
 
     Team::Interpret::interpret($whole, \@{$chains_team{$team}}, 
      \$chunk{SCORING}, $chunk{BBONO});
+
+    add_to_countries(\@{$chains_team{$team}}, $team, \%team_countries);
 
     $stats_team->incr(\@{$chains_team{$team}});
   }
@@ -189,7 +193,7 @@ while ($line = <$fh>)
   Event::Postprocess::post_process(\@chains_event);
 
   Event::Interpret::interpret($whole, \@chains_event,
-   \$chunk{SCORING}, $chunk{BBONO});
+    \%team_countries, \$chunk{SCORING}, $chunk{BBONO});
 
   refill_histo($histo_event_final, \@chains_event);
 
@@ -254,6 +258,31 @@ if ($token->field() eq 'MONTH_DAY')
   print "HERE\n";
 }
       $histo->incr($token->field());
+    }
+  }
+}
+
+
+sub add_to_countries
+{
+  my ($chains, $team, $countries) = @_;
+  for my $chain (@$chains)
+  {
+    next if $chain->status() eq 'KILLED';
+    for my $i (0 .. $chain->last())
+    {
+      my $token = $chain->check_out($i);
+      if ($token->field() eq 'COUNTRY')
+      {
+        if ($countries->{$team} ne '')
+        {
+          $countries->{$team} = '[multiple]';
+        }
+        else
+        {
+          $countries->{$team} = $token->value();
+        }
+      }
     }
   }
 }

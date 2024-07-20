@@ -171,12 +171,56 @@ sub post_process_some_iterators
 }
 
 
+sub post_process_countries
+{
+  my ($chains, $teams) = @_;
+
+  for my $chain (@$chains)
+  {
+    next if $chain->status() eq 'KILLED';
+    next unless $chain->last() == 0;
+
+    my $token = $chain->check_out(0);
+    my $field = $token->field();
+    next unless $field eq 'COUNTRY';
+
+    my $text = $token->text();
+    if (lc($text) eq 'fin')
+    {
+      # Normally 'Final', not 'Finland' in EVENT.
+      $token->set_general('SINGLETON', 'STAGE', 'Final');
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+      return;
+    }
+
+    my $value = $token->value();
+    if ($value eq $teams->{TEAM1} || $value eq $teams->{TEAM2})
+    {
+      $chain->complete_if_last_is(0, 'KILLED');
+    }
+    elsif ($value eq 'Bermuda')
+    {
+      # Almost always Bermuda Bowl.  Even in the one case where it
+      # isn't, it still is... (Year 2000).
+      $token->set_general('SINGLETON', 'TNAME', 'Bermuda Bowl');
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+    }
+    else
+    {
+      # It's a normal country.
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+    }
+  }
+}
+
+
 sub interpret
 {
-  my ($whole, $chains, $scoring, $bbono) = @_;
+  my ($whole, $chains, $teams, $scoring, $bbono) = @_;
 
   post_process_single($chains);
   post_process_some_iterators($chains);
+  post_process_countries($chains, $teams);
 }
 
 1;
