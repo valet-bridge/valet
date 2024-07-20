@@ -16,9 +16,9 @@ use lib './Connections';
 use Connections::Matrix;
 use Event::Ematch;
 
-my @ACCEPT_FIELDS = qw(AGE COLOR DATE GENDER MONTH_DAY MOVEMENT 
-  PLACE QUARTER SCORING SECTION STANZA WEEK WEEKDAY WEEKEND 
-  YEAR YEAR_MONTH);
+my @ACCEPT_FIELDS = qw(AGE COLOR CLUB DATE GENDER MONTH_DAY 
+  MOVEMENT PLACE QUARTER SCORING SECTION SET STANZA WEEK WEEKDAY 
+  WEEKEND YEAR YEAR_MONTH);
 
 my @KILL_FIELDS = qw(ROOM);
 
@@ -149,7 +149,10 @@ sub post_process_some_iterators
 
     my $token = $chain->check_out(0);
     my $field = $token->field();
-    next unless $field eq 'STANZA' || $field eq 'QUARTER';
+    next unless $field eq 'STANZA' || 
+      $field eq 'QUARTER' ||
+      $field eq 'SET';
+
     next unless lc($token->value()) eq lc($field);
 
     # So STANZA Stanza, or QUARTER Quarter.
@@ -214,6 +217,74 @@ sub post_process_countries
 }
 
 
+sub post_process_letters
+{
+  my ($chains) = @_;
+
+  my $chain = $chains->[0];
+  return if $chain->status() eq 'KILLED';
+  return unless $chain->last() == 0;
+
+  my $token = $chain->check_out(0);
+  return unless $token->category() eq 'AMBIGUOUS';
+  
+  my $field = $token->field();
+
+  if ($field eq 'G')
+  {
+    $token->set_general('SINGLETON', 'AGE', 'Juniors');
+
+    my $token1 = Token->new();
+    $token1->copy_origin_from($token);
+    $token1->set_general('SINGLETON', 'GENDER', 'Women');
+
+    my $chain1 = Chain->new();
+    $chain1->append($token1);
+    $chain1->complete_if_last_is(0, 'EXPLAINED');
+    splice(@$chains, 1, 0, $chain1);
+  }
+  elsif ($field eq 'J')
+  {
+    $token->set_general('SINGLETON', 'AGE', 'Juniors');
+  }
+  elsif ($field eq 'K')
+  {
+    $token->set_general('SINGLETON', 'AGE', 'Kids');
+  }
+  elsif ($field eq 'O')
+  {
+    $token->set_general('SINGLETON', 'AGE', 'Open');
+
+    my $token1 = Token->new();
+    $token1->copy_origin_from($token);
+    $token1->set_general('SINGLETON', 'GENDER', 'Open');
+
+    my $chain1 = Chain->new();
+    $chain1->append($token1);
+    $chain1->complete_if_last_is(0, 'EXPLAINED');
+    splice(@$chains, 1, 0, $chain1);
+  }
+  elsif ($field eq 'S')
+  {
+    $token->set_general('SINGLETON', 'AGE', 'Seniors');
+  }
+  elsif ($field eq 'W')
+  {
+    $token->set_general('SINGLETON', 'GENDER', 'Women');
+  }
+  elsif ($field eq 'Y')
+  {
+    $token->set_general('SINGLETON', 'AGE', 'Youngsters');
+  }
+  else
+  {
+    die "Unknown ambiguous letter: $field";
+  }
+
+  $chain->complete_if_last_is(0, 'EXPLAINED');
+}
+
+
 sub interpret
 {
   my ($whole, $chains, $teams, $scoring, $bbono) = @_;
@@ -221,6 +292,7 @@ sub interpret
   post_process_single($chains);
   post_process_some_iterators($chains);
   post_process_countries($chains, $teams);
+  post_process_letters($chains);
 }
 
 1;

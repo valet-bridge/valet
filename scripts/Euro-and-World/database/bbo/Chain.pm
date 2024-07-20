@@ -459,7 +459,7 @@ sub print
   elsif ($status eq 'COMPLETE' && $prefix =~ /^EVENT/)
   {
     print "COMPLETE_CHAIN ", $l+1, ": $prefix, ",
-      $self->check_out(0)-> str(0, $prefix), "\n";
+      $self->check_out(0)->str(0, $prefix), "\n";
   }
 
   for my $i (0 .. $l)

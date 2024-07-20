@@ -1,13 +1,5 @@
-EVENT_COUNTRY
-6831 Bermuda (actually OK, but also Bermuda Bowl)
-6836 6851
-
-11141 Bermuda -> BB
-11142 11149 11151 11154 11155 11164 11177 11189 11192 
-
-Some countries are really teams, including 'v'
-Single country tends to be where they played,
-  but Bermuda can be place or BB
+SERIES: Can go if SERIES Series
+ORG: OK as such
 
 Global
 - TEAMS
