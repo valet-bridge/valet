@@ -1,5 +1,7 @@
-3938: Events, expanding G, should then split on AGE and GENDER again
-Event::Postprocess, lines 125 and 151
+QUARTER:
+2 of 4 -> 2
+Quarter (once or twice), really "Final quarter" -> QUARTER last
+Quarter last = 4
 
 Global
 - TEAMS

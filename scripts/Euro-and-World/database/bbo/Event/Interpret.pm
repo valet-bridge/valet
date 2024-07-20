@@ -17,7 +17,8 @@ use Connections::Matrix;
 use Event::Ematch;
 
 my @ACCEPT_FIELDS = qw(AGE COLOR DATE GENDER MONTH_DAY MOVEMENT 
-  PLACE SCORING SECTION WEEK WEEKDAY WEEKEND YEAR YEAR_MONTH);
+  PLACE QUARTER SCORING SECTION STANZA WEEK WEEKDAY WEEKEND 
+  YEAR YEAR_MONTH);
 
 my @KILL_FIELDS = qw(ROOM);
 
@@ -134,11 +135,48 @@ sub find_field_in_chains
 }
 
 
+sub post_process_some_iterators
+{
+  my ($chains) = @_;
+
+  for my $cno (0 .. $#$chains)
+  {
+    next unless $cno > 0; # Skip the first chain.
+
+    my $chain = $chains->[$cno];
+    next if $chain->status() eq 'KILLED';
+    next unless $chain->last() == 0;
+
+    my $token = $chain->check_out(0);
+    my $field = $token->field();
+    next unless $field eq 'STANZA' || $field eq 'QUARTER';
+    next unless lc($token->value()) eq lc($field);
+
+    # So STANZA Stanza, or QUARTER Quarter.
+    # Could be that there is a Final in the chain before.
+
+    my $chain0 = $chains->[$cno-1];
+    next unless $chain0->last() == 0;
+
+    my $token0 = $chain0->check_out(0);
+    next unless $token0->value() eq 'Final';
+
+    # So 'Final', 'Stanza' without any number.
+    $token->set_general('MARKER', $field, 'last');
+    $chain->complete_if_last_is(0, 'EXPLAINED');
+
+    splice(@$chains, $cno-1, 1);
+    return;
+  }
+}
+
+
 sub interpret
 {
   my ($whole, $chains, $scoring, $bbono) = @_;
 
   post_process_single($chains);
+  post_process_some_iterators($chains);
 }
 
 1;
