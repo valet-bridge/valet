@@ -262,7 +262,7 @@ our @EVENT_REDUCTIONS =
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
     METHOD => \&Patterns::Chainify::process_merge_0colon2,
-    SPLIT_FRONT => 1,
+    SPLIT_FRONT => 0,
     SPLIT_BACK => 1,
     COMPLETION => 1
   },

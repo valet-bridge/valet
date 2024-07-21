@@ -31,7 +31,7 @@ my %MULTI_TYPOS =
   'Pre-Quarterfinal' => ['pre qf', 'pr qf'],
   Qualifying => ['qualification for', 'qualification to',
     'wbg qualification', 'qualification to', 'qualifying swiss',
-    'playoff qual'],
+    'playoff qual', 'preliminary rounds'],
   Quarterfinal => ['quarter final', 'quarter finals', 
     'quarter-final', 'quarter-finals', 'qua fin', 'q-final', 'q_f',
     'quater final', 'quater finals', 'round of 8', 'rd of 8', 'r of 8',

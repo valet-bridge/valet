@@ -17,7 +17,7 @@ use Connections::Matrix;
 use Event::Ematch;
 
 my @ACCEPT_FIELDS = qw(AGE CITY COLOR CLUB DATE FORM GENDER HALF
-  MONTH_DAY MOVEMENT ORIGIN PLACE QUARTER SCORING SECTION SESSION
+  MONTH_DAY MOVEMENT ORIGIN PLACE QUARTER ROUND SCORING SECTION SESSION
   SET SPONSOR STAGE STANZA WEEK WEEKDAY WEEKEND YEAR YEAR_MONTH);
 
 my @KILL_FIELDS = qw(ROOM);
@@ -39,7 +39,7 @@ sub init_hashes
 
 sub post_process_single
 {
-  my ($chains) = @_;
+  my ($chains, $bbono) = @_;
 
   # Check for a last chain with only a numeral.
   for my $chain (@$chains)
@@ -67,6 +67,13 @@ sub post_process_single
       else
       {
         # Probably just 'Berth'.
+        $chain->complete_if_last_is(0, 'KILLED');
+      }
+    }
+    elsif ($field0 eq 'ROUND')
+    {
+      if (exists $EVENT_MATCHES{$bbono})
+      {
         $chain->complete_if_last_is(0, 'KILLED');
       }
     }
@@ -151,6 +158,7 @@ sub post_process_some_iterators
     my $field = $token->field();
     next unless $field eq 'STANZA' || 
       $field eq 'QUARTER' ||
+      $field eq 'ROUND' ||
       $field eq 'SESSION' ||
       $field eq 'SET';
 
@@ -290,7 +298,7 @@ sub interpret
 {
   my ($whole, $chains, $teams, $scoring, $bbono) = @_;
 
-  post_process_single($chains);
+  post_process_single($chains, $bbono);
   post_process_some_iterators($chains);
   post_process_countries($chains, $teams);
   post_process_letters($chains);
