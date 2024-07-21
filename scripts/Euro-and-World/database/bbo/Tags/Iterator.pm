@@ -17,6 +17,7 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  Match => ['mecz o']
 );
 
 my @SINGLE_WORDS = qw(
@@ -43,7 +44,7 @@ my %SINGLE_TYPOS =
     'istis', 'pool', 'poule'],
   Half => ['hallf', 'hlf', 'halvleg', 'halv', 'lhf', 'mt', 'ha'],
   Match => ['m', 'mathc', 'kamp', 'incontro', 'matxh', 'macth',
-    'meci', 'matches', 'mo', 'maych', 'mecz'],
+    'meci', 'matches', 'mo', 'maych', 'mecz', 'mac'],
   Phase => ['etap', 'fase'],
   Place => ['puesto', 'lugar'],
   Quarter => ['qtr', 'quaerter'],

@@ -13,9 +13,7 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
-  'Closed Room',
   'Knock-out',
-  'Open Room',
   'Pre-Quarterfinal',
   'Round-robin'
 );
@@ -24,14 +22,11 @@ my %MULTI_TYPOS =
 (
   Bronze => ['third place', '3rd place', 'bronze-finals', 
     'bronze playoff', 'bronze match', 'small final'],
-  'Closed Room' => ['closed rm'],
   'Elimination' => ['head to head'],
   'Final' => ['gran final', 'super final', 'final phase', 'fase final',
     'playoff final', 'playoffs final', 'final poule', 'phase finale',
     'f i n a l', 'fin als'],
   'Knock-out' => ['knock-outs', 'knock out', 'k _ o'],
-  Match => ['mecz o'],
-  'Open Room' => ['open rm', 'room 1', 'or'],
   Playoff => ['play offs', 'play-off', 'play off', 'play_off'],
   'Pre-Quarterfinal' => ['pre qf', 'pr qf'],
   Qualifying => ['qualification for', 'qualification to',
@@ -96,7 +91,6 @@ my %SINGLE_TYPOS =
     'slutspil', 'slutspillet', 'superfinal', 'finalen'],
   'Knock-out' => ['knockour', 'knockout', 'ko', 'kostage', 'knockouts',
     'knock'],
-  Match => ['mac'],
   Playoff => ['playoffs', 'po'],
   Qualifying => ['qualification', 'qualifications', 'qualif',
     'qualifier', 'qalifyng', 'qualy', 'qualifikation', 'qual',

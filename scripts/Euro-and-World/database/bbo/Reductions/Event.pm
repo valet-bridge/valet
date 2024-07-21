@@ -540,11 +540,11 @@ our @EVENT_REDUCTIONS =
     COMPLETION => 0
   },
 
-  # As the previous one may make a AGE/GENDER, we fix this too.
+  # As the previous one may make a AGE/GENDER/STAGE, we fix this too.
   {
     PATTERN =>
     [
-      { CATEGORY => ['SINGLETON'], FIELD => ['AGE', 'GENDER'] }
+      { CATEGORY => ['SINGLETON'], FIELD => ['AGE', 'GENDER', 'STAGE'] }
     ],
     ANCHOR => 'ANY',
     KEEP_LAST => 0,
