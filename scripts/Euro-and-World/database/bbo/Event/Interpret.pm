@@ -29,11 +29,11 @@ my %KILL = map { $_ => 1 } @KILL_FIELDS;
 
 
 # BBOVG numbers for which special occurrences are OK.
-my %EVENT_MATCHES;
+my %EVENT_MATCHES_ROUND;
 
 sub init_hashes
 {
-  Event::Ematch::set_ematch(\%EVENT_MATCHES);
+  Event::Ematch::set_ematch_round(\%EVENT_MATCHES_ROUND);
 }
 
 
@@ -50,7 +50,12 @@ sub post_process_single
     my $token0 = $chain->check_out(0);
     my $field0 = $token0->field();
 
-    if (exists $ACCEPT{$field0})
+    if ($field0 eq 'ROUND' &&
+      exists $EVENT_MATCHES_ROUND{$bbono})
+    {
+      $chain->complete_if_last_is(0, 'KILLED');
+    }
+    elsif (exists $ACCEPT{$field0})
     {
       $chain->complete_if_last_is(0, 'EXPLAINED');
     }
@@ -67,13 +72,6 @@ sub post_process_single
       else
       {
         # Probably just 'Berth'.
-        $chain->complete_if_last_is(0, 'KILLED');
-      }
-    }
-    elsif ($field0 eq 'ROUND')
-    {
-      if (exists $EVENT_MATCHES{$bbono})
-      {
         $chain->complete_if_last_is(0, 'KILLED');
       }
     }
@@ -159,6 +157,7 @@ sub post_process_some_iterators
     next unless $field eq 'STANZA' || 
       $field eq 'QUARTER' ||
       $field eq 'ROUND' ||
+      $field eq 'SEGMENT' ||
       $field eq 'SESSION' ||
       $field eq 'SET';
 
