@@ -17,8 +17,9 @@ use Connections::Matrix;
 use Event::Ematch;
 
 my @ACCEPT_FIELDS = qw(AGE CITY COLOR CLUB DATE FORM GENDER HALF
-  MONTH_DAY MOVEMENT ORIGIN PLACE QUARTER ROUND SCORING SECTION SESSION
-  SET SPONSOR STAGE STANZA WEEK WEEKDAY WEEKEND YEAR YEAR_MONTH);
+  MONTH_DAY MOVEMENT ORIGIN PLACE QUARTER ROUND SCORING SECTION 
+  SEGMENT SESSION SET SPONSOR STAGE STANZA WEEK WEEKDAY WEEKEND 
+  YEAR YEAR_MONTH);
 
 my @KILL_FIELDS = qw(ROOM);
 
@@ -30,10 +31,12 @@ my %KILL = map { $_ => 1 } @KILL_FIELDS;
 
 # BBOVG numbers for which special occurrences are OK.
 my %EVENT_MATCHES_ROUND;
+my %EVENT_MATCHES_SEGMENT;
 
 sub init_hashes
 {
   Event::Ematch::set_ematch_round(\%EVENT_MATCHES_ROUND);
+  Event::Ematch::set_ematch_segment(\%EVENT_MATCHES_SEGMENT);
 }
 
 
@@ -52,6 +55,11 @@ sub post_process_single
 
     if ($field0 eq 'ROUND' &&
       exists $EVENT_MATCHES_ROUND{$bbono})
+    {
+      $chain->complete_if_last_is(0, 'KILLED');
+    }
+    elsif ($field0 eq 'SEGMENT' &&
+      exists $EVENT_MATCHES_SEGMENT{$bbono})
     {
       $chain->complete_if_last_is(0, 'KILLED');
     }
