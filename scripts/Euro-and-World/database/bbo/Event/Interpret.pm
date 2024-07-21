@@ -17,8 +17,8 @@ use Connections::Matrix;
 use Event::Ematch;
 
 my @ACCEPT_FIELDS = qw(AGE CITY COLOR CLUB DATE FORM GENDER HALF
-  MONTH_DAY MOVEMENT ORIGIN PLACE QUARTER SCORING SECTION SET SPONSOR 
-  STAGE STANZA WEEK WEEKDAY WEEKEND YEAR YEAR_MONTH);
+  MONTH_DAY MOVEMENT ORIGIN PLACE QUARTER SCORING SECTION SESSION
+  SET SPONSOR STAGE STANZA WEEK WEEKDAY WEEKEND YEAR YEAR_MONTH);
 
 my @KILL_FIELDS = qw(ROOM);
 
@@ -151,6 +151,7 @@ sub post_process_some_iterators
     my $field = $token->field();
     next unless $field eq 'STANZA' || 
       $field eq 'QUARTER' ||
+      $field eq 'SESSION' ||
       $field eq 'SET';
 
     next unless lc($token->value()) eq lc($field);

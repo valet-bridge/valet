@@ -17,6 +17,8 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  Afternoon => ['afternoon session'],
+  Night => ['night session'],
   Summer => ['summer time']
 );
 
