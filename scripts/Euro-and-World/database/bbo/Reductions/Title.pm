@@ -264,7 +264,7 @@ our @TITLE_REDUCTIONS =
       { CATEGORY => ['AMBIGUOUS'] },
     ],
     ANCHOR => 'EXACT',
-    KEEP_LAST => 0,
+    KEEP_LAST => 1,
     METHOD => \&Patterns::Chainify::process_general,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,

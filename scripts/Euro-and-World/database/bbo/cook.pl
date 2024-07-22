@@ -16,6 +16,7 @@ use lib './Patterns';
 use Title::Study;
 use Title::Preprocess;
 use Title::Postprocess;
+use Title::Interpret;
 
 use Team::Clean;
 use Team::Study;
@@ -45,6 +46,7 @@ $whole->init_hashes();
 use Histo;
 our $histo_team = Histo->new();
 our $histo_title = Histo->new();
+my $histo_title_final = Histo->new();
 our $histo_event = Histo->new();
 my $histo_event_final = Histo->new();
 
@@ -135,6 +137,11 @@ while ($line = <$fh>)
     0, \@reduction_title_stats);
 
   Title::Postprocess::post_process(\@chains_title);
+
+  Title::Interpret::interpret($whole, \@chains_title,
+    \$chunk{SCORING}, $chunk{BBONO});
+
+  refill_histo($histo_title_final, \@chains_title);
 
   $stats_title->incr(\@chains_title);
 
@@ -230,6 +237,10 @@ print_reduction_stats("Event", \@reduction_event_stats);
 print "\nTotal unknown events: $unknown_events\n\n";
 
 $histo_title->print();
+
+print "\nHisto open part\n\n";
+$histo_title_final->print();
+
 $stats_title->print("Title");
 print_reduction_stats("Title", \@reduction_title_stats);
 print "\nTotal unknown titles $unknown_titles\n\n";
@@ -255,7 +266,7 @@ sub refill_histo
       next if $token->category() eq 'SEPARATOR';
 if ($token->field() eq 'MONTH_DAY')
 {
-  print "HERE\n";
+  # print "HERE\n";
 }
       $histo->incr($token->field());
     }

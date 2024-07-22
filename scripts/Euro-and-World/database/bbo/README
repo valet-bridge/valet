@@ -1,3 +1,24 @@
+From TITLE
+- Make a full map of fields TEAM1, TEAM2, CAPTAIN, maybe COUNTRY
+- Also of @team1, @team2
+- Check that TEAM1 is consistent with @team1 or @team2, and vice versa
+- Only if there's nothing to delete, look at CAPTAIN, COUNTRY
+- Same thing
+- Flag matches
+
+First chain
+- First token: ORDINAL or ROMAN or perhaps NUMERAL
+- Special field TINST, maybe always as an ordinal
+
+Maybe only output BBONO if there is at least one reason (open,
+completed) to do so.  Cut down on file size.
+
+
+TITLE:
+TABLE: Table -> can always delete, but keep numbesr
+PARTICLE: Can delete as very first thing VS
+
+
 GROUP: Group is often Round-robin
 1A of 11 can come apart again into Group A | 1 of 11 (just a counter,
 maybe called GENERIC).
