@@ -9,7 +9,7 @@ use utf8;
 use open ':std', ':encoding(UTF-8)';
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(interpret);
+our @EXPORT = qw(interpret deteam);
 
 use lib './Connections';
 
@@ -90,11 +90,91 @@ sub post_process_single
 }
 
 
+# Fields that appear in title teams.
+
+my %TEAM_FIELDS = 
+(
+  AGE => 1,
+  CAPTAIN => 1,
+  CITY => 1,
+  COUNTRY => 1,
+  GENDER => 1,
+  REGION => 1,
+  SPONSOR => 1
+);
+
+sub post_process_title_teams
+{
+  my ($chains, $teams, $bbono) = @_;
+
+  my %matches = (TEAM1 => 0, TEAM2 => 0);
+  my %counts = (TEAM1 => 0, TEAM2 => 0);
+
+  for my $chain (@$chains)
+  {
+    next if $chain->status() eq 'KILLED' || $chain->status() eq 'EXPLAINED';
+    next unless $chain->last() == 0;
+
+    my $token = $chain->check_out(0);
+    my $field = $token->field();
+    next unless $field =~ /^(TEAM\d)_(.*)$/;
+
+    my ($team, $main) = ($1, $2);
+    $counts{$team}++;
+    for my $t (qw(TEAM1 TEAM2))
+    {
+      next unless exists $teams->{$t}{$main};
+      my $found = 0;
+      for my $entry (@{$teams->{$t}{$main}})
+      {
+        if (lc($token->value()) eq lc($entry))
+        {
+          $found = 1;
+          last;
+        }
+      }
+
+      $matches{$t}++ if $found;
+    }
+  }
+
+  return unless $counts{TEAM1} > 0 || $counts{TEAM2} > 0;
+
+  if (($matches{TEAM1} == $counts{TEAM1} &&
+       $matches{TEAM2} == $counts{TEAM2})  ||
+      ($matches{TEAM1} == $counts{TEAM2} &&
+       $matches{TEAM2} == $counts{TEAM1}))
+  {
+    # Perfect matches.
+    for my $chain (@$chains)
+    {
+      next if $chain->status() eq 'KILLED' || 
+        $chain->status() eq 'EXPLAINED';
+      next unless $chain->last() == 0;
+
+      my $token = $chain->check_out(0);
+      my $field = $token->field();
+      next unless $field =~ /^(TEAM\d)_(.*)$/;
+
+      $chain->complete_if_last_is(0, 'KILLED');
+    }
+  }
+}
+
+
 sub interpret
 {
   my ($whole, $chains, $scoring, $bbono) = @_;
 
   post_process_single($chains, $scoring, $bbono);
+}
+
+
+sub deteam
+{
+  my ($chains, $teams, $bbono) = @_;
+
+  post_process_title_teams($chains, $teams, $bbono);
 }
 
 1;

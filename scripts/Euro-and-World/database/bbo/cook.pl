@@ -149,10 +149,6 @@ while ($line = <$fh>)
   Title::Interpret::interpret($whole, \@chains_title,
     \$teams{SCORING}, $chunk{BBONO});
 
-  refill_histo($histo_title_final, \@chains_title);
-
-  $stats_title->incr(\@chains_title);
-
 
   # TEAMS
 
@@ -214,9 +210,17 @@ while ($line = <$fh>)
       chains_done(\@chains_event));
 
 
+  # Look for teams in the title.
+
   my %team_record;
   make_record($chains_team{TEAM1}, \%{$team_record{TEAM1}});
   make_record($chains_team{TEAM2}, \%{$team_record{TEAM2}});
+
+  Title::Interpret::deteam(\@chains_title, \%team_record, $chunk{BBONO});
+
+  refill_histo($histo_title_final, \@chains_title);
+
+  $stats_title->incr(\@chains_title);
 
 
   if ($print_chains)
