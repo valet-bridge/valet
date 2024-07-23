@@ -10,9 +10,6 @@ First chain
 - First token: ORDINAL or ROMAN or perhaps NUMERAL
 - Special field TINST, maybe always as an ordinal
 
-Maybe only output BBONO if there is at least one reason (open,
-completed) to do so.  Cut down on file size.
-
 
 TITLE:
 TABLE: Table -> can always delete, but keep numbesr

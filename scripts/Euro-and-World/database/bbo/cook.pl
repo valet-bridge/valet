@@ -38,6 +38,7 @@ use Reductions::Event;
 use Reductions::Title;
 
 use Chain;
+use Util;
 
 use Whole;
 my $whole = Whole->new();
@@ -66,6 +67,7 @@ my $print_chains = 1; # 1 if we dump results for further analysis
 my @RAW_FIELDS = qw(BBONO TITLE EVENT SCORING TEAMS);
 
 Team::Study::init_hashes();
+Title::Interpret::init_hashes();
 Team::Interpret::init_hashes();
 Event::Interpret::init_hashes();
 
@@ -122,6 +124,12 @@ while ($line = <$fh>)
   }
 
 
+  # SCORING
+
+  my %teams;
+  Scoring::Study::study($chunk{SCORING}, \%teams, $chunk{BBONO});
+
+
   # TITLE
 
   my $chain_title = Chain->new();
@@ -139,18 +147,11 @@ while ($line = <$fh>)
   Title::Postprocess::post_process(\@chains_title);
 
   Title::Interpret::interpret($whole, \@chains_title,
-    \$chunk{SCORING}, $chunk{BBONO});
+    \$teams{SCORING}, $chunk{BBONO});
 
   refill_histo($histo_title_final, \@chains_title);
 
   $stats_title->incr(\@chains_title);
-
-
-  # SCORING
-
-  my %teams;
-  Scoring::Study::study($chunk{SCORING}, \%teams, $chunk{BBONO});
-
 
 
   # TEAMS
@@ -205,6 +206,17 @@ while ($line = <$fh>)
   refill_histo($histo_event_final, \@chains_event);
 
   $stats_event->incr(\@chains_event);
+
+
+  next if (chains_done(\@chains_title) &&
+      chains_done($chains_team{TEAM1}) &&
+      chains_done($chains_team{TEAM2}) &&
+      chains_done(\@chains_event));
+
+
+  my %team_record;
+  make_record($chains_team{TEAM1}, \%{$team_record{TEAM1}});
+  make_record($chains_team{TEAM2}, \%{$team_record{TEAM2}});
 
 
   if ($print_chains)
@@ -296,6 +308,18 @@ sub add_to_countries
       }
     }
   }
+}
+
+
+sub chains_done
+{
+  my ($chains) = @_;
+  for my $chain (@$chains)
+  {
+    my $status = $chain->status();
+    return 0 if $status eq 'OPEN' || $status eq 'COMPLETE';
+  }
+  return 1; # KILLED or EXPLAINED
 }
 
 

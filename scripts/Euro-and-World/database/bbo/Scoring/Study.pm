@@ -21,11 +21,11 @@ sub study
 
   if ($text eq 'I')
   {
-    $result->{SCORING} = 'IMPs';
+    $result->{SCORING} = 'IMP';
   }
   elsif ($text eq 'P')
   {
-    $result->{SCORING} = 'Pairs';
+    $result->{SCORING} = 'MP';
   }
   elsif ($text eq 'B')
   {

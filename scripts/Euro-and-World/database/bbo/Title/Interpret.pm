@@ -15,6 +15,7 @@ use lib './Connections';
 
 use Connections::Matrix;
 use Title::Tmatch;
+use Util;
 
 my @ACCEPT_FIELDS = qw(AGE CITY CLUB COUNTRY DATE DATE_START DATE_END
   DAY FORM FLIGHT GENDER GROUP LOCALITY MATCH MEET MONTH MOVEMENT 
@@ -30,16 +31,20 @@ my %KILL = map { $_ => 1 } @KILL_FIELDS;
 
 # BBOVG numbers for which special occurrences are OK.
 my %TITLE_MATCHES_ROUND;
+my %TITLE_MATCHES_SCORING;
+my %TITLE_MATCHES_INTUIT;
 
 sub init_hashes
 {
   Title::Tmatch::set_tmatch_round(\%TITLE_MATCHES_ROUND);
+  Title::Tmatch::set_tmatch_scoring(\%TITLE_MATCHES_SCORING);
+  Title::Tmatch::set_tmatch_intuit(\%TITLE_MATCHES_INTUIT);
 }
 
 
 sub post_process_single
 {
-  my ($chains, $bbono) = @_;
+  my ($chains, $scoring, $bbono) = @_;
 
   # Check for a last chain with only a numeral.
   for my $chain (@$chains)
@@ -53,6 +58,24 @@ sub post_process_single
     if ($field0 eq 'ROUND' &&
       exists $TITLE_MATCHES_ROUND{$bbono})
     {
+      $chain->complete_if_last_is(0, 'KILLED');
+    }
+    elsif ($field0 eq 'SCORING')
+    {
+      my $full = $token0->value();
+      my $short = scoring_full_to_short($full);
+      if ($short ne $$scoring)
+      {
+        if (exists $TITLE_MATCHES_SCORING{$bbono})
+        {
+          $$scoring = $short;
+        }
+        elsif (! exists $TITLE_MATCHES_INTUIT{$bbono})
+        {
+          warn "$bbono: Got $full -> $short, expected $$scoring";
+        }
+      }
+
       $chain->complete_if_last_is(0, 'KILLED');
     }
     elsif (exists $ACCEPT{$field0})
@@ -71,7 +94,7 @@ sub interpret
 {
   my ($whole, $chains, $scoring, $bbono) = @_;
 
-  post_process_single($chains, $bbono);
+  post_process_single($chains, $scoring, $bbono);
 }
 
 1;

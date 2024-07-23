@@ -12,6 +12,7 @@ use Exporter;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(ordinal_to_numeral ordinalize unteam 
+  scoring_full_to_short 
   split_on_dates split_on_capitals split_on_multi append_token 
   singleton_numeral singleton_non_tag_matches singleton_tag_matches
   make_record);
@@ -85,6 +86,24 @@ sub unteam
   $res =~ s/\Q$team1\E//i if defined $team1 && length($team1) > 1;
   $res =~ s/\Q$team2\E//i if defined $team2 && length($team2) > 1;
   return $res;
+}
+
+
+my %SCORING_FULL_TO_SHORT = (
+  BAM => 'BAM',
+  IMP => 'IMP',
+  'IMPs Across the Field' => 'IAF',
+  MP => 'MP',
+  Patton => 'Patton'
+);
+
+sub scoring_full_to_short
+{
+  my $full = pop;
+  die "No full scoring $full" unless 
+    exists $SCORING_FULL_TO_SHORT{$full};
+  return $SCORING_FULL_TO_SHORT{$full};
+
 }
 
 
