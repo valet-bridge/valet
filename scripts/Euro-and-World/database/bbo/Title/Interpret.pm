@@ -205,6 +205,26 @@ sub post_process_captains
 }
 
 
+sub post_process_leading_number
+{
+  my ($chains, $teams, $bbono) = @_;
+
+  return unless $#$chains >= 0;
+  my $chain = $chains->[0];
+
+  return if $chain->status() eq 'KILLED' || $chain->status() eq 'EXPLAINED';
+  return unless $chain->last() == 0;
+
+  my $token = $chain->check_out(0);
+  my $field = $token->field();
+  if ($field eq 'NUMERAL' || $field eq 'ORDINAL' || $field eq 'ROMAN')
+  {
+    $token->set_general('COUNTER', 'ORDINAL', $token->value());
+    $chain->complete_if_last_is(0, 'EXPLAINED');
+  }
+}
+
+
 sub interpret
 {
   my ($whole, $chains, $scoring, $bbono) = @_;
@@ -219,6 +239,7 @@ sub deteam
 
   post_process_title_teams($chains, $teams, $bbono);
   post_process_captains($chains, $bbono);
+  post_process_leading_number($chains, $bbono);
 }
 
 1;
