@@ -103,12 +103,27 @@ my %TEAM_FIELDS =
   SPONSOR => 1
 );
 
+
+sub field_found_in
+{
+  my ($value, $field, $list) = @_;
+
+  return 0 unless exists $list->{$field};
+  for my $entry (@{$list->{$field}})
+  {
+    return 1 if $value eq lc($entry);
+  }
+  return 0;
+}
+
+
 sub post_process_title_teams
 {
   my ($chains, $teams, $bbono) = @_;
 
   my %matches = (TEAM1 => 0, TEAM2 => 0);
   my %counts = (TEAM1 => 0, TEAM2 => 0);
+  my $captain_no = 1;
 
   for my $chain (@$chains)
   {
@@ -118,24 +133,25 @@ sub post_process_title_teams
     {
       my $token = $chain->check_out($i);
       my $field = $token->field();
-      next unless $field =~ /^(TEAM\d)_(.*)$/;
-
-      my ($team, $main) = ($1, $2);
-      $counts{$team}++;
-      for my $t (qw(TEAM1 TEAM2))
+      if ($field =~ /^(TEAM\d)_(.*)$/)
       {
-        next unless exists $teams->{$t}{$main};
-        my $found = 0;
-        for my $entry (@{$teams->{$t}{$main}})
+        my ($team, $main) = ($1, $2);
+        $counts{$team}++;
+        for my $t (qw(TEAM1 TEAM2))
         {
-          if (lc($token->value()) eq lc($entry))
-          {
-            $found = 1;
-            last;
-          }
+          $matches{$t}++ if 
+            field_found_in(lc($token->value()), $main, $teams->{$t});
         }
-
-        $matches{$t}++ if $found;
+      }
+      elsif ($field eq 'CAPTAIN')
+      {
+        $counts{'TEAM' . $captain_no}++;
+        $captain_no++;
+        for my $t (qw(TEAM1 TEAM2))
+        {
+          $matches{$t}++ if 
+            field_found_in(lc($token->value()), 'CAPTAIN', $teams->{$t});
+        }
       }
     }
   }
@@ -156,9 +172,34 @@ sub post_process_title_teams
 
       my $token = $chain->check_out(0);
       my $field = $token->field();
-      next unless $field =~ /^(TEAM\d)_(.*)$/;
+      next unless $field =~ /^(TEAM\d)_(.*)$/ || $field eq 'CAPTAIN';
 
       $chain->complete_if_last_is($chain->last(), 'KILLED');
+    }
+  }
+}
+
+
+sub post_process_captains
+{
+  my ($chains, $teams, $bbono) = @_;
+
+  for my $chain (@$chains)
+  {
+    next if $chain->status() eq 'KILLED' || $chain->status() eq 'EXPLAINED';
+    next unless $chain->last() == 0;
+
+    my $token = $chain->check_out(0);
+    if ($token->field() eq 'CAPTAIN')
+    {
+      my $value = $token->value();
+      if ($value eq 'Angelini' || $value eq 'Assael' ||
+          $value eq 'Carlos Ferreira' || $value eq 'Evgueni Gladysh' ||
+          $value eq 'Prashant Desai' || $value eq 'Rui Pinto')
+      {
+        $token->set_general('SINGLETON', 'PERSON', $value);
+        $chain->complete_if_last_is($chain->last(), 'EXPLAINED');
+      }
     }
   }
 }
@@ -177,6 +218,7 @@ sub deteam
   my ($chains, $teams, $bbono) = @_;
 
   post_process_title_teams($chains, $teams, $bbono);
+  post_process_captains($chains, $bbono);
 }
 
 1;

@@ -984,6 +984,7 @@ my %MULTI_TYPOS =
     'tolani summer nationals gold', 'tolani summer nationald gold',
     'tolani gold summer nationals', 'tolani gold summar nationals',
     'tolani gold summer national', 'dr_tolanigoldcup',
+    'tolani gold summer',
     'dr_tolani gold summer nationals', 'tolani gold summer nationals',
     'tolani gols summer nationals', 'dr_tolani open summer natinal',
     'dr_tolani open summer national', 'dr_tolani open summer nationals',
