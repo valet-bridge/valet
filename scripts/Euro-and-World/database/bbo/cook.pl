@@ -204,12 +204,6 @@ while ($line = <$fh>)
   $stats_event->incr(\@chains_event);
 
 
-  next if (chains_done(\@chains_title) &&
-      chains_done($chains_team{TEAM1}) &&
-      chains_done($chains_team{TEAM2}) &&
-      chains_done(\@chains_event));
-
-
   # Look for teams in the title.
 
   my %team_record;
@@ -221,6 +215,12 @@ while ($line = <$fh>)
   refill_histo($histo_title_final, \@chains_title);
 
   $stats_title->incr(\@chains_title);
+
+
+  next if (chains_done(\@chains_title) &&
+      chains_done($chains_team{TEAM1}) &&
+      chains_done($chains_team{TEAM2}) &&
+      chains_done(\@chains_event));
 
 
   if ($print_chains)

@@ -51,7 +51,15 @@ sub post_process_single
     }
     elsif ($field0 eq 'COLOR')
     {
-      $chain->complete_if_last_is(0, 'KILLED');
+      if ($token0->value() eq 'Orange')
+      {
+        $token0->set_general('SINGLETON', 'COUNTRY', 'Netherlands');
+        $chain->complete_if_last_is(0, 'EXPLAINED');
+      }
+      else
+      {
+        $chain->complete_if_last_is(0, 'KILLED');
+      }
     }
     elsif ($field0 eq 'MEET' && $token0->value() eq 'Festival')
     {

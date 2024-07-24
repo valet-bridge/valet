@@ -113,50 +113,52 @@ sub post_process_title_teams
   for my $chain (@$chains)
   {
     next if $chain->status() eq 'KILLED' || $chain->status() eq 'EXPLAINED';
-    next unless $chain->last() == 0;
 
-    my $token = $chain->check_out(0);
-    my $field = $token->field();
-    next unless $field =~ /^(TEAM\d)_(.*)$/;
-
-    my ($team, $main) = ($1, $2);
-    $counts{$team}++;
-    for my $t (qw(TEAM1 TEAM2))
+    for my $i (0 .. $chain->last())
     {
-      next unless exists $teams->{$t}{$main};
-      my $found = 0;
-      for my $entry (@{$teams->{$t}{$main}})
-      {
-        if (lc($token->value()) eq lc($entry))
-        {
-          $found = 1;
-          last;
-        }
-      }
+      my $token = $chain->check_out($i);
+      my $field = $token->field();
+      next unless $field =~ /^(TEAM\d)_(.*)$/;
 
-      $matches{$t}++ if $found;
+      my ($team, $main) = ($1, $2);
+      $counts{$team}++;
+      for my $t (qw(TEAM1 TEAM2))
+      {
+        next unless exists $teams->{$t}{$main};
+        my $found = 0;
+        for my $entry (@{$teams->{$t}{$main}})
+        {
+          if (lc($token->value()) eq lc($entry))
+          {
+            $found = 1;
+            last;
+          }
+        }
+
+        $matches{$t}++ if $found;
+      }
     }
   }
 
   return unless $counts{TEAM1} > 0 || $counts{TEAM2} > 0;
 
-  if (($matches{TEAM1} == $counts{TEAM1} &&
-       $matches{TEAM2} == $counts{TEAM2})  ||
-      ($matches{TEAM1} == $counts{TEAM2} &&
-       $matches{TEAM2} == $counts{TEAM1}))
+  # Something like 'Open' can occur multiple times.
+  if (($matches{TEAM1} >= $counts{TEAM1} &&
+       $matches{TEAM2} >= $counts{TEAM2})  ||
+      ($matches{TEAM1} >= $counts{TEAM2} &&
+       $matches{TEAM2} >= $counts{TEAM1}))
   {
     # Perfect matches.
     for my $chain (@$chains)
     {
       next if $chain->status() eq 'KILLED' || 
         $chain->status() eq 'EXPLAINED';
-      next unless $chain->last() == 0;
 
       my $token = $chain->check_out(0);
       my $field = $token->field();
       next unless $field =~ /^(TEAM\d)_(.*)$/;
 
-      $chain->complete_if_last_is(0, 'KILLED');
+      $chain->complete_if_last_is($chain->last(), 'KILLED');
     }
   }
 }
