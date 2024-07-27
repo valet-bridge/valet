@@ -17,11 +17,11 @@ use Util;
 
 my @TAG_ORDER = qw(
   ROMAN
+  MEET
   TNAME
   DESTROY
   TWORD
   ORIGIN
-  MEET
   CLUB
 
   ORGANIZATION 

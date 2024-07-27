@@ -227,10 +227,9 @@ sub post_process_title
       my $tname = find_field_in_chains($chains_title, 'TNAME', \$cno);
       if (! $tname)
       {
-        warn "$bbono: ODD $field, $value\n";
+        # warn "$bbono: ODD $field, $value\n";
       }
-
-      if ($value eq $tname)
+      elsif ($value eq $tname)
       {
         $chain->complete_if_last_is(0, 'KILLED');
       }

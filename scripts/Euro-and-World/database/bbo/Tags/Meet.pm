@@ -48,6 +48,8 @@ my @MULTI_WORDS =
   'Mautern Bridge Festival',
   'Mersin Bridge Festival',
   'Monaco International Festival',
+  'Norwegian Championship',
+  'Norwegian District Championship',
   'Pärnu Festival',
   'Plovdiv Bridge Festival',
   'Polish Youth Olympiad',
@@ -59,6 +61,7 @@ my @MULTI_WORDS =
   'Sivrioglu Festival',
   'Stara Zagora Bridge Festival',
   'Tallinn Bridge Festival',
+  'Tolani Summer Nationals',
   'Thailand National Games',
   'Turkish Autumn Festival',
   'Turkish-Greek Friendship Festival',
@@ -70,6 +73,10 @@ my @MULTI_WORDS =
   'Wachauer Bridge Festival',
   'West Java Regional',
   'Winter Bridge Festival',
+  'Winter Championships',
+  'Winter Nationals',
+  'World Mind Games',
+  'World Team Championships',
   'Zulawski Congress'
 );
 
@@ -124,6 +131,9 @@ my %MULTI_TYPOS =
   'Marmara Festival' => ['festival marmara'],
   'Mautern Bridge Festival' => ['mautern bridgefestival'],
   'Monaco International Festival' => ['festival international de monaco'],
+  'Norwegian District Championship' => ['norwegian district',
+     'norw district', 'norwegian regional chship',
+     'norway regional champship'],
   'Plovdiv Bridge Festival' => ['international festival - plovdiv',
     'international festival plovdiv'],
   'Polish Youth Olympiad' => ['oom'],
@@ -142,6 +152,13 @@ my %MULTI_TYPOS =
     'bridge festival-bulgaria-stara zagora'],
   'Tallinn Bridge Festival' => ['talinn festival', 'tallin festival',
     'tallinns festival'],
+  'Tolani Summer Nationals' => ['tolani open', 'dr_tolani summer nationals',
+    'tolani open summer nationals', 'dr tolani summer nationals',
+    'dr_ tolani summer nationals',
+    'dr_ tolani open summer nations', 'dr_ tolani summar nationals',
+    'dr_tolani open summer natinal', 'dr_tolani open summer national', 
+    'dr_tolani open summer nationals', 'dr_ tolani open summer nationals',
+    'dr_tolani open summer nationaals', 'dr tolani open summer nationals'],
   'Turkish Autumn Festival' => ['sonbahar bridge festival'],
   'Turkish-Greek Friendship Festival' => [
     'greek-turkish friendship festival'],
@@ -152,6 +169,12 @@ my %MULTI_TYPOS =
   'West Java Regional' => ['west java regional sport games',
     'west java regional games', 'west java regional spots event',
     'regional west java'],
+  'Winter Championships' => ['winter championship',
+    'winter championsship'],
+  'Winter Nationals' => ['winter national', 'wintter nationals',
+    'wintrer national'],
+  'World Mind Games' => ['world mind game', 'word mind games', 'wmsg',
+    'mind sports games', 'sawmg', 'wmg', 'wnsg', 'world ming games'],
   'Zulawski Congress' => ['mityng zulawski', "kongres \"zulawski\"",
     'kongres zulawski', "mityng \"zulawski\""]
 );
@@ -169,7 +192,10 @@ my %SINGLE_TYPOS =
   Festival => ['fest', 'festivan', 'festývalý', 'festivalul', 'festiwal'],
   'Gold Coast Congress' => ['gc', 'gcc'],
   'Indonesian National Pre-Sports Week' => ['prapon'],
-  'Indonesian National Sports Week' => ['indonesia week', 'pon']
+  'Indonesian National Sports Week' => ['indonesia week', 'pon'],
+  'Norwegian Championship' => ['nm'],
+  'Winter Nationals' => ['winternationals'],
+  'World Team Championships' => ['wbtc']
 );
 
 
