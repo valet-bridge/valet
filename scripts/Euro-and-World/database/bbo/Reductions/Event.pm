@@ -563,7 +563,7 @@ our @EVENT_REDUCTIONS =
       { CATEGORY => ['ITERATOR'] }
     ],
     ANCHOR => 'EXACT',
-    KEEP_LAST => 0,
+    KEEP_LAST => 2,
     METHOD => \&Patterns::Chainify::process_swap,
     SPLIT_FRONT => 0,
     SPLIT_BACK => 0,

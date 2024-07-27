@@ -19,7 +19,7 @@ my %MULTI_TYPOS =
 (
   Men => ["men's", "men`s"],
   Mixed => ['cat mixtas', 'categorías mixtas'],
-  Open => ['open´s'],
+  Open => ['open´s', 'open series'],
   Women => ["ladies's", "ladies'", "woman's", "women's", 'for ladies',
     'womwn'],
 );

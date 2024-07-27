@@ -20,6 +20,7 @@ use Util;
 
 my @TAG_ORDER = qw(
   ROMAN
+  MEET
   TNAME
   DESTROY
   TWORD
@@ -73,6 +74,9 @@ my %HARD_SUBS =
   'VIII B' => ['viiib'],
   'IX A' => ['ixa'],
   'IX B' => ['ixb'],
+
+  'Segment 1' => ['i t_', 'i t'],
+  'Segment 2' => ['ii t_', 'ii t'],
 
   'Final Round' => ['fr'],
   'Final Segment' => ['fs'],

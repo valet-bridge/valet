@@ -535,7 +535,7 @@ my %MULTI_TYPOS =
   'Grant Thornton' => ['bc grant thornton',
     'bg thornton', 'grant thonrton', 'grantt thornton'],
   'GSD Club' => ['GSD Briç'],
-  'Guangdong Club' => ['guangdong briagclub'],
+  'Guangdong Club' => ['guangdong briagclub', 'guang dong briag club'],
   'Hanseatic Hamburg BC' => ['hanseatic bc', 'hanseatic hamburg'],
   'Heimdal BK' => ['heimdal bc'],
   'Hok Studiecentrum' => ['hok ts', 'hoc studiecentrum'],

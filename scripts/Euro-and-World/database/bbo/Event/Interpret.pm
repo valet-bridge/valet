@@ -20,8 +20,8 @@ use Util;
 
 my @ACCEPT_FIELDS = qw(AGE CITY COLOR CLUB DATE FORM GENDER HALF
   MONTH_DAY MOVEMENT ORIGIN PLACE QUARTER ROUND SCORING SECTION 
-  SEGMENT SESSION SET SPONSOR STAGE STANZA WEEK WEEKDAY WEEKEND 
-  YEAR YEAR_MONTH);
+  SEGMENT SESSION SET SPONSOR STAGE STANZA TABLE WEEK WEEKDAY 
+  WEEKEND YEAR YEAR_MONTH);
 
 my @KILL_FIELDS = qw(ROOM);
 
@@ -209,7 +209,7 @@ sub post_process_countries
 }
 
 
-sub post_process_title
+sub post_process_tname
 {
   my ($chains, $chains_title, $bbono) = @_;
 
@@ -220,29 +220,78 @@ sub post_process_title
 
     my $token = $chain->check_out(0);
     my $field = $token->field();
-    if ($field eq 'TNAME')
+    next unless $field eq 'TNAME';
+
+    my $value = $token->value();
+
+    my $cno;
+    my $tname = find_field_in_chains($chains_title, 'TNAME', \$cno);
+    if (! $tname)
     {
-      my $value = $token->value();
+      # Move the TNAME from here to TITLE.
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+      push @$chains_title, dclone($chain);
+      $chain->complete_if_last_is(0, 'KILLED');
+    }
+    elsif ($value eq $tname)
+    {
+      # Redundant with TITLE.
+      $chain->complete_if_last_is(0, 'KILLED');
+    }
+    else
+    {
+      print "$bbono: DIFFER $field, $value vs TNAME $tname\n";
+    }
+  }
+}
 
-      my $cno;
-      my $tname = find_field_in_chains($chains_title, 'TNAME', \$cno);
-      if (! $tname)
-      {
-        # Move the TNAME from here to TITLE.
-        $chain->complete_if_last_is(0, 'EXPLAINED');
-        push @$chains_title, dclone($chain);
-        $chain->complete_if_last_is(0, 'KILLED');
 
-      }
-      elsif ($value eq $tname)
-      {
-        # Redundant with TITLE.
-        $chain->complete_if_last_is(0, 'KILLED');
-      }
-      else
-      {
-        print "$bbono: DIFFER $field, $value vs TNAME $tname\n";
-      }
+sub post_process_tword
+{
+  my ($chains, $chains_title, $bbono) = @_;
+
+  for my $chain (@$chains)
+  {
+    next if $chain->status() eq 'KILLED';
+    next unless $chain->last() == 0;
+
+    my $token = $chain->check_out(0);
+    my $field = $token->field();
+    next unless $field eq 'TWORD';
+
+    my $value = $token->value();
+    if ($value eq 'First Half')
+    {
+      $token->set_general('ITERATOR', 'HALF', 1);
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+    }
+    elsif ($value eq 'Second Half')
+    {
+      $token->set_general('ITERATOR', 'HALF', 2);
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+    }
+    elsif ($value eq 'Open Room')
+    {
+      $token->set_general('ITERATOR', 'ROOM', 'Open');
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+    }
+    elsif ($value eq 'Closed Room')
+    {
+      $token->set_general('ITERATOR', 'ROOM', 'Closed');
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+    }
+    elsif ($value eq 'Second Place')
+    {
+      $token->set_general('ITERATOR', 'PLACE', 2);
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+    }
+    elsif ($value eq 'Championship' || $value eq 'Tournament')
+    {
+      $chain->complete_if_last_is(0, 'KILLED');
+    }
+    else
+    {
+      $chain->complete_if_last_is(0, 'EXPLAINED');
     }
   }
 }
@@ -323,7 +372,8 @@ sub interpret
   post_process_single($chains, $bbono);
   post_process_some_iterators($chains);
   post_process_countries($chains, $teams);
-  post_process_title($chains, $chains_title, $bbono);
+  post_process_tname($chains, $chains_title, $bbono);
+  post_process_tword($chains, $chains_title, $bbono);
   post_process_letters($chains);
 }
 

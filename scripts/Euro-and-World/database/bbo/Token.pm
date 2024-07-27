@@ -314,11 +314,22 @@ sub merge_numeral_of
     # Something like 10:3 of 9.
     $self->{FIELD} = 'MAJOR_MINOR';
     $self->{VALUE} .= '+' . $token2->{VALUE};
+    return;
   }
-  else
+
+  my $v = $token2->value();
+  $v =~ /^(\d+) of/;
+
+  if ($self->{VALUE} < $1)
   {
     $self->{FIELD} = 'N_TO_N_OF_N';
     $self->{VALUE} .= '-' . $token2->{VALUE};
+  }
+  else
+  {
+    # Something like 17 1-10.
+    $self->{FIELD} = 'MAJOR_MINOR';
+    $self->{VALUE} .= '+' . $token2->{VALUE};
   }
 }
 
