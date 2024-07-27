@@ -19,9 +19,9 @@ use Util;
 
 my @ACCEPT_FIELDS = qw(AGE CITY CLUB COUNTRY DATE DATE_START DATE_END
   DAY FORM FLIGHT GENDER GROUP LOCALITY MATCH MEET MONTH MOVEMENT 
-  NATIONALITY ORGANIZATION ORIGIN PERSON QUARTER REGION SCORING SECTION 
-  SEGMENT SERIES SESSION SPONSOR STAGE STANZA TIME TNAME TWORD 
-  UNIVERSITY WEEK WEEKDAY WEEKEND YEAR ZONE);
+  NATIONALITY ORGANIZATION ORIGIN PERSON PHASE QUARTER REGION ROF
+  ROUND SCORING SECTION SEGMENT SERIES SESSION SPONSOR STAGE STANZA 
+  TABLE TIME TNAME TWORD UNIVERSITY WEEK WEEKDAY WEEKEND YEAR ZONE);
 
 my @KILL_FIELDS = qw(ROOM);
 
@@ -222,7 +222,44 @@ sub post_process_leading_number
     $token->set_general('COUNTER', 'ORDINAL', $token->value());
     $chain->complete_if_last_is(0, 'EXPLAINED');
   }
+  elsif ($field eq 'PARTICLE' && lc($token->value()) eq 'vs')
+  {
+    # I don't know what this occasional leading VS is.
+    $chain->complete_if_last_is(0, 'KILLED');
+  }
 }
+
+
+sub post_process_maybe_rof
+{
+  my ($chains, $bbono) = @_;
+
+  for my $chain (@$chains)
+  {
+    next if $chain->status() eq 'KILLED' || $chain->status() eq 'EXPLAINED';
+    next unless $chain->last() == 0;
+
+    my $token = $chain->check_out(0);
+    next unless $token->field() eq 'ROUND';
+
+    my $value = $token->value();
+    next unless $value =~ /^\d+$/;
+    next unless $value == 8 || $value == 16 || $value == 32 || $value == 64;
+    
+    my $cno;
+    my $tname = find_field_in_chains($chains, 'TNAME', \$cno);
+    next unless $tname;
+
+    if ($tname eq 'Spingold' || $tname eq 'Vanderbilt' ||
+        $tname eq 'Baze Senior Knock-out' ||
+        $tname eq 'United States Bridge Championship')
+    {
+      $token->set_general('MARKER', 'ROF', $value);
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+    }
+  }
+}
+    
 
 
 sub interpret
@@ -240,6 +277,7 @@ sub deteam
   post_process_title_teams($chains, $teams, $bbono);
   post_process_captains($chains, $bbono);
   post_process_leading_number($chains, $bbono);
+  post_process_maybe_rof($chains, $bbono);
 }
 
 1;

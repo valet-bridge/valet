@@ -197,7 +197,7 @@ while ($line = <$fh>)
   Event::Postprocess::post_process(\@chains_event);
 
   Event::Interpret::interpret($whole, \@chains_event,
-    \%team_countries, \$chunk{SCORING}, $chunk{BBONO});
+    \@chains_title, \%team_countries, \$chunk{SCORING}, $chunk{BBONO});
 
   refill_histo($histo_event_final, \@chains_event);
 
@@ -280,7 +280,7 @@ sub refill_histo
     {
       my $token = $chain->check_out($i);
       next if $token->category() eq 'SEPARATOR';
-if ($token->field() eq 'MONTH_DAY')
+if ($token->field() eq 'PARTICLE')
 {
   # print "HERE\n";
 }

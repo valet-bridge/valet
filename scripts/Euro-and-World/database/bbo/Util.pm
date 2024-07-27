@@ -12,7 +12,7 @@ use Exporter;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(ordinal_to_numeral ordinalize unteam 
-  scoring_full_to_short 
+  scoring_full_to_short find_field_in_chains
   split_on_dates split_on_capitals split_on_multi append_token 
   singleton_numeral singleton_non_tag_matches singleton_tag_matches
   make_record);
@@ -104,6 +104,32 @@ sub scoring_full_to_short
     exists $SCORING_FULL_TO_SHORT{$full};
   return $SCORING_FULL_TO_SHORT{$full};
 
+}
+
+
+sub find_field_in_chains
+{
+  my ($chains, $tag, $cno_found) = @_;
+
+  my $found = 0;
+  my $value;
+
+  for my $cno (0 .. $#$chains)
+  {
+    my $chain = $chains->[$cno];
+    next if $chain->status() eq 'KILLED';
+    next unless $chain->last() == 0;
+
+    my $token = $chain->check_out(0);
+    my $field = $token->field();
+    next unless $field eq $tag;
+
+    $$cno_found = $cno;
+    return $token->value();
+    last;
+  }
+
+  return 0;
 }
 
 

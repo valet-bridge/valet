@@ -1,10 +1,5 @@
-From TITLE
-- Make a full map of fields TEAM1, TEAM2, CAPTAIN, maybe COUNTRY
-- Also of @team1, @team2
-- Check that TEAM1 is consistent with @team1 or @team2, and vice versa
-- Only if there's nothing to delete, look at CAPTAIN, COUNTRY
-- Same thing
-- Flag matches
+10316: Says Round 32 but is Rof32.
+10315: Then is probably Rof32, seg 2?
 
 First chain
 - First token: ORDINAL or ROMAN or perhaps NUMERAL

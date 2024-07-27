@@ -15,6 +15,7 @@ use lib './Connections';
 
 use Connections::Matrix;
 use Event::Ematch;
+use Util;
 
 my @ACCEPT_FIELDS = qw(AGE CITY COLOR CLUB DATE FORM GENDER HALF
   MONTH_DAY MOVEMENT ORIGIN PLACE QUARTER ROUND SCORING SECTION 
@@ -122,32 +123,6 @@ sub post_process_single
 }
 
 
-sub find_field_in_chains
-{
-  my ($chains, $tag, $cno_found) = @_;
-
-  my $found = 0;
-  my $value;
-
-  for my $cno (0 .. $#$chains)
-  {
-    my $chain = $chains->[$cno];
-    next if $chain->status() eq 'KILLED';
-    next unless $chain->last() == 0;
-
-    my $token = $chain->check_out(0);
-    my $field = $token->field();
-    next unless $field eq $tag;
-
-    $$cno_found = $cno;
-    return $token->value();
-    last;
-  }
-
-  return 0;
-}
-
-
 sub post_process_some_iterators
 {
   my ($chains) = @_;
@@ -178,7 +153,7 @@ sub post_process_some_iterators
     next unless $chain0->last() == 0;
 
     my $token0 = $chain0->check_out(0);
-    next unless $token0->value() eq 'Final';
+    next unless lc($token0->value()) eq 'final';
 
     # So 'Final', 'Stanza' without any number.
     $token->set_general('MARKER', $field, 'last');
@@ -228,6 +203,41 @@ sub post_process_countries
     {
       # It's a normal country.
       $chain->complete_if_last_is(0, 'EXPLAINED');
+    }
+  }
+}
+
+
+sub post_process_title
+{
+  my ($chains, $chains_title, $bbono) = @_;
+
+  for my $chain (@$chains)
+  {
+    next if $chain->status() eq 'KILLED';
+    next unless $chain->last() == 0;
+
+    my $token = $chain->check_out(0);
+    my $field = $token->field();
+    if ($field eq 'TNAME')
+    {
+      my $value = $token->value();
+
+      my $cno;
+      my $tname = find_field_in_chains($chains_title, 'TNAME', \$cno);
+      if (! $tname)
+      {
+        warn "$bbono: ODD $field, $value\n";
+      }
+
+      if ($value eq $tname)
+      {
+        $chain->complete_if_last_is(0, 'KILLED');
+      }
+      else
+      {
+        warn "$bbono: DIFFER $field, $value vs TNAME $tname\n";
+      }
     }
   }
 }
@@ -303,11 +313,12 @@ sub post_process_letters
 
 sub interpret
 {
-  my ($whole, $chains, $teams, $scoring, $bbono) = @_;
+  my ($whole, $chains, $chains_title, $teams, $scoring, $bbono) = @_;
 
   post_process_single($chains, $bbono);
   post_process_some_iterators($chains);
   post_process_countries($chains, $teams);
+  post_process_title($chains, $chains_title, $bbono);
   post_process_letters($chains);
 }
 
