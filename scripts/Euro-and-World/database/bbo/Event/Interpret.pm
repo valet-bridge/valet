@@ -7,6 +7,7 @@ use strict;
 use warnings;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
+use Storable 'dclone';
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(interpret);
@@ -227,15 +228,20 @@ sub post_process_title
       my $tname = find_field_in_chains($chains_title, 'TNAME', \$cno);
       if (! $tname)
       {
-        # warn "$bbono: ODD $field, $value\n";
+        # Move the TNAME from here to TITLE.
+        $chain->complete_if_last_is(0, 'EXPLAINED');
+        push @$chains_title, dclone($chain);
+        $chain->complete_if_last_is(0, 'KILLED');
+
       }
       elsif ($value eq $tname)
       {
+        # Redundant with TITLE.
         $chain->complete_if_last_is(0, 'KILLED');
       }
       else
       {
-        warn "$bbono: DIFFER $field, $value vs TNAME $tname\n";
+        print "$bbono: DIFFER $field, $value vs TNAME $tname\n";
       }
     }
   }

@@ -28,6 +28,7 @@ my @MULTI_WORDS =
   'Crete Bridge Festival',
   'Danish Bridge Festival',
   'Estoril Bridge Festival',
+   'European Championship',
   'Fes Festival',
   'Festival della Matematica',
   'Gold Coast Congress',
@@ -67,6 +68,7 @@ my @MULTI_WORDS =
   'Turkish-Greek Friendship Festival',
   'The Hague Bridge Festival',
   'Umea Bridgefestival',
+   'United States Bridge Championship',
   'Vanke Cup',
   'Varna Bridge Festival',
   'VVE Beheer Bridge Week',
@@ -77,6 +79,7 @@ my @MULTI_WORDS =
   'Winter Nationals',
   'World Mind Games',
   'World Team Championships',
+   'World Team Olympiad',
   'Zulawski Congress'
 );
 
@@ -100,6 +103,8 @@ my %MULTI_TYPOS =
     'festivalul international de bridge brasov'],
   'Crete Bridge Festival' => ['crete b_ festival'],
   'Estoril Bridge Festival' => ['estoril festival'],
+  'European Championship' => ['eur champ', 'eur cham', 'champ eur',
+    'eur cha', 'eur champ eur'],
   'Fes Festival' => ['fes bridge international festival',
     'festival fes', 'festival de fes', 'festival international de fès',
     'festival de fez'],
@@ -162,6 +167,8 @@ my %MULTI_TYPOS =
   'Turkish Autumn Festival' => ['sonbahar bridge festival'],
   'Turkish-Greek Friendship Festival' => [
     'greek-turkish friendship festival'],
+  'United States Bridge Championship' => ['us bridge championship',
+    'u_s_b_c', 'united states bridge championships'],
   'Varna Bridge Festival' => ['international bridge festival varna'],
   'VVE Beheer Bridge Week' => ['vve-beheer bridgeweek',
     'vve-beheer bridge week'],
@@ -175,6 +182,8 @@ my %MULTI_TYPOS =
     'wintrer national'],
   'World Mind Games' => ['world mind game', 'word mind games', 'wmsg',
     'mind sports games', 'sawmg', 'wmg', 'wnsg', 'world ming games'],
+  'World Team Olympiad' => ['world bridge team olympiad',
+    'world bridge olympiad', 'bridge olympiad'],
   'Zulawski Congress' => ['mityng zulawski', "kongres \"zulawski\"",
     'kongres zulawski', "mityng \"zulawski\""]
 );
@@ -189,13 +198,16 @@ my %SINGLE_TYPOS =
   'Australian National Championships' => ['anc'],
   'Bangkok Bridge Festival' => ['bbf', 'bff'],
   Congress => ['kongres', 'kongresowy'],
+  'European Championship' => ['ec'],
   Festival => ['fest', 'festivan', 'festývalý', 'festivalul', 'festiwal'],
   'Gold Coast Congress' => ['gc', 'gcc'],
   'Indonesian National Pre-Sports Week' => ['prapon'],
   'Indonesian National Sports Week' => ['indonesia week', 'pon'],
   'Norwegian Championship' => ['nm'],
+  'United States Bridge Championship' => ['usbc'],
   'Winter Nationals' => ['winternationals'],
-  'World Team Championships' => ['wbtc']
+  'World Team Championships' => ['wbtc'],
+  'World Team Olympiad' => ['olympiad', 'olympiads', 'wbo']
 );
 
 
