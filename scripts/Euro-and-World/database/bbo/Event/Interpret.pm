@@ -18,10 +18,10 @@ use Connections::Matrix;
 use Event::Ematch;
 use Util;
 
-my @ACCEPT_FIELDS = qw(AGE CITY COLOR CLUB DATE FORM GENDER HALF
-  MONTH_DAY MOVEMENT ORIGIN PLACE QUARTER ROUND SCORING SECTION 
-  SEGMENT SESSION SET SPONSOR STAGE STANZA TABLE WEEK WEEKDAY 
-  WEEKEND YEAR YEAR_MONTH);
+my @ACCEPT_FIELDS = qw(AGE CITY COLOR CLUB DATE FORM GENDER GROUP
+  HALF MATCH MONTH_DAY MOVEMENT ORGANIZATION ORIGIN PERSON PLACE 
+  QUARTER ROF ROUND SCORING SECTION SEGMENT SESSION SET SPONSOR 
+  STAGE STANZA TABLE WEEK WEEKDAY WEEKEND YEAR YEAR_MONTH);
 
 my @KILL_FIELDS = qw(ROOM);
 
@@ -141,6 +141,7 @@ sub post_process_some_iterators
     next unless $field eq 'STANZA' || 
       $field eq 'QUARTER' ||
       $field eq 'ROUND' ||
+      $field eq 'MATCH' ||
       $field eq 'SEGMENT' ||
       $field eq 'SESSION' ||
       $field eq 'SET';
@@ -204,6 +205,43 @@ sub post_process_countries
     {
       # It's a normal country.
       $chain->complete_if_last_is(0, 'EXPLAINED');
+    }
+  }
+}
+
+
+sub post_process_meet
+{
+  my ($chains, $chains_title, $bbono) = @_;
+
+  for my $chain (@$chains)
+  {
+    next if $chain->status() eq 'KILLED';
+    next unless $chain->last() == 0;
+
+    my $token = $chain->check_out(0);
+    my $field = $token->field();
+    next unless $field eq 'MEET';
+
+    my $value = $token->value();
+
+    my $cno;
+    my $meet = find_field_in_chains($chains_title, 'MEET', \$cno);
+    if (! $meet)
+    {
+      # Move the MEET from here to TITLE.
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+      push @$chains_title, dclone($chain);
+      $chain->complete_if_last_is(0, 'KILLED');
+    }
+    elsif ($value eq $meet)
+    {
+      # Redundant with TITLE.
+      $chain->complete_if_last_is(0, 'KILLED');
+    }
+    else
+    {
+      print "$bbono: DIFFER $field, $value vs MEET $meet\n";
     }
   }
 }
@@ -297,6 +335,45 @@ sub post_process_tword
 }
 
 
+sub post_process_match
+{
+  my ($chains, $teams) = @_;
+
+  return unless $#$chains > 0;
+  for my $cno (1 .. $#$chains)
+  {
+    my $chain = $chains->[$cno];
+    next if $chain->status() eq 'KILLED';
+    next unless $chain->last() == 0;
+
+    my $token = $chain->check_out(0);
+    my $field = $token->field();
+    next unless $field eq 'MATCH';
+    next unless $token->value() eq 'Match';
+
+    # Try to fix MATCH Match.
+    my $chain_prev = $chains->[$cno-1];
+    next if $chain->status() eq 'KILLED';
+    next unless $chain->last() == 0;
+
+    my $token_prev = $chain_prev->check_out(0);
+    my $field_prev = $token_prev->field();
+    next unless $field_prev eq 'MAJOR_MINOR';
+
+    my $value_prev = $token_prev->value();
+    $value_prev =~ /^(\d+)\+(\d+)$/;
+    my ($first, $second) = ($1, $2);
+
+    # So probably the MINOR is really the match number.
+    $token->set_general('MARKER', 'MATCH', $second);
+    $chain->complete_if_last_is(0, 'EXPLAINED');
+
+    $token_prev->set_general('COUNTER', 'NUMERAL', $first);
+    $chain_prev->complete_if_last_is(0, 'COMPLETE');
+  }
+}
+
+
 sub post_process_letters
 {
   my ($chains) = @_;
@@ -372,8 +449,10 @@ sub interpret
   post_process_single($chains, $bbono);
   post_process_some_iterators($chains);
   post_process_countries($chains, $teams);
+  post_process_meet($chains, $chains_title, $bbono);
   post_process_tname($chains, $chains_title, $bbono);
   post_process_tword($chains, $chains_title, $bbono);
+  post_process_match($chains, $bbono);
   post_process_letters($chains);
 }
 
