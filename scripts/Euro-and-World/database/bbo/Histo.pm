@@ -13,6 +13,7 @@ sub new
 {
   my $class = shift;
   my $self = bless {}, $class;
+  $self->{TOTAL} = 0;
   return $self;
 }
 

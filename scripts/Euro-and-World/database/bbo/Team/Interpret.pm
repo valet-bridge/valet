@@ -18,7 +18,7 @@ use Connections::Matrix;
 use Team::Cmatch;
 
 my @ACCEPT_FIELDS = qw(AGE BOT CAPTAIN CITY CLUB COUNTRY FIRST
-  FORM FUN GENDER LOCALITY NATIONALITY ORGANIZATION OTHER
+  FORM FUN GENDER LOCALITY NATIONALITY ORGANIZATION ORIGIN OTHER
   REGION SPONSOR UNIVERSITY ZONE);
 
 my %ACCEPT = map { $_ => 1 } @ACCEPT_FIELDS;
@@ -144,6 +144,44 @@ sub post_process_abbr
 }
 
 
+sub post_process_meet
+{
+  my ($chains, $chains_title, $bbono) = @_;
+
+  # Check for MEET.
+  for my $chain (@$chains)
+  {
+    next if $chain->status() eq 'KILLED';
+    next unless $chain->last() == 0;
+
+    my $token = $chain->check_out(0);
+    my $field = $token->field();
+    next unless $field eq 'MEET';
+
+    my $value = $token->value();
+
+    my $cno;
+    my $meet = find_field_in_chains($chains, 'MEET', \$cno);
+    if (! $meet)
+    {
+      # Move the MEET from here to TITLE.
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+      push @$chains_title, dclone($chain);
+      $chain->complete_if_last_is(0, 'KILLED');
+    }
+    elsif ($value eq $meet)
+    {
+      # Redundant with TITLE.
+      $chain->complete_if_last_is(0, 'KILLED');
+    }
+    else
+    {
+      print "$bbono: DIFFER $field, $value vs MEET $meet\n";
+    }
+  }
+}
+
+
 sub eliminate_scoring
 {
   my ($chains, $scoring) = @_;
@@ -193,10 +231,11 @@ sub post_process_empty
 
 sub interpret
 {
-  my ($whole, $chains, $scoring, $bbono) = @_;
+  my ($whole, $chains, $chains_title, $scoring, $bbono) = @_;
 
   post_process_single($chains);
   post_process_abbr($whole, $chains, $bbono);
+  post_process_meet($chains, $chains_title, $bbono);
   eliminate_scoring($chains, $scoring);
   post_process_empty($chains);
 }

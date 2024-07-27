@@ -46,6 +46,7 @@ $whole->init_hashes();
 
 use Histo;
 our $histo_team = Histo->new();
+our $histo_team_final = Histo->new();
 our $histo_title = Histo->new();
 my $histo_title_final = Histo->new();
 our $histo_event = Histo->new();
@@ -172,7 +173,7 @@ while ($line = <$fh>)
     Team::Postprocess::post_process(\@{$chains_team{$team}});
 
     Team::Interpret::interpret($whole, \@{$chains_team{$team}}, 
-     \$chunk{SCORING}, $chunk{BBONO});
+     \@chains_title, \$chunk{SCORING}, $chunk{BBONO});
 
     add_to_countries(\@{$chains_team{$team}}, $team, \%team_countries);
 
@@ -214,6 +215,9 @@ while ($line = <$fh>)
 
   refill_histo($histo_title_final, \@chains_title);
 
+  refill_histo($histo_team_final, \@{$chains_team{TEAM1}});
+  refill_histo($histo_team_final, \@{$chains_team{TEAM2}});
+
   $stats_title->incr(\@chains_title);
 
 
@@ -240,6 +244,10 @@ while ($line = <$fh>)
 close $fh;
 
 $histo_team->print();
+
+print "\nHisto open part\n\n";
+$histo_team_final->print();
+
 $stats_team->print("Team");
 print "\nTotal unknown teams: $unknown_events\n\n";
 
