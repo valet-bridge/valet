@@ -1,31 +1,10 @@
+Maybe look for event chains with exactly one numeral chain and
+it's the last one.
+- If preceded by RR, it's a Round.
+
+
 10316: Says Round 32 but is Rof32.
 10315: Then is probably Rof32, seg 2?
-
-First chain
-- First token: ORDINAL or ROMAN or perhaps NUMERAL
-- Special field TINST, maybe always as an ordinal
-
-
-TITLE:
-TABLE: Table -> can always delete, but keep numbesr
-PARTICLE: Can delete as very first thing VS
-
-
-GROUP: Group is often Round-robin
-1A of 11 can come apart again into Group A | 1 of 11 (just a counter,
-maybe called GENERIC).
-Maybe NL_N is just a bad idea to begin with.
-
-SERIES: Can go if SERIES Series
-ORG: OK as such
-
-Global
-- TEAMS
-  - MEET: If consistent with TITLE, move up and delete
-  - ORIGIN: Not sure
-
-In team chains
-- See if we can eliminate same from TITLE
 
 
 Dynamic consistency of chains: What occurs in raw.txt

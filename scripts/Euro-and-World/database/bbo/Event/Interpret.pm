@@ -30,6 +30,48 @@ my @KILL_FIELDS = qw(ROOM);
 my %ACCEPT = map { $_ => 1 } @ACCEPT_FIELDS;
 my %KILL = map { $_ => 1 } @KILL_FIELDS;
 
+# Default iterators for some tournaments.
+# TODO Probably I will label up all TNAME tournaments later.
+
+my %TITERATORS = (
+   'Anatolian Club Qualifying' => 'ROUND',
+   'ASEAN Club Championship' => 'ROUND',
+   'Buffett Cup' => 'ROUND',
+   'Camrose' => 'ROUND',
+   "European Champions' Cup" => 'ROUND',
+   'European Mixed Junior Pairs' => 'ROUND',
+   'European Open Bridge Championship' => 'ROUND',
+   'European Small Federation Games' => 'ROUND',
+   'European Youth Bridge Teams Championship' => 'ROUND',
+   'Finnish Pairs Championship' => 'ROUND',
+   'Four Nations Cup' => 'ROUND',
+   'FOSS-Tren' => 'ROUND',
+   'Gelibolu Peace Cup' => 'ROUND',
+   'Goksu-Yalikavak Pairs' => 'ROUND',
+   "Gro's Supercup" => 'ROUND',
+   'Guangdong Club Championship' => 'ROUND',
+   'Higson Cup' => 'ROUND',
+   'Hong Kong Inter-City' => 'ROUND',
+   'IMSA Cup' => 'ROUND',
+   'Israel Open Pairs' => 'ROUND',
+   'Lady Milne Trophy' => 'STANZA',
+   'Madeira Swiss Teams' => 'ROUND',
+   'Mondial de Deauville' => 'ROUND',
+   'Nordic Championship' => 'ROUND',
+   'Nordic Junior Championship' => 'ROUND',
+   'Nordic Junior Pairs' => 'ROUND',
+   'Norwegian Mixed Pairs' => 'ROUND',
+   'Olrud Easter Mixed Pairs' => 'ROUND',
+   'Olrud Easter Pairs' => 'ROUND',
+   'Olrud Easter Teams' => 'ROUND',
+   'Olrud Easter Swiss Teams' => 'ROUND',
+   'Pesta Sukan' => 'ROUND',
+   'Portuguese Open Teams' => 'ROUND',
+   'Smirnov Cup' => 'ROUND',
+   'Spanish Central Zone Teams' => 'ROUND',
+   'Thrace Club Teams' => 'ROUND',
+   'World Youth Bridge Congress' => 'ROUND'
+);
 
 # BBOVG numbers for which special occurrences are OK.
 my %EVENT_MATCHES_ROUND;
@@ -442,6 +484,102 @@ sub post_process_letters
 }
 
 
+sub post_process_stand_alone_number
+{
+  # There is one chain and it's a number, without a direct indication
+  # of the name of the iterator.  We can use the title to guess with.
+
+  my ($chain, $chains_title, $bbono) = @_;
+  
+  my $token = $chain->check_out(0);
+  my $field = $token->field();
+  my $value = $token->value();
+
+  my $cno;
+  my $tname = find_field_in_chains($chains_title, 'TNAME', \$cno);
+  if ($tname && $field eq 'NUMERAL')
+  {
+    if (exists $TITERATORS{$tname})
+    {
+      my $iter = $TITERATORS{$tname};
+      $token->set_general('MARKER', $iter, $value);
+    }
+    else
+    {
+      print "TODO $bbono, $tname: $field $value\n";
+    }
+  }
+}
+
+
+sub post_process_single_numerals
+{
+  my ($chains, $chains_title, $bbono) = @_;
+
+  # Find a single non-final chain.
+  my $cno_single;
+  my $count_complete = 0;
+  my $count_active = 0;
+  for my $cno (0 .. $#$chains)
+  {
+    my $chain = $chains->[$cno];
+    my $status = $chain->status();
+    next if $status eq 'KILLED';
+    $count_active++;
+    next if $status eq 'EXPLAINED';
+    $count_complete++;
+    $cno_single = $cno;
+  }
+  return unless $count_complete == 1;
+
+  my $chain = $chains->[$cno_single];
+  return unless $chain->last() == 0;
+
+  if ($count_active == 1 && $count_complete == 1)
+  {
+    post_process_stand_alone_number($chain, $chains_title, $bbono);
+  }
+
+  return;
+
+  my $token = $chain->check_out(0);
+  my $field = $token->field();
+
+
+  if ($field eq 'NUMERAL')
+  {
+    if ($cno_single == 0)
+    {
+        print "TODO0\n";
+    }
+    else
+    {
+      my $chain_prev = $chains->[$cno_single-1];
+      my $status_prev = $chain_prev->status();
+      if ($status_prev eq 'KILLED')
+      {
+        print "TODO1\n";
+      }
+      elsif ($chain_prev->last() > 0)
+      {
+        print "TODO2\n";
+      }
+      else
+      {
+        my $token_prev = $chain_prev->check_out(0);
+        my $value_prev = $token_prev->value();
+
+        if ($value_prev eq 'Round-robin')
+        {
+          $token->set_general('ITERATOR', 'ROUND', $token->value());
+          $chain->complete_if_last_is(0, 'EXPLAINED');
+        }
+      }
+    }
+  }
+}
+
+
 sub interpret
 {
   my ($whole, $chains, $chains_title, $teams, $scoring, $bbono) = @_;
@@ -454,6 +592,8 @@ sub interpret
   post_process_tword($chains, $chains_title, $bbono);
   post_process_match($chains, $bbono);
   post_process_letters($chains);
+
+  post_process_single_numerals($chains, $chains_title, $bbono);
 }
 
 1;
