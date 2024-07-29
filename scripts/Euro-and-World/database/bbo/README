@@ -1,11 +1,25 @@
+NL:
+                        Team    Pair
+- nF (as Fn in text)
+- n[A-Da-d]
+
+
+For isolated N_OF_N:
+Look for STAGE in TITLE, QF, SF, F
+Look at SCORING being I
+Look for x with x <= 8
+Then it's probably a segment
+
 Maybe look for event chains with exactly one numeral chain and
 it's the last one.
 - If preceded by RR, it's a Round.
 
+39011: Why still TEAM1_COUNTRY, TEAM2_COUNTRY?
 
 10316: Says Round 32 but is Rof32.
 10315: Then is probably Rof32, seg 2?
 
+There are some counters 0_..., e.g. 5203
 
 Dynamic consistency of chains: What occurs in raw.txt
 
