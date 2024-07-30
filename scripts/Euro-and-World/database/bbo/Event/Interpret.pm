@@ -525,6 +525,61 @@ sub one_to_two_chains
 }
 
 
+sub n_of_n
+{
+  my ($chain, $token, $tname, $stage, $scoring, $value) = @_;
+
+  $value =~ /^(\d+) of (\d+)$/;
+  my ($n1, $n2) = ($1, $2);
+
+  if ($stage && $stage =~ /final/i && 
+      $scoring eq 'I' && $n2 <= 8)
+  {
+    # Probably a segment.
+    $token->set_general('MARKER', 'SEGMENT', $value);
+    $chain->complete_if_last_is(0, 'EXPLAINED');
+    return 1;
+  }
+  elsif ($scoring eq 'I' && $n2 <= 6)
+  {
+    # Probably a segment.
+    $token->set_general('MARKER', 'SEGMENT', $value);
+    $chain->complete_if_last_is(0, 'EXPLAINED');
+    return 1;
+  }
+  elsif ($tname && ($tname =~ /Swiss Teams/ || $tname =~ /League/))
+  {
+    # Probably a round.
+    $token->set_general('MARKER', 'ROUND', $value);
+    $chain->complete_if_last_is(0, 'EXPLAINED');
+    return 1;
+  }
+  elsif ($stage && ($stage eq 'Qualifying' || $stage eq 'Round-robin'))
+  {
+    # Probably a round.
+    $token->set_general('MARKER', 'ROUND', $value);
+    $chain->complete_if_last_is(0, 'EXPLAINED');
+    return 1;
+  }
+  elsif (($scoring eq 'P' || ($tname && $tname =~ /Pairs/)) || 
+      ($n2 == 11 || $n2 > 12))
+  {
+    # Probably a round.
+    $token->set_general('MARKER', 'ROUND', $value);
+    $chain->complete_if_last_is(0, 'EXPLAINED');
+    return 1;
+  }
+  elsif ($tname && exists $ITERATORS_NOFN{$tname})
+  {
+    my $iter = $ITERATORS_NOFN{$tname};
+    $token->set_general('MARKER', $iter, $value);
+    $chain->complete_if_last_is(0, 'EXPLAINED');
+    return 1;
+  }
+  return 0;
+}
+
+
 sub major_minor
 {
   my ($chains, $chain, $token, $tname, $value) = @_;
@@ -619,27 +674,9 @@ sub number_letter
 }
 
 
-sub n_to_n_of_n
+sub event_generic_number
 {
   my ($chains, $chain, $token, $tname, $stage, $scoring, $value) = @_;
-
-  if (($scoring eq 'I' || $scoring eq 'B') && $stage =~ /final/i)
-  {
-    $token->set_general('MARKER', 'SEGMENT', $value);
-    $chain->complete_if_last_is(0, 'EXPLAINED');
-  }
-  else
-  {
-    $token->set_general('MARKER', 'ROUND', $value);
-    $chain->complete_if_last_is(0, 'EXPLAINED');
-  }
-  return 1;
-}
-
-
-sub event_ordinal
-{
-  my ($token, $stage, $scoring, $value) = @_;
 
   if (($scoring eq 'I' || $scoring eq 'B') && $stage =~ /final/i)
   {
@@ -685,57 +722,12 @@ sub post_process_stand_alone_number
     }
     else
     {
-      print "TODO1 $bbono, $tname: $field $value\n";
+      print "TODO1 $bbono, $tname: $stage, $field, $value\n";
     }
   }
   elsif ($field eq 'N_OF_N')
   {
-    # if (! n_of_n($chain, $token, $tname, $value))
-    # {
-    # }
-
-    $value =~ /^(\d+) of (\d+)$/;
-    my ($n1, $n2) = ($1, $2);
-
-    if ($stage && $stage =~ /final/i && 
-        $$scoring eq 'I' && $n2 <= 8)
-    {
-      # Probably a segment.
-      $token->set_general('MARKER', 'SEGMENT', $value);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
-    }
-    elsif ($$scoring eq 'I' && $n2 <= 6)
-    {
-      # Probably a segment.
-      $token->set_general('MARKER', 'SEGMENT', $value);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
-    }
-    elsif ($tname && ($tname =~ /Swiss Teams/ || $tname =~ /League/))
-    {
-      # Probably a round.
-      $token->set_general('MARKER', 'ROUND', $value);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
-    }
-    elsif ($stage && ($stage eq 'Qualifying' || $stage eq 'Round-robin'))
-    {
-      # Probably a round.
-      $token->set_general('MARKER', 'ROUND', $value);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
-    }
-    elsif (($$scoring eq 'P' || ($tname && $tname =~ /Pairs/)) || 
-        ($n2 == 11 || $n2 > 12))
-    {
-      # Probably a round.
-      $token->set_general('MARKER', 'ROUND', $value);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
-    }
-    elsif ($tname && exists $ITERATORS_NOFN{$tname})
-    {
-      my $iter = $ITERATORS_NOFN{$tname};
-      $token->set_general('MARKER', $iter, $value);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
-    }
-    else
+    if (! n_of_n($chain, $token, $tname, $stage, $$scoring, $value))
     {
       print "TODO2 $bbono, $tname: $stage, $field, $value\n";
     }
@@ -755,24 +747,19 @@ sub post_process_stand_alone_number
       print "TODO4 $bbono, $tname: $stage, $field, $value\n";
     }
   }
-  elsif ($field eq 'N_TO_N_OF_N')
+  elsif ($field eq 'AMBIGUOUS' ||
+      $field eq 'N_TO_N_OF_N' ||
+      $field eq 'ORDINAL')
   {
-    if (! n_to_n_of_n($chains, $chain, $token, 
+    if (! event_generic_number($chains, $chain, $token, 
         $tname, $stage, $$scoring, $value))
     {
       print "TODO5 $bbono, $tname: $stage, $field, $value\n";
     }
   }
-  elsif ($field eq 'ORDINAL')
-  {
-    if (! event_ordinal($token, $stage, $$scoring, $value))
-    {
-      print "TODO6 $bbono, $tname: $stage, $field, $value\n";
-    }
-  }
   else
   {
-    print "TODO7 $bbono, $tname: $stage, $field, $value\n";
+    print "TODO6 $bbono, $tname: $stage, $field, $value\n";
   }
 }
 
