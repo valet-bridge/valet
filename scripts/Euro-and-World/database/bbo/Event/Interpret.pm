@@ -600,19 +600,58 @@ sub number_letter
   elsif (exists $ITERATORS_NL{$tname})
   {
     $token->set_general('MARKER', $ITERATORS_NL{$tname}, $value);
+    $chain->complete_if_last_is(0, 'EXPLAINED');
     return 1;
   }
   elsif ($stage =~ /final/i)
   {
     $token->set_general('MARKER', 'SEGMENT', $value);
+    $chain->complete_if_last_is(0, 'EXPLAINED');
     return 1;
   }
   else
   {
     $token->set_general('MARKER', 'ROUND', $value);
+    $chain->complete_if_last_is(0, 'EXPLAINED');
     return 1;
   }
   return 0;
+}
+
+
+sub n_to_n_of_n
+{
+  my ($chains, $chain, $token, $tname, $stage, $scoring, $value) = @_;
+
+  if (($scoring eq 'I' || $scoring eq 'B') && $stage =~ /final/i)
+  {
+    $token->set_general('MARKER', 'SEGMENT', $value);
+    $chain->complete_if_last_is(0, 'EXPLAINED');
+  }
+  else
+  {
+    $token->set_general('MARKER', 'ROUND', $value);
+    $chain->complete_if_last_is(0, 'EXPLAINED');
+  }
+  return 1;
+}
+
+
+sub event_ordinal
+{
+  my ($token, $stage, $scoring, $value) = @_;
+
+  if (($scoring eq 'I' || $scoring eq 'B') && $stage =~ /final/i)
+  {
+    $token->set_general('MARKER', 'SEGMENT', $value);
+    $chain->complete_if_last_is(0, 'EXPLAINED');
+  }
+  else
+  {
+    $token->set_general('MARKER', 'ROUND', $value);
+    $chain->complete_if_last_is(0, 'EXPLAINED');
+  }
+  return 1;
 }
 
 
@@ -629,11 +668,16 @@ sub post_process_stand_alone_number
 
   my $cno;
   my $tname = find_field_in_chains($chains_title, 'TNAME', \$cno);
-  my $stage = find_field_in_chains($chains_title, 'STAGE', \$cno);
 
-  if ($tname && $field eq 'NUMERAL')
+  my $stage = find_field_in_chains($chains_title, 'STAGE', \$cno);
+  if (! $stage)
   {
-    if (exists $ITERATORS_NUMERAL{$tname})
+    $stage = find_field_in_chains($chains, 'STAGE', \$cno);
+  }
+
+  if ($field eq 'NUMERAL')
+  {
+    if ($tname && exists $ITERATORS_NUMERAL{$tname})
     {
       my $iter = $ITERATORS_NUMERAL{$tname};
       $token->set_general('MARKER', $iter, $value);
@@ -641,12 +685,15 @@ sub post_process_stand_alone_number
     }
     else
     {
-      # This is clean for now.
-      print "TODO $bbono, $tname: $field $value\n";
+      print "TODO1 $bbono, $tname: $field $value\n";
     }
   }
   elsif ($field eq 'N_OF_N')
   {
+    # if (! n_of_n($chain, $token, $tname, $value))
+    # {
+    # }
+
     $value =~ /^(\d+) of (\d+)$/;
     my ($n1, $n2) = ($1, $2);
 
@@ -690,14 +737,14 @@ sub post_process_stand_alone_number
     }
     else
     {
-      # print "TODO2 $bbono, $tname: $stage, $field, $value\n";
+      print "TODO2 $bbono, $tname: $stage, $field, $value\n";
     }
   }
   elsif ($field eq 'MAJOR_MINOR')
   {
     if (! major_minor($chains, $chain, $token, $tname, $value))
     {
-      print "TODO4 $bbono, $tname: $stage, $field, $value\n";
+      print "TODO3 $bbono, $tname: $stage, $field, $value\n";
     }
   }
   elsif ($field eq 'NL')
@@ -705,12 +752,27 @@ sub post_process_stand_alone_number
     if (! number_letter($chains, $chain, $token, 
         $tname, $stage, $$scoring, $value))
     {
+      print "TODO4 $bbono, $tname: $stage, $field, $value\n";
+    }
+  }
+  elsif ($field eq 'N_TO_N_OF_N')
+  {
+    if (! n_to_n_of_n($chains, $chain, $token, 
+        $tname, $stage, $$scoring, $value))
+    {
       print "TODO5 $bbono, $tname: $stage, $field, $value\n";
+    }
+  }
+  elsif ($field eq 'ORDINAL')
+  {
+    if (! event_ordinal($token, $stage, $$scoring, $value))
+    {
+      print "TODO6 $bbono, $tname: $stage, $field, $value\n";
     }
   }
   else
   {
-    print "TODO3 $bbono, $tname: $stage, $field, $value\n";
+    print "TODO7 $bbono, $tname: $stage, $field, $value\n";
   }
 }
 
@@ -754,7 +816,7 @@ sub post_process_single_numerals
   {
     if ($cno_single == 0)
     {
-        print "TODO0\n";
+        print "TODOA\n";
     }
     else
     {
@@ -762,11 +824,11 @@ sub post_process_single_numerals
       my $status_prev = $chain_prev->status();
       if ($status_prev eq 'KILLED')
       {
-        print "TODO1\n";
+        print "TODOB\n";
       }
       elsif ($chain_prev->last() > 0)
       {
-        print "TODO2\n";
+        print "TODOC\n";
       }
       else
       {

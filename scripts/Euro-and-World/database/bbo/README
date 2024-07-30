@@ -1,8 +1,4 @@
-NL:
-                        Team    Pair
-- nF (as Fn in text)
-- n[A-Da-d]
-
+Resolve pairs, e.g. 3077
 
 For isolated N_OF_N:
 Look for STAGE in TITLE, QF, SF, F
@@ -45,7 +41,7 @@ Things to deal with in chains:
 More general stuff
 ------------------
 
-Write output from C++ of #qx, #hands, range of board #s, lines
-Check the .ref files that modify qx against this
+Check the .ref files that modify qx against boards, lines
+(Output #lines from C++ as well?)
 
 URL scraper from .lin

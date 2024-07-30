@@ -131,6 +131,18 @@ while ($line = <$fh>)
   Scoring::Study::study($chunk{SCORING}, \%teams, $chunk{BBONO});
 
 
+  # BOARDS
+
+  my %boards;
+  if ($chunk{BOARDS} =~ /(\d+) (\d+) \| (\d+) (\d+) \| (\d+) (\d+) (\d+)/)
+  {
+    ($boards{HEADER_FIRST}, $boards{HEADER_LAST},
+     $boards{ACTUAL_FIRST}, $boards{ACTUAL_LAST},
+     $boards{NUM_OPEN}, $boards{NUM_CLOSED}, $boards{NUM_BOTH}) =
+       ($1, $2, $3, $4, $5, $6, $7);
+  }
+
+
   # TITLE
 
   my $chain_title = Chain->new();
@@ -179,6 +191,10 @@ while ($line = <$fh>)
 
     $stats_team->incr(\@{$chains_team{$team}});
   }
+
+
+  # Try to figure out whether it is teams, pairs or individual.
+
 
 
   # EVENTS
@@ -231,6 +247,7 @@ while ($line = <$fh>)
   {
     print_chunk(\%chunk);
     print_chains_by_tag(\@chains_title, "TITLE");
+    print "BOARDS ", $chunk{BOARDS}, "\n";
     print "SCORING ", $chunk{SCORING}, "\n";
     for my $team (qw(TEAM1 TEAM2))
     {
