@@ -801,11 +801,13 @@ sub get_next_one_chain
       my $chain_prev = $chains->[$cno];
       my $status_prev = $chain_prev->status();
 
-      next if $status_prev eq 'KILLED';
-      return 0 if $chain_prev->last() > 0;
+      if ($status_prev ne 'KILLED')
+      {
+        return 0 if $chain_prev->last() > 0;
 
-      $$token_ref = $chain_prev->check_out(0);
-      return 1;
+        $$token_ref = $chain_prev->check_out(0);
+        return 1;
+      }
     }
     while (1);
     return 0;
@@ -882,6 +884,49 @@ sub process_front_number
 }
 
 
+sub process_back_number
+{
+  my ($chains, $chain, $cno, $chains_title, $scoring, $bbono) = @_;
+
+  my $token = $chain->check_out(0);
+  my $field = $token->field();
+  my $value = $token->value();
+
+  my $cnotmp;
+  my $tname = find_field_in_chains($chains_title, 'TNAME', \$cnotmp);
+
+  my $stage = find_field_in_chains($chains_title, 'STAGE', \$cnotmp);
+  if (! $stage)
+  {
+    $stage = find_field_in_chains($chains, 'STAGE', \$cnotmp);
+  }
+
+  my $token2;
+  if (get_next_one_chain($chains, $cno, 0, \$token2) &&
+      $token2->value() eq 'Round-robin')
+  {
+    $token->set_general('MARKER', 'ROUND', $value);
+    $chain->complete_if_last_is(0, 'EXPLAINED');
+    return 1;
+  }
+  elsif (($scoring eq 'I' || $scoring eq 'B') ||
+    $token2->value() =~ /final/i)
+  {
+    $token->set_general('MARKER', 'SEGMENT', $value);
+    $chain->complete_if_last_is(0, 'EXPLAINED');
+    return 1;
+  }
+  elsif ($token2->value() =~ /pairs/i)
+  {
+    $token->set_general('MARKER', 'ROUND', $value);
+    $chain->complete_if_last_is(0, 'EXPLAINED');
+    return 1;
+  }
+
+  print "TODOX $bbono, $tname: $stage, $field, $value\n";
+}
+
+
 sub post_process_single_numerals
 {
   my ($chains, $chains_title, $scoring, $bbono) = @_;
@@ -909,17 +954,38 @@ sub post_process_single_numerals
   {
     post_process_stand_alone_number($chains, $chain, $chains_title, 
       $scoring, $bbono);
+    return;
   }
   elsif ($cno_single == 0)
   {
     process_front_number($chains, $chain, $cno_single, $chains_title, 
       $$scoring, $bbono);
+    return;
+  }
+  elsif ($cno_single == $#$chains)
+  {
+    process_back_number($chains, $chain, $cno_single, $chains_title, 
+      $$scoring, $bbono);
+    return;
   }
 
   return;
 
     my $token = $chain->check_out(0);
     my $field = $token->field();
+    my $value = $token->value();
+
+  my $cnotmp;
+  my $tname = find_field_in_chains($chains_title, 'TNAME', \$cnotmp);
+
+  my $stage = find_field_in_chains($chains_title, 'STAGE', \$cnotmp);
+  if (! $stage)
+  {
+    $stage = find_field_in_chains($chains, 'STAGE', \$cnotmp);
+  }
+
+
+    print "TODOX $bbono, $tname: $stage, $field, $value\n";
 
 
   if ($field eq 'NUMERAL')

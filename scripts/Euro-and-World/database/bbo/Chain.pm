@@ -456,7 +456,7 @@ sub print
   {
     print "OPENCHAIN ", $l+1, ": $prefix\n";
   }
-  elsif ($status eq 'COMPLETE' && $prefix =~ /^TITLE/)
+  elsif ($status eq 'COMPLETE' && $prefix =~ /^EVENT/)
   {
     print "COMPLETE_CHAIN ", $l+1, ": $prefix, ",
       $self->check_out(0)->str(0, $prefix), "\n";
