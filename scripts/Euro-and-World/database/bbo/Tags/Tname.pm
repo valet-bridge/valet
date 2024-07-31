@@ -640,7 +640,7 @@ my %MULTI_TYPOS =
     'seniors bowl', 'senior bowl'],
   'Danish Club Teams' => ['danish club team', 'dm klubhold',
     'dm i klubhold', 'dm i knubhold', 'dm i klub hold',
-    'danish 1st division', 'danmark 1_division',
+    'danish 1st division', 'danmark 1_division', 'danish 1st division',
     'denmark 1_division'],
   'Danish Cup' => ['danmark pokal'],
   'Danish District Championship' => ['danish district teams championship'],

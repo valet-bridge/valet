@@ -80,7 +80,7 @@ my %HARD_SUBS =
 
   'Final Round' => ['fr'],
   'Final Segment' => ['fs'],
-  'First Half' => ['1emt', '1mt', 'andata'],
+  'First Half' => ['1emt', '1mt', 'andata', '1st half'],
   'Group A' => ['groupa'],
   'Group B' => ['groupb'],
   'Open A' => ['opena'],
@@ -88,7 +88,7 @@ my %HARD_SUBS =
   'Open Round Robin' => ['orr'],
   'QF A' => ['qfa'],
   'QF B' => ['qfb'],
-  'Second Half' => ['2emt', '2mt', 'ritorno', 'retur'],
+  'Second Half' => ['2emt', '2mt', 'ritorno', 'retur', '2nd half'],
   'Semifinal A' => ['sfa'],
   'Semifinal B' => ['sfb'],
   'SF A' => ['semia'],

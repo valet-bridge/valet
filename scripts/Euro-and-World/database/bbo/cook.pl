@@ -134,12 +134,13 @@ while ($line = <$fh>)
   # BOARDS
 
   my %boards;
-  if ($chunk{BOARDS} =~ /(\d+) (\d+) \| (\d+) (\d+) \| (\d+) (\d+) (\d+)/)
+  if ($chunk{BOARDS} =~ /header (\d+) (\d+) \| actual (\d+) (\d+) \| counts (\d+) (\d+) (\d+) | (\d+) lines/)
   {
     ($boards{HEADER_FIRST}, $boards{HEADER_LAST},
      $boards{ACTUAL_FIRST}, $boards{ACTUAL_LAST},
-     $boards{NUM_OPEN}, $boards{NUM_CLOSED}, $boards{NUM_BOTH}) =
-       ($1, $2, $3, $4, $5, $6, $7);
+     $boards{NUM_OPEN}, $boards{NUM_CLOSED}, $boards{NUM_BOTH},
+     $boards{LINES}) =
+       ($1, $2, $3, $4, $5, $6, $7, $8);
   }
 
 

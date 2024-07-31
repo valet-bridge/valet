@@ -722,14 +722,14 @@ sub post_process_stand_alone_number
     }
     else
     {
-      print "TODO1 $bbono, $tname: $stage, $field, $value\n";
+      # print "TODO1 $bbono, $tname: $stage, $field, $value\n";
     }
   }
   elsif ($field eq 'N_OF_N')
   {
     if (! n_of_n($chain, $token, $tname, $stage, $$scoring, $value))
     {
-      print "TODO2 $bbono, $tname: $stage, $field, $value\n";
+      # print "TODO2 $bbono, $tname: $stage, $field, $value\n";
     }
   }
   elsif ($field eq 'MAJOR_MINOR')
@@ -764,6 +764,124 @@ sub post_process_stand_alone_number
 }
 
 
+sub get_next_one_chain
+{
+  # If forward_flag, then up in chain number, otherwise down.
+  # Return 1 if that chain has exactly one token.
+
+  my ($chains, $cno, $forward_flag, $token_ref) = @_;
+   
+  if ($forward_flag)
+  {
+    my $n = $#$chains;
+    do
+    {
+      return 0 if $cno == $n;
+      $cno++;
+      my $chain_next = $chains->[$cno];
+      my $status_next = $chain_next->status();
+
+      if ($status_next ne 'KILLED')
+      {
+        return 0 if $chain_next->last() > 0;
+
+        $$token_ref = $chain_next->check_out(0);
+        return 1;
+      }
+    }
+    while (1);
+    return 0;
+  }
+  else
+  {
+    do
+    {
+      return 0 if $cno == 0;
+      $cno--;
+      my $chain_prev = $chains->[$cno];
+      my $status_prev = $chain_prev->status();
+
+      next if $status_prev eq 'KILLED';
+      return 0 if $chain_prev->last() > 0;
+
+      $$token_ref = $chain_prev->check_out(0);
+      return 1;
+    }
+    while (1);
+    return 0;
+  }
+}
+
+
+sub process_front_number
+{
+  my ($chains, $chain, $cno, $chains_title, $scoring, $bbono) = @_;
+
+  my $token = $chain->check_out(0);
+  my $field = $token->field();
+  my $value = $token->value();
+
+  my $cnotmp;
+  my $tname = find_field_in_chains($chains_title, 'TNAME', \$cnotmp);
+
+  my $stage = find_field_in_chains($chains_title, 'STAGE', \$cnotmp);
+  if (! $stage)
+  {
+    $stage = find_field_in_chains($chains, 'STAGE', \$cnotmp);
+  }
+
+  my $token2;
+  if ($field eq 'AMBIGUOUS')
+  {
+    if (get_next_one_chain($chains, $cno, 1, \$token2) &&
+      $token2->field() eq 'ROUND')
+    {
+      $token->set_general('MARKER', 'SESSION', $value);
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+    }
+    else
+    {
+      print "TODOA $bbono, $tname: $stage, $field, $value\n";
+    }
+  }
+  elsif ($scoring ne 'I' && $scoring ne 'B')
+  {
+    print "TODOB $bbono, $tname: $stage, $field, $value\n";
+  }
+  elsif ($stage =~ /final/i)
+  {
+    if ($field eq 'ORDINAL' || $field eq 'N_OF_N')
+    {
+      $token->set_general('MARKER', 'SEGMENT', $value);
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+    }
+    else
+    {
+      print "TODOC $bbono, $tname: $stage, $field, $value\n";
+    }
+  }
+  elsif ($field eq 'N_OF_N' &&
+    ($value eq '1 of 16' || $value eq '1 of 32' || $value eq '1 of 64'))
+  {
+    $value =~ /1 of (\d+)/;
+    my $n = $1;
+    $token->set_general('MARKER', 'ROF', $n);
+    $chain->complete_if_last_is(0, 'EXPLAINED');
+  }
+  elsif (get_next_one_chain($chains, $cno, 1, \$token2) &&
+      ($token2->value() eq 'Round-robin' ||
+       $token2->field() eq 'HALF'))
+  {
+    $token->set_general('MARKER', 'ROUND', $value);
+    $chain->complete_if_last_is(0, 'EXPLAINED');
+  }
+  else
+  {
+    print "TODOD $bbono, $tname: $stage, $field, $value\n";
+  }
+}
+
+
 sub post_process_single_numerals
 {
   my ($chains, $chains_title, $scoring, $bbono) = @_;
@@ -792,11 +910,16 @@ sub post_process_single_numerals
     post_process_stand_alone_number($chains, $chain, $chains_title, 
       $scoring, $bbono);
   }
+  elsif ($cno_single == 0)
+  {
+    process_front_number($chains, $chain, $cno_single, $chains_title, 
+      $$scoring, $bbono);
+  }
 
   return;
 
-  my $token = $chain->check_out(0);
-  my $field = $token->field();
+    my $token = $chain->check_out(0);
+    my $field = $token->field();
 
 
   if ($field eq 'NUMERAL')
