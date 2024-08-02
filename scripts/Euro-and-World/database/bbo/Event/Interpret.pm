@@ -902,23 +902,57 @@ sub process_back_number
   }
 
   my $token2;
-  if (get_next_one_chain($chains, $cno, 0, \$token2) &&
-      $token2->value() eq 'Round-robin')
+  get_next_one_chain($chains, $cno, 0, \$token2);
+  my $value2 = $token2->value();
+
+  if ($field eq 'LETTER')
+  {
+    if ($scoring eq 'P' || $value2 !~ /final/i)
+    {
+      $token->set_general('MARKER', 'GROUP', $value);
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+      return 1;
+    }
+    else
+    {
+      $chain->complete_if_last_is(0, 'KILLED');
+      return 1;
+    }
+  }
+  elsif ($field eq 'AMBIGUOUS')
+  {
+    if ($tname eq 'Camrose')
+    {
+      $token->set_general('MARKER', 'STANZA', $value);
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+      return 1;
+    }
+    else
+    {
+      $token->set_general('MARKER', 'SESSION', $value);
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+      return 1;
+    }
+  }
+  elsif ($scoring eq 'P' ||
+      $stage eq 'Round-robin' ||
+      $value2 =~ /swiss/i ||
+      $value2 =~ /danish/i ||
+      $value2 =~ /pairs/i ||
+      $value2 =~ /individual/i ||
+      $stage eq 'Qualifying')
   {
     $token->set_general('MARKER', 'ROUND', $value);
     $chain->complete_if_last_is(0, 'EXPLAINED');
     return 1;
   }
-  elsif (($scoring eq 'I' || $scoring eq 'B') ||
-    $token2->value() =~ /final/i)
+  elsif ($stage =~ /final/i || 
+     $value2 =~ /^Rof/ ||
+     $stage eq 'Elimination' ||
+     $stage eq 'Playoff' ||
+     $value2 eq 'Super League')
   {
     $token->set_general('MARKER', 'SEGMENT', $value);
-    $chain->complete_if_last_is(0, 'EXPLAINED');
-    return 1;
-  }
-  elsif ($token2->value() =~ /pairs/i)
-  {
-    $token->set_general('MARKER', 'ROUND', $value);
     $chain->complete_if_last_is(0, 'EXPLAINED');
     return 1;
   }
