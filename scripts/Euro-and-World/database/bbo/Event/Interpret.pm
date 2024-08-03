@@ -901,8 +901,11 @@ sub process_back_number
     $stage = find_field_in_chains($chains, 'STAGE', \$cnotmp);
   }
 
+  my $form = find_field_in_chains($chains_title, 'FORM', \$cnotmp);
+
   my $token2;
   get_next_one_chain($chains, $cno, 0, \$token2);
+  my $field2 = $token2->field();
   my $value2 = $token2->value();
 
   if ($field eq 'LETTER')
@@ -919,28 +922,28 @@ sub process_back_number
       return 1;
     }
   }
+  elsif ($tname eq 'Camrose' && ($field eq 'AMBIGUOUS' || $field eq 'NUMERAL'))
+  {
+    $token->set_general('MARKER', 'STANZA', $value);
+    $chain->complete_if_last_is(0, 'EXPLAINED');
+    return 1;
+  }
   elsif ($field eq 'AMBIGUOUS')
   {
-    if ($tname eq 'Camrose')
-    {
-      $token->set_general('MARKER', 'STANZA', $value);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
-      return 1;
-    }
-    else
-    {
-      $token->set_general('MARKER', 'SESSION', $value);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
-      return 1;
-    }
+    $token->set_general('MARKER', 'SESSION', $value);
+    $chain->complete_if_last_is(0, 'EXPLAINED');
+    return 1;
   }
-  elsif ($scoring eq 'P' ||
+  elsif ($form eq 'Pairs' ||
+      $scoring eq 'P' ||
       $stage eq 'Round-robin' ||
+      $value2 eq 'Round-robin' ||
       $value2 =~ /swiss/i ||
       $value2 =~ /danish/i ||
       $value2 =~ /pairs/i ||
       $value2 =~ /individual/i ||
-      $stage eq 'Qualifying')
+      $stage eq 'Qualifying' ||
+      $stage eq 'Consolation')
   {
     $token->set_general('MARKER', 'ROUND', $value);
     $chain->complete_if_last_is(0, 'EXPLAINED');
@@ -949,14 +952,87 @@ sub process_back_number
   elsif ($stage =~ /final/i || 
      $value2 =~ /^Rof/ ||
      $stage eq 'Elimination' ||
+     $stage eq 'Knock-out' ||
      $stage eq 'Playoff' ||
+     $value2 eq 'Bronze' ||
      $value2 eq 'Super League')
   {
     $token->set_general('MARKER', 'SEGMENT', $value);
     $chain->complete_if_last_is(0, 'EXPLAINED');
     return 1;
   }
+  elsif ($field eq 'MAJOR_MINOR')
+  {
+    if ($stage eq 'Knock-out')
+    {
+      $value2 =~ /^(\d+)+(\d+)$/;
+      one_to_two_chains($chains, $chain, $token,
+        'MARKER', 'ROUND', 'MARKER', 'SEGMENT', $1, $2);
+    }
+    else
+    {
+      print "TODOE $bbono, $tname: $stage, $field, $value\n";
+    }
+    return 1;
+  }
+  elsif ($field eq 'NL')
+  {
+    $value =~ /^(\d+)([A-Za-z]+)$/;
+    my ($n, $l) = ($1, $2);
 
+    if ($l eq 'F')
+    {
+      one_to_two_chains($chains, $chain, $token,
+        'MARKER', 'STAGE', 'MARKER', 'SEGMENT', $l, $n);
+      return 1;
+    }
+    else
+    {
+      one_to_two_chains($chains, $chain, $token,
+        'MARKER', 'GROUP', 'MARKER', 'SEGMENT', $l, $n);
+      return 1;
+    }
+  }
+  elsif ($field2 eq 'BERTH' ||
+      $field2 eq 'MATCH' ||
+      $field2 eq 'PLACE' ||
+      $field2 eq 'ROUND' ||
+      $field2 eq 'MATCH' ||
+      $field2 eq 'AGE' ||
+      $field2 eq 'GENDER' ||
+      ($field2 eq 'FORM' && $value2 eq 'Teams'))
+  {
+    if ($field ne 'NUMERAL' && $field ne 'N_OF_N')
+    {
+      print "TODOE $bbono, $tname: $stage, $field, $value\n";
+      return 0;
+    }
+
+    my $n;
+    if ($field eq 'NUMERAL')
+    {
+      $n = $value;
+    }
+    else
+    {
+      $value =~ /^(\d+) of (\d+)$/;
+      $n = $2;
+    }
+
+    # Heuristic.
+    if ($n >= 12 || $n == 11 || $n == 7)
+    {
+      $token->set_general('MARKER', 'ROUND', $value);
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+      return 1;
+    }
+    else
+    {
+      $token->set_general('MARKER', 'SEGMENT', $value);
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+      return 1;
+    }
+  }
   print "TODOX $bbono, $tname: $stage, $field, $value\n";
 }
 
