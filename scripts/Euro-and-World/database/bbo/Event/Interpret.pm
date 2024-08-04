@@ -1195,12 +1195,9 @@ sub post_process_analyze_rest
 
     if ($status eq 'KILLED' || $status eq 'EXPLAINED')
     {
-      if ($status eq 'KILLED' &&
+      next if ($status eq 'KILLED' &&
           $chain->last() == 0 && 
-          $token->value() eq '')
-      {
-        next;
-      }
+          $token->value() eq '');
 
       if ($status eq 'EXPLAINED')
       {
@@ -1228,26 +1225,6 @@ sub post_process_analyze_rest
       print "ANALYZE: expected one-token chain, $bbono\n";
       next;
     }
-
-    # my $token = $chain->check_out(0);
-    # my $cat = $token->category();
-    # my $field = $token->field();
-    # if ($cat eq 'MARKER' ||
-        # $field eq 'AGE' || $field eq 'CITY' || $field eq 'FORM' || 
-        # $field eq 'GENDER' || $field eq 'MONTH_DAY' || $field eq 'MOVEMENT' ||
-        # $field eq 'ORIGIN' || $field eq 'SPONSOR' || $field eq 'TNAME' ||
-        # $field eq 'YEAR' || $field eq 'YEAR_MONTH')
-    # {
-      # die;
-      # push @{$known->{$field}}, $token->value();
-      # if ($open_flag && $counter_flag)
-      # {
-        # push @$stretches, [$open_start, $cno-1];
-      # }
-      # $open_flag = 0;
-      # $counter_flag = 0;
-      # next;
-    # }
 
     if (! $open_flag)
     {
@@ -1284,6 +1261,80 @@ sub post_process_analyze_rest
 }
 
 
+sub post_process_pair
+{
+  my ($known, $chain0, $chain1, $bbono) = @_;
+
+  my $token0 = $chain0->check_out(0);
+  my $token1 = $chain1->check_out(0);
+
+  my $stage = '';
+  if (exists $known->{STAGE})
+  {
+    if ($#{$known->{STAGE}} > 0)
+    {
+      warn "Confusing number of stages";
+      return;
+    }
+    $stage = $known->{STAGE}[0];
+  }
+
+  my $field0 = $token0->field();
+  my $field1 = $token1->field();
+  my $value0 = $token0->value();
+  my $value1 = $token1->value();
+
+  if ($stage eq '' || $stage eq 'Quarterfinal' || $stage eq 'Semifinal' ||
+      $stage eq 'Final' || $stage eq 'Playoff' || $stage eq 'Knock-out')
+  {
+
+    if (($field0 eq 'LETTER' || $field0 eq 'NUMERAL' || $field0 eq 'N_OF_N') &&
+        ($field1 eq 'NUMERAL' || $field1 eq 'N_OF_N' || $field1 eq 'AMBIGUOUS'))
+    {
+      if ($value0 eq '16' || $value0 eq '32' || $value0 eq '64')
+      {
+        $token0->set_general('MARKER', 'ROF', $value0);
+        $token1->set_general('MARKER', 'SEGMENT', $value1);
+
+        $chain0->complete_if_last_is(0, 'EXPLAINED');
+        $chain1->complete_if_last_is(0, 'EXPLAINED');
+      }
+      elsif ($value0 eq '1 of 16' || $value0 eq '1 of 32' || $value0 eq '1 of 64')
+      {
+        $value0 =~ /^1 of (\d+)$/;
+        $token0->set_general('MARKER', 'ROF', $1);
+        $token1->set_general('MARKER', 'SEGMENT', $value1);
+
+        $chain0->complete_if_last_is(0, 'EXPLAINED');
+        $chain1->complete_if_last_is(0, 'EXPLAINED');
+      }
+      else
+      {
+        # Drop the letter/numeral.
+        $token1->set_general('MARKER', 'SEGMENT', $value1);
+
+        $chain0->complete_if_last_is(0, 'KILLED');
+        $chain1->complete_if_last_is(0, 'EXPLAINED');
+      }
+    }
+    return;
+  }
+  elsif ($stage eq 'Round-robin' && 
+      $field0 eq 'N_OF_N' &&
+      $field1 eq 'N_OF_N')
+  {
+    $token0->set_general('MARKER', 'ROUND', $value0);
+    $token1->set_general('MARKER', 'SEGMENT', $value1);
+
+    $chain0->complete_if_last_is(0, 'EXPLAINED');
+    $chain1->complete_if_last_is(0, 'EXPLAINED');
+    return;
+  }
+
+  print "STRETCH pair $bbono\n";
+}
+
+
 sub post_process_single_numerals_new
 {
   my ($chains, $chains_title, $known, $stretch, $actives, $bbono) = @_;
@@ -1316,10 +1367,7 @@ sub post_process_single_numerals_new
     return;
   }
 
-  my $token0 = $chain0->check_out(0);
-  my $token1 = $chain1->check_out(0);
-
-  print "STRETCH pair $bbono\n";
+  post_process_pair($known, $chain0, $chain1, $bbono);
 }
 
 
