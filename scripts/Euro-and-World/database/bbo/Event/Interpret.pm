@@ -1184,14 +1184,34 @@ sub post_process_analyze_rest
   {
     my $chain = $chains->[$cno];
     my $status = $chain->status();
-    if ($status eq 'KILLED')
-    {
-      next if ($chain->last() == 0 && $chain->check_out(0)->value() eq '');
 
-      if ($open_flag)
+    if ($status eq 'COMPLETE' && $chain->last() == -1)
+    {
+      $chain->complete_if_last_is(-1, 'KILLED');
+      next;
+    }
+
+    my $token = $chain->check_out(0);
+
+    if ($status eq 'KILLED' || $status eq 'EXPLAINED')
+    {
+      if ($status eq 'KILLED' &&
+          $chain->last() == 0 && 
+          $token->value() eq '')
+      {
+        next;
+      }
+
+      if ($status eq 'EXPLAINED')
+      {
+        push @{$known->{$token->field()}}, $token->value();
+      }
+
+      if ($open_flag && $counter_flag)
       {
         push @$stretches, [$open_start, $cno-1];
       }
+
       $open_flag = 0;
       $counter_flag = 0;
       next;
@@ -1203,36 +1223,31 @@ sub post_process_analyze_rest
       next;
     }
 
-    if ($status eq 'COMPLETE' && $chain->last() == -1)
-    {
-      $chain->complete_if_last_is(-1, 'KILLED');
-      next;
-    }
-
     if ($chain->last() != 0)
     {
       print "ANALYZE: expected one-token chain, $bbono\n";
       next;
     }
 
-    my $token = $chain->check_out(0);
-    my $cat = $token->category();
-    my $field = $token->field();
-    if ($cat eq 'MARKER' ||
-        $field eq 'AGE' || $field eq 'CITY' || $field eq 'FORM' || 
-        $field eq 'GENDER' || $field eq 'MONTH_DAY' || $field eq 'MOVEMENT' ||
-        $field eq 'ORIGIN' || $field eq 'SPONSOR' || $field eq 'TNAME' ||
-        $field eq 'YEAR' || $field eq 'YEAR_MONTH')
-    {
-      push @{$known->{$field}}, $token->value();
-      if ($open_flag && $counter_flag)
-      {
-        push @$stretches, [$open_start, $cno-1];
-      }
-      $open_flag = 0;
-      $counter_flag = 0;
-      next;
-    }
+    # my $token = $chain->check_out(0);
+    # my $cat = $token->category();
+    # my $field = $token->field();
+    # if ($cat eq 'MARKER' ||
+        # $field eq 'AGE' || $field eq 'CITY' || $field eq 'FORM' || 
+        # $field eq 'GENDER' || $field eq 'MONTH_DAY' || $field eq 'MOVEMENT' ||
+        # $field eq 'ORIGIN' || $field eq 'SPONSOR' || $field eq 'TNAME' ||
+        # $field eq 'YEAR' || $field eq 'YEAR_MONTH')
+    # {
+      # die;
+      # push @{$known->{$field}}, $token->value();
+      # if ($open_flag && $counter_flag)
+      # {
+        # push @$stretches, [$open_start, $cno-1];
+      # }
+      # $open_flag = 0;
+      # $counter_flag = 0;
+      # next;
+    # }
 
     if (! $open_flag)
     {
@@ -1240,7 +1255,7 @@ sub post_process_analyze_rest
       $open_start = $cno;
     }
 
-    if ($cat eq 'COUNTER')
+    if ($token->category() eq 'COUNTER')
     {
       $counter_flag = 1;
     }
