@@ -1261,6 +1261,52 @@ sub post_process_analyze_rest
 }
 
 
+sub lookup_known
+{
+  my ($known, $field) = @_;
+
+  return '' unless exists $known->{$field};
+
+  if ($#{$known->{$field}} > 0)
+  {
+    warn "Confusing number of $field";
+    return '';
+  }
+  else
+  {
+    return $known->{$field}[0];
+  }
+}
+
+
+sub post_process_single_active
+{
+  my ($known, $chain, $bbono) = @_;
+
+  my $token = $chain->check_out(0);
+  my $field = $token->field();
+  my $value = $token->value();
+
+  my $stage = lookup_known($known, 'STAGE');
+
+  # TODO Also get FORM and TNAME, including from TITLE
+
+  if ($stage eq '' || $stage eq 'Quarterfinal' || $stage eq 'Semifinal' ||
+      $stage eq 'Final' || $stage eq 'Playoff' || $stage eq 'Knock-out')
+  {
+    if ($field eq 'NUMERAL' || $field eq 'N_OF_N')
+    {
+      # TODO A segment, at least for teams
+    }
+    else
+    {
+    }
+  }
+
+  print "TODOX $bbono: $stage, $field, $value\n";
+}
+
+
 sub post_process_pair
 {
   my ($known, $chain0, $chain1, $bbono) = @_;
@@ -1268,16 +1314,7 @@ sub post_process_pair
   my $token0 = $chain0->check_out(0);
   my $token1 = $chain1->check_out(0);
 
-  my $stage = '';
-  if (exists $known->{STAGE})
-  {
-    if ($#{$known->{STAGE}} > 0)
-    {
-      warn "Confusing number of stages";
-      return;
-    }
-    $stage = $known->{STAGE}[0];
-  }
+  my $stage = lookup_known($known, 'STAGE');
 
   my $field0 = $token0->field();
   my $field1 = $token1->field();
@@ -1287,7 +1324,6 @@ sub post_process_pair
   if ($stage eq '' || $stage eq 'Quarterfinal' || $stage eq 'Semifinal' ||
       $stage eq 'Final' || $stage eq 'Playoff' || $stage eq 'Knock-out')
   {
-
     if (($field0 eq 'LETTER' || $field0 eq 'NUMERAL' || $field0 eq 'N_OF_N') &&
         ($field1 eq 'NUMERAL' || $field1 eq 'N_OF_N' || $field1 eq 'AMBIGUOUS'))
     {
@@ -1343,7 +1379,7 @@ sub post_process_single_numerals_new
 
   if ($#$actives == 0)
   {
-    print "STRETCH one $bbono\n";
+    post_process_single_active($known, $chains->[$actives->[0]], $bbono);
     return;
   }
 

@@ -1,16 +1,8 @@
-5923, RD16 can be Rof16
-
-Resolve pairs, e.g. 3077
-
 For isolated N_OF_N:
 Look for STAGE in TITLE, QF, SF, F
 Look at SCORING being I
 Look for x with x <= 8
 Then it's probably a segment
-
-Maybe look for event chains with exactly one numeral chain and
-it's the last one.
-- If preceded by RR, it's a Round.
 
 39011: Why still TEAM1_COUNTRY, TEAM2_COUNTRY?
 
