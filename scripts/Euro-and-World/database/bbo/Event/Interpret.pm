@@ -1166,6 +1166,148 @@ sub post_process_single_numerals
 }
 
 
+sub post_process_analyze_rest
+{
+  # Some known fields are stored in %known.
+  # There is supposed to be one remaining stretch of chain numbers.
+  # That stretch is supposed to have 1 or 2 chain numbers with content
+  # that is not KILLED.  These go in actives.
+
+  my ($chains, $known, $stretches, $actives, $bbono) = @_;
+  
+  # Some chains are just considered done.  Others, ideally one contiguous set,
+  # must still be analyzed for their number content.
+  my $open_flag = 0;
+  my $counter_flag = 0;
+  my $open_start = 0;
+  for my $cno (0 .. $#$chains)
+  {
+    my $chain = $chains->[$cno];
+    my $status = $chain->status();
+    if ($status eq 'KILLED')
+    {
+      next if ($chain->last() == 0 && $chain->check_out(0)->value() eq '');
+
+      if ($open_flag)
+      {
+        push @$stretches, [$open_start, $cno-1];
+      }
+      $open_flag = 0;
+      $counter_flag = 0;
+      next;
+    }
+
+    if ($status eq 'OPEN')
+    {
+      print "ANALYZE: odd $bbono\n";
+      next;
+    }
+
+    if ($status eq 'COMPLETE' && $chain->last() == -1)
+    {
+      $chain->complete_if_last_is(-1, 'KILLED');
+      next;
+    }
+
+    if ($chain->last() != 0)
+    {
+      print "ANALYZE: expected one-token chain, $bbono\n";
+      next;
+    }
+
+    my $token = $chain->check_out(0);
+    my $cat = $token->category();
+    my $field = $token->field();
+    if ($cat eq 'MARKER' ||
+        $field eq 'AGE' || $field eq 'CITY' || $field eq 'FORM' || 
+        $field eq 'GENDER' || $field eq 'MONTH_DAY' || $field eq 'MOVEMENT' ||
+        $field eq 'ORIGIN' || $field eq 'SPONSOR' || $field eq 'TNAME' ||
+        $field eq 'YEAR' || $field eq 'YEAR_MONTH')
+    {
+      push @{$known->{$field}}, $token->value();
+      if ($open_flag && $counter_flag)
+      {
+        push @$stretches, [$open_start, $cno-1];
+      }
+      $open_flag = 0;
+      $counter_flag = 0;
+      next;
+    }
+
+    if (! $open_flag)
+    {
+      $open_flag = 1;
+      $open_start = $cno;
+    }
+
+    if ($cat eq 'COUNTER')
+    {
+      $counter_flag = 1;
+    }
+  }
+
+  if ($open_flag)
+  {
+    push @$stretches, [$open_start, $#$chains];
+  }
+
+  if ($#$stretches > 0)
+  {
+    print "STRETCH multiple $bbono\n";
+    return;
+  }
+
+  return if $#$stretches == -1;
+
+  for my $cno ($stretches->[0][0] .. $stretches->[0][1])
+  {
+    if ($chains->[$cno]->status() ne 'KILLED')
+    {
+      push @$actives, $cno;
+    }
+  }
+}
+
+
+sub post_process_single_numerals_new
+{
+  my ($chains, $chains_title, $known, $stretch, $actives, $bbono) = @_;
+
+  my ($cno0, $cno1) = ($stretch->[0], $stretch->[1]);
+
+  if ($#$actives == 0)
+  {
+    print "STRETCH one $bbono\n";
+    return;
+  }
+
+  if ($#$actives != 1)
+  {
+    print "STRETCH long $bbono\n";
+    return;
+  }
+
+  my $chain0 = $chains->[$actives->[0]];
+  my $chain1 = $chains->[$actives->[1]];
+
+  if ($chain0->last() != 0)
+  {
+    print "STRETCH chain0 $bbono\n";
+    return;
+  }
+  if ($chain1->last() != 0)
+  {
+    print "STRETCH chain1 $bbono\n";
+    return;
+  }
+
+  my $token0 = $chain0->check_out(0);
+  my $token1 = $chain1->check_out(0);
+
+  print "STRETCH pair $bbono\n";
+}
+
+
 sub interpret
 {
   my ($whole, $chains, $chains_title, $teams, $scoring, $bbono) = @_;
@@ -1179,7 +1321,21 @@ sub interpret
   post_process_match($chains, $bbono);
   post_process_letters($chains);
 
-  post_process_single_numerals($chains, $chains_title, $scoring, $bbono);
+  my (%known, @stretches, @actives);
+  post_process_analyze_rest($chains, \%known, \@stretches, \@actives, $bbono);
+
+  return unless $#stretches == 0;
+
+  print "STRETCH single $bbono\n";
+  # post_process_single_numerals($chains, $chains_title, $scoring, $bbono);
+
+  if ($$scoring ne '')
+  {
+    $known{SCORING} = $$scoring;
+  }
+
+  post_process_single_numerals_new($chains, $chains_title, 
+    \%known, $stretches[0], \@actives, $bbono);
 }
 
 1;
