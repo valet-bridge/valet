@@ -1037,6 +1037,34 @@ sub process_back_number
 }
 
 
+sub process_middle_number
+{
+  my ($chains, $chain, $cno, $chains_title, $scoring, $bbono) = @_;
+
+  my $token = $chain->check_out(0);
+  my $field = $token->field();
+  my $value = $token->value();
+
+  my $cnotmp;
+  my $tname = find_field_in_chains($chains_title, 'TNAME', \$cnotmp);
+
+  my $stage = find_field_in_chains($chains_title, 'STAGE', \$cnotmp);
+  if (! $stage)
+  {
+    $stage = find_field_in_chains($chains, 'STAGE', \$cnotmp);
+  }
+
+  my $form = find_field_in_chains($chains_title, 'FORM', \$cnotmp);
+
+  # my $token2;
+  # get_next_one_chain($chains, $cno, 0, \$token2);
+  # my $field2 = $token2->field();
+  # my $value2 = $token2->value();
+
+  print "TODOX $bbono, $tname, $form: $stage, $field, $value\n";
+}
+
+
 sub post_process_single_numerals
 {
   my ($chains, $chains_title, $scoring, $bbono) = @_;
@@ -1075,6 +1103,12 @@ sub post_process_single_numerals
   elsif ($cno_single == $#$chains)
   {
     process_back_number($chains, $chain, $cno_single, $chains_title, 
+      $$scoring, $bbono);
+    return;
+  }
+  else
+  {
+    process_middle_number($chains, $chain, $cno_single, $chains_title, 
       $$scoring, $bbono);
     return;
   }

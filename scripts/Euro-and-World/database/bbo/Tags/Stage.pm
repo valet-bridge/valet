@@ -63,7 +63,7 @@ my %MULTI_TYPOS =
     'yarý final', 'sem fin', 'semi <final', 'simi final',
     'pó³fina³y', 'semi and final', 'semis and finals', 'semi f',
     'playoff semi-final', 'playoffs semi final', 'semi finale', 
-    '1/2 f', '1_2 f', '1_2 final', '1_2 final_', '1_2 finale',
+    '1/2 f', '1_2 f', '1_2f', '1_2 final', '1_2 final_', '1_2 finale',
     '1_2 finales', 'play-off semi-final', 'semi- final', 'semi finall'],
   Tiebreak => ['tie break', 'tie reak', 'extra boards', 'extra stanza',
     'extra match', 'o_t', 'extra time']

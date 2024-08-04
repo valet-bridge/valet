@@ -677,6 +677,7 @@ my %MULTI_TYPOS =
     'european b_t_ch_', 'e_b_l_ team championships',
     'e_b_l_ teams championship', 'e_b_l_ team champioships', 
     'europeqn teqm championships'],
+  "European Champions' Cup" => ['european champs cup'],
   'European Junior Mixed Pairs' => ['eyjc mixed pairs'],
   'European Junior Teams Championship' => [
     'european junior teams championship',
@@ -1180,7 +1181,8 @@ my %SINGLE_TYPOS =
   'United States Juniors Bridge Championship' => ['usjbc', 'jusbc'],
   'United States Juniors Training' => ['jtp'],
   'United States Seniors Bridge Championship' => ['ussbc'],
-  'United States Women Bridge Championship' => ['uswbc', 'uswbf', 'uswc'],
+  'United States Women Bridge Championship' => ['uswbc', 'uswbf', 'uswc',
+    'us womens championships'],
   Vanderbilt => ['vanderbuilt', 'vanderebilt', 'vandebilt', 'vandy'],
   'Venice Cup' => ['vc', 'venice'],
   'Victor Champion Cup' => ['vcc'],
