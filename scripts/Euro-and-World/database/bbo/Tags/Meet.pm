@@ -34,6 +34,7 @@ my @MULTI_WORDS =
   'Gold Coast Congress',
   'Greek Islands Festival',
   'Iceland Bridge Festival',
+  'Indonesian National Championships',
   'Indonesian National Pre-Sports Week',
   'Indonesian National Sports Week',
   'International Bridge Festival',
@@ -77,6 +78,7 @@ my @MULTI_WORDS =
   'Winter Bridge Festival',
   'Winter Championships',
   'Winter Nationals',
+  'World Bridge Series',
   'World Mind Games',
   'World Team Championships',
    'World Team Olympiad',
@@ -206,6 +208,7 @@ my %SINGLE_TYPOS =
   'Norwegian Championship' => ['nm'],
   'United States Bridge Championship' => ['usbc'],
   'Winter Nationals' => ['winternationals'],
+  'World Bridge Series' => ['wbs'],
   'World Team Championships' => ['wbtc'],
   'World Team Olympiad' => ['olympiad', 'olympiads', 'wbo']
 );

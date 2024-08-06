@@ -1061,7 +1061,7 @@ sub process_middle_number
   # my $field2 = $token2->field();
   # my $value2 = $token2->value();
 
-  print "TODOX $bbono, $tname, $form: $stage, $field, $value\n";
+  print "TODOX $bbono, $tname: $stage, $field, $value\n";
 }
 
 
@@ -1263,13 +1263,14 @@ sub post_process_analyze_rest
 
 sub lookup_known
 {
-  my ($known, $field) = @_;
+  my ($known, $field, $bbono) = @_;
 
   return '' unless exists $known->{$field};
 
   if ($#{$known->{$field}} > 0)
   {
-    warn "Confusing number of $field";
+    my $list = join ' ', @{$known->{$field}};
+    print "$bbono: Confusing number of $field: $list\n";
     return '';
   }
   else
@@ -1281,40 +1282,89 @@ sub lookup_known
 
 sub post_process_single_active
 {
-  my ($known, $chain, $bbono) = @_;
+  my ($knowledge, $known, $chain, $bbono) = @_;
 
   my $token = $chain->check_out(0);
   my $field = $token->field();
   my $value = $token->value();
 
-  my $stage = lookup_known($known, 'STAGE');
+  my $mask = '';
+  $mask .= ($known->{GROUP}[0] ? 1 : 0);
+  $mask .= ($known->{ROUND}[0] ? 1 : 0);
+  $mask .= ($known->{SESSION}[0] ? 1 : 0);
+  $mask .= ($known->{SEGMENT}[0] ? 1 : 0);
 
-  # TODO Also get FORM and TNAME, including from TITLE
+  my $mask2 = '';
+  $mask2 .= ($knowledge->get_field('GROUP', $bbono) ? 1 : 0);
+  $mask2 .= ($knowledge->get_field('ROUND', $bbono) ? 1 : 0);
+  $mask2 .= ($knowledge->get_field('SESSION', $bbono) ? 1 : 0);
+  $mask2 .= ($knowledge->get_field('SEGMENT', $bbono) ? 1 : 0);
 
+  if ($mask ne $mask2)
+  {
+    die "$mask vs $mask2";
+  }
+
+  my $tname = lookup_known($known, 'TNAME', $bbono);
+  my $stage = lookup_known($known, 'STAGE', $bbono);
+
+  my $form;
+  if (exists $known->{FORM}[0])
+  {
+    $form = $known->{FORM}[0];
+  }
+  elsif ($known->{SCORING}[0] eq 'I')
+  {
+    $form = 'Teams';
+  }
+  else
+  {
+    $form = 'Pairs';
+  }
+
+  my $ko_flag = 0;
   if ($stage eq '' || $stage eq 'Quarterfinal' || $stage eq 'Semifinal' ||
       $stage eq 'Final' || $stage eq 'Playoff' || $stage eq 'Knock-out')
   {
-    if ($field eq 'NUMERAL' || $field eq 'N_OF_N')
-    {
-      # TODO A segment, at least for teams
-    }
-    else
-    {
-    }
+    $ko_flag = 1;
   }
 
-  print "TODOX $bbono: $stage, $field, $value\n";
+
+  if ($mask eq '0000' && $ko_flag &&
+      ($field eq 'NUMERAL' || $field eq 'N_OF_N'))
+  {
+    $token->set_general('MARKER', 'SEGMENT', $value);
+    $chain->complete_if_last_is(0, 'EXPLAINED');
+    return;
+  }
+
+  print "TODOX $bbono, $mask, $tname: $form, $stage, $field, $value\n";
 }
 
 
 sub post_process_pair
 {
-  my ($known, $chain0, $chain1, $bbono) = @_;
+  my ($knowledge, $known, $chain0, $chain1, $bbono) = @_;
 
   my $token0 = $chain0->check_out(0);
   my $token1 = $chain1->check_out(0);
 
-  my $stage = lookup_known($known, 'STAGE');
+  my $stage = lookup_known($known, 'STAGE', $bbono);
+  my $stage2 = $knowledge->get_field('STAGE', $bbono);
+  my $movement2 = $knowledge->get_field('MOVEMENT', $bbono);
+  if ($stage ne $stage2)
+  {
+    if ($stage eq 'Knock-out' && $movement2 eq 'Knock-out')
+    {
+    }
+    elsif ($stage eq 'Round-robin' && $movement2 eq 'Round-robin')
+    {
+    }
+    else
+    {
+      die "$stage vs $stage2";
+    }
+  }
 
   my $field0 = $token0->field();
   my $field1 = $token1->field();
@@ -1373,13 +1423,15 @@ sub post_process_pair
 
 sub post_process_single_numerals_new
 {
-  my ($chains, $chains_title, $known, $stretch, $actives, $bbono) = @_;
+  my ($chains, $chains_title, $knowledge, $known, 
+    $stretch, $actives, $bbono) = @_;
 
   my ($cno0, $cno1) = ($stretch->[0], $stretch->[1]);
 
   if ($#$actives == 0)
   {
-    post_process_single_active($known, $chains->[$actives->[0]], $bbono);
+    post_process_single_active($knowledge, $known, 
+      $chains->[$actives->[0]], $bbono);
     return;
   }
 
@@ -1403,13 +1455,14 @@ sub post_process_single_numerals_new
     return;
   }
 
-  post_process_pair($known, $chain0, $chain1, $bbono);
+  post_process_pair($knowledge, $known, $chain0, $chain1, $bbono);
 }
 
 
 sub interpret
 {
-  my ($whole, $chains, $chains_title, $teams, $scoring, $bbono) = @_;
+  my ($whole, $chains, $chains_title, $teams, 
+    $knowledge, $scoring, $bbono) = @_;
 
   post_process_single($chains, $bbono);
   post_process_some_iterators($chains);
@@ -1425,16 +1478,22 @@ sub interpret
 
   return unless $#stretches == 0;
 
-  print "STRETCH single $bbono\n";
+  make_record($chains_title, \%known);
+
+  $knowledge->add_explained_chains($chains_title, $bbono);
+  $knowledge->add_explained_chains($chains, $bbono);
+  $knowledge->add_field('SCORING', $$scoring, $bbono);
+
+  # print "STRETCH single $bbono\n";
   # post_process_single_numerals($chains, $chains_title, $scoring, $bbono);
 
   if ($$scoring ne '')
   {
-    $known{SCORING} = $$scoring;
+    $known{SCORING}[0] = $$scoring;
   }
 
   post_process_single_numerals_new($chains, $chains_title, 
-    \%known, $stretches[0], \@actives, $bbono);
+    $knowledge, \%known, $stretches[0], \@actives, $bbono);
 }
 
 1;

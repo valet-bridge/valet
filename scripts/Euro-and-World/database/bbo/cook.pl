@@ -39,6 +39,7 @@ use Reductions::Title;
 
 use Chain;
 use Util;
+use Knowledge;
 
 use Whole;
 my $whole = Whole->new();
@@ -200,6 +201,7 @@ while ($line = <$fh>)
 
   # EVENTS
 
+  my $knowledge = Knowledge->new();
   my $chain_event = Chain->new();
   my @chains_event;
   push @chains_event, $chain_event;
@@ -215,7 +217,8 @@ while ($line = <$fh>)
   Event::Postprocess::post_process(\@chains_event);
 
   Event::Interpret::interpret($whole, \@chains_event,
-    \@chains_title, \%team_countries, \$chunk{SCORING}, $chunk{BBONO});
+    \@chains_title, \%team_countries, 
+    $knowledge, \$chunk{SCORING}, $chunk{BBONO});
 
   refill_histo($histo_event_final, \@chains_event);
 
