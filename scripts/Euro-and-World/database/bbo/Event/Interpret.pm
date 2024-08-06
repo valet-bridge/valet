@@ -1288,30 +1288,20 @@ sub post_process_single_active
   my $field = $token->field();
   my $value = $token->value();
 
-  my $mask = '';
-  $mask .= ($known->{GROUP}[0] ? 1 : 0);
-  $mask .= ($known->{ROUND}[0] ? 1 : 0);
-  $mask .= ($known->{SESSION}[0] ? 1 : 0);
-  $mask .= ($known->{SEGMENT}[0] ? 1 : 0);
-
-  my $mask2 = '';
-  $mask2 .= ($knowledge->get_field('GROUP', $bbono) ? 1 : 0);
-  $mask2 .= ($knowledge->get_field('ROUND', $bbono) ? 1 : 0);
-  $mask2 .= ($knowledge->get_field('SESSION', $bbono) ? 1 : 0);
-  $mask2 .= ($knowledge->get_field('SEGMENT', $bbono) ? 1 : 0);
-
-  if ($mask ne $mask2)
-  {
-    die "$mask vs $mask2";
-  }
-
-  my $tname = lookup_known($known, 'TNAME', $bbono);
-  my $stage = lookup_known($known, 'STAGE', $bbono);
+  my $tname = $knowledge->get_field('TNAME', $bbono);
+  my $form2 = $knowledge->get_field('FORM', $bbono);
+  my $stage = $knowledge->get_field('STAGE', $bbono);
+  my $movement = $knowledge->get_field('MOVEMENT', $bbono);
+  my $mask = $knowledge->get_iter_mask($bbono);
 
   my $form;
   if (exists $known->{FORM}[0])
   {
     $form = $known->{FORM}[0];
+  if ($form ne $form2)
+  {
+    warn "FORM $form vs $form2";
+  }
   }
   elsif ($known->{SCORING}[0] eq 'I')
   {
@@ -1322,15 +1312,9 @@ sub post_process_single_active
     $form = 'Pairs';
   }
 
-  my $ko_flag = 0;
-  if ($stage eq '' || $stage eq 'Quarterfinal' || $stage eq 'Semifinal' ||
-      $stage eq 'Final' || $stage eq 'Playoff' || $stage eq 'Knock-out')
-  {
-    $ko_flag = 1;
-  }
 
-
-  if ($mask eq '0000' && $ko_flag &&
+  if ($mask eq '0000' &&
+      $knowledge->is_knock_out($bbono) &&
       ($field eq 'NUMERAL' || $field eq 'N_OF_N'))
   {
     $token->set_general('MARKER', 'SEGMENT', $value);
@@ -1338,7 +1322,7 @@ sub post_process_single_active
     return;
   }
 
-  print "TODOX $bbono, $mask, $tname: $form, $stage, $field, $value\n";
+  print "TODOX $bbono, $mask, $tname: $form, $stage, $movement, $field, $value\n";
 }
 
 

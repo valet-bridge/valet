@@ -191,4 +191,30 @@ sub get_field
 }
 
 
+sub get_iter_mask
+{
+  my ($self, $bbono) = @_;
+  my $mask = '';
+  $mask .= ($self->get_field('GROUP', $bbono) ? 1 : 0);
+  $mask .= ($self->get_field('ROUND', $bbono) ? 1 : 0);
+  $mask .= ($self->get_field('SESSION', $bbono) ? 1 : 0);
+  $mask .= ($self->get_field('SEGMENT', $bbono) ? 1 : 0);
+  return $mask;
+}
+
+
+sub is_knock_out
+{
+  my ($self, $bbono) = @_;
+  my $movement = $self->get_field('MOVEMENT', $bbono);
+  my $stage = $self->get_field('STAGE', $bbono);
+
+  return ($movement eq 'Knock-out' ||
+    $stage eq 'Quarterfinal' ||
+    $stage eq 'Semifinal' ||
+    $stage eq 'Final' ||
+    $stage eq 'Playoff')
+}
+
+
 1;
