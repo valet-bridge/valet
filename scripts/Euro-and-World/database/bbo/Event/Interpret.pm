@@ -1344,27 +1344,13 @@ sub post_process_single_active
 
 sub post_process_pair
 {
-  my ($knowledge, $known, $chain0, $chain1, $bbono) = @_;
+  my ($knowledge, $chain0, $chain1, $bbono) = @_;
 
   my $token0 = $chain0->check_out(0);
   my $token1 = $chain1->check_out(0);
 
-  my $stage = lookup_known($known, 'STAGE', $bbono);
-  my $stage2 = $knowledge->get_field('STAGE', $bbono);
-  my $movement2 = $knowledge->get_field('MOVEMENT', $bbono);
-  if ($stage ne $stage2)
-  {
-    if ($stage eq 'Knock-out' && $movement2 eq 'Knock-out')
-    {
-    }
-    elsif ($stage eq 'Round-robin' && $movement2 eq 'Round-robin')
-    {
-    }
-    else
-    {
-      die "$stage vs $stage2";
-    }
-  }
+  my $stage = $knowledge->get_field('STAGE', $bbono);
+  my $movement = $knowledge->get_field('MOVEMENT', $bbono);
 
   my $field0 = $token0->field();
   my $field1 = $token1->field();
@@ -1372,7 +1358,8 @@ sub post_process_pair
   my $value1 = $token1->value();
 
   if ($stage eq '' || $stage eq 'Quarterfinal' || $stage eq 'Semifinal' ||
-      $stage eq 'Final' || $stage eq 'Playoff' || $stage eq 'Knock-out')
+      $stage eq 'Final' || $stage eq 'Playoff' || 
+      $movement eq 'Knock-out')
   {
     if (($field0 eq 'LETTER' || $field0 eq 'NUMERAL' || $field0 eq 'N_OF_N') &&
         ($field1 eq 'NUMERAL' || $field1 eq 'N_OF_N' || $field1 eq 'AMBIGUOUS'))
@@ -1405,7 +1392,7 @@ sub post_process_pair
     }
     return;
   }
-  elsif ($stage eq 'Round-robin' && 
+  elsif ($movement eq 'Round-robin' && 
       $field0 eq 'N_OF_N' &&
       $field1 eq 'N_OF_N')
   {
@@ -1455,7 +1442,7 @@ sub post_process_single_numerals_new
     return;
   }
 
-  post_process_pair($knowledge, $known, $chain0, $chain1, $bbono);
+  post_process_pair($knowledge, $chain0, $chain1, $bbono);
 }
 
 
