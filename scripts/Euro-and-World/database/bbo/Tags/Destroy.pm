@@ -76,7 +76,7 @@ my %SINGLE_TYPOS =
     'de', 'des', 'ds', 'du', 'dw', 'dwii', 'enc', 'eve', 'ew',
     'from', 'gd', 'glpd', 'het', 'im', 'in', 'jm', 'kb', 'kdk', 
     'krs', 'ktp', 'ld', 'min', 'mr', 'nc', 'nk', 'no', 'npc', 'nr', 'ns',
-    'og', 'pc', 'se', 'sw', 'tc', 'te', 'teh', 'th', 'the', 'tn',
+    'og', 'pc', 'se', 'tc', 'te', 'teh', 'th', 'the', 'tn',
     'ts', 'tv', 'und', 'vsa', 'vsb', 'vw','xy', 'yz', 'zw'],
   Uninformative => ['?', '*',
     'ab', 'am', 'alumni', 'anniversary', 'annual', 'any', 'away',

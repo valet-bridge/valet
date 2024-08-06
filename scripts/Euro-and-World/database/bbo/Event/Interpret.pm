@@ -525,6 +525,25 @@ sub one_to_two_chains
 }
 
 
+sub one_to_two_chains_new
+{
+  my ($chains, $chain, $cno, $token, 
+    $cat1, $field1, $value1, $cat2, $field2, $value2) = @_;
+
+  $token->set_general($cat1, $field1, $value1);
+  $chain->complete_if_last_is(0, 'EXPLAINED');
+
+  my $token1 = Token->new();
+  $token1->copy_origin_from($token);
+  $token1->set_general($cat2, $field2, $value2);
+
+  my $chain1 = Chain->new();
+  $chain1->append($token1);
+  $chain1->complete_if_last_is(0, 'EXPLAINED');
+  splice(@$chains, $cno+1, 0, $chain1);
+}
+
+
 sub n_of_n
 {
   my ($chain, $token, $tname, $stage, $scoring, $value) = @_;
@@ -1280,46 +1299,110 @@ sub lookup_known
 }
 
 
+sub post_process_rof
+{
+  my ($chains, $knowledge, $bbono) = @_;
+
+  for my $cno (0 .. $#$chains)
+  {
+    my $chain = $chains->[$cno];
+    next if $chain->status() eq 'KILLED';
+    next unless $chain->last() == 0;
+
+    my $token = $chain->check_out(0);
+    my $field = $token->field();
+    next unless $field eq 'ROUND';
+
+    my $value = $token->value();
+    next unless $value eq '16' || $value eq '32' || $value eq '64';
+
+    my $tname = $knowledge->get_field('TNAME', $bbono);
+    my $meet = $knowledge->get_field('MEET', $bbono);
+    if ($tname eq 'Spingold' || $tname eq 'Vanderbilt' || 
+        $meet eq 'United States Bridge Championship')
+    {
+      # Probably round-of.
+      $token->set_general('MARKER', 'ROF', $value);
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+    }
+  }
+}
+
 sub post_process_single_active
 {
-  my ($knowledge, $known, $chain, $bbono) = @_;
+  my ($knowledge, $known, $chains, $chain, $cno, $bbono) = @_;
 
   my $token = $chain->check_out(0);
   my $field = $token->field();
   my $value = $token->value();
 
   my $tname = $knowledge->get_field('TNAME', $bbono);
-  my $form2 = $knowledge->get_field('FORM', $bbono);
+  my $form = $knowledge->get_field('FORM', $bbono);
   my $stage = $knowledge->get_field('STAGE', $bbono);
   my $movement = $knowledge->get_field('MOVEMENT', $bbono);
   my $mask = $knowledge->get_iter_mask($bbono);
 
-  my $form;
-  if (exists $known->{FORM}[0])
+  if ($form eq '')
   {
-    $form = $known->{FORM}[0];
-  if ($form ne $form2)
-  {
-    warn "FORM $form vs $form2";
-  }
-  }
-  elsif ($known->{SCORING}[0] eq 'I')
-  {
-    $form = 'Teams';
-  }
-  else
-  {
-    $form = 'Pairs';
+    # TODO This is not clean.  Should go by TNAME or TWORD.
+    $form = ($known->{SCORING}[0] eq 'I' ||
+      $known->{SCORING}[0] eq 'B' ?  'Teams' : 'Pairs');
   }
 
-
-  if ($mask eq '0000' &&
-      $knowledge->is_knock_out($bbono) &&
-      ($field eq 'NUMERAL' || $field eq 'N_OF_N'))
+  if ($form eq 'Pairs')
   {
-    $token->set_general('MARKER', 'SEGMENT', $value);
-    $chain->complete_if_last_is(0, 'EXPLAINED');
+    if ($mask eq '0000')
+    {
+      if ($field eq 'NUMERAL' || 
+          $field eq 'N_OF_N' ||
+          $field eq 'ORDINAL')
+      {
+        $token->set_general('MARKER', 'SESSION', $value);
+        $chain->complete_if_last_is(0, 'EXPLAINED');
+        return;
+      }
+      elsif ($field eq 'NL')
+      {
+        $value =~ /^(\d+)([A-Za-z]+)$/;
+        my ($number, $letter) = ($1, $2);
+        one_to_two_chains_new($chains, $chain, $cno, $token,
+          'MARKER', 'GROUP', $letter,
+          'MARKER', 'SESSION', $number);
+        return;
+      }
+      elsif ($field eq 'AMBIGUOUS')
+      {
+        $value =~ /^S (.*)$/;
+        $token->set_general('MARKER', 'SESSION', $1);
+        $chain->complete_if_last_is(0, 'EXPLAINED');
+        return;
+      }
+    }
+
+    print "TODOY $bbono, $mask, $tname: $form, $stage, $movement, $field, $value\n";
     return;
+  }
+  elsif ($mask eq '0000' || $mask eq '1000')
+  {
+    if ($knowledge->is_knock_out($bbono))
+    {
+      if ($field eq 'NUMERAL' || 
+          $field eq 'N_OF_N' ||
+          $field eq 'ORDINAL')
+      {
+        $token->set_general('MARKER', 'SEGMENT', $value);
+        $chain->complete_if_last_is(0, 'EXPLAINED');
+        return;
+      }
+    }
+    elsif ($field eq 'NUMERAL' || 
+          $field eq 'N_OF_N' ||
+          $field eq 'ORDINAL')
+    {
+      $token->set_general('MARKER', 'ROUND', $value);
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+      return;
+    }
   }
 
   print "TODOX $bbono, $mask, $tname: $form, $stage, $movement, $field, $value\n";
@@ -1402,7 +1485,7 @@ sub post_process_single_numerals_new
   if ($#$actives == 0)
   {
     post_process_single_active($knowledge, $known, 
-      $chains->[$actives->[0]], $bbono);
+      $chains, $chains->[$actives->[0]], $actives->[0], $bbono);
     return;
   }
 
@@ -1447,13 +1530,15 @@ sub interpret
   my (%known, @stretches, @actives);
   post_process_analyze_rest($chains, \%known, \@stretches, \@actives, $bbono);
 
-  return unless $#stretches == 0;
-
-  make_record($chains_title, \%known);
-
   $knowledge->add_explained_chains($chains_title, $bbono);
   $knowledge->add_explained_chains($chains, $bbono);
   $knowledge->add_field('SCORING', $$scoring, $bbono);
+
+  post_process_rof($chains, $knowledge, $bbono);
+
+  return unless $#stretches == 0;
+
+  make_record($chains_title, \%known);
 
   # print "STRETCH single $bbono\n";
   # post_process_single_numerals($chains, $chains_title, $scoring, $bbono);

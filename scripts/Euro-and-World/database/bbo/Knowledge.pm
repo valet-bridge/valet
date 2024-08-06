@@ -119,6 +119,10 @@ sub rework_scoring
   {
     # IMP Pairs, apparently.
   }
+  elsif ($old eq 'MP' && $value eq 'P')
+  {
+    # Keep MP.
+  }
   else
   {
     warn "$bbono: SCORING $old vs $value\n";

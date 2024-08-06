@@ -31,7 +31,7 @@ my %SINGLE_TYPOS =
 (
   Barometer => ['barometr'],
   Goulash => ['goullash', 'goulyash'],
-  Swiss => ['suisse', 'swis', 'monrad']
+  Swiss => ['suisse', 'swis', 'sw', 'monrad']
 );
 
 
