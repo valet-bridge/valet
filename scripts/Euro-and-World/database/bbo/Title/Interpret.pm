@@ -236,15 +236,16 @@ sub post_process_maybe_rof
 
   for my $chain (@$chains)
   {
-    next if $chain->status() eq 'KILLED' || $chain->status() eq 'EXPLAINED';
+    next if $chain->status() eq 'KILLED';
     next unless $chain->last() == 0;
 
     my $token = $chain->check_out(0);
     next unless $token->field() eq 'ROUND';
 
     my $value = $token->value();
-    next unless $value =~ /^\d+$/;
-    next unless $value == 8 || $value == 16 || $value == 32 || $value == 64;
+    next unless $value =~ /^(\d+)[A-Za-z]*$/;
+    my $r = $1;
+    next unless $r == 8 || $r == 16 || $r == 32 || $r == 64;
     
     my $cno;
     my $tname = find_field_in_chains($chains, 'TNAME', \$cno);
@@ -254,7 +255,7 @@ sub post_process_maybe_rof
         $tname eq 'Baze Senior Knock-out' ||
         $tname eq 'United States Bridge Championship')
     {
-      $token->set_general('MARKER', 'ROF', $value);
+      $token->set_general('MARKER', 'ROF', $r);
       $chain->complete_if_last_is(0, 'EXPLAINED');
     }
   }
@@ -267,6 +268,7 @@ sub interpret
   my ($whole, $chains, $scoring, $bbono) = @_;
 
   post_process_single($chains, $scoring, $bbono);
+  post_process_maybe_rof($chains, $bbono);
 }
 
 
@@ -277,7 +279,6 @@ sub deteam
   post_process_title_teams($chains, $teams, $bbono);
   post_process_captains($chains, $bbono);
   post_process_leading_number($chains, $bbono);
-  post_process_maybe_rof($chains, $bbono);
 }
 
 1;

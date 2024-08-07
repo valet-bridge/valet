@@ -1,16 +1,14 @@
-What's up with > 1 STAGE?
-Look for ROUND, SEGMENT, SESSION, GROUP.
-Look for FORM / Scoring.
+1200 lines:
+ 454 MAJOR_MINOR
+ 249 N_TO_N
+ 124 N_TO_N_OF_N
+  26 NUMERAL
+ 287 NL_OF_N
+  40 NL_TO_N
+----
+1140
 
 Activate KDEBUG in Knowledge.pm
-
-
-
-For isolated N_OF_N:
-Look for STAGE in TITLE, QF, SF, F
-Look at SCORING being I
-Look for x with x <= 8
-Then it's probably a segment
 
 39011: Why still TEAM1_COUNTRY, TEAM2_COUNTRY?
 

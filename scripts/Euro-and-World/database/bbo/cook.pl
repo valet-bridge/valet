@@ -187,7 +187,7 @@ while ($line = <$fh>)
     Team::Postprocess::post_process(\@{$chains_team{$team}});
 
     Team::Interpret::interpret($whole, \@{$chains_team{$team}}, 
-     \@chains_title, \$chunk{SCORING}, $chunk{BBONO});
+      \@chains_title, \$chunk{SCORING}, $chunk{BBONO});
 
     add_to_countries(\@{$chains_team{$team}}, $team, \%team_countries);
 

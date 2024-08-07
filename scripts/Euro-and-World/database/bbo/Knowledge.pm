@@ -161,6 +161,45 @@ sub add_field
 }
 
 
+sub delete_field
+{
+  my ($self, $field, $value, $bbono) = @_;
+
+  if (! exists $self->{HASH}{$field} ||
+      ! exists $self->{HASH}{$field}{$value})
+  {
+    die "$bbono delete_field CONFLICT: $field, $value not found";
+  }
+
+  my $l = $#{$self->{LIST}{$field}};
+  my $hit = 0;
+  my $index;
+  for my $i (0 .. $l)
+  {
+    if ($self->{LIST}{$field}[$i] eq $value)
+    {
+      $hit = 1;
+      $index = $i;
+      last;
+    }
+  }
+
+  if (! $hit)
+  {
+    die "$bbono delete_field ERROR: $field, $value in hash but not in list";
+  }
+
+  delete $self->{HASH}{$field}{$value};
+  splice(@{$self->{LIST}{$field}}, $index, 1);
+
+  if ($l == 0)
+  {
+    delete $self->{HASH}{$field};
+    delete $self->{LIST}{$field};
+  }
+}
+
+
 sub add_explained_chains
 {
   my ($self, $chains, $bbono) = @_;

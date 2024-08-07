@@ -1318,15 +1318,44 @@ sub post_process_rof
 
     my $tname = $knowledge->get_field('TNAME', $bbono);
     my $meet = $knowledge->get_field('MEET', $bbono);
-    if ($tname eq 'Spingold' || $tname eq 'Vanderbilt' || 
-        $meet eq 'United States Bridge Championship')
+    if ($tname eq 'Spingold' || 
+        $tname eq 'Vanderbilt' || 
+        $meet eq 'United States Bridge Championship' ||
+       ($tname eq 'European Open Bridge Championship' &&
+        $knowledge->is_knock_out($bbono)))
     {
       # Probably round-of.
       $token->set_general('MARKER', 'ROF', $value);
       $chain->complete_if_last_is(0, 'EXPLAINED');
+
+      $knowledge->delete_field('ROUND', $value, $bbono);
+      $knowledge->add_field('ROF', $value, $bbono);
     }
   }
 }
+
+
+sub likely_rof
+{
+  my ($field, $value, $rof) = @_;
+  if ($field eq 'NUMERAL' &&
+      ($value eq '16' || $value eq '32' || $value eq '64'))
+  {
+    $$rof = $value;
+    return 1;
+  }
+  elsif ($field eq 'N_OF_N' && $value =~ /^1 of (\d+)$/ &&
+    ($1 eq '16' || $1 eq '32' || $1 eq '64'))
+  {
+    $$rof = $value;
+    return 1;
+  }
+  else
+  {
+    return 0;
+  }
+}
+
 
 sub post_process_single_active
 {
@@ -1382,6 +1411,63 @@ sub post_process_single_active
     print "TODOY $bbono, $mask, $tname: $form, $stage, $movement, $field, $value\n";
     return;
   }
+  elsif ($field eq 'LETTER')
+  {
+    if ($knowledge->is_knock_out($bbono))
+    {
+      # Discard.
+      return;
+    }
+    else
+    {
+      $token->set_general('MARKER', 'GROUP', $value);
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+      return;
+    }
+  }
+  elsif ($field eq 'NL')
+  {
+    $value =~ /^(\d+)([A-Za-z]+)$/;
+    my ($number, $letter) = ($1, $2);
+    if ($knowledge->is_knock_out($bbono))
+    {
+      # Discard the letter.
+      $token->set_general('MARKER', 'SEGMENT', $number);
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+      return;
+    }
+    elsif ($mask eq '0100')
+    {
+      # Already have a round.
+      $token->set_general('MARKER', 'MATCH', $number);
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+      return;
+    }
+    else
+    {
+      one_to_two_chains_new($chains, $chain, $cno, $token,
+        'MARKER', 'GROUP', $letter,
+        'MARKER', 'ROUND', $number);
+      return;
+    }
+  }
+  elsif ($field eq 'AMBIGUOUS')
+  {
+    $value =~ /^S (.*)$/;
+    my $f = $1;
+    if ($knowledge->is_knock_out($bbono))
+    {
+      $token->set_general('MARKER', 'SEGMENT', $f);
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+      return;
+    }
+    else
+    {
+      $token->set_general('MARKER', 'SESSION', $f);
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+      return;
+    }
+  }
   elsif ($mask eq '0000' || $mask eq '1000')
   {
     if ($knowledge->is_knock_out($bbono))
@@ -1403,6 +1489,45 @@ sub post_process_single_active
       $chain->complete_if_last_is(0, 'EXPLAINED');
       return;
     }
+  }
+  elsif ($mask eq '0100')
+  {
+    # Have ROUND, so SEGMENT or ROF depending on value.
+    my $rof;
+    if (likely_rof($field, $value, \$rof))
+    {
+      $token->set_general('MARKER', 'ROF', $rof);
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+    }
+    else
+    {
+      $token->set_general('MARKER', 'SEGMENT', $value);
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+    }
+    return;
+  }
+  elsif ($mask eq '0001')
+  {
+    # Have SEGMENT, so ROF or ROUND depending on value.
+    if ($movement eq 'Round-robin')
+    {
+      $token->set_general('MARKER', 'ROUND', $value);
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+      return;
+    }
+
+    my $rof;
+    if (likely_rof($field, $value, \$rof))
+    {
+      $token->set_general('MARKER', 'ROF', $rof);
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+    }
+    else
+    {
+      $token->set_general('MARKER', 'SEGMENT', $value);
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+    }
+    return;
   }
 
   print "TODOX $bbono, $mask, $tname: $form, $stage, $movement, $field, $value\n";
