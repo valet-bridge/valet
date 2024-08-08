@@ -1,17 +1,7 @@
- 453 MAJOR_MINOR
- 249 N_TO_N
-----
- 702
-
-Lady Milne Trophy, 2B+2: Stanza 2, Match B, Segment 2
-APBF Championships, KO is Round-Segment, not Session-Round
-
-
 Activate KDEBUG in Knowledge.pm
 
 39011: Why still TEAM1_COUNTRY, TEAM2_COUNTRY?
 
-10316: Says Round 32 but is Rof32.
 10315: Then is probably Rof32, seg 2?
 
 There are some counters 0_..., e.g. 5203
