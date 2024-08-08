@@ -480,7 +480,6 @@ my %MULTI_TYPOS =
   'Hengsha Haijiu' => ['hengsha jiuhai'],
   'Hengsha Ke Ji' => ['heng sha ke ji'],
   'HF Verðbréf' => ['h.f. verðbréf'],
-  'HNA' => ["hna's"],
   Huayuan => ['hua yuan'],
   'Hubei Dongfeng' => ['hb dongfeng', 'hu bei dong feng qi'],
   'Hunan Tou Zhan' => ['hn  tuozhan'],

@@ -361,7 +361,7 @@ sub merge_counters
   die "Not a counter" unless $self->{CATEGORY} eq 'COUNTER';
   die "Not a counter" unless $token2->{CATEGORY} eq 'COUNTER';
 
-  if ($self->{FIELD} eq 'NUMERAL' &&
+  if (($self->{FIELD} eq 'NUMERAL' || $self->{FIELD} eq 'ROMAN') &&
       $token2->{FIELD} eq 'LETTER')
   {
     $self->{FIELD} = 'NL';

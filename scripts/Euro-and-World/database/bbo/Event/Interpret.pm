@@ -14,6 +14,8 @@ our @EXPORT = qw(interpret);
 
 use lib './Connections';
 
+my $TRACE = 1;
+
 use Connections::Matrix;
 use Event::Ematch;
 use Util;
@@ -82,13 +84,26 @@ my %ITERATORS_NOFN = (
 );
 
 my %ITERATORS_MAJOR_MINOR = (
-  'Codan Cup' => 1,
-  'Norwegian Club Teams' => 1,
-  'Norwegian Premier League' => 1,
-  'Swedish Elite Series' => 1,
-  'Swedish District Championship' => 1,
-  'Swedish Open Teams' => 1,
-  'Swedish Premier League' => 1
+  'APBF Championships' =>  ['SESSION', 'ROUND'],
+  'APBF Youth Championships' =>  ['SESSION', 'ROUND'],
+  'Asia Cup' => ['SESSION', 'ROUND'],
+  "Chairman's Cup" => ['SEGMENT', ''],
+  'China First League' => ['SESSION', 'ROUND'],
+  'Codan Cup' => ['ROUND', 'SEGMENT'],
+  'Indian Senior Trials' => ['SESSION', 'ROUND'],
+  'Norwegian Club Teams' =>  ['ROUND', 'SEGMENT'],
+  'Norwegian Premier League' => ['ROUND', 'SEGMENT'],
+  'Sao Paulo State Championship' => ['SEGMENT', ''],
+  'South American Women Teams' => ['SEGMENT', ''],
+  'South American Open Teams' => ['SEGMENT', ''],
+  'Southeast Asian Games' => ['SESSION', 'ROUND'],
+  'Swedish District Championship' => ['ROUND', 'SEGMENT'],
+  'Swedish Open Teams' => ['ROUND', 'SEGMENT'],
+  'Swedish Premier League' =>  ['ROUND', 'SEGMENT'],
+  'Taiwanese Senior Trials' => ['SESSION', 'ROUND'],
+  'Turkish Club Championship' => ['ROUND', 'SEGMENT'],
+  'Turkish Open Trials' => ['SEGMENT', ''],
+  'Yeh Bros Cup' => ['ROUND', 'SEGMENT']
 );
 
 my %ITERATORS_NL = (
@@ -1386,12 +1401,14 @@ sub post_process_single_active
           $field eq 'N_OF_N' ||
           $field eq 'ORDINAL')
       {
+        print "$bbono ETRACE1\n" if $TRACE;
         $token->set_general('MARKER', 'SESSION', $value);
         $chain->complete_if_last_is(0, 'EXPLAINED');
         return;
       }
       elsif ($field eq 'NL')
       {
+        print "$bbono ETRACE2\n" if $TRACE;
         $value =~ /^(\d+)([A-Za-z]+)$/;
         my ($number, $letter) = ($1, $2);
         one_to_two_chains_new($chains, $chain, $cno, $token,
@@ -1401,10 +1418,15 @@ sub post_process_single_active
       }
       elsif ($field eq 'AMBIGUOUS')
       {
+        print "$bbono ETRACE3\n" if $TRACE;
         $value =~ /^S (.*)$/;
         $token->set_general('MARKER', 'SESSION', $1);
         $chain->complete_if_last_is(0, 'EXPLAINED');
         return;
+      }
+      else
+      {
+        print "$bbono ETRACE4\n" if $TRACE;
       }
     }
 
@@ -1415,11 +1437,13 @@ sub post_process_single_active
   {
     if ($knowledge->is_knock_out($bbono))
     {
+      print "$bbono ETRACE10\n" if $TRACE;
       # Discard.
       return;
     }
     else
     {
+      print "$bbono ETRACE11\n" if $TRACE;
       $token->set_general('MARKER', 'GROUP', $value);
       $chain->complete_if_last_is(0, 'EXPLAINED');
       return;
@@ -1432,6 +1456,7 @@ sub post_process_single_active
     if ($knowledge->is_knock_out($bbono))
     {
       # Discard the letter.
+      print "$bbono ETRACE20\n" if $TRACE;
       $token->set_general('MARKER', 'SEGMENT', $number);
       $chain->complete_if_last_is(0, 'EXPLAINED');
       return;
@@ -1439,12 +1464,14 @@ sub post_process_single_active
     elsif ($mask eq '0100')
     {
       # Already have a round.
+      print "$bbono ETRACE21\n" if $TRACE;
       $token->set_general('MARKER', 'MATCH', $number);
       $chain->complete_if_last_is(0, 'EXPLAINED');
       return;
     }
     else
     {
+      print "$bbono ETRACE22\n" if $TRACE;
       one_to_two_chains_new($chains, $chain, $cno, $token,
         'MARKER', 'GROUP', $letter,
         'MARKER', 'ROUND', $number);
@@ -1457,12 +1484,14 @@ sub post_process_single_active
     my $f = $1;
     if ($knowledge->is_knock_out($bbono))
     {
+      print "$bbono ETRACE30\n" if $TRACE;
       $token->set_general('MARKER', 'SEGMENT', $f);
       $chain->complete_if_last_is(0, 'EXPLAINED');
       return;
     }
     else
     {
+      print "$bbono ETRACE31\n" if $TRACE;
       $token->set_general('MARKER', 'SESSION', $f);
       $chain->complete_if_last_is(0, 'EXPLAINED');
       return;
@@ -1470,37 +1499,139 @@ sub post_process_single_active
   }
   elsif ($mask eq '0000' || $mask eq '1000')
   {
-    if ($knowledge->is_knock_out($bbono))
+    if ($field eq 'NL_OF_N' || $field eq 'NL_TO_N')
+    {
+      $value =~ /^(\d+)-(\d+)([A-D])$/;
+      my ($n1, $n2) = ($1, $2);
+      if ($movement eq 'Round-robin')
+      {
+        # Skip the letter (which would be a group).
+        print "$bbono ETRACE40\n" if $TRACE;
+        one_to_two_chains_new($chains, $chain, $cno, $token,
+          'MARKER', 'ROUND', $n1,
+          'MARKER', 'MATCH', $n2);
+        return;
+      }
+      elsif ($knowledge->is_knock_out($bbono))
+      {
+        # Skip the letter (which would be a group).
+        print "$bbono ETRACE41\n" if $TRACE;
+        warn "ORDER ETRACE41" if $n2 <= $n1;
+        $token->set_general('MARKER', 'SEGMENT', "$n1 of $n2");
+        $chain->complete_if_last_is(0, 'EXPLAINED');
+        return;
+      }
+      else
+      {
+        print "$bbono ETRACE42\n" if $TRACE;
+      }
+    }
+    elsif ($tname && exists $ITERATORS_MAJOR_MINOR{$tname} &&
+        ($field eq 'MAJOR_MINOR' || $field eq 'N_TO_N'))
+    {
+      my ($n1, $n2);
+      if ($field eq 'MAJOR_MINOR')
+      {
+        if ($value !~ /^(\d+)\+(\d+)[A-Z]*$/)
+        {
+          die "Unexpected: $bbono, $value";
+        }
+        ($n1, $n2) = ($1, $2);
+      }
+      else
+      {
+        if ($value !~ /^(\d+)-(\d+)$/)
+        {
+          die "Unexpected: $bbono, $value";
+        }
+        ($n1, $n2) = ($1, $2);
+      }
+
+      my ($field1, $field2) = 
+        ($ITERATORS_MAJOR_MINOR{$tname}[0],
+         $ITERATORS_MAJOR_MINOR{$tname}[1]);
+
+      if ($field2 eq '')
+      {
+        print "$bbono ETRACE43\n" if $TRACE;
+        $token->set_general('MARKER', $field1, "$n1 of $n2");
+        $chain->complete_if_last_is(0, 'EXPLAINED');
+        return;
+      }
+      else
+      {
+        print "$bbono ETRACE44\n" if $TRACE;
+        one_to_two_chains_new($chains, $chain, $cno, $token,
+          'MARKER', $field1, $n1,
+          'MARKER', $field2, $n2);
+      }
+      return;
+    }
+    elsif ($tname eq 'Lady Milne Trophy')
+    {
+      # Special case.
+      if ($value =~ /^(\d+[ABC])[+-](\d+)$/)
+      {
+        print "$bbono ETRACE45\n" if $TRACE;
+        my ($match, $stanza) = ($1, $2);
+        one_to_two_chains($chains, $chain, $token,
+          'MARKER', 'MATCH', 'MARKER', 
+          'STANZA', $1, $2);
+      }
+      else
+      {
+        print "$bbono ETRACE46\n" if $TRACE;
+        print "$bbono: WARN Unexpected MAJOR_MINOR format (Lady Milne)\n";
+      }
+      return 1;
+    }
+    elsif ($knowledge->is_knock_out($bbono))
     {
       if ($field eq 'NUMERAL' || 
           $field eq 'N_OF_N' ||
-          $field eq 'ORDINAL')
+          $field eq 'N_TO_N_OF_N' ||
+          $field eq 'ORDINAL' ||
+          $field eq 'ROMAN')
       {
+        print "$bbono ETRACE47\n" if $TRACE;
         $token->set_general('MARKER', 'SEGMENT', $value);
         $chain->complete_if_last_is(0, 'EXPLAINED');
         return;
       }
+      else
+      {
+        print "$bbono ETRACE48\n" if $TRACE;
+      }
     }
     elsif ($field eq 'NUMERAL' || 
           $field eq 'N_OF_N' ||
-          $field eq 'ORDINAL')
+          $field eq 'N_TO_N_OF_N' ||
+          $field eq 'ORDINAL' ||
+          $field eq 'ROMAN')
     {
+      print "$bbono ETRACE49\n" if $TRACE;
       $token->set_general('MARKER', 'ROUND', $value);
       $chain->complete_if_last_is(0, 'EXPLAINED');
       return;
     }
+    else
+    {
+      print "$bbono ETRACE50\n" if $TRACE;
+    }
   }
-  elsif ($mask eq '0100')
+  elsif ($mask eq '0100' || $mask eq '0010')
   {
     # Have ROUND, so SEGMENT or ROF depending on value.
     my $rof;
     if (likely_rof($field, $value, \$rof))
     {
+      print "$bbono ETRACE55\n" if $TRACE;
       $token->set_general('MARKER', 'ROF', $rof);
       $chain->complete_if_last_is(0, 'EXPLAINED');
     }
     else
     {
+      print "$bbono ETRACE56\n" if $TRACE;
       $token->set_general('MARKER', 'SEGMENT', $value);
       $chain->complete_if_last_is(0, 'EXPLAINED');
     }
@@ -1511,6 +1642,7 @@ sub post_process_single_active
     # Have SEGMENT, so ROF or ROUND depending on value.
     if ($movement eq 'Round-robin')
     {
+      print "$bbono ETRACE60\n" if $TRACE;
       $token->set_general('MARKER', 'ROUND', $value);
       $chain->complete_if_last_is(0, 'EXPLAINED');
       return;
@@ -1519,15 +1651,22 @@ sub post_process_single_active
     my $rof;
     if (likely_rof($field, $value, \$rof))
     {
+      print "$bbono ETRACE61\n" if $TRACE;
       $token->set_general('MARKER', 'ROF', $rof);
       $chain->complete_if_last_is(0, 'EXPLAINED');
     }
     else
     {
+      print "$bbono ETRACE62\n" if $TRACE;
       $token->set_general('MARKER', 'SEGMENT', $value);
       $chain->complete_if_last_is(0, 'EXPLAINED');
     }
     return;
+  }
+
+  if ($tname eq '')
+  {
+    $tname = 'MEET ' . $knowledge->get_field('MEET', $bbono);
   }
 
   print "TODOX $bbono, $mask, $tname: $form, $stage, $movement, $field, $value\n";

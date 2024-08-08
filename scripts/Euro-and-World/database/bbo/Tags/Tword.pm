@@ -18,7 +18,6 @@ my @MULTI_WORDS =
   'Bridge Meeting',
   'Business League',
   'Butler Pairs',
-  "Chairman's Cup",
   'Challenge Match',
   'Closed Room',
   'Commercial Pairs',
@@ -98,8 +97,6 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  "Chairman's Cup" => ['chairmans cup', "chariman's cup",
-    "chairmans's cup"],
   Championship => ["ch'ship", 'ch.ship', "champion's",
     "championship's", "chmpionship's", 'champion ship',
     'championship flight', 'championship flt'],

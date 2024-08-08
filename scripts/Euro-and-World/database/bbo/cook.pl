@@ -264,6 +264,8 @@ while ($line = <$fh>)
 
 close $fh;
 
+exit if $debug_flag;
+
 $histo_team->print();
 
 print "\nHisto open part\n\n";

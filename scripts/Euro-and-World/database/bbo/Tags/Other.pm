@@ -327,7 +327,7 @@ my %MULTI_TYPOS =
   'Bhinneka Garuda' => ['bhineka garuda'],
   'Bridgerama Milan' => ['bridgerama mi'],
 
-  "Chairman's Choice" => ["chairman's team", "chairman's"],
+  "Chairman's Choice" => ["chairman's team"],
   'Chicho Itsi' => ['chicho ici'],
 
   Crossfatek => ['cross fatek'],
