@@ -1393,9 +1393,25 @@ sub post_process_single_active
       $known->{SCORING}[0] eq 'B' ?  'Teams' : 'Pairs');
   }
 
-  if ($form eq 'Pairs')
+  if ($field eq 'LETTER')
   {
-    if ($mask eq '0000')
+    if ($knowledge->is_knock_out($bbono))
+    {
+      print "$bbono ETRACE10\n" if $TRACE;
+      # Discard.
+      return;
+    }
+    else
+    {
+      print "$bbono ETRACE11\n" if $TRACE;
+      $token->set_general('MARKER', 'GROUP', $value);
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+      return;
+    }
+  }
+  elsif ($form eq 'Pairs')
+  {
+    if ($mask eq '0000' || $mask eq '1000')
     {
       if ($field eq 'NUMERAL' || 
           $field eq 'N_OF_N' ||
@@ -1416,9 +1432,27 @@ sub post_process_single_active
           'MARKER', 'SESSION', $number);
         return;
       }
-      elsif ($field eq 'AMBIGUOUS')
+      elsif ($field eq 'N_TO_N_OF_N')
       {
         print "$bbono ETRACE3\n" if $TRACE;
+        $token->set_general('MARKER', 'ROUND', $value);
+        $chain->complete_if_last_is(0, 'EXPLAINED');
+        return;
+      }
+      elsif ($field eq 'NL_OF_N' || $field eq 'NL_TO_N')
+      {
+        $value =~ /^(\d+)([A-D])-(\d+)$/;
+        my ($n1, $n2) = ($1, $2);
+        # Skip the letter (which would be a group).
+        print "$bbono ETRACE4\n" if $TRACE;
+        warn "ORDER ETRACE4" if $n2 <= $n1;
+        $token->set_general('MARKER', 'SEGMENT', "$n1 of $n2");
+        $chain->complete_if_last_is(0, 'EXPLAINED');
+        return;
+      }
+      elsif ($field eq 'AMBIGUOUS')
+      {
+        print "$bbono ETRACE5\n" if $TRACE;
         $value =~ /^S (.*)$/;
         $token->set_general('MARKER', 'SESSION', $1);
         $chain->complete_if_last_is(0, 'EXPLAINED');
@@ -1426,28 +1460,12 @@ sub post_process_single_active
       }
       else
       {
-        print "$bbono ETRACE4\n" if $TRACE;
+        print "$bbono ETRACE6\n" if $TRACE;
       }
     }
 
     print "TODOY $bbono, $mask, $tname: $form, $stage, $movement, $field, $value\n";
     return;
-  }
-  elsif ($field eq 'LETTER')
-  {
-    if ($knowledge->is_knock_out($bbono))
-    {
-      print "$bbono ETRACE10\n" if $TRACE;
-      # Discard.
-      return;
-    }
-    else
-    {
-      print "$bbono ETRACE11\n" if $TRACE;
-      $token->set_general('MARKER', 'GROUP', $value);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
-      return;
-    }
   }
   elsif ($field eq 'NL')
   {
