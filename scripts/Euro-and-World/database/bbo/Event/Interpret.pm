@@ -686,7 +686,82 @@ sub active_nl_teams
       'MARKER', 'GROUP', $letter,
       'MARKER', 'ROUND', $number);
   }
+}
 
+
+sub active_ambiguous_teams
+{
+  my ($knowledge, $chain, $token, $value, $bbono) = @_;
+
+  my $meet = $knowledge->get_field('MEET', $bbono);
+  $value =~ /^S (.*)$/;
+  my $f = $1;
+
+  if (exists $ITERATORS_S_FOR_SENIORS{$meet} ||
+      $ITERATORS_S_FOR_SENIORS{$meet})
+  {
+    print "$bbono ETRACE-AMBTEAMS-1\n" if $TRACE;
+    $token->set_general('SINGLETON', 'AGE', 'Seniors');
+    $chain->complete('EXPLAINED');
+  }
+  elsif ($knowledge->is_knock_out($bbono))
+  {
+    print "$bbono ETRACE-AMBTEAMS-2\n" if $TRACE;
+    $token->set_general('MARKER', 'SEGMENT', $f);
+    $chain->complete('EXPLAINED');
+  }
+  else
+  {
+    print "$bbono ETRACE-AMBTEAMS-3\n" if $TRACE;
+    $token->set_general('MARKER', 'SESSION', $f);
+    $chain->complete('EXPLAINED');
+  }
+}
+
+
+sub active_some_mm_teams
+{
+  my ($knowledge, $chains, $chain, $cno, 
+    $token, $field, $value, $bbono) = @_;
+
+  my $tname = $knowledge->get_field('TNAME', $bbono);
+
+  my ($n1, $n2);
+  if ($field eq 'MAJOR_MINOR')
+  {
+    if ($value !~ /^(\d+)\+(\d+)[A-Z]*$/)
+    {
+      die "Unexpected: $bbono, $value";
+    }
+    ($n1, $n2) = ($1, $2);
+  }
+  else
+  {
+    if ($value !~ /^(\d+)-(\d+)$/)
+    {
+      die "Unexpected: $bbono, $value";
+    }
+    ($n1, $n2) = ($1, $2);
+  }
+
+  my ($field1, $field2) = 
+    ($ITERATORS_MAJOR_MINOR{$tname}[0],
+     $ITERATORS_MAJOR_MINOR{$tname}[1]);
+
+  if ($field2 eq '')
+  {
+    print "$bbono ETRACE-SOMEMMTEAMS-1\n" if $TRACE;
+    $token->set_general('MARKER', $field1, "$n1 of $n2");
+    $chain->complete('EXPLAINED');
+    return;
+  }
+  else
+  {
+    print "$bbono ETRACE-SOMEMMTEAMS-2\n" if $TRACE;
+    one_to_two_chains($chains, $chain, $cno, $token,
+      'MARKER', $field1, $n1,
+      'MARKER', $field2, $n2);
+  }
 }
 
 
@@ -785,30 +860,8 @@ sub post_process_single_active
   }
   elsif ($field eq 'AMBIGUOUS')
   {
-    $value =~ /^S (.*)$/;
-    my $f = $1;
-    if (exists $ITERATORS_S_FOR_SENIORS{$meet} ||
-        $ITERATORS_S_FOR_SENIORS{$meet})
-    {
-      print "$bbono ETRACE30\n" if $TRACE;
-      $token->set_general('SINGLETON', 'AGE', 'Seniors');
-      $chain->complete('EXPLAINED');
-      return;
-    }
-    elsif ($knowledge->is_knock_out($bbono))
-    {
-      print "$bbono ETRACE31\n" if $TRACE;
-      $token->set_general('MARKER', 'SEGMENT', $f);
-      $chain->complete('EXPLAINED');
-      return;
-    }
-    else
-    {
-      print "$bbono ETRACE32\n" if $TRACE;
-      $token->set_general('MARKER', 'SESSION', $f);
-      $chain->complete('EXPLAINED');
-      return;
-    }
+    active_ambiguous_teams($knowledge, $chain, $token, $value, $bbono);
+    return;
   }
   elsif ($mask eq '0000' || $mask eq '1000')
   {
@@ -842,42 +895,8 @@ sub post_process_single_active
     elsif ($tname && exists $ITERATORS_MAJOR_MINOR{$tname} &&
         ($field eq 'MAJOR_MINOR' || $field eq 'N_TO_N'))
     {
-      my ($n1, $n2);
-      if ($field eq 'MAJOR_MINOR')
-      {
-        if ($value !~ /^(\d+)\+(\d+)[A-Z]*$/)
-        {
-          die "Unexpected: $bbono, $value";
-        }
-        ($n1, $n2) = ($1, $2);
-      }
-      else
-      {
-        if ($value !~ /^(\d+)-(\d+)$/)
-        {
-          die "Unexpected: $bbono, $value";
-        }
-        ($n1, $n2) = ($1, $2);
-      }
-
-      my ($field1, $field2) = 
-        ($ITERATORS_MAJOR_MINOR{$tname}[0],
-         $ITERATORS_MAJOR_MINOR{$tname}[1]);
-
-      if ($field2 eq '')
-      {
-        print "$bbono ETRACE43\n" if $TRACE;
-        $token->set_general('MARKER', $field1, "$n1 of $n2");
-        $chain->complete('EXPLAINED');
-        return;
-      }
-      else
-      {
-        print "$bbono ETRACE44\n" if $TRACE;
-        one_to_two_chains($chains, $chain, $cno, $token,
-          'MARKER', $field1, $n1,
-          'MARKER', $field2, $n2);
-      }
+      active_some_mm_teams($knowledge, $chains, $chain, $cno,
+        $token, $field, $value, $bbono);
       return;
     }
     elsif ($tname eq 'Lady Milne Trophy')
