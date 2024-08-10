@@ -35,54 +35,6 @@ my %KILL = map { $_ => 1 } @KILL_FIELDS;
 # Default iterators for some tournaments.
 # TODO Probably I will label up all TNAME tournaments later.
 
-my %ITERATORS_NUMERAL = (
-  'Anatolian Club Qualifying' => 'ROUND',
-  'ASEAN Club Championship' => 'ROUND',
-  'Buffett Cup' => 'ROUND',
-  'Camrose' => 'ROUND',
-  "European Champions' Cup" => 'ROUND',
-  'European Mixed Junior Pairs' => 'ROUND',
-  'European Open Bridge Championship' => 'ROUND',
-  'European Small Federation Games' => 'ROUND',
-  'European Youth Bridge Teams Championship' => 'ROUND',
-  'Finnish Pairs Championship' => 'ROUND',
-  'Four Nations Cup' => 'ROUND',
-  'FOSS-Tren' => 'ROUND',
-  'Gelibolu Peace Cup' => 'ROUND',
-  'Goksu-Yalikavak Pairs' => 'ROUND',
-  "Gro's Supercup" => 'ROUND',
-  'Guangdong Club Championship' => 'ROUND',
-  'Higson Cup' => 'ROUND',
-  'Hong Kong Inter-City' => 'ROUND',
-  'IMSA Cup' => 'ROUND',
-  'Israel Open Pairs' => 'ROUND',
-  'Lady Milne Trophy' => 'STANZA',
-  'Madeira Open' => 'ROUND',
-  'Madeira Swiss Teams' => 'ROUND',
-  'Mondial de Deauville' => 'ROUND',
-  'Nordic Championship' => 'ROUND',
-  'Nordic Junior Championship' => 'ROUND',
-  'Nordic Junior Pairs' => 'ROUND',
-  'Norwegian Mixed Pairs' => 'ROUND',
-  'Olrud Easter Mixed Pairs' => 'ROUND',
-  'Olrud Easter Pairs' => 'ROUND',
-  'Olrud Easter Teams' => 'ROUND',
-  'Olrud Easter Swiss Teams' => 'ROUND',
-  'Pesta Sukan' => 'ROUND',
-  'Portuguese Open Teams' => 'ROUND',
-  'Smirnov Cup' => 'ROUND',
-  'Spanish Central Zone Teams' => 'ROUND',
-  'Thrace Club Teams' => 'ROUND',
-  'World Youth Bridge Congress' => 'ROUND'
-);
-
-my %ITERATORS_NOFN = (
-  'European Open Bridge Championship' => 'ROUND',
-  'European Small Federation Games' => 'ROUND',
-  'Victor Champion Cup' => 'ROUND',
-  'World Bridge Series' => 'ROUND'
-);
-
 my %ITERATORS_MAJOR_MINOR = (
   'APBF Championships' =>  ['SESSION', 'ROUND'],
   'APBF Youth Championships' =>  ['SESSION', 'ROUND'],
@@ -104,10 +56,6 @@ my %ITERATORS_MAJOR_MINOR = (
   'Turkish Club Championship' => ['ROUND', 'SEGMENT'],
   'Turkish Open Trials' => ['SEGMENT', ''],
   'Yeh Bros Cup' => ['ROUND', 'SEGMENT']
-);
-
-my %ITERATORS_NL = (
-  'Camrose' => 'MATCH'
 );
 
 my %ITERATORS_S_FOR_SENIORS = (
@@ -528,25 +476,6 @@ sub post_process_letters
 
 sub one_to_two_chains
 {
-  my ($chains, $chain, $token, 
-    $cat1, $field1, $cat2, $field2, $value1, $value2) = @_;
-
-  $token->set_general('MARKER', $field1, $value1);
-  $chain->complete_if_last_is(0, 'EXPLAINED');
-
-  my $token1 = Token->new();
-  $token1->copy_origin_from($token);
-  $token1->set_general('MARKER', $field2, $value2);
-
-  my $chain1 = Chain->new();
-  $chain1->append($token1);
-  $chain1->complete_if_last_is(0, 'EXPLAINED');
-  splice(@$chains, 1, 0, $chain1);
-}
-
-
-sub one_to_two_chains_new
-{
   my ($chains, $chain, $cno, $token, 
     $cat1, $field1, $value1, $cat2, $field2, $value2) = @_;
 
@@ -561,296 +490,6 @@ sub one_to_two_chains_new
   $chain1->append($token1);
   $chain1->complete_if_last_is(0, 'EXPLAINED');
   splice(@$chains, $cno+1, 0, $chain1);
-}
-
-
-sub n_of_n
-{
-  my ($chain, $token, $tname, $stage, $scoring, $value) = @_;
-
-  $value =~ /^(\d+) of (\d+)$/;
-  my ($n1, $n2) = ($1, $2);
-
-  if ($stage && $stage =~ /final/i && 
-      $scoring eq 'I' && $n2 <= 8)
-  {
-    # Probably a segment.
-    $token->set_general('MARKER', 'SEGMENT', $value);
-    $chain->complete_if_last_is(0, 'EXPLAINED');
-    return 1;
-  }
-  elsif ($scoring eq 'I' && $n2 <= 6)
-  {
-    # Probably a segment.
-    $token->set_general('MARKER', 'SEGMENT', $value);
-    $chain->complete_if_last_is(0, 'EXPLAINED');
-    return 1;
-  }
-  elsif ($tname && ($tname =~ /Swiss Teams/ || $tname =~ /League/))
-  {
-    # Probably a round.
-    $token->set_general('MARKER', 'ROUND', $value);
-    $chain->complete_if_last_is(0, 'EXPLAINED');
-    return 1;
-  }
-  elsif ($stage && ($stage eq 'Qualifying' || $stage eq 'Round-robin'))
-  {
-    # Probably a round.
-    $token->set_general('MARKER', 'ROUND', $value);
-    $chain->complete_if_last_is(0, 'EXPLAINED');
-    return 1;
-  }
-  elsif (($scoring eq 'P' || ($tname && $tname =~ /Pairs/)) || 
-      ($n2 == 11 || $n2 > 12))
-  {
-    # Probably a round.
-    $token->set_general('MARKER', 'ROUND', $value);
-    $chain->complete_if_last_is(0, 'EXPLAINED');
-    return 1;
-  }
-  elsif ($tname && exists $ITERATORS_NOFN{$tname})
-  {
-    my $iter = $ITERATORS_NOFN{$tname};
-    $token->set_general('MARKER', $iter, $value);
-    $chain->complete_if_last_is(0, 'EXPLAINED');
-    return 1;
-  }
-  return 0;
-}
-
-
-sub major_minor
-{
-  my ($chains, $chain, $token, $tname, $value) = @_;
-
-  if ($tname && exists $ITERATORS_MAJOR_MINOR{$tname})
-  {
-    if ($value =~ /^(\d+)\+(\d+)$/)
-    {
-      one_to_two_chains($chains, $chain, $token,
-        'MARKER', 'ROUND', 'MARKER', 'SEGMENT', $1, $2);
-    }
-    else
-    {
-      print "WARN Unexpected MAJOR_MINOR format\n";
-    }
-    return 1;
-  }
-  elsif ($tname eq 'Lady Milne Trophy')
-  {
-    # Special case.
-    if ($value =~ /^(\d+[ABC])[+-](\d+)$/)
-    {
-      my ($match, $stanza) = ($1, $2);
-      one_to_two_chains($chains, $chain, $token,
-        'MARKER', 'MATCH', 'MARKER', 'STANZA', $1, $2);
-    }
-    else
-    {
-      print "WARN Unexpected MAJOR_MINOR format (Lady Milne)\n";
-    }
-    return 1;
-  }
-  return 0;
-}
-
-
-sub number_letter
-{
-  my ($chains, $chain, $token, $tname, $stage, $scoring, $value) = @_;
-
-  if ($value !~ /^(\d+)([A-Fa-f])$/)
-  {
-    print "WARN Unexpected NL format\n";
-    return 0;
-  }
-  my ($number, $letter) = ($1, $2);
-  my $f_flag = ($token->text() =~ /^F/ ? 1 : 0);
-
-  if ($letter eq 'F')
-  {
-    if (! $f_flag)
-    {
-      print "WARN Unexpected NL text ", $token->text(), " (F)\n";
-      return 0;
-    }
-    elsif ($scoring eq 'P')
-    {
-      one_to_two_chains($chains, $chain, $token,
-        'SINGLETON', 'STAGE', 'MARKER', 'ROUND', $1, $2);
-    }
-    elsif (exists $ITERATORS_NL{$tname})
-    {
-      one_to_two_chains($chains, $chain, $token,
-        'SINGLETON', 'STAGE', 'MARKER', $ITERATORS_NL{$tname}, $1, $2);
-    }
-    else
-    {
-      one_to_two_chains($chains, $chain, $token,
-        'SINGLETON', 'STAGE', 'MARKER', 'SEGMENT', $1, $2);
-    }
-    return 1;
-  }
-  elsif (exists $ITERATORS_NL{$tname})
-  {
-    $token->set_general('MARKER', $ITERATORS_NL{$tname}, $value);
-    $chain->complete_if_last_is(0, 'EXPLAINED');
-    return 1;
-  }
-  elsif ($stage =~ /final/i)
-  {
-    $token->set_general('MARKER', 'SEGMENT', $value);
-    $chain->complete_if_last_is(0, 'EXPLAINED');
-    return 1;
-  }
-  else
-  {
-    $token->set_general('MARKER', 'ROUND', $value);
-    $chain->complete_if_last_is(0, 'EXPLAINED');
-    return 1;
-  }
-  return 0;
-}
-
-
-sub event_generic_number
-{
-  my ($chains, $chain, $token, $tname, $stage, $scoring, $value) = @_;
-
-  if (($scoring eq 'I' || $scoring eq 'B') && $stage =~ /final/i)
-  {
-    $token->set_general('MARKER', 'SEGMENT', $value);
-    $chain->complete_if_last_is(0, 'EXPLAINED');
-  }
-  else
-  {
-    $token->set_general('MARKER', 'ROUND', $value);
-    $chain->complete_if_last_is(0, 'EXPLAINED');
-  }
-  return 1;
-}
-
-
-sub post_process_stand_alone_number
-{
-  # There is one chain and it's a number, without a direct indication
-  # of the name of the iterator.  We can use the title to guess with.
-
-  my ($chains, $chain, $chains_title, $scoring, $bbono) = @_;
-  
-  my $token = $chain->check_out(0);
-  my $field = $token->field();
-  my $value = $token->value();
-
-  my $cno;
-  my $tname = find_field_in_chains($chains_title, 'TNAME', \$cno);
-
-  my $stage = find_field_in_chains($chains_title, 'STAGE', \$cno);
-  if (! $stage)
-  {
-    $stage = find_field_in_chains($chains, 'STAGE', \$cno);
-  }
-
-  if ($field eq 'NUMERAL')
-  {
-    if ($tname && exists $ITERATORS_NUMERAL{$tname})
-    {
-      my $iter = $ITERATORS_NUMERAL{$tname};
-      $token->set_general('MARKER', $iter, $value);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
-    }
-    else
-    {
-      # print "TODO1 $bbono, $tname: $stage, $field, $value\n";
-    }
-  }
-  elsif ($field eq 'N_OF_N')
-  {
-    if (! n_of_n($chain, $token, $tname, $stage, $$scoring, $value))
-    {
-      # print "TODO2 $bbono, $tname: $stage, $field, $value\n";
-    }
-  }
-  elsif ($field eq 'MAJOR_MINOR')
-  {
-    if (! major_minor($chains, $chain, $token, $tname, $value))
-    {
-      print "TODO3 $bbono, $tname: $stage, $field, $value\n";
-    }
-  }
-  elsif ($field eq 'NL')
-  {
-    if (! number_letter($chains, $chain, $token, 
-        $tname, $stage, $$scoring, $value))
-    {
-      print "TODO4 $bbono, $tname: $stage, $field, $value\n";
-    }
-  }
-  elsif ($field eq 'AMBIGUOUS' ||
-      $field eq 'N_TO_N_OF_N' ||
-      $field eq 'ORDINAL')
-  {
-    if (! event_generic_number($chains, $chain, $token, 
-        $tname, $stage, $$scoring, $value))
-    {
-      print "TODO5 $bbono, $tname: $stage, $field, $value\n";
-    }
-  }
-  else
-  {
-    print "TODO6 $bbono, $tname: $stage, $field, $value\n";
-  }
-}
-
-
-sub get_next_one_chain
-{
-  # If forward_flag, then up in chain number, otherwise down.
-  # Return 1 if that chain has exactly one token.
-
-  my ($chains, $cno, $forward_flag, $token_ref) = @_;
-   
-  if ($forward_flag)
-  {
-    my $n = $#$chains;
-    do
-    {
-      return 0 if $cno == $n;
-      $cno++;
-      my $chain_next = $chains->[$cno];
-      my $status_next = $chain_next->status();
-
-      if ($status_next ne 'KILLED')
-      {
-        return 0 if $chain_next->last() > 0;
-
-        $$token_ref = $chain_next->check_out(0);
-        return 1;
-      }
-    }
-    while (1);
-    return 0;
-  }
-  else
-  {
-    do
-    {
-      return 0 if $cno == 0;
-      $cno--;
-      my $chain_prev = $chains->[$cno];
-      my $status_prev = $chain_prev->status();
-
-      if ($status_prev ne 'KILLED')
-      {
-        return 0 if $chain_prev->last() > 0;
-
-        $$token_ref = $chain_prev->check_out(0);
-        return 1;
-      }
-    }
-    while (1);
-    return 0;
-  }
 }
 
 
@@ -939,25 +578,6 @@ sub post_process_analyze_rest
         push @{$actives->[$s]}, $cno;
       }
     }
-  }
-}
-
-
-sub lookup_known
-{
-  my ($known, $field, $bbono) = @_;
-
-  return '' unless exists $known->{$field};
-
-  if ($#{$known->{$field}} > 0)
-  {
-    my $list = join ' ', @{$known->{$field}};
-    print "$bbono: Confusing number of $field: $list\n";
-    return '';
-  }
-  else
-  {
-    return $known->{$field}[0];
   }
 }
 
@@ -1078,7 +698,7 @@ sub post_process_single_active
         print "$bbono ETRACE2\n" if $TRACE;
         $value =~ /^(\d+)([A-Za-z]+)$/;
         my ($number, $letter) = ($1, $2);
-        one_to_two_chains_new($chains, $chain, $cno, $token,
+        one_to_two_chains($chains, $chain, $cno, $token,
           'MARKER', 'GROUP', $letter,
           'MARKER', 'SESSION', $number);
         return;
@@ -1141,7 +761,7 @@ sub post_process_single_active
     else
     {
       print "$bbono ETRACE22\n" if $TRACE;
-      one_to_two_chains_new($chains, $chain, $cno, $token,
+      one_to_two_chains($chains, $chain, $cno, $token,
         'MARKER', 'GROUP', $letter,
         'MARKER', 'ROUND', $number);
       return;
@@ -1184,7 +804,7 @@ sub post_process_single_active
       {
         # Skip the letter (which would be a group).
         print "$bbono ETRACE40\n" if $TRACE;
-        one_to_two_chains_new($chains, $chain, $cno, $token,
+        one_to_two_chains($chains, $chain, $cno, $token,
           'MARKER', 'ROUND', $n1,
           'MARKER', 'MATCH', $n2);
         return;
@@ -1238,7 +858,7 @@ sub post_process_single_active
       else
       {
         print "$bbono ETRACE44\n" if $TRACE;
-        one_to_two_chains_new($chains, $chain, $cno, $token,
+        one_to_two_chains($chains, $chain, $cno, $token,
           'MARKER', $field1, $n1,
           'MARKER', $field2, $n2);
       }
@@ -1251,7 +871,7 @@ sub post_process_single_active
       {
         print "$bbono ETRACE45\n" if $TRACE;
         my ($match, $stanza) = ($1, $2);
-        one_to_two_chains($chains, $chain, $token,
+        one_to_two_chains($chains, $chain, $cno, $token,
           'MARKER', 'MATCH', 'MARKER', 
           'STANZA', $1, $2);
       }
