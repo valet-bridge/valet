@@ -990,11 +990,8 @@ sub post_process_single_active
   my $field = $token->field();
   my $value = $token->value();
 
-  my $meet = $knowledge->get_field('MEET', $bbono);
   my $tname = $knowledge->get_field('TNAME', $bbono);
   my $form = $knowledge->get_field('FORM', $bbono);
-  my $stage = $knowledge->get_field('STAGE', $bbono);
-  my $movement = $knowledge->get_field('MOVEMENT', $bbono);
   my $mask = $knowledge->get_iter_mask($bbono);
 
   if ($form eq '')
@@ -1018,9 +1015,6 @@ sub post_process_single_active
       return if active_number_pairs($knowledge, $chains, $chain, $cno, 
         $token, $field, $value, $bbono);
     }
-
-    print "TODOY $bbono, $mask, $tname: $form, $stage, $movement, $field, $value\n";
-    return;
   }
   elsif ($field eq 'NL')
   {
@@ -1075,12 +1069,7 @@ sub post_process_single_active
       $token, $value, $field, $bbono);
   }
 
-  if ($tname eq '')
-  {
-    $tname = 'MEET ' . $knowledge->get_field('MEET', $bbono);
-  }
-
-  print "TODOX $bbono, $mask, $tname: $form, $stage, $movement, $field, $value\n";
+  print "TODOX " . $knowledge->str($bbono) . ", $field, $value\n";
 }
 
 

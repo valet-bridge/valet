@@ -260,4 +260,24 @@ sub is_knock_out
 }
 
 
+sub str
+{
+  my ($self, $bbono) = @_;
+
+  my $meet = $self->get_field('MEET', $bbono);
+  my $tname = $self->get_field('TNAME', $bbono);
+  my $form = $self->get_field('FORM', $bbono);
+  my $stage = $self->get_field('STAGE', $bbono);
+  my $movement = $self->get_field('MOVEMENT', $bbono);
+  my $mask = $self->get_iter_mask($bbono);
+
+  if ($tname eq '')
+  {
+    $tname = 'MEET ' . $self->get_field('MEET', $bbono);
+  }
+
+  print "$bbono, $mask, $tname: $form, $stage, $movement";
+}
+
+
 1;
