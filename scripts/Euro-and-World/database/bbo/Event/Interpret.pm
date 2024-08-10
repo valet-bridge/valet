@@ -90,43 +90,43 @@ sub post_process_single
     if ($field0 eq 'ROUND' &&
       exists $EVENT_MATCHES_ROUND{$bbono})
     {
-      $chain->complete_if_last_is(0, 'KILLED');
+      $chain->complete('KILLED');
     }
     elsif ($field0 eq 'SEGMENT' &&
       exists $EVENT_MATCHES_SEGMENT{$bbono})
     {
-      $chain->complete_if_last_is(0, 'KILLED');
+      $chain->complete('KILLED');
     }
     elsif (exists $ACCEPT{$field0})
     {
-      $chain->complete_if_last_is(0, 'EXPLAINED');
+      $chain->complete('EXPLAINED');
     }
     elsif (exists $KILL{$field0})
     {
-      $chain->complete_if_last_is(0, 'KILLED');
+      $chain->complete('KILLED');
     }
     elsif ($field0 eq 'BERTH' || $field0 eq 'DAY')
     {
       if ($token0->value() =~ /^\d+$/)
       {
-        $chain->complete_if_last_is(0, 'EXPLAINED');
+        $chain->complete('EXPLAINED');
       }
       else
       {
         # Probably just 'Berth'.
-        $chain->complete_if_last_is(0, 'KILLED');
+        $chain->complete('KILLED');
       }
     }
     elsif ($field0 eq 'BOARDS')
     {
       if ($token0->value() =~ /^\d+-\d+$/)
       {
-        $chain->complete_if_last_is(0, 'EXPLAINED');
+        $chain->complete('EXPLAINED');
       }
       else
       {
         # Probably just '16 boards'.
-        $chain->complete_if_last_is(0, 'KILLED');
+        $chain->complete('KILLED');
       }
     }
     elsif ($field0 eq 'PARTICLE')
@@ -135,7 +135,7 @@ sub post_process_single
       {
         # Probably two teams that were recognized from TEAMS,
         # leaving only the 'vs'.
-        $chain->complete_if_last_is(0, 'KILLED');
+        $chain->complete('KILLED');
       }
     }
     elsif ($field0 eq 'TIME')
@@ -144,12 +144,12 @@ sub post_process_single
           $token0->value() eq 'Evening' ||
           $token0->value() eq 'Night')
       {
-        $chain->complete_if_last_is(0, 'KILLED');
+        $chain->complete('KILLED');
       }
       else
       {
         # Probably just '16 boards'.
-        $chain->complete_if_last_is(0, 'EXPLAINED');
+        $chain->complete('EXPLAINED');
       }
     }
   }
@@ -191,7 +191,7 @@ sub post_process_some_iterators
 
     # So 'Final', 'Stanza' without any number.
     $token->set_general('MARKER', $field, 'last');
-    $chain->complete_if_last_is(0, 'EXPLAINED');
+    $chain->complete('EXPLAINED');
 
     splice(@$chains, $cno-1, 1);
     return;
@@ -217,26 +217,26 @@ sub post_process_countries
     {
       # Normally 'Final', not 'Finland' in EVENT.
       $token->set_general('SINGLETON', 'STAGE', 'Final');
-      $chain->complete_if_last_is(0, 'EXPLAINED');
+      $chain->complete('EXPLAINED');
       return;
     }
 
     my $value = $token->value();
     if ($value eq $teams->{TEAM1} || $value eq $teams->{TEAM2})
     {
-      $chain->complete_if_last_is(0, 'KILLED');
+      $chain->complete('KILLED');
     }
     elsif ($value eq 'Bermuda')
     {
       # Almost always Bermuda Bowl.  Even in the one case where it
       # isn't, it still is... (Year 2000).
       $token->set_general('SINGLETON', 'TNAME', 'Bermuda Bowl');
-      $chain->complete_if_last_is(0, 'EXPLAINED');
+      $chain->complete('EXPLAINED');
     }
     else
     {
       # It's a normal country.
-      $chain->complete_if_last_is(0, 'EXPLAINED');
+      $chain->complete('EXPLAINED');
     }
   }
 }
@@ -262,14 +262,14 @@ sub post_process_meet
     if (! $meet)
     {
       # Move the MEET from here to TITLE.
-      $chain->complete_if_last_is(0, 'EXPLAINED');
+      $chain->complete('EXPLAINED');
       push @$chains_title, dclone($chain);
-      $chain->complete_if_last_is(0, 'KILLED');
+      $chain->complete('KILLED');
     }
     elsif ($value eq $meet)
     {
       # Redundant with TITLE.
-      $chain->complete_if_last_is(0, 'KILLED');
+      $chain->complete('KILLED');
     }
     else
     {
@@ -299,14 +299,14 @@ sub post_process_tname
     if (! $tname)
     {
       # Move the TNAME from here to TITLE.
-      $chain->complete_if_last_is(0, 'EXPLAINED');
+      $chain->complete('EXPLAINED');
       push @$chains_title, dclone($chain);
-      $chain->complete_if_last_is(0, 'KILLED');
+      $chain->complete('KILLED');
     }
     elsif ($value eq $tname)
     {
       # Redundant with TITLE.
-      $chain->complete_if_last_is(0, 'KILLED');
+      $chain->complete('KILLED');
     }
     else
     {
@@ -333,35 +333,35 @@ sub post_process_tword
     if ($value eq 'First Half')
     {
       $token->set_general('ITERATOR', 'HALF', 1);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
+      $chain->complete('EXPLAINED');
     }
     elsif ($value eq 'Second Half')
     {
       $token->set_general('ITERATOR', 'HALF', 2);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
+      $chain->complete('EXPLAINED');
     }
     elsif ($value eq 'Open Room')
     {
       $token->set_general('ITERATOR', 'ROOM', 'Open');
-      $chain->complete_if_last_is(0, 'EXPLAINED');
+      $chain->complete('EXPLAINED');
     }
     elsif ($value eq 'Closed Room')
     {
       $token->set_general('ITERATOR', 'ROOM', 'Closed');
-      $chain->complete_if_last_is(0, 'EXPLAINED');
+      $chain->complete('EXPLAINED');
     }
     elsif ($value eq 'Second Place')
     {
       $token->set_general('ITERATOR', 'PLACE', 2);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
+      $chain->complete('EXPLAINED');
     }
     elsif ($value eq 'Championship' || $value eq 'Tournament')
     {
-      $chain->complete_if_last_is(0, 'KILLED');
+      $chain->complete('KILLED');
     }
     else
     {
-      $chain->complete_if_last_is(0, 'EXPLAINED');
+      $chain->complete('EXPLAINED');
     }
   }
 }
@@ -398,15 +398,15 @@ sub post_process_match
 
     # So probably the MINOR is really the match number.
     $token->set_general('MARKER', 'MATCH', $second);
-    $chain->complete_if_last_is(0, 'EXPLAINED');
+    $chain->complete('EXPLAINED');
 
     $token_prev->set_general('COUNTER', 'NUMERAL', $first);
-    $chain_prev->complete_if_last_is(0, 'COMPLETE');
+    $chain_prev->complete('COMPLETE');
   }
 }
 
 
-sub post_process_letters
+sub post_process_ambiguous_letters
 {
   my ($chains) = @_;
 
@@ -429,7 +429,7 @@ sub post_process_letters
 
     my $chain1 = Chain->new();
     $chain1->append($token1);
-    $chain1->complete_if_last_is(0, 'EXPLAINED');
+    $chain1->complete('EXPLAINED');
     splice(@$chains, 1, 0, $chain1);
   }
   elsif ($field eq 'J')
@@ -450,7 +450,7 @@ sub post_process_letters
 
     my $chain1 = Chain->new();
     $chain1->append($token1);
-    $chain1->complete_if_last_is(0, 'EXPLAINED');
+    $chain1->complete('EXPLAINED');
     splice(@$chains, 1, 0, $chain1);
   }
   elsif ($field eq 'S')
@@ -470,7 +470,7 @@ sub post_process_letters
     die "Unknown ambiguous letter: $field";
   }
 
-  $chain->complete_if_last_is(0, 'EXPLAINED');
+  $chain->complete('EXPLAINED');
 }
 
 
@@ -480,7 +480,7 @@ sub one_to_two_chains
     $cat1, $field1, $value1, $cat2, $field2, $value2) = @_;
 
   $token->set_general($cat1, $field1, $value1);
-  $chain->complete_if_last_is(0, 'EXPLAINED');
+  $chain->complete('EXPLAINED');
 
   my $token1 = Token->new();
   $token1->copy_origin_from($token);
@@ -488,7 +488,7 @@ sub one_to_two_chains
 
   my $chain1 = Chain->new();
   $chain1->append($token1);
-  $chain1->complete_if_last_is(0, 'EXPLAINED');
+  $chain1->complete('EXPLAINED');
   splice(@$chains, $cno+1, 0, $chain1);
 }
 
@@ -513,7 +513,7 @@ sub post_process_analyze_rest
 
     if ($status eq 'COMPLETE' && $chain->last() == -1)
     {
-      $chain->complete_if_last_is(-1, 'KILLED');
+      $chain->complete('KILLED');
       next;
     }
 
@@ -609,7 +609,7 @@ sub post_process_rof
     {
       # Probably round-of.
       $token->set_general('MARKER', 'ROF', $value);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
+      $chain->complete('EXPLAINED');
 
       $knowledge->delete_field('ROUND', $value, $bbono);
       $knowledge->add_field('ROF', $value, $bbono);
@@ -640,6 +640,56 @@ sub likely_rof
 }
 
 
+sub active_letter
+{
+  my ($knowledge, $chain, $token, $value, $bbono) = @_;
+
+  if ($knowledge->is_knock_out($bbono))
+  {
+    print "$bbono ETRACE-LETTER1\n" if $TRACE;
+    $chain->complete('KILLED');
+  }
+  else
+  {
+    print "$bbono ETRACE-LETTER2\n" if $TRACE;
+    $token->set_general('MARKER', 'GROUP', $value);
+    $chain->complete('EXPLAINED');
+  }
+}
+
+
+sub active_nl_teams
+{
+  my ($knowledge, $mask ,
+    $chains, $chain, $cno, $token, $value, $bbono) = @_;
+
+  $value =~ /^(\d+)([A-Za-z]+)$/;
+  my ($number, $letter) = ($1, $2);
+  if ($knowledge->is_knock_out($bbono))
+  {
+    # Discard the letter.
+    print "$bbono ETRACE-NLTEAMS-1\n" if $TRACE;
+    $token->set_general('MARKER', 'SEGMENT', $number);
+    $chain->complete('EXPLAINED');
+  }
+  elsif ($mask eq '0100')
+  {
+    # Already have a round.
+    print "$bbono ETRACE-NLTEAMS-2\n" if $TRACE;
+    $token->set_general('MARKER', 'MATCH', $number);
+    $chain->complete('EXPLAINED');
+  }
+  else
+  {
+    print "$bbono ETRACE-NLTEAMS-3\n" if $TRACE;
+    one_to_two_chains($chains, $chain, $cno, $token,
+      'MARKER', 'GROUP', $letter,
+      'MARKER', 'ROUND', $number);
+  }
+
+}
+
+
 sub post_process_single_active
 {
   my ($knowledge, $chains, $chain, $cno, $bbono) = @_;
@@ -666,19 +716,8 @@ sub post_process_single_active
 
   if ($field eq 'LETTER')
   {
-    if ($knowledge->is_knock_out($bbono))
-    {
-      print "$bbono ETRACE10\n" if $TRACE;
-      $chain->complete_if_last_is(0, 'KILLED');
-      return;
-    }
-    else
-    {
-      print "$bbono ETRACE11\n" if $TRACE;
-      $token->set_general('MARKER', 'GROUP', $value);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
-      return;
-    }
+    active_letter($knowledge, $chain, $token, $value, $bbono);
+    return;
   }
   elsif ($form eq 'Pairs')
   {
@@ -690,7 +729,7 @@ sub post_process_single_active
       {
         print "$bbono ETRACE1\n" if $TRACE;
         $token->set_general('MARKER', 'SESSION', $value);
-        $chain->complete_if_last_is(0, 'EXPLAINED');
+        $chain->complete('EXPLAINED');
         return;
       }
       elsif ($field eq 'NL')
@@ -707,7 +746,7 @@ sub post_process_single_active
       {
         print "$bbono ETRACE3\n" if $TRACE;
         $token->set_general('MARKER', 'ROUND', $value);
-        $chain->complete_if_last_is(0, 'EXPLAINED');
+        $chain->complete('EXPLAINED');
         return;
       }
       elsif ($field eq 'NL_OF_N' || $field eq 'NL_TO_N')
@@ -718,7 +757,7 @@ sub post_process_single_active
         print "$bbono ETRACE4\n" if $TRACE;
         warn "ORDER ETRACE4" if $n2 <= $n1;
         $token->set_general('MARKER', 'SEGMENT', "$n1 of $n2");
-        $chain->complete_if_last_is(0, 'EXPLAINED');
+        $chain->complete('EXPLAINED');
         return;
       }
       elsif ($field eq 'AMBIGUOUS')
@@ -726,7 +765,7 @@ sub post_process_single_active
         print "$bbono ETRACE5\n" if $TRACE;
         $value =~ /^S (.*)$/;
         $token->set_general('MARKER', 'SESSION', $1);
-        $chain->complete_if_last_is(0, 'EXPLAINED');
+        $chain->complete('EXPLAINED');
         return;
       }
       else
@@ -740,32 +779,9 @@ sub post_process_single_active
   }
   elsif ($field eq 'NL')
   {
-    $value =~ /^(\d+)([A-Za-z]+)$/;
-    my ($number, $letter) = ($1, $2);
-    if ($knowledge->is_knock_out($bbono))
-    {
-      # Discard the letter.
-      print "$bbono ETRACE20\n" if $TRACE;
-      $token->set_general('MARKER', 'SEGMENT', $number);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
-      return;
-    }
-    elsif ($mask eq '0100')
-    {
-      # Already have a round.
-      print "$bbono ETRACE21\n" if $TRACE;
-      $token->set_general('MARKER', 'MATCH', $number);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
-      return;
-    }
-    else
-    {
-      print "$bbono ETRACE22\n" if $TRACE;
-      one_to_two_chains($chains, $chain, $cno, $token,
-        'MARKER', 'GROUP', $letter,
-        'MARKER', 'ROUND', $number);
-      return;
-    }
+    active_nl_teams($knowledge, $mask,
+      $chains, $chain, $cno, $token, $value, $bbono);
+    return;
   }
   elsif ($field eq 'AMBIGUOUS')
   {
@@ -776,21 +792,21 @@ sub post_process_single_active
     {
       print "$bbono ETRACE30\n" if $TRACE;
       $token->set_general('SINGLETON', 'AGE', 'Seniors');
-      $chain->complete_if_last_is(0, 'EXPLAINED');
+      $chain->complete('EXPLAINED');
       return;
     }
     elsif ($knowledge->is_knock_out($bbono))
     {
       print "$bbono ETRACE31\n" if $TRACE;
       $token->set_general('MARKER', 'SEGMENT', $f);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
+      $chain->complete('EXPLAINED');
       return;
     }
     else
     {
       print "$bbono ETRACE32\n" if $TRACE;
       $token->set_general('MARKER', 'SESSION', $f);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
+      $chain->complete('EXPLAINED');
       return;
     }
   }
@@ -815,7 +831,7 @@ sub post_process_single_active
         print "$bbono ETRACE41\n" if $TRACE;
         warn "ORDER ETRACE41" if $n2 <= $n1;
         $token->set_general('MARKER', 'SEGMENT', "$n1 of $n2");
-        $chain->complete_if_last_is(0, 'EXPLAINED');
+        $chain->complete('EXPLAINED');
         return;
       }
       else
@@ -852,7 +868,7 @@ sub post_process_single_active
       {
         print "$bbono ETRACE43\n" if $TRACE;
         $token->set_general('MARKER', $field1, "$n1 of $n2");
-        $chain->complete_if_last_is(0, 'EXPLAINED');
+        $chain->complete('EXPLAINED');
         return;
       }
       else
@@ -879,7 +895,7 @@ sub post_process_single_active
       {
         print "$bbono ETRACE45a\n" if $TRACE;
         $token->set_general('COUNTER', 'NUMERAL', $value);
-        $chain->complete_if_last_is(0, 'EXPLAINED');
+        $chain->complete('EXPLAINED');
         return;
       }
       else
@@ -899,7 +915,7 @@ sub post_process_single_active
       {
         print "$bbono ETRACE47\n" if $TRACE;
         $token->set_general('MARKER', 'SEGMENT', $value);
-        $chain->complete_if_last_is(0, 'EXPLAINED');
+        $chain->complete('EXPLAINED');
         return;
       }
       else
@@ -915,7 +931,7 @@ sub post_process_single_active
     {
       print "$bbono ETRACE49\n" if $TRACE;
       $token->set_general('MARKER', 'ROUND', $value);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
+      $chain->complete('EXPLAINED');
       return;
     }
     else
@@ -931,13 +947,13 @@ sub post_process_single_active
     {
       print "$bbono ETRACE55\n" if $TRACE;
       $token->set_general('MARKER', 'ROF', $rof);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
+      $chain->complete('EXPLAINED');
     }
     else
     {
       print "$bbono ETRACE56\n" if $TRACE;
       $token->set_general('MARKER', 'SEGMENT', $value);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
+      $chain->complete('EXPLAINED');
     }
     return;
   }
@@ -948,7 +964,7 @@ sub post_process_single_active
     {
       print "$bbono ETRACE60\n" if $TRACE;
       $token->set_general('MARKER', 'ROUND', $value);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
+      $chain->complete('EXPLAINED');
       return;
     }
 
@@ -957,13 +973,13 @@ sub post_process_single_active
     {
       print "$bbono ETRACE61\n" if $TRACE;
       $token->set_general('MARKER', 'ROF', $rof);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
+      $chain->complete('EXPLAINED');
     }
     else
     {
       print "$bbono ETRACE62\n" if $TRACE;
       $token->set_general('MARKER', 'SEGMENT', $value);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
+      $chain->complete('EXPLAINED');
     }
     return;
   }
@@ -1006,8 +1022,8 @@ sub post_process_pair
         $token0->set_general('MARKER', 'ROF', $value0);
         $token1->set_general('MARKER', 'SEGMENT', $value1);
 
-        $chain0->complete_if_last_is(0, 'EXPLAINED');
-        $chain1->complete_if_last_is(0, 'EXPLAINED');
+        $chain0->complete('EXPLAINED');
+        $chain1->complete('EXPLAINED');
       }
       elsif ($value0 eq '1 of 16' || $value0 eq '1 of 32' || 
           $value0 eq '1 of 64')
@@ -1016,16 +1032,16 @@ sub post_process_pair
         $token0->set_general('MARKER', 'ROF', $1);
         $token1->set_general('MARKER', 'SEGMENT', $value1);
 
-        $chain0->complete_if_last_is(0, 'EXPLAINED');
-        $chain1->complete_if_last_is(0, 'EXPLAINED');
+        $chain0->complete('EXPLAINED');
+        $chain1->complete('EXPLAINED');
       }
       else
       {
         # Drop the letter/numeral.
         $token1->set_general('MARKER', 'SEGMENT', $value1);
 
-        $chain0->complete_if_last_is(0, 'KILLED');
-        $chain1->complete_if_last_is(0, 'EXPLAINED');
+        $chain0->complete('KILLED');
+        $chain1->complete('EXPLAINED');
       }
     }
     return;
@@ -1037,8 +1053,8 @@ sub post_process_pair
     $token0->set_general('MARKER', 'ROUND', $value0);
     $token1->set_general('MARKER', 'SEGMENT', $value1);
 
-    $chain0->complete_if_last_is(0, 'EXPLAINED');
-    $chain1->complete_if_last_is(0, 'EXPLAINED');
+    $chain0->complete('EXPLAINED');
+    $chain1->complete('EXPLAINED');
     return;
   }
 
@@ -1096,7 +1112,7 @@ sub interpret
   post_process_tname($chains, $chains_title, $bbono);
   post_process_tword($chains, $chains_title, $bbono);
   post_process_match($chains, $bbono);
-  post_process_letters($chains);
+  post_process_ambiguous_letters($chains);
 
   my (@stretches, @actives);
   post_process_analyze_rest($chains, \@stretches, \@actives, $bbono);

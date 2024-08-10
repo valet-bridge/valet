@@ -205,6 +205,13 @@ sub complete_if_last_is
 }
 
 
+sub complete
+{
+  my ($self, $status) = @_;
+  $self->{STATUS} = $status;
+}
+
+
 sub category
 {
   my ($self, $index) = @_;
