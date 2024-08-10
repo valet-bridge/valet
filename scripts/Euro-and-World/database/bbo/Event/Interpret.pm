@@ -854,368 +854,16 @@ sub get_next_one_chain
 }
 
 
-sub process_front_number
-{
-  my ($chains, $chain, $cno, $chains_title, $scoring, $bbono) = @_;
-
-  my $token = $chain->check_out(0);
-  my $field = $token->field();
-  my $value = $token->value();
-
-  my $cnotmp;
-  my $tname = find_field_in_chains($chains_title, 'TNAME', \$cnotmp);
-
-  my $stage = find_field_in_chains($chains_title, 'STAGE', \$cnotmp);
-  if (! $stage)
-  {
-    $stage = find_field_in_chains($chains, 'STAGE', \$cnotmp);
-  }
-
-  my $token2;
-  if ($field eq 'AMBIGUOUS')
-  {
-    if (get_next_one_chain($chains, $cno, 1, \$token2) &&
-      $token2->field() eq 'ROUND')
-    {
-      $token->set_general('MARKER', 'SESSION', $value);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
-    }
-    else
-    {
-      print "TODOA $bbono, $tname: $stage, $field, $value\n";
-    }
-  }
-  elsif ($scoring ne 'I' && $scoring ne 'B')
-  {
-    print "TODOB $bbono, $tname: $stage, $field, $value\n";
-  }
-  elsif ($stage =~ /final/i)
-  {
-    if ($field eq 'ORDINAL' || $field eq 'N_OF_N')
-    {
-      $token->set_general('MARKER', 'SEGMENT', $value);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
-    }
-    else
-    {
-      print "TODOC $bbono, $tname: $stage, $field, $value\n";
-    }
-  }
-  elsif ($field eq 'N_OF_N' &&
-    ($value eq '1 of 16' || $value eq '1 of 32' || $value eq '1 of 64'))
-  {
-    $value =~ /1 of (\d+)/;
-    my $n = $1;
-    $token->set_general('MARKER', 'ROF', $n);
-    $chain->complete_if_last_is(0, 'EXPLAINED');
-  }
-  elsif (get_next_one_chain($chains, $cno, 1, \$token2) &&
-      ($token2->value() eq 'Round-robin' ||
-       $token2->field() eq 'HALF'))
-  {
-    $token->set_general('MARKER', 'ROUND', $value);
-    $chain->complete_if_last_is(0, 'EXPLAINED');
-  }
-  else
-  {
-    print "TODOD $bbono, $tname: $stage, $field, $value\n";
-  }
-}
-
-
-sub process_back_number
-{
-  my ($chains, $chain, $cno, $chains_title, $scoring, $bbono) = @_;
-
-  my $token = $chain->check_out(0);
-  my $field = $token->field();
-  my $value = $token->value();
-
-  my $cnotmp;
-  my $tname = find_field_in_chains($chains_title, 'TNAME', \$cnotmp);
-
-  my $stage = find_field_in_chains($chains_title, 'STAGE', \$cnotmp);
-  if (! $stage)
-  {
-    $stage = find_field_in_chains($chains, 'STAGE', \$cnotmp);
-  }
-
-  my $form = find_field_in_chains($chains_title, 'FORM', \$cnotmp);
-
-  my $token2;
-  get_next_one_chain($chains, $cno, 0, \$token2);
-  my $field2 = $token2->field();
-  my $value2 = $token2->value();
-
-  if ($field eq 'LETTER')
-  {
-    if ($scoring eq 'P' || $value2 !~ /final/i)
-    {
-      $token->set_general('MARKER', 'GROUP', $value);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
-      return 1;
-    }
-    else
-    {
-      $chain->complete_if_last_is(0, 'KILLED');
-      return 1;
-    }
-  }
-  elsif ($tname eq 'Camrose' && ($field eq 'AMBIGUOUS' || $field eq 'NUMERAL'))
-  {
-    $token->set_general('MARKER', 'STANZA', $value);
-    $chain->complete_if_last_is(0, 'EXPLAINED');
-    return 1;
-  }
-  elsif ($field eq 'AMBIGUOUS')
-  {
-    $token->set_general('MARKER', 'SESSION', $value);
-    $chain->complete_if_last_is(0, 'EXPLAINED');
-    return 1;
-  }
-  elsif ($form eq 'Pairs' ||
-      $scoring eq 'P' ||
-      $stage eq 'Round-robin' ||
-      $value2 eq 'Round-robin' ||
-      $value2 =~ /swiss/i ||
-      $value2 =~ /danish/i ||
-      $value2 =~ /pairs/i ||
-      $value2 =~ /individual/i ||
-      $stage eq 'Qualifying' ||
-      $stage eq 'Consolation')
-  {
-    $token->set_general('MARKER', 'ROUND', $value);
-    $chain->complete_if_last_is(0, 'EXPLAINED');
-    return 1;
-  }
-  elsif ($stage =~ /final/i || 
-     $value2 =~ /^Rof/ ||
-     $stage eq 'Elimination' ||
-     $stage eq 'Knock-out' ||
-     $stage eq 'Playoff' ||
-     $value2 eq 'Bronze' ||
-     $value2 eq 'Super League')
-  {
-    $token->set_general('MARKER', 'SEGMENT', $value);
-    $chain->complete_if_last_is(0, 'EXPLAINED');
-    return 1;
-  }
-  elsif ($field eq 'MAJOR_MINOR')
-  {
-    if ($stage eq 'Knock-out')
-    {
-      $value2 =~ /^(\d+)+(\d+)$/;
-      one_to_two_chains($chains, $chain, $token,
-        'MARKER', 'ROUND', 'MARKER', 'SEGMENT', $1, $2);
-    }
-    else
-    {
-      print "TODOE $bbono, $tname: $stage, $field, $value\n";
-    }
-    return 1;
-  }
-  elsif ($field eq 'NL')
-  {
-    $value =~ /^(\d+)([A-Za-z]+)$/;
-    my ($n, $l) = ($1, $2);
-
-    if ($l eq 'F')
-    {
-      one_to_two_chains($chains, $chain, $token,
-        'MARKER', 'STAGE', 'MARKER', 'SEGMENT', $l, $n);
-      return 1;
-    }
-    else
-    {
-      one_to_two_chains($chains, $chain, $token,
-        'MARKER', 'GROUP', 'MARKER', 'SEGMENT', $l, $n);
-      return 1;
-    }
-  }
-  elsif ($field2 eq 'BERTH' ||
-      $field2 eq 'MATCH' ||
-      $field2 eq 'PLACE' ||
-      $field2 eq 'ROUND' ||
-      $field2 eq 'MATCH' ||
-      $field2 eq 'AGE' ||
-      $field2 eq 'GENDER' ||
-      ($field2 eq 'FORM' && $value2 eq 'Teams'))
-  {
-    if ($field ne 'NUMERAL' && $field ne 'N_OF_N')
-    {
-      print "TODOE $bbono, $tname: $stage, $field, $value\n";
-      return 0;
-    }
-
-    my $n;
-    if ($field eq 'NUMERAL')
-    {
-      $n = $value;
-    }
-    else
-    {
-      $value =~ /^(\d+) of (\d+)$/;
-      $n = $2;
-    }
-
-    # Heuristic.
-    if ($n >= 12 || $n == 11 || $n == 7)
-    {
-      $token->set_general('MARKER', 'ROUND', $value);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
-      return 1;
-    }
-    else
-    {
-      $token->set_general('MARKER', 'SEGMENT', $value);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
-      return 1;
-    }
-  }
-  print "TODOX $bbono, $tname: $stage, $field, $value\n";
-}
-
-
-sub process_middle_number
-{
-  my ($chains, $chain, $cno, $chains_title, $scoring, $bbono) = @_;
-
-  my $token = $chain->check_out(0);
-  my $field = $token->field();
-  my $value = $token->value();
-
-  my $cnotmp;
-  my $tname = find_field_in_chains($chains_title, 'TNAME', \$cnotmp);
-
-  my $stage = find_field_in_chains($chains_title, 'STAGE', \$cnotmp);
-  if (! $stage)
-  {
-    $stage = find_field_in_chains($chains, 'STAGE', \$cnotmp);
-  }
-
-  my $form = find_field_in_chains($chains_title, 'FORM', \$cnotmp);
-
-  # my $token2;
-  # get_next_one_chain($chains, $cno, 0, \$token2);
-  # my $field2 = $token2->field();
-  # my $value2 = $token2->value();
-
-  print "TODOX $bbono, $tname: $stage, $field, $value\n";
-}
-
-
-sub post_process_single_numerals
-{
-  my ($chains, $chains_title, $scoring, $bbono) = @_;
-
-  # Find a single non-final chain.
-  my $cno_single;
-  my $count_complete = 0;
-  my $count_active = 0;
-  for my $cno (0 .. $#$chains)
-  {
-    my $chain = $chains->[$cno];
-    my $status = $chain->status();
-    next if $status eq 'KILLED';
-    $count_active++;
-    next if $status eq 'EXPLAINED';
-    $count_complete++;
-    $cno_single = $cno;
-  }
-  return unless $count_complete == 1;
-
-  my $chain = $chains->[$cno_single];
-  return unless $chain->last() == 0;
-
-  if ($count_active == 1)
-  {
-    post_process_stand_alone_number($chains, $chain, $chains_title, 
-      $scoring, $bbono);
-    return;
-  }
-  elsif ($cno_single == 0)
-  {
-    process_front_number($chains, $chain, $cno_single, $chains_title, 
-      $$scoring, $bbono);
-    return;
-  }
-  elsif ($cno_single == $#$chains)
-  {
-    process_back_number($chains, $chain, $cno_single, $chains_title, 
-      $$scoring, $bbono);
-    return;
-  }
-  else
-  {
-    process_middle_number($chains, $chain, $cno_single, $chains_title, 
-      $$scoring, $bbono);
-    return;
-  }
-
-  return;
-
-    my $token = $chain->check_out(0);
-    my $field = $token->field();
-    my $value = $token->value();
-
-  my $cnotmp;
-  my $tname = find_field_in_chains($chains_title, 'TNAME', \$cnotmp);
-
-  my $stage = find_field_in_chains($chains_title, 'STAGE', \$cnotmp);
-  if (! $stage)
-  {
-    $stage = find_field_in_chains($chains, 'STAGE', \$cnotmp);
-  }
-
-
-    print "TODOX $bbono, $tname: $stage, $field, $value\n";
-
-
-  if ($field eq 'NUMERAL')
-  {
-    if ($cno_single == 0)
-    {
-        print "TODOA\n";
-    }
-    else
-    {
-      my $chain_prev = $chains->[$cno_single-1];
-      my $status_prev = $chain_prev->status();
-      if ($status_prev eq 'KILLED')
-      {
-        print "TODOB\n";
-      }
-      elsif ($chain_prev->last() > 0)
-      {
-        print "TODOC\n";
-      }
-      else
-      {
-        my $token_prev = $chain_prev->check_out(0);
-        my $value_prev = $token_prev->value();
-
-        if ($value_prev eq 'Round-robin')
-        {
-          $token->set_general('ITERATOR', 'ROUND', $token->value());
-          $chain->complete_if_last_is(0, 'EXPLAINED');
-        }
-      }
-    }
-  }
-}
-
-
 sub post_process_analyze_rest
 {
-  # Some known fields are stored in %known.
   # There is supposed to be one remaining stretch of chain numbers.
   # That stretch is supposed to have 1 or 2 chain numbers with content
   # that is not KILLED.  These go in actives.
 
-  my ($chains, $known, $stretches, $actives, $bbono) = @_;
+  my ($chains, $stretches, $actives, $bbono) = @_;
   
-  # Some chains are just considered done.  Others, ideally one contiguous set,
-  # must still be analyzed for their number content.
+  # Some chains are just considered done.  Others, ideally one 
+  # contiguous set, must still be analyzed for their number content.
   my $open_flag = 0;
   my $counter_flag = 0;
   my $open_start = 0;
@@ -1237,11 +885,6 @@ sub post_process_analyze_rest
       next if ($status eq 'KILLED' &&
           $chain->last() == 0 && 
           $token->value() eq '');
-
-      if ($status eq 'EXPLAINED')
-      {
-        push @{$known->{$token->field()}}, $token->value();
-      }
 
       if ($open_flag && $counter_flag)
       {
@@ -1379,7 +1022,7 @@ sub likely_rof
 
 sub post_process_single_active
 {
-  my ($knowledge, $known, $chains, $chain, $cno, $bbono) = @_;
+  my ($knowledge, $chains, $chain, $cno, $bbono) = @_;
 
   my $token = $chain->check_out(0);
   my $field = $token->field();
@@ -1394,9 +1037,11 @@ sub post_process_single_active
 
   if ($form eq '')
   {
+    my $scoring = $knowledge->get_field('SCORING', $bbono);
     # TODO This is not clean.  Should go by TNAME or TWORD.
-    $form = ($known->{SCORING}[0] eq 'I' ||
-      $known->{SCORING}[0] eq 'B' ?  'Teams' : 'Pairs');
+    $form = ($scoring eq 'IMP' || $scoring eq 'I' ||
+      $scoring eq 'BAM' || $scoring eq 'B' ?  
+      'Teams' : 'Pairs');
   }
 
   if ($field eq 'LETTER')
@@ -1731,8 +1376,10 @@ sub post_process_pair
       $stage eq 'Final' || $stage eq 'Playoff' || 
       $movement eq 'Knock-out')
   {
-    if (($field0 eq 'LETTER' || $field0 eq 'NUMERAL' || $field0 eq 'N_OF_N') &&
-        ($field1 eq 'NUMERAL' || $field1 eq 'N_OF_N' || $field1 eq 'AMBIGUOUS'))
+    if (($field0 eq 'LETTER' || $field0 eq 'NUMERAL' || 
+          $field0 eq 'N_OF_N') &&
+        ($field1 eq 'NUMERAL' || $field1 eq 'N_OF_N' || 
+          $field1 eq 'AMBIGUOUS'))
     {
       if ($value0 eq '16' || $value0 eq '32' || $value0 eq '64')
       {
@@ -1742,7 +1389,8 @@ sub post_process_pair
         $chain0->complete_if_last_is(0, 'EXPLAINED');
         $chain1->complete_if_last_is(0, 'EXPLAINED');
       }
-      elsif ($value0 eq '1 of 16' || $value0 eq '1 of 32' || $value0 eq '1 of 64')
+      elsif ($value0 eq '1 of 16' || $value0 eq '1 of 32' || 
+          $value0 eq '1 of 64')
       {
         $value0 =~ /^1 of (\d+)$/;
         $token0->set_general('MARKER', 'ROF', $1);
@@ -1778,16 +1426,16 @@ sub post_process_pair
 }
 
 
-sub post_process_single_numerals_new
+sub post_process_single_numerals
 {
-  my ($chains, $chains_title, $knowledge, $known, 
+  my ($chains, $chains_title, $knowledge,
     $stretch, $actives, $bbono) = @_;
 
   my ($cno0, $cno1) = ($stretch->[0], $stretch->[1]);
 
   if ($#$actives == 0)
   {
-    post_process_single_active($knowledge, $known, 
+    post_process_single_active($knowledge,
       $chains, $chains->[$actives->[0]], $actives->[0], $bbono);
     return;
   }
@@ -1830,8 +1478,8 @@ sub interpret
   post_process_match($chains, $bbono);
   post_process_letters($chains);
 
-  my (%known, @stretches, @actives);
-  post_process_analyze_rest($chains, \%known, \@stretches, \@actives, $bbono);
+  my (@stretches, @actives);
+  post_process_analyze_rest($chains, \@stretches, \@actives, $bbono);
 
   $knowledge->add_explained_chains($chains_title, $bbono);
   $knowledge->add_explained_chains($chains, $bbono);
@@ -1839,22 +1487,10 @@ sub interpret
 
   post_process_rof($chains, $knowledge, $bbono);
 
-  # return unless $#stretches == 0;
-
-  make_record($chains_title, \%known);
-
-  # print "STRETCH single $bbono\n";
-  # post_process_single_numerals($chains, $chains_title, $scoring, $bbono);
-
-  if ($$scoring ne '')
-  {
-    $known{SCORING}[0] = $$scoring;
-  }
-
   for my $s (0 .. $#stretches)
   {
-    post_process_single_numerals_new($chains, $chains_title, 
-      $knowledge, \%known, $stretches[$s], $actives[$s], $bbono);
+    post_process_single_numerals($chains, $chains_title, 
+      $knowledge, $stretches[$s], $actives[$s], $bbono);
   }
 }
 
