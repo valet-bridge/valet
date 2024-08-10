@@ -94,6 +94,7 @@ my %HARD_SUBS =
   'SF A' => ['semia'],
   'SF B' => ['semib'],
   'Table A' => ['ta'],
+  'USA' => ['usa1', 'usa2', 'usa 1', 'usa 2'],
   'Table B' => ['tb'],
   'Women Round Robin' => ['wrr']
 );

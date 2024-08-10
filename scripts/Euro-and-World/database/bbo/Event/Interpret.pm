@@ -110,6 +110,11 @@ my %ITERATORS_NL = (
   'Camrose' => 'MATCH'
 );
 
+my %ITERATORS_S_FOR_SENIORS = (
+  'European Bridge Teams Championship' => 1,
+  'World Mind Games' => 1
+);
+
 # BBOVG numbers for which special occurrences are OK.
 my %EVENT_MATCHES_ROUND;
 my %EVENT_MATCHES_SEGMENT;
@@ -1266,7 +1271,7 @@ sub post_process_analyze_rest
       $open_start = $cno;
     }
 
-    if ($token->category() eq 'COUNTER')
+    if ($token->category() eq 'COUNTER' || $token->field() eq 'AMBIGUOUS')
     {
       $counter_flag = 1;
     }
@@ -1280,16 +1285,16 @@ sub post_process_analyze_rest
   if ($#$stretches > 0)
   {
     print "STRETCH multiple $bbono\n";
-    return;
   }
 
-  return if $#$stretches == -1;
-
-  for my $cno ($stretches->[0][0] .. $stretches->[0][1])
+  for my $s (0 .. $#$stretches)
   {
-    if ($chains->[$cno]->status() ne 'KILLED')
+    for my $cno ($stretches->[$s][0] .. $stretches->[$s][1])
     {
-      push @$actives, $cno;
+      if ($chains->[$cno]->status() ne 'KILLED')
+      {
+        push @{$actives->[$s]}, $cno;
+      }
     }
   }
 }
@@ -1380,6 +1385,7 @@ sub post_process_single_active
   my $field = $token->field();
   my $value = $token->value();
 
+  my $meet = $knowledge->get_field('MEET', $bbono);
   my $tname = $knowledge->get_field('TNAME', $bbono);
   my $form = $knowledge->get_field('FORM', $bbono);
   my $stage = $knowledge->get_field('STAGE', $bbono);
@@ -1398,7 +1404,7 @@ sub post_process_single_active
     if ($knowledge->is_knock_out($bbono))
     {
       print "$bbono ETRACE10\n" if $TRACE;
-      # Discard.
+      $chain->complete_if_last_is(0, 'KILLED');
       return;
     }
     else
@@ -1500,16 +1506,24 @@ sub post_process_single_active
   {
     $value =~ /^S (.*)$/;
     my $f = $1;
-    if ($knowledge->is_knock_out($bbono))
+    if (exists $ITERATORS_S_FOR_SENIORS{$meet} ||
+        $ITERATORS_S_FOR_SENIORS{$meet})
     {
       print "$bbono ETRACE30\n" if $TRACE;
+      $token->set_general('SINGLETON', 'AGE', 'Seniors');
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+      return;
+    }
+    elsif ($knowledge->is_knock_out($bbono))
+    {
+      print "$bbono ETRACE31\n" if $TRACE;
       $token->set_general('MARKER', 'SEGMENT', $f);
       $chain->complete_if_last_is(0, 'EXPLAINED');
       return;
     }
     else
     {
-      print "$bbono ETRACE31\n" if $TRACE;
+      print "$bbono ETRACE32\n" if $TRACE;
       $token->set_general('MARKER', 'SESSION', $f);
       $chain->complete_if_last_is(0, 'EXPLAINED');
       return;
@@ -1595,6 +1609,13 @@ sub post_process_single_active
         one_to_two_chains($chains, $chain, $token,
           'MARKER', 'MATCH', 'MARKER', 
           'STANZA', $1, $2);
+      }
+      elsif ($field eq 'NUMERAL')
+      {
+        print "$bbono ETRACE45a\n" if $TRACE;
+        $token->set_general('COUNTER', 'NUMERAL', $value);
+        $chain->complete_if_last_is(0, 'EXPLAINED');
+        return;
       }
       else
       {
@@ -1818,7 +1839,7 @@ sub interpret
 
   post_process_rof($chains, $knowledge, $bbono);
 
-  return unless $#stretches == 0;
+  # return unless $#stretches == 0;
 
   make_record($chains_title, \%known);
 
@@ -1830,8 +1851,11 @@ sub interpret
     $known{SCORING}[0] = $$scoring;
   }
 
-  post_process_single_numerals_new($chains, $chains_title, 
-    $knowledge, \%known, $stretches[0], \@actives, $bbono);
+  for my $s (0 .. $#stretches)
+  {
+    post_process_single_numerals_new($chains, $chains_title, 
+      $knowledge, \%known, $stretches[$s], $actives[$s], $bbono);
+  }
 }
 
 1;

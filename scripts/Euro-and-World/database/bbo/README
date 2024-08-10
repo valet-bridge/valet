@@ -1,4 +1,17 @@
-Activate KDEBUG in Knowledge.pm
+* Finish Event
+* Clean up Event code
+  - Potentially update knowledge with every change (central methods)
+* Do Title
+* Put print into Knowledge
+* Activate KDEBUG in Knowledge.pm
+* Can we limit TWORD to actual multi-purpose tournament and not
+  single words?
+* URL scraper
+* Maybe store pdf's of URL's when available
+* Syntax for Meet info
+* Syntax for Tname info
+* Individual tournament are version of Tname with year, ...
+
 
 39011: Why still TEAM1_COUNTRY, TEAM2_COUNTRY?
 

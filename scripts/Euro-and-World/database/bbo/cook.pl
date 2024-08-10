@@ -241,7 +241,8 @@ while ($line = <$fh>)
   $stats_title->incr(\@chains_title);
 
 
-  next if (chains_done(\@chains_title) &&
+  next if ! $debug_flag &&
+     (chains_done(\@chains_title) &&
       chains_done($chains_team{TEAM1}) &&
       chains_done($chains_team{TEAM2}) &&
       chains_done(\@chains_event));
