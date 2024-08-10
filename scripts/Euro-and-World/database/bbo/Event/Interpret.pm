@@ -906,6 +906,29 @@ sub active_milne
 }
 
 
+sub active_knock_out
+{
+  my ($knowledge, $chain, $token, $value, $field, $bbono) = @_;
+
+  if ($field eq 'NUMERAL' || 
+      $field eq 'N_OF_N' ||
+      $field eq 'N_TO_N_OF_N' ||
+      $field eq 'ORDINAL' ||
+      $field eq 'ROMAN')
+  {
+    print "$bbono ETRACE-KO_1\n" if $TRACE;
+    $token->set_general('MARKER', 'SEGMENT', $value);
+    $chain->complete('EXPLAINED');
+  }
+  else
+  {
+    print "$bbono ETRACE-KO_2\n" if $TRACE;
+    return 0;
+  }
+  return 1;
+}
+
+
 sub active_seg_complete_teams
 {
   my ($knowledge, $chain, $token, $value, $field, $bbono) = @_;
@@ -1007,21 +1030,8 @@ sub post_process_single_active
     }
     elsif ($knowledge->is_knock_out($bbono))
     {
-      if ($field eq 'NUMERAL' || 
-          $field eq 'N_OF_N' ||
-          $field eq 'N_TO_N_OF_N' ||
-          $field eq 'ORDINAL' ||
-          $field eq 'ROMAN')
-      {
-        print "$bbono ETRACE47\n" if $TRACE;
-        $token->set_general('MARKER', 'SEGMENT', $value);
-        $chain->complete('EXPLAINED');
-        return;
-      }
-      else
-      {
-        print "$bbono ETRACE48\n" if $TRACE;
-      }
+      return if active_knock_out($knowledge, $chain, 
+        $token, $value, $field, $bbono);
     }
     elsif ($field eq 'NUMERAL' || 
           $field eq 'N_OF_N' ||
