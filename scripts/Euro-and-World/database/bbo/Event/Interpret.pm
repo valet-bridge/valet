@@ -655,6 +655,7 @@ sub active_letter
     $token->set_general('MARKER', 'GROUP', $value);
     $chain->complete('EXPLAINED');
   }
+  return 1;
 }
 
 
@@ -706,7 +707,9 @@ sub active_number_pairs
   else
   {
     print "$bbono ETRACE-NUMP-6\n" if $TRACE;
+    return 0;
   }
+  return 1;
 }
 
 
@@ -738,6 +741,7 @@ sub active_nl_teams
       'MARKER', 'GROUP', $letter,
       'MARKER', 'ROUND', $number);
   }
+  return 1;
 }
 
 
@@ -768,6 +772,41 @@ sub active_ambiguous_teams
     $token->set_general('MARKER', 'SESSION', $f);
     $chain->complete('EXPLAINED');
   }
+  return 1;
+}
+
+
+sub active_nton_teams
+{
+  my ($knowledge, $chains, $chain, $cno, 
+    $token, $field, $value, $bbono) = @_;
+
+  my $movement = $knowledge->get_field('MOVEMENT', $bbono);
+
+  $value =~ /^(\d+)-(\d+)([A-D])$/;
+  my ($n1, $n2) = ($1, $2);
+  if ($movement eq 'Round-robin')
+  {
+    # Skip the letter (which would be a group).
+    print "$bbono ETRACE-NTONT-3\n" if $TRACE;
+    one_to_two_chains($chains, $chain, $cno, $token,
+      'MARKER', 'ROUND', $n1,
+      'MARKER', 'MATCH', $n2);
+  }
+  elsif ($knowledge->is_knock_out($bbono))
+  {
+    # Skip the letter (which would be a group).
+    print "$bbono ETRACE-NTONT-3\n" if $TRACE;
+    warn "ORDER ETRACE-NTONT-1" if $n2 <= $n1;
+    $token->set_general('MARKER', 'SEGMENT', "$n1 of $n2");
+    $chain->complete('EXPLAINED');
+  }
+  else
+  {
+    print "$bbono ETRACE-NTONT-3\n" if $TRACE;
+    return 0;
+  }
+  return 1;
 }
 
 
@@ -805,7 +844,6 @@ sub active_some_mm_teams
     print "$bbono ETRACE-SOMEMMTEAMS-1\n" if $TRACE;
     $token->set_general('MARKER', $field1, "$n1 of $n2");
     $chain->complete('EXPLAINED');
-    return;
   }
   else
   {
@@ -814,6 +852,58 @@ sub active_some_mm_teams
       'MARKER', $field1, $n1,
       'MARKER', $field2, $n2);
   }
+  return 1;
+}
+
+
+sub active_sr_complete_teams
+{
+  my ($knowledge, $chain, $token, $value, $field, $bbono) = @_;
+
+  my $rof;
+  if (likely_rof($field, $value, \$rof))
+  {
+    print "$bbono ETRACE-SRC-1\n" if $TRACE;
+    $token->set_general('MARKER', 'ROF', $rof);
+    $chain->complete('EXPLAINED');
+  }
+  else
+  {
+    print "$bbono ETRACE-SRC-2\n" if $TRACE;
+    $token->set_general('MARKER', 'SEGMENT', $value);
+    $chain->complete('EXPLAINED');
+  }
+  return 1;
+}
+
+
+sub active_seg_complete_teams
+{
+  my ($knowledge, $chain, $token, $value, $field, $bbono) = @_;
+
+  my $movement = $knowledge->get_field('MOVEMENT', $bbono);
+  if ($movement eq 'Round-robin')
+  {
+    print "$bbono ETRACE-SEGC-1\n" if $TRACE;
+    $token->set_general('MARKER', 'ROUND', $value);
+    $chain->complete('EXPLAINED');
+    return 1;
+  }
+
+  my $rof;
+  if (likely_rof($field, $value, \$rof))
+  {
+    print "$bbono ETRACE-SEGC-2\n" if $TRACE;
+    $token->set_general('MARKER', 'ROF', $rof);
+    $chain->complete('EXPLAINED');
+  }
+  else
+  {
+    print "$bbono ETRACE-SEGC-3\n" if $TRACE;
+    $token->set_general('MARKER', 'SEGMENT', $value);
+    $chain->complete('EXPLAINED');
+  }
+  return 1;
 }
 
 
@@ -843,17 +933,15 @@ sub post_process_single_active
 
   if ($field eq 'LETTER')
   {
-    active_letter($knowledge, $chain, $token, $value, $bbono);
-    return;
+    return if active_letter($knowledge, $chain, $token, $value, $bbono);
   }
   elsif ($form eq 'Pairs')
   {
     if ($mask eq '0000' || $mask eq '1000')
     {
       # Might have group, but no other relevant iterator.
-      active_number_pairs($knowledge, $chains, $chain, $cno, 
+      return if active_number_pairs($knowledge, $chains, $chain, $cno, 
         $token, $field, $value, $bbono);
-      return;
     }
 
     print "TODOY $bbono, $mask, $tname: $form, $stage, $movement, $field, $value\n";
@@ -861,50 +949,27 @@ sub post_process_single_active
   }
   elsif ($field eq 'NL')
   {
-    active_nl_teams($knowledge, $mask,
+    return if active_nl_teams($knowledge, $mask,
       $chains, $chain, $cno, $token, $value, $bbono);
-    return;
   }
   elsif ($field eq 'AMBIGUOUS')
   {
-    active_ambiguous_teams($knowledge, $chain, $token, $value, $bbono);
-    return;
+    return if active_ambiguous_teams($knowledge, $chain, 
+      $token, $value, $bbono);
   }
   elsif ($mask eq '0000' || $mask eq '1000')
   {
     if ($field eq 'NL_OF_N' || $field eq 'NL_TO_N')
     {
-      $value =~ /^(\d+)-(\d+)([A-D])$/;
-      my ($n1, $n2) = ($1, $2);
-      if ($movement eq 'Round-robin')
-      {
-        # Skip the letter (which would be a group).
-        print "$bbono ETRACE40\n" if $TRACE;
-        one_to_two_chains($chains, $chain, $cno, $token,
-          'MARKER', 'ROUND', $n1,
-          'MARKER', 'MATCH', $n2);
-        return;
-      }
-      elsif ($knowledge->is_knock_out($bbono))
-      {
-        # Skip the letter (which would be a group).
-        print "$bbono ETRACE41\n" if $TRACE;
-        warn "ORDER ETRACE41" if $n2 <= $n1;
-        $token->set_general('MARKER', 'SEGMENT', "$n1 of $n2");
-        $chain->complete('EXPLAINED');
-        return;
-      }
-      else
-      {
-        print "$bbono ETRACE42\n" if $TRACE;
-      }
+      # Could be really N_OF_N or two different things.
+      return if active_nton_teams($knowledge, $chains, $chain, $cno,
+        $token, $field, $value, $bbono);
     }
     elsif ($tname && exists $ITERATORS_MAJOR_MINOR{$tname} &&
         ($field eq 'MAJOR_MINOR' || $field eq 'N_TO_N'))
     {
-      active_some_mm_teams($knowledge, $chains, $chain, $cno,
+      return if active_some_mm_teams($knowledge, $chains, $chain, $cno,
         $token, $field, $value, $bbono);
-      return;
     }
     elsif ($tname eq 'Lady Milne Trophy')
     {
@@ -967,47 +1032,15 @@ sub post_process_single_active
   }
   elsif ($mask eq '0100' || $mask eq '0010')
   {
-    # Have ROUND, so SEGMENT or ROF depending on value.
-    my $rof;
-    if (likely_rof($field, $value, \$rof))
-    {
-      print "$bbono ETRACE55\n" if $TRACE;
-      $token->set_general('MARKER', 'ROF', $rof);
-      $chain->complete('EXPLAINED');
-    }
-    else
-    {
-      print "$bbono ETRACE56\n" if $TRACE;
-      $token->set_general('MARKER', 'SEGMENT', $value);
-      $chain->complete('EXPLAINED');
-    }
-    return;
+    # Have ROUND or SESSION, so SEGMENT or ROF depending on value.
+    return if active_sr_complete_teams($knowledge, $chain, 
+      $token, $value, $field, $bbono);
   }
   elsif ($mask eq '0001')
   {
     # Have SEGMENT, so ROF or ROUND depending on value.
-    if ($movement eq 'Round-robin')
-    {
-      print "$bbono ETRACE60\n" if $TRACE;
-      $token->set_general('MARKER', 'ROUND', $value);
-      $chain->complete('EXPLAINED');
-      return;
-    }
-
-    my $rof;
-    if (likely_rof($field, $value, \$rof))
-    {
-      print "$bbono ETRACE61\n" if $TRACE;
-      $token->set_general('MARKER', 'ROF', $rof);
-      $chain->complete('EXPLAINED');
-    }
-    else
-    {
-      print "$bbono ETRACE62\n" if $TRACE;
-      $token->set_general('MARKER', 'SEGMENT', $value);
-      $chain->complete('EXPLAINED');
-    }
-    return;
+    return if active_seg_complete_teams($knowledge, $chain, 
+      $token, $value, $field, $bbono);
   }
 
   if ($tname eq '')
