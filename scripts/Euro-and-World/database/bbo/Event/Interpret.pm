@@ -929,6 +929,29 @@ sub active_knock_out
 }
 
 
+sub active_othn_teams
+{
+  my ($knowledge, $chain, $token, $value, $field, $bbono) = @_;
+
+  if ($field eq 'NUMERAL' || 
+        $field eq 'N_OF_N' ||
+        $field eq 'N_TO_N_OF_N' ||
+        $field eq 'ORDINAL' ||
+        $field eq 'ROMAN')
+  {
+    print "$bbono ETRACE-OTHN-1\n" if $TRACE;
+    $token->set_general('MARKER', 'ROUND', $value);
+    $chain->complete('EXPLAINED');
+  }
+  else
+  {
+    print "$bbono ETRACE-OTHN-1\n" if $TRACE;
+    return 0;
+  }
+  return 1;
+}
+
+
 sub active_seg_complete_teams
 {
   my ($knowledge, $chain, $token, $value, $field, $bbono) = @_;
@@ -1033,20 +1056,10 @@ sub post_process_single_active
       return if active_knock_out($knowledge, $chain, 
         $token, $value, $field, $bbono);
     }
-    elsif ($field eq 'NUMERAL' || 
-          $field eq 'N_OF_N' ||
-          $field eq 'N_TO_N_OF_N' ||
-          $field eq 'ORDINAL' ||
-          $field eq 'ROMAN')
-    {
-      print "$bbono ETRACE49\n" if $TRACE;
-      $token->set_general('MARKER', 'ROUND', $value);
-      $chain->complete('EXPLAINED');
-      return;
-    }
     else
     {
-      print "$bbono ETRACE50\n" if $TRACE;
+      return if active_othn_teams($knowledge, $chain, 
+        $token, $value, $field, $bbono);
     }
   }
   elsif ($mask eq '0100' || $mask eq '0010')
