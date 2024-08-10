@@ -29,6 +29,17 @@ my %ACCEPT = map { $_ => 1 } @ACCEPT_FIELDS;
 my %KILL = map { $_ => 1 } @KILL_FIELDS;
 
 
+my %RECOGNIZE_LETTER_GROUPS =
+(
+  'European Championship' => 1,
+  'European Bridge Teams Championship' => 1,
+  'European Open Bridge Championship' => 1,
+  'Sunchime Fund Cup' => 1,
+  'World Mind Games' => 1,
+  'World Women Elite Tournament' => 1
+);
+
+
 # BBOVG numbers for which special occurrences are OK.
 my %TITLE_MATCHES_ROUND;
 my %TITLE_MATCHES_SCORING;
@@ -260,7 +271,124 @@ sub post_process_maybe_rof
     }
   }
 }
-    
+
+
+sub finish_letter
+{
+  my ($chain, $knowledge, $bbono) = @_;
+
+  my $token = $chain->check_out(0);
+  my $field = $token->field();
+  my $value = $token->value();
+  return 0 unless $field eq 'LETTER';
+  return 0 unless $value ge 'A' && $value le 'E';
+
+  my $meet = $knowledge->get_field('MEET', $bbono);
+  my $tname = $knowledge->get_field('TNAME', $bbono);
+  my $movement = $knowledge->get_field('MOVEMENT', $bbono);
+  my $stage = $knowledge->get_field('STAGE', $bbono);
+
+  if ($knowledge->is_knock_out($bbono) ||
+      $movement eq 'Round-robin' ||
+      $stage =~ /^Rof/ ||
+      $stage eq 'Qualifying')
+  {
+    $chain->complete('KILLED');
+    return 1;
+  }
+  elsif (exists $RECOGNIZE_LETTER_GROUPS{$meet} ||
+         exists $RECOGNIZE_LETTER_GROUPS{$tname} ||
+         $movement eq 'Swiss')
+  {
+    $token->set_general('MARKER', 'GROUP', $value);
+    $chain->complete('EXPLAINED');
+    return 1;
+  }
+  else
+  {
+    $chain->complete('KILLED');
+    return 1;
+  }
+}
+
+
+sub finish_ordinal
+{
+  my ($whole, $chains, $chain, $knowledge, $bbono) = @_;
+
+  my $token = $chain->check_out(0);
+  my $field = $token->field();
+  my $value = $token->value();
+  return unless $field eq 'ORDINAL';
+
+  if ($value > 12)
+  {
+    $chain->complete('EXPLAINED');
+    return 1;
+  }
+
+  my $meet = $knowledge->get_field('MEET', $bbono);
+  my $tname = $knowledge->get_field('TNAME', $bbono);
+  my $movement = $knowledge->get_field('MOVEMENT', $bbono);
+  my $stage = $knowledge->get_field('STAGE', $bbono);
+
+  if ($tname eq 'Vanderbilt' || $tname eq 'Spingold')
+  {
+    $chain->complete('KILLED');
+    return 1;
+  }
+  elsif ($tname eq 'Reisinger')
+  {
+    $token->set_general('MARKER', 'SESSION', $value);
+    $chain->complete('EXPLAINED');
+    return 1;
+  }
+
+  # Bit of a kludge, but it catches a lot of cases.
+  return 0 unless $#$chains == 2;
+  return 0 unless 
+    $chains->[1]->status() eq 'COMPLETE' &&
+    $chains->[2]->status() eq 'EXPLAINED';
+  return 0 unless
+    $chains->[1]->check_out(0)->field() eq 'ORDINAL' &&
+    ($chains->[2]->check_out(0)->field() eq 'TNAME' ||
+     $chains->[2]->check_out(0)->field() eq 'TWORD' ||
+     $chains->[2]->check_out(0)->field() eq 'MEET');
+
+  if ($chains->[0]->status() eq 'KILLED')
+  {
+    # It's simply an ordinal.
+    $chain->complete('EXPLAINED');
+    return 1;
+  }
+  elsif ($chains->[0]->status() eq 'EXPLAINED')
+  {
+    if ($chains->[0]->check_out(0)->field eq 'TNAME')
+    {
+      # Probably there are two TNAME's, so call it an ordinal.
+      $chain->complete('EXPLAINED');
+      return 1;
+    }
+
+    # Maybe the ordinal is interspersed between two parts of the
+    # tournament name.
+    my $composite = $chains->[0]->check_out(0)->value() . ' ' .
+      $chains->[2]->check_out(0)->value();
+
+    my $tname_comp = $whole->get_multi('TNAME', lc($composite));
+    if (defined $tname_comp)
+    {
+      $chains->[0]->complete('KILLED');
+      $chains->[1]->complete('EXPLAINED');
+
+      my $token = $chains->[2]->check_out(0);
+      $token->set_general('SINGLETON', 'TNAME', $tname_comp);
+      return 1;
+    }
+  }
+
+  return 0;
+}
 
 
 sub interpret
@@ -280,5 +408,29 @@ sub deteam
   post_process_captains($chains, $bbono);
   post_process_leading_number($chains, $bbono);
 }
+
+
+sub finish
+{
+  my ($whole, $chains, $chains_title, $scoring, $bbono) = @_;
+
+  my $knowledge = Knowledge->new();;
+  $knowledge->add_explained_chains($chains_title, $bbono);
+  $knowledge->add_explained_chains($chains, $bbono);
+  $knowledge->add_field('SCORING', $$scoring, $bbono);
+
+  my (@stretches, @actives);
+  post_process_analyze_rest($chains, \@stretches, \@actives, $bbono);
+
+  return unless $#stretches == 0;
+  return unless $#{$actives[0]} == 0;
+
+  return if finish_letter($chains->[$actives[0][0]], $knowledge, $bbono);
+  return if finish_ordinal($whole, $chains, 
+    $chains->[$actives[0][0]], $knowledge, $bbono);
+
+  print "TODOX " . $knowledge->str($bbono) . ", $field, $value\n";
+}
+
 
 1;

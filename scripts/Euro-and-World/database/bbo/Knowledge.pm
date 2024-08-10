@@ -276,7 +276,7 @@ sub str
     $tname = 'MEET ' . $self->get_field('MEET', $bbono);
   }
 
-  print "$bbono, $mask, $tname: $form, $stage, $movement";
+  return "$bbono, $mask, $tname: $form, $stage, $movement";
 }
 
 

@@ -1,8 +1,9 @@
-* Finish Event
-* Clean up Event code
-  - Potentially update knowledge with every change (central methods)
+ROMAN
+a single 'v' (ROMAN) between TEAM1* and TEAM2*
+a roman at the very end except some special cases in hash
+
+
 * Do Title
-* Put print into Knowledge
 * Activate KDEBUG in Knowledge.pm
 * Can we limit TWORD to actual multi-purpose tournament and not
   single words?

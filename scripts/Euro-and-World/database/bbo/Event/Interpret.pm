@@ -14,7 +14,7 @@ our @EXPORT = qw(interpret);
 
 use lib './Connections';
 
-my $TRACE = 1;
+my $TRACE = 0;
 
 use Connections::Matrix;
 use Event::Ematch;
@@ -490,95 +490,6 @@ sub one_to_two_chains
   $chain1->append($token1);
   $chain1->complete('EXPLAINED');
   splice(@$chains, $cno+1, 0, $chain1);
-}
-
-
-sub post_process_analyze_rest
-{
-  # There is supposed to be one remaining stretch of chain numbers.
-  # That stretch is supposed to have 1 or 2 chain numbers with content
-  # that is not KILLED.  These go in actives.
-
-  my ($chains, $stretches, $actives, $bbono) = @_;
-  
-  # Some chains are just considered done.  Others, ideally one 
-  # contiguous set, must still be analyzed for their number content.
-  my $open_flag = 0;
-  my $counter_flag = 0;
-  my $open_start = 0;
-  for my $cno (0 .. $#$chains)
-  {
-    my $chain = $chains->[$cno];
-    my $status = $chain->status();
-
-    if ($status eq 'COMPLETE' && $chain->last() == -1)
-    {
-      $chain->complete('KILLED');
-      next;
-    }
-
-    my $token = $chain->check_out(0);
-
-    if ($status eq 'KILLED' || $status eq 'EXPLAINED')
-    {
-      next if ($status eq 'KILLED' &&
-          $chain->last() == 0 && 
-          $token->value() eq '');
-
-      if ($open_flag && $counter_flag)
-      {
-        push @$stretches, [$open_start, $cno-1];
-      }
-
-      $open_flag = 0;
-      $counter_flag = 0;
-      next;
-    }
-
-    if ($status eq 'OPEN')
-    {
-      print "ANALYZE: odd $bbono\n";
-      next;
-    }
-
-    if ($chain->last() != 0)
-    {
-      print "ANALYZE: expected one-token chain, $bbono\n";
-      next;
-    }
-
-    if (! $open_flag)
-    {
-      $open_flag = 1;
-      $open_start = $cno;
-    }
-
-    if ($token->category() eq 'COUNTER' || $token->field() eq 'AMBIGUOUS')
-    {
-      $counter_flag = 1;
-    }
-  }
-
-  if ($open_flag)
-  {
-    push @$stretches, [$open_start, $#$chains];
-  }
-
-  if ($#$stretches > 0)
-  {
-    print "STRETCH multiple $bbono\n";
-  }
-
-  for my $s (0 .. $#$stretches)
-  {
-    for my $cno ($stretches->[$s][0] .. $stretches->[$s][1])
-    {
-      if ($chains->[$cno]->status() ne 'KILLED')
-      {
-        push @{$actives->[$s]}, $cno;
-      }
-    }
-  }
 }
 
 
@@ -1144,8 +1055,7 @@ sub post_process_pair
 
 sub post_process_single_numerals
 {
-  my ($chains, $chains_title, $knowledge,
-    $stretch, $actives, $bbono) = @_;
+  my ($chains, $knowledge, $stretch, $actives, $bbono) = @_;
 
   my ($cno0, $cno1) = ($stretch->[0], $stretch->[1]);
 
@@ -1205,7 +1115,7 @@ sub interpret
 
   for my $s (0 .. $#stretches)
   {
-    post_process_single_numerals($chains, $chains_title, 
+    post_process_single_numerals($chains,
       $knowledge, $stretches[$s], $actives[$s], $bbono);
   }
 }

@@ -233,6 +233,12 @@ while ($line = <$fh>)
 
   Title::Interpret::deteam(\@chains_title, \%team_record, $chunk{BBONO});
 
+  # Use all our knowledge to finish the title.
+
+  Title::Interpret::finish($whole, \@chains_title, \@chains_event, 
+    \$chunk{SCORING}, $chunk{BBONO});
+
+
   refill_histo($histo_title_final, \@chains_title);
 
   refill_histo($histo_team_final, \@{$chains_team{TEAM1}});
