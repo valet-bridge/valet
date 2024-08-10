@@ -658,6 +658,58 @@ sub active_letter
 }
 
 
+sub active_number_pairs
+{
+  my ($knowledge, $chains, $chain, $cno, 
+    $token, $field, $value, $bbono) = @_;
+
+  if ($field eq 'NUMERAL' || 
+      $field eq 'N_OF_N' ||
+      $field eq 'ORDINAL')
+  {
+    print "$bbono ETRACE-NUMP-1\n" if $TRACE;
+    $token->set_general('MARKER', 'SESSION', $value);
+    $chain->complete('EXPLAINED');
+  }
+  elsif ($field eq 'NL')
+  {
+    print "$bbono ETRACE-NUMP-2\n" if $TRACE;
+    $value =~ /^(\d+)([A-Za-z]+)$/;
+    my ($number, $letter) = ($1, $2);
+    one_to_two_chains($chains, $chain, $cno, $token,
+      'MARKER', 'GROUP', $letter,
+      'MARKER', 'SESSION', $number);
+  }
+  elsif ($field eq 'N_TO_N_OF_N')
+  {
+    print "$bbono ETRACE-NUMP-3\n" if $TRACE;
+    $token->set_general('MARKER', 'ROUND', $value);
+    $chain->complete('EXPLAINED');
+  }
+  elsif ($field eq 'NL_OF_N' || $field eq 'NL_TO_N')
+  {
+    $value =~ /^(\d+)([A-D])-(\d+)$/;
+    my ($n1, $n2) = ($1, $2);
+    # Skip the letter (which would be a group).
+    print "$bbono ETRACE-NUMP-4\n" if $TRACE;
+    warn "ORDER ETRACE-NUMP-4" if $n2 <= $n1;
+    $token->set_general('MARKER', 'SEGMENT', "$n1 of $n2");
+    $chain->complete('EXPLAINED');
+  }
+  elsif ($field eq 'AMBIGUOUS')
+  {
+    print "$bbono ETRACE-NUMP-5\n" if $TRACE;
+    $value =~ /^S (.*)$/;
+    $token->set_general('MARKER', 'SESSION', $1);
+    $chain->complete('EXPLAINED');
+  }
+  else
+  {
+    print "$bbono ETRACE-NUMP-6\n" if $TRACE;
+  }
+}
+
+
 sub active_nl_teams
 {
   my ($knowledge, $mask ,
@@ -798,55 +850,10 @@ sub post_process_single_active
   {
     if ($mask eq '0000' || $mask eq '1000')
     {
-      if ($field eq 'NUMERAL' || 
-          $field eq 'N_OF_N' ||
-          $field eq 'ORDINAL')
-      {
-        print "$bbono ETRACE1\n" if $TRACE;
-        $token->set_general('MARKER', 'SESSION', $value);
-        $chain->complete('EXPLAINED');
-        return;
-      }
-      elsif ($field eq 'NL')
-      {
-        print "$bbono ETRACE2\n" if $TRACE;
-        $value =~ /^(\d+)([A-Za-z]+)$/;
-        my ($number, $letter) = ($1, $2);
-        one_to_two_chains($chains, $chain, $cno, $token,
-          'MARKER', 'GROUP', $letter,
-          'MARKER', 'SESSION', $number);
-        return;
-      }
-      elsif ($field eq 'N_TO_N_OF_N')
-      {
-        print "$bbono ETRACE3\n" if $TRACE;
-        $token->set_general('MARKER', 'ROUND', $value);
-        $chain->complete('EXPLAINED');
-        return;
-      }
-      elsif ($field eq 'NL_OF_N' || $field eq 'NL_TO_N')
-      {
-        $value =~ /^(\d+)([A-D])-(\d+)$/;
-        my ($n1, $n2) = ($1, $2);
-        # Skip the letter (which would be a group).
-        print "$bbono ETRACE4\n" if $TRACE;
-        warn "ORDER ETRACE4" if $n2 <= $n1;
-        $token->set_general('MARKER', 'SEGMENT', "$n1 of $n2");
-        $chain->complete('EXPLAINED');
-        return;
-      }
-      elsif ($field eq 'AMBIGUOUS')
-      {
-        print "$bbono ETRACE5\n" if $TRACE;
-        $value =~ /^S (.*)$/;
-        $token->set_general('MARKER', 'SESSION', $1);
-        $chain->complete('EXPLAINED');
-        return;
-      }
-      else
-      {
-        print "$bbono ETRACE6\n" if $TRACE;
-      }
+      # Might have group, but no other relevant iterator.
+      active_number_pairs($knowledge, $chains, $chain, $cno, 
+        $token, $field, $value, $bbono);
+      return;
     }
 
     print "TODOY $bbono, $mask, $tname: $form, $stage, $movement, $field, $value\n";
