@@ -877,6 +877,35 @@ sub active_sr_complete_teams
 }
 
 
+sub active_milne
+{
+  my ($knowledge, $chains, $chain, $cno, 
+    $token, $field, $value, $bbono) = @_;
+
+  if ($value =~ /^(\d+[ABC])[+-](\d+)$/)
+  {
+    print "$bbono ETRACE-MILNE-1\n" if $TRACE;
+    my ($match, $stanza) = ($1, $2);
+    one_to_two_chains($chains, $chain, $cno, $token,
+      'MARKER', 'MATCH', 'MARKER', 
+      'STANZA', $1, $2);
+  }
+  elsif ($field eq 'NUMERAL')
+  {
+    print "$bbono ETRACE-MILNE-2\n" if $TRACE;
+    $token->set_general('COUNTER', 'NUMERAL', $value);
+    $chain->complete('EXPLAINED');
+  }
+  else
+  {
+    print "$bbono ETRACE-MILNE-3\n" if $TRACE;
+    print "$bbono: WARN Unexpected MAJOR_MINOR format (Lady Milne)\n";
+    return 0;
+  }
+  return 1;
+}
+
+
 sub active_seg_complete_teams
 {
   my ($knowledge, $chain, $token, $value, $field, $bbono) = @_;
@@ -973,28 +1002,8 @@ sub post_process_single_active
     }
     elsif ($tname eq 'Lady Milne Trophy')
     {
-      # Special case.
-      if ($value =~ /^(\d+[ABC])[+-](\d+)$/)
-      {
-        print "$bbono ETRACE45\n" if $TRACE;
-        my ($match, $stanza) = ($1, $2);
-        one_to_two_chains($chains, $chain, $cno, $token,
-          'MARKER', 'MATCH', 'MARKER', 
-          'STANZA', $1, $2);
-      }
-      elsif ($field eq 'NUMERAL')
-      {
-        print "$bbono ETRACE45a\n" if $TRACE;
-        $token->set_general('COUNTER', 'NUMERAL', $value);
-        $chain->complete('EXPLAINED');
-        return;
-      }
-      else
-      {
-        print "$bbono ETRACE46\n" if $TRACE;
-        print "$bbono: WARN Unexpected MAJOR_MINOR format (Lady Milne)\n";
-      }
-      return 1;
+      return if active_milne($knowledge, $chains, $chain, $cno,
+        $token, $field, $value, $bbono);
     }
     elsif ($knowledge->is_knock_out($bbono))
     {
