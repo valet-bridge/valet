@@ -39,7 +39,7 @@ my %MULTI_TYPOS =
     'quarter f', '1/4 f', '1_4 f', 'quaerter final', '1_4 fin',
     '1_4 final', '1_4 final_', '1_4 fina', '1/4f', '1_4f',
     '1_4 finales', 'quet final', 'quarti finale', '1_4 finale', 
-    '1_4 de finale', 'quartal final'],
+    '1/4 finale', '1_4 de finale', 'quartal final'],
   Rof6 => ['round of 6'],
   Rof12 => ['round of 12', 'rnd of12', 'phase a 12'],
   Rof14 => ['phase à 14'],

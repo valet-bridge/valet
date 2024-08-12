@@ -304,6 +304,47 @@ sub fix_metals
 }
 
 
+sub finish_numeral
+{
+  my ($whole, $chains, $chain, $cno,
+    $knowledge, $token, $field, $value, $bbono) = @_;
+
+  my $meet = $knowledge->get_field('MEET', $bbono);
+  my $tname = $knowledge->get_field('TNAME', $bbono);
+
+  if ($meet eq 'Winter Nationals' ||
+      $tname eq 'Gabrial UI Bastaman Cup' ||
+      $tname eq 'Geologi Cup' ||
+      $tname eq "Kepri Governor's Cup")
+  {
+    $token->set_general('SINGLETON', 'ORDINAL', $value);
+    $chain->complete('EXPLAINED');
+    return 1;
+  }
+
+  # Bit of a kludge for a numeral preceded by 'RR'.
+  if ($cno > 0)
+  {
+    my $chain_prev = $chains->[$cno-1];
+    if ($chain_prev->last() == 0)
+    {
+      my $token_prev = $chain_prev->check_out(0);
+      if ($token_prev->value() eq 'Round-robin')
+      {
+        # That makes the numeral a ROUND.
+        $token->set_general('MARKER', 'ROUND', $value);
+        $chain->complete('EXPLAINED');
+        return 1;
+      }
+    }
+  }
+
+  # Drop the numeral.
+  $chain->complete('KILLED');
+  return 1;
+}
+
+
 sub finish_letter
 {
   my ($chain, $knowledge, $token, $field, $value, $bbono) = @_;
@@ -432,6 +473,40 @@ sub finish_nl
 }
 
 
+sub finish_roman
+{
+  my ($chain, $knowledge, $token, $field, $value, $bbono) = @_;
+
+  my $tname = $knowledge->get_field('TNAME', $bbono);
+  if ($value eq '5' && $token->text() eq 'v')
+  {
+    # Probably a left-over 'v' for vs.
+    $chain->complete('KILLED');
+    return 1;
+  }
+  elsif ($value > 12)
+  {
+    $token->set_general('SINGLETON', 'ORDINAL', $value);
+    $chain->complete('EXPLAINED');
+    return 1;
+  }
+  elsif ($tname eq 'Chilean Team Trials' ||
+      $tname eq 'Swedish District Championship' ||
+      $tname eq 'Romanian League')
+  {
+    # Ignore Roman.
+    return 1;
+  }
+  else
+  {
+    # Roman is OK.
+    $token->set_general('SINGLETON', 'ORDINAL', $value);
+    $chain->complete('EXPLAINED');
+    return 1;
+  }
+}
+
+
 sub post_process_single_active
 {
   my ($whole, $knowledge, $chains, $chain, $cno, $bbono) = @_;
@@ -444,9 +519,14 @@ sub post_process_single_active
   my $form = $knowledge->get_field('FORM', $bbono);
   my $mask = $knowledge->get_iter_mask($bbono);
 
-  if ($field eq 'LETTER')
+  if ($field eq 'NUMERAL')
   {
-    if ($value ge 'A' && $value le 'E')
+    return if finish_numeral($whole, $chains, 
+      $chain, $cno, $knowledge, $token, $field, $value, $bbono);
+  }
+  elsif ($field eq 'LETTER')
+  {
+    if ((lc($value) ge 'a' && lc($value) le 'e') || $value eq 'H')
     {
       return if finish_letter($chain, 
         $knowledge, $token, $field, $value, $bbono);
@@ -460,6 +540,11 @@ sub post_process_single_active
   elsif ($field eq 'NL')
   {
     return if finish_nl($chain, $knowledge, 
+      $token, $field, $value, $bbono);
+  }
+  elsif ($field eq 'ROMAN')
+  {
+    return if finish_roman($chain, $knowledge, 
       $token, $field, $value, $bbono);
   }
 

@@ -106,7 +106,6 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  APBF => ['PABF', 'PABFs'],
   CBAI => ['cabi'],
   FMB => ['fm'],
   HKBCA => ['hncba'],

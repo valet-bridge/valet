@@ -224,6 +224,7 @@ my @MULTI_WORDS =
   'Ööklubi Strand',
 
   'Paak Festival',
+  'PABF Open',
   "Pai's",
   "Pal's Four",
   'Park Bridge',

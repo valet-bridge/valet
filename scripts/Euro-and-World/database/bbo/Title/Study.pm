@@ -93,6 +93,7 @@ sub title_specific_inline
 
   # A hodge-podge, mostly of spacing.
   $text =~ s/pokal([a-z])/pokal $1/i; # pokal|a
+  $text =~ s/(d[ae]nmark) - pokal/$1 Pokal/i;
   $text =~ s/-th\b/th/g; # 4-th
   $text =~ s/(\d) th\b/$1th/g; # 4 th
   $text =~ s/2 nd\b/2nd/g; #  2nd
