@@ -273,6 +273,37 @@ sub post_process_maybe_rof
 }
 
 
+sub fix_metals
+{
+  my ($chains, $knowledge, $bbono) = @_;
+
+  for my $chain (@$chains)
+  {
+    next if $chain->status() ne 'COMPLETE';
+    next unless $chain->last() == 0;
+
+    my $token = $chain->check_out(0);
+    my $value = $token->value();
+    next unless $token->field() eq 'CAPTAIN' &&
+      ($value eq 'Silver' || $value eq 'Gold');
+
+    my $meet = $knowledge->get_field('MEET', $bbono);
+    next unless $meet eq 'Tolani Summer Nationals';
+
+    if ($value eq 'Silver')
+    {
+      $token->set_general('SINGLETON', 'TNAME', 'Tolani Silver Cup');
+      $chain->complete('EXPLAINED');
+    }
+    else
+    {
+      $token->set_general('SINGLETON', 'TNAME', 'Tolani Gold Trophy');
+      $chain->complete('EXPLAINED');
+    }
+  }
+}
+
+
 sub finish_letter
 {
   my ($chain, $knowledge, $token, $field, $value, $bbono) = @_;
@@ -381,6 +412,26 @@ sub finish_ordinal
 }
 
 
+sub finish_nl
+{
+  my ($chain, $knowledge, $token, $field, $value, $bbono) = @_;
+
+  my $tname = $knowledge->get_field('TNAME', $bbono);
+  if ($tname eq 'Camrose')
+  {
+    $token->set_general('MARKER', 'MATCH', $value);
+    $chain->complete('EXPLAINED');
+    return 1;
+  }
+  else
+  {
+    # Can probably ignore.
+    $chain->complete('KILLED');
+    return 1;
+  }
+}
+
+
 sub post_process_single_active
 {
   my ($whole, $knowledge, $chains, $chain, $cno, $bbono) = @_;
@@ -405,6 +456,11 @@ sub post_process_single_active
   {
     return if finish_ordinal($whole, $chains, 
       $chain, $knowledge, $token, $field, $value, $bbono);
+  }
+  elsif ($field eq 'NL')
+  {
+    return if finish_nl($chain, $knowledge, 
+      $token, $field, $value, $bbono);
   }
 
   print "TODOX " . $knowledge->str($bbono) . ", $field, $value\n";
@@ -470,20 +526,23 @@ sub deteam
 
 sub finish
 {
-  my ($whole, $chains, $chains_title, $scoring, $bbono) = @_;
+  my ($whole, $chains_title, $chains_event, $scoring, $bbono) = @_;
 
   my $knowledge = Knowledge->new();;
   $knowledge->add_explained_chains($chains_title, $bbono);
-  $knowledge->add_explained_chains($chains, $bbono);
+  $knowledge->add_explained_chains($chains_event, $bbono);
   $knowledge->add_field('SCORING', $$scoring, $bbono);
 
+  # A special case: There are both players and tournaments with
+  # Silver and Gold in them.
+  fix_metals($chains_title, $knowledge, $bbono);
+
   my (@stretches, @actives);
-  post_process_analyze_rest($chains, \@stretches, \@actives, $bbono);
+  post_process_analyze_rest($chains_title, \@stretches, \@actives, $bbono);
 
   return if $#stretches == -1;
-  # return unless $#{$actives[0]} == 0;
 
-  post_process_single_numerals($chains,
+  post_process_single_numerals($chains_title,
     $whole, $knowledge, $stretches[0], $actives[0], $bbono);
 }
 

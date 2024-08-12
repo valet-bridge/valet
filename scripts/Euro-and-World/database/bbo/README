@@ -1,14 +1,3 @@
-fix_metals():
-CAPTAIN
-39609
-MEET Tolani Summer Nationals, CAPTAIN Silver -> TNAME Tolani Silver Cup
-45675
-MEET Tolani Summer Nationals, CAPTAIN Gold -> Tolani Gold Trophy
-45678, 45680, 45690, 45693, 45699
-
-NL Camrose -> Match
-Others fix manually (5)
-
 ROMAN
 a single 'v' (ROMAN) between TEAM1* and TEAM2*
 a roman at the very end except some special cases in hash

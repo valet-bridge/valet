@@ -235,7 +235,7 @@ while ($line = <$fh>)
 
   # Use all our knowledge to finish the title.
 
-  Title::Interpret::finish($whole, \@chains_title, \@chains_event, 
+  Title::Interpret::finish($whole, \@chains_title, \@chains_event,
     \$chunk{SCORING}, $chunk{BBONO});
 
 
