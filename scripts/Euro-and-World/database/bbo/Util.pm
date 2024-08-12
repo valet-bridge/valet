@@ -552,11 +552,6 @@ sub post_process_analyze_rest
     push @$stretches, [$open_start, $#$chains];
   }
 
-  if ($#$stretches > 0)
-  {
-    print "STRETCH multiple $bbono\n";
-  }
-
   for my $s (0 .. $#$stretches)
   {
     for my $cno ($stretches->[$s][0] .. $stretches->[$s][1])

@@ -275,13 +275,7 @@ sub post_process_maybe_rof
 
 sub finish_letter
 {
-  my ($chain, $knowledge, $bbono) = @_;
-
-  my $token = $chain->check_out(0);
-  my $field = $token->field();
-  my $value = $token->value();
-  return 0 unless $field eq 'LETTER';
-  return 0 unless $value ge 'A' && $value le 'E';
+  my ($chain, $knowledge, $token, $field, $value, $bbono) = @_;
 
   my $meet = $knowledge->get_field('MEET', $bbono);
   my $tname = $knowledge->get_field('TNAME', $bbono);
@@ -314,12 +308,8 @@ sub finish_letter
 
 sub finish_ordinal
 {
-  my ($whole, $chains, $chain, $knowledge, $bbono) = @_;
-
-  my $token = $chain->check_out(0);
-  my $field = $token->field();
-  my $value = $token->value();
-  return unless $field eq 'ORDINAL';
+  my ($whole, $chains, $chain, 
+    $knowledge, $token, $field, $value, $bbono) = @_;
 
   if ($value > 12)
   {
@@ -391,6 +381,74 @@ sub finish_ordinal
 }
 
 
+sub post_process_single_active
+{
+  my ($whole, $knowledge, $chains, $chain, $cno, $bbono) = @_;
+
+  my $token = $chain->check_out(0);
+  my $field = $token->field();
+  my $value = $token->value();
+
+  my $tname = $knowledge->get_field('TNAME', $bbono);
+  my $form = $knowledge->get_field('FORM', $bbono);
+  my $mask = $knowledge->get_iter_mask($bbono);
+
+  if ($field eq 'LETTER')
+  {
+    if ($value ge 'A' && $value le 'E')
+    {
+      return if finish_letter($chain, 
+        $knowledge, $token, $field, $value, $bbono);
+    }
+  }
+  elsif ($field eq 'ORDINAL')
+  {
+    return if finish_ordinal($whole, $chains, 
+      $chain, $knowledge, $token, $field, $value, $bbono);
+  }
+
+  print "TODOX " . $knowledge->str($bbono) . ", $field, $value\n";
+}
+
+
+sub post_process_single_numerals
+{
+  my ($chains, $whole, $knowledge, $stretch, $actives, $bbono) = @_;
+
+  my ($cno0, $cno1) = ($stretch->[0], $stretch->[1]);
+
+  if ($#$actives == 0)
+  {
+    post_process_single_active($whole, $knowledge,
+      $chains, $chains->[$actives->[0]], $actives->[0], $bbono);
+    return;
+  }
+
+  if ($#$actives != 1)
+  {
+    print "STRETCH long $bbono\n";
+    return;
+  }
+
+  my $chain0 = $chains->[$actives->[0]];
+  my $chain1 = $chains->[$actives->[1]];
+
+  if ($chain0->last() != 0)
+  {
+    print "STRETCH chain0 $bbono\n";
+    return;
+  }
+  if ($chain1->last() != 0)
+  {
+    print "STRETCH chain1 $bbono\n";
+    return;
+  }
+
+  print "TODOY " . $knowledge->str($bbono) . "\n";
+  # post_process_pair($knowledge, $chain0, $chain1, $bbono);
+}
+
+
 sub interpret
 {
   my ($whole, $chains, $scoring, $bbono) = @_;
@@ -422,14 +480,11 @@ sub finish
   my (@stretches, @actives);
   post_process_analyze_rest($chains, \@stretches, \@actives, $bbono);
 
-  return unless $#stretches == 0;
-  return unless $#{$actives[0]} == 0;
+  return if $#stretches == -1;
+  # return unless $#{$actives[0]} == 0;
 
-  return if finish_letter($chains->[$actives[0][0]], $knowledge, $bbono);
-  return if finish_ordinal($whole, $chains, 
-    $chains->[$actives[0][0]], $knowledge, $bbono);
-
-  print "TODOX " . $knowledge->str($bbono) . ", $field, $value\n";
+  post_process_single_numerals($chains,
+    $whole, $knowledge, $stretches[0], $actives[0], $bbono);
 }
 
 
