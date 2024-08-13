@@ -33,17 +33,12 @@ Output all the cook results into a text file in compact format:
 Read in that same format
 
 Some things to do deal with:
-- Unify scoring
-- Teams, if present more than one time, should match, then simplify
-- Years can come out
 - TWORDs can be aggregated and clustered
 - List of actual TNAME profiles, also ordinal guidance,
   24th was in 2013 etc, list of support points,
   locations {2013: Lisbon}, display name
 
 Things to deal with in chains:
-- ambiguous Q, O, S, Q
-- Maybe eliminate/compare team names and knowledge
 - Aggregate TWORD, compare against TNAME clusters
 
 More general stuff

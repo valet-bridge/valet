@@ -552,6 +552,35 @@ sub post_process_single_active
 }
 
 
+sub post_process_pair
+{
+  my ($knowledge, $chain0, $chain1, $cno0, $cno1, $bbono) = @_;
+
+  my $token0 = $chain0->check_out(0);
+  my $token1 = $chain1->check_out(0);
+
+  my $stage = $knowledge->get_field('STAGE', $bbono);
+  my $movement = $knowledge->get_field('MOVEMENT', $bbono);
+
+  my $field0 = $token0->field();
+  my $field1 = $token1->field();
+  my $value0 = $token0->value();
+  my $value1 = $token1->value();
+
+  if ($cno0 == 0 && $cno1 <= 2 &&
+      $field0 eq 'LETTER' && lc($value0) ge 'a' && lc($value0) le 'e' &&
+      $field1 eq 'ORDINAL')
+  {
+    $chain0->complete('KILLED');
+    $chain1->complete('EXPLAINED');
+    return 1;
+  }
+
+  print "TODOY " . $knowledge->str($bbono) . ", [$cno0: $field0, $value0], " .
+    "[$cno1: $field1, $value1]\n";
+}
+
+
 sub post_process_single_numerals
 {
   my ($chains, $whole, $knowledge, $stretch, $actives, $bbono) = @_;
@@ -585,8 +614,8 @@ sub post_process_single_numerals
     return;
   }
 
-  print "TODOY " . $knowledge->str($bbono) . "\n";
-  # post_process_pair($knowledge, $chain0, $chain1, $bbono);
+  post_process_pair($knowledge, $chain0, $chain1, 
+    $actives->[0], $actives->[1], $bbono);
 }
 
 
