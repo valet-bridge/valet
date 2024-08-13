@@ -54,7 +54,6 @@ my @MULTI_WORDS =
   'National Team Championship',
   'National Women Teams',
   'Nations Cup',
-  'NEC Cup',
   'Neighbor Challenge',
   "New Year's Teams",
   'New Zealand Trials',

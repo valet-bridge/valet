@@ -15,7 +15,7 @@ our @EXPORT = qw(ordinal_to_numeral ordinalize unteam
   scoring_full_to_short find_field_in_chains
   split_on_dates split_on_capitals split_on_multi append_token 
   singleton_numeral singleton_non_tag_matches singleton_tag_matches
-  make_record post_process_analyze_rest);
+  make_record post_process_analyze_rest one_to_two_chains);
 
 
 sub ordinal_to_numeral
@@ -564,5 +564,23 @@ sub post_process_analyze_rest
   }
 }
 
+
+sub one_to_two_chains
+{
+  my ($chains, $chain, $cno, $token,
+    $cat1, $field1, $value1, $cat2, $field2, $value2) = @_;
+
+  $token->set_general($cat1, $field1, $value1);
+  $chain->complete('EXPLAINED');
+
+  my $token1 = Token->new();
+  $token1->copy_origin_from($token);
+  $token1->set_general($cat2, $field2, $value2);
+
+  my $chain1 = Chain->new();
+  $chain1->append($token1);
+  $chain1->complete('EXPLAINED');
+  splice(@$chains, $cno+1, 0, $chain1);
+}
 
 1;

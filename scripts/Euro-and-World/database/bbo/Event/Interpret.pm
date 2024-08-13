@@ -474,25 +474,6 @@ sub post_process_ambiguous_letters
 }
 
 
-sub one_to_two_chains
-{
-  my ($chains, $chain, $cno, $token, 
-    $cat1, $field1, $value1, $cat2, $field2, $value2) = @_;
-
-  $token->set_general($cat1, $field1, $value1);
-  $chain->complete('EXPLAINED');
-
-  my $token1 = Token->new();
-  $token1->copy_origin_from($token);
-  $token1->set_general($cat2, $field2, $value2);
-
-  my $chain1 = Chain->new();
-  $chain1->append($token1);
-  $chain1->complete('EXPLAINED');
-  splice(@$chains, $cno+1, 0, $chain1);
-}
-
-
 sub post_process_rof
 {
   my ($chains, $knowledge, $bbono) = @_;

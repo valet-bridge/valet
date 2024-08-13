@@ -347,7 +347,7 @@ sub finish_numeral
 
 sub finish_n_of_n
 {
-  my ($chain, $knowledge, $token, $field, $value, $bbono) = @_;
+  my ($chains, $chain, $knowledge, $token, $field, $value, $bbono) = @_;
 
   my $tname = $knowledge->get_field('TNAME', $bbono);
   my $movement = $knowledge->get_field('MOVEMENT', $bbono);
@@ -365,6 +365,17 @@ sub finish_n_of_n
     $chain->complete('KILLED');
     return 1;
   }
+
+  # Look for a MARKER token with the same value.
+  for my $field0 (qw(GROUP SESSION SEGMENT ROUND))
+  {
+    my $value0 = $knowledge->get_field($field0, $bbono);
+    next unless $value0 eq $value;
+
+    $chain->complete('KILLED');
+    return 1;
+  }
+
   return 0;
 }
 
@@ -524,6 +535,7 @@ sub finish_roman
       $tname eq 'Romanian League')
   {
     # Ignore Roman.
+    $chain->complete('KILLED');
     return 1;
   }
   else
@@ -533,6 +545,79 @@ sub finish_roman
     $chain->complete('EXPLAINED');
     return 1;
   }
+}
+
+
+sub finish_ambiguous
+{
+  my ($chains, $chain, $cno,
+    $knowledge, $token, $field, $value, $bbono) = @_;
+
+  my $meet = $knowledge->get_field('MEET', $bbono);
+  my $tname = $knowledge->get_field('TNAME', $bbono);
+
+  if ($value =~ / of / ||
+      $tname =~ /Cavendish/ ||
+      $tname eq 'Reisinger' ||
+      $tname eq 'Tolani Grand Prix' ||
+      $tname eq 'Greek Open Trials' ||
+      $tname eq 'Portuguese Open Teams')
+  {
+    $token->set_general('MARKER', 'SESSION', $value);
+    $chain->complete('EXPLAINED');
+    return 1;
+  }
+  elsif ($tname eq 'Camrose' && $value =~ '^W (\d+)$')
+  {
+    $token->set_general('MARKER', 'WEEKEND', $1);
+    $chain->complete('EXPLAINED');
+    return 1;
+  }
+  elsif ($meet eq 'United States Bridge Championship' ||
+      $tname eq 'Gianarrigo Rona Trophy' ||
+      $tname eq 'Prince Takamatsu Cup' ||
+      $tname eq 'World Youth Bridge Congress' ||
+      $tname eq 'ASEAN Club Championship')
+  {
+    $token->set_general('MARKER', 'STAGE', 'Final');
+    $chain->complete('EXPLAINED');
+    return 1;
+  }
+  elsif ($meet eq 'World Mind Games' ||
+      $tname eq 'IMSA Elite Mind Games')
+  {
+    if ($value =~ /^O (\d+)$/)
+    {
+      one_to_two_chains($chains, $chain, $cno, $token,
+        'MARKER', 'GENDER', 'Open',
+        'MARKER', 'AGE', 'Open');
+      return 1;
+    }
+    elsif ($value =~ /^W (\d+)$/)
+    {
+      $token->set_general('SINGLETON', 'GENDER', 'Women');
+      $chain->complete('EXPLAINED');
+      return 1;
+    }
+    elsif ($value =~ /^S (\d+)$/)
+    {
+      $token->set_general('SINGLETON', 'AGE', 'Seniors');
+      $chain->complete('EXPLAINED');
+      return 1;
+    }
+  }
+  elsif ($meet eq 'European Championship' ||
+    $tname eq 'World Transnational Teams' ||
+    $tname eq 'Reisinger' ||
+    $tname eq 'Bermuda Bowl' ||
+    $tname eq 'Venice Cup' ||
+    $tname eq "d'Orsi")
+  {
+    $chain->complete('KILLED');
+    return 1;
+  }
+
+  return 0;
 }
 
 
@@ -555,7 +640,7 @@ sub post_process_single_active
   }
   elsif ($field eq 'N_OF_N')
   {
-    return if finish_n_of_n($chain, $knowledge, 
+    return if finish_n_of_n($chains, $chain, $knowledge, 
       $token, $field, $value, $bbono);
   }
   elsif ($field eq 'LETTER')
@@ -579,6 +664,11 @@ sub post_process_single_active
   elsif ($field eq 'ROMAN')
   {
     return if finish_roman($chain, $knowledge, 
+      $token, $field, $value, $bbono);
+  }
+  elsif ($field eq 'AMBIGUOUS')
+  {
+    return if finish_ambiguous($chains, $chain, $cno, $knowledge, 
       $token, $field, $value, $bbono);
   }
 
@@ -719,8 +809,11 @@ sub finish
 
   return if $#stretches == -1;
 
-  post_process_single_numerals($chains_title,
-    $whole, $knowledge, $stretches[0], $actives[0], $bbono);
+  for my $s (0 .. $#stretches)
+  {
+    post_process_single_numerals($chains_title,
+      $whole, $knowledge, $stretches[$s], $actives[$s], $bbono);
+  }
 }
 
 

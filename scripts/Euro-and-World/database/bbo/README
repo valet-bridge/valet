@@ -1,19 +1,6 @@
-N_OF_N
-If there is another MARKER with the same value: Ignore
-Pairs: Session
-Teams && is_knock_out: SEGMENT
-
-As we go to stretches loop:
-ROMAN, LETTER, NUMERAL will be OK
-
-ROMAN
-
-* Do Title
-  AMBIG, N_OF_N (single)
-  All pairs
-  29535: Why not "Table 1"?
-  37050: Why not "Round 4"?
-  There will be some Reductions to look at...
+13496: Why is Israel not picked up as a team country?
+39011: Why still TEAM1_COUNTRY, TEAM2_COUNTRY?
+There are some counters 0_..., e.g. 5203
 
 * Activate KDEBUG in Knowledge.pm
 * Can we limit TWORD to actual multi-purpose tournament and not
@@ -23,19 +10,6 @@ ROMAN
 * Syntax for Meet info
 * Syntax for Tname info
 * Individual tournament are version of Tname with year, ...
-
-8240: Should be QF
-
-13496: Why is Israel not picked up as a team country?
-
-39011: Why still TEAM1_COUNTRY, TEAM2_COUNTRY?
-
-10315: Then is probably Rof32, seg 2?
-
-
-There are some counters 0_..., e.g. 5203
-
-Dynamic consistency of chains: What occurs in raw.txt
 
 Output all the cook results into a text file in compact format:
 - a field can probably be a single or a list, { }
@@ -56,5 +30,3 @@ More general stuff
 
 Check the .ref files that modify qx against boards, lines
 (Output #lines from C++ as well?)
-
-URL scraper from .lin
