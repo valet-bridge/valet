@@ -345,6 +345,30 @@ sub finish_numeral
 }
 
 
+sub finish_n_of_n
+{
+  my ($chain, $knowledge, $token, $field, $value, $bbono) = @_;
+
+  my $tname = $knowledge->get_field('TNAME', $bbono);
+  my $movement = $knowledge->get_field('MOVEMENT', $bbono);
+
+  if ($tname =~ /Cavendish/ ||
+      $movement eq 'Round-robin' ||
+      $movement eq 'Swiss')
+  {
+    $token->set_general('MARKER', 'ROUND', $value);
+    $chain->complete('EXPLAINED');
+    return 1;
+  }
+  elsif ($tname eq 'Division Nationale')
+  {
+    $chain->complete('KILLED');
+    return 1;
+  }
+  return 0;
+}
+
+
 sub finish_letter
 {
   my ($chain, $knowledge, $token, $field, $value, $bbono) = @_;
@@ -402,6 +426,11 @@ sub finish_ordinal
   elsif ($tname eq 'Reisinger')
   {
     $token->set_general('MARKER', 'SESSION', $value);
+    $chain->complete('EXPLAINED');
+    return 1;
+  }
+  elsif ($tname eq 'NEC Cup')
+  {
     $chain->complete('EXPLAINED');
     return 1;
   }
@@ -524,6 +553,11 @@ sub post_process_single_active
     return if finish_numeral($whole, $chains, 
       $chain, $cno, $knowledge, $token, $field, $value, $bbono);
   }
+  elsif ($field eq 'N_OF_N')
+  {
+    return if finish_n_of_n($chain, $knowledge, 
+      $token, $field, $value, $bbono);
+  }
   elsif ($field eq 'LETTER')
   {
     if ((lc($value) ge 'a' && lc($value) le 'e') || $value eq 'H')
@@ -559,8 +593,7 @@ sub post_process_pair
   my $token0 = $chain0->check_out(0);
   my $token1 = $chain1->check_out(0);
 
-  my $stage = $knowledge->get_field('STAGE', $bbono);
-  my $movement = $knowledge->get_field('MOVEMENT', $bbono);
+  my $tname = $knowledge->get_field('TNAME', $bbono);
 
   my $field0 = $token0->field();
   my $field1 = $token1->field();
@@ -569,10 +602,40 @@ sub post_process_pair
 
   if ($cno0 == 0 && $cno1 <= 2 &&
       $field0 eq 'LETTER' && lc($value0) ge 'a' && lc($value0) le 'e' &&
-      $field1 eq 'ORDINAL')
+      ($field1 eq 'ORDINAL' || ($field1 eq 'NUMERAL' && $value1 >= 12)))
   {
     $chain0->complete('KILLED');
+
+    $token1->set_general('SINGLETON', 'ORDINAL', $value1);
     $chain1->complete('EXPLAINED');
+    return 1;
+  }
+  elsif ($tname eq 'European Open Bridge Championship' &&
+    $field0 eq 'LETTER' && $field1 eq 'NUMERAL')
+  {
+    $chain0->complete('KILLED');
+    $chain1->complete('KILLED');
+    return 1;
+  }
+  elsif ($tname eq 'Romanian League' &&
+    $field0 eq 'ROMAN' && $field1 eq 'LETTER')
+  {
+    $chain0->complete('KILLED');
+    $chain1->complete('KILLED');
+    return 1;
+  }
+  elsif ($tname eq 'Division Nationale' &&
+    $field0 eq 'NUMERAL' && $field1 eq 'NUMERAL')
+  {
+    $chain0->complete('KILLED');
+    $chain1->complete('KILLED');
+    return 1;
+  }
+  elsif ($tname eq 'Chilean Team Trials' &&
+    $field0 eq 'ROMAN' && $field1 eq 'ROMAN')
+  {
+    $chain0->complete('KILLED');
+    $chain1->complete('KILLED');
     return 1;
   }
 

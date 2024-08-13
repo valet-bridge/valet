@@ -1,3 +1,11 @@
+N_OF_N
+If there is another MARKER with the same value: Ignore
+Pairs: Session
+Teams && is_knock_out: SEGMENT
+
+As we go to stretches loop:
+ROMAN, LETTER, NUMERAL will be OK
+
 ROMAN
 
 * Do Title
@@ -15,6 +23,8 @@ ROMAN
 * Syntax for Meet info
 * Syntax for Tname info
 * Individual tournament are version of Tname with year, ...
+
+8240: Should be QF
 
 13496: Why is Israel not picked up as a team country?
 
