@@ -280,4 +280,28 @@ sub str
 }
 
 
+sub str_csv
+{
+  my ($self, $sep, $bbono) = @_;
+
+  my $meet = $self->get_field('MEET', $bbono);
+  my $tname = $self->get_field('TNAME', $bbono);
+  my $form = $self->get_field('FORM', $bbono);
+  my $stage = $self->get_field('STAGE', $bbono);
+  my $movement = $self->get_field('MOVEMENT', $bbono);
+  my $mask = $self->get_iter_mask($bbono);
+
+  my $s = 
+    $bbono . $sep .
+    $meet . $sep .
+    $tname . $sep .
+    $form . $sep .
+    $stage . $sep .
+    $movement . $sep .
+    $mask . "\n";
+
+  return $s;
+}
+
+
 1;

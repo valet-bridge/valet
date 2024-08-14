@@ -84,6 +84,8 @@ if ($#ARGV == 1)
   $debug_bbono = $ARGV[1];
 }
 
+my $csv_flag = 1;
+
 my $file = $ARGV[0];
 open my $fh, '<', $file or die "Cannot read tfile: $!";
 
@@ -245,6 +247,8 @@ while ($line = <$fh>)
   refill_histo($histo_team_final, \@{$chains_team{TEAM2}});
 
   $stats_title->incr(\@chains_title);
+
+  print $knowledge->str_csv(';', $chunk{BBONO}) if $csv_flag;
 
 
   next if ! $debug_flag &&
