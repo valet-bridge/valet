@@ -85,12 +85,7 @@ my @MULTI_WORDS =
   'Swiss Teams',
   'Third Division',
   'Top Individual',
-  'Top Pairs',
-  'Winter Open Teams',
-  'Youth Game',
-  'Youth Triathlon',
-  'Youth Triathlon Individual',
-  'Youth Triathlon Pairs'
+  'Top Pairs'
 );
 
 my %MULTI_TYPOS =
@@ -158,11 +153,7 @@ my %MULTI_TYPOS =
   Training => ['practice session', 'training match', 'practice match',
     'test match', 'tes match', 'practise match', 'practice matche',
     'practice matches'],
-  Trial => ['prueba de seleccion', 'test event'],
-  'Winter Open Teams' => ['wýnter team cs'],
-  'Youth Game' => ['youth games'],
-  'Youth Triathlon' => ['youth triathalon'],
-  'Youth Triathlon Individual' => ['youth tri individual']
+  Trial => ['prueba de seleccion', 'test event']
 );
 
 my @SINGLE_WORDS = qw(
@@ -217,7 +208,6 @@ my %SINGLE_TYPOS =
     'selections', 'selekction', 'selelection', 'sélection', 'selectio',
     'séléction', 'entrainement', 'slection', 'prueba'],
   Trophy => ['trofeo'],
-  'Youth Triathlon Pairs' => ['youth triathalon']
 );
 
 

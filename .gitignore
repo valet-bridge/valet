@@ -59,6 +59,9 @@ scripts/Euro-and-World/*.txt
 
 scripts/Euro-and-World/database/data/*.txt
 scripts/Euro-and-World/database/output/*.txt
+scripts/Euro-and-World/database/bbo/URL/*.txt
+scripts/Euro-and-World/database/bbo/dates/*.txt
+scripts/Euro-and-World/database/bbo/dates/*.xlsx
 
 scripts/cluster/data/20*
 scripts/cluster/*.txt

@@ -65,6 +65,7 @@ my $stats_title = Stats->new();
 die "perl cook.pl raw.txt [bbono]" unless ($#ARGV == 0 || $#ARGV == 1);
 
 my $print_chains = 1; # 1 if we dump results for further analysis
+my $csv_flag = 0;
 
 my @RAW_FIELDS = qw(BBONO TITLE EVENT SCORING TEAMS);
 
@@ -84,7 +85,6 @@ if ($#ARGV == 1)
   $debug_bbono = $ARGV[1];
 }
 
-my $csv_flag = 1;
 
 my $file = $ARGV[0];
 open my $fh, '<', $file or die "Cannot read tfile: $!";

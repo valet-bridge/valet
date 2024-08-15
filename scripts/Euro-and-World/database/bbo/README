@@ -1,16 +1,8 @@
-Date scraping:
-- Turn the added* into a single file of seqno, bbno, date
-- Read it into Excel
-- Look where sequences are broken when sorted for seqno or bbono
-- Look where the scraped years match or not
-
-Clean up times, url dirs
-Work on url
-Maybe store pdf's of URL's when available
-
 Work on tname, meet
 
-
+Scrapers:
+Use dates added in cook.pl
+Maybe store scraped pdf's of URL's when available?
 
 13496: Why is Israel not picked up as a team country?
 39011: Why still TEAM1_COUNTRY, TEAM2_COUNTRY?
