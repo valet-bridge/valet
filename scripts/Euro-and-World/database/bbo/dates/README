@@ -1,0 +1,23 @@
+2024-08-15
+
+I tried three ways to get the date of play of each LIN file:
+
+1. Using what are probably the dates at which each file was added on BBO.
+   modif.pl generates files called added_20xx_xx by scraping BBO.
+   These are generally close to being in order, and they are by far
+   the most useful data among the attempts.  The results are in
+   dates.txt and merged.xlsx
+
+2. Recognizing actual years in the LIN text.
+   years.pl generates years.txt.
+   Sometimes other years appear as references in the text, so I
+   output a histogram of the years in each LIN file.
+   I've not checked these against #1.
+
+3. Trying to recognize dates in the LIN text.
+
+   a. times.pl uses a Perl library, generating times_perl
+   b. dates.py uses a Python library, generating dates_python
+
+   Both are close to useless.
+   pare.pl can cut down at least a little bit on the clutter.

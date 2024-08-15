@@ -1,0 +1,29 @@
+2024-08-15
+
+Here I extract URI's from the text of the LIN files.
+It works well as such, but people put all kinds of stuff in the chat.
+
+1. url.py can do it with or without the scheme (https:// for example).
+   It is currently set to use URI::Find::Schemeless.
+
+2. url.py is schemeless.
+
+In order to cut down on the clutter, I've started on pare.pl.
+This is work in progress.  Maybe I want to download pdf's of result
+pages, including from the Wayback Machine.
+For that I might want wkhtmltopdf 
+pip install pdfkit
+
+import pdfkit
+
+# Specify the URL of the web page you want to download
+url = 'https://www.example.com'
+
+# Specify the output file name
+output_pdf = 'output.pdf'
+
+# Download the web page and save it as a PDF
+pdfkit.from_url(url, output_pdf)
+
+print(f'Web page saved as {output_pdf}')
+
