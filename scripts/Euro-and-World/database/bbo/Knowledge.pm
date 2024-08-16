@@ -282,7 +282,7 @@ sub str
 
 sub str_csv
 {
-  my ($self, $sep, $bbono) = @_;
+  my ($self, $sep, $title, $bbono) = @_;
 
   my $meet = $self->get_field('MEET', $bbono);
   my $tname = $self->get_field('TNAME', $bbono);
@@ -295,6 +295,7 @@ sub str_csv
     $bbono . $sep .
     $meet . $sep .
     $tname . $sep .
+    $title . $sep .
     $form . $sep .
     $stage . $sep .
     $movement . $sep .

@@ -65,7 +65,7 @@ my $stats_title = Stats->new();
 die "perl cook.pl raw.txt [bbono]" unless ($#ARGV == 0 || $#ARGV == 1);
 
 my $print_chains = 1; # 1 if we dump results for further analysis
-my $csv_flag = 0;
+my $csv_flag = 1;
 
 my @RAW_FIELDS = qw(BBONO TITLE EVENT SCORING TEAMS);
 
@@ -248,7 +248,7 @@ while ($line = <$fh>)
 
   $stats_title->incr(\@chains_title);
 
-  print $knowledge->str_csv(';', $chunk{BBONO}) if $csv_flag;
+  print $knowledge->str_csv(';', $chunk{TITLE}, $chunk{BBONO}) if $csv_flag;
 
 
   next if ! $debug_flag &&
