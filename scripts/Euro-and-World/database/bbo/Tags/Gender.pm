@@ -36,7 +36,7 @@ my %SINGLE_TYPOS =
   Women => [qw(woman wemen womans womens womvn
     lady ladies ladie femme femmes damas dames damer dame damen 
     putri pi wo womvn)],
-  Mixed => [qw(mix mixte mýx mixen mixt)]
+  Mixed => [qw(mix mixte mýx mixen mixt mixty)]
 );
 
 

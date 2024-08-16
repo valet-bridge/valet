@@ -89,7 +89,7 @@ my %SINGLE_TYPOS =
     'fans', 'for', 'hawks', 'home', 'host',
     'inter', 'interland', 'kws',
     'last one!', 'leaders', 'leders', 
-    'man', 'mandarin', 'merkezi', 'mates', 'milli', 'missed', 
+    'man', 'mandarin', 'merkezi', 'mates', 'milli', 'mini', 'missed', 
     'multievent', 'multieventof',
     'naturalists', 'nature', 'nauralists', 'noname', 'nord', 'north',
     'only', 'opponent', 'opponents', 'other', 'others',
