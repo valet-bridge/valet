@@ -39,7 +39,6 @@ my @MULTI_WORDS =
   'Spring National Senior Teams',
   'Spring National Women Teams',
   'Spring Teams',
-  'Summer Bridge Festival',
   'Summer Team Championship',
   'Super League',
   'Student Championship',

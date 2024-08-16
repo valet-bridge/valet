@@ -94,7 +94,7 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   'All China Games' => ['all-china games'],
-  'Australian Summer Festival' => ['sfob'],
+  'Australian Summer Festival' => ['summer bridge festival'],
   'Azores Festival' => ['azores festival bridge', 'azores bridge open',
     'azores bridge teams', 'azores team', 'azores teams',
     'azores team festval', 'festival azores bridge', 'azores festiva', 
@@ -209,6 +209,7 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   'Australian National Championships' => ['anc'],
+  'Australian Summer Festival' => ['sfb', 'sfob'],
   'Bangkok Bridge Festival' => ['bbf', 'bff'],
   Congress => ['kongres', 'kongresowy'],
   'European Championship' => ['ec'],
