@@ -447,15 +447,9 @@ sub finish_ordinal
   }
 
   # Bit of a kludge, but it catches a lot of cases.
-  return 0 unless $#$chains == 2;
-  return 0 unless 
-    $chains->[1]->status() eq 'COMPLETE' &&
-    $chains->[2]->status() eq 'EXPLAINED';
-  return 0 unless
-    $chains->[1]->check_out(0)->field() eq 'ORDINAL' &&
-    ($chains->[2]->check_out(0)->field() eq 'TNAME' ||
-     $chains->[2]->check_out(0)->field() eq 'TWORD' ||
-     $chains->[2]->check_out(0)->field() eq 'MEET');
+  return 0 unless $#$chains >= 2;
+  return 0 unless $chains->[1]->status() eq 'COMPLETE';
+  return 0 unless $chains->[1]->check_out(0)->field() eq 'ORDINAL';
 
   if ($chains->[0]->status() eq 'KILLED')
   {
@@ -474,19 +468,76 @@ sub finish_ordinal
 
     # Maybe the ordinal is interspersed between two parts of the
     # tournament name.
-    my $composite = $chains->[0]->check_out(0)->value() . ' ' .
-      $chains->[2]->check_out(0)->value();
 
-    my $tname_comp = $whole->get_multi('TNAME', lc($composite));
-    if (defined $tname_comp)
+    my $composite = $chains->[0]->check_out(0)->value();
+    my $found = 0;
+    my $cno_found;
+    my $tname_comp = '';
+    my $meet_comp = '';
+
+    for my $cno (2 .. $#$chains)
+    {
+      my $elem = $chains->[$cno]->check_out(0)->text();
+      $composite .= ' ' .  $elem;
+
+      $tname_comp = $whole->get_multi('TNAME', lc($composite));
+      if (defined $tname_comp)
+      {
+        $found = 1;
+        $cno_found = $cno;
+        last;
+      }
+
+      $meet_comp = $whole->get_multi('MEET', lc($composite));
+      if (defined $meet_comp)
+      {
+        $found = 1;
+        $cno_found = $cno;
+        last;
+      }
+    }
+
+    if ($found)
     {
       $chains->[0]->complete('KILLED');
       $chains->[1]->complete('EXPLAINED');
 
       my $token = $chains->[2]->check_out(0);
-      $token->set_general('SINGLETON', 'TNAME', $tname_comp);
+
+      if ($tname_comp)
+      {
+        $token->set_general('SINGLETON', 'TNAME', $tname_comp);
+      }
+      elsif ($meet_comp)
+      {
+        $token->set_general('SINGLETON', 'MEET', $meet_comp);
+      }
+      else
+      {
+        die "Odd";
+      }
+
+      for my $cno (3 .. $cno_found)
+      {
+        $chains->[$cno]->complete('KILLED');
+      }
       return 1;
     }
+    
+
+    # my $composite = $chains->[0]->check_out(0)->value() . ' ' .
+      # $chains->[2]->check_out(0)->value();
+
+    # my $tname_comp = $whole->get_multi('TNAME', lc($composite));
+    # if (defined $tname_comp)
+    # {
+      # $chains->[0]->complete('KILLED');
+      # $chains->[1]->complete('EXPLAINED');
+
+      # my $token = $chains->[2]->check_out(0);
+      # $token->set_general('SINGLETON', 'TNAME', $tname_comp);
+      # return 1;
+    # }
   }
 
   return 0;

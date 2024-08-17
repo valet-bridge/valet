@@ -124,7 +124,6 @@ while ($line = <$fh>)
   if ($debug_flag)
   {
     next unless $chunk{BBONO} == $debug_bbono;
-    print "HERE\n";
   }
 
 

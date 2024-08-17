@@ -19,19 +19,12 @@ my @MULTI_WORDS =
   'First Division',
   'Grand National Teams',
   'International Grand Tournament',
-  'International Team Trials',
-  'International Seniors',
-  'Invitational Bridge Meeting',
   'National Club League',
   'National Senior Teams',
   'National Student Championship',
-  'National Open Teams',
-  'National Pairs Championship',
-  'National Team Championship',
   'National Women Teams',
   'Neighbor Challenge',
   "New Year's Teams",
-  'Open Swiss Teams',
   'Opening Tournament',
   'Premier Pairs',
   'Premier League',
@@ -42,8 +35,6 @@ my @MULTI_WORDS =
   'Summer Team Championship',
   'Super League',
   'Student Championship',
-  'Swiss IMP Pairs',
-  'Swiss Pairs',
   'Swiss Teams'
 );
 
@@ -59,14 +50,9 @@ my %MULTI_TYPOS =
   'Friendly Match' => ['match amical', 'friendly tm'],
   'International Grand Tournament' => ['intl_ grand tournament', 
     'intl grand tournament'],
-  'International Seniors' => ['int_ seniors'],
-  'National Pairs Championship' => ["nacional pares por imp's",
-    'nacional pares imps', 'nacional pares por imps'],
-  'National Team Championship' => ['campeonato nacional de equipas'],
   'Neighbor Challenge' => ['neighbour challenge',
     'neighbourhood challange', 'neighbour challange'],
   "New Year's Teams" => ['new year greet tm'],
-  'Open Swiss Teams' => ['open teams swiss'],
   'Opening Tournament' => ['opening tournement', 'pre nm'],
   'Premier League' => ['premiere league', 'premier leaugue',
     'premier leauge', 'premier lge', 'premie league',
@@ -79,8 +65,6 @@ my %MULTI_TYPOS =
   'Summer Team Championship' => ['summer teams championship'],
   'Super League' => ['sup league', 'sup leg', 'sup l',
     'super leahue', 's l', 'sup-l'],
-  'Swiss Pairs' => ['parejas suizas', 'sw2iss pairs', 'swiis pairs',
-    'swiss pair'],
   'Swiss Teams' => ['teams swiss', 'swiss team'],
   Training => ['practice session', 'training match', 'practice match',
     'test match', 'tes match', 'practise match', 'practice matche',
@@ -92,7 +76,7 @@ my @SINGLE_WORDS = qw(
   Bridge
   Challenge Championship Charity Club Commercial Cup
   Friendship
-  Memorial
+  Meeting Memorial
   Online
   Simultaneous
   Tournament Training Trial Trophy
@@ -122,7 +106,6 @@ my %SINGLE_TYPOS =
   # 'Junior High School' => ['jhs'],
   # Memorial => ['memorials', 'menorial', 'memoral', 'memrial'],
   'National Masters' => ['nationalmasters'],
-  'National Open Teams' => ['not'],
   'National Senior Teams' => ['nst'],
   'National Women Teams' => ['nwt'],
   'Senior High School' => ['shs'],
