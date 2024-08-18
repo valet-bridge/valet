@@ -144,6 +144,7 @@ my %MULTI_TYPOS =
   'Lozenets Bridge Festival' => ['bridge festival lozenets'],
   'Luczniczka Meeting' => ['meeting luczniczka'],
   'Maharaja Holkar National Championship' => [
+    'maharaja holakar championship',
     'maharaja holar national open',
     'maharaja holkar bridge championship',
     'maharaja holkar championship',
