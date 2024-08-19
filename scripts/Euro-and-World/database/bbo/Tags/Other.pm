@@ -105,6 +105,7 @@ my @MULTI_WORDS =
   'Ella-Jamie',
   'EM-76',
   'England and Pharon',
+  'English Premier League',
   'Equator 1771',
   'Erdal Abi',
   'Erdal Tekin',

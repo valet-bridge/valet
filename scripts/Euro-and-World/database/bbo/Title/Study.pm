@@ -63,6 +63,17 @@ sub local_substitutions
     # $text =~ s///;
   # }
 
+  if ($bbono >= 9728 && $bbono <= 9770)
+  {
+    $text =~ 
+      s/Indonesian Final Premier League/Indonesian Premier League Final/;
+  }
+
+  if ($bbono >= 11683 && $bbono <= 11873)
+  {
+    $text =~ s/Premier League/English Premier League/;
+  }
+
   if ($bbono >= 38376 && $bbono <= 38436)
   {
     $text =~ s/Swedish Trials/Swedish Open Trials/i;
