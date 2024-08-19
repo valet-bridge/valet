@@ -54,6 +54,79 @@ my $PREFIX = 'TITLE_';
 our $histo_title;
 
 
+sub local_substitutions
+{
+  my ($text, $bbono) = @_;
+
+  # if ($bbono >= && $bbono <= )
+  # {
+    # $text =~ s///;
+  # }
+
+  if ($bbono >= 38376 && $bbono <= 38436)
+  {
+    $text =~ s/Swedish Trials/Swedish Open Trials/i;
+  }
+
+  if ($bbono >= 38594 && $bbono <= 38652)
+  {
+    $text =~ s/Turkish Open Championship/Turkish Open Teams Championship/i;
+    $text =~ s/Turkish Open Championships/Turkish Open Teams Championship/i;
+  }
+
+  if ($bbono >= 39501 && $bbono <= 39525)
+  {
+    $text =~ 
+      s/Lozenets Tournament Teams/Lozenets Bridge Festival - Open Teams/i;
+    $text =~ 
+      s/Lozenets Team Tournament/Lozenets Bridge Festival - Open Teams/i;
+  }
+
+  if ($bbono >= 39162 && $bbono <= 39309)
+  {
+    $text =~ s/I National Bridge Tournament/1st Bulgarian Open Teams/;
+  }
+
+  if ($bbono >= 40702 && $bbono <= 40802)
+  {
+    $text =~ s/Inter State Championship/Indian Inter-State Teams/;
+    $text =~ s/Inter State Nationals/Indian Inter-State Teams/;
+    $text =~ s/Interstate Nationals/Indian Inter-State Teams/;
+  }
+
+  if ($bbono >= 40926 && $bbono <= 40955)
+  {
+    $text =~ s/Selection Open/French Open Trials/i;
+  }
+
+  if ($bbono >= 41719 && $bbono <= 41744)
+  {
+    $text =~ 
+      s/National Student Championship/Indonesian Student Championship/;
+  }
+
+  if ($bbono >= 41967 && $bbono <= 42044)
+  {
+    $text =~ 
+      s/Campeonato Nacional Equipas Open/Portuguese Open Teams/;
+    $text =~ 
+      s/Campeonato Nacional\s+de Equipas Open/Portuguese Open Teams/;
+  }
+
+  if ($bbono >= 43070 && $bbono <= 43154)
+  {
+    $text =~ s/Bulgaria Group A/Bulgarian Open Teams - Group A/;
+  }
+
+  if ($bbono >= 43195 && $bbono <= 43235)
+  {
+    $text =~ s/Open Playoff/Australian Open Team Trials - Playoff/;
+  }
+
+  return $text;
+}
+
+
 sub title_specific_inline
 {
   my ($text) = @_;
@@ -154,6 +227,7 @@ sub study
 
   return if $text eq '';
 
+  $text = local_substitutions($text, $bbono);
   my $stext = split_on_capitals($text);
   my $ntext = title_specific_inline($stext);
 
