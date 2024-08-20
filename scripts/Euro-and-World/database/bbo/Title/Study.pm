@@ -53,6 +53,78 @@ my @TAG_ORDER = qw(
 my $PREFIX = 'TITLE_';
 our $histo_title;
 
+my @LOCAL_SUBS =
+(
+  { START => 3620, END => 3631, TEXT => 'Pula', 
+    CORR => 'Pula Bridge Festival' },
+  { START => 3708, END => 3728, TEXT => 'CCBA Championships', 
+    CORR => 'Chinese Open Teams' },
+  { START => 3729, END => 3738, TEXT => 'Stara Zagora 2007 Open Teams',
+    CORR => 'Stara Zagora Open Teams 2007' },
+  { START => 6268, END => 6279, TEXT => 'Selection Senior', 
+    CORR => 'French Senior Trials' },
+  { START => 6856, END => 6975, TEXT => 'Cap Gemini', 
+    CORR => 'Cap Gemini World Top Tournament' },
+  { START => 7843, END => 7865, TEXT => 'ACBL 1999 Open Team Trials', 
+    CORR => '1999 USA International Team Trials' },
+  { START => 8186, END => 8199, TEXT => 'White House', 
+    CORR => 'White House International' },
+  { START => 8236, END => 8242, TEXT => 'Selection Francaise', 
+    CORR => 'French Open Trials' },
+  { START => 8489, END => 8503, TEXT => 'Selection Francaise', 
+    CORR => 'French Open Trials' },
+  { START => 9728, END => 9770, TEXT => 'Indonesian Final Premier League',
+    CORR => 'Indonesian Premier League Final' },
+  { START => 11683, END => 11873, TEXT => 'Premier League', 
+    CORR => 'English Premier League' },
+  { START => 38376, END => 38436, TEXT => 'Swedish Trials', 
+    CORR => 'Swedish Open Trials' },
+  { START => 38594, END => 38652, TEXT => 'Turkish Open Championship', 
+    CORR => 'Turkish Open Teams Championship' },
+  { START => 38594, END => 38652, TEXT => 'Turkish Open Championships', 
+    CORR => 'Turkish Open Teams Championship' },
+  { START => 39162, END => 39309, TEXT => 'I National Bridge Tournament', 
+    CORR => '1st Bulgarian Open Teams' },
+  { START => 39501, END => 39525, TEXT => 'Lozenets Tournament Teams', 
+    CORR => 'Lozenets Bridge Festival - Open Teams' },
+  { START => 39501, END => 39525, TEXT => 'Lozenets Team Tournament', 
+    CORR => 'Lozenets Bridge Festival - Open Teams' },
+  { START => 40702, END => 40802, TEXT => 'Inter State Championship', 
+    CORR => 'Indian Inter-State Teams' },
+  { START => 40702, END => 40802, TEXT => 'Inter State Nationals', 
+    CORR => 'Indian Inter-State Teams' },
+  { START => 40702, END => 40802, TEXT => 'Interstate Nationals', 
+    CORR => 'Indian Inter-State Teams' },
+  { START => 40926, END => 40955, TEXT => 'Selection Open', 
+    CORR => 'French Open Trials' },
+  { START => 41719, END => 41744, TEXT => 'National Student Championship', 
+    CORR => 'Indonesian Student Championship' },
+  { START => 41967, END => 42044, 
+    TEXT => 'Campeonato Nacional Equipas Open',
+    CORR => 'Portuguese Open Teams' },
+  { START => 41967, END => 42044, 
+    TEXT => 'Campeonato Nacional\s+de Equipas Open',
+    CORR => 'Portuguese Open Teams' },
+  { START => 43070, END => 43154, TEXT => 'Bulgaria Group A', 
+    CORR => 'Bulgarian Open Teams - Group A' },
+  { START => 43195, END => 43235, TEXT => 'Open Playoff', 
+    CORR => 'Australian Open Team Trials - Playoff' }
+);
+
+
+sub local_substitutions2
+{
+  my ($text, $bbono) = @_;
+
+  for my $entry (@LOCAL_SUBS)
+  {
+    if ($bbono >= $entry->{START} && $bbono <= $entry->{END})
+    {
+      $text =~ s/$entry->{TEXT}/$entry->{CORR}/i;
+    }
+  }
+}
+
 
 sub local_substitutions
 {
@@ -63,10 +135,56 @@ sub local_substitutions
     # $text =~ s///;
   # }
 
+  if ($bbono >= 3620 && $bbono <= 3631)
+  {
+    $text =~ s/PULA/Pula Bridge Festival/;
+  }
+
+  if ($bbono >= 3729 && $bbono <= 3738)
+  {
+    $text =~ s/Stara Zagora 2007 Open Teams/Stara Zagora Open Teams 2007/;
+  }
+
   if ($bbono >= 9728 && $bbono <= 9770)
   {
     $text =~ 
       s/Indonesian Final Premier League/Indonesian Premier League Final/;
+  }
+
+  if ($bbono >= 3708 && $bbono <= 3728)
+  {
+    $text =~ s/CCBA Championships/Chinese Open Teams/;
+  }
+
+  if ($bbono >= 6268 && $bbono <= 6279)
+  {
+    $text =~ s/Selection Senior/French Senior Trials/i;
+  }
+
+  if ($bbono >= 6856 && $bbono <= 6975)
+  {
+    $text =~ s/Cap Gemini/Cap Gemini World Top Tournament/;
+  }
+
+  if ($bbono >= 7843 && $bbono <= 7865)
+  {
+    $text =~ 
+      s/ACBL 1999 Open Team Trials/1999 USA International Team Trials/;
+  }
+
+  if ($bbono >= 8236 && $bbono <= 8242)
+  {
+    $text =~ s/Selection Francaise/French Open Trials/;
+  }
+
+  if ($bbono >= 8186 && $bbono <= 8199)
+  {
+    $text =~ s/White House/White House International/;
+  }
+
+  if ($bbono >= 8489 && $bbono <= 8503)
+  {
+    $text =~ s/Selection Francaise/French Open Trials/;
   }
 
   if ($bbono >= 11683 && $bbono <= 11873)

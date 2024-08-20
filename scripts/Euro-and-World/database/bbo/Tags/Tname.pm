@@ -21,6 +21,9 @@ my @MULTI_WORDS =
   'APBF Championships',
   'APBF Youth Championships',
   'African Zonal Championship',
+  'African Zonal Open Trials',
+  'African Zonal Senior Trials',
+  'African Zonal Women Trials',
   'All-China Games',
   'All India Bangur Cement Hindusthan Club',
   'All India Corporate Invitational',
@@ -111,6 +114,7 @@ my @MULTI_WORDS =
   'Belgian Open Pairs',
   'Belgian Open Teams',
 
+  'Belisol Invitational Pairs',
   'Bergen Grand Tournament',
   'Bermuda Bowl',
   'Bermuda Triangle Cup',
@@ -120,10 +124,12 @@ my @MULTI_WORDS =
   'Bhabha Atomic Research Centre Open',
   'Biarritz Hiver',
   'BKBT Teams',
+  'B L Rao Memorial Open',
   'Bobby Evans Seniors Teams',
   'Bolivian Open Teams',
   'Bologna Trophy',
   'Bonn Nations Cup',
+  'bridge24.pl Trophy',
   
   # BRAZIL
   'Brazilian Championship',
@@ -332,6 +338,7 @@ my @MULTI_WORDS =
   'Gardermoen Airport Hotel Cup',
   'Gelibolu Peace Cup',
   'Geologi Cup',
+  'Godfrey Phillips All India Open',
 
   # GERMANY
   'German Club Cup',
@@ -409,6 +416,7 @@ my @MULTI_WORDS =
   'Indian Inter-State Teams',
   'Indian Open Trials',
   'Indian Senior Trials',
+  'Indian South Zone Championship',
   'Indian State Championship',
 
   # INDONESIA
@@ -443,6 +451,7 @@ my @MULTI_WORDS =
   'Israel Juniors Pairs',
   'Israel Juniors Teams',
   'Israel Juniors Trials',
+  'Israel IMP Pairs',
   'Israel Open Pairs',
   'Israel Open Teams',
   'Israel Open Trials',
@@ -471,8 +480,10 @@ my @MULTI_WORDS =
 
   'Jaap Kokkes Tournament',
   'Janina Wielkoszewska Memorial Open',
+  'Janos Levai Memorial',
   'Japanese District KO Teams',
   'Japanese Open Trials',
+  'Jaya Jain Memorial',
   'Jean Besse Cup',
   "Jessheim New Year's Cup",
   'Jianshe Cup',
@@ -504,6 +515,8 @@ my @MULTI_WORDS =
   'Lady Milne Trials',
   'Lady Milne Trophy',
   'Lalit Mohanka Memorial',
+  'Las Palmas Simultaneous Pairs',
+  'L C Sunil Rajendra Memorial',
   'Lederer Memorial Trophy',
   'Leszek Kwiatkowski Memorial Teams',
   "Linda Stern Women's Teams",
@@ -518,6 +531,7 @@ my @MULTI_WORDS =
   'Madeira Swiss Teams',
   'Madras Gymkhana Club Open',
   'Madrid Senior Teams',
+  'Maharaja Yeshwantrao Holkar National',
   'Maharashtra State Championship',
   'Marit Sveaas Tournament',
   'McConnell Cup',
@@ -637,6 +651,7 @@ my @MULTI_WORDS =
   'Polish Premier League',
   'Polish Second League',
   'Polish School Championship',
+  'Polish Super League',
   'Polish Teams',
   'Polish Top Individual',
   'Polish U16 Championship',
@@ -661,6 +676,7 @@ my @MULTI_WORDS =
   'Prince Albert II Cup',
   'Prince Henrik Trophy',
   'Prince Takamatsu Cup',
+  'PSN Sarma Centenary Memorial',
   'Puutalo Open',
   'PYC Hindu Gymkhana Royale',
   'PYC Hindu Gymkhana PairsRoyale',
@@ -671,6 +687,7 @@ my @MULTI_WORDS =
   'R R Gupta Memorial Championship',
   'R Ratnam Memorial',
   'Ragn-Sells International Grand Tournament',
+  'Rai Bahadur Modi Memorial All India Open',
   'Rajasthan Championship',
   'Rand Cup',
   'Rector University of Brawijaya Cup',
@@ -684,6 +701,7 @@ my @MULTI_WORDS =
   'Romanian Second League',
   'Romanian Open Teams',
   'Romanian Open Trials',
+  'Rome Challenger Trophy',
   'Rondane Pairs Cup',
   'Rondane Teams Cup',
   'Rosfjord Swiss Teams',
@@ -726,12 +744,14 @@ my @MULTI_WORDS =
   'Shenzhen Lanpu Cup',
   'Shenzhen Nangangdongli Cup',
   'Shield of Thoisy',
+  'Shree Keni Trophy',
   'Sigismund Bell Krakow',
   'Singapore Open Teams',
   'Slava Cup',
   'Slovakian Open Teams',
   'Smirnov Cup',
   'Solomon Teams',
+  'Stara Zagora Open Teams',
 
   # SOUTH AFRICA
   'South African Championship',
@@ -762,6 +782,7 @@ my @MULTI_WORDS =
   'Spring Nationals',
   'SPS Trophy',
   'Star Wars',
+  'Staszek Wybranowski Memorial',
   'Staszic Pairs Cup',
   'Stena Line Cup',
   'Stern-Cornell Trophy',
@@ -898,6 +919,7 @@ my @MULTI_WORDS =
   'Whitelaw Cup',
   'Willingdon Sports Club Swiss Pairs',
   'Willoughby Bridge Classic',
+  'Willy Brown Memorial',
   'Winter Open Teams',
 
   # WORLD
@@ -1104,6 +1126,8 @@ my %MULTI_TYPOS =
     'bfame bridge championship', 'bfame chamionship'],
   'Bhabha Atomic Research Centre Open' => ['barc open'],
   'BKBT Teams' => ['bkbt match'],
+  'B L Rao Memorial Open' => ['open b_l_rao memorial',
+    'open b_r_rao  memorial', 'b_l_rao memorial open'],
   'Bobby Evans Seniors Teams' => ["bobby evans senior's teams",
     'bobby evans senior teams'],
 
@@ -1129,6 +1153,7 @@ my %MULTI_TYPOS =
   'Brazilian Seniors' => ['brazilian senior'],
   'Brazilian Women' => ['brazilian ladies'],
 
+  'bridge24.pl Trophy' => ['bridge24_pl trophy'],
   'British Gold Cup' => ['gold cup', 'british gold'],
   'Buffett Cup' => ['buffet cup', 'bufett cup'],
   'Bulgarian Open Teams' => ['bulgarian national teams championship',
@@ -1434,7 +1459,8 @@ my %MULTI_TYPOS =
   'French Intercircle' => ['finale intercercle'],
   'French Junior Trials' => ['french junior trial',
     'french juniors trials', 'french juniors trial',
-    'sélection junior france'],
+    'sélection junior france',
+    'selection junior france'],
   'French Open Teams' => ['french teams championship'],
   'French Open Trials' => ['french open team trial',
     'french opentrial', 'french teams trial', 'french teams trials',
@@ -1464,7 +1490,8 @@ my %MULTI_TYPOS =
   'Geologi Cup' => ['geo cup'],
 
   # GERMANY
-  'German Club Cup' => ['german cup', 'vereinspokal'],
+  'German Club Cup' => ['german cup', 'vereinspokal', 
+    'dbv-cup', 'dbv cup'],
   'German Open Pairs' => ['german men pairs', 'german mens pairs'],
   'German Open Teams' => ['offene team meisterschaft',
     'offene team meistershaft', 'german open team championships',
@@ -1509,7 +1536,8 @@ my %MULTI_TYPOS =
   ### HHH
 
   "Hans Rosendorff Memorial Women's Teams" => [
-    'Hans Rosendorff Memorial  Womens Teams',
+    'hans rosendorff memorial womens teams',
+    'hans rosendorff memorial  womens teams',
     'han rosendorff memorial womens teams'],
   'Hellenic Mixed Pairs' => ['hellenik mixed pairs'],
   'Hellenic Team Championship' => ['hellenic teams championship'],
@@ -1564,6 +1592,7 @@ my %MULTI_TYPOS =
     "indian seniors' team trials",
     'indian seniors selection trials',
     "indian seniors' team trials"],
+  'Indian South Zone Championship' => ['south zone championship'],
   'Indian State Championship' => ['state level bridge championship',
     'state level bridge tournament',
     'state level bridgee championship'],
@@ -1598,7 +1627,8 @@ my %MULTI_TYPOS =
   'Indonesian National Games' => ['indonesian games',
     'indonesian nasional games'],
   'Indonesian Open Pair Trials' => ['indonesian pairs trials'],
-  'Indonesian Open Teams' => ['indonesia open team'],
+  'Indonesian Open Teams' => ['indonesia open team',
+    'indonesian national open team'],
   'Indonesian Open Trials' => ['indonesian men national selection',
     'indonesian men selection'],
   'Indonesian Student Championship' => [
@@ -1675,14 +1705,18 @@ my %MULTI_TYPOS =
     'jaap kokkes'],
   'Janina Wielkoszewska Memorial Open' => [
     'memorial im_ janiny wielkoszewskiej open'],
+  'Janos Levai Memorial' => ['levai janos memorial'],
   'Japanese Open Trials' => ['japanese open team trial',
     'japanese open team trials'],
+  'Jaya Jain Memorial' => ['mrs_ jaya jain memorial'],
   'Jean Besse Cup' => ['cup jean besse', 'cup jean besser'],
   "Jessheim New Year's Cup" => ['jessheim new years cup',
     'jesshiem new years cup', 'jessheim new years cup swiss teams'],
   'Jordan Spring Mixed Pairs' => ['jordan spring mix pairs'],
   'JP Morgan Inter-City Championship' => [
     'JP Morgan Inter-City Bridge Championship',
+    'JP Morgan Intercity Bridge Championships-Open',
+    'JP Morgan Intercity Bridge Championships-Open T_',
     'JP Morgan Intercity Bridge Championships-Open  T_'],
   'Junior Camrose' => ['juniior camrose'],
   'Justice J M Lal All India Open' => [
@@ -1690,6 +1724,9 @@ my %MULTI_TYPOS =
     'justice lal memorial',
     'justice j m lal memorial',
     'justice j m lal memorial championship',
+    'justice j_m_lal memorial championship',
+    'justice j_m_lal memorial  championship',
+    'justice jm lal memorial championship',
     'j m lal memorial'],
 
   ### KKK
@@ -1717,6 +1754,8 @@ my %MULTI_TYPOS =
 
   'Lady Milne Trophy' => ['lady milne', 'lady mile'],
   'Lalit Mohanka Memorial' => ['lalit mohanka memorials'],
+  'Las Palmas Simultaneous Pairs' => ['simultaneo de mayo las palmas'],
+  'L C Sunil Rajendra Memorial' => ['l_c_sunil rajendra memorial'],
   'Lederer Memorial Trophy' => ['lederer memorial'],
   'Leszek Kwiatkowski Memorial Teams' => [
     'teams memorial of leszek kwiatkowski'],
@@ -1737,6 +1776,10 @@ my %MULTI_TYPOS =
   'Madeira Swiss Teams' => ['swiss teams madeira', 'madeira swiss'],
   'Madras Gymkhana Club Open' => ['mgc open'],
   'Madrid Senior Teams' => ['equipos senior madrid'],
+  'Maharaja Yeshwantrao Holkar National' => [
+    'holkars trophy',
+    'm yeswantrao holkar bridge championship',
+    'm yeswantrao holkar national bridge championship'],
   'Maharashtra State Championship' => ['maharashtra state brahmin sabha',
     'maharashtra state championships',
     'maharashtra championship'],
@@ -1754,6 +1797,7 @@ my %MULTI_TYPOS =
   'Mohanlal Bhartia Memorial Grand Prix' => [
     'bhartia memorial gran prix',
     'bhartia memorial grand prix',
+    'bhartiya memorial',
     'mohanlal bharatia grand prix', 
     'mohanlal bharatia memorial grand prix',
     'mohanlal bharatiya memorial gran prix',
@@ -1940,6 +1984,8 @@ my %MULTI_TYPOS =
     'polish premier leaugue', 'polish 1st division', 'i liga'],
   'Polish Second League' => ['polish 2 league'],
   'Polish School Championship' => ['polish schools champ'],
+  'Polish Super League' => ['mecz o superlig©', 'mecz o superlige',
+    'mecz o superligê'],
   'Polish Third League' => ['polish league: division 3'],
   'Polish Teams' => ['mistrzostwa polski teamów',
     'teams championship of poland', 'championship of poland',
@@ -1975,6 +2021,8 @@ my %MULTI_TYPOS =
   'Poznan Mixed Pairs' => ['otwarte mistrzostwa poznania mixt'],
   'Poznan Open Teams' => ['poznan teams tournament'],
   'Prince Takamatsu Cup' => ['prince takamatsu memorial cup'],
+  'PSN Sarma Centenary Memorial' => ['psn  sarma centenary memorial',
+    'psn sarma memorial'],
 
   ### RRR
 
@@ -1986,6 +2034,9 @@ my %MULTI_TYPOS =
     'ragn-sells intl grand tournament',
     'ragn-sells intl_ grand tournament',
     'ragn sells intl_ grand tournament'],
+  'Rai Bahadur Modi Memorial All India Open' => [
+    'rai bahadur modi memorial',
+    'rai bahadur memorial'],
   'Rajasthan Championship' => ['rajasthan bridge championship'],
   'Riga Invites to Jurmala' => ['riga invites', 'latvia invites'],
   'Rio de Janeiro Championship' => ['rio de janeiro state final'],
@@ -2001,13 +2052,15 @@ my %MULTI_TYPOS =
     'romanian selection', 'romanian open trials'],
   'Romanian Second League' => ['cn echipe div b',
     'cn ecgipe div b'],
+  'Rome Challenger Trophy' => ['trofeo challenger città di roma',
+    'challenge trofeo città di roma'],
   'Rondane Pairs Cup' => ['rondanecupen swiss pairs'],
   'Rondane Teams Cup' => ['rondane cup teams', 'rondanecupen teams',
     'rondanecupen swiss teams'],
   'Rosfjord Swiss Teams' => ['rosfjord monrad team',
     'rosfjord monrad teams'],
   'Rottneros Nordic Cup' => ['rottneros cup'],
-  'Ruia Gold Cup' => ['ruia gold', 'ruia gols'],
+  'Ruia Gold Cup' => ['ruia gold', 'ruia gols', 'ruia gold trophy'],
   'Ruia Silver Cup' => ['ruia silver'],
 
   # RUSSIA
@@ -2042,6 +2095,9 @@ my %MULTI_TYPOS =
     'serbianteam championship', 'serbian closed team championship'],
   'Serdika Cup' => ['serdika open teams'],
   'Shenhua Cup' => ['shen hua cup'],
+  'Shree Keni Trophy' => ['keni memorial trophy',
+    'keni memorial  trophy', 'mkeni  trophy', 'm keny trophy',
+    'm keni  trophy', 'm keni trophy', 'mkeni trophy'],
   'Slava Cup' => ['cup slava', 'salava cup'],
   'Slovakian Open Teams' => ['slovakia open teams'],
 
@@ -2088,6 +2144,7 @@ my %MULTI_TYPOS =
   'Spring Nationals' => ['spring nat', 'spring national', 'spring nats',
     'sping national', 'spring nat opens'],
   'SPS Trophy' => ['lojdy cup', 'sps construction trophy'],
+  'Staszek Wybranowski Memorial' => ['memorial staszka wybranowskiego'],
   'Staszic Pairs Cup' => ['otp puchar grodu staszica'],
   "Sternberg Women's BAM Teams" => ['marsha may sternberg bam'],
   'Stockholm Teams' => ['stockholm teams cs', 'stockholms teams'],
@@ -2240,6 +2297,7 @@ my %MULTI_TYPOS =
   'US Women' => ['us womens championships'],
   'US Youngsters' => ['u-21 us'],
   'USBF Challenge Match' => ['usbf jr/pro charity challenge match'],
+  'Uttar Pradesh State Championship' => ['up state championship'],
 
   ### VVV
 
@@ -2258,6 +2316,7 @@ my %MULTI_TYPOS =
   'Victorian Open Teams Playoff' => ['victorian playoff'],
   'Victorian Senior Trials' => ['vic seniors trials'],
   'Victorian Women Trials' => ['vic women trials'],
+  'Videocon WCG Open' => ['videcon wcg open'],
   'Vinoble Cup' => ['vinoble open'],
 
   ### WWW
@@ -2271,17 +2330,16 @@ my %MULTI_TYPOS =
     'wsc open swisspairs championship', 'wsc swiss open pairs'],
   'Western Mediterranean Club Teams' => [
     'western mediterranean clubs team championship'],
+  'White House International' => ['white house international teams',
+    'white house tournament teams'],
   'White House Juniors' => ['whiteouse juniors', 'the white hous juniors',
     'qhite house juniors'],
   'White House Top 12' => ['modalfa top 12', 'witte huis top 12'],
   'White House Top 16' => ['white house int. teams top 16',
     'white house int_ teams top 16',
     'white house international top 16 teams'],
-  'Uttar Pradesh State Championship' => ['up state championship'],
-  'Videocon WCG Open' => ['videcon wcg open'],
   'Welsh Open Trials' => ['welsh open trial', 'welsh trials',
     'welsh trial'],
-  'White House International' => ['white house international teams'],
   'Willingdon Sports Club Swiss Pairs' => [
     'willingdon sports club open swiss pairs',
     'willingdon sports club open',

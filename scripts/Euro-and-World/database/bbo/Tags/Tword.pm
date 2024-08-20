@@ -18,11 +18,9 @@ my @MULTI_WORDS =
   'Friendly Pairs',
 
   'First Division',
-  'National Student Championship',
+  'Invitational Bridge Meeting',
   "New Year's Teams",
-  'Opening Tournament',
-  'Super League',
-  'Swiss Teams'
+  'Opening Tournament'
 );
 
 my %MULTI_TYPOS =
@@ -37,10 +35,6 @@ my %MULTI_TYPOS =
   'Friendly Match' => ['match amical', 'friendly tm'],
   "New Year's Teams" => ['new year greet tm'],
   'Opening Tournament' => ['opening tournement', 'pre nm'],
-  'Student Championship' => ['students championships'],
-  'Super League' => ['sup league', 'sup leg', 'sup l',
-    'super leahue', 's l', 'sup-l'],
-  'Swiss Teams' => ['teams swiss', 'swiss team'],
   Training => ['practice session', 'training match', 'practice match',
     'test match', 'tes match', 'practise match', 'practice matche',
     'practice matches'],
@@ -49,12 +43,14 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Bridge
-  Challenge Championship Charity Club Commercial Cup
-  Friendship
-  Meeting Memorial
-  Online
-  Simultaneous
-  Tournament Training Trial Trophy
+  Challenge 
+  Championship 
+  Charity 
+  Club 
+  Cup
+  Tournament 
+  Training 
+  Trial 
 );
 
 my %SINGLE_TYPOS =
@@ -76,10 +72,6 @@ my %SINGLE_TYPOS =
   Cup => ['cups', 'coppa'],
   'Exhibition Match' => ['exhibition'],
   'Friendly match' => ['friendly'],
-  'Grand Prix' => ['gp'],
-  Simultaneous => ['simultaneo'],
-  'Super League' => ['superleague', 'superlige', 'superlig©',
-    'superligê', 'sl'],
   Tournament => ['tourn', 'tourname', 'tourney', 'turnament', 
     'tourmanent', 'tourna', 'tournamnt', 'toernooi', 'turneringen', 
     'tounoi', 'torneo', 'tournoi', 'turniej', 'trniej'],
@@ -88,8 +80,7 @@ my %SINGLE_TYPOS =
   Trial => ['trials', 'trail', 'trails', 'triaals',
     'selection', 'seleccion', 'selección', 'select',
     'selections', 'selekction', 'selelection', 'sélection', 'selectio',
-    'séléction', 'entrainement', 'slection', 'prueba'],
-  Trophy => ['trofeo'],
+    'séléction', 'entrainement', 'slection', 'prueba']
 );
 
 

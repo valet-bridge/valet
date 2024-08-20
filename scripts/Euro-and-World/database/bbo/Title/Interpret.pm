@@ -523,21 +523,6 @@ sub finish_ordinal
       }
       return 1;
     }
-    
-
-    # my $composite = $chains->[0]->check_out(0)->value() . ' ' .
-      # $chains->[2]->check_out(0)->value();
-
-    # my $tname_comp = $whole->get_multi('TNAME', lc($composite));
-    # if (defined $tname_comp)
-    # {
-      # $chains->[0]->complete('KILLED');
-      # $chains->[1]->complete('EXPLAINED');
-
-      # my $token = $chains->[2]->check_out(0);
-      # $token->set_general('SINGLETON', 'TNAME', $tname_comp);
-      # return 1;
-    # }
   }
 
   return 0;
