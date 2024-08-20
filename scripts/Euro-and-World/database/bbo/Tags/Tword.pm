@@ -13,10 +13,6 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
-  'Exhibition Match',
-  'Friendly Match',
-  'Friendly Pairs',
-
   'First Division',
   'Invitational Bridge Meeting',
   "New Year's Teams",
@@ -32,18 +28,14 @@ my %MULTI_TYPOS =
     'the longest day charity on the shortest day'],
   'First Division' => ['1_ division', '1st division', 'd1', 
     'division1', 'division 1', 'i liga', '1_division', 'a division'],
-  'Friendly Match' => ['match amical', 'friendly tm'],
   "New Year's Teams" => ['new year greet tm'],
   'Opening Tournament' => ['opening tournement', 'pre nm'],
-  Training => ['practice session', 'training match', 'practice match',
-    'test match', 'tes match', 'practise match', 'practice matche',
-    'practice matches'],
   Trial => ['prueba de seleccion', 'test event']
 );
 
+  # Challenge 
 my @SINGLE_WORDS = qw(
   Bridge
-  Challenge 
   Championship 
   Charity 
   Club 
@@ -57,7 +49,6 @@ my %SINGLE_TYPOS =
 (
   Bridge => ['brdige', 'briag', 'bric', 'bridg', 'brýç'],
   'Business League' => ['blb'],
-  Challenge => ['desafio', 'challengue', 'challenger'],
   Championship => ['champ', 'champion', 'champions', 
     'championshi', 'championships', 'championsihp', 'champioship', 
     'champs', 'chams', 'chmp', 'chmapionship', 'chship', 'chships', 
@@ -70,8 +61,6 @@ my %SINGLE_TYPOS =
     'champinship', 'campeonato'],
   Club => ['clubs', 'clut', 'clybs'],
   Cup => ['cups', 'coppa'],
-  'Exhibition Match' => ['exhibition'],
-  'Friendly match' => ['friendly'],
   Tournament => ['tourn', 'tourname', 'tourney', 'turnament', 
     'tourmanent', 'tourna', 'tournamnt', 'toernooi', 'turneringen', 
     'tounoi', 'torneo', 'tournoi', 'turniej', 'trniej'],

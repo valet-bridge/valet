@@ -112,7 +112,7 @@ my @LOCAL_SUBS =
 );
 
 
-sub local_substitutions2
+sub local_substitutions
 {
   my ($text, $bbono) = @_;
 
@@ -123,135 +123,6 @@ sub local_substitutions2
       $text =~ s/$entry->{TEXT}/$entry->{CORR}/i;
     }
   }
-}
-
-
-sub local_substitutions
-{
-  my ($text, $bbono) = @_;
-
-  # if ($bbono >= && $bbono <= )
-  # {
-    # $text =~ s///;
-  # }
-
-  if ($bbono >= 3620 && $bbono <= 3631)
-  {
-    $text =~ s/PULA/Pula Bridge Festival/;
-  }
-
-  if ($bbono >= 3729 && $bbono <= 3738)
-  {
-    $text =~ s/Stara Zagora 2007 Open Teams/Stara Zagora Open Teams 2007/;
-  }
-
-  if ($bbono >= 9728 && $bbono <= 9770)
-  {
-    $text =~ 
-      s/Indonesian Final Premier League/Indonesian Premier League Final/;
-  }
-
-  if ($bbono >= 3708 && $bbono <= 3728)
-  {
-    $text =~ s/CCBA Championships/Chinese Open Teams/;
-  }
-
-  if ($bbono >= 6268 && $bbono <= 6279)
-  {
-    $text =~ s/Selection Senior/French Senior Trials/i;
-  }
-
-  if ($bbono >= 6856 && $bbono <= 6975)
-  {
-    $text =~ s/Cap Gemini/Cap Gemini World Top Tournament/;
-  }
-
-  if ($bbono >= 7843 && $bbono <= 7865)
-  {
-    $text =~ 
-      s/ACBL 1999 Open Team Trials/1999 USA International Team Trials/;
-  }
-
-  if ($bbono >= 8236 && $bbono <= 8242)
-  {
-    $text =~ s/Selection Francaise/French Open Trials/;
-  }
-
-  if ($bbono >= 8186 && $bbono <= 8199)
-  {
-    $text =~ s/White House/White House International/;
-  }
-
-  if ($bbono >= 8489 && $bbono <= 8503)
-  {
-    $text =~ s/Selection Francaise/French Open Trials/;
-  }
-
-  if ($bbono >= 11683 && $bbono <= 11873)
-  {
-    $text =~ s/Premier League/English Premier League/;
-  }
-
-  if ($bbono >= 38376 && $bbono <= 38436)
-  {
-    $text =~ s/Swedish Trials/Swedish Open Trials/i;
-  }
-
-  if ($bbono >= 38594 && $bbono <= 38652)
-  {
-    $text =~ s/Turkish Open Championship/Turkish Open Teams Championship/i;
-    $text =~ s/Turkish Open Championships/Turkish Open Teams Championship/i;
-  }
-
-  if ($bbono >= 39501 && $bbono <= 39525)
-  {
-    $text =~ 
-      s/Lozenets Tournament Teams/Lozenets Bridge Festival - Open Teams/i;
-    $text =~ 
-      s/Lozenets Team Tournament/Lozenets Bridge Festival - Open Teams/i;
-  }
-
-  if ($bbono >= 39162 && $bbono <= 39309)
-  {
-    $text =~ s/I National Bridge Tournament/1st Bulgarian Open Teams/;
-  }
-
-  if ($bbono >= 40702 && $bbono <= 40802)
-  {
-    $text =~ s/Inter State Championship/Indian Inter-State Teams/;
-    $text =~ s/Inter State Nationals/Indian Inter-State Teams/;
-    $text =~ s/Interstate Nationals/Indian Inter-State Teams/;
-  }
-
-  if ($bbono >= 40926 && $bbono <= 40955)
-  {
-    $text =~ s/Selection Open/French Open Trials/i;
-  }
-
-  if ($bbono >= 41719 && $bbono <= 41744)
-  {
-    $text =~ 
-      s/National Student Championship/Indonesian Student Championship/;
-  }
-
-  if ($bbono >= 41967 && $bbono <= 42044)
-  {
-    $text =~ 
-      s/Campeonato Nacional Equipas Open/Portuguese Open Teams/;
-    $text =~ 
-      s/Campeonato Nacional\s+de Equipas Open/Portuguese Open Teams/;
-  }
-
-  if ($bbono >= 43070 && $bbono <= 43154)
-  {
-    $text =~ s/Bulgaria Group A/Bulgarian Open Teams - Group A/;
-  }
-
-  if ($bbono >= 43195 && $bbono <= 43235)
-  {
-    $text =~ s/Open Playoff/Australian Open Team Trials - Playoff/;
-  }
-
   return $text;
 }
 

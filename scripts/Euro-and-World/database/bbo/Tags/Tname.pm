@@ -13,6 +13,15 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  ### These are the only ones that are not specific (in time/place)
+  ### tournament "names".
+
+ 'Challenge Match',
+ 'Exhibition Match',
+ 'Friendly Match',
+ 'Friendly Pairs',
+ 'Practice Match',
+
   '0 to 1500 Spingold',
 
   #### AAA
@@ -954,6 +963,14 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  ### These are the only ones that are not specific (in time/place)
+  ### tournament "names".
+
+  'Friendly Match' => ['match amical', 'friendly tm'],
+  'Practice Match' => ['practice session', 'training match', 
+    'practice match', 'test match', 'tes match', 'practise match', 
+    'practice matche', 'practice matches'],
+
   ### AAA
 
   'AfBF Zone 8 Championships' => ['african zone 8 open teams',
@@ -2407,6 +2424,8 @@ my %SINGLE_TYPOS =
   'Canadian Women Teams Championship' => ['cwtc'],
   Cavendish => ['cavendiish', 'caavendish', 'cavemdish', 'cavendiosh',
     'cavendsh', 'cavvendish', 'avendish', 'cav'],
+  'Challenge Match' => ['desafio', 'challengue', 'challenger',
+    'challenge'],
   'Collegiate Bowl' => ['collegiate', 'collegiates'],
   'Commonwealth Nations Bridge Championships' => ['cnbc'],
   'Copenhagen Invitational Pairs' => ['cbi'],
@@ -2423,7 +2442,9 @@ my %SINGLE_TYPOS =
   'European Youth Bridge Championship' => ['eybc'],
   'European Youth Bridge Pairs Championship' => ['eybpc', 'eypc'],
   'European Youth Bridge Teams Championship' => ['eytc', 'jem'],
+  'Exhibition Match' => ['exhibition'],
   'FOSS Grand Tournament' => ['foss'],
+  'Friendly match' => ['friendly'],
   'German Team Championship' => ['teammeisterschaft'],
   'Gianarrigo Rona Trophy' => ['rona'],
   'Grand National Open Teams' => ['gnot'],
