@@ -247,7 +247,14 @@ while ($line = <$fh>)
 
   $stats_title->incr(\@chains_title);
 
-  print $knowledge->str_csv(';', $chunk{TITLE}, $chunk{BBONO}) if $csv_flag;
+  # Quite wasteful to keep regenerating this.
+  my $knowledge_final = Knowledge->new();
+  $knowledge_final->add_explained_chains(\@chains_title, $chunk{BBONO});
+  $knowledge_final->add_explained_chains(\@chains_event, $chunk{BBONO});
+  $knowledge_final->add_field('SCORING', $chunk{SCORING}, $chunk{BBONO});
+
+  print $knowledge_final->str_csv(';', $chunk{TITLE}, $chunk{BBONO}) 
+    if $csv_flag;
 
 
   next if ! $debug_flag &&

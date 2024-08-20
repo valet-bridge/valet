@@ -15,8 +15,7 @@ my @MULTI_WORDS =
 (
   'First Division',
   'Invitational Bridge Meeting',
-  "New Year's Teams",
-  'Opening Tournament'
+  "New Year's Teams"
 );
 
 my %MULTI_TYPOS =
@@ -29,7 +28,6 @@ my %MULTI_TYPOS =
   'First Division' => ['1_ division', '1st division', 'd1', 
     'division1', 'division 1', 'i liga', '1_division', 'a division'],
   "New Year's Teams" => ['new year greet tm'],
-  'Opening Tournament' => ['opening tournement', 'pre nm'],
   Trial => ['prueba de seleccion', 'test event']
 );
 

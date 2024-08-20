@@ -501,6 +501,7 @@ sub finish_ordinal
     {
       $chains->[0]->complete('KILLED');
       $chains->[1]->complete('EXPLAINED');
+      $chains->[2]->complete('EXPLAINED');
 
       my $token = $chains->[2]->check_out(0);
 
@@ -831,7 +832,7 @@ sub finish
 {
   my ($whole, $chains_title, $chains_event, $scoring, $bbono) = @_;
 
-  my $knowledge = Knowledge->new();;
+  my $knowledge = Knowledge->new();
   $knowledge->add_explained_chains($chains_title, $bbono);
   $knowledge->add_explained_chains($chains_event, $bbono);
   $knowledge->add_field('SCORING', $$scoring, $bbono);
