@@ -200,6 +200,7 @@ my @MULTI_WORDS =
   'China Friend City Senior Team Tournament',
   'China First League',
   'China Hosts Europe in Rome',
+  'China Inter-City Teams',
   'China Resources Inter-City',
   'Chinese Club Championship',
   'Chinese Mixed Teams',
@@ -300,6 +301,7 @@ my @MULTI_WORDS =
   'European Mixed Junior Pairs',
   'European Mixed Bridge Championship',
   'European Open Bridge Championship',
+  'European Open Pairs',
   "European Champions' Cup",
   'European School Teams Championship',
   'European Small Federation Games',
@@ -349,6 +351,7 @@ my @MULTI_WORDS =
   'French Open Teams',
   'French Open Trials',
   'French Senior Trials',
+  'French Women Trials',
   'French U28 Trials',
 
   'FTBC Tanjungpura University',
@@ -365,6 +368,7 @@ my @MULTI_WORDS =
   'Gelibolu Peace Cup',
   'Geologi Cup',
   'Godfrey Phillips All India Open',
+  'Goulyash by E. Gladysh',
 
   # GERMANY
   'German Club Cup',
@@ -486,6 +490,7 @@ my @MULTI_WORDS =
   'Israel Open Teams',
   'Israel Open Trials',
   'Israel Schools',
+  'Israel Women Pairs',
 
   'Istanbul Teams',
   'INEA Cup',
@@ -630,6 +635,7 @@ my @MULTI_WORDS =
   'Norwegian Premier League',
   'Norwegian Premier Pairs',
   'Norwegian Senior Teams',
+  'Norwegian Swiss Pairs',
   'Norwegian Swiss Teams',
   'Norwegian Team Trials',
   'Norwegian Teams',
@@ -688,6 +694,7 @@ my @MULTI_WORDS =
   'Polish Patton Teams',
   'Polish Premier League',
   'Polish Second League',
+  'Polish Senior Trials',
   'Polish School Championship',
   'Polish Super League',
   'Polish Teams',
@@ -948,6 +955,7 @@ my @MULTI_WORDS =
   'Victorian Mixed Teams',
   'Victorian Open Teams',
   'Victorian Open Teams Playoff',
+  'Victorian Open Trials',
   'Victorian Pennant',
   'Victorian Senior Trials',
   'Victorian Women Trials',
@@ -1000,6 +1008,7 @@ my @MULTI_WORDS =
 
   'Yeh Bros Cup',
   'Young Chelsea Knock-out',
+  'Youth Open Bridge Paris',
 
   # ZZZ
 
@@ -1007,7 +1016,8 @@ my @MULTI_WORDS =
   "Zia's Individual Goulash",
   'Zimmermann Cup',
   'Zulawski Cup',
-  'Zurich Open Pairs'
+  'Zurich Open Pairs',
+  'Zurich Open Teams'
 );
 
 my %MULTI_TYPOS =
@@ -1544,7 +1554,10 @@ my %MULTI_TYPOS =
     'european university team championship'],
   'European Women Championship' => ['eur women champ'],
   'European Youngster Bridge Championship' => [
-    'euro youngster championships', 'euro yongster championships'],
+    'euro youngster championships', 
+    'euro youngsters championship', 
+    'euro youngsters championships', 
+    'euro yongster championships'],
   'European Youth Bridge Championship' => ['european youth championships',
     'european youth championship'],
   'European Youth Bridge Pairs Championship' => [
@@ -1644,6 +1657,7 @@ my %MULTI_TYPOS =
   'Gabrial UI Bastaman Cup' => ['gabrial-ui cup',
     'gabrial ui cup'],
   'Geologi Cup' => ['geo cup'],
+  'Goulyash by E. Gladysh' => ['goulyash by e_gladysh'],
 
   # GERMANY
   'German Club Cup' => ['german cup', 'vereinspokal', 
@@ -1659,6 +1673,7 @@ my %MULTI_TYPOS =
     'german open', 
     'german open team',
     'open german team'],
+  'German Open Trials' => ['deutsche open qualifikation'],
   'German Team Championship' => ['deutsche teammeisterschaft'],
   'German Team Trophy' => ['german bridge team trophy',
     'german team bridge trophy', 'german bridge trophy', 'dbv-pokal'],
@@ -1971,7 +1986,9 @@ my %MULTI_TYPOS =
   'Lalit Mohanka Memorial' => ['lalit mohanka memorials'],
   'Las Palmas Simultaneous Pairs' => ['simultaneo de mayo las palmas'],
   'L C Sunil Rajendra Memorial' => ['l_c_sunil rajendra memorial'],
-  'Lebanese Invitational Teams' => ['lebanon invitational team',
+  'Lebanese Invitational Teams' => [
+    'lebanese invitational team',
+    'lebanon invitational team',
     'lebanon invitational teams'],
   'Lederer Memorial Trophy' => ['lederer memorial',
     'lederer trophy'],
@@ -2049,6 +2066,7 @@ my %MULTI_TYPOS =
     'barriere championship', 
     'barriere championship deauville', 
     'champion ship barriere',
+    'champions barriere',
     "deauville championship's tournament",
     'mondial barriere deauville', 
     'mondial barrière de deauville',
@@ -2143,15 +2161,9 @@ my %MULTI_TYPOS =
   'Norwegian Mixed Teams' => ['norwegian championship mix swiss teams'],
   'Norwegian Open Pairs' => [
     'nbf norwegian pairs', 
-    'nm monrad pairs', 
     'nm pairs',
-    'nm swiss pairs', 
     'nm-pairs', 
-    'nor swiss pairs',
-    'norwegian open swiss pairs',
     'norwegian pairs championship',
-    'norwegian swiss open pairs',
-    'norwegian swiss pairs championship',
     'norwegain pairs', 
     'norwegian pairs'],
   'Norwegian Open Teams' => ['nm open teams',
@@ -2164,6 +2176,13 @@ my %MULTI_TYPOS =
     'nor premier league',
     'norvegian premier league'],
   'Norwegian Senior Teams' => ['nbf senior team championship'],
+  'Norwegian Swiss Pairs' => [
+    'nm monrad pairs', 
+    'nm swiss pairs', 
+    'nor swiss pairs',
+    'norwegian open swiss pairs',
+    'norwegian swiss open pairs',
+    'norwegian swiss pairs championship'],
   'Norwegian Swiss Teams' => ['nm-monrad-lag', 'nor swiss teams',
     'norwegian swiss team championship', 'nm monrad lag', 
     'nm-monrad teams', 'nm-monrad-teams', 
@@ -2461,6 +2480,7 @@ my %MULTI_TYPOS =
     'sudamericano de parejas',
     'sudamericano de parejas libres'],
   'South American Open Teams' => [
+    'libres sudamericano',
     'southamerica championship',
     'southamerican championship', 
     'southamerican open championship',
@@ -2471,7 +2491,8 @@ my %MULTI_TYPOS =
     'south american championshi', 
     'south american championships',
     'sudamericano de bridge',
-    'sudamericano libre equipos'],
+    'sudamericano libre equipos',
+    'sudamericano libres'],
   'South American Seniors Teams' => ['clasificacion sudamericano seniors',
     'south american senior championship'],
   'South American Women Teams' => ['clasificatoria damas equipos',
@@ -2485,13 +2506,15 @@ my %MULTI_TYPOS =
   'Southeast Asian Games' => ['sea games', 'south east asian games'],
 
   # SPAIN
-  'Spanish Central Zone Teams' => ['zonal centro equipos',
+  'Spanish Central Zone Teams' => [
+    'zonal centro equipos',
     'equipos zonal centro'],
   'Spanish Mixed Teams' => ['spanish mixed national teams'],
   'Spanish Open Teams' => [
     'spanish teams', 
     "spanish teams ch'ship",
     'spanish national championship',
+    'spanish national teams',
     'spanish national teams championship'],
   'Spanish Open Trials' => ['open seleccion mundial'],
   'Spanish Senior Trials' => ['prueba de seleccion equipos senior'],
@@ -2634,6 +2657,7 @@ my %MULTI_TYPOS =
     'turkýsh mixed teams',
     'turkish mixed teams'],
   'Turkish Open Teams Championship' => [
+    'turkey open team championship',
     'turkish national open national selection',
     'turkish open team championship',
     'turkish open teams',
@@ -2703,6 +2727,7 @@ my %MULTI_TYPOS =
     'victorian opean',
     'victoian open', 
     'victorian team'],
+  'Victorian Open Trials' => ['victorian open team trials'],
   'Victorian Pennant' => ['vic pennant'],
   'Victorian Open Teams Playoff' => ['victorian playoff'],
   'Victorian Senior Trials' => ['vic seniors trials'],
@@ -2768,8 +2793,12 @@ my %MULTI_TYPOS =
   'Yeh Bros Cup' => ['yehbros cup', 'yer bros cup'],
   'Young Chelsea Knock-out' => ['yc ko', 'young chelsea ko',
     'young chelsea knockout'],
+  'Youth Open Bridge Paris' => ['youth paris open bridge'],
 
-  'Zulawski Cup' => ['zulawski teams']
+  ### ZZZ
+
+  'Zulawski Cup' => ['zulawski teams'],
+  'Zurich Open Pairs' => ['zurich imp pairs']
 );
 
 my @SINGLE_WORDS = qw(
