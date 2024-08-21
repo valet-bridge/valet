@@ -850,6 +850,7 @@ my @MULTI_WORDS =
   'TGR Auction Pairs',
   'TGR Auction Teams',
   'TGR Super League',
+  'Thane Champion of Champions Teams',
   'The Hague Bridge Experience',
   'Thrace Club Teams',
   'Thrace Cup League',
@@ -1756,7 +1757,9 @@ my %MULTI_TYPOS =
   'Istanbul Winter Teams' => ['istanbul kis dortlu takimlar',
     'istanbul kis dortlu takim', 'istanbul winter champs',
     'istanbul kis'],
-  'Izmir Teams Cup' => ['Izmir Open Teams Championships'],
+  'Izmir Teams Cup' => [
+    'izmir open teams championship',
+    'izmir open teams championships'],
 
   # ITALY
   'Italian Championship' => ['italian master',
@@ -1795,7 +1798,9 @@ my %MULTI_TYPOS =
 
   ### JJJ
 
-  'Jaap Kokkes Tournament' => ['Jaap Kokkes Toernooi',
+  'Jaap Kokkes Tournament' => [
+    'jaap kokkes toernooi',
+    'jaap kookes toernooi',
     'jaap kokkes'],
   'Janina Wielkoszewska Memorial Open' => [
     'memorial im_ janiny wielkoszewskiej open'],
@@ -1869,7 +1874,9 @@ my %MULTI_TYPOS =
     'madeira international teams open´s',
     'madeira international teams open'],
   'Madeira Swiss Teams' => ['swiss teams madeira', 'madeira swiss'],
-  'Madras Gymkhana Club Open' => ['mgc open'],
+  'Madras Gymkhana Club Open' => [
+    'madras gymkhana open',
+    'mgc open'],
   'Madrid Senior Teams' => ['equipos senior madrid'],
   'Maharaja Yeshwantrao Holkar National' => [
     'holkars trophy',
@@ -2083,6 +2090,7 @@ my %MULTI_TYPOS =
 
   # POLAND
   'Polish BAM Teams' => ['bam team championship of poland'],
+  'Polish Business League' => ['blb'],
   'Polish Boys Championship' => ['polish championship boys'],
   'Polish Girls Championship' => ['polish championship girls'],
   'Polish IMP Pairs' => ['butler polish championship',
@@ -2360,6 +2368,8 @@ my %MULTI_TYPOS =
   'TGR Super League' => ["tgr's super league", "tgr's super legue",
     'tgrs league', 'tgrs 2nd auction pairs', 'tgrs super league',
     "tgr's league", "trg's super league"],
+  'Thane Champion of Champions Teams' => [
+    'tdba champion of champions'],
   'The Hague Bridge Experience' => ['the hague bride experience',
     'teh hague bridge experience'],
   'Thrace Club Teams' => ['thrace region clubs team championship',
@@ -2412,6 +2422,8 @@ my %MULTI_TYPOS =
     'turkish mixed team championships',
     'turkey mix teams championship',
     'turkey mixed teams',
+    'turkis mixed teams',
+    'turkýsh mixed teams',
     'turkish mixed teams'],
   'Turkish Open Teams Championship' => [
     'turkish open teams championships',
