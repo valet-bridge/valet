@@ -418,12 +418,6 @@ sub finish_ordinal
   my ($whole, $chains, $chain, 
     $knowledge, $token, $field, $value, $bbono) = @_;
 
-  if ($value > 12)
-  {
-    $chain->complete('EXPLAINED');
-    return 1;
-  }
-
   my $meet = $knowledge->get_field('MEET', $bbono);
   my $tname = $knowledge->get_field('TNAME', $bbono);
   my $movement = $knowledge->get_field('MOVEMENT', $bbono);
@@ -447,9 +441,12 @@ sub finish_ordinal
   }
 
   # Bit of a kludge, but it catches a lot of cases.
-  return 0 unless $#$chains >= 2;
-  return 0 unless $chains->[1]->status() eq 'COMPLETE';
-  return 0 unless $chains->[1]->check_out(0)->field() eq 'ORDINAL';
+  # TODO Make a method, clean up.
+
+  if ($#$chains >= 2 &&
+      $chains->[1]->status() eq 'COMPLETE' &&
+      $chains->[1]->check_out(0)->field() eq 'ORDINAL')
+  {
 
   if ($chains->[0]->status() eq 'KILLED')
   {
@@ -524,6 +521,14 @@ sub finish_ordinal
       }
       return 1;
     }
+  }
+
+  }
+
+  if ($value > 12)
+  {
+    $chain->complete('EXPLAINED');
+    return 1;
   }
 
   return 0;
