@@ -13,6 +13,7 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  'Aegean Championships',
   'Azores Festival',
   'Amman Bridge Festival',
   'Australian National Championships',

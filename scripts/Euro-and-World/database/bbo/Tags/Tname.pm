@@ -20,6 +20,7 @@ my @MULTI_WORDS =
  'Exhibition Match',
  'Friendly Match',
  'Friendly Pairs',
+ "New Year's Teams",
  'Opening Tournament',
  'Practice Match',
 
@@ -55,6 +56,7 @@ my @MULTI_WORDS =
   'ArboNed Team Cup',
 
   # ARGENTINA
+  'Argentinian Club Teams',
   'Argentinian Copa Republica',
   'Argentinian Flags Day Championship',
   'Argentinian Mixed Pairs',
@@ -63,7 +65,8 @@ my @MULTI_WORDS =
   'Argentinian Open Trials',
   'Argentinian Seniors Teams',
   'Argentinian Senior Trials',
-  'Argentinian Women Clubs',
+  'Argentinian Women Teams',
+  'Argentinian Women Trials',
 
   'ARIS Cup',
   'Arnhem Interbridge Tournament',
@@ -193,6 +196,7 @@ my @MULTI_WORDS =
   'Chilean Cup',
   'Chilean Pairs',
   'Chilean Open Teams',
+  'Chilean Senior Teams',
   'Chilean Team Trials',
   'Chilean Women Teams',
   'Chilean Women Trials',
@@ -304,6 +308,7 @@ my @MULTI_WORDS =
   'European Mixed Junior Pairs',
   'European Mixed Bridge Championship',
   'European Open Bridge Championship',
+  'European Open Junior Pairs',
   'European Open Pairs',
   "European Champions' Cup",
   'European School Teams Championship',
@@ -417,6 +422,7 @@ my @MULTI_WORDS =
   'Hellenic Women Team Trials',
   'Higson Cup',
   'High-Tech Zone Workers Invitational',
+  'Hindusthan Club Teams',
   'Huayuan Cup',
 
   # HUNGARY
@@ -462,6 +468,7 @@ my @MULTI_WORDS =
   'Indonesian Inter-City Championship',
   'Indonesian Inter-Club Championship',
   'Indonesian Inter-Province Championship',
+  'Indonesian Invitational Teams',
   'Indonesian Junior League Online',
   'Indonesian Kids Trials',
   'Indonesian League',
@@ -578,6 +585,7 @@ my @MULTI_WORDS =
   'Maharashtra State Championship',
   'Maharashtra State Pairs',
   'Marit Sveaas Tournament',
+  'Marmara Inter-Club Championship',
   'McConnell Cup',
   'Menpora-Pertamina Cup',
   'Mike Lawrence Exhibition',
@@ -729,7 +737,7 @@ my @MULTI_WORDS =
   'PT Timah Invitational Teams',
   'Puutalo Open',
   'PYC Hindu Gymkhana Royale',
-  'PYC Hindu Gymkhana PairsRoyale',
+  'PYC Hindu Gymkhana Pairs Royale',
 
   ### RRR
 
@@ -738,7 +746,7 @@ my @MULTI_WORDS =
   'R Ratnam Memorial',
   'Ragn-Sells International Grand Tournament',
   'Rai Bahadur Modi Memorial All India Open',
-  'Rajasthan Championship',
+  'Rajasthan Invitational Championship',
   'Rand Cup',
   'Rector University of Brawijaya Cup',
   'Rona Cup',
@@ -790,6 +798,7 @@ my @MULTI_WORDS =
 
   # SERBIA
   'Serbian Cup',
+  'Serbian Inter-City Teams',
   'Serbian Open Trials',
   'Serbian Premier League',
   'Serbian Team Championship',
@@ -977,7 +986,9 @@ my @MULTI_WORDS =
 
   'Warsaw Online Teams',
   'Watermark Bridge Classic',
+  'WCG Open',
   'Wellingdon Swiss Pairs',
+  'Welsh Invitational Pairs',
   'Welsh Open Trials',
   'Western Mediterranean Club Teams',
   'White House International',
@@ -989,6 +1000,7 @@ my @MULTI_WORDS =
   'Willoughby Bridge Classic',
   'Willy Brown Memorial',
   'Winter Open Teams',
+  'Wronie Summer Teams',
 
   # WORLD
   'World Juniors Championship',
@@ -1047,6 +1059,7 @@ my %MULTI_TYPOS =
     'african zonal championships',
     'zonal africa open'],
   'African Zonal Women Teams' => [
+    'zonal africa ladies',
     'zonal africa women'],
   'All India Corporate Invitational' => [
     'all india invitational corporate'],
@@ -1104,16 +1117,21 @@ my %MULTI_TYPOS =
     'open argentin team', 
     'opteamsudamargentina'],
   'Argentinian Open Trials' => [
+    'argentina open trials',
     'argentinian team trials',
     'open argentina team trials',
     'openargentin team trials', 
-    'open team argentina trials'],
+    'open team argentina trials',
+    'seleccion libre argentina',
+    'seleccion argentina libre'],
   'Argentinian Seniors Teams' => ['clasificatoria seniors argentina',
     'clasificatoria argentina seniors sudamericano'],
   'Argentinian Senior Trials' => ['senior argentina team trials',
     'open senior argentina trials', 'seleccion argetina seniors',
     'seleccion argentina seniors'],
   'Argentinian Women Clubs' => ['interclub damas argentina'],
+  'Argentinian Women Teams' => [
+   'gran final argentina damas'],
 
   'Arnhem Interbridge Tournament' => ['interbridge tournament'],
   'ASEAN Club Championship' => [
@@ -1177,7 +1195,9 @@ my %MULTI_TYPOS =
     'australian seniors', 
     'australain seniors',
     'sen australian'],
-  'Australian Seniors Trials' => ['australian seniors trial'],
+  'Australian Seniors Trials' => [
+    'australian senior trials',
+    'australian seniors trial'],
   'Australian Spring Open Teams' => ['spring national open teams',
     'spring open teams'],
   'Australian Spring Seniors Teams' => ['aust spring seniors teams',
@@ -1193,7 +1213,8 @@ my %MULTI_TYPOS =
     'aust womens team', 
     'aust womens teams', 
     "australian women's", 
-    'australian women'],
+    'australian women',
+    'australian womens teams'],
   "Australian Women's Trials" => ["australian women's team selection",
     'australian women team selection',
     'australian women team trials',
@@ -1319,9 +1340,14 @@ my %MULTI_TYPOS =
     'canadian champ senior', 
     'canadian champs senior',
     'canadian senior championship',
+    'canadian senior teams',
     'canadian senior tm'],
   'Canadian Women Championship' => ['can ladies bridge champs'],
-  'Canadian Women Teams Championship' => ['can ladies team champ'],
+  'Canadian Women Teams Championship' => [
+    'can ladies team champ',
+    'cbc womens finals',
+    'cbf womens final',
+    'cbf womens finals'],
 
   'Cavendish Teams' => ['cavendish tms', 'cavendish team'],
   'Central American & Caribbean Championship' => [
@@ -1415,6 +1441,9 @@ my %MULTI_TYPOS =
 
   "d'Orsi" => ["d'orsi senior bowl", 'senior world cup',
     'seniors bowl', 'senior bowl'],
+  'Dainik Navjyoti All India Inter-State' => [
+    'Dainik Navjyoti All India Interstate',
+    'Dainik Navjyoti All India Inter -State'],
 
   # DENMARK
   'Danish Club Teams' => ['danish club team', 'dm klubhold',
@@ -1542,6 +1571,7 @@ my %MULTI_TYPOS =
     'ebl team champs',
     'ebl team championships',
     'ebl teams championship',
+    'ebl teams championships',
     'euro team championships',
     'euro team champs',
     'european b.t.ch.',
@@ -1551,18 +1581,22 @@ my %MULTI_TYPOS =
     'europeqn teqm championships',
     'european team championship',
     'european team championships',
+    'european teams championship',
     'european teams championships'],
   "European Champions' Cup" => ['european champs cup'],
   'European Girls Teams Championship' => [
     'european girls championships',
+    'european girls teams',
     'euro girls championships'],
   'European Junior Mixed Pairs' => ['eyjc mixed pairs'],
   'European Junior Teams Championship' => [
     'ebl juniors',
     'euro juniors championship',
     'euro juniors championships',
-    'european junior teams championship',
-    'euroepan junior teams championships'],
+    'european junior teams',
+    'european junior teams championships',
+    'euroepan junior teams championships',
+    'european juniors championship'],
   'European Mixed Bridge Championship' => [
     'euro mixed teams',
     'european mixed teams',
@@ -1591,6 +1625,7 @@ my %MULTI_TYPOS =
     'european university team championship'],
   'European Women Championship' => ['eur women champ'],
   'European Youngster Bridge Championship' => [
+    'euro youngster championship', 
     'euro youngster championships', 
     'euro youngsters championship', 
     'euro youngsters championships', 
@@ -1901,9 +1936,15 @@ my %MULTI_TYPOS =
     'israeli juniors team trials'],
   'Israel Open Pairs' => ['israel pairs', 'israel pairs champ',
     'israeli pairs championship'],
-  'Israel Open Teams' => ['israeli open team', 'israel teams',
-    'israel team of four cup', 'israel team cup', 'israel team champ_',
-    'israel team championship', 'israelairs champ_',
+  'Israel Open Teams' => [
+    'israeli open team', 
+    'israel teams',
+    'israel team of four cup', 
+    'israel team cup', 
+    'israel team champ_',
+    'israel team championship', 
+    'israelairs champ_',
+    'israeli teams cup',
     'israeli team champ_'],
   'Israel Open Trials' => ['israel open team trials',
     'israel open trials', 'israel team trials'],
@@ -2144,6 +2185,7 @@ my %MULTI_TYPOS =
     'nsw interstate team selection',
     'nsw interstate teams selection'],
   'New South Wales State Teams' => ['nsw state teams'],
+ "New Year's Teams" => ['new year greet tm'],
 
   # NEW ZEALAND
   'New Zealand Inter-Provincial Open Teams' => [
@@ -2210,9 +2252,12 @@ my %MULTI_TYPOS =
     'norwegian pairs championship',
     'norwegain pairs', 
     'norwegian pairs'],
-  'Norwegian Open Teams' => ['nm open teams',
+  'Norwegian Open Teams' => [
+    'nm open teams',
     'norwegian chship teams',
-    'norwgian open teams championship', 'norwegian chmp teams'],
+    'norwegian chships teams',
+    'norwgian open teams championship', 
+    'norwegian chmp teams'],
   'Norwegian Premier League' => [
     'norw premier league',
     'norwegian prremier league',
@@ -2402,12 +2447,13 @@ my %MULTI_TYPOS =
     'invitasi pt_ timah',
     'invitasi pt_timah',
     'invitasi terbatas pt timah',
+    'invitasi terbatas pt_timah',
     'invitasi terbatas pt_ timah',
     'pt timah limited invitational teams',
     'pt_ timah limited invitation teams',
     'pt_ timah limited invitational teams',
     'pt_ timah ltd invitational teams'],
-  'PYC Hindu Gymkhana PairsRoyale' => ['pyc pairs royale'],
+  'PYC Hindu Gymkhana Pairs Royale' => ['pyc pairs royale'],
   'Prince Takamatsu Cup' => ['prince takamatsu memorial cup'],
 
   ### RRR
@@ -2424,7 +2470,16 @@ my %MULTI_TYPOS =
   'Rai Bahadur Modi Memorial All India Open' => [
     'rai bahadur modi memorial',
     'rai bahadur memorial'],
-  'Rajasthan Championship' => ['rajasthan bridge championship'],
+  'Rajasthan Invitational Championship' => [
+    'rajasthan bridge association invitational',
+    'rajasthan bridge championship',
+    'rajasthan championship',
+    'rajasthan invitational bridge championship',
+    'rajasthan invitational bridge tournament',
+    'rajasthan invitational championship',
+    'rajasthan invitation tournament',
+    'rajasthan invitatational tournament',
+    'rajasthan invitational tournament'],
   'Riga Invites to Jurmala' => ['riga invites', 'latvia invites'],
   'Rio de Janeiro Championship' => ['rio de janeiro state final'],
   'Rio de Janeiro Christmas Individual' => [
@@ -2442,6 +2497,7 @@ my %MULTI_TYPOS =
     'romanian national championships teams',
     'romanian national team championship',
     'romanian national team championships',
+    'romanian national team champs',
     'romanian national teams championships',
     'romanian national teams', 
     'romanian team championship',
@@ -2599,6 +2655,8 @@ my %MULTI_TYPOS =
     'swedish juniors cs'],
   'Swedish Juniors Pairs' => [
     'swedish junior pair championship',
+    'swedish junior pairs championship',
+    'swedish national junior pair championship',
     'swedish national junior pairs'],
   'Swedish Juniors Teams' => ['swedish juniors teams cs',
     'swedish juniors teams cs', 'swedish junior teams',
@@ -2617,7 +2675,9 @@ my %MULTI_TYPOS =
     'swedish elitserien', 'swedish premier leauge',
     'swedish premieer league'],
   'Swedish Senior Trials' => ['sweden senior trials'],
-  'Swedish Women Trials' => ['swedish women euro trials'],
+  'Swedish Women Trials' => [
+    'sweden women euro trials',
+    'swedish women euro trials'],
 
   # SWITZERLAND
   'Swiss Championship' => ['champion suisse', 'championnat suisse',
@@ -2639,7 +2699,10 @@ my %MULTI_TYPOS =
   'Taiwanese Senior Trials' => ['ctcba senior team trial'],
   'Taiwanese Teams' => ['taiwanese teal'],
   'TATA Open' => ['tata opren', 'tata sports', 'ttat open'],
-  'Telkom Indonesia Open' => ['telkom indonesian open'],
+  'Telkom Indonesia Open' => [
+    'telkom cup',
+    'telkom speedy',
+    'telkom indonesian open'],
   'Teltscher Trophy' => ['teltcher trophy'],
   'TGR Auction Pairs' => ["tgr's auction pairs",
     'tgrs auction pair', 'tgrs auction pairs'],
@@ -2648,7 +2711,8 @@ my %MULTI_TYPOS =
     'tgrs league', 'tgrs 2nd auction pairs', 'tgrs super league',
     "tgr's league", "trg's super league"],
   'Thane Champion of Champions Teams' => [
-    'tdba champion of champions'],
+    'tdba champion of champions',
+    'thane bridge annual'],
   'Thanos Capayiannides Memorial Simultaneous' => [
     'thanos capayiannides'],
   'The Hague Bridge Experience' => ['the hague bride experience',
@@ -2676,6 +2740,7 @@ my %MULTI_TYPOS =
 
   # TURKEY
   'Turkish Club Championship' => ['türkýye kulüplerarasi þampýyonasi',
+    'turkey club teams championship',
     'türkýye klüpler arasi brýç þampýyonasi',
     'turkish club teams championship',
     'turkish club championships',
@@ -2718,7 +2783,11 @@ my %MULTI_TYPOS =
     'turkiye acik takimlar sampiyonasi',
     'turkish national open teams'],
   'Turkish Open Trials' => [
+    'turkish national team selection',
+    'turkish national open team selection',
+    'turkish open national team selection',
     'turkish open team selection',
+    'turkey open national team selection',
     'turkey open team trials', 
     'turkish open team trials'],
   'Turkish Swiss Mixed Teams' => ['turkey swiss mixed teams'],
@@ -2738,6 +2807,7 @@ my %MULTI_TYPOS =
     'turkish womens teams championship'],
   'Turkish Women Trials' => [
     'turkish woman national selection',
+    'turkish woman team trials',
     'turkish women national selection',
     'turkish women team selection'],
 
@@ -2793,6 +2863,7 @@ my %MULTI_TYPOS =
   'Warsaw Online Teams' => ['enthusiast bridge zlot', 
     'warsaw bboers champ', 'warsaw bboers championship'],
   'Watermark Bridge Classic' => ['watermark teams'],
+  'WCG Open' => ['wcg annual'],
   'Wellingdon Swiss Pairs' => ['wsc open swiss pairs championship',
     'wsc open swisspairs championship', 'wsc swiss open pairs'],
   'Western Mediterranean Club Teams' => [

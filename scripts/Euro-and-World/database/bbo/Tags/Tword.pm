@@ -14,8 +14,7 @@ our @EXPORT = qw(set_hashes);
 my @MULTI_WORDS =
 (
   'First Division',
-  'Invitational Bridge Meeting',
-  "New Year's Teams"
+  'Invitational Bridge Meeting'
 );
 
 my %MULTI_TYPOS =
@@ -27,7 +26,6 @@ my %MULTI_TYPOS =
     'the longest day charity on the shortest day'],
   'First Division' => ['1_ division', '1st division', 'd1', 
     'division1', 'division 1', 'i liga', '1_division', 'a division'],
-  "New Year's Teams" => ['new year greet tm'],
   Trial => ['prueba de seleccion', 'test event']
 );
 
