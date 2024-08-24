@@ -83,6 +83,7 @@ my @MULTI_WORDS =
   # AUSTRALIA
   'Australian Autumn National Open Teams',
   'Australian Grand National Open Teams',
+  'Australian Junior Teams',
   'Australian National Open Teams',
   'Australian National Senior Teams',
   'Australian National Women Teams',
@@ -90,7 +91,7 @@ my @MULTI_WORDS =
   'Australian Open Trials',
   'Australian Seniors Pairs',
   'Australian Seniors Teams',
-  'Australian Seniors Trials',
+  'Australian Senior Trials',
   'Australian Spring Open Teams',
   'Australian Spring Seniors Teams',
   "Australian Spring Women's Teams",
@@ -195,6 +196,7 @@ my @MULTI_WORDS =
   # CHILE
   'Chilean Cup',
   'Chilean Pairs',
+  'Chilean Invitational Teams',
   'Chilean Open Teams',
   'Chilean Senior Teams',
   'Chilean Team Trials',
@@ -628,6 +630,7 @@ my @MULTI_WORDS =
   'Nordic Junior Team Championship',
   'Nordic Open Championship',
   'Nordic Race',
+  'Nordic Security Pro-Am Pairs',
   'Nordic Team Championship',
   'Nordic Women Championship',
   'North American Bridge Championship',
@@ -665,6 +668,7 @@ my @MULTI_WORDS =
   'Olrud Easter Swiss Teams',
   'Olrud Easter Teams',
   'Open Catalunya Preferent',
+  'Otters Inter-Club Teams',
 
   ### PPP
 
@@ -738,6 +742,9 @@ my @MULTI_WORDS =
   'Puutalo Open',
   'PYC Hindu Gymkhana Royale',
   'PYC Hindu Gymkhana Pairs Royale',
+
+  'Queensland Women Trials',
+  'Queensland Senior Trials',
 
   ### RRR
 
@@ -831,6 +838,7 @@ my @MULTI_WORDS =
   'South American Senior Trials',
   'South American Seniors Teams',
   'South American Women Teams',
+  'South American Women Trials',
   'South American Trials',
 
   'South Zone Championship',
@@ -961,6 +969,7 @@ my @MULTI_WORDS =
   'Vanderbilt Fantasy Challenge',
   'Varna Titan Teams',
   'Vasil Levski Cup',
+  'Venezuelan Mixed Teams',
   'Venezuelan Swiss Pairs',
   'Venice Cup',
   'Vest-Agder Regional Team Championship',
@@ -1193,11 +1202,13 @@ my %MULTI_TYPOS =
     'aust seniors open', 
     'aust senriors open', 
     'australian seniors', 
+    'australian senior teams', 
     'australain seniors',
     'sen australian'],
-  'Australian Seniors Trials' => [
+  'Australian Senior Trials' => [
     'australian senior trials',
-    'australian seniors trial'],
+    'australian seniors trial',
+    'australian seniors trials'],
   'Australian Spring Open Teams' => ['spring national open teams',
     'spring open teams'],
   'Australian Spring Seniors Teams' => ['aust spring seniors teams',
@@ -1596,7 +1607,8 @@ my %MULTI_TYPOS =
     'european junior teams',
     'european junior teams championships',
     'euroepan junior teams championships',
-    'european juniors championship'],
+    'european juniors championship',
+    'european juniors championships'],
   'European Mixed Bridge Championship' => [
     'euro mixed teams',
     'european mixed teams',
@@ -2158,6 +2170,8 @@ my %MULTI_TYPOS =
     'tournoi des champions',
     'tournoi des champions barriere'],
   'Moscow Sunday Times' => ['russian sunday times'],
+  'Murat Kilercioglu Turkish Spring Teams' => [
+    'Murat Kilercioglu Spring Teams'],
 
   ###  NNN
 
@@ -2207,6 +2221,8 @@ my %MULTI_TYPOS =
     'nordic junior teams championship',
     'nordic junior teams championships'],
   'Nordic Open Championship' => ['nordic championship open class'],
+  'Nordic Security Pro-Am Pairs' => [
+    'Nordic Security Play against the stars'],
   'Nordic Team Championship' => ['nordic bridge team championship',
     'nordics', 'nordic team championships'],
   'Nordic Women Championship' => ['nordics (women)'],
@@ -2316,6 +2332,9 @@ my %MULTI_TYPOS =
     'open cataluña preferent', 'open preferent equips',
     'open preferent', 'open equips preferent'],
  'Opening Tournament' => ['opening tournement'],
+  'Otters Inter-Club Teams' => [
+    'otters club open',
+    'otters interclub championship'],
 
   ### PPP
 
@@ -2455,6 +2474,11 @@ my %MULTI_TYPOS =
     'pt_ timah ltd invitational teams'],
   'PYC Hindu Gymkhana Pairs Royale' => ['pyc pairs royale'],
   'Prince Takamatsu Cup' => ['prince takamatsu memorial cup'],
+
+  'Queensland Women Trials' => ['qld womens trials'],
+  'Queensland Senior Trials' => [
+    'qld seniors trial',
+    'qld seniors trials'],
 
   ### RRR
 
@@ -2827,6 +2851,7 @@ my %MULTI_TYPOS =
   'US Seniors' => ['us senior'],
   'US Women' => ['us womens championships'],
   'US Youngsters' => ['u-21 us'],
+  'US Youngster Trials' => ['us u-21 trials'],
   'USBF Challenge Match' => ['usbf jr/pro charity challenge match'],
   'Uttar Pradesh State Championship' => ['up state championship'],
 
