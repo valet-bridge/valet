@@ -1,0 +1,106 @@
+#!perl
+
+package EntryT;
+
+use strict;
+use warnings;
+use v5.10;
+use utf8;
+use open ':std', ':encoding(UTF-8)';
+
+use lib '.';
+
+
+sub new
+{
+  my $class = shift;
+  my $self = bless {}, $class;
+  return $self;
+}
+
+
+sub read
+{
+  my ($self, $fh) = @_;
+
+  %$self = ();
+
+  my $line;
+  return 0 unless defined($line = <$fh>);
+
+  die "Not a BBONO: $line" unless $line =~ /^BBONO\s+(\d+)$/;
+  $self->{BBONO} = $1;
+
+  do
+  {
+    $line = <$fh>;
+    chomp $line;
+  }
+  while ($line ne '');
+
+  while (1)
+  {
+    $line = <$fh>;
+    chomp $line;
+    return 1 if $line eq '';
+
+    if ($line !~ /^([A-Z0-9_]+)\s(.*)$/)
+    {
+      die "$self->{BBONO}: Malformed line $line";
+    }
+
+    my ($tag, $value) = ($1, $2);
+    push @{$self->{$tag}}, $value;
+  }
+
+  return 1;
+}
+
+
+sub tname
+{
+  my ($self) = @_;
+
+  if (exists $self->{TITLE_TNAME})
+  {
+    return $self->{TITLE_TNAME}[0];
+  }
+  else
+  {
+    return '';
+  }
+}
+
+
+sub str
+{
+  my ($self) = @_;
+
+  my $s = "$self->{BBONO}\n";
+
+  for my $order (qw(TITLE_ TEAM1_ TEAM2_ EVENT_ DATE_))
+  {
+    for my $key (sort keys %$self)
+    {
+      if ($key =~ /^$order/)
+      {
+        $s .= "$self->{$key}\n";
+      }
+    }
+  }
+
+  if (exists $self->{BOARDS})
+  {
+    $s .= "$self->{BOARDS}\n";
+  }
+
+  if (exists $self->{SCORING})
+  {
+    $s .= "$self->{SCORING}\n";
+  }
+
+  return "$s\n";
+}
+
+
+1;

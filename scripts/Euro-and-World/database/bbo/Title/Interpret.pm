@@ -317,7 +317,7 @@ sub finish_numeral
       $tname eq 'Geologi Cup' ||
       $tname eq "Kepri Governor's Cup")
   {
-    $token->set_general('SINGLETON', 'ORDINAL', $value);
+    $token->set_general('COUNTER', 'ORDINAL', $value);
     $chain->complete('EXPLAINED');
     return 1;
   }
@@ -568,7 +568,7 @@ sub finish_roman
   }
   elsif ($value > 12)
   {
-    $token->set_general('SINGLETON', 'ORDINAL', $value);
+    $token->set_general('COUNTER', 'ORDINAL', $value);
     $chain->complete('EXPLAINED');
     return 1;
   }
@@ -583,7 +583,7 @@ sub finish_roman
   else
   {
     # Roman is OK.
-    $token->set_general('SINGLETON', 'ORDINAL', $value);
+    $token->set_general('COUNTER', 'ORDINAL', $value);
     $chain->complete('EXPLAINED');
     return 1;
   }
@@ -631,8 +631,8 @@ sub finish_ambiguous
     if ($value =~ /^O (\d+)$/)
     {
       one_to_two_chains($chains, $chain, $cno, $token,
-        'MARKER', 'GENDER', 'Open',
-        'MARKER', 'AGE', 'Open');
+        'SINGLETON', 'GENDER', 'Open',
+        'SINGLETON', 'AGE', 'Open');
       return 1;
     }
     elsif ($value =~ /^W (\d+)$/)
@@ -738,7 +738,7 @@ sub post_process_pair
   {
     $chain0->complete('KILLED');
 
-    $token1->set_general('SINGLETON', 'ORDINAL', $value1);
+    $token1->set_general('COUNTER', 'ORDINAL', $value1);
     $chain1->complete('EXPLAINED');
     return 1;
   }

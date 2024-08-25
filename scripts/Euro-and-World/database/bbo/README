@@ -1,12 +1,14 @@
-Title, finish_ordinal: Move the test for > 12 to end of method?
-Make a diff
+Dump the entire Knowledge
+Read in the entire Knowledge
+Filter on the German Meets and Tnames
+All expected tags not contradicted in data
+Nothing extra in data
+
 
 Order Tname by the structure that I want later.
 
 Mo i Rana Ladies Invitational: 
 https://www.bridge.no/Turneringer/Turneringsresultater/Tidligere-aars-resultater/Resultater-2008-09
-
-Work on tname, meet
 
 Scrapers:
 Use dates added in cook.pl

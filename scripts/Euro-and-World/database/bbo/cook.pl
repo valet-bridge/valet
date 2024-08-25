@@ -65,7 +65,7 @@ my $stats_title = Stats->new();
 die "perl cook.pl raw.txt [bbono]" unless ($#ARGV == 0 || $#ARGV == 1);
 
 my $print_chains = 1; # 1 if we dump results for further analysis
-my $csv_flag = 1;
+my $csv_flag = 0;
 
 my @RAW_FIELDS = qw(BBONO TITLE EVENT SCORING TEAMS);
 
@@ -83,6 +83,13 @@ if ($#ARGV == 1)
 {
   $debug_flag = 1;
   $debug_bbono = $ARGV[1];
+}
+
+my $add_dates_flag = 1; # Output DATE_ADDED with the knowledge
+my %dates_added;
+if ($add_dates_flag)
+{
+  read_dates_added('dates/dates.txt', \%dates_added);
 }
 
 
@@ -121,7 +128,7 @@ while ($line = <$fh>)
     next;
   }
 
-  if ($debug_flag)
+  if ($debug_flag && defined $debug_bbono)
   {
     next unless $chunk{BBONO} == $debug_bbono;
   }
@@ -258,6 +265,7 @@ while ($line = <$fh>)
 
 
   next if ! $debug_flag &&
+     ! $print_chains &&
      (chains_done(\@chains_title) &&
       chains_done($chains_team{TEAM1}) &&
       chains_done($chains_team{TEAM2}) &&
@@ -275,6 +283,18 @@ while ($line = <$fh>)
       print_chains_by_tag(\@{$chains_team{$team}}, $team);
     }
     print_chains_by_tag(\@chains_event, "EVENT");
+
+    if ($add_dates_flag)
+    {
+      if (exists $dates_added{$chunk{BBONO}})
+      {
+        print "DATE_ADDED ", $dates_added{$chunk{BBONO}}, "\n";
+      }
+      else
+      {
+        # warn "No date added for $chunk{BBONO}";
+      }
+    }
   }
   print "\n";
 }
@@ -411,3 +431,22 @@ sub print_reduction_stats
     printf("%6d%10d\n", $i, $reduction_stats->[$i]);
   }
 }
+
+
+sub read_dates_added
+{
+  my ($fname, $dates) = @_;
+  open my $fh, '<', $fname or die "Cannot read name $!";
+
+  while (my $line = <$fh>)
+  {
+    if ($line !~ /^\s*(\d+)\s+(\d+)\s+(.*)$/)
+    {
+      die "Bad format: $line";
+    }
+
+    my ($seqno, $bbono, $date) = ($1, $2, $3);
+    $dates->{$bbono} = $date;
+  }
+}
+

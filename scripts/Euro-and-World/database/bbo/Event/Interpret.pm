@@ -779,8 +779,8 @@ sub active_milne
     print "$bbono ETRACE-MILNE-1\n" if $TRACE;
     my ($match, $stanza) = ($1, $2);
     one_to_two_chains($chains, $chain, $cno, $token,
-      'MARKER', 'MATCH', 'MARKER', 
-      'STANZA', $1, $2);
+      'MARKER', 'MATCH', $1, 
+      'MARKER', 'STANZA', $2);
   }
   elsif ($field eq 'NUMERAL')
   {

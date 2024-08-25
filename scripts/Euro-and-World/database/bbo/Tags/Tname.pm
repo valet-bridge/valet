@@ -381,6 +381,7 @@ my @MULTI_WORDS =
   'Goulyash by E. Gladysh',
 
   # GERMANY
+  'German Bundesliga',
   'German Club Cup',
   'German Open Pairs',
   'German Open Teams',
@@ -2949,7 +2950,6 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Bundesliga
   Camrose Cavendish
   Reisinger
   Rosenblum
@@ -3000,6 +3000,7 @@ my %SINGLE_TYPOS =
   'FOSS Grand Tournament' => ['foss'],
   'Friendly match' => ['friendly'],
   'German Team Championship' => ['teammeisterschaft'],
+  'German Bundesliga' => ['bundesliga'],
   'Gianarrigo Rona Trophy' => ['rona'],
   'Grand National Open Teams' => ['gnot'],
   'Grand National Teams' => ['gnt'],
