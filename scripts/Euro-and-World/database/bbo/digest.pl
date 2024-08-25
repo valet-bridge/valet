@@ -24,18 +24,25 @@ $parseT->init_links();
 open my $fh, '<', $file or die "Cannot read tfile: $!";
 
 my $num_matches = 0;
+my %hist_matches;
 
 my $entryT = EntryT->new();
 while ($entryT->read($fh))
 {
-  next unless $entryT->tname() ne '' &&
-      $parseT->is_tname($entryT->tname());
+  my $tname = $entryT->tname();
+  next unless $tname ne '' && $parseT->is_tname($tname);
   
   print $entryT->str();
   $num_matches++;
+  $hist_matches{$tname}++;
 }
 
 close $fh;
 
-print "Number of matches: $num_matches\n";
+print "Number of matches: $num_matches\n\n";
+
+for my $key (sort keys %hist_matches)
+{
+  printf("%-30s %4d\n", $key, $hist_matches{$key});
+}
 

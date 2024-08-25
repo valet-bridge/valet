@@ -1,17 +1,32 @@
-Dump the entire Knowledge
-Read in the entire Knowledge
-Filter on the German Meets and Tnames
-All expected tags not contradicted in data
-Nothing extra in data
-
-
-Order Tname by the structure that I want later.
+For an entry:
+- Within the tournament, find the edition by date
+  - What if there's no date?  Is there at least a year then?
+    If not, can we guess a year from BBONO?
+- Validate the central fields against the entry
+  - ORGANIZATION (if present, the same)
+  - COUNTRY (ditto)
+  - CITY
+  - ZONE
+  - FORM
+  - SCORING
+  - GENDER
+  - AGE
+- The edition may have a meet
+  - Must agree if given
+  - Also has an ORGANIZATION, COUNTRY
+  - Also has an EDITION with ORDINAL, YEAR, CITY, DATE_START, DATE_END
+  - In some cases, DATEn_START, DATEn_END (give a WEEKEND as well
+    centrally?)
+- Are there fields in the entry that are not central?
+  teams OK
+  round etc OK
+  More global information: what does it mean?
+- Do we really lists of everything in EntryT?  Conflicts?
 
 Mo i Rana Ladies Invitational: 
 https://www.bridge.no/Turneringer/Turneringsresultater/Tidligere-aars-resultater/Resultater-2008-09
 
 Scrapers:
-Use dates added in cook.pl
 Maybe store scraped pdf's of URL's when available?
 
 13496: Why is Israel not picked up as a team country?
@@ -21,23 +36,6 @@ There are some counters 0_..., e.g. 5203
 * Activate KDEBUG in Knowledge.pm
 * Can we limit TWORD to actual multi-purpose tournament and not
   single words?
-* Syntax for Meet info
-* Syntax for Tname info
-* Individual tournament are version of Tname with year, ...
-
-Output all the cook results into a text file in compact format:
-- a field can probably be a single or a list, { }
-
-Read in that same format
-
-Some things to do deal with:
-- TWORDs can be aggregated and clustered
-- List of actual TNAME profiles, also ordinal guidance,
-  24th was in 2013 etc, list of support points,
-  locations {2013: Lisbon}, display name
-
-Things to deal with in chains:
-- Aggregate TWORD, compare against TNAME clusters
 
 More general stuff
 ------------------

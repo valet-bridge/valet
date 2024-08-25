@@ -381,14 +381,14 @@ my @MULTI_WORDS =
   'Goulyash by E. Gladysh',
 
   # GERMANY
-  'German Bundesliga',
+  'German Bundesliga', # x
   'German Club Cup',
+  'German Mixed Teams', # x
   'German Open Pairs',
-  'German Open Teams',
+  'German Open Teams', # x
   'German Open Trials',
-  'German Team Championship',
   'German Team Trophy',
-  'German Women Pairs',
+  'German Women Pairs', #x
 
   'GHTD Cup',
   'Goksu-Yalikavak Pairs',
@@ -1745,23 +1745,35 @@ my %MULTI_TYPOS =
   'Goulyash by E. Gladysh' => ['goulyash by e_gladysh'],
 
   # GERMANY
-  'German Club Cup' => ['german cup', 'vereinspokal', 
-    'dbv-cup', 'dbv cup'],
+  'German Club Cup' => [
+    'german cup', 
+    'vereinspokal', 
+    'dbv-cup', 
+    'dbv cup',
+    'dbv-pokal'],
+  'German Mixed Teams' => [
+    'deutsche mixed-teammeisterschaft',
+    'deutsche mixed teammeisterschaft'],
   'German Open Pairs' => [
     'german men pairs', 
     'german mens pairs',
     'germany mens pairs'],
   'German Open Teams' => [
+    'offene deutsche teammeisterschaft',
     'offene team meisterschaft',
     'offene team meistershaft', 
     'german open team championships',
     'german open', 
     'german open team',
     'open german team'],
-  'German Open Trials' => ['deutsche open qualifikation'],
+  'German Open Trials' => [
+    'deutsche open qualifikation',
+    'german open qualification'],
   'German Team Championship' => ['deutsche teammeisterschaft'],
-  'German Team Trophy' => ['german bridge team trophy',
-    'german team bridge trophy', 'german bridge trophy', 'dbv-pokal'],
+  'German Team Trophy' => [
+    'german bridge team trophy',
+    'german team bridge trophy', 
+    'german bridge trophy'],
   'German Women Pairs' => ['damen-paar'],
 
   'Golden Jubilee' => ['golden jubily'],

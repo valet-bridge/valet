@@ -72,11 +72,24 @@ sub tname
 }
 
 
+sub str_fields
+{
+  my ($self, $key) = @_;
+
+  my $s = '';
+  for my $v (@{$self->{$key}})
+  {
+    $s .= "$key $v\n";
+  }
+  return $s;
+}
+
+
 sub str
 {
   my ($self) = @_;
 
-  my $s = "$self->{BBONO}\n";
+  my $s = "BBONO $self->{BBONO}\n";
 
   for my $order (qw(TITLE_ TEAM1_ TEAM2_ EVENT_ DATE_))
   {
@@ -84,19 +97,19 @@ sub str
     {
       if ($key =~ /^$order/)
       {
-        $s .= "$self->{$key}\n";
+        $s .= $self->str_fields($key);
       }
     }
   }
 
   if (exists $self->{BOARDS})
   {
-    $s .= "$self->{BOARDS}\n";
+    $s .= $self->str_fields('BOARDS');
   }
 
   if (exists $self->{SCORING})
   {
-    $s .= "$self->{SCORING}\n";
+    $s .= $self->str_fields('SCORING');
   }
 
   return "$s\n";

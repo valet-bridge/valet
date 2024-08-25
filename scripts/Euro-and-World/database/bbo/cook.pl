@@ -104,6 +104,7 @@ my (@reduction_team_stats, @reduction_event_stats, @reduction_title_stats);
 my $unknown_teams = 0;
 my $unknown_events = 0;
 my $unknown_titles = 0;
+my $final_histo_field = 'EXPLAINED';
 
 while ($line = <$fh>)
 {
@@ -228,7 +229,7 @@ while ($line = <$fh>)
     \@chains_title, \%team_countries, 
     $knowledge, \$chunk{SCORING}, $chunk{BBONO});
 
-  refill_histo($histo_event_final, \@chains_event);
+  refill_histo($histo_event_final, \@chains_event, $final_histo_field);
 
   $stats_event->incr(\@chains_event);
 
@@ -247,10 +248,12 @@ while ($line = <$fh>)
     \$chunk{SCORING}, $chunk{BBONO});
 
 
-  refill_histo($histo_title_final, \@chains_title);
+  refill_histo($histo_title_final, \@chains_title, $final_histo_field);
 
-  refill_histo($histo_team_final, \@{$chains_team{TEAM1}});
-  refill_histo($histo_team_final, \@{$chains_team{TEAM2}});
+  refill_histo($histo_team_final, \@{$chains_team{TEAM1}}, 
+    $final_histo_field);
+  refill_histo($histo_team_final, \@{$chains_team{TEAM2}}, 
+    $final_histo_field);
 
   $stats_title->incr(\@chains_title);
 
@@ -305,7 +308,7 @@ exit if $debug_flag;
 
 $histo_team->print();
 
-print "\nHisto open part\n\n";
+print "\nHisto $final_histo_field part\n\n";
 $histo_team_final->print();
 
 $stats_team->print("Team");
@@ -313,7 +316,7 @@ print "\nTotal unknown teams: $unknown_events\n\n";
 
 $histo_event->print();
 
-print "\nHisto open part\n\n";
+print "\nHisto $final_histo_field part\n\n";
 $histo_event_final->print();
 
 $stats_event->print("Event");
@@ -322,7 +325,7 @@ print "\nTotal unknown events: $unknown_events\n\n";
 
 $histo_title->print();
 
-print "\nHisto open part\n\n";
+print "\nHisto $final_histo_field part\n\n";
 $histo_title_final->print();
 
 $stats_title->print("Title");
@@ -338,11 +341,10 @@ exit;
 
 sub refill_histo
 {
-  my ($histo, $chains) = @_;
+  my ($histo, $chains, $status) = @_;
   for my $chain (@$chains)
   {
-    next if $chain->status() eq 'KILLED' ||
-      $chain->status() eq 'EXPLAINED';
+    next unless $chain->status() eq $status;
 
     for my $i (0 .. $chain->last())
     {

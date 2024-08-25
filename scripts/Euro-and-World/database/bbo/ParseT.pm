@@ -21,6 +21,9 @@ my %DIVISIONS =
 
 my @MEET_FIELDS = qw(ORGANIZATION COUNTRY CITY ORIGIN ZONE);
 
+my @TOURNAMENT_FIELDS = qw(ORGANIZATION COUNTRY CITY ORIGIN ZONEo
+  FORM SCORING GENDER AGE);
+
 
 sub new
 {
@@ -32,24 +35,34 @@ sub new
 
 sub set_parse_links
 {
-  my ($self, $dictionary, $key) = @_;
+  my ($self, $meets, $tournaments, $key) = @_;
 
-  for my $meet (sort keys %$dictionary)
+  for my $meet (sort keys %$meets)
   {
     for my $mfield (@MEET_FIELDS)
     {
-      if (exists $dictionary->{$meet}{$mfield})
+      if (exists $meets->{$meet}{$mfield})
       {
-        $self->{MEET}{$mfield} = $dictionary->{$meet}{$mfield};
+        $self->{MEET}{$meet}{$mfield} = $meets->{$meet}{$mfield};
       }
     }
 
-    for my $tname (sort keys %{$dictionary->{$meet}})
+    %{$self->{MEET}{$meet}{EDITIONS}} = %{$meets->{$meet}{EDITIONS}};
+  }
+
+  for my $tournament (sort keys %$tournaments)
+  {
+    for my $tfield (@TOURNAMENT_FIELDS)
     {
-      # Was a meeting field?
-      next if exists $self->{MEET}{$tname};
-      %{$self->{TOURNAMENT}{$tname}} = %{$dictionary->{$meet}{$tname}};
+      if (exists $tournaments->{$tournament}{$tfield})
+      {
+        $self->{TOURNAMENT}{$tournament}{$tfield} = 
+          $tournaments->{$tournament}{$tfield};
+      }
     }
+
+    %{$self->{TOURNAMENT}{$tournament}{EDITIONS}} = 
+      %{$tournaments->{$tournament}{EDITIONS}};
   }
 }
 
