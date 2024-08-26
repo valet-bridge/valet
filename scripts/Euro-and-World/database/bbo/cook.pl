@@ -86,10 +86,11 @@ if ($#ARGV == 1)
 }
 
 my $add_dates_flag = 1; # Output DATE_ADDED with the knowledge
-my %dates_added;
+my (%dates_added, %est_dates);
 if ($add_dates_flag)
 {
   read_dates_added('dates/dates.txt', \%dates_added);
+  read_estimated_dates('dates/estmonth.txt', \%est_dates);
 }
 
 
@@ -293,9 +294,13 @@ while ($line = <$fh>)
       {
         print "DATE_ADDED ", $dates_added{$chunk{BBONO}}, "\n";
       }
+      elsif (my $yyyymm = check_estimated_dates(\%est_dates, $chunk{BBONO}))
+      {
+        print "MONTH_ADDED ", $yyyymm, "\n";
+      }
       else
       {
-        # warn "No date added for $chunk{BBONO}";
+        warn "No date added for $chunk{BBONO}";
       }
     }
   }
@@ -450,5 +455,39 @@ sub read_dates_added
     my ($seqno, $bbono, $date) = ($1, $2, $3);
     $dates->{$bbono} = $date;
   }
+}
+
+
+sub read_estimated_dates
+{
+  my ($fname, $est_dates) = @_;
+  open my $fh, '<', $fname or die "Cannot read name $!";
+
+  while (my $line = <$fh>)
+  {
+    if ($line !~ /^(\d\d\d\d-\d\d)\s+(\d+)\s+(\d+)$/)
+    {
+      die "Bad format: $line";
+    }
+
+    my ($yyyymm, $lo, $hi) = ($1, $2, $3);
+    $est_dates->{$yyyymm} = [$lo, $hi];
+  }
+}
+
+
+sub check_estimated_dates
+{
+  my ($est_dates, $bbono) = @_;
+
+  for my $key (keys %$est_dates)
+  {
+    my $pair = $est_dates->{$key};
+    if ($bbono >= $pair->[0] && $bbono <= $pair->[1])
+    {
+      return $key;
+    }
+  }
+  return 0;
 }
 

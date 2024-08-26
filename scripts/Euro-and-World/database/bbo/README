@@ -1,3 +1,8 @@
+In cook.txt
+- Read in dates/estmonth.txt
+- Use it to write an estimated MONTH_ADDED when DATE_ADDED is missing
+- Flag the missing ones from the cracks
+
 For an entry:
 - Within the tournament, find the edition by date
   - What if there's no date?  Is there at least a year then?

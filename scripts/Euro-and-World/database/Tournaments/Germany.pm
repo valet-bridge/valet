@@ -973,7 +973,7 @@ my %TOURNAMENTS_GERMANY =
           {
             YEAR => 2009,
             DATE_START => '2009-04-24',
-            DATE_END => '2004-04-26'
+            DATE_END => '2009-04-26'
           } 
         ]
       }
