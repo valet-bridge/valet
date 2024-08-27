@@ -16,6 +16,7 @@ sub new
 
   $self->read_dates_added('dates/dates.txt');
   $self->read_estimated_dates('dates/estmonth.txt');
+  $self->read_dates_manual('dates/hardwired.txt');
   return $self;
 }
 
@@ -56,6 +57,25 @@ sub read_estimated_dates
 }
 
 
+sub read_dates_manual
+{
+  my ($self, $fname, $dates) = @_;
+  open my $fh, '<', $fname or die "Cannot read name $!";
+
+  while (my $line = <$fh>)
+  {
+    if ($line !~ /^(\d+)\s+(.*)$/)
+    {
+      die "Bad format: $line";
+    }
+
+    my ($bbono, $date) = ($1, $2);
+    $self->{MANUAL}{$bbono} = $date;
+  }
+}
+
+
+
 sub check_estimated_dates
 {
   my ($self, $bbono) = @_;
@@ -84,9 +104,13 @@ sub estimate_time_field
   {
     return "MONTH_ADDED " . $yyyymm . "\n";
   }
+  if (exists $self->{MANUAL}{$bbono})
+  {
+    return "MONTH_ADDED " . $self->{MANUAL}{$bbono} . "\n";
+  }
   else
   {
-    warn "No date added for $bbono";
+    print "TTT No date added for $bbono";
     return '';
   }
 }
