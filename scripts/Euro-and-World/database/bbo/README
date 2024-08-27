@@ -1,7 +1,15 @@
 In cook.txt
-- Read in dates/estmonth.txt
-- Use it to write an estimated MONTH_ADDED when DATE_ADDED is missing
-- Flag the missing ones from the cracks
+- Just hardwire the last 350 or so numbers
+
+From ParseT, return the edition matching a tname
+Be able to generate an EntryT from ParseT
+In EntryT, be able to prune the BBO entry using the parsed entry,
+leaving other fields
+For a given tname+edition, store a list of BBONO
+Store a large list of pruned EntryT for each BBONO
+I guess only some fields in EntryT are allowed to survive
+To output, loop over keys of tname+edition, then numerically in order
+  over BBONO for that key
 
 For an entry:
 - Within the tournament, find the edition by date
