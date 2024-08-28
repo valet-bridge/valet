@@ -85,7 +85,21 @@ sub check_estimated_dates
     my $pair = $self->{RANGES}{$key};
     if ($bbono >= $pair->[0] && $bbono <= $pair->[1])
     {
-      return $key;
+      # Here we can return the $key if we want the format YYYY-DD.
+      # But let's actually guess a date.
+      while ($bbono >= 1 && ! exists $self->{ADDED}{$bbono})
+      {
+        $bbono--;
+      }
+
+      if (exists $self->{ADDED}{$bbono})
+      {
+        return $self->{ADDED}{$bbono} 
+      }
+      else
+      {
+        return 0;
+      }
     }
   }
   return 0;
@@ -100,13 +114,13 @@ sub estimate_time_field
   {
     return "DATE_ADDED " . $self->{ADDED}{$bbono} . "\n";
   }
-  elsif (my $yyyymm = $self->check_estimated_dates($bbono))
+  elsif (my $date = $self->check_estimated_dates($bbono))
   {
-    return "MONTH_ADDED " . $yyyymm . "\n";
+    return "DATE_ADDED " . $date . "\n";
   }
   if (exists $self->{MANUAL}{$bbono})
   {
-    return "MONTH_ADDED " . $self->{MANUAL}{$bbono} . "\n";
+    return "DATE_ADDED " . $self->{MANUAL}{$bbono} . "\n";
   }
   else
   {
