@@ -15,15 +15,16 @@ sub new
   my $self = bless {}, $class;
 
   $self->read_dates_added('dates/dates.txt');
+  $self->read_dates_manual('dates/overrides.txt', 'ADDED');
   $self->read_estimated_dates('dates/estmonth.txt');
-  $self->read_dates_manual('dates/hardwired.txt');
+  $self->read_dates_manual('dates/hardwired.txt', 'MANUAL');
   return $self;
 }
 
 
 sub read_dates_added
 {
-  my ($self, $fname, $dates) = @_;
+  my ($self, $fname) = @_;
   open my $fh, '<', $fname or die "Cannot read name $!";
 
   while (my $line = <$fh>)
@@ -41,7 +42,7 @@ sub read_dates_added
 
 sub read_estimated_dates
 {
-  my ($self, $fname, $est_dates) = @_;
+  my ($self, $fname) = @_;
   open my $fh, '<', $fname or die "Cannot read name $!";
 
   while (my $line = <$fh>)
@@ -59,7 +60,7 @@ sub read_estimated_dates
 
 sub read_dates_manual
 {
-  my ($self, $fname, $dates) = @_;
+  my ($self, $fname, $self_field) = @_;
   open my $fh, '<', $fname or die "Cannot read name $!";
 
   while (my $line = <$fh>)
@@ -70,7 +71,7 @@ sub read_dates_manual
     }
 
     my ($bbono, $date) = ($1, $2);
-    $self->{MANUAL}{$bbono} = $date;
+    $self->{$self_field}{$bbono} = $date;
   }
 }
 

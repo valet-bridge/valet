@@ -31,10 +31,19 @@ while ($entryT->read($fh))
 {
   my $tname = $entryT->field('TITLE_TNAME');
   next if $tname eq '';
-  my $edition = $parseT->get_edition($tname, $entryT->field('DATE_ADDED'));
+
+if ($entryT->bbono() eq 711)
+{
+  # print "HERE\n";
+}
+
+  my ($edition, $chapter) = 
+    $parseT->get_edition_and_chapter($tname, $entryT->field('DATE_ADDED'));
+
   next if $edition eq '';
   
   print "EDITION $edition\n";
+  print "CHAPTER $chapter\n";
   print $entryT->str();
   $num_matches++;
   $hist_matches{$tname}++;
@@ -42,10 +51,11 @@ while ($entryT->read($fh))
 
 close $fh;
 
-print "Number of matches: $num_matches\n\n";
-
 for my $key (sort keys %hist_matches)
 {
   printf("%-30s %4d\n", $key, $hist_matches{$key});
 }
+
+print '-' x 35 . "\n";
+printf("%-30s %4d\n", "Number of matches", $num_matches);
 

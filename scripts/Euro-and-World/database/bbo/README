@@ -1,3 +1,11 @@
+Output:
+Tournament
+Chapter unless SINGLE
+The individual ones
+
+Hence the EntryT per tournament also has a separate chapter component
+
+
 Be able to generate an EntryT from ParseT
 In EntryT, be able to prune the BBO entry using the parsed entry,
 leaving other fields

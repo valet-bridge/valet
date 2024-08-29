@@ -9,7 +9,7 @@ use utf8;
 use open ':std', ':encoding(UTF-8)';
 
 # Can work with YYYY-MM-DD.
-my $daysec = 365 * 24 * 3600;
+my $daysec = 24 * 3600;
 
 use Time::Piece;
 
@@ -24,7 +24,7 @@ sub new
 sub set_by_field
 {
   my ($self, $str) = @_;
-  $self->{BASE} = Time::Piece->strptime($1, "%Y-%m-%d");
+  $self->{BASE} = Time::Piece->strptime($str, "%Y-%m-%d");
 }
 
 
@@ -35,13 +35,13 @@ sub distance
   my $lowerT = Time::Piece->strptime($lower, "%Y-%m-%d");
   my $upperT = Time::Piece->strptime($upper, "%Y-%m-%d");
 
-  if ($lowerT <= $self->{BASE})
+  if ($self->{BASE} < $lowerT)
   {
-    return ($self->{BASE} - $lowerT) / $daysec;
+    return ($lowerT - $self->{BASE}) / $daysec;
   }
-  elsif ($self->{BASE} <= $upperT)
+  elsif ($self->{BASE} > $upperT)
   {
-    return ($upperT - $self->{BASE}) / $daysec;
+    return ($self->{BASE} - $upperT) / $daysec;
   }
   else
   {

@@ -73,6 +73,13 @@ sub field
 }
 
 
+sub bbono
+{
+  my ($self) = @_;
+  return $self->{BBONO};
+}
+
+
 sub str_fields
 {
   my ($self, $key) = @_;
