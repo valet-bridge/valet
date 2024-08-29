@@ -11,6 +11,7 @@ use open ':std', ':encoding(UTF-8)';
 use lib '.';
 use lib '..';
 
+use DateCalc;
 use Tournaments::Germany;
 
 
@@ -80,12 +81,39 @@ sub init_links
 }
 
 
-
-sub is_tname
+sub get_edition
 {
-  my ($self, $tname) = @_;
+  my ($self, $tname, $date_added) = @_;
+  return '' unless exists $self->{TOURNAMENT}{$tname};
+  my $t = $self->{TOURNAMENT}{$tname};
 
-  return exists $self->{TOURNAMENT}{$tname};
+  my $target = DateCalc->new();
+  $target->set_by_field($date_added);
+
+  my $lowest_dist = 9999;
+  my $lowest_edition;
+  for my $edition (keys %{$t->{EDITIONS}})
+  {
+    my $dist = $target->distance($edition,
+      $t->{EDITIONS}{$edition}{DATE_START},
+      $t->{EDITIONS}{$edition}{DATE_END});
+    
+    if ($dist < $lowest_dist)
+    {
+      $lowest_dist = $dist;
+      $lowest_edition = $edition;
+    }
+  }
+
+  if ($lowest_dist <= 7)
+  {
+    # Within one week
+    return $lowest_edition;
+  }
+  else
+  {
+    return '';
+  }
 }
 
 

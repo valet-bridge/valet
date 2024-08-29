@@ -1,7 +1,3 @@
-In cook.txt
-- Just hardwire the last 350 or so numbers
-
-From ParseT, return the edition matching a tname
 Be able to generate an EntryT from ParseT
 In EntryT, be able to prune the BBO entry using the parsed entry,
 leaving other fields
@@ -12,9 +8,6 @@ To output, loop over keys of tname+edition, then numerically in order
   over BBONO for that key
 
 For an entry:
-- Within the tournament, find the edition by date
-  - What if there's no date?  Is there at least a year then?
-    If not, can we guess a year from BBONO?
 - Validate the central fields against the entry
   - ORGANIZATION (if present, the same)
   - COUNTRY (ditto)

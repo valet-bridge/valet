@@ -57,13 +57,14 @@ sub read
 }
 
 
-sub tname
+sub field
 {
-  my ($self) = @_;
+  my ($self, $field) = @_;
 
-  if (exists $self->{TITLE_TNAME})
+  if (exists $self->{$field})
   {
-    return $self->{TITLE_TNAME}[0];
+    # TODO For now.  What is there is more than one?
+    return $self->{$field}[0];
   }
   else
   {

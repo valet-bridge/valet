@@ -29,9 +29,12 @@ my %hist_matches;
 my $entryT = EntryT->new();
 while ($entryT->read($fh))
 {
-  my $tname = $entryT->tname();
-  next unless $tname ne '' && $parseT->is_tname($tname);
+  my $tname = $entryT->field('TITLE_TNAME');
+  next if $tname eq '';
+  my $edition = $parseT->get_edition($tname, $entryT->field('DATE_ADDED'));
+  next if $edition eq '';
   
+  print "EDITION $edition\n";
   print $entryT->str();
   $num_matches++;
   $hist_matches{$tname}++;
