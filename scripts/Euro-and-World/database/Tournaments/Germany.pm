@@ -1062,7 +1062,7 @@ my %TOURNAMENTS_GERMANY =
           {
             YEAR => 2015,
             DATE_START => '2015-05-23',
-            DATE_END => '2015-05-24'
+            DATE_END => '2015-05-25'
           } 
         }
       },
@@ -1076,7 +1076,7 @@ my %TOURNAMENTS_GERMANY =
           {
             YEAR => 2016,
             DATE_START => '2016-05-14',
-            DATE_END => '2016-05-15'
+            DATE_END => '2016-05-16'
           } 
         }
       }

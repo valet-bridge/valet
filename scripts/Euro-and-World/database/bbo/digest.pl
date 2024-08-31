@@ -40,7 +40,8 @@ while ($entryT->read($fh))
   }
 
   my ($edition, $chapter) = 
-    $parseT->get_edition_and_chapter($tname, $entryT->field('DATE_ADDED'));
+    $parseT->get_edition_and_chapter($tname, 
+      $entryT->field('DATE_ADDED'), $entryT->bbono());
 
   next if $edition eq '';
 

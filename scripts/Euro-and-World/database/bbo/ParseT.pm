@@ -90,7 +90,7 @@ sub init_links
 
 sub get_edition_and_chapter
 {
-  my ($self, $tname, $date_added) = @_;
+  my ($self, $tname, $date_added, $bbono) = @_;
   return ('', '') unless exists $self->{TOURNAMENT}{$tname};
   my $t = $self->{TOURNAMENT}{$tname};
 
@@ -121,14 +121,14 @@ sub get_edition_and_chapter
     }
   }
 
-  if ($lowest_dist <= 7)
+  if ($lowest_dist <= 0)
   {
-    # Within one week
+    # 'Within one week' would be 7.
     return ($lowest_edition, $lowest_chapter);
   }
   else
   {
-    warn "Not found (dist $lowest_dist): $tname, $date_added";
+    warn "$bbono not found (dist $lowest_dist): $tname, $date_added";
     return ('', '');
   }
 }

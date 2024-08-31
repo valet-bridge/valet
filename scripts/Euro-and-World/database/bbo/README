@@ -1,6 +1,40 @@
-Reduce distance from 7 to eg 0 or 1
 Make the chapters explicit on other fields
 Search not just for date but for no conflict
+- then maximize positive matches, eg Final rather than no Final
+When outputting a chapter, sort by the counter?
+Make more chapters, e.g. Round-robin, Semi-Final, Final, Swiss
+
+German Open Teams, 2016: ROUND
+German Mixed Teams, 2016: ROUND
+Gro's Supercup, 2016: SESSION (for some)
+German Team Trophy, 2016: ROUND
+German Open Trials, 2016: SESSION
+German Bundesliga, 2016: ROUND+SESSION (SEGMENT!)
+German Open Trials, 2016: PHASE(2)+SEGMENT
+German Bundesliga, 2016: ROUND+SESSION (SEGMENT!)
+German Bundesliga, 2016: ROUND+sometimes SESSION (SEGMENT!)
+German Club Cup, 2015: SEGMENT
+German Open Teams, 2015: ROUND, later SEGMENT in SF
+German Mixed Teams, 2015: ROUND
+Gro's Supercup, 2015: SESSION (for some)
+German Team Trophy, 2015: ROUND
+German Bundesliga, 2015: ROUND+SESSION (SEGMENT!)
+German Club Cup, 2014: SEGMENT
+German Open Teams, 2014: ROUND, later SEGMENT in SF
+
+DATE_ADDED and EVENT_DATE: Consolidate
+TITLE_STAGE and EVENT_STAGE sometimes don't agree (F and SF)
+  Maybe title stage is elimination and can include F, SF, ...?
+Have some kind of major and minor counter
+Homogenize
+If all rounds are "of 13", then enforce
+OK to turn SESSION into SEGMENT
+Better order of chapter output:
+BBONO, DATE_ADDED, STAGE, counters, teams, boards
+TWORD Championship can be killed
+Add URLs
+Store pdf's showing also player names
+
 
 For an entry:
 Mo i Rana Ladies Invitational: 
