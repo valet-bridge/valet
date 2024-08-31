@@ -775,7 +775,7 @@ my @SINGLE_WORDS = qw(
    Kamelåså Kamikaze Kangaroo Kanin Karo Kartel Kat Kingkong Kings 
    KISS KKKQ Kompisarna Kuglana Kuhmilch 
 
-   Laplanders Lazy Lebensohl Liggeunderlaget Lion Lions Lirarna 
+   Lady Laplanders Lazy Lebensohl Liggeunderlaget Lion Lions Lirarna 
    Liverbird Lucky LVBridgeBums Løwene
 
    Maestroi Magi Magic Magister Maharaja Major MajorB Majorn Majority 

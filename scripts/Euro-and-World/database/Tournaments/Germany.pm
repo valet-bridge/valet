@@ -16,7 +16,8 @@ my %MEETS_GERMANY =
   'German Championship Week' =>
   {
     ORGANIZATION => 'DBV',
-    COUNTRY => 'GERMANY',
+    COUNTRY => 'Germany',
+    ORIGIN => 'National',
 
     EDITIONS =>
     {
@@ -66,7 +67,7 @@ my %TOURNAMENTS_GERMANY =
     ORGANIZATION => 'BC Bonn',
     COUNTRY => 'Germany',
     CITY => 'Bonn',
-    ORIGIN => 'National',
+    ORIGIN => 'International',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -976,7 +977,7 @@ my %TOURNAMENTS_GERMANY =
     ORIGIN => 'Invitational',
     ZONE => 'Europe',
     FORM => 'Pairs',
-    SCORING => 'MP',
+    SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 

@@ -5,6 +5,8 @@ The individual ones
 
 Hence the EntryT per tournament also has a separate chapter component
 
+Reduce distance from 7 to eg 0 or 1
+
 
 Be able to generate an EntryT from ParseT
 In EntryT, be able to prune the BBO entry using the parsed entry,

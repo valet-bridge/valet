@@ -41,10 +41,25 @@ if ($entryT->bbono() eq 711)
     $parseT->get_edition_and_chapter($tname, $entryT->field('DATE_ADDED'));
 
   next if $edition eq '';
-  
-  print "EDITION $edition\n";
-  print "CHAPTER $chapter\n";
-  print $entryT->str();
+
+  my ($header_entry, $chapter_entry) = 
+    $parseT->set_header_entry($tname, $edition, $chapter);
+
+  print "===\n\nAs read\n\n";
+  print $entryT->str_as_read();
+
+  print "---\n\nHeader\n\n";
+  print $header_entry->str_header();
+
+  print "---\n\nChapter\n\n";
+  print $chapter unless $chapter eq 'SINGLE';
+  print $chapter_entry->str_chapter();
+
+  $entryT->prune_using($header_entry, $chapter_entry);
+
+  print "---\n\nPruned\n\n";
+  print $entryT->str_as_read();
+
   $num_matches++;
   $hist_matches{$tname}++;
 }

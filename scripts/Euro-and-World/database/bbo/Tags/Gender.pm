@@ -34,7 +34,7 @@ my %SINGLE_TYPOS =
     offene opena)],
   Men => [qw(mens putra pa homme hommes varones)],
   Women => [qw(woman wemen womans womens womvn
-    lady ladies ladie femme femmes damas dames damer dame damen 
+    ladies ladie femme femmes damas dames damer dame damen 
     putri pi wo womvn)],
   Mixed => [qw(mix mixte mýx mixen mixt mixty)]
 );

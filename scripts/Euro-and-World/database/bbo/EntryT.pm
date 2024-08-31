@@ -10,6 +10,77 @@ use open ':std', ':encoding(UTF-8)';
 
 use lib '.';
 
+my @HEADER_FIELDS = qw(
+  TOURNAMENT_ORDINAL
+  TOURNAMENT_NAME
+  ZONE
+  ORIGIN
+  COUNTRY
+  CITY
+  ORGANIZATION
+  FORM
+  SCORING
+  AGE 
+  GENDER
+);
+
+my %HEADER_HASH_CHECK;
+$HEADER_HASH_CHECK{$_} = 1 for @HEADER_FIELDS;
+
+my @CHAPTER_FIELDS = qw(
+  YEAR
+  DATE_START
+  DATE_END
+);
+
+my %CHAPTER_HASH_CHECK;
+$CHAPTER_HASH_CHECK{$_} = 1 for @CHAPTER_FIELDS;
+
+
+my @PRUNE_HEADER_FIELDS = (
+  ['TOURNAMENT_ORDINAL', 'TITLE_ORDINAL'],
+  ['TOURNAMENT_NAME', 'TITLE_TNAME'],
+  ['ZONE', 'TITLE_ZONE'],
+  ['ORIGIN', 'TITLE_ORIGIN'],
+  ['COUNTRY', 'TITLE_COUNTRY'],
+  ['CITY', 'TITLE_CITY'],
+  ['ORGANIZATION', 'TITLE_ORGANIZATION'],
+  ['FORM', 'TITLE_FORM'],
+  ['FORM', 'TEAM1_FORM'],
+  ['FORM', 'TEAM2_FORM'],
+  ['SCORING', 'TITLE_SCORING'],
+  ['SCORING', 'SCORING'],
+  ['AGE', 'TITLE_AGE'],
+  ['GENDER', 'TITLE_GENDER']
+);
+
+my @PRUNE_CHAPTER_FIELDS = (
+  ['YEAR', 'TITLE_YEAR']
+);
+
+my %SCORING_CORRECTIONS = (
+  # Says P in BBO file, but is IMPs
+  "Gro's Supercup" => [15059, 15070, 
+    19725, 19732, 19745,
+    24988, 24989, 29535, 29536, 29540, 29541, 29548, 29549,
+    34123, 34129, 34132, 34133,
+    39117, 39120, 39145, 39146, 39151,
+    44699, 44700, 44702, 44704, 44709, 44710, 44723, 44724,
+    44730, 44731, 44736, 44737, 44738, 44739, 44764, 44765, 44766]
+);
+
+my %FORM_CORRECTIONS = (
+  # Says Team 1, Team 2 in BBO file, but is pairs
+  'German Women Pairs' => [26011, 26021, 26028],
+  "Gro's Supercup" => [15059, 15070, 
+    19725, 19732, 19745,
+    24988, 24989,
+    29535, 29536, 29540, 29541, 29548, 29549,
+    34116, 34117, 34121, 34123, 34129, 34132, 34133,
+    44699, 44700, 44702, 44704, 44709, 44710, 44723, 44724,
+    44730, 44731, 44736, 44737, 44738, 44739, 44764, 44765, 44766]
+);
+
 
 sub new
 {
@@ -57,6 +128,154 @@ sub read
 }
 
 
+sub set
+{
+  my ($self, $fields) = @_;
+  for my $tag (keys %$fields)
+  {
+    $self->{$tag} = $fields->{$tag};
+  }
+}
+
+
+sub prune_field_using
+{
+  my ($self, $field, $value, $header) = @_;
+
+  return unless defined $self->{$field};
+  my $len = $#{$self->{$field}};
+  for my $i (0 .. $len)
+  {
+    if ($self->{$field}[$i] eq $value)
+    {
+      if ($len == 0)
+      {
+        delete $self->{$field};
+      }
+      else
+      {
+        splice(@{$self->{$field}}, $i, 1);
+      }
+      return;
+    }
+  }
+
+  if ($field eq 'SCORING')
+  {
+    die "Multiple scoring values" unless $len == 0;
+    my $read = $self->{$field}[0];
+    if (($read eq 'I' && $value eq 'IMP') ||
+        ($read eq 'P' && ($value eq 'MP' || $value eq 'Pairs')))
+    {
+      delete $self->{$field};
+      return;
+    }
+
+    if ($read eq 'P' && $value eq 'IMP')
+    {
+      if (exists $header->{TOURNAMENT_NAME})
+      {
+        my $tname = $header->{TOURNAMENT_NAME};
+        if (exists $SCORING_CORRECTIONS{$tname})
+        {
+          for my $ok (@{$SCORING_CORRECTIONS{$tname}})
+          {
+            if ($ok eq $self->{BBONO})
+            {
+              # Value is deemed correct.
+              delete $self->{$field};
+              return;
+            }
+          }
+        }
+      }
+
+      warn "$self->{BBONO}, $header->{TOURNAMENT_NAME}: Scoring";
+      return;
+    }
+  }
+  elsif ($field eq 'TEAM1_FORM' || $field eq 'TEAM2_FORM')
+  {
+    die "Multiple form values" unless $len == 0;
+    my $read = $self->{$field}[0];
+    if ($read eq 'Teams' && $value eq 'Pairs')
+    {
+      if (exists $header->{TOURNAMENT_NAME})
+      {
+        my $tname = $header->{TOURNAMENT_NAME};
+        if (exists $FORM_CORRECTIONS{$tname})
+        {
+          for my $ok (@{$FORM_CORRECTIONS{$tname}})
+          {
+            if ($ok eq $self->{BBONO})
+            {
+              # Value is deemed correct.
+              delete $self->{$field};
+              return;
+            }
+          }
+        }
+      }
+
+      warn "$self->{BBONO}, $header->{TOURNAMENT_NAME}, $field: " .
+        "Form $read, $value";
+      return;
+    }
+  }
+  elsif ($field eq 'TITLE_ORDINAL')
+  {
+    die "Multiple ordinal values" unless $len == 0;
+    my $read = $self->{$field}[0];
+    if ($value !~ /^(\d+)([a-z]+)$/)
+    {
+      die "Strange ordinal: $value";
+    }
+
+    my ($number, $ending) = ($1, $2);
+
+    if ($read ne $number)
+    {
+      die "Ordinal $read is not $number";
+    }
+
+    if ($ending ne 'st' && $ending ne 'nd' &&
+        $ending ne 'rd' && $ending ne 'th')
+    {
+      die "Ordinal ending: $value";
+    }
+
+    delete $self->{$field};
+    return;
+  }
+
+
+  warn "$self->{BBONO}, pruning field $field, value $value, but have " .
+    join '|', @{$self->{$field}};
+}
+
+
+sub prune_using
+{
+  my ($self, $header, $chapter) = @_;
+
+  for my $pair (@PRUNE_HEADER_FIELDS)
+  {
+    $self->prune_field_using($pair->[1], $header->{$pair->[0]}, $header) if
+      exists $header->{$pair->[0]};
+  }
+
+  for my $pair (@PRUNE_CHAPTER_FIELDS)
+  {
+    $self->prune_field_using($pair->[1], $chapter->{$pair->[0]}, $header) if
+      exists $chapter->{$pair->[0]};
+  }
+
+
+  # TODO TWORD?
+
+}
+
+
 sub field
 {
   my ($self, $field) = @_;
@@ -93,11 +312,12 @@ sub str_fields
 }
 
 
-sub str
+sub str_as_read
 {
   my ($self) = @_;
 
-  my $s = "BBONO $self->{BBONO}\n";
+  my $s;
+  $s = "BBONO $self->{BBONO}\n";
 
   for my $order (qw(TITLE_ TEAM1_ TEAM2_ EVENT_ DATE_))
   {
@@ -121,6 +341,43 @@ sub str
   }
 
   return "$s\n";
+}
+
+
+sub str_by_ordered_fields
+{
+  my ($self, $fields, $check_fields) = @_;
+
+  my $s = '';
+
+  for my $key (@$fields)
+  {
+    # This form of an entry only has one value per key.
+    $s .= "$key $self->{$key}\n" if exists $self->{$key};
+  }
+
+  for my $key (keys %$self)
+  {
+    warn "Unprinted field $key" unless exists $check_fields->{$key};
+  }
+
+  return "$s\n";
+}
+
+
+sub str_header
+{
+  my ($self) = @_;
+  return $self->str_by_ordered_fields(\@HEADER_FIELDS,
+    \%HEADER_HASH_CHECK);
+}
+
+
+sub str_chapter
+{
+  my ($self) = @_;
+  return $self->str_by_ordered_fields(\@CHAPTER_FIELDS,
+    \%CHAPTER_HASH_CHECK);
 }
 
 

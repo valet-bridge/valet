@@ -153,16 +153,21 @@ sub transfer_field
 sub set_header_entry
 {
   my ($self, $tname, $edition_str, $chapter_str) = @_;
-  my $entry = EntryT->new();
 
+  my $entry = EntryT->new();
   my %fields;
+
+  my $chapter_entry = EntryT->new();
+  my %chapter_fields;
 
   # In principle we can override meeting-level data with other data,
   # but I'd like to keep it sparse.
 
   my $tournament = $self->{TOURNAMENT}{$tname};
   my $t_edition = $tournament->{EDITIONS}{$edition_str};
-  my $t_chapter = $t_edition->{CHAPTER}{$chapter_str};
+  my $t_chapter = $t_edition->{CHAPTERS}{$chapter_str};
+
+  transfer_field(\%fields, 'TOURNAMENT_NAME', $tname);
 
   if (exists $t_edition->{MEET})
   {
@@ -203,11 +208,13 @@ sub set_header_entry
     }
   }
 
+  $entry->set(\%fields);
+
   for my $tfield (@TOURNAMENT_CHAPTER_FIELDS)
   {
     if (exists $t_chapter->{$tfield})
     {
-      transfer_field(\%fields, $tfield, $t_chapter->{$tfield});
+      transfer_field(\%chapter_fields, $tfield, $t_chapter->{$tfield});
     }
   }
 
@@ -229,8 +236,12 @@ sub set_header_entry
     }
   }
 
-  transfer_field(\%fields, 'DATE_START', $t_chapter->{DATE_START});
-  transfer_field(\%fields, 'DATE_END', $t_chapter->{DATE_END});
+  transfer_field(\%chapter_fields, 'DATE_START', $t_chapter->{DATE_START});
+  transfer_field(\%chapter_fields, 'DATE_END', $t_chapter->{DATE_END});
+
+  $chapter_entry->set(\%chapter_fields);
+
+  return ($entry, $chapter_entry);
 }
 
 
