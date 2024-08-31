@@ -34,7 +34,7 @@ while ($entryT->read($fh))
   my $tname = $entryT->field('TITLE_TNAME');
   next if $tname eq '';
 
-  if ($entryT->bbono() eq 715)
+  if ($entryT->bbono() eq 46441)
   {
     # print "HERE\n";
   }
@@ -63,7 +63,7 @@ close $fh;
 
 for my $date_start (sort keys %data)
 {
-if ($date_start eq '2012-01-20')
+if ($date_start eq '2016-08-26')
 {
   # print "HERE\n";
 }

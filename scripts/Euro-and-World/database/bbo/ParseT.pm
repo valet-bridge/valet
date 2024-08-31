@@ -27,10 +27,15 @@ my @MEET_EDITION_FIELDS = qw(YEAR CITY);
 my @MEET_EDITION_PREFIXED_FIELDS = qw(ORDINAL DATE_START DATE_END);
 
 my @TOURNAMENT_EDITION_PREFIXED_FIELDS = qw(ORDINAL);
-my @TOURNAMENT_CHAPTER_FIELDS = qw(YEAR);
+my @TOURNAMENT_CHAPTER_FIELDS = qw(YEAR MOVEMENT STAGE);
 
 my @TOURNAMENT_FIELDS = qw(ORGANIZATION COUNTRY CITY ORIGIN ZONE
   FORM SCORING GENDER AGE);
+
+my %COMPATIBILITIES = (
+  MOVEMENT => 'EVENT_MOVEMENT',
+  STAGE => 'EVENT_STAGE'
+);
 
 
 sub new
@@ -99,7 +104,8 @@ sub compatibility
   for my $key (keys %$chapter)
   {
     next if $key =~ /[a-z]/; # Skip internal information
-    my $value = $entry->field($key);
+    next unless defined $COMPATIBILITIES{$key};
+    my $value = $entry->field($COMPATIBILITIES{$key});
     next if $value eq '';
     if ($value eq $chapter->{$key})
     {
@@ -124,7 +130,8 @@ sub get_edition_and_chapter
   $target->set_by_field($entry->field('DATE_ADDED'));
 
   my $lowest_dist = 9999;
-  my ($lowest_edition, $lowest_chapter, $lowest_hits);
+  my $lowest_hits = 0;
+  my ($lowest_edition, $lowest_chapter);
   for my $edition_str (keys %{$t->{EDITIONS}})
   {
     my $edition = $t->{EDITIONS}{$edition_str};
@@ -141,7 +148,7 @@ sub get_edition_and_chapter
         $chapter->{DATE_END});
     
       if (($dist < $lowest_dist) ||
-          ($dist == $lowest_dist && $hits < $lowest_hits))
+          ($dist == $lowest_dist && $hits > $lowest_hits))
       {
         $lowest_dist = $dist;
         $lowest_edition = $edition_str;
@@ -270,6 +277,8 @@ sub set_header_entry
   transfer_field(\%chapter_fields, 'DATE_START', $t_chapter->{DATE_START});
   transfer_field(\%chapter_fields, 'DATE_END', $t_chapter->{DATE_END});
   transfer_field(\%chapter_fields, 'WEEKEND', $t_chapter->{WEEKEND});
+  transfer_field(\%chapter_fields, 'MOVEMENT', $t_chapter->{MOVEMENT});
+  transfer_field(\%chapter_fields, 'STAGE', $t_chapter->{STAGE});
 
   $chapter_entry->set(\%chapter_fields);
 

@@ -813,9 +813,17 @@ my %TOURNAMENTS_GERMANY =
         MEET => 'German Championship Week',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            MOVEMENT => 'Swiss',
+            DATE_START => '2016-08-26',
+            DATE_END => '2016-08-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Round-robin',
             DATE_START => '2016-08-26',
             DATE_END => '2016-08-28'
           } 
