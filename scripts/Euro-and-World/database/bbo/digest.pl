@@ -40,8 +40,7 @@ while ($entryT->read($fh))
   }
 
   my ($edition, $chapter) = 
-    $parseT->get_edition_and_chapter($tname, 
-      $entryT->field('DATE_ADDED'), $entryT->bbono());
+    $parseT->get_edition_and_chapter($tname, $entryT);
 
   next if $edition eq '';
 
@@ -56,16 +55,6 @@ while ($entryT->read($fh))
   $entryT->update_tournaments(\%data, $tname, $edition, $chapter,
     $header_entry, $chapter_entry);
 
-  # print "---\n\nHeader\n\n";
-  # print $header_entry->str_header();
-
-  # print "---\n\nChapter\n\n";
-  # print $chapter unless $chapter eq 'SINGLE';
-  # print $chapter_entry->str_chapter();
-
-  # print "---\n\nPruned\n\n";
-  # print $entryT->str_as_read();
-
   $num_matches++;
   $hist_matches{$tname}++;
 }
@@ -74,6 +63,10 @@ close $fh;
 
 for my $date_start (sort keys %data)
 {
+if ($date_start eq '2012-01-20')
+{
+  # print "HERE\n";
+}
   for my $dno (0 .. $#{$data{$date_start}})
   {
     my $datum = $data{$date_start}[$dno];
@@ -82,7 +75,7 @@ for my $date_start (sort keys %data)
     for my $chapter (sort keys %{$datum->{CHAPTER}})
     {
       my $cptr = $datum->{CHAPTER}{$chapter};
-      print "$chapter\n" unless $chapter eq 'SINGLE';
+      # print "$chapter\n" unless $chapter eq 'SINGLE';
       print $cptr->{HEADER}->str_chapter();
 
       for my $i (0 .. $#{$cptr->{LIST}})

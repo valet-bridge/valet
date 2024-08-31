@@ -88,35 +88,65 @@ sub init_links
 }
 
 
+sub compatibility
+{
+  # Not a class method.
+  my ($chapter, $entry) = @_;
+
+  my $hits = 0;
+  my $conflicts = 0;
+
+  for my $key (keys %$chapter)
+  {
+    next if $key =~ /[a-z]/; # Skip internal information
+    my $value = $entry->field($key);
+    next if $value eq '';
+    if ($value eq $chapter->{$key})
+    {
+      $hits++;
+    }
+    else
+    {
+      $conflicts++;
+    }
+  }
+  return ($hits, $conflicts);
+}
+
+
 sub get_edition_and_chapter
 {
-  my ($self, $tname, $date_added, $bbono) = @_;
+  my ($self, $tname, $entry) = @_;
   return ('', '') unless exists $self->{TOURNAMENT}{$tname};
   my $t = $self->{TOURNAMENT}{$tname};
 
   my $target = DateCalc->new();
-  $target->set_by_field($date_added);
+  $target->set_by_field($entry->field('DATE_ADDED'));
 
   my $lowest_dist = 9999;
-  my ($lowest_edition, $lowest_chapter);
+  my ($lowest_edition, $lowest_chapter, $lowest_hits);
   for my $edition_str (keys %{$t->{EDITIONS}})
   {
     my $edition = $t->{EDITIONS}{$edition_str};
     for my $chapter_str (keys %{$edition->{CHAPTERS}})
     {
       my $chapter = $edition->{CHAPTERS}{$chapter_str};
-
       next unless ref($chapter) eq 'HASH';
+
+      my ($hits, $conflicts) = compatibility($chapter, $entry);
+      next unless $conflicts == 0;
 
       my $dist = $target->distance(
         $chapter->{DATE_START},
         $chapter->{DATE_END});
     
-      if ($dist < $lowest_dist)
+      if (($dist < $lowest_dist) ||
+          ($dist == $lowest_dist && $hits < $lowest_hits))
       {
         $lowest_dist = $dist;
         $lowest_edition = $edition_str;
         $lowest_chapter = $chapter_str;
+        $lowest_hits = $hits;
       }
     }
   }
@@ -128,7 +158,8 @@ sub get_edition_and_chapter
   }
   else
   {
-    warn "$bbono not found (dist $lowest_dist): $tname, $date_added";
+    warn "$entry->bbono() not found (dist $lowest_dist): " .
+      "$tname, " . $entry->field('DATE_ADDED');
     return ('', '');
   }
 }
@@ -238,6 +269,7 @@ sub set_header_entry
 
   transfer_field(\%chapter_fields, 'DATE_START', $t_chapter->{DATE_START});
   transfer_field(\%chapter_fields, 'DATE_END', $t_chapter->{DATE_END});
+  transfer_field(\%chapter_fields, 'WEEKEND', $t_chapter->{WEEKEND});
 
   $chapter_entry->set(\%chapter_fields);
 

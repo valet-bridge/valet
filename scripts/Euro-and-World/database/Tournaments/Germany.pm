@@ -301,16 +301,19 @@ my %TOURNAMENTS_GERMANY =
           {
             DATE_START => '2013-01-19',
             DATE_END => '2013-01-20',
+            WEEKEND => 1
           },
           'WEEKEND 2' =>
           {
             DATE_START => '2013-02-16',
             DATE_END => '2013-02-17',
+            WEEKEND => 2
           },
           'WEEKEND 3' =>
           {
             DATE_START => '2013-03-02',
-            DATE_END => '2013-03-03'
+            DATE_END => '2013-03-03',
+            WEEKEND => 3
           } 
         }
       },
@@ -326,16 +329,19 @@ my %TOURNAMENTS_GERMANY =
           {
             DATE_START => '2014-01-18',
             DATE_END => '2014-01-19',
+            WEEKEND => 1
           },
           'WEEKEND 2' =>
           {
             DATE_START => '2014-03-15',
             DATE_END => '2014-03-16',
+            WEEKEND => 2
           },
           'WEEKEND 3' =>
           {
             DATE_START => '2014-04-05',
-            DATE_END => '2014-04-06'
+            DATE_END => '2014-04-06',
+            WEEKEND => 3
           } 
         }
       },
@@ -351,16 +357,19 @@ my %TOURNAMENTS_GERMANY =
           {
             DATE_START => '2015-01-24',
             DATE_END => '2015-01-25',
+            WEEKEND => 1
           },
           'WEEKEND 2' =>
           {
             DATE_START => '2015-03-07',
             DATE_END => '2015-03-08',
+            WEEKEND => 2
           },
           'WEEKEND 3' =>
           {
             DATE_START => '2015-04-25',
-            DATE_END => '2015-04-26'
+            DATE_END => '2015-04-26',
+            WEEKEND => 3
           } 
         }
       },
@@ -376,16 +385,19 @@ my %TOURNAMENTS_GERMANY =
           {
             DATE_START => '2016-01-23',
             DATE_END => '2016-01-24',
+            WEEKEND => 1
           },
           'WEEKEND 2' =>
           {
             DATE_START => '2016-02-20',
             DATE_END => '2016-02-21',
+            WEEKEND => 2
           },
           'WEEKEND 3' =>
           {
             DATE_START => '2016-03-05',
-            DATE_END => '2016-03-06'
+            DATE_END => '2016-03-06',
+            WEEKEND => 3
           } 
         }
       }
@@ -639,12 +651,14 @@ my %TOURNAMENTS_GERMANY =
           'WEEKEND 1' => 
           {
             DATE_START => '2012-01-20',
-            DATE_END => '2012-01-22'
+            DATE_END => '2012-01-22',
+            WEEKEND => 1
           },
           'WEEKEND 2' => 
           {
             DATE_START => '2012-03-09',
-            DATE_END => '2012-03-11'
+            DATE_END => '2012-03-11',
+            WEEKEND => 2
           } 
         }
       },
@@ -673,11 +687,13 @@ my %TOURNAMENTS_GERMANY =
           {
             DATE_START => '2016-02-27',
             DATE_END => '2016-02-28',
+            WEEKEND => 1
           },
           'WEEKEND 2' => 
           {
             DATE_START => '2016-03-12',
-            DATE_END => '2016-03-13'
+            DATE_END => '2016-03-13',
+            WEEKEND => 2
           } 
         }
       }
