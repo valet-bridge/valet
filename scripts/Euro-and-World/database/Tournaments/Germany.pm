@@ -622,7 +622,7 @@ my %TOURNAMENTS_GERMANY =
         YEAR => 2003,
         CHAPTERS => 
         {
-          'SINGLE 1' => 
+          'SINGLE' => 
           {
             DATE_START => '2003-10-07',
             DATE_END => '2003-10-08'

@@ -1,44 +1,8 @@
-Output:
-Tournament
-Chapter unless SINGLE
-The individual ones
-
-Hence the EntryT per tournament also has a separate chapter component
-
 Reduce distance from 7 to eg 0 or 1
-
-
-Be able to generate an EntryT from ParseT
-In EntryT, be able to prune the BBO entry using the parsed entry,
-leaving other fields
-For a given tname+edition, store a list of BBONO
-Store a large list of pruned EntryT for each BBONO
-I guess only some fields in EntryT are allowed to survive
-To output, loop over keys of tname+edition, then numerically in order
-  over BBONO for that key
+Make the chapters explicit on other fields
+Search not just for date but for no conflict
 
 For an entry:
-- Validate the central fields against the entry
-  - ORGANIZATION (if present, the same)
-  - COUNTRY (ditto)
-  - CITY
-  - ZONE
-  - FORM
-  - SCORING
-  - GENDER
-  - AGE
-- The edition may have a meet
-  - Must agree if given
-  - Also has an ORGANIZATION, COUNTRY
-  - Also has an EDITION with ORDINAL, YEAR, CITY, DATE_START, DATE_END
-  - In some cases, DATEn_START, DATEn_END (give a WEEKEND as well
-    centrally?)
-- Are there fields in the entry that are not central?
-  teams OK
-  round etc OK
-  More global information: what does it mean?
-- Do we really lists of everything in EntryT?  Conflicts?
-
 Mo i Rana Ladies Invitational: 
 https://www.bridge.no/Turneringer/Turneringsresultater/Tidligere-aars-resultater/Resultater-2008-09
 

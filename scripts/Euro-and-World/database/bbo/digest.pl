@@ -26,16 +26,18 @@ open my $fh, '<', $file or die "Cannot read tfile: $!";
 my $num_matches = 0;
 my %hist_matches;
 
+my %data;
+
 my $entryT = EntryT->new();
 while ($entryT->read($fh))
 {
   my $tname = $entryT->field('TITLE_TNAME');
   next if $tname eq '';
 
-if ($entryT->bbono() eq 711)
-{
-  # print "HERE\n";
-}
+  if ($entryT->bbono() eq 715)
+  {
+    # print "HERE\n";
+  }
 
   my ($edition, $chapter) = 
     $parseT->get_edition_and_chapter($tname, $entryT->field('DATE_ADDED'));
@@ -45,26 +47,50 @@ if ($entryT->bbono() eq 711)
   my ($header_entry, $chapter_entry) = 
     $parseT->set_header_entry($tname, $edition, $chapter);
 
-  print "===\n\nAs read\n\n";
-  print $entryT->str_as_read();
-
-  print "---\n\nHeader\n\n";
-  print $header_entry->str_header();
-
-  print "---\n\nChapter\n\n";
-  print $chapter unless $chapter eq 'SINGLE';
-  print $chapter_entry->str_chapter();
+  # print "===\n\nAs read\n\n";
+  # print $entryT->str_as_read();
 
   $entryT->prune_using($header_entry, $chapter_entry);
 
-  print "---\n\nPruned\n\n";
-  print $entryT->str_as_read();
+  $entryT->update_tournaments(\%data, $tname, $edition, $chapter,
+    $header_entry, $chapter_entry);
+
+  # print "---\n\nHeader\n\n";
+  # print $header_entry->str_header();
+
+  # print "---\n\nChapter\n\n";
+  # print $chapter unless $chapter eq 'SINGLE';
+  # print $chapter_entry->str_chapter();
+
+  # print "---\n\nPruned\n\n";
+  # print $entryT->str_as_read();
 
   $num_matches++;
   $hist_matches{$tname}++;
 }
 
 close $fh;
+
+for my $date_start (sort keys %data)
+{
+  for my $dno (0 .. $#{$data{$date_start}})
+  {
+    my $datum = $data{$date_start}[$dno];
+    print $datum->{HEADER}->str_header();
+
+    for my $chapter (sort keys %{$datum->{CHAPTER}})
+    {
+      my $cptr = $datum->{CHAPTER}{$chapter};
+      print "$chapter\n" unless $chapter eq 'SINGLE';
+      print $cptr->{HEADER}->str_chapter();
+
+      for my $i (0 .. $#{$cptr->{LIST}})
+      {
+        print $cptr->{LIST}[$i]->str_as_read();
+      }
+    }
+  }
+}
 
 for my $key (sort keys %hist_matches)
 {

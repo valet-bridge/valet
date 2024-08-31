@@ -270,9 +270,100 @@ sub prune_using
       exists $chapter->{$pair->[0]};
   }
 
-
   # TODO TWORD?
+}
 
+
+sub find_tname_index
+{
+  # Not a class method.
+  # For a given DATE_START.
+  my ($data, $date_start, $tname, $index) = @_;
+  return 0 unless exists $data->{$date_start};
+
+  for my $i (0 .. $#{$data->{$date_start}})
+  {
+    if ($data->{$date_start}[$i]{HEADER}{TOURNAMENT_NAME} eq $tname)
+    {
+      $$index = $i;
+      return 1;
+    }
+  }
+  return 0;
+}
+
+
+sub check_tname
+{
+  my ($self, $datum, $tname, $edition, $header_entry) = @_;
+
+  if ($datum->{TOURNAMENT_NAME} ne $tname)
+  {
+    warn "$self->{BBONO}: $datum->{TNAME} vs $tname";
+  }
+
+  for my $key (keys %$header_entry)
+  {
+    if (exists $datum->{$key} && $datum->{$key} ne $header_entry->{$key})
+    {
+      warn "$self->{BBONO}, $key: $datum->{$key} vs $header_entry->{$key}";
+    }
+  }
+}
+
+
+sub check_chapter
+{
+  my ($self, $dchapter, $chapter_entry) = @_;
+
+  for my $key (keys %$chapter_entry)
+  {
+    if (exists $chapter_entry->{$key} && exists $dchapter->{$key})
+    {
+      if ($chapter_entry->{$key} ne $dchapter->{$key})
+      {
+        warn "$self->{BBONO}, $key: $chapter_entry->{$key} vs " .
+          "$dchapter->{$key}";
+      }
+    }
+  }
+}
+
+
+sub update_tournaments
+{
+  my ($self, $data, $tname, $edition, $chapter,
+    $header_entry, $chapter_entry) = @_;
+
+  my $tindex;
+  if (find_tname_index($data, $chapter_entry->{DATE_START},
+    $tname, \$tindex))
+  {
+    my $dhdr = $data->{$chapter_entry->{DATE_START}}[$tindex]{HEADER};
+    $self->check_tname($dhdr, $tname, $edition, $header_entry);
+  }
+  else
+  {
+    $tindex = 1 + $#{$data->{$chapter_entry->{DATE_START}}};
+  }
+
+  $data->{$chapter_entry->{DATE_START}}[$tindex]{HEADER} //= EntryT->new();
+  my $datum = $data->{$chapter_entry->{DATE_START}}[$tindex];
+  $datum->{HEADER}->set($header_entry);
+
+  if (exists $datum->{CHAPTER}{$chapter})
+  {
+    my $dchapter = $datum->{CHAPTER}{$chapter};
+    $self->check_chapter($dchapter, $chapter_entry);
+  }
+
+  $datum->{CHAPTER}{$chapter}{HEADER} //= EntryT->new();
+  my $dchapter = $datum->{CHAPTER}{$chapter};
+  $dchapter->{HEADER}->set($chapter_entry);
+
+  my $dindex = 1 + $#{$dchapter->{LIST}};
+  $dchapter->{LIST}[$dindex] = EntryT->new();
+  $dchapter->{LIST}[$dindex]->set($self);
 }
 
 
@@ -319,7 +410,7 @@ sub str_as_read
   my $s;
   $s = "BBONO $self->{BBONO}\n";
 
-  for my $order (qw(TITLE_ TEAM1_ TEAM2_ EVENT_ DATE_))
+  for my $order (qw(TITLE_ DATE_ EVENT_ TEAM1_ TEAM2_))
   {
     for my $key (sort keys %$self)
     {
