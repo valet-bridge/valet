@@ -1,9 +1,30 @@
-Cleanup of fields:
-*_something -> No prefix, but perhaps better order
+Some counters are ignored:
+HALF
+SESSION
+TABLE?
 
-Implement major/minor:
-1. Look for things to fix, first single major, then major/minor
-2. Within counters, if enough are "of 13", then all are
+When there are two, order by hierarchy, not by count
+
+Tie break for 1D and 2D?
+
+Also analyse the "round of" aspect in analyze.
+
+major_fix
+Should be major already
+flag if not same field name
+
+major_minor_fix
+Should be 2D already
+Could be two same names
+Or one same, match the other
+Or no same, flag
+
+Could return an order in which to output the original list, 0 4 5 2 3 ...
+
+Actually fix in situ in the data, but first practice
+
+When outputting: sort on major if present, then minor if present, then bbono
+
 
 Add URLs
 Store pdf's showing also player names

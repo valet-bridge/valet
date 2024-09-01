@@ -11,6 +11,7 @@ use lib '.';
 
 use ParseT;
 use EntryT;
+use RegCounter;
 
 # Parse the raw output of cook.pl
 # Recognize and check tournaments
@@ -83,6 +84,15 @@ if ($date_start eq '2013-07-20')
       {
         $cptr->{LIST}[$i]->fix_list_tags();
       }
+
+      my $reg_counter = RegCounter->new();
+      for my $i (0 .. $#{$cptr->{LIST}})
+      {
+        $reg_counter->register($cptr->{LIST}[$i]);
+      }
+      $reg_counter->analyze();
+      print "ANALYSIS:\n";
+      print $reg_counter->str_analysis() . "\n";
 
       for my $i (0 .. $#{$cptr->{LIST}})
       {
