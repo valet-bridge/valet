@@ -11,7 +11,7 @@ use open ':std', ':encoding(UTF-8)';
 use lib '.';
 use lib '..';
 
-my @FIELDS = qw(HALF MATCH PHASE QUARTER ROUND SCORING SEGMENT);
+my @FIELDS = qw(PHASE MATCH ROUND SESSION QUARTER HALF SEGMENT TABLE);
 
 my %FIELD_MAP;
 $FIELD_MAP{$FIELDS[$_]} = $_ for (0 .. $#FIELDS);
@@ -58,6 +58,22 @@ sub register
 }
 
 
+sub has_of_structure
+{
+  # Not a class method.
+  my ($hash) = @_;
+
+  my $num = scalar keys %$hash;
+  return 0 if $num != 1;
+
+  for my $key (keys %$hash)
+  {
+    # The first and only one.
+    return $key;
+  }
+}
+
+
 sub analyze
 {
   my ($self) = @_;
@@ -81,7 +97,11 @@ sub analyze
     }
   }
 
-  return if $top_count == 0;
+  if ($top_count == 0)
+  {
+    $self->{ANALYSIS}{FORM} = 'EMPTY';
+    return;
+  }
 
   # Rank the fields by occurrence.
   my @occur;
@@ -100,28 +120,35 @@ sub analyze
 
   @occur = sort { $b->{COUNT} <=> $a->{COUNT} } @occur;
 
-  my $form;
-  my $major = '';
-  my $minor = '';
-  if ($top_no == 2)
-  {
-    $form = 'MAJOR_MINOR';
-    $major = $occur[0]{FIELD};
-    $minor = $occur[1]{FIELD};
-  }
-  elsif ($top_no == 1)
-  {
-    $form = 'MAJOR';
-    $major = $occur[0]{FIELD};
-  }
-  else
-  {
-    warn "No clear picture";
-  }
+  # Keep only the enough for the most frequent number of counters.
+  die "Top number $top_no" unless ($top_no >= 0 && $top_no < 4);
+  $self->{NUM_FIELDS} = $top_no;
+  return if $top_no == 0;
 
-  $self->{ANALYSIS}{FORM} = $form;
-  $self->{ANALYSIS}{MAJOR} = $major;
-  $self->{ANALYSIS}{MINOR} = $minor;
+  splice(@occur, $top_no); 
+
+  # Re-sort by hierarchical order.
+  @occur = sort { $FIELD_MAP{$a->{FIELD}} <=> 
+      $FIELD_MAP{$b->{FIELD}} } @occur;
+
+  for my $i (0 .. $top_no-1)
+  {
+    my $field = $occur[$i]{FIELD};
+    $self->{ANALYSIS}[$i] = $field;
+
+    if (! exists $self->{COUNTER}{$field}{OF})
+    {
+      $self->{OF}[$i] = 0;
+    }
+    elsif (my $of_end = has_of_structure($self->{COUNTER}{$field}{ENDS}))
+    {
+      $self->{OF}[$i] = $of_end;
+    }
+    else
+    {
+      print "WARN: Contradictory OF structure for '$field'\n";
+    }
+  }
 }
 
 
@@ -129,18 +156,18 @@ sub str_analysis
 {
   my ($self) = @_;
 
-  return "No counters at all\n" unless defined $self->{ANALYSIS}{FORM};
-  my $form = $self->{ANALYSIS}{FORM};
+  return "No counters at all\n" unless defined $self->{NUM_FIELDS};
+  my $num_fields = $self->{NUM_FIELDS};
 
-  my $s = "Form $form\n";
-  if ($form eq 'MAJOR_MINOR')
+  my $s = "Number of fields: $num_fields\n";
+  for my $i (0 .. $num_fields-1)
   {
-    $s .= "MAJOR " . $self->{ANALYSIS}{MAJOR} . "\n";
-    $s .= "MINOR " . $self->{ANALYSIS}{MINOR} . "\n";
-  }
-  elsif ($form eq 'MAJOR')
-  {
-    $s .= "MAJOR " . $self->{ANALYSIS}{MAJOR} . "\n";
+    $s .= "FIELD $i: " . $self->{ANALYSIS}[$i];
+    if ($self->{OF}[$i])
+    {
+      $s .= " (of " . $self->{OF}[$i] . ")";
+    }
+    $s .= "\n";
   }
   return $s;
 }

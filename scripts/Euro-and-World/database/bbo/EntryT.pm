@@ -449,6 +449,8 @@ sub fix_list_tags
 
   $self->transfer_list_tag('EVENT_SEGMENT', 'SEGMENT');
 
+  $self->transfer_list_tag('EVENT_HALF', 'HALF');
+
   $self->transfer_list_tag('TITLE_ROUND', 'ROUND');
   $self->transfer_list_tag('EVENT_ROUND', 'ROUND');
 

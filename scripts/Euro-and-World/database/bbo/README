@@ -1,28 +1,17 @@
-Some counters are ignored:
-HALF
-SESSION
-TABLE?
+Make sure major and minor survive from chapter into chapter header
 
-When there are two, order by hierarchy, not by count
+If there is only 'major':
+Map to the leader
+Should all others map to this as well, or be deleted or whatever?
 
-Tie break for 1D and 2D?
+If two:
+Hopefully one of them lines up
+How to map the others?  Depending on circumstances?
 
-Also analyse the "round of" aspect in analyze.
-
-major_fix
-Should be major already
-flag if not same field name
-
-major_minor_fix
-Should be 2D already
-Could be two same names
-Or one same, match the other
-Or no same, flag
-
-Could return an order in which to output the original list, 0 4 5 2 3 ...
 
 Actually fix in situ in the data, but first practice
 
+Could return an order in which to output the original list, 0 4 5 2 3 ...
 When outputting: sort on major if present, then minor if present, then bbono
 
 
