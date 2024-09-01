@@ -26,15 +26,15 @@ my @MEET_FIELDS = qw(ORGANIZATION COUNTRY CITY ORIGIN ZONE);
 my @MEET_EDITION_FIELDS = qw(YEAR CITY);
 my @MEET_EDITION_PREFIXED_FIELDS = qw(ORDINAL DATE_START DATE_END);
 
-my @TOURNAMENT_EDITION_PREFIXED_FIELDS = qw(ORDINAL);
+my @TOURNAMENT_EDITION_PREFIXED_FIELDS = qw(ORDINAL CITY);
 my @TOURNAMENT_CHAPTER_FIELDS = qw(YEAR MOVEMENT STAGE);
 
 my @TOURNAMENT_FIELDS = qw(ORGANIZATION COUNTRY CITY ORIGIN ZONE
   FORM SCORING GENDER AGE);
 
 my %COMPATIBILITIES = (
-  MOVEMENT => 'EVENT_MOVEMENT',
-  STAGE => 'EVENT_STAGE'
+  MOVEMENT => ['EVENT_MOVEMENT', 'TITLE_MOVEMENT'],
+  STAGE => ['EVENT_STAGE', 'TITLE_STAGE']
 );
 
 
@@ -93,6 +93,19 @@ sub init_links
 }
 
 
+sub lookup_among_fields
+{
+  my ($entry, $key) = @_;
+  return '' unless defined $COMPATIBILITIES{$key};
+  for my $ckey (@{$COMPATIBILITIES{$key}})
+  {
+    my $value = $entry->field($ckey);
+    return $value unless $value eq '';
+  }
+  return '';
+}
+
+
 sub compatibility
 {
   # Not a class method.
@@ -104,8 +117,7 @@ sub compatibility
   for my $key (keys %$chapter)
   {
     next if $key =~ /[a-z]/; # Skip internal information
-    next unless defined $COMPATIBILITIES{$key};
-    my $value = $entry->field($COMPATIBILITIES{$key});
+    my $value = lookup_among_fields($entry, $key);
     next if $value eq '';
     if ($value eq $chapter->{$key})
     {
@@ -165,7 +177,7 @@ sub get_edition_and_chapter
   }
   else
   {
-    warn "$entry->bbono() not found (dist $lowest_dist): " .
+    warn $entry->bbono() . " not found (dist $lowest_dist): " .
       "$tname, " . $entry->field('DATE_ADDED');
     return ('', '');
   }

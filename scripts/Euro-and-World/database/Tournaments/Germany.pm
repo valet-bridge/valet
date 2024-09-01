@@ -81,9 +81,19 @@ my %TOURNAMENTS_GERMANY =
         ORDINAL => '19th',
         CHAPTERS => 
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2004,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2004-05-19',
+            DATE_END => '2004-05-20'
+          },
+          'C1' =>
+          {
+            YEAR => 2004,
+            STAGE => => 'Final',
+            major => 'HALF',
             DATE_START => '2004-05-19',
             DATE_END => '2004-05-20'
           } 
@@ -95,10 +105,19 @@ my %TOURNAMENTS_GERMANY =
         ORDINAL => '20th',
         CHAPTERS => 
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2005,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2005-05-04',
+            DATE_END => '2005-05-05'
+          },
+          'C1' =>
+          {
+            YEAR => 2005,
+            STAGE => => 'Final',
+            DATE_START => '2005-05-05',
             DATE_END => '2005-05-05'
           } 
         }
@@ -109,9 +128,27 @@ my %TOURNAMENTS_GERMANY =
         ORDINAL => '21st',
         CHAPTERS => 
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2006,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2006-05-24',
+            DATE_END => '2006-05-25'
+          },
+          'C1' =>
+          {
+            YEAR => 2006,
+            STAGE => 'Consolation',
+            MOVEMENT => 'Swiss',
+            DATE_START => '2006-05-24',
+            DATE_END => '2006-05-25'
+          },
+          'C2' =>
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2006-05-24',
             DATE_END => '2006-05-25'
           } 
@@ -123,10 +160,20 @@ my %TOURNAMENTS_GERMANY =
         ORDINAL => '22nd',
         CHAPTERS => 
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2007,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2007-05-16',
+            DATE_END => '2007-05-17'
+          },
+          'C1' =>
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-05-17',
             DATE_END => '2007-05-17'
           } 
         }
@@ -137,10 +184,20 @@ my %TOURNAMENTS_GERMANY =
         ORDINAL => '23rd',
         CHAPTERS => 
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2008,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2008-04-30',
+            DATE_END => '2008-05-01'
+          },
+          'C1' =>
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-05-01',
             DATE_END => '2008-05-01'
           } 
         }
@@ -151,10 +208,20 @@ my %TOURNAMENTS_GERMANY =
         ORDINAL => '24th',
         CHAPTERS => 
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2009,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2009-05-20',
+            DATE_END => '2009-05-21'
+          },
+          'C1' =>
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-05-21',
             DATE_END => '2009-05-21'
           } 
         }
@@ -165,10 +232,20 @@ my %TOURNAMENTS_GERMANY =
         ORDINAL => '25th',
         CHAPTERS => 
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2010,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2010-05-12',
+            DATE_END => '2010-05-13'
+          },
+          'C1' =>
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-05-13',
             DATE_END => '2010-05-13'
           } 
         }
@@ -179,10 +256,20 @@ my %TOURNAMENTS_GERMANY =
         ORDINAL => '26th',
         CHAPTERS => 
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2011,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2011-06-01',
+            DATE_END => '2011-06-02'
+          },
+          'C1' =>
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-06-02',
             DATE_END => '2011-06-02'
           } 
         }
@@ -193,10 +280,20 @@ my %TOURNAMENTS_GERMANY =
         ORDINAL => '27th',
         CHAPTERS => 
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2012-05-16',
+            DATE_END => '2012-05-17'
+          },
+          'C1' =>
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-05-17',
             DATE_END => '2012-05-17'
           } 
         }
@@ -204,12 +301,12 @@ my %TOURNAMENTS_GERMANY =
     }
   },
 
-  'Dr. Heinz von Rotteck Pokal' =>
+  'German Open Pairs' =>
   {
     ORGANIZATION => 'DBV',
     COUNTRY => 'Germany',
     ORIGIN => 'National',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'Pairs',
     GENDER => 'Open',
     AGE => 'Open',
@@ -219,12 +316,13 @@ my %TOURNAMENTS_GERMANY =
       '2009' => 
       {
         ORDINAL => '6th',
+        CITY => 'Bad Nauheim',
         CHAPTERS => 
         {
           'SINGLE' =>
           {
             YEAR => 2009,
-            CITY => 'Bad Nauheim',
+            major => 'SESSION',
             DATE_START => '2009-11-21',
             DATE_END => '2009-11-22'
           } 
@@ -234,12 +332,12 @@ my %TOURNAMENTS_GERMANY =
       '2011' => 
       {
         ORDINAL => '8th',
+        CITY => 'Darmstadt',
         CHAPTERS => 
         {
           'SINGLE' =>
           {
             YEAR => 2011,
-            CITY => 'Darmstadt',
             DATE_START => '2011-11-12',
             DATE_END => '2011-11-13'
           } 
@@ -249,12 +347,13 @@ my %TOURNAMENTS_GERMANY =
       '2012' => 
       {
         ORDINAL => '9th',
+        CITY => 'Darmstadt',
         CHAPTERS => 
         {
           'SINGLE' =>
           {
             YEAR => 2012,
-            CITY => 'Darmstadt',
+            major => 'SESSION',
             DATE_START => '2012-11-10',
             DATE_END => '2012-11-11'
           } 
@@ -264,12 +363,13 @@ my %TOURNAMENTS_GERMANY =
       '2013' => 
       {
         ORDINAL => '10th',
+        CITY => 'Darmstadt',
         CHAPTERS => 
         {
           'SINGLE' =>
           {
             YEAR => 2013,
-            CITY => 'Darmstadt',
+            major => 'SESSION',
             DATE_START => '2013-11-09',
             DATE_END => '2013-11-10'
           } 
@@ -301,19 +401,28 @@ my %TOURNAMENTS_GERMANY =
           {
             DATE_START => '2013-01-19',
             DATE_END => '2013-01-20',
-            WEEKEND => 1
+            WEEKEND => 1,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            STAGE => 'Round-robin'
           },
           'WEEKEND 2' =>
           {
             DATE_START => '2013-02-16',
             DATE_END => '2013-02-17',
-            WEEKEND => 2
+            WEEKEND => 2,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            STAGE => 'Round-robin'
           },
           'WEEKEND 3' =>
           {
             DATE_START => '2013-03-02',
             DATE_END => '2013-03-03',
-            WEEKEND => 3
+            WEEKEND => 3,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            STAGE => 'Round-robin'
           } 
         }
       },
@@ -329,19 +438,28 @@ my %TOURNAMENTS_GERMANY =
           {
             DATE_START => '2014-01-18',
             DATE_END => '2014-01-19',
-            WEEKEND => 1
+            WEEKEND => 1,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT'
           },
           'WEEKEND 2' =>
           {
             DATE_START => '2014-03-15',
             DATE_END => '2014-03-16',
-            WEEKEND => 2
+            WEEKEND => 2,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT'
           },
           'WEEKEND 3' =>
           {
             DATE_START => '2014-04-05',
             DATE_END => '2014-04-06',
-            WEEKEND => 3
+            WEEKEND => 3,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT'
           } 
         }
       },
@@ -357,19 +475,28 @@ my %TOURNAMENTS_GERMANY =
           {
             DATE_START => '2015-01-24',
             DATE_END => '2015-01-25',
-            WEEKEND => 1
+            WEEKEND => 1,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT'
           },
           'WEEKEND 2' =>
           {
             DATE_START => '2015-03-07',
             DATE_END => '2015-03-08',
-            WEEKEND => 2
+            WEEKEND => 2,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT'
           },
           'WEEKEND 3' =>
           {
             DATE_START => '2015-04-25',
             DATE_END => '2015-04-26',
-            WEEKEND => 3
+            WEEKEND => 3,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT'
           } 
         }
       },
@@ -385,19 +512,28 @@ my %TOURNAMENTS_GERMANY =
           {
             DATE_START => '2016-01-23',
             DATE_END => '2016-01-24',
-            WEEKEND => 1
+            WEEKEND => 1,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            STAGE => 'Round-robin'
           },
           'WEEKEND 2' =>
           {
             DATE_START => '2016-02-20',
             DATE_END => '2016-02-21',
-            WEEKEND => 2
+            WEEKEND => 2,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            STAGE => 'Round-robin'
           },
           'WEEKEND 3' =>
           {
             DATE_START => '2016-03-05',
             DATE_END => '2016-03-06',
-            WEEKEND => 3
+            WEEKEND => 3,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            STAGE => 'Round-robin'
           } 
         }
       }
@@ -421,9 +557,19 @@ my %TOURNAMENTS_GERMANY =
       {
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2005,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2005-12-10',
+            DATE_END => '2005-12-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2005-12-10',
             DATE_END => '2005-12-11'
           } 
@@ -434,10 +580,21 @@ my %TOURNAMENTS_GERMANY =
       {
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2006,
             CITY => 'Düsseldorf',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-12-02',
+            DATE_END => '2006-12-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            CITY => 'Düsseldorf',
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2006-12-02',
             DATE_END => '2006-12-03'
           } 
@@ -448,10 +605,21 @@ my %TOURNAMENTS_GERMANY =
       {
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
-            YEAR => 2086,
+            YEAR => 2008,
             CITY => 'Bonn',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-11-15',
+            DATE_END => '2008-11-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            CITY => 'Bonn',
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2008-11-15',
             DATE_END => '2008-11-16'
           } 
@@ -462,10 +630,21 @@ my %TOURNAMENTS_GERMANY =
       {
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
             CITY => 'Kassel',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-11-28',
+            DATE_END => '2009-11-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            CITY => 'Kassel',
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2009-11-28',
             DATE_END => '2009-11-29'
           } 
@@ -476,10 +655,21 @@ my %TOURNAMENTS_GERMANY =
       {
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2010,
             CITY => 'Kassel',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-11-27',
+            DATE_END => '2010-11-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            CITY => 'Kassel',
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2010-11-27',
             DATE_END => '2010-11-28'
           } 
@@ -490,10 +680,21 @@ my %TOURNAMENTS_GERMANY =
       {
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
             CITY => 'Bonn',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-12-10',
+            DATE_END => '2011-12-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            CITY => 'Bonn',
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2011-12-10',
             DATE_END => '2011-12-11'
           } 
@@ -504,10 +705,21 @@ my %TOURNAMENTS_GERMANY =
       {
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
             CITY => 'Kassel',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-12-08',
+            DATE_END => '2012-12-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            CITY => 'Kassel',
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2012-12-08',
             DATE_END => '2012-12-09'
           } 
@@ -518,10 +730,21 @@ my %TOURNAMENTS_GERMANY =
       {
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
             CITY => 'Kassel',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-11-23',
+            DATE_END => '2013-11-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            CITY => 'Kassel',
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2013-11-23',
             DATE_END => '2013-11-24'
           } 
@@ -532,10 +755,21 @@ my %TOURNAMENTS_GERMANY =
       {
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
             CITY => 'Darmstadt',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-11-22',
+            DATE_END => '2014-11-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            CITY => 'Darmstadt',
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2014-11-22',
             DATE_END => '2014-11-23'
           } 
@@ -546,10 +780,21 @@ my %TOURNAMENTS_GERMANY =
       {
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
             CITY => 'Darmstadt',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-11-21',
+            DATE_END => '2015-11-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            CITY => 'Darmstadt',
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2015-11-21',
             DATE_END => '2015-11-22'
           } 
@@ -576,10 +821,28 @@ my %TOURNAMENTS_GERMANY =
         MEET => 'German Championship Week',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2014-08-20',
+            DATE_END => '2014-08-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-21',
+            DATE_END => '2014-08-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-21',
             DATE_END => '2014-08-21'
           } 
         }
@@ -595,7 +858,9 @@ my %TOURNAMENTS_GERMANY =
           {
             YEAR => 2015,
             DATE_START => '2015-08-15',
-            DATE_END => '2015-08-16'
+            DATE_END => '2015-08-16',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND'
           } 
         }
       },
@@ -606,10 +871,20 @@ my %TOURNAMENTS_GERMANY =
         MEET => 'German Championship Week',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2016-08-20',
+            DATE_END => '2016-08-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2016-08-21',
             DATE_END => '2016-08-21'
           } 
         }
@@ -637,7 +912,8 @@ my %TOURNAMENTS_GERMANY =
           'SINGLE' => 
           {
             DATE_START => '2003-10-07',
-            DATE_END => '2003-10-08'
+            DATE_END => '2003-10-08',
+            major => 'ROUND'
           }
         }
       },
@@ -652,12 +928,24 @@ my %TOURNAMENTS_GERMANY =
           {
             DATE_START => '2012-01-20',
             DATE_END => '2012-01-22',
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             WEEKEND => 1
           },
-          'WEEKEND 2' => 
+          'C1' => 
           {
             DATE_START => '2012-03-09',
+            DATE_END => '2012-03-10',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            WEEKEND => 2
+          },
+          'C2' => 
+          {
+            DATE_START => '2012-03-10',
             DATE_END => '2012-03-11',
+            STAGE => 'Final',
+            major => 'SEGMENT',
             WEEKEND => 2
           } 
         }
@@ -671,6 +959,7 @@ my %TOURNAMENTS_GERMANY =
           {
             YEAR => 2014,
             CITY => '',
+            major => 'ROUND',
             DATE_START => '2014-02-14',
             DATE_END => '2014-02-16'
           } 
@@ -687,13 +976,16 @@ my %TOURNAMENTS_GERMANY =
           {
             DATE_START => '2016-02-27',
             DATE_END => '2016-02-28',
+            major => 'ROUND',
             WEEKEND => 1
           },
           'WEEKEND 2' => 
           {
             DATE_START => '2016-03-12',
             DATE_END => '2016-03-13',
-            WEEKEND => 2
+            major => 'ROUND',
+            WEEKEND => 2,
+            STAGE => 'Final'
           } 
         }
       }
@@ -722,10 +1014,21 @@ my %TOURNAMENTS_GERMANY =
         ORDINAL => '58th',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2006,
             CITY => 'Kassel',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-05-05',
+            DATE_END => '2006-05-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            CITY => 'Kassel',
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2006-05-05',
             DATE_END => '2006-05-07'
           } 
@@ -737,11 +1040,31 @@ my %TOURNAMENTS_GERMANY =
         ORDINAL => '61st',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
             CITY => 'Kassel',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2009-06-05',
+            DATE_END => '2009-06-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            CITY => 'Kassel',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-06-06',
+            DATE_END => '2009-06-07'
+          },
+          'C2' => 
+          {
+            YEAR => 2009,
+            CITY => 'Kassel',
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-06-07',
             DATE_END => '2009-06-07'
           } 
         }
@@ -752,11 +1075,31 @@ my %TOURNAMENTS_GERMANY =
         ORDINAL => '64th',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
             CITY => 'Kassel',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2011-09-09',
+            DATE_END => '2011-09-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            CITY => 'Kassel',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-09-10',
+            DATE_END => '2011-09-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            CITY => 'Kassel',
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-09-11',
             DATE_END => '2011-09-11'
           } 
         }
@@ -768,10 +1111,28 @@ my %TOURNAMENTS_GERMANY =
         MEET => 'German Championship Week',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2013-08-16',
+            DATE_END => '2013-08-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-08-17',
+            DATE_END => '2013-08-18'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-08-18',
             DATE_END => '2013-08-18'
           } 
         }
@@ -783,10 +1144,28 @@ my %TOURNAMENTS_GERMANY =
         MEET => 'German Championship Week',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2014-08-22',
+            DATE_END => '2014-08-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-23',
+            DATE_END => '2014-08-24'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-24',
             DATE_END => '2014-08-24'
           } 
         }
@@ -798,11 +1177,21 @@ my %TOURNAMENTS_GERMANY =
         MEET => 'German Championship Week',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
             DATE_START => '2015-08-21',
-            DATE_END => '2015-08-23'
+            DATE_END => '2015-08-23',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-08-22',
+            DATE_END => '2015-08-23',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT'
           } 
         }
       },
@@ -817,14 +1206,16 @@ my %TOURNAMENTS_GERMANY =
           {
             YEAR => 2016,
             MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2016-08-26',
-            DATE_END => '2016-08-28'
+            DATE_END => '2016-08-27'
           },
           'C1' => 
           {
             YEAR => 2016,
             STAGE => 'Round-robin',
-            DATE_START => '2016-08-26',
+            major => 'ROUND',
+            DATE_START => '2016-08-27',
             DATE_END => '2016-08-28'
           } 
         }
@@ -849,10 +1240,21 @@ my %TOURNAMENTS_GERMANY =
         ORDINAL => '1st',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2010,
             CITY => 'Bonn',
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2010-05-14',
+            DATE_END => '2010-05-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            CITY => 'Bonn',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2010-05-14',
             DATE_END => '2010-05-16'
           } 
@@ -864,10 +1266,21 @@ my %TOURNAMENTS_GERMANY =
         ORDINAL => '2nd',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
             CITY => 'Bonn',
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2011-06-03',
+            DATE_END => '2011-06-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            CITY => 'Bonn',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2011-06-03',
             DATE_END => '2011-06-05'
           } 
@@ -879,10 +1292,21 @@ my %TOURNAMENTS_GERMANY =
         ORDINAL => '3rd',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
             CITY => 'Bonn',
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2012-05-18',
+            DATE_END => '2012-05-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            CITY => 'Bonn',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2012-05-18',
             DATE_END => '2012-05-20'
           } 
@@ -894,11 +1318,22 @@ my %TOURNAMENTS_GERMANY =
         ORDINAL => '4th',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
             CITY => 'Bonn',
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2013-05-08',
+            DATE_END => '2013-05-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            CITY => 'Bonn',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2013-05-09',
             DATE_END => '2013-05-10'
           } 
         }
@@ -909,10 +1344,21 @@ my %TOURNAMENTS_GERMANY =
         ORDINAL => '5th',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
             CITY => 'Berlin',
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2014-05-02',
+            DATE_END => '2014-05-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            CITY => 'Berlin',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2014-05-02',
             DATE_END => '2014-05-04'
           } 
@@ -924,10 +1370,21 @@ my %TOURNAMENTS_GERMANY =
         ORDINAL => '6th',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
             CITY => 'Berlin',
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2015-05-01',
+            DATE_END => '2015-05-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            CITY => 'Berlin',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2015-05-01',
             DATE_END => '2015-05-03'
           } 
@@ -939,10 +1396,21 @@ my %TOURNAMENTS_GERMANY =
         ORDINAL => '7th',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
             CITY => 'Berlin',
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2016-04-29',
+            DATE_END => '2016-04-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            CITY => 'Berlin',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2016-04-29',
             DATE_END => '2016-05-01'
           } 
@@ -985,6 +1453,7 @@ my %TOURNAMENTS_GERMANY =
           {
             YEAR => 2012,
             CITY => 'Darmstadt',
+            major => 'SESSION',
             DATE_START => '2012-11-10',
             DATE_END => '2012-11-11'
           } 
@@ -1054,10 +1523,18 @@ my %TOURNAMENTS_GERMANY =
         ORDINAL => '4th',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Qualifying',
             DATE_START => '2013-07-20',
+            DATE_END => '2013-07-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            DATE_START => '2013-07-21',
             DATE_END => '2013-07-21'
           } 
         }
@@ -1068,9 +1545,18 @@ my %TOURNAMENTS_GERMANY =
         ORDINAL => '5th',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Qualifying',
+            major => 'SESSION',
+            DATE_START => '2014-06-14',
+            DATE_END => '2014-06-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
             DATE_START => '2014-06-14',
             DATE_END => '2014-06-15'
           } 
@@ -1082,10 +1568,19 @@ my %TOURNAMENTS_GERMANY =
         ORDINAL => '6th',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Qualifying',
+            major => 'SESSION',
             DATE_START => '2015-05-23',
+            DATE_END => '2015-05-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            DATE_START => '2015-05-25',
             DATE_END => '2015-05-25'
           } 
         }
@@ -1096,10 +1591,19 @@ my %TOURNAMENTS_GERMANY =
         ORDINAL => '7th',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Qualifying',
+            major => 'SESSION',
             DATE_START => '2016-05-14',
+            DATE_END => '2016-05-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            DATE_START => '2016-05-16',
             DATE_END => '2016-05-16'
           } 
         }

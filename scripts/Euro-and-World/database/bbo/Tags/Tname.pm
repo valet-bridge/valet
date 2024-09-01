@@ -264,7 +264,6 @@ my @MULTI_WORDS =
   'Division Nationale',
   'Dongfeng Cup',
   'Dongming Knock-out Teams',
-  'Dr. Heinz von Rotteck Pokal',
   'Dr. Rand Masters',
 
   # NETHERLANDS
@@ -1515,8 +1514,6 @@ my %MULTI_TYPOS =
     'nationale division 1', 'division nationale 1'],
   'Dongming Knock-out Teams' => ['dong ming knockout teams',
     'dong ming knockour teams', 'ding ming knockout teams'],
-  'Dr. Heinz von Rotteck Pokal' => ['dr_-heinz-von-rotteck-pokal',
-    'v_-rotteck-pokal'],
   'Dr. Rand Masters' => ['dr_ rand masters'],
   'Dutch Knock-Out Cup' => ['knock-out team cup netherlands',
     'knock out team cup netherlands'],
@@ -1757,7 +1754,10 @@ my %MULTI_TYPOS =
   'German Open Pairs' => [
     'german men pairs', 
     'german mens pairs',
-    'germany mens pairs'],
+    'germany mens pairs',
+    'Dr. Heinz von Rotteck Pokal',
+    'dr_-heinz-von-rotteck-pokal',
+    'v_-rotteck-pokal'],
   'German Open Teams' => [
     'offene deutsche teammeisterschaft',
     'offene team meisterschaft',

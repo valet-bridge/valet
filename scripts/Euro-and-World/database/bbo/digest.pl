@@ -34,7 +34,7 @@ while ($entryT->read($fh))
   my $tname = $entryT->field('TITLE_TNAME');
   next if $tname eq '';
 
-  if ($entryT->bbono() eq 46441)
+  if ($entryT->bbono() eq 31218)
   {
     # print "HERE\n";
   }
@@ -63,7 +63,7 @@ close $fh;
 
 for my $date_start (sort keys %data)
 {
-if ($date_start eq '2016-08-26')
+if ($date_start eq '2013-07-20')
 {
   # print "HERE\n";
 }
@@ -75,8 +75,14 @@ if ($date_start eq '2016-08-26')
     for my $chapter (sort keys %{$datum->{CHAPTER}})
     {
       my $cptr = $datum->{CHAPTER}{$chapter};
+
       # print "$chapter\n" unless $chapter eq 'SINGLE';
       print $cptr->{HEADER}->str_chapter();
+
+      for my $i (0 .. $#{$cptr->{LIST}})
+      {
+        $cptr->{LIST}[$i]->fix_list_tags();
+      }
 
       for my $i (0 .. $#{$cptr->{LIST}})
       {

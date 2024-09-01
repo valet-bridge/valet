@@ -13,6 +13,7 @@ use lib '.';
 my @HEADER_FIELDS = qw(
   TOURNAMENT_ORDINAL
   TOURNAMENT_NAME
+  TOURNAMENT_CITY
   ZONE
   ORIGIN
   COUNTRY
@@ -60,7 +61,8 @@ my @PRUNE_HEADER_FIELDS = (
 my @PRUNE_CHAPTER_FIELDS = (
   ['YEAR', 'TITLE_YEAR'],
   ['MOVEMENT', 'EVENT_MOVEMENT'],
-  ['STAGE', 'EVENT_STAGE'],
+  ['STAGE', 'TITLE_STAGE'],
+  ['STAGE', 'EVENT_STAGE']
 );
 
 my %SCORING_CORRECTIONS = (
@@ -76,8 +78,14 @@ my %SCORING_CORRECTIONS = (
 
 my %FORM_CORRECTIONS = (
   # Says Team 1, Team 2 in BBO file, but is pairs
+  'German Open Pairs' => [
+    11914, 11917, 11920, 11921, 11932, 11933,
+    21016, 21039, 
+    26012, 26020, 26027,
+    31218, 31228, 31250],
   'German Women Pairs' => [26011, 26021, 26028],
-  "Gro's Supercup" => [15059, 15070, 
+  "Gro's Supercup" => [
+    15059, 15070, 
     19725, 19732, 19745,
     24988, 24989,
     29535, 29536, 29540, 29541, 29548, 29549,
@@ -372,13 +380,93 @@ sub update_tournaments
 }
 
 
+sub delete_list_tag_if
+{
+  my ($self, $tag, $value) = @_;
+
+  return unless exists $self->{$tag};
+  for my $n (reverse 0 .. $#{$self->{$tag}})
+  {
+    if ($self->{$tag}[$n] eq $value)
+    {
+      splice(@{$self->{$tag}}, $n, 1);
+    }
+  }
+
+  if ($#{$self->{$tag}} == -1)
+  {
+    delete $self->{TITLE_TWORD};
+  }
+}
+
+
+sub tag_list_contains
+{
+  my ($self, $tag, $value) = @_;
+
+  for my $v (@{$self->{$tag}})
+  {
+    return 1 if ($v eq $value);
+  }
+  return 0;
+}
+
+
+sub transfer_list_tag
+{
+  my ($self, $tag_from, $tag_to) = @_;
+
+  return unless exists $self->{$tag_from};
+
+  if (! exists $self->{$tag_to})
+  {
+    @{$self->{$tag_to}} = @{$self->{$tag_from}};
+    delete $self->{$tag_from};
+    return;
+  }
+
+  for my $value (@{$self->{$tag_from}})
+  {
+    if (! $self->tag_list_contains($tag_to, $value))
+    {
+      push @{$self->{$tag_to}}, $value;
+    }
+  }
+  delete $self->{$tag_from};
+}
+
+
+sub fix_list_tags
+{
+  my ($self) = @_;
+
+  $self->delete_list_tag_if('TITLE_TWORD', 'Championship');
+
+  $self->transfer_list_tag('DATE_ADDED', 'DATE');
+  $self->transfer_list_tag('EVENT_DATE', 'DATE');
+
+  $self->transfer_list_tag('EVENT_SESSION', 'SESSION');
+
+  $self->transfer_list_tag('EVENT_SEGMENT', 'SEGMENT');
+
+  $self->transfer_list_tag('TITLE_ROUND', 'ROUND');
+  $self->transfer_list_tag('EVENT_ROUND', 'ROUND');
+
+  $self->transfer_list_tag('TITLE_YEAR', 'YEAR');
+
+  $self->transfer_list_tag('TITLE_PHASE', 'PHASE');
+
+  $self->transfer_list_tag('TITLE_TABLE', 'TABLE');
+}
+
+
 sub field
 {
   my ($self, $field) = @_;
 
   if (exists $self->{$field})
   {
-    # TODO For now.  What is there is more than one?
+# TODO For now.  What is there is more than one?
     return $self->{$field}[0];
   }
   else
@@ -415,6 +503,11 @@ sub str_as_read
   my $s;
   $s = "BBONO $self->{BBONO}\n";
 
+  for my $key (qw(YEAR DATE PHASE SESSION ROUND SEGMENT TABLE))
+  {
+    $s .= $self->str_fields($key) if exists $self->{$key};
+  }
+
   for my $order (qw(TITLE_ DATE_ EVENT_ TEAM1_ TEAM2_))
   {
     for my $key (sort keys %$self)
@@ -426,15 +519,8 @@ sub str_as_read
     }
   }
 
-  if (exists $self->{BOARDS})
-  {
-    $s .= $self->str_fields('BOARDS');
-  }
-
-  if (exists $self->{SCORING})
-  {
-    $s .= $self->str_fields('SCORING');
-  }
+  $s .= $self->str_fields('BOARDS') if exists $self->{BOARDS};
+  $s .= $self->str_fields('SCORING') if exists $self->{SCORING};
 
   return "$s\n";
 }
