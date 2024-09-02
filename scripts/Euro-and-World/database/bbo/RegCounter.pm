@@ -179,7 +179,7 @@ sub get_assigned_fields
     else
     {
       $self->{ASSIGNED_FIELDS} = 2;
-    $self->{ASSIGNED}[1] = $v2;
+      $self->{ASSIGNED}[1] = $v2;
     }
     # TODO Maybe there should be a third assigned level possible.
   }
@@ -202,8 +202,7 @@ sub align
     return;
   }
 
-  # Maps fields actually present to actions.
-  my %field_map;
+  # $self->{FIELD_MAP}: Maps fields actually present to actions.
 
   # Note the fields from the analysis.
   for my $i (0 .. $#{$self->{ANALYSIS}})
@@ -218,7 +217,7 @@ sub align
     my $field = $self->{ASSIGNED}[$i];
     if (exists $self->{COUNTER}{$field})
     {
-      $field_map{$field} = $field;
+      $self->{FIELD_MAP}{$field} = $field;
     }
 
     # Take it out from unmatched analysis fields.
@@ -232,13 +231,13 @@ sub align
   for my $i (0 .. $self->{ASSIGNED_FIELDS}-1)
   {
     my $given_field = $self->{ASSIGNED}[$i];
-    next if exists $field_map{$given_field};
+    next if exists $self->{FIELD_MAP}{$given_field};
 
     for my $analysis_field (keys %{$self->{ANALYSIS_FIELDS}})
     {
       if (exists $CONFUSION_MATRIX{$given_field}{$analysis_field})
       {
-        $field_map{$analysis_field} = $given_field;
+        $self->{FIELD_MAP}{$analysis_field} = $given_field;
         delete $self->{ANALYSIS_FIELDS}{$analysis_field};
       }
     }
@@ -247,7 +246,7 @@ sub align
   # Look at any present, unmatched fields.
   for my $present_field (keys %{$self->{COUNTER}})
   {
-    next if exists $field_map{$present_field};
+    next if exists $self->{FIELD_MAP}{$present_field};
 
     my @confusion_list;
     for my $i (0 .. $self->{ASSIGNED_FIELDS}-1)
@@ -264,35 +263,55 @@ sub align
       if ($present_field eq 'TABLE' || $present_field eq 'PHASE')
       {
         # Permit it.
-        $field_map{$present_field} = $present_field;
+        $self->{FIELD_MAP}{$present_field} = $present_field;
       }
       else
       {
         # Not storing a match.
         print "WARNING: Deleting unmatched field $present_field\n";
+        $self->{FIELD_MAP}{$present_field} = 'TO_DELETE';
       }
     }
     elsif ($#confusion_list > 0)
     {
       print "WARNING: More than one match for unmatched field $present_field\n";
+      $self->{FIELD_MAP}{$present_field} = 'TO_DELETE';
     }
     else
     {
-      $field_map{$present_field} = $confusion_list[0];
+      $self->{FIELD_MAP}{$present_field} = $confusion_list[0];
     }
   }
+}
 
-  # TODO Just for now
-  my $flag = 0;
-  for my $field (keys %field_map)
+
+sub fix_counters
+{
+  my ($self, $list) = @_;
+
+  for my $entry (@$list)
   {
-    if ($field_map{$field} ne $field)
+    $entry->fix_counters($self->{FIELD_MAP}, $self->{OF});
+  }
+}
+
+
+sub str_field_map
+{
+  my ($self) = @_;
+
+  my $flag = 0;
+  my $s = '';
+  for my $field (keys %{$self->{FIELD_MAP}})
+  {
+    if ($self->{FIELD_MAP}{$field} ne $field)
     {
-      print "Mapping $field to ", $field_map{$field}, "\n";
+      $s .= "Mapping $field to " . $self->{FIELD_MAP}{$field} . "\n";
       $flag = 1;
     }
   }
-  print "\n" if $flag;
+  $s .= "\n" if $flag;
+  return $s;
 }
 
 

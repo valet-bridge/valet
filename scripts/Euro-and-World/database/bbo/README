@@ -1,11 +1,3 @@
-Now we have %field_map locally in RegCounter.
-We should store it in self.
-
-fix_counters:
-Delete or map.
-Use OF.
-Fill out 'unknown'?
-
 get_sorted_order:
 Maybe really sort the list in situ.
 

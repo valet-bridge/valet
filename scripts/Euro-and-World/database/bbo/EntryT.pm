@@ -462,6 +462,49 @@ sub fix_list_tags
 }
 
 
+sub fix_counters
+{
+  my ($self, $field_map, $of_map) = @_;
+
+  for my $field (keys %$field_map)
+  {
+    next unless exists $self->{$field};
+
+    if ($field_map->{$field} ne $field)
+    {
+      if ($field_map->{$field} eq 'TO_DELETE')
+      {
+        delete $self->{$field};
+      }
+      else
+      {
+        $self->transfer_list_tag($field, $field_map->{$field});
+      }
+    }
+  }
+
+  # Now fix OF.
+  for my $orig_field (keys %$of_map)
+  {
+    next if $of_map->{$orig_field} == 0;
+    next unless exists $field_map->{$orig_field};
+    my $mapped = $field_map->{$orig_field};
+    next if $mapped eq 'TO_DELETE';
+    next unless exists $self->{$mapped};
+
+    # So we still have the ones mapped to themselves here.
+    for my $i (0 .. $#{$self->{$mapped}})
+    {
+      my $value = $self->{$mapped}[$i];
+      if ($value =~ /^(\d+)$/)
+      {
+        $value .= " of " . $of_map->{$orig_field};
+      }
+    }
+  }
+}
+
+
 sub number
 {
   my ($self, $field) = @_;

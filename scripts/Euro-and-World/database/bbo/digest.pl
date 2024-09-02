@@ -64,7 +64,7 @@ close $fh;
 
 for my $date_start (sort keys %data)
 {
-if ($date_start eq '2013-03-02')
+if ($date_start eq '2006-05-24')
 {
   # print "HERE\n";
 }
@@ -95,8 +95,10 @@ if ($date_start eq '2013-03-02')
 
       # This will use 'major' and 'minor' if present.
       $reg_counter->align($cptr->{HEADER});
+      print $reg_counter->str_field_map();
 
-      # TODO Loop: ->fix_counters (remap, but also all present)
+      $reg_counter->fix_counters($cptr->{LIST});
+
       # TODO ->get_sorted_order (from 0 to #$LIST)
 
       for my $i (0 .. $#{$cptr->{LIST}})
