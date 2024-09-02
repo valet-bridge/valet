@@ -462,6 +462,21 @@ sub fix_list_tags
 }
 
 
+sub number
+{
+  my ($self, $field) = @_;
+
+  if (exists $self->{$field})
+  {
+    return $self->{$field};
+  }
+  else
+  {
+    return '';
+  }
+}
+
+
 sub field
 {
   my ($self, $field) = @_;
@@ -542,6 +557,7 @@ sub str_by_ordered_fields
 
   for my $key (keys %$self)
   {
+    next if $key =~ /[a-z]/; # E.g., 'major' and 'minor'
     warn "Unprinted field $key" unless exists $check_fields->{$key};
   }
 

@@ -420,8 +420,6 @@ my %TOURNAMENTS_GERMANY =
             DATE_START => '2013-03-02',
             DATE_END => '2013-03-03',
             WEEKEND => 3,
-            major => 'ROUND',
-            minor => 'SEGMENT',
             STAGE => 'Round-robin'
           } 
         }

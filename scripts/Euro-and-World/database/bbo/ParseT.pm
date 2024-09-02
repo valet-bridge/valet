@@ -27,7 +27,7 @@ my @MEET_EDITION_FIELDS = qw(YEAR CITY);
 my @MEET_EDITION_PREFIXED_FIELDS = qw(ORDINAL DATE_START DATE_END);
 
 my @TOURNAMENT_EDITION_PREFIXED_FIELDS = qw(ORDINAL CITY);
-my @TOURNAMENT_CHAPTER_FIELDS = qw(YEAR MOVEMENT STAGE);
+my @TOURNAMENT_CHAPTER_FIELDS = qw(YEAR MOVEMENT STAGE major minor);
 
 my @TOURNAMENT_FIELDS = qw(ORGANIZATION COUNTRY CITY ORIGIN ZONE
   FORM SCORING GENDER AGE);
@@ -290,7 +290,6 @@ sub set_header_entry
   transfer_field(\%chapter_fields, 'DATE_END', $t_chapter->{DATE_END});
   transfer_field(\%chapter_fields, 'WEEKEND', $t_chapter->{WEEKEND});
   transfer_field(\%chapter_fields, 'MOVEMENT', $t_chapter->{MOVEMENT});
-  transfer_field(\%chapter_fields, 'STAGE', $t_chapter->{STAGE});
 
   $chapter_entry->set(\%chapter_fields);
 

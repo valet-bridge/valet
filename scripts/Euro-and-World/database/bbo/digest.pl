@@ -64,7 +64,7 @@ close $fh;
 
 for my $date_start (sort keys %data)
 {
-if ($date_start eq '2013-07-20')
+if ($date_start eq '2013-03-02')
 {
   # print "HERE\n";
 }
@@ -76,8 +76,6 @@ if ($date_start eq '2013-07-20')
     for my $chapter (sort keys %{$datum->{CHAPTER}})
     {
       my $cptr = $datum->{CHAPTER}{$chapter};
-
-      # print "$chapter\n" unless $chapter eq 'SINGLE';
       print $cptr->{HEADER}->str_chapter();
 
       for my $i (0 .. $#{$cptr->{LIST}})
@@ -91,8 +89,15 @@ if ($date_start eq '2013-07-20')
         $reg_counter->register($cptr->{LIST}[$i]);
       }
       $reg_counter->analyze();
+
       print "ANALYSIS:\n";
       print $reg_counter->str_analysis() . "\n";
+
+      # This will use 'major' and 'minor' if present.
+      $reg_counter->align($cptr->{HEADER});
+
+      # TODO Loop: ->fix_counters (remap, but also all present)
+      # TODO ->get_sorted_order (from 0 to #$LIST)
 
       for my $i (0 .. $#{$cptr->{LIST}})
       {

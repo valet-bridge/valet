@@ -16,6 +16,12 @@ my @FIELDS = qw(PHASE MATCH ROUND SESSION QUARTER HALF SEGMENT TABLE);
 my %FIELD_MAP;
 $FIELD_MAP{$FIELDS[$_]} = $_ for (0 .. $#FIELDS);
 
+# (given_field, present_field)
+my %CONFUSION_MATRIX;
+$CONFUSION_MATRIX{ROUND}{SEGMENT} = 1;
+$CONFUSION_MATRIX{ROUND}{SESSION} = 1;
+$CONFUSION_MATRIX{SEGMENT}{SESSION} = 1;
+
 
 sub new
 {
@@ -99,7 +105,7 @@ sub analyze
 
   if ($top_count == 0)
   {
-    $self->{ANALYSIS}{FORM} = 'EMPTY';
+    $self->{FORM} = 'EMPTY';
     return;
   }
 
@@ -138,17 +144,155 @@ sub analyze
 
     if (! exists $self->{COUNTER}{$field}{OF})
     {
-      $self->{OF}[$i] = 0;
+      $self->{OF}{$field} = 0;
     }
     elsif (my $of_end = has_of_structure($self->{COUNTER}{$field}{ENDS}))
     {
-      $self->{OF}[$i] = $of_end;
+      $self->{OF}{$field} = $of_end;
     }
     else
     {
-      print "WARN: Contradictory OF structure for '$field'\n";
+      print "WARNING: Contradictory OF structure for '$field'\n";
     }
   }
+}
+
+
+sub get_assigned_fields
+{
+  my ($self, $entry) = @_;
+
+  my $v1 = $entry->number('major');
+  if ($v1 eq '')
+  {
+    $self->{ASSIGNED_FIELDS} = 0;
+  }
+  else
+  {
+    $self->{ASSIGNED}[0] = $v1;
+
+    my $v2 = $entry->number('minor');
+    if ($v2 eq '')
+    {
+      $self->{ASSIGNED_FIELDS} = 1;
+    }
+    else
+    {
+      $self->{ASSIGNED_FIELDS} = 2;
+    $self->{ASSIGNED}[1] = $v2;
+    }
+    # TODO Maybe there should be a third assigned level possible.
+  }
+}
+
+
+sub align
+{
+  my ($self, $entry) = @_;
+
+  # Look for pre-assigned counter names and match them up with
+  # the ones we discovered ourselves.
+  
+  $self->get_assigned_fields($entry);
+  return unless $self->{ASSIGNED_FIELDS} > 0;
+
+  if (exists $self->{FORM} && $self->{FORM} eq 'EMPTY')
+  {
+    print "WARNING: Expecting some counter fields\n";
+    return;
+  }
+
+  # Maps fields actually present to actions.
+  my %field_map;
+
+  # Note the fields from the analysis.
+  for my $i (0 .. $#{$self->{ANALYSIS}})
+  {
+    my $field = $self->{ANALYSIS}[$i];
+    $self->{ANALYSIS_FIELDS}{$field} = 1;
+  }
+
+  # For every given field, look for exact matches.
+  for my $i (0 .. $self->{ASSIGNED_FIELDS}-1)
+  {
+    my $field = $self->{ASSIGNED}[$i];
+    if (exists $self->{COUNTER}{$field})
+    {
+      $field_map{$field} = $field;
+    }
+
+    # Take it out from unmatched analysis fields.
+    if (exists $self->{ANALYSIS_FIELDS}{$field})
+    {
+      delete $self->{ANALYSIS_FIELDS}{$field};
+    }
+  }
+
+  # Try to guess about unmatched, given fields.
+  for my $i (0 .. $self->{ASSIGNED_FIELDS}-1)
+  {
+    my $given_field = $self->{ASSIGNED}[$i];
+    next if exists $field_map{$given_field};
+
+    for my $analysis_field (keys %{$self->{ANALYSIS_FIELDS}})
+    {
+      if (exists $CONFUSION_MATRIX{$given_field}{$analysis_field})
+      {
+        $field_map{$analysis_field} = $given_field;
+        delete $self->{ANALYSIS_FIELDS}{$analysis_field};
+      }
+    }
+  }
+
+  # Look at any present, unmatched fields.
+  for my $present_field (keys %{$self->{COUNTER}})
+  {
+    next if exists $field_map{$present_field};
+
+    my @confusion_list;
+    for my $i (0 .. $self->{ASSIGNED_FIELDS}-1)
+    {
+      my $given_field = $self->{ASSIGNED}[$i];
+      if (exists $CONFUSION_MATRIX{$given_field}{$present_field})
+      {
+        push @confusion_list, $given_field;
+      }
+    }
+
+    if ($#confusion_list == -1)
+    {
+      if ($present_field eq 'TABLE' || $present_field eq 'PHASE')
+      {
+        # Permit it.
+        $field_map{$present_field} = $present_field;
+      }
+      else
+      {
+        # Not storing a match.
+        print "WARNING: Deleting unmatched field $present_field\n";
+      }
+    }
+    elsif ($#confusion_list > 0)
+    {
+      print "WARNING: More than one match for unmatched field $present_field\n";
+    }
+    else
+    {
+      $field_map{$present_field} = $confusion_list[0];
+    }
+  }
+
+  # TODO Just for now
+  my $flag = 0;
+  for my $field (keys %field_map)
+  {
+    if ($field_map{$field} ne $field)
+    {
+      print "Mapping $field to ", $field_map{$field}, "\n";
+      $flag = 1;
+    }
+  }
+  print "\n" if $flag;
 }
 
 
@@ -156,16 +300,17 @@ sub str_analysis
 {
   my ($self) = @_;
 
-  return "No counters at all\n" unless defined $self->{NUM_FIELDS};
+  return "No counters at all\n" unless exists $self->{NUM_FIELDS};
   my $num_fields = $self->{NUM_FIELDS};
 
   my $s = "Number of fields: $num_fields\n";
   for my $i (0 .. $num_fields-1)
   {
-    $s .= "FIELD $i: " . $self->{ANALYSIS}[$i];
-    if ($self->{OF}[$i])
+    my $field = $self->{ANALYSIS}[$i];
+    $s .= "FIELD $i: $field";
+    if ($self->{OF}{$field})
     {
-      $s .= " (of " . $self->{OF}[$i] . ")";
+      $s .= " (of " . $self->{OF}{$field} . ")";
     }
     $s .= "\n";
   }

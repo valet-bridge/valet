@@ -1,12 +1,27 @@
-Make sure major and minor survive from chapter into chapter header
+Now we have %field_map locally in RegCounter.
+We should store it in self.
 
-If there is only 'major':
-Map to the leader
-Should all others map to this as well, or be deleted or whatever?
+fix_counters:
+Delete or map.
+Use OF.
+Fill out 'unknown'?
 
-If two:
-Hopefully one of them lines up
-How to map the others?  Depending on circumstances?
+get_sorted_order:
+Maybe really sort the list in situ.
+
+@records = sort {
+    my $sum_a = 0;
+    $sum_a += $_ for @{$a->{scores}};
+
+    my $sum_b = 0;
+    $sum_b += $_ for @{$b->{scores}};
+
+    $sum_b <=> $sum_a;  # Descending order
+} @records;
+
+
+VERBOSE or DISCOVERY flag in RegCounter and digest, for new
+countries or datasets.
 
 
 Actually fix in situ in the data, but first practice
