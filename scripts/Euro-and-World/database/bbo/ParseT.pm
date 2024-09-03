@@ -13,12 +13,14 @@ use lib '..';
 
 use DateCalc;
 use EntryT;
-use Tournaments::Germany;
+# use Tournaments::Germany;
+use Tournaments::Italy;
 
 
 my %DIVISIONS =
 (
-  GERMANY => \&Tournaments::Germany::set_links
+  # GERMANY => \&Tournaments::Germany::set_links
+  ITALY => \&Tournaments::Italy::set_links
 );
 
 my @MEET_FIELDS = qw(ORGANIZATION COUNTRY CITY ORIGIN ZONE);
@@ -294,6 +296,13 @@ sub set_header_entry
   $chapter_entry->set(\%chapter_fields);
 
   return ($entry, $chapter_entry);
+}
+
+
+sub is_tournament
+{
+  my ($self, $tname) = @_;
+  return exists $self->{TOURNAMENT}{$tname};
 }
 
 

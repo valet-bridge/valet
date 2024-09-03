@@ -1,26 +1,12 @@
-get_sorted_order:
-Maybe really sort the list in situ.
-
-@records = sort {
-    my $sum_a = 0;
-    $sum_a += $_ for @{$a->{scores}};
-
-    my $sum_b = 0;
-    $sum_b += $_ for @{$b->{scores}};
-
-    $sum_b <=> $sum_a;  # Descending order
-} @records;
+Finish dates
+Code to have Italy Cup as a Meet: If no tname, all tnames with that Meet
+Look at consistency, there are two tournaments from 2004-06 that
+  may have the wrong names
 
 
-VERBOSE or DISCOVERY flag in RegCounter and digest, for new
-countries or datasets.
+Finish the web lookup
 
-
-Actually fix in situ in the data, but first practice
-
-Could return an order in which to output the original list, 0 4 5 2 3 ...
-When outputting: sort on major if present, then minor if present, then bbono
-
+VERBOSE flag in RegCounter, for new countries or datasets.
 
 Add URLs
 Store pdf's showing also player names

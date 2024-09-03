@@ -498,10 +498,65 @@ sub fix_counters
       my $value = $self->{$mapped}[$i];
       if ($value =~ /^(\d+)$/)
       {
-        $value .= " of " . $of_map->{$orig_field};
+        $self->{$mapped}[$i] .= " of " . $of_map->{$orig_field};
       }
     }
   }
+}
+
+
+sub spaceship
+{
+  my ($self, $other, $priorities) = @_;
+
+  # This is a sorting operator.
+  for my $field (@$priorities)
+  {
+    if (exists $self->{$field})
+    {
+      if (! exists $other->{$field})
+      {
+        # Empty is ranked before full.
+        return 1;
+      }
+      else
+      {
+        if ($#{$self->{$field}} != 0)
+        {
+          die "Need a single value: $field";
+        }
+        if ($#{$other->{$field}} != 0)
+        {
+          die "Need a single value: $field";
+        }
+
+        my $value_self = $self->{$field}[0];
+        my $value_other = $other->{$field}[0];
+
+        if ($value_self !~ /^(\d+)/)
+        {
+          die "No leading number: $value_self";
+        }
+        my $num_self = $1;
+
+        if ($value_other !~ /^(\d+)/)
+        {
+          die "No leading number: $value_other";
+        }
+        my $num_other = $1;
+        
+        return -1 if ($num_self < $num_other);
+        return 1 if ($num_self > $num_other);
+      }
+    }
+    elsif (exists $other->{$field})
+    {
+      # Empty is ranked before full.
+      return -1;
+    }
+  }
+
+  return $self->{BBONO} <=> $other->{BBONO};
 }
 
 

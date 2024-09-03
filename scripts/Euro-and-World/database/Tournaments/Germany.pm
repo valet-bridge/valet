@@ -140,6 +140,7 @@ my %TOURNAMENTS_GERMANY =
           {
             YEAR => 2006,
             STAGE => 'Consolation',
+            major => 'ROUND',
             MOVEMENT => 'Swiss',
             DATE_START => '2006-05-24',
             DATE_END => '2006-05-25'

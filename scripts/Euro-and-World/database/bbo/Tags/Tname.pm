@@ -379,15 +379,15 @@ my @MULTI_WORDS =
   'Godfrey Phillips All India Open',
   'Goulyash by E. Gladysh',
 
-  # GERMANY
-  'German Bundesliga', # x
+  # GERMANY -- mapped in detail
+  'German Bundesliga',
   'German Club Cup',
-  'German Mixed Teams', # x
+  'German Mixed Teams',
   'German Open Pairs',
-  'German Open Teams', # x
+  'German Open Teams',
   'German Open Trials',
   'German Team Trophy',
-  'German Women Pairs', #x
+  'German Women Pairs',
 
   'GHTD Cup',
   'Goksu-Yalikavak Pairs',
@@ -515,9 +515,10 @@ my @MULTI_WORDS =
   'Italian Mixed Cup',
   'Italian Mixed Pairs',
   'Italian Mixed Teams',
-  'Italian Team Championship',
   'Italian Open Teams',
+  'Italian Open Trials',
   'Italian Senior Trials',
+  'Italian U36 Teams',
   'Italian Women Club Teams',
   'Italy Cup',
 
@@ -1769,7 +1770,7 @@ my %MULTI_TYPOS =
   'German Open Trials' => [
     'deutsche open qualifikation',
     'german open qualification'],
-  'German Team Championship' => ['deutsche teammeisterschaft'],
+  # 'German Team Championship' => ['deutsche teammeisterschaft'],
   'German Team Trophy' => [
     'german bridge team trophy',
     'german team bridge trophy', 
@@ -2020,10 +2021,14 @@ my %MULTI_TYPOS =
   'Italian Mixed Cup' => ['italy mixed cup'],
   'Italian Mixed Pairs' => ['italy mixed pairs'],
   'Italian Mixed Teams' => ['italian mixed teams championships'],
-  'Italian Open Teams' => ['italian open team championships'],
-  'Italian Senior Trials' => ['italian senior teams trials'],
-  'Italian Team Championship' => ['camp.it.squadre',
+  'Italian Open Teams' => [
+    'italian open team championships',
+    'italian team championship',
+    'camp.it.squadre',
     'camp.it. squadre'],
+  'Italian Open Trials' => ['italian open teams trials'],
+  'Italian Senior Trials' => ['italian senior teams trials'],
+  'Italian U36 Teams' => ['Italian Master U36'],
   'Italy Cup' => ['coppa italia'],
 
   ### JJJ

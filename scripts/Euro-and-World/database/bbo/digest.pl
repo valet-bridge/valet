@@ -13,6 +13,9 @@ use ParseT;
 use EntryT;
 use RegCounter;
 
+my $EXPLORE_TOURNAMENTS = 2;
+my $VERBOSE = 0;
+
 # Parse the raw output of cook.pl
 # Recognize and check tournaments
 
@@ -40,16 +43,31 @@ while ($entryT->read($fh))
     # print "HERE\n";
   }
 
+  if ($EXPLORE_TOURNAMENTS == 1)
+  {
+    if ($parseT->is_tournament($tname))
+    {
+      print "===\n\nAs read\n\n";
+      print $entryT->str_as_read();
+    }
+    next;
+  }
+
+
   my ($edition, $chapter) = 
     $parseT->get_edition_and_chapter($tname, $entryT);
 
   next if $edition eq '';
 
+  if ($EXPLORE_TOURNAMENTS == 2)
+  {
+    print $entryT->str_as_read();
+    next;
+  }
+
   my ($header_entry, $chapter_entry) = 
     $parseT->set_header_entry($tname, $edition, $chapter);
 
-  # print "===\n\nAs read\n\n";
-  # print $entryT->str_as_read();
 
   $entryT->prune_using($header_entry, $chapter_entry);
 
@@ -66,7 +84,7 @@ for my $date_start (sort keys %data)
 {
 if ($date_start eq '2006-05-24')
 {
-  # print "HERE\n";
+  print "HERE\n";
 }
   for my $dno (0 .. $#{$data{$date_start}})
   {
@@ -90,16 +108,15 @@ if ($date_start eq '2006-05-24')
       }
       $reg_counter->analyze();
 
-      print "ANALYSIS:\n";
-      print $reg_counter->str_analysis() . "\n";
+      print $reg_counter->str_analysis() . "\n" if $VERBOSE;
 
       # This will use 'major' and 'minor' if present.
       $reg_counter->align($cptr->{HEADER});
-      print $reg_counter->str_field_map();
+      print $reg_counter->str_field_map() if $VERBOSE;
 
       $reg_counter->fix_counters($cptr->{LIST});
 
-      # TODO ->get_sorted_order (from 0 to #$LIST)
+      $reg_counter->sort_counters($cptr->{LIST});
 
       for my $i (0 .. $#{$cptr->{LIST}})
       {

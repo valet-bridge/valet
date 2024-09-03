@@ -296,6 +296,20 @@ sub fix_counters
 }
 
 
+sub sort_counters
+{
+  my ($self, $list) = @_;
+
+  return unless exists $self->{ASSIGNED};
+
+  @$list = sort
+  {
+    $a->spaceship($b, $self->{ASSIGNED});
+  }
+  @$list;
+}
+
+
 sub str_field_map
 {
   my ($self) = @_;
@@ -322,7 +336,8 @@ sub str_analysis
   return "No counters at all\n" unless exists $self->{NUM_FIELDS};
   my $num_fields = $self->{NUM_FIELDS};
 
-  my $s = "Number of fields: $num_fields\n";
+  my $s = "ANALYSIS:\n";
+  $s .= "Number of fields: $num_fields\n";
   for my $i (0 .. $num_fields-1)
   {
     my $field = $self->{ANALYSIS}[$i];
