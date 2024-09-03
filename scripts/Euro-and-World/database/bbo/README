@@ -1,7 +1,12 @@
-Finish dates
-Code to have Italy Cup as a Meet: If no tname, all tnames with that Meet
-Look at consistency, there are two tournaments from 2004-06 that
-  may have the wrong names
+Make copy of n
+Edit Italy.pm for Meets
+Check n file again
+829: Women is in BBO entry, could be in chapter? (Still an issue then?)
+
+Edit Tname.pm for Germany and Italy match, alpha order
+Rerun Germany
+Add URLs to Germany
+
 
 
 Finish the web lookup

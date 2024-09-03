@@ -31,6 +31,8 @@ $HEADER_HASH_CHECK{$_} = 1 for @HEADER_FIELDS;
 my @CHAPTER_FIELDS = qw(
   YEAR
   WEEKEND
+  AGE
+  GENDER
   DATE_START
   DATE_END
   MOVEMENT
@@ -91,7 +93,10 @@ my %FORM_CORRECTIONS = (
     29535, 29536, 29540, 29541, 29548, 29549,
     34116, 34117, 34121, 34123, 34129, 34132, 34133,
     44699, 44700, 44702, 44704, 44709, 44710, 44723, 44724,
-    44730, 44731, 44736, 44737, 44738, 44739, 44764, 44765, 44766]
+    44730, 44731, 44736, 44737, 44738, 44739, 44764, 44765, 44766],
+  'Italian Mixed Pairs' => [
+    36287, 36289, 36293, 36295, 36296, 36308, 36309,
+    41672, 41674, 41691, 41692, 41704, 41705]
 );
 
 
@@ -454,6 +459,8 @@ sub fix_list_tags
   $self->transfer_list_tag('TITLE_ROUND', 'ROUND');
   $self->transfer_list_tag('EVENT_ROUND', 'ROUND');
 
+  $self->transfer_list_tag('EVENT_MATCH', 'MATCH');
+
   $self->transfer_list_tag('TITLE_YEAR', 'YEAR');
 
   $self->transfer_list_tag('TITLE_PHASE', 'PHASE');
@@ -533,17 +540,33 @@ sub spaceship
         my $value_self = $self->{$field}[0];
         my $value_other = $other->{$field}[0];
 
-        if ($value_self !~ /^(\d+)/)
+        my $num_self;
+        if ($value_self eq 'last')
+        {
+          $num_self = 9999;
+        }
+        elsif ($value_self =~ /^(\d+)/)
+        {
+          $num_self = $1;
+        }
+        else
         {
           die "No leading number: $value_self";
         }
-        my $num_self = $1;
 
-        if ($value_other !~ /^(\d+)/)
+        my $num_other;
+        if ($value_other eq 'last')
+        {
+          $num_other = 9999;
+        }
+        elsif ($value_other =~ /^(\d+)/)
+        {
+          $num_other = $1;
+        }
+        else
         {
           die "No leading number: $value_other";
         }
-        my $num_other = $1;
         
         return -1 if ($num_self < $num_other);
         return 1 if ($num_self > $num_other);

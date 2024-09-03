@@ -13,8 +13,8 @@ use ParseT;
 use EntryT;
 use RegCounter;
 
-my $EXPLORE_TOURNAMENTS = 2;
-my $VERBOSE = 0;
+my $EXPLORE_TOURNAMENTS = 0;
+my $VERBOSE = 1;
 
 # Parse the raw output of cook.pl
 # Recognize and check tournaments
@@ -35,12 +35,13 @@ my %data;
 my $entryT = EntryT->new();
 while ($entryT->read($fh))
 {
+  my $meet = $entryT->field('TITLE_MEET');
   my $tname = $entryT->field('TITLE_TNAME');
-  next if $tname eq '';
+  next if $meet eq '' && $tname eq '';
 
-  if ($entryT->bbono() eq 31218)
+  if ($entryT->bbono() eq 12130)
   {
-    # print "HERE\n";
+    print "HERE\n";
   }
 
   if ($EXPLORE_TOURNAMENTS == 1)
@@ -54,8 +55,10 @@ while ($entryT->read($fh))
   }
 
 
-  my ($edition, $chapter) = 
-    $parseT->get_edition_and_chapter($tname, $entryT);
+  # This could set tname if it was previously unset!
+  my ($edition, $chapter);
+  ($tname, $edition, $chapter) =
+    $parseT->get_edition_and_chapter($meet, $tname, $entryT);
 
   next if $edition eq '';
 
@@ -67,7 +70,6 @@ while ($entryT->read($fh))
 
   my ($header_entry, $chapter_entry) = 
     $parseT->set_header_entry($tname, $edition, $chapter);
-
 
   $entryT->prune_using($header_entry, $chapter_entry);
 
@@ -82,7 +84,7 @@ close $fh;
 
 for my $date_start (sort keys %data)
 {
-if ($date_start eq '2006-05-24')
+if ($date_start eq '2014-05-01')
 {
   print "HERE\n";
 }

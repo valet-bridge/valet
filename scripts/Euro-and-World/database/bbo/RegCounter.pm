@@ -18,8 +18,10 @@ $FIELD_MAP{$FIELDS[$_]} = $_ for (0 .. $#FIELDS);
 
 # (given_field, present_field)
 my %CONFUSION_MATRIX;
+$CONFUSION_MATRIX{ROUND}{MATCH} = 1;
 $CONFUSION_MATRIX{ROUND}{SEGMENT} = 1;
 $CONFUSION_MATRIX{ROUND}{SESSION} = 1;
+$CONFUSION_MATRIX{SEGMENT}{ROUND} = 1;
 $CONFUSION_MATRIX{SEGMENT}{SESSION} = 1;
 
 
@@ -46,7 +48,7 @@ sub register
     $self->{BBOCOUNT}{$bbono}++;
     $self->{COUNTER}{$field}{COUNT}++;
 
-    if ($value =~ /^\d+$/)
+    if ($value =~ /^\d+$/ || $value eq 'last')
     {
       $self->{COUNTER}{$field}{SIMPLE}++;
     }

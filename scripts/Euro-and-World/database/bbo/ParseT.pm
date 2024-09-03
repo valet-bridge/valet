@@ -35,6 +35,8 @@ my @TOURNAMENT_FIELDS = qw(ORGANIZATION COUNTRY CITY ORIGIN ZONE
   FORM SCORING GENDER AGE);
 
 my %COMPATIBILITIES = (
+  AGE => ['TITLE_AGE'],
+  GENDER => ['TITLE_GENDER'],
   MOVEMENT => ['EVENT_MOVEMENT', 'TITLE_MOVEMENT'],
   STAGE => ['EVENT_STAGE', 'TITLE_STAGE']
 );
@@ -136,52 +138,77 @@ sub compatibility
 
 sub get_edition_and_chapter
 {
-  my ($self, $tname, $entry) = @_;
-  return ('', '') unless exists $self->{TOURNAMENT}{$tname};
-  my $t = $self->{TOURNAMENT}{$tname};
+  my ($self, $meet, $tname, $entry) = @_;
+
+  my @tname_list;
+  if (exists $self->{TOURNAMENT}{$tname})
+  {
+    # Use tname if given.
+    push @tname_list, $tname;
+  }
+  elsif ($meet ne '')
+  {
+    # Look for tournaments with the right meet.
+    for my $tname (keys %{$self->{TOURNAMENT}})
+    {
+      if (exists $self->{TOURNAMENT}{$tname}{MEET} &&
+          $self->{TOURNAMENT}{$tname}{MEET} eq $meet)
+      {
+        push @tname_list, $tname;
+      }
+    }
+  }
+  return ($tname, '', '') unless $#tname_list >= 0;
 
   my $target = DateCalc->new();
   $target->set_by_field($entry->field('DATE_ADDED'));
 
   my $lowest_dist = 9999;
   my $lowest_hits = 0;
-  my ($lowest_edition, $lowest_chapter);
-  for my $edition_str (keys %{$t->{EDITIONS}})
+  my ($lowest_tname, $lowest_edition, $lowest_chapter);
+
+  for my $tname (@tname_list)
   {
-    my $edition = $t->{EDITIONS}{$edition_str};
-    for my $chapter_str (keys %{$edition->{CHAPTERS}})
+    my $t = $self->{TOURNAMENT}{$tname};
+
+    for my $edition_str (keys %{$t->{EDITIONS}})
     {
-      my $chapter = $edition->{CHAPTERS}{$chapter_str};
-      next unless ref($chapter) eq 'HASH';
-
-      my ($hits, $conflicts) = compatibility($chapter, $entry);
-      next unless $conflicts == 0;
-
-      my $dist = $target->distance(
-        $chapter->{DATE_START},
-        $chapter->{DATE_END});
-    
-      if (($dist < $lowest_dist) ||
-          ($dist == $lowest_dist && $hits > $lowest_hits))
+      my $edition = $t->{EDITIONS}{$edition_str};
+      for my $chapter_str (keys %{$edition->{CHAPTERS}})
       {
-        $lowest_dist = $dist;
-        $lowest_edition = $edition_str;
-        $lowest_chapter = $chapter_str;
-        $lowest_hits = $hits;
+        my $chapter = $edition->{CHAPTERS}{$chapter_str};
+        next unless ref($chapter) eq 'HASH';
+
+        my ($hits, $conflicts) = compatibility($chapter, $entry);
+        next unless $conflicts == 0;
+
+        my $dist = $target->distance(
+          $chapter->{DATE_START},
+          $chapter->{DATE_END});
+    
+        if (($dist < $lowest_dist) ||
+            ($dist == $lowest_dist && $hits > $lowest_hits))
+        {
+          $lowest_dist = $dist;
+          $lowest_tname = $tname;
+          $lowest_edition = $edition_str;
+          $lowest_chapter = $chapter_str;
+          $lowest_hits = $hits;
+        }
       }
     }
   }
 
-  if ($lowest_dist <= 0)
+  if ($lowest_dist == 0)
   {
     # 'Within one week' would be 7.
-    return ($lowest_edition, $lowest_chapter);
+    return ($lowest_tname, $lowest_edition, $lowest_chapter);
   }
   else
   {
     warn $entry->bbono() . " not found (dist $lowest_dist): " .
       "$tname, " . $entry->field('DATE_ADDED');
-    return ('', '');
+    return ($tname, '', '');
   }
 }
 

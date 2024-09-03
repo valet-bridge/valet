@@ -15,7 +15,7 @@ my %MEETS_ITALY =
 (
   '' =>
   {
-    ORGANIZATION => 'FIBG',
+    ORGANIZATION => 'FIGB',
     COUNTRY => 'Italy',
     ORIGIN => 'National',
 
@@ -50,7 +50,6 @@ my %TOURNAMENTS_ITALY =
     {
       '2004' =>
       {
-        # ORDINAL => '19th',
         CHAPTERS => 
         {
           'C0' =>
@@ -94,7 +93,8 @@ my %TOURNAMENTS_ITALY =
             YEAR => 2005,
             STAGE => => 'Qualifying',
             GENDER => 'Open',
-            major => 'SEGMENT',
+            major => 'ROUND',
+            minor => 'HALF',
             DATE_START => '2005-02-12',
             DATE_END => '2005-02-13'
           },
@@ -396,6 +396,15 @@ my %TOURNAMENTS_ITALY =
             major => 'SEGMENT',
             DATE_START => '2014-09-27',
             DATE_END => '2014-09-28'
+          },
+          'C3' =>
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            GENDER => 'Women',
+            major => 'SEGMENT',
+            DATE_START => '2014-09-27',
+            DATE_END => '2014-09-28'
           }
         }
       },
@@ -604,7 +613,6 @@ my %TOURNAMENTS_ITALY =
           {
             YEAR => 2014,
             STAGE => 'Final',
-            major => 'SESSION',
             DATE_START => '2014-11-01',
             DATE_END => '2014-11-02'
           }
@@ -965,10 +973,18 @@ my %TOURNAMENTS_ITALY =
             MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2014-01-31',
+            DATE_END => '2014-02-01'
+          },
+          'C1' =>
+          {
+            YEAR => 2014,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2014-02-02',
             DATE_END => '2014-02-02'
           },
 
-          'C1' =>
+          'C2' =>
           {
             YEAR => 2014,
             STAGE => 'Semifinal',
@@ -976,7 +992,7 @@ my %TOURNAMENTS_ITALY =
             DATE_START => '2014-02-13',
             DATE_END => '2014-02-14'
           },
-          'C2' =>
+          'C3' =>
           {
             YEAR => 2014,
             STAGE => 'Final',
@@ -1088,7 +1104,6 @@ my %TOURNAMENTS_ITALY =
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
-    AGE => 'Open',
 
     EDITIONS =>
     {
@@ -1100,6 +1115,7 @@ my %TOURNAMENTS_ITALY =
           {
             YEAR => 2004,
             GENDER => 'Women',
+            AGE => 'Open',
             STAGE => 'Quarterfinal',
             major => 'SEGMENT',
             DATE_START => '2004-06-05',
@@ -1109,6 +1125,7 @@ my %TOURNAMENTS_ITALY =
           {
             YEAR => 2004,
             GENDER => 'Women',
+            AGE => 'Open',
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2004-06-06',
@@ -1119,6 +1136,7 @@ my %TOURNAMENTS_ITALY =
           {
             YEAR => 2004,
             GENDER => 'Men',
+            AGE => 'Open',
             STAGE => 'Quarterfinal',
             major => 'SEGMENT',
             DATE_START => '2004-06-05',
@@ -1128,6 +1146,7 @@ my %TOURNAMENTS_ITALY =
           {
             YEAR => 2004,
             GENDER => 'Men',
+            AGE => 'Open',
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2004-06-06',
@@ -1137,10 +1156,21 @@ my %TOURNAMENTS_ITALY =
           {
             YEAR => 2004,
             GENDER => 'Men',
+            AGE => 'Open',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2004-06-07',
             DATE_END => '2004-06-08'
+          },
+          'C5' =>
+          {
+            YEAR => 2004,
+            GENDER => 'Men',
+            AGE => 'O55',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2004-06-06',
+            DATE_END => '2004-06-07'
           }
         }
       },
@@ -1294,34 +1324,34 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             YEAR => 2009,
-            GENDER => 'Open',
+            GENDER => 'Men',
             STAGE => 'Rof16',
             major => 'SEGMENT',
             DATE_START => '2009-12-11',
             DATE_END => '2009-12-11'
           },
-          'C0' =>
+          'C1' =>
           {
             YEAR => 2009,
-            GENDER => 'Open',
+            GENDER => 'Men',
             STAGE => 'Quarterfinal',
             major => 'SEGMENT',
             DATE_START => '2009-12-11',
             DATE_END => '2009-12-12'
           },
-          'C1' =>
+          'C2' =>
           {
             YEAR => 2009,
-            GENDER => 'Open',
+            GENDER => 'Men',
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2009-12-12',
             DATE_END => '2009-12-12'
           },
-          'C2' =>
+          'C3' =>
           {
             YEAR => 2009,
-            GENDER => 'Open',
+            GENDER => 'Men',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2009-12-12',
@@ -1366,6 +1396,15 @@ my %TOURNAMENTS_ITALY =
           {
             YEAR => 2010,
             GENDER => 'Open',
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-12-18',
+            DATE_END => '2010-12-19'
+          },
+          'C4' =>
+          {
+            YEAR => 2010,
+            GENDER => 'Women',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2010-12-18',
@@ -1541,6 +1580,7 @@ my %TOURNAMENTS_ITALY =
             GENDER => 'Seniors',
             STAGE => 'Round-robin',
             major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2014-09-11',
             DATE_END => '2014-09-12'
           },
@@ -1621,7 +1661,7 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             YEAR => 2015,
-            GENDER => 'Seniors',
+            AGE => 'Seniors',
             STAGE => 'Rof16',
             major => 'SEGMENT',
             DATE_START => '2015-10-08',
@@ -1630,7 +1670,7 @@ my %TOURNAMENTS_ITALY =
           'C1' =>
           {
             YEAR => 2015,
-            GENDER => 'Seniors',
+            AGE => 'Seniors',
             STAGE => 'Quarterfinal',
             major => 'SEGMENT',
             DATE_START => '2015-10-09',
@@ -1639,7 +1679,7 @@ my %TOURNAMENTS_ITALY =
           'C2' =>
           {
             YEAR => 2015,
-            GENDER => 'Seniors',
+            AGE => 'Seniors',
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2015-10-09',
@@ -1648,7 +1688,7 @@ my %TOURNAMENTS_ITALY =
           'C3' =>
           {
             YEAR => 2015,
-            GENDER => 'Seniors',
+            AGE => 'Seniors',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2015-10-10',
@@ -1658,7 +1698,7 @@ my %TOURNAMENTS_ITALY =
           'C4' =>
           {
             YEAR => 2015,
-            GENDER => 'Open',
+            AGE => 'Open',
             STAGE => 'Rof16',
             major => 'SEGMENT',
             DATE_START => '2015-11-19',
@@ -1667,7 +1707,7 @@ my %TOURNAMENTS_ITALY =
           'C5' =>
           {
             YEAR => 2015,
-            GENDER => 'Open',
+            AGE => 'Open',
             STAGE => 'Quarterfinal',
             major => 'SEGMENT',
             DATE_START => '2015-11-20',
@@ -1676,7 +1716,7 @@ my %TOURNAMENTS_ITALY =
           'C6' =>
           {
             YEAR => 2015,
-            GENDER => 'Open',
+            AGE => 'Open',
             STAGE => 'Semifinal',
             major => 'ROUND',
             DATE_START => '2015-11-20',
@@ -1685,7 +1725,7 @@ my %TOURNAMENTS_ITALY =
           'C7' =>
           {
             YEAR => 2015,
-            GENDER => 'Open',
+            AGE => 'Open',
             STAGE => 'Final',
             major => 'ROUND',
             DATE_START => '2015-11-21',
