@@ -278,6 +278,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2012' =>
       {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=222&site=0&kl=0
         ORDINAL => '27th',
         CHAPTERS => 
         {
@@ -316,6 +317,9 @@ my %TOURNAMENTS_GERMANY =
     {
       '2013' => 
       {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=315&site=0&kl=0
+        ORDINAL => 27,
+
         CHAPTERS => 
         {
           YEAR => 2013,
@@ -351,6 +355,9 @@ my %TOURNAMENTS_GERMANY =
 
       '2014' => 
       {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=687&submit=Anzeigen
+        ORDINAL => 28,
+
         CHAPTERS => 
         {
           YEAR => 2014,
@@ -388,6 +395,9 @@ my %TOURNAMENTS_GERMANY =
 
       '2015' => 
       {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=1143&site=0&kl=0
+        ORDINAL => 29,
+
         CHAPTERS => 
         {
           YEAR => 2015,
@@ -425,6 +435,9 @@ my %TOURNAMENTS_GERMANY =
 
       '2016' => 
       {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=14602&site=0&kl=0
+        ORDINAL => 30,
+
         CHAPTERS => 
         {
           YEAR => 2016,
@@ -452,6 +465,286 @@ my %TOURNAMENTS_GERMANY =
           {
             DATE_START => '2016-03-05',
             DATE_END => '2016-03-06',
+            WEEKEND => 3,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            STAGE => 'Round-robin'
+          } 
+        }
+      },
+
+      '2017' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=13842&site=0&kl=0
+        ORDINAL => 31,
+
+        CHAPTERS => 
+        {
+          YEAR => 2017,
+          CITY => 'Kassel',
+
+          'WEEKEND 1' =>
+          {
+            DATE_START => '2017-01-28',
+            DATE_END => '2017-01-29',
+            WEEKEND => 1,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            STAGE => 'Round-robin'
+          },
+          'WEEKEND 2' =>
+          {
+            DATE_START => '2017-02-18',
+            DATE_END => '2017-02-19',
+            WEEKEND => 2,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            STAGE => 'Round-robin'
+          },
+          'WEEKEND 3' =>
+          {
+            DATE_START => '2017-03-11',
+            DATE_END => '2017-03-12',
+            WEEKEND => 3,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            STAGE => 'Round-robin'
+          } 
+        }
+      },
+
+      '2018' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=8827&submit=Anzeigen
+        ORDINAL => 32,
+
+        CHAPTERS => 
+        {
+          YEAR => 2018,
+          CITY => 'Kassel',
+
+          'WEEKEND 1' =>
+          {
+            DATE_START => '2018-01-20',
+            DATE_END => '2018-01-21',
+            WEEKEND => 1,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            STAGE => 'Round-robin'
+          },
+          'WEEKEND 2' =>
+          {
+            DATE_START => '2018-02-10',
+            DATE_END => '2018-02-11',
+            WEEKEND => 2,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            STAGE => 'Round-robin'
+          },
+          'WEEKEND 3' =>
+          {
+            DATE_START => '2018-04-14',
+            DATE_END => '2018-04-15',
+            WEEKEND => 3,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            STAGE => 'Round-robin'
+          } 
+        }
+      },
+
+      '2019' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=9737&site=0&kl=0
+        ORDINAL => 33,
+
+        CHAPTERS => 
+        {
+          YEAR => 2019,
+          CITY => 'Kassel',
+
+          'WEEKEND 1' =>
+          {
+            DATE_START => '2019-01-19',
+            DATE_END => '2019-01-20',
+            WEEKEND => 1,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            STAGE => 'Round-robin'
+          },
+          'WEEKEND 2' =>
+          {
+            DATE_START => '2019-03-16',
+            DATE_END => '2019-03-17',
+            WEEKEND => 2,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            STAGE => 'Round-robin'
+          },
+          'WEEKEND 3' =>
+          {
+            DATE_START => '2019-04-06',
+            DATE_END => '2019-04-07',
+            WEEKEND => 3,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            STAGE => 'Round-robin'
+          } 
+        }
+      },
+
+      '2020' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=16553&site=0&kl=0
+        ORDINAL => 34,
+
+        CHAPTERS => 
+        {
+          YEAR => 2020,
+          CITY => 'Kassel',
+
+          'WEEKEND 1' =>
+          {
+            DATE_START => '2020-01-11',
+            DATE_END => '2020-01-12',
+            WEEKEND => 1,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            STAGE => 'Round-robin'
+          },
+          'WEEKEND 2' =>
+          {
+            DATE_START => '2020-02-22',
+            DATE_END => '2020-02-23',
+            WEEKEND => 2,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            STAGE => 'Round-robin'
+          },
+          'WEEKEND 3' =>
+          {
+            DATE_START => '2021-10-09', # Covid
+            DATE_END => '2021-10-10',
+            WEEKEND => 3,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            STAGE => 'Round-robin'
+          } 
+        }
+      },
+
+      '2022' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=19017&submit=Anzeigen
+        ORDINAL => 35,
+
+        CHAPTERS => 
+        {
+          YEAR => 2022,
+          CITY => 'Niedernhausen',
+
+          'WEEKEND 1' =>
+          {
+            DATE_START => '2022-02-05',
+            DATE_END => '2022-02-06',
+            WEEKEND => 1,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            STAGE => 'Round-robin'
+          },
+          'WEEKEND 2' =>
+          {
+            DATE_START => '2022-02-26',
+            DATE_END => '2022-02-27',
+            WEEKEND => 2,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            STAGE => 'Round-robin'
+          },
+          'WEEKEND 3' =>
+          {
+            DATE_START => '2022-03-05',
+            DATE_END => '2022-03-06',
+            WEEKEND => 3,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            STAGE => 'Round-robin'
+          } 
+        }
+      },
+
+      '2023' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=22923&site=0&kl=0
+        ORDINAL => 36,
+
+        CHAPTERS => 
+        {
+          YEAR => 2023,
+          CITY => 'Niedernhausen',
+
+          'WEEKEND 1' =>
+          {
+            DATE_START => '2023-02-11',
+            DATE_END => '2023-02-12',
+            WEEKEND => 1,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            STAGE => 'Round-robin'
+          },
+          'WEEKEND 2' =>
+          {
+            DATE_START => '2023-03-11',
+            DATE_END => '2023-03-12',
+            WEEKEND => 2,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            STAGE => 'Round-robin'
+          },
+          'WEEKEND 3' =>
+          {
+            DATE_START => '2023-04-15',
+            DATE_END => '2023-04-16',
+            WEEKEND => 3,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            STAGE => 'Round-robin'
+          } 
+        }
+      },
+
+      '2024' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=29362&submit=Anzeigen
+        ORDINAL => 37,
+
+        CHAPTERS => 
+        {
+          YEAR => 2024,
+          CITY => 'Niedernhausen',
+
+          'WEEKEND 1' =>
+          {
+            DATE_START => '2024-01-20',
+            DATE_END => '2024-01-21',
+            WEEKEND => 1,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            STAGE => 'Round-robin'
+          },
+          'WEEKEND 2' =>
+          {
+            DATE_START => '2024-02-17',
+            DATE_END => '2024-02-18',
+            WEEKEND => 2,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            STAGE => 'Round-robin'
+          },
+          'WEEKEND 3' =>
+          {
+            DATE_START => '2024-03-09',
+            DATE_END => '2024-03-10',
             WEEKEND => 3,
             major => 'ROUND',
             minor => 'SEGMENT',
@@ -500,6 +793,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2006' => 
       {
+        # https://ergebnisse.bridge-verband.de/error.html?errtype=1&auswcl=0&auswtid=16740
         CHAPTERS => 
         {
           'C0' => 
@@ -525,6 +819,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2008' => 
       {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=15954&site=0&kl=0
         CHAPTERS => 
         {
           'C0' => 
@@ -550,6 +845,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2009' => 
       {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=15953&site=0&kl=0
         CHAPTERS => 
         {
           'C0' => 
@@ -575,6 +871,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2010' => 
       {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=27254&submit=Anzeigen
         CHAPTERS => 
         {
           'C0' => 
@@ -600,6 +897,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2011' => 
       {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=148&submit=Anzeigen
         CHAPTERS => 
         {
           'C0' => 
@@ -625,6 +923,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2012' => 
       {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=301&site=0&kl=0
         CHAPTERS => 
         {
           'C0' => 
@@ -650,6 +949,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2013' => 
       {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=603&site=0&kl=0
         CHAPTERS => 
         {
           'C0' => 
@@ -675,6 +975,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2014' => 
       {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=1048&site=0&kl=0
         CHAPTERS => 
         {
           'C0' => 
@@ -700,6 +1001,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2015' => 
       {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=1996&site=0&kl=0
         CHAPTERS => 
         {
           'C0' => 
@@ -721,6 +1023,162 @@ my %TOURNAMENTS_GERMANY =
             DATE_END => '2015-11-22'
           } 
         }
+      },
+
+      '2016' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=3591&site=0&kl=0
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            CITY => 'Kassel',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-19',
+            DATE_END => '2016-11-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            CITY => 'Kassel',
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-19',
+            DATE_END => '2016-11-20'
+          } 
+        }
+      },
+
+      '2017' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=5671&site=0&kl=0
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            CITY => 'Kassel',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-11-18',
+            DATE_END => '2017-11-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            CITY => 'Kassel',
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-11-18',
+            DATE_END => '2017-11-19'
+          } 
+        }
+      },
+
+      '2018' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=8486&site=0&kl=0
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            CITY => 'Kassel',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-11-17',
+            DATE_END => '2018-11-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            CITY => 'Kassel',
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-11-17',
+            DATE_END => '2018-11-18'
+          } 
+        }
+      },
+
+      '2019' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=12105&site=0&kl=0
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            CITY => 'Kassel',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-11-16',
+            DATE_END => '2019-11-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            CITY => 'Kassel',
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-11-16',
+            DATE_END => '2019-11-17'
+          } 
+        }
+      },
+
+      '2023' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=28517&site=0&kl=0
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            CITY => 'Niedernhausen',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-12-02',
+            DATE_END => '2023-12-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            CITY => 'Niedernhausen',
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-12-02',
+            DATE_END => '2023-12-03'
+          } 
+        }
+      },
+
+      '2024' => 
+      {
+        # 
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            CITY => 'Wetzlar',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-12-06',
+            DATE_END => '2024-12-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            CITY => 'Wetzlar',
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-12-06',
+            DATE_END => '2024-12-08'
+          } 
+        }
       }
     }
   },
@@ -739,6 +1197,7 @@ my %TOURNAMENTS_GERMANY =
     {
       '2014' => 
       {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=842&site=0&kl=0
         ORDINAL => '8th',
         MEET => 'German Championship Week',
         CHAPTERS => 
@@ -772,6 +1231,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2015' => 
       {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=1689&site=0&kl=0
         ORDINAL => '9th',
         MEET => 'German Championship Week',
         CHAPTERS => 
@@ -789,6 +1249,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2016' => 
       {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=3180&site=0&kl=0
         ORDINAL => '10th',
         MEET => 'German Championship Week',
         CHAPTERS => 
@@ -808,6 +1269,190 @@ my %TOURNAMENTS_GERMANY =
             major => 'ROUND',
             DATE_START => '2016-08-21',
             DATE_END => '2016-08-21'
+          } 
+        }
+      },
+
+      '2017' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=5039&site=0&kl=0
+        ORDINAL => '11th',
+        MEET => 'German Championship Week',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2017-08-16',
+            DATE_END => '2017-08-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2017-08-16',
+            DATE_END => '2017-08-18'
+          } 
+        }
+      },
+
+      '2018' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=7444&site=0&kl=0
+        ORDINAL => '12th',
+        MEET => 'German Championship Week',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2018-07-22',
+            DATE_END => '2018-07-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2018-07-22',
+            DATE_END => '2018-07-23'
+          } 
+        }
+      },
+
+      '2019' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=10947&site=0&kl=0
+        ORDINAL => '13th',
+        MEET => 'German Championship Week',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2019-08-26',
+            DATE_END => '2019-08-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2019-08-26',
+            DATE_END => '2019-08-27'
+          } 
+        }
+      },
+
+      '2021' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=15504&site=0&kl=0
+        ORDINAL => '14th',
+        MEET => 'German Championship Week',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2021,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2021-08-14', # Estimated
+            DATE_END => '2021-08-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2021,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2021-08-14',
+            DATE_END => '2021-08-15'
+          } 
+        }
+      },
+
+      '2022' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=19971&site=0&kl=0
+        ORDINAL => '15th',
+        MEET => 'German Championship Week',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2022-08-04',
+            DATE_END => '2022-08-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2022-08-04',
+            DATE_END => '2022-08-05'
+          } 
+        }
+      },
+
+      '2023' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=24659&site=0&kl=0
+        ORDINAL => '16th',
+        CITY => 'Wetzlar',
+
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2023-04-18',
+            DATE_END => '2023-04-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2023-04-18',
+            DATE_END => '2023-04-19'
+          } 
+        }
+      },
+
+      '2024' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=32025&site=0&kl=0
+        ORDINAL => '17th',
+        CITY => 'Wetzlar',
+
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2024-05-09',
+            DATE_END => '2024-05-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2024-05-09',
+            DATE_END => '2024-05-10'
           } 
         }
       }
@@ -887,6 +1532,179 @@ my %TOURNAMENTS_GERMANY =
             DATE_END => '2013-11-10'
           } 
         }
+      },
+
+      '2014' => 
+      {
+        ORDINAL => '11th',
+        CITY => 'Darmstadt',
+        CHAPTERS => 
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2014,
+            major => 'SESSION',
+            DATE_START => '2014-11-01',
+            DATE_END => '2014-11-02'
+          } 
+        }
+      },
+
+      '2015' => 
+      {
+        ORDINAL => '12th',
+        CITY => 'Darmstadt',
+        CHAPTERS => 
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2015,
+            major => 'SESSION',
+            DATE_START => '2015-10-31',
+            DATE_END => '2015-11-01'
+          } 
+        }
+      },
+
+      '2016' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=15858&site=0&kl=0
+        MEET => 'German Championship Week',
+        ORDINAL => '73rd',
+        CITY => 'Darmstadt',
+        CHAPTERS => 
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2016,
+            major => 'SESSION',
+            DATE_START => '2016-08-24',
+            DATE_END => '2016-08-25'
+          } 
+        }
+      },
+
+      '2017' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=5040&site=0&kl=0
+        MEET => 'German Championship Week',
+        ORDINAL => '74th',
+        CITY => 'Darmstadt',
+        CHAPTERS => 
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2017,
+            major => 'SESSION',
+            DATE_START => '2017-08-24',
+            DATE_END => '2017-08-25'
+          } 
+        }
+      },
+
+      '2018' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=7502&site=0&kl=0
+        MEET => 'German Championship Week',
+        ORDINAL => '75th',
+        CITY => 'Darmstadt',
+        CHAPTERS => 
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            major => 'SESSION',
+            DATE_START => '2018-08-28',
+            DATE_END => '2018-08-29'
+          } 
+        }
+      },
+
+      '2019' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=10950&site=0&kl=0
+        MEET => 'German Championship Week',
+        ORDINAL => '76th',
+        CITY => 'Darmstadt',
+        CHAPTERS => 
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            major => 'SESSION',
+            DATE_START => '2019-08-31',
+            DATE_END => '2019-09-01'
+          } 
+        }
+      },
+
+      '2021' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=15544&site=0&kl=0
+        MEET => 'German Championship Week',
+        ORDINAL => '77th',
+        CITY => 'Darmstadt',
+        CHAPTERS => 
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2021,
+            major => 'SESSION',
+            DATE_START => '2021-08-18', # Estimated
+            DATE_END => '2021-09-19'
+          } 
+        }
+      },
+
+      '2022' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=19721&site=0&kl=0
+        ORDINAL => '78th',
+        CITY => 'Würzburg',
+        CHAPTERS => 
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            major => 'SESSION',
+            DATE_START => '2022-04-23',
+            DATE_END => '2022-04-24'
+          } 
+        }
+      },
+
+      '2023' => 
+      {
+        # None.
+        ORDINAL => '79th',
+        CITY => 'Würzburg',
+        CHAPTERS => 
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            major => 'SESSION',
+            DATE_START => '2023-07-15',
+            DATE_END => '2023-07-16'
+          } 
+        }
+      },
+
+      '2024' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=32883&site=0&kl=0
+        ORDINAL => '80th',
+        CITY => 'Wetzlar',
+        CHAPTERS => 
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            major => 'SESSION',
+            DATE_START => '2024-06-15',
+            DATE_END => '2024-06-15'
+          } 
+        }
       }
     }
   },
@@ -910,6 +1728,7 @@ my %TOURNAMENTS_GERMANY =
     {
       '2006' => 
       {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=16696&site=0&kl=0
         ORDINAL => '58th',
         CHAPTERS => 
         {
@@ -936,6 +1755,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2009' => 
       {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=15986&site=0&kl=0
         ORDINAL => '61st',
         CHAPTERS => 
         {
@@ -971,7 +1791,8 @@ my %TOURNAMENTS_GERMANY =
 
       '2011' => 
       {
-        ORDINAL => '64th',
+        # https://ergebnisse.bridge-verband.de/index.php?turid=121&site=0&kl=0
+        ORDINAL => '63rd',
         CHAPTERS => 
         {
           'C0' => 
@@ -1006,7 +1827,8 @@ my %TOURNAMENTS_GERMANY =
 
       '2013' => 
       {
-        ORDINAL => '66th',
+        # https://ergebnisse.bridge-verband.de/index.php?turid=121&site=0&kl=0
+        ORDINAL => '65th',
         MEET => 'German Championship Week',
         CHAPTERS => 
         {
@@ -1039,7 +1861,8 @@ my %TOURNAMENTS_GERMANY =
 
       '2014' => 
       {
-        ORDINAL => '67th',
+        # https://ergebnisse.bridge-verband.de/index.php?turid=843&site=0&kl=0
+        ORDINAL => '66th',
         MEET => 'German Championship Week',
         CHAPTERS => 
         {
@@ -1072,7 +1895,8 @@ my %TOURNAMENTS_GERMANY =
 
       '2015' => 
       {
-        ORDINAL => '68th',
+        # https://ergebnisse.bridge-verband.de/index.php?turid=1706&site=0&kl=0
+        ORDINAL => '67th',
         MEET => 'German Championship Week',
         CHAPTERS => 
         {
@@ -1097,8 +1921,9 @@ my %TOURNAMENTS_GERMANY =
 
       '2016' => 
       {
-        ORDINAL => '69th',
+        # https://ergebnisse.bridge-verband.de/index.php?turid=3210&site=0&kl=0
         MEET => 'German Championship Week',
+        ORDINAL => '69th', # Or 68th -- not clear
         CHAPTERS => 
         {
           'C0' => 
@@ -1116,6 +1941,188 @@ my %TOURNAMENTS_GERMANY =
             major => 'ROUND',
             DATE_START => '2016-08-27',
             DATE_END => '2016-08-28'
+          } 
+        }
+      },
+
+      '2017' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=13841&site=0&kl=0
+        MEET => 'German Championship Week',
+        ORDINAL => '69th',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2017-08-26',
+            DATE_END => '2017-08-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2017-08-27',
+            DATE_END => '2017-08-28'
+          } 
+        }
+      },
+
+      '2018' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=8830&site=0&kl=0
+        ORDINAL => '70th',
+        CITY => 'Kassel',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2018-06-01',
+            DATE_END => '2018-06-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2018-06-01',
+            DATE_END => '2018-06-03'
+          } 
+        }
+      },
+
+      '2019' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=11140&site=0&kl=0
+        MEET => 'German Championship Week',
+        ORDINAL => '71st',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2019-08-31',
+            DATE_END => '2019-09-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2019-08-31',
+            DATE_END => '2019-09-01'
+          } 
+        }
+      },
+
+      '2021' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=15580&site=0&kl=0
+        MEET => 'German Championship Week',
+        ORDINAL => '72nd',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2021,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2021-08-20', # Estimated
+            DATE_END => '2021-08-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2021-08-20',
+            DATE_END => '2021-08-21'
+          } 
+        }
+      },
+
+      '2022' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=20873&site=0&kl=0
+        ORDINAL => '73rd',
+        CITY => 'Bamberg',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2022-10-01',
+            DATE_END => '2022-10-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2022-10-01',
+            DATE_END => '2022-10-03'
+          } 
+        }
+      },
+
+      '2023' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=24381&site=0&kl=0
+        ORDINAL => '74th',
+        CITY => 'Niedernhausen',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2023-04-29',
+            DATE_END => '2023-05-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2023-04-29',
+            DATE_END => '2023-05-01'
+          } 
+        }
+      },
+
+      '2024' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=31334&site=0&kl=0
+        ORDINAL => '75th',
+        CITY => 'Niedernhausen',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2024-04-12',
+            DATE_END => '2024-04-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2024-04-12',
+            DATE_END => '2024-04-14'
           } 
         }
       }
@@ -1236,6 +2243,7 @@ my %TOURNAMENTS_GERMANY =
     {
       '2010' => 
       {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=41&submit=Anzeigen
         ORDINAL => '1st',
         CHAPTERS => 
         {
@@ -1262,6 +2270,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2011' => 
       {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=84&site=0&kl=0
         ORDINAL => '2nd',
         CHAPTERS => 
         {
@@ -1288,6 +2297,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2012' => 
       {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=221&site=0&kl=0
         ORDINAL => '3rd',
         CHAPTERS => 
         {
@@ -1314,6 +2324,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2013' => 
       {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=373&site=0&kl=0
         ORDINAL => '4th',
         CHAPTERS => 
         {
@@ -1340,6 +2351,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2014' => 
       {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=704&site=0&kl=0
         ORDINAL => '5th',
         CHAPTERS => 
         {
@@ -1366,6 +2378,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2015' => 
       {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=1398&site=0&kl=0
         ORDINAL => '6th',
         CHAPTERS => 
         {
@@ -1392,6 +2405,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2016' => 
       {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=2657&site=0&kl=0
         ORDINAL => '7th',
         CHAPTERS => 
         {
@@ -1414,6 +2428,87 @@ my %TOURNAMENTS_GERMANY =
             DATE_END => '2016-05-01'
           } 
         }
+      },
+
+      '2017' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=4416&site=0&kl=0
+        ORDINAL => '8th',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            CITY => 'Berlin',
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2017-04-29',
+            DATE_END => '2017-05-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            CITY => 'Berlin',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2017-04-29',
+            DATE_END => '2017-05-01'
+          } 
+        }
+      },
+
+      '2018' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=6873&site=0&kl=0
+        ORDINAL => '9th',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            CITY => 'Berlin',
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2018-04-29',
+            DATE_END => '2018-05-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            CITY => 'Berlin',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2018-04-29',
+            DATE_END => '2018-05-01'
+          } 
+        }
+      },
+
+      '2019' => 
+      {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=9900&site=0&kl=0
+        ORDINAL => '10th',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            CITY => 'Berlin',
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2019-04-26',
+            DATE_END => '2019-04-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            CITY => 'Berlin',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2019-04-26',
+            DATE_END => '2019-04-28'
+          } 
+        }
       }
     }
   },
@@ -1430,6 +2525,7 @@ my %TOURNAMENTS_GERMANY =
 
     EDITIONS =>
     {
+      # https://ergebnisse.bridge-verband.de/index.php?turid=9900&site=0&kl=0
       '2011' => {
         ORDINAL => '56th',
         CHAPTERS => 
@@ -1445,6 +2541,7 @@ my %TOURNAMENTS_GERMANY =
       },
 
       '2012' => {
+        # https://ergebnisse.bridge-verband.de/index.php?turid=288&site=0&kl=0
         ORDINAL => '57th',
         CHAPTERS => 
         {
