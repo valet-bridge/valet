@@ -13,14 +13,14 @@ use lib '..';
 
 use DateCalc;
 use EntryT;
-# use Tournaments::Germany;
-use Tournaments::Italy;
+use Tournaments::Germany;
+# use Tournaments::Italy;
 
 
 my %DIVISIONS =
 (
-  # GERMANY => \&Tournaments::Germany::set_links
-  ITALY => \&Tournaments::Italy::set_links
+  GERMANY => \&Tournaments::Germany::set_links
+  # ITALY => \&Tournaments::Italy::set_links
 );
 
 my @MEET_FIELDS = qw(ORGANIZATION COUNTRY CITY ORIGIN ZONE SCORING);
