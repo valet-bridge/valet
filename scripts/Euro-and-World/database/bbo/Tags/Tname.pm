@@ -512,18 +512,18 @@ my @MULTI_WORDS =
   # ITALY
   'Italian Club Open Championship',
   'Italian Club Women Championship',
-  # 'Italian Men Cup',
+  'Italian Men Cup',
   'Italian Mixed Cup',
   'Italian Mixed Pairs',
   'Italian Mixed Teams',
-  # 'Italian Open Cup',
+  'Italian Open Cup',
   'Italian Open Teams',
   'Italian Open Trials',
+  'Italian Senior Cup',
   'Italian Senior Trials',
   'Italian U36 Teams',
-  'Italian Women Club Teams',
-  # 'Italian Women Cup',
-  'Italy Cup',
+  # 'Italian Women Club Teams',
+  'Italian Women Cup', #
 
   'Izmir Teams Cup',
 
@@ -1995,11 +1995,7 @@ my %MULTI_TYPOS =
     'izmýr teams cup'],
 
   # ITALY
-  # 'Italian Championship' => ['italian master',
-    # 'italian championships'],
-  'Italian Club Open Championship' => [
-    'camp_ soc_ open',
-    ],
+  'Italian Club Open Championship' => ['camp_ soc_ open'],
   'Italian Club Women Championship' => [
     'italian club team champ women',
     'italian club women championships'],
@@ -2015,7 +2011,6 @@ my %MULTI_TYPOS =
   'Italian Open Trials' => ['italian open teams trials'],
   'Italian Senior Trials' => ['italian senior teams trials'],
   'Italian U36 Teams' => ['Italian Master U36'],
-  'Italy Cup' => ['coppa italia'],
 
   ### JJJ
 

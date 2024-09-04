@@ -127,6 +127,112 @@ my %MEETS_ITALY =
         DATE_END => '2016-05-22'
       }
     }
+  },
+
+  'Italy Cup' =>
+  {
+    ORGANIZATION => 'FIGB',
+    COUNTRY => 'Italy',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2004' =>
+      {
+        YEAR => 2004,
+        DATE_START => '2004-06-05',
+        DATE_END => '2004-06-08'
+      },
+      '2005' =>
+      {
+        YEAR => 2005,
+        CITY => 'Bologna',
+        DATE_START => '2005-12-10',
+        DATE_END => '2005-12-11'
+      },
+      '2006' =>
+      {
+        YEAR => 2006,
+        CITY => 'Bologna',
+        DATE_START => '2006-12-14',
+        DATE_END => '2006-12-17'
+      },
+      '2007' =>
+      {
+        YEAR => 2007,
+        CITY => 'Salsomaggiore',
+        DATE_START => '2007-12-14',
+        DATE_END => '2007-12-16'
+      },
+      '2008' =>
+      {
+        YEAR => 2008,
+        CITY => 'Salsomaggiore',
+        DATE_START => '2008-12-12',
+        DATE_END => '2008-12-14'
+      },
+      '2009' =>
+      {
+        CITY => 'Salsomaggiore',
+        YEAR => 2009,
+        DATE_START => '2009-12-11',
+        DATE_END => '2009-12-13'
+      },
+      '2010' =>
+      {
+        YEAR => 2010,
+        CITY => 'Salsomaggiore',
+        DATE_START => '2010-12-16',
+        DATE_END => '2010-12-19'
+      },
+      '2011' =>
+      {
+        # https://www.federbridge.it/campionati/2011/CI/programma.asp?ciType=4I
+        YEAR => 2011,
+        CITY => 'Salsomaggiore',
+        DATE_START => '2011-12-16',
+        DATE_END => '2011-12-18'
+      },
+      '2012' =>
+      {
+        # https://www.federbridge.it/campionati/2012/CI/programma.asp?ciType=4I
+        YEAR => 2012,
+        CITY => 'Salsomaggiore',
+        DATE_START => '2012-12-14',
+        DATE_END => '2012-12-16'
+      },
+      '2013' =>
+      {
+        # https://www.federbridge.it/campionati/2013/ci/programma.asp?ciType=4I
+
+        YEAR => 2013,
+        CITY => 'Salsomaggiore',
+        DATE_START => '2013-11-21',
+        DATE_END => '2013-11-24'
+      },
+      '2014' =>
+      {
+        # https://www.federbridge.it/campionati/2014/CI/programma.asp?ciType=OI
+        # https://www.federbridge.it/campionati/2014/CI/programma.asp?ciType=MIWI4I
+        YEAR => 2014,
+        CITY => 'Salsomaggiore',
+        DATE_START => '2014-09-11',
+        DATE_END => '2014-12-14'
+      },
+      '2015' =>
+      {
+        # https://www.federbridge.it/campionati/2015/CI/programma.asp?ciType=OI
+        # https://www.federbridge.it/campionati/2015/CI/programma.asp?ciType=MIWI5I
+
+        YEAR => 2015,
+        CITY => 'Salsomaggiore',
+        DATE_START => '2015-10-08',
+        DATE_END => '2015-11-22'
+      }
+    }
   }
 );
 
@@ -533,6 +639,116 @@ my %TOURNAMENTS_ITALY =
     }
   },
 
+  # Probably the same as Open Cup, but would take some relabeling
+  # of Men into Open in the original files.
+  'Italian Men Cup' =>
+  {
+    GENDER => 'Men',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2004' =>
+      {
+        MEET => 'Italy Cup',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2004-06-05',
+            DATE_END => '2004-06-06'
+          },
+          'C1' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2004-06-06',
+            DATE_END => '2004-06-07'
+          },
+          'C2' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2004-06-07',
+            DATE_END => '2004-06-08'
+          }
+        }
+      },
+      '2009' =>
+      {
+        MEET => 'Italy Cup',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2009-12-11',
+            DATE_END => '2009-12-11'
+          },
+          'C1' =>
+          {
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-12-11',
+            DATE_END => '2009-12-12'
+          },
+          'C2' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-12-12',
+            DATE_END => '2009-12-12'
+          },
+          'C3' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-12-12',
+            DATE_END => '2009-12-13'
+          }
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'Italy Cup',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2010-12-16',
+            DATE_END => '2010-12-16'
+          },
+          'C1' =>
+          {
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-12-17',
+            DATE_END => '2010-12-17'
+          },
+          'C2' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-12-17',
+            DATE_END => '2010-12-18'
+          },
+          'C3' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-12-18',
+            DATE_END => '2010-12-19'
+          }
+        }
+      }
+    }
+  },
+
   'Italian Mixed Cup' =>
   {
     ORGANIZATION => 'FIGB',
@@ -831,6 +1047,380 @@ my %TOURNAMENTS_ITALY =
     }
   },
 
+  'Italian Open Cup' =>
+  {
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2005' =>
+      {
+        MEET => 'Italy Cup',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2005-12-10',
+            DATE_END => '2005-12-10'
+          },
+          'C1' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2005-12-10',
+            DATE_END => '2005-12-11'
+          }
+        }
+      },
+      '2006' =>
+      {
+        MEET => 'Italy Cup',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-12-14',
+            DATE_END => '2006-12-15'
+          },
+          'C1' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-12-15',
+            DATE_END => '2006-12-16'
+          },
+          'C2' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2006-12-16',
+            DATE_END => '2006-12-17'
+          }
+        }
+      },
+      '2007' =>
+      {
+        MEET => 'Italy Cup',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-12-14',
+            DATE_END => '2007-12-15'
+          },
+          'C1' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-12-15',
+            DATE_END => '2007-12-15'
+          },
+          'C2' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-12-15',
+            DATE_END => '2007-12-16'
+          }
+        }
+      },
+      '2008' =>
+      {
+        MEET => 'Italy Cup',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-12-12',
+            DATE_END => '2008-12-13'
+          },
+          'C1' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-12-13',
+            DATE_END => '2008-12-13'
+          },
+          'C2' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-12-13',
+            DATE_END => '2008-12-14'
+          }
+        }
+      },
+      '2009' =>
+      {
+        MEET => 'Italy Cup',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2009-12-11',
+            DATE_END => '2009-12-11'
+          },
+          'C1' =>
+          {
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-12-11',
+            DATE_END => '2009-12-12'
+          },
+          'C2' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-12-12',
+            DATE_END => '2009-12-12'
+          },
+          'C3' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-12-12',
+            DATE_END => '2009-12-13'
+          }
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'Italy Cup',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2010-12-16',
+            DATE_END => '2010-12-16'
+          },
+          'C1' =>
+          {
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-12-17',
+            DATE_END => '2010-12-17'
+          },
+          'C2' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-12-17',
+            DATE_END => '2010-12-18'
+          },
+          'C3' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-12-18',
+            DATE_END => '2010-12-19'
+          }
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Italy Cup',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2011-12-16',
+            DATE_END => '2011-12-16'
+          },
+          'C1' =>
+          {
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-12-16',
+            DATE_END => '2011-12-17'
+          },
+          'C2' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-12-17',
+            DATE_END => '2011-12-17'
+          },
+          'C3' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-12-17',
+            DATE_END => '2011-12-18'
+          }
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'Italy Cup',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2012-12-14',
+            DATE_END => '2012-12-14'
+          },
+          'C1' =>
+          {
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-12-14',
+            DATE_END => '2012-12-15'
+          },
+          'C2' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-12-15',
+            DATE_END => '2012-12-15'
+          },
+          'C3' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-12-15',
+            DATE_END => '2012-12-16'
+          }
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'Italy Cup',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2013-11-21',
+            DATE_END => '2013-11-21'
+          },
+          'C1' =>
+          {
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-11-21',
+            DATE_END => '2013-11-22'
+          },
+          'C2' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-11-22',
+            DATE_END => '2013-11-22'
+          },
+          'C3' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-11-22',
+            DATE_END => '2013-11-24'
+          }
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Italy Cup',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-09-12',
+            DATE_END => '2014-09-13'
+          },
+          'C1' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-09-13',
+            DATE_END => '2014-09-14'
+          },
+          'C2' =>
+          {
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2014-12-11',
+            DATE_END => '2014-12-11'
+          },
+          'C3' =>
+          {
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-12-12',
+            DATE_END => '2014-12-12'
+          },
+          'C4' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-12-12',
+            DATE_END => '2014-12-13'
+          },
+          'C5' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-12-13',
+            DATE_END => '2014-12-14'
+          }
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Italy Cup',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2015-11-19',
+            DATE_END => '2015-11-19'
+          },
+          'C1' =>
+          {
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-11-20',
+            DATE_END => '2015-11-20'
+          },
+          'C2' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'ROUND',
+            DATE_START => '2015-11-20',
+            DATE_END => '2015-11-21'
+          },
+          'C3' =>
+          {
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2015-11-21',
+            DATE_END => '2015-11-22'
+          }
+        }
+      }
+    }
+  },
+
   'Italian Open Teams' =>
   {
     ORGANIZATION => 'FIGB',
@@ -1063,6 +1653,87 @@ my %TOURNAMENTS_ITALY =
     }
   },
 
+  'Italian Senior Cup' =>
+  {
+    GENDER => 'Open',
+    AGE => 'Seniors',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        MEET => 'Italy Cup',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2014-09-11',
+            DATE_END => '2014-09-12'
+          },
+          'C1' =>
+          {
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-09-12',
+            DATE_END => '2014-09-12'
+          },
+          'C2' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-09-12',
+            DATE_END => '2014-09-13'
+          },
+          'C3' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-09-13',
+            DATE_END => '2014-09-14'
+          }
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Italy Cup',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2015-10-08',
+            DATE_END => '2015-10-08'
+          },
+          'C1' =>
+          {
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-10-09',
+            DATE_END => '2015-10-09'
+          },
+          'C2' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-10-09',
+            DATE_END => '2015-10-10'
+          },
+          'C3' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-10-10',
+            DATE_END => '2015-10-11'
+          }
+        }
+      }
+    }
+  },
+
   'Italian Senior Trials' =>
   {
     ORGANIZATION => 'FIGB',
@@ -1154,26 +1825,20 @@ my %TOURNAMENTS_ITALY =
     }
   },
 
-  'Italy Cup' =>
+  'Italian Women Cup' =>
   {
-    ORGANIZATION => 'FIGB',
-    COUNTRY => 'Italy',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
 
     EDITIONS =>
     {
       '2004' =>
       {
+        MEET => 'Italy Cup',
         CHAPTERS => 
         {
           'C0' =>
           {
-            YEAR => 2004,
-            GENDER => 'Women',
-            AGE => 'Open',
             STAGE => 'Quarterfinal',
             major => 'SEGMENT',
             DATE_START => '2004-06-05',
@@ -1181,50 +1846,6 @@ my %TOURNAMENTS_ITALY =
           },
           'C1' =>
           {
-            YEAR => 2004,
-            GENDER => 'Women',
-            AGE => 'Open',
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2004-06-06',
-            DATE_END => '2004-06-07'
-          },
-
-          'C2' =>
-          {
-            YEAR => 2004,
-            GENDER => 'Men',
-            AGE => 'Open',
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2004-06-05',
-            DATE_END => '2004-06-06'
-          },
-          'C3' =>
-          {
-            YEAR => 2004,
-            GENDER => 'Men',
-            AGE => 'Open',
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2004-06-06',
-            DATE_END => '2004-06-07'
-          },
-          'C4' =>
-          {
-            YEAR => 2004,
-            GENDER => 'Men',
-            AGE => 'Open',
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2004-06-07',
-            DATE_END => '2004-06-08'
-          },
-          'C5' =>
-          {
-            YEAR => 2004,
-            GENDER => 'Men',
-            AGE => 'O55',
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2004-06-06',
@@ -1234,335 +1855,38 @@ my %TOURNAMENTS_ITALY =
       },
       '2005' =>
       {
-        CITY => 'Bologna',
-
+        MEET => 'Italy Cup',
         CHAPTERS => 
         {
           'C0' =>
           {
-            YEAR => 2005,
-            GENDER => 'Women',
-            STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2005-12-10',
             DATE_END => '2005-12-10'
-          },
-
-          'C1' =>
-          {
-            YEAR => 2005,
-            GENDER => 'Open',
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2005-12-10',
-            DATE_END => '2005-12-10'
-          },
-          'C2' =>
-          {
-            YEAR => 2005,
-            GENDER => 'Open',
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2005-12-10',
-            DATE_END => '2005-12-11'
-          }
-        }
-      },
-      '2006' =>
-      {
-        CITY => 'Bologna',
-
-        CHAPTERS => 
-        {
-          'C0' =>
-          {
-            YEAR => 2006,
-            GENDER => 'Open',
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2006-12-14',
-            DATE_END => '2006-12-15'
-          },
-          'C1' =>
-          {
-            YEAR => 2006,
-            GENDER => 'Open',
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2006-12-15',
-            DATE_END => '2006-12-16'
-          },
-          'C2' =>
-          {
-            YEAR => 2006,
-            GENDER => 'Open',
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2006-12-16',
-            DATE_END => '2006-12-17'
-          }
-        }
-      },
-      '2007' =>
-      {
-        CITY => 'Salsomaggiore',
-
-        CHAPTERS => 
-        {
-          'C0' =>
-          {
-            YEAR => 2007,
-            GENDER => 'Open',
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2007-12-14',
-            DATE_END => '2007-12-15'
-          },
-          'C1' =>
-          {
-            YEAR => 2007,
-            GENDER => 'Open',
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2007-12-15',
-            DATE_END => '2007-12-15'
-          },
-          'C2' =>
-          {
-            YEAR => 2007,
-            GENDER => 'Open',
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2007-12-15',
-            DATE_END => '2007-12-16'
-          }
-        }
-      },
-      '2008' =>
-      {
-        CITY => 'Salsomaggiore',
-
-        CHAPTERS => 
-        {
-          'C0' =>
-          {
-            YEAR => 2008,
-            GENDER => 'Open',
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2008-12-12',
-            DATE_END => '2008-12-13'
-          },
-          'C1' =>
-          {
-            YEAR => 2008,
-            GENDER => 'Open',
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2008-12-13',
-            DATE_END => '2008-12-13'
-          },
-          'C2' =>
-          {
-            YEAR => 2008,
-            GENDER => 'Open',
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2008-12-13',
-            DATE_END => '2008-12-14'
-          }
-        }
-      },
-      '2009' =>
-      {
-        CITY => 'Salsomaggiore',
-
-        CHAPTERS => 
-        {
-          'C0' =>
-          {
-            YEAR => 2009,
-            GENDER => 'Men',
-            STAGE => 'Rof16',
-            major => 'SEGMENT',
-            DATE_START => '2009-12-11',
-            DATE_END => '2009-12-11'
-          },
-          'C1' =>
-          {
-            YEAR => 2009,
-            GENDER => 'Men',
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2009-12-11',
-            DATE_END => '2009-12-12'
-          },
-          'C2' =>
-          {
-            YEAR => 2009,
-            GENDER => 'Men',
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2009-12-12',
-            DATE_END => '2009-12-12'
-          },
-          'C3' =>
-          {
-            YEAR => 2009,
-            GENDER => 'Men',
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2009-12-12',
-            DATE_END => '2009-12-13'
           }
         }
       },
       '2010' =>
       {
-        CITY => 'Salsomaggiore',
-
+        MEET => 'Italy Cup',
         CHAPTERS => 
         {
           'C0' =>
           {
-            YEAR => 2010,
-            GENDER => 'Open',
-            STAGE => 'Rof16',
-            major => 'SEGMENT',
-            DATE_START => '2010-12-16',
-            DATE_END => '2010-12-16'
-          },
-          'C1' =>
-          {
-            YEAR => 2010,
-            GENDER => 'Open',
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2010-12-17',
-            DATE_END => '2010-12-17'
-          },
-          'C2' =>
-          {
-            YEAR => 2010,
-            GENDER => 'Open',
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2010-12-17',
-            DATE_END => '2010-12-18'
-          },
-          'C3' =>
-          {
-            YEAR => 2010,
-            GENDER => 'Open',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2010-12-18',
             DATE_END => '2010-12-19'
-          },
-          'C4' =>
-          {
-            YEAR => 2010,
-            GENDER => 'Women',
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2010-12-18',
-            DATE_END => '2010-12-19'
-          }
-        }
-      },
-      '2011' =>
-      {
-        CITY => 'Salsomaggiore',
-        # https://www.federbridge.it/campionati/2011/CI/programma.asp?ciType=4I
-
-        CHAPTERS => 
-        {
-          'C0' =>
-          {
-            YEAR => 2011,
-            GENDER => 'Open',
-            STAGE => 'Rof16',
-            major => 'SEGMENT',
-            DATE_START => '2011-12-16',
-            DATE_END => '2011-12-16'
-          },
-          'C1' =>
-          {
-            YEAR => 2011,
-            GENDER => 'Open',
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2011-12-16',
-            DATE_END => '2011-12-17'
-          },
-          'C2' =>
-          {
-            YEAR => 2011,
-            GENDER => 'Open',
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2011-12-17',
-            DATE_END => '2011-12-17'
-          },
-          'C3' =>
-          {
-            YEAR => 2011,
-            GENDER => 'Open',
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2011-12-17',
-            DATE_END => '2011-12-18'
           }
         }
       },
       '2012' =>
       {
-        CITY => 'Salsomaggiore',
-        # https://www.federbridge.it/campionati/2012/CI/programma.asp?ciType=4I
-
+        MEET => 'Italy Cup',
         CHAPTERS => 
         {
           'C0' =>
           {
-            YEAR => 2012,
-            GENDER => 'Open',
-            STAGE => 'Rof16',
-            major => 'SEGMENT',
-            DATE_START => '2012-12-14',
-            DATE_END => '2012-12-14'
-          },
-          'C1' =>
-          {
-            YEAR => 2012,
-            GENDER => 'Open',
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2012-12-14',
-            DATE_END => '2012-12-15'
-          },
-          'C2' =>
-          {
-            YEAR => 2012,
-            GENDER => 'Open',
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2012-12-15',
-            DATE_END => '2012-12-15'
-          },
-          'C3' =>
-          {
-            YEAR => 2012,
-            GENDER => 'Open',
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2012-12-15',
-            DATE_END => '2012-12-16'
-          },
-
-          'C4' =>
-          {
-            YEAR => 2012,
-            GENDER => 'Women',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2012-12-15',
@@ -1572,228 +1896,20 @@ my %TOURNAMENTS_ITALY =
       },
       '2013' =>
       {
-        CITY => 'Salsomaggiore',
-        # https://www.federbridge.it/campionati/2013/ci/programma.asp?ciType=4I
-
+        MEET => 'Italy Cup',
         CHAPTERS => 
         {
           'C0' =>
           {
-            YEAR => 2013,
-            GENDER => 'Open',
-            STAGE => 'Rof16',
-            major => 'SEGMENT',
-            DATE_START => '2013-11-21',
-            DATE_END => '2013-11-21'
-          },
-          'C1' =>
-          {
-            YEAR => 2013,
-            GENDER => 'Open',
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2013-11-21',
-            DATE_END => '2013-11-22'
-          },
-          'C2' =>
-          {
-            YEAR => 2013,
-            GENDER => 'Open',
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2013-11-22',
-            DATE_END => '2013-11-22'
-          },
-          'C3' =>
-          {
-            YEAR => 2013,
-            GENDER => 'Open',
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2013-11-22',
-            DATE_END => '2013-11-24'
-          },
-
-          'C4' =>
-          {
-            YEAR => 2013,
-            GENDER => 'Women',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2013-11-24',
             DATE_END => '2013-11-24'
           }
         }
-      },
-      '2014' =>
-      {
-        CITY => 'Salsomaggiore',
-        # https://www.federbridge.it/campionati/2014/CI/programma.asp?ciType=OI
-        # https://www.federbridge.it/campionati/2014/CI/programma.asp?ciType=MIWI4I
-        CHAPTERS => 
-        {
-          'C0' =>
-          {
-            YEAR => 2014,
-            GENDER => 'Seniors',
-            STAGE => 'Round-robin',
-            major => 'ROUND',
-            minor => 'SEGMENT',
-            DATE_START => '2014-09-11',
-            DATE_END => '2014-09-12'
-          },
-          'C1' =>
-          {
-            YEAR => 2014,
-            GENDER => 'Seniors',
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2014-09-12',
-            DATE_END => '2014-09-12'
-          },
-          'C2' =>
-          {
-            YEAR => 2014,
-            GENDER => 'Open',
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2014-09-12',
-            DATE_END => '2014-09-13'
-          },
-          'C3' =>
-          {
-            YEAR => 2014,
-            GENDER => 'Open',
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2014-09-13',
-            DATE_END => '2014-09-14'
-          },
-
-          'C4' =>
-          {
-            YEAR => 2014,
-            GENDER => 'Open',
-            STAGE => 'Rof16',
-            major => 'SEGMENT',
-            DATE_START => '2014-12-11',
-            DATE_END => '2014-12-11'
-          },
-          'C5' =>
-          {
-            YEAR => 2014,
-            GENDER => 'Open',
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2014-12-12',
-            DATE_END => '2014-12-12'
-          },
-          'C6' =>
-          {
-            YEAR => 2014,
-            GENDER => 'Open',
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2014-12-12',
-            DATE_END => '2014-12-13'
-          },
-          'C7' =>
-          {
-            YEAR => 2014,
-            GENDER => 'Open',
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2014-12-13',
-            DATE_END => '2014-12-14'
-          }
-        }
-      },
-      '2015' =>
-      {
-        CITY => 'Salsomaggiore',
-        # https://www.federbridge.it/campionati/2015/CI/programma.asp?ciType=OI
-        # https://www.federbridge.it/campionati/2015/CI/programma.asp?ciType=MIWI5I
-
-        CHAPTERS => 
-        {
-          'C0' =>
-          {
-            YEAR => 2015,
-            AGE => 'Seniors',
-            STAGE => 'Rof16',
-            major => 'SEGMENT',
-            DATE_START => '2015-10-08',
-            DATE_END => '2015-10-08'
-          },
-          'C1' =>
-          {
-            YEAR => 2015,
-            AGE => 'Seniors',
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2015-10-09',
-            DATE_END => '2015-10-09'
-          },
-          'C2' =>
-          {
-            YEAR => 2015,
-            AGE => 'Seniors',
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2015-10-09',
-            DATE_END => '2015-10-10'
-          },
-          'C3' =>
-          {
-            YEAR => 2015,
-            AGE => 'Seniors',
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2015-10-10',
-            DATE_END => '2015-10-11'
-          },
-
-          'C4' =>
-          {
-            YEAR => 2015,
-            AGE => 'Open',
-            STAGE => 'Rof16',
-            major => 'SEGMENT',
-            DATE_START => '2015-11-19',
-            DATE_END => '2015-11-19'
-          },
-          'C5' =>
-          {
-            YEAR => 2015,
-            AGE => 'Open',
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2015-11-20',
-            DATE_END => '2015-11-20'
-          },
-          'C6' =>
-          {
-            YEAR => 2015,
-            AGE => 'Open',
-            STAGE => 'Semifinal',
-            major => 'ROUND',
-            DATE_START => '2015-11-20',
-            DATE_END => '2015-11-21'
-          },
-          'C7' =>
-          {
-            YEAR => 2015,
-            AGE => 'Open',
-            STAGE => 'Final',
-            major => 'ROUND',
-            DATE_START => '2015-11-21',
-            DATE_END => '2015-11-22'
-          }
-        }
       }
     }
   }
-
 );
 
 

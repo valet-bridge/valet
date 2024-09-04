@@ -41,7 +41,7 @@ while ($entryT->read($fh))
 
   if ($entryT->bbono() eq 1265)
   {
-    print "HERE\n";
+    # print "HERE\n";
   }
 
   if ($EXPLORE_TOURNAMENTS == 1)

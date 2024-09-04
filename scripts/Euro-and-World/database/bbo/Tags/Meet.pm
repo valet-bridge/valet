@@ -46,6 +46,7 @@ my @MULTI_WORDS =
   'Israel International Festival',
   'Israel Teams Cup',
   'Italian Club Championship',
+  'Italy Cup',
   'Jordan Bridge Festival',
   'Jyvaskala Easter Bridge Festival',
   'Krakow Meeting',
@@ -168,6 +169,8 @@ my %MULTI_TYPOS =
     'italian teams clubs championships',
     'italian interclub',
     'interclub italian'],
+  'Italy Cup' => ['coppa italia'],
+
   'Jordan Bridge Festival' => ['jordab festival', 'jordan b_ festival',
     'jordan bridge f estival', 'jordan bridge tournament spring festival',
     'jordan bridge tournament ( spring festival)',
