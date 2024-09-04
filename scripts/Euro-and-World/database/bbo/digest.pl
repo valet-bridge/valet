@@ -14,7 +14,7 @@ use EntryT;
 use RegCounter;
 
 my $EXPLORE_TOURNAMENTS = 0;
-my $VERBOSE = 1;
+my $VERBOSE = 0;
 
 # Parse the raw output of cook.pl
 # Recognize and check tournaments
@@ -39,9 +39,9 @@ while ($entryT->read($fh))
   my $tname = $entryT->field('TITLE_TNAME');
   next if $meet eq '' && $tname eq '';
 
-  if ($entryT->bbono() eq 1265)
+  if ($entryT->bbono() eq 36260)
   {
-    # print "HERE\n";
+    print "HERE\n";
   }
 
   if ($EXPLORE_TOURNAMENTS == 1)
@@ -84,9 +84,9 @@ close $fh;
 
 for my $date_start (sort keys %data)
 {
-if ($date_start eq '2014-05-01')
+if ($date_start eq '2014-10-30')
 {
-  print "HERE\n";
+  # print "HERE\n";
 }
   for my $dno (0 .. $#{$data{$date_start}})
   {

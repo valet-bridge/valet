@@ -23,7 +23,7 @@ my %DIVISIONS =
   ITALY => \&Tournaments::Italy::set_links
 );
 
-my @MEET_FIELDS = qw(ORGANIZATION COUNTRY CITY ORIGIN ZONE);
+my @MEET_FIELDS = qw(ORGANIZATION COUNTRY CITY ORIGIN ZONE SCORING);
 
 my @MEET_EDITION_FIELDS = qw(YEAR CITY);
 my @MEET_EDITION_PREFIXED_FIELDS = qw(ORDINAL DATE_START DATE_END);
@@ -272,7 +272,7 @@ sub set_header_entry
 
     for my $mfield (@MEET_EDITION_FIELDS)
     {
-      transfer_field(\%fields, $mfield, $meet->{$mfield});
+      transfer_field(\%fields, $mfield, $m_edition->{$mfield});
     }
 
     for my $mfield (@MEET_EDITION_PREFIXED_FIELDS)

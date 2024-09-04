@@ -14,6 +14,7 @@ my @HEADER_FIELDS = qw(
   TOURNAMENT_ORDINAL
   TOURNAMENT_NAME
   TOURNAMENT_CITY
+  YEAR
   ZONE
   ORIGIN
   COUNTRY
@@ -46,6 +47,7 @@ $CHAPTER_HASH_CHECK{$_} = 1 for @CHAPTER_FIELDS;
 my @PRUNE_HEADER_FIELDS = (
   ['TOURNAMENT_ORDINAL', 'TITLE_ORDINAL'],
   ['TOURNAMENT_NAME', 'TITLE_TNAME'],
+  ['YEAR', 'TITLE_YEAR'],
   ['ZONE', 'TITLE_ZONE'],
   ['ORIGIN', 'TITLE_ORIGIN'],
   ['COUNTRY', 'TITLE_COUNTRY'],
@@ -454,6 +456,10 @@ sub fix_list_tags
 
   $self->transfer_list_tag('EVENT_SEGMENT', 'SEGMENT');
 
+  $self->transfer_list_tag('EVENT_AGE', 'AGE');
+
+  $self->transfer_list_tag('EVENT_GENDER', 'GENDER');
+
   $self->transfer_list_tag('EVENT_HALF', 'HALF');
 
   $self->transfer_list_tag('TITLE_ROUND', 'ROUND');
@@ -680,6 +686,10 @@ sub str_by_ordered_fields
   {
     next if $key =~ /[a-z]/; # E.g., 'major' and 'minor'
     warn "Unprinted field $key" unless exists $check_fields->{$key};
+if (! exists $check_fields->{$key})
+{
+print "UNPRINTED $key\n";
+}
   }
 
   return "$s\n";

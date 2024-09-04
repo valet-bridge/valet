@@ -217,6 +217,7 @@ my %MEETS_ITALY =
       {
         # https://www.federbridge.it/campionati/2014/CI/programma.asp?ciType=OI
         # https://www.federbridge.it/campionati/2014/CI/programma.asp?ciType=MIWI4I
+        # https://www.federbridge.it/campionati/2014/CI/programma.asp?ciType=XI
         YEAR => 2014,
         CITY => 'Salsomaggiore',
         DATE_START => '2014-09-11',
@@ -226,6 +227,7 @@ my %MEETS_ITALY =
       {
         # https://www.federbridge.it/campionati/2015/CI/programma.asp?ciType=OI
         # https://www.federbridge.it/campionati/2015/CI/programma.asp?ciType=MIWI5I
+        # https://www.federbridge.it/campionati/2015/CI/programma.asp?ciType=XI
 
         YEAR => 2015,
         CITY => 'Salsomaggiore',
@@ -751,12 +753,6 @@ my %TOURNAMENTS_ITALY =
 
   'Italian Mixed Cup' =>
   {
-    ORGANIZATION => 'FIGB',
-    COUNTRY => 'Italy',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
     GENDER => 'Mixed',
     AGE => 'Open',
 
@@ -764,14 +760,11 @@ my %TOURNAMENTS_ITALY =
     {
       '2014' =>
       {
-        CITY => 'Salsomaggiore',
-        # https://www.federbridge.it/campionati/2014/CI/programma.asp?ciType=XI
-
+        MEET => 'Italy Cup',
         CHAPTERS => 
         {
           'C0' =>
           {
-            YEAR => 2014,
             STAGE => 'Rof32',
             major => 'SEGMENT',
             DATE_START => '2014-10-29',
@@ -779,7 +772,6 @@ my %TOURNAMENTS_ITALY =
           },
           'C1' =>
           {
-            YEAR => 2014,
             STAGE => => 'Rof16',
             major => 'SEGMENT',
             DATE_START => '2014-10-29',
@@ -787,7 +779,6 @@ my %TOURNAMENTS_ITALY =
           },
           'C2' =>
           {
-            YEAR => 2014,
             STAGE => => 'Quarterfinal',
             major => 'SEGMENT',
             DATE_START => '2014-10-30',
@@ -795,7 +786,6 @@ my %TOURNAMENTS_ITALY =
           },
           'C3' =>
           {
-            YEAR => 2014,
             STAGE => => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2014-10-30',
@@ -803,7 +793,6 @@ my %TOURNAMENTS_ITALY =
           },
           'C4' =>
           {
-            YEAR => 2014,
             STAGE => => 'Final',
             major => 'SEGMENT',
             DATE_START => '2014-10-31',
@@ -813,14 +802,11 @@ my %TOURNAMENTS_ITALY =
       },
       '2015' =>
       {
-        CITY => 'Salsomaggiore',
-        # https://www.federbridge.it/campionati/2015/CI/programma.asp?ciType=XI
-
+        MEET => 'Italy Cup',
         CHAPTERS => 
         {
           'C0' =>
           {
-            YEAR => 2015,
             STAGE => 'Rof32',
             major => 'SEGMENT',
             DATE_START => '2015-10-28',
@@ -828,7 +814,6 @@ my %TOURNAMENTS_ITALY =
           },
           'C1' =>
           {
-            YEAR => 2015,
             STAGE => => 'Rof16',
             major => 'SEGMENT',
             DATE_START => '2015-10-28',
@@ -836,7 +821,6 @@ my %TOURNAMENTS_ITALY =
           },
           'C2' =>
           {
-            YEAR => 2015,
             STAGE => => 'Quarterfinal',
             major => 'SEGMENT',
             DATE_START => '2015-10-29',
@@ -844,7 +828,6 @@ my %TOURNAMENTS_ITALY =
           },
           'C3' =>
           {
-            YEAR => 2015,
             STAGE => => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2015-10-29',
@@ -852,7 +835,6 @@ my %TOURNAMENTS_ITALY =
           },
           'C4' =>
           {
-            YEAR => 2015,
             STAGE => => 'Final',
             major => 'SEGMENT',
             DATE_START => '2015-10-30',
@@ -878,6 +860,7 @@ my %TOURNAMENTS_ITALY =
     {
       '2014' =>
       {
+        YEAR => 2014,
         CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2014/CXCCMX/indice.asp
 
@@ -885,7 +868,6 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            YEAR => 2014,
             STAGE => 'Final',
             DATE_START => '2014-11-01',
             DATE_END => '2014-11-02'
@@ -894,6 +876,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2015' =>
       {
+        YEAR => 2015,
         CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2015/CXCCMX/indice.asp
 
@@ -901,7 +884,6 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            YEAR => 2015,
             STAGE => 'Final',
             major => 'SESSION',
             DATE_START => '2015-10-31',
@@ -927,6 +909,7 @@ my %TOURNAMENTS_ITALY =
     {
       '2010' =>
       {
+        YEAR => 2010,
         CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2010/CXSQMX/indice.asp
 
@@ -934,7 +917,6 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            YEAR => 2010,
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2010-10-29',
@@ -944,6 +926,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2011' =>
       {
+        YEAR => 2011,
         CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2011/CXSQMX/indice.asp
 
@@ -951,7 +934,6 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            YEAR => 2011,
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-10-30',
@@ -961,6 +943,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2012' =>
       {
+        YEAR => 2012,
         CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2012/CXSQMX/indice.asp
 
@@ -968,7 +951,6 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            YEAR => 2012,
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-11-01',
@@ -978,6 +960,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2013' =>
       {
+        YEAR => 2013,
         CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2013/CXSQMX/indice.asp
         
@@ -985,7 +968,6 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            YEAR => 2013,
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-05-30',
@@ -995,6 +977,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2014' =>
       {
+        YEAR => 2014,
         CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2014/CXSQMX/indice.asp
         
@@ -1002,7 +985,6 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            YEAR => 2014,
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-05-30',
@@ -1012,6 +994,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2015' =>
       {
+        YEAR => 2015,
         CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2015/CXSQMX/indice.asp
 
@@ -1019,7 +1002,6 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            YEAR => 2015,
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-05-30',
@@ -1029,6 +1011,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2016' =>
       {
+        YEAR => 2016,
         CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2016/CXSQMX/indice.asp
 
@@ -1036,7 +1019,6 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            YEAR => 2016,
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-06-02',
@@ -1436,11 +1418,11 @@ my %TOURNAMENTS_ITALY =
     {
       '2004' =>
       {
+        YEAR => 2004,
         CHAPTERS => 
         {
           'C0' =>
           {
-            YEAR => 2004,
             STAGE => => 'Qualifying',
             major => 'ROUND',
             DATE_START => '2004-04-28',
@@ -1448,7 +1430,6 @@ my %TOURNAMENTS_ITALY =
           },
           'C1' =>
           {
-            YEAR => 2004,
             STAGE => 'Final',
             major => 'ROUND',
             DATE_START => '2004-05-01',
@@ -1458,6 +1439,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2006' =>
       {
+        YEAR => 2006,
         CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2006/CPSQLBSG/indice.asp
 
@@ -1465,7 +1447,6 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            YEAR => 2006,
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2006-04-23',
@@ -1475,6 +1456,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2010' =>
       {
+        YEAR => 2010,
         CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2010/CXSQLBSG/indice.asp
 
@@ -1482,7 +1464,6 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            YEAR => 2010,
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2010-04-29',
@@ -1492,6 +1473,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2011' =>
       {
+        YEAR => 2011,
         CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2011/CXSQLBSG/indice.asp
 
@@ -1499,7 +1481,6 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            YEAR => 2011,
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-04-28',
@@ -1509,6 +1490,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2012' =>
       {
+        YEAR => 2012,
         CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2012/CXSQLBSG/indice.asp
 
@@ -1516,7 +1498,6 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            YEAR => 2012,
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-04-28',
@@ -1526,6 +1507,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2013' =>
       {
+        YEAR => 2013,
         CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2013/CXSQLBSG/indice.asp
 
@@ -1533,7 +1515,6 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            YEAR => 2013,
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-04-25',
@@ -1543,6 +1524,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2014' =>
       {
+        YEAR => 2014,
         CITY => 'Salsomaggiore',
         #  https://www.federbridge.it/campionati/2014/CXSQLBSG/indice.asp
 
@@ -1550,7 +1532,6 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            YEAR => 2014,
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-04-24',
@@ -1560,6 +1541,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2015' =>
       {
+        YEAR => 2015,
         CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2015/CXSQLBSG/indice.asp
 
@@ -1567,7 +1549,6 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            YEAR => 2015,
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-04-30',
@@ -1577,6 +1558,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2016' =>
       {
+        YEAR => 2016,
         CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2016/CXSQLBSG/indice.asp
 
@@ -1584,7 +1566,6 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            YEAR => 2016,
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-04-22',
@@ -1612,12 +1593,12 @@ my %TOURNAMENTS_ITALY =
       {
         CHAPTERS => 
         {
+        YEAR => 2014,
           CITY => 'Salsomaggiore',
           # https://www.federbridge.it/campionati/2014/SSSQOP/indice.asp
 
           'C0' =>
           {
-            YEAR => 2014,
             MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2014-01-31',
@@ -1625,7 +1606,6 @@ my %TOURNAMENTS_ITALY =
           },
           'C1' =>
           {
-            YEAR => 2014,
             MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2014-02-02',
@@ -1634,7 +1614,6 @@ my %TOURNAMENTS_ITALY =
 
           'C2' =>
           {
-            YEAR => 2014,
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2014-02-13',
@@ -1642,7 +1621,6 @@ my %TOURNAMENTS_ITALY =
           },
           'C3' =>
           {
-            YEAR => 2014,
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2014-02-14',
@@ -1749,6 +1727,7 @@ my %TOURNAMENTS_ITALY =
     {
       '2014' =>
       {
+        YEAR => 2014,
         CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2014/SSSN/indice.asp
 
@@ -1756,7 +1735,6 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            YEAR => 2014,
             MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2014-03-07',
@@ -1764,7 +1742,6 @@ my %TOURNAMENTS_ITALY =
           },
           'C1' =>
           {
-            YEAR => 2014,
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-03-09',
@@ -1773,7 +1750,6 @@ my %TOURNAMENTS_ITALY =
 
           'C2' =>
           {
-            YEAR => 2014,
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2014-04-03',
@@ -1781,7 +1757,6 @@ my %TOURNAMENTS_ITALY =
           },
           'C3' =>
           {
-            YEAR => 2014,
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2014-04-04',
@@ -1807,6 +1782,7 @@ my %TOURNAMENTS_ITALY =
     {
       '2016' =>
       {
+        YEAR => 2016,
         CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2016/CU/indice.asp
 
@@ -1814,7 +1790,6 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            YEAR => 2016,
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-03-25',
