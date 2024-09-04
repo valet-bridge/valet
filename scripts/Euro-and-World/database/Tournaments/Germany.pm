@@ -302,83 +302,6 @@ my %TOURNAMENTS_GERMANY =
     }
   },
 
-  'German Open Pairs' =>
-  {
-    ORGANIZATION => 'DBV',
-    COUNTRY => 'Germany',
-    ORIGIN => 'National',
-    FORM => 'Pairs',
-    SCORING => 'Pairs',
-    GENDER => 'Open',
-    AGE => 'Open',
- 
-    EDITIONS =>
-    {
-      '2009' => 
-      {
-        ORDINAL => '6th',
-        CITY => 'Bad Nauheim',
-        CHAPTERS => 
-        {
-          'SINGLE' =>
-          {
-            YEAR => 2009,
-            major => 'SESSION',
-            DATE_START => '2009-11-21',
-            DATE_END => '2009-11-22'
-          } 
-        }
-      },
-
-      '2011' => 
-      {
-        ORDINAL => '8th',
-        CITY => 'Darmstadt',
-        CHAPTERS => 
-        {
-          'SINGLE' =>
-          {
-            YEAR => 2011,
-            DATE_START => '2011-11-12',
-            DATE_END => '2011-11-13'
-          } 
-        }
-      },
-
-      '2012' => 
-      {
-        ORDINAL => '9th',
-        CITY => 'Darmstadt',
-        CHAPTERS => 
-        {
-          'SINGLE' =>
-          {
-            YEAR => 2012,
-            major => 'SESSION',
-            DATE_START => '2012-11-10',
-            DATE_END => '2012-11-11'
-          } 
-        }
-      },
-
-      '2013' => 
-      {
-        ORDINAL => '10th',
-        CITY => 'Darmstadt',
-        CHAPTERS => 
-        {
-          'SINGLE' =>
-          {
-            YEAR => 2013,
-            major => 'SESSION',
-            DATE_START => '2013-11-09',
-            DATE_END => '2013-11-10'
-          } 
-        }
-      }
-    }
-  },
-
   'German Bundesliga' => 
   {
     ORGANIZATION => 'DBV',
@@ -891,100 +814,77 @@ my %TOURNAMENTS_GERMANY =
     }
   },
 
-  'German Open Trials' => 
+  'German Open Pairs' =>
   {
     ORGANIZATION => 'DBV',
     COUNTRY => 'Germany',
     ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
+    FORM => 'Pairs',
+    SCORING => 'Pairs',
     GENDER => 'Open',
     AGE => 'Open',
  
     EDITIONS =>
     {
-      '2003' => 
+      '2009' => 
       {
-        YEAR => 2003,
+        ORDINAL => '6th',
+        CITY => 'Bad Nauheim',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'SINGLE' =>
           {
-            DATE_START => '2003-10-07',
-            DATE_END => '2003-10-08',
-            major => 'ROUND'
-          }
+            YEAR => 2009,
+            major => 'SESSION',
+            DATE_START => '2009-11-21',
+            DATE_END => '2009-11-22'
+          } 
+        }
+      },
+
+      '2011' => 
+      {
+        ORDINAL => '8th',
+        CITY => 'Darmstadt',
+        CHAPTERS => 
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2011,
+            DATE_START => '2011-11-12',
+            DATE_END => '2011-11-13'
+          } 
         }
       },
 
       '2012' => 
       {
-        YEAR => 2012,
-        CITY => '',
+        ORDINAL => '9th',
+        CITY => 'Darmstadt',
         CHAPTERS => 
         {
-          'WEEKEND 1' => 
+          'SINGLE' =>
           {
-            DATE_START => '2012-01-20',
-            DATE_END => '2012-01-22',
-            STAGE => 'Round-robin',
-            major => 'ROUND',
-            WEEKEND => 1
-          },
-          'C1' => 
-          {
-            DATE_START => '2012-03-09',
-            DATE_END => '2012-03-10',
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            WEEKEND => 2
-          },
-          'C2' => 
-          {
-            DATE_START => '2012-03-10',
-            DATE_END => '2012-03-11',
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            WEEKEND => 2
+            YEAR => 2012,
+            major => 'SESSION',
+            DATE_START => '2012-11-10',
+            DATE_END => '2012-11-11'
           } 
         }
       },
 
-      '2014' => 
+      '2013' => 
       {
+        ORDINAL => '10th',
+        CITY => 'Darmstadt',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'SINGLE' =>
           {
-            YEAR => 2014,
-            CITY => '',
-            major => 'ROUND',
-            DATE_START => '2014-02-14',
-            DATE_END => '2014-02-16'
-          } 
-        }
-      },
-
-      '2016' => 
-      {
-        CHAPTERS => 
-        {
-          YEAR => 2016,
-          CITY => '',
-          'WEEKEND 1' => 
-          {
-            DATE_START => '2016-02-27',
-            DATE_END => '2016-02-28',
-            major => 'ROUND',
-            WEEKEND => 1
-          },
-          'WEEKEND 2' => 
-          {
-            DATE_START => '2016-03-12',
-            DATE_END => '2016-03-13',
-            major => 'ROUND',
-            WEEKEND => 2,
-            STAGE => 'Final'
+            YEAR => 2013,
+            major => 'SESSION',
+            DATE_START => '2013-11-09',
+            DATE_END => '2013-11-10'
           } 
         }
       }
@@ -1216,6 +1116,106 @@ my %TOURNAMENTS_GERMANY =
             major => 'ROUND',
             DATE_START => '2016-08-27',
             DATE_END => '2016-08-28'
+          } 
+        }
+      }
+    }
+  },
+
+  'German Open Trials' => 
+  {
+    ORGANIZATION => 'DBV',
+    COUNTRY => 'Germany',
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+ 
+    EDITIONS =>
+    {
+      '2003' => 
+      {
+        YEAR => 2003,
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            DATE_START => '2003-10-07',
+            DATE_END => '2003-10-08',
+            major => 'ROUND'
+          }
+        }
+      },
+
+      '2012' => 
+      {
+        YEAR => 2012,
+        CITY => '',
+        CHAPTERS => 
+        {
+          'WEEKEND 1' => 
+          {
+            DATE_START => '2012-01-20',
+            DATE_END => '2012-01-22',
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            WEEKEND => 1
+          },
+          'C1' => 
+          {
+            DATE_START => '2012-03-09',
+            DATE_END => '2012-03-10',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            WEEKEND => 2
+          },
+          'C2' => 
+          {
+            DATE_START => '2012-03-10',
+            DATE_END => '2012-03-11',
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            WEEKEND => 2
+          } 
+        }
+      },
+
+      '2014' => 
+      {
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            CITY => '',
+            major => 'ROUND',
+            DATE_START => '2014-02-14',
+            DATE_END => '2014-02-16'
+          } 
+        }
+      },
+
+      '2016' => 
+      {
+        CHAPTERS => 
+        {
+          YEAR => 2016,
+          CITY => '',
+          'WEEKEND 1' => 
+          {
+            DATE_START => '2016-02-27',
+            DATE_END => '2016-02-28',
+            major => 'ROUND',
+            WEEKEND => 1
+          },
+          'WEEKEND 2' => 
+          {
+            DATE_START => '2016-03-12',
+            DATE_END => '2016-03-13',
+            major => 'ROUND',
+            WEEKEND => 2,
+            STAGE => 'Final'
           } 
         }
       }

@@ -147,7 +147,6 @@ my @MULTI_WORDS =
   'Bobby Evans Seniors Teams',
   'Bolivian Open Teams',
   'Bologna Trophy',
-  'Bonn Nations Cup',
   'bridge24.pl Trophy',
   
   # BRAZIL
@@ -380,6 +379,7 @@ my @MULTI_WORDS =
   'Goulyash by E. Gladysh',
 
   # GERMANY -- mapped in detail
+  'Bonn Nations Cup',
   'German Bundesliga',
   'German Club Cup',
   'German Mixed Teams',
@@ -388,6 +388,8 @@ my @MULTI_WORDS =
   'German Open Trials',
   'German Team Trophy',
   'German Women Pairs',
+  "Gro's Supercup",
+  'König Ludwig Cup',
 
   'GHTD Cup',
   'Goksu-Yalikavak Pairs',
@@ -404,7 +406,6 @@ my @MULTI_WORDS =
   'Greek Open Teams',
   'Greek Open Trials',
 
-  "Gro's Supercup",
   'Guangdong Club Championship',
   'Guangdong Club Invitational',
   'Guangdong Elite Tournament',
@@ -509,7 +510,7 @@ my @MULTI_WORDS =
   'IOC Grand Prix',
   'Istanbul Winter Teams',
 
-  # ITALY
+  # ITALY -- mapped in detail
   'Italian Club Open Championship',
   'Italian Club Women Championship',
   'Italian Men Cup',
@@ -522,8 +523,7 @@ my @MULTI_WORDS =
   'Italian Senior Cup',
   'Italian Senior Trials',
   'Italian U36 Teams',
-  # 'Italian Women Club Teams',
-  'Italian Women Cup', #
+  'Italian Women Cup',
 
   'Izmir Teams Cup',
 
@@ -558,7 +558,6 @@ my @MULTI_WORDS =
   'Karnik-Vaidya Open',
   "Kepri Governor's Cup",
   'Kings and Queens Blaine Howe Teams',
-  'König Ludwig Cup',
   'Krakow Spring',
   'Krakow Teams',
   'Krishnapatnam Port National Masters',
@@ -1303,7 +1302,6 @@ my %MULTI_TYPOS =
   'Bologna Trophy' => ["trofeo citta' di bologna",
     "trofeo citta' bologna", "citta' di bologna", 
     "trofeo citta' bologna"],
-  'Bonn Nations Cup' => ['nations cup germany', 'bonn cup'],
 
   # BRAZIL
   'Brazilian Championship' => ['brazilian championships',
@@ -1745,7 +1743,8 @@ my %MULTI_TYPOS =
   'Geologi Cup' => ['geo cup'],
   'Goulyash by E. Gladysh' => ['goulyash by e_gladysh'],
 
-  # GERMANY
+  # GERMANY -- mapped in detail
+  'Bonn Nations Cup' => ['nations cup germany', 'bonn cup'],
   'German Club Cup' => [
     'german cup', 
     'vereinspokal', 
@@ -1773,12 +1772,13 @@ my %MULTI_TYPOS =
   'German Open Trials' => [
     'deutsche open qualifikation',
     'german open qualification'],
-  # 'German Team Championship' => ['deutsche teammeisterschaft'],
   'German Team Trophy' => [
     'german bridge team trophy',
     'german team bridge trophy', 
     'german bridge trophy'],
   'German Women Pairs' => ['damen-paar'],
+  "Gro's Supercup" => ["gro's super-cup", 'gros supercup'],
+  'König Ludwig Cup' => ['koenig ludwig nationen cup'],
 
   'Golden Jubilee' => ['golden jubily'],
   'Grand National Teams' => ['gnt championship'],
@@ -1802,7 +1802,6 @@ my %MULTI_TYPOS =
     'greek team'],
   'Greek Open Trials' => ['greek trials', 'greek national team trials',
     'greek national trials', 'greek national teams trials'],
-  "Gro's Supercup" => ["gro's super-cup", 'gros supercup'],
   'Guangdong Club Championship' => ['guang dong club championship',
     'guang dong club bridge championship'],
   'Guangdong Club Invitational' => [
@@ -1994,12 +1993,11 @@ my %MULTI_TYPOS =
     'izmir teams championship',
     'izmýr teams cup'],
 
-  # ITALY
+  # ITALY -- mapped in detail
   'Italian Club Open Championship' => ['camp_ soc_ open'],
   'Italian Club Women Championship' => [
     'italian club team champ women',
     'italian club women championships'],
-
   'Italian Mixed Cup' => ['italy mixed cup'],
   'Italian Mixed Pairs' => ['italy mixed pairs'],
   'Italian Mixed Teams' => ['italian mixed teams championships'],
@@ -2061,7 +2059,6 @@ my %MULTI_TYPOS =
     'governor kepri cup', 'gov bi cup', 'governor cup', 'bi cup',
     'kepri bridge championship', 'kepri international tournament',
     'kepri international bridge tournament'],
-  'König Ludwig Cup' => ['koenig ludwig nationen cup'],
   'Krakow Spring' => ['krakowska wiosna'],
   'Krommenie Nations Cup' => [
     'forbo krommenie teams',
