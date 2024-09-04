@@ -39,7 +39,7 @@ while ($entryT->read($fh))
   my $tname = $entryT->field('TITLE_TNAME');
   next if $meet eq '' && $tname eq '';
 
-  if ($entryT->bbono() eq 12130)
+  if ($entryT->bbono() eq 1265)
   {
     print "HERE\n";
   }
@@ -130,9 +130,9 @@ if ($date_start eq '2014-05-01')
 
 for my $key (sort keys %hist_matches)
 {
-  printf("%-30s %4d\n", $key, $hist_matches{$key});
+  printf("%-32s %4d\n", $key, $hist_matches{$key});
 }
 
-print '-' x 35 . "\n";
-printf("%-30s %4d\n", "Number of matches", $num_matches);
+print '-' x 37 . "\n";
+printf("%-32s %4d\n", "Number of matches", $num_matches);
 

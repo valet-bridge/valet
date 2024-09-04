@@ -13,29 +13,6 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_ITALY =
 (
-  '' =>
-  {
-    ORGANIZATION => 'FIGB',
-    COUNTRY => 'Italy',
-    ORIGIN => 'National',
-
-    EDITIONS =>
-    {
-      '2013' =>
-      {
-        ORDINAL => '1st',
-        YEAR => 2013,
-        CITY => 'Berlin',
-        DATE_START => '2014-08-10',
-        DATE_END => '2014-08-18'
-      }
-    }
-  }
-);
-
-my %TOURNAMENTS_ITALY =
-(
-  # TODO Split into a meet
   'Italian Club Championship' =>
   {
     ORGANIZATION => 'FIGB',
@@ -44,37 +21,139 @@ my %TOURNAMENTS_ITALY =
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
-    AGE => 'Open',
 
     EDITIONS =>
     {
       '2004' =>
       {
+        YEAR => 2004,
+        DATE_START => '2004-12-16',
+        DATE_END => '2004-12-16'
+      },
+      '2005' =>
+      {
+        # https://www.federbridge.it/campionati/2005/CSSASBSC/indice.asp
+        YEAR => 2005,
+        CITY => 'Salsomaggiore',
+        DATE_START => '2005-02-12',
+        DATE_END => '2005-04-08'
+      },
+      '2006' =>
+      {
+        # https://www.federbridge.it/campionati/2006/CSSASBSC/indice.asp
+        YEAR => 2006,
+        CITY => 'Montecatini',
+        DATE_START => '2006-09-28',
+        DATE_END => '2006-10-01'
+      },
+      '2007' =>
+      {
+        # https://www.federbridge.it/campionati/2007/CLCCSQMX/indice.asp
+        YEAR => 2007,
+        CITY => 'Salsomaggiore',
+        DATE_START => '2007-10-27',
+        DATE_END => '2007-10-28'
+      },
+      '2008' =>
+      {
+        # https://www.federbridge.it/campionati/2008/CSSASBSC/indice.asp
+        YEAR => 2008,
+        CITY => 'San Remo',
+        DATE_START => '2008-09-18',
+        DATE_END => '2008-09-21'
+      },
+      '2009' =>
+      {
+        # https://www.federbridge.it/campionati/2009/CSSASBSC/indice.asp
+        YEAR => 2009,
+        CITY => 'Bologna',
+        DATE_START => '2009-09-24',
+        DATE_END => '2009-09-27'
+      },
+      '2010' =>
+      {
+        # https://www.federbridge.it/campionati/2010/CSS1S2S3/indice.asp
+        YEAR => 2010,
+        CITY => 'Bologna',
+        DATE_START => '2010-09-23',
+        DATE_END => '2010-09-26'
+      },
+      '2011' =>
+      {
+        # https://www.federbridge.it/campionati/2011/CSS1S2S3/indice.asp
+        YEAR => 2011,
+        CITY => 'Salsomaggiore',
+        DATE_START => '2011-09-22',
+        DATE_END => '2011-09-25'
+      },
+      '2012' =>
+      {
+        # https://www.federbridge.it/campionati/2012/CSS1S2S3/indice.asp
+        YEAR => 2012,
+        CITY => 'Salsomaggiore',
+        DATE_START => '2012-09-27',
+        DATE_END => '2012-09-30'
+      },
+      '2013' =>
+      {
+        # https://www.federbridge.it/campionati/2013/CSS1S2S3/indice.asp
+        YEAR => 2013,
+        CITY => 'Salsomaggiore',
+        DATE_START => '2013-10-03',
+        DATE_END => '2013-10-06'
+      },
+      '2014' =>
+      {
+        # https://www.federbridge.it/campionati/2014/CSS1S2S3/indice.asp
+        YEAR => 2014,
+        CITY => 'Salsomaggiore',
+        DATE_START => '2014-09-25',
+        DATE_END => '2014-09-28'
+      },
+      '2015' =>
+      {
+        # https://www.federbridge.it/campionati/2015/CSS1S2S3/indice.asp
+        YEAR => 2015,
+        CITY => 'Salsomaggiore',
+        DATE_START => '2015-06-19',
+        DATE_END => '2015-06-21'
+      },
+      '2016' =>
+      {
+        # https://www.federbridge.it/campionati/2016/CSS1S2S3/indice.asp
+        YEAR => 2016,
+        CITY => 'Salsomaggiore',
+        DATE_START => '2016-05-19',
+        DATE_END => '2016-05-22'
+      }
+    }
+  }
+);
+
+my %TOURNAMENTS_ITALY =
+(
+  'Italian Club Open Championship' =>
+  {
+    AGE => 'Open',
+    GENDER => 'Open',
+
+    EDITIONS =>
+    {
+      '2004' =>
+      {
+        MEET => 'Italian Club Championship',
         CHAPTERS => 
         {
           'C0' =>
           {
-            YEAR => 2004,
-            STAGE => 'Final',
-            GENDER => 'Women',
-            major => 'ROUND',
-            DATE_START => '2004-12-16',
-            DATE_END => '2004-12-16'
-          },
-          'C1' =>
-          {
-            YEAR => 2004,
             STAGE => => 'Semifinal',
-            GENDER => 'Open',
             major => 'ROUND',
             DATE_START => '2004-12-16',
             DATE_END => '2004-12-16'
           } ,
-          'C2' =>
+          'C1' =>
           {
-            YEAR => 2004,
             STAGE => => 'Final',
-            GENDER => 'Open',
             major => 'ROUND',
             DATE_START => '2004-12-16',
             DATE_END => '2004-12-16'
@@ -83,16 +162,12 @@ my %TOURNAMENTS_ITALY =
       },
       '2005' =>
       {
-        CITY => 'Salsomaggiore',
-        # https://www.federbridge.it/campionati/2005/CSSASBSC/indice.asp
-
+        MEET => 'Italian Club Championship',
         CHAPTERS => 
         {
           'C0' =>
           {
-            YEAR => 2005,
             STAGE => => 'Qualifying',
-            GENDER => 'Open',
             major => 'ROUND',
             minor => 'HALF',
             DATE_START => '2005-02-12',
@@ -100,18 +175,14 @@ my %TOURNAMENTS_ITALY =
           },
           'C1' =>
           {
-            YEAR => 2005,
             STAGE => => 'Semifinal',
-            GENDER => 'Open',
             major => 'SEGMENT',
             DATE_START => '2005-04-07',
             DATE_END => '2005-04-07'
           },
           'C2' =>
           {
-            YEAR => 2005,
             STAGE => => 'Final',
-            GENDER => 'Open',
             major => 'SEGMENT',
             DATE_START => '2005-04-08',
             DATE_END => '2005-04-08'
@@ -120,25 +191,19 @@ my %TOURNAMENTS_ITALY =
       },
       '2006' =>
       {
-        CITY => 'Montecatini',
-        # https://www.federbridge.it/campionati/2006/CSSASBSC/indice.asp
-
+        MEET => 'Italian Club Championship',
         CHAPTERS => 
         {
           'C0' =>
           {
-            YEAR => 2006,
             STAGE => => 'Semifinal',
-            GENDER => 'Open',
             major => 'ROUND',
             DATE_START => '2006-09-28',
             DATE_END => '2006-09-29'
           } ,
           'C1' =>
           {
-            YEAR => 2006,
             STAGE => => 'Final',
-            GENDER => 'Open',
             major => 'ROUND',
             DATE_START => '2006-09-30',
             DATE_END => '2006-10-01'
@@ -147,25 +212,19 @@ my %TOURNAMENTS_ITALY =
       },
       '2007' =>
       {
-        CITY => 'Salsomaggiore',
-        # https://www.federbridge.it/campionati/2007/CLCCSQMX/indice.asp
-
+        MEET => 'Italian Club Championship',
         CHAPTERS => 
         {
           'C0' =>
           {
-            YEAR => 2007,
             STAGE => => 'Semifinal',
-            GENDER => 'Open',
             major => 'ROUND',
             DATE_START => '2007-10-27',
             DATE_END => '2007-10-27'
           } ,
           'C1' =>
           {
-            YEAR => 2007,
             STAGE => => 'Final',
-            GENDER => 'Open',
             major => 'ROUND',
             DATE_START => '2007-10-28',
             DATE_END => '2007-10-28'
@@ -174,44 +233,26 @@ my %TOURNAMENTS_ITALY =
       },
       '2008' =>
       {
-        CITY => 'San Remo',
-        # https://www.federbridge.it/campionati/2008/CSSASBSC/indice.asp
-
+        MEET => 'Italian Club Championship',
         CHAPTERS => 
         {
           'C0' =>
           {
-            YEAR => 2008,
             STAGE => 'Semifinal',
-            GENDER => 'Women',
             major => 'SEGMENT',
             DATE_START => '2008-09-18',
             DATE_END => '2008-09-19'
           },
-
           'C1' =>
           {
-            YEAR => 2008,
-            STAGE => 'Semifinal',
-            GENDER => 'Open',
-            major => 'SEGMENT',
-            DATE_START => '2008-09-18',
-            DATE_END => '2008-09-19'
-          },
-          'C2' =>
-          {
-            YEAR => 2008,
             STAGE => 'Bronze',
-            GENDER => 'Open',
             major => 'SEGMENT',
             DATE_START => '2008-09-19',
             DATE_END => '2008-09-20'
           },
-          'C3' =>
+          'C2' =>
           {
-            YEAR => 2008,
             STAGE => 'Final',
-            GENDER => 'Open',
             major => 'SEGMENT',
             DATE_START => '2008-09-19',
             DATE_END => '2008-09-21'
@@ -220,25 +261,19 @@ my %TOURNAMENTS_ITALY =
       },
       '2009' =>
       {
-        CITY => 'Bologna',
-        # https://www.federbridge.it/campionati/2009/CSSASBSC/indice.asp
-
+        MEET => 'Italian Club Championship',
         CHAPTERS => 
         {
           'C0' =>
           {
-            YEAR => 2009,
             STAGE => 'Semifinal',
-            GENDER => 'Open',
             major => 'SEGMENT',
             DATE_START => '2009-09-24',
             DATE_END => '2009-09-25'
           },
           'C1' =>
           {
-            YEAR => 2009,
             STAGE => 'Final',
-            GENDER => 'Open',
             major => 'SEGMENT',
             DATE_START => '2009-09-25',
             DATE_END => '2009-09-27'
@@ -247,25 +282,19 @@ my %TOURNAMENTS_ITALY =
       },
       '2010' =>
       {
-        CITY => 'Bologna',
-        # https://www.federbridge.it/campionati/2010/CSS1S2S3/indice.asp
-
+        MEET => 'Italian Club Championship',
         CHAPTERS => 
         {
           'C0' =>
           {
-            YEAR => 2010,
             STAGE => 'Semifinal',
-            GENDER => 'Open',
             major => 'SEGMENT',
             DATE_START => '2010-09-23',
             DATE_END => '2010-09-24'
           },
           'C1' =>
           {
-            YEAR => 2010,
             STAGE => 'Final',
-            GENDER => 'Open',
             major => 'SEGMENT',
             DATE_START => '2010-09-24',
             DATE_END => '2010-09-26'
@@ -274,25 +303,19 @@ my %TOURNAMENTS_ITALY =
       },
       '2011' =>
       {
-        CITY => 'Salsomaggiore',
-        # https://www.federbridge.it/campionati/2011/CSS1S2S3/indice.asp
-
+        MEET => 'Italian Club Championship',
         CHAPTERS => 
         {
           'C0' =>
           {
-            YEAR => 2011,
             STAGE => 'Semifinal',
-            GENDER => 'Open',
             major => 'SEGMENT',
             DATE_START => '2011-09-22',
             DATE_END => '2011-09-23'
           },
           'C1' =>
           {
-            YEAR => 2011,
             STAGE => 'Final',
-            GENDER => 'Open',
             major => 'SEGMENT',
             DATE_START => '2011-09-23',
             DATE_END => '2011-09-25'
@@ -301,25 +324,19 @@ my %TOURNAMENTS_ITALY =
       },
       '2012' =>
       {
-        CITY => 'Salsomaggiore',
-        # https://www.federbridge.it/campionati/2012/CSS1S2S3/indice.asp
-
+        MEET => 'Italian Club Championship',
         CHAPTERS => 
         {
           'C0' =>
           {
-            YEAR => 2012,
             STAGE => 'Semifinal',
-            GENDER => 'Open',
             major => 'SEGMENT',
             DATE_START => '2012-09-27',
             DATE_END => '2012-09-28'
           },
           'C1' =>
           {
-            YEAR => 2012,
             STAGE => 'Final',
-            GENDER => 'Open',
             major => 'SEGMENT',
             DATE_START => '2012-09-28',
             DATE_END => '2012-09-30'
@@ -328,34 +345,26 @@ my %TOURNAMENTS_ITALY =
       },
       '2013' =>
       {
-        CITY => 'Salsomaggiore',
-        # https://www.federbridge.it/campionati/2013/CSS1S2S3/indice.asp
-
+        MEET => 'Italian Club Championship',
         CHAPTERS => 
         {
           'C0' =>
           {
-            YEAR => 2013,
             STAGE => 'Quarterfinal',
-            GENDER => 'Open',
             major => 'SEGMENT',
             DATE_START => '2013-10-03',
             DATE_END => '2013-10-03'
           },
           'C1' =>
           {
-            YEAR => 2013,
             STAGE => 'Semifinal',
-            GENDER => 'Open',
             major => 'SEGMENT',
             DATE_START => '2013-10-04',
             DATE_END => '2013-10-04'
           },
           'C2' =>
           {
-            YEAR => 2013,
             STAGE => 'Final',
-            GENDER => 'Open',
             major => 'SEGMENT',
             DATE_START => '2013-10-05',
             DATE_END => '2013-10-06'
@@ -364,16 +373,12 @@ my %TOURNAMENTS_ITALY =
       },
       '2014' =>
       {
-        CITY => 'Salsomaggiore',
-        # https://www.federbridge.it/campionati/2014/CSS1S2S3/indice.asp
-
+        MEET => 'Italian Club Championship',
         CHAPTERS => 
         {
           'C0' =>
           {
-            YEAR => 2014,
             STAGE => 'Round-robin',
-            GENDER => 'Open',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2014-09-25',
@@ -381,27 +386,14 @@ my %TOURNAMENTS_ITALY =
           },
           'C1' =>
           {
-            YEAR => 2014,
             STAGE => 'Semifinal',
-            GENDER => 'Open',
             major => 'SEGMENT',
             DATE_START => '2014-09-26',
             DATE_END => '2014-09-27'
           },
           'C2' =>
           {
-            YEAR => 2014,
             STAGE => 'Final',
-            GENDER => 'Open',
-            major => 'SEGMENT',
-            DATE_START => '2014-09-27',
-            DATE_END => '2014-09-28'
-          },
-          'C3' =>
-          {
-            YEAR => 2014,
-            STAGE => 'Final',
-            GENDER => 'Women',
             major => 'SEGMENT',
             DATE_START => '2014-09-27',
             DATE_END => '2014-09-28'
@@ -410,25 +402,19 @@ my %TOURNAMENTS_ITALY =
       },
       '2015' =>
       {
-        CITY => 'Salsomaggiore',
-        # https://www.federbridge.it/campionati/2015/CSS1S2S3/indice.asp
-
+        MEET => 'Italian Club Championship',
         CHAPTERS => 
         {
           'C0' =>
           {
-            YEAR => 2015,
             STAGE => 'Semifinal',
-            GENDER => 'Open',
             major => 'SEGMENT',
             DATE_START => '2015-06-19',
             DATE_END => '2015-06-20'
           },
           'C1' =>
           {
-            YEAR => 2015,
             STAGE => 'Final',
-            GENDER => 'Open',
             major => 'SEGMENT',
             DATE_START => '2015-06-20',
             DATE_END => '2015-06-21'
@@ -437,16 +423,12 @@ my %TOURNAMENTS_ITALY =
       },
       '2016' =>
       {
-        CITY => 'Salsomaggiore',
-        # https://www.federbridge.it/campionati/2016/CSS1S2S3/indice.asp
-
+        MEET => 'Italian Club Championship',
         CHAPTERS => 
         {
           'C0' =>
           {
-            YEAR => 2016,
             STAGE => 'Round-robin',
-            GENDER => 'Open',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2016-05-19',
@@ -454,21 +436,97 @@ my %TOURNAMENTS_ITALY =
           },
           'C1' =>
           {
-            YEAR => 2016,
             STAGE => 'Semifinal',
-            GENDER => 'Open',
             major => 'SEGMENT',
             DATE_START => '2016-05-20',
             DATE_END => '2016-05-21'
           },
           'C2' =>
           {
-            YEAR => 2016,
             STAGE => 'Final',
-            GENDER => 'Open',
             major => 'SEGMENT',
             DATE_START => '2016-05-21',
             DATE_END => '2016-05-22'
+          }
+        }
+      }
+    }
+  },
+
+  'Italian Club Women Championship' =>
+  {
+    AGE => 'Open',
+    GENDER => 'Women',
+
+    EDITIONS =>
+    {
+      '2004' =>
+      {
+        MEET => 'Italian Club Championship',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2004-12-16',
+            DATE_END => '2004-12-16'
+          }
+        }
+      },
+      '2006' =>
+      {
+        MEET => 'Italian Club Championship',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2006-09-30',
+            DATE_END => '2006-10-01'
+          }
+        }
+      },
+      '2007' =>
+      {
+        MEET => 'Italian Club Championship',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-10-27',
+            DATE_END => '2007-10-27'
+          }
+        }
+      },
+      '2008' =>
+      {
+        MEET => 'Italian Club Championship',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-09-18',
+            DATE_END => '2008-09-19'
+          }
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Italian Club Championship',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-09-27',
+            DATE_END => '2014-09-28'
           }
         }
       }

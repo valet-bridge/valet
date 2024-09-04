@@ -148,13 +148,24 @@ sub get_edition_and_chapter
   }
   elsif ($meet ne '')
   {
-    # Look for tournaments with the right meet.
+    # Look for tournaments with the right meet in at least
+    # one edition.
     for my $tname (keys %{$self->{TOURNAMENT}})
     {
-      if (exists $self->{TOURNAMENT}{$tname}{MEET} &&
-          $self->{TOURNAMENT}{$tname}{MEET} eq $meet)
+      my $t = $self->{TOURNAMENT}{$tname};
+
+      my ($hits, $conflicts) = compatibility($t, $entry);
+      next if $conflicts > 0;
+
+      for my $edition_str (keys %{$t->{EDITIONS}})
       {
-        push @tname_list, $tname;
+        my $edition = $t->{EDITIONS}{$edition_str};
+
+        if (exists $edition->{MEET} && $edition->{MEET} eq $meet)
+        {
+          push @tname_list, $tname;
+          last;
+        }
       }
     }
   }
