@@ -364,7 +364,6 @@ my @MULTI_WORDS =
 
   'FTBC Tanjungpura University',
   'FullBridge International Teams',
-  'Full Tilt Irish Bridge Masters',
   'FX Securities Cup',
 
   ### GGG
@@ -492,6 +491,7 @@ my @MULTI_WORDS =
   # IRELAND
   'Irish Invitational Pairs',
   'Irish Open Trials',
+  'Full Tilt Irish Bridge Masters',
 
   # ISRAEL
   'Israel Juniors Championship',
@@ -1945,13 +1945,17 @@ my %MULTI_TYPOS =
     'IOB madras gymkhana club championship'],
 
   # IRELAND
-  'Irish Invitational Pairs' => ['ireland invitational pairs',
+  'Irish Invitational Pairs' => [
+    'ireland invitational pairs',
     'irish invitational matchpoints'],
   'Irish Open Trials' => [
     'ibu trials',
+    'ireland trials', 
+    'ireland camrose trials', 
+    'ireland lady milne trials', 
     'irish bridge union trials',
     'irish bridge union open trials',
-    'ireland trials', 
+    'irish camrose trials', 
     'irish trials'],
 
   # ISRAEL

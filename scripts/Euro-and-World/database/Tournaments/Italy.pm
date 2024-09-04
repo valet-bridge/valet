@@ -3629,7 +3629,7 @@ sub set_links
 {
   my ($method) = @_;
 
-  $method->(\%MEETS_ITALY, \%TOURNAMENTS_ITALY, 'Germany');
+  $method->(\%MEETS_ITALY, \%TOURNAMENTS_ITALY, 'Italy');
 }
 
 1;
