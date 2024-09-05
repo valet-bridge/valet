@@ -16,7 +16,8 @@ my @MULTI_WORDS =
   'African Zone',
   'Central America and Caribbean',
   'North America',
-  'South America'
+  'South America',
+  'South Pacific'
 );
 
 my %MULTI_TYPOS =

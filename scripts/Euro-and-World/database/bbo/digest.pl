@@ -133,6 +133,6 @@ for my $key (sort keys %hist_matches)
   printf("%-36s %4d\n", $key, $hist_matches{$key});
 }
 
-print '-' x 40 . "\n";
+print '-' x 41 . "\n";
 printf("%-36s %4d\n", "Number of matches", $num_matches);
 

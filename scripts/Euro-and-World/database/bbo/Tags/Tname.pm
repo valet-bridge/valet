@@ -619,7 +619,8 @@ my @MULTI_WORDS =
   # NEW ZEALAND
   'New Zealand Inter-Provincial Open Teams',
   'New Zealand Open Teams',
-  'New Zealand Trials',
+  'New Zealand Open Trials',
+  'New Zealand Women Trials',
 
   'NN Cup',
   'Nordic Championship',
@@ -2208,7 +2209,9 @@ my %MULTI_TYPOS =
     'nz interprovincials',
     'new zealand inter provincials'],
   'New Zealand Open Teams' => ['nz teams'],
-  'New Zealand Trials' => ['nz trials'],
+  'New Zealand Open Trials' => [
+    'new zealand trials',
+    'nz trials'],
 
   'NN Cup' => ['nn-cup'],
   'Nordic Championship' => ['nordic championships',
