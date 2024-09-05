@@ -82,6 +82,8 @@ my %SCORING_CORRECTIONS = (
 
 my %FORM_CORRECTIONS = (
   # Says Team 1, Team 2 in BBO file, but is pairs
+  'Chilean Cup' => [26199, 26218, 26237, 26265],
+  'Chilean Open Pairs' => [31502, 31503],
   'Full Tilt Irish Bridge Masters' => [
     29654, 29666, 29677 ],
   'German Open Pairs' => [

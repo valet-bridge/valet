@@ -11,6 +11,13 @@ package Tournaments::Ireland;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+# TODO Cities are a guess.
+# TODO There are no links to actual results.
+# https://www.bridgewebs.com/cgi-bin/bwoq/bw.cgi?club=cbai&pid=display_home
+# doesn't have a search function, and seems to stop in 2022.
+# https://www.fob.ie/national/
+# seems random.
+
 my %MEETS_IRELAND =
 (
 );
@@ -19,7 +26,6 @@ my %TOURNAMENTS_IRELAND =
 (
   'Full Tilt Irish Bridge Masters' =>
   {
-    ORGANIZATION => 'IBU',
     COUNTRY => 'Ireland',
     ORIGIN => 'National',
     ZONE => 'Europe',
@@ -32,7 +38,7 @@ my %TOURNAMENTS_IRELAND =
     {
       '2013' =>
       {
-        CITY => 'Dublin',
+        CITY => 'Galway',
         CHAPTERS => 
         {
           'SINGLE' => 
@@ -62,6 +68,7 @@ my %TOURNAMENTS_IRELAND =
     {
       '2016' =>
       {
+        # https://www.fob.ie/national/invitational-premier-pairs-championship/
         CITY => 'Dublin',
         CHAPTERS => 
         {
@@ -93,7 +100,7 @@ my %TOURNAMENTS_IRELAND =
 
   'Irish Open Trials' =>
   {
-    ORGANIZATION => 'IBU',
+    ORGANIZATION => 'CBAI',
     COUNTRY => 'Ireland',
     ORIGIN => 'National',
     ZONE => 'Europe',

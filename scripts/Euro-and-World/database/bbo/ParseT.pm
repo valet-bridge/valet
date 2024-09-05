@@ -13,15 +13,17 @@ use lib '..';
 
 use DateCalc;
 use EntryT;
-use Tournaments::Germany;
-use Tournaments::Ireland;
+use Tournaments::Chile;
+# use Tournaments::Germany;
+# use Tournaments::Ireland;
 # use Tournaments::Italy;
 
 
 my %DIVISIONS =
 (
+  CHILE => \&Tournaments::Chile::set_links
   # GERMANY => \&Tournaments::Germany::set_links
-  IRELAND => \&Tournaments::Ireland::set_links
+  # IRELAND => \&Tournaments::Ireland::set_links
   # ITALY => \&Tournaments::Italy::set_links
 );
 

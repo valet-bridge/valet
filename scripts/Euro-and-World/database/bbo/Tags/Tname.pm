@@ -192,13 +192,13 @@ my @MULTI_WORDS =
   'Channel Trophy',
   'Cherven Briag National Tournament',
 
-  # CHILE
+  # CHILE -- mapped in detail
   'Chilean Cup',
-  'Chilean Pairs',
   'Chilean Invitational Teams',
+  'Chilean Open Pairs',
   'Chilean Open Teams',
+  'Chilean Open Trials',
   'Chilean Senior Teams',
-  'Chilean Team Trials',
   'Chilean Women Teams',
   'Chilean Women Trials',
 
@@ -488,7 +488,7 @@ my @MULTI_WORDS =
 
   'IOB Madras Gymkhana Open',
 
-  # IRELAND
+  # IRELAND -- mapped in detail
   'Irish Invitational Pairs',
   'Irish Open Trials',
   'Full Tilt Irish Bridge Masters',
@@ -1299,6 +1299,7 @@ my %MULTI_TYPOS =
     'bolivarian tournament',
     'campeonato bolivariano de equipos',
     'torneo bolivariano equipos'],
+
   'Bologna Trophy' => ["trofeo citta' di bologna",
     "trofeo citta' bologna", "citta' di bologna", 
     "trofeo citta' bologna"],
@@ -1384,12 +1385,14 @@ my %MULTI_TYPOS =
     'national tournament cherven briag', 'cherven briag',
     'national tournament cgerven briag'],
 
-  # CHILE
+  # CHILE -- mapped in detail
   'Chilean Cup' => ['copa aniversario'],
+  'Chilean Open Pairs' => ['chilean pairs'],
   'Chilean Open Teams' => ['torneo nacional de chile'],
-  'Chilean Team Trials' => [
+  'Chilean Open Trials' => [
     'chile open team trials',
     'chile team trials',
+    'chilean team trials',
     'chilean open trials'],
 
   # CHINA
@@ -1802,6 +1805,7 @@ my %MULTI_TYPOS =
     'greek team'],
   'Greek Open Trials' => ['greek trials', 'greek national team trials',
     'greek national trials', 'greek national teams trials'],
+
   'Guangdong Club Championship' => ['guang dong club championship',
     'guang dong club bridge championship'],
   'Guangdong Club Invitational' => [
@@ -1944,7 +1948,7 @@ my %MULTI_TYPOS =
     'iob maras gymkhana open',
     'IOB madras gymkhana club championship'],
 
-  # IRELAND
+  # IRELAND -- mapped in detail
   'Irish Invitational Pairs' => [
     'ireland invitational pairs',
     'irish invitational matchpoints'],
