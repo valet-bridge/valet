@@ -16,20 +16,22 @@ use EntryT;
 
 # use Tournaments::Canada;
 # use Tournaments::Chile;
+use Tournaments::Denmark;
 # use Tournaments::Germany;
 # use Tournaments::Ireland;
 # use Tournaments::Italy;
-use Tournaments::NewZealand;
+# use Tournaments::NewZealand;
 
 
 my %DIVISIONS =
 (
   # CANADA => \&Tournaments::Canada::set_links
   # CHILE => \&Tournaments::Chile::set_links
+  DENMARK => \&Tournaments::Denmark::set_links
   # GERMANY => \&Tournaments::Germany::set_links
   # IRELAND => \&Tournaments::Ireland::set_links
   # ITALY => \&Tournaments::Italy::set_links
-  NEWZEALAND => \&Tournaments::NewZealand::set_links
+  # NEWZEALAND => \&Tournaments::NewZealand::set_links
 );
 
 my @MEET_FIELDS = qw(ORGANIZATION COUNTRY CITY ORIGIN ZONE SCORING);

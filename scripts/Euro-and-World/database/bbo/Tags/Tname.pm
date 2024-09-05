@@ -221,8 +221,6 @@ my @MULTI_WORDS =
   'Copa de Plata',
   'Copa de Oro',
   'Copa Zanalda River Plate',
-  'Copenhagen Invitational Pairs',
-  'Copenhagen Open Pairs',
   'Coppie Viareggio',
   'Corn Cairdis',
   'Cross Strait Invitational',
@@ -240,6 +238,8 @@ my @MULTI_WORDS =
   'Damiani Cup',
 
   # DENMARK
+  'Copenhagen Invitational Pairs',
+  'Copenhagen Open Pairs',
   'Danish Club Teams',
   'Danish Cup',
   'Danish Championship',
@@ -248,11 +248,11 @@ my @MULTI_WORDS =
   'Danish Junior Teams',
   'Danish Mixed Pairs',
   'Danish Mixed Teams',
-  'Danish Open',
-  'Danish Pairs Championship',
-  'Danish Teams Championship',
-  'Danish Team Trials',
+  'Danish Open Teams',
+  'Danish Open Pairs',
+  'Danish Open Trials',
   'Danish Women Pairs',
+  'Vinoble Open',
 
   'Delhi Gymkhana Club Centenary',
   'Delhi Gymkhana Club Open',
@@ -616,7 +616,7 @@ my @MULTI_WORDS =
   'New South Wales Open Teams',
   'New South Wales Open Trials',
 
-  # NEW ZEALAND
+  # NEW ZEALAND -- mapped in detail
   'New Zealand Inter-Provincial Open Teams',
   'New Zealand Open Teams',
   'New Zealand Open Trials',
@@ -986,7 +986,6 @@ my @MULTI_WORDS =
   'Videocon WCG Open',
   'Vilnius Club Pairs',
   'Vilnius Cup',
-  'Vinoble Cup',
   'Vito Teams',
   'Vrnjacka Banja Open Teams',
   'VV Cup',
@@ -1434,7 +1433,6 @@ my %MULTI_TYPOS =
     'commomwealth bridge championship',
     'commonwealth championship',
     'commonwealth bridge championship'],
-  'Copenhagen Open Pairs' => ['km åben par'],
 
   # CZECH
   'Czech Championship' => ['czech bridge championship',
@@ -1460,41 +1458,69 @@ my %MULTI_TYPOS =
     'Dainik Navjyoti All India Inter -State'],
 
   # DENMARK
-  'Danish Club Teams' => ['danish club team', 'dm klubhold',
-    'dm i klubhold', 'dm i knubhold', 'dm i klub hold', 'danmark 1_ division',
-    'danish 1st division', 'danmark 1_division', 'danish 1st division',
-    'danmark 1st division', 'denmark 1_division'],
-  'Danish Cup' => ['danmark pokal', 'danmark pokal', 'denmark pokal'],
-  'Danish District Championship' => ['danish district teams championship'],
-  'Danish First Division' => ['1_ division danmark',
-    'denmark 1st division'],
-  'Danish Junior Teams' => ['danish junior team championship', 
-    'dansih junior team championship', 'junior dm'],
-  'Danish Mixed Pairs' => ['dm mix par', 'danish championship mixed pairs',
-    'danish mix-pair championship', 'danish mix pair championship',
-    'danish national mix-pairs championship', 'danish mix pairs',
-    'dm mix'],
-  'Danish Pairs Championship' => ['danish open pairs championship', 
-    'danish open pairs championships',
-    'danish championship open pairs', 'open pairs - danish championship',
-    'denmark national open pair championship',
-    'denmark national open pairs championship'],
-  'Danish Teams Championship' => [
-    'danish open team', 
+  'Copenhagen Open Pairs' => ['km åben par'],
+  'Danish Club Teams' => [
+    'danish club team', 
+    'danish district teams championship',
+    'dm klubhold',
+    'dm i klubhold', 
+    'dm i knubhold', 
+    'dm i klub hold',
+    'dmi i klubhold'],
+  'Danish Cup' => [
+    'danmark pokal', 
+    'denmark pokal',
+    'vinoble cup'],
+  'Danish First Division' => [
+    '1_ division danmark',
+    'danish 1st division', 
+    'danish 1_division',
+    'danish team', 
     'danish team champions',
     'danish team championship',
     'danish team championships', 
-    'danish open teams',
-    'danish team', 
+    'danmark 1_ division',
+    'danmark 1_division', 
+    'danmark 1st division', 
+    'denmark 1st division',
+    'denmark 1_division',
     'denmark team championship',
-    'dm hold', 
-    'dmi i klubhold',  # TODO Move??
-    'danish 1_division'], # TODO Move??
-  'Danish Team Trials' => ['danish teams test', 'danish team test',
+    'dm hold'], 
+  'Danish Junior Teams' => [
+    'danish junior team championship', 
+    'dansih junior team championship', 
+    'junior dm'],
+  'Danish Mixed Pairs' => [
+    'dm mix',
+    'dm mix par', 
+    'danish championship mixed pairs',
+    'danish mix-pair championship', 
+    'danish mix pair championship',
+    'danish mix pairs',
+    'danish national mix-pairs championship'], 
+  'Danish Open Pairs' => [
+    'danish championship open pairs', 
+    'danish open pairs championship', 
+    'denmark national open pair championship',
+    'denmark national open pairs championship',
+    'danish open pairs championships',
+    'danish pairs championship',
+    'open pairs - danish championship'],
+  'Danish Open Teams' => [
+    'danish open',
+    'danish open team', 
+    'danish open teams'],
+  'Danish Open Trials' => [
+    'danish open team trials',
+    'danish team test',
+    'danish team trial',
+    'danish team trials',
+    'danish teams test', 
     'denmark team test'],
-  'Danish Women Pairs' => ['ladies pairs - danish championship',
+  'Danish Women Pairs' => [
     'danish championship ladies pairs', 
-    'danish champoinship ladies pairs'],
+    'danish champoinship ladies pairs',
+    'ladies pairs - danish championship'],
 
   'Delhi Gymkhana Club Centenary' => [
     'delhi gymkhana centenary celebrations',
@@ -2203,7 +2229,7 @@ my %MULTI_TYPOS =
   'New South Wales State Teams' => ['nsw state teams'],
  "New Year's Teams" => ['new year greet tm'],
 
-  # NEW ZEALAND
+  # NEW ZEALAND -- mapped in detail
   'New Zealand Inter-Provincial Open Teams' => [
     'nz interprovincial',
     'nz interprovincials',
@@ -2883,7 +2909,6 @@ my %MULTI_TYPOS =
   'Victorian Senior Trials' => ['vic seniors trials'],
   'Victorian Women Trials' => ['vic women trials'],
   'Videocon WCG Open' => ['videcon wcg open'],
-  'Vinoble Cup' => ['vinoble open'],
 
   ### WWW
 
