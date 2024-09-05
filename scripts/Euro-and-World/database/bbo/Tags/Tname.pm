@@ -172,13 +172,9 @@ my @MULTI_WORDS =
 
   ### CCC
 
-  # CANADA
-  'Canadian Bridge Championship',
+  # CANADA -- mapped in detail
   'Canadian National Teams Championship',
-  'Canadian Open Teams Championship',
   'Canadian Seniors Teams Championship',
-  'Canadian Senior Trials',
-  'Canadian Women Championship',
   'Canadian Women Teams Championship',
 
   'Carrousel Cup',
@@ -1340,24 +1336,25 @@ my %MULTI_TYPOS =
 
   Camrose => ['camrose trophy'],
 
-  # CANADA
-  'Canadian National Teams Championship' => ['canadian national team'],
-  'Canadian Open Teams Championship' => [
+  # CANADA -- mapped in detail
+  'Canadian National Teams Championship' => [
+    'canadian a tm', 
+    'canadian champ open', 
+    'canadian national team',
+    'canadian open teams',
+    'canadian open teams championship',
+    'canadian tm a',
     'can open teams championship',
     'can open team championship', 
-    'can_ champ open',
-    'canadian champ open', 
-    'canadian open teams',
-    'canadian a tm', 
-    'canadian tm a'],
+    'can_ champ open'],
   'Canadian Seniors Championship' => [
     'canadian champ senior', 
     'canadian champs senior',
     'canadian senior championship',
     'canadian senior teams',
     'canadian senior tm'],
-  'Canadian Women Championship' => ['can ladies bridge champs'],
   'Canadian Women Teams Championship' => [
+    'can ladies bridge champs',
     'can ladies team champ',
     'cbc womens finals',
     'cbf womens final',
@@ -2975,7 +2972,6 @@ my %SINGLE_TYPOS =
   'Brazilian Championship' => ['brasilchamp'],
   "Buffett Cup" => ['buffett', 'buffet'],
   Camrose => ['camroae', 'ccmrose'],
-  'Canadian Bridge Championship' => ['cbc'],
   'Canadian National Teams Championship' => ['cntc'],
   'Canadian Seniors Teams Championship' => ['cstc', 'cnst'],
   'Canadian Women Teams Championship' => ['cwtc'],

@@ -39,7 +39,6 @@ my %TOURNAMENTS_CHILE =
     {
       '2012' =>
       {
-        CITY => 'Santiago',
         CHAPTERS => 
         {
           'SINGLE' => 
@@ -55,7 +54,6 @@ my %TOURNAMENTS_CHILE =
 
       '2013' =>
       {
-        CITY => 'Santiago',
         CHAPTERS => 
         {
           'SINGLE' => 
@@ -85,7 +83,6 @@ my %TOURNAMENTS_CHILE =
     {
       '2011' =>
       {
-        CITY => 'Santiago',
         CHAPTERS => 
         {
           'SINGLE' => 
@@ -115,7 +112,6 @@ my %TOURNAMENTS_CHILE =
     {
       '2013' =>
       {
-        CITY => 'Santiago',
         CHAPTERS => 
         {
           'SINGLE' => 
@@ -144,7 +140,6 @@ my %TOURNAMENTS_CHILE =
     {
       '2013' =>
       {
-        CITY => 'Santiago',
         CHAPTERS => 
         {
           'C0' => 
@@ -183,7 +178,6 @@ my %TOURNAMENTS_CHILE =
     {
       '2010' =>
       {
-        CITY => 'Santiago',
         CHAPTERS => 
         {
           'SINGLE' => 
@@ -198,7 +192,6 @@ my %TOURNAMENTS_CHILE =
 
       '2011' =>
       {
-        CITY => 'Santiago',
         CHAPTERS => 
         {
           'SINGLE' => 
@@ -213,7 +206,6 @@ my %TOURNAMENTS_CHILE =
 
       '2012' =>
       {
-        CITY => 'Santiago',
         CHAPTERS => 
         {
           'C0' => 
@@ -252,7 +244,6 @@ my %TOURNAMENTS_CHILE =
     {
       '2013' =>
       {
-        CITY => 'Santiago',
         CHAPTERS => 
         {
           'C0' => 
@@ -291,7 +282,6 @@ my %TOURNAMENTS_CHILE =
     {
       '2013' =>
       {
-        CITY => 'Santiago',
         CHAPTERS => 
         {
           'SINGLE' => 
@@ -322,7 +312,6 @@ my %TOURNAMENTS_CHILE =
     {
       '2011' =>
       {
-        CITY => 'Santiago',
         CHAPTERS => 
         {
           'SINGLE' => 
@@ -337,7 +326,6 @@ my %TOURNAMENTS_CHILE =
 
       '2012' =>
       {
-        CITY => 'Santiago',
         CHAPTERS => 
         {
           'SINGLE' => 

@@ -58,6 +58,12 @@ sub register
       $self->{COUNTER}{$field}{OF}++;
       $self->{COUNTER}{$field}{ENDS}{$end}++;
     }
+    elsif ($value =~ /^\d+-\d+ of (\d+)$/)
+    {
+      my $end = $1;
+      $self->{COUNTER}{$field}{OF}++;
+      $self->{COUNTER}{$field}{ENDS}{$end}++;
+    }
     else
     {
       warn "Haven't learned $value";

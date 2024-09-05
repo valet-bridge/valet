@@ -69,7 +69,6 @@ my %TOURNAMENTS_IRELAND =
       '2016' =>
       {
         # https://www.fob.ie/national/invitational-premier-pairs-championship/
-        CITY => 'Dublin',
         CHAPTERS => 
         {
           'C0' => 
@@ -113,7 +112,6 @@ my %TOURNAMENTS_IRELAND =
     {
       '2012' =>
       {
-        CITY => 'Dublin',
         CHAPTERS => 
         {
           'SINGLE' => 
@@ -128,7 +126,6 @@ my %TOURNAMENTS_IRELAND =
 
       '2013' =>
       {
-        CITY => 'Dublin',
         CHAPTERS => 
         {
           'SINGLE' => 
@@ -143,7 +140,6 @@ my %TOURNAMENTS_IRELAND =
 
       '2014' =>
       {
-        CITY => 'Dublin',
         CHAPTERS => 
         {
           'C0' => 
@@ -167,7 +163,6 @@ my %TOURNAMENTS_IRELAND =
 
       '2015' =>
       {
-        CITY => 'Dublin',
         CHAPTERS => 
         {
           'SINGLE' => 
@@ -183,7 +178,6 @@ my %TOURNAMENTS_IRELAND =
 
       '2016' =>
       {
-        CITY => 'Dublin',
         CHAPTERS => 
         {
           'SINGLE' => 
