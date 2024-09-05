@@ -96,6 +96,7 @@ my %FORM_CORRECTIONS = (
     34362, 34368, 34373,
     45696, 45707, 45724, 45728],
   'Danish Open Pairs' => [
+    10471, 10474,
     14732, 14733, 14736, 14737, 14738,
     19209, 19211, 19219, 19223, 19236, 19242, 19250,
     24207, 24212, 24217, 24236, 24240,
@@ -674,7 +675,8 @@ sub str_as_read
   my $s;
   $s = "BBONO $self->{BBONO}\n";
 
-  for my $key (qw(YEAR DATE PHASE SESSION ROUND SEGMENT TABLE))
+  for my $key (qw(YEAR DATE PHASE SECTION SESSION 
+    ROUND MATCH SEGMENT HALF TABLE))
   {
     $s .= $self->str_fields($key) if exists $self->{$key};
   }

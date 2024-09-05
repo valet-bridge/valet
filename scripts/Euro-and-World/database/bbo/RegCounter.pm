@@ -52,17 +52,16 @@ sub register
     {
       $self->{COUNTER}{$field}{SIMPLE}++;
     }
-    elsif ($value =~ /^\d+ of (\d+)$/)
+    elsif ($value =~ /^\d+ of (\d+)$/ ||
+        $value =~ /^\d+-\d+ of (\d+)$/)
     {
       my $end = $1;
       $self->{COUNTER}{$field}{OF}++;
       $self->{COUNTER}{$field}{ENDS}{$end}++;
     }
-    elsif ($value =~ /^\d+-\d+ of (\d+)$/)
+    elsif ($value =~ /^\d+-\d+$/)
     {
-      my $end = $1;
-      $self->{COUNTER}{$field}{OF}++;
-      $self->{COUNTER}{$field}{ENDS}{$end}++;
+      $self->{COUNTER}{$field}{SIMPLE}++;
     }
     else
     {

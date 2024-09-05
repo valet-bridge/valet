@@ -175,6 +175,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'SECTION',
             DATE_START => '2013-04-20',
             DATE_END => '2013-04-21'
           } 
@@ -187,6 +188,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2014,
+            major => 'SECTION',
             DATE_START => '2014-03-15',
             DATE_END => '2014-03-16'
           } 
@@ -201,6 +203,269 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2015,
             DATE_START => '2015-03-28',
             DATE_END => '2015-03-29'
+          } 
+        }
+      }
+    }
+  },
+
+  'Danish Club Teams',
+  {
+    ORGANIZATION => 'DBF',
+    COUNTRY => 'Denmark',
+    ORIGIN => 'Interclub',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2008' =>
+      {
+        # https://www2.bridge.dk/Default.aspx?ID=18619#21568
+        CITY => 'Slagelse',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            major => 'ROUND',
+            DATE_START => '2008-10-25',
+            DATE_END => '2008-10-26'
+          } 
+        }
+      },
+
+      '2009' =>
+      {
+        # https://www2.bridge.dk/Default.aspx?ID=18805#26986
+        CITY => 'Aarhus',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2009-10-24',
+            DATE_END => '2009-10-25'
+          } 
+        }
+      },
+
+      '2010' =>
+      {
+        # https://www2.bridge.dk/Default.aspx?ID=17978#20654
+        CITY => 'Køge',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2010-10-30',
+            DATE_END => '2010-10-31'
+          } 
+        }
+      },
+
+      '2011' =>
+      {
+        # https://www2.bridge.dk/Default.aspx?ID=18971#22277
+        CITY => 'Odense',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2011-10-29',
+            DATE_END => '2011-10-30'
+          } 
+        }
+      },
+
+      '2012' =>
+      {
+        # https://www2.bridge.dk/Default.aspx?ID=19166#22982
+        CITY => 'Copenhagen',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            major => 'ROUND',
+            DATE_START => '2012-10-28',
+            DATE_END => '2012-10-29'
+          } 
+        }
+      },
+
+      '2013' =>
+      {
+        # https://www2.bridge.dk/Default.aspx?ID=19549#23398
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-10-26',
+            DATE_END => '2013-10-27'
+          } 
+        }
+      },
+
+      '2014' =>
+      {
+        # http://hobro.wp.bridge.dk/wp-content/uploads/sites/12/2013/08/DM_Klubhold_2014-program.pdf
+        CITY => 'Hobro',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'ROUND',
+            DATE_START => '2014-10-25',
+            DATE_END => '2014-10-26'
+          } 
+        }
+      },
+
+      '2015' =>
+      {
+        # https://www2.bridge.dk/Default.aspx?ID=19341#23247
+        CITY => 'Hobro',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'ROUND',
+            DATE_START => '2015-10-24',
+            DATE_END => '2015-10-25'
+          } 
+        }
+      },
+
+      '2016' =>
+      {
+        # https://www2.bridge.dk/Default.aspx?ID=22394#26981
+        CITY => 'Slagelse',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-10-29',
+            DATE_END => '2016-10-30'
+          } 
+        }
+      },
+
+      '2017' =>
+      {
+        # https://www2.bridge.dk/Default.aspx?ID=22352#26915
+        CITY => 'Haderslev',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-10-28',
+            DATE_END => '2017-10-29'
+          } 
+        }
+      },
+
+      '2018' =>
+      {
+        # https://www2.bridge.dk/Default.aspx?ID=22961#27700
+        CITY => 'Næstved',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-10-27',
+            DATE_END => '2018-10-28'
+          } 
+        }
+      },
+
+      '2019' =>
+      {
+        # https://www2.bridge.dk/Default.aspx?ID=25136#30729
+        CITY => 'Aarhus',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-10-26',
+            DATE_END => '2019-10-27'
+          } 
+        }
+      },
+
+      '2020' =>
+      {
+        # https://www2.bridge.dk/Default.aspx?ID=25540#31135
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-10-24',
+            DATE_END => '2020-10-25'
+          } 
+        }
+      },
+
+      '2021' =>
+      {
+        # https://www2.bridge.dk/Default.aspx?ID=26012
+        CITY => 'Odense',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-10-30',
+            DATE_END => '2021-10-31'
+          } 
+        }
+      },
+
+      '2022' =>
+      {
+        # https://www2.bridge.dk/Default.aspx?ID=26267#31896
+        CITY => 'Copenhagen',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-10-29',
+            DATE_END => '2022-10-30'
+          } 
+        }
+      },
+
+      '2023' =>
+      {
+        # https://www2.bridge.dk/Default.aspx?ID=26592
+        CITY => 'Herning',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-10-28',
+            DATE_END => '2023-10-29'
           } 
         }
       }
@@ -229,6 +494,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2008,
             STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2008-09-27',
             DATE_END => '2008-09-27'
           },
@@ -236,6 +502,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2008,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2008-09-28',
             DATE_END => '2008-09-28'
           } 
@@ -252,6 +519,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2009,
             STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2009-10-03',
             DATE_END => '2009-10-04'
           },
@@ -259,6 +527,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2009,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2009-10-04',
             DATE_END => '2009-10-04'
           } 
@@ -275,14 +544,16 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2010,
             STAGE => 'Semifinal',
-            DATE_START => '2010-09-27',
-            DATE_END => '2010-09-27'
+            major => 'SEGMENT',
+            DATE_START => '2010-11-27',
+            DATE_END => '2010-11-27'
           },
           'C1' => 
           {
             YEAR => 2010,
             STAGE => 'Final',
-            DATE_START => '2010-11-27',
+            major => 'SEGMENT',
+            DATE_START => '2010-11-28',
             DATE_END => '2010-11-28'
           } 
         }
@@ -298,6 +569,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2011,
             STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2011-09-24',
             DATE_END => '2011-09-24'
           },
@@ -305,6 +577,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2011,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2011-09-25',
             DATE_END => '2011-09-25'
           } 
@@ -327,6 +600,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2012,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2012-09-30',
             DATE_END => '2012-09-30'
           } 
@@ -343,6 +617,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2013,
             STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2013-09-07',
             DATE_END => '2013-09-08'
           },
@@ -350,6 +625,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2013,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2013-09-08',
             DATE_END => '2013-09-08'
           } 
@@ -366,6 +642,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2014,
             STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2014-09-13',
             DATE_END => '2014-09-13'
           },
@@ -373,6 +650,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2014,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2014-09-14',
             DATE_END => '2014-09-14'
           } 
@@ -389,6 +667,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2015,
             STAGE => 'Semifinal',
+            major => 'ROUND',
             DATE_START => '2015-09-12',
             DATE_END => '2015-09-12'
           },
@@ -396,6 +675,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2015,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2015-09-13',
             DATE_END => '2015-09-13'
           } 
@@ -561,287 +841,6 @@ my %TOURNAMENTS_DENMARK =
     }
   },
 
-  'Danish Championship',
-  {
-    ORGANIZATION => 'DBF',
-    COUNTRY => 'Denmark',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        CHAPTERS => 
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            DATE_START => '2000-11-29',
-            DATE_END => '2000-12-03'
-          } 
-        }
-      }
-    }
-  },
-
-  'Danish Club Teams',
-  {
-    ORGANIZATION => 'DBF',
-    COUNTRY => 'Denmark',
-    ORIGIN => 'Interclub',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2008' =>
-      {
-        # https://www2.bridge.dk/Default.aspx?ID=18619#21568
-        CITY => 'Slagelse',
-        CHAPTERS => 
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2008,
-            DATE_START => '2008-10-25',
-            DATE_END => '2008-10-26'
-          } 
-        }
-      },
-
-      '2009' =>
-      {
-        # https://www2.bridge.dk/Default.aspx?ID=18805#26986
-        CITY => 'Aarhus',
-        CHAPTERS => 
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2009,
-            DATE_START => '2009-10-24',
-            DATE_END => '2009-10-25'
-          } 
-        }
-      },
-
-      '2010' =>
-      {
-        # https://www2.bridge.dk/Default.aspx?ID=17978#20654
-        CITY => 'Køge',
-        CHAPTERS => 
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2010,
-            DATE_START => '2010-10-30',
-            DATE_END => '2010-10-31'
-          } 
-        }
-      },
-
-      '2011' =>
-      {
-        # https://www2.bridge.dk/Default.aspx?ID=18971#22277
-        CITY => 'Odense',
-        CHAPTERS => 
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2011,
-            DATE_START => '2011-10-29',
-            DATE_END => '2011-10-30'
-          } 
-        }
-      },
-
-      '2012' =>
-      {
-        # https://www2.bridge.dk/Default.aspx?ID=19166#22982
-        CITY => 'Copenhagen',
-        CHAPTERS => 
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2012,
-            DATE_START => '2012-10-28',
-            DATE_END => '2012-10-29'
-          } 
-        }
-      },
-
-      '2013' =>
-      {
-        # https://www2.bridge.dk/Default.aspx?ID=19549#23398
-        CHAPTERS => 
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2013,
-            DATE_START => '2013-10-26',
-            DATE_END => '2013-10-27'
-          } 
-        }
-      },
-
-      '2014' =>
-      {
-        # http://hobro.wp.bridge.dk/wp-content/uploads/sites/12/2013/08/DM_Klubhold_2014-program.pdf
-        CITY => 'Hobro',
-        CHAPTERS => 
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2014,
-            DATE_START => '2014-10-25',
-            DATE_END => '2014-10-26'
-          } 
-        }
-      },
-
-      '2015' =>
-      {
-        # https://www2.bridge.dk/Default.aspx?ID=19341#23247
-        CITY => 'Hobro',
-        CHAPTERS => 
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2015,
-            DATE_START => '2015-10-24',
-            DATE_END => '2015-10-25'
-          } 
-        }
-      },
-
-      '2016' =>
-      {
-        # https://www2.bridge.dk/Default.aspx?ID=22394#26981
-        CITY => 'Slagelse',
-        CHAPTERS => 
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2016,
-            DATE_START => '2016-10-29',
-            DATE_END => '2016-10-30'
-          } 
-        }
-      },
-
-      '2017' =>
-      {
-        # https://www2.bridge.dk/Default.aspx?ID=22352#26915
-        CITY => 'Haderslev',
-        CHAPTERS => 
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2017,
-            DATE_START => '2017-10-28',
-            DATE_END => '2017-10-29'
-          } 
-        }
-      },
-
-      '2018' =>
-      {
-        # https://www2.bridge.dk/Default.aspx?ID=22961#27700
-        CITY => 'Næstved',
-        CHAPTERS => 
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2018,
-            DATE_START => '2018-10-27',
-            DATE_END => '2018-10-28'
-          } 
-        }
-      },
-
-      '2019' =>
-      {
-        # https://www2.bridge.dk/Default.aspx?ID=25136#30729
-        CITY => 'Aarhus',
-        CHAPTERS => 
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2019,
-            DATE_START => '2019-10-26',
-            DATE_END => '2019-10-27'
-          } 
-        }
-      },
-
-      '2020' =>
-      {
-        # https://www2.bridge.dk/Default.aspx?ID=25540#31135
-        CHAPTERS => 
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2020,
-            DATE_START => '2020-10-24',
-            DATE_END => '2020-10-25'
-          } 
-        }
-      },
-
-      '2021' =>
-      {
-        # https://www2.bridge.dk/Default.aspx?ID=26012
-        CITY => 'Odense',
-        CHAPTERS => 
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2021,
-            DATE_START => '2021-10-30',
-            DATE_END => '2021-10-31'
-          } 
-        }
-      },
-
-      '2022' =>
-      {
-        # https://www2.bridge.dk/Default.aspx?ID=26267#31896
-        CITY => 'Copenhagen',
-        CHAPTERS => 
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2022,
-            DATE_START => '2022-10-29',
-            DATE_END => '2022-10-30'
-          } 
-        }
-      },
-
-      '2023' =>
-      {
-        # https://www2.bridge.dk/Default.aspx?ID=26592
-        CITY => 'Herning',
-        CHAPTERS => 
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2023,
-            DATE_START => '2023-10-28',
-            DATE_END => '2023-10-29'
-          } 
-        }
-      }
-    }
-  },
-
   'Danish First Division',
   {
     ORGANIZATION => 'DBF',
@@ -892,18 +891,20 @@ my %TOURNAMENTS_DENMARK =
           'C4' => 
           {
             YEAR => 2009,
+            CITY => 'Copenhagen',
             WEEKEND => 5,
             STAGE => 'Semifinal',
-            CITY => 'Copenhagen',
+            major => 'SEGMENT',
             DATE_START => '2009-04-25',
             DATE_END => '2009-04-26'
           },
           'C5' => 
           {
             YEAR => 2009,
+            CITY => 'Copenhagen',
             WEEKEND => 5,
             STAGE => 'Final',
-            CITY => 'Copenhagen',
+            major => 'SEGMENT',
             DATE_START => '2009-04-26',
             DATE_END => '2009-04-26'
           }
@@ -947,18 +948,20 @@ my %TOURNAMENTS_DENMARK =
           'C4' => 
           {
             YEAR => 2010,
+            CITY => 'Asminderød',
             WEEKEND => 5,
             STAGE => 'Semifinal',
-            CITY => 'Asminderød',
+            major => 'SEGMENT',
             DATE_START => '2010-03-06',
             DATE_END => '2010-03-06'
           },
           'C5' => 
           {
             YEAR => 2010,
+            CITY => 'Asminderød',
             WEEKEND => 5,
             STAGE => 'Final',
-            CITY => 'Asminderød',
+            major => 'SEGMENT',
             DATE_START => '2010-03-07',
             DATE_END => '2010-03-07'
           }
@@ -1002,18 +1005,20 @@ my %TOURNAMENTS_DENMARK =
           'C4' => 
           {
             YEAR => 2011,
+            CITY => 'Copenhagen',
             WEEKEND => 5,
             STAGE => 'Semifinal',
-            CITY => 'Copenhagen',
+            major => 'SEGMENT',
             DATE_START => '2011-03-05',
             DATE_END => '2011-03-05'
           },
           'C5' => 
           {
             YEAR => 2011,
+            CITY => 'Copenhagen',
             WEEKEND => 5,
             STAGE => 'Final',
-            CITY => 'Copenhagen',
+            major => 'SEGMENT',
             DATE_START => '2011-03-06',
             DATE_END => '2011-03-06'
           }
@@ -1058,18 +1063,20 @@ my %TOURNAMENTS_DENMARK =
           'C4' => 
           {
             YEAR => 2012,
+            CITY => 'Copenhagen',
             WEEKEND => 5,
             STAGE => 'Semifinal',
-            CITY => 'Copenhagen',
+            major => 'SEGMENT',
             DATE_START => '2012-03-31',
             DATE_END => '2012-03-31'
           },
           'C5' => 
           {
             YEAR => 2012,
+            CITY => 'Copenhagen',
             WEEKEND => 5,
             STAGE => 'Final',
-            CITY => 'Copenhagen',
+            major => 'SEGMENT',
             DATE_START => '2012-04-01',
             DATE_END => '2012-04-01'
           }
@@ -1108,24 +1115,28 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2013,
             CITY => 'Copenhagen',
             WEEKEND => 4,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2013-03-02',
             DATE_END => '2013-03-03'
           },
           'C4' => 
           {
             YEAR => 2013,
+            CITY => 'Copenhagen',
             WEEKEND => 5,
             STAGE => 'Semifinal',
-            CITY => 'Copenhagen',
+            major => 'SEGMENT',
             DATE_START => '2013-04-06',
             DATE_END => '2013-04-06'
           },
           'C5' => 
           {
             YEAR => 2013,
+            CITY => 'Copenhagen',
             WEEKEND => 5,
             STAGE => 'Final',
-            CITY => 'Copenhagen',
+            major => 'SEGMENT',
             DATE_START => '2013-04-07',
             DATE_END => '2013-04-07'
           }
@@ -1169,18 +1180,20 @@ my %TOURNAMENTS_DENMARK =
           'C4' => 
           {
             YEAR => 2014,
+            CITY => 'Copenhagen',
             WEEKEND => 5,
             STAGE => 'Semifinal',
-            CITY => 'Copenhagen',
+            major => 'SEGMENT',
             DATE_START => '2014-04-05',
             DATE_END => '2014-04-05'
           },
           'C5' => 
           {
             YEAR => 2014,
+            CITY => 'Copenhagen',
             WEEKEND => 5,
             STAGE => 'Final',
-            CITY => 'Copenhagen',
+            major => 'SEGMENT',
             DATE_START => '2014-04-06',
             DATE_END => '2014-04-06'
           }
@@ -1211,32 +1224,36 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2015,
             WEEKEND => 3,
+            major => 'ROUND',
             DATE_START => '2015-01-10',
             DATE_END => '2015-01-11'
           },
           'C3' => 
           {
             YEAR => 2015,
-            WEEKEND => 4,
             CITY => 'Copenhagen',
+            WEEKEND => 4,
+            major => 'ROUND',
             DATE_START => '2015-03-07',
             DATE_END => '2015-03-08'
           },
           'C4' => 
           {
             YEAR => 2015,
+            CITY => 'Copenhagen',
             WEEKEND => 5,
             STAGE => 'Semifinal',
-            CITY => 'Copenhagen',
+            major => 'SEGMENT',
             DATE_START => '2015-04-18',
             DATE_END => '2015-04-18'
           },
           'C5' => 
           {
             YEAR => 2015,
+            CITY => 'Copenhagen',
             WEEKEND => 5,
             STAGE => 'Final',
-            CITY => 'Copenhagen',
+            major => 'SEGMENT',
             DATE_START => '2015-04-19',
             DATE_END => '2015-04-19'
           }
@@ -1253,30 +1270,35 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2015,
             WEEKEND => 1,
+            major => 'ROUND',
             DATE_START => '2015-09-19',
             DATE_END => '2015-09-20'
           },
           'C1' => 
           {
             YEAR => 2015,
-            WEEKEND => 2,
             CITY => 'Copenhagen',
+            WEEKEND => 2,
+            major => 'ROUND',
             DATE_START => '2015-11-21',
             DATE_END => '2015-11-22'
           },
           'C2' => 
           {
             YEAR => 2016,
-            WEEKEND => 3,
             CITY => 'Copenhagen',
+            WEEKEND => 3,
+            major => 'ROUND',
             DATE_START => '2016-01-16',
             DATE_END => '2016-01-17'
           },
           'C3' => 
           {
             YEAR => 2016,
-            WEEKEND => 4,
             CITY => 'Aarhus',
+            WEEKEND => 4,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2016-03-05',
             DATE_END => '2016-03-06'
           },
@@ -1284,17 +1306,19 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2016,
             WEEKEND => 5,
-            STAGE => 'Semifinal',
             CITY => 'Copenhagen',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2016-04-02',
             DATE_END => '2016-04-02'
           },
           'C5' => 
           {
             YEAR => 2016,
+            CITY => 'Copenhagen',
             WEEKEND => 5,
             STAGE => 'Final',
-            CITY => 'Copenhagen',
+            major => 'SEGMENT',
             DATE_START => '2016-04-03',
             DATE_END => '2016-04-03'
           }
@@ -1725,10 +1749,21 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2012,
             WEEKEND => 2,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2012-03-17',
-            DATE_END => '2012-03-18'
+            DATE_END => '2012-03-17'
           },
           'C2' => 
+          {
+            YEAR => 2012,
+            WEEKEND => 2,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-03-18',
+            DATE_END => '2012-03-18'
+          },
+          'C3' => 
           {
             YEAR => 2012,
             WEEKEND => 3,
@@ -1758,8 +1793,40 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2014-04-12',
             DATE_END => '2014-04-13'
+          } 
+        }
+      },
+
+      '2018' =>
+      {
+        CHAPTERS => 
+        {
+          # https://www2.bridge.dk/Default.aspx?ID=17866#26511
+          CITY => 'Vejle',
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-05-05',
+            DATE_END => '2018-05-06'
+          } 
+        }
+      },
+
+      '2019' =>
+      {
+        CHAPTERS => 
+        {
+          # https://www2.bridge.dk/Default.aspx?ID=23451#DM_Juniorhold
+          CITY => 'Vejle',
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-05-04',
+            DATE_END => '2018-05-05'
           } 
         }
       }
@@ -1783,6 +1850,9 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2011,
+            STAGE => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2011-07-09',
             DATE_END => '2011-07-10'
           } 
@@ -1797,6 +1867,8 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2012-07-07',
             DATE_END => '2012-07-08'
           } 
@@ -1827,6 +1899,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2014,
             STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2014-07-05',
             DATE_END => '2014-07-06'
           } 
@@ -1857,6 +1930,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2016,
             STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2016-07-09',
             DATE_END => '2016-07-10'
           } 
@@ -1962,10 +2036,16 @@ my %TOURNAMENTS_DENMARK =
         CITY => 'Svendborg',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
-            DATE_START => '2014-05-16',
+            DATE_START => '2014-05-18',
+            DATE_END => '2014-05-18'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-05-18',
             DATE_END => '2014-05-18'
           } 
         }
@@ -1994,8 +2074,9 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2009,
-            DATE_START => '2009-07-08',
-            DATE_END => '2009-07-09'
+            major => 'SESSION',
+            DATE_START => '2009-07-11',
+            DATE_END => '2009-07-12'
           } 
         }
       },
@@ -2008,6 +2089,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2010,
+            major => 'SESSION',
             DATE_START => '2010-07-17',
             DATE_END => '2010-07-18'
           } 
@@ -2022,6 +2104,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'SESSION',
             DATE_START => '2011-07-16',
             DATE_END => '2011-07-17'
           } 
@@ -2051,6 +2134,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2013,
             STAGE => 'Semifinal',
+            major => 'SESSION',
             DATE_START => '2013-07-12',
             DATE_END => '2013-07-12'
           },
@@ -2058,6 +2142,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2013,
             STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2013-07-13',
             DATE_END => '2013-07-14'
           } 
@@ -2072,6 +2157,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2014,
+            major => 'SECTION',
             DATE_START => '2014-07-12',
             DATE_END => '2014-07-13'
           } 
@@ -2086,6 +2172,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2015,
+            major => 'SECTION',
             DATE_START => '2015-07-11',
             DATE_END => '2015-07-12'
           } 
@@ -2156,6 +2243,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2003,
+            STAGE => 'Final',
             DATE_START => '2003-05-31',
             DATE_END => '2003-05-31'
           } 
@@ -2167,10 +2255,20 @@ my %TOURNAMENTS_DENMARK =
         MEET => 'Danish Bridge Festival',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2009-07-08',
+            DATE_END => '2009-07-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-07-09',
             DATE_END => '2009-07-09'
           } 
         }
@@ -2181,10 +2279,20 @@ my %TOURNAMENTS_DENMARK =
         MEET => 'Danish Bridge Festival',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2010-07-14',
+            DATE_END => '2010-07-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-07-15',
             DATE_END => '2010-07-15'
           } 
         }
@@ -2195,10 +2303,20 @@ my %TOURNAMENTS_DENMARK =
         MEET => 'Danish Bridge Festival',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2011-07-13',
+            DATE_END => '2011-07-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-07-14',
             DATE_END => '2011-07-14'
           } 
         }
@@ -2209,12 +2327,22 @@ my %TOURNAMENTS_DENMARK =
         MEET => 'Danish Bridge Festival',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2012-07-11',
+            DATE_END => '2012-07-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-07-12',
             DATE_END => '2012-07-12'
-          } 
+          },
         }
       },
 
@@ -2223,10 +2351,36 @@ my %TOURNAMENTS_DENMARK =
         MEET => 'Danish Bridge Festival',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2013-07-08',
+            DATE_END => '2013-07-09'
+          } ,
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-07-10',
+            DATE_END => '2013-07-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-07-10',
+            DATE_END => '2013-07-10'
+          },
+          'C3' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-07-11',
             DATE_END => '2013-07-11'
           } 
         }
@@ -2237,10 +2391,18 @@ my %TOURNAMENTS_DENMARK =
         MEET => 'Danish Bridge Festival',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
             DATE_START => '2014-07-07',
+            DATE_END => '2014-07-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-07-09',
             DATE_END => '2014-07-09'
           } 
         }
@@ -2248,33 +2410,33 @@ my %TOURNAMENTS_DENMARK =
     }
   },
 
-  'Danish Teams Championship',
-  {
-    ORGANIZATION => 'DBF',
-    COUNTRY => 'Denmark',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
+  # 'Danish Open Pairs Trials',
+  # {
+    # ORGANIZATION => 'DBF',
+    # COUNTRY => 'Denmark',
+    # ORIGIN => 'National',
+    # ZONE => 'Europe',
+    # FORM => 'Pairs',
+    # SCORING => 'MP',
+    # GENDER => 'Open',
+    # AGE => 'Open',
 
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        CHAPTERS => 
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            DATE_START => '2000-11-29',
-            DATE_END => '2000-12-03'
-          } 
-        }
-      }
-    }
-  },
+    # EDITIONS =>
+    # {
+      # '2010' =>
+      # {
+        # CHAPTERS => 
+        # {
+          # 'C0' => 
+          # {
+            # YEAR => 2010,
+            # DATE_START => '2010-03-27',
+            # DATE_END => '2010-03-28'
+          # }
+        # }
+      # }
+    # }
+  # },
 
   'Danish Open Trials',
   {
@@ -2304,6 +2466,8 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2010,
             WEEKEND => 2,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2010-05-01',
             DATE_END => '2010-05-02'
           }
@@ -2317,12 +2481,14 @@ my %TOURNAMENTS_DENMARK =
           'C0' => 
           {
             YEAR => 2012,
+            major => 'ROUND',
             DATE_START => '2012-01-07',
             DATE_END => '2012-01-08'
           },
           'C1' => 
           {
             YEAR => 2012,
+            major => 'ROUND',
             DATE_START => '2012-04-13',
             DATE_END => '2012-04-15'
           } 
@@ -2352,6 +2518,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2010,
+            major => 'SESSION',
             DATE_START => '2010-07-12',
             DATE_END => '2010-07-13'
           } 
@@ -2366,6 +2533,9 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2011,
+            STAGE => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2011-07-11',
             DATE_END => '2011-07-12'
           } 
@@ -2406,9 +2576,19 @@ my %TOURNAMENTS_DENMARK =
         MEET => 'Danish Bridge Festival',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-07-08',
+            DATE_END => '2015-07-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2015-07-08',
             DATE_END => '2015-07-08'
           } 

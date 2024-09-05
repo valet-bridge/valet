@@ -242,14 +242,13 @@ my @MULTI_WORDS =
   'Copenhagen Open Pairs',
   'Danish Club Teams',
   'Danish Cup',
-  'Danish Championship',
-  'Danish District Championship',
   'Danish First Division',
   'Danish Junior Teams',
   'Danish Mixed Pairs',
   'Danish Mixed Teams',
-  'Danish Open Teams',
   'Danish Open Pairs',
+  'Danish Open Pairs Trials',
+  'Danish Open Teams',
   'Danish Open Trials',
   'Danish Women Pairs',
   'Vinoble Open',
@@ -1469,6 +1468,7 @@ my %MULTI_TYPOS =
     'dmi i klubhold'],
   'Danish Cup' => [
     'danmark pokal', 
+    'danmark pokal match', 
     'denmark pokal',
     'vinoble cup'],
   'Danish First Division' => [
@@ -1510,12 +1510,13 @@ my %MULTI_TYPOS =
     'danish open',
     'danish open team', 
     'danish open teams'],
+  'Danish Open Pairs Trials' => [
+    'danish team test',
+    'danish teams test'], 
   'Danish Open Trials' => [
     'danish open team trials',
-    'danish team test',
     'danish team trial',
     'danish team trials',
-    'danish teams test', 
     'denmark team test'],
   'Danish Women Pairs' => [
     'danish championship ladies pairs', 
