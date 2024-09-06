@@ -2412,34 +2412,6 @@ my %TOURNAMENTS_DENMARK =
     }
   },
 
-  # 'Danish Open Pairs Trials',
-  # {
-    # ORGANIZATION => 'DBF',
-    # COUNTRY => 'Denmark',
-    # ORIGIN => 'National',
-    # ZONE => 'Europe',
-    # FORM => 'Pairs',
-    # SCORING => 'MP',
-    # GENDER => 'Open',
-    # AGE => 'Open',
-
-    # EDITIONS =>
-    # {
-      # '2010' =>
-      # {
-        # CHAPTERS => 
-        # {
-          # 'C0' => 
-          # {
-            # YEAR => 2010,
-            # DATE_START => '2010-03-27',
-            # DATE_END => '2010-03-28'
-          # }
-        # }
-      # }
-    # }
-  # },
-
   'Danish Open Trials',
   {
     ORGANIZATION => 'DBF',

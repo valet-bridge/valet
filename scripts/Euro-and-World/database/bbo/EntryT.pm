@@ -11,13 +11,15 @@ use open ':std', ':encoding(UTF-8)';
 use lib '.';
 
 my @HEADER_FIELDS = qw(
-  TOURNAMENT_ORDINAL
   TOURNAMENT_NAME
   TOURNAMENT_CITY
   YEAR
+  TOURNAMENT_ORDINAL
+  ORDINAL
   ZONE
   ORIGIN
   COUNTRY
+  LOCALITY
   CITY
   ORGANIZATION
   FORM
@@ -319,6 +321,19 @@ sub prune_using
       exists $chapter->{$pair->[0]};
   }
 
+  # This is not so clean -- modifying a method argument.
+  if (exists $header->{YEAR} && exists $chapter->{YEAR})
+  {
+    die "Different years" unless $header->{YEAR} eq $chapter->{YEAR};
+    delete $chapter->{YEAR};
+  }
+
+  # This is not so clean -- modifying a method argument.
+  $header->transfer_list_tag_from($self, 'TITLE_ORDINAL', 'ORDINAL');
+  $header->transfer_list_tag_from($self, 'TITLE_COUNTRY', 'COUNTRY');
+  $header->transfer_list_tag_from($self, 'TITLE_LOCALITY', 'LOCALITY');
+
+
   # TODO TWORD?
 }
 
@@ -469,6 +484,34 @@ sub transfer_list_tag
     }
   }
   delete $self->{$tag_from};
+}
+
+
+sub transfer_list_tag_from
+{
+  my ($self, $from, $tag_from, $tag_to) = @_;
+
+  return unless exists $from->{$tag_from};
+  if ($#{$from->{$tag_from}} != 0)
+  {
+    die "Need exactly one $tag_from";
+  }
+
+  my $value_from = $from->field($tag_from);
+
+  if (exists $self->{$tag_to})
+  {
+    if ($self->field($tag_to) ne $value_from)
+    {
+      die "Attempting to rewrite $tag_to";
+    }
+  }
+  else
+  {
+    $self->{$tag_to} = $value_from;
+  }
+
+  delete $from->{$tag_from};
 }
 
 

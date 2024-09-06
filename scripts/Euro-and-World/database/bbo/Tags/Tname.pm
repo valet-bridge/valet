@@ -297,16 +297,13 @@ my @MULTI_WORDS =
 
   # EUROPE
   'European Bridge Teams Championship',
-  'European Girls Teams Championship',
   'European Junior Mixed Pairs',
-  'European Junior Teams Championship',
   'European Mixed Junior Pairs',
   'European Mixed Bridge Championship',
   'European Open Bridge Championship',
   'European Open Junior Pairs',
   'European Open Pairs',
   "European Champions' Cup",
-  'European School Teams Championship',
   'European Small Federation Games',
   'European University Bridge Championship',
   'European Winter Games',
@@ -314,7 +311,11 @@ my @MULTI_WORDS =
   'European Youngster Bridge Championship',
   'European Youth Bridge Championship',
   'European Youth Bridge Pairs Championship',
-  'European Youth Bridge Teams Championship',
+
+  'European U16 Open Teams',
+  'European U21 Open Teams',
+  'European U26 Open Teams',
+  'European U26 Women Teams',
 
   'EUSA Games',
 
@@ -1623,20 +1624,7 @@ my %MULTI_TYPOS =
     'european teams championship',
     'european teams championships'],
   "European Champions' Cup" => ['european champs cup'],
-  'European Girls Teams Championship' => [
-    'european girls championships',
-    'european girls teams',
-    'euro girls championships'],
   'European Junior Mixed Pairs' => ['eyjc mixed pairs'],
-  'European Junior Teams Championship' => [
-    'ebl juniors',
-    'euro juniors championship',
-    'euro juniors championships',
-    'european junior teams',
-    'european junior teams championships',
-    'euroepan junior teams championships',
-    'european juniors championship',
-    'european juniors championships'],
   'European Mixed Bridge Championship' => [
     'euro mixed teams',
     'european mixed teams',
@@ -1646,7 +1634,6 @@ my %MULTI_TYPOS =
   'European Open Bridge Championship' => ['eobc',
     'euroepan open champ', 'european open champ', 'europe open champ',
     'euro open championships', 'euro open teams'],
-  'European School Teams Championship' => ['ebl schools'],
   'European Small Federation Games' => ['ebl small federation trophy',
     'ebl small federations trophy', 'games of small federations',
     'european small federations games', 'small federation games',
@@ -1674,8 +1661,29 @@ my %MULTI_TYPOS =
     'european youth championship'],
   'European Youth Bridge Pairs Championship' => [
     'european youth pairs'],
-  'European Youth Bridge Teams Championship' => [
-    'european youth bridge team champ', 'european youth teams'],
+
+  ### EUROPE PART
+  'European U16 Open Teams' => [
+    'ebl schools'],
+  'European U21 Open Teams' => [
+    'european youth bridge team champ', 
+    'european youth teams'],
+  'European U26 Open Teams' => [
+    'ebl juniors',
+    'euro juniors championship',
+    'euro juniors championships',
+    'european junior teams',
+    'european junior teams championship',
+    'european junior teams championships',
+    'euroepan junior teams championships',
+    'european juniors championship',
+    'european juniors championships',
+    'european youth teams u26'],
+  'European U26 Women Teams' => [
+    'european girls championships',
+    'european girls teams',
+    'euro girls championships'],
+
 
   ### FFF
 

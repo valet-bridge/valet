@@ -16,7 +16,8 @@ use EntryT;
 
 # use Tournaments::Canada;
 # use Tournaments::Chile;
-use Tournaments::Denmark;
+# use Tournaments::Denmark;
+use Tournaments::EuroYouth;
 # use Tournaments::Germany;
 # use Tournaments::Ireland;
 # use Tournaments::Italy;
@@ -27,14 +28,16 @@ my %DIVISIONS =
 (
   # CANADA => \&Tournaments::Canada::set_links
   # CHILE => \&Tournaments::Chile::set_links
-  DENMARK => \&Tournaments::Denmark::set_links
+  # DENMARK => \&Tournaments::Denmark::set_links
+  EUROYOUTH => \&Tournaments::EuroYouth::set_links
   # GERMANY => \&Tournaments::Germany::set_links
   # IRELAND => \&Tournaments::Ireland::set_links
   # ITALY => \&Tournaments::Italy::set_links
   # NEWZEALAND => \&Tournaments::NewZealand::set_links
 );
 
-my @MEET_FIELDS = qw(ORGANIZATION COUNTRY CITY ORIGIN ZONE SCORING);
+my @MEET_FIELDS = qw(ORGANIZATION COUNTRY CITY LOCALITY ORDINAL
+  ORIGIN ZONE SCORING);
 
 my @MEET_EDITION_FIELDS = qw(YEAR CITY);
 my @MEET_EDITION_PREFIXED_FIELDS = qw(ORDINAL DATE_START DATE_END);

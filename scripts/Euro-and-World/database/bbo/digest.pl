@@ -39,7 +39,7 @@ while ($entryT->read($fh))
   my $tname = $entryT->field('TITLE_TNAME');
   next if $meet eq '' && $tname eq '';
 
-  if ($entryT->bbono() eq 24156)
+  if ($entryT->bbono() eq 822)
   {
     print "HERE\n";
   }

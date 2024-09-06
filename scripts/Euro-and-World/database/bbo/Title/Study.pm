@@ -58,6 +58,8 @@ my @LOCAL_SUBS =
   # { START => , END => , TEXT => '',
     # CORR => '' },
 
+  { START => 797, END => 822, TEXT => 'European Youth Bridge Team Champ', 
+    CORR => 'European U26 Open Teams' },
   { START => 3620, END => 3631, TEXT => 'Pula', 
     CORR => 'Pula Bridge Festival' },
   { START => 3708, END => 3728, TEXT => 'CCBA Championships', 
