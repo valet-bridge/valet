@@ -192,7 +192,7 @@ sub get_edition_and_chapter
 
   my $lowest_dist = 9999;
   my $lowest_hits = 0;
-  my ($lowest_tname, $lowest_edition, $lowest_chapter);
+  my ($lowest_tname, $lowest_edition, $lowest_chapter, $lowest_opens);
 
   for my $tname (@tname_list)
   {
@@ -209,18 +209,25 @@ sub get_edition_and_chapter
         my ($hits, $conflicts) = compatibility($chapter, $entry);
         next unless $conflicts == 0;
 
+        my $opens = 
+          (exists $t->{GENDER} && $t->{GENDER} eq 'Open' ? 1 : 0) +
+          (exists $t->{AGE} && $t->{AGE} eq 'Open' ? 1 : 0);
+
         my $dist = $target->distance(
           $chapter->{DATE_START},
           $chapter->{DATE_END});
-    
+
         if (($dist < $lowest_dist) ||
-            ($dist == $lowest_dist && $hits > $lowest_hits))
+            ($dist == $lowest_dist && $hits > $lowest_hits) ||
+            ($dist == $lowest_dist && $hits == $lowest_hits &&
+             $opens > $lowest_opens))
         {
           $lowest_dist = $dist;
           $lowest_tname = $tname;
           $lowest_edition = $edition_str;
           $lowest_chapter = $chapter_str;
           $lowest_hits = $hits;
+          $lowest_opens = $opens;
         }
       }
     }

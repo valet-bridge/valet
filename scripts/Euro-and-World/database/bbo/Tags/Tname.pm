@@ -237,7 +237,7 @@ my @MULTI_WORDS =
   'Dainik Navjyoti All India Inter-State',
   'Damiani Cup',
 
-  # DENMARK
+  # DENMARK: Mapped in detail
   'Copenhagen Invitational Pairs',
   'Copenhagen Open Pairs',
   'Danish Club Teams',
@@ -297,27 +297,30 @@ my @MULTI_WORDS =
 
   # EUROPE
   'European Bridge Teams Championship',
-  'European Junior Mixed Pairs',
-  'European Mixed Junior Pairs',
   'European Mixed Bridge Championship',
   'European Open Bridge Championship',
-  'European Open Junior Pairs',
   'European Open Pairs',
   "European Champions' Cup",
   'European Small Federation Games',
   'European University Bridge Championship',
   'European Winter Games',
   'European Women Championship',
-  'European Youngster Bridge Championship',
-  'European Youth Bridge Championship',
-  'European Youth Bridge Pairs Championship',
-
-  'European U16 Open Teams',
-  'European U21 Open Teams',
-  'European U26 Open Teams',
-  'European U26 Women Teams',
-
   'EUSA Games',
+
+  # EURO-YOUTH: Mapped in detail
+  'European U16 Open Pairs',
+  'European U16 Open Teams',
+  'European U21 Open Pairs',
+  'European U21 Open Teams',
+  'European U26 Mixed Pairs',
+  'European U26 Open IMP Pairs',
+  'European U26 Open Pairs',
+  'European U26 Open Teams',
+  'European U26 Women Pairs',
+  'European U26 Women Teams',
+  'European U31 Open Pairs',
+  "European U31 President's Cup",
+
 
   ### FFF
 
@@ -1457,7 +1460,7 @@ my %MULTI_TYPOS =
     'Dainik Navjyoti All India Interstate',
     'Dainik Navjyoti All India Inter -State'],
 
-  # DENMARK
+  # DENMARK: Mapped in detail
   'Copenhagen Open Pairs' => ['km åben par'],
   'Danish Club Teams' => [
     'danish club team', 
@@ -1624,13 +1627,10 @@ my %MULTI_TYPOS =
     'european teams championship',
     'european teams championships'],
   "European Champions' Cup" => ['european champs cup'],
-  'European Junior Mixed Pairs' => ['eyjc mixed pairs'],
   'European Mixed Bridge Championship' => [
     'euro mixed teams',
     'european mixed teams',
     'euro open mixed teams'],
-  'European Mixed Junior Pairs' => ['em pairs junior mix',
-    'junior em mix'],
   'European Open Bridge Championship' => ['eobc',
     'euroepan open champ', 'european open champ', 'europe open champ',
     'euro open championships', 'euro open teams'],
@@ -1651,23 +1651,21 @@ my %MULTI_TYPOS =
     'european uni championship',
     'european university team championship'],
   'European Women Championship' => ['eur women champ'],
-  'European Youngster Bridge Championship' => [
-    'euro youngster championship', 
-    'euro youngster championships', 
-    'euro youngsters championship', 
-    'euro youngsters championships', 
-    'euro yongster championships'],
-  'European Youth Bridge Championship' => ['european youth championships',
-    'european youth championship'],
-  'European Youth Bridge Pairs Championship' => [
-    'european youth pairs'],
 
-  ### EUROPE PART
+  ### EURO-YOUTH: Mapped in detail
   'European U16 Open Teams' => [
     'ebl schools'],
   'European U21 Open Teams' => [
     'european youth bridge team champ', 
     'european youth teams'],
+  'European U26 Mixed Pairs' => [
+    'em pairs junior mix',
+    'european mixed pairs pairs',
+    'eyjc mixed pairs',
+    'junior em mix'],
+  'European U26 Open Pairs' => [
+    'european youth bridge pairs championship',
+    'european youth pairs'],
   'European U26 Open Teams' => [
     'ebl juniors',
     'euro juniors championship',

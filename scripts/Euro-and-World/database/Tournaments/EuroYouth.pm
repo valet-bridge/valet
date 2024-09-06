@@ -16,6 +16,94 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_EURO_YOUTH =
 (
+  'European Youth Pairs Championships' =>
+  {
+    ORGANIZATION => 'EBL',
+    ORIGIN => 'International',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+
+    EDITIONS =>
+    {
+      '2008' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/08Wroclaw/Results.htm
+        ORDINAL => '9th',
+        YEAR => 2008,
+        CITY => 'Wroclaw',
+        COUNTRY => 'Poland',
+        DATE_START => '2008-07-15',
+        DATE_END => '2008-07-18'
+      },
+
+      '2010' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/10Opatija/Results.htm
+        ORDINAL => '10th',
+        YEAR => 2010,
+        CITY => 'Opatija',
+        COUNTRY => 'Croatia',
+        DATE_START => '2010-07-14',
+        DATE_END => '2010-07-17'
+      },
+
+      '2012' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/12Vejle/microSite/Results.htm
+        ORDINAL => '11th',
+        YEAR => 2012,
+        CITY => 'Vejle',
+        COUNTRY => 'Denmark',
+        DATE_START => '2012-07-01',
+        DATE_END => '2012-07-06'
+      },
+
+      '2014' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/14Burghausen/microSite/results.htm
+        ORDINAL => '12th',
+        YEAR => 2014,
+        CITY => 'Burghausen',
+        COUNTRY => 'Germany',
+        DATE_START => '2014-07-12',
+        DATE_END => '2014-07-19'
+      },
+
+      '2016' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/16Liepaja/microSite/results.htm
+        ORDINAL => '13th',
+        YEAR => 2016,
+        CITY => 'Liepaja',
+        COUNTRY => 'Latvia',
+        DATE_START => '2016-07-12',
+        DATE_END => '2016-07-20'
+      },
+
+      '2018' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/18opatija/microsite/results.htm
+        ORDINAL => '14th',
+        YEAR => 2018,
+        CITY => 'Opatija',
+        COUNTRY => 'Croatia',
+        DATE_START => '2018-07-11',
+        DATE_END => '2018-07-18'
+      },
+
+      '2023' =>
+      {
+        # http://db.eurobridge.org/repository/competitions/23Veldhoven/microsite/results.htm
+        ORDINAL => '15th',
+        YEAR => 2023,
+        CITY => 'Veldhoven',
+        COUNTRY => 'Netherlands',
+        DATE_START => '2023-07-24',
+        DATE_END => '2023-07-29'
+      },
+    }
+  },
+
   'European Youth Team Championships' =>
   {
     ORGANIZATION => 'EBL',
@@ -196,6 +284,76 @@ my %MEETS_EURO_YOUTH =
 
 my %TOURNAMENTS_EURO_YOUTH =
 (
+  'European U16 Open Pairs' =>
+  {
+    GENDER => 'Open',
+    AGE => 'U16',
+    SCORING => 'MP',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Round-robin',
+            DATE_START => '2016-07-15',
+            DATE_END => '2016-07-17'
+          },
+        }
+      },
+
+      '2018' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Round-robin',
+            DATE_START => '2018-07-13',
+            DATE_END => '2018-07-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            DATE_START => '2018-07-15',
+            DATE_END => '2018-07-15'
+          }
+        }
+      },
+
+      '2023' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Round-robin',
+            DATE_START => '2023-07-27',
+            DATE_END => '2023-07-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            DATE_START => '2023-07-29',
+            DATE_END => '2023-07-29'
+          }
+        }
+      },
+
+    }
+  },
+
   'European U16 Open Teams',
   {
     GENDER => 'Open',
@@ -273,6 +431,185 @@ my %TOURNAMENTS_EURO_YOUTH =
           }
         }
       },
+    }
+  },
+
+  'European U21 Open Pairs' =>
+  {
+    GENDER => 'Open',
+    AGE => 'U21',
+    SCORING => 'MP',
+
+    EDITIONS =>
+    {
+      '2008' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Round-robin',
+            DATE_START => '2008-07-16',
+            DATE_END => '2008-07-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Semifinal',
+            DATE_START => '2008-07-17',
+            DATE_END => '2008-07-17'
+          },
+          'C2' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            DATE_START => '2008-07-18',
+            DATE_END => '2008-07-18'
+          }
+        }
+      },
+
+      '2010' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Round-robin',
+            DATE_START => '2010-07-15',
+            DATE_END => '2010-07-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            DATE_START => '2010-07-16',
+            DATE_END => '2010-07-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            DATE_START => '2010-07-17',
+            DATE_END => '2010-07-17'
+          }
+        }
+      },
+
+      '2012' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Round-robin',
+            DATE_START => '2012-07-04',
+            DATE_END => '2012-07-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            DATE_START => '2012-07-06',
+            DATE_END => '2012-07-06'
+          }
+        }
+      },
+
+      '2014' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Round-robin',
+            DATE_START => '2014-07-14',
+            DATE_END => '2014-07-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            DATE_START => '2014-07-16',
+            DATE_END => '2014-07-16'
+          }
+        }
+      },
+
+      '2016' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Round-robin',
+            DATE_START => '2016-07-15',
+            DATE_END => '2016-07-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            DATE_START => '2016-07-17',
+            DATE_END => '2016-07-17'
+          }
+        }
+      },
+
+      '2018' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Round-robin',
+            DATE_START => '2018-07-13',
+            DATE_END => '2018-07-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            DATE_START => '2018-07-15',
+            DATE_END => '2018-07-15'
+          }
+        }
+      },
+
+      '2023' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Round-robin',
+            DATE_START => '2023-07-27',
+            DATE_END => '2023-07-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            DATE_START => '2023-07-29',
+            DATE_END => '2023-07-29'
+          }
+        }
+      },
+
     }
   },
 
@@ -491,6 +828,298 @@ my %TOURNAMENTS_EURO_YOUTH =
             STAGE => 'Round-robin',
             DATE_START => '2024-07-07',
             DATE_END => '2024-07-12'
+          }
+        }
+      },
+    }
+  },
+
+  'European U26 Mixed Pairs' =>
+  {
+    GENDER => 'Mixed',
+    AGE => 'U26',
+    SCORING => 'MP',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'SESSION',
+            DATE_START => '2012-07-02',
+            DATE_END => '2012-07-03'
+          },
+        }
+      },
+
+      '2014' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'SESSION',
+            DATE_START => '2014-07-12',
+            DATE_END => '2014-07-13'
+          },
+        }
+      },
+
+      '2016' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Round-robin',
+            DATE_START => '2016-07-13',
+            DATE_END => '2016-07-14'
+          },
+        }
+      },
+
+      '2018' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Round-robin',
+            DATE_START => '2018-07-11',
+            DATE_END => '2018-07-12'
+          },
+        }
+      },
+
+      '2023' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Round-robin',
+            DATE_START => '2023-07-25',
+            DATE_END => '2023-07-26'
+          },
+        }
+      },
+    }
+  },
+
+  'European U26 Open IMP Pairs' =>
+  {
+    GENDER => 'Open',
+    AGE => 'U26',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2023' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Round-robin',
+            DATE_START => '2023-07-25',
+            DATE_END => '2023-07-26'
+          }
+        }
+      },
+    }
+  },
+
+  'European U26 Open Pairs' =>
+  {
+    GENDER => 'Open',
+    AGE => 'U26',
+    SCORING => 'MP',
+
+    EDITIONS =>
+    {
+      '2008' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Round-robin',
+            DATE_START => '2008-07-16',
+            DATE_END => '2008-07-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Semifinal',
+            DATE_START => '2008-07-17',
+            DATE_END => '2008-07-17'
+          },
+          'C2' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            DATE_START => '2008-07-18',
+            DATE_END => '2008-07-18'
+          }
+        }
+      },
+
+      '2010' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Round-robin',
+            DATE_START => '2010-07-15',
+            DATE_END => '2010-07-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            DATE_START => '2010-07-16',
+            DATE_END => '2010-07-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            DATE_START => '2010-07-17',
+            DATE_END => '2010-07-17'
+          }
+        }
+      },
+
+      '2012' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'SESSION',
+            DATE_START => '2012-07-04',
+            DATE_END => '2012-07-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2012-07-06',
+            DATE_END => '2012-07-06'
+          }
+        }
+      },
+
+      '2014' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Round-robin',
+            DATE_START => '2014-07-14',
+            DATE_END => '2014-07-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            DATE_START => '2014-07-16',
+            DATE_END => '2014-07-16'
+          }
+        }
+      },
+
+      '2016' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Round-robin',
+            DATE_START => '2016-07-15',
+            DATE_END => '2016-07-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            DATE_START => '2016-07-17',
+            DATE_END => '2016-07-17'
+          }
+        }
+      },
+
+      '2018' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Round-robin',
+            DATE_START => '2018-07-13',
+            DATE_END => '2018-07-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            DATE_START => '2018-07-15',
+            DATE_END => '2018-07-15'
+          }
+        }
+      },
+
+      '2023' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Round-robin',
+            DATE_START => '2023-07-27',
+            DATE_END => '2023-07-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            DATE_START => '2023-07-29',
+            DATE_END => '2023-07-29'
           }
         }
       },
@@ -721,6 +1350,177 @@ my %TOURNAMENTS_EURO_YOUTH =
     }
   },
 
+  'European U26 Women Pairs' =>
+  {
+    GENDER => 'Women',
+    AGE => 'U26',
+    SCORING => 'MP',
+
+    EDITIONS =>
+    {
+      '2008' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Round-robin',
+            DATE_START => '2008-07-16',
+            DATE_END => '2008-07-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Semifinal',
+            DATE_START => '2008-07-17',
+            DATE_END => '2008-07-17'
+          },
+          'C2' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            DATE_START => '2008-07-18',
+            DATE_END => '2008-07-18'
+          }
+        }
+      },
+
+      '2010' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Round-robin',
+            DATE_START => '2010-07-15',
+            DATE_END => '2010-07-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            DATE_START => '2010-07-16',
+            DATE_END => '2010-07-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            DATE_START => '2010-07-17',
+            DATE_END => '2010-07-17'
+          }
+        }
+      },
+
+      '2012' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Round-robin',
+            DATE_START => '2012-07-04',
+            DATE_END => '2012-07-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            DATE_START => '2012-07-06',
+            DATE_END => '2012-07-06'
+          }
+        }
+      },
+
+      '2014' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Round-robin',
+            DATE_START => '2014-07-14',
+            DATE_END => '2014-07-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            DATE_START => '2014-07-16',
+            DATE_END => '2014-07-16'
+          }
+        }
+      },
+
+      '2016' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Round-robin',
+            DATE_START => '2016-07-15',
+            DATE_END => '2016-07-17'
+          },
+        }
+      },
+
+      '2018' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Round-robin',
+            DATE_START => '2018-07-13',
+            DATE_END => '2018-07-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            DATE_START => '2018-07-15',
+            DATE_END => '2018-07-15'
+          }
+        }
+      },
+
+      '2023' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Round-robin',
+            DATE_START => '2023-07-27',
+            DATE_END => '2023-07-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            DATE_START => '2023-07-29',
+            DATE_END => '2023-07-29'
+          }
+        }
+      },
+    }
+  },
+
   'European U26 Women Teams',
   {
     GENDER => 'Women',
@@ -888,7 +1688,39 @@ my %TOURNAMENTS_EURO_YOUTH =
     }
   },
 
-  'European Youth U31 Open Teams',
+  'European U31 Open Pairs',
+  {
+    GENDER => 'Open',
+    AGE => 'U31',
+    SCORING => 'MP',
+
+    EDITIONS =>
+    {
+      '2023' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Round-robin',
+            DATE_START => '2023-07-27',
+            DATE_END => '2023-07-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            DATE_START => '2023-07-29',
+            DATE_END => '2023-07-29'
+          }
+        }
+      },
+    }
+  },
+
+  'European U31 Open Teams',
   {
     GENDER => 'Open',
     AGE => 'U31',
@@ -920,6 +1752,91 @@ my %TOURNAMENTS_EURO_YOUTH =
             STAGE => 'Round-robin',
             DATE_START => '2024-07-09',
             DATE_END => '2024-07-12'
+          }
+        }
+      },
+    }
+  },
+
+  "European U31 President's Cup",
+  {
+    GENDER => 'Open',
+    AGE => 'U31',
+    SCORING => 'MP',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            DATE_START => '2012-07-06',
+            DATE_END => '2012-07-06'
+          },
+        }
+      },
+
+      '2014' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            DATE_START => '2014-07-16',
+            DATE_END => '2014-07-16'
+          },
+        }
+      },
+
+      '2016' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            DATE_START => '2016-07-17',
+            DATE_END => '2016-07-17'
+          },
+        }
+      },
+
+      '2018' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            DATE_START => '2018-07-15',
+            DATE_END => '2018-07-15'
+          }
+        }
+      },
+
+      '2023' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            DATE_START => '2023-07-29',
+            DATE_END => '2023-07-29'
           }
         }
       },
