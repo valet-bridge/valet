@@ -31,6 +31,7 @@ $HEADER_HASH_CHECK{$_} = 1 for @HEADER_FIELDS;
 
 my @CHAPTER_FIELDS = qw(
   YEAR
+  MEET
   WEEKEND
   AGE
   GENDER
@@ -482,6 +483,8 @@ sub fix_list_tags
 
   $self->transfer_list_tag('EVENT_SESSION', 'SESSION');
 
+  $self->transfer_list_tag('EVENT_SECTION', 'SECTION');
+
   $self->transfer_list_tag('EVENT_SEGMENT', 'SEGMENT');
 
   $self->transfer_list_tag('EVENT_AGE', 'AGE');
@@ -717,7 +720,7 @@ sub str_by_ordered_fields
     warn "Unprinted field $key" unless exists $check_fields->{$key};
 if (! exists $check_fields->{$key})
 {
-print "UNPRINTED $key\n";
+print "WARNING: Unprinted $key\n";
 }
   }
 

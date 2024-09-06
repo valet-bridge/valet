@@ -41,6 +41,7 @@ my @MEET_EDITION_PREFIXED_FIELDS = qw(ORDINAL DATE_START DATE_END);
 
 my @TOURNAMENT_EDITION_PREFIXED_FIELDS = qw(ORDINAL CITY);
 my @TOURNAMENT_CHAPTER_FIELDS = qw(YEAR MOVEMENT STAGE major minor);
+my @TOURNAMENT_MEET_FIELDS = qw(MEET);
 
 my @TOURNAMENT_FIELDS = qw(ORGANIZATION COUNTRY CITY ORIGIN ZONE
   FORM SCORING GENDER AGE);
@@ -49,7 +50,8 @@ my %COMPATIBILITIES = (
   AGE => ['TITLE_AGE'],
   GENDER => ['TITLE_GENDER'],
   MOVEMENT => ['EVENT_MOVEMENT', 'TITLE_MOVEMENT'],
-  STAGE => ['EVENT_STAGE', 'TITLE_STAGE']
+  STAGE => ['EVENT_STAGE', 'TITLE_STAGE'],
+  SEGMENT => ['HALF']
 );
 
 
@@ -316,6 +318,14 @@ sub set_header_entry
     if (exists $t_chapter->{$tfield})
     {
       transfer_field(\%chapter_fields, $tfield, $t_chapter->{$tfield});
+    }
+  }
+
+  for my $mfield (@TOURNAMENT_MEET_FIELDS)
+  {
+    if (exists $t_edition->{$mfield})
+    {
+      transfer_field(\%chapter_fields, $mfield, $t_edition->{$mfield});
     }
   }
 

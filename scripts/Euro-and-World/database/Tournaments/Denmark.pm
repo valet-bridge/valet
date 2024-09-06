@@ -1225,6 +1225,7 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2015,
             WEEKEND => 3,
             major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2015-01-10',
             DATE_END => '2015-01-11'
           },
@@ -1234,6 +1235,7 @@ my %TOURNAMENTS_DENMARK =
             CITY => 'Copenhagen',
             WEEKEND => 4,
             major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2015-03-07',
             DATE_END => '2015-03-08'
           },
