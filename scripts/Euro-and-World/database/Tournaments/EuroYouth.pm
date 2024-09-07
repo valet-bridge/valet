@@ -19,7 +19,6 @@ my %MEETS_EURO_YOUTH =
   'European Youth Pairs Championships' =>
   {
     ORGANIZATION => 'EBL',
-    ORIGIN => 'International',
     ZONE => 'Europe',
     FORM => 'Pairs',
 
@@ -107,7 +106,6 @@ my %MEETS_EURO_YOUTH =
   'European Youth Team Championships' =>
   {
     ORGANIZATION => 'EBL',
-    ORIGIN => 'International',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -286,6 +284,7 @@ my %TOURNAMENTS_EURO_YOUTH =
 (
   'European U16 Open Pairs' =>
   {
+    ORIGIN => 'International',
     GENDER => 'Open',
     AGE => 'U16',
     SCORING => 'MP',
@@ -356,6 +355,7 @@ my %TOURNAMENTS_EURO_YOUTH =
 
   'European U16 Open Teams',
   {
+    ORIGIN => 'International',
     GENDER => 'Open',
     AGE => 'U16',
 
@@ -436,6 +436,7 @@ my %TOURNAMENTS_EURO_YOUTH =
 
   'European U21 Open Pairs' =>
   {
+    ORIGIN => 'International',
     GENDER => 'Open',
     AGE => 'U21',
     SCORING => 'MP',
@@ -615,6 +616,7 @@ my %TOURNAMENTS_EURO_YOUTH =
 
   'European U21 Open Teams',
   {
+    ORIGIN => 'International',
     GENDER => 'Open',
     AGE => 'U21',
 
@@ -836,6 +838,7 @@ my %TOURNAMENTS_EURO_YOUTH =
 
   'European U26 Mixed Pairs' =>
   {
+    ORIGIN => 'International',
     GENDER => 'Mixed',
     AGE => 'U26',
     SCORING => 'MP',
@@ -923,6 +926,7 @@ my %TOURNAMENTS_EURO_YOUTH =
 
   'European U26 Open IMP Pairs' =>
   {
+    ORIGIN => 'International',
     GENDER => 'Open',
     AGE => 'U26',
     SCORING => 'IMP',
@@ -948,6 +952,7 @@ my %TOURNAMENTS_EURO_YOUTH =
 
   'European U26 Open Pairs' =>
   {
+    ORIGIN => 'International',
     GENDER => 'Open',
     AGE => 'U26',
     SCORING => 'MP',
@@ -1128,6 +1133,7 @@ my %TOURNAMENTS_EURO_YOUTH =
 
   'European U26 Open Teams',
   {
+    ORIGIN => 'International',
     GENDER => 'Open',
     AGE => 'U26',
 
@@ -1352,6 +1358,7 @@ my %TOURNAMENTS_EURO_YOUTH =
 
   'European U26 Women Pairs' =>
   {
+    ORIGIN => 'International',
     GENDER => 'Women',
     AGE => 'U26',
     SCORING => 'MP',
@@ -1523,6 +1530,7 @@ my %TOURNAMENTS_EURO_YOUTH =
 
   'European U26 Women Teams',
   {
+    ORIGIN => 'International',
     GENDER => 'Women',
     AGE => 'U26',
 
@@ -1690,6 +1698,7 @@ my %TOURNAMENTS_EURO_YOUTH =
 
   'European U31 Open Pairs',
   {
+    ORIGIN => 'International',
     GENDER => 'Open',
     AGE => 'U31',
     SCORING => 'MP',
@@ -1722,6 +1731,7 @@ my %TOURNAMENTS_EURO_YOUTH =
 
   'European U31 Open Teams',
   {
+    ORIGIN => 'International',
     GENDER => 'Open',
     AGE => 'U31',
 
@@ -1760,6 +1770,7 @@ my %TOURNAMENTS_EURO_YOUTH =
 
   "European U31 President's Cup",
   {
+    ORIGIN => 'Transnational',
     GENDER => 'Open',
     AGE => 'U31',
     SCORING => 'MP',

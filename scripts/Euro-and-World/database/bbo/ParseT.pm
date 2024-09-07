@@ -17,6 +17,7 @@ use EntryT;
 # use Tournaments::Canada;
 # use Tournaments::Chile;
 # use Tournaments::Denmark;
+use Tournaments::EuroAdult;
 use Tournaments::EuroYouth;
 # use Tournaments::Germany;
 # use Tournaments::Ireland;
@@ -29,7 +30,8 @@ my %DIVISIONS =
   # CANADA => \&Tournaments::Canada::set_links
   # CHILE => \&Tournaments::Chile::set_links
   # DENMARK => \&Tournaments::Denmark::set_links
-  EUROYOUTH => \&Tournaments::EuroYouth::set_links
+  EUROADULT => \&Tournaments::EuroAdult::set_links
+  # EUROYOUTH => \&Tournaments::EuroYouth::set_links
   # GERMANY => \&Tournaments::Germany::set_links
   # IRELAND => \&Tournaments::Ireland::set_links
   # ITALY => \&Tournaments::Italy::set_links

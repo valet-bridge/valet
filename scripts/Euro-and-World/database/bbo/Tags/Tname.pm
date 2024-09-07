@@ -296,15 +296,18 @@ my @MULTI_WORDS =
   'Estoril Swiss Teams',
 
   # EUROPE
-  'European Bridge Teams Championship',
-  'European Mixed Bridge Championship',
-  'European Open Bridge Championship',
-  'European Open Pairs',
+  'European National Open Teams',
+  'European National Mixed Teams',
+  'European National Seniors Pairs',
+  'European National Seniors Teams',
+  'European National Women Pairs',
+  'European National Women Teams',
+
+
   "European Champions' Cup",
   'European Small Federation Games',
   'European University Bridge Championship',
   'European Winter Games',
-  'European Women Championship',
   'EUSA Games',
 
   # EURO-YOUTH: Mapped in detail
@@ -1607,33 +1610,25 @@ my %MULTI_TYPOS =
     'estoril international teams', 'estoril internacional teams'],
 
   # EUROPE
-  'European Bridge Teams Championship' => [
-    'e_b_l_ team championships',
-    'e_b_l_ teams championship', 
-    'e_b_l_ team champioships', 
-    'ebl team champs',
-    'ebl team championships',
-    'ebl teams championship',
-    'ebl teams championships',
-    'euro team championships',
-    'euro team champs',
-    'european b.t.ch.',
-    'european b_t_ch_', 
-    'european bridge team championships', 
-    'european bridge team champ',
-    'europeqn teqm championships',
-    'european team championship',
-    'european team championships',
-    'european teams championship',
-    'european teams championships'],
-  "European Champions' Cup" => ['european champs cup'],
-  'European Mixed Bridge Championship' => [
+
+  'European National Mixed Teams' => [
     'euro mixed teams',
-    'european mixed teams',
+    'european mixed teams'],
+  'European National Open Teams' => [
+    'eur champ pau open'],
+  'European National Women Teams' => [
+    'eur champ pau woman',
+    'eur champ pau women',
+    'eur women champ'],
+  'European National Seniors Teams' => [
+    'eur champ pau senior',
+    'eur champ pau seniors'],
+  'European Transnational Mixed Teams' => [
     'euro open mixed teams'],
-  'European Open Bridge Championship' => ['eobc',
-    'euroepan open champ', 'european open champ', 'europe open champ',
-    'euro open championships', 'euro open teams'],
+  'Generali European Open Teams' => [
+    'generali euro team champs'],
+
+  "European Champions' Cup" => ['european champs cup'],
   'European Small Federation Games' => ['ebl small federation trophy',
     'ebl small federations trophy', 'games of small federations',
     'european small federations games', 'small federation games',
@@ -1650,7 +1645,6 @@ my %MULTI_TYPOS =
     'european uni bridge championship',
     'european uni championship',
     'european university team championship'],
-  'European Women Championship' => ['eur women champ'],
 
   ### EURO-YOUTH: Mapped in detail
   'European U16 Open Teams' => [
@@ -1670,13 +1664,22 @@ my %MULTI_TYPOS =
     'ebl juniors',
     'euro juniors championship',
     'euro juniors championships',
+    'euro yongster championships',
+    'euro youngster championship',
+    'euro youngster championships',
+    'euro youngsters championship',
+    'euro youngsters championships',
     'european junior teams',
     'european junior teams championship',
     'european junior teams championships',
     'euroepan junior teams championships',
     'european juniors championship',
     'european juniors championships',
-    'european youth teams u26'],
+    'european youth teams u26',
+    'european youth bridge championship',
+    'european youth championships',
+    'european youth championship',
+    'european youngster bridge championship'],
   'European U26 Women Teams' => [
     'european girls championships',
     'european girls teams',
@@ -3023,7 +3026,6 @@ my %SINGLE_TYPOS =
   'Dutch Meesterklasse' => ['meesterklasse'],
   'European Bridge Teams Championship' => ['ebtc'],
   "European Champions' Cup" => ['ecc'],
-  'European Open Bridge Championship' => ['eoc'],
   'European Small Federation Games' => ['esfg', 'sfc'],
   'European University Bridge Championship' => ['eubc', 'eucb', 'euc'],
   'European Winter Games' => ['ewg'],

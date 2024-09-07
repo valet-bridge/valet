@@ -31,7 +31,7 @@ my %KILL = map { $_ => 1 } @KILL_FIELDS;
 
 my %RECOGNIZE_LETTER_GROUPS =
 (
-  'European Championship' => 1,
+  'European National Championships' => 1,
   'European Bridge Teams Championship' => 1,
   'European Open Bridge Championship' => 1,
   'Sunchime Fund Cup' => 1,
@@ -138,7 +138,7 @@ sub post_process_title_teams
 
   for my $chain (@$chains)
   {
-    next if $chain->status() eq 'KILLED' || $chain->status() eq 'EXPLAINED';
+    next if $chain->status() eq 'KILLED';
 
     for my $i (0 .. $chain->last())
     {
@@ -154,14 +154,14 @@ sub post_process_title_teams
             field_found_in(lc($token->value()), $main, $teams->{$t});
         }
       }
-      elsif ($field eq 'CAPTAIN')
+      elsif ($field eq 'CAPTAIN' || $field eq 'COUNTRY')
       {
         $counts{'TEAM' . $captain_no}++;
         $captain_no++;
         for my $t (qw(TEAM1 TEAM2))
         {
           $matches{$t}++ if 
-            field_found_in(lc($token->value()), 'CAPTAIN', $teams->{$t});
+            field_found_in(lc($token->value()), $field, $teams->{$t});
         }
       }
     }
@@ -178,12 +178,15 @@ sub post_process_title_teams
     # Perfect matches.
     for my $chain (@$chains)
     {
-      next if $chain->status() eq 'KILLED' || 
-        $chain->status() eq 'EXPLAINED';
+      # next if $chain->status() eq 'KILLED' || 
+        # $chain->status() eq 'EXPLAINED';
+      next if $chain->status() eq 'KILLED';
 
       my $token = $chain->check_out(0);
       my $field = $token->field();
-      next unless $field =~ /^(TEAM\d)_(.*)$/ || $field eq 'CAPTAIN';
+      next unless $field =~ /^(TEAM\d)_(.*)$/ || 
+        $field eq 'CAPTAIN' ||
+        $field eq 'COUNTRY';
 
       $chain->complete_if_last_is($chain->last(), 'KILLED');
     }
@@ -648,7 +651,7 @@ sub finish_ambiguous
       return 1;
     }
   }
-  elsif ($meet eq 'European Championship' ||
+  elsif ($meet eq 'European National Championships' ||
     $tname eq 'World Transnational Teams' ||
     $tname eq 'Reisinger' ||
     $tname eq 'Bermuda Bowl' ||
