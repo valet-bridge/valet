@@ -296,12 +296,20 @@ my @MULTI_WORDS =
   'Estoril Swiss Teams',
 
   # EUROPE
-  'European National Open Teams',
   'European National Mixed Teams',
+  'European National Open Teams',
   'European National Seniors Pairs',
   'European National Seniors Teams',
   'European National Women Pairs',
   'European National Women Teams',
+  'European Transnational Mixed Pairs',
+  'European Transnational Mixed Teams',
+  'European Transnational Open Pairs',
+  'European Transnational Open Teams',
+  'European Transnational Seniors Teams',
+  'Generali European Open Teams',
+  'Generali European Women Pairs',
+  'Generali European Women Teams',
 
 
   "European Champions' Cup",
@@ -1626,7 +1634,8 @@ my %MULTI_TYPOS =
   'European Transnational Mixed Teams' => [
     'euro open mixed teams'],
   'Generali European Open Teams' => [
-    'generali euro team champs'],
+    'generali euro team champs',
+    'generali european team championships'],
 
   "European Champions' Cup" => ['european champs cup'],
   'European Small Federation Games' => ['ebl small federation trophy',
