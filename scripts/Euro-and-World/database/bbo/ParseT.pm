@@ -52,10 +52,11 @@ my @TOURNAMENT_FIELDS = qw(ORGANIZATION COUNTRY CITY ORIGIN ZONE
   FORM SCORING GENDER AGE);
 
 my %COMPATIBILITIES = (
+  FORM => ['TITLE_FORM'],
   AGE => ['TITLE_AGE'],
   GENDER => ['TITLE_GENDER'],
   MOVEMENT => ['EVENT_MOVEMENT', 'TITLE_MOVEMENT'],
-  STAGE => ['EVENT_STAGE', 'TITLE_STAGE'],
+  STAGE => ['EVENT_STAGE', 'TITLE_STAGE', 'TITLE_ROF'],
   SEGMENT => ['HALF']
 );
 
@@ -131,18 +132,27 @@ sub lookup_among_fields
 sub compatibility
 {
   # Not a class method.
-  my ($chapter, $entry) = @_;
+  my ($header, $entry) = @_;
 
   my $hits = 0;
   my $conflicts = 0;
 
-  for my $key (keys %$chapter)
+  for my $key (keys %$header)
   {
     next if $key =~ /[a-z]/; # Skip internal information
     my $value = lookup_among_fields($entry, $key);
     next if $value eq '';
-    if ($value eq $chapter->{$key})
+
+    if ($value eq $header->{$key})
     {
+      $hits++;
+    }
+    elsif ($key eq 'STAGE' && 
+      $header->{$key} =~ /^Rof(\d+)$/ &&
+      $1 eq $value)
+    {
+      # Kludge because header may say STAGE and entry may
+      # say TITLE_ROF 16.  Should probably be prevented.
       $hits++;
     }
     else
@@ -156,7 +166,7 @@ sub compatibility
 
 sub get_edition_and_chapter
 {
-  my ($self, $meet, $tname, $entry) = @_;
+  my ($self, $meet, $tname, $entry, $debug) = @_;
 
   my @tname_list;
   if (exists $self->{TOURNAMENT}{$tname})
@@ -199,17 +209,34 @@ sub get_edition_and_chapter
   for my $tname (@tname_list)
   {
     my $t = $self->{TOURNAMENT}{$tname};
+    my ($t_hits, $t_conflicts) = compatibility($t, $entry);
+    next if $t_conflicts > 0;
 
     for my $edition_str (keys %{$t->{EDITIONS}})
     {
       my $edition = $t->{EDITIONS}{$edition_str};
+      my ($e_hits, $e_conflicts) = compatibility($edition, $entry);
+      next if $e_conflicts > 0;
+
+      my ($m_hits, $m_conflicts) = (0, 0);
+      my $t_meet;
+      if (exists $edition->{MEET} && $meet ne '')
+      {
+        continue unless ($edition->{MEET} eq $meet);
+        $t_meet = $self->{MEET}{$meet};
+        my ($m_hits, $m_conflicts) = compatibility($t_meet, $entry);
+        next unless $m_conflicts == 0;
+      }
+
       for my $chapter_str (keys %{$edition->{CHAPTERS}})
       {
         my $chapter = $edition->{CHAPTERS}{$chapter_str};
         next unless ref($chapter) eq 'HASH';
 
-        my ($hits, $conflicts) = compatibility($chapter, $entry);
-        next unless $conflicts == 0;
+        my ($c_hits, $c_conflicts) = compatibility($chapter, $entry);
+        next unless $c_conflicts == 0;
+
+        my $hits = $t_hits + $m_hits + $e_hits + $c_hits;
 
         my $opens = 
           (exists $t->{GENDER} && $t->{GENDER} eq 'Open' ? 1 : 0) +
@@ -219,11 +246,18 @@ sub get_edition_and_chapter
           $chapter->{DATE_START},
           $chapter->{DATE_END});
 
+        if ($debug)
+        {
+          print "$tname, $edition_str, $chapter_str: ";
+          print "Hits $hits, Open $opens, Dist $dist\n";
+        }
+
         if (($dist < $lowest_dist) ||
             ($dist == $lowest_dist && $hits > $lowest_hits) ||
             ($dist == $lowest_dist && $hits == $lowest_hits &&
              $opens > $lowest_opens))
         {
+          print "        SWITCHING: dist now $dist\n" if $debug;
           $lowest_dist = $dist;
           $lowest_tname = $tname;
           $lowest_edition = $edition_str;
