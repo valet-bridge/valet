@@ -292,6 +292,24 @@ my %MEETS_EUROADULT =
         DATE_START => '1997-06-14',
         DATE_END => '1997-06-28'
       },
+      '1999' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/99Malta/malta.htm
+        YEAR => 1999,
+        CITY => 'Valletta',
+        COUNTRY => 'Malta',
+        DATE_START => '1999-06-12',
+        DATE_END => '1999-06-26'
+      },
+      '2001' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/01Tenerife/Tenerife.htm
+        YEAR => 2001,
+        CITY => 'Tenerife',
+        COUNTRY => 'Spain',
+        DATE_START => '2001-06-16',
+        DATE_END => '2001-06-30'
+      },
     }
   },
 );
@@ -1950,7 +1968,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2009,
-            STAGE => 'Round-robin',
+            STAGE => 'Qualifying',
             major => 'ROUND',
             DATE_START => '2009-06-13',
             DATE_END => '2009-06-13'
@@ -2790,7 +2808,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2009,
-            STAGE => 'Round-robin',
+            STAGE => 'Qualifying',
             major => 'ROUND',
             DATE_START => '2009-06-19',
             DATE_END => '2009-06-20'
@@ -2943,6 +2961,13 @@ my %TOURNAMENTS_EUROADULT =
             DATE_END => '2013-06-25'
           },
           'C4' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Bronze',
+            DATE_START => '2013-06-25',
+            DATE_END => '2013-06-25'
+          },
+          'C5' => 
           {
             YEAR => 2013,
             STAGE => 'Final',

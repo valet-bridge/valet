@@ -489,22 +489,55 @@ sub post_process_rof
     next unless $field eq 'ROUND';
 
     my $value = $token->value();
-    next unless $value eq '16' || $value eq '32' || $value eq '64';
-
-    my $tname = $knowledge->get_field('TNAME', $bbono);
-    my $meet = $knowledge->get_field('MEET', $bbono);
-    if ($tname eq 'Spingold' || 
-        $tname eq 'Vanderbilt' || 
-        $meet eq 'United States Bridge Championship' ||
-       ($tname eq 'European Open Bridge Championship' &&
-        $knowledge->is_knock_out($bbono)))
+    if ($value eq '16' || $value eq '32' || $value eq '64')
     {
-      # Probably round-of.
-      $token->set_general('MARKER', 'ROF', $value);
-      $chain->complete('EXPLAINED');
+      my $tname = $knowledge->get_field('TNAME', $bbono);
+      my $meet = $knowledge->get_field('MEET', $bbono);
+      if ($tname eq 'Spingold' || 
+          $tname eq 'Vanderbilt' || 
+          $meet eq 'United States Bridge Championship' ||
+         ($meet eq 'European Transnational Championships' &&
+          $knowledge->is_knock_out($bbono)))
+      {
+        # Probably round-of.
+        $token->set_general('SINGLETON', 'STAGE', "Rof$value");
+        $chain->complete('EXPLAINED');
 
-      $knowledge->delete_field('ROUND', $value, $bbono);
-      $knowledge->add_field('ROF', $value, $bbono);
+        $knowledge->delete_field('ROUND', $value, $bbono);
+        $knowledge->add_field('STAGE', $value, $bbono);
+      }
+    }
+    elsif ($value =~ /^(16)\+(\d+ of \d+)$/ ||
+           $value =~ /^(32)\+(\d+ of \d+)$/ ||
+           $value =~ /^(64)\+(\d+ of \d+)$/)
+    {
+      my ($rof, $segment) = ($1, $2);
+      my $tname = $knowledge->get_field('TNAME', $bbono);
+      my $meet = $knowledge->get_field('MEET', $bbono);
+      if ($tname eq 'Spingold' || 
+          $tname eq 'Vanderbilt' || 
+          $meet eq 'United States Bridge Championship' ||
+         ($meet eq 'European Transnational Championships' &&
+          $knowledge->is_knock_out($bbono)))
+      {
+        # Probably round-of.
+        my $new_value = "Rof$rof";
+        $token->set_general('SINGLETON', 'STAGE', $new_value);
+        $chain->complete('EXPLAINED');
+
+        $knowledge->delete_field('ROUND', $value, $bbono);
+        $knowledge->add_field('STAGE', $value, $bbono);
+
+        my $token1 = Token->new();
+        $token1->copy_origin_from($token);
+        $token1->set_general('MARKER', 'SEGMENT', $segment);
+
+        my $chain1 = Chain->new();
+        $chain1->append($token1);
+        $chain1->complete('EXPLAINED');
+
+        splice(@$chains, $cno+1, 0, $chain1);
+      }
     }
   }
 }
@@ -1034,6 +1067,47 @@ sub post_process_pair
 }
 
 
+sub post_process_multiple_stages
+{
+  my ($chains) = @_;
+
+  my @stages;
+  my $ccount = $#$chains;
+  for my $cno (0 .. $ccount)
+  {
+    my $chain = $chains->[$cno];
+    next unless $chain->last() == 0;
+    next unless $chain->status() eq 'EXPLAINED';
+
+    my $token = $chain->check_out(0);
+    next unless $token->field() eq 'STAGE';
+    push @stages, $cno;
+  }
+
+  return unless $#stages == 1;
+  my ($ko_index, $other_index);
+  my $value = $chains->[$stages[0]]->check_out(0)->value();
+  if ($value eq 'Knock-out')
+  {
+    $ko_index = 0;
+    $other_index = 1;
+    $value = $chains->[$stages[1]]->check_out(0)->value();
+  }
+  elsif ($chains->[$stages[1]]->check_out(0)->value() eq 'Knock_out')
+  {
+    $ko_index = 1;
+    $other_index = 0;
+  }
+  else
+  {
+    return;
+  }
+
+  # No need for KO when we also have the actual KO stage.
+  $chains->[$ko_index]->complete('KILLED');
+}
+
+
 sub post_process_single_numerals
 {
   my ($chains, $knowledge, $stretch, $actives, $bbono) = @_;
@@ -1093,6 +1167,7 @@ sub interpret
   $knowledge->add_field('SCORING', $$scoring, $bbono);
 
   post_process_rof($chains, $knowledge, $bbono);
+  post_process_multiple_stages($chains);
 
   for my $s (0 .. $#stretches)
   {

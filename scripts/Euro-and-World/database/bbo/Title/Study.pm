@@ -85,6 +85,8 @@ my @LOCAL_SUBS =
     CORR => 'Generali European Open Teams' },
   { START => 7672, END => 7701, TEXT => 'Euro Team Championships',
     CORR => 'Generali European Open Teams' },
+  { START => 7672, END => 7702, TEXT => 'European Team Championships',
+    CORR => 'Generali European Open Teams' },
   { START => 7843, END => 7865, TEXT => 'ACBL 1999 Open Team Trials', 
     CORR => '1999 USA International Team Trials' },
   { START => 8123, END => 8127, TEXT => 'MONBU Kanto-Final',

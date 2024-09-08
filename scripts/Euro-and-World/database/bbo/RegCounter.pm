@@ -68,7 +68,7 @@ sub register
     }
     else
     {
-      warn "Haven't learned $value";
+      warn "$bbono: Haven't learned $value";
     }
   }
 }
