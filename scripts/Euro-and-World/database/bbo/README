@@ -1,5 +1,10 @@
 Perhaps in prune_using:
-If a knock-out chapter, round 16 is a Rof16
+If chapter has STAGE RofX, 
+and self has no STAGE,
+and self has ROUND 1 of Y,
+and Y is 16, 32, 64,
+then:
+delete the round
 
 
 Euro Youth Teams:

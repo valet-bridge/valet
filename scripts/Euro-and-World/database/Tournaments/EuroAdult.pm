@@ -2091,11 +2091,26 @@ my %TOURNAMENTS_EUROADULT =
         MEET => 'European Transnational Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
             MOVEMENT => 'Swiss',
             major => 'ROUND',
+            DATE_START => '2013-06-19',
+            DATE_END => '2013-06-21'
+          },
+          'C1' => 
+          {
+            # These two are not in the program!
+            YEAR => 2013,
+            STAGE => 'Bronze',
+            DATE_START => '2013-06-19',
+            DATE_END => '2013-06-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
             DATE_START => '2013-06-19',
             DATE_END => '2013-06-21'
           },
