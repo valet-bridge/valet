@@ -140,6 +140,11 @@ sub local_substitutions
       $text =~ s/$entry->{TEXT}/$entry->{CORR}/i;
     }
   }
+
+  if ($bbono >= 28879 && $bbono <= 28887)
+  {
+    $text =~ s/^(T\d+) (\d+_\d+)$/$1 Round $2/;
+  }
   return $text;
 }
 
