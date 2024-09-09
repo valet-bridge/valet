@@ -13,6 +13,8 @@ my $daysec = 24 * 3600;
 
 use Time::Piece;
 
+use overload '<' => \&compare_lt;
+
 sub new
 {
   my $class = shift;
@@ -25,6 +27,13 @@ sub set_by_field
 {
   my ($self, $str) = @_;
   $self->{BASE} = Time::Piece->strptime($str, "%Y-%m-%d");
+}
+
+
+sub compare_lt
+{
+  my ($self, $other) = @_;
+  return $self->{BASE} < $other->{BASE};
 }
 
 

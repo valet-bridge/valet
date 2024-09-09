@@ -8,6 +8,8 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
+use Time::Piece;
+
 use lib '.';
 
 my @HEADER_FIELDS = qw(
@@ -714,6 +716,14 @@ sub spaceship
       # Empty is ranked before full.
       return -1;
     }
+  }
+
+  if (exists $self->{DATE} && exists $other->{DATE})
+  {
+    my $d0 = Time::Piece->strptime($self->{DATE}[0], "%Y-%m-%d");
+    my $d1 = Time::Piece->strptime($other->{DATE}[0], "%Y-%m-%d");
+    return -1 if ($d0 < $d1);
+    return 1 if ($d1 < $d0);
   }
 
   return $self->{BBONO} <=> $other->{BBONO};

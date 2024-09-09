@@ -14,7 +14,7 @@ use EntryT;
 use RegCounter;
 
 my $EXPLORE_TOURNAMENTS = 0;
-my $VERBOSE = 0;
+my $VERBOSE = 1;
 
 # Parse the raw output of cook.pl
 # Recognize and check tournaments
@@ -105,7 +105,7 @@ exit if $debug_flag;
 
 for my $date_start (sort keys %data)
 {
-if ($date_start eq '2013-06-19')
+if ($date_start eq '2006-08-13')
 {
   print "HERE\n";
 }

@@ -122,6 +122,28 @@ sub sub_hard_fragments
 }
 
 
+my @LOCAL_SUBS =
+(
+  { START => 39721, END => 39730, TEXT => 'R16', CORR => 'Rof16' },
+  { START => 39899, END => 39907, TEXT => 'R16', CORR => 'Rof16' },
+);
+
+
+sub local_substitutions
+{
+  my ($text, $bbono) = @_;
+
+  for my $entry (@LOCAL_SUBS)
+  {
+    if ($bbono >= $entry->{START} && $bbono <= $entry->{END})
+    {
+      $text =~ s/$entry->{TEXT}/$entry->{CORR}/i;
+    }
+  }
+  return $text;
+}
+
+
 sub event_specific_inline
 {
   my ($text) = @_;
@@ -222,7 +244,8 @@ sub study
     return;
   }
 
-  my $utext = unteam($chunk->{EVENT}, $result);
+  my $ltext = local_substitutions($chunk->{EVENT}, $chunk->{BBONO});
+  my $utext = unteam($ltext, $result);
   my $htext = sub_hard_fragments($utext);
   my $ctext = split_on_capitals($htext);
   my $etext = event_specific_inline($ctext);

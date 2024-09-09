@@ -789,7 +789,7 @@ sub active_sr_complete_teams
   if (likely_rof($field, $value, \$rof))
   {
     print "$bbono ETRACE-SRC-1\n" if $TRACE;
-    $token->set_general('MARKER', 'ROF', $rof);
+    $token->set_general('SINGLETON', 'STAGE', "Rof$rof");
     $chain->complete('EXPLAINED');
   }
   else
@@ -894,7 +894,7 @@ sub active_seg_complete_teams
   if (likely_rof($field, $value, \$rof))
   {
     print "$bbono ETRACE-SEGC-2\n" if $TRACE;
-    $token->set_general('MARKER', 'ROF', $rof);
+    $token->set_general('SINGLETON', 'STAGE', "Rof$rof");
     $chain->complete('EXPLAINED');
   }
   else
@@ -1024,7 +1024,7 @@ sub post_process_pair
     {
       if ($value0 eq '16' || $value0 eq '32' || $value0 eq '64')
       {
-        $token0->set_general('MARKER', 'ROF', $value0);
+        $token0->set_general('SINGLETON', 'STAGE', "Rof$value0");
         $token1->set_general('MARKER', 'SEGMENT', $value1);
 
         $chain0->complete('EXPLAINED');
@@ -1034,7 +1034,7 @@ sub post_process_pair
           $value0 eq '1 of 64')
       {
         $value0 =~ /^1 of (\d+)$/;
-        $token0->set_general('MARKER', 'ROF', $1);
+        $token0->set_general('SINGLETON', 'STAGE', "Rof$1");
         $token1->set_general('MARKER', 'SEGMENT', $value1);
 
         $chain0->complete('EXPLAINED');

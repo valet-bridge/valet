@@ -51,6 +51,9 @@ sub register
     $self->{BBOCOUNT}{$bbono}++;
     $self->{COUNTER}{$field}{COUNT}++;
 
+    # Basically just take the leading number.
+    # This is also what gets sorted on.
+
     if ($value =~ /^\d+$/ || $value eq 'last')
     {
       $self->{COUNTER}{$field}{SIMPLE}++;
@@ -63,6 +66,10 @@ sub register
       $self->{COUNTER}{$field}{ENDS}{$end}++;
     }
     elsif ($value =~ /^\d+-\d+$/)
+    {
+      $self->{COUNTER}{$field}{SIMPLE}++;
+    }
+    elsif ($value =~ /^\d+[A-D]$/)
     {
       $self->{COUNTER}{$field}{SIMPLE}++;
     }
@@ -309,8 +316,6 @@ sub fix_counters
 sub sort_counters
 {
   my ($self, $list) = @_;
-
-  return unless exists $self->{ASSIGNED};
 
   @$list = sort
   {

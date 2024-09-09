@@ -460,6 +460,7 @@ my %TOURNAMENTS_EUROADULT =
             YEAR => 2006,
             STAGE => 'Round-robin',
             major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2006-08-13',
             DATE_END => '2006-08-26'
           } 
@@ -1875,7 +1876,6 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2005,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
             DATE_START => '2005-06-21',
             DATE_END => '2005-06-21'
           },
@@ -1883,7 +1883,6 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2005,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
             DATE_START => '2005-06-21',
             DATE_END => '2005-06-21'
           },
@@ -3642,6 +3641,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 1999,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '1999-06-13',
             DATE_END => '1999-06-26'
           },
