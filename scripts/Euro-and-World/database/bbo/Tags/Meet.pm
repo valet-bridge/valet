@@ -34,6 +34,7 @@ my @MULTI_WORDS =
   'Estoril Bridge Festival',
 
   # 'European Championship',
+  "European Champions' Cup",
   'European National Championships',
   'European Transnational Championships',
   'Generali European Championships',

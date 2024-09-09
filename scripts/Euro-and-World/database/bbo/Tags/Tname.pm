@@ -311,8 +311,9 @@ my @MULTI_WORDS =
   'Generali European Women Pairs',
   'Generali European Women Teams',
 
+  "European Open Champions' Cup",
+  "European Women Open Champions' Cup",
 
-  "European Champions' Cup",
   'European Small Federation Games',
   'European University Bridge Championship',
   'European Winter Games',

@@ -708,8 +708,24 @@ sub active_nton_teams
 
   my $movement = $knowledge->get_field('MOVEMENT', $bbono);
 
-  $value =~ /^(\d+)-(\d+)([A-D])$/;
-  my ($n1, $n2) = ($1, $2);
+  my ($n1, $n2);
+  if ($value =~ /^(\d+)-(\d+)([A-D])$/)
+  {
+    ($n1, $n2) = ($1, $2);
+  }
+  elsif ($value =~ /^(\d+)([A-D]) of (\d+)$/)
+  {
+    ($n1, $n2) = ($1, $3);
+  }
+  elsif ($value =~ /^(\d+)([A-D]) to (\d+)$/)
+  {
+    ($n1, $n2) = ($1, $3);
+  }
+  else
+  {
+    die "Odd N_TO_N format: $value";
+  }
+
   if ($movement eq 'Round-robin')
   {
     # Skip the letter (which would be a group).
@@ -722,7 +738,7 @@ sub active_nton_teams
   {
     # Skip the letter (which would be a group).
     print "$bbono ETRACE-NTONT-3\n" if $TRACE;
-    warn "ORDER ETRACE-NTONT-1" if $n2 <= $n1;
+    warn "ORDER ETRACE-NTONT-1" if $n2 < $n1;
     $token->set_general('MARKER', 'SEGMENT', "$n1 of $n2");
     $chain->complete('EXPLAINED');
   }

@@ -16,6 +16,219 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_EUROADULT =
 (
+  "European Champions' Cup" =>
+  {
+    ORGANIZATION => 'EBL',
+    ZONE => 'Europe',
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS => 
+    {
+      '2003' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/03Rome/Results.htm
+        YEAR => 2003,
+        ORDINAL => 2,
+        CITY => 'Rome',
+        COUNTRY => 'Italy',
+        DATE_START => '2003-10-10',
+        DATE_END => '2003-10-12'
+      },
+      '2004' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/04Barcelona/Results.htm
+        YEAR => 2004,
+        ORDINAL => 3,
+        CITY => 'Barcelona',
+        COUNTRY => 'Spain',
+        DATE_START => '2004-10-07',
+        DATE_END => '2004-10-10'
+      },
+      '2005' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/05Brussels/Results.htm
+        YEAR => 2005,
+        ORDINAL => 4,
+        CITY => 'Brussels',
+        COUNTRY => 'Belgium',
+        DATE_START => '2005-10-13',
+        DATE_END => '2005-10-16'
+      },
+      '2006' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/06Rome/Results.htm
+        YEAR => 2006,
+        ORDINAL => 5,
+        CITY => 'Rome',
+        COUNTRY => 'Italy',
+        DATE_START => '2006-10-12',
+        DATE_END => '2006-10-15'
+      },
+      '2007' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/07Wroclaw/Results.htm
+        YEAR => 2007,
+        ORDINAL => 6,
+        CITY => 'Wroclaw',
+        COUNTRY => 'Poland',
+        DATE_START => '2007-11-08',
+        DATE_END => '2007-11-11'
+      },
+      '2008' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/08Amsterdam/Results.htm
+        YEAR => 2008,
+        ORDINAL => 7,
+        CITY => 'Amsterdam',
+        COUNTRY => 'Netherlands',
+        DATE_START => '2008-11-06',
+        DATE_END => '2008-11-09'
+      },
+      '2009' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/09Paris/Results.htm
+        YEAR => 2009,
+        ORDINAL => 8,
+        CITY => 'Paris',
+        COUNTRY => 'France',
+        DATE_START => '2009-10-15',
+        DATE_END => '2009-10-18'
+      },
+      '2010' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/10Izmir/Results.htm
+        YEAR => 2010,
+        ORDINAL => 9,
+        CITY => 'Izmir',
+        COUNTRY => 'Turkey',
+        DATE_START => '2010-11-11',
+        DATE_END => '2010-11-14'
+      },
+      '2011' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/11BadHonnef/Results.html
+        YEAR => 2011,
+        ORDINAL => 10,
+        CITY => 'Bad Honnef',
+        COUNTRY => 'Germany',
+        DATE_START => '2011-11-17',
+        DATE_END => '2011-11-20'
+      },
+      '2012' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/12Eilat/Microsite/Results.html
+        YEAR => 2012,
+        ORDINAL => 11,
+        CITY => 'Eilat',
+        COUNTRY => 'Israel',
+        DATE_START => '2012-11-15',
+        DATE_END => '2012-11-18'
+      },
+      '2013' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/13Opatija/microSite/Results.htm
+        YEAR => 2013,
+        ORDINAL => 12,
+        CITY => 'Opatija',
+        COUNTRY => 'Croatia',
+        DATE_START => '2013-11-14',
+        DATE_END => '2013-11-17'
+      },
+      '2014' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/14Milan/microSite/Results.htm
+        YEAR => 2014,
+        ORDINAL => 13,
+        CITY => 'Milan',
+        COUNTRY => 'Italy',
+        DATE_START => '2014-11-13',
+        DATE_END => '2014-11-15'
+      },
+      '2015' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/15MiltonKeynes/microSite/results.htm
+        YEAR => 2015,
+        ORDINAL => 14,
+        CITY => 'Milton Keynes',
+        COUNTRY => 'England',
+        DATE_START => '2015-11-12',
+        DATE_END => '2015-11-14'
+      },
+      '2016' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/16Zagreb/microSite/results.htm
+        YEAR => 2016,
+        ORDINAL => 15,
+        CITY => 'Zagreb',
+        COUNTRY => 'Croatia',
+        DATE_START => '2016-11-10',
+        DATE_END => '2016-11-12'
+      },
+      '2017' =>
+      {
+        # http://db.eurobridge.org/repository/competitions/17riga/microsite/results.htm
+        YEAR => 2017,
+        ORDINAL => 16,
+        CITY => 'Riga',
+        COUNTRY => 'Latvia',
+        DATE_START => '2017-11-09',
+        DATE_END => '2017-11-11'
+      },
+      '2018' =>
+      {
+        # http://db.eurobridge.org/repository/competitions/18Eilat/microSite/results.htm
+        YEAR => 2018,
+        ORDINAL => 17,
+        CITY => 'Eilat',
+        COUNTRY => 'Israel',
+        DATE_START => '2018-11-08',
+        DATE_END => '2018-11-10'
+      },
+      '2019' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/19bucharest/microSite/results.htm
+        YEAR => 2019,
+        ORDINAL => 18,
+        CITY => 'Bucharest',
+        COUNTRY => 'Romania',
+        DATE_START => '2019-11-14',
+        DATE_END => '2019-11-16'
+      },
+      '2021' =>
+      {
+        # http://db.eurobridge.org/repository/competitions/21Pezinok/microsite/results.htm
+        YEAR => 2021,
+        ORDINAL => 19,
+        CITY => 'Pezinok',
+        COUNTRY => 'Slovakia',
+        DATE_START => '2021-11-11',
+        DATE_END => '2021-11-13'
+      },
+      '2022' =>
+      {
+        # http://db.eurobridge.org/repository/competitions/22Helsinki/microsite/results.htm
+        YEAR => 2022,
+        ORDINAL => 20,
+        CITY => 'Helsinki',
+        COUNTRY => 'Finland',
+        DATE_START => '2022-11-10',
+        DATE_END => '2022-11-12'
+      },
+      '2023' =>
+      {
+        # http://db.eurobridge.org/repository/competitions/23Dubrovnik/microsite/results.htm
+        YEAR => 2023,
+        ORDINAL => 21,
+        CITY => 'Dubrovnik',
+        COUNTRY => 'Croatia',
+        DATE_START => '2023-09-09',
+        DATE_END => '2023-09-11'
+      },
+    }
+  },
+
   'European National Championships' =>
   {
     ORGANIZATION => 'EBL',
@@ -316,6 +529,692 @@ my %MEETS_EUROADULT =
 
 my %TOURNAMENTS_EUROADULT =
 (
+  "European Open Champions' Cup" =>
+  {
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2003' =>
+      {
+        MEET => "European Champions' Cup",
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2003,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2003-10-10',
+            DATE_END => '2003-10-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2003,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2003-10-11',
+            DATE_END => '2003-10-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2003,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2003-10-12',
+            DATE_END => '2003-10-12'
+          } 
+        }
+      },
+      '2004' =>
+      {
+        MEET => "European Champions' Cup",
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2004-10-07',
+            DATE_END => '2004-10-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2004-10-09',
+            DATE_END => '2004-10-09'
+          },
+          'C2' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2004-10-10',
+            DATE_END => '2004-10-10'
+          } 
+        }
+      },
+      '2005' =>
+      {
+        MEET => "European Champions' Cup",
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2005-10-13',
+            DATE_END => '2005-10-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2005-10-15',
+            DATE_END => '2005-10-15'
+          },
+          'C2' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2005-10-16',
+            DATE_END => '2005-10-16'
+          } 
+        }
+      },
+      '2006' =>
+      {
+        MEET => "European Champions' Cup",
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2006-10-12',
+            DATE_END => '2006-10-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-10-14',
+            DATE_END => '2006-10-14'
+          },
+          'C2' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2006-10-15',
+            DATE_END => '2006-10-15'
+          } 
+        }
+      },
+      '2007' =>
+      {
+        MEET => "European Champions' Cup",
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2007-11-08',
+            DATE_END => '2007-11-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-11-10',
+            DATE_END => '2007-11-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-11-11',
+            DATE_END => '2007-11-11'
+          } 
+        }
+      },
+      '2008' =>
+      {
+        MEET => "European Champions' Cup",
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2008-11-06',
+            DATE_END => '2008-11-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-11-08',
+            DATE_END => '2008-11-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-11-09',
+            DATE_END => '2008-11-09'
+          } 
+        }
+      },
+      '2009' =>
+      {
+        MEET => "European Champions' Cup",
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2009-10-15',
+            DATE_END => '2009-10-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-10-17',
+            DATE_END => '2009-10-17'
+          },
+          'C2' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-10-18',
+            DATE_END => '2009-10-18'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        MEET => "European Champions' Cup",
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2010-11-11',
+            DATE_END => '2010-11-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-11-13',
+            DATE_END => '2010-11-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Consolation',
+            major => 'SEGMENT',
+            DATE_START => '2010-11-14',
+            DATE_END => '2010-11-14'
+          },
+          'C3' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2010-11-14',
+            DATE_END => '2010-11-14'
+          },
+          'C4' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-11-14',
+            DATE_END => '2010-11-14'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => "European Champions' Cup",
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2011-11-17',
+            DATE_END => '2011-11-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-11-19',
+            DATE_END => '2011-11-19'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-11-20',
+            DATE_END => '2011-11-20'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => "European Champions' Cup",
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2012-11-15',
+            DATE_END => '2012-11-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-11-17',
+            DATE_END => '2012-11-17'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-11-18',
+            DATE_END => '2012-11-18'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        MEET => "European Champions' Cup",
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2013-11-14',
+            DATE_END => '2013-11-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-11-16',
+            DATE_END => '2013-11-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-11-16',
+            DATE_END => '2013-11-16'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => "European Champions' Cup",
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2014-11-13',
+            DATE_END => '2014-11-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-11-15',
+            DATE_END => '2014-11-15'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-11-15',
+            DATE_END => '2014-11-15'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => "European Champions' Cup",
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2015-11-12',
+            DATE_END => '2015-11-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-11-14',
+            DATE_END => '2015-11-14'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-11-14',
+            DATE_END => '2015-11-14'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => "European Champions' Cup",
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2016-11-10',
+            DATE_END => '2016-11-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-12',
+            DATE_END => '2016-11-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-12',
+            DATE_END => '2016-11-12'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => "European Champions' Cup",
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2017-11-09',
+            DATE_END => '2017-11-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-11-11',
+            DATE_END => '2017-11-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-11-11',
+            DATE_END => '2017-11-11'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => "European Champions' Cup",
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2018-11-08',
+            DATE_END => '2018-11-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-11-10',
+            DATE_END => '2018-11-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-11-10',
+            DATE_END => '2018-11-10'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => "European Champions' Cup",
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2019-11-14',
+            DATE_END => '2019-11-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-11-16',
+            DATE_END => '2019-11-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-11-16',
+            DATE_END => '2019-11-16'
+          } 
+        }
+      },
+      '2021' =>
+      {
+        MEET => "European Champions' Cup",
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2021-11-11',
+            DATE_END => '2021-11-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2021-11-13',
+            DATE_END => '2021-11-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2021-11-13',
+            DATE_END => '2021-11-13'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        MEET => "European Champions' Cup",
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2022-11-10',
+            DATE_END => '2022-11-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-11-12',
+            DATE_END => '2022-11-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2022-11-12',
+            DATE_END => '2022-11-12'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => "European Champions' Cup",
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2023-11-09',
+            DATE_END => '2023-11-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-11-11',
+            DATE_END => '2023-11-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-11-11',
+            DATE_END => '2023-11-11'
+          } 
+        }
+      },
+    }
+  },
+
+  "European Women Champions' Cup" =>
+  {
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2023' =>
+      {
+        MEET => "European Champions' Cup",
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2023-11-09',
+            DATE_END => '2023-11-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-11-11',
+            DATE_END => '2023-11-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-11-11',
+            DATE_END => '2023-11-11'
+          } 
+        }
+      },
+    }
+  },
   'European National Mixed Teams' => 
   {
     ORIGIN => 'International',
