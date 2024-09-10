@@ -38,6 +38,7 @@ my @MULTI_WORDS =
   'European Transnational Championships',
   'European Winter Games',
   'European Winter Transnational Championships',
+  'European Youth Team Championships',
   'Generali European Championships',
 
   'Fes Festival',
@@ -163,16 +164,16 @@ my %MULTI_TYPOS =
     # 'european open championships',
     # 'european open bridge championships',
     # 'ec open'],
-  # 'European Youth Team Championships' => [
+  'European Youth Team Championships' => [
     # 'euro yongster championships',
     # 'euro youngster championship',
     # 'euro youngster championships',
     # 'euro youngsters championship',
     # 'euro youngsters championships',
     # 'european youngster bridge championship',
-    # 'european youth bridge championship',
-    # 'european youth championships',
-    # 'european youth championship'],
+    'european youth bridge championship',
+    'european youth championships',
+    'european youth championship'],
 
   'Fes Festival' => ['fes bridge international festival',
     'festival fes', 'festival de fes', 'festival international de fès',

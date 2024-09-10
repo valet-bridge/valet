@@ -18,7 +18,7 @@ use EntryT;
 # use Tournaments::Chile;
 # use Tournaments::Denmark;
 use Tournaments::EuroAdult;
-use Tournaments::EuroYouth;
+# use Tournaments::EuroYouth;
 # use Tournaments::Germany;
 # use Tournaments::Ireland;
 # use Tournaments::Italy;

@@ -1854,6 +1854,236 @@ my %TOURNAMENTS_EURO_YOUTH =
     }
   },
 
+  'European University Bridge Championship' =>
+  {
+    # https://www.eusa.eu/championships
+    ORGANIZATION => 'EBL',
+    ZONE => 'Europe',
+    ORIGIN => 'University',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U31',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        # No link
+        ORDINAL => 1,
+        CITY => 'Opatija',
+        COUNTRY => 'Croatia',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-10-05',
+            DATE_END => '2009-10-09'
+          },
+        }
+      },
+      '2011' =>
+      {
+        # No link
+        ORDINAL => 2,
+        CITY => 'Warsaw',
+        COUNTRY => 'Poland',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-09-19',
+            DATE_END => '2011-09-23'
+          },
+        }
+      },
+      '2013' =>
+      {
+        # No link
+        ORDINAL => 3,
+        CITY => 'Kraljevica',
+        COUNTRY => 'Croatia',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-10-01',
+            DATE_END => '2013-10-04'
+          },
+        }
+      },
+      '2015' =>
+      {
+        # https://wyniki.pzbs.pl/2015/euc2015/euc2015leaderb.html
+        ORDINAL => 4,
+        CITY => 'Warsaw',
+        COUNTRY => 'Poland',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-09-01',
+            DATE_END => '2015-09-06'
+          },
+        }
+      },
+      '2017' =>
+      {
+        # https://wyniki.pzbs.pl/2017/eusa/euc2017_leaderb.html
+        ORDINAL => 5,
+        CITY => 'Warsaw',
+        COUNTRY => 'Poland',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-09-21',
+            DATE_END => '2017-09-24'
+          },
+        }
+      },
+      '2019' =>
+      {
+        # https://www.eusa.eu/championships/championships-2019/european-universities-mind-sports-championship
+        ORDINAL => 6,
+        CITY => 'Budapest',
+        COUNTRY => 'Hungary',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-09-21',
+            DATE_END => '2019-09-24'
+          },
+        }
+      },
+    }
+  },
+
+  'European University Team Championship' =>
+  {
+    # http://www.eurobridge.org/championship-archives/
+    ORGANIZATION => 'EUSA',
+    ZONE => 'Europe',
+    ORIGIN => 'University',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U31',
+
+    EDITIONS =>
+    {
+      '2005' =>
+      {
+        # https://www.eusa.eu/cups-and-patronage/cups-and-patronage-2005/1st-eusa-cup-in-bridge
+        ORDINAL => 9,
+        CITY => 'Rotterdam',
+        COUNTRY => 'Netherlands',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2005,
+            DATE_START => '2005-08-25',
+            DATE_END => '2005-08-29'
+          },
+        }
+      },
+      '2007' =>
+      {
+        # https://www.eusa.eu/cups-and-patronage/cups-and-patronage-2007/2nd-eusa-cup-in-bridge
+        ORDINAL => 10,
+        CITY => 'Bruges',
+        COUNTRY => 'Belgium',
+
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2007-08-05',
+            DATE_END => '2007-08-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-08-08',
+            DATE_END => '2007-08-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-08-08',
+            DATE_END => '2007-08-08'
+          },
+          'C3' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Consolation',
+            major => 'SEGMENT',
+            DATE_START => '2007-08-08',
+            DATE_END => '2007-08-08'
+          },
+        }
+      },
+      '2014' =>
+      {
+        # https://www.eusa.eu/games/rotterdam-2014
+        # https://kubusiu.michzimny.pl/EUSAGAMES/EUSACupRRleaderb.html
+        CITY => 'Rotterdam',
+        COUNTRY => 'Netherlands',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-07-25',
+            DATE_END => '2014-07-26'
+          },
+        }
+      },
+      '2016' =>
+      {
+        # http://www.eurobridge.org/2015/12/08/bridge-at-the-european-universities-games-zagreb-rijeka-2016/
+        CITY => 'Zagreb',
+        COUNTRY => 'Croatia',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2016-07-19',
+            DATE_END => '2016-07-22'
+          },
+        }
+      },
+    }
+  },
 );
 
 
