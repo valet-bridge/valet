@@ -2411,6 +2411,378 @@ my %TOURNAMENTS_EUROADULT =
     }
   },
 
+  'European Small Federation Games' => 
+  {
+    # http://www.eurobridge.org/competitions/european-national-championship/small-federation-games/
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2007' =>
+      {
+        # http://www.eurobridge.org/TeamChampRP/?qmenudetid=474
+        ORDINAL => 1,
+        CITY => 'Monte Carlo',
+        COUNTRY => 'Monaco',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2007-11-07',
+            DATE_END => '2007-11-09'
+          } 
+        }
+      },
+      '2009' =>
+      {
+        # http://www.eurobridge.org/TeamChampRP/?qmenudetid=475
+        # https://stara.pzbs.pl/wyniki/2009/zagr2009/Vilnius/sf2009frunda2.html
+        ORDINAL => 2,
+        CITY => 'Vilnius',
+        COUNTRY => 'Lithuania',
+
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2009-09-28',
+            DATE_END => '2009-09-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-09-30',
+            DATE_END => '2009-09-30'
+          },
+          'C2' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-09-30',
+            DATE_END => '2009-09-30'
+          },
+          'C3' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2009-09-30',
+            DATE_END => '2009-09-30'
+          },
+        }
+      },
+      '2010' =>
+      {
+        # http://www.eurobridge.org/TeamChampRP/?qmenudetid=505
+        ORDINAL => 3,
+        CITY => 'Ptuj',
+        COUNTRY => 'Slovenia',
+
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2010-09-21',
+            DATE_END => '2010-09-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-09-23',
+            DATE_END => '2010-09-23'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-09-23',
+            DATE_END => '2010-09-23'
+          },
+        }
+      },
+      '2011' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/11SanMarino/minirama.html
+        ORDINAL => 4,
+        CITY => 'San Marino',
+        COUNTRY => 'San Marino',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2011-09-14',
+            DATE_END => '2011-09-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-09-16',
+            DATE_END => '2011-09-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-09-16',
+            DATE_END => '2011-09-16'
+          },
+        }
+      },
+      '2012' =>
+      {
+        # http://www.eurobridge.org/TeamChampRP/?qmenudetid=2308
+        ORDINAL => 5,
+        CITY => 'Tallinn',
+        COUNTRY => 'Estonia',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2012-09-24',
+            DATE_END => '2012-09-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-09-26',
+            DATE_END => '2012-09-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-09-26',
+            DATE_END => '2012-09-26'
+          },
+        }
+      },
+      '2013' =>
+      {
+        # http://esfg2013.bridgeclub.sk/Results/s12esfgleaderb.html
+        ORDINAL => 6,
+        CITY => 'Kosice',
+        COUNTRY => 'Slovakia',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2013-09-24',
+            DATE_END => '2013-09-26'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        # https://ebl.bridgeresults.org/esfg14/esfg14r.php
+        ORDINAL => 7,
+        CITY => 'Jurmala',
+        COUNTRY => 'Latvia',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2014-10-01',
+            DATE_END => '2014-10-03'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        # http://db.eurobridge.org/repository/competitions/15Protaras/microSite/Results.htm
+        ORDINAL => 8,
+        CITY => 'Protaras',
+        COUNTRY => 'Cyprus',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2015-10-27',
+            DATE_END => '2015-10-29'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        # http://db.eurobridge.org/repository/competitions/16Dubrovnik/microSite/results.htm
+        ORDINAL => 9,
+        CITY => 'Dubrovnik',
+        COUNTRY => 'Croatia',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2016-11-02',
+            DATE_END => '2016-11-04'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        # http://db.eurobridge.org/repository/competitions/17Monaco/microsite/small5/menu.html
+        ORDINAL => 10,
+        CITY => 'Monaco',
+        COUNTRY => 'Monaco',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2017-10-20',
+            DATE_END => '2017-10-22'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/18Budapest/microSite/results.htm
+        ORDINAL => 11,
+        CITY => 'Budapest',
+        COUNTRY => 'Hungary',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2018-10-25',
+            DATE_END => '2018-10-27'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/19novisad/microSite/results.htm
+        ORDINAL => 12,
+        CITY => 'Novi Sad',
+        COUNTRY => 'Serbia',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2019-10-21',
+            DATE_END => '2019-10-23'
+          } 
+        }
+      },
+      '2021' =>
+      {
+        # http://db.eurobridge.org/repository/competitions/21Vilnius/microsite/results.htm
+        ORDINAL => 13,
+        CITY => 'Vilnius',
+        COUNTRY => 'Lithuania',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2021-09-28',
+            DATE_END => '2021-09-30'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/22Larnaca/microsite/results.htm
+        ORDINAL => 14,
+        CITY => 'Larnaca',
+        COUNTRY => 'Cyprus',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2022-11-01',
+            DATE_END => '2022-11-03'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        # http://db.eurobridge.org/repository/competitions/23Talinn/microsite/results.htm
+        ORDINAL => 15,
+        CITY => 'Tallinn',
+        COUNTRY => 'Estonia',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2023-10-25',
+            DATE_END => '2023-10-17'
+          } 
+        }
+      },
+    }
+  },
+
   'European Transnational Mixed Pairs' => 
   {
     ORIGIN => 'Transnational',
@@ -4538,6 +4910,237 @@ my %TOURNAMENTS_EUROADULT =
             DATE_START => '2023-06-08',
             DATE_END => '2023-06-08'
           } 
+        }
+      },
+    }
+  },
+
+  'European University Bridge Championship' =>
+  {
+    # https://www.eusa.eu/championships
+    ORGANIZATION => 'EBL',
+    ZONE => 'Europe',
+    ORIGIN => 'University',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U31',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        # No link
+        ORDINAL => 1,
+        CITY => 'Opatija',
+        COUNTRY => 'Croatia',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-10-05',
+            DATE_END => '2009-10-09'
+          },
+        }
+      },
+      '2011' =>
+      {
+        # No link
+        ORDINAL => 2,
+        CITY => 'Warsaw',
+        COUNTRY => 'Poland',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-09-19',
+            DATE_END => '2011-09-23'
+          },
+        }
+      },
+      '2013' =>
+      {
+        # No link
+        ORDINAL => 3,
+        CITY => 'Kraljevica',
+        COUNTRY => 'Croatia',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-10-01',
+            DATE_END => '2013-10-04'
+          },
+        }
+      },
+      '2015' =>
+      {
+        # https://wyniki.pzbs.pl/2015/euc2015/euc2015leaderb.html
+        ORDINAL => 4,
+        CITY => 'Warsaw',
+        COUNTRY => 'Poland',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-09-01',
+            DATE_END => '2015-09-06'
+          },
+        }
+      },
+      '2017' =>
+      {
+        # https://wyniki.pzbs.pl/2017/eusa/euc2017_leaderb.html
+        ORDINAL => 5,
+        CITY => 'Warsaw',
+        COUNTRY => 'Poland',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-09-21',
+            DATE_END => '2017-09-24'
+          },
+        }
+      },
+      '2019' =>
+      {
+        # https://www.eusa.eu/championships/championships-2019/european-universities-mind-sports-championship
+        ORDINAL => 6,
+        CITY => 'Budapest',
+        COUNTRY => 'Hungary',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-09-21',
+            DATE_END => '2019-09-24'
+          },
+        }
+      },
+    }
+  },
+
+  'European University Team Championship' =>
+  {
+    # http://www.eurobridge.org/championship-archives/
+    ORGANIZATION => 'EUSA',
+    ZONE => 'Europe',
+    ORIGIN => 'University',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U31',
+
+    EDITIONS =>
+    {
+      '2005' =>
+      {
+        # https://www.eusa.eu/cups-and-patronage/cups-and-patronage-2005/1st-eusa-cup-in-bridge
+        ORDINAL => 9,
+        CITY => 'Rotterdam',
+        COUNTRY => 'Netherlands',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2005,
+            DATE_START => '2005-08-25',
+            DATE_END => '2005-08-29'
+          },
+        }
+      },
+      '2007' =>
+      {
+        # https://www.eusa.eu/cups-and-patronage/cups-and-patronage-2007/2nd-eusa-cup-in-bridge
+        ORDINAL => 10,
+        CITY => 'Bruges',
+        COUNTRY => 'Belgium',
+
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2007-08-05',
+            DATE_END => '2007-08-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-08-08',
+            DATE_END => '2007-08-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-08-08',
+            DATE_END => '2007-08-08'
+          },
+          'C3' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Consolation',
+            major => 'SEGMENT',
+            DATE_START => '2007-08-08',
+            DATE_END => '2007-08-08'
+          },
+        }
+      },
+      '2014' =>
+      {
+        # https://www.eusa.eu/games/rotterdam-2014
+        # https://kubusiu.michzimny.pl/EUSAGAMES/EUSACupRRleaderb.html
+        CITY => 'Rotterdam',
+        COUNTRY => 'Netherlands',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-07-25',
+            DATE_END => '2014-07-26'
+          },
+        }
+      },
+      '2016' =>
+      {
+        # http://www.eurobridge.org/2015/12/08/bridge-at-the-european-universities-games-zagreb-rijeka-2016/
+        CITY => 'Zagreb',
+        COUNTRY => 'Croatia',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2016-07-19',
+            DATE_END => '2016-07-22'
+          },
         }
       },
     }

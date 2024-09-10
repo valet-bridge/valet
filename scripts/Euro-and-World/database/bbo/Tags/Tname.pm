@@ -295,7 +295,7 @@ my @MULTI_WORDS =
   'Estoril Teams',
   'Estoril Swiss Teams',
 
-  # EUROPE
+  # EUROPE -- mapped in detail
   "European Open Champions' Cup",
   'European National Mixed Teams',
   'European National Open Teams',
@@ -303,6 +303,7 @@ my @MULTI_WORDS =
   'European National Seniors Teams',
   'European National Women Pairs',
   'European National Women Teams',
+  'European Small Federation Games',
   'European Transnational Mixed Pairs',
   'European Transnational Mixed Teams',
   'European Transnational Open Pairs',
@@ -315,11 +316,6 @@ my @MULTI_WORDS =
   'Generali European Open Teams',
   'Generali European Women Pairs',
   'Generali European Women Teams',
-
-
-  'European Small Federation Games',
-  'European University Bridge Championship',
-  'EUSA Games',
 
   # EURO-YOUTH: Mapped in detail
   'European U16 Open Pairs',
@@ -334,7 +330,8 @@ my @MULTI_WORDS =
   'European U26 Women Teams',
   'European U31 Open Pairs',
   "European U31 President's Cup",
-
+  'European University Bridge Championship',
+  'European University Team Championship',
 
   ### FFF
 
@@ -1619,8 +1616,8 @@ my %MULTI_TYPOS =
   'Estoril Teams' => ['estoril open teams',
     'estoril international teams', 'estoril internacional teams'],
 
-  # EUROPE
-
+  # EUROPE -- mapped in detail
+  "European Champions' Cup" => ['european champs cup'],
   'European National Mixed Teams' => [
     'euro mixed teams',
     'european mixed teams'],
@@ -1633,6 +1630,12 @@ my %MULTI_TYPOS =
   'European National Seniors Teams' => [
     'eur champ pau senior',
     'eur champ pau seniors'],
+  'European Small Federation Games' => ['ebl small federation trophy',
+    'ebl small federations trophy', 'games of small federations',
+    'european small federations games', 'small federation games',
+    'small federations games', 'small ffederations games',
+    'small federation cup', 'european small feds games',
+    'small f federations games', 'europian small federation games'],
   'European Transnational Mixed Teams' => [
     'euro open mixed teams'],
   'European Winter Teams' => [
@@ -1640,24 +1643,6 @@ my %MULTI_TYPOS =
   'Generali European Open Teams' => [
     'generali euro team champs',
     'generali european team championships'],
-
-  "European Champions' Cup" => ['european champs cup'],
-  'European Small Federation Games' => ['ebl small federation trophy',
-    'ebl small federations trophy', 'games of small federations',
-    'european small federations games', 'small federation games',
-    'small federations games', 'small ffederations games',
-    'small federation cup', 'european small feds games',
-    'small f federations games', 'europian small federation games'],
-  'European University Bridge Championship' => [
-    'european university championship',
-    'european universities bridge championship',
-    'european universities bridge trophy',
-    'european univeristies bridge championship',
-    'european universities championship',
-    'european unibridge championship',
-    'european uni bridge championship',
-    'european uni championship',
-    'european university team championship'],
 
   ### EURO-YOUTH: Mapped in detail
   'European U16 Open Teams' => [
@@ -1697,7 +1682,17 @@ my %MULTI_TYPOS =
     'european girls championships',
     'european girls teams',
     'euro girls championships'],
-
+  'European University Bridge Championship' => [
+    'european university championship',
+    'european universities bridge championship',
+    'european univeristies bridge championship',
+    'european universities championship',
+    'european unibridge championship',
+    'european uni bridge championship',
+    'european uni championship'],
+  'European University Team Championship' => [
+    'european universities bridge trophy',
+    'eusa games'],
 
   ### FFF
 
