@@ -280,6 +280,12 @@ sub prune_field_using
       return;
     }
 
+    if ($read eq 'B' && $value eq 'BAM')
+    {
+      delete $self->{$field};
+      return;
+    }
+
     if (($read eq 'P' && $value eq 'IMP') ||
         ($read eq 'I' && $value eq 'MP'))
     {

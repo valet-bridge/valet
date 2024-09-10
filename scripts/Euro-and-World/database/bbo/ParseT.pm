@@ -56,8 +56,15 @@ my %COMPATIBILITIES = (
   AGE => ['TITLE_AGE', 'EVENT_AGE'],
   GENDER => ['TITLE_GENDER', 'EVENT_GENDER'],
   MOVEMENT => ['EVENT_MOVEMENT', 'TITLE_MOVEMENT'],
+  SCORING => ['SCORING'],
   STAGE => ['EVENT_STAGE', 'TITLE_STAGE', 'TITLE_ROF'],
   SEGMENT => ['HALF']
+);
+
+my %SCORING_HASH = (
+  'B' => {'B' => 1, 'BAM' => 1},
+  'I' => {'IMP' => 1, 'I' => 1},
+  'P' => {'MP' => 1, 'P' => 1}
 );
 
 
@@ -155,6 +162,11 @@ sub compatibility
       # say TITLE_ROF 16.  Should probably be prevented.
       $hits++;
     }
+    elsif ($key eq 'SCORING' && 
+        exists $SCORING_HASH{$value}{$header->{$key}})
+    {
+      $hits++;
+    }
     else
     {
       $conflicts++;
@@ -222,7 +234,7 @@ sub get_edition_and_chapter
       my $t_meet;
       if (exists $edition->{MEET} && $meet ne '')
       {
-        continue unless ($edition->{MEET} eq $meet);
+        next unless ($edition->{MEET} eq $meet);
         $t_meet = $self->{MEET}{$meet};
         my ($m_hits, $m_conflicts) = compatibility($t_meet, $entry);
         next unless $m_conflicts == 0;

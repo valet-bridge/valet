@@ -488,6 +488,82 @@ my %MEETS_EUROADULT =
     }
   },
 
+  'European Winter Games' =>
+  {
+    ORGANIZATION => 'EBL',
+    ZONE => 'Europe',
+    ORIGIN => 'Transnational',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        # http://db.eurobridge.org/Repository/competitions/16Monaco/microSite/results.htm
+        YEAR => 2016,
+        ORDINAL => 1,
+        CITY => 'Monaco',
+        COUNTRY => 'Monaco',
+        DATE_START => '2016-02-05',
+        DATE_END => '2016-02-11'
+      },
+      '2018' =>
+      {
+        # http://db.eurobridge.org/repository/competitions/18Monaco/microSite/results.htm
+        YEAR => 2018,
+        ORDINAL => 2,
+        CITY => 'Monaco',
+        COUNTRY => 'Monaco',
+        DATE_START => '2018-02-17',
+        DATE_END => '2018-02-23'
+      },
+      '2020' =>
+      {
+        # http://db.eurobridge.org/repository/competitions/20Monaco/microSite/results.htm
+        YEAR => 2020,
+        ORDINAL => 3,
+        CITY => 'Monaco',
+        COUNTRY => 'Monaco',
+        DATE_START => '2020-02-29',
+        DATE_END => '2020-03-06'
+      },
+      '2023' =>
+      {
+        # http://db.eurobridge.org/repository/competitions/23Tignes/microsite/results.htm
+        YEAR => 2023,
+        ORDINAL => 4,
+        CITY => 'Tignes',
+        COUNTRY => 'France',
+        DATE_START => '2023-04-21',
+        DATE_END => '2023-04-27'
+      },
+    }
+  },
+
+  'European Winter Transnational Championships' =>
+  {
+    ORGANIZATION => 'EBL',
+    ZONE => 'Europe',
+    ORIGIN => 'Transnational',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2024' =>
+      {
+        # http://db.eurobridge.org/repository/competitions/24AlpedHuez/microsite/results.htm
+        YEAR => 2024,
+        ORDINAL => 1,
+        CITY => "Alpe d'Huez",
+        COUNTRY => 'France',
+        DATE_START => '2024-04-15',
+        DATE_END => '2024-04-21'
+      },
+    }
+  },
+
   'Generali European Championships' =>
   {
     ORGANIZATION => 'EBL',
@@ -1175,46 +1251,6 @@ my %TOURNAMENTS_EUROADULT =
     }
   },
 
-  "European Women Champions' Cup" =>
-  {
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2023' =>
-      {
-        MEET => "European Champions' Cup",
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2023,
-            STAGE => 'Round-robin',
-            major => 'ROUND',
-            DATE_START => '2023-11-09',
-            DATE_END => '2023-11-10'
-          },
-          'C1' => 
-          {
-            YEAR => 2023,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2023-11-11',
-            DATE_END => '2023-11-11'
-          },
-          'C2' => 
-          {
-            YEAR => 2023,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2023-11-11',
-            DATE_END => '2023-11-11'
-          } 
-        }
-      },
-    }
-  },
   'European National Mixed Teams' => 
   {
     ORIGIN => 'International',
@@ -4501,6 +4537,459 @@ my %TOURNAMENTS_EUROADULT =
             major => 'SEGMENT',
             DATE_START => '2023-06-08',
             DATE_END => '2023-06-08'
+          } 
+        }
+      },
+    }
+  },
+
+  'European Winter BAM Trophy' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'BAM',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        MEET => 'European Winter Games',
+
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2016-02-08',
+            DATE_END => '2016-02-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2016-02-10',
+            DATE_END => '2016-02-11'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'European Winter Games',
+
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2018-02-20',
+            DATE_END => '2018-02-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2018-02-22',
+            DATE_END => '2018-02-23'
+          },
+        }
+      },
+      '2020' =>
+      {
+        MEET => 'European Winter Games',
+
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2020-03-03',
+            DATE_END => '2020-03-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2020-03-05',
+            DATE_END => '2020-03-05'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'European Winter Games',
+
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2023-04-24',
+            DATE_END => '2023-04-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'ROUND',
+            DATE_START => '2023-04-26',
+            DATE_END => '2023-04-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2023-04-27',
+            DATE_END => '2023-04-27'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'European Winter Transnational Championships',
+
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2024-04-18',
+            DATE_END => '2024-04-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'ROUND',
+            DATE_START => '2024-04-20',
+            DATE_END => '2024-04-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2024-04-21',
+            DATE_END => '2024-04-21'
+          },
+        }
+      }
+    }
+  },
+
+  'European Winter Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        MEET => 'European Winter Games',
+
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2016-02-05',
+            DATE_END => '2016-02-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2016-02-08',
+            DATE_END => '2016-02-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-02-09',
+            DATE_END => '2016-02-09'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-02-10',
+            DATE_END => '2016-02-10'
+          },
+          'C4' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-02-11',
+            DATE_END => '2016-02-11'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'European Winter Games',
+
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2018-02-17',
+            DATE_END => '2018-02-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2018-02-20',
+            DATE_END => '2018-02-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-02-21',
+            DATE_END => '2018-02-21'
+          },
+          'C3' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2018-02-22',
+            DATE_END => '2018-02-22'
+          },
+          'C4' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-02-23',
+            DATE_END => '2018-02-23'
+          },
+        }
+      },
+      '2020' =>
+      {
+        MEET => 'European Winter Games',
+
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2020-02-29',
+            DATE_END => '2020-03-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2020-03-03',
+            DATE_END => '2020-03-03'
+          },
+          'C2' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2020-03-04',
+            DATE_END => '2020-03-04'
+          },
+          'C3' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2020-03-05',
+            DATE_END => '2020-03-05'
+          },
+          'C4' => 
+          {
+            YEAR => 2020,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2020-03-06',
+            DATE_END => '2020-03-06'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'European Winter Games',
+
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2023-04-21',
+            DATE_END => '2023-04-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2023-04-24',
+            DATE_END => '2023-04-24'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-04-25',
+            DATE_END => '2023-04-26'
+          },
+          'C3' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-04-26',
+            DATE_END => '2023-04-26'
+          },
+          'C4' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-04-27',
+            DATE_END => '2023-04-27'
+          },
+        }
+      },
+    }
+  },
+
+  'European Winter Transnational Teams' =>
+  {
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2024' =>
+      {
+        MEET => 'European Winter Transnational Championships',
+        ORDINAL => 1,
+
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2024-04-15',
+            DATE_END => '2024-04-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2024-04-18',
+            DATE_END => '2024-04-18'
+          },
+          'C2' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-04-19',
+            DATE_END => '2024-04-19'
+          },
+          'C3' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2024-04-20',
+            DATE_END => '2024-04-20'
+          },
+          'C4' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-04-21',
+            DATE_END => '2024-04-21'
+          },
+        }
+      },
+    }
+  },
+
+  "European Women Champions' Cup" =>
+  {
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2023' =>
+      {
+        MEET => "European Champions' Cup",
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2023-11-09',
+            DATE_END => '2023-11-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-11-11',
+            DATE_END => '2023-11-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-11-11',
+            DATE_END => '2023-11-11'
           } 
         }
       },

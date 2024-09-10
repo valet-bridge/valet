@@ -296,6 +296,7 @@ my @MULTI_WORDS =
   'Estoril Swiss Teams',
 
   # EUROPE
+  "European Open Champions' Cup",
   'European National Mixed Teams',
   'European National Open Teams',
   'European National Seniors Pairs',
@@ -307,16 +308,17 @@ my @MULTI_WORDS =
   'European Transnational Open Pairs',
   'European Transnational Open Teams',
   'European Transnational Seniors Teams',
+  'European Winter BAM Trophy',
+  'European Winter Teams',
+  'European Winter Transnational Teams',
+  "European Women Open Champions' Cup",
   'Generali European Open Teams',
   'Generali European Women Pairs',
   'Generali European Women Teams',
 
-  "European Open Champions' Cup",
-  "European Women Open Champions' Cup",
 
   'European Small Federation Games',
   'European University Bridge Championship',
-  'European Winter Games',
   'EUSA Games',
 
   # EURO-YOUTH: Mapped in detail
@@ -1054,7 +1056,6 @@ my @MULTI_WORDS =
 
   'Zhejiang Huamen Cup',
   "Zia's Individual Goulash",
-  'Zimmermann Cup',
   'Zulawski Cup',
   'Zurich Open Pairs',
   'Zurich Open Teams'
@@ -1634,6 +1635,8 @@ my %MULTI_TYPOS =
     'eur champ pau seniors'],
   'European Transnational Mixed Teams' => [
     'euro open mixed teams'],
+  'European Winter Teams' => [
+    'zimmermann cup'],
   'Generali European Open Teams' => [
     'generali euro team champs',
     'generali european team championships'],
@@ -3038,7 +3041,6 @@ my %SINGLE_TYPOS =
   "European Champions' Cup" => ['ecc'],
   'European Small Federation Games' => ['esfg', 'sfc'],
   'European University Bridge Championship' => ['eubc', 'eucb', 'euc'],
-  'European Winter Games' => ['ewg'],
   'European Youth Bridge Championship' => ['eybc'],
   'European Youth Bridge Pairs Championship' => ['eybpc', 'eypc'],
   'European Youth Bridge Teams Championship' => ['eytc', 'jem'],
@@ -3094,7 +3096,7 @@ my %SINGLE_TYPOS =
   'World Youth Open Bridge Championship' => ['wyobc', 'wboyc'],
   'World Youth Teams Championship' => ['wytc', 'world youth teams'],
   'Young Chelsea Knock-out' => ['ycko'],
-  'Zimmermann Cup' => ['zc']
+  'European Winter Teams' => ['zc']
 );
 
 sub set_hashes
