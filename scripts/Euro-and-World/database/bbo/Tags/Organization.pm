@@ -23,6 +23,7 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  ABA => ['argentinian bridge association'],
   ACBL => ['american contract bridge league'],
   AfBF => ['african bridge federation'],
   APBF => ['asia pacific bridge federation'],

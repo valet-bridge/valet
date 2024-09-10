@@ -55,7 +55,7 @@ my @MULTI_WORDS =
   'Aoda Cup',
   'ArboNed Team Cup',
 
-  # ARGENTINA
+  # ARGENTINA -- mapped in detail
   'Argentinian Club Teams',
   'Argentinian Copa Republica',
   'Argentinian Flags Day Championship',
@@ -67,6 +67,7 @@ my @MULTI_WORDS =
   'Argentinian Senior Trials',
   'Argentinian Women Teams',
   'Argentinian Women Trials',
+  'Mar del Plata Open Teams',
 
   'ARIS Cup',
   'Arnhem Interbridge Tournament',
@@ -1120,7 +1121,7 @@ my %MULTI_TYPOS =
     'asia pacific bridge federation champio teams'],
   'ArboNed Team Cup' => ['arbo ned team cup', 'arbo ned teams cup'],
 
-  # ARGENTINA
+  # ARGENTINA -- mapped in detail
   'Argentinian Copa Republica' => ['copa republica'],
   'Argentinian Mixed Pairs' => ['argentina national mixed pairs'],
   'Argentinian Mixed Teams' => ['argentina equipos mixtos',
@@ -1135,24 +1136,25 @@ my %MULTI_TYPOS =
     'cn equipos libres argentina',
     'equipo libres argentina',
     'equipos libres argentina',
-    'open argentin team', 
-    'opteamsudamargentina'],
+    'open argentin team'], 
   'Argentinian Open Trials' => [
     'argentina open trials',
+    'argentine team trials', 
     'argentinian team trials',
     'open argentina team trials',
-    'openargentin team trials', 
     'open team argentina trials',
+    'openargentin team trials', 
+    'opteamsudamargentina',
     'seleccion libre argentina',
     'seleccion argentina libre'],
-  'Argentinian Seniors Teams' => ['clasificatoria seniors argentina',
+  'Argentinian Seniors Teams' => [
+    'clasificatoria seniors argentina',
     'clasificatoria argentina seniors sudamericano'],
-  'Argentinian Senior Trials' => ['senior argentina team trials',
-    'open senior argentina trials', 'seleccion argetina seniors',
+  'Argentinian Senior Trials' => [
+    'senior argentina team trials',
+    'open senior argentina trials', 
+    'seleccion argetina seniors',
     'seleccion argentina seniors'],
-  'Argentinian Women Clubs' => ['interclub damas argentina'],
-  'Argentinian Women Teams' => [
-   'gran final argentina damas'],
 
   'Arnhem Interbridge Tournament' => ['interbridge tournament'],
   'ASEAN Club Championship' => [
@@ -1673,9 +1675,6 @@ my %MULTI_TYPOS =
     'european juniors championship',
     'european juniors championships',
     'european youth teams u26',
-    # 'european youth bridge championship',
-    # 'european youth championships',
-    # 'european youth championship',
     'european youth bridge team champ', 
     'european youth teams'],
   'European U26 Women Teams' => [
@@ -3007,7 +3006,7 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   'APBF Championships' => ['pabfc', 'pabf', 'pabfs'],
-  'Argentinian Open Teams' => ['cnia'],
+  'Argentinian Club Teams' => ['cnia'],
   'ASEAN Club Championship' => ['abcc'],
   'Australian National Open Teams' => ['anot', 'not'],
   'Australian National Senior Teams' => ['nst'],

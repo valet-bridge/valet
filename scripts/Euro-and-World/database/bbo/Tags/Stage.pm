@@ -23,7 +23,7 @@ my %MULTI_TYPOS =
   Bronze => ['third place', '3rd place', 'bronze-finals', 
     'bronze playoff', 'bronze match', 'small final'],
   'Elimination' => ['head to head'],
-  'Final' => ['gran final', 'super final', 'final phase', 'fase final',
+  'Final' => ['super final', 'final phase', 'fase final',
     'playoff final', 'playoffs final', 'final poule', 'phase finale',
     'f i n a l', 'fin als'],
   'Knock-out' => ['knock-outs', 'knock out', 'k _ o'],
