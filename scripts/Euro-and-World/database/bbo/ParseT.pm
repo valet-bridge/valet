@@ -14,7 +14,8 @@ use lib '..';
 use DateCalc;
 use EntryT;
 
-use Tournaments::Argentina;
+# use Tournaments::Argentina;
+use Tournaments::Belgium;
 # use Tournaments::Canada;
 # use Tournaments::Chile;
 # use Tournaments::Denmark;
@@ -28,7 +29,8 @@ use Tournaments::Argentina;
 
 my %DIVISIONS =
 (
-  ARGENTINA => \&Tournaments::Argentina::set_links
+  # ARGENTINA => \&Tournaments::Argentina::set_links
+  BELGIUM => \&Tournaments::Belgium::set_links
   # CANADA => \&Tournaments::Canada::set_links
   # CHILE => \&Tournaments::Chile::set_links
   # DENMARK => \&Tournaments::Denmark::set_links

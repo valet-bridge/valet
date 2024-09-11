@@ -103,6 +103,7 @@ my %FORM_CORRECTIONS = (
   # Says Team 1, Team 2 in BBO file, but is pairs
   'Argentinian Mixed Pairs' => [
     43946],
+  'Belgian Open Pairs' => [3075, 3076, 9813, 9824, 18125,18133],
   'Chilean Cup' => [26199, 26218, 26237, 26265],
   'Chilean Open Pairs' => [31502, 31503],
   'Copenhagen Invitational Pairs' => [36915, 36941, 36954],

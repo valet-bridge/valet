@@ -129,7 +129,7 @@ my @MULTI_WORDS =
   'Baze Senior Knock-out',
   'Belarusian Open Teams',
 
-  # BELGIUM
+  # BELGIUM -- mapped in detail
   'Belgian Open Pairs',
   'Belgian Open Teams',
   'Belgian Open Trials',
