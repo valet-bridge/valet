@@ -15,9 +15,10 @@ use DateCalc;
 use EntryT;
 
 # use Tournaments::Argentina;
-use Tournaments::Belgium;
+# use Tournaments::Belgium;
 # use Tournaments::Canada;
 # use Tournaments::Chile;
+use Tournaments::Czech;
 # use Tournaments::Denmark;
 # use Tournaments::EuroAdult;
 # use Tournaments::EuroYouth;
@@ -30,9 +31,10 @@ use Tournaments::Belgium;
 my %DIVISIONS =
 (
   # ARGENTINA => \&Tournaments::Argentina::set_links
-  BELGIUM => \&Tournaments::Belgium::set_links
+  # BELGIUM => \&Tournaments::Belgium::set_links
   # CANADA => \&Tournaments::Canada::set_links
   # CHILE => \&Tournaments::Chile::set_links
+  CZECH => \&Tournaments::Czech::set_links
   # DENMARK => \&Tournaments::Denmark::set_links
   # EUROADULT => \&Tournaments::EuroAdult::set_links
   # EUROYOUTH => \&Tournaments::EuroYouth::set_links

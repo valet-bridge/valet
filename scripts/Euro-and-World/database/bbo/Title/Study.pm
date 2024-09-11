@@ -68,6 +68,8 @@ my @LOCAL_SUBS =
     CORR => 'Chinese Open Teams' },
   { START => 3729, END => 3738, TEXT => 'Stara Zagora 2007 Open Teams',
     CORR => 'Stara Zagora Open Teams 2007' },
+  { START => 4315, END => 4318, TEXT => 'Czech Teams Champ_',
+    CORR => 'Czech First League' },
   { START => 4339, END => 4346, TEXT => 'Canadian National Championships',
     CORR => 'Canadian Open Teams' },
   { START => 4339, END => 4346, TEXT => 'Canadian Championship',
@@ -320,7 +322,11 @@ my @LOCAL_SUBS =
   { START => 43070, END => 43154, TEXT => 'Bulgaria Group A', 
     CORR => 'Bulgarian Open Teams - Group A' },
   { START => 43195, END => 43235, TEXT => 'Open Playoff', 
-    CORR => 'Australian Open Team Trials - Playoff' }
+    CORR => 'Australian Open Team Trials - Playoff' },
+  { START => 43433, END => 43457, TEXT => 'Czech Bridge Championships*', 
+    CORR => 'Czech First League' },
+  { START => 43470, END => 43479, TEXT => 'Czech Team Championships*', 
+    CORR => 'Czech First League' }
 );
 
 
