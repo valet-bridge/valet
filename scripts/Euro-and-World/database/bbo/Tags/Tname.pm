@@ -226,9 +226,7 @@ my @MULTI_WORDS =
   'Corn Cairdis',
   'Cross Strait Invitational',
 
-  # CZECH
-  'Czech Championship',
-  'Czech Team Championship',
+  # CZECH -- mapped in detail
   'Czech First League',
   'Czech Open',
 
@@ -415,6 +413,10 @@ my @MULTI_WORDS =
   'Greek Central Regional Championship',
   'Greek Open Teams',
   'Greek Open Trials',
+  'Hellenic Mixed Pairs',
+  'Hellenic Team Trials',
+  'Hellenic Team Championship',
+  'Hellenic Women Team Trials',
 
   'Guangdong Club Championship',
   'Guangdong Club Invitational',
@@ -429,10 +431,6 @@ my @MULTI_WORDS =
   "Hans Rosendorff Memorial Women's Teams",
   'Haskovski Mineralni Bani',
   'Hecht Cup',
-  'Hellenic Mixed Pairs',
-  'Hellenic Team Trials',
-  'Hellenic Team Championship',
-  'Hellenic Women Team Trials',
   'Higson Cup',
   'High-Tech Zone Workers Invitational',
   'Hindusthan Club Teams',
@@ -2557,10 +2555,18 @@ my %MULTI_TYPOS =
     'rio de janeiro xmas individual'],
 
   # ROMANIA
-  'Romanian League' => ['cn echipe', 'c_n_ echipe', 'cn ecgipe',
-    'divizia a', 'romanian national teams div a', 
-    'romanian national division', 'romanian national teams- div a', 
-    'romanian teams-a division', 'romanian teams- a division'],
+  'Romanian League' => [
+    'cn ecgipe',
+    'cn echipe', 
+    'c_n_ echipe', 
+    'divizia a', 
+    'national romanian teams',
+    'romanian national teams div a', 
+    'romanian national division', 
+    'romanian national teams- div a', 
+    'romanian team championship',
+    'romanian teams-a division', 
+    'romanian teams- a division'],
   'Romanian Open Teams' => [
     'romanian national champ_',
     'romanian national champs',
@@ -2569,17 +2575,20 @@ my %MULTI_TYPOS =
     'romanian national team championship',
     'romanian national team championships',
     'romanian national team champs',
-    'romanian national teams championships',
     'romanian national teams', 
-    'romanian team championship',
+    'romanian national teams championships',
     'romanian teams'],
   'Romanian Open Trials' => [
     'romanian national team selection',
     'romanian national trials',
+    'romanian open teams trial',
+    'romanian open teams trials',
     'romanian open trials',
     'romanian selection'], 
-  'Romanian Second League' => ['cn echipe div b',
+  'Romanian Second League' => [
+    'cn echipe div b',
     'cn ecgipe div b'],
+
   'Rome Challenger Trophy' => ['trofeo challenger città di roma',
     'challenge trofeo città di roma'],
   'Rondane Pairs Cup' => ['rondanecupen swiss pairs'],
