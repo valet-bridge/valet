@@ -25,6 +25,7 @@ my @MULTI_WORDS =
   'Banten Sports Week',
   'Bodrum Peninsula Festival',
   'Brasov Festival',
+  'Brazilian Trials',
   'Cairo Bridge Festival',
   'Canadian Bridge Championships',
   'Cappadocia Fairy Chimneys Festival',
@@ -123,6 +124,9 @@ my %MULTI_TYPOS =
   'Brasov Festival' => ['festival brasov', 'festival bridge brasov',
     'international bridge festival brasov',
     'festivalul international de bridge brasov'],
+  'Brazilian Trials' => [
+    'brazilian team trials',
+    'brazilian teams trials'],
   'Copenhagen Invitational' => ['copenhagen bridge invitational'],
   'Crete Bridge Festival' => ['crete b_ festival'],
   'Estoril Bridge Festival' => ['estoril festival'],

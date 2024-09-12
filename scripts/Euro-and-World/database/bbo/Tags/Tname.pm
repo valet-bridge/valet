@@ -151,12 +151,11 @@ my @MULTI_WORDS =
   'bridge24.pl Trophy',
   
   # BRAZIL
-  'Brazilian Championship',
-  'Brazilian Open',
-  'Brazilian Seniors',
-  'Brazilian Teams',
-  'Brazilian Trials',
-  'Brazilian Women',
+  # 'Brazilian Championship',
+  'Brazilian Senior Trials',
+  'Brazilian Open Teams',
+  'Brazilian Open Trials',
+  'Brazilian Women Trials',
 
   # BRITAIN
   'British Gold Cup',
@@ -777,7 +776,7 @@ my @MULTI_WORDS =
   'Rio de Janeiro Christmas Individual',
   'Roberto Taunay Cup',
 
-  # ROMANIA
+  # ROMANIA -- mapped in detail
   'Romanian League',
   'Romanian Second League',
   'Romanian Open Teams',
@@ -1314,13 +1313,21 @@ my %MULTI_TYPOS =
     "trofeo citta' bologna"],
 
   # BRAZIL
-  'Brazilian Championship' => ['brazilian championships',
-    'brazilian chapionship', 'open brazilian championship',
-    'brazilian open championship', 'brasil champ', 
-    'brazilian national championship', 'brasilian championship'],
-  'Brazilian Teams' => ['brazilian team'],
-  'Brazilian Seniors' => ['brazilian senior'],
+  # 'Brazilian Championship' => [
+  'Brazilian Open Teams' => [
+    'brasil champ', 
+    'brasilian championship',
+    'brazilian championship',
+    'brazilian championships',
+    'brazilian chapionship', 
+    'brazilian national championship', 
+    'brazilian open championship', 
+    'brazilian team',
+    'brazilian teams',
+    'open brazilian championship'],
+  'Brazilian Senior Trials' => ['brazilian senior'],
   'Brazilian Women' => ['brazilian ladies'],
+  'Brazilian Women Trials' => ['brazilian ladies trials'],
 
   'bridge24.pl Trophy' => ['bridge24_pl trophy'],
   'British Gold Cup' => ['gold cup', 'british gold'],
@@ -2554,7 +2561,7 @@ my %MULTI_TYPOS =
   'Rio de Janeiro Christmas Individual' => [
     'rio de janeiro xmas individual'],
 
-  # ROMANIA
+  # ROMANIA -- mapped in detail
   'Romanian League' => [
     'cn ecgipe',
     'cn echipe', 
@@ -2587,7 +2594,8 @@ my %MULTI_TYPOS =
     'romanian selection'], 
   'Romanian Second League' => [
     'cn echipe div b',
-    'cn ecgipe div b'],
+    'cn echipe div b seria a',
+    'cn ecgipe div b seria a'],
 
   'Rome Challenger Trophy' => ['trofeo challenger città di roma',
     'challenge trofeo città di roma'],
@@ -3023,7 +3031,7 @@ my %SINGLE_TYPOS =
   'Australian Spring Open Teams' => ['snot'],
   'Bermuda Bowl' => ['bb'],
   'Bobby Evans Seniors Teams' => ['best'],
-  'Brazilian Championship' => ['brasilchamp'],
+  'Brazilian Open Teams' => ['brasilchamp'],
   "Buffett Cup" => ['buffett', 'buffet'],
   Camrose => ['camroae', 'ccmrose'],
   'Canadian National Teams Championship' => ['cntc'],
