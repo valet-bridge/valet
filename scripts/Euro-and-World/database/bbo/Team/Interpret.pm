@@ -204,6 +204,12 @@ sub eliminate_scoring
     {
       $chain->complete_if_last_is(0, 'KILLED');
     }
+    elsif ($$scoring eq 'B' && $value0 eq 'MP')
+    {
+      # I'm not actually sure what this means,
+      # but it occurs especially in some Polish tournaments.
+      $chain->complete_if_last_is(0, 'KILLED');
+    }
     elsif ($$scoring ne 'P' && $value0 eq 'MP')
     {
       # Probably a few errors in data entry.

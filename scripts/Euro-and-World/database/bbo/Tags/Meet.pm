@@ -23,6 +23,7 @@ my @MULTI_WORDS =
   'Baltic Congress',
   'Bangkok Bridge Festival',
   'Banten Sports Week',
+  'Beskids Slam',
   'Bodrum Peninsula Festival',
   'Brasov Festival',
   'Brazilian Trials',
@@ -72,6 +73,7 @@ my @MULTI_WORDS =
   'Pärnu Festival',
   'Plovdiv Bridge Festival',
   'Polish Grand Prix',
+  'Polish Pairs Championship',
   'Polish Youth Olympiad',
   'Polish Schools Championship',
   'Poznan Festival',
@@ -237,6 +239,9 @@ my %MULTI_TYPOS =
      'norway regional champship'],
   'Plovdiv Bridge Festival' => ['international festival - plovdiv',
     'international festival plovdiv'],
+  'Polish Pairs Championship' => [
+    'pairs championship od poland',
+    'pairs championship of poland'],
   'Polish Schools Championship' => [
     'polish schools champ',
     'polish schools champs'],
