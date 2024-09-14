@@ -141,6 +141,7 @@ sub study
   my $token_no = 0;
   if (my $s = suggest_form($text))
   {
+    return if $s eq 'Neutral';
     append_token($chain, 'SINGLETON', 'FORM', $s, $text, \$token_no,
       $main::histo_team, $PREFIX);
     return;

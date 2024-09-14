@@ -74,7 +74,7 @@ my @MULTI_WORDS =
   'Polish Grand Prix',
   'Polish Youth Olympiad',
   'Polish Schools Championship',
-  'Poznan Bridge Festival',
+  'Poznan Festival',
   'Pula Bridge Festival',
   'Red Sea International Festival',
   'Reykjavik Bridge Festival',
@@ -130,9 +130,6 @@ my %MULTI_TYPOS =
   'Copenhagen Invitational' => ['copenhagen bridge invitational'],
   'Crete Bridge Festival' => ['crete b_ festival'],
   'Estoril Bridge Festival' => ['estoril festival'],
-  # 'European Championship' => ['eur champ', 'eur cham', 'champ eur',
-    # 'eur cha', 'eur champ eur', 'euro bridge championships',
-    # 'european championships'],
   'European National Championships' => [
     'champ eur pau',
     'e_b_l_ team championships',
@@ -164,17 +161,7 @@ my %MULTI_TYPOS =
     'european open champ', 
     'europe open champ'],
 
-  # 'European Open Championship' => [
-    # 'european open championships',
-    # 'european open bridge championships',
-    # 'ec open'],
   'European Youth Team Championships' => [
-    # 'euro yongster championships',
-    # 'euro youngster championship',
-    # 'euro youngster championships',
-    # 'euro youngsters championship',
-    # 'euro youngsters championships',
-    # 'european youngster bridge championship',
     'european youth bridge championship',
     'european youth championships',
     'european youth championship'],
@@ -254,8 +241,10 @@ my %MULTI_TYPOS =
     'polish schools champ',
     'polish schools champs'],
   'Polish Youth Olympiad' => ['oom'],
-  'Poznan Bridge Festival' => ['poznanski kongres brydzowy',
-    'kongres poznanski', 'bridge meeting poznan'],
+  'Poznan Congress' => [
+    'bridge meeting poznan',
+    'kongres poznanski', 
+    'poznanski kongres brydzowy'],
   'Pula Bridge Festival' => ['international festival pula',
     'pula bridge festiwal'],
   'Red Sea International Festival' => ['red see international festival',
@@ -299,8 +288,11 @@ my %MULTI_TYPOS =
     'mind sports games', 'sawmg', 'wmg', 'wnsg', 'world ming games'],
   'World Team Olympiad' => ['world bridge team olympiad',
     'world bridge olympiad', 'bridge olympiad'],
-  'Zulawski Congress' => ['mityng zulawski', "kongres \"zulawski\"",
-    'kongres zulawski', "mityng \"zulawski\""]
+  'Zulawski Congress' => [
+    'mityng zulawski', 
+    "kongres \"zulawski\"",
+    'kongres zulawski', 
+    "mityng \"zulawski\""]
 );
 
 my @SINGLE_WORDS = qw(

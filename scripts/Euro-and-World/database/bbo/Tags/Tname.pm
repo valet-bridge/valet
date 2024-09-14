@@ -48,7 +48,6 @@ my @MULTI_WORDS =
   'Anatolian Fall Teams',
   'Anatolian Open Teams',
   'Anatolian Spring Teams',
-  'Andrzej Wilkosz Memorial Pairs',
   'Angelini Teams',
   'Ankara Summer Teams',
   'Antonio Chong Cup',
@@ -150,8 +149,7 @@ my @MULTI_WORDS =
   'Bologna Trophy',
   'bridge24.pl Trophy',
   
-  # BRAZIL
-  # 'Brazilian Championship',
+  # BRAZIL -- mapped in detail
   'Brazilian Senior Trials',
   'Brazilian Open Teams',
   'Brazilian Open Trials',
@@ -401,12 +399,10 @@ my @MULTI_WORDS =
   'GHTD Cup',
   'Goksu-Yalikavak Pairs',
   'Golden Jubilee',
-  'Grand National Teams',
-  'Grand Prix of Poland',
-  'Grand Prix of Poland Pairs',
+
   'Grand Prix of Prague',
-  'Grand Prix of Warsaw',
-  'Grand Prix of Wielkopolski',
+  'Grand National Teams',
+
   
   # GREECE
   'Greek Central Regional Championship',
@@ -538,8 +534,6 @@ my @MULTI_WORDS =
   ### JJJ
 
   'Jaap Kokkes Tournament',
-  'Janina Wielkoszewska Memorial Open',
-  'Janos Levai Memorial',
   'Japanese District KO Teams',
   'Japanese Open Trials',
   'Jaya Jain Memorial',
@@ -551,7 +545,6 @@ my @MULTI_WORDS =
   'Jordan Spring Mixed Pairs',
   'Jordan Spring Tournament',
   'Jordanese Open Pairs',
-  'Józef Pochron Jubilee Pairs',
   'JPD Cup',
   'JP Morgan Inter-City Championship',
   'Junior Camrose',
@@ -566,8 +559,6 @@ my @MULTI_WORDS =
   'Karnik-Vaidya Open',
   "Kepri Governor's Cup",
   'Kings and Queens Blaine Howe Teams',
-  'Krakow Spring',
-  'Krakow Teams',
   'Krishnapatnam Port National Masters',
   'Krommenie Nations Cup',
 
@@ -581,7 +572,6 @@ my @MULTI_WORDS =
   'L C Sunil Rajendra Memorial',
   'Lebanese Invitational Teams',
   'Lederer Memorial Trophy',
-  'Leszek Kwiatkowski Memorial Teams',
   "Linda Stern Women's Teams",
   'Lithuanian Open Teams',
   'Lokmanya Jubilee',
@@ -704,6 +694,20 @@ my @MULTI_WORDS =
   'Poddar National Masters',
 
   # POLAND
+  'Grand Prix of Poland Pairs',
+  'Grand Prix of Poland Teams',
+
+
+  'Andrzej Wilkosz Memorial Pairs',
+  'Grand Prix of Poland',
+  'Grand Prix of Wielkopolski',
+  'Janina Wielkoszewska Memorial Open',
+  'Janos Levai Memorial',
+  'Józef Pochron Jubilee Pairs',
+  'Krakow Spring',
+  'Krakow Teams',
+  'Leszek Kwiatkowski Memorial Pairs',
+  'Leszek Kwiatkowski Memorial Teams',
   'Polish BAM Teams',
   'Polish Boys Championship',
   'Polish Business League',
@@ -721,6 +725,7 @@ my @MULTI_WORDS =
   'Polish Pairs',
   'Polish Patton Teams',
   'Polish Premier League',
+  'Polish First League',
   'Polish Second League',
   'Polish Senior Trials',
   'Polish School Championship',
@@ -732,9 +737,12 @@ my @MULTI_WORDS =
   'Polish U25 Trials',
   'Polish Women Trials',
   'Polish Youngster Teams',
-
   'Poznan Mixed Pairs',
-  'Poznan Open Teams',
+  # 'Poznan Open Teams',
+  'Staszek Wybranowski Memorial',
+  'Warsaw Online Teams',
+  'Zulawski Cup',
+
   'Pomerania Cup',
 
   # PORTUGAL
@@ -872,7 +880,6 @@ my @MULTI_WORDS =
   'Spring Nationals',
   'SPS Trophy',
   'Star Wars',
-  'Staszek Wybranowski Memorial',
   'Staszic Pairs Cup',
   'Stena Line Cup',
   'Stern-Cornell Trophy',
@@ -1004,7 +1011,6 @@ my @MULTI_WORDS =
 
   ### WWW
 
-  'Warsaw Online Teams',
   'Watermark Bridge Classic',
   'WCG Open',
   'Wellingdon Swiss Pairs',
@@ -1051,7 +1057,6 @@ my @MULTI_WORDS =
 
   'Zhejiang Huamen Cup',
   "Zia's Individual Goulash",
-  'Zulawski Cup',
   'Zurich Open Pairs',
   'Zurich Open Teams'
 );
@@ -1313,7 +1318,6 @@ my %MULTI_TYPOS =
     "trofeo citta' bologna"],
 
   # BRAZIL
-  # 'Brazilian Championship' => [
   'Brazilian Open Teams' => [
     'brasil champ', 
     'brasilian championship',
@@ -1326,7 +1330,6 @@ my %MULTI_TYPOS =
     'brazilian teams',
     'open brazilian championship'],
   'Brazilian Senior Trials' => ['brazilian senior'],
-  'Brazilian Women' => ['brazilian ladies'],
   'Brazilian Women Trials' => ['brazilian ladies trials'],
 
   'bridge24.pl Trophy' => ['bridge24_pl trophy'],
@@ -1831,16 +1834,6 @@ my %MULTI_TYPOS =
 
   'Golden Jubilee' => ['golden jubily'],
   'Grand National Teams' => ['gnt championship'],
-  'Grand Prix of Poland' => ['grand prix polski', 'gp of poland',
-    'grnd prix of poland', 'grand priix polski', 'gp polski',
-    'grand prix plolski', 'grand prix team of poland'],
-  'Grand Prix of Poland Pairs' => ['grand prix pairs of poland',
-    'gran prix pairs of poland'],
-  'Grand Prix of Prague' => ['gp prague', 'grand prix prague'],
-  'Grand Prix of Wielkopolski' => ['gp wielkopolski',
-    'grand prix of wielkopolski', 
-    'grand prix of greater poland voivodeship'],
-  'Grand Prix of Warsaw' => ['gp warszawy'],
 
   # GREECE
   'Greek Central Regional Championship' => [
@@ -2447,17 +2440,18 @@ my %MULTI_TYPOS =
     'polish team trials', 'polish national trials'],
   'Polish Pairs' => ['pairs championship od poland',
     'pairs championship of poland', 'open pairs championship of poland'],
-  'Polish Premier League' => [
+  'Polish First League' => [
     'polish first division', 
+    'polish 1st division', 
+    'i liga'],
+  'Polish Premier League' => [
     'polish premier leauge', 
     'polish premier legaue',
     'polish premier legue',
     'polish premier leuge', 
     'polish premier leuge', 
     'polish premier leaugue', 
-    'polish premiere league',
-    'polish 1st division', 
-    'i liga'],
+    'polish premiere league'],
   'Polish Second League' => ['polish 2 league'],
   'Polish School Championship' => [
     'polish schools champ',
@@ -2478,6 +2472,31 @@ my %MULTI_TYPOS =
     'polish trials ladies', 'woman trial poland',
     "polish bridge union women's trials"],
   'Polish Youngster Teams' => ['kadry juniorów m³odszych'],
+  'Poznan Mixed Pairs' => ['otwarte mistrzostwa poznania mixt'],
+  'Grand Prix of Poland Teams' => [
+    'grand prix polski teamow',
+    'poznan open teams',
+    'poznan teams tournament'],
+  'Grand Prix of Poland' => [
+    'gp of poland',
+    'gp polski',
+    'gp warszawy',
+    'gpp teamow',
+    'grand prix of warsaw',
+    'grand prix polski', 
+    'grand prix plolski', 
+    'grand prix team of poland',
+    'grnd prix of poland', 
+    'grand priix polski'], 
+  'Grand Prix of Poland Pairs' => [
+    'gp polski par',
+    'grand prix pairs of poland',
+    'gran prix pairs of poland',
+    'grand prix polski par'],
+  'Grand Prix of Prague' => ['gp prague', 'grand prix prague'],
+  'Grand Prix of Wielkopolski' => ['gp wielkopolski',
+    'grand prix of wielkopolski', 
+    'grand prix of greater poland voivodeship'],
 
   'Pomerania Cup' => ['rozgrywek pucharowych pwzbs'],
 
@@ -2506,8 +2525,6 @@ my %MULTI_TYPOS =
     'northern regional open teams',
     'northern regional teams open'],
 
-  'Poznan Mixed Pairs' => ['otwarte mistrzostwa poznania mixt'],
-  'Poznan Open Teams' => ['poznan teams tournament'],
   'PRBA State Level Open' => ['prba open state level',
     'prba state level', 'prba statelevel'],
   'PYC Hindu Gymkhana Royale' => ['pyc royale'],
@@ -3064,6 +3081,7 @@ my %SINGLE_TYPOS =
   'Grand National Open Teams' => ['gnot'],
   'Grand National Teams' => ['gnt'],
   'Grand Prix of Poland' => ['gpp', 'gppp'],
+  'Grand Prix of Poland Pairs' => ['gppp'],
   "Gro's Supercup" => ['grocup'],
   'Icelandair Open' => ['icelandair'],
   'Junior Camrose' => ['juniorcamrose', 'juniorcmrose'],
