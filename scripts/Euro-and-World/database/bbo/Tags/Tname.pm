@@ -334,8 +334,6 @@ my @MULTI_WORDS =
   'Faroese Teams',
   'Fatih Kiral Cup',
   'Filbyter Cup',
-  'forumbridge.pl Top Individual',
-  'forumbridge.pl Top Pairs',
 
   # Finland
 
@@ -509,7 +507,6 @@ my @MULTI_WORDS =
   'Israel Women Pairs',
 
   'Istanbul Teams',
-  'INEA Cup',
   'IOC Grand Prix',
   'Istanbul Winter Teams',
 
@@ -695,10 +692,16 @@ my @MULTI_WORDS =
   # POLAND
   'Grand Prix of Poland Pairs',
   'Grand Prix of Poland Teams',
+  'forumbridge.pl Top Individual',
+  'forumbridge.pl Top Pairs',
+  'Sigismund Bell Krakow',
+  'SPS Trophy',
+  'Staszic Pairs Cup',
+  'Vasil Levski Cup',
+  'Wronie Summer Teams',
 
 
   'Andrzej Wilkosz Memorial Pairs',
-  'Grand Prix of Wielkopolski',
   'Janina Wielkoszewska Memorial Open',
   'Janos Levai Memorial',
   'Józef Pochron Jubilee Pairs',
@@ -720,7 +723,7 @@ my @MULTI_WORDS =
   'Polish Open Teams',
   'Polish Open Trials',
   'Polish Open Pairs',
-  'Polish Pairs',
+  'Polish Pairs Cup',
   'Polish Patton Teams',
   'Polish Premier League',
   'Polish First League',
@@ -833,7 +836,6 @@ my @MULTI_WORDS =
   'Shenzhen Nangangdongli Cup',
   'Shield of Thoisy',
   'Shree Keni Trophy',
-  'Sigismund Bell Krakow',
   'Singapore Open Teams',
   'Slava Cup',
   'Slovakian Open Teams',
@@ -872,11 +874,8 @@ my @MULTI_WORDS =
 
   'SPBF Championship',
   'Spring Fours',
-  'Spring of Cracow',
   'Spring Nationals',
-  'SPS Trophy',
   'Star Wars',
-  'Staszic Pairs Cup',
   'Stena Line Cup',
   'Stern-Cornell Trophy',
   "Sternberg Women's BAM Teams",
@@ -983,7 +982,6 @@ my @MULTI_WORDS =
 
   'Vanderbilt Fantasy Challenge',
   'Varna Titan Teams',
-  'Vasil Levski Cup',
   'Venezuelan Mixed Teams',
   'Venezuelan Swiss Pairs',
   'Venice Cup',
@@ -1022,7 +1020,6 @@ my @MULTI_WORDS =
   'Willoughby Bridge Classic',
   'Willy Brown Memorial',
   'Winter Open Teams',
-  'Wronie Summer Teams',
 
   # WORLD
   'World Juniors Championship',
@@ -2102,7 +2099,9 @@ my %MULTI_TYPOS =
     'governor kepri cup', 'gov bi cup', 'governor cup', 'bi cup',
     'kepri bridge championship', 'kepri international tournament',
     'kepri international bridge tournament'],
-  'Krakow Spring' => ['krakowska wiosna'],
+  'Krakow Spring Teams' => [
+    'krakowska wiosna',
+    'spring of cracow'],
   'Krommenie Nations Cup' => [
     'forbo krommenie teams',
     'forbo teams',
@@ -2431,7 +2430,10 @@ my %MULTI_TYPOS =
     'polish championships team patton',
     'poland championship patton',
     'polish teams patton'],
-  'Polish Open Pairs' => ['polish open pairs championship',
+  'Polish Open Pairs' => [
+    'inea cup',
+    'open pairs championship of poland',
+    'polish open pairs championship',
     'polish championship open pairs'],
   'Polish Open Teams' => [
     'mistrzostwa polski teamów',
@@ -2446,8 +2448,6 @@ my %MULTI_TYPOS =
     'polish trials',
     'polish team trials', 
     'polish national trials'],
-  'Polish Open Pairs' => [
-    'open pairs championship of poland'],
   'Polish First League' => [
     'polish first division', 
     'polish 1st division', 
@@ -2514,7 +2514,9 @@ my %MULTI_TYPOS =
     'grand prix of wielkopolski', 
     'grand prix of greater poland voivodeship'],
 
-  'Pomerania Cup' => ['rozgrywek pucharowych pwzbs'],
+  'Pomerania Cup' => [
+    'grand prix of wielkopolski',
+    'rozgrywek pucharowych pwzbs'],
 
   # PORTUGAL
   'Portuguese Grand Prix' => ['portuguese grad prix',

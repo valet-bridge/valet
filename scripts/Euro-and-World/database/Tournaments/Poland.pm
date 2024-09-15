@@ -1973,7 +1973,7 @@ my %TOURNAMENTS_POLAND =
     }
   },
 
-  'Grand Prix of Wielkopolski',
+  'Pomerania Cup',
   {
     ORGANIZATION => 'PZBS',
     COUNTRY => 'Poland',
@@ -1986,20 +1986,63 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2009' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2009,
+            DATE_START => '2009-12-03',
+            DATE_END => '2009-12-03'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-10-09',
+            DATE_END => '2010-10-09'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-10-06',
+            DATE_END => '2011-10-06'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-12-07',
+            DATE_END => '2013-12-07'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-10-26',
+            DATE_END => '2014-10-26'
           } 
         }
       },
@@ -2104,7 +2147,7 @@ my %TOURNAMENTS_POLAND =
     }
   },
 
-  'Krakow Spring',
+  'Krakow Spring Teams',
   {
     ORGANIZATION => 'PZBS',
     COUNTRY => 'Poland',
@@ -2117,20 +2160,15 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2013' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2013,
+            DATE_START => '2013-03-23',
+            DATE_END => '2013-03-23'
           } 
         }
       },
@@ -2510,6 +2548,18 @@ my %TOURNAMENTS_POLAND =
             YEAR => 2013,
             DATE_START => '2013-11-23',
             DATE_END => '2013-11-23'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-11-21',
+            DATE_END => '2015-11-21'
           } 
         }
       },
@@ -3066,8 +3116,8 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2015,
-            DATE_START => '2015-05-03',
-            DATE_END => '2015-05-04'
+            DATE_START => '2015-05-02',
+            DATE_END => '2015-05-03'
           } 
         }
       },
@@ -3921,7 +3971,7 @@ my %TOURNAMENTS_POLAND =
   'Polish Pairs Cup',
   {
     FORM => 'Pairs',
-    SCORING => 'BAM',
+    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
@@ -4020,20 +4070,15 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2013' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2013,
+            DATE_START => '2013-06-01',
+            DATE_END => '2013-06-01'
           } 
         }
       },
