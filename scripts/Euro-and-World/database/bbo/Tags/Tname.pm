@@ -727,10 +727,8 @@ my @MULTI_WORDS =
   'Polish Second League',
   'Polish Senior Trials',
   'Polish School Championship',
-  'Polish Super League',
   'Polish Teams',
-  'Polish Top Individual',
-  'Polish U16 Championship',
+  'Polish U16 Pairs',
   'Polish U20 Trials',
   'Polish U25 Trials',
   'Polish Women Trials',
@@ -2417,8 +2415,13 @@ my %MULTI_TYPOS =
   'Polish IMP Pairs' => ['butler polish championship',
     'butler (imp) polish pairs championship'],
   'Polish Individual Championship' => [
-    'individual championship of poland'],
-  'Polish Mixed Pairs' => ['polish mixed pairs championship',
+    'individual championship of poland',
+    'polish top individual',
+    'top indyvidual'],
+  'Polish Mixed Pairs' => [
+    'otwarte mistrzostwa poznania mixt',
+    'mixed championship of poland',
+    'polish mixed pairs championship',
     'polish mixed pairs championships',
     'polish mixt pairs championship'],
   'Polish Mixed Teams' => [
@@ -2426,7 +2429,8 @@ my %MULTI_TYPOS =
     'polish mixt team championships'],
   'Polish Patton Teams' => [
     'polish championships team patton',
-    'poland championship patton'],
+    'poland championship patton',
+    'polish teams patton'],
   'Polish Open Pairs' => ['polish open pairs championship',
     'polish championship open pairs'],
   'Polish Open Teams' => [
@@ -2449,6 +2453,9 @@ my %MULTI_TYPOS =
     'polish 1st division', 
     'i liga'],
   'Polish Premier League' => [
+    'mecz o superlig©', 
+    'mecz o superlige',
+    'mecz o superligê',
     'polish premier leauge', 
     'polish premier legaue',
     'polish premier legue',
@@ -2460,14 +2467,11 @@ my %MULTI_TYPOS =
   'Polish School Championship' => [
     'polish schools champ',
     'polish schools championships'],
-  'Polish Super League' => ['mecz o superlig©', 'mecz o superlige',
-    'mecz o superligê'],
   'Polish Third League' => ['polish league: division 3'],
   'Polish Teams' => [
     'championship of poland',
     'champioship of poland'],
-  'Polish Top Individual' => ['top indyvidual'],
-  'Polish U16 Championship' => [
+  'Polish U16 Pairs' => [
     'polish u-16 championships',
     'polish u16 championships'],
   'Polish U20 Trials' => ['u20 polish trials'],
@@ -2476,7 +2480,6 @@ my %MULTI_TYPOS =
     'polish trials ladies', 'woman trial poland',
     "polish bridge union women's trials"],
   'Polish Youngster Teams' => ['kadry juniorów m³odszych'],
-  'Poznan Mixed Pairs' => ['otwarte mistrzostwa poznania mixt'],
   'Grand Prix of Poland Teams' => [
     'gp of poland teams',
     'gpp teamow',

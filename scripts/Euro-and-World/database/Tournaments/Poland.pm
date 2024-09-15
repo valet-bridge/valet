@@ -29,6 +29,31 @@ my %MEETS_POLAND =
 
     EDITIONS => 
     {
+      '2010' =>
+      {
+        # https://bridge.gda.pl/kongres/10/k_baltycki10.htm
+        ORDINAL => 50,
+        YEAR => 2010,
+        CITY => 'Sopot',
+        DATE_START => '2010-07-14',
+        DATE_END => '2010-07-25'
+      },
+      '2012' =>
+      {
+        # https://wyniki.pzbs.pl/2012/baltycki/
+        ORDINAL => 52,
+        YEAR => 2012,
+        DATE_START => '2012-07-26',
+        DATE_END => '2012-08-05'
+      },
+      '2013' =>
+      {
+        # https://wyniki.pzbs.pl/2013/baltycki/
+        ORDINAL => 53,
+        YEAR => 2013,
+        DATE_START => '2013-07-19',
+        DATE_END => '2013-07-27'
+      },
       '2014' =>
       {
         # https://wyniki.pzbs.pl/2014/baltycki/
@@ -82,7 +107,7 @@ my %MEETS_POLAND =
         # ?
         ORDINAL => 18,
         YEAR => 2009,
-        DATE_START => '2009-09-20',
+        DATE_START => '2009-09-19',
         DATE_END => '2009-09-20' # And more
       },
       '2010' =>
@@ -158,7 +183,7 @@ my %MEETS_POLAND =
         # https://wyniki.pzbs.pl/2012/gpp/05bydgoszcz/W-bydgpp.html
         ORDINAL => 49,
         YEAR => 2012,
-        DATE_START => '2012-03-25', # TODO Probably more days
+        DATE_START => '2012-03-24', # TODO Probably more days
         DATE_END => '2012-03-25'
       },
       '2015' =>
@@ -202,6 +227,12 @@ my %MEETS_POLAND =
 
     EDITIONS => 
     {
+      '2012' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2013-05-02', # Probably more days
+        DATE_END => '2013-05-05'
+      },
       '2013' =>
       {
         YEAR => 2013,
@@ -251,7 +282,7 @@ my %MEETS_POLAND =
       },
       '2006' =>
       {
-        # https://stara.pzbs.pl/wyniki/2006/krajowe/poznanski06/poznanski2006.htm
+        # https://stara.pzbs.pl/wyniki/2006/arajowe/poznanski06/poznanski2006.htm
         ORDINAL => 46,
         YEAR => 2006,
         DATE_START => '2006-06-30',
@@ -900,32 +931,56 @@ my %TOURNAMENTS_POLAND =
     COUNTRY => 'Poland',
     ORIGIN => 'National',
     ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
+    FORM => 'Pairs',
+    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2014' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2014,
+            DATE_START => '2014-03-30',
+            DATE_END => '2014-03-30'
           } 
         }
       },
     }
   },
+
+  # 'Friendly Match',
+  # {
+    # ORGANIZATION => 'PZBS',
+    # COUNTRY => 'Poland',
+    # ORIGIN => 'National',
+    # ZONE => 'Europe',
+    # FORM => 'Teams',
+    # SCORING => 'IMP',
+    # GENDER => 'Open',
+    # AGE => 'Open',
+
+    # EDITIONS =>
+    # {
+      # '2016' =>
+      # {
+        # CHAPTERS =>
+        # {
+          # MEET => 'Zulawski Congress',
+          # 'SINGLE' => 
+          # {
+            # YEAR => 2016,
+            # DATE_START => '2016-03-03',
+            # DATE_END => '2016-03-03'
+          # } 
+        # }
+      # },
+    # }
+  # },
 
   'Grand Prix of Poland Pairs',
   {
@@ -1624,6 +1679,18 @@ my %TOURNAMENTS_POLAND =
 
   'Grand Prix of Poland Teams',
   {
+    # Overviews of annual GPPT tournaments:
+    # 2013: https://www.pzbs.pl/archiwum/2013/1791-regulamin-grand-prix-polski-teamow-2013
+    # 2014: https://www.pzbs.pl/archiwum/2014/2265-komunikat-grand-prix-polski-teamow-jako-mistrzostwa-polski-teamow
+    # 2015: https://www.pzbs.pl/archiwum/regulaminy-2015/2866-komunikat-organizacyjny-mistrzostw-polski-teamow-2015
+    # 2016: https://www.pzbs.pl/archiwum/regulainy-2016/3031-komunikat-organizacyjny-29-mistrzostw-polski-teamow-grand-prix-polski-teamow-2016
+    # 2017: https://www.pzbs.pl/archiwum/regulaminy-2017/3544-grand-prix-polski-teamow-2017-komunikat-organizacyjny
+    # 2017-18: https://www.pzbs.pl/archiwum/regulaminy-2018/3904-grand-prix-polski-teamow-2017-18
+    # 2019-21: https://www.pzbs.pl/archiwum/regulaminy-2021/5302-grand-prix-polski-teamow-2019-20-komunikat
+    # 2022: https://www.pzbs.pl/archiwum/2022/6793-grand-prix-polski-teamow-2022-komunikat
+    # 2023: https://www.pzbs.pl/2023/7413-grand-prix-polski-teamow-2023-komunikat
+    # 2024: https://www.pzbs.pl/nowosci/8266-2024-02-15-12-20-59
+
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1684,7 +1751,20 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2012' =>
+      '2012A' =>
+      {
+        MEET => 'Krakow Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-03-24',
+            DATE_END => '2012-03-24'
+          } 
+        }
+      },
+      '2012B' =>
       {
         MEET => 'Slawa Congress',
         CHAPTERS =>
@@ -1699,6 +1779,34 @@ my %TOURNAMENTS_POLAND =
       },
       '2013A' =>
       {
+        MEET => 'Zulawski Congress',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-03-08',
+            DATE_END => '2013-03-09'
+          } 
+        }
+      },
+      '2013B' =>
+      {
+        MEET => 'Poznan Congress',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-06-01',
+            DATE_END => '2013-06-01'
+          } 
+        }
+      },
+      '2013C' =>
+      {
         MEET => 'Slawa Congress',
 
         CHAPTERS =>
@@ -1711,7 +1819,20 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2013B' =>
+      '2013D' =>
+      {
+        MEET => 'Baltic Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-07-22',
+            DATE_END => '2013-07-26'
+          } 
+        }
+      },
+      '2013E' =>
       {
         MEET => 'Boleslawiec Festival',
         CHAPTERS =>
@@ -1724,10 +1845,88 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2016' =>
+      '2013F' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-12-19',
+            DATE_END => '2013-12-21'
+          } 
+        }
+      },
+      '2014A' =>
+      {
+        # 
+        CITY => 'Bydgoszcz',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-03-14',
+            DATE_END => '2014-03-15'
+          } 
+        }
+      },
+      '2014B' =>
+      {
+        # https://wyniki.pzbs.pl/2014/_gpp/07wroclaw/t/fleaderb.html?1401096198
+        CITY => 'Wroclaw',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-05-24',
+            DATE_END => '2014-05-24'
+          } 
+        }
+      },
+      '2015A' =>
+      {
+        MEET => 'Krakow Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-03-21',
+            DATE_END => '2015-03-21'
+          } 
+        }
+      },
+      '2015B' =>
+      {
+        CITY => 'Bydgoszcz',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-03-29',
+            DATE_END => '2015-03-29'
+          } 
+        }
+      },
+      '2016A' =>
+      {
+        MEET => 'Zulawski Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-03-04',
+            DATE_END => '2016-03-06'
+          } 
+        }
+      },
+      '2016B' =>
       {
         MEET => 'Poznan Congress',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1820,20 +2019,17 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2009' =>
       {
-        # Link
-        MEET => 'Meet name',
+        # https://stara.pzbs.pl/wyniki/2009/krajowe/wielkoszewska2009/TT-08-11/index.html
 
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2009,
+            DATE_START => '2009-11-08',
+            DATE_END => '2009-11-08'
           } 
         }
       },
@@ -2012,20 +2208,16 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2011' =>
       {
-        # Link
-        MEET => 'Meet name',
-
+        MEET => 'Poznan Congress',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2011,
+            DATE_START => '2011-05-03',
+            DATE_END => '2011-05-03'
           } 
         }
       },
@@ -2114,35 +2306,77 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
-      '2014' =>
+      '2014-15' =>
       {
         # http://akademiabrydza.pl/blb/kontakt
         # Only on Wayback Machine
         CHAPTERS =>
         {
-          'C0' => 
+          'C00' => 
           {
             YEAR => 2014,
             DATE_START => '2014-10-22',
             DATE_END => '2014-10-22'
           },
-          'C1' => 
+          'C01' => 
           {
             YEAR => 2014,
             DATE_START => '2014-10-29',
             DATE_END => '2014-10-29'
           },
-          'C2' => 
+          'C02' => 
           {
             YEAR => 2014,
             DATE_START => '2014-11-05',
             DATE_END => '2014-11-05'
           },
-          'C3' => 
+          'C03' => 
           {
             YEAR => 2014,
             DATE_START => '2014-11-12',
             DATE_END => '2014-11-12'
+          },
+          'C04' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-11-19',
+            DATE_END => '2014-11-19'
+          },
+          'C05' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-11-26',
+            DATE_END => '2014-11-26'
+          },
+          'C06' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-12-03',
+            DATE_END => '2014-12-03'
+          },
+          'C07' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-12-10',
+            DATE_END => '2014-12-10'
+          },
+          'C08' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-12-17',
+            DATE_END => '2014-12-17'
+          },
+          'C09' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-01-07',
+            DATE_END => '2015-01-07'
+          },
+          'C10' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-01-14',
+            DATE_END => '2015-01-14'
           },
         }
       },
@@ -2217,25 +2451,20 @@ my %TOURNAMENTS_POLAND =
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
+    GENDER => 'Women',
+    AGE => 'U26',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2009' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2009,
+            DATE_START => '2009-05-09',
+            DATE_END => '2009-05-10'
           } 
         }
       },
@@ -2248,27 +2477,39 @@ my %TOURNAMENTS_POLAND =
     COUNTRY => 'Poland',
     ORIGIN => 'National',
     ZONE => 'Europe',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2009' =>
       {
-        # Link
-        MEET => 'Meet name',
+        # https://s3.eu-central-1.amazonaws.com/kongres.brydz.wlkp.pl/wyniki2009/W-cz1.html
+        MEET => 'Poznan Congress',
 
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2009,
+            DATE_START => '2009-06-12',
+            DATE_END => '2009-06-12'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        # https://wyniki.pzbs.pl/2013/mppimp/W-impfin.html
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-11-23',
+            DATE_END => '2013-11-23'
           } 
         }
       },
@@ -2281,27 +2522,46 @@ my %TOURNAMENTS_POLAND =
     COUNTRY => 'Poland',
     ORIGIN => 'National',
     ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
+    FORM => 'Individual',
+    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2010' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2010,
+            DATE_START => '2010-03-27',
+            DATE_END => '2010-03-27'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-01-21',
+            DATE_END => '2011-01-22'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-10-19',
+            DATE_END => '2013-10-20'
           } 
         }
       },
@@ -2314,27 +2574,22 @@ my %TOURNAMENTS_POLAND =
     COUNTRY => 'Poland',
     ORIGIN => 'National',
     ZONE => 'Europe',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'U26',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2012' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2012,
+            DATE_START => '2012-04-09',
+            DATE_END => '2012-04-12'
           } 
         }
       },
@@ -2348,12 +2603,50 @@ my %TOURNAMENTS_POLAND =
     ORIGIN => 'National',
     ZONE => 'Europe',
     FORM => 'Pairs',
-    SCORING => 'BAM',
+    SCORING => 'MP',
     GENDER => 'Mixed',
     AGE => 'Open',
 
     EDITIONS =>
     {
+      '2011' =>
+      {
+        # https://s3.eu-central-1.amazonaws.com/kongres.brydz.wlkp.pl/wyniki2011/W-sb2m.html
+        MEET => 'Poznan Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-04-30',
+            DATE_END => '2011-04-30'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-05-01',
+            DATE_END => '2012-05-01'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-05-01',
+            DATE_END => '2014-05-02'
+          } 
+        }
+      },
       '2015' =>
       {
         # https://wyniki.pzbs.pl/2015/mpp/W-mxtf.html
@@ -2400,20 +2693,17 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2007' =>
       {
-        # Link
-        MEET => 'Meet name',
-
+        # https://stara.pzbs.pl/wyniki/2007/H500Mixt/final/t/HTleaderb.html
+        CITY => 'Zegrze',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2007,
+            DATE_START => '2007-04-27',
+            DATE_END => '2007-04-29'
           } 
         }
       },
@@ -2429,6 +2719,85 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
+      '2007' =>
+      {
+        # https://stara.pzbs.pl/wyniki/2007/krajowe/gpp/09poznan/teamy/TTleaderb.html
+        MEET => 'Poznan Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-06-10',
+            DATE_END => '2007-06-10'
+          } 
+        }
+      },
+      '2009' =>
+      {
+        MEET => 'Poznan Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-06-14',
+            DATE_END => '2009-06-14'
+          } 
+        }
+      },
+      '2010A' =>
+      {
+        MEET => 'Zulawski Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-02-19',
+            DATE_END => '2010-02-19'
+          } 
+        }
+      },
+      '2010B' =>
+      {
+        MEET => 'Baltic Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-07-19',
+            DATE_END => '2010-07-21'
+          } 
+        }
+      },
+      '2012A' =>
+      {
+        MEET => 'Polish Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-05-02',
+            DATE_END => '2012-05-05'
+          } 
+        }
+      },
+      '2012B' =>
+      {
+        MEET => 'Baltic Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-07-30',
+            DATE_END => '2012-07-30'
+          } 
+        }
+      },
       '2013' =>
       {
         MEET => 'Polish Championships',
@@ -2442,7 +2811,33 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2015a' =>
+      '2014A' =>
+      {
+        MEET => 'Zulawski Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-01-25',
+            DATE_END => '2014-01-25'
+          } 
+        }
+      },
+      '2014B' =>
+      {
+        CHAPTERS =>
+        {
+          # https://wyniki.pzbs.pl/2014/_gpp/teamfin/14gptfrunda2.html
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-12-11',
+            DATE_END => '2014-12-13'
+          } 
+        }
+      },
+      '2015A' =>
       {
         MEET => 'Zulawski Congress',
         CHAPTERS =>
@@ -2455,10 +2850,11 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2015b' =>
+      '2015B' =>
       {
         CHAPTERS =>
         {
+          # https://wyniki.pzbs.pl/2015/_gpp/team/15gptofrunda1.html
           'SINGLE' => 
           {
             YEAR => 2015,
@@ -2483,20 +2879,93 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2004' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2004,
+            DATE_START => '2004-04-28',
+            DATE_END => '2004-04-28'
+          } 
+        }
+      },
+      '2005' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2005,
+            DATE_START => '2005-05-28',
+            DATE_END => '2005-05-31'
+          } 
+        }
+      },
+      '2007' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-01-24',
+            DATE_END => '2007-01-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-05-05',
+            DATE_END => '2007-05-06'
+          },
+          'C2' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-05-15',
+            DATE_END => '2007-05-15'
+          } 
+        }
+      },
+      '2008' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-01-27',
+            DATE_END => '2008-01-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-04-02',
+            DATE_END => '2008-04-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-05-04',
+            DATE_END => '2008-05-04'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-01-16',
+            DATE_END => '2014-01-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-02-21',
+            DATE_END => '2014-02-22'
           } 
         }
       },
@@ -2516,6 +2985,77 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
+      '2007' =>
+      {
+        MEET => 'Polish Championships',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-05-05',
+            DATE_END => '2007-05-05'
+          } 
+        }
+      },
+      '2009A' =>
+      {
+        # https://s3.eu-central-1.amazonaws.com/kongres.brydz.wlkp.pl/wyniki2009/W-cz1.html
+        MEET => 'Poznan Congress',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-06-11',
+            DATE_END => '2009-06-11'
+          } 
+        }
+      },
+      '2009B' =>
+      {
+        # https://s3.eu-central-1.amazonaws.com/kongres.brydz.wlkp.pl/wyniki2009/W-cz1.html
+        MEET => 'Poznan Congress',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-06-12',
+            DATE_END => '2009-06-12'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'Zulawski Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-02-21',
+            DATE_END => '2010-02-21'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        # https://s3.eu-central-1.amazonaws.com/kongres.brydz.wlkp.pl/wyniki2011/W-sb1.html
+        MEET => 'Poznan Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-04-30',
+            DATE_END => '2011-04-30'
+          } 
+        }
+      },
       '2015' =>
       {
         # https://wyniki.pzbs.pl/2015/mpp/W-mxtf.html
@@ -2555,8 +3095,8 @@ my %TOURNAMENTS_POLAND =
     COUNTRY => 'Poland',
     ORIGIN => 'National',
     ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
+    FORM => 'Pairs',
+    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
@@ -2564,18 +3104,14 @@ my %TOURNAMENTS_POLAND =
     {
       '2000' =>
       {
-        # Link
-        MEET => 'Meet name',
-
+        MEET => 'Poznan Congress',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            DATE_START => '2000-06-11',
+            DATE_END => '2000-06-14'
           } 
         }
       },
@@ -2591,6 +3127,92 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
+      '2009' =>
+      {
+        MEET => 'Boleslawiec Festival',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-09-19',
+            DATE_END => '2009-09-19'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        # https://www.pzbs.pl/wyniki-archiwum/wyniki2010/471-19-boleslawiecka-trzydniowka-wyniki
+        MEET => 'Boleslawiec Festival',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-10-02',
+            DATE_END => '2010-10-02'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        # https://wyniki.pzbs.pl/2011/110916boles/program.htm
+        MEET => 'Boleslawiec Festival',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-09-17',
+            DATE_END => '2011-09-17'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'Boleslawiec Festival',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-09-22',
+            DATE_END => '2012-09-22'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'Boleslawiec Festival',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-10-05',
+            DATE_END => '2013-10-05'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Boleslawiec Festival',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-09-26',
+            DATE_END => '2014-09-27'
+          } 
+        }
+      },
       '2015' =>
       {
         # https://wyniki.pzbs.pl/2015/_gpp/14boleslawiec/program.htm
@@ -2622,6 +3244,94 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
+      '2006-07' =>
+      {
+        # https://stara.pzbs.pl/liga/liga2006_7/pierwsza/1liga20067.htm
+
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-06-06',
+            DATE_END => '2007-06-08'
+          },
+        }
+      },
+      '2007-08' =>
+      {
+        # https://stara.pzbs.pl/liga/liga2007_8/pierwsza/1liga20078.htm
+
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-05-21',
+            DATE_END => '2008-05-21'
+          },
+        }
+      },
+      '2008-09' =>
+      {
+        # https://stara.pzbs.pl/liga/liga2008_9/pierwsza20089/pierwsza20089liga.html
+
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-05-14',
+            DATE_END => '2009-05-16'
+          },
+        }
+      },
+      '2009-10' =>
+      {
+        # https://www.pzbs.pl/ligi-all/93
+
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-05-01',
+            DATE_END => '2010-05-03'
+          },
+        }
+      },
+      '2010-11' =>
+      {
+        # https://www.pzbs.pl/ligi-all/92?start=20
+
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-10-22',
+            DATE_END => '2010-10-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-01-07',
+            DATE_END => '2011-01-09'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-03-26',
+            DATE_END => '2011-03-27'
+          },
+          'C3' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-05-19',
+            DATE_END => '2011-05-21'
+          },
+        }
+      },
       '2011-12' =>
       {
         # https://www.pzbs.pl/ligi-all/84/1219
@@ -2641,6 +3351,18 @@ my %TOURNAMENTS_POLAND =
             DATE_END => '2012-01-15'
           },
           'C2' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-02-11',
+            DATE_END => '2012-02-12'
+          },
+          'C3' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-03-03',
+            DATE_END => '2012-03-03'
+          },
+          'C4' => 
           {
             YEAR => 2012,
             DATE_START => '2012-05-09',
@@ -2664,9 +3386,21 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2013,
             DATE_START => '2013-01-04',
-            DATE_END => '2013-01-05'
+            DATE_END => '2013-01-06'
           },
           'C2' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-03-09',
+            DATE_END => '2013-03-10'
+          },
+          'C3' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-04-05',
+            DATE_END => '2013-04-05'
+          },
+          'C4' => 
           {
             YEAR => 2013,
             DATE_START => '2013-05-16',
@@ -2695,6 +3429,18 @@ my %TOURNAMENTS_POLAND =
           'C2' => 
           {
             YEAR => 2014,
+            DATE_START => '2014-03-07',
+            DATE_END => '2014-03-08'
+          },
+          'C3' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-04-11',
+            DATE_END => '2014-04-12'
+          },
+          'C4' => 
+          {
+            YEAR => 2014,
             DATE_START => '2014-06-12',
             DATE_END => '2014-06-14'
           },
@@ -2708,6 +3454,7 @@ my %TOURNAMENTS_POLAND =
         {
           'C0' => 
           {
+            CITY => 'Wroclaw',
             YEAR => 2014,
             DATE_START => '2014-10-03',
             DATE_END => '2014-10-05'
@@ -2721,8 +3468,26 @@ my %TOURNAMENTS_POLAND =
           'C2' => 
           {
             YEAR => 2015,
+            DATE_START => '2015-02-07',
+            DATE_END => '2015-02-08'
+          },
+          'C3' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-02-20',
+            DATE_END => '2015-02-21'
+          },
+          'C4' => 
+          {
+            YEAR => 2015,
             DATE_START => '2015-06-17',
             DATE_END => '2015-06-20'
+          },
+          'C5' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-07-11',
+            DATE_END => '2015-07-12'
           },
         }
       },
@@ -2734,12 +3499,14 @@ my %TOURNAMENTS_POLAND =
         {
           'C0' => 
           {
+            CITY => 'Wroclaw',
             YEAR => 2015,
             DATE_START => '2015-10-16',
             DATE_END => '2015-10-18'
           },
           'C1' => 
           {
+            CITY => 'Warsaw',
             YEAR => 2016,
             DATE_START => '2016-01-08',
             DATE_END => '2016-01-10'
@@ -2778,20 +3545,15 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2014' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2014,
+            DATE_START => '2014-05-18',
+            DATE_END => '2014-05-18'
           } 
         }
       },
@@ -2807,24 +3569,19 @@ my %TOURNAMENTS_POLAND =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'Seniors',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2014' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2014,
+            DATE_START => '2014-02-15',
+            DATE_END => '2014-02-16'
           } 
         }
       },
@@ -2844,53 +3601,15 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2010' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
-          } 
-        }
-      },
-    }
-  },
-
-  'Polish Super League',
-  {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        # Link
-        MEET => 'Meet name',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2010,
+            DATE_START => '2010-06-12',
+            DATE_END => '2010-06-13'
           } 
         }
       },
@@ -2963,33 +3682,28 @@ my %TOURNAMENTS_POLAND =
     }
   },
 
-  'Polish U16 Championship',
+  'Polish U16 Pairs',
   {
     ORGANIZATION => 'PZBS',
     COUNTRY => 'Poland',
     ORIGIN => 'National',
     ZONE => 'Europe',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'U16',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2012' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2012,
+            DATE_START => '2012-05-18',
+            DATE_END => '2012-05-20'
           } 
         }
       },
@@ -3002,27 +3716,22 @@ my %TOURNAMENTS_POLAND =
     COUNTRY => 'Poland',
     ORIGIN => 'National',
     ZONE => 'Europe',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'U20',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2014' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2014,
+            DATE_START => '2014-04-12',
+            DATE_END => '2014-04-13'
           } 
         }
       },
@@ -3066,25 +3775,44 @@ my %TOURNAMENTS_POLAND =
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Women',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2004' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2004,
+            DATE_START => '2004-04-28',
+            DATE_END => '2004-04-28'
+          } 
+        }
+      },
+      '2006' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            DATE_START => '2006-04-05',
+            DATE_END => '2006-04-09'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-04-27',
+            DATE_END => '2012-04-29'
           } 
         }
       },
@@ -3130,27 +3858,22 @@ my %TOURNAMENTS_POLAND =
     COUNTRY => 'Poland',
     ORIGIN => 'National',
     ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Mixed',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2014' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2014,
+            DATE_START => '2014-05-02',
+            DATE_END => '2014-05-02'
           } 
         }
       },
@@ -3266,20 +3989,18 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2011' =>
       {
-        # Link
-        MEET => 'Meet name',
+        # https://s3.eu-central-1.amazonaws.com/kongres.brydz.wlkp.pl/wyniki2011/W-sb2.html
+        MEET => 'Poznan Congress',
 
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2011,
+            DATE_START => '2011-04-30',
+            DATE_END => '2011-04-30'
           } 
         }
       },

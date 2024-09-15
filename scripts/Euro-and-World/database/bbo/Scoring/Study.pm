@@ -71,6 +71,27 @@ my @LOCAL_SUBS =
   { START => 43325, END => 43341, TEXT => 'BAM', CORR => 'MP' },
   { START => 44725, END => 44741, TEXT => 'BAM', CORR => 'MP' },
   { START => 44958, END => 44959, TEXT => 'BAM', CORR => 'MP' },
+
+  { START =>  4285, END =>  4286, TEXT => 'BAM', CORR => 'MP' },
+  { START => 10140, END => 10141, TEXT => 'BAM', CORR => 'MP' },
+  { START => 10161, END => 10169, TEXT => 'BAM', CORR => 'MP' },
+  { START => 13235, END => 13242, TEXT => 'BAM', CORR => 'MP' },
+  { START => 16511, END => 16537, TEXT => 'BAM', CORR => 'MP' },
+
+  { START => 11213, END => 11227, TEXT => 'BAM', CORR => 'Patton' },
+  { START => 15441, END => 15453, TEXT => 'BAM', CORR => 'Patton' },
+  { START => 20025, END => 20044, TEXT => 'BAM', CORR => 'Patton' },
+  { START => 25436, END => 25451, TEXT => 'BAM', CORR => 'Patton' },
+  { START => 30617, END => 30654, TEXT => 'BAM', CORR => 'Patton' },
+  { START => 35703, END => 35712, TEXT => 'BAM', CORR => 'Patton' },
+  { START => 40957, END => 40967, TEXT => 'IMP', CORR => 'Patton' },
+
+  { START => 30808, END => 30840, TEXT => 'BAM', CORR => 'MP' },
+
+  { START => 32745, END => 32746, TEXT => 'BAM', CORR => 'MP' },
+  { START => 33281, END => 33285, TEXT => 'BAM', CORR => 'MP' },
+
+  { START => 36516, END => 36516, TEXT => 'BAM', CORR => 'MP' },
 );
 
 

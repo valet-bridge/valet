@@ -100,7 +100,7 @@ my %SCORING_CORRECTIONS = (
 );
 
 my %FORM_CORRECTIONS = (
-  # Says Team 1, Team 2 in BBO file, but is pairs
+  # Says Team 1, Team 2 in BBO file, but is pairs or individual
   'Argentinian Mixed Pairs' => [
     43946],
   'Belgian Open Pairs' => [3075, 3076, 9813, 9824, 18125,18133],
@@ -205,7 +205,14 @@ my %FORM_CORRECTIONS = (
     45160, 45161, 45164, 45166, 45168, 45171, 45172],
   'Italian Mixed Pairs' => [
     36287, 36289, 36293, 36295, 36296, 36308, 36309,
-    41672, 41674, 41691, 41692, 41704, 41705]
+    41672, 41674, 41691, 41692, 41704, 41705],
+  'Polish Individual Championship' => [
+    13235, 13236, 13237, 13242,
+    16511, 16513, 16514, 16515, 16526, 16532, 16537],
+  'Polish Junior Pairs Trials' => [
+    22677, 22678, 22679, 22680, 22681],
+  'Polish Open Pairs' => [
+     4285,  4286],
 );
 
 
@@ -332,7 +339,8 @@ sub prune_field_using
   {
     die "Multiple form values" unless $len == 0;
     my $read = $self->{$field}[0];
-    if ($read eq 'Teams' && $value eq 'Pairs')
+    if (($read eq 'Teams' || $read eq 'Pairs') && 
+        ($value eq 'Pairs' || $value eq 'Individual'))
     {
       if (exists $header->{TOURNAMENT_NAME})
       {
