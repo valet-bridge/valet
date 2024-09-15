@@ -283,7 +283,8 @@ while ($line = <$fh>)
     print_chunk(\%chunk);
     print_chains_by_tag(\@chains_title, "TITLE");
     print "BOARDS ", $chunk{BOARDS}, "\n";
-    print "SCORING ", $chunk{SCORING}, "\n";
+    # print "SCORING ", $chunk{SCORING}, "\n";
+    print "SCORING ", $teams{SCORING}, "\n";
     for my $team (qw(TEAM1 TEAM2))
     {
       print_chains_by_tag(\@{$chains_team{$team}}, $team);

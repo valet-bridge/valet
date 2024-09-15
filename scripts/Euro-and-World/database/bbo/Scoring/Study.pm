@@ -12,12 +12,92 @@ use open ':std', ':encoding(UTF-8)';
 our @ISA = qw(Exporter);
 our @EXPORT = qw(study);
 
+my @LOCAL_SUBS =
+(
+  # { START => , END => , TEXT => '',
+    # CORR => '' },
+
+  # Lots of "Grand Prix of Poland Pairs" are entered as BAM
+  # (and sometimes IMPs), I believe incorrectly.
+
+  { START =>  1116, END =>  1128, TEXT => 'BAM', CORR => 'MP' },
+  { START =>  3077, END =>  3078, TEXT => 'BAM', CORR => 'MP' },
+  { START =>  3453, END =>  3455, TEXT => 'BAM', CORR => 'MP' },
+  { START =>  4979, END =>  4982, TEXT => 'IMP', CORR => 'MP' }, # IMP!
+  { START =>  8351, END =>  8353, TEXT => 'BAM', CORR => 'MP' },
+  { START =>  9230, END =>  9241, TEXT => 'BAM', CORR => 'MP' },
+  { START => 10194, END => 10194, TEXT => 'IMP', CORR => 'MP' }, # IMP!
+  { START => 11229, END => 11247, TEXT => 'IMP', CORR => 'MP' }, # IMP!
+  { START => 12222, END => 12253, TEXT => 'BAM', CORR => 'MP' },
+  { START => 12739, END => 12756, TEXT => 'BAM', CORR => 'MP' },
+  { START => 12983, END => 13010, TEXT => 'BAM', CORR => 'MP' },
+  { START => 14200, END => 14275, TEXT => 'BAM', CORR => 'MP' },
+  { START => 15457, END => 15461, TEXT => 'BAM', CORR => 'MP' },
+  { START => 15462, END => 15463, TEXT => 'IMP', CORR => 'MP' }, # IMP!
+  { START => 16307, END => 16377, TEXT => 'BAM', CORR => 'MP' },
+  { START => 16829, END => 16842, TEXT => 'BAM', CORR => 'MP' },
+  { START => 17625, END => 17633, TEXT => 'BAM', CORR => 'MP' },
+  { START => 20051, END => 20063, TEXT => 'BAM', CORR => 'MP' },
+  { START => 21520, END => 21553, TEXT => 'BAM', CORR => 'MP' },
+  { START => 21960, END => 21975, TEXT => 'BAM', CORR => 'MP' },
+  { START => 22437, END => 22453, TEXT => 'BAM', CORR => 'MP' },
+  { START => 23503, END => 23518, TEXT => 'IMP', CORR => 'MP' }, # IMP!
+  { START => 23594, END => 23598, TEXT => 'BAM', CORR => 'MP' },
+  { START => 23823, END => 23837, TEXT => 'BAM', CORR => 'MP' },
+  { START => 25456, END => 25467, TEXT => 'BAM', CORR => 'MP' },
+  { START => 26446, END => 26514, TEXT => 'BAM', CORR => 'MP' },
+  { START => 27263, END => 27274, TEXT => 'BAM', CORR => 'MP' },
+  { START => 27419, END => 27436, TEXT => 'BAM', CORR => 'MP' },
+  { START => 28295, END => 28314, TEXT => 'BAM', CORR => 'MP' },
+  { START => 28467, END => 28479, TEXT => 'BAM', CORR => 'MP' },
+  { START => 29182, END => 29191, TEXT => 'BAM', CORR => 'MP' },
+  { START => 29546, END => 29552, TEXT => 'BAM', CORR => 'MP' },
+  { START => 30673, END => 30704, TEXT => 'BAM', CORR => 'MP' },
+  { START => 31409, END => 31416, TEXT => 'BAM', CORR => 'MP' },
+  { START => 31521, END => 31604, TEXT => 'BAM', CORR => 'MP' },
+  { START => 32120, END => 32134, TEXT => 'BAM', CORR => 'MP' },
+  { START => 32643, END => 32645, TEXT => 'BAM', CORR => 'MP' },
+  { START => 33817, END => 33829, TEXT => 'BAM', CORR => 'MP' },
+  { START => 34365, END => 34372, TEXT => 'BAM', CORR => 'MP' },
+  { START => 34548, END => 34554, TEXT => 'BAM', CORR => 'MP' },
+  { START => 35734, END => 35746, TEXT => 'BAM', CORR => 'MP' },
+  { START => 37029, END => 37069, TEXT => 'BAM', CORR => 'MP' },
+  { START => 37612, END => 37621, TEXT => 'BAM', CORR => 'MP' },
+  { START => 38008, END => 38028, TEXT => 'BAM', CORR => 'MP' },
+  { START => 40982, END => 40998, TEXT => 'BAM', CORR => 'MP' },
+  { START => 42370, END => 42385, TEXT => 'BAM', CORR => 'MP' },
+  { START => 42397, END => 42420, TEXT => 'IMP', CORR => 'MP' }, # IMP!
+  { START => 43307, END => 43311, TEXT => 'BAM', CORR => 'MP' },
+  { START => 43325, END => 43341, TEXT => 'BAM', CORR => 'MP' },
+  { START => 44725, END => 44741, TEXT => 'BAM', CORR => 'MP' },
+  { START => 44958, END => 44959, TEXT => 'BAM', CORR => 'MP' },
+);
+
+
+sub local_substitutions
+{
+  my ($text, $bbono) = @_;
+
+  for my $entry (@LOCAL_SUBS)
+  {
+    if ($bbono >= $entry->{START} && $bbono <= $entry->{END})
+    {
+      $text =~ s/$entry->{TEXT}/$entry->{CORR}/i;
+    }
+  }
+  return $text;
+}
+
 
 sub study
 {
   my ($text, $result, $bbono) = @_;
 
-  return unless defined $text;
+  if (! defined $text)
+  {
+    $result->{SCORING} = '';
+    return;
+  }
 
   if ($text eq 'I')
   {
@@ -35,6 +115,8 @@ sub study
   {
     die "$bbono: Unknown scoring $text";
   }
+
+  $result->{SCORING} = local_substitutions($result->{SCORING}, $bbono);
 }
 
 

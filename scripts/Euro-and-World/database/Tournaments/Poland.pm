@@ -71,7 +71,7 @@ my %MEETS_POLAND =
   {
     ORGANIZATION => 'PZBS',
     COUNTRY => 'Poland',
-    CITY => 'Bydgoszcz',
+    CITY => 'Boleslawiec',
     ORIGIN => 'National',
     ZONE => 'Europe',
 
@@ -160,6 +160,13 @@ my %MEETS_POLAND =
         YEAR => 2012,
         DATE_START => '2012-03-25', # TODO Probably more days
         DATE_END => '2012-03-25'
+      },
+      '2015' =>
+      {
+        # https://wyniki.pzbs.pl/2015/_gpp/03krakow/
+        YEAR => 2015,
+        DATE_START => '2015-03-20',
+        DATE_END => '2015-03-22'
       },
     }
   },
@@ -927,7 +934,7 @@ my %TOURNAMENTS_POLAND =
     ORIGIN => 'National',
     ZONE => 'Europe',
     FORM => 'Pairs',
-    SCORING => 'BAM',
+    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
@@ -945,6 +952,9 @@ my %TOURNAMENTS_POLAND =
     # 16th, 2015: https://www.pzbs.pl/archiwum/regulaminy-2015/2596-komunikat-budimex-grand-prix-polski-par-2015
     # 17th, 2016: https://www.pzbs.pl/archiwum/regulainy-2016/3030-17-budimex-grand-prix-polski-par-komunikat-2016
     # 19th, 2017/18: https://www.pzbs.pl/archiwum/regulaminy-2018/3905-grand-prix-polski-par-2017-18
+    # 21th, 2019/21: https://www.pzbs.pl/archiwum/regulaminy-2021/5301-grand-prix-polski-par-2019-20-komunikat
+    # 22nd, 2022: https://www.pzbs.pl/archiwum/2022/6792-grand-prix-polski-par-2022-komunikat
+    # 23rd, 2023: https://www.pzbs.pl/2023/7411-grand-prix-polski-par-2023-komunikat
 
     EDITIONS =>
     {
@@ -959,6 +969,19 @@ my %TOURNAMENTS_POLAND =
             YEAR => 2005,
             DATE_START => '2005-09-06',
             DATE_END => '2005-09-06'
+          } 
+        }
+      },
+      '2006A' =>
+      {
+        CITY => 'Warsaw',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            DATE_START => '2006-12-15',
+            DATE_END => '2006-12-17'
           } 
         }
       },
@@ -1002,6 +1025,32 @@ my %TOURNAMENTS_POLAND =
       },
       '2009A' =>
       {
+        CITY => 'Saw',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-03-08',
+            DATE_END => '2009-03-08'
+          } 
+        }
+      },
+      '2009B' =>
+      {
+        MEET => 'Poznan Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-06-13',
+            DATE_END => '2009-06-13'
+          } 
+        }
+      },
+      '2009C' =>
+      {
         MEET => 'Boleslawiec Festival',
         CHAPTERS =>
         {
@@ -1013,7 +1062,7 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2009B' =>
+      '2009D' =>
       {
         # https://stara.pzbs.pl/wyniki/2009/krajowe/gpp/gppp2009final/www/el.html
         CITY => 'Starachowice',
@@ -1108,6 +1157,19 @@ my %TOURNAMENTS_POLAND =
       },
       '2011B' =>
       {
+        MEET => 'Poznan Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-05-01',
+            DATE_END => '2011-05-01'
+          } 
+        }
+      },
+      '2011C' =>
+      {
         MEET => 'Boleslawiec Festival',
         CHAPTERS =>
         {
@@ -1116,6 +1178,18 @@ my %TOURNAMENTS_POLAND =
             YEAR => 2011,
             DATE_START => '2011-09-18',
             DATE_END => '2011-09-18'
+          } 
+        }
+      },
+      '2011D' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-12-16',
+            DATE_END => '2011-12-18'
           } 
         }
       },
@@ -1174,6 +1248,19 @@ my %TOURNAMENTS_POLAND =
       },
       '2012E' =>
       {
+        CITY => 'Pulawy',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-06-16',
+            DATE_END => '2012-06-16'
+          } 
+        }
+      },
+      '2012F' =>
+      {
         MEET => 'Boleslawiec Festival',
         CHAPTERS =>
         {
@@ -1185,7 +1272,7 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2012F' =>
+      '2012G' =>
       {
         CHAPTERS =>
         {
@@ -1197,7 +1284,7 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2012G' =>
+      '2012H' =>
       {
         CHAPTERS =>
         {
@@ -1213,6 +1300,19 @@ my %TOURNAMENTS_POLAND =
       {
         CHAPTERS =>
         {
+          MEET => 'Zulawski Congress',
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-03-10',
+            DATE_END => '2013-03-10'
+          } 
+        }
+      },
+      '2013B' =>
+      {
+        CHAPTERS =>
+        {
           'SINGLE' => 
           {
             YEAR => 2013,
@@ -1222,7 +1322,7 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2013B' =>
+      '2013C' =>
       {
         MEET => 'Wroclaw Meeting',
         CHAPTERS =>
@@ -1235,7 +1335,7 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2013C' =>
+      '2013D' =>
       {
         MEET => 'Poznan Congress',
         CHAPTERS =>
@@ -1243,12 +1343,12 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2013,
-            DATE_START => '2013-06-01',
-            DATE_END => '2013-06-01'
+            DATE_START => '2013-06-02',
+            DATE_END => '2013-06-02'
           } 
         }
       },
-      '2013D' =>
+      '2013E' =>
       {
         MEET => 'Slawa Congress',
         CHAPTERS =>
@@ -1261,7 +1361,20 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2013E' =>
+      '2013F' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            CITY => 'Sopot',
+            DATE_START => '2013-07-21',
+            DATE_END => '2013-07-21'
+          } 
+        }
+      },
+      '2013G' =>
       {
         MEET => 'Boleslawiec Festival',
         CHAPTERS =>
@@ -1274,7 +1387,7 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2013F' =>
+      '2013H' =>
       {
         CHAPTERS =>
         {
@@ -1287,15 +1400,15 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2013G' =>
+      '2013I' =>
       {
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2013,
-            DATE_START => '2013-12-17',
-            DATE_END => '2013-12-19'
+            DATE_START => '2013-12-13',
+            DATE_END => '2013-12-15'
           } 
         }
       },
@@ -1314,6 +1427,45 @@ my %TOURNAMENTS_POLAND =
       },
       '2014B' =>
       {
+        CHAPTERS =>
+        {
+          CITY => 'Bydgoszcz',
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-03-16',
+            DATE_END => '2014-03-16'
+          } 
+        }
+      },
+      '2014C' =>
+      {
+        CHAPTERS =>
+        {
+          CITY => 'Krakow',
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-03-30',
+            DATE_END => '2014-03-30'
+          } 
+        }
+      },
+      '2014D' =>
+      {
+        MEET => 'Wroclaw Meeting',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-05-25',
+            DATE_END => '2014-05-25'
+          } 
+        }
+      },
+      '2014E' =>
+      {
         MEET => 'Slawa Congress',
         CHAPTERS =>
         {
@@ -1325,7 +1477,20 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2014C' =>
+      '2014F' =>
+      {
+        CITY => 'Sopot',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-07-20',
+            DATE_END => '2014-07-20'
+          } 
+        }
+      },
+      '2014G' =>
       {
         MEET => 'Boleslawiec Festival',
         CHAPTERS =>
@@ -1338,7 +1503,7 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2014D' =>
+      '2014H' =>
       {
         CHAPTERS =>
         {
@@ -1350,7 +1515,59 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2015' =>
+      '2015A' =>
+      {
+        CHAPTERS =>
+        {
+          CITY => 'Szczyrk',
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-02-14',
+            DATE_END => '2015-02-14'
+          } 
+        }
+      },
+      '2015B' =>
+      {
+        MEET => 'Krakow Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-03-22',
+            DATE_END => '2015-03-22'
+          } 
+        }
+      },
+      '2015C' =>
+      {
+        CHAPTERS =>
+        {
+          CITY => 'Bydgoszcz',
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-03-28',
+            DATE_END => '2015-03-28'
+          } 
+        }
+      },
+      '2015D' =>
+      {
+        MEET => 'Boleslawiec Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-09-20',
+            DATE_END => '2015-09-20'
+          } 
+        }
+      },
+      '2015E' =>
       {
         # https://wyniki.pzbs.pl/2015/_gpp/fin/15gppfin2.html
         CHAPTERS =>
@@ -1365,6 +1582,19 @@ my %TOURNAMENTS_POLAND =
       },
       '2016A' =>
       {
+        CHAPTERS =>
+        {
+          CITY => 'Szczyrk',
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-02-20',
+            DATE_END => '2016-02-20'
+          } 
+        }
+      },
+      '2016B' =>
+      {
         MEET => 'Luczniczka Meeting',
         CHAPTERS =>
         {
@@ -1376,7 +1606,7 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2016B' =>
+      '2016C' =>
       {
         MEET => 'Poznan Congress',
         CHAPTERS =>

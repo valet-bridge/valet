@@ -115,7 +115,7 @@ my @LOCAL_SUBS =
     CORR => 'French Open Trials' },
   { START => 8324, END => 8331, TEXT => 'Canadian Team',
     CORR => 'Canadian Open Teams' },
-  { START => 8351, END => 8353, TEXT => 'Grand Prix of Poland',
+  { START => 8351, END => 8353, TEXT => 'BAM Grand Prix of Poland',
     CORR => 'Grand Prix of Poland Pairs' },
   { START => 8489, END => 8503, TEXT => 'Selection Francaise', 
     CORR => 'French Open Trials' },
