@@ -1940,39 +1940,6 @@ my %TOURNAMENTS_POLAND =
     }
   },
 
-  'Grand Prix of Warsaw',
-  {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        # Link
-        MEET => 'Meet name',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
-          } 
-        }
-      },
-    }
-  },
-
   'Pomerania Cup',
   {
     ORGANIZATION => 'PZBS',
@@ -2169,39 +2136,6 @@ my %TOURNAMENTS_POLAND =
             YEAR => 2013,
             DATE_START => '2013-03-23',
             DATE_END => '2013-03-23'
-          } 
-        }
-      },
-    }
-  },
-
-  'Krakow Teams',
-  {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        # Link
-        MEET => 'Meet name',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
           } 
         }
       },
@@ -3139,35 +3073,6 @@ my %TOURNAMENTS_POLAND =
     }
   },
 
-  'Polish Pairs',
-  {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-    FORM => 'Pairs',
-    SCORING => 'MP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        MEET => 'Poznan Congress',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            DATE_START => '2000-06-11',
-            DATE_END => '2000-06-14'
-          } 
-        }
-      },
-    }
-  },
-
   'Polish Patton Teams',
   {
     FORM => 'Teams',
@@ -3666,72 +3571,6 @@ my %TOURNAMENTS_POLAND =
     }
   },
 
-  'Polish Teams',
-  {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        # Link
-        MEET => 'Meet name',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
-          } 
-        }
-      },
-    }
-  },
-
-  'Polish Top Individual',
-  {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        # Link
-        MEET => 'Meet name',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
-          } 
-        }
-      },
-    }
-  },
-
   'Polish U16 Pairs',
   {
     ORGANIZATION => 'PZBS',
@@ -3869,39 +3708,6 @@ my %TOURNAMENTS_POLAND =
     }
   },
 
-  'Polish Youngster Teams',
-  {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        # Link
-        MEET => 'Meet name',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
-          } 
-        }
-      },
-    }
-  },
-
   'Poznan Mixed Pairs',
   {
     ORGANIZATION => 'PZBS',
@@ -3987,39 +3793,6 @@ my %TOURNAMENTS_POLAND =
             YEAR => 2012,
             DATE_START => '2012-06-02',
             DATE_END => '2012-06-02'
-          } 
-        }
-      },
-    }
-  },
-
-  'Poznan Open Teams',
-  {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        # Link
-        MEET => 'Meet name',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
           } 
         }
       },
