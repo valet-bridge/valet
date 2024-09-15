@@ -77,6 +77,14 @@ my %MEETS_POLAND =
 
     EDITIONS => 
     {
+      '2009' =>
+      {
+        # ?
+        ORDINAL => 18,
+        YEAR => 2009,
+        DATE_START => '2009-09-20',
+        DATE_END => '2009-09-20' # And more
+      },
       '2010' =>
       {
         # https://www.pzbs.pl/wyniki-archiwum/wyniki2010/471-19-boleslawiecka-trzydniowka-wyniki
@@ -124,6 +132,13 @@ my %MEETS_POLAND =
         YEAR => 2015,
         DATE_START => '2015-09-17',
         DATE_END => '2015-09-20'
+      },
+      '2024' =>
+      {
+        # http://mzbskarkonosze.internetdsl.pl/trzydniowka/2024/program.htm
+        YEAR => 2024,
+        DATE_START => '2024-08-30',
+        DATE_END => '2024-09-01'
       },
     }
   },
@@ -868,8 +883,6 @@ my %MEETS_POLAND =
     }
   },
 
-  # http://www.bridge.elblag.com.pl/zulawski14/rules.html
-
 );
 
 my %TOURNAMENTS_POLAND =
@@ -918,8 +931,102 @@ my %TOURNAMENTS_POLAND =
     GENDER => 'Open',
     AGE => 'Open',
 
+    # Overviews of annual GPPP tournaments:
+    # 6th, 2005: https://stara.pzbs.pl/komunikaty/r2005/reg_gppp2005.htm
+    # 7th, 2006: https://stara.pzbs.pl/komunikaty/r2006/reg_gppp2006.htm
+    # 8th, 2007: https://stara.pzbs.pl/komunikaty/r2007/reg_gppp2007.htm
+    # 9th, 2008: https://stara.pzbs.pl/komunikaty/r2008/gppp2008.htm
+    # 10th, 2009: https://stara.pzbs.pl/komunikaty/r2009/gppp2009.html
+    # 11th, 2010: https://stara.pzbs.pl/komunikaty/r2010/gppp2010reg.html
+    # 12th, 2011: https://www.pzbs.pl/archiwum/regulaminy2011/598-budimex-gpp-2011-regulamin
+    # 13th, 2012: https://www.pzbs.pl/archiwum/regulaminy2012/1162-budimex-grand-prix-polski-par-2012
+    # 14th, 2013: https://www.pzbs.pl/archiwum/2013/1593-budimex-14-grand-prix-polski-par-2013
+    # 15th, 2014: https://www.pzbs.pl/archiwum/2014/2268-15-budimex-grand-prix-polski-par-komunikat-2014
+    # 16th, 2015: https://www.pzbs.pl/archiwum/regulaminy-2015/2596-komunikat-budimex-grand-prix-polski-par-2015
+    # 17th, 2016: https://www.pzbs.pl/archiwum/regulainy-2016/3030-17-budimex-grand-prix-polski-par-komunikat-2016
+    # 19th, 2017/18: https://www.pzbs.pl/archiwum/regulaminy-2018/3905-grand-prix-polski-par-2017-18
+
     EDITIONS =>
     {
+      '2005A' =>
+      {
+        # https://stara.pzbs.pl/komunikaty/r2005/reg_gppt2005.htm
+        CITY => 'Warsaw',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2005,
+            DATE_START => '2005-09-06',
+            DATE_END => '2005-09-06'
+          } 
+        }
+      },
+      '2007A' =>
+      {
+        CHAPTERS =>
+        {
+          # https://stara.pzbs.pl/wyniki/2007/krajowe/gpp/05lodz/3/3.html
+          CITY => 'Lodz',
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-04-15',
+            DATE_END => '2007-04-15'
+          } 
+        }
+      },
+      '2007B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-12-14',
+            DATE_END => '2007-12-16'
+          } 
+        }
+      },
+      '2008A' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-12-19',
+            DATE_END => '2008-12-21'
+          } 
+        }
+      },
+      '2009A' =>
+      {
+        MEET => 'Boleslawiec Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-09-20',
+            DATE_END => '2009-09-20'
+          } 
+        }
+      },
+      '2009B' =>
+      {
+        # https://stara.pzbs.pl/wyniki/2009/krajowe/gpp/gppp2009final/www/el.html
+        CITY => 'Starachowice',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-12-18',
+            DATE_END => '2009-12-20'
+          } 
+        }
+      },
       '2010A' =>
       {
         MEET => 'Zulawski Congress',
@@ -935,6 +1042,20 @@ my %TOURNAMENTS_POLAND =
       },
       '2010B' =>
       {
+        CHAPTERS =>
+        {
+          # https://michzimny.pl/bridge/2010/pila/W-gp.html
+          CITY => 'Pila',
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-03-06',
+            DATE_END => '2010-03-07'
+          } 
+        }
+      },
+      '2010C' =>
+      {
         MEET => 'Poznan Congress',
         CHAPTERS =>
         {
@@ -946,7 +1067,7 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2010C' =>
+      '2010D' =>
       {
         MEET => 'Boleslawiec Festival',
         CHAPTERS =>
@@ -959,7 +1080,7 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2010D' =>
+      '2010E' =>
       {
         # https://wyniki.pzbs.pl/2010/_gpp/final/f.html
         CHAPTERS =>
@@ -1280,7 +1401,34 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
-      '2009' =>
+      '2009A' =>
+      {
+        MEET => 'Poznan Congress',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-06-13',
+            DATE_END => '2009-06-13'
+          } 
+        }
+      },
+      '2009B' =>
+      {
+        CHAPTERS =>
+        {
+          CITY => 'Staszic',
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-03-08',
+            DATE_END => '2009-03-08'
+          } 
+        }
+      },
+      '2009C' =>
       {
         MEET => 'Warsaw Grand Prix',
         CHAPTERS =>
@@ -2779,7 +2927,45 @@ my %TOURNAMENTS_POLAND =
     }
   },
 
-  'Poznan Pairs Cup',
+  'Polish BAM Cup',
+  {
+    FORM => 'Teams',
+    SCORING => 'BAM',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2006' =>
+      {
+        MEET => 'Warsaw Grand Prix',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            DATE_START => '2006-08-26',
+            DATE_END => '2006-08-26'
+          } 
+        }
+      },
+      '2007' =>
+      {
+        # https://www.warsbrydz.pl/GPW2006/support/program.htm
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-05-26',
+            DATE_END => '2007-05-27'
+          } 
+        }
+      },
+    }
+  },
+
+  'Polish Pairs Cup',
   {
     FORM => 'Pairs',
     SCORING => 'BAM',
