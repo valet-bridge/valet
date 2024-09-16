@@ -517,7 +517,7 @@ my %MEETS_POLAND =
       {
         # https://wyniki.pzbs.pl/2015/_gpp/04bydgoszcz/
         ORDINAL => 52,
-        YEAR => 2014,
+        YEAR => 2015,
         DATE_START => '2015-03-27',
         DATE_END => '2015-03-29'
       },
@@ -582,17 +582,35 @@ my %MEETS_POLAND =
 
     EDITIONS => 
     {
+      '2007' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-05-05', # Probably more days
+        DATE_END => '2007-05-05'
+      },
       '2012' =>
       {
         YEAR => 2012,
         DATE_START => '2013-05-02', # Probably more days
         DATE_END => '2013-05-05'
       },
+      '2012' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-05-01', # Estimated
+        DATE_END => '2012-05-04'
+      },
       '2013' =>
       {
         YEAR => 2013,
-        DATE_START => '2013-04-30',
+        DATE_START => '2013-04-30', # Estimated
         DATE_END => '2013-05-04'
+      },
+      '2014' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-05-01',
+        DATE_END => '2014-05-04'
       },
       '2015' =>
       {
@@ -1445,6 +1463,8 @@ my %TOURNAMENTS_POLAND =
     {
       '2014' =>
       {
+        # https://wyniki.pzbs.pl/2014/_gpp/04krakow/W-gpp2014.html
+        MEET => 'Krakow Congress',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1547,10 +1567,10 @@ my %TOURNAMENTS_POLAND =
       },
       '2007A' =>
       {
+        CITY => 'Lodz',
         CHAPTERS =>
         {
           # https://stara.pzbs.pl/wyniki/2007/krajowe/gpp/05lodz/3/3.html
-          CITY => 'Lodz',
           'SINGLE' => 
           {
             YEAR => 2007,
@@ -1561,6 +1581,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2007B' =>
       {
+        CITY => 'Warsaw',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1573,6 +1594,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2008A' =>
       {
+        CITY => 'Warsaw',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1585,7 +1607,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2009A' =>
       {
-        CITY => 'Saw',
+        CITY => 'Starachowice',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1651,10 +1673,10 @@ my %TOURNAMENTS_POLAND =
       },
       '2010B' =>
       {
+        CITY => 'Pila',
         CHAPTERS =>
         {
           # https://michzimny.pl/bridge/2010/pila/W-gp.html
-          CITY => 'Pila',
           'SINGLE' => 
           {
             YEAR => 2010,
@@ -1851,8 +1873,8 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2012,
-            DATE_START => '2012-12-18',
-            DATE_END => '2012-12-17'
+            DATE_START => '2012-12-17',
+            DATE_END => '2012-12-18'
           } 
         }
       },
@@ -1871,12 +1893,12 @@ my %TOURNAMENTS_POLAND =
       },
       '2013B' =>
       {
+        MEET => 'Krakow Congress',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2013,
-            CITY => 'Krakow',
             DATE_START => '2013-03-24',
             DATE_END => '2013-03-24'
           } 
@@ -1923,12 +1945,12 @@ my %TOURNAMENTS_POLAND =
       },
       '2013F' =>
       {
+        MEET => 'Baltic Congress',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2013,
-            CITY => 'Sopot',
             DATE_START => '2013-07-21',
             DATE_END => '2013-07-21'
           } 
@@ -1949,12 +1971,12 @@ my %TOURNAMENTS_POLAND =
       },
       '2013H' =>
       {
+        CITY => 'Krakow',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2013,
-            CITY => 'Krakow',
             DATE_START => '2013-11-24',
             DATE_END => '2013-11-24'
           } 
@@ -2002,7 +2024,7 @@ my %TOURNAMENTS_POLAND =
       {
         CHAPTERS =>
         {
-          CITY => 'Krakow',
+          MEET => 'Krakow Congress',
           'SINGLE' => 
           {
             YEAR => 2014,
@@ -2039,7 +2061,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2014F' =>
       {
-        CITY => 'Sopot',
+        MEET => 'Baltic Congress',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2077,9 +2099,9 @@ my %TOURNAMENTS_POLAND =
       },
       '2015A' =>
       {
+        MEET => 'Beskids Slam',
         CHAPTERS =>
         {
-          CITY => 'Szczyrk',
           'SINGLE' => 
           {
             YEAR => 2015,
@@ -2103,9 +2125,9 @@ my %TOURNAMENTS_POLAND =
       },
       '2015C' =>
       {
+        MEET => 'Luczniczka Meeting',
         CHAPTERS =>
         {
-          CITY => 'Bydgoszcz',
           'SINGLE' => 
           {
             YEAR => 2015,
@@ -2142,9 +2164,9 @@ my %TOURNAMENTS_POLAND =
       },
       '2016A' =>
       {
+        MEET => 'Beskids Slam',
         CHAPTERS =>
         {
-          CITY => 'Szczyrk',
           'SINGLE' => 
           {
             YEAR => 2016,
@@ -2219,9 +2241,9 @@ my %TOURNAMENTS_POLAND =
       },
       '2009B' =>
       {
+        CITY => 'Staszic',
         CHAPTERS =>
         {
-          CITY => 'Staszic',
           'SINGLE' => 
           {
             YEAR => 2009,
@@ -2285,7 +2307,6 @@ my %TOURNAMENTS_POLAND =
       '2013A' =>
       {
         MEET => 'Zulawski Congress',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2299,7 +2320,6 @@ my %TOURNAMENTS_POLAND =
       '2013B' =>
       {
         MEET => 'Poznan Congress',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2313,7 +2333,6 @@ my %TOURNAMENTS_POLAND =
       '2013C' =>
       {
         MEET => 'Slawa Congress',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2364,8 +2383,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2014A' =>
       {
-        # 
-        CITY => 'Bydgoszcz',
+        MEET => 'Luczniczka Meeting',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2379,7 +2397,7 @@ my %TOURNAMENTS_POLAND =
       '2014B' =>
       {
         # https://wyniki.pzbs.pl/2014/_gpp/07wroclaw/t/fleaderb.html?1401096198
-        CITY => 'Wroclaw',
+        MEET => 'Wroclaw Meeting',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2405,7 +2423,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2015B' =>
       {
-        CITY => 'Bydgoszcz',
+        MEET => 'Luczniczka Meeting',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2431,6 +2449,19 @@ my %TOURNAMENTS_POLAND =
       },
       '2016B' =>
       {
+        MEET => 'Luczniczka Meeting',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-05-14',
+            DATE_END => '2016-05-15'
+          } 
+        }
+      },
+      '2016C' =>
+      {
         MEET => 'Poznan Congress',
         CHAPTERS =>
         {
@@ -2439,82 +2470,6 @@ my %TOURNAMENTS_POLAND =
             YEAR => 2016,
             DATE_START => '2016-05-28',
             DATE_END => '2016-05-28'
-          } 
-        }
-      },
-    }
-  },
-
-  'Pomerania Cup',
-  {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2009' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2009,
-            DATE_START => '2009-12-03',
-            DATE_END => '2009-12-03'
-          } 
-        }
-      },
-      '2010' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2010,
-            DATE_START => '2010-10-09',
-            DATE_END => '2010-10-09'
-          } 
-        }
-      },
-      '2011' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2011,
-            DATE_START => '2011-10-06',
-            DATE_END => '2011-10-06'
-          } 
-        }
-      },
-      '2013' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2013,
-            DATE_START => '2013-12-07',
-            DATE_END => '2013-12-07'
-          } 
-        }
-      },
-      '2014' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2014,
-            DATE_START => '2014-10-26',
-            DATE_END => '2014-10-26'
           } 
         }
       },
@@ -2537,6 +2492,8 @@ my %TOURNAMENTS_POLAND =
       '2009' =>
       {
         # https://stara.pzbs.pl/wyniki/2009/krajowe/wielkoszewska2009/TT-08-11/index.html
+        ORDINAL => 19,
+        CITY => 'Stargard',
 
         CHAPTERS =>
         {
@@ -2604,8 +2561,7 @@ my %TOURNAMENTS_POLAND =
     {
       '2014' =>
       {
-        # https://www.pzbs.pl/wyniki-archiwum/wyn2014
-
+        # https://wyniki.pzbs.pl/2014/mppimp/W-impa.html
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2634,6 +2590,7 @@ my %TOURNAMENTS_POLAND =
     {
       '2013' =>
       {
+        MEET => 'Krakow Congress',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2772,7 +2729,7 @@ my %TOURNAMENTS_POLAND =
     ZONE => 'Europe',
     FORM => 'Pairs',
     GENDER => 'Open',
-    AGE => 'U18',
+    AGE => 'U18', # Unclear
 
     EDITIONS =>
     {
@@ -2781,21 +2738,14 @@ my %TOURNAMENTS_POLAND =
         # https://www.pzbs.pl/wyniki-mlodziezowe
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
             SCORING => 'BAM',
             DATE_START => '2013-04-11',
             DATE_END => '2013-04-12'
-          } 
-        }
-      },
-      '2013b' =>
-      {
-        # https://www.pzbs.pl/wyniki-mlodziezowe
-        CHAPTERS =>
-        {
-          'SINGLE' => 
+          },
+          'C1' => 
           {
             YEAR => 2013,
             SCORING => 'IMP',
@@ -2938,7 +2888,7 @@ my %TOURNAMENTS_POLAND =
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Women',
-    AGE => 'U18',
+    AGE => 'U18', # Unclear
 
     EDITIONS =>
     {
@@ -2973,6 +2923,7 @@ my %TOURNAMENTS_POLAND =
     {
       '2009' =>
       {
+        MEET => 'Wroclaw Meeting',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3017,7 +2968,6 @@ my %TOURNAMENTS_POLAND =
       '2013' =>
       {
         # https://wyniki.pzbs.pl/2013/mppimp/W-impfin.html
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3030,6 +2980,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2015' =>
       {
+        # https://wyniki.pzbs.pl/2015/kjb/
+        CITY => 'Krakow',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3058,6 +3010,7 @@ my %TOURNAMENTS_POLAND =
     {
       '2010' =>
       {
+        # http://www.branka.pl/wengorz/TOP/top.html
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3080,8 +3033,36 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2013' =>
+      '2012' =>
       {
+        # http://wengorz.waw.pl/top2012/
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-03-30',
+            DATE_END => '2012-03-31'
+          } 
+        }
+      },
+      '2013A' =>
+      {
+        # https://wyniki.pzbs.pl/2013/topi/W-topif.html
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-04-12',
+            DATE_END => '2013-04-13'
+          } 
+        }
+      },
+      '2013B' =>
+      {
+        # https://michzimny.pl/bridge/2013/indmp/
+        CITY => 'Tarnow',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3152,6 +3133,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2012' =>
       {
+        # https://wyniki.pzbs.pl/2012/mmm/W-mxt.html
+        MEET => 'Polish Championships',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3164,6 +3147,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2014' =>
       {
+        # https://wyniki.pzbs.pl/2014/mpp/W-mxtf.html
+        MEET => 'Polish Championships',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3231,6 +3216,133 @@ my %TOURNAMENTS_POLAND =
             YEAR => 2007,
             DATE_START => '2007-04-27',
             DATE_END => '2007-04-29'
+          } 
+        }
+      },
+    }
+  },
+
+  'Polish Open Pairs',
+  {
+    ORGANIZATION => 'PZBS',
+    COUNTRY => 'Poland',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2007' =>
+      {
+        MEET => 'Polish Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-05-05',
+            DATE_END => '2007-05-05'
+          } 
+        }
+      },
+      '2009A' =>
+      {
+        # https://s3.eu-central-1.amazonaws.com/kongres.brydz.wlkp.pl/wyniki2009/W-cz1.html
+        MEET => 'Poznan Congress',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-06-11',
+            DATE_END => '2009-06-11'
+          } 
+        }
+      },
+      '2009B' =>
+      {
+        # https://s3.eu-central-1.amazonaws.com/kongres.brydz.wlkp.pl/wyniki2009/W-cz1.html
+        MEET => 'Poznan Congress',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-06-12',
+            DATE_END => '2009-06-12'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'Zulawski Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-02-21',
+            DATE_END => '2010-02-21'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        # https://s3.eu-central-1.amazonaws.com/kongres.brydz.wlkp.pl/wyniki2011/W-sb1.html
+        MEET => 'Poznan Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-04-30',
+            DATE_END => '2011-04-30'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        # http://wengorz.waw.pl/top2012/
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-03-29',
+            DATE_END => '2012-03-30'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        # https://wyniki.pzbs.pl/2015/mpp/W-mxtf.html
+        MEET => 'Polish Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-05-02',
+            DATE_END => '2015-05-03'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        # https://wyniki.pzbs.pl/2016/mpp/W-openf2.html
+        MEET => 'Polish Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-05-02',
+            DATE_END => '2016-05-03'
           } 
         }
       },
@@ -3499,12 +3611,8 @@ my %TOURNAMENTS_POLAND =
     }
   },
 
-  'Polish Open Pairs',
+  'Polish Pairs Cup',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -3512,104 +3620,16 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
-      '2007' =>
+      '2012' =>
       {
-        MEET => 'Polish Championships',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2007,
-            DATE_START => '2007-05-05',
-            DATE_END => '2007-05-05'
-          } 
-        }
-      },
-      '2009A' =>
-      {
-        # https://s3.eu-central-1.amazonaws.com/kongres.brydz.wlkp.pl/wyniki2009/W-cz1.html
-        MEET => 'Poznan Congress',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2009,
-            DATE_START => '2009-06-11',
-            DATE_END => '2009-06-11'
-          } 
-        }
-      },
-      '2009B' =>
-      {
-        # https://s3.eu-central-1.amazonaws.com/kongres.brydz.wlkp.pl/wyniki2009/W-cz1.html
-        MEET => 'Poznan Congress',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2009,
-            DATE_START => '2009-06-12',
-            DATE_END => '2009-06-12'
-          } 
-        }
-      },
-      '2010' =>
-      {
-        MEET => 'Zulawski Congress',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2010,
-            DATE_START => '2010-02-21',
-            DATE_END => '2010-02-21'
-          } 
-        }
-      },
-      '2011' =>
-      {
-        # https://s3.eu-central-1.amazonaws.com/kongres.brydz.wlkp.pl/wyniki2011/W-sb1.html
         MEET => 'Poznan Congress',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2011,
-            DATE_START => '2011-04-30',
-            DATE_END => '2011-04-30'
-          } 
-        }
-      },
-      '2015' =>
-      {
-        # https://wyniki.pzbs.pl/2015/mpp/W-mxtf.html
-        MEET => 'Polish Championships',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2015,
-            DATE_START => '2015-05-02',
-            DATE_END => '2015-05-03'
-          } 
-        }
-      },
-      '2016' =>
-      {
-        # https://wyniki.pzbs.pl/2016/mpp/W-openf2.html
-        MEET => 'Polish Championships',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2016,
-            DATE_START => '2016-05-02',
-            DATE_END => '2016-05-03'
+            YEAR => 2012,
+            DATE_START => '2012-06-02',
+            DATE_END => '2012-06-02'
           } 
         }
       },
@@ -3628,7 +3648,6 @@ my %TOURNAMENTS_POLAND =
       '2009' =>
       {
         MEET => 'Boleslawiec Festival',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3643,7 +3662,6 @@ my %TOURNAMENTS_POLAND =
       {
         # https://www.pzbs.pl/wyniki-archiwum/wyniki2010/471-19-boleslawiecka-trzydniowka-wyniki
         MEET => 'Boleslawiec Festival',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3658,7 +3676,6 @@ my %TOURNAMENTS_POLAND =
       {
         # https://wyniki.pzbs.pl/2011/110916boles/program.htm
         MEET => 'Boleslawiec Festival',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3672,7 +3689,6 @@ my %TOURNAMENTS_POLAND =
       '2012' =>
       {
         MEET => 'Boleslawiec Festival',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3686,7 +3702,6 @@ my %TOURNAMENTS_POLAND =
       '2013' =>
       {
         MEET => 'Boleslawiec Festival',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3700,7 +3715,6 @@ my %TOURNAMENTS_POLAND =
       '2014' =>
       {
         MEET => 'Boleslawiec Festival',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3715,7 +3729,6 @@ my %TOURNAMENTS_POLAND =
       {
         # https://wyniki.pzbs.pl/2015/_gpp/14boleslawiec/program.htm
         MEET => 'Boleslawiec Festival',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3745,7 +3758,6 @@ my %TOURNAMENTS_POLAND =
       '2006-07' =>
       {
         # https://stara.pzbs.pl/liga/liga2006_7/pierwsza/1liga20067.htm
-
         CHAPTERS =>
         {
           'C0' => 
@@ -3759,7 +3771,6 @@ my %TOURNAMENTS_POLAND =
       '2007-08' =>
       {
         # https://stara.pzbs.pl/liga/liga2007_8/pierwsza/1liga20078.htm
-
         CHAPTERS =>
         {
           'C0' => 
@@ -3787,7 +3798,6 @@ my %TOURNAMENTS_POLAND =
       '2009-10' =>
       {
         # https://www.pzbs.pl/ligi-all/93
-
         CHAPTERS =>
         {
           'C0' => 
@@ -3801,7 +3811,6 @@ my %TOURNAMENTS_POLAND =
       '2010-11' =>
       {
         # https://www.pzbs.pl/ligi-all/92?start=20
-
         CHAPTERS =>
         {
           'C0' => 
@@ -3833,7 +3842,6 @@ my %TOURNAMENTS_POLAND =
       '2011-12' =>
       {
         # https://www.pzbs.pl/ligi-all/84/1219
-
         CHAPTERS =>
         {
           'C0' => 
@@ -3871,7 +3879,6 @@ my %TOURNAMENTS_POLAND =
       '2012-13' =>
       {
         # https://www.pzbs.pl/ligi-all/ekstraklasa
-
         CHAPTERS =>
         {
           'C0' => 
@@ -3909,7 +3916,6 @@ my %TOURNAMENTS_POLAND =
       '2013-14' =>
       {
         # https://www.pzbs.pl/ligi-all/119
-
         CHAPTERS =>
         {
           'C0' => 
@@ -3947,7 +3953,6 @@ my %TOURNAMENTS_POLAND =
       '2014-15' =>
       {
         # https://www.pzbs.pl/ligi-all/132
-
         CHAPTERS =>
         {
           'C0' => 
@@ -3992,7 +3997,6 @@ my %TOURNAMENTS_POLAND =
       '2015-16' =>
       {
         # https://www.pzbs.pl/ligi-all/201516/ekstraklasa-201516
-
         CHAPTERS =>
         {
           'C0' => 
@@ -4024,6 +4028,34 @@ my %TOURNAMENTS_POLAND =
             major => 'SEGMENT',
             DATE_START => '2016-06-10',
             DATE_END => '2016-06-11'
+          } 
+        }
+      },
+    }
+  },
+
+  'Polish School Championship',
+  {
+    ORGANIZATION => 'PZBS',
+    COUNTRY => 'Poland',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U18', # Unclear
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-06-12',
+            DATE_END => '2010-06-13'
           } 
         }
       },
@@ -4071,6 +4103,7 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
+      # https://wyniki.pzbs.pl/2014/mpps/W-senfin.html
       '2014' =>
       {
         CHAPTERS =>
@@ -4080,34 +4113,6 @@ my %TOURNAMENTS_POLAND =
             YEAR => 2014,
             DATE_START => '2014-02-15',
             DATE_END => '2014-02-16'
-          } 
-        }
-      },
-    }
-  },
-
-  'Polish School Championship',
-  {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2010' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2010,
-            DATE_START => '2010-06-12',
-            DATE_END => '2010-06-13'
           } 
         }
       },
@@ -4251,19 +4256,67 @@ my %TOURNAMENTS_POLAND =
     }
   },
 
-  'Poznan Mixed Pairs',
+  'Pomerania Cup',
   {
     ORGANIZATION => 'PZBS',
     COUNTRY => 'Poland',
     ORIGIN => 'National',
     ZONE => 'Europe',
-    FORM => 'Pairs',
-    SCORING => 'MP',
-    GENDER => 'Mixed',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-12-03',
+            DATE_END => '2009-12-03'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-10-09',
+            DATE_END => '2010-10-09'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-10-06',
+            DATE_END => '2011-10-06'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-12-07',
+            DATE_END => '2013-12-07'
+          } 
+        }
+      },
       '2014' =>
       {
         CHAPTERS =>
@@ -4271,33 +4324,91 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2014,
-            DATE_START => '2014-05-02',
-            DATE_END => '2014-05-02'
+            DATE_START => '2014-10-26',
+            DATE_END => '2014-10-26'
           } 
         }
       },
     }
   },
 
-  'Polish Pairs Cup',
+  'Sigismund Bell Krakow',
   {
-    FORM => 'Pairs',
-    SCORING => 'MP',
+    FORM => 'Teams',
+    SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2012' =>
+      '2014' =>
       {
-        MEET => 'Poznan Congress',
+        MEET => 'Krakow Congress',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2012,
-            DATE_START => '2012-06-02',
-            DATE_END => '2012-06-02'
+            YEAR => 2014,
+            DATE_START => '2014-03-29',
+            DATE_END => '2014-03-29'
+          } 
+        }
+      },
+    }
+  },
+
+  'SPS Trophy',
+  {
+    ORGANIZATION => 'PZBS',
+    COUNTRY => 'Poland',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        # http://www.czaja.pzbs.pl/wyniki/2014/sps/W-loj2.html
+        CITY => 'Lojdy',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-05-16',
+            DATE_END => '2014-05-17'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        # http://czaja.pzbs.pl/wyniki/2015/sps/15lojdy.html
+        CITY => 'Lojdy',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-05-15',
+            DATE_END => '2015-05-16'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        # https://wyniki.pzbs.pl/2016/sps/W-spscup.html
+        CITY => 'Lojdy',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-06-03',
+            DATE_END => '2016-06-04'
           } 
         }
       },
@@ -4321,7 +4432,6 @@ my %TOURNAMENTS_POLAND =
       {
         # https://s3.eu-central-1.amazonaws.com/kongres.brydz.wlkp.pl/wyniki2011/W-sb2.html
         MEET => 'Poznan Congress',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4348,8 +4458,10 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
+      # https://wyniki.pzbs.pl/2013/130530zlot/W-13zlotmax1.html
       '2013' =>
       {
+        CITY => 'Warsaw',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4357,6 +4469,35 @@ my %TOURNAMENTS_POLAND =
             YEAR => 2013,
             DATE_START => '2013-06-01',
             DATE_END => '2013-06-01'
+          } 
+        }
+      },
+    }
+  },
+
+  'Wronie Summer Teams',
+  {
+    ORGANIZATION => 'PZBS',
+    COUNTRY => 'Poland',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        CITY => 'Wronie',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-08-14',
+            DATE_END => '2010-08-14'
           } 
         }
       },
