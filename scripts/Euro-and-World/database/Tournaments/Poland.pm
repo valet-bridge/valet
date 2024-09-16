@@ -11,12 +11,13 @@ package Tournaments::Poland;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
-# Poland has a number of congresses, each with a number of
-# tournaments that have similar names, often including
-# "Grand Prix of Poland".
+# Poland has a number of congresses, and a grand prix system
+# that cuts across many congresses and events.
 #
-# My solution is to keep the number of tournament names low
-# by keeping the generic tournament names where possible.
+# Useful links:
+# https://stara.pzbs.pl/wyniki/default.htm
+# https://stara.pzbs.pl/imprezy/kal08.html
+# https://stara.pzbs.pl/imprezy/kal09.html
 
 my %MEETS_POLAND =
 (
@@ -38,11 +39,21 @@ my %MEETS_POLAND =
         DATE_START => '2010-07-14',
         DATE_END => '2010-07-25'
       },
+      '2011' =>
+      {
+        # https://wyniki.pzbs.pl/2011/baltycki/
+        ORDINAL => 51,
+        YEAR => 2011,
+        CITY => 'Sopot',
+        DATE_START => '2011-07-21',
+        DATE_END => '2011-07-31'
+      },
       '2012' =>
       {
         # https://wyniki.pzbs.pl/2012/baltycki/
         ORDINAL => 52,
         YEAR => 2012,
+        CITY => 'Sopot',
         DATE_START => '2012-07-26',
         DATE_END => '2012-08-05'
       },
@@ -51,6 +62,7 @@ my %MEETS_POLAND =
         # https://wyniki.pzbs.pl/2013/baltycki/
         ORDINAL => 53,
         YEAR => 2013,
+        CITY => 'Sopot',
         DATE_START => '2013-07-19',
         DATE_END => '2013-07-27'
       },
@@ -59,14 +71,97 @@ my %MEETS_POLAND =
         # https://wyniki.pzbs.pl/2014/baltycki/
         ORDINAL => 54,
         YEAR => 2014,
+        CITY => 'Sopot',
         DATE_START => '2014-07-18',
         DATE_END => '2014-07-26'
+      },
+      '2015' =>
+      {
+        # https://wyniki.pzbs.pl/2015/baltycki/
+        ORDINAL => 55,
+        YEAR => 2015,
+        CITY => 'Sopot',
+        DATE_START => '2015-07-17',
+        DATE_END => '2015-07-25'
+      },
+      '2016' =>
+      {
+        # https://wyniki.pzbs.pl/2016/baltycki/
+        ORDINAL => 56,
+        YEAR => 2016,
+        CITY => 'Sopot',
+        DATE_START => '2016-07-22',
+        DATE_END => '2016-07-30'
+      },
+      '2017' =>
+      {
+        # https://wyniki.pzbs.pl/2017/baltycki/
+        ORDINAL => 57,
+        YEAR => 2017,
+        CITY => 'Sopot',
+        DATE_START => '2017-08-04',
+        DATE_END => '2017-08-12'
+      },
+      '2018' =>
+      {
+        # https://wyniki.pzbs.pl/2018/baltycki/
+        ORDINAL => 58,
+        YEAR => 2018,
+        CITY => 'Sopot',
+        DATE_START => '2018-08-03',
+        DATE_END => '2018-08-11'
+      },
+      '2019' =>
+      {
+        # https://wyniki.pzbs.pl/2019/baltycki/
+        ORDINAL => 59,
+        YEAR => 2019,
+        CITY => 'Sopot',
+        DATE_START => '2019-08-02',
+        DATE_END => '2019-08-10'
+      },
+      '2021' =>
+      {
+        # https://wyniki.pzbs.pl/2021/baltycki/
+        ORDINAL => 60,
+        YEAR => 2021,
+        CITY => 'Sopot',
+        DATE_START => '2021-08-06',
+        DATE_END => '2021-08-14'
+      },
+      '2022' =>
+      {
+        # https://wyniki.pzbs.pl/2022/baltycki/
+        ORDINAL => 61,
+        YEAR => 2022,
+        CITY => 'Sopot',
+        DATE_START => '2022-07-15',
+        DATE_END => '2022-07-23'
+      },
+      '2023' =>
+      {
+        # https://wyniki.pzbs.pl/2023/baltycki/
+        ORDINAL => 62,
+        YEAR => 2023,
+        CITY => 'Sopot',
+        DATE_START => '2023-07-28',
+        DATE_END => '2023-08-03'
+      },
+      '2024' =>
+      {
+        # https://wyniki.pzbs.pl/2024/baltycki/
+        ORDINAL => 63,
+        YEAR => 2024,
+        CITY => 'Sopot',
+        DATE_START => '2024-07-26',
+        DATE_END => '2024-08-01'
       },
     }
   },
 
   'Beskids Slam' =>
   {
+    # Seems to have stopped in 2019
     ORGANIZATION => 'PZBS',
     COUNTRY => 'Poland',
     CITY => 'Szczyrk',
@@ -75,9 +170,40 @@ my %MEETS_POLAND =
 
     EDITIONS => 
     {
+      '2011' =>
+      {
+        # https://wyniki.pzbs.pl/2011/111111szczyrk/W-szczyrk.html
+        YEAR => 2011,
+        DATE_START => '2011-11-11',
+        DATE_END => '2011-11-13'
+      },
+      '2012' =>
+      {
+        # https://wyniki.pzbs.pl/2012/121109szczyrk/W-szczyrk2012_final.html
+        YEAR => 2012,
+        DATE_START => '2012-11-09',
+        DATE_END => '2012-11-11'
+      },
+      '2013' =>
+      {
+        # https://wyniki.pzbs.pl/2013/131108szczyrk/
+        ORDINAL => 1,
+        YEAR => 2013,
+        DATE_START => '2013-11-08',
+        DATE_END => '2013-11-11'
+      },
+      '2014' =>
+      {
+        # https://wyniki.pzbs.pl/2014/_gpp/02szczyrk/W-14szgpp.html
+        ORDINAL => 2,
+        YEAR => 2014,
+        DATE_START => '2014-02-03',
+        DATE_END => '2014-02-08'
+      },
       '2015' =>
       {
         # https://wyniki.pzbs.pl/2015/_gpp/01szczyrk/W-15szgpp.html
+        ORDINAL => 3,
         YEAR => 2015,
         DATE_START => '2015-02-09',
         DATE_END => '2015-02-15'
@@ -85,9 +211,34 @@ my %MEETS_POLAND =
       '2016' =>
       {
         # https://www.pzbs.pl/wyniki/kadra/2016/jun/szlem.html
+        ORDINAL => 4,
         YEAR => 2016,
         DATE_START => '2016-02-15',
         DATE_END => '2016-02-21'
+      },
+      '2017' =>
+      {
+        # https://wyniki.pzbs.pl/2017/gpp/01szczyrk/szlem.html
+        ORDINAL => 5,
+        YEAR => 2017,
+        DATE_START => '2017-02-06',
+        DATE_END => '2017-02-12'
+      },
+      '2018' =>
+      {
+        # https://wyniki.pzbs.pl/2018/gpp/01szczyrk/
+        ORDINAL => 6,
+        YEAR => 2018,
+        DATE_START => '2018-02-02',
+        DATE_END => '2018-02-04'
+      },
+      '2019' =>
+      {
+        # https://wyniki.pzbs.pl/2019/gpp/szczyrk/
+        ORDINAL => 7,
+        YEAR => 2019,
+        DATE_START => '2019-01-11',
+        DATE_END => '2019-01-13'
       },
     }
   },
@@ -107,8 +258,8 @@ my %MEETS_POLAND =
         # ?
         ORDINAL => 18,
         YEAR => 2009,
-        DATE_START => '2009-09-19',
-        DATE_END => '2009-09-20' # And more
+        DATE_START => '2009-09-18',
+        DATE_END => '2009-09-20'
       },
       '2010' =>
       {
@@ -158,6 +309,38 @@ my %MEETS_POLAND =
         DATE_START => '2015-09-17',
         DATE_END => '2015-09-20'
       },
+      '2016' =>
+      {
+        # https://wyniki.pzbs.pl/2016/_gpp/15boles/program.htm
+        ORDINAL => 25,
+        YEAR => 2016,
+        DATE_START => '2016-09-22',
+        DATE_END => '2016-09-25'
+      },
+      '2017' =>
+      {
+        # https://wyniki.pzbs.pl/2017/gpp/1718boles/program.htm
+        ORDINAL => 26,
+        YEAR => 2017,
+        DATE_START => '2017-09-22',
+        DATE_END => '2017-09-24'
+      },
+      '2018' =>
+      {
+        # https://wyniki.pzbs.pl/2018/gpp1819/boles/program.htm
+        ORDINAL => 27,
+        YEAR => 2018,
+        DATE_START => '2018-09-20',
+        DATE_END => '2018-09-23'
+      },
+      '2019' =>
+      {
+        # https://wyniki.pzbs.pl/2019/gpp1920/01boles/program.htm
+        ORDINAL => 28,
+        YEAR => 2019,
+        DATE_START => '2019-09-19',
+        DATE_END => '2019-09-23'
+      },
       '2024' =>
       {
         # http://mzbskarkonosze.internetdsl.pl/trzydniowka/2024/program.htm
@@ -170,6 +353,7 @@ my %MEETS_POLAND =
 
   'Krakow Congress' =>
   {
+    # This is Krakow Spring
     ORGANIZATION => 'PZBS',
     COUNTRY => 'Poland',
     CITY => 'Krakow',
@@ -183,8 +367,22 @@ my %MEETS_POLAND =
         # https://wyniki.pzbs.pl/2012/gpp/05bydgoszcz/W-bydgpp.html
         ORDINAL => 49,
         YEAR => 2012,
-        DATE_START => '2012-03-24', # TODO Probably more days
+        DATE_START => '2012-03-23', # Dates are a guess
         DATE_END => '2012-03-25'
+      },
+      '2013' =>
+      {
+        # https://wyniki.pzbs.pl/2013/_gpp/03krakow/13kwgpp.html
+        YEAR => 2013,
+        DATE_START => '2014-03-22', # Dates are a guess
+        DATE_END => '2014-03-24'
+      },
+      '2014' =>
+      {
+        # https://wyniki.pzbs.pl/2014/_gpp/04krakow/W-gpp2014.html
+        YEAR => 2014,
+        DATE_START => '2014-03-28', # Dates are a guess
+        DATE_END => '2014-03-30'
       },
       '2015' =>
       {
@@ -193,11 +391,61 @@ my %MEETS_POLAND =
         DATE_START => '2015-03-20',
         DATE_END => '2015-03-22'
       },
+      '2016' =>
+      {
+        # https://wyniki.pzbs.pl/2016/kwb/
+        YEAR => 2016,
+        DATE_START => '2016-03-11',
+        DATE_END => '2016-03-13'
+      },
+      '2017' =>
+      {
+        # https://wyniki.pzbs.pl/2017/kwb/
+        YEAR => 2017,
+        DATE_START => '2017-03-24',
+        DATE_END => '2017-03-26'
+      },
+      '2018' =>
+      {
+        # https://wyniki.pzbs.pl/2018/kwb/
+        YEAR => 2018,
+        DATE_START => '2018-03-23',
+        DATE_END => '2018-03-25'
+      },
+      '2019' =>
+      {
+        # https://wyniki.pzbs.pl/2019/kwb/
+        YEAR => 2019,
+        DATE_START => '2019-03-22',
+        DATE_END => '2019-03-24'
+      },
+      '2022' =>
+      {
+        # https://kwb.mzbs.pl/22/
+        YEAR => 2022,
+        DATE_START => '2022-03-18',
+        DATE_END => '2022-03-20'
+      },
+      '2023' =>
+      {
+        # https://kwb.mzbs.pl/23/
+        YEAR => 2023,
+        DATE_START => '2023-03-17',
+        DATE_END => '2023-03-19'
+      },
+      '2024' =>
+      {
+        # https://kwb.mzbs.pl/24/
+        YEAR => 2024,
+        DATE_START => '2024-03-15',
+        DATE_END => '2024-03-17'
+      },
     }
   },
 
   'Luczniczka Meeting' =>
   {
+    # "Archer"
     ORGANIZATION => 'PZBS',
     COUNTRY => 'Poland',
     CITY => 'Bydgoszcz',
@@ -206,13 +454,120 @@ my %MEETS_POLAND =
 
     EDITIONS => 
     {
+      # 2006: No date found:
+      # https://stara.pzbs.pl/wyniki/2006/krajowe/gpp2006/06bydg/luczniczka2006.htm
+
+      '2007' =>
+      {
+        # https://stara.pzbs.pl/wyniki/2007/krajowe/gpp/11Bydgoszcz/LUCZ/LUCZ.html
+        ORDINAL => 44,
+        YEAR => 2007,
+        DATE_START => '2007-07-15', # Probably more days
+        DATE_END => '2007-07-15'
+      },
+      '2009' =>
+      {
+        # https://stara.pzbs.pl/wyniki/2009/krajowe/gpp/07bydgoszcz/luczniczka2009.html
+        ORDINAL => 46,
+        YEAR => 2009,
+        DATE_START => '2009-06-05',
+        DATE_END => '2009-06-07'
+      },
+      '2010' =>
+      {
+        # https://www.pzbs.pl/wyniki-archiwum/wyniki2010/222-47-ogolnopolski-kongres-brydzowy-luczniczka-wyniki
+        ORDINAL => 47,
+        YEAR => 2010,
+        DATE_START => '2010-06-26',
+        DATE_END => '2010-06-28'
+      },
+      '2011' =>
+      {
+        # http://kpzbs.host4u.pl/wyniki/GP2011/Luczniczka/luczniczka.html
+        ORDINAL => 48,
+        YEAR => 2011,
+        DATE_START => '2011-06-10',
+        DATE_END => '2011-06-12'
+      },
+      '2012' =>
+      {
+        # https://wyniki.pzbs.pl/2012/gpp/05bydgoszcz/W-bydgpp.html
+        ORDINAL => 49,
+        YEAR => 2012,
+        DATE_START => '2012-04-27', # Guess
+        DATE_END => '2012-04-29'
+      },
+      '2013' =>
+      {
+        # https://wyniki.pzbs.pl/2013/_gpp/08bydgoszcz/gp.html
+        ORDINAL => 50,
+        YEAR => 2013,
+        DATE_START => '2013-06-14',
+        DATE_END => '2013-06-16'
+      },
+      '2014' =>
+      {
+        # http://www.kpzbs.host4u.pl/wyniki/2014/luczniczka/luczniczka2014.html
+        ORDINAL => 51,
+        YEAR => 2014,
+        DATE_START => '2014-03-14',
+        DATE_END => '2014-03-16'
+      },
+      '2015' =>
+      {
+        # https://wyniki.pzbs.pl/2015/_gpp/04bydgoszcz/
+        ORDINAL => 52,
+        YEAR => 2014,
+        DATE_START => '2015-03-27',
+        DATE_END => '2015-03-29'
+      },
       '2016' =>
       {
         # https://wyniki.pzbs.pl/2016/_gpp/06bydgoszcz/
         ORDINAL => 53,
         YEAR => 2016,
-        DATE_START => '2016-05-15',
+        DATE_START => '2016-05-13',
         DATE_END => '2016-05-15'
+      },
+      '2017' =>
+      {
+        # https://wyniki.pzbs.pl/2017/gpp/06bydgoszcz/
+        ORDINAL => 54,
+        YEAR => 2017,
+        DATE_START => '2017-05-12',
+        DATE_END => '2017-05-14'
+      },
+      '2018' =>
+      {
+        # http://kpzbs.host4u.pl/wyniki/2018/Luczniczka/Luczniczka2018.html
+        ORDINAL => 55,
+        YEAR => 2018,
+        DATE_START => '2018-07-27',
+        DATE_END => '2018-07-29'
+      },
+      '2019' =>
+      {
+        # http://kpzbs.host4u.pl/wyniki/2019/Luczniczka/Luczniczka2019.html
+        ORDINAL => 56,
+        YEAR => 2019,
+        DATE_START => '2019-07-19',
+        DATE_END => '2019-07-21'
+      },
+      '2023' =>
+      {
+        # http://kpzbs.host4u.pl/zaproszenia/2023/luczniczka59.html
+        ORDINAL => 59,
+        YEAR => 2023,
+        DATE_START => '2023-04-14',
+        DATE_END => '2023-04-16'
+      },
+      '2024' =>
+      {
+        # http://kpzbs.host4u.pl/zaproszenia/2024/luczniczka60.html
+        ORDINAL => 60,
+        YEAR => 2024,
+        DATE_START => '2024-07-19',
+        DATE_END => '2024-07-21'
       },
     }
   },
@@ -437,6 +792,38 @@ my %MEETS_POLAND =
 
     EDITIONS => 
     {
+      '2007' =>
+      {
+        # No link
+        ORDINAL => 50,
+        YEAR => 2007,
+        DATE_START => '2007-07-06',
+        DATE_END => '2007-07-15'
+      },
+      '2008' =>
+      {
+        # No link
+        ORDINAL => 51,
+        YEAR => 2008,
+        DATE_START => '2008-07-04',
+        DATE_END => '2008-07-13'
+      },
+      '2009' =>
+      {
+        # No link
+        ORDINAL => 52,
+        YEAR => 2009,
+        DATE_START => '2009-07-03',
+        DATE_END => '2009-07-11'
+      },
+      '2010' =>
+      {
+        # https://wyniki.pzbs.pl/2010/slawa/
+        ORDINAL => 53,
+        YEAR => 2010,
+        DATE_START => '2010-07-02',
+        DATE_END => '2010-07-11'
+      },
       '2011' =>
       {
         # https://www.kongres-slawa.pl/harmonogram/2011
@@ -728,6 +1115,7 @@ my %MEETS_POLAND =
 
   'Wroclaw Meeting' =>
   {
+    # Also "Blue Ribbon of the Oder"
     ORGANIZATION => 'PZBS',
     COUNTRY => 'Poland',
     ORIGIN => 'National',
@@ -735,6 +1123,42 @@ my %MEETS_POLAND =
 
     EDITIONS => 
     {
+      '2008' =>
+      {
+        # Link on https://stara.pzbs.pl/imprezy/kal08.html
+        ORDINAL => 29,
+        CITY => 'Wroclaw',
+        YEAR => 2008,
+        DATE_START => '2008-05-09',
+        DATE_END => '2008-05-11'
+      },
+      '2009' =>
+      {
+        # https://stara.pzbs.pl/imprezy/OTP/2009/bwodry2009.html
+        ORDINAL => 30,
+        CITY => 'Wroclaw',
+        YEAR => 2009,
+        DATE_START => '2009-05-08',
+        DATE_END => '2009-05-10'
+      },
+      '2010' =>
+      {
+        # https://michzimny.pl/bridge/2010/wroclaw/
+        ORDINAL => 31,
+        CITY => 'Wroclaw',
+        YEAR => 2010,
+        DATE_START => '2010-05-07',
+        DATE_END => '2010-05-09'
+      },
+      '2011' =>
+      {
+        # https://michzimny.pl/bridge/2011/wroclaw/
+        ORDINAL => 32,
+        CITY => 'Wroclaw',
+        YEAR => 2011,
+        DATE_START => '2011-05-06',
+        DATE_END => '2011-05-08'
+      },
       '2012' =>
       {
         # https://michzimny.pl/bridge/2012/wroclaw/
@@ -752,6 +1176,87 @@ my %MEETS_POLAND =
         YEAR => 2013,
         DATE_START => '2013-05-24',
         DATE_END => '2013-05-26'
+      },
+      '2014' =>
+      {
+        # https://wyniki.pzbs.pl/2014/_gpp/07wroclaw/
+        ORDINAL => 35,
+        CITY => 'Wroclaw',
+        YEAR => 2015,
+        DATE_START => '2014-05-23',
+        DATE_END => '2014-05-25'
+      },
+      '2015' =>
+      {
+        # https://wyniki.pzbs.pl/2015/_gpp/07wroclaw/
+        ORDINAL => 36,
+        CITY => 'Wroclaw',
+        YEAR => 2015,
+        DATE_START => '2015-05-22',
+        DATE_END => '2015-05-24'
+      },
+      '2016' =>
+      {
+        # https://wyniki.pzbs.pl/2016/_gpp/07wroclaw/
+        ORDINAL => 37,
+        CITY => 'Wroclaw',
+        YEAR => 2016,
+        DATE_START => '2016-05-20',
+        DATE_END => '2016-05-22'
+      },
+      '2017' =>
+      {
+        # https://wyniki.pzbs.pl/2017/gpp/07wroclaw/
+        ORDINAL => 38,
+        CITY => 'Wroclaw',
+        YEAR => 2017,
+        DATE_START => '2017-05-26',
+        DATE_END => '2017-05-28'
+      },
+      '2018' =>
+      {
+        # https://wyniki.pzbs.pl/2018/gpp/wroclaw/
+        ORDINAL => 39,
+        CITY => 'Wroclaw',
+        YEAR => 2018,
+        DATE_START => '2018-05-18',
+        DATE_END => '2018-05-20'
+      },
+      '2019' =>
+      {
+        # https://wyniki.pzbs.pl/2019/gpp/wroclaw/
+        ORDINAL => 40,
+        CITY => 'Wroclaw',
+        YEAR => 2019,
+        DATE_START => '2019-05-24',
+        DATE_END => '2019-05-26'
+      },
+      '2022' =>
+      {
+        # https://wyniki.pzbs.pl/2022/wroclaw/
+        ORDINAL => 41,
+        CITY => 'Wroclaw',
+        YEAR => 2022,
+        DATE_START => '2022-05-20',
+        DATE_END => '2022-05-22'
+      },
+      '2023' =>
+      {
+        # https://wyniki.pzbs.pl/2023/wroclaw/
+        ORDINAL => 42,
+        CITY => 'Wroclaw',
+        YEAR => 2023,
+        DATE_START => '2023-05-12',
+        DATE_END => '2023-05-14'
+      },
+      '2024' =>
+      {
+        # https://wyniki.pzbs.pl/2024/wroclaw/
+        ORDINAL => 43,
+        CITY => 'Wroclaw',
+        YEAR => 2024,
+        DATE_START => '2024-05-17',
+        DATE_END => '2024-05-19'
       },
     }
   },
@@ -2190,6 +2695,44 @@ my %TOURNAMENTS_POLAND =
             YEAR => 2011,
             DATE_START => '2011-05-03',
             DATE_END => '2011-05-03'
+          } 
+        }
+      },
+    }
+  },
+
+  'Polish BAM Cup',
+  {
+    FORM => 'Teams',
+    SCORING => 'BAM',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2006' =>
+      {
+        MEET => 'Warsaw Grand Prix',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            DATE_START => '2006-08-26',
+            DATE_END => '2006-08-26'
+          } 
+        }
+      },
+      '2007' =>
+      {
+        # https://www.warsbrydz.pl/GPW2006/support/program.htm
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-05-26',
+            DATE_END => '2007-05-27'
           } 
         }
       },
@@ -3730,44 +4273,6 @@ my %TOURNAMENTS_POLAND =
             YEAR => 2014,
             DATE_START => '2014-05-02',
             DATE_END => '2014-05-02'
-          } 
-        }
-      },
-    }
-  },
-
-  'Polish BAM Cup',
-  {
-    FORM => 'Teams',
-    SCORING => 'BAM',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2006' =>
-      {
-        MEET => 'Warsaw Grand Prix',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2006,
-            DATE_START => '2006-08-26',
-            DATE_END => '2006-08-26'
-          } 
-        }
-      },
-      '2007' =>
-      {
-        # https://www.warsbrydz.pl/GPW2006/support/program.htm
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2007,
-            DATE_START => '2007-05-26',
-            DATE_END => '2007-05-27'
           } 
         }
       },

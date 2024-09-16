@@ -13,6 +13,20 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  # POLAND
+  'Baltic Congress',
+  'Beskids Slam',
+  'Boleslawiec Festival',
+  'Krakow Congress',
+  'Luczniczka Meeting',
+  'Polish Championships',
+  'Poznan Congress',
+  'Slawa Congress',
+  'Warsaw Grand Prix',
+  'Wroclaw Meeting',
+  'Zulawski Congress',
+
+ 
   'Aegean Championships',
   'Azores Festival',
   'Amman Bridge Festival',
@@ -20,10 +34,8 @@ my @MULTI_WORDS =
   'Australian Summer Festival',
   'Australian Youth Triathlon',
   'Balkan Friendship Festival',
-  'Baltic Congress',
   'Bangkok Bridge Festival',
   'Banten Sports Week',
-  'Beskids Slam',
   'Bodrum Peninsula Festival',
   'Brasov Festival',
   'Brazilian Trials',
@@ -59,9 +71,7 @@ my @MULTI_WORDS =
   'Italy Cup',
   'Jordan Bridge Festival',
   'Jyvaskala Easter Bridge Festival',
-  'Krakow Meeting',
   'Lozenets Bridge Festival',
-  'Luczniczka Meeting',
   'Maharaja Holkar National Championship',
   'Mar del Plata Festival',
   'Marmara Festival',
@@ -76,14 +86,12 @@ my @MULTI_WORDS =
   'Polish Pairs Championship',
   'Polish Youth Olympiad',
   'Polish Schools Championship',
-  'Poznan Festival',
   'Pula Bridge Festival',
   'Red Sea International Festival',
   'Reykjavik Bridge Festival',
   'Samobor Bridge Meeting',
   'Serdika Bridge Festival',
   'Sivrioglu Festival',
-  'Slava Congress',
   'Stara Zagora Bridge Festival',
   'Tallinn Bridge Festival',
   'Tolani Summer Nationals',
@@ -105,7 +113,6 @@ my @MULTI_WORDS =
   'World Mind Games',
   'World Team Championships',
    'World Team Olympiad',
-  'Zulawski Congress'
 );
 
 my %MULTI_TYPOS =
@@ -219,7 +226,10 @@ my %MULTI_TYPOS =
     'jordan bridge tournament ( spring festival)',
     'jordan bridge tournament (spring festival)'],
   'Jyvaskala Easter Bridge Festival' => ['easter bridge trophy'],
+
+  'Krakow Congress' => ['krakow meeting'],
   'Lozenets Bridge Festival' => ['bridge festival lozenets'],
+
   'Luczniczka Meeting' => ['meeting luczniczka'],
   'Maharaja Holkar National Championship' => [
     'maharaja holakar championship',
