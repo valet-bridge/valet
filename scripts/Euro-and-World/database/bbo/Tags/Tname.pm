@@ -723,6 +723,7 @@ my @MULTI_WORDS =
   'Polish Second League',
   'Polish Senior Trials',
   'Polish U16 Pairs',
+  'Polish U16 Teams',
   'Polish U20 Trials',
   'Polish U25 Trials',
   'Polish Women Trials',
@@ -1838,6 +1839,9 @@ my %MULTI_TYPOS =
     'guangdong bridge club  elites  tournament',
     'guangdong bridge club  elites tournament'],
 
+  'Grand Prix of Prague' => [
+    'grand prix prague', 'gp prague'],
+
   ### HHH
 
   "Hans Rosendorff Memorial Women's Teams" => [
@@ -2398,11 +2402,36 @@ my %MULTI_TYPOS =
     'podder nationals masters'],
 
   # POLAND
+  'Grand Prix of Poland Pairs' => [
+    'gp polski par',
+    'gpp mpp open',
+    'grand prix plolski par',
+    'grand priix polski par',
+    'grand prix pairs of poland',
+    'gran prix pairs of poland',
+    'grand prix polski par',
+    'otp puchar grodu staszica gpp',
+    'pair grand prix of poland'],
+  'Grand Prix of Poland Teams' => [
+    'gp of poland teams',
+    'gpp teamow',
+    'grand prix of poland zulawski teams',
+    'grand prix polski teamow',
+    'grand prix team of poland',
+    'poznan open teams',
+    'poznan teams tournament',
+    'team grand prix of poland',
+    'teams grand prix of poland'],
   'Polish BAM Teams' => ['bam team championship of poland'],
-  'Polish Business League' => ['blb'],
   'Polish Boys Championship' => ['polish championship boys'],
+  'Polish Business League' => ['blb'],
+  'Polish First League' => [
+    'polish 1st division', 
+    'polish first division', 
+    'i liga'],
   'Polish Girls Championship' => ['polish championship girls'],
-  'Polish IMP Pairs' => ['butler polish championship',
+  'Polish IMP Pairs' => [
+    'butler polish championship',
     'butler (imp) polish pairs championship'],
   'Polish Individual Championship' => [
     'forumbridge.pl top individual',
@@ -2416,35 +2445,31 @@ my %MULTI_TYPOS =
     'polish mixed pairs championships',
     'polish mixt pairs championship'],
   'Polish Mixed Teams' => [
-    'Mistrzostwa Polski Teamów Mikst',
+    'mistrzostwa polski teamów mikst',
     'polish mixt team championships'],
-  'Polish Patton Teams' => [
-    'polish championships team patton',
-    'poland championship patton',
-    'polish teams patton'],
   'Polish Open Pairs' => [
     'forumbridge.pl top pairs',
     'inea cup',
     'open pairs championship of poland',
-    'polish open pairs championship',
-    'polish championship open pairs'],
+    'polish championship open pairs',
+    'polish open pairs championship'],
   'Polish Open Teams' => [
     'mistrzostwa polski teamów',
-    'polish open tems',
     'polish open team championship',
+    'polish open tems',
     'polish team championship',
     'polish teams championship',
     'team championship of poland',
     'teams championship of poland'], 
   'Polish Open Trials' => [
-    'polish trials open', 
-    'polish trials',
+    'polish national trials',
     'polish team trials', 
-    'polish national trials'],
-  'Polish First League' => [
-    'polish first division', 
-    'polish 1st division', 
-    'i liga'],
+    'polish trials',
+    'polish trials open'], 
+  'Polish Patton Teams' => [
+    'poland championship patton',
+    'polish championships team patton',
+    'polish teams patton'],
   'Polish Premier League' => [
     'mecz o superlig©', 
     'mecz o superlige',
@@ -2456,15 +2481,12 @@ my %MULTI_TYPOS =
     'polish premier leuge', 
     'polish premier leaugue', 
     'polish premiere league'],
-  'Polish Second League' => ['polish 2 league'],
   'Polish School Championship' => [
     'polish schools champ',
     'polish schools championships'],
+  'Polish Second League' => ['polish 2 league'],
   'Polish Third League' => ['polish league: division 3'],
-  'Polish Teams' => [
-    'championship of poland',
-    'champioship of poland'],
-  'Polish U16 Pairs' => [
+  'Polish U16 Teams' => [
     'polish u-16 championships',
     'polish u16 championships'],
   'Polish U20 Trials' => ['u20 polish trials'],
@@ -2472,35 +2494,11 @@ my %MULTI_TYPOS =
   'Polish Women Trials' => ['polish trials women',
     'polish trials ladies', 'woman trial poland',
     "polish bridge union women's trials"],
-  'Polish Youngster Teams' => ['kadry juniorów m³odszych'],
-  'Grand Prix of Poland Teams' => [
-    'gp of poland teams',
-    'gpp teamow',
-    'grand prix of poland zulawski teams',
-    'grand prix polski teamow',
-    'grand prix team of poland',
-    'poznan open teams',
-    'poznan teams tournament',
-    'team grand prix of poland',
-    'teams grand prix of poland'],
-  'Grand Prix of Poland Pairs' => [
-    'gp polski par',
-    'gpp mpp open',
-    'grand prix plolski par',
-    'grand priix polski par',
-    'grand prix pairs of poland',
-    'gran prix pairs of poland',
-    'grand prix polski par',
-    'otp puchar grodu staszica gpp',
-    'pair grand prix of poland'],
-  'Grand Prix of Prague' => ['gp prague', 'grand prix prague'],
-  'Grand Prix of Wielkopolski' => ['gp wielkopolski',
-    'grand prix of wielkopolski', 
-    'grand prix of greater poland voivodeship'],
-
   'Pomerania Cup' => [
+    'grand prix of greater poland voivodeship',
     'grand prix of wielkopolski',
     'rozgrywek pucharowych pwzbs'],
+
 
   # PORTUGAL
   'Portuguese Grand Prix' => ['portuguese grad prix',
