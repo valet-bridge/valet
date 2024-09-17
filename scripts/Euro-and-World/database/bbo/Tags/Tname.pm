@@ -689,8 +689,7 @@ my @MULTI_WORDS =
   'Plock District League',
   'Poddar National Masters',
 
-  # POLAND
-
+  # POLAND -- mapped in detail
   'Andrzej Wilkosz Memorial Pairs',
   'Grand Prix of Poland Pairs',
   'Grand Prix of Poland Teams',
@@ -2401,7 +2400,7 @@ my %MULTI_TYPOS =
     'poddar nationals masters', 'podder national masters',
     'podder nationals masters'],
 
-  # POLAND
+  # POLAND -- mapped in detail
   'Grand Prix of Poland Pairs' => [
     'gp polski par',
     'gpp mpp open',

@@ -615,6 +615,7 @@ sub fix_list_tags
   $self->transfer_list_tag('DATE_ADDED', 'DATE');
   $self->transfer_list_tag('EVENT_DATE', 'DATE');
 
+  $self->transfer_list_tag('TITLE_SESSION', 'SESSION');
   $self->transfer_list_tag('EVENT_SESSION', 'SESSION');
 
   $self->transfer_list_tag('EVENT_SECTION', 'SECTION');

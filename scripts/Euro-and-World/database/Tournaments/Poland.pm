@@ -2900,7 +2900,6 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2013,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
             DATE_START => '2013-03-23',
             DATE_END => '2013-03-23'
           },
@@ -2998,13 +2997,38 @@ my %TOURNAMENTS_POLAND =
       },
       '2007' =>
       {
-        # https://www.warsbrydz.pl/GPW2006/support/program.htm
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2007,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2007-05-26',
+            DATE_END => '2007-05-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-05-26',
+            DATE_END => '2007-05-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-05-27',
+            DATE_END => '2007-05-27'
+          },
+          'C3' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-05-27',
             DATE_END => '2007-05-27'
           } 
         }
@@ -4164,14 +4188,15 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2007,
-            major => 'SEGMENT',
-            DATE_START => '2007-01-24',
-            DATE_END => '2007-01-24'
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2007-01-23',
+            DATE_END => '2007-01-23'
           },
           'C1' => 
           {
             YEAR => 2007,
-            STAGE => 'Semifinal',
+            STAGE => 'Quarterfinal',
             major => 'SEGMENT',
             DATE_START => '2007-01-24',
             DATE_END => '2007-01-24'
@@ -4179,7 +4204,7 @@ my %TOURNAMENTS_POLAND =
           'C2' => 
           {
             YEAR => 2007,
-            STAGE => 'Final',
+            STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2007-01-24',
             DATE_END => '2007-01-24'
@@ -4187,12 +4212,20 @@ my %TOURNAMENTS_POLAND =
           'C3' => 
           {
             YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-01-24',
+            DATE_END => '2007-01-24'
+          },
+          'C4' => 
+          {
+            YEAR => 2007,
             STAGE => 'Qualifying',
             major => 'ROUND',
             DATE_START => '2007-05-05',
             DATE_END => '2007-05-06'
           },
-          'C4' => 
+          'C5' => 
           {
             YEAR => 2007,
             STAGE => 'Semifinal',
@@ -4200,7 +4233,7 @@ my %TOURNAMENTS_POLAND =
             DATE_START => '2007-05-05',
             DATE_END => '2007-05-06'
           },
-          'C5' => 
+          'C6' => 
           {
             YEAR => 2007,
             STAGE => 'Final',
@@ -4208,7 +4241,7 @@ my %TOURNAMENTS_POLAND =
             DATE_START => '2007-05-05',
             DATE_END => '2007-05-06'
           },
-          'C6' => 
+          'C7' => 
           {
             YEAR => 2007,
             major => 'SEGMENT',
@@ -4258,8 +4291,8 @@ my %TOURNAMENTS_POLAND =
             YEAR => 2008,
             STAGE => 'Semifinal',
             major => 'SEGMENT',
-            DATE_START => '2008-05-04',
-            DATE_END => '2008-05-04'
+            DATE_START => '2008-05-03',
+            DATE_END => '2008-05-03'
           },
           'C5' => 
           {
@@ -4355,7 +4388,6 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2009,
             STAGE => 'Final',
-            major => 'SEGMENT',
             DATE_START => '2009-09-19',
             DATE_END => '2009-09-19'
           },
@@ -4479,14 +4511,22 @@ my %TOURNAMENTS_POLAND =
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2007-06-06',
-            DATE_END => '2007-06-08'
+            DATE_END => '2007-06-07'
           },
           'C1' => 
           {
             YEAR => 2007,
             STAGE => 'Final',
             major => 'SEGMENT',
-            DATE_START => '2007-06-06',
+            DATE_START => '2007-06-07',
+            DATE_END => '2007-06-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2007-06-07',
             DATE_END => '2007-06-08'
           },
         }
@@ -4555,6 +4595,14 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2010,
             STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-05-02',
+            DATE_END => '2010-05-03'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Bronze',
             major => 'SEGMENT',
             DATE_START => '2010-05-02',
             DATE_END => '2010-05-03'
@@ -5303,9 +5351,19 @@ my %TOURNAMENTS_POLAND =
         CITY => 'Lojdy',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2014-05-16',
+            DATE_END => '2014-05-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2014-05-16',
             DATE_END => '2014-05-17'
           } 
@@ -5398,7 +5456,6 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2013,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
             DATE_START => '2013-06-01',
             DATE_END => '2013-06-01'
           },
