@@ -92,6 +92,13 @@ my @LOCAL_SUBS =
   { START => 33281, END => 33285, TEXT => 'BAM', CORR => 'MP' },
 
   { START => 36516, END => 36516, TEXT => 'BAM', CORR => 'MP' },
+
+  # In Finland they use B for Barometer, I think.
+  { START => 15747, END => 15786, TEXT => 'BAM', CORR => 'MP' },
+  { START => 25865, END => 25921, TEXT => 'BAM', CORR => 'MP' },
+  { START => 30627, END => 30670, TEXT => 'BAM', CORR => 'MP' },
+  { START => 41675, END => 41707, TEXT => 'BAM', CORR => 'MP' },
+  { START => 44253, END => 44304, TEXT => 'BAM', CORR => 'MP' },
 );
 
 

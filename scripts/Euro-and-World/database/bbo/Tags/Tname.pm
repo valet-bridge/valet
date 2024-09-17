@@ -442,8 +442,8 @@ my @MULTI_WORDS =
 
   'Finnish Cup',
   'Finnish Easter Teams',
+  'Finnish Open Pairs',
   'Finnish Open Trials',
-  'Finnish Pairs Championship',
   'Finnish Teams Championship',
   'Finnish Senior Trials',
   'Finnish Swiss Teams Championship',
@@ -1693,22 +1693,35 @@ my %MULTI_TYPOS =
   'Filbyter Cup' => ['filbyer cup'],
 
   # FINLAND
-  'Finnish Open Trials' => ['finnish team trials',
+  'Finnish Open Pairs' => [
+    'finnish open pairs championship', 
+    'finnish pair championship',
+    'finnish pair championships', 
+    'finnish pairs',
+    'finnish pairs championship',
+    'finnish pairs champs'],
+  'Finnish Open Trials' => [
     'finnish national team qualifications',
-    'finnish open team qualifications'],
-  'Finnish Pairs Championship' => ['finnish pair championship',
-    'finnish pair championships', 'finnish pairs champs',
-    'finnish open pairs championship', 'finnish pairs'],
-  'Finnish Senior Trials' => ['finnish senior qualifications',
-    'finnish senior teams trial', 'finnish senior teams trials'],
+    'finnish open team qualifications',
+    'finnish team trials'],
+  'Finnish Senior Trials' => [
+    'finnish senior qualifications',
+    'finnish senior teams trial', 
+    'finnish senior teams trials',
+    'finnish teams senior trials'],
   'Finnish Swiss Teams Championship' => [
     'finnish swiss imps championship',
     'finnish swiss imps championships',
-    'finnish swiss-imps championships', 'finnish swiss-ims championships'],
-  'Finnish Teams Championship' => ['finnish teams championships',
-    'finnish teams', 'finnish team championships',
-    'finnish team championship', 'finnish open imp championship'],
-  'Finnish Women Trials' => ['finnish women teams trials'],
+    'finnish swiss-imps championships', 
+    'finnish swiss-ims championships'],
+  'Finnish Teams Championship' => [
+    'finnish open imp championship',
+    'finnish team championship',
+    'finnish team championships',
+    'finnish teams championships',
+    'finnish teams'],
+  'Finnish Women Trials' => [
+    'finnish women teams trials'],
 
   'Forest Trophy' => ['forest bridge trophy'],
   'forumbridge.pl Top Individual' => ['forumbridge_pl top individual'],

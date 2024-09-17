@@ -79,6 +79,7 @@ my %MULTI_TYPOS =
   PTBA => ['philippine tournament bridge association'],
   RBBF => ['royal belgian bridge federation'],
   SABF => ['south african bridge federation'],
+  SBL => ['suomen bridgeliitto'],
   SBF => ['svenska bridgeförbundet'],
   SBU => ['scottish bridge union'],
   SPBF => ['south pacific bridge federation', 'zone 7'],
