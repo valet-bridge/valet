@@ -26,6 +26,202 @@ my @MULTI_WORDS =
 
   '0 to 1500 Spingold',
 
+  # ARGENTINA -- mapped in detail
+  'Argentinian Club Teams',
+  'Argentinian Copa Republica',
+  'Argentinian Flags Day Championship',
+  'Argentinian Mixed Pairs',
+  'Argentinian Mixed Teams',
+  'Argentinian Open Teams',
+  'Argentinian Open Trials',
+  'Argentinian Seniors Teams',
+  'Argentinian Senior Trials',
+  'Argentinian Women Teams',
+  'Argentinian Women Trials',
+  'Mar del Plata Open Teams',
+
+  # BELGIUM -- mapped in detail
+  'Belgian Open Pairs',
+  'Belgian Open Teams',
+  'Belgian Open Trials',
+
+  # BRAZIL -- mapped in detail
+  'Brazilian Senior Trials',
+  'Brazilian Open Teams',
+  'Brazilian Open Trials',
+  'Brazilian Women Trials',
+
+  # CANADA -- mapped in detail
+  'Canadian National Teams Championship',
+  'Canadian Seniors Teams Championship',
+  'Canadian Women Teams Championship',
+
+  # CHILE -- mapped in detail
+  'Chilean Cup',
+  'Chilean Invitational Teams',
+  'Chilean Open Pairs',
+  'Chilean Open Teams',
+  'Chilean Open Trials',
+  'Chilean Senior Teams',
+  'Chilean Women Teams',
+  'Chilean Women Trials',
+
+  # CZECH -- mapped in detail
+  'Czech First League',
+  'Czech Open',
+
+  # DENMARK: Mapped in detail
+  'Copenhagen Invitational Pairs',
+  'Copenhagen Open Pairs',
+  'Danish Club Teams',
+  'Danish Cup',
+  'Danish First Division',
+  'Danish Junior Teams',
+  'Danish Mixed Pairs',
+  'Danish Mixed Teams',
+  'Danish Open Pairs',
+  'Danish Open Pairs Trials',
+  'Danish Open Teams',
+  'Danish Open Trials',
+  'Danish Women Pairs',
+  'Vinoble Open',
+
+  # EUROPE -- mapped in detail
+  "European Open Champions' Cup",
+  'European National Mixed Teams',
+  'European National Open Teams',
+  'European National Seniors Pairs',
+  'European National Seniors Teams',
+  'European National Women Pairs',
+  'European National Women Teams',
+  'European Small Federation Games',
+  'European Transnational Mixed Pairs',
+  'European Transnational Mixed Teams',
+  'European Transnational Open Pairs',
+  'European Transnational Open Teams',
+  'European Transnational Seniors Teams',
+  'European Winter BAM Trophy',
+  'European Winter Teams',
+  'European Winter Transnational Teams',
+  "European Women Open Champions' Cup",
+  'Generali European Open Teams',
+  'Generali European Women Pairs',
+  'Generali European Women Teams',
+
+  # EURO-YOUTH: Mapped in detail
+  'European U16 Open Pairs',
+  'European U16 Open Teams',
+  'European U21 Open Pairs',
+  'European U21 Open Teams',
+  'European U26 Mixed Pairs',
+  'European U26 Open IMP Pairs',
+  'European U26 Open Pairs',
+  'European U26 Open Teams',
+  'European U26 Women Pairs',
+  'European U26 Women Teams',
+  'European U31 Open Pairs',
+  "European U31 President's Cup",
+  'European University Bridge Championship',
+  'European University Team Championship',
+
+  # GERMANY -- mapped in detail
+  'Bonn Nations Cup',
+  'German Bundesliga',
+  'German Club Cup',
+  'German Mixed Teams',
+  'German Open Pairs',
+  'German Open Teams',
+  'German Open Trials',
+  'German Team Trophy',
+  'German Women Pairs',
+  "Gro's Supercup",
+  'König Ludwig Cup',
+
+  # IRELAND -- mapped in detail
+  'Irish Invitational Pairs',
+  'Irish Open Trials',
+  'Full Tilt Irish Bridge Masters',
+
+  # ITALY -- mapped in detail
+  'Italian Club Open Championship',
+  'Italian Club Women Championship',
+  'Italian Men Cup',
+  'Italian Mixed Cup',
+  'Italian Mixed Pairs',
+  'Italian Mixed Teams',
+  'Italian Open Cup',
+  'Italian Open Teams',
+  'Italian Open Trials',
+  'Italian Senior Cup',
+  'Italian Senior Trials',
+  'Italian U36 Teams',
+  'Italian Women Cup',
+
+  # NEW ZEALAND -- mapped in detail
+  'New Zealand Inter-Provincial Open Teams',
+  'New Zealand Open Teams',
+  'New Zealand Open Trials',
+  'New Zealand Women Trials',
+
+  # POLAND -- mapped in detail
+  'Andrzej Wilkosz Memorial Pairs',
+  'Grand Prix of Poland Pairs',
+  'Grand Prix of Poland Teams',
+  'Janina Wielkoszewska Memorial Open',
+  'Janos Levai Memorial',
+  'Józef Pochron Jubilee Pairs',
+  'Krakow Spring Teams',
+  'Leszek Kwiatkowski Memorial Pairs',
+  'Leszek Kwiatkowski Memorial Teams',
+  'Polish BAM Cup',
+  'Polish BAM Teams',
+  'Polish Boys Championship',
+  'Polish Business League',
+  'Polish Business Pairs',
+  'Polish First League',
+  'Polish Girls Championship',
+  'Polish Girls Trials',
+  'Polish IMP Pairs',
+  'Polish Individual Championship',
+  'Polish Junior Pairs Trials',
+  'Polish Mixed Pairs',
+  'Polish Mixed Teams',
+  'Polish Open Pairs',
+  'Polish Open Teams',
+  'Polish Open Trials',
+  'Polish Pairs Cup',
+  'Polish Patton Teams',
+  'Polish Premier League',
+  'Polish School Championship',
+  'Polish Second League',
+  'Polish Senior Trials',
+  'Polish U16 Pairs',
+  'Polish U16 Teams',
+  'Polish U20 Trials',
+  'Polish U25 Trials',
+  'Polish Women Trials',
+  'Pomerania Cup',
+  'Sigismund Bell Krakow',
+  'SPS Trophy',
+  'Staszek Wybranowski Memorial',
+  'Warsaw Online Teams',
+  'Wronie Summer Teams',
+  'Zulawski Cup',
+
+  # ROMANIA -- mapped in detail
+  'Romanian League',
+  'Romanian Second League',
+  'Romanian Open Teams',
+  'Romanian Open Trials',
+
+  # SPAIN -- mapped in detail
+  'Spanish Central Zone Teams',
+  'Spanish Mixed Teams',
+  'Spanish Open Teams',
+  'Spanish Open Trials',
+  'Spanish Senior Trials',
+
+
   #### AAA
 
   'AfBF Zone 8 Championships',
@@ -53,20 +249,6 @@ my @MULTI_WORDS =
   'Antonio Chong Cup',
   'Aoda Cup',
   'ArboNed Team Cup',
-
-  # ARGENTINA -- mapped in detail
-  'Argentinian Club Teams',
-  'Argentinian Copa Republica',
-  'Argentinian Flags Day Championship',
-  'Argentinian Mixed Pairs',
-  'Argentinian Mixed Teams',
-  'Argentinian Open Teams',
-  'Argentinian Open Trials',
-  'Argentinian Seniors Teams',
-  'Argentinian Senior Trials',
-  'Argentinian Women Teams',
-  'Argentinian Women Trials',
-  'Mar del Plata Open Teams',
 
   'ARIS Cup',
   'Arnhem Interbridge Tournament',
@@ -128,11 +310,6 @@ my @MULTI_WORDS =
   'Baze Senior Knock-out',
   'Belarusian Open Teams',
 
-  # BELGIUM -- mapped in detail
-  'Belgian Open Pairs',
-  'Belgian Open Teams',
-  'Belgian Open Trials',
-
   'Belisol Invitational Pairs',
   'Bergen Grand Tournament',
   'Bermuda Bowl',
@@ -148,12 +325,6 @@ my @MULTI_WORDS =
   'Bologna Trophy',
   'bridge24.pl Trophy',
   
-  # BRAZIL -- mapped in detail
-  'Brazilian Senior Trials',
-  'Brazilian Open Teams',
-  'Brazilian Open Trials',
-  'Brazilian Women Trials',
-
   # BRITAIN
   'British Gold Cup',
   'British Premier League',
@@ -169,11 +340,6 @@ my @MULTI_WORDS =
 
   ### CCC
 
-  # CANADA -- mapped in detail
-  'Canadian National Teams Championship',
-  'Canadian Seniors Teams Championship',
-  'Canadian Women Teams Championship',
-
   'Carrousel Cup',
   'Cavendish Pairs',
   'Cavendish Teams',
@@ -184,16 +350,6 @@ my @MULTI_WORDS =
   "Champions' Cup",
   'Channel Trophy',
   'Cherven Briag National Tournament',
-
-  # CHILE -- mapped in detail
-  'Chilean Cup',
-  'Chilean Invitational Teams',
-  'Chilean Open Pairs',
-  'Chilean Open Teams',
-  'Chilean Open Trials',
-  'Chilean Senior Teams',
-  'Chilean Women Teams',
-  'Chilean Women Trials',
 
   # CHINA
   'China Elite Tournament',
@@ -209,7 +365,14 @@ my @MULTI_WORDS =
 
   'Chinese Taipei Open Trials',
   'Chinese Taipei Trials',
+  'Dongfeng Cup',
+  'Dongming Knock-out Teams',
   'Chung Hua Cup',
+  'Shenhua Cup',
+  'Shenyang Spring',
+  'Shenzhen Lanpu Cup',
+  'Shenzhen Nangangdongli Cup',
+
   'Cliff Wake Challenge',
   'Codan Cup',
   'Collegiate Bowl',
@@ -222,37 +385,15 @@ my @MULTI_WORDS =
   'Corn Cairdis',
   'Cross Strait Invitational',
 
-  # CZECH -- mapped in detail
-  'Czech First League',
-  'Czech Open',
-
   ### DDD
 
   "d'Orsi",
   'Dainik Navjyoti All India Inter-State',
   'Damiani Cup',
 
-  # DENMARK: Mapped in detail
-  'Copenhagen Invitational Pairs',
-  'Copenhagen Open Pairs',
-  'Danish Club Teams',
-  'Danish Cup',
-  'Danish First Division',
-  'Danish Junior Teams',
-  'Danish Mixed Pairs',
-  'Danish Mixed Teams',
-  'Danish Open Pairs',
-  'Danish Open Pairs Trials',
-  'Danish Open Teams',
-  'Danish Open Trials',
-  'Danish Women Pairs',
-  'Vinoble Open',
-
   'Delhi Gymkhana Club Centenary',
   'Delhi Gymkhana Club Open',
   'Division Nationale',
-  'Dongfeng Cup',
-  'Dongming Knock-out Teams',
   'Dr. Rand Masters',
 
   # NETHERLANDS
@@ -289,44 +430,6 @@ my @MULTI_WORDS =
 
   'Estoril Teams',
   'Estoril Swiss Teams',
-
-  # EUROPE -- mapped in detail
-  "European Open Champions' Cup",
-  'European National Mixed Teams',
-  'European National Open Teams',
-  'European National Seniors Pairs',
-  'European National Seniors Teams',
-  'European National Women Pairs',
-  'European National Women Teams',
-  'European Small Federation Games',
-  'European Transnational Mixed Pairs',
-  'European Transnational Mixed Teams',
-  'European Transnational Open Pairs',
-  'European Transnational Open Teams',
-  'European Transnational Seniors Teams',
-  'European Winter BAM Trophy',
-  'European Winter Teams',
-  'European Winter Transnational Teams',
-  "European Women Open Champions' Cup",
-  'Generali European Open Teams',
-  'Generali European Women Pairs',
-  'Generali European Women Teams',
-
-  # EURO-YOUTH: Mapped in detail
-  'European U16 Open Pairs',
-  'European U16 Open Teams',
-  'European U21 Open Pairs',
-  'European U21 Open Teams',
-  'European U26 Mixed Pairs',
-  'European U26 Open IMP Pairs',
-  'European U26 Open Pairs',
-  'European U26 Open Teams',
-  'European U26 Women Pairs',
-  'European U26 Women Teams',
-  'European U31 Open Pairs',
-  "European U31 President's Cup",
-  'European University Bridge Championship',
-  'European University Team Championship',
 
   ### FFF
 
@@ -379,19 +482,6 @@ my @MULTI_WORDS =
   'Geologi Cup',
   'Godfrey Phillips All India Open',
   'Goulyash by E. Gladysh',
-
-  # GERMANY -- mapped in detail
-  'Bonn Nations Cup',
-  'German Bundesliga',
-  'German Club Cup',
-  'German Mixed Teams',
-  'German Open Pairs',
-  'German Open Teams',
-  'German Open Trials',
-  'German Team Trophy',
-  'German Women Pairs',
-  "Gro's Supercup",
-  'König Ludwig Cup',
 
   'GHTD Cup',
   'Goksu-Yalikavak Pairs',
@@ -489,11 +579,6 @@ my @MULTI_WORDS =
 
   'IOB Madras Gymkhana Open',
 
-  # IRELAND -- mapped in detail
-  'Irish Invitational Pairs',
-  'Irish Open Trials',
-  'Full Tilt Irish Bridge Masters',
-
   # ISRAEL
   'Israel Juniors Championship',
   'Israel Juniors Pairs',
@@ -509,21 +594,6 @@ my @MULTI_WORDS =
   'Istanbul Teams',
   'IOC Grand Prix',
   'Istanbul Winter Teams',
-
-  # ITALY -- mapped in detail
-  'Italian Club Open Championship',
-  'Italian Club Women Championship',
-  'Italian Men Cup',
-  'Italian Mixed Cup',
-  'Italian Mixed Pairs',
-  'Italian Mixed Teams',
-  'Italian Open Cup',
-  'Italian Open Teams',
-  'Italian Open Trials',
-  'Italian Senior Cup',
-  'Italian Senior Trials',
-  'Italian U36 Teams',
-  'Italian Women Cup',
 
   'Izmir Teams Cup',
 
@@ -614,12 +684,6 @@ my @MULTI_WORDS =
   'New South Wales Open Teams',
   'New South Wales Open Trials',
 
-  # NEW ZEALAND -- mapped in detail
-  'New Zealand Inter-Provincial Open Teams',
-  'New Zealand Open Teams',
-  'New Zealand Open Trials',
-  'New Zealand Women Trials',
-
   'NN Cup',
   'Nordic Championship',
   'Nordic Cup',
@@ -689,51 +753,6 @@ my @MULTI_WORDS =
   'Plock District League',
   'Poddar National Masters',
 
-  # POLAND -- mapped in detail
-  'Andrzej Wilkosz Memorial Pairs',
-  'Grand Prix of Poland Pairs',
-  'Grand Prix of Poland Teams',
-  'Janina Wielkoszewska Memorial Open',
-  'Janos Levai Memorial',
-  'Józef Pochron Jubilee Pairs',
-  'Krakow Spring Teams',
-  'Leszek Kwiatkowski Memorial Pairs',
-  'Leszek Kwiatkowski Memorial Teams',
-  'Polish BAM Cup',
-  'Polish BAM Teams',
-  'Polish Boys Championship',
-  'Polish Business League',
-  'Polish Business Pairs',
-  'Polish First League',
-  'Polish Girls Championship',
-  'Polish Girls Trials',
-  'Polish IMP Pairs',
-  'Polish Individual Championship',
-  'Polish Junior Pairs Trials',
-  'Polish Mixed Pairs',
-  'Polish Mixed Teams',
-  'Polish Open Pairs',
-  'Polish Open Teams',
-  'Polish Open Trials',
-  'Polish Pairs Cup',
-  'Polish Patton Teams',
-  'Polish Premier League',
-  'Polish School Championship',
-  'Polish Second League',
-  'Polish Senior Trials',
-  'Polish U16 Pairs',
-  'Polish U16 Teams',
-  'Polish U20 Trials',
-  'Polish U25 Trials',
-  'Polish Women Trials',
-  'Pomerania Cup',
-  'Sigismund Bell Krakow',
-  'SPS Trophy',
-  'Staszek Wybranowski Memorial',
-  'Warsaw Online Teams',
-  'Wronie Summer Teams',
-  'Zulawski Cup',
-
 
   # PORTUGAL
   'Portuguese Grand Prix',
@@ -773,12 +792,6 @@ my @MULTI_WORDS =
   'Rio de Janeiro Championship',
   'Rio de Janeiro Christmas Individual',
   'Roberto Taunay Cup',
-
-  # ROMANIA -- mapped in detail
-  'Romanian League',
-  'Romanian Second League',
-  'Romanian Open Teams',
-  'Romanian Open Trials',
 
   'Rome Challenger Trophy',
   'Rondane Pairs Cup',
@@ -821,10 +834,6 @@ my @MULTI_WORDS =
   'Serbian Team Championship',
 
   'Serdika Cup',
-  'Shenhua Cup',
-  'Shenyang Spring',
-  'Shenzhen Lanpu Cup',
-  'Shenzhen Nangangdongli Cup',
   'Shield of Thoisy',
   'Shree Keni Trophy',
   'Singapore Open Teams',
@@ -854,14 +863,6 @@ my @MULTI_WORDS =
   'Southeast Asian Games',
 
   'South Pacific Zone 7 Championship',
-
-  # SPAIN
-  'Spanish Central Zone Teams',
-  'Spanish Mixed Teams',
-  'Spanish Open Teams',
-  'Spanish Open Trials',
-  'Spanish Senior Trials',
-  'Spanish Teams Championship',
 
   'SPBF Championship',
   'Spring Fours',
@@ -2715,23 +2716,27 @@ my %MULTI_TYPOS =
 
   # SPAIN
   'Spanish Central Zone Teams' => [
-    'zonal centro equipos',
-    'equipos zonal centro'],
-  'Spanish Mixed Teams' => ['spanish mixed national teams'],
+    'equipos zonal centro',
+    'zonal centro equipos'],
+  'Spanish Mixed Teams' => [
+    'spanish mixed national teams'],
   'Spanish Open Teams' => [
-    'spanish teams', 
-    "spanish teams ch'ship",
-    'spanish national championship',
-    'spanish national teams',
-    'spanish national teams championship'],
-  'Spanish Open Trials' => ['open seleccion mundial'],
-  'Spanish Senior Trials' => ['prueba de seleccion equipos senior'],
-  'Spanish Teams Championship' => [
+    'camp esp',
     'campeonato de españa por equipos',
     'campeonato espan', 
     'campeonato espanaonda', 
-    'camp esp',
+    'spanish national championship',
+    'spanish national teams',
+    'spanish national teams championship',
+    'spanish teams', 
+    'spanish teams championship',
+    "spanish teams ch'ship",
     'spain teams'],
+  'Spanish Open Trials' => [
+    'open seleccion mundial'],
+  'Spanish Senior Trials' => [
+    'prueba de seleccion equipos senior'],
+
   'SPBF Championship' => ['zone 7 championship', 'zone 7 championships'],
   'Spring Fours' => ['spring 4s', 'spring foursomes', 'schapirosfs'],
   'Spring Nationals' => ['spring nat', 'spring national', 'spring nats',
