@@ -26,7 +26,7 @@ my @MULTI_WORDS =
 
   '0 to 1500 Spingold',
 
-  # ARGENTINA -- mapped in detail
+  # ARGENTINA
   'Argentinian Club Teams',
   'Argentinian Copa Republica',
   'Argentinian Flags Day Championship',
@@ -40,23 +40,23 @@ my @MULTI_WORDS =
   'Argentinian Women Trials',
   'Mar del Plata Open Teams',
 
-  # BELGIUM -- mapped in detail
+  # BELGIUM
   'Belgian Open Pairs',
   'Belgian Open Teams',
   'Belgian Open Trials',
 
-  # BRAZIL -- mapped in detail
+  # BRAZIL
   'Brazilian Senior Trials',
   'Brazilian Open Teams',
   'Brazilian Open Trials',
   'Brazilian Women Trials',
 
-  # CANADA -- mapped in detail
+  # CANADA
   'Canadian National Teams Championship',
   'Canadian Seniors Teams Championship',
   'Canadian Women Teams Championship',
 
-  # CHILE -- mapped in detail
+  # CHILE
   'Chilean Cup',
   'Chilean Invitational Teams',
   'Chilean Open Pairs',
@@ -66,11 +66,11 @@ my @MULTI_WORDS =
   'Chilean Women Teams',
   'Chilean Women Trials',
 
-  # CZECH -- mapped in detail
+  # CZECH
   'Czech First League',
   'Czech Open',
 
-  # DENMARK: Mapped in detail
+  # DENMARK
   'Copenhagen Invitational Pairs',
   'Copenhagen Open Pairs',
   'Danish Club Teams',
@@ -86,7 +86,7 @@ my @MULTI_WORDS =
   'Danish Women Pairs',
   'Vinoble Open',
 
-  # EUROPE -- mapped in detail
+  # EUROPE
   "European Open Champions' Cup",
   'European National Mixed Teams',
   'European National Open Teams',
@@ -108,7 +108,7 @@ my @MULTI_WORDS =
   'Generali European Women Pairs',
   'Generali European Women Teams',
 
-  # EURO-YOUTH: Mapped in detail
+  # EURO-YOUTH
   'European U16 Open Pairs',
   'European U16 Open Teams',
   'European U21 Open Pairs',
@@ -124,7 +124,18 @@ my @MULTI_WORDS =
   'European University Bridge Championship',
   'European University Team Championship',
 
-  # GERMANY -- mapped in detail
+  # FINLAND
+  'Finnish Cup',
+  'Finnish Easter Teams',
+  'Finnish Open Pairs',
+  'Finnish Open Pair Trials',
+  'Finnish Open Trials',
+  'Finnish Open Teams',
+  'Finnish Senior Trials',
+  'Finnish Swiss Teams Championship',
+  'Finnish Women Trials',
+
+  # GERMANY
   'Bonn Nations Cup',
   'German Bundesliga',
   'German Club Cup',
@@ -137,12 +148,12 @@ my @MULTI_WORDS =
   "Gro's Supercup",
   'König Ludwig Cup',
 
-  # IRELAND -- mapped in detail
+  # IRELAND
   'Irish Invitational Pairs',
   'Irish Open Trials',
   'Full Tilt Irish Bridge Masters',
 
-  # ITALY -- mapped in detail
+  # ITALY
   'Italian Club Open Championship',
   'Italian Club Women Championship',
   'Italian Men Cup',
@@ -157,13 +168,13 @@ my @MULTI_WORDS =
   'Italian U36 Teams',
   'Italian Women Cup',
 
-  # NEW ZEALAND -- mapped in detail
+  # NEW ZEALAND
   'New Zealand Inter-Provincial Open Teams',
   'New Zealand Open Teams',
   'New Zealand Open Trials',
   'New Zealand Women Trials',
 
-  # POLAND -- mapped in detail
+  # POLAND
   'Andrzej Wilkosz Memorial Pairs',
   'Grand Prix of Poland Pairs',
   'Grand Prix of Poland Teams',
@@ -208,18 +219,20 @@ my @MULTI_WORDS =
   'Wronie Summer Teams',
   'Zulawski Cup',
 
-  # ROMANIA -- mapped in detail
+  # ROMANIA
   'Romanian League',
   'Romanian Second League',
   'Romanian Open Teams',
   'Romanian Open Trials',
 
-  # SPAIN -- mapped in detail
+  # SPAIN
   'Spanish Central Zone Teams',
   'Spanish Mixed Teams',
   'Spanish Open Teams',
   'Spanish Open Trials',
   'Spanish Senior Trials',
+
+  # ----------------------------------------------------
 
 
   #### AAA
@@ -286,6 +299,10 @@ my @MULTI_WORDS =
   'Australian Trials',
   'Australian Youth IMP Pairs',
 
+  'New South Wales State Teams',
+  'New South Wales Open Teams',
+  'New South Wales Open Trials',
+
   # AUSTRIA
   'Austrian Team Championship',
 
@@ -312,7 +329,6 @@ my @MULTI_WORDS =
 
   'Belisol Invitational Pairs',
   'Bergen Grand Tournament',
-  'Bermuda Bowl',
   'Bermuda Triangle Cup',
   'BFAME Championship',
   'BFAME Friendship Pairs',
@@ -389,7 +405,6 @@ my @MULTI_WORDS =
 
   "d'Orsi",
   'Dainik Navjyoti All India Inter-State',
-  'Damiani Cup',
 
   'Delhi Gymkhana Club Centenary',
   'Delhi Gymkhana Club Open',
@@ -400,6 +415,10 @@ my @MULTI_WORDS =
   'Dutch Knock-Out Cup',
   'Dutch Meesterklasse',
   'Dutch Women',
+  'White House International',
+  'White House Juniors',
+  'White House Top 12',
+  'White House Top 16',
 
   ### EEE
 
@@ -422,6 +441,11 @@ my @MULTI_WORDS =
   'English Women Teams',
   'English Women Trials',
 
+  'TGR Auction',
+  'TGR Auction Pairs',
+  'TGR Auction Teams',
+  'TGR Super League',
+
   # ESTONIA
   'Estonian First League',
   'Estonian Open Teams',
@@ -437,17 +461,6 @@ my @MULTI_WORDS =
   'Faroese Teams',
   'Fatih Kiral Cup',
   'Filbyter Cup',
-
-  # Finland
-
-  'Finnish Cup',
-  'Finnish Easter Teams',
-  'Finnish Open Pairs',
-  'Finnish Open Trials',
-  'Finnish Teams Championship',
-  'Finnish Senior Trials',
-  'Finnish Swiss Teams Championship',
-  'Finnish Women Trials',
 
   'Forbo Nations Cup',
   'Forest Trophy',
@@ -555,6 +568,26 @@ my @MULTI_WORDS =
   'Indian State Championship',
   'Indian Western Zone Championship',
 
+  'Madras Gymkhana Club Open',
+  'Maharaja Yeshwantrao Holkar National',
+  'Maharashtra State Championship',
+  'Maharashtra State Pairs',
+  'Mitra Vihar State Championship',
+  'Mohan Sicka Trophy',
+  'Mohanlal Bhartia Memorial Grand Prix',
+
+  'Poddar National Masters',
+  'R N Bagla Memorial Pairs',
+  'R R Gupta Memorial Championship',
+  'PYC Hindu Gymkhana Royale',
+  'PYC Hindu Gymkhana Pairs Royale',
+  'Rai Bahadur Modi Memorial All India Open',
+  'Rajasthan Invitational Championship',
+  'Tolani Gold Trophy',
+  'Tolani Grand Prix',
+  'Tolani Silver Cup',
+  'Uttar Pradesh State Championship',
+
   # INDONESIA
   'Indonesian Championship',
   'Indonesian Girls Trials',
@@ -591,11 +624,6 @@ my @MULTI_WORDS =
   'Israel Schools',
   'Israel Women Pairs',
 
-  'Istanbul Teams',
-  'IOC Grand Prix',
-  'Istanbul Winter Teams',
-
-  'Izmir Teams Cup',
 
   ### JJJ
 
@@ -648,11 +676,7 @@ my @MULTI_WORDS =
   'Maccabi Games',
   'Madeira Open',
   'Madeira Swiss Teams',
-  'Madras Gymkhana Club Open',
   'Madrid Senior Teams',
-  'Maharaja Yeshwantrao Holkar National',
-  'Maharashtra State Championship',
-  'Maharashtra State Pairs',
   'Marit Sveaas Tournament',
   'Marmara Inter-Club Championship',
   'McConnell Cup',
@@ -660,10 +684,7 @@ my @MULTI_WORDS =
   'Mike Lawrence Exhibition',
   'Milan Trophy',
   "Missouri Braggin' Rights",
-  'Mitra Vihar State Championship',
   'Mo i Rana Ladies Invitational',
-  'Mohan Sicka Trophy',
-  'Mohanlal Bhartia Memorial Grand Prix',
   'Mondi Cup',
   'Mondial de Deauville',
   'Moscow Sunday Times',
@@ -680,9 +701,6 @@ my @MULTI_WORDS =
   'NEC Cup',
   'Necmettin Sunget Teams Cup',
   'Neighbor Challenge',
-  'New South Wales State Teams',
-  'New South Wales Open Teams',
-  'New South Wales Open Trials',
 
   'NN Cup',
   'Nordic Championship',
@@ -719,6 +737,8 @@ my @MULTI_WORDS =
   'Norwegian Women Invitational Pairs',
   'Norwegian Women Teams',
 
+  'Trondheim Cup',
+
   'NTU Cup',
   'NYSA Euroregion Nations Cup',
 
@@ -751,7 +771,6 @@ my @MULTI_WORDS =
   "Pigg's Peak All Africa",
   'PLN Cup',
   'Plock District League',
-  'Poddar National Masters',
 
 
   # PORTUGAL
@@ -769,20 +788,14 @@ my @MULTI_WORDS =
   'PSN Sarma Centenary Memorial',
   'PT Timah Invitational Teams',
   'Puutalo Open',
-  'PYC Hindu Gymkhana Royale',
-  'PYC Hindu Gymkhana Pairs Royale',
 
   'Queensland Women Trials',
   'Queensland Senior Trials',
 
   ### RRR
 
-  'R N Bagla Memorial Pairs',
-  'R R Gupta Memorial Championship',
   'R Ratnam Memorial',
   'Ragn-Sells International Grand Tournament',
-  'Rai Bahadur Modi Memorial All India Open',
-  'Rajasthan Invitational Championship',
   'Rand Cup',
   'Rector University of Brawijaya Cup',
   'Rona Cup',
@@ -899,6 +912,8 @@ my @MULTI_WORDS =
   'Swiss Cup',
   'Swiss Open Championship',
   'Swiss Team Championship',
+  'Zurich Open Pairs',
+  'Zurich Open Teams',
 
   ### TTT
 
@@ -912,10 +927,6 @@ my @MULTI_WORDS =
   'TATA Open',
   'Telkom Indonesia Open',
   'Teltscher Trophy',
-  'TGR Auction',
-  'TGR Auction Pairs',
-  'TGR Auction Teams',
-  'TGR Super League',
   'Thane Champion of Champions Teams',
   'Thanos Capayiannides Memorial Simultaneous',
   'The Hague Bridge Experience',
@@ -923,16 +934,12 @@ my @MULTI_WORDS =
   'Thrace Cup League',
   'Tianjin Binhai Cup',
   'Tielu Jixie Invitational',
-  'Tolani Gold Trophy',
-  'Tolani Grand Prix',
-  'Tolani Silver Cup',
   'Top Circuit',
   'Torneo di Rastignano',
   'Torneo di Roma',
   'Toscana Cup',
   'Towns Cup',
   'Transnational Open Teams',
-  'Trondheim Cup',
 
   # TURKEY
   'Turkish Club Championship',
@@ -953,6 +960,10 @@ my @MULTI_WORDS =
   'Turkish Winter Women Teams',
   'Turkish Women Trials',
 
+  'Istanbul Teams',
+  'Istanbul Winter Teams',
+  'Izmir Teams Cup',
+
   ### UUU
 
   'United States Juniors Bridge Championship',
@@ -968,7 +979,6 @@ my @MULTI_WORDS =
   'US Youngsters',
   'USBF Challenge Match',
 
-  'Uttar Pradesh State Championship',
 
   ### VVV
 
@@ -976,7 +986,6 @@ my @MULTI_WORDS =
   'Varna Titan Teams',
   'Venezuelan Mixed Teams',
   'Venezuelan Swiss Pairs',
-  'Venice Cup',
   'Vest-Agder Regional Team Championship',
   'Victor Champion Cup',
   'Victoria Cup',
@@ -1003,10 +1012,6 @@ my @MULTI_WORDS =
   'Welsh Invitational Pairs',
   'Welsh Open Trials',
   'Western Mediterranean Club Teams',
-  'White House International',
-  'White House Juniors',
-  'White House Top 12',
-  'White House Top 16',
   'Whitelaw Cup',
   'Willingdon Sports Club Swiss Pairs',
   'Willoughby Bridge Classic',
@@ -1014,6 +1019,10 @@ my @MULTI_WORDS =
   'Winter Open Teams',
 
   # WORLD
+  'Bermuda Bowl',
+  'Damiani Cup',
+  'IOC Grand Prix',
+  'Venice Cup',
   'World Juniors Championship',
   'World Masters Individual',
   'World Men Elite Tournament',
@@ -1042,8 +1051,6 @@ my @MULTI_WORDS =
 
   'Zhejiang Huamen Cup',
   "Zia's Individual Goulash",
-  'Zurich Open Pairs',
-  'Zurich Open Teams'
 );
 
 my %MULTI_TYPOS =
@@ -1700,26 +1707,28 @@ my %MULTI_TYPOS =
     'finnish pairs',
     'finnish pairs championship',
     'finnish pairs champs'],
+  'Finnish Open Teams' => [
+    'finnish team championship',
+    'finnish team championships',
+    'finnish teams championship',
+    'finnish teams championships',
+    'finnish teams'],
   'Finnish Open Trials' => [
     'finnish national team qualifications',
     'finnish open team qualifications',
-    'finnish team trials'],
+    'finnish team trials',
+    'finnish teams trials'],
   'Finnish Senior Trials' => [
     'finnish senior qualifications',
     'finnish senior teams trial', 
     'finnish senior teams trials',
     'finnish teams senior trials'],
-  'Finnish Swiss Teams Championship' => [
+  'Finnish Swiss Pairs' => [
+    'finnish open imp championship',
     'finnish swiss imps championship',
     'finnish swiss imps championships',
     'finnish swiss-imps championships', 
     'finnish swiss-ims championships'],
-  'Finnish Teams Championship' => [
-    'finnish open imp championship',
-    'finnish team championship',
-    'finnish team championships',
-    'finnish teams championships',
-    'finnish teams'],
   'Finnish Women Trials' => [
     'finnish women teams trials'],
 

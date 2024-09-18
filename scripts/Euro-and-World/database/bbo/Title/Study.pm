@@ -190,6 +190,8 @@ my @LOCAL_SUBS =
     CORR => 'Grand Prix of Poland Pairs' },
   { START => 15883, END => 15886, TEXT => 'Gran Final Argentina Damas', 
     CORR => 'Argentinian Women Trials - Final' },
+  { START => 15919, END => 15966, TEXT => 'Finnish Team Trials', 
+    CORR => 'Finnish Open Pair Trials' },
   { START => 16061, END => 16111, TEXT => 'Romanian National Teams',
     CORR => 'Romanian League' },
   { START => 16307, END => 16324, TEXT => 'GP of Poland',

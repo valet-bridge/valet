@@ -19,6 +19,7 @@ $FIELD_MAP{$FIELDS[$_]} = $_ for (0 .. $#FIELDS);
 
 # (given_field, present_field)
 my %CONFUSION_MATRIX;
+$CONFUSION_MATRIX{MATCH}{ROUND} = 1;
 $CONFUSION_MATRIX{ROUND}{MATCH} = 1;
 $CONFUSION_MATRIX{ROUND}{SEGMENT} = 1;
 $CONFUSION_MATRIX{ROUND}{SESSION} = 1;
@@ -72,7 +73,7 @@ sub register
     {
       $self->{COUNTER}{$field}{SIMPLE}++;
     }
-    elsif ($value =~ /^\d+[A-D]$/)
+    elsif ($value =~ /^\d+[A-Da-d]$/)
     {
       $self->{COUNTER}{$field}{SIMPLE}++;
     }

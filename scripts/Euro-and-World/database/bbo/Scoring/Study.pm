@@ -66,7 +66,6 @@ my @LOCAL_SUBS =
   { START => 38008, END => 38028, TEXT => 'BAM', CORR => 'MP' },
   { START => 40982, END => 40998, TEXT => 'BAM', CORR => 'MP' },
   { START => 42370, END => 42385, TEXT => 'BAM', CORR => 'MP' },
-  { START => 42397, END => 42420, TEXT => 'IMP', CORR => 'MP' }, # IMP!
   { START => 43307, END => 43311, TEXT => 'BAM', CORR => 'MP' },
   { START => 43325, END => 43341, TEXT => 'BAM', CORR => 'MP' },
   { START => 44725, END => 44741, TEXT => 'BAM', CORR => 'MP' },
@@ -96,6 +95,7 @@ my @LOCAL_SUBS =
   # In Finland they use B for Barometer, I think.
   { START => 15747, END => 15786, TEXT => 'BAM', CORR => 'MP' },
   { START => 25865, END => 25921, TEXT => 'BAM', CORR => 'MP' },
+  { START => 26966, END => 27009, TEXT => 'BAM', CORR => 'IMP' },
   { START => 30627, END => 30670, TEXT => 'BAM', CORR => 'MP' },
   { START => 41675, END => 41707, TEXT => 'BAM', CORR => 'MP' },
   { START => 44253, END => 44304, TEXT => 'BAM', CORR => 'MP' },
