@@ -153,6 +153,17 @@ my @MULTI_WORDS =
   'Irish Open Trials',
   'Full Tilt Irish Bridge Masters',
 
+  # ISRAEL
+  'Israel Cup',
+  'Israel Juniors Pairs',
+  'Israel Juniors Trials',
+  'Israel IMP Pairs',
+  'Israel Open Pairs',
+  'Israel Open Teams',
+  'Israel Open Trials',
+  'Israel School Trials',
+  'Israel Women Pairs',
+
   # ITALY
   'Italian Club Open Championship',
   'Italian Club Women Championship',
@@ -505,13 +516,13 @@ my @MULTI_WORDS =
 
   
   # GREECE
-  'Greek Central Regional Championship',
+  'Greek Central Regional Pairs',
+  'Greek Mixed Pairs',
+  'Greek Northern Regional',
   'Greek Open Teams',
-  'Greek Open Trials',
-  'Hellenic Mixed Pairs',
-  'Hellenic Team Trials',
-  'Hellenic Team Championship',
-  'Hellenic Women Team Trials',
+  'Greek Open Pair Trials',
+  'Greek Open Team Trials',
+  'Greek Women Trials',
 
   'Guangdong Club Championship',
   'Guangdong Club Invitational',
@@ -576,6 +587,7 @@ my @MULTI_WORDS =
   'Mohan Sicka Trophy',
   'Mohanlal Bhartia Memorial Grand Prix',
 
+  'IOB Madras Gymkhana Open',
   'Poddar National Masters',
   'R N Bagla Memorial Pairs',
   'R R Gupta Memorial Championship',
@@ -610,19 +622,6 @@ my @MULTI_WORDS =
   'Indonesian University Championship',
   'Indonesian Women Trials',
 
-  'IOB Madras Gymkhana Open',
-
-  # ISRAEL
-  'Israel Juniors Championship',
-  'Israel Juniors Pairs',
-  'Israel Juniors Teams',
-  'Israel Juniors Trials',
-  'Israel IMP Pairs',
-  'Israel Open Pairs',
-  'Israel Open Teams',
-  'Israel Open Trials',
-  'Israel Schools',
-  'Israel Women Pairs',
 
 
   ### JJJ
@@ -714,7 +713,6 @@ my @MULTI_WORDS =
   'Nordic Team Championship',
   'Nordic Women Championship',
   'North American Bridge Championship',
-  'Northern Greece Regional Championship',
   'Northern Territory Gold Teams',
   'Northern Territory Gold Swiss Pairs',
 
@@ -1843,14 +1841,40 @@ my %MULTI_TYPOS =
   'Grand National Teams' => ['gnt championship'],
 
   # GREECE
-  'Greek Central Regional Championship' => [
+  'Greek Central Regional Pairs' => [
     'regional championship of central greece'],
-  'Greek Open Teams' => ['greek open nationa team',
-    'greek natioanal teams', 'greek open team championship', 
-    'greek open team', 'grekk open national team', 'greek teams',
-    'greek team'],
-  'Greek Open Trials' => ['greek trials', 'greek national team trials',
-    'greek national trials', 'greek national teams trials'],
+  'Greek Mixed Pairs' => [
+    'hellenic mixed pairs',
+    'hellenik mixed pairs'],
+  'Greek Northern Regional' => [
+    'n_ greece regional championship'],
+  'Greek Open Teams' => [
+    'greek natioanal teams', 
+    'greek open nationa team',
+    'grekk open national team', 
+    'greek open team', 
+    'greek open team championship', 
+    'greek team',
+    'greek teams',
+    'hellenic teams championship'],
+  'Greek Open Team Trials' => [
+    'greek national team trials',
+    'greek national teams trials',
+    'greek national trials', 
+    'greek open nationa team trials',
+    'greek open national team trials',
+    'greek open team trials',
+    'greek trials', 
+    'grekk open national team trials',
+    'helenic national team trials',
+    'hellenic national team trials',
+    'hellenic national teams trials',
+    'hellenic open team trials',
+    'hellenic team trials',
+    'hellenic teams trials'], 
+  'Greek Women Trials' => [
+    'hellenic ladies team trials',
+    'hellenic ladies teams trials'],
 
   'Guangdong Club Championship' => ['guang dong club championship',
     'guang dong club bridge championship'],
@@ -1870,15 +1894,6 @@ my %MULTI_TYPOS =
     'hans rosendorff memorial womens teams',
     'hans rosendorff memorial  womens teams',
     'han rosendorff memorial womens teams'],
-  'Hellenic Mixed Pairs' => ['hellenik mixed pairs'],
-  'Hellenic Team Championship' => ['hellenic teams championship'],
-  'Hellenic Team Trials' => ['hellenic national team trials',
-    'hellenic teams trials', 'helenic national team trials',
-    'hellenic national teams trials',
-    'hellenic open team trials'],
-  'Hellenic Women Team Trials' => [
-    'hellenic ladies teams trials',
-    'hellenic ladies team trials'],
   'HNA Open Teams' => ['hna cup', 'hna openteams', 'hna open team',
     "hna's hainan bridge tournament"],
   'Hong Kong Inter-City' => ['hong kong iner-city'],
@@ -2012,27 +2027,35 @@ my %MULTI_TYPOS =
     'irish trials'],
 
   # ISRAEL
-  'Israel Juniors Championship' => ['israel juniors chamionship',
-    'israeli juniors championship', 'israeli juniors chamionship',
-    'israel juniours', 'israeli juniours'],
-  'Israel Juniors Pairs' => ['israel juniours pairs'],
-  'Israel Juniors Teams' => ['israel juniors team'],
-  'Israel Juniors Trials' => ['israeli juniors trials',
+  'Israel Cup' => [
+    'israel team cup', 
+    'israel team of four cup', 
+    'israeli teams cup'],
+  'Israel Juniors Pairs' => [
+    'israel juniours pairs'],
+  'Israel Juniors Trials' => [
+    'israel juniors team trials',
+    'israeli juniors trials',
     'israeli juniors team trials'],
-  'Israel Open Pairs' => ['israel pairs', 'israel pairs champ',
+  'Israel Open Pairs' => [
+    'israel pairs', 
+    'israel pairs champ',
     'israeli pairs championship'],
   'Israel Open Teams' => [
     'israeli open team', 
     'israel teams',
-    'israel team of four cup', 
-    'israel team cup', 
     'israel team champ_',
     'israel team championship', 
     'israelairs champ_',
-    'israeli teams cup',
     'israeli team champ_'],
-  'Israel Open Trials' => ['israel open team trials',
-    'israel open trials', 'israel team trials'],
+  'Israel Open Trials' => [
+    'israel open team trials',
+    'israel open trials', 
+    'israel team trials',
+    'israeli open team trials'],
+  'Israel School Trials' => [
+    'israel schools trials',
+    'israel schools teams trials'],
 
   'Istanbul Teams' => [
     'istanbul team championship', 
@@ -2283,8 +2306,6 @@ my %MULTI_TYPOS =
   'Nordic Team Championship' => ['nordic bridge team championship',
     'nordics', 'nordic team championships'],
   'Nordic Women Championship' => ['nordics (women)'],
-  'Northern Greece Regional Championship' => [
-    'n_ greece regional championship'],
   'Northern Territory Gold Teams' => ['nt gold teams'],
   'Northern Territory Gold Swiss Pairs' => ['nt gold swiss pairs',
     'nt gold swis pairs', 'nt gold swiss piars'],

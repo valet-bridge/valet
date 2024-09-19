@@ -49,6 +49,7 @@ my %MULTI_TYPOS =
   DBV => ['deutscher bridge-verband'],
   EBL => ['european bridge league', 'e_b_l'],
   EBU => ['eng bridge union'],
+  EOM => ['greek bridge federation'],
   EUSA => ['european university sports association'],
   FBB => ['Federação Brasileira de Bridge'],
   FCB => ['Federacion Chilena de Bridge'],
