@@ -25,13 +25,16 @@ use EntryT;
 # use Tournaments::EuroYouth;
 # use Tournaments::Finland;
 # use Tournaments::Germany;
-use Tournaments::Greece;
+# use Tournaments::Greece;
+# use Tournaments::Hungary;
 # use Tournaments::Ireland;
 # use Tournaments::Israel;
 # use Tournaments::Italy;
 # use Tournaments::NewZealand;
 # use Tournaments::Poland;
+use Tournaments::Portugal;
 # use Tournaments::Romania;
+# use Tournaments::Serbia;
 # use Tournaments::Spain;
 
 
@@ -48,13 +51,16 @@ my %DIVISIONS =
   # EUROYOUTH => \&Tournaments::EuroYouth::set_links
   # FINLAND => \&Tournaments::Finland::set_links
   # GERMANY => \&Tournaments::Germany::set_links
-  GREECE => \&Tournaments::Greece::set_links
+  # GREECE => \&Tournaments::Greece::set_links
+  # HUNGARY => \&Tournaments::Hungary::set_links
   # IRELAND => \&Tournaments::Ireland::set_links
   # ISRAEL => \&Tournaments::Israel::set_links
   # ITALY => \&Tournaments::Italy::set_links
   # NEWZEALAND => \&Tournaments::NewZealand::set_links
   # POLAND => \&Tournaments::Poland::set_links
+  PORTUGAL => \&Tournaments::Portugal::set_links
   # ROMANIA => \&Tournaments::Romania::set_links
+  # SERBIA => \&Tournaments::Serbia::set_links
   # SPAIN => \&Tournaments::Spain::set_links
 );
 

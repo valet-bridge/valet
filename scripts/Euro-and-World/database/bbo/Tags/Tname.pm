@@ -148,6 +148,24 @@ my @MULTI_WORDS =
   "Gro's Supercup",
   'König Ludwig Cup',
 
+  # GREECE
+  'Greek Central Regional Pairs',
+  'Greek Mixed Pairs',
+  'Greek Northern Regional',
+  'Greek Open Teams',
+  'Greek Open Pair Trials',
+  'Greek Open Team Trials',
+  'Greek Women Trials',
+
+  # HUNGARY
+  'Hungarian Cup',
+  'Hungarian IMP Pairs',
+  'Hungarian Open Pairs',
+  'Hungarian Open Teams',
+  'Hungarian Open Trials',
+  'Hungarian Senior Trials',
+  'Hungarian Women Trials',
+
   # IRELAND
   'Irish Invitational Pairs',
   'Irish Open Trials',
@@ -235,6 +253,13 @@ my @MULTI_WORDS =
   'Romanian Second League',
   'Romanian Open Teams',
   'Romanian Open Trials',
+
+  # SERBIA
+  'Serbian Cup',
+  'Serbian Inter-City Teams',
+  'Serbian Open Teams',
+  'Serbian Open Trials',
+  'Serbian Premier League',
 
   # SPAIN
   'Spanish Central Zone Teams',
@@ -395,6 +420,10 @@ my @MULTI_WORDS =
   'Dongfeng Cup',
   'Dongming Knock-out Teams',
   'Chung Hua Cup',
+  'Guangdong Club Championship',
+  'Guangdong Club Invitational',
+  'Guangdong Elite Tournament',
+  'Guangzhou-HK-Macau Interport',
   'Shenhua Cup',
   'Shenyang Spring',
   'Shenzhen Lanpu Cup',
@@ -414,11 +443,7 @@ my @MULTI_WORDS =
 
   ### DDD
 
-  "d'Orsi",
-  'Dainik Navjyoti All India Inter-State',
 
-  'Delhi Gymkhana Club Centenary',
-  'Delhi Gymkhana Club Open',
   'Division Nationale',
   'Dr. Rand Masters',
 
@@ -515,19 +540,6 @@ my @MULTI_WORDS =
   'Grand National Teams',
 
   
-  # GREECE
-  'Greek Central Regional Pairs',
-  'Greek Mixed Pairs',
-  'Greek Northern Regional',
-  'Greek Open Teams',
-  'Greek Open Pair Trials',
-  'Greek Open Team Trials',
-  'Greek Women Trials',
-
-  'Guangdong Club Championship',
-  'Guangdong Club Invitational',
-  'Guangdong Elite Tournament',
-  'Guangzhou-HK-Macau Interport',
 
   ### HHH
 
@@ -541,15 +553,6 @@ my @MULTI_WORDS =
   'High-Tech Zone Workers Invitational',
   'Hindusthan Club Teams',
   'Huayuan Cup',
-
-  # HUNGARY
-  'Hungarian Cup',
-  'Hungarian IMP Pairs',
-  'Hungarian Open Pairs',
-  'Hungarian Open Teams',
-  'Hungarian Open Trials',
-  'Hungarian Senior trials',
-  'Hungarian Women Trials',
 
   'HNA Open Teams',
   'Hong Kong Inter-City',
@@ -572,6 +575,10 @@ my @MULTI_WORDS =
   'IMSA Elite Mind Games',
 
   # INDIA
+  'Dainik Navjyoti All India Inter-State',
+  'Delhi Gymkhana Club Centenary',
+  'Delhi Gymkhana Club Open',
+
   'Indian Inter-State Teams',
   'Indian Open Trials',
   'Indian Senior Trials',
@@ -837,13 +844,6 @@ my @MULTI_WORDS =
   'Semen Padang Cup',
   'Senior Camrose',
 
-  # SERBIA
-  'Serbian Cup',
-  'Serbian Inter-City Teams',
-  'Serbian Open Trials',
-  'Serbian Premier League',
-  'Serbian Team Championship',
-
   'Serdika Cup',
   'Shield of Thoisy',
   'Shree Keni Trophy',
@@ -882,7 +882,6 @@ my @MULTI_WORDS =
   'Stena Line Cup',
   'Stern-Cornell Trophy',
   "Sternberg Women's BAM Teams",
-  'Stockholm Teams',
   'Sudamericano Transnacional',
   'Summer Monsoon League',
   'Summer Nationals',
@@ -890,6 +889,7 @@ my @MULTI_WORDS =
   'Suomen Cup',
 
   # SWEDEN
+  'Stockholm Teams',
   'Swedish Club Teams',
   'Swedish Cup',
   'Swedish District Championship',
@@ -1018,10 +1018,10 @@ my @MULTI_WORDS =
 
   # WORLD
   'Bermuda Bowl',
+  "d'Orsi",
   'Damiani Cup',
   'IOC Grand Prix',
   'Venice Cup',
-  'World Juniors Championship',
   'World Masters Individual',
   'World Men Elite Tournament',
   'World Open Pairs',
@@ -1030,6 +1030,10 @@ my @MULTI_WORDS =
   'World Transnational Teams',
   'World Transnational Mixed Teams',
   'World Transnational Open Teams',
+  'World Women Elite Tournament',
+
+  # WORLD YOUTH
+  'World Juniors Championship',
   'World University Championship',
   'World Youth Congress',
   'World Youth Open Bridge Championship',
@@ -1037,7 +1041,6 @@ my @MULTI_WORDS =
   'World Youth Bridge Congress',
   'World Youth Bridge Team Championship',
   'World Youth Championship',
-  'World Women Elite Tournament',
 
   'Xinyuan Cup',
 
@@ -1903,14 +1906,16 @@ my %MULTI_TYPOS =
   'Hungarian Open Pairs' => ['hungarian national pairs'],
   'Hungarian Open Teams' => [
     'hungarian championships',
-    'hungarian teams championships',
+    'hungarian team championships',
     'hungarian teams', 
-    'hungary teams', 
     'hungarian teams championship',
-    'hungarian team championships'],
-  'Hungarian Open Trials' => ['hungarian team trial',
+    'hungarian teams championships',
+    'hungary teams'], 
+  'Hungarian Open Trials' => [
+    'hungarian team trial',
     'hungarian team trials'],
-  'Hungarian Women Trials' => ['hungarian woman trials',
+  'Hungarian Women Trials' => [
+    'hungarian woman trials',
     "hungarian woman's trials"],
 
   ### III
@@ -2556,8 +2561,8 @@ my %MULTI_TYPOS =
     'open teams pt',
     'portugal open teams championship',
     'portuguese cneo', 
-    'portuguese teams',
-    'portuguese national teams'],
+    'portuguese national teams',
+    'portuguese teams'],
   'Portuguese Open Trials' => [
     'portuguese open trial', 
     'portuguese slection trials',
@@ -2690,18 +2695,29 @@ my %MULTI_TYPOS =
   'Scottish Cup' => ['scot cup', 'scot cuo', 'scottish cup plate'],
   'Scottish National League' => ['scotland national league'],
   'Senior Camrose' => ['seniors camrose'],
-  'Serbian Cup' => ['cup of serbia', 'cup srbije', 'kup srbije'],
+
+  'Serbian Cup' => [
+    'cup of serbia', 
+    'cup srbije', 
+    'kup srbije'],
+  'Serbian Open Teams' => [
+    'serbian bridge championship',
+    'serbia teams championship',
+    'serbian tam championship', 
+    'serbian team championship',
+    'serbian teams championship',
+    'serbianteam championship', 
+    'serbian closed team championship'],
   'Serbian Open Trials' => [
     'open serbian trials',
-    'serbian open trial', 
     'serbian open team trials',
+    'serbian open trial', 
     'serbian teams trial'],
-  'Serbian Premier League' => ['serbian premier leaugue',
-    'serbian league', 'serbian premier leauge'],
-  'Serbian Team Championship' => ['serbia teams championship',
-    'serbian tam championship', 'serbian teams championship',
-    'serbian bridge championship',
-    'serbianteam championship', 'serbian closed team championship'],
+  'Serbian Premier League' => [
+    'serbian league', 
+    'serbian premier leaugue',
+    'serbian premier leauge'],
+
   'Serdika Cup' => ['serdika open teams'],
   'Shenhua Cup' => ['shen hua cup'],
   'Shree Keni Trophy' => ['keni memorial trophy',

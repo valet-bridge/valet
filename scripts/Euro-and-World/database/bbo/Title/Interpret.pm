@@ -606,7 +606,8 @@ sub finish_ambiguous
       $tname eq 'Reisinger' ||
       $tname eq 'Tolani Grand Prix' ||
       $tname eq 'Greek Open Trials' ||
-      $tname eq 'Portuguese Open Teams')
+      $tname eq 'Portuguese Open Teams' ||
+      $tname eq 'Portuguese Club Teams')
   {
     $token->set_general('MARKER', 'SESSION', $value);
     $chain->complete('EXPLAINED');
