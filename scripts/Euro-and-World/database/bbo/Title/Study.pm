@@ -201,6 +201,8 @@ my @LOCAL_SUBS =
     CORR => 'Finnish Open Pair Trials' },
   { START => 16061, END => 16111, TEXT => 'Romanian National Teams',
     CORR => 'Romanian League' },
+  { START => 16116, END => 16128, TEXT => 'R16',
+    CORR => 'Rof16' },
   { START => 16307, END => 16324, TEXT => 'GP of Poland',
     CORR => 'Grand Prix of Poland Pairs' },
   { START => 16748, END => 16751, TEXT => '2010-2011',

@@ -448,15 +448,31 @@ my %TOURNAMENTS_USA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2013' =>
+      {
+        # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2013-junior-usbc/index.php
+        CITY => 'Atlanta',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-12-31',
+            DATE_END => '2014-01-02'
+          } 
+        }
+      },
+      '2015' =>
       {
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-07-16',
-            DATE_END => '2000-07-19'
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-12-28',
+            DATE_END => '2015-12-30'
           } 
         }
       },
@@ -482,6 +498,7 @@ my %TOURNAMENTS_USA =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'MATCH',
             DATE_START => '2013-12-29',
             DATE_END => '2013-12-30'
           } 
@@ -506,10 +523,20 @@ my %TOURNAMENTS_USA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2008,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2008-07-16',
+            DATE_END => '2008-07-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-07-18',
             DATE_END => '2008-07-19'
           } 
         }
@@ -518,9 +545,19 @@ my %TOURNAMENTS_USA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-07-22',
+            DATE_END => '2009-07-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2009-07-22',
             DATE_END => '2009-07-23'
           } 
@@ -546,6 +583,8 @@ my %TOURNAMENTS_USA =
         {
           'SINGLE' => 
           {
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2013-12-31',
             DATE_END => '2014-01-02'
           } 
@@ -613,10 +652,18 @@ my %TOURNAMENTS_USA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 1997,
+            STAGE => 'Semifinal',
             DATE_START => '1997-06-06',
+            DATE_END => '1997-06-07'
+          },
+          'C1' => 
+          {
+            YEAR => 1997,
+            STAGE => 'Playoff',
+            DATE_START => '1997-06-08',
             DATE_END => '1997-06-09'
           } 
         }
@@ -626,10 +673,20 @@ my %TOURNAMENTS_USA =
         CITY => 'Tunica',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 1998,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '1998-06-17',
+            DATE_END => '1998-06-18'
+          },
+          'C1' => 
+          {
+            YEAR => 1998,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '1998-06-19',
             DATE_END => '1998-06-20'
           } 
         }
@@ -638,10 +695,19 @@ my %TOURNAMENTS_USA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 1999,
+            STAGE => 'Semifinal',
             DATE_START => '1999-06-17',
+            DATE_END => '1999-06-17'
+          },
+          'C1' => 
+          {
+            YEAR => 1999,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '1999-06-18',
             DATE_END => '1999-06-19'
           } 
         }
@@ -650,10 +716,20 @@ my %TOURNAMENTS_USA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2000,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2000-06-14',
+            DATE_END => '2000-06-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2000,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2000-06-16',
             DATE_END => '2000-06-17'
           } 
         }
@@ -966,7 +1042,9 @@ my %TOURNAMENTS_USA =
           'SINGLE' => 
           {
             YEAR => 2006,
-            DATE_START => '2006-11-16',
+            STAGE => 'Final',
+            major => 'QUARTER',
+            DATE_START => '2006-11-26',
             DATE_END => '2006-11-26'
           } 
         }
@@ -975,9 +1053,19 @@ my %TOURNAMENTS_USA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2007,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-07-05',
+            DATE_END => '2007-07-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2007-07-05',
             DATE_END => '2007-07-05'
           } 
@@ -987,9 +1075,19 @@ my %TOURNAMENTS_USA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-12-10',
+            DATE_END => '2007-12-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2007-12-10',
             DATE_END => '2007-12-10'
           } 
@@ -999,9 +1097,27 @@ my %TOURNAMENTS_USA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2008,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-06-21',
+            DATE_END => '2008-06-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-06-21',
+            DATE_END => '2008-06-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2008-06-21',
             DATE_END => '2008-06-21'
           } 
@@ -1009,25 +1125,23 @@ my %TOURNAMENTS_USA =
       },
       '2009A' =>
       {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2009,
-            DATE_START => '2009-07-06',
-            DATE_END => '2009-07-06'
-          } 
-        }
-      },
-      '2009B' =>
-      {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2009-12-01',
+            DATE_END => '2009-12-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-12-02',
             DATE_END => '2009-12-02'
           } 
         }
@@ -1037,10 +1151,36 @@ my %TOURNAMENTS_USA =
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2010,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
             DATE_START => '2010-11-28',
+            DATE_END => '2010-11-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-11-29',
+            DATE_END => '2010-11-29'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-11-30',
+            DATE_END => '2010-12-01'
+          },
+          'C3' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-12-01',
             DATE_END => '2010-12-01'
           } 
         }
@@ -1049,10 +1189,36 @@ my %TOURNAMENTS_USA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2011-06-07',
+            DATE_END => '2011-06-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-06-08',
+            DATE_END => '2011-06-09'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-06-09',
+            DATE_END => '2011-06-11'
+          },
+          'C3' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2011-06-09',
             DATE_END => '2011-06-11'
           } 
         }
@@ -1062,10 +1228,20 @@ my %TOURNAMENTS_USA =
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2011-11-28',
+            DATE_END => '2011-11-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-11-29',
             DATE_END => '2011-11-30'
           } 
         }
@@ -1074,10 +1250,36 @@ my %TOURNAMENTS_USA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
             DATE_START => '2012-06-01',
+            DATE_END => '2012-06-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-06-02',
+            DATE_END => '2012-06-04'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-06-04',
+            DATE_END => '2012-06-05'
+          },
+          'C3' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-06-05',
             DATE_END => '2012-06-07'
           } 
         }
@@ -1101,10 +1303,20 @@ my %TOURNAMENTS_USA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2004,
+            STAGE => 'Semifinal',
+            major => 'QUARTER',
             DATE_START => '2004-06-24',
+            DATE_END => '2004-06-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Final',
+            major => 'QUARTER',
+            DATE_START => '2004-06-25',
             DATE_END => '2004-06-25'
           } 
         }
@@ -1116,10 +1328,18 @@ my %TOURNAMENTS_USA =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2005,
+            STAGE => 'Semifinal',
             DATE_START => '2005-07-04',
+            DATE_END => '2005-07-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Final',
+            DATE_START => '2005-07-06',
             DATE_END => '2005-07-07'
           } 
         }
@@ -1129,10 +1349,20 @@ my %TOURNAMENTS_USA =
         # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2007-senior-usbc/index.php
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2007,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2007-07-06',
+            DATE_END => '2007-07-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-07-07',
             DATE_END => '2007-07-08'
           } 
         }
@@ -1144,10 +1374,36 @@ my %TOURNAMENTS_USA =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2009-07-06',
+            DATE_END => '2009-07-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-07-07',
+            DATE_END => '2009-07-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-07-09',
+            DATE_END => '2009-07-10'
+          },
+          'C3' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2009-07-09',
             DATE_END => '2009-07-10'
           } 
         }
@@ -1321,9 +1577,27 @@ my %TOURNAMENTS_USA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2008,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-08-12',
+            DATE_END => '2008-08-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-08-12',
+            DATE_END => '2008-08-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
             DATE_START => '2008-08-12',
             DATE_END => '2008-08-12'
           } 
@@ -1348,11 +1622,21 @@ my %TOURNAMENTS_USA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             # Estimated.
             YEAR => 2001,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2001-06-16',
+            DATE_END => '2001-06-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2001,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2001-06-18',
             DATE_END => '2001-06-19'
           } 
         }
@@ -1361,10 +1645,20 @@ my %TOURNAMENTS_USA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2004,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2004-05-31',
+            DATE_END => '2004-05-31'
+          },
+          'C1' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2004-06-01',
             DATE_END => '2004-06-02'
           } 
         }
@@ -1373,10 +1667,28 @@ my %TOURNAMENTS_USA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2005,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2005-06-10',
+            DATE_END => '2005-06-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2005-06-12',
+            DATE_END => '2005-06-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2005-06-12',
             DATE_END => '2005-06-13'
           } 
         }
@@ -1388,6 +1700,7 @@ my %TOURNAMENTS_USA =
           'SINGLE' => 
           {
             YEAR => 2006,
+            STAGE => 'Final',
             DATE_START => '2006-06-12',
             DATE_END => '2006-06-12'
           } 
@@ -1409,10 +1722,28 @@ my %TOURNAMENTS_USA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2007,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2007-06-05',
+            DATE_END => '2007-06-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-06-06',
+            DATE_END => '2007-06-07'
+          },
+          'C2' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2007-06-06',
             DATE_END => '2007-06-07'
           } 
         }
@@ -1421,9 +1752,19 @@ my %TOURNAMENTS_USA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2008,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-06-03',
+            DATE_END => '2008-06-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2008-06-03',
             DATE_END => '2008-06-03'
           } 
@@ -1433,10 +1774,28 @@ my %TOURNAMENTS_USA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2009-05-25',
+            DATE_END => '2009-05-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-05-26',
+            DATE_END => '2009-05-29'
+          },
+          'C2' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2009-05-26',
             DATE_END => '2009-05-29'
           } 
         }
@@ -1445,10 +1804,20 @@ my %TOURNAMENTS_USA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2011-06-08',
+            DATE_END => '2011-06-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-06-10',
             DATE_END => '2011-06-11'
           } 
         }
@@ -1457,10 +1826,20 @@ my %TOURNAMENTS_USA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2012-06-03',
+            DATE_END => '2012-06-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-06-05',
             DATE_END => '2012-06-06'
           } 
         }
@@ -1648,9 +2027,20 @@ my %TOURNAMENTS_USA =
         # https://www.usbf.org/2010-junior-usbc/2010-under-21-trials
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2010-06-26',
+            DATE_END => '2010-06-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2010-06-26',
             DATE_END => '2010-06-27'
           } 
@@ -1675,6 +2065,8 @@ my %TOURNAMENTS_USA =
         {
           'SINGLE' => 
           {
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2015-12-27',
             DATE_END => '2015-12-31'
           } 
@@ -1702,6 +2094,7 @@ my %TOURNAMENTS_USA =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'MATCH',
             DATE_START => '2016-01-31',
             DATE_END => '2016-01-31'
           } 

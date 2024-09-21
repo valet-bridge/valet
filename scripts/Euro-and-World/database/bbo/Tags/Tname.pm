@@ -2978,16 +2978,20 @@ my %MULTI_TYPOS =
 
   ### UUU
 
-  'US Girls Teams' => ['jusbc rona'],
+  'US Girls Trials' => [
+    'junior usbc rona',
+    'jusbc rona'],
   'US Junior Trials' => [
     'us junior teams',
     'usbf junior trials'],
   'US Open Trials' => [
     'us itt', 
+    'us itt trials', 
     'usa international team trials',
     'usa itt',
     'usa team trial'],
   'US Senior Teams' => [
+    'nabc senior ko',
     'united states seniors bridge championship',
     'us senior',
     'us seniors'],
@@ -3106,10 +3110,12 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Camrose Cavendish
-  Reisinger
   Rosenblum
+  Vadsøturneringen 
+
+  Reisinger
   Spingold
-  Vadsøturneringen Vanderbilt
+  Vanderbilt
   Wagar
 );
 
