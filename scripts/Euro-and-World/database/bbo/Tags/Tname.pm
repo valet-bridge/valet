@@ -248,6 +248,13 @@ my @MULTI_WORDS =
   'Wronie Summer Teams',
   'Zulawski Cup',
 
+  # PORTUGAL
+  'Portuguese Grand Prix',
+  'Portuguese IMP Pairs',
+  'Portuguese Open Teams',
+  'Portuguese Open Trials',
+  'Portuguese Northern Regional Open Teams',
+
   # ROMANIA
   'Romanian League',
   'Romanian Second League',
@@ -719,7 +726,6 @@ my @MULTI_WORDS =
   'Nordic Security Pro-Am Pairs',
   'Nordic Team Championship',
   'Nordic Women Championship',
-  'North American Bridge Championship',
   'Northern Territory Gold Teams',
   'Northern Territory Gold Swiss Pairs',
 
@@ -777,13 +783,6 @@ my @MULTI_WORDS =
   'PLN Cup',
   'Plock District League',
 
-
-  # PORTUGAL
-  'Portuguese Grand Prix',
-  'Portuguese IMP Pairs',
-  'Portuguese Open Teams',
-  'Portuguese Open Trials',
-  'Portuguese Northern Regional Open Teams',
 
   'Prashant Desai Memorial',
   'PRBA State Level Open',
@@ -964,17 +963,16 @@ my @MULTI_WORDS =
 
   ### UUU
 
-  'United States Juniors Bridge Championship',
-  'United States Juniors Training',
-  'United States Seniors Bridge Championship',
-  'United States Women Bridge Championship',
-  'US International Team Trials',
+  'US Girls Trials',
+  'US Juniors Training',
   'US Junior Trials',
+  'US Open Trials',
+  'US Senior Teams',
   'US Senior Trials',
-  'US Seniors',
   'US University Trials',
-  'US Women',
-  'US Youngsters',
+  'US Women Teams',
+  'US Women Trials',
+  'US Youngster Trials',
   'USBF Challenge Match',
 
 
@@ -2980,22 +2978,38 @@ my %MULTI_TYPOS =
 
   ### UUU
 
-  'United States Juniors Bridge Championship' => [
-    'jusbc rona'],
-  'United States Women Bridge Championship' => [
-    "us women's bridge championship", "us women's bridge championhip",
-    "united states women's bridge championship"],
-  'US International Team Trials' => ['us itt', 'usa itt',
-    'usa team trial', 'usa international team trials'],
-  'US Junior Trials' => ['usbf junior trials'],
-  'US Senior Trials' => ['usbf senior trials', 'usbf seniors trials',
-    'usa seniors trials', 'usa seniors team trials',
-    'usbf senior team trials'],
-  'US Seniors' => ['us senior'],
+  'US Girls Teams' => ['jusbc rona'],
+  'US Junior Trials' => [
+    'us junior teams',
+    'usbf junior trials'],
+  'US Open Trials' => [
+    'us itt', 
+    'usa international team trials',
+    'usa itt',
+    'usa team trial'],
+  'US Senior Teams' => [
+    'united states seniors bridge championship',
+    'us senior',
+    'us seniors'],
+  'US Senior Trials' => [
+    'usa seniors team trials',
+    'usa seniors trials', 
+    'usbf senior team trials',
+    'usbf senior trials', 
+    'usbf seniors trials'],
   'US Women' => ['us womens championships'],
+  'US Women Teams' => [
+    'united states women bridge championship',
+    "us women's bridge championship", 
+    "us women's bridge championhip",
+    "united states women's bridge championship"],
   'US Youngsters' => ['u-21 us'],
-  'US Youngster Trials' => ['us u-21 trials'],
+  'US Youngster Trials' => [
+    'jusbc u21',
+    'us u-21 trials',
+    'u-21 us trials'],
   'USBF Challenge Match' => ['usbf jr/pro charity challenge match'],
+
   'Uttar Pradesh State Championship' => ['up state championship'],
 
   ### VVV
@@ -3153,7 +3167,6 @@ my %SINGLE_TYPOS =
   "Linda Stern Women's Teams" => ['lswt'],
   'Maccabi Games' => ['maccabiah'],
   'McConnell Cup' => ['mcconnell'],
-  'North American Bridge Championship' => ['nabc'],
   'NTU Cup' => ['ntucup'],
   'Paris Youth Open Teams' => ['ypob'],
   'Peggy Bayer' => ['peggybayer'],
@@ -3169,10 +3182,13 @@ my %SINGLE_TYPOS =
   'Tolani Grand Prix' => ['tolanigrandprix'],
   'Top Circuit' => ['topcircuit'],
   'Transnational Open Teams' => ['tnt', 'tnot'],
-  'United States Juniors Bridge Championship' => ['usjbc', 'jusbc'],
-  'United States Juniors Training' => ['jtp'],
-  'United States Seniors Bridge Championship' => ['ussbc'],
-  'United States Women Bridge Championship' => ['uswbc', 'uswbf', 'uswc',
+  'US Junior Trials' => ['usjbc', 'jusbc'],
+  'US Juniors Training' => ['jtp'],
+  'US Senior Teams' => ['ussbc'],
+  'US Women Teams' => [
+    'uswbc', 
+    'uswbf', 
+    'uswc',
     'us womens championships'],
   Vanderbilt => ['vanderbuilt', 'vanderebilt', 'vandebilt', 'vandy'],
   'Venice Cup' => ['vc', 'venice'],

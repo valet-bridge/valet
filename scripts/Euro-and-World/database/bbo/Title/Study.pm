@@ -70,6 +70,9 @@ my @LOCAL_SUBS =
     CORR => 'Grand Prix of Poland Pairs' },
   { START => 3620, END => 3631, TEXT => 'Pula', 
     CORR => 'Pula Bridge Festival' },
+  { START => 3657, END => 3670, TEXT => 
+    'United States Seniors Bridge Championship', 
+    CORR => 'US Senior Trials' },
   { START => 3708, END => 3728, TEXT => 'CCBA Championships', 
     CORR => 'Chinese Open Teams' },
   { START => 3729, END => 3738, TEXT => 'Stara Zagora 2007 Open Teams',

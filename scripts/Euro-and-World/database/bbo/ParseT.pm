@@ -32,10 +32,11 @@ use EntryT;
 # use Tournaments::Italy;
 # use Tournaments::NewZealand;
 # use Tournaments::Poland;
-use Tournaments::Portugal;
+# use Tournaments::Portugal;
 # use Tournaments::Romania;
 # use Tournaments::Serbia;
 # use Tournaments::Spain;
+use Tournaments::USA;
 
 
 my %DIVISIONS =
@@ -58,10 +59,11 @@ my %DIVISIONS =
   # ITALY => \&Tournaments::Italy::set_links
   # NEWZEALAND => \&Tournaments::NewZealand::set_links
   # POLAND => \&Tournaments::Poland::set_links
-  PORTUGAL => \&Tournaments::Portugal::set_links
+  # PORTUGAL => \&Tournaments::Portugal::set_links
   # ROMANIA => \&Tournaments::Romania::set_links
   # SERBIA => \&Tournaments::Serbia::set_links
   # SPAIN => \&Tournaments::Spain::set_links
+  USA => \&Tournaments::USA::set_links
 );
 
 my @MEET_FIELDS = qw(ORGANIZATION COUNTRY CITY LOCALITY ORDINAL
