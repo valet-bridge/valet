@@ -20,7 +20,8 @@ my @LOCAL_SUBS =
   # Lots of "Grand Prix of Poland Pairs" are entered as BAM
   # (and sometimes IMPs), I believe incorrectly.
 
-  { START =>  1116, END =>  1128, TEXT => 'BAM', CORR => 'MP' },
+  { START =>  1116, END =>  1118, TEXT => 'BAM', CORR => 'MP' },
+  { START =>  1120, END =>  1128, TEXT => 'BAM', CORR => 'MP' },
   { START =>  3077, END =>  3078, TEXT => 'BAM', CORR => 'MP' },
   { START =>  3453, END =>  3455, TEXT => 'BAM', CORR => 'MP' },
   { START =>  4979, END =>  4982, TEXT => 'IMP', CORR => 'MP' }, # IMP!

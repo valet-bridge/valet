@@ -436,6 +436,161 @@ my %MEETS_USA =
 
 my %TOURNAMENTS_USA =
 (
+  'Reisinger' => 
+  {
+    FORM => 'Teams',
+    SCORING => 'BAM',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2004' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2004,
+            DATE_START => '2004-11-29',
+            DATE_END => '2004-11-29'
+          } 
+        }
+      },
+      '2006' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            DATE_START => '2006-11-26',
+            DATE_END => '2006-11-27'
+          } 
+        }
+      },
+      '2007' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-12-02',
+            DATE_END => '2007-12-02'
+          } 
+        }
+      },
+      '2008' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-11-30',
+            DATE_END => '2008-11-30'
+          } 
+        }
+      },
+      '2009' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-12-06',
+            DATE_END => '2009-12-06'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-12-05',
+            DATE_END => '2010-12-05'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-12-04',
+            DATE_END => '2011-12-04'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-12-02',
+            DATE_END => '2012-12-03'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-12-08',
+            DATE_END => '2013-12-09'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-12-06',
+            DATE_END => '2014-12-08'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-12-05',
+            DATE_END => '2015-12-07'
+          } 
+        }
+      },
+    }
+  },
+
   'Spingold' => 
   {
     FORM => 'Teams',

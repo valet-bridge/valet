@@ -1,7 +1,11 @@
 USA:
-Get WARN to run
-Add Vanderbilt etc
-Same again
+Add Reisinger
+- Reisinger doesn't have ordinal
+- Also no lettered TITLE_SESSION (F,G)
+- Why is 42197 "TITLE_SESSION S 1" and not just 1?
+
+Maybe give the 4 tournaments multi-word names, careful that the
+current names occur directly in the code
 
 
 Romanian Second League, 2009:
