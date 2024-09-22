@@ -3501,6 +3501,243 @@ my %TOURNAMENTS_USA =
     }
   },
 
+  'Wagar' => 
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '1998' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 1998,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '1998-07-30',
+            DATE_END => '1998-07-31'
+          } 
+        }
+      },
+      '2004' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2004-07-29',
+            DATE_END => '2004-07-29'
+          } 
+        }
+      },
+      '2005' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C1' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2005-07-29',
+            DATE_END => '2005-07-30'
+          } 
+        }
+      },
+      '2006' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            DATE_START => '2006-07-24',
+            DATE_END => '2006-07-24'
+          } 
+        }
+      },
+      '2007' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-07-27',
+            DATE_END => '2007-07-27'
+          } 
+        }
+      },
+      '2009' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-07-30',
+            DATE_END => '2009-07-30'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-07-29',
+            DATE_END => '2010-07-30'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-07-28',
+            DATE_END => '2011-07-29'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-07-18',
+            DATE_END => '2012-07-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-07-19',
+            DATE_END => '2012-07-20'
+          },
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-08-07',
+            DATE_END => '2013-08-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-08-08',
+            DATE_END => '2013-08-09'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-07-23',
+            DATE_END => '2014-07-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-07-24',
+            DATE_END => '2014-07-25'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-11',
+            DATE_END => '2015-08-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-12',
+            DATE_END => '2015-08-13'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-07-27',
+            DATE_END => '2016-07-28'
+          } 
+        }
+      },
+    }
+  },
 );
 
 

@@ -24,8 +24,6 @@ my @MULTI_WORDS =
  'Opening Tournament',
  'Practice Match',
 
-  '0 to 1500 Spingold',
-
   # ARGENTINA
   'Argentinian Club Teams',
   'Argentinian Copa Republica',
@@ -345,6 +343,17 @@ my @MULTI_WORDS =
   'New South Wales State Teams',
   'New South Wales Open Teams',
   'New South Wales Open Trials',
+  'Northern Territory Gold Teams',
+  'Northern Territory Gold Swiss Pairs',
+  'Victoria Cup',
+  'Victorian Mixed Teams',
+  'Victorian Open Teams',
+  'Victorian Open Teams Playoff',
+  'Victorian Open Trials',
+  'Victorian Pennant',
+  'Victorian Senior Trials',
+  'Victorian Women Trials',
+  'Victorian Youth Trials',
 
   # AUSTRIA
   'Austrian Team Championship',
@@ -614,6 +623,10 @@ my @MULTI_WORDS =
   'Tolani Silver Cup',
   'Uttar Pradesh State Championship',
 
+  'Ruia Gold Cup',
+  'Ruia Silver Cup',
+  'Ruia Trophy',
+
   # INDONESIA
   'Indonesian Championship',
   'Indonesian Girls Trials',
@@ -707,7 +720,6 @@ my @MULTI_WORDS =
 
   ### NNN
 
-  'NABC Senior Knock-Out Teams',
   'Namsos Cup',
   'Nandu Oke Memorial IAF Swiss Pairs',
   'Narain Bhojwani Memorial',
@@ -726,8 +738,6 @@ my @MULTI_WORDS =
   'Nordic Security Pro-Am Pairs',
   'Nordic Team Championship',
   'Nordic Women Championship',
-  'Northern Territory Gold Teams',
-  'Northern Territory Gold Swiss Pairs',
 
   # NORWAY
   'Norwegian Club Pairs',
@@ -816,9 +826,6 @@ my @MULTI_WORDS =
   'Rosfjord Swiss Teams',
   'Rottneros Nordic Cup',
   'Rui Pinto Cup',
-  'Ruia Gold Cup',
-  'Ruia Silver Cup',
-  'Ruia Trophy',
 
   # RUSSIA
   'Russian Open Teams',
@@ -975,24 +982,18 @@ my @MULTI_WORDS =
   'US Youngster Trials',
   'USBF Challenge Match',
 
+  'NABC Senior Knock-Out Teams',
+  'Vanderbilt Fantasy Challenge',
+  '0 to 1500 Spingold',
+
 
   ### VVV
 
-  'Vanderbilt Fantasy Challenge',
   'Varna Titan Teams',
   'Venezuelan Mixed Teams',
   'Venezuelan Swiss Pairs',
   'Vest-Agder Regional Team Championship',
   'Victor Champion Cup',
-  'Victoria Cup',
-  'Victorian Mixed Teams',
-  'Victorian Open Teams',
-  'Victorian Open Teams Playoff',
-  'Victorian Open Trials',
-  'Victorian Pennant',
-  'Victorian Senior Trials',
-  'Victorian Women Trials',
-  'Victorian Youth Trials',
   'Videocon WCG Open',
   'Vilnius Club Pairs',
   'Vilnius Cup',
@@ -3046,7 +3047,10 @@ my %MULTI_TYPOS =
 
   ### WWW
 
-  Wagar => ['wagar teams', "wagar women's", "wagar women's ko",
+  Wagar => [
+    'wagar teams', 
+    "wagar women's", 
+    "wagar women's ko",
     'wagar womens ko'],
   'Warsaw Online Teams' => ['enthusiast bridge zlot', 
     'warsaw bboers champ', 'warsaw bboers championship'],
