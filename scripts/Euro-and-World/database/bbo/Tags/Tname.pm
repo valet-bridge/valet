@@ -2978,6 +2978,9 @@ my %MULTI_TYPOS =
 
   ### UUU
 
+  'Spingold' => [
+    'spingold knockout',
+    'spingold knockout teams'],
   'US Girls Trials' => [
     'junior usbc rona',
     'jusbc rona'],

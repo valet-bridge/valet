@@ -269,7 +269,7 @@ sub post_process_maybe_rof
         $tname eq 'Baze Senior Knock-out' ||
         $tname eq 'United States Bridge Championship')
     {
-      $token->set_general('MARKER', 'ROF', $r);
+      $token->set_general('MARKER', 'STAGE', 'Rof' . $r);
       $chain->complete_if_last_is(0, 'EXPLAINED');
     }
   }

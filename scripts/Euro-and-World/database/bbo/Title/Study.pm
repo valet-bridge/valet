@@ -195,6 +195,8 @@ my @LOCAL_SUBS =
     CORR => 'Budimex - Grand Prix of Poland Pairs' },
   { START => 14494, END => 15000, TEXT => 'Wronie - Summer time',
     CORR => 'Wronie Summer Teams' },
+  { START => 14860, END => 14877, TEXT => 'R8',
+    CORR => 'Quarterfinal' },
   { START => 15142, END => 15156, TEXT => 'Pula', 
     CORR => 'Pula Bridge Festival' },
   { START => 15457, END => 15463, TEXT => 'Grand Prix of Poland',

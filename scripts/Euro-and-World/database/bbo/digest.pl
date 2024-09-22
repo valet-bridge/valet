@@ -68,6 +68,8 @@ while ($entryT->read($fh))
     }
   }
 
+  # Kludge.
+  $entryT->fix_some_fields();
 
   # This could set tname if it was previously unset!
   my ($edition, $chapter);

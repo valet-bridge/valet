@@ -436,6 +436,748 @@ my %MEETS_USA =
 
 my %TOURNAMENTS_USA =
 (
+  'Spingold' => 
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '1996' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            # Actually ended on Saturday August 10, but no matter.
+            YEAR => 1996,
+            STAGE => 'Final',
+            DATE_START => '1996-08-10',
+            DATE_END => '1996-08-11'
+          } 
+        }
+      },
+      '1997' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 1997,
+            STAGE => 'Rof16',
+            DATE_START => '1997-07-27',
+            DATE_END => '1997-07-27'
+          },
+          'C1' => 
+          {
+            YEAR => 1997,
+            STAGE => 'Quarterfinal',
+            DATE_START => '1997-07-27',
+            DATE_END => '1997-07-28'
+          },
+          'C2' => 
+          {
+            YEAR => 1997,
+            STAGE => 'Semifinal',
+            DATE_START => '1997-07-30',
+            DATE_END => '1997-07-31'
+          },
+          'C3' => 
+          {
+            YEAR => 1997,
+            STAGE => 'Final',
+            DATE_START => '1997-08-01',
+            DATE_END => '1997-08-02'
+          },
+        }
+      },
+      '1998' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 1998,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '1998-07-27',
+            DATE_END => '1998-08-01'
+          } 
+        }
+      },
+      '1999' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 1999,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '1999-07-28',
+            DATE_END => '1999-07-31'
+          } 
+        }
+      },
+      '2000' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2000,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2000-08-13',
+            DATE_END => '2000-08-19'
+          } 
+        }
+      },
+      '2001' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2001,
+            STAGE => 'Rof128',
+            DATE_START => '2001-07-19',
+            DATE_END => '2001-07-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2001,
+            STAGE => 'Rof64',
+            DATE_START => '2001-07-20',
+            DATE_END => '2001-07-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2001,
+            STAGE => 'Rof32',
+            DATE_START => '2001-07-21',
+            DATE_END => '2001-07-21'
+          },
+          'C3' => 
+          {
+            YEAR => 2001,
+            STAGE => 'Rof16',
+            DATE_START => '2001-07-22',
+            DATE_END => '2001-07-22'
+          },
+          'C4' => 
+          {
+            YEAR => 2001,
+            STAGE => 'Quarterfinal',
+            DATE_START => '2001-07-23',
+            DATE_END => '2001-07-24'
+          },
+          'C5' => 
+          {
+            YEAR => 2001,
+            STAGE => 'Semifinal',
+            DATE_START => '2001-07-25',
+            DATE_END => '2001-07-26'
+          },
+          'C6' => 
+          {
+            YEAR => 2001,
+            STAGE => 'Final',
+            DATE_START => '2001-07-27',
+            DATE_END => '2001-07-28'
+          } 
+        }
+      },
+      '2004' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2004-07-15',
+            DATE_END => '2004-07-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2004-07-17',
+            DATE_END => '2004-07-18'
+          } 
+        }
+      },
+      '2005' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2005-07-27',
+            DATE_END => '2005-07-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2005-07-29',
+            DATE_END => '2005-07-30'
+          } 
+        }
+      },
+      '2006' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
+            DATE_START => '2006-07-14',
+            DATE_END => '2006-07-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2006-07-15',
+            DATE_END => '2006-07-15'
+          },
+          'C2' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2006-07-16',
+            DATE_END => '2006-07-16'
+          },
+          'C3' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-07-17',
+            DATE_END => '2006-07-18'
+          },
+          'C4' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-07-19',
+            DATE_END => '2006-07-20'
+          },
+          'C5' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2006-07-21',
+            DATE_END => '2006-07-22'
+          },
+        }
+      },
+      '2007' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2007-07-22',
+            DATE_END => '2007-07-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-07-23',
+            DATE_END => '2007-07-24'
+          },
+          'C2' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-07-25',
+            DATE_END => '2007-07-26'
+          },
+          'C3' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-07-27',
+            DATE_END => '2007-07-28'
+          },
+        }
+      },
+      '2008' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
+            DATE_START => '2008-07-19',
+            DATE_END => '2008-07-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2008-07-20',
+            DATE_END => '2008-07-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2008-07-21',
+            DATE_END => '2008-07-21'
+          },
+          'C3' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-07-22',
+            DATE_END => '2008-07-23'
+          },
+          'C4' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-07-24',
+            DATE_END => '2008-07-25'
+          },
+          'C5' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-07-26',
+            DATE_END => '2008-07-27'
+          },
+        }
+      },
+      '2009' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
+            DATE_START => '2009-07-28',
+            DATE_END => '2009-07-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2009-07-29',
+            DATE_END => '2009-07-29'
+          },
+          'C2' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2009-07-30',
+            DATE_END => '2009-07-30'
+          },
+          'C3' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-07-31',
+            DATE_END => '2009-08-01'
+          },
+          'C4' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-08-01',
+            DATE_END => '2009-08-02'
+          },
+          'C5' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-08-02',
+            DATE_END => '2009-08-02'
+          },
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2010-07-27',
+            DATE_END => '2010-07-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2010-07-28',
+            DATE_END => '2010-07-29'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-07-29',
+            DATE_END => '2010-07-30'
+          },
+          'C3' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-07-30',
+            DATE_END => '2010-07-31'
+          },
+          'C4' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-07-31',
+            DATE_END => '2010-08-01'
+          },
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2011-07-27',
+            DATE_END => '2011-07-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2011-07-28',
+            DATE_END => '2011-07-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-07-29',
+            DATE_END => '2011-07-30'
+          },
+          'C3' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-07-30',
+            DATE_END => '2011-07-30'
+          },
+          'C4' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-07-31',
+            DATE_END => '2011-07-31'
+          },
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2012-07-18',
+            DATE_END => '2012-07-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2012-07-19',
+            DATE_END => '2012-07-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-07-20',
+            DATE_END => '2012-07-21'
+          },
+          'C3' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-07-21',
+            DATE_END => '2012-07-22'
+          },
+          'C4' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-07-22',
+            DATE_END => '2012-07-23'
+          },
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2013-08-07',
+            DATE_END => '2013-08-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2013-08-08',
+            DATE_END => '2013-08-09'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-08-09',
+            DATE_END => '2013-08-10'
+          },
+          'C3' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-08-10',
+            DATE_END => '2013-08-11'
+          },
+          'C4' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-08-11',
+            DATE_END => '2013-08-12'
+          },
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2014-07-23',
+            DATE_END => '2014-07-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2014-07-24',
+            DATE_END => '2014-07-25'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-07-25',
+            DATE_END => '2014-07-26'
+          },
+          'C3' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-07-26',
+            DATE_END => '2014-07-27'
+          },
+          'C4' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-07-27',
+            DATE_END => '2014-07-28'
+          },
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-13',
+            DATE_END => '2015-08-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-13',
+            DATE_END => '2015-08-14'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-14',
+            DATE_END => '2015-08-15'
+          },
+          'C3' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-15',
+            DATE_END => '2015-08-16'
+          },
+          'C4' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-16',
+            DATE_END => '2015-08-17'
+          },
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2016-07-27',
+            DATE_END => '2016-07-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2016-07-28',
+            DATE_END => '2016-07-29'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-07-29',
+            DATE_END => '2016-07-30'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-07-30',
+            DATE_END => '2016-07-31'
+          },
+          'C4' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-07-31',
+            DATE_END => '2016-08-01'
+          },
+        }
+      },
+    }
+  },
+
   'US Girls Trials',
   {
     ORGANIZATION => 'USBF',
@@ -2097,6 +2839,662 @@ my %TOURNAMENTS_USA =
             major => 'MATCH',
             DATE_START => '2016-01-31',
             DATE_END => '2016-01-31'
+          } 
+        }
+      },
+    }
+  },
+
+  'Vanderbilt' => 
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '1997' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 1997,
+            DATE_START => '1997-03-14',
+            DATE_END => '1997-03-14'
+          } 
+        }
+      },
+      '1998' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 1998,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '1998-03-27',
+            DATE_END => '1998-03-28'
+          } 
+        }
+      },
+      '1999' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CITY => 'Vancouver',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 1999,
+            STAGE => 'Final',
+            DATE_START => '1999-03-28',
+            DATE_END => '1999-03-28'
+          } 
+        }
+      },
+      '2000' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2000,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2000-03-24',
+            DATE_END => '2000-03-25'
+          } 
+        }
+      },
+      '2001' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2001,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2001-03-23',
+            DATE_END => '2001-03-24'
+          } 
+        }
+      },
+      '2002' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2002,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2002-03-21',
+            DATE_END => '2002-03-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2002,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2002-03-22',
+            DATE_END => '2002-03-23'
+          } 
+        }
+      },
+      '2004' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2004-03-25',
+            DATE_END => '2004-03-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2004-03-27',
+            DATE_END => '2004-03-27'
+          } 
+        }
+      },
+      '2005' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2005-03-18',
+            DATE_END => '2005-03-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2005-03-18',
+            DATE_END => '2005-03-19'
+          },
+          'C2' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2005-03-20',
+            DATE_END => '2005-03-20'
+          },
+        }
+      },
+      '2006' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C9' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
+            DATE_START => '2006-04-03',
+            DATE_END => '2006-04-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-04-06',
+            DATE_END => '2006-04-06'
+          },
+          'C2' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2006-04-08',
+            DATE_END => '2006-04-08'
+          } 
+        }
+      },
+      '2007' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2007-03-10',
+            DATE_END => '2007-03-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-03-11',
+            DATE_END => '2007-03-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-03-13',
+            DATE_END => '2007-03-14'
+          },
+          'C3' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-03-15',
+            DATE_END => '2007-03-16'
+          },
+        }
+      },
+      '2008' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2008-03-10',
+            DATE_END => '2008-03-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-03-11',
+            DATE_END => '2008-03-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-03-13',
+            DATE_END => '2008-03-14'
+          },
+          'C3' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-03-15',
+            DATE_END => '2008-03-16'
+          },
+        }
+      },
+      '2009' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2009-03-17',
+            DATE_END => '2009-03-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2009-03-18',
+            DATE_END => '2009-03-19'
+          },
+          'C2' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-03-19',
+            DATE_END => '2009-03-20'
+          },
+          'C3' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-03-20',
+            DATE_END => '2009-03-21'
+          },
+          'C4' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-03-21',
+            DATE_END => '2009-03-21'
+          },
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
+            DATE_START => '2010-03-16',
+            DATE_END => '2010-03-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2010-03-17',
+            DATE_END => '2010-03-18'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2010-03-18',
+            DATE_END => '2010-03-19'
+          },
+          'C3' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-03-19',
+            DATE_END => '2010-03-20'
+          },
+          'C4' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-03-20',
+            DATE_END => '2010-03-21'
+          },
+          'C5' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-03-21',
+            DATE_END => '2010-03-22'
+          },
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2011-03-16',
+            DATE_END => '2011-03-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2011-03-17',
+            DATE_END => '2011-03-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-03-18',
+            DATE_END => '2011-03-19'
+          },
+          'C3' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-03-19',
+            DATE_END => '2011-03-20'
+          },
+          'C4' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-03-20',
+            DATE_END => '2011-03-20'
+          },
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2012-03-21',
+            DATE_END => '2012-03-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2012-03-22',
+            DATE_END => '2012-03-23'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-03-23',
+            DATE_END => '2012-03-24'
+          },
+          'C3' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-03-24',
+            DATE_END => '2012-03-25'
+          },
+          'C4' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-03-25',
+            DATE_END => '2012-03-25'
+          },
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2013-03-20',
+            DATE_END => '2013-03-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2013-03-21',
+            DATE_END => '2013-03-22'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-03-22',
+            DATE_END => '2013-03-23'
+          },
+          'C3' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-03-23',
+            DATE_END => '2013-03-24'
+          },
+          'C4' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-03-24',
+            DATE_END => '2013-03-25'
+          },
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2014-03-26',
+            DATE_END => '2014-03-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2014-03-27',
+            DATE_END => '2014-03-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-03-28',
+            DATE_END => '2014-03-29'
+          },
+          'C3' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-03-29',
+            DATE_END => '2014-03-30'
+          },
+          'C4' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-03-30',
+            DATE_END => '2014-03-31'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2015-03-19',
+            DATE_END => '2015-03-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-03-20',
+            DATE_END => '2015-03-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-03-21',
+            DATE_END => '2015-03-22'
+          },
+          'C3' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-03-22',
+            DATE_END => '2015-03-23'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
+            DATE_START => '2016-03-15',
+            DATE_END => '2016-03-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2016-03-16',
+            DATE_END => '2016-03-17'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2016-03-17',
+            DATE_END => '2016-03-18'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-03-18',
+            DATE_END => '2016-03-19'
+          },
+          'C4' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-03-19',
+            DATE_END => '2016-03-20'
+          },
+          'C5' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-03-20',
+            DATE_END => '2016-03-21'
           } 
         }
       },

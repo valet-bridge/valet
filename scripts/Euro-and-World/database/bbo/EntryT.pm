@@ -321,6 +321,25 @@ sub set
 }
 
 
+sub fix_some_fields
+{
+  my ($self) = @_;
+  if (exists $self->{TITLE_ROF})
+  {
+    if (exists $self->{TITLE_STAGE})
+    {
+      warn "Confused";
+      return;
+    }
+    for my $v (@{$self->{TITLE_ROF}})
+    {
+      push @{$self->{TITLE_STAGE}}, 'Rof' . $v;
+    }
+    delete $self->{TITLE_ROF};
+  }
+}
+
+
 sub prune_field_using
 {
   my ($self, $field, $value, $header) = @_;
