@@ -493,8 +493,8 @@ sub post_process_rof
     {
       my $tname = $knowledge->get_field('TNAME', $bbono);
       my $meet = $knowledge->get_field('MEET', $bbono);
-      if ($tname eq 'Spingold' || 
-          $tname eq 'Vanderbilt' || 
+      if ($tname eq 'Spingold Teams' || 
+          $tname eq 'Vanderbilt Teams' || 
           $meet eq 'United States Bridge Championship' ||
          ($meet eq 'European Transnational Championships' &&
           $knowledge->is_knock_out($bbono)))
@@ -514,8 +514,8 @@ sub post_process_rof
       my ($rof, $segment) = ($1, $2);
       my $tname = $knowledge->get_field('TNAME', $bbono);
       my $meet = $knowledge->get_field('MEET', $bbono);
-      if ($tname eq 'Spingold' || 
-          $tname eq 'Vanderbilt' || 
+      if ($tname eq 'Spingold Teams' || 
+          $tname eq 'Vanderbilt Teams' || 
           $meet eq 'United States Bridge Championship' ||
          ($meet eq 'European Transnational Championships' &&
           $knowledge->is_knock_out($bbono)))

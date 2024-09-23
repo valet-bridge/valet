@@ -338,7 +338,7 @@ sub fix_some_fields
     delete $self->{TITLE_ROF};
   }
 
-  if ($self->field('TITLE_TNAME') eq 'Reisinger')
+  if ($self->field('TITLE_TNAME') eq 'Reisinger BAM Teams')
   {
     if ($self->field('TITLE_ORDINAL'))
     {

@@ -436,7 +436,32 @@ my %MEETS_USA =
 
 my %TOURNAMENTS_USA =
 (
-  'Reisinger' => 
+  '0 to 1500 Spingold' => 
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2007' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-07-24',
+            DATE_END => '2007-07-24'
+          },
+        }
+      },
+    }
+  },
+
+  'Reisinger BAM Teams' => 
   {
     FORM => 'Teams',
     SCORING => 'BAM',
@@ -662,7 +687,7 @@ my %TOURNAMENTS_USA =
     }
   },
 
-  'Spingold' => 
+  'Spingold Teams' => 
   {
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -1999,11 +2024,42 @@ my %TOURNAMENTS_USA =
 
     EDITIONS =>
     {
+      '2004' =>
+      {
+        MEET => 'North American Bridge Championship',
+
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-07-26',
+            DATE_END => '2007-07-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-07-27',
+            DATE_END => '2007-07-27'
+          },
+          'C2' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-07-28',
+            DATE_END => '2007-07-28'
+          } 
+        }
+      },
       '2006' =>
       {
         # https://s3.amazonaws.com/cdn.acbl.org/nabc/2006/03/results/November19.html
         MEET => 'North American Bridge Championship',
-        CITY => 'Honolulu',
 
         CHAPTERS =>
         {
@@ -2061,7 +2117,7 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2008' =>
+      '2008A' =>
       {
         CHAPTERS =>
         {
@@ -2089,6 +2145,20 @@ my %TOURNAMENTS_USA =
             DATE_START => '2008-06-21',
             DATE_END => '2008-06-21'
           } 
+        }
+      },
+      '2008B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-11-30',
+            DATE_END => '2008-11-30'
+          },
         }
       },
       '2009A' =>
@@ -3071,7 +3141,7 @@ my %TOURNAMENTS_USA =
     }
   },
 
-  'Vanderbilt' => 
+  'Vanderbilt Teams' => 
   {
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -3727,7 +3797,7 @@ my %TOURNAMENTS_USA =
     }
   },
 
-  'Wagar' => 
+  'Wagar Teams' => 
   {
     FORM => 'Teams',
     SCORING => 'IMP',

@@ -273,6 +273,24 @@ my @MULTI_WORDS =
   'Spanish Open Trials',
   'Spanish Senior Trials',
 
+  # USA
+  '0 to 1500 Spingold',
+  'Reisinger BAM Teams',
+  'Spingold Teams',
+  'US Girls Trials',
+  'US Juniors Training',
+  'US Junior Trials',
+  'US Open Trials',
+  'US Senior Teams',
+  'US Senior Trials',
+  'US University Trials',
+  'US Women Teams',
+  'US Women Trials',
+  'US Youngster Trials',
+  'USBF Challenge Match',
+  'Vanderbilt Teams',
+  'Wagar Teams',
+
   # ----------------------------------------------------
 
 
@@ -286,13 +304,6 @@ my @MULTI_WORDS =
   'African Zonal Senior Trials',
   'African Zonal Women Teams',
   'African Zonal Women Trials',
-  'All-China Games',
-  'All India Bangur Cement Hindusthan Club',
-  'All India Corporate Invitational',
-  'All India Corporate Invitational Pairs',
-  'All India HCL Tournament',
-  'All India Shree Cement',
-  'All India UTI Bank Masters Championship',
   'Altman Swiss Pairs',
   'Anatolian Club Qualifying',
   'Anatolian Fall Teams',
@@ -405,6 +416,9 @@ my @MULTI_WORDS =
   'Bulgarian Open Teams Gabi',
   'Bulgarian Open Trials',
   'Bulgarian Women Trials',
+  'IBF Dobrich',
+  'Stara Zagora Open Teams',
+  'Varna Titan Teams',
 
   ### CCC
 
@@ -431,6 +445,7 @@ my @MULTI_WORDS =
   'Chinese Open Teams',
   'Chinese Open Trials',
 
+  'All-China Games',
   'Chinese Taipei Open Trials',
   'Chinese Taipei Trials',
   'Dongfeng Cup',
@@ -444,6 +459,7 @@ my @MULTI_WORDS =
   'Shenyang Spring',
   'Shenzhen Lanpu Cup',
   'Shenzhen Nangangdongli Cup',
+
 
   'Cliff Wake Challenge',
   'Codan Cup',
@@ -545,7 +561,6 @@ my @MULTI_WORDS =
   'Gardermoen Airport Hotel Cup',
   'Gelibolu Peace Cup',
   'Geologi Cup',
-  'Godfrey Phillips All India Open',
   'Goulyash by E. Gladysh',
 
   'GHTD Cup',
@@ -567,7 +582,6 @@ my @MULTI_WORDS =
   'Hecht Cup',
   'Higson Cup',
   'High-Tech Zone Workers Invitational',
-  'Hindusthan Club Teams',
   'Huayuan Cup',
 
   'HNA Open Teams',
@@ -576,7 +590,6 @@ my @MULTI_WORDS =
   ### III
 
   'IBF Albena',
-  'IBF Dobrich',
   'IBWI Cup',
 
   # ICELAND
@@ -591,9 +604,17 @@ my @MULTI_WORDS =
   'IMSA Elite Mind Games',
 
   # INDIA
+  'All India Bangur Cement Hindusthan Club',
+  'All India Corporate Invitational',
+  'All India Corporate Invitational Pairs',
+  'All India HCL Tournament',
+  'All India Shree Cement',
+  'All India UTI Bank Masters Championship',
   'Dainik Navjyoti All India Inter-State',
   'Delhi Gymkhana Club Centenary',
   'Delhi Gymkhana Club Open',
+  'Godfrey Phillips All India Open',
+  'Hindusthan Club Teams',
 
   'Indian Inter-State Teams',
   'Indian Open Trials',
@@ -740,9 +761,9 @@ my @MULTI_WORDS =
   'Nordic Women Championship',
 
   # NORWAY
+  'Norwegian Club Cup',
   'Norwegian Club Pairs',
   'Norwegian Club Teams',
-  'Norwegian Club Cup',
   'Norwegian Corporate Championship',
   'Norwegian Mixed Pairs',
   'Norwegian Mixed Teams',
@@ -859,7 +880,6 @@ my @MULTI_WORDS =
   'Smirnov Cup',
   'Snåsa Cup',
   'Solomon Teams',
-  'Stara Zagora Open Teams',
 
   # SOUTH AFRICA
   'South African Championship',
@@ -893,6 +913,10 @@ my @MULTI_WORDS =
   'Summer Nationals',
   'Sunchime Fund Cup',
   'Suomen Cup',
+  'Tianjin Binhai Cup',
+  'Tielu Jixie Invitational',
+  'Xinyuan Cup',
+  'Zhejiang Huamen Cup',
 
   # SWEDEN
   'Stockholm Teams',
@@ -936,8 +960,6 @@ my @MULTI_WORDS =
   'The Hague Bridge Experience',
   'Thrace Club Teams',
   'Thrace Cup League',
-  'Tianjin Binhai Cup',
-  'Tielu Jixie Invitational',
   'Top Circuit',
   'Torneo di Rastignano',
   'Torneo di Roma',
@@ -970,26 +992,9 @@ my @MULTI_WORDS =
 
   ### UUU
 
-  'US Girls Trials',
-  'US Juniors Training',
-  'US Junior Trials',
-  'US Open Trials',
-  'US Senior Teams',
-  'US Senior Trials',
-  'US University Trials',
-  'US Women Teams',
-  'US Women Trials',
-  'US Youngster Trials',
-  'USBF Challenge Match',
-
-  'NABC Senior Knock-Out Teams',
-  'Vanderbilt Fantasy Challenge',
-  '0 to 1500 Spingold',
-
 
   ### VVV
 
-  'Varna Titan Teams',
   'Venezuelan Mixed Teams',
   'Venezuelan Swiss Pairs',
   'Vest-Agder Regional Team Championship',
@@ -1041,7 +1046,6 @@ my @MULTI_WORDS =
   'World Youth Bridge Team Championship',
   'World Youth Championship',
 
-  'Xinyuan Cup',
 
   'Yeh Bros Cup',
   'Young Chelsea Knock-out',
@@ -1049,7 +1053,6 @@ my @MULTI_WORDS =
 
   # ZZZ
 
-  'Zhejiang Huamen Cup',
   "Zia's Individual Goulash",
 );
 
@@ -2979,7 +2982,7 @@ my %MULTI_TYPOS =
 
   ### UUU
 
-  'Spingold' => [
+  'Spingold Teams' => [
     'spingold knockout',
     'spingold knockout teams'],
   'US Girls Trials' => [
@@ -2996,6 +2999,7 @@ my %MULTI_TYPOS =
     'usa team trial'],
   'US Senior Teams' => [
     'nabc senior ko',
+    'nabc senior knock-out teams',
     'united states seniors bridge championship',
     'us senior',
     'us seniors'],
@@ -3022,7 +3026,9 @@ my %MULTI_TYPOS =
 
   ### VVV
 
-  Vanderbilt => ['vanderbilt teams', 'vanderbilt ko teams'],
+  'Vanderbilt Teams' => [
+    'vanderbilt teams', 
+    'vanderbilt ko teams'],
   'Varna Titan Teams' => ['teams titan'],
   'Venezuelan Swiss Pairs' => ['venezuela parejas suizas',
     'venezuela swiss pairs'],
@@ -3047,7 +3053,7 @@ my %MULTI_TYPOS =
 
   ### WWW
 
-  Wagar => [
+  'Wagar Teams' => [
     'wagar teams', 
     "wagar women's", 
     "wagar women's ko",
@@ -3119,11 +3125,6 @@ my @SINGLE_WORDS = qw(
   Camrose Cavendish
   Rosenblum
   Vadsøturneringen 
-
-  Reisinger
-  Spingold
-  Vanderbilt
-  Wagar
 );
 
 my %SINGLE_TYPOS =
@@ -3184,11 +3185,15 @@ my %SINGLE_TYPOS =
   'Paris Youth Open Teams' => ['ypob'],
   'Peggy Bayer' => ['peggybayer'],
   'Portuguese Open Teams' => ['cneo'],
-  Reisinger => ['reisiger', 'resisinger'],
+  'Reisinger BAM Teams' => [
+    'reisiger', 
+    'reisinger', 
+    'resisinger'],
   'Ruia Trophy' => ['ruia'],
   'Scottish Cup' => ['scottishcupplate'],
   'South American Open Teams' => ['sabc'],
   'Southeast Asian Games' => ['seagames'],
+  'Spingold Teams' => ['spingold'],
   'Swedish Elite Series' => ['elitserien'],
   'Takamatsu Cup' => ['takamatsu'],
   'Teltscher Trophy' => ['teltschertrophy', 'teltscher', 'telschertrophy'],
@@ -3203,11 +3208,17 @@ my %SINGLE_TYPOS =
     'uswbf', 
     'uswc',
     'us womens championships'],
-  Vanderbilt => ['vanderbuilt', 'vanderebilt', 'vandebilt', 'vandy'],
+  'Vanderbilt Teams' => [
+    'vanderbilt', 
+    'vanderbuilt', 
+    'vanderebilt', 
+    'vandebilt', 
+    'vandy'],
   'Venice Cup' => ['vc', 'venice'],
   'Victor Champion Cup' => ['vcc'],
   'Victorian Pennant' => ['pennant'],
   'Vilnius Club Pairs' => ['vbk'],
+  'Wagar Teams' => ['wagar'],
   'White House Juniors' => ['whj'],
   'World Transnational Mixed Teams' => ['wtmt'],
   'World Transnational Open Teams' => ['wtot'],

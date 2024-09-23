@@ -265,7 +265,8 @@ sub post_process_maybe_rof
     my $tname = find_field_in_chains($chains, 'TNAME', \$cno);
     next unless $tname;
 
-    if ($tname eq 'Spingold' || $tname eq 'Vanderbilt' ||
+    if ($tname eq 'Spingold Teams' || 
+        $tname eq 'Vanderbilt Teams' ||
         $tname eq 'Baze Senior Knock-out' ||
         $tname eq 'United States Bridge Championship')
     {
@@ -426,12 +427,13 @@ sub finish_ordinal
   my $movement = $knowledge->get_field('MOVEMENT', $bbono);
   my $stage = $knowledge->get_field('STAGE', $bbono);
 
-  if ($tname eq 'Vanderbilt' || $tname eq 'Spingold')
+  if ($tname eq 'Vanderbilt Teams' || 
+      $tname eq 'Spingold Teams')
   {
     $chain->complete('KILLED');
     return 1;
   }
-  elsif ($tname eq 'Reisinger')
+  elsif ($tname eq 'Reisinger BAM Teams')
   {
     $token->set_general('MARKER', 'SESSION', $value);
     $chain->complete('EXPLAINED');
@@ -612,7 +614,7 @@ sub finish_ambiguous
     $chain->complete('EXPLAINED');
     return 1;
   }
-  elsif ($tname eq 'Reisinger')
+  elsif ($tname eq 'Reisinger BAM Teams')
   {
     if ($value =~ /^S (\d+)$/)
     {
@@ -672,7 +674,7 @@ sub finish_ambiguous
   }
   elsif ($meet eq 'European National Championships' ||
     $tname eq 'World Transnational Teams' ||
-    $tname eq 'Reisinger' ||
+    $tname eq 'Reisinger BAM Teams' ||
     $tname eq 'Bermuda Bowl' ||
     $tname eq 'Venice Cup' ||
     $tname eq "d'Orsi")
