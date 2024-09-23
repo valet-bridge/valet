@@ -342,20 +342,22 @@ my @MULTI_WORDS =
   'Australian Spring Open Teams',
   'Australian Spring Seniors Teams',
   "Australian Spring Women's Teams",
+  'Australian Trials',
   "Australian Women's Teams",
   "Australian Women's Trials",
   'Australian Youth',
+  'Australian Youth IMP Pairs',
   'Australian Youth Tri Individual',
   'Australian Youth Tri Pairs',
   'Australian Youth Tri Teams',
-  'Australian Trials',
-  'Australian Youth IMP Pairs',
 
   'New South Wales State Teams',
   'New South Wales Open Teams',
   'New South Wales Open Trials',
   'Northern Territory Gold Teams',
   'Northern Territory Gold Swiss Pairs',
+  'Queensland Women Trials',
+  'Queensland Senior Trials',
   'Victoria Cup',
   'Victorian Mixed Teams',
   'Victorian Open Teams',
@@ -623,6 +625,10 @@ my @MULTI_WORDS =
   'Indian State Championship',
   'Indian Western Zone Championship',
 
+  'Krishnapatnam Port National Masters',
+  'Lalit Mohanka Memorial',
+  'L C Sunil Rajendra Memorial',
+
   'Madras Gymkhana Club Open',
   'Maharaja Yeshwantrao Holkar National',
   'Maharashtra State Championship',
@@ -669,6 +675,7 @@ my @MULTI_WORDS =
   'Indonesian U26 Trials',
   'Indonesian University Championship',
   'Indonesian Women Trials',
+  "Kepri Governor's Cup",
 
 
 
@@ -698,19 +705,15 @@ my @MULTI_WORDS =
   'Karlovo Pairs',
   'Karlovo Teams',
   'Karnik-Vaidya Open',
-  "Kepri Governor's Cup",
   'Kings and Queens Blaine Howe Teams',
-  'Krishnapatnam Port National Masters',
   'Krommenie Nations Cup',
 
   ### LLL
 
   'Lady Milne Trials',
   'Lady Milne Trophy',
-  'Lalit Mohanka Memorial',
   'Las Palmas Simultaneous Pairs',
   'Las Palmas Women Pairs',
-  'L C Sunil Rajendra Memorial',
   'Lebanese Invitational Teams',
   'Lederer Memorial Trophy',
   "Linda Stern Women's Teams",
@@ -734,7 +737,6 @@ my @MULTI_WORDS =
   'Mo i Rana Ladies Invitational',
   'Mondi Cup',
   'Mondial de Deauville',
-  'Moscow Sunday Times',
   'Mountain Sea Cup',
   'Murat Kilercioglu Turkish Spring Teams',
   'MTP Cup',
@@ -824,8 +826,6 @@ my @MULTI_WORDS =
   'PT Timah Invitational Teams',
   'Puutalo Open',
 
-  'Queensland Women Trials',
-  'Queensland Senior Trials',
 
   ### RRR
 
@@ -849,6 +849,7 @@ my @MULTI_WORDS =
   'Rui Pinto Cup',
 
   # RUSSIA
+  'Moscow Sunday Times',
   'Russian Open Teams',
   'Russian Premier League',
 
@@ -1188,12 +1189,15 @@ my %MULTI_TYPOS =
 
   # AUSTRALIA
   'Australian Autumn National Open Teams' => [
+    'abf anot',
     'australian autumn national open  teams',
     'autumn national open teams'],
-  'Australian National Open Teams' => ['abf anot',
-    'abf national open teams', 'national open teams',
+  'Australian National Open Teams' => [
+    'abf national open teams', 
+    'national open teams',
     'national openteams'],
-  'Australian Grand National Open Teams' => ['abf gnot',
+  'Australian Grand National Open Teams' => [
+    'abf gnot',
     'grand national open teams'],
   'Australian Open Teams' => [
     'aust open', 
@@ -1207,7 +1211,7 @@ my %MULTI_TYPOS =
     'australian open selection',
     'australian open team selection', 
     'austalian open team selections'],
-  'Australian Seniors Pairs' => ['aust seniors pairs'],,
+  'Australian Seniors Pairs' => ['aust seniors pairs'],
   'Australian Seniors Teams' => [
     'aus seniors',
     'aust seniors open', 
@@ -1220,15 +1224,23 @@ my %MULTI_TYPOS =
     'australian senior trials',
     'australian seniors trial',
     'australian seniors trials'],
-  'Australian Spring Open Teams' => ['spring national open teams',
+  'Australian Spring Open Teams' => [
+    'spring national open teams',
     'spring open teams'],
-  'Australian Spring Seniors Teams' => ['aust spring seniors teams',
-    'aust spring seniors', 'australian spring seniors'],
+  'Australian Spring Seniors Teams' => [
+    'aust spring seniors teams',
+    'aust spring seniors', 
+    'australian spring seniors'],
   "Australian Spring Women's Teams" => ['australian spring womens'],
-  'Australian Seniors Trials' => ['abf seniors playoff',
+  'Australian Seniors Trials' => [
+  'abf seniors playoff',
     'australian seniors trial'],
-  'Australian Trials' => ['abf trials', 'abf team trials',
-    'abf playoff', 'abf trial', 'australian team selection'],
+  'Australian Trials' => [
+    'abf trials', 
+    'abf team trials',
+    'abf playoff', 
+    'abf trial', 
+    'australian team selection'],
   "Australian Women's Teams" => [
     'aust women open team',
     "aust women's team",
@@ -1237,21 +1249,27 @@ my %MULTI_TYPOS =
     "australian women's", 
     'australian women',
     'australian womens teams'],
-  "Australian Women's Trials" => ["australian women's team selection",
+  "Australian Women's Trials" => [
+    "australian women's team selection",
     'australian women team selection',
     'australian women team trials',
     "australian women's team selection",
     "australian women's selection",
     "australian women's team selelection",
-    'australian womens team trial', 'australian womens trials',
+    'australian womens team trial', 
+    'australian womens trials',
     'australian womens team selection',
     'australian womens trial'],
-  'Australian Youth IMP Pairs' => ['aust youth butler',
+  'Australian Youth IMP Pairs' => [
+    'aust youth butler',
     'australian youth butler'],
   'Australian Youth Tri Individual' => ['youth tri individual'],
   'Australian Youth Tri Pairs' => ['youth triathlon pairs'],
-  'Australian Youth' => ['aust youth', 'australian youth selection',
-    'aust youth selection', 'oz youth selection'],
+  'Australian Youth' => [
+    'aust youth', 
+    'australian youth selection',
+    'aust youth selection', 
+    'oz youth selection'],
 
   'Austrian Team Championship' => ['austrian team championships'],
   'Avia Inter-City Championship' => [
@@ -3132,7 +3150,8 @@ my %SINGLE_TYPOS =
   'APBF Championships' => ['pabfc', 'pabf', 'pabfs'],
   'Argentinian Club Teams' => ['cnia'],
   'ASEAN Club Championship' => ['abcc'],
-  'Australian National Open Teams' => ['anot', 'not'],
+  'Australian Autumn National Open Teams' => ['anot'],
+  'Australian National Open Teams' => ['not'],
   'Australian National Senior Teams' => ['nst'],
   'Australian National Women Teams' => ['nwt'],
   'Australian Spring Open Teams' => ['snot'],
