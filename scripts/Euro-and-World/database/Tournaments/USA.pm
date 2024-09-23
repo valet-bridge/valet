@@ -450,9 +450,19 @@ my %TOURNAMENTS_USA =
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2004,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2004-11-29',
+            DATE_END => '2004-11-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2004-11-29',
             DATE_END => '2004-11-29'
           } 
@@ -463,9 +473,18 @@ my %TOURNAMENTS_USA =
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2006,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-11-26',
+            DATE_END => '2006-11-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
             DATE_START => '2006-11-26',
             DATE_END => '2006-11-27'
           } 
@@ -479,6 +498,8 @@ my %TOURNAMENTS_USA =
           'SINGLE' => 
           {
             YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2007-12-02',
             DATE_END => '2007-12-02'
           } 
@@ -492,6 +513,8 @@ my %TOURNAMENTS_USA =
           'SINGLE' => 
           {
             YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2008-11-30',
             DATE_END => '2008-11-30'
           } 
@@ -505,6 +528,8 @@ my %TOURNAMENTS_USA =
           'SINGLE' => 
           {
             YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2009-12-06',
             DATE_END => '2009-12-06'
           } 
@@ -518,6 +543,8 @@ my %TOURNAMENTS_USA =
           'SINGLE' => 
           {
             YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2010-12-05',
             DATE_END => '2010-12-05'
           } 
@@ -531,6 +558,8 @@ my %TOURNAMENTS_USA =
           'SINGLE' => 
           {
             YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2011-12-04',
             DATE_END => '2011-12-04'
           } 
@@ -541,12 +570,22 @@ my %TOURNAMENTS_USA =
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-12-02',
+            DATE_END => '2012-12-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2012-12-02',
             DATE_END => '2012-12-03'
-          } 
+          },
         }
       },
       '2013' =>
@@ -554,9 +593,19 @@ my %TOURNAMENTS_USA =
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-12-08',
+            DATE_END => '2013-12-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2013-12-08',
             DATE_END => '2013-12-09'
           } 
@@ -567,12 +616,23 @@ my %TOURNAMENTS_USA =
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2014-12-06',
+            DATE_END => '2014-12-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SESSION',
+            minor => 'ROUND',
+            DATE_START => '2014-12-07',
             DATE_END => '2014-12-08'
-          } 
+          },
         }
       },
       '2015' =>
@@ -580,12 +640,23 @@ my %TOURNAMENTS_USA =
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SESSION',
+            minor => 'SEGMENT',
             DATE_START => '2015-12-05',
+            DATE_END => '2015-12-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-12-06',
             DATE_END => '2015-12-07'
-          } 
+          },
         }
       },
     }

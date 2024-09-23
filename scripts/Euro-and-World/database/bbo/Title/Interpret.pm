@@ -603,7 +603,6 @@ sub finish_ambiguous
 
   if ($value =~ / of / ||
       $tname =~ /Cavendish/ ||
-      $tname eq 'Reisinger' ||
       $tname eq 'Tolani Grand Prix' ||
       $tname eq 'Greek Open Trials' ||
       $tname eq 'Portuguese Open Teams' ||
@@ -611,6 +610,25 @@ sub finish_ambiguous
   {
     $token->set_general('MARKER', 'SESSION', $value);
     $chain->complete('EXPLAINED');
+    return 1;
+  }
+  elsif ($tname eq 'Reisinger')
+  {
+    if ($value =~ /^S (\d+)$/)
+    {
+      $token->set_general('MARKER', 'SESSION', $1);
+      $chain->complete('EXPLAINED');
+    }
+    elsif ($value =~ /^[FG]$/)
+    {
+      $token->set_general('MARKER', 'GROUP', $value);
+      $chain->complete('EXPLAINED');
+    }
+    else
+    {
+      $token->set_general('MARKER', 'SESSION', $value);
+      $chain->complete('EXPLAINED');
+    }
     return 1;
   }
   elsif ($tname eq 'Camrose' && $value =~ '^W (\d+)$')

@@ -1,8 +1,7 @@
 USA:
-Add Reisinger
-- Reisinger doesn't have ordinal
-- Also no lettered TITLE_SESSION (F,G)
-- Why is 42197 "TITLE_SESSION S 1" and not just 1?
+Reisinger mostly OK, but Semifinal 2015: SESSION, SEGMENT
+Session 1 goes to segment 9, session 2 goes to segment 10
+When both major/minor, should have per-major maximum.
 
 Maybe give the 4 tournaments multi-word names, careful that the
 current names occur directly in the code
