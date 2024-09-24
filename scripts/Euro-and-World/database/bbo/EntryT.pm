@@ -112,6 +112,19 @@ my %FORM_CORRECTIONS = (
   # Says Team 1, Team 2 in BBO file, but is pairs or individual
   'Argentinian Mixed Pairs' => [
     43946],
+  'Australian Senior Pairs' => [
+    13315, 13316, 13317, 13318, 13319, 13321, 13323, 13324, 13329,
+    13332, 13350, 13351, 13352, 13353, 13355, 13356, 13357, 13359,
+    32882, 32883, 32884, 32886, 32889, 32904, 32907, 32908],
+  'Australian Youth IMP Pairs' => [
+    16490, 16491, 16492, 16493, 16494, 16495, 16496, 16497, 16499,
+    16500, 16501, 16502, 16503, 16504, 16505, 16506, 16506, 16507,
+    16508],
+  'Australian Youth Tri Individual' => [
+    21284],
+  'Australian Youth Tri Pairs' => [
+    21303,
+    31483, 31484],
   'Belgian Open Pairs' => [3075, 3076, 9813, 9824, 18125,18133],
   'Chilean Cup' => [26199, 26218, 26237, 26265],
   'Chilean Open Pairs' => [31502, 31503],
@@ -491,7 +504,8 @@ sub prune_using
   # This is not so clean -- modifying a method argument.
   if (exists $header->{YEAR} && exists $chapter->{YEAR})
   {
-    die "Different years" unless $header->{YEAR} eq $chapter->{YEAR};
+    die "Different years: $header->{YEAR} vs $chapter->{YEAR}" 
+      unless $header->{YEAR} eq $chapter->{YEAR};
     delete $chapter->{YEAR};
   }
 

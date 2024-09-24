@@ -336,8 +336,8 @@ my @MULTI_WORDS =
   'Australian National Women Teams',
   'Australian Open Teams',
   'Australian Open Trials',
-  'Australian Seniors Pairs',
-  'Australian Seniors Teams',
+  'Australian Senior Pairs',
+  'Australian Senior Teams',
   'Australian Senior Trials',
   'Australian Spring Open Teams',
   'Australian Spring Seniors Teams',
@@ -1207,17 +1207,20 @@ my %MULTI_TYPOS =
   'Australian Open Trials' => [
     'abf open team trials', 
     'abf oprn trials',
+    'austalian open team selections',
     'australian open team trials', 
     'australian open selection',
     'australian open team selection', 
-    'austalian open team selections'],
-  'Australian Seniors Pairs' => ['aust seniors pairs'],
-  'Australian Seniors Teams' => [
+    'australian open tream selection'], 
+  'Australian Senior Pairs' => [
+    'aust seniors pairs',
+    'austalian seniors pairs'],
+  'Australian Senior Teams' => [
     'aus seniors',
     'aust seniors open', 
     'aust senriors open', 
     'australian seniors', 
-    'australian senior teams', 
+    'australian seniors teams', 
     'australain seniors',
     'sen australian'],
   'Australian Senior Trials' => [
@@ -1230,8 +1233,11 @@ my %MULTI_TYPOS =
   'Australian Spring Seniors Teams' => [
     'aust spring seniors teams',
     'aust spring seniors', 
-    'australian spring seniors'],
-  "Australian Spring Women's Teams" => ['australian spring womens'],
+    'australian spring seniors',
+    'snot seniors'],
+  "Australian Spring Women's Teams" => [
+    'australian spring womens',
+    'snot womens'],
   'Australian Seniors Trials' => [
   'abf seniors playoff',
     'australian seniors trial'],
@@ -1265,8 +1271,10 @@ my %MULTI_TYPOS =
     'australian youth butler'],
   'Australian Youth Tri Individual' => ['youth tri individual'],
   'Australian Youth Tri Pairs' => ['youth triathlon pairs'],
-  'Australian Youth' => [
-    'aust youth', 
+  'Australian Youth Teams' => [
+    'aust youth',
+    'australian youth'], 
+  'Australian Youth Trials' => [
     'australian youth selection',
     'aust youth selection', 
     'oz youth selection'],
