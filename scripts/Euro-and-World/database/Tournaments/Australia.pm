@@ -1914,262 +1914,6 @@ my %TOURNAMENTS_AUSTRALIA =
     }
   },
 
-  'Australian Seniors Teams',
-  {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
-    ORIGIN => 'National',
-    ZONE => 'South Pacific',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Seniors',
-
-    EDITIONS =>
-    {
-      '2006' =>
-      {
-        # https://www.abf.com.au/events/results/results.asp?yr=2006&dir=spo
-        CITY => 'Sydney',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2006,
-            DATE_START => '2006-04-20',
-            DATE_END => '2006-04-24'
-          } 
-        }
-      },
-      '2007' =>
-      {
-        # https://www.abf.com.au/events/results/results.asp?yr=2007&dir=spo
-        CITY => 'Sydney',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2007,
-            DATE_START => '2007-04-19',
-            DATE_END => '2007-04-23'
-          } 
-        }
-      },
-      '2008' =>
-      {
-        # https://abfevents.com.au/events/results/results.asp?yr=2008&dir=spo
-        CITY => 'Sydney',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2008,
-            DATE_START => '2008-04-19',
-            DATE_END => '2008-04-23'
-          } 
-        }
-      },
-      '2009' =>
-      {
-        # https://abfevents.com.au/events/results/results.asp?yr=2009&dir=spo
-        CITY => 'Sydney',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2009,
-            DATE_START => '2009-04-16',
-            DATE_END => '2009-04-20'
-          } 
-        }
-      },
-      '2010' =>
-      {
-        # https://abfevents.com.au/events/results/results.asp?yr=2010&dir=spo
-        CITY => 'Sydney',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2010,
-            DATE_START => '2010-04-07',
-            DATE_END => '2010-04-11'
-          } 
-        }
-      },
-      '2011' =>
-      {
-        # https://abfevents.com.au/events/results/results.asp?yr=2011&dir=spo
-        CITY => 'Sydney',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2011,
-            DATE_START => '2011-04-06',
-            DATE_END => '2011-04-10'
-          } 
-        }
-      },
-      '2012' =>
-      {
-        # https://abfevents.com.au/events/results/results.asp?yr=2012&dir=spo
-        CITY => 'Sydney',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2012,
-            DATE_START => '2012-04-18',
-            DATE_END => '2012-04-22'
-          } 
-        }
-      },
-      '2013' =>
-      {
-        # https://abfevents.com.au/events/playoffs/2013/seniors/
-        CITY => 'Redfern',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2013,
-            DATE_START => '2013-02-13',
-            DATE_END => '2013-02-17'
-          } 
-        }
-      },
-      '2014' =>
-      {
-        # https://abfevents.com.au/events/playoffs/2014/seniors/
-        CITY => 'Sydney',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2014,
-            DATE_START => '2014-04-04',
-            DATE_END => '2014-04-08'
-          } 
-        }
-      },
-      '2015' =>
-      {
-        # https://abfevents.com.au/events/playoffs/2015/seniors/
-        CITY => 'Sydney',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2015,
-            DATE_START => '2015-03-13',
-            DATE_END => '2015-03-17'
-          } 
-        }
-      },
-      '2016A' =>
-      {
-        # https://abfevents.com.au/events/playoffs/2016/SW/
-        CITY => 'Canberra',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2016,
-            DATE_START => '2016-03-12',
-            DATE_END => '2016-03-17'
-          } 
-        }
-      },
-      '2016B' =>
-      {
-        # https://abfevents.com.au/events/playoffs/2017/SW/
-        CITY => 'Canberra',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2016,
-            DATE_START => '2016-12-03',
-            DATE_END => '2016-12-08'
-          } 
-        }
-      },
-      '2017' =>
-      {
-        # https://abfevents.com.au/events/playoffs/2018/sw/
-        CITY => 'Canberra',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2017,
-            DATE_START => '2017-12-03',
-            DATE_END => '2017-12-07'
-          } 
-        }
-      },
-      '2018' =>
-      {
-        # https://abfevents.com.au/events/playoffs/2019/SW/
-        CITY => 'Canberra',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2018,
-            DATE_START => '2018-12-08',
-            DATE_END => '2018-12-13'
-          } 
-        }
-      },
-      '2019' =>
-      {
-        # https://abfevents.com.au/events/playoffs/2020/sw/
-        CITY => 'Canberra',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2019,
-            DATE_START => '2019-12-07',
-            DATE_END => '2019-12-12'
-          } 
-        }
-      },
-      '2022' =>
-      {
-        # https://abfevents.com.au/events/playoffs/2022/ows/
-        CITY => 'Canberra',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2022,
-            DATE_START => '2022-03-12',
-            DATE_END => '2022-03-17'
-          } 
-        }
-      },
-    }
-  },
-
   'Australian Senior Teams',
   {
     ORGANIZATION => 'AuBF',
@@ -2332,6 +2076,21 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
+      '2015' =>
+      {
+        # http://abfevents.com.au/events/playoffs/2015/seniors/
+        CITY => 'Canberra',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-03-13',
+            DATE_END => '2015-03-18'
+          } 
+        }
+      },
       '2016A' =>
       {
         # http://abfevents.com.au/events/playoffs/2016/SW/
@@ -2425,37 +2184,6 @@ my %TOURNAMENTS_AUSTRALIA =
     }
   },
 
-  'Australian Senior Trials',
-  {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
-    ORIGIN => 'National',
-    ZONE => 'South Pacific',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        # Link
-        MEET => 'Meet name',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
-          } 
-        }
-      },
-    }
-  },
-
   'Australian Spring Open Teams',
   {
     FORM => 'Teams',
@@ -2533,7 +2261,7 @@ my %TOURNAMENTS_AUSTRALIA =
     }
   },
 
-  'Australian Spring Seniors Teams',
+  'Australian Spring Senior Teams',
   {
     ORGANIZATION => 'AuBF',
     COUNTRY => 'Australia',
@@ -2605,7 +2333,7 @@ my %TOURNAMENTS_AUSTRALIA =
     }
   },
 
-  "Australian Spring Women's Teams",
+  "Australian Spring Women Teams",
   {
     ORGANIZATION => 'AuBF',
     COUNTRY => 'Australia',
@@ -2666,38 +2394,7 @@ my %TOURNAMENTS_AUSTRALIA =
     }
   },
 
-  'Australian Trials',
-  {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
-    ORIGIN => 'National',
-    ZONE => 'South Pacific',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        # Link
-        MEET => 'Meet name',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
-          } 
-        }
-      },
-    }
-  },
-
-  "Australian Women's Teams",
+  "Australian Women Teams",
   {
     ORGANIZATION => 'AuBF',
     COUNTRY => 'Australia',
@@ -2982,7 +2679,7 @@ my %TOURNAMENTS_AUSTRALIA =
     }
   },
 
-  "Australian Women's Trials",
+  "Australian Women Trials",
   {
     ORGANIZATION => 'AuBF',
     COUNTRY => 'Australia',
@@ -3040,37 +2737,6 @@ my %TOURNAMENTS_AUSTRALIA =
             YEAR => 2015,
             DATE_START => '2015-02-03',
             DATE_END => '2015-02-05'
-          } 
-        }
-      },
-    }
-  },
-
-  'Australian Youth',
-  {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
-    ORIGIN => 'National',
-    ZONE => 'South Pacific',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        # Link
-        MEET => 'Meet name',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
           } 
         }
       },
@@ -3137,6 +2803,32 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
+      '2010' =>
+      {
+        MEET => 'Australian Youth Week',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-01-15',
+            DATE_END => '2010-01-16'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Australian Youth Week',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-01-21',
+            DATE_END => '2011-01-22'
+          } 
+        }
+      },
       '2012' =>
       {
         MEET => 'Australian Youth Week',
@@ -3160,6 +2852,19 @@ my %TOURNAMENTS_AUSTRALIA =
             YEAR => 2013,
             DATE_START => '2013-01-19',
             DATE_END => '2013-01-20'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Australian Youth Week',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-01-18',
+            DATE_END => '2014-01-19'
           } 
         }
       },
@@ -3299,8 +3004,6 @@ my %TOURNAMENTS_AUSTRALIA =
       },
     }
   },
-
-
 
 );
 

@@ -338,15 +338,13 @@ my @MULTI_WORDS =
   'Australian Open Trials',
   'Australian Senior Pairs',
   'Australian Senior Teams',
-  'Australian Senior Trials',
   'Australian Spring Open Teams',
-  'Australian Spring Seniors Teams',
-  "Australian Spring Women's Teams",
-  'Australian Trials',
-  "Australian Women's Teams",
-  "Australian Women's Trials",
-  'Australian Youth',
+  'Australian Spring Senior Teams',
+  "Australian Spring Women Teams",
+  "Australian Women Teams",
+  "Australian Women Trials",
   'Australian Youth IMP Pairs',
+  'Australian Youth Teams',
   'Australian Youth Tri Individual',
   'Australian Youth Tri Pairs',
   'Australian Youth Tri Teams',
@@ -1192,13 +1190,13 @@ my %MULTI_TYPOS =
     'abf anot',
     'australian autumn national open  teams',
     'autumn national open teams'],
+  'Australian Grand National Open Teams' => [
+    'abf gnot',
+    'grand national open teams'],
   'Australian National Open Teams' => [
     'abf national open teams', 
     'national open teams',
     'national openteams'],
-  'Australian Grand National Open Teams' => [
-    'abf gnot',
-    'grand national open teams'],
   'Australian Open Teams' => [
     'aust open', 
     'australian open championships',
@@ -1216,6 +1214,7 @@ my %MULTI_TYPOS =
     'aust seniors pairs',
     'austalian seniors pairs'],
   'Australian Senior Teams' => [
+    'abf seniors playoff',
     'aus seniors',
     'aust seniors open', 
     'aust senriors open', 
@@ -1223,39 +1222,29 @@ my %MULTI_TYPOS =
     'australian seniors teams', 
     'australain seniors',
     'sen australian'],
-  'Australian Senior Trials' => [
-    'australian senior trials',
-    'australian seniors trial',
-    'australian seniors trials'],
   'Australian Spring Open Teams' => [
     'spring national open teams',
     'spring open teams'],
-  'Australian Spring Seniors Teams' => [
+  'Australian Spring Senior Teams' => [
     'aust spring seniors teams',
     'aust spring seniors', 
     'australian spring seniors',
+    'australian spring seniors teams',
     'snot seniors'],
-  "Australian Spring Women's Teams" => [
+  'Australian Spring Women Teams' => [
+    "australian spring women's teams",
     'australian spring womens',
     'snot womens'],
-  'Australian Seniors Trials' => [
-  'abf seniors playoff',
-    'australian seniors trial'],
-  'Australian Trials' => [
-    'abf trials', 
-    'abf team trials',
-    'abf playoff', 
-    'abf trial', 
-    'australian team selection'],
-  "Australian Women's Teams" => [
+  'Australian Women Teams' => [
     'aust women open team',
     "aust women's team",
     'aust womens team', 
     'aust womens teams', 
     "australian women's", 
     'australian women',
+    "australian women's teams",
     'australian womens teams'],
-  "Australian Women's Trials" => [
+  'Australian Women Trials' => [
     "australian women's team selection",
     'australian women team selection',
     'australian women team trials',
@@ -1263,21 +1252,21 @@ my %MULTI_TYPOS =
     "australian women's selection",
     "australian women's team selelection",
     'australian womens team trial', 
+    "australian women's trials",
     'australian womens trials',
     'australian womens team selection',
     'australian womens trial'],
   'Australian Youth IMP Pairs' => [
     'aust youth butler',
     'australian youth butler'],
-  'Australian Youth Tri Individual' => ['youth tri individual'],
-  'Australian Youth Tri Pairs' => ['youth triathlon pairs'],
   'Australian Youth Teams' => [
     'aust youth',
-    'australian youth'], 
-  'Australian Youth Trials' => [
-    'australian youth selection',
     'aust youth selection', 
+    'australian youth', 
+    'australian youth selection',
     'oz youth selection'],
+  'Australian Youth Tri Individual' => ['youth tri individual'],
+  'Australian Youth Tri Pairs' => ['youth triathlon pairs'],
 
   'Austrian Team Championship' => ['austrian team championships'],
   'Avia Inter-City Championship' => [
