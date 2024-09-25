@@ -1721,7 +1721,22 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2012' =>
+      '2012A' =>
+      {
+        # http://abfevents.com.au/events/results/results.asp?yr=2012&dir=owp
+        CITY => 'Sydney',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-04-02',
+            DATE_END => '2012-04-05'
+          } 
+        }
+      },
+      '2012B' =>
       {
         # http://abfevents.com.au/events/playoffs/2013/OW/results.asp
         CITY => 'Canberra',
@@ -1776,7 +1791,21 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2016' =>
+      '2016A' =>
+      {
+        # http://abfevents.com.au/events/playoffs/2016/open/
+        CITY => 'Canberra',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-02-09',
+            DATE_END => '2016-02-11'
+          } 
+        }
+      },
+      '2016B' =>
       {
         # http://abfevents.com.au/events/playoffs/2017/open/
         CITY => 'Canberra',
@@ -1885,70 +1914,6 @@ my %TOURNAMENTS_AUSTRALIA =
             YEAR => 2024,
             DATE_START => '2024-11-16',
             DATE_END => '2024-11-21'
-          } 
-        }
-      },
-    }
-  },
-
-  'Australian Open Trials',
-  {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
-    ORIGIN => 'National',
-    ZONE => 'South Pacific',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2012' =>
-      {
-        # http://abfevents.com.au/events/results/results.asp?yr=2012&dir=owp
-        # Really teams
-        CITY => 'Sydney',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2012,
-            DATE_START => '2012-04-02',
-            DATE_END => '2012-04-05'
-          } 
-        }
-      },
-      '2015' =>
-      {
-        # http://abfevents.com.au/events/playoffs/2015/OW/
-        # Really teamy
-        CITY => 'Coogee',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2015,
-            DATE_START => '2015-02-03',
-            DATE_END => '2015-02-05'
-          } 
-        }
-      },
-      '2016' =>
-      {
-        # http://abfevents.com.au/events/playoffs/2016/open/
-        # Really teams TODO Move
-        CITY => 'Canberra',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2016,
-            DATE_START => '2016-02-09',
-            DATE_END => '2016-02-11'
           } 
         }
       },
@@ -2363,15 +2328,14 @@ my %TOURNAMENTS_AUSTRALIA =
     {
       '2008' =>
       {
-        # Link: TODO Shift dates
-
+        MEET => 'Australian Spring Nationals',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2008,
-            DATE_START => '2008-11-05',
-            DATE_END => '2008-11-05'
+            DATE_START => '2008-10-30',
+            DATE_END => '2008-10-30'
           } 
         }
       },
@@ -2432,16 +2396,14 @@ my %TOURNAMENTS_AUSTRALIA =
     {
       '2008' =>
       {
-        # Link: TODO Shift dates
-        MEET => 'Meet name',
-
+        MEET => 'Australian Spring Nationals',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2008,
-            DATE_START => '2008-11-05',
-            DATE_END => '2008-11-05'
+            DATE_START => '2008-10-30',
+            DATE_END => '2008-10-30'
           } 
         }
       },
@@ -2758,81 +2720,6 @@ my %TOURNAMENTS_AUSTRALIA =
     }
   },
 
-  "Australian Women Trials",
-  {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
-    ORIGIN => 'National',
-    ZONE => 'South Pacific',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Women',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2009' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=09PLAY&header=abf
-            # Really teams
-            YEAR => 2009,
-            DATE_START => '2009-03-22',
-            DATE_END => '2009-03-24'
-          } 
-        }
-      },
-      '2011' =>
-      {
-        # https://abfevents.com.au/events/playoffs/2011/results/
-        # Really teams
-        CITY => 'Sydney',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2011,
-            DATE_START => '2011-03-25',
-            DATE_END => '2011-03-29'
-          } 
-        }
-      },
-      '2012' =>
-      {
-        # http://abfevents.com.au/events/results/results.asp?yr=2012&dir=owp
-        # Really teams
-        CITY => 'Sydney',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2012,
-            DATE_START => '2012-04-02',
-            DATE_END => '2012-04-04'
-          } 
-        }
-      },
-      '2015' =>
-      {
-        # http://abfevents.com.au/events/playoffs/2015/OW/
-        # Really teams TODO Move
-        CITY => 'Coogee',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2015,
-            DATE_START => '2015-02-03',
-            DATE_END => '2015-02-05'
-          } 
-        }
-      },
-    }
-  },
-
   'Australian Youth IMP Pairs',
   {
     FORM => 'Pairs',
@@ -3002,9 +2889,7 @@ my %TOURNAMENTS_AUSTRALIA =
     {
       '2011' =>
       {
-        # Link
-        MEET => 'Meet name',
-
+        # No link
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3033,9 +2918,7 @@ my %TOURNAMENTS_AUSTRALIA =
     {
       '2011' =>
       {
-        # Link
-        MEET => 'Meet name',
-
+        # No link
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3079,9 +2962,7 @@ my %TOURNAMENTS_AUSTRALIA =
     {
       '2011' =>
       {
-        # Link
-        MEET => 'Meet name',
-
+        # No link
         CHAPTERS =>
         {
           'SINGLE' => 
