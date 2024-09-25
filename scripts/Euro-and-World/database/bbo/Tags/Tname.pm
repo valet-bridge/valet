@@ -1207,6 +1207,7 @@ my %MULTI_TYPOS =
     'australian open trials',
     'australian open team trials', 
     'australian open team selection', 
+    'australian open teams playoff', 
     'australian open tream selection'], 
   'Australian Senior Pairs' => [
     'aust seniors pairs',
@@ -1214,12 +1215,15 @@ my %MULTI_TYPOS =
   'Australian Senior Teams' => [
     'abf seniors playoff',
     'aus seniors',
+    'aus seniors playoff',
+    'aus seniors playoffs',
     'aust seniors open', 
     'aust senriors open', 
     'australian seniors', 
     'australian seniors teams', 
     'australain seniors',
-    'sen australian'],
+    'sen australian',
+    'sen australian playoffs'],
   'Australian Spring Open Teams' => [
     'spring national open teams',
     'spring open teams'],
