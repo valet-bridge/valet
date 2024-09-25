@@ -33,6 +33,14 @@ my %MEETS_AUSTRALIA =
         DATE_START => '2011-07-24',
         DATE_END => '2011-07-29'
       },
+      '2012' =>
+      {
+        # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=12ANCD&header=abf
+        YEAR => 2012,
+        CITY => 'Darwin',
+        DATE_START => '2012-07-14',
+        DATE_END => '2012-07-19'
+      },
       '2013' =>
       {
         # http://abfevents.com.au/events/anc/2013/
@@ -40,6 +48,78 @@ my %MEETS_AUSTRALIA =
         CITY => 'Adelaide',
         DATE_START => '2013-07-06',
         DATE_END => '2013-07-18'
+      },
+      '2014' =>
+      {
+        # https://abfevents.com.au/events/anc/2014/
+        YEAR => 2014,
+        CITY => 'Sydney',
+        DATE_START => '2014-07-12',
+        DATE_END => '2014-07-24'
+      },
+      '2015' =>
+      {
+        # http://abfevents.com.au/events/anc/2016/
+        YEAR => 2015,
+        CITY => 'Fremantle',
+        DATE_START => '2015-07-11',
+        DATE_END => '2015-07-23'
+      },
+      '2016' =>
+      {
+        # http://abfevents.com.au/events/anc/2016/
+        YEAR => 2016,
+        CITY => 'Brisbane',
+        DATE_START => '2016-06-25',
+        DATE_END => '2016-07-07'
+      },
+      '2017' =>
+      {
+        # http://abfevents.com.au/events/anc/2017/
+        YEAR => 2017,
+        CITY => 'Canberra',
+        DATE_START => '2017-07-15',
+        DATE_END => '2017-08-27'
+      },
+      '2018' =>
+      {
+        # https://abfevents.com.au/events/anc/2018/
+        YEAR => 2018,
+        CITY => 'Hobart',
+        DATE_START => '2018-07-28',
+        DATE_END => '2018-08-09'
+      },
+      '2019' =>
+      {
+        # http://abfevents.com.au/events/anc/2019/
+        YEAR => 2019,
+        CITY => 'Melbourne',
+        DATE_START => '2019-07-13',
+        DATE_END => '2019-07-25'
+      },
+      '2022' =>
+      {
+        # https://abfevents.com.au/events/anc/2022/
+        YEAR => 2022,
+        CITY => 'Adelaide',
+        DATE_START => '2022-07-02',
+        DATE_END => '2022-07-14'
+      },
+      '2023' =>
+      {
+        # https://www.myabf.com.au/events/congress/view/472
+        YEAR => 2023,
+        CITY => 'Perth',
+        DATE_START => '2023-07-09',
+        DATE_END => '2023-07-20'
+      },
+      '2024' =>
+      {
+        # https://www.myabf.com.au/events/congress/view/798
+        YEAR => 2024,
+        CITY => 'Orange',
+        DATE_START => '2024-07-06',
+        DATE_END => '2024-07-18'
       },
     }
   },
@@ -225,6 +305,14 @@ my %MEETS_AUSTRALIA =
 
     EDITIONS => 
     {
+      '2004' =>
+      {
+        # https://abfevents.com.au/events/spnot/2004/results.asp
+        YEAR => 2004,
+        CITY => 'Sydney',
+        DATE_START => '2004-11-11',
+        DATE_END => '2004-11-18'
+      },
       '2006' =>
       {
         # https://abfevents.com.au/events/results/results.asp?yr=2006&dir=sn
@@ -699,7 +787,6 @@ my %TOURNAMENTS_AUSTRALIA =
       '2007' =>
       {
         MEET => 'Australian Autumn Nationals',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -713,7 +800,6 @@ my %TOURNAMENTS_AUSTRALIA =
       '2008' =>
       {
         MEET => 'Australian Autumn Nationals',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -727,7 +813,6 @@ my %TOURNAMENTS_AUSTRALIA =
       '2009' =>
       {
         MEET => 'Australian Autumn Nationals',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -741,7 +826,6 @@ my %TOURNAMENTS_AUSTRALIA =
       '2010' =>
       {
         MEET => 'Australian Autumn Nationals',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -755,7 +839,6 @@ my %TOURNAMENTS_AUSTRALIA =
       '2011' =>
       {
         MEET => 'Australian Autumn Nationals',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -769,7 +852,6 @@ my %TOURNAMENTS_AUSTRALIA =
       '2012' =>
       {
         MEET => 'Australian Autumn Nationals',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -783,7 +865,6 @@ my %TOURNAMENTS_AUSTRALIA =
       '2013' =>
       {
         MEET => 'Australian Autumn Nationals',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -797,7 +878,6 @@ my %TOURNAMENTS_AUSTRALIA =
       '2014' =>
       {
         MEET => 'Australian Autumn Nationals',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -811,7 +891,6 @@ my %TOURNAMENTS_AUSTRALIA =
       '2015' =>
       {
         MEET => 'Australian Autumn Nationals',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -825,7 +904,6 @@ my %TOURNAMENTS_AUSTRALIA =
       '2016' =>
       {
         MEET => 'Australian Autumn Nationals',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1119,7 +1197,6 @@ my %TOURNAMENTS_AUSTRALIA =
       '2011' =>
       {
         MEET => 'Australian ANC Championships',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1535,14 +1612,14 @@ my %TOURNAMENTS_AUSTRALIA =
     {
       '2005' =>
       {
-        # TODO Look up
+        # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=05PLAY&abf=yes
         CITY => 'Sydney',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2005,
-            DATE_START => '2005-03-21', # TODO Look up
+            DATE_START => '2005-03-21',
             DATE_END => '2005-03-21'
           } 
         }
@@ -1634,7 +1711,6 @@ my %TOURNAMENTS_AUSTRALIA =
       '2011B' =>
       {
         MEET => 'Australian ANC Championships',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1662,7 +1738,6 @@ my %TOURNAMENTS_AUSTRALIA =
       '2013' =>
       {
         MEET => 'Australian ANC Championships',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1831,6 +1906,10 @@ my %TOURNAMENTS_AUSTRALIA =
     {
       '2012' =>
       {
+        # http://abfevents.com.au/events/results/results.asp?yr=2012&dir=owp
+        # Really teams
+        CITY => 'Sydney',
+
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1843,6 +1922,10 @@ my %TOURNAMENTS_AUSTRALIA =
       },
       '2015' =>
       {
+        # http://abfevents.com.au/events/playoffs/2015/OW/
+        # Really teamy
+        CITY => 'Coogee',
+
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1855,6 +1938,10 @@ my %TOURNAMENTS_AUSTRALIA =
       },
       '2016' =>
       {
+        # http://abfevents.com.au/events/playoffs/2016/open/
+        # Really teams TODO Move
+        CITY => 'Canberra',
+
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1883,8 +1970,8 @@ my %TOURNAMENTS_AUSTRALIA =
     {
       '2010' =>
       {
-        # Link
-        MEET => 'Meet name',
+        # https://abfevents.com.au/events/results/results.asp?yr=2010&dir=spo
+        CITY => 'Sydney',
 
         CHAPTERS =>
         {
@@ -1898,8 +1985,8 @@ my %TOURNAMENTS_AUSTRALIA =
       },
       '2014' =>
       {
-        # Link
-        MEET => 'Meet name',
+        # http://abfevents.com.au/events/playoffs/2014/seniors/
+        CITY => 'Coogee',
 
         CHAPTERS =>
         {
@@ -2201,7 +2288,7 @@ my %TOURNAMENTS_AUSTRALIA =
           'SINGLE' => 
           {
             YEAR => 2004,
-            DATE_START => '2004-11-18', # TODO Look up, enter above
+            DATE_START => '2004-11-18',
             DATE_END => '2004-11-18'
           } 
         }
@@ -2276,7 +2363,7 @@ my %TOURNAMENTS_AUSTRALIA =
     {
       '2008' =>
       {
-        # Link
+        # Link: TODO Shift dates
 
         CHAPTERS =>
         {
@@ -2290,8 +2377,7 @@ my %TOURNAMENTS_AUSTRALIA =
       },
       '2009' =>
       {
-        # Link
-
+        MEET => 'Australian Spring Nationals',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2304,8 +2390,7 @@ my %TOURNAMENTS_AUSTRALIA =
       },
       '2010' =>
       {
-        # Link
-
+        MEET => 'Australian Spring Nationals',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2318,8 +2403,7 @@ my %TOURNAMENTS_AUSTRALIA =
       },
       '2011' =>
       {
-        # Link
-
+        MEET => 'Australian Spring Nationals',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2348,7 +2432,7 @@ my %TOURNAMENTS_AUSTRALIA =
     {
       '2008' =>
       {
-        # Link
+        # Link: TODO Shift dates
         MEET => 'Meet name',
 
         CHAPTERS =>
@@ -2363,9 +2447,7 @@ my %TOURNAMENTS_AUSTRALIA =
       },
       '2010' =>
       {
-        # Link
-        MEET => 'Meet name',
-
+        MEET => 'Australian Spring Nationals',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2378,9 +2460,7 @@ my %TOURNAMENTS_AUSTRALIA =
       },
       '2011' =>
       {
-        # Link
-        MEET => 'Meet name',
-
+        MEET => 'Australian Spring Nationals',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2409,7 +2489,7 @@ my %TOURNAMENTS_AUSTRALIA =
     {
       '2005' =>
       {
-        # TODO Look up
+        # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=05PLAY&abf=yes
         CITY => 'Sydney',
 
         CHAPTERS =>
@@ -2515,7 +2595,6 @@ my %TOURNAMENTS_AUSTRALIA =
       '2011B' =>
       {
         MEET => 'Australian ANC Championships',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2698,6 +2777,8 @@ my %TOURNAMENTS_AUSTRALIA =
         {
           'SINGLE' => 
           {
+            # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=09PLAY&header=abf
+            # Really teams
             YEAR => 2009,
             DATE_START => '2009-03-22',
             DATE_END => '2009-03-24'
@@ -2706,6 +2787,9 @@ my %TOURNAMENTS_AUSTRALIA =
       },
       '2011' =>
       {
+        # https://abfevents.com.au/events/playoffs/2011/results/
+        # Really teams
+        CITY => 'Sydney',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2718,6 +2802,9 @@ my %TOURNAMENTS_AUSTRALIA =
       },
       '2012' =>
       {
+        # http://abfevents.com.au/events/results/results.asp?yr=2012&dir=owp
+        # Really teams
+        CITY => 'Sydney',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2730,6 +2817,9 @@ my %TOURNAMENTS_AUSTRALIA =
       },
       '2015' =>
       {
+        # http://abfevents.com.au/events/playoffs/2015/OW/
+        # Really teams TODO Move
+        CITY => 'Coogee',
         CHAPTERS =>
         {
           'SINGLE' => 
