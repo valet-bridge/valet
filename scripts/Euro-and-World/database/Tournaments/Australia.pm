@@ -3889,6 +3889,93 @@ my %TOURNAMENTS_AUSTRALIA =
     }
   },
 
+  'New South Wales Open Teams' =>
+  {
+    ORGANIZATION => 'AuBF',
+    COUNTRY => 'Australia',
+    ORIGIN => 'Regional',
+    ZONE => 'South Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-12-10',
+            DATE_END => '2011-12-11'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-12-15',
+            DATE_END => '2013-12-15'
+          } 
+        }
+      },
+    }
+  },
+
+  'New South Wales Open Trials' =>
+  {
+    ORGANIZATION => 'AuBF',
+    COUNTRY => 'Australia',
+    ORIGIN => 'Regional',
+    ZONE => 'South Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            major => 'SESSION',
+            DATE_START => '2010-04-23',
+            DATE_END => '2010-04-26'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2012-04-13',
+            DATE_END => '2012-04-15'
+          } 
+        }
+      },
+    }
+  },
+
 );
 
 

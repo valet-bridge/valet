@@ -349,10 +349,9 @@ my @MULTI_WORDS =
   'Bobby Evans Senior Teams',
   'Cliff Wake Challenge',
   "Linda Stern Women's Teams",
-
-  'New South Wales State Teams',
   'New South Wales Open Teams',
   'New South Wales Open Trials',
+
   'Northern Territory Gold Teams',
   'Northern Territory Gold Swiss Pairs',
   'Queensland Women Trials',
@@ -2305,14 +2304,16 @@ my %MULTI_TYPOS =
     'necmettin sünget dörtlü',
     'necmettin sünget dörtlü takýmlar'],
   'Neighbor Challenge' => ['neighbour challenge'],
-  'New South Wales Open Teams' => ['nsw open teams'],
+  'New South Wales Open Teams' => [
+    'new south wales state teams',
+    'nsw open teams',
+    'nsw state teams'],
   'New South Wales Open Trials' => [
     'nsw interstate open team trials',
     'nsw interstate open team selection',
     'nsw interstate open teams selection',
     'nsw interstate team selection',
     'nsw interstate teams selection'],
-  'New South Wales State Teams' => ['nsw state teams'],
  "New Year's Teams" => ['new year greet tm'],
 
   # NEW ZEALAND -- mapped in detail
