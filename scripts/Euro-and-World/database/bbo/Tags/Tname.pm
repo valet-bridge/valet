@@ -346,10 +346,10 @@ my @MULTI_WORDS =
   'Australian Youth Tri Individual',
   'Australian Youth Tri Pairs',
   'Australian Youth Tri Teams',
-
-  'Bobby Evans Seniors Teams',
+  'Bobby Evans Senior Teams',
   'Cliff Wake Challenge',
   "Linda Stern Women's Teams",
+
   'New South Wales State Teams',
   'New South Wales Open Teams',
   'New South Wales Open Trials',
@@ -1324,8 +1324,9 @@ my %MULTI_TYPOS =
   'BKBT Teams' => ['bkbt match'],
   'B L Rao Memorial Open' => ['open b_l_rao memorial',
     'open b_r_rao  memorial', 'b_l_rao memorial open'],
-  'Bobby Evans Seniors Teams' => ["bobby evans senior's teams",
-    'bobby evans senior teams'],
+  'Bobby Evans Senior Teams' => [
+    "bobby evans senior's teams",
+    'bobby evans seniors teams'],
 
   # BOLIVIA
   'Bolivian Open Pairs' => ['bolivariano open pairs'],

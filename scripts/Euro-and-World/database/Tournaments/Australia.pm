@@ -3708,6 +3708,187 @@ my %TOURNAMENTS_AUSTRALIA =
     }
   },
 
+  'Bobby Evans Senior Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Seniors',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-11-01',
+            DATE_END => '2012-11-01'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-10-31',
+            DATE_END => '2013-10-31'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-10-29',
+            DATE_END => '2015-10-29'
+          } 
+        }
+      },
+    }
+  },
+
+  'Cliff Wake Challenge' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'BAM',
+    GENDER => 'Open',
+    AGE => 'U26',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        MEET => 'Australian Youth Week',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'SEGMENT',
+            DATE_START => '2011-01-18',
+            DATE_END => '2011-01-18'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Australian Youth Week',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Tiebreak',
+            DATE_START => '2014-01-14',
+            DATE_END => '2014-01-14'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Australian Youth Week',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            DATE_START => '2015-01-13',
+            DATE_END => '2015-01-13'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Australian Youth Week',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-01-11',
+            DATE_END => '2016-01-11'
+          } 
+        }
+      },
+    }
+  },
+
+  "Linda Stern Women's Teams" =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-11-01',
+            DATE_END => '2012-11-01'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-10-31',
+            DATE_END => '2013-10-31'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-10-29',
+            DATE_END => '2015-10-29'
+          } 
+        }
+      },
+    }
+  },
+
 );
 
 
