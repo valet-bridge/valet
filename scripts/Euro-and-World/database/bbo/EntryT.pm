@@ -268,6 +268,8 @@ my %FORM_CORRECTIONS = (
   'Italian Mixed Pairs' => [
     36287, 36289, 36293, 36295, 36296, 36308, 36309,
     41672, 41674, 41691, 41692, 41704, 41705],
+  'Northern Territory Gold Swiss Pairs' => [
+     1242,  1244,  1245,  1246,  1247,  1248],
   'Polish Individual Championship' => [
     13235, 13236, 13237, 13242,
     16511, 16513, 16514, 16515, 16526, 16532, 16537],

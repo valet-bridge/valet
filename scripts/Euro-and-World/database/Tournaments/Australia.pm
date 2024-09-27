@@ -3976,6 +3976,122 @@ my %TOURNAMENTS_AUSTRALIA =
     }
   },
 
+  'Northern Territory Gold Swiss Pairs' =>
+  {
+    ORGANIZATION => 'AuBF',
+    COUNTRY => 'Australia',
+    ORIGIN => 'Regional',
+    ZONE => 'South Pacific',
+    FORM => 'Pairs',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2008' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            major => 'ROUND',
+            DATE_START => '2008-09-10',
+            DATE_END => '2008-09-10'
+          } 
+        }
+      },
+    }
+  },
+
+  'Northern Territory Gold Teams' =>
+  {
+    ORGANIZATION => 'AuBF',
+    COUNTRY => 'Australia',
+    ORIGIN => 'Regional',
+    ZONE => 'South Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2008' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            major => 'ROUND',
+            DATE_START => '2008-09-10',
+            DATE_END => '2008-09-10'
+          } 
+        }
+      },
+    }
+  },
+
+  'Queensland Women Trials' =>
+  {
+    ORGANIZATION => 'AuBF',
+    COUNTRY => 'Australia',
+    ORIGIN => 'Regional',
+    ZONE => 'South Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-05-21',
+            DATE_END => '2011-05-21'
+          } 
+        }
+      },
+    }
+  },
+
+  'Queensland Senior Trials' =>
+  {
+    ORGANIZATION => 'AuBF',
+    COUNTRY => 'Australia',
+    ORIGIN => 'Regional',
+    ZONE => 'South Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Seniors',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-05-20',
+            DATE_END => '2011-05-21'
+          } 
+        }
+      },
+    }
+  },
+
 );
 
 

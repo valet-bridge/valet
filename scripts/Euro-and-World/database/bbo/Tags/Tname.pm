@@ -351,11 +351,11 @@ my @MULTI_WORDS =
   "Linda Stern Women's Teams",
   'New South Wales Open Teams',
   'New South Wales Open Trials',
-
-  'Northern Territory Gold Teams',
   'Northern Territory Gold Swiss Pairs',
+  'Northern Territory Gold Teams',
   'Queensland Women Trials',
   'Queensland Senior Trials',
+
   'Victoria Cup',
   'Victorian Mixed Teams',
   'Victorian Open Teams',
