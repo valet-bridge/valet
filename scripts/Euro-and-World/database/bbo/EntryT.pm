@@ -255,6 +255,10 @@ my %FORM_CORRECTIONS = (
   'Hungarian IMP Pairs' => [
      1113,  1117,  1126,
     12005, 12016],
+  'Iceland Express Pairs' => [
+    12516, 12517, 12518],
+  'Icelandair Open Pairs' => [
+     1725,  1727,  1729],
   'Irish Invitational Pairs' => [
     44185, 44186,
     45160, 45161, 45164, 45166, 45168, 45171, 45172],

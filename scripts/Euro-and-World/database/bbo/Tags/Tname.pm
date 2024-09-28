@@ -200,6 +200,14 @@ my @MULTI_WORDS =
   'Hungarian Senior Trials',
   'Hungarian Women Trials',
 
+  # ICELAND
+  'Iceland Express Pairs',
+  'Iceland Express Teams',
+  'Icelandair Open Pairs',
+  'Icelandair Open Teams',
+  'Icelandic Cup',
+  'Icelandic Open Teams',
+
   # IRELAND
   'Irish Invitational Pairs',
   'Irish Open Trials',
@@ -400,9 +408,7 @@ my @MULTI_WORDS =
   'Bermuda Triangle Cup',
   'BFAME Championship',
   'BFAME Friendship Pairs',
-  'Bhabha Atomic Research Centre Open',
   'BKBT Teams',
-  'B L Rao Memorial Open',
   'Bolivian Open Teams',
   'Bologna Trophy',
   'bridge24.pl Trophy',
@@ -511,6 +517,11 @@ my @MULTI_WORDS =
   'English Women Teams',
   'English Women Trials',
 
+  'Lady Milne Trials',
+  'Lady Milne Trophy',
+
+  'Lederer Memorial Trophy',
+
   'TGR Auction',
   'TGR Auction Pairs',
   'TGR Auction Teams',
@@ -597,14 +608,6 @@ my @MULTI_WORDS =
   'IBF Albena',
   'IBWI Cup',
 
-  # ICELAND
-  'Iceland Express Pairs',
-  'Iceland Express Teams',
-  'Icelandair Open',
-  'Icelandair Team Championship',
-  'Icelandic Cup',
-  'Icelandic Teams',
-
   'IMSA Cup',
   'IMSA Elite Mind Games',
 
@@ -615,6 +618,8 @@ my @MULTI_WORDS =
   'All India HCL Tournament',
   'All India Shree Cement',
   'All India UTI Bank Masters Championship',
+  'Bhabha Atomic Research Centre Open',
+  'B L Rao Memorial Open',
   'Dainik Navjyoti All India Inter-State',
   'Delhi Gymkhana Club Centenary',
   'Delhi Gymkhana Club Open',
@@ -656,6 +661,10 @@ my @MULTI_WORDS =
   'Ruia Gold Cup',
   'Ruia Silver Cup',
   'Ruia Trophy',
+
+  'Prashant Desai Memorial',
+  'R Ratnam Memorial',
+  'Shree Keni Trophy',
 
   # INDONESIA
   'Indonesian Championship',
@@ -712,12 +721,9 @@ my @MULTI_WORDS =
 
   ### LLL
 
-  'Lady Milne Trials',
-  'Lady Milne Trophy',
   'Las Palmas Simultaneous Pairs',
   'Las Palmas Women Pairs',
   'Lebanese Invitational Teams',
-  'Lederer Memorial Trophy',
   'Lithuanian Open Teams',
   'Lokmanya Jubilee',
   'Lüleburgaz Liberation Cup',
@@ -780,7 +786,15 @@ my @MULTI_WORDS =
   'Norwegian Women Invitational Pairs',
   'Norwegian Women Teams',
 
+  'Olrud Easter Mixed Pairs',
+  'Olrud Easter Pairs',
+  'Olrud Easter Swiss Teams',
+  'Olrud Easter Teams',
+  'Rondane Pairs Cup',
+  'Rondane Teams Cup',
+  'Rosfjord Swiss Teams',
   'Trondheim Cup',
+
 
   'NTU Cup',
   'NYSA Euroregion Nations Cup',
@@ -788,10 +802,6 @@ my @MULTI_WORDS =
   ### OOO
 
   'Olona International Teams',
-  'Olrud Easter Mixed Pairs',
-  'Olrud Easter Pairs',
-  'Olrud Easter Swiss Teams',
-  'Olrud Easter Teams',
   'Open Catalunya Preferent',
   'Otters Inter-Club Teams',
 
@@ -816,7 +826,6 @@ my @MULTI_WORDS =
   'Plock District League',
 
 
-  'Prashant Desai Memorial',
   'PRBA State Level Open',
   'Prince Albert II Cup',
   'Prince Henrik Trophy',
@@ -828,7 +837,6 @@ my @MULTI_WORDS =
 
   ### RRR
 
-  'R Ratnam Memorial',
   'Ragn-Sells International Grand Tournament',
   'Rand Cup',
   'Rector University of Brawijaya Cup',
@@ -841,9 +849,6 @@ my @MULTI_WORDS =
   'Roberto Taunay Cup',
 
   'Rome Challenger Trophy',
-  'Rondane Pairs Cup',
-  'Rondane Teams Cup',
-  'Rosfjord Swiss Teams',
   'Rottneros Nordic Cup',
   'Rui Pinto Cup',
 
@@ -873,7 +878,6 @@ my @MULTI_WORDS =
 
   'Serdika Cup',
   'Shield of Thoisy',
-  'Shree Keni Trophy',
   'Singapore Open Teams',
   'Slava Cup',
   'Slovakian Open Teams',
@@ -1949,13 +1953,23 @@ my %MULTI_TYPOS =
 
   # ICELAND
   'Iceland Express Teams' => ['iceland express team'],
-  'Icelandair Open' => ['icelandari open'],
-  'Icelandic Cup' => ['bikarkeppni bsí', 'icelandoc cup',
+  'Icelandair Open Teams' => [
+    'icelandair open',
+    'icelandair team championship',
+    'icelandari open'],
+  'Icelandic Cup' => [
+    'bikarkeppni bsí', 
+    'icelandoc cup',
     'iceland cup'],
-  'Icelandic Teams' => ['icelandic teamhampionship', 'iceland teams',
-    'icelandic team', 'icelandic team championsship',
-    'icelandic team chapmionship', 'icelandic teamhampionship',
-    'icelandic team championship', 'icelandic team championships'],
+  'Icelandic Open Teams' => [
+    'iceland teams',
+    'icelandic team', 
+    'icelandic team championship', 
+    'icelandic team championsship',
+    'icelandic team chapmionship', 
+    'icelandic team championships',
+    'icelandic teamhampionship', 
+    'icelandic teams'],
 
   # INDIA
   'Indian Open Trials' => [
