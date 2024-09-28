@@ -313,7 +313,7 @@ my @MULTI_WORDS =
   'Swiss Club Championship',
   'Swiss Cup',
   'Swiss Open IMP Pairs',
-  'Swiss Team Championship',
+  'Swiss Open Teams',
   'Zurich Open Pairs',
   'Zurich Open Teams',
 
@@ -401,7 +401,6 @@ my @MULTI_WORDS =
   'BFAME Championship',
   'BFAME Friendship Pairs',
   'Bhabha Atomic Research Centre Open',
-  'Biarritz Hiver',
   'BKBT Teams',
   'B L Rao Memorial Open',
   'Bolivian Open Teams',
@@ -552,6 +551,9 @@ my @MULTI_WORDS =
   'French Women Trials',
   'French U28 Trials',
 
+  'Biarritz Hiver',
+  'Mondial de Deauville',
+
   'FTBC Tanjungpura University',
   'FullBridge International Teams',
   'FX Securities Cup',
@@ -701,7 +703,6 @@ my @MULTI_WORDS =
 
   ### KKK
 
-  'Kalani Trophy',
   'Kanto Teams',
   'Karlovo Pairs',
   'Karlovo Teams',
@@ -736,9 +737,7 @@ my @MULTI_WORDS =
   "Missouri Braggin' Rights",
   'Mo i Rana Ladies Invitational',
   'Mondi Cup',
-  'Mondial de Deauville',
   'Mountain Sea Cup',
-  'Murat Kilercioglu Turkish Spring Teams',
   'MTP Cup',
 
   ### NNN
@@ -981,6 +980,8 @@ my @MULTI_WORDS =
   'Istanbul Teams',
   'Istanbul Winter Teams',
   'Izmir Teams Cup',
+  'Kalani Trophy',
+  'Murat Kilercioglu Turkish Spring Teams',
 
   ### UUU
 
@@ -2875,11 +2876,6 @@ my %MULTI_TYPOS =
     'swedish women euro trials'],
 
   # SWITZERLAND
-  'Swiss Championship' => [
-    'champion suisse', 
-    'championnat suisse',
-    'swiss championshi', 
-    'swiss championshio'],
   'Swiss Club Championship' => [
     'interclub swiss team championship',
     'swiss interclubs',
@@ -2890,11 +2886,18 @@ my %MULTI_TYPOS =
     'coupe suisse', 
     'swiss open cup', 
     'swiss cuo', 
-    'switzerland open cup'],
-  'Swiss Open Championship' => [
-    'swiss open',
-    'swiss open championship'],
-  'Swiss Team Championship' => ['swiss team champiomshio'],
+    'switzerland open cup',
+
+    'champion suisse', 
+    'championnat suisse',
+    'swiss championshi', 
+    'swiss championshio',
+    'swiss championship',
+    'Swiss open championship',
+    'swiss team champiomshio',
+    'Swiss team championship'
+
+    ],
 
   ### TTT
 

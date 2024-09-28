@@ -352,13 +352,26 @@ my %TOURNAMENTS_SWITZERLAND =
     COUNTRY => 'Switzerland',
     ORIGIN => 'National',
     ZONE => 'Europe',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'SESSION',
+            DATE_START => '2015-05-30',
+            DATE_END => '2015-05-30'
+          },
+        }
+      },
       '2016' =>
       {
         CHAPTERS =>
@@ -368,6 +381,47 @@ my %TOURNAMENTS_SWITZERLAND =
             YEAR => 2016,
             major => 'SESSION',
             DATE_START => '2016-04-16',
+            DATE_END => '2016-04-17'
+          },
+        }
+      },
+    }
+  },
+
+  'Swiss Open Teams' =>
+  {
+    ORGANIZATION => 'FSB',
+    COUNTRY => 'Switzerland',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-05-31',
+            DATE_END => '2015-05-31'
+          },
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'SESSION',
+            DATE_START => '2016-04-17',
             DATE_END => '2016-04-17'
           },
         }

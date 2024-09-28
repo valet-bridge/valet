@@ -461,6 +461,8 @@ my @LOCAL_SUBS =
     CORR => 'Turkish Open Teams Championship' },
   { START => 39162, END => 39309, TEXT => 'I National Bridge Tournament', 
     CORR => '1st Bulgarian Open Teams' },
+  { START => 39297, END => 39316, TEXT => 'Swiss Open', 
+    CORR => 'Swiss Open Teams' },
   { START => 39501, END => 39525, TEXT => 'Lozenets Tournament Teams', 
     CORR => 'Lozenets Bridge Festival - Open Teams' },
   { START => 39501, END => 39525, TEXT => 'Lozenets Team Tournament', 
@@ -499,7 +501,9 @@ my @LOCAL_SUBS =
   { START => 43433, END => 43457, TEXT => 'Czech Bridge Championships*', 
     CORR => 'Czech First League' },
   { START => 43470, END => 43479, TEXT => 'Czech Team Championships*', 
-    CORR => 'Czech First League' }
+    CORR => 'Czech First League' },
+  { START => 44286, END => 44315, TEXT => 'Swiss Open - Swiss Teams', 
+    CORR => 'Swiss Open Teams' },
 );
 
 
