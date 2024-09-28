@@ -4092,6 +4092,505 @@ my %TOURNAMENTS_AUSTRALIA =
     }
   },
 
+  'Victoria Cup' =>
+  {
+    ORGANIZATION => 'AuBF',
+    COUNTRY => 'Australia',
+    ORIGIN => 'Regional',
+    ZONE => 'South Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-12-15',
+            DATE_END => '2013-12-15'
+          } 
+        }
+      },
+    }
+  },
+
+  'Victorian Mixed Teams' =>
+  {
+    ORGANIZATION => 'AuBF',
+    COUNTRY => 'Australia',
+    ORIGIN => 'Regional',
+    ZONE => 'South Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            DATE_START => '2010-05-26',
+            DATE_END => '2010-05-26'
+          } 
+        }
+      },
+    }
+  },
+
+  'Victorian Open Trials' =>
+  {
+    ORGANIZATION => 'AuBF',
+    COUNTRY => 'Australia',
+    ORIGIN => 'Regional',
+    ZONE => 'South Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2005' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2005-04-10',
+            DATE_END => '2005-04-10'
+          },
+        }
+      },
+      '2008' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2008-05-04',
+            DATE_END => '2008-05-04'
+          },
+        }
+      },
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2010-03-26',
+            DATE_END => '2010-03-28'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2011-04-01',
+            DATE_END => '2011-04-03'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            major => 'ROUND',
+            DATE_START => '2012-03-23',
+            DATE_END => '2012-03-25'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2013-04-07',
+            DATE_END => '2013-04-07'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Rof6',
+            major => 'ROUND',
+            DATE_START => '2014-04-26',
+            DATE_END => '2014-04-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-04-27',
+            DATE_END => '2014-04-27'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-03-22',
+            DATE_END => '2015-03-22'
+          } 
+        }
+      },
+    }
+  },
+
+  'Victorian Pennant' =>
+  {
+    ORGANIZATION => 'AuBF',
+    COUNTRY => 'Australia',
+    ORIGIN => 'Regional',
+    ZONE => 'South Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2004' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2004-04-13',
+            DATE_END => '2004-04-13'
+          },
+        }
+      },
+      '2005' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2005-04-02',
+            DATE_END => '2005-04-02'
+          },
+        }
+      },
+      '2008' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-04-16',
+            DATE_END => '2008-04-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-04-16',
+            DATE_END => '2008-04-16'
+          },
+        }
+      },
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-04-03',
+            DATE_END => '2009-04-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-04-04',
+            DATE_END => '2009-04-05'
+          },
+          'C2' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2009-04-24',
+            DATE_END => '2009-04-26'
+          },
+          'C3' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-11-21',
+            DATE_END => '2009-11-22'
+          },
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-11-19',
+            DATE_END => '2011-11-20'
+          },
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2012-11-07',
+            DATE_END => '2012-11-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2012-11-14',
+            DATE_END => '2012-11-14'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Rof6',
+            major => 'SEGMENT',
+            DATE_START => '2012-11-24',
+            DATE_END => '2012-11-24'
+          },
+          'C3' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-11-24',
+            DATE_END => '2012-11-24'
+          },
+          'C4' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-11-24',
+            DATE_END => '2012-11-25'
+          },
+        }
+      },
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            major => 'MATCH',
+            DATE_START => '2013-09-11',
+            DATE_END => '2013-09-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-11-16',
+            DATE_END => '2013-11-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-11-17',
+            DATE_END => '2013-11-17'
+          }
+        }
+      },
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-11-23',
+            DATE_END => '2014-11-23'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-11-22',
+            DATE_END => '2015-11-22'
+          } 
+        }
+      },
+    }
+  },
+
+  'Victorian Senior Trials' =>
+  {
+    ORGANIZATION => 'AuBF',
+    COUNTRY => 'Australia',
+    ORIGIN => 'Regional',
+    ZONE => 'South Pacific',
+    FORM => 'Teams',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Seniors',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-04-03',
+            DATE_END => '2016-04-09'
+          } 
+        }
+      },
+    }
+  },
+
+  'Victorian Women Trials' =>
+  {
+    ORGANIZATION => 'AuBF',
+    COUNTRY => 'Australia',
+    ORIGIN => 'Regional',
+    ZONE => 'South Pacific',
+    FORM => 'Teams',
+    SCORING => 'MP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-04-16',
+            DATE_END => '2016-04-16'
+          } 
+        }
+      },
+    }
+  },
+
+  'Victorian Youth Trials' =>
+  {
+    ORGANIZATION => 'AuBF',
+    COUNTRY => 'Australia',
+    ORIGIN => 'Regional',
+    ZONE => 'South Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U26',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-05-25',
+            DATE_END => '2013-05-25'
+          } 
+        }
+      },
+    }
+  },
+
 );
 
 
