@@ -309,6 +309,14 @@ my @MULTI_WORDS =
   'Spanish Open Trials',
   'Spanish Senior Trials',
 
+  # SWITZERLAND
+  'Swiss Club Championship',
+  'Swiss Cup',
+  'Swiss Open IMP Pairs',
+  'Swiss Team Championship',
+  'Zurich Open Pairs',
+  'Zurich Open Teams',
+
   # USA
   '0 to 1500 Spingold',
   'Reisinger BAM Teams',
@@ -926,15 +934,6 @@ my @MULTI_WORDS =
   'Swedish Premier League',
   'Swedish Senior Trials',
   'Swedish Women Trials',
-
-  # SWITZERLAND
-  'Swiss Championship',
-  'Swiss Club Championship',
-  'Swiss Cup',
-  'Swiss Open Championship',
-  'Swiss Team Championship',
-  'Zurich Open Pairs',
-  'Zurich Open Teams',
 
   ### TTT
 
@@ -2876,13 +2875,25 @@ my %MULTI_TYPOS =
     'swedish women euro trials'],
 
   # SWITZERLAND
-  'Swiss Championship' => ['champion suisse', 'championnat suisse',
-    'swiss championshi', 'swiss championshio'],
-  'Swiss Club Championship' => ['swisss interclubs', 'swiss interclubs',
-    'swiss interclub championship', 'swiss interclub'],
-  'Swiss Cup' => ['coupe suisse', 'swiss open cup', 'swiss open',
-    'swiss cuo', 'switzerland open cup'],
-  'Swiss Open Championship' => ['swiss open championship'],
+  'Swiss Championship' => [
+    'champion suisse', 
+    'championnat suisse',
+    'swiss championshi', 
+    'swiss championshio'],
+  'Swiss Club Championship' => [
+    'interclub swiss team championship',
+    'swiss interclubs',
+    'swiss interclub championship', 
+    'swisss interclubs', 
+    'swiss interclub'],
+  'Swiss Cup' => [
+    'coupe suisse', 
+    'swiss open cup', 
+    'swiss cuo', 
+    'switzerland open cup'],
+  'Swiss Open Championship' => [
+    'swiss open',
+    'swiss open championship'],
   'Swiss Team Championship' => ['swiss team champiomshio'],
 
   ### TTT

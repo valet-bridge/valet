@@ -279,6 +279,8 @@ my %FORM_CORRECTIONS = (
      4285,  4286],
   'Victorian Women Trials' => [
     44237, 44241],
+  'Zurich Open Pairs' => [
+    32511, 32515, 32549, 32561],
 );
 
 
