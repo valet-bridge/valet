@@ -788,12 +788,13 @@ my @MULTI_WORDS =
 
   'Olrud Easter Mixed Pairs',
   'Olrud Easter Pairs',
+  'Olrud Easter Swiss Pairs',
   'Olrud Easter Swiss Teams',
-  'Olrud Easter Teams',
   'Rondane Pairs Cup',
   'Rondane Teams Cup',
   'Rosfjord Swiss Teams',
-  'Trondheim Cup',
+  'Trondheim Pairs Cup',
+  'Trondheim Teams Cup',
 
 
   'NTU Cup',
@@ -2447,13 +2448,21 @@ my %MULTI_TYPOS =
   'Olona International Teams' => [
     'international olona bridge team'],
   'Olrud Easter Mixed Pairs' => ['olrud easter mixed'],
-  'Olrud Easter Swiss Teams' => ['olrudpaasken monrad lag',
-    'olrud paasken monrad lag', 'olrud easter tourn',
-    'olrud swiss teams', 'olrud easter swiss event', 'olrud easter',
-    'olrud easter swiss team', 'olrud easter tournament'],
-  'Olrud Easter Teams' => ['olrudpaasken teams',
-    'olrud estern teamevent', 'olrud estern team-event',
-    'olrud easter team-event'],
+  'Olrud Easter Swiss Teams' => [
+    'olrudpaasken monrad lag',
+    'olrud easter',
+    'olrud easter tournament',
+    'olrud easter swiss event', 
+    'olrud easter swiss team', 
+    'olrud easter teams',
+    'olrud easter team-event',
+    'olrud easter tourn',
+    'olrud estern teamevent', 
+    'olrud estern team-event',
+    'olrud paasken monrad lag', 
+    'olrud swiss teams', 
+    'olrudpaasken teams'],
+
   'Open Catalunya Preferent' => ['open catalunya equips',
     'open cataluña preferent', 'open preferent equips',
     'open preferent', 'open equips preferent'],
@@ -2960,7 +2969,8 @@ my %MULTI_TYPOS =
     'dr_tolani sliver cup summer nationals'],
   'Top Circuit' => ['melchemie top circuit',
     'ing bank top circuit', 'witte huis topcircuit'],
-  'Trondheim Cup' => ['trondheim cup swiss teams'],
+  'Trondheim Pairs Cup' => ['trondheim cup swiss pairs'],
+  'Trondheim Teams Cup' => ['trondheim cup swiss teams'],
 
   # TURKEY
   'Turkish Club Championship' => ['türkýye kulüplerarasi þampýyonasi',

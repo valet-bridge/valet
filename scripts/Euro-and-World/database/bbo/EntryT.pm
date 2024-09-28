@@ -281,9 +281,17 @@ my %FORM_CORRECTIONS = (
     22677, 22678, 22679, 22680, 22681],
   'Polish Open Pairs' => [
      4285,  4286],
+  'Rondane Pairs Cup' => [
+    15526, 15532,
+    20358, 20372,
+    25662, 25674,
+    30655,
+    35795, 35816],
   'Swiss Open IMP Pairs' => [
     39271, 39282,
     44262, 44279],
+  'Trondheim Pairs Cup' => [
+    17764, 17774],
   'Victorian Women Trials' => [
     44237, 44241],
   'Zurich Open Pairs' => [

@@ -28,11 +28,12 @@ use EntryT;
 # use Tournaments::Germany;
 # use Tournaments::Greece;
 # use Tournaments::Hungary;
-use Tournaments::Iceland;
+# use Tournaments::Iceland;
 # use Tournaments::Ireland;
 # use Tournaments::Israel;
 # use Tournaments::Italy;
 # use Tournaments::NewZealand;
+use Tournaments::Norway;
 # use Tournaments::Poland;
 # use Tournaments::Portugal;
 # use Tournaments::Romania;
@@ -58,11 +59,12 @@ my %DIVISIONS =
   # GERMANY => \&Tournaments::Germany::set_links
   # GREECE => \&Tournaments::Greece::set_links
   # HUNGARY => \&Tournaments::Hungary::set_links
-  ICELAND => \&Tournaments::Iceland::set_links
+  # ICELAND => \&Tournaments::Iceland::set_links
   # IRELAND => \&Tournaments::Ireland::set_links
   # ISRAEL => \&Tournaments::Israel::set_links
   # ITALY => \&Tournaments::Italy::set_links
   # NEWZEALAND => \&Tournaments::NewZealand::set_links
+  NORWAY => \&Tournaments::Norway::set_links
   # POLAND => \&Tournaments::Poland::set_links
   # PORTUGAL => \&Tournaments::Portugal::set_links
   # ROMANIA => \&Tournaments::Romania::set_links
