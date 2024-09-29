@@ -565,6 +565,59 @@ sub likely_rof
 }
 
 
+sub post_process_some_explained_mm
+{
+  my ($chains, $knowledge, $bbono) = @_;
+
+  # This is a quite specific fix of some major-minor counters.
+  my $tname = $knowledge->get_field('TNAME', $bbono);
+
+  return unless ($tname && exists $ITERATORS_MAJOR_MINOR{$tname});
+
+  return unless $#$chains == 0;
+  my $chain = $chains->[0];
+  return unless $chain->status() eq 'EXPLAINED';
+  return unless $chain->last() == 0;
+
+  my $token = $chain->check_out(0);
+  my $cat = $token->category();
+  return unless $cat eq 'MARKER';
+
+  my ($field1, $field2) = 
+    ($ITERATORS_MAJOR_MINOR{$tname}[0],
+     $ITERATORS_MAJOR_MINOR{$tname}[1]);
+
+  my $field = $token->field();
+  if ($field ne $field1)
+  {
+    return unless ($field eq 'MATCH' && $field1 eq 'ROUND');
+  }
+  return if $field2 eq '';
+
+  my $value = $token->value();
+  my ($n1, $n2);
+
+  if ($value =~ /^(\d+)\+(\d+)[A-Z]*$/)
+  {
+    ($n1, $n2) = ($1, $2);
+  }
+  elsif ($value =~ /^(\d+)-(\d+)$/)
+  {
+    ($n1, $n2) = ($1, $2);
+    return if ($n2 > 2);
+  }
+  else
+  {
+    return;
+  }
+
+  print "$bbono ETRACE-SOMEMMTEAMS-2\n" if $TRACE;
+  one_to_two_chains($chains, $chain,0 , $token,
+    'MARKER', $field1, $n1,
+    'MARKER', $field2, $n2);
+}
+
+
 sub active_letter
 {
   my ($knowledge, $chain, $token, $value, $bbono) = @_;
@@ -1183,6 +1236,7 @@ sub interpret
   $knowledge->add_field('SCORING', $$scoring, $bbono);
 
   post_process_rof($chains, $knowledge, $bbono);
+  post_process_some_explained_mm($chains, $knowledge, $bbono);
   post_process_multiple_stages($chains);
 
   for my $s (0 .. $#stretches)

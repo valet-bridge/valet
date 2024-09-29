@@ -13,8 +13,10 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_NORWAY =
 (
-  'Meet name' =>
+  'Norwegian Bridge Festival' =>
   {
+    # https://bridgefestival.no/resultater
+
     ORGANIZATION => 'NBF',
     COUNTRY => 'Norway',
     ORIGIN => 'National',
@@ -22,13 +24,83 @@ my %MEETS_NORWAY =
 
     EDITIONS => 
     {
-      '2015' =>
+      '2011' =>
       {
-        # Link
-        YEAR => 2000,
-        CITY => 'Hamilton',
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
+        YEAR => 2011,
+        DATE_START => '2011-07-30',
+        DATE_END => '2011-08-06'
+      },
+      '2012' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-08-05',
+        DATE_END => '2012-08-09'
+      },
+      '2013' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-08-04',
+        DATE_END => '2013-08-12'
+      },
+      '2014' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-08-03',
+        DATE_END => '2014-08-10'
+      },
+      '2016' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-07-30',
+        DATE_END => '2016-08-04'
+      },
+      '2017' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-08-02',
+        DATE_END => '2017-08-13'
+      },
+      '2018' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-08-03',
+        DATE_END => '2018-08-11'
+      },
+      '2019' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-08-04',
+        DATE_END => '2019-08-10'
+      },
+      '2020' =>
+      {
+        YEAR => 2020,
+        DATE_START => '2020-08-03',
+        DATE_END => '2020-08-08'
+      },
+      '2021' =>
+      {
+        YEAR => 2021,
+        DATE_START => '2021-08-02',
+        DATE_END => '2021-08-07'
+      },
+      '2022' =>
+      {
+        YEAR => 2022,
+        DATE_START => '2022-08-07',
+        DATE_END => '2022-08-13'
+      },
+      '2023' =>
+      {
+        YEAR => 2023,
+        DATE_START => '2023-08-06',
+        DATE_END => '2023-08-12'
+      },
+      '2024' =>
+      {
+        YEAR => 2024,
+        DATE_START => '2024-08-02',
+        DATE_END => '2024-08-12'
       },
     }
   }
@@ -36,11 +108,42 @@ my %MEETS_NORWAY =
 
 my %TOURNAMENTS_NORWAY =
 (
-  'Norwegian Club Cup' =>
+  'Norwegian Championship' =>
   {
     ORGANIZATION => 'NBF',
     COUNTRY => 'Norway',
     ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        # Link
+        MEET => 'Meet name',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          } 
+        }
+      },
+    }
+  },
+
+  'Norwegian District Championship' =>
+  {
+    ORGANIZATION => 'NBF',
+    COUNTRY => 'Norway',
+    ORIGIN => 'Regional',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -73,25 +176,22 @@ my %TOURNAMENTS_NORWAY =
     COUNTRY => 'Norway',
     ORIGIN => 'National',
     ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
+    FORM => 'Pairs',
+    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2011' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2011,
+            DATE_START => '2011-06-01',
+            DATE_END => '2011-06-01'
           } 
         }
       },
@@ -132,6 +232,18 @@ my %TOURNAMENTS_NORWAY =
             YEAR => 2005,
             DATE_START => '2005-05-05',
             DATE_END => '2005-05-07'
+          } 
+        }
+      },
+      '2006' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            DATE_START => '2006-05-28',
+            DATE_END => '2006-05-28'
           } 
         }
       },
@@ -187,7 +299,13 @@ my %TOURNAMENTS_NORWAY =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-04-08',
+            DATE_END => '2011-04-08'
+          },
+          'C1' => 
           {
             YEAR => 2011,
             DATE_START => '2011-06-02',
@@ -253,7 +371,7 @@ my %TOURNAMENTS_NORWAY =
   {
     ORGANIZATION => 'NBF',
     COUNTRY => 'Norway',
-    ORIGIN => 'National',
+    ORIGIN => 'Corporate',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -262,18 +380,15 @@ my %TOURNAMENTS_NORWAY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2016,
+            DATE_START => '2016-03-05',
+            DATE_END => '2016-03-06'
           } 
         }
       },
@@ -286,25 +401,127 @@ my %TOURNAMENTS_NORWAY =
     COUNTRY => 'Norway',
     ORIGIN => 'National',
     ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Mixed',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2005' =>
       {
-        # Link
-        MEET => 'Meet name',
-
+        MEET => 'Norwegian Bridge Festival',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2005,
+            DATE_START => '2005-08-05',
+            DATE_END => '2005-08-05'
+          } 
+        }
+      },
+      '2006' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            DATE_START => '2006-08-09',
+            DATE_END => '2006-08-09'
+          } 
+        }
+      },
+      '2009' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-08-02',
+            DATE_END => '2009-08-03'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-07-31',
+            DATE_END => '2010-08-01'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-07-30',
+            DATE_END => '2011-07-30'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-08-04',
+            DATE_END => '2012-08-05'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-08-03',
+            DATE_END => '2013-08-04'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-08-02',
+            DATE_END => '2014-08-03'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-07-29',
+            DATE_END => '2016-07-30'
           } 
         }
       },
@@ -319,23 +536,34 @@ my %TOURNAMENTS_NORWAY =
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Mixed',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2014' =>
       {
-        # Link
-        MEET => 'Meet name',
-
+        MEET => 'Norwegian Bridge Festival',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2014,
+            DATE_START => '2014-08-03',
+            DATE_END => '2014-08-04'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-07-31',
+            DATE_END => '2016-08-01'
           } 
         }
       },
@@ -348,25 +576,151 @@ my %TOURNAMENTS_NORWAY =
     COUNTRY => 'Norway',
     ORIGIN => 'National',
     ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
+    FORM => 'Pairs',
+    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2005' =>
       {
-        # Link
-        MEET => 'Meet name',
-
+        MEET => 'Norwegian Bridge Festival',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2005,
+            DATE_START => '2005-08-05',
+            DATE_END => '2005-08-05'
+          } 
+        }
+      },
+      '2005' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2005,
+            DATE_START => '2005-08-05',
+            DATE_END => '2005-08-05'
+          } 
+        }
+      },
+      '2006' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            DATE_START => '2006-08-09',
+            DATE_END => '2006-08-09'
+          } 
+        }
+      },
+      '2009' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-08-05',
+            DATE_END => '2009-08-07'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-08-03',
+            DATE_END => '2010-08-05'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-08-02',
+            DATE_END => '2011-08-04'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-08-07',
+            DATE_END => '2012-08-09'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-08-06',
+            DATE_END => '2013-08-08'
+          } 
+        }
+      },
+      '2014A' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-08-08',
+            DATE_END => '2014-08-09'
+          } 
+        }
+      },
+      '2014B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-09-19',
+            DATE_END => '2014-09-21'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        # No festival in 2015
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-09-18',
+            DATE_END => '2015-09-20'
           } 
         }
       },
@@ -386,18 +740,56 @@ my %TOURNAMENTS_NORWAY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2005' =>
       {
-        # Link
-        MEET => 'Meet name',
-
+        MEET => 'Norwegian Bridge Festival',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2005,
+            DATE_START => '2005-08-05',
+            DATE_END => '2005-08-05'
+          } 
+        }
+      },
+      '2006' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            # Just a guess
+            YEAR => 2006,
+            DATE_START => '2006-08-06',
+            DATE_END => '2006-08-06'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-08-06',
+            DATE_END => '2014-08-08'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-08-01',
+            DATE_END => '2016-08-04'
           } 
         }
       },
@@ -417,6 +809,48 @@ my %TOURNAMENTS_NORWAY =
 
     EDITIONS =>
     {
+      '2004-05' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2004,
+            DATE_START => '2004-11-13',
+            DATE_END => '2004-11-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2005,
+            DATE_START => '2005-02-05',
+            DATE_END => '2005-02-06'
+          },
+          'C2' => 
+          {
+            YEAR => 2005,
+            DATE_START => '2005-03-26',
+            DATE_END => '2005-03-27'
+          }
+        }
+      },
+      '2005-06' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2005,
+            DATE_START => '2005-11-14',
+            DATE_END => '2005-11-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            DATE_START => '2006-02-07',
+            DATE_END => '2006-02-07'
+          },
+        }
+      },
       '2006-07' =>
       {
         CHAPTERS =>
@@ -432,6 +866,12 @@ my %TOURNAMENTS_NORWAY =
             YEAR => 2007,
             DATE_START => '2007-02-11',
             DATE_END => '2007-02-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-03-27',
+            DATE_END => '2007-03-27'
           } 
         }
       },
@@ -484,6 +924,12 @@ my %TOURNAMENTS_NORWAY =
           'C1' => 
           {
             YEAR => 2010,
+            DATE_START => '2010-01-07',
+            DATE_END => '2010-01-07'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
             DATE_START => '2010-02-12',
             DATE_END => '2010-02-14'
           } 
@@ -501,9 +947,21 @@ my %TOURNAMENTS_NORWAY =
           },
           'C1' => 
           {
+            YEAR => 2010,
+            DATE_START => '2010-11-07',
+            DATE_END => '2010-11-07'
+          },
+          'C2' => 
+          {
             YEAR => 2011,
             DATE_START => '2011-02-11',
             DATE_END => '2011-02-13'
+          },
+          'C3' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-03-27',
+            DATE_END => '2011-03-27'
           } 
         }
       },
@@ -516,7 +974,7 @@ my %TOURNAMENTS_NORWAY =
           {
             YEAR => 2011,
             DATE_START => '2011-11-04',
-            DATE_END => '2011-11-06'
+            DATE_END => '2011-11-07'
           },
           'C1' => 
           {
@@ -647,22 +1105,19 @@ my %TOURNAMENTS_NORWAY =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'Seniors',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2016,
+            DATE_START => '2016-03-06',
+            DATE_END => '2016-03-06'
           } 
         }
       },
@@ -675,25 +1130,108 @@ my %TOURNAMENTS_NORWAY =
     COUNTRY => 'Norway',
     ORIGIN => 'National',
     ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
+    FORM => 'Pairs',
+    MOVEMENT => 'Swiss',
+    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2005' =>
       {
-        # Link
-        MEET => 'Meet name',
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2005,
+            DATE_START => '2005-08-05',
+            DATE_END => '2005-08-05'
+          } 
+        }
+      },
+      '2006' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            DATE_START => '2006-08-09',
+            DATE_END => '2006-08-09'
+          } 
+        }
+      },
+      '2009' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
 
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2009,
+            DATE_START => '2009-08-03',
+            DATE_END => '2009-08-04'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-08-01',
+            DATE_END => '2010-08-02'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-07-31',
+            DATE_END => '2011-08-01'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-08-05',
+            DATE_END => '2012-08-06'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        # https://www.bridge.no/var/ruter/html/9901/2013monradpar.htm
+        MEET => 'Norwegian Bridge Festival',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-08-04',
+            DATE_END => '2013-08-05'
           } 
         }
       },
@@ -707,24 +1245,127 @@ my %TOURNAMENTS_NORWAY =
     ORIGIN => 'National',
     ZONE => 'Europe',
     FORM => 'Teams',
+    MOVEMENT => 'Swiss',
     SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2006' =>
       {
-        # Link
-        MEET => 'Meet name',
-
+        MEET => 'Norwegian Bridge Festival',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2006,
+            DATE_START => '2006-08-09',
+            DATE_END => '2006-08-09'
+          } 
+        }
+      },
+      '2007' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-08-05',
+            DATE_END => '2007-08-05'
+          } 
+        }
+      },
+      '2008' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-08-12',
+            DATE_END => '2008-08-12'
+          } 
+        }
+      },
+      '2009' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-08-08',
+            DATE_END => '2009-08-09'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-08-05',
+            DATE_END => '2010-08-07'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-08-05',
+            DATE_END => '2011-08-06'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-08-10',
+            DATE_END => '2012-08-11'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-08-09',
+            DATE_END => '2013-08-10'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-08-05',
+            DATE_END => '2014-08-06'
           } 
         }
       },
@@ -744,18 +1385,27 @@ my %TOURNAMENTS_NORWAY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2004' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2004,
+            DATE_START => '2004-06-08',
+            DATE_END => '2004-06-08'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-05-07',
+            DATE_END => '2016-05-08'
           } 
         }
       },
@@ -799,25 +1449,94 @@ my %TOURNAMENTS_NORWAY =
     COUNTRY => 'Norway',
     ORIGIN => 'National',
     ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Women',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2009' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2009,
+            DATE_START => '2009-10-31',
+            DATE_END => '2009-10-31'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-10-30',
+            DATE_END => '2010-10-30'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-10-29',
+            DATE_END => '2011-10-29'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-10-27',
+            DATE_END => '2012-10-27'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-10-26',
+            DATE_END => '2013-10-26'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-10-25',
+            DATE_END => '2014-10-25'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-10-31',
+            DATE_END => '2015-10-31'
           } 
         }
       },
@@ -832,23 +1551,44 @@ my %TOURNAMENTS_NORWAY =
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Women',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2014' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2014,
+            DATE_START => '2014-03-08',
+            DATE_END => '2014-03-09'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-04-25',
+            DATE_END => '2015-04-26'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-03-05',
+            DATE_END => '2016-03-06'
           } 
         }
       },
@@ -860,58 +1600,77 @@ my %TOURNAMENTS_NORWAY =
   {
     ORGANIZATION => 'NBF',
     COUNTRY => 'Norway',
-    ORIGIN => 'National',
+    ORIGIN => 'Regional',
     ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Mixed',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2008' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2008,
+            DATE_START => '2008-04-02',
+            DATE_END => '2008-04-02'
           } 
         }
       },
     }
   },
 
-  'Olrud Easter Pairs' =>
+  'Olrud Easter Swiss Pairs' =>
   {
     ORGANIZATION => 'NBF',
     COUNTRY => 'Norway',
-    ORIGIN => 'National',
+    ORIGIN => 'Regional',
     ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
+    FORM => 'Pairs',
+    MOVEMENT => 'Swiss',
+    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2008' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2008,
+            DATE_START => '2008-04-02',
+            DATE_END => '2008-04-02'
+          } 
+        }
+      },
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-04-04',
+            DATE_END => '2009-04-05'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-03-27',
+            DATE_END => '2010-03-28'
           } 
         }
       },
@@ -1222,7 +1981,7 @@ my %TOURNAMENTS_NORWAY =
   {
     ORGANIZATION => 'NBF',
     COUNTRY => 'Norway',
-    ORIGIN => 'National',
+    ORIGIN => 'Regional',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -1231,18 +1990,15 @@ my %TOURNAMENTS_NORWAY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2012' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2012,
+            DATE_START => '2012-04-05',
+            DATE_END => '2012-04-05'
           } 
         }
       },

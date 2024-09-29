@@ -768,26 +768,29 @@ my @MULTI_WORDS =
   'Nordic Women Championship',
 
   # NORWAY
-  'Norwegian Club Cup',
-  'Norwegian Club Pairs',
+  'Norwegian Championship', # TODO For now
+  'Norwegian District Championship', # TODO For now
+
   'Norwegian Club Teams',
   'Norwegian Corporate Championship',
+  'Norwegian Premier League',
+  'Norwegian Women Invitational Pairs',
+
+  'Norwegian Club Cup',
+  'Norwegian Club Pairs',
   'Norwegian Mixed Pairs',
   'Norwegian Mixed Teams',
   'Norwegian Open Pairs',
   'Norwegian Open Teams',
-  'Norwegian Premier League',
   'Norwegian Premier Pairs',
   'Norwegian Senior Teams',
   'Norwegian Swiss Pairs',
   'Norwegian Swiss Teams',
   'Norwegian Team Trials',
   'Norwegian Teams',
-  'Norwegian Women Invitational Pairs',
   'Norwegian Women Teams',
 
   'Olrud Easter Mixed Pairs',
-  'Olrud Easter Pairs',
   'Olrud Easter Swiss Pairs',
   'Olrud Easter Swiss Teams',
   'Rondane Pairs Cup',
@@ -2360,7 +2363,6 @@ my %MULTI_TYPOS =
     'nt gold swis pairs', 'nt gold swiss piars'],
 
   # NORWAY
-  'Norwegian Club Cup' => ['sm norway', 'norway sm'],
   'Norwegian Club Teams' => [
     'club team championship norway', 
     'nor club teams ch_ship', 
@@ -2383,42 +2385,57 @@ my %MULTI_TYPOS =
     'nm mix pairs',
     'nor mixed pairs ch_ship', 
     'norwegian championship mix swiss pair',
+    'norwegian championship mix swiss pairs',
+    'norwegian championship mixed swiss pairs',
+    'norwegian championship open mixed pairs',
     'norwegian championships mixed pairs',
     'norwegian mixed pair championship',
     'norwegian mixed pairs championship',
     'norwegian mix pairs championship'],
-  'Norwegian Mixed Teams' => ['norwegian championship mix swiss teams'],
+  'Norwegian Mixed Teams' => [
+    'norwegian championship mix swiss teams',
+    'norwegian championship mix teams'],
   'Norwegian Open Pairs' => [
     'nbf norwegian pairs', 
     'nm pairs',
     'nm-pairs', 
+    'norwegian championship open pairs',
     'norwegian pairs championship',
     'norwegain pairs', 
     'norwegian pairs'],
   'Norwegian Open Teams' => [
     'nm open teams',
+    'norwegian championship open teams',
     'norwegian chship teams',
     'norwegian chships teams',
     'norwgian open teams championship', 
     'norwegian chmp teams'],
   'Norwegian Premier League' => [
     'norw premier league',
+    'norway sm',
     'norwegian prremier league',
     'nbf premier league', 
     'nor premier league',
-    'norvegian premier league'],
+    'norvegian premier league',
+    'sm norway'], 
   'Norwegian Senior Teams' => ['nbf senior team championship'],
   'Norwegian Swiss Pairs' => [
     'nm monrad pairs', 
     'nm swiss pairs', 
     'nor swiss pairs',
+    'norwegian championship siwss pairs',
     'norwegian open swiss pairs',
     'norwegian swiss open pairs',
     'norwegian swiss pairs championship'],
-  'Norwegian Swiss Teams' => ['nm-monrad-lag', 'nor swiss teams',
-    'norwegian swiss team championship', 'nm monrad lag', 
-    'nm-monrad teams', 'nm-monrad-teams', 
-    'norwegian championship swiss teams'],
+  'Norwegian Swiss Teams' => [
+    'nm-monrad-lag', 
+    'nm monrad lag', 
+    'nm-monrad-teams', 
+    'nm-monrad teams', 
+    'nor swiss teams',
+    'norwegian championship open teams swiss',
+    'norwegian championship swiss teams',
+    'norwegian swiss team championship'], 
   'Norwegian Team Trials' => ['nor team trials',
     'norwegian open trials',
     'norwegian wbg qualification'],
@@ -2448,6 +2465,8 @@ my %MULTI_TYPOS =
   'Olona International Teams' => [
     'international olona bridge team'],
   'Olrud Easter Mixed Pairs' => ['olrud easter mixed'],
+  'Olrud Easter Swiss Pairs' => [
+    'olrud easter pairs'],
   'Olrud Easter Swiss Teams' => [
     'olrudpaasken monrad lag',
     'olrud easter',
