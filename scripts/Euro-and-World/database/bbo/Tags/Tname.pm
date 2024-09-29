@@ -245,6 +245,30 @@ my @MULTI_WORDS =
   'New Zealand Open Trials',
   'New Zealand Women Trials',
 
+  # NORWAY
+  'Norwegian Club Pairs',
+  'Norwegian Club Teams',
+  'Norwegian Corporate Championship',
+  'Norwegian Mixed Pairs',
+  'Norwegian Mixed Teams',
+  'Norwegian Open Pairs',
+  'Norwegian Open Teams',
+  'Norwegian Premier League',
+  'Norwegian Senior Teams',
+  'Norwegian Swiss Pairs',
+  'Norwegian Swiss Teams',
+  'Norwegian Team Trials',
+  'Norwegian Women Invitational Pairs',
+  'Norwegian Women Teams',
+  'Olrud Easter Mixed Pairs',
+  'Olrud Easter Swiss Pairs',
+  'Olrud Easter Swiss Teams',
+  'Rondane Pairs Cup',
+  'Rondane Teams Cup',
+  'Rosfjord Swiss Teams',
+  'Trondheim Pairs Cup',
+  'Trondheim Teams Cup',
+
   # POLAND
   'Andrzej Wilkosz Memorial Pairs',
   'Grand Prix of Poland Pairs',
@@ -766,38 +790,6 @@ my @MULTI_WORDS =
   'Nordic Security Pro-Am Pairs',
   'Nordic Team Championship',
   'Nordic Women Championship',
-
-  # NORWAY
-  'Norwegian Championship', # TODO For now
-  'Norwegian District Championship', # TODO For now
-
-  'Norwegian Club Teams',
-  'Norwegian Corporate Championship',
-  'Norwegian Premier League',
-  'Norwegian Women Invitational Pairs',
-
-  'Norwegian Club Cup',
-  'Norwegian Club Pairs',
-  'Norwegian Mixed Pairs',
-  'Norwegian Mixed Teams',
-  'Norwegian Open Pairs',
-  'Norwegian Open Teams',
-  'Norwegian Premier Pairs',
-  'Norwegian Senior Teams',
-  'Norwegian Swiss Pairs',
-  'Norwegian Swiss Teams',
-  'Norwegian Team Trials',
-  'Norwegian Teams',
-  'Norwegian Women Teams',
-
-  'Olrud Easter Mixed Pairs',
-  'Olrud Easter Swiss Pairs',
-  'Olrud Easter Swiss Teams',
-  'Rondane Pairs Cup',
-  'Rondane Teams Cup',
-  'Rosfjord Swiss Teams',
-  'Trondheim Pairs Cup',
-  'Trondheim Teams Cup',
 
 
   'NTU Cup',

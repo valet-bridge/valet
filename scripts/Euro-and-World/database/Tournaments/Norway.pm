@@ -108,68 +108,6 @@ my %MEETS_NORWAY =
 
 my %TOURNAMENTS_NORWAY =
 (
-  'Norwegian Championship' =>
-  {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        # Link
-        MEET => 'Meet name',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
-          } 
-        }
-      },
-    }
-  },
-
-  'Norwegian District Championship' =>
-  {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
-    ORIGIN => 'Regional',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        # Link
-        MEET => 'Meet name',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
-          } 
-        }
-      },
-    }
-  },
-
   'Norwegian Club Pairs' =>
   {
     ORGANIZATION => 'NBF',
@@ -190,6 +128,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
             DATE_START => '2011-06-01',
             DATE_END => '2011-06-01'
           } 
@@ -218,6 +157,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2004,
+            major => 'ROUND',
+            minor => 'HALF',
             DATE_START => '2004-05-20',
             DATE_END => '2004-05-23'
           } 
@@ -230,6 +171,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2005,
+            major => 'ROUND',
             DATE_START => '2005-05-05',
             DATE_END => '2005-05-07'
           } 
@@ -242,6 +184,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2006,
+            major => 'ROUND',
+            minor => 'HALF',
             DATE_START => '2006-05-28',
             DATE_END => '2006-05-28'
           } 
@@ -254,6 +198,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2007,
+            major => 'ROUND',
+            minor => 'HALF',
             DATE_START => '2007-05-31',
             DATE_END => '2007-05-31'
           } 
@@ -266,6 +212,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2008,
+            major => 'ROUND',
+            minor => 'HALF',
             DATE_START => '2008-05-04',
             DATE_END => '2008-05-04'
           } 
@@ -278,6 +226,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2009,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2009-05-20',
             DATE_END => '2009-05-24'
           } 
@@ -290,6 +240,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2010,
+            major => 'ROUND',
+            minor => 'HALF',
             DATE_START => '2010-05-13',
             DATE_END => '2010-05-16'
           } 
@@ -302,12 +254,16 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2011,
-            DATE_START => '2011-04-08',
-            DATE_END => '2011-04-08'
+            major => 'ROUND',
+            minor => 'HALF',
+            DATE_START => '2011-03-27',
+            DATE_END => '2011-03-27'
           },
           'C1' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2011-06-02',
             DATE_END => '2011-06-05'
           } 
@@ -320,6 +276,9 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2012,
+            STAGE => 'Final',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2012-05-25',
             DATE_END => '2012-05-28'
           } 
@@ -333,6 +292,9 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2013,
+            STAGE => 'Final',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2013-05-09',
             DATE_END => '2013-05-11'
           } 
@@ -346,6 +308,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2014,
+            major => 'MATCH',
+            minor => 'SEGMENT',
             DATE_START => '2014-05-28',
             DATE_END => '2014-05-31'
           } 
@@ -359,6 +323,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2016-06-02',
             DATE_END => '2016-06-05'
           } 
@@ -387,6 +353,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'ROUND',
             DATE_START => '2016-03-05',
             DATE_END => '2016-03-06'
           } 
@@ -416,6 +383,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2005,
+            major => 'SESSION',
             DATE_START => '2005-08-05',
             DATE_END => '2005-08-05'
           } 
@@ -429,6 +397,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2006,
+            major => 'SESSION',
             DATE_START => '2006-08-09',
             DATE_END => '2006-08-09'
           } 
@@ -442,6 +411,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2009,
+            major => 'SESSION',
             DATE_START => '2009-08-02',
             DATE_END => '2009-08-03'
           } 
@@ -455,6 +425,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2010,
+            major => 'SESSION',
             DATE_START => '2010-07-31',
             DATE_END => '2010-08-01'
           } 
@@ -468,6 +439,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'SESSION',
             DATE_START => '2011-07-30',
             DATE_END => '2011-07-30'
           } 
@@ -481,6 +453,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'SESSION',
             DATE_START => '2012-08-04',
             DATE_END => '2012-08-05'
           } 
@@ -494,6 +467,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'SESSION',
             DATE_START => '2013-08-03',
             DATE_END => '2013-08-04'
           } 
@@ -507,6 +481,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2014,
+            major => 'SESSION',
             DATE_START => '2014-08-02',
             DATE_END => '2014-08-03'
           } 
@@ -520,6 +495,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'SESSION',
             DATE_START => '2016-07-29',
             DATE_END => '2016-07-30'
           } 
@@ -549,6 +525,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2014,
+            major => 'ROUND',
             DATE_START => '2014-08-03',
             DATE_END => '2014-08-04'
           } 
@@ -562,6 +539,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2016,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2016-07-31',
             DATE_END => '2016-08-01'
           } 
@@ -591,19 +570,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2005,
-            DATE_START => '2005-08-05',
-            DATE_END => '2005-08-05'
-          } 
-        }
-      },
-      '2005' =>
-      {
-        MEET => 'Norwegian Bridge Festival',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2005,
+            STAGE => 'Final',
             DATE_START => '2005-08-05',
             DATE_END => '2005-08-05'
           } 
@@ -617,6 +584,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2006,
+            major => 'SESSION',
             DATE_START => '2006-08-09',
             DATE_END => '2006-08-09'
           } 
@@ -630,6 +598,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2009-08-05',
             DATE_END => '2009-08-07'
           } 
@@ -643,6 +613,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2010-08-03',
             DATE_END => '2010-08-05'
           } 
@@ -656,6 +628,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2011-08-02',
             DATE_END => '2011-08-04'
           } 
@@ -669,6 +643,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'SESSION',
             DATE_START => '2012-08-07',
             DATE_END => '2012-08-09'
           } 
@@ -682,6 +657,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2013-08-06',
             DATE_END => '2013-08-08'
           } 
@@ -694,6 +671,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2014,
+            STAGE => 'Final',
             DATE_START => '2014-08-08',
             DATE_END => '2014-08-09'
           } 
@@ -706,6 +684,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2014-09-19',
             DATE_END => '2014-09-21'
           } 
@@ -719,6 +699,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2015-09-18',
             DATE_END => '2015-09-20'
           } 
@@ -748,6 +730,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2005,
+            major => 'MATCH',
             DATE_START => '2005-08-05',
             DATE_END => '2005-08-05'
           } 
@@ -762,6 +745,8 @@ my %TOURNAMENTS_NORWAY =
           {
             # Just a guess
             YEAR => 2006,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2006-08-06',
             DATE_END => '2006-08-06'
           } 
@@ -772,10 +757,32 @@ my %TOURNAMENTS_NORWAY =
         MEET => 'Norwegian Bridge Festival',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Rof16',
             DATE_START => '2014-08-06',
+            DATE_END => '2014-08-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            DATE_START => '2014-08-07',
+            DATE_END => '2014-08-07'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            DATE_START => '2014-08-07',
+            DATE_END => '2014-08-07'
+          },
+          'C3' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            DATE_START => '2014-08-08',
             DATE_END => '2014-08-08'
           } 
         }
@@ -785,12 +792,45 @@ my %TOURNAMENTS_NORWAY =
         MEET => 'Norwegian Bridge Festival',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2016-08-01',
+            DATE_END => '2016-08-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Rof16',
+            major => 'ROUND',
+            DATE_START => '2016-08-02',
+            DATE_END => '2016-08-03'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-08-03',
+            DATE_END => '2016-08-03'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-08-03',
             DATE_END => '2016-08-04'
-          } 
+          },
+          'C4' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            DATE_START => '2016-08-04',
+            DATE_END => '2016-08-04'
+          }
         }
       },
     }
@@ -816,18 +856,22 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2004,
+            major => 'ROUND',
             DATE_START => '2004-11-13',
             DATE_END => '2004-11-13'
           },
           'C1' => 
           {
             YEAR => 2005,
+            major => 'ROUND',
             DATE_START => '2005-02-05',
             DATE_END => '2005-02-06'
           },
           'C2' => 
           {
             YEAR => 2005,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2005-03-26',
             DATE_END => '2005-03-27'
           }
@@ -840,12 +884,15 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2005,
+            major => 'ROUND',
             DATE_START => '2005-11-14',
             DATE_END => '2005-11-14'
           },
           'C1' => 
           {
             YEAR => 2006,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2006-02-07',
             DATE_END => '2006-02-07'
           },
@@ -858,18 +905,22 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2006,
+            major => 'ROUND',
             DATE_START => '2006-11-13',
             DATE_END => '2006-11-13'
           },
           'C1' => 
           {
             YEAR => 2007,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2007-02-11',
             DATE_END => '2007-02-11'
           },
           'C2' => 
           {
             YEAR => 2007,
+            major => 'ROUND',
             DATE_START => '2007-03-27',
             DATE_END => '2007-03-27'
           } 
@@ -882,12 +933,15 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2007,
+            major => 'ROUND',
+            minor => 'HALF',
             DATE_START => '2007-11-25',
             DATE_END => '2007-11-25'
           },
           'C1' => 
           {
             YEAR => 2008,
+            major => 'ROUND',
             DATE_START => '2008-02-12',
             DATE_END => '2008-02-12'
           } 
@@ -900,12 +954,17 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2008,
+            STAGE => 'Final',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2008-11-23',
             DATE_END => '2008-11-23'
           },
           'C1' => 
           {
             YEAR => 2009,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2009-02-13',
             DATE_END => '2009-02-15'
           } 
@@ -918,18 +977,23 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2009,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2009-10-23',
             DATE_END => '2009-10-25'
           },
           'C1' => 
           {
             YEAR => 2010,
+            major => 'ROUND',
             DATE_START => '2010-01-07',
             DATE_END => '2010-01-07'
           },
           'C2' => 
           {
             YEAR => 2010,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2010-02-12',
             DATE_END => '2010-02-14'
           } 
@@ -942,26 +1006,35 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2010,
+            major => 'ROUND',
+            minor => 'HALF',
             DATE_START => '2010-10-22',
             DATE_END => '2010-10-24'
           },
           'C1' => 
           {
             YEAR => 2010,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2010-11-07',
             DATE_END => '2010-11-07'
           },
           'C2' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
+            minor => 'HALF',
             DATE_START => '2011-02-11',
             DATE_END => '2011-02-13'
           },
           'C3' => 
           {
+            # ?
             YEAR => 2011,
-            DATE_START => '2011-03-27',
-            DATE_END => '2011-03-27'
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-04-08',
+            DATE_END => '2011-04-08'
           } 
         }
       },
@@ -973,12 +1046,16 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2011-11-04',
             DATE_END => '2011-11-07'
           },
           'C1' => 
           {
             YEAR => 2012,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2012-02-11',
             DATE_END => '2012-02-12'
           } 
@@ -992,12 +1069,17 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Final',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2012-11-02',
             DATE_END => '2012-11-04'
           },
           'C1' => 
           {
             YEAR => 2013,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2013-02-09',
             DATE_END => '2013-02-10'
           } 
@@ -1011,12 +1093,16 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2013,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2013-11-01',
             DATE_END => '2013-11-03'
           },
           'C1' => 
           {
             YEAR => 2014,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2014-02-08',
             DATE_END => '2014-02-09'
           } 
@@ -1030,12 +1116,16 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2014,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2014-11-07',
             DATE_END => '2014-11-09'
           },
           'C1' => 
           {
             YEAR => 2015,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2015-02-07',
             DATE_END => '2015-02-08'
           } 
@@ -1049,12 +1139,16 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2015,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2015-11-06',
             DATE_END => '2015-11-08'
           },
           'C1' => 
           {
             YEAR => 2016,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2016-02-06',
             DATE_END => '2016-02-07'
           } 
@@ -1062,37 +1156,6 @@ my %TOURNAMENTS_NORWAY =
       },
 
       # https://www.bridge.no/Turneringer/NM-for-klubblag/Tidligere-aar
-    }
-  },
-
-  'Norwegian Premier Pairs' =>
-  {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        # Link
-        MEET => 'Meet name',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
-          } 
-        }
-      },
     }
   },
 
@@ -1116,6 +1179,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'ROUND',
             DATE_START => '2016-03-06',
             DATE_END => '2016-03-06'
           } 
@@ -1146,6 +1210,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2005,
+            major => 'SESSION',
             DATE_START => '2005-08-05',
             DATE_END => '2005-08-05'
           } 
@@ -1159,6 +1224,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2006,
+            major => 'SESSION',
             DATE_START => '2006-08-09',
             DATE_END => '2006-08-09'
           } 
@@ -1173,6 +1239,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2009,
+            major => 'SESSION',
             DATE_START => '2009-08-03',
             DATE_END => '2009-08-04'
           } 
@@ -1187,6 +1254,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2010,
+            major => 'SESSION',
             DATE_START => '2010-08-01',
             DATE_END => '2010-08-02'
           } 
@@ -1201,6 +1269,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'SESSION',
             DATE_START => '2011-07-31',
             DATE_END => '2011-08-01'
           } 
@@ -1215,6 +1284,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'SESSION',
             DATE_START => '2012-08-05',
             DATE_END => '2012-08-06'
           } 
@@ -1230,6 +1300,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'SESSION',
             DATE_START => '2013-08-04',
             DATE_END => '2013-08-05'
           } 
@@ -1260,6 +1331,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2006,
+            major => 'MATCH',
             DATE_START => '2006-08-09',
             DATE_END => '2006-08-09'
           } 
@@ -1273,6 +1345,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2007,
+            major => 'ROUND',
             DATE_START => '2007-08-05',
             DATE_END => '2007-08-05'
           } 
@@ -1286,6 +1359,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2008,
+            major => 'ROUND',
             DATE_START => '2008-08-12',
             DATE_END => '2008-08-12'
           } 
@@ -1299,6 +1373,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2009,
+            major => 'ROUND',
             DATE_START => '2009-08-08',
             DATE_END => '2009-08-09'
           } 
@@ -1312,6 +1387,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2010,
+            major => 'ROUND',
             DATE_START => '2010-08-05',
             DATE_END => '2010-08-07'
           } 
@@ -1325,6 +1401,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
             DATE_START => '2011-08-05',
             DATE_END => '2011-08-06'
           } 
@@ -1338,6 +1415,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'ROUND',
             DATE_START => '2012-08-10',
             DATE_END => '2012-08-11'
           } 
@@ -1351,6 +1429,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'ROUND',
             DATE_START => '2013-08-09',
             DATE_END => '2013-08-10'
           } 
@@ -1364,6 +1443,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2014,
+            major => 'ROUND',
             DATE_START => '2014-08-05',
             DATE_END => '2014-08-06'
           } 
@@ -1392,6 +1472,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2004,
+            major => 'SEGMENT',
             DATE_START => '2004-06-08',
             DATE_END => '2004-06-08'
           } 
@@ -1404,39 +1485,9 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'SEGMENT',
             DATE_START => '2016-05-07',
             DATE_END => '2016-05-08'
-          } 
-        }
-      },
-    }
-  },
-
-  'Norwegian Teams' =>
-  {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        # Link
-        MEET => 'Meet name',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
           } 
         }
       },
@@ -1463,6 +1514,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2009,
+            major => 'SESSION',
             DATE_START => '2009-10-31',
             DATE_END => '2009-10-31'
           } 
@@ -1487,6 +1539,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'SESSION',
             DATE_START => '2011-10-29',
             DATE_END => '2011-10-29'
           } 
@@ -1499,6 +1552,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'SESSION',
             DATE_START => '2012-10-27',
             DATE_END => '2012-10-27'
           } 
@@ -1511,6 +1565,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'SESSION',
             DATE_START => '2013-10-26',
             DATE_END => '2013-10-26'
           } 
@@ -1523,6 +1578,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2014,
+            major => 'SESSION',
             DATE_START => '2014-10-25',
             DATE_END => '2014-10-25'
           } 
@@ -1535,6 +1591,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2015,
+            major => 'SESSION',
             DATE_START => '2015-10-31',
             DATE_END => '2015-10-31'
           } 
@@ -1563,6 +1620,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2014,
+            major => 'ROUND',
             DATE_START => '2014-03-08',
             DATE_END => '2014-03-09'
           } 
@@ -1575,6 +1633,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2015,
+            major => 'ROUND',
             DATE_START => '2015-04-25',
             DATE_END => '2015-04-26'
           } 
@@ -1587,6 +1646,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'ROUND',
             DATE_START => '2016-03-05',
             DATE_END => '2016-03-06'
           } 
@@ -1616,6 +1676,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2008,
+            major => 'SESSION',
             DATE_START => '2008-04-02',
             DATE_END => '2008-04-02'
           } 
@@ -1645,6 +1706,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2008,
+            major => 'SESSION',
             DATE_START => '2008-04-02',
             DATE_END => '2008-04-02'
           } 
@@ -1657,6 +1719,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2009,
+            major => 'SESSION',
             DATE_START => '2009-04-04',
             DATE_END => '2009-04-05'
           } 
@@ -1669,6 +1732,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2010,
+            major => 'SESSION',
             DATE_START => '2010-03-27',
             DATE_END => '2010-03-28'
           } 
@@ -1697,6 +1761,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2005,
+            major => 'MATCH',
             DATE_START => '2005-03-25',
             DATE_END => '2005-03-25'
           } 
@@ -1709,6 +1774,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2006,
+            major => 'MATCH',
             DATE_START => '2006-04-10',
             DATE_END => '2006-04-11'
           } 
@@ -1721,6 +1787,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2007,
+            major => 'ROUND',
             DATE_START => '2007-04-11',
             DATE_END => '2007-04-11'
           } 
@@ -1733,6 +1800,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2008,
+            major => 'ROUND',
             DATE_START => '2008-04-02',
             DATE_END => '2008-04-02'
           } 
@@ -1745,6 +1813,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2009,
+            major => 'ROUND',
             DATE_START => '2009-04-06',
             DATE_END => '2009-04-07'
           } 
@@ -1757,6 +1826,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2010,
+            major => 'ROUND',
             DATE_START => '2010-03-29',
             DATE_END => '2010-03-30'
           } 
@@ -1769,6 +1839,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'MATCH',
             DATE_START => '2011-04-17',
             DATE_END => '2011-04-18'
           } 
@@ -1782,6 +1853,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'MATCH',
             DATE_START => '2012-04-01',
             DATE_END => '2012-04-02'
           } 
@@ -1795,6 +1867,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'ROUND',
             DATE_START => '2013-03-24',
             DATE_END => '2013-03-25'
           } 
@@ -1807,6 +1880,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2014,
+            major => 'ROUND',
             DATE_START => '2014-04-13',
             DATE_END => '2014-04-14'
           } 
@@ -1836,6 +1910,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2010,
+            major => 'SESSION',
             DATE_START => '2010-10-09',
             DATE_END => '2010-10-09'
           } 
@@ -1849,6 +1924,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'SESSION',
             DATE_START => '2011-10-08',
             DATE_END => '2011-10-08'
           } 
@@ -1862,6 +1938,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'SESSION',
             DATE_START => '2012-10-06',
             DATE_END => '2012-10-06'
           } 
@@ -1875,6 +1952,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'SESSION',
             DATE_START => '2013-10-05',
             DATE_END => '2013-10-05'
           } 
@@ -1888,6 +1966,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2014,
+            major => 'ROUND',
             DATE_START => '2014-10-04',
             DATE_END => '2014-10-04'
           } 
@@ -1917,6 +1996,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2010,
+            major => 'ROUND',
             DATE_START => '2010-10-10',
             DATE_END => '2010-10-10'
           } 
@@ -1930,6 +2010,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
             DATE_START => '2011-10-09',
             DATE_END => '2011-10-09'
           } 
@@ -1943,6 +2024,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'ROUND',
             DATE_START => '2012-10-07',
             DATE_END => '2012-10-07'
           } 
@@ -1956,6 +2038,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'ROUND',
             DATE_START => '2013-10-06',
             DATE_END => '2013-10-06'
           } 
@@ -1969,6 +2052,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2014,
+            major => 'ROUND',
             DATE_START => '2014-10-05',
             DATE_END => '2014-10-05'
           } 
@@ -1997,6 +2081,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2012-04-05',
             DATE_END => '2012-04-05'
           } 
@@ -2027,6 +2113,7 @@ my %TOURNAMENTS_NORWAY =
           {
             YEAR => 2011,
             CITY => 'Trondheim',
+            majror => 'SESSION',
             DATE_START => '2011-05-07',
             DATE_END => '2011-05-07'
           } 
@@ -2057,6 +2144,7 @@ my %TOURNAMENTS_NORWAY =
           {
             YEAR => 2011,
             CITY => 'Trondheim',
+            major => 'ROUND',
             DATE_START => '2011-05-08',
             DATE_END => '2011-05-08'
           } 
