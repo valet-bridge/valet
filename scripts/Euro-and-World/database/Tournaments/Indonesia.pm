@@ -13,22 +13,84 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_INDONESIA =
 (
-  'Meet name' =>
+  'Indonesian National Championship Week' =>
   {
-    ORGANIZATION => 'NZB',
+    ORGANIZATION => 'GABSI',
     COUNTRY => 'Indonesia',
-    ORIGIN => 'National',
     ZONE => 'Asia Pacific',
 
     EDITIONS => 
     {
+      '2009' =>
+      {
+        # 
+        YEAR => 2009,
+        DATE_START => '2009-05-29',
+        DATE_END => '2009-06-05'
+      },
+      '2012' =>
+      {
+        # https://bridge.web.id/2012/kejurnas50/
+        ORDINAL => 50,
+        YEAR => 2012,
+        CITY => 'Jakarta',
+        DATE_START => '2012-04-14',
+        DATE_END => '2012-04-22'
+      },
+      '2014' =>
+      {
+        # https://bridge.web.id/2014/kejurnas/
+        ORDINAL => 52,
+        YEAR => 2014,
+        CITY => 'Manado',
+        DATE_START => '2014-09-14',
+        DATE_END => '2014-09-21'
+      },
       '2015' =>
       {
-        # Link
-        YEAR => 2000,
-        CITY => 'Hamilton',
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
+        # https://bridge.web.id/2015/kejurnas/
+        ORDINAL => 53,
+        YEAR => 2015,
+        CITY => 'Aceh',
+        DATE_START => '2015-05-09',
+        DATE_END => '2015-05-16'
+      },
+      '2016' =>
+      {
+        # https://bridge.web.id/2016/kejurnas54/
+        ORDINAL => 54,
+        YEAR => 2016,
+        CITY => 'Lubuklinggau',
+        DATE_START => '2016-05-09',
+        DATE_END => '2016-05-17'
+      },
+      '2018' =>
+      {
+        # https://bridge.web.id/2018/kejurnas/
+        ORDINAL => 56,
+        YEAR => 2018,
+        CITY => 'Padang',
+        DATE_START => '2018-12-06',
+        DATE_END => '2018-12-15'
+      },
+      '2019' =>
+      {
+        # https://bridge.web.id/2019/kejurnas/antar-prov/
+        # https://bridge.web.id/2019/kejurnas/open/
+        ORDINAL => 57,
+        YEAR => 2019,
+        CITY => 'Jakarta',
+        DATE_START => '2019-12-05',
+        DATE_END => '2019-12-14'
+      },
+      '2022' =>
+      {
+        # https://bridge.web.id/2022/kejurnas/
+        ORDINAL => 58,
+        YEAR => 2022,
+        CITY => 'Solo',
+        DATE_START => '2022-11-25',
+        DATE_END => '2022-12-04'
       },
     }
   }
@@ -38,7 +100,7 @@ my %TOURNAMENTS_INDONESIA =
 (
   'Indonesian Championship' =>
   {
-    ORGANIZATION => 'NZB',
+    ORGANIZATION => 'GABSI',
     COUNTRY => 'Indonesia',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
@@ -69,33 +131,28 @@ my %TOURNAMENTS_INDONESIA =
     }
   },
 
-  'Indonesian Girls Trials' =>
+  'Indonesian U26 Women Pair Trials' =>
   {
-    ORGANIZATION => 'NZB',
+    ORGANIZATION => 'GABSI',
     COUNTRY => 'Indonesia',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Women',
+    AGE => 'U26',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2016,
+            DATE_START => '2016-01-23',
+            DATE_END => '2016-01-29'
           } 
         }
       },
@@ -104,7 +161,7 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Inter-City Championship' =>
   {
-    ORGANIZATION => 'NZB',
+    ORGANIZATION => 'GABSI',
     COUNTRY => 'Indonesia',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
@@ -137,10 +194,7 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Inter-Club Championship' =>
   {
-    ORGANIZATION => 'NZB',
-    COUNTRY => 'Indonesia',
-    ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
+    ORIGIN => 'Interclub',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -148,20 +202,55 @@ my %TOURNAMENTS_INDONESIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2009' =>
       {
-        # Link
-        MEET => 'Meet name',
-
+        MEET => 'Indonesian National Championship Week',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2009,
+            DATE_START => '2009-06-01',
+            DATE_END => '2009-06-05'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Indonesian National Championship Week',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-09-17',
+            DATE_END => '2014-09-20'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Indonesian National Championship Week',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-05-13',
+            DATE_END => '2015-05-16'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Indonesian National Championship Week',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-05-13',
+            DATE_END => '2016-05-17'
           } 
         }
       },
@@ -170,10 +259,7 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Inter-Province Championship' =>
   {
-    ORGANIZATION => 'NZB',
-    COUNTRY => 'Indonesia',
-    ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
+    ORIGIN => 'Interprovince',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -181,20 +267,42 @@ my %TOURNAMENTS_INDONESIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2014' =>
       {
-        # Link
-        MEET => 'Meet name',
-
+        MEET => 'Indonesian National Championship Week',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2014,
+            DATE_START => '2014-09-14',
+            DATE_END => '2014-09-17'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Indonesian National Championship Week',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-05-10',
+            DATE_END => '2015-05-12'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Indonesian National Championship Week',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-05-10',
+            DATE_END => '2016-05-12'
           } 
         }
       },
@@ -203,7 +311,7 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Invitational Teams' =>
   {
-    ORGANIZATION => 'NZB',
+    ORGANIZATION => 'GABSI',
     COUNTRY => 'Indonesia',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
@@ -236,7 +344,7 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Junior League Online' =>
   {
-    ORGANIZATION => 'NZB',
+    ORGANIZATION => 'GABSI',
     COUNTRY => 'Indonesia',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
@@ -269,7 +377,7 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian U16 Pair Trials' =>
   {
-    ORGANIZATION => 'NZB',
+    ORGANIZATION => 'GABSI',
     COUNTRY => 'Indonesia',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
@@ -298,7 +406,7 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian League' =>
   {
-    ORGANIZATION => 'NZB',
+    ORGANIZATION => 'GABSI',
     COUNTRY => 'Indonesia',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
@@ -331,7 +439,7 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Mixed Pair Trials' =>
   {
-    ORGANIZATION => 'NZB',
+    ORGANIZATION => 'GABSI',
     COUNTRY => 'Indonesia',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
@@ -360,7 +468,7 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Mixed Team Trials' =>
   {
-    ORGANIZATION => 'NZB',
+    ORGANIZATION => 'GABSI',
     COUNTRY => 'Indonesia',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
@@ -388,7 +496,7 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian National Games' =>
   {
-    ORGANIZATION => 'NZB',
+    ORGANIZATION => 'GABSI',
     COUNTRY => 'Indonesia',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
@@ -421,7 +529,7 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Open Pair Trials' =>
   {
-    ORGANIZATION => 'NZB',
+    ORGANIZATION => 'GABSI',
     COUNTRY => 'Indonesia',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
@@ -450,7 +558,7 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Open Teams' =>
   {
-    ORGANIZATION => 'NZB',
+    ORGANIZATION => 'GABSI',
     COUNTRY => 'Indonesia',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
@@ -483,7 +591,7 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Open Trials' =>
   {
-    ORGANIZATION => 'NZB',
+    ORGANIZATION => 'GABSI',
     COUNTRY => 'Indonesia',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
@@ -516,7 +624,7 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Premier League' =>
   {
-    ORGANIZATION => 'NZB',
+    ORGANIZATION => 'GABSI',
     COUNTRY => 'Indonesia',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
@@ -549,7 +657,7 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Student Championship' =>
   {
-    ORGANIZATION => 'NZB',
+    ORGANIZATION => 'GABSI',
     COUNTRY => 'Indonesia',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
@@ -582,7 +690,7 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian U21 Pair Trials' =>
   {
-    ORGANIZATION => 'NZB',
+    ORGANIZATION => 'GABSI',
     COUNTRY => 'Indonesia',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
@@ -613,7 +721,7 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian U21 Trials' =>
   {
-    ORGANIZATION => 'NZB',
+    ORGANIZATION => 'GABSI',
     COUNTRY => 'Indonesia',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
@@ -646,7 +754,7 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian U26 Pair Trials' =>
   {
-    ORGANIZATION => 'NZB',
+    ORGANIZATION => 'GABSI',
     COUNTRY => 'Indonesia',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
@@ -677,7 +785,7 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian U26 Trials' =>
   {
-    ORGANIZATION => 'NZB',
+    ORGANIZATION => 'GABSI',
     COUNTRY => 'Indonesia',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
@@ -710,7 +818,7 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian University Championship' =>
   {
-    ORGANIZATION => 'NZB',
+    ORGANIZATION => 'GABSI',
     COUNTRY => 'Indonesia',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
@@ -743,7 +851,7 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Women Pair Trials' =>
   {
-    ORGANIZATION => 'NZB',
+    ORGANIZATION => 'GABSI',
     COUNTRY => 'Indonesia',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
@@ -772,7 +880,7 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Women Trials' =>
   {
-    ORGANIZATION => 'NZB',
+    ORGANIZATION => 'GABSI',
     COUNTRY => 'Indonesia',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
@@ -801,7 +909,7 @@ my %TOURNAMENTS_INDONESIA =
 
   "Kepri Governor's Cup" =>
   {
-    ORGANIZATION => 'NZB',
+    ORGANIZATION => 'GABSI',
     COUNTRY => 'Indonesia',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',

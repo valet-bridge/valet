@@ -693,8 +693,6 @@ my @MULTI_WORDS =
   'Justice J M Lal All India Open',
 
   # INDONESIA
-  'Indonesian Championship',
-  'Indonesian Girls Trials',
   'Indonesian Inter-City Championship',
   'Indonesian Inter-Club Championship',
   'Indonesian Inter-Province Championship',
@@ -714,6 +712,7 @@ my @MULTI_WORDS =
   'Indonesian U26 Pair Trials',
   'Indonesian U21 Trials',
   'Indonesian U26 Trials',
+  'Indonesian U26 Women Pair Trials',
   'Indonesian University Championship',
   'Indonesian Women Pair Trials',
   'Indonesian Women Trials',
@@ -2002,23 +2001,14 @@ my %MULTI_TYPOS =
     'cba wz India'],
 
   # INDONESIA
-  'Indonesian Championship' => [
-    'indonesia bridge championships',
-    'indonesia national championships',
-    'indonesian championships',
-    'indonesia national championship',
-    'indonesian national chamapionship',
-    'indonesian national champonship',
-    'indonesian national championship',
-    'national championship indonesia'],
-  'Indonesian Girls Trials' => ['indonesian girls u26 selection',
+  'Indonesian U26 Women Pair Trials' => [
+    'indonesian girls u26 selection',
     'indonesia girls u26 selection'],
   'Indonesian Inter-City Championship' => [
     'ina intercity national champs'],
   'Indonesian Inter-Club Championship' => [
     'ina intercity national chams',
     'ina interclub national champs',
-    'national indonesian championship',
     'national indonesian championship (inter-club'],
   'Indonesian Inter-Province Championship' => [
     'uji coba'],
