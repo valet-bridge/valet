@@ -49,6 +49,13 @@ my %MEETS_INDONESIA =
         DATE_START => '2009-05-29',
         DATE_END => '2009-06-05'
       },
+      '2011' =>
+      {
+        # http://kejurnas2011.org/hasil/kejurnas/ (Wayback Machine)
+        YEAR => 2011,
+        DATE_START => '2011-06-05',
+        DATE_END => '2011-06-12'
+      },
       '2012' =>
       {
         # https://bridge.web.id/2012/kejurnas50/
@@ -290,6 +297,19 @@ my %TOURNAMENTS_INDONESIA =
             YEAR => 2009,
             DATE_START => '2009-05-29',
             DATE_END => '2009-06-01'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Indonesian National Championship Week',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-06-05',
+            DATE_END => '2011-06-12'
           } 
         }
       },
@@ -698,6 +718,19 @@ my %TOURNAMENTS_INDONESIA =
           } 
         }
       },
+      '2011' =>
+      {
+        MEET => 'Indonesian National Championship Week',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-06-08',
+            DATE_END => '2011-06-09'
+          } 
+        }
+      },
     }
   },
 
@@ -804,6 +837,19 @@ my %TOURNAMENTS_INDONESIA =
             YEAR => 2007,
             DATE_START => '2007-05-15',
             DATE_END => '2007-05-15'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Indonesian National Championship Week',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-06-09',
+            DATE_END => '2011-06-09'
           } 
         }
       },
@@ -989,6 +1035,19 @@ my %TOURNAMENTS_INDONESIA =
 
     EDITIONS =>
     {
+      '2012' =>
+      {
+        MEET => 'Indonesian University Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-05-17',
+            DATE_END => '2012-05-19'
+          } 
+        }
+      },
       '2015' =>
       {
         # https://bridge.web.id/2015/kejurnas-mhs/
@@ -1084,6 +1143,19 @@ my %TOURNAMENTS_INDONESIA =
 
     EDITIONS =>
     {
+      '2012' =>
+      {
+        MEET => 'Indonesian University Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-05-17',
+            DATE_END => '2012-05-17'
+          } 
+        }
+      },
       '2014' =>
       {
         # https://bridge.web.id/2014/kejurnas-mhs/

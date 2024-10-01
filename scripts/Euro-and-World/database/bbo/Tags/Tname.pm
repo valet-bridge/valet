@@ -2031,6 +2031,7 @@ my %MULTI_TYPOS =
   'Indonesian Open Trials' => ['indonesian men national selection',
     'indonesian men selection'],
   'Indonesian U21 Teams' => [
+    'indonesian student championship jhs',
     'indonesian student championship shs',
     'indonesian students championship shs',
     'students championship shs'],
