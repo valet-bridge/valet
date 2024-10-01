@@ -881,7 +881,7 @@ my %COUNTRY_TO_SPONSOR =
     'Elektrika', 'Geo BSP', 'Geo Kideco', 'Geo Pertamina', 'Geo Timah', 
     'Geo Vale', 'Geologi', 'Geologi Banpu', 'Geoportal Kutai Kartanegara', 
     'Harke', 'Indoarsip', 'Intan', 'Inteligent', 'Indonesian Power',
-    'Jasa Marga Jakarta', 'JHS', 'Kideko', 'Kombi Tondano', 'Makus', 
+    'Jasa Marga Jakarta', 'Kideko', 'Kombi Tondano', 'Makus', 
     'Mandiri Minahasa', 'Mitra Buana', 'Mutiara Energy', 'OICO Maesa',
     'P2TEL', 'Palma Karya Mandiri', 'Penajam PU', 'Perbankan Jatim',
     'Pertagas', 'Pertamina', 'Petroconas', 'PU Bitung', 'PU Minsel',

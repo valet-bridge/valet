@@ -246,6 +246,12 @@ sub get_edition_and_chapter
         }
       }
     }
+
+    if ($#tname_list == -1 && exists $self->{MEET}{$meet})
+    {
+      warn $entry->bbono() . " not found: meet $meet, " . 
+        $entry->field('DATE_ADDED');
+    }
   }
   return ($tname, '', '') unless $#tname_list >= 0;
 

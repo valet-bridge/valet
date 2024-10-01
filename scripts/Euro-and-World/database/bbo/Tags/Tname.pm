@@ -698,22 +698,21 @@ my @MULTI_WORDS =
   'Indonesian Inter-Province Championship',
   'Indonesian Invitational Teams',
   'Indonesian Junior League Online',
-  'Indonesian U16 Pair Trials',
-  'Indonesian League',
   'Indonesian Mixed Pair Trials',
   'Indonesian Mixed Team Trials',
-  'Indonesian National Games',
   'Indonesian Open Pair Trials',
   'Indonesian Open Teams',
   'Indonesian Open Trials',
   'Indonesian Premier League',
-  'Indonesian Student Championship',
+  'Indonesian U16 Pair Trials',
   'Indonesian U21 Pair Trials',
-  'Indonesian U26 Pair Trials',
+  'Indonesian U21 Teams',
   'Indonesian U21 Trials',
+  'Indonesian U26 Pair Trials',
+  'Indonesian U26 Teams',
   'Indonesian U26 Trials',
   'Indonesian U26 Women Pair Trials',
-  'Indonesian University Championship',
+  'Indonesian U31 Teams',
   'Indonesian Women Pair Trials',
   'Indonesian Women Trials',
   "Kepri Governor's Cup",
@@ -2005,9 +2004,9 @@ my %MULTI_TYPOS =
     'indonesian girls u26 selection',
     'indonesia girls u26 selection'],
   'Indonesian Inter-City Championship' => [
+    'ina intercity national chams',
     'ina intercity national champs'],
   'Indonesian Inter-Club Championship' => [
-    'ina intercity national chams',
     'ina interclub national champs',
     'national indonesian championship (inter-club'],
   'Indonesian Inter-Province Championship' => [
@@ -2017,13 +2016,12 @@ my %MULTI_TYPOS =
   'Indonesian U16 Pair Trials' => [
     'indonesian kids national selection',
     'indonesian kids trials'],
-  'Indonesian League' => ['indonesian bridge league',
-    'indonesia bridge league', 'indonesian premier league',
+  'Indonesian Premier League' => [
+    'indonesian bridge league',
+    'indonesia bridge league', 
     'indonesia premier league'],
   'Indonesian Mixed Pair Trials' => [
     'indonesian mixed national selection'],
-  'Indonesian National Games' => ['indonesian games',
-    'indonesian nasional games'],
   'Indonesian Open Pair Trials' => ['indonesian pairs trials'],
   'Indonesian Open Teams' => [
     'indonesia open team',
@@ -2032,19 +2030,19 @@ my %MULTI_TYPOS =
     'indonesian national open team'],
   'Indonesian Open Trials' => ['indonesian men national selection',
     'indonesian men selection'],
-  'Indonesian Student Championship' => [
+  'Indonesian U21 Teams' => [
     'indonesian student championship shs',
+    'indonesian students championship shs',
+    'students championship shs'],
+  'Indonesian U26 Teams' => [
+    'indonesian student championship',
     'indonesian student championships',
     'indonesian students championship',
-    'indonesian students championship shs',
-    'indonesian students championships',
-    'students championship shs'],
+    'indonesian students championships'],
   'Indonesian U21 Trials' => ['indonesian u21 selection',
     'indonesia u21 selection', 'indoneian u21 selection',
     'indonesian u21 selekction'],
   'Indonesian U26 Trials' => ['indonesian u26 selection'],
-  'Indonesian University Championship' => [
-    'indonesian university championships'],
   'Indonesian Women Trials' => ['indonesian women national selection'],
 
   'IOB Madras Gymkhana Open' => [

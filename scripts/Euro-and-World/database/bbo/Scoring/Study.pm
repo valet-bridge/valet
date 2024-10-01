@@ -103,8 +103,10 @@ my @LOCAL_SUBS =
 
   # Australia
   { START =>  1244, END =>  1248, TEXT => 'MP', CORR => 'IMP' },
-  { START => 13315, END => 13332, TEXT => 'MP', CORR => 'IMP' },
-  { START => 13351, END => 13359, TEXT => 'MP', CORR => 'IMP' },
+  { START => 13315, END => 13319, TEXT => 'MP', CORR => 'IMP' },
+  { START => 13321, END => 13324, TEXT => 'MP', CORR => 'IMP' },
+  { START => 13351, END => 13353, TEXT => 'MP', CORR => 'IMP' },
+  { START => 13355, END => 13357, TEXT => 'MP', CORR => 'IMP' },
   { START => 16490, END => 16508, TEXT => 'MP', CORR => 'IMP' },
   { START => 32882, END => 32908, TEXT => 'MP', CORR => 'IMP' },
 );

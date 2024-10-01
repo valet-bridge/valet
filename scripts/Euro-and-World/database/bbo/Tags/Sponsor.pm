@@ -641,7 +641,7 @@ my @SINGLE_WORDS = qw(
 
   IBM IMAX Impress Indoarsip Intan Inteligent Interface Interkala
 
-  Jetox Jiegao JHS Jinfan Junibacken
+  Jetox Jiegao Jinfan Junibacken
 
   Kadimex Kancelaria Kayseria Kideko Kilogrupp Konstanta Kvika
 
