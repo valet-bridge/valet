@@ -216,10 +216,11 @@ my %MEETS_INDONESIA =
 
 my %TOURNAMENTS_INDONESIA =
 (
-  'Indonesian Championship' =>
+  'Geologi Cup' =>
   {
     ORGANIZATION => 'GABSI',
     COUNTRY => 'Indonesia',
+    SPONSOR => 'Telkom Indonesia',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
     FORM => 'Teams',
@@ -229,48 +230,98 @@ my %TOURNAMENTS_INDONESIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2007' =>
       {
-        # Link
-        MEET => 'Meet name',
-
+        CITY => 'Bandung',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2007,
+            DATE_START => '2007-06-05',
+            DATE_END => '2007-06-05'
           } 
         }
       },
-    }
-  },
-
-  'Indonesian U26 Women Pair Trials' =>
-  {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
-    ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
-    FORM => 'Pairs',
-    SCORING => 'MP',
-    GENDER => 'Women',
-    AGE => 'U26',
-
-    EDITIONS =>
-    {
-      '2016' =>
+      '2009' =>
       {
+        CITY => 'Bandung',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2016,
-            DATE_START => '2016-01-23',
-            DATE_END => '2016-01-29'
+            YEAR => 2009,
+            DATE_START => '2009-12-18',
+            DATE_END => '2009-12-20'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        CITY => 'Bandung',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-12-10',
+            DATE_END => '2010-12-12'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        #  https://bridge.web.id/geologi/
+        CITY => 'Bandung',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-12-16',
+            DATE_END => '2011-12-18'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        # https://bridge.web.id/geologi/2012/
+        CITY => 'Bandung',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-08-03',
+            DATE_END => '2012-08-05'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        # https://bridge.web.id/geologi/2013/
+        CITY => 'Bandung',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-07-26',
+            DATE_END => '2013-07-28'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        # https://bridge.web.id/geologi/2014/
+        CITY => 'Bandung',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-07-11',
+            DATE_END => '2014-07-13'
           } 
         }
       },
@@ -581,77 +632,6 @@ my %TOURNAMENTS_INDONESIA =
     }
   },
 
-  'Indonesian U16 Pair Trials' =>
-  {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
-    ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
-    FORM => 'Pairs',
-    SCORING => 'MP',
-    GENDER => 'Open',
-    AGE => 'U16',
-
-    EDITIONS =>
-    {
-      '2016' =>
-      {
-        # https://bridge.web.id/2016/seleknas2/
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2016,
-            DATE_START => '2016-03-19',
-            DATE_END => '2016-03-21'
-          } 
-        }
-      },
-    }
-  },
-
-  'Indonesian Men Teams' =>
-  {
-    ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Men',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2004' =>
-      {
-        MEET => 'Indonesian National Games',
-        ORDINAL => 16,
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            # TODO Not all dates?
-            YEAR => 2004,
-            DATE_START => '2004-09-05',
-            DATE_END => '2004-09-14'
-          } 
-        }
-      },
-      '2008' =>
-      {
-        MEET => 'Indonesian National Games',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2008,
-            DATE_START => '2008-07-16',
-            DATE_END => '2008-07-16'
-          } 
-        }
-      },
-    }
-  },
-
   'Indonesian Mixed Pair Trials' =>
   {
     ORGANIZATION => 'GABSI',
@@ -728,34 +708,6 @@ my %TOURNAMENTS_INDONESIA =
             YEAR => 2011,
             DATE_START => '2011-06-08',
             DATE_END => '2011-06-09'
-          } 
-        }
-      },
-    }
-  },
-
-  'Indonesian Mixed Team Trials' =>
-  {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
-    ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Mixed',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            DATE_START => '2000-03-14',
-            DATE_END => '2000-03-18'
           } 
         }
       },
@@ -991,6 +943,35 @@ my %TOURNAMENTS_INDONESIA =
     }
   },
 
+  'Indonesian U16 Pair Trials' =>
+  {
+    ORGANIZATION => 'GABSI',
+    COUNTRY => 'Indonesia',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'U16',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        # https://bridge.web.id/2016/seleknas2/
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-03-19',
+            DATE_END => '2016-03-21'
+          } 
+        }
+      },
+    }
+  },
+
   'Indonesian U21 Pair Trials' =>
   {
     ORGANIZATION => 'GABSI',
@@ -1016,6 +997,35 @@ my %TOURNAMENTS_INDONESIA =
             YEAR => 2016,
             DATE_START => '2016-01-30',
             DATE_END => '2016-02-05'
+          } 
+        }
+      },
+    }
+  },
+
+  'Indonesian U18 Teams' =>
+  {
+    ORGANIZATION => 'GABSI',
+    COUNTRY => 'Indonesia',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U18',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        MEET => 'Indonesian University Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-05-17',
+            DATE_END => '2012-05-19'
           } 
         }
       },
@@ -1060,39 +1070,6 @@ my %TOURNAMENTS_INDONESIA =
             YEAR => 2015,
             DATE_START => '2015-11-03',
             DATE_END => '2015-11-05'
-          } 
-        }
-      },
-    }
-  },
-
-  'Indonesian U21 Trials' =>
-  {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
-    ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'U21',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        # Link
-        MEET => 'Meet name',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
           } 
         }
       },
@@ -1189,33 +1166,28 @@ my %TOURNAMENTS_INDONESIA =
     }
   },
 
-  'Indonesian U26 Trials' =>
+  'Indonesian U26 Women Pair Trials' =>
   {
     ORGANIZATION => 'GABSI',
     COUNTRY => 'Indonesia',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Women',
     AGE => 'U26',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2016,
+            DATE_START => '2016-01-23',
+            DATE_END => '2016-01-29'
           } 
         }
       },
@@ -1254,6 +1226,51 @@ my %TOURNAMENTS_INDONESIA =
             YEAR => 2014,
             DATE_START => '2014-12-09',
             DATE_END => '2014-12-11'
+          } 
+        }
+      },
+    }
+  },
+
+
+
+
+  'Indonesian Men Teams' =>
+  {
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Men',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2004' =>
+      {
+        MEET => 'Indonesian National Games',
+        ORDINAL => 16,
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            # TODO Not all dates?
+            YEAR => 2004,
+            DATE_START => '2004-09-05',
+            DATE_END => '2004-09-14'
+          } 
+        }
+      },
+      '2008' =>
+      {
+        MEET => 'Indonesian National Games',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-07-16',
+            DATE_END => '2008-07-16'
           } 
         }
       },
@@ -1647,6 +1664,177 @@ my %TOURNAMENTS_INDONESIA =
             YEAR => 2019,
             DATE_START => '2019-08-23',
             DATE_END => '2019-08-25'
+          } 
+        }
+      },
+    }
+  },
+
+  'Telkom Indonesia Open' =>
+  {
+    ORGANIZATION => 'GABSI',
+    COUNTRY => 'Indonesia',
+    SPONSOR => 'Telkom Indonesia',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        # https://bridge.web.id/telkom/2010/
+        CITY => 'Bandung',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-06-25',
+            DATE_END => '2010-06-27'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        # https://bridge.web.id/telkom/2011/
+        CITY => 'Bandung',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-07-08',
+            DATE_END => '2011-07-10'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        # https://bridge.web.id/telkom/2012/
+        CITY => 'Bandung',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-03-23',
+            DATE_END => '2012-03-25'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        # https://bridge.web.id/telkom/2013/
+        CITY => 'Bandung',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-04-19',
+            DATE_END => '2013-04-21'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        # https://bridge.web.id/telkom/2014/
+        CITY => 'Bandung',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-05-30',
+            DATE_END => '2014-06-04'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        # https://bridge.web.id/telkom/2015/
+        CITY => 'Bandung',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-11-27',
+            DATE_END => '2015-11-29'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        # https://bridge.web.id/telkom/2016/
+        CITY => 'Bandung',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-12-02',
+            DATE_END => '2016-12-04'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        # https://bridge.web.id/telkom/2017/
+        CITY => 'Bandung',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-11-24',
+            DATE_END => '2017-11-26'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        # https://bridge.web.id/telkom/2018/
+        CITY => 'Jakarta',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-11-15',
+            DATE_END => '2018-11-17'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        # https://bridge.web.id/telkom/2019/
+        CITY => 'Jakarta',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-11-15',
+            DATE_END => '2019-11-17'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        # https://bridge.web.id/telkom/2022/
+        CITY => 'Jakarta',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-10-28',
+            DATE_END => '2022-10-30'
           } 
         }
       },
