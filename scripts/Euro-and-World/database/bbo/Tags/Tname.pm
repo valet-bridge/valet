@@ -369,6 +369,13 @@ my @MULTI_WORDS =
 
   # ----------------------------------------------------
 
+  'Angelini Teams',
+  'Baze Senior Knock-out',
+  'Bergen Grand Tournament',
+  'Bologna Trophy',
+  'Centre Island Teams',
+
+  # ----------------------------------------------------
 
   #### AAA
 
@@ -385,8 +392,6 @@ my @MULTI_WORDS =
   'Anatolian Fall Teams',
   'Anatolian Open Teams',
   'Anatolian Spring Teams',
-  'Angelini Teams',
-  'Ankara Summer Teams',
   'Antonio Chong Cup',
   'Aoda Cup',
   'ArboNed Team Cup',
@@ -423,18 +428,14 @@ my @MULTI_WORDS =
   'Baltic Cup',
   'Baltic Teams Cup',
 
-  'Bastaman Cup',
-  'Baze Senior Knock-out',
   'Belarusian Open Teams',
 
   'Belisol Invitational Pairs',
-  'Bergen Grand Tournament',
   'Bermuda Triangle Cup',
   'BFAME Championship',
   'BFAME Friendship Pairs',
   'BKBT Teams',
   'Bolivian Open Teams',
-  'Bologna Trophy',
   'bridge24.pl Trophy',
   
   # BRITAIN
@@ -460,7 +461,6 @@ my @MULTI_WORDS =
   'Cavendish Teams',
   'Central American & Caribbean Championship',
   'Central American Zonal Championships',
-  'Centre Island Teams',
   "Chairman's Cup",
   "Champions' Cup",
   'Channel Trophy',
@@ -595,7 +595,6 @@ my @MULTI_WORDS =
 
   ### GGG
 
-  'Gabrial UI Cup',
   'Garden Cities',
   'Gardermoen Airport Hotel Pairs',
   'Gardermoen Airport Hotel Cup',
@@ -603,7 +602,6 @@ my @MULTI_WORDS =
   'Goulyash by E. Gladysh',
 
   'GHTD Cup',
-  'Goksu-Yalikavak Pairs',
   'Golden Jubilee',
 
   'Grand Prix of Prague',
@@ -692,6 +690,7 @@ my @MULTI_WORDS =
   'Justice J M Lal All India Open',
 
   # INDONESIA
+  'Gabrial UI Bastaman Cup',
   'Geologi Cup',
   'Indonesian Inter-City Championship',
   'Indonesian Inter-Club Championship',
@@ -717,6 +716,7 @@ my @MULTI_WORDS =
   'Indonesian Women Teams',
   'Indonesian Women Trials',
   "Kepri Governor's Cup",
+  'PT Timah Invitational Teams',
   'Telkom Indonesia Open',
 
 
@@ -780,7 +780,6 @@ my @MULTI_WORDS =
   'Nandu Oke Memorial IAF Swiss Pairs',
   'Narain Bhojwani Memorial',
   'NEC Cup',
-  'Necmettin Sunget Teams Cup',
   'Neighbor Challenge',
 
   'NN Cup',
@@ -831,7 +830,6 @@ my @MULTI_WORDS =
   'Prince Henrik Trophy',
   'Prince Takamatsu Cup',
   'PSN Sarma Centenary Memorial',
-  'PT Timah Invitational Teams',
   'Puutalo Open',
 
 
@@ -985,6 +983,9 @@ my @MULTI_WORDS =
   'Izmir Teams Cup',
   'Kalani Trophy',
   'Murat Kilercioglu Turkish Spring Teams',
+  'Ankara Summer Teams',
+  'Goksu-Yalikavak Pairs',
+  'Necmettin Sunget Teams Cup',
 
   ### UUU
 
@@ -1828,7 +1829,9 @@ my %MULTI_TYPOS =
 
   ### GGG
 
-  'Gabrial UI Bastaman Cup' => ['gabrial-ui cup',
+  'Gabrial UI Bastaman Cup' => [
+    'bastaman cup',
+    'gabrial-ui cup',
     'gabrial ui cup'],
   'Geologi Cup' => ['geo cup'],
   'Goulyash by E. Gladysh' => ['goulyash by e_gladysh'],
@@ -2031,16 +2034,6 @@ my %MULTI_TYPOS =
     'indonesian national open team'],
   'Indonesian Open Trials' => ['indonesian men national selection',
     'indonesian men selection'],
-  'Indonesian U21 Teams' => [
-    'indonesian student championship jhs',
-    'indonesian student championship shs',
-    'indonesian students championship shs',
-    'students championship shs'],
-  'Indonesian U26 Teams' => [
-    'indonesian student championship',
-    'indonesian student championships',
-    'indonesian students championship',
-    'indonesian students championships'],
   'Indonesian U21 Trials' => ['indonesian u21 selection',
     'indonesia u21 selection', 'indoneian u21 selection',
     'indonesian u21 selekction'],

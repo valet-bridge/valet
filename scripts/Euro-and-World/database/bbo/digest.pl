@@ -107,7 +107,7 @@ exit if $debug_flag;
 
 for my $date_start (sort keys %data)
 {
-if ($date_start eq '2006-11-26')
+if ($date_start eq '2012-04-17')
 {
   print "HERE\n";
 }

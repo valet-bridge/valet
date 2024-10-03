@@ -901,11 +901,11 @@ sub spaceship
       {
         if ($#{$self->{$field}} != 0)
         {
-          die "Need a single value: $field";
+          die "Need a single value: $field, " . $self->str_as_read();
         }
         if ($#{$other->{$field}} != 0)
         {
-          die "Need a single value: $field";
+          die "Need a single value: $field, " . $other->str_as_read();
         }
 
         my $value_self = $self->{$field}[0];
