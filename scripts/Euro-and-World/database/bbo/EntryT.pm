@@ -111,7 +111,13 @@ my %SCORING_CORRECTIONS = (
 my %FORM_CORRECTIONS = (
   # Says Team 1, Team 2 in BBO file, but is pairs or individual
   'All India Corporate Invitational Pairs' => [
+    25406, 25408,
+    30537,
     46420, 46433],
+  'All India HCL Pairs' => [
+    19955, 19968,
+    25115, 25129,
+    29833],
   'Argentinian Mixed Pairs' => [
     43946],
   'Australian Senior Pairs' => [
@@ -314,9 +320,17 @@ my %FORM_CORRECTIONS = (
   'Italian Mixed Pairs' => [
     36287, 36289, 36293, 36295, 36296, 36308, 36309,
     41672, 41674, 41691, 41692, 41704, 41705],
+  'L C Sunil Rajendra Memorial' => [
+    30177, 30181],
+  'Maharaja Yeshwantrao Holkar National Pairs' => [
+    12268, 12269, 12270,
+    21381, 21391,
+    26606, 26607, 26614, 26616],
   'Maharashtra State Pairs' => [
     22116, 22117, 22118, 22119, 22122, 22129, 22130, 22131, 22133, 
     22135],
+  'Mohan Sicka Pairs' => [
+    32032, 32033],
   'Northern Territory Gold Swiss Pairs' => [
      1242,  1244,  1245,  1246,  1247,  1248],
   'Norwegian Mixed Pairs' => [
@@ -376,6 +390,10 @@ my %FORM_CORRECTIONS = (
     11733, 11734, 11736, 11738, 11740, 11743, 11745, 11758, 11761, 
     11762, 11763, 11766, 11767, 11774, 11775, 11777, 11780, 11783, 
     11788, 11790, 11792, 11796, 11798, 11801, 11803],
+  'Rajasthan Invitational Pairs' => [
+    32569, 32582],
+  'R N Bagla Memorial Pairs' => [
+    19678],
   'Rondane Pairs Cup' => [
     15526, 15532,
     20358, 20372,

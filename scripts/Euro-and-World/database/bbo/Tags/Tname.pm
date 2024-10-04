@@ -678,7 +678,6 @@ my @MULTI_WORDS =
 
   # INDIA
   'All India Bangur Cement Hindusthan Club',
-  'All India Corporate Invitational',
   'All India Corporate Invitational Pairs',
   'All India HCL Teams',
   'All India Shree Cement',
@@ -697,23 +696,26 @@ my @MULTI_WORDS =
   'Indian Western Zone Championship',
   'Jaya Jain Memorial',
   'Justice J M Lal All India Open',
+  'Karnataka State Teams',
   'Krishnapatnam Port National Masters',
   'Lalit Mohanka Memorial',
   'L C Sunil Rajendra Memorial',
   'Madras Gymkhana Club Open',
   'Maharaja Yeshwantrao Holkar National Pairs',
   'Maharaja Yeshwantrao Holkar National Teams',
-  'Maharashtra State Championship',
   'Maharashtra State Pairs',
+  'Maharashtra State Teams',
   'Mitra Vihar State Championship',
-  'Mohan Sicka Trophy',
+  'Mohan Sicka BAM Teams',
+  'Mohan Sicka Pairs',
   'Mohanlal Bhartia Memorial Grand Prix',
   'Poddar National Masters',
   'Prashant Desai Memorial',
   'PYC Hindu Gymkhana Royale',
   'PYC Hindu Gymkhana Pairs Royale',
   'Rai Bahadur Modi Memorial All India Open',
-  'Rajasthan Invitational Championship',
+  'Rajasthan Invitational Pairs',
+  'Rajasthan Invitational Teams',
   'R N Bagla Memorial Pairs',
   'R R Gupta Memorial Championship',
   'R Ratnam Memorial',
@@ -909,7 +911,6 @@ my @MULTI_WORDS =
   "Sternberg Women's BAM Teams",
   'Sudamericano Transnacional',
   'Summer Monsoon League',
-  'Summer Nationals',
   'Sunchime Fund Cup',
   'Suomen Cup',
   'Tianjin Binhai Cup',
@@ -1071,26 +1072,15 @@ my %MULTI_TYPOS =
   'African Zonal Women Teams' => [
     'zonal africa ladies',
     'zonal africa women'],
-  'All India Corporate Invitational' => [
-    'all india invitational corporate'],
-  'All India HCL Teams' => [
-    'all india hcl open',
-    'hcl bridg tournamnt',
-    'hcl bridge champion ship',
-    'hcl bridge championship',
-    'hcl bridge tournament',
-    'hcl championship',
-    'hcl international bridge championship',
-    'hcl international open',
-    'hcl international open championship',
-    'hcl open',
-    'hcl open championship',
-    'hcl open international tournament',
-    'hcl open tournament'],
+  # 'All India Corporate Invitational' => [
+    # 'all india invitational corporate'],
   'All India Bangur Cement Hindusthan Club' => [
     'bangur cement hindusthan club'],
   'All India Corporate Invitational Pairs' => [
-    'corporate pairs', 'corporate invitational pairs'],
+    'all india corporate invitational',
+    'all india invitational corporate',
+    'corporate pairs', 
+    'corporate invitational pairs'],
   'All India UTI Bank Masters Championship' => [
     'ull aindia uti bank masters championship',
     'all india uti national masters championship',
@@ -1994,6 +1984,14 @@ my %MULTI_TYPOS =
     'state level bridgee championship'],
   'Indian Western Zone Championship' => [
     'cba wz India'],
+  'Karnataka State Teams' => [
+    'ksba golden jubily'],
+  'Mohan Sicka BAM Teams' => [
+    'mohan sicka',
+    'mohan sicka bam',
+    'mohan sicka trophy'],
+  'Mohan Sicka Pairs' => [
+    'sickka pairs'],
 
   # INDONESIA
   'Indonesian U26 Women Pair Trials' => [
@@ -2230,11 +2228,6 @@ my %MULTI_TYPOS =
     'maharaja yashwant rao holkar bridge championship',
     'yashawantrao holkar championship',
     'yashwant rao holkar bridge championship'],
-  'Maharashtra State Championship' => [
-    'maharashtra state brahmin sabha',
-    'maharashtra state brhman sabha',
-    'maharashtra state championships',
-    'maharashtra championship'],
   'Marit Sveaas Tournament' => [
     'marit sveaas international bridge tournament',
     'marit sveaas international  bridge tournament'],
@@ -2245,7 +2238,6 @@ my %MULTI_TYPOS =
   'Mitra Vihar State Championship' => ['mitravihar centenary state level',
     'mitravihar club centenary state level',
     'mitravihar nasik centenary state level'],
-  'Mohan Sicka Trophy' => ['mohan sicka'],
   'Mohanlal Bhartia Memorial Grand Prix' => [
     'bhartia memorial gran prix',
     'bhartia memorial grand prix',
@@ -2666,16 +2658,6 @@ my %MULTI_TYPOS =
   'Rai Bahadur Modi Memorial All India Open' => [
     'rai bahadur modi memorial',
     'rai bahadur memorial'],
-  'Rajasthan Invitational Championship' => [
-    'rajasthan bridge association invitational',
-    'rajasthan bridge championship',
-    'rajasthan championship',
-    'rajasthan invitational bridge championship',
-    'rajasthan invitational bridge tournament',
-    'rajasthan invitational championship',
-    'rajasthan invitation tournament',
-    'rajasthan invitatational tournament',
-    'rajasthan invitational tournament'],
   'Riga Invites to Jurmala' => ['riga invites', 'latvia invites'],
   'Rio de Janeiro Championship' => ['rio de janeiro state final'],
   'Rio de Janeiro Christmas Individual' => [
@@ -2728,7 +2710,6 @@ my %MULTI_TYPOS =
   'Rui Pinto Cup' => ['taça rui pinto'],
   'Ruia Gold Cup' => [
     'golden jubilee',
-    'golden jubily',
     'ruia gold', 
     'ruia gold trophy',
     'ruia gols', 
@@ -2868,7 +2849,6 @@ my %MULTI_TYPOS =
   'Sudamericano Transnacional' => ['sudamerican transnacional',
     'sudamerico transnacional'],
   'Summer Monsoon League' => ['summer monsoon', 'summer monsoon leahue'],
-  'Summer Nationals' => ['summer national'],
 
   # SWEDEN
   'Swedish District Championship' => ['swedish championships distrcit',
@@ -2963,13 +2943,23 @@ my %MULTI_TYPOS =
     'türk trakya bölge kulüpler þampýyonasi ekýbý', 'trachean club teams'],
   'Thrace Cup League' => ['trakya kulupler ligi'],
   'Tianjin Binhai Cup' => ['tianjin bin hai cup'],
-  'Tolani Gold Trophy' => ['dr_tolani gold troph',
-    'tolani summer nationals gold', 'tolani summer nationald gold',
-    'tolani gold summer nationals', 'tolani gold summar nationals',
-    'tolani gold summer national', 'dr_tolanigoldcup',
-    'tolani gold summer', 'dr_tolani gold cup summer nationals',
-    'dr_tolani gold summer nationals', 'tolani gold summer nationals',
-    'tolani gols summer nationals'],
+  'Tolani Gold Trophy' => [
+    'dr_tolanigoldcup',
+    'dr_tolani gold cup summer nationals',
+    'dr_tolani gold summer nationals', 
+    'dr_tolani gold troph',
+    'tolani gold summar nationals',
+    'tolani gold summer nationals',
+    'tolani gold summer', 
+    'tolani gold summer national', 
+    'tolani gold summer nationals', 
+    'tolani gold summer nationals',
+    'tolani gols summer nationals',
+    'tolani open summer national',
+    'tolani open summer nationals',
+    'tolani summer nationals gold', 
+    'tolani summer nationald gold',
+    ],
   'Tolani Grand Prix' => ['tolani gp', 'tolani grand pix'],
   'Tolani Silver Cup' => ['dr tolani summer nationals silver',
     'tolani silver trophy',

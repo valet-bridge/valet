@@ -232,6 +232,13 @@ my %MEETS_INDIA =
         DATE_START => '2015-07-23',
         DATE_END => '2015-07-26'
       },
+      '2016' =>
+      {
+        YEAR => 2016,
+        CITY => 'Panjim',
+        DATE_START => '2016-07-30',
+        DATE_END => '2016-07-31'
+      },
       '2017' =>
       {
         YEAR => 2017,
@@ -268,10 +275,25 @@ my %MEETS_INDIA =
     {
       '2012' =>
       {
+        ORDINAL => 1,
+        CITY => 'Nashik',
+        YEAR => 2012,
+        DATE_START => '2011-03-15', # More dates
+        DATE_END => '2011-03-15'
+      },
+      '2012' =>
+      {
         ORDINAL => 2,
         YEAR => 2012,
         DATE_START => '2012-06-19', # More dates
         DATE_END => '2012-06-20'
+      },
+      '2013' =>
+      {
+        ORDINAL => 3,
+        YEAR => 2013,
+        DATE_START => '2013-02-18', # More dates
+        DATE_END => '2013-02-20'
       },
       '2014' =>
       {
@@ -414,6 +436,12 @@ my %MEETS_INDIA =
         DATE_START => '2008-11-12',
         DATE_END => '2008-11-21'
       },
+      '2009' =>
+      {
+        ORDINAL => 51,
+        DATE_START => '2009-12-24', # More dates
+        DATE_END => '2009-12-24'
+      },
       '2010' =>
       {
         ORDINAL => 52,
@@ -518,7 +546,50 @@ my %MEETS_INDIA =
         DATE_END => '2024-01-09'
       },
     }
-  }
+  },
+
+  'Maharashtra State Championship'  =>
+  {
+    ORGANIZATION => 'BFI',
+    COUNTRY => 'India',
+    ORIGIN => 'Regional',
+    ZONE => 'Asia Pacific',
+
+    EDITIONS => 
+    {
+      '2012' =>
+      {
+        ORDINAL => 32,
+        YEAR => 2012,
+        DATE_START => '2012-06-19', # More dates
+        DATE_END => '2012-06-20'
+      },
+    }
+  },
+
+  'Rajasthan Invitational Championship'  =>
+  {
+    ORGANIZATION => 'BFI',
+    COUNTRY => 'India',
+    ORIGIN => 'Invitational',
+    ZONE => 'Asia Pacific',
+
+    EDITIONS => 
+    {
+      '2013' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-05-03',
+        DATE_END => '2013-05-05'
+      },
+      '2014' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-03-07',
+        DATE_END => '2014-03-09'
+      },
+    }
+  },
 );
 
 my %TOURNAMENTS_INDIA =
@@ -613,12 +684,37 @@ my %TOURNAMENTS_INDIA =
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
     FORM => 'Pairs',
-    SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            SCORING => 'MP',
+            DATE_START => '2012-09-16',
+            DATE_END => '2012-09-16'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            SCORING => 'MP',
+            DATE_START => '2013-09-28',
+            DATE_END => '2013-09-28'
+          } 
+        }
+      },
       '2016' =>
       {
         CHAPTERS =>
@@ -626,8 +722,60 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2016,
+            SCORING => 'IMP',
             DATE_START => '2016-08-27',
             DATE_END => '2016-08-27'
+          } 
+        }
+      },
+    }
+  },
+
+  'All India HCL Pairs' =>
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        MEET => 'All India HCL Tournament',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-09-11',
+            DATE_END => '2011-09-11'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'All India HCL Tournament',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-09-02',
+            DATE_END => '2012-09-02'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'All India HCL Tournament',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-08-11',
+            DATE_END => '2013-08-11'
           } 
         }
       },
@@ -789,18 +937,21 @@ my %TOURNAMENTS_INDIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2011' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2011,
+            DATE_START => '2011-10-15',
+            DATE_END => '2011-10-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-11-11',
+            DATE_END => '2011-11-13'
           } 
         }
       },
@@ -1372,18 +1523,16 @@ my %TOURNAMENTS_INDIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      # TODO Same as Indian Inter-State Teams?
+      '2013' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2013,
+            DATE_START => '2013-11-09',
+            DATE_END => '2013-11-10'
           } 
         }
       },
@@ -1522,6 +1671,34 @@ my %TOURNAMENTS_INDIA =
     }
   },
 
+  'Karnataka State Teams' =>
+  {
+    ORGANIZATION => 'BFI',
+    COUNTRY => 'India',
+    ORIGIN => 'Regional',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-07-28',
+            DATE_END => '2012-07-29'
+          } 
+        }
+      },
+    }
+  },
+
   'Krishnapatnam Port National Masters' =>
   {
     ORGANIZATION => 'BFI',
@@ -1632,25 +1809,22 @@ my %TOURNAMENTS_INDIA =
     COUNTRY => 'India',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
-    FORM => 'Teams',
-    SCORING => 'IMP',
+    FORM => 'Pairs',
+    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2013' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2013,
+            DATE_START => '2013-09-15',
+            DATE_END => '2013-09-15'
           } 
         }
       },
@@ -1712,12 +1886,8 @@ my %TOURNAMENTS_INDIA =
 
   'Maharaja Yeshwantrao Holkar National Pairs' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
-    ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Pairs',
-    SCORING => 'IMP',
+    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
@@ -1725,6 +1895,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2009' =>
       {
+        MEET => 'Indian Winter Nationals',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1732,6 +1903,32 @@ my %TOURNAMENTS_INDIA =
             YEAR => 2009,
             DATE_START => '2009-12-24',
             DATE_END => '2009-12-24'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Indian Winter Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-12-10',
+            DATE_END => '2011-12-10'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'Indian Winter Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-12-22',
+            DATE_END => '2012-12-22'
           } 
         }
       },
@@ -1751,7 +1948,20 @@ my %TOURNAMENTS_INDIA =
 
     EDITIONS =>
     {
-      '2010' =>
+      '2009' =>
+      {
+        MEET => 'Indian Winter Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-12-24',
+            DATE_END => '2009-12-24'
+          } 
+        }
+      },
+      '2010A' =>
       {
         CHAPTERS =>
         {
@@ -1760,6 +1970,19 @@ my %TOURNAMENTS_INDIA =
             YEAR => 2010,
             DATE_START => '2010-01-08',
             DATE_END => '2010-01-09'
+          } 
+        }
+      },
+      '2010B' =>
+      {
+        MEET => 'Indian Winter Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-12-17',
+            DATE_END => '2010-12-17'
           } 
         }
       },
@@ -1790,7 +2013,7 @@ my %TOURNAMENTS_INDIA =
     }
   },
 
-  'Maharashtra State Championship' =>
+  'Maharashtra State Teams' =>
   {
     ORGANIZATION => 'BFI',
     COUNTRY => 'India',
@@ -1805,6 +2028,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2012' =>
       {
+        MEET => 'Maharashtra State Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1817,6 +2041,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2014' =>
       {
+        MEET => 'Maharashtra State Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1858,7 +2083,7 @@ my %TOURNAMENTS_INDIA =
   {
     ORGANIZATION => 'BFI',
     COUNTRY => 'India',
-    ORIGIN => 'National',
+    ORIGIN => 'Regional',
     ZONE => 'Asia Pacific',
     FORM => 'Pairs',
     SCORING => 'IMP',
@@ -1869,6 +2094,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2012' =>
       {
+        MEET => 'Maharashtra State Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1913,7 +2139,7 @@ my %TOURNAMENTS_INDIA =
     }
   },
 
-  'Mohan Sicka Trophy' =>
+  'Mohan Sicka BAM Teams' =>
   {
     FORM => 'Teams',
     SCORING => 'BAM',
@@ -1932,6 +2158,44 @@ my %TOURNAMENTS_INDIA =
             YEAR => 2009,
             DATE_START => '2009-12-23',
             DATE_END => '2009-12-23'
+          } 
+        }
+      },
+    }
+  },
+
+  'Mohan Sicka Pairs' =>
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        MEET => 'Indian Winter Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-12-23',
+            DATE_END => '2009-12-23'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Maharashtra State Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-01-20',
+            DATE_END => '2014-01-20'
           } 
         }
       },
@@ -2230,7 +2494,36 @@ my %TOURNAMENTS_INDIA =
     }
   },
 
-  'Rajasthan Invitational Championship' =>
+  'Rajasthan Invitational Pairs' =>
+  {
+    ORGANIZATION => 'BFI',
+    COUNTRY => 'India',
+    ORIGIN => 'Invitational',
+    ZONE => 'Asia Pacific',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        MEET => 'Rajasthan Invitational Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-03-09',
+            DATE_END => '2014-03-09'
+          } 
+        }
+      },
+    }
+  },
+
+  'Rajasthan Invitational Teams' =>
   {
     ORGANIZATION => 'BFI',
     COUNTRY => 'India',
@@ -2245,6 +2538,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2013' =>
       {
+        MEET => 'Rajasthan Invitational Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2257,6 +2551,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2014' =>
       {
+        MEET => 'Rajasthan Invitational Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2276,25 +2571,22 @@ my %TOURNAMENTS_INDIA =
     COUNTRY => 'India',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2011' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2011,
+            DATE_START => '2011-08-26',
+            DATE_END => '2011-08-26'
           } 
         }
       },
@@ -2582,8 +2874,21 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2015,
-            DATE_START => '2015-07-26',
+            DATE_START => '2015-07-25',
             DATE_END => '2015-07-26'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+        MEET => 'Goa Bridge Festival',
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-07-30',
+            DATE_END => '2016-07-31'
           } 
         }
       },
@@ -2599,6 +2904,19 @@ my %TOURNAMENTS_INDIA =
 
     EDITIONS =>
     {
+      '2011' =>
+      {
+        MEET => 'Indian Summer Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-03-15',
+            DATE_END => '2011-03-16'
+          } 
+        }
+      },
       '2012' =>
       {
         MEET => 'Indian Summer Nationals',
@@ -2609,6 +2927,19 @@ my %TOURNAMENTS_INDIA =
             YEAR => 2012,
             DATE_START => '2012-06-19',
             DATE_END => '2012-06-19'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'Indian Summer Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-02-18',
+            DATE_END => '2013-02-20'
           } 
         }
       },
@@ -2679,6 +3010,18 @@ my %TOURNAMENTS_INDIA =
           } 
         }
       },
+      '2008' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-12-14',
+            DATE_END => '2008-12-14'
+          } 
+        }
+      },
       '2009' =>
       {
         CHAPTERS =>
@@ -2686,16 +3029,10 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2009,
-            DATE_START => '2009-01-05',
-            DATE_END => '2009-01-05'
-          },
-          'C1' => 
-          {
-            YEAR => 2009,
             DATE_START => '2009-10-01',
             DATE_END => '2009-10-05'
           },
-          'C2' => 
+          'C1' => 
           {
             YEAR => 2009,
             DATE_START => '2009-12-12',
