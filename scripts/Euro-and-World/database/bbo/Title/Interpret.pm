@@ -292,7 +292,7 @@ sub fix_metals
       ($value eq 'Silver' || $value eq 'Gold');
 
     my $meet = $knowledge->get_field('MEET', $bbono);
-    next unless $meet eq 'Tolani Summer Nationals';
+    next unless $meet eq 'Indian Summer Nationals';
 
     if ($value eq 'Silver')
     {

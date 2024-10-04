@@ -110,6 +110,8 @@ my %SCORING_CORRECTIONS = (
 
 my %FORM_CORRECTIONS = (
   # Says Team 1, Team 2 in BBO file, but is pairs or individual
+  'All India Corporate Invitational Pairs' => [
+    46420, 46433],
   'Argentinian Mixed Pairs' => [
     43946],
   'Australian Senior Pairs' => [
@@ -312,6 +314,9 @@ my %FORM_CORRECTIONS = (
   'Italian Mixed Pairs' => [
     36287, 36289, 36293, 36295, 36296, 36308, 36309,
     41672, 41674, 41691, 41692, 41704, 41705],
+  'Maharashtra State Pairs' => [
+    22116, 22117, 22118, 22119, 22122, 22129, 22130, 22131, 22133, 
+    22135],
   'Northern Territory Gold Swiss Pairs' => [
      1242,  1244,  1245,  1246,  1247,  1248],
   'Norwegian Mixed Pairs' => [
@@ -366,6 +371,11 @@ my %FORM_CORRECTIONS = (
     22677, 22678, 22679, 22680, 22681],
   'Polish Open Pairs' => [
      4285,  4286],
+  'PYC Hindu Gymkhana Royale' => [
+    11718, 11719, 11720, 11721, 11722, 11723, 11725, 11726, 11727, 
+    11733, 11734, 11736, 11738, 11740, 11743, 11745, 11758, 11761, 
+    11762, 11763, 11766, 11767, 11774, 11775, 11777, 11780, 11783, 
+    11788, 11790, 11792, 11796, 11798, 11801, 11803],
   'Rondane Pairs Cup' => [
     15526, 15532,
     20358, 20372,

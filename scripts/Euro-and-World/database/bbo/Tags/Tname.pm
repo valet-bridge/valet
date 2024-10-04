@@ -208,6 +208,36 @@ my @MULTI_WORDS =
   'Icelandic Cup',
   'Icelandic Open Teams',
 
+  # INDONESIA
+  'Gabrial UI Bastaman Cup',
+  'Geologi Cup',
+  'Indonesian Inter-City Championship',
+  'Indonesian Inter-Club Championship',
+  'Indonesian Inter-Province Championship',
+  'Indonesian Invitational Teams',
+  'Indonesian Junior League Online',
+  'Indonesian Mixed Pair Trials',
+  'Indonesian Mixed Teams',
+  'Indonesian Open Pair Trials',
+  'Indonesian Open Teams',
+  'Indonesian Open Trials',
+  'Indonesian Premier League',
+  'Indonesian U16 Pair Trials',
+  'Indonesian U18 Teams',
+  'Indonesian U21 Pair Trials',
+  'Indonesian U21 Teams',
+  'Indonesian U26 Pair Trials',
+  'Indonesian U26 Teams',
+  'Indonesian U26 Women Pair Trials',
+  'Indonesian U31 Teams',
+  'Indonesian U31 Women Teams',
+  'Indonesian Women Pair Trials',
+  'Indonesian Women Teams',
+  'Indonesian Women Trials',
+  "Kepri Governor's Cup",
+  'PT Timah Invitational Teams',
+  'Telkom Indonesia Open',
+
   # IRELAND
   'Irish Invitational Pairs',
   'Irish Open Trials',
@@ -374,6 +404,22 @@ my @MULTI_WORDS =
   'Bergen Grand Tournament',
   'Bologna Trophy',
   'Centre Island Teams',
+  'FOSS Grand Tournament',
+  'FOSS-Tren',
+  'Madeira Open',
+  'Madeira Swiss Teams',
+  'Madrid Senior Teams',
+  'Marit Sveaas Tournament',
+  'Mo i Rana Ladies Invitational',
+  'Pärnu Summer Invitational Pairs',
+  'Pärnu Summer Open Teams',
+  'Peggy Bayer',
+  'Pesta Sukan',
+  'Prince Henrik Trophy',
+  'Rome Challenger Trophy',
+  'Torneo di Rastignano',
+  'Torneo di Roma',
+  'Toscana Cup',
 
   # ----------------------------------------------------
 
@@ -570,8 +616,6 @@ my @MULTI_WORDS =
   'Forbo Nations Cup',
   'Forest Trophy',
   'Fortuna Cup',
-  'FOSS Grand Tournament',
-  'FOSS-Tren',
   'Four Nations Cup',
   
   # FRANCE
@@ -636,88 +680,52 @@ my @MULTI_WORDS =
   'All India Bangur Cement Hindusthan Club',
   'All India Corporate Invitational',
   'All India Corporate Invitational Pairs',
-  'All India HCL Tournament',
+  'All India HCL Teams',
   'All India Shree Cement',
   'All India UTI Bank Masters Championship',
   'Bhabha Atomic Research Centre Open',
   'B L Rao Memorial Open',
   'Dainik Navjyoti All India Inter-State',
-  'Delhi Gymkhana Club Centenary',
   'Delhi Gymkhana Club Open',
   'Godfrey Phillips All India Open',
   'Hindusthan Club Teams',
-
   'Indian Inter-State Teams',
   'Indian Open Trials',
   'Indian Senior Trials',
   'Indian South Zone Championship',
   'Indian State Championship',
   'Indian Western Zone Championship',
-
+  'Jaya Jain Memorial',
+  'Justice J M Lal All India Open',
   'Krishnapatnam Port National Masters',
   'Lalit Mohanka Memorial',
   'L C Sunil Rajendra Memorial',
-
   'Madras Gymkhana Club Open',
-  'Maharaja Yeshwantrao Holkar National',
+  'Maharaja Yeshwantrao Holkar National Pairs',
+  'Maharaja Yeshwantrao Holkar National Teams',
   'Maharashtra State Championship',
   'Maharashtra State Pairs',
   'Mitra Vihar State Championship',
   'Mohan Sicka Trophy',
   'Mohanlal Bhartia Memorial Grand Prix',
-
-  'IOB Madras Gymkhana Open',
   'Poddar National Masters',
-  'R N Bagla Memorial Pairs',
-  'R R Gupta Memorial Championship',
+  'Prashant Desai Memorial',
   'PYC Hindu Gymkhana Royale',
   'PYC Hindu Gymkhana Pairs Royale',
   'Rai Bahadur Modi Memorial All India Open',
   'Rajasthan Invitational Championship',
+  'R N Bagla Memorial Pairs',
+  'R R Gupta Memorial Championship',
+  'R Ratnam Memorial',
+  'Ruia Gold Cup',
+  'Ruia Silver Cup',
+  'Shree Keni Trophy',
   'Tolani Gold Trophy',
   'Tolani Grand Prix',
   'Tolani Silver Cup',
   'Uttar Pradesh State Championship',
 
-  'Ruia Gold Cup',
-  'Ruia Silver Cup',
-  'Ruia Trophy',
 
-  'Prashant Desai Memorial',
-  'R Ratnam Memorial',
-  'Shree Keni Trophy',
-  'Jaya Jain Memorial',
-  'Justice J M Lal All India Open',
-
-  # INDONESIA
-  'Gabrial UI Bastaman Cup',
-  'Geologi Cup',
-  'Indonesian Inter-City Championship',
-  'Indonesian Inter-Club Championship',
-  'Indonesian Inter-Province Championship',
-  'Indonesian Invitational Teams',
-  'Indonesian Junior League Online',
-  'Indonesian Mixed Pair Trials',
-  'Indonesian Mixed Teams',
-  'Indonesian Open Pair Trials',
-  'Indonesian Open Teams',
-  'Indonesian Open Trials',
-  'Indonesian Premier League',
-  'Indonesian U16 Pair Trials',
-  'Indonesian U18 Teams',
-  'Indonesian U21 Pair Trials',
-  'Indonesian U21 Teams',
-  'Indonesian U26 Pair Trials',
-  'Indonesian U26 Teams',
-  'Indonesian U26 Women Pair Trials',
-  'Indonesian U31 Teams',
-  'Indonesian U31 Women Teams',
-  'Indonesian Women Pair Trials',
-  'Indonesian Women Teams',
-  'Indonesian Women Trials',
-  "Kepri Governor's Cup",
-  'PT Timah Invitational Teams',
-  'Telkom Indonesia Open',
 
 
 
@@ -759,17 +767,12 @@ my @MULTI_WORDS =
   ### MMM
 
   'Maccabi Games',
-  'Madeira Open',
-  'Madeira Swiss Teams',
-  'Madrid Senior Teams',
-  'Marit Sveaas Tournament',
   'Marmara Inter-Club Championship',
   'McConnell Cup',
   'Menpora-Pertamina Cup',
   'Mike Lawrence Exhibition',
   'Milan Trophy',
   "Missouri Braggin' Rights",
-  'Mo i Rana Ladies Invitational',
   'Mondi Cup',
   'Mountain Sea Cup',
   'MTP Cup',
@@ -814,10 +817,6 @@ my @MULTI_WORDS =
   'Paris Youth Open Teams',
   'Park Hotell Swiss Teams',
   'Patton de Monaco',
-  'Pärnu Summer Invitational Pairs',
-  'Pärnu Summer Open Teams',
-  'Peggy Bayer',
-  'Pesta Sukan',
   'Petit Grand Prix van Driene',
   'Pertamina Field Tambun Cup',
   "Pigg's Peak All Africa",
@@ -827,7 +826,6 @@ my @MULTI_WORDS =
 
   'PRBA State Level Open',
   'Prince Albert II Cup',
-  'Prince Henrik Trophy',
   'Prince Takamatsu Cup',
   'PSN Sarma Centenary Memorial',
   'Puutalo Open',
@@ -846,7 +844,6 @@ my @MULTI_WORDS =
   'Rio de Janeiro Christmas Individual',
   'Roberto Taunay Cup',
 
-  'Rome Challenger Trophy',
   'Rottneros Nordic Cup',
   'Rui Pinto Cup',
 
@@ -953,9 +950,6 @@ my @MULTI_WORDS =
   'Thrace Club Teams',
   'Thrace Cup League',
   'Top Circuit',
-  'Torneo di Rastignano',
-  'Torneo di Roma',
-  'Toscana Cup',
   'Towns Cup',
   'Transnational Open Teams',
 
@@ -1079,7 +1073,7 @@ my %MULTI_TYPOS =
     'zonal africa women'],
   'All India Corporate Invitational' => [
     'all india invitational corporate'],
-  'All India HCL Tournament' => [
+  'All India HCL Teams' => [
     'all india hcl open',
     'hcl bridg tournamnt',
     'hcl bridge champion ship',
@@ -1571,19 +1565,18 @@ my %MULTI_TYPOS =
     'danish champoinship ladies pairs',
     'ladies pairs - danish championship'],
 
-  'Delhi Gymkhana Club Centenary' => [
-    'delhi gymkhana centenary celebrations',
-    'delhi gymkhana club centenary celebrations',
-    'dgc centenary tournament',
-    'dgc centenary celebrations'],
-
   'Delhi Gymkhana Club Open' => [
+    'delhi gymkhana centenary celebrations',
+    'delhi gymkhana championship',
+    'delhi gymkhana club centenary',
+    'delhi gymkhana club centenary celebrations',
     'delhi gymkhana club championship',
     'delhi gymkhana club open championship',
-    'delhi gymkhana championship',
     'delhi gymkhana open',
     'delhi gymkhana open championship',
     'delhi gymkhana open chmpionship',
+    'dgc centenary celebrations',
+    'dgc centenary tournament',
     'dgc open championship'],
   'Division Nationale' => ['division natonale', 'division ntionale',
     'division natinale', 'divison nationale', 'french dn1', 'div_nat',
@@ -1873,7 +1866,6 @@ my %MULTI_TYPOS =
   "Gro's Supercup" => ["gro's super-cup", 'gros supercup'],
   'König Ludwig Cup' => ['koenig ludwig nationen cup'],
 
-  'Golden Jubilee' => ['golden jubily'],
   'Grand National Teams' => ['gnt championship'],
 
   # GREECE
@@ -2040,9 +2032,6 @@ my %MULTI_TYPOS =
   'Indonesian U26 Trials' => ['indonesian u26 selection'],
   'Indonesian Women Trials' => ['indonesian women national selection'],
 
-  'IOB Madras Gymkhana Open' => [
-    'iob maras gymkhana open',
-    'IOB madras gymkhana club championship'],
 
   # IRELAND -- mapped in detail
   'Irish Invitational Pairs' => [
@@ -2225,9 +2214,14 @@ my %MULTI_TYPOS =
   'Madeira Swiss Teams' => ['swiss teams madeira', 'madeira swiss'],
   'Madras Gymkhana Club Open' => [
     'madras gymkhana open',
-    'mgc open'],
+    'mgc open',
+    'iob madras gymkhana club championship',
+    'iob madras gymkhana open',
+    'iob maras gymkhana open'],
   'Madrid Senior Teams' => ['equipos senior madrid'],
-  'Maharaja Yeshwantrao Holkar National' => [
+  'Maharaja Yeshwantrao Holkar National Pairs' => [
+    'holkar pairs'],
+  'Maharaja Yeshwantrao Holkar National Teams' => [
     'holkars trophy',
     'm yeswantrao holkar bridge championship',
     'm yeswantrao holkar national bridge championship',
@@ -2732,7 +2726,13 @@ my %MULTI_TYPOS =
     'rosfjord monrad teams'],
   'Rottneros Nordic Cup' => ['rottneros cup'],
   'Rui Pinto Cup' => ['taça rui pinto'],
-  'Ruia Gold Cup' => ['ruia gold', 'ruia gols', 'ruia gold trophy'],
+  'Ruia Gold Cup' => [
+    'golden jubilee',
+    'golden jubily',
+    'ruia gold', 
+    'ruia gold trophy',
+    'ruia gols', 
+    'ruia trophy'],
   'Ruia Silver Cup' => ['ruia silver'],
 
   # RUSSIA
@@ -3268,7 +3268,7 @@ my %SINGLE_TYPOS =
     'reisiger', 
     'reisinger', 
     'resisinger'],
-  'Ruia Trophy' => ['ruia'],
+  'Ruia Gold Cup' => ['ruia'],
   'Scottish Cup' => ['scottishcupplate'],
   'South American Open Teams' => ['sabc'],
   'Southeast Asian Games' => ['seagames'],
