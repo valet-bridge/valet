@@ -590,6 +590,27 @@ my %MEETS_INDIA =
       },
     }
   },
+
+  'Uttar Pradesh State Championship' =>
+  {
+    ORGANIZATION => 'BFI',
+    COUNTRY => 'India',
+    ORIGIN => 'Regional',
+    ZONE => 'Asia Pacific',
+
+    EDITIONS => 
+    {
+      '2012' =>
+      {
+        ORDINAL => 42,
+        YEAR => 2012,
+        CITY => 'Noida',
+        DATE_START => '2012-08-18',
+        DATE_END => '2012-08-19'
+      },
+    }
+  },
+
 );
 
 my %TOURNAMENTS_INDIA =
@@ -924,6 +945,62 @@ my %TOURNAMENTS_INDIA =
     }
   },
 
+  'All India Open Pairs' =>
+  {
+    ORGANIZATION => 'BFI',
+    COUNTRY => 'India',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    # Bit of a synthetic tournament
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        MEET => 'Indian Summer Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-02-20',
+            DATE_END => '2013-02-20'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Indian Winter Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-12-21',
+            DATE_END => '2014-12-21'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Indian Summer Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-06-21',
+            DATE_END => '2015-06-21'
+          } 
+        }
+      },
+    }
+  },
+
   'All India Shree Cement' =>
   {
     ORGANIZATION => 'BFI',
@@ -1070,38 +1147,36 @@ my %TOURNAMENTS_INDIA =
     }
   },
 
-  'Delhi Gymkhana Club Centenary' =>
+  'Delhi Gymkhana Club Open Pairs' =>
   {
     ORGANIZATION => 'BFI',
     COUNTRY => 'India',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
-    FORM => 'Teams',
-    SCORING => 'IMP',
+    FORM => 'Pairs',
+    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2012' =>
       {
-        # Link
-        MEET => 'Meet name',
 
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2012,
+            DATE_START => '2012-12-02',
+            DATE_END => '2012-12-02'
           } 
         }
       },
     }
   },
 
-  'Delhi Gymkhana Club Open' =>
+  'Delhi Gymkhana Club Open Teams' =>
   {
     ORGANIZATION => 'BFI',
     COUNTRY => 'India',
@@ -1595,7 +1670,35 @@ my %TOURNAMENTS_INDIA =
     }
   },
 
-  'Justice J M Lal All India Open' =>
+  'Justice J M Lal All India Open Pairs' =>
+  {
+    ORGANIZATION => 'BFI',
+    COUNTRY => 'India',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-03-30',
+            DATE_END => '2013-04-01'
+          } 
+        }
+      },
+    }
+  },
+
+  'Justice J M Lal All India Open Teams' =>
   {
     ORGANIZATION => 'BFI',
     COUNTRY => 'India',
@@ -1693,7 +1796,7 @@ my %TOURNAMENTS_INDIA =
             YEAR => 2012,
             DATE_START => '2012-07-28',
             DATE_END => '2012-07-29'
-          } 
+          },
         }
       },
     }
@@ -1906,6 +2009,19 @@ my %TOURNAMENTS_INDIA =
           } 
         }
       },
+      '2010' =>
+      {
+        MEET => 'Indian Winter Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-12-17',
+            DATE_END => '2010-12-17'
+          } 
+        }
+      },
       '2011' =>
       {
         MEET => 'Indian Winter Nationals',
@@ -1927,7 +2043,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2012,
-            DATE_START => '2012-12-22',
+            DATE_START => '2012-12-21',
             DATE_END => '2012-12-22'
           } 
         }
@@ -2031,11 +2147,19 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Maharashtra State Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
             DATE_START => '2012-02-25',
             DATE_END => '2012-02-27'
+          },
+          'C1' => 
+          {
+            # Not sure
+            YEAR => 2012,
+            CITY => 'Nashik',
+            DATE_START => '2012-10-27',
+            DATE_END => '2012-10-28'
           } 
         }
       },
@@ -2302,6 +2426,34 @@ my %TOURNAMENTS_INDIA =
     }
   },
 
+  'Mohanlal Bhartia Memorial Pairs' =>
+  {
+    ORGANIZATION => 'BFI',
+    COUNTRY => 'India',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-02-12',
+            DATE_END => '2011-02-13'
+          } 
+        }
+      },
+    }
+  },
+
   'Poddar National Masters' =>
   {
     ORGANIZATION => 'BFI',
@@ -2507,6 +2659,19 @@ my %TOURNAMENTS_INDIA =
 
     EDITIONS =>
     {
+      '2013' =>
+      {
+        MEET => 'Rajasthan Invitational Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-05-03',
+            DATE_END => '2013-05-05'
+          } 
+        }
+      },
       '2014' =>
       {
         MEET => 'Rajasthan Invitational Championship',
@@ -3094,11 +3259,40 @@ my %TOURNAMENTS_INDIA =
     }
   },
 
-  'Uttar Pradesh State Championship' =>
+  'Uttar Pradesh State Pairs' =>
   {
     ORGANIZATION => 'BFI',
     COUNTRY => 'India',
-    ORIGIN => 'National',
+    ORIGIN => 'Regional',
+    ZONE => 'Asia Pacific',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        MEET => 'Uttar Pradesh State Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-08-18',
+            DATE_END => '2012-08-19'
+          } 
+        }
+      },
+    }
+  },
+
+  'Uttar Pradesh State Teams' =>
+  {
+    ORGANIZATION => 'BFI',
+    COUNTRY => 'India',
+    ORIGIN => 'Regional',
     ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -3109,12 +3303,13 @@ my %TOURNAMENTS_INDIA =
     {
       '2012' =>
       {
+        MEET => 'Uttar Pradesh State Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2012,
-            DATE_START => '2012-08-18',
+            DATE_START => '2012-08-17',
             DATE_END => '2012-08-19'
           } 
         }

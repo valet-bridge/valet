@@ -163,8 +163,9 @@ sub merge_num_num
   {
     if ($self->{FIELD} eq 'NUMERAL' &&
         $token2->{FIELD} eq 'NUMERAL' &&
-        $self->{VALUE} <= $token2->{VALUE})
+        (($self->{VALUE} <= $token2->{VALUE}) | $sep eq 'of'))
     {
+      # "5 of 4" is permitted, e.g. a playoff.
       $self->{FIELD} = 'N_OF_N';
       $self->{VALUE} .= ' of ' . $token2->{VALUE};
     }

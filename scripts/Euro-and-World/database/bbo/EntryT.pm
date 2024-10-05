@@ -118,6 +118,10 @@ my %FORM_CORRECTIONS = (
     19955, 19968,
     25115, 25129,
     29833],
+  'All India Open Pairs' => [
+    27043, 27045,
+    37060,
+    39616],
   'Argentinian Mixed Pairs' => [
     43946],
   'Australian Senior Pairs' => [
@@ -157,6 +161,8 @@ my %FORM_CORRECTIONS = (
   'Danish Women Pairs' => [
     14716,
     19120, 19124, 19125, 19130, 19133, 19134],
+  'Delhi Gymkhana Club Open Pairs' => [
+    26251],
   'European Transnational Mixed Pairs' => [
     28786, 28787, 28788, 28789, 28790, 28791, 28792, 28793, 28794,
     28795, 28796, 28797, 28798, 28799, 28800, 28801, 28802, 28803,
@@ -320,10 +326,13 @@ my %FORM_CORRECTIONS = (
   'Italian Mixed Pairs' => [
     36287, 36289, 36293, 36295, 36296, 36308, 36309,
     41672, 41674, 41691, 41692, 41704, 41705],
+  'Justice J M Lal All India Open Pairs' => [
+    27505],
   'L C Sunil Rajendra Memorial' => [
     30177, 30181],
   'Maharaja Yeshwantrao Holkar National Pairs' => [
     12268, 12269, 12270,
+    16299, 16304,
     21381, 21391,
     26606, 26607, 26614, 26616],
   'Maharashtra State Pairs' => [
@@ -331,6 +340,8 @@ my %FORM_CORRECTIONS = (
     22135],
   'Mohan Sicka Pairs' => [
     32032, 32033],
+  'Mohanlal Bhartia Memorial Pairs' => [
+    16734, 16745],
   'Northern Territory Gold Swiss Pairs' => [
      1242,  1244,  1245,  1246,  1247,  1248],
   'Norwegian Mixed Pairs' => [
@@ -391,6 +402,7 @@ my %FORM_CORRECTIONS = (
     11762, 11763, 11766, 11767, 11774, 11775, 11777, 11780, 11783, 
     11788, 11790, 11792, 11796, 11798, 11801, 11803],
   'Rajasthan Invitational Pairs' => [
+    27959,
     32569, 32582],
   'R N Bagla Memorial Pairs' => [
     19678],

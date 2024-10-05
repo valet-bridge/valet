@@ -110,7 +110,8 @@ my @MULTI_WORDS =
   'Turkish-Greek Friendship Festival',
   'The Hague Bridge Festival',
   'Umea Bridgefestival',
-   'United States Bridge Championship',
+  'United States Bridge Championship',
+  'Uttar Pradesh State Championship',
   'Vanke Cup',
   'Varna Bridge Festival',
   'VVE Beheer Bridge Week',
@@ -355,6 +356,8 @@ my %MULTI_TYPOS =
     'greek-turkish friendship festival'],
   'United States Bridge Championship' => ['us bridge championship',
     'u_s_b_c', 'united states bridge championships'],
+  'Uttar Pradesh State Championship' => [
+    'up state championship'],
   'Varna Bridge Festival' => ['international bridge festival varna'],
   'VVE Beheer Bridge Week' => ['vve-beheer bridgeweek',
     'vve-beheer bridge week'],

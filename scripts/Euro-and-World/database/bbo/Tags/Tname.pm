@@ -685,7 +685,8 @@ my @MULTI_WORDS =
   'Bhabha Atomic Research Centre Open',
   'B L Rao Memorial Open',
   'Dainik Navjyoti All India Inter-State',
-  'Delhi Gymkhana Club Open',
+  'Delhi Gymkhana Club Open Pairs',
+  'Delhi Gymkhana Club Open Teams',
   'Godfrey Phillips All India Open',
   'Hindusthan Club Teams',
   'Indian Inter-State Teams',
@@ -695,7 +696,8 @@ my @MULTI_WORDS =
   'Indian State Championship',
   'Indian Western Zone Championship',
   'Jaya Jain Memorial',
-  'Justice J M Lal All India Open',
+  'Justice J M Lal All India Open Pairs',
+  'Justice J M Lal All India Open Teams',
   'Karnataka State Teams',
   'Krishnapatnam Port National Masters',
   'Lalit Mohanka Memorial',
@@ -705,10 +707,10 @@ my @MULTI_WORDS =
   'Maharaja Yeshwantrao Holkar National Teams',
   'Maharashtra State Pairs',
   'Maharashtra State Teams',
-  'Mitra Vihar State Championship',
   'Mohan Sicka BAM Teams',
   'Mohan Sicka Pairs',
   'Mohanlal Bhartia Memorial Grand Prix',
+  'Mohanlal Bhartia Memorial Pairs',
   'Poddar National Masters',
   'Prashant Desai Memorial',
   'PYC Hindu Gymkhana Royale',
@@ -725,7 +727,8 @@ my @MULTI_WORDS =
   'Tolani Gold Trophy',
   'Tolani Grand Prix',
   'Tolani Silver Cup',
-  'Uttar Pradesh State Championship',
+  'Uttar Pradesh State Pairs',
+  'Uttar Pradesh State Teams',
 
 
 
@@ -1555,14 +1558,14 @@ my %MULTI_TYPOS =
     'danish champoinship ladies pairs',
     'ladies pairs - danish championship'],
 
-  'Delhi Gymkhana Club Open' => [
+  'Delhi Gymkhana Club Open Teams' => [
     'delhi gymkhana centenary celebrations',
     'delhi gymkhana championship',
     'delhi gymkhana club centenary',
     'delhi gymkhana club centenary celebrations',
     'delhi gymkhana club championship',
+    'delhi gymkhana club open',
     'delhi gymkhana club open championship',
-    'delhi gymkhana open',
     'delhi gymkhana open championship',
     'delhi gymkhana open chmpionship',
     'dgc centenary celebrations',
@@ -2136,14 +2139,15 @@ my %MULTI_TYPOS =
     'JP Morgan Intercity Bridge Championships-Open T_',
     'JP Morgan Intercity Bridge Championships-Open  T_'],
   'Junior Camrose' => ['juniior camrose'],
-  'Justice J M Lal All India Open' => [
-    'justice  j m lal memorial all india open',
-    'justice lal memorial',
+  'Justice J M Lal All India Open Teams' => [
+    'justice j m lal all india open',
     'justice j m lal memorial',
     'justice j m lal memorial championship',
     'justice j_m_lal memorial championship',
     'justice j_m_lal memorial  championship',
     'justice jm lal memorial championship',
+    'justice  j m lal memorial all india open',
+    'justice lal memorial',
     'j m lal memorial'],
 
   ### KKK
@@ -2228,6 +2232,10 @@ my %MULTI_TYPOS =
     'maharaja yashwant rao holkar bridge championship',
     'yashawantrao holkar championship',
     'yashwant rao holkar bridge championship'],
+  'Maharashtra State Teams' => [
+    'mitravihar centenary state level',
+    'mitravihar club centenary state level',
+    'mitravihar nasik centenary state level'],
   'Marit Sveaas Tournament' => [
     'marit sveaas international bridge tournament',
     'marit sveaas international  bridge tournament'],
@@ -2235,13 +2243,9 @@ my %MULTI_TYPOS =
   'Mike Lawrence Exhibition' => ['m lawrence exhibiton'],
   'Milan Trophy' => ["trofeo citta' di milano", "citta' di milano"],
   "Missouri Braggin' Rights" => ['bragging rights'],
-  'Mitra Vihar State Championship' => ['mitravihar centenary state level',
-    'mitravihar club centenary state level',
-    'mitravihar nasik centenary state level'],
   'Mohanlal Bhartia Memorial Grand Prix' => [
     'bhartia memorial gran prix',
     'bhartia memorial grand prix',
-    'bhartiya memorial',
     'mohanlal bharatia grand prix', 
     'mohanlal bharatia memorial grand prix',
     'mohanlal bharatiya memorial gran prix',
@@ -2257,6 +2261,8 @@ my %MULTI_TYPOS =
     'mohanlal bhartiya memorial gran prix',
     'mohon lal bharatia grand pix',
     'mohnlal bhartia grand prix'],
+  'Mohanlal Bhartia Memorial Pairs' => [
+    'bhartiya memorial'],
   'Mondial de Deauville' => [
     "barrière champion's cup",
     "barriere champion's cup", 
@@ -3085,8 +3091,6 @@ my %MULTI_TYPOS =
     'us u-21 trials',
     'u-21 us trials'],
   'USBF Challenge Match' => ['usbf jr/pro charity challenge match'],
-
-  'Uttar Pradesh State Championship' => ['up state championship'],
 
   ### VVV
 
