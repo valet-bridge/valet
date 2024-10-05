@@ -264,6 +264,30 @@ my %MEETS_INDIA =
     }
   },
 
+  'Indian South Zone Championship' =>
+  {
+    ORGANIZATION => 'BFI',
+    COUNTRY => 'India',
+    ORIGIN => 'Regional',
+    ZONE => 'Asia Pacific',
+
+    EDITIONS => 
+    {
+      '2014' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-07-20', # More dates
+        DATE_END => '2014-07-21'
+      },
+      '2016' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-08-13', # More dates
+        DATE_END => '2016-08-14'
+      },
+    }
+  },
+
   'Indian Summer Nationals' =>
   {
     ORGANIZATION => 'BFI',
@@ -632,10 +656,20 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2012-07-27',
+            DATE_END => '2012-07-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2012-07-29',
             DATE_END => '2012-07-29'
           } 
         }
@@ -644,10 +678,20 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2013-07-27',
+            DATE_END => '2013-07-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2013-07-28',
             DATE_END => '2013-07-28'
           } 
         }
@@ -656,42 +700,21 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2015-07-24',
-            DATE_END => '2015-07-26'
-          } 
-        }
-      },
-    }
-  },
-
-  'All India Corporate Invitational' =>
-  {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
-    ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        # Link
-        MEET => 'Meet name',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
+            DATE_END => '2015-07-25'
+          },
+          'C1' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2015,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2015-07-26',
+            DATE_END => '2015-07-26'
           } 
         }
       },
@@ -718,6 +741,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2012,
             SCORING => 'MP',
+            major => 'SESSION',
             DATE_START => '2012-09-16',
             DATE_END => '2012-09-16'
           } 
@@ -744,6 +768,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2016,
             SCORING => 'IMP',
+            major => 'SESSION',
             DATE_START => '2016-08-27',
             DATE_END => '2016-08-27'
           } 
@@ -769,6 +794,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'SESSION',
             DATE_START => '2011-09-11',
             DATE_END => '2011-09-11'
           } 
@@ -820,6 +846,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2004,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2004-08-15',
             DATE_END => '2004-08-15'
           } 
@@ -830,9 +858,19 @@ my %TOURNAMENTS_INDIA =
         MEET => 'All India HCL Tournament',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2007,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-08-19',
+            DATE_END => '2007-08-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2007-08-19',
             DATE_END => '2007-08-19'
           } 
@@ -843,9 +881,27 @@ my %TOURNAMENTS_INDIA =
         MEET => 'All India HCL Tournament',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2008,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-09-07',
+            DATE_END => '2008-09-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-09-07',
+            DATE_END => '2008-09-07'
+          },
+          'C2' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2008-09-07',
             DATE_END => '2008-09-07'
           } 
@@ -856,10 +912,28 @@ my %TOURNAMENTS_INDIA =
         MEET => 'All India HCL Tournament',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2009-08-14',
+            DATE_END => '2009-08-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-08-15',
+            DATE_END => '2009-08-15'
+          },
+          'C2' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-08-16',
             DATE_END => '2009-08-16'
           } 
         }
@@ -869,10 +943,28 @@ my %TOURNAMENTS_INDIA =
         MEET => 'All India HCL Tournament',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2010,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2010-10-31',
+            DATE_END => '2010-11-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-11-01',
+            DATE_END => '2010-11-01'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-11-02',
             DATE_END => '2010-11-02'
           } 
         }
@@ -882,10 +974,28 @@ my %TOURNAMENTS_INDIA =
         MEET => 'All India HCL Tournament',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2011-09-09',
+            DATE_END => '2011-09-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-09-10',
+            DATE_END => '2011-09-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-09-11',
             DATE_END => '2011-09-11'
           } 
         }
@@ -895,10 +1005,36 @@ my %TOURNAMENTS_INDIA =
         MEET => 'All India HCL Tournament',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'ROUND',
             DATE_START => '2012-08-31',
+            DATE_END => '2012-08-31'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-09-01',
+            DATE_END => '2012-09-01'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-09-01',
+            DATE_END => '2012-09-01'
+          },
+          'C3' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-09-02',
             DATE_END => '2012-09-02'
           } 
         }
@@ -908,10 +1044,28 @@ my %TOURNAMENTS_INDIA =
         MEET => 'All India HCL Tournament',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2013-08-09',
+            DATE_END => '2013-08-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-08-10',
+            DATE_END => '2013-08-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-08-11',
             DATE_END => '2013-08-11'
           } 
         }
@@ -921,10 +1075,28 @@ my %TOURNAMENTS_INDIA =
         MEET => 'All India HCL Tournament',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2014-08-18',
+            DATE_END => '2014-08-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-19',
+            DATE_END => '2014-08-19'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-20',
             DATE_END => '2014-08-20'
           } 
         }
@@ -934,10 +1106,44 @@ my %TOURNAMENTS_INDIA =
         MEET => 'All India HCL Tournament',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2015-08-20',
+            DATE_END => '2015-08-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'ROUND',
+            DATE_START => '2015-08-21',
+            DATE_END => '2015-08-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Quarterfinal',
+            major => 'ROUND',
+            DATE_START => '2015-08-22',
+            DATE_END => '2015-08-22'
+          },
+          'C3' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'ROUND',
+            DATE_START => '2015-08-22',
+            DATE_END => '2015-08-22'
+          },
+          'C4' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2015-08-22',
             DATE_END => '2015-08-23'
           } 
         }
@@ -967,6 +1173,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2013-02-20',
             DATE_END => '2013-02-20'
           } 
@@ -980,6 +1188,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2014,
+            STAGE => 'Final',
             DATE_START => '2014-12-21',
             DATE_END => '2014-12-21'
           } 
@@ -993,6 +1202,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2015,
+            STAGE => 'Final',
             DATE_START => '2015-06-21',
             DATE_END => '2015-06-21'
           } 
@@ -1021,13 +1231,41 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2011-10-15',
             DATE_END => '2011-10-16'
           },
           'C1' => 
           {
             YEAR => 2011,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2011-11-11',
+            DATE_END => '2011-11-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Quarterfinal',
+            major => 'ROUND',
+            DATE_START => '2011-11-12',
+            DATE_END => '2011-11-12'
+          },
+          'C3' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'ROUND',
+            DATE_START => '2011-11-12',
+            DATE_END => '2011-11-12'
+          },
+          'C4' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2011-11-13',
             DATE_END => '2011-11-13'
           } 
         }
@@ -1052,9 +1290,19 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2007,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-04-11',
+            DATE_END => '2007-04-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2007-04-11',
             DATE_END => '2007-04-11'
           } 
@@ -1083,6 +1331,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2013-11-17',
             DATE_END => '2013-11-17'
           } 
@@ -1108,10 +1358,36 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2012-07-14',
+            DATE_END => '2012-07-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-07-15',
+            DATE_END => '2012-07-15'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-07-15',
+            DATE_END => '2012-07-15'
+          },
+          'C4' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-07-16',
             DATE_END => '2012-07-16'
           } 
         }
@@ -1136,10 +1412,28 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2011-08-14',
+            DATE_END => '2011-08-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-08-15',
+            DATE_END => '2011-08-15'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-08-16',
             DATE_END => '2011-08-16'
           } 
         }
@@ -1193,10 +1487,36 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2011-11-25',
+            DATE_END => '2011-11-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-11-26',
+            DATE_END => '2011-11-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-11-27',
+            DATE_END => '2011-11-27'
+          },
+          'C3' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-11-27',
             DATE_END => '2011-11-27'
           } 
         }
@@ -1205,10 +1525,36 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2013-09-06',
+            DATE_END => '2013-09-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-09-07',
+            DATE_END => '2013-09-07'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-09-07',
+            DATE_END => '2013-09-08'
+          },
+          'C3' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-09-08',
             DATE_END => '2013-09-08'
           } 
         }
@@ -1217,11 +1563,21 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2012-11-29',
-            DATE_END => '2012-12-02'
+            DATE_END => '2012-11-30'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2012-11-30',
+            DATE_END => '2012-12-01'
           } 
         }
       },
@@ -1229,10 +1585,36 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2014-02-07',
+            DATE_END => '2014-02-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-02-08',
+            DATE_END => '2014-02-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-02-09',
+            DATE_END => '2014-02-09'
+          },
+          'C3' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-02-09',
             DATE_END => '2014-02-09'
           } 
         }
@@ -1241,10 +1623,36 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2015-02-13',
+            DATE_END => '2015-02-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-02-14',
+            DATE_END => '2015-02-14'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-02-15',
+            DATE_END => '2015-02-15'
+          },
+          'C3' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-02-15',
             DATE_END => '2015-02-15'
           } 
         }
@@ -1253,10 +1661,28 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2016-02-20',
+            DATE_END => '2016-02-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-02-21',
+            DATE_END => '2016-02-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-02-21',
             DATE_END => '2016-02-21'
           } 
         }
@@ -1278,9 +1704,19 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Indian Winter Nationals',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2007,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-12-22',
+            DATE_END => '2007-12-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2007-12-22',
             DATE_END => '2007-12-22'
           } 
@@ -1306,10 +1742,20 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2009-07-18',
+            DATE_END => '2009-07-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2009-07-19',
             DATE_END => '2009-07-19'
           } 
         }
@@ -1334,10 +1780,28 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2012-11-02',
+            DATE_END => '2012-11-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-11-03',
+            DATE_END => '2012-11-03'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-11-04',
             DATE_END => '2012-11-04'
           } 
         }
@@ -1346,10 +1810,36 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2013-08-23',
+            DATE_END => '2013-08-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-08-23',
+            DATE_END => '2013-08-23'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-08-24',
+            DATE_END => '2013-08-24'
+          },
+          'C3' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-08-25',
             DATE_END => '2013-08-25'
           } 
         }
@@ -1358,10 +1848,20 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2014-09-06',
+            DATE_END => '2014-09-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-09-07',
             DATE_END => '2014-09-07'
           } 
         }
@@ -1370,10 +1870,28 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2015-09-04',
+            DATE_END => '2015-09-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-09-05',
+            DATE_END => '2015-09-05'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-09-06',
             DATE_END => '2015-09-06'
           } 
         }
@@ -1398,10 +1916,20 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2011-04-22',
+            DATE_END => '2011-04-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-04-24',
             DATE_END => '2011-04-25'
           } 
         }
@@ -1410,10 +1938,28 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2012-06-23',
+            DATE_END => '2012-06-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-06-25',
+            DATE_END => '2012-06-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-06-26',
             DATE_END => '2012-06-27'
           } 
         }
@@ -1422,10 +1968,20 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2013-02-22',
+            DATE_END => '2013-02-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-02-25',
             DATE_END => '2013-02-26'
           } 
         }
@@ -1434,10 +1990,37 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Knock-out',
+            major => 'SESSION',
+            minor => 'SEGMENT',
             DATE_START => '2014-08-12',
+            DATE_END => '2014-08-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-13',
+            DATE_END => '2014-08-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-14',
+            DATE_END => '2014-08-15'
+          },
+          'C3' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-15',
             DATE_END => '2014-08-16'
           } 
         }
@@ -1446,10 +2029,20 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2015-06-29',
+            DATE_END => '2015-06-30'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-06-30',
             DATE_END => '2015-07-01'
           } 
         }
@@ -1458,10 +2051,20 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2016-06-11',
+            DATE_END => '2016-06-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-06-12',
             DATE_END => '2016-06-13'
           } 
         }
@@ -1486,10 +2089,21 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2011-05-06',
+            DATE_END => '2011-05-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-05-08',
             DATE_END => '2011-05-08'
           } 
         }
@@ -1498,10 +2112,28 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2012-07-07',
+            DATE_END => '2012-07-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-07-08',
+            DATE_END => '2012-07-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-07-09',
             DATE_END => '2012-07-09'
           } 
         }
@@ -1510,10 +2142,28 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2013-04-15',
+            DATE_END => '2013-04-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-04-16',
+            DATE_END => '2013-04-17'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-04-17',
             DATE_END => '2013-04-18'
           } 
         }
@@ -1522,10 +2172,20 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2015-02-09',
+            DATE_END => '2015-02-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-02-10',
             DATE_END => '2015-02-10'
           } 
         }
@@ -1537,48 +2197,10 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2016-06-15',
             DATE_END => '2016-06-16'
-          } 
-        }
-      },
-    }
-  },
-
-  'Indian South Zone Championship' =>
-  {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
-    ORIGIN => 'Regional',
-    ZONE => 'Asia Pacific',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2014' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2014,
-            DATE_START => '2014-07-20',
-            DATE_END => '2014-07-21'
-          } 
-        }
-      },
-      '2016' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2016,
-            DATE_START => '2016-08-13',
-            DATE_END => '2016-08-14'
           } 
         }
       },
@@ -1603,10 +2225,20 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2013-11-09',
+            DATE_END => '2013-11-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-11-10',
             DATE_END => '2013-11-10'
           } 
         }
@@ -1631,9 +2263,27 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2005,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2005-07-11',
+            DATE_END => '2005-07-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2005-07-11',
+            DATE_END => '2005-07-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2005-07-11',
             DATE_END => '2005-07-11'
           } 
@@ -1662,6 +2312,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'ROUND',
             DATE_START => '2012-08-17',
             DATE_END => '2012-08-17'
           } 
@@ -1718,6 +2369,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2011-04-17',
             DATE_END => '2011-04-17'
           } 
@@ -1727,10 +2380,28 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2012-04-06',
+            DATE_END => '2012-04-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-04-06',
+            DATE_END => '2012-04-06'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-04-07',
             DATE_END => '2012-04-07'
           } 
         }
@@ -1739,10 +2410,28 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2013-03-30',
+            DATE_END => '2013-03-30'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-03-30',
+            DATE_END => '2013-03-30'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-03-31',
             DATE_END => '2013-04-01'
           } 
         }
@@ -1754,6 +2443,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2014-04-06',
             DATE_END => '2014-04-06'
           } 
@@ -1763,10 +2454,28 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2015-04-18',
+            DATE_END => '2015-04-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-04-18',
+            DATE_END => '2015-04-18'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-04-19',
             DATE_END => '2015-04-19'
           } 
         }
@@ -1791,10 +2500,28 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2012-07-28',
+            DATE_END => '2012-07-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-07-29',
+            DATE_END => '2012-07-29'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-07-29',
             DATE_END => '2012-07-29'
           },
         }
@@ -1806,7 +2533,7 @@ my %TOURNAMENTS_INDIA =
   {
     ORGANIZATION => 'BFI',
     COUNTRY => 'India',
-    ORIGIN => 'National',
+    ORIGIN => 'Regional',
     ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -1819,11 +2546,68 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2015-12-19',
+            DATE_END => '2015-12-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-12-20',
+            DATE_END => '2015-12-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-12-21',
             DATE_END => '2015-12-21'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Indian South Zone Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-08-13',
+            DATE_END => '2016-08-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-08-13',
+            DATE_END => '2016-08-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-08-14',
+            DATE_END => '2016-08-14'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-08-14',
+            DATE_END => '2016-08-14'
           } 
         }
       },
@@ -1847,10 +2631,20 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2011-03-25',
+            DATE_END => '2011-03-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2011-03-27',
             DATE_END => '2011-03-27'
           } 
         }
@@ -1859,10 +2653,28 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2012-03-24',
+            DATE_END => '2012-03-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-03-24',
+            DATE_END => '2012-03-25'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-03-25',
             DATE_END => '2012-03-25'
           } 
         }
@@ -1871,10 +2683,36 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2013-03-23',
+            DATE_END => '2013-03-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-03-23',
+            DATE_END => '2013-03-23'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-03-23',
+            DATE_END => '2013-03-24'
+          },
+          'C3' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-03-24',
             DATE_END => '2013-03-24'
           } 
         }
@@ -1883,10 +2721,28 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2014-01-25',
+            DATE_END => '2014-01-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-01-25',
+            DATE_END => '2014-01-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-01-26',
             DATE_END => '2014-01-26'
           } 
         }
@@ -1895,10 +2751,28 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2015-02-20',
+            DATE_END => '2015-02-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-02-21',
+            DATE_END => '2015-02-22'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-02-22',
             DATE_END => '2015-02-22'
           } 
         }
@@ -1926,6 +2800,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'SESSION',
             DATE_START => '2013-09-15',
             DATE_END => '2013-09-15'
           } 
@@ -1952,10 +2827,36 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2012-01-19',
+            DATE_END => '2012-01-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-01-21',
+            DATE_END => '2012-01-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-01-21',
+            DATE_END => '2012-01-21'
+          },
+          'C3' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-01-22',
             DATE_END => '2012-01-22'
           } 
         }
@@ -1967,6 +2868,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2015,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2015-01-18',
             DATE_END => '2015-01-18'
           } 
@@ -1979,6 +2882,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2016,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2016-01-24',
             DATE_END => '2016-01-24'
           } 
@@ -2004,6 +2909,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2009-12-24',
             DATE_END => '2009-12-24'
           } 
@@ -2017,6 +2924,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2010-12-17',
             DATE_END => '2010-12-17'
           } 
@@ -2030,6 +2939,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2011-12-10',
             DATE_END => '2011-12-10'
           } 
@@ -2043,6 +2954,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2012-12-21',
             DATE_END => '2012-12-22'
           } 
@@ -2072,33 +2985,32 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2009-12-24',
             DATE_END => '2009-12-24'
           } 
         }
       },
-      '2010A' =>
+      '2010' =>
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2010-01-08',
             DATE_END => '2010-01-09'
-          } 
-        }
-      },
-      '2010B' =>
-      {
-        MEET => 'Indian Winter Nationals',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
+          },
+          'C1' => 
           {
             YEAR => 2010,
-            DATE_START => '2010-12-17',
-            DATE_END => '2010-12-17'
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-01-09',
+            DATE_END => '2010-01-09'
           } 
         }
       },
@@ -2109,6 +3021,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'ROUND',
             DATE_START => '2012-01-05',
             DATE_END => '2012-01-06'
           } 
@@ -2121,82 +3034,10 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2013-01-10',
             DATE_END => '2013-01-11'
-          } 
-        }
-      },
-    }
-  },
-
-  'Maharashtra State Teams' =>
-  {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
-    ORIGIN => 'Regional',
-    ZONE => 'Asia Pacific',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2012' =>
-      {
-        MEET => 'Maharashtra State Championship',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2012,
-            DATE_START => '2012-02-25',
-            DATE_END => '2012-02-27'
-          },
-          'C1' => 
-          {
-            # Not sure
-            YEAR => 2012,
-            CITY => 'Nashik',
-            DATE_START => '2012-10-27',
-            DATE_END => '2012-10-28'
-          } 
-        }
-      },
-      '2014' =>
-      {
-        MEET => 'Maharashtra State Championship',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2014,
-            DATE_START => '2014-01-18',
-            DATE_END => '2014-01-20'
-          } 
-        }
-      },
-      '2015' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2015,
-            DATE_START => '2015-05-02',
-            DATE_END => '2015-05-02'
-          } 
-        }
-      },
-      '2016' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2016,
-            DATE_START => '2016-06-25',
-            DATE_END => '2016-06-25'
           } 
         }
       },
@@ -2224,6 +3065,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2012-02-27',
             DATE_END => '2012-02-28'
           } 
@@ -2232,11 +3075,11 @@ my %TOURNAMENTS_INDIA =
     }
   },
 
-  'Mitra Vihar State Championship' =>
+  'Maharashtra State Teams' =>
   {
     ORGANIZATION => 'BFI',
     COUNTRY => 'India',
-    ORIGIN => 'National',
+    ORIGIN => 'Regional',
     ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -2245,18 +3088,125 @@ my %TOURNAMENTS_INDIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2012' =>
       {
-        # Link
-        MEET => 'Meet name',
-
+        MEET => 'Maharashtra State Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-02-25',
+            DATE_END => '2012-02-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-02-26',
+            DATE_END => '2012-02-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-02-26',
+            DATE_END => '2012-02-26'
+          },
+          'C3' => 
+          {
+            # Not sure
+            YEAR => 2012,
+            CITY => 'Nashik',
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2012-10-27',
+            DATE_END => '2012-10-28'
+          },
+          'C4' => 
+          {
+            # Not sure
+            YEAR => 2012,
+            CITY => 'Nashik',
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-10-27',
+            DATE_END => '2012-10-27'
+          },
+          'C5' => 
+          {
+            # Not sure
+            YEAR => 2012,
+            CITY => 'Nashik',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-10-27',
+            DATE_END => '2012-10-28'
+          },
+          'C6' => 
+          {
+            # Not sure
+            YEAR => 2012,
+            CITY => 'Nashik',
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-10-28',
+            DATE_END => '2012-10-28'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Maharashtra State Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2014-01-18',
+            DATE_END => '2014-01-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2014-01-19',
+            DATE_END => '2014-01-19'
+          } 
+        }
+      },
+      '2015' =>
+      {
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-05-02',
+            DATE_END => '2015-05-02'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2016-06-25',
+            DATE_END => '2016-06-25'
           } 
         }
       },
@@ -2280,6 +3230,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2009,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2009-12-23',
             DATE_END => '2009-12-23'
           } 
@@ -2297,19 +3249,6 @@ my %TOURNAMENTS_INDIA =
 
     EDITIONS =>
     {
-      '2009' =>
-      {
-        MEET => 'Indian Winter Nationals',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2009,
-            DATE_START => '2009-12-23',
-            DATE_END => '2009-12-23'
-          } 
-        }
-      },
       '2014' =>
       {
         MEET => 'Maharashtra State Championship',
@@ -2318,6 +3257,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2014,
+            major => 'SESSION',
             DATE_START => '2014-01-20',
             DATE_END => '2014-01-20'
           } 
@@ -2343,10 +3283,28 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2010,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2010-02-05',
+            DATE_END => '2010-02-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-02-05',
+            DATE_END => '2010-02-06'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-02-06',
             DATE_END => '2010-02-07'
           } 
         }
@@ -2355,10 +3313,36 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2011-02-10',
+            DATE_END => '2011-02-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-02-11',
+            DATE_END => '2011-02-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-02-12',
+            DATE_END => '2011-02-12'
+          },
+          'C3' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-02-12',
             DATE_END => '2011-02-13'
           } 
         }
@@ -2367,10 +3351,37 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            MOVEMENT => 'Swiss',
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2012-02-10',
+            DATE_END => '2012-02-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-02-10',
+            DATE_END => '2012-02-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-02-11',
+            DATE_END => '2012-02-11'
+          },
+          'C3' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-02-11',
             DATE_END => '2012-02-12'
           } 
         }
@@ -2379,10 +3390,36 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'ROUND',
             DATE_START => '2013-04-05',
+            DATE_END => '2013-04-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-04-05',
+            DATE_END => '2013-04-06'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-04-06',
+            DATE_END => '2013-04-06'
+          },
+          'C3' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-04-07',
             DATE_END => '2013-04-07'
           } 
         }
@@ -2391,10 +3428,52 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
             DATE_START => '2014-03-14',
+            DATE_END => '2014-03-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2014-03-14',
+            DATE_END => '2014-03-14'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2014-03-15',
+            DATE_END => '2014-03-15'
+          },
+          'C3' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-03-15',
+            DATE_END => '2014-03-15'
+          },
+          'C4' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-03-15',
+            DATE_END => '2014-03-15'
+          },
+          'C5' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-03-16',
             DATE_END => '2014-03-16'
           } 
         }
@@ -2403,10 +3482,21 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Knock-out',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2015-04-03',
+            DATE_END => '2015-04-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-04-05',
             DATE_END => '2015-04-05'
           } 
         }
@@ -2415,10 +3505,21 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Knock-out',
+            major => 'MATCH',
+            minor => 'SEGMENT',
             DATE_START => '2016-03-11',
+            DATE_END => '2016-03-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-03-13',
             DATE_END => '2016-03-13'
           } 
         }
@@ -2446,6 +3547,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2011-02-12',
             DATE_END => '2011-02-13'
           } 
@@ -2471,10 +3574,20 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2010-08-16',
+            DATE_END => '2010-08-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-08-17',
             DATE_END => '2010-08-17'
           } 
         }
@@ -2483,10 +3596,28 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2011-08-05',
+            DATE_END => '2011-08-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-08-06',
+            DATE_END => '2011-08-06'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-08-07',
             DATE_END => '2011-08-07'
           } 
         }
@@ -2495,10 +3626,28 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2012-10-05',
+            DATE_END => '2012-10-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-10-06',
+            DATE_END => '2012-10-06'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-10-07',
             DATE_END => '2012-10-07'
           } 
         }
@@ -2507,10 +3656,36 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2013-10-24',
+            DATE_END => '2013-10-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-10-25',
+            DATE_END => '2013-10-25'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-10-26',
+            DATE_END => '2013-10-26'
+          },
+          'C3' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-10-27',
             DATE_END => '2013-10-27'
           } 
         }
@@ -2519,10 +3694,28 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2014-10-31',
+            DATE_END => '2014-10-31'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-11-01',
+            DATE_END => '2014-11-01'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-11-02',
             DATE_END => '2014-11-02'
           } 
         }
@@ -2547,10 +3740,20 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2016-03-26',
+            DATE_END => '2016-03-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2016-03-27',
             DATE_END => '2016-03-27'
           } 
         }
@@ -2579,39 +3782,9 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2009,
+            major => 'ROUND',
             DATE_START => '2009-10-31',
             DATE_END => '2009-11-02'
-          } 
-        }
-      },
-    }
-  },
-
-  'PYC Hindu Gymkhana Pairs Royale' =>
-  {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
-    ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        # Link
-        MEET => 'Meet name',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
           } 
         }
       },
@@ -2638,6 +3811,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2007-09-29',
             DATE_END => '2007-09-29'
           } 
@@ -2664,10 +3839,27 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Rajasthan Invitational Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2013-05-03',
+            DATE_END => '2013-05-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-05-04',
+            DATE_END => '2013-05-04'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            DATE_START => '2013-05-05',
             DATE_END => '2013-05-05'
           } 
         }
@@ -2677,7 +3869,7 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Rajasthan Invitational Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
             DATE_START => '2014-03-09',
@@ -2706,10 +3898,28 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Rajasthan Invitational Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2013-05-03',
+            DATE_END => '2013-05-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-05-04',
+            DATE_END => '2013-05-04'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-05-04',
             DATE_END => '2013-05-05'
           } 
         }
@@ -2719,11 +3929,21 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Rajasthan Invitational Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2014-03-07',
-            DATE_END => '2014-03-09'
+            DATE_END => '2014-03-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-03-08',
+            DATE_END => '2014-03-08'
           } 
         }
       },
@@ -2750,6 +3970,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
             DATE_START => '2011-08-26',
             DATE_END => '2011-08-26'
           } 
@@ -2775,10 +3996,36 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2015-03-12',
+            DATE_END => '2015-03-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-03-13',
+            DATE_END => '2015-03-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-03-14',
+            DATE_END => '2015-03-14'
+          },
+          'C3' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-03-15',
             DATE_END => '2015-03-15'
           } 
         }
@@ -2787,10 +4034,28 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2016-04-01',
+            DATE_END => '2016-04-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-04-02',
+            DATE_END => '2016-04-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-04-03',
             DATE_END => '2016-04-03'
           } 
         }
@@ -2815,10 +4080,20 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2014-11-15',
+            DATE_END => '2014-11-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-11-16',
             DATE_END => '2014-11-16'
           } 
         }
@@ -2840,9 +4115,19 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Indian Winter Nationals',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2004,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2004-12-16',
+            DATE_END => '2004-12-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2004-12-16',
             DATE_END => '2004-12-16'
           } 
@@ -2853,10 +4138,29 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Indian Winter Nationals',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
+            YEAR => 2005,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2005-12-31',
-            DATE_END => '2006-01-06'
+            DATE_END => '2005-12-31'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-01-01',
+            DATE_END => '2006-01-01'
+          },
+          'C2' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2006-01-02',
+            DATE_END => '2006-01-02'
           } 
         }
       },
@@ -2865,9 +4169,19 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Indian Winter Nationals',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2008,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-11-23',
+            DATE_END => '2008-11-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2008-11-23',
             DATE_END => '2008-11-23'
           } 
@@ -2878,10 +4192,36 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Indian Winter Nationals',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2009-12-18',
+            DATE_END => '2009-12-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-12-18',
+            DATE_END => '2009-12-19'
+          },
+          'C2' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-12-19',
+            DATE_END => '2009-12-19'
+          },
+          'C3' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-12-20',
             DATE_END => '2009-12-20'
           } 
         }
@@ -2891,10 +4231,28 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Indian Winter Nationals',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2010,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2010-12-15',
+            DATE_END => '2010-12-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-12-16',
+            DATE_END => '2010-12-17'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-12-16',
             DATE_END => '2010-12-17'
           } 
         }
@@ -2904,10 +4262,37 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Indian Winter Nationals',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2011-12-06',
+            DATE_END => '2011-12-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-12-08',
+            DATE_END => '2011-12-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-12-09',
+            DATE_END => '2011-12-09'
+          },
+          'C3' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-12-10',
             DATE_END => '2011-12-10'
           } 
         }
@@ -2917,10 +4302,28 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Indian Winter Nationals',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2012-12-19',
+            DATE_END => '2012-12-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-12-19',
+            DATE_END => '2012-12-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-12-20',
             DATE_END => '2012-12-21'
           } 
         }
@@ -2933,6 +4336,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2013,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2013-12-20',
             DATE_END => '2013-12-20'
           } 
@@ -2943,10 +4348,36 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Indian Winter Nationals',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'ROUND',
             DATE_START => '2014-12-18',
+            DATE_END => '2014-12-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-12-19',
+            DATE_END => '2014-12-19'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-12-20',
+            DATE_END => '2014-12-20'
+          },
+          'C4' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-12-21',
             DATE_END => '2014-12-21'
           } 
         }
@@ -2956,10 +4387,28 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Indian Winter Nationals',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2015-11-20',
+            DATE_END => '2015-11-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-11-21',
+            DATE_END => '2015-11-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-11-22',
             DATE_END => '2015-11-22'
           } 
         }
@@ -2988,6 +4437,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2010,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2010-12-12',
             DATE_END => '2010-12-12'
           } 
@@ -3001,6 +4452,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2011,
+            STAGE => 'Final',
             DATE_START => '2011-12-06',
             DATE_END => '2011-12-06'
           } 
@@ -3026,32 +4478,85 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2013-07-21',
             DATE_END => '2013-07-21'
           } 
         }
       },
-      '2015' =>
+      '2014' =>
       {
+        MEET => 'Indian South Zone Championship',
         CHAPTERS =>
         {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-07-20',
+            DATE_END => '2014-07-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-07-20',
+            DATE_END => '2014-07-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-07-21',
+            DATE_END => '2014-07-21'
+          } 
+        }
+      },
+      '2015' =>
+      {
         MEET => 'Goa Bridge Festival',
-          'SINGLE' => 
+        CHAPTERS =>
+        {
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2015-07-25',
+            DATE_END => '2015-07-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2015-07-26',
             DATE_END => '2015-07-26'
           } 
         }
       },
       '2016' =>
       {
+        MEET => 'Goa Bridge Festival',
         CHAPTERS =>
         {
-        MEET => 'Goa Bridge Festival',
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-07-30',
+            DATE_END => '2016-07-30'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2016-07-30',
             DATE_END => '2016-07-31'
           } 
@@ -3074,10 +4579,20 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Indian Summer Nationals',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2011-03-15',
+            DATE_END => '2011-03-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-03-16',
             DATE_END => '2011-03-16'
           } 
         }
@@ -3090,6 +4605,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2012-06-19',
             DATE_END => '2012-06-19'
           } 
@@ -3100,10 +4617,28 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Indian Summer Nationals',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2013-02-18',
+            DATE_END => '2013-02-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-02-19',
+            DATE_END => '2013-02-19'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-02-20',
             DATE_END => '2013-02-20'
           } 
         }
@@ -3113,10 +4648,28 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Indian Summer Nationals',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2014-04-21',
+            DATE_END => '2014-04-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-04-22',
+            DATE_END => '2014-04-22'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-04-23',
             DATE_END => '2014-04-23'
           } 
         }
@@ -3126,12 +4679,30 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Indian Summer Nationals',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
             DATE_START => '2015-06-18',
+            DATE_END => '2015-06-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-06-19',
+            DATE_END => '2015-06-19'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-06-20',
             DATE_END => '2015-06-20'
-          } 
+          },
         }
       },
       '2016' =>
@@ -3139,10 +4710,36 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Indian Summer Nationals',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2016-07-07',
+            DATE_END => '2016-07-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-07-08',
+            DATE_END => '2016-07-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-07-09',
+            DATE_END => '2016-07-09'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-07-10',
             DATE_END => '2016-07-10'
           } 
         }
@@ -3167,9 +4764,35 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2007,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2007-10-31',
+            DATE_END => '2007-10-31'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-10-31',
+            DATE_END => '2007-10-31'
+          },
+          'C2' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-10-31',
+            DATE_END => '2007-10-31'
+          },
+          'C3' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2007-10-31',
             DATE_END => '2007-10-31'
           } 
@@ -3179,9 +4802,27 @@ my %TOURNAMENTS_INDIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2008,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-12-14',
+            DATE_END => '2008-12-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-12-14',
+            DATE_END => '2008-12-14'
+          },
+          'C2' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2008-12-14',
             DATE_END => '2008-12-14'
           } 
@@ -3194,6 +4835,8 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2009,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2009-10-01',
             DATE_END => '2009-10-05'
           },
@@ -3222,10 +4865,20 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Indian Summer Nationals',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2012-06-19',
+            DATE_END => '2012-06-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-06-20',
             DATE_END => '2012-06-20'
           } 
         }
@@ -3238,6 +4891,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2015-06-21',
             DATE_END => '2015-06-21'
           } 
@@ -3251,6 +4906,8 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2016-07-10',
             DATE_END => '2016-07-10'
           } 
@@ -3306,17 +4963,26 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Uttar Pradesh State Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2012-08-17',
-            DATE_END => '2012-08-19'
+            DATE_END => '2012-08-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2012-08-18',
+            DATE_END => '2012-08-18'
           } 
         }
       },
     }
   },
-
 
 );
 

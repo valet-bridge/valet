@@ -679,7 +679,9 @@ my @MULTI_WORDS =
   # INDIA
   'All India Bangur Cement Hindusthan Club',
   'All India Corporate Invitational Pairs',
+  'All India HCL Pairs',
   'All India HCL Teams',
+  'All India Open Pairs',
   'All India Shree Cement',
   'All India UTI Bank Masters Championship',
   'Bhabha Atomic Research Centre Open',
@@ -692,7 +694,6 @@ my @MULTI_WORDS =
   'Indian Inter-State Teams',
   'Indian Open Trials',
   'Indian Senior Trials',
-  'Indian South Zone Championship',
   'Indian State Championship',
   'Indian Western Zone Championship',
   'Jaya Jain Memorial',
@@ -714,7 +715,6 @@ my @MULTI_WORDS =
   'Poddar National Masters',
   'Prashant Desai Memorial',
   'PYC Hindu Gymkhana Royale',
-  'PYC Hindu Gymkhana Pairs Royale',
   'Rai Bahadur Modi Memorial All India Open',
   'Rajasthan Invitational Pairs',
   'Rajasthan Invitational Teams',
@@ -900,7 +900,6 @@ my @MULTI_WORDS =
   'South American Women Trials',
   'South American Trials',
 
-  'South Zone Championship',
   'Southeast Asian Games',
 
   'South Pacific Zone 7 Championship',
@@ -1075,8 +1074,6 @@ my %MULTI_TYPOS =
   'African Zonal Women Teams' => [
     'zonal africa ladies',
     'zonal africa women'],
-  # 'All India Corporate Invitational' => [
-    # 'all india invitational corporate'],
   'All India Bangur Cement Hindusthan Club' => [
     'bangur cement hindusthan club'],
   'All India Corporate Invitational Pairs' => [
@@ -1981,7 +1978,6 @@ my %MULTI_TYPOS =
     "indian seniors' team trials",
     'indian seniors selection trials',
     "indian seniors' team trials"],
-  'Indian South Zone Championship' => ['south zone championship'],
   'Indian State Championship' => ['state level bridge championship',
     'state level bridge tournament',
     'state level bridgee championship'],
@@ -2816,9 +2812,6 @@ my %MULTI_TYPOS =
   'South American Trials' => ['clasificatoria sudamericano',
     'clasificatorias sudamericano', 'south americal trials'],
   'South American Senior Trials' => ['seleccion sudamericano senior'],
-
-  'South Zone Championship' => ['southzone championship',
-    'souhzone championship'],
   'Southeast Asian Games' => ['sea games', 'south east asian games'],
 
   # SPAIN

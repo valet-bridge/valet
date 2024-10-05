@@ -72,6 +72,7 @@ my @MULTI_WORDS =
   'Indonesian Student Championship',
   'Indonesian University Championship',
 
+  'Indian South Zone Championship',
   'International Bridge Festival',
   'Israel Grand Prix',
   'Israel International Festival',
@@ -209,6 +210,10 @@ my %MULTI_TYPOS =
   'Iceland Bridge Festival' => ['iceland bridgefestival',
     'iceland express bridge festival',
     'icelandic express bridge festival'],
+  'Indian South Zone Championship' => [
+    'south zone championship',
+    'southzone championship',
+    'souhzone championship'],
   'Indonesian National Championship Week' => [
     'indonesia bridge championships',
     'indonesia national championship',
