@@ -109,6 +109,8 @@ my @MULTI_WORDS =
   'Thailand National Games',
   'Turkish Autumn Festival',
   'Turkish-Greek Friendship Festival',
+  'Turkish Open Trials',
+  'Turkish Women Trials',
   'The Hague Bridge Festival',
   'Umea Bridgefestival',
   'United States Bridge Championship',
@@ -359,6 +361,20 @@ my %MULTI_TYPOS =
   'Turkish Autumn Festival' => ['sonbahar bridge festival'],
   'Turkish-Greek Friendship Festival' => [
     'greek-turkish friendship festival'],
+  'Turkish Open Trials' => [
+    'turkey open national team selection',
+    'turkey open team trials',
+    'turkish national team selection',
+    'turkish national open team selection',
+    'turkish open national selection',
+    'turkish open national team selection',
+    'turkish open team selection',
+    'turkish open team trials'],
+  'Turkish Women Trials' => [
+    'turkish woman national selection',
+    'turkish woman team trials',
+    'turkish women national selection',
+    'turkish women team selection'],
   'United States Bridge Championship' => ['us bridge championship',
     'u_s_b_c', 'united states bridge championships'],
   'Uttar Pradesh State Championship' => [
@@ -372,11 +388,11 @@ my %MULTI_TYPOS =
     'regional west java'],
   'Winter Championships' => ['winter championship',
     'winter championsship'],
-  'Indian Winter Nationals' => [
-    'winter national', 
-    'winter nationals', 
-    'wintter nationals',
-    'wintrer national'],
+  # 'Indian Winter Nationals' => [
+    # 'winter national', 
+    # 'winter nationals', 
+    # 'wintter nationals',
+    # 'wintrer national'],
   'World Mind Games' => ['world mind game', 'word mind games', 'wmsg',
     'mind sports games', 'sawmg', 'wmg', 'wnsg', 'world ming games'],
   'World Team Olympiad' => ['world bridge team olympiad',

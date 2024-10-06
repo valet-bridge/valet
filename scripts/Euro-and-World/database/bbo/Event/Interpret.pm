@@ -555,7 +555,7 @@ sub likely_rof
   elsif ($field eq 'N_OF_N' && $value =~ /^1 of (\d+)$/ &&
     ($1 eq '16' || $1 eq '32' || $1 eq '64'))
   {
-    $$rof = $value;
+    $$rof = $1;
     return 1;
   }
   else
@@ -571,6 +571,11 @@ sub post_process_some_explained_mm
 
   # This is a quite specific fix of some major-minor counters.
   my $tname = $knowledge->get_field('TNAME', $bbono);
+  my $meet = $knowledge->get_field('MEET', $bbono);
+  if ($tname eq '' && $meet ne '')
+  {
+    $tname = $meet;
+  }
 
   return unless ($tname && exists $ITERATORS_MAJOR_MINOR{$tname});
 

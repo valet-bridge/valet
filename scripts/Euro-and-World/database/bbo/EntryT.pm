@@ -232,6 +232,8 @@ my %FORM_CORRECTIONS = (
     26012, 26020, 26027,
     31218, 31228, 31250],
   'German Women Pairs' => [26011, 26021, 26028],
+  'Goksu-Yalikavak Pairs' => [
+    10507, 10531],
   'Grand Prix of Poland Pairs' => [
      3077,  3078,
      3453,  3454,  3455,
@@ -417,6 +419,17 @@ my %FORM_CORRECTIONS = (
     44262, 44279],
   'Trondheim Pairs Cup' => [
     17764, 17774],
+  'Turkish Junior Pairs' => [
+    21824, 21825],
+  'Turkish Open Pair Trials' => [
+    13277, 13280, 13289, 13295, 13299, 13300, 13302, 13303, 13305,
+    13306, 13312,
+    45624, 45627, 45629, 45632, 45640, 45644, 45647, 45651, 45654,
+    45657, 45658, 45659],
+  'Turkish U16 Pairs' => [
+    45642, 45646],
+  'Turkish Women Pair Trials' => [
+    13292, 13304],
   'Victorian Women Trials' => [
     44237, 44241],
   'Zurich Open Pairs' => [

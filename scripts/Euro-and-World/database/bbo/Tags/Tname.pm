@@ -208,6 +208,60 @@ my @MULTI_WORDS =
   'Icelandic Cup',
   'Icelandic Open Teams',
 
+  # INDIA
+  'All India Bangur Cement Hindusthan Club',
+  'All India Corporate Invitational Pairs',
+  'All India HCL Pairs',
+  'All India HCL Teams',
+  'All India Open Pairs',
+  'All India Shree Cement',
+  'All India UTI Bank Masters Championship',
+  'Bhabha Atomic Research Centre Open',
+  'B L Rao Memorial Open',
+  'Dainik Navjyoti All India Inter-State',
+  'Delhi Gymkhana Club Open Pairs',
+  'Delhi Gymkhana Club Open Teams',
+  'Godfrey Phillips All India Open',
+  'Hindusthan Club Teams',
+  'Indian Inter-State Teams',
+  'Indian Open Trials',
+  'Indian Senior Trials',
+  'Indian State Championship',
+  'Indian Western Zone Championship',
+  'Jaya Jain Memorial',
+  'Justice J M Lal All India Open Pairs',
+  'Justice J M Lal All India Open Teams',
+  'Karnataka State Teams',
+  'Krishnapatnam Port National Masters',
+  'Lalit Mohanka Memorial',
+  'L C Sunil Rajendra Memorial',
+  'Madras Gymkhana Club Open',
+  'Maharaja Yeshwantrao Holkar National Pairs',
+  'Maharaja Yeshwantrao Holkar National Teams',
+  'Maharashtra State Pairs',
+  'Maharashtra State Teams',
+  'Mohan Sicka BAM Teams',
+  'Mohan Sicka Pairs',
+  'Mohanlal Bhartia Memorial Grand Prix',
+  'Mohanlal Bhartia Memorial Pairs',
+  'Poddar National Masters',
+  'Prashant Desai Memorial',
+  'PYC Hindu Gymkhana Royale',
+  'Rai Bahadur Modi Memorial All India Open',
+  'Rajasthan Invitational Pairs',
+  'Rajasthan Invitational Teams',
+  'R N Bagla Memorial Pairs',
+  'R R Gupta Memorial Championship',
+  'R Ratnam Memorial',
+  'Ruia Gold Cup',
+  'Ruia Silver Cup',
+  'Shree Keni Trophy',
+  'Tolani Gold Trophy',
+  'Tolani Grand Prix',
+  'Tolani Silver Cup',
+  'Uttar Pradesh State Pairs',
+  'Uttar Pradesh State Teams',
+
   # INDONESIA
   'Gabrial UI Bastaman Cup',
   'Geologi Cup',
@@ -553,7 +607,6 @@ my @MULTI_WORDS =
 
   ### DDD
 
-
   'Division Nationale',
   'Dr. Rand Masters',
 
@@ -651,8 +704,6 @@ my @MULTI_WORDS =
   'Grand Prix of Prague',
   'Grand National Teams',
 
-  
-
   ### HHH
 
   'Haikou Fitness Day',
@@ -675,64 +726,6 @@ my @MULTI_WORDS =
 
   'IMSA Cup',
   'IMSA Elite Mind Games',
-
-  # INDIA
-  'All India Bangur Cement Hindusthan Club',
-  'All India Corporate Invitational Pairs',
-  'All India HCL Pairs',
-  'All India HCL Teams',
-  'All India Open Pairs',
-  'All India Shree Cement',
-  'All India UTI Bank Masters Championship',
-  'Bhabha Atomic Research Centre Open',
-  'B L Rao Memorial Open',
-  'Dainik Navjyoti All India Inter-State',
-  'Delhi Gymkhana Club Open Pairs',
-  'Delhi Gymkhana Club Open Teams',
-  'Godfrey Phillips All India Open',
-  'Hindusthan Club Teams',
-  'Indian Inter-State Teams',
-  'Indian Open Trials',
-  'Indian Senior Trials',
-  'Indian State Championship',
-  'Indian Western Zone Championship',
-  'Jaya Jain Memorial',
-  'Justice J M Lal All India Open Pairs',
-  'Justice J M Lal All India Open Teams',
-  'Karnataka State Teams',
-  'Krishnapatnam Port National Masters',
-  'Lalit Mohanka Memorial',
-  'L C Sunil Rajendra Memorial',
-  'Madras Gymkhana Club Open',
-  'Maharaja Yeshwantrao Holkar National Pairs',
-  'Maharaja Yeshwantrao Holkar National Teams',
-  'Maharashtra State Pairs',
-  'Maharashtra State Teams',
-  'Mohan Sicka BAM Teams',
-  'Mohan Sicka Pairs',
-  'Mohanlal Bhartia Memorial Grand Prix',
-  'Mohanlal Bhartia Memorial Pairs',
-  'Poddar National Masters',
-  'Prashant Desai Memorial',
-  'PYC Hindu Gymkhana Royale',
-  'Rai Bahadur Modi Memorial All India Open',
-  'Rajasthan Invitational Pairs',
-  'Rajasthan Invitational Teams',
-  'R N Bagla Memorial Pairs',
-  'R R Gupta Memorial Championship',
-  'R Ratnam Memorial',
-  'Ruia Gold Cup',
-  'Ruia Silver Cup',
-  'Shree Keni Trophy',
-  'Tolani Gold Trophy',
-  'Tolani Grand Prix',
-  'Tolani Silver Cup',
-  'Uttar Pradesh State Pairs',
-  'Uttar Pradesh State Teams',
-
-
-
-
 
   ### JJJ
 
@@ -957,32 +950,36 @@ my @MULTI_WORDS =
   'Transnational Open Teams',
 
   # TURKEY
+  'Ankara Summer Teams',
+  'Goksu-Yalikavak Pairs',
+  'Istanbul Teams',
+  'Istanbul Winter Teams',
+  'Izmir Teams Cup',
+  'Murat Kilercioglu Turkish Spring Teams',
+  'Necmettin Sunget Teams Cup',
   'Turkish Club Championship',
-  'Turkish East & South-East Teams',
   'Turkish East Mediterranean Teams',
   'Turkish Junior Pairs',
   'Turkish Mixed Team Trials',
   'Turkish Mixed Teams Championship',
-  'Turkish Open Teams Championship',
-  'Turkish Open Trials',
+  'Turkish Open Teams',
+  'Turkish Open Pair Trials',
+  'Turkish Open Team Trials',
   'Turkish Teams Championship',
   'Turkish Women Teams',
   'Turkish Swiss Mixed Teams',
-  'Turkish U16 Championship',
-  'Turkish Universities Championship',
+  'Turkish U16 Pairs',
+  'Turkish University Teams',
   'Turkish Winter Championship',
   'Turkish Winter Open Teams',
   'Turkish Winter Women Teams',
-  'Turkish Women Trials',
+  'Turkish Women Pair Trials',
+  'Turkish Women Team Trials',
 
-  'Istanbul Teams',
-  'Istanbul Winter Teams',
-  'Izmir Teams Cup',
+
+  # Indian
   'Kalani Trophy',
-  'Murat Kilercioglu Turkish Spring Teams',
-  'Ankara Summer Teams',
-  'Goksu-Yalikavak Pairs',
-  'Necmettin Sunget Teams Cup',
+
 
   ### UUU
 
@@ -2081,8 +2078,10 @@ my %MULTI_TYPOS =
     'istanbul club teams championship',
     'ýstanbul championship',
     'ýstanbul teams'],
-  'Istanbul Winter Teams' => ['istanbul kis dortlu takimlar',
-    'istanbul kis dortlu takim', 'istanbul winter champs',
+  'Istanbul Winter Teams' => [
+    'istanbul kis dortlu takimlar',
+    'istanbul kis dortlu takim', 
+    'istanbul winter champs',
     'istanbul kis'],
   'Izmir Teams Cup' => [
     'izmir open teams championship',
@@ -2985,51 +2984,47 @@ my %MULTI_TYPOS =
     'turkish inter club championships',
     'turkish inter-clubs championship',
     'turkiye clubs championship', 'turkey clubs championship'],
-  'Turkish East & South-East Teams' => [
-    'turkish clubs championship east & south east el'],
   'Turkish East Mediterranean Teams' => [
+    'turkish clubs championship east & south east el',
+    'turkish east & south-east teams',
     'turkish east mediterranean',
     'turkish east mediterranean club teams',
     'turkish eastern mediterranean club', 
-    'turkish eastern mediterranean club teams',
-    'turkey mixed teams'],
+    'turkish eastern mediterranean club teams'],
   'Turkish Mixed Team Trials' => ['turkish mixed team trails'],
-  'Turkish Mixed Teams Championship' => ['turkey mix teams ch',
-    'turkey mixed team championship',
-    'turkish mixed team championship',
-    'turkish mixed team championships',
-    'turkiye mixed teams championship',
+  'Turkish Mixed Teams' => [
+    'turkey mix teams ch',
     'turkey mix teams championship',
+    'turkey mixed team championship',
     'turkey mixed teams',
     'turkis mixed teams',
-    'turkýsh mixed teams',
-    'turkish mixed teams'],
-  'Turkish Open Teams Championship' => [
+    'turkish mixed teams',
+    'turkish mixed team championship',
+    'turkish mixed team championships',
+    'turkish mixed teams championship',
+    'turkiye mixed teams championship',
+    'turkýsh mixed teams'],
+  'Turkish Open Teams' => [
     'turkey open team championship',
     'turkish national open national selection',
     'turkish open team championship',
     'turkish open teams',
     'turkish open teams championship',
     'turkish open teams championships',
-    'turkish open national selection',
     'turkiye acik takimlar sampiyonasi',
     'turkish national open teams'],
-  'Turkish Open Trials' => [
-    'turkish national team selection',
-    'turkish national open team selection',
-    'turkish open national team selection',
-    'turkish open team selection',
-    'turkey open national team selection',
-    'turkey open team trials', 
-    'turkish open team trials'],
   'Turkish Swiss Mixed Teams' => ['turkey swiss mixed teams'],
   'Turkish Teams Championship' => ['turkiye bric takimlar sampiyonasi'],
-  'Turkish U16 Championship' => ['turkey u16 championship'],
-  'Turkish Universities Championship' => [
+  'Turkish U16 Pairs' => [
+    'turkey u16 championship'],
+  'Turkish University Teams' => [
+    'turkish Universities championship',
     'turkish universities bridge championship'],
-  'Turkish Winter Championship' => ['turkiye kis takimlar sampiyonasi',
+  'Turkish Winter Championship' => [
+    'turkiye kis takimlar sampiyonasi',
     'turkish winter chanpionship'],
-  'Turkish Winter Open Teams' => ['turkiye kis acik takimlar sampiyonasi'],
+  'Turkish Winter Open Teams' => [
+    'turkiye kis acik takimlar sampiyonasi'],
   'Turkish Winter Women Teams' => [
     'turkish winter woman team championship'],
   'Turkish Women Teams' => ['türkish ladies teams',
@@ -3037,11 +3032,6 @@ my %MULTI_TYPOS =
     'turkish ladies teams',
     'turkish women championships',
     'turkish womens teams championship'],
-  'Turkish Women Trials' => [
-    'turkish woman national selection',
-    'turkish woman team trials',
-    'turkish women national selection',
-    'turkish women team selection'],
 
   ### UUU
 
