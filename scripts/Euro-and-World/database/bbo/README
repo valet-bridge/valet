@@ -1,3 +1,11 @@
+Phases:
+1. Dates run (.lin files matched to tournaments)
+2. Recognized MEET's where needed
+3. Links for major tournaments found
+4. Edited down names of tournaments, merged where needed
+5. No WARN
+6. Filled out major, minor for remaining ones
+
 Event/Interpret.pm:
 post_process_rof
 Might be a place to catch 40465
