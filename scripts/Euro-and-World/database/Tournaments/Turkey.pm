@@ -915,7 +915,6 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2015,
             STAGE => 'Rof64',
-            major => 'SEGMENT',
             DATE_START => '2015-08-22',
             DATE_END => '2015-08-23'
           },
@@ -923,7 +922,6 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2015,
             STAGE => 'Rof32',
-            major => 'SEGMENT',
             DATE_START => '2015-08-24',
             DATE_END => '2015-08-24'
           },
@@ -931,7 +929,6 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2015,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
             DATE_START => '2015-08-24',
             DATE_END => '2015-08-25'
           },
@@ -941,7 +938,7 @@ my %TOURNAMENTS_TURKEY =
             STAGE => 'Quarterfinal',
             major => 'SEGMENT',
             DATE_START => '2015-08-25',
-            DATE_END => '2015-08-25'
+            DATE_END => '2015-08-26'
           },
           'C5' => 
           {
@@ -1180,7 +1177,8 @@ my %TOURNAMENTS_TURKEY =
             YEAR => 2009,
             MOVEMENT => 'Swiss',
             STAGE => 'Round-robin',
-            major => 'ROUND',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2009-04-26',
             DATE_END => '2009-04-30'
           } 
@@ -1232,13 +1230,21 @@ my %TOURNAMENTS_TURKEY =
         # http://clubs.vugraph.com/tbricfed/calendar.php?month=5&year=2012
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
             MOVEMENT => 'Swiss',
             major => 'SESSION',
             minor => 'SEGMENT',
             DATE_START => '2012-05-08',
+            DATE_END => '2012-05-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            MOVEMENT => 'Danish',
+            major => 'ROUND',
+            DATE_START => '2012-05-10',
             DATE_END => '2012-05-10'
           } 
         }
@@ -1693,7 +1699,6 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2015,
             STAGE => 'Rof64',
-            major => 'SEGMENT',
             DATE_START => '2015-03-02',
             DATE_END => '2015-03-03'
           },
@@ -1701,7 +1706,6 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2015,
             STAGE => 'Rof32',
-            major => 'SEGMENT',
             DATE_START => '2015-03-03',
             DATE_END => '2015-03-04'
           },
@@ -1709,7 +1713,6 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2015,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
             DATE_START => '2015-03-04',
             DATE_END => '2015-03-05'
           },

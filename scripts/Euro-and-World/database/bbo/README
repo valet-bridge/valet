@@ -6,10 +6,6 @@ Phases:
 5. No WARN
 6. Filled out major, minor for remaining ones
 
-Event/Interpret.pm:
-post_process_rof
-Might be a place to catch 40465
-
 India:
 Retest India, looking for Winter Nationals
 

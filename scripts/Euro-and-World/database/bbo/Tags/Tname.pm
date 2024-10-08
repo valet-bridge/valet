@@ -433,6 +433,31 @@ my @MULTI_WORDS =
   'Zurich Open Pairs',
   'Zurich Open Teams',
 
+  # TURKEY
+  'Ankara Summer Teams',
+  'Goksu-Yalikavak Pairs',
+  'Istanbul Teams',
+  'Istanbul Winter Teams',
+  'Izmir Teams Cup',
+  'Murat Kilercioglu Turkish Spring Teams',
+  'Necmettin Sunget Teams Cup',
+  'Turkish Club Championship',
+  'Turkish East Mediterranean Teams',
+  'Turkish Junior Pairs',
+  'Turkish Mixed Team Trials',
+  'Turkish Mixed Teams',
+  'Turkish Open Teams',
+  'Turkish Open Pair Trials',
+  'Turkish Open Team Trials',
+  'Turkish Swiss Mixed Teams',
+  'Turkish U16 Pairs',
+  'Turkish University Teams',
+  'Turkish Winter Open Teams',
+  'Turkish Winter Women Teams',
+  'Turkish Women Pair Trials',
+  'Turkish Women Team Trials',
+  'Turkish Women Teams',
+
   # USA
   '0 to 1500 Spingold',
   'Reisinger BAM Teams',
@@ -454,16 +479,21 @@ my @MULTI_WORDS =
   # ----------------------------------------------------
 
   'Angelini Teams',
+  'Ashok Kapur Memorial Swiss Pairs',
+  'Bagla Pairs Royale',
   'Baze Senior Knock-out',
   'Bergen Grand Tournament',
   'Bologna Trophy',
+  'bridge24.pl Trophy',
   'Centre Island Teams',
   'FOSS Grand Tournament',
   'FOSS-Tren',
+  'Grand Prix of Prague',
   'Madeira Open',
   'Madeira Swiss Teams',
   'Madrid Senior Teams',
   'Marit Sveaas Tournament',
+  'Milan Trophy',
   'Mo i Rana Ladies Invitational',
   'Pärnu Summer Invitational Pairs',
   'Pärnu Summer Open Teams',
@@ -499,7 +529,6 @@ my @MULTI_WORDS =
   'ARIS Cup',
   'Arnhem Interbridge Tournament',
   'Asenovgrad Tournament',
-  'Ashok Kapur Memorial Swiss Pairs',
   'ASEAN Club Championship',
   'ASEAN Mixed Teams',
   'ASEAN Open Teams',
@@ -515,7 +544,6 @@ my @MULTI_WORDS =
 
   ### BBB
 
-  'Bagla Pairs Royale',
   'Balaton Invitational Teams',
   'Balatonfoldvar Teams',
   'Balikcioglu Teams Championship',
@@ -536,7 +564,6 @@ my @MULTI_WORDS =
   'BFAME Friendship Pairs',
   'BKBT Teams',
   'Bolivian Open Teams',
-  'bridge24.pl Trophy',
   
   # BRITAIN
   'British Gold Cup',
@@ -701,7 +728,6 @@ my @MULTI_WORDS =
   'GHTD Cup',
   'Golden Jubilee',
 
-  'Grand Prix of Prague',
   'Grand National Teams',
 
   ### HHH
@@ -769,7 +795,6 @@ my @MULTI_WORDS =
   'McConnell Cup',
   'Menpora-Pertamina Cup',
   'Mike Lawrence Exhibition',
-  'Milan Trophy',
   "Missouri Braggin' Rights",
   'Mondi Cup',
   'Mountain Sea Cup',
@@ -949,40 +974,8 @@ my @MULTI_WORDS =
   'Towns Cup',
   'Transnational Open Teams',
 
-  # TURKEY
-  'Ankara Summer Teams',
-  'Goksu-Yalikavak Pairs',
-  'Istanbul Teams',
-  'Istanbul Winter Teams',
-  'Izmir Teams Cup',
-  'Murat Kilercioglu Turkish Spring Teams',
-  'Necmettin Sunget Teams Cup',
-  'Turkish Club Championship',
-  'Turkish East Mediterranean Teams',
-  'Turkish Junior Pairs',
-  'Turkish Mixed Team Trials',
-  'Turkish Mixed Teams Championship',
-  'Turkish Open Teams',
-  'Turkish Open Pair Trials',
-  'Turkish Open Team Trials',
-  'Turkish Teams Championship',
-  'Turkish Women Teams',
-  'Turkish Swiss Mixed Teams',
-  'Turkish U16 Pairs',
-  'Turkish University Teams',
-  'Turkish Winter Championship',
-  'Turkish Winter Open Teams',
-  'Turkish Winter Women Teams',
-  'Turkish Women Pair Trials',
-  'Turkish Women Team Trials',
-
-
   # Indian
   'Kalani Trophy',
-
-
-  ### UUU
-
 
   ### VVV
 
