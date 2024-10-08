@@ -41,7 +41,8 @@ use EntryT;
 # use Tournaments::Romania;
 # use Tournaments::Serbia;
 # use Tournaments::Spain;
-use Tournaments::Turkey;
+use Tournaments::SouthAmerica;
+# use Tournaments::Turkey;
 # use Tournaments::Switzerland;
 # use Tournaments::USA;
 
@@ -75,7 +76,8 @@ my %DIVISIONS =
   # ROMANIA => \&Tournaments::Romania::set_links
   # SERBIA => \&Tournaments::Serbia::set_links
   # SPAIN => \&Tournaments::Spain::set_links
-  TURKEY => \&Tournaments::Turkey::set_links
+  SOUTHAMERICA => \&Tournaments::SouthAmerica::set_links
+  # TURKEY => \&Tournaments::Turkey::set_links
   # SWITZERLAND => \&Tournaments::Switzerland::set_links
   # USA => \&Tournaments::USA::set_links
 );

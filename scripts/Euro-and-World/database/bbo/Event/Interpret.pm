@@ -48,6 +48,7 @@ my %ITERATORS_MAJOR_MINOR = (
   'Sao Paulo State Championship' => ['SEGMENT', ''],
   'South American Women Teams' => ['SEGMENT', ''],
   'South American Open Teams' => ['SEGMENT', ''],
+  'South American Team Championship' => ['SEGMENT', ''],
   'Southeast Asian Games' => ['SESSION', 'ROUND'],
   'Swedish District Championship' => ['ROUND', 'SEGMENT'],
   'Swedish Open Teams' => ['ROUND', 'SEGMENT'],
@@ -833,6 +834,10 @@ sub active_some_mm_teams
     $token, $field, $value, $bbono) = @_;
 
   my $tname = $knowledge->get_field('TNAME', $bbono);
+  if ($tname eq '')
+  {
+    $tname = $knowledge->get_field('MEET', $bbono);
+  }
 
   my ($n1, $n2);
   if ($field eq 'MAJOR_MINOR')
@@ -1048,13 +1053,19 @@ sub post_process_single_active
   }
   elsif ($mask eq '0000' || $mask eq '1000')
   {
+    my $tname_ext = $tname;
+    if ($tname eq '')
+    {
+      $tname_ext = $knowledge->get_field('MEET', $bbono);
+    }
+
     if ($field eq 'NL_OF_N' || $field eq 'NL_TO_N')
     {
       # Could be really N_OF_N or two different things.
       return if active_nton_teams($knowledge, $chains, $chain, $cno,
         $token, $field, $value, $bbono);
     }
-    elsif ($tname && exists $ITERATORS_MAJOR_MINOR{$tname} &&
+    elsif ($tname_ext && exists $ITERATORS_MAJOR_MINOR{$tname_ext} &&
         ($field eq 'MAJOR_MINOR' || $field eq 'N_TO_N'))
     {
       return if active_some_mm_teams($knowledge, $chains, $chain, $cno,
@@ -1062,7 +1073,7 @@ sub post_process_single_active
     }
     elsif ($tname eq 'Lady Milne Trophy')
     {
-      return if active_milne($knowledge, $chains, $chain, $cno,
+    return if active_milne($knowledge, $chains, $chain, $cno,
         $token, $field, $value, $bbono);
     }
     elsif ($knowledge->is_knock_out($bbono))

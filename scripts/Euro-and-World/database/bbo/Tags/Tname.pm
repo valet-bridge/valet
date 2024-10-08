@@ -418,6 +418,16 @@ my @MULTI_WORDS =
   'Serbian Open Trials',
   'Serbian Premier League',
 
+  # SOUTH AMERICA
+  'South American Junior Teams',
+  'South American Open Pairs',
+  'South American Open Teams',
+  'South American Open Trials',
+  'South American Senior Trials',
+  'South American Seniors Teams',
+  'South American Women Teams',
+  'South American Women Trials',
+
   # SPAIN
   'Spanish Central Zone Teams',
   'Spanish Mixed Teams',
@@ -486,6 +496,10 @@ my @MULTI_WORDS =
   'Bologna Trophy',
   'bridge24.pl Trophy',
   'Centre Island Teams',
+  'Copa de Plata',
+  'Copa de Oro',
+  'Copa Zanalda River Plate',
+  'Coppie Viareggio',
   'FOSS Grand Tournament',
   'FOSS-Tren',
   'Grand Prix of Prague',
@@ -493,14 +507,23 @@ my @MULTI_WORDS =
   'Madeira Swiss Teams',
   'Madrid Senior Teams',
   'Marit Sveaas Tournament',
+  'Menpora-Pertamina Cup',
   'Milan Trophy',
   'Mo i Rana Ladies Invitational',
+  'Open Catalunya Preferent',
   'Pärnu Summer Invitational Pairs',
   'Pärnu Summer Open Teams',
   'Peggy Bayer',
+  'Pertamina Field Tambun Cup',
   'Pesta Sukan',
   'Prince Henrik Trophy',
+  'PSN Sarma Centenary Memorial',
+  'Puutalo Open',
+  'Riau Governor Cup',
+  'Rio de Janeiro Championship',
+  'Rio de Janeiro Christmas Individual',
   'Rome Challenger Trophy',
+  'Sao Paulo State Championship',
   'Torneo di Rastignano',
   'Torneo di Roma',
   'Toscana Cup',
@@ -581,6 +604,8 @@ my @MULTI_WORDS =
   'Stara Zagora Open Teams',
   'Varna Titan Teams',
 
+  'IBF Albena',
+
   ### CCC
 
   'Carrousel Cup',
@@ -625,10 +650,6 @@ my @MULTI_WORDS =
   'Collegiate Bowl',
   'Commonwealth Nations Bridge Championships',
   'Computer World Championship',
-  'Copa de Plata',
-  'Copa de Oro',
-  'Copa Zanalda River Plate',
-  'Coppie Viareggio',
   'Corn Cairdis',
   'Cross Strait Invitational',
 
@@ -747,7 +768,6 @@ my @MULTI_WORDS =
 
   ### III
 
-  'IBF Albena',
   'IBWI Cup',
 
   'IMSA Cup',
@@ -793,7 +813,6 @@ my @MULTI_WORDS =
   'Maccabi Games',
   'Marmara Inter-Club Championship',
   'McConnell Cup',
-  'Menpora-Pertamina Cup',
   'Mike Lawrence Exhibition',
   "Missouri Braggin' Rights",
   'Mondi Cup',
@@ -807,8 +826,8 @@ my @MULTI_WORDS =
   'Narain Bhojwani Memorial',
   'NEC Cup',
   'Neighbor Challenge',
-
   'NN Cup',
+
   'Nordic Championship',
   'Nordic Cup',
   'Nordic Junior Championship',
@@ -827,7 +846,6 @@ my @MULTI_WORDS =
   ### OOO
 
   'Olona International Teams',
-  'Open Catalunya Preferent',
   'Otters Inter-Club Teams',
 
   ### PPP
@@ -841,7 +859,6 @@ my @MULTI_WORDS =
   'Park Hotell Swiss Teams',
   'Patton de Monaco',
   'Petit Grand Prix van Driene',
-  'Pertamina Field Tambun Cup',
   "Pigg's Peak All Africa",
   'PLN Cup',
   'Plock District League',
@@ -850,8 +867,6 @@ my @MULTI_WORDS =
   'PRBA State Level Open',
   'Prince Albert II Cup',
   'Prince Takamatsu Cup',
-  'PSN Sarma Centenary Memorial',
-  'Puutalo Open',
 
 
   ### RRR
@@ -861,10 +876,7 @@ my @MULTI_WORDS =
   'Rector University of Brawijaya Cup',
   'Rona Cup',
   'Gianarrigo Rona Trophy',
-  'Riau Governor Cup',
   'Riga Invites to Jurmala',
-  'Rio de Janeiro Championship',
-  'Rio de Janeiro Christmas Individual',
   'Roberto Taunay Cup',
 
   'Rottneros Nordic Cup',
@@ -887,7 +899,6 @@ my @MULTI_WORDS =
   'Samobor Invitational Bridge Meeting',
   'Sanchen Cup',
   'Sanya Cup',
-  'Sao Paulo State Championship',
   'Sarundajang Cup',
   'Scottish Cup',
   'Scottish National League',
@@ -908,16 +919,6 @@ my @MULTI_WORDS =
   'South African Inter-Province Teams',
   'South African Teams',
 
-  # SOUTH AMERICA
-  'South American Junior Teams',
-  'South American Open Pairs',
-  'South American Open Teams',
-  'South American Senior Trials',
-  'South American Seniors Teams',
-  'South American Women Teams',
-  'South American Women Trials',
-  'South American Trials',
-
   'Southeast Asian Games',
 
   'South Pacific Zone 7 Championship',
@@ -929,7 +930,6 @@ my @MULTI_WORDS =
   'Stena Line Cup',
   'Stern-Cornell Trophy',
   "Sternberg Women's BAM Teams",
-  'Sudamericano Transnacional',
   'Summer Monsoon League',
   'Sunchime Fund Cup',
   'Suomen Cup',
@@ -2779,32 +2779,29 @@ my %MULTI_TYPOS =
   'South American Junior Teams' => [
     'south american junior championship',
     'south american junior championships',
-    'south american junioor championships'],
+    'south american junioor championships',
+    'youth sabc'],
   'South American Open Pairs' => [
     'sudamericano de parejas',
     'sudamericano de parejas libres'],
   'South American Open Teams' => [
     'libres sudamericano',
-    'southamerica championship',
-    'southamerican championship', 
     'southamerican open championship',
-    'south american bridge championships', 
-    'south american championship',
-    'south american championhip', 
-    'south american champioship', 
-    'south american championshi', 
-    'south american championships',
-    'sudamericano de bridge',
     'sudamericano libre equipos',
     'sudamericano libres'],
-  'South American Seniors Teams' => ['clasificacion sudamericano seniors',
+  'South American Senior Teams' => [
+    'clasificacion sudamericano seniors',
     'south american senior championship'],
-  'South American Women Teams' => ['clasificatoria damas equipos',
-    'clasificatoria equipos damas', 'sudamericano damas'],
-  'South American Trials' => ['clasificatoria sudamericano',
-    'clasificatorias sudamericano', 'south americal trials'],
-  'South American Senior Trials' => ['seleccion sudamericano senior'],
-  'Southeast Asian Games' => ['sea games', 'south east asian games'],
+  'South American Women Teams' => [
+    'clasificatoria damas equipos',
+    'clasificatoria equipos damas', 
+    'sudamericano damas'],
+  'South American Senior Trials' => [
+    'seleccion sudamericano senior'],
+
+  'Southeast Asian Games' => [
+    'sea games', 
+    'south east asian games'],
 
   # SPAIN
   'Spanish Central Zone Teams' => [
@@ -2837,8 +2834,6 @@ my %MULTI_TYPOS =
   'Staszek Wybranowski Memorial' => ['memorial staszka wybranowskiego'],
   "Sternberg Women's BAM Teams" => ['marsha may sternberg bam'],
   'Stockholm Teams' => ['stockholm teams cs', 'stockholms teams'],
-  'Sudamericano Transnacional' => ['sudamerican transnacional',
-    'sudamerico transnacional'],
   'Summer Monsoon League' => ['summer monsoon', 'summer monsoon leahue'],
 
   # SWEDEN
@@ -3240,7 +3235,6 @@ my %SINGLE_TYPOS =
     'resisinger'],
   'Ruia Gold Cup' => ['ruia'],
   'Scottish Cup' => ['scottishcupplate'],
-  'South American Open Teams' => ['sabc'],
   'Southeast Asian Games' => ['seagames'],
   'Spingold Teams' => ['spingold'],
   'Swedish Elite Series' => ['elitserien'],
