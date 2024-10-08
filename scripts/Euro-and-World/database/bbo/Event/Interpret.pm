@@ -486,9 +486,27 @@ sub post_process_rof
 
     my $token = $chain->check_out(0);
     my $field = $token->field();
+    my $value = $token->value();
+
+    if ($field eq 'N_OF_N' && 
+        ($value =~ /^1_(\d+)$/ || $value =~ /^1 of (\d+)$/))
+    {
+      my $n = $1;
+      if ($n == 16 || $n == 32 || $n == 64)
+      {
+        # Probably round-of.
+        my $rof = "Rof$n";
+        $token->set_general('SINGLETON', 'STAGE', $rof);
+        $chain->complete('EXPLAINED');
+
+        # No named field to delete.
+        $knowledge->add_field('STAGE', $rof, $bbono);
+        next;
+      }
+    }
+
     next unless $field eq 'ROUND';
 
-    my $value = $token->value();
     if ($value eq '16' || $value eq '32' || $value eq '64')
     {
       my $tname = $knowledge->get_field('TNAME', $bbono);
@@ -985,6 +1003,9 @@ sub post_process_single_active
 {
   my ($knowledge, $chains, $chain, $cno, $bbono) = @_;
 
+  # Can happen if there are some late hits in interpret().
+  return if $chain->status() eq 'EXPLAINED';
+
   my $token = $chain->check_out(0);
   my $field = $token->field();
   my $value = $token->value();
@@ -1087,9 +1108,7 @@ sub post_process_pair
   my $value0 = $token0->value();
   my $value1 = $token1->value();
 
-  if ($stage eq '' || $stage eq 'Quarterfinal' || $stage eq 'Semifinal' ||
-      $stage eq 'Final' || $stage eq 'Playoff' || 
-      $movement eq 'Knock-out')
+  if ($stage eq '' || $movement eq 'Knock-out')
   {
     if (($field0 eq 'LETTER' || $field0 eq 'NUMERAL' || 
           $field0 eq 'N_OF_N') &&
@@ -1122,6 +1141,19 @@ sub post_process_pair
         $chain0->complete('KILLED');
         $chain1->complete('EXPLAINED');
       }
+    }
+    return;
+  }
+  if ($stage eq 'Rof64' || $stage eq 'Rof32' ||
+      $stage eq 'Rof16' || $stage eq 'Quarterfinal' || 
+      $stage eq 'Semifinal' || $stage eq 'Final' || 
+      $stage eq 'Playoff')
+  {
+    if ($field1 eq 'NUMERAL' || $field1 eq 'N_OF_N' || 
+        $field1 eq 'AMBIGUOUS')
+    {
+      $token1->set_general('MARKER', 'SEGMENT', $value1);
+      $chain1->complete('EXPLAINED');
     }
     return;
   }

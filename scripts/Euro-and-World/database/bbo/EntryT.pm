@@ -637,6 +637,17 @@ sub prune_field_using
     delete $self->{$field};
     return;
   }
+  elsif ($field eq 'TITLE_STAGE')
+  {
+    die "Multiple ordinal values" unless $len == 0;
+    my $read = $self->{$field}[0];
+
+    if ($read eq 'Final' || $read eq 'Playoff')
+    {
+      delete $self->{$field};
+      return;
+    }
+  }
 
 
   warn "$self->{BBONO}, pruning field $field, value $value, but have " .

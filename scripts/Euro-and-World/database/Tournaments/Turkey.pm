@@ -913,9 +913,50 @@ my %TOURNAMENTS_TURKEY =
           },
           'C1' => 
           {
-            # TODO Got to here from above
             YEAR => 2015,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
             DATE_START => '2015-08-22',
+            DATE_END => '2015-08-23'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-24',
+            DATE_END => '2015-08-24'
+          },
+          'C3' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-24',
+            DATE_END => '2015-08-25'
+          },
+          'C4' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-25',
+            DATE_END => '2015-08-25'
+          },
+          'C5' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-26',
+            DATE_END => '2015-08-26'
+          },
+          'C6' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-27',
             DATE_END => '2015-08-27'
           } 
         }
@@ -928,12 +969,15 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2016,
+            major => 'SEGMENT',
             DATE_START => '2016-06-05',
             DATE_END => '2016-06-05'
           },
           'C1' => 
           {
             YEAR => 2016,
+            STAGE => 'Round-robin',
+            major => 'SEGMENT',
             DATE_START => '2016-08-26',
             DATE_END => '2016-08-28'
           } 
@@ -962,6 +1006,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'ROUND',
             DATE_START => '2013-05-25',
             DATE_END => '2013-05-26'
           } 
@@ -974,6 +1019,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2014,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2014-06-28',
             DATE_END => '2014-06-29'
           } 
@@ -1003,6 +1050,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2012,
+            STAGE => 'Final',
             DATE_START => '2012-02-03',
             DATE_END => '2012-02-03'
           } 
@@ -1029,9 +1077,19 @@ my %TOURNAMENTS_TURKEY =
         # http://clubs.vugraph.com/tbricfed/calendar.php?month=7&year=2016
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-07-10',
+            DATE_END => '2016-07-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2016-07-10',
             DATE_END => '2016-07-10'
           } 
@@ -1061,6 +1119,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'ROUND',
             DATE_START => '2012-12-19',
             DATE_END => '2012-12-21'
           } 
@@ -1074,6 +1133,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'ROUND',
             DATE_START => '2013-12-18',
             DATE_END => '2013-12-20'
           } 
@@ -1087,6 +1147,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2014,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2014-12-10',
             DATE_END => '2014-12-12'
           } 
@@ -1116,6 +1178,9 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2009,
+            MOVEMENT => 'Swiss',
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2009-04-26',
             DATE_END => '2009-04-30'
           } 
@@ -1129,6 +1194,9 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2010,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            minor => 'MATCH',
             DATE_START => '2010-05-02',
             DATE_END => '2010-05-06'
           } 
@@ -1139,10 +1207,22 @@ my %TOURNAMENTS_TURKEY =
         # http://clubs.vugraph.com/tbricfed/calendar.php?month=5&year=2011
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            MOVEMENT => 'Swiss',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2011-05-10',
+            DATE_END => '2011-05-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            MOVEMENT => 'Danish',
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-05-12',
             DATE_END => '2011-05-12'
           } 
         }
@@ -1155,6 +1235,9 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2012,
+            MOVEMENT => 'Swiss',
+            major => 'SESSION',
+            minor => 'SEGMENT',
             DATE_START => '2012-05-08',
             DATE_END => '2012-05-10'
           } 
@@ -1188,10 +1271,28 @@ my %TOURNAMENTS_TURKEY =
         # http://clubs.vugraph.com/tbricfed/calendar.php?month=5&year=2014
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2014-05-04',
+            DATE_END => '2014-05-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2014-05-06',
+            DATE_END => '2014-05-06'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            MOVEMENT => 'Danish',
+            major => 'ROUND',
+            DATE_START => '2014-05-07',
             DATE_END => '2014-05-07'
           } 
         }
@@ -1260,10 +1361,26 @@ my %TOURNAMENTS_TURKEY =
         MEET => 'Turkish Open Trials',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2010,
+            major => 'SESSION',
             DATE_START => '2010-04-04',
+            DATE_END => '2010-04-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SESSION',
+            DATE_START => '2010-04-06',
+            DATE_END => '2010-04-07'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            DATE_START => '2010-04-08',
             DATE_END => '2010-04-09'
           } 
         }
@@ -1277,6 +1394,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2016,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2016-07-01',
             DATE_END => '2016-07-03'
           } 
@@ -1345,74 +1464,6 @@ my %TOURNAMENTS_TURKEY =
     }
   },
 
-  'Turkish Women Teams',
-  {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Women',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2009' =>
-      {
-        # http://clubs.vugraph.com/tbricfed/calendar.php?month=4&year=2009
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2009,
-            DATE_START => '2009-04-25',
-            DATE_END => '2009-04-30'
-          } 
-        }
-      },
-      '2010' =>
-      {
-        # http://clubs.vugraph.com/tbricfed/calendar.php?month=5&year=2010
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2010,
-            DATE_START => '2010-05-01',
-            DATE_END => '2010-05-06'
-          } 
-        }
-      },
-      '2014' =>
-      {
-        # http://clubs.vugraph.com/tbricfed/calendar.php?month=5&year=2014
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2014,
-            DATE_START => '2014-05-06',
-            DATE_END => '2014-05-07'
-          } 
-        }
-      },
-      '2015' =>
-      {
-        # http://clubs.vugraph.com/tbricfed/calendar.php?month=5&year=2015
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2015,
-            DATE_START => '2015-05-07',
-            DATE_END => '2015-05-07'
-          } 
-        }
-      },
-    }
-  },
-
   'Turkish Swiss Mixed Teams',
   {
     ORGANIZATION => 'TBF',
@@ -1435,6 +1486,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2015,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2015-12-16',
             DATE_END => '2015-12-18'
           } 
@@ -1464,6 +1517,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2016,
+            STAGE => 'Final',
             DATE_START => '2016-07-02',
             DATE_END => '2016-07-02'
           } 
@@ -1492,6 +1546,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'ROUND',
             DATE_START => '2012-03-30',
             DATE_END => '2012-03-30'
           } 
@@ -1504,6 +1559,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2013-03-28',
             DATE_END => '2013-03-28'
           } 
@@ -1532,12 +1589,16 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Playoff',
+            major => 'ROUND',
             DATE_START => '2013-02-19',
             DATE_END => '2013-02-19'
           },
           'C1' => 
           {
             YEAR => 2013,
+            STAGE => 'Playoff',
+            major => 'ROUND',
             DATE_START => '2013-03-02',
             DATE_END => '2013-03-03'
           } 
@@ -1620,10 +1681,60 @@ my %TOURNAMENTS_TURKEY =
         # http://clubs.vugraph.com/tbricfed/calendar.php?month=3&year=2015
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2015-02-28',
+            DATE_END => '2015-03-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
+            DATE_START => '2015-03-02',
+            DATE_END => '2015-03-03'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2015-03-03',
+            DATE_END => '2015-03-04'
+          },
+          'C3' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2015-03-04',
+            DATE_END => '2015-03-05'
+          },
+          'C5' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-03-05',
+            DATE_END => '2015-03-05'
+          },
+          'C6' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-03-06',
+            DATE_END => '2015-03-06'
+          },
+          'C7' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-03-06',
             DATE_END => '2015-03-07'
           } 
         }
@@ -1633,10 +1744,36 @@ my %TOURNAMENTS_TURKEY =
         # http://clubs.vugraph.com/tbricfed/calendar.php?month=3&year=2016
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
             DATE_START => '2016-03-09',
+            DATE_END => '2016-03-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-03-10',
+            DATE_END => '2016-03-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-03-11',
+            DATE_END => '2016-03-11'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-03-11',
             DATE_END => '2016-03-12'
           } 
         }
@@ -1662,10 +1799,28 @@ my %TOURNAMENTS_TURKEY =
         # http://clubs.vugraph.com/tbricfed/calendar.php?month=2&year=2013
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2013-02-23',
+            DATE_END => '2013-02-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-02-23',
+            DATE_END => '2013-02-24'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-02-24',
             DATE_END => '2013-02-24'
           } 
         }
@@ -1678,6 +1833,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'SEGMENT',
             DATE_START => '2014-02-21',
             DATE_END => '2014-02-23'
           } 
@@ -1704,6 +1861,8 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2010-04-05',
             DATE_END => '2010-04-08'
           } 
@@ -1742,6 +1901,96 @@ my %TOURNAMENTS_TURKEY =
             major => 'SEGMENT',
             DATE_START => '2011-10-22',
             DATE_END => '2011-10-23'
+          } 
+        }
+      },
+    }
+  },
+
+  'Turkish Women Teams',
+  {
+    ORGANIZATION => 'TBF',
+    COUNTRY => 'Turkey',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        # http://clubs.vugraph.com/tbricfed/calendar.php?month=4&year=2009
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2009,
+            major => 'ROUND',
+            DATE_START => '2009-04-25',
+            DATE_END => '2009-04-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2009-04-30',
+            DATE_END => '2009-04-30'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        # http://clubs.vugraph.com/tbricfed/calendar.php?month=5&year=2010
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            DATE_START => '2010-05-01',
+            DATE_END => '2010-05-06'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        # http://clubs.vugraph.com/tbricfed/calendar.php?month=5&year=2014
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2014-05-06',
+            DATE_END => '2014-05-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            MOVEMENT => 'Danish',
+            major => 'ROUND',
+            DATE_START => '2014-05-07',
+            DATE_END => '2014-05-07'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        # http://clubs.vugraph.com/tbricfed/calendar.php?month=5&year=2015
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            MOVEMENT => 'Danish',
+            major => 'ROUND',
+            DATE_START => '2015-05-07',
+            DATE_END => '2015-05-07'
           } 
         }
       },
