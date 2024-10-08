@@ -35,13 +35,14 @@ use EntryT;
 # use Tournaments::Israel;
 # use Tournaments::Italy;
 # use Tournaments::NewZealand;
+use Tournaments::Nordic;
 # use Tournaments::Norway;
 # use Tournaments::Poland;
 # use Tournaments::Portugal;
 # use Tournaments::Romania;
 # use Tournaments::Serbia;
 # use Tournaments::Spain;
-use Tournaments::SouthAmerica;
+# use Tournaments::SouthAmerica;
 # use Tournaments::Turkey;
 # use Tournaments::Switzerland;
 # use Tournaments::USA;
@@ -70,13 +71,14 @@ my %DIVISIONS =
   # ISRAEL => \&Tournaments::Israel::set_links
   # ITALY => \&Tournaments::Italy::set_links
   # NEWZEALAND => \&Tournaments::NewZealand::set_links
+  NORDIC => \&Tournaments::Nordic::set_links
   # NORWAY => \&Tournaments::Norway::set_links
   # POLAND => \&Tournaments::Poland::set_links
   # PORTUGAL => \&Tournaments::Portugal::set_links
   # ROMANIA => \&Tournaments::Romania::set_links
   # SERBIA => \&Tournaments::Serbia::set_links
   # SPAIN => \&Tournaments::Spain::set_links
-  SOUTHAMERICA => \&Tournaments::SouthAmerica::set_links
+  # SOUTHAMERICA => \&Tournaments::SouthAmerica::set_links
   # TURKEY => \&Tournaments::Turkey::set_links
   # SWITZERLAND => \&Tournaments::Switzerland::set_links
   # USA => \&Tournaments::USA::set_links

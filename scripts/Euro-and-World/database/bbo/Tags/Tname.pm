@@ -828,16 +828,16 @@ my @MULTI_WORDS =
   'Neighbor Challenge',
   'NN Cup',
 
-  'Nordic Championship',
   'Nordic Cup',
-  'Nordic Junior Championship',
   'Nordic Junior Pairs',
-  'Nordic Junior Team Championship',
-  'Nordic Open Championship',
-  'Nordic Race',
+  'Nordic Junior Teams',
+  'Nordic Open Teams',
   'Nordic Security Pro-Am Pairs',
-  'Nordic Team Championship',
-  'Nordic Women Championship',
+  'Nordic Women Teams',
+
+
+  # Actually a Swedish trial.
+  'Nordic Race',
 
 
   'NTU Cup',
@@ -879,7 +879,6 @@ my @MULTI_WORDS =
   'Riga Invites to Jurmala',
   'Roberto Taunay Cup',
 
-  'Rottneros Nordic Cup',
   'Rui Pinto Cup',
 
   # RUSSIA
@@ -2312,22 +2311,28 @@ my %MULTI_TYPOS =
     'nz trials'],
 
   'NN Cup' => ['nn-cup'],
-  'Nordic Championship' => ['nordic championships',
-    'nordic bridge championship', 'nordic bridge championships'],
-  'Nordic Junior Championship' => ['nordic championship for juniors',
-    'nordic junior championships'],
-  'Nordic Junior Pairs' => ['nordic junior pair championship',
-    'open nordic junior pair', 'open nordic junior pairs'],
-  'Nordic Junior Team Championship' => [
+
+  'Nordic Cup' => [
+    'rottneros cup',
+    'rottneros nordic cup'],
+  'Nordic Junior Pairs' => [
+    'nordic junior pair championship',
+    'open nordic junior pair', 
+    'open nordic junior pairs'],
+  'Nordic Junior Teams' => [
+    'nordic junior team championship',
     'nordic junior team championships',
     'nordic junior teams championship',
     'nordic junior teams championships'],
-  'Nordic Open Championship' => ['nordic championship open class'],
+  'Nordic Open Teams' => [
+    'nordic championship open class',
+    'nordic open championship'],
   'Nordic Security Pro-Am Pairs' => [
     'Nordic Security Play against the stars'],
-  'Nordic Team Championship' => ['nordic bridge team championship',
-    'nordics', 'nordic team championships'],
-  'Nordic Women Championship' => ['nordics (women)'],
+  'Nordic Women Teams' => [
+    'nordic women championship',
+    'nordics (women)'],
+
   'Northern Territory Gold Teams' => ['nt gold teams'],
   'Northern Territory Gold Swiss Pairs' => ['nt gold swiss pairs',
     'nt gold swis pairs', 'nt gold swiss piars'],
@@ -2700,7 +2705,6 @@ my %MULTI_TYPOS =
     'rondanecupen swiss teams'],
   'Rosfjord Swiss Teams' => ['rosfjord monrad team',
     'rosfjord monrad teams'],
-  'Rottneros Nordic Cup' => ['rottneros cup'],
   'Rui Pinto Cup' => ['taça rui pinto'],
   'Ruia Gold Cup' => [
     'golden jubilee',

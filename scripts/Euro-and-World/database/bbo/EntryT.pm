@@ -344,6 +344,10 @@ my %FORM_CORRECTIONS = (
     32032, 32033],
   'Mohanlal Bhartia Memorial Pairs' => [
     16734, 16745],
+  'Nordic Junior Pairs' => [
+    13268, 13269, 13272, 13273, 13275, 13278, 13283, 13286,
+    22642, 22646, 22650, 22654, 22658, 22662, 22664, 22668, 22673,
+    44077, 44091, 44098, 44119, 44122],
   'Northern Territory Gold Swiss Pairs' => [
      1242,  1244,  1245,  1246,  1247,  1248],
   'Norwegian Mixed Pairs' => [

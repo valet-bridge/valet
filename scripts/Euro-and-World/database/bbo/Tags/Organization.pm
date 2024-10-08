@@ -75,6 +75,7 @@ my %MULTI_TYPOS =
   MCBA => ['macau contract bridge association'],
   NBB => ['dutch bridge federation'],
   NBF => ['norsk bridgeforbund'],
+  NBU => ['nordic bridge union'],
   NIBU => ['northern ireland bridge union'],
   NZB => ['new zealand bridge'],
   ÖBV => ['austrian bridge federation'],

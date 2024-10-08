@@ -9,6 +9,38 @@ Phases:
 India:
 Retest India, looking for Winter Nationals
 
+  'Nordic Race',
+  {
+    ORGANIZATION => 'NBU',
+    ORIGIN => 'International',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        # https://arkiv.svenskbridge.se/e107_plugins/content/content.php?content.2836
+        # This is a Swedish qualification tournament!
+        MEET => 'Meet name',
+
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2013,
+            DATE_START => '2013-04-05',
+            DATE_END => '2013-04-07'
+          }
+        }
+      },
+    }
+  },
+
+
 USA:
 Reisinger mostly OK, but Semifinal 2015: SESSION, SEGMENT
 Session 1 goes to segment 9, session 2 goes to segment 10
