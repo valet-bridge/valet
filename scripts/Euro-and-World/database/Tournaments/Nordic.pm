@@ -193,6 +193,8 @@ my %TOURNAMENTS_NORDIC =
           {
             YEAR => 2006,
             CITY => 'Rottneros',
+            major => 'MATCH',
+            minor => 'HALF',
             DATE_START => '2006-05-19',
             DATE_END => '2006-05-21'
           } 
@@ -204,11 +206,21 @@ my %TOURNAMENTS_NORDIC =
         ORDINAL => 12,
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2008,
             CITY => 'Rottneros',
+            major => 'ROUND',
             DATE_START => '2008-05-23',
+            DATE_END => '2008-05-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            CITY => 'Rottneros',
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-05-25',
             DATE_END => '2008-05-25'
           } 
         }
@@ -231,6 +243,7 @@ my %TOURNAMENTS_NORDIC =
           'SINGLE' => 
           {
             YEAR => 2010,
+            major => 'SESSION',
             DATE_START => '2010-04-03',
             DATE_END => '2010-04-04'
           } 
@@ -244,6 +257,7 @@ my %TOURNAMENTS_NORDIC =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'SESSION',
             DATE_START => '2012-04-07',
             DATE_END => '2012-04-08'
           } 
@@ -257,6 +271,7 @@ my %TOURNAMENTS_NORDIC =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'SESSION',
             DATE_START => '2016-03-26',
             DATE_END => '2016-03-27'
           } 
@@ -280,6 +295,7 @@ my %TOURNAMENTS_NORDIC =
           'SINGLE' => 
           {
             YEAR => 2005,
+            major => 'ROUND',
             DATE_START => '2005-07-01',
             DATE_END => '2005-07-04'
           } 
@@ -293,6 +309,7 @@ my %TOURNAMENTS_NORDIC =
           'SINGLE' => 
           {
             YEAR => 2009,
+            major => 'ROUND',
             DATE_START => '2009-04-09',
             DATE_END => '2009-04-12'
           } 
@@ -306,6 +323,9 @@ my %TOURNAMENTS_NORDIC =
           'SINGLE' => 
           {
             YEAR => 2011,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2011-04-21',
             DATE_END => '2011-04-24'
           } 
@@ -316,10 +336,20 @@ my %TOURNAMENTS_NORDIC =
         MEET => 'Nordic Junior Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2013-03-28',
+            DATE_END => '2013-03-30'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-03-30',
             DATE_END => '2013-03-31'
           } 
         }
@@ -332,6 +362,8 @@ my %TOURNAMENTS_NORDIC =
           'SINGLE' => 
           {
             YEAR => 2015,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2015-04-04',
             DATE_END => '2015-04-06'
           } 
@@ -357,6 +389,8 @@ my %TOURNAMENTS_NORDIC =
           'SINGLE' => 
           {
             YEAR => 2005,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2005-07-01',
             DATE_END => '2005-07-04'
           } 
@@ -364,6 +398,7 @@ my %TOURNAMENTS_NORDIC =
       },
       '2007' =>
       {
+        # TODO
         MEET => 'Nordic Team Championship',
         CHAPTERS =>
         {
@@ -383,6 +418,7 @@ my %TOURNAMENTS_NORDIC =
           'SINGLE' => 
           {
             YEAR => 2009,
+            major => 'ROUND',
             DATE_START => '2009-06-05',
             DATE_END => '2009-06-07'
           } 
@@ -396,6 +432,7 @@ my %TOURNAMENTS_NORDIC =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
             DATE_START => '2011-05-27',
             DATE_END => '2011-05-29'
           } 
@@ -409,6 +446,7 @@ my %TOURNAMENTS_NORDIC =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'ROUND',
             DATE_START => '2013-05-24',
             DATE_END => '2013-05-26'
           } 
@@ -422,6 +460,7 @@ my %TOURNAMENTS_NORDIC =
           'SINGLE' => 
           {
             YEAR => 2015,
+            major => 'ROUND',
             DATE_START => '2015-05-21',
             DATE_END => '2015-05-24'
           } 
@@ -474,6 +513,7 @@ my %TOURNAMENTS_NORDIC =
           'SINGLE' => 
           {
             YEAR => 2005,
+            major => 'ROUND',
             DATE_START => '2005-07-01',
             DATE_END => '2005-07-04'
           } 
@@ -487,6 +527,8 @@ my %TOURNAMENTS_NORDIC =
           'SINGLE' => 
           {
             YEAR => 2007,
+            major => 'MATCH',
+            minor => 'HALF',
             DATE_START => '2007-06-05',
             DATE_END => '2007-06-09'
           } 
@@ -500,6 +542,7 @@ my %TOURNAMENTS_NORDIC =
           'SINGLE' => 
           {
             YEAR => 2009,
+            major => 'ROUND',
             DATE_START => '2009-06-05',
             DATE_END => '2009-06-07'
           } 
@@ -513,6 +556,7 @@ my %TOURNAMENTS_NORDIC =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
             DATE_START => '2011-05-27',
             DATE_END => '2011-05-29'
           } 
@@ -520,6 +564,7 @@ my %TOURNAMENTS_NORDIC =
       },
       '2013' =>
       {
+        # TODO
         MEET => 'Nordic Team Championship',
         CHAPTERS =>
         {
