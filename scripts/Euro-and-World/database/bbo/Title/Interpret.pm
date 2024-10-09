@@ -578,7 +578,7 @@ sub finish_roman
     return 1;
   }
   elsif ($tname eq 'Chilean Team Trials' ||
-      $tname eq 'Swedish District Championship' ||
+      $tname eq 'Swedish District Teams' ||
       $tname eq 'Romanian League')
   {
     # Ignore Roman.

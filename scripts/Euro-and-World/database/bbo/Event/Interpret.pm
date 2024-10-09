@@ -50,7 +50,7 @@ my %ITERATORS_MAJOR_MINOR = (
   'South American Open Teams' => ['SEGMENT', ''],
   'South American Team Championship' => ['SEGMENT', ''],
   'Southeast Asian Games' => ['SESSION', 'ROUND'],
-  'Swedish District Championship' => ['ROUND', 'SEGMENT'],
+  'Swedish District Teams' => ['ROUND', 'SEGMENT'],
   'Swedish Open Teams' => ['ROUND', 'SEGMENT'],
   'Swedish Premier League' =>  ['ROUND', 'SEGMENT'],
   'Taiwanese Senior Trials' => ['SESSION', 'ROUND'],
@@ -626,6 +626,11 @@ sub post_process_some_explained_mm
     ($n1, $n2) = ($1, $2);
   }
   elsif ($value =~ /^(\d+)-(\d+)$/)
+  {
+    ($n1, $n2) = ($1, $2);
+    return if ($n2 > 2);
+  }
+  elsif ($value =~ /^(\d+) of (\d+)$/)
   {
     ($n1, $n2) = ($1, $2);
     return if ($n2 > 2);

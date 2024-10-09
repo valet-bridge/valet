@@ -108,6 +108,8 @@ my @MULTI_WORDS =
   'South American Team Championship',
   'South American Trials',
   'Stara Zagora Bridge Festival',
+  'Swedish Women Trials',
+  'Swedish Bridge Festival',
   'Tallinn Bridge Festival',
   'Indian Summer Nationals',
   'Thailand National Games',
@@ -374,6 +376,9 @@ my %MULTI_TYPOS =
   'Stara Zagora Bridge Festival' => ['bridge festival - stara zagora',
     'bridge festival stara zagora', 
     'bridge festival-bulgaria-stara zagora'],
+  'Swedish Women Trials' => [
+    'sweden women euro trials',
+    'swedish women euro trials'],
   'Tallinn Bridge Festival' => ['talinn festival', 'tallin festival',
     'tallinns festival'],
   'Indian Summer Nationals' => [

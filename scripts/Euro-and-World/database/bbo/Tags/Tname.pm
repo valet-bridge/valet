@@ -621,7 +621,6 @@ my @MULTI_WORDS =
   'Cavendish Teams',
   'Central American & Caribbean Championship',
   'Central American Zonal Championships',
-  "Chairman's Cup",
   "Champions' Cup",
   'Channel Trophy',
   'Cherven Briag National Tournament',
@@ -939,9 +938,10 @@ my @MULTI_WORDS =
   'Zhejiang Huamen Cup',
 
   # SWEDEN
+  "Chairman's Cup",
   'Stockholm Teams',
   'Swedish Cup',
-  'Swedish District Championship',
+  'Swedish District Teams',
   'Swedish Juniors Championship',
   'Swedish Juniors Pairs',
   'Swedish Juniors Teams',
@@ -951,8 +951,9 @@ my @MULTI_WORDS =
   'Swedish Open Pair Trials',
   'Swedish Open Team Trials',
   'Swedish Premier League',
-  'Swedish Senior Trials',
-  'Swedish Women Trials',
+  'Swedish Senior Team Trials',
+  'Swedish Women Pair Trials',
+  'Swedish Women Team Trials',
 
   ### TTT
 
@@ -2842,13 +2843,23 @@ my %MULTI_TYPOS =
   'Summer Monsoon League' => ['summer monsoon', 'summer monsoon leahue'],
 
   # SWEDEN
-  'Swedish District Championship' => ['swedish championships distrcit',
-    'sweden distric', 'swedish districts', 'swedish disttrict',
-    'swedis district', 'swesish district', 'sweden district',
-    'swedish championship district', 'swesish champsionship district',
-    'swedish championships district', 'swedish district championships',
-    'swedish championship cistrict', 'swedish district',
-    'swedish champsionship district', 'swdish district'],
+  'Swedish District Teams' => [
+    'swdish district',
+    'sweden distric', 
+    'sweden district',
+    'swedis district', 
+    'swedish championship cistrict', 
+    'swedish championship district', 
+    'swedish championships distrcit',
+    'swedish championships district', 
+    'swedish champsionship district', 
+    'swesish champsionship district',
+    'swedish district championship',
+    'swedish district championships',
+    'swedish district',
+    'swedish districts', 
+    'swedish disttrict',
+    'swesish district'], 
   'Swedish Juniors Championship' => [
     'swedish junior championships',
     'swedish juniors cs'],
@@ -2879,10 +2890,9 @@ my %MULTI_TYPOS =
     'swedish elitserien', 
     'swedish premier leauge',
     'swedish premieer league'],
-  'Swedish Senior Trials' => ['sweden senior trials'],
-  'Swedish Women Trials' => [
-    'sweden women euro trials',
-    'swedish women euro trials'],
+  'Swedish Senior Team Trials' => [
+    'sweden senior trials',
+    'swedish senior trials'],
 
   # SWITZERLAND
   'Swiss Club Championship' => [
