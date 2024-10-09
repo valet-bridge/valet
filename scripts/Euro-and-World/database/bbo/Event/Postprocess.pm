@@ -149,7 +149,7 @@ sub post_process_disambiguate
 
       my $token2 = Token->new();
       $token2->copy_origin_from($token0);
-      $token2->set_general('SINGLETON', 'GENDER', 'OPEN');
+      $token2->set_general('SINGLETON', 'GENDER', 'Open');
 
       my $chain2 = Chain->new();
       $chain2->append($token2);

@@ -443,6 +443,23 @@ my @MULTI_WORDS =
   'Spanish Open Trials',
   'Spanish Senior Trials',
 
+  # SWEDEN
+  "Chairman's Cup",
+  'Stockholm Teams',
+  'Swedish Cup',
+  'Swedish District Teams',
+  'Swedish Juniors Pairs',
+  'Swedish Juniors Teams',
+  'Swedish Mixed Teams',
+  'Swedish Open Pairs',
+  'Swedish Open Teams',
+  'Swedish Open Pair Trials',
+  'Swedish Open Team Trials',
+  'Swedish Premier League',
+  'Swedish Senior Team Trials',
+  'Swedish Women Pair Trials',
+  'Swedish Women Team Trials',
+
   # SWITZERLAND
   'Swiss Club Championship',
   'Swiss Cup',
@@ -511,6 +528,8 @@ my @MULTI_WORDS =
   'FOSS Grand Tournament',
   'FOSS-Tren',
   'Grand Prix of Prague',
+  'Las Palmas Simultaneous Pairs',
+  'Las Palmas Women Pairs',
   'Madeira Open',
   'Madeira Swiss Teams',
   'Madrid Senior Teams',
@@ -518,6 +537,7 @@ my @MULTI_WORDS =
   'Menpora-Pertamina Cup',
   'Milan Trophy',
   'Mo i Rana Ladies Invitational',
+  'Nordic Race', # Actually a Swedish trial.
   'Open Catalunya Preferent',
   'Pärnu Summer Invitational Pairs',
   'Pärnu Summer Open Teams',
@@ -586,6 +606,16 @@ my @MULTI_WORDS =
   'Baltic Bowl',
   'Baltic Cup',
   'Baltic Teams Cup',
+  'Estonian First League',
+  'Estonian Open Teams',
+  'Estonian Open Trials',
+  'Estonian-Latvian Open Trials',
+  'Lithuanian Open Teams',
+  'Riga Invites to Jurmala',
+  'Vilnius Club Pairs',
+  'Vilnius Cup',
+
+
 
   'Belarusian Open Teams',
 
@@ -609,6 +639,8 @@ my @MULTI_WORDS =
   'Bulgarian Open Trials',
   'Bulgarian Women Trials',
   'IBF Dobrich',
+  'Karlovo Pairs',
+  'Karlovo Teams',
   'Stara Zagora Open Teams',
   'Varna Titan Teams',
 
@@ -706,10 +738,6 @@ my @MULTI_WORDS =
   'TGR Super League',
 
   # ESTONIA
-  'Estonian First League',
-  'Estonian Open Teams',
-  'Estonian Open Trials',
-  'Estonian-Latvian Open Trials',
 
   'Estoril Teams',
   'Estoril Swiss Teams',
@@ -752,7 +780,6 @@ my @MULTI_WORDS =
   'Gardermoen Airport Hotel Cup',
   'Gelibolu Peace Cup',
   'Goulyash by E. Gladysh',
-
   'GHTD Cup',
   'Golden Jubilee',
 
@@ -777,9 +804,6 @@ my @MULTI_WORDS =
 
   'IBWI Cup',
 
-  'IMSA Cup',
-  'IMSA Elite Mind Games',
-
   ### JJJ
 
   'Jaap Kokkes Tournament',
@@ -800,18 +824,13 @@ my @MULTI_WORDS =
   ### KKK
 
   'Kanto Teams',
-  'Karlovo Pairs',
-  'Karlovo Teams',
   'Karnik-Vaidya Open',
   'Kings and Queens Blaine Howe Teams',
   'Krommenie Nations Cup',
 
   ### LLL
 
-  'Las Palmas Simultaneous Pairs',
-  'Las Palmas Women Pairs',
   'Lebanese Invitational Teams',
-  'Lithuanian Open Teams',
   'Lokmanya Jubilee',
   'Lüleburgaz Liberation Cup',
 
@@ -819,7 +838,6 @@ my @MULTI_WORDS =
 
   'Maccabi Games',
   'Marmara Inter-Club Championship',
-  'McConnell Cup',
   'Mike Lawrence Exhibition',
   "Missouri Braggin' Rights",
   'Mondi Cup',
@@ -834,12 +852,6 @@ my @MULTI_WORDS =
   'NEC Cup',
   'Neighbor Challenge',
   'NN Cup',
-
-
-  # Actually a Swedish trial.
-  'Nordic Race',
-
-
   'NTU Cup',
   'NYSA Euroregion Nations Cup',
 
@@ -862,8 +874,6 @@ my @MULTI_WORDS =
   "Pigg's Peak All Africa",
   'PLN Cup',
   'Plock District League',
-
-
   'PRBA State Level Open',
   'Prince Albert II Cup',
   'Prince Takamatsu Cup',
@@ -874,9 +884,6 @@ my @MULTI_WORDS =
   'Ragn-Sells International Grand Tournament',
   'Rand Cup',
   'Rector University of Brawijaya Cup',
-  'Rona Cup',
-  'Gianarrigo Rona Trophy',
-  'Riga Invites to Jurmala',
   'Roberto Taunay Cup',
 
   'Rui Pinto Cup',
@@ -937,24 +944,6 @@ my @MULTI_WORDS =
   'Xinyuan Cup',
   'Zhejiang Huamen Cup',
 
-  # SWEDEN
-  "Chairman's Cup",
-  'Stockholm Teams',
-  'Swedish Cup',
-  'Swedish District Teams',
-  'Swedish Juniors Championship',
-  'Swedish Juniors Pairs',
-  'Swedish Juniors Teams',
-  'Swedish Mixed Teams',
-  'Swedish Open Pairs',
-  'Swedish Open Teams',
-  'Swedish Open Pair Trials',
-  'Swedish Open Team Trials',
-  'Swedish Premier League',
-  'Swedish Senior Team Trials',
-  'Swedish Women Pair Trials',
-  'Swedish Women Team Trials',
-
   ### TTT
 
   'Taça Rui Pinto',
@@ -985,8 +974,6 @@ my @MULTI_WORDS =
   'Vest-Agder Regional Team Championship',
   'Victor Champion Cup',
   'Videocon WCG Open',
-  'Vilnius Club Pairs',
-  'Vilnius Cup',
   'Vito Teams',
   'Vrnjacka Banja Open Teams',
   'VV Cup',
@@ -1009,7 +996,10 @@ my @MULTI_WORDS =
   'Bermuda Bowl',
   "d'Orsi",
   'Damiani Cup',
+  'IMSA Cup',
+  'IMSA Elite Mind Games',
   'IOC Grand Prix',
+  'McConnell Cup',
   'Venice Cup',
   'World Masters Individual',
   'World Men Elite Tournament',
@@ -1022,6 +1012,8 @@ my @MULTI_WORDS =
   'World Women Elite Tournament',
 
   # WORLD YOUTH
+  'Gianarrigo Rona Trophy',
+  'Rona Cup',
   'World Juniors Championship',
   'World University Championship',
   'World Youth Congress',
@@ -2558,6 +2550,7 @@ my %MULTI_TYPOS =
     'team championship of poland',
     'teams championship of poland'], 
   'Polish Open Trials' => [
+    'polish bermuda bowl trials',
     'polish national trials',
     'polish team trials', 
     'polish trials',
