@@ -329,6 +329,14 @@ my @MULTI_WORDS =
   'New Zealand Open Trials',
   'New Zealand Women Trials',
 
+  # NORDIC
+  'Nordic Cup',
+  'Nordic Junior Pairs',
+  'Nordic Junior Teams',
+  'Nordic Open Teams',
+  'Nordic Security Pro-Am Pairs',
+  'Nordic Women Teams',
+
   # NORWAY
   'Norwegian Club Pairs',
   'Norwegian Club Teams',
@@ -828,13 +836,6 @@ my @MULTI_WORDS =
   'Neighbor Challenge',
   'NN Cup',
 
-  'Nordic Cup',
-  'Nordic Junior Pairs',
-  'Nordic Junior Teams',
-  'Nordic Open Teams',
-  'Nordic Security Pro-Am Pairs',
-  'Nordic Women Teams',
-
 
   # Actually a Swedish trial.
   'Nordic Race',
@@ -939,7 +940,6 @@ my @MULTI_WORDS =
 
   # SWEDEN
   'Stockholm Teams',
-  'Swedish Club Teams',
   'Swedish Cup',
   'Swedish District Championship',
   'Swedish Juniors Championship',
@@ -948,7 +948,8 @@ my @MULTI_WORDS =
   'Swedish Mixed Teams',
   'Swedish Open Pairs',
   'Swedish Open Teams',
-  'Swedish Open Trials',
+  'Swedish Open Pair Trials',
+  'Swedish Open Team Trials',
   'Swedish Premier League',
   'Swedish Senior Trials',
   'Swedish Women Trials',
@@ -2867,10 +2868,16 @@ my %MULTI_TYPOS =
     'swedish pair',
     'swedish pairs championships'],
   'Swedish Open Teams' => ['swedish teams'],
-  'Swedish Open Trials' => ['swedish trial', 'swedish team trials',
-    'swedish teams trials', 'swedish team trial'],
-  'Swedish Premier League' => ['swedish elite series',
-    'swedish elitserien', 'swedish premier leauge',
+  'Swedish Open Team Trials' => [
+    'swedish open trials',
+    'swedish team trials',
+    'swedish teams trials', 
+    'swedish team trial'],
+  'Swedish Premier League' => [
+    'swedish club teams',
+    'swedish elite series',
+    'swedish elitserien', 
+    'swedish premier leauge',
     'swedish premieer league'],
   'Swedish Senior Trials' => ['sweden senior trials'],
   'Swedish Women Trials' => [
