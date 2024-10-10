@@ -683,6 +683,23 @@ sub prune_field_using
 }
 
 
+sub match_letter_to_number
+{
+  my ($self) = @_;
+
+  my $field = 'EVENT_MATCH';
+  return unless defined $self->{$field};
+  my $len = $#{$self->{$field}};
+  return unless $len == 0;
+
+  my $value = uc($self->{$field}[0]);
+  if ($value =~ /^[A-D]$/)
+  {
+    $self->{$field}[0] = ord($value) - ord('A') + 1;
+  }
+}
+
+
 sub prune_using
 {
   my ($self, $header, $chapter) = @_;
@@ -698,6 +715,8 @@ sub prune_using
     $self->prune_field_using($pair->[1], $chapter->{$pair->[0]}, $header) if
       exists $chapter->{$pair->[0]};
   }
+
+  $self->match_letter_to_number();
 
   # This is not so clean -- modifying a method argument.
   if (exists $header->{YEAR} && exists $chapter->{YEAR})

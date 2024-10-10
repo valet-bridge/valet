@@ -1,3 +1,8 @@
+EntryT, prune_using:
+method match_letter_to_number
+ABCabc becomes 123
+
+
 Phases:
 1. Dates run (.lin files matched to tournaments)
 2. Recognized MEET's where needed

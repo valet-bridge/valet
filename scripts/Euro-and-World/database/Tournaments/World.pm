@@ -199,17 +199,17 @@ my %TOURNAMENTS_WORLD =
           },
           'C1' => 
           {
+            # No counter data.
             YEAR => 1997,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
             DATE_START => '1997-10-26',
             DATE_END => '1997-10-27'
           },
           'C2' => 
           {
+            # No counter data.
             YEAR => 1997,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
             DATE_START => '1997-10-28',
             DATE_END => '1997-10-29'
           },
@@ -643,9 +643,9 @@ my %TOURNAMENTS_WORLD =
           },
           'C2' => 
           {
+            # No counter data.
             YEAR => 1997,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
             DATE_START => '1997-10-28',
             DATE_END => '1997-10-29'
           },
@@ -1182,9 +1182,9 @@ my %TOURNAMENTS_WORLD =
           },
           'C3' => 
           {
+            # No counter data.
             YEAR => 2011,
             STAGE => 'Playoff',
-            major => 'SEGMENT',
             DATE_START => '2011-10-27',
             DATE_END => '2011-10-28'
           },
