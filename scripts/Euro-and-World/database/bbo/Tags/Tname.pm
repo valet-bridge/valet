@@ -944,6 +944,8 @@ my @MULTI_WORDS =
   'Xinyuan Cup',
   'Zhejiang Huamen Cup',
 
+  'Senior World Cup',
+
   ### TTT
 
   'Taça Rui Pinto',
@@ -994,13 +996,15 @@ my @MULTI_WORDS =
 
   # WORLD
   'Bermuda Bowl',
+  'Venice Cup',
   "d'Orsi",
+  'World Transnational Open Teams',
+
   'Damiani Cup',
   'IMSA Cup',
   'IMSA Elite Mind Games',
   'IOC Grand Prix',
   'McConnell Cup',
-  'Venice Cup',
   'World Masters Individual',
   'World Men Elite Tournament',
   'World Open Pairs',
@@ -1008,7 +1012,6 @@ my @MULTI_WORDS =
   'World Top Tournament',
   'World Transnational Teams',
   'World Transnational Mixed Teams',
-  'World Transnational Open Teams',
   'World Women Elite Tournament',
 
   # WORLD YOUTH
@@ -1465,7 +1468,7 @@ my %MULTI_TYPOS =
 
   ### DDD
 
-  "d'Orsi" => ["d'orsi senior bowl", 'senior world cup',
+  "d'Orsi" => ["d'orsi senior bowl",
     'seniors bowl', 'senior bowl'],
   'Dainik Navjyoti All India Inter-State' => [
     'Dainik Navjyoti All India Interstate',
@@ -1787,6 +1790,7 @@ my %MULTI_TYPOS =
     'selection senior pekin',
     'selection senior pau', 'sélection senior pau'],
   'French U28 Trials' => ['selection junior pekin', 'selection u28 pekin'],
+  'French Women Trials' => ['entrainement venice cup'],
 
   'FTBC Tanjungpura University' => ['ftbc university tanjungpura'],
   'FullBridge International Teams' => ['internacional equipos full bridge',
