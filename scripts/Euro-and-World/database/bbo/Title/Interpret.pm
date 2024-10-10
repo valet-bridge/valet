@@ -673,6 +673,7 @@ sub finish_ambiguous
     }
   }
   elsif ($meet eq 'European National Championships' ||
+    $tname eq 'World Transnational Open Teams' ||
     $tname eq 'World Transnational Teams' ||
     $tname eq 'Reisinger BAM Teams' ||
     $tname eq 'Bermuda Bowl' ||

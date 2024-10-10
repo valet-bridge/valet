@@ -1010,7 +1010,6 @@ my @MULTI_WORDS =
   'World Open Pairs',
   'World Seniors Championships',
   'World Top Tournament',
-  'World Transnational Teams',
   'World Transnational Mixed Teams',
   'World Women Elite Tournament',
 
@@ -3155,7 +3154,8 @@ my %MULTI_TYPOS =
     'world masters'],
   'World Open Pairs' => ['world pairs championship'],
   'World Seniors Championships' => ['world senior championship'],
-  'World Transnational Teams' => ['world transnational open teams'],
+  'World Transnational Open Teams' => [
+    'world transnational teams'],
   'World University Championship' => [
     'world university bridge championship',
     'world university bridge championships',
