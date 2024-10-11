@@ -57,6 +57,51 @@ my %MEETS_WORLD =
 
     EDITIONS => 
     {
+      '1998' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/Lille.98/Lille.htm#table
+        YEAR => 1998,
+        CITY => 'Lille',
+        COUNTRY => 'France',
+        DATE_START => '1998-08-21',
+        DATE_END => '1998-09-04'
+      },
+      '2002' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/Montreal.02/Results.htm
+        YEAR => 2002,
+        CITY => 'Montreal',
+        COUNTRY => 'Canada',
+        DATE_START => '2002-08-16',
+        DATE_END => '2002-08-31'
+      },
+      '2006' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/Verona.06/Results.htm
+        YEAR => 2006,
+        CITY => 'Verona',
+        COUNTRY => 'Italy',
+        DATE_START => '2006-06-09',
+        DATE_END => '2006-06-24'
+      },
+      '2010' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/Philadelphia.10/Results.asp
+        YEAR => 2010,
+        CITY => 'Philadelphia',
+        COUNTRY => 'USA',
+        DATE_START => '2010-10-01',
+        DATE_END => '2010-10-16'
+      },
+      '2014' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/Sanya.14/microSite/results.htm
+        YEAR => 2014,
+        CITY => 'Sanya',
+        COUNTRY => 'China',
+        DATE_START => '2014-10-10',
+        DATE_END => '2014-10-25'
+      },
       '2016' =>
       {
         # http://db.worldbridge.org/Repository/tourn/wroclaw.16/microSite/results.htm
@@ -741,6 +786,44 @@ my %TOURNAMENTS_WORLD =
     }
   },
 
+  'Damiani Trophy' => 
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U21',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        
+        # http://db.worldbridge.org/Repository/tourn/Philadelphia.10/Philadelphia.htm
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-10-14',
+            DATE_END => '2010-10-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-10-15',
+            DATE_END => '2010-10-16'
+          },
+        }
+      }
+    }
+  },
+
   "d'Orsi" => 
   {
     ORIGIN => 'International',
@@ -1034,6 +1117,437 @@ my %TOURNAMENTS_WORLD =
           } 
         }
       },
+    }
+  },
+
+  'IOC Grand Prix' => 
+  {
+    ORGANIZER => 'IOC',
+    ZONE => 'World',
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '1998' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 1998,
+            DATE_START => '1998-09-11',
+            DATE_END => '1998-09-11'
+          },
+        }
+      },
+      '2002' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/Salt%20Lake.02/Results.htm
+        CITY => 'Salt Lake City',
+        COUNTRY => 'USA',
+
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2002,
+            STAGE => 'Round-robin',
+            DATE_START => '2002-02-02',
+            DATE_END => '2002-02-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2002,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2002-02-04',
+            DATE_END => '2002-02-05'
+          },
+          'C2' => 
+          {
+            YEAR => 2002,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2002-02-06',
+            DATE_END => '2002-02-06'
+          },
+        }
+      },
+    }
+  },
+
+  'McConnell Cup' => 
+  {
+    ORGANIZER => 'WBF',
+    ZONE => 'World',
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2006' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            DATE_START => '2006-06-21',
+            DATE_END => '2006-06-21'
+          },
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-10-12',
+            DATE_END => '2010-10-12'
+          },
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-10-22',
+            DATE_END => '2014-10-22'
+          },
+        }
+      },
+    }
+  },
+
+  'Rona Cup' => 
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'U26',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        
+        # http://db.worldbridge.org/Repository/tourn/Philadelphia.10/Philadelphia.htm
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-10-13',
+            DATE_END => '2010-10-13'
+          },
+        }
+      }
+    }
+  },
+
+  'Rosenblum Cup' => 
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '1998' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 1998,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '1998-08-24',
+            DATE_END => '1998-08-26'
+          },
+          'C1' => 
+          {
+            YEAR => 1998,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
+            DATE_START => '1998-08-27',
+            DATE_END => '1998-08-27'
+          },
+          'C2' => 
+          {
+            YEAR => 1998,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '1998-08-28',
+            DATE_END => '1998-08-28'
+          },
+          'C3' => 
+          {
+            YEAR => 1998,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '1998-08-29',
+            DATE_END => '1998-08-29'
+          },
+          'C4' => 
+          {
+            YEAR => 1998,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '1998-08-30',
+            DATE_END => '1998-08-30'
+          },
+          'C5' => 
+          {
+            YEAR => 1998,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '1998-08-31',
+            DATE_END => '1998-08-31'
+          },
+          'C6' => 
+          {
+            YEAR => 1998,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '1998-09-01',
+            DATE_END => '1998-09-01'
+          },
+        }
+      },
+      '2002' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2002,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2002-08-20',
+            DATE_END => '2002-08-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2002,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
+            DATE_START => '2002-08-23',
+            DATE_END => '2002-08-23'
+          },
+          'C2' => 
+          {
+            YEAR => 2002,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2002-08-24',
+            DATE_END => '2002-08-24'
+          },
+          'C3' => 
+          {
+            YEAR => 2002,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2002-08-25',
+            DATE_END => '2002-08-25'
+          },
+          'C4' => 
+          {
+            YEAR => 2002,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2002-08-26',
+            DATE_END => '2002-08-26'
+          },
+          'C5' => 
+          {
+            YEAR => 2002,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2002-08-27',
+            DATE_END => '2002-08-27'
+          },
+          'C6' => 
+          {
+            YEAR => 2002,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2002-08-28',
+            DATE_END => '2002-08-28'
+          },
+        }
+      },
+      '2006' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2006-06-13',
+            DATE_END => '2006-06-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
+            DATE_START => '2006-06-16',
+            DATE_END => '2006-06-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2006-06-17',
+            DATE_END => '2006-06-17'
+          },
+          'C3' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2006-06-18',
+            DATE_END => '2006-06-18'
+          },
+          'C4' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-06-19',
+            DATE_END => '2006-06-19'
+          },
+          'C5' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-06-20',
+            DATE_END => '2006-06-20'
+          },
+          'C6' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2006-06-21',
+            DATE_END => '2006-06-21'
+          },
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2010-10-05',
+            DATE_END => '2010-10-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
+            DATE_START => '2010-10-08',
+            DATE_END => '2010-10-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2010-10-09',
+            DATE_END => '2010-10-09'
+          },
+          'C3' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2010-10-10',
+            DATE_END => '2010-10-10'
+          },
+          'C4' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-10-11',
+            DATE_END => '2010-10-11'
+          },
+          'C5' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-10-12',
+            DATE_END => '2010-10-12'
+          },
+          'C6' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2010-10-13',
+            DATE_END => '2010-10-13'
+          },
+          'C7' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-10-13',
+            DATE_END => '2010-10-13'
+          },
+        }
+      },
+      '2014' =>
+      {
+        
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-10-18',
+            DATE_END => '2014-10-23'
+          },
+        }
+      }
     }
   },
 
@@ -1427,6 +1941,114 @@ my %TOURNAMENTS_WORLD =
     }
   },
 
+  'World Mixed Pairs' => 
+  {
+    ORIGIN => 'International',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-10-13',
+            DATE_END => '2014-10-17'
+          },
+        }
+      }
+    }
+  },
+
+  'World Mixed Teams' => 
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-10-11',
+            DATE_END => '2014-10-15'
+          },
+        }
+      }
+    }
+  },
+
+  'World Open Pairs' => 
+  {
+    ORIGIN => 'International',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2006' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2006-06-22',
+            DATE_END => '2006-06-24'
+          },
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-10-14',
+            DATE_END => '2010-10-16'
+          },
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-10-24',
+            DATE_END => '2014-10-25'
+          },
+        }
+      }
+    }
+  },
+
   'World Transnational Mixed Teams' => 
   {
     ORIGIN => 'Transnational',
@@ -1445,6 +2067,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2004,
+            major => 'SEGMENT',
             DATE_START => '2004-11-02',
             DATE_END => '2004-11-06'
           } 
@@ -1517,6 +2140,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2007-10-12',
             DATE_END => '2007-10-13'
           } 
@@ -1608,6 +2233,53 @@ my %TOURNAMENTS_WORLD =
           } 
         }
       },
+      '2013' =>
+      {
+        MEET => 'World Team Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2013-09-24',
+            DATE_END => '2013-09-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-09-27',
+            DATE_END => '2013-09-27'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-09-28',
+            DATE_END => '2013-09-28'
+          },
+          'C3' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2013-09-29',
+            DATE_END => '2013-09-29'
+          },
+          'C4' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-09-29',
+            DATE_END => '2013-09-29'
+          } 
+        }
+      },
       '2015' =>
       {
         MEET => 'World Team Championships',
@@ -1684,6 +2356,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
             DATE_START => '2011-12-14',
             DATE_END => '2011-12-16'
           } 
@@ -1697,6 +2370,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'ROUND',
             DATE_START => '2012-12-17',
             DATE_END => '2012-12-18'
           } 
@@ -1723,6 +2397,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
             DATE_START => '2011-12-12',
             DATE_END => '2011-12-15'
           } 
@@ -1736,6 +2411,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'ROUND',
             DATE_START => '2012-12-16',
             DATE_END => '2012-12-19'
           } 
@@ -1762,9 +2438,10 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
             DATE_START => '2011-12-09',
             DATE_END => '2011-12-13'
-          } 
+          },
         }
       },
       '2012' =>
@@ -1772,9 +2449,19 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Mind Games',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2012-12-13',
+            DATE_END => '2012-12-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2012-12-13',
             DATE_END => '2012-12-15'
           } 
@@ -1785,10 +2472,20 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Mind Games',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2013-12-12',
+            DATE_END => '2013-12-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-12-14',
             DATE_END => '2013-12-14'
           } 
         }
@@ -1814,6 +2511,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'ROUND',
             DATE_START => '2013-12-16',
             DATE_END => '2013-12-18'
           } 
@@ -1827,6 +2525,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2014,
+            major => 'ROUND',
             DATE_START => '2014-12-16',
             DATE_END => '2014-12-17'
           } 
@@ -1853,6 +2552,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'SESSION',
             DATE_START => '2011-12-13',
             DATE_END => '2011-12-14'
           } 
@@ -1866,6 +2566,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'SESSION',
             DATE_START => '2013-12-15',
             DATE_END => '2013-12-18'
           } 
@@ -1879,6 +2580,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2014-12-14',
             DATE_END => '2014-12-17'
           } 
@@ -1954,10 +2657,19 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Mind Games',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
             DATE_START => '2011-12-10',
+            DATE_END => '2011-12-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-12-11',
             DATE_END => '2011-12-12'
           } 
         }
@@ -1967,11 +2679,53 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Mind Games',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2012-08-10',
-            DATE_END => '2012-12-23'
+            DATE_END => '2012-08-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-15',
+            DATE_END => '2012-08-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-17',
+            DATE_END => '2012-08-18'
+          },
+          'C3' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-19',
+            DATE_END => '2012-08-20'
+          },
+          'C4' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-21',
+            DATE_END => '2012-08-22'
+          },
+          'C5' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-21',
+            DATE_END => '2012-08-23'
           } 
         }
       },
@@ -1980,10 +2734,20 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Mind Games',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2014-12-11',
+            DATE_END => '2014-12-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-12-13',
             DATE_END => '2014-12-13'
           } 
         }
@@ -2167,11 +2931,21 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Mind Games',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2008,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2008-10-04',
-            DATE_END => '2008-10-13'
+            DATE_END => '2008-10-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-10-08',
+            DATE_END => '2008-10-11'
           } 
         }
       },
@@ -2193,10 +2967,36 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Mind Games',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2008,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2008-10-04',
+            DATE_END => '2008-10-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-10-11',
+            DATE_END => '2008-10-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-10-11',
+            DATE_END => '2008-10-12'
+          },
+          'C3' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-10-13',
             DATE_END => '2008-10-13'
           } 
         }
@@ -2222,6 +3022,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
             DATE_START => '2011-12-14',
             DATE_END => '2011-12-16'
           } 
@@ -2235,6 +3036,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'ROUND',
             DATE_START => '2012-12-18',
             DATE_END => '2012-12-19'
           } 
@@ -2248,6 +3050,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'ROUND',
             DATE_START => '2013-12-17',
             DATE_END => '2013-12-18'
           } 
@@ -2261,6 +3064,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2014,
+            major => 'ROUND',
             DATE_START => '2014-12-16',
             DATE_END => '2014-12-17'
           } 
@@ -2287,6 +3091,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'SESSION',
             DATE_START => '2011-12-12',
             DATE_END => '2011-12-15'
           } 
@@ -2300,6 +3105,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'SESSION',
             DATE_START => '2012-12-16',
             DATE_END => '2012-12-19'
           } 
@@ -2313,6 +3119,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'SESSION',
             DATE_START => '2013-12-15',
             DATE_END => '2013-12-18'
           } 
@@ -2326,6 +3133,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2014,
+            major => 'SESSION',
             DATE_START => '2014-12-14',
             DATE_END => '2014-12-17'
           } 
@@ -2404,6 +3212,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2011-12-10',
             DATE_END => '2011-12-13'
           } 
@@ -2420,7 +3230,7 @@ my %TOURNAMENTS_WORLD =
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-08-11',
-            DATE_END => '2012-12-14'
+            DATE_END => '2012-08-14'
           },
           'C1' => 
           {
@@ -2428,7 +3238,7 @@ my %TOURNAMENTS_WORLD =
             STAGE => 'Rof16',
             major => 'SEGMENT',
             DATE_START => '2012-08-15',
-            DATE_END => '2012-12-16'
+            DATE_END => '2012-08-16'
           },
           'C2' => 
           {
@@ -2436,7 +3246,7 @@ my %TOURNAMENTS_WORLD =
             STAGE => 'Quarterfinal',
             major => 'SEGMENT',
             DATE_START => '2012-08-17',
-            DATE_END => '2012-12-18'
+            DATE_END => '2012-08-18'
           },
           'C3' => 
           {
@@ -2444,7 +3254,7 @@ my %TOURNAMENTS_WORLD =
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2012-08-19',
-            DATE_END => '2012-12-20'
+            DATE_END => '2012-08-20'
           },
           'C4' => 
           {
@@ -2452,7 +3262,7 @@ my %TOURNAMENTS_WORLD =
             STAGE => 'Playoff',
             major => 'SEGMENT',
             DATE_START => '2012-08-21',
-            DATE_END => '2012-12-22'
+            DATE_END => '2012-08-22'
           },
           'C5' => 
           {
@@ -2460,7 +3270,7 @@ my %TOURNAMENTS_WORLD =
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2012-08-21',
-            DATE_END => '2012-12-22'
+            DATE_END => '2012-08-22'
           } 
         }
       },
@@ -2482,10 +3292,28 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Mind Games',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2013-12-12',
+            DATE_END => '2013-12-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2013-12-14',
+            DATE_END => '2013-12-14'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-12-14',
             DATE_END => '2013-12-14'
           } 
         }
@@ -2495,10 +3323,20 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Mind Games',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2014-12-11',
+            DATE_END => '2014-12-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-12-13',
             DATE_END => '2014-12-13'
           } 
         }

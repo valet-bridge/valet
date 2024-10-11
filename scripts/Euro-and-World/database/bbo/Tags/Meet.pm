@@ -128,7 +128,7 @@ my @MULTI_WORDS =
   'West Java Regional',
   'Winter Bridge Festival',
   'Winter Championships',
-  'World Bridge Series',
+  'World Series',
   'World Mind Games',
   'World Team Championships',
    'World Team Olympiad',
@@ -431,6 +431,7 @@ my %MULTI_TYPOS =
     # 'winter nationals', 
     # 'wintter nationals',
     # 'wintrer national'],
+  'World Series' => ['world bridge series'],
   'World Mind Games' => ['world mind game', 'word mind games', 'wmsg',
     'mind sports games', 'sawmg', 'wmg', 'wnsg', 'world ming games'],
   'World Team Olympiad' => ['world bridge team olympiad',
@@ -465,7 +466,7 @@ my %SINGLE_TYPOS =
   'United States Bridge Championship' => ['usbc'],
   'South American Team Championship' => ['sabc'],
   'Indian Winter Nationals' => ['winternationals'],
-  'World Bridge Series' => ['wbs'],
+  'World Series' => ['wbs'],
   'World Team Championships' => ['wbtc'],
   'World Team Olympiad' => ['olympiad', 'olympiads', 'wbo']
 );

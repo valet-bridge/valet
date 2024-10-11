@@ -45,6 +45,36 @@ Retest India, looking for Winter Nationals
     }
   },
 
+  'Russian IMSA Cup' =>
+  {
+    ORIGIN => 'National',
+    FORM => 'Pairs',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2008' =>
+      {
+        # http://amsr.ru/en/events/623.htm
+        CITY => 'Perm',
+        COUNTRY => 'Russia',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2008,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2008-04-27',
+            DATE_END => '2008-04-29'
+          },
+        }
+      }
+    }
+  },
+
 
 USA:
 Reisinger mostly OK, but Semifinal 2015: SESSION, SEGMENT

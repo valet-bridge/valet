@@ -992,7 +992,13 @@ my @MULTI_WORDS =
   # WORLD
   'Bermuda Bowl',
   "d'Orsi",
+  'Damiani Trophy',
+  'IOC Grand Prix',
+  'McConnell Cup',
+  'Rona Cup',
+  'Rosenblum Cup',
   'Venice Cup',
+  'World Open Pairs',
   'World Transnational Mixed Teams',
   'World Transnational Open Teams',
   'WMG Men Individual',
@@ -1009,23 +1015,18 @@ my @MULTI_WORDS =
   'WMG Women Pairs',
   'WMG Women Teams',
 
-  'Senior World Cup',
-  'Transnational Open Teams',
-  'Damiani Cup',
-  'IMSA Cup',
   'IMSA Elite Mind Games',
-  'IOC Grand Prix',
-  'McConnell Cup',
   'World Masters Individual',
   'World Men Elite Tournament',
-  'World Open Pairs',
   'World Seniors Championships',
   'World Top Tournament',
   'World Women Elite Tournament',
 
+
+  'Russian IMSA Cup',
+  'Transnational Open Teams',
+
   # WORLD YOUTH
-  'Gianarrigo Rona Trophy',
-  'Rona Cup',
   'World Juniors Championship',
   'World University Championship',
   'World Youth Congress',
@@ -1477,6 +1478,8 @@ my %MULTI_TYPOS =
 
   ### DDD
 
+  'Damiani Trophy' => [
+    'damiani cup'],
   "d'Orsi" => ["d'orsi senior bowl",
     'seniors bowl', 'senior bowl'],
   'Dainik Navjyoti All India Inter-State' => [
@@ -2723,6 +2726,7 @@ my %MULTI_TYPOS =
   'Ruia Silver Cup' => ['ruia silver'],
 
   # RUSSIA
+  'Russian IMSA Cup' => ['imsa cup'],
   'Russian Open Teams' => ['russian teams championship',
     'russian team championship'],
   'Russian Premier League' => ['russian premiere league'],
@@ -3194,7 +3198,6 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Camrose Cavendish
-  Rosenblum
   Vadsøturneringen 
 );
 
@@ -3261,6 +3264,7 @@ my %SINGLE_TYPOS =
     'reisiger', 
     'reisinger', 
     'resisinger'],
+  'Rosenblum Cup' => ['rosenblum'],
   'Ruia Gold Cup' => ['ruia'],
   'Scottish Cup' => ['scottishcupplate'],
   'Southeast Asian Games' => ['seagames'],
