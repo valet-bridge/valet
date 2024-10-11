@@ -615,8 +615,6 @@ my @MULTI_WORDS =
   'Vilnius Club Pairs',
   'Vilnius Cup',
 
-
-
   'Belarusian Open Teams',
 
   'Belisol Invitational Pairs',
@@ -683,7 +681,6 @@ my @MULTI_WORDS =
   'Shenyang Spring',
   'Shenzhen Lanpu Cup',
   'Shenzhen Nangangdongli Cup',
-
 
   'Codan Cup',
   'Collegiate Bowl',
@@ -944,7 +941,6 @@ my @MULTI_WORDS =
   'Xinyuan Cup',
   'Zhejiang Huamen Cup',
 
-  'Senior World Cup',
 
   ### TTT
 
@@ -964,7 +960,6 @@ my @MULTI_WORDS =
   'Thrace Cup League',
   'Top Circuit',
   'Towns Cup',
-  'Transnational Open Teams',
 
   # Indian
   'Kalani Trophy',
@@ -996,10 +991,26 @@ my @MULTI_WORDS =
 
   # WORLD
   'Bermuda Bowl',
-  'Venice Cup',
   "d'Orsi",
+  'Venice Cup',
+  'World Transnational Mixed Teams',
   'World Transnational Open Teams',
+  'WMG Men Individual',
+  'WMG Men Pairs',
+  'WMG Men Teams',
+  'WMG Open Individual',
+  'WMG Open Pairs',
+  'WMG Open Teams',
+  'WMG Senior Teams',
+  'WMG U21 Teams',
+  'WMG U26 Teams',
+  'WMG U28 Teams',
+  'WMG Women Individual',
+  'WMG Women Pairs',
+  'WMG Women Teams',
 
+  'Senior World Cup',
+  'Transnational Open Teams',
   'Damiani Cup',
   'IMSA Cup',
   'IMSA Elite Mind Games',
@@ -1010,7 +1021,6 @@ my @MULTI_WORDS =
   'World Open Pairs',
   'World Seniors Championships',
   'World Top Tournament',
-  'World Transnational Mixed Teams',
   'World Women Elite Tournament',
 
   # WORLD YOUTH

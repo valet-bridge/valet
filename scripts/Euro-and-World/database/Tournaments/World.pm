@@ -1450,6 +1450,29 @@ my %TOURNAMENTS_WORLD =
           } 
         }
       },
+      '2008' =>
+      {
+        MEET => 'World Mind Games',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-10-16',
+            DATE_END => '2008-10-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-10-17',
+            DATE_END => '2008-10-17'
+          },
+        }
+      },
       '2012' =>
       {
         MEET => 'World Mind Games',
@@ -1461,7 +1484,7 @@ my %TOURNAMENTS_WORLD =
             STAGE => 'Playoff',
             major => 'SEGMENT',
             DATE_START => '2012-08-22',
-            DATE_END => '2012-08-22'
+            DATE_END => '2012-08-23'
           },
           'C1' => 
           {
@@ -1469,7 +1492,7 @@ my %TOURNAMENTS_WORLD =
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2012-08-22',
-            DATE_END => '2012-08-22'
+            DATE_END => '2012-08-23'
           } 
         }
       },
@@ -1661,8 +1684,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2011,
-            DATE_START => '2011-12-13',
-            DATE_END => '2011-12-14'
+            DATE_START => '2011-12-14',
+            DATE_END => '2011-12-16'
           } 
         }
       },
@@ -1822,6 +1845,19 @@ my %TOURNAMENTS_WORLD =
 
     EDITIONS =>
     {
+      '2011' =>
+      {
+        MEET => 'World Mind Games',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-12-13',
+            DATE_END => '2011-12-14'
+          } 
+        }
+      },
       '2013' =>
       {
         MEET => 'World Mind Games',
@@ -1861,6 +1897,71 @@ my %TOURNAMENTS_WORLD =
 
     EDITIONS =>
     {
+      '2008' =>
+      {
+        MEET => 'World Mind Games',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            minor => 'MATCH',
+            DATE_START => '2008-10-04',
+            DATE_END => '2008-10-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            minor => 'MATCH',
+            DATE_START => '2008-10-11',
+            DATE_END => '2008-10-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            minor => 'MATCH',
+            DATE_START => '2008-10-14',
+            DATE_END => '2008-10-15'
+          },
+          'C3' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            minor => 'MATCH',
+            DATE_START => '2008-10-16',
+            DATE_END => '2008-10-16'
+          },
+          'C4' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            minor => 'MATCH',
+            DATE_START => '2008-10-16',
+            DATE_END => '2008-10-17'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'World Mind Games',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-12-10',
+            DATE_END => '2011-12-12'
+          } 
+        }
+      },
       '2012' =>
       {
         MEET => 'World Mind Games',
@@ -1900,16 +2001,203 @@ my %TOURNAMENTS_WORLD =
 
     EDITIONS =>
     {
+      '2008' =>
+      {
+        MEET => 'World Mind Games',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2008-10-04',
+            DATE_END => '2008-10-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2008-10-11',
+            DATE_END => '2008-10-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            minor => 'MATCH',
+            DATE_START => '2008-10-11',
+            DATE_END => '2008-10-13'
+          },
+          'C3' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            minor => 'MATCH',
+            DATE_START => '2008-10-14',
+            DATE_END => '2008-10-15'
+          },
+          'C4' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-10-16',
+            DATE_END => '2008-10-17'
+          } 
+        }
+      },
       '2012' =>
+      {
+        MEET => 'World Mind Games',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2012-08-11',
+            DATE_END => '2012-12-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-15',
+            DATE_END => '2012-12-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-17',
+            DATE_END => '2012-12-18'
+          },
+          'C3' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-19',
+            DATE_END => '2012-12-20'
+          },
+          'C4' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-21',
+            DATE_END => '2012-12-22'
+          },
+          'C5' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-21',
+            DATE_END => '2012-12-22'
+          } 
+        }
+      },
+    }
+  },
+
+  'WMG U21 Teams' => 
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U21',
+
+    EDITIONS =>
+    {
+      '2008' =>
+      {
+        MEET => 'World Mind Games',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2008-10-06',
+            DATE_END => '2008-10-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-10-12',
+            DATE_END => '2008-10-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-10-13',
+            DATE_END => '2008-10-13'
+          } 
+        }
+      },
+    }
+  },
+
+  'WMG U26 Teams' => 
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U26',
+
+    EDITIONS =>
+    {
+      '2008' =>
       {
         MEET => 'World Mind Games',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2012,
-            DATE_START => '2012-08-10',
-            DATE_END => '2012-12-22'
+            YEAR => 2008,
+            DATE_START => '2008-10-04',
+            DATE_END => '2008-10-13'
+          } 
+        }
+      },
+    }
+  },
+
+  'WMG U28 Teams' => 
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U28',
+
+    EDITIONS =>
+    {
+      '2008' =>
+      {
+        MEET => 'World Mind Games',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-10-04',
+            DATE_END => '2008-10-13'
           } 
         }
       },
@@ -1935,7 +2223,7 @@ my %TOURNAMENTS_WORLD =
           {
             YEAR => 2011,
             DATE_START => '2011-12-14',
-            DATE_END => '2011-12-15'
+            DATE_END => '2011-12-16'
           } 
         }
       },
@@ -2056,6 +2344,58 @@ my %TOURNAMENTS_WORLD =
 
     EDITIONS =>
     {
+      '2008' =>
+      {
+        MEET => 'World Mind Games',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            minor => 'MATCH',
+            DATE_START => '2008-10-04',
+            DATE_END => '2008-10-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            minor => 'MATCH',
+            DATE_START => '2008-10-11',
+            DATE_END => '2008-10-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            minor => 'MATCH',
+            DATE_START => '2008-10-14',
+            DATE_END => '2008-10-15'
+          },
+          'C3' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            minor => 'MATCH',
+            DATE_START => '2008-10-16',
+            DATE_END => '2008-10-16'
+          },
+          'C4' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            minor => 'MATCH',
+            DATE_START => '2008-10-16',
+            DATE_END => '2008-10-17'
+          } 
+        }
+      },
       '2011' =>
       {
         MEET => 'World Mind Games',
@@ -2064,8 +2404,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2011,
-            DATE_START => '2012-12-09',
-            DATE_END => '2012-12-13'
+            DATE_START => '2011-12-10',
+            DATE_END => '2011-12-13'
           } 
         }
       },
@@ -2074,10 +2414,52 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Mind Games',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
-            DATE_START => '2012-08-10',
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2012-08-11',
+            DATE_END => '2012-12-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-15',
+            DATE_END => '2012-12-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-17',
+            DATE_END => '2012-12-18'
+          },
+          'C3' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-19',
+            DATE_END => '2012-12-20'
+          },
+          'C4' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-21',
+            DATE_END => '2012-12-22'
+          },
+          'C5' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-21',
             DATE_END => '2012-12-22'
           } 
         }
