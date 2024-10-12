@@ -1015,11 +1015,12 @@ my @MULTI_WORDS =
   'WMG Women Pairs',
   'WMG Women Teams',
 
-  'IMSA Elite Mind Games',
   'World Masters Individual',
+  'World Top Tournament',
+
+  'IMSA Elite Mind Games',
   'World Men Elite Tournament',
   'World Seniors Championships',
-  'World Top Tournament',
   'World Women Elite Tournament',
 
 

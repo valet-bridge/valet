@@ -1990,6 +1990,53 @@ my %TOURNAMENTS_WORLD =
     }
   },
 
+  'World Masters Individual' => 
+  {
+    ORIGIN => 'International',
+    FORM => 'Individual',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/Athens.00/Athens.htm
+        ORDINAL => 5,
+        CITY => 'Athens',
+        COUNTRY => 'Greece',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2000,
+            major => 'SESSION',
+            DATE_START => '2000-04-13',
+            DATE_END => '2000-04-15'
+          },
+        }
+      },
+      '2004' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/Verona.04/Results.htm
+        ORDINAL => 6,
+        CITY => 'Verona',
+        COUNTRY => 'Italy',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2004,
+            major => 'SESSION',
+            DATE_START => '2004-09-08',
+            DATE_END => '2004-09-10'
+          },
+        }
+      },
+    }
+  },
+
   'World Mixed Pairs' => 
   {
     ORIGIN => 'International',
@@ -2152,6 +2199,59 @@ my %TOURNAMENTS_WORLD =
           },
         }
       }
+    }
+  },
+
+  'World Top Tournament' => 
+  {
+    ORIGIN => 'International',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+    SPONSOR => 'Cap Gemini',
+
+    EDITIONS =>
+    {
+      '1997' =>
+      {
+        CITY => 'The Hague',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 1997,
+            DATE_START => '1997-01-16',
+            DATE_END => '1997-01-19'
+          },
+        }
+      },
+      '1999' =>
+      {
+        CITY => 'The Hague',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 1999,
+            DATE_START => '1999-01-14',
+            DATE_END => '1999-01-17'
+          },
+        }
+      },
+      '2000' =>
+      {
+        CITY => 'The Hague',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2000,
+            DATE_START => '2000-03-23',
+            DATE_END => '2000-03-26'
+          },
+        }
+      },
     }
   },
 
