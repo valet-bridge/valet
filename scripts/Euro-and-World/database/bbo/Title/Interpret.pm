@@ -650,7 +650,7 @@ sub finish_ambiguous
     return 1;
   }
   elsif ($meet eq 'World Mind Games' ||
-      $tname eq 'IMSA Elite Mind Games')
+      $meet eq 'IMSA Elite Mind Games')
   {
     if ($value =~ /^O (\d+)$/)
     {

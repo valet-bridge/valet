@@ -72,6 +72,7 @@ my @MULTI_WORDS =
   'Indonesian Student Championship',
   'Indonesian University Championship',
 
+  'IMSA Elite Mind Games',
   'Indian South Zone Championship',
   'International Bridge Festival',
   'Israel Grand Prix',

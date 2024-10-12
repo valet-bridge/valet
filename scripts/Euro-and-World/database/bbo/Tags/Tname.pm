@@ -792,7 +792,6 @@ my @MULTI_WORDS =
   'Hecht Cup',
   'Higson Cup',
   'High-Tech Zone Workers Invitational',
-  'Huayuan Cup',
 
   'HNA Open Teams',
   'Hong Kong Inter-City',
@@ -936,7 +935,6 @@ my @MULTI_WORDS =
   'Summer Monsoon League',
   'Sunchime Fund Cup',
   'Suomen Cup',
-  'Tianjin Binhai Cup',
   'Tielu Jixie Invitational',
   'Xinyuan Cup',
   'Zhejiang Huamen Cup',
@@ -993,12 +991,24 @@ my @MULTI_WORDS =
   'Bermuda Bowl',
   "d'Orsi",
   'Damiani Trophy',
+  'Huayuan Cup',
+  'IMSA Elite Open Individual',
+  'IMSA Elite Open Pairs',
+  'IMSA Elite Open Teams',
+  'IMSA Elite Women Individual',
+  'IMSA Elite Women Pairs',
+  'IMSA Elite Women Teams',
   'IOC Grand Prix',
   'McConnell Cup',
+  'Oly-Star Cup',
+  'PABF Women Elite Tournament',
   'Rona Cup',
   'Rosenblum Cup',
+  'Tianjin Binhai Cup',
   'Venice Cup',
   'World Masters Individual',
+  'World Mixed Pairs',
+  'World Mixed Teams',
   'World Open Pairs',
   'World Top Tournament',
   'World Transnational Mixed Teams',
@@ -1018,10 +1028,8 @@ my @MULTI_WORDS =
   'WMG Women Teams',
 
 
-  'IMSA Elite Mind Games',
-  'World Men Elite Tournament',
-  'World Seniors Championships',
-  'World Women Elite Tournament',
+
+  # 'World Men Elite Tournament',
 
 
   'Russian IMSA Cup',
@@ -2960,7 +2968,9 @@ my %MULTI_TYPOS =
   'Thrace Club Teams' => ['thrace region clubs team championship',
     'türk trakya bölge kulüpler þampýyonasi ekýbý', 'trachean club teams'],
   'Thrace Cup League' => ['trakya kulupler ligi'],
-  'Tianjin Binhai Cup' => ['tianjin bin hai cup'],
+  'Tianjin Binhai Cup' => [
+    'tianjin bin hai cup',
+    'tianjin binhai cup world men elite tournament'],
   'Tolani Gold Trophy' => [
     'dr_tolanigoldcup',
     'dr_tolani gold cup summer nationals',
@@ -3164,6 +3174,17 @@ my %MULTI_TYPOS =
   'Winter Open Teams' => ['winter teams', 'winter team'],
 
   # WORLD
+  'Huayuan Cup' => [
+    'hua yuan cup'],
+  'Oly-Star Cup' => [
+    "oly-star cup women's bridge elite tournament",
+    "oly-star cup women's bridge grand prix"],
+  'IMSA Elite Women Teams' => [
+    'women elite tournament',
+    "women's bridge elite tournament",
+    "women's elite tournament",
+    "women's bridge grand prix"],
+    # 'world women elite tournament'],
   'World Juniors Championship' => ['world juniors championships'],
   'World Masters Individual' => ['masters individual',
     'world masters'],
@@ -3175,10 +3196,7 @@ my %MULTI_TYPOS =
     'world university bridge championship',
     'world university bridge championships',
     'univ_ world champs'],
-  'World Women Elite Tournament' => ['women elite tournament',
-    "women's bridge elite tournament",
-    "women's elite tournament",
-    "women's bridge grand prix"],
+  # 'World Women Elite Tournament' => [
   'World Youth Championship' => ['world youth championships'],
   'World Youth Congress' => ['youth world bridge congress',
     'worlf youth bridge congress', 'workd youth bridge congress',

@@ -13,6 +13,35 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_WORLD =
 (
+  'IMSA Elite Mind Games' => 
+  {
+    ORGANIZATION => 'CCBA',
+    ZONE => 'World',
+    COUNTRY => 'China',
+    
+    EDITIONS => 
+    {
+      '2016' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/HuaiAn.16/microSite/results.htm
+        ORDINAL => 1,
+        YEAR => 2016,
+        CITY => 'Huai An',
+        DATE_START => '2016-02-26',
+        DATE_END => '2016-03-03'
+      },
+      '2017' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/HuaiAn.17/microSite/results.htm
+        ORDINAL => 2,
+        YEAR => 2017,
+        CITY => 'Huai An',
+        DATE_START => '2017-12-09',
+        DATE_END => '2017-12-15'
+      },
+    }
+  },
+
   'World Olympiad' =>
   {
     ORGANIZATION => 'WBF',
@@ -1120,6 +1149,274 @@ my %TOURNAMENTS_WORLD =
     }
   },
 
+  'Huayuan Cup' => 
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2006' =>
+      {
+        CITY => 'Beijing',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-08-09',
+            DATE_END => '2006-08-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2006-08-09',
+            DATE_END => '2006-08-09'
+          },
+        }
+      },
+      '2011' =>
+      {
+        CITY => 'Beijing',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-09-05',
+            DATE_END => '2011-09-07'
+          },
+        }
+      },
+      '2013' =>
+      {
+        CITY => 'Beijing',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            major => 'ROUND',
+            DATE_START => '2013-10-14',
+            DATE_END => '2013-10-16'
+          },
+        }
+      },
+      '2015' =>
+      {
+        CITY => 'Beijing',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'ROUND',
+            DATE_START => '2015-11-09',
+            DATE_END => '2015-11-11'
+          },
+        }
+      },
+    }
+  },
+
+
+  'IMSA Elite Open Individual' => 
+  {
+    ORIGIN => 'International',
+    FORM => 'Individual',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        MEET => 'IMSA Elite Mind Games',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2016-03-02',
+            DATE_END => '2016-03-03'
+          },
+        }
+      },
+    }
+  },
+
+  'IMSA Elite Open Pairs' => 
+  {
+    ORIGIN => 'International',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        MEET => 'IMSA Elite Mind Games',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'SESSION',
+            DATE_START => '2016-02-29',
+            DATE_END => '2016-03-03'
+          },
+        }
+      },
+    }
+  },
+
+  'IMSA Elite Open Teams' => 
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        MEET => 'IMSA Elite Mind Games',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2016-02-26',
+            DATE_END => '2016-02-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-02-28',
+            DATE_END => '2016-02-28'
+          },
+        }
+      },
+    }
+  },
+
+  'IMSA Elite Women Individual' => 
+  {
+    ORIGIN => 'International',
+    FORM => 'Individual',
+    SCORING => 'MP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        MEET => 'IMSA Elite Mind Games',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'SESSION',
+            DATE_START => '2016-03-02',
+            DATE_END => '2016-03-03'
+          },
+        }
+      },
+    }
+  },
+
+  'IMSA Elite Women Pairs' => 
+  {
+    ORIGIN => 'International',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        MEET => 'IMSA Elite Mind Games',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'SESSION',
+            DATE_START => '2016-02-29',
+            DATE_END => '2016-03-03'
+          },
+        }
+      },
+    }
+  },
+
+  'IMSA Elite Women Teams' => 
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        MEET => 'IMSA Elite Mind Games',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2016-02-26',
+            DATE_END => '2016-02-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2016-02-28',
+            DATE_END => '2016-02-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-02-28',
+            DATE_END => '2016-02-28'
+          },
+        }
+      },
+    }
+  },
+
   'IOC Grand Prix' => 
   {
     ORGANIZER => 'IOC',
@@ -1234,6 +1531,169 @@ my %TOURNAMENTS_WORLD =
             major => 'SEGMENT',
             DATE_START => '2014-10-22',
             DATE_END => '2014-10-22'
+          },
+        }
+      },
+    }
+  },
+
+  'Oly-Star Cup' => 
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2011-07-12',
+            DATE_END => '2011-07-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-07-21',
+            DATE_END => '2011-07-22'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2011-07-22',
+            DATE_END => '2011-07-24'
+          },
+          'C3' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-07-22',
+            DATE_END => '2011-07-24'
+          },
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2012-06-06',
+            DATE_END => '2012-06-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-06-08',
+            DATE_END => '2012-06-09'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-06-09',
+            DATE_END => '2012-06-10'
+          },
+        }
+      },
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2013-07-10',
+            DATE_END => '2013-07-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-07-12',
+            DATE_END => '2013-07-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-07-13',
+            DATE_END => '2013-07-14'
+          },
+        }
+      },
+    }
+  },
+
+  'PABF Women Elite Tournament' => 
+  {
+    ORIGIN => 'International',
+    ORGANIZER => 'PABF',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2006' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2006-10-18',
+            DATE_END => '2006-10-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-10-20',
+            DATE_END => '2006-10-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2006-10-21',
+            DATE_END => '2006-10-21'
+          },
+          'C3' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2006-10-21',
+            DATE_END => '2006-10-21'
           },
         }
       },
@@ -1597,6 +2057,33 @@ my %TOURNAMENTS_WORLD =
           },
         }
       }
+    }
+  },
+
+  'Tianjin Binhai Cup' => 
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Men',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2011-09-11',
+            DATE_END => '2011-09-14'
+          },
+        }
+      },
     }
   },
 
