@@ -2215,6 +2215,7 @@ my %TOURNAMENTS_WORLD =
     {
       '1997' =>
       {
+        ORDINAL => 11,
         CITY => 'The Hague',
         CHAPTERS =>
         {
@@ -2226,8 +2227,23 @@ my %TOURNAMENTS_WORLD =
           },
         }
       },
+      '1998' =>
+      {
+        ORDINAL => 12,
+        CITY => 'The Hague',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 1998,
+            DATE_START => '1998-01-15',
+            DATE_END => '1998-01-18'
+          },
+        }
+      },
       '1999' =>
       {
+        ORDINAL => 13,
         CITY => 'The Hague',
         CHAPTERS =>
         {
@@ -2241,6 +2257,7 @@ my %TOURNAMENTS_WORLD =
       },
       '2000' =>
       {
+        ORDINAL => 14,
         CITY => 'The Hague',
         CHAPTERS =>
         {

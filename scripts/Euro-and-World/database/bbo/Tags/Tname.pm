@@ -998,7 +998,9 @@ my @MULTI_WORDS =
   'Rona Cup',
   'Rosenblum Cup',
   'Venice Cup',
+  'World Masters Individual',
   'World Open Pairs',
+  'World Top Tournament',
   'World Transnational Mixed Teams',
   'World Transnational Open Teams',
   'WMG Men Individual',
@@ -1015,8 +1017,6 @@ my @MULTI_WORDS =
   'WMG Women Pairs',
   'WMG Women Teams',
 
-  'World Masters Individual',
-  'World Top Tournament',
 
   'IMSA Elite Mind Games',
   'World Men Elite Tournament',
