@@ -1200,6 +1200,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2006-06-21',
             DATE_END => '2006-06-21'
           },
@@ -1213,6 +1215,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2010-10-12',
             DATE_END => '2010-10-12'
           },
@@ -1226,6 +1230,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2014-10-22',
             DATE_END => '2014-10-22'
           },
@@ -1540,11 +1546,54 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Series',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2014-10-18',
-            DATE_END => '2014-10-23'
+            DATE_END => '2014-10-18'
+          },
+          'C1' => 
+          {
+            # Confusing to call this a semifinal
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-10-19',
+            DATE_END => '2014-10-19'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2014-10-20',
+            DATE_END => '2014-10-20'
+          },
+          'C3' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2014-10-20',
+            DATE_END => '2014-10-21'
+          },
+          'C4' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-10-21',
+            DATE_END => '2014-10-22'
+          },
+          'C5' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-10-22',
+            DATE_END => '2014-10-22'
           },
         }
       }
@@ -1959,6 +2008,9 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SESSION',
+            minor => 'TABLE',
             DATE_START => '2014-10-13',
             DATE_END => '2014-10-17'
           },
@@ -1982,10 +2034,61 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Series',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2014-10-11',
+            DATE_END => '2014-10-11'
+          },
+          'C1' => 
+          {
+            # Confusing to call this a semifinal
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-10-12',
+            DATE_END => '2014-10-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2014-10-13',
+            DATE_END => '2014-10-13'
+          },
+          'C3' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2014-10-13',
+            DATE_END => '2014-10-13'
+          },
+          'C4' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-10-14',
+            DATE_END => '2014-10-14'
+          },
+          'C5' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-10-14',
+            DATE_END => '2014-10-14'
+          },
+          'C6' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-10-15',
             DATE_END => '2014-10-15'
           },
         }
@@ -2041,6 +2144,9 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SESSION',
+            minor => 'TABLE',
             DATE_START => '2014-10-24',
             DATE_END => '2014-10-25'
           },
@@ -2067,6 +2173,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2004,
+            STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2004-11-02',
             DATE_END => '2004-11-06'
@@ -3282,6 +3389,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2012-12-13',
             DATE_END => '2012-12-15'
           } 

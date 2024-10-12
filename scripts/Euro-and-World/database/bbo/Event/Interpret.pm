@@ -536,6 +536,7 @@ sub post_process_rof
       if ($tname eq 'Spingold Teams' || 
           $tname eq 'Vanderbilt Teams' || 
           $meet eq 'United States Bridge Championship' ||
+          $meet eq 'World Series' ||
          ($meet eq 'European Transnational Championships' &&
           $knowledge->is_knock_out($bbono)))
       {
@@ -684,9 +685,18 @@ sub active_number_pairs
     print "$bbono ETRACE-NUMP-2\n" if $TRACE;
     $value =~ /^(\d+)([A-Za-z]+)$/;
     my ($number, $letter) = ($1, $2);
-    one_to_two_chains($chains, $chain, $cno, $token,
-      'MARKER', 'GROUP', $letter,
-      'MARKER', 'SESSION', $number);
+    if ($letter eq 'F' && $number <= 8)
+    {
+      one_to_two_chains($chains, $chain, $cno, $token,
+        'SINGLETON', 'STAGE', 'Final',
+        'MARKER', 'SESSION', $number);
+    }
+    else
+    {
+      one_to_two_chains($chains, $chain, $cno, $token,
+        'MARKER', 'GROUP', $letter,
+        'MARKER', 'SESSION', $number);
+    }
   }
   elsif ($field eq 'N_TO_N_OF_N')
   {
