@@ -1097,7 +1097,7 @@ my %TOURNAMENTS_WORLD =
     }
   },
 
-  # TODO Same as World Junior Open Teams?
+  # TODO Same as World Junior Teams?
   'Damiani Trophy' => 
   {
     ORIGIN => 'International',
@@ -2873,32 +2873,6 @@ my %TOURNAMENTS_WORLD =
     }
   },
 
-  'World Junior Open Teams' =>
-  {
-    ORIGIN => 'International',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Juniors',
-
-    EDITIONS =>
-    {
-      '2011' =>
-      {
-        MEET => 'World Youth Open Championships',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2011,
-            DATE_START => '2011-08-22',
-            DATE_END => '2011-08-26'
-          } 
-        }
-      },
-    }
-  },
-
   'World Junior Teams' =>
   {
     ORIGIN => 'International',
@@ -3776,11 +3750,29 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Youth Open Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2015-08-24',
-            DATE_END => '2015-08-28'
+            DATE_END => '2015-08-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-26',
+            DATE_END => '2015-08-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-27',
+            DATE_END => '2015-08-27'
           } 
         }
       },
@@ -3805,6 +3797,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2009,
+            major => 'SESSION',
             DATE_START => '2009-08-20',
             DATE_END => '2009-08-23'
           } 
@@ -3831,6 +3824,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2009-08-20',
             DATE_END => '2009-08-23'
           } 
@@ -3844,6 +3839,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2011-08-28',
             DATE_END => '2011-08-30'
           } 
@@ -3857,6 +3854,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2013-08-04',
             DATE_END => '2013-08-06'
           } 
@@ -3870,6 +3869,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2015,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2015-08-21',
             DATE_END => '2015-08-23'
           } 
@@ -3893,11 +3894,92 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Youth Open Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2009-08-15',
+            DATE_END => '2009-08-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-08-18',
+            DATE_END => '2009-08-18'
+          },
+          'C2' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-08-18',
+            DATE_END => '2009-08-18'
+          },
+          'C3' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2009-08-19',
             DATE_END => '2009-08-19'
+          },
+          'C4' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-08-19',
+            DATE_END => '2009-08-19'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2011-08-22',
+            DATE_END => '2011-08-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-08-24',
+            DATE_END => '2011-08-24'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-08-25',
+            DATE_END => '2011-08-25'
+          },
+          'C3' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2011-08-26',
+            DATE_END => '2011-08-26'
+          },
+          'C4' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-08-26',
+            DATE_END => '2011-08-26'
           } 
         }
       },
@@ -3945,11 +4027,45 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Youth Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2014-08-14',
-            DATE_END => '2014-08-24'
+            DATE_END => '2014-08-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-20',
+            DATE_END => '2014-08-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-21',
+            DATE_END => '2014-08-21'
+          },
+          'C3' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-22',
+            DATE_END => '2014-08-22'
+          },
+          'C4' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-22',
+            DATE_END => '2014-08-23'
           } 
         }
       },
@@ -4021,6 +4137,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2013-08-04',
             DATE_END => '2013-08-06'
           } 
@@ -4044,10 +4162,20 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Youth Open Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2013-08-06',
+            DATE_END => '2013-08-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-08-09',
             DATE_END => '2013-08-09'
           } 
         }
@@ -4057,11 +4185,29 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Youth Open Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2015-08-24',
-            DATE_END => '2015-08-28'
+            DATE_END => '2015-08-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-26',
+            DATE_END => '2015-08-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-27',
+            DATE_END => '2015-08-27'
           } 
         }
       },
@@ -4086,6 +4232,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2011,
+            STAGE => 'Final',
             DATE_START => '2011-08-24',
             DATE_END => '2011-08-27'
           } 
@@ -4099,6 +4246,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2013-08-08',
             DATE_END => '2013-08-11'
           } 
@@ -4112,6 +4261,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2015-08-26',
             DATE_END => '2015-08-29'
           } 
@@ -4138,6 +4289,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2006,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2006-10-31',
             DATE_END => '2006-10-31'
           } 
@@ -4151,6 +4304,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2008,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2008-09-10',
             DATE_END => '2008-09-10'
           } 
@@ -4164,6 +4319,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2010,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2010-08-03',
             DATE_END => '2010-08-09'
           } 
@@ -4177,6 +4334,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2012-07-10',
             DATE_END => '2012-07-15'
           } 
@@ -4216,7 +4375,9 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2006,
-            DATE_START => '2006-07-30',
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2006-08-03',
             DATE_END => '2006-08-08'
           } 
         }
@@ -4229,8 +4390,10 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2010,
-            DATE_START => '2010-10-10',
-            DATE_END => '2010-10-16'
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-10-14',
+            DATE_END => '2010-10-14'
           } 
         }
       },
@@ -4239,10 +4402,44 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Youth Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
-            DATE_START => '2012-07-25',
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2012-07-27',
+            DATE_END => '2012-07-31'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-01',
+            DATE_END => '2012-08-01'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-02',
+            DATE_END => '2012-08-02'
+          },
+          'C3' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-03',
+            DATE_END => '2012-08-03'
+          },
+          'C4' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-03',
             DATE_END => '2012-08-04'
           } 
         }
