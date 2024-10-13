@@ -1097,25 +1097,108 @@ my %TOURNAMENTS_WORLD =
     }
   },
 
-  # TODO Same as World Junior Teams?
-  'Damiani Trophy' => 
+  'Damiani Trophy' =>
   {
     ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'U21',
+    AGE => 'Juniors',
 
     EDITIONS =>
     {
+      '2005' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2005-08-08',
+            DATE_END => '2005-08-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2005-08-15',
+            DATE_END => '2005-08-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2005-08-16',
+            DATE_END => '2005-08-16'
+          },
+          'C3' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2005-08-16',
+            DATE_END => '2005-08-17'
+          } 
+        }
+      },
+      '2006' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2006-07-30',
+            DATE_END => '2006-08-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-08-08',
+            DATE_END => '2006-08-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2006-08-08',
+            DATE_END => '2006-08-08'
+          } 
+        }
+      },
       '2010' =>
       {
-        
-        # http://db.worldbridge.org/Repository/tourn/Philadelphia.10/Philadelphia.htm
         MEET => 'World Series',
         CHAPTERS =>
         {
           'C0' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-10-13',
+            DATE_END => '2010-10-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-10-13',
+            DATE_END => '2010-10-13'
+          },
+          'C2' => 
           {
             YEAR => 2010,
             STAGE => 'Semifinal',
@@ -1123,7 +1206,7 @@ my %TOURNAMENTS_WORLD =
             DATE_START => '2010-10-14',
             DATE_END => '2010-10-14'
           },
-          'C1' => 
+          'C3' => 
           {
             YEAR => 2010,
             STAGE => 'Final',
@@ -1132,9 +1215,96 @@ my %TOURNAMENTS_WORLD =
             DATE_END => '2010-10-16'
           },
         }
-      }
+      },
+      '2012' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2012-07-26',
+            DATE_END => '2012-07-31'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-01',
+            DATE_END => '2012-08-01'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-02',
+            DATE_END => '2012-08-02'
+          },
+          'C3' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-03',
+            DATE_END => '2012-08-04'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2016-08-04',
+            DATE_END => '2016-08-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-08-10',
+            DATE_END => '2016-08-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-08-11',
+            DATE_END => '2016-08-11'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2016-08-12',
+            DATE_END => '2016-08-12'
+          },
+          'C4' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-08-12',
+            DATE_END => '2016-08-13'
+          } 
+        }
+      },
     }
   },
+
 
   "d'Orsi" => 
   {
@@ -1983,21 +2153,18 @@ my %TOURNAMENTS_WORLD =
     }
   },
 
-  # TODO Same as some World Junior...?
-  'Rona Cup' => 
+  'Rona Cup' =>
   {
     ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
-    AGE => 'U26',
+    AGE => 'Juniors',
 
     EDITIONS =>
     {
       '2010' =>
       {
-        
-        # http://db.worldbridge.org/Repository/tourn/Philadelphia.10/Philadelphia.htm
         MEET => 'World Series',
         CHAPTERS =>
         {
@@ -2010,9 +2177,109 @@ my %TOURNAMENTS_WORLD =
             DATE_END => '2010-10-13'
           },
         }
-      }
+      },
+      '2012' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-07-25',
+            DATE_END => '2012-08-04'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2014-08-14',
+            DATE_END => '2014-08-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-20',
+            DATE_END => '2014-08-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-21',
+            DATE_END => '2014-08-21'
+          },
+          'C3' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-22',
+            DATE_END => '2014-08-23'
+          },
+          'C4' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-22',
+            DATE_END => '2014-08-23'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2016-08-04',
+            DATE_END => '2016-08-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-08-10',
+            DATE_END => '2016-08-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-08-11',
+            DATE_END => '2016-08-11'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-08-12',
+            DATE_END => '2016-08-13'
+          }
+        }
+      },
     }
   },
+
 
   'Rosenblum Cup' => 
   {
@@ -2755,326 +3022,6 @@ my %TOURNAMENTS_WORLD =
             major => 'SEGMENT',
             DATE_START => '2015-10-08',
             DATE_END => '2015-10-09'
-          } 
-        }
-      },
-    }
-  },
-
-  'World Girl Teams' =>
-  {
-    ORIGIN => 'International',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Women',
-    AGE => 'Juniors',
-
-    EDITIONS =>
-    {
-      '2012' =>
-      {
-        MEET => 'World Youth Championships',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2012,
-            DATE_START => '2012-07-25',
-            DATE_END => '2012-08-04'
-          } 
-        }
-      },
-      '2014' =>
-      {
-        MEET => 'World Youth Championships',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2014,
-            STAGE => 'Round-robin',
-            major => 'ROUND',
-            DATE_START => '2014-08-14',
-            DATE_END => '2014-08-18'
-          },
-          'C1' => 
-          {
-            YEAR => 2014,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2014-08-20',
-            DATE_END => '2014-08-20'
-          },
-          'C2' => 
-          {
-            YEAR => 2014,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2014-08-21',
-            DATE_END => '2014-08-21'
-          },
-          'C3' => 
-          {
-            YEAR => 2014,
-            STAGE => 'Playoff',
-            major => 'SEGMENT',
-            DATE_START => '2014-08-22',
-            DATE_END => '2014-08-23'
-          },
-          'C4' => 
-          {
-            YEAR => 2014,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2014-08-22',
-            DATE_END => '2014-08-23'
-          } 
-        }
-      },
-      '2016' =>
-      {
-        MEET => 'World Youth Championships',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2016,
-            STAGE => 'Round-robin',
-            major => 'ROUND',
-            DATE_START => '2016-08-04',
-            DATE_END => '2016-08-08'
-          },
-          'C1' => 
-          {
-            YEAR => 2016,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2016-08-10',
-            DATE_END => '2016-08-10'
-          },
-          'C2' => 
-          {
-            YEAR => 2016,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2016-08-11',
-            DATE_END => '2016-08-11'
-          },
-          'C3' => 
-          {
-            YEAR => 2016,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2016-08-12',
-            DATE_END => '2016-08-13'
-          }
-        }
-      },
-    }
-  },
-
-  'World Junior Teams' =>
-  {
-    ORIGIN => 'International',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Juniors',
-
-    EDITIONS =>
-    {
-      '2005' =>
-      {
-        MEET => 'World Youth Championships',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2005,
-            STAGE => 'Round-robin',
-            major => 'ROUND',
-            DATE_START => '2005-08-08',
-            DATE_END => '2005-08-15'
-          },
-          'C1' => 
-          {
-            YEAR => 2005,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2005-08-15',
-            DATE_END => '2005-08-16'
-          },
-          'C2' => 
-          {
-            YEAR => 2005,
-            STAGE => 'Bronze',
-            major => 'SEGMENT',
-            DATE_START => '2005-08-16',
-            DATE_END => '2005-08-16'
-          },
-          'C3' => 
-          {
-            YEAR => 2005,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2005-08-16',
-            DATE_END => '2005-08-17'
-          } 
-        }
-      },
-      '2006' =>
-      {
-        MEET => 'World Youth Championships',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2006,
-            STAGE => 'Round-robin',
-            major => 'ROUND',
-            DATE_START => '2006-07-30',
-            DATE_END => '2006-08-05'
-          },
-          'C1' => 
-          {
-            YEAR => 2006,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2006-08-08',
-            DATE_END => '2006-08-08'
-          },
-          'C2' => 
-          {
-            YEAR => 2006,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2006-08-08',
-            DATE_END => '2006-08-08'
-          } 
-        }
-      },
-      '2010' =>
-      {
-        MEET => 'World Series',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2010,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2010-10-13',
-            DATE_END => '2010-10-16'
-          },
-          'C1' => 
-          {
-            YEAR => 2010,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2010-10-13',
-            DATE_END => '2010-10-13'
-          },
-          'C2' => 
-          {
-            YEAR => 2010,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2010-10-14',
-            DATE_END => '2010-10-14'
-          },
-          'C3' => 
-          {
-            YEAR => 2010,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2010-10-15',
-            DATE_END => '2010-10-16'
-          },
-        }
-      },
-      '2012' =>
-      {
-        MEET => 'World Youth Championships',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2012,
-            STAGE => 'Round-robin',
-            major => 'ROUND',
-            DATE_START => '2012-07-26',
-            DATE_END => '2012-07-31'
-          },
-          'C1' => 
-          {
-            YEAR => 2012,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2012-08-01',
-            DATE_END => '2012-08-01'
-          },
-          'C2' => 
-          {
-            YEAR => 2012,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2012-08-02',
-            DATE_END => '2012-08-02'
-          },
-          'C3' => 
-          {
-            YEAR => 2012,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2012-08-03',
-            DATE_END => '2012-08-04'
-          } 
-        }
-      },
-      '2016' =>
-      {
-        MEET => 'World Youth Championships',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2016,
-            STAGE => 'Round-robin',
-            major => 'ROUND',
-            DATE_START => '2016-08-04',
-            DATE_END => '2016-08-09'
-          },
-          'C1' => 
-          {
-            YEAR => 2016,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2016-08-10',
-            DATE_END => '2016-08-10'
-          },
-          'C2' => 
-          {
-            YEAR => 2016,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2016-08-11',
-            DATE_END => '2016-08-11'
-          },
-          'C3' => 
-          {
-            YEAR => 2016,
-            STAGE => 'Playoff',
-            major => 'SEGMENT',
-            DATE_START => '2016-08-12',
-            DATE_END => '2016-08-12'
-          },
-          'C4' => 
-          {
-            YEAR => 2016,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2016-08-12',
-            DATE_END => '2016-08-13'
           } 
         }
       },

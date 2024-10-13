@@ -248,6 +248,8 @@ my @LOCAL_SUBS =
     CORR => 'Pula Bridge Festival' },
   { START => 15457, END => 15463, TEXT => 'Grand Prix of Poland',
     CORR => 'Grand Prix of Poland Pairs' },
+  { START => 15603, END => 15628, TEXT => 'World Juniors Championships*', 
+    CORR => 'World Series - Damiani Trophy' },
   { START => 15883, END => 15886, TEXT => 'Gran Final Argentina Damas', 
     CORR => 'Argentinian Women Trials - Final' },
   { START => 15919, END => 15966, TEXT => 'Finnish Team Trials', 
