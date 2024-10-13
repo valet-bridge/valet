@@ -655,16 +655,19 @@ my @MULTI_WORDS =
   'Balkan Teams',
 
   'Baltic Bowl',
-  'Baltic Cup',
-  'Baltic Teams Cup',
+  'Baltic Open Teams',
   'Estonian First League',
   'Estonian Open Teams',
-  'Estonian Open Trials',
-  'Estonian-Latvian Open Trials',
+  'Estonian Open Pair Trials',
+  'Estonian-Latvian Open Team Trials',
+  'Latvia Invites',
   'Lithuanian Open Teams',
-  'Riga Invites to Jurmala',
   'Vilnius Club Pairs',
-  'Vilnius Cup',
+
+  'Riga Invitational Pairs',
+  'Riga Open Teams',
+  'Vilnius Open Pairs',
+  'Vilnius Open Teams',
 
   'Belarusian Open Teams',
 
@@ -1291,7 +1294,9 @@ my %MULTI_TYPOS =
     'balkan bridge championship'],
   'Balkan Teams' => ['bolkan team championship',
     'bolkan teams championship', 'bolkan championship'],
-  'Baltic Teams Cup' => ['baltic open teams cup'],
+  'Baltic Open Teams' => [
+    'baltic open teams cup',
+    'baltic teams cup'],
   'Baze Senior Knock-out' => ['baze senior ko', 'baze sr_ ko',
     'baze sr_ ko', 'baze sr ko'],
   'Belarusian Open Teams' => ['belarus teams',
@@ -1636,11 +1641,14 @@ my %MULTI_TYPOS =
     'estonian team championships', 'estonian open teams',
     'estonia teams championships', 'est teams champs',
     'estonian teams championships'],
-  'Estonian Open Trials' => ['estonian team trials'],
-  'Estonian-Latvian Open Trials' => [
+  'Estonian Open Pair Trials' => [
+    'estonian open trials',
+    'estonian team trials'],
+  'Estonian-Latvian Open Team Trials' => [
+    'estonian-latvian national team trials',
+    'estonian-latvian open trials',
     'estonian latvian team trial',
     'estonian latvian team trials',
-    'estonian-latvian national team trials',
     'estonian-latvian team trials'],
 
   'Estoril Teams' => ['estoril open teams',
@@ -2683,7 +2691,6 @@ my %MULTI_TYPOS =
   'Rai Bahadur Modi Memorial All India Open' => [
     'rai bahadur modi memorial',
     'rai bahadur memorial'],
-  'Riga Invites to Jurmala' => ['riga invites', 'latvia invites'],
   'Rio de Janeiro Championship' => ['rio de janeiro state final'],
   'Rio de Janeiro Christmas Individual' => [
     'rio de janeiro xmas individual'],
