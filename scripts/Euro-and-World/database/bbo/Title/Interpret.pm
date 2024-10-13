@@ -642,7 +642,7 @@ sub finish_ambiguous
   elsif ($meet eq 'United States Bridge Championship' ||
       $tname eq 'Gianarrigo Rona Trophy' ||
       $tname eq 'Prince Takamatsu Cup' ||
-      $tname eq 'World Youth Bridge Congress' ||
+      $meet eq 'World Youth Open Championships' ||
       $tname eq 'ASEAN Club Championship')
   {
     $token->set_general('MARKER', 'STAGE', 'Final');

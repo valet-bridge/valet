@@ -1,7 +1,5 @@
-EntryT, prune_using:
-method match_letter_to_number
-ABCabc becomes 123
-
+Util.pm 450:
+Need to set the Age from Girls to Juniors, but Token is not passed in
 
 Phases:
 1. Dates run (.lin files matched to tournaments)

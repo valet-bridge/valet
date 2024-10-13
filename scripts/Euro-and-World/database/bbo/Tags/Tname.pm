@@ -636,13 +636,13 @@ my @MULTI_WORDS =
   'Bulgarian Open Teams Gabi',
   'Bulgarian Open Trials',
   'Bulgarian Women Trials',
+  'IBF Albena',
   'IBF Dobrich',
   'Karlovo Pairs',
   'Karlovo Teams',
   'Stara Zagora Open Teams',
   'Varna Titan Teams',
 
-  'IBF Albena',
 
   ### CCC
 
@@ -716,6 +716,10 @@ my @MULTI_WORDS =
   'Electric Cup',
 
   # ENGLAND
+
+  'Junior Camrose',
+  'Senior Camrose',
+
   'English Premier League',
   'English Open Trials',
   'English Senior Teams',
@@ -729,10 +733,14 @@ my @MULTI_WORDS =
 
   'Lederer Memorial Trophy',
 
+  'Teltscher Trophy',
+
   'TGR Auction',
   'TGR Auction Pairs',
   'TGR Auction Teams',
   'TGR Super League',
+
+  'Young Chelsea Knock-out',
 
   # ESTONIA
 
@@ -815,7 +823,6 @@ my @MULTI_WORDS =
   'Jordanese Open Pairs',
   'JPD Cup',
   'JP Morgan Inter-City Championship',
-  'Junior Camrose',
 
   ### KKK
 
@@ -847,7 +854,6 @@ my @MULTI_WORDS =
   'Narain Bhojwani Memorial',
   'NEC Cup',
   'Neighbor Challenge',
-  'NN Cup',
   'NTU Cup',
   'NYSA Euroregion Nations Cup',
 
@@ -886,6 +892,8 @@ my @MULTI_WORDS =
 
   # RUSSIA
   'Moscow Sunday Times',
+  'NN Cup',
+  'Russian IMSA Cup',
   'Russian Open Teams',
   'Russian Premier League',
 
@@ -905,7 +913,6 @@ my @MULTI_WORDS =
   'Scottish Cup',
   'Scottish National League',
   'Semen Padang Cup',
-  'Senior Camrose',
 
   'Serdika Cup',
   'Shield of Thoisy',
@@ -950,7 +957,6 @@ my @MULTI_WORDS =
   'Taiwanese Teams',
   'Taiwanese Senior Trials',
   'TATA Open',
-  'Teltscher Trophy',
   'Thane Champion of Champions Teams',
   'Thanos Capayiannides Memorial Simultaneous',
   'The Hague Bridge Experience',
@@ -989,8 +995,8 @@ my @MULTI_WORDS =
 
   # WORLD
   'Bermuda Bowl',
-  "d'Orsi",
   'Damiani Trophy',
+  "d'Orsi",
   'Huayuan Cup',
   'IMSA Elite Open Individual',
   'IMSA Elite Open Pairs',
@@ -1001,11 +1007,12 @@ my @MULTI_WORDS =
   'IOC Grand Prix',
   'McConnell Cup',
   'Oly-Star Cup',
-  'PABF Women Elite Tournament',
+  'APBF Women Elite Tournament',
   'Rona Cup',
   'Rosenblum Cup',
   'Tianjin Binhai Cup',
   'Venice Cup',
+  'World Junior Teams',
   'World Masters Individual',
   'World Mixed Pairs',
   'World Mixed Teams',
@@ -1027,27 +1034,25 @@ my @MULTI_WORDS =
   'WMG Women Pairs',
   'WMG Women Teams',
 
+  'World Open Girl Pairs',
+  'World Open Girl Teams',
+  'World Open Junior Pairs',
+  'World Open Junior IMP Pairs',
+  'World Open Junior Teams',
+  'World Open Youngster Pairs',
+  'World Open Youngster Teams',
+  'World Open Youth BAM Teams',
+  'World University Teams',
+  'World Youngster Teams',
 
 
-  # 'World Men Elite Tournament',
 
-
-  'Russian IMSA Cup',
   'Transnational Open Teams',
 
   # WORLD YOUTH
-  'World Juniors Championship',
-  'World University Championship',
-  'World Youth Congress',
-  'World Youth Open Bridge Championship',
-  'World Youth Teams Championship',
-  'World Youth Bridge Congress',
-  'World Youth Bridge Team Championship',
-  'World Youth Championship',
 
 
   'Yeh Bros Cup',
-  'Young Chelsea Knock-out',
   'Youth Open Bridge Paris',
 
   # ZZZ
@@ -3184,25 +3189,20 @@ my %MULTI_TYPOS =
     "women's bridge elite tournament",
     "women's elite tournament",
     "women's bridge grand prix"],
-    # 'world women elite tournament'],
   'World Juniors Championship' => ['world juniors championships'],
+  'World Junior Teams' => [
+    'world juniors championship'],
   'World Masters Individual' => ['masters individual',
     'world masters'],
   'World Open Pairs' => ['world pairs championship'],
   'World Seniors Championships' => ['world senior championship'],
   'World Transnational Open Teams' => [
     'world transnational teams'],
-  'World University Championship' => [
+  'World University Teams' => [
     'world university bridge championship',
     'world university bridge championships',
+    'world university championship',
     'univ_ world champs'],
-  # 'World Women Elite Tournament' => [
-  'World Youth Championship' => ['world youth championships'],
-  'World Youth Congress' => ['youth world bridge congress',
-    'worlf youth bridge congress', 'workd youth bridge congress',
-    'world youht congress'],
-  'World Youth Teams Championship' => ['world youth team championships',
-    'world youth teams'],
 
   'Yeh Bros Cup' => ['yehbros cup', 'yer bros cup'],
   'Young Chelsea Knock-out' => ['yc ko', 'young chelsea ko',
@@ -3317,9 +3317,6 @@ my %SINGLE_TYPOS =
   'World Transnational Mixed Teams' => ['wtmt'],
   'World Transnational Open Teams' => ['wtot'],
   'World University Championship' => ['wuc'],
-  'World Youth Bridge Team Championship' => ['wybtc'],
-  'World Youth Open Bridge Championship' => ['wyobc', 'wboyc'],
-  'World Youth Teams Championship' => ['wytc', 'world youth teams'],
   'Young Chelsea Knock-out' => ['ycko'],
   'European Winter Teams' => ['zc']
 );

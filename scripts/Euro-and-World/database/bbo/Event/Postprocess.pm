@@ -136,7 +136,18 @@ sub post_process_disambiguate
     elsif ($letter eq 'J')
     {
       $token0->set_general('SINGLETON', 'AGE', 'Juniors');
-      $chain->complete_if_last_is(0, 'COMPLETE');
+
+      my $token2 = Token->new();
+      $token2->copy_origin_from($token0);
+      $token2->set_general('SINGLETON', 'GENDER', 'Open');
+
+      my $chain2 = Chain->new();
+      $chain2->append($token2);
+      $chain->truncate_directly_before(1);
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+      $chain2->complete_if_last_is(0, 'EXPLAINED');
+      splice(@$chains, $cno+1, 0, $chain2);
+
     }
     elsif ($letter eq 'K')
     {

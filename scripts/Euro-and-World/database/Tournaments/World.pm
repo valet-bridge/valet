@@ -13,6 +13,108 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_WORLD =
 (
+  'FISU World University Championships' => 
+  {
+    # https://www.fisu.net/results/?related-sport=bridge
+    ORGANIZATION => 'FISU',
+    ZONE => 'World',
+    AGE => 'U31',
+    
+    EDITIONS => 
+    {
+      '2006' =>
+      {
+        # https://www.fisu.net/events/2006-fisu-world-university-championships-bridge/?utm_source=results
+        YEAR => 2006,
+        CITY => 'Tianjin',
+        COUNTRY => 'China',
+        DATE_START => '2006-10-21',
+        DATE_END => '2006-10-26'
+      },
+      '2008' =>
+      {
+        # https://www.fisu.net/events/2008-fisu-world-university-championships-bridge/?utm_source=results
+        YEAR => 2008,
+        CITY => 'Lodz',
+        COUNTRY => 'Poland',
+        DATE_START => '2008-09-03',
+        DATE_END => '2008-09-08'
+      },
+      '2010' =>
+      {
+        # https://www.fisu.net/events/2010-fisu-world-university-championships-bridge/?utm_source=results
+        YEAR => 2010,
+        CITY => 'Kaohsiung',
+        COUNTRY => 'Chinese Taipei',
+        DATE_START => '2010-08-02',
+        DATE_END => '2010-08-09'
+      },
+      '2012' =>
+      {
+        # https://www.fisu.net/events/2012-fisu-world-university-championships-bridge/?utm_source=results
+        YEAR => 2012,
+        CITY => 'Reims',
+        COUNTRY => 'France',
+        DATE_START => '2012-07-10',
+        DATE_END => '2012-07-15'
+      },
+      '2014' =>
+      {
+        # https://www.fisu.net/events/2014-fisu-world-university-championships-bridge/?utm_source=results
+        YEAR => 2014,
+        CITY => 'Opatija',
+        COUNTRY => 'Croatia',
+        DATE_START => '2014-11-01',
+        DATE_END => '2014-11-06'
+      },
+      '2016' =>
+      {
+        # https://www.fisu.net/events/2016-fisu-world-university-championships-bridge/?utm_source=results
+        YEAR => 2016,
+        CITY => 'Lodz',
+        COUNTRY => 'Poland',
+        DATE_START => '2016-08-23',
+        DATE_END => '2016-08-28'
+      },
+      '2018' =>
+      {
+        # https://www.fisu.net/events/2018-fisu-world-university-championships-bridge/?utm_source=results
+        YEAR => 2018,
+        CITY => 'Xuzhou',
+        COUNTRY => 'China',
+        DATE_START => '2018-10-25',
+        DATE_END => '2018-10-28'
+      },
+      '2020' =>
+      {
+        # https://www.fisu.net/events/2020-fisu-world-university-championships-mind-sports/?utm_source=results
+        YEAR => 2020,
+        CITY => 'Bydgoszcz',
+        COUNTRY => 'Poland',
+        DATE_START => '2020-10-26',
+        DATE_END => '2020-10-30'
+      },
+      '2022' =>
+      {
+        # https://www.fisu.net/events/2022-fisu-world-university-championships-mind-sports/?utm_source=results
+        YEAR => 2022,
+        CITY => 'Antwerpen',
+        COUNTRY => 'Belgium',
+        DATE_START => '2022-09-12',
+        DATE_END => '2022-09-17'
+      },
+      '2024' =>
+      {
+        # https://www.fisu.net/events/2024-fisu-world-university-championships-mind-sports/?utm_source=results
+        YEAR => 2024,
+        CITY => 'Entebbe',
+        COUNTRY => 'Uganda',
+        DATE_START => '2024-06-25',
+        DATE_END => '2024-06-30'
+      },
+    }
+  },
+
   'IMSA Elite Mind Games' => 
   {
     ORGANIZATION => 'CCBA',
@@ -356,6 +458,186 @@ my %MEETS_WORLD =
         COUNTRY => 'Morocco',
         DATE_START => '2023-08-20',
         DATE_END => '2023-09-02'
+      },
+    }
+  },
+
+  'World Youth Championships' =>
+  {
+    ORGANIZATION => 'WBF',
+    ZONE => 'World',
+
+    EDITIONS => 
+    {
+      '2001' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/Mangaratiba.01/Mangaratiba.htm
+        ORDINAL => 8,
+        YEAR => 2001,
+        CITY => 'Rio de Janeiro',
+        COUNTRY => 'Brazil',
+        DATE_START => '2001-08-06',
+        DATE_END => '2001-08-15'
+      },
+      '2003' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/Paris.03/Paris.htm
+        ORDINAL => 9,
+        YEAR => 2003,
+        CITY => 'Paris',
+        COUNTRY => 'France',
+        DATE_START => '2003-08-18',
+        DATE_END => '2003-08-28'
+      },
+      '2005' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/Sydney.05/Sydney.htm
+        ORDINAL => 10,
+        YEAR => 2005,
+        CITY => 'Sydney',
+        COUNTRY => 'Australia',
+        DATE_START => '2005-08-07',
+        DATE_END => '2005-08-17'
+      },
+      '2006' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/Bangkok.06/Bangkok.htm
+        ORDINAL => 11,
+        YEAR => 2006,
+        CITY => 'Bangkok',
+        COUNTRY => 'Thailand',
+        DATE_START => '2006-07-29',
+        DATE_END => '2006-08-08'
+      },
+      '2012' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/Taicang.12/microSite/Taicang.htm
+        ORDINAL => 14,
+        YEAR => 2012,
+        CITY => 'Taicang',
+        COUNTRY => 'China',
+        DATE_START => '2012-07-25',
+        DATE_END => '2012-08-04'
+      },
+      '2014' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/Istanbul.14/microSite/results.htm
+        ORDINAL => 15,
+        YEAR => 2014,
+        CITY => 'Istanbul',
+        COUNTRY => 'Turkey',
+        DATE_START => '2014-08-13',
+        DATE_END => '2014-08-23'
+      },
+      '2016' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/salsomaggiore.16/microSite/results.htm
+        ORDINAL => 16,
+        YEAR => 2016,
+        CITY => 'Salsomaggiore',
+        COUNTRY => 'Italy',
+        DATE_START => '2016-08-03',
+        DATE_END => '2016-08-13'
+      },
+      '2018' =>
+      {
+        # http://db.worldbridge.org/repository/tourn/suzhou.18/microsite/Results.htm
+        ORDINAL => 17,
+        YEAR => 2018,
+        CITY => 'Wujiang',
+        COUNTRY => 'China',
+        DATE_START => '2018-08-08',
+        DATE_END => '2018-08-18'
+      },
+      '2023' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/Veldhoven.23/microSite/Results.htm
+        ORDINAL => 18,
+        YEAR => 2023,
+        CITY => 'Veldhoven',
+        COUNTRY => 'Netherlands',
+        DATE_START => '2023-07-31',
+        DATE_END => '2023-08-07'
+      },
+    }
+  },
+
+  'World Youth Open Championships' =>
+  {
+    ORGANIZATION => 'WBF',
+    ZONE => 'World',
+
+    EDITIONS => 
+    {
+      '2009' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/Istanbul.09/Istanbul.htm
+        ORDINAL => 1,
+        YEAR => 2009,
+        CITY => 'Istanbul',
+        COUNTRY => 'Turkey',
+        DATE_START => '2009-08-15',
+        DATE_END => '2009-08-23'
+      },
+      '2011' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/Opatija.11/Opatija11.htm
+        ORDINAL => 2,
+        YEAR => 2011,
+        CITY => 'Opatija',
+        COUNTRY => 'Croatia',
+        DATE_START => '2011-08-22',
+        DATE_END => '2011-08-30'
+      },
+      '2013' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/Atlanta.13/microSite/results.htm
+        ORDINAL => 3,
+        YEAR => 2013,
+        CITY => 'Atlanta',
+        COUNTRY => 'USA',
+        DATE_START => '2013-08-03',
+        DATE_END => '2013-08-11'
+      },
+      '2015' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/Opatija.15/microSite/results.htm
+        ORDINAL => 4,
+        YEAR => 2015,
+        CITY => 'Opatija',
+        COUNTRY => 'Croatia',
+        DATE_START => '2015-08-20',
+        DATE_END => '2015-08-29'
+      },
+      '2017' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/lyonyouth.17/microSite/results.htm
+        ORDINAL => 5,
+        YEAR => 2017,
+        CITY => 'Lyon',
+        COUNTRY => 'France',
+        DATE_START => '2017-08-15',
+        DATE_END => '2017-08-24'
+      },
+      '2019' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/opatija.19/microSite/Results.htm
+        ORDINAL => 6,
+        YEAR => 2019,
+        CITY => 'Opatija',
+        COUNTRY => 'Croatia',
+        DATE_START => '2019-08-20',
+        DATE_END => '2019-08-29'
+      },
+      '2022' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/salsoyouth.22/microSite/Results.htm
+        ORDINAL => 7,
+        YEAR => 2022,
+        CITY => 'Salsomaggiore',
+        COUNTRY => 'Italy',
+        DATE_START => '2022-10-08',
+        DATE_END => '2022-10-10'
       },
     }
   },
@@ -815,6 +1097,7 @@ my %TOURNAMENTS_WORLD =
     }
   },
 
+  # TODO Same as World Junior Open Teams?
   'Damiani Trophy' => 
   {
     ORIGIN => 'International',
@@ -1648,10 +1931,10 @@ my %TOURNAMENTS_WORLD =
     }
   },
 
-  'PABF Women Elite Tournament' => 
+  'APBF Women Elite Tournament' => 
   {
     ORIGIN => 'International',
-    ORGANIZER => 'PABF',
+    ORGANIZER => 'APBF',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -1700,6 +1983,7 @@ my %TOURNAMENTS_WORLD =
     }
   },
 
+  # TODO Same as some World Junior...?
   'Rona Cup' => 
   {
     ORIGIN => 'International',
@@ -2477,6 +2761,391 @@ my %TOURNAMENTS_WORLD =
     }
   },
 
+  'World Girl Teams' =>
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Juniors',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-07-25',
+            DATE_END => '2012-08-04'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2014-08-14',
+            DATE_END => '2014-08-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-20',
+            DATE_END => '2014-08-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-21',
+            DATE_END => '2014-08-21'
+          },
+          'C3' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-22',
+            DATE_END => '2014-08-23'
+          },
+          'C4' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-22',
+            DATE_END => '2014-08-23'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2016-08-04',
+            DATE_END => '2016-08-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-08-10',
+            DATE_END => '2016-08-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-08-11',
+            DATE_END => '2016-08-11'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-08-12',
+            DATE_END => '2016-08-13'
+          }
+        }
+      },
+    }
+  },
+
+  'World Junior Open Teams' =>
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Juniors',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-08-22',
+            DATE_END => '2011-08-26'
+          } 
+        }
+      },
+    }
+  },
+
+  'World Junior Teams' =>
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Juniors',
+
+    EDITIONS =>
+    {
+      '2005' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2005-08-08',
+            DATE_END => '2005-08-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2005-08-15',
+            DATE_END => '2005-08-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2005-08-16',
+            DATE_END => '2005-08-16'
+          },
+          'C3' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2005-08-16',
+            DATE_END => '2005-08-17'
+          } 
+        }
+      },
+      '2006' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2006-07-30',
+            DATE_END => '2006-08-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-08-08',
+            DATE_END => '2006-08-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2006-08-08',
+            DATE_END => '2006-08-08'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-10-13',
+            DATE_END => '2010-10-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-10-13',
+            DATE_END => '2010-10-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-10-14',
+            DATE_END => '2010-10-14'
+          },
+          'C3' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-10-15',
+            DATE_END => '2010-10-16'
+          },
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2012-07-26',
+            DATE_END => '2012-07-31'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-01',
+            DATE_END => '2012-08-01'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-02',
+            DATE_END => '2012-08-02'
+          },
+          'C3' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-03',
+            DATE_END => '2012-08-04'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2016-08-04',
+            DATE_END => '2016-08-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-08-10',
+            DATE_END => '2016-08-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-08-11',
+            DATE_END => '2016-08-11'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2016-08-12',
+            DATE_END => '2016-08-12'
+          },
+          'C4' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-08-12',
+            DATE_END => '2016-08-13'
+          } 
+        }
+      },
+    }
+  },
+
+  'World Kids Teams' =>
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Kids',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-08-14',
+            DATE_END => '2014-08-18'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-08-04',
+            DATE_END => '2016-08-13'
+          } 
+        }
+      },
+    }
+  },
+
   'World Masters Individual' => 
   {
     ORIGIN => 'International',
@@ -3044,6 +3713,632 @@ my %TOURNAMENTS_WORLD =
             DATE_START => '2015-10-10',
             DATE_END => '2015-10-10'
           } 
+        }
+      },
+    }
+  },
+
+  'World Open Girl Pairs' =>
+  {
+    ORIGIN => 'International',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Women',
+    AGE => 'Juniors',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2013-08-04',
+            DATE_END => '2013-08-06'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2015-08-21',
+            DATE_END => '2015-08-23'
+          } 
+        }
+      },
+    }
+  },
+
+  'World Open Girl Teams' =>
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Juniors',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-08-24',
+            DATE_END => '2015-08-28'
+          } 
+        }
+      },
+    }
+  },
+
+  'World Open Junior IMP Pairs' =>
+  {
+    ORIGIN => 'International',
+    FORM => 'Pairs',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Juniors',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-08-20',
+            DATE_END => '2009-08-23'
+          } 
+        }
+      },
+    }
+  },
+
+  'World Open Junior Pairs' =>
+  {
+    ORIGIN => 'International',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Juniors',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-08-20',
+            DATE_END => '2009-08-23'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-08-28',
+            DATE_END => '2011-08-30'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-08-04',
+            DATE_END => '2013-08-06'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-08-21',
+            DATE_END => '2015-08-23'
+          } 
+        }
+      },
+    }
+  },
+
+  'World Open Junior Teams' =>
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Juniors',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-08-15',
+            DATE_END => '2009-08-19'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2013-08-06',
+            DATE_END => '2013-08-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-08-08',
+            DATE_END => '2013-08-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2013-08-09',
+            DATE_END => '2013-08-09'
+          },
+          'C4' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-08-09',
+            DATE_END => '2013-08-09'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-08-14',
+            DATE_END => '2014-08-24'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2015-08-24',
+            DATE_END => '2015-08-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-26',
+            DATE_END => '2015-08-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-27',
+            DATE_END => '2015-08-27'
+          },
+          'C3' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-28',
+            DATE_END => '2015-08-28'
+          },
+          'C4' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-28',
+            DATE_END => '2015-08-28'
+          } 
+        }
+      },
+    }
+  },
+
+  'World Open Youngster Pairs' =>
+  {
+    ORIGIN => 'International',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Youngsters',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-08-04',
+            DATE_END => '2013-08-06'
+          } 
+        }
+      },
+    }
+  },
+
+  'World Open Youngster Teams' =>
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Youngsters',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-08-06',
+            DATE_END => '2013-08-09'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-08-24',
+            DATE_END => '2015-08-28'
+          } 
+        }
+      },
+    }
+  },
+
+  'World Open Youth BAM Teams' =>
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'BAM',
+    GENDER => 'Open',
+    AGE => 'Juniors',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-08-24',
+            DATE_END => '2011-08-27'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-08-08',
+            DATE_END => '2013-08-11'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-08-26',
+            DATE_END => '2015-08-29'
+          } 
+        }
+      },
+    }
+  },
+
+  'World University Teams' =>
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U31',
+
+    EDITIONS =>
+    {
+      '2006' =>
+      {
+        MEET => 'FISU World University Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            DATE_START => '2006-10-31',
+            DATE_END => '2006-10-31'
+          } 
+        }
+      },
+      '2008' =>
+      {
+        MEET => 'FISU World University Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-09-10',
+            DATE_END => '2008-09-10'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'FISU World University Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-08-03',
+            DATE_END => '2010-08-09'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'FISU World University Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-07-10',
+            DATE_END => '2012-07-15'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'FISU World University Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-08-23',
+            DATE_END => '2016-08-28'
+          } 
+        }
+      },
+    }
+  },
+
+  'World Youngster Teams' =>
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Youngsters',
+
+    EDITIONS =>
+    {
+      '2006' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            DATE_START => '2006-07-30',
+            DATE_END => '2006-08-08'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-10-10',
+            DATE_END => '2010-10-16'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-07-25',
+            DATE_END => '2012-08-04'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2014-08-14',
+            DATE_END => '2014-08-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-20',
+            DATE_END => '2014-08-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-20',
+            DATE_END => '2014-08-21'
+          },
+          'C3' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-22',
+            DATE_END => '2014-08-23'
+          },
+          'C4' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-22',
+            DATE_END => '2014-08-23'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2016-08-04',
+            DATE_END => '2016-08-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-08-10',
+            DATE_END => '2016-08-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-08-11',
+            DATE_END => '2016-08-11'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2016-08-12',
+            DATE_END => '2016-08-12'
+          },
+          'C4' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-08-12',
+            DATE_END => '2016-08-13'
+          },
         }
       },
     }

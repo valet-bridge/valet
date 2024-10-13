@@ -55,6 +55,8 @@ my @MULTI_WORDS =
   'European Youth Team Championships',
   'Generali European Championships',
 
+  'FISU World University Championships',
+
   'Fes Festival',
   'Festival della Matematica',
   'Goa Bridge Festival',
@@ -132,7 +134,9 @@ my @MULTI_WORDS =
   'World Series',
   'World Mind Games',
   'World Team Championships',
-   'World Team Olympiad',
+  'World Team Olympiad',
+  'World Youth Championships',
+  'World Youth Open Championships',
 );
 
 my %MULTI_TYPOS =
@@ -427,16 +431,27 @@ my %MULTI_TYPOS =
     'regional west java'],
   'Winter Championships' => ['winter championship',
     'winter championsship'],
-  # 'Indian Winter Nationals' => [
-    # 'winter national', 
-    # 'winter nationals', 
-    # 'wintter nationals',
-    # 'wintrer national'],
   'World Series' => ['world bridge series'],
   'World Mind Games' => ['world mind game', 'word mind games', 'wmsg',
     'mind sports games', 'sawmg', 'wmg', 'wnsg', 'world ming games'],
   'World Team Olympiad' => ['world bridge team olympiad',
     'world bridge olympiad', 'bridge olympiad'],
+  'World Youth Championships' => [
+    'world youth bridge team championship',
+    'world youth championship',
+    'world youth team championships',
+    'world youth teams',
+    'world youth teams championship'],
+  'World Youth Open Championships' => [
+    'wboyc',
+    'wyobc',
+    'world youht congress',
+    'world youth congress',
+    'world youth open bridge championship',
+    'world youth bridge congress',
+    'workd youth bridge congress',
+    'worlf youth bridge congress', 
+    'youth world bridge congress'],
   'Zulawski Congress' => [
     'mityng zulawski', 
     "kongres \"zulawski\"",
@@ -469,7 +484,8 @@ my %SINGLE_TYPOS =
   'Indian Winter Nationals' => ['winternationals'],
   'World Series' => ['wbs'],
   'World Team Championships' => ['wbtc'],
-  'World Team Olympiad' => ['olympiad', 'olympiads', 'wbo']
+  'World Team Olympiad' => ['olympiad', 'olympiads', 'wbo'],
+  'World Youth Championships' => ['wytc', 'wybtc'],
 );
 
 

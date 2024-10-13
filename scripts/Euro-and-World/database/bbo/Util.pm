@@ -430,11 +430,11 @@ sub singleton_tag_matches
 
     my $tag = $fix->{CATEGORY};
 
-    append_token($chain, 'SINGLETON', $tag, $fix->{VALUE}, $text, 
-      $pos, $histo, $prefix);
-
     if ($tag eq 'GENDER' && $fix->{VALUE} eq 'Open')
     {
+      append_token($chain, 'SINGLETON', 'GENDER', 'Open',, $text, 
+        $pos, $histo, $prefix);
+
       # Special case: Add an extra token.
       if ($sep_flag)
       {
@@ -445,8 +445,26 @@ sub singleton_tag_matches
       append_token($chain, 'SINGLETON', 'AGE', $fix->{VALUE}, $text, 
         $pos, $histo, $prefix);
     }
+    elsif ($tag eq 'AGE' && $fix->{VALUE} eq 'Juniors')
+    {
+      append_token($chain, 'SINGLETON', 'AGE', 'Juniors', $text, 
+        $pos, $histo, $prefix);
+
+      # Special case: Add an extra token.
+      if ($sep_flag)
+      {
+        append_token($chain, 'SEPARATOR', 'VIRTUAL', '|', '', 
+          $pos, $histo, $prefix);
+      }
+
+      append_token($chain, 'SINGLETON', 'GENDER', 'Open', $text, 
+        $pos, $histo, $prefix);
+    }
     elsif ($tag eq 'AGE' && $fix->{VALUE} eq 'Girls')
     {
+      append_token($chain, 'SINGLETON', 'AGE', 'Juniors', $text, 
+        $pos, $histo, $prefix);
+
       # Special case: Add an extra token.
       if ($sep_flag)
       {
@@ -455,6 +473,11 @@ sub singleton_tag_matches
       }
 
       append_token($chain, 'SINGLETON', 'GENDER', 'Women', $text, 
+        $pos, $histo, $prefix);
+    }
+    else
+    {
+      append_token($chain, 'SINGLETON', $tag, $fix->{VALUE}, $text, 
         $pos, $histo, $prefix);
     }
 

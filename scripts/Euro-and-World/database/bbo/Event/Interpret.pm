@@ -706,11 +706,27 @@ sub active_number_pairs
   }
   elsif ($field eq 'NL_OF_N' || $field eq 'NL_TO_N')
   {
-    $value =~ /^(\d+)([A-D])-(\d+)$/;
-    my ($n1, $n2) = ($1, $2);
+    my ($n1, $n2);
+    if ($value =~ /^(\d+)([A-D])-(\d+)$/)
+    {
+      ($n1, $n2) = ($1, $3);
+    }
+    elsif ($value =~ /^(\d+)([A-D]) of (\d+)$/)
+    {
+      ($n1, $n2) = ($1, $3);
+    }
+    else
+    {
+      warn "ORDER ETRACE-NUMP-3a" if $n2 < $n1;
+      warn "ORDER ETRACE-NUMP-3a" if ($n2 == $n1 &&
+        $field eq 'NL_TO_N');
+    }
+
     # Skip the letter (which would be a group).
     print "$bbono ETRACE-NUMP-4\n" if $TRACE;
-    warn "ORDER ETRACE-NUMP-4" if $n2 <= $n1;
+    warn "ORDER $bbono ETRACE-NUMP-4" if $n2 < $n1;
+    warn "ORDER $bbono ETRACE-NUMP-4" if ($n2 == $n1 &&
+      $field eq 'NL_TO_N');
     $token->set_general('MARKER', 'SEGMENT', "$n1 of $n2");
     $chain->complete('EXPLAINED');
   }
@@ -751,9 +767,16 @@ sub active_nl_teams
     $token->set_general('MARKER', 'MATCH', $number);
     $chain->complete('EXPLAINED');
   }
-  else
+  elsif ($letter eq 'F' && $number <= 8)
   {
     print "$bbono ETRACE-NLTEAMS-3\n" if $TRACE;
+    one_to_two_chains($chains, $chain, $cno, $token,
+      'SINGLETON', 'STAGE', 'Final',
+      'MARKER', 'SESSION', $number);
+  }
+  else
+  {
+    print "$bbono ETRACE-NLTEAMS-4\n" if $TRACE;
     one_to_two_chains($chains, $chain, $cno, $token,
       'MARKER', 'GROUP', $letter,
       'MARKER', 'ROUND', $number);
