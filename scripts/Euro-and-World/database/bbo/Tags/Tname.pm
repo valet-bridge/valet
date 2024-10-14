@@ -695,7 +695,7 @@ my @MULTI_WORDS =
   'Bulgarian Open Teams Gabi',
   'Bulgarian Open Trials',
   'Bulgarian Women Trials',
-  'IBF Albena',
+  'Albena Open Teams',
   'IBF Dobrich',
   'Karlovo Pairs',
   'Karlovo Teams',
@@ -1092,6 +1092,7 @@ my %MULTI_TYPOS =
   'African Zonal Women Teams' => [
     'zonal africa ladies',
     'zonal africa women'],
+  'Albena Open Teams' => ['ibf albena'],
   'All India Bangur Cement Hindusthan Club' => [
     'bangur cement hindusthan club'],
   'All India Corporate Invitational Pairs' => [

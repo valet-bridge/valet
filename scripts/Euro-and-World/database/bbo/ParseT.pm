@@ -16,9 +16,10 @@ use EntryT;
 
 # use Tournaments::Argentina;
 # use Tournaments::Australia;
-use Tournaments::Baltic;
+# use Tournaments::Baltic;
 # use Tournaments::Belgium;
 # use Tournaments::Brazil;
+use Tournaments::Bulgaria;
 # use Tournaments::Canada;
 # use Tournaments::Chile;
 # use Tournaments::Czech;
@@ -55,9 +56,10 @@ my %DIVISIONS =
 (
   # ARGENTINA => \&Tournaments::Argentina::set_links
   # AUSTRALIA => \&Tournaments::Australia::set_links
-  BALTIC => \&Tournaments::Baltic::set_links
+  # BALTIC => \&Tournaments::Baltic::set_links
   # BELGIUM => \&Tournaments::Belgium::set_links
   # BRAZIL => \&Tournaments::Brazil::set_links
+  BULGARIA => \&Tournaments::Bulgaria::set_links
   # CANADA => \&Tournaments::Canada::set_links
   # CHILE => \&Tournaments::Chile::set_links
   # CZECH => \&Tournaments::Czech::set_links
