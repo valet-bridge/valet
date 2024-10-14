@@ -153,7 +153,6 @@ my %MEETS_BALTIC =
     CITY => 'Riga',
     COUNTRY => 'Latvia',
     FORM => 'Teams',
-    SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
@@ -277,7 +276,6 @@ my %MEETS_BALTIC =
   'Vilnius Cup' =>
   {
     ORGANIZATION => 'LiBA',
-    ORIGIN => 'Transnational',
     ZONE => 'Europe',
     CITY => 'Vilnius',
     COUNTRY => 'Lithuania',
@@ -394,34 +392,6 @@ my %MEETS_BALTIC =
 
 my %TOURNAMENTS_BALTIC =
 (
-  'Baltic Bowl' =>
-  {
-    # ORGANIZATION => 'NZB',
-    # COUNTRY => 'New Zealand',
-    # ORIGIN => 'Interprovince',
-    # ZONE => 'South Pacific',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
-          } 
-        }
-      },
-    }
-  },
-
   'Baltic Open Teams' =>
   {
     FORM => 'Teams',
@@ -436,9 +406,27 @@ my %TOURNAMENTS_BALTIC =
         MEET => 'Baltic Cup',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2011-04-30',
+            DATE_END => '2011-04-30'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-04-30',
+            DATE_END => '2011-05-01'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2011-04-30',
             DATE_END => '2011-05-01'
           } 
@@ -449,10 +437,28 @@ my %TOURNAMENTS_BALTIC =
         MEET => 'Baltic Cup',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2012-05-26',
+            DATE_END => '2012-05-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-05-27',
+            DATE_END => '2012-05-27'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-05-27',
             DATE_END => '2012-05-27'
           } 
         }
@@ -462,9 +468,19 @@ my %TOURNAMENTS_BALTIC =
         MEET => 'Baltic Cup',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-05-12',
+            DATE_END => '2013-05-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2013-05-12',
             DATE_END => '2013-05-12'
           } 
@@ -475,10 +491,27 @@ my %TOURNAMENTS_BALTIC =
         MEET => 'Baltic Cup',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2014-04-26',
+            DATE_END => '2014-04-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            DATE_START => '2014-04-27',
+            DATE_END => '2014-04-27'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-04-27',
             DATE_END => '2014-04-27'
           } 
         }
@@ -488,11 +521,44 @@ my %TOURNAMENTS_BALTIC =
         MEET => 'Baltic Cup',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2015-04-25',
+            DATE_END => '2015-04-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-04-26',
             DATE_END => '2015-04-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-04-26',
+            DATE_END => '2015-04-26'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Baltic Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-04-24',
+            DATE_END => '2016-04-24'
           } 
         }
       },
@@ -520,84 +586,10 @@ my %TOURNAMENTS_BALTIC =
           'SINGLE' => 
           {
             YEAR => 2013,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2013-04-06',
             DATE_END => '2013-04-07'
-          } 
-        }
-      },
-    }
-  },
-
-  'Estonian Open Teams' =>
-  {
-    ORGANIZATION => 'EstBL',
-    COUNTRY => 'Estonia',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2007' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2007,
-            DATE_START => '2007-04-03',
-            DATE_END => '2007-04-03'
-          } 
-        }
-      },
-      '2009' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2009,
-            DATE_START => '2009-04-04',
-            DATE_END => '2009-04-05'
-          } 
-        }
-      },
-      '2010' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2010,
-            DATE_START => '2010-04-10',
-            DATE_END => '2010-04-11'
-          } 
-        }
-      },
-      '2011' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2011,
-            DATE_START => '2011-04-02',
-            DATE_END => '2011-04-03'
-          } 
-        }
-      },
-      '2012' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2012,
-            DATE_START => '2012-03-31',
-            DATE_END => '2012-04-01'
           } 
         }
       },
@@ -624,6 +616,7 @@ my %TOURNAMENTS_BALTIC =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'ROUND',
             DATE_START => '2013-09-07',
             DATE_END => '2013-09-08'
           } 
@@ -636,6 +629,7 @@ my %TOURNAMENTS_BALTIC =
           'SINGLE' => 
           {
             YEAR => 2015,
+            major => 'ROUND',
             DATE_START => '2015-08-29',
             DATE_END => '2015-08-30'
           } 
@@ -644,7 +638,90 @@ my %TOURNAMENTS_BALTIC =
     }
   },
 
-  'Estonian-Latvian Open Trials' =>
+  'Estonian Open Teams' =>
+  {
+    ORGANIZATION => 'EstBL',
+    COUNTRY => 'Estonia',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2007' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'ROUND',
+            DATE_START => '2007-04-03',
+            DATE_END => '2007-04-03'
+          } 
+        }
+      },
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2009-04-04',
+            DATE_END => '2009-04-05'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            DATE_START => '2010-04-10',
+            DATE_END => '2010-04-11'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-04-02',
+            DATE_END => '2011-04-03'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2012-03-31',
+            DATE_END => '2012-04-01'
+          } 
+        }
+      },
+    }
+  },
+
+  'Estonian-Latvian Open Team Trials' =>
   {
     ORIGIN => 'International',
     ZONE => 'Europe',
@@ -684,10 +761,9 @@ my %TOURNAMENTS_BALTIC =
 
   'Latvia Invites' =>
   {
-    # ORGANIZATION => 'NZB',
-    # COUNTRY => 'New Zealand',
-    # ORIGIN => 'Interprovince',
-    # ZONE => 'South Pacific',
+    ORGANIZATION => 'LaBF',
+    ZONE => 'Europe',
+    COUNTRY => 'Latvia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -695,15 +771,16 @@ my %TOURNAMENTS_BALTIC =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2014' =>
       {
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2014,
+            major => 'ROUND',
+            DATE_START => '2014-05-31',
+            DATE_END => '2014-06-01'
           } 
         }
       },
@@ -727,10 +804,20 @@ my %TOURNAMENTS_BALTIC =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2009-04-25',
+            DATE_END => '2009-04-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-04-26',
             DATE_END => '2009-04-26'
           } 
         }
@@ -742,7 +829,7 @@ my %TOURNAMENTS_BALTIC =
   {
     ORIGIN => 'Invitational',
     FORM => 'Pairs',
-    SCORING => 'MP',
+    SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
@@ -756,6 +843,7 @@ my %TOURNAMENTS_BALTIC =
           'SINGLE' => 
           {
             YEAR => 2009,
+            major => 'ROUND',
             DATE_START => '2009-08-19',
             DATE_END => '2009-08-19'
           } 
@@ -808,8 +896,8 @@ my %TOURNAMENTS_BALTIC =
           'SINGLE' => 
           {
             YEAR => 2013,
-            DATE_START => '2013-08-29',
-            DATE_END => '2013-08-31'
+            DATE_START => '2013-08-21',
+            DATE_END => '2013-08-25'
           } 
         }
       },
@@ -870,10 +958,18 @@ my %TOURNAMENTS_BALTIC =
         MEET => 'Riga Invites to Jurmala',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
-            DATE_START => '2009-08-20',
+            STAGE => 'Semifinal',
+            DATE_START => '2009-08-21',
+            DATE_END => '2009-08-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            DATE_START => '2009-08-21',
             DATE_END => '2009-08-21'
           } 
         }
@@ -883,9 +979,17 @@ my %TOURNAMENTS_BALTIC =
         MEET => 'Riga Invites to Jurmala',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2010,
+            STAGE => 'Semifinal',
+            DATE_START => '2010-08-20',
+            DATE_END => '2010-08-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
             DATE_START => '2010-08-20',
             DATE_END => '2010-08-20'
           } 
@@ -896,9 +1000,17 @@ my %TOURNAMENTS_BALTIC =
         MEET => 'Riga Invites to Jurmala',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Semifinal',
+            DATE_START => '2011-08-19',
+            DATE_END => '2011-08-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
             DATE_START => '2011-08-19',
             DATE_END => '2011-08-19'
           } 
@@ -909,9 +1021,17 @@ my %TOURNAMENTS_BALTIC =
         MEET => 'Riga Invites to Jurmala',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Semifinal',
+            DATE_START => '2012-08-31',
+            DATE_END => '2012-08-31'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
             DATE_START => '2012-08-31',
             DATE_END => '2012-08-31'
           } 
@@ -922,9 +1042,17 @@ my %TOURNAMENTS_BALTIC =
         MEET => 'Riga Invites to Jurmala',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Semifinal',
+            DATE_START => '2013-08-23',
+            DATE_END => '2013-08-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
             DATE_START => '2013-08-23',
             DATE_END => '2013-08-23'
           } 
@@ -935,9 +1063,17 @@ my %TOURNAMENTS_BALTIC =
         MEET => 'Riga Invites to Jurmala',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Semifinal',
+            DATE_START => '2014-08-15',
+            DATE_END => '2014-08-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
             DATE_START => '2014-08-15',
             DATE_END => '2014-08-15'
           } 
@@ -948,9 +1084,17 @@ my %TOURNAMENTS_BALTIC =
         MEET => 'Riga Invites to Jurmala',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Semifinal',
+            DATE_START => '2015-08-21',
+            DATE_END => '2015-08-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
             DATE_START => '2015-08-21',
             DATE_END => '2015-08-21'
           } 
@@ -961,9 +1105,17 @@ my %TOURNAMENTS_BALTIC =
         MEET => 'Riga Invites to Jurmala',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Semifinal',
+            DATE_START => '2016-08-19',
+            DATE_END => '2016-08-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
             DATE_START => '2016-08-19',
             DATE_END => '2016-08-19'
           } 
@@ -972,57 +1124,16 @@ my %TOURNAMENTS_BALTIC =
     }
   },
 
-  'Vilnius Club Pairs' =>
-  {
-    # ORGANIZATION => 'NZB',
-    # COUNTRY => 'New Zealand',
-    # ORIGIN => 'Interprovince',
-    # ZONE => 'South Pacific',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
-          } 
-        }
-      },
-    }
-  },
-
-  'Vilnius Open Pairs' =>
+  'Vilnius BAM Pairs' =>
   {
     FORM => 'Pairs',
-    SCORING => 'MP',
+    SCORING => 'BAM',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2009' =>
-      {
-        MEET => 'Vilnius Cup',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2009,
-            DATE_START => '2009-10-01',
-            DATE_END => '2009-10-04'
-          } 
-        }
-      },
-      '2010' =>
+      '2010A' =>
       {
         MEET => 'Vilnius Cup',
         CHAPTERS =>
@@ -1030,8 +1141,23 @@ my %TOURNAMENTS_BALTIC =
           'SINGLE' => 
           {
             YEAR => 2010,
+            major => 'ROUND',
+            DATE_START => '2010-09-16',
+            DATE_END => '2010-09-16'
+          } 
+        }
+      },
+      '2010B' =>
+      {
+        MEET => 'Vilnius Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
             DATE_START => '2010-09-17',
-            DATE_END => '2010-09-19'
+            DATE_END => '2010-09-18'
           } 
         }
       },
@@ -1043,6 +1169,120 @@ my %TOURNAMENTS_BALTIC =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-09-29',
+            DATE_END => '2011-10-01'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'Vilnius Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            major => 'ROUND',
+            DATE_START => '2013-08-29',
+            DATE_END => '2013-08-31'
+          } 
+        }
+      },
+    }
+  },
+
+  'Vilnius Club Pairs' =>
+  {
+    ORGANIZATION => 'LiBA',
+    ORIGIN => 'Interclub',
+    CITY => 'Vilnius',
+    COUNTRY => 'Lithuania',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2011-05-14',
+            DATE_END => '2011-05-14'
+          } 
+        }
+      },
+    }
+  },
+
+  'Vilnius IMP Pairs' =>
+  {
+    FORM => 'Pairs',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009A' =>
+      {
+        MEET => 'Vilnius Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            major => 'SESSION',
+            DATE_START => '2009-10-01',
+            DATE_END => '2009-10-01'
+          } 
+        }
+      },
+      '2009B' =>
+      {
+        MEET => 'Vilnius Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            major => 'SESSION',
+            DATE_START => '2009-10-03',
+            DATE_END => '2009-10-04'
+          } 
+        }
+      },
+      '2011A' =>
+      {
+        MEET => 'Vilnius Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'SESSION',
+            DATE_START => '2011-09-29',
+            DATE_END => '2011-09-29'
+          } 
+        }
+      },
+      '2011B' =>
+      {
+        MEET => 'Vilnius Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'SESSION',
             DATE_START => '2011-09-29',
             DATE_END => '2011-10-01'
           } 
@@ -1064,8 +1304,64 @@ my %TOURNAMENTS_BALTIC =
     }
   },
 
+  'Vilnius Open Pairs' =>
+  {
+    ORIGIN => 'Invitational',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        MEET => 'Vilnius Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'SESSION',
+            DATE_START => '2011-10-01',
+            DATE_END => '2011-10-01'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'Vilnius Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            major => 'SESSION',
+            DATE_START => '2012-10-25',
+            DATE_END => '2012-10-27'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'Vilnius Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            major => 'SESSION',
+            DATE_START => '2013-08-29',
+            DATE_END => '2013-08-31'
+          } 
+        }
+      },
+    }
+  },
+
   'Vilnius Open Teams' =>
   {
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1081,6 +1377,7 @@ my %TOURNAMENTS_BALTIC =
           'SINGLE' => 
           {
             YEAR => 2005,
+            major => 'ROUND',
             DATE_START => '2005-10-02',
             DATE_END => '2005-10-02'
           } 
@@ -1094,6 +1391,7 @@ my %TOURNAMENTS_BALTIC =
           'SINGLE' => 
           {
             YEAR => 2006,
+            major => 'ROUND',
             DATE_START => '2006-10-01',
             DATE_END => '2006-10-01'
           } 
@@ -1107,6 +1405,7 @@ my %TOURNAMENTS_BALTIC =
           'SINGLE' => 
           {
             YEAR => 2007,
+            major => 'ROUND',
             DATE_START => '2007-09-16',
             DATE_END => '2007-09-16'
           } 
@@ -1120,6 +1419,7 @@ my %TOURNAMENTS_BALTIC =
           'SINGLE' => 
           {
             YEAR => 2009,
+            major => 'ROUND',
             DATE_START => '2009-10-01',
             DATE_END => '2009-10-04'
           } 
@@ -1130,10 +1430,27 @@ my %TOURNAMENTS_BALTIC =
         MEET => 'Vilnius Cup',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2010,
+            major => 'ROUND',
             DATE_START => '2010-09-17',
+            DATE_END => '2010-09-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-09-19',
+            DATE_END => '2010-09-19'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-09-19',
             DATE_END => '2010-09-19'
           } 
         }
@@ -1143,10 +1460,27 @@ my %TOURNAMENTS_BALTIC =
         MEET => 'Vilnius Cup',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
             DATE_START => '2011-09-30',
+            DATE_END => '2011-09-30'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-10-02',
+            DATE_END => '2011-10-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-10-02',
             DATE_END => '2011-10-02'
           } 
         }
@@ -1156,10 +1490,27 @@ my %TOURNAMENTS_BALTIC =
         MEET => 'Vilnius Cup',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            major => 'ROUND',
             DATE_START => '2012-10-26',
+            DATE_END => '2012-10-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-10-28',
+            DATE_END => '2012-10-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-10-28',
             DATE_END => '2012-10-28'
           } 
         }
@@ -1169,10 +1520,27 @@ my %TOURNAMENTS_BALTIC =
         MEET => 'Vilnius Cup',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            major => 'ROUND',
             DATE_START => '2013-08-30',
+            DATE_END => '2013-08-30'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-09-01',
+            DATE_END => '2013-09-01'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-09-01',
             DATE_END => '2013-09-01'
           } 
         }
@@ -1185,6 +1553,8 @@ my %TOURNAMENTS_BALTIC =
           'SINGLE' => 
           {
             YEAR => 2015,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2015-09-06',
             DATE_END => '2015-09-06'
           } 

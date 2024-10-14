@@ -74,6 +74,22 @@ my @MULTI_WORDS =
   'Victorian Women Trials',
   'Victorian Youth Trials',
 
+  # BALTIC (Estonia, Latvia, Lithuania)
+  'Baltic Open Teams',
+  'Estonian First League',
+  'Estonian Open Pair Trials',
+  'Estonian Open Teams',
+  'Estonian-Latvian Open Team Trials',
+  'Latvia Invites',
+  'Lithuanian Open Teams',
+  'Riga Invitational Pairs',
+  'Riga Open Teams',
+  'Vilnius BAM Pairs',
+  'Vilnius Club Pairs',
+  'Vilnius IMP Pairs',
+  'Vilnius Open Pairs',
+  'Vilnius Open Teams',
+
   # BELGIUM
   'Belgian Open Pairs',
   'Belgian Open Teams',
@@ -654,20 +670,9 @@ my @MULTI_WORDS =
   'Balkan Intercity Cup',
   'Balkan Teams',
 
+  # https://wyniki.pzbs.pl/2016/baltycki/
+  # Should probably be Poland: Grand Prix of Poland Teams, 2016D.
   'Baltic Bowl',
-  'Baltic Open Teams',
-  'Estonian First League',
-  'Estonian Open Teams',
-  'Estonian Open Pair Trials',
-  'Estonian-Latvian Open Team Trials',
-  'Latvia Invites',
-  'Lithuanian Open Teams',
-  'Vilnius Club Pairs',
-
-  'Riga Invitational Pairs',
-  'Riga Open Teams',
-  'Vilnius Open Pairs',
-  'Vilnius Open Teams',
 
   'Belarusian Open Teams',
 

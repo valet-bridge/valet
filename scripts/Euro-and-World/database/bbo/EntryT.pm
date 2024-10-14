@@ -163,6 +163,8 @@ my %FORM_CORRECTIONS = (
     19120, 19124, 19125, 19130, 19133, 19134],
   'Delhi Gymkhana Club Open Pairs' => [
     26251],
+  'Estonian Open Pair Trials' => [
+    40645],
   'European Transnational Mixed Pairs' => [
     28786, 28787, 28788, 28789, 28790, 28791, 28792, 28793, 28794,
     28795, 28796, 28797, 28798, 28799, 28800, 28801, 28802, 28803,
@@ -418,6 +420,11 @@ my %FORM_CORRECTIONS = (
   'Rajasthan Invitational Pairs' => [
     27959,
     32569, 32582],
+  'Riga Invitational Pairs' => [
+    19565,
+    25013,
+    34854,
+    46294],
   'R N Bagla Memorial Pairs' => [
     19678],
   'Rondane Pairs Cup' => [
@@ -471,6 +478,14 @@ my %FORM_CORRECTIONS = (
     13292, 13304],
   'Victorian Women Trials' => [
     44237, 44241],
+  'Vilnius BAM Pairs' => [
+    15275, 15276, 15277, 15278, 15291, 15293, 15295, 15297, 15298],
+  'Vilnius Club Pairs' => [
+    17990, 17995, 18011],
+  'Vilnius IMP Pairs' => [
+    11340, 11341, 11342, 11344, 11345, 11346, 11347, 11403, 11406,
+    11410, 11413, 11414, 11420, 11421, 11423, 11424,
+    20193, 20194],
   'World Masters Individual' => [
       245,   246,   247,   248,
      6824,  6826,  6827,  6828],
