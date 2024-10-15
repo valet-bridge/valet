@@ -46,6 +46,7 @@ my @MULTI_WORDS =
   'Copenhagen Invitational',
   'Crete Bridge Festival',
   'Danish Bridge Festival',
+  'Dobrich Bridge Festival',
   'Estoril Bridge Festival',
 
   "European Champions' Cup",
@@ -179,6 +180,8 @@ my %MULTI_TYPOS =
     'brazilian teams trials'],
   'Copenhagen Invitational' => ['copenhagen bridge invitational'],
   'Crete Bridge Festival' => ['crete b_ festival'],
+  'Dobrich Bridge Festival' => [
+    'ibf dobrich'],
   'Estoril Bridge Festival' => ['estoril festival'],
   'European National Championships' => [
     'champ eur pau',
@@ -329,7 +332,10 @@ my %MULTI_TYPOS =
   'Norwegian District Championship' => ['norwegian district',
      'norw district', 'norwegian regional chship',
      'norway regional champship'],
-  'Plovdiv Bridge Festival' => ['international festival - plovdiv',
+  'Plovdiv Bridge Festival' => [
+    'bridge festival plovdiv',
+    'international bridge festival plovdiv',
+    'international festival  plovdiv',
     'international festival plovdiv'],
   'Polish Pairs Championship' => [
     'pairs championship od poland',
@@ -361,7 +367,8 @@ my %MULTI_TYPOS =
   'Reykjavik Bridge Festival' => ['reykjavikbridgefestival'],
   'Riga Invites to Jurmala' => ['riga invites'],
   'Samobor Bridge Meeting' => ['bridge meeting samobor'],
-  'Serdika Bridge Festival' => ['bridge festival - serdika',
+  'Serdika Bridge Festival' => [
+    'bridge festival - serdika',
     'bridge festival serdika'],
   'Slava Congress' => ['s³awa turniej kongresowy'],
   'South American Team Championship' => [
@@ -426,7 +433,8 @@ my %MULTI_TYPOS =
     'u_s_b_c', 'united states bridge championships'],
   'Uttar Pradesh State Championship' => [
     'up state championship'],
-  'Varna Bridge Festival' => ['international bridge festival varna'],
+  'Varna Bridge Festival' => [
+    'international bridge festival varna'],
   'VVE Beheer Bridge Week' => ['vve-beheer bridgeweek',
     'vve-beheer bridge week'],
   'Wachauer Bridge Festival' => ['wachauer bridgefestival'],

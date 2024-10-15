@@ -646,7 +646,6 @@ my @MULTI_WORDS =
 
   'ARIS Cup',
   'Arnhem Interbridge Tournament',
-  'Asenovgrad Tournament',
   'ASEAN Club Championship',
   'ASEAN Mixed Teams',
   'ASEAN Open Teams',
@@ -690,17 +689,21 @@ my @MULTI_WORDS =
   'Buffett Cup',
 
   # BULGARIA
+  'Albena Open Teams',
+  'Asenovgrad Open Teams',
   'Bulgarian Open Pairs',
   'Bulgarian Open Teams',
-  'Bulgarian Open Teams Gabi',
   'Bulgarian Open Trials',
   'Bulgarian Women Trials',
-  'Albena Open Teams',
-  'IBF Dobrich',
-  'Karlovo Pairs',
-  'Karlovo Teams',
+  'Cherven Briag National Tournament',
+  'Dobrich Open Teams',
+  'Karlovo Open Pairs',
+  'Karlovo Open Teams',
+  'Pleven Open Teams',
+  'Plovdiv Open Teams',
   'Stara Zagora Open Teams',
-  'Varna Titan Teams',
+  'Varna Intercity Teams',
+  'Varna Titan Open Teams',
 
 
   ### CCC
@@ -712,7 +715,6 @@ my @MULTI_WORDS =
   'Central American Zonal Championships',
   "Champions' Cup",
   'Channel Trophy',
-  'Cherven Briag National Tournament',
 
   # CHINA
   'China Elite Tournament',
@@ -973,7 +975,7 @@ my @MULTI_WORDS =
   'Scottish National League',
   'Semen Padang Cup',
 
-  'Serdika Cup',
+  'Serdika Open Teams',
   'Shield of Thoisy',
   'Singapore Open Teams',
   'Slava Cup',
@@ -1172,7 +1174,9 @@ my %MULTI_TYPOS =
     'asean bridge finals', 
     'asean bridge open team finals', 
     'asean open'],
-  'Asenovgrad Tournament' => ['national bridge tournament asenovgrad'],
+  'Asenovgrad Open Teams' => [
+    'asenovgrad tournament',
+    'national bridge tournament asenovgrad'],
   'Ashok Kapur Memorial Swiss Pairs' => ['ashok kapur memorial',
     'Ashok Kapur Memrial swiss pairs',
     'Ashok Kapur Memrial  swiss pairs',
@@ -1370,8 +1374,10 @@ my %MULTI_TYPOS =
   'Bulgarian Open Teams' => ['bulgarian national teams championship',
     'bulgarian national championship',
     'bulgaria national teams championship'],
-  'Bulgarian Open Teams Gabi' => ["national bridge tournament \"gabi\"",
-    "national tournament \"gabi\"", "bridge tournament \"gabi\"",
+  'Pleven Open Teams' => [
+    "bridge tournament \"gabi\"",
+    "national bridge tournament \"gabi\"",
+    "national tournament \"gabi\"", 
     'national tournament gabi'],
   'Bulgarian Open Trials' => [
     'bulgaria national team trials',
@@ -1430,9 +1436,11 @@ my %MULTI_TYPOS =
     "champion'scup", 
     "champions'cup"],
   'Channel Trophy' => ['channel trpohy'],
-  'Cherven Briag National Tournament' => [
-    'national tournament cherven briag', 'cherven briag',
-    'national tournament cgerven briag'],
+  'Cherven Briag Open Teams' => [
+    'cherven briag',
+    'cherven briag national tournament',
+    'national tournament cgerven briag',
+    'national tournament cherven briag'], 
 
   # CHILE -- mapped in detail
   'Chilean Cup' => ['copa aniversario'],
@@ -2180,7 +2188,8 @@ my %MULTI_TYPOS =
 
   'Kalani Trophy' => ['kalani bridge championship', 'kalani trohy',
     'kalani bridge champioship'],
-  'Karlovo Pairs' => ['karlovo open pairs'],
+  'Karlovo Open Pairs' => ['karlovo pairs'],
+  'Karlovo Open Teams' => ['karlovo teams'],
   'Karnik-Vaidya Open' => ['karnik vaidya open',
     'karnik-vaidya annual'],
   "Kepri Governor's Cup" => [
@@ -2798,7 +2807,7 @@ my %MULTI_TYPOS =
     'serbian premier leaugue',
     'serbian premier leauge'],
 
-  'Serdika Cup' => ['serdika open teams'],
+  'Serdika Open Teams' => ['serdika cup'],
   'Shenhua Cup' => ['shen hua cup'],
   'Shree Keni Trophy' => ['keni memorial trophy',
     'keni memorial  trophy', 'mkeni  trophy', 'm keny trophy',
@@ -3129,7 +3138,9 @@ my %MULTI_TYPOS =
   'Vanderbilt Teams' => [
     'vanderbilt teams', 
     'vanderbilt ko teams'],
-  'Varna Titan Teams' => ['teams titan'],
+  'Varna Titan Open Teams' => [
+    'varna titan teams',
+    'teams titan'],
   'Venezuelan Swiss Pairs' => ['venezuela parejas suizas',
     'venezuela swiss pairs'],
   'Venice Cup' => ['<venive <cup'],

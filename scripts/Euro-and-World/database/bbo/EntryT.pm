@@ -273,6 +273,8 @@ my %FORM_CORRECTIONS = (
   'Hungarian IMP Pairs' => [
      1113,  1117,  1126,
     12005, 12016],
+  'Karlovo Open Pairs' => [
+    9134],
   'Iceland Express Pairs' => [
     12516, 12517, 12518],
   'Icelandair Open Pairs' => [
