@@ -101,6 +101,24 @@ my @MULTI_WORDS =
   'Brazilian Open Trials',
   'Brazilian Women Trials',
 
+  # BULGARIA
+  'Albena Open Teams',
+  'Asenovgrad Open Teams',
+  'Bulgarian Open Pairs',
+  'Bulgarian Open Teams',
+  'Bulgarian Open Trials',
+  'Bulgarian Women Trials',
+  'Cherven Briag National Tournament',
+  'Dobrich Open Teams',
+  'Karlovo Open Pairs',
+  'Karlovo Open Teams',
+  'Pleven Open Teams',
+  'Plovdiv Open Teams',
+  'Serdika Open Teams',
+  'Stara Zagora Open Teams',
+  'Varna Intercity Teams',
+  'Varna Titan Open Teams',
+
   # CANADA
   'Canadian National Teams Championship',
   'Canadian Seniors Teams Championship',
@@ -688,23 +706,6 @@ my @MULTI_WORDS =
 
   'Buffett Cup',
 
-  # BULGARIA
-  'Albena Open Teams',
-  'Asenovgrad Open Teams',
-  'Bulgarian Open Pairs',
-  'Bulgarian Open Teams',
-  'Bulgarian Open Trials',
-  'Bulgarian Women Trials',
-  'Cherven Briag National Tournament',
-  'Dobrich Open Teams',
-  'Karlovo Open Pairs',
-  'Karlovo Open Teams',
-  'Pleven Open Teams',
-  'Plovdiv Open Teams',
-  'Stara Zagora Open Teams',
-  'Varna Intercity Teams',
-  'Varna Titan Open Teams',
-
 
   ### CCC
 
@@ -975,7 +976,6 @@ my @MULTI_WORDS =
   'Scottish National League',
   'Semen Padang Cup',
 
-  'Serdika Open Teams',
   'Shield of Thoisy',
   'Singapore Open Teams',
   'Slava Cup',
