@@ -1097,6 +1097,9 @@ sub fix_list_tags
   $self->transfer_list_tag('TITLE_ROUND', 'ROUND');
   $self->transfer_list_tag('EVENT_ROUND', 'ROUND');
 
+  $self->transfer_list_tag('TITLE_MATCH', 'MATCH');
+  $self->transfer_list_tag('EVENT_MATCH', 'MATCH');
+
   $self->transfer_list_tag('TITLE_QUARTER', 'QUARTER');
   $self->transfer_list_tag('EVENT_QUARTER', 'QUARTER');
 

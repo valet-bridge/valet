@@ -700,12 +700,7 @@ my @MULTI_WORDS =
   'BKBT Teams',
   'Bolivian Open Teams',
   
-  # BRITAIN
-  'British Gold Cup',
-  'British Premier League',
-
   'Buffett Cup',
-
 
   ### CCC
 
@@ -779,6 +774,11 @@ my @MULTI_WORDS =
 
   # ENGLAND
 
+  'Camrose Trophy',
+
+
+  'British Gold Cup',
+  'British Premier League',
   'Junior Camrose',
   'Senior Camrose',
 
@@ -795,12 +795,18 @@ my @MULTI_WORDS =
 
   'Lederer Memorial Trophy',
 
+  'Scottish Cup',
+  'Scottish National League',
+
   'Teltscher Trophy',
 
   'TGR Auction',
   'TGR Auction Pairs',
   'TGR Auction Teams',
   'TGR Super League',
+
+  'Welsh Invitational Pairs',
+  'Welsh Open Trials',
 
   'Young Chelsea Knock-out',
 
@@ -942,7 +948,6 @@ my @MULTI_WORDS =
   'Prince Albert II Cup',
   'Prince Takamatsu Cup',
 
-
   ### RRR
 
   'Ragn-Sells International Grand Tournament',
@@ -972,8 +977,6 @@ my @MULTI_WORDS =
   'Sanchen Cup',
   'Sanya Cup',
   'Sarundajang Cup',
-  'Scottish Cup',
-  'Scottish National League',
   'Semen Padang Cup',
 
   'Shield of Thoisy',
@@ -1045,8 +1048,6 @@ my @MULTI_WORDS =
   'Watermark Bridge Classic',
   'WCG Open',
   'Wellingdon Swiss Pairs',
-  'Welsh Invitational Pairs',
-  'Welsh Open Trials',
   'Western Mediterranean Club Teams',
   'Whitelaw Cup',
   'Willingdon Sports Club Swiss Pairs',
@@ -1054,13 +1055,9 @@ my @MULTI_WORDS =
   'Willy Brown Memorial',
   'Winter Open Teams',
 
-
-
-
   'Transnational Open Teams',
 
   # WORLD YOUTH
-
 
   'Yeh Bros Cup',
   'Youth Open Bridge Paris',
@@ -1392,7 +1389,6 @@ my %MULTI_TYPOS =
 
   ### CCC
 
-  Camrose => ['camrose trophy'],
 
   # CANADA -- mapped in detail
   'Canadian National Teams Championship' => [
@@ -3239,7 +3235,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Camrose Cavendish
+  Cavendish
   Vadsøturneringen 
 );
 
@@ -3257,7 +3253,7 @@ my %SINGLE_TYPOS =
   'Bobby Evans Seniors Teams' => ['best'],
   'Brazilian Open Teams' => ['brasilchamp'],
   "Buffett Cup" => ['buffett', 'buffet'],
-  Camrose => ['camroae', 'ccmrose'],
+  'Camrose Trophy' => ['camrose', 'camroae', 'ccmrose'],
   'Canadian National Teams Championship' => ['cntc'],
   'Canadian Seniors Teams Championship' => ['cstc', 'cnst'],
   'Canadian Women Teams Championship' => ['cwtc'],

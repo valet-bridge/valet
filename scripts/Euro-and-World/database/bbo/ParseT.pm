@@ -19,7 +19,7 @@ use EntryT;
 # use Tournaments::Baltic;
 # use Tournaments::Belgium;
 # use Tournaments::Brazil;
-use Tournaments::Bulgaria;
+# use Tournaments::Bulgaria;
 # use Tournaments::Canada;
 # use Tournaments::Chile;
 # use Tournaments::Czech;
@@ -48,6 +48,7 @@ use Tournaments::Bulgaria;
 # use Tournaments::Sweden;
 # use Tournaments::Turkey;
 # use Tournaments::Switzerland;
+use Tournaments::UK;
 # use Tournaments::USA;
 # use Tournaments::World;
 
@@ -59,7 +60,7 @@ my %DIVISIONS =
   # BALTIC => \&Tournaments::Baltic::set_links
   # BELGIUM => \&Tournaments::Belgium::set_links
   # BRAZIL => \&Tournaments::Brazil::set_links
-  BULGARIA => \&Tournaments::Bulgaria::set_links
+  # BULGARIA => \&Tournaments::Bulgaria::set_links
   # CANADA => \&Tournaments::Canada::set_links
   # CHILE => \&Tournaments::Chile::set_links
   # CZECH => \&Tournaments::Czech::set_links
@@ -88,6 +89,7 @@ my %DIVISIONS =
   # SWEDEN => \&Tournaments::Sweden::set_links
   # TURKEY => \&Tournaments::Turkey::set_links
   # SWITZERLAND => \&Tournaments::Switzerland::set_links
+  UK => \&Tournaments::UK::set_links
   # USA => \&Tournaments::USA::set_links
   # WORLD => \&Tournaments::World::set_links
 );
@@ -112,7 +114,8 @@ my %COMPATIBILITIES = (
   MOVEMENT => ['EVENT_MOVEMENT', 'TITLE_MOVEMENT'],
   SCORING => ['SCORING'],
   STAGE => ['EVENT_STAGE', 'TITLE_STAGE', 'TITLE_ROF'],
-  SEGMENT => ['HALF']
+  SEGMENT => ['HALF'],
+  MATCH => ['TITLE_MATCH', 'EVENT_MATCH']
 );
 
 my %SCORING_HASH = (

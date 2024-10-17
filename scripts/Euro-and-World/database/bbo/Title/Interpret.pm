@@ -545,7 +545,7 @@ sub finish_nl
   my ($chain, $knowledge, $token, $field, $value, $bbono) = @_;
 
   my $tname = $knowledge->get_field('TNAME', $bbono);
-  if ($tname eq 'Camrose')
+  if ($tname eq 'Camrose Trophy')
   {
     $token->set_general('MARKER', 'MATCH', $value);
     $chain->complete('EXPLAINED');
@@ -633,7 +633,7 @@ sub finish_ambiguous
     }
     return 1;
   }
-  elsif ($tname eq 'Camrose' && $value =~ '^W (\d+)$')
+  elsif ($tname eq 'Camrose Trophy' && $value =~ '^W (\d+)$')
   {
     $token->set_general('MARKER', 'WEEKEND', $1);
     $chain->complete('EXPLAINED');

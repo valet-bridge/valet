@@ -39,6 +39,7 @@ my %ITERATORS_MAJOR_MINOR = (
   'APBF Championships' =>  ['SESSION', 'ROUND'],
   'APBF Youth Championships' =>  ['SESSION', 'ROUND'],
   'Asia Cup' => ['SESSION', 'ROUND'],
+  'Camrose Trophy' => ['ROUND', 'SEGMENT'],
   "Chairman's Cup" => ['SEGMENT', ''],
   'China First League' => ['SESSION', 'ROUND'],
   'Codan Cup' => ['ROUND', 'SEGMENT'],
@@ -623,6 +624,18 @@ sub post_process_some_explained_mm
   my ($n1, $n2);
 
   if ($value =~ /^(\d+)\+(\d+)[A-Z]*$/)
+  {
+    ($n1, $n2) = ($1, $2);
+  }
+  elsif ($value =~ /^(\d+)[a-d]\+(\d+)$/)
+  {
+    ($n1, $n2) = ($1, $2);
+  }
+  elsif ($value =~ /^(\d+)[A-D] of (\d+)$/)
+  {
+    ($n1, $n2) = ($1, $2);
+  }
+  elsif ($value =~ /^(\d+)\+(\d+ of \d+)$/)
   {
     ($n1, $n2) = ($1, $2);
   }
