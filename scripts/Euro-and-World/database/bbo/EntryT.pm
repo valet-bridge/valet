@@ -846,15 +846,17 @@ sub match_letter_to_number
 {
   my ($self) = @_;
 
-  my $field = 'EVENT_MATCH';
-  return unless defined $self->{$field};
-  my $len = $#{$self->{$field}};
-  return unless $len == 0;
-
-  my $value = uc($self->{$field}[0]);
-  if ($value =~ /^[A-D]$/)
+  for my $field (qw(TITLE_MATCH EVENT_MATCH))
   {
-    $self->{$field}[0] = ord($value) - ord('A') + 1;
+    next unless defined $self->{$field};
+    my $len = $#{$self->{$field}};
+    next unless $len == 0;
+
+    my $value = uc($self->{$field}[0]);
+    if ($value =~ /^[A-E]$/)
+    {
+      $self->{$field}[0] = ord($value) - ord('A') + 1;
+    }
   }
 }
 

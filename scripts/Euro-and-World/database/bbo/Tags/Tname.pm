@@ -774,13 +774,14 @@ my @MULTI_WORDS =
 
   # ENGLAND
 
-  'Camrose Trophy',
-
-
   'British Gold Cup',
-  'British Premier League',
+  'Camrose Trophy',
   'Junior Camrose',
-  'Senior Camrose',
+  'Lady Milne Trophy',
+  'Lederer Memorial Trophy',
+  'Teltscher Trophy',
+
+  'British Premier League',
 
   'English Premier League',
   'English Open Trials',
@@ -791,14 +792,9 @@ my @MULTI_WORDS =
   'English Women Trials',
 
   'Lady Milne Trials',
-  'Lady Milne Trophy',
-
-  'Lederer Memorial Trophy',
 
   'Scottish Cup',
   'Scottish National League',
-
-  'Teltscher Trophy',
 
   'TGR Auction',
   'TGR Auction Pairs',
@@ -2975,7 +2971,9 @@ my %MULTI_TYPOS =
     'telkom cup',
     'telkom speedy',
     'telkom indonesian open'],
-  'Teltscher Trophy' => ['teltcher trophy'],
+  'Teltscher Trophy' => [
+    'senior camrose',
+    'teltcher trophy'],
   'TGR Auction Pairs' => ["tgr's auction pairs",
     'tgrs auction pair', 'tgrs auction pairs'],
   'TGR Auction Teams' => ['tgrs auction teams'],
@@ -2997,9 +2995,13 @@ my %MULTI_TYPOS =
     'tianjin binhai cup world men elite tournament'],
   'Tolani Gold Trophy' => [
     'dr_tolanigoldcup',
+    'dr_tolani gold cup summer national',
     'dr_tolani gold cup summer nationals',
     'dr_tolani gold summer nationals', 
     'dr_tolani gold troph',
+    'dr_ tolani gold cup summer national',
+    'dr_ tolani gold cup summer nationals',
+    'dr tolani gold cup summer nationals',
     'tolani gold summar nationals',
     'tolani gold summer nationals',
     'tolani gold summer', 
@@ -3309,7 +3311,10 @@ my %SINGLE_TYPOS =
   'Spingold Teams' => ['spingold'],
   'Swedish Elite Series' => ['elitserien'],
   'Takamatsu Cup' => ['takamatsu'],
-  'Teltscher Trophy' => ['teltschertrophy', 'teltscher', 'telschertrophy'],
+  'Teltscher Trophy' => [ 
+   'teltschertrophy', 
+   'teltscher', 
+   'telschertrophy'],
   'Tolani Grand Prix' => ['tolanigrandprix'],
   'Top Circuit' => ['topcircuit'],
   'Transnational Open Teams' => ['tnt', 'tnot'],
