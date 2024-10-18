@@ -777,6 +777,7 @@ my @MULTI_WORDS =
   'British Gold Cup',
   'Camrose Trophy',
   'English Open Trials',
+  'English Premier League',
   'English Senior Trials',
   'English U28 Trials',
   'English Women Trials',
@@ -786,22 +787,18 @@ my @MULTI_WORDS =
   'Scottish Cup',
   'Scottish National League',
   'Teltscher Trophy',
-
+  'TGR Auction Pairs',
+  'TGR Auction Teams',
+  'TGR Super League',
   'Welsh Invitational Pairs',
   'Welsh Open Trials',
 
-  'British Premier League',
 
-  'English Premier League',
   'English Senior Teams',
   'English Women Teams',
 
   'Lady Milne Trials',
 
-  'TGR Auction',
-  'TGR Auction Pairs',
-  'TGR Auction Teams',
-  'TGR Super League',
 
   'Young Chelsea Knock-out',
 
@@ -2973,8 +2970,11 @@ my %MULTI_TYPOS =
   'Teltscher Trophy' => [
     'senior camrose',
     'teltcher trophy'],
-  'TGR Auction Pairs' => ["tgr's auction pairs",
-    'tgrs auction pair', 'tgrs auction pairs'],
+  'TGR Auction Pairs' => [
+    'tgr auction',
+    "tgr's auction pairs",
+    'tgrs auction pair', 
+    'tgrs auction pairs'],
   'TGR Auction Teams' => ['tgrs auction teams'],
   'TGR Super League' => ["tgr's super league", "tgr's super legue",
     'tgrs league', 'tgrs 2nd auction pairs', 'tgrs super league',

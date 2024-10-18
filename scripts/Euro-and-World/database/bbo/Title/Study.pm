@@ -269,6 +269,8 @@ my @LOCAL_SUBS =
     CORR => 'Indian Winter Nationals' },
   { START => 16307, END => 16324, TEXT => 'GP of Poland',
     CORR => 'Grand Prix of Poland Pairs' },
+  { START => 16474, END => 16480, TEXT => 'TGRs 2nd Auction Pairs',
+    CORR => 'TGR Auction Pairs' },
   { START => 16588, END => 16592, TEXT => 'R20',
     CORR => 'Rof20' },
   { START => 16748, END => 16751, TEXT => '2010-2011',

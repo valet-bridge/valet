@@ -916,6 +916,250 @@ my %TOURNAMENTS_UK =
     }
   },
 
+  'English Premier League' => 
+  {
+    ORIGIN => 'Interclub',
+    ZONE => 'Europe',
+    COUNTRY => 'England',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2008' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            major => 'MATCH',
+            DATE_START => '2008-09-10',
+            DATE_END => '2008-09-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            major => 'MATCH',
+            DATE_START => '2008-11-05',
+            DATE_END => '2008-11-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2008,
+            major => 'MATCH',
+            DATE_START => '2008-11-23',
+            DATE_END => '2008-11-23'
+          },
+        }
+      },
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2009,
+            major => 'MATCH',
+            minor => 'STANZA',
+            DATE_START => '2009-10-03',
+            DATE_END => '2009-10-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            major => 'MATCH',
+            minor => 'STANZA',
+            DATE_START => '2009-10-24',
+            DATE_END => '2009-10-24'
+          },
+          'C2' => 
+          {
+            YEAR => 2009,
+            major => 'MATCH',
+            minor => 'STANZA',
+            DATE_START => '2009-10-31',
+            DATE_END => '2009-11-01'
+          },
+          'C3' => 
+          {
+            YEAR => 2009,
+            major => 'MATCH',
+            minor => 'SEGMENT',
+            DATE_START => '2009-11-13',
+            DATE_END => '2009-11-15'
+          },
+        }
+      },
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            major => 'MATCH',
+            minor => 'STANZA',
+            DATE_START => '2010-09-11',
+            DATE_END => '2010-09-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            major => 'MATCH',
+            minor => 'STANZA',
+            DATE_START => '2010-09-25',
+            DATE_END => '2010-09-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
+            major => 'MATCH',
+            minor => 'SEGMENT',
+            DATE_START => '2010-11-13',
+            DATE_END => '2010-11-14'
+          },
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            major => 'MATCH',
+            minor => 'SEGMENT',
+            DATE_START => '2011-09-24',
+            DATE_END => '2011-09-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            major => 'MATCH',
+            minor => 'STANZA',
+            DATE_START => '2011-09-30',
+            DATE_END => '2011-10-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            major => 'MATCH',
+            minor => 'SET',
+            DATE_START => '2011-11-11',
+            DATE_END => '2011-11-13'
+          },
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            major => 'MATCH',
+            minor => 'SET',
+            DATE_START => '2012-09-22',
+            DATE_END => '2012-09-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            major => 'STANZA',
+            DATE_START => '2012-10-27',
+            DATE_END => '2012-10-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            major => 'MATCH',
+            minor => 'STANZA',
+            DATE_START => '2012-11-09',
+            DATE_END => '2012-11-11'
+          },
+        }
+      },
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            major => 'MATCH',
+            DATE_START => '2013-10-12',
+            DATE_END => '2013-10-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            major => 'MATCH',
+            DATE_START => '2013-11-08',
+            DATE_END => '2013-11-10'
+          },
+        }
+      },
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            major => 'MATCH',
+            DATE_START => '2014-09-20',
+            DATE_END => '2014-09-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            major => 'MATCH',
+            minor => 'STANZA',
+            DATE_START => '2014-09-27',
+            DATE_END => '2014-09-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            major => 'MATCH',
+            DATE_START => '2014-11-07',
+            DATE_END => '2014-11-09'
+          },
+        }
+      },
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            major => 'MATCH',
+            DATE_START => '2015-09-12',
+            DATE_END => '2015-09-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            major => 'MATCH',
+            DATE_START => '2015-10-31',
+            DATE_END => '2015-11-01'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            major => 'MATCH',
+            DATE_START => '2015-11-06',
+            DATE_END => '2015-11-07'
+          },
+        }
+      },
+    }
+  },
+
   'English Senior Trials' => 
   {
     ORIGIN => 'National',
@@ -1977,6 +2221,440 @@ my %TOURNAMENTS_UK =
     }
   },
 
+  'TGR Auction Pairs' => 
+  {
+    ORIGIN => 'International',
+    ZONE => 'Europe',
+    COUNTRY => 'England',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            major => 'SESSION',
+            DATE_START => '2010-01-17',
+            DATE_END => '2010-01-17'
+          },
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'SESSION',
+            DATE_START => '2011-01-15',
+            DATE_END => '2011-01-16'
+          },
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            major => 'SESSION',
+            DATE_START => '2012-01-14',
+            DATE_END => '2012-01-15'
+          },
+        }
+      },
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            major => 'SESSION',
+            DATE_START => '2013-01-12',
+            DATE_END => '2013-01-13'
+          },
+        }
+      },
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'SESSION',
+            DATE_START => '2014-01-11',
+            DATE_END => '2014-01-12'
+          },
+        }
+      },
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'SESSION',
+            DATE_START => '2015-01-10',
+            DATE_END => '2015-01-11'
+          },
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'SESSION',
+            DATE_START => '2016-01-09',
+            DATE_END => '2016-01-10'
+          },
+        }
+      }
+    }
+  },
+
+  'TGR Auction Teams' => 
+  {
+    ORIGIN => 'International',
+    ZONE => 'Europe',
+    COUNTRY => 'England',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2011-09-03',
+            DATE_END => '2011-09-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-09-04',
+            DATE_END => '2011-09-04'
+          },
+        }
+      }
+    }
+  },
+
+  'TGR Super League' => 
+  {
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    COUNTRY => 'England',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009-10' =>
+      {
+        CHAPTERS =>
+        {
+          'C00' => 
+          {
+            YEAR => 2009,
+            major => 'ROUND',
+            minor => 'HALF',
+            DATE_START => '2009-09-16',
+            DATE_END => '2009-09-16'
+          },
+          'C01' => 
+          {
+            YEAR => 2009,
+            major => 'ROUND',
+            DATE_START => '2009-09-30',
+            DATE_END => '2009-09-30'
+          },
+          'C02' => 
+          {
+            YEAR => 2009,
+            major => 'ROUND',
+            DATE_START => '2009-10-07',
+            DATE_END => '2009-10-07'
+          },
+          'C03' => 
+          {
+            YEAR => 2009,
+            major => 'ROUND',
+            DATE_START => '2009-10-07',
+            DATE_START => '2009-10-14',
+            DATE_END => '2009-10-14'
+          },
+          'C04' => 
+          {
+            YEAR => 2009,
+            major => 'ROUND',
+            DATE_START => '2009-10-28',
+            DATE_END => '2009-10-28'
+          },
+          'C05' => 
+          {
+            YEAR => 2009,
+            major => 'ROUND',
+            DATE_START => '2009-11-04',
+            DATE_END => '2009-11-04'
+          },
+          'C06' => 
+          {
+            YEAR => 2009,
+            major => 'ROUND',
+            DATE_START => '2009-11-10',
+            DATE_END => '2009-11-11'
+          },
+          'C07' => 
+          {
+            YEAR => 2009,
+            major => 'ROUND',
+            DATE_START => '2009-11-18',
+            DATE_END => '2009-11-18'
+          },
+          'C08' => 
+          {
+            YEAR => 2009,
+            major => 'ROUND',
+            DATE_START => '2009-12-09',
+            DATE_END => '2009-12-09'
+          },
+          'C09' => 
+          {
+            YEAR => 2010,
+            major => 'MATCH',
+            minor => 'SEGMENT',
+            DATE_START => '2010-01-20',
+            DATE_END => '2010-01-20'
+          },
+          'C10' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            DATE_START => '2010-01-27',
+            DATE_END => '2010-01-27'
+          },
+          'C11' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            DATE_START => '2010-02-03',
+            DATE_END => '2010-02-03'
+          },
+          'C12' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            DATE_START => '2010-02-17',
+            DATE_END => '2010-02-17'
+          },
+          'C13' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            DATE_START => '2010-03-03',
+            DATE_END => '2010-03-03'
+          },
+          'C14' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            DATE_START => '2010-03-24',
+            DATE_END => '2010-03-24'
+          },
+          'C15' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            DATE_START => '2010-04-14',
+            DATE_END => '2010-04-14'
+          },
+          'C16' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            DATE_START => '2010-04-28',
+            DATE_END => '2010-04-28'
+          },
+          'C17' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            DATE_START => '2010-05-12',
+            DATE_END => '2010-05-12'
+          },
+        }
+      },
+      '2010-11' =>
+      {
+        CHAPTERS =>
+        {
+          'C00' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            DATE_START => '2010-09-15',
+            DATE_END => '2010-09-15'
+          },
+          'C01' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2010-09-22',
+            DATE_END => '2010-09-22'
+          },
+          'C02' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2010-09-29',
+            DATE_END => '2010-09-29'
+          },
+          'C03' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            DATE_START => '2010-10-27',
+            DATE_END => '2010-10-27'
+          },
+          'C04' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            DATE_START => '2010-11-03',
+            DATE_END => '2010-11-03'
+          },
+          'C05' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            DATE_START => '2010-11-10',
+            DATE_END => '2010-11-10'
+          },
+          'C06' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            DATE_START => '2010-11-17',
+            DATE_END => '2010-11-17'
+          },
+          'C07' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            DATE_START => '2010-12-01',
+            DATE_END => '2010-12-01'
+          },
+          'C08' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            DATE_START => '2010-12-15',
+            DATE_END => '2010-12-15'
+          },
+          'C09' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-02-09',
+            DATE_END => '2011-02-09'
+          },
+          'C10' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-02-23',
+            DATE_END => '2011-02-23'
+          },
+          'C11' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-03-02',
+            DATE_END => '2011-03-02'
+          },
+          'C12' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-03-16',
+            DATE_END => '2011-03-16'
+          },
+          'C13' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-03-23',
+            DATE_END => '2011-03-23'
+          },
+          'C14' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-04-06',
+            DATE_END => '2011-04-06'
+          },
+          'C15' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-04-27',
+            DATE_END => '2011-04-27'
+          },
+          'C16' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-05-11',
+            DATE_END => '2011-05-11'
+          },
+          'C17' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-06-01',
+            DATE_END => '2011-06-01'
+          },
+          'C18' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            DATE_START => '2011-06-08',
+            DATE_END => '2011-06-08'
+          },
+        }
+      }
+    }
+  },
+
   'Welsh Invitational Pairs' => 
   {
     ORIGIN => 'National',
@@ -1996,6 +2674,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2009,
+            major => 'ROUND',
             DATE_START => '2009-09-20',
             DATE_END => '2009-09-20'
           },
@@ -2023,6 +2702,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2011,
             SCORING => 'MP',
+            major => 'MATCH',
             DATE_START => '2011-10-15',
             DATE_END => '2011-10-16'
           },
@@ -2036,6 +2716,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2012,
             SCORING => 'IMP',
+            major => 'ROUND',
             DATE_START => '2012-10-20',
             DATE_END => '2012-10-21'
           },
@@ -2049,6 +2730,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2013,
             SCORING => 'MP',
+            major => 'MATCH',
             DATE_START => '2013-10-19',
             DATE_END => '2013-10-20'
           },
