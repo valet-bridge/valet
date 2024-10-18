@@ -57,6 +57,8 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2003,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2003-12-13',
             DATE_END => '2003-12-14'
           },
@@ -70,6 +72,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2004,
+            STAGE => 'Final',
             DATE_START => '2004-12-12',
             DATE_END => '2004-12-12'
           },
@@ -83,6 +86,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2005,
+            STAGE => 'Final',
             DATE_START => '2005-12-10',
             DATE_END => '2005-12-11'
           },
@@ -96,6 +100,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2006,
+            STAGE => 'Final',
             DATE_START => '2006-12-09',
             DATE_END => '2006-12-10'
           },
@@ -109,6 +114,8 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2007-12-09',
             DATE_END => '2007-12-09'
           },
@@ -121,10 +128,27 @@ my %TOURNAMENTS_UK =
         COUNTRY => 'Scotland',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2008,
-            DATE_START => '2008-12-12',
+            STAGE => 'Quarterfinal',
+            DATE_START => '2008-12-14',
+            DATE_END => '2008-12-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-12-14',
+            DATE_END => '2008-12-14'
+          },
+          'C2' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-12-14',
             DATE_END => '2008-12-14'
           },
         }
@@ -135,10 +159,20 @@ my %TOURNAMENTS_UK =
         ORDINAL => 72,
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'SET',
             DATE_START => '2009-12-12',
+            DATE_END => '2009-12-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SET',
+            DATE_START => '2009-12-13',
             DATE_END => '2009-12-13'
           },
         }
@@ -149,10 +183,20 @@ my %TOURNAMENTS_UK =
         ORDINAL => 73,
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'STANZA',
             DATE_START => '2010-12-11',
+            DATE_END => '2010-12-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'STANZA',
+            DATE_START => '2010-12-12',
             DATE_END => '2010-12-12'
           },
         }
@@ -163,10 +207,20 @@ my %TOURNAMENTS_UK =
         ORDINAL => 74,
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'STANZA',
             DATE_START => '2011-12-10',
+            DATE_END => '2011-12-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'STANZA',
+            DATE_START => '2011-12-11',
             DATE_END => '2011-12-11'
           },
         }
@@ -177,10 +231,20 @@ my %TOURNAMENTS_UK =
         ORDINAL => 75,
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'STANZA',
             DATE_START => '2012-12-08',
+            DATE_END => '2012-12-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'STANZA',
+            DATE_START => '2012-12-09',
             DATE_END => '2012-12-09'
           },
         }
@@ -191,10 +255,20 @@ my %TOURNAMENTS_UK =
         ORDINAL => 76,
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'STANZA',
             DATE_START => '2013-12-14',
+            DATE_END => '2013-12-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'STANZA',
+            DATE_START => '2013-12-15',
             DATE_END => '2013-12-15'
           },
         }
@@ -205,10 +279,20 @@ my %TOURNAMENTS_UK =
         ORDINAL => 77,
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'STANZA',
             DATE_START => '2014-12-13',
+            DATE_END => '2014-12-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'STANZA',
+            DATE_START => '2014-12-14',
             DATE_END => '2014-12-14'
           },
         }
@@ -219,10 +303,20 @@ my %TOURNAMENTS_UK =
         ORDINAL => 78,
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'STANZA',
             DATE_START => '2015-12-12',
+            DATE_END => '2015-12-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'STANZA',
+            DATE_START => '2015-12-13',
             DATE_END => '2015-12-13'
           },
         }
@@ -699,6 +793,7 @@ my %TOURNAMENTS_UK =
 
   'Junior Camrose' => 
   {
+    # https://www.bridgewebs.com/bgb/Junior%20Camrose%20Winners.htm
     ORIGIN => 'International',
     ZONE => 'Europe',
     FORM => 'Teams',
@@ -715,6 +810,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2006,
+            major => 'MATCH',
             DATE_START => '2006-02-19',
             DATE_END => '2006-02-19'
           },
@@ -727,6 +823,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2007,
+            major => 'MATCH',
             DATE_START => '2007-02-24',
             DATE_END => '2007-02-24'
           },
@@ -739,6 +836,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2008,
+            major => 'MATCH',
             DATE_START => '2008-03-03',
             DATE_END => '2008-03-03'
           },
@@ -751,6 +849,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2009,
+            major => 'MATCH',
             DATE_START => '2009-02-21',
             DATE_END => '2009-02-22'
           },
@@ -763,6 +862,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2010,
+            major => 'MATCH',
             DATE_START => '2010-02-20',
             DATE_END => '2010-02-21'
           },
@@ -775,6 +875,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'SESSION',
             DATE_START => '2011-02-19',
             DATE_END => '2011-02-20'
           },
@@ -787,6 +888,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'MATCH',
             DATE_START => '2012-02-18',
             DATE_END => '2012-02-19'
           },
@@ -799,6 +901,8 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'ROUND',
+            minor => 'SET',
             DATE_START => '2013-02-16',
             DATE_END => '2013-02-17'
           },
@@ -811,6 +915,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2014,
+            major => 'MATCH',
             DATE_START => '2014-02-22',
             DATE_END => '2014-02-23'
           },
@@ -823,6 +928,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2015,
+            major => 'MATCH',
             DATE_START => '2015-02-21',
             DATE_END => '2015-02-22'
           },
@@ -835,6 +941,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'ROUND',
             DATE_START => '2016-02-19',
             DATE_END => '2016-02-21'
           },
@@ -845,6 +952,7 @@ my %TOURNAMENTS_UK =
 
   'Lady Milne Trophy' => 
   {
+    # https://www.bridgewebs.com/bgb/Lady%20Milne%20Winners.htm
     ORIGIN => 'International',
     ZONE => 'Europe',
     FORM => 'Teams',
@@ -861,6 +969,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2004,
+            major => 'MATCH',
             DATE_START => '2004-04-18',
             DATE_END => '2004-04-18'
           },
@@ -873,6 +982,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2005,
+            major => 'MATCH',
             DATE_START => '2005-04-15',
             DATE_END => '2005-04-17'
           },
@@ -885,6 +995,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2006,
+            major => 'MATCH',
             DATE_START => '2006-04-01',
             DATE_END => '2006-04-03'
           },
@@ -897,6 +1008,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2007,
+            major => 'MATCH',
             DATE_START => '2007-04-14',
             DATE_END => '2007-04-16'
           },
@@ -909,6 +1021,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2008,
+            major => 'MATCH',
             DATE_START => '2008-04-12',
             DATE_END => '2008-04-14'
           },
@@ -921,6 +1034,8 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2009,
+            major => 'MATCH',
+            minor => 'STANZA',
             DATE_START => '2009-04-17',
             DATE_END => '2009-04-19'
           },
@@ -933,6 +1048,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2010,
+            major => 'MATCH',
             DATE_START => '2010-04-17',
             DATE_END => '2010-04-18'
           },
@@ -945,6 +1061,8 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
+            minor => 'MATCH',
             DATE_START => '2011-04-15',
             DATE_END => '2011-04-17'
           },
@@ -957,6 +1075,8 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'MATCH',
+            minor => 'STANZA',
             DATE_START => '2012-04-13',
             DATE_END => '2012-04-15'
           },
@@ -969,6 +1089,8 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'MATCH',
+            minor => 'STANZA',
             DATE_START => '2013-04-12',
             DATE_END => '2013-04-14'
           },
@@ -981,6 +1103,8 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2014,
+            major => 'ROUND',
+            minor => 'MATCH',
             DATE_START => '2014-04-11',
             DATE_END => '2014-04-13'
           },
@@ -993,6 +1117,8 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2015,
+            major => 'ROUND',
+            minor => 'STANZA',
             DATE_START => '2015-04-17',
             DATE_END => '2015-04-19'
           },
@@ -1005,6 +1131,8 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'MATCH',
+            minor => 'STANZA',
             DATE_START => '2016-04-15',
             DATE_END => '2016-04-17'
           },
@@ -1015,6 +1143,7 @@ my %TOURNAMENTS_UK =
 
   'Lederer Memorial Trophy' => 
   {
+    # https://lederertrophy.com/previous-winners/
     ORIGIN => 'International',
     ZONE => 'Europe',
     FORM => 'Teams',
@@ -1031,6 +1160,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2004,
+            major => 'MATCH',
             DATE_START => '2004-10-16',
             DATE_END => '2004-10-17'
           },
@@ -1043,6 +1173,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2005,
+            major => 'MATCH',
             DATE_START => '2005-10-16',
             DATE_END => '2005-10-17'
           },
@@ -1055,6 +1186,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2006,
+            major => 'MATCH',
             DATE_START => '2006-10-31',
             DATE_END => '2006-10-31'
           },
@@ -1067,6 +1199,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2007,
+            major => 'MATCH',
             DATE_START => '2007-10-22',
             DATE_END => '2007-10-22'
           },
@@ -1079,6 +1212,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2008,
+            major => 'MATCH',
             DATE_START => '2008-11-05',
             DATE_END => '2008-11-05'
           },
@@ -1091,6 +1225,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2009,
+            major => 'MATCH',
             DATE_START => '2009-10-17',
             DATE_END => '2009-10-18'
           },
@@ -1103,6 +1238,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2010,
+            major => 'MATCH',
             DATE_START => '2010-10-30',
             DATE_END => '2010-10-31'
           },
@@ -1115,6 +1251,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'MATCH',
             DATE_START => '2011-11-19',
             DATE_END => '2011-11-20'
           },
@@ -1127,6 +1264,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'MATCH',
             DATE_START => '2012-09-29',
             DATE_END => '2012-09-30'
           },
@@ -1139,6 +1277,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'MATCH',
             DATE_START => '2013-10-26',
             DATE_END => '2013-10-27'
           },
@@ -1151,6 +1290,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2015,
+            major => 'MATCH',
             DATE_START => '2015-02-28',
             DATE_END => '2015-03-01'
           },
@@ -1163,6 +1303,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'MATCH',
             DATE_START => '2016-02-27',
             DATE_END => '2016-02-28'
           },
@@ -1192,6 +1333,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2010,
+            major => 'SESSION',
             DATE_START => '2010-05-28',
             DATE_END => '2010-05-30'
           },
@@ -1204,6 +1346,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'MATCH',
             DATE_START => '2012-05-18',
             DATE_END => '2012-05-20'
           },
@@ -1216,6 +1359,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2014,
+            major => 'MATCH',
             DATE_START => '2014-05-16',
             DATE_END => '2014-05-18'
           },
@@ -1228,6 +1372,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2015,
+            major => 'MATCH',
             DATE_START => '2015-05-15',
             DATE_END => '2015-05-17'
           },
@@ -1242,6 +1387,8 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2016,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2016-05-20',
             DATE_END => '2016-05-22'
           },

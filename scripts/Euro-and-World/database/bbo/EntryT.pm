@@ -1088,7 +1088,14 @@ sub fix_list_tags
 
   $self->transfer_list_tag('EVENT_SECTION', 'SECTION');
 
+  $self->transfer_list_tag('TITLE_SEGMENT', 'SEGMENT');
   $self->transfer_list_tag('EVENT_SEGMENT', 'SEGMENT');
+
+  $self->transfer_list_tag('TITLE_STANZA', 'STANZA');
+  $self->transfer_list_tag('EVENT_STANZA', 'STANZA');
+
+  $self->transfer_list_tag('TITLE_SET', 'SET');
+  $self->transfer_list_tag('EVENT_SET', 'SET');
 
   $self->transfer_list_tag('EVENT_AGE', 'AGE');
 

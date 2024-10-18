@@ -12,7 +12,7 @@ use lib '.';
 use lib '..';
 
 my @FIELDS = qw(PHASE MATCH ROUND SESSION SECTION QUARTER HALF 
-  SEGMENT TABLE);
+  SEGMENT SET STANZA TABLE);
 
 my %FIELD_MAP;
 $FIELD_MAP{$FIELDS[$_]} = $_ for (0 .. $#FIELDS);
@@ -151,7 +151,14 @@ sub analyze
   @occur = sort { $b->{COUNT} <=> $a->{COUNT} } @occur;
 
   # Keep only the enough for the most frequent number of counters.
-  die "Top number $top_no" unless ($top_no >= 0 && $top_no < 4);
+  if ($top_no < 0 || $top_no >= 4)
+  {
+    for my $bbono (keys %{$self->{BBOCOUNT}})
+    {
+      warn $bbono;
+    }
+    die "Top number $top_no";
+  }
   $self->{NUM_FIELDS} = $top_no;
   return if $top_no == 0;
 

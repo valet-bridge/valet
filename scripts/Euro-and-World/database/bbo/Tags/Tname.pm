@@ -781,15 +781,16 @@ my @MULTI_WORDS =
   'Lederer Memorial Trophy',
   'Teltscher Trophy',
 
+  'English Open Trials',
+  'English Senior Trials',
+  'English U28 Trials',
+  'English Women Trials',
+
   'British Premier League',
 
   'English Premier League',
-  'English Open Trials',
   'English Senior Teams',
-  'English Senior Trials',
-  'English U28 Trials',
   'English Women Teams',
-  'English Women Trials',
 
   'Lady Milne Trials',
 
