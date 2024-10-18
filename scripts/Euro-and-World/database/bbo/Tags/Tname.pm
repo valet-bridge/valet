@@ -783,8 +783,12 @@ my @MULTI_WORDS =
   'Junior Camrose',
   'Lady Milne Trophy',
   'Lederer Memorial Trophy',
+  'Scottish Cup',
+  'Scottish National League',
   'Teltscher Trophy',
 
+  'Welsh Invitational Pairs',
+  'Welsh Open Trials',
 
   'British Premier League',
 
@@ -794,16 +798,10 @@ my @MULTI_WORDS =
 
   'Lady Milne Trials',
 
-  'Scottish Cup',
-  'Scottish National League',
-
   'TGR Auction',
   'TGR Auction Pairs',
   'TGR Auction Teams',
   'TGR Super League',
-
-  'Welsh Invitational Pairs',
-  'Welsh Open Trials',
 
   'Young Chelsea Knock-out',
 

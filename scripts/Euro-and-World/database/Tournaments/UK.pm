@@ -1618,6 +1618,204 @@ my %TOURNAMENTS_UK =
     }
   },
 
+  'Scottish Cup' => 
+  {
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    COUNTRY => 'Scotland',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2006' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            DATE_START => '2006-05-06',
+            DATE_END => '2006-05-06'
+          },
+        }
+      },
+      '2007' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'QUARTER',
+            DATE_START => '2007-05-30',
+            DATE_END => '2007-05-30'
+          },
+        }
+      },
+      '2008' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'STANZA',
+            DATE_START => '2008-05-21',
+            DATE_END => '2008-05-21'
+          },
+        }
+      },
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-05-16',
+            DATE_END => '2009-05-16'
+          },
+        }
+      },
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'STANZA',
+            DATE_START => '2010-05-15',
+            DATE_END => '2010-05-15'
+          },
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'STANZA',
+            DATE_START => '2011-05-14',
+            DATE_END => '2011-05-14'
+          },
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'STANZA',
+            DATE_START => '2012-05-12',
+            DATE_END => '2012-05-12'
+          },
+        }
+      },
+      '2013A' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'STANZA',
+            DATE_START => '2013-05-11',
+            DATE_END => '2013-05-11'
+          },
+        }
+      },
+      '2013B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-12-14',
+            DATE_END => '2013-12-14'
+          },
+        }
+      },
+      '2014-15' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-12-09',
+            DATE_END => '2014-12-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-12-13',
+            DATE_END => '2014-12-13'
+          },
+          'C2' => 
+          {
+            # Not sure what this is.
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-02-01',
+            DATE_END => '2015-02-01'
+          },
+        }
+      }
+    }
+  },
+
+  'Scottish National League' => 
+  {
+    ORIGIN => 'Interclub',
+    ZONE => 'Europe',
+    COUNTRY => 'Scotland',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'STANZA',
+            DATE_START => '2013-08-24',
+            DATE_END => '2013-08-24'
+          },
+        }
+      }
+    }
+  },
+
   'Teltscher Trophy' => 
   {
     # https://www.bridgewebs.com/bgb/Past%20Teltscher%20Trophy%20Winners.htm
@@ -1777,7 +1975,88 @@ my %TOURNAMENTS_UK =
         }
       },
     }
-  }
+  },
+
+  'Welsh Invitational Pairs' => 
+  {
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    COUNTRY => 'Scotland',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-09-20',
+            DATE_END => '2009-09-20'
+          },
+        }
+      }
+    }
+  },
+
+  'Welsh Open Trials' => 
+  {
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    COUNTRY => 'Scotland',
+    FORM => 'Pairs',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            SCORING => 'MP',
+            DATE_START => '2011-10-15',
+            DATE_END => '2011-10-16'
+          },
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            SCORING => 'IMP',
+            DATE_START => '2012-10-20',
+            DATE_END => '2012-10-21'
+          },
+        }
+      },
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            SCORING => 'MP',
+            DATE_START => '2013-10-19',
+            DATE_END => '2013-10-20'
+          },
+        }
+      }
+    }
+  },
+
 );
 
 
