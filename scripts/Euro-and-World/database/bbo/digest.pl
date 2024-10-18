@@ -54,7 +54,7 @@ while ($entryT->read($fh))
 
   next if $meet eq '' && $tname eq '';
 
-  if ($entryT->bbono() eq 18995)
+  if ($entryT->bbono() eq 37047)
   {
     # print "HERE\n";
   }
@@ -107,7 +107,7 @@ exit if $debug_flag;
 
 for my $date_start (sort keys %data)
 {
-if ($date_start eq '2012-03-02')
+if ($date_start eq '2014-12-18')
 {
   print "HERE\n";
 }

@@ -857,6 +857,10 @@ sub match_letter_to_number
     {
       $self->{$field}[0] = ord($value) - ord('A') + 1;
     }
+    elsif ($value =~ /^\d+[A-D] [oO][fF] \d+$/)
+    {
+      $self->{$field}[0] =~ s/[A-D]//;
+    }
   }
 }
 

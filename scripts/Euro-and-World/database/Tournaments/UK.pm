@@ -791,6 +791,312 @@ my %TOURNAMENTS_UK =
     }
   },
 
+  'English Open Trials' => 
+  {
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2006A' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-01-16',
+            DATE_END => '2006-01-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SET',
+            DATE_START => '2006-02-19',
+            DATE_END => '2006-02-19'
+          },
+        }
+      },
+      '2006B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2006,
+            major => 'STANZA',
+            DATE_START => '2006-09-11',
+            DATE_END => '2006-09-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            major => 'STANZA',
+            DATE_START => '2006-10-14',
+            DATE_END => '2006-10-15'
+          },
+        }
+      },
+      '2007A' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2007,
+            major => 'MATCH',
+            DATE_START => '2007-09-16',
+            DATE_END => '2007-09-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            major => 'MATCH',
+            DATE_START => '2007-10-31',
+            DATE_END => '2007-10-31'
+          },
+        }
+      },
+      '2007B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Semifinal',
+            major => 'SET',
+            DATE_START => '2007-11-25',
+            DATE_END => '2007-11-25'
+          },
+        }
+      },
+      '2008A' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-03-03',
+            DATE_END => '2008-03-03'
+          },
+        }
+      },
+      '2008B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            major => 'ROUND',
+            DATE_START => '2008-08-27',
+            DATE_END => '2008-08-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-08-28',
+            DATE_END => '2008-08-28'
+          },
+        }
+      }
+    }
+  },
+
+  'English Senior Trials' => 
+  {
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Seniors',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            major => 'MATCH',
+            DATE_START => '2013-12-20',
+            DATE_END => '2013-12-22'
+          },
+        }
+      },
+      '2014A' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'SEGMENT',
+            DATE_START => '2014-01-04',
+            DATE_END => '2014-01-05'
+          },
+        }
+      },
+      '2014B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'MATCH',
+            DATE_START => '2014-12-18',
+            DATE_END => '2014-12-20'
+          },
+        }
+      },
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'MATCH',
+            minor => 'STANZA',
+            DATE_START => '2015-12-18',
+            DATE_END => '2015-12-20'
+          },
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'MATCH',
+            minor => 'STANZA',
+            DATE_START => '2016-02-05',
+            DATE_END => '2016-02-07'
+          },
+        }
+      }
+    }
+  },
+
+  'English U28 Trials' => 
+  {
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U28',
+
+    EDITIONS =>
+    {
+      '2008' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            major => 'MATCH',
+            DATE_START => '2008-05-21',
+            DATE_END => '2008-05-21'
+          },
+        }
+      }
+    }
+  },
+
+  'English Women Trials' => 
+  {
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2006' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2006,
+            major => 'STANZA',
+            DATE_START => '2006-10-17',
+            DATE_END => '2006-10-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            major => 'STANZA',
+            DATE_START => '2006-11-13',
+            DATE_END => '2006-11-13'
+          },
+        }
+      },
+      '2008' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            major => 'MATCH',
+            DATE_START => '2008-02-12',
+            DATE_END => '2008-02-12'
+          },
+        }
+      },
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            major => 'MATCH',
+            DATE_START => '2009-01-05',
+            DATE_END => '2009-01-05'
+          },
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'SESSION',
+            DATE_START => '2016-01-22',
+            DATE_END => '2016-01-22'
+          },
+        }
+      }
+    }
+  },
+
   'Junior Camrose' => 
   {
     # https://www.bridgewebs.com/bgb/Junior%20Camrose%20Winners.htm

@@ -776,15 +776,15 @@ my @MULTI_WORDS =
 
   'British Gold Cup',
   'Camrose Trophy',
+  'English Open Trials',
+  'English Senior Trials',
+  'English U28 Trials',
+  'English Women Trials',
   'Junior Camrose',
   'Lady Milne Trophy',
   'Lederer Memorial Trophy',
   'Teltscher Trophy',
 
-  'English Open Trials',
-  'English Senior Trials',
-  'English U28 Trials',
-  'English Women Trials',
 
   'British Premier League',
 
