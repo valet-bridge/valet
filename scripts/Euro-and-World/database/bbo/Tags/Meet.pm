@@ -32,6 +32,7 @@ my @MULTI_WORDS =
   'Azores Festival',
   'Amman Bridge Festival',
   'Australian National Championships',
+  'Australian Spring Nationals',
   'Australian Summer Festival',
   'Australian Youth Triathlon',
   'Balkan Friendship Festival',
@@ -171,6 +172,10 @@ my %MULTI_TYPOS =
     'hcl open championship',
     'hcl open international tournament',
     'hcl open tournament'],
+  'Australian Spring Nationals' => [
+    'aus spring nationals',
+    'australian spring national',
+    'sydney spring nationals'],
   'Australian Summer Festival' => ['summer bridge festival'],
   'Azores Festival' => ['azores festival bridge', 'azores bridge open',
     'azores bridge teams', 'azores team', 'azores teams',

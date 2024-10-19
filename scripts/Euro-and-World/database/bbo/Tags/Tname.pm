@@ -28,6 +28,7 @@ my @MULTI_WORDS =
   'African Zonal Open Teams',
   'African Zonal Senior Teams',
   'African Zonal Women Teams',
+  "Pigg's Peak All Africa",
 
   # ARGENTINA
   'Argentinian Club Teams',
@@ -626,8 +627,52 @@ my @MULTI_WORDS =
 
   # ----------------------------------------------------
 
+  # Argentina
+  'Copa Zanalda River Plate',
+
+  # Asia
+  'APBF Championships',
+  'APBF Youth Championships',
+  'ASEAN Club Championship',
+  'ASEAN Mixed Teams',
+  'ASEAN Open Teams',
+  'Asia Cup',
+  'Asian University Championship',
+  'Southeast Asian Games',
+  'South Pacific Zone 7 Championship',
+  'SPBF Championship',
+
+  # Asia Middle East
+  'BFAME Championship',
+  'BFAME Friendship Pairs',
+  'Pan Arab Inter-Club Championship',
+
   # Australia
   'Altman Swiss Pairs',
+  "Hans Rosendorff Memorial Women's Teams",
+  'John Arkinstall State Teams',
+  'Kings and Queens Blaine Howe Teams',
+  'Smirnov Cup',
+  'Victor Champion Cup',
+  'Watermark Bridge Classic',
+  'Willoughby Bridge Classic',
+
+  # Austria
+  'Austrian Team Championship',
+
+  # Balkan
+  'Balkan Championship',
+  'Balkan Intercity Cup',
+  'Balkan Teams',
+
+  # Baltic
+  'VV Cup',
+
+  # Belarus
+  'Belarusian Open Teams',
+
+  # Belgium
+  'Belisol Invitational Pairs',
 
   # Bolivia
   'Bolivian Open Teams',
@@ -635,12 +680,79 @@ my @MULTI_WORDS =
   # Brazil
   'Rio de Janeiro Championship',
   'Rio de Janeiro Christmas Individual',
+  'Roberto Taunay Cup',
   'Sao Paulo State Championship',
+
+  # Bulgaria
+  'ARIS Cup',
+  'Haskovski Mineralni Bani',
+  'Vito Teams',
+
+  # Central America
+  'Central American & Caribbean Championship',
+  'Central American Zonal Championships',
+
+  # Chile
+  'Copa de Oro',
+  'Copa de Plata',
+
+  # China
+  'All-China Games',
+  'Aoda Cup',
+  'Avia Inter-City Championship',
+  'China Elite Tournament',
+  'China Friend City Senior Team Tournament',
+  'China First League',
+  'China Hosts Europe in Rome',
+  'China Inter-City Teams',
+  'China Resources Inter-City',
+  'Chinese Club Championship',
+  'Chinese Mixed Teams',
+  'Chinese Open Teams',
+  'Chinese Open Trials',
+  'Cross Strait Invitational',
+  'Dongfeng Cup',
+  'Dongming Knock-out Teams',
+  'Chung Hua Cup',
+  'GHTD Cup',
+  'Guangdong Club Championship',
+  'Guangdong Club Invitational',
+  'Guangdong Elite Tournament',
+  'Guangzhou-HK-Macau Interport',
+  'Haikou Fitness Day',
+  'Hainan Air Cup',
+  'High-Tech Zone Workers Invitational',
+  'HNA Open Teams',
+  'Jianshe Cup',
+  'Jili Cup',
+  'JPD Cup',
+  'Mountain Sea Cup',
+  'Sanchen Cup',
+  'Sanya Cup',
+  'Shenhua Cup',
+  'Shenyang Spring',
+  'Shenzhen Lanpu Cup',
+  'Shenzhen Nangangdongli Cup',
+  'Sunchime Fund Cup',
+  'Tielu Jixie Invitational',
+  'Xinyuan Cup',
+  'Yeh Bros Cup',
+  'Zhejiang Huamen Cup',
+
+  # Chinese Taipei
+  'Antonio Chong Cup',
+  'Chinese Taipei Open Trials',
+  'Chinese Taipei Trials',
+
+  # Croatia
+  'Atlantic Trade Bridge Cup',
+  'Samobor Invitational Bridge Meeting',
 
   # Czech
   'Grand Prix of Prague',
 
   # Denmark
+  'Hecht Cup',
   'Prince Henrik Trophy',
 
   # Ecuador
@@ -651,37 +763,98 @@ my @MULTI_WORDS =
   'Egyptian Cup',
   'Egyptian League',
 
+  # England
+  'Garden Cities',
+  'Higson Cup',
+
+  # Europe: Same as European Champions' Cup
+  "Champions' Cup",
+
   # Faroe Islands
   'Faroese Teams',
 
   # Finland
+  'Hanko Teams',
   'Pärnu Summer Invitational Pairs',
   'Pärnu Summer Open Teams',
   'Puutalo Open',
+  'Salo Midsummer Juniors',
+  'Suomen Cup',
+
+  # France
+  'Biarritz Hiver',
+  'Division Nationale',
+  'French Cup',
+  'French First Division',
+  'French Intercircle',
+  'French Junior Trials',
+  'French Mixed Teams',
+  'French Open Teams',
+  'French Open Trials',
+  'French Senior Trials',
+  'French Women Trials',
+  'French U28 Trials',
+  'Mondial de Deauville',
+
+  # Greece
+  'Thanos Capayiannides Memorial Simultaneous',
+
+  # Hong Kong
+  'Hong Kong Inter-City',
+  'JP Morgan Inter-City Championship',
 
   # Hungary
   'Balaton Invitational Teams',
   'Balatonfoldvar Teams',
+  'EcoSoft Cup',
 
   # India
   'Ashok Kapur Memorial Swiss Pairs',
+  'Bagla Pairs Royale',
+  'Golden Jubilee',
+  'IBWI Cup',
+  'Kalani Trophy',
+  'Karnik-Vaidya Open',
+  'Lokmanya Jubilee',
+  'Nandu Oke Memorial IAF Swiss Pairs',
+  'Narain Bhojwani Memorial',
+  'Otters Inter-Club Teams',
+  'PRBA State Level Open',
   'PSN Sarma Centenary Memorial',
+  'Samadhan Summer League',
+  'Summer Monsoon League',
+  'TATA Open',
+  'Thane Champion of Champions Teams',
+  'Videocon WCG Open',
+  'WCG Open',
+  'Wellingdon Swiss Pairs',
+  'Willingdon Sports Club Swiss Pairs',
 
   # Indonesia
+  'Electric Cup',
   'FTBC Tanjungpura University',
   'Menpora-Pertamina Cup',
+  'Pahlawan Cup',
   'Pesta Sukan',
+  'PLN Cup',
   'Pertamina Field Tambun Cup',
   'Rector University of Brawijaya Cup',
   'Riau Governor Cup',
   'Sarundajang Cup',
   'Semen Padang Cup',
 
+  # Israel
+  'Dr. Rand Masters',
+  'Four Nations Cup',
+  'Maccabi Games',
+  'Rand Cup',
+
   # Italy
   'Angelini Teams',
   'Bologna Trophy',
   'Coppie Viareggio',
   'Milan Trophy',
+  'Olona International Teams',
   'Rome Challenger Trophy',
   'Torneo di Rastignano',
   'Torneo di Roma',
@@ -690,20 +863,39 @@ my @MULTI_WORDS =
   # Japan
   'Japanese District KO Teams',
   'Japanese Open Trials',
+  'Kanto Teams',
+  'NEC Cup',
+  'Prince Takamatsu Cup',
+  'Takamatsu Cup',
 
   # Jordan
   'Jordan Spring Mixed Pairs',
   'Jordan Spring Tournament',
   'Jordanese Open Pairs',
 
+  # Lebanon
+  'Lebanese Invitational Teams',
+
+  # Monaco
+  'Patton de Monaco',
+  'Prince Albert II Cup',
+
   # New Zealand
   'Centre Island Teams',
 
   # Netherlands
   'ArboNed Team Cup',
+  'Arnhem Interbridge Tournament',
+  'Carrousel Cup',
   'Dutch Knock-Out Cup',
   'Dutch Meesterklasse',
   'Dutch Women',
+  'Forbo Nations Cup',
+  'Jaap Kokkes Tournament',
+  'Krommenie Nations Cup',
+  'Petit Grand Prix van Driene',
+  'The Hague Bridge Experience',
+  'Top Circuit',
   'White House International',
   'White House Juniors',
   'White House Top 12',
@@ -711,30 +903,68 @@ my @MULTI_WORDS =
 
   # Norway
   'Bergen Grand Tournament',
+  'Codan Cup',
+  'Farmen Invitational',
+  'FOSS Grand Tournament',
+  'FOSS-Tren',
+  'FX Securities Cup',
+  'Gardermoen Airport Hotel Pairs',
+  'Gardermoen Airport Hotel Cup',
+  "Jessheim New Year's Cup",
   'Marit Sveaas Tournament',
   'Mo i Rana Ladies Invitational',
+  'Namsos Cup',
+  'Ragn-Sells International Grand Tournament',
+  'Ruter 7 Open',
+  'Snåsa Cup',
+  'Vest-Agder Regional Team Championship',
+  'Willy Brown Memorial',
 
   # Pakistan
   'Pakistan Day Bridge Championship',
   'Pakistan Open Trials',
 
   # Poland
+  # https://wyniki.pzbs.pl/2016/baltycki/
+  # Should probably be Poland: Grand Prix of Poland Teams, 2016D.
+  'Baltic Bowl',
   'bridge24.pl Trophy',
+  'Forest Trophy',
+  'Fortuna Cup',
+  'Mondi Cup',
+  'MTP Cup',
+  'Palace Cup',
+  'Plock District League',
+  'Towns Cup', # Tallinn
 
   # Portugal
   'Estoril Teams',
   'Estoril Swiss Teams',
   'Madeira Open',
   'Madeira Swiss Teams',
+  'Rui Pinto Cup',
+  'Taça Rui Pinto',
 
   # Russia
+  'Goulyash by E. Gladysh',
   'Moscow Sunday Times',
   'NN Cup',
   'Russian IMSA Cup',
   'Russian Open Teams',
   'Russian Premier League',
+  'Slava Cup',
+
+  # Serbia
+  'Vrnjacka Banja Open Teams',
+
+  # Singapore
+  'Singapore Open Teams',
+
+  # Slovakia
+  'Slovakian Open Teams',
 
   # South Africa
+  'FullBridge International Teams',
   'South African Championship',
   'South African Inter-Province Teams',
   'South African Teams',
@@ -745,10 +975,33 @@ my @MULTI_WORDS =
   'Madrid Senior Teams',
   'Open Catalunya Preferent',
 
+  # Supra
+  'Bermuda Triangle Cup',
+  'BKBT Teams',
+  'Buffett Cup',
+  'Cavendish Pairs',
+  'Cavendish Teams',
+  'Computer World Championship',
+  'Channel Trophy', # Europe
+  'Neighbor Challenge',
+  'NYSA Euroregion Nations Cup',
+  'Shield of Thoisy',
+  'Stern-Cornell Trophy', # Australia - New Zelsn
+  'Youth Open Bridge Paris',
+  'Paris Youth Open Teams',
+
   # Sweden
+  'Filbyter Cup',
   'Nordic Race', # Actually a Swedish trial.
+  'Park Hotell Swiss Teams',
+  'S:t Erik Championship Series',
+  'Stena Line Cup',
+
+  # Switzerland
+  'Jean Besse Cup',
 
   # Taiwan
+  'NTU Cup',
   'Taiwan University Cup',
   'Taiwan University Cup Teachers',
   'Taiwanese Open Trials',
@@ -760,335 +1013,43 @@ my @MULTI_WORDS =
   'Anatolian Fall Teams',
   'Anatolian Open Teams',
   'Anatolian Spring Teams',
+  'Assael Invitational Calcutta',
+  'Balikcioglu Teams Championship',
+  'Fatih Kiral Cup',
+  'Gelibolu Peace Cup',
+  'Lüleburgaz Liberation Cup',
+  'Marmara Inter-Club Championship',
+  'Salvador Assael IMP Pairs',
+  'Salvador Assael Pro-Am',
+  'Thrace Club Teams',
+  'Thrace Cup League',
+  'Western Mediterranean Club Teams',
+  'Winter Open Teams',
+
+  # UK
+  'Commonwealth Nations Bridge Championships',
+  'Corn Cairdis',
+  'Glasgow Transnational Open Teams',
+  'Peggy Bayer',
+  'Whitelaw Cup',
 
   # USA
   'Baze Senior Knock-out',
+  'Collegiate Bowl',
+  'Grand National Teams', # Add ABCL or US to name
+  "Missouri Braggin' Rights",
+  'Solomon Teams',
+  "Sternberg Women's BAM Teams",
 
-  'Bagla Pairs Royale',
-  'Copa de Plata',
-  'Copa de Oro',
-  'Copa Zanalda River Plate',
-  'FOSS Grand Tournament',
-  'FOSS-Tren',
-  'Peggy Bayer',
+  # Venezuela
+  'Venezuelan Mixed Teams',
+  'Venezuelan Swiss Pairs',
 
   # ----------------------------------------------------
 
-  #### AAA
-
-  'APBF Championships',
-  'APBF Youth Championships',
-  'Antonio Chong Cup',
-  'Aoda Cup',
-  'ARIS Cup',
-  'Arnhem Interbridge Tournament',
-  'ASEAN Club Championship',
-  'ASEAN Mixed Teams',
-  'ASEAN Open Teams',
-  'Asia Cup',
-  'Asian University Championship',
-  'Assael Invitational Calcutta',
-  'Atlantic Trade Bridge Cup',
-  
-  # AUSTRIA
-  'Austrian Team Championship',
-  'Avia Inter-City Championship',
-
-  ### BBB
-
-  'Balikcioglu Teams Championship',
-
-  'Balkan Championship',
-  'Balkan Intercity Cup',
-  'Balkan Teams',
-
-  # https://wyniki.pzbs.pl/2016/baltycki/
-  # Should probably be Poland: Grand Prix of Poland Teams, 2016D.
-  'Baltic Bowl',
-
-  'Belarusian Open Teams',
-
-  'Belisol Invitational Pairs',
-  'Bermuda Triangle Cup',
-  'BFAME Championship',
-  'BFAME Friendship Pairs',
-  'BKBT Teams',
-  
-  'Buffett Cup',
-
-  ### CCC
-
-  'Carrousel Cup',
-  'Cavendish Pairs',
-  'Cavendish Teams',
-  'Central American & Caribbean Championship',
-  'Central American Zonal Championships',
-  "Champions' Cup",
-  'Channel Trophy',
-
-  # CHINA
-  'All-China Games',
-  'China Elite Tournament',
-  'China Friend City Senior Team Tournament',
-  'China First League',
-  'China Hosts Europe in Rome',
-  'China Inter-City Teams',
-  'China Resources Inter-City',
-  'Chinese Club Championship',
-  'Chinese Mixed Teams',
-  'Chinese Open Teams',
-  'Chinese Open Trials',
-  'Dongfeng Cup',
-  'Dongming Knock-out Teams',
-  'Chung Hua Cup',
-  'Guangdong Club Championship',
-  'Guangdong Club Invitational',
-  'Guangdong Elite Tournament',
-  'Guangzhou-HK-Macau Interport',
-  'Jianshe Cup',
-  'Jili Cup',
-  'Sanchen Cup',
-  'Sanya Cup',
-  'Shenhua Cup',
-  'Shenyang Spring',
-  'Shenzhen Lanpu Cup',
-  'Shenzhen Nangangdongli Cup',
-  'Sunchime Fund Cup',
-  'Tielu Jixie Invitational',
-  'Xinyuan Cup',
-  'Zhejiang Huamen Cup',
-
-
-  'Chinese Taipei Open Trials',
-  'Chinese Taipei Trials',
-
-  'Codan Cup',
-  'Collegiate Bowl',
-  'Commonwealth Nations Bridge Championships',
-  'Computer World Championship',
-  'Corn Cairdis',
-  'Cross Strait Invitational',
-
-  ### DDD
-
-  'Division Nationale',
-  'Dr. Rand Masters',
-
-  ### EEE
-
-  'EcoSoft Cup',
-  'Electric Cup',
-
-  ### FFF
-
-  'Farmen Invitational',
-  'Fatih Kiral Cup',
-  'Filbyter Cup',
-
-  'Forbo Nations Cup',
-  'Forest Trophy',
-  'Fortuna Cup',
-  'Four Nations Cup',
-  
-  # FRANCE
-  'French Cup',
-  'French First Division',
-  'French Intercircle',
-  'French Junior Trials',
-  'French Mixed Teams',
-  'French Open Teams',
-  'French Open Trials',
-  'French Senior Trials',
-  'French Women Trials',
-  'French U28 Trials',
-
-  'Biarritz Hiver',
-  'Mondial de Deauville',
-
-  'FullBridge International Teams',
-  'FX Securities Cup',
-
-  ### GGG
-
-  'Garden Cities',
-  'Gardermoen Airport Hotel Pairs',
-  'Gardermoen Airport Hotel Cup',
-  'Gelibolu Peace Cup',
-  'Goulyash by E. Gladysh',
-  'GHTD Cup',
-  'Golden Jubilee',
-
-  'Grand National Teams',
-
-  ### HHH
-
-  'Haikou Fitness Day',
-  'Hainan Air Cup',
-  'Hanko Teams',
-  "Hans Rosendorff Memorial Women's Teams",
-  'Haskovski Mineralni Bani',
-  'Hecht Cup',
-  'Higson Cup',
-  'High-Tech Zone Workers Invitational',
-
-  'HNA Open Teams',
-  'Hong Kong Inter-City',
-
-  ### III
-
-  'IBWI Cup',
-
-  ### JJJ
-
-  'Jaap Kokkes Tournament',
-  'Jean Besse Cup',
-  "Jessheim New Year's Cup",
-  'John Arkinstall State Teams',
-  'JPD Cup',
-  'JP Morgan Inter-City Championship',
-
-  ### KKK
-
-  'Kanto Teams',
-  'Karnik-Vaidya Open',
-  'Kings and Queens Blaine Howe Teams',
-  'Krommenie Nations Cup',
-
-  ### LLL
-
-  'Lebanese Invitational Teams',
-  'Lokmanya Jubilee',
-  'Lüleburgaz Liberation Cup',
-
-  ### MMM
-
-  'Maccabi Games',
-  'Marmara Inter-Club Championship',
-  'Mike Lawrence Exhibition',
-  "Missouri Braggin' Rights",
-  'Mondi Cup',
-  'Mountain Sea Cup',
-  'MTP Cup',
-
-  ### NNN
-
-  'Namsos Cup',
-  'Nandu Oke Memorial IAF Swiss Pairs',
-  'Narain Bhojwani Memorial',
-  'NEC Cup',
-  'Neighbor Challenge',
-  'NTU Cup',
-  'NYSA Euroregion Nations Cup',
-
-  ### OOO
-
-  'Olona International Teams',
-  'Otters Inter-Club Teams',
-
-  ### PPP
-
-  'Pahlawan Cup',
-  'Palace Cup',
-  'Pan Arab Inter-Club Championship',
-  'Paris Youth Open Teams',
-  'Park Hotell Swiss Teams',
-  'Patton de Monaco',
-  'Petit Grand Prix van Driene',
-  "Pigg's Peak All Africa",
-  'PLN Cup',
-  'Plock District League',
-  'PRBA State Level Open',
-  'Prince Albert II Cup',
-  'Prince Takamatsu Cup',
-
-  ### RRR
-
-  'Ragn-Sells International Grand Tournament',
-  'Rand Cup',
-  'Roberto Taunay Cup',
-  'Rui Pinto Cup',
-  'Ruter 7 Open',
-
-  ### SSS
-
-  'S:t Erik Championship Series',
-  'Salo Midsummer Juniors',
-  'Salvador Assael IMP Pairs',
-  'Salvador Assael Pro-Am',
-  'Samadhan Summer League',
-  'Samobor Invitational Bridge Meeting',
-
-  'Shield of Thoisy',
-  'Singapore Open Teams',
-  'Slava Cup',
-  'Slovakian Open Teams',
-  'Smirnov Cup',
-  'Snåsa Cup',
-  'Solomon Teams',
-
-  'Southeast Asian Games',
-
-  'South Pacific Zone 7 Championship',
-
-  'SPBF Championship',
-  'Spring Nationals',
-  'Star Wars',
-  'Stena Line Cup',
-  'Stern-Cornell Trophy',
-  "Sternberg Women's BAM Teams",
-  'Summer Monsoon League',
-  'Suomen Cup',
-
-
-  ### TTT
-
-  'Taça Rui Pinto',
-  'Takamatsu Cup',
-  'TATA Open',
-  'Thane Champion of Champions Teams',
-  'Thanos Capayiannides Memorial Simultaneous',
-  'The Hague Bridge Experience',
-  'Thrace Club Teams',
-  'Thrace Cup League',
-  'Top Circuit',
-  'Towns Cup',
-
-  # Indian
-  'Kalani Trophy',
-
-  ### VVV
-
-  'Venezuelan Mixed Teams',
-  'Venezuelan Swiss Pairs',
-  'Vest-Agder Regional Team Championship',
-  'Victor Champion Cup',
-  'Videocon WCG Open',
-  'Vito Teams',
-  'Vrnjacka Banja Open Teams',
-  'VV Cup',
-
-  ### WWW
-
-  'Watermark Bridge Classic',
-  'WCG Open',
-  'Wellingdon Swiss Pairs',
-  'Western Mediterranean Club Teams',
-  'Whitelaw Cup',
-  'Willingdon Sports Club Swiss Pairs',
-  'Willoughby Bridge Classic',
-  'Willy Brown Memorial',
-  'Winter Open Teams',
-
-  'Transnational Open Teams',
-
-  # WORLD YOUTH
-
-  'Yeh Bros Cup',
-  'Youth Open Bridge Paris',
-
-  # ZZZ
-
-  "Zia's Individual Goulash",
+  'Mike Lawrence Exhibition', # Friendly, probably Scotland
+  'Spring Nationals', # Many probably Australian
+  'Transnational Open Teams', # Try to make unused
 );
 
 my %MULTI_TYPOS =
@@ -1880,6 +1841,7 @@ my %MULTI_TYPOS =
     'gabrial-ui cup',
     'gabrial ui cup'],
   'Geologi Cup' => ['geo cup'],
+  'Glasgow Transnational Open Teams' => ['tnt glasgow'],
   'Goulyash by E. Gladysh' => ['goulyash by e_gladysh'],
 
   # GERMANY -- mapped in detail
