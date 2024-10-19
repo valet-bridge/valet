@@ -14,6 +14,7 @@ use lib '..';
 use DateCalc;
 use EntryT;
 
+use Tournaments::Africa;
 # use Tournaments::Argentina;
 # use Tournaments::Australia;
 # use Tournaments::Baltic;
@@ -48,13 +49,14 @@ use EntryT;
 # use Tournaments::Sweden;
 # use Tournaments::Turkey;
 # use Tournaments::Switzerland;
-use Tournaments::UK;
+# use Tournaments::UK;
 # use Tournaments::USA;
 # use Tournaments::World;
 
 
 my %DIVISIONS =
 (
+  AFRICA => \&Tournaments::Africa::set_links
   # ARGENTINA => \&Tournaments::Argentina::set_links
   # AUSTRALIA => \&Tournaments::Australia::set_links
   # BALTIC => \&Tournaments::Baltic::set_links
@@ -89,7 +91,7 @@ my %DIVISIONS =
   # SWEDEN => \&Tournaments::Sweden::set_links
   # TURKEY => \&Tournaments::Turkey::set_links
   # SWITZERLAND => \&Tournaments::Switzerland::set_links
-  UK => \&Tournaments::UK::set_links
+  # UK => \&Tournaments::UK::set_links
   # USA => \&Tournaments::USA::set_links
   # WORLD => \&Tournaments::World::set_links
 );

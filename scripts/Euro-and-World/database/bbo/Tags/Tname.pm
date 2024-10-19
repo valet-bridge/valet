@@ -24,6 +24,11 @@ my @MULTI_WORDS =
  'Opening Tournament',
  'Practice Match',
 
+  # AFRICA
+  'African Zonal Open Teams',
+  'African Zonal Senior Teams',
+  'African Zonal Women Teams',
+
   # ARGENTINA
   'Argentinian Club Teams',
   'Argentinian Copa Republica',
@@ -621,70 +626,160 @@ my @MULTI_WORDS =
 
   # ----------------------------------------------------
 
-  'Angelini Teams',
-  'Ashok Kapur Memorial Swiss Pairs',
-  'Bagla Pairs Royale',
-  'Baze Senior Knock-out',
-  'Bergen Grand Tournament',
-  'Bologna Trophy',
-  'bridge24.pl Trophy',
-  'Centre Island Teams',
-  'Copa de Plata',
-  'Copa de Oro',
-  'Copa Zanalda River Plate',
-  'Coppie Viareggio',
-  'FOSS Grand Tournament',
-  'FOSS-Tren',
-  'Grand Prix of Prague',
-  'Las Palmas Simultaneous Pairs',
-  'Las Palmas Women Pairs',
-  'Madeira Open',
-  'Madeira Swiss Teams',
-  'Madrid Senior Teams',
-  'Marit Sveaas Tournament',
-  'Menpora-Pertamina Cup',
-  'Milan Trophy',
-  'Mo i Rana Ladies Invitational',
-  'Nordic Race', # Actually a Swedish trial.
-  'Open Catalunya Preferent',
-  'Pärnu Summer Invitational Pairs',
-  'Pärnu Summer Open Teams',
-  'Peggy Bayer',
-  'Pertamina Field Tambun Cup',
-  'Pesta Sukan',
-  'Prince Henrik Trophy',
-  'PSN Sarma Centenary Memorial',
-  'Puutalo Open',
-  'Riau Governor Cup',
+  # Australia
+  'Altman Swiss Pairs',
+
+  # Bolivia
+  'Bolivian Open Teams',
+
+  # Brazil
   'Rio de Janeiro Championship',
   'Rio de Janeiro Christmas Individual',
-  'Rome Challenger Trophy',
   'Sao Paulo State Championship',
+
+  # Czech
+  'Grand Prix of Prague',
+
+  # Denmark
+  'Prince Henrik Trophy',
+
+  # Ecuador
+  'Ecuador Open Team Trials',
+  'Ecuador Open Teams',
+
+  # Egypt
+  'Egyptian Cup',
+  'Egyptian League',
+
+  # Faroe Islands
+  'Faroese Teams',
+
+  # Finland
+  'Pärnu Summer Invitational Pairs',
+  'Pärnu Summer Open Teams',
+  'Puutalo Open',
+
+  # Hungary
+  'Balaton Invitational Teams',
+  'Balatonfoldvar Teams',
+
+  # India
+  'Ashok Kapur Memorial Swiss Pairs',
+  'PSN Sarma Centenary Memorial',
+
+  # Indonesia
+  'FTBC Tanjungpura University',
+  'Menpora-Pertamina Cup',
+  'Pesta Sukan',
+  'Pertamina Field Tambun Cup',
+  'Rector University of Brawijaya Cup',
+  'Riau Governor Cup',
+  'Sarundajang Cup',
+  'Semen Padang Cup',
+
+  # Italy
+  'Angelini Teams',
+  'Bologna Trophy',
+  'Coppie Viareggio',
+  'Milan Trophy',
+  'Rome Challenger Trophy',
   'Torneo di Rastignano',
   'Torneo di Roma',
   'Toscana Cup',
+
+  # Japan
+  'Japanese District KO Teams',
+  'Japanese Open Trials',
+
+  # Jordan
+  'Jordan Spring Mixed Pairs',
+  'Jordan Spring Tournament',
+  'Jordanese Open Pairs',
+
+  # New Zealand
+  'Centre Island Teams',
+
+  # Netherlands
+  'ArboNed Team Cup',
+  'Dutch Knock-Out Cup',
+  'Dutch Meesterklasse',
+  'Dutch Women',
+  'White House International',
+  'White House Juniors',
+  'White House Top 12',
+  'White House Top 16',
+
+  # Norway
+  'Bergen Grand Tournament',
+  'Marit Sveaas Tournament',
+  'Mo i Rana Ladies Invitational',
+
+  # Pakistan
+  'Pakistan Day Bridge Championship',
+  'Pakistan Open Trials',
+
+  # Poland
+  'bridge24.pl Trophy',
+
+  # Portugal
+  'Estoril Teams',
+  'Estoril Swiss Teams',
+  'Madeira Open',
+  'Madeira Swiss Teams',
+
+  # Russia
+  'Moscow Sunday Times',
+  'NN Cup',
+  'Russian IMSA Cup',
+  'Russian Open Teams',
+  'Russian Premier League',
+
+  # South Africa
+  'South African Championship',
+  'South African Inter-Province Teams',
+  'South African Teams',
+
+  # Spain
+  'Las Palmas Simultaneous Pairs',
+  'Las Palmas Women Pairs',
+  'Madrid Senior Teams',
+  'Open Catalunya Preferent',
+
+  # Sweden
+  'Nordic Race', # Actually a Swedish trial.
+
+  # Taiwan
+  'Taiwan University Cup',
+  'Taiwan University Cup Teachers',
+  'Taiwanese Open Trials',
+  'Taiwanese Teams',
+  'Taiwanese Senior Trials',
+
+  # Turkey
+  'Anatolian Club Qualifying',
+  'Anatolian Fall Teams',
+  'Anatolian Open Teams',
+  'Anatolian Spring Teams',
+
+  # USA
+  'Baze Senior Knock-out',
+
+  'Bagla Pairs Royale',
+  'Copa de Plata',
+  'Copa de Oro',
+  'Copa Zanalda River Plate',
+  'FOSS Grand Tournament',
+  'FOSS-Tren',
+  'Peggy Bayer',
 
   # ----------------------------------------------------
 
   #### AAA
 
-  'AfBF Zone 8 Championships',
   'APBF Championships',
   'APBF Youth Championships',
-  'African Zonal Open Teams',
-  'African Zonal Open Trials',
-  'African Zonal Senior Trials',
-  'African Zonal Women Teams',
-  'African Zonal Women Trials',
-  'Altman Swiss Pairs',
-  'Anatolian Club Qualifying',
-  'Anatolian Fall Teams',
-  'Anatolian Open Teams',
-  'Anatolian Spring Teams',
   'Antonio Chong Cup',
   'Aoda Cup',
-  'ArboNed Team Cup',
-
   'ARIS Cup',
   'Arnhem Interbridge Tournament',
   'ASEAN Club Championship',
@@ -697,13 +792,10 @@ my @MULTI_WORDS =
   
   # AUSTRIA
   'Austrian Team Championship',
-
   'Avia Inter-City Championship',
 
   ### BBB
 
-  'Balaton Invitational Teams',
-  'Balatonfoldvar Teams',
   'Balikcioglu Teams Championship',
 
   'Balkan Championship',
@@ -721,7 +813,6 @@ my @MULTI_WORDS =
   'BFAME Championship',
   'BFAME Friendship Pairs',
   'BKBT Teams',
-  'Bolivian Open Teams',
   
   'Buffett Cup',
 
@@ -736,6 +827,7 @@ my @MULTI_WORDS =
   'Channel Trophy',
 
   # CHINA
+  'All-China Games',
   'China Elite Tournament',
   'China Friend City Senior Team Tournament',
   'China First League',
@@ -746,10 +838,6 @@ my @MULTI_WORDS =
   'Chinese Mixed Teams',
   'Chinese Open Teams',
   'Chinese Open Trials',
-
-  'All-China Games',
-  'Chinese Taipei Open Trials',
-  'Chinese Taipei Trials',
   'Dongfeng Cup',
   'Dongming Knock-out Teams',
   'Chung Hua Cup',
@@ -757,10 +845,22 @@ my @MULTI_WORDS =
   'Guangdong Club Invitational',
   'Guangdong Elite Tournament',
   'Guangzhou-HK-Macau Interport',
+  'Jianshe Cup',
+  'Jili Cup',
+  'Sanchen Cup',
+  'Sanya Cup',
   'Shenhua Cup',
   'Shenyang Spring',
   'Shenzhen Lanpu Cup',
   'Shenzhen Nangangdongli Cup',
+  'Sunchime Fund Cup',
+  'Tielu Jixie Invitational',
+  'Xinyuan Cup',
+  'Zhejiang Huamen Cup',
+
+
+  'Chinese Taipei Open Trials',
+  'Chinese Taipei Trials',
 
   'Codan Cup',
   'Collegiate Bowl',
@@ -774,37 +874,14 @@ my @MULTI_WORDS =
   'Division Nationale',
   'Dr. Rand Masters',
 
-  # NETHERLANDS
-  'Dutch Knock-Out Cup',
-  'Dutch Meesterklasse',
-  'Dutch Women',
-  'White House International',
-  'White House Juniors',
-  'White House Top 12',
-  'White House Top 16',
-
   ### EEE
 
   'EcoSoft Cup',
-  'Ecuador Open Team Trials',
-  'Ecuador Open Teams',
-
-  # EGYPT
-  'Egyptian Cup',
-  'Egyptian League',
-
   'Electric Cup',
-
-
-  # ESTONIA
-
-  'Estoril Teams',
-  'Estoril Swiss Teams',
 
   ### FFF
 
   'Farmen Invitational',
-  'Faroese Teams',
   'Fatih Kiral Cup',
   'Filbyter Cup',
 
@@ -828,7 +905,6 @@ my @MULTI_WORDS =
   'Biarritz Hiver',
   'Mondial de Deauville',
 
-  'FTBC Tanjungpura University',
   'FullBridge International Teams',
   'FX Securities Cup',
 
@@ -865,16 +941,9 @@ my @MULTI_WORDS =
   ### JJJ
 
   'Jaap Kokkes Tournament',
-  'Japanese District KO Teams',
-  'Japanese Open Trials',
   'Jean Besse Cup',
   "Jessheim New Year's Cup",
-  'Jianshe Cup',
-  'Jili Cup',
   'John Arkinstall State Teams',
-  'Jordan Spring Mixed Pairs',
-  'Jordan Spring Tournament',
-  'Jordanese Open Pairs',
   'JPD Cup',
   'JP Morgan Inter-City Championship',
 
@@ -919,8 +988,6 @@ my @MULTI_WORDS =
   ### PPP
 
   'Pahlawan Cup',
-  'Pakistan Day Bridge Championship',
-  'Pakistan Open Trials',
   'Palace Cup',
   'Pan Arab Inter-Club Championship',
   'Paris Youth Open Teams',
@@ -938,18 +1005,8 @@ my @MULTI_WORDS =
 
   'Ragn-Sells International Grand Tournament',
   'Rand Cup',
-  'Rector University of Brawijaya Cup',
   'Roberto Taunay Cup',
-
   'Rui Pinto Cup',
-
-  # RUSSIA
-  'Moscow Sunday Times',
-  'NN Cup',
-  'Russian IMSA Cup',
-  'Russian Open Teams',
-  'Russian Premier League',
-
   'Ruter 7 Open',
 
   ### SSS
@@ -960,10 +1017,6 @@ my @MULTI_WORDS =
   'Salvador Assael Pro-Am',
   'Samadhan Summer League',
   'Samobor Invitational Bridge Meeting',
-  'Sanchen Cup',
-  'Sanya Cup',
-  'Sarundajang Cup',
-  'Semen Padang Cup',
 
   'Shield of Thoisy',
   'Singapore Open Teams',
@@ -972,11 +1025,6 @@ my @MULTI_WORDS =
   'Smirnov Cup',
   'Snåsa Cup',
   'Solomon Teams',
-
-  # SOUTH AFRICA
-  'South African Championship',
-  'South African Inter-Province Teams',
-  'South African Teams',
 
   'Southeast Asian Games',
 
@@ -989,22 +1037,13 @@ my @MULTI_WORDS =
   'Stern-Cornell Trophy',
   "Sternberg Women's BAM Teams",
   'Summer Monsoon League',
-  'Sunchime Fund Cup',
   'Suomen Cup',
-  'Tielu Jixie Invitational',
-  'Xinyuan Cup',
-  'Zhejiang Huamen Cup',
 
 
   ### TTT
 
   'Taça Rui Pinto',
   'Takamatsu Cup',
-  'Taiwan University Cup',
-  'Taiwan University Cup Teachers',
-  'Taiwanese Open Trials',
-  'Taiwanese Teams',
-  'Taiwanese Senior Trials',
   'TATA Open',
   'Thane Champion of Champions Teams',
   'Thanos Capayiannides Memorial Simultaneous',
@@ -1064,18 +1103,17 @@ my %MULTI_TYPOS =
 
   ### AAA
 
-  'AfBF Zone 8 Championships' => ['african zone 8 open teams',
-    'abf zone 8 championships', 'abf championship', 'abf championships',
-    'abf champoinship'],
   'African Zonal Open Teams' => [
-    'zonal qualifying africa',
-    'abf zonal', 
-    'african zone championship',
-    'african zonal championships',
+    'african zonal open trials',
+    'african zone 8 open teams',
     'zonal africa open'],
+  'African Zonal Senior Teams' => [
+    'african zonal senior trials'],
   'African Zonal Women Teams' => [
+    'african zonal women trials',
     'zonal africa ladies',
     'zonal africa women'],
+
   'Albena Open Teams' => ['ibf albena'],
   'All India Bangur Cement Hindusthan Club' => [
     'bangur cement hindusthan club'],

@@ -28,6 +28,7 @@ my @MULTI_WORDS =
 
  
   'Aegean Championships',
+  'African Zonal Championships',
   'Azores Festival',
   'Amman Bridge Festival',
   'Australian National Championships',
@@ -145,6 +146,16 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'African Zonal Championships' => [
+    'abf championship', 
+    'abf championships',
+    'abf champoinship',
+    'abf zone 8 championships', 
+    'abf zonal',
+    'afbf zone 8 championships',
+    'african zonal championships',
+    'african zone championship',
+    'zonal qualifying africa'],
   'All China Games' => ['all-china games'],
   'All India HCL Tournament' => [
     'all india hcl open',
