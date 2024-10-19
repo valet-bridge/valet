@@ -13,25 +13,6 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_UK =
 (
-  'Meet name' =>
-  {
-    ORGANIZATION => 'ORG',
-    COUNTRY => 'CTR',
-    ORIGIN => 'National',
-    ZONE => 'South Pacific',
-
-    EDITIONS => 
-    {
-      '2015' =>
-      {
-        # Link
-        YEAR => 2000,
-        CITY => 'Hamilton',
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
-      },
-    }
-  }
 );
 
 my %TOURNAMENTS_UK =
@@ -793,6 +774,7 @@ my %TOURNAMENTS_UK =
 
   'English Open Trials' => 
   {
+    ORGANIZATION => 'EBU',
     ORIGIN => 'National',
     ZONE => 'Europe',
     FORM => 'Teams',
@@ -918,6 +900,7 @@ my %TOURNAMENTS_UK =
 
   'English Premier League' => 
   {
+    ORGANIZATION => 'EBU',
     ORIGIN => 'Interclub',
     ZONE => 'Europe',
     COUNTRY => 'England',
@@ -957,6 +940,7 @@ my %TOURNAMENTS_UK =
       },
       '2009' =>
       {
+        # https://www.ebu.co.uk/results/283
         CHAPTERS =>
         {
           'C0' => 
@@ -995,6 +979,7 @@ my %TOURNAMENTS_UK =
       },
       '2010' =>
       {
+        # https://www.ebu.co.uk/results/224
         CHAPTERS =>
         {
           'C0' => 
@@ -1025,6 +1010,7 @@ my %TOURNAMENTS_UK =
       },
       '2011' =>
       {
+        # https://www.ebu.co.uk/results/166
         CHAPTERS =>
         {
           'C0' => 
@@ -1055,6 +1041,7 @@ my %TOURNAMENTS_UK =
       },
       '2012' =>
       {
+        # https://www.ebu.co.uk/results/105
         CHAPTERS =>
         {
           'C0' => 
@@ -1084,6 +1071,7 @@ my %TOURNAMENTS_UK =
       },
       '2013' =>
       {
+        # https://www.ebu.co.uk/results/5
         CHAPTERS =>
         {
           'C0' => 
@@ -1104,6 +1092,7 @@ my %TOURNAMENTS_UK =
       },
       '2014' =>
       {
+        # https://www.ebu.co.uk/results/48
         CHAPTERS =>
         {
           'C0' => 
@@ -1132,6 +1121,7 @@ my %TOURNAMENTS_UK =
       },
       '2015' =>
       {
+        # https://www.ebu.co.uk/results/428
         CHAPTERS =>
         {
           'C0' => 
@@ -1162,6 +1152,7 @@ my %TOURNAMENTS_UK =
 
   'English Senior Trials' => 
   {
+    ORGANIZATION => 'EBU',
     ORIGIN => 'National',
     ZONE => 'Europe',
     FORM => 'Teams',
@@ -1171,6 +1162,33 @@ my %TOURNAMENTS_UK =
 
     EDITIONS =>
     {
+      '2004' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2004,
+            major => 'ROUND',
+            DATE_START => '2004-09-05',
+            DATE_END => '2004-09-05'
+          },
+        }
+      },
+      '2012' =>
+      {
+        # https://www.ebu.co.uk/results/100
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            major => 'MATCH',
+            DATE_START => '2012-12-15',
+            DATE_END => '2012-12-16'
+          },
+        }
+      },
       '2013' =>
       {
         CHAPTERS =>
@@ -1199,6 +1217,7 @@ my %TOURNAMENTS_UK =
       },
       '2014B' =>
       {
+        # https://www.ebu.co.uk/results/162
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1206,12 +1225,13 @@ my %TOURNAMENTS_UK =
             YEAR => 2014,
             major => 'MATCH',
             DATE_START => '2014-12-18',
-            DATE_END => '2014-12-20'
+            DATE_END => '2014-12-21'
           },
         }
       },
       '2015' =>
       {
+        # https://www.ebu.co.uk/results/453
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1243,6 +1263,7 @@ my %TOURNAMENTS_UK =
 
   'English U28 Trials' => 
   {
+    ORGANIZATION => 'EBU',
     ORIGIN => 'National',
     ZONE => 'Europe',
     FORM => 'Teams',
@@ -1268,8 +1289,9 @@ my %TOURNAMENTS_UK =
     }
   },
 
-  'English Women Trials' => 
+  'English Women Teams' => 
   {
+    ORGANIZATION => 'EBU',
     ORIGIN => 'National',
     ZONE => 'Europe',
     FORM => 'Teams',
@@ -1279,8 +1301,46 @@ my %TOURNAMENTS_UK =
 
     EDITIONS =>
     {
+      '2012' =>
+      {
+        # https://www.ebu.co.uk/results/116
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SET',
+            DATE_START => '2012-09-02',
+            DATE_END => '2012-09-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'STANZA',
+            DATE_START => '2012-09-02',
+            DATE_END => '2012-09-02'
+          },
+        }
+      }
+    }
+  },
+
+  'English Women Trials' => 
+  {
+    ORGANIZATION => 'EBU',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
       '2006' =>
       {
+        FORM => 'Teams',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'C0' => 
@@ -1301,6 +1361,8 @@ my %TOURNAMENTS_UK =
       },
       '2008' =>
       {
+        FORM => 'Teams',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1314,6 +1376,8 @@ my %TOURNAMENTS_UK =
       },
       '2009' =>
       {
+        FORM => 'Teams',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1325,16 +1389,108 @@ my %TOURNAMENTS_UK =
           },
         }
       },
+      '2010' =>
+      {
+        # https://www.ebu.co.uk/results/277
+        FORM => 'Teams',
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-01-22',
+            DATE_END => '2010-01-24'
+          },
+        }
+      },
+      '2011' =>
+      {
+        # https://www.ebu.co.uk/results/217
+        FORM => 'Teams',
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-01-21',
+            DATE_END => '2011-01-23'
+          },
+        }
+      },
+      '2012' =>
+      {
+        # https://www.ebu.co.uk/results/155
+        FORM => 'Pairs',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-01-13',
+            DATE_END => '2012-01-15'
+          },
+        }
+      },
+      '2013' =>
+      {
+        # https://www.ebu.co.uk/results/94
+        FORM => 'Pairs',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-01-25',
+            DATE_END => '2013-01-27'
+          },
+        }
+      },
+      '2014' =>
+      {
+        # https://www.ebu.co.uk/results/17
+        FORM => 'Teams',
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-01-24',
+            DATE_END => '2014-01-26'
+          },
+        }
+      },
+      '2015' =>
+      {
+        # https://www.ebu.co.uk/results/235
+        FORM => 'Pairs',
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-01-23',
+            DATE_END => '2015-01-25'
+          },
+        }
+      },
       '2016' =>
       {
+        # https://www.ebu.co.uk/results/461
+        FORM => 'Teams',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2016,
-            major => 'SESSION',
             DATE_START => '2016-01-22',
-            DATE_END => '2016-01-22'
+            DATE_END => '2016-01-24'
           },
         }
       }
@@ -1527,6 +1683,7 @@ my %TOURNAMENTS_UK =
       },
       '2005' =>
       {
+        # https://www.ebu.co.uk/results/582
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1540,6 +1697,7 @@ my %TOURNAMENTS_UK =
       },
       '2006' =>
       {
+        # https://www.ebu.co.uk/results/513
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1566,6 +1724,7 @@ my %TOURNAMENTS_UK =
       },
       '2008' =>
       {
+        # https://www.ebu.co.uk/results/363
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1593,6 +1752,7 @@ my %TOURNAMENTS_UK =
       },
       '2010' =>
       {
+        # https://www.ebu.co.uk/results/277
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1662,6 +1822,7 @@ my %TOURNAMENTS_UK =
       },
       '2015' =>
       {
+        # https://www.ebu.co.uk/results/353
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1864,6 +2025,8 @@ my %TOURNAMENTS_UK =
 
   'Scottish Cup' => 
   {
+    # https://www.sbu.org.uk/results/archived-results
+    ORGANIZATION => 'SBU',
     ORIGIN => 'National',
     ZONE => 'Europe',
     COUNTRY => 'Scotland',
@@ -2033,6 +2196,8 @@ my %TOURNAMENTS_UK =
 
   'Scottish National League' => 
   {
+    # https://www.sbu.org.uk/results/archived-results
+    ORGANIZATION => 'SBU',
     ORIGIN => 'Interclub',
     ZONE => 'Europe',
     COUNTRY => 'Scotland',
@@ -2057,6 +2222,304 @@ my %TOURNAMENTS_UK =
           },
         }
       }
+    }
+  },
+
+  'Spring Foursomes' => 
+  {
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2005' =>
+      {
+        # https://www.ebu.co.uk/results/576
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2005-05-02',
+            DATE_END => '2005-05-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2005-05-03',
+            DATE_END => '2005-05-03'
+          },
+        }
+      },
+      '2006' =>
+      {
+        # https://www.ebu.co.uk/results/505
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-04-28',
+            DATE_END => '2006-05-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2006-05-02',
+            DATE_END => '2006-05-02'
+          },
+        }
+      },
+      '2007' =>
+      {
+        # https://www.ebu.co.uk/results/413
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-05-04',
+            DATE_END => '2007-05-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-05-08',
+            DATE_END => '2007-05-08'
+          },
+        }
+      },
+      '2008' =>
+      {
+        # https://www.ebu.co.uk/results/637
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SET',
+            DATE_START => '2008-05-02',
+            DATE_END => '2008-05-06'
+          },
+        }
+      },
+      '2009' =>
+      {
+        # https://www.ebu.co.uk/results/314
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-05-01',
+            DATE_END => '2009-05-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-05-05',
+            DATE_END => '2009-05-05'
+          },
+        }
+      },
+      '2010' =>
+      {
+        # https://www.ebu.co.uk/results/256
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-04-30',
+            DATE_END => '2010-05-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-05-04',
+            DATE_END => '2010-05-04'
+          },
+        }
+      },
+      '2011' =>
+      {
+        # https://www.ebu.co.uk/results/202
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-04-29',
+            DATE_END => '2011-05-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-05-03',
+            DATE_END => '2011-05-03'
+          },
+        }
+      },
+      '2012' =>
+      {
+        # https://www.ebu.co.uk/results/135
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SET',
+            DATE_START => '2012-05-04',
+            DATE_END => '2012-05-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'STANZA',
+            DATE_START => '2012-05-08',
+            DATE_END => '2012-05-08'
+          },
+        }
+      },
+      '2013' =>
+      {
+        # https://www.ebu.co.uk/results/63
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-05-03',
+            DATE_END => '2013-05-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-05-07',
+            DATE_END => '2013-05-07'
+          },
+        }
+      },
+      '2014' =>
+      {
+        # https://www.ebu.co.uk/results/30
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2014-05-02',
+            DATE_END => '2014-05-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'STANZA',
+            DATE_START => '2014-05-06',
+            DATE_END => '2014-05-06'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'STANZA',
+            DATE_START => '2014-05-06',
+            DATE_END => '2014-05-06'
+          },
+        }
+      },
+      '2015' =>
+      {
+        # https://www.ebu.co.uk/results/361
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'STANZA',
+            DATE_START => '2015-05-01',
+            DATE_END => '2015-05-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'STANZA',
+            DATE_START => '2015-05-05',
+            DATE_END => '2015-05-05'
+          },
+        }
+      },
+      '2016' =>
+      {
+        # https://www.ebu.co.uk/results/492
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2016-04-29',
+            DATE_END => '2016-05-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'STANZA',
+            DATE_START => '2016-05-03',
+            DATE_END => '2016-05-03'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'STANZA',
+            DATE_START => '2016-05-03',
+            DATE_END => '2016-05-03'
+          },
+        }
+      },
     }
   },
 
@@ -2223,6 +2686,7 @@ my %TOURNAMENTS_UK =
 
   'TGR Auction Pairs' => 
   {
+    # https://www.bridgewebs.com/tgrs/
     ORIGIN => 'International',
     ZONE => 'Europe',
     COUNTRY => 'England',
@@ -2329,6 +2793,7 @@ my %TOURNAMENTS_UK =
 
   'TGR Auction Teams' => 
   {
+    # https://www.bridgewebs.com/tgrs/
     ORIGIN => 'International',
     ZONE => 'Europe',
     COUNTRY => 'England',
@@ -2366,6 +2831,7 @@ my %TOURNAMENTS_UK =
 
   'TGR Super League' => 
   {
+    # https://www.bridgewebs.com/tgrs/
     ORIGIN => 'Regional',
     ZONE => 'Europe',
     COUNTRY => 'England',
@@ -2657,6 +3123,8 @@ my %TOURNAMENTS_UK =
 
   'Welsh Invitational Pairs' => 
   {
+    # https://www.bridgewebs.com/tgrs/
+    ORGANIZATION => 'WBU',
     ORIGIN => 'National',
     ZONE => 'Europe',
     COUNTRY => 'Scotland',
@@ -2685,6 +3153,8 @@ my %TOURNAMENTS_UK =
 
   'Welsh Open Trials' => 
   {
+    # https://welshbridgeunion.org/archive-test
+    ORGANIZATION => 'WBU',
     ORIGIN => 'National',
     ZONE => 'Europe',
     COUNTRY => 'Scotland',
@@ -2737,6 +3207,85 @@ my %TOURNAMENTS_UK =
         }
       }
     }
+  },
+
+  'Young Chelsea Knock-out' => 
+  {
+    # https://www.bridgewebs.com/cgi-bin/bwoq/bw.cgi?club=youngchelsea&pid=display_page12
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2008' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-07-16',
+            DATE_END => '2008-07-16'
+          },
+        }
+      },
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-01-03',
+            DATE_END => '2010-01-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-09-19',
+            DATE_END => '2010-09-19'
+          },
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-08-07',
+            DATE_END => '2011-08-07'
+          },
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-05',
+            DATE_END => '2012-08-05'
+          },
+        }
+      }
+    },
   },
 
 );

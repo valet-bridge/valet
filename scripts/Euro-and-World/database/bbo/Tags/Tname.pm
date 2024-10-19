@@ -527,6 +527,29 @@ my @MULTI_WORDS =
   'Turkish Women Team Trials',
   'Turkish Women Teams',
 
+  # UNITED KINGDOM
+  'British Gold Cup',
+  'Camrose Trophy',
+  'English Open Trials',
+  'English Premier League',
+  'English Senior Trials',
+  'English U28 Trials',
+  'English Women Teams',
+  'English Women Trials',
+  'Junior Camrose',
+  'Lady Milne Trophy',
+  'Lederer Memorial Trophy',
+  'Scottish Cup',
+  'Scottish National League',
+  'Spring Foursomes',
+  'Teltscher Trophy',
+  'TGR Auction Pairs',
+  'TGR Auction Teams',
+  'TGR Super League',
+  'Welsh Invitational Pairs',
+  'Welsh Open Trials',
+  'Young Chelsea Knock-out',
+
   # USA
   '0 to 1500 Spingold',
   'Reisinger BAM Teams',
@@ -772,35 +795,6 @@ my @MULTI_WORDS =
 
   'Electric Cup',
 
-  # ENGLAND
-
-  'British Gold Cup',
-  'Camrose Trophy',
-  'English Open Trials',
-  'English Premier League',
-  'English Senior Trials',
-  'English U28 Trials',
-  'English Women Trials',
-  'Junior Camrose',
-  'Lady Milne Trophy',
-  'Lederer Memorial Trophy',
-  'Scottish Cup',
-  'Scottish National League',
-  'Teltscher Trophy',
-  'TGR Auction Pairs',
-  'TGR Auction Teams',
-  'TGR Super League',
-  'Welsh Invitational Pairs',
-  'Welsh Open Trials',
-
-
-  'English Senior Teams',
-  'English Women Teams',
-
-  'Lady Milne Trials',
-
-
-  'Young Chelsea Knock-out',
 
   # ESTONIA
 
@@ -989,7 +983,6 @@ my @MULTI_WORDS =
   'South Pacific Zone 7 Championship',
 
   'SPBF Championship',
-  'Spring Fours',
   'Spring Nationals',
   'Star Wars',
   'Stena Line Cup',
@@ -1626,15 +1619,23 @@ my %MULTI_TYPOS =
   'English Premier League' => ['engish premier league',
     'england premier league', 'english premie league',
     'englush premier league', 'english premier lge'],
-  'English Senior Teams' => ['english seniors'],
-  'English Senior Trials' => ['england senior trial',
-    'england senior trials', 'english senior european trials',
-    'englnd senior trials', 'england senior trial',
-    'england senior teams trial'],
+  'English Senior Trials' => [
+    'england senior trial',
+    'england senior trials', 
+    'england senior teams trial',
+    'england senior trial',
+    'english seniors',
+    'english senior european trials',
+    'english seniors european trials',
+    'english senior teams',
+    'englnd senior trials'], 
   'English U28 Trials' => ['england u28 trials'],
   'English Women Teams' => ['english national womens teams'],
-  'English Women Trials' => ['english ladies trials',
-    "english ladies' trials", "england ladies' trials"],
+  'English Women Trials' => [
+    "england ladies' trials",
+    'english ladies trials',
+    "english ladies' trials",
+    'lady milne trials'],
 
   # ESTONIA
   'Estonian First League' => ['estonian a- league',
@@ -2868,7 +2869,10 @@ my %MULTI_TYPOS =
     'prueba de seleccion equipos senior'],
 
   'SPBF Championship' => ['zone 7 championship', 'zone 7 championships'],
-  'Spring Fours' => ['spring 4s', 'spring foursomes', 'schapirosfs'],
+  'Spring Foursomes' => [
+    'spring 4s', 
+    'spring fours', 
+    'schapirosfs'],
   'Spring Nationals' => ['spring nat', 'spring national', 'spring nats',
     'sping national', 'spring nat opens'],
   'SPS Trophy' => ['lojdy cup', 'sps construction trophy'],

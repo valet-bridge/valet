@@ -51,6 +51,7 @@ my %ITERATORS_MAJOR_MINOR = (
   'South American Open Teams' => ['SEGMENT', ''],
   'South American Team Championship' => ['SEGMENT', ''],
   'Southeast Asian Games' => ['SESSION', 'ROUND'],
+  'Spring Foursomes' => ['ROUND', 'SEGMENT'],
   'Swedish District Teams' => ['ROUND', 'SEGMENT'],
   'Swedish Open Teams' => ['ROUND', 'SEGMENT'],
   'Swedish Premier League' =>  ['ROUND', 'SEGMENT'],

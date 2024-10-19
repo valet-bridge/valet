@@ -163,6 +163,9 @@ my %FORM_CORRECTIONS = (
     19120, 19124, 19125, 19130, 19133, 19134],
   'Delhi Gymkhana Club Open Pairs' => [
     26251],
+  'English Women Trials' => [
+    21647, 21651, 21656, 21666, 21669,
+    26849, 26850, 26872, 26878, 26881, 26901, 26903],
   'Estonian Open Pair Trials' => [
     40645],
   'European Transnational Mixed Pairs' => [
