@@ -42,6 +42,7 @@ my @MULTI_WORDS =
   'Argentinian Senior Trials',
   'Argentinian Women Teams',
   'Argentinian Women Trials',
+  'Copa Zanalda River Plate',
   'Mar del Plata Open Teams',
 
   # AUSTRALIA
@@ -143,6 +144,7 @@ my @MULTI_WORDS =
   # CZECH
   'Czech First League',
   'Czech Open',
+  'Grand Prix of Prague',
 
   # DENMARK
   'Copenhagen Invitational Pairs',
@@ -574,6 +576,10 @@ my @MULTI_WORDS =
   'Vanderbilt Teams',
   'Wagar Teams',
 
+  # VENEZUELA
+  'Venezuelan Mixed Teams',
+  'Venezuelan Swiss Pairs',
+
   # WORLD
   'APBF Women Elite Tournament',
   'Bermuda Bowl',
@@ -626,9 +632,6 @@ my @MULTI_WORDS =
   'WMG Women Teams',
 
   # ----------------------------------------------------
-
-  # Argentina
-  'Copa Zanalda River Plate',
 
   # Asia
   'APBF Championships',
@@ -748,8 +751,6 @@ my @MULTI_WORDS =
   'Atlantic Trade Bridge Cup',
   'Samobor Invitational Bridge Meeting',
 
-  # Czech
-  'Grand Prix of Prague',
 
   # Denmark
   'Hecht Cup',
@@ -1041,9 +1042,6 @@ my @MULTI_WORDS =
   'Solomon Teams',
   "Sternberg Women's BAM Teams",
 
-  # Venezuela
-  'Venezuelan Mixed Teams',
-  'Venezuelan Swiss Pairs',
 
   # ----------------------------------------------------
 

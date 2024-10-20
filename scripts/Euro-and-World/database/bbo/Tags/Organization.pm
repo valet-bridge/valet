@@ -95,6 +95,7 @@ my %MULTI_TYPOS =
   TBF => ['turkish bridge federation'],
   TDBA => ['Thane District Bridge Association'],
   USBF => ['united states bridge federation'],
+  VBF => ['venezuelan bridge federation'],
   WBF => ['world bridge federation'],
   WBU => ['welsh bridge union']
 );

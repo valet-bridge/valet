@@ -26,7 +26,6 @@ my %MEETS_ARGENTINA =
     {
       '2012' =>
       {
-        # Link
         YEAR => 2012,
         DATE_START => '2012-04-14',
         DATE_END => '2012-11-05'
@@ -43,17 +42,20 @@ my %MEETS_ARGENTINA =
 
     EDITIONS => 
     {
+      '2006' =>
+      {
+        YEAR => 2006,
+        DATE_START => '2006-12-17',
+        DATE_END => '2006-12-17'
+      },
       '2012' =>
       {
-        # Link
         YEAR => 2012,
         DATE_START => '2012-12-05',
         DATE_END => '2012-12-08'
       },
-
       '2015' =>
       {
-        # Link
         YEAR => 2015,
         DATE_START => '2015-12-06',
         DATE_END => '2015-12-06'
@@ -79,8 +81,6 @@ my %TOURNAMENTS_ARGENTINA =
     {
       '2011' =>
       {
-        # Link
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -95,8 +95,6 @@ my %TOURNAMENTS_ARGENTINA =
       },
       '2015' =>
       {
-        # Link
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -127,9 +125,7 @@ my %TOURNAMENTS_ARGENTINA =
     {
       '2009' =>
       {
-        # Link
         MEET => 'Mar del Plata Festival',
-
         CHAPTERS =>
         {
           'C0' => 
@@ -152,9 +148,7 @@ my %TOURNAMENTS_ARGENTINA =
       },
       '2010' =>
       {
-        # Link
         MEET => 'Mar del Plata Festival',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -169,9 +163,7 @@ my %TOURNAMENTS_ARGENTINA =
       },
       '2015' =>
       {
-        # Link
         MEET => 'Mar del Plata Festival',
-
         CHAPTERS =>
         {
           'C0' => 
@@ -210,8 +202,6 @@ my %TOURNAMENTS_ARGENTINA =
     {
       '2007' =>
       {
-        # Link
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -241,8 +231,6 @@ my %TOURNAMENTS_ARGENTINA =
     {
       '2016' =>
       {
-        # Link
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -272,8 +260,6 @@ my %TOURNAMENTS_ARGENTINA =
     {
       '2011' =>
       {
-        # Link
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -288,8 +274,6 @@ my %TOURNAMENTS_ARGENTINA =
       },
       '2016' =>
       {
-        # Link
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -321,8 +305,6 @@ my %TOURNAMENTS_ARGENTINA =
     {
       '2007' =>
       {
-        # Link
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -336,8 +318,6 @@ my %TOURNAMENTS_ARGENTINA =
       },
       '2009' =>
       {
-        # Link
-
         CHAPTERS =>
         {
           'C0' => 
@@ -360,8 +340,6 @@ my %TOURNAMENTS_ARGENTINA =
       },
       '2010' =>
       {
-        # Link
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -376,8 +354,6 @@ my %TOURNAMENTS_ARGENTINA =
       },
       '2011' =>
       {
-        # Link
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -392,8 +368,6 @@ my %TOURNAMENTS_ARGENTINA =
       },
       '2012' =>
       {
-        # Link
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -408,8 +382,6 @@ my %TOURNAMENTS_ARGENTINA =
       },
       '2013' =>
       {
-        # Link
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -424,8 +396,6 @@ my %TOURNAMENTS_ARGENTINA =
       },
       '2016' =>
       {
-        # Link
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -454,7 +424,6 @@ my %TOURNAMENTS_ARGENTINA =
     {
       '2006' =>
       {
-        # Link
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -469,8 +438,6 @@ my %TOURNAMENTS_ARGENTINA =
       },
       '2007' =>
       {
-        # Link
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -486,8 +453,6 @@ my %TOURNAMENTS_ARGENTINA =
       },
       '2009' =>
       {
-        # Link
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -586,9 +551,7 @@ my %TOURNAMENTS_ARGENTINA =
     {
       '2015' =>
       {
-        # Link
         # TODO vs Argentinian Senior Trials?!
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -617,8 +580,6 @@ my %TOURNAMENTS_ARGENTINA =
     {
       '2007' =>
       {
-        # Link
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -632,8 +593,6 @@ my %TOURNAMENTS_ARGENTINA =
       },
       '2015' =>
       {
-        # Link
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -664,8 +623,6 @@ my %TOURNAMENTS_ARGENTINA =
     {
       '2000' =>
       {
-        # Link
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -688,9 +645,7 @@ my %TOURNAMENTS_ARGENTINA =
     {
       '2010' =>
       {
-        # 
         MEET => 'Argentinian Trials',
-
         CHAPTERS =>
         {
           'C0' => 
@@ -715,9 +670,7 @@ my %TOURNAMENTS_ARGENTINA =
       },
       '2011' =>
       {
-        # 
         MEET => 'Argentinian Trials',
-
         CHAPTERS =>
         {
           'C0' => 
@@ -735,7 +688,6 @@ my %TOURNAMENTS_ARGENTINA =
       {
         # https://csbnews.org/2013-argentine-trials-the-gran-final-1st-match-rizzo-angeleri/
         MEET => 'Argentinian Trials',
-
         CHAPTERS =>
         {
           'C0' => 
@@ -750,6 +702,35 @@ my %TOURNAMENTS_ARGENTINA =
           },
         }
       },
+    }
+  },
+
+  'Copa Zanalda River Plate',
+  {
+    ORGANIZATION => 'ABA',
+    COUNTRY => 'Argentina',
+    ORIGIN => 'National',
+    ZONE => 'South America',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            major => 'SEGMENT',
+            DATE_START => '2009-11-12',
+            DATE_END => '2009-11-12'
+          },
+        }
+      }
     }
   },
 
@@ -768,9 +749,7 @@ my %TOURNAMENTS_ARGENTINA =
     {
       '2005' =>
       {
-        # Link
         MEET => 'Mar del Plata Festival',
-
         CHAPTERS =>
         {
           'C0' => 
@@ -801,9 +780,7 @@ my %TOURNAMENTS_ARGENTINA =
       },
       '2006' =>
       {
-        # Link
         MEET => 'Mar del Plata Festival',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -818,9 +795,7 @@ my %TOURNAMENTS_ARGENTINA =
       },
       '2010' =>
       {
-        # Link
         MEET => 'Mar del Plata Festival',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -835,9 +810,7 @@ my %TOURNAMENTS_ARGENTINA =
       },
       '2012' =>
       {
-        # Link
         MEET => 'Mar del Plata Festival',
-
         CHAPTERS =>
         {
           'C0' => 

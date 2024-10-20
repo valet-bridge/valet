@@ -489,6 +489,9 @@ my %FORM_CORRECTIONS = (
     45642, 45646],
   'Turkish Women Pair Trials' => [
     13292, 13304],
+  'Venezuelan Swiss Pairs' => [
+    14100,
+    17324, 17336],
   'Victorian Women Trials' => [
     44237, 44241],
   'Vilnius BAM Pairs' => [

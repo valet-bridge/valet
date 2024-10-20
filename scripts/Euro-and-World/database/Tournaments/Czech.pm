@@ -214,6 +214,37 @@ my %TOURNAMENTS_CZECH =
       },
     }
   },
+
+  'Grand Prix of Prague',
+  {
+    ORGANIZATION => 'CzFB',
+    CITY => 'Prague',
+    COUNTRY => 'Czech Republic',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2004' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2004,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2004-10-17',
+            DATE_END => '2004-10-17'
+          },
+        }
+      }
+    }
+  },
 );
 
 
