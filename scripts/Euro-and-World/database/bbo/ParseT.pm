@@ -18,7 +18,7 @@ use EntryT;
 # use Tournaments::Argentina;
 # use Tournaments::Australia;
 # use Tournaments::Baltic;
-use Tournaments::Belarus;
+# use Tournaments::Belarus;
 # use Tournaments::Belgium;
 # use Tournaments::Brazil;
 # use Tournaments::Bulgaria;
@@ -49,6 +49,7 @@ use Tournaments::Belarus;
 # use Tournaments::Spain;
 # use Tournaments::SouthAmerica;
 # use Tournaments::Sweden;
+use Tournaments::Taipei;
 # use Tournaments::Turkey;
 # use Tournaments::Switzerland;
 # use Tournaments::UK;
@@ -63,7 +64,7 @@ my %DIVISIONS =
   # ARGENTINA => \&Tournaments::Argentina::set_links
   # AUSTRALIA => \&Tournaments::Australia::set_links
   # BALTIC => \&Tournaments::Baltic::set_links
-  BELARUS => \&Tournaments::Belarus::set_links
+  # BELARUS => \&Tournaments::Belarus::set_links
   # BELGIUM => \&Tournaments::Belgium::set_links
   # BRAZIL => \&Tournaments::Brazil::set_links
   # BULGARIA => \&Tournaments::Bulgaria::set_links
@@ -94,6 +95,7 @@ my %DIVISIONS =
   # SPAIN => \&Tournaments::Spain::set_links
   # SOUTHAMERICA => \&Tournaments::SouthAmerica::set_links
   # SWEDEN => \&Tournaments::Sweden::set_links
+  TAIPEI => \&Tournaments::Taipei::set_links
   # TURKEY => \&Tournaments::Turkey::set_links
   # SWITZERLAND => \&Tournaments::Switzerland::set_links
   # UK => \&Tournaments::UK::set_links

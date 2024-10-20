@@ -748,7 +748,6 @@ my @MULTI_WORDS =
   # Chinese Taipei
   'Antonio Chong Cup',
   'Chinese Taipei Open Trials',
-  'Chinese Taipei Trials',
 
   # Croatia
   'Atlantic Trade Bridge Cup',
@@ -1449,19 +1448,20 @@ my %MULTI_TYPOS =
     'cr power intercity'],
 
   'Chinese Taipei Open Trials' => [
-    'ctcba open trail',
+    'ctcba chinese taipei open team trials',
+    'ctcba chinese taipei open trial',
     'ctcba open team trial',
     'ctcba open team trials',
+    'ctcba open trail',
     'ctcba open trial',
-    'ctcba chinese taipei open trial',
+    'ctcba trial',
     'chinese taipei open team trail',
     'chinese taipei open team trial',
     'chinese taipei open team trials',
-    'ctcba chinese taipei open team trials',
+    'chinese taipei team trial', 
+    'chinese taipei trails',
+    'chinese taipei trials',
     'taipei open trials'],
-  'Chinese Taipei Trials' => ['chinese taipei trails',
-    'chinese taipei team trial', 'ctcba trial'],
-
   'Cliff Wake Challenge' => ['cliff wake invitational'],
   'Commonwealth Nations Bridge Championships' => [
     'commonwealth beidge championship', 
