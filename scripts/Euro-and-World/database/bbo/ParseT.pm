@@ -18,6 +18,7 @@ use EntryT;
 # use Tournaments::Argentina;
 # use Tournaments::Australia;
 # use Tournaments::Baltic;
+use Tournaments::Belarus;
 # use Tournaments::Belgium;
 # use Tournaments::Brazil;
 # use Tournaments::Bulgaria;
@@ -25,6 +26,7 @@ use EntryT;
 # use Tournaments::Chile;
 # use Tournaments::Czech;
 # use Tournaments::Denmark;
+# use Tournaments::Ecuador;
 # use Tournaments::EuroAdult;
 # use Tournaments::EuroYouth;
 # use Tournaments::Finland;
@@ -51,7 +53,7 @@ use EntryT;
 # use Tournaments::Switzerland;
 # use Tournaments::UK;
 # use Tournaments::USA;
-use Tournaments::Venezuela;
+# use Tournaments::Venezuela;
 # use Tournaments::World;
 
 
@@ -61,6 +63,7 @@ my %DIVISIONS =
   # ARGENTINA => \&Tournaments::Argentina::set_links
   # AUSTRALIA => \&Tournaments::Australia::set_links
   # BALTIC => \&Tournaments::Baltic::set_links
+  BELARUS => \&Tournaments::Belarus::set_links
   # BELGIUM => \&Tournaments::Belgium::set_links
   # BRAZIL => \&Tournaments::Brazil::set_links
   # BULGARIA => \&Tournaments::Bulgaria::set_links
@@ -68,6 +71,7 @@ my %DIVISIONS =
   # CHILE => \&Tournaments::Chile::set_links
   # CZECH => \&Tournaments::Czech::set_links
   # DENMARK => \&Tournaments::Denmark::set_links
+  # ECUADOR => \&Tournaments::Ecuador::set_links
   # EUROADULT => \&Tournaments::EuroAdult::set_links
   # EUROYOUTH => \&Tournaments::EuroYouth::set_links
   # FINLAND => \&Tournaments::Finland::set_links
@@ -94,7 +98,7 @@ my %DIVISIONS =
   # SWITZERLAND => \&Tournaments::Switzerland::set_links
   # UK => \&Tournaments::UK::set_links
   # USA => \&Tournaments::USA::set_links
-  VENEZUELA => \&Tournaments::Venezuela::set_links
+  # VENEZUELA => \&Tournaments::Venezuela::set_links
   # WORLD => \&Tournaments::World::set_links
 );
 

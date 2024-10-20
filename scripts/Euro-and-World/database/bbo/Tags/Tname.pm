@@ -97,6 +97,9 @@ my @MULTI_WORDS =
   'Vilnius Open Pairs',
   'Vilnius Open Teams',
 
+  # BELARUS
+  'Belarusian Open Teams',
+
   # BELGIUM
   'Belgian Open Pairs',
   'Belgian Open Teams',
@@ -161,6 +164,9 @@ my @MULTI_WORDS =
   'Danish Open Trials',
   'Danish Women Pairs',
   'Vinoble Open',
+
+  # ECUADOR
+  'Ecuador Open Teams',
 
   # EUROPE
   "European Open Champions' Cup",
@@ -671,9 +677,6 @@ my @MULTI_WORDS =
   # Baltic
   'VV Cup',
 
-  # Belarus
-  'Belarusian Open Teams',
-
   # Belgium
   'Belisol Invitational Pairs',
 
@@ -755,10 +758,6 @@ my @MULTI_WORDS =
   # Denmark
   'Hecht Cup',
   'Prince Henrik Trophy',
-
-  # Ecuador
-  'Ecuador Open Team Trials',
-  'Ecuador Open Teams',
 
   # Egypt
   'Egyptian Cup',
@@ -1598,7 +1597,9 @@ my %MULTI_TYPOS =
   ### EEE
 
   'EcoSoft Cup' => ['eco soft cup'],
-  'Ecuador Open Teams' => ['ecuador teams champinonship'],
+  'Ecuador Open Teams' => [
+    'ecuador open team trials',
+    'ecuador teams champinonship'],
 
   # EGYPT
   'Egyptian Cup' => ['egy-cup', 'egypt cup', 'egypt-cup', 'egy cup',

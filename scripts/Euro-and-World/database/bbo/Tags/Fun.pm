@@ -767,7 +767,7 @@ my @SINGLE_WORDS = qw(
    Hiiimmm Hjerterdamer Hobbits Hollywood Holmenkollen Honeymoon 
    Hopfenkönig Hornet Huhu Hunhun Hurra Hybrid
 
-   Ikarus Imponderables Instructor 
+   Ikarus Imponderables Indi Instructor 
 
    Jernbaneverket JJJ Job Jocker JoJo Joker Journalists Jugermaister 
    Juice Jupiter Juubilar 
