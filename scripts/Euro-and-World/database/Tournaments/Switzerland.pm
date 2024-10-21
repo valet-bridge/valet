@@ -48,6 +48,35 @@ my %MEETS_SWITZERLAND =
 
 my %TOURNAMENTS_SWITZERLAND =
 (
+  'Jean Besse Cup' =>
+  {
+    ORGANIZATION => 'FSB',
+    COUNTRY => 'Switzerland',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'SEGMENT',
+            DATE_START => '2011-06-12',
+            DATE_END => '2011-06-12'
+          } 
+        }
+      },
+    }
+  },
+
   'Swiss Club Championship' =>
   {
     ORGANIZATION => 'FSB',

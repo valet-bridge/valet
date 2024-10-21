@@ -658,6 +658,485 @@ my %TOURNAMENTS_BRAZIL =
     }
   },
 
+  'Rio de Janeiro Open Teams',
+  {
+    ORGANIZATION => 'FBB',
+    COUNTRY => 'Brazil',
+    ORIGIN => 'National',
+    ZONE => 'South America',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2004' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2004,
+            major => 'SEGMENT',
+            DATE_START => '2004-09-05',
+            DATE_END => '2004-09-05'
+          } 
+        }
+      },
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-06-30',
+            DATE_END => '2009-07-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-07-01',
+            DATE_END => '2009-07-01'
+          } 
+        }
+      },
+    }
+  },
+
+  'Rio de Janeiro Christmas Individual',
+  {
+    ORGANIZATION => 'FBB',
+    COUNTRY => 'Brazil',
+    ORIGIN => 'National',
+    ZONE => 'South America',
+    FORM => 'Individual',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            DATE_START => '2009-12-17',
+            DATE_END => '2009-12-17'
+          } 
+        }
+      },
+    }
+  },
+
+  'Roberto Taunay Cup',
+  {
+    ORGANIZATION => 'FBB',
+    COUNTRY => 'Brazil',
+    ORIGIN => 'National',
+    ZONE => 'South America',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            major => 'SEGMENT',
+            DATE_START => '2009-11-10',
+            DATE_END => '2009-11-10'
+          } 
+        }
+      },
+    }
+  },
+
+  'Sao Paulo Cup',
+  {
+    ORGANIZATION => 'FBB',
+    COUNTRY => 'Brazil',
+    ORIGIN => 'National',
+    ZONE => 'South America',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2004' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2004-11-14',
+            DATE_END => '2004-11-16'
+          },
+        }
+      },
+      '2005' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2005-12-17',
+            DATE_END => '2005-12-17'
+          },
+        }
+      },
+      '2006' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2006-11-13',
+            DATE_END => '2006-11-13'
+          },
+        }
+      },
+      '2007' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-11-25',
+            DATE_END => '2007-11-25'
+          },
+        }
+      },
+      '2008' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-11-05',
+            DATE_END => '2008-11-05'
+          },
+        }
+      },
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-10-29',
+            DATE_END => '2010-10-30'
+          },
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-10-08',
+            DATE_END => '2011-10-09'
+          },
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-11-10',
+            DATE_END => '2012-11-11'
+          },
+        }
+      },
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-11-23',
+            DATE_END => '2013-11-23'
+          },
+        }
+      },
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-11-29',
+            DATE_END => '2014-11-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-12-06',
+            DATE_END => '2014-12-06'
+          } 
+        }
+      },
+    }
+  },
+
+  'Sao Paulo State Championship',
+  {
+    ORGANIZATION => 'FBB',
+    COUNTRY => 'Brazil',
+    ORIGIN => 'National',
+    ZONE => 'South America',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2004' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2004-06-21',
+            DATE_END => '2004-06-21'
+          } 
+        }
+      },
+      '2005' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2005-06-27',
+            DATE_END => '2005-06-27'
+          } 
+        }
+      },
+      '2006' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2006-07-03',
+            DATE_END => '2006-07-03'
+          } 
+        }
+      },
+      '2007' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-08-27',
+            DATE_END => '2007-08-27'
+          } 
+        }
+      },
+      '2008' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-07-16',
+            DATE_END => '2008-07-16'
+          } 
+        }
+      },
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-06-19',
+            DATE_END => '2009-06-21'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-06-18',
+            DATE_END => '2010-06-20'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-06-03',
+            DATE_END => '2011-06-05'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-06-23',
+            DATE_END => '2012-06-24'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-05-18',
+            DATE_END => '2013-05-19'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-06-11',
+            DATE_END => '2014-06-15'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-06-03',
+            DATE_END => '2015-06-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-06-13',
+            DATE_END => '2015-06-14'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-05-22',
+            DATE_END => '2016-05-22'
+          } 
+        }
+      },
+    }
+  },
+
 
 );
 

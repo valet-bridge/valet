@@ -110,6 +110,11 @@ my @MULTI_WORDS =
   'Brazilian Open Teams',
   'Brazilian Open Trials',
   'Brazilian Women Trials',
+  'Rio de Janeiro Open Teams',
+  'Rio de Janeiro Christmas Individual',
+  'Roberto Taunay Cup',
+  'Sao Paulo Cup',
+  'Sao Paulo State Championship',
 
   # BULGARIA
   'Albena Open Teams',
@@ -171,6 +176,10 @@ my @MULTI_WORDS =
 
   # ECUADOR
   'Ecuador Open Teams',
+
+  # EGYPT
+  'Egyptian Cup',
+  'Egyptian League',
 
   # EUROPE
   "European Open Champions' Cup",
@@ -375,6 +384,11 @@ my @MULTI_WORDS =
   'Italian U36 Teams',
   'Italian Women Cup',
 
+  # JORDAN
+  'Jordan Mixed Pairs',
+  'Jordan Open Pairs',
+  'Jordan Open Teams',
+
   # NEW ZEALAND
   'New Zealand Inter-Provincial Open Teams',
   'New Zealand Open Teams',
@@ -513,6 +527,7 @@ my @MULTI_WORDS =
   'Swedish Women Team Trials',
 
   # SWITZERLAND
+  'Jean Besse Cup',
   'Swiss Club Championship',
   'Swiss Cup',
   'Swiss Open IMP Pairs',
@@ -687,12 +702,6 @@ my @MULTI_WORDS =
   # Bolivia
   'Bolivian Open Teams',
 
-  # Brazil
-  'Rio de Janeiro Championship',
-  'Rio de Janeiro Christmas Individual',
-  'Roberto Taunay Cup',
-  'Sao Paulo State Championship',
-
   # Bulgaria
   'ARIS Cup',
   'Haskovski Mineralni Bani',
@@ -757,10 +766,6 @@ my @MULTI_WORDS =
   # Denmark
   'Hecht Cup',
   'Prince Henrik Trophy',
-
-  # Egypt
-  'Egyptian Cup',
-  'Egyptian League',
 
   # England
   'Garden Cities',
@@ -866,11 +871,6 @@ my @MULTI_WORDS =
   'NEC Cup',
   'Prince Takamatsu Cup',
   'Takamatsu Cup',
-
-  # Jordan
-  'Jordan Mixed Pairs',
-  'Jordan Open Pairs',
-  'Jordan Open Teams',
 
   # Lebanon
   'Lebanese Invitational Teams',
@@ -995,9 +995,6 @@ my @MULTI_WORDS =
   'Park Hotell Swiss Teams',
   'S:t Erik Championship Series',
   'Stena Line Cup',
-
-  # Switzerland
-  'Jean Besse Cup',
 
   # Taiwan
   'NTU Cup',
@@ -2698,7 +2695,9 @@ my %MULTI_TYPOS =
   'Rai Bahadur Modi Memorial All India Open' => [
     'rai bahadur modi memorial',
     'rai bahadur memorial'],
-  'Rio de Janeiro Championship' => ['rio de janeiro state final'],
+  'Rio de Janeiro Open Teams' => [
+    'rio de janeiro championship',
+    'rio de janeiro state final'],
   'Rio de Janeiro Christmas Individual' => [
     'rio de janeiro xmas individual'],
 
@@ -2768,10 +2767,18 @@ my %MULTI_TYPOS =
   'Salvador Assael IMP Pairs' => [
     "salvador assael imp's across the field"],
   'Samadhan Summer League' => ['samadhan bridge league'],
-  'Sao Paulo State Championship' => ['s o paulo cup', 'sao paulo champ',
-    'sao paulo championship', 'sao paulo champ', 'sao paulo cup',
-    'sao paulo state cup', 'são paulo cup', 'sap paulo state championship',
-    'são paulo state championship', 'sp champ', 'sao paulo state'],
+  'Sao Paulo Cup' => [
+    's o paulo cup', 
+    'sao paulo state cup', 
+    'são paulo cup'], 
+  'Sao Paulo State Championship' => [
+    'sao paulo champ',
+    'sao paulo championship', 
+    'sao paulo champ', 
+    'sap paulo state championship',
+    'são paulo state championship', 
+    'sp champ', 
+    'sao paulo state'],
   'Sarundajang Cup' => ['the sarundajang cup'],
   'Scottish Cup' => ['scot cup', 'scot cuo', 'scottish cup plate'],
   'Scottish National League' => ['scotland national league'],

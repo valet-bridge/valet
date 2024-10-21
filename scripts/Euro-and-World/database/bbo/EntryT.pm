@@ -443,6 +443,8 @@ my %FORM_CORRECTIONS = (
     25013,
     34854,
     46294],
+  'Rio de Janeiro Christmas Individual' => [
+    12205],
   'R N Bagla Memorial Pairs' => [
     19678],
   'Rondane Pairs Cup' => [
