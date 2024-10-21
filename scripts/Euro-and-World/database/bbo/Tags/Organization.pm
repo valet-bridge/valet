@@ -73,6 +73,7 @@ my %MULTI_TYPOS =
   IceBF => ['icelandic bridge federation'],
   IBU => ['irish bridge union'],
   JBA => ['j.b.a.', 'jordan bridge federation', 'j_b_a', 'j_ba'],
+  JCBL => ['japanese contract bridge league'],
   KSBA => ['karnataka state bridge association'],
   LaBF => ['latvian bridge federation'],
   LiBA => ['lithuanian bridge association'],

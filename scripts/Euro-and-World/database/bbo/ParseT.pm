@@ -40,6 +40,7 @@ use Tournaments::Brazil;
 # use Tournaments::Ireland;
 # use Tournaments::Israel;
 # use Tournaments::Italy;
+use Tournaments::Japan;
 # use Tournaments::Jordan;
 # use Tournaments::NewZealand;
 # use Tournaments::Nordic;
@@ -68,7 +69,7 @@ my %DIVISIONS =
   # BALTIC => \&Tournaments::Baltic::set_links
   # BELARUS => \&Tournaments::Belarus::set_links
   # BELGIUM => \&Tournaments::Belgium::set_links
-  BRAZIL => \&Tournaments::Brazil::set_links
+  # BRAZIL => \&Tournaments::Brazil::set_links
   # BULGARIA => \&Tournaments::Bulgaria::set_links
   # CANADA => \&Tournaments::Canada::set_links
   # CHILE => \&Tournaments::Chile::set_links
@@ -88,6 +89,7 @@ my %DIVISIONS =
   # IRELAND => \&Tournaments::Ireland::set_links
   # ISRAEL => \&Tournaments::Israel::set_links
   # ITALY => \&Tournaments::Italy::set_links
+  JAPAN => \&Tournaments::Japan::set_links
   # JORDAN => \&Tournaments::Jordan::set_links
   # NEWZEALAND => \&Tournaments::NewZealand::set_links
   # NORDIC => \&Tournaments::Nordic::set_links

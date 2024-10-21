@@ -384,6 +384,13 @@ my @MULTI_WORDS =
   'Italian U36 Teams',
   'Italian Women Cup',
 
+  # JAPAN
+  'Japanese District KO Teams',
+  'Japanese Open Trials',
+  'Kanto Teams',
+  'NEC Cup',
+  'Prince Takamatsu Cup',
+
   # JORDAN
   'Jordan Mixed Pairs',
   'Jordan Open Pairs',
@@ -863,14 +870,6 @@ my @MULTI_WORDS =
   'Torneo di Rastignano',
   'Torneo di Roma',
   'Toscana Cup',
-
-  # Japan
-  'Japanese District KO Teams',
-  'Japanese Open Trials',
-  'Kanto Teams',
-  'NEC Cup',
-  'Prince Takamatsu Cup',
-  'Takamatsu Cup',
 
   # Lebanon
   'Lebanese Invitational Teams',
@@ -2320,6 +2319,8 @@ my %MULTI_TYPOS =
     'n_ bhojwani cup',
     "otter's cup open",
     "otter's club open"],
+  'NEC Cup' => [
+    'nec cup bridge festival'],
   'Necmettin Sunget Teams Cup' => [
     'necmettin sunget teams',
     'necmettin sünget dörtlü',
@@ -2674,7 +2675,9 @@ my %MULTI_TYPOS =
     'pt_ timah limited invitational teams',
     'pt_ timah ltd invitational teams'],
   'PYC Hindu Gymkhana Pairs Royale' => ['pyc pairs royale'],
-  'Prince Takamatsu Cup' => ['prince takamatsu memorial cup'],
+  'Prince Takamatsu Cup' => [
+    'prince takamatsu memorial cup',
+    'takamatsu cup'],
 
   'Queensland Women Trials' => ['qld womens trials'],
   'Queensland Senior Trials' => [
@@ -3323,7 +3326,7 @@ my %SINGLE_TYPOS =
   'Southeast Asian Games' => ['seagames'],
   'Spingold Teams' => ['spingold'],
   'Swedish Elite Series' => ['elitserien'],
-  'Takamatsu Cup' => ['takamatsu'],
+  'Prince Takamatsu Cup' => ['takamatsu'],
   'Teltscher Trophy' => [ 
    'teltschertrophy', 
    'teltscher', 
