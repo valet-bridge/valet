@@ -306,10 +306,14 @@ my %MULTI_TYPOS =
     'interclub italian'],
   'Italy Cup' => ['coppa italia'],
 
-  'Jordan Bridge Festival' => ['jordab festival', 'jordan b_ festival',
-    'jordan bridge f estival', 'jordan bridge tournament spring festival',
+  'Jordan Bridge Festival' => [
+    'jordab festival', 
+    'jordan b_ festival',
+    'jordan bridge f estival', 
+    'jordan bridge tournament spring festival',
     'jordan bridge tournament ( spring festival)',
-    'jordan bridge tournament (spring festival)'],
+    'jordan bridge tournament (spring festival)',
+    'jordan spring tournament'],
   'Jyvaskala Easter Bridge Festival' => ['easter bridge trophy'],
 
   'Krakow Congress' => ['krakow meeting'],

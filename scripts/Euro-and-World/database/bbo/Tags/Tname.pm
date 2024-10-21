@@ -144,6 +144,10 @@ my @MULTI_WORDS =
   'Chilean Women Teams',
   'Chilean Women Trials',
 
+  # CHINESE TAIPEI
+  'Antonio Chong Cup',
+  'Chinese Taipei Open Trials',
+
   # CZECH
   'Czech First League',
   'Czech Open',
@@ -745,10 +749,6 @@ my @MULTI_WORDS =
   'Yeh Bros Cup',
   'Zhejiang Huamen Cup',
 
-  # Chinese Taipei
-  'Antonio Chong Cup',
-  'Chinese Taipei Open Trials',
-
   # Croatia
   'Atlantic Trade Bridge Cup',
   'Samobor Invitational Bridge Meeting',
@@ -868,9 +868,9 @@ my @MULTI_WORDS =
   'Takamatsu Cup',
 
   # Jordan
-  'Jordan Spring Mixed Pairs',
-  'Jordan Spring Tournament',
-  'Jordanese Open Pairs',
+  'Jordan Mixed Pairs',
+  'Jordan Open Pairs',
+  'Jordan Open Teams',
 
   # Lebanon
   'Lebanese Invitational Teams',
@@ -2151,7 +2151,11 @@ my %MULTI_TYPOS =
   'Jean Besse Cup' => ['cup jean besse', 'cup jean besser'],
   "Jessheim New Year's Cup" => ['jessheim new years cup',
     'jesshiem new years cup', 'jessheim new years cup swiss teams'],
-  'Jordan Spring Mixed Pairs' => ['jordan spring mix pairs'],
+  'Jordan Open Pairs' => [
+    'jordanese open pairs'],
+  'Jordan Mixed Pairs' => [
+    'jordan spring mix pairs',
+    'jordan spring mixed pairs'],
   'Józef Pochron Jubilee Pairs' => [
     'around 52 cards in 80 years by joe pochron'],
   'JP Morgan Inter-City Championship' => [
