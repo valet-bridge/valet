@@ -89,6 +89,9 @@ my @MULTI_WORDS =
   'Victorian Youth Trials',
   'Watermark Open Teams',
 
+  # AUSTRIA
+  'Austrian Open Teams',
+
   # BALTIC (Estonia, Latvia, Lithuania)
   'Baltic Open Teams',
   'Estonian First League',
@@ -161,6 +164,10 @@ my @MULTI_WORDS =
   # CHINESE TAIPEI
   'Antonio Chong Cup',
   'Chinese Taipei Open Trials',
+
+  # CROATIA
+  'Atlantic Trade Bridge Cup',
+  'Samobor Open Teams',
 
   # CZECH
   'Czech First League',
@@ -701,9 +708,6 @@ my @MULTI_WORDS =
   'BFAME Friendship Pairs',
   'Pan Arab Inter-Club Championship',
 
-  # Austria
-  'Austrian Team Championship',
-
   # Balkan
   'Balkan Championship',
   'Balkan Intercity Cup',
@@ -770,10 +774,6 @@ my @MULTI_WORDS =
   'Xinyuan Cup',
   'Yeh Bros Cup',
   'Zhejiang Huamen Cup',
-
-  # Croatia
-  'Atlantic Trade Bridge Cup',
-  'Samobor Invitational Bridge Meeting',
 
   # England
   'Garden Cities',
@@ -1248,7 +1248,9 @@ my %MULTI_TYPOS =
   'Australian Youth Tri Individual' => ['youth tri individual'],
   'Australian Youth Tri Pairs' => ['youth triathlon pairs'],
 
-  'Austrian Team Championship' => ['austrian team championships'],
+  'Austrian Open Teams' => [
+    'austrian team championship',
+    'austrian team championships'],
   'Avia Inter-City Championship' => [
     'avia inter-city bridge championships'],
 
