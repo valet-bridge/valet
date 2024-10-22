@@ -234,6 +234,35 @@ my %TOURNAMENTS_BELGIUM =
     }
   },
 
+  'Belisol Invitational Pairs',
+  {
+    ORGANIZATION => 'RBBF',
+    COUNTRY => 'Belgium',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2007' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'ROUND',
+            DATE_START => '2007-04-16',
+            DATE_END => '2007-04-16'
+          } 
+        }
+      },
+    }
+  },
+
 );
 
 
