@@ -783,7 +783,7 @@ my @MULTI_WORDS =
   "Champions' Cup",
 
   # Faroe Islands
-  'Faroese Teams',
+  'Faroese Open Teams',
 
   # Finland
   'Hanko Teams',
@@ -1722,8 +1722,10 @@ my %MULTI_TYPOS =
 
   ### FFF
 
-  'Faroese Teams' => ['faroese tc', 'faroese open teams', 'faroese tc',
-    'faroese team championships'],
+  'Faroese Open Teams' => [
+    'faroese tc', 
+    'faroese team championships',
+    'faroese teams'],
   'Filbyter Cup' => ['filbyer cup'],
 
   # FINLAND
