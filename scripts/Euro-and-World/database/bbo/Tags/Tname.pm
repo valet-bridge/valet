@@ -46,6 +46,7 @@ my @MULTI_WORDS =
   'Mar del Plata Open Teams',
 
   # AUSTRALIA
+  'Altman Swiss Pairs',
   'Australian Autumn National Open Teams',
   'Australian Grand National Open Teams',
   'Australian Junior Teams',
@@ -66,6 +67,9 @@ my @MULTI_WORDS =
   'Australian Youth Tri Teams',
   'Bobby Evans Senior Teams',
   'Cliff Wake Challenge',
+  "Hans Rosendorff Memorial Women's Teams",
+  'John Arkinstall State Teams',
+  'Kings and Queens Blaine Howe Teams',
   "Linda Stern Women's Teams",
   'New South Wales Open Teams',
   'New South Wales Open Trials',
@@ -73,6 +77,9 @@ my @MULTI_WORDS =
   'Northern Territory Gold Teams',
   'Queensland Women Trials',
   'Queensland Senior Trials',
+  'Smirnov Cup',
+  'Victor Swiss Pairs',
+  'Victor Open Teams',
   'Victoria Cup',
   'Victorian Mixed Teams',
   'Victorian Open Trials',
@@ -80,6 +87,7 @@ my @MULTI_WORDS =
   'Victorian Senior Trials',
   'Victorian Women Trials',
   'Victorian Youth Trials',
+  'Watermark Open Teams',
 
   # BALTIC (Estonia, Latvia, Lithuania)
   'Baltic Open Teams',
@@ -104,6 +112,7 @@ my @MULTI_WORDS =
   'Belgian Open Pairs',
   'Belgian Open Teams',
   'Belgian Open Trials',
+  'Belisol Invitational Pairs',
 
   # BRAZIL
   'Brazilian Senior Trials',
@@ -255,6 +264,9 @@ my @MULTI_WORDS =
   'Greek Women Trials',
 
   # HUNGARY
+  'Balaton Invitational Teams',
+  'Balatonföldvár Open Teams',
+  'EcoSoft Cup',
   'Hungarian Cup',
   'Hungarian IMP Pairs',
   'Hungarian Open Pairs',
@@ -397,6 +409,9 @@ my @MULTI_WORDS =
   'Jordan Mixed Pairs',
   'Jordan Open Pairs',
   'Jordan Open Teams',
+
+  # LEBANON
+  'Lebanese Invitational Teams',
 
   # NEW ZEALAND
   'New Zealand Inter-Provincial Open Teams',
@@ -686,16 +701,6 @@ my @MULTI_WORDS =
   'BFAME Friendship Pairs',
   'Pan Arab Inter-Club Championship',
 
-  # Australia
-  'Altman Swiss Pairs',
-  "Hans Rosendorff Memorial Women's Teams",
-  'John Arkinstall State Teams',
-  'Kings and Queens Blaine Howe Teams',
-  'Smirnov Cup',
-  'Victor Champion Cup',
-  'Watermark Bridge Classic',
-  'Willoughby Bridge Classic',
-
   # Austria
   'Austrian Team Championship',
 
@@ -706,9 +711,6 @@ my @MULTI_WORDS =
 
   # Baltic
   'VV Cup',
-
-  # Belgium
-  'Belisol Invitational Pairs',
 
   # Bolivia
   'Bolivian Open Teams',
@@ -773,7 +775,6 @@ my @MULTI_WORDS =
   'Atlantic Trade Bridge Cup',
   'Samobor Invitational Bridge Meeting',
 
-
   # England
   'Garden Cities',
   'Higson Cup',
@@ -814,10 +815,6 @@ my @MULTI_WORDS =
   'Hong Kong Inter-City',
   'JP Morgan Inter-City Championship',
 
-  # Hungary
-  'Balaton Invitational Teams',
-  'Balatonfoldvar Teams',
-  'EcoSoft Cup',
 
   # India
   'Ashok Kapur Memorial Swiss Pairs',
@@ -870,9 +867,6 @@ my @MULTI_WORDS =
   'Torneo di Rastignano',
   'Torneo di Roma',
   'Toscana Cup',
-
-  # Lebanon
-  'Lebanese Invitational Teams',
 
   # Monaco
   'Patton de Monaco',
@@ -1265,6 +1259,8 @@ my %MULTI_TYPOS =
   'Balaton Invitational Teams' => [
     'balaton international teams',
     'balaton invitation teams'],
+  'Balatonföldvár Open Teams' => [
+    'balatonfoldvar teams'],
   'Balkan Championship' => ['balkan bridge ch', 
     'balkanbridge championship', 'balkan championships',
     'balkan bridge championship'],
@@ -3190,7 +3186,10 @@ my %MULTI_TYPOS =
     'wagar womens ko'],
   'Warsaw Online Teams' => ['enthusiast bridge zlot', 
     'warsaw bboers champ', 'warsaw bboers championship'],
-  'Watermark Bridge Classic' => ['watermark teams'],
+  'Watermark Open Teams' => [
+    'watermark bridge classic',
+    'watermark teams',
+    'willoughby bridge classic'],
   'WCG Open' => ['wcg annual'],
   'Wellingdon Swiss Pairs' => ['wsc open swiss pairs championship',
     'wsc open swisspairs championship', 'wsc swiss open pairs'],
@@ -3350,7 +3349,6 @@ my %SINGLE_TYPOS =
     'vandebilt', 
     'vandy'],
   'Venice Cup' => ['vc', 'venice'],
-  'Victor Champion Cup' => ['vcc'],
   'Victorian Pennant' => ['pennant'],
   'Vilnius Club Pairs' => ['vbk'],
   'Wagar Teams' => ['wagar'],

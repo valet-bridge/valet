@@ -771,10 +771,391 @@ my %MEETS_AUSTRALIA =
       },
     }
   },
+
+  'Victor Champion Cup' =>
+  {
+    ORGANIZATION => 'AuBF',
+    COUNTRY => 'Australia',
+    ORIGIN => 'National',
+    ZONE => 'South Pacific',
+
+    EDITIONS =>
+    {
+      '2004' =>
+      {
+        # https://www.abfevents.com.au/events/vcc/2004/
+        CITY => 'Melbourne',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2004,
+            DATE_START => '2004-06-10',
+            DATE_END => '2004-06-14'
+          },
+        }
+      },
+      '2005' =>
+      {
+        # https://www.abfevents.com.au/events/vcc/2005/
+        CITY => 'Melbourne',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2005,
+            DATE_START => '2005-06-09',
+            DATE_END => '2005-06-13'
+          },
+        }
+      },
+      '2006' =>
+      {
+        # https://www.abfevents.com.au/events/vcc/2006/
+        CITY => 'Melbourne',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            DATE_START => '2006-06-08',
+            DATE_END => '2006-06-12'
+          },
+        }
+      },
+      '2007' =>
+      {
+        # https://www.abfevents.com.au/events/vcc/2007/
+        CITY => 'Melbourne',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-06-07',
+            DATE_END => '2007-06-11'
+          },
+        }
+      },
+      '2008' =>
+      {
+        # https://www.abfevents.com.au/events/vcc/2008/
+        CITY => 'Melbourne',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-06-05',
+            DATE_END => '2008-06-09'
+          },
+        }
+      },
+      '2009' =>
+      {
+        # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=09VCCC&header=abf
+        CITY => 'Melbourne',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2010-06-04',
+            DATE_END => '2010-06-08'
+          },
+        }
+      },
+      '2010' =>
+      {
+        # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=vccc10&header=abf
+        CITY => 'Melbourne',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-06-10',
+            DATE_END => '2010-06-14'
+          },
+        }
+      },
+      '2011' =>
+      {
+        # https://abfevents.com.au/events/results/results.asp?yr=2011&dir=vcc
+        CITY => 'Melbourne',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-06-09',
+            DATE_END => '2011-06-13'
+          },
+        }
+      },
+      '2012' =>
+      {
+        CITY => 'Melbourne',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-06-07',
+            DATE_END => '2012-06-11'
+          },
+        }
+      },
+      '2013' =>
+      {
+        # https://www.abfevents.com.au/events/vcc/2013/
+        CITY => 'Melbourne',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-06-06',
+            DATE_END => '2013-06-10'
+          },
+        }
+      },
+      '2014' =>
+      {
+        # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?header=abf&code=14VCCC
+        CITY => 'Melbourne',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-06-05',
+            DATE_END => '2014-06-09'
+          },
+        }
+      },
+      '2015' =>
+      {
+        # https://abfevents.com.au/events/results/results.asp?yr=2015&dir=vcc
+        CITY => 'Melbourne',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-06-04',
+            DATE_END => '2015-06-08'
+          },
+        }
+      },
+      '2016' =>
+      {
+        # https://www.abfevents.com.au/events/vcc/2016/
+        CITY => 'Melbourne',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-06-09',
+            DATE_END => '2016-06-13'
+          },
+        }
+      },
+      '2017' =>
+      {
+        # https://www.abfevents.com.au/events/vcc/2017/
+        CITY => 'Melbourne',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-06-08',
+            DATE_END => '2017-06-12'
+          },
+        }
+      },
+      '2018' =>
+      {
+        # https://www.abfevents.com.au/events/vcc/2018/
+        CITY => 'Melbourne',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-06-07',
+            DATE_END => '2018-07-11'
+          },
+        }
+      },
+      '2019' =>
+      {
+        # https://www.abfevents.com.au/events/vcc/2019/
+        CITY => 'Melbourne',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-06-06',
+            DATE_END => '2019-06-10'
+          },
+        }
+      },
+      '2020' =>
+      {
+        # https://www.abf.com.au/event/2020-victor-champion-cup/
+        # https://www.abfevents.com.au/events/vcc/2020/
+        CITY => 'Melbourne',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-06-04',
+            DATE_END => '2020-06-08'
+          },
+        }
+      },
+      '2021' =>
+      {
+        # https://www.abf.com.au/event/2021-victor-champion-cup/
+        CITY => 'Melbourne',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-08-26',
+            DATE_END => '2021-08-29'
+          },
+        }
+      },
+      '2022' =>
+      {
+        # https://www.abf.com.au/event/2022-victor-champion-cup/
+        CITY => 'Melbourne',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-09-06',
+            DATE_END => '2022-09-13'
+          },
+        }
+      },
+      '2023' =>
+      {
+        # https://www.abf.com.au/event/2023-victor-champion-cup/
+        CITY => 'Moonee Ponds',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-06-08',
+            DATE_END => '2023-06-12'
+          },
+        }
+      },
+      '2024' =>
+      {
+        # https://www.abf.com.au/event/2024-victor-champion-cup/
+        CITY => 'Moonee Ponds',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-06-06',
+            DATE_END => '2024-06-10'
+          },
+        }
+      },
+    }
+  },
 );
 
 my %TOURNAMENTS_AUSTRALIA =
 (
+  'Eksempel',
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2000-05-14',
+            DATE_END => '2000-05-14'
+          },
+        }
+      },
+    }
+  },
+
+  'Altman Swiss Pairs',
+  {
+    ORGANIZATION => 'AuBF',
+    COUNTRY => 'Australia',
+    ORIGIN => 'National',
+    ZONE => 'South Pacific',
+    FORM => 'Pairs',
+    MOVEMENT => 'Swiss',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-04-13',
+            DATE_END => '2011-04-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-04-20',
+            DATE_END => '2011-04-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-04-27',
+            DATE_END => '2011-04-27'
+          },
+          'C3' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-05-04',
+            DATE_END => '2011-05-04'
+          },
+        }
+      },
+    }
+  },
+
   'Australian Autumn National Open Teams',
   {
     FORM => 'Teams',
@@ -2888,6 +3269,98 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
+      '2011' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-10-21',
+            DATE_END => '2011-10-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-10-22',
+            DATE_END => '2011-10-22'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-10-27',
+            DATE_END => '2012-10-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-10-28',
+            DATE_END => '2012-10-28'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-10-26',
+            DATE_END => '2013-10-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-10-27',
+            DATE_END => '2013-10-27'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-11-01',
+            DATE_END => '2014-11-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-11-02',
+            DATE_END => '2014-11-02'
+          } 
+        }
+      },
       '2015' =>
       {
         MEET => 'Australian Spring Nationals',
@@ -2927,6 +3400,21 @@ my %TOURNAMENTS_AUSTRALIA =
 
     EDITIONS =>
     {
+      '2007' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-11-05',
+            DATE_END => '2007-11-05'
+          } 
+        }
+      },
       '2008' =>
       {
         MEET => 'Australian Spring Nationals',
@@ -2952,7 +3440,7 @@ my %TOURNAMENTS_AUSTRALIA =
             YEAR => 2009,
             STAGE => 'Final',
             major => 'SEGMENT',
-            DATE_START => '2009-10-29',
+            DATE_START => '2009-10-28',
             DATE_END => '2009-10-29'
           } 
         }
@@ -3003,6 +3491,21 @@ my %TOURNAMENTS_AUSTRALIA =
 
     EDITIONS =>
     {
+      '2007' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-11-05',
+            DATE_END => '2007-11-05'
+          } 
+        }
+      },
       '2008' =>
       {
         MEET => 'Australian Spring Nationals',
@@ -3832,6 +4335,120 @@ my %TOURNAMENTS_AUSTRALIA =
     }
   },
 
+  "Hans Rosendorff Memorial Women's Teams",
+  {
+    ORGANIZATION => 'AuBF',
+    COUNTRY => 'Australia',
+    ORIGIN => 'National',
+    ZONE => 'South Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            major => 'ROUND',
+            DATE_START => '2009-09-27',
+            DATE_END => '2009-09-28'
+          },
+        }
+      },
+    }
+  },
+
+  'John Arkinstall State Teams',
+  {
+    ORGANIZATION => 'AuBF',
+    COUNTRY => 'Australia',
+    ORIGIN => 'Regional',
+    ZONE => 'South Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-12-10',
+            DATE_END => '2011-12-10'
+          },
+        }
+      },
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-12-14',
+            DATE_END => '2014-12-14'
+          },
+        }
+      },
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-12-13',
+            DATE_END => '2015-12-13'
+          },
+        }
+      },
+    }
+  },
+
+  'Kings and Queens Blaine Howe Teams',
+  {
+    ORGANIZATION => 'AuBF',
+    COUNTRY => 'Australia',
+    ORIGIN => 'Regional',
+    ZONE => 'South Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            major => 'ROUND',
+            DATE_START => '2012-12-30',
+            DATE_END => '2012-12-30'
+          },
+        }
+      },
+    }
+  },
+
   "Linda Stern Women's Teams" =>
   {
     FORM => 'Teams',
@@ -4086,6 +4703,255 @@ my %TOURNAMENTS_AUSTRALIA =
             major => 'ROUND',
             DATE_START => '2011-05-20',
             DATE_END => '2011-05-21'
+          } 
+        }
+      },
+    }
+  },
+
+  'Smirnov Cup',
+  {
+    ORGANIZATION => 'AuBF',
+    COUNTRY => 'Australia',
+    ORIGIN => 'Regional',
+    ZONE => 'South Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            major => 'ROUND',
+            DATE_START => '2012-05-05',
+            DATE_END => '2012-05-06'
+          },
+        }
+      },
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            major => 'ROUND',
+            DATE_START => '2013-06-29',
+            DATE_END => '2013-06-30'
+          },
+        }
+      },
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'ROUND',
+            DATE_START => '2014-05-24',
+            DATE_END => '2014-05-25'
+          },
+        }
+      },
+    }
+  },
+
+  'Victor Swiss Pairs',
+  {
+    FORM => 'Pairs',
+    MOVEMENT => 'Swiss',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2004' =>
+      {
+        MEET => 'Victor Champion Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            major => 'SESSION',
+            DATE_START => '2013-06-07',
+            DATE_END => '2013-06-07'
+          } 
+        }
+      },
+    }
+  },
+
+  'Victor Open Teams',
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2004' =>
+      {
+        MEET => 'Victor Champion Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2004,
+            major => 'ROUND',
+            DATE_START => '2004-06-13',
+            DATE_END => '2004-06-13'
+          } 
+        }
+      },
+      '2007' =>
+      {
+        MEET => 'Victor Champion Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'MATCH',
+            DATE_START => '2007-06-10',
+            DATE_END => '2007-06-10'
+          } 
+        }
+      },
+      '2008' =>
+      {
+        MEET => 'Victor Champion Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            major => 'ROUND',
+            DATE_START => '2008-06-08',
+            DATE_END => '2008-06-08'
+          } 
+        }
+      },
+      '2009' =>
+      {
+        MEET => 'Victor Champion Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            major => 'MATCH',
+            DATE_START => '2009-06-06',
+            DATE_END => '2009-06-07'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'Victor Champion Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            DATE_START => '2010-06-12',
+            DATE_END => '2011-06-13'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Victor Champion Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-06-11',
+            DATE_END => '2011-06-12'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'Victor Champion Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            major => 'ROUND',
+            DATE_START => '2012-06-09',
+            DATE_END => '2012-06-11'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'Victor Champion Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            major => 'ROUND',
+            DATE_START => '2013-06-08',
+            DATE_END => '2013-06-10'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Victor Champion Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'ROUND',
+            DATE_START => '2014-06-07',
+            DATE_END => '2014-06-09'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Victor Champion Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'ROUND',
+            DATE_START => '2015-06-06',
+            DATE_END => '2015-06-08'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Victor Champion Cup',
+        MOVEMENT => 'Swiss',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND',
+            DATE_START => '2016-06-11',
+            DATE_END => '2016-06-13'
           } 
         }
       },
@@ -4586,6 +5452,109 @@ my %TOURNAMENTS_AUSTRALIA =
             DATE_START => '2013-05-25',
             DATE_END => '2013-05-25'
           } 
+        }
+      },
+    }
+  },
+
+  'Watermark Open Teams',
+  {
+    # https://nsw.bridgeaustralia.org/resultslistbm.asp
+    ORGANIZATION => 'AuBF',
+    COUNTRY => 'Australia',
+    ORIGIN => 'Regional',
+    ZONE => 'South Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2009-06-26',
+            DATE_END => '2009-06-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-06-27',
+            DATE_END => '2009-06-28'
+          },
+        }
+      },
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2010-06-25',
+            DATE_END => '2010-06-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-06-26',
+            DATE_END => '2010-06-27'
+          },
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-07-14',
+            DATE_END => '2011-07-14'
+          },
+        }
+      },
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-04-24',
+            DATE_END => '2014-04-24'
+          },
+        }
+      },
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-04-23',
+            DATE_END => '2015-04-23'
+          },
         }
       },
     }
