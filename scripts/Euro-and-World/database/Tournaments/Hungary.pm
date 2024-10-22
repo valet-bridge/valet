@@ -20,6 +20,204 @@ my %MEETS_HUNGARY =
 
 my %TOURNAMENTS_HUNGARY =
 (
+  'Balaton Invitational Teams',
+  {
+    ORGANIZATION => 'MBSZ',
+    COUNTRY => 'Hungary',
+    LOCALITY => 'Balaton',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2013-12-06',
+            DATE_END => '2013-12-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-12-08',
+            DATE_END => '2013-12-08'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2014-05-15',
+            DATE_END => '2014-05-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            DATE_START => '2014-05-18',
+            DATE_END => '2014-05-18'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            DATE_START => '2014-05-18',
+            DATE_END => '2014-05-18'
+          } 
+        }
+      },
+    }
+  },
+
+  'Balatonföldvár Open Teams',
+  {
+    ORGANIZATION => 'MBSZ',
+    COUNTRY => 'Hungary',
+    CITY => 'Balatonföldvár',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-05-01',
+            DATE_END => '2010-05-01'
+          } 
+        }
+      },
+    }
+  },
+
+  'EcoSoft Cup',
+  {
+    ORGANIZATION => 'MBSZ',
+    COUNTRY => 'Hungary',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-04-30',
+            DATE_END => '2011-04-30'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-05-27',
+            DATE_END => '2012-05-27'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-05-19',
+            DATE_END => '2013-05-19'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-06-08',
+            DATE_END => '2014-06-08'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-05-24',
+            DATE_END => '2015-05-24'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-05-15',
+            DATE_END => '2016-05-15'
+          } 
+        }
+      },
+    }
+  },
+
   'Hungarian Cup',
   {
     ORGANIZATION => 'MBSZ',
