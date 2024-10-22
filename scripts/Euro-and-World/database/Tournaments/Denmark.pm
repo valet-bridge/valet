@@ -1126,7 +1126,8 @@ my %TOURNAMENTS_DENMARK =
             CITY => 'Copenhagen',
             WEEKEND => 5,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'MATCH',
+            minor => 'SEGMENT',
             DATE_START => '2013-04-06',
             DATE_END => '2013-04-06'
           },
@@ -2527,6 +2528,136 @@ my %TOURNAMENTS_DENMARK =
             DATE_START => '2014-07-11',
             DATE_END => '2014-07-12'
           } 
+        }
+      }
+    }
+  },
+
+  'Hecht Cup',
+  {
+    ORGANIZATION => 'DBF',
+    COUNTRY => 'Denmark',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2004' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2004,
+            SCORING => 'MP',
+            DATE_START => '2004-09-27',
+            DATE_END => '2004-09-27'
+          },
+        }
+      },
+      '2005' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2005,
+            SCORING => 'MP',
+            DATE_START => '2005-09-28',
+            DATE_END => '2005-09-28'
+          },
+        }
+      },
+      '2006' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2006,
+            SCORING => 'IMP',
+            DATE_START => '2006-09-11',
+            DATE_END => '2006-09-11'
+          },
+        }
+      },
+      '2007' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2007,
+            SCORING => 'MP',
+            DATE_START => '2007-09-20',
+            DATE_END => '2007-09-20'
+          },
+        }
+      }
+    }
+  },
+
+  'Prince Henrik Trophy',
+  {
+    ORGANIZATION => 'DBF',
+    COUNTRY => 'Denmark',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2004' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Semifinal',
+            major => 'SESSION',
+            minor => 'SEGMENT',
+            DATE_START => '2004-10-08',
+            DATE_END => '2004-10-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Final',
+            major => 'SESSION',
+            minor => 'SEGMENT',
+            DATE_START => '2004-10-08',
+            DATE_END => '2004-10-08'
+          },
+        }
+      },
+      '2005' =>
+      {
+        CHAPTERS => 
+        {
+          # Really SEGMENT
+          'C0' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Semifinal',
+            major => 'SESSION',
+            DATE_START => '2005-04-01',
+            DATE_END => '2005-04-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2005-04-01',
+            DATE_END => '2005-04-01'
+          },
         }
       }
     }

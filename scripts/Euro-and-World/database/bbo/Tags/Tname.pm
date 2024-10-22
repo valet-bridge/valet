@@ -172,6 +172,8 @@ my @MULTI_WORDS =
   'Danish Open Teams',
   'Danish Open Trials',
   'Danish Women Pairs',
+  'Hecht Cup',
+  'Prince Henrik Trophy',
   'Vinoble Open',
 
   # ECUADOR
@@ -771,10 +773,6 @@ my @MULTI_WORDS =
   'Atlantic Trade Bridge Cup',
   'Samobor Invitational Bridge Meeting',
 
-
-  # Denmark
-  'Hecht Cup',
-  'Prince Henrik Trophy',
 
   # England
   'Garden Cities',
