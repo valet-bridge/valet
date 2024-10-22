@@ -37,6 +37,7 @@ my %MULTI_TYPOS =
   BrBaOn => ['bridge base online'],
   BSS => ['bridž savez srbije'],
   BuBF => ['bulgarian bridge federation'],
+  BZS => ['bridge zveza slovenije'],
   CACBF => ['central american and caribbean bridge federation'],
   'CBA WZ' => ['Contract Bridge Association West Zone', 'cbz wz'],
   CBAI => ['contract bridge association of ireland'],

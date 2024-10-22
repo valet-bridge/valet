@@ -420,6 +420,10 @@ my @MULTI_WORDS =
   # LEBANON
   'Lebanese Invitational Teams',
 
+  # MONACO
+  'Patton de Monaco',
+  'Prince Albert II Cup',
+
   # NEW ZEALAND
   'New Zealand Inter-Provincial Open Teams',
   'New Zealand Open Teams',
@@ -524,6 +528,9 @@ my @MULTI_WORDS =
   'Serbian Open Teams',
   'Serbian Open Trials',
   'Serbian Premier League',
+
+  # SLOVAKIA
+  'Slovakian Open Teams',
 
   # SOUTH AMERICA
   'South American Junior Teams',
@@ -868,10 +875,6 @@ my @MULTI_WORDS =
   'Torneo di Roma',
   'Toscana Cup',
 
-  # Monaco
-  'Patton de Monaco',
-  'Prince Albert II Cup',
-
   # New Zealand
   'Centre Island Teams',
 
@@ -944,9 +947,6 @@ my @MULTI_WORDS =
 
   # Singapore
   'Singapore Open Teams',
-
-  # Slovakia
-  'Slovakian Open Teams',
 
   # South Africa
   'FullBridge International Teams',

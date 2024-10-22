@@ -138,6 +138,7 @@ my %FORM_CORRECTIONS = (
     21303,
     31483, 31484],
   'Belgian Open Pairs' => [3075, 3076, 9813, 9824, 18125,18133],
+  'Belisol Invitational Pairs' => [4095, 4096],
   'Chilean Cup' => [26199, 26218, 26237, 26265],
   'Chilean Open Pairs' => [31502, 31503],
   'Copenhagen Invitational Pairs' => [36915, 36941, 36954],
@@ -273,6 +274,11 @@ my %FORM_CORRECTIONS = (
     34116, 34117, 34121, 34123, 34129, 34132, 34133,
     44699, 44700, 44702, 44704, 44709, 44710, 44723, 44724,
     44730, 44731, 44736, 44737, 44738, 44739, 44764, 44765, 44766],
+  'Hecht Cup' => [
+      587,   588,   589,   590,
+     4097,  4098,  4099,  4100,  4101,
+     5843,  5844,  5845,  5846,  5847,
+     8676,  8677,  8678,  8679],
   'Hungarian IMP Pairs' => [
      1113,  1117,  1126,
     12005, 12016],
@@ -737,6 +743,13 @@ sub fix_some_fields
       delete $self->{TITLE_ORDINAL};
     }
   }
+
+  if ($self->field('TITLE_TNAME') =~ 'Patton' &&
+      $self->field('SCORING') eq 'IMP')
+  {
+    delete $self->{SCORING};
+    push @{$self->{SCORING}}, 'Patton';
+  }
 }
 
 
@@ -879,7 +892,7 @@ sub match_letter_to_number
 {
   my ($self) = @_;
 
-  for my $field (qw(TITLE_MATCH EVENT_MATCH))
+  for my $field (qw(TITLE_MATCH EVENT_MATCH EVENT_SESSION))
   {
     next unless defined $self->{$field};
     my $len = $#{$self->{$field}};

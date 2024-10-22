@@ -17,19 +17,22 @@ use EntryT;
 # use Tournaments::Africa;
 # use Tournaments::Argentina;
 # use Tournaments::Australia;
+# use Tournaments::Austria;
 # use Tournaments::Baltic;
 # use Tournaments::Belarus;
 # use Tournaments::Belgium;
-use Tournaments::Brazil;
+# use Tournaments::Brazil;
 # use Tournaments::Bulgaria;
 # use Tournaments::Canada;
 # use Tournaments::Chile;
 # use Tournaments::Czech;
+# use Tournaments::Croatia;
 # use Tournaments::Denmark;
 # use Tournaments::Ecuador;
 # use Tournaments::Egypt;
 # use Tournaments::EuroAdult;
 # use Tournaments::EuroYouth;
+# use Tournaments::Faroe;
 # use Tournaments::Finland;
 # use Tournaments::Germany;
 # use Tournaments::Greece;
@@ -42,13 +45,16 @@ use Tournaments::Brazil;
 # use Tournaments::Italy;
 # use Tournaments::Japan;
 # use Tournaments::Jordan;
+# use Tournaments::Lebanon;
+# use Tournaments::Monaco;
 # use Tournaments::NewZealand;
 # use Tournaments::Nordic;
 # use Tournaments::Norway;
 # use Tournaments::Poland;
-use Tournaments::Portugal;
+# use Tournaments::Portugal;
 # use Tournaments::Romania;
 # use Tournaments::Serbia;
+use Tournaments::Slovakia;
 # use Tournaments::SouthAmerica;
 # use Tournaments::Spain;
 # use Tournaments::Sweden;
@@ -66,6 +72,7 @@ my %DIVISIONS =
   # AFRICA => \&Tournaments::Africa::set_links
   # ARGENTINA => \&Tournaments::Argentina::set_links
   # AUSTRALIA => \&Tournaments::Australia::set_links
+  # AUSTRIA => \&Tournaments::Austria::set_links
   # BALTIC => \&Tournaments::Baltic::set_links
   # BELARUS => \&Tournaments::Belarus::set_links
   # BELGIUM => \&Tournaments::Belgium::set_links
@@ -74,11 +81,13 @@ my %DIVISIONS =
   # CANADA => \&Tournaments::Canada::set_links
   # CHILE => \&Tournaments::Chile::set_links
   # CZECH => \&Tournaments::Czech::set_links
+  # CROATIA => \&Tournaments::Croatia::set_links
   # DENMARK => \&Tournaments::Denmark::set_links
   # ECUADOR => \&Tournaments::Ecuador::set_links
   # EGYPT => \&Tournaments::Egypt::set_links
   # EUROADULT => \&Tournaments::EuroAdult::set_links
   # EUROYOUTH => \&Tournaments::EuroYouth::set_links
+  # FAROE => \&Tournaments::Faroe::set_links
   # FINLAND => \&Tournaments::Finland::set_links
   # GERMANY => \&Tournaments::Germany::set_links
   # GREECE => \&Tournaments::Greece::set_links
@@ -91,13 +100,16 @@ my %DIVISIONS =
   # ITALY => \&Tournaments::Italy::set_links
   # JAPAN => \&Tournaments::Japan::set_links
   # JORDAN => \&Tournaments::Jordan::set_links
+  # LEBANON => \&Tournaments::Lebanon::set_links
+  # MONACO => \&Tournaments::Monaco::set_links
   # NEWZEALAND => \&Tournaments::NewZealand::set_links
   # NORDIC => \&Tournaments::Nordic::set_links
   # NORWAY => \&Tournaments::Norway::set_links
   # POLAND => \&Tournaments::Poland::set_links
-  PORTUGAL => \&Tournaments::Portugal::set_links
+  # PORTUGAL => \&Tournaments::Portugal::set_links
   # ROMANIA => \&Tournaments::Romania::set_links
   # SERBIA => \&Tournaments::Serbia::set_links
+  SLOVAKIA => \&Tournaments::Slovakia::set_links
   # SOUTHAMERICA => \&Tournaments::SouthAmerica::set_links
   # SPAIN => \&Tournaments::Spain::set_links
   # SWEDEN => \&Tournaments::Sweden::set_links
