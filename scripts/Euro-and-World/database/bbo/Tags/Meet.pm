@@ -89,6 +89,7 @@ my @MULTI_WORDS =
   'Jordan Bridge Festival',
   'Jyvaskala Easter Bridge Festival',
   'Lozenets Bridge Festival',
+  'Madeira International Festival',
   'Maharaja Holkar National Championship',
   'Maharashtra State Championship',
   'Mar del Plata Festival',

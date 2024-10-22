@@ -480,11 +480,13 @@ my @MULTI_WORDS =
   'Zulawski Cup',
 
   # PORTUGAL
+  'Madeira Open Teams',
   'Portuguese Grand Prix',
   'Portuguese IMP Pairs',
   'Portuguese Open Teams',
   'Portuguese Open Trials',
   'Portuguese Northern Regional Open Teams',
+  'Rui Pinto Cup',
 
   # ROMANIA
   'Romanian League',
@@ -935,13 +937,6 @@ my @MULTI_WORDS =
   'Plock District League',
   'Towns Cup', # Tallinn
 
-  # Portugal
-  'Estoril Teams',
-  'Estoril Swiss Teams',
-  'Madeira Open',
-  'Madeira Swiss Teams',
-  'Rui Pinto Cup',
-  'Taça Rui Pinto',
 
   # Russia
   'Goulyash by E. Gladysh',
@@ -1648,8 +1643,11 @@ my %MULTI_TYPOS =
     'estonian latvian team trials',
     'estonian-latvian team trials'],
 
-  'Estoril Teams' => ['estoril open teams',
-    'estoril international teams', 'estoril internacional teams'],
+  'Estoril Open Teams' => [
+    'estoril international teams', 
+    'estoril internacional teams',
+    'estoril swiss teams',
+    'estoril teams'],
 
   # EUROPE -- mapped in detail
   "European Champions' Cup" => ['european champs cup'],
@@ -2227,16 +2225,17 @@ my %MULTI_TYPOS =
   ### MMM
 
   'Maccabi Games' => ['maccabi-games', 'europ_ maccabi games'],
-  'Madeira Open' => [
+  'Madeira Open Teams' => [
     'madeira internacional', 
     'madeira internacional open',
     'madeira international open',
     'madeira international teams',
     'madeira international teams open´s',
     'madeira international teams open',
-    'madeira open teams',
-    'madeira teams'], 
-  'Madeira Swiss Teams' => ['swiss teams madeira', 'madeira swiss'],
+    'madeira swiss',
+    'madeira swiss teams',
+    'madeira teams', 
+    'swiss teams madeira'], 
   'Madras Gymkhana Club Open' => [
     'madras gymkhana open',
     'mgc open',
@@ -2634,8 +2633,11 @@ my %MULTI_TYPOS =
 
 
   # PORTUGAL
-  'Portuguese Grand Prix' => ['portuguese grad prix',
-    'portugal grand prix', 'portugal grand peix'],
+  'Portuguese Grand Prix' => [
+    'estoril open teams',
+    'portugal grand peix',
+    'portugal grand prix', 
+    'portuguese grad prix'],
   'Portuguese IMP Pairs' => [
     'nacional pares por imps',
     "nacional pares por imp's",
@@ -2747,7 +2749,8 @@ my %MULTI_TYPOS =
     'rondanecupen swiss teams'],
   'Rosfjord Swiss Teams' => ['rosfjord monrad team',
     'rosfjord monrad teams'],
-  'Rui Pinto Cup' => ['taça rui pinto'],
+  'Rui Pinto Cup' => [
+    'taça rui pinto'],
   'Ruia Gold Cup' => [
     'golden jubilee',
     'ruia gold', 
