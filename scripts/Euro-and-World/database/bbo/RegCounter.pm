@@ -152,19 +152,34 @@ sub analyze
 
   @occur = sort { $b->{COUNT} <=> $a->{COUNT} } @occur;
 
-  # Keep only the enough for the most frequent number of counters.
-  if ($top_no < 0 || $top_no >= 4)
+  my $first_zero = $#occur + 1;
+  for my $i (0 .. $#occur)
+  {
+    if ($occur[$i]{COUNT} == 0)
+    {
+      $first_zero = $i;
+      splice(@occur, $first_zero); 
+      last;
+    }
+  }
+
+  if ($first_zero > 3)
   {
     for my $bbono (keys %{$self->{BBOCOUNT}})
     {
-      warn $bbono;
+      warn "BBONO $bbono";
     }
-    die "Top number $top_no";
+    for my $i (0 ..$#occur)
+    {
+      warn "$i $occur[$i]{FIELD} $occur[$i]{COUNT}\n";
+    }
+    die "Top number $first_zero";
   }
+
+  # Keep only the enough for the most frequent number of counters.
+  $top_no = $first_zero;
   $self->{NUM_FIELDS} = $top_no;
   return if $top_no == 0;
-
-  splice(@occur, $top_no); 
 
   # Re-sort by hierarchical order.
   @occur = sort { $FIELD_MAP{$a->{FIELD}} <=> 

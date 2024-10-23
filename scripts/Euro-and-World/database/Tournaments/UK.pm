@@ -772,6 +772,170 @@ my %TOURNAMENTS_UK =
     }
   },
 
+  'Commonwealth Nations Bridge Championships' => 
+  {
+    ORIGIN => 'International',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2006' =>
+      {
+        COUNTRY => 'Australia',
+        CITY => 'Melbourne',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-03-07',
+            DATE_END => '2006-03-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2006-03-07',
+            DATE_END => '2006-03-12'
+          },
+        }
+      },
+      '2010' =>
+      {
+        COUNTRY => 'India',
+        CITY => 'Delhi',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2010-10-24',
+            DATE_END => '2010-10-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-10-29',
+            DATE_END => '2010-10-29'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-10-29',
+            DATE_END => '2010-10-29'
+          },
+        }
+      },
+      '2014' =>
+      {
+        COUNTRY => 'Scotland',
+        CITY => 'Glasgow',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            minor => 'MATCH',
+            DATE_START => '2014-09-07',
+            DATE_END => '2014-09-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            minor => 'MATCH',
+            DATE_START => '2014-09-12',
+            DATE_END => '2014-09-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            minor => 'MATCH',
+            DATE_START => '2014-09-12',
+            DATE_END => '2014-09-12'
+          },
+          'C3' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            minor => 'MATCH',
+            DATE_START => '2014-09-13',
+            DATE_END => '2014-09-13'
+          },
+          'C4' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            minor => 'MATCH',
+            DATE_START => '2014-09-13',
+            DATE_END => '2014-09-13'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            COUNTRY => 'Australia',
+            CITY => 'Gold Coast',
+            DATE_START => '2018-02-14',
+            DATE_END => '2018-02-18'
+          },
+        }
+      },
+    }
+  },
+
+  'Corn Cairdis Match' => 
+  {
+    ORIGIN => 'International',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'MATCH',
+            DATE_START => '2011-05-14',
+            DATE_END => '2011-05-15'
+          },
+        }
+      },
+    }
+  },
+
   'English Open Trials' => 
   {
     ORGANIZATION => 'EBU',
@@ -1291,6 +1455,7 @@ my %TOURNAMENTS_UK =
 
   'English Women Teams' => 
   {
+    # https://www.ebu.co.uk/information-resources/whitelaw-cup-english-womens-teams-championship
     ORGANIZATION => 'EBU',
     ORIGIN => 'National',
     ZONE => 'Europe',
@@ -1301,6 +1466,29 @@ my %TOURNAMENTS_UK =
 
     EDITIONS =>
     {
+      '2011' =>
+      {
+        # https://www.ebu.co.uk/results/116
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-09-04',
+            DATE_END => '2011-09-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-09-04',
+            DATE_END => '2011-09-04'
+          },
+        }
+      },
       '2012' =>
       {
         # https://www.ebu.co.uk/results/116
@@ -1494,6 +1682,45 @@ my %TOURNAMENTS_UK =
           },
         }
       }
+    }
+  },
+
+  'Glasgow Transnational Open Teams' => 
+  {
+    ORIGIN => 'International',
+    ZONE => 'Europe',
+    COUNTRY => 'Scotland',
+    CITY => 'Glasgow',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'MATCH',
+            minor => 'SEGMENT',
+            DATE_START => '2014-09-14',
+            DATE_END => '2014-09-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            minor => 'SEGMENT',
+            DATE_START => '2014-09-14',
+            DATE_END => '2014-09-14'
+          },
+        }
+      },
     }
   },
 
@@ -2017,6 +2244,74 @@ my %TOURNAMENTS_UK =
             major => 'MATCH',
             DATE_START => '2016-02-27',
             DATE_END => '2016-02-28'
+          },
+        }
+      },
+    }
+  },
+
+  'Peggy Bayer Trophy' => 
+  {
+    # https://www.ebu.co.uk/internationals/peggy-bayer-trophy-home-internationals-history
+    ORGANIZATION => 'EBU',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'U21',
+
+    EDITIONS =>
+    {
+      '2008' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            major => 'MATCH',
+            DATE_START => '2008-03-03',
+            DATE_END => '2008-03-03'
+          },
+        }
+      },
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            major => 'MATCH',
+            DATE_START => '2009-02-22',
+            DATE_END => '2009-02-22'
+          },
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-02-20',
+            DATE_END => '2011-02-20'
+          },
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND',
+            DATE_START => '2016-02-19',
+            DATE_END => '2016-02-21'
           },
         }
       },

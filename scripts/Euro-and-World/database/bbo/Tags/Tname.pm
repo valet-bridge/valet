@@ -237,6 +237,9 @@ my @MULTI_WORDS =
   'European University Bridge Championship',
   'European University Team Championship',
 
+  # FAROE ISLANDS
+  'Faroese Open Teams',
+
   # FINLAND
   'Finnish Cup',
   'Finnish Easter Teams',
@@ -603,15 +606,19 @@ my @MULTI_WORDS =
   # UNITED KINGDOM
   'British Gold Cup',
   'Camrose Trophy',
+  'Commonwealth Nations Bridge Championships',
+  'Corn Cairdis Match',
   'English Open Trials',
   'English Premier League',
   'English Senior Trials',
   'English U28 Trials',
   'English Women Teams',
   'English Women Trials',
+  'Glasgow Transnational Open Teams',
   'Junior Camrose',
   'Lady Milne Trophy',
   'Lederer Memorial Trophy',
+  'Peggy Bayer Trophy',
   'Scottish Cup',
   'Scottish National League',
   'Spring Foursomes',
@@ -622,6 +629,7 @@ my @MULTI_WORDS =
   'Welsh Invitational Pairs',
   'Welsh Open Trials',
   'Young Chelsea Knock-out',
+
 
   # USA
   '0 to 1500 Spingold',
@@ -789,9 +797,6 @@ my @MULTI_WORDS =
   # Europe: Same as European Champions' Cup
   "Champions' Cup",
 
-  # Faroe Islands
-  'Faroese Open Teams',
-
   # Finland
   'Hanko Teams',
   'Pärnu Summer Invitational Pairs',
@@ -821,7 +826,6 @@ my @MULTI_WORDS =
   # Hong Kong
   'Hong Kong Inter-City',
   'JP Morgan Inter-City Championship',
-
 
   # India
   'Ashok Kapur Memorial Swiss Pairs',
@@ -932,7 +936,6 @@ my @MULTI_WORDS =
   'Plock District League',
   'Towns Cup', # Tallinn
 
-
   # Russia
   'Goulyash by E. Gladysh',
   'Moscow Sunday Times',
@@ -1007,13 +1010,6 @@ my @MULTI_WORDS =
   'Thrace Cup League',
   'Western Mediterranean Club Teams',
   'Winter Open Teams',
-
-  # UK
-  'Commonwealth Nations Bridge Championships',
-  'Corn Cairdis',
-  'Glasgow Transnational Open Teams',
-  'Peggy Bayer',
-  'Whitelaw Cup',
 
   # USA
   'Baze Senior Knock-out',
@@ -1457,6 +1453,7 @@ my %MULTI_TYPOS =
     'commomwealth bridge championship',
     'commonwealth championship',
     'commonwealth bridge championship'],
+  'Corn Cairdis Match' => ['corn cairdis'],
 
   # CZECH
   'Czech Championship' => ['czech bridge championship',
@@ -1615,7 +1612,9 @@ my %MULTI_TYPOS =
     'english senior teams',
     'englnd senior trials'], 
   'English U28 Trials' => ['england u28 trials'],
-  'English Women Teams' => ['english national womens teams'],
+  'English Women Teams' => [
+    'english national womens teams',
+    'whitelaw cup'],
   'English Women Trials' => [
     "england ladies' trials",
     'english ladies trials',
@@ -2521,6 +2520,8 @@ my %MULTI_TYPOS =
     'pärnu summer_ invitational pairs_', 
     'parnu summer tournament_ invitatoinal pairs',
     'pärnu summer tournament_ invitational pairs_'],
+  'Peggy Bayer Trophy' => [
+    'peggy bayer'],
   'Petit Grand Prix van Driene' => ['petit grand prix',
     'grand prix van driene'],
   'Pertamina Field Tambun Cup' => ['pertamina ep field tambun cup'],
@@ -3318,7 +3319,8 @@ my %SINGLE_TYPOS =
   'McConnell Cup' => ['mcconnell'],
   'NTU Cup' => ['ntucup'],
   'Paris Youth Open Teams' => ['ypob'],
-  'Peggy Bayer' => ['peggybayer'],
+  'Peggy Bayer Trophy' => [
+    'peggybayer'],
   'Portuguese Open Teams' => ['cneo'],
   'Reisinger BAM Teams' => [
     'reisiger', 
