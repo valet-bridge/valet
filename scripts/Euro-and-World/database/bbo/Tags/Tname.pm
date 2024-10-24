@@ -163,7 +163,12 @@ my @MULTI_WORDS =
 
   # CHINESE TAIPEI
   'Antonio Chong Cup',
-  'Chinese Taipei Open Trials',
+  'NTU Cup',
+  'Taiwan University Open Cup',
+  'Taiwan University Teachers Cup',
+  'Taiwan University Women Cup',
+  'Taiwanese Open Trials',
+  'Taiwanese Senior Trials',
 
   # CROATIA
   'Atlantic Trade Bridge Cup',
@@ -985,14 +990,6 @@ my @MULTI_WORDS =
   'S:t Erik Championship Series',
   'Stena Line Cup',
 
-  # Taiwan
-  'NTU Cup',
-  'Taiwan University Cup',
-  'Taiwan University Cup Teachers',
-  'Taiwanese Open Trials',
-  'Taiwanese Teams',
-  'Taiwanese Senior Trials',
-
   # Turkey
   'Anatolian Club Qualifying',
   'Anatolian Fall Teams',
@@ -1430,21 +1427,6 @@ my %MULTI_TYPOS =
     'china resources land  inter-city bridge cham',
     'cr power intercity'],
 
-  'Chinese Taipei Open Trials' => [
-    'ctcba chinese taipei open team trials',
-    'ctcba chinese taipei open trial',
-    'ctcba open team trial',
-    'ctcba open team trials',
-    'ctcba open trail',
-    'ctcba open trial',
-    'ctcba trial',
-    'chinese taipei open team trail',
-    'chinese taipei open team trial',
-    'chinese taipei open team trials',
-    'chinese taipei team trial', 
-    'chinese taipei trails',
-    'chinese taipei trials',
-    'taipei open trials'],
   'Cliff Wake Challenge' => ['cliff wake invitational'],
   'Commonwealth Nations Bridge Championships' => [
     'commonwealth beidge championship', 
@@ -2974,13 +2956,36 @@ my %MULTI_TYPOS =
 
   ### TTT
 
-  'Taiwan University Cup' => ['taiwan university championship'],
-  'Taiwan University Cup Teachers' => [
+  'Taiwan University Open Cup' => [
+    'taiwan university cup',
+    'taiwan university championship'],
+  'Taiwan University Women Cup' => [
+    'taiwan university championship women'],
+  'Taiwan University Teachers Cup' => [
+    'taiwan university cup teachers',
     "taiwan university cup teacher's section"],
-  'Taiwanese Open Trials' => ['taiwanese trials',
-    'taiwanese team trial'],
-  'Taiwanese Senior Trials' => ['ctcba senior team trial'],
-  'Taiwanese Teams' => ['taiwanese teal'],
+  'Taiwanese Open Trials' => [
+    'chinese taipei open trials',
+    'ctcba chinese taipei open team trials',
+    'ctcba chinese taipei open trial',
+    'ctcba open team trial',
+    'ctcba open team trials',
+    'ctcba open trail',
+    'ctcba open trial',
+    'ctcba trial',
+    'chinese taipei open team trail',
+    'chinese taipei open team trial',
+    'chinese taipei open team trials',
+    'chinese taipei team trial', 
+    'chinese taipei trails',
+    'chinese taipei trials',
+    'taipei open trials',
+    'taiwanese teal trial',
+    'taiwanese team trial',
+    'taiwanese trials'],
+  'Taiwanese Senior Trials' => [
+    'ctcba senior team trial'],
+
   'TATA Open' => ['tata opren', 'tata sports', 'ttat open'],
   'Telkom Indonesia Open' => [
     'telkom cup',
