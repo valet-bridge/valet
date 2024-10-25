@@ -18,11 +18,30 @@ my @MULTI_WORDS =
 
  'Challenge Match',
  'Exhibition Match',
- 'Friendly Match',
+ # 'Friendly Match',
  'Friendly Pairs',
  "New Year's Teams",
  'Opening Tournament',
  'Practice Match',
+
+  # FRIENDLY
+  'China Friendly',
+  'France Friendly',
+  'Hong Kong Friendly',
+  'Hungary Friendly',
+  'Ireland Friendly',
+  'Italy Friendly',
+  'Morocco Friendly',
+  'Netherlands Friendly',
+  'Online Friendly',
+  'Poland Friendly',
+  'Portugal Friendly',
+  'Scotland Friendly',
+  'Spain Friendly',
+  'Sweden Friendly',
+  'Tunisia Friendly',
+  'Zulawski Friendly',
+
 
   # AFRICA
   'African Zonal Open Teams',
@@ -1029,7 +1048,7 @@ my %MULTI_TYPOS =
   ### These are the only ones that are not specific (in time/place)
   ### tournament "names".
 
-  'Friendly Match' => ['match amical', 'friendly tm'],
+  # 'Friendly Match' => ['match amical', 'friendly tm'],
   'Practice Match' => ['practice session', 'training match', 
     'practice match', 'test match', 'tes match', 'practise match', 
     'practice matche', 'practice matches'],
@@ -3305,7 +3324,7 @@ my %SINGLE_TYPOS =
   'European Youth Bridge Teams Championship' => ['eytc', 'jem'],
   'Exhibition Match' => ['exhibition'],
   'FOSS Grand Tournament' => ['foss'],
-  'Friendly match' => ['friendly'],
+  # 'Friendly match' => ['friendly'],
   'German Team Championship' => ['teammeisterschaft'],
   'German Bundesliga' => ['bundesliga'],
   'Gianarrigo Rona Trophy' => ['rona'],

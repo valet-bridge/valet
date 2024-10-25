@@ -26,6 +26,8 @@ my @MULTI_WORDS =
   'Wroclaw Meeting',
   'Zulawski Congress',
 
+  'Friendly Match',
+
  
   'Aegean Championships',
   'African Zonal Championships',
@@ -240,6 +242,8 @@ my %MULTI_TYPOS =
   'Fes Festival' => ['fes bridge international festival',
     'festival fes', 'festival de fes', 'festival international de fès',
     'festival de fez'],
+  'Friendly Match' => [
+    'match amical', 'friendly tm'],
   'Gold Coast Congress' => ['gold coast'],
   'Greek Islands Festival' => ['greek bridge festival',
     'greek island festival', 'athens bridge festival', 
@@ -509,6 +513,7 @@ my %SINGLE_TYPOS =
   'European Transnational Championships' => ['eobc', 'eoc'],
   'European Winter Games' => ['ewg'],
   Festival => ['fest', 'festivan', 'festývalý', 'festivalul', 'festiwal'],
+  'Friendly Match' => ['friendly'],
   'Gold Coast Congress' => ['gc', 'gcc'],
   'Indonesian National Pre-Sports Week' => ['prapon'],
   'Indonesian National Sports Week' => ['indonesia week', 'pon'],

@@ -795,6 +795,12 @@ sub post_process_pair
     $chain1->complete('KILLED');
     return 1;
   }
+  elsif ($field0 eq 'TEAM1_COUNTRY' && $field1 eq 'TEAM2_COUNTRY')
+  {
+    $chain0->complete('EXPLAINED');
+    $chain1->complete('EXPLAINED');
+    return 1;
+  }
 
   print "TODOY " . $knowledge->str($bbono) . ", [$cno0: $field0, $value0], " .
     "[$cno1: $field1, $value1]\n";

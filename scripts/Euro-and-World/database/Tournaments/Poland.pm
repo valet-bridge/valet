@@ -1479,6 +1479,7 @@ my %TOURNAMENTS_POLAND =
     }
   },
 
+  # TODO This now has two MEETs and no TNAME
   # 'Friendly Match',
   # {
     # ORGANIZATION => 'PZBS',

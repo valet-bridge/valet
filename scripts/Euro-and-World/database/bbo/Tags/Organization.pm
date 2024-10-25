@@ -64,6 +64,7 @@ my %MULTI_TYPOS =
   FISU => ['international university sports federation'],
   FFB => ['fédération francaise de bridge'],
   FPB => ['federação portuguesa de bridge'],
+  FRM => ['fédération royale marocaine'],
   FRB => ['federatia romana de bridge'],
   FMB => ['fédération monegasque de bridge'],
   FSB => ['fédération suisse de bridge'],

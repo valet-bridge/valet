@@ -750,6 +750,12 @@ sub fix_some_fields
     delete $self->{SCORING};
     push @{$self->{SCORING}}, 'Patton';
   }
+
+  if (exists $self->{TITLE_COUNTRY})
+  {
+    @{$self->{COUNTRY}} = @{$self->{TITLE_COUNTRY}};
+    delete $self->{TITLE_COUNTRY};
+  }
 }
 
 
