@@ -794,30 +794,28 @@ my @MULTI_WORDS =
   'Copa de Plata',
 
   # China
-  'All-China Games',
+  'All-China Open Teams',
+  'All-China Mixed Teams',
+  'All-China Women Teams',
   'Aoda Cup',
-  'Avia Inter-City Championship',
   'China Elite Tournament',
-  'China Friend City Senior Team Tournament',
-  'China First League',
+  'China Friend City Senior Teams',
+  'Chinese First League',
   'China Hosts Europe in Rome',
   'China Inter-City Teams',
   'China Resources Inter-City',
-  'Chinese Club Championship',
   'Chinese Mixed Teams',
   'Chinese Open Teams',
   'Chinese Open Trials',
+  'Chung Hua Cup',
   'Cross Strait Invitational',
   'Dongfeng Cup',
   'Dongming Knock-out Teams',
-  'Chung Hua Cup',
   'GHTD Cup',
   'Guangdong Club Championship',
-  'Guangdong Club Invitational',
   'Guangdong Elite Tournament',
   'Guangzhou-HK-Macau Interport',
   'Haikou Fitness Day',
-  'Hainan Air Cup',
   'High-Tech Zone Workers Invitational',
   'HNA Open Teams',
   'Jianshe Cup',
@@ -827,13 +825,12 @@ my @MULTI_WORDS =
   'Sanchen Cup',
   'Sanya Cup',
   'Shenhua Cup',
-  'Shenyang Spring',
+  'Shenyang Spring Teams',
   'Shenzhen Lanpu Cup',
   'Shenzhen Nangangdongli Cup',
   'Sunchime Fund Cup',
   'Tielu Jixie Invitational',
   'Xinyuan Cup',
-  'Yeh Bros Cup',
   'Zhejiang Huamen Cup',
 
   # England
@@ -1023,6 +1020,7 @@ my @MULTI_WORDS =
   'NYSA Euroregion Nations Cup',
   'Shield of Thoisy',
   'Stern-Cornell Trophy', # Australia - New Zelsn
+  'Yeh Bros Cup',
   'Youth Open Bridge Paris',
   'Paris Youth Open Teams',
 
@@ -1285,8 +1283,6 @@ my %MULTI_TYPOS =
   'Austrian Open Teams' => [
     'austrian team championship',
     'austrian team championships'],
-  'Avia Inter-City Championship' => [
-    'avia inter-city bridge championships'],
 
   ### BBB
 
@@ -1450,23 +1446,34 @@ my %MULTI_TYPOS =
     'chilean open trials'],
 
   # CHINA
-  'China Elite Tournament' => ['china elite inivitational tournament',
+  'China Friend City Senior Teams' => [
+    'china friend city senior team tournament'],
+  'China Elite Tournament' => [
+    'china elite inivitational tournament',
     'china bridge elite tournament',
     'china bridge elite invitational tournament',
     'bridge elite tournament china'],
-  'China First League' => ['the national class a club league',
-    'national club league china', 'national club league'],
-  'Chinese Club Championship' => ['china bridge club championship',
-    'club championships china'],
+  'Chinese First League' => [
+    'china bridge club championship',
+    'china first league',
+    'chinese club championship',
+    'club championships china',
+    'national club league china', 
+    'national club league',
+    'the national class a club league'],
+  'Chinese Inter-City Teams' => [
+    'avia intercity championship',
+    'china inter-city teams',
+    'china resources inter-city',
+    'china resources inter-city bridge championships',
+    'china resources land inter-city bridge cham',
+    'china resources land  inter-city bridge cham',
+    'chinese intercity teams',
+    'cr power intercity'],
   'Chinese Mixed Teams' => [
     'ccba mix teams',
     'mixed teams china'],
   'Chinese Open Teams' => ['team championship china'],
-  'China Resources Inter-City' => [
-    'china resources inter-city bridge championships',
-    'china resources land inter-city bridge cham',
-    'china resources land  inter-city bridge cham',
-    'cr power intercity'],
 
   'Cliff Wake Challenge' => ['cliff wake invitational'],
   'Commonwealth Nations Bridge Championships' => [
@@ -1932,10 +1939,11 @@ my %MULTI_TYPOS =
     'hellenic ladies team trials',
     'hellenic ladies teams trials'],
 
-  'Guangdong Club Championship' => ['guang dong club championship',
-    'guang dong club bridge championship'],
-  'Guangdong Club Invitational' => [
-    'Guangdong province the bridge club invitational t'],
+  'Guangdong Club Championship' => [
+    'guangdong club invitational',
+    'guangdong province the bridge club invitational t',
+    'guang dong club bridge championship',
+    'guang dong club championship'],
   'Guangdong Elite Tournament' => [
     'guangdong bridge club elites tournament',
     'guangdong bridge club  elites  tournament',
@@ -1950,7 +1958,11 @@ my %MULTI_TYPOS =
     'hans rosendorff memorial womens teams',
     'hans rosendorff memorial  womens teams',
     'han rosendorff memorial womens teams'],
-  'HNA Open Teams' => ['hna cup', 'hna openteams', 'hna open team',
+  'HNA Open Teams' => [
+    'hainan air cup',
+    'hna cup', 
+    'hna openteams', 
+    'hna open team',
     "hna's hainan bridge tournament"],
   'Hong Kong Inter-City' => ['hong kong iner-city'],
 
@@ -2972,6 +2984,8 @@ my %MULTI_TYPOS =
   'Swedish Senior Team Trials' => [
     'sweden senior trials',
     'swedish senior trials'],
+
+  'Shenyang Spring Teams' => ['shenyang spring'],
 
   # SWITZERLAND
   'Swiss Club Championship' => [
