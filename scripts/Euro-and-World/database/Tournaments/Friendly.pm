@@ -13,6 +13,44 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_FRIENDLY =
 (
+  'Challenge Match' =>
+  {
+    EDITIONS => 
+    {
+      '2007' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-05-30',
+        DATE_END => '2007-05-30'
+      },
+    }
+  },
+
+  'Exhibition Match' =>
+  {
+    EDITIONS => 
+    {
+      '2004' =>
+      {
+        YEAR => 2004,
+        DATE_START => '2004-11-29',
+        DATE_END => '2004-11-29'
+      },
+      '2005' =>
+      {
+        YEAR => 2005,
+        DATE_START => '2005-02-17',
+        DATE_END => '2005-02-17'
+      },
+      '2007' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-08-19',
+        DATE_END => '2007-08-19'
+      },
+    }
+  },
+
   'Friendly Match' =>
   {
     EDITIONS => 
@@ -284,6 +322,31 @@ my %MEETS_FRIENDLY =
     }
   },
 
+  'Friendly Pairs' =>
+  {
+    EDITIONS => 
+    {
+      '2007' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-06-05',
+        DATE_END => '2007-06-05'
+      },
+      '2015' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-02-13',
+        DATE_END => '2015-02-15'
+      },
+      '2016' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-07-16',
+        DATE_END => '2016-07-17'
+      },
+    }
+  },
+
   'Practice Match' =>
   {
     EDITIONS => 
@@ -367,6 +430,37 @@ my %TOURNAMENTS_FRIENDLY =
     }
   },
 
+  'Australia Challenge' => 
+  {
+    ORGANIZATION => 'AuBF',
+    COUNTRY => 'Australia',
+    ORIGIN => 'National',
+    ZONE => 'South Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2007' =>
+      {
+        MEET => 'Challenge Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'SESSION',
+            DATE_START => '2007-05-30',
+            DATE_END => '2007-05-30'
+          } 
+        }
+      },
+    }
+  },
+
   'Australia Practice' => 
   {
     ORGANIZATION => 'AuBF',
@@ -426,6 +520,86 @@ my %TOURNAMENTS_FRIENDLY =
             major => 'ROUND',
             DATE_START => '2016-05-28',
             DATE_END => '2016-05-28'
+          } 
+        }
+      },
+    }
+  },
+
+  'Bay Area Challenge' => 
+  {
+    ORGANIZATION => 'USBF',
+    COUNTRY => 'USA',
+    ORIGIN => 'Interuniversity',
+    ZONE => 'North America',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        MEET => 'Challenge Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'SESSION',
+            DATE_START => '2014-05-18',
+            DATE_END => '2014-05-18'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Challenge Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'SEGMENT',
+            DATE_START => '2015-11-02',
+            DATE_END => '2015-11-02'
+          } 
+        }
+      },
+    }
+  },
+
+  'Brighton Exhibition' => 
+  {
+    ORGANIZATION => 'EBU',
+    COUNTRY => 'England',
+    CITY => 'Brighton',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2007' =>
+      {
+        MEET => 'Exhibition Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'SET',
+            DATE_START => '2007-08-19',
+            DATE_END => '2007-08-19'
           } 
         }
       },
@@ -520,6 +694,38 @@ my %TOURNAMENTS_FRIENDLY =
             major => 'SEGMENT',
             DATE_START => '2012-09-12',
             DATE_END => '2012-09-13'
+          } 
+        }
+      },
+    }
+  },
+
+  'Denmark Friendly' => 
+  {
+    ORGANIZATION => 'DBF',
+    COUNTRY => 'Denmark',
+    ORIGIN => 'International',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        MEET => 'Friendly Match',
+        MOVEMENT => 'Triangle',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND',
+            DATE_START => '2016-02-19',
+            DATE_END => '2016-02-21'
           } 
         }
       },
@@ -777,6 +983,36 @@ my %TOURNAMENTS_FRIENDLY =
     }
   },
 
+  'France Friendly Pairs' => 
+  {
+    ORGANIZATION => 'FFB',
+    COUNTRY => 'France',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2006' =>
+      {
+        MEET => 'Friendly Pairs',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-05-27',
+            DATE_END => '2010-05-27'
+          } 
+        }
+      },
+    }
+  },
+
   'France Practice' => 
   {
     ORGANIZATION => 'FFB',
@@ -997,6 +1233,36 @@ my %TOURNAMENTS_FRIENDLY =
     }
   },
 
+  'Germany Friendly Pairs' => 
+  {
+    ORIGIN => 'National',
+    COUNTRY => 'Germany',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        MEET => 'Friendly Pairs',
+        GENDER => 'Women',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'SESSION',
+            DATE_START => '2015-02-13',
+            DATE_END => '2015-02-15'
+          } 
+        }
+      },
+    }
+  },
+
   'Goulash Practice' => 
   {
     ORIGIN => 'Transnational',
@@ -1048,20 +1314,85 @@ my %TOURNAMENTS_FRIENDLY =
           'C0' => 
           {
             YEAR => 2013,
+            major => 'ROUND',
             DATE_START => '2013-06-11',
             DATE_END => '2013-06-11'
           },
           'C1' => 
           {
             YEAR => 2013,
+            major => 'ROUND',
             DATE_START => '2013-06-18',
             DATE_END => '2013-06-18'
           },
           'C2' => 
           {
             YEAR => 2013,
+            major => 'ROUND',
             DATE_START => '2013-06-25',
             DATE_END => '2013-06-25'
+          } 
+        }
+      },
+    }
+  },
+
+  'Hungary Challenge' => 
+  {
+    ORGANIZATION => 'MBSZ',
+    COUNTRY => 'Hungary',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        MEET => 'Challenge Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            DATE_START => '2010-06-08',
+            DATE_END => '2010-06-08'
+          } 
+        }
+      },
+    }
+  },
+
+  'Hungary Exhibition' => 
+  {
+    ORGANIZATION => 'MBSZ',
+    COUNTRY => 'Hungary',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2004' =>
+      {
+        MEET => 'Exhibition Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2004,
+            major => 'SEGMENT',
+            DATE_START => '2004-11-29',
+            DATE_END => '2004-11-29'
           } 
         }
       },
@@ -1123,6 +1454,36 @@ my %TOURNAMENTS_FRIENDLY =
             major => 'ROUND',
             DATE_START => '2011-08-23',
             DATE_END => '2011-08-23'
+          } 
+        }
+      },
+    }
+  },
+
+  'Iceland Exhibition' => 
+  {
+    ORGANIZATION => 'IceBF',
+    COUNTRY => 'Iceland',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2005' =>
+      {
+        MEET => 'Exhibition Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2005,
+            DATE_START => '2005-02-17',
+            DATE_END => '2005-02-17'
           } 
         }
       },
@@ -1680,6 +2041,37 @@ my %TOURNAMENTS_FRIENDLY =
     }
   },
 
+  'Netherlands Friendly Pairs' => 
+  {
+    ORGANIZATION => 'NBB',
+    COUNTRY => 'Netherlands',
+    ORIGIN => 'International',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2007' =>
+      {
+        MEET => 'Friendly Pairs',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'SEGMENT',
+            DATE_START => '2007-06-05',
+            DATE_END => '2007-06-05'
+          } 
+        }
+      },
+    }
+  },
+
   'Netherlands Practice' => 
   {
     ORGANIZATION => 'NBB',
@@ -2049,7 +2441,7 @@ my %TOURNAMENTS_FRIENDLY =
 
   'Poland Friendly' => 
   {
-    ORGANIZATION => 'PYBS',
+    ORGANIZATION => 'PZBS',
     COUNTRY => 'Poland',
     ORIGIN => 'National',
     ZONE => 'Europe',
@@ -2105,6 +2497,37 @@ my %TOURNAMENTS_FRIENDLY =
             major => 'SEGMENT',
             DATE_START => '2013-05-24',
             DATE_END => '2013-05-24'
+          } 
+        }
+      },
+    }
+  },
+
+  'Poland Mixed Friendly Pairs' => 
+  {
+    ORGANIZATION => 'PZBS',
+    ORIGIN => 'National',
+    COUNTRY => 'Poland',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        MEET => 'Friendly Pairs',
+        GENDER => 'Mixed',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'SEGMENT',
+            DATE_START => '2016-07-16',
+            DATE_END => '2016-07-17'
           } 
         }
       },
@@ -2255,6 +2678,37 @@ my %TOURNAMENTS_FRIENDLY =
     }
   },
 
+  'Scotland Exhibition' => 
+  {
+    ORGANIZATION => 'SBU',
+    COUNTRY => 'Scotland',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2005' =>
+      {
+        MEET => 'Exhibition Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2005,
+            major => 'SESSION',
+            DATE_START => '2005-05-22',
+            DATE_END => '2005-05-22'
+          } 
+        }
+      },
+    }
+  },
+
   'Scotland Friendly' => 
   {
     ORGANIZATION => 'SBU',
@@ -2327,6 +2781,54 @@ my %TOURNAMENTS_FRIENDLY =
             YEAR => 2010,
             DATE_START => '2010-03-03',
             DATE_END => '2010-03-03'
+          } 
+        }
+      },
+    }
+  },
+
+  'Spain Challenge' => 
+  {
+    ORGANIZATION => 'AEB',
+    COUNTRY => 'Spain',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        MEET => 'Challenge Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            major => 'ROUND',
+            DATE_START => '2013-05-18',
+            DATE_END => '2013-05-18'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Challenge Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'SEGMENT',
+            DATE_START => '2014-11-02',
+            DATE_END => '2014-11-02'
           } 
         }
       },
@@ -2527,7 +3029,7 @@ my %TOURNAMENTS_FRIENDLY =
   'Turkey Practice' => 
   {
     ORGANIZATION => 'FFB',
-    COUNTRY => 'France',
+    COUNTRY => 'Turkey',
     ORIGIN => 'National',
     ZONE => 'Europe',
     FORM => 'Teams',
@@ -2584,6 +3086,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'SEGMENT',
             DATE_START => '2016-03-03',
             DATE_END => '2016-03-03'
           } 

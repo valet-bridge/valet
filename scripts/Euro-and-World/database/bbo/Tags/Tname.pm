@@ -16,28 +16,51 @@ my @MULTI_WORDS =
   ### These are the only ones that are not specific (in time/place)
   ### tournament "names".
 
- 'Challenge Match',
- 'Exhibition Match',
- 'Friendly Pairs',
- "New Year's Teams",
- 'Opening Tournament',
-
   # FRIENDLY
+  'Argentina Friendly',
+  'Australia Challenge',
+  'Australia Practice',
+  'Bay Area Challenge',
+  'Brighton Exhibition',
+  'Canada Practice',
+  'Chile Practice',
   'China Friendly',
+  'Denmark Friendly',
+  'Denmark Practice',
   'France Friendly',
+  'France Friendly Pairs',
+  'France Practice',
+  'Germany Friendly Pairs',
+  'Goulash Practice',
   'Hong Kong Friendly',
+  'Hungary Challenge',
+  'Hungary Exhibition',
   'Hungary Friendly',
+  'Hungary Practice',
+  'Iceland Exhibition',
   'Ireland Friendly',
   'Italy Friendly',
+  'Italy Practice',
   'Morocco Friendly',
   'Netherlands Friendly',
+  'Netherlands Friendly Pairs',
+  'Netherlands Practice',
   'Online Friendly',
   'Poland Friendly',
+  'Poland Mixed Friendly Pairs',
+  'Poland Practice',
   'Portugal Friendly',
+  'Portugal Practice',
+  'Scotland Exhibition',
   'Scotland Friendly',
+  'Scotland Practice',
+  'Spain Challenge',
   'Spain Friendly',
   'Sweden Friendly',
+  'Sweden Practice',
+  'Taiwan Practice',
   'Tunisia Friendly',
+  'Turkey Practice',
   'Zulawski Friendly',
 
 
@@ -469,6 +492,7 @@ my @MULTI_WORDS =
   'Norwegian Corporate Championship',
   'Norwegian Mixed Pairs',
   'Norwegian Mixed Teams',
+  'Norwegian Open IMP Pairs',
   'Norwegian Open Pairs',
   'Norwegian Open Teams',
   'Norwegian Premier League',
@@ -667,7 +691,7 @@ my @MULTI_WORDS =
   'US Women Teams',
   'US Women Trials',
   'US Youngster Trials',
-  'USBF Challenge Match',
+  'USBF Charity Match',
   'Vanderbilt Teams',
   'Wagar Teams',
 
@@ -815,6 +839,7 @@ my @MULTI_WORDS =
   # England
   'Garden Cities',
   'Higson Cup',
+  'Scotland Exhibition',
 
   # Europe: Same as European Champions' Cup
   "Champions' Cup",
@@ -847,6 +872,7 @@ my @MULTI_WORDS =
 
   # Hong Kong
   'Hong Kong Inter-City',
+  'Hong Kong New Year Teams',
   'JP Morgan Inter-City Championship',
 
   # India
@@ -1036,7 +1062,6 @@ my @MULTI_WORDS =
 
   # ----------------------------------------------------
 
-  'Mike Lawrence Exhibition', # Friendly, probably Scotland
   'Spring Nationals', # Many probably Australian
   'Transnational Open Teams', # Try to make unused
 );
@@ -2257,7 +2282,9 @@ my %MULTI_TYPOS =
     'marit sveaas international bridge tournament',
     'marit sveaas international  bridge tournament'],
   'McConnell Cup' => ['mc connell'],
-  'Mike Lawrence Exhibition' => ['m lawrence exhibiton'],
+  'Scotland Exhibition' => [
+    'm lawrence exhibiton',
+    'mike lawrence exhibition'],
   'Milan Trophy' => ["trofeo citta' di milano", "citta' di milano"],
   "Missouri Braggin' Rights" => ['bragging rights'],
   'Mohanlal Bhartia Memorial Grand Prix' => [
@@ -3168,7 +3195,7 @@ my %MULTI_TYPOS =
     'jusbc u21',
     'us u-21 trials',
     'u-21 us trials'],
-  'USBF Challenge Match' => ['usbf jr/pro charity challenge match'],
+  'USBF Charity Match' => ['usbf jr/pro charity challenge match'],
 
   ### VVV
 
@@ -3303,8 +3330,6 @@ my %SINGLE_TYPOS =
   'Canadian Women Teams Championship' => ['cwtc'],
   Cavendish => ['cavendiish', 'caavendish', 'cavemdish', 'cavendiosh',
     'cavendsh', 'cavvendish', 'avendish', 'cav'],
-  'Challenge Match' => ['desafio', 'challengue', 'challenger',
-    'challenge'],
   'Collegiate Bowl' => ['collegiate', 'collegiates'],
   'Commonwealth Nations Bridge Championships' => ['cnbc'],
   'Copenhagen Invitational Pairs' => ['cbi'],
@@ -3319,7 +3344,6 @@ my %SINGLE_TYPOS =
   'European Youth Bridge Championship' => ['eybc'],
   'European Youth Bridge Pairs Championship' => ['eybpc', 'eypc'],
   'European Youth Bridge Teams Championship' => ['eytc', 'jem'],
-  'Exhibition Match' => ['exhibition'],
   'FOSS Grand Tournament' => ['foss'],
   'German Team Championship' => ['teammeisterschaft'],
   'German Bundesliga' => ['bundesliga'],

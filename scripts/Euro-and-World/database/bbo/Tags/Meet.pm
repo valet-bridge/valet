@@ -26,7 +26,10 @@ my @MULTI_WORDS =
   'Wroclaw Meeting',
   'Zulawski Congress',
 
+  'Challenge Match',
+  'Exhibition Match',
   'Friendly Match',
+  'Friendly Pairs',
   'Practice Match',
 
  
@@ -199,6 +202,8 @@ my %MULTI_TYPOS =
   'Brazilian Trials' => [
     'brazilian team trials',
     'brazilian teams trials'],
+  'Challenge Match' => [
+    'desafio'], 
   'Copenhagen Invitational' => ['copenhagen bridge invitational'],
   'Crete Bridge Festival' => ['crete b_ festival'],
   'Dobrich Bridge Festival' => [

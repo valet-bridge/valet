@@ -1479,36 +1479,6 @@ my %TOURNAMENTS_POLAND =
     }
   },
 
-  # TODO This now has two MEETs and no TNAME
-  # 'Friendly Match',
-  # {
-    # ORGANIZATION => 'PZBS',
-    # COUNTRY => 'Poland',
-    # ORIGIN => 'National',
-    # ZONE => 'Europe',
-    # FORM => 'Teams',
-    # SCORING => 'IMP',
-    # GENDER => 'Open',
-    # AGE => 'Open',
-
-    # EDITIONS =>
-    # {
-      # '2016' =>
-      # {
-        # CHAPTERS =>
-        # {
-          # MEET => 'Zulawski Congress',
-          # 'SINGLE' => 
-          # {
-            # YEAR => 2016,
-            # DATE_START => '2016-03-03',
-            # DATE_END => '2016-03-03'
-          # } 
-        # }
-      # },
-    # }
-  # },
-
   'Grand Prix of Poland Pairs',
   {
     ORGANIZATION => 'PZBS',

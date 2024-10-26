@@ -24,6 +24,12 @@ my %MEETS_NORWAY =
 
     EDITIONS => 
     {
+      '2006' =>
+      {
+        YEAR => 2006,
+        DATE_START => '2006-08-08',
+        DATE_END => '2006-08-08'
+      },
       '2011' =>
       {
         YEAR => 2011,
@@ -543,6 +549,35 @@ my %TOURNAMENTS_NORWAY =
             major => 'ROUND',
             DATE_START => '2016-07-31',
             DATE_END => '2016-08-01'
+          } 
+        }
+      },
+    }
+  },
+
+  'Norwegian Open IMP Pairs' =>
+  {
+    ORGANIZATION => 'NBF',
+    COUNTRY => 'Norway',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2006' =>
+      {
+        MEET => 'Norwegian Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            DATE_START => '2006-08-08',
+            DATE_END => '2006-08-08'
           } 
         }
       },
