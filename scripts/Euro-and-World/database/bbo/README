@@ -1,3 +1,6 @@
+Check that Tournament (if it has a Meet) has a Meet time interval
+that fits.
+
 Util.pm 450:
 Need to set the Age from Girls to Juniors, but Token is not passed in
 

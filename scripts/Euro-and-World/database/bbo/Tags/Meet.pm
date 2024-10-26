@@ -27,6 +27,7 @@ my @MULTI_WORDS =
   'Zulawski Congress',
 
   'Friendly Match',
+  'Practice Match',
 
  
   'Aegean Championships',
@@ -374,6 +375,15 @@ my %MULTI_TYPOS =
     'bridge meeting poznan',
     'kongres poznanski', 
     'poznanski kongres brydzowy'],
+   'Practice Match' => [
+     'practice match', 
+     'practice matche', 
+     'practice matches',
+     'practice session', 
+     'practise match',
+     'training match',
+     'tes match', 
+     'test match'], 
   'Pula Bridge Festival' => ['international festival pula',
     'pula bridge festiwal'],
   'Rajasthan Invitational Championship' => [

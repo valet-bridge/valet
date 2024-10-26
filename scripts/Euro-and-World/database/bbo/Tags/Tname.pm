@@ -18,11 +18,9 @@ my @MULTI_WORDS =
 
  'Challenge Match',
  'Exhibition Match',
- # 'Friendly Match',
  'Friendly Pairs',
  "New Year's Teams",
  'Opening Tournament',
- 'Practice Match',
 
   # FRIENDLY
   'China Friendly',
@@ -1048,10 +1046,9 @@ my %MULTI_TYPOS =
   ### These are the only ones that are not specific (in time/place)
   ### tournament "names".
 
-  # 'Friendly Match' => ['match amical', 'friendly tm'],
-  'Practice Match' => ['practice session', 'training match', 
-    'practice match', 'test match', 'tes match', 'practise match', 
-    'practice matche', 'practice matches'],
+  # 'Practice Match' => ['practice session', 'training match', 
+    # 'practice match', 'test match', 'tes match', 'practise match', 
+    # 'practice matche', 'practice matches'],
 
   ### AAA
 
@@ -3324,13 +3321,11 @@ my %SINGLE_TYPOS =
   'European Youth Bridge Teams Championship' => ['eytc', 'jem'],
   'Exhibition Match' => ['exhibition'],
   'FOSS Grand Tournament' => ['foss'],
-  # 'Friendly match' => ['friendly'],
   'German Team Championship' => ['teammeisterschaft'],
   'German Bundesliga' => ['bundesliga'],
   'Gianarrigo Rona Trophy' => ['rona'],
   'Grand National Open Teams' => ['gnot'],
   'Grand National Teams' => ['gnt'],
-  # 'Grand Prix of Poland' => ['gpp'],
   'Grand Prix of Poland Pairs' => ['gppp'],
   "Gro's Supercup" => ['grocup'],
   'Icelandair Open' => ['icelandair'],

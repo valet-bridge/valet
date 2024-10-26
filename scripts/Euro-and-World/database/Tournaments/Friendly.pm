@@ -282,7 +282,56 @@ my %MEETS_FRIENDLY =
         DATE_END => '2016-07-03'
       },
     }
-  }
+  },
+
+  'Practice Match' =>
+  {
+    EDITIONS => 
+    {
+      '2016A' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-03-26',
+        DATE_END => '2016-03-27'
+      },
+      '2016B' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-04-16',
+        DATE_END => '2016-04-17'
+      },
+      '2016C' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-04-19',
+        DATE_END => '2016-04-21'
+      },
+      '2016D' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-05-14',
+        DATE_END => '2016-05-15'
+      },
+      '2016E' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-05-20',
+        DATE_END => '2016-05-22'
+      },
+      '2016F' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-05-28',
+        DATE_END => '2016-05-28'
+      },
+      '2016G' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-08-18',
+        DATE_END => '2016-08-20'
+      },
+    }
+  },
 );
 
 my %TOURNAMENTS_FRIENDLY =
@@ -318,6 +367,134 @@ my %TOURNAMENTS_FRIENDLY =
     }
   },
 
+  'Australia Practice' => 
+  {
+    ORGANIZATION => 'AuBF',
+    COUNTRY => 'Australia',
+    ORIGIN => 'National',
+    ZONE => 'South Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Youngsters',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            major => 'ROUND',
+            DATE_START => '2013-01-19',
+            DATE_END => '2013-01-20'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Youngsters',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'ROUND',
+            DATE_START => '2014-01-18',
+            DATE_END => '2014-01-19'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND',
+            DATE_START => '2016-05-28',
+            DATE_END => '2016-05-28'
+          } 
+        }
+      },
+    }
+  },
+
+  'Canada Practice' => 
+  {
+    ORGANIZATION => 'CBF',
+    COUNTRY => 'Canada',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Women',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'SESSION',
+            DATE_START => '2015-06-27',
+            DATE_END => '2015-06-28'
+          } 
+        }
+      },
+    }
+  },
+
+  'Chile Practice' => 
+  {
+    ORGANIZATION => 'FCB',
+    COUNTRY => 'Chile',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-05-13',
+            DATE_END => '2009-05-13'
+          } 
+        }
+      },
+    }
+  },
+
   'China Friendly' => 
   {
     ORGANIZATION => 'CCBA',
@@ -343,6 +520,71 @@ my %TOURNAMENTS_FRIENDLY =
             major => 'SEGMENT',
             DATE_START => '2012-09-12',
             DATE_END => '2012-09-13'
+          } 
+        }
+      },
+    }
+  },
+
+  'Denmark Practice' => 
+  {
+    ORGANIZATION => 'DBF',
+    COUNTRY => 'Denmark',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Seniors',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            major => 'ROUND',
+            DATE_START => '2013-01-27',
+            DATE_END => '2013-01-27'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Women',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'ROUND',
+            DATE_START => '2014-11-28',
+            DATE_END => '2014-11-30'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'ROUND',
+            DATE_START => '2015-02-21',
+            DATE_END => '2015-02-22'
           } 
         }
       },
@@ -535,6 +777,255 @@ my %TOURNAMENTS_FRIENDLY =
     }
   },
 
+  'France Practice' => 
+  {
+    ORGANIZATION => 'FFB',
+    COUNTRY => 'France',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2007A' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Women',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'MATCH',
+            minor => 'SEGMENT',
+            DATE_START => '2007-03-05',
+            DATE_END => '2007-03-06'
+          } 
+        }
+      },
+      '2007B' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'ROUND',
+            DATE_START => '2007-06-01',
+            DATE_END => '2007-06-01'
+          } 
+        }
+      },
+      '2007C' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Women',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'ROUND',
+            DATE_START => '2007-06-03',
+            DATE_END => '2007-06-03'
+          } 
+        }
+      },
+      '2007D' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'ROUND',
+            DATE_START => '2007-06-07',
+            DATE_END => '2007-06-07'
+          } 
+        }
+      },
+      '2007E' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Women',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'SEGMENT',
+            DATE_START => '2007-06-08',
+            DATE_END => '2007-06-08'
+          } 
+        }
+      },
+      '2007F' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'ROUND',
+            DATE_START => '2007-06-09',
+            DATE_END => '2007-06-09'
+          } 
+        }
+      },
+      '2008A' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Women',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            major => 'SEGMENT',
+            DATE_START => '2008-04-16',
+            DATE_END => '2008-04-16'
+          } 
+        }
+      },
+      '2008B' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            major => 'ROUND',
+            DATE_START => '2008-09-27',
+            DATE_END => '2008-09-27'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Women',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2015-09-05',
+            DATE_END => '2015-09-06'
+          } 
+        }
+      },
+      '2016A' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'SEGMENT',
+            DATE_START => '2016-03-26',
+            DATE_END => '2016-03-27'
+          } 
+        }
+      },
+      '2016B' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND',
+            DATE_START => '2016-04-16',
+            DATE_END => '2016-04-17'
+          },
+        }
+      },
+      '2016C' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND',
+            DATE_START => '2016-05-20',
+            DATE_END => '2016-05-22'
+          } 
+        }
+      },
+    }
+  },
+
+  'Goulash Practice' => 
+  {
+    ORIGIN => 'Transnational',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2007' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'SET',
+            DATE_START => '2007-11-05',
+            DATE_END => '2007-11-05'
+          } 
+        }
+      },
+    }
+  },
+
   'Hong Kong Friendly' => 
   {
     ORGANIZATION => 'HKCBA',
@@ -599,9 +1090,39 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2014,
-            major => 'ROUND',
             DATE_START => '2014-04-18',
             DATE_END => '2014-04-18'
+          } 
+        }
+      },
+    }
+  },
+
+  'Hungary Practice' => 
+  {
+    ORGANIZATION => 'MBSZ',
+    COUNTRY => 'Hungary',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-08-23',
+            DATE_END => '2011-08-23'
           } 
         }
       },
@@ -698,6 +1219,37 @@ my %TOURNAMENTS_FRIENDLY =
             major => 'SEGMENT',
             DATE_START => '2015-10-18',
             DATE_END => '2015-10-18'
+          } 
+        }
+      },
+    }
+  },
+
+  'Italy Practice' => 
+  {
+    ORGANIZATION => 'FIGB',
+    COUNTRY => 'Italy',
+    ORIGIN => 'International',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'SEGMENT',
+            DATE_START => '2014-06-08',
+            DATE_END => '2014-06-08'
           } 
         }
       },
@@ -1128,6 +1680,343 @@ my %TOURNAMENTS_FRIENDLY =
     }
   },
 
+  'Netherlands Practice' => 
+  {
+    ORGANIZATION => 'NBB',
+    COUNTRY => 'Netherlands',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2007A' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'ROUND',
+            DATE_START => '2007-01-24',
+            DATE_END => '2007-01-24'
+          } 
+        }
+      },
+      '2007B' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'SEGMENT',
+            DATE_START => '2007-02-22',
+            DATE_END => '2007-02-22'
+          } 
+        }
+      },
+      '2007C' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'ROUND',
+            DATE_START => '2007-05-05',
+            DATE_END => '2007-05-06'
+          } 
+        }
+      },
+      '2007D' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'SESSION',
+            DATE_START => '2007-06-05',
+            DATE_END => '2007-06-05'
+          } 
+        }
+      },
+      '2007E' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Youngsters',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'ROUND',
+            DATE_START => '2007-09-02',
+            DATE_END => '2007-09-02'
+          } 
+        }
+      },
+      '2007F' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Women',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'SEGMENT',
+            DATE_START => '2007-12-10',
+            DATE_END => '2007-12-10'
+          } 
+        }
+      },
+      '2008' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            major => 'MATCH',
+            DATE_START => '2008-05-04',
+            DATE_END => '2008-05-04'
+          } 
+        }
+      },
+      '2010A' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            DATE_START => '2010-05-20',
+            DATE_END => '2010-05-22'
+          } 
+        }
+      },
+      '2011A' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Seniors',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-09-02',
+            DATE_END => '2011-09-03'
+          } 
+        }
+      },
+      '2011B' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-10-02',
+            DATE_END => '2011-10-02'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            major => 'ROUND',
+            DATE_START => '2012-04-20',
+            DATE_END => '2012-04-21'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            major => 'ROUND',
+            minor => 'TABLE',
+            DATE_START => '2013-06-07',
+            DATE_END => '2013-06-09'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'ROUND',
+            DATE_START => '2014-05-16',
+            DATE_END => '2014-05-18'
+          } 
+        }
+      },
+      '2015A' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Women',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'ROUND',
+            DATE_START => '2015-05-16',
+            DATE_END => '2015-05-17'
+          } 
+        }
+      },
+      '2015B' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'ROUND',
+            DATE_START => '2015-06-05',
+            DATE_END => '2015-06-07'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2016-05-19',
+            DATE_END => '2016-05-19'
+          } 
+        }
+      },
+    }
+  },
+
+  'Norway Practice' => 
+  {
+    ORGANIZATION => 'NBF',
+    COUNTRY => 'Norway',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2011-05-26',
+            DATE_END => '2011-05-29'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            major => 'HALF',
+            DATE_START => '2012-03-03',
+            DATE_END => '2012-03-03'
+          } 
+        }
+      },
+    }
+  },
+
   'Online Friendly' => 
   {
     ORGANIZATION => 'BrBaOn',
@@ -1222,6 +2111,88 @@ my %TOURNAMENTS_FRIENDLY =
     }
   },
 
+  'Poland Practice' => 
+  {
+    ORGANIZATION => 'PYBS',
+    COUNTRY => 'Poland',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2004' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2004,
+            major => 'SESSION',
+            DATE_START => '2004-05-09',
+            DATE_END => '2004-05-10'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'MATCH',
+            DATE_START => '2014-07-08',
+            DATE_END => '2014-07-08'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'SEGMENT',
+            DATE_START => '2015-06-03',
+            DATE_END => '2015-06-03'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'SEGMENT',
+            DATE_START => '2016-08-18',
+            DATE_END => '2016-08-20'
+          } 
+        }
+      },
+    }
+  },
+
   'Portugal Friendly' => 
   {
     ORGANIZATION => 'FPB',
@@ -1253,6 +2224,37 @@ my %TOURNAMENTS_FRIENDLY =
     }
   },
 
+  'Portugal Practice' => 
+  {
+    ORGANIZATION => 'FPB',
+    COUNTRY => 'Portugal',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'ROUND',
+            DATE_START => '2015-06-13',
+            DATE_END => '2015-06-14'
+          } 
+        }
+      },
+    }
+  },
+
   'Scotland Friendly' => 
   {
     ORGANIZATION => 'SBU',
@@ -1278,6 +2280,53 @@ my %TOURNAMENTS_FRIENDLY =
             major => 'SESSION',
             DATE_START => '2010-11-27',
             DATE_END => '2010-11-27'
+          } 
+        }
+      },
+    }
+  },
+
+  'Scotland Practice' => 
+  {
+    ORGANIZATION => 'SBU',
+    COUNTRY => 'Scotland',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            major => 'SEGMENT',
+            DATE_START => '2009-02-22',
+            DATE_END => '2009-02-22'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-03-03',
+            DATE_END => '2010-03-03'
           } 
         }
       },
@@ -1381,6 +2430,68 @@ my %TOURNAMENTS_FRIENDLY =
     }
   },
 
+  'Sweden Practice' => 
+  {
+    ORGANIZATION => 'SBF',
+    COUNTRY => 'Sweden',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Women',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            major => 'ROUND',
+            DATE_START => '2012-04-06',
+            DATE_END => '2012-04-07'
+          } 
+        }
+      },
+    }
+  },
+
+  'Taiwan Practice' => 
+  {
+    ORGANIZATION => 'CTCBA',
+    COUNTRY => 'Taiwan',
+    ORIGIN => 'National',
+    ZONE => 'Asi',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2007' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'SEGMENT',
+            DATE_START => '2007-04-16',
+            DATE_END => '2007-04-16'
+          },
+        }
+      },
+    }
+  },
+
   'Tunisia Friendly' => 
   {
     ORGANIZATION => 'SBF',
@@ -1407,6 +2518,44 @@ my %TOURNAMENTS_FRIENDLY =
             major => 'ROUND',
             DATE_START => '2013-06-22',
             DATE_END => '2013-06-25'
+          } 
+        }
+      },
+    }
+  },
+
+  'Turkey Practice' => 
+  {
+    ORGANIZATION => 'FFB',
+    COUNTRY => 'France',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2016A' =>
+      {
+        MEET => 'Practice Match',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND',
+            DATE_START => '2016-04-19',
+            DATE_END => '2016-04-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            major => 'SESSION',
+            DATE_START => '2016-05-14',
+            DATE_END => '2016-05-15'
           } 
         }
       },
