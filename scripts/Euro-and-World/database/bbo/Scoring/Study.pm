@@ -28,8 +28,8 @@ my @LOCAL_SUBS =
   { START =>  8351, END =>  8353, TEXT => 'BAM', CORR => 'MP' },
   { START =>  9230, END =>  9241, TEXT => 'BAM', CORR => 'MP' },
   { START => 10194, END => 10194, TEXT => 'IMP', CORR => 'MP' }, # IMP!
-  { START => 11229, END => 11234, TEXT => 'IMP', CORR => 'MP' }, # IMP!
-  { START => 11239, END => 11243, TEXT => 'IMP', CORR => 'MP' }, # IMP!
+  { START => 11231, END => 11234, TEXT => 'IMP', CORR => 'MP' }, # IMP!
+  { START => 11241, END => 11243, TEXT => 'IMP', CORR => 'MP' }, # IMP!
   { START => 11245, END => 11247, TEXT => 'IMP', CORR => 'MP' }, # IMP!
   { START => 12222, END => 12253, TEXT => 'BAM', CORR => 'MP' },
   { START => 12739, END => 12756, TEXT => 'BAM', CORR => 'MP' },
@@ -114,6 +114,11 @@ my @LOCAL_SUBS =
 
   # India
   { START => 11718, END => 11723, TEXT => 'MP', CORR => 'IMP' },
+
+  # Deauville
+  { START => 29524, END => 29579, TEXT => 'BAM', CORR => 'Patton' },
+  { START => 40062, END => 40187, TEXT => 'BAM', CORR => 'Patton' },
+
  
 );
 

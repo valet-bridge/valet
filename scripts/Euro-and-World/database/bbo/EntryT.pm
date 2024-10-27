@@ -162,6 +162,8 @@ my %FORM_CORRECTIONS = (
   'Danish Women Pairs' => [
     14716,
     19120, 19124, 19125, 19130, 19133, 19134],
+  'Deauville Open Pairs' => [
+    45817, 45871, 45872, 45979, 45980],
   'Delhi Gymkhana Club Open Pairs' => [
     26251],
   'English Women Trials' => [
@@ -745,6 +747,13 @@ sub fix_some_fields
   }
 
   if ($self->field('TITLE_TNAME') =~ 'Patton' &&
+      $self->field('SCORING') eq 'IMP')
+  {
+    delete $self->{SCORING};
+    push @{$self->{SCORING}}, 'Patton';
+  }
+
+  if ($self->field('EVENT_SCORING') eq 'Patton' &&
       $self->field('SCORING') eq 'IMP')
   {
     delete $self->{SCORING};

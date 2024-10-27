@@ -364,7 +364,7 @@ sub finish_n_of_n
     $chain->complete('EXPLAINED');
     return 1;
   }
-  elsif ($tname eq 'Division Nationale')
+  elsif ($tname eq 'French First Division')
   {
     $chain->complete('KILLED');
     return 1;
@@ -781,7 +781,7 @@ sub post_process_pair
     $chain1->complete('KILLED');
     return 1;
   }
-  elsif ($tname eq 'Division Nationale' &&
+  elsif ($tname eq 'French First Division' &&
     $field0 eq 'NUMERAL' && $field1 eq 'NUMERAL')
   {
     $chain0->complete('KILLED');

@@ -44,6 +44,7 @@ my %ITERATORS_MAJOR_MINOR = (
   'Chinese First League' => ['SESSION', 'ROUND'],
   'Codan Cup' => ['ROUND', 'SEGMENT'],
   'Dongming Knock-out Teams' => ['ROUND', 'SEGMENT'],
+  'French First Division' => ['ROUND', 'SEGMENT'],
   'GHTD Cup' => ['ROUND', 'SEGMENT'],
   'Indian Senior Trials' => ['SESSION', 'ROUND'],
   'Norwegian Club Teams' =>  ['ROUND', 'SEGMENT'],
