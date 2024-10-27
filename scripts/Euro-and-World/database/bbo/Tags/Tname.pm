@@ -336,6 +336,22 @@ my @MULTI_WORDS =
   'Finnish Swiss Teams Championship',
   'Finnish Women Trials',
 
+  # FRANCE
+  'Biarritz Hiver',
+  'Deauville Open Pairs',
+  'Deauville Open Teams',
+  'Deauville Patton Teams',
+  'French Cup',
+  'French First Division',
+  'French Intercircle',
+  'French Junior Trials',
+  'French Mixed Teams',
+  'French Open Teams',
+  'French Open Trials',
+  'French Senior Trials',
+  'French U28 Trials',
+  'French Women Trials',
+
   # GERMANY
   'Bonn Nations Cup',
   'German Bundesliga',
@@ -848,19 +864,6 @@ my @MULTI_WORDS =
   'Puutalo Open',
   'Salo Midsummer Juniors',
   'Suomen Cup',
-
-  # France
-  'Biarritz Hiver',
-  'French Cup',
-  'French First Division',
-  'French Intercircle',
-  'French Junior Trials',
-  'French Mixed Teams',
-  'French Open Teams',
-  'French Open Trials',
-  'French Senior Trials',
-  'French Women Trials',
-  'French U28 Trials',
 
   # Greece
   'Thanos Capayiannides Memorial Simultaneous',

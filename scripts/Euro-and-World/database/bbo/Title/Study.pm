@@ -649,6 +649,8 @@ sub title_specific_inline
   $text =~ s/^([01]\d)([A-SU-Z])/20$1 $2/; # Year. Avoid th
   $text =~ s/\b([1-9])([A-D])\b/$1 $2/gi; # 1|A
   $text =~ s/\b(\d)of(\d)\b/$1 of $2/g; # 1|of|2
+
+  $text =~ s/\bDN[0O]_4\b/French First Division/g; # DN0_4, DNO_4
   
   # n_n (n of n), n&n (n to n).
   if ($text =~ /(\d+)[_&](\d+)/ && $1 <= $2 && $1 < 1990)
