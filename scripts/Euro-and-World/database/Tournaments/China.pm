@@ -688,13 +688,38 @@ my %TOURNAMENTS_CHINA =
       },
       '2012' =>
       {
-        # TODO
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
             DATE_START => '2012-11-29',
+            DATE_END => '2012-11-30'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-12-01',
+            DATE_END => '2012-12-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-12-03',
+            DATE_END => '2012-12-03'
+          },
+          'C3' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-12-04',
             DATE_END => '2012-12-04'
           } 
         }
@@ -848,19 +873,6 @@ my %TOURNAMENTS_CHINA =
             DATE_START => '2007-04-16',
             DATE_END => '2007-04-16'
           } 
-        }
-      },
-      '2014' =>
-      {
-        CHAPTERS =>
-        {
-          # TODO
-          'C0' => 
-          {
-            YEAR => 2014,
-            DATE_START => '2014-04-12',
-            DATE_END => '2014-04-18'
-          },
         }
       },
     }
@@ -1376,13 +1388,22 @@ my %TOURNAMENTS_CHINA =
       },
       '2012' =>
       {
-        # TODO
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2012-10-18',
+            DATE_END => '2012-10-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            major => 'SESSION',
+            minor => 'ROUND',
+            DATE_START => '2012-10-20',
             DATE_END => '2012-10-21'
           } 
         }

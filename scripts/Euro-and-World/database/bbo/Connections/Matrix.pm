@@ -26,7 +26,7 @@ my %COUNTRY_TO_REGION =
   Brazil => ['rio de janeiro state'],
   China => ['anhui', 'gansu', 'guangdong', 'guangxi',
     'guizhou', 'hainan', 'haixing', 'hebei', 'hubei', 'hunan', 'jiangsu',
-    'jilin', 'liaoning', 'pearl river', 'ren shou', 'shanxi', 
+    'jilin', 'liaoning', 'pearl river', 'ren shou', 'shandong', 'shanxi', 
     'sichuan', 'tianya', 'tinglin', 'wujin', 'yongjia',
     'yunnan', 'zhejiang'],
   Denmark => ['bornholm', 'fjends', 'midtsjælland', 'sydvest'],

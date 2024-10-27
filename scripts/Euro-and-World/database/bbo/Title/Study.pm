@@ -466,6 +466,8 @@ my @LOCAL_SUBS =
     CORR => 'Australian Senior Pairs' },
   { START => 32882, END => 32908, TEXT => 'Australian Seniors Trials',
     CORR => 'Australian Senior Teams' },
+  { START => 32951, END => 33100, TEXT => 'Team Championship China',
+    CORR => 'Chinese Women Teams' },
   { START => 32956, END => 33015, 
     TEXT => 'International Festival - Dobrich',
     CORR => 'Dobrich Bridge Festival - Teams' },

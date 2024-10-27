@@ -158,8 +158,8 @@ my @SINGLE_WORDS = qw(
   Oberloiben Olona Orontes Otago
   Papua Pomerania Porong Punjab
   Rajasthan Rajputana Ratchaburi Rhodes Rogaland Rosfjord 
-  Sakarya Salten Shanxi Siberia Sichuan Silesia Silla Sindh Sintang 
-  Skåne Slask Southland Sydvest
+  Sakarya Salten Shandong Shanxi Siberia Sichuan Silesia Silla Sindh 
+  Sintang Skåne Slask Southland Sydvest
   Tambun Tasmania Telemark Tianya
   Tigris Tinglin Tuncelý
   Uttarakhand

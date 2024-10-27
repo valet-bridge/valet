@@ -27,6 +27,7 @@ use Tournaments::Friendly;
 # use Tournaments::Bulgaria;
 # use Tournaments::Canada;
 # use Tournaments::Chile;
+use Tournaments::China;
 # use Tournaments::Czech;
 # use Tournaments::Croatia;
 # use Tournaments::Denmark;
@@ -36,6 +37,7 @@ use Tournaments::Friendly;
 # use Tournaments::EuroYouth;
 # use Tournaments::Faroe;
 # use Tournaments::Finland;
+# use Tournaments::France;
 # use Tournaments::Germany;
 # use Tournaments::Greece;
 # use Tournaments::Hungary;
@@ -71,7 +73,7 @@ use Tournaments::Friendly;
 
 my %DIVISIONS =
 (
-  FRIENDLY => \&Tournaments::Friendly::set_links
+  # FRIENDLY => \&Tournaments::Friendly::set_links
   
   # AFRICA => \&Tournaments::Africa::set_links
   # ARGENTINA => \&Tournaments::Argentina::set_links
@@ -84,6 +86,7 @@ my %DIVISIONS =
   # BULGARIA => \&Tournaments::Bulgaria::set_links
   # CANADA => \&Tournaments::Canada::set_links
   # CHILE => \&Tournaments::Chile::set_links
+  CHINA => \&Tournaments::China::set_links
   # CZECH => \&Tournaments::Czech::set_links
   # CROATIA => \&Tournaments::Croatia::set_links
   # DENMARK => \&Tournaments::Denmark::set_links
@@ -93,6 +96,7 @@ my %DIVISIONS =
   # EUROYOUTH => \&Tournaments::EuroYouth::set_links
   # FAROE => \&Tournaments::Faroe::set_links
   # FINLAND => \&Tournaments::Finland::set_links
+  # FRANCE => \&Tournaments::France::set_links
   # GERMANY => \&Tournaments::Germany::set_links
   # GREECE => \&Tournaments::Greece::set_links
   # HUNGARY => \&Tournaments::Hungary::set_links

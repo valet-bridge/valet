@@ -35,23 +35,23 @@ sub fix_some_parentheses
 
   if ($t eq 'O')
   {
-    $$team_ref = 'Open';
+    $$team_ref =~ s/\($t\)/(Open)/;
   }
   elsif ($t eq 'W')
   {
-    $$team_ref = 'Women';
+    $$team_ref =~ s/\($t\)/(Women)/;
   }
   elsif ($t eq 'S')
   {
-    $$team_ref = 'Seniors';
+    $$team_ref =~ s/\($t\)/(Seniors)/;
   }
   elsif ($t eq 'L')
   {
-    $$team_ref = 'Ladies';
+    $$team_ref =~ s/\($t\)/(Ladies)/;
   }
   elsif ($t eq 'J')
   {
-    $$team_ref = 'Juniors';
+    $$team_ref =~ s/\($t\)/(Juniors)/;
   }
 }
 
