@@ -37,7 +37,7 @@ use Tournaments::Friendly;
 # use Tournaments::EuroYouth;
 # use Tournaments::Faroe;
 # use Tournaments::Finland;
-use Tournaments::France;
+# use Tournaments::France;
 # use Tournaments::Germany;
 # use Tournaments::Greece;
 # use Tournaments::Hungary;
@@ -51,6 +51,7 @@ use Tournaments::France;
 # use Tournaments::Jordan;
 # use Tournaments::Lebanon;
 # use Tournaments::Monaco;
+use Tournaments::Netherlands;
 # use Tournaments::NewZealand;
 # use Tournaments::Nordic;
 # use Tournaments::Norway;
@@ -96,7 +97,7 @@ my %DIVISIONS =
   # EUROYOUTH => \&Tournaments::EuroYouth::set_links
   # FAROE => \&Tournaments::Faroe::set_links
   # FINLAND => \&Tournaments::Finland::set_links
-  FRANCE => \&Tournaments::France::set_links
+  # FRANCE => \&Tournaments::France::set_links
   # GERMANY => \&Tournaments::Germany::set_links
   # GREECE => \&Tournaments::Greece::set_links
   # HUNGARY => \&Tournaments::Hungary::set_links
@@ -110,6 +111,7 @@ my %DIVISIONS =
   # JORDAN => \&Tournaments::Jordan::set_links
   # LEBANON => \&Tournaments::Lebanon::set_links
   # MONACO => \&Tournaments::Monaco::set_links
+  NETHERLANDS => \&Tournaments::Netherlands::set_links
   # NEWZEALAND => \&Tournaments::NewZealand::set_links
   # NORDIC => \&Tournaments::Nordic::set_links
   # NORWAY => \&Tournaments::Norway::set_links
