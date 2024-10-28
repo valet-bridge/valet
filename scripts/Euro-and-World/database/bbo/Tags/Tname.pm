@@ -157,6 +157,9 @@ my @MULTI_WORDS =
   'Belgian Open Trials',
   'Belisol Invitational Pairs',
 
+  # BOLIVIA
+  'Bolivian Open Teams',
+
   # BRAZIL
   'Brazilian Senior Trials',
   'Brazilian Open Teams',
@@ -584,6 +587,10 @@ my @MULTI_WORDS =
   'Trondheim Pairs Cup',
   'Trondheim Teams Cup',
 
+  # PAKISTAN
+  'Pakistan Day Open Teams',
+  'Pakistan Open Trials',
+
   # POLAND
   'Andrzej Wilkosz Memorial Pairs',
   'Grand Prix of Poland Pairs',
@@ -850,9 +857,6 @@ my @MULTI_WORDS =
   # Baltic
   'VV Cup',
 
-  # Bolivia
-  'Bolivian Open Teams',
-
   # Bulgaria
   'ARIS Cup',
   'Haskovski Mineralni Bani',
@@ -963,10 +967,6 @@ my @MULTI_WORDS =
   'Snåsa Cup',
   'Vest-Agder Regional Team Championship',
   'Willy Brown Memorial',
-
-  # Pakistan
-  'Pakistan Day Bridge Championship',
-  'Pakistan Open Trials',
 
   # Poland
   # https://wyniki.pzbs.pl/2016/baltycki/
@@ -2522,9 +2522,12 @@ my %MULTI_TYPOS =
     'olrud swiss teams', 
     'olrudpaasken teams'],
 
-  'Open Catalunya Preferent' => ['open catalunya equips',
-    'open cataluña preferent', 'open preferent equips',
-    'open preferent', 'open equips preferent'],
+  'Open Catalunya Preferent' => [
+    'open catalunya equips',
+    'open cataluña preferent', 
+    'open equips preferent',
+    'open preferent', 
+    'open preferent equips'],
  'Opening Tournament' => ['opening tournement'],
   'Otters Inter-Club Teams' => [
     'otters club open',
@@ -2532,7 +2535,9 @@ my %MULTI_TYPOS =
 
   ### PPP
 
-  'Pakistan Day Bridge Championship' => ['pakistan day bridge'],
+  'Pakistan Day Open Teams' => [
+    'pakistan day bridge championship',
+    'pakistan day bridge'],
   'Pakistan Open Trials' => [
     'pakistan national trials',
     'pakistan open national trials',
@@ -2541,9 +2546,13 @@ my %MULTI_TYPOS =
     'pakistan open team national trials',
     'pakistan open team trials', 
     'pakistan trial'],
-  'Pan Arab Inter-Club Championship' => ['pan arab championship',
-    'pan arab inter_club', 'pan arab interclub',
-    'pan arab inter-club', 'pan arab inter club', 'pan arab iner club'],
+  'Pan Arab Inter-Club Championship' => [
+    'pan arab championship',
+    'pan arab iner club',
+    'pan arab inter_club', 
+    'pan arab inter-club', 
+    'pan arab inter club', 
+    'pan arab interclub'],
   'Patton de Monaco' => ["monaco's patton", 'patton international monaco',
     'patton international monte-carlo',
     'patton international monte carlo', 'patton monte carlo'],
