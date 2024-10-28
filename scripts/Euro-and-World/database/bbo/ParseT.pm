@@ -23,6 +23,7 @@ use EntryT;
 # use Tournaments::Baltic;
 # use Tournaments::Belarus;
 # use Tournaments::Belgium;
+use Tournaments::Bolivia;
 # use Tournaments::Brazil;
 # use Tournaments::Bulgaria;
 # use Tournaments::Canada;
@@ -58,7 +59,7 @@ use EntryT;
 # use Tournaments::Poland;
 # use Tournaments::Portugal;
 # use Tournaments::Romania;
-use Tournaments::Russia;
+# use Tournaments::Russia;
 # use Tournaments::Serbia;
 # use Tournaments::Slovakia;
 # use Tournaments::SouthAmerica;
@@ -84,6 +85,7 @@ my %DIVISIONS =
   # BALTIC => \&Tournaments::Baltic::set_links
   # BELARUS => \&Tournaments::Belarus::set_links
   # BELGIUM => \&Tournaments::Belgium::set_links
+  BOLIVIA => \&Tournaments::Bolivia::set_links
   # BRAZIL => \&Tournaments::Brazil::set_links
   # BULGARIA => \&Tournaments::Bulgaria::set_links
   # CANADA => \&Tournaments::Canada::set_links
@@ -119,7 +121,7 @@ my %DIVISIONS =
   # POLAND => \&Tournaments::Poland::set_links
   # PORTUGAL => \&Tournaments::Portugal::set_links
   # ROMANIA => \&Tournaments::Romania::set_links
-  RUSSIA => \&Tournaments::Russia::set_links
+  # RUSSIA => \&Tournaments::Russia::set_links
   # SERBIA => \&Tournaments::Serbia::set_links
   # SLOVAKIA => \&Tournaments::Slovakia::set_links
   # SOUTHAMERICA => \&Tournaments::SouthAmerica::set_links

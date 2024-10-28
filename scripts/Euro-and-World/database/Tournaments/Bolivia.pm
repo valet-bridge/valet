@@ -1,0 +1,121 @@
+#!perl
+
+use strict;
+use warnings;
+use v5.10;
+use utf8;
+use open ':std', ':encoding(UTF-8)';
+
+package Tournaments::Bolivia;
+
+our @ISA = qw(Exporter);
+our @EXPORT = qw(set_links);
+
+my %MEETS_BOLIVIA =
+(
+);
+
+my %TOURNAMENTS_BOLIVIA =
+(
+  'Bolivian Open Teams' => 
+  {
+    ORGANIZATION => 'ABB',
+    COUNTRY => 'Bolivia',
+    ORIGIN => 'National',
+    ZONE => 'South America',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2004' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2004-09-10',
+            DATE_END => '2004-09-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2004-09-11',
+            DATE_END => '2004-09-12'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        ORDINAL => 11,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2013-10-21',
+            DATE_END => '2013-10-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-10-25',
+            DATE_END => '2013-10-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-10-26',
+            DATE_END => '2013-10-27'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-11-20',
+            DATE_END => '2015-11-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-11-21',
+            DATE_END => '2015-11-21'
+          } 
+        }
+      },
+    }
+  },
+
+);
+
+
+sub set_links
+{
+  my ($method) = @_;
+
+  $method->(\%MEETS_BOLIVIA, \%TOURNAMENTS_BOLIVIA, 'Bolivia');
+}
+
+1;
