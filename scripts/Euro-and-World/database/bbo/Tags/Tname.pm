@@ -658,6 +658,9 @@ my @MULTI_WORDS =
   'Serbian Open Trials',
   'Serbian Premier League',
 
+  # SINGAPORE
+  'Singapore Open Teams',
+
   # SLOVAKIA
   'Slovakian Open Teams',
 
@@ -756,11 +759,15 @@ my @MULTI_WORDS =
   'Welsh Open Trials',
   'Young Chelsea Knock-out',
 
-
   # USA
   '0 to 1500 Spingold',
+  'Collegiate Bowl',
+  'Grand National Teams',
+  "Missouri Braggin' Rights",
+  'Philadelphia Solomon Teams',
   'Reisinger BAM Teams',
   'Spingold Teams',
+  "Sternberg Women's BAM Teams",
   'US Girls Trials',
   'US Juniors Training',
   'US Junior Trials',
@@ -993,9 +1000,6 @@ my @MULTI_WORDS =
   # Serbia
   'Vrnjacka Banja Open Teams',
 
-  # Singapore
-  'Singapore Open Teams',
-
   # South Africa
   'FullBridge International Teams',
   'South African Championship',
@@ -1048,14 +1052,6 @@ my @MULTI_WORDS =
   'Thrace Cup League',
   'Western Mediterranean Club Teams',
   'Winter Open Teams',
-
-  # USA
-  'Baze Senior Knock-out',
-  'Collegiate Bowl',
-  'Grand National Teams', # Add ABCL or US to name
-  "Missouri Braggin' Rights",
-  'Solomon Teams',
-  "Sternberg Women's BAM Teams",
 
 
   # ----------------------------------------------------
@@ -1294,8 +1290,6 @@ my %MULTI_TYPOS =
   'Baltic Open Teams' => [
     'baltic open teams cup',
     'baltic teams cup'],
-  'Baze Senior Knock-out' => ['baze senior ko', 'baze sr_ ko',
-    'baze sr_ ko', 'baze sr ko'],
   'Belarusian Open Teams' => ['belarus teams',
     'belarus cup', 'belarus national teams',
     'belarus team championship', 'belarus teams cup',
@@ -2565,6 +2559,8 @@ my %MULTI_TYPOS =
   'Petit Grand Prix van Driene' => ['petit grand prix',
     'grand prix van driene'],
   'Pertamina Field Tambun Cup' => ['pertamina ep field tambun cup'],
+  'Philadelphia Solomon Teams' => [
+    'solomon teams'],
   'PLN Cup' => ['pln fortuga'],
   'Plock District League' => ['plockiej ligi okregowej'],
   'Poddar National Masters' => ['poddar national master',
@@ -3188,6 +3184,11 @@ my %MULTI_TYPOS =
     'usa itt',
     'usa team trial'],
   'US Senior Teams' => [
+    'baze senior knock-out',
+    'baze senior ko', 
+    'baze sr_ ko',
+    'baze sr_ ko', 
+    'baze sr ko',
     'nabc senior ko',
     'nabc senior knock-out teams',
     'united states seniors bridge championship',

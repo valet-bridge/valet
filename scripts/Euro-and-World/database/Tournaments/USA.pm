@@ -461,6 +461,388 @@ my %TOURNAMENTS_USA =
     }
   },
 
+  'Collegiate Bowl' => 
+  {
+    ORGANIZATION => 'ACBL',
+    COUNTRY => 'USA',
+    ORIGIN => 'National',
+    ZONE => 'North America',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'MATCH',
+            DATE_START => '2014-07-19',
+            DATE_END => '2014-07-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-07-20',
+            DATE_END => '2014-07-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-07-21',
+            DATE_END => '2014-07-21'
+          }
+        }
+      },
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-08',
+            DATE_END => '2015-08-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-09',
+            DATE_END => '2015-08-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-09',
+            DATE_END => '2015-08-10'
+          }
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-07-23',
+            DATE_END => '2016-07-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2016-07-24',
+            DATE_END => '2016-07-25'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-07-24',
+            DATE_END => '2016-07-25'
+          }
+        }
+      },
+    }
+  },
+
+  'Grand National Teams' => 
+  {
+    ORGANIZATION => 'ACBL',
+    COUNTRY => 'USA',
+    ORIGIN => 'National',
+    ZONE => 'North America',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-07-24',
+            DATE_END => '2010-07-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-07-25',
+            DATE_END => '2010-07-26'
+          },
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-07-24',
+            DATE_END => '2011-07-25'
+          },
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-07-14',
+            DATE_END => '2012-07-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-07-15',
+            DATE_END => '2012-07-16'
+          }
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-08-03',
+            DATE_END => '2013-08-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-08-04',
+            DATE_END => '2013-08-04'
+          },
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-07-19',
+            DATE_END => '2014-07-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-07-20',
+            DATE_END => '2014-07-21'
+          },
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-08',
+            DATE_END => '2015-08-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-09',
+            DATE_END => '2015-08-10'
+          },
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-07-23',
+            DATE_END => '2016-07-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-07-24',
+            DATE_END => '2016-07-25'
+          },
+        }
+      },
+    }
+  },
+
+  "Missouri Braggin' Rights" => 
+  {
+    ORGANIZATION => 'ACBL',
+    COUNTRY => 'USA',
+    ORIGIN => 'National',
+    ZONE => 'North America',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2009,
+            major => 'QUARTER',
+            DATE_START => '2009-08-22',
+            DATE_END => '2009-08-22'
+          },
+        }
+      },
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-08-14',
+            DATE_END => '2010-08-14'
+          },
+        }
+      },
+    }
+  },
+
+  'Philadelphia Solomon Teams' => 
+  {
+    ORGANIZATION => 'ACBL',
+    COUNTRY => 'USA',
+    CITY => 'Philadelphia',
+    ORIGIN => 'National',
+    ZONE => 'North America',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-05-15',
+            DATE_END => '2010-05-15'
+          },
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'SEGMENT',
+            DATE_START => '2011-07-13',
+            DATE_END => '2011-07-13'
+          },
+        }
+      },
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-09-11',
+            DATE_END => '2013-09-11'
+          },
+        }
+      },
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-11-05',
+            DATE_END => '2014-11-05'
+          },
+        }
+      },
+    }
+  },
+
   'Reisinger BAM Teams' => 
   {
     FORM => 'Teams',
@@ -672,9 +1054,18 @@ my %TOURNAMENTS_USA =
             major => 'SESSION',
             minor => 'SEGMENT',
             DATE_START => '2015-12-05',
-            DATE_END => '2015-12-06'
+            DATE_END => '2015-12-05'
           },
           'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SESSION',
+            minor => 'SEGMENT',
+            DATE_START => '2015-12-06',
+            DATE_END => '2015-12-06'
+          },
+          'C2' => 
           {
             YEAR => 2015,
             STAGE => 'Final',
@@ -1423,6 +1814,33 @@ my %TOURNAMENTS_USA =
             major => 'SEGMENT',
             DATE_START => '2016-07-31',
             DATE_END => '2016-08-01'
+          },
+        }
+      },
+    }
+  },
+
+  "Sternberg Women's BAM Teams" => 
+  {
+    FORM => 'Teams',
+    SCORING => 'BAM',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2004' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2004-11-29',
+            DATE_END => '2004-11-29'
           },
         }
       },
@@ -2284,7 +2702,7 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2012' =>
+      '2012A' =>
       {
         CHAPTERS =>
         {
@@ -2320,6 +2738,146 @@ my %TOURNAMENTS_USA =
             DATE_START => '2012-06-05',
             DATE_END => '2012-06-07'
           } 
+        }
+      },
+      '2012B' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-11-26',
+            DATE_END => '2012-11-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-11-27',
+            DATE_END => '2012-11-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-11-28',
+            DATE_END => '2012-11-29'
+          },
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2013-11-30',
+            DATE_END => '2013-12-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-12-01',
+            DATE_END => '2013-12-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-12-02',
+            DATE_END => '2013-12-03'
+          },
+          'C3' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-12-03',
+            DATE_END => '2013-12-04'
+          },
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-11-30',
+            DATE_END => '2014-12-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-12-01',
+            DATE_END => '2014-12-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-12-02',
+            DATE_END => '2014-12-03'
+          },
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2015-11-28',
+            DATE_END => '2015-11-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-11-29',
+            DATE_END => '2015-11-30'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-11-30',
+            DATE_END => '2015-12-01'
+          },
+          'C3' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-12-01',
+            DATE_END => '2015-12-02'
+          },
         }
       },
     }
@@ -3280,6 +3838,7 @@ my %TOURNAMENTS_USA =
             YEAR => 2005,
             STAGE => 'Quarterfinal',
             major => 'SEGMENT',
+            minor => 'MATCH',
             DATE_START => '2005-03-18',
             DATE_END => '2005-03-18'
           },
@@ -3288,6 +3847,7 @@ my %TOURNAMENTS_USA =
             YEAR => 2005,
             STAGE => 'Semifinal',
             major => 'SEGMENT',
+            minor => 'MATCH',
             DATE_START => '2005-03-18',
             DATE_END => '2005-03-19'
           },
