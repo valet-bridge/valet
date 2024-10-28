@@ -11,6 +11,8 @@ package Tournaments::Netherlands;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+# bridge.nl, Wayback Machine
+
 my %MEETS_NETHERLANDS =
 (
   'The Hague Bridge Experience',
@@ -54,6 +56,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2000,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2000-04-01',
             DATE_END => '2000-04-04'
           } 
@@ -66,6 +70,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2001,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2001-05-24',
             DATE_END => '2001-05-27'
           } 
@@ -78,6 +84,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2002,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2002-05-12',
             DATE_END => '2002-05-12'
           } 
@@ -90,6 +98,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2003,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2003-06-04',
             DATE_END => '2003-06-04'
           } 
@@ -118,6 +128,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'ROUND',
             DATE_START => '2012-06-09',
             DATE_END => '2012-06-09'
           } 
@@ -147,6 +158,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2002,
+            major => 'ROUND',
+            minor => 'MATCH',
             DATE_START => '2002-05-23',
             DATE_END => '2002-05-26'
           } 
@@ -154,14 +167,24 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2003' =>
       {
+        # Really 2003-06-28 to 2003-07-02
         CITY => "'s-Hertogenbosch",
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
-            # Really 2003-06-28 to 2003-07-02
             YEAR => 2003,
+            major => 'ROUND',
+            minor => 'MATCH',
             DATE_START => '2003-07-05',
+            DATE_END => '2003-07-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2003,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2003-07-06',
             DATE_END => '2003-07-06'
           } 
         }
@@ -189,6 +212,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2004,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2004-05-23',
             DATE_END => '2004-05-23'
           } 
@@ -217,6 +242,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 1996,
+            STAGE => 'Final',
             DATE_START => '1996-12-14',
             DATE_END => '1996-12-15'
           } 
@@ -229,6 +255,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 1997,
+            STAGE => 'Final',
             DATE_START => '1997-12-13',
             DATE_END => '1997-12-14'
           } 
@@ -241,6 +268,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 1998,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '1998-12-12',
             DATE_END => '1998-12-13'
           } 
@@ -253,6 +282,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 1999,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '1999-12-11',
             DATE_END => '1999-12-12'
           } 
@@ -265,6 +296,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2000,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2000-12-09',
             DATE_END => '2000-12-10'
           } 
@@ -277,6 +310,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2001,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2001-12-08',
             DATE_END => '2001-12-09'
           } 
@@ -289,6 +324,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2003,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2003-01-25',
             DATE_END => '2003-01-26'
           } 
@@ -301,6 +338,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2004,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2004-01-24',
             DATE_END => '2004-01-25'
           } 
@@ -313,6 +352,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2005,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2005-01-29',
             DATE_END => '2005-01-30'
           } 
@@ -340,18 +381,6 @@ my %TOURNAMENTS_NETHERLANDS =
           } 
         }
       },
-      '2008' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2008,
-            DATE_START => '2008-03-03',
-            DATE_END => '2008-03-03'
-          } 
-        }
-      },
       '2007' =>
       {
         CHAPTERS =>
@@ -359,8 +388,24 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2007-02-04',
             DATE_END => '2007-02-04'
+          } 
+        }
+      },
+      '2008' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2008-03-03',
+            DATE_END => '2008-03-03'
           } 
         }
       },
@@ -371,6 +416,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2010-01-09',
             DATE_END => '2010-01-10'
           } 
@@ -383,6 +430,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2011-01-29',
             DATE_END => '2011-01-30'
           } 
@@ -395,18 +444,24 @@ my %TOURNAMENTS_NETHERLANDS =
           'C0' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
+            minor => 'MATCH',
             DATE_START => '2011-09-24',
             DATE_END => '2011-09-25'
           },
           'C1' => 
           {
             YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2012-01-21',
             DATE_END => '2012-01-22'
           },
           'C2' => 
           {
             YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2012-02-04',
             DATE_END => '2012-02-05'
           } 
@@ -419,12 +474,16 @@ my %TOURNAMENTS_NETHERLANDS =
           'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2012-12-22',
             DATE_END => '2012-12-23'
           },
           'C1' => 
           {
             YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2013-01-05',
             DATE_END => '2013-01-06'
           } 
@@ -437,6 +496,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2014-01-25',
             DATE_END => '2014-01-26'
           } 
@@ -449,6 +510,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2015-01-24',
             DATE_END => '2015-01-25'
           } 
@@ -461,6 +524,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2016-01-23',
             DATE_END => '2016-01-24'
           } 
@@ -491,6 +556,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 1997,
+            major => 'ROUND',
             DATE_START => '1997-02-21',
             DATE_END => '1997-02-23'
           } 
@@ -518,6 +584,8 @@ my %TOURNAMENTS_NETHERLANDS =
           {
             # Guess
             YEAR => 1999,
+            STAGE => 'Final',
+            major => 'MATCH',
             DATE_START => '1999-02-23',
             DATE_END => '1999-02-25'
           } 
@@ -530,6 +598,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2000,
+            STAGE => 'Final',
+            major => 'MATCH',
             DATE_START => '2000-02-25',
             DATE_END => '2000-02-27'
           } 
@@ -542,6 +612,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2001,
+            STAGE => 'Final',
+            major => 'MATCH',
             DATE_START => '2001-04-14',
             DATE_END => '2001-04-16'
           } 
@@ -554,6 +626,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2002,
+            STAGE => 'Final',
+            major => 'MATCH',
             DATE_START => '2002-02-22',
             DATE_END => '2002-02-24'
           } 
@@ -582,6 +656,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2014,
+            major => 'ROUND',
             DATE_START => '2014-09-13',
             DATE_END => '2014-09-13'
           } 
@@ -594,6 +669,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2015,
+            major => 'ROUND',
             DATE_START => '2015-09-05',
             DATE_END => '2015-09-05'
           } 
@@ -622,6 +698,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2007,
+            major => 'SESSION',
             DATE_START => '2007-05-31',
             DATE_END => '2007-05-31'
           } 
@@ -634,6 +711,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'SESSION',
             DATE_START => '2011-06-11',
             DATE_END => '2011-06-11'
           } 
@@ -664,6 +742,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'ROUND',
             DATE_START => '2016-08-19',
             DATE_END => '2016-08-20'
           } 
@@ -722,6 +801,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2007,
+            major => 'SEGMENT',
             DATE_START => '2007-09-11',
             DATE_END => '2007-09-11'
           } 
@@ -752,6 +832,8 @@ my %TOURNAMENTS_NETHERLANDS =
           {
             # Guess
             YEAR => 1998,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '1998-06-12',
             DATE_END => '1998-06-14'
           } 
@@ -766,6 +848,8 @@ my %TOURNAMENTS_NETHERLANDS =
           {
             # Guess
             YEAR => 1999,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '1999-06-11',
             DATE_END => '1999-06-13'
           } 
@@ -779,6 +863,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2000,
+            major => 'MATCH',
             DATE_START => '2000-06-10',
             DATE_END => '2000-06-12'
           } 
@@ -792,6 +877,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2002,
+            STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2002-03-30',
             DATE_END => '2002-04-01'
           } 
@@ -805,6 +892,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2009-03-07',
             DATE_END => '2009-03-08'
           } 
@@ -818,6 +907,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2010-03-06',
             DATE_END => '2010-03-07'
           } 
@@ -831,6 +922,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2011-03-05',
             DATE_END => '2011-03-06'
           } 
@@ -844,6 +937,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2012,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2012-03-03',
             DATE_END => '2012-03-04'
           } 
@@ -857,6 +952,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2013-03-02',
             DATE_END => '2013-03-03'
           } 
@@ -870,6 +967,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2014-03-01',
             DATE_END => '2014-03-02'
           } 
@@ -883,6 +982,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2015-03-07',
             DATE_END => '2015-03-08'
           } 
@@ -896,6 +997,9 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2016-03-05',
             DATE_END => '2016-03-06'
           } 
@@ -924,20 +1028,9 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2005,
+            major => 'ROUND',
             DATE_START => '2005-02-26',
             DATE_END => '2005-02-27'
-          } 
-        }
-      },
-      '2006' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2006,
-            DATE_START => '2006-02-26',
-            DATE_END => '2006-02-26'
           } 
         }
       },
@@ -945,9 +1038,26 @@ my %TOURNAMENTS_NETHERLANDS =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2007,
+            major => 'ROUND',
+            DATE_START => '2007-02-24',
+            DATE_END => '2007-02-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-02-25',
+            DATE_END => '2007-02-25'
+          },
+          'C2' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2007-02-25',
             DATE_END => '2007-02-25'
           } 
@@ -957,11 +1067,38 @@ my %TOURNAMENTS_NETHERLANDS =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2008,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2008-03-02',
+            DATE_END => '2008-03-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2008-03-03',
             DATE_END => '2008-03-03'
+          },
+          'C2' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-03-03',
+            DATE_END => '2008-03-03'
+          },
+          'C3' => 
+          {
+            # Unclear what this really is
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-03-04',
+            DATE_END => '2008-03-04'
           } 
         }
       },
@@ -985,9 +1122,24 @@ my %TOURNAMENTS_NETHERLANDS =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2006,
+            STAGE => 'Round-robin',
+            DATE_START => '2006-03-26',
+            DATE_END => '2006-03-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Semifinal',
+            DATE_START => '2006-03-26',
+            DATE_END => '2006-03-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
             DATE_START => '2006-03-26',
             DATE_END => '2006-03-26'
           } 
@@ -997,10 +1149,25 @@ my %TOURNAMENTS_NETHERLANDS =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2007,
-            DATE_START => '2007-03-27',
+            major => 'ROUND',
+            DATE_START => '2007-03-25',
+            DATE_END => '2007-03-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Semifinal',
+            DATE_START => '2007-03-29',
+            DATE_END => '2007-03-29'
+          },
+          'C2' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            DATE_START => '2007-03-29',
             DATE_END => '2007-03-29'
           } 
         }
@@ -1009,9 +1176,27 @@ my %TOURNAMENTS_NETHERLANDS =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2008,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2008-03-19',
+            DATE_END => '2008-03-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-03-20',
+            DATE_END => '2008-03-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2008-03-20',
             DATE_END => '2008-03-20'
           } 
@@ -1021,10 +1206,28 @@ my %TOURNAMENTS_NETHERLANDS =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2009-03-09',
+            DATE_END => '2009-03-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-03-13',
+            DATE_END => '2009-03-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-03-13',
             DATE_END => '2009-03-13'
           } 
         }
@@ -1033,10 +1236,28 @@ my %TOURNAMENTS_NETHERLANDS =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2010,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2010-03-22',
+            DATE_END => '2010-03-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-03-26',
+            DATE_END => '2010-03-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-03-26',
             DATE_END => '2010-03-26'
           } 
         }
@@ -1045,10 +1266,28 @@ my %TOURNAMENTS_NETHERLANDS =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2011-03-21',
+            DATE_END => '2011-03-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-03-25',
+            DATE_END => '2011-03-25'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-03-25',
             DATE_END => '2011-03-25'
           } 
         }
@@ -1057,10 +1296,28 @@ my %TOURNAMENTS_NETHERLANDS =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2012-03-26',
+            DATE_END => '2012-03-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-03-29',
+            DATE_END => '2012-03-29'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-03-30',
             DATE_END => '2012-03-30'
           } 
         }
@@ -1069,10 +1326,28 @@ my %TOURNAMENTS_NETHERLANDS =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2013-03-18',
+            DATE_END => '2013-03-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-03-21',
+            DATE_END => '2013-03-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-03-21',
             DATE_END => '2013-03-22'
           } 
         }
@@ -1213,6 +1488,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2006,
+            major => 'ROUND',
             DATE_START => '2006-09-11',
             DATE_END => '2006-09-11'
           } 
@@ -1225,6 +1501,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2007,
+            major => 'ROUND',
             DATE_START => '2007-08-27',
             DATE_END => '2007-08-28'
           } 
@@ -1237,6 +1514,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2008,
+            major => 'ROUND',
             DATE_START => '2008-08-30',
             DATE_END => '2008-08-31'
           } 
@@ -1249,6 +1527,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2010,
+            major => 'ROUND',
             DATE_START => '2010-08-28',
             DATE_END => '2010-08-29'
           } 
@@ -1261,6 +1540,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'ROUND',
             DATE_START => '2012-09-01',
             DATE_END => '2012-09-02'
           } 

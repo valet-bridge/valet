@@ -528,6 +528,23 @@ my @MULTI_WORDS =
   'Patton de Monaco',
   'Prince Albert II Cup',
 
+  # NETHERLANDS
+  'ArboNed Team Cup',
+  'Arnhem Interbridge Tournament',
+  'Carrousel Cup',
+  'Dutch Knock-Out Cup',
+  'Dutch Meesterklasse',
+  'Forbo-Krommenie Nations Cup',
+  'Jaap Kokkes Tournament',
+  'Petit Grand Prix van Driene',
+  'The Hague Open Teams',
+  'The Hague Pro-Am Pairs',
+  'Top Circuit',
+  'Top Circuit Teams',
+  'White House International',
+  'White House Juniors',
+  'White House Top 12',
+
   # NEW ZEALAND
   'New Zealand Inter-Provincial Open Teams',
   'New Zealand Open Teams',
@@ -928,23 +945,6 @@ my @MULTI_WORDS =
   # New Zealand
   'Centre Island Teams',
 
-  # Netherlands
-  'ArboNed Team Cup',
-  'Arnhem Interbridge Tournament',
-  'Carrousel Cup',
-  'Dutch Knock-Out Cup',
-  'Dutch Meesterklasse',
-  'Jaap Kokkes Tournament',
-  'Forbo-Krommenie Nations Cup',
-  'Petit Grand Prix van Driene',
-  'The Hague Open Teams',
-  'The Hague Pro-Am Pairs',
-  'Top Circuit',
-  'Top Circuit Teams',
-  'White House International',
-  'White House Juniors',
-  'White House Top 12',
-
   # Norway
   'Bergen Grand Tournament',
   'Codan Cup',
@@ -1066,13 +1066,6 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  ### These are the only ones that are not specific (in time/place)
-  ### tournament "names".
-
-  # 'Practice Match' => ['practice session', 'training match', 
-    # 'practice match', 'test match', 'tes match', 'practise match', 
-    # 'practice matche', 'practice matches'],
-
   ### AAA
 
   'African Zonal Open Teams' => [
