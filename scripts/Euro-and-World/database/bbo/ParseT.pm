@@ -41,6 +41,7 @@ use EntryT;
 # use Tournaments::France;
 # use Tournaments::Germany;
 # use Tournaments::Greece;
+use Tournaments::HongKong;
 # use Tournaments::Hungary;
 # use Tournaments::Iceland;
 # use Tournaments::India;
@@ -71,7 +72,7 @@ use EntryT;
 # use Tournaments::Taipei;
 # use Tournaments::Turkey;
 # use Tournaments::UK;
-use Tournaments::USA;
+# use Tournaments::USA;
 # use Tournaments::Venezuela;
 # use Tournaments::World;
 
@@ -105,6 +106,7 @@ my %DIVISIONS =
   # FRANCE => \&Tournaments::France::set_links
   # GERMANY => \&Tournaments::Germany::set_links
   # GREECE => \&Tournaments::Greece::set_links
+  HONGKONG => \&Tournaments::HongKong::set_links
   # HUNGARY => \&Tournaments::Hungary::set_links
   # ICELAND => \&Tournaments::Iceland::set_links
   # INDIA => \&Tournaments::India::set_links
@@ -135,7 +137,7 @@ my %DIVISIONS =
   # TAIPEI => \&Tournaments::Taipei::set_links
   # TURKEY => \&Tournaments::Turkey::set_links
   # UK => \&Tournaments::UK::set_links
-  USA => \&Tournaments::USA::set_links
+  # USA => \&Tournaments::USA::set_links
   # VENEZUELA => \&Tournaments::Venezuela::set_links
   # WORLD => \&Tournaments::World::set_links
 );

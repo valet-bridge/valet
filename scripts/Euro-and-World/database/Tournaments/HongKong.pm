@@ -90,7 +90,15 @@ my %TOURNAMENTS_HONGKONG =
           'C2' => 
           {
             YEAR => 2007,
-            STAGE => 'Semifinal',
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2007-09-02',
+            DATE_END => '2007-09-02'
+          },
+          'C3' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2007-09-02',
             DATE_END => '2007-09-02'
@@ -157,7 +165,7 @@ my %TOURNAMENTS_HONGKONG =
           'C2' => 
           {
             YEAR => 2014,
-            STAGE => 'Femifinal',
+            STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2014-08-02',
             DATE_END => '2014-08-03'

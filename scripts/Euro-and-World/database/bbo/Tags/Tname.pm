@@ -377,6 +377,11 @@ my @MULTI_WORDS =
   'Greek Open Team Trials',
   'Greek Women Trials',
 
+  # HONG KONG
+  'Hong Kong Inter-City Open Teams',
+  'Hong Kong Inter-City Women Teams',
+  'Hong Kong New Year Teams',
+
   # HUNGARY
   'Balaton Invitational Teams',
   'Balatonföldvár Open Teams',
@@ -895,11 +900,6 @@ my @MULTI_WORDS =
 
   # Greece
   'Thanos Capayiannides Memorial Simultaneous',
-
-  # Hong Kong
-  'Hong Kong Inter-City',
-  'Hong Kong New Year Teams',
-  'JP Morgan Inter-City Championship',
 
   # India
   'Ashok Kapur Memorial Swiss Pairs',
@@ -1964,7 +1964,15 @@ my %MULTI_TYPOS =
     'hna openteams', 
     'hna open team',
     "hna's hainan bridge tournament"],
-  'Hong Kong Inter-City' => ['hong kong iner-city'],
+  'Hong Kong Inter-City Open Teams' => [
+    'hong kong iner-city',
+    'hong kong inter-city',
+    'JP Morgan Inter-City Championship',
+    'JP Morgan Inter-City Bridge Championship',
+    'JP Morgan Intercity Bridge Championships',
+    'JP Morgan Intercity Bridge Championships-Open',
+    'JP Morgan Intercity Bridge Championships-Open T_',
+    'JP Morgan Intercity Bridge Championships-Open  T_'],
 
   # HUNGARY
   'Hungarian IMP Pairs' => ['hungarian imp'],
@@ -2184,12 +2192,6 @@ my %MULTI_TYPOS =
     'jordan spring mixed pairs'],
   'Józef Pochron Jubilee Pairs' => [
     'around 52 cards in 80 years by joe pochron'],
-  'JP Morgan Inter-City Championship' => [
-    'JP Morgan Inter-City Bridge Championship',
-    'JP Morgan Intercity Bridge Championships',
-    'JP Morgan Intercity Bridge Championships-Open',
-    'JP Morgan Intercity Bridge Championships-Open T_',
-    'JP Morgan Intercity Bridge Championships-Open  T_'],
   'Junior Camrose' => ['juniior camrose'],
   'Justice J M Lal All India Open Teams' => [
     'justice j m lal all india open',
