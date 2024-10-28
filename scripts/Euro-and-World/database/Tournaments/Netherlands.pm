@@ -55,8 +55,32 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            DATE_START => '2000-04-01',
+            DATE_END => '2000-04-04'
+          } 
+        }
+      },
+      '2001' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2001,
+            DATE_START => '2001-05-24',
+            DATE_END => '2001-05-27'
+          } 
+        }
+      },
+      '2002' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2002,
+            DATE_START => '2002-05-12',
+            DATE_END => '2002-05-12'
           } 
         }
       },
@@ -175,6 +199,78 @@ my %TOURNAMENTS_NETHERLANDS =
 
     EDITIONS =>
     {
+      '1996' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 1996,
+            DATE_START => '1996-12-14',
+            DATE_END => '1996-12-15'
+          } 
+        }
+      },
+      '1997' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 1997,
+            DATE_START => '1997-12-13',
+            DATE_END => '1997-12-14'
+          } 
+        }
+      },
+      '1998' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 1998,
+            DATE_START => '1998-12-12',
+            DATE_END => '1998-12-13'
+          } 
+        }
+      },
+      '1999' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 1999,
+            DATE_START => '1999-12-11',
+            DATE_END => '1999-12-12'
+          } 
+        }
+      },
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2000,
+            DATE_START => '2000-12-09',
+            DATE_END => '2000-12-10'
+          } 
+        }
+      },
+      '2001' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2001,
+            DATE_START => '2001-12-08',
+            DATE_END => '2001-12-09'
+          } 
+        }
+      },
       '2010' =>
       {
         CHAPTERS =>
@@ -308,9 +404,10 @@ my %TOURNAMENTS_NETHERLANDS =
     }
   },
 
-  'Forbo Nations Cup',
+  'Forbo-Krommenie Nations Cup',
   {
     ORGANIZATION => 'NBB',
+    SPONSOR => 'Forbo',
     COUNTRY => 'Netherlands',
     ORIGIN => 'National',
     ZONE => 'Europe',
@@ -321,6 +418,19 @@ my %TOURNAMENTS_NETHERLANDS =
 
     EDITIONS =>
     {
+      '1997' =>
+      {
+        ORDINAL => 5,
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 1997,
+            DATE_START => '1997-02-21',
+            DATE_END => '1997-02-23'
+          } 
+        }
+      },
       '2000' =>
       {
         CHAPTERS =>
@@ -328,8 +438,32 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            DATE_START => '2000-02-25',
+            DATE_END => '2000-02-27'
+          } 
+        }
+      },
+      '2001' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2001,
+            DATE_START => '2001-04-14',
+            DATE_END => '2001-04-16'
+          } 
+        }
+      },
+      '2002' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2002,
+            DATE_START => '2002-02-22',
+            DATE_END => '2002-02-24'
           } 
         }
       },
@@ -468,14 +602,54 @@ my %TOURNAMENTS_NETHERLANDS =
     ORIGIN => 'National',
     ZONE => 'Europe',
     FORM => 'Pairs',
-    SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
+      '1999' =>
+      {
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            # Guess
+            YEAR => 1999,
+            DATE_START => '1999-06-11',
+            DATE_END => '1999-06-13'
+          } 
+        }
+      },
+      '2000' =>
+      {
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2000,
+            DATE_START => '2000-06-10',
+            DATE_END => '2000-06-12'
+          } 
+        }
+      },
+      '2002' =>
+      {
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2002,
+            DATE_START => '2002-03-30',
+            DATE_END => '2002-04-01'
+          } 
+        }
+      },
       '2009' =>
       {
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -488,6 +662,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2010' =>
       {
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -500,6 +675,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2011' =>
       {
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -512,6 +688,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2012' =>
       {
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -524,6 +701,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2013' =>
       {
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -536,6 +714,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2014' =>
       {
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -548,6 +727,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2015' =>
       {
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -560,6 +740,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2016' =>
       {
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 

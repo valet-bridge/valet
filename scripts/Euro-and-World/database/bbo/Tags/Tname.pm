@@ -935,9 +935,8 @@ my @MULTI_WORDS =
   'Dutch Knock-Out Cup',
   'Dutch Meesterklasse',
   'Dutch Women',
-  'Forbo Nations Cup',
   'Jaap Kokkes Tournament',
-  'Krommenie Nations Cup',
+  'Forbo-Krommenie Nations Cup',
   'Petit Grand Prix van Driene',
   'The Hague Bridge Experience',
   'Top Circuit',
@@ -2241,13 +2240,15 @@ my %MULTI_TYPOS =
   'Krakow Spring Teams' => [
     'krakowska wiosna',
     'spring of cracow'],
-  'Krommenie Nations Cup' => [
+  'Forbo-Krommenie Nations Cup' => [
     'forbo krommenie teams',
+    'forbo nations cup',
     'forbo teams',
-    'forbo-krommenie tournament',
     'forbo-krommenie international bridge event',
+    'forbo-krommenie tourname',
+    'forbo-krommenie tournament',
     'international forbo krommenie bridge event',
-    'forbo-krommenie tourname'],
+    'krommenie nations cup'],
 
   ### LLL
 
