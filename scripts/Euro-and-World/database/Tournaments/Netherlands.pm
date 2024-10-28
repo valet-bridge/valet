@@ -13,21 +13,20 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_NETHERLANDS =
 (
-  'Meet name' =>
+  'The Hague Bridge Experience',
   {
     ORGANIZATION => 'NBB',
     COUNTRY => 'Netherlands',
+    CITY => 'The Hague',
     ORIGIN => 'National',
-    ZONE => 'Europe',
 
     EDITIONS => 
     {
-      '2015' =>
+      '2016' =>
       {
-        # Link
-        YEAR => 2000,
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
+        YEAR => 2016,
+        DATE_START => '2016-08-19',
+        DATE_END => '2016-08-20'
       },
     }
   }
@@ -84,6 +83,18 @@ my %TOURNAMENTS_NETHERLANDS =
           } 
         }
       },
+      '2003' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2003,
+            DATE_START => '2003-06-04',
+            DATE_END => '2003-06-04'
+          } 
+        }
+      },
     }
   },
 
@@ -100,15 +111,15 @@ my %TOURNAMENTS_NETHERLANDS =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2012' =>
       {
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2012,
+            DATE_START => '2012-06-09',
+            DATE_END => '2012-06-09'
           } 
         }
       },
@@ -171,15 +182,15 @@ my %TOURNAMENTS_NETHERLANDS =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2004' =>
       {
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2004,
+            DATE_START => '2004-05-23',
+            DATE_END => '2004-05-23'
           } 
         }
       },
@@ -268,6 +279,88 @@ my %TOURNAMENTS_NETHERLANDS =
             YEAR => 2001,
             DATE_START => '2001-12-08',
             DATE_END => '2001-12-09'
+          } 
+        }
+      },
+      '2003' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2003,
+            DATE_START => '2003-01-25',
+            DATE_END => '2003-01-26'
+          } 
+        }
+      },
+      '2004' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2004,
+            DATE_START => '2004-01-24',
+            DATE_END => '2004-01-25'
+          } 
+        }
+      },
+      '2005' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2005,
+            DATE_START => '2005-01-29',
+            DATE_END => '2005-01-30'
+          } 
+        }
+      },
+      '2006' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-01-16',
+            DATE_END => '2006-01-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2006-02-07',
+            DATE_END => '2006-02-07'
+          } 
+        }
+      },
+      '2008' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-03-03',
+            DATE_END => '2008-03-03'
+          } 
+        }
+      },
+      '2007' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-02-04',
+            DATE_END => '2007-02-04'
           } 
         }
       },
@@ -376,34 +469,6 @@ my %TOURNAMENTS_NETHERLANDS =
     }
   },
 
-  'Dutch Women',
-  {
-    ORGANIZATION => 'NBB',
-    COUNTRY => 'Netherlands',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
-          } 
-        }
-      },
-    }
-  },
-
   'Forbo-Krommenie Nations Cup',
   {
     ORGANIZATION => 'NBB',
@@ -428,6 +493,33 @@ my %TOURNAMENTS_NETHERLANDS =
             YEAR => 1997,
             DATE_START => '1997-02-21',
             DATE_END => '1997-02-23'
+          } 
+        }
+      },
+      '1998' =>
+      {
+        ORDINAL => 6,
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 1998,
+            DATE_START => '1998-02-20',
+            DATE_END => '1998-02-20'
+          } 
+        }
+      },
+      '1999' =>
+      {
+        ORDINAL => 7,
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            # Guess
+            YEAR => 1999,
+            DATE_START => '1999-02-23',
+            DATE_END => '1999-02-25'
           } 
         }
       },
@@ -510,63 +602,47 @@ my %TOURNAMENTS_NETHERLANDS =
     }
   },
 
-  'Krommenie Nations Cup',
-  {
-    ORGANIZATION => 'NBB',
-    COUNTRY => 'Netherlands',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
-          } 
-        }
-      },
-    }
-  },
-
   'Petit Grand Prix van Driene',
   {
     ORGANIZATION => 'NBB',
     COUNTRY => 'Netherlands',
     ORIGIN => 'National',
     ZONE => 'Europe',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2007' =>
       {
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2007,
+            DATE_START => '2007-05-31',
+            DATE_END => '2007-05-31'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-06-11',
+            DATE_END => '2011-06-11'
           } 
         }
       },
     }
   },
 
-  'The Hague Bridge Experience',
+  'The Hague Open Teams',
   {
     ORGANIZATION => 'NBB',
     COUNTRY => 'Netherlands',
@@ -582,6 +658,7 @@ my %TOURNAMENTS_NETHERLANDS =
     {
       '2016' =>
       {
+        MEET => 'The Hague Bridge Experience',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -595,6 +672,65 @@ my %TOURNAMENTS_NETHERLANDS =
     }
   },
 
+  'The Hague Pro-Am Pairs',
+  {
+    ORGANIZATION => 'NBB',
+    COUNTRY => 'Netherlands',
+    CITY => 'The Hague',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        MEET => 'The Hague Bridge Experience',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-08-19',
+            DATE_END => '2016-08-20'
+          } 
+        }
+      },
+    }
+  },
+
+  'Top Circuit Teams',
+  {
+    ORGANIZATION => 'NBB',
+    COUNTRY => 'Netherlands',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2007' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-09-11',
+            DATE_END => '2007-09-11'
+          } 
+        }
+      },
+    }
+  },
+
+
   'Top Circuit',
   {
     ORGANIZATION => 'NBB',
@@ -607,6 +743,20 @@ my %TOURNAMENTS_NETHERLANDS =
 
     EDITIONS =>
     {
+      '1998' =>
+      {
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            # Guess
+            YEAR => 1998,
+            DATE_START => '1998-06-12',
+            DATE_END => '1998-06-14'
+          } 
+        }
+      },
       '1999' =>
       {
         SCORING => 'MP',
@@ -767,15 +917,51 @@ my %TOURNAMENTS_NETHERLANDS =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2005' =>
       {
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2005,
+            DATE_START => '2005-02-26',
+            DATE_END => '2005-02-27'
+          } 
+        }
+      },
+      '2006' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            DATE_START => '2006-02-26',
+            DATE_END => '2006-02-26'
+          } 
+        }
+      },
+      '2007' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-02-25',
+            DATE_END => '2007-02-25'
+          } 
+        }
+      },
+      '2008' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-03-03',
+            DATE_END => '2008-03-03'
           } 
         }
       },
@@ -815,7 +1001,7 @@ my %TOURNAMENTS_NETHERLANDS =
           {
             YEAR => 2007,
             DATE_START => '2007-03-27',
-            DATE_END => '2007-03-27'
+            DATE_END => '2007-03-29'
           } 
         }
       },
@@ -895,10 +1081,27 @@ my %TOURNAMENTS_NETHERLANDS =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            major => 'ROUND',
             DATE_START => '2014-03-31',
+            DATE_END => '2014-04-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-04-03',
+            DATE_END => '2014-04-03'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-04-04',
             DATE_END => '2014-04-04'
           } 
         }
@@ -907,10 +1110,36 @@ my %TOURNAMENTS_NETHERLANDS =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2015-03-30',
+            DATE_END => '2015-03-31'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-04-01',
+            DATE_END => '2015-04-01'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-04-02',
+            DATE_END => '2015-04-02'
+          },
+          'C3' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-04-03',
             DATE_END => '2015-04-03'
           } 
         }
@@ -919,10 +1148,44 @@ my %TOURNAMENTS_NETHERLANDS =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2016-03-21',
+            DATE_END => '2016-03-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2016-03-23',
+            DATE_END => '2016-03-23'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-03-24',
+            DATE_END => '2016-03-24'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-03-24',
+            DATE_END => '2016-03-24'
+          },
+          'C4' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-03-25',
             DATE_END => '2016-03-25'
           } 
         }
@@ -936,56 +1199,75 @@ my %TOURNAMENTS_NETHERLANDS =
     COUNTRY => 'Netherlands',
     ORIGIN => 'National',
     ZONE => 'Europe',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2006' =>
       {
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2006,
+            DATE_START => '2006-09-11',
+            DATE_END => '2006-09-11'
           } 
         }
       },
-    }
-  },
-
-  'White House Top 16',
-  {
-    ORGANIZATION => 'NBB',
-    COUNTRY => 'Netherlands',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
+      '2007' =>
       {
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2007,
+            DATE_START => '2007-08-27',
+            DATE_END => '2007-08-28'
+          } 
+        }
+      },
+      '2008' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-08-30',
+            DATE_END => '2008-08-31'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-08-28',
+            DATE_END => '2010-08-29'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-09-01',
+            DATE_END => '2012-09-02'
           } 
         }
       },
     }
   },
-
 
 );
 

@@ -934,16 +934,16 @@ my @MULTI_WORDS =
   'Carrousel Cup',
   'Dutch Knock-Out Cup',
   'Dutch Meesterklasse',
-  'Dutch Women',
   'Jaap Kokkes Tournament',
   'Forbo-Krommenie Nations Cup',
   'Petit Grand Prix van Driene',
-  'The Hague Bridge Experience',
+  'The Hague Open Teams',
+  'The Hague Pro-Am Pairs',
   'Top Circuit',
+  'Top Circuit Teams',
   'White House International',
   'White House Juniors',
   'White House Top 12',
-  'White House Top 16',
 
   # Norway
   'Bergen Grand Tournament',
@@ -3065,8 +3065,6 @@ my %MULTI_TYPOS =
     'thane bridge annual'],
   'Thanos Capayiannides Memorial Simultaneous' => [
     'thanos capayiannides'],
-  'The Hague Bridge Experience' => ['the hague bride experience',
-    'teh hague bridge experience'],
   'Thrace Club Teams' => ['thrace region clubs team championship',
     'türk trakya bölge kulüpler þampýyonasi ekýbý', 'trachean club teams'],
   'Thrace Cup League' => ['trakya kulupler ligi'],
@@ -3262,7 +3260,9 @@ my %MULTI_TYPOS =
     'wsc open swisspairs championship', 'wsc swiss open pairs'],
   'Western Mediterranean Club Teams' => [
     'western mediterranean clubs team championship'],
-  'White House International' => ['white house international teams',
+  'White House International' => [
+    'white house international teams',
+    'white house top 16',
     'white house tournament teams'],
   'White House Juniors' => [
     'qhite house juniors',

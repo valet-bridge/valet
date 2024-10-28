@@ -129,6 +129,7 @@ my @MULTI_WORDS =
   'Tallinn Bridge Festival',
   'Indian Summer Nationals',
   'Thailand National Games',
+  'The Hague Bridge Experience',
   'Turkish Autumn Festival',
   'Turkish-Greek Friendship Festival',
   'Turkish Open Trials',
@@ -470,6 +471,9 @@ my %MULTI_TYPOS =
     'dr_ tolani open summer nationals',
     'dr_ tolani summar nationals',
     'dr_ tolani summer nationals'],
+  'The Hague Bridge Experience' => [
+    'teh hague bridge experience',
+    'the hague bride experience'],
   'Turkish Autumn Festival' => ['sonbahar bridge festival'],
   'Turkish-Greek Friendship Festival' => [
     'greek-turkish friendship festival'],
