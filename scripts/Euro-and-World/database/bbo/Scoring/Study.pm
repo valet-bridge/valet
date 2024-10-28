@@ -85,7 +85,9 @@ my @LOCAL_SUBS =
   { START => 25436, END => 25451, TEXT => 'BAM', CORR => 'Patton' },
   { START => 30617, END => 30654, TEXT => 'BAM', CORR => 'Patton' },
   { START => 35703, END => 35712, TEXT => 'BAM', CORR => 'Patton' },
-  { START => 40957, END => 40967, TEXT => 'IMP', CORR => 'Patton' },
+  { START => 40957, END => 40958, TEXT => 'IMP', CORR => 'Patton' },
+  { START => 40960, END => 40963, TEXT => 'IMP', CORR => 'Patton' },
+  { START => 40965, END => 40967, TEXT => 'IMP', CORR => 'Patton' },
 
   { START => 30808, END => 30840, TEXT => 'BAM', CORR => 'MP' },
 

@@ -104,6 +104,7 @@ my @MULTI_WORDS =
   'Mersin Bridge Festival',
   'Monaco International Festival',
   'Mondial de Deauville',
+  'Moscow Sunday Times',
   'Nordic Junior Championship',
   'Nordic Team Championship',
   'North American Bridge Championship',
@@ -368,6 +369,8 @@ my %MULTI_TYPOS =
     'montial de deauville',
     'tournoi des champions',
     'tournoi des champions barriere'],
+  'Moscow Sunday Times' => [
+    'russian sunday times'],
   'Nordic Junior Championship' => [
     'nordic championship for juniors',
     'nordic junior championships'],

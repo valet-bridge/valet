@@ -380,6 +380,8 @@ my %FORM_CORRECTIONS = (
     32032, 32033],
   'Mohanlal Bhartia Memorial Pairs' => [
     16734, 16745],
+  'Moscow Sunday Times Pairs' => [
+    31732, 31740],
   'Nordic Junior Pairs' => [
     13268, 13269, 13272, 13273, 13275, 13278, 13283, 13286,
     22642, 22646, 22650, 22654, 22658, 22662, 22664, 22668, 22673,

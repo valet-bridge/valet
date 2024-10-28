@@ -982,8 +982,8 @@ my @MULTI_WORDS =
   'Towns Cup', # Tallinn
 
   # Russia
-  'Goulyash by E. Gladysh',
-  'Moscow Sunday Times',
+  'Moscow Sunday Times Pairs',
+  'Moscow Sunday Times Teams',
   'NN Cup',
   'Russian IMSA Cup',
   'Russian Open Teams',
@@ -1869,7 +1869,6 @@ my %MULTI_TYPOS =
     'gabrial ui cup'],
   'Geologi Cup' => ['geo cup'],
   'Glasgow Transnational Open Teams' => ['tnt glasgow'],
-  'Goulyash by E. Gladysh' => ['goulyash by e_gladysh'],
 
   # GERMANY -- mapped in detail
   'Bonn Nations Cup' => ['nations cup germany', 'bonn cup'],
@@ -2328,7 +2327,6 @@ my %MULTI_TYPOS =
     'mohnlal bhartia grand prix'],
   'Mohanlal Bhartia Memorial Pairs' => [
     'bhartiya memorial'],
-  'Moscow Sunday Times' => ['russian sunday times'],
   'Murat Kilercioglu Turkish Spring Teams' => [
     'Murat Kilercioglu Spring Teams'],
 
@@ -2374,7 +2372,10 @@ my %MULTI_TYPOS =
     'new zealand trials',
     'nz trials'],
 
-  'NN Cup' => ['nn-cup'],
+  'NN Cup' => [
+    'goulyash by e. gladysh',
+    'goulyash by e_gladysh',
+    'nn-cup'],
 
   'Nordic Cup' => [
     'rottneros cup',
