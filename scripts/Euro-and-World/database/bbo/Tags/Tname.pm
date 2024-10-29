@@ -656,6 +656,15 @@ my @MULTI_WORDS =
   'Romanian Open Teams',
   'Romanian Open Trials',
 
+  # RUSSIA
+  'Moscow Sunday Times Pairs',
+  'Moscow Sunday Times Teams',
+  'NN Cup',
+  'Russian IMSA Cup',
+  'Russian Open Teams',
+  'Russian Premier League',
+  'Slava Cup',
+
   # SERBIA
   'Serbian Cup',
   'Serbian Inter-City Teams',
@@ -680,6 +689,11 @@ my @MULTI_WORDS =
   'South American Women Trials',
 
   # SPAIN
+  'Las Palmas Simultaneous Pairs',
+  'Las Palmas Women Pairs',
+  'Madrid Senior Teams',
+  'Open Catalunya Preferent Pairs',
+  'Open Catalunya Preferent Teams',
   'Spanish Central Zone Teams',
   'Spanish Mixed Teams',
   'Spanish Open Teams',
@@ -988,15 +1002,6 @@ my @MULTI_WORDS =
   'Plock District League',
   'Towns Cup', # Tallinn
 
-  # Russia
-  'Moscow Sunday Times Pairs',
-  'Moscow Sunday Times Teams',
-  'NN Cup',
-  'Russian IMSA Cup',
-  'Russian Open Teams',
-  'Russian Premier League',
-  'Slava Cup',
-
   # Serbia
   'Vrnjacka Banja Open Teams',
 
@@ -1005,12 +1010,6 @@ my @MULTI_WORDS =
   'South African Championship',
   'South African Inter-Province Teams',
   'South African Teams',
-
-  # Spain
-  'Las Palmas Simultaneous Pairs',
-  'Las Palmas Women Pairs',
-  'Madrid Senior Teams',
-  'Open Catalunya Preferent',
 
   # Supra
   'Bermuda Triangle Cup',
@@ -2518,11 +2517,13 @@ my %MULTI_TYPOS =
     'olrud swiss teams', 
     'olrudpaasken teams'],
 
-  'Open Catalunya Preferent' => [
-    'open catalunya equips',
+  'Open Catalunya Preferent Pairs' => [
     'open cataluña preferent', 
+    'open catalunya preferent', 
+    'open preferent'], 
+  'Open Catalunya Preferent Teams' => [
+    'open catalunya equips',
     'open equips preferent',
-    'open preferent', 
     'open preferent equips'],
  'Opening Tournament' => ['opening tournement'],
   'Otters Inter-Club Teams' => [

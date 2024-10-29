@@ -25,11 +25,9 @@ my %MEETS_SPAIN =
 
     EDITIONS => 
     {
-      '2015' =>
+      '2000' =>
       {
-        # Link
         YEAR => 2000,
-        CITY => 'Hamilton',
         DATE_START => '2000-01-01',
         DATE_END => '2000-01-01'
       },
@@ -39,6 +37,322 @@ my %MEETS_SPAIN =
 
 my %TOURNAMENTS_SPAIN =
 (
+  'Las Palmas Simultaneous Pairs',
+  {
+    ORGANIZATION => 'AEB',
+    COUNTRY => 'Spain',
+    CITY => 'Las Palmas',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-05-30',
+            DATE_END => '2013-05-30'
+          } 
+        }
+      },
+    }
+  },
+
+  'Las Palmas Women Pairs',
+  {
+    ORGANIZATION => 'AEB',
+    COUNTRY => 'Spain',
+    CITY => 'Las Palmas',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            major => 'SESSION',
+            DATE_START => '2013-05-24',
+            DATE_END => '2013-05-26'
+          } 
+        }
+      },
+    }
+  },
+
+  'Madrid Senior Teams',
+  {
+    ORGANIZATION => 'AEB',
+    COUNTRY => 'Spain',
+    CITY => 'Madrid',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Seniors',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND',
+            DATE_START => '2016-05-15',
+            DATE_END => '2016-05-15'
+          } 
+        }
+      },
+    }
+  },
+
+  'Open Catalunya Preferent Pairs',
+  {
+    # https://www.bridge.cat/
+    ORGANIZATION => 'AEB',
+    COUNTRY => 'Spain',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2009,
+            major => 'SESSION',
+            DATE_START => '2009-10-06',
+            DATE_END => '2009-10-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            major => 'SESSION',
+            DATE_START => '2009-10-19',
+            DATE_END => '2009-10-19'
+          },
+          'C2' => 
+          {
+            YEAR => 2009,
+            major => 'SESSION',
+            DATE_START => '2009-10-26',
+            DATE_END => '2009-10-26'
+          },
+          'C3' => 
+          {
+            YEAR => 2009,
+            major => 'SESSION',
+            DATE_START => '2009-11-02',
+            DATE_END => '2009-11-02'
+          },
+          'C4' => 
+          {
+            YEAR => 2009,
+            major => 'SESSION',
+            DATE_START => '2009-11-09',
+            DATE_END => '2009-11-09'
+          },
+          'C5' => 
+          {
+            YEAR => 2009,
+            major => 'SESSION',
+            DATE_START => '2009-11-23',
+            DATE_END => '2009-11-23'
+          },
+          'C6' => 
+          {
+            YEAR => 2009,
+            major => 'SESSION',
+            DATE_START => '2009-11-30',
+            DATE_END => '2009-11-30'
+          },
+        }
+      },
+    }
+  },
+
+  'Open Catalunya Preferent Teams',
+  {
+    # https://www.bridge.cat/
+    ORGANIZATION => 'AEB',
+    COUNTRY => 'Spain',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2010-01-11',
+            DATE_END => '2010-01-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2010-01-18',
+            DATE_END => '2010-01-18'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2010-01-25',
+            DATE_END => '2010-01-25'
+          },
+          'C3' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2010-02-01',
+            DATE_END => '2010-02-01'
+          },
+          'C4' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2010-02-08',
+            DATE_END => '2010-02-08'
+          },
+          'C5' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2010-02-15',
+            DATE_END => '2010-02-15'
+          },
+          'C6' => 
+          {
+            YEAR => 2010,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2010-03-01',
+            DATE_END => '2010-03-01'
+          },
+          'C7' => 
+          {
+            YEAR => 2010,
+            major => 'SESSION',
+            DATE_START => '2010-03-15',
+            DATE_END => '2010-03-16'
+          },
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            major => 'SESSION',
+            DATE_START => '2011-01-10',
+            DATE_END => '2011-01-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            major => 'SESSION',
+            DATE_START => '2011-01-17',
+            DATE_END => '2011-01-17'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            major => 'SESSION',
+            DATE_START => '2011-01-24',
+            DATE_END => '2011-01-24'
+          },
+          'C3' => 
+          {
+            YEAR => 2011,
+            major => 'SESSION',
+            DATE_START => '2011-01-31',
+            DATE_END => '2011-01-31'
+          },
+          'C4' => 
+          {
+            YEAR => 2011,
+            major => 'SESSION',
+            DATE_START => '2011-02-07',
+            DATE_END => '2011-02-07'
+          },
+          'C5' => 
+          {
+            YEAR => 2011,
+            major => 'SESSION',
+            DATE_START => '2011-02-14',
+            DATE_END => '2011-02-14'
+          },
+          'C6' => 
+          {
+            YEAR => 2011,
+            major => 'SESSION',
+            DATE_START => '2011-02-21',
+            DATE_END => '2011-02-21'
+          },
+          'C7' => 
+          {
+            YEAR => 2011,
+            major => 'SESSION',
+            DATE_START => '2011-02-28',
+            DATE_END => '2011-02-28'
+          },
+          'C8' => 
+          {
+            YEAR => 2011,
+            major => 'SESSION',
+            DATE_START => '2011-03-07',
+            DATE_END => '2011-03-07'
+          }
+        }
+      },
+    }
+  },
+
   'Spanish Central Zone Teams',
   {
     ORGANIZATION => 'AEB',

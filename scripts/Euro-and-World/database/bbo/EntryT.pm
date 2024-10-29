@@ -368,6 +368,10 @@ my %FORM_CORRECTIONS = (
     27505],
   'L C Sunil Rajendra Memorial' => [
     30177, 30181],
+  'Las Palmas Simultaneous Pairs' => [
+    28371],
+  'Las Palmas Women Pairs' => [
+    28245, 28286, 28320],
   'Maharaja Yeshwantrao Holkar National Pairs' => [
     12268, 12269, 12270,
     16299, 16304,
@@ -433,6 +437,8 @@ my %FORM_CORRECTIONS = (
      2204,  2205,  2207,  2213,
      9405,  9409,  9417,  9421,
     13239, 13248, 13249, 13252],
+  'Open Catalunya Preferent Pairs' => [
+    11451, 11631, 11676, 11807, 11846, 11938, 12032],
   'Petit Grand Prix van Driene' => [
      3297,  3298,  3299],
   'Polish Individual Championship' => [
