@@ -2188,6 +2188,34 @@ my %TOURNAMENTS_NORWAY =
     }
   },
 
+  'Willy Brown Memorial Pairs' =>
+  {
+    ORGANIZATION => 'NBF',
+    COUNTRY => 'Norway',
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-12-03',
+            DATE_END => '2011-12-03'
+          } 
+        }
+      },
+    }
+  },
+
 );
 
 
