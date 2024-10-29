@@ -484,6 +484,34 @@ my %TOURNAMENTS_GREECE =
     }
   },
   
+  'Thanos Capayiannides Memorial Simultaneous' =>
+  {
+    ORGANIZATION => 'EOM',
+    COUNTRY => 'Greece',
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-03-17',
+            DATE_END => '2010-03-17'
+          } 
+        }
+      },
+    }
+  },
+  
 );
 
 

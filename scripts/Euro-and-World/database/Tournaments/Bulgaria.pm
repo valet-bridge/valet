@@ -557,14 +557,29 @@ my %TOURNAMENTS_BULGARIA =
     ORIGIN => 'National',
     ZONE => 'Europe',
     FORM => 'Pairs',
-    SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
+      '2011' =>
+      {
+        CITY => 'Chepelare',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-11-12',
+            DATE_END => '2011-11-13'
+          } 
+        }
+      },
       '2013' =>
       {
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -578,6 +593,7 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2014' =>
       {
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -950,6 +966,78 @@ my %TOURNAMENTS_BULGARIA =
     }
   },
 
+  'Haskovski Mineralni Bani Open Pairs' =>
+  {
+    ORGANIZATION => 'BuBF',
+    COUNTRY => 'Bulgaria',
+    CITY => 'Haskovski Mineralni Bani',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-06-05',
+            DATE_END => '2009-06-05'
+          } 
+        }
+      },
+    }
+  },
+
+  'Haskovski Mineralni Bani Open Teams' =>
+  {
+    ORGANIZATION => 'BuBF',
+    COUNTRY => 'Bulgaria',
+    CITY => 'Haskovski Mineralni Bani',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            major => 'ROUND',
+            DATE_START => '2009-06-06',
+            DATE_END => '2009-06-07'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            major => 'ROUND',
+            DATE_START => '2012-06-09',
+            DATE_END => '2012-06-10'
+          } 
+        }
+      },
+    }
+  },
+
   'Karlovo Open Pairs' =>
   {
     ORGANIZATION => 'BuBF',
@@ -1267,6 +1355,34 @@ my %TOURNAMENTS_BULGARIA =
             STAGE => 'Final',
             DATE_START => '2007-10-22',
             DATE_END => '2007-10-22'
+          } 
+        }
+      },
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2009-10-10',
+            DATE_END => '2009-10-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Semifinal',
+            DATE_START => '2009-10-11',
+            DATE_END => '2009-10-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            DATE_START => '2009-10-11',
+            DATE_END => '2009-10-11'
           } 
         }
       },

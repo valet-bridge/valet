@@ -180,6 +180,8 @@ my @MULTI_WORDS =
   'Bulgarian Women Trials',
   'Cherven Briag National Tournament',
   'Dobrich Open Teams',
+  'Haskovski Mineralni Bani Open Pairs',
+  'Haskovski Mineralni Bani Open Teams',
   'Karlovo Open Pairs',
   'Karlovo Open Teams',
   'Pleven Open Teams',
@@ -376,6 +378,7 @@ my @MULTI_WORDS =
   'Greek Open Pair Trials',
   'Greek Open Team Trials',
   'Greek Women Trials',
+  'Thanos Capayiannides Memorial Simultaneous',
 
   # HONG KONG
   'Hong Kong Inter-City Open Teams',
@@ -883,11 +886,6 @@ my @MULTI_WORDS =
   # Baltic
   'VV Cup',
 
-  # Bulgaria
-  'ARIS Cup',
-  'Haskovski Mineralni Bani',
-  'Vito Teams',
-
   # Central America
   'Central American & Caribbean Championship',
   'Central American Zonal Championships',
@@ -911,9 +909,6 @@ my @MULTI_WORDS =
   'Puutalo Open',
   'Salo Midsummer Juniors',
   'Suomen Cup',
-
-  # Greece
-  'Thanos Capayiannides Memorial Simultaneous',
 
   # India
   'Ashok Kapur Memorial Swiss Pairs',
@@ -1350,7 +1345,10 @@ my %MULTI_TYPOS =
   'Buffett Cup' => ['buffet cup', 'bufett cup'],
 
   # BULGARIA
-  'Bulgarian Open Pairs' => ['bulgaria open pairs championship'],
+  'Bulgarian Open Pairs' => [
+    'aris cup',
+    'bulgaria open pairs championship',
+    'bulgarian champions pairs'],
   'Bulgarian Open Teams' => ['bulgarian national teams championship',
     'bulgarian national championship',
     'bulgaria national teams championship'],
@@ -1957,6 +1955,8 @@ my %MULTI_TYPOS =
     'hans rosendorff memorial womens teams',
     'hans rosendorff memorial  womens teams',
     'han rosendorff memorial womens teams'],
+  'Haskovski Mineralni Bani Open Teams' => [
+    'haskovski mineralni bani'],
   'HNA Open Teams' => [
     'hainan air cup',
     'hna cup', 
@@ -2931,6 +2931,7 @@ my %MULTI_TYPOS =
     'sping national', 'spring nat opens'],
   'SPS Trophy' => ['lojdy cup', 'sps construction trophy'],
   'Staszek Wybranowski Memorial' => ['memorial staszka wybranowskiego'],
+  'Stara Zagora Open Teams' => ['vito teams'],
   "Sternberg Women's BAM Teams" => ['marsha may sternberg bam'],
   'Stockholm Teams' => ['stockholm teams cs', 'stockholms teams'],
   'Summer Monsoon League' => ['summer monsoon', 'summer monsoon leahue'],

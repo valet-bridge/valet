@@ -25,7 +25,7 @@ use EntryT;
 # use Tournaments::Belgium;
 # use Tournaments::Bolivia;
 # use Tournaments::Brazil;
-# use Tournaments::Bulgaria;
+use Tournaments::Bulgaria;
 # use Tournaments::Canada;
 # use Tournaments::Chile;
 # use Tournaments::China;
@@ -41,7 +41,7 @@ use EntryT;
 # use Tournaments::France;
 # use Tournaments::Germany;
 # use Tournaments::Greece;
-use Tournaments::HongKong;
+# use Tournaments::HongKong;
 # use Tournaments::Hungary;
 # use Tournaments::Iceland;
 # use Tournaments::India;
@@ -90,7 +90,7 @@ my %DIVISIONS =
   # BELGIUM => \&Tournaments::Belgium::set_links
   # BOLIVIA => \&Tournaments::Bolivia::set_links
   # BRAZIL => \&Tournaments::Brazil::set_links
-  # BULGARIA => \&Tournaments::Bulgaria::set_links
+  BULGARIA => \&Tournaments::Bulgaria::set_links
   # CANADA => \&Tournaments::Canada::set_links
   # CHILE => \&Tournaments::Chile::set_links
   # CHINA => \&Tournaments::China::set_links
@@ -106,7 +106,7 @@ my %DIVISIONS =
   # FRANCE => \&Tournaments::France::set_links
   # GERMANY => \&Tournaments::Germany::set_links
   # GREECE => \&Tournaments::Greece::set_links
-  HONGKONG => \&Tournaments::HongKong::set_links
+  # HONGKONG => \&Tournaments::HongKong::set_links
   # HUNGARY => \&Tournaments::Hungary::set_links
   # ICELAND => \&Tournaments::Iceland::set_links
   # INDIA => \&Tournaments::India::set_links

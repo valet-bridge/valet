@@ -509,6 +509,8 @@ my %FORM_CORRECTIONS = (
     31910, 31919, 31931, 31936, 37176, 37186, 37197, 37201,
     37176, 37186, 37197, 37201,
     42665, 42674, 42692, 42699],
+  'Thanos Capayiannides Memorial Simultaneous' => [
+    13077],
   'The Hague Pro-Am Pairs' => [
     46320],
   'Top Circuit' => [
