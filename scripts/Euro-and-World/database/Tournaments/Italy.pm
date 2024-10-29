@@ -375,6 +375,77 @@ my %MEETS_ITALY =
 
 my %TOURNAMENTS_ITALY =
 (
+  'Angelini Teams' =>
+  {
+    ORGANIZATION => 'FIGB',
+    COUNTRY => 'Italy',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        YEAR => 2012,
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            DATE_START => '2012-10-06',
+            DATE_END => '2012-10-06'
+          }
+        }
+      },
+    }
+  },
+
+  'Bologna Trophy' =>
+  {
+    ORGANIZATION => 'FIGB',
+    COUNTRY => 'Italy',
+    CITY => 'Bologna',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        YEAR => 2012,
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            major => 'ROUND',
+            DATE_START => '2012-10-06',
+            DATE_END => '2012-10-06'
+          }
+        }
+      },
+      '2014' =>
+      {
+        YEAR => 2014,
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            major => 'ROUND',
+            DATE_START => '2014-10-04',
+            DATE_END => '2014-10-04'
+          }
+        }
+      },
+    }
+  },
+
   'Italian Club Open Championship' =>
   {
     AGE => 'Open',
@@ -886,7 +957,6 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             STAGE => 'Final',
-            major => 'ROUND',
             DATE_START => '2004-12-16',
             DATE_END => '2004-12-16'
           }
@@ -1160,6 +1230,55 @@ my %TOURNAMENTS_ITALY =
             major => 'SEGMENT',
             DATE_START => '2004-06-07',
             DATE_END => '2004-06-08'
+          }
+        }
+      },
+      '2005' =>
+      {
+        MEET => 'Italy Cup',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2005-12-10',
+            DATE_END => '2005-12-10'
+          },
+          'C1' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2005-12-10',
+            DATE_END => '2005-12-11'
+          }
+        }
+      },
+      '2008' =>
+      {
+        MEET => 'Italy Cup',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-12-12',
+            DATE_END => '2008-12-13'
+          },
+          'C1' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-12-13',
+            DATE_END => '2008-12-13'
+          },
+          'C2' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-12-13',
+            DATE_END => '2008-12-14'
           }
         }
       },
@@ -1995,27 +2114,6 @@ my %TOURNAMENTS_ITALY =
 
     EDITIONS =>
     {
-      '2005' =>
-      {
-        MEET => 'Italy Cup',
-        CHAPTERS => 
-        {
-          'C0' =>
-          {
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2005-12-10',
-            DATE_END => '2005-12-10'
-          },
-          'C1' =>
-          {
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2005-12-10',
-            DATE_END => '2005-12-11'
-          }
-        }
-      },
       '2006' =>
       {
         MEET => 'Italy Cup',
@@ -2069,34 +2167,6 @@ my %TOURNAMENTS_ITALY =
             major => 'SEGMENT',
             DATE_START => '2007-12-15',
             DATE_END => '2007-12-16'
-          }
-        }
-      },
-      '2008' =>
-      {
-        MEET => 'Italy Cup',
-        CHAPTERS => 
-        {
-          'C0' =>
-          {
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2008-12-12',
-            DATE_END => '2008-12-13'
-          },
-          'C1' =>
-          {
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2008-12-13',
-            DATE_END => '2008-12-13'
-          },
-          'C2' =>
-          {
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2008-12-13',
-            DATE_END => '2008-12-14'
           }
         }
       },
@@ -2926,6 +2996,31 @@ my %TOURNAMENTS_ITALY =
     }
   },
 
+  'Italian O55 Cup' =>
+  {
+    GENDER => 'Open',
+    AGE => 'O55',
+
+    EDITIONS =>
+    {
+      '2004' =>
+      {
+        MEET => 'Italy Cup',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            YEAR => '2004',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2004-06-07',
+            DATE_END => '2004-06-07'
+          },
+        }
+      },
+    }
+  },
+
   'Italian Senior Cup' =>
   {
     GENDER => 'Open',
@@ -3395,7 +3490,21 @@ my %TOURNAMENTS_ITALY =
           }
         }
       },
-      '2013' =>
+      '2013A' =>
+      {
+        MEET => 'Italian Club Championship',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-10-06',
+            DATE_END => '2013-10-06'
+          }
+        }
+      },
+      '2013B' =>
       {
         MEET => 'Italy Cup',
         CHAPTERS => 
@@ -3621,7 +3730,305 @@ my %TOURNAMENTS_ITALY =
         }
       }
     }
-  }
+  },
+
+  'Milan Trophy' =>
+  {
+    ORGANIZATION => 'FIGB',
+    COUNTRY => 'Italy',
+    CITY => 'Milan',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        YEAR => 2012,
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            major => 'ROUND',
+            DATE_START => '2012-12-08',
+            DATE_END => '2012-12-09'
+          }
+        }
+      },
+      '2013' =>
+      {
+        YEAR => 2013,
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-12-14',
+            DATE_END => '2013-12-15'
+          }
+        }
+      }
+    }
+  },
+
+  'Olona International Teams' =>
+  {
+    ORGANIZATION => 'FIGB',
+    COUNTRY => 'Italy',
+    REGION => 'Olona',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2004' =>
+      {
+        YEAR => 2004,
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            major => 'ROUND',
+            DATE_START => '2004-12-05',
+            DATE_END => '2004-12-08'
+          }
+        }
+      },
+    }
+  },
+
+  'Rome Challenger Trophy' =>
+  {
+    ORGANIZATION => 'FIGB',
+    COUNTRY => 'Italy',
+    CITY => 'Rome',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        YEAR => 2010,
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            DATE_START => '2010-01-10',
+            DATE_END => '2010-01-10'
+          }
+        }
+      },
+    }
+  },
+
+  'Torneo di Rastignano' =>
+  {
+    ORGANIZATION => 'FIGB',
+    COUNTRY => 'Italy',
+    CITY => 'Rastignano',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        YEAR => 2012,
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            major => 'ROUND',
+            DATE_START => '2012-09-08',
+            DATE_END => '2012-09-08'
+          }
+        }
+      },
+      '2013' =>
+      {
+        YEAR => 2013,
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2013-09-07',
+            DATE_END => '2013-09-07'
+          },
+          'C1' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-09-07',
+            DATE_END => '2013-09-07'
+          }
+        }
+      },
+      '2014' =>
+      {
+        YEAR => 2014,
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2014-09-06',
+            DATE_END => '2014-09-06'
+          },
+          'C1' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-09-06',
+            DATE_END => '2014-09-06'
+          }
+        }
+      },
+      '2015' =>
+      {
+        YEAR => 2015,
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2015-09-05',
+            DATE_END => '2015-09-05'
+          },
+          'C1' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-09-05',
+            DATE_END => '2015-09-05'
+          }
+        }
+      },
+    }
+  },
+
+  'Torneo di Roma' =>
+  {
+    ORGANIZATION => 'FIGB',
+    COUNTRY => 'Italy',
+    CITY => 'Rome',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        YEAR => 2013,
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            major => 'ROUND',
+            DATE_START => '2013-10-11',
+            DATE_END => '2013-10-13'
+          }
+        }
+      },
+      '2014' =>
+      {
+        YEAR => 2014,
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            DATE_START => '2014-10-11',
+            DATE_END => '2014-10-12'
+          }
+        }
+      },
+    }
+  },
+
+  'Toscana Cup' =>
+  {
+    ORGANIZATION => 'FIGB',
+    COUNTRY => 'Italy',
+    CITY => 'Viareggio',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2005' =>
+      {
+        YEAR => 2005,
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            major => 'SEGMENT',
+            DATE_START => '2005-02-09',
+            DATE_END => '2005-02-09'
+          }
+        }
+      },
+    }
+  },
+
+  'Viareggio Cup' =>
+  {
+    ORGANIZATION => 'FIGB',
+    COUNTRY => 'Italy',
+    CITY => 'Viareggio',
+    ORIGIN => 'International',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2005' =>
+      {
+        YEAR => 2005,
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            DATE_START => '2005-04-08',
+            DATE_END => '2005-04-08'
+          }
+        }
+      },
+    }
+  },
+
 );
 
 

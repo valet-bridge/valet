@@ -506,6 +506,7 @@ my @MULTI_WORDS =
   'Israel Women Pairs',
 
   # ITALY
+  'Bologna Trophy',
   'Italian Club Open Championship',
   'Italian Club Women Championship',
   'Italian Men Cup',
@@ -519,6 +520,13 @@ my @MULTI_WORDS =
   'Italian Senior Trials',
   'Italian U36 Teams',
   'Italian Women Cup',
+  'Milan Trophy',
+  'Olona International Teams',
+  'Rome Challenger Trophy',
+  'Torneo di Rastignano',
+  'Torneo di Roma',
+  'Toscana Cup',
+  'Viareggio Cup',
 
   # JAPAN
   'Japanese District KO Teams',
@@ -950,17 +958,6 @@ my @MULTI_WORDS =
   'Four Nations Cup',
   'Maccabi Games',
   'Rand Cup',
-
-  # Italy
-  'Angelini Teams',
-  'Bologna Trophy',
-  'Coppie Viareggio',
-  'Milan Trophy',
-  'Olona International Teams',
-  'Rome Challenger Trophy',
-  'Torneo di Rastignano',
-  'Torneo di Roma',
-  'Toscana Cup',
 
   # New Zealand
   'Centre Island Teams',
@@ -3103,6 +3100,7 @@ my %MULTI_TYPOS =
     'dr_tolani sliver cup summer nationals'],
   'Top Circuit' => ['melchemie top circuit',
     'ing bank top circuit', 'witte huis topcircuit'],
+  'Torneo di Roma' => ['angelini teams'],
   'Trondheim Pairs Cup' => ['trondheim cup swiss pairs'],
   'Trondheim Teams Cup' => ['trondheim cup swiss teams'],
 
@@ -3231,6 +3229,8 @@ my %MULTI_TYPOS =
   'Vest-Agder Regional Team Championship' => [
     'regional chship vest-agder', 'regional champship vest-agder',
     'regional chship vest-agder', 'vest-agder km lag'],
+  'Viareggio Cup' => [
+    'coppie viareggio'],
   'Victorian Open Trials' => [
     'victoian open', 
     'victorian opean',
