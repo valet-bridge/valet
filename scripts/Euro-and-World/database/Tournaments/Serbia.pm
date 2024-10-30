@@ -20,7 +20,7 @@ my %MEETS_SERBIA =
 
 my %TOURNAMENTS_SERBIA =
 (
-  'Serbian Cup',
+  'Serbian Cup' =>
   {
     ORGANIZATION => 'BSS',
     COUNTRY => 'Serbia',
@@ -185,7 +185,7 @@ my %TOURNAMENTS_SERBIA =
     }
   },
 
-  'Serbian Inter-City Teams',
+  'Serbian Inter-City Teams' =>
   {
     ORGANIZATION => 'BSS',
     COUNTRY => 'Serbia',
@@ -224,7 +224,7 @@ my %TOURNAMENTS_SERBIA =
     }
   },
 
-  'Serbian Open Teams',
+  'Serbian Open Teams' =>
   {
     ORGANIZATION => 'BSS',
     COUNTRY => 'Serbia',
@@ -238,11 +238,12 @@ my %TOURNAMENTS_SERBIA =
     EDITIONS =>
     {
       # https://www.bridgeserbia.org/arhiva/sezona2009/bss/zeps.html
-      ORDINAL => 3,
-      CITY => 'Belgrade',
 
       '2009' =>
       {
+        ORDINAL => 3,
+        CITY => 'Belgrade',
+
         CHAPTERS =>
         {
           'C0' => 
@@ -309,7 +310,7 @@ my %TOURNAMENTS_SERBIA =
     }
   },
 
-  'Serbian Open Trials',
+  'Serbian Open Trials' =>
   {
     ORGANIZATION => 'BSS',
     COUNTRY => 'Serbia',
@@ -372,7 +373,7 @@ my %TOURNAMENTS_SERBIA =
     }
   },
 
-  'Serbian Premier League',
+  'Serbian Premier League' =>
   {
     ORGANIZATION => 'BSS',
     COUNTRY => 'Serbia',
@@ -468,6 +469,63 @@ my %TOURNAMENTS_SERBIA =
             DATE_START => '2016-04-16',
             DATE_END => '2016-04-17'
           } 
+        }
+      },
+    }
+  },
+
+  'Vrnjacka Banja Open Teams' =>
+  {
+    ORGANIZATION => 'BSS',
+    COUNTRY => 'Serbia',
+    CITY => 'Vrnjacka Banja',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Bronze',
+            DATE_START => '2009-04-30',
+            DATE_END => '2009-04-30'
+          },
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Quarterfinal',
+            DATE_START => '2011-05-02',
+            DATE_END => '2011-05-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            DATE_START => '2011-05-02',
+            DATE_END => '2011-05-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            DATE_START => '2011-05-02',
+            DATE_END => '2011-05-02'
+          },
         }
       },
     }

@@ -1685,6 +1685,37 @@ my %TOURNAMENTS_UK =
     }
   },
 
+  'Garden Cities Teams' => 
+  {
+    # https://www.ebu.co.uk/competitions/garden-cities
+    ORGANIZATION => 'EBU',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    COUNTRY => 'England',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'MATCH',
+            DATE_START => '2014-06-14',
+            DATE_END => '2014-06-14'
+          },
+        }
+      }
+    }
+  },
+
   'Glasgow Transnational Open Teams' => 
   {
     ORIGIN => 'International',
@@ -1721,6 +1752,53 @@ my %TOURNAMENTS_UK =
           },
         }
       },
+    }
+  },
+
+  'Higson Teams Cup' => 
+  {
+    # http://www.manchesterbridge.org.uk/cup.html
+    ORGANIZATION => 'EBU',
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    COUNTRY => 'England',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SESSION',
+            minor => 'ROUND',
+            DATE_START => '2014-04-27',
+            DATE_END => '2014-04-27'
+          },
+        }
+      },
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SESSION',
+            minor => 'ROUND',
+            DATE_START => '2015-04-26',
+            DATE_END => '2015-04-26'
+          },
+        }
+      }
     }
   },
 

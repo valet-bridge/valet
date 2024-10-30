@@ -706,6 +706,10 @@ my @MULTI_WORDS =
   # SLOVAKIA
   'Slovakian Open Teams',
 
+  # SOUTH AFRICA
+  'South African Inter-Province Teams',
+  'South African Open Teams',
+
   # SOUTH AMERICA
   'South American Junior Teams',
   'South American Open Pairs',
@@ -790,7 +794,9 @@ my @MULTI_WORDS =
   'English U28 Trials',
   'English Women Teams',
   'English Women Trials',
+  'Garden Cities Teams',
   'Glasgow Transnational Open Teams',
+  'Higson Teams Cup',
   'Junior Camrose',
   'Lady Milne Trophy',
   'Lederer Memorial Trophy',
@@ -919,11 +925,6 @@ my @MULTI_WORDS =
   'Copa de Oro',
   'Copa de Plata',
 
-  # England
-  'Garden Cities',
-  'Higson Cup',
-  'Scotland Exhibition',
-
   # Europe: Same as European Champions' Cup
   "Champions' Cup",
 
@@ -995,11 +996,7 @@ my @MULTI_WORDS =
   # Serbia
   'Vrnjacka Banja Open Teams',
 
-  # South Africa
   'FullBridge International Teams',
-  'South African Championship',
-  'South African Inter-Province Teams',
-  'South African Teams',
 
   # Supra
   'Bermuda Triangle Cup',
@@ -1866,6 +1863,7 @@ my %MULTI_TYPOS =
     'bastaman cup',
     'gabrial-ui cup',
     'gabrial ui cup'],
+  'Garden Cities Teams' => ['garden cities'],
   'Gardermoen Airport Hotel Teams' => [
     'gardermoen airport hotel cup'],
   'Geologi Cup' => ['geo cup'],
@@ -1967,6 +1965,7 @@ my %MULTI_TYPOS =
     'han rosendorff memorial womens teams'],
   'Haskovski Mineralni Bani Open Teams' => [
     'haskovski mineralni bani'],
+  'Higson Teams Cup' => ['higson cup'],
   'HNA Open Teams' => [
     'hainan air cup',
     'hna cup', 
@@ -2313,7 +2312,7 @@ my %MULTI_TYPOS =
     'marit sveaas international  bridge tournament',
     'marit sveaas tournament'],
   'McConnell Cup' => ['mc connell'],
-  'Scotland Exhibition' => [
+  'Scottish Exhibition' => [
     'm lawrence exhibiton',
     'mike lawrence exhibition'],
   'Milan Trophy' => ["trofeo citta' di milano", "citta' di milano"],
@@ -2881,17 +2880,19 @@ my %MULTI_TYPOS =
     'snåsa cup'],
 
   # SOUTH AFRICA
-  'South African Championship' => ['south african nationals',
-    'south african championships'],
   'South African Inter-Province Teams' => [
     'sa interprovincial',
     'sa interprovincials',
     'sa inter provincials'],
-  'South African Teams' => [
+  'South African Open Teams' => [
     'sa team champs',
     'sa teams',
     'sa teams champs',
-    'south african chaionships'],
+    'south african chaionships',
+    'south african championship',
+    'south african championships',
+    'south african nationals',
+    'south african teams'],
 
   # SOUTH AMERICA
   'South American Junior Teams' => [

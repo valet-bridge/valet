@@ -139,6 +139,14 @@ my %FORM_CORRECTIONS = (
     31483, 31484],
   'Belgian Open Pairs' => [3075, 3076, 9813, 9824, 18125,18133],
   'Belisol Invitational Pairs' => [4095, 4096],
+  'Bergen Grand Open Pairs' => [
+     2622,  2623,  2624,
+     4414,  4415,  4416,
+     6138,  6139,  6140,
+    12460, 12461, 12466, 12467, 12485, 12488,
+    16529, 16535, 16560, 16561,
+    31995, 32028,
+    44277, 44287, 44294, 44300, 44305],
   'Chilean Cup' => [26199, 26218, 26237, 26265],
   'Chilean Open Pairs' => [31502, 31503],
   'Copenhagen Invitational Pairs' => [36915, 36941, 36954],
@@ -245,6 +253,9 @@ my %FORM_CORRECTIONS = (
     10893, 15031],
   'Full Tilt Irish Bridge Masters' => [
     29654, 29666, 29677 ],
+  'FX Securities Pairs Cup' => [
+    20489, 20531, 20540,
+    25810, 25841, 25842],
   'Gardermoen Airport Hotel Pairs' => [
     16425],
   'German Open Pairs' => [
@@ -364,6 +375,8 @@ my %FORM_CORRECTIONS = (
   'Italian Mixed Pairs' => [
     36287, 36289, 36293, 36295, 36296, 36308, 36309,
     41672, 41674, 41691, 41692, 41704, 41705],
+  "Jessheim New Year's Pairs" => [
+    37107],
   'Jordan Mixed Pairs' => [
     36385,
     38622, 38637,
@@ -474,6 +487,9 @@ my %FORM_CORRECTIONS = (
     11733, 11734, 11736, 11738, 11740, 11743, 11745, 11758, 11761, 
     11762, 11763, 11766, 11767, 11774, 11775, 11777, 11780, 11783, 
     11788, 11790, 11792, 11796, 11798, 11801, 11803],
+  'Ragn-Sells International Open Pairs' => [
+    21700, 21708, 21732, 21741, 21742,
+    26774, 26796],
   'Rajasthan Invitational Pairs' => [
     27959,
     32569, 32582],
@@ -495,6 +511,12 @@ my %FORM_CORRECTIONS = (
   'Russian IMSA Cup' => [
      2808, 2809,  2810,  2811,  2812,  2813,  2814,  2815,  2816,
      2817],
+  'Ruter 7 Open Pairs' => [
+    14352,
+    23267, 23276, 23282,
+    28432, 28472],
+  'Snåsa Pairs Cup' => [
+    21245, 21247],
   'South American Open Pairs' => [
     23494, 23522, 23524, 23532, 23533,
     33722, 33723, 33724, 33725,
