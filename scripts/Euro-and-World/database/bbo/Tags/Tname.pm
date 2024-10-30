@@ -579,11 +579,15 @@ my @MULTI_WORDS =
   'Nordic Women Teams',
 
   # NORWAY
+  'Bergen Grand Open Pairs',
   'Codan Teams Cup',
   'Farmen Invitational',
   'FOSS Grand Pairs',
+  'FX Securities Pairs Cup',
   'Gardermoen Airport Hotel Pairs',
   'Gardermoen Airport Hotel Teams',
+  "Jessheim New Year's Pairs",
+  "Jessheim New Year's Teams",
   'Marit Sveaas Open Pairs',
   'Mo i Rana Ladies Invitational',
   'Namsos Pairs Cup',
@@ -605,22 +609,16 @@ my @MULTI_WORDS =
   'Olrud Easter Mixed Pairs',
   'Olrud Easter Swiss Pairs',
   'Olrud Easter Swiss Teams',
+  'Ragn-Sells International Open Pairs',
   'Rondane Pairs Cup',
   'Rondane Teams Cup',
   'Rosfjord Swiss Teams',
+  'Ruter 7 Open Pairs',
+  'Snåsa Pairs Cup',
   'Trondheim Pairs Cup',
   'Trondheim Teams Cup',
-  'Willy Brown Memorial Pairs',
-
-  # Norway
-  'Bergen Grand Tournament',
-  'FX Securities Cup',
-  "Jessheim New Year's Cup",
-
-  'Ragn-Sells International Grand Tournament',
-  'Ruter 7 Open',
-  'Snåsa Cup',
   'Vest-Agder Regional Team Championship',
+  'Willy Brown Memorial Pairs',
 
   # PAKISTAN
   'Pakistan Day Open Teams',
@@ -1291,10 +1289,13 @@ my %MULTI_TYPOS =
   'Belgian Open Teams' => ['belgian teams', 'belgian team',
     'belgian team championship', 'belgium championship',
     'belgium open teams', 'belgian open team'],
-
-  'Bergen Grand Tournament' => ['bergen open',
-    'bergen storturnering', 'bergen grand tournamnet',
-    'bergen storturnering mester', 'bergen stor mester',
+  'Bergen Grand Open Pairs' => [
+    'bergen grand tournament',
+    'bergen grand tournamnet',
+    'bergen open',
+    'bergen storturnering', 
+    'bergen storturnering mester', 
+    'bergen stor mester',
     'bst mester'],
   'Bermuda Bowl' => ['bermuda bow', 'bemruda bowl'],
   'Bermuda Triangle Cup' => ['bermuda triangle teams cup'],
@@ -1855,7 +1856,9 @@ my %MULTI_TYPOS =
   'FTBC Tanjungpura University' => ['ftbc university tanjungpura'],
   'FullBridge International Teams' => ['internacional equipos full bridge',
     'internacional full bridge'],
-  'FX Securities Cup' => ['fx sec_ cup'],
+  'FX Securities Pairs Cup' => [
+    'fx securities cup',
+    'fx sec_ cup'],
 
   ### GGG
 
@@ -2189,8 +2192,13 @@ my %MULTI_TYPOS =
     'japanese open team trials'],
   'Jaya Jain Memorial' => ['mrs_ jaya jain memorial'],
   'Jean Besse Cup' => ['cup jean besse', 'cup jean besser'],
-  "Jessheim New Year's Cup" => ['jessheim new years cup',
-    'jesshiem new years cup', 'jessheim new years cup swiss teams'],
+  "Jessheim New Year's Pairs" => [
+    'warm up jessheim new years cup'],
+  "Jessheim New Year's Teams" => [
+    "Jessheim New Year's Cup",
+    'jessheim new years cup',
+    'jesshiem new years cup', 
+    'jessheim new years cup swiss teams'],
   'Jordan Open Pairs' => [
     'jordanese open pairs'],
   'Jordan Mixed Pairs' => [
@@ -2739,8 +2747,9 @@ my %MULTI_TYPOS =
   'R R Gupta Memorial Championship' => [
     'r r gupta memorial bridge tournament'],
   'R Ratnam Memorial' => ['r ratnam memoral championship'],
-  'Ragn-Sells International Grand Tournament' => [
+  'Ragn-Sells International Open Pairs' => [
     'ragn sells international',
+    'ragn-sells international grand tournament',
     'ragn-sells intl grand tournament',
     'ragn-sells intl_ grand tournament',
     'ragn sells intl_ grand tournament'],
@@ -2812,7 +2821,9 @@ my %MULTI_TYPOS =
     'russian team championship'],
   'Russian Premier League' => ['russian premiere league'],
 
-  'Ruter 7 Open' => ['ruter7 elitetournament'],
+  'Ruter 7 Open Pairs' => [
+    'ruter7 elitetournament',
+    'ruter 7 open'],
 
   ### SSS
 
@@ -2866,6 +2877,8 @@ my %MULTI_TYPOS =
     'm keni  trophy', 'm keni trophy', 'mkeni trophy'],
   'Slava Cup' => ['cup slava', 'salava cup'],
   'Slovakian Open Teams' => ['slovakia open teams'],
+  'Snåsa Pairs Cup' => [
+    'snåsa cup'],
 
   # SOUTH AFRICA
   'South African Championship' => ['south african nationals',

@@ -114,6 +114,222 @@ my %MEETS_NORWAY =
 
 my %TOURNAMENTS_NORWAY =
 (
+
+  'Bergen Grand Open Pairs' =>
+  {
+    ORGANIZATION => 'NBF',
+    COUNTRY => 'Norway',
+    CITY => 'Bergen',
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2006' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            major => 'SESSION',
+            DATE_START => '2006-02-01',
+            DATE_END => '2006-02-01'
+          } 
+        }
+      },
+      '2007' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'SEGMENT',
+            DATE_START => '2007-01-24',
+            DATE_END => '2007-01-24'
+          } 
+        }
+      },
+      '2008' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            major => 'SESSION',
+            DATE_START => '2008-01-22',
+            DATE_END => '2008-01-22'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            major => 'SESSION',
+            DATE_START => '2010-01-23',
+            DATE_END => '2010-01-24'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'SEGMENT',
+            DATE_START => '2011-01-22',
+            DATE_END => '2011-01-23'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'SESSION',
+            DATE_START => '2014-01-18',
+            DATE_END => '2014-01-19'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'SESSION',
+            DATE_START => '2016-04-16',
+            DATE_END => '2016-04-17'
+          } 
+        }
+      },
+    }
+  },
+
+  'FX Securities Pairs Cup' =>
+  {
+    ORGANIZATION => 'NBF',
+    SPONSOR => 'FX Securities',
+    COUNTRY => 'Norway',
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'SEGMENT',
+            DATE_START => '2011-10-15',
+            DATE_END => '2011-10-16'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            major => 'SEGMENT',
+            DATE_START => '2012-10-20',
+            DATE_END => '2012-10-21'
+          } 
+        }
+      },
+    }
+  },
+
+  "Jessheim New Year's Pairs" =>
+  {
+    ORGANIZATION => 'NBF',
+    COUNTRY => 'Norway',
+    CITY => 'Jessheim',
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'SESSION',
+            DATE_START => '2015-01-02',
+            DATE_END => '2015-01-02'
+          } 
+        }
+      },
+    }
+  },
+
+  "Jessheim New Year's Teams" =>
+  {
+    ORGANIZATION => 'NBF',
+    COUNTRY => 'Norway',
+    CITY => 'Jessheim',
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    MOVEMENT => 'Swiss',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'ROUND',
+            DATE_START => '2015-01-03',
+            DATE_END => '2015-01-04'
+          } 
+        }
+      },
+    }
+  },
+
+
+
+
   'Codan Teams Cup' =>
   {
     ORGANIZATION => 'NBF',
@@ -2429,6 +2645,48 @@ my %TOURNAMENTS_NORWAY =
     }
   },
 
+  'Ragn-Sells International Open Pairs' =>
+  {
+    ORGANIZATION => 'NBF',
+    COUNTRY => 'Norway',
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            major => 'SESSION',
+            DATE_START => '2012-01-21',
+            DATE_END => '2012-01-22'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            major => 'SESSION',
+            DATE_START => '2013-01-19',
+            DATE_END => '2013-01-20'
+          } 
+        }
+      },
+    }
+  },
+
   'Rosfjord Swiss Teams' =>
   {
     ORGANIZATION => 'NBF',
@@ -2459,6 +2717,98 @@ my %TOURNAMENTS_NORWAY =
     }
   },
 
+  'Ruter 7 Open Pairs' =>
+  {
+    ORGANIZATION => 'NBF',
+    COUNTRY => 'Norway',
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            major => 'SEGMENT',
+            DATE_START => '2010-06-19',
+            DATE_END => '2010-06-19'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-05-12',
+            DATE_END => '2012-05-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            DATE_START => '2012-05-12',
+            DATE_END => '2012-05-13'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            major => 'SESSION',
+            DATE_START => '2013-06-01',
+            DATE_END => '2013-06-02'
+          } 
+        }
+      },
+    }
+  },
+
+  'Snåsa Pairs Cup' =>
+  {
+    ORGANIZATION => 'NBF',
+    COUNTRY => 'Norway',
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-11-26',
+            DATE_END => '2011-11-26'
+          } 
+        }
+      },
+    }
+  },
+
   'Trondheim Pairs Cup' =>
   {
     ORGANIZATION => 'NBF',
@@ -2474,14 +2824,13 @@ my %TOURNAMENTS_NORWAY =
     {
       '2011' =>
       {
-        # No link
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2011,
             CITY => 'Trondheim',
-            majror => 'SESSION',
+            major => 'SESSION',
             DATE_START => '2011-05-07',
             DATE_END => '2011-05-07'
           } 
@@ -2515,6 +2864,60 @@ my %TOURNAMENTS_NORWAY =
             major => 'ROUND',
             DATE_START => '2011-05-08',
             DATE_END => '2011-05-08'
+          } 
+        }
+      },
+    }
+  },
+
+  'Vest-Agder Regional Team Championship' =>
+  {
+    ORGANIZATION => 'NBF',
+    COUNTRY => 'Norway',
+    REGION => 'Vest-Agder',
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-12-08',
+            DATE_END => '2009-12-08'
+          } 
+        }
+      },
+      '2012A' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            major => 'SEGMENT',
+            DATE_START => '2012-01-13',
+            DATE_END => '2012-01-13'
+          } 
+        }
+      },
+      '2012B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-11-21',
+            DATE_END => '2012-11-21'
           } 
         }
       },
