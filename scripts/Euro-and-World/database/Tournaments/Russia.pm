@@ -411,6 +411,7 @@ my %TOURNAMENTS_RUSSIA =
     {
       '2008' =>
       {
+        # http://amsr.ru/en/events/623.htm
         CHAPTERS =>
         {
           'SINGLE' => 

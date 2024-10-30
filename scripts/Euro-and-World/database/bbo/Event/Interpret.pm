@@ -42,7 +42,7 @@ my %ITERATORS_MAJOR_MINOR = (
   'Camrose Trophy' => ['ROUND', 'SEGMENT'],
   "Chairman's Cup" => ['SEGMENT', ''],
   'Chinese First League' => ['SESSION', 'ROUND'],
-  'Codan Cup' => ['ROUND', 'SEGMENT'],
+  'Codan Teams Cup' => ['ROUND', 'SEGMENT'],
   'Dongming Knock-out Teams' => ['ROUND', 'SEGMENT'],
   'French First Division' => ['ROUND', 'SEGMENT'],
   'GHTD Cup' => ['ROUND', 'SEGMENT'],
@@ -606,23 +606,29 @@ sub post_process_some_explained_mm
 
   return unless $#$chains == 0;
   my $chain = $chains->[0];
-  return unless $chain->status() eq 'EXPLAINED';
+  return unless ($chain->status() eq 'EXPLAINED' ||
+    $chain->status() eq 'COMPLETE');
   return unless $chain->last() == 0;
 
   my $token = $chain->check_out(0);
   my $cat = $token->category();
-  return unless $cat eq 'MARKER';
+  return unless ($cat eq 'MARKER' || $cat eq 'COUNTER');
 
   my ($field1, $field2) = 
     ($ITERATORS_MAJOR_MINOR{$tname}[0],
      $ITERATORS_MAJOR_MINOR{$tname}[1]);
 
+  return if $field2 eq '';
+
   my $field = $token->field();
-  if ($field ne $field1)
+  if ($cat eq 'MARKER' && $field ne $field1)
   {
     return unless ($field eq 'MATCH' && $field1 eq 'ROUND');
   }
-  return if $field2 eq '';
+  elsif ($cat eq 'COUNTER')
+  {
+    return unless $field eq 'N_OF_N';
+  }
 
   my $value = $token->value();
   my ($n1, $n2);
@@ -659,7 +665,7 @@ sub post_process_some_explained_mm
   }
 
   print "$bbono ETRACE-SOMEMMTEAMS-2\n" if $TRACE;
-  one_to_two_chains($chains, $chain,0 , $token,
+  one_to_two_chains($chains, $chain, 0, $token,
     'MARKER', $field1, $n1,
     'MARKER', $field2, $n2);
 }

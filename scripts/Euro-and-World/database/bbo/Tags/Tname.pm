@@ -579,6 +579,14 @@ my @MULTI_WORDS =
   'Nordic Women Teams',
 
   # NORWAY
+  'Codan Teams Cup',
+  'Farmen Invitational',
+  'FOSS Grand Pairs',
+  'Gardermoen Airport Hotel Pairs',
+  'Gardermoen Airport Hotel Teams',
+  'Marit Sveaas Open Pairs',
+  'Mo i Rana Ladies Invitational',
+  'Namsos Pairs Cup',
   'Norwegian Club Pairs',
   'Norwegian Club Teams',
   'Norwegian Corporate Championship',
@@ -602,6 +610,17 @@ my @MULTI_WORDS =
   'Rosfjord Swiss Teams',
   'Trondheim Pairs Cup',
   'Trondheim Teams Cup',
+  'Willy Brown Memorial Pairs',
+
+  # Norway
+  'Bergen Grand Tournament',
+  'FX Securities Cup',
+  "Jessheim New Year's Cup",
+
+  'Ragn-Sells International Grand Tournament',
+  'Ruter 7 Open',
+  'Snåsa Cup',
+  'Vest-Agder Regional Team Championship',
 
   # PAKISTAN
   'Pakistan Day Open Teams',
@@ -961,25 +980,6 @@ my @MULTI_WORDS =
 
   # New Zealand
   'Centre Island Teams',
-
-  # Norway
-  'Bergen Grand Tournament',
-  'Codan Cup',
-  'Farmen Invitational',
-  'FOSS Grand Tournament',
-  'FOSS-Tren',
-  'FX Securities Cup',
-  'Gardermoen Airport Hotel Pairs',
-  'Gardermoen Airport Hotel Cup',
-  "Jessheim New Year's Cup",
-  'Marit Sveaas Tournament',
-  'Mo i Rana Ladies Invitational',
-  'Namsos Cup',
-  'Ragn-Sells International Grand Tournament',
-  'Ruter 7 Open',
-  'Snåsa Cup',
-  'Vest-Agder Regional Team Championship',
-  'Willy Brown Memorial',
 
   # Poland
   # https://wyniki.pzbs.pl/2016/baltycki/
@@ -1457,6 +1457,7 @@ my %MULTI_TYPOS =
   'Chinese Open Teams' => ['team championship china'],
 
   'Cliff Wake Challenge' => ['cliff wake invitational'],
+  'Codan Teams Cup' => ['codan cup'],
   'Commonwealth Nations Bridge Championships' => [
     'commonwealth beidge championship', 
     'commonwealth nations bridge championship', 
@@ -1769,11 +1770,18 @@ my %MULTI_TYPOS =
   'Forest Trophy' => ['forest bridge trophy'],
   'forumbridge.pl Top Individual' => ['forumbridge_pl top individual'],
   'forumbridge.pl Top Pairs' => ['forumbridge_pl top pairs'],
-  'FOSS Grand Tournament' => ['foss grand tourney', 'foss grnad tourn',
-    'foss grand tourament', 'foss grand tournement',
-    'foss grand toruney', 'ftredriklstad and sarpsborg grand tournet',
-    'foss grand torunament', 'foss grand torurnament',
-    'foss grand torurney'],
+  'FOSS Grand Pairs' => [
+    'foss grnad tourn',
+    'foss grand tourney', 
+    'foss grand torunament', 
+    'foss grand toruney', 
+    'foss grand tournament',
+    'foss grand torurnament',
+    'foss grand torurney',
+    'foss grand tourament', 
+    'foss grand tournement',
+    'foss-tren',
+    'ftredriklstad and sarpsborg grand tournet'],
   'Four Nations Cup' => ['4 nations cupn', '4 nations cup'],
 
   # FRANCE
@@ -1855,6 +1863,8 @@ my %MULTI_TYPOS =
     'bastaman cup',
     'gabrial-ui cup',
     'gabrial ui cup'],
+  'Gardermoen Airport Hotel Teams' => [
+    'gardermoen airport hotel cup'],
   'Geologi Cup' => ['geo cup'],
   'Glasgow Transnational Open Teams' => ['tnt glasgow'],
 
@@ -2290,9 +2300,10 @@ my %MULTI_TYPOS =
     'mitravihar centenary state level',
     'mitravihar club centenary state level',
     'mitravihar nasik centenary state level'],
-  'Marit Sveaas Tournament' => [
+  'Marit Sveaas Open Pairs' => [
     'marit sveaas international bridge tournament',
-    'marit sveaas international  bridge tournament'],
+    'marit sveaas international  bridge tournament',
+    'marit sveaas tournament'],
   'McConnell Cup' => ['mc connell'],
   'Scotland Exhibition' => [
     'm lawrence exhibiton',
@@ -2325,6 +2336,7 @@ my %MULTI_TYPOS =
   ###  NNN
 
   'NABC Senior Knock-Out Teams' => ['nabc senior ko teams'],
+  'Namsos Pairs Cup' => ['namsos cup'],
   'Nandu Oke Memorial IAF Swiss Pairs' => [
     'nandu oke memorial',
     'nandu oke memorial swiss pairs',
@@ -3290,6 +3302,8 @@ my %MULTI_TYPOS =
     'willingdon sports club  open',
     'willingdon sports club  open swiss pairs',
     'willingdon sports club  swiss pairs'],
+  'Willy Brown Memorial Pairs' => [
+    'willy brown memorial'],
   'Winter Open Teams' => ['winter teams', 'winter team'],
 
   # WORLD
@@ -3366,7 +3380,7 @@ my %SINGLE_TYPOS =
   'European Youth Bridge Championship' => ['eybc'],
   'European Youth Bridge Pairs Championship' => ['eybpc', 'eypc'],
   'European Youth Bridge Teams Championship' => ['eytc', 'jem'],
-  'FOSS Grand Tournament' => ['foss'],
+  'FOSS Grand Pairs' => ['foss'],
   'German Team Championship' => ['teammeisterschaft'],
   'German Bundesliga' => ['bundesliga'],
   'Gianarrigo Rona Trophy' => ['rona'],

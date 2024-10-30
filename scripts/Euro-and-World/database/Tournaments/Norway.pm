@@ -114,6 +114,339 @@ my %MEETS_NORWAY =
 
 my %TOURNAMENTS_NORWAY =
 (
+  'Codan Teams Cup' =>
+  {
+    ORGANIZATION => 'NBF',
+    COUNTRY => 'Norway',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2015-05-28',
+            DATE_END => '2015-05-30'
+          } 
+        }
+      },
+    }
+  },
+
+  'Farmen Invitational' =>
+  {
+    ORGANIZATION => 'NBF',
+    COUNTRY => 'Norway',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2005' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2005,
+            major => 'MATCH',
+            DATE_START => '2005-10-21',
+            DATE_END => '2005-10-23'
+          } 
+        }
+      },
+      '2006' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            major => 'MATCH',
+            DATE_START => '2006-08-09',
+            DATE_END => '2006-08-09'
+          } 
+        }
+      },
+      '2007' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'MATCH',
+            DATE_START => '2007-08-27',
+            DATE_END => '2007-08-27'
+          } 
+        }
+      },
+    }
+  },
+
+  'FOSS Grand Pairs' =>
+  {
+    ORGANIZATION => 'NBF',
+    COUNTRY => 'Norway',
+    CITY => 'Fredrikstad',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            major => 'SESSION',
+            DATE_START => '2009-08-29',
+            DATE_END => '2009-08-30'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            major => 'SESSION',
+            DATE_START => '2010-08-28',
+            DATE_END => '2010-08-29'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        # https://www.bridge.no/var/ruter/html/0219/2011-09-04-foss2.htm
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'SESSION',
+            minor => 'SEGMENT',
+            DATE_START => '2011-09-03',
+            DATE_END => '2011-09-04'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        # https://www.bridge.no/var/ruter/html/0219/2012-09-09-foss2.htm
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            major => 'SESSION',
+            DATE_START => '2012-09-08',
+            DATE_END => '2012-09-09'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        # https://www.bridge.no/var/ruter/html/0219/2013-09-08-fosssndag.htm
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            major => 'SESSION',
+            DATE_START => '2013-09-07',
+            DATE_END => '2013-09-08'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'SESSION',
+            DATE_START => '2014-09-06',
+            DATE_END => '2014-09-07'
+          } 
+        }
+      },
+    }
+  },
+
+  'Gardermoen Airport Hotel Pairs' =>
+  {
+    ORGANIZATION => 'NBF',
+    COUNTRY => 'Norway',
+    LOCALITY => 'Gardermoen',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-01-08',
+            DATE_END => '2011-01-08'
+          } 
+        }
+      },
+    }
+  },
+
+  'Gardermoen Airport Hotel Teams' =>
+  {
+    ORGANIZATION => 'NBF',
+    COUNTRY => 'Norway',
+    LOCALITY => 'Gardermoen',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'MATCH',
+            DATE_START => '2011-01-09',
+            DATE_END => '2011-01-09'
+          } 
+        }
+      },
+    }
+  },
+
+  'Marit Sveaas Open Pairs' =>
+  {
+    ORGANIZATION => 'NBF',
+    COUNTRY => 'Norway',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'SESSION',
+            DATE_START => '2016-08-05',
+            DATE_END => '2016-08-07'
+          } 
+        }
+      },
+    }
+  },
+
+  'Mo i Rana Ladies Invitational' =>
+  {
+    ORGANIZATION => 'NBF',
+    COUNTRY => 'Norway',
+    ORIGIN => 'Invitational',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2008' =>
+      {
+        # https://www.bridge.no/Turneringer/Turneringsresultater/Tidligere-aars-resultater/Resultater-2008-09
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            major => 'SESSION',
+            DATE_START => '2008-11-05',
+            DATE_END => '2008-11-05'
+          } 
+        }
+      },
+    }
+  },
+
+  'Namsos Pairs Cup' =>
+  {
+    ORGANIZATION => 'NBF',
+    COUNTRY => 'Norway',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'SESSION',
+            DATE_START => '2011-09-17',
+            DATE_END => '2011-09-18'
+          } 
+        }
+      },
+    }
+  },
+
   'Norwegian Club Pairs' =>
   {
     ORGANIZATION => 'NBF',
@@ -2208,6 +2541,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'SEGMENT',
             DATE_START => '2011-12-03',
             DATE_END => '2011-12-03'
           } 
