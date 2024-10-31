@@ -33,6 +33,20 @@ my %TOURNAMENTS_FINLAND =
 
     EDITIONS =>
     {
+      '2006' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2006-08-09',
+            DATE_END => '2006-08-09'
+          },
+        }
+      },
       '2008' =>
       {
         # No link
@@ -219,7 +233,6 @@ my %TOURNAMENTS_FINLAND =
     {
       '2005' =>
       {
-        # No link
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -813,6 +826,203 @@ my %TOURNAMENTS_FINLAND =
             major => 'SEGMENT',
             DATE_START => '2015-12-12',
             DATE_END => '2015-12-13'
+          } 
+        }
+      },
+    }
+  },
+
+  'Hanko Open Teams' =>
+  {
+    ORGANIZATION => 'SBL',
+    COUNTRY => 'Finland',
+    CITY => 'Hanko',
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            DATE_START => '2011-07-28',
+            DATE_END => '2011-07-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            DATE_START => '2011-07-28',
+            DATE_END => '2011-07-28'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            DATE_START => '2013-07-25',
+            DATE_END => '2013-07-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Bronze',
+            DATE_START => '2013-07-25',
+            DATE_END => '2013-07-25'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            DATE_START => '2013-07-25',
+            DATE_END => '2013-07-25'
+          } 
+        }
+      },
+    }
+  },
+
+  'Pärnu Summer Invitational Pairs' =>
+  {
+    ORGANIZATION => 'SBL',
+    COUNTRY => 'Finland',
+    CITY => 'Pärnu',
+    ORIGIN => 'Invitational',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2006' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            major => 'ROUND',
+            DATE_START => '2006-08-09',
+            DATE_END => '2006-08-09'
+          } 
+        }
+      },
+    }
+  },
+
+  'Pärnu Summer Open Teams' =>
+  {
+    ORGANIZATION => 'SBL',
+    COUNTRY => 'Finland',
+    CITY => 'Pärnu',
+    ORIGIN => 'Invitational',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2008' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            major => 'ROUND',
+            DATE_START => '2008-07-16',
+            DATE_END => '2008-07-16'
+          } 
+        }
+      },
+    }
+  },
+
+  'Puutalo Open Teams' =>
+  {
+    ORGANIZATION => 'SBL',
+    COUNTRY => 'Finland',
+    CITY => 'Puutalo',
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2007' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'ROUND',
+            DATE_START => '2007-05-15',
+            DATE_END => '2007-05-15'
+          } 
+        }
+      },
+      '2008' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            major => 'ROUND',
+            DATE_START => '2008-05-14',
+            DATE_END => '2008-05-14'
+          } 
+        }
+      },
+    }
+  },
+
+  'Salo Midsummer Juniors Teams' =>
+  {
+    ORGANIZATION => 'SBL',
+    COUNTRY => 'Finland',
+    CITY => 'Salo',
+    ORIGIN => 'International',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Juniors',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'ROUND',
+            DATE_START => '2015-06-05',
+            DATE_END => '2015-06-05'
           } 
         }
       },

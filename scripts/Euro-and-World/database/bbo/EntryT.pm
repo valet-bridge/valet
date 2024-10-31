@@ -475,6 +475,8 @@ my %FORM_CORRECTIONS = (
     13239, 13248, 13249, 13252],
   'Open Catalunya Preferent Pairs' => [
     11451, 11631, 11676, 11807, 11846, 11938, 12032],
+  'Pärnu Summer Invitational Pairs' => [
+     5985,  5986, 5987],
   'Petit Grand Prix van Driene' => [
      3297,  3298,  3299],
   'Polish Individual Championship' => [

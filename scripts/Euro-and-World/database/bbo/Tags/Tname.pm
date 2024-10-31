@@ -340,6 +340,11 @@ my @MULTI_WORDS =
   'Finnish Senior Trials',
   'Finnish Swiss Teams Championship',
   'Finnish Women Trials',
+  'Hanko Open Teams',
+  'Pärnu Summer Invitational Pairs',
+  'Pärnu Summer Open Teams',
+  'Puutalo Open Teams',
+  'Salo Midsummer Juniors Teams',
 
   # FRANCE
   'Biarritz Hiver',
@@ -941,14 +946,6 @@ my @MULTI_WORDS =
 
   # Europe: Same as European Champions' Cup
   "Champions' Cup",
-
-  # Finland
-  'Hanko Teams',
-  'Pärnu Summer Invitational Pairs',
-  'Pärnu Summer Open Teams',
-  'Puutalo Open',
-  'Salo Midsummer Juniors',
-  'Suomen Cup',
 
   # India
   'Ashok Kapur Memorial Swiss Pairs',
@@ -1730,6 +1727,8 @@ my %MULTI_TYPOS =
   'Fatih Kiral Pairs' => [
     'fatih kiral cup'],
   'Filbyter Cup' => ['filbyer cup'],
+  'Finnish Cup' => [
+    'suomen cup'],
 
   # FINLAND
   'Finnish Open Pairs' => [
@@ -1959,6 +1958,7 @@ my %MULTI_TYPOS =
 
   ### HHH
 
+  'Hanko Open Teams' => ['hanko teams'],
   "Hans Rosendorff Memorial Women's Teams" => [
     'hans rosendorff memorial womens teams',
     'hans rosendorff memorial  womens teams',
@@ -2590,6 +2590,7 @@ my %MULTI_TYPOS =
   'Poddar National Masters' => ['poddar national master',
     'poddar nationals masters', 'podder national masters',
     'podder nationals masters'],
+  'Puutalo Open Teams' => ['puutalo open'],
 
   # POLAND -- mapped in detail
   'Grand Prix of Poland Pairs' => [
@@ -2831,7 +2832,9 @@ my %MULTI_TYPOS =
 
   ### SSS
 
-  'Salo Midsummer Juniors' => ['midsummer juniors'],
+  'Salo Midsummer Juniors Teams' => [
+    'midsummer juniors',
+    'salo midsummer Juniors'],
   'Salvador Assael IMP Pairs' => [
     'assael invitational calcutta',
     "salvador assael imp's across the field"],

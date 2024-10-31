@@ -37,7 +37,7 @@ use EntryT;
 # use Tournaments::EuroAdult;
 # use Tournaments::EuroYouth;
 # use Tournaments::Faroe;
-# use Tournaments::Finland;
+use Tournaments::Finland;
 # use Tournaments::France;
 # use Tournaments::Germany;
 # use Tournaments::Greece;
@@ -71,7 +71,7 @@ use EntryT;
 # use Tournaments::Sweden;
 # use Tournaments::Switzerland;
 # use Tournaments::Taipei;
-use Tournaments::Turkey;
+# use Tournaments::Turkey;
 # use Tournaments::UK;
 # use Tournaments::USA;
 # use Tournaments::Venezuela;
@@ -103,7 +103,7 @@ my %DIVISIONS =
   # EUROADULT => \&Tournaments::EuroAdult::set_links
   # EUROYOUTH => \&Tournaments::EuroYouth::set_links
   # FAROE => \&Tournaments::Faroe::set_links
-  # FINLAND => \&Tournaments::Finland::set_links
+  FINLAND => \&Tournaments::Finland::set_links
   # FRANCE => \&Tournaments::France::set_links
   # GERMANY => \&Tournaments::Germany::set_links
   # GREECE => \&Tournaments::Greece::set_links
@@ -137,7 +137,7 @@ my %DIVISIONS =
   # SWEDEN => \&Tournaments::Sweden::set_links
   # SWITZERLAND => \&Tournaments::Switzerland::set_links
   # TAIPEI => \&Tournaments::Taipei::set_links
-  TURKEY => \&Tournaments::Turkey::set_links
+  # TURKEY => \&Tournaments::Turkey::set_links
   # UK => \&Tournaments::UK::set_links
   # USA => \&Tournaments::USA::set_links
   # VENEZUELA => \&Tournaments::Venezuela::set_links
