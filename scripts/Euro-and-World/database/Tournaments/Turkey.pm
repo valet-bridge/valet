@@ -77,6 +77,160 @@ my %MEETS_TURKEY =
 
 my %TOURNAMENTS_TURKEY =
 (
+  'Anatolian Club Teams',
+  {
+    ORGANIZATION => 'TBF',
+    COUNTRY => 'Turkey',
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2012-05-20',
+            DATE_END => '2012-05-20'
+          },
+        }
+      },
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            major => 'ROUND',
+            DATE_START => '2014-05-17',
+            DATE_END => '2014-05-18'
+          },
+        }
+      }
+    }
+  },
+
+  'Anatolian Fall Teams',
+  {
+    ORGANIZATION => 'TBF',
+    COUNTRY => 'Turkey',
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-10-26',
+            DATE_END => '2011-10-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-10-26',
+            DATE_END => '2011-10-27'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-10-27',
+            DATE_END => '2011-10-27'
+          },
+        }
+      }
+    }
+  },
+
+  'Anatolian Spring Teams',
+  {
+    ORGANIZATION => 'TBF',
+    COUNTRY => 'Turkey',
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2007' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-04-16',
+            DATE_END => '2007-04-16'
+          },
+        }
+      },
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            MOVEMENT => 'Danish',
+            major => 'SEGMENT',
+            DATE_START => '2010-04-26',
+            DATE_END => '2010-04-27'
+          },
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-04-27',
+            DATE_END => '2011-04-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-04-27',
+            DATE_END => '2011-04-27'
+          },
+        }
+      }
+    }
+  },
+
   'Ankara Summer Teams',
   {
     ORGANIZATION => 'TBF',
@@ -145,6 +299,167 @@ my %TOURNAMENTS_TURKEY =
     }
   },
 
+  'Balikcioglu Open Teams',
+  {
+    ORGANIZATION => 'TBF',
+    COUNTRY => 'Turkey',
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2012-05-17',
+            DATE_END => '2012-05-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2012-05-24',
+            DATE_END => '2012-05-24'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2012-05-31',
+            DATE_END => '2012-05-31'
+          },
+          'C3' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2012-06-07',
+            DATE_END => '2012-06-07'
+          },
+          'C4' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2012-06-14',
+            DATE_END => '2012-06-14'
+          },
+          'C5' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2012-06-21',
+            DATE_END => '2012-06-21'
+          },
+          'C6' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2012-06-26',
+            DATE_END => '2012-06-26'
+          },
+          'C7' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2012-06-28',
+            DATE_END => '2012-06-28'
+          },
+        }
+      },
+    }
+  },
+
+  'Fatih Kiral Pairs',
+  {
+    ORGANIZATION => 'TBF',
+    COUNTRY => 'Turkey',
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-06-11',
+            DATE_END => '2011-06-11'
+          },
+        }
+      },
+    }
+  },
+
+  'Gelibolu Peace Teams',
+  {
+    ORGANIZATION => 'TBF',
+    COUNTRY => 'Turkey',
+    CITY => 'Gelibolu',
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2007' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2007,
+            major => 'MATCH',
+            DATE_START => '2007-04-22',
+            DATE_END => '2007-04-23'
+          },
+        }
+      },
+      '2008' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            major => 'MATCH',
+            DATE_START => '2008-05-04',
+            DATE_END => '2008-05-04'
+          },
+        }
+      },
+    }
+  },
+
   'Goksu-Yalikavak Pairs',
   {
     ORGANIZATION => 'TBF',
@@ -174,7 +489,7 @@ my %TOURNAMENTS_TURKEY =
     }
   },
 
-  'Istanbul Teams',
+  'Istanbul Summer Teams',
   {
     ORGANIZATION => 'TBF',
     COUNTRY => 'Turkey',
@@ -187,47 +502,6 @@ my %TOURNAMENTS_TURKEY =
 
     EDITIONS =>
     {
-      '2006' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2006,
-            major => 'SEGMENT',
-            DATE_START => '2006-02-13',
-            DATE_END => '2006-02-13'
-          } 
-        }
-      },
-      '2010' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2010,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2010-02-20',
-            DATE_END => '2010-02-21'
-          } 
-        }
-      },
-      '2012' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2012,
-            STAGE => 'Final',
-            major => 'ROUND',
-            DATE_START => '2012-02-10',
-            DATE_END => '2012-02-12'
-          } 
-        }
-      },
       '2014' =>
       {
         CHAPTERS =>
@@ -271,17 +545,37 @@ my %TOURNAMENTS_TURKEY =
 
     EDITIONS =>
     {
-      '2010' =>
+      '2006' =>
       {
-
         CHAPTERS =>
         {
           'SINGLE' => 
+          {
+            YEAR => 2006,
+            major => 'SEGMENT',
+            DATE_START => '2006-02-13',
+            DATE_END => '2006-02-13'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
           {
             YEAR => 2010,
             major => 'SEGMENT',
             DATE_START => '2010-02-19',
             DATE_END => '2010-02-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-02-20',
+            DATE_END => '2010-02-21'
           } 
         }
       },
@@ -296,6 +590,48 @@ my %TOURNAMENTS_TURKEY =
             major => 'ROUND',
             DATE_START => '2011-02-18',
             DATE_END => '2011-02-20'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2012-02-10',
+            DATE_END => '2012-02-12'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2013-02-16',
+            DATE_END => '2013-02-17'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2014-02-08',
+            DATE_END => '2014-02-09'
           } 
         }
       },
@@ -367,6 +703,22 @@ my %TOURNAMENTS_TURKEY =
           } 
         }
       },
+    }
+  },
+
+  'Izmir Winter Teams Cup',
+  {
+    ORGANIZATION => 'TBF',
+    COUNTRY => 'Turkey',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
       '2010' =>
       {
         CHAPTERS =>
@@ -377,6 +729,28 @@ my %TOURNAMENTS_TURKEY =
             major => 'ROUND',
             DATE_START => '2010-02-27',
             DATE_END => '2010-02-28'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Playoff',
+            major => 'ROUND',
+            DATE_START => '2013-02-19',
+            DATE_END => '2013-02-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Playoff',
+            major => 'ROUND',
+            DATE_START => '2013-03-02',
+            DATE_END => '2013-03-03'
           } 
         }
       },
@@ -406,6 +780,66 @@ my %TOURNAMENTS_TURKEY =
             DATE_START => '2016-02-07',
             DATE_END => '2016-02-07'
           } 
+        }
+      },
+    }
+  },
+
+  'Lüleburgaz Liberation Cup',
+  {
+    ORGANIZATION => 'TBF',
+    COUNTRY => 'Turkey',
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2015-11-08',
+            DATE_END => '2015-11-08'
+          },
+        }
+      },
+    }
+  },
+
+  'Marmara Inter-Club Championship',
+  {
+    ORGANIZATION => 'TBF',
+    COUNTRY => 'Turkey',
+    REGION => 'Marmara',
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            major => 'ROUND',
+            DATE_START => '2012-04-28',
+            DATE_END => '2012-04-29'
+          },
         }
       },
     }
@@ -547,6 +981,184 @@ my %TOURNAMENTS_TURKEY =
             DATE_START => '2011-12-11',
             DATE_END => '2011-12-11'
           } 
+        }
+      },
+    }
+  },
+
+  'Salvador Assael IMP Pairs',
+  {
+    # https://bridgescanner.com/event/salvador-assael-aegean-pair-championship-2023
+
+    ORGANIZATION => 'TBF',
+    COUNTRY => 'Turkey',
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IAF',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            major => 'SESSION',
+            DATE_START => '2013-06-04',
+            DATE_END => '2013-06-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2013-06-06',
+            DATE_END => '2013-06-06'
+          },
+        }
+      },
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            major => 'SESSION',
+            DATE_START => '2015-06-01',
+            DATE_END => '2015-06-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2015-06-03',
+            DATE_END => '2015-06-04'
+          },
+        }
+      },
+    }
+  },
+
+  'Salvador Assael Pro-Am Pairs',
+  {
+    ORGANIZATION => 'TBF',
+    COUNTRY => 'Turkey',
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2012-05-20',
+            DATE_END => '2012-05-20'
+          },
+        }
+      },
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2013-06-02',
+            DATE_END => '2013-06-03'
+          },
+        }
+      },
+    }
+  },
+
+  'Thrace Cup League',
+  {
+    ORGANIZATION => 'TBF',
+    COUNTRY => 'Turkey',
+    REGION => 'Thrace',
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            major => 'ROUND',
+            DATE_START => '2014-05-18',
+            DATE_END => '2014-05-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-05-19',
+            DATE_END => '2014-05-19'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2014-07-11',
+            DATE_END => '2014-07-13'
+          },
+        }
+      },
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            major => 'ROUND',
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2015-05-16',
+            DATE_END => '2015-05-19'
+          },
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            major => 'SEGMENT',
+            DATE_START => '2016-06-05',
+            DATE_END => '2016-06-05'
+          },
         }
       },
     }
@@ -837,18 +1449,12 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2014,
-            DATE_START => '2014-07-11',
-            DATE_END => '2014-07-13'
-          },
-          'C1' => 
-          {
-            YEAR => 2014,
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-08-03',
             DATE_END => '2014-08-04'
           },
-          'C2' => 
+          'C1' => 
           {
             YEAR => 2014,
             STAGE => 'Rof32',
@@ -856,7 +1462,7 @@ my %TOURNAMENTS_TURKEY =
             DATE_START => '2014-08-05',
             DATE_END => '2014-08-05'
           },
-          'C3' => 
+          'C2' => 
           {
             YEAR => 2014,
             STAGE => 'Rof16',
@@ -864,7 +1470,7 @@ my %TOURNAMENTS_TURKEY =
             DATE_START => '2014-08-05',
             DATE_END => '2014-08-06'
           },
-          'C4' => 
+          'C3' => 
           {
             YEAR => 2014,
             STAGE => 'Quarterfinal',
@@ -872,7 +1478,7 @@ my %TOURNAMENTS_TURKEY =
             DATE_START => '2014-08-06',
             DATE_END => '2014-08-07'
           },
-          'C5' => 
+          'C4' => 
           {
             YEAR => 2014,
             STAGE => 'Semifinal',
@@ -880,7 +1486,7 @@ my %TOURNAMENTS_TURKEY =
             DATE_START => '2014-08-07',
             DATE_END => '2014-08-07'
           },
-          'C6' => 
+          'C5' => 
           {
             YEAR => 2014,
             STAGE => 'Bronze',
@@ -888,7 +1494,7 @@ my %TOURNAMENTS_TURKEY =
             DATE_START => '2014-08-08',
             DATE_END => '2014-08-08'
           },
-          'C7' => 
+          'C6' => 
           {
             YEAR => 2014,
             STAGE => 'Final',
@@ -964,13 +1570,6 @@ my %TOURNAMENTS_TURKEY =
         CHAPTERS =>
         {
           'C0' => 
-          {
-            YEAR => 2016,
-            major => 'SEGMENT',
-            DATE_START => '2016-06-05',
-            DATE_END => '2016-06-05'
-          },
-          'C1' => 
           {
             YEAR => 2016,
             STAGE => 'Round-robin',
@@ -1588,6 +2187,170 @@ my %TOURNAMENTS_TURKEY =
 
     EDITIONS =>
     {
+      '2007' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2007,
+            major => 'SEGMENT',
+            DATE_START => '2007-03-19',
+            DATE_END => '2007-03-19'
+          },
+        }
+      },
+      '2008' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2008-03-03',
+            DATE_END => '2008-03-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-03-03',
+            DATE_END => '2008-03-03'
+          },
+        }
+      },
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2009-03-06',
+            DATE_END => '2009-03-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2009-03-08',
+            DATE_END => '2009-03-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2009-03-08',
+            DATE_END => '2009-03-09'
+          },
+          'C3' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-03-09',
+            DATE_END => '2009-03-10'
+          },
+          'C4' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-03-10',
+            DATE_END => '2009-03-10'
+          },
+          'C5' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-03-11',
+            DATE_END => '2009-03-11'
+          },
+        }
+      },
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2010-03-05',
+            DATE_END => '2010-03-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2010-03-07',
+            DATE_END => '2010-03-07'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2010-03-07',
+            DATE_END => '2010-03-08'
+          },
+          'C3' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-03-08',
+            DATE_END => '2010-03-09'
+          },
+          'C4' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-03-09',
+            DATE_END => '2010-03-09'
+          },
+          'C5' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-03-10',
+            DATE_END => '2010-03-10'
+          },
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-03-08',
+            DATE_END => '2011-03-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            DATE_START => '2011-03-08',
+            DATE_END => '2011-03-08'
+          },
+        }
+      },
       '2013' =>
       {
         CHAPTERS =>
@@ -1595,19 +2358,66 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Playoff',
+            STAGE => 'Round-robin',
             major => 'ROUND',
-            DATE_START => '2013-02-19',
-            DATE_END => '2013-02-19'
+            DATE_START => '2013-03-10',
+            DATE_END => '2013-03-11'
           },
           'C1' => 
           {
             YEAR => 2013,
-            STAGE => 'Playoff',
-            major => 'ROUND',
-            DATE_START => '2013-03-02',
-            DATE_END => '2013-03-03'
-          } 
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
+            DATE_START => '2013-03-12',
+            DATE_END => '2013-03-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2013-03-12',
+            DATE_END => '2013-03-13'
+          },
+          'C3' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2013-03-13',
+            DATE_END => '2013-03-14'
+          },
+          'C4' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-03-14',
+            DATE_END => '2013-03-14'
+          },
+          'C5' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-03-14',
+            DATE_END => '2013-03-15'
+          },
+          'C6' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Bronze',
+            DATE_START => '2013-03-16',
+            DATE_END => '2013-03-16'
+          },
+          'C7' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-03-15',
+            DATE_END => '2013-03-16'
+          },
         }
       },
       '2014' =>
@@ -1843,6 +2653,21 @@ my %TOURNAMENTS_TURKEY =
           } 
         }
       },
+      '2015' =>
+      {
+        # http://clubs.vugraph.com/tbricfed/calendar.php?month=2&year=2015
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2015-02-20',
+            DATE_END => '2015-02-22'
+          } 
+        }
+      },
     }
   },
 
@@ -1995,6 +2820,35 @@ my %TOURNAMENTS_TURKEY =
             DATE_START => '2015-05-07',
             DATE_END => '2015-05-07'
           } 
+        }
+      },
+    }
+  },
+
+  'Western Mediterranean Club Teams',
+  {
+    ORGANIZATION => 'TBF',
+    COUNTRY => 'Turkey',
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            major => 'ROUND',
+            DATE_START => '2014-05-30',
+            DATE_END => '2014-06-01'
+          },
         }
       },
     }

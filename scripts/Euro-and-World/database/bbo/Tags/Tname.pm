@@ -699,6 +699,7 @@ my @MULTI_WORDS =
   'Serbian Open Teams',
   'Serbian Open Trials',
   'Serbian Premier League',
+  'Vrnjacka Banja Open Teams',
 
   # SINGAPORE
   'Singapore Open Teams',
@@ -759,21 +760,33 @@ my @MULTI_WORDS =
   'Zurich Open Teams',
 
   # TURKEY
+  'Anatolian Club Teams',
+  'Anatolian Fall Teams',
+  'Anatolian Spring Teams',
   'Ankara Summer Teams',
+  'Balikcioglu Open Teams',
+  'Fatih Kiral Pairs',
+  'Gelibolu Peace Teams',
   'Goksu-Yalikavak Pairs',
-  'Istanbul Teams',
+  'Istanbul Summer Teams',
   'Istanbul Winter Teams',
   'Izmir Teams Cup',
+  'Izmir Winter Teams Cup',
+  'Lüleburgaz Liberation Cup',
+  'Marmara Inter-Club Championship',
   'Murat Kilercioglu Turkish Spring Teams',
   'Necmettin Sunget Teams Cup',
+  'Salvador Assael IMP Pairs',
+  'Salvador Assael Pro-Am Pairs',
+  'Thrace Cup League',
   'Turkish Club Championship',
   'Turkish East Mediterranean Teams',
   'Turkish Junior Pairs',
   'Turkish Mixed Team Trials',
   'Turkish Mixed Teams',
-  'Turkish Open Teams',
   'Turkish Open Pair Trials',
   'Turkish Open Team Trials',
+  'Turkish Open Teams',
   'Turkish Swiss Mixed Teams',
   'Turkish U16 Pairs',
   'Turkish University Teams',
@@ -782,6 +795,7 @@ my @MULTI_WORDS =
   'Turkish Women Pair Trials',
   'Turkish Women Team Trials',
   'Turkish Women Teams',
+  'Western Mediterranean Club Teams',
 
   # UNITED KINGDOM
   'British Gold Cup',
@@ -993,9 +1007,6 @@ my @MULTI_WORDS =
   'Plock District League',
   'Towns Cup', # Tallinn
 
-  # Serbia
-  'Vrnjacka Banja Open Teams',
-
   'FullBridge International Teams',
 
   # Supra
@@ -1020,24 +1031,6 @@ my @MULTI_WORDS =
   'Park Hotell Swiss Teams',
   'S:t Erik Championship Series',
   'Stena Line Cup',
-
-  # Turkey
-  'Anatolian Club Qualifying',
-  'Anatolian Fall Teams',
-  'Anatolian Open Teams',
-  'Anatolian Spring Teams',
-  'Assael Invitational Calcutta',
-  'Balikcioglu Teams Championship',
-  'Fatih Kiral Cup',
-  'Gelibolu Peace Cup',
-  'Lüleburgaz Liberation Cup',
-  'Marmara Inter-Club Championship',
-  'Salvador Assael IMP Pairs',
-  'Salvador Assael Pro-Am',
-  'Thrace Club Teams',
-  'Thrace Cup League',
-  'Western Mediterranean Club Teams',
-  'Winter Open Teams',
 
 
   # ----------------------------------------------------
@@ -1073,11 +1066,13 @@ my %MULTI_TYPOS =
     'ull aindia uti bank masters championship',
     'all india uti national masters championship',
     'all india utibank masters championship'],
-  'Anatolian Club Qualifying' => ['eastern anatolian qualification',
+  'Anatolian Club Teams' => [
+    'anatolian club qualifying',
+    'eastern anatolian qualification',
     'eastern anatolýa qualýfýcatýon',
     'turkish interclubs champ_ anatolia elections'],
   'Anatolian Fall Teams' => ['anatolian side fall teams'],
-  'Anatolian Open Teams' => ['anatolian side bridge clubs open teams'],
+  # 'Anatolian Open Teams' => ['anatolian side bridge clubs open teams'],
   'Anatolian Spring Teams' => ['anatolia spring teams'],
   'Andrzej Wilkosz Memorial Pairs' => ['a_ wilkosz pro memoriam'],
   'Ankara Summer Teams' => ['ankara summer team championship'],
@@ -1268,6 +1263,8 @@ my %MULTI_TYPOS =
     'balaton invitation teams'],
   'Balatonföldvár Open Teams' => [
     'balatonfoldvar teams'],
+  'Balikcioglu Open Teams' => [
+    'balikcioglu teams championship'],
   'Balkan Championship' => ['balkan bridge ch', 
     'balkanbridge championship', 'balkan championships',
     'balkan bridge championship'],
@@ -1730,6 +1727,8 @@ my %MULTI_TYPOS =
     'faroese tc', 
     'faroese team championships',
     'faroese teams'],
+  'Fatih Kiral Pairs' => [
+    'fatih kiral cup'],
   'Filbyter Cup' => ['filbyer cup'],
 
   # FINLAND
@@ -1866,6 +1865,7 @@ my %MULTI_TYPOS =
   'Garden Cities Teams' => ['garden cities'],
   'Gardermoen Airport Hotel Teams' => [
     'gardermoen airport hotel cup'],
+  'Gelibolu Peace Teams' => ['gelibolu peace cup'],
   'Geologi Cup' => ['geo cup'],
   'Glasgow Transnational Open Teams' => ['tnt glasgow'],
 
@@ -2141,7 +2141,7 @@ my %MULTI_TYPOS =
     'israel schools trials',
     'israel schools teams trials'],
 
-  'Istanbul Teams' => [
+  'Istanbul Summer Teams' => [
     'istanbul team championship', 
     'istanbul team championships',
     'istanbul club teams championship',
@@ -2151,6 +2151,8 @@ my %MULTI_TYPOS =
     'istanbul kis dortlu takimlar',
     'istanbul kis dortlu takim', 
     'istanbul winter champs',
+    'istanbul winter open teams',
+    'istanbul winter team championship',
     'istanbul kis'],
   'Izmir Teams Cup' => [
     'izmir open teams championship',
@@ -2158,6 +2160,9 @@ my %MULTI_TYPOS =
     'izmir teams',
     'izmir teams championship',
     'izmýr teams cup'],
+  'Izmir Winter Teams Cup' => [
+    'izmir winter teams championship',
+    'turkish winter open teams izmir'],
 
   # ITALY -- mapped in detail
   'Italian Club Open Championship' => ['camp_ soc_ open'],
@@ -2828,7 +2833,10 @@ my %MULTI_TYPOS =
 
   'Salo Midsummer Juniors' => ['midsummer juniors'],
   'Salvador Assael IMP Pairs' => [
+    'assael invitational calcutta',
     "salvador assael imp's across the field"],
+  'Salvador Assael Pro-Am Pairs' => [
+    'salvador assael pro-am'],
   'Samadhan Summer League' => ['samadhan bridge league'],
   'Sao Paulo Cup' => [
     's o paulo cup', 
@@ -3091,9 +3099,13 @@ my %MULTI_TYPOS =
     'thane bridge annual'],
   'Thanos Capayiannides Memorial Simultaneous' => [
     'thanos capayiannides'],
-  'Thrace Club Teams' => ['thrace region clubs team championship',
-    'türk trakya bölge kulüpler þampýyonasi ekýbý', 'trachean club teams'],
-  'Thrace Cup League' => ['trakya kulupler ligi'],
+  'Thrace Cup League' => [
+    'trachean club teams',
+    'Thrace Club Teams',
+    'thrace region clubs team championship',
+    'trakya kulupler ligi',
+    'turkish club teams championship aegean playoffs',
+    'türk trakya bölge kulüpler þampýyonasi ekýbý'], 
   'Tianjin Binhai Cup' => [
     'tianjin bin hai cup',
     'tianjin binhai cup world men elite tournament'],
@@ -3181,14 +3193,31 @@ my %MULTI_TYPOS =
   'Turkish University Teams' => [
     'turkish Universities championship',
     'turkish universities bridge championship'],
-  'Turkish Winter Championship' => [
-    'turkiye kis takimlar sampiyonasi',
-    'turkish winter chanpionship'],
+  # 'Turkish Winter Championship' => [
+    # 'turkiye kis takimlar sampiyonasi',
+    # 'turkish winter chanpionship',
+    # 'turkey winter open teams',
+    # 'turkey winter teams'],
   'Turkish Winter Open Teams' => [
+    'turkey winter open teams',
+    'turkey winter teams',
+    'turkey winter team championship',
+    'turkey winter teams championship',
+    'turkis winter teams',
+    'turkish winter chanpionship',
+    'turkish winter championship',
+    'turkish winter championships',
+    'turkish winter team championship',
+    'turkish winter team championships',
+    'turkish winter teams',
+    'turkiye kis takimlar sampiyonasi',
     'turkiye kis acik takimlar sampiyonasi'],
   'Turkish Winter Women Teams' => [
-    'turkish winter woman team championship'],
-  'Turkish Women Teams' => ['türkish ladies teams',
+    'turkish winter woman team championship',
+    "turkish woman's winter teams",
+    "turkish women's winter teams"],
+  'Turkish Women Teams' => [
+    'türkish ladies teams',
     'turkish ladies teams championships',
     'turkish ladies teams',
     'turkish women championships',
@@ -3318,7 +3347,6 @@ my %MULTI_TYPOS =
     'willingdon sports club  swiss pairs'],
   'Willy Brown Memorial Pairs' => [
     'willy brown memorial'],
-  'Winter Open Teams' => ['winter teams', 'winter team'],
 
   # WORLD
   'Huayuan Cup' => [
