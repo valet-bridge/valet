@@ -520,6 +520,7 @@ my @MULTI_WORDS =
   'Full Tilt Irish Bridge Masters',
 
   # ISRAEL
+  'Four Nations Cup',
   'Israel Cup',
   'Israel Juniors Pairs',
   'Israel Juniors Trials',
@@ -529,6 +530,9 @@ my @MULTI_WORDS =
   'Israel Open Trials',
   'Israel School Trials',
   'Israel Women Pairs',
+  'Maccabi Games',
+  'Rand Pairs Cup',
+  'Rand Teams Cup',
 
   # ITALY
   'Bologna Trophy',
@@ -932,7 +936,6 @@ my @MULTI_WORDS =
   # ----------------------------------------------------
 
   # Asia Middle East
-  'BFAME Championship',
   'BFAME Friendship Pairs',
   'Pan Arab Inter-Club Championship',
 
@@ -989,12 +992,6 @@ my @MULTI_WORDS =
   'Riau Governor Cup',
   'Sarundajang Cup',
   'Semen Padang Cup',
-
-  # Israel
-  'Dr. Rand Masters',
-  'Four Nations Cup',
-  'Maccabi Games',
-  'Rand Cup',
 
   # New Zealand
   'Centre Island Teams',
@@ -1285,9 +1282,6 @@ my %MULTI_TYPOS =
     'bst mester'],
   'Bermuda Bowl' => ['bermuda bow', 'bemruda bowl'],
   'Bermuda Triangle Cup' => ['bermuda triangle teams cup'],
-  'BFAME Championship' => ['zone 4 bridge championship',
-    'zone4 bridge championship', 'bfame chp', 'bfame championships',
-    'bfame bridge championship', 'bfame chamionship'],
   'Bhabha Atomic Research Centre Open' => ['barc open'],
   'BKBT Teams' => ['bkbt match'],
   'B L Rao Memorial Open' => ['open b_l_rao memorial',
@@ -1562,7 +1556,6 @@ my %MULTI_TYPOS =
     'dgc open championship'],
   'Dongming Knock-out Teams' => ['dong ming knockout teams',
     'dong ming knockour teams', 'ding ming knockout teams'],
-  'Dr. Rand Masters' => ['dr_ rand masters'],
   'Dutch Knock-Out Cup' => ['knock-out team cup netherlands',
     'knock out team cup netherlands'],
   'Dutch Meesterklasse' => [

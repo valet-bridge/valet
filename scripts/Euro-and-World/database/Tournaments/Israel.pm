@@ -15,11 +15,76 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_ISRAEL =
 (
+  'Rand Cup' =>
+  {
+    ORGANIZATION => 'IBF',
+    COUNTRY => 'Israel',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        COUNTRY => 'Israel',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2010,
+            DATE_START => '2010-11-25',
+            DATE_END => '2010-11-25'
+          }
+        }
+      },
+      '2014' =>
+      {
+        COUNTRY => 'Israel',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2014,
+            DATE_START => '2014-11-20',
+            DATE_END => '2014-11-20'
+          }
+        }
+      },
+    }
+  },
+
 );
 
 my %TOURNAMENTS_ISRAEL =
 (
-  'Israel Cup',
+  'Four Nations Cup' =>
+  {
+    ORGANIZATION => 'IBF',
+    COUNTRY => 'Israel',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-11-19',
+            DATE_END => '2011-11-19'
+          } 
+        }
+      },
+    }
+  },
+
+  'Israel Cup' =>
   {
     ORGANIZATION => 'IBF',
     COUNTRY => 'Israel',
@@ -34,7 +99,6 @@ my %TOURNAMENTS_ISRAEL =
     {
       '2010' =>
       {
-        # No link
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -50,7 +114,7 @@ my %TOURNAMENTS_ISRAEL =
     }
   },
 
-  'Israel Juniors Pairs',
+  'Israel Juniors Pairs' => 
   {
     ORGANIZATION => 'IBF',
     COUNTRY => 'Israel',
@@ -96,7 +160,7 @@ my %TOURNAMENTS_ISRAEL =
     }
   },
 
-  'Israel Juniors Trials',
+  'Israel Juniors Trials' =>
   {
     ORGANIZATION => 'IBF',
     COUNTRY => 'Israel',
@@ -138,7 +202,7 @@ my %TOURNAMENTS_ISRAEL =
     }
   },
 
-  'Israel IMP Pairs',
+  'Israel IMP Pairs' =>
   {
     ORGANIZATION => 'IBF',
     COUNTRY => 'Israel',
@@ -180,7 +244,7 @@ my %TOURNAMENTS_ISRAEL =
     }
   },
 
-  'Israel Open Pairs',
+  'Israel Open Pairs' =>
   {
     ORGANIZATION => 'IBF',
     COUNTRY => 'Israel',
@@ -331,7 +395,7 @@ my %TOURNAMENTS_ISRAEL =
     }
   },
 
-  'Israel Open Teams',
+  'Israel Open Teams' =>
   {
     ORGANIZATION => 'IBF',
     COUNTRY => 'Israel',
@@ -497,7 +561,7 @@ my %TOURNAMENTS_ISRAEL =
     }
   },
 
-  'Israel Open Trials',
+  'Israel Open Trials' =>
   {
     ORGANIZATION => 'IBF',
     COUNTRY => 'Israel',
@@ -586,7 +650,7 @@ my %TOURNAMENTS_ISRAEL =
     }
   },
 
-  'Israel School Trials',
+  'Israel School Trials' =>
   {
     ORGANIZATION => 'IBF',
     COUNTRY => 'Israel',
@@ -615,7 +679,7 @@ my %TOURNAMENTS_ISRAEL =
     }
   },
 
-  'Israel Women Pairs',
+  'Israel Women Pairs' =>
   {
     ORGANIZATION => 'IBF',
     COUNTRY => 'Israel',
@@ -638,6 +702,116 @@ my %TOURNAMENTS_ISRAEL =
             YEAR => 2015,
             DATE_START => '2015-07-21',
             DATE_END => '2015-07-21'
+          } 
+        }
+      },
+    }
+  },
+
+  'Maccabi Games' =>
+  {
+    ORGANIZATION => 'IBF',
+    COUNTRY => 'Israel',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2005' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2005,
+            major => 'ROUND',
+            DATE_START => '2005-07-19',
+            DATE_END => '2005-07-19'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-07-11',
+            DATE_END => '2011-07-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-07-11',
+            DATE_END => '2011-07-12'
+          } 
+        }
+      },
+    }
+  },
+
+  'Rand Pairs Cup' =>
+  {
+    ORGANIZATION => 'IBF',
+    COUNTRY => 'Israel',
+    ORIGIN => 'Invitational',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        MEET => 'Rand Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'ROUND',
+            DATE_START => '2014-11-20',
+            DATE_END => '2014-11-20'
+          } 
+        }
+      },
+    }
+  },
+
+  'Rand Teams Cup' =>
+  {
+    ORGANIZATION => 'IBF',
+    COUNTRY => 'Israel',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        MEET => 'Rand Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-11-25',
+            DATE_END => '2010-11-25'
           } 
         }
       },
