@@ -478,6 +478,9 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2013-08-21',
             DATE_END => '2013-08-25'
           } 
@@ -491,7 +494,10 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2015,
-            DATE_START => '2015-04-01',
+            STAGE => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
+            DATE_START => '2015-04-03',
             DATE_END => '2015-04-07'
           } 
         }
@@ -519,6 +525,9 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2006,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            minor => 'MATCH',
             DATE_START => '2006-06-10',
             DATE_END => '2006-06-10'
           } 
@@ -529,10 +538,22 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2010,
-            DATE_START => '2010-05-23',
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            minor => 'MATCH',
+            DATE_START => '2010-05-24',
+            DATE_END => '2010-05-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-05-26',
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            minor => 'MATCH',
             DATE_END => '2010-05-29'
           } 
         }
@@ -542,10 +563,22 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Youth Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2013-08-20',
+            DATE_END => '2013-08-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
+            DATE_START => '2013-08-24',
             DATE_END => '2013-08-25'
           } 
         }
@@ -555,10 +588,22 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Youth Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2015-04-01',
+            DATE_END => '2015-04-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
+            DATE_START => '2015-04-05',
             DATE_END => '2015-04-07'
           } 
         }
@@ -650,10 +695,28 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2005,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2005-06-23',
+            DATE_END => '2005-07-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Bronze',
+            major => 'ROUND',
+            DATE_START => '2005-07-02',
+            DATE_END => '2005-07-03'
+          },
+          'C2' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Playoff',
+            major => 'ROUND',
+            DATE_START => '2005-07-01',
             DATE_END => '2005-07-03'
           } 
         }
@@ -666,6 +729,9 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2006,
+            STAGE => 'Qualifying',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2006-08-24',
             DATE_END => '2006-08-29'
           } 
@@ -676,10 +742,30 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2007,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            minor => 'MATCH',
             DATE_START => '2007-06-04',
+            DATE_END => '2007-06-11'
+          },
+          'C1' => 
+          {
+            # Not sure.
+            YEAR => 2007,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2007-06-12',
+            DATE_END => '2007-06-12'
+          },
+          'C2' => 
+          {
+            # Not sure.
+            YEAR => 2007,
+            STAGE => 'Playoff',
+            DATE_START => '2007-06-13',
             DATE_END => '2007-06-13'
           } 
         }
@@ -690,9 +776,27 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2008,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2008-09-10',
+            DATE_END => '2008-09-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-09-10',
+            DATE_END => '2008-09-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2008-09-10',
             DATE_END => '2008-09-10'
           } 
@@ -703,12 +807,23 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
+            STAGE => 'Qualifying',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2009-06-19',
+            DATE_END => '2009-06-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2009-06-26',
             DATE_END => '2009-06-28'
-          } 
+          },
         }
       },
       '2010' =>
@@ -719,6 +834,8 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2010,
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2010-05-23',
             DATE_END => '2010-05-29'
           } 
@@ -729,10 +846,22 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            minor => 'MATCH',
             DATE_START => '2011-06-15',
+            DATE_END => '2011-06-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Playoff',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2011-06-23',
             DATE_END => '2011-06-24'
           } 
         }
@@ -742,10 +871,21 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2013-06-07',
+            DATE_END => '2013-06-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2013-06-15',
             DATE_END => '2013-06-16'
           } 
         }
@@ -755,10 +895,22 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2015-05-21',
+            DATE_END => '2015-05-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Playoff',
+            major => 'SESSION',
+            minor => 'ROUND',
+            DATE_START => '2015-05-30',
             DATE_END => '2015-05-31'
           } 
         }
@@ -786,6 +938,9 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2006,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            minor => 'MATCH',
             DATE_START => '2006-06-10',
             DATE_END => '2006-06-10'
           } 
@@ -799,7 +954,10 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2007,
-            DATE_START => '2007-06-04',
+            STAGE => 'Playoff',
+            major => 'SESSION',
+            minor => 'ROUND',
+            DATE_START => '2007-06-13',
             DATE_END => '2007-06-13'
           } 
         }
@@ -827,7 +985,10 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2006,
-            DATE_START => '2006-08-24',
+            STAGE => 'Qualifying',
+            major => 'SESSION',
+            minor => 'ROUND',
+            DATE_START => '2006-08-28',
             DATE_END => '2006-08-29'
           } 
         }
@@ -837,10 +998,22 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2007,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            minor => 'MATCH',
             DATE_START => '2007-06-04',
+            DATE_END => '2007-06-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Playoff',
+            major => 'SESSION',
+            minor => 'ROUND',
+            DATE_START => '2007-06-12',
             DATE_END => '2007-06-13'
           } 
         }
@@ -851,9 +1024,19 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2008,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2008-09-10',
+            DATE_END => '2008-09-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2008-09-10',
             DATE_END => '2008-09-10'
           } 
@@ -867,8 +1050,11 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2009,
-            DATE_START => '2009-06-19',
-            DATE_END => '2009-06-28'
+            STAGE => 'Qualifying',
+            major => 'SESSION',
+            minor => 'ROUND',
+            DATE_START => '2009-06-23',
+            DATE_END => '2009-06-25'
           } 
         }
       },
@@ -880,21 +1066,10 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2010,
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2010-05-23',
-            DATE_END => '2010-05-29'
-          } 
-        }
-      },
-      '2011' =>
-      {
-        MEET => 'APBF Championships',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2011,
-            DATE_START => '2011-06-15',
-            DATE_END => '2011-06-24'
+            DATE_END => '2010-05-28'
           } 
         }
       },
@@ -903,10 +1078,21 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2013-06-07',
+            DATE_END => '2013-06-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2013-06-16',
             DATE_END => '2013-06-16'
           } 
         }
@@ -916,11 +1102,23 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2015-05-21',
-            DATE_END => '2015-05-31'
+            DATE_END => '2015-05-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Playoff',
+            major => 'SESSION',
+            minor => 'ROUND',
+            DATE_START => '2015-05-30',
+            DATE_END => '2015-05-30'
           } 
         }
       },
@@ -947,6 +1145,9 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2006,
+            STAGE => 'Qualifying',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2006-08-24',
             DATE_END => '2006-08-29'
           } 
@@ -957,11 +1158,30 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2007,
-            DATE_START => '2007-06-04',
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            minor => 'MATCH',
+            DATE_START => '2007-06-05',
+            DATE_END => '2007-06-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Bronze',
+            DATE_START => '2007-06-13',
             DATE_END => '2007-06-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Playoff',
+            major => 'SESSION',
+            minor => 'ROUND',
+            DATE_START => '2007-06-11',
+            DATE_END => '2007-06-12'
           } 
         }
       },
@@ -971,9 +1191,20 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2008,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2008-09-10',
+            DATE_END => '2008-09-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2008-09-10',
             DATE_END => '2008-09-10'
           } 
@@ -984,11 +1215,22 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
-            DATE_START => '2009-06-19',
-            DATE_END => '2009-06-28'
+            STAGE => 'Qualifying',
+            major => 'SESSION',
+            minor => 'ROUND',
+            DATE_START => '2009-06-20',
+            DATE_END => '2009-06-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2009-06-27',
+            DATE_END => '2009-06-27'
           } 
         }
       },
@@ -1000,21 +1242,10 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2010,
-            DATE_START => '2010-05-23',
-            DATE_END => '2010-05-29'
-          } 
-        }
-      },
-      '2011' =>
-      {
-        MEET => 'APBF Championships',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2011,
-            DATE_START => '2011-06-15',
-            DATE_END => '2011-06-24'
+            major => 'ROUND',
+            minor => 'MATCH',
+            DATE_START => '2010-05-24',
+            DATE_END => '2010-05-26'
           } 
         }
       },
@@ -1026,8 +1257,11 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2013,
-            DATE_START => '2013-06-07',
-            DATE_END => '2013-06-16'
+            STAGE => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
+            DATE_START => '2013-06-08',
+            DATE_END => '2013-06-14'
           } 
         }
       },
@@ -1036,11 +1270,23 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2015-05-21',
-            DATE_END => '2015-05-31'
+            DATE_END => '2015-05-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Playoff',
+            major => 'SESSION',
+            minor => 'ROUND',
+            DATE_START => '2015-05-30',
+            DATE_END => '2015-05-30'
           } 
         }
       },
@@ -1067,8 +1313,11 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2007,
-            DATE_START => '2007-06-04',
-            DATE_END => '2007-06-13'
+            STAGE => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
+            DATE_START => '2007-06-08',
+            DATE_END => '2007-06-11'
           } 
         }
       },
@@ -1078,9 +1327,19 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2008,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2008-09-10',
+            DATE_END => '2008-09-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2008-09-10',
             DATE_END => '2008-09-10'
           } 
@@ -1094,7 +1353,9 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2010,
-            DATE_START => '2010-05-23',
+            major => 'SESSION',
+            minor => 'ROUND',
+            DATE_START => '2010-05-25',
             DATE_END => '2010-05-29'
           } 
         }
@@ -1107,6 +1368,9 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2013-08-21',
             DATE_END => '2013-08-25'
           } 
@@ -1120,7 +1384,10 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2015,
-            DATE_START => '2015-04-01',
+            STAGE => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
+            DATE_START => '2015-04-02',
             DATE_END => '2015-04-07'
           } 
         }
@@ -1148,12 +1415,29 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2006,
+            major => 'ROUND',
             DATE_START => '2006-12-17',
             DATE_END => '2006-12-17'
           } 
         }
       },
-      '2008' =>
+      '2008A' =>
+      {
+        # Suspect -- PABF rather than APBF?
+        MEET => 'ASEAN Club Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2008-09-10',
+            DATE_END => '2008-09-10'
+          },
+        }
+      },
+      '2008B' =>
       {
         MEET => 'ASEAN Club Championship',
         CHAPTERS =>
@@ -1161,6 +1445,8 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2008,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2008-12-07',
             DATE_END => '2008-12-07'
           } 
@@ -1187,6 +1473,7 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2010,
+            major => 'ROUND',
             DATE_START => '2010-11-21',
             DATE_END => '2010-11-24'
           } 
@@ -1200,6 +1487,7 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'ROUND',
             DATE_START => '2012-12-05',
             DATE_END => '2012-12-09'
           } 
@@ -1213,6 +1501,7 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2015,
+            major => 'ROUND',
             DATE_START => '2015-12-03',
             DATE_END => '2015-12-06'
           } 
@@ -1241,6 +1530,7 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2006,
+            major => 'SESSION',
             DATE_START => '2006-12-17',
             DATE_END => '2006-12-17'
           } 
@@ -1254,6 +1544,7 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'SESSION',
             DATE_START => '2012-12-05',
             DATE_END => '2012-12-09'
           } 
@@ -1279,9 +1570,24 @@ my %TOURNAMENTS_ASIA =
         MEET => 'ASEAN Club Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2006,
+            major => 'SESSION',
+            DATE_START => '2006-12-16',
+            DATE_END => '2006-12-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Semifinal',
+            DATE_START => '2006-12-17',
+            DATE_END => '2006-12-17'
+          },
+          'C2' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
             DATE_START => '2006-12-17',
             DATE_END => '2006-12-17'
           } 
@@ -1292,9 +1598,20 @@ my %TOURNAMENTS_ASIA =
         MEET => 'ASEAN Club Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2008,
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2008-12-06',
+            DATE_END => '2008-12-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2008-12-07',
             DATE_END => '2008-12-07'
           } 
@@ -1305,10 +1622,26 @@ my %TOURNAMENTS_ASIA =
         MEET => 'ASEAN Club Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
+            major => 'ROUND',
             DATE_START => '2009-12-06',
+            DATE_END => '2009-12-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            major => 'ROUND',
+            DATE_START => '2009-12-07',
+            DATE_END => '2009-12-09'
+          },
+          'C2' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2009-12-08',
             DATE_END => '2009-12-09'
           } 
         }
@@ -1318,10 +1651,19 @@ my %TOURNAMENTS_ASIA =
         MEET => 'ASEAN Club Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2010,
+            major => 'ROUND',
             DATE_START => '2010-11-21',
+            DATE_END => '2010-11-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2010-11-24',
             DATE_END => '2010-11-24'
           } 
         }
@@ -1334,6 +1676,8 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2011,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2011-12-06',
             DATE_END => '2011-12-07'
           } 
@@ -1344,10 +1688,27 @@ my %TOURNAMENTS_ASIA =
         MEET => 'ASEAN Club Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            major => 'ROUND',
             DATE_START => '2012-12-05',
+            DATE_END => '2012-12-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2012-12-07',
+            DATE_END => '2012-12-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-12-09',
             DATE_END => '2012-12-09'
           } 
         }
@@ -1357,10 +1718,20 @@ my %TOURNAMENTS_ASIA =
         MEET => 'ASEAN Club Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
-            DATE_START => '2015-12-03',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2015-12-04',
+            DATE_END => '2015-12-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-12-06',
             DATE_END => '2015-12-06'
           } 
         }
@@ -1388,6 +1759,7 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2006,
+            major => 'SESSION',
             DATE_START => '2006-12-17',
             DATE_END => '2006-12-17'
           } 
@@ -1416,7 +1788,9 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2015,
-            DATE_START => '2015-12-03',
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-12-06',
             DATE_END => '2015-12-06'
           } 
         }
@@ -1444,8 +1818,10 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2010,
-            DATE_START => '2010-08-30',
-            DATE_END => '2010-09-05'
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2010-08-31',
+            DATE_END => '2010-09-04'
           } 
         }
       },
@@ -1454,10 +1830,29 @@ my %TOURNAMENTS_ASIA =
         MEET => 'Asia Cup',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2014-06-13',
+            DATE_END => '2014-06-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-06-21',
+            DATE_END => '2014-06-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-06-22',
             DATE_END => '2014-06-22'
           } 
         }
@@ -1485,6 +1880,8 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2010,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2010-08-30',
             DATE_END => '2010-09-05'
           } 
@@ -1512,6 +1909,9 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2009,
+            STAGE => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2009-11-25',
             DATE_END => '2009-11-30'
           } 
@@ -1540,6 +1940,8 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2011,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2011-09-08',
             DATE_END => '2011-09-11'
           } 
@@ -1568,6 +1970,9 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2011,
+            STAGE => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2011-11-10',
             DATE_END => '2011-11-21'
           } 
@@ -1592,9 +1997,19 @@ my %TOURNAMENTS_ASIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2005,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2005-05-18',
+            DATE_END => '2005-05-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2005-05-18',
             DATE_END => '2005-05-18'
           } 
@@ -1607,6 +2022,8 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2007-05-15',
             DATE_END => '2007-05-15'
           } 

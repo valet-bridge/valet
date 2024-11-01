@@ -85,6 +85,26 @@ my @MULTI_WORDS =
   'Copa Zanalda River Plate',
   'Mar del Plata Open Teams',
 
+  # ASIA
+  'APBF Girl Teams',
+  'APBF Junior Teams',
+  'APBF Mixed Teams',
+  'APBF Open Teams',
+  'APBF Senior Teams',
+  'APBF Women Teams',
+  'APBF Youngster Teams',
+  'ASEAN Mixed Club Teams',
+  'ASEAN Open Club Pairs',
+  'ASEAN Open Club Teams',
+  'ASEAN Women Club Teams',
+  'ASEAN Youngsters Club Teams',
+  'Asia Open Teams Cup',
+  'Asia Women Teams Cup',
+  'Asian University Championship',
+  'Indonesian SEA Open Team Trials',
+  'SEA Open Teams',
+  'South Pacific Open Teams',
+
   # AUSTRALIA
   'Altman Swiss Pairs',
   'Australian Autumn National Open Teams',
@@ -910,28 +930,6 @@ my @MULTI_WORDS =
   'WMG Women Teams',
 
   # ----------------------------------------------------
-
-  # Asia
-  'APBF Girl Teams',
-  'APBF Junior Teams',
-  'APBF Mixed Teams',
-  'APBF Open Teams',
-  'APBF Senior Teams',
-  'APBF Women Teams',
-  'APBF Youngster Teams',
-  'ASEAN Mixed Club Teams',
-  'ASEAN Open Club Pairs',
-  'ASEAN Open Club Teams',
-  'ASEAN Women Club Teams',
-  'ASEAN Youngsters Club Teams',
-  'Asia Open Teams Cup',
-  'Asia Women Teams Cup',
-  'Asian University Championship',
-  'Indonesian SEA Open Team Trials',
-  'SEA Open Teams',
-  'South Pacific Open Teams',
-  # 'South Pacific Zone 7 Championship',
-  # 'SPBF Championship',
 
   # Asia Middle East
   'BFAME Championship',
