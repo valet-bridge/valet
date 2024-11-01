@@ -37,6 +37,10 @@ my @MULTI_WORDS =
   'African Zonal Championships',
   'Azores Festival',
   'Amman Bridge Festival',
+  'APBF Championships',
+  'APBF Youth Championships',
+  'ASEAN Club Championship',
+  'Asia Cup',
   'Australian National Championships',
   'Australian Spring Nationals',
   'Australian Summer Festival',
@@ -124,6 +128,7 @@ my @MULTI_WORDS =
   'Sivrioglu Festival',
   'South American Team Championship',
   'South American Trials',
+  'Southeast Asian Games',
   'Stara Zagora Bridge Festival',
   'Swedish Women Trials',
   'Swedish Bridge Festival',
@@ -183,6 +188,30 @@ my %MULTI_TYPOS =
     'hcl open championship',
     'hcl open international tournament',
     'hcl open tournament'],
+
+  'APBF Championships' => [
+    'pabf championship', 'pabf c',
+    'asia pacific bridge federation championship',
+    'asia pacific bridge federation championships',
+    'asia pacific bridge federation champio teams'],
+  'APBF Youth Championships' => [
+    'pabf youth championships'],
+
+  'ASEAN Club Championship' => [
+    "aseam bridge club c'ship",
+    "asean bridge club c'ship",
+    'asean bridge club',
+    'asean bridge club championship',
+    'asean bridge club championships',
+    'asean bridge club open championships',
+    'asean bridg club championship',
+    "asean bridge c'ship",
+    'asean bridge cship',
+    'asean bridge championship',
+    'asean bridge championships',
+    'asean bridge finals',
+    'asean club championships'],
+
   'Australian Spring Nationals' => [
     'aus spring nationals',
     'australian spring national',
@@ -451,6 +480,9 @@ my %MULTI_TYPOS =
     'clasificatoria sudamericano',
     'clasificatorias sudamericano', 
     'south americal trials'],
+  'Southeast Asian Games' => [
+    'sea games',
+    'south east asian games'],
   'Stara Zagora Bridge Festival' => ['bridge festival - stara zagora',
     'bridge festival stara zagora', 
     'bridge festival-bulgaria-stara zagora'],
@@ -543,6 +575,8 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  'APBF Championships' => ['pabfc', 'pabf', 'pabfs'],
+  'ASEAN Club Championship' => ['abcc'],
   'Australian National Championships' => ['anc'],
   'Australian Summer Festival' => ['sfb', 'sfob'],
   'Bangkok Bridge Festival' => ['bbf', 'bff'],
@@ -559,6 +593,7 @@ my %SINGLE_TYPOS =
   'North American Bridge Championship' => ['nabc'],
   'United States Bridge Championship' => ['usbc'],
   'South American Team Championship' => ['sabc'],
+  'Southeast Asian Games' => ['seagames'],
   'Indian Winter Nationals' => ['winternationals'],
   'Victor Champion Cup' => ['vcc'],
   'World Series' => ['wbs'],

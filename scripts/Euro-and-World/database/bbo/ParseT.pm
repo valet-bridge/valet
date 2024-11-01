@@ -18,6 +18,7 @@ use EntryT;
 
 # use Tournaments::Africa;
 # use Tournaments::Argentina;
+use Tournaments::Asia;
 # use Tournaments::Australia;
 # use Tournaments::Austria;
 # use Tournaments::Baltic;
@@ -37,7 +38,7 @@ use EntryT;
 # use Tournaments::EuroAdult;
 # use Tournaments::EuroYouth;
 # use Tournaments::Faroe;
-use Tournaments::Finland;
+# use Tournaments::Finland;
 # use Tournaments::France;
 # use Tournaments::Germany;
 # use Tournaments::Greece;
@@ -84,6 +85,7 @@ my %DIVISIONS =
   
   # AFRICA => \&Tournaments::Africa::set_links
   # ARGENTINA => \&Tournaments::Argentina::set_links
+  ASIA => \&Tournaments::Asia::set_links
   # AUSTRALIA => \&Tournaments::Australia::set_links
   # AUSTRIA => \&Tournaments::Austria::set_links
   # BALTIC => \&Tournaments::Baltic::set_links
@@ -103,7 +105,7 @@ my %DIVISIONS =
   # EUROADULT => \&Tournaments::EuroAdult::set_links
   # EUROYOUTH => \&Tournaments::EuroYouth::set_links
   # FAROE => \&Tournaments::Faroe::set_links
-  FINLAND => \&Tournaments::Finland::set_links
+  # FINLAND => \&Tournaments::Finland::set_links
   # FRANCE => \&Tournaments::France::set_links
   # GERMANY => \&Tournaments::Germany::set_links
   # GREECE => \&Tournaments::Greece::set_links

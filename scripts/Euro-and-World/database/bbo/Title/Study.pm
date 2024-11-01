@@ -106,7 +106,7 @@ my @LOCAL_SUBS =
   { START => 4636, END => 4678, TEXT => 'EC',
     CORR => 'European Transnational Championships' },
   { START => 5085, END => 5130, TEXT => 'Women Elite Tournament',
-    CORR => 'PABF Women Elite Tournament' },
+    CORR => 'IMSA Elite Women Teams' },
   { START => 5356, END => 5362, 
     TEXT => 'Samobor 5th Invitational Bridge Meeting',
     CORR => '5th Samobor Bridge Meeting' },

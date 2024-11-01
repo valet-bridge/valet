@@ -643,7 +643,9 @@ sub finish_ambiguous
       $tname eq 'Gianarrigo Rona Trophy' ||
       $tname eq 'Prince Takamatsu Cup' ||
       $meet eq 'World Youth Open Championships' ||
-      $tname eq 'ASEAN Club Championship')
+      $meet eq 'ASEAN Club Championship' ||
+      $tname eq 'ASEAN Mixed Club Teams' ||
+      $tname eq 'ASEAN Open Club Teams')
   {
     $token->set_general('MARKER', 'STAGE', 'Final');
     $chain->complete('EXPLAINED');

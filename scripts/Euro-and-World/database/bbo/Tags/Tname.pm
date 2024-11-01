@@ -912,16 +912,26 @@ my @MULTI_WORDS =
   # ----------------------------------------------------
 
   # Asia
-  'APBF Championships',
-  'APBF Youth Championships',
-  'ASEAN Club Championship',
-  'ASEAN Mixed Teams',
-  'ASEAN Open Teams',
-  'Asia Cup',
+  'APBF Girl Teams',
+  'APBF Junior Teams',
+  'APBF Mixed Teams',
+  'APBF Open Teams',
+  'APBF Senior Teams',
+  'APBF Women Teams',
+  'APBF Youngster Teams',
+  'ASEAN Mixed Club Teams',
+  'ASEAN Open Club Pairs',
+  'ASEAN Open Club Teams',
+  'ASEAN Women Club Teams',
+  'ASEAN Youngsters Club Teams',
+  'Asia Open Teams Cup',
+  'Asia Women Teams Cup',
   'Asian University Championship',
-  'Southeast Asian Games',
-  'South Pacific Zone 7 Championship',
-  'SPBF Championship',
+  'Indonesian SEA Open Team Trials',
+  'SEA Open Teams',
+  'South Pacific Open Teams',
+  # 'South Pacific Zone 7 Championship',
+  # 'SPBF Championship',
 
   # Asia Middle East
   'BFAME Championship',
@@ -1073,10 +1083,6 @@ my %MULTI_TYPOS =
   'Anatolian Spring Teams' => ['anatolia spring teams'],
   'Andrzej Wilkosz Memorial Pairs' => ['a_ wilkosz pro memoriam'],
   'Ankara Summer Teams' => ['ankara summer team championship'],
-  'APBF Championships' => ['pabf championship', 'pabf c',
-    'asia pacific bridge federation championship',
-    'asia pacific bridge federation championships',
-    'asia pacific bridge federation champio teams'],
   'ArboNed Team Cup' => ['arbo ned team cup', 'arbo ned teams cup'],
 
   # ARGENTINA -- mapped in detail
@@ -1115,24 +1121,15 @@ my %MULTI_TYPOS =
     'seleccion argentina seniors'],
 
   'Arnhem Interbridge Tournament' => ['interbridge tournament'],
-  'ASEAN Club Championship' => [
-    "aseam bridge club c'ship",
-    "asean bridge club c'ship",
-    'asean bridge club', 
-    'asean bridge club championship', 
-    'asean bridge club championships',
-    'asean bridge club open championships',
-    'asean bridg club championship', 
-    "asean bridge c'ship",
-    'asean bridge cship', 
-    'asean bridge championship',
-    'asean bridge championships',
-    'asean club championships', 
-    'asean clubs championships open teams'],
-  'ASEAN Open Teams' => [
-    'asean bridge finals', 
+  'ASEAN Open Club Pairs' => [
+    'asean open pairs'],
+  'ASEAN Open Club Teams' => [
     'asean bridge open team finals', 
-    'asean open'],
+    'asean clubs championships open teams',
+    'asean open',
+    'asean open teams'],
+  'ASEAN Mixed Club Teams' => [
+    'asean mixed teams'],
   'Asenovgrad Open Teams' => [
     'asenovgrad tournament',
     'national bridge tournament asenovgrad'],
@@ -2929,10 +2926,6 @@ my %MULTI_TYPOS =
   'South American Senior Trials' => [
     'seleccion sudamericano senior'],
 
-  'Southeast Asian Games' => [
-    'sea games', 
-    'south east asian games'],
-
   # SPAIN
   'Spanish Central Zone Teams' => [
     'equipos zonal centro',
@@ -2956,7 +2949,11 @@ my %MULTI_TYPOS =
   'Spanish Senior Trials' => [
     'prueba de seleccion equipos senior'],
 
-  'SPBF Championship' => ['zone 7 championship', 'zone 7 championships'],
+  'South Pacific Open Teams' => [
+    'south pacific zone 7 championship',
+    'spbf championship',
+    'zone 7 championship', 
+    'zone 7 championships'],
   'Spring Foursomes' => [
     'spring 4s', 
     'spring fours', 
@@ -3393,9 +3390,7 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  'APBF Championships' => ['pabfc', 'pabf', 'pabfs'],
   'Argentinian Club Teams' => ['cnia'],
-  'ASEAN Club Championship' => ['abcc'],
   'Australian Autumn National Open Teams' => ['anot'],
   'Australian National Open Teams' => ['not'],
   'Australian National Senior Teams' => ['nst'],
@@ -3453,7 +3448,6 @@ my %SINGLE_TYPOS =
   'Rosenblum Cup' => ['rosenblum'],
   'Ruia Gold Cup' => ['ruia'],
   'Scottish Cup' => ['scottishcupplate'],
-  'Southeast Asian Games' => ['seagames'],
   'Spingold Teams' => ['spingold'],
   'Swedish Elite Series' => ['elitserien'],
   'Prince Takamatsu Cup' => ['takamatsu'],
