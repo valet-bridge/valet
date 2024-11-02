@@ -1,16 +1,24 @@
-Check that Tournament (if it has a Meet) has a Meet time interval
-that fits.
+Make individual files of Tname and Meet
+Make country selectable from command line?
+Be able to run with all countries at the same time
+Should be already map Juniors to U26?
+
+Consistencies:
+- Dates in Meet vs matching tournament
+- Dates of Tournament C's as tight as possible
+- Tournaments and Meets per file match (no extras on either side)
+- Output a spreadsheet, look at org, country, origin, zone
+- All chapters used
+- Every BBONO has a TNAME (or gets one when looked up)
+
+Fields
+- All fields used
+- Move fields up
+- Fields in tournaments exist in e.g. Country, Zone
+
 
 Util.pm 450:
 Need to set the Age from Girls to Juniors, but Token is not passed in
-
-Phases:
-1. Dates run (.lin files matched to tournaments)
-2. Recognized MEET's where needed
-3. Links for major tournaments found
-4. Edited down names of tournaments, merged where needed
-5. No WARN
-6. Filled out major, minor for remaining ones
 
 India:
 Retest India, looking for Winter Nationals
@@ -63,8 +71,6 @@ TITLE_MEET, e.g. 8202
 
 Euro Youth Teams:
 Will parse at some point, but the proper allocation is *hard*
-
-Finish the web lookup
 
 VERBOSE flag in RegCounter, for new countries or datasets.
 

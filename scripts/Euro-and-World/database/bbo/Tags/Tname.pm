@@ -175,6 +175,10 @@ my @MULTI_WORDS =
   'Vilnius Open Pairs',
   'Vilnius Open Teams',
 
+  # BALKAN
+  'Balkan Intercity Cup',
+  'Balkan Open Teams',
+
   # BELARUS
   'Belarusian Open Teams',
 
@@ -520,6 +524,19 @@ my @MULTI_WORDS =
   "Kepri Governor's Cup",
   'PT Timah Invitational Teams',
   'Telkom Indonesia Open',
+
+  # Indonesia
+  'Electric Cup',
+  'FTBC Tanjungpura University',
+  'Menpora-Pertamina Cup',
+  'Pahlawan Cup',
+  'Pesta Sukan',
+  'PLN Cup',
+  'Pertamina Field Tambun Cup',
+  'Rector University of Brawijaya Cup',
+  'Riau Governor Cup',
+  'Sarundajang Cup',
+  'Semen Padang Cup',
 
   # IRELAND
   'Irish Invitational Pairs',
@@ -943,11 +960,6 @@ my @MULTI_WORDS =
 
   # ----------------------------------------------------
 
-  # Balkan
-  'Balkan Championship',
-  'Balkan Intercity Cup',
-  'Balkan Teams',
-
   # Baltic
   'VV Cup',
 
@@ -984,19 +996,6 @@ my @MULTI_WORDS =
   'Wellingdon Swiss Pairs',
   'Willingdon Sports Club Swiss Pairs',
 
-  # Indonesia
-  'Electric Cup',
-  'FTBC Tanjungpura University',
-  'Menpora-Pertamina Cup',
-  'Pahlawan Cup',
-  'Pesta Sukan',
-  'PLN Cup',
-  'Pertamina Field Tambun Cup',
-  'Rector University of Brawijaya Cup',
-  'Riau Governor Cup',
-  'Sarundajang Cup',
-  'Semen Padang Cup',
-
   # Poland
   # https://wyniki.pzbs.pl/2016/baltycki/
   # Should probably be Poland: Grand Prix of Poland Teams, 2016D.
@@ -1023,7 +1022,7 @@ my @MULTI_WORDS =
   'Neighbor Challenge',
   'NYSA Euroregion Nations Cup',
   'Shield of Thoisy',
-  'Stern-Cornell Trophy', # Australia - New Zelsn
+  'Stern-Cornell Trophy', # Australia - New Zealand
   'Yeh Bros Cup',
   'Youth Open Bridge Paris',
   'Paris Youth Open Teams',
@@ -1255,11 +1254,6 @@ my %MULTI_TYPOS =
     'balatonfoldvar teams'],
   'Balikcioglu Open Teams' => [
     'balikcioglu teams championship'],
-  'Balkan Championship' => ['balkan bridge ch', 
-    'balkanbridge championship', 'balkan championships',
-    'balkan bridge championship'],
-  'Balkan Teams' => ['bolkan team championship',
-    'bolkan teams championship', 'bolkan championship'],
   'Baltic Open Teams' => [
     'baltic open teams cup',
     'baltic teams cup'],

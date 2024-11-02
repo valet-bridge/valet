@@ -150,6 +150,9 @@ my %FORM_CORRECTIONS = (
     16529, 16535, 16560, 16561,
     31995, 32028,
     44277, 44287, 44294, 44300, 44305],
+  'BFAME Friendship Pairs' => [
+    28511,
+    39167, 39168, 39169, 39170],
   'Chilean Cup' => [26199, 26218, 26237, 26265],
   'Chilean Open Pairs' => [31502, 31503],
   'Copenhagen Invitational Pairs' => [36915, 36941, 36954],
@@ -500,6 +503,8 @@ my %FORM_CORRECTIONS = (
   'Rajasthan Invitational Pairs' => [
     27959,
     32569, 32582],
+  'Rand Pairs Cup' => [
+    36523],
   'Riga Invitational Pairs' => [
     19565,
     25013,

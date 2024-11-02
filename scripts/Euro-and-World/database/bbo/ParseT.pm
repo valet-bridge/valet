@@ -18,9 +18,10 @@ use EntryT;
 
 # use Tournaments::Africa;
 # use Tournaments::Argentina;
-use Tournaments::Asia;
+# use Tournaments::Asia;
 # use Tournaments::Australia;
 # use Tournaments::Austria;
+use Tournaments::Balkan;
 # use Tournaments::Baltic;
 # use Tournaments::Belarus;
 # use Tournaments::Belgium;
@@ -53,6 +54,7 @@ use Tournaments::Asia;
 # use Tournaments::Japan;
 # use Tournaments::Jordan;
 # use Tournaments::Lebanon;
+# use Tournaments::MiddleEast;
 # use Tournaments::Monaco;
 # use Tournaments::Netherlands;
 # use Tournaments::NewZealand;
@@ -85,9 +87,10 @@ my %DIVISIONS =
   
   # AFRICA => \&Tournaments::Africa::set_links
   # ARGENTINA => \&Tournaments::Argentina::set_links
-  ASIA => \&Tournaments::Asia::set_links
+  # ASIA => \&Tournaments::Asia::set_links
   # AUSTRALIA => \&Tournaments::Australia::set_links
   # AUSTRIA => \&Tournaments::Austria::set_links
+  BALKAN => \&Tournaments::Balkan::set_links
   # BALTIC => \&Tournaments::Baltic::set_links
   # BELARUS => \&Tournaments::Belarus::set_links
   # BELGIUM => \&Tournaments::Belgium::set_links
@@ -120,6 +123,7 @@ my %DIVISIONS =
   # JAPAN => \&Tournaments::Japan::set_links
   # JORDAN => \&Tournaments::Jordan::set_links
   # LEBANON => \&Tournaments::Lebanon::set_links
+  # MIDDLEEAST => \&Tournaments::MiddleEast::set_links
   # MONACO => \&Tournaments::Monaco::set_links
   # NETHERLANDS => \&Tournaments::Netherlands::set_links
   # NEWZEALAND => \&Tournaments::NewZealand::set_links
