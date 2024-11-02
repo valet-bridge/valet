@@ -46,8 +46,8 @@ use EntryT;
 # use Tournaments::HongKong;
 # use Tournaments::Hungary;
 # use Tournaments::Iceland;
-# use Tournaments::India;
-use Tournaments::Indonesia;
+use Tournaments::India;
+# use Tournaments::Indonesia;
 # use Tournaments::Ireland;
 # use Tournaments::Israel;
 # use Tournaments::Italy;
@@ -115,8 +115,8 @@ my %DIVISIONS =
   # HONGKONG => \&Tournaments::HongKong::set_links
   # HUNGARY => \&Tournaments::Hungary::set_links
   # ICELAND => \&Tournaments::Iceland::set_links
-  # INDIA => \&Tournaments::India::set_links
-  INDONESIA => \&Tournaments::Indonesia::set_links
+  INDIA => \&Tournaments::India::set_links
+  # INDONESIA => \&Tournaments::Indonesia::set_links
   # IRELAND => \&Tournaments::Ireland::set_links
   # ISRAEL => \&Tournaments::Israel::set_links
   # ITALY => \&Tournaments::Italy::set_links

@@ -449,8 +449,9 @@ my @MULTI_WORDS =
   'All India Open Pairs',
   'All India Shree Cement',
   'All India UTI Bank Masters Championship',
-  'Bhabha Atomic Research Centre Open',
+  'Ashok Kapur Memorial Swiss Pairs',
   'B L Rao Memorial Open',
+  'Bhabha Atomic Research Centre Open',
   'Dainik Navjyoti All India Inter-State',
   'Delhi Gymkhana Club Open Pairs',
   'Delhi Gymkhana Club Open Teams',
@@ -464,10 +465,13 @@ my @MULTI_WORDS =
   'Jaya Jain Memorial',
   'Justice J M Lal All India Open Pairs',
   'Justice J M Lal All India Open Teams',
+  'Kalani Trophy',
   'Karnataka State Teams',
+  'Karnik-Vaidya Open',
   'Krishnapatnam Port National Masters',
-  'Lalit Mohanka Memorial',
   'L C Sunil Rajendra Memorial',
+  'Lalit Mohanka Memorial',
+  'Lokmanya Jubilee',
   'Madras Gymkhana Club Open',
   'Maharaja Yeshwantrao Holkar National Pairs',
   'Maharaja Yeshwantrao Holkar National Teams',
@@ -477,23 +481,33 @@ my @MULTI_WORDS =
   'Mohan Sicka Pairs',
   'Mohanlal Bhartia Memorial Grand Prix',
   'Mohanlal Bhartia Memorial Pairs',
+  'Nandu Oke Memorial IAF Swiss Pairs',
+  'Narain Bhojwani Memorial',
+  'Otters Inter-Club Teams',
+  'PSN Sarma Centenary Memorial Pairs',
+  'PSN Sarma Centenary Memorial Teams',
+  'PYC Hindu Gymkhana Royale',
   'Poddar National Masters',
   'Prashant Desai Memorial',
-  'PYC Hindu Gymkhana Royale',
-  'Rai Bahadur Modi Memorial All India Open',
-  'Rajasthan Invitational Pairs',
-  'Rajasthan Invitational Teams',
   'R N Bagla Memorial Pairs',
   'R R Gupta Memorial Championship',
   'R Ratnam Memorial',
+  'Rai Bahadur Modi Memorial All India Open',
+  'Rajasthan Invitational Pairs',
+  'Rajasthan Invitational Teams',
   'Ruia Gold Cup',
   'Ruia Silver Cup',
   'Shree Keni Trophy',
+  'Summer Monsoon League',
+  'TATA Open',
+  'Thane Champion of Champions Teams',
   'Tolani Gold Trophy',
   'Tolani Grand Prix',
   'Tolani Silver Cup',
   'Uttar Pradesh State Pairs',
   'Uttar Pradesh State Teams',
+  'Willingdon Sports Club Swiss Pairs',
+  'WCG Open',
 
   # INDONESIA
   'Electric Cup',
@@ -973,27 +987,8 @@ my @MULTI_WORDS =
   # Europe: Same as European Champions' Cup
   "Champions' Cup",
 
-  # India
-  'Ashok Kapur Memorial Swiss Pairs',
-  'Bagla Pairs Royale',
-  'Golden Jubilee',
+  # Indonesia
   'IBWI Cup',
-  'Kalani Trophy',
-  'Karnik-Vaidya Open',
-  'Lokmanya Jubilee',
-  'Nandu Oke Memorial IAF Swiss Pairs',
-  'Narain Bhojwani Memorial',
-  'Otters Inter-Club Teams',
-  'PRBA State Level Open',
-  'PSN Sarma Centenary Memorial',
-  'Samadhan Summer League',
-  'Summer Monsoon League',
-  'TATA Open',
-  'Thane Champion of Champions Teams',
-  'Videocon WCG Open',
-  'WCG Open',
-  'Wellingdon Swiss Pairs',
-  'Willingdon Sports Club Swiss Pairs',
 
   # Poland
   # https://wyniki.pzbs.pl/2016/baltycki/
@@ -1037,7 +1032,6 @@ my @MULTI_WORDS =
   # ----------------------------------------------------
 
   'Spring Nationals', # Many probably Australian
-  'Transnational Open Teams', # Try to make unused
 );
 
 my %MULTI_TYPOS =
@@ -1244,8 +1238,6 @@ my %MULTI_TYPOS =
 
   ### BBB
 
-  'Bagla Pairs Royale' => ['r_n_bagla pairs royale',
-    'r_n_bagla memorial pairs royale', 'r_nbagla pairs royale'],
   'Balaton Invitational Teams' => [
     'balaton international teams',
     'balaton invitation teams'],
@@ -2294,7 +2286,11 @@ my %MULTI_TYPOS =
   'Maharashtra State Teams' => [
     'mitravihar centenary state level',
     'mitravihar club centenary state level',
-    'mitravihar nasik centenary state level'],
+    'mitravihar nasik centenary state level',
+    'prba open state level',
+    'prba statelevel',
+    'prba state level open',
+    'prba state level'], 
   'Marit Sveaas Open Pairs' => [
     'marit sveaas international bridge tournament',
     'marit sveaas international  bridge tournament',
@@ -2700,11 +2696,7 @@ my %MULTI_TYPOS =
     'northern regional open teams',
     'northern regional teams open'],
 
-  'PRBA State Level Open' => ['prba open state level',
-    'prba state level', 'prba statelevel'],
   'PYC Hindu Gymkhana Royale' => ['pyc royale'],
-  'PSN Sarma Centenary Memorial' => ['psn  sarma centenary memorial',
-    'psn sarma memorial'],
   'PT Timah Invitational Teams' => [
     'invitasi pt timah',
     'invitasi pt_ timah',
@@ -2728,7 +2720,12 @@ my %MULTI_TYPOS =
 
   ### RRR
 
-  'R N Bagla Memorial Pairs' => ['rn bagla menorial pairs'],
+  'R N Bagla Memorial Pairs' => [
+    'bagla pairs royale',
+    'r_n_bagla memorial pairs royale', 
+    'r_n_bagla pairs royale',
+    'r_nbagla pairs royale',
+    'rn bagla menorial pairs'],
   'R R Gupta Memorial Championship' => [
     'r r gupta memorial bridge tournament'],
   'R Ratnam Memorial' => ['r ratnam memoral championship'],
@@ -2820,7 +2817,6 @@ my %MULTI_TYPOS =
     "salvador assael imp's across the field"],
   'Salvador Assael Pro-Am Pairs' => [
     'salvador assael pro-am'],
-  'Samadhan Summer League' => ['samadhan bridge league'],
   'Sao Paulo Cup' => [
     's o paulo cup', 
     'sao paulo state cup', 
@@ -2948,8 +2944,11 @@ my %MULTI_TYPOS =
   'Stara Zagora Open Teams' => ['vito teams'],
   "Sternberg Women's BAM Teams" => ['marsha may sternberg bam'],
   'Stockholm Teams' => ['stockholm teams cs', 'stockholms teams'],
-  'Summer Monsoon League' => ['summer monsoon', 'summer monsoon leahue'],
-
+  'Summer Monsoon League' => [
+    'samadhan summer league',
+    'samadhan bridge league',
+    'summer monsoon', 
+    'summer monsoon leahue'],
   # SWEDEN
   'Swedish District Teams' => [
     'swdish district',
@@ -3286,7 +3285,6 @@ my %MULTI_TYPOS =
   'Victorian Senior Trials' => ['vic seniors trials'],
   'Victorian Women Trials' => ['vic women trials'],
 
-  'Videocon WCG Open' => ['videcon wcg open'],
 
   ### WWW
 
@@ -3301,9 +3299,10 @@ my %MULTI_TYPOS =
     'watermark bridge classic',
     'watermark teams',
     'willoughby bridge classic'],
-  'WCG Open' => ['wcg annual'],
-  'Wellingdon Swiss Pairs' => ['wsc open swiss pairs championship',
-    'wsc open swisspairs championship', 'wsc swiss open pairs'],
+  'WCG Open' => [
+    'videocon wcg Open', 
+    'videcon wcg open',
+    'wcg annual'],
   'Western Mediterranean Club Teams' => [
     'western mediterranean clubs team championship'],
   'White House International' => [
@@ -3323,11 +3322,15 @@ my %MULTI_TYPOS =
   'Welsh Open Trials' => ['welsh open trial', 'welsh trials',
     'welsh trial'],
   'Willingdon Sports Club Swiss Pairs' => [
+    'wellingdon swiss pairs',
     'willingdon sports club open swiss pairs',
     'willingdon sports club open',
     'willingdon sports club  open',
     'willingdon sports club  open swiss pairs',
-    'willingdon sports club  swiss pairs'],
+    'willingdon sports club  swiss pairs',
+    'wsc open swiss pairs championship',
+    'wsc open swisspairs championship', 
+    'wsc swiss open pairs'],
   'Willy Brown Memorial Pairs' => [
     'willy brown memorial'],
 

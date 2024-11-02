@@ -490,7 +490,7 @@ my %MEETS_INDIA =
         DATE_START => '2012-12-16',
         DATE_END => '2012-12-22'
       },
-      '2014' =>
+      '2013' =>
       {
         ORDINAL => 55,
         CITY => 'Ahmedabad',
@@ -1165,7 +1165,7 @@ my %TOURNAMENTS_INDIA =
     # Bit of a synthetic tournament
     EDITIONS =>
     {
-      '2013' =>
+      '2013A' =>
       {
         MEET => 'Indian Summer Nationals',
         CHAPTERS =>
@@ -1177,6 +1177,21 @@ my %TOURNAMENTS_INDIA =
             major => 'SESSION',
             DATE_START => '2013-02-20',
             DATE_END => '2013-02-20'
+          } 
+        }
+      },
+      '2013B' =>
+      {
+        MEET => 'Indian Winter Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2013-12-23',
+            DATE_END => '2013-12-23'
           } 
         }
       },
@@ -1305,6 +1320,78 @@ my %TOURNAMENTS_INDIA =
             major => 'SEGMENT',
             DATE_START => '2007-04-11',
             DATE_END => '2007-04-11'
+          } 
+        }
+      },
+    }
+  },
+
+  'Ashok Kapur Memorial Swiss Pairs',
+  {
+    ORGANIZATION => 'BFI',
+    COUNTRY => 'India',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Pairs',
+    MOVEMENT => 'Swiss',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            major => 'ROUND',
+            DATE_START => '2012-11-24',
+            DATE_END => '2012-11-25'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            major => 'ROUND',
+            DATE_START => '2013-11-23',
+            DATE_END => '2013-11-24'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'SESSION',
+            DATE_START => '2014-11-22',
+            DATE_END => '2014-11-23'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'ROUND',
+            DATE_START => '2015-11-28',
+            DATE_END => '2015-11-29'
           } 
         }
       },
@@ -2529,6 +2616,161 @@ my %TOURNAMENTS_INDIA =
     }
   },
 
+  'Kalani Trophy',
+  {
+    ORGANIZATION => 'BFI',
+    COUNTRY => 'India',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-01-08',
+            DATE_END => '2010-01-08'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-01-04',
+            DATE_END => '2011-01-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-01-07',
+            DATE_END => '2011-01-07'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-01-08',
+            DATE_END => '2011-01-08'
+          },
+          'C3' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-01-09',
+            DATE_END => '2011-01-09'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-01-06',
+            DATE_END => '2012-01-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-01-06',
+            DATE_END => '2012-01-07'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-01-07',
+            DATE_END => '2012-01-08'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-01-09',
+            DATE_END => '2015-01-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-01-10',
+            DATE_END => '2015-01-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-01-10',
+            DATE_END => '2015-01-11'
+          } 
+        }
+      },
+    }
+  },
+
+  'Karnik-Vaidya Open',
+  {
+    ORGANIZATION => 'BFI',
+    COUNTRY => 'India',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-02-06',
+            DATE_END => '2011-02-06'
+          } 
+        }
+      },
+    }
+  },
+
   'Krishnapatnam Port National Masters' =>
   {
     ORGANIZATION => 'BFI',
@@ -2774,6 +3016,36 @@ my %TOURNAMENTS_INDIA =
             major => 'SEGMENT',
             DATE_START => '2015-02-22',
             DATE_END => '2015-02-22'
+          } 
+        }
+      },
+    }
+  },
+
+  'Lokmanya Jubilee',
+  {
+    ORGANIZATION => 'BFI',
+    COUNTRY => 'India',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-09-26',
+            DATE_END => '2010-09-26'
           } 
         }
       },
@@ -3088,7 +3360,7 @@ my %TOURNAMENTS_INDIA =
 
     EDITIONS =>
     {
-      '2012' =>
+      '2012A' =>
       {
         MEET => 'Maharashtra State Championship',
         CHAPTERS =>
@@ -3117,7 +3389,14 @@ my %TOURNAMENTS_INDIA =
             DATE_START => '2012-02-26',
             DATE_END => '2012-02-26'
           },
-          'C3' => 
+        }
+      },
+      '2012B' =>
+      {
+        MEET => 'Maharashtra State Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
           {
             # Not sure
             YEAR => 2012,
@@ -3127,7 +3406,7 @@ my %TOURNAMENTS_INDIA =
             DATE_START => '2012-10-27',
             DATE_END => '2012-10-28'
           },
-          'C4' => 
+          'C1' => 
           {
             # Not sure
             YEAR => 2012,
@@ -3137,7 +3416,7 @@ my %TOURNAMENTS_INDIA =
             DATE_START => '2012-10-27',
             DATE_END => '2012-10-27'
           },
-          'C5' => 
+          'C2' => 
           {
             # Not sure
             YEAR => 2012,
@@ -3147,7 +3426,7 @@ my %TOURNAMENTS_INDIA =
             DATE_START => '2012-10-27',
             DATE_END => '2012-10-28'
           },
-          'C6' => 
+          'C3' => 
           {
             # Not sure
             YEAR => 2012,
@@ -3159,7 +3438,7 @@ my %TOURNAMENTS_INDIA =
           } 
         }
       },
-      '2014' =>
+      '2014A' =>
       {
         MEET => 'Maharashtra State Championship',
         CHAPTERS =>
@@ -3182,7 +3461,23 @@ my %TOURNAMENTS_INDIA =
           } 
         }
       },
-      '2015' =>
+      '2014B' =>
+      {
+        # Not sure
+        CITY => 'Pune',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2014-06-01',
+            DATE_END => '2014-06-01'
+          },
+        }
+      },
+      '2015A' =>
       {
         CHAPTERS =>
         {
@@ -3193,6 +3488,21 @@ my %TOURNAMENTS_INDIA =
             major => 'SEGMENT',
             DATE_START => '2015-05-02',
             DATE_END => '2015-05-02'
+          } 
+        }
+      },
+      '2015B' =>
+      {
+        # Not sure
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2015-05-24',
+            DATE_END => '2015-05-24'
           } 
         }
       },
@@ -3557,6 +3867,146 @@ my %TOURNAMENTS_INDIA =
     }
   },
 
+  'Nandu Oke Memorial IAF Swiss Pairs',
+  {
+    ORGANIZATION => 'BFI',
+    COUNTRY => 'India',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    MOVEMENT => 'Swiss',
+    SCORING => 'IAF',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'ROUND',
+            DATE_START => '2014-09-19',
+            DATE_END => '2014-09-21'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2016-05-13',
+            DATE_END => '2016-05-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-05-14',
+            DATE_END => '2016-05-15'
+          } 
+        }
+      },
+    }
+  },
+
+  'Narain Bhojwani Memorial',
+  {
+    ORGANIZATION => 'BFI',
+    COUNTRY => 'India',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-01-30',
+            DATE_END => '2010-01-31'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-01-28',
+            DATE_END => '2012-01-29'
+          } 
+        }
+      },
+    }
+  },
+
+  'Otters Inter-Club Teams',
+  {
+    ORGANIZATION => 'BFI',
+    COUNTRY => 'India',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-09-05',
+            DATE_END => '2010-09-05'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2011-01-22',
+            DATE_END => '2011-01-23'
+          } 
+        }
+      },
+    }
+  },
+
   'Poddar National Masters' =>
   {
     ORGANIZATION => 'BFI',
@@ -3755,6 +4205,67 @@ my %TOURNAMENTS_INDIA =
             major => 'ROUND',
             DATE_START => '2016-03-27',
             DATE_END => '2016-03-27'
+          } 
+        }
+      },
+    }
+  },
+
+  'PSN Sarma Centenary Memorial Pairs',
+  {
+    ORGANIZATION => 'BFI',
+    COUNTRY => 'India',
+    CITY => 'Chennai',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            DATE_START => '2015-02-07',
+            DATE_END => '2015-02-07'
+          } 
+        }
+      },
+    }
+  },
+
+  'PSN Sarma Centenary Memorial Teams',
+  {
+    ORGANIZATION => 'BFI',
+    COUNTRY => 'India',
+    CITY => 'Chennai',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2015-02-08',
+            DATE_END => '2015-02-08'
           } 
         }
       },
@@ -3972,7 +4483,20 @@ my %TOURNAMENTS_INDIA =
             YEAR => 2011,
             major => 'ROUND',
             DATE_START => '2011-08-26',
-            DATE_END => '2011-08-26'
+            DATE_END => '2011-08-28'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            major => 'ROUND',
+            DATE_START => '2012-10-19',
+            DATE_END => '2012-10-21'
           } 
         }
       },
@@ -4333,13 +4857,37 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Indian Winter Nationals',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
             STAGE => 'Pre-Quarterfinal',
             major => 'SEGMENT',
             DATE_START => '2013-12-20',
             DATE_END => '2013-12-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-12-21',
+            DATE_END => '2013-12-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-12-22',
+            DATE_END => '2013-12-22'
+          },
+          'C3' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-12-23',
+            DATE_END => '2013-12-23'
           } 
         }
       },
@@ -4565,6 +5113,236 @@ my %TOURNAMENTS_INDIA =
     }
   },
 
+  'Summer Monsoon League',
+  {
+    ORGANIZATION => 'MBA',
+    COUNTRY => 'India',
+    REGION => 'Maharashtra',
+    ORIGIN => 'Regional',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2011-07-17',
+            DATE_END => '2011-07-18'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            major => 'ROUND',
+            DATE_START => '2012-08-11',
+            DATE_END => '2012-08-12'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2013-07-06',
+            DATE_END => '2013-07-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2013-07-07',
+            DATE_END => '2013-07-07'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2014-06-21',
+            DATE_END => '2014-06-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-06-22',
+            DATE_END => '2014-06-22'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2015-07-04',
+            DATE_END => '2015-07-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2015-07-05',
+            DATE_END => '2015-07-05'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2016-06-18',
+            DATE_END => '2016-06-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2016-06-19',
+            DATE_END => '2016-06-19'
+          } 
+        }
+      },
+    }
+  },
+
+  'TATA Open',
+  {
+    ORGANIZATION => 'BFI',
+    COUNTRY => 'India',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-01-17',
+            DATE_END => '2011-01-17'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-01-15',
+            DATE_END => '2012-01-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-01-16',
+            DATE_END => '2012-01-16'
+          } 
+        }
+      },
+    }
+  },
+
+  'Thane Champion of Champions Teams',
+  {
+    ORGANIZATION => 'BFI',
+    COUNTRY => 'India',
+    CITY => 'Mulund',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-02-06',
+            DATE_END => '2011-02-06'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'ROUND',
+            DATE_START => '2014-11-09',
+            DATE_END => '2014-11-09'
+          } 
+        }
+      },
+    }
+  },
+
   'Tolani Gold Trophy' =>
   {
     FORM => 'Teams',
@@ -4602,13 +5380,29 @@ my %TOURNAMENTS_INDIA =
         MEET => 'Indian Summer Nationals',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
             STAGE => 'Quarterfinal',
             major => 'SEGMENT',
             DATE_START => '2012-06-19',
             DATE_END => '2012-06-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-06-20',
+            DATE_END => '2012-06-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-06-21',
+            DATE_END => '2012-06-21'
           } 
         }
       },
@@ -4978,6 +5772,101 @@ my %TOURNAMENTS_INDIA =
             major => 'ROUND',
             DATE_START => '2012-08-18',
             DATE_END => '2012-08-18'
+          } 
+        }
+      },
+    }
+  },
+
+  'Willingdon Sports Club Swiss Pairs',
+  {
+    ORGANIZATION => 'BFI',
+    COUNTRY => 'India',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Pairs',
+    MOVEMENT => 'Swiss',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'ROUND',
+            DATE_START => '2015-01-23',
+            DATE_END => '2015-01-25'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND',
+            DATE_START => '2016-01-24',
+            DATE_END => '2016-01-26'
+          } 
+        }
+      },
+    }
+  },
+
+  'WCG Open',
+  {
+    ORGANIZATION => 'BFI',
+    COUNTRY => 'India',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2007' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-10-22',
+            DATE_END => '2007-10-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-10-22',
+            DATE_END => '2007-10-22'
+          } 
+        }
+      },
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-10-25',
+            DATE_END => '2009-10-25'
           } 
         }
       },
