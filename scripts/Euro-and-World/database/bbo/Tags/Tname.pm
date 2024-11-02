@@ -496,6 +496,8 @@ my @MULTI_WORDS =
   'Uttar Pradesh State Teams',
 
   # INDONESIA
+  'Electric Cup',
+  'FTBC Tanjungpura University',
   'Gabrial UI Bastaman Cup',
   'Geologi Cup',
   'Indonesian Inter-City Championship',
@@ -522,21 +524,15 @@ my @MULTI_WORDS =
   'Indonesian Women Teams',
   'Indonesian Women Trials',
   "Kepri Governor's Cup",
-  'PT Timah Invitational Teams',
-  'Telkom Indonesia Open',
-
-  # Indonesia
-  'Electric Cup',
-  'FTBC Tanjungpura University',
   'Menpora-Pertamina Cup',
   'Pahlawan Cup',
-  'Pesta Sukan',
-  'PLN Cup',
   'Pertamina Field Tambun Cup',
+  'PLN Cup',
+  'PT Timah Invitational Teams',
   'Rector University of Brawijaya Cup',
-  'Riau Governor Cup',
   'Sarundajang Cup',
   'Semen Padang Cup',
+  'Telkom Indonesia Open',
 
   # IRELAND
   'Irish Invitational Pairs',
@@ -959,6 +955,9 @@ my @MULTI_WORDS =
   'WMG Women Teams',
 
   # ----------------------------------------------------
+
+  # Singapore
+  'Pesta Sukan',
 
   # Baltic
   'VV Cup',
@@ -2225,7 +2224,8 @@ my %MULTI_TYPOS =
     'kepri governor cup', 
     'kepri governors cup', 
     'kepri international tournament',
-    'kepri international bridge tournament'],
+    'kepri international bridge tournament',
+    'riau governor cup'],
   'Krakow Spring Teams' => [
     'krakowska wiosna',
     'spring of cracow'],

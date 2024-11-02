@@ -243,6 +243,125 @@ my %MEETS_INDONESIA =
 
 my %TOURNAMENTS_INDONESIA =
 (
+  'Electric Cup' => 
+  {
+    ORGANIZATION => 'GABSI',
+    COUNTRY => 'Indonesia',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2007' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2007-11-25',
+            DATE_END => '2007-11-25'
+          },
+        }
+      },
+    }
+  },
+
+  'FTBC Tanjungpura University' => 
+  {
+    ORGANIZATION => 'GABSI',
+    COUNTRY => 'Indonesia',
+    CITY => 'Pontianak',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U31',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2015-03-13',
+            DATE_END => '2015-03-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Quarterfinal',
+            DATE_START => '2015-03-13',
+            DATE_END => '2015-03-14'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-03-14',
+            DATE_END => '2015-03-14'
+          },
+          'C3' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-03-15',
+            DATE_END => '2015-03-15'
+          },
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            major => 'SESSION',
+            DATE_START => '2016-03-16',
+            DATE_END => '2016-03-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2016-03-18',
+            DATE_END => '2016-03-19'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            DATE_START => '2016-03-19',
+            DATE_END => '2016-03-19'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            DATE_START => '2016-03-19',
+            DATE_END => '2016-03-19'
+          },
+        }
+      },
+    }
+  },
+
   'Gabrial UI Bastaman Cup' =>
   {
     ORGANIZATION => 'GABSI',
@@ -2442,12 +2561,20 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2007,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2007-05-15',
+            DATE_END => '2007-05-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2007-08-12',
             DATE_END => '2007-08-12'
           },
-          'C1' => 
+          'C2' => 
           {
             YEAR => 2007,
             MOVEMENT => 'Swiss',
@@ -2741,6 +2868,208 @@ my %TOURNAMENTS_INDONESIA =
     }
   },
 
+  'Menpora-Pertamina Cup' => 
+  {
+    ORGANIZATION => 'GABSI',
+    COUNTRY => 'Indonesia',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2015-10-23',
+            DATE_END => '2015-10-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2015-10-24',
+            DATE_END => '2015-10-25'
+          },
+        }
+      },
+    }
+  },
+
+  'Pahlawan Cup' => 
+  {
+    ORGANIZATION => 'GABSI',
+    COUNTRY => 'Indonesia',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2014-12-14',
+            DATE_END => '2014-12-14'
+          },
+        }
+      },
+    }
+  },
+
+  'Pertamina Field Tambun Cup' => 
+  {
+    ORGANIZATION => 'GABSI',
+    COUNTRY => 'Indonesia',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2010-12-03',
+            DATE_END => '2010-12-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-12-04',
+            DATE_END => '2010-12-05'
+          },
+        }
+      },
+      '2012' =>
+      {
+        # https://bridge.web.id/2012/pertamina/
+        CITY => 'Bekasi',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2012-07-14',
+            DATE_END => '2012-07-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2012-07-14',
+            DATE_END => '2012-07-15'
+          },
+        }
+      },
+    }
+  },
+
+  'PLN Cup' => 
+  {
+    ORGANIZATION => 'GABSI',
+    COUNTRY => 'Indonesia',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        # https://bridge.web.id/2012/pln/
+        CITY => 'Jakarta',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2012-10-18',
+            DATE_END => '2012-10-21'
+          },
+        }
+      },
+      '2013' =>
+      {
+        # https://bridge.web.id/2013/pln/
+        CITY => 'Jakarta',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2013-10-18',
+            DATE_END => '2013-10-20'
+          },
+        }
+      },
+      '2015' =>
+      {
+        # https://bridge.web.id/2015/pln/
+        CITY => 'Jakarta',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2015-10-16',
+            DATE_END => '2015-10-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2015-10-17',
+            DATE_END => '2015-10-18'
+          },
+        }
+      },
+    }
+  },
+
   'PT Timah Invitational Teams' =>
   {
     ORGANIZATION => 'GABSI',
@@ -2780,6 +3109,155 @@ my %TOURNAMENTS_INDONESIA =
             DATE_START => '2011-09-15',
             DATE_END => '2011-09-18'
           } 
+        }
+      },
+    }
+  },
+
+  'Rector University of Brawijaya Cup' => 
+  {
+    ORGANIZATION => 'GABSI',
+    COUNTRY => 'Indonesia',
+    CITY => 'Malang',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Qualifying',
+            major => 'SESSION',
+            DATE_START => '2013-06-08',
+            DATE_END => '2013-06-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2013-06-09',
+            DATE_END => '2013-06-09'
+          },
+        }
+      },
+    }
+  },
+
+  'Sarundajang Cup' => 
+  {
+    ORGANIZATION => 'GABSI',
+    COUNTRY => 'Indonesia',
+    ORIGIN => 'International',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        # Could be another similar tournament?
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2015-01-13',
+            DATE_END => '2015-01-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2015-01-14',
+            DATE_END => '2015-01-15'
+          },
+        }
+      },
+      '2015' =>
+      {
+        # https://bridge.web.id/2015/sarundajang/
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2015-08-26',
+            DATE_END => '2015-08-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Knock-out',
+            major => 'MATCH',
+            minor => 'SEGMENT',
+            DATE_START => '2015-08-29',
+            DATE_END => '2015-08-30'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-31',
+            DATE_END => '2015-08-31'
+          },
+        }
+      },
+    }
+  },
+
+  'Semen Padang Cup' => 
+  {
+    ORGANIZATION => 'GABSI',
+    COUNTRY => 'Indonesia',
+    CITY => 'Padang',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2012-07-05',
+            DATE_END => '2012-07-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-07-07',
+            DATE_END => '2012-07-08'
+          },
         }
       },
     }

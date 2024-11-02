@@ -12,6 +12,9 @@ our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
 # https://main.bridge.co.il/results/archive/12
+#
+# https://www.bridgeredsea.com/previous-results
+# may include Rand Cup, Four Nations Cup
 
 my %MEETS_ISRAEL =
 (
