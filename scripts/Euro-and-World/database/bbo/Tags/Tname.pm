@@ -105,6 +105,13 @@ my @MULTI_WORDS =
   'SEA Open Teams',
   'South Pacific Open Teams',
 
+  # ASIA/MIDDLE EAST
+  'BFAME Friendship Pairs',
+  'BFAME Open Teams',
+  'BFAME Senior Teams',
+  'BFAME Women Teams',
+  'Pan Arab Inter-Club Championship',
+
   # AUSTRALIA
   'Altman Swiss Pairs',
   'Australian Autumn National Open Teams',
@@ -594,6 +601,7 @@ my @MULTI_WORDS =
   'White House Top 12',
 
   # NEW ZEALAND
+  'Centre Island Open Teams',
   'New Zealand Inter-Provincial Open Teams',
   'New Zealand Open Teams',
   'New Zealand Open Trials',
@@ -935,10 +943,6 @@ my @MULTI_WORDS =
 
   # ----------------------------------------------------
 
-  # Asia Middle East
-  'BFAME Friendship Pairs',
-  'Pan Arab Inter-Club Championship',
-
   # Balkan
   'Balkan Championship',
   'Balkan Intercity Cup',
@@ -992,9 +996,6 @@ my @MULTI_WORDS =
   'Riau Governor Cup',
   'Sarundajang Cup',
   'Semen Padang Cup',
-
-  # New Zealand
-  'Centre Island Teams',
 
   # Poland
   # https://wyniki.pzbs.pl/2016/baltycki/
@@ -1379,7 +1380,7 @@ my %MULTI_TYPOS =
   'Central American Zonal Championships' => ["cacbf zonal ch'ships",
     'cacbf zonal championship', "cacbf zonal cha'ships",
     "cacbf zonal c'ships", 'cac final'],
-  'Centre Island Teams' => ['ci teams'],
+  'Centre Island Open Teams' => ['ci teams'],
   "Chairman's Cup" => ['chairmans cup', "chariman's cup",
     "chairmans's cup", "swedish chairman's cup", 'chairmans cup'],
   "Champions' Cup" => [
@@ -2372,9 +2373,6 @@ my %MULTI_TYPOS =
     'nz interprovincials',
     'new zealand inter provincials'],
   'New Zealand Open Teams' => ['nz teams'],
-  'New Zealand Open Trials' => [
-    'new zealand trials',
-    'nz trials'],
 
   'NN Cup' => [
     'goulyash by e. gladysh',

@@ -25,6 +25,7 @@ my %MULTI_TYPOS =
 (
   ABA => ['argentinian bridge association'],
   ABB => ['bolivian bridge association'],
+  ABL => ['arab bridge league'],
   ACBL => ['american contract bridge league'],
   AEB => ['asociación española de bridge'],
   AfBF => ['african bridge federation'],

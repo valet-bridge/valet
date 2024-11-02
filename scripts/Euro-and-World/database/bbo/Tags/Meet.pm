@@ -110,6 +110,7 @@ my @MULTI_WORDS =
   'Monaco International Festival',
   'Mondial de Deauville',
   'Moscow Sunday Times',
+  'New Zealand Trials',
   'Nordic Junior Championship',
   'Nordic Team Championship',
   'North American Bridge Championship',
@@ -409,6 +410,8 @@ my %MULTI_TYPOS =
     'tournoi des champions barriere'],
   'Moscow Sunday Times' => [
     'russian sunday times'],
+  'New Zealand Trials' => [
+    'nz trials'],
   'Nordic Junior Championship' => [
     'nordic championship for juniors',
     'nordic junior championships'],

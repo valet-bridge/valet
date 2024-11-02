@@ -122,8 +122,7 @@ my @LOCAL_SUBS =
   { START => 40062, END => 40187, TEXT => 'BAM', CORR => 'Patton' },
 
   # Salvador Assael
-  { START => 28516, END => 28590, TEXT => 'MP', CORR => 'IAF' },
-  { START => 39328, END => 39377, TEXT => 'MP', CORR => 'IAF' },
+  # { START => 39328, END => 39377, TEXT => 'MP', CORR => 'IAF' },
  
 );
 

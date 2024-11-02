@@ -74,11 +74,68 @@ my %MEETS_NEWZEALAND =
         DATE_END => '2023-09-30'
       }
     }
-  }
+  },
+
+  'New Zealand Trials' =>
+  {
+    ORGANIZATION => 'NZB',
+    COUNTRY => 'New Zealand',
+    ORIGIN => 'National',
+    ZONE => 'South Pacific',
+
+    EDITIONS => 
+    {
+      '2009' =>
+      {
+        YEAR => 2009,
+        DATE_START => '2009-04-09',
+        DATE_END => '2009-04-11'
+      },
+    }
+  },
 );
 
 my %TOURNAMENTS_NEWZEALAND =
 (
+  'Centre Island Open Teams' => 
+  {
+    ORGANIZATION => 'NZB',
+    COUNTRY => 'New Zealand',
+    ORIGIN => 'Regional',
+    ZONE => 'South Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2007' =>
+      {
+        CITY => 'Wellington',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2007-03-27',
+            DATE_END => '2007-03-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-03-27',
+            DATE_END => '2007-03-27'
+          } 
+        }
+      }
+    }
+  },
+
   'New Zealand Inter-Provincial Open Teams' => 
   {
     ORGANIZATION => 'NZB',
@@ -518,6 +575,7 @@ my %TOURNAMENTS_NEWZEALAND =
     {
       '2009' =>
       {
+        MEET => 'New Zealand Trials',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -547,13 +605,20 @@ my %TOURNAMENTS_NEWZEALAND =
     {
       '2009' =>
       {
+        MEET => 'New Zealand Trials',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
             DATE_START => '2009-03-23',
             DATE_END => '2009-03-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-04-09',
+            DATE_END => '2009-04-10'
           } 
         }
       }
