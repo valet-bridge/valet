@@ -749,6 +749,7 @@ my @MULTI_WORDS =
   'Zulawski Cup',
 
   # PORTUGAL
+  'FullBridge International Teams',
   'Madeira Open Teams',
   'Portuguese Grand Prix',
   'Portuguese IMP Pairs',
@@ -995,14 +996,6 @@ my @MULTI_WORDS =
 
   # Indonesia
   'IBWI Cup',
-
-  # Poland
-  # https://wyniki.pzbs.pl/2016/baltycki/
-  # Should probably be Poland: Grand Prix of Poland Teams, 2016D.
-  'Baltic Bowl',
-
-  # Portugal?
-  'FullBridge International Teams',
 
   # Supra
   'Bermuda Triangle Cup',

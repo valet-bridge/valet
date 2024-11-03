@@ -29,7 +29,7 @@ use EntryT;
 # use Tournaments::Brazil;
 # use Tournaments::Bulgaria;
 # use Tournaments::Canada;
-use Tournaments::CentralAmerica;
+# use Tournaments::CentralAmerica;
 # use Tournaments::Chile;
 # use Tournaments::China;
 # use Tournaments::Czech;
@@ -62,7 +62,7 @@ use Tournaments::CentralAmerica;
 # use Tournaments::Nordic;
 # use Tournaments::Norway;
 # use Tournaments::Pakistan;
-# use Tournaments::Poland;
+use Tournaments::Poland;
 # use Tournaments::Portugal;
 # use Tournaments::Romania;
 # use Tournaments::Russia;
@@ -99,7 +99,7 @@ my %DIVISIONS =
   # BRAZIL => \&Tournaments::Brazil::set_links
   # BULGARIA => \&Tournaments::Bulgaria::set_links
   # CANADA => \&Tournaments::Canada::set_links
-  CENTRALAMERICA => \&Tournaments::CentralAmerica::set_links
+  # CENTRALAMERICA => \&Tournaments::CentralAmerica::set_links
   # CHILE => \&Tournaments::Chile::set_links
   # CHINA => \&Tournaments::China::set_links
   # CZECH => \&Tournaments::Czech::set_links
@@ -132,7 +132,7 @@ my %DIVISIONS =
   # NORDIC => \&Tournaments::Nordic::set_links
   # NORWAY => \&Tournaments::Norway::set_links
   # PAKISTAN => \&Tournaments::Pakistan::set_links
-  # POLAND => \&Tournaments::Poland::set_links
+  POLAND => \&Tournaments::Poland::set_links
   # PORTUGAL => \&Tournaments::Portugal::set_links
   # ROMANIA => \&Tournaments::Romania::set_links
   # RUSSIA => \&Tournaments::Russia::set_links

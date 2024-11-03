@@ -239,7 +239,9 @@ my %MULTI_TYPOS =
     'bolkan championship',
     'bolkan team championship',
     'bolkan teams championship'],
-  'Baltic Congress' => ['baltic bridge congress',
+  'Baltic Congress' => [
+    'baltic bowl',
+    'baltic bridge congress',
     'international baltic congress'],
   'Bodrum Peninsula Festival' => ['bodrum yarýmada bric festivali'],
   'BFAME Championship' => [

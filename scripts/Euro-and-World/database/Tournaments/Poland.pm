@@ -2847,6 +2847,30 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
+      '2016D' =>
+      {
+        # https://wyniki.pzbs.pl/2016/baltycki/
+        MEET => 'Baltic Congress',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-07-26',
+            DATE_END => '2016-07-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-07-26',
+            DATE_END => '2016-07-26'
+          } 
+        }
+      },
     }
   },
 

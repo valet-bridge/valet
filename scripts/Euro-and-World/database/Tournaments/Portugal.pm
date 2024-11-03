@@ -94,6 +94,35 @@ my %MEETS_PORTUGAL =
 
 my %TOURNAMENTS_PORTUGAL =
 (
+  'FullBridge International Teams',
+  {
+    ORGANIZATION => 'FPB',
+    COUNTRY => 'Portugal',
+    ORIGIN => 'International',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'ROUND',
+            DATE_START => '2014-11-28',
+            DATE_END => '2014-11-30'
+          } 
+        }
+      },
+    }
+  },
+
   'Madeira Open Teams',
   {
     ZONE => 'Europe',
