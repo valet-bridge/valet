@@ -1006,7 +1006,6 @@ my @MULTI_WORDS =
   'Stern-Cornell Trophy', # Australia - New Zealand
   'Yeh Bros Cup',
   'Paris Youth Open Teams',
-
   'Spring Nationals', # Many probably Australian
 
   # ----------------------------------------------------
