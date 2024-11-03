@@ -229,7 +229,13 @@ my @MULTI_WORDS =
   'Canadian Seniors Teams Championship',
   'Canadian Women Teams Championship',
 
+  # CENTRAL AMERICA
+  'Central American & Caribbean Open Teams',
+  'Central American & Caribbean Transnational Teams',
+
   # CHILE
+  'Chilean Copa de Oro',
+  'Chilean Copa de Plata',
   'Chilean Cup',
   'Chilean Invitational Teams',
   'Chilean Open Pairs',
@@ -984,15 +990,6 @@ my @MULTI_WORDS =
 
   # ----------------------------------------------------
 
-
-  # Central America
-  'Central American & Caribbean Championship',
-  'Central American Zonal Championships',
-
-  # Chile
-  'Chilean Copa de Oro',
-  'Chilean Copa de Plata',
-
   # Europe: Same as European Champions' Cup
   "Champions' Cup",
 
@@ -1355,11 +1352,15 @@ my %MULTI_TYPOS =
     'cbf womens finals'],
 
   'Cavendish Teams' => ['cavendish tms', 'cavendish team'],
-  'Central American & Caribbean Championship' => [
-    'central america & caribean championship'],
-  'Central American Zonal Championships' => ["cacbf zonal ch'ships",
-    'cacbf zonal championship', "cacbf zonal cha'ships",
-    "cacbf zonal c'ships", 'cac final'],
+  'Central American & Caribbean Open Teams' => [
+    'cac final',
+    "cacbf zonal c'ships", 
+    "cacbf zonal ch'ships",
+    "cacbf zonal cha'ships",
+    'cacbf zonal championship', 
+    'central america & caribean championship',
+    'central american & caribbean championship',
+    'central american zonal championships'],
   'Centre Island Open Teams' => ['ci teams'],
   "Chairman's Cup" => ['chairmans cup', "chariman's cup",
     "chairmans's cup", "swedish chairman's cup", 'chairmans cup'],

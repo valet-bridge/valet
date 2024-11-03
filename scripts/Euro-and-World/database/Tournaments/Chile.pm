@@ -24,6 +24,134 @@ my %MEETS_CHILE =
 
 my %TOURNAMENTS_CHILE =
 (
+  'Chilean Copa de Oro' =>
+  {
+    ORGANIZATION => 'FCB',
+    COUNTRY => 'Chile',
+    ORIGIN => 'National',
+    ZONE => 'South America',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-03-17',
+            DATE_END => '2011-03-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-03-24',
+            DATE_END => '2011-03-24'
+          },
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-03-22',
+            DATE_END => '2012-03-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-03-29',
+            DATE_END => '2012-03-29'
+          },
+        }
+      },
+      '2013' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-04-12',
+            DATE_END => '2013-04-12'
+          },
+        }
+      },
+      '2014' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-04-11',
+            DATE_END => '2014-04-11'
+          },
+        }
+      },
+      '2015' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-04-10',
+            DATE_END => '2015-04-10'
+          },
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-04-05',
+            DATE_END => '2016-04-05'
+          },
+        }
+      },
+    }
+  },
+
+  'Chilean Copa de Plata' =>
+  {
+    ORGANIZATION => 'FCB',
+    COUNTRY => 'Chile',
+    ORIGIN => 'National',
+    ZONE => 'South America',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-04-12',
+            DATE_END => '2013-04-12'
+          },
+        }
+      }
+    }
+  },
+
   'Chilean Cup' =>
   {
     ORGANIZATION => 'FCB',
@@ -328,17 +456,27 @@ my %TOURNAMENTS_CHILE =
       {
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Semifinal',
             major => 'SEGMENT',
-            DATE_START => '2012-06-16',
+            DATE_START => '2012-06-17',
+            DATE_END => '2012-06-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-06-18',
             DATE_END => '2012-06-18'
           } 
         }
       }
     }
-  }
+  },
+
 );
 
 
