@@ -733,6 +733,15 @@ my @MULTI_WORDS =
   'Wronie Summer Teams',
   'Zulawski Cup',
 
+  # TODO
+  'bridge24.pl Trophy',
+  'Forest Trophy',
+  'Fortuna Cup',
+  'Mondi Cup',
+  'MTP Cup',
+  'Palace Cup',
+  'Plock District League',
+
   # PORTUGAL
   'Madeira Open Teams',
   'Portuguese Grand Prix',
@@ -766,6 +775,7 @@ my @MULTI_WORDS =
   'Vrnjacka Banja Open Teams',
 
   # SINGAPORE
+  'Pesta Sukan',
   'Singapore Open Teams',
 
   # SLOVAKIA
@@ -974,9 +984,6 @@ my @MULTI_WORDS =
 
   # ----------------------------------------------------
 
-  # Singapore
-  'Pesta Sukan',
-
   # Baltic
   'VV Cup',
 
@@ -998,13 +1005,7 @@ my @MULTI_WORDS =
   # https://wyniki.pzbs.pl/2016/baltycki/
   # Should probably be Poland: Grand Prix of Poland Teams, 2016D.
   'Baltic Bowl',
-  'bridge24.pl Trophy',
-  'Forest Trophy',
-  'Fortuna Cup',
-  'Mondi Cup',
-  'MTP Cup',
-  'Palace Cup',
-  'Plock District League',
+
   'Towns Cup', # Tallinn
 
   'FullBridge International Teams',
