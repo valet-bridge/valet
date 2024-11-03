@@ -572,6 +572,37 @@ my %MEETS_POLAND =
     }
   },
 
+  'Palace Cup' =>
+  {
+    ORGANIZATION => 'PZBS',
+    COUNTRY => 'Poland',
+    CITY => 'Warsaw',
+    ZONE => 'Europe',
+
+    EDITIONS => 
+    {
+      '2014' =>
+      {
+        # https://wyniki.pzbs.pl/2014/palacecup/palace16.html
+        YEAR => 2014,
+        DATE_START => '2014-08-27',
+        DATE_END => '2014-08-29'
+      },
+      '2015' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-06-22',
+        DATE_END => '2015-06-25'
+      },
+      '2016' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-04-01',
+        DATE_END => '2016-04-03'
+      },
+    }
+  },
+
   'Polish Championships' =>
   {
     ORGANIZATION => 'PZBS',
@@ -1479,6 +1510,86 @@ my %TOURNAMENTS_POLAND =
     }
   },
 
+  'bridge24.pl Trophy' =>
+  {
+    ORGANIZATION => 'PZBS',
+    COUNTRY => 'Poland',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-06-25',
+            DATE_END => '2015-06-25'
+          },
+        }
+      },
+    }
+  },
+
+  'Forest Trophy' =>
+  {
+    ORGANIZATION => 'PZBS',
+    COUNTRY => 'Poland',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2009,
+            major => 'SEGMENT',
+            DATE_START => '2009-05-16',
+            DATE_END => '2009-05-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            major => 'SEGMENT',
+            DATE_START => '2009-05-17',
+            DATE_END => '2009-05-17'
+          },
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-05-22',
+            DATE_END => '2011-05-22'
+          },
+        }
+      },
+    }
+  },
+
   'Grand Prix of Poland Pairs',
   {
     ORGANIZATION => 'PZBS',
@@ -1773,20 +1884,6 @@ my %TOURNAMENTS_POLAND =
       },
       '2011B' =>
       {
-        MEET => 'Poznan Congress',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2011,
-            major => 'ROUND',
-            DATE_START => '2011-05-01',
-            DATE_END => '2011-05-01'
-          } 
-        }
-      },
-      '2011C' =>
-      {
         MEET => 'Boleslawiec Festival',
         CHAPTERS =>
         {
@@ -1799,7 +1896,7 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2011D' =>
+      '2011C' =>
       {
         CHAPTERS =>
         {
@@ -1821,13 +1918,28 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2012,
+            STAGE => 'Final',
             major => 'ROUND',
-            DATE_START => '2012-02-11',
-            DATE_END => '2012-02-11'
+            DATE_START => '2012-02-10',
+            DATE_END => '2012-02-10'
           } 
         }
       },
       '2012B' =>
+      {
+        MEET => 'Zulawski Congress',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            major => 'ROUND',
+            DATE_START => '2012-02-11',
+            DATE_END => '2012-02-12'
+          } 
+        }
+      },
+      '2012C' =>
       {
         MEET => 'Krakow Congress',
         CHAPTERS =>
@@ -1842,7 +1954,7 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2012C' =>
+      '2012D' =>
       {
         MEET => 'Wroclaw Meeting',
         CHAPTERS =>
@@ -1856,7 +1968,7 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2012D' =>
+      '2012E' =>
       {
         MEET => 'Poznan Congress',
         CHAPTERS =>
@@ -1870,7 +1982,7 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2012E' =>
+      '2012F' =>
       {
         CITY => 'Pulawy',
         CHAPTERS =>
@@ -1884,7 +1996,7 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2012F' =>
+      '2012G' =>
       {
         MEET => 'Boleslawiec Festival',
         CHAPTERS =>
@@ -1898,7 +2010,7 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2012G' =>
+      '2012H' =>
       {
         CHAPTERS =>
         {
@@ -1912,7 +2024,7 @@ my %TOURNAMENTS_POLAND =
           },
         }
       },
-      '2012H' =>
+      '2012I' =>
       {
         CHAPTERS =>
         {
@@ -2944,6 +3056,221 @@ my %TOURNAMENTS_POLAND =
     }
   },
 
+  'Mondi Cup' =>
+  {
+    ORGANIZATION => 'PZBS',
+    COUNTRY => 'Poland',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            major => 'ROUND',
+            DATE_START => '2009-04-05',
+            DATE_END => '2009-04-05'
+          },
+        }
+      },
+    }
+  },
+
+  'MTP Cup' =>
+  {
+    FORM => 'Pairs',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011A' =>
+      {
+        MEET => 'Poznan Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'SESSION',
+            DATE_START => '2011-05-02',
+            DATE_END => '2011-05-02'
+          },
+        }
+      },
+      '2011B' =>
+      {
+        MEET => 'Poznan Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-05-02',
+            DATE_END => '2011-05-02'
+          },
+        }
+      },
+    }
+  },
+
+  'Palace Pairs Cup' =>
+  {
+    ORIGIN => 'Invitational',
+    FORM => 'Pairs',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        MEET => 'Palace Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'MATCH',
+            DATE_START => '2014-08-27',
+            DATE_END => '2014-08-29'
+          },
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Palace Cup',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'SEGMENT',
+            DATE_START => '2015-06-22',
+            DATE_END => '2015-06-23'
+          },
+        }
+      },
+    }
+  },
+
+  'Palace Teams Cup' =>
+  {
+    ORIGIN => 'Invitational',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        MEET => 'Palace Cup',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            major => 'MATCH',
+            DATE_START => '2015-06-24',
+            DATE_END => '2015-06-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-06-25',
+            DATE_END => '2015-06-25'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-06-25',
+            DATE_END => '2015-06-25'
+          },
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Palace Cup',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2016-04-01',
+            DATE_END => '2016-04-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-04-02',
+            DATE_END => '2016-04-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-04-02',
+            DATE_END => '2016-04-03'
+          },
+        }
+      },
+    }
+  },
+
+  'Plock District League' =>
+  {
+    ORGANIZATION => 'PZBS',
+    COUNTRY => 'Poland',
+    CITY => 'Plock',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-05-09',
+            DATE_END => '2015-05-09'
+          },
+        }
+      },
+    }
+  },
+
   'Polish BAM Cup',
   {
     FORM => 'Teams',
@@ -3305,6 +3632,20 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
+      '2011' =>
+      {
+        MEET => 'Poznan Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-05-01',
+            DATE_END => '2011-05-01'
+          } 
+        }
+      },
       '2013' =>
       {
         # https://wyniki.pzbs.pl/2013/mppimp/W-impfin.html
@@ -3498,6 +3839,21 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
+      '2009' =>
+      {
+        MEET => 'Poznan Congress',
+
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2009,
+            major => 'SEGMENT',
+            DATE_START => '2009-06-11',
+            DATE_END => '2009-06-11'
+          },
+        }
+      },
       '2011' =>
       {
         # https://s3.eu-central-1.amazonaws.com/kongres.brydz.wlkp.pl/wyniki2011/W-sb2m.html
@@ -4152,7 +4508,7 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2007' =>
+      '2007A' =>
       {
         CHAPTERS =>
         {
@@ -4219,6 +4575,19 @@ my %TOURNAMENTS_POLAND =
             DATE_START => '2007-05-15',
             DATE_END => '2007-05-15'
           } 
+        }
+      },
+      '2007B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2007,
+            major => 'SEGMENT',
+            DATE_START => '2007-08-05',
+            DATE_END => '2007-08-08'
+          },
         }
       },
       '2008' =>

@@ -429,6 +429,8 @@ my %FORM_CORRECTIONS = (
      1281,  1285,  1286,  1291,  1297],
   'Mohanlal Bhartia Memorial Pairs' => [
     16734, 16745],
+  'Mondi Cup' => [
+     9418],
   'Moscow Sunday Times Pairs' => [
     31732, 31740],
   'Namsos Pairs Cup' => [

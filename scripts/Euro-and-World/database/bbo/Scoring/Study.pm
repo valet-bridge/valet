@@ -39,7 +39,7 @@ my @LOCAL_SUBS =
   { START => 15462, END => 15463, TEXT => 'IMP', CORR => 'MP' }, # IMP!
   { START => 16307, END => 16377, TEXT => 'BAM', CORR => 'MP' },
   { START => 16829, END => 16842, TEXT => 'BAM', CORR => 'MP' },
-  { START => 17625, END => 17633, TEXT => 'BAM', CORR => 'MP' },
+  { START => 17625, END => 17633, TEXT => 'BAM', CORR => 'IMP' },
   { START => 20051, END => 20063, TEXT => 'BAM', CORR => 'MP' },
   { START => 21520, END => 21553, TEXT => 'BAM', CORR => 'MP' },
   { START => 21960, END => 21975, TEXT => 'BAM', CORR => 'MP' },
@@ -103,6 +103,9 @@ my @LOCAL_SUBS =
   { START => 30627, END => 30670, TEXT => 'BAM', CORR => 'MP' },
   { START => 41675, END => 41707, TEXT => 'BAM', CORR => 'MP' },
   { START => 44253, END => 44304, TEXT => 'BAM', CORR => 'MP' },
+
+  # A Polish tournament (B for Barometer).
+  { START => 21944, END => 22007, TEXT => 'BAM', CORR => 'MP' },
 
   # Australia
   { START =>  1244, END =>  1248, TEXT => 'MP', CORR => 'IMP' },

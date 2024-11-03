@@ -61,7 +61,7 @@ use EntryT;
 # use Tournaments::Nordic;
 # use Tournaments::Norway;
 # use Tournaments::Pakistan;
-# use Tournaments::Poland;
+use Tournaments::Poland;
 # use Tournaments::Portugal;
 # use Tournaments::Romania;
 # use Tournaments::Russia;
@@ -71,7 +71,7 @@ use EntryT;
 # use Tournaments::SouthAfrica;
 # use Tournaments::SouthAmerica;
 # use Tournaments::Spain;
-use Tournaments::Sweden;
+# use Tournaments::Sweden;
 # use Tournaments::Switzerland;
 # use Tournaments::Taipei;
 # use Tournaments::Turkey;
@@ -130,7 +130,7 @@ my %DIVISIONS =
   # NORDIC => \&Tournaments::Nordic::set_links
   # NORWAY => \&Tournaments::Norway::set_links
   # PAKISTAN => \&Tournaments::Pakistan::set_links
-  # POLAND => \&Tournaments::Poland::set_links
+  POLAND => \&Tournaments::Poland::set_links
   # PORTUGAL => \&Tournaments::Portugal::set_links
   # ROMANIA => \&Tournaments::Romania::set_links
   # RUSSIA => \&Tournaments::Russia::set_links
@@ -140,7 +140,7 @@ my %DIVISIONS =
   # SOUTHAFRICA => \&Tournaments::SouthAfrica::set_links
   # SOUTHAMERICA => \&Tournaments::SouthAmerica::set_links
   # SPAIN => \&Tournaments::Spain::set_links
-  SWEDEN => \&Tournaments::Sweden::set_links
+  # SWEDEN => \&Tournaments::Sweden::set_links
   # SWITZERLAND => \&Tournaments::Switzerland::set_links
   # TAIPEI => \&Tournaments::Taipei::set_links
   # TURKEY => \&Tournaments::Turkey::set_links

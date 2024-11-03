@@ -115,6 +115,7 @@ my @MULTI_WORDS =
   'Nordic Junior Championship',
   'Nordic Team Championship',
   'North American Bridge Championship',
+  'Palace Cup',
   'Pärnu Festival',
   'Plovdiv Bridge Festival',
   'Polish Grand Prix',
@@ -451,6 +452,7 @@ my %MULTI_TYPOS =
   'Poznan Congress' => [
     'bridge meeting poznan',
     'kongres poznanski', 
+    'poznan bridge congress',
     'poznanski kongres brydzowy'],
    'Practice Match' => [
      'practice match', 

@@ -690,6 +690,8 @@ my @MULTI_WORDS =
 
   # POLAND
   'Andrzej Wilkosz Memorial Pairs',
+  'bridge24.pl Trophy',
+  'Forest Trophy',
   'Grand Prix of Poland Pairs',
   'Grand Prix of Poland Teams',
   'Janina Wielkoszewska Memorial Open',
@@ -698,6 +700,11 @@ my @MULTI_WORDS =
   'Krakow Spring Teams',
   'Leszek Kwiatkowski Memorial Pairs',
   'Leszek Kwiatkowski Memorial Teams',
+  'Mondi Cup',
+  'MTP Cup',
+  'Palace Pairs Cup',
+  'Palace Teams Cup',
+  'Plock District League',
   'Polish BAM Cup',
   'Polish BAM Teams',
   'Polish Boys Championship',
@@ -732,15 +739,6 @@ my @MULTI_WORDS =
   'Warsaw Online Teams',
   'Wronie Summer Teams',
   'Zulawski Cup',
-
-  # TODO
-  'bridge24.pl Trophy',
-  'Forest Trophy',
-  'Fortuna Cup',
-  'Mondi Cup',
-  'MTP Cup',
-  'Palace Cup',
-  'Plock District League',
 
   # PORTUGAL
   'Madeira Open Teams',
@@ -986,6 +984,8 @@ my @MULTI_WORDS =
 
   # Baltic
   'VV Cup',
+  'Towns Cup', # Tallinn
+  'Fortuna Cup', # Tallinn
 
   # Central America
   'Central American & Caribbean Championship',
@@ -1006,8 +1006,7 @@ my @MULTI_WORDS =
   # Should probably be Poland: Grand Prix of Poland Teams, 2016D.
   'Baltic Bowl',
 
-  'Towns Cup', # Tallinn
-
+  # Portugal?
   'FullBridge International Teams',
 
   # Supra
@@ -2162,6 +2161,7 @@ my %MULTI_TYPOS =
   'Janina Wielkoszewska Memorial Open' => [
     'memorial im_ janiny wielkoszewskiej open'],
   'Janos Levai Memorial' => [
+    'janos levai memorial match',
     'levai janos cup',
     'levai janos memorial'],
   'Japanese Open Trials' => ['japanese open team trial',
