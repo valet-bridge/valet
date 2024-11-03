@@ -264,6 +264,17 @@ my %MULTI_TYPOS =
   'Dobrich Bridge Festival' => [
     'ibf dobrich'],
   'Estoril Bridge Festival' => ['estoril festival'],
+  "European Champions' Cup" => [
+    'european bridge champion cup',
+    "european bridge champions'cup",
+    "european bridge champion's cup",
+    "european bridge champions' cup",
+    'european chamions cup',
+    "european champion's cup",
+    'european champions cup',
+    "white house champions' cup",
+    "whitehouse champions'cup",
+    "whitehouse champions' cup"],
   'European National Championships' => [
     'champ eur pau',
     'e_b_l_ team championships',

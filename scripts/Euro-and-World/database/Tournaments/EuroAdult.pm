@@ -729,6 +729,14 @@ my %TOURNAMENTS_EUROADULT =
           'C2' => 
           {
             YEAR => 2006,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2006-10-15',
+            DATE_END => '2006-10-15'
+          },
+          'C3' => 
+          {
+            YEAR => 2006,
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2006-10-15',
@@ -758,6 +766,14 @@ my %TOURNAMENTS_EUROADULT =
             DATE_END => '2007-11-10'
           },
           'C2' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2007-11-11',
+            DATE_END => '2007-11-11'
+          },
+          'C3' => 
           {
             YEAR => 2007,
             STAGE => 'Final',
@@ -791,6 +807,14 @@ my %TOURNAMENTS_EUROADULT =
           'C2' => 
           {
             YEAR => 2008,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2008-11-09',
+            DATE_END => '2008-11-09'
+          },
+          'C3' => 
+          {
+            YEAR => 2008,
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2008-11-09',
@@ -806,7 +830,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2009,
-            STAGE => 'Round-robin',
+            STAGE => 'Qualifying',
             major => 'ROUND',
             DATE_START => '2009-10-15',
             DATE_END => '2009-10-16'
@@ -820,6 +844,14 @@ my %TOURNAMENTS_EUROADULT =
             DATE_END => '2009-10-17'
           },
           'C2' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2009-10-18',
+            DATE_END => '2009-10-18'
+          },
+          'C3' => 
           {
             YEAR => 2009,
             STAGE => 'Final',
@@ -862,7 +894,6 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2010,
             STAGE => 'Bronze',
-            major => 'SEGMENT',
             DATE_START => '2010-11-14',
             DATE_END => '2010-11-14'
           },
@@ -870,7 +901,6 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2010,
             STAGE => 'Final',
-            major => 'SEGMENT',
             DATE_START => '2010-11-14',
             DATE_END => '2010-11-14'
           } 
@@ -898,6 +928,14 @@ my %TOURNAMENTS_EUROADULT =
             DATE_END => '2011-11-19'
           },
           'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2011-11-20',
+            DATE_END => '2011-11-20'
+          },
+          'C3' => 
           {
             YEAR => 2011,
             STAGE => 'Final',
@@ -962,10 +1000,18 @@ my %TOURNAMENTS_EUROADULT =
           'C2' => 
           {
             YEAR => 2013,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2013-11-17',
+            DATE_END => '2013-11-17'
+          },
+          'C3' => 
+          {
+            YEAR => 2013,
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2013-11-16',
-            DATE_END => '2013-11-16'
+            DATE_END => '2013-11-17'
           } 
         }
       },
@@ -2787,7 +2833,6 @@ my %TOURNAMENTS_EUROADULT =
   {
     ORIGIN => 'Transnational',
     FORM => 'Pairs',
-    SCORING => 'MP',
     GENDER => 'Mixed',
     AGE => 'Open',
 
@@ -2796,6 +2841,7 @@ my %TOURNAMENTS_EUROADULT =
       '2003' =>
       {
         MEET => 'European Transnational Championships',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'C0' => 
@@ -2824,6 +2870,7 @@ my %TOURNAMENTS_EUROADULT =
       '2005' =>
       {
         MEET => 'European Transnational Championships',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'C0' => 
@@ -2852,6 +2899,7 @@ my %TOURNAMENTS_EUROADULT =
       '2007' =>
       {
         MEET => 'European Transnational Championships',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'C0' => 
@@ -2880,6 +2928,7 @@ my %TOURNAMENTS_EUROADULT =
       '2009' =>
       {
         MEET => 'European Transnational Championships',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'C0' => 
@@ -2908,6 +2957,7 @@ my %TOURNAMENTS_EUROADULT =
       '2011' =>
       {
         MEET => 'European Transnational Championships',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'C0' => 
@@ -2936,6 +2986,7 @@ my %TOURNAMENTS_EUROADULT =
       '2013' =>
       {
         MEET => 'European Transnational Championships',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'C0' => 
@@ -2957,6 +3008,7 @@ my %TOURNAMENTS_EUROADULT =
       '2015' =>
       {
         MEET => 'European Transnational Championships',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'C0' => 
@@ -2985,6 +3037,7 @@ my %TOURNAMENTS_EUROADULT =
       '2017' =>
       {
         MEET => 'European Transnational Championships',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'C0' => 
@@ -3013,6 +3066,7 @@ my %TOURNAMENTS_EUROADULT =
       '2019' =>
       {
         MEET => 'European Transnational Championships',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'C0' => 
@@ -3041,6 +3095,7 @@ my %TOURNAMENTS_EUROADULT =
       '2023' =>
       {
         MEET => 'European Transnational Championships',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'C0' => 
@@ -3633,7 +3688,6 @@ my %TOURNAMENTS_EUROADULT =
   {
     ORIGIN => 'Transnational',
     FORM => 'Pairs',
-    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
@@ -3642,6 +3696,7 @@ my %TOURNAMENTS_EUROADULT =
       '2003' =>
       {
         MEET => 'European Transnational Championships',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'C0' => 
@@ -3670,6 +3725,7 @@ my %TOURNAMENTS_EUROADULT =
       '2005' =>
       {
         MEET => 'European Transnational Championships',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'C0' => 
@@ -3698,6 +3754,7 @@ my %TOURNAMENTS_EUROADULT =
       '2007' =>
       {
         MEET => 'European Transnational Championships',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'C0' => 
@@ -3726,6 +3783,7 @@ my %TOURNAMENTS_EUROADULT =
       '2009' =>
       {
         MEET => 'European Transnational Championships',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'C0' => 
@@ -3754,6 +3812,7 @@ my %TOURNAMENTS_EUROADULT =
       '2011' =>
       {
         MEET => 'European Transnational Championships',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'C0' => 
@@ -3782,6 +3841,7 @@ my %TOURNAMENTS_EUROADULT =
       '2013' =>
       {
         MEET => 'European Transnational Championships',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'C0' => 
@@ -3810,6 +3870,7 @@ my %TOURNAMENTS_EUROADULT =
       '2015' =>
       {
         MEET => 'European Transnational Championships',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'C0' => 
@@ -3838,6 +3899,7 @@ my %TOURNAMENTS_EUROADULT =
       '2017' =>
       {
         MEET => 'European Transnational Championships',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'C0' => 
@@ -3866,6 +3928,7 @@ my %TOURNAMENTS_EUROADULT =
       '2019' =>
       {
         MEET => 'European Transnational Championships',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'C0' => 
@@ -3894,6 +3957,7 @@ my %TOURNAMENTS_EUROADULT =
       '2023' =>
       {
         MEET => 'European Transnational Championships',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'C0' => 
@@ -4915,6 +4979,81 @@ my %TOURNAMENTS_EUROADULT =
     }
   },
 
+  'European Transnational Women Teams' => 
+  {
+    ORIGIN => 'Transnational',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        MEET => 'European Transnational Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-06-23',
+            DATE_END => '2009-06-24'
+          },
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'European Transnational Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-06-28',
+            DATE_END => '2011-06-29'
+          },
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'European Transnational Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-06-24',
+            DATE_END => '2013-06-24'
+          },
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'European Transnational Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-07-06',
+            DATE_END => '2015-07-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-07-07',
+            DATE_END => '2015-07-07'
+          },
+        }
+      }
+    }
+  },
+
   'European Winter BAM Trophy' =>
   {
     FORM => 'Teams',
@@ -5552,7 +5691,8 @@ my %TOURNAMENTS_EUROADULT =
         }
       },
     }
-  }
+  },
+
 );
 
 

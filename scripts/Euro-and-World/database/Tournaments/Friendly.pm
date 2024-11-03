@@ -911,23 +911,6 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2012C' =>
-      {
-        MEET => 'Friendly Match',
-        GENDER => 'Open',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2012,
-            major => 'ROUND',
-            DATE_START => '2012-06-05',
-            DATE_END => '2012-06-05'
-          } 
-        }
-      },
       '2015A' =>
       {
         MEET => 'Friendly Match',

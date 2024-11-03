@@ -610,6 +610,7 @@ sub finish_ambiguous
       $tname eq 'Portuguese Open Teams' ||
       $tname eq 'Portuguese Club Teams')
   {
+    $value =~ s/^S (\d+)$/$1/;
     $token->set_general('MARKER', 'SESSION', $value);
     $chain->complete('EXPLAINED');
     return 1;

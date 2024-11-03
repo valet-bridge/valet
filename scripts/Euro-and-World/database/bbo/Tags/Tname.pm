@@ -992,9 +992,6 @@ my @MULTI_WORDS =
 
   # ----------------------------------------------------
 
-  # Europe: Same as European Champions' Cup
-  "Champions' Cup",
-
   # Supra
   'Bermuda Triangle Cup',
   'BKBT Teams',
@@ -1008,7 +1005,6 @@ my @MULTI_WORDS =
   'Shield of Thoisy',
   'Stern-Cornell Trophy', # Australia - New Zealand
   'Yeh Bros Cup',
-  'Youth Open Bridge Paris',
   'Paris Youth Open Teams',
 
   'Spring Nationals', # Many probably Australian
@@ -1620,12 +1616,18 @@ my %MULTI_TYPOS =
   'European National Seniors Teams' => [
     'eur champ pau senior',
     'eur champ pau seniors'],
-  'European Small Federation Games' => ['ebl small federation trophy',
-    'ebl small federations trophy', 'games of small federations',
-    'european small federations games', 'small federation games',
-    'small federations games', 'small ffederations games',
-    'small federation cup', 'european small feds games',
-    'small f federations games', 'europian small federation games'],
+  'European Small Federation Games' => [
+    'ebl small federation trophy',
+    'ebl small federations trophy', 
+    'games of small federations',
+    'european small federations games', 
+    'small federation games',
+    'small federations games', 
+    'small ffederations games',
+    'small federation cup', 
+    'european small feds games',
+    'small f federations games', 
+    'europian small federation games'],
   'European Transnational Mixed Teams' => [
     'euro open mixed teams'],
   'European Winter Teams' => [
@@ -1973,6 +1975,7 @@ my %MULTI_TYPOS =
     'icelandari open'],
   'Icelandic Cup' => [
     'bikarkeppni bsí', 
+    'icelandic champions cup',
     'icelandoc cup',
     'iceland cup'],
   'Icelandic Open Teams' => [
@@ -2538,6 +2541,7 @@ my %MULTI_TYPOS =
     'pan arab inter-club', 
     'pan arab inter club', 
     'pan arab interclub'],
+  'Paris Youth Open Teams' => ['youth open bridge paris'],
   'Patton de Monaco' => ["monaco's patton", 'patton international monaco',
     'patton international monte-carlo',
     'patton international monte carlo', 'patton monte carlo'],

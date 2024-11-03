@@ -58,6 +58,8 @@ my @LOCAL_SUBS =
   # { START => , END => , TEXT => '',
     # CORR => '' },
 
+  { START => 266, END => 285, TEXT => "Champion's Cup",
+    CORR => "European Champions' Cup" },
   { START => 797, END => 822, TEXT => 'European Youth Bridge Team Champ', 
     CORR => 'European U26 Open Teams' },
   { START => 1116, END => 1128, TEXT => 'Grand Prix of Poland',
@@ -474,6 +476,8 @@ my @LOCAL_SUBS =
     CORR => 'Grand Prix of Poland Pairs' },
   { START => 31538, END => 31569, TEXT => 'SFB',
     CORR => 'SF' },
+  { START => 31268, END => 31338, TEXT => "Champions' Cup",
+    CORR => "European Champions' Cup" },
   { START => 32082, END => 32122, TEXT => 'Lalit Mohanka',
     CORR => 'Lalit Mohanka Memorial' },
   { START => 32120, END => 32134, TEXT => 'Grand Prix Polski',
