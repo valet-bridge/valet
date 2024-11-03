@@ -559,6 +559,7 @@ my %MULTI_TYPOS =
     'up state championship'],
   'Varna Bridge Festival' => [
     'international bridge festival varna'],
+  'Vilnius Cup' => ['vv cup'],
   'VVE Beheer Bridge Week' => ['vve-beheer bridgeweek',
     'vve-beheer bridge week'],
   'Wachauer Bridge Festival' => ['wachauer bridgefestival'],

@@ -165,10 +165,12 @@ my @MULTI_WORDS =
   'Estonian Open Pair Trials',
   'Estonian Open Teams',
   'Estonian-Latvian Open Team Trials',
+  'Fortuna Cup',
   'Latvia Invites',
   'Lithuanian Open Teams',
   'Riga Invitational Pairs',
   'Riga Open Teams',
+  'Towns Cup',
   'Vilnius BAM Pairs',
   'Vilnius Club Pairs',
   'Vilnius IMP Pairs',
@@ -982,18 +984,14 @@ my @MULTI_WORDS =
 
   # ----------------------------------------------------
 
-  # Baltic
-  'VV Cup',
-  'Towns Cup', # Tallinn
-  'Fortuna Cup', # Tallinn
 
   # Central America
   'Central American & Caribbean Championship',
   'Central American Zonal Championships',
 
   # Chile
-  'Copa de Oro',
-  'Copa de Plata',
+  'Chilean Copa de Oro',
+  'Chilean Copa de Plata',
 
   # Europe: Same as European Champions' Cup
   "Champions' Cup",
@@ -1429,6 +1427,8 @@ my %MULTI_TYPOS =
     'commomwealth bridge championship',
     'commonwealth championship',
     'commonwealth bridge championship'],
+  'Chilean Copa de Oro' => ['copa de oro'],
+  'Chilean Copa de Plata' => ['copa de plata'],
   'Corn Cairdis Match' => ['corn cairdis'],
 
   # CZECH

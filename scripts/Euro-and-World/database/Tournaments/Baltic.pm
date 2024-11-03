@@ -759,6 +759,48 @@ my %TOURNAMENTS_BALTIC =
     }
   },
 
+  'Fortuna Cup' =>
+  {
+    ORGANIZATION => 'LiBA',
+    ORIGIN => 'National',
+    CITY => 'Tallinn',
+    COUNTRY => 'Estonia',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-05-30',
+            DATE_END => '2009-05-30'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-05-28',
+            DATE_END => '2011-05-29'
+          } 
+        }
+      },
+    }
+  },
+
   'Latvia Invites' =>
   {
     ORGANIZATION => 'LaBF',
@@ -1118,6 +1160,44 @@ my %TOURNAMENTS_BALTIC =
             STAGE => 'Final',
             DATE_START => '2016-08-19',
             DATE_END => '2016-08-19'
+          } 
+        }
+      },
+    }
+  },
+
+  'Towns Cup' =>
+  {
+    ORGANIZATION => 'LiBA',
+    ORIGIN => 'National',
+    CITY => 'Tallinn',
+    COUNTRY => 'Estonia',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-05-27',
+            DATE_END => '2011-05-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-05-28',
+            DATE_END => '2011-05-28'
           } 
         }
       },
@@ -1545,12 +1625,49 @@ my %TOURNAMENTS_BALTIC =
           } 
         }
       },
-      '2015' =>
+      '2014' =>
       {
         MEET => 'Vilnius Cup',
         CHAPTERS =>
         {
           'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-09-19',
+            DATE_END => '2014-09-21'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Vilnius Cup',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Rof16',
+            major => 'ROUND',
+            DATE_START => '2015-09-04',
+            DATE_END => '2015-09-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Quarterfinal',
+            major => 'ROUND',
+            DATE_START => '2015-09-05',
+            DATE_END => '2015-09-05'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'ROUND',
+            DATE_START => '2015-09-05',
+            DATE_END => '2015-09-05'
+          },
+          'C3' => 
           {
             YEAR => 2015,
             STAGE => 'Final',
@@ -1562,7 +1679,6 @@ my %TOURNAMENTS_BALTIC =
       },
     }
   },
-
 
 );
 
