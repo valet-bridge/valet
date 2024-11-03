@@ -522,6 +522,7 @@ my @MULTI_WORDS =
   'FTBC Tanjungpura University',
   'Gabrial UI Bastaman Cup',
   'Geologi Cup',
+  'IBWI Women Cup',
   'Indonesian Inter-City Championship',
   'Indonesian Inter-Club Championship',
   'Indonesian Inter-Province Championship',
@@ -993,9 +994,6 @@ my @MULTI_WORDS =
 
   # Europe: Same as European Champions' Cup
   "Champions' Cup",
-
-  # Indonesia
-  'IBWI Cup',
 
   # Supra
   'Bermuda Triangle Cup',
@@ -1967,6 +1965,7 @@ my %MULTI_TYPOS =
   ### III
 
   # ICELAND
+  'IBWI Women Cup' => ['ibwi cup'],
   'Iceland Express Teams' => ['iceland express team'],
   'Icelandair Open Teams' => [
     'icelandair open',

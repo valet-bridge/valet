@@ -600,6 +600,36 @@ my %TOURNAMENTS_INDONESIA =
     }
   },
 
+  'IBWI Women Cup' =>
+  {
+    ORGANIZATION => 'GABSI',
+    COUNTRY => 'Indonesia',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'BAM',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2010-06-12',
+            DATE_END => '2010-06-13'
+          },
+        }
+      },
+    }
+  }
+
   'Indonesian Inter-City Championship' =>
   {
     ORIGIN => 'Intercity',
