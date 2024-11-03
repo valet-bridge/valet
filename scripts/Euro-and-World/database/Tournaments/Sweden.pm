@@ -452,6 +452,344 @@ my %TOURNAMENTS_SWEDEN =
     }
   },
 
+  'Filbyter Cup',
+  {
+    ORGANIZATION => 'SBF',
+    COUNTRY => 'Sweden',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Playoff',
+            major => 'ROUND',
+            DATE_START => '2009-03-30',
+            DATE_END => '2009-03-30'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-03-30',
+            DATE_END => '2009-03-30'
+          },
+          'C2' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-04-06',
+            DATE_END => '2009-04-06'
+          },
+        }
+      },
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-03-01',
+            DATE_END => '2010-03-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-03-08',
+            DATE_END => '2010-03-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-03-15',
+            DATE_END => '2010-03-15'
+          },
+          'C3' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-03-22',
+            DATE_END => '2010-03-22'
+          },
+          'C4' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-03-29',
+            DATE_END => '2010-03-29'
+          },
+          'C5' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-04-12',
+            DATE_END => '2010-04-12'
+          },
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Rof16',
+            major => 'ROUND',
+            DATE_START => '2011-02-17',
+            DATE_END => '2011-02-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-03-03',
+            DATE_END => '2011-03-03'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-03-10',
+            DATE_END => '2011-03-10'
+          },
+          'C3' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-03-17',
+            DATE_END => '2011-03-17'
+          },
+          'C4' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-03-24',
+            DATE_END => '2011-03-24'
+          },
+          'C5' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-03-31',
+            DATE_END => '2011-03-31'
+          },
+          'C6' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-04-07',
+            DATE_END => '2011-04-07'
+          },
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2012-03-19',
+            DATE_END => '2012-03-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-04-02',
+            DATE_END => '2012-04-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-04-16',
+            DATE_END => '2012-04-16'
+          },
+          'C3' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-04-23',
+            DATE_END => '2012-04-23'
+          },
+          'C4' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-05-07',
+            DATE_END => '2012-05-07'
+          },
+          'C5' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-05-14',
+            DATE_END => '2012-05-14'
+          },
+          'C6' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-05-21',
+            DATE_END => '2012-05-21'
+          },
+          'C7' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-06-04',
+            DATE_END => '2012-06-05'
+          },
+        }
+      },
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-05-05',
+            DATE_END => '2014-05-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-05-12',
+            DATE_END => '2014-05-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-05-19',
+            DATE_END => '2014-05-19'
+          },
+          'C3' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-05-26',
+            DATE_END => '2014-05-26'
+          } 
+        }
+      },
+    }
+  },
+
+  'Park Hotell Swiss Teams',
+  {
+    ORGANIZATION => 'SBF',
+    COUNTRY => 'Sweden',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    MOVEMENT => 'Swiss',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            major => 'ROUND',
+            DATE_START => '2013-09-21',
+            DATE_END => '2013-09-22'
+          } 
+        }
+      },
+    }
+  },
+
+  'Stena Line Cup',
+  {
+    ORGANIZATION => 'SBF',
+    COUNTRY => 'Sweden',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-11-07',
+            DATE_END => '2013-11-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-11-08',
+            DATE_END => '2013-11-09'
+          } 
+        }
+      },
+    }
+  },
+
   'Stockholm Teams',
   {
     ORGANIZATION => 'SBF',
@@ -1467,7 +1805,6 @@ my %TOURNAMENTS_SWEDEN =
     ORIGIN => 'National',
     ZONE => 'Europe',
     FORM => 'Pairs',
-    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
@@ -1475,6 +1812,7 @@ my %TOURNAMENTS_SWEDEN =
     {
       '2009' =>
       {
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1483,6 +1821,21 @@ my %TOURNAMENTS_SWEDEN =
             major => 'ROUND',
             DATE_START => '2009-10-31',
             DATE_END => '2009-11-01'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2013-04-05',
+            DATE_END => '2013-04-07'
           } 
         }
       },
@@ -1846,6 +2199,35 @@ my %TOURNAMENTS_SWEDEN =
             major => 'SESSION',
             DATE_START => '2012-04-27',
             DATE_END => '2012-04-29'
+          } 
+        }
+      },
+    }
+  },
+
+  'S:t Erik Championship Series',
+  {
+    ORGANIZATION => 'SBF',
+    COUNTRY => 'Sweden',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'SEGMENT',
+            DATE_START => '2011-12-12',
+            DATE_END => '2011-12-14'
           } 
         }
       },

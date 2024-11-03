@@ -799,6 +799,10 @@ my @MULTI_WORDS =
 
   # SWEDEN
   "Chairman's Cup",
+  'Filbyter Cup',
+  'Park Hotell Swiss Teams',
+  'S:t Erik Championship Series',
+  'Stena Line Cup',
   'Stockholm Teams',
   'Swedish Cup',
   'Swedish District Teams',
@@ -1021,17 +1025,10 @@ my @MULTI_WORDS =
   'Youth Open Bridge Paris',
   'Paris Youth Open Teams',
 
-  # Sweden
-  'Filbyter Cup',
-  'Nordic Race', # Actually a Swedish trial.
-  'Park Hotell Swiss Teams',
-  'S:t Erik Championship Series',
-  'Stena Line Cup',
-
+  'Spring Nationals', # Many probably Australian
 
   # ----------------------------------------------------
 
-  'Spring Nationals', # Many probably Australian
 );
 
 my %MULTI_TYPOS =
@@ -2985,6 +2982,7 @@ my %MULTI_TYPOS =
     'swedish open pair', 
     'swedish pair',
     'swedish pairs championships'],
+  'Swedish Open Pair Trials' => ['nordic race'],
   'Swedish Open Teams' => ['swedish teams'],
   'Swedish Open Team Trials' => [
     'swedish open trials',

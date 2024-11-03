@@ -46,7 +46,7 @@ use EntryT;
 # use Tournaments::HongKong;
 # use Tournaments::Hungary;
 # use Tournaments::Iceland;
-use Tournaments::India;
+# use Tournaments::India;
 # use Tournaments::Indonesia;
 # use Tournaments::Ireland;
 # use Tournaments::Israel;
@@ -71,7 +71,7 @@ use Tournaments::India;
 # use Tournaments::SouthAfrica;
 # use Tournaments::SouthAmerica;
 # use Tournaments::Spain;
-# use Tournaments::Sweden;
+use Tournaments::Sweden;
 # use Tournaments::Switzerland;
 # use Tournaments::Taipei;
 # use Tournaments::Turkey;
@@ -115,7 +115,7 @@ my %DIVISIONS =
   # HONGKONG => \&Tournaments::HongKong::set_links
   # HUNGARY => \&Tournaments::Hungary::set_links
   # ICELAND => \&Tournaments::Iceland::set_links
-  INDIA => \&Tournaments::India::set_links
+  # INDIA => \&Tournaments::India::set_links
   # INDONESIA => \&Tournaments::Indonesia::set_links
   # IRELAND => \&Tournaments::Ireland::set_links
   # ISRAEL => \&Tournaments::Israel::set_links
@@ -140,7 +140,7 @@ my %DIVISIONS =
   # SOUTHAFRICA => \&Tournaments::SouthAfrica::set_links
   # SOUTHAMERICA => \&Tournaments::SouthAmerica::set_links
   # SPAIN => \&Tournaments::Spain::set_links
-  # SWEDEN => \&Tournaments::Sweden::set_links
+  SWEDEN => \&Tournaments::Sweden::set_links
   # SWITZERLAND => \&Tournaments::Switzerland::set_links
   # TAIPEI => \&Tournaments::Taipei::set_links
   # TURKEY => \&Tournaments::Turkey::set_links
