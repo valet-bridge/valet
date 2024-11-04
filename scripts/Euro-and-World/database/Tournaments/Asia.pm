@@ -2032,6 +2032,347 @@ my %TOURNAMENTS_ASIA =
     }
   },
 
+  'Yeh Bros Pairs Cup' =>
+  {
+    ORIGIN => 'Invitational',
+    ZONE => 'Southeast Asia',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        CITY => 'Broadbeach Island',
+        COUNTRY => 'Australia',
+        CHAPTERS =>
+        {
+          'C0' =>
+          {
+            YEAR => 2009,
+            DATE_START => '2009-03-02',
+            DATE_END => '2009-03-02'
+          },
+        }
+      },
+    }
+  },
+
+  'Yeh Bros Cup' =>
+  {
+    ORIGIN => 'Invitational',
+    ZONE => 'Southeast Asia',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2004' =>
+      {
+        # Not present in data
+        CITY => 'Beijing',
+        COUNTRY => 'China',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2004,
+            DATE_START => '2004-04-23',
+            DATE_END => '2004-04-25'
+          }
+        }
+      },
+      '2006' =>
+      {
+        CITY => 'Kaohsiung',
+        COUNTRY => 'Taiwan',
+        CHAPTERS =>
+        {
+          'C0' =>
+          {
+            YEAR => 2006,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2006-03-18',
+            DATE_END => '2006-03-18'
+          },
+          'C1' =>
+          {
+            YEAR => 2006,
+            STAGE => 'Knock-out',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2006-03-18',
+            DATE_END => '2006-03-19'
+          },
+          'C2' =>
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2006-03-19',
+            DATE_END => '2006-03-19'
+          }
+        }
+      },
+      '2007' =>
+      {
+        CITY => 'Shenzhen',
+        COUNTRY => 'China',
+        CHAPTERS =>
+        {
+          'C0' =>
+          {
+            YEAR => 2007,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2007-03-01',
+            DATE_END => '2007-03-02'
+          },
+          'C1' =>
+          {
+            YEAR => 2007,
+            STAGE => 'Knock-out',
+            major => 'SEGMENT',
+            DATE_START => '2007-03-03',
+            DATE_END => '2007-03-04'
+          },
+          'C2' =>
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-03-04',
+            DATE_END => '2007-03-04'
+          }
+        }
+      },
+      '2008' =>
+      {
+        CITY => 'Kaohsiung',
+        COUNTRY => 'Taiwan',
+        CHAPTERS =>
+        {
+          'C0' =>
+          {
+            YEAR => 2008,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2008-02-13',
+            DATE_END => '2008-02-15'
+          },
+          'C1' =>
+          {
+            YEAR => 2008,
+            STAGE => 'Knock-out',
+            major => 'SEGMENT',
+            minor => 'HALF',
+            DATE_START => '2008-02-16',
+            DATE_END => '2008-02-16'
+          },
+          'C2' =>
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-02-17',
+            DATE_END => '2008-02-17'
+          }
+        }
+      },
+      '2009' =>
+      {
+        CITY => 'Broadbeach Island',
+        COUNTRY => 'Australia',
+        CHAPTERS =>
+        {
+          'C0' =>
+          {
+            YEAR => 2009,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2009-02-25',
+            DATE_END => '2009-02-27'
+          },
+          'C1' =>
+          {
+            YEAR => 2009,
+            STAGE => 'Knock-out',
+            major => 'MATCH',
+            minor => 'SEGMENT',
+            DATE_START => '2009-02-27',
+            DATE_END => '2009-03-01'
+          },
+          'C2' =>
+          {
+            YEAR => 2009,
+            MOVEMENT => 'Triangle',
+            major => 'MATCH',
+            minor => 'SEGMENT',
+            DATE_START => '2009-02-28',
+            DATE_END => '2009-03-01'
+          },
+          'C3' =>
+          {
+            YEAR => 2009,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2009-03-01',
+            DATE_END => '2009-03-02'
+          },
+          'C4' =>
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-03-01',
+            DATE_END => '2009-03-02'
+          }
+        }
+      },
+      '2011' =>
+      {
+        CITY => 'Wuxi',
+        COUNTRY => 'China',
+        CHAPTERS =>
+        {
+          'C0' =>
+          {
+            YEAR => 2011,
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2011-04-17',
+            DATE_END => '2011-04-19'
+          },
+          'C1' =>
+          {
+            YEAR => 2011,
+            STAGE => 'Knock-out',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2011-04-19',
+            DATE_END => '2011-04-21'
+          },
+          'C2' =>
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-04-19',
+            DATE_END => '2011-04-21'
+          }
+        }
+      },
+      '2013' =>
+      {
+        CITY => 'Yokohama',
+        COUNTRY => 'Japan',
+        CHAPTERS =>
+        {
+          'C0' =>
+          {
+            YEAR => 2013,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2013-04-22',
+            DATE_END => '2013-04-23'
+          },
+          'C1' =>
+          {
+            YEAR => 2013,
+            STAGE => 'Knock-out',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2013-04-23',
+            DATE_END => '2013-04-25'
+          },
+          'C2' =>
+          {
+            YEAR => 2013,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2013-04-23',
+            DATE_END => '2013-04-26'
+          },
+          'C3' =>
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-04-23',
+            DATE_END => '2013-04-26'
+          }
+        }
+      },
+      '2015' =>
+      {
+        CITY => 'Shanghai',
+        COUNTRY => 'China',
+        CHAPTERS =>
+        {
+          'C0' =>
+          {
+            YEAR => 2015,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2015-04-08',
+            DATE_END => '2015-04-09'
+          },
+          'C1' =>
+          {
+            YEAR => 2015,
+            STAGE => 'Knock-out',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2015-04-10',
+            DATE_END => '2015-04-11'
+          },
+          'C2' =>
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-04-12',
+            DATE_END => '2015-04-12'
+          }
+        }
+      },
+      '2017' =>
+      {
+        CITY => 'Tokyo',
+        COUNTRY => 'Japan',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2017,
+            DATE_START => '2017-07-03',
+            DATE_END => '2017-07-03'
+          }
+        }
+      },
+      '2018' =>
+      {
+        CITY => 'Beijing',
+        COUNTRY => 'China',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-07-01',
+            DATE_END => '2018-07-05'
+          }
+        }
+      },
+    }
+  },
+
 );
 
 

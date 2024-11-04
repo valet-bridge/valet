@@ -1771,6 +1771,34 @@ my %TOURNAMENTS_FRANCE =
     }
   },
 
+  'Shield of Thoisy' =>
+  {
+    ORIGIN => 'International',
+    CITY => 'Thoisy',
+    COUNTRY => 'France',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2013,
+            major => 'STANZA',
+            DATE_START => '2013-08-23',
+            DATE_END => '2013-08-25'
+          }
+        }
+      },
+    }
+  },
 
 );
 

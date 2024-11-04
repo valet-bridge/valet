@@ -111,6 +111,7 @@ my @MULTI_WORDS =
   'BFAME Senior Teams',
   'BFAME Women Teams',
   'Pan Arab Inter-Club Championship',
+  'Yeh Bros Cup',
 
   # AUSTRALIA
   'Altman Swiss Pairs',
@@ -400,6 +401,7 @@ my @MULTI_WORDS =
   'French Senior Trials',
   'French U28 Trials',
   'French Women Trials',
+  'Shield of Thoisy',
 
   # GERMANY
   'Bonn Nations Cup',
@@ -699,6 +701,7 @@ my @MULTI_WORDS =
 
   # POLAND
   'Andrzej Wilkosz Memorial Pairs',
+  'Bermuda Triangle Cup',
   'bridge24.pl Trophy',
   'Forest Trophy',
   'Grand Prix of Poland Pairs',
@@ -766,6 +769,7 @@ my @MULTI_WORDS =
   'Romanian Open Trials',
 
   # RUSSIA
+  'BKBT Teams',
   'Moscow Sunday Times Pairs',
   'Moscow Sunday Times Teams',
   'NN Cup',
@@ -814,6 +818,21 @@ my @MULTI_WORDS =
   'Spanish Open Teams',
   'Spanish Open Trials',
   'Spanish Senior Trials',
+
+  # SUPRA
+  'Buffett Cup Individual',
+  'Cavendish Pairs',
+  'Cavendish Teams',
+  'Channel Girls Trophy',
+  'Channel Juniors Trophy',
+  'Channel Schools Trophy',
+  'Computer World Championship',
+  'Neighbor Challenge IMP Pairs',
+  'Neighbor Challenge Open Teams',
+  'Neighbor Challenge Women Teams',
+  'NYSA Euroregion Nations Cup',
+  'Stern-Cornell Trophy',
+  'Paris Youth Open Teams',
 
   # SWEDEN
   "Chairman's Cup",
@@ -989,27 +1008,6 @@ my @MULTI_WORDS =
   'WMG Women Individual',
   'WMG Women Pairs',
   'WMG Women Teams',
-
-  # ----------------------------------------------------
-
-  # Supra
-  'Bermuda Triangle Cup', # Poland
-  'BKBT Teams', # Russia
-  'Buffett Cup Individual',
-  'Cavendish Pairs',
-  'Cavendish Teams',
-  'Channel Girls Trophy',
-  'Channel Juniors Trophy',
-  'Channel Schools Trophy',
-  'Computer World Championship',
-  'Neighbor Challenge IMP Pairs',
-  'Neighbor Challenge Open Teams',
-  'Neighbor Challenge Women Teams',
-  'NYSA Euroregion Nations Cup',
-  'Shield of Thoisy', # France
-  'Stern-Cornell Trophy',
-  'Yeh Bros Cup', # Asia
-  'Paris Youth Open Teams',
 
   # ----------------------------------------------------
 

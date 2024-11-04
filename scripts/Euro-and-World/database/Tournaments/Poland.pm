@@ -1510,6 +1510,52 @@ my %TOURNAMENTS_POLAND =
     }
   },
 
+  'Bermuda Triangle Cup' =>
+  {
+    ORGANIZATION => 'PZBS',
+    COUNTRY => 'Poland',
+    ORIGIN => 'International',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2007' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' =>
+          {
+            YEAR => 2007,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2007-04-21',
+            DATE_END => '2007-04-21'
+          },
+          'C1' =>
+          {
+            YEAR => 2007,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-04-22',
+            DATE_END => '2007-04-22'
+          },
+          'C2' =>
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-04-22',
+            DATE_END => '2007-04-22'
+          }
+        }
+      },
+    }
+  },
+
   'bridge24.pl Trophy' =>
   {
     ORGANIZATION => 'PZBS',

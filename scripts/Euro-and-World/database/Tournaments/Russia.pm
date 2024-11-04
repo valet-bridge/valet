@@ -34,6 +34,60 @@ my %MEETS_RUSSIA =
 
 my %TOURNAMENTS_RUSSIA =
 (
+  'BKBT Teams' =>
+  {
+    # Unclear
+    ORGANIZATION => 'RBL',
+    COUNTRY => 'Russia',
+    ORIGIN => 'International',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2005' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' =>
+          {
+            YEAR => 2005,
+            major => 'ROUND',
+            DATE_START => '2005-02-03',
+            DATE_END => '2005-02-04'
+          },
+          'C1' =>
+          {
+            YEAR => 2005,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2005-02-05',
+            DATE_END => '2005-02-05'
+          },
+          'C2' =>
+          {
+            YEAR => 2005,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2005-02-07',
+            DATE_END => '2005-02-07'
+          },
+          'C3' =>
+          {
+            YEAR => 2005,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2005-02-08',
+            DATE_END => '2005-02-08'
+          }
+        }
+      },
+    }
+  },
+
   'Moscow Sunday Times Pairs',
   {
     ORGANIZATION => 'RBL',
