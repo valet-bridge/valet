@@ -54,9 +54,11 @@ my @MULTI_WORDS =
   'Bodrum Peninsula Festival',
   'Brasov Festival',
   'Brazilian Trials',
+  'Buffett Cup',
   'Cairo Bridge Festival',
   'Canadian Bridge Championships',
   'Cappadocia Fairy Chimneys Festival',
+  'Channel Trophy',
   'Copenhagen Invitational',
   'Crete Bridge Festival',
   'Danish Bridge Festival',
@@ -111,6 +113,7 @@ my @MULTI_WORDS =
   'Monaco International Festival',
   'Mondial de Deauville',
   'Moscow Sunday Times',
+  'Neighbor Challenge',
   'New Zealand Trials',
   'Nordic Junior Championship',
   'Nordic Team Championship',
@@ -257,8 +260,10 @@ my %MULTI_TYPOS =
   'Brazilian Trials' => [
     'brazilian team trials',
     'brazilian teams trials'],
+  'Buffett Cup' => ['buffet cup', 'bufett cup'],
   'Challenge Match' => [
     'desafio'], 
+  'Channel Trophy' => ['channel trpohy'],
   'Copenhagen Invitational' => ['copenhagen bridge invitational'],
   'Crete Bridge Festival' => ['crete b_ festival'],
   'Dobrich Bridge Festival' => [
@@ -434,6 +439,7 @@ my %MULTI_TYPOS =
     'tournoi des champions barriere'],
   'Moscow Sunday Times' => [
     'russian sunday times'],
+  'Neighbor Challenge' => ['neighbour challenge'],
   'New Zealand Trials' => [
     'nz trials'],
   'Nordic Junior Championship' => [
@@ -621,6 +627,7 @@ my %SINGLE_TYPOS =
   'Australian National Championships' => ['anc'],
   'Australian Summer Festival' => ['sfb', 'sfob'],
   'Bangkok Bridge Festival' => ['bbf', 'bff'],
+  "Buffett Cup" => ['buffett', 'buffet'],
   'Canadian Bridge Championships' => ['cbc'],
   Congress => ['kongres', 'kongresowy'],
   'European National Championships' => ['ec'],

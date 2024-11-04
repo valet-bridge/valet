@@ -11,6 +11,8 @@ package Tags::Organization;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes);
 
+# https://en.wikipedia.org/wiki/List_of_contract_bridge_governing_bodies
+
 my @MULTI_WORDS =
 (
   'Bridge Great Britain',

@@ -993,20 +993,23 @@ my @MULTI_WORDS =
   # ----------------------------------------------------
 
   # Supra
-  'Bermuda Triangle Cup',
-  'BKBT Teams',
-  'Buffett Cup',
+  'Bermuda Triangle Cup', # Poland
+  'BKBT Teams', # Russia
+  'Buffett Cup Individual',
   'Cavendish Pairs',
   'Cavendish Teams',
+  'Channel Girls Trophy',
+  'Channel Juniors Trophy',
+  'Channel Schools Trophy',
   'Computer World Championship',
-  'Channel Trophy', # Europe
-  'Neighbor Challenge',
+  'Neighbor Challenge IMP Pairs',
+  'Neighbor Challenge Open Teams',
+  'Neighbor Challenge Women Teams',
   'NYSA Euroregion Nations Cup',
-  'Shield of Thoisy',
-  'Stern-Cornell Trophy', # Australia - New Zealand
-  'Yeh Bros Cup',
+  'Shield of Thoisy', # France
+  'Stern-Cornell Trophy',
+  'Yeh Bros Cup', # Asia
   'Paris Youth Open Teams',
-  'Spring Nationals', # Many probably Australian
 
   # ----------------------------------------------------
 
@@ -1169,11 +1172,13 @@ my %MULTI_TYPOS =
     'aust spring seniors', 
     'australian spring seniors',
     'australian spring seniors teams',
-    'snot seniors'],
+    'snot seniors',
+    'spring national senior teams'],
   'Australian Spring Women Teams' => [
     "australian spring women's teams",
     'australian spring womens',
-    'snot womens'],
+    'snot womens',
+    'spring national women teams'],
   'Australian Women Teams' => [
     'aust women open team',
     "aust women's team",
@@ -1284,7 +1289,6 @@ my %MULTI_TYPOS =
 
   'bridge24.pl Trophy' => ['bridge24_pl trophy'],
   'British Gold Cup' => ['gold cup', 'british gold'],
-  'Buffett Cup' => ['buffet cup', 'bufett cup'],
 
   # BULGARIA
   'Bulgarian Open Pairs' => [
@@ -1358,7 +1362,8 @@ my %MULTI_TYPOS =
     'champion cup', 
     "champion'scup", 
     "champions'cup"],
-  'Channel Trophy' => ['channel trpohy'],
+  'Channel Girls Trophy' => ['channel trophy girls'],
+  'Channel Schools Trophy' => ['channel trophy schools'],
   'Cherven Briag Open Teams' => [
     'cherven briag',
     'cherven briag national tournament',
@@ -2337,7 +2342,6 @@ my %MULTI_TYPOS =
     'necmettin sunget teams',
     'necmettin sünget dörtlü',
     'necmettin sünget dörtlü takýmlar'],
-  'Neighbor Challenge' => ['neighbour challenge'],
   'New South Wales Open Teams' => [
     'new south wales state teams',
     'nsw open teams',
@@ -2931,8 +2935,12 @@ my %MULTI_TYPOS =
     'spring 4s', 
     'spring fours', 
     'schapirosfs'],
-  'Spring Nationals' => ['spring nat', 'spring national', 'spring nats',
-    'sping national', 'spring nat opens'],
+  'Spring Nationals' => [
+    'spring nat', 
+    'spring national', 
+    'spring nats',
+    'sping national', 
+    'spring nat opens'],
   'SPS Trophy' => ['lojdy cup', 'sps construction trophy'],
   'Staszek Wybranowski Memorial' => ['memorial staszka wybranowskiego'],
   'Stara Zagora Open Teams' => ['vito teams'],
@@ -3380,7 +3388,6 @@ my %SINGLE_TYPOS =
   'Bermuda Bowl' => ['bb'],
   'Bobby Evans Seniors Teams' => ['best'],
   'Brazilian Open Teams' => ['brasilchamp'],
-  "Buffett Cup" => ['buffett', 'buffet'],
   'Camrose Trophy' => ['camrose', 'camroae', 'ccmrose'],
   'Canadian National Teams Championship' => ['cntc'],
   'Canadian Seniors Teams Championship' => ['cstc', 'cnst'],
