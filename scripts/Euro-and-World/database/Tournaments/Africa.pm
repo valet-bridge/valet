@@ -20,8 +20,6 @@ my %MEETS_AFRICA =
     ZONE => 'Africa',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
 
     EDITIONS => 
     {

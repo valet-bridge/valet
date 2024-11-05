@@ -582,9 +582,6 @@ my %TOURNAMENTS_BRAZIL =
     {
       '2007' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 

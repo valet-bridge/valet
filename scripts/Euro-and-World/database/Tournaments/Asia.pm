@@ -1634,14 +1634,14 @@ my %TOURNAMENTS_ASIA =
             YEAR => 2009,
             major => 'ROUND',
             DATE_START => '2009-12-07',
-            DATE_END => '2009-12-09'
+            DATE_END => '2009-12-08'
           },
           'C2' => 
           {
             YEAR => 2009,
             STAGE => 'Final',
             major => 'ROUND',
-            DATE_START => '2009-12-08',
+            DATE_START => '2009-12-09',
             DATE_END => '2009-12-09'
           } 
         }

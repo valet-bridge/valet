@@ -183,6 +183,22 @@ my %MEETS_SUPRA =
         DATE_START => '2013-10-21',
         DATE_END => '2013-10-25'
       },
+      '2014' =>
+      {
+        CITY => 'Monte Carlo',
+        COUNTRY => 'Monaco',
+        YEAR => 2014,
+        DATE_START => '2014-09-01',
+        DATE_END => '2014-09-05'
+      },
+      '2015' =>
+      {
+        CITY => 'Monte Carlo',
+        COUNTRY => 'Monaco',
+        YEAR => 2015,
+        DATE_START => '2015-10-19',
+        DATE_END => '2015-10-23'
+      },
     }
   },
 
@@ -476,7 +492,7 @@ my %TOURNAMENTS_SUPRA =
     }
   },
 
-  'Cavendish Pairs' =>
+  'Cavendish Open Pairs' =>
   {
     FORM => 'Pairs',
     GENDER => 'Open',
@@ -681,12 +697,20 @@ my %TOURNAMENTS_SUPRA =
         SCORING => 'IMP',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
             STAGE => 'Qualifying',
             major => 'SESSION',
             DATE_START => '2012-10-17',
+            DATE_END => '2012-10-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2012-10-18',
             DATE_END => '2012-10-18'
           } 
         }
@@ -697,139 +721,70 @@ my %TOURNAMENTS_SUPRA =
         SCORING => 'MP',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
             major => 'ROUND',
-            DATE_START => '2013-10-24',
+            DATE_START => '2013-10-23',
             DATE_END => '2013-10-24'
-          } 
-        }
-      },
-    }
-  },
-
-  'Neighbor Challenge IMP Pairs' =>
-  {
-    FORM => 'Pairs',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2014' =>
-      {
-        MEET => 'Neighbor Challenge',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2014,
-            DATE_START => '2014-04-25',
-            DATE_END => '2014-04-27'
-          } 
-        }
-      },
-    }
-  },
-
-  'Neighbor Challenge Open Teams' =>
-  {
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2013' =>
-      {
-        MEET => 'Neighbor Challenge',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
+          },
+          'C1' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
-            major => 'ROUND',
-            DATE_START => '2013-04-27',
-            DATE_END => '2013-04-28'
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2013-10-25',
+            DATE_END => '2013-10-25'
           } 
         }
       },
       '2014' =>
       {
-        MEET => 'Neighbor Challenge',
+        MEET => 'Cavendish Invitational',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
-            major => 'ROUND',
-            DATE_START => '2014-04-25',
-            DATE_END => '2014-04-27'
+            major => 'SESSION',
+            DATE_START => '2014-09-03',
+            DATE_END => '2014-09-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2014-09-05',
+            DATE_END => '2014-09-05'
           } 
         }
       },
       '2015' =>
       {
-        MEET => 'Neighbor Challenge',
+        MEET => 'Cavendish Invitational',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
-            major => 'ROUND',
-            DATE_START => '2015-03-28',
-            DATE_END => '2015-03-29'
+            STAGE => 'Qualifying',
+            major => 'SESSION',
+            DATE_START => '2015-10-21',
+            DATE_END => '2015-10-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2015-10-23',
+            DATE_END => '2015-10-23'
           } 
         }
       },
     }
   },
-
-  'Neighbor Challenge Women Teams' =>
-  {
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Women',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2014' =>
-      {
-        MEET => 'Neighbor Challenge',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2014,
-            major => 'ROUND',
-            DATE_START => '2014-04-25',
-            DATE_END => '2014-04-27'
-          } 
-        }
-      },
-      '2015' =>
-      {
-        MEET => 'Neighbor Challenge',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2015,
-            major => 'MATCH',
-            DATE_START => '2015-03-28',
-            DATE_END => '2015-03-29'
-          } 
-        }
-      },
-    }
-  },
-
-  # --- "DONE" ---
 
   'Cavendish Teams' =>
   {
@@ -1020,11 +975,174 @@ my %TOURNAMENTS_SUPRA =
         MEET => 'Cavendish Invitational',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            major => 'ROUND',
             DATE_START => '2013-10-21',
+            DATE_END => '2013-10-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2013-10-22',
+            DATE_END => '2013-10-22'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-10-22',
+            DATE_END => '2013-10-22'
+          } 
+        }
+      },
+      '2014A' =>
+      {
+        MEET => 'Cavendish Invitational',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2014-09-01',
+            DATE_END => '2014-09-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-09-02',
+            DATE_END => '2014-09-02'
+          } 
+        }
+      },
+      '2014B' =>
+      {
+        MEET => 'Cavendish Invitational',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-09-06',
+            DATE_END => '2014-09-06'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Cavendish Invitational',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2015-10-19',
+            DATE_END => '2015-10-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Consolation',
+            major => 'ROUND',
+            DATE_START => '2015-10-20',
+            DATE_END => '2015-10-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-10-20',
+            DATE_END => '2015-10-20'
+          } 
+        }
+      },
+    }
+  },
+
+  'Cavendish Women Pairs' =>
+  {
+    FORM => 'Pairs',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        MEET => 'Cavendish Invitational',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            major => 'ROUND',
+            DATE_START => '2013-10-23',
+            DATE_END => '2013-10-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2013-10-25',
             DATE_END => '2013-10-25'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Cavendish Invitational',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            major => 'SESSION',
+            DATE_START => '2014-09-03',
+            DATE_END => '2014-09-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2014-09-05',
+            DATE_END => '2014-09-05'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Cavendish Invitational',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Qualifying',
+            major => 'SESSION',
+            DATE_START => '2015-10-21',
+            DATE_END => '2015-10-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2015-10-23',
+            DATE_END => '2015-10-23'
           } 
         }
       },
@@ -1352,6 +1470,126 @@ my %TOURNAMENTS_SUPRA =
             major => 'SEGMENT',
             DATE_START => '2008-07-25',
             DATE_END => '2008-07-25'
+          } 
+        }
+      },
+    }
+  },
+
+  'Neighbor Challenge IMP Pairs' =>
+  {
+    FORM => 'Pairs',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        MEET => 'Neighbor Challenge',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-04-25',
+            DATE_END => '2014-04-27'
+          } 
+        }
+      },
+    }
+  },
+
+  'Neighbor Challenge Open Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        MEET => 'Neighbor Challenge',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2013-04-27',
+            DATE_END => '2013-04-28'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Neighbor Challenge',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'ROUND',
+            DATE_START => '2014-04-25',
+            DATE_END => '2014-04-27'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Neighbor Challenge',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'ROUND',
+            DATE_START => '2015-03-28',
+            DATE_END => '2015-03-29'
+          } 
+        }
+      },
+    }
+  },
+
+  'Neighbor Challenge Women Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        MEET => 'Neighbor Challenge',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'ROUND',
+            DATE_START => '2014-04-25',
+            DATE_END => '2014-04-27'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Neighbor Challenge',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'MATCH',
+            DATE_START => '2015-03-28',
+            DATE_END => '2015-03-29'
           } 
         }
       },

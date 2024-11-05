@@ -18,20 +18,32 @@ my $VERBOSE = 1;
 
 # Parse the raw output of cook.pl
 # Recognize and check tournaments
+# Optional second element is number or e.g. AFRICA (see ParseT.pm).
 
 die "perl digest.pl cooked.txt" unless ($#ARGV == 0 || $#ARGV == 1);
 my $file = $ARGV[0];
 
 my $debug_flag = 0;
 my $debug_bbono;
+my $division_flag = 0;
+my $debug_division;
+
 if ($#ARGV == 1)
 {
-  $debug_flag = 1;
-  $debug_bbono = $ARGV[1];
+  if ($ARGV[1] =~ /^\d+$/)
+  {
+    $debug_flag = 1;
+    $debug_bbono = $ARGV[1];
+  }
+  else
+  {
+    $division_flag = 1;
+    $debug_division = $ARGV[1];
+  }
 }
 
 my $parseT = ParseT->new();
-$parseT->init_links();
+$parseT->init_links($debug_division, $division_flag);
 
 open my $fh, '<', $file or die "Cannot read tfile: $!";
 
@@ -39,6 +51,7 @@ my $num_matches = 0;
 my %hist_matches;
 
 my %data;
+my (@times, $t0);
 
 my $entryT = EntryT->new();
 while ($entryT->read($fh))
@@ -69,12 +82,16 @@ while ($entryT->read($fh))
   }
 
   # Kludge.
+  $t0 = time();
   $entryT->fix_some_fields();
+  $times[0] += time() - $t0;
 
   # This could set tname if it was previously unset!
   my ($edition, $chapter);
+  $t0 = time();
   ($tname, $edition, $chapter) =
     $parseT->get_edition_and_chapter($meet, $tname, $entryT, $debug_flag);
+  $times[1] += time() - $t0;
 
   if ($debug_flag)
   {
@@ -90,13 +107,19 @@ while ($entryT->read($fh))
     next;
   }
 
+  $t0 = time();
   my ($header_entry, $chapter_entry) = 
     $parseT->set_header_entry($tname, $edition, $chapter);
+  $times[2] += time() - $t0;
 
+  $t0 = time();
   $entryT->prune_using($header_entry, $chapter_entry);
+  $times[3] += time() - $t0;
 
+  $t0 = time();
   $entryT->update_tournaments(\%data, $tname, $edition, $chapter,
     $header_entry, $chapter_entry);
+  $times[4] += time() - $t0;
 
   $num_matches++;
   $hist_matches{$tname}++;
@@ -104,6 +127,13 @@ while ($entryT->read($fh))
 
 close $fh;
 exit if $debug_flag;
+
+# for my $i (0 .. $#times)
+# {
+  # printf "Time $i: %.3f seconds\n", $times[$i];
+# }
+# $parseT->print_times();
+exit;
 
 for my $date_start (sort keys %data)
 {
@@ -157,5 +187,5 @@ for my $key (sort keys %hist_matches)
 }
 
 print '-' x 48 . "\n";
-printf("%-43s %4d\n", "Number of matches", $num_matches);
+printf("%-42s %5d\n", "Number of matches", $num_matches);
 

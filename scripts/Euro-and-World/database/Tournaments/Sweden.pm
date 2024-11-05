@@ -1826,6 +1826,7 @@ my %TOURNAMENTS_SWEDEN =
       },
       '2013' =>
       {
+        # https://arkiv.svenskbridge.se/e107_plugins/content/content.php?content.2836
         SCORING => 'IMP',
         CHAPTERS =>
         {

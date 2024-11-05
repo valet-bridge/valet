@@ -236,6 +236,7 @@ my %TOURNAMENTS_ROMANIA =
             YEAR => 2011,
             STAGE => 'Semifinal',
             major => 'SEGMENT',
+            minor => 'MATCH',
             DATE_START => '2011-06-10',
             DATE_END => '2011-06-12'
           },

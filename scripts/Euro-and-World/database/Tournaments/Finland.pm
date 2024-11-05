@@ -1029,6 +1029,36 @@ my %TOURNAMENTS_FINLAND =
     }
   },
 
+  'Vadsø Open Pairs' =>
+  {
+    ORGANIZATION => 'SBL',
+    COUNTRY => 'Finland',
+    CITY => 'Vadsø',
+    ORIGIN => 'International',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2008' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            major => 'ROUND',
+            DATE_START => '2008-11-05',
+            DATE_END => '2008-11-05'
+          } 
+        }
+      },
+    }
+  },
+
 );
 
 

@@ -54,6 +54,7 @@ my %TOURNAMENTS_CENTRALAMERICA =
           'C0' => 
           {
             YEAR => 2007,
+            STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2007-05-29',
             DATE_END => '2007-05-29'

@@ -2149,19 +2149,26 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2007-12-14',
+            DATE_END => '2007-12-14'
+          },
+          'C1' =>
+          {
             STAGE => 'Quarterfinal',
             major => 'SEGMENT',
             DATE_START => '2007-12-14',
             DATE_END => '2007-12-15'
           },
-          'C1' =>
+          'C2' =>
           {
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2007-12-15',
             DATE_END => '2007-12-15'
           },
-          'C2' =>
+          'C3' =>
           {
             STAGE => 'Final',
             major => 'SEGMENT',

@@ -1,9 +1,15 @@
-Channel Trophy:
-Make a Meet
+Back up overrides.txt
+Flag matches with both dist == 0
 
-Make individual files of Tname and Meet
-Make country selectable from command line?
-Be able to run with all countries at the same time
+digest.pl: 
+- At least it runs now, but very slow: Profile
+- 8 warnings
+- Fix issues
+- Optional last argument country, otherwise run all
+
+cook.pl:
+- Make individual files of Tname and Meet
+
 Should be already map Juniors to U26?
 
 Consistencies:
@@ -26,37 +32,6 @@ Need to set the Age from Girls to Juniors, but Token is not passed in
 
 India:
 Retest India, looking for Winter Nationals
-
-  'Nordic Race',
-  {
-    ORGANIZATION => 'NBU',
-    ORIGIN => 'International',
-    ZONE => 'Europe',
-    FORM => 'Pairs',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2013' =>
-      {
-        # https://arkiv.svenskbridge.se/e107_plugins/content/content.php?content.2836
-        # This is a Swedish qualification tournament!
-        MEET => 'Meet name',
-
-        CHAPTERS =>
-        {
-          'SINGLE' =>
-          {
-            YEAR => 2013,
-            DATE_START => '2013-04-05',
-            DATE_END => '2013-04-07'
-          }
-        }
-      },
-    }
-  },
 
 USA:
 Reisinger mostly OK, but Semifinal 2015: SESSION, SEGMENT

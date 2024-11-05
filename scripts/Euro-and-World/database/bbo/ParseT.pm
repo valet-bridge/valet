@@ -7,6 +7,7 @@ use warnings;
 use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
+use Time::HiRes qw(time);
 
 use lib '.';
 use lib '..';
@@ -14,148 +15,151 @@ use lib '..';
 use DateCalc;
 use EntryT;
 
-# use Tournaments::Friendly;
+use Tournaments::Friendly;
 
-# use Tournaments::Africa;
-# use Tournaments::Argentina;
-# use Tournaments::Asia;
-# use Tournaments::Australia;
-# use Tournaments::Austria;
-# use Tournaments::Balkan;
-# use Tournaments::Baltic;
-# use Tournaments::Belarus;
-# use Tournaments::Belgium;
-# use Tournaments::Bolivia;
-# use Tournaments::Brazil;
-# use Tournaments::Bulgaria;
-# use Tournaments::Canada;
-# use Tournaments::CentralAmerica;
-# use Tournaments::Chile;
-# use Tournaments::China;
-# use Tournaments::Czech;
-# use Tournaments::Croatia;
-# use Tournaments::Denmark;
-# use Tournaments::Ecuador;
-# use Tournaments::Egypt;
-# use Tournaments::EuroAdult;
-# use Tournaments::EuroYouth;
-# use Tournaments::Faroe;
-# use Tournaments::Finland;
-# use Tournaments::France;
-# use Tournaments::Germany;
-# use Tournaments::Greece;
-# use Tournaments::HongKong;
-# use Tournaments::Hungary;
-# use Tournaments::Iceland;
-# use Tournaments::India;
-# use Tournaments::Indonesia;
-# use Tournaments::Ireland;
-# use Tournaments::Israel;
-# use Tournaments::Italy;
-# use Tournaments::Japan;
-# use Tournaments::Jordan;
-# use Tournaments::Lebanon;
-# use Tournaments::MiddleEast;
-# use Tournaments::Monaco;
-# use Tournaments::Netherlands;
-# use Tournaments::NewZealand;
-# use Tournaments::Nordic;
-# use Tournaments::Norway;
-# use Tournaments::Pakistan;
-# use Tournaments::Poland;
-# use Tournaments::Portugal;
-# use Tournaments::Romania;
-# use Tournaments::Russia;
-# use Tournaments::Serbia;
-# use Tournaments::Slovakia;
-# use Tournaments::Singapore;
-# use Tournaments::SouthAfrica;
-# use Tournaments::SouthAmerica;
-# use Tournaments::Spain;
+use Tournaments::Africa;
+use Tournaments::Argentina;
+use Tournaments::Asia;
+use Tournaments::Australia;
+use Tournaments::Austria;
+use Tournaments::Balkan;
+use Tournaments::Baltic;
+use Tournaments::Belarus;
+use Tournaments::Belgium;
+use Tournaments::Bolivia;
+use Tournaments::Brazil;
+use Tournaments::Bulgaria;
+use Tournaments::Canada;
+use Tournaments::CentralAmerica;
+use Tournaments::Chile;
+use Tournaments::China;
+use Tournaments::Czech;
+use Tournaments::Croatia;
+use Tournaments::Denmark;
+use Tournaments::Ecuador;
+use Tournaments::Egypt;
+use Tournaments::EuroAdult;
+use Tournaments::EuroYouth;
+use Tournaments::Faroe;
+use Tournaments::Finland;
+use Tournaments::France;
+use Tournaments::Germany;
+use Tournaments::Greece;
+use Tournaments::HongKong;
+use Tournaments::Hungary;
+use Tournaments::Iceland;
+use Tournaments::India;
+use Tournaments::Indonesia;
+use Tournaments::Ireland;
+use Tournaments::Israel;
+use Tournaments::Italy;
+use Tournaments::Japan;
+use Tournaments::Jordan;
+use Tournaments::Lebanon;
+use Tournaments::MiddleEast;
+use Tournaments::Monaco;
+use Tournaments::Netherlands;
+use Tournaments::NewZealand;
+use Tournaments::Nordic;
+use Tournaments::Norway;
+use Tournaments::Pakistan;
+use Tournaments::Poland;
+use Tournaments::Portugal;
+use Tournaments::Romania;
+use Tournaments::Russia;
+use Tournaments::Serbia;
+use Tournaments::Slovakia;
+use Tournaments::Singapore;
+use Tournaments::SouthAfrica;
+use Tournaments::SouthAmerica;
+use Tournaments::Spain;
 use Tournaments::Supra;
-# use Tournaments::Sweden;
-# use Tournaments::Switzerland;
-# use Tournaments::Taipei;
-# use Tournaments::Turkey;
-# use Tournaments::UK;
-# use Tournaments::USA;
-# use Tournaments::Venezuela;
-# use Tournaments::World;
+use Tournaments::Sweden;
+use Tournaments::Switzerland;
+use Tournaments::Taipei;
+use Tournaments::Turkey;
+use Tournaments::UK;
+use Tournaments::USA;
+use Tournaments::Venezuela;
+use Tournaments::World;
 
 
 my %DIVISIONS =
 (
-  # FRIENDLY => \&Tournaments::Friendly::set_links
+  FRIENDLY => \&Tournaments::Friendly::set_links,
   
-  # AFRICA => \&Tournaments::Africa::set_links
-  # ARGENTINA => \&Tournaments::Argentina::set_links
-  # ASIA => \&Tournaments::Asia::set_links
-  # AUSTRALIA => \&Tournaments::Australia::set_links
-  # AUSTRIA => \&Tournaments::Austria::set_links
-  # BALKAN => \&Tournaments::Balkan::set_links
-  # BALTIC => \&Tournaments::Baltic::set_links
-  # BELARUS => \&Tournaments::Belarus::set_links
-  # BELGIUM => \&Tournaments::Belgium::set_links
-  # BOLIVIA => \&Tournaments::Bolivia::set_links
-  # BRAZIL => \&Tournaments::Brazil::set_links
-  # BULGARIA => \&Tournaments::Bulgaria::set_links
-  # CANADA => \&Tournaments::Canada::set_links
-  # CENTRALAMERICA => \&Tournaments::CentralAmerica::set_links
-  # CHILE => \&Tournaments::Chile::set_links
-  # CHINA => \&Tournaments::China::set_links
-  # CZECH => \&Tournaments::Czech::set_links
-  # CROATIA => \&Tournaments::Croatia::set_links
-  # DENMARK => \&Tournaments::Denmark::set_links
-  # ECUADOR => \&Tournaments::Ecuador::set_links
-  # EGYPT => \&Tournaments::Egypt::set_links
-  # EUROADULT => \&Tournaments::EuroAdult::set_links
-  # EUROYOUTH => \&Tournaments::EuroYouth::set_links
-  # FAROE => \&Tournaments::Faroe::set_links
-  # FINLAND => \&Tournaments::Finland::set_links
-  # FRANCE => \&Tournaments::France::set_links
-  # GERMANY => \&Tournaments::Germany::set_links
-  # GREECE => \&Tournaments::Greece::set_links
-  # HONGKONG => \&Tournaments::HongKong::set_links
-  # HUNGARY => \&Tournaments::Hungary::set_links
-  # ICELAND => \&Tournaments::Iceland::set_links
-  # INDIA => \&Tournaments::India::set_links
-  # INDONESIA => \&Tournaments::Indonesia::set_links
-  # IRELAND => \&Tournaments::Ireland::set_links
-  # ISRAEL => \&Tournaments::Israel::set_links
-  # ITALY => \&Tournaments::Italy::set_links
-  # JAPAN => \&Tournaments::Japan::set_links
-  # JORDAN => \&Tournaments::Jordan::set_links
-  # LEBANON => \&Tournaments::Lebanon::set_links
-  # MIDDLEEAST => \&Tournaments::MiddleEast::set_links
-  # MONACO => \&Tournaments::Monaco::set_links
-  # NETHERLANDS => \&Tournaments::Netherlands::set_links
-  # NEWZEALAND => \&Tournaments::NewZealand::set_links
-  # NORDIC => \&Tournaments::Nordic::set_links
-  # NORWAY => \&Tournaments::Norway::set_links
-  # PAKISTAN => \&Tournaments::Pakistan::set_links
-  # POLAND => \&Tournaments::Poland::set_links
-  # PORTUGAL => \&Tournaments::Portugal::set_links
-  # ROMANIA => \&Tournaments::Romania::set_links
-  # RUSSIA => \&Tournaments::Russia::set_links
-  # SERBIA => \&Tournaments::Serbia::set_links
-  # SINGAPORE => \&Tournaments::Singapore::set_links
-  # SLOVAKIA => \&Tournaments::Slovakia::set_links
-  # SOUTHAFRICA => \&Tournaments::SouthAfrica::set_links
-  # SOUTHAMERICA => \&Tournaments::SouthAmerica::set_links
-  # SPAIN => \&Tournaments::Spain::set_links
-  SUPRA => \&Tournaments::Supra::set_links
-  # SWEDEN => \&Tournaments::Sweden::set_links
-  # SWITZERLAND => \&Tournaments::Switzerland::set_links
-  # TAIPEI => \&Tournaments::Taipei::set_links
-  # TURKEY => \&Tournaments::Turkey::set_links
-  # UK => \&Tournaments::UK::set_links
-  # USA => \&Tournaments::USA::set_links
-  # VENEZUELA => \&Tournaments::Venezuela::set_links
-  # WORLD => \&Tournaments::World::set_links
+  AFRICA => \&Tournaments::Africa::set_links,
+  ARGENTINA => \&Tournaments::Argentina::set_links,
+  ASIA => \&Tournaments::Asia::set_links,
+  AUSTRALIA => \&Tournaments::Australia::set_links,
+  AUSTRIA => \&Tournaments::Austria::set_links,
+  BALKAN => \&Tournaments::Balkan::set_links,
+  BALTIC => \&Tournaments::Baltic::set_links,
+  BELARUS => \&Tournaments::Belarus::set_links,
+  BELGIUM => \&Tournaments::Belgium::set_links,
+  BOLIVIA => \&Tournaments::Bolivia::set_links,
+  BRAZIL => \&Tournaments::Brazil::set_links,
+  BULGARIA => \&Tournaments::Bulgaria::set_links,
+  CANADA => \&Tournaments::Canada::set_links,
+  CENTRALAMERICA => \&Tournaments::CentralAmerica::set_links,
+  CHILE => \&Tournaments::Chile::set_links,
+  CHINA => \&Tournaments::China::set_links,
+  CZECH => \&Tournaments::Czech::set_links,
+  CROATIA => \&Tournaments::Croatia::set_links,
+  DENMARK => \&Tournaments::Denmark::set_links,
+  ECUADOR => \&Tournaments::Ecuador::set_links,
+  EGYPT => \&Tournaments::Egypt::set_links,
+  EUROADULT => \&Tournaments::EuroAdult::set_links,
+  EUROYOUTH => \&Tournaments::EuroYouth::set_links,
+  FAROE => \&Tournaments::Faroe::set_links,
+  FINLAND => \&Tournaments::Finland::set_links,
+  FRANCE => \&Tournaments::France::set_links,
+  GERMANY => \&Tournaments::Germany::set_links,
+  GREECE => \&Tournaments::Greece::set_links,
+  HONGKONG => \&Tournaments::HongKong::set_links,
+  HUNGARY => \&Tournaments::Hungary::set_links,
+  ICELAND => \&Tournaments::Iceland::set_links,
+  INDIA => \&Tournaments::India::set_links,
+  INDONESIA => \&Tournaments::Indonesia::set_links,
+  IRELAND => \&Tournaments::Ireland::set_links,
+  ISRAEL => \&Tournaments::Israel::set_links,
+  ITALY => \&Tournaments::Italy::set_links,
+  JAPAN => \&Tournaments::Japan::set_links,
+  JORDAN => \&Tournaments::Jordan::set_links,
+  LEBANON => \&Tournaments::Lebanon::set_links,
+  MIDDLEEAST => \&Tournaments::MiddleEast::set_links,
+  MONACO => \&Tournaments::Monaco::set_links,
+  NETHERLANDS => \&Tournaments::Netherlands::set_links,
+  NEWZEALAND => \&Tournaments::NewZealand::set_links,
+  NORDIC => \&Tournaments::Nordic::set_links,
+  NORWAY => \&Tournaments::Norway::set_links,
+  PAKISTAN => \&Tournaments::Pakistan::set_links,
+  POLAND => \&Tournaments::Poland::set_links,
+  PORTUGAL => \&Tournaments::Portugal::set_links,
+  ROMANIA => \&Tournaments::Romania::set_links,
+  RUSSIA => \&Tournaments::Russia::set_links,
+  SERBIA => \&Tournaments::Serbia::set_links,
+  SINGAPORE => \&Tournaments::Singapore::set_links,
+  SLOVAKIA => \&Tournaments::Slovakia::set_links,
+  SOUTHAFRICA => \&Tournaments::SouthAfrica::set_links,
+  SOUTHAMERICA => \&Tournaments::SouthAmerica::set_links,
+  SPAIN => \&Tournaments::Spain::set_links,
+  SUPRA => \&Tournaments::Supra::set_links,
+  SWEDEN => \&Tournaments::Sweden::set_links,
+  SWITZERLAND => \&Tournaments::Switzerland::set_links,
+  TAIPEI => \&Tournaments::Taipei::set_links,
+  TURKEY => \&Tournaments::Turkey::set_links,
+  UK => \&Tournaments::UK::set_links,
+  USA => \&Tournaments::USA::set_links,
+  VENEZUELA => \&Tournaments::Venezuela::set_links,
+  WORLD => \&Tournaments::World::set_links
 );
 
-my @MEET_FIELDS = qw(ORGANIZATION COUNTRY CITY LOCALITY ORDINAL
-  ORIGIN ZONE SCORING);
+my @MEET_FIELDS = qw(ORGANIZATION SPONSOR COUNTRY CITY LOCALITY ORDINAL
+  ORIGIN ZONE FORM SCORING GENDER AGE);
+
+my %MEET_FIELDS_HASH;
+$MEET_FIELDS_HASH{$_} = 1 for @MEET_FIELDS;
 
 my @MEET_EDITION_FIELDS = qw(YEAR CITY);
 my @MEET_EDITION_PREFIXED_FIELDS = qw(ORDINAL DATE_START DATE_END);
@@ -164,11 +168,15 @@ my @TOURNAMENT_EDITION_PREFIXED_FIELDS = qw(ORDINAL CITY);
 my @TOURNAMENT_CHAPTER_FIELDS = qw(YEAR MOVEMENT STAGE major minor);
 my @TOURNAMENT_MEET_FIELDS = qw(MEET);
 
-my @TOURNAMENT_FIELDS = qw(ORGANIZATION COUNTRY CITY ORIGIN ZONE
-  FORM SCORING GENDER AGE);
+my @TOURNAMENT_FIELDS = qw(ORGANIZATION SPONSOR LOCALITY COUNTRY 
+  REGION CITY ORIGIN ZONE FORM SCORING MOVEMENT GENDER AGE);
+
+my %TOURNAMENT_FIELDS_HASH;
+$TOURNAMENT_FIELDS_HASH{$_} = 1 for @TOURNAMENT_FIELDS;
 
 my %COMPATIBILITIES = (
   COUNTRY => ['COUNTRY'],
+  CITY => ['TITLE_CITY'],
   FORM => ['TITLE_FORM', 'EVENT_FORM'],
   AGE => ['TITLE_AGE', 'EVENT_AGE'],
   GENDER => ['TITLE_GENDER', 'EVENT_GENDER'],
@@ -209,6 +217,15 @@ sub set_parse_links
     }
 
     %{$self->{MEET}{$meet}{EDITIONS}} = %{$meets->{$meet}{EDITIONS}};
+
+    for my $mfield (keys %{$meets->{$meet}})
+    {
+      next if $mfield eq 'EDITIONS';
+      if (! exists $MEET_FIELDS_HASH{$mfield})
+      {
+        warn "Key $key, meet $meet, field $mfield not used\n";
+      }
+    }
   }
 
   for my $tournament (sort keys %$tournaments)
@@ -222,21 +239,47 @@ sub set_parse_links
       }
     }
 
+    my $t = $tournaments->{$tournament}{EDITIONS};
+    for my $edition_str (keys %$t)
+    {
+      my $edition = $t->{$edition_str};
+
+      if (exists $edition->{MEET})
+      {
+        $self->{T_MEET}{$tournament}{$edition->{MEET}} = 1;
+      }
+    }
+
     %{$self->{TOURNAMENT}{$tournament}{EDITIONS}} = 
       %{$tournaments->{$tournament}{EDITIONS}};
+
+    for my $tfield (keys %{$tournaments->{$tournament}})
+    {
+      next if $tfield eq 'EDITIONS';
+      if (! exists $TOURNAMENT_FIELDS_HASH{$tfield})
+      {
+        warn "Key $key, tournament $tournament, field $tfield not used\n";
+      }
+    }
   }
 }
 
 
 sub init_links
 {
-  my ($self) = @_;
+  my ($self, $division, $debug) = @_;
   my $callback_method = sub { $self->set_parse_links(@_); };
 
-  while (my ($key, $set_method) = each %DIVISIONS)
+  if ($debug)
   {
-    $set_method->($callback_method);
-    
+    $DIVISIONS{$division}->($callback_method);
+  }
+  else
+  {
+    while (my ($key, $set_method) = each %DIVISIONS)
+    {
+      $set_method->($callback_method);
+    }
   }
 }
 
@@ -294,6 +337,8 @@ sub compatibility
 }
 
 
+my (@times, $t0, $t1);
+
 sub get_edition_and_chapter
 {
   my ($self, $meet, $tname, $entry, $debug) = @_;
@@ -308,13 +353,19 @@ sub get_edition_and_chapter
   {
     # Look for tournaments with the right meet in at least
     # one edition.
+    $t0 = time();
     for my $tname (keys %{$self->{TOURNAMENT}})
     {
       my $t = $self->{TOURNAMENT}{$tname};
 
+      next unless exists $self->{T_MEET}{$tname}{$meet};
+
+      $t1 = time();
       my ($hits, $conflicts) = compatibility($t, $entry);
+      $times[2] += time() - $t1;
       next if $conflicts > 0;
 
+      $t1 = time();
       for my $edition_str (keys %{$t->{EDITIONS}})
       {
         my $edition = $t->{EDITIONS}{$edition_str};
@@ -325,7 +376,9 @@ sub get_edition_and_chapter
           last;
         }
       }
+      $times[3] += time() - $t1;
     }
+    $times[0] += time() - $t0;
 
     if ($#tname_list == -1 && exists $self->{MEET}{$meet})
     {
@@ -341,6 +394,8 @@ sub get_edition_and_chapter
   my $lowest_dist = 9999;
   my $lowest_hits = 0;
   my ($lowest_tname, $lowest_edition, $lowest_chapter, $lowest_opens);
+  my $equal_collision = 0;
+  my $collision_str = '';
 
   for my $tname (@tname_list)
   {
@@ -364,6 +419,7 @@ sub get_edition_and_chapter
         next unless $m_conflicts == 0;
       }
 
+      $t0 = time();
       for my $chapter_str (keys %{$edition->{CHAPTERS}})
       {
         my $chapter = $edition->{CHAPTERS}{$chapter_str};
@@ -400,9 +456,29 @@ sub get_edition_and_chapter
           $lowest_chapter = $chapter_str;
           $lowest_hits = $hits;
           $lowest_opens = $opens;
+          $equal_collision = 0;
+        }
+        elsif ($dist == 0 && 
+            $hits == $lowest_hits && 
+            $opens == $lowest_opens)
+        {
+          $equal_collision = 1;
+          $collision_str = $entry->bbono() . 
+            " double zero, ($tname, $edition_str, $chapter_str) vs (" .
+            ($lowest_tname eq $tname ? '=' : $lowest_tname) . ", " .
+            ($lowest_edition eq $edition_str ? '=' : $lowest_edition) . 
+            ", " .
+            ($lowest_chapter eq $chapter_str ? '=' : $lowest_chapter) . 
+            ")";
         }
       }
+      $times[1] += time() - $t0;
     }
+  }
+
+  if ($equal_collision)
+  {
+    warn $collision_str;
   }
 
   if ($lowest_dist == 0)
@@ -415,6 +491,15 @@ sub get_edition_and_chapter
     warn $entry->bbono() . " not found (dist $lowest_dist): " .
       "$tname, " . $entry->field('DATE_ADDED');
     return ($tname, '', '');
+  }
+}
+
+
+sub print_times
+{
+  for my $i (0 .. $#times)
+  {
+    printf "  Time $i: %.3f seconds\n", $times[$i];
   }
 }
 
@@ -456,6 +541,7 @@ sub set_header_entry
 
   if (exists $t_edition->{MEET})
   {
+    # TODO Edition string not required to be the same?
     my $meet_str = $t_edition->{MEET};
     my $meet = $self->{MEET}{$meet_str};
     my $m_edition = $meet->{EDITIONS}{$edition_str};

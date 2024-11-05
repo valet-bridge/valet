@@ -511,7 +511,7 @@ my %TOURNAMENTS_CHINA =
             YEAR => 2009,
             STAGE => 'Quarterfinal',
             major => 'SEGMENT',
-            DATE_START => '2009-08-12',
+            DATE_START => '2009-08-22',
             DATE_END => '2009-08-22'
           },
           'C2' => 
@@ -519,7 +519,7 @@ my %TOURNAMENTS_CHINA =
             YEAR => 2009,
             STAGE => 'Semifinal',
             major => 'SEGMENT',
-            DATE_START => '2009-08-12',
+            DATE_START => '2009-08-22',
             DATE_END => '2009-08-22'
           },
           'C3' => 

@@ -152,9 +152,6 @@ my %MEETS_BALTIC =
     ZONE => 'Europe',
     CITY => 'Riga',
     COUNTRY => 'Latvia',
-    FORM => 'Teams',
-    GENDER => 'Open',
-    AGE => 'Open',
 
     EDITIONS =>
     {

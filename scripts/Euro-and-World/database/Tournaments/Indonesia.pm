@@ -628,7 +628,7 @@ my %TOURNAMENTS_INDONESIA =
         }
       },
     }
-  }
+  },
 
   'Indonesian Inter-City Championship' =>
   {
@@ -2572,14 +2572,6 @@ my %TOURNAMENTS_INDONESIA =
             DATE_START => '2005-09-18',
             DATE_END => '2005-09-18'
           },
-          'C4' => 
-          {
-            YEAR => 2005,
-            STAGE => 'Playoff',
-            major => 'SEGMENT',
-            DATE_START => '2005-09-18',
-            DATE_END => '2005-09-18'
-          } 
         }
       },
       '2007' =>

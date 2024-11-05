@@ -399,37 +399,6 @@ my %MEETS_FRIENDLY =
 
 my %TOURNAMENTS_FRIENDLY =
 (
-  'Argentina Friendly' => 
-  {
-    ORGANIZATION => 'ABA',
-    COUNTRY => 'Argentina',
-    ORIGIN => 'National',
-    ZONE => 'South America',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-
-    EDITIONS =>
-    {
-      '2011' =>
-      {
-        MEET => 'Friendly Match',
-        GENDER => 'Open',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2011,
-            major => 'SEGMENT',
-            DATE_START => '2011-04-06',
-            DATE_END => '2011-04-07'
-          } 
-        }
-      },
-    }
-  },
-
   'Australia Challenge' => 
   {
     ORGANIZATION => 'AuBF',
@@ -1385,6 +1354,7 @@ my %TOURNAMENTS_FRIENDLY =
   'Hungary Friendly' => 
   {
     ORGANIZATION => 'MBSZ',
+    CITY => 'Budapest',
     COUNTRY => 'Hungary',
     ORIGIN => 'National',
     ZONE => 'Europe',
@@ -2980,6 +2950,7 @@ my %TOURNAMENTS_FRIENDLY =
   'Tunisia Friendly' => 
   {
     ORGANIZATION => 'SBF',
+    CITY => 'Hammamet',
     COUNTRY => 'Tunisia',
     ORIGIN => 'National',
     ZONE => 'Africa',
@@ -2993,7 +2964,6 @@ my %TOURNAMENTS_FRIENDLY =
         MEET => 'Friendly Match',
         GENDER => 'Open',
         AGE => 'Open',
-        CITY => 'Hammamet',
 
         CHAPTERS =>
         {

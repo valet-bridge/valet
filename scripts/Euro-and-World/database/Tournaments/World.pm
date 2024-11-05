@@ -1117,6 +1117,7 @@ my %TOURNAMENTS_WORLD =
             YEAR => 2005,
             STAGE => 'Round-robin',
             major => 'ROUND',
+            minor => 'MATCH',
             DATE_START => '2005-08-08',
             DATE_END => '2005-08-15'
           },
@@ -1125,6 +1126,7 @@ my %TOURNAMENTS_WORLD =
             YEAR => 2005,
             STAGE => 'Semifinal',
             major => 'SEGMENT',
+            minor => 'MATCH',
             DATE_START => '2005-08-15',
             DATE_END => '2005-08-16'
           },
@@ -1133,6 +1135,7 @@ my %TOURNAMENTS_WORLD =
             YEAR => 2005,
             STAGE => 'Bronze',
             major => 'SEGMENT',
+            minor => 'MATCH',
             DATE_START => '2005-08-16',
             DATE_END => '2005-08-16'
           },
@@ -1141,6 +1144,7 @@ my %TOURNAMENTS_WORLD =
             YEAR => 2005,
             STAGE => 'Final',
             major => 'SEGMENT',
+            minor => 'MATCH',
             DATE_START => '2005-08-16',
             DATE_END => '2005-08-17'
           } 
@@ -1872,7 +1876,7 @@ my %TOURNAMENTS_WORLD =
 
   'IOC Grand Prix' => 
   {
-    ORGANIZER => 'IOC',
+    ORGANIZATION => 'IOC',
     ZONE => 'World',
     ORIGIN => 'International',
     FORM => 'Teams',
@@ -1932,7 +1936,7 @@ my %TOURNAMENTS_WORLD =
 
   'McConnell Cup' => 
   {
-    ORGANIZER => 'WBF',
+    ORGANIZATION => 'WBF',
     ZONE => 'World',
     ORIGIN => 'International',
     FORM => 'Teams',
@@ -2104,7 +2108,7 @@ my %TOURNAMENTS_WORLD =
   'APBF Women Elite Tournament' => 
   {
     ORIGIN => 'International',
-    ORGANIZER => 'APBF',
+    ORGANIZATION => 'APBF',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',

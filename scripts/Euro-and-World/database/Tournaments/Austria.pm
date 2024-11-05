@@ -46,7 +46,6 @@ my %TOURNAMENTS_AUSTRIA =
           {
             YEAR => 2015,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
             DATE_START => '2015-05-02',
             DATE_END => '2015-05-02'
           },
@@ -54,7 +53,6 @@ my %TOURNAMENTS_AUSTRIA =
           {
             YEAR => 2015,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
             DATE_START => '2015-05-02',
             DATE_END => '2015-05-03'
           },
@@ -62,7 +60,6 @@ my %TOURNAMENTS_AUSTRIA =
           {
             YEAR => 2015,
             STAGE => 'Final',
-            major => 'SEGMENT',
             DATE_START => '2015-05-03',
             DATE_END => '2015-05-03'
           } 

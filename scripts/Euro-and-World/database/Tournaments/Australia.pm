@@ -4164,9 +4164,6 @@ my %TOURNAMENTS_AUSTRALIA =
       },
       '2013' =>
       {
-        # Link
-        MEET => 'Meet name',
-
         CHAPTERS =>
         {
           'SINGLE' => 

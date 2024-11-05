@@ -783,10 +783,18 @@ my %TOURNAMENTS_ARGENTINA =
         MEET => 'Mar del Plata Festival',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2006,
             STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-12-17',
+            DATE_END => '2006-12-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2006-12-17',
             DATE_END => '2006-12-17'

@@ -385,6 +385,7 @@ my @MULTI_WORDS =
   'Pärnu Summer Open Teams',
   'Puutalo Open Teams',
   'Salo Midsummer Juniors Teams',
+  'Vadsø Open Pairs',
 
   # FRANCE
   'Biarritz Hiver',
@@ -821,7 +822,8 @@ my @MULTI_WORDS =
 
   # SUPRA
   'Buffett Cup Individual',
-  'Cavendish Pairs',
+  'Cavendish Open Pairs',
+  'Cavendish Women Pairs',
   'Cavendish Teams',
   'Channel Girls Trophy',
   'Channel Juniors Trophy',
@@ -1339,7 +1341,20 @@ my %MULTI_TYPOS =
     'cbf womens final',
     'cbf womens finals'],
 
-  'Cavendish Teams' => ['cavendish tms', 'cavendish team'],
+  'Cavendish Open Pairs' => [
+    'cavemdish pairs',
+    'cavendish monaco pairs',
+    'cavendish pair',
+    'cavendish pairs',
+    'cavendiish pairs',
+    'cavendiosh pairs',
+    'cavendsh pairs'],
+  'Cavendish Women Pairs' => [
+    'cavendish monaco pairs women'],
+  'Cavendish Teams' => [
+    'avendish teams',
+    'cavendish tms', 
+    'cavendish team'],
   'Central American & Caribbean Open Teams' => [
     'cac final',
     "cacbf zonal c'ships", 
@@ -1558,9 +1573,12 @@ my %MULTI_TYPOS =
     'english open team trials',
     'english open teams trial',
     'english open teams trials'],
-  'English Premier League' => ['engish premier league',
-    'england premier league', 'english premie league',
-    'englush premier league', 'english premier lge'],
+  'English Premier League' => [
+    'engish premier league',
+    'england premier league', 
+    'english premie league',
+    'englush premier league', 
+    'english premier lge'],
   'English Senior Trials' => [
     'england senior trial',
     'england senior trials', 
@@ -3176,11 +3194,6 @@ my %MULTI_TYPOS =
   'Turkish University Teams' => [
     'turkish Universities championship',
     'turkish universities bridge championship'],
-  # 'Turkish Winter Championship' => [
-    # 'turkiye kis takimlar sampiyonasi',
-    # 'turkish winter chanpionship',
-    # 'turkey winter open teams',
-    # 'turkey winter teams'],
   'Turkish Winter Open Teams' => [
     'turkey winter open teams',
     'turkey winter teams',
@@ -3372,7 +3385,6 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Cavendish
-  Vadsøturneringen 
 );
 
 my %SINGLE_TYPOS =
@@ -3452,6 +3464,7 @@ my %SINGLE_TYPOS =
     'uswbf', 
     'uswc',
     'us womens championships'],
+  'Vadsø Open Pairs' => ['Vadsøturneringen'],
   'Vanderbilt Teams' => [
     'vanderbilt', 
     'vanderbuilt', 

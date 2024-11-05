@@ -28,7 +28,7 @@ my %MEETS_CANADA =
       '2004' =>
       {
         # https://www.cbf.ca/BWeek/BWeek04.html
-        YEAR => 2005,
+        YEAR => 2004,
         CITY => 'St. Catherines',
         DATE_START => '2004-06-19',
         DATE_END => '2004-06-26'
@@ -92,7 +92,7 @@ my %MEETS_CANADA =
       '2012' =>
       {
         # https://cbf.ca/BWeek/12files/
-        YEAR => 2013,
+        YEAR => 2012,
         CITY => 'Montreal',
         DATE_START => '2012-04-28',
         DATE_END => '2012-05-05'
