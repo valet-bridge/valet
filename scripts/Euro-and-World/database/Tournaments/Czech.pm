@@ -129,12 +129,16 @@ my %TOURNAMENTS_CZECH =
           'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2015-04-11',
             DATE_END => '2015-04-11'
           },
           'C1' => 
           {
             YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2015-04-11',
             DATE_END => '2015-04-12'
           } 

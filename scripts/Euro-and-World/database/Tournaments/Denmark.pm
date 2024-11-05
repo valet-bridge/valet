@@ -2042,12 +2042,16 @@ my %TOURNAMENTS_DENMARK =
           'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'HALF',
             DATE_START => '2014-05-18',
             DATE_END => '2014-05-18'
           },
-          'C2' => 
+          'C1' => 
           {
             YEAR => 2014,
+            STAGE => 'Final',
+            major => 'HALF',
             DATE_START => '2014-05-18',
             DATE_END => '2014-05-18'
           } 

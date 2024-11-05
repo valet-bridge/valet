@@ -276,7 +276,7 @@ my %TOURNAMENTS_CHILE =
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-10-19',
-            DATE_END => '2013-10-20'
+            DATE_END => '2013-10-19'
           },
           'C1' => 
           {
@@ -380,14 +380,14 @@ my %TOURNAMENTS_CHILE =
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2013-04-13',
-            DATE_END => '2013-04-15'
+            DATE_END => '2013-04-13'
           },
           'C1' => 
           {
             YEAR => 2013,
             STAGE => 'Final',
             major => 'SEGMENT',
-            DATE_START => '2013-04-13',
+            DATE_START => '2013-04-14',
             DATE_END => '2013-04-15'
           } 
         }

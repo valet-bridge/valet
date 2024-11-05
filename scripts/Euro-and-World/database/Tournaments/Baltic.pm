@@ -1337,30 +1337,23 @@ my %TOURNAMENTS_BALTIC =
           } 
         }
       },
-      '2011A' =>
+      '2011' =>
       {
         MEET => 'Vilnius Cup',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
             major => 'SESSION',
             DATE_START => '2011-09-29',
             DATE_END => '2011-09-29'
-          } 
-        }
-      },
-      '2011B' =>
-      {
-        MEET => 'Vilnius Cup',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
+          },
+          'C1' => 
           {
             YEAR => 2011,
             major => 'SESSION',
-            DATE_START => '2011-09-29',
+            DATE_START => '2011-10-01',
             DATE_END => '2011-10-01'
           } 
         }

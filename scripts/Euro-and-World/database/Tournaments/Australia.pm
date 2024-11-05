@@ -1181,6 +1181,13 @@ my %TOURNAMENTS_AUSTRALIA =
           'C1' => 
           {
             YEAR => 2007,
+            STAGE => 'Rof16',
+            DATE_START => '2007-05-14',
+            DATE_END => '2007-05-14'
+          },
+          'C2' => 
+          {
+            YEAR => 2007,
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2007-05-14',
@@ -3239,6 +3246,21 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
+      '2008' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-10-30',
+            DATE_END => '2008-10-30'
+          } 
+        }
+      },
       '2009' =>
       {
         MEET => 'Australian Spring Nationals',
@@ -3471,7 +3493,22 @@ my %TOURNAMENTS_AUSTRALIA =
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2011-10-26',
-            DATE_END => '2011-10-26'
+            DATE_END => '2011-10-27'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-11-06',
+            DATE_END => '2014-11-06'
           } 
         }
       },
@@ -3548,6 +3585,21 @@ my %TOURNAMENTS_AUSTRALIA =
             major => 'SEGMENT',
             DATE_START => '2011-10-26',
             DATE_END => '2011-10-26'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Australian Spring Nationals',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-11-06',
+            DATE_END => '2014-11-06'
           } 
         }
       },
@@ -3925,7 +3977,7 @@ my %TOURNAMENTS_AUSTRALIA =
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-01-13',
-            DATE_END => '2015-01-16'
+            DATE_END => '2015-01-15'
           },
           'C1' => 
           {
@@ -4863,7 +4915,7 @@ my %TOURNAMENTS_AUSTRALIA =
             YEAR => 2010,
             major => 'ROUND',
             DATE_START => '2010-06-12',
-            DATE_END => '2011-06-13'
+            DATE_END => '2010-06-13'
           } 
         }
       },

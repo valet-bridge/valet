@@ -1,16 +1,12 @@
-Back up overrides.txt
-Flag matches with both dist == 0
-
 digest.pl: 
 - At least it runs now, but very slow: Profile
 - 8 warnings
 - Fix issues
-- Optional last argument country, otherwise run all
 
 cook.pl:
 - Make individual files of Tname and Meet
 
-Should be already map Juniors to U26?
+Should we already map Juniors to U26?
 
 Consistencies:
 - Dates in Meet vs matching tournament
@@ -25,6 +21,7 @@ Fields
 - All fields used
 - Move fields up
 - Fields in tournaments exist in e.g. Country, Zone
+- Stats of fields used at different levels; avg # fields?
 
 
 Util.pm 450:

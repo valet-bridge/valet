@@ -1339,8 +1339,8 @@ my %TOURNAMENTS_BULGARIA =
             YEAR => 2007,
             STAGE => 'Round-robin',
             major => 'ROUND',
-            DATE_START => '2007-10-22',
-            DATE_END => '2007-10-22'
+            DATE_START => '2007-10-21',
+            DATE_END => '2007-10-21'
           },
           'C1' => 
           {
@@ -1396,7 +1396,7 @@ my %TOURNAMENTS_BULGARIA =
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-10-08',
-            DATE_END => '2011-10-09'
+            DATE_END => '2011-10-08'
           },
           'C1' => 
           {

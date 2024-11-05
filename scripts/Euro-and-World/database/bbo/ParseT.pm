@@ -109,6 +109,7 @@ my %DIVISIONS =
   DENMARK => \&Tournaments::Denmark::set_links,
   ECUADOR => \&Tournaments::Ecuador::set_links,
   EGYPT => \&Tournaments::Egypt::set_links,
+  # -----------  OK down to here -----------------
   EUROADULT => \&Tournaments::EuroAdult::set_links,
   EUROYOUTH => \&Tournaments::EuroYouth::set_links,
   FAROE => \&Tournaments::Faroe::set_links,
