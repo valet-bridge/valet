@@ -2752,13 +2752,13 @@ my %TOURNAMENTS_NORWAY =
           {
             YEAR => 2012,
             DATE_START => '2012-05-12',
-            DATE_END => '2012-05-13'
+            DATE_END => '2012-05-12'
           },
           'C1' => 
           {
             YEAR => 2012,
             STAGE => 'Final',
-            DATE_START => '2012-05-12',
+            DATE_START => '2012-05-13',
             DATE_END => '2012-05-13'
           } 
         }

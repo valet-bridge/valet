@@ -486,7 +486,6 @@ my %TOURNAMENTS_SWITZERLAND =
   'Zurich Open Teams' =>
   {
     FORM => 'Teams',
-    SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
@@ -497,10 +496,18 @@ my %TOURNAMENTS_SWITZERLAND =
         MEET => 'Zurich Open',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            SCORING => 'IMP',
             DATE_START => '2012-03-02',
+            DATE_END => '2012-03-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            SCORING => 'Patton',
+            DATE_START => '2012-03-04',
             DATE_END => '2012-03-04'
           } 
         }
@@ -508,6 +515,7 @@ my %TOURNAMENTS_SWITZERLAND =
       '2013' =>
       {
         MEET => 'Zurich Open',
+        SCORING => 'Patton',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -521,6 +529,7 @@ my %TOURNAMENTS_SWITZERLAND =
       '2014' =>
       {
         MEET => 'Zurich Open',
+        SCORING => 'Patton',
         CHAPTERS =>
         {
           'SINGLE' => 

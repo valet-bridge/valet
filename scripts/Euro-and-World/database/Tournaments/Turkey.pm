@@ -995,7 +995,7 @@ my %TOURNAMENTS_TURKEY =
     ORIGIN => 'Regional',
     ZONE => 'Europe',
     FORM => 'Teams',
-    SCORING => 'IAF',
+    SCORING => 'IMP', # Really IAF, but hard to get through the code
     GENDER => 'Open',
     AGE => 'Open',
 
@@ -1233,6 +1233,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2010,
+            STAGE => 'Qualifying',
             major => 'ROUND',
             DATE_START => '2010-08-27',
             DATE_END => '2010-08-28'

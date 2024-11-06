@@ -1807,7 +1807,7 @@ my %TOURNAMENTS_POLAND =
             YEAR => 2009,
             major => 'SESSION',
             DATE_START => '2009-12-18',
-            DATE_END => '2009-12-19'
+            DATE_END => '2009-12-18'
           },
           'C1' => 
           {
@@ -3164,21 +3164,7 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
-      '2011A' =>
-      {
-        MEET => 'Poznan Congress',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2011,
-            major => 'SESSION',
-            DATE_START => '2011-05-02',
-            DATE_END => '2011-05-02'
-          },
-        }
-      },
-      '2011B' =>
+      '2011' =>
       {
         MEET => 'Poznan Congress',
         CHAPTERS =>
@@ -3792,6 +3778,7 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Qualifying',
             major => 'ROUND',
             DATE_START => '2011-01-21',
             DATE_END => '2011-01-22'

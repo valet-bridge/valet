@@ -955,7 +955,7 @@ sub fix_some_fields
     }
   }
 
-  if ($self->field('TITLE_TNAME') =~ 'Patton' &&
+  if ($self->field('TITLE_TNAME') =~ /Patton/i &&
       $self->field('SCORING') eq 'IMP')
   {
     delete $self->{SCORING};
@@ -969,7 +969,7 @@ sub fix_some_fields
     push @{$self->{SCORING}}, 'IAF';
   }
 
-  if ($self->field('EVENT_SCORING') eq 'Patton' &&
+  if ($self->field('EVENT_SCORING') =~ /Patton/i &&
       $self->field('SCORING') eq 'IMP')
   {
     delete $self->{SCORING};

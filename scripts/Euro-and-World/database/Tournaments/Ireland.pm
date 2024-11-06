@@ -165,13 +165,21 @@ my %TOURNAMENTS_IRELAND =
       {
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2015-09-11',
             DATE_END => '2015-09-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-09-12',
+            DATE_END => '2015-09-13'
           } 
         }
       },

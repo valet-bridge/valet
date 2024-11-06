@@ -496,7 +496,7 @@ my %TOURNAMENTS_JAPAN =
             STAGE => 'Qualifying',
             major => 'MATCH',
             DATE_START => '2011-02-07',
-            DATE_END => '2011-02-10'
+            DATE_END => '2011-02-09'
           },
           'C1' => 
           {

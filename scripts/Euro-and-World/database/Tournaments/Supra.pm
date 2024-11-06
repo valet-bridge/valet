@@ -956,6 +956,7 @@ my %TOURNAMENTS_SUPRA =
           'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Qualifying',
             major => 'ROUND',
             DATE_START => '2012-10-15',
             DATE_END => '2012-10-16'

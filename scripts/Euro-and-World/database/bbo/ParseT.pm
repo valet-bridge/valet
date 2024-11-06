@@ -114,7 +114,6 @@ my %DIVISIONS =
   FAROE => \&Tournaments::Faroe::set_links,
   FINLAND => \&Tournaments::Finland::set_links,
   FRANCE => \&Tournaments::France::set_links,
-  # -----------  OK down to here -----------------
   GERMANY => \&Tournaments::Germany::set_links,
   GREECE => \&Tournaments::Greece::set_links,
   HONGKONG => \&Tournaments::HongKong::set_links,
@@ -151,6 +150,7 @@ my %DIVISIONS =
   TAIPEI => \&Tournaments::Taipei::set_links,
   TURKEY => \&Tournaments::Turkey::set_links,
   UK => \&Tournaments::UK::set_links,
+  # -----------  OK down to here -----------------
   USA => \&Tournaments::USA::set_links,
   VENEZUELA => \&Tournaments::Venezuela::set_links,
   WORLD => \&Tournaments::World::set_links

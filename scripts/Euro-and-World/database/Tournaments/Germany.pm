@@ -1465,7 +1465,7 @@ my %TOURNAMENTS_GERMANY =
     COUNTRY => 'Germany',
     ORIGIN => 'National',
     FORM => 'Pairs',
-    SCORING => 'Pairs',
+    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
  
@@ -2566,7 +2566,7 @@ my %TOURNAMENTS_GERMANY =
     ORIGIN => 'Invitational',
     ZONE => 'Europe',
     FORM => 'Pairs',
-    SCORING => 'IMP',
+    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
