@@ -432,6 +432,27 @@ my %MEETS_USA =
       },
     }
   },
+
+  'United States Bridge Championship' =>
+  {
+    # https://usbf.org/past-tournaments/past-usbf-tournaments/index.php
+
+    ORGANIZATION => 'USBF',
+    COUNTRY => 'USA',
+    ORIGIN => 'National',
+    ZONE => 'North America',
+
+    EDITIONS => 
+    {
+      '2016' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-08-01',
+        DATE_END => '2016-08-03'
+      },
+    }
+  },
+
 );
 
 my %TOURNAMENTS_USA =
@@ -2310,6 +2331,7 @@ my %TOURNAMENTS_USA =
       '2016' =>
       {
         # https://www.usbf.org/2016-open-usbc/2016-open-usbc
+        MEET => 'United States Bridge Championship',
         CITY => 'Denver',
 
         CHAPTERS =>
@@ -2430,11 +2452,37 @@ my %TOURNAMENTS_USA =
     }
   },
 
-  'US Senior Teams',
+  'US Mixed Teams',
   {
-    ORGANIZATION => 'ACBL',
+    ORGANIZATION => 'USBF',
     COUNTRY => 'USA',
     ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        MEET => 'United States Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-08-01',
+            DATE_END => '2016-08-03'
+          },
+
+        }
+      },
+    }
+  },
+
+  'US Senior Teams',
+  {
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2880,6 +2928,19 @@ my %TOURNAMENTS_USA =
           },
         }
       },
+      '2016' =>
+      {
+        MEET => 'United States Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-06-18',
+            DATE_END => '2016-06-23'
+          },
+        }
+      },
     }
   },
 
@@ -3052,6 +3113,7 @@ my %TOURNAMENTS_USA =
       '2015' =>
       {
         # https://www.usbf.org/2024-united-states-bridge-championships/2024-united-states-bridge-championships/index.php
+        MEET => 'United States Bridge Championship',
         CITY => 'Schaumburg',
 
         CHAPTERS =>
@@ -3516,6 +3578,7 @@ my %TOURNAMENTS_USA =
       '2015' =>
       {
         # https://www.usbf.org/2015-women-s-usbc/2015-women-s-usbc
+        MEET => 'United States Bridge Championship',
         CITY => 'Fort Lauderdale',
 
         CHAPTERS =>

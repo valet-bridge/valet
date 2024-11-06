@@ -13,6 +13,31 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_AUSTRIA =
 (
+  'Mautern Bridge Festival' =>
+  {
+    ORGANIZATION => 'ÖBV',
+    CITY => 'Mautern',
+    COUNTRY => 'Austria',
+    ORIGIN => 'Transnational',
+    ZONE => 'Europe',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-08-05',
+        DATE_END => '2015-08-06'
+      },
+      '2016' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-08-10',
+        DATE_END => '2016-08-11'
+      },
+    }
+  },
+
 );
 
 my %TOURNAMENTS_AUSTRIA =
@@ -63,6 +88,46 @@ my %TOURNAMENTS_AUSTRIA =
             DATE_START => '2015-05-03',
             DATE_END => '2015-05-03'
           } 
+        }
+      },
+    }
+  },
+
+  'Mautern Open Teams' => 
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        MEET => 'Mautern Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'ROUND',
+            DATE_START => '2015-08-05',
+            DATE_END => '2015-08-06'
+          },
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Mautern Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND',
+            DATE_START => '2016-08-10',
+            DATE_END => '2016-08-11'
+          },
         }
       },
     }

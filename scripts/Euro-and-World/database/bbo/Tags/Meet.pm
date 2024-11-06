@@ -419,7 +419,10 @@ my %MULTI_TYPOS =
   'Mar del Plata Festival' => [ 'mar del plata international festival',
     'mar del plata international bridge festival'],
   'Marmara Festival' => ['festival marmara'],
-  'Mautern Bridge Festival' => ['mautern bridgefestival'],
+  'Mautern Bridge Festival' => [
+    'mautern bridgefestival',
+    'wachauer bridgefestival',
+    'wachauer bridge festival'], 
   'Monaco International Festival' => ['festival international de monaco'],
   'Mondial de Deauville' => [
     "barrière champion's cup",
@@ -581,7 +584,6 @@ my %MULTI_TYPOS =
   'Vilnius Cup' => ['vv cup'],
   'VVE Beheer Bridge Week' => ['vve-beheer bridgeweek',
     'vve-beheer bridge week'],
-  'Wachauer Bridge Festival' => ['wachauer bridgefestival'],
   'West Java Regional' => ['west java regional sport games',
     'west java regional games', 'west java regional spots event',
     'regional west java'],
