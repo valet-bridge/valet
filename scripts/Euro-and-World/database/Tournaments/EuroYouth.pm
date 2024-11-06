@@ -1356,6 +1356,31 @@ my %TOURNAMENTS_EURO_YOUTH =
     }
   },
 
+  'European School Teams',
+  {
+    ORIGIN => 'International',
+    GENDER => 'Open',
+    AGE => 'Schools',
+
+    EDITIONS =>
+    {
+      '2007' =>
+      {
+        MEET => 'European Youth Team Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Round-robin',
+            DATE_START => '2007-07-20',
+            DATE_END => '2007-07-21'
+          }
+        }
+      },
+    }
+  },
+
   'European U26 Women Pairs' =>
   {
     ORIGIN => 'International',
