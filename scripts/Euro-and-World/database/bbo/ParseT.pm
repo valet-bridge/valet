@@ -150,7 +150,6 @@ my %DIVISIONS =
   TAIPEI => \&Tournaments::Taipei::set_links,
   TURKEY => \&Tournaments::Turkey::set_links,
   UK => \&Tournaments::UK::set_links,
-  # -----------  OK down to here -----------------
   USA => \&Tournaments::USA::set_links,
   VENEZUELA => \&Tournaments::Venezuela::set_links,
   WORLD => \&Tournaments::World::set_links

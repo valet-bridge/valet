@@ -132,6 +132,7 @@ my %TOURNAMENTS_IRELAND =
           {
             YEAR => 2013,
             major => 'ROUND',
+            minor => 'HALF',
             DATE_START => '2013-10-05',
             DATE_END => '2013-10-06'
           } 

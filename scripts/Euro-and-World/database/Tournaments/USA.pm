@@ -3637,7 +3637,7 @@ my %TOURNAMENTS_USA =
             YEAR => 2010,
             STAGE => 'Final',
             major => 'SEGMENT',
-            DATE_START => '2010-06-26',
+            DATE_START => '2010-06-27',
             DATE_END => '2010-06-27'
           } 
         }
@@ -4091,7 +4091,7 @@ my %TOURNAMENTS_USA =
             STAGE => 'Rof16',
             major => 'SEGMENT',
             DATE_START => '2011-03-17',
-            DATE_END => '2011-03-28'
+            DATE_END => '2011-03-18'
           },
           'C2' => 
           {

@@ -1192,17 +1192,9 @@ my %TOURNAMENTS_WORLD =
             STAGE => 'Quarterfinal',
             major => 'SEGMENT',
             DATE_START => '2010-10-13',
-            DATE_END => '2010-10-16'
-          },
-          'C1' => 
-          {
-            YEAR => 2010,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2010-10-13',
             DATE_END => '2010-10-13'
           },
-          'C2' => 
+          'C1' => 
           {
             YEAR => 2010,
             STAGE => 'Semifinal',
@@ -1210,7 +1202,7 @@ my %TOURNAMENTS_WORLD =
             DATE_START => '2010-10-14',
             DATE_END => '2010-10-14'
           },
-          'C3' => 
+          'C2' => 
           {
             YEAR => 2010,
             STAGE => 'Final',
@@ -4070,6 +4062,34 @@ my %TOURNAMENTS_WORLD =
     }
   },
 
+  'World Open School Teams' =>
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Schools',
+
+    EDITIONS =>
+    {
+      'SINGLE' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2006-08-03',
+            DATE_END => '2006-08-04'
+          },
+        }
+      },
+    }
+  },
+
   'World Open Youngster Pairs' =>
   {
     ORIGIN => 'International',
@@ -4814,6 +4834,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-12-10',
             DATE_END => '2011-12-11'

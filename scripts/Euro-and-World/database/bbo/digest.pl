@@ -65,7 +65,11 @@ while ($entryT->read($fh))
   my $tname = $entryT->field('TITLE_TNAME');
   print "Starting with:\nMeet $meet\nTname $tname\n\n" if $debug_flag;
 
-  next if $meet eq '' && $tname eq '';
+  if ($meet eq '' && $tname eq '')
+  {
+    # warn $entryT->bbono() . " not found at all";
+    next;
+  }
 
   if ($entryT->bbono() eq 37047)
   {
@@ -92,6 +96,11 @@ while ($entryT->read($fh))
   ($tname, $edition, $chapter) =
     $parseT->get_edition_and_chapter($meet, $tname, $entryT, $debug_flag);
   $times[1] += time() - $t0;
+
+  if ($tname eq '')
+  {
+    # warn $entryT->bbono() . ": no TNAME found";
+  }
 
   if ($debug_flag)
   {
@@ -133,7 +142,6 @@ exit if $debug_flag;
   # printf "Time $i: %.3f seconds\n", $times[$i];
 # }
 # $parseT->print_times();
-exit;
 
 for my $date_start (sort keys %data)
 {

@@ -1,7 +1,7 @@
 digest.pl: 
-- At least it runs now, but very slow: Profile
-- 8 warnings
-- Fix issues
+- Eliminate warnings
+- Look for missing TNAME or indeed missing completely
+- Speed up, esp. compatibility()?
 
 cook.pl:
 - Make individual files of Tname and Meet
