@@ -14,6 +14,7 @@ our @EXPORT = qw(set_hashes);
 use Tags::Tnames::Africa;
 use Tags::Tnames::Argentina;
 use Tags::Tnames::Asia;
+use Tags::Tnames::Australia;
 
 my @MULTI_WORDS =
 (
@@ -74,50 +75,6 @@ my @MULTI_WORDS =
   'BFAME Women Teams',
   'Pan Arab Inter-Club Championship',
   'Yeh Bros Cup',
-
-  # AUSTRALIA
-  'Altman Swiss Pairs',
-  'Australian Autumn National Open Teams',
-  'Australian Grand National Open Teams',
-  'Australian Junior Teams',
-  'Australian National Open Teams',
-  'Australian National Senior Teams',
-  'Australian National Women Teams',
-  'Australian Open Teams',
-  'Australian Senior Pairs',
-  'Australian Senior Teams',
-  'Australian Spring Open Teams',
-  'Australian Spring Senior Teams',
-  "Australian Spring Women Teams",
-  "Australian Women Teams",
-  'Australian Youth IMP Pairs',
-  'Australian Youth Teams',
-  'Australian Youth Tri Individual',
-  'Australian Youth Tri Pairs',
-  'Australian Youth Tri Teams',
-  'Bobby Evans Senior Teams',
-  'Cliff Wake Challenge',
-  "Hans Rosendorff Memorial Women's Teams",
-  'John Arkinstall State Teams',
-  'Kings and Queens Blaine Howe Teams',
-  "Linda Stern Women's Teams",
-  'New South Wales Open Teams',
-  'New South Wales Open Trials',
-  'Northern Territory Gold Swiss Pairs',
-  'Northern Territory Gold Teams',
-  'Queensland Women Trials',
-  'Queensland Senior Trials',
-  'Smirnov Cup',
-  'Victor Swiss Pairs',
-  'Victor Open Teams',
-  'Victoria Cup',
-  'Victorian Mixed Teams',
-  'Victorian Open Trials',
-  'Victorian Pennant',
-  'Victorian Senior Trials',
-  'Victorian Women Trials',
-  'Victorian Youth Trials',
-  'Watermark Open Teams',
 
   # AUSTRIA
   'Austrian Open Teams',
@@ -1020,106 +977,6 @@ my %MULTI_TYPOS =
     'Ashok Kapur Memorial Swiss IMP Pairs'],
   'Atlantic Trade Bridge Cup' => ['atlantic grupa bridge cup'],
 
-  # AUSTRALIA
-  'Australian Autumn National Open Teams' => [
-    'abf anot',
-    'australian autumn national open  teams',
-    'autumn national open teams'],
-  'Australian Grand National Open Teams' => [
-    'abf gnot',
-    'grand national open teams'],
-  'Australian National Open Teams' => [
-    'abf national open teams', 
-    'national open teams',
-    'national openteams'],
-  'Australian Open Teams' => [
-    'abf open team trials', 
-    'abf oprn trials',
-    'aust open', 
-    'aust open trials', 
-    'austalian open team selections',
-    'australian open championships',
-    'australian open selection',
-    'australian open tream',
-    'australian open team',
-    'australian open team trials',
-    'australian open trials',
-    'australian open team trials', 
-    'australian open team selection', 
-    'australian open teams playoff', 
-    'australian open tream selection',
-    'australian playoffs'], 
-  'Australian Senior Pairs' => [
-    'aust seniors pairs',
-    'austalian seniors pairs'],
-  'Australian Senior Teams' => [
-    'abf seniors playoff',
-    'aus seniors',
-    'aus seniors playoff',
-    'aus seniors playoffs',
-    'aust seniors open', 
-    'aust seniors team trial', 
-    'aust senriors open', 
-    'australian seniors', 
-    'australian seniors playoff', 
-    'australian seniors playoffs', 
-    'australian seniors po', 
-    'australian seniors teams', 
-    'australian seniors teams playoffs', 
-    'australain seniors',
-    'sen australian',
-    'sen australian playoffs'],
-  'Australian Spring Open Teams' => [
-    'spring national open teams',
-    'spring open teams'],
-  'Australian Spring Senior Teams' => [
-    'aust spring seniors teams',
-    'aust spring seniors', 
-    'australian spring seniors',
-    'australian spring seniors teams',
-    'snot seniors',
-    'spring national senior teams'],
-  'Australian Spring Women Teams' => [
-    "australian spring women's teams",
-    'australian spring womens',
-    'snot womens',
-    'spring national women teams'],
-  'Australian Women Teams' => [
-    'aust women open team',
-    "aust women's team",
-    'aust womens team', 
-    'aust womens teams', 
-    'australian women',
-    'australian women po',
-    'australian women team selection',
-    'australian women team trials',
-    'australian women trials',
-    "australian women's", 
-    "australian women's po", 
-    "australian women's team selection",
-    "australian women's teams",
-    "australian women's selection",
-    "australian women's team selection",
-    "australian women's team selelection",
-    "australian women's trials",
-    'australian womens team selection',
-    'australian womens team trial', 
-    'australian womens teams',
-    'australian womens trial',
-    'australian womens trials'],
-  'Australian Youth IMP Pairs' => [
-    'aust youth butler',
-    'australian youth butler'],
-  'Australian Youth Teams' => [
-    'aust youth',
-    'aust youth playoff',
-    'aust youth selection', 
-    'australian youth', 
-    'australian youth selection',
-    'oz youth selection'],
-  'Australian Youth Tri Individual' => ['youth tri individual'],
-  'Australian Youth Tri Pairs' => ['youth triathlon pairs'],
-
   'Austrian Open Teams' => [
     'austrian team championship',
     'austrian team championships'],
@@ -1160,9 +1017,6 @@ my %MULTI_TYPOS =
   'BKBT Teams' => ['bkbt match'],
   'B L Rao Memorial Open' => ['open b_l_rao memorial',
     'open b_r_rao  memorial', 'b_l_rao memorial open'],
-  'Bobby Evans Senior Teams' => [
-    "bobby evans senior's teams",
-    'bobby evans seniors teams'],
 
   # BOLIVIA
   'Bolivian Open Pairs' => ['bolivariano open pairs'],
@@ -1328,7 +1182,6 @@ my %MULTI_TYPOS =
     'mixed teams china'],
   'Chinese Open Teams' => ['team championship china'],
 
-  'Cliff Wake Challenge' => ['cliff wake invitational'],
   'Codan Teams Cup' => ['codan cup'],
   'Commonwealth Nations Bridge Championships' => [
     'commonwealth beidge championship', 
@@ -1849,10 +1702,6 @@ my %MULTI_TYPOS =
   ### HHH
 
   'Hanko Open Teams' => ['hanko teams'],
-  "Hans Rosendorff Memorial Women's Teams" => [
-    'hans rosendorff memorial womens teams',
-    'hans rosendorff memorial  womens teams',
-    'han rosendorff memorial womens teams'],
   'Haskovski Mineralni Bani Open Teams' => [
     'haskovski mineralni bani'],
   'Higson Teams Cup' => ['higson cup'],
@@ -2164,7 +2013,6 @@ my %MULTI_TYPOS =
     'lederer trophy'],
   'Leszek Kwiatkowski Memorial Teams' => [
     'teams memorial of leszek kwiatkowski'],
-  "Linda Stern Women's Teams" => ['linda stern womens teams'],
   'Lithuanian Open Teams' => ['lithuanian teams championship'],
   'Lokmanya Jubilee' => ['lokmanya ss silver jubilee',
     'lokmanya ss siver jubliee', 'lokmanya golden jubilee'],
@@ -2263,16 +2111,6 @@ my %MULTI_TYPOS =
     'necmettin sunget teams',
     'necmettin sünget dörtlü',
     'necmettin sünget dörtlü takýmlar'],
-  'New South Wales Open Teams' => [
-    'new south wales state teams',
-    'nsw open teams',
-    'nsw state teams'],
-  'New South Wales Open Trials' => [
-    'nsw interstate open team trials',
-    'nsw interstate open team selection',
-    'nsw interstate open teams selection',
-    'nsw interstate team selection',
-    'nsw interstate teams selection'],
  "New Year's Teams" => ['new year greet tm'],
 
   # NEW ZEALAND -- mapped in detail
@@ -2307,10 +2145,6 @@ my %MULTI_TYPOS =
   'Nordic Women Teams' => [
     'nordic women championship',
     'nordics (women)'],
-
-  'Northern Territory Gold Teams' => ['nt gold teams'],
-  'Northern Territory Gold Swiss Pairs' => ['nt gold swiss pairs',
-    'nt gold swis pairs', 'nt gold swiss piars'],
 
   # NORWAY
   'Norwegian Club Teams' => [
@@ -2631,11 +2465,6 @@ my %MULTI_TYPOS =
   'Prince Takamatsu Cup' => [
     'prince takamatsu memorial cup',
     'takamatsu cup'],
-
-  'Queensland Women Trials' => ['qld womens trials'],
-  'Queensland Senior Trials' => [
-    'qld seniors trial',
-    'qld seniors trials'],
 
   ### RRR
 
@@ -3182,22 +3011,6 @@ my %MULTI_TYPOS =
     'regional chship vest-agder', 'vest-agder km lag'],
   'Viareggio Cup' => [
     'coppie viareggio'],
-  'Victorian Open Trials' => [
-    'victoian open', 
-    'victorian opean',
-    'victorian opean teams', 
-    'victorian open',
-    "'victorian open", 
-    'victorian open team', 
-    'victorian open team selection',
-    'victorian open team trials',
-    'victorian open teams',
-    'victorian open teams playoff',
-    'victorian playoff',
-    'victorian team'],
-  'Victorian Pennant' => ['vic pennant'],
-  'Victorian Senior Trials' => ['vic seniors trials'],
-  'Victorian Women Trials' => ['vic women trials'],
 
 
   ### WWW
@@ -3209,10 +3022,6 @@ my %MULTI_TYPOS =
     'wagar womens ko'],
   'Warsaw Online Teams' => ['enthusiast bridge zlot', 
     'warsaw bboers champ', 'warsaw bboers championship'],
-  'Watermark Open Teams' => [
-    'watermark bridge classic',
-    'watermark teams',
-    'willoughby bridge classic'],
   'WCG Open' => [
     'videocon wcg Open', 
     'videcon wcg open',
@@ -3389,6 +3198,7 @@ sub set_hashes
   Tags::Tnames::Africa::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
   Tags::Tnames::Argentina::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
   Tags::Tnames::Asia::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
+  Tags::Tnames::Australia::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
 
   $method->(\@MULTI_WORDS, \%MULTI_TYPOS,
     \@SINGLE_WORDS, \%SINGLE_TYPOS, $key);
