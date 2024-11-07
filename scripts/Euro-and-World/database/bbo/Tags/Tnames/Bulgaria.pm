@@ -1,0 +1,93 @@
+#!perl
+
+use strict;
+use warnings;
+use v5.10;
+use utf8;
+use open ':std', ':encoding(UTF-8)';
+
+package Tags::Tnames::Bulgaria;
+
+our @ISA = qw(Exporter);
+our @EXPORT = qw(set_hash);
+
+
+my @MULTI_WORDS =
+(
+  'Albena Open Teams',
+  'Asenovgrad Open Teams',
+  'Bulgarian Open Pairs',
+  'Bulgarian Open Teams',
+  'Bulgarian Open Trials',
+  'Bulgarian Women Trials',
+  'Cherven Briag National Tournament',
+  'Dobrich Open Teams',
+  'Haskovski Mineralni Bani Open Pairs',
+  'Haskovski Mineralni Bani Open Teams',
+  'Karlovo Open Pairs',
+  'Karlovo Open Teams',
+  'Pleven Open Teams',
+  'Plovdiv Open Teams',
+  'Serdika Open Teams',
+  'Stara Zagora Open Teams',
+  'Varna Intercity Teams',
+  'Varna Titan Open Teams'
+);
+
+my %MULTI_TYPOS =
+(
+  'Albena Open Teams' => ['ibf albena'],
+  'Asenovgrad Open Teams' => [
+    'asenovgrad tournament',
+    'national bridge tournament asenovgrad'],
+  'Bulgarian Open Pairs' => [
+    'aris cup',
+    'bulgaria open pairs championship',
+    'bulgarian champions pairs'],
+  'Bulgarian Open Teams' => ['bulgarian national teams championship',
+    'bulgarian national championship',
+    'bulgaria national teams championship'],
+  'Bulgarian Open Trials' => [
+    'bulgaria national team trials',
+    'bulgarian national team qualification',
+    'bulgarian national team qualifications',
+    'bulgarian national team trial',
+    'bulgarian national team trials',
+    'bulgarian national trials'],
+  'Bulgarian Women Trials' => [
+    'bulgaria women national team trials',
+    'bulgarian ladies trial'],
+  'Cherven Briag Open Teams' => [
+    'cherven briag',
+    'cherven briag national tournament',
+    'national tournament cgerven briag',
+    'national tournament cherven briag'],
+  'Haskovski Mineralni Bani Open Teams' => [
+    'haskovski mineralni bani'],
+  'Karlovo Open Pairs' => ['karlovo pairs'],
+  'Karlovo Open Teams' => ['karlovo teams'],
+  'Pleven Open Teams' => [
+    "bridge tournament \"gabi\"",
+    "national bridge tournament \"gabi\"",
+    "national tournament \"gabi\"",
+    'national tournament gabi'],
+  'Serdika Open Teams' => ['serdika cup'],
+  'Stara Zagora Open Teams' => ['vito teams'],
+  'Varna Titan Open Teams' => [
+    'varna titan teams',
+    'teams titan']
+);
+
+sub set_hash
+{
+  my ($gmulti_words, $gmulti_typos) = @_;
+
+  push @$gmulti_words, @MULTI_WORDS;
+
+  while (my ($key, $value) = each %MULTI_TYPOS)
+  {
+    @{$gmulti_typos->{$key}} = @$value;
+  }
+}
+
+1;
