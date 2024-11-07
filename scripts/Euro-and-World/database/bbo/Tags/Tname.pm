@@ -15,6 +15,9 @@ use Tags::Tnames::Africa;
 use Tags::Tnames::Argentina;
 use Tags::Tnames::Asia;
 use Tags::Tnames::Australia;
+use Tags::Tnames::Balkan;
+use Tags::Tnames::Belgium;
+use Tags::Tnames::Chile;
 
 my @MULTI_WORDS =
 (
@@ -97,18 +100,8 @@ my @MULTI_WORDS =
   'Vilnius Open Pairs',
   'Vilnius Open Teams',
 
-  # BALKAN
-  'Balkan Intercity Cup',
-  'Balkan Open Teams',
-
   # BELARUS
   'Belarusian Open Teams',
-
-  # BELGIUM
-  'Belgian Open Pairs',
-  'Belgian Open Teams',
-  'Belgian Open Trials',
-  'Belisol Invitational Pairs',
 
   # BOLIVIA
   'Bolivian Open Teams',
@@ -152,18 +145,6 @@ my @MULTI_WORDS =
   # CENTRAL AMERICA
   'Central American & Caribbean Open Teams',
   'Central American & Caribbean Transnational Teams',
-
-  # CHILE
-  'Chilean Copa de Oro',
-  'Chilean Copa de Plata',
-  'Chilean Cup',
-  'Chilean Invitational Teams',
-  'Chilean Open Pairs',
-  'Chilean Open Teams',
-  'Chilean Open Trials',
-  'Chilean Senior Teams',
-  'Chilean Women Teams',
-  'Chilean Women Trials',
 
   # CHINA
   'All-China Mixed Teams',
@@ -999,10 +980,6 @@ my %MULTI_TYPOS =
     'belarusian team championship'],
 
   # BELGIUM
-  'Belgian Open Pairs' => ['belgian open paris'],
-  'Belgian Open Teams' => ['belgian teams', 'belgian team',
-    'belgian team championship', 'belgium championship',
-    'belgium open teams', 'belgian open team'],
   'Bergen Grand Open Pairs' => [
     'bergen grand tournament',
     'bergen grand tournamnet',
@@ -1142,16 +1119,6 @@ my %MULTI_TYPOS =
     'national tournament cgerven briag',
     'national tournament cherven briag'], 
 
-  # CHILE -- mapped in detail
-  'Chilean Cup' => ['copa aniversario'],
-  'Chilean Open Pairs' => ['chilean pairs'],
-  'Chilean Open Teams' => ['torneo nacional de chile'],
-  'Chilean Open Trials' => [
-    'chile open team trials',
-    'chile team trials',
-    'chilean team trials',
-    'chilean open trials'],
-
   # CHINA
   'China Friend City Senior Teams' => [
     'china friend city senior team tournament'],
@@ -1190,8 +1157,6 @@ my %MULTI_TYPOS =
     'commomwealth bridge championship',
     'commonwealth championship',
     'commonwealth bridge championship'],
-  'Chilean Copa de Oro' => ['copa de oro'],
-  'Chilean Copa de Plata' => ['copa de plata'],
   'Corn Cairdis Match' => ['corn cairdis'],
 
   # CZECH
@@ -3199,6 +3164,9 @@ sub set_hashes
   Tags::Tnames::Argentina::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
   Tags::Tnames::Asia::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
   Tags::Tnames::Australia::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
+  Tags::Tnames::Balkan::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
+  Tags::Tnames::Belgium::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
+  Tags::Tnames::Chile::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
 
   $method->(\@MULTI_WORDS, \%MULTI_TYPOS,
     \@SINGLE_WORDS, \%SINGLE_TYPOS, $key);
