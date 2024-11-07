@@ -19,6 +19,7 @@ use Tags::Tnames::Balkan;
 use Tags::Tnames::Belgium;
 use Tags::Tnames::Bulgaria;
 use Tags::Tnames::Chile;
+use Tags::Tnames::China;
 use Tags::Tnames::Denmark;
 use Tags::Tnames::Finland;
 use Tags::Tnames::Hungary;
@@ -132,46 +133,6 @@ my @MULTI_WORDS =
   # CENTRAL AMERICA
   'Central American & Caribbean Open Teams',
   'Central American & Caribbean Transnational Teams',
-
-  # CHINA
-  'All-China Mixed Teams',
-  'All-China Open Teams',
-  'All-China Women Teams',
-  'Aoda Cup',
-  'China Elite Tournament',
-  'China Friend City Senior Teams',
-  'China Hosts Europe in Rome',
-  'Chinese First League',
-  'Chinese Inter-City Teams',
-  'Chinese Mixed Teams',
-  'Chinese Open Teams',
-  'Chinese Open Trials',
-  'Chinese Women Teams',
-  'Chung Hua Cup',
-  'Cross Strait Invitational',
-  'Dongfeng Cup',
-  'Dongming Knock-out Teams',
-  'GHTD Cup',
-  'Guangdong Club Championship',
-  'Guangdong Elite Tournament',
-  'Guangzhou-HK-Macau Interport',
-  'HNA Open Teams',
-  'Haikou Fitness Day',
-  'High-Tech Zone Workers Invitational',
-  'JPD Cup',
-  'Jianshe Cup',
-  'Jili Cup',
-  'Mountain Sea Cup',
-  'Sanchen Cup',
-  'Sanya Cup',
-  'Shenhua Cup',
-  'Shenyang Spring Teams',
-  'Shenzhen Lanpu Cup',
-  'Shenzhen Nangangdongli Cup',
-  'Sunchime Fund Cup',
-  'Tielu Jixie Invitational',
-  'Xinyuan Cup',
-  'Zhejiang Huamen Cup',
 
   # CROATIA
   'Atlantic Trade Bridge Cup',
@@ -975,36 +936,6 @@ my %MULTI_TYPOS =
   'Channel Girls Trophy' => ['channel trophy girls'],
   'Channel Schools Trophy' => ['channel trophy schools'],
 
-  # CHINA
-  'China Friend City Senior Teams' => [
-    'china friend city senior team tournament'],
-  'China Elite Tournament' => [
-    'china elite inivitational tournament',
-    'china bridge elite tournament',
-    'china bridge elite invitational tournament',
-    'bridge elite tournament china'],
-  'Chinese First League' => [
-    'china bridge club championship',
-    'china first league',
-    'chinese club championship',
-    'club championships china',
-    'national club league china', 
-    'national club league',
-    'the national class a club league'],
-  'Chinese Inter-City Teams' => [
-    'avia intercity championship',
-    'china inter-city teams',
-    'china resources inter-city',
-    'china resources inter-city bridge championships',
-    'china resources land inter-city bridge cham',
-    'china resources land  inter-city bridge cham',
-    'chinese intercity teams',
-    'cr power intercity'],
-  'Chinese Mixed Teams' => [
-    'ccba mix teams',
-    'mixed teams china'],
-  'Chinese Open Teams' => ['team championship china'],
-
   'Codan Teams Cup' => ['codan cup'],
   'Commonwealth Nations Bridge Championships' => [
     'commonwealth beidge championship', 
@@ -1054,8 +985,6 @@ my %MULTI_TYPOS =
     'dgc centenary celebrations',
     'dgc centenary tournament',
     'dgc open championship'],
-  'Dongming Knock-out Teams' => ['dong ming knockout teams',
-    'dong ming knockour teams', 'ding ming knockout teams'],
   'Dutch Knock-Out Cup' => ['knock-out team cup netherlands',
     'knock out team cup netherlands'],
   'Dutch Meesterklasse' => [
@@ -1402,28 +1331,12 @@ my %MULTI_TYPOS =
     'hellenic ladies team trials',
     'hellenic ladies teams trials'],
 
-  'Guangdong Club Championship' => [
-    'guangdong club invitational',
-    'guangdong province the bridge club invitational t',
-    'guang dong club bridge championship',
-    'guang dong club championship'],
-  'Guangdong Elite Tournament' => [
-    'guangdong bridge club elites tournament',
-    'guangdong bridge club  elites  tournament',
-    'guangdong bridge club  elites tournament'],
-
   'Grand Prix of Prague' => [
     'grand prix prague', 'gp prague'],
 
   ### HHH
 
   'Higson Teams Cup' => ['higson cup'],
-  'HNA Open Teams' => [
-    'hainan air cup',
-    'hna cup', 
-    'hna openteams', 
-    'hna open team',
-    "hna's hainan bridge tournament"],
   'Hong Kong Inter-City Open Teams' => [
     'hong kong iner-city',
     'hong kong inter-city',
@@ -2226,7 +2139,6 @@ my %MULTI_TYPOS =
     'serbian premier leaugue',
     'serbian premier leauge'],
 
-  'Shenhua Cup' => ['shen hua cup'],
   'Shree Keni Trophy' => ['keni memorial trophy',
     'keni memorial  trophy', 'mkeni  trophy', 'm keny trophy',
     'm keni  trophy', 'm keni trophy', 'mkeni trophy'],
@@ -2368,8 +2280,6 @@ my %MULTI_TYPOS =
   'Swedish Senior Team Trials' => [
     'sweden senior trials',
     'swedish senior trials'],
-
-  'Shenyang Spring Teams' => ['shenyang spring'],
 
   # SWITZERLAND
   'Swiss Club Championship' => [
@@ -2777,20 +2687,25 @@ sub set_hashes
 {
   my ($method, $key) = @_;
 
-  Tags::Tnames::Africa::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
-  Tags::Tnames::Argentina::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
-  Tags::Tnames::Asia::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
-  Tags::Tnames::Australia::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
-  Tags::Tnames::Balkan::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
-  Tags::Tnames::Belgium::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
-  Tags::Tnames::Bulgaria::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
-  Tags::Tnames::Chile::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
-  Tags::Tnames::Denmark::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
-  Tags::Tnames::Finland::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
-  Tags::Tnames::Hungary::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
-  Tags::Tnames::Italy::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
-  Tags::Tnames::Portugal::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
-  Tags::Tnames::Taipei::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
+  Tags::Tnames::Africa::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::Argentina::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS,
+    \%SINGLE_TYPOS);
+  Tags::Tnames::Asia::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::Australia::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS,
+    \%SINGLE_TYPOS);
+  Tags::Tnames::Balkan::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::Belgium::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::Bulgaria::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, 
+    \%SINGLE_TYPOS);
+  Tags::Tnames::Chile::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::China::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::Denmark::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::Finland::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::Hungary::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::Italy::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::Portugal::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS,
+    \%SINGLE_TYPOS);
+  Tags::Tnames::Taipei::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
 
   $method->(\@MULTI_WORDS, \%MULTI_TYPOS,
     \@SINGLE_WORDS, \%SINGLE_TYPOS, $key);
