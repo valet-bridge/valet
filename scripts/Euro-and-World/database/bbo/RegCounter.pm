@@ -362,7 +362,7 @@ sub str_field_map
 
   my $flag = 0;
   my $s = '';
-  for my $field (keys %{$self->{FIELD_MAP}})
+  for my $field (sort keys %{$self->{FIELD_MAP}})
   {
     if ($self->{FIELD_MAP}{$field} ne $field)
     {

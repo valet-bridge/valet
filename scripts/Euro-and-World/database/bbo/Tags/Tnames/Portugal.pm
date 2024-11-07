@@ -70,15 +70,24 @@ my %MULTI_TYPOS =
     'taça rui pinto']
 );
 
+my %SINGLE_TYPOS =
+(
+);
+
 sub set_hash
 {
-  my ($gmulti_words, $gmulti_typos) = @_;
+  my ($gmulti_words, $gmulti_typos, $gsingle_typos) = @_;
 
   push @$gmulti_words, @MULTI_WORDS;
 
   while (my ($key, $value) = each %MULTI_TYPOS)
   {
     @{$gmulti_typos->{$key}} = @$value;
+  }
+
+  while (my ($key, $value) = each %SINGLE_TYPOS)
+  {
+    @{$gsingle_typos->{$key}} = @$value;
   }
 }
 
