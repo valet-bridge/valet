@@ -13,6 +13,7 @@ our @EXPORT = qw(set_hashes);
 
 use Tags::Tnames::Africa;
 use Tags::Tnames::Argentina;
+use Tags::Tnames::Asia;
 
 my @MULTI_WORDS =
 (
@@ -65,26 +66,6 @@ my @MULTI_WORDS =
   'Tunisia Friendly',
   'Turkey Practice',
   'Zulawski Friendly',
-
-  # ASIA
-  'APBF Girl Teams',
-  'APBF Junior Teams',
-  'APBF Mixed Teams',
-  'APBF Open Teams',
-  'APBF Senior Teams',
-  'APBF Women Teams',
-  'APBF Youngster Teams',
-  'ASEAN Mixed Club Teams',
-  'ASEAN Open Club Pairs',
-  'ASEAN Open Club Teams',
-  'ASEAN Women Club Teams',
-  'ASEAN Youngsters Club Teams',
-  'Asia Open Teams Cup',
-  'Asia Women Teams Cup',
-  'Asian University Championship',
-  'Indonesian SEA Open Team Trials',
-  'SEA Open Teams',
-  'South Pacific Open Teams',
 
   # ASIA/MIDDLE EAST
   'BFAME Friendship Pairs',
@@ -1025,15 +1006,6 @@ my %MULTI_TYPOS =
   'ArboNed Team Cup' => ['arbo ned team cup', 'arbo ned teams cup'],
 
   'Arnhem Interbridge Tournament' => ['interbridge tournament'],
-  'ASEAN Open Club Pairs' => [
-    'asean open pairs'],
-  'ASEAN Open Club Teams' => [
-    'asean bridge open team finals', 
-    'asean clubs championships open teams',
-    'asean open',
-    'asean open teams'],
-  'ASEAN Mixed Club Teams' => [
-    'asean mixed teams'],
   'Asenovgrad Open Teams' => [
     'asenovgrad tournament',
     'national bridge tournament asenovgrad'],
@@ -1046,8 +1018,6 @@ my %MULTI_TYPOS =
     'Ashok Kapur Memorial  Annual All India Pairs',
     'Ashok Kapur Memorial Swiis Pairs',
     'Ashok Kapur Memorial Swiss IMP Pairs'],
-  'Asian University Championship' => [
-    'asian university bridge championship'],
   'Atlantic Trade Bridge Cup' => ['atlantic grupa bridge cup'],
 
   # AUSTRALIA
@@ -2877,11 +2847,6 @@ my %MULTI_TYPOS =
   'Spanish Senior Trials' => [
     'prueba de seleccion equipos senior'],
 
-  'South Pacific Open Teams' => [
-    'south pacific zone 7 championship',
-    'spbf championship',
-    'zone 7 championship', 
-    'zone 7 championships'],
   'Spring Foursomes' => [
     'spring 4s', 
     'spring fours', 
@@ -3423,6 +3388,7 @@ sub set_hashes
 
   Tags::Tnames::Africa::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
   Tags::Tnames::Argentina::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
+  Tags::Tnames::Asia::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
 
   $method->(\@MULTI_WORDS, \%MULTI_TYPOS,
     \@SINGLE_WORDS, \%SINGLE_TYPOS, $key);
