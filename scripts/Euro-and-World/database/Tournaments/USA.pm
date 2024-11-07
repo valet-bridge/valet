@@ -444,6 +444,61 @@ my %MEETS_USA =
 
     EDITIONS => 
     {
+      '2001' =>
+      {
+        YEAR => 2001,
+        CITY => 'Houston',
+        DATE_START => '2001-05-11',
+        DATE_END => '2001-05-20'
+      },
+      '2002' =>
+      {
+        YEAR => 2002,
+        CITY => 'Houston',
+        DATE_START => '2002-05-10',
+        DATE_END => '2002-05-19'
+      },
+      '2004' =>
+      {
+        YEAR => 2004,
+        CITY => 'Memphis',
+        DATE_START => '2004-06-04',
+        DATE_END => '2004-06-13'
+      },
+      '2005' =>
+      {
+        YEAR => 2005,
+        CITY => 'Houston',
+        DATE_START => '2005-05-13',
+        DATE_END => '2005-05-22'
+      },
+      '2006' =>
+      {
+        YEAR => 2006,
+        CITY => 'White Plains',
+        DATE_START => '2006-08-19',
+        DATE_END => '2006-08-27'
+      },
+      '2008' =>
+      {
+        # Approximate
+        YEAR => 2008,
+        DATE_START => '2008-06-03',
+        DATE_END => '2008-06-07'
+      },
+      '2009' =>
+      {
+        YEAR => 2009,
+        CITY => 'White Plains',
+        DATE_START => '2009-06-06',
+        DATE_END => '2009-06-14'
+      },
+      '2013-14' =>
+      {
+        CITY => 'Atlanta',
+        DATE_START => '2013-12-31',
+        DATE_END => '2014-01-02'
+      },
       '2016' =>
       {
         YEAR => 2016,
@@ -1995,30 +2050,49 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2013' =>
+      '2013-14' =>
       {
         # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2013-junior-usbc/index.php
+        MEET => 'United States Bridge Championship',
         CITY => 'Atlanta',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
-            DATE_START => '2013-12-28',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-12-31',
+            DATE_END => '2014-01-01'
+          },
+          'C1' => 
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-01-01',
             DATE_END => '2014-01-02'
           } 
         }
       },
-      '2013' =>
+      '2015' =>
       {
-        CITY => 'Atlanta',
+        MEET => 'United States Bridge Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-12-28',
+            DATE_END => '2015-12-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
             STAGE => 'Final',
             major => 'SEGMENT',
-            DATE_START => '2013-12-31',
-            DATE_END => '2014-01-02'
+            DATE_START => '2015-12-29',
+            DATE_END => '2015-12-31'
           } 
         }
       },
@@ -2166,15 +2240,80 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2004' =>
+      '2001' =>
       {
+        MEET => 'United States Bridge Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
+          {
+            YEAR => 2001,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2001-05-19',
+            DATE_END => '2001-05-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2001,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2001-05-20',
+            DATE_END => '2001-05-20'
+          } 
+        }
+      },
+      '2002' =>
+      {
+        MEET => 'United States Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2002,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2002-05-18',
+            DATE_END => '2002-05-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2002,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2002-05-19',
+            DATE_END => '2002-05-19'
+          } 
+        }
+      },
+      '2004' =>
+      {
+        MEET => 'United States Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
           {
             YEAR => 2004,
-            DATE_START => '2004-06-09',
-            DATE_END => '2004-06-09'
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2004-06-11',
+            DATE_END => '2004-06-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2004-06-12',
+            DATE_END => '2004-06-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2004-06-13',
+            DATE_END => '2004-06-13'
           } 
         }
       },
@@ -2185,26 +2324,85 @@ my %TOURNAMENTS_USA =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2005,
-            DATE_START => '2005-07-04',
-            DATE_END => '2005-07-07'
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2005-05-19',
+            DATE_END => '2005-05-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2005-05-20',
+            DATE_END => '2005-05-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2005-05-21',
+            DATE_END => '2005-05-21'
+          },
+          'C3' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2005-05-22',
+            DATE_END => '2005-05-22'
           } 
         }
       },
       '2006' =>
       {
         # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2006-open-usbc/index.php
-        CITY => 'White Plains',
-
+        MEET => 'United States Bridge Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2006,
-            DATE_START => '2006-08-19',
-            DATE_END => '2006-08-27'
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2006-08-22',
+            DATE_END => '2006-08-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2006-08-23',
+            DATE_END => '2006-08-23'
+          },
+          'C2' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-08-24',
+            DATE_END => '2006-08-24'
+          },
+          'C3' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-08-25',
+            DATE_END => '2006-08-25'
+          },
+          'C4' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2006-08-26',
+            DATE_END => '2006-08-26'
           } 
         }
       },
@@ -2215,27 +2413,175 @@ my %TOURNAMENTS_USA =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2007,
-            DATE_START => '2007-06-01',
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2007-06-08',
+            DATE_END => '2007-06-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-06-09',
+            DATE_END => '2007-06-09'
+          },
+          'C2' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-06-10',
+            DATE_END => '2007-06-10'
+          },
+          'C3' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-06-11',
             DATE_END => '2007-06-11'
+          } 
+        }
+      },
+      '2008' =>
+      {
+        MEET => 'United States Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2008-06-04',
+            DATE_END => '2008-06-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-06-05',
+            DATE_END => '2008-06-05'
+          },
+          'C2' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-06-06',
+            DATE_END => '2008-06-06'
+          },
+          'C3' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-06-07',
+            DATE_END => '2008-06-07'
           } 
         }
       },
       '2009' =>
       {
         # https://www.usbf.org/2009-open-usbc/2009-usbc-daily-bulletin
-        CITY => 'White Plains',
+        MEET => 'United States Bridge Championship',
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
-            DATE_START => '2009-06-15',
-            DATE_END => '2009-06-25'
-          } 
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2009-06-06',
+            DATE_END => '2009-06-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2009-06-07',
+            DATE_END => '2009-06-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-06-08',
+            DATE_END => '2009-06-09'
+          },
+          'C3' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-06-10',
+            DATE_END => '2009-06-11'
+          },
+          'C4' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-06-12',
+            DATE_END => '2009-06-13'
+          },
+          # Two teams were selected separately
+          'D0' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
+            DATE_START => '2009-06-09',
+            DATE_END => '2009-06-09'
+          },
+          'D1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2009-06-10',
+            DATE_END => '2009-06-10'
+          },
+          'D2' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2009-06-11',
+            DATE_END => '2009-06-11'
+          },
+          'D3' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-06-12',
+            DATE_END => '2009-06-12'
+          },
+          'D4' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-06-13',
+            DATE_END => '2009-06-14'
+          },
+          'D5' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-06-14',
+            DATE_END => '2009-06-15'
+          },
         }
       },
       '2010' =>
@@ -2245,10 +2591,36 @@ my %TOURNAMENTS_USA =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2010,
-            DATE_START => '2010-06-18',
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2010-06-20',
+            DATE_END => '2010-06-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-06-22',
+            DATE_END => '2010-06-23'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-06-24',
+            DATE_END => '2010-06-25'
+          },
+          'C3' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-06-26',
             DATE_END => '2010-06-27'
           } 
         }
@@ -2260,11 +2632,37 @@ my %TOURNAMENTS_USA =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
             DATE_START => '2011-05-10',
-            DATE_END => '2011-05-18'
+            DATE_END => '2011-05-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-05-12',
+            DATE_END => '2011-05-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-05-14',
+            DATE_END => '2011-05-15'
+          },
+          'C3' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-05-16',
+            DATE_END => '2011-05-17'
           } 
         }
       },
@@ -2290,12 +2688,86 @@ my %TOURNAMENTS_USA =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
-            DATE_START => '2013-05-31',
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2013-06-01',
+            DATE_END => '2013-06-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-06-03',
+            DATE_END => '2013-06-05'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-06-05',
+            DATE_END => '2013-06-07'
+          },
+          'C3' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-06-07',
+            DATE_END => '2013-06-08'
+          },
+          'D0' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Rof64',
+            major => 'SEGMENT',
+            DATE_START => '2013-06-04',
+            DATE_END => '2013-06-05'
+          },
+          'D1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2013-06-05',
+            DATE_END => '2013-06-06'
+          },
+          'D2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2013-06-06',
+            DATE_END => '2013-06-07'
+          },
+          'D3' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-06-07',
+            DATE_END => '2013-06-08'
+          },
+          'D4' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-06-08',
+            DATE_END => '2013-06-09'
+          },
+          'D5' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-06-09',
             DATE_END => '2013-06-10'
-          } 
+          },
         }
       },
       '2014' =>
@@ -2305,11 +2777,37 @@ my %TOURNAMENTS_USA =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
-            DATE_START => '2014-05-09',
-            DATE_END => '2014-05-18'
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2014-05-11',
+            DATE_END => '2014-05-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-05-13',
+            DATE_END => '2014-05-15'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-05-15',
+            DATE_END => '2014-05-17'
+          },
+          'C3' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-05-17',
+            DATE_END => '2014-05-19'
           } 
         }
       },
@@ -2336,10 +2834,36 @@ my %TOURNAMENTS_USA =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
-            DATE_START => '2016-05-06',
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2016-05-08',
+            DATE_END => '2016-05-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-05-10',
+            DATE_END => '2016-05-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-05-12',
+            DATE_END => '2016-05-14'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-05-14',
             DATE_END => '2016-05-15'
           } 
         }
@@ -2928,19 +3452,6 @@ my %TOURNAMENTS_USA =
           },
         }
       },
-      '2016' =>
-      {
-        MEET => 'United States Bridge Championship',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2016,
-            DATE_START => '2016-06-18',
-            DATE_END => '2016-06-23'
-          },
-        }
-      },
     }
   },
 
@@ -3129,6 +3640,7 @@ my %TOURNAMENTS_USA =
       '2016' =>
       {
         # https://www.usbf.org/2016-senior-usbc/2016-senior-usbc
+        MEET => 'United States Bridge Championship',
         CITY => 'Denver',
 
         CHAPTERS =>
@@ -3567,11 +4079,37 @@ my %TOURNAMENTS_USA =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
-            DATE_START => '2013-07-12',
-            DATE_END => '2013-07-20'
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-07-14',
+            DATE_END => '2013-07-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-07-15',
+            DATE_END => '2013-07-16'
+          },
+          'D0' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-07-15',
+            DATE_END => '2013-07-16'
+          },
+          'D1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-07-17',
+            DATE_END => '2013-07-18'
           } 
         }
       },
@@ -3583,10 +4121,28 @@ my %TOURNAMENTS_USA =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
-            DATE_START => '2015-04-12',
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-04-14',
+            DATE_END => '2015-04-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-04-15',
+            DATE_END => '2015-04-17'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-04-17',
             DATE_END => '2015-04-18'
           } 
         }
@@ -3598,11 +4154,29 @@ my %TOURNAMENTS_USA =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
-            DATE_START => '2016-05-05',
-            DATE_END => '2016-05-15'
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-05-30',
+            DATE_END => '2016-06-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-06-01',
+            DATE_END => '2016-06-03'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-06-03',
+            DATE_END => '2016-06-05'
           } 
         }
       },
@@ -3720,13 +4294,39 @@ my %TOURNAMENTS_USA =
       },
       '2015' =>
       {
+        MEET => 'United States Bridge Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
+            YEAR => 2015,
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-12-27',
+            DATE_END => '2015-12-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-12-29',
+            DATE_END => '2015-12-30'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2015-12-30',
+            DATE_END => '2015-12-31'
+          },
+          'C3' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-12-30',
             DATE_END => '2015-12-31'
           } 
         }

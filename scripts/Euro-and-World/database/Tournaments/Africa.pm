@@ -293,6 +293,35 @@ my %TOURNAMENTS_AFRICA =
     }
   },
 
+  "Pigg's Peak All Africa" =>
+  {
+    ORGANIZATION => 'AfBF',
+    ORIGIN => 'International',
+    ZONE => 'Africa',
+    CITY => 'Piggs Peak',
+    COUNTRY => 'South Africa',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2008' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            major => 'SESSION',
+            DATE_START => '2008-04-02',
+            DATE_END => '2008-04-02'
+          } 
+        }
+      },
+    }
+  },
 );
 
 

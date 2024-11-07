@@ -99,7 +99,7 @@ while ($entryT->read($fh))
 
   if ($tname eq '')
   {
-    warn $entryT->bbono() . ": no TNAME found for meet $meet";
+    # warn $entryT->bbono() . ": no TNAME found for meet $meet";
   }
 
   if ($debug_flag)
@@ -142,7 +142,7 @@ exit if $debug_flag;
   # printf "Time $i: %.3f seconds\n", $times[$i];
 # }
 # $parseT->print_times();
-exit;
+# exit;
 
 for my $date_start (sort keys %data)
 {

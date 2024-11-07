@@ -11,6 +11,8 @@ package Tags::Tname;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes);
 
+use Tags::Tnames::Africa;
+
 my @MULTI_WORDS =
 (
   ### These are the only ones that are not specific (in time/place)
@@ -63,12 +65,6 @@ my @MULTI_WORDS =
   'Turkey Practice',
   'Zulawski Friendly',
 
-
-  # AFRICA
-  'African Zonal Open Teams',
-  'African Zonal Senior Teams',
-  'African Zonal Women Teams',
-  "Pigg's Peak All Africa",
 
   # ARGENTINA
   'Argentinian Club Teams',
@@ -1018,17 +1014,6 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   ### AAA
-
-  'African Zonal Open Teams' => [
-    'african zonal open trials',
-    'african zone 8 open teams',
-    'zonal africa open'],
-  'African Zonal Senior Teams' => [
-    'african zonal senior trials'],
-  'African Zonal Women Teams' => [
-    'african zonal women trials',
-    'zonal africa ladies',
-    'zonal africa women'],
 
   'Albena Open Teams' => ['ibf albena'],
   'All India Bangur Cement Hindusthan Club' => [
@@ -3384,7 +3369,6 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Cavendish
 );
 
 my %SINGLE_TYPOS =
@@ -3486,6 +3470,8 @@ my %SINGLE_TYPOS =
 sub set_hashes
 {
   my ($method, $key) = @_;
+
+  Tags::Tnames::Africa::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
 
   $method->(\@MULTI_WORDS, \%MULTI_TYPOS,
     \@SINGLE_WORDS, \%SINGLE_TYPOS, $key);

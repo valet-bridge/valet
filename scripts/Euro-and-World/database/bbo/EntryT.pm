@@ -577,6 +577,8 @@ my %FORM_CORRECTIONS = (
      5985,  5986, 5987],
   'Petit Grand Prix van Driene' => [
      3297,  3298,  3299],
+  "Pigg's Peak All Africa" => [
+     2764,  2765,  2766],
   'Polish Individual Championship' => [
     13235, 13236, 13237, 13242,
     16511, 16513, 16514, 16515, 16526, 16532, 16537],

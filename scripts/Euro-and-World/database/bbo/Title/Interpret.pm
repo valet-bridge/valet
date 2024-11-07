@@ -263,6 +263,10 @@ sub post_process_maybe_rof
     
     my $cno;
     my $tname = find_field_in_chains($chains, 'TNAME', \$cno);
+    if (! $tname)
+    {
+      $tname = find_field_in_chains($chains, 'MEET', \$cno);
+    }
     next unless $tname;
 
     if ($tname eq 'Spingold Teams' || 
