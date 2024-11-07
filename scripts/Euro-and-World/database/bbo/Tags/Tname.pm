@@ -12,6 +12,7 @@ our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes);
 
 use Tags::Tnames::Africa;
+use Tags::Tnames::Argentina;
 
 my @MULTI_WORDS =
 (
@@ -64,22 +65,6 @@ my @MULTI_WORDS =
   'Tunisia Friendly',
   'Turkey Practice',
   'Zulawski Friendly',
-
-
-  # ARGENTINA
-  'Argentinian Club Teams',
-  'Argentinian Copa Republica',
-  'Argentinian Flags Day Championship',
-  'Argentinian Mixed Pairs',
-  'Argentinian Mixed Teams',
-  'Argentinian Open Teams',
-  'Argentinian Open Trials',
-  'Argentinian Seniors Teams',
-  'Argentinian Senior Trials',
-  'Argentinian Women Teams',
-  'Argentinian Women Trials',
-  'Copa Zanalda River Plate',
-  'Mar del Plata Open Teams',
 
   # ASIA
   'APBF Girl Teams',
@@ -1038,41 +1023,6 @@ my %MULTI_TYPOS =
   'Andrzej Wilkosz Memorial Pairs' => ['a_ wilkosz pro memoriam'],
   'Ankara Summer Teams' => ['ankara summer team championship'],
   'ArboNed Team Cup' => ['arbo ned team cup', 'arbo ned teams cup'],
-
-  # ARGENTINA -- mapped in detail
-  'Argentinian Copa Republica' => ['copa republica'],
-  'Argentinian Mixed Pairs' => ['argentina national mixed pairs'],
-  'Argentinian Mixed Teams' => ['argentina equipos mixtos',
-    'campeonato nacional equipos mixtos argentino'],
-  'Argentinian Open Teams' => [
-    'argentina national team championship',
-    'argentina open team',
-    'argentina open teams',
-    'argentina team championship',
-    'argentine team', 
-    'argentinian open team',
-    'cn equipos libres argentina',
-    'equipo libres argentina',
-    'equipos libres argentina',
-    'open argentin team'], 
-  'Argentinian Open Trials' => [
-    'argentina open trials',
-    'argentine team trials', 
-    'argentinian team trials',
-    'open argentina team trials',
-    'open team argentina trials',
-    'openargentin team trials', 
-    'opteamsudamargentina',
-    'seleccion libre argentina',
-    'seleccion argentina libre'],
-  'Argentinian Seniors Teams' => [
-    'clasificatoria seniors argentina',
-    'clasificatoria argentina seniors sudamericano'],
-  'Argentinian Senior Trials' => [
-    'senior argentina team trials',
-    'open senior argentina trials', 
-    'seleccion argetina seniors',
-    'seleccion argentina seniors'],
 
   'Arnhem Interbridge Tournament' => ['interbridge tournament'],
   'ASEAN Open Club Pairs' => [
@@ -3472,6 +3422,7 @@ sub set_hashes
   my ($method, $key) = @_;
 
   Tags::Tnames::Africa::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
+  Tags::Tnames::Argentina::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
 
   $method->(\@MULTI_WORDS, \%MULTI_TYPOS,
     \@SINGLE_WORDS, \%SINGLE_TYPOS, $key);
