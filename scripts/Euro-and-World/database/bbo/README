@@ -1,10 +1,11 @@
+cook.pl:
+- Add the single typos before splitting further
+- Split Tname
+- Split Meet
+
 digest.pl: 
-- Eliminate warnings
 - Look for missing TNAME or indeed missing completely
 - Speed up, esp. compatibility()?
-
-cook.pl:
-- Make individual files of Tname and Meet
 
 Should we already map Juniors to U26?
 

@@ -19,8 +19,12 @@ use Tags::Tnames::Balkan;
 use Tags::Tnames::Belgium;
 use Tags::Tnames::Bulgaria;
 use Tags::Tnames::Chile;
+use Tags::Tnames::Denmark;
 use Tags::Tnames::Finland;
+use Tags::Tnames::Hungary;
 use Tags::Tnames::Italy;
+use Tags::Tnames::Portugal;
+use Tags::Tnames::Taipei;
 
 my @MULTI_WORDS =
 (
@@ -169,15 +173,6 @@ my @MULTI_WORDS =
   'Xinyuan Cup',
   'Zhejiang Huamen Cup',
 
-  # CHINESE TAIPEI
-  'Antonio Chong Cup',
-  'NTU Cup',
-  'Taiwan University Open Cup',
-  'Taiwan University Teachers Cup',
-  'Taiwan University Women Cup',
-  'Taiwanese Open Trials',
-  'Taiwanese Senior Trials',
-
   # CROATIA
   'Atlantic Trade Bridge Cup',
   'Samobor Open Teams',
@@ -186,24 +181,6 @@ my @MULTI_WORDS =
   'Czech First League',
   'Czech Open',
   'Grand Prix of Prague',
-
-  # DENMARK
-  'Copenhagen Invitational Pairs',
-  'Copenhagen Open Pairs',
-  'Danish Club Teams',
-  'Danish Cup',
-  'Danish First Division',
-  'Danish Junior Teams',
-  'Danish Mixed Pairs',
-  'Danish Mixed Teams',
-  'Danish Open Pairs',
-  'Danish Open Pairs Trials',
-  'Danish Open Teams',
-  'Danish Open Trials',
-  'Danish Women Pairs',
-  'Hecht Cup',
-  'Prince Henrik Trophy',
-  'Vinoble Open',
 
   # ECUADOR
   'Ecuador Open Teams',
@@ -297,18 +274,6 @@ my @MULTI_WORDS =
   'Hong Kong Inter-City Open Teams',
   'Hong Kong Inter-City Women Teams',
   'Hong Kong New Year Teams',
-
-  # HUNGARY
-  'Balaton Invitational Teams',
-  'Balatonföldvár Open Teams',
-  'EcoSoft Cup',
-  'Hungarian Cup',
-  'Hungarian IMP Pairs',
-  'Hungarian Open Pairs',
-  'Hungarian Open Teams',
-  'Hungarian Open Trials',
-  'Hungarian Senior Trials',
-  'Hungarian Women Trials',
 
   # ICELAND
   'Iceland Express Pairs',
@@ -595,16 +560,6 @@ my @MULTI_WORDS =
   'Warsaw Online Teams',
   'Wronie Summer Teams',
   'Zulawski Cup',
-
-  # PORTUGAL
-  'FullBridge International Teams',
-  'Madeira Open Teams',
-  'Portuguese Grand Prix',
-  'Portuguese IMP Pairs',
-  'Portuguese Open Teams',
-  'Portuguese Open Trials',
-  'Portuguese Northern Regional Open Teams',
-  'Rui Pinto Cup',
 
   # ROMANIA
   'Romanian League',
@@ -903,11 +858,6 @@ my %MULTI_TYPOS =
 
   ### BBB
 
-  'Balaton Invitational Teams' => [
-    'balaton international teams',
-    'balaton invitation teams'],
-  'Balatonföldvár Open Teams' => [
-    'balatonfoldvar teams'],
   'Balikcioglu Open Teams' => [
     'balikcioglu teams championship'],
   'Baltic Open Teams' => [
@@ -1091,73 +1041,6 @@ my %MULTI_TYPOS =
     'Dainik Navjyoti All India Interstate',
     'Dainik Navjyoti All India Inter -State'],
 
-  # DENMARK: Mapped in detail
-  'Copenhagen Open Pairs' => ['km åben par'],
-  'Danish Club Teams' => [
-    'danish club team', 
-    'danish district teams championship',
-    'dm klubhold',
-    'dm i klubhold', 
-    'dm i knubhold', 
-    'dm i klub hold',
-    'dmi i klubhold'],
-  'Danish Cup' => [
-    'danmark pokal', 
-    'danmark pokal match', 
-    'denmark pokal',
-    'vinoble cup'],
-  'Danish First Division' => [
-    '1_ division danmark',
-    'danish 1st division', 
-    'danish 1_division',
-    'danish team', 
-    'danish team champions',
-    'danish team championship',
-    'danish team championships', 
-    'danmark 1_ division',
-    'danmark 1_division', 
-    'danmark 1st division', 
-    'denmark 1st division',
-    'denmark 1_division',
-    'denmark team championship',
-    'dm hold'], 
-  'Danish Junior Teams' => [
-    'danish junior team championship', 
-    'dansih junior team championship', 
-    'junior dm'],
-  'Danish Mixed Pairs' => [
-    'dm mix',
-    'dm mix par', 
-    'danish championship mixed pairs',
-    'danish mix-pair championship', 
-    'danish mix pair championship',
-    'danish mix pairs',
-    'danish national mix-pairs championship'], 
-  'Danish Open Pairs' => [
-    'danish championship open pairs', 
-    'danish open pairs championship', 
-    'denmark national open pair championship',
-    'denmark national open pairs championship',
-    'danish open pairs championships',
-    'danish pairs championship',
-    'open pairs - danish championship'],
-  'Danish Open Teams' => [
-    'danish open',
-    'danish open team', 
-    'danish open teams'],
-  'Danish Open Pairs Trials' => [
-    'danish team test',
-    'danish teams test'], 
-  'Danish Open Trials' => [
-    'danish open team trials',
-    'danish team trial',
-    'danish team trials',
-    'denmark team test'],
-  'Danish Women Pairs' => [
-    'danish championship ladies pairs', 
-    'danish champoinship ladies pairs',
-    'ladies pairs - danish championship'],
-
   'Delhi Gymkhana Club Open Teams' => [
     'delhi gymkhana centenary celebrations',
     'delhi gymkhana championship',
@@ -1184,7 +1067,6 @@ my %MULTI_TYPOS =
 
   ### EEE
 
-  'EcoSoft Cup' => ['eco soft cup'],
   'Ecuador Open Teams' => [
     'ecuador open team trials',
     'ecuador teams champinonship'],
@@ -1428,8 +1310,6 @@ my %MULTI_TYPOS =
   'French Women Trials' => ['entrainement venice cup'],
 
   'FTBC Tanjungpura University' => ['ftbc university tanjungpura'],
-  'FullBridge International Teams' => ['internacional equipos full bridge',
-    'internacional full bridge'],
   'FX Securities Pairs Cup' => [
     'fx securities cup',
     'fx sec_ cup'],
@@ -1553,23 +1433,6 @@ my %MULTI_TYPOS =
     'JP Morgan Intercity Bridge Championships-Open',
     'JP Morgan Intercity Bridge Championships-Open T_',
     'JP Morgan Intercity Bridge Championships-Open  T_'],
-
-  # HUNGARY
-  'Hungarian IMP Pairs' => ['hungarian imp'],
-  'Hungarian Open Pairs' => ['hungarian national pairs'],
-  'Hungarian Open Teams' => [
-    'hungarian championships',
-    'hungarian team championships',
-    'hungarian teams', 
-    'hungarian teams championship',
-    'hungarian teams championships',
-    'hungary teams'], 
-  'Hungarian Open Trials' => [
-    'hungarian team trial',
-    'hungarian team trials'],
-  'Hungarian Women Trials' => [
-    'hungarian woman trials',
-    "hungarian woman's trials"],
 
   ### III
 
@@ -1835,17 +1698,6 @@ my %MULTI_TYPOS =
   ### MMM
 
   'Maccabi Games' => ['maccabi-games', 'europ_ maccabi games'],
-  'Madeira Open Teams' => [
-    'madeira internacional', 
-    'madeira internacional open',
-    'madeira international open',
-    'madeira international teams',
-    'madeira international teams open´s',
-    'madeira international teams open',
-    'madeira swiss',
-    'madeira swiss teams',
-    'madeira teams', 
-    'swiss teams madeira'], 
   'Madras Gymkhana Club Open' => [
     'madras gymkhana open',
     'mgc open',
@@ -2226,35 +2078,6 @@ my %MULTI_TYPOS =
     'grand prix of wielkopolski',
     'rozgrywek pucharowych pwzbs'],
 
-
-  # PORTUGAL
-  'Portuguese Grand Prix' => [
-    'estoril open teams',
-    'portugal grand peix',
-    'portugal grand prix', 
-    'portuguese grad prix'],
-  'Portuguese IMP Pairs' => [
-    'nacional pares por imps',
-    "nacional pares por imp's",
-    'nacional pares imps portugal',
-    "campeonato nacional pares por imp's"],
-  'Portuguese Open Teams' => [
-    'equipas open pt', 
-    'open teams pt',
-    'portugal open teams championship',
-    'portuguese cneo', 
-    'portuguese national teams',
-    'portuguese teams'],
-  'Portuguese Open Trials' => [
-    'portuguese open trial', 
-    'portuguese slection trials',
-    'portuguese trials',
-    'portuguese trial', 
-    'portuguese selection trials'],
-  'Portuguese Northern Regional Open Teams' => [
-    'northern regional open teams',
-    'northern regional teams open'],
-
   'PYC Hindu Gymkhana Royale' => ['pyc royale'],
   'PT Timah Invitational Teams' => [
     'invitasi pt timah',
@@ -2339,8 +2162,6 @@ my %MULTI_TYPOS =
     'rondanecupen swiss teams'],
   'Rosfjord Swiss Teams' => ['rosfjord monrad team',
     'rosfjord monrad teams'],
-  'Rui Pinto Cup' => [
-    'taça rui pinto'],
   'Ruia Gold Cup' => [
     'golden jubilee',
     'ruia gold', 
@@ -2575,36 +2396,6 @@ my %MULTI_TYPOS =
     ],
 
   ### TTT
-
-  'Taiwan University Open Cup' => [
-    'taiwan university cup',
-    'taiwan university championship'],
-  'Taiwan University Women Cup' => [
-    'taiwan university championship women'],
-  'Taiwan University Teachers Cup' => [
-    'taiwan university cup teachers',
-    "taiwan university cup teacher's section"],
-  'Taiwanese Open Trials' => [
-    'chinese taipei open trials',
-    'ctcba chinese taipei open team trials',
-    'ctcba chinese taipei open trial',
-    'ctcba open team trial',
-    'ctcba open team trials',
-    'ctcba open trail',
-    'ctcba open trial',
-    'ctcba trial',
-    'chinese taipei open team trail',
-    'chinese taipei open team trial',
-    'chinese taipei open team trials',
-    'chinese taipei team trial', 
-    'chinese taipei trails',
-    'chinese taipei trials',
-    'taipei open trials',
-    'taiwanese teal trial',
-    'taiwanese team trial',
-    'taiwanese trials'],
-  'Taiwanese Senior Trials' => [
-    'ctcba senior team trial'],
 
   'TATA Open' => ['tata opren', 'tata sports', 'ttat open'],
   'Telkom Indonesia Open' => [
@@ -2994,8 +2785,12 @@ sub set_hashes
   Tags::Tnames::Belgium::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
   Tags::Tnames::Bulgaria::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
   Tags::Tnames::Chile::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
+  Tags::Tnames::Denmark::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
   Tags::Tnames::Finland::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
+  Tags::Tnames::Hungary::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
   Tags::Tnames::Italy::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
+  Tags::Tnames::Portugal::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
+  Tags::Tnames::Taipei::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS);
 
   $method->(\@MULTI_WORDS, \%MULTI_TYPOS,
     \@SINGLE_WORDS, \%SINGLE_TYPOS, $key);

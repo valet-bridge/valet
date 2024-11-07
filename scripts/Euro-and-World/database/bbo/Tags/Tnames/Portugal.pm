@@ -1,0 +1,85 @@
+#!perl
+
+use strict;
+use warnings;
+use v5.10;
+use utf8;
+use open ':std', ':encoding(UTF-8)';
+
+package Tags::Tnames::Portugal;
+
+our @ISA = qw(Exporter);
+our @EXPORT = qw(set_hash);
+
+
+my @MULTI_WORDS =
+(
+  'FullBridge International Teams',
+  'Madeira Open Teams',
+  'Portuguese Grand Prix',
+  'Portuguese IMP Pairs',
+  'Portuguese Open Teams',
+  'Portuguese Open Trials',
+  'Portuguese Northern Regional Open Teams',
+  'Rui Pinto Cup'
+);
+
+my %MULTI_TYPOS =
+(
+  'FullBridge International Teams' => [
+    'internacional equipos full bridge',
+    'internacional full bridge'],
+  'Madeira Open Teams' => [
+    'madeira internacional',
+    'madeira internacional open',
+    'madeira international open',
+    'madeira international teams',
+    'madeira international teams open´s',
+    'madeira international teams open',
+    'madeira swiss',
+    'madeira swiss teams',
+    'madeira teams',
+    'swiss teams madeira'],
+  'Portuguese Grand Prix' => [
+    'estoril open teams',
+    'portugal grand peix',
+    'portugal grand prix',
+    'portuguese grad prix'],
+  'Portuguese IMP Pairs' => [
+    'nacional pares por imps',
+    "nacional pares por imp's",
+    'nacional pares imps portugal',
+    "campeonato nacional pares por imp's"],
+  'Portuguese Open Teams' => [
+    'equipas open pt',
+    'open teams pt',
+    'portugal open teams championship',
+    'portuguese cneo',
+    'portuguese national teams',
+    'portuguese teams'],
+  'Portuguese Open Trials' => [
+    'portuguese open trial',
+    'portuguese slection trials',
+    'portuguese trials',
+    'portuguese trial',
+    'portuguese selection trials'],
+  'Portuguese Northern Regional Open Teams' => [
+    'northern regional open teams',
+    'northern regional teams open'],
+  'Rui Pinto Cup' => [
+    'taça rui pinto']
+);
+
+sub set_hash
+{
+  my ($gmulti_words, $gmulti_typos) = @_;
+
+  push @$gmulti_words, @MULTI_WORDS;
+
+  while (my ($key, $value) = each %MULTI_TYPOS)
+  {
+    @{$gmulti_typos->{$key}} = @$value;
+  }
+}
+
+1;
