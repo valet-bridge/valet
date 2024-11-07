@@ -28,6 +28,7 @@ use Tags::Tnames::Italy;
 use Tags::Tnames::Poland;
 use Tags::Tnames::Portugal;
 use Tags::Tnames::Taipei;
+use Tags::Tnames::UK;
 
 my @MULTI_WORDS =
 (
@@ -544,35 +545,6 @@ my @MULTI_WORDS =
   'Turkish Women Teams',
   'Western Mediterranean Club Teams',
 
-  # UNITED KINGDOM
-  'British Gold Cup',
-  'Camrose Trophy',
-  'Commonwealth Nations Bridge Championships',
-  'Corn Cairdis Match',
-  'English Open Trials',
-  'English Premier League',
-  'English Senior Trials',
-  'English U28 Trials',
-  'English Women Teams',
-  'English Women Trials',
-  'Garden Cities Teams',
-  'Glasgow Transnational Open Teams',
-  'Higson Teams Cup',
-  'Junior Camrose',
-  'Lady Milne Trophy',
-  'Lederer Memorial Trophy',
-  'Peggy Bayer Trophy',
-  'Scottish Cup',
-  'Scottish National League',
-  'Spring Foursomes',
-  'Teltscher Trophy',
-  'TGR Auction Pairs',
-  'TGR Auction Teams',
-  'TGR Super League',
-  'Welsh Invitational Pairs',
-  'Welsh Open Trials',
-  'Young Chelsea Knock-out',
-
   # USA
   '0 to 1500 Spingold',
   'Collegiate Bowl',
@@ -677,6 +649,10 @@ my %MULTI_TYPOS =
     'austrian team championship',
     'austrian team championships'],
 
+  'Scottish Exhibition' => [
+    'm lawrence exhibiton',
+    'mike lawrence exhibition'],
+
   ### BBB
 
   'Balikcioglu Open Teams' => [
@@ -724,8 +700,6 @@ my %MULTI_TYPOS =
     'open brazilian championship'],
   'Brazilian Senior Trials' => ['brazilian senior'],
   'Brazilian Women Trials' => ['brazilian ladies trials'],
-
-  'British Gold Cup' => ['gold cup', 'british gold'],
 
   ### CCC
 
@@ -792,14 +766,6 @@ my %MULTI_TYPOS =
   'Channel Schools Trophy' => ['channel trophy schools'],
 
   'Codan Teams Cup' => ['codan cup'],
-  'Commonwealth Nations Bridge Championships' => [
-    'commonwealth beidge championship', 
-    'commonwealth nations bridge championship', 
-    "commonwealth nation's bridge championship",
-    'commomwealth bridge championship',
-    'commonwealth championship',
-    'commonwealth bridge championship'],
-  'Corn Cairdis Match' => ['corn cairdis'],
 
   # CZECH
   'Czech Championship' => ['czech bridge championship',
@@ -844,39 +810,6 @@ my %MULTI_TYPOS =
     'egy_cup'],
   'Egyptian League' => ['egy_league', 'egy-league',
     'egyptian premier league'],
-
-  # ENGLAND
-  'English Open Trials' => [
-    'english open trial',
-    'enlish open trials', 
-    'english open team trials',
-    'english open teams trial',
-    'english open teams trials'],
-  'English Premier League' => [
-    'engish premier league',
-    'england premier league', 
-    'english premie league',
-    'englush premier league', 
-    'english premier lge'],
-  'English Senior Trials' => [
-    'england senior trial',
-    'england senior trials', 
-    'england senior teams trial',
-    'england senior trial',
-    'english seniors',
-    'english senior european trials',
-    'english seniors european trials',
-    'english senior teams',
-    'englnd senior trials'], 
-  'English U28 Trials' => ['england u28 trials'],
-  'English Women Teams' => [
-    'english national womens teams',
-    'whitelaw cup'],
-  'English Women Trials' => [
-    "england ladies' trials",
-    'english ladies trials',
-    "english ladies' trials",
-    'lady milne trials'],
 
   # ESTONIA
   'Estonian First League' => ['estonian a- league',
@@ -1087,12 +1020,10 @@ my %MULTI_TYPOS =
     'bastaman cup',
     'gabrial-ui cup',
     'gabrial ui cup'],
-  'Garden Cities Teams' => ['garden cities'],
   'Gardermoen Airport Hotel Teams' => [
     'gardermoen airport hotel cup'],
   'Gelibolu Peace Teams' => ['gelibolu peace cup'],
   'Geologi Cup' => ['geo cup'],
-  'Glasgow Transnational Open Teams' => ['tnt glasgow'],
 
   # GERMANY -- mapped in detail
   'Bonn Nations Cup' => ['nations cup germany', 'bonn cup'],
@@ -1174,7 +1105,6 @@ my %MULTI_TYPOS =
 
   ### HHH
 
-  'Higson Teams Cup' => ['higson cup'],
   'Hong Kong Inter-City Open Teams' => [
     'hong kong iner-city',
     'hong kong inter-city',
@@ -1336,7 +1266,6 @@ my %MULTI_TYPOS =
   'Jordan Mixed Pairs' => [
     'jordan spring mix pairs',
     'jordan spring mixed pairs'],
-  'Junior Camrose' => ['juniior camrose'],
 
   ### KKK
 
@@ -1366,14 +1295,11 @@ my %MULTI_TYPOS =
 
   ### LLL
 
-  'Lady Milne Trophy' => ['lady milne', 'lady mile'],
   'Las Palmas Simultaneous Pairs' => ['simultaneo de mayo las palmas'],
   'Lebanese Invitational Teams' => [
     'lebanese invitational team',
     'lebanon invitational team',
     'lebanon invitational teams'],
-  'Lederer Memorial Trophy' => ['lederer memorial',
-    'lederer trophy'],
   'Lithuanian Open Teams' => ['lithuanian teams championship'],
   'Lüleburgaz Liberation Cup' => ['luleburgaz kurtulus kupasi'],
 
@@ -1386,9 +1312,6 @@ my %MULTI_TYPOS =
     'marit sveaas international  bridge tournament',
     'marit sveaas tournament'],
   'McConnell Cup' => ['mc connell'],
-  'Scottish Exhibition' => [
-    'm lawrence exhibiton',
-    'mike lawrence exhibition'],
   "Missouri Braggin' Rights" => ['bragging rights'],
   'Murat Kilercioglu Turkish Spring Teams' => [
     'Murat Kilercioglu Spring Teams'],
@@ -1590,8 +1513,6 @@ my %MULTI_TYPOS =
   'Patton de Monaco' => ["monaco's patton", 'patton international monaco',
     'patton international monte-carlo',
     'patton international monte carlo', 'patton monte carlo'],
-  'Peggy Bayer Trophy' => [
-    'peggy bayer'],
   'Petit Grand Prix van Driene' => ['petit grand prix',
     'grand prix van driene'],
   'Pertamina Field Tambun Cup' => ['pertamina ep field tambun cup'],
@@ -1700,8 +1621,6 @@ my %MULTI_TYPOS =
     'sp champ', 
     'sao paulo state'],
   'Sarundajang Cup' => ['the sarundajang cup'],
-  'Scottish Cup' => ['scot cup', 'scot cuo', 'scottish cup plate'],
-  'Scottish National League' => ['scotland national league'],
   'Senior Camrose' => ['seniors camrose'],
 
   'Serbian Cup' => [
@@ -1793,10 +1712,6 @@ my %MULTI_TYPOS =
   'Spanish Senior Trials' => [
     'prueba de seleccion equipos senior'],
 
-  'Spring Foursomes' => [
-    'spring 4s', 
-    'spring fours', 
-    'schapirosfs'],
   'Spring Nationals' => [
     'spring nat', 
     'spring national', 
@@ -1888,18 +1803,6 @@ my %MULTI_TYPOS =
     'telkom cup',
     'telkom speedy',
     'telkom indonesian open'],
-  'Teltscher Trophy' => [
-    'senior camrose',
-    'teltcher trophy'],
-  'TGR Auction Pairs' => [
-    'tgr auction',
-    "tgr's auction pairs",
-    'tgrs auction pair', 
-    'tgrs auction pairs'],
-  'TGR Auction Teams' => ['tgrs auction teams'],
-  'TGR Super League' => ["tgr's super league", "tgr's super legue",
-    'tgrs league', 'tgrs 2nd auction pairs', 'tgrs super league',
-    "tgr's league", "trg's super league"],
   'Thanos Capayiannides Memorial Simultaneous' => [
     'thanos capayiannides'],
   'Thrace Cup League' => [
@@ -2075,8 +1978,6 @@ my %MULTI_TYPOS =
   'White House Top 16' => ['white house int. teams top 16',
     'white house int_ teams top 16',
     'white house international top 16 teams'],
-  'Welsh Open Trials' => ['welsh open trial', 'welsh trials',
-    'welsh trial'],
   'Willy Brown Memorial Pairs' => [
     'willy brown memorial'],
 
@@ -2105,8 +2006,6 @@ my %MULTI_TYPOS =
     'univ_ world champs'],
 
   'Yeh Bros Cup' => ['yehbros cup', 'yer bros cup'],
-  'Young Chelsea Knock-out' => ['yc ko', 'young chelsea ko',
-    'young chelsea knockout'],
   'Youth Open Bridge Paris' => ['youth paris open bridge'],
 
   ### ZZZ
@@ -2128,14 +2027,12 @@ my %SINGLE_TYPOS =
   'Bermuda Bowl' => ['bb'],
   'Bobby Evans Seniors Teams' => ['best'],
   'Brazilian Open Teams' => ['brasilchamp'],
-  'Camrose Trophy' => ['camrose', 'camroae', 'ccmrose'],
   'Canadian National Teams Championship' => ['cntc'],
   'Canadian Seniors Teams Championship' => ['cstc', 'cnst'],
   'Canadian Women Teams Championship' => ['cwtc'],
   Cavendish => ['cavendiish', 'caavendish', 'cavemdish', 'cavendiosh',
     'cavendsh', 'cavvendish', 'avendish', 'cav'],
   'Collegiate Bowl' => ['collegiate', 'collegiates'],
-  'Commonwealth Nations Bridge Championships' => ['cnbc'],
   'Copenhagen Invitational Pairs' => ['cbi'],
   'Danish Championship' => ['dm'],
   'French First Division' => ['dn'],
@@ -2156,30 +2053,21 @@ my %SINGLE_TYPOS =
   'Grand National Teams' => ['gnt'],
   "Gro's Supercup" => ['grocup'],
   'Icelandair Open' => ['icelandair'],
-  'Junior Camrose' => ['juniorcamrose', 'juniorcmrose'],
   "Kepri Governor's Cup" => ['kepricup'],
-  'Lederer Memorial Trophy' => ['lederer', 'ledered'],
   "Linda Stern Women's Teams" => ['lswt'],
   'Maccabi Games' => ['maccabiah'],
   'McConnell Cup' => ['mcconnell'],
   'NTU Cup' => ['ntucup'],
   'Paris Youth Open Teams' => ['ypob'],
-  'Peggy Bayer Trophy' => [
-    'peggybayer'],
   'Portuguese Open Teams' => ['cneo'],
   'Reisinger BAM Teams' => [
     'reisiger', 
     'reisinger', 
     'resisinger'],
   'Rosenblum Cup' => ['rosenblum'],
-  'Scottish Cup' => ['scottishcupplate'],
   'Spingold Teams' => ['spingold'],
   'Swedish Elite Series' => ['elitserien'],
   'Prince Takamatsu Cup' => ['takamatsu'],
-  'Teltscher Trophy' => [ 
-   'teltschertrophy', 
-   'teltscher', 
-   'telschertrophy'],
   'Top Circuit' => ['topcircuit'],
   'Transnational Open Teams' => ['tnt', 'tnot'],
   'US Junior Trials' => ['usjbc', 'jusbc'],
@@ -2204,7 +2092,6 @@ my %SINGLE_TYPOS =
   'World Transnational Mixed Teams' => ['wtmt'],
   'World Transnational Open Teams' => ['wtot'],
   'World University Championship' => ['wuc'],
-  'Young Chelsea Knock-out' => ['ycko'],
   'European Winter Teams' => ['zc']
 );
 
@@ -2233,6 +2120,7 @@ sub set_hashes
   Tags::Tnames::Portugal::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS,
     \%SINGLE_TYPOS);
   Tags::Tnames::Taipei::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::UK::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
 
   $method->(\@MULTI_WORDS, \%MULTI_TYPOS,
     \@SINGLE_WORDS, \%SINGLE_TYPOS, $key);
