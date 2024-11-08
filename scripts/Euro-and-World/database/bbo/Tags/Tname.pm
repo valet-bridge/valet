@@ -25,6 +25,7 @@ use Tags::Tnames::Finland;
 use Tags::Tnames::Germany;
 use Tags::Tnames::Hungary;
 use Tags::Tnames::India;
+use Tags::Tnames::Indonesia;
 use Tags::Tnames::Israel;
 use Tags::Tnames::Italy;
 use Tags::Tnames::Norway;
@@ -239,46 +240,6 @@ my @MULTI_WORDS =
   'Icelandair Open Teams',
   'Icelandic Cup',
   'Icelandic Open Teams',
-
-  # INDONESIA
-  'Electric Cup',
-  'FTBC Tanjungpura University',
-  'Gabrial UI Bastaman Cup',
-  'Geologi Cup',
-  'IBWI Women Cup',
-  'Indonesian Inter-City Championship',
-  'Indonesian Inter-Club Championship',
-  'Indonesian Inter-Province Championship',
-  'Indonesian Invitational Teams',
-  'Indonesian Junior League Online',
-  'Indonesian Mixed Pair Trials',
-  'Indonesian Mixed Teams',
-  'Indonesian Open Pair Trials',
-  'Indonesian Open Teams',
-  'Indonesian Open Trials',
-  'Indonesian Premier League',
-  'Indonesian U16 Pair Trials',
-  'Indonesian U18 Teams',
-  'Indonesian U21 Pair Trials',
-  'Indonesian U21 Teams',
-  'Indonesian U26 Pair Trials',
-  'Indonesian U26 Teams',
-  'Indonesian U26 Women Pair Trials',
-  'Indonesian U31 Teams',
-  'Indonesian U31 Women Teams',
-  'Indonesian Women Pair Trials',
-  'Indonesian Women Teams',
-  'Indonesian Women Trials',
-  "Kepri Governor's Cup",
-  'Menpora-Pertamina Cup',
-  'Pahlawan Cup',
-  'Pertamina Field Tambun Cup',
-  'PLN Cup',
-  'PT Timah Invitational Teams',
-  'Rector University of Brawijaya Cup',
-  'Sarundajang Cup',
-  'Semen Padang Cup',
-  'Telkom Indonesia Open',
 
   # IRELAND
   'Irish Invitational Pairs',
@@ -789,15 +750,7 @@ my %MULTI_TYPOS =
   'French U28 Trials' => ['selection junior pekin', 'selection u28 pekin'],
   'French Women Trials' => ['entrainement venice cup'],
 
-  'FTBC Tanjungpura University' => ['ftbc university tanjungpura'],
-
   ### GGG
-
-  'Gabrial UI Bastaman Cup' => [
-    'bastaman cup',
-    'gabrial-ui cup',
-    'gabrial ui cup'],
-  'Geologi Cup' => ['geo cup'],
 
   'Grand National Teams' => ['gnt championship'],
 
@@ -855,7 +808,6 @@ my %MULTI_TYPOS =
   ### III
 
   # ICELAND
-  'IBWI Women Cup' => ['ibwi cup'],
   'Iceland Express Teams' => ['iceland express team'],
   'Icelandair Open Teams' => [
     'icelandair open',
@@ -875,43 +827,6 @@ my %MULTI_TYPOS =
     'icelandic team championships',
     'icelandic teamhampionship', 
     'icelandic teams'],
-
-  # INDONESIA
-  'Indonesian U26 Women Pair Trials' => [
-    'indonesian girls u26 selection',
-    'indonesia girls u26 selection'],
-  'Indonesian Inter-City Championship' => [
-    'ina intercity national chams',
-    'ina intercity national champs'],
-  'Indonesian Inter-Club Championship' => [
-    'ina interclub national champs',
-    'national indonesian championship (inter-club'],
-  'Indonesian Inter-Province Championship' => [
-    'uji coba'],
-  'Indonesian Junior League Online' => [
-    'icba junior league online'],
-  'Indonesian U16 Pair Trials' => [
-    'indonesian kids national selection',
-    'indonesian kids trials'],
-  'Indonesian Premier League' => [
-    'indonesian bridge league',
-    'indonesia bridge league', 
-    'indonesia premier league'],
-  'Indonesian Mixed Pair Trials' => [
-    'indonesian mixed national selection'],
-  'Indonesian Open Pair Trials' => ['indonesian pairs trials'],
-  'Indonesian Open Teams' => [
-    'indonesia open team',
-    'indonesian open team',
-    'indonesia national open team',
-    'indonesian national open team'],
-  'Indonesian Open Trials' => ['indonesian men national selection',
-    'indonesian men selection'],
-  'Indonesian U21 Trials' => ['indonesian u21 selection',
-    'indonesia u21 selection', 'indoneian u21 selection',
-    'indonesian u21 selekction'],
-  'Indonesian U26 Trials' => ['indonesian u26 selection'],
-  'Indonesian Women Trials' => ['indonesian women national selection'],
 
 
   # IRELAND -- mapped in detail
@@ -945,20 +860,6 @@ my %MULTI_TYPOS =
 
   ### KKK
 
-  "Kepri Governor's Cup" => [
-    'bi cup',
-    'gov bi cup', 
-    'governor cup', 
-    'governor kepri cup', 
-    'gubernur kepri cup', 
-    'guvernor kepri cup',
-    'kepri bridge championship', 
-    'kepri cup',
-    'kepri governor cup', 
-    'kepri governors cup', 
-    'kepri international tournament',
-    'kepri international bridge tournament',
-    'riau governor cup'],
   'Forbo-Krommenie Nations Cup' => [
     'forbo krommenie teams',
     'forbo nations cup',
@@ -1063,22 +964,9 @@ my %MULTI_TYPOS =
     'patton international monte carlo', 'patton monte carlo'],
   'Petit Grand Prix van Driene' => ['petit grand prix',
     'grand prix van driene'],
-  'Pertamina Field Tambun Cup' => ['pertamina ep field tambun cup'],
   'Philadelphia Solomon Teams' => [
     'solomon teams'],
-  'PLN Cup' => ['pln fortuga'],
 
-  'PT Timah Invitational Teams' => [
-    'invitasi pt timah',
-    'invitasi pt_ timah',
-    'invitasi pt_timah',
-    'invitasi terbatas pt timah',
-    'invitasi terbatas pt_timah',
-    'invitasi terbatas pt_ timah',
-    'pt timah limited invitational teams',
-    'pt_ timah limited invitation teams',
-    'pt_ timah limited invitational teams',
-    'pt_ timah ltd invitational teams'],
   'Prince Takamatsu Cup' => [
     'prince takamatsu memorial cup',
     'takamatsu cup'],
@@ -1147,7 +1035,6 @@ my %MULTI_TYPOS =
     'são paulo state championship', 
     'sp champ', 
     'sao paulo state'],
-  'Sarundajang Cup' => ['the sarundajang cup'],
   'Senior Camrose' => ['seniors camrose'],
 
   'Serbian Cup' => [
@@ -1271,10 +1158,6 @@ my %MULTI_TYPOS =
 
   ### TTT
 
-  'Telkom Indonesia Open' => [
-    'telkom cup',
-    'telkom speedy',
-    'telkom indonesian open'],
   'Thanos Capayiannides Memorial Simultaneous' => [
     'thanos capayiannides'],
   'Top Circuit' => ['melchemie top circuit',
@@ -1400,7 +1283,6 @@ my %SINGLE_TYPOS =
   'Grand National Teams' => ['gnt'],
   "Gro's Supercup" => ['grocup'],
   'Icelandair Open' => ['icelandair'],
-  "Kepri Governor's Cup" => ['kepricup'],
   "Linda Stern Women's Teams" => ['lswt'],
   'NTU Cup' => ['ntucup'],
   'Paris Youth Open Teams' => ['ypob'],
@@ -1455,6 +1337,7 @@ sub set_hashes
   Tags::Tnames::Germany::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Hungary::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::India::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::Indonesia::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Israel::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Italy::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Norway::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
