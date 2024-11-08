@@ -27,13 +27,16 @@ use Tags::Tnames::Canada;
 use Tags::Tnames::Chile;
 use Tags::Tnames::China;
 use Tags::Tnames::Croatia;
+use Tags::Tnames::Czech;
 use Tags::Tnames::Denmark;
+use Tags::Tnames::Ecuador;
 use Tags::Tnames::Egypt;
 use Tags::Tnames::EuroAdult;
 use Tags::Tnames::EuroYouth;
 use Tags::Tnames::Faroe;
 use Tags::Tnames::Finland;
 use Tags::Tnames::France;
+use Tags::Tnames::Friendly;
 use Tags::Tnames::Germany;
 use Tags::Tnames::Greece;
 use Tags::Tnames::Hungary;
@@ -46,9 +49,12 @@ use Tags::Tnames::Italy;
 use Tags::Tnames::Japan;
 use Tags::Tnames::Jordan;
 use Tags::Tnames::Lebanon;
+use Tags::Tnames::Monaco;
 use Tags::Tnames::Netherlands;
+use Tags::Tnames::NewZealand;
 use Tags::Tnames::Nordic;
 use Tags::Tnames::Norway;
+use Tags::Tnames::Pakistan;
 use Tags::Tnames::Poland;
 use Tags::Tnames::Portugal;
 use Tags::Tnames::Romania;
@@ -56,6 +62,7 @@ use Tags::Tnames::Russia;
 use Tags::Tnames::Serbia;
 use Tags::Tnames::Singapore;
 use Tags::Tnames::Slovakia;
+use Tags::Tnames::SouthAfrica;
 use Tags::Tnames::SouthAmerica;
 use Tags::Tnames::Spain;
 use Tags::Tnames::Supra;
@@ -64,6 +71,7 @@ use Tags::Tnames::Switzerland;
 use Tags::Tnames::Taipei;
 use Tags::Tnames::Turkey;
 use Tags::Tnames::UK;
+use Tags::Tnames::Venezuela;
 use Tags::Tnames::World;
 
 my %DIVISIONS =
@@ -84,13 +92,16 @@ my %DIVISIONS =
   CHILE => \&Tags::Tnames::Chile::set_hash,
   CHINA => \&Tags::Tnames::China::set_hash,
   CROATIA => \&Tags::Tnames::Croatia::set_hash,
+  CZECH => \&Tags::Tnames::Czech::set_hash,
   DENMARK => \&Tags::Tnames::Denmark::set_hash,
+  ECUADOR => \&Tags::Tnames::Ecuador::set_hash,
   EGYPT => \&Tags::Tnames::Egypt::set_hash,
   EUROADULT => \&Tags::Tnames::EuroAdult::set_hash,
   EUROYOUTH => \&Tags::Tnames::EuroYouth::set_hash,
   FAROE => \&Tags::Tnames::Faroe::set_hash,
   FINLAND => \&Tags::Tnames::Finland::set_hash,
   FRANCE => \&Tags::Tnames::France::set_hash,
+  FRIENDLY => \&Tags::Tnames::Friendly::set_hash,
   GERMANY => \&Tags::Tnames::Germany::set_hash,
   GREECE => \&Tags::Tnames::Greece::set_hash,
   HUNGARY => \&Tags::Tnames::Hungary::set_hash,
@@ -103,8 +114,12 @@ my %DIVISIONS =
   JAPAN => \&Tags::Tnames::Japan::set_hash,
   JORDAN => \&Tags::Tnames::Jordan::set_hash,
   LEBANON => \&Tags::Tnames::Lebanon::set_hash,
+  MONACO => \&Tags::Tnames::Monaco::set_hash,
   NETHERLANDS => \&Tags::Tnames::Netherlands::set_hash,
+  NEWZEALAND => \&Tags::Tnames::NewZealand::set_hash,
   NORDIC => \&Tags::Tnames::Nordic::set_hash,
+  NORWAY => \&Tags::Tnames::Norway::set_hash,
+  PAKISTAN => \&Tags::Tnames::Pakistan::set_hash,
   POLAND => \&Tags::Tnames::Poland::set_hash,
   PORTUGAL => \&Tags::Tnames::Portugal::set_hash,
   ROMANIA => \&Tags::Tnames::Romania::set_hash,
@@ -112,6 +127,7 @@ my %DIVISIONS =
   SERBIA => \&Tags::Tnames::Serbia::set_hash,
   SINGAPORE => \&Tags::Tnames::Singapore::set_hash,
   SLOVAKIA => \&Tags::Tnames::Slovakia::set_hash,
+  SOUTHAFRICA => \&Tags::Tnames::SouthAfrica::set_hash,
   SOUTHAMERICA => \&Tags::Tnames::SouthAmerica::set_hash,
   SPAIN => \&Tags::Tnames::Spain::set_hash,
   SUPRA => \&Tags::Tnames::Supra::set_hash,
@@ -120,61 +136,12 @@ my %DIVISIONS =
   TAIPEI => \&Tags::Tnames::Taipei::set_hash,
   TURKEY => \&Tags::Tnames::Turkey::set_hash,
   UK => \&Tags::Tnames::UK::set_hash,
+  VENEZUELA => \&Tags::Tnames::Venezuela::set_hash,
   WORLD => \&Tags::Tnames::World::set_hash,
 );
 
 my @MULTI_WORDS =
 (
-  ### These are the only ones that are not specific (in time/place)
-  ### tournament "names".
-
-  # FRIENDLY
-  'Argentina Friendly',
-  'Australia Challenge',
-  'Australia Practice',
-  'Bay Area Challenge',
-  'Brighton Exhibition',
-  'Canada Practice',
-  'Chile Practice',
-  'China Friendly',
-  'Denmark Friendly',
-  'Denmark Practice',
-  'France Friendly',
-  'France Friendly Pairs',
-  'France Practice',
-  'Germany Friendly Pairs',
-  'Goulash Practice',
-  'Hong Kong Friendly',
-  'Hungary Challenge',
-  'Hungary Exhibition',
-  'Hungary Friendly',
-  'Hungary Practice',
-  'Iceland Exhibition',
-  'Ireland Friendly',
-  'Italy Friendly',
-  'Italy Practice',
-  'Morocco Friendly',
-  'Netherlands Friendly',
-  'Netherlands Friendly Pairs',
-  'Netherlands Practice',
-  'Online Friendly',
-  'Poland Friendly',
-  'Poland Mixed Friendly Pairs',
-  'Poland Practice',
-  'Portugal Friendly',
-  'Portugal Practice',
-  'Scotland Exhibition',
-  'Scotland Friendly',
-  'Scotland Practice',
-  'Spain Challenge',
-  'Spain Friendly',
-  'Sweden Friendly',
-  'Sweden Practice',
-  'Taiwan Practice',
-  'Tunisia Friendly',
-  'Turkey Practice',
-  'Zulawski Friendly',
-
   # ASIA/MIDDLE EAST
   'BFAME Friendship Pairs',
   'BFAME Open Teams',
@@ -187,37 +154,10 @@ my @MULTI_WORDS =
   'Central American & Caribbean Open Teams',
   'Central American & Caribbean Transnational Teams',
 
-  # CZECH
-  'Czech First League',
-  'Czech Open',
-  'Grand Prix of Prague',
-
-  # ECUADOR
-  'Ecuador Open Teams',
-
   # HONG KONG
   'Hong Kong Inter-City Open Teams',
   'Hong Kong Inter-City Women Teams',
   'Hong Kong New Year Teams',
-
-  # MONACO
-  'Patton de Monaco',
-  'Prince Albert II Cup',
-
-  # NEW ZEALAND
-  'Centre Island Open Teams',
-  'New Zealand Inter-Provincial Open Teams',
-  'New Zealand Open Teams',
-  'New Zealand Open Trials',
-  'New Zealand Women Trials',
-
-  # PAKISTAN
-  'Pakistan Day Open Teams',
-  'Pakistan Open Trials',
-
-  # SOUTH AFRICA
-  'South African Inter-Province Teams',
-  'South African Open Teams',
 
   # USA
   '0 to 1500 Spingold',
@@ -242,10 +182,6 @@ my @MULTI_WORDS =
   'Vanderbilt Teams',
   'Wagar Teams',
 
-  # VENEZUELA
-  'Venezuelan Mixed Teams',
-  'Venezuelan Swiss Pairs',
-
   # ----------------------------------------------------
 
 );
@@ -253,8 +189,6 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   ### AAA
-
-  'Atlantic Trade Bridge Cup' => ['atlantic grupa bridge cup'],
 
   'Scottish Exhibition' => [
     'm lawrence exhibiton',
@@ -271,7 +205,6 @@ my %MULTI_TYPOS =
     'central america & caribean championship',
     'central american & caribbean championship',
     'central american zonal championships'],
-  'Centre Island Open Teams' => ['ci teams'],
   "Champions' Cup" => [
     'champions cup', 
     "champion's cup", 
@@ -281,16 +214,6 @@ my %MULTI_TYPOS =
     "champion'scup", 
     "champions'cup"],
 
-  # CZECH
-  'Czech Championship' => ['czech bridge championship',
-    'czech bridge championships'],
-  'Czech First League' => ['czech bridge league', 'czech bridge league',
-    'czech premier league'],
-  'Czech Team Championship' => ['czech team championships',
-    'czech teams champ_'],
-  'Czech First League' => ['czech 1st league', 'czech bridge league',
-    'czech premier league'],
-
   'Collegiate Bowl' => ['collegiate championship',
     'collegiate championships', 'collegiate champs'],
 
@@ -299,10 +222,6 @@ my %MULTI_TYPOS =
   'Dutch Women' => ['ducth woman'],
 
   ### EEE
-
-  'Ecuador Open Teams' => [
-    'ecuador open team trials',
-    'ecuador teams champinonship'],
 
   'Estoril Open Teams' => [
     'estoril international teams', 
@@ -316,9 +235,6 @@ my %MULTI_TYPOS =
   ### GGG
 
   'Grand National Teams' => ['gnt championship'],
-
-  'Grand Prix of Prague' => [
-    'grand prix prague', 'gp prague'],
 
   ### HHH
 
@@ -341,30 +257,12 @@ my %MULTI_TYPOS =
   'NABC Senior Knock-Out Teams' => ['nabc senior ko teams'],
  "New Year's Teams" => ['new year greet tm'],
 
-  # NEW ZEALAND -- mapped in detail
-  'New Zealand Inter-Provincial Open Teams' => [
-    'nz interprovincial',
-    'nz interprovincials',
-    'new zealand inter provincials'],
-  'New Zealand Open Teams' => ['nz teams'],
-
   ### OOO
 
  'Opening Tournament' => ['opening tournement'],
 
   ### PPP
 
-  'Pakistan Day Open Teams' => [
-    'pakistan day bridge championship',
-    'pakistan day bridge'],
-  'Pakistan Open Trials' => [
-    'pakistan national trials',
-    'pakistan open national trials',
-    'pakistan open team national bridge trials',
-    'pakistan open team naational trials',
-    'pakistan open team national trials',
-    'pakistan open team trials', 
-    'pakistan trial'],
   'Pan Arab Inter-Club Championship' => [
     'pan arab championship',
     'pan arab iner club',
@@ -372,29 +270,11 @@ my %MULTI_TYPOS =
     'pan arab inter-club', 
     'pan arab inter club', 
     'pan arab interclub'],
-  'Patton de Monaco' => ["monaco's patton", 'patton international monaco',
-    'patton international monte-carlo',
-    'patton international monte carlo', 'patton monte carlo'],
   'Philadelphia Solomon Teams' => [
     'solomon teams'],
 
   ### SSS
   'Senior Camrose' => ['seniors camrose'],
-
-  # SOUTH AFRICA
-  'South African Inter-Province Teams' => [
-    'sa interprovincial',
-    'sa interprovincials',
-    'sa inter provincials'],
-  'South African Open Teams' => [
-    'sa team champs',
-    'sa teams',
-    'sa teams champs',
-    'south african chaionships',
-    'south african championship',
-    'south african championships',
-    'south african nationals',
-    'south african teams'],
 
   'Spring Nationals' => [
     'spring nat', 
@@ -456,8 +336,6 @@ my %MULTI_TYPOS =
   'Vanderbilt Teams' => [
     'vanderbilt teams', 
     'vanderbilt ko teams'],
-  'Venezuelan Swiss Pairs' => ['venezuela parejas suizas',
-    'venezuela swiss pairs'],
 
   ### WWW
 
@@ -511,70 +389,10 @@ sub set_hashes
 {
   my ($method, $key) = @_;
 
-  # while (my ($key, $set_method) = each %DIVISIONS)
-  # {
-    # $set_method->(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  # }
-
-  Tags::Tnames::Africa::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Argentina::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS,
-    \%SINGLE_TYPOS);
-  Tags::Tnames::Asia::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Australia::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS,
-    \%SINGLE_TYPOS);
-  Tags::Tnames::Austria::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS,
-    \%SINGLE_TYPOS);
-  Tags::Tnames::Balkan::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Baltic::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Belarus::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Belgium::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Bolivia::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Brazil::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Bulgaria::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, 
-    \%SINGLE_TYPOS);
-  Tags::Tnames::Canada::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Chile::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::China::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Croatia::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Denmark::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Egypt::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::EuroAdult::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::EuroYouth::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Faroe::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Finland::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::France::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Germany::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Greece::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Hungary::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Iceland::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::India::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Indonesia::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Ireland::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Israel::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Italy::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Japan::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Jordan::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Lebanon::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Netherlands::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Nordic::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Norway::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Poland::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Portugal::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS,
-    \%SINGLE_TYPOS);
-  Tags::Tnames::Romania::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Russia::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Serbia::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Singapore::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Slovakia::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::SouthAmerica::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Spain::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Supra::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Sweden::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Switzerland::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Taipei::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::Turkey::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::UK::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
-  Tags::Tnames::World::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  while (my ($key, $set_method) = each %DIVISIONS)
+  {
+    $set_method->(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  }
 
   $method->(\@MULTI_WORDS, \%MULTI_TYPOS,
     \@SINGLE_WORDS, \%SINGLE_TYPOS, $key);
