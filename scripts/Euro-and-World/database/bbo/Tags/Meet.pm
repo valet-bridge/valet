@@ -15,7 +15,14 @@ use Tags::Meets::Africa;
 use Tags::Meets::Argentina;
 use Tags::Meets::Asia;
 use Tags::Meets::Australia;
+use Tags::Meets::Austria;
+use Tags::Meets::Balkan;
 use Tags::Meets::Baltic;
+use Tags::Meets::Belarus;
+use Tags::Meets::Belgium;
+use Tags::Meets::Bolivia;
+use Tags::Meets::Brazil;
+use Tags::Meets::Bulgaria;
 
 my %DIVISIONS =
 (
@@ -23,7 +30,14 @@ my %DIVISIONS =
   ARGENTINA => \&Tags::Meets::Argentina::set_hash,
   ASIA => \&Tags::Meets::Asia::set_hash,
   AUSTRALIA => \&Tags::Meets::Australia::set_hash,
+  AUSTRIA => \&Tags::Meets::Austria::set_hash,
+  BALKAN => \&Tags::Meets::Balkan::set_hash,
   BALTIC => \&Tags::Meets::Baltic::set_hash,
+  BELARUS => \&Tags::Meets::Belarus::set_hash,
+  BELGIUM => \&Tags::Meets::Belgium::set_hash,
+  BOLIVIA => \&Tags::Meets::Bolivia::set_hash,
+  BRAZIL => \&Tags::Meets::Brazil::set_hash,
+  BULGARIA => \&Tags::Meets::Bulgaria::set_hash,
 );
 
 my @MULTI_WORDS =
@@ -53,14 +67,11 @@ my @MULTI_WORDS =
   'Amman Bridge Festival',
   'ASEAN Club Championship',
   'Australian Youth Triathlon',
-  'Balkan Friendship Festival',
-  'Balkan Championship',
   'Bangkok Bridge Festival',
   'Banten Sports Week',
   'BFAME Championship',
   'Bodrum Peninsula Festival',
   'Brasov Festival',
-  'Brazilian Trials',
   'Buffett Cup',
   'Cairo Bridge Festival',
   'Canadian Bridge Championships',
@@ -69,7 +80,6 @@ my @MULTI_WORDS =
   'Copenhagen Invitational',
   'Crete Bridge Festival',
   'Danish Bridge Festival',
-  'Dobrich Bridge Festival',
   'Estoril Bridge Festival',
 
   "European Champions' Cup",
@@ -113,7 +123,6 @@ my @MULTI_WORDS =
   'Maharaja Holkar National Championship',
   'Maharashtra State Championship',
   'Marmara Festival',
-  'Mautern Bridge Festival',
   'Mersin Bridge Festival',
   'Monaco International Festival',
   'Mondial de Deauville',
@@ -125,7 +134,6 @@ my @MULTI_WORDS =
   'North American Bridge Championship',
   'Palace Cup',
   'Pärnu Festival',
-  'Plovdiv Bridge Festival',
   'Polish Grand Prix',
   'Polish Pairs Championship',
   'Polish Youth Olympiad',
@@ -136,7 +144,6 @@ my @MULTI_WORDS =
   'Red Sea International Festival',
   'Reykjavik Bridge Festival',
   'Samobor Bridge Meeting',
-  'Serdika Bridge Festival',
   'Sivrioglu Festival',
   'South American Team Championship',
   'South American Trials',
@@ -156,7 +163,6 @@ my @MULTI_WORDS =
   'United States Bridge Championship',
   'Uttar Pradesh State Championship',
   'Vanke Cup',
-  'Varna Bridge Festival',
   'VVE Beheer Bridge Week',
   'Wachauer Bridge Festival',
   'West Java Regional',
@@ -192,19 +198,6 @@ my %MULTI_TYPOS =
     'azores bridge teams', 'azores team', 'azores teams',
     'azores team festval', 'festival azores bridge', 'azores festiva', 
     'festival azores'],
-  'Balkan Friendship Festival' => ['balkan bridge festival',
-    'balkan festival', 'balcan friendship festival',
-    'balcan frienship festival', 'balkan frienship festival',
-    'balkan friendsphip festival'],
-  'Balkan Championship' => [
-    'balkanbridge championship', 
-    'balkan bridge ch',
-    'balkan bridge championship',
-    'balkan championships',
-    'balkan teams',
-    'bolkan championship',
-    'bolkan team championship',
-    'bolkan teams championship'],
   'Baltic Congress' => [
     'baltic bowl',
     'baltic bridge congress',
@@ -220,17 +213,12 @@ my %MULTI_TYPOS =
   'Brasov Festival' => ['festival brasov', 'festival bridge brasov',
     'international bridge festival brasov',
     'festivalul international de bridge brasov'],
-  'Brazilian Trials' => [
-    'brazilian team trials',
-    'brazilian teams trials'],
   'Buffett Cup' => ['buffet cup', 'bufett cup'],
   'Challenge Match' => [
     'desafio'], 
   'Channel Trophy' => ['channel trpohy'],
   'Copenhagen Invitational' => ['copenhagen bridge invitational'],
   'Crete Bridge Festival' => ['crete b_ festival'],
-  'Dobrich Bridge Festival' => [
-    'ibf dobrich'],
   'Estoril Bridge Festival' => ['estoril festival'],
   "European Champions' Cup" => [
     'european bridge champion cup',
@@ -379,10 +367,6 @@ my %MULTI_TYPOS =
     'maharashtra state brhman sabha',
     'maharashtra state championships'],
   'Marmara Festival' => ['festival marmara'],
-  'Mautern Bridge Festival' => [
-    'mautern bridgefestival',
-    'wachauer bridgefestival',
-    'wachauer bridge festival'], 
   'Monaco International Festival' => ['festival international de monaco'],
   'Mondial de Deauville' => [
     "barrière champion's cup",
@@ -419,11 +403,6 @@ my %MULTI_TYPOS =
   'Norwegian District Championship' => ['norwegian district',
      'norw district', 'norwegian regional chship',
      'norway regional champship'],
-  'Plovdiv Bridge Festival' => [
-    'bridge festival plovdiv',
-    'international bridge festival plovdiv',
-    'international festival  plovdiv',
-    'international festival plovdiv'],
   'Polish Pairs Championship' => [
     'pairs championship od poland',
     'pairs championship of poland'],
@@ -466,9 +445,6 @@ my %MULTI_TYPOS =
     'red sea int_ festival'],
   'Reykjavik Bridge Festival' => ['reykjavikbridgefestival'],
   'Samobor Bridge Meeting' => ['bridge meeting samobor'],
-  'Serdika Bridge Festival' => [
-    'bridge festival - serdika',
-    'bridge festival serdika'],
   'Slava Congress' => ['s³awa turniej kongresowy'],
   'South American Team Championship' => [
     'southamerica championship',
@@ -535,8 +511,6 @@ my %MULTI_TYPOS =
     'u_s_b_c', 'united states bridge championships'],
   'Uttar Pradesh State Championship' => [
     'up state championship'],
-  'Varna Bridge Festival' => [
-    'international bridge festival varna'],
   'VVE Beheer Bridge Week' => ['vve-beheer bridgeweek',
     'vve-beheer bridge week'],
   'West Java Regional' => ['west java regional sport games',
