@@ -11,10 +11,12 @@ package Tags::Meet;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes);
 
+use Tags::Meets::Africa;
 use Tags::Meets::Baltic;
 
 my %DIVISIONS =
 (
+  AFRICA => \&Tags::Meets::Africa::set_hash,
   BALTIC => \&Tags::Meets::Baltic::set_hash,
 );
 
@@ -41,7 +43,6 @@ my @MULTI_WORDS =
 
  
   'Aegean Championships',
-  'African Zonal Championships',
   'Azores Festival',
   'Amman Bridge Festival',
   'APBF Championships',
@@ -175,16 +176,6 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  'African Zonal Championships' => [
-    'abf championship', 
-    'abf championships',
-    'abf champoinship',
-    'abf zone 8 championships', 
-    'abf zonal',
-    'afbf zone 8 championships',
-    'african zonal championships',
-    'african zone championship',
-    'zonal qualifying africa'],
   'All China Games' => ['all-china games'],
   'All India HCL Tournament' => [
     'all india hcl open',
