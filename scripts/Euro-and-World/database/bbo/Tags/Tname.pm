@@ -30,9 +30,11 @@ use Tags::Tnames::India;
 use Tags::Tnames::Indonesia;
 use Tags::Tnames::Israel;
 use Tags::Tnames::Italy;
+use Tags::Tnames::Netherlands;
 use Tags::Tnames::Norway;
 use Tags::Tnames::Poland;
 use Tags::Tnames::Portugal;
+use Tags::Tnames::Russia;
 use Tags::Tnames::Sweden;
 use Tags::Tnames::Taipei;
 use Tags::Tnames::Turkey;
@@ -232,23 +234,6 @@ my @MULTI_WORDS =
   'Patton de Monaco',
   'Prince Albert II Cup',
 
-  # NETHERLANDS
-  'ArboNed Team Cup',
-  'Arnhem Interbridge Tournament',
-  'Carrousel Cup',
-  'Dutch Knock-Out Cup',
-  'Dutch Meesterklasse',
-  'Forbo-Krommenie Nations Cup',
-  'Jaap Kokkes Tournament',
-  'Petit Grand Prix van Driene',
-  'The Hague Open Teams',
-  'The Hague Pro-Am Pairs',
-  'Top Circuit',
-  'Top Circuit Teams',
-  'White House International',
-  'White House Juniors',
-  'White House Top 12',
-
   # NEW ZEALAND
   'Centre Island Open Teams',
   'New Zealand Inter-Provincial Open Teams',
@@ -273,16 +258,6 @@ my @MULTI_WORDS =
   'Romanian Second League',
   'Romanian Open Teams',
   'Romanian Open Trials',
-
-  # RUSSIA
-  'BKBT Teams',
-  'Moscow Sunday Times Pairs',
-  'Moscow Sunday Times Teams',
-  'NN Cup',
-  'Russian IMSA Cup',
-  'Russian Open Teams',
-  'Russian Premier League',
-  'Slava Cup',
 
   # SERBIA
   'Serbian Cup',
@@ -385,9 +360,6 @@ my %MULTI_TYPOS =
 (
   ### AAA
 
-  'ArboNed Team Cup' => ['arbo ned team cup', 'arbo ned teams cup'],
-
-  'Arnhem Interbridge Tournament' => ['interbridge tournament'],
   'Atlantic Trade Bridge Cup' => ['atlantic grupa bridge cup'],
 
   'Austrian Open Teams' => [
@@ -404,9 +376,6 @@ my %MULTI_TYPOS =
     'belarus cup', 'belarus national teams',
     'belarus team championship', 'belarus teams cup',
     'belarusian team championship'],
-
-  # BELGIUM
-  'BKBT Teams' => ['bkbt match'],
 
   # BOLIVIA
   'Bolivian Open Pairs' => ['bolivariano open pairs'],
@@ -511,13 +480,6 @@ my %MULTI_TYPOS =
 
   ### DDD
 
-  'Dutch Knock-Out Cup' => ['knock-out team cup netherlands',
-    'knock out team cup netherlands'],
-  'Dutch Meesterklasse' => [
-    'dutch mk', 
-    'dutch team',
-    'dutch teams',
-    'dutch club teams'],
   'Dutch Women' => ['ducth woman'],
 
   ### EEE
@@ -724,10 +686,6 @@ my %MULTI_TYPOS =
 
   ### JJJ
 
-  'Jaap Kokkes Tournament' => [
-    'jaap kokkes toernooi',
-    'jaap kookes toernooi',
-    'jaap kokkes'],
   'Japanese Open Trials' => ['japanese open team trial',
     'japanese open team trials'],
   'Jean Besse Cup' => ['cup jean besse', 'cup jean besser'],
@@ -736,18 +694,6 @@ my %MULTI_TYPOS =
   'Jordan Mixed Pairs' => [
     'jordan spring mix pairs',
     'jordan spring mixed pairs'],
-
-  ### KKK
-
-  'Forbo-Krommenie Nations Cup' => [
-    'forbo krommenie teams',
-    'forbo nations cup',
-    'forbo teams',
-    'forbo-krommenie international bridge event',
-    'forbo-krommenie tourname',
-    'forbo-krommenie tournament',
-    'international forbo krommenie bridge event',
-    'krommenie nations cup'],
 
   ### LLL
 
@@ -775,11 +721,6 @@ my %MULTI_TYPOS =
     'nz interprovincials',
     'new zealand inter provincials'],
   'New Zealand Open Teams' => ['nz teams'],
-
-  'NN Cup' => [
-    'goulyash by e. gladysh',
-    'goulyash by e_gladysh',
-    'nn-cup'],
 
   'Nordic Cup' => [
     'rottneros cup',
@@ -840,8 +781,6 @@ my %MULTI_TYPOS =
   'Patton de Monaco' => ["monaco's patton", 'patton international monaco',
     'patton international monte-carlo',
     'patton international monte carlo', 'patton monte carlo'],
-  'Petit Grand Prix van Driene' => ['petit grand prix',
-    'grand prix van driene'],
   'Philadelphia Solomon Teams' => [
     'solomon teams'],
 
@@ -893,12 +832,6 @@ my %MULTI_TYPOS =
     'cn echipe div b seria a',
     'cn ecgipe div b seria a'],
 
-  # RUSSIA
-  'Russian IMSA Cup' => ['imsa cup'],
-  'Russian Open Teams' => ['russian teams championship',
-    'russian team championship'],
-  'Russian Premier League' => ['russian premiere league'],
-
   ### SSS
 
   'Sao Paulo Cup' => [
@@ -937,7 +870,6 @@ my %MULTI_TYPOS =
     'serbian premier leaugue',
     'serbian premier leauge'],
 
-  'Slava Cup' => ['cup slava', 'salava cup'],
   'Slovakian Open Teams' => ['slovakia open teams'],
 
   # SOUTH AFRICA
@@ -1038,8 +970,6 @@ my %MULTI_TYPOS =
 
   'Thanos Capayiannides Memorial Simultaneous' => [
     'thanos capayiannides'],
-  'Top Circuit' => ['melchemie top circuit',
-    'ing bank top circuit', 'witte huis topcircuit'],
 
   ### UUU
 
@@ -1103,20 +1033,6 @@ my %MULTI_TYPOS =
     "wagar women's", 
     "wagar women's ko",
     'wagar womens ko'],
-  'White House International' => [
-    'white house international teams',
-    'white house top 16',
-    'white house tournament teams'],
-  'White House Juniors' => [
-    'qhite house juniors',
-    'the white hous juniors',
-    'white house junior',
-    'white house junior internationals',
-    'whiteouse juniors'], 
-  'White House Top 12' => ['modalfa top 12', 'witte huis top 12'],
-  'White House Top 16' => ['white house int. teams top 16',
-    'white house int_ teams top 16',
-    'white house international top 16 teams'],
 
   'Yeh Bros Cup' => ['yehbros cup', 'yer bros cup'],
   'Youth Open Bridge Paris' => ['youth paris open bridge'],
@@ -1147,7 +1063,6 @@ my %SINGLE_TYPOS =
   'Collegiate Bowl' => ['collegiate', 'collegiates'],
   'Copenhagen Invitational Pairs' => ['cbi'],
   'Danish Championship' => ['dm'],
-  'Dutch Meesterklasse' => ['meesterklasse'],
   'European Bridge Teams Championship' => ['ebtc'],
   "European Champions' Cup" => ['ecc'],
   'European Small Federation Games' => ['esfg', 'sfc'],
@@ -1170,7 +1085,6 @@ my %SINGLE_TYPOS =
     'resisinger'],
   'Spingold Teams' => ['spingold'],
   'Prince Takamatsu Cup' => ['takamatsu'],
-  'Top Circuit' => ['topcircuit'],
   'Transnational Open Teams' => ['tnt', 'tnot'],
   'US Junior Trials' => ['usjbc', 'jusbc'],
   'US Juniors Training' => ['jtp'],
@@ -1188,7 +1102,6 @@ my %SINGLE_TYPOS =
     'vandy'],
   'Victorian Pennant' => ['pennant'],
   'Wagar Teams' => ['wagar'],
-  'White House Juniors' => ['whj'],
   'European Winter Teams' => ['zc']
 );
 
@@ -1218,10 +1131,12 @@ sub set_hashes
   Tags::Tnames::Indonesia::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Israel::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Italy::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::Netherlands::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Norway::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Poland::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Portugal::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS,
     \%SINGLE_TYPOS);
+  Tags::Tnames::Russia::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Sweden::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Taipei::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Turkey::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
