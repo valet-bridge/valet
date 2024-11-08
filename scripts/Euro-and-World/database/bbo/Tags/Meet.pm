@@ -11,6 +11,13 @@ package Tags::Meet;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes);
 
+use Tags::Meets::Baltic;
+
+my %DIVISIONS =
+(
+  BALTIC => \&Tags::Meets::Baltic::set_hash,
+);
+
 my @MULTI_WORDS =
 (
   # POLAND
@@ -47,7 +54,6 @@ my @MULTI_WORDS =
   'Australian Youth Triathlon',
   'Balkan Friendship Festival',
   'Balkan Championship',
-  'Baltic Cup',
   'Bangkok Bridge Festival',
   'Banten Sports Week',
   'BFAME Championship',
@@ -130,7 +136,6 @@ my @MULTI_WORDS =
   'Rajasthan Invitational Championship',
   'Red Sea International Festival',
   'Reykjavik Bridge Festival',
-  'Riga Invites to Jurmala',
   'Samobor Bridge Meeting',
   'Serdika Bridge Festival',
   'Sivrioglu Festival',
@@ -155,7 +160,6 @@ my @MULTI_WORDS =
   'Vanke Cup',
   'Varna Bridge Festival',
   'Victor Champion Cup',
-  'Vilnius Cup',
   'VVE Beheer Bridge Week',
   'Wachauer Bridge Festival',
   'West Java Regional',
@@ -505,7 +509,6 @@ my %MULTI_TYPOS =
     'red sea bridge festival', 'red see int_ bridge festival',
     'red sea int_ festival'],
   'Reykjavik Bridge Festival' => ['reykjavikbridgefestival'],
-  'Riga Invites to Jurmala' => ['riga invites'],
   'Samobor Bridge Meeting' => ['bridge meeting samobor'],
   'Serdika Bridge Festival' => [
     'bridge festival - serdika',
@@ -581,7 +584,6 @@ my %MULTI_TYPOS =
     'up state championship'],
   'Varna Bridge Festival' => [
     'international bridge festival varna'],
-  'Vilnius Cup' => ['vv cup'],
   'VVE Beheer Bridge Week' => ['vve-beheer bridgeweek',
     'vve-beheer bridge week'],
   'West Java Regional' => ['west java regional sport games',
@@ -656,6 +658,11 @@ my %SINGLE_TYPOS =
 sub set_hashes
 {
   my ($method, $key) = @_;
+
+  while (my ($key, $set_method) = each %DIVISIONS)
+  {
+    $set_method->(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  }
 
   $method->(\@MULTI_WORDS, \%MULTI_TYPOS,
     \@SINGLE_WORDS, \%SINGLE_TYPOS, $key);
