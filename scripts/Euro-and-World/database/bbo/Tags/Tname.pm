@@ -28,7 +28,9 @@ use Tags::Tnames::Italy;
 use Tags::Tnames::Norway;
 use Tags::Tnames::Poland;
 use Tags::Tnames::Portugal;
+use Tags::Tnames::Sweden;
 use Tags::Tnames::Taipei;
+use Tags::Tnames::Turkey;
 use Tags::Tnames::UK;
 use Tags::Tnames::World;
 
@@ -437,27 +439,6 @@ my @MULTI_WORDS =
   'Stern-Cornell Trophy',
   'Paris Youth Open Teams',
 
-  # SWEDEN
-  "Chairman's Cup",
-  'Filbyter Cup',
-  'Park Hotell Swiss Teams',
-  'S:t Erik Championship Series',
-  'Stena Line Cup',
-  'Stockholm Teams',
-  'Swedish Cup',
-  'Swedish District Teams',
-  'Swedish Juniors Pairs',
-  'Swedish Juniors Teams',
-  'Swedish Mixed Teams',
-  'Swedish Open Pairs',
-  'Swedish Open Teams',
-  'Swedish Open Pair Trials',
-  'Swedish Open Team Trials',
-  'Swedish Premier League',
-  'Swedish Senior Team Trials',
-  'Swedish Women Pair Trials',
-  'Swedish Women Team Trials',
-
   # SWITZERLAND
   'Jean Besse Cup',
   'Swiss Club Championship',
@@ -466,44 +447,6 @@ my @MULTI_WORDS =
   'Swiss Open Teams',
   'Zurich Open Pairs',
   'Zurich Open Teams',
-
-  # TURKEY
-  'Anatolian Club Teams',
-  'Anatolian Fall Teams',
-  'Anatolian Spring Teams',
-  'Ankara Summer Teams',
-  'Balikcioglu Open Teams',
-  'Fatih Kiral Pairs',
-  'Gelibolu Peace Teams',
-  'Goksu-Yalikavak Pairs',
-  'Istanbul Summer Teams',
-  'Istanbul Winter Teams',
-  'Izmir Teams Cup',
-  'Izmir Winter Teams Cup',
-  'Lüleburgaz Liberation Cup',
-  'Marmara Inter-Club Championship',
-  'Murat Kilercioglu Turkish Spring Teams',
-  'Necmettin Sunget Teams Cup',
-  'Salvador Assael IMP Pairs',
-  'Salvador Assael Pro-Am Pairs',
-  'Thrace Cup League',
-  'Turkish Club Championship',
-  'Turkish East Mediterranean Teams',
-  'Turkish Junior Pairs',
-  'Turkish Mixed Team Trials',
-  'Turkish Mixed Teams',
-  'Turkish Open Pair Trials',
-  'Turkish Open Team Trials',
-  'Turkish Open Teams',
-  'Turkish Swiss Mixed Teams',
-  'Turkish U16 Pairs',
-  'Turkish University Teams',
-  'Turkish Winter Open Teams',
-  'Turkish Winter Women Teams',
-  'Turkish Women Pair Trials',
-  'Turkish Women Team Trials',
-  'Turkish Women Teams',
-  'Western Mediterranean Club Teams',
 
   # USA
   '0 to 1500 Spingold',
@@ -540,14 +483,6 @@ my %MULTI_TYPOS =
 (
   ### AAA
 
-  'Anatolian Club Teams' => [
-    'anatolian club qualifying',
-    'eastern anatolian qualification',
-    'eastern anatolýa qualýfýcatýon',
-    'turkish interclubs champ_ anatolia elections'],
-  'Anatolian Fall Teams' => ['anatolian side fall teams'],
-  'Anatolian Spring Teams' => ['anatolia spring teams'],
-  'Ankara Summer Teams' => ['ankara summer team championship'],
   'ArboNed Team Cup' => ['arbo ned team cup', 'arbo ned teams cup'],
 
   'Arnhem Interbridge Tournament' => ['interbridge tournament'],
@@ -563,8 +498,6 @@ my %MULTI_TYPOS =
 
   ### BBB
 
-  'Balikcioglu Open Teams' => [
-    'balikcioglu teams championship'],
   'Baltic Open Teams' => [
     'baltic open teams cup',
     'baltic teams cup'],
@@ -651,8 +584,6 @@ my %MULTI_TYPOS =
     'central american & caribbean championship',
     'central american zonal championships'],
   'Centre Island Open Teams' => ['ci teams'],
-  "Chairman's Cup" => ['chairmans cup', "chariman's cup",
-    "chairmans's cup", "swedish chairman's cup", 'chairmans cup'],
   "Champions' Cup" => [
     'champions cup', 
     "champion's cup", 
@@ -812,9 +743,6 @@ my %MULTI_TYPOS =
     'faroese tc', 
     'faroese team championships',
     'faroese teams'],
-  'Fatih Kiral Pairs' => [
-    'fatih kiral cup'],
-  'Filbyter Cup' => ['filbyer cup'],
 
   'forumbridge.pl Top Individual' => ['forumbridge_pl top individual'],
   'forumbridge.pl Top Pairs' => ['forumbridge_pl top pairs'],
@@ -896,7 +824,6 @@ my %MULTI_TYPOS =
     'bastaman cup',
     'gabrial-ui cup',
     'gabrial ui cup'],
-  'Gelibolu Peace Teams' => ['gelibolu peace cup'],
   'Geologi Cup' => ['geo cup'],
 
   # GERMANY -- mapped in detail
@@ -1096,29 +1023,6 @@ my %MULTI_TYPOS =
     'israel schools trials',
     'israel schools teams trials'],
 
-  'Istanbul Summer Teams' => [
-    'istanbul team championship', 
-    'istanbul team championships',
-    'istanbul club teams championship',
-    'ýstanbul championship',
-    'ýstanbul teams'],
-  'Istanbul Winter Teams' => [
-    'istanbul kis dortlu takimlar',
-    'istanbul kis dortlu takim', 
-    'istanbul winter champs',
-    'istanbul winter open teams',
-    'istanbul winter team championship',
-    'istanbul kis'],
-  'Izmir Teams Cup' => [
-    'izmir open teams championship',
-    'izmir open teams championships',
-    'izmir teams',
-    'izmir teams championship',
-    'izmýr teams cup'],
-  'Izmir Winter Teams Cup' => [
-    'izmir winter teams championship',
-    'turkish winter open teams izmir'],
-
   ### JJJ
 
   'Jaap Kokkes Tournament' => [
@@ -1168,25 +1072,18 @@ my %MULTI_TYPOS =
     'lebanon invitational team',
     'lebanon invitational teams'],
   'Lithuanian Open Teams' => ['lithuanian teams championship'],
-  'Lüleburgaz Liberation Cup' => ['luleburgaz kurtulus kupasi'],
 
   ### MMM
 
   'Maccabi Games' => ['maccabi-games', 'europ_ maccabi games'],
   'Madrid Senior Teams' => ['equipos senior madrid'],
   "Missouri Braggin' Rights" => ['bragging rights'],
-  'Murat Kilercioglu Turkish Spring Teams' => [
-    'Murat Kilercioglu Spring Teams'],
 
   ###  NNN
 
   'NABC Senior Knock-Out Teams' => ['nabc senior ko teams'],
   'NEC Cup' => [
     'nec cup bridge festival'],
-  'Necmettin Sunget Teams Cup' => [
-    'necmettin sunget teams',
-    'necmettin sünget dörtlü',
-    'necmettin sünget dörtlü takýmlar'],
  "New Year's Teams" => ['new year greet tm'],
 
   # NEW ZEALAND -- mapped in detail
@@ -1334,11 +1231,6 @@ my %MULTI_TYPOS =
 
   ### SSS
 
-  'Salvador Assael IMP Pairs' => [
-    'assael invitational calcutta',
-    "salvador assael imp's across the field"],
-  'Salvador Assael Pro-Am Pairs' => [
-    'salvador assael pro-am'],
   'Sao Paulo Cup' => [
     's o paulo cup', 
     'sao paulo state cup', 
@@ -1448,59 +1340,6 @@ my %MULTI_TYPOS =
     'sping national', 
     'spring nat opens'],
   "Sternberg Women's BAM Teams" => ['marsha may sternberg bam'],
-  'Stockholm Teams' => ['stockholm teams cs', 'stockholms teams'],
-  # SWEDEN
-  'Swedish District Teams' => [
-    'swdish district',
-    'sweden distric', 
-    'sweden district',
-    'swedis district', 
-    'swedish championship cistrict', 
-    'swedish championship district', 
-    'swedish championships distrcit',
-    'swedish championships district', 
-    'swedish champsionship district', 
-    'swesish champsionship district',
-    'swedish district championship',
-    'swedish district championships',
-    'swedish district',
-    'swedish districts', 
-    'swedish disttrict',
-    'swesish district'], 
-  'Swedish Juniors Championship' => [
-    'swedish junior championships',
-    'swedish juniors cs'],
-  'Swedish Juniors Pairs' => [
-    'swedish junior pair championship',
-    'swedish junior pairs championship',
-    'swedish national junior pair championship',
-    'swedish national junior pairs'],
-  'Swedish Juniors Teams' => ['swedish juniors teams cs',
-    'swedish juniors teams cs', 'swedish junior teams',
-    'swedish junior team', 'swedish junior team championship'],
-  'Swedish Open Pairs' => [
-    'open swedish pairs championship', 
-    'sweden national pairs',
-    'swedish national pairs',
-    'swedish open pair', 
-    'swedish pair',
-    'swedish pairs championships'],
-  'Swedish Open Pair Trials' => ['nordic race'],
-  'Swedish Open Teams' => ['swedish teams'],
-  'Swedish Open Team Trials' => [
-    'swedish open trials',
-    'swedish team trials',
-    'swedish teams trials', 
-    'swedish team trial'],
-  'Swedish Premier League' => [
-    'swedish club teams',
-    'swedish elite series',
-    'swedish elitserien', 
-    'swedish premier leauge',
-    'swedish premieer league'],
-  'Swedish Senior Team Trials' => [
-    'sweden senior trials',
-    'swedish senior trials'],
 
   # SWITZERLAND
   'Swiss Club Championship' => [
@@ -1534,91 +1373,8 @@ my %MULTI_TYPOS =
     'telkom indonesian open'],
   'Thanos Capayiannides Memorial Simultaneous' => [
     'thanos capayiannides'],
-  'Thrace Cup League' => [
-    'trachean club teams',
-    'Thrace Club Teams',
-    'thrace region clubs team championship',
-    'trakya kulupler ligi',
-    'turkish club teams championship aegean playoffs',
-    'türk trakya bölge kulüpler þampýyonasi ekýbý'], 
   'Top Circuit' => ['melchemie top circuit',
     'ing bank top circuit', 'witte huis topcircuit'],
-
-  # TURKEY
-  'Turkish Club Championship' => ['türkýye kulüplerarasi þampýyonasi',
-    'turkey club teams championship',
-    'türkýye klüpler arasi brýç þampýyonasi',
-    'turkish club teams championship',
-    'turkish club championships',
-    'turkish club teams championship',
-    'turkish clubs championship',
-    'turkish clubs team championship',
-    'turkish clubs teams championship',
-    'turkish clubs team championship teams',
-    'turkish club team championship',
-    'turkish inter club championships',
-    'turkish inter-clubs championship',
-    'turkiye clubs championship', 'turkey clubs championship'],
-  'Turkish East Mediterranean Teams' => [
-    'turkish clubs championship east & south east el',
-    'turkish east & south-east teams',
-    'turkish east mediterranean',
-    'turkish east mediterranean club teams',
-    'turkish eastern mediterranean club', 
-    'turkish eastern mediterranean club teams'],
-  'Turkish Mixed Team Trials' => ['turkish mixed team trails'],
-  'Turkish Mixed Teams' => [
-    'turkey mix teams ch',
-    'turkey mix teams championship',
-    'turkey mixed team championship',
-    'turkey mixed teams',
-    'turkis mixed teams',
-    'turkish mixed teams',
-    'turkish mixed team championship',
-    'turkish mixed team championships',
-    'turkish mixed teams championship',
-    'turkiye mixed teams championship',
-    'turkýsh mixed teams'],
-  'Turkish Open Teams' => [
-    'turkey open team championship',
-    'turkish national open national selection',
-    'turkish open team championship',
-    'turkish open teams',
-    'turkish open teams championship',
-    'turkish open teams championships',
-    'turkiye acik takimlar sampiyonasi',
-    'turkish national open teams'],
-  'Turkish Swiss Mixed Teams' => ['turkey swiss mixed teams'],
-  'Turkish Teams Championship' => ['turkiye bric takimlar sampiyonasi'],
-  'Turkish U16 Pairs' => [
-    'turkey u16 championship'],
-  'Turkish University Teams' => [
-    'turkish Universities championship',
-    'turkish universities bridge championship'],
-  'Turkish Winter Open Teams' => [
-    'turkey winter open teams',
-    'turkey winter teams',
-    'turkey winter team championship',
-    'turkey winter teams championship',
-    'turkis winter teams',
-    'turkish winter chanpionship',
-    'turkish winter championship',
-    'turkish winter championships',
-    'turkish winter team championship',
-    'turkish winter team championships',
-    'turkish winter teams',
-    'turkiye kis takimlar sampiyonasi',
-    'turkiye kis acik takimlar sampiyonasi'],
-  'Turkish Winter Women Teams' => [
-    'turkish winter woman team championship',
-    "turkish woman's winter teams",
-    "turkish women's winter teams"],
-  'Turkish Women Teams' => [
-    'türkish ladies teams',
-    'turkish ladies teams championships',
-    'turkish ladies teams',
-    'turkish women championships',
-    'turkish womens teams championship'],
 
   ### UUU
 
@@ -1682,8 +1438,6 @@ my %MULTI_TYPOS =
     "wagar women's", 
     "wagar women's ko",
     'wagar womens ko'],
-  'Western Mediterranean Club Teams' => [
-    'western mediterranean clubs team championship'],
   'White House International' => [
     'white house international teams',
     'white house top 16',
@@ -1755,7 +1509,6 @@ my %SINGLE_TYPOS =
     'reisinger', 
     'resisinger'],
   'Spingold Teams' => ['spingold'],
-  'Swedish Elite Series' => ['elitserien'],
   'Prince Takamatsu Cup' => ['takamatsu'],
   'Top Circuit' => ['topcircuit'],
   'Transnational Open Teams' => ['tnt', 'tnot'],
@@ -1805,7 +1558,9 @@ sub set_hashes
   Tags::Tnames::Poland::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Portugal::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS,
     \%SINGLE_TYPOS);
+  Tags::Tnames::Sweden::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Taipei::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::Turkey::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::UK::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::World::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
 
