@@ -23,6 +23,11 @@ use Tags::Meets::Belgium;
 use Tags::Meets::Bolivia;
 use Tags::Meets::Brazil;
 use Tags::Meets::Bulgaria;
+use Tags::Meets::Canada;
+use Tags::Meets::CentralAmerica;
+use Tags::Meets::Chile;
+use Tags::Meets::China;
+use Tags::Meets::Croatia;
 
 my %DIVISIONS =
 (
@@ -38,6 +43,11 @@ my %DIVISIONS =
   BOLIVIA => \&Tags::Meets::Bolivia::set_hash,
   BRAZIL => \&Tags::Meets::Brazil::set_hash,
   BULGARIA => \&Tags::Meets::Bulgaria::set_hash,
+  CANADA => \&Tags::Meets::Canada::set_hash,
+  CENTRALAMERICA => \&Tags::Meets::CentralAmerica::set_hash,
+  CHILE => \&Tags::Meets::Chile::set_hash,
+  CHINA => \&Tags::Meets::China::set_hash,
+  CROATIA => \&Tags::Meets::Croatia::set_hash,
 );
 
 my @MULTI_WORDS =
@@ -74,7 +84,6 @@ my @MULTI_WORDS =
   'Brasov Festival',
   'Buffett Cup',
   'Cairo Bridge Festival',
-  'Canadian Bridge Championships',
   'Cappadocia Fairy Chimneys Festival',
   'Channel Trophy',
   'Copenhagen Invitational',
@@ -143,7 +152,6 @@ my @MULTI_WORDS =
   'Rajasthan Invitational Championship',
   'Red Sea International Festival',
   'Reykjavik Bridge Festival',
-  'Samobor Bridge Meeting',
   'Sivrioglu Festival',
   'South American Team Championship',
   'South American Trials',
@@ -178,7 +186,6 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  'All China Games' => ['all-china games'],
   'All India HCL Tournament' => [
     'all india hcl open',
     'hcl bridg tournamnt',
@@ -444,7 +451,6 @@ my %MULTI_TYPOS =
     'red sea bridge festival', 'red see int_ bridge festival',
     'red sea int_ festival'],
   'Reykjavik Bridge Festival' => ['reykjavikbridgefestival'],
-  'Samobor Bridge Meeting' => ['bridge meeting samobor'],
   'Slava Congress' => ['s³awa turniej kongresowy'],
   'South American Team Championship' => [
     'southamerica championship',
@@ -556,7 +562,6 @@ my %SINGLE_TYPOS =
   'Australian National Championships' => ['anc'],
   'Bangkok Bridge Festival' => ['bbf', 'bff'],
   "Buffett Cup" => ['buffett', 'buffet'],
-  'Canadian Bridge Championships' => ['cbc'],
   Congress => ['kongres', 'kongresowy'],
   'European National Championships' => ['ec'],
   'European Transnational Championships' => ['eobc', 'eoc'],

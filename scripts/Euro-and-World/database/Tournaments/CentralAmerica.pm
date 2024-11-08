@@ -13,22 +13,6 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_CENTRALAMERICA =
 (
-  'Meet name' =>
-  {
-    ORGANIZATION => 'CACBF',
-    ORIGIN => 'International',
-    ZONE => 'Central America',
-
-    EDITIONS => 
-    {
-      '2015' =>
-      {
-        YEAR => 2000,
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
-      },
-    }
-  }
 );
 
 my %TOURNAMENTS_CENTRALAMERICA =
