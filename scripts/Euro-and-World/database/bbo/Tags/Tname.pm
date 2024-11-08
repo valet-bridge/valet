@@ -22,8 +22,10 @@ use Tags::Tnames::Chile;
 use Tags::Tnames::China;
 use Tags::Tnames::Denmark;
 use Tags::Tnames::Finland;
+use Tags::Tnames::Germany;
 use Tags::Tnames::Hungary;
 use Tags::Tnames::India;
+use Tags::Tnames::Israel;
 use Tags::Tnames::Italy;
 use Tags::Tnames::Norway;
 use Tags::Tnames::Poland;
@@ -215,19 +217,6 @@ my @MULTI_WORDS =
   'French Women Trials',
   'Shield of Thoisy',
 
-  # GERMANY
-  'Bonn Nations Cup',
-  'German Bundesliga',
-  'German Club Cup',
-  'German Mixed Teams',
-  'German Open Pairs',
-  'German Open Teams',
-  'German Open Trials',
-  'German Team Trophy',
-  'German Women Pairs',
-  "Gro's Supercup",
-  'König Ludwig Cup',
-
   # GREECE
   'Greek Central Regional Pairs',
   'Greek Mixed Pairs',
@@ -295,21 +284,6 @@ my @MULTI_WORDS =
   'Irish Invitational Pairs',
   'Irish Open Trials',
   'Full Tilt Irish Bridge Masters',
-
-  # ISRAEL
-  'Four Nations Cup',
-  'Israel Cup',
-  'Israel Juniors Pairs',
-  'Israel Juniors Trials',
-  'Israel IMP Pairs',
-  'Israel Open Pairs',
-  'Israel Open Teams',
-  'Israel Open Trials',
-  'Israel School Trials',
-  'Israel Women Pairs',
-  'Maccabi Games',
-  'Rand Pairs Cup',
-  'Rand Teams Cup',
 
   # JAPAN
   'Japanese District KO Teams',
@@ -746,7 +720,6 @@ my %MULTI_TYPOS =
 
   'forumbridge.pl Top Individual' => ['forumbridge_pl top individual'],
   'forumbridge.pl Top Pairs' => ['forumbridge_pl top pairs'],
-  'Four Nations Cup' => ['4 nations cupn', '4 nations cup'],
 
   # FRANCE
   'French Cup' => ['coupe de france', 'de la coupe de france'],
@@ -825,43 +798,6 @@ my %MULTI_TYPOS =
     'gabrial-ui cup',
     'gabrial ui cup'],
   'Geologi Cup' => ['geo cup'],
-
-  # GERMANY -- mapped in detail
-  'Bonn Nations Cup' => ['nations cup germany', 'bonn cup'],
-  'German Club Cup' => [
-    'german cup', 
-    'vereinspokal', 
-    'dbv-cup', 
-    'dbv cup',
-    'dbv-pokal'],
-  'German Mixed Teams' => [
-    'deutsche mixed-teammeisterschaft',
-    'deutsche mixed teammeisterschaft'],
-  'German Open Pairs' => [
-    'german men pairs', 
-    'german mens pairs',
-    'germany mens pairs',
-    'Dr. Heinz von Rotteck Pokal',
-    'dr_-heinz-von-rotteck-pokal',
-    'v_-rotteck-pokal'],
-  'German Open Teams' => [
-    'offene deutsche teammeisterschaft',
-    'offene team meisterschaft',
-    'offene team meistershaft', 
-    'german open team championships',
-    'german open', 
-    'german open team',
-    'open german team'],
-  'German Open Trials' => [
-    'deutsche open qualifikation',
-    'german open qualification'],
-  'German Team Trophy' => [
-    'german bridge team trophy',
-    'german team bridge trophy', 
-    'german bridge trophy'],
-  'German Women Pairs' => ['damen-paar'],
-  "Gro's Supercup" => ["gro's super-cup", 'gros supercup'],
-  'König Ludwig Cup' => ['koenig ludwig nationen cup'],
 
   'Grand National Teams' => ['gnt championship'],
 
@@ -992,37 +928,6 @@ my %MULTI_TYPOS =
     'irish camrose trials', 
     'irish trials'],
 
-  # ISRAEL
-  'Israel Cup' => [
-    'israel team cup', 
-    'israel team of four cup', 
-    'israeli teams cup'],
-  'Israel Juniors Pairs' => [
-    'israel juniours pairs'],
-  'Israel Juniors Trials' => [
-    'israel juniors team trials',
-    'israeli juniors trials',
-    'israeli juniors team trials'],
-  'Israel Open Pairs' => [
-    'israel pairs', 
-    'israel pairs champ',
-    'israeli pairs championship'],
-  'Israel Open Teams' => [
-    'israeli open team', 
-    'israel teams',
-    'israel team champ_',
-    'israel team championship', 
-    'israelairs champ_',
-    'israeli team champ_'],
-  'Israel Open Trials' => [
-    'israel open team trials',
-    'israel open trials', 
-    'israel team trials',
-    'israeli open team trials'],
-  'Israel School Trials' => [
-    'israel schools trials',
-    'israel schools teams trials'],
-
   ### JJJ
 
   'Jaap Kokkes Tournament' => [
@@ -1075,7 +980,6 @@ my %MULTI_TYPOS =
 
   ### MMM
 
-  'Maccabi Games' => ['maccabi-games', 'europ_ maccabi games'],
   'Madrid Senior Teams' => ['equipos senior madrid'],
   "Missouri Braggin' Rights" => ['bragging rights'],
 
@@ -1491,8 +1395,6 @@ my %SINGLE_TYPOS =
   'European Youth Bridge Championship' => ['eybc'],
   'European Youth Bridge Pairs Championship' => ['eybpc', 'eypc'],
   'European Youth Bridge Teams Championship' => ['eytc', 'jem'],
-  'German Team Championship' => ['teammeisterschaft'],
-  'German Bundesliga' => ['bundesliga'],
   'Gianarrigo Rona Trophy' => ['rona'],
   'Grand National Open Teams' => ['gnot'],
   'Grand National Teams' => ['gnt'],
@@ -1500,7 +1402,6 @@ my %SINGLE_TYPOS =
   'Icelandair Open' => ['icelandair'],
   "Kepri Governor's Cup" => ['kepricup'],
   "Linda Stern Women's Teams" => ['lswt'],
-  'Maccabi Games' => ['maccabiah'],
   'NTU Cup' => ['ntucup'],
   'Paris Youth Open Teams' => ['ypob'],
   'Portuguese Open Teams' => ['cneo'],
@@ -1551,8 +1452,10 @@ sub set_hashes
   Tags::Tnames::China::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Denmark::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Finland::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::Germany::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Hungary::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::India::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::Israel::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Italy::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Norway::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Poland::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
