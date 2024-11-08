@@ -28,6 +28,10 @@ use Tags::Meets::CentralAmerica;
 use Tags::Meets::Chile;
 use Tags::Meets::China;
 use Tags::Meets::Croatia;
+use Tags::Meets::Czech;
+use Tags::Meets::Denmark;
+use Tags::Meets::Ecuador;
+use Tags::Meets::Egypt;
 
 my %DIVISIONS =
 (
@@ -48,6 +52,10 @@ my %DIVISIONS =
   CHILE => \&Tags::Meets::Chile::set_hash,
   CHINA => \&Tags::Meets::China::set_hash,
   CROATIA => \&Tags::Meets::Croatia::set_hash,
+  CZECH => \&Tags::Meets::Czech::set_hash,
+  DENMARK => \&Tags::Meets::Denmark::set_hash,
+  ECUADOR => \&Tags::Meets::Ecuador::set_hash,
+  EGYPT => \&Tags::Meets::Egypt::set_hash,
 );
 
 my @MULTI_WORDS =
@@ -83,12 +91,9 @@ my @MULTI_WORDS =
   'Bodrum Peninsula Festival',
   'Brasov Festival',
   'Buffett Cup',
-  'Cairo Bridge Festival',
   'Cappadocia Fairy Chimneys Festival',
   'Channel Trophy',
-  'Copenhagen Invitational',
   'Crete Bridge Festival',
-  'Danish Bridge Festival',
   'Estoril Bridge Festival',
 
   "European Champions' Cup",
@@ -224,7 +229,6 @@ my %MULTI_TYPOS =
   'Challenge Match' => [
     'desafio'], 
   'Channel Trophy' => ['channel trpohy'],
-  'Copenhagen Invitational' => ['copenhagen bridge invitational'],
   'Crete Bridge Festival' => ['crete b_ festival'],
   'Estoril Bridge Festival' => ['estoril festival'],
   "European Champions' Cup" => [
