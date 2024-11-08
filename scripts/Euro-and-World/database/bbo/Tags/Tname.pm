@@ -19,13 +19,16 @@ use Tags::Tnames::Balkan;
 use Tags::Tnames::Baltic;
 use Tags::Tnames::Belgium;
 use Tags::Tnames::Bulgaria;
+use Tags::Tnames::Canada;
 use Tags::Tnames::Chile;
 use Tags::Tnames::China;
 use Tags::Tnames::Denmark;
 use Tags::Tnames::Finland;
 use Tags::Tnames::France;
 use Tags::Tnames::Germany;
+use Tags::Tnames::Greece;
 use Tags::Tnames::Hungary;
+use Tags::Tnames::Iceland;
 use Tags::Tnames::India;
 use Tags::Tnames::Indonesia;
 use Tags::Tnames::Israel;
@@ -34,7 +37,10 @@ use Tags::Tnames::Netherlands;
 use Tags::Tnames::Norway;
 use Tags::Tnames::Poland;
 use Tags::Tnames::Portugal;
+use Tags::Tnames::Romania;
 use Tags::Tnames::Russia;
+use Tags::Tnames::Serbia;
+use Tags::Tnames::SouthAmerica;
 use Tags::Tnames::Spain;
 use Tags::Tnames::Supra;
 use Tags::Tnames::Sweden;
@@ -123,11 +129,6 @@ my @MULTI_WORDS =
   'Sao Paulo Cup',
   'Sao Paulo State Championship',
 
-  # CANADA
-  'Canadian National Teams Championship',
-  'Canadian Seniors Teams Championship',
-  'Canadian Women Teams Championship',
-
   # CENTRAL AMERICA
   'Central American & Caribbean Open Teams',
   'Central American & Caribbean Transnational Teams',
@@ -189,28 +190,10 @@ my @MULTI_WORDS =
   # FAROE ISLANDS
   'Faroese Open Teams',
 
-  # GREECE
-  'Greek Central Regional Pairs',
-  'Greek Mixed Pairs',
-  'Greek Northern Regional',
-  'Greek Open Teams',
-  'Greek Open Pair Trials',
-  'Greek Open Team Trials',
-  'Greek Women Trials',
-  'Thanos Capayiannides Memorial Simultaneous',
-
   # HONG KONG
   'Hong Kong Inter-City Open Teams',
   'Hong Kong Inter-City Women Teams',
   'Hong Kong New Year Teams',
-
-  # ICELAND
-  'Iceland Express Pairs',
-  'Iceland Express Teams',
-  'Icelandair Open Pairs',
-  'Icelandair Open Teams',
-  'Icelandic Cup',
-  'Icelandic Open Teams',
 
   # IRELAND
   'Irish Invitational Pairs',
@@ -255,20 +238,6 @@ my @MULTI_WORDS =
   'Pakistan Day Open Teams',
   'Pakistan Open Trials',
 
-  # ROMANIA
-  'Romanian League',
-  'Romanian Second League',
-  'Romanian Open Teams',
-  'Romanian Open Trials',
-
-  # SERBIA
-  'Serbian Cup',
-  'Serbian Inter-City Teams',
-  'Serbian Open Teams',
-  'Serbian Open Trials',
-  'Serbian Premier League',
-  'Vrnjacka Banja Open Teams',
-
   # SINGAPORE
   'Pesta Sukan',
   'Singapore Open Teams',
@@ -279,16 +248,6 @@ my @MULTI_WORDS =
   # SOUTH AFRICA
   'South African Inter-Province Teams',
   'South African Open Teams',
-
-  # SOUTH AMERICA
-  'South American Junior Teams',
-  'South American Open Pairs',
-  'South American Open Teams',
-  'South American Open Trials',
-  'South American Senior Trials',
-  'South American Seniors Teams',
-  'South American Women Teams',
-  'South American Women Trials',
 
   # SWITZERLAND
   'Jean Besse Cup',
@@ -377,30 +336,6 @@ my %MULTI_TYPOS =
 
   ### CCC
 
-
-  # CANADA -- mapped in detail
-  'Canadian National Teams Championship' => [
-    'canadian a tm', 
-    'canadian champ open', 
-    'canadian national team',
-    'canadian open teams',
-    'canadian open teams championship',
-    'canadian tm a',
-    'can open teams championship',
-    'can open team championship', 
-    'can_ champ open'],
-  'Canadian Seniors Championship' => [
-    'canadian champ senior', 
-    'canadian champs senior',
-    'canadian senior championship',
-    'canadian senior teams',
-    'canadian senior tm'],
-  'Canadian Women Teams Championship' => [
-    'can ladies bridge champs',
-    'can ladies team champ',
-    'cbc womens finals',
-    'cbf womens final',
-    'cbf womens finals'],
 
   'Central American & Caribbean Open Teams' => [
     'cac final',
@@ -551,42 +486,6 @@ my %MULTI_TYPOS =
 
   'Grand National Teams' => ['gnt championship'],
 
-  # GREECE
-  'Greek Central Regional Pairs' => [
-    'regional championship of central greece'],
-  'Greek Mixed Pairs' => [
-    'hellenic mixed pairs',
-    'hellenik mixed pairs'],
-  'Greek Northern Regional' => [
-    'n_ greece regional championship'],
-  'Greek Open Teams' => [
-    'greek natioanal teams', 
-    'greek open nationa team',
-    'grekk open national team', 
-    'greek open team', 
-    'greek open team championship', 
-    'greek team',
-    'greek teams',
-    'hellenic teams championship'],
-  'Greek Open Team Trials' => [
-    'greek national team trials',
-    'greek national teams trials',
-    'greek national trials', 
-    'greek open nationa team trials',
-    'greek open national team trials',
-    'greek open team trials',
-    'greek trials', 
-    'grekk open national team trials',
-    'helenic national team trials',
-    'hellenic national team trials',
-    'hellenic national teams trials',
-    'hellenic open team trials',
-    'hellenic team trials',
-    'hellenic teams trials'], 
-  'Greek Women Trials' => [
-    'hellenic ladies team trials',
-    'hellenic ladies teams trials'],
-
   'Grand Prix of Prague' => [
     'grand prix prague', 'gp prague'],
 
@@ -603,27 +502,6 @@ my %MULTI_TYPOS =
     'JP Morgan Intercity Bridge Championships-Open  T_'],
 
   ### III
-
-  # ICELAND
-  'Iceland Express Teams' => ['iceland express team'],
-  'Icelandair Open Teams' => [
-    'icelandair open',
-    'icelandair team championship',
-    'icelandari open'],
-  'Icelandic Cup' => [
-    'bikarkeppni bsí', 
-    'icelandic champions cup',
-    'icelandoc cup',
-    'iceland cup'],
-  'Icelandic Open Teams' => [
-    'iceland teams',
-    'icelandic team', 
-    'icelandic team championship', 
-    'icelandic team championsship',
-    'icelandic team chapmionship', 
-    'icelandic team championships',
-    'icelandic teamhampionship', 
-    'icelandic teams'],
 
 
   # IRELAND -- mapped in detail
@@ -739,42 +617,6 @@ my %MULTI_TYPOS =
   'Rio de Janeiro Christmas Individual' => [
     'rio de janeiro xmas individual'],
 
-  # ROMANIA -- mapped in detail
-  'Romanian League' => [
-    'cn ecgipe',
-    'cn echipe', 
-    'c_n_ echipe', 
-    'divizia a', 
-    'national romanian teams',
-    'romanian national teams div a', 
-    'romanian national division', 
-    'romanian national teams- div a', 
-    'romanian team championship',
-    'romanian teams-a division', 
-    'romanian teams- a division'],
-  'Romanian Open Teams' => [
-    'romanian national champ_',
-    'romanian national champs',
-    'romanian national championship',
-    'romanian national championships teams',
-    'romanian national team championship',
-    'romanian national team championships',
-    'romanian national team champs',
-    'romanian national teams', 
-    'romanian national teams championships',
-    'romanian teams'],
-  'Romanian Open Trials' => [
-    'romanian national team selection',
-    'romanian national trials',
-    'romanian open teams trial',
-    'romanian open teams trials',
-    'romanian open trials',
-    'romanian selection'], 
-  'Romanian Second League' => [
-    'cn echipe div b',
-    'cn echipe div b seria a',
-    'cn ecgipe div b seria a'],
-
   ### SSS
 
   'Sao Paulo Cup' => [
@@ -790,28 +632,6 @@ my %MULTI_TYPOS =
     'sp champ', 
     'sao paulo state'],
   'Senior Camrose' => ['seniors camrose'],
-
-  'Serbian Cup' => [
-    'cup of serbia', 
-    'cup srbije', 
-    'kup srbije'],
-  'Serbian Open Teams' => [
-    'serbian bridge championship',
-    'serbia teams championship',
-    'serbian tam championship', 
-    'serbian team championship',
-    'serbian teams championship',
-    'serbianteam championship', 
-    'serbian closed team championship'],
-  'Serbian Open Trials' => [
-    'open serbian trials',
-    'serbian open team trials',
-    'serbian open trial', 
-    'serbian teams trial'],
-  'Serbian Premier League' => [
-    'serbian league', 
-    'serbian premier leaugue',
-    'serbian premier leauge'],
 
   'Slovakian Open Teams' => ['slovakia open teams'],
 
@@ -829,30 +649,6 @@ my %MULTI_TYPOS =
     'south african championships',
     'south african nationals',
     'south african teams'],
-
-  # SOUTH AMERICA
-  'South American Junior Teams' => [
-    'south american junior championship',
-    'south american junior championships',
-    'south american junioor championships',
-    'youth sabc'],
-  'South American Open Pairs' => [
-    'sudamericano de parejas',
-    'sudamericano de parejas libres'],
-  'South American Open Teams' => [
-    'libres sudamericano',
-    'southamerican open championship',
-    'sudamericano libre equipos',
-    'sudamericano libres'],
-  'South American Senior Teams' => [
-    'clasificacion sudamericano seniors',
-    'south american senior championship'],
-  'South American Women Teams' => [
-    'clasificatoria damas equipos',
-    'clasificatoria equipos damas', 
-    'sudamericano damas'],
-  'South American Senior Trials' => [
-    'seleccion sudamericano senior'],
 
   'Spring Nationals' => [
     'spring nat', 
@@ -885,11 +681,6 @@ my %MULTI_TYPOS =
     'Swiss team championship'
 
     ],
-
-  ### TTT
-
-  'Thanos Capayiannides Memorial Simultaneous' => [
-    'thanos capayiannides'],
 
   ### UUU
 
@@ -975,9 +766,6 @@ my %SINGLE_TYPOS =
   'Australian Spring Open Teams' => ['snot'],
   'Bobby Evans Seniors Teams' => ['best'],
   'Brazilian Open Teams' => ['brasilchamp'],
-  'Canadian National Teams Championship' => ['cntc'],
-  'Canadian Seniors Teams Championship' => ['cstc', 'cnst'],
-  'Canadian Women Teams Championship' => ['cwtc'],
   'Collegiate Bowl' => ['collegiate', 'collegiates'],
   'Copenhagen Invitational Pairs' => ['cbi'],
   'Danish Championship' => ['dm'],
@@ -991,8 +779,6 @@ my %SINGLE_TYPOS =
   'Gianarrigo Rona Trophy' => ['rona'],
   'Grand National Open Teams' => ['gnot'],
   'Grand National Teams' => ['gnt'],
-  "Gro's Supercup" => ['grocup'],
-  'Icelandair Open' => ['icelandair'],
   "Linda Stern Women's Teams" => ['lswt'],
   'NTU Cup' => ['ntucup'],
   'Portuguese Open Teams' => ['cneo'],
@@ -1037,13 +823,16 @@ sub set_hashes
   Tags::Tnames::Belgium::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Bulgaria::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, 
     \%SINGLE_TYPOS);
+  Tags::Tnames::Canada::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Chile::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::China::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Denmark::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Finland::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::France::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Germany::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::Greece::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Hungary::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::Iceland::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::India::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Indonesia::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Israel::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
@@ -1053,7 +842,10 @@ sub set_hashes
   Tags::Tnames::Poland::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Portugal::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS,
     \%SINGLE_TYPOS);
+  Tags::Tnames::Romania::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Russia::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::Serbia::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::SouthAmerica::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Spain::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Supra::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Sweden::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);

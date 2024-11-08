@@ -72,6 +72,7 @@ my %SINGLE_TYPOS =
 (
   'German Team Championship' => ['teammeisterschaft'],
   'German Bundesliga' => ['bundesliga'],
+  "Gro's Supercup" => ['grocup'],
 );
 
 sub set_hash
