@@ -14,6 +14,7 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
+  'Alex Nurdin Cup',
   'Electric Cup',
   'FTBC Tanjungpura University',
   'Gabrial UI Bastaman Cup',
@@ -56,6 +57,7 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'Alex Nurdin Cup' => ['test event sea games'],
   'FTBC Tanjungpura University' => ['ftbc university tanjungpura'],
   'Gabrial UI Bastaman Cup' => [
     'bastaman cup',

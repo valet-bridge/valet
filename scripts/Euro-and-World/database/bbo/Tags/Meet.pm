@@ -12,11 +12,17 @@ our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hashes);
 
 use Tags::Meets::Africa;
+use Tags::Meets::Argentina;
+use Tags::Meets::Asia;
+use Tags::Meets::Australia;
 use Tags::Meets::Baltic;
 
 my %DIVISIONS =
 (
   AFRICA => \&Tags::Meets::Africa::set_hash,
+  ARGENTINA => \&Tags::Meets::Argentina::set_hash,
+  ASIA => \&Tags::Meets::Asia::set_hash,
+  AUSTRALIA => \&Tags::Meets::Australia::set_hash,
   BALTIC => \&Tags::Meets::Baltic::set_hash,
 );
 
@@ -45,13 +51,7 @@ my @MULTI_WORDS =
   'Aegean Championships',
   'Azores Festival',
   'Amman Bridge Festival',
-  'APBF Championships',
-  'APBF Youth Championships',
   'ASEAN Club Championship',
-  'Asia Cup',
-  'Australian National Championships',
-  'Australian Spring Nationals',
-  'Australian Summer Festival',
   'Australian Youth Triathlon',
   'Balkan Friendship Festival',
   'Balkan Championship',
@@ -85,7 +85,6 @@ my @MULTI_WORDS =
   'Fes Festival',
   'Festival della Matematica',
   'Goa Bridge Festival',
-  'Gold Coast Congress',
   'Greek Islands Festival',
   'Iceland Bridge Festival',
 
@@ -113,7 +112,6 @@ my @MULTI_WORDS =
   'Madeira International Festival',
   'Maharaja Holkar National Championship',
   'Maharashtra State Championship',
-  'Mar del Plata Festival',
   'Marmara Festival',
   'Mautern Bridge Festival',
   'Mersin Bridge Festival',
@@ -142,7 +140,6 @@ my @MULTI_WORDS =
   'Sivrioglu Festival',
   'South American Team Championship',
   'South American Trials',
-  'Southeast Asian Games',
   'Stara Zagora Bridge Festival',
   'Swedish Women Trials',
   'Swedish Bridge Festival',
@@ -160,7 +157,6 @@ my @MULTI_WORDS =
   'Uttar Pradesh State Championship',
   'Vanke Cup',
   'Varna Bridge Festival',
-  'Victor Champion Cup',
   'VVE Beheer Bridge Week',
   'Wachauer Bridge Festival',
   'West Java Regional',
@@ -192,34 +188,6 @@ my %MULTI_TYPOS =
     'hcl open international tournament',
     'hcl open tournament'],
 
-  'APBF Championships' => [
-    'pabf championship', 'pabf c',
-    'asia pacific bridge federation championship',
-    'asia pacific bridge federation championships',
-    'asia pacific bridge federation champio teams'],
-  'APBF Youth Championships' => [
-    'pabf youth championships'],
-
-  'ASEAN Club Championship' => [
-    "aseam bridge club c'ship",
-    "asean bridge club c'ship",
-    'asean bridge club',
-    'asean bridge club championship',
-    'asean bridge club championships',
-    'asean bridge club open championships',
-    'asean bridg club championship',
-    "asean bridge c'ship",
-    'asean bridge cship',
-    'asean bridge championship',
-    'asean bridge championships',
-    'asean bridge finals',
-    'asean club championships'],
-
-  'Australian Spring Nationals' => [
-    'aus spring nationals',
-    'australian spring national',
-    'sydney spring nationals'],
-  'Australian Summer Festival' => ['summer bridge festival'],
   'Azores Festival' => ['azores festival bridge', 'azores bridge open',
     'azores bridge teams', 'azores team', 'azores teams',
     'azores team festval', 'festival azores bridge', 'azores festiva', 
@@ -316,7 +284,6 @@ my %MULTI_TYPOS =
     'festival de fez'],
   'Friendly Match' => [
     'match amical', 'friendly tm'],
-  'Gold Coast Congress' => ['gold coast'],
   'Greek Islands Festival' => ['greek bridge festival',
     'greek island festival', 'athens bridge festival', 
     'greek islands festivals', 'greek festival islands', 'greek islands'],
@@ -411,8 +378,6 @@ my %MULTI_TYPOS =
     'maharashtra state brahmin sabha',
     'maharashtra state brhman sabha',
     'maharashtra state championships'],
-  'Mar del Plata Festival' => [ 'mar del plata international festival',
-    'mar del plata international bridge festival'],
   'Marmara Festival' => ['festival marmara'],
   'Mautern Bridge Festival' => [
     'mautern bridgefestival',
@@ -523,9 +488,6 @@ my %MULTI_TYPOS =
     'clasificatoria sudamericano',
     'clasificatorias sudamericano', 
     'south americal trials'],
-  'Southeast Asian Games' => [
-    'sea games',
-    'south east asian games'],
   'Stara Zagora Bridge Festival' => ['bridge festival - stara zagora',
     'bridge festival stara zagora', 
     'bridge festival-bulgaria-stara zagora'],
@@ -617,10 +579,7 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  'APBF Championships' => ['pabfc', 'pabf', 'pabfs'],
-  'ASEAN Club Championship' => ['abcc'],
   'Australian National Championships' => ['anc'],
-  'Australian Summer Festival' => ['sfb', 'sfob'],
   'Bangkok Bridge Festival' => ['bbf', 'bff'],
   "Buffett Cup" => ['buffett', 'buffet'],
   'Canadian Bridge Championships' => ['cbc'],
@@ -636,9 +595,7 @@ my %SINGLE_TYPOS =
   'North American Bridge Championship' => ['nabc'],
   'United States Bridge Championship' => ['usbc'],
   'South American Team Championship' => ['sabc'],
-  'Southeast Asian Games' => ['seagames'],
   'Indian Winter Nationals' => ['winternationals'],
-  'Victor Champion Cup' => ['vcc'],
   'World Series' => ['wbs'],
   'World Team Championships' => ['wbtc'],
   'World Team Olympiad' => ['olympiad', 'olympiads', 'wbo'],

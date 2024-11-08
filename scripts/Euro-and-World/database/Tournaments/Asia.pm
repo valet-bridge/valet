@@ -428,7 +428,7 @@ my %MEETS_ASIA =
     }
   },
 
-  'Southeast Asia Games' =>
+  'Southeast Asian Games' =>
   {
     ORGANIZATION => 'APBF',
     ORIGIN => 'International',
@@ -1950,6 +1950,99 @@ my %TOURNAMENTS_ASIA =
     }
   },
 
+  'SEA Mixed Pairs' =>
+  {
+    ORGANIZATION => 'APBF',
+    ORIGIN => 'International',
+    ZONE => 'Asia Pacific',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        MEET => 'Southeast Asian Games',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-11-10',
+            DATE_END => '2011-11-21'
+          } 
+        }
+      },
+    }
+  },
+
+  'SEA Mixed Teams' =>
+  {
+    ORGANIZATION => 'APBF',
+    ORIGIN => 'International',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        MEET => 'Southeast Asian Games',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Round-robin',
+            DATE_START => '2011-11-15',
+            DATE_END => '2011-11-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-11-17',
+            DATE_END => '2011-11-18'
+          } 
+        }
+      },
+    }
+  },
+
+  'SEA Open Pairs' =>
+  {
+    ORGANIZATION => 'APBF',
+    ORIGIN => 'International',
+    ZONE => 'Asia Pacific',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        MEET => 'Southeast Asian Games',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-11-10',
+            DATE_END => '2011-11-21'
+          } 
+        }
+      },
+    }
+  },
+
   'SEA Open Teams' =>
   {
     ORGANIZATION => 'APBF',
@@ -1970,12 +2063,76 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2011,
+            DATE_START => '2011-11-10',
+            DATE_END => '2011-11-21'
+          } 
+        }
+      },
+    }
+  },
+
+  'SEA Women Pairs' =>
+  {
+    ORGANIZATION => 'APBF',
+    ORIGIN => 'International',
+    ZONE => 'Asia Pacific',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        MEET => 'Southeast Asian Games',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-11-10',
+            DATE_END => '2011-11-21'
+          } 
+        }
+      },
+    }
+  },
+
+  'SEA Women Teams' =>
+  {
+    ORGANIZATION => 'APBF',
+    ORIGIN => 'International',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        MEET => 'Southeast Asian Games',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
             STAGE => 'Round-robin',
             major => 'SESSION',
             minor => 'ROUND',
             DATE_START => '2011-11-10',
-            DATE_END => '2011-11-21'
-          } 
+            DATE_END => '2011-11-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-11-14',
+            DATE_END => '2011-11-15'
+          },
         }
       },
     }

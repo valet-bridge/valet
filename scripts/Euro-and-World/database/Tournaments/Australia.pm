@@ -1081,30 +1081,6 @@ my %MEETS_AUSTRALIA =
 
 my %TOURNAMENTS_AUSTRALIA =
 (
-  'Eksempel',
-  {
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2007,
-            DATE_START => '2000-05-14',
-            DATE_END => '2000-05-14'
-          },
-        }
-      },
-    }
-  },
-
   'Altman Swiss Pairs',
   {
     ORGANIZATION => 'AuBF',
@@ -2678,7 +2654,7 @@ my %TOURNAMENTS_AUSTRALIA =
             YEAR => 2013,
             STAGE => 'Final',
             major => 'SEGMENT',
-            DATE_START => '2013-07-12',
+            DATE_START => '2013-07-11',
             DATE_END => '2013-07-12'
           } 
         }
@@ -2919,7 +2895,7 @@ my %TOURNAMENTS_AUSTRALIA =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'Seniors',
 
     EDITIONS =>
     {
@@ -3102,7 +3078,7 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2013' =>
+      '2013A' =>
       {
         # http://abfevents.com.au/events/playoffs/2013/seniors/
         CITY => 'Canberra',
@@ -3116,6 +3092,21 @@ my %TOURNAMENTS_AUSTRALIA =
             major => 'SEGMENT',
             DATE_START => '2013-02-13',
             DATE_END => '2013-02-17'
+          } 
+        }
+      },
+      '2013B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-07-11',
+            DATE_END => '2013-07-12'
           } 
         }
       },
@@ -3844,6 +3835,21 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
+      '2013B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-07-11',
+            DATE_END => '2013-07-12'
+          } 
+        }
+      },
       '2014' =>
       {
         # https://abfevents.com.au/events/playoffs/2014/ow/
@@ -4038,6 +4044,33 @@ my %TOURNAMENTS_AUSTRALIA =
             major => 'ROUND',
             DATE_START => '2016-01-15',
             DATE_END => '2016-01-15'
+          } 
+        }
+      },
+    }
+  },
+
+  'Australian Youngster Teams',
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Youngsters',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-07-11',
+            DATE_END => '2013-07-12'
           } 
         }
       },

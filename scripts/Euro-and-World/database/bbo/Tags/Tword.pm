@@ -26,7 +26,9 @@ my %MULTI_TYPOS =
     'the longest day charity on the shortest day'],
   'First Division' => ['1_ division', '1st division', 'd1', 
     'division1', 'division 1', 'i liga', '1_division', 'a division'],
-  Trial => ['prueba de seleccion', 'test event']
+  Trial => [
+    'prueba de seleccion', 
+    'test event'],
 );
 
   # Challenge 

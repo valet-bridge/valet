@@ -243,6 +243,35 @@ my %MEETS_INDONESIA =
 
 my %TOURNAMENTS_INDONESIA =
 (
+  'Alex Nurdin Cup' => 
+  {
+    ORGANIZATION => 'GABSI',
+    COUNTRY => 'Indonesia',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CITY => 'Palembang',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-09-09',
+            DATE_END => '2011-09-11'
+          },
+        }
+      },
+    }
+  },
+
   'Electric Cup' => 
   {
     ORGANIZATION => 'GABSI',
