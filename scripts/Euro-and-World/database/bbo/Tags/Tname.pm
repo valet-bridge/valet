@@ -18,6 +18,7 @@ use Tags::Tnames::Australia;
 use Tags::Tnames::Balkan;
 use Tags::Tnames::Baltic;
 use Tags::Tnames::Belgium;
+use Tags::Tnames::Brazil;
 use Tags::Tnames::Bulgaria;
 use Tags::Tnames::Canada;
 use Tags::Tnames::Chile;
@@ -33,9 +34,12 @@ use Tags::Tnames::Hungary;
 use Tags::Tnames::Iceland;
 use Tags::Tnames::India;
 use Tags::Tnames::Indonesia;
+use Tags::Tnames::Ireland;
 use Tags::Tnames::Israel;
 use Tags::Tnames::Italy;
+use Tags::Tnames::Japan;
 use Tags::Tnames::Netherlands;
+use Tags::Tnames::Nordic;
 use Tags::Tnames::Norway;
 use Tags::Tnames::Poland;
 use Tags::Tnames::Portugal;
@@ -46,6 +50,7 @@ use Tags::Tnames::SouthAmerica;
 use Tags::Tnames::Spain;
 use Tags::Tnames::Supra;
 use Tags::Tnames::Sweden;
+use Tags::Tnames::Switzerland;
 use Tags::Tnames::Taipei;
 use Tags::Tnames::Turkey;
 use Tags::Tnames::UK;
@@ -120,17 +125,6 @@ my @MULTI_WORDS =
   # BOLIVIA
   'Bolivian Open Teams',
 
-  # BRAZIL
-  'Brazilian Senior Trials',
-  'Brazilian Open Teams',
-  'Brazilian Open Trials',
-  'Brazilian Women Trials',
-  'Rio de Janeiro Open Teams',
-  'Rio de Janeiro Christmas Individual',
-  'Roberto Taunay Cup',
-  'Sao Paulo Cup',
-  'Sao Paulo State Championship',
-
   # CENTRAL AMERICA
   'Central American & Caribbean Open Teams',
   'Central American & Caribbean Transnational Teams',
@@ -159,18 +153,6 @@ my @MULTI_WORDS =
   'Hong Kong Inter-City Women Teams',
   'Hong Kong New Year Teams',
 
-  # IRELAND
-  'Irish Invitational Pairs',
-  'Irish Open Trials',
-  'Full Tilt Irish Bridge Masters',
-
-  # JAPAN
-  'Japanese District KO Teams',
-  'Japanese Open Trials',
-  'Kanto Teams',
-  'NEC Cup',
-  'Prince Takamatsu Cup',
-
   # JORDAN
   'Jordan Mixed Pairs',
   'Jordan Open Pairs',
@@ -190,14 +172,6 @@ my @MULTI_WORDS =
   'New Zealand Open Trials',
   'New Zealand Women Trials',
 
-  # NORDIC
-  'Nordic Cup',
-  'Nordic Junior Pairs',
-  'Nordic Junior Teams',
-  'Nordic Open Teams',
-  'Nordic Security Pro-Am Pairs',
-  'Nordic Women Teams',
-
   # PAKISTAN
   'Pakistan Day Open Teams',
   'Pakistan Open Trials',
@@ -212,15 +186,6 @@ my @MULTI_WORDS =
   # SOUTH AFRICA
   'South African Inter-Province Teams',
   'South African Open Teams',
-
-  # SWITZERLAND
-  'Jean Besse Cup',
-  'Swiss Club Championship',
-  'Swiss Cup',
-  'Swiss Open IMP Pairs',
-  'Swiss Open Teams',
-  'Zurich Open Pairs',
-  'Zurich Open Teams',
 
   # USA
   '0 to 1500 Spingold',
@@ -282,21 +247,6 @@ my %MULTI_TYPOS =
     'bolivarian tournament',
     'campeonato bolivariano de equipos',
     'torneo bolivariano equipos'],
-
-  # BRAZIL
-  'Brazilian Open Teams' => [
-    'brasil champ', 
-    'brasilian championship',
-    'brazilian championship',
-    'brazilian championships',
-    'brazilian chapionship', 
-    'brazilian national championship', 
-    'brazilian open championship', 
-    'brazilian team',
-    'brazilian teams',
-    'open brazilian championship'],
-  'Brazilian Senior Trials' => ['brazilian senior'],
-  'Brazilian Women Trials' => ['brazilian ladies trials'],
 
   ### CCC
 
@@ -384,28 +334,8 @@ my %MULTI_TYPOS =
     'JP Morgan Intercity Bridge Championships-Open T_',
     'JP Morgan Intercity Bridge Championships-Open  T_'],
 
-  ### III
-
-
-  # IRELAND -- mapped in detail
-  'Irish Invitational Pairs' => [
-    'ireland invitational pairs',
-    'irish invitational matchpoints'],
-  'Irish Open Trials' => [
-    'ibu trials',
-    'ireland trials', 
-    'ireland camrose trials', 
-    'ireland lady milne trials', 
-    'irish bridge union trials',
-    'irish bridge union open trials',
-    'irish camrose trials', 
-    'irish trials'],
-
   ### JJJ
 
-  'Japanese Open Trials' => ['japanese open team trial',
-    'japanese open team trials'],
-  'Jean Besse Cup' => ['cup jean besse', 'cup jean besser'],
   'Jordan Open Pairs' => [
     'jordanese open pairs'],
   'Jordan Mixed Pairs' => [
@@ -426,8 +356,6 @@ my %MULTI_TYPOS =
   ###  NNN
 
   'NABC Senior Knock-Out Teams' => ['nabc senior ko teams'],
-  'NEC Cup' => [
-    'nec cup bridge festival'],
  "New Year's Teams" => ['new year greet tm'],
 
   # NEW ZEALAND -- mapped in detail
@@ -436,27 +364,6 @@ my %MULTI_TYPOS =
     'nz interprovincials',
     'new zealand inter provincials'],
   'New Zealand Open Teams' => ['nz teams'],
-
-  'Nordic Cup' => [
-    'rottneros cup',
-    'rottneros nordic cup'],
-  'Nordic Junior Pairs' => [
-    'nordic junior pair championship',
-    'open nordic junior pair', 
-    'open nordic junior pairs'],
-  'Nordic Junior Teams' => [
-    'nordic junior team championship',
-    'nordic junior team championships',
-    'nordic junior teams championship',
-    'nordic junior teams championships'],
-  'Nordic Open Teams' => [
-    'nordic championship open class',
-    'nordic open championship'],
-  'Nordic Security Pro-Am Pairs' => [
-    'Nordic Security Play against the stars'],
-  'Nordic Women Teams' => [
-    'nordic women championship',
-    'nordics (women)'],
 
   ### OOO
 
@@ -488,32 +395,7 @@ my %MULTI_TYPOS =
   'Philadelphia Solomon Teams' => [
     'solomon teams'],
 
-  'Prince Takamatsu Cup' => [
-    'prince takamatsu memorial cup',
-    'takamatsu cup'],
-
-  ### RRR
-
-  'Rio de Janeiro Open Teams' => [
-    'rio de janeiro championship',
-    'rio de janeiro state final'],
-  'Rio de Janeiro Christmas Individual' => [
-    'rio de janeiro xmas individual'],
-
   ### SSS
-
-  'Sao Paulo Cup' => [
-    's o paulo cup', 
-    'sao paulo state cup', 
-    'são paulo cup'], 
-  'Sao Paulo State Championship' => [
-    'sao paulo champ',
-    'sao paulo championship', 
-    'sao paulo champ', 
-    'sap paulo state championship',
-    'são paulo state championship', 
-    'sp champ', 
-    'sao paulo state'],
   'Senior Camrose' => ['seniors camrose'],
 
   'Slovakian Open Teams' => ['slovakia open teams'],
@@ -540,30 +422,6 @@ my %MULTI_TYPOS =
     'sping national', 
     'spring nat opens'],
   "Sternberg Women's BAM Teams" => ['marsha may sternberg bam'],
-
-  # SWITZERLAND
-  'Swiss Club Championship' => [
-    'interclub swiss team championship',
-    'swiss interclubs',
-    'swiss interclub championship', 
-    'swisss interclubs', 
-    'swiss interclub'],
-  'Swiss Cup' => [
-    'coupe suisse', 
-    'swiss open cup', 
-    'swiss cuo', 
-    'switzerland open cup',
-
-    'champion suisse', 
-    'championnat suisse',
-    'swiss championshi', 
-    'swiss championshio',
-    'swiss championship',
-    'Swiss open championship',
-    'swiss team champiomshio',
-    'Swiss team championship'
-
-    ],
 
   ### UUU
 
@@ -631,9 +489,6 @@ my %MULTI_TYPOS =
   'Yeh Bros Cup' => ['yehbros cup', 'yer bros cup'],
   'Youth Open Bridge Paris' => ['youth paris open bridge'],
 
-  ### ZZZ
-
-  'Zurich Open Pairs' => ['zurich imp pairs']
 );
 
 my @SINGLE_WORDS = qw(
@@ -642,7 +497,6 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   'Argentinian Club Teams' => ['cnia'],
-  'Brazilian Open Teams' => ['brasilchamp'],
   'Collegiate Bowl' => ['collegiate', 'collegiates'],
   'Gianarrigo Rona Trophy' => ['rona'],
   'Grand National Open Teams' => ['gnot'],
@@ -654,7 +508,6 @@ my %SINGLE_TYPOS =
     'reisinger', 
     'resisinger'],
   'Spingold Teams' => ['spingold'],
-  'Prince Takamatsu Cup' => ['takamatsu'],
   'Transnational Open Teams' => ['tnt', 'tnot'],
   'US Junior Trials' => ['usjbc', 'jusbc'],
   'US Juniors Training' => ['jtp'],
@@ -686,6 +539,7 @@ sub set_hashes
   Tags::Tnames::Balkan::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Baltic::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Belgium::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::Brazil::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Bulgaria::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, 
     \%SINGLE_TYPOS);
   Tags::Tnames::Canada::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
@@ -702,9 +556,12 @@ sub set_hashes
   Tags::Tnames::Iceland::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::India::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Indonesia::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::Ireland::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Israel::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Italy::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::Japan::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Netherlands::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::Nordic::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Norway::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Poland::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Portugal::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS,
@@ -716,6 +573,7 @@ sub set_hashes
   Tags::Tnames::Spain::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Supra::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Sweden::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::Switzerland::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Taipei::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Turkey::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::UK::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
