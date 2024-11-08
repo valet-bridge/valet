@@ -25,6 +25,7 @@ use Tags::Tnames::Finland;
 use Tags::Tnames::Hungary;
 use Tags::Tnames::India;
 use Tags::Tnames::Italy;
+use Tags::Tnames::Norway;
 use Tags::Tnames::Poland;
 use Tags::Tnames::Portugal;
 use Tags::Tnames::Taipei;
@@ -358,48 +359,6 @@ my @MULTI_WORDS =
   'Nordic Security Pro-Am Pairs',
   'Nordic Women Teams',
 
-  # NORWAY
-  'Bergen Grand Open Pairs',
-  'Codan Teams Cup',
-  'Farmen Invitational',
-  'FOSS Grand Pairs',
-  'FX Securities Pairs Cup',
-  'Gardermoen Airport Hotel Pairs',
-  'Gardermoen Airport Hotel Teams',
-  "Jessheim New Year's Pairs",
-  "Jessheim New Year's Teams",
-  'Marit Sveaas Open Pairs',
-  'Mo i Rana Ladies Invitational',
-  'Namsos Pairs Cup',
-  'Norwegian Club Pairs',
-  'Norwegian Club Teams',
-  'Norwegian Corporate Championship',
-  'Norwegian Mixed Pairs',
-  'Norwegian Mixed Teams',
-  'Norwegian Open IMP Pairs',
-  'Norwegian Open Pairs',
-  'Norwegian Open Teams',
-  'Norwegian Premier League',
-  'Norwegian Senior Teams',
-  'Norwegian Swiss Pairs',
-  'Norwegian Swiss Teams',
-  'Norwegian Team Trials',
-  'Norwegian Women Invitational Pairs',
-  'Norwegian Women Teams',
-  'Olrud Easter Mixed Pairs',
-  'Olrud Easter Swiss Pairs',
-  'Olrud Easter Swiss Teams',
-  'Ragn-Sells International Open Pairs',
-  'Rondane Pairs Cup',
-  'Rondane Teams Cup',
-  'Rosfjord Swiss Teams',
-  'Ruter 7 Open Pairs',
-  'Snåsa Pairs Cup',
-  'Trondheim Pairs Cup',
-  'Trondheim Teams Cup',
-  'Vest-Agder Regional Team Championship',
-  'Willy Brown Memorial Pairs',
-
   # PAKISTAN
   'Pakistan Day Open Teams',
   'Pakistan Open Trials',
@@ -666,14 +625,6 @@ my %MULTI_TYPOS =
     'belarusian team championship'],
 
   # BELGIUM
-  'Bergen Grand Open Pairs' => [
-    'bergen grand tournament',
-    'bergen grand tournamnet',
-    'bergen open',
-    'bergen storturnering', 
-    'bergen storturnering mester', 
-    'bergen stor mester',
-    'bst mester'],
   'Bermuda Bowl' => ['bermuda bow', 'bemruda bowl'],
   'BKBT Teams' => ['bkbt match'],
 
@@ -764,8 +715,6 @@ my %MULTI_TYPOS =
     "champions'cup"],
   'Channel Girls Trophy' => ['channel trophy girls'],
   'Channel Schools Trophy' => ['channel trophy schools'],
-
-  'Codan Teams Cup' => ['codan cup'],
 
   # CZECH
   'Czech Championship' => ['czech bridge championship',
@@ -927,18 +876,6 @@ my %MULTI_TYPOS =
 
   'forumbridge.pl Top Individual' => ['forumbridge_pl top individual'],
   'forumbridge.pl Top Pairs' => ['forumbridge_pl top pairs'],
-  'FOSS Grand Pairs' => [
-    'foss grnad tourn',
-    'foss grand tourney', 
-    'foss grand torunament', 
-    'foss grand toruney', 
-    'foss grand tournament',
-    'foss grand torurnament',
-    'foss grand torurney',
-    'foss grand tourament', 
-    'foss grand tournement',
-    'foss-tren',
-    'ftredriklstad and sarpsborg grand tournet'],
   'Four Nations Cup' => ['4 nations cupn', '4 nations cup'],
 
   # FRANCE
@@ -1010,9 +947,6 @@ my %MULTI_TYPOS =
   'French Women Trials' => ['entrainement venice cup'],
 
   'FTBC Tanjungpura University' => ['ftbc university tanjungpura'],
-  'FX Securities Pairs Cup' => [
-    'fx securities cup',
-    'fx sec_ cup'],
 
   ### GGG
 
@@ -1020,8 +954,6 @@ my %MULTI_TYPOS =
     'bastaman cup',
     'gabrial-ui cup',
     'gabrial ui cup'],
-  'Gardermoen Airport Hotel Teams' => [
-    'gardermoen airport hotel cup'],
   'Gelibolu Peace Teams' => ['gelibolu peace cup'],
   'Geologi Cup' => ['geo cup'],
 
@@ -1254,13 +1186,6 @@ my %MULTI_TYPOS =
   'Japanese Open Trials' => ['japanese open team trial',
     'japanese open team trials'],
   'Jean Besse Cup' => ['cup jean besse', 'cup jean besser'],
-  "Jessheim New Year's Pairs" => [
-    'warm up jessheim new years cup'],
-  "Jessheim New Year's Teams" => [
-    "Jessheim New Year's Cup",
-    'jessheim new years cup',
-    'jesshiem new years cup', 
-    'jessheim new years cup swiss teams'],
   'Jordan Open Pairs' => [
     'jordanese open pairs'],
   'Jordan Mixed Pairs' => [
@@ -1307,10 +1232,6 @@ my %MULTI_TYPOS =
 
   'Maccabi Games' => ['maccabi-games', 'europ_ maccabi games'],
   'Madrid Senior Teams' => ['equipos senior madrid'],
-  'Marit Sveaas Open Pairs' => [
-    'marit sveaas international bridge tournament',
-    'marit sveaas international  bridge tournament',
-    'marit sveaas tournament'],
   'McConnell Cup' => ['mc connell'],
   "Missouri Braggin' Rights" => ['bragging rights'],
   'Murat Kilercioglu Turkish Spring Teams' => [
@@ -1319,7 +1240,6 @@ my %MULTI_TYPOS =
   ###  NNN
 
   'NABC Senior Knock-Out Teams' => ['nabc senior ko teams'],
-  'Namsos Pairs Cup' => ['namsos cup'],
   'NEC Cup' => [
     'nec cup bridge festival'],
   'Necmettin Sunget Teams Cup' => [
@@ -1361,123 +1281,9 @@ my %MULTI_TYPOS =
     'nordic women championship',
     'nordics (women)'],
 
-  # NORWAY
-  'Norwegian Club Teams' => [
-    'club team championship norway', 
-    'nor club teams ch_ship', 
-    'nor_club teams ch_ship',
-    'nor club teams',
-    'nor. club teams ch.ship',
-    'norwegian ch ship teams', 
-    'norwegian club team',
-    'norwegian club-team',
-    'norwegian club team championship',
-    'norwegian clubteams championship',
-    'norwegian clubteams ch_ship',
-    'norwegian clubteam championship', 
-    'norwegian clubs team', 
-    'norway club team championship',
-    'norway club-team championship',
-    'norway km teams'], 
-  'Norwegian Corporate Championship' => ['norwegian corp_ championship'],
-  'Norwegian Mixed Pairs' => [
-    'nm mix pairs',
-    'nor mixed pairs ch_ship', 
-    'norwegian championship mix swiss pair',
-    'norwegian championship mix swiss pairs',
-    'norwegian championship mixed swiss pairs',
-    'norwegian championship open mixed pairs',
-    'norwegian championships mixed pairs',
-    'norwegian mixed pair championship',
-    'norwegian mixed pairs championship',
-    'norwegian mix pairs championship'],
-  'Norwegian Mixed Teams' => [
-    'norwegian championship mix swiss teams',
-    'norwegian championship mix teams'],
-  'Norwegian Open Pairs' => [
-    'nbf norwegian pairs', 
-    'nm pairs',
-    'nm-pairs', 
-    'norwegian championship open pairs',
-    'norwegian pairs championship',
-    'norwegain pairs', 
-    'norwegian pairs'],
-  'Norwegian Open Teams' => [
-    'nm open teams',
-    'norwegian championship open teams',
-    'norwegian chship teams',
-    'norwegian chships teams',
-    'norwgian open teams championship', 
-    'norwegian chmp teams'],
-  'Norwegian Premier League' => [
-    'norw premier league',
-    'norway sm',
-    'norwegian prremier league',
-    'nbf premier league', 
-    'nor premier league',
-    'norvegian premier league',
-    'sm norway'], 
-  'Norwegian Senior Teams' => ['nbf senior team championship'],
-  'Norwegian Swiss Pairs' => [
-    'nm monrad pairs', 
-    'nm swiss pairs', 
-    'nor swiss pairs',
-    'norwegian championship siwss pairs',
-    'norwegian open swiss pairs',
-    'norwegian swiss open pairs',
-    'norwegian swiss pairs championship'],
-  'Norwegian Swiss Teams' => [
-    'nm-monrad-lag', 
-    'nm monrad lag', 
-    'nm-monrad-teams', 
-    'nm-monrad teams', 
-    'nor swiss teams',
-    'norwegian championship open teams swiss',
-    'norwegian championship swiss teams',
-    'norwegian swiss team championship'], 
-  'Norwegian Team Trials' => ['nor team trials',
-    'norwegian open trials',
-    'norwegian wbg qualification'],
-  'Norwegian Teams' => [
-    'norewegian chship temas',
-    'norwegian championships teams',
-    'norwegian team championship', 
-    'norwegian team championships', 
-    'norwegian teams ch_ship',
-    'norwegian teams ch.ship',
-    'norwegian teams ch.ships', 
-    'norway team championship',
-    'norway teams championship',
-    'norway teams championships'],
-  'Norwegian Women Teams' => ['norwegian ladies team championship',
-    'norwegian ladies teams',
-    'nbf women team championship',
-    'nbf women teams championship',
-    'nbf womens team championship',
-    'norwegian women team championship',
-    'norwegian womens team championship'],
-
   'NYSA Euroregion Nations Cup' => ['cup of euroregion nysa'],
 
   ### OOO
-
-  'Olrud Easter Mixed Pairs' => ['olrud easter mixed'],
-  'Olrud Easter Swiss Pairs' => [
-    'olrud easter pairs'],
-  'Olrud Easter Swiss Teams' => [
-    'olrudpaasken monrad lag',
-    'olrud easter',
-    'olrud easter tournament',
-    'olrud easter swiss event', 
-    'olrud easter swiss team', 
-    'olrud easter teams',
-    'olrud easter team-event',
-    'olrud easter tourn',
-    'olrud estern teamevent', 
-    'olrud estern team-event',
-    'olrud paasken monrad lag', 
-    'olrud swiss teams', 
-    'olrudpaasken teams'],
 
   'Open Catalunya Preferent Pairs' => [
     'open cataluña preferent', 
@@ -1537,12 +1343,6 @@ my %MULTI_TYPOS =
 
   ### RRR
 
-  'Ragn-Sells International Open Pairs' => [
-    'ragn sells international',
-    'ragn-sells international grand tournament',
-    'ragn-sells intl grand tournament',
-    'ragn-sells intl_ grand tournament',
-    'ragn sells intl_ grand tournament'],
   'Rio de Janeiro Open Teams' => [
     'rio de janeiro championship',
     'rio de janeiro state final'],
@@ -1585,21 +1385,11 @@ my %MULTI_TYPOS =
     'cn echipe div b seria a',
     'cn ecgipe div b seria a'],
 
-  'Rondane Pairs Cup' => ['rondanecupen swiss pairs'],
-  'Rondane Teams Cup' => ['rondane cup teams', 'rondanecupen teams',
-    'rondanecupen swiss teams'],
-  'Rosfjord Swiss Teams' => ['rosfjord monrad team',
-    'rosfjord monrad teams'],
-
   # RUSSIA
   'Russian IMSA Cup' => ['imsa cup'],
   'Russian Open Teams' => ['russian teams championship',
     'russian team championship'],
   'Russian Premier League' => ['russian premiere league'],
-
-  'Ruter 7 Open Pairs' => [
-    'ruter7 elitetournament',
-    'ruter 7 open'],
 
   ### SSS
 
@@ -1647,8 +1437,6 @@ my %MULTI_TYPOS =
 
   'Slava Cup' => ['cup slava', 'salava cup'],
   'Slovakian Open Teams' => ['slovakia open teams'],
-  'Snåsa Pairs Cup' => [
-    'snåsa cup'],
 
   # SOUTH AFRICA
   'South African Inter-Province Teams' => [
@@ -1817,8 +1605,6 @@ my %MULTI_TYPOS =
     'tianjin binhai cup world men elite tournament'],
   'Top Circuit' => ['melchemie top circuit',
     'ing bank top circuit', 'witte huis topcircuit'],
-  'Trondheim Pairs Cup' => ['trondheim cup swiss pairs'],
-  'Trondheim Teams Cup' => ['trondheim cup swiss teams'],
 
   # TURKEY
   'Turkish Club Championship' => ['türkýye kulüplerarasi þampýyonasi',
@@ -1951,9 +1737,6 @@ my %MULTI_TYPOS =
   'Venezuelan Swiss Pairs' => ['venezuela parejas suizas',
     'venezuela swiss pairs'],
   'Venice Cup' => ['<venive <cup'],
-  'Vest-Agder Regional Team Championship' => [
-    'regional chship vest-agder', 'regional champship vest-agder',
-    'regional chship vest-agder', 'vest-agder km lag'],
 
   ### WWW
 
@@ -1978,8 +1761,6 @@ my %MULTI_TYPOS =
   'White House Top 16' => ['white house int. teams top 16',
     'white house int_ teams top 16',
     'white house international top 16 teams'],
-  'Willy Brown Memorial Pairs' => [
-    'willy brown memorial'],
 
   # WORLD
   'Huayuan Cup' => [
@@ -2045,7 +1826,6 @@ my %SINGLE_TYPOS =
   'European Youth Bridge Championship' => ['eybc'],
   'European Youth Bridge Pairs Championship' => ['eybpc', 'eypc'],
   'European Youth Bridge Teams Championship' => ['eytc', 'jem'],
-  'FOSS Grand Pairs' => ['foss'],
   'German Team Championship' => ['teammeisterschaft'],
   'German Bundesliga' => ['bundesliga'],
   'Gianarrigo Rona Trophy' => ['rona'],
@@ -2116,6 +1896,7 @@ sub set_hashes
   Tags::Tnames::Hungary::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::India::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Italy::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::Norway::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Poland::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Portugal::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS,
     \%SINGLE_TYPOS);
