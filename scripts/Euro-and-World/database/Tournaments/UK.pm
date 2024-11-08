@@ -2910,6 +2910,19 @@ my %TOURNAMENTS_UK =
 
     EDITIONS =>
     {
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            major => 'MATCH',
+            DATE_START => '2009-05-29',
+            DATE_END => '2009-05-31'
+          },
+        }
+      },
       '2010' =>
       {
         CHAPTERS =>
@@ -2923,6 +2936,19 @@ my %TOURNAMENTS_UK =
           },
         }
       },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'MATCH',
+            DATE_START => '2011-05-27',
+            DATE_END => '2011-05-29'
+          },
+        }
+      },
       '2012' =>
       {
         CHAPTERS =>
@@ -2933,6 +2959,19 @@ my %TOURNAMENTS_UK =
             major => 'MATCH',
             DATE_START => '2012-05-18',
             DATE_END => '2012-05-20'
+          },
+        }
+      },
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            major => 'SESSION',
+            DATE_START => '2013-05-17',
+            DATE_END => '2013-05-19'
           },
         }
       },

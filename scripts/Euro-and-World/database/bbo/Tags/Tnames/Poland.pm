@@ -120,6 +120,7 @@ my %MULTI_TYPOS =
     'butler (imp) polish pairs championship'],
   'Polish Individual Championship' => [
     'forumbridge.pl top individual',
+    'forumbridge_pl top individual',
     'individual championship of poland',
     'polish top individual',
     'top indyvidual'],
@@ -134,6 +135,7 @@ my %MULTI_TYPOS =
     'polish mixt team championships'],
   'Polish Open Pairs' => [
     'forumbridge.pl top pairs',
+    'forumbridge_pl top pairs',
     'inea cup',
     'open pairs championship of poland',
     'polish championship open pairs',

@@ -106,6 +106,8 @@ my @LOCAL_SUBS =
 
   # A Polish tournament (B for Barometer).
   { START => 21944, END => 22007, TEXT => 'BAM', CORR => 'MP' },
+  { START => 22535, END => 22555, TEXT => 'BAM', CORR => 'MP' },
+  { START => 27627, END => 27673, TEXT => 'BAM', CORR => 'MP' },
 
   # Australia
   { START =>  1244, END =>  1248, TEXT => 'MP', CORR => 'IMP' },

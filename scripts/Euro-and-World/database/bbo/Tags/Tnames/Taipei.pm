@@ -58,6 +58,7 @@ my %MULTI_TYPOS =
 
 my %SINGLE_TYPOS =
 (
+  'NTU Cup' => ['ntucup'],
 );
 
 sub set_hash

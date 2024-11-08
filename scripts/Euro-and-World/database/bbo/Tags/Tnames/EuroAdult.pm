@@ -38,7 +38,16 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  "European Champions' Cup" => ['european champs cup'],
+  "European Champions' Cup" => [
+    'chamions cup',
+    'champion cup',
+    'champions cup',
+    "champion'scup",
+    "champions'cup",
+    "champion's cup",
+    "champions' cup",
+    'champs cup',
+    'european champs cup'],
   'European National Mixed Teams' => [
     'euro mixed teams',
     'european mixed teams'],

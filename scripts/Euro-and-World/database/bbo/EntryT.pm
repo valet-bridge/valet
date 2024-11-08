@@ -581,11 +581,13 @@ my %FORM_CORRECTIONS = (
      2764,  2765,  2766],
   'Polish Individual Championship' => [
     13235, 13236, 13237, 13242,
-    16511, 16513, 16514, 16515, 16526, 16532, 16537],
+    16511, 16513, 16514, 16515, 16526, 16532, 16537,
+    22535, 22547, 22549, 22555],
   'Polish Junior Pairs Trials' => [
     22677, 22678, 22679, 22680, 22681],
   'Polish Open Pairs' => [
-     4285,  4286],
+     4285,  4286,
+    22510, 22513, 22515, 22524, 22529],
   'PSN Sarma Centenary Memorial Pairs' => [
     37504, 37509],
   'PYC Hindu Gymkhana Royale' => [

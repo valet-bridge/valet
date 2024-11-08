@@ -1701,12 +1701,28 @@ my %TOURNAMENTS_SUPRA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
             STAGE => 'Qualifying',
             major => 'ROUND',
             DATE_START => '2013-11-01',
+            DATE_END => '2013-11-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-11-04',
+            DATE_END => '2013-11-04'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-11-05',
             DATE_END => '2013-11-05'
           } 
         }
@@ -1772,6 +1788,87 @@ my %TOURNAMENTS_SUPRA =
       },
     }
   },
+
+  # ---
+
+  "New Year's Teams" =>
+  {
+    ORIGIN => 'International',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-01-17',
+            DATE_END => '2015-01-17'
+          } 
+        }
+      },
+    }
+  },
+
+  'Spring Nationals' =>
+  {
+    ORIGIN => 'International',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-01-17',
+            DATE_END => '2015-01-17'
+          } 
+        }
+      },
+    }
+  },
+
+  'Transnational Open Teams' =>
+  {
+    ORIGIN => 'International',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-01-17',
+            DATE_END => '2015-01-17'
+          } 
+        }
+      },
+    }
+  },
+
 
 );
 

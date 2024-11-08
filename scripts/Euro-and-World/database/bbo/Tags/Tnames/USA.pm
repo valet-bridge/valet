@@ -71,6 +71,7 @@ my %MULTI_TYPOS =
     'baze sr_ ko',
     'baze sr ko',
     'nabc senior ko',
+    'nabc senior ko teams',
     'nabc senior knock-out teams',
     'united states seniors bridge championship',
     'us senior',

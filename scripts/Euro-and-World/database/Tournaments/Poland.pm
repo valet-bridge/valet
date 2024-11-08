@@ -3798,11 +3798,20 @@ my %TOURNAMENTS_POLAND =
         # http://wengorz.waw.pl/top2012/
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            major => 'ROUND',
             DATE_START => '2012-03-30',
-            DATE_END => '2012-03-31'
+            DATE_END => '2012-03-30'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2012-03-31',
+            DATE_END => '2012-04-01'
           } 
         }
       },
@@ -4030,7 +4039,6 @@ my %TOURNAMENTS_POLAND =
     ORIGIN => 'National',
     ZONE => 'Europe',
     FORM => 'Pairs',
-    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
@@ -4039,6 +4047,7 @@ my %TOURNAMENTS_POLAND =
       '2007' =>
       {
         MEET => 'Polish Championships',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4055,7 +4064,7 @@ my %TOURNAMENTS_POLAND =
       {
         # https://s3.eu-central-1.amazonaws.com/kongres.brydz.wlkp.pl/wyniki2009/W-cz1.html
         MEET => 'Poznan Congress',
-
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'C0' => 
@@ -4077,6 +4086,7 @@ my %TOURNAMENTS_POLAND =
       '2010' =>
       {
         MEET => 'Zulawski Congress',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4092,6 +4102,7 @@ my %TOURNAMENTS_POLAND =
       {
         # https://s3.eu-central-1.amazonaws.com/kongres.brydz.wlkp.pl/wyniki2011/W-sb1.html
         MEET => 'Poznan Congress',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4106,12 +4117,22 @@ my %TOURNAMENTS_POLAND =
       '2012' =>
       {
         # http://wengorz.waw.pl/top2012/
+        SCORING => 'IMP',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            major => 'ROUND',
             DATE_START => '2012-03-29',
+            DATE_END => '2012-03-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2012-03-30',
             DATE_END => '2012-03-30'
           } 
         }
@@ -4120,6 +4141,7 @@ my %TOURNAMENTS_POLAND =
       {
         # https://wyniki.pzbs.pl/2015/mpp/W-mxtf.html
         MEET => 'Polish Championships',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4136,6 +4158,7 @@ my %TOURNAMENTS_POLAND =
       {
         # https://wyniki.pzbs.pl/2016/mpp/W-openf2.html
         MEET => 'Polish Championships',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 

@@ -24,6 +24,7 @@ use Tags::Tnames::Bolivia;
 use Tags::Tnames::Brazil;
 use Tags::Tnames::Bulgaria;
 use Tags::Tnames::Canada;
+use Tags::Tnames::CentralAmerica;
 use Tags::Tnames::Chile;
 use Tags::Tnames::China;
 use Tags::Tnames::Croatia;
@@ -92,6 +93,7 @@ my %DIVISIONS =
   BRAZIL => \&Tags::Tnames::Brazil::set_hash,
   BULGARIA => \&Tags::Tnames::Bulgaria::set_hash,
   CANADA => \&Tags::Tnames::Canada::set_hash,
+  CENTRALAMERICA => \&Tags::Tnames::CentralAmerica::set_hash,
   CHILE => \&Tags::Tnames::Chile::set_hash,
   CHINA => \&Tags::Tnames::China::set_hash,
   CROATIA => \&Tags::Tnames::Croatia::set_hash,
@@ -148,78 +150,10 @@ my %DIVISIONS =
 
 my @MULTI_WORDS =
 (
-  # CENTRAL AMERICA
-  'Central American & Caribbean Open Teams',
-  'Central American & Caribbean Transnational Teams',
-
-  # ----------------------------------------------------
-
 );
 
 my %MULTI_TYPOS =
 (
-  ### AAA
-
-  'Scottish Exhibition' => [
-    'm lawrence exhibiton',
-    'mike lawrence exhibition'],
-
-  ### CCC
-
-  'Central American & Caribbean Open Teams' => [
-    'cac final',
-    "cacbf zonal c'ships", 
-    "cacbf zonal ch'ships",
-    "cacbf zonal cha'ships",
-    'cacbf zonal championship', 
-    'central america & caribean championship',
-    'central american & caribbean championship',
-    'central american zonal championships'],
-  "Champions' Cup" => [
-    'champions cup', 
-    "champion's cup", 
-    'chamions cup', 
-    'champs cup', 
-    'champion cup', 
-    "champion'scup", 
-    "champions'cup"],
-
-  ### DDD
-
-  'Dutch Women' => ['ducth woman'],
-
-  ### EEE
-
-  'Estoril Open Teams' => [
-    'estoril international teams', 
-    'estoril internacional teams',
-    'estoril swiss teams',
-    'estoril teams'],
-
-  'forumbridge.pl Top Individual' => ['forumbridge_pl top individual'],
-  'forumbridge.pl Top Pairs' => ['forumbridge_pl top pairs'],
-
-  ###  NNN
-
-  'NABC Senior Knock-Out Teams' => ['nabc senior ko teams'],
- "New Year's Teams" => ['new year greet tm'],
-
-  ### OOO
-
- 'Opening Tournament' => ['opening tournement'],
-
-  ### SSS
-  'Senior Camrose' => ['seniors camrose'],
-
-  'Spring Nationals' => [
-    'spring nat', 
-    'spring national', 
-    'spring nats',
-    'sping national', 
-    'spring nat opens'],
-
-  'Youth Open Bridge Paris' => ['youth paris open bridge'],
-
 );
 
 my @SINGLE_WORDS = qw(
@@ -227,10 +161,6 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  'Gianarrigo Rona Trophy' => ['rona'],
-  'Grand National Open Teams' => ['gnot'],
-  'NTU Cup' => ['ntucup'],
-  'Transnational Open Teams' => ['tnt', 'tnot'],
 );
 
 sub set_hashes

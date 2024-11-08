@@ -1358,10 +1358,20 @@ my %TOURNAMENTS_AUSTRALIA =
         CITY => 'Banora Point',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2006,
-            DATE_START => '2006-11-17',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-11-19',
+            DATE_END => '2006-11-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2006-11-20',
             DATE_END => '2006-11-20'
           } 
         }
@@ -1372,10 +1382,20 @@ my %TOURNAMENTS_AUSTRALIA =
         CITY => 'Banora Point',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2007,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2007-11-30',
+            DATE_END => '2007-11-30'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-12-01',
             DATE_END => '2007-12-01'
           } 
         }
@@ -1410,10 +1430,28 @@ my %TOURNAMENTS_AUSTRALIA =
         CITY => 'Banora Point',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
+            STAGE => 'Rof6',
+            major => 'ROUND',
             DATE_START => '2009-11-27',
+            DATE_END => '2009-11-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'ROUND',
+            DATE_START => '2009-11-28',
+            DATE_END => '2009-11-29'
+          },
+          'C2' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2009-11-30',
             DATE_END => '2009-11-30'
           } 
         }

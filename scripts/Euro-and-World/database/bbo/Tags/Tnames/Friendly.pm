@@ -63,6 +63,9 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'Scotland Exhibition' => [
+    'm lawrence exhibiton',
+    'mike lawrence exhibition'],
 );
 
 my %SINGLE_TYPOS =

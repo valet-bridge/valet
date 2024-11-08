@@ -210,6 +210,7 @@ my %MULTI_TYPOS =
 
 my %SINGLE_TYPOS =
 (
+  'Australian Grand National Open Teams' => ['gnot'],
   'Australian Autumn National Open Teams' => ['anot'],
   'Australian National Open Teams' => ['not'],
   'Australian National Senior Teams' => ['nst'],

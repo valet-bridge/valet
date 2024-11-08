@@ -3024,25 +3024,25 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2004,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2007-07-26',
-            DATE_END => '2007-07-26'
+            major => 'QUARTER',
+            DATE_START => '2004-11-26',
+            DATE_END => '2004-11-26'
           },
           'C1' => 
           {
             YEAR => 2004,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2007-07-27',
-            DATE_END => '2007-07-27'
+            major => 'QUARTER',
+            DATE_START => '2004-11-27',
+            DATE_END => '2004-11-27'
           },
           'C2' => 
           {
             YEAR => 2004,
             STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2007-07-28',
-            DATE_END => '2007-07-28'
+            major => 'QUARTER',
+            DATE_START => '2004-11-28',
+            DATE_END => '2004-11-28'
           } 
         }
       },

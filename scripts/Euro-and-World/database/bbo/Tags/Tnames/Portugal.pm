@@ -41,7 +41,11 @@ my %MULTI_TYPOS =
     'madeira teams',
     'swiss teams madeira'],
   'Portuguese Grand Prix' => [
+    'estoril internacional teams',
+    'estoril international teams',
     'estoril open teams',
+    'estoril swiss teams',
+    'estoril teams',
     'portugal grand peix',
     'portugal grand prix',
     'portuguese grad prix'],

@@ -108,6 +108,7 @@ my %MULTI_TYPOS =
     'schapirosfs'],
   'Teltscher Trophy' => [
     'senior camrose',
+    'seniors camrose',
     'teltcher trophy'],
   'TGR Auction Pairs' => [
     'tgr auction',
