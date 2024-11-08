@@ -22,6 +22,7 @@ use Tags::Tnames::Chile;
 use Tags::Tnames::China;
 use Tags::Tnames::Denmark;
 use Tags::Tnames::Finland;
+use Tags::Tnames::France;
 use Tags::Tnames::Germany;
 use Tags::Tnames::Hungary;
 use Tags::Tnames::India;
@@ -200,23 +201,6 @@ my @MULTI_WORDS =
 
   # FAROE ISLANDS
   'Faroese Open Teams',
-
-  # FRANCE
-  'Biarritz Hiver',
-  'Deauville Open Pairs',
-  'Deauville Open Teams',
-  'Deauville Patton Teams',
-  'French Cup',
-  'French First Division',
-  'French Intercircle',
-  'French Junior Trials',
-  'French Mixed Teams',
-  'French Open Teams',
-  'French Open Trials',
-  'French Senior Trials',
-  'French U28 Trials',
-  'French Women Trials',
-  'Shield of Thoisy',
 
   # GREECE
   'Greek Central Regional Pairs',
@@ -681,74 +665,6 @@ my %MULTI_TYPOS =
 
   'forumbridge.pl Top Individual' => ['forumbridge_pl top individual'],
   'forumbridge.pl Top Pairs' => ['forumbridge_pl top pairs'],
-
-  # FRANCE
-  'French Cup' => ['coupe de france', 'de la coupe de france'],
-  'French First Division' => [
-    'div_nat',
-    'div_ nat_', 
-    'division natinale', 
-    'division natonale', 
-    'division ntionale',
-    'divison nationale', 
-    'dno_4 d1',
-    'dn0_4 division 1',
-    'dn0_4 d1',
-    'dno0_4 d1',
-    'dn1',
-    'divisionnationale 1', 
-    'division natinale open _ 4 d1',
-    'division nationale', 
-    'division nationale 1',
-    'division nationale1_4',
-    'division nationale1 _4',
-    'division nationale open 1_ 4',
-    'division nationale open 1 _4',
-    'division nationale open 1 _ 4',
-    'division nationale open_4 d1',
-    'division nationale open_ 4 d1',
-    'division nationale open _4 d1',
-    'division nationale open _ 4 d1',
-    'division nationale 1 open_4 d1', 
-    'finale nationale interclubs division1',
-    'france div_ nat_ 1', 
-    'french dn1', 
-    'interclub d1',
-    'interclub finale d1',
-    'interclubs d1', 
-    'interclubs division1', 
-    'interclubs finale nationale division1',
-    'nationale interclubs division 1', 
-    'nationale division 1', 
-    'nationale interclub d1'],
-  'French Intercircle' => ['finale intercercle'],
-  'French Junior Trials' => ['french junior trial',
-    'french juniors trials', 'french juniors trial',
-    'sélection junior france',
-    'selection junior france'],
-  'French Open Teams' => ['french teams championship'],
-  'French Open Trials' => [
-    'french opentrial', 
-    'french open team trial',
-    'french open trial', 
-    'french teams trial',
-    'french teams trials',
-    'french opentrial',
-    'selection francaise pau 2008',
-    'selection francaise - pau',
-    'selection francaise pour pau 2008',
-    'selection pekin', 
-    'séléction pékin',
-    'sélection pau', 
-    'selection pau 2008'],
-  'French Senior Trials' => ['french seniors trials',
-    'french senior trials', 'french seniors selection',
-    'french senior trial', 'french seniors trial',
-    'selection senior france',
-    'selection senior pekin',
-    'selection senior pau', 'sélection senior pau'],
-  'French U28 Trials' => ['selection junior pekin', 'selection u28 pekin'],
-  'French Women Trials' => ['entrainement venice cup'],
 
   ### GGG
 
@@ -1269,7 +1185,6 @@ my %SINGLE_TYPOS =
   'Collegiate Bowl' => ['collegiate', 'collegiates'],
   'Copenhagen Invitational Pairs' => ['cbi'],
   'Danish Championship' => ['dm'],
-  'French First Division' => ['dn'],
   'Dutch Meesterklasse' => ['meesterklasse'],
   'European Bridge Teams Championship' => ['ebtc'],
   "European Champions' Cup" => ['ecc'],
@@ -1334,6 +1249,7 @@ sub set_hashes
   Tags::Tnames::China::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Denmark::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Finland::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::France::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Germany::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Hungary::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::India::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
