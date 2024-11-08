@@ -210,6 +210,14 @@ my %MULTI_TYPOS =
 
 my %SINGLE_TYPOS =
 (
+  'Australian Autumn National Open Teams' => ['anot'],
+  'Australian National Open Teams' => ['not'],
+  'Australian National Senior Teams' => ['nst'],
+  'Australian National Women Teams' => ['nwt'],
+  'Australian Spring Open Teams' => ['snot'],
+  'Bobby Evans Seniors Teams' => ['best'],
+  "Linda Stern Women's Teams" => ['lswt'],
+  'Victorian Pennant' => ['pennant'],
 );
 
 sub set_hash

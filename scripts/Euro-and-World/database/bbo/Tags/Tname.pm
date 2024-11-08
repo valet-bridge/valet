@@ -23,6 +23,8 @@ use Tags::Tnames::Canada;
 use Tags::Tnames::Chile;
 use Tags::Tnames::China;
 use Tags::Tnames::Denmark;
+use Tags::Tnames::EuroAdult;
+use Tags::Tnames::EuroYouth;
 use Tags::Tnames::Finland;
 use Tags::Tnames::France;
 use Tags::Tnames::Germany;
@@ -148,44 +150,6 @@ my @MULTI_WORDS =
   # EGYPT
   'Egyptian Cup',
   'Egyptian League',
-
-  # EUROPE
-  "European Open Champions' Cup",
-  'European National Mixed Teams',
-  'European National Open Teams',
-  'European National Seniors Pairs',
-  'European National Seniors Teams',
-  'European National Women Pairs',
-  'European National Women Teams',
-  'European Small Federation Games',
-  'European Transnational Mixed Pairs',
-  'European Transnational Mixed Teams',
-  'European Transnational Open Pairs',
-  'European Transnational Open Teams',
-  'European Transnational Seniors Teams',
-  'European Winter BAM Trophy',
-  'European Winter Teams',
-  'European Winter Transnational Teams',
-  "European Women Open Champions' Cup",
-  'Generali European Open Teams',
-  'Generali European Women Pairs',
-  'Generali European Women Teams',
-
-  # EURO-YOUTH
-  'European U16 Open Pairs',
-  'European U16 Open Teams',
-  'European U21 Open Pairs',
-  'European U21 Open Teams',
-  'European U26 Mixed Pairs',
-  'European U26 Open IMP Pairs',
-  'European U26 Open Pairs',
-  'European U26 Open Teams',
-  'European U26 Women Pairs',
-  'European U26 Women Teams',
-  'European U31 Open Pairs',
-  "European U31 President's Cup",
-  'European University Bridge Championship',
-  'European University Team Championship',
 
   # FAROE ISLANDS
   'Faroese Open Teams',
@@ -390,87 +354,6 @@ my %MULTI_TYPOS =
     'estoril internacional teams',
     'estoril swiss teams',
     'estoril teams'],
-
-  # EUROPE -- mapped in detail
-  "European Champions' Cup" => ['european champs cup'],
-  'European National Mixed Teams' => [
-    'euro mixed teams',
-    'european mixed teams'],
-  'European National Open Teams' => [
-    'eur champ pau open'],
-  'European National Women Teams' => [
-    'eur champ pau woman',
-    'eur champ pau women',
-    'eur women champ'],
-  'European National Seniors Teams' => [
-    'eur champ pau senior',
-    'eur champ pau seniors'],
-  'European Small Federation Games' => [
-    'ebl small federation trophy',
-    'ebl small federations trophy', 
-    'games of small federations',
-    'european small federations games', 
-    'small federation games',
-    'small federations games', 
-    'small ffederations games',
-    'small federation cup', 
-    'european small feds games',
-    'small f federations games', 
-    'europian small federation games'],
-  'European Transnational Mixed Teams' => [
-    'euro open mixed teams'],
-  'European Winter Teams' => [
-    'zimmermann cup'],
-  'Generali European Open Teams' => [
-    'generali euro team champs',
-    'generali european team championships'],
-
-  ### EURO-YOUTH: Mapped in detail
-  'European U16 Open Teams' => [
-    'ebl schools'],
-  'European U21 Open Teams' => [
-    'euro yongster championships',
-    'euro youngster championship',
-    'euro youngster championships',
-    'euro youngsters championship',
-    'euro youngsters championships',
-    'european youngster bridge championship'],
-  'European U26 Mixed Pairs' => [
-    'em pairs junior mix',
-    'european mixed pairs pairs',
-    'eyjc mixed pairs',
-    'junior em mix'],
-  'European U26 Open Pairs' => [
-    'european youth bridge pairs championship',
-    'european youth pairs'],
-  'European U26 Open Teams' => [
-    'ebl juniors',
-    'euro juniors championship',
-    'euro juniors championships',
-    'european junior teams',
-    'european junior teams championship',
-    'european junior teams championships',
-    'euroepan junior teams championships',
-    'european juniors championship',
-    'european juniors championships',
-    'european youth teams u26',
-    'european youth bridge team champ', 
-    'european youth teams'],
-  'European U26 Women Teams' => [
-    'european girls championships',
-    'european girls teams',
-    'euro girls championships'],
-  'European University Bridge Championship' => [
-    'european university championship',
-    'european universities bridge championship',
-    'european univeristies bridge championship',
-    'european universities championship',
-    'european unibridge championship',
-    'european uni bridge championship',
-    'european uni championship'],
-  'European University Team Championship' => [
-    'european universities bridge trophy',
-    'eusa games'],
 
   ### FFF
 
@@ -759,27 +642,11 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   'Argentinian Club Teams' => ['cnia'],
-  'Australian Autumn National Open Teams' => ['anot'],
-  'Australian National Open Teams' => ['not'],
-  'Australian National Senior Teams' => ['nst'],
-  'Australian National Women Teams' => ['nwt'],
-  'Australian Spring Open Teams' => ['snot'],
-  'Bobby Evans Seniors Teams' => ['best'],
   'Brazilian Open Teams' => ['brasilchamp'],
   'Collegiate Bowl' => ['collegiate', 'collegiates'],
-  'Copenhagen Invitational Pairs' => ['cbi'],
-  'Danish Championship' => ['dm'],
-  'European Bridge Teams Championship' => ['ebtc'],
-  "European Champions' Cup" => ['ecc'],
-  'European Small Federation Games' => ['esfg', 'sfc'],
-  'European University Bridge Championship' => ['eubc', 'eucb', 'euc'],
-  'European Youth Bridge Championship' => ['eybc'],
-  'European Youth Bridge Pairs Championship' => ['eybpc', 'eypc'],
-  'European Youth Bridge Teams Championship' => ['eytc', 'jem'],
   'Gianarrigo Rona Trophy' => ['rona'],
   'Grand National Open Teams' => ['gnot'],
   'Grand National Teams' => ['gnt'],
-  "Linda Stern Women's Teams" => ['lswt'],
   'NTU Cup' => ['ntucup'],
   'Portuguese Open Teams' => ['cneo'],
   'Reisinger BAM Teams' => [
@@ -803,9 +670,7 @@ my %SINGLE_TYPOS =
     'vanderebilt', 
     'vandebilt', 
     'vandy'],
-  'Victorian Pennant' => ['pennant'],
   'Wagar Teams' => ['wagar'],
-  'European Winter Teams' => ['zc']
 );
 
 sub set_hashes
@@ -827,6 +692,8 @@ sub set_hashes
   Tags::Tnames::Chile::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::China::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Denmark::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::EuroAdult::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::EuroYouth::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Finland::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::France::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Germany::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);

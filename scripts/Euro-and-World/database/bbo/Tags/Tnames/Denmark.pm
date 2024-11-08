@@ -103,6 +103,8 @@ my %MULTI_TYPOS =
 
 my %SINGLE_TYPOS =
 (
+  'Copenhagen Invitational Pairs' => ['cbi'],
+  'Danish Championship' => ['dm'],
 );
 
 sub set_hash
