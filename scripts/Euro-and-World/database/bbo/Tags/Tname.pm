@@ -30,6 +30,7 @@ use Tags::Tnames::Poland;
 use Tags::Tnames::Portugal;
 use Tags::Tnames::Taipei;
 use Tags::Tnames::UK;
+use Tags::Tnames::World;
 
 my @MULTI_WORDS =
 (
@@ -531,57 +532,6 @@ my @MULTI_WORDS =
   'Venezuelan Mixed Teams',
   'Venezuelan Swiss Pairs',
 
-  # WORLD
-  'APBF Women Elite Tournament',
-  'Bermuda Bowl',
-  'Damiani Trophy',
-  "d'Orsi",
-  'Huayuan Cup',
-  'IMSA Elite Open Individual',
-  'IMSA Elite Open Pairs',
-  'IMSA Elite Open Teams',
-  'IMSA Elite Women Individual',
-  'IMSA Elite Women Pairs',
-  'IMSA Elite Women Teams',
-  'IOC Grand Prix',
-  'McConnell Cup',
-  'Oly-Star Cup',
-  'Rona Cup',
-  'Rosenblum Cup',
-  'Tianjin Binhai Cup',
-  'Venice Cup',
-  'World Kids Teams',
-  'World Masters Individual',
-  'World Mixed Pairs',
-  'World Mixed Teams',
-  'World Open Girl Pairs',
-  'World Open Girl Teams',
-  'World Open Junior IMP Pairs',
-  'World Open Junior Pairs',
-  'World Open Junior Teams',
-  'World Open Pairs',
-  'World Open Youngster Pairs',
-  'World Open Youngster Teams',
-  'World Open Youth BAM Teams',
-  'World Top Tournament',
-  'World Transnational Mixed Teams',
-  'World Transnational Open Teams',
-  'World University Teams',
-  'World Youngster Teams',
-  'WMG Men Individual',
-  'WMG Men Pairs',
-  'WMG Men Teams',
-  'WMG Open Individual',
-  'WMG Open Pairs',
-  'WMG Open Teams',
-  'WMG Senior Teams',
-  'WMG U21 Teams',
-  'WMG U26 Teams',
-  'WMG U28 Teams',
-  'WMG Women Individual',
-  'WMG Women Pairs',
-  'WMG Women Teams',
-
   # ----------------------------------------------------
 
 );
@@ -596,7 +546,6 @@ my %MULTI_TYPOS =
     'eastern anatolýa qualýfýcatýon',
     'turkish interclubs champ_ anatolia elections'],
   'Anatolian Fall Teams' => ['anatolian side fall teams'],
-  # 'Anatolian Open Teams' => ['anatolian side bridge clubs open teams'],
   'Anatolian Spring Teams' => ['anatolia spring teams'],
   'Ankara Summer Teams' => ['ankara summer team championship'],
   'ArboNed Team Cup' => ['arbo ned team cup', 'arbo ned teams cup'],
@@ -625,7 +574,6 @@ my %MULTI_TYPOS =
     'belarusian team championship'],
 
   # BELGIUM
-  'Bermuda Bowl' => ['bermuda bow', 'bemruda bowl'],
   'BKBT Teams' => ['bkbt match'],
 
   # BOLIVIA
@@ -732,12 +680,6 @@ my %MULTI_TYPOS =
     'computer bridge', 'computer world bridge championships'],
 
   ### DDD
-
-  'Damiani Trophy' => [
-    'damiani cup',
-    'world junior teams'],
-  "d'Orsi" => ["d'orsi senior bowl",
-    'seniors bowl', 'senior bowl'],
 
   'Dutch Knock-Out Cup' => ['knock-out team cup netherlands',
     'knock out team cup netherlands'],
@@ -1232,7 +1174,6 @@ my %MULTI_TYPOS =
 
   'Maccabi Games' => ['maccabi-games', 'europ_ maccabi games'],
   'Madrid Senior Teams' => ['equipos senior madrid'],
-  'McConnell Cup' => ['mc connell'],
   "Missouri Braggin' Rights" => ['bragging rights'],
   'Murat Kilercioglu Turkish Spring Teams' => [
     'Murat Kilercioglu Spring Teams'],
@@ -1600,9 +1541,6 @@ my %MULTI_TYPOS =
     'trakya kulupler ligi',
     'turkish club teams championship aegean playoffs',
     'türk trakya bölge kulüpler þampýyonasi ekýbý'], 
-  'Tianjin Binhai Cup' => [
-    'tianjin bin hai cup',
-    'tianjin binhai cup world men elite tournament'],
   'Top Circuit' => ['melchemie top circuit',
     'ing bank top circuit', 'witte huis topcircuit'],
 
@@ -1736,7 +1674,6 @@ my %MULTI_TYPOS =
     'vanderbilt ko teams'],
   'Venezuelan Swiss Pairs' => ['venezuela parejas suizas',
     'venezuela swiss pairs'],
-  'Venice Cup' => ['<venive <cup'],
 
   ### WWW
 
@@ -1762,30 +1699,6 @@ my %MULTI_TYPOS =
     'white house int_ teams top 16',
     'white house international top 16 teams'],
 
-  # WORLD
-  'Huayuan Cup' => [
-    'hua yuan cup'],
-  'Oly-Star Cup' => [
-    "oly-star cup women's bridge elite tournament",
-    "oly-star cup women's bridge grand prix"],
-  'IMSA Elite Women Teams' => [
-    'women elite tournament',
-    "women's bridge elite tournament",
-    "women's elite tournament",
-    "women's bridge grand prix"],
-  'World Juniors Championship' => ['world juniors championships'],
-  'World Masters Individual' => ['masters individual',
-    'world masters'],
-  'World Open Pairs' => ['world pairs championship'],
-  'World Seniors Championships' => ['world senior championship'],
-  'World Transnational Open Teams' => [
-    'world transnational teams'],
-  'World University Teams' => [
-    'world university bridge championship',
-    'world university bridge championships',
-    'world university championship',
-    'univ_ world champs'],
-
   'Yeh Bros Cup' => ['yehbros cup', 'yer bros cup'],
   'Youth Open Bridge Paris' => ['youth paris open bridge'],
 
@@ -1805,7 +1718,6 @@ my %SINGLE_TYPOS =
   'Australian National Senior Teams' => ['nst'],
   'Australian National Women Teams' => ['nwt'],
   'Australian Spring Open Teams' => ['snot'],
-  'Bermuda Bowl' => ['bb'],
   'Bobby Evans Seniors Teams' => ['best'],
   'Brazilian Open Teams' => ['brasilchamp'],
   'Canadian National Teams Championship' => ['cntc'],
@@ -1817,7 +1729,6 @@ my %SINGLE_TYPOS =
   'Copenhagen Invitational Pairs' => ['cbi'],
   'Danish Championship' => ['dm'],
   'French First Division' => ['dn'],
-  "d'Orsi" => ['sb', 'dosb'],
   'Dutch Meesterklasse' => ['meesterklasse'],
   'European Bridge Teams Championship' => ['ebtc'],
   "European Champions' Cup" => ['ecc'],
@@ -1836,7 +1747,6 @@ my %SINGLE_TYPOS =
   "Kepri Governor's Cup" => ['kepricup'],
   "Linda Stern Women's Teams" => ['lswt'],
   'Maccabi Games' => ['maccabiah'],
-  'McConnell Cup' => ['mcconnell'],
   'NTU Cup' => ['ntucup'],
   'Paris Youth Open Teams' => ['ypob'],
   'Portuguese Open Teams' => ['cneo'],
@@ -1844,7 +1754,6 @@ my %SINGLE_TYPOS =
     'reisiger', 
     'reisinger', 
     'resisinger'],
-  'Rosenblum Cup' => ['rosenblum'],
   'Spingold Teams' => ['spingold'],
   'Swedish Elite Series' => ['elitserien'],
   'Prince Takamatsu Cup' => ['takamatsu'],
@@ -1864,14 +1773,10 @@ my %SINGLE_TYPOS =
     'vanderebilt', 
     'vandebilt', 
     'vandy'],
-  'Venice Cup' => ['vc', 'venice'],
   'Victorian Pennant' => ['pennant'],
   'Vilnius Club Pairs' => ['vbk'],
   'Wagar Teams' => ['wagar'],
   'White House Juniors' => ['whj'],
-  'World Transnational Mixed Teams' => ['wtmt'],
-  'World Transnational Open Teams' => ['wtot'],
-  'World University Championship' => ['wuc'],
   'European Winter Teams' => ['zc']
 );
 
@@ -1902,6 +1807,7 @@ sub set_hashes
     \%SINGLE_TYPOS);
   Tags::Tnames::Taipei::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::UK::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::World::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
 
   $method->(\@MULTI_WORDS, \%MULTI_TYPOS,
     \@SINGLE_WORDS, \%SINGLE_TYPOS, $key);
