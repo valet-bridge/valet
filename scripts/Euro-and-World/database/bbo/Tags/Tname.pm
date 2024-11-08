@@ -16,6 +16,7 @@ use Tags::Tnames::Argentina;
 use Tags::Tnames::Asia;
 use Tags::Tnames::Australia;
 use Tags::Tnames::Balkan;
+use Tags::Tnames::Baltic;
 use Tags::Tnames::Belgium;
 use Tags::Tnames::Bulgaria;
 use Tags::Tnames::Chile;
@@ -100,24 +101,6 @@ my @MULTI_WORDS =
 
   # AUSTRIA
   'Austrian Open Teams',
-
-  # BALTIC (Estonia, Latvia, Lithuania)
-  'Baltic Open Teams',
-  'Estonian First League',
-  'Estonian Open Pair Trials',
-  'Estonian Open Teams',
-  'Estonian-Latvian Open Team Trials',
-  'Fortuna Cup',
-  'Latvia Invites',
-  'Lithuanian Open Teams',
-  'Riga Invitational Pairs',
-  'Riga Open Teams',
-  'Towns Cup',
-  'Vilnius BAM Pairs',
-  'Vilnius Club Pairs',
-  'Vilnius IMP Pairs',
-  'Vilnius Open Pairs',
-  'Vilnius Open Teams',
 
   # BELARUS
   'Belarusian Open Teams',
@@ -417,9 +400,6 @@ my %MULTI_TYPOS =
 
   ### BBB
 
-  'Baltic Open Teams' => [
-    'baltic open teams cup',
-    'baltic teams cup'],
   'Belarusian Open Teams' => ['belarus teams',
     'belarus cup', 'belarus national teams',
     'belarus team championship', 'belarus teams cup',
@@ -551,23 +531,6 @@ my %MULTI_TYPOS =
     'egy_cup'],
   'Egyptian League' => ['egy_league', 'egy-league',
     'egyptian premier league'],
-
-  # ESTONIA
-  'Estonian First League' => ['estonian a- league',
-    'estonia a- league'],
-  'Estonian Open Teams' => ['estonian team championship',
-    'estonian team championships', 'estonian open teams',
-    'estonia teams championships', 'est teams champs',
-    'estonian teams championships'],
-  'Estonian Open Pair Trials' => [
-    'estonian open trials',
-    'estonian team trials'],
-  'Estonian-Latvian Open Team Trials' => [
-    'estonian-latvian national team trials',
-    'estonian-latvian open trials',
-    'estonian latvian team trial',
-    'estonian latvian team trials',
-    'estonian-latvian team trials'],
 
   'Estoril Open Teams' => [
     'estoril international teams', 
@@ -793,7 +756,6 @@ my %MULTI_TYPOS =
     'lebanese invitational team',
     'lebanon invitational team',
     'lebanon invitational teams'],
-  'Lithuanian Open Teams' => ['lithuanian teams championship'],
 
   ### MMM
 
@@ -1225,7 +1187,6 @@ my %SINGLE_TYPOS =
     'vandebilt', 
     'vandy'],
   'Victorian Pennant' => ['pennant'],
-  'Vilnius Club Pairs' => ['vbk'],
   'Wagar Teams' => ['wagar'],
   'White House Juniors' => ['whj'],
   'European Winter Teams' => ['zc']
@@ -1242,6 +1203,7 @@ sub set_hashes
   Tags::Tnames::Australia::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS,
     \%SINGLE_TYPOS);
   Tags::Tnames::Balkan::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::Baltic::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Belgium::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Bulgaria::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, 
     \%SINGLE_TYPOS);
