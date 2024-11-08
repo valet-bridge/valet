@@ -6,7 +6,7 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package Tags::Tnames::Balkan;
+package Tags::Tnames::USA;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hash);
@@ -14,16 +14,121 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
-  'Balkan Intercity Cup',
-  'Balkan Open Teams',
+  '0 to 1500 Spingold',
+  'Collegiate Bowl',
+  'Grand National Teams',
+  "Missouri Braggin' Rights",
+  'Philadelphia Solomon Teams',
+  'Reisinger BAM Teams',
+  'Spingold Teams',
+  "Sternberg Women's BAM Teams",
+  'US Girls Trials',
+  'US Juniors Training',
+  'US Junior Trials',
+  'US Open Trials',
+  'US Senior Teams',
+  'US Senior Trials',
+  'US University Trials',
+  'US Women Teams',
+  'US Women Trials',
+  'US Youngster Trials',
+  'USBF Charity Match',
+  'Vanderbilt Teams',
+  'Wagar Teams',
 );
 
 my %MULTI_TYPOS =
 (
+
+  'Collegiate Bowl' => [
+    'collegiate championship',
+    'collegiate championships', 
+    'collegiate champs'],
+  'Grand National Teams' => ['gnt championship'],
+  "Missouri Braggin' Rights" => ['bragging rights'],
+  'Philadelphia Solomon Teams' => [
+    'solomon teams'],
+  'Spingold Teams' => [
+    'spingold knockout',
+    'spingold knockout teams'],
+  "Sternberg Women's BAM Teams" => ['marsha may sternberg bam'],
+  'US Girls Trials' => [
+    'junior usbc rona',
+    'jusbc rona'],
+  'US Junior Trials' => [
+    'us junior teams',
+    'usbf junior trials'],
+  'US Open Trials' => [
+    'us itt',
+    'us itt trials',
+    'usa international team trials',
+    'usa itt',
+    'usa team trial'],
+  'US Senior Teams' => [
+    'baze senior knock-out',
+    'baze senior ko',
+    'baze sr_ ko',
+    'baze sr_ ko',
+    'baze sr ko',
+    'nabc senior ko',
+    'nabc senior knock-out teams',
+    'united states seniors bridge championship',
+    'us senior',
+    'us seniors'],
+  'US Senior Trials' => [
+    'usa seniors team trials',
+    'usa seniors trials',
+    'usbf senior team trials',
+    'usbf senior trials',
+    'usbf seniors trials'],
+  'US Women' => ['us womens championships'],
+  'US Women Teams' => [
+    'united states women bridge championship',
+    "us women's bridge championship",
+    "us women's bridge championhip",
+    "united states women's bridge championship"],
+  'US Youngsters' => ['u-21 us'],
+  'US Youngster Trials' => [
+    'jusbc u21',
+    'us u-21 trials',
+    'u-21 us trials'],
+  'USBF Charity Match' => ['usbf jr/pro charity challenge match'],
+  'Vanderbilt Teams' => [
+    'vanderbilt teams',
+    'vanderbilt ko teams'],
+  'Wagar Teams' => [
+    'wagar teams',
+    "wagar women's",
+    "wagar women's ko",
+    'wagar womens ko'],
 );
 
 my %SINGLE_TYPOS =
 (
+  'Collegiate Bowl' => [
+    'collegiate', 
+    'collegiates'],
+  'Grand National Teams' => ['gnt'],
+  'Reisinger BAM Teams' => [
+    'reisiger',
+    'reisinger',
+    'resisinger'],
+  'Spingold Teams' => ['spingold'],
+  'US Junior Trials' => ['usjbc', 'jusbc'],
+  'US Juniors Training' => ['jtp'],
+  'US Senior Teams' => ['ussbc'],
+  'US Women Teams' => [
+    'uswbc',
+    'uswbf',
+    'uswc',
+    'us womens championships'],
+  'Vanderbilt Teams' => [
+    'vanderbilt',
+    'vanderbuilt',
+    'vanderebilt',
+    'vandebilt',
+    'vandy'],
+  'Wagar Teams' => ['wagar'],
 );
 
 sub set_hash

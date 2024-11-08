@@ -3,6 +3,8 @@ cook.pl:
 - Split Tname
 - Split Meet
 
+Philadelphia Solomon Teams is an odd Tname
+
 digest.pl: 
 - Look for missing TNAME or indeed missing completely
 - Speed up, esp. compatibility()?
