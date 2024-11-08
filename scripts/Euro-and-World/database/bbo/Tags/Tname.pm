@@ -35,6 +35,8 @@ use Tags::Tnames::Norway;
 use Tags::Tnames::Poland;
 use Tags::Tnames::Portugal;
 use Tags::Tnames::Russia;
+use Tags::Tnames::Spain;
+use Tags::Tnames::Supra;
 use Tags::Tnames::Sweden;
 use Tags::Tnames::Taipei;
 use Tags::Tnames::Turkey;
@@ -288,34 +290,6 @@ my @MULTI_WORDS =
   'South American Women Teams',
   'South American Women Trials',
 
-  # SPAIN
-  'Las Palmas Simultaneous Pairs',
-  'Las Palmas Women Pairs',
-  'Madrid Senior Teams',
-  'Open Catalunya Preferent Pairs',
-  'Open Catalunya Preferent Teams',
-  'Spanish Central Zone Teams',
-  'Spanish Mixed Teams',
-  'Spanish Open Teams',
-  'Spanish Open Trials',
-  'Spanish Senior Trials',
-
-  # SUPRA
-  'Buffett Cup Individual',
-  'Cavendish Open Pairs',
-  'Cavendish Women Pairs',
-  'Cavendish Teams',
-  'Channel Girls Trophy',
-  'Channel Juniors Trophy',
-  'Channel Schools Trophy',
-  'Computer World Championship',
-  'Neighbor Challenge IMP Pairs',
-  'Neighbor Challenge Open Teams',
-  'Neighbor Challenge Women Teams',
-  'NYSA Euroregion Nations Cup',
-  'Stern-Cornell Trophy',
-  'Paris Youth Open Teams',
-
   # SWITZERLAND
   'Jean Besse Cup',
   'Swiss Club Championship',
@@ -428,20 +402,6 @@ my %MULTI_TYPOS =
     'cbf womens final',
     'cbf womens finals'],
 
-  'Cavendish Open Pairs' => [
-    'cavemdish pairs',
-    'cavendish monaco pairs',
-    'cavendish pair',
-    'cavendish pairs',
-    'cavendiish pairs',
-    'cavendiosh pairs',
-    'cavendsh pairs'],
-  'Cavendish Women Pairs' => [
-    'cavendish monaco pairs women'],
-  'Cavendish Teams' => [
-    'avendish teams',
-    'cavendish tms', 
-    'cavendish team'],
   'Central American & Caribbean Open Teams' => [
     'cac final',
     "cacbf zonal c'ships", 
@@ -460,8 +420,6 @@ my %MULTI_TYPOS =
     'champion cup', 
     "champion'scup", 
     "champions'cup"],
-  'Channel Girls Trophy' => ['channel trophy girls'],
-  'Channel Schools Trophy' => ['channel trophy schools'],
 
   # CZECH
   'Czech Championship' => ['czech bridge championship',
@@ -475,8 +433,6 @@ my %MULTI_TYPOS =
 
   'Collegiate Bowl' => ['collegiate championship',
     'collegiate championships', 'collegiate champs'],
-  'Computer World Championship' => ['computer bridge championship',
-    'computer bridge', 'computer world bridge championships'],
 
   ### DDD
 
@@ -697,7 +653,6 @@ my %MULTI_TYPOS =
 
   ### LLL
 
-  'Las Palmas Simultaneous Pairs' => ['simultaneo de mayo las palmas'],
   'Lebanese Invitational Teams' => [
     'lebanese invitational team',
     'lebanon invitational team',
@@ -705,7 +660,6 @@ my %MULTI_TYPOS =
 
   ### MMM
 
-  'Madrid Senior Teams' => ['equipos senior madrid'],
   "Missouri Braggin' Rights" => ['bragging rights'],
 
   ###  NNN
@@ -743,18 +697,8 @@ my %MULTI_TYPOS =
     'nordic women championship',
     'nordics (women)'],
 
-  'NYSA Euroregion Nations Cup' => ['cup of euroregion nysa'],
-
   ### OOO
 
-  'Open Catalunya Preferent Pairs' => [
-    'open cataluña preferent', 
-    'open catalunya preferent', 
-    'open preferent'], 
-  'Open Catalunya Preferent Teams' => [
-    'open catalunya equips',
-    'open equips preferent',
-    'open preferent equips'],
  'Opening Tournament' => ['opening tournement'],
 
   ### PPP
@@ -777,7 +721,6 @@ my %MULTI_TYPOS =
     'pan arab inter-club', 
     'pan arab inter club', 
     'pan arab interclub'],
-  'Paris Youth Open Teams' => ['youth open bridge paris'],
   'Patton de Monaco' => ["monaco's patton", 'patton international monaco',
     'patton international monte-carlo',
     'patton international monte carlo', 'patton monte carlo'],
@@ -911,29 +854,6 @@ my %MULTI_TYPOS =
   'South American Senior Trials' => [
     'seleccion sudamericano senior'],
 
-  # SPAIN
-  'Spanish Central Zone Teams' => [
-    'equipos zonal centro',
-    'zonal centro equipos'],
-  'Spanish Mixed Teams' => [
-    'spanish mixed national teams'],
-  'Spanish Open Teams' => [
-    'camp esp',
-    'campeonato de españa por equipos',
-    'campeonato espan', 
-    'campeonato espanaonda', 
-    'spanish national championship',
-    'spanish national teams',
-    'spanish national teams championship',
-    'spanish teams', 
-    'spanish teams championship',
-    "spanish teams ch'ship",
-    'spain teams'],
-  'Spanish Open Trials' => [
-    'open seleccion mundial'],
-  'Spanish Senior Trials' => [
-    'prueba de seleccion equipos senior'],
-
   'Spring Nationals' => [
     'spring nat', 
     'spring national', 
@@ -1058,8 +978,6 @@ my %SINGLE_TYPOS =
   'Canadian National Teams Championship' => ['cntc'],
   'Canadian Seniors Teams Championship' => ['cstc', 'cnst'],
   'Canadian Women Teams Championship' => ['cwtc'],
-  Cavendish => ['cavendiish', 'caavendish', 'cavemdish', 'cavendiosh',
-    'cavendsh', 'cavvendish', 'avendish', 'cav'],
   'Collegiate Bowl' => ['collegiate', 'collegiates'],
   'Copenhagen Invitational Pairs' => ['cbi'],
   'Danish Championship' => ['dm'],
@@ -1077,7 +995,6 @@ my %SINGLE_TYPOS =
   'Icelandair Open' => ['icelandair'],
   "Linda Stern Women's Teams" => ['lswt'],
   'NTU Cup' => ['ntucup'],
-  'Paris Youth Open Teams' => ['ypob'],
   'Portuguese Open Teams' => ['cneo'],
   'Reisinger BAM Teams' => [
     'reisiger', 
@@ -1137,6 +1054,8 @@ sub set_hashes
   Tags::Tnames::Portugal::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS,
     \%SINGLE_TYPOS);
   Tags::Tnames::Russia::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::Spain::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
+  Tags::Tnames::Supra::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Sweden::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Taipei::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
   Tags::Tnames::Turkey::set_hash(\@MULTI_WORDS, \%MULTI_TYPOS, \%SINGLE_TYPOS);
