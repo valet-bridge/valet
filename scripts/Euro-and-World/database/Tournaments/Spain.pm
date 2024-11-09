@@ -16,23 +16,6 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_SPAIN =
 (
-  'Meet name' =>
-  {
-    ORGANIZATION => 'AEB',
-    COUNTRY => 'Spain',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-
-    EDITIONS => 
-    {
-      '2000' =>
-      {
-        YEAR => 2000,
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
-      },
-    }
-  }
 );
 
 my %TOURNAMENTS_SPAIN =

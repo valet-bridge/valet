@@ -26,6 +26,12 @@ my @MULTI_WORDS =
   'Warsaw Grand Prix',
   'Wroclaw Meeting',
   'Zulawski Congress',
+
+  # Unused?
+  'Polish Grand Prix',
+  'Polish Pairs Championship',
+  'Polish Youth Olympiad',
+  'Polish Schools Championship',
 );
 
 my %MULTI_TYPOS =

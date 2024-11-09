@@ -67,6 +67,16 @@ use Tags::Meets::Singapore;
 use Tags::Meets::Slovakia;
 use Tags::Meets::SouthAfrica;
 use Tags::Meets::SouthAmerica;
+use Tags::Meets::Spain;
+use Tags::Meets::Supra;
+use Tags::Meets::Sweden;
+use Tags::Meets::Switzerland;
+use Tags::Meets::Taipei;
+use Tags::Meets::Turkey;
+use Tags::Meets::UK;
+use Tags::Meets::USA;
+use Tags::Meets::Venezuela;
+use Tags::Meets::World;
 
 my %DIVISIONS =
 (
@@ -126,6 +136,16 @@ my %DIVISIONS =
   SLOVAKIA => \&Tags::Meets::Slovakia::set_hash,
   SOUTHAFRICA => \&Tags::Meets::SouthAfrica::set_hash,
   SOUTHAMERICA => \&Tags::Meets::SouthAmerica::set_hash,
+  SPAIN => \&Tags::Meets::Spain::set_hash,
+  SUPRA => \&Tags::Meets::Supra::set_hash,
+  SWEDEN => \&Tags::Meets::Sweden::set_hash,
+  SWITZERLAND => \&Tags::Meets::Switzerland::set_hash,
+  TAIPEI => \&Tags::Meets::Taipei::set_hash,
+  TURKEY => \&Tags::Meets::Turkey::set_hash,
+  UK => \&Tags::Meets::UK::set_hash,
+  USA => \&Tags::Meets::USA::set_hash,
+  VENEZUELA => \&Tags::Meets::Venezuela::set_hash,
+  WORLD => \&Tags::Meets::World::set_hash,
 );
 
 my @MULTI_WORDS =
@@ -137,60 +157,32 @@ my @MULTI_WORDS =
   'Australian Youth Triathlon',
   'Bangkok Bridge Festival',
   'Banten Sports Week',
-  'Bodrum Peninsula Festival',
-  'Brasov Festival',
-  'Buffett Cup',
   'Cappadocia Fairy Chimneys Festival',
-  'Channel Trophy',
   'Crete Bridge Festival',
   'Estoril Bridge Festival',
-
-  'FISU World University Championships',
 
   'Fes Festival',
   'Festival della Matematica',
   'Greek Islands Festival',
 
-  'IMSA Elite Mind Games',
   'International Bridge Festival',
   'Jyvaskala Easter Bridge Festival',
   'Lozenets Bridge Festival',
   'Maharaja Holkar National Championship',
   'Marmara Festival',
   'Mersin Bridge Festival',
-  'Monaco International Festival',
-  'Neighbor Challenge',
-  'North American Bridge Championship',
   'Pärnu Festival',
-  'Polish Grand Prix',
-  'Polish Pairs Championship',
-  'Polish Youth Olympiad',
-  'Polish Schools Championship',
   'Pula Bridge Festival',
   'Sivrioglu Festival',
   'Stara Zagora Bridge Festival',
-  'Swedish Women Trials',
-  'Swedish Bridge Festival',
   'Tallinn Bridge Festival',
   'Thailand National Games',
-  'Turkish Autumn Festival',
-  'Turkish-Greek Friendship Festival',
-  'Turkish Open Trials',
-  'Turkish Women Trials',
   'Umea Bridgefestival',
-  'United States Bridge Championship',
   'Vanke Cup',
   'VVE Beheer Bridge Week',
-  'Wachauer Bridge Festival',
-  'West Java Regional',
   'Winter Bridge Festival',
   'Winter Championships',
-  'World Series',
-  'World Mind Games',
-  'World Team Championships',
   'World Team Olympiad',
-  'World Youth Championships',
-  'World Youth Open Championships',
 );
 
 my %MULTI_TYPOS =
@@ -199,12 +191,6 @@ my %MULTI_TYPOS =
     'azores bridge teams', 'azores team', 'azores teams',
     'azores team festval', 'festival azores bridge', 'azores festiva', 
     'festival azores'],
-  'Bodrum Peninsula Festival' => ['bodrum yarýmada bric festivali'],
-  'Brasov Festival' => ['festival brasov', 'festival bridge brasov',
-    'international bridge festival brasov',
-    'festivalul international de bridge brasov'],
-  'Buffett Cup' => ['buffet cup', 'bufett cup'],
-  'Channel Trophy' => ['channel trpohy'],
   'Crete Bridge Festival' => ['crete b_ festival'],
   'Estoril Bridge Festival' => ['estoril festival'],
 
@@ -229,74 +215,19 @@ my %MULTI_TYPOS =
     'maharaja holkar national tournament',
     'M Yeshwantrao Holkar National Bridge Championship'],
   'Marmara Festival' => ['festival marmara'],
-  'Monaco International Festival' => ['festival international de monaco'],
-  'Neighbor Challenge' => ['neighbour challenge'],
-   'Practice Match' => [
-     'practice match', 
-     'practice matche', 
-     'practice matches',
-     'practice session', 
-     'practise match',
-     'training match',
-     'tes match', 
-     'test match'], 
   'Pula Bridge Festival' => ['international festival pula',
     'pula bridge festiwal'],
   'Stara Zagora Bridge Festival' => ['bridge festival - stara zagora',
     'bridge festival stara zagora', 
     'bridge festival-bulgaria-stara zagora'],
-  'Swedish Women Trials' => [
-    'sweden women euro trials',
-    'swedish women euro trials'],
   'Tallinn Bridge Festival' => ['talinn festival', 'tallin festival',
     'tallinns festival'],
-  'Turkish Autumn Festival' => ['sonbahar bridge festival'],
-  'Turkish-Greek Friendship Festival' => [
-    'greek-turkish friendship festival'],
-  'Turkish Open Trials' => [
-    'turkey open national team selection',
-    'turkey open team trials',
-    'turkish national team selection',
-    'turkish national open team selection',
-    'turkish open national selection',
-    'turkish open national team selection',
-    'turkish open team selection',
-    'turkish open team trials'],
-  'Turkish Women Trials' => [
-    'turkish woman national selection',
-    'turkish woman team trials',
-    'turkish women national selection',
-    'turkish women team selection'],
-  'United States Bridge Championship' => ['us bridge championship',
-    'u_s_b_c', 'united states bridge championships'],
   'VVE Beheer Bridge Week' => ['vve-beheer bridgeweek',
     'vve-beheer bridge week'],
-  'West Java Regional' => ['west java regional sport games',
-    'west java regional games', 'west java regional spots event',
-    'regional west java'],
   'Winter Championships' => ['winter championship',
     'winter championsship'],
-  'World Series' => ['world bridge series'],
-  'World Mind Games' => ['world mind game', 'word mind games', 'wmsg',
-    'mind sports games', 'sawmg', 'wmg', 'wnsg', 'world ming games'],
   'World Team Olympiad' => ['world bridge team olympiad',
     'world bridge olympiad', 'bridge olympiad'],
-  'World Youth Championships' => [
-    'world youth bridge team championship',
-    'world youth championship',
-    'world youth team championships',
-    'world youth teams',
-    'world youth teams championship'],
-  'World Youth Open Championships' => [
-    'wboyc',
-    'wyobc',
-    'world youht congress',
-    'world youth congress',
-    'world youth open bridge championship',
-    'world youth bridge congress',
-    'workd youth bridge congress',
-    'worlf youth bridge congress', 
-    'youth world bridge congress'],
 );
 
 my @SINGLE_WORDS = qw(
@@ -314,12 +245,7 @@ my %SINGLE_TYPOS =
   'European Transnational Championships' => ['eobc', 'eoc'],
   Festival => ['fest', 'festivan', 'festývalý', 'festivalul', 'festiwal'],
   'Gold Coast Congress' => ['gc', 'gcc'],
-  'North American Bridge Championship' => ['nabc'],
-  'United States Bridge Championship' => ['usbc'],
-  'World Series' => ['wbs'],
-  'World Team Championships' => ['wbtc'],
   'World Team Olympiad' => ['olympiad', 'olympiads', 'wbo'],
-  'World Youth Championships' => ['wytc', 'wybtc'],
 );
 
 

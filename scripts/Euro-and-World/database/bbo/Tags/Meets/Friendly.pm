@@ -25,6 +25,15 @@ my %MULTI_TYPOS =
 (
   'Friendly Match' => [
     'match amical', 'friendly tm'],
+  'Practice Match' => [
+    'practice match',
+    'practice matche',
+    'practice matches',
+    'practice session',
+    'practise match',
+    'training match',
+    'tes match',
+    'test match'],
 );
 
 my %SINGLE_TYPOS =
