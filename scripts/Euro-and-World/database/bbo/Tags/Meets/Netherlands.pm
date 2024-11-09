@@ -16,6 +16,7 @@ my @MULTI_WORDS =
 (
   'The Hague Bridge Experience',
   'The Hague Bridge Festival',
+  'VVE Beheer Bridge Week',
 );
 
 my %MULTI_TYPOS =
@@ -23,6 +24,9 @@ my %MULTI_TYPOS =
   'The Hague Bridge Experience' => [
     'teh hague bridge experience',
     'the hague bride experience'],
+  'VVE Beheer Bridge Week' => [
+    'vve-beheer bridgeweek',
+    'vve-beheer bridge week'],
 );
 
 my %SINGLE_TYPOS =

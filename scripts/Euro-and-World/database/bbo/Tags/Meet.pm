@@ -72,6 +72,7 @@ use Tags::Meets::Supra;
 use Tags::Meets::Sweden;
 use Tags::Meets::Switzerland;
 use Tags::Meets::Taipei;
+use Tags::Meets::Thailand;
 use Tags::Meets::Turkey;
 use Tags::Meets::UK;
 use Tags::Meets::USA;
@@ -141,6 +142,7 @@ my %DIVISIONS =
   SWEDEN => \&Tags::Meets::Sweden::set_hash,
   SWITZERLAND => \&Tags::Meets::Switzerland::set_hash,
   TAIPEI => \&Tags::Meets::Taipei::set_hash,
+  THAILAND => \&Tags::Meets::Thailand::set_hash,
   TURKEY => \&Tags::Meets::Turkey::set_hash,
   UK => \&Tags::Meets::UK::set_hash,
   USA => \&Tags::Meets::USA::set_hash,
@@ -150,84 +152,16 @@ my %DIVISIONS =
 
 my @MULTI_WORDS =
 (
-  'Aegean Championships',
-  'Azores Festival',
-  'Amman Bridge Festival',
-  'ASEAN Club Championship',
-  'Australian Youth Triathlon',
-  'Bangkok Bridge Festival',
-  'Banten Sports Week',
-  'Cappadocia Fairy Chimneys Festival',
-  'Crete Bridge Festival',
-  'Estoril Bridge Festival',
-
-  'Fes Festival',
-  'Festival della Matematica',
-  'Greek Islands Festival',
-
   'International Bridge Festival',
-  'Jyvaskala Easter Bridge Festival',
-  'Lozenets Bridge Festival',
-  'Maharaja Holkar National Championship',
-  'Marmara Festival',
-  'Mersin Bridge Festival',
-  'Pärnu Festival',
-  'Pula Bridge Festival',
-  'Sivrioglu Festival',
-  'Stara Zagora Bridge Festival',
-  'Tallinn Bridge Festival',
-  'Thailand National Games',
-  'Umea Bridgefestival',
-  'Vanke Cup',
-  'VVE Beheer Bridge Week',
   'Winter Bridge Festival',
   'Winter Championships',
-  'World Team Olympiad',
 );
 
 my %MULTI_TYPOS =
 (
-  'Azores Festival' => ['azores festival bridge', 'azores bridge open',
-    'azores bridge teams', 'azores team', 'azores teams',
-    'azores team festval', 'festival azores bridge', 'azores festiva', 
-    'festival azores'],
-  'Crete Bridge Festival' => ['crete b_ festival'],
-  'Estoril Bridge Festival' => ['estoril festival'],
-
-  'Fes Festival' => ['fes bridge international festival',
-    'festival fes', 'festival de fes', 'festival international de fès',
-    'festival de fez'],
-  'Greek Islands Festival' => ['greek bridge festival',
-    'greek island festival', 'athens bridge festival', 
-    'greek islands festivals', 'greek festival islands', 'greek islands'],
   'International Bridge Festival' => ['int_ bridge festival'],
-
-  'Jyvaskala Easter Bridge Festival' => ['easter bridge trophy'],
-
-  'Lozenets Bridge Festival' => ['bridge festival lozenets'],
-
-  'Maharaja Holkar National Championship' => [
-    'maharaja holakar championship',
-    'maharaja holar national open',
-    'maharaja holkar bridge championship',
-    'maharaja holkar championship',
-    'maharaja holkar national open championship',
-    'maharaja holkar national tournament',
-    'M Yeshwantrao Holkar National Bridge Championship'],
-  'Marmara Festival' => ['festival marmara'],
-  'Pula Bridge Festival' => ['international festival pula',
-    'pula bridge festiwal'],
-  'Stara Zagora Bridge Festival' => ['bridge festival - stara zagora',
-    'bridge festival stara zagora', 
-    'bridge festival-bulgaria-stara zagora'],
-  'Tallinn Bridge Festival' => ['talinn festival', 'tallin festival',
-    'tallinns festival'],
-  'VVE Beheer Bridge Week' => ['vve-beheer bridgeweek',
-    'vve-beheer bridge week'],
   'Winter Championships' => ['winter championship',
     'winter championsship'],
-  'World Team Olympiad' => ['world bridge team olympiad',
-    'world bridge olympiad', 'bridge olympiad'],
 );
 
 my @SINGLE_WORDS = qw(
@@ -237,15 +171,8 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  'Australian National Championships' => ['anc'],
-  'Bangkok Bridge Festival' => ['bbf', 'bff'],
-  "Buffett Cup" => ['buffett', 'buffet'],
   Congress => ['kongres', 'kongresowy'],
-  'European National Championships' => ['ec'],
-  'European Transnational Championships' => ['eobc', 'eoc'],
   Festival => ['fest', 'festivan', 'festývalý', 'festivalul', 'festiwal'],
-  'Gold Coast Congress' => ['gc', 'gcc'],
-  'World Team Olympiad' => ['olympiad', 'olympiads', 'wbo'],
 );
 
 

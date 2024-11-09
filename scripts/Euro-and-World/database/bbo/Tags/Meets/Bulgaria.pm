@@ -16,8 +16,10 @@ my @MULTI_WORDS =
 (
   'Albena Bridge Festival',
   'Dobrich Bridge Festival',
+  'Lozenets Bridge Festival',
   'Plovdiv Bridge Festival',
   'Serdika Bridge Festival',
+  'Stara Zagora Bridge Festival',
   'Varna Bridge Festival'
 );
 
@@ -25,6 +27,7 @@ my %MULTI_TYPOS =
 (
   'Dobrich Bridge Festival' => [
     'ibf dobrich'],
+  'Lozenets Bridge Festival' => ['bridge festival lozenets'],
   'Plovdiv Bridge Festival' => [
     'bridge festival plovdiv',
     'international bridge festival plovdiv',
@@ -33,6 +36,10 @@ my %MULTI_TYPOS =
   'Serdika Bridge Festival' => [
     'bridge festival - serdika',
     'bridge festival serdika'],
+  'Stara Zagora Bridge Festival' => [
+    'bridge festival - stara zagora',
+    'bridge festival stara zagora',
+    'bridge festival-bulgaria-stara zagora'],
   'Varna Bridge Festival' => [
     'international bridge festival varna'],
 );

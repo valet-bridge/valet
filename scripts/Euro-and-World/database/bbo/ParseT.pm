@@ -77,6 +77,7 @@ use Tournaments::Supra;
 use Tournaments::Sweden;
 use Tournaments::Switzerland;
 use Tournaments::Taipei;
+use Tournaments::Thailand;
 use Tournaments::Turkey;
 use Tournaments::UK;
 use Tournaments::USA;
@@ -148,6 +149,7 @@ my %DIVISIONS =
   SWEDEN => \&Tournaments::Sweden::set_links,
   SWITZERLAND => \&Tournaments::Switzerland::set_links,
   TAIPEI => \&Tournaments::Taipei::set_links,
+  THAILAND => \&Tournaments::Thailand::set_links,
   TURKEY => \&Tournaments::Turkey::set_links,
   UK => \&Tournaments::UK::set_links,
   USA => \&Tournaments::USA::set_links,

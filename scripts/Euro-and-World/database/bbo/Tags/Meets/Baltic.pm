@@ -16,12 +16,17 @@ my @MULTI_WORDS =
 (
   'Baltic Cup',
   'Riga Invites to Jurmala',
+  'Tallinn Bridge Festival',
   'Vilnius Cup',
 );
 
 my %MULTI_TYPOS =
 (
   'Riga Invites to Jurmala' => ['riga invites'],
+  'Tallinn Bridge Festival' => [
+    'talinn festival', 
+    'tallin festival',
+    'tallinns festival'],
   'Vilnius Cup' => ['vv cup'],
 );
 

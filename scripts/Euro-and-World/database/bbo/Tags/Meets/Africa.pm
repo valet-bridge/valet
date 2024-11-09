@@ -14,7 +14,8 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
-  'African Zonal Championships'
+  'African Zonal Championships',
+  'Fes Festival',
 );
 
 my %MULTI_TYPOS =
@@ -29,6 +30,12 @@ my %MULTI_TYPOS =
     'african zonal championships',
     'african zone championship',
     'zonal qualifying africa'],
+  'Fes Festival' => [
+    'fes bridge international festival',
+    'festival de fes', 
+    'festival de fez',
+    'festival fes', 
+    'festival international de fès'],
 );
 
 my %SINGLE_TYPOS =

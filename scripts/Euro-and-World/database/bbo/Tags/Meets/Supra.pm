@@ -29,6 +29,7 @@ my %MULTI_TYPOS =
 
 my %SINGLE_TYPOS =
 (
+  "Buffett Cup" => ['buffett', 'buffet'],
 );
 
 sub set_hash

@@ -14,7 +14,12 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
+  'Aegean Championships',
   'Bodrum Peninsula Festival',
+  'Cappadocia Fairy Chimneys Festival',
+  'Marmara Festival',
+  'Mersin Bridge Festival',
+  'Sivrioglu Festival',
   'Turkish Autumn Festival',
   'Turkish-Greek Friendship Festival',
   'Turkish Open Trials',
@@ -24,6 +29,7 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   'Bodrum Peninsula Festival' => ['bodrum yarýmada bric festivali'],
+  'Marmara Festival' => ['festival marmara'],
   'Turkish Autumn Festival' => ['sonbahar bridge festival'],
   'Turkish-Greek Friendship Festival' => [
     'greek-turkish friendship festival'],

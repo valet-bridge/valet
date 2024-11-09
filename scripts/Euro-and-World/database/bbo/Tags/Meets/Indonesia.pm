@@ -14,6 +14,7 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
+  'Banten Sports Week',
   'Indonesian National Championship Week',
   'Indonesian National Games',
   'Indonesian National Pre-Sports Week',

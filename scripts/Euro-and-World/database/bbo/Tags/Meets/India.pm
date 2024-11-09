@@ -19,6 +19,7 @@ my @MULTI_WORDS =
   'Indian South Zone Championship',
   'Indian Summer Nationals',
   'Indian Winter Nationals',
+  'Maharaja Holkar National Championship',
   'Maharashtra State Championship',
   'Rajasthan Invitational Championship',
   'Uttar Pradesh State Championship',
@@ -59,6 +60,14 @@ my %MULTI_TYPOS =
     'dr_ tolani open summer nationals',
     'dr_ tolani summar nationals',
     'dr_ tolani summer nationals'],
+  'Maharaja Holkar National Championship' => [
+    'maharaja holakar championship',
+    'maharaja holar national open',
+    'maharaja holkar bridge championship',
+    'maharaja holkar championship',
+    'maharaja holkar national open championship',
+    'maharaja holkar national tournament',
+    'm yeshwantrao holkar national bridge championship'],
   'Maharashtra State Championship' => [
     'maharashtra championship',
     'maharashtra state brahmin sabha',

@@ -14,6 +14,7 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
+  'Festival della Matematica',
   'Italian Club Championship',
   'Italy Cup',
 );

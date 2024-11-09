@@ -18,6 +18,7 @@ my @MULTI_WORDS =
   'Australian Autumn Nationals',
   'Australian Spring Nationals',
   'Australian Summer Festival',
+  'Australian Youth Triathlon',
   'Australian Youth Week',
   'Gold Coast Congress',
   'Victor Champion Cup'
@@ -38,7 +39,9 @@ my %MULTI_TYPOS =
 
 my %SINGLE_TYPOS =
 (
+  'Australian ANC Championships' => ['anc'],
   'Australian Summer Festival' => ['sfb', 'sfob'],
+  'Gold Coast Congress' => ['gc', 'gcc'],
   'Victor Champion Cup' => ['vcc'],
 );
 

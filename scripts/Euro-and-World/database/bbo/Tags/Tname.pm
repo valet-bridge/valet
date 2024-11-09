@@ -72,6 +72,7 @@ use Tags::Tnames::Supra;
 use Tags::Tnames::Sweden;
 use Tags::Tnames::Switzerland;
 use Tags::Tnames::Taipei;
+use Tags::Tnames::Thailand;
 use Tags::Tnames::Turkey;
 use Tags::Tnames::UK;
 use Tags::Tnames::USA;
@@ -141,6 +142,7 @@ my %DIVISIONS =
   SWEDEN => \&Tags::Tnames::Sweden::set_hash,
   SWITZERLAND => \&Tags::Tnames::Switzerland::set_hash,
   TAIPEI => \&Tags::Tnames::Taipei::set_hash,
+  THAILAND => \&Tags::Tnames::Thailand::set_hash,
   TURKEY => \&Tags::Tnames::Turkey::set_hash,
   UK => \&Tags::Tnames::UK::set_hash,
   USA => \&Tags::Tnames::USA::set_hash,

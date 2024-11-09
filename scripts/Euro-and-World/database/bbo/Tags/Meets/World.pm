@@ -36,6 +36,11 @@ my %MULTI_TYPOS =
     'wmg', 
     'wmsg',
     'wnsg'], 
+  'World Olympiad' => [
+    'bridge olympiad',
+    'world bridge olympiad', 
+    'world bridge team olympiad',
+    'world team olympiad'],
   'World Youth Championships' => [
     'world youth bridge team championship',
     'world youth championship',
@@ -56,6 +61,7 @@ my %MULTI_TYPOS =
 
 my %SINGLE_TYPOS =
 (
+  'World Olympiad' => ['olympiad', 'olympiads', 'wbo'],
   'World Series' => ['wbs'],
   'World Team Championships' => ['wbtc'],
   'World Youth Championships' => ['wytc', 'wybtc'],
