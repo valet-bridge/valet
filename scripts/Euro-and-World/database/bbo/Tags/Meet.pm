@@ -39,6 +39,20 @@ use Tags::Meets::Finland;
 use Tags::Meets::France;
 use Tags::Meets::Friendly;
 use Tags::Meets::Germany;
+use Tags::Meets::Greece;
+use Tags::Meets::HongKong;
+use Tags::Meets::Hungary;
+use Tags::Meets::Iceland;
+use Tags::Meets::India;
+use Tags::Meets::Indonesia;
+use Tags::Meets::Ireland;
+use Tags::Meets::Israel;
+use Tags::Meets::Italy;
+use Tags::Meets::Japan;
+use Tags::Meets::Jordan;
+use Tags::Meets::Lebanon;
+use Tags::Meets::MiddleEast;
+use Tags::Meets::Monaco;
 
 my %DIVISIONS =
 (
@@ -70,6 +84,20 @@ my %DIVISIONS =
   FRANCE => \&Tags::Meets::France::set_hash,
   FRIENDLY => \&Tags::Meets::Friendly::set_hash,
   GERMANY => \&Tags::Meets::Germany::set_hash,
+  GREECE => \&Tags::Meets::Greece::set_hash,
+  HONGKONG => \&Tags::Meets::HongKong::set_hash,
+  HUNGARY => \&Tags::Meets::Hungary::set_hash,
+  ICELAND => \&Tags::Meets::Iceland::set_hash,
+  INDIA => \&Tags::Meets::India::set_hash,
+  INDONESIA => \&Tags::Meets::Indonesia::set_hash,
+  IRELAND => \&Tags::Meets::Ireland::set_hash,
+  ISRAEL => \&Tags::Meets::Israel::set_hash,
+  ITALY => \&Tags::Meets::Italy::set_hash,
+  JAPAN => \&Tags::Meets::Japan::set_hash,
+  JORDAN => \&Tags::Meets::Jordan::set_hash,
+  LEBANON => \&Tags::Meets::Lebanon::set_hash,
+  MIDDLEEAST => \&Tags::Meets::MiddleEast::set_hash,
+  MONACO => \&Tags::Meets::Monaco::set_hash,
 );
 
 my @MULTI_WORDS =
@@ -94,7 +122,6 @@ my @MULTI_WORDS =
   'Australian Youth Triathlon',
   'Bangkok Bridge Festival',
   'Banten Sports Week',
-  'BFAME Championship',
   'Bodrum Peninsula Festival',
   'Brasov Festival',
   'Buffett Cup',
@@ -107,34 +134,18 @@ my @MULTI_WORDS =
 
   'Fes Festival',
   'Festival della Matematica',
-  'Goa Bridge Festival',
   'Greek Islands Festival',
   'Iceland Bridge Festival',
 
-  'All India HCL Tournament',
-  'Indian Winter Nationals',
-
-  'Indonesian National Championship Week',
-  'Indonesian National Games',
-  'Indonesian National Pre-Sports Week',
-  'Indonesian National Sports Week',
-  'Indonesian Student Championship',
-  'Indonesian University Championship',
-
   'IMSA Elite Mind Games',
-  'Indian South Zone Championship',
   'International Bridge Festival',
   'Israel Grand Prix',
   'Israel International Festival',
   'Israel Teams Cup',
-  'Italian Club Championship',
-  'Italy Cup',
-  'Jordan Bridge Festival',
   'Jyvaskala Easter Bridge Festival',
   'Lozenets Bridge Festival',
   'Madeira International Festival',
   'Maharaja Holkar National Championship',
-  'Maharashtra State Championship',
   'Marmara Festival',
   'Mersin Bridge Festival',
   'Monaco International Festival',
@@ -151,10 +162,7 @@ my @MULTI_WORDS =
   'Polish Youth Olympiad',
   'Polish Schools Championship',
   'Pula Bridge Festival',
-  'Rand Cup',
-  'Rajasthan Invitational Championship',
   'Red Sea International Festival',
-  'Reykjavik Bridge Festival',
   'Sivrioglu Festival',
   'South American Team Championship',
   'South American Trials',
@@ -162,7 +170,6 @@ my @MULTI_WORDS =
   'Swedish Women Trials',
   'Swedish Bridge Festival',
   'Tallinn Bridge Festival',
-  'Indian Summer Nationals',
   'Thailand National Games',
   'The Hague Bridge Experience',
   'Turkish Autumn Festival',
@@ -172,7 +179,6 @@ my @MULTI_WORDS =
   'The Hague Bridge Festival',
   'Umea Bridgefestival',
   'United States Bridge Championship',
-  'Uttar Pradesh State Championship',
   'Vanke Cup',
   'VVE Beheer Bridge Week',
   'Wachauer Bridge Festival',
@@ -189,21 +195,6 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  'All India HCL Tournament' => [
-    'all india hcl open',
-    'hcl bridg tournamnt',
-    'hcl bridge champion ship',
-    'hcl bridge championship',
-    'hcl bridge tournament',
-    'hcl championship',
-    'hcl international bridge championship',
-    'hcl international open',
-    'hcl international open championship',
-    'hcl open',
-    'hcl open championship',
-    'hcl open international tournament',
-    'hcl open tournament'],
-
   'Azores Festival' => ['azores festival bridge', 'azores bridge open',
     'azores bridge teams', 'azores team', 'azores teams',
     'azores team festval', 'festival azores bridge', 'azores festiva', 
@@ -213,13 +204,6 @@ my %MULTI_TYPOS =
     'baltic bridge congress',
     'international baltic congress'],
   'Bodrum Peninsula Festival' => ['bodrum yarýmada bric festivali'],
-  'BFAME Championship' => [
-    'zone 4 bridge championship',
-    'zone4 bridge championship',
-    'bfame chp',
-    'bfame championships',
-    'bfame bridge championship',
-    'bfame chamionship'],
   'Brasov Festival' => ['festival brasov', 'festival bridge brasov',
     'international bridge festival brasov',
     'festivalul international de bridge brasov'],
@@ -237,34 +221,6 @@ my %MULTI_TYPOS =
   'Iceland Bridge Festival' => ['iceland bridgefestival',
     'iceland express bridge festival',
     'icelandic express bridge festival'],
-  'Indian South Zone Championship' => [
-    'south zone championship',
-    'southzone championship',
-    'souhzone championship'],
-  'Indonesian National Championship Week' => [
-    'indonesia bridge championships',
-    'indonesia national championship',
-    'indonesia national championships',
-    'indonesian championship',
-    'indonesian championships',
-    'indonesian national chamapionship',
-    'indonesian national championship',
-    'indonesian national championships',
-    'indonesian national champonship',
-    'national indonesian championship',
-    'national championship indonesia'],
-  'Indonesian National Games' => [
-    'indonesian games',
-    'indonesian nasional games'],
-  'Indonesian National Pre-Sports Week' => ['pra pon'],
-  'Indonesian National Sports Week' => ['indonesia week',
-    'indonesian national sports weeks'],
-  'Indonesian Student Championship' => [
-    'indonesian student championships',
-    'indonesian students championship',
-    'indonesian students championships'],
-  'Indonesian University Championship' => [
-    'indonesian university championships'],
   'International Bridge Festival' => ['int_ bridge festival'],
   'Israel Grand Prix' => ['israeli grand prix',
     'israeli grand prize'],
@@ -276,36 +232,7 @@ my %MULTI_TYPOS =
     'israeli team cup', 
     'israel teams cup', 
     'israel team of four cup'],
-  'Italian Club Championship' => [
-    'camp.societ sportive',
-    'campionato italiano di societa',
-    'campionato italiano di società',
-    'campionato italiano intersocietario',
-    'campionato di società',
-    'campionati soc',
-    'interclub italy',
-    'italian club champ_',
-    'italian clubs champ_',
-    'italian club team',
-    'italian club team cham',
-    'italian club team champ',
-    'italian club team championship',
-    'italian club team championships',
-    'italian club teams',
-    'italian clubs teams championships',
-    'italian teams clubs championships',
-    'italian interclub',
-    'interclub italian'],
-  'Italy Cup' => ['coppa italia'],
 
-  'Jordan Bridge Festival' => [
-    'jordab festival', 
-    'jordan b_ festival',
-    'jordan bridge f estival', 
-    'jordan bridge tournament spring festival',
-    'jordan bridge tournament ( spring festival)',
-    'jordan bridge tournament (spring festival)',
-    'jordan spring tournament'],
   'Jyvaskala Easter Bridge Festival' => ['easter bridge trophy'],
 
   'Krakow Congress' => ['krakow meeting'],
@@ -320,11 +247,6 @@ my %MULTI_TYPOS =
     'maharaja holkar national open championship',
     'maharaja holkar national tournament',
     'M Yeshwantrao Holkar National Bridge Championship'],
-  'Maharashtra State Championship' => [
-    'maharashtra championship',
-    'maharashtra state brahmin sabha',
-    'maharashtra state brhman sabha',
-    'maharashtra state championships'],
   'Marmara Festival' => ['festival marmara'],
   'Monaco International Festival' => ['festival international de monaco'],
   'Moscow Sunday Times' => [
@@ -369,24 +291,6 @@ my %MULTI_TYPOS =
      'test match'], 
   'Pula Bridge Festival' => ['international festival pula',
     'pula bridge festiwal'],
-  'Rajasthan Invitational Championship' => [
-    'rajasthan bridge association invitational',
-    'rajasthan bridge championship',
-    'rajasthan championship',
-    'rajasthan invitational bridge championship',
-    'rajasthan invitational bridge tournament',
-    'rajasthan invitational championship',
-    'rajasthan invitation tournament',
-    'rajasthan invitatational tournament',
-    'rajasthan invitational tournament'],
-  'Rand Cup' => [
-    'dr_ rand masters',
-    'dr. rand masters'],
-  'Red Sea International Festival' => ['red see international festival',
-    'read beach festival', 'red beach festival', 'red sea festival',
-    'red sea bridge festival', 'red see int_ bridge festival',
-    'red sea int_ festival'],
-  'Reykjavik Bridge Festival' => ['reykjavikbridgefestival'],
   'Slava Congress' => ['s³awa turniej kongresowy'],
   'South American Team Championship' => [
     'southamerica championship',
@@ -414,21 +318,6 @@ my %MULTI_TYPOS =
     'swedish women euro trials'],
   'Tallinn Bridge Festival' => ['talinn festival', 'tallin festival',
     'tallinns festival'],
-  'Indian Summer Nationals' => [
-    'tolani open', 
-    'tolani open summer nationals', 
-    'tolani summer nationals',
-    'dr tolani open summer nationals',
-    'dr_tolani open summer natinal', 
-    'dr_tolani open summer nationaals', 
-    'dr_tolani open summer national', 
-    'dr_tolani open summer nationals', 
-    'dr tolani summer nationals',
-    'dr_tolani summer nationals',
-    'dr_ tolani open summer nations', 
-    'dr_ tolani open summer nationals',
-    'dr_ tolani summar nationals',
-    'dr_ tolani summer nationals'],
   'The Hague Bridge Experience' => [
     'teh hague bridge experience',
     'the hague bride experience'],
@@ -451,8 +340,6 @@ my %MULTI_TYPOS =
     'turkish women team selection'],
   'United States Bridge Championship' => ['us bridge championship',
     'u_s_b_c', 'united states bridge championships'],
-  'Uttar Pradesh State Championship' => [
-    'up state championship'],
   'VVE Beheer Bridge Week' => ['vve-beheer bridgeweek',
     'vve-beheer bridge week'],
   'West Java Regional' => ['west java regional sport games',
@@ -503,12 +390,9 @@ my %SINGLE_TYPOS =
   'European Transnational Championships' => ['eobc', 'eoc'],
   Festival => ['fest', 'festivan', 'festývalý', 'festivalul', 'festiwal'],
   'Gold Coast Congress' => ['gc', 'gcc'],
-  'Indonesian National Pre-Sports Week' => ['prapon'],
-  'Indonesian National Sports Week' => ['indonesia week', 'pon'],
   'North American Bridge Championship' => ['nabc'],
   'United States Bridge Championship' => ['usbc'],
   'South American Team Championship' => ['sabc'],
-  'Indian Winter Nationals' => ['winternationals'],
   'World Series' => ['wbs'],
   'World Team Championships' => ['wbtc'],
   'World Team Olympiad' => ['olympiad', 'olympiads', 'wbo'],
