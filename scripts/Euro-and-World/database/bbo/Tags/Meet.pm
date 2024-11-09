@@ -53,6 +53,20 @@ use Tags::Meets::Jordan;
 use Tags::Meets::Lebanon;
 use Tags::Meets::MiddleEast;
 use Tags::Meets::Monaco;
+use Tags::Meets::Netherlands;
+use Tags::Meets::NewZealand;
+use Tags::Meets::Nordic;
+use Tags::Meets::Norway;
+use Tags::Meets::Pakistan;
+use Tags::Meets::Poland;
+use Tags::Meets::Portugal;
+use Tags::Meets::Romania;
+use Tags::Meets::Russia;
+use Tags::Meets::Serbia;
+use Tags::Meets::Singapore;
+use Tags::Meets::Slovakia;
+use Tags::Meets::SouthAfrica;
+use Tags::Meets::SouthAmerica;
 
 my %DIVISIONS =
 (
@@ -98,23 +112,24 @@ my %DIVISIONS =
   LEBANON => \&Tags::Meets::Lebanon::set_hash,
   MIDDLEEAST => \&Tags::Meets::MiddleEast::set_hash,
   MONACO => \&Tags::Meets::Monaco::set_hash,
+  NETHERLANDS => \&Tags::Meets::Netherlands::set_hash,
+  NEWZEALAND => \&Tags::Meets::NewZealand::set_hash,
+  NORDIC => \&Tags::Meets::Nordic::set_hash,
+  NORWAY => \&Tags::Meets::Norway::set_hash,
+  PAKISTAN => \&Tags::Meets::Pakistan::set_hash,
+  POLAND => \&Tags::Meets::Poland::set_hash,
+  PORTUGAL => \&Tags::Meets::Portugal::set_hash,
+  ROMANIA => \&Tags::Meets::Romania::set_hash,
+  RUSSIA => \&Tags::Meets::Russia::set_hash,
+  SERBIA => \&Tags::Meets::Serbia::set_hash,
+  SINGAPORE => \&Tags::Meets::Singapore::set_hash,
+  SLOVAKIA => \&Tags::Meets::Slovakia::set_hash,
+  SOUTHAFRICA => \&Tags::Meets::SouthAfrica::set_hash,
+  SOUTHAMERICA => \&Tags::Meets::SouthAmerica::set_hash,
 );
 
 my @MULTI_WORDS =
 (
-  # POLAND
-  'Baltic Congress',
-  'Beskids Slam',
-  'Boleslawiec Festival',
-  'Krakow Congress',
-  'Luczniczka Meeting',
-  'Polish Championships',
-  'Poznan Congress',
-  'Slawa Congress',
-  'Warsaw Grand Prix',
-  'Wroclaw Meeting',
-  'Zulawski Congress',
-
   'Aegean Championships',
   'Azores Festival',
   'Amman Bridge Festival',
@@ -135,48 +150,33 @@ my @MULTI_WORDS =
   'Fes Festival',
   'Festival della Matematica',
   'Greek Islands Festival',
-  'Iceland Bridge Festival',
 
   'IMSA Elite Mind Games',
   'International Bridge Festival',
-  'Israel Grand Prix',
-  'Israel International Festival',
-  'Israel Teams Cup',
   'Jyvaskala Easter Bridge Festival',
   'Lozenets Bridge Festival',
-  'Madeira International Festival',
   'Maharaja Holkar National Championship',
   'Marmara Festival',
   'Mersin Bridge Festival',
   'Monaco International Festival',
-  'Moscow Sunday Times',
   'Neighbor Challenge',
-  'New Zealand Trials',
-  'Nordic Junior Championship',
-  'Nordic Team Championship',
   'North American Bridge Championship',
-  'Palace Cup',
   'Pärnu Festival',
   'Polish Grand Prix',
   'Polish Pairs Championship',
   'Polish Youth Olympiad',
   'Polish Schools Championship',
   'Pula Bridge Festival',
-  'Red Sea International Festival',
   'Sivrioglu Festival',
-  'South American Team Championship',
-  'South American Trials',
   'Stara Zagora Bridge Festival',
   'Swedish Women Trials',
   'Swedish Bridge Festival',
   'Tallinn Bridge Festival',
   'Thailand National Games',
-  'The Hague Bridge Experience',
   'Turkish Autumn Festival',
   'Turkish-Greek Friendship Festival',
   'Turkish Open Trials',
   'Turkish Women Trials',
-  'The Hague Bridge Festival',
   'Umea Bridgefestival',
   'United States Bridge Championship',
   'Vanke Cup',
@@ -199,10 +199,6 @@ my %MULTI_TYPOS =
     'azores bridge teams', 'azores team', 'azores teams',
     'azores team festval', 'festival azores bridge', 'azores festiva', 
     'festival azores'],
-  'Baltic Congress' => [
-    'baltic bowl',
-    'baltic bridge congress',
-    'international baltic congress'],
   'Bodrum Peninsula Festival' => ['bodrum yarýmada bric festivali'],
   'Brasov Festival' => ['festival brasov', 'festival bridge brasov',
     'international bridge festival brasov',
@@ -218,27 +214,12 @@ my %MULTI_TYPOS =
   'Greek Islands Festival' => ['greek bridge festival',
     'greek island festival', 'athens bridge festival', 
     'greek islands festivals', 'greek festival islands', 'greek islands'],
-  'Iceland Bridge Festival' => ['iceland bridgefestival',
-    'iceland express bridge festival',
-    'icelandic express bridge festival'],
   'International Bridge Festival' => ['int_ bridge festival'],
-  'Israel Grand Prix' => ['israeli grand prix',
-    'israeli grand prize'],
-  'Israel International Festival' => ['israel int_ festival',
-    'int_ israel festival', 'israel festival', 'israel fest_'],
-  'Israel Teams Cup' => [
-    'israel national team cup',
-    'israel team cup', 
-    'israeli team cup', 
-    'israel teams cup', 
-    'israel team of four cup'],
 
   'Jyvaskala Easter Bridge Festival' => ['easter bridge trophy'],
 
-  'Krakow Congress' => ['krakow meeting'],
   'Lozenets Bridge Festival' => ['bridge festival lozenets'],
 
-  'Luczniczka Meeting' => ['meeting luczniczka'],
   'Maharaja Holkar National Championship' => [
     'maharaja holakar championship',
     'maharaja holar national open',
@@ -249,37 +230,7 @@ my %MULTI_TYPOS =
     'M Yeshwantrao Holkar National Bridge Championship'],
   'Marmara Festival' => ['festival marmara'],
   'Monaco International Festival' => ['festival international de monaco'],
-  'Moscow Sunday Times' => [
-    'russian sunday times'],
   'Neighbor Challenge' => ['neighbour challenge'],
-  'New Zealand Trials' => [
-    'nz trials'],
-  'Nordic Junior Championship' => [
-    'nordic championship for juniors',
-    'nordic junior championships'],
-  'Nordic Team Championship' => [
-    'nordic bridge championship',
-    'nordic bridge championships',
-    'nordic bridge team championship',
-    'nordic championship',
-    'nordic championships',
-    'nordic team championships',
-    'nordics'], 
-  'Norwegian District Championship' => ['norwegian district',
-     'norw district', 'norwegian regional chship',
-     'norway regional champship'],
-  'Polish Pairs Championship' => [
-    'pairs championship od poland',
-    'pairs championship of poland'],
-  'Polish Schools Championship' => [
-    'polish schools champ',
-    'polish schools champs'],
-  'Polish Youth Olympiad' => ['oom'],
-  'Poznan Congress' => [
-    'bridge meeting poznan',
-    'kongres poznanski', 
-    'poznan bridge congress',
-    'poznanski kongres brydzowy'],
    'Practice Match' => [
      'practice match', 
      'practice matche', 
@@ -291,25 +242,6 @@ my %MULTI_TYPOS =
      'test match'], 
   'Pula Bridge Festival' => ['international festival pula',
     'pula bridge festiwal'],
-  'Slava Congress' => ['s³awa turniej kongresowy'],
-  'South American Team Championship' => [
-    'southamerica championship',
-    'southamerican championship',
-    'southamerican open championship',
-    'south american bridge championships',
-    'south american championship',
-    'south american championhip',
-    'south american champioship',
-    'south american championshi',
-    'south american championships',
-    'sudamerican transnacional',
-    'sudamericano de bridge',
-    'sudamericano transnacional',
-    'sudamerico transnacional'],
-  'South American Trials' => [
-    'clasificatoria sudamericano',
-    'clasificatorias sudamericano', 
-    'south americal trials'],
   'Stara Zagora Bridge Festival' => ['bridge festival - stara zagora',
     'bridge festival stara zagora', 
     'bridge festival-bulgaria-stara zagora'],
@@ -318,9 +250,6 @@ my %MULTI_TYPOS =
     'swedish women euro trials'],
   'Tallinn Bridge Festival' => ['talinn festival', 'tallin festival',
     'tallinns festival'],
-  'The Hague Bridge Experience' => [
-    'teh hague bridge experience',
-    'the hague bride experience'],
   'Turkish Autumn Festival' => ['sonbahar bridge festival'],
   'Turkish-Greek Friendship Festival' => [
     'greek-turkish friendship festival'],
@@ -368,11 +297,6 @@ my %MULTI_TYPOS =
     'workd youth bridge congress',
     'worlf youth bridge congress', 
     'youth world bridge congress'],
-  'Zulawski Congress' => [
-    'mityng zulawski', 
-    "kongres \"zulawski\"",
-    'kongres zulawski', 
-    "mityng \"zulawski\""]
 );
 
 my @SINGLE_WORDS = qw(
@@ -392,7 +316,6 @@ my %SINGLE_TYPOS =
   'Gold Coast Congress' => ['gc', 'gcc'],
   'North American Bridge Championship' => ['nabc'],
   'United States Bridge Championship' => ['usbc'],
-  'South American Team Championship' => ['sabc'],
   'World Series' => ['wbs'],
   'World Team Championships' => ['wbtc'],
   'World Team Olympiad' => ['olympiad', 'olympiads', 'wbo'],

@@ -14,12 +14,25 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
+  'Israel Grand Prix',
+  'Israel International Festival',
+  'Israel Teams Cup',
   'Rand Cup',
   'Red Sea International Festival'
 );
 
 my %MULTI_TYPOS =
 (
+  'Israel Grand Prix' => ['israeli grand prix',
+    'israeli grand prize'],
+  'Israel International Festival' => ['israel int_ festival',
+    'int_ israel festival', 'israel festival', 'israel fest_'],
+  'Israel Teams Cup' => [
+    'israel national team cup',
+    'israel team cup',
+    'israeli team cup',
+    'israel teams cup',
+    'israel team of four cup'],
   'Rand Cup' => [
     'dr_ rand masters',
     'dr. rand masters'],

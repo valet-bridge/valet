@@ -6,7 +6,7 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-package Tags::Meets::Iceland;
+package Tags::Meets::Nordic;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_hash);
@@ -14,21 +14,27 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
-  'Iceland Bridge Festival',
-  'Reykjavik Bridge Festival',
+  'Nordic Junior Championship',
+  'Nordic Team Championship',
 );
 
 my %MULTI_TYPOS =
 (
-  'Iceland Bridge Festival' => [
-    'iceland bridgefestival',
-    'iceland express bridge festival',
-    'icelandic express bridge festival'],
+  'Nordic Junior Championship' => [
+    'nordic championship for juniors',
+    'nordic junior championships'],
+  'Nordic Team Championship' => [
+    'nordic bridge championship',
+    'nordic bridge championships',
+    'nordic bridge team championship',
+    'nordic championship',
+    'nordic championships',
+    'nordic team championships',
+    'nordics'],
 );
 
 my %SINGLE_TYPOS =
 (
-  'Reykjavik Bridge Festival' => ['reykjavikbridgefestival'],
 );
 
 sub set_hash
