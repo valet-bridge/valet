@@ -32,6 +32,13 @@ use Tags::Meets::Czech;
 use Tags::Meets::Denmark;
 use Tags::Meets::Ecuador;
 use Tags::Meets::Egypt;
+use Tags::Meets::EuroAdult;
+use Tags::Meets::EuroYouth;
+use Tags::Meets::Faroe;
+use Tags::Meets::Finland;
+use Tags::Meets::France;
+use Tags::Meets::Friendly;
+use Tags::Meets::Germany;
 
 my %DIVISIONS =
 (
@@ -56,6 +63,13 @@ my %DIVISIONS =
   DENMARK => \&Tags::Meets::Denmark::set_hash,
   ECUADOR => \&Tags::Meets::Ecuador::set_hash,
   EGYPT => \&Tags::Meets::Egypt::set_hash,
+  EUROADULT => \&Tags::Meets::EuroAdult::set_hash,
+  EUROYOUTH => \&Tags::Meets::EuroYouth::set_hash,
+  FAROE => \&Tags::Meets::Faroe::set_hash,
+  FINLAND => \&Tags::Meets::Finland::set_hash,
+  FRANCE => \&Tags::Meets::France::set_hash,
+  FRIENDLY => \&Tags::Meets::Friendly::set_hash,
+  GERMANY => \&Tags::Meets::Germany::set_hash,
 );
 
 my @MULTI_WORDS =
@@ -73,13 +87,6 @@ my @MULTI_WORDS =
   'Wroclaw Meeting',
   'Zulawski Congress',
 
-  'Challenge Match',
-  'Exhibition Match',
-  'Friendly Match',
-  'Friendly Pairs',
-  'Practice Match',
-
- 
   'Aegean Championships',
   'Azores Festival',
   'Amman Bridge Festival',
@@ -95,14 +102,6 @@ my @MULTI_WORDS =
   'Channel Trophy',
   'Crete Bridge Festival',
   'Estoril Bridge Festival',
-
-  "European Champions' Cup",
-  'European National Championships',
-  'European Transnational Championships',
-  'European Winter Games',
-  'European Winter Transnational Championships',
-  'European Youth Team Championships',
-  'Generali European Championships',
 
   'FISU World University Championships',
 
@@ -139,7 +138,6 @@ my @MULTI_WORDS =
   'Marmara Festival',
   'Mersin Bridge Festival',
   'Monaco International Festival',
-  'Mondial de Deauville',
   'Moscow Sunday Times',
   'Neighbor Challenge',
   'New Zealand Trials',
@@ -226,63 +224,13 @@ my %MULTI_TYPOS =
     'international bridge festival brasov',
     'festivalul international de bridge brasov'],
   'Buffett Cup' => ['buffet cup', 'bufett cup'],
-  'Challenge Match' => [
-    'desafio'], 
   'Channel Trophy' => ['channel trpohy'],
   'Crete Bridge Festival' => ['crete b_ festival'],
   'Estoril Bridge Festival' => ['estoril festival'],
-  "European Champions' Cup" => [
-    'european bridge champion cup',
-    "european bridge champions'cup",
-    "european bridge champion's cup",
-    "european bridge champions' cup",
-    'european chamions cup',
-    "european champion's cup",
-    'european champions cup',
-    "white house champions' cup",
-    "whitehouse champions'cup",
-    "whitehouse champions' cup"],
-  'European National Championships' => [
-    'champ eur pau',
-    'e_b_l_ team championships',
-    'e_b_l_ teams championship',
-    'e_b_l_ team champioships',
-    'ebl team champs',
-    'ebl team championships',
-    'ebl teams championship',
-    'ebl teams championships',
-    'eur cha pau',
-    'eur cham pau',
-    'eur champ eur',
-    'eur champ pau',
-    'eur champ puau',
-    'euro team championships',
-    'european b.t.ch.',
-    'european b_t_ch_',
-    'european bridge team championships',
-    'european bridge team champ',
-    'europeqn teqm championships',
-    'european team championship',
-    'european team championships',
-    'european teams championship',
-    'european teams championships'],
-  'European Transnational Championships' => [
-    'euro open championships', 
-    'euro open teams',
-    'euroepan open champ', 
-    'european open champ', 
-    'europe open champ'],
-
-  'European Youth Team Championships' => [
-    'european youth bridge championship',
-    'european youth championships',
-    'european youth championship'],
 
   'Fes Festival' => ['fes bridge international festival',
     'festival fes', 'festival de fes', 'festival international de fès',
     'festival de fez'],
-  'Friendly Match' => [
-    'match amical', 'friendly tm'],
   'Greek Islands Festival' => ['greek bridge festival',
     'greek island festival', 'athens bridge festival', 
     'greek islands festivals', 'greek festival islands', 'greek islands'],
@@ -379,22 +327,6 @@ my %MULTI_TYPOS =
     'maharashtra state championships'],
   'Marmara Festival' => ['festival marmara'],
   'Monaco International Festival' => ['festival international de monaco'],
-  'Mondial de Deauville' => [
-    "barrière champion's cup",
-    "barriere champion's cup",
-    'barriere championship',
-    'barriere championship deauville',
-    'barrière championship',
-    'champion ship barriere',
-    'champions barriere',
-    "deauville championship's tournament",
-    'mondial barriere deauville',
-    'mondial barrière de deauville',
-    'mondial deauville',
-    'mondial de deauille',
-    'montial de deauville',
-    'tournoi des champions',
-    'tournoi des champions barriere'],
   'Moscow Sunday Times' => [
     'russian sunday times'],
   'Neighbor Challenge' => ['neighbour challenge'],
@@ -569,9 +501,7 @@ my %SINGLE_TYPOS =
   Congress => ['kongres', 'kongresowy'],
   'European National Championships' => ['ec'],
   'European Transnational Championships' => ['eobc', 'eoc'],
-  'European Winter Games' => ['ewg'],
   Festival => ['fest', 'festivan', 'festývalý', 'festivalul', 'festiwal'],
-  'Friendly Match' => ['friendly'],
   'Gold Coast Congress' => ['gc', 'gcc'],
   'Indonesian National Pre-Sports Week' => ['prapon'],
   'Indonesian National Sports Week' => ['indonesia week', 'pon'],
