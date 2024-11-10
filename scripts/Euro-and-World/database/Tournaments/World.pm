@@ -154,6 +154,7 @@ my %MEETS_WORLD =
       '1996' =>
       {
         # http://db.worldbridge.org/Repository/tourn/Rhodes.96/rhodes.htm
+        ORDINAL => 10,
         YEAR => 1996,
         CITY => 'Rhodes',
         COUNTRY => 'Greece',
@@ -163,6 +164,7 @@ my %MEETS_WORLD =
       '2000' =>
       {
         # http://db.worldbridge.org/Repository/tourn/Maastricht.00/default.htm
+        ORDINAL => 11,
         YEAR => 2000,
         CITY => 'Maastricht',
         COUNTRY => 'Netherlands',
@@ -172,6 +174,7 @@ my %MEETS_WORLD =
       '2004' =>
       {
         # http://db.worldbridge.org/Repository/tourn/Istanbul.04/Results.htm
+        ORDINAL => 12,
         YEAR => 2004,
         CITY => 'Istanbul',
         COUNTRY => 'Turkey',
@@ -4084,6 +4087,170 @@ my %TOURNAMENTS_WORLD =
             major => 'ROUND',
             DATE_START => '2006-08-03',
             DATE_END => '2006-08-04'
+          },
+        }
+      },
+    }
+  },
+
+  'World Olympiad Open Teams' =>
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '1996' =>
+      {
+        MEET => 'World Olympiad',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 1996,
+            DATE_START => '1996-10-31',
+            DATE_END => '1996-11-02'
+          },
+        }
+      },
+      '2000' =>
+      {
+        MEET => 'World Olympiad',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2000,
+            DATE_START => '2000-08-26',
+            DATE_END => '2000-09-09'
+          },
+        }
+      },
+      '2004' =>
+      {
+        MEET => 'World Olympiad',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2004-10-23',
+            DATE_END => '2004-10-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2004-10-30',
+            DATE_END => '2004-10-31'
+          },
+          'C2' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2004-11-01',
+            DATE_END => '2004-11-02'
+          },
+          'C3' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2004-11-03',
+            DATE_END => '2004-11-04'
+          },
+          'C4' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2004-11-05',
+            DATE_END => '2004-11-06'
+          },
+        }
+      },
+    }
+  },
+
+  'World Olympiad Women Teams' =>
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '1996' =>
+      {
+        MEET => 'World Olympiad',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 1996,
+            DATE_START => '1996-10-31',
+            DATE_END => '1996-11-02'
+          },
+        }
+      },
+      '2000' =>
+      {
+        MEET => 'World Olympiad',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2000,
+            DATE_START => '2000-08-26',
+            DATE_END => '2000-09-09'
+          },
+        }
+      },
+      '2004' =>
+      {
+        MEET => 'World Olympiad',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2004-10-24',
+            DATE_END => '2004-10-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2004-10-30',
+            DATE_END => '2004-10-30'
+          },
+          'C2' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2004-11-02',
+            DATE_END => '2004-11-03'
+          },
+          'C3' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2004-11-04',
+            DATE_END => '2004-11-05'
           },
         }
       },

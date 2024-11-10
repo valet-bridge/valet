@@ -54,6 +54,123 @@ my %MEETS_THAILAND =
 
 my %TOURNAMENTS_THAILAND =
 (
+  'Bangkok Open Teams' =>
+  {
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        MEET => 'Bangkok Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2013,
+            DATE_START => '2013-01-31',
+            DATE_END => '2013-02-03'
+          },
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Bangkok Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2014,
+            DATE_START => '2014-04-06',
+            DATE_END => '2014-04-09'
+          },
+        }
+      },
+    }
+  },
+
+  'Thailand Mixed Teams' =>
+  {
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        MEET => 'Thailand National Games',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2014,
+            DATE_START => '2014-12-13',
+            DATE_END => '2014-12-16'
+          },
+        }
+      },
+    }
+  },
+
+  'Thailand Open Teams' =>
+  {
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        MEET => 'Thailand National Games',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2014,
+            DATE_START => '2014-12-13',
+            DATE_END => '2014-12-16'
+          },
+        }
+      },
+    }
+  },
+
+  'Thailand Women Teams' =>
+  {
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        MEET => 'Thailand National Games',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2014,
+            DATE_START => '2014-12-13',
+            DATE_END => '2014-12-16'
+          },
+        }
+      },
+    }
+  },
+
 );
 
 

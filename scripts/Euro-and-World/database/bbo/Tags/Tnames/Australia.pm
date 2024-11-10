@@ -17,6 +17,7 @@ my @MULTI_WORDS =
   'Altman Swiss Pairs',
   'Australian Autumn National Open Teams',
   'Australian Grand National Open Teams',
+  'Australian Interstate Teams',
   'Australian Junior Teams',
   'Australian National Open Teams',
   'Australian National Senior Teams',
@@ -67,6 +68,10 @@ my %MULTI_TYPOS =
   'Australian Grand National Open Teams' => [
     'abf gnot',
     'grand national open teams'],
+  'Australian Interstate Teams' => [
+    'anc interstate teams'],
+  'Australian Junior Teams' => [
+    'anc juniors'],
   'Australian National Open Teams' => [
     'abf national open teams',
     'national open teams',
@@ -74,6 +79,8 @@ my %MULTI_TYPOS =
   'Australian Open Teams' => [
     'abf open team trials',
     'abf oprn trials',
+    'anc open',
+    'anc open teams',
     'aust open',
     'aust open trials',
     'austalian open team selections',
@@ -93,6 +100,7 @@ my %MULTI_TYPOS =
     'austalian seniors pairs'],
   'Australian Senior Teams' => [
     'abf seniors playoff',
+    'anc seniors',
     'aus seniors',
     'aus seniors playoff',
     'aus seniors playoffs',
@@ -124,6 +132,9 @@ my %MULTI_TYPOS =
     'snot womens',
     'spring national women teams'],
   'Australian Women Teams' => [
+    'anc women',
+    'anc womens',
+    "anc women's teams",
     'aust women open team',
     "aust women's team",
     'aust womens team',

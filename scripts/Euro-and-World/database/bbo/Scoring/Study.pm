@@ -117,7 +117,8 @@ my @LOCAL_SUBS =
   { START => 13355, END => 13357, TEXT => 'MP', CORR => 'IMP' },
   { START => 16490, END => 16508, TEXT => 'MP', CORR => 'IMP' },
   { START => 32882, END => 32886, TEXT => 'MP', CORR => 'IMP' },
-  { START => 32893, END => 32908, TEXT => 'MP', CORR => 'IMP' },
+  { START => 32896, END => 32900, TEXT => 'MP', CORR => 'IMP' },
+  { START => 32902, END => 32908, TEXT => 'MP', CORR => 'IMP' },
 
   # India
   { START => 11718, END => 11723, TEXT => 'MP', CORR => 'IMP' },

@@ -58,6 +58,8 @@ my @LOCAL_SUBS =
   # { START => , END => , TEXT => '',
     # CORR => '' },
 
+  { START => 70, END => 193, TEXT => '12WBO',
+    CORR => '12th WBO - 2004' },
   { START => 266, END => 285, TEXT => "Champion's Cup",
     CORR => "European Champions' Cup" },
   { START => 797, END => 822, TEXT => 'European Youth Bridge Team Champ', 
@@ -69,6 +71,8 @@ my @LOCAL_SUBS =
     CORR => 'Norwegian Club Teams' },
   { START => 1301, END => 1305, TEXT => 'Winter\s+Nationals*',
     CORR => 'Indian Winter Nationals' },
+  { START => 1835, END => 1845, TEXT => 'ANC 2008 Open',
+    CORR => 'ANC Open 2008' },
   { START => 1853, END => 1873, TEXT => 'Australian Seniors Teams',
     CORR => 'Australian National Senior Teams' },
   { START => 2750, END => 2756, TEXT => 'Winter Open Teams',

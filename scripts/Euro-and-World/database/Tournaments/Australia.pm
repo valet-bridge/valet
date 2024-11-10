@@ -20,11 +20,42 @@ my %MEETS_AUSTRALIA =
   {
     ORGANIZATION => 'AuBF',
     COUNTRY => 'Australia',
-    ORIGIN => 'National',
     ZONE => 'South Pacific',
 
     EDITIONS => 
     {
+      '2005' =>
+      {
+        # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=05ANCN&header=abf
+        YEAR => 2005,
+        CITY => 'Sydney',
+        DATE_START => '2005-07-22',
+        DATE_END => '2005-08-05'
+      },
+      '2008' =>
+      {
+        # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=08ANCW&header=abf
+        YEAR => 2008,
+        CITY => 'Surfers Paradise', # Sic
+        DATE_START => '2008-07-25',
+        DATE_END => '2008-08-08'
+      },
+      '2009' =>
+      {
+        # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=09ANCT&header=abf
+        YEAR => 2009,
+        CITY => 'Canberra',
+        DATE_START => '2009-07-03',
+        DATE_END => '2009-07-18'
+      },
+      '2010' =>
+      {
+        # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=ANCT10&header=abf
+        YEAR => 2010,
+        CITY => 'Hobart',
+        DATE_START => '2010-07-17',
+        DATE_END => '2010-07-29'
+      },
       '2011' =>
       {
         # https://abfevents.com.au/events/results/results.asp?yr=2011&dir=anc
@@ -1643,6 +1674,7 @@ my %TOURNAMENTS_AUSTRALIA =
 
   'Australian Junior Teams',
   {
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1650,6 +1682,45 @@ my %TOURNAMENTS_AUSTRALIA =
 
     EDITIONS =>
     {
+      '2008' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-08-08',
+            DATE_END => '2008-08-08'
+          } 
+        }
+      },
+      '2009' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-07-17',
+            DATE_END => '2009-07-18'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-07-22',
+            DATE_END => '2010-07-23'
+          } 
+        }
+      },
       '2011' =>
       {
         MEET => 'Australian ANC Championships',
@@ -1660,6 +1731,58 @@ my %TOURNAMENTS_AUSTRALIA =
             YEAR => 2011,
             DATE_START => '2011-07-28',
             DATE_END => '2011-07-28'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-07-12',
+            DATE_END => '2012-07-13'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-07-13',
+            DATE_END => '2014-07-18'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-07-16',
+            DATE_END => '2015-07-17'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-07-01',
+            DATE_END => '2016-07-01'
           } 
         }
       },
@@ -2360,7 +2483,7 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2015' =>
+      '2015A' =>
       {
         MEET => 'Australian Summer Festival',
         CHAPTERS =>
@@ -2380,6 +2503,19 @@ my %TOURNAMENTS_AUSTRALIA =
             major => 'SEGMENT',
             DATE_START => '2015-01-17',
             DATE_END => '2015-01-18'
+          },
+        }
+      },
+      '2015B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-07-16',
+            DATE_END => '2015-07-17'
           },
         }
       },
@@ -2422,7 +2558,7 @@ my %TOURNAMENTS_AUSTRALIA =
 
     EDITIONS =>
     {
-      '2005' =>
+      '2005A' =>
       {
         # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=05PLAY&abf=yes
         CITY => 'Sydney',
@@ -2443,6 +2579,19 @@ my %TOURNAMENTS_AUSTRALIA =
             major => 'SEGMENT',
             DATE_START => '2005-03-21',
             DATE_END => '2005-03-21'
+          } 
+        }
+      },
+      '2005B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2005,
+            DATE_START => '2005-07-29',
+            DATE_END => '2005-07-29'
           } 
         }
       },
@@ -2484,7 +2633,7 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2008' =>
+      '2008A' =>
       {
         # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=08PLAY&header=abf
         CITY => 'Canberra',
@@ -2499,7 +2648,20 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2009' =>
+      '2008B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-08-08',
+            DATE_END => '2008-08-08'
+          } 
+        }
+      },
+      '2009A' =>
       {
         # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=09PLAY&header=abf
         CITY => 'Sydney',
@@ -2523,7 +2685,20 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2010' =>
+      '2009B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-07-17',
+            DATE_END => '2009-07-18'
+          } 
+        }
+      },
+      '2010A' =>
       {
         # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=10PLAY&header=abf
         CITY => 'Sydney',
@@ -2536,6 +2711,19 @@ my %TOURNAMENTS_AUSTRALIA =
             minor => 'SEGMENT',
             DATE_START => '2010-03-20',
             DATE_END => '2010-03-24'
+          } 
+        }
+      },
+      '2010B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-07-19',
+            DATE_END => '2010-07-23'
           } 
         }
       },
@@ -2622,6 +2810,19 @@ my %TOURNAMENTS_AUSTRALIA =
       },
       '2012B' =>
       {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-07-12',
+            DATE_END => '2012-07-13'
+          } 
+        }
+      },
+      '2012C' =>
+      {
         # http://abfevents.com.au/events/playoffs/2013/OW/results.asp
         CITY => 'Canberra',
         CHAPTERS =>
@@ -2675,7 +2876,7 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2015' =>
+      '2015A' =>
       {
         # http://abfevents.com.au/events/playoffs/2015/OW/
         CITY => 'Canberra',
@@ -2697,6 +2898,19 @@ my %TOURNAMENTS_AUSTRALIA =
             DATE_START => '2015-02-04',
             DATE_END => '2015-02-05'
           } 
+        }
+      },
+      '2015B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-07-16',
+            DATE_END => '2015-07-17'
+          },
         }
       },
       '2016A' =>
@@ -2734,6 +2948,19 @@ my %TOURNAMENTS_AUSTRALIA =
             YEAR => 2016,
             DATE_START => '2016-11-12',
             DATE_END => '2016-11-17'
+          } 
+        }
+      },
+      '2016C' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-07-01',
+            DATE_END => '2016-07-01'
           } 
         }
       },
@@ -2949,7 +3176,7 @@ my %TOURNAMENTS_AUSTRALIA =
           }
         }
       },
-      '2008' =>
+      '2008A' =>
       {
         # https://abfevents.com.au/events/results/results.asp?yr=2008&dir=spo
         CITY => 'Sydney',
@@ -2961,6 +3188,19 @@ my %TOURNAMENTS_AUSTRALIA =
             YEAR => 2008,
             DATE_START => '2008-04-09',
             DATE_END => '2008-04-13'
+          } 
+        }
+      },
+      '2008B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-08-08',
+            DATE_END => '2008-08-08'
           } 
         }
       },
@@ -2989,7 +3229,7 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2010' =>
+      '2010A' =>
       {
         # https://abfevents.com.au/events/results/results.asp?yr=2010&dir=spo
         CITY => 'Sydney',
@@ -3001,6 +3241,19 @@ my %TOURNAMENTS_AUSTRALIA =
             YEAR => 2010,
             DATE_START => '2010-04-07',
             DATE_END => '2010-04-11'
+          } 
+        }
+      },
+      '2010B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-07-19',
+            DATE_END => '2010-07-23'
           } 
         }
       },
@@ -3053,7 +3306,7 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2012' =>
+      '2012A' =>
       {
         # http://abfevents.com.au/events/results/results.asp?yr=2012&dir=spo
         CITY => 'Sydney',
@@ -3075,6 +3328,19 @@ my %TOURNAMENTS_AUSTRALIA =
             major => 'SEGMENT',
             DATE_START => '2012-04-20',
             DATE_END => '2012-04-22'
+          } 
+        }
+      },
+      '2012B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-07-12',
+            DATE_END => '2012-07-13'
           } 
         }
       },
@@ -3125,7 +3391,7 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2015' =>
+      '2015A' =>
       {
         # http://abfevents.com.au/events/playoffs/2015/seniors/
         CITY => 'Canberra',
@@ -3139,6 +3405,19 @@ my %TOURNAMENTS_AUSTRALIA =
             major => 'SEGMENT',
             DATE_START => '2015-03-13',
             DATE_END => '2015-03-18'
+          } 
+        }
+      },
+      '2015B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-07-16',
+            DATE_END => '2015-07-17'
           } 
         }
       },
@@ -3160,6 +3439,19 @@ my %TOURNAMENTS_AUSTRALIA =
         }
       },
       '2016B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-07-01',
+            DATE_END => '2016-07-01'
+          } 
+        }
+      },
+      '2016C' =>
       {
         # http://abfevents.com.au/events/playoffs/2017/SW/
         CITY => 'Canberra',
@@ -3648,7 +3940,7 @@ my %TOURNAMENTS_AUSTRALIA =
 
     EDITIONS =>
     {
-      '2005' =>
+      '2005A' =>
       {
         # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=05PLAY&abf=yes
         CITY => 'Sydney',
@@ -3670,6 +3962,19 @@ my %TOURNAMENTS_AUSTRALIA =
             major => 'SEGMENT',
             DATE_START => '2005-03-20',
             DATE_END => '2005-03-21'
+          } 
+        }
+      },
+      '2005B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2005,
+            DATE_START => '2005-07-29',
+            DATE_END => '2005-07-29'
           } 
         }
       },
@@ -3704,7 +4009,7 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2008' =>
+      '2008A' =>
       {
         # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=08PLAY&header=abf
         CITY => 'Canberra',
@@ -3720,7 +4025,20 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2009' =>
+      '2008B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-08-08',
+            DATE_END => '2008-08-08'
+          } 
+        }
+      },
+      '2009A' =>
       {
         # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=09PLAY&header=abf
         CITY => 'Sydney',
@@ -3745,7 +4063,20 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2010' =>
+      '2009B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-07-17',
+            DATE_END => '2009-07-18'
+          } 
+        }
+      },
+      '2010A' =>
       {
         # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=10PLAY&header=abf
         CITY => 'Sydney',
@@ -3758,6 +4089,19 @@ my %TOURNAMENTS_AUSTRALIA =
             major => 'ROUND',
             DATE_START => '2010-03-20',
             DATE_END => '2010-03-24'
+          } 
+        }
+      },
+      '2010B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-07-19',
+            DATE_END => '2010-07-23'
           } 
         }
       },
@@ -3796,7 +4140,7 @@ my %TOURNAMENTS_AUSTRALIA =
             YEAR => 2011,
             STAGE => 'Final',
             major => 'SEGMENT',
-            DATE_START => '2011-07-29',
+            DATE_START => '2011-07-28',
             DATE_END => '2011-07-29'
           } 
         }
@@ -3819,6 +4163,19 @@ my %TOURNAMENTS_AUSTRALIA =
         }
       },
       '2012B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-07-12',
+            DATE_END => '2012-07-13'
+          } 
+        }
+      },
+      '2012C' =>
       {
         # https://abfevents.com.au/events/playoffs/2013/OW/results.asp
         CITY => 'Sydney',
@@ -3867,7 +4224,7 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2015' =>
+      '2015A' =>
       {
         # https://abfevents.com.au/events/playoffs/2015/OW/
         CITY => 'Sydney',
@@ -3892,6 +4249,19 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
+      '2015B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-07-16',
+            DATE_END => '2015-07-17'
+          } 
+        }
+      },
       '2016A' =>
       {
         # https://abfevents.com.au/events/playoffs/2016/SW/
@@ -3910,6 +4280,19 @@ my %TOURNAMENTS_AUSTRALIA =
         }
       },
       '2016B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-07-01',
+            DATE_END => '2016-07-01'
+          } 
+        }
+      },
+      '2016C' =>
       {
         # https://abfevents.com.au/events/playoffs/2017/SW/
         CITY => 'Canberra',
@@ -4052,6 +4435,8 @@ my %TOURNAMENTS_AUSTRALIA =
 
   'Australian Youngster Teams',
   {
+    # Some of these are really Juniors, I think.
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -4059,6 +4444,58 @@ my %TOURNAMENTS_AUSTRALIA =
 
     EDITIONS =>
     {
+      '2008' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-08-08',
+            DATE_END => '2008-08-08'
+          } 
+        }
+      },
+      '2009' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-07-17',
+            DATE_END => '2009-07-18'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-07-19',
+            DATE_END => '2010-07-23'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-07-12',
+            DATE_END => '2012-07-13'
+          } 
+        }
+      },
       '2013' =>
       {
         MEET => 'Australian ANC Championships',
@@ -4071,6 +4508,32 @@ my %TOURNAMENTS_AUSTRALIA =
             major => 'SEGMENT',
             DATE_START => '2013-07-11',
             DATE_END => '2013-07-12'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-07-16',
+            DATE_END => '2015-07-17'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-07-01',
+            DATE_END => '2016-07-01'
           } 
         }
       },
@@ -4108,7 +4571,7 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2010' =>
+      '2010A' =>
       {
         MEET => 'Australian Youth Week',
         CHAPTERS =>
@@ -4120,6 +4583,19 @@ my %TOURNAMENTS_AUSTRALIA =
             minor => 'ROUND',
             DATE_START => '2010-01-15',
             DATE_END => '2010-01-16'
+          } 
+        }
+      },
+      '2010B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-07-19',
+            DATE_END => '2010-07-23'
           } 
         }
       },

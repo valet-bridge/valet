@@ -28,6 +28,7 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   'Australian ANC Championships' => [
+    'anc teams',
     'australian national championships'],
   'Australian Spring Nationals' => [
     'aus spring nationals',
