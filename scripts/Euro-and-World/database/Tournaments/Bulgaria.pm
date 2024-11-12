@@ -1083,6 +1083,18 @@ my %TOURNAMENTS_BULGARIA =
 
     EDITIONS =>
     {
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-03-01',
+            DATE_END => '2009-03-01'
+          } 
+        }
+      },
       '2016' =>
       {
         CHAPTERS =>

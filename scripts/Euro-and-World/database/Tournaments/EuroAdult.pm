@@ -4108,7 +4108,6 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2005,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
             DATE_START => '2005-06-28',
             DATE_END => '2005-06-28'
           },
@@ -4989,6 +4988,19 @@ my %TOURNAMENTS_EUROADULT =
 
     EDITIONS =>
     {
+      '2007' =>
+      {
+        MEET => 'European Transnational Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-06-28',
+            DATE_END => '2007-06-28'
+          },
+        }
+      },
       '2009' =>
       {
         MEET => 'European Transnational Championships',

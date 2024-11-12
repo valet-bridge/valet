@@ -65,7 +65,9 @@ my %MULTI_TYPOS =
   'Haskovski Mineralni Bani Open Teams' => [
     'haskovski mineralni bani'],
   'Karlovo Open Pairs' => ['karlovo pairs'],
-  'Karlovo Open Teams' => ['karlovo teams'],
+  'Karlovo Open Teams' => [
+    'karlovo teams',
+    'vasil levski cup'],
   'Pleven Open Teams' => [
     "bridge tournament \"gabi\"",
     "national bridge tournament \"gabi\"",

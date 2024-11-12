@@ -56,6 +56,7 @@ my %MULTI_TYPOS =
     'danish team champions',
     'danish team championship',
     'danish team championships',
+    'danish teams championship',
     'danmark 1_ division',
     'danmark 1_division',
     'danmark 1st division',

@@ -134,7 +134,6 @@ my %TOURNAMENTS_ISRAEL =
       {
         CHAPTERS =>
         {
-          # No link
           'SINGLE' => 
           {
             YEAR => 2008,
@@ -149,7 +148,6 @@ my %TOURNAMENTS_ISRAEL =
       {
         CHAPTERS =>
         {
-          # No link
           'SINGLE' => 
           {
             YEAR => 2009,
@@ -157,6 +155,19 @@ my %TOURNAMENTS_ISRAEL =
             major => 'SESSION',
             DATE_START => '2009-12-26',
             DATE_END => '2009-12-26'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-01-15',
+            DATE_END => '2011-01-15'
           } 
         }
       },
@@ -659,7 +670,7 @@ my %TOURNAMENTS_ISRAEL =
     COUNTRY => 'Israel',
     ORIGIN => 'National',
     ZONE => 'Europe',
-    FORM => 'Pairs',
+    FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'U18',

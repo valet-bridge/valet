@@ -1935,7 +1935,7 @@ my %TOURNAMENTS_USA =
 
     EDITIONS =>
     {
-      '2013' =>
+      '2013-14' =>
       {
         # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2013-junior-usbc/index.php
         CITY => 'Atlanta',

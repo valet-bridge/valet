@@ -31,7 +31,8 @@ my @MULTI_WORDS =
   'Asian University Championship',
   'Indonesian SEA Open Team Trials',
   'SEA Open Teams',
-  'South Pacific Open Teams'
+  'South Pacific Open Teams',
+  'Yeh Bros Pairs Cup',
 );
 
 my %MULTI_TYPOS =

@@ -48,6 +48,7 @@ my @MULTI_WORDS =
   'Polish Open Teams',
   'Polish Open Trials',
   'Polish Pairs Cup',
+  'Polish Patton Pairs',
   'Polish Patton Teams',
   'Polish Premier League',
   'Polish School Championship',

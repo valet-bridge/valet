@@ -55,6 +55,7 @@ my %MULTI_TYPOS =
     'nacional pares imps portugal',
     "campeonato nacional pares por imp's"],
   'Portuguese Open Teams' => [
+    'campeonato nacional equipas open',
     'equipas open pt',
     'open teams pt',
     'portugal open teams championship',

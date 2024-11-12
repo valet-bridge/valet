@@ -67,11 +67,11 @@ while ($entryT->read($fh))
 
   if ($meet eq '' && $tname eq '')
   {
-    # warn $entryT->bbono() . " not found at all";
+    warn $entryT->bbono() . " not found at all";
     next;
   }
 
-  if ($entryT->bbono() eq 37047)
+  if ($entryT->bbono() eq 4656)
   {
     # print "HERE\n";
   }
@@ -148,7 +148,7 @@ for my $date_start (sort keys %data)
 {
 if ($date_start eq '2003-02-02')
 {
-  print "HERE\n";
+  # print "HERE\n";
 }
   for my $dno (0 .. $#{$data{$date_start}})
   {

@@ -43,10 +43,11 @@ my %MULTI_TYPOS =
     'european youngster bridge championship'],
   'European U26 Mixed Pairs' => [
     'em pairs junior mix',
-    'european mixed pairs pairs',
+    'european mixed junior pairs',
     'eyjc mixed pairs',
     'junior em mix'],
   'European U26 Open Pairs' => [
+    'european open junior pairs',
     'european youth bridge pairs championship',
     'european youth pairs'],
   'European U26 Open Teams' => [

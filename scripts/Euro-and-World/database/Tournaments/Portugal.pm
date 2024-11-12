@@ -172,9 +172,26 @@ my %TOURNAMENTS_PORTUGAL =
           {
             YEAR => 2006,
             MOVEMENT => 'Swiss',
-            major => 'ROUND',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2006-11-13',
             DATE_END => '2006-11-13'
+          } 
+        }
+      },
+      '2007' =>
+      {
+        MEET => 'Madeira International Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            MOVEMENT => 'Swiss',
+            major => 'SESSION',
+            minor => 'ROUND',
+            DATE_START => '2007-11-25',
+            DATE_END => '2007-11-25'
           } 
         }
       },
@@ -220,6 +237,36 @@ my %TOURNAMENTS_PORTUGAL =
             major => 'ROUND',
             DATE_START => '2010-11-05',
             DATE_END => '2010-11-07'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Madeira International Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2011-11-11',
+            DATE_END => '2011-11-13'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'Madeira International Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2012-11-09',
+            DATE_END => '2012-11-11'
           } 
         }
       },
@@ -692,10 +739,34 @@ my %TOURNAMENTS_PORTUGAL =
         # https://fpbridge.pt/_wp/wp-content/uploads/2015/07/CN-Equipas-Open-2015-Final.pdf
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            major => 'ROUND',
+            DATE_START => '2015-11-20',
+            DATE_END => '2015-11-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Quarterfinal',
             DATE_START => '2015-11-21',
+            DATE_END => '2015-11-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-11-21',
+            DATE_END => '2015-11-22'
+          },
+          'C3' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-11-22',
             DATE_END => '2015-11-22'
           } 
         }

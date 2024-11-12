@@ -223,7 +223,9 @@ my %MULTI_TYPOS =
   'Snåsa Pairs Cup' => [
     'snåsa cup'],
   'Trondheim Pairs Cup' => ['trondheim cup swiss pairs'],
-  'Trondheim Teams Cup' => ['trondheim cup swiss teams'],
+  'Trondheim Teams Cup' => [
+    'trondheim cup swiss teams',
+    'trondheim cup team'],
   'Vest-Agder Regional Team Championship' => [
     'regional champship vest-agder',
     'regional chship vest-agder', 

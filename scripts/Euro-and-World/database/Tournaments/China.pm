@@ -614,6 +614,18 @@ my %TOURNAMENTS_CHINA =
           } 
         }
       },
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-07-29',
+            DATE_END => '2015-08-02'
+          } 
+        }
+      },
     }
   },
 

@@ -1386,13 +1386,20 @@ my %TOURNAMENTS_FRANCE =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          # Could potentially be two selections, further apart in time.
+          'C0' => 
           {
             YEAR => 2008,
-            STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2008-04-02',
             DATE_END => '2008-04-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            major => 'SEGMENT',
+            DATE_START => '2008-04-03',
+            DATE_END => '2008-04-03'
           }
         }
       },

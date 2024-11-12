@@ -72,6 +72,7 @@ my %MULTI_TYPOS =
     'national club league',
     'the national class a club league'],
   'Chinese Inter-City Teams' => [
+    'avia inter-city bridge championships',
     'avia intercity championship',
     'china inter-city teams',
     'china resources inter-city',

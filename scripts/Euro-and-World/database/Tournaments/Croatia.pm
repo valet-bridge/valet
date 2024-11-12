@@ -23,6 +23,12 @@ my %MEETS_CROATIA =
 
     EDITIONS =>
     {
+      '2004' =>
+      {
+        YEAR => 2004,
+        DATE_START => '2004-05-22',
+        DATE_END => '2004-05-24'
+      },
       '2005' =>
       {
         YEAR => 2005,
@@ -129,6 +135,19 @@ my %TOURNAMENTS_CROATIA =
 
     EDITIONS =>
     {
+      '2004' =>
+      {
+        MEET => 'Samobor Bridge Meeting',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2004,
+            DATE_START => '2004-05-22',
+            DATE_END => '2004-05-24'
+          },
+        }
+      },
       '2005' =>
       {
         MEET => 'Samobor Bridge Meeting',
@@ -189,7 +208,32 @@ my %TOURNAMENTS_CROATIA =
         }
       },
     }
-  }
+  },
+
+  'Samobor Women Teams' => 
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2004' =>
+      {
+        MEET => 'Samobor Bridge Meeting',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2004,
+            DATE_START => '2004-05-22',
+            DATE_END => '2004-05-24'
+          },
+        }
+      },
+    }
+  },
 );
 
 

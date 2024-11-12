@@ -297,12 +297,19 @@ my %MEETS_INDIA =
 
     EDITIONS => 
     {
-      '2012' =>
+      '2010' =>
+      {
+        ORDINAL => 41,
+        YEAR => 2010,
+        DATE_START => '2010-06-18', # More dates
+        DATE_END => '2010-06-20'
+      },
+      '2011' =>
       {
         ORDINAL => 1,
         CITY => 'Nashik',
-        YEAR => 2012,
-        DATE_START => '2011-03-15', # More dates
+        YEAR => 2011,
+        DATE_START => '2011-03-14', # More dates
         DATE_END => '2011-03-15'
       },
       '2012' =>
@@ -5260,6 +5267,37 @@ my %TOURNAMENTS_INDIA =
 
     EDITIONS =>
     {
+      '2010' =>
+      {
+        MEET => 'Indian Summer Nationals',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-06-18',
+            DATE_END => '2010-06-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-06-19',
+            DATE_END => '2010-06-19'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-06-20',
+            DATE_END => '2010-06-20'
+          } 
+        }
+      },
       '2011' =>
       {
         CHAPTERS =>
@@ -5360,12 +5398,20 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-03-14',
+            DATE_END => '2011-03-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2011-03-15',
             DATE_END => '2011-03-15'
           },
-          'C1' => 
+          'C2' => 
           {
             YEAR => 2011,
             STAGE => 'Final',

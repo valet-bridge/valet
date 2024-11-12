@@ -39,7 +39,8 @@ my %MULTI_TYPOS =
     'israel team of four cup',
     'israeli teams cup'],
   'Israel Juniors Pairs' => [
-    'israel juniours pairs'],
+    'israel juniours pairs',
+    'israeli juniors pairs'],
   'Israel Juniors Trials' => [
     'israel juniors team trials',
     'israeli juniors trials',
@@ -62,6 +63,7 @@ my %MULTI_TYPOS =
     'israeli open team trials'],
   'Israel School Trials' => [
     'israel schools trials',
+    'israel schools team trials',
     'israel schools teams trials'],
   'Maccabi Games' => ['maccabi-games', 'europ_ maccabi games'],
 );

@@ -91,6 +91,7 @@ my %MULTI_TYPOS =
   'US Youngsters' => ['u-21 us'],
   'US Youngster Trials' => [
     'jusbc u21',
+    'us u21 teams',
     'us u-21 trials',
     'u-21 us trials'],
   'USBF Charity Match' => ['usbf jr/pro charity challenge match'],

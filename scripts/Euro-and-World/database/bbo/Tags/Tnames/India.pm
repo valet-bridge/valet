@@ -113,6 +113,8 @@ my %MULTI_TYPOS =
   'Dainik Navjyoti All India Inter-State' => [
     'Dainik Navjyoti All India Interstate',
     'Dainik Navjyoti All India Inter -State'],
+  'Delhi Gymkhana Club Open Pairs' => [
+    'delhi gymkhana open pairs'],
   'Delhi Gymkhana Club Open Teams' => [
     'delhi gymkhana centenary celebrations',
     'delhi gymkhana championship',
@@ -121,8 +123,10 @@ my %MULTI_TYPOS =
     'delhi gymkhana club championship',
     'delhi gymkhana club open',
     'delhi gymkhana club open championship',
+    'delhi gymkhana open',
     'delhi gymkhana open championship',
     'delhi gymkhana open chmpionship',
+    'delhi gymkhana open tournament',
     'dgc centenary celebrations',
     'dgc centenary tournament',
     'dgc open championship'],
@@ -282,6 +286,7 @@ my %MULTI_TYPOS =
   'TATA Open' => [
     'tata opren', 
     'tata sports', 
+    'tcs teams championship',
     'ttat open'],
   'Thane Champion of Champions Teams' => [
     'tdba champion of champions',

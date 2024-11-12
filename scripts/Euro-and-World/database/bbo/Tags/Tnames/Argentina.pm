@@ -15,6 +15,7 @@ our @EXPORT = qw(set_hash);
 my @MULTI_WORDS =
 (
   'Argentinian Club Teams',
+  'Argentinian Women Club Teams',
   'Argentinian Copa Republica',
   'Argentinian Flags Day Championship',
   'Argentinian Mixed Pairs',
@@ -65,6 +66,8 @@ my %MULTI_TYPOS =
     'seleccion argetina seniors',
     'seleccion argentina seniors',
     'senior argentina team trials'],
+  'Argentinian Women Club Teams' => [
+    'interclub damas argentina'],
 );
 
 my %SINGLE_TYPOS =
