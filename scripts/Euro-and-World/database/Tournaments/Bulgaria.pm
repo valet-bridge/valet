@@ -242,6 +242,25 @@ my %MEETS_BULGARIA =
     }
   },
 
+  'Lozenets Bridge Festival' =>
+  {
+    ORGANIZATION => 'BuBF',
+    CITY => 'Lozenets',
+    COUNTRY => 'Bulgaria',
+    ORIGIN => 'Transnational',
+    ZONE => 'Europe',
+
+    EDITIONS => 
+    {
+      '2015' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-06-13',
+        DATE_END => '2015-06-13'
+      },
+    }
+  },
+
   'Plovdiv Bridge Festival' =>
   {
     ORGANIZATION => 'BuBF',
@@ -378,6 +397,62 @@ my %MEETS_BULGARIA =
         YEAR => 2012,
         DATE_START => '2012-05-19',
         DATE_END => '2012-05-20'
+      },
+    }
+  },
+
+  'Shumen Bridge Festival' =>
+  {
+    ORGANIZATION => 'BuBF',
+    CITY => 'Shumen',
+    COUNTRY => 'Bulgaria',
+    ORIGIN => 'Transnational',
+    ZONE => 'Europe',
+
+    EDITIONS => 
+    {
+      '2015' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-09-21',
+        DATE_END => '2015-09-21'
+      },
+    }
+  },
+
+  'Stara Zagora Bridge Festival' =>
+  {
+    ORGANIZATION => 'BuBF',
+    CITY => 'Stara Zagora',
+    COUNTRY => 'Bulgaria',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+
+    EDITIONS => 
+    {
+      '2012' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-10-07',
+        DATE_END => '2012-10-07'
+      },
+      '2013' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-10-05',
+        DATE_END => '2013-10-06'
+      },
+      '2014' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-10-04',
+        DATE_END => '2014-10-05'
+      },
+      '2015' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-10-17',
+        DATE_END => '2015-10-18'
       },
     }
   },
@@ -1111,6 +1186,57 @@ my %TOURNAMENTS_BULGARIA =
     }
   },
 
+  'Lozenets Open Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        MEET => 'Lozenets Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-05-30',
+            DATE_END => '2009-05-31'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'Lozenets Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-05-29',
+            DATE_END => '2010-05-30'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Lozenets Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-06-13',
+            DATE_END => '2015-06-14'
+          } 
+        }
+      },
+    }
+  },
+
   'Pleven Open Teams' =>
   {
     ORGANIZATION => 'BuBF',
@@ -1329,6 +1455,44 @@ my %TOURNAMENTS_BULGARIA =
     }
   },
 
+  'Shumen Open Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        MEET => 'Shumen Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-09-21',
+            DATE_END => '2014-09-22'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Shumen Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-09-21',
+            DATE_END => '2015-09-22'
+          } 
+        }
+      },
+    }
+  },
+
   'Stara Zagora Open Teams' =>
   {
     ORGANIZATION => 'BuBF',
@@ -1424,6 +1588,58 @@ my %TOURNAMENTS_BULGARIA =
             DATE_START => '2011-10-09',
             DATE_END => '2011-10-09'
           } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'Stara Zagora Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-10-06',
+            DATE_END => '2012-10-07'
+          },
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'Stara Zagora Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-10-05',
+            DATE_END => '2013-10-06'
+          },
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Stara Zagora Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-10-04',
+            DATE_END => '2014-10-05'
+          },
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Stara Zagora Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-10-17',
+            DATE_END => '2015-10-18'
+          },
         }
       },
     }

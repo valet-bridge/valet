@@ -13,6 +13,42 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_ICELAND =
 (
+  'Reykjavik Bridge Festival' =>
+  {
+    ORGANIZATION => 'IceBF',
+    COUNTRY => 'Iceland',
+    CITY => 'Reykjavik',
+    ORIGIN => 'Transnational',
+    ZONE => 'Europe',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-01-29',
+        DATE_END => '2010-01-29'
+      },
+      '2011' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-01-27',
+        DATE_END => '2011-01-27'
+      },
+      '2015' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-01-30',
+        DATE_END => '2015-01-30'
+      },
+      '2016' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-01-29',
+        DATE_END => '2016-01-29'
+      },
+    }
+  },
 );
 
 my %TOURNAMENTS_ICELAND =
@@ -21,10 +57,9 @@ my %TOURNAMENTS_ICELAND =
   {
     ORGANIZATION => 'IceBF',
     COUNTRY => 'Iceland',
-    ORIGIN => 'National',
+    ORIGIN => 'Transnational',
     ZONE => 'Europe',
     FORM => 'Pairs',
-    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
@@ -32,6 +67,8 @@ my %TOURNAMENTS_ICELAND =
     {
       '2010' =>
       {
+        MEET => 'Reykjavik Bridge Festival',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -43,6 +80,62 @@ my %TOURNAMENTS_ICELAND =
           } 
         }
       },
+      '2011' =>
+      {
+        MEET => 'Reykjavik Bridge Festival',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-01-27',
+            DATE_END => '2011-01-28'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'Reykjavik Bridge Festival',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-01-26',
+            DATE_END => '2012-01-27'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Reykjavik Bridge Festival',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-01-30',
+            DATE_END => '2015-01-30'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Reykjavik Bridge Festival',
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-01-29',
+            DATE_END => '2016-01-29'
+          } 
+        }
+      },
     }
   },
 
@@ -50,7 +143,7 @@ my %TOURNAMENTS_ICELAND =
   {
     ORGANIZATION => 'IceBF',
     COUNTRY => 'Iceland',
-    ORIGIN => 'National',
+    ORIGIN => 'Transnational',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -61,6 +154,7 @@ my %TOURNAMENTS_ICELAND =
     {
       '2010' =>
       {
+        MEET => 'Reykjavik Bridge Festival',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -68,7 +162,72 @@ my %TOURNAMENTS_ICELAND =
             YEAR => 2010,
             major => 'ROUND',
             DATE_START => '2010-01-30',
-            DATE_END => '2010-01-30'
+            DATE_END => '2010-01-31'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Reykjavik Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-01-29',
+            DATE_END => '2011-01-30'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'Reykjavik Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-01-28',
+            DATE_END => '2012-01-29'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Reykjavik Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-01-25',
+            DATE_END => '2014-01-26'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Reykjavik Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-01-31',
+            DATE_END => '2015-02-01'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Reykjavik Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-01-30',
+            DATE_END => '2016-01-31'
           } 
         }
       },

@@ -13,6 +13,76 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_PORTUGAL =
 (
+  'Azores Festival' =>
+  {
+    ORGANIZATION => 'FPB',
+    COUNTRY => 'Portugal',
+    CITY => 'Lisbon',
+    ORIGIN => 'International',
+    ZONE => 'Europe',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        ORDINAL => 19,
+        YEAR => 2015,
+        DATE_START => '2015-10-03',
+        DATE_END => '2015-10-03'
+      },
+    }
+  },
+
+  'Estoril Bridge Festival' =>
+  {
+    ORGANIZATION => 'FPB',
+    COUNTRY => 'Portugal',
+    CITY => 'Estoril',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-04-20',
+        DATE_END => '2010-04-20'
+      },
+      '2011' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-05-10',
+        DATE_END => '2011-05-10'
+      },
+      '2013' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-05-14',
+        DATE_END => '2013-05-14'
+      },
+    }
+  },
+
+  'Lisbon International Festival' =>
+  {
+    ORGANIZATION => 'FPB',
+    COUNTRY => 'Portugal',
+    CITY => 'Lisbon',
+    ORIGIN => 'International',
+    ZONE => 'Europe',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-03-19',
+        DATE_END => '2016-03-19'
+      },
+    }
+  },
+
   'Madeira International Festival' =>
   {
     ORGANIZATION => 'FPB',
@@ -94,6 +164,88 @@ my %MEETS_PORTUGAL =
 
 my %TOURNAMENTS_PORTUGAL =
 (
+  'Azores Open Teams',
+  {
+    ORGANIZATION => 'FPB',
+    COUNTRY => 'Portugal',
+    REGION => 'Azores',
+    ORIGIN => 'International',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        MEET => 'Azores Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-10-03',
+            DATE_END => '2011-10-04'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'Azores Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-10-05',
+            DATE_END => '2012-10-06'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'Azores Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-09-27',
+            DATE_END => '2013-09-28'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Azores Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-10-04',
+            DATE_END => '2014-10-05'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Azores Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-10-03',
+            DATE_END => '2015-10-04'
+          } 
+        }
+      },
+    }
+  },
+
   'FullBridge International Teams',
   {
     ORGANIZATION => 'FPB',
@@ -117,6 +269,30 @@ my %TOURNAMENTS_PORTUGAL =
             major => 'ROUND',
             DATE_START => '2014-11-28',
             DATE_END => '2014-11-30'
+          } 
+        }
+      },
+    }
+  },
+
+  'Lisbon Open Teams',
+  {
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        MEET => 'Lisbon International Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-03-19',
+            DATE_END => '2016-03-20'
           } 
         }
       },
@@ -402,6 +578,32 @@ my %TOURNAMENTS_PORTUGAL =
           } 
         }
       },
+      '2010' =>
+      {
+        MEET => 'Estoril Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-04-20',
+            DATE_END => '2010-04-22'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Estoril Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-05-10',
+            DATE_END => '2011-05-12'
+          } 
+        }
+      },
       '2012' =>
       {
         CHAPTERS =>
@@ -412,6 +614,19 @@ my %TOURNAMENTS_PORTUGAL =
             major => 'ROUND',
             DATE_START => '2012-04-24',
             DATE_END => '2012-04-26'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'Estoril Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-05-14',
+            DATE_END => '2013-05-17'
           } 
         }
       },

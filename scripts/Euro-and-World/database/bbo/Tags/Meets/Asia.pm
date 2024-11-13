@@ -24,7 +24,9 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   'APBF Championships' => [
-    'pabf championship', 'pabf c',
+    'apbf congress',
+    'pabf championship', 
+    'pabf c',
     'asia pacific bridge federation championship',
     'asia pacific bridge federation championships',
     'asia pacific bridge federation champio teams'],

@@ -13,6 +13,61 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_CROATIA =
 (
+  'Pula Bridge Festival' =>
+  {
+    ORGANIZATION => 'CrBF',
+    COUNTRY => 'Croatia',
+    CITY => 'Pula',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        YEAR => 2009,
+        DATE_START => '2009-09-09',
+        DATE_END => '2009-09-09'
+      },
+      '2010' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-09-08',
+        DATE_END => '2010-09-08'
+      },
+      '2011' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-09-07',
+        DATE_END => '2011-09-07'
+      },
+      '2012' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-09-13',
+        DATE_END => '2012-09-13'
+      },
+      '2013' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-08-31',
+        DATE_END => '2013-08-31'
+      },
+      '2014' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-09-07',
+        DATE_END => '2014-09-07'
+      },
+      '2015' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-09-05',
+        DATE_END => '2015-09-09'
+      },
+    }
+  },
+
   'Samobor Bridge Meeting' =>
   {
     ORGANIZATION => 'CrBF',
@@ -121,6 +176,237 @@ my %TOURNAMENTS_CROATIA =
             DATE_START => '2008-05-25',
             DATE_END => '2008-05-25'
           } 
+        }
+      },
+    }
+  },
+
+  'Pula Mixed Teams' => 
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-09-07',
+            DATE_END => '2014-09-07'
+          },
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-09-06',
+            DATE_END => '2015-09-06'
+          },
+        }
+      },
+    }
+  },
+
+  'Pula Open BAM Teams' => 
+  {
+    FORM => 'Teams',
+    SCORING => 'BAM',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-09-08',
+            DATE_END => '2014-09-08'
+          },
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-09-07',
+            DATE_END => '2015-09-07'
+          },
+        }
+      },
+    }
+  },
+
+  'Pula Open Teams' => 
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2005' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2005,
+            DATE_START => '2005-09-18',
+            DATE_END => '2005-09-18'
+          },
+        }
+      },
+      '2006' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2006,
+            DATE_START => '2006-09-25',
+            DATE_END => '2006-09-25'
+          },
+        }
+      },
+      '2007' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-09-20',
+            DATE_END => '2007-09-20'
+          },
+        }
+      },
+      '2008' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-09-27',
+            DATE_END => '2008-09-27'
+          },
+        }
+      },
+      '2009' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-09-09',
+            DATE_END => '2009-09-10'
+          },
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-09-08',
+            DATE_END => '2010-09-09'
+          },
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-09-07',
+            DATE_END => '2011-09-08'
+          },
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-09-12',
+            DATE_END => '2012-09-13'
+          },
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-09-11',
+            DATE_END => '2013-09-12'
+          },
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-09-10',
+            DATE_END => '2014-09-11'
+          },
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-09-09',
+            DATE_END => '2015-09-11'
+          },
         }
       },
     }

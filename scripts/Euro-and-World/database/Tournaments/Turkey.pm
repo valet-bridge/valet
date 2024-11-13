@@ -13,6 +13,44 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_TURKEY =
 (
+  'Mersin Bridge Festival' =>
+  {
+    ORGANIZATION => 'TBF',
+    COUNTRY => 'Turkey',
+    CITY => 'Mersin',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+
+    EDITIONS => 
+    {
+      '2015' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-09-11',
+        DATE_END => '2015-09-11'
+      },
+    }
+  },
+
+  'Sivrioglu Festival' =>
+  {
+    ORGANIZATION => 'TBF',
+    COUNTRY => 'Turkey',
+    CITY => 'Sivrioglu',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+
+    EDITIONS => 
+    {
+      '2016' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-02-07',
+        DATE_END => '2016-02-07'
+      },
+    }
+  },
+
   'Turkish Open Trials' =>
   {
     ORGANIZATION => 'TBF',
@@ -845,6 +883,75 @@ my %TOURNAMENTS_TURKEY =
     }
   },
 
+  'Mersin Open Patton Teams',
+  {
+    ORGANIZATION => 'TBF',
+    COUNTRY => 'Turkey',
+    REGION => 'Mersin',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'Patton',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        MEET => 'Mersin Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-09-23',
+            DATE_END => '2011-09-23'
+          },
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'Mersin Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-09-20',
+            DATE_END => '2013-09-20'
+          },
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Mersin Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-09-12',
+            DATE_END => '2014-09-12'
+          },
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Mersin Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-09-11',
+            DATE_END => '2015-09-11'
+          },
+        }
+      },
+    }
+  },
+
   'Murat Kilercioglu Turkish Spring Teams',
   {
     ORGANIZATION => 'TBF',
@@ -1084,6 +1191,35 @@ my %TOURNAMENTS_TURKEY =
             major => 'SESSION',
             DATE_START => '2013-06-02',
             DATE_END => '2013-06-03'
+          },
+        }
+      },
+    }
+  },
+
+  'Sivrioglu BAM Teams',
+  {
+    ORGANIZATION => 'TBF',
+    COUNTRY => 'Turkey',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'BAM',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        MEET => 'Sivrioglu Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-02-07',
+            DATE_END => '2016-02-07'
           },
         }
       },

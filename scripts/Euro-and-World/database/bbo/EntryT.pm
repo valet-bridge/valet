@@ -386,6 +386,14 @@ my %FORM_CORRECTIONS = (
     20136, 20162, 20176],
   'Greek Mixed Pairs' => [
     18103, 18134, 18148],
+  'Greek Islands Mixed Pairs' => [
+      933,   940,
+    15096, 15097,
+    19778, 19779],
+  'Greek Islands Open Pairs' => [
+      932,   938,   941,
+    15077, 15082, 15090,
+    19748, 19751, 19777],
   'Greek Open Pair Trials' => [
     12439, 12440, 12441, 12447, 12463, 12464, 12465, 12468, 12470,
     12471, 12484, 12486, 12487, 12489, 12490, 12492, 12520, 12526,
@@ -409,10 +417,11 @@ my %FORM_CORRECTIONS = (
   'Hungarian IMP Pairs' => [
      1113,  1117,  1126,
     12005, 12016],
-  'Karlovo Open Pairs' => [
-    9134],
   'Iceland Express Pairs' => [
-    12516, 12517, 12518],
+    12516, 12517, 12518, 12523, 12524,
+    16585, 16586, 16594,
+    21748, 21759, 21760,
+    37445, 37451],
   'Icelandair Open Pairs' => [
      1725,  1727,  1729],
   'IMSA Elite Open Individual' => [
@@ -495,6 +504,8 @@ my %FORM_CORRECTIONS = (
     44170],
   'Justice J M Lal All India Open Pairs' => [
     27505],
+  'Karlovo Open Pairs' => [
+    9134],
   'L C Sunil Rajendra Memorial' => [
     30177, 30181],
   'Las Palmas Simultaneous Pairs' => [
@@ -677,6 +688,8 @@ my %FORM_CORRECTIONS = (
   'Swiss Open IMP Pairs' => [
     39271, 39282,
     44262, 44279],
+  'Tallinn Invitational Pairs' => [
+    39191, 39195, 39203],
   'TGR Auction Pairs' => [
     12431, 12432,
     16474, 16476, 16477, 16478, 16479, 16480,

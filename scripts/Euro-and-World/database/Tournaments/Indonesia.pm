@@ -184,6 +184,33 @@ my %MEETS_INDONESIA =
     }
   },
 
+  'Indonesian National Pre-Sports Week' =>
+  {
+    ORGANIZATION => 'GABSI',
+    COUNTRY => 'Indonesia',
+    ZONE => 'Asia Pacific',
+
+    EDITIONS => 
+    {
+      '2011' =>
+      {
+        # https://bridge.web.id/2011/prapon18/
+        CITY => 'Pekanbaru',
+        YEAR => 2011,
+        DATE_START => '2011-10-01',
+        DATE_END => '2011-10-08'
+      },
+      '2015' =>
+      {
+        # https://bridge.web.id/2015/pra-pon/
+        CITY => 'Batam',
+        YEAR => 2015,
+        DATE_START => '2015-09-06',
+        DATE_END => '2015-09-12'
+      },
+    }
+  },
+
   'Indonesian Student Championship' =>
   {
     ORGANIZATION => 'GABSI',
@@ -1835,6 +1862,35 @@ my %TOURNAMENTS_INDONESIA =
             DATE_START => '2010-04-16',
             DATE_END => '2010-04-18'
           },
+        }
+      },
+    }
+  },
+
+  'Indonesian Pre-Sports Open Teams' =>
+  {
+    ORGANIZATION => 'GABSI',
+    COUNTRY => 'Indonesia',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        MEET => 'Indonesian National Pre-Sports Week',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-09-30',
+            DATE_END => '2011-10-05'
+          } 
         }
       },
     }

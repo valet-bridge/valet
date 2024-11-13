@@ -579,6 +579,24 @@ my %MEETS_INDIA =
     }
   },
 
+  'Maharaja Holkar National Championship'  =>
+  {
+    ORGANIZATION => 'BFI',
+    COUNTRY => 'India',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+
+    EDITIONS => 
+    {
+      '2010' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-01-07',
+        DATE_END => '2012-01-07'
+      },
+    }
+  },
+
   'Maharashtra State Championship'  =>
   {
     ORGANIZATION => 'BFI',
@@ -3245,6 +3263,7 @@ my %TOURNAMENTS_INDIA =
 
   'Maharaja Yeshwantrao Holkar National Teams' =>
   {
+    # Could be the same as Kalani Trophy
     ORGANIZATION => 'BFI',
     COUNTRY => 'India',
     ORIGIN => 'National',
@@ -3273,6 +3292,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2010' =>
       {
+        MEET => 'Maharaja Holkar National Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -3308,18 +3328,43 @@ my %TOURNAMENTS_INDIA =
       },
       '2013' =>
       {
+        MEET => 'Maharaja Holkar National Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
-            major => 'ROUND',
             DATE_START => '2013-01-10',
-            DATE_END => '2013-01-11'
+            DATE_END => '2013-01-13'
           } 
         }
       },
+      '2014' =>
+      {
+        MEET => 'Maharaja Holkar National Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-01-04',
+            DATE_END => '2014-01-06'
+          },
+        },
+      },
+      '2016' =>
+      {
+        MEET => 'Maharaja Holkar National Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-01-08',
+            DATE_END => '2016-01-10'
+          },
+        },
+      }
     }
   },
 

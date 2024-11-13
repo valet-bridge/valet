@@ -270,6 +270,42 @@ my %MEETS_BALTIC =
     }
   },
 
+  'Tallinn Bridge Festival' =>
+  {
+    ORGANIZATION => 'EstBL',
+    ZONE => 'Europe',
+    CITY => 'Tallinn',
+    COUNTRY => 'Estonia',
+
+    EDITIONS =>
+    {
+      '2004' =>
+      {
+        YEAR => 2004,
+        DATE_START => '2004-05-29',
+        DATE_END => '2004-05-29'
+      },
+      '2013' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-05-23',
+        DATE_END => '2013-05-23'
+      },
+      '2015' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-05-28',
+        DATE_END => '2015-05-28'
+      },
+      '2016' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-05-26',
+        DATE_END => '2016-05-26'
+      },
+    }
+  },
+
   'Vilnius Cup' =>
   {
     ORGANIZATION => 'LiBA',
@@ -757,7 +793,7 @@ my %TOURNAMENTS_BALTIC =
 
   'Fortuna Cup' =>
   {
-    ORGANIZATION => 'LiBA',
+    ORGANIZATION => 'EstBL',
     ORIGIN => 'National',
     CITY => 'Tallinn',
     COUNTRY => 'Estonia',
@@ -791,6 +827,20 @@ my %TOURNAMENTS_BALTIC =
             YEAR => 2011,
             DATE_START => '2011-05-28',
             DATE_END => '2011-05-29'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Tallinn Bridge Festival',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-05-27',
+            DATE_END => '2016-05-27'
           } 
         }
       },
@@ -1162,9 +1212,76 @@ my %TOURNAMENTS_BALTIC =
     }
   },
 
+  'Tallinn Invitational Pairs' =>
+  {
+    ORGANIZATION => 'EstBL',
+    ORIGIN => 'Invitational',
+    CITY => 'Tallinn',
+    COUNTRY => 'Estonia',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-05-28',
+            DATE_END => '2009-05-28'
+          },
+        }
+      },
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-09-27',
+            DATE_END => '2012-09-27'
+          },
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Tallinn Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-05-28',
+            DATE_END => '2015-05-29'
+          },
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Tallinn Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-05-26',
+            DATE_END => '2016-05-26'
+          },
+        }
+      },
+    }
+  },
+
   'Towns Cup' =>
   {
-    ORGANIZATION => 'LiBA',
+    ORGANIZATION => 'EstBL',
     ORIGIN => 'National',
     CITY => 'Tallinn',
     COUNTRY => 'Estonia',
@@ -1176,8 +1293,74 @@ my %TOURNAMENTS_BALTIC =
 
     EDITIONS =>
     {
+      '2004' =>
+      {
+        MEET => 'Tallinn Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2004,
+            DATE_START => '2004-05-29',
+            DATE_END => '2004-05-29'
+          },
+        }
+      },
+      '2007' =>
+      {
+        MEET => 'Tallinn Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-05-30',
+            DATE_END => '2007-05-30'
+          },
+        }
+      },
+      '2008' =>
+      {
+        MEET => 'Tallinn Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-06-03',
+            DATE_END => '2008-06-03'
+          },
+        }
+      },
+      '2009' =>
+      {
+        MEET => 'Tallinn Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-05-29',
+            DATE_END => '2009-05-29'
+          },
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'Tallinn Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-05-28',
+            DATE_END => '2010-05-29'
+          },
+        }
+      },
       '2011' =>
       {
+        MEET => 'Tallinn Bridge Festival',
         CHAPTERS =>
         {
           'C0' => 
@@ -1195,6 +1378,71 @@ my %TOURNAMENTS_BALTIC =
             DATE_START => '2011-05-28',
             DATE_END => '2011-05-28'
           } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'Tallinn Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-05-28',
+            DATE_END => '2012-05-28'
+          },
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'Tallinn Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-05-23',
+            DATE_END => '2013-05-25'
+          },
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Tallinn Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-05-22',
+            DATE_END => '2014-05-24'
+          },
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Tallinn Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-05-29',
+            DATE_END => '2015-05-29'
+          },
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Tallinn Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-05-26',
+            DATE_END => '2016-05-27'
+          },
         }
       },
     }

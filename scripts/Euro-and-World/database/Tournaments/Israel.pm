@@ -20,6 +20,7 @@ my %MEETS_ISRAEL =
 (
   'Rand Cup' =>
   {
+    # Maybe takes place within the Red Sea International Festival
     ORGANIZATION => 'IBF',
     COUNTRY => 'Israel',
 
@@ -54,6 +55,29 @@ my %MEETS_ISRAEL =
     }
   },
 
+  'Red Sea International Festival' =>
+  {
+    ORGANIZATION => 'IBF',
+    COUNTRY => 'Israel',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2015,
+            DATE_START => '2015-11-19',
+            DATE_END => '2015-11-19'
+          }
+        }
+      },
+    },
+  }
 );
 
 my %TOURNAMENTS_ISRAEL =
@@ -767,6 +791,62 @@ my %TOURNAMENTS_ISRAEL =
             major => 'SEGMENT',
             DATE_START => '2011-07-11',
             DATE_END => '2011-07-12'
+          } 
+        }
+      },
+    }
+  },
+
+  'Red Sea Open Swiss Teams' =>
+  {
+    ORGANIZATION => 'IBF',
+    COUNTRY => 'Israel',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    MOVEMENT => 'Swiss',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        MEET => 'Red Sea International Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-11-07',
+            DATE_END => '2009-11-08'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Red Sea International Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-06-08',
+            DATE_END => '2011-06-09'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Red Sea International Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-11-21',
+            DATE_END => '2015-11-21'
           } 
         }
       },

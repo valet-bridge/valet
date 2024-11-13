@@ -13,6 +13,23 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_SOUTHAFRICA =
 (
+  'South African Congress' =>
+  {
+    ORGANIZATION => 'SABF',
+    COUNTRY => 'South Africa',
+    ORIGIN => 'National',
+    ZONE => 'Africa',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-05-17',
+        DATE_END => '2016-05-17'
+      },
+    }
+  },
 );
 
 my %TOURNAMENTS_SOUTHAFRICA =
@@ -139,6 +156,19 @@ my %TOURNAMENTS_SOUTHAFRICA =
             major => 'SEGMENT',
             DATE_START => '2013-04-11',
             DATE_END => '2013-04-12'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'South African Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-05-17',
+            DATE_END => '2016-05-19'
           } 
         }
       },

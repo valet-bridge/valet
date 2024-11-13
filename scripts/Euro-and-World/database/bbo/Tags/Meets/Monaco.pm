@@ -19,7 +19,10 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  'Monaco International Festival' => ['festival international de monaco'],
+  'Monaco International Festival' => [
+    'festival international de monaco',
+    'festival international monaco',
+    'festival international monte-carlo'],
 );
 
 my %SINGLE_TYPOS =

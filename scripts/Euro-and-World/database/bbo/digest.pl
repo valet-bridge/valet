@@ -99,7 +99,7 @@ while ($entryT->read($fh))
 
   if ($tname eq '')
   {
-    # warn $entryT->bbono() . ": no TNAME found for meet $meet";
+    warn $entryT->bbono() . ": no TNAME found for meet $meet";
   }
 
   if ($debug_flag)

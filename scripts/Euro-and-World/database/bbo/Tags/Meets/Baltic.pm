@@ -26,6 +26,7 @@ my %MULTI_TYPOS =
   'Tallinn Bridge Festival' => [
     'talinn festival', 
     'tallin festival',
+    'tallinn festival',
     'tallinns festival'],
   'Vilnius Cup' => ['vv cup'],
 );

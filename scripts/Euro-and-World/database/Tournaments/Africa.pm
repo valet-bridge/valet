@@ -73,7 +73,28 @@ my %MEETS_AFRICA =
         DATE_END => '2015-05-13'
       },
     }
-  }
+  },
+
+  'Fes Festival' =>
+  {
+    ORGANIZATION => 'AfBF',
+    ORIGIN => 'National',
+    CITY => 'Fes',
+    COUNTRY => 'Morocco',
+    ZONE => 'Africa',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS => 
+    {
+      '2010' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-03-12',
+        DATE_END => '2010-03-12'
+      },
+    }
+  },
 );
 
 my %TOURNAMENTS_AFRICA =
@@ -287,6 +308,88 @@ my %TOURNAMENTS_AFRICA =
             major => 'ROUND',
             DATE_START => '2015-05-08',
             DATE_END => '2015-05-13'
+          } 
+        }
+      },
+    }
+  },
+
+  'Morocco Open Pairs' =>
+  {
+    ORGANIZATION => 'AfBF',
+    ORIGIN => 'International',
+    ZONE => 'Africa',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        MEET => 'Fes Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-03-12',
+            DATE_END => '2010-03-14'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Fes Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-03-13',
+            DATE_END => '2011-03-13'
+          } 
+        }
+      },
+    }
+  },
+
+  'Morocco Patton Teams' =>
+  {
+    ORGANIZATION => 'AfBF',
+    ORIGIN => 'International',
+    ZONE => 'Africa',
+    FORM => 'Teams',
+    SCORING => 'Patton',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        MEET => 'Fes Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-03-17',
+            DATE_END => '2010-03-17'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Fes Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-03-16',
+            DATE_END => '2011-03-17'
           } 
         }
       },

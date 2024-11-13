@@ -866,6 +866,19 @@ my %TOURNAMENTS_ASIA =
           } 
         }
       },
+      '2012' =>
+      {
+        MEET => 'APBF Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-08-27',
+            DATE_END => '2012-09-02'
+          },
+        }
+      },
       '2013' =>
       {
         MEET => 'APBF Championships',

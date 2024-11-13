@@ -16,6 +16,7 @@ my @MULTI_WORDS =
 (
   'Azores Festival',
   'Estoril Bridge Festival',
+  'Lisbon International Festival',
   'Madeira International Festival',
 );
 

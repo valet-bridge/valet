@@ -13,6 +13,24 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_MONACO =
 (
+  'Monaco International Festival' =>
+  {
+    ORGANIZATION => 'FMB',
+    ORIGIN => 'International',
+    CITY => 'Monte Carlo',
+    COUNTRY => 'Monaco',
+    ZONE => 'Europe',
+
+    EDITIONS =>
+    {
+      '2008' =>
+      {
+        YEAR => 2008,
+        DATE_START => '2008-11-23',
+        DATE_END => '2008-11-23'
+      },
+    }
+  },
 );
 
 my %TOURNAMENTS_MONACO =
@@ -21,7 +39,7 @@ my %TOURNAMENTS_MONACO =
   {
     ORGANIZATION => 'FMB',
     COUNTRY => 'Monaco',
-    ORIGIN => 'National',
+    ORIGIN => 'International',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'Patton',
@@ -65,6 +83,19 @@ my %TOURNAMENTS_MONACO =
             DATE_START => '2007-11-25',
             DATE_END => '2007-11-25'
           } 
+        }
+      },
+      '2008' =>
+      {
+        MEET => 'Monaco International Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-11-23',
+            DATE_END => '2008-11-23'
+          },
         }
       },
       '2009' =>

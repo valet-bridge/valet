@@ -650,6 +650,9 @@ my @LOCAL_SUBS =
   { START => 43671, END => 43753, 
     TEXT => 'Indonesian Men National Selection', 
     CORR => 'Indonesian Open Pair Trials' },
+  { START => 43890, END => 43944, 
+    TEXT => 'International Teams Festival - Lisbon', 
+    CORR => 'Lisbon International Festival - Teams' },
   { START => 44286, END => 44315, TEXT => 'Swiss Open - Swiss Teams', 
     CORR => 'Swiss Open Teams' },
 );

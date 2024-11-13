@@ -803,6 +803,114 @@ my %MEETS_AUSTRALIA =
     }
   },
 
+  'Gold Coast Congress' =>
+  {
+    ORGANIZATION => 'AuBF',
+    COUNTRY => 'Australia',
+    ORIGIN => 'National',
+    ZONE => 'South Pacific',
+
+    EDITIONS => 
+    {
+      '2005' =>
+      {
+        # https://abfevents.com.au/events/gcc/2005.html
+        YEAR => 2005,
+        CITY => 'Surfers Paradise',
+        DATE_START => '2005-02-19',
+        DATE_END => '2005-02-26'
+      },
+      '2006' =>
+      {
+        # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=06SURF&header=abf
+        YEAR => 2006,
+        CITY => 'Gold Coast',
+        DATE_START => '2006-02-18',
+        DATE_END => '2006-02-25'
+      },
+      '2007' =>
+      {
+        # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=07SURF&header=abf
+        YEAR => 2007,
+        CITY => 'Gold Coast',
+        DATE_START => '2007-02-17',
+        DATE_END => '2007-02-24'
+      },
+      '2008' =>
+      {
+        # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=08GCCC&header=abf
+        YEAR => 2008,
+        CITY => 'Gold Coast',
+        DATE_START => '2008-02-17',
+        DATE_END => '2008-03-01'
+      },
+      '2009' =>
+      {
+        # https://abfevents.com.au/events/results/gcc.asp?yr=2009
+        YEAR => 2009,
+        CITY => 'Gold Coast',
+        DATE_START => '2009-02-28',
+        DATE_END => '2009-03-07'
+      },
+      '2010' =>
+      {
+        # https://abfevents.com.au/events/results/gcc.asp?yr=2010
+        YEAR => 2010,
+        CITY => 'Gold Coast',
+        DATE_START => '2010-02-27',
+        DATE_END => '2010-03-06'
+      },
+      '2011' =>
+      {
+        # https://abfevents.com.au/events/results/gcc.asp?yr=2011
+        YEAR => 2011,
+        CITY => 'Broadbeach',
+        DATE_START => '2011-02-26',
+        DATE_END => '2011-03-05'
+      },
+      '2012' =>
+      {
+        # https://abfevents.com.au/events/results/gcc.asp?yr=2012
+        YEAR => 2012,
+        CITY => 'Broadbeach',
+        DATE_START => '2012-02-25',
+        DATE_END => '2012-03-03'
+      },
+      '2013' =>
+      {
+        # https://abfevents.com.au/events/results/gcc.asp?yr=2013
+        YEAR => 2013,
+        CITY => 'Broadbeach',
+        DATE_START => '2013-02-23',
+        DATE_END => '2013-03-02'
+      },
+      '2014' =>
+      {
+        # https://abfevents.com.au/events/results/gcc.asp?yr=2014
+        YEAR => 2014,
+        CITY => 'Broadbeach',
+        DATE_START => '2014-02-22',
+        DATE_END => '2014-03-01'
+      },
+      '2015' =>
+      {
+        # https://abfevents.com.au/events/results/gcc.asp?yr=2015
+        YEAR => 2015,
+        CITY => 'Broadbeach',
+        DATE_START => '2015-02-21',
+        DATE_END => '2015-02-28'
+      },
+      '2016' =>
+      {
+        # https://abfevents.com.au/events/results/gcc.asp?yr=2016
+        YEAR => 2016,
+        CITY => 'Broadbeach',
+        DATE_START => '2016-02-19',
+        DATE_END => '2016-02-27'
+      },
+    }
+  },
+
   'Victor Champion Cup' =>
   {
     ORGANIZATION => 'AuBF',
@@ -4925,6 +5033,225 @@ my %TOURNAMENTS_AUSTRALIA =
             YEAR => 2016,
             DATE_START => '2016-01-11',
             DATE_END => '2016-01-11'
+          } 
+        }
+      },
+    }
+  },
+
+  'Gold Coast Open Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2005' =>
+      {
+        MEET => 'Gold Coast Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2005,
+            DATE_START => '2005-02-27',
+            DATE_END => '2005-02-27'
+          } 
+        }
+      },
+      '2006' =>
+      {
+        MEET => 'Gold Coast Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            DATE_START => '2006-02-26',
+            DATE_END => '2006-02-26'
+          } 
+        }
+      },
+      '2007' =>
+      {
+        MEET => 'Gold Coast Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-02-24',
+            DATE_END => '2007-02-24'
+          } 
+        }
+      },
+      '2008' =>
+      {
+        MEET => 'Gold Coast Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-03-03',
+            DATE_END => '2008-03-03'
+          } 
+        }
+      },
+      '2009' =>
+      {
+        MEET => 'Gold Coast Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-03-05',
+            DATE_END => '2009-03-06'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'Gold Coast Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-03-04',
+            DATE_END => '2010-03-06'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Gold Coast Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-03-03',
+            DATE_END => '2011-03-04'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'Gold Coast Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-03-01',
+            DATE_END => '2012-03-03'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'Gold Coast Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-03-01',
+            DATE_END => '2013-03-02'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Gold Coast Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-02-28',
+            DATE_END => '2014-03-01'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Gold Coast Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-02-27',
+            DATE_END => '2015-02-28'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Gold Coast Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-02-26',
+            DATE_END => '2016-02-27'
+          } 
+        }
+      },
+    }
+  },
+
+  'Gold Coast Senior Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Seniors',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        MEET => 'Gold Coast Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-02-28',
+            DATE_END => '2014-03-01'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Gold Coast Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-02-27',
+            DATE_END => '2015-02-28'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Gold Coast Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-02-26',
+            DATE_END => '2016-02-27'
           } 
         }
       },

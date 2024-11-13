@@ -20,6 +20,7 @@ my @LOCAL_SUBS =
   # Lots of "Grand Prix of Poland Pairs" are entered as BAM
   # (and sometimes IMPs), I believe incorrectly.
 
+  { START =>  1001, END =>  1014, TEXT => 'IMP', CORR => 'Patton' },
   { START =>  1116, END =>  1118, TEXT => 'BAM', CORR => 'MP' },
   { START =>  1120, END =>  1128, TEXT => 'BAM', CORR => 'MP' },
   { START =>  3077, END =>  3078, TEXT => 'BAM', CORR => 'MP' },
@@ -126,6 +127,9 @@ my @LOCAL_SUBS =
   # Deauville
   { START => 29524, END => 29579, TEXT => 'BAM', CORR => 'Patton' },
   { START => 40062, END => 40187, TEXT => 'BAM', CORR => 'Patton' },
+
+  # Mersin
+  { START => 40879, END => 40888, TEXT => 'BAM', CORR => 'Patton' },
 
   # Salvador Assael
   # { START => 39328, END => 39377, TEXT => 'MP', CORR => 'IAF' },
