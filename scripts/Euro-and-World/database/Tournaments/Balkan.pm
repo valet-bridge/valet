@@ -80,11 +80,129 @@ my %MEETS_BALKAN =
         DATE_END => '2023-10-05'
       },
     }
-  }
+  },
+
+  'Balkan Friendship Festival' =>
+  {
+    ORIGIN => 'International',
+    ZONE => 'Balkan',
+
+    EDITIONS => 
+    {
+      '2008' =>
+      {
+        YEAR => 2008,
+        DATE_START => '2008-05-04',
+        DATE_END => '2008-05-04'
+      },
+    }
+  },
 );
 
 my %TOURNAMENTS_BALKAN =
 (
+  'Balkan Friendship Open Pairs' => 
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2008' =>
+      {
+        MEET => 'Balkan Friendship Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-05-04',
+            DATE_END => '2008-05-04'
+          },
+        }
+      },
+    }
+  },
+
+  'Balkan Friendship Open Teams' => 
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2008' =>
+      {
+        MEET => 'Balkan Friendship Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-05-04',
+            DATE_END => '2008-05-04'
+          },
+        }
+      },
+      '2009' =>
+      {
+        MEET => 'Balkan Friendship Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-05-01',
+            DATE_END => '2009-05-03'
+          },
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'Balkan Friendship Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-04-10',
+            DATE_END => '2010-04-11'
+          },
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Balkan Friendship Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-04-28',
+            DATE_END => '2011-04-29'
+          },
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'Balkan Friendship Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-04-28',
+            DATE_END => '2013-04-29'
+          },
+        }
+      },
+    }
+  },
+
   'Balkan Intercity Cup' => 
   {
     ORIGIN => 'Intercity',

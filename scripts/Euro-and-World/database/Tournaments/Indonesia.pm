@@ -1347,6 +1347,58 @@ my %TOURNAMENTS_INDONESIA =
     }
   },
 
+  'Indonesian Men Pairs' =>
+  {
+    ORIGIN => 'National',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Men',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2012A' =>
+      {
+        MEET => 'Indonesian National Sports Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-09-02',
+            DATE_END => '2012-09-02'
+          },
+        }
+      },
+      '2012B' =>
+      {
+        MEET => 'Indonesian National Sports Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-09-12',
+            DATE_END => '2012-09-13'
+          },
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Indonesian National Pre-Sports Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-09-07',
+            DATE_END => '2015-09-11'
+          },
+        }
+      },
+    }
+  },
+
   'Indonesian Men Teams' =>
   {
     ORIGIN => 'National',
@@ -1425,6 +1477,60 @@ my %TOURNAMENTS_INDONESIA =
             STAGE => 'Bronze',
             DATE_START => '2008-07-16',
             DATE_END => '2008-07-16'
+          },
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Indonesian National Pre-Sports Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-09-07',
+            DATE_END => '2015-09-11'
+          },
+        }
+      },
+    }
+  },
+
+  'Indonesian Mixed Pairs' =>
+  {
+    ORGANIZATION => 'GABSI',
+    COUNTRY => 'Indonesia',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2012A' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-09-03',
+            DATE_END => '2012-09-03'
+          },
+        }
+      },
+      '2012B' =>
+      {
+        MEET => 'Indonesian National Sports Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-09-10',
+            DATE_END => '2012-09-11'
           },
         }
       },
@@ -1880,7 +1986,7 @@ my %TOURNAMENTS_INDONESIA =
 
     EDITIONS =>
     {
-      '2016' =>
+      '2011' =>
       {
         MEET => 'Indonesian National Pre-Sports Week',
         CHAPTERS =>
@@ -1890,6 +1996,19 @@ my %TOURNAMENTS_INDONESIA =
             YEAR => 2011,
             DATE_START => '2011-09-30',
             DATE_END => '2011-10-05'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Indonesian National Pre-Sports Week',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-09-07',
+            DATE_END => '2015-10-10'
           } 
         }
       },
@@ -2480,6 +2599,35 @@ my %TOURNAMENTS_INDONESIA =
     }
   },
 
+  'Indonesian Women Pairs' =>
+  {
+    ORGANIZATION => 'GABSI',
+    COUNTRY => 'Indonesia',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        MEET => 'Indonesian National Sports Week',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-09-12',
+            DATE_END => '2012-09-13'
+          } 
+        }
+      },
+    }
+  },
+
   'Indonesian Women Pair Trials' =>
   {
     ORGANIZATION => 'GABSI',
@@ -2560,7 +2708,20 @@ my %TOURNAMENTS_INDONESIA =
           } 
         }
       },
-      '2015' =>
+      '2012' =>
+      {
+        MEET => 'Indonesian National Sports Week',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-09-14',
+            DATE_END => '2012-09-14'
+          } 
+        }
+      },
+      '2015A' =>
       {
         MEET => 'Indonesian National Championship Week',
         CHAPTERS =>
@@ -2571,6 +2732,19 @@ my %TOURNAMENTS_INDONESIA =
             major => 'ROUND',
             DATE_START => '2015-05-10',
             DATE_END => '2015-05-10'
+          } 
+        }
+      },
+      '2015B' =>
+      {
+        MEET => 'Indonesian National Pre-Sports Week',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-09-10',
+            DATE_END => '2015-09-10'
           } 
         }
       },
