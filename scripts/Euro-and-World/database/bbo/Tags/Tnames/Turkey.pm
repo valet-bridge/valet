@@ -175,6 +175,7 @@ my %MULTI_TYPOS =
   'Turkish Winter Women Teams' => [
     'turkish winter woman team championship',
     "turkish woman's winter teams",
+    "turkish women's winter championship",
     "turkish women's winter teams"],
   'Turkish Women Teams' => [
     'türkish ladies teams',

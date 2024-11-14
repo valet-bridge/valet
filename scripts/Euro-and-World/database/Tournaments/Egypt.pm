@@ -16,10 +16,51 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_EGYPT =
 (
+  'Cairo Bridge Festival' =>
+  {
+    ORGANIZATION => 'EgBF',
+    COUNTRY => 'Egypt',
+    ORIGIN => 'National',
+    ZONE => 'Africa',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        YEAR => 2009,
+        DATE_START => '2009-02-25',
+        DATE_END => '2009-02-25'
+      },
+    }
+  },
 );
 
 my %TOURNAMENTS_EGYPT =
 (
+  'Cairo Open Teams' => 
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-02-25',
+            DATE_END => '2009-02-25'
+          } 
+        }
+      },
+    }
+  },
+
   'Egyptian Cup' => 
   {
     ORGANIZATION => 'EgBF',

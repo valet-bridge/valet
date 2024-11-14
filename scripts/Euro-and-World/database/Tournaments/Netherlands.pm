@@ -24,6 +24,12 @@ my %MEETS_NETHERLANDS =
 
     EDITIONS => 
     {
+      '2013' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-08-29',
+        DATE_END => '2013-08-30'
+      },
       '2016' =>
       {
         YEAR => 2016,
@@ -734,6 +740,19 @@ my %TOURNAMENTS_NETHERLANDS =
 
     EDITIONS =>
     {
+      '2013' =>
+      {
+        MEET => 'The Hague Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-08-29',
+            DATE_END => '2013-08-30'
+          } 
+        }
+      },
       '2016' =>
       {
         MEET => 'The Hague Bridge Experience',

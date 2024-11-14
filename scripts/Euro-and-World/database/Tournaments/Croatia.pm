@@ -228,6 +228,19 @@ my %TOURNAMENTS_CROATIA =
 
     EDITIONS =>
     {
+      '2006' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2006,
+            DATE_START => '2006-09-25',
+            DATE_END => '2006-09-25'
+          },
+        }
+      },
       '2014' =>
       {
         MEET => 'Pula Bridge Festival',

@@ -21,6 +21,7 @@ my @MULTI_WORDS =
   'Israel IMP Pairs',
   'Israel Open Pairs',
   'Israel Open Teams',
+  'Israel Open Teams Cup',
   'Israel Open Trials',
   'Israel School Trials',
   'Israel Women Pairs',
@@ -56,6 +57,12 @@ my %MULTI_TYPOS =
     'israel team championship',
     'israelairs champ_',
     'israeli team champ_'],
+  'Israel Open Teams Cup' => [
+    'israel national team cup',
+    'israel team cup',
+    'israel team of four cup',
+    'israel teams cup',
+    'israeli team cup'],
   'Israel Open Trials' => [
     'israel open team trials',
     'israel open trials',

@@ -18,6 +18,24 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_GREECE =
 (
+  'Crete Bridge Festival' =>
+  {
+    ORGANIZATION => 'EOM',
+    COUNTRY => 'Greece',
+    REGION => 'Crete',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+
+    EDITIONS =>
+    {
+      '2007' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-09-02',
+        DATE_END => '2007-09-02'
+      },
+    }
+  },
 );
 
 my %TOURNAMENTS_GREECE =
@@ -65,6 +83,19 @@ my %TOURNAMENTS_GREECE =
 
     EDITIONS =>
     {
+      '2007' =>
+      {
+        MEET => 'Crete Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-09-02',
+            DATE_END => '2007-09-02'
+          },
+        }
+      },
       '2008' =>
       {
         MEET => 'Greek Islands Festival',
@@ -133,6 +164,19 @@ my %TOURNAMENTS_GREECE =
 
     EDITIONS =>
     {
+      '2007' =>
+      {
+        MEET => 'Crete Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-09-02',
+            DATE_END => '2007-09-02'
+          },
+        }
+      },
       '2008' =>
       {
         MEET => 'Greek Islands Festival',
@@ -201,6 +245,19 @@ my %TOURNAMENTS_GREECE =
 
     EDITIONS =>
     {
+      '2007' =>
+      {
+        MEET => 'Crete Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-09-02',
+            DATE_END => '2007-09-02'
+          },
+        }
+      },
       '2008' =>
       {
         MEET => 'Greek Islands Festival',

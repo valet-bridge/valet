@@ -144,7 +144,7 @@ my %TOURNAMENTS_JORDAN =
           {
             YEAR => 2014,
             major => 'SESSION',
-            DATE_START => '2014-11-06',
+            DATE_START => '2014-11-05',
             DATE_END => '2014-11-07'
           } 
         }
@@ -244,7 +244,7 @@ my %TOURNAMENTS_JORDAN =
             YEAR => 2014,
             major => 'SESSION',
             DATE_START => '2014-11-08',
-            DATE_END => '2014-11-08'
+            DATE_END => '2014-11-09'
           } 
         }
       },

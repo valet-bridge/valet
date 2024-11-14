@@ -50,6 +50,7 @@ my @MULTI_WORDS =
   'Shenzhen Nangangdongli Cup',
   'Sunchime Fund Cup',
   'Tielu Jixie Invitational',
+  'Vanke Open Teams Cup',
   'Xinyuan Cup',
   'Zhejiang Huamen Cup'
 );
@@ -105,7 +106,9 @@ my %MULTI_TYPOS =
     'hna open team',
     "hna's hainan bridge tournament"],
   'Shenhua Cup' => ['shen hua cup'],
-  'Shenyang Spring Teams' => ['shenyang spring']
+  'Shenyang Spring Teams' => ['shenyang spring'],
+  'Vanke Open Teams Cup' => [
+    'vanke cup']
 );
 
 my %SINGLE_TYPOS =

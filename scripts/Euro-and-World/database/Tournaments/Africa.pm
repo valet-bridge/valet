@@ -78,12 +78,10 @@ my %MEETS_AFRICA =
   'Fes Festival' =>
   {
     ORGANIZATION => 'AfBF',
-    ORIGIN => 'National',
+    ORIGIN => 'International',
     CITY => 'Fes',
     COUNTRY => 'Morocco',
     ZONE => 'Africa',
-    FORM => 'Teams',
-    SCORING => 'IMP',
 
     EDITIONS => 
     {

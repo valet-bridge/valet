@@ -154,14 +154,12 @@ my @MULTI_WORDS =
 (
   'International Bridge Festival',
   'Winter Bridge Festival',
-  'Winter Championships',
+  # 'Winter Championships',
 );
 
 my %MULTI_TYPOS =
 (
   'International Bridge Festival' => ['int_ bridge festival'],
-  'Winter Championships' => ['winter championship',
-    'winter championsship'],
 );
 
 my @SINGLE_WORDS = qw(

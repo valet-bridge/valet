@@ -13,6 +13,24 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_DENMARK =
 (
+  'Copenhagen Invitational' =>
+  {
+    ORGANIZATION => 'DBF',
+    CITY => 'Copenhagen',
+    COUNTRY => 'Denmark',
+    ZONE => 'Europe',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-12-13',
+        DATE_END => '2014-12-13'
+      },
+    }
+  },
+
   'Danish Bridge Festival' =>
   {
     ORGANIZATION => 'DBF',
@@ -131,15 +149,72 @@ my %TOURNAMENTS_DENMARK =
     ORIGIN => 'Invitational',
     ZONE => 'Europe',
     FORM => 'Pairs',
-    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
     CITY => 'Copenhagen',
 
     EDITIONS =>
     {
+      '2010A' =>
+      {
+        MEET => 'Copenhagen Invitational',
+        SCORING => 'MP',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-11-04',
+            DATE_END => '2010-11-04'
+          } 
+        }
+      },
+      '2010B' =>
+      {
+        MEET => 'Copenhagen Invitational',
+        SCORING => 'IMP',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-11-05',
+            DATE_END => '2010-11-07'
+          } 
+        }
+      },
+      '2013A' =>
+      {
+        MEET => 'Copenhagen Invitational',
+        SCORING => 'MP',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-02-21',
+            DATE_END => '2013-02-21'
+          } 
+        }
+      },
+      '2013B' =>
+      {
+        MEET => 'Copenhagen Invitational',
+        SCORING => 'IMP',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-02-22',
+            DATE_END => '2013-02-24'
+          } 
+        }
+      },
       '2014' =>
       {
+        MEET => 'Copenhagen Invitational',
+        SCORING => 'MP',
         CHAPTERS => 
         {
           'SINGLE' => 
@@ -148,6 +223,20 @@ my %TOURNAMENTS_DENMARK =
             STAGE => 'Qualifying',
             DATE_START => '2014-12-13',
             DATE_END => '2014-12-14'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Copenhagen Invitational',
+        SCORING => 'IMP',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-01-16',
+            DATE_END => '2015-01-18'
           } 
         }
       }
@@ -206,6 +295,32 @@ my %TOURNAMENTS_DENMARK =
           } 
         }
       }
+    }
+  },
+
+  'Copenhagen Pro-Am Pairs',
+  {
+    ORIGIN => 'Pro-Am',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        MEET => 'Copenhagen Invitational',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-01-15',
+            DATE_END => '2015-01-15'
+          } 
+        }
+      },
     }
   },
 

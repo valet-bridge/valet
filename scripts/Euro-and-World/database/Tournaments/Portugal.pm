@@ -283,6 +283,19 @@ my %TOURNAMENTS_PORTUGAL =
 
     EDITIONS =>
     {
+      '2015' =>
+      {
+        MEET => 'Lisbon International Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-03-13',
+            DATE_END => '2015-03-15'
+          } 
+        }
+      },
       '2016' =>
       {
         MEET => 'Lisbon International Festival',

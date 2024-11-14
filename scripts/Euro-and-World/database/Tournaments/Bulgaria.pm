@@ -167,6 +167,13 @@ my %MEETS_BULGARIA =
 
     EDITIONS => 
     {
+      '2009' =>
+      {
+        ORDINAL => 24,
+        YEAR => 2009,
+        DATE_START => '2009-04-09',
+        DATE_END => '2009-04-12'
+      },
       '2013' =>
       {
         # https://www.bridge.bg/en/tournaments/1182-28th-International-Bridge-Festival-Dobrich-2013
@@ -277,7 +284,7 @@ my %MEETS_BULGARIA =
         ORDINAL => 28,
         YEAR => 2009,
         DATE_START => '2009-04-30',
-        DATE_END => '2009-04-03'
+        DATE_END => '2009-05-03'
       },
       '2010' =>
       {
@@ -374,7 +381,7 @@ my %MEETS_BULGARIA =
         ORDINAL => 17,
         YEAR => 2009,
         DATE_START => '2009-05-16',
-        DATE_END => '2010905-17'
+        DATE_END => '2009-05-17'
       },
       '2010' =>
       {
@@ -575,7 +582,7 @@ my %TOURNAMENTS_BULGARIA =
           {
             YEAR => 2016,
             major => 'ROUND',
-            DATE_START => '2016-07-08',
+            DATE_START => '2016-07-03',
             DATE_END => '2016-07-10'
           } 
         }
@@ -993,6 +1000,20 @@ my %TOURNAMENTS_BULGARIA =
 
     EDITIONS =>
     {
+      '2009' =>
+      {
+        MEET => 'Dobrich Bridge Festival',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-04-12',
+            DATE_END => '2009-04-12'
+          } 
+        }
+      },
       '2013' =>
       {
         MEET => 'Dobrich Bridge Festival',
@@ -1560,6 +1581,18 @@ my %TOURNAMENTS_BULGARIA =
             DATE_START => '2009-10-11',
             DATE_END => '2009-10-11'
           } 
+        }
+      },
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-10-02',
+            DATE_END => '2010-10-02'
+          },
         }
       },
       '2011' =>

@@ -31,7 +31,7 @@ my %COUNTRY_TO_REGION =
     'yunnan', 'zhejiang'],
   Denmark => ['bornholm', 'fjends', 'midtsjælland', 'sydvest'],
   France => ['corsica', 'new caledonia'],
-  Greece => ['rhodes'],
+  Greece => ['crete', 'rhodes'],
   Iceland => ['eyjafjallajokull'],
   Hungary => ['hegyvidék'],
   Italy => ['olona'],

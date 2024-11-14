@@ -2044,6 +2044,34 @@ my %TOURNAMENTS_CHINA =
     }
   },
 
+  'Vanke Open Teams Cup' =>
+  {
+    ORGANIZATION => 'CCBA',
+    COUNTRY => 'China',
+    ORIGIN => 'National',
+    ZONE => 'Asia',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-07-13',
+            DATE_END => '2012-07-15'
+          } 
+        }
+      },
+    }
+  },
+
   'Xinyuan Cup' =>
   {
     ORGANIZATION => 'CCBA',

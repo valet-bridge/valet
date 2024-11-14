@@ -26,6 +26,8 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'Albena Bridge Festival' => [
+    'international bridge festival albena'],
   'Dobrich Bridge Festival' => [
     'ibf dobrich'],
   'Lozenets Bridge Festival' => ['bridge festival lozenets'],

@@ -16,10 +16,78 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_ROMANIA =
 (
+  'Brasov Festival' =>
+  {
+    ORGANIZATION => 'FRB',
+    CITY => 'Brasov',
+    COUNTRY => 'Romania',
+    ORIGIN => 'National',
+    ZONE => 'Europe Pacific',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        YEAR => 2009,
+        DATE_START => '2009-11-19',
+        DATE_END => '2009-11-19'
+      },
+    }
+  },
 );
 
 my %TOURNAMENTS_ROMANIA =
 (
+  'Brasov Open Pairs',
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        MEET => 'Brasov Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-11-21',
+            DATE_END => '2009-11-22'
+          } 
+        }
+      },
+    }
+  },
+
+  'Brasov Open Teams',
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        MEET => 'Brasov Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-11-19',
+            DATE_END => '2009-11-20'
+          } 
+        }
+      },
+    }
+  },
+
   'Romanian League',
   {
     ORGANIZATION => 'FRB',

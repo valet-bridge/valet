@@ -272,6 +272,7 @@ my %MEETS_BALTIC =
 
   'Tallinn Bridge Festival' =>
   {
+    # https://old.bridge.ee/festival/results.php
     ORGANIZATION => 'EstBL',
     ZONE => 'Europe',
     CITY => 'Tallinn',
@@ -285,23 +286,86 @@ my %MEETS_BALTIC =
         DATE_START => '2004-05-29',
         DATE_END => '2004-05-29'
       },
+      '2012' =>
+      {
+        # https://old.bridge.ee/festival/5SFG_fest12.htm
+        ORDINAL => 45,
+        YEAR => 2012,
+        DATE_START => '2012-09-27',
+        DATE_END => '2012-09-30'
+      },
       '2013' =>
       {
+        # https://old.bridge.ee/festival/fest13.htm
+        ORDINAL => 46,
         YEAR => 2013,
-        DATE_START => '2013-05-23',
-        DATE_END => '2013-05-23'
+        DATE_START => '2013-05-22',
+        DATE_END => '2013-05-26'
+      },
+      '2014' =>
+      {
+        # https://old.bridge.ee/festival/fest14.htm
+        ORDINAL => 47,
+        YEAR => 2014,
+        DATE_START => '2014-05-21',
+        DATE_END => '2014-05-25'
       },
       '2015' =>
       {
+        # https://old.bridge.ee/festival/fest15.htm
+        ORDINAL => 48,
         YEAR => 2015,
-        DATE_START => '2015-05-28',
-        DATE_END => '2015-05-28'
+        DATE_START => '2015-05-27',
+        DATE_END => '2015-05-31'
       },
       '2016' =>
       {
+        ORDINAL => 49,
         YEAR => 2016,
-        DATE_START => '2016-05-26',
-        DATE_END => '2016-05-26'
+        DATE_START => '2016-05-25',
+        DATE_END => '2016-05-29'
+      },
+      '2017' =>
+      {
+        ORDINAL => 50,
+        YEAR => 2017,
+        DATE_START => '2017-05-25',
+        DATE_END => '2017-05-29'
+      },
+      '2018' =>
+      {
+        ORDINAL => 51,
+        YEAR => 2018,
+        DATE_START => '2018-04-24',
+        DATE_END => '2018-04-28'
+      },
+      '2019' =>
+      {
+        ORDINAL => 52,
+        YEAR => 2019,
+        DATE_START => '2019-05-02',
+        DATE_END => '2019-05-05'
+      },
+      '2022' =>
+      {
+        ORDINAL => 53,
+        YEAR => 2022,
+        DATE_START => '2022-04-20',
+        DATE_END => '2022-04-24'
+      },
+      '2023' =>
+      {
+        ORDINAL => 54,
+        YEAR => 2023,
+        DATE_START => '2023-05-25',
+        DATE_END => '2023-05-28'
+      },
+      '2024' =>
+      {
+        ORDINAL => 55,
+        YEAR => 2024,
+        DATE_START => '2024-05-16',
+        DATE_END => '2024-05-19'
       },
     }
   },
@@ -817,6 +881,19 @@ my %TOURNAMENTS_BALTIC =
           } 
         }
       },
+      '2010' =>
+      {
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-05-29',
+            DATE_END => '2010-05-30'
+          } 
+        }
+      },
       '2011' =>
       {
         SCORING => 'IMP',
@@ -1220,7 +1297,6 @@ my %TOURNAMENTS_BALTIC =
     COUNTRY => 'Estonia',
     ZONE => 'Europe',
     FORM => 'Pairs',
-    SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
@@ -1228,6 +1304,7 @@ my %TOURNAMENTS_BALTIC =
     {
       '2009' =>
       {
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'C0' => 
@@ -1238,8 +1315,22 @@ my %TOURNAMENTS_BALTIC =
           },
         }
       },
+      '2010' =>
+      {
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-05-27',
+            DATE_END => '2010-05-27'
+          },
+        }
+      },
       '2012' =>
       {
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'C0' => 
@@ -1253,6 +1344,7 @@ my %TOURNAMENTS_BALTIC =
       '2015' =>
       {
         MEET => 'Tallinn Bridge Festival',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'C0' => 
@@ -1266,6 +1358,7 @@ my %TOURNAMENTS_BALTIC =
       '2016' =>
       {
         MEET => 'Tallinn Bridge Festival',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'C0' => 
@@ -1341,7 +1434,7 @@ my %TOURNAMENTS_BALTIC =
           {
             YEAR => 2009,
             DATE_START => '2009-05-29',
-            DATE_END => '2009-05-29'
+            DATE_END => '2009-05-30'
           },
         }
       },
@@ -1388,8 +1481,8 @@ my %TOURNAMENTS_BALTIC =
           'C0' => 
           {
             YEAR => 2012,
-            DATE_START => '2012-05-28',
-            DATE_END => '2012-05-28'
+            DATE_START => '2012-09-28',
+            DATE_END => '2012-09-30'
           },
         }
       },

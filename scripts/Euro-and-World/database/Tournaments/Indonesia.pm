@@ -1480,6 +1480,19 @@ my %TOURNAMENTS_INDONESIA =
           },
         }
       },
+      '2012' =>
+      {
+        MEET => 'Indonesian National Pre-Sports Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-09-14',
+            DATE_END => '2012-09-18'
+          },
+        }
+      },
       '2015' =>
       {
         MEET => 'Indonesian National Pre-Sports Week',
@@ -2717,7 +2730,7 @@ my %TOURNAMENTS_INDONESIA =
           {
             YEAR => 2012,
             DATE_START => '2012-09-14',
-            DATE_END => '2012-09-14'
+            DATE_END => '2012-09-18'
           } 
         }
       },

@@ -13,6 +13,25 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_TURKEY =
 (
+  'Bodrum Peninsula Festival' =>
+  {
+    ORGANIZATION => 'TBF',
+    COUNTRY => 'Turkey',
+    CITY => 'Bodrum',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+
+    EDITIONS => 
+    {
+      '2014' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-07-25',
+        DATE_END => '2014-07-25'
+      },
+    }
+  },
+
   'Mersin Bridge Festival' =>
   {
     ORGANIZATION => 'TBF',
@@ -84,6 +103,24 @@ my %MEETS_TURKEY =
         YEAR => 2016,
         DATE_START => '2016-07-01',
         DATE_END => '2016-07-03'
+      },
+    }
+  },
+
+  'Turkish Winter Championships' =>
+  {
+    ORGANIZATION => 'TBF',
+    COUNTRY => 'Turkey',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+
+    EDITIONS => 
+    {
+      '2012' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-02-23',
+        DATE_END => '2012-02-23'
       },
     }
   },
@@ -421,6 +458,31 @@ my %TOURNAMENTS_TURKEY =
             minor => 'SEGMENT',
             DATE_START => '2012-06-28',
             DATE_END => '2012-06-28'
+          },
+        }
+      },
+    }
+  },
+
+  'Bodrum Patton Teams',
+  {
+    FORM => 'Teams',
+    SCORING => 'Patton',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        MEET => 'Bodrum Peninsula Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-07-25',
+            DATE_END => '2014-07-25'
           },
         }
       },
@@ -2469,22 +2531,67 @@ my %TOURNAMENTS_TURKEY =
       },
       '2011' =>
       {
+        MEET => 'Turkish Winter Championships',
         CHAPTERS =>
         {
           'C0' => 
           {
             YEAR => 2011,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2011-03-08',
-            DATE_END => '2011-03-08'
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2011-03-04',
+            DATE_END => '2011-03-05'
           },
           'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2011-03-06',
+            DATE_END => '2011-03-06'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2011-03-06',
+            DATE_END => '2011-03-07'
+          },
+          'C3' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-03-07',
+            DATE_END => '2011-03-08'
+          },
+          'C4' => 
           {
             YEAR => 2011,
             STAGE => 'Semifinal',
             DATE_START => '2011-03-08',
             DATE_END => '2011-03-08'
+          },
+          'C5' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            DATE_START => '2011-03-09',
+            DATE_END => '2011-03-09'
+          },
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'Turkish Winter Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-02-23',
+            DATE_END => '2012-02-28'
           },
         }
       },
@@ -2744,6 +2851,19 @@ my %TOURNAMENTS_TURKEY =
 
     EDITIONS =>
     {
+      '2012' =>
+      {
+        MEET => 'Turkish Winter Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-03-17',
+            DATE_END => '2012-03-18'
+          },
+        }
+      },
       '2013' =>
       {
         # http://clubs.vugraph.com/tbricfed/calendar.php?month=2&year=2013

@@ -16,6 +16,23 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_FINLAND =
 (
+  'Pärnu Festival' =>
+  {
+    ORGANIZATION => 'SBL',
+    COUNTRY => 'Finland',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+
+    EDITIONS =>
+    {
+      '2007' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-10-22',
+        DATE_END => '2007-10-22'
+      },
+    }
+  },
 );
 
 my %TOURNAMENTS_FINLAND =
@@ -931,7 +948,7 @@ my %TOURNAMENTS_FINLAND =
     ORGANIZATION => 'SBL',
     COUNTRY => 'Finland',
     CITY => 'Pärnu',
-    ORIGIN => 'Invitational',
+    ORIGIN => 'National',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -942,6 +959,7 @@ my %TOURNAMENTS_FINLAND =
     {
       '2008' =>
       {
+        MEET => 'Pärnu Festival',
         CHAPTERS =>
         {
           'SINGLE' => 

@@ -3309,7 +3309,7 @@ my %TOURNAMENTS_INDIA =
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2010-01-09',
-            DATE_END => '2010-01-09'
+            DATE_END => '2010-01-10'
           } 
         }
       },

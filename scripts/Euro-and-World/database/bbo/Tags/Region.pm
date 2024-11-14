@@ -139,7 +139,7 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   Aceh Agder Akdeniz Akkad Anhui Ayrshire
   Bali Banten Belitung Bengkayang Bihar Bornholm Bungo Buskerud
-  Cappadocia Catalonia Corsica
+  Cappadocia Catalonia Corsica Crete
   Dersým Druts
   Eyjafjallajokull
   Fjends Florida

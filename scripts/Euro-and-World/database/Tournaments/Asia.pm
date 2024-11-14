@@ -1086,6 +1086,19 @@ my %TOURNAMENTS_ASIA =
           } 
         }
       },
+      '2012' =>
+      {
+        MEET => 'APBF Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-08-27',
+            DATE_END => '2012-09-02'
+          } 
+        }
+      },
       '2013' =>
       {
         MEET => 'APBF Championships',
@@ -1259,6 +1272,19 @@ my %TOURNAMENTS_ASIA =
             minor => 'MATCH',
             DATE_START => '2010-05-24',
             DATE_END => '2010-05-26'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'APBF Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-08-27',
+            DATE_END => '2012-09-02'
           } 
         }
       },

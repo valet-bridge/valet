@@ -29,9 +29,13 @@ my %MULTI_TYPOS =
     'bolkan championship',
     'bolkan team championship',
     'bolkan teams championship'],
-  'Balkan Friendship Festival' => ['balkan bridge festival',
-    'balkan festival', 'balcan friendship festival',
-    'balcan frienship festival', 'balkan frienship festival',
+  'Balkan Friendship Festival' => [
+    'balcan friendship festival',
+    'balcan frienship festival', 
+    'balkan bridge festival',
+    'balkan festival', 
+    'balkan festivan', 
+    'balkan frienship festival',
     'balkan friendsphip festival'],
 );
 
