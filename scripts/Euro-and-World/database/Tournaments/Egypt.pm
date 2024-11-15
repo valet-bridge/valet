@@ -48,6 +48,7 @@ my %TOURNAMENTS_EGYPT =
     {
       '2009' =>
       {
+        MEET => 'Cairo Bridge Festival',
         CHAPTERS =>
         {
           'SINGLE' => 

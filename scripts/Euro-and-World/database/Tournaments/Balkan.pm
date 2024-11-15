@@ -183,7 +183,7 @@ my %TOURNAMENTS_BALKAN =
           {
             YEAR => 2011,
             DATE_START => '2011-04-28',
-            DATE_END => '2011-04-29'
+            DATE_END => '2011-04-30'
           },
         }
       },

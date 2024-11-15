@@ -1527,6 +1527,18 @@ my %TOURNAMENTS_BULGARIA =
 
     EDITIONS =>
     {
+      '2006' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2006,
+            DATE_START => '2006-10-17',
+            DATE_END => '2006-10-17'
+          },
+        }
+      },
       '2007' =>
       {
         CHAPTERS =>
@@ -1591,7 +1603,7 @@ my %TOURNAMENTS_BULGARIA =
           {
             YEAR => 2010,
             DATE_START => '2010-10-02',
-            DATE_END => '2010-10-02'
+            DATE_END => '2010-10-03'
           },
         }
       },

@@ -19,6 +19,9 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'Zurich Open' => [
+    'international zurich festival',
+    'zurich international festival'],
 );
 
 my %SINGLE_TYPOS =

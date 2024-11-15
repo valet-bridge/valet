@@ -461,15 +461,29 @@ my %TOURNAMENTS_SWITZERLAND =
   'Zurich Open Pairs' =>
   {
     FORM => 'Pairs',
-    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
+      '2013' =>
+      {
+        MEET => 'Zurich Open',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-03-01',
+            DATE_END => '2013-03-02'
+          } 
+        }
+      },
       '2014' =>
       {
         MEET => 'Zurich Open',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 

@@ -877,7 +877,7 @@ my %TOURNAMENTS_BALTIC =
           {
             YEAR => 2009,
             DATE_START => '2009-05-30',
-            DATE_END => '2009-05-30'
+            DATE_END => '2009-05-31'
           } 
         }
       },
@@ -1302,6 +1302,19 @@ my %TOURNAMENTS_BALTIC =
 
     EDITIONS =>
     {
+      '2005' =>
+      {
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2005,
+            DATE_START => '2005-05-26',
+            DATE_END => '2005-05-26'
+          },
+        }
+      },
       '2009' =>
       {
         SCORING => 'IMP',
@@ -1338,6 +1351,20 @@ my %TOURNAMENTS_BALTIC =
             YEAR => 2012,
             DATE_START => '2012-09-27',
             DATE_END => '2012-09-27'
+          },
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Tallinn Bridge Festival',
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-05-22',
+            DATE_END => '2014-05-22'
           },
         }
       },
@@ -1396,6 +1423,32 @@ my %TOURNAMENTS_BALTIC =
             YEAR => 2004,
             DATE_START => '2004-05-29',
             DATE_END => '2004-05-29'
+          },
+        }
+      },
+      '2005' =>
+      {
+        MEET => 'Tallinn Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2005,
+            DATE_START => '2005-05-31',
+            DATE_END => '2005-05-31'
+          },
+        }
+      },
+      '2006' =>
+      {
+        MEET => 'Tallinn Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2006,
+            DATE_START => '2006-05-26',
+            DATE_END => '2006-05-26'
           },
         }
       },

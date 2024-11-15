@@ -273,8 +273,8 @@ my %MEETS_ISRAEL =
         CITY => 'Eilat',
         COUNTRY => 'Israel',
         YEAR => 2011,
-        DATE_START => '2014-11-17',
-        DATE_END => '2014-11-27'
+        DATE_START => '2011-11-17',
+        DATE_END => '2011-11-27'
       },
       '2012' =>
       {
@@ -403,6 +403,44 @@ my %TOURNAMENTS_ISRAEL =
     }
   },
 
+  'Israel Festival Open Pairs' =>
+  {
+    FORM => 'Pairs',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        MEET => 'Israel Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-02-26',
+            DATE_END => '2010-02-26'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Israel Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-02-18',
+            DATE_END => '2011-02-18'
+          } 
+        }
+      },
+    }
+  },
+
   'Israel Festival Open Teams' =>
   {
     FORM => 'Teams',
@@ -412,6 +450,45 @@ my %TOURNAMENTS_ISRAEL =
 
     EDITIONS =>
     {
+      '2009' =>
+      {
+        MEET => 'Israel Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-02-13',
+            DATE_END => '2009-02-13'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'Israel Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-02-26',
+            DATE_END => '2010-02-26'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Israel Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-02-18',
+            DATE_END => '2011-02-18'
+          } 
+        }
+      },
       '2016' =>
       {
         MEET => 'Israel Bridge Festival',
@@ -563,6 +640,19 @@ my %TOURNAMENTS_ISRAEL =
             major => 'ROUND',
             DATE_START => '2009-03-28',
             DATE_END => '2009-03-28'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'Israel Grand Prix',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-09-02',
+            DATE_END => '2010-09-03'
           } 
         }
       },

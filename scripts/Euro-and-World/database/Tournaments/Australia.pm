@@ -5039,6 +5039,31 @@ my %TOURNAMENTS_AUSTRALIA =
     }
   },
 
+  'Gold Coast Open Pairs' =>
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        MEET => 'Gold Coast Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-03-03',
+            DATE_END => '2009-03-03'
+          } 
+        }
+      },
+    }
+  },
+
   'Gold Coast Open Teams' =>
   {
     FORM => 'Teams',

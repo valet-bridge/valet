@@ -58,6 +58,7 @@ my @MULTI_WORDS =
   'Polish U16 Teams',
   'Polish U20 Trials',
   'Polish U25 Trials',
+  'Polish Women Pairs',
   'Polish Women Trials',
   'Pomerania Cup',
   'Sigismund Bell Krakow',
@@ -128,6 +129,7 @@ my %MULTI_TYPOS =
   'Polish Mixed Pairs' => [
     'otwarte mistrzostwa poznania mixt',
     'mixed championship of poland',
+    'mixed pairs championship of poland',
     'polish mixed pairs championship',
     'polish mixed pairs championships',
     'polish mixt pairs championship'],
@@ -139,6 +141,8 @@ my %MULTI_TYPOS =
     'forumbridge_pl top pairs',
     'inea cup',
     'open pairs championship of poland',
+    'pairs championship od poland',
+    'pairs championship of poland',
     'polish championship open pairs',
     'polish open pairs championship'],
   'Polish Open Teams' => [
@@ -172,6 +176,8 @@ my %MULTI_TYPOS =
     'polish premiere league'],
   'Polish School Championship' => [
     'polish schools champ',
+    'polish schools champs',
+    'polish schools championship',
     'polish schools championships'],
   'Polish Second League' => ['polish 2 league'],
   'Polish Third League' => ['polish league: division 3'],
@@ -180,6 +186,8 @@ my %MULTI_TYPOS =
     'polish u16 championships'],
   'Polish U20 Trials' => ['u20 polish trials'],
   'Polish U25 Trials' => ['poish u25 trials'],
+  'Polish Women Pairs' => [
+    'women pairs championship of poland'],
   'Polish Women Trials' => ['polish trials women',
     'polish trials ladies', 'woman trial poland',
     "polish bridge union women's trials"],

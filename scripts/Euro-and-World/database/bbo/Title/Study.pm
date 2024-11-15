@@ -424,6 +424,8 @@ my @LOCAL_SUBS =
     CORR => 'Grand Prix of Poland Pairs' },
   { START => 26563, END => 26616, TEXT => 'Winter\s+Nationals*',
     CORR => 'Indian Winter Nationals' },
+  { START => 26753, END => 26759, TEXT => 'Summer Festival',
+    CORR => 'Australian Summer Festival' },
   { START => 27066, END => 27107, TEXT => 'Romanian National Teams',
     CORR => 'Romanian League' },
   { START => 27085, END => 27107, TEXT => 'Romanian National Championship',

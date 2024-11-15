@@ -23,7 +23,8 @@ my %MULTI_TYPOS =
     'iceland bridge festival',
     'iceland bridgefestival',
     'iceland express bridge festival',
-    'icelandic express bridge festival'],
+    'icelandic express bridge festival',
+    'reykavik bridge festival'],
 );
 
 my %SINGLE_TYPOS =

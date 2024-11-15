@@ -14,6 +14,7 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
+  'Aegean Open Teams',
   'Anatolian Club Teams',
   'Anatolian Fall Teams',
   'Anatolian Spring Teams',
@@ -54,6 +55,8 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'Aegean Open Teams' => [
+    'aegean championships' ],
   'Anatolian Club Teams' => [
     'anatolian club qualifying',
     'eastern anatolian qualification',

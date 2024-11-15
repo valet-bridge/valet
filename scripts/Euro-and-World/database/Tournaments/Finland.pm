@@ -16,6 +16,31 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_FINLAND =
 (
+  'Jyväskylä Easter Bridge Festival' =>
+  {
+    ORGANIZATION => 'SBL',
+    CITY => 'Jyväskylä',
+    COUNTRY => 'Finland',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+
+    EDITIONS =>
+    {
+      '2008' =>
+      {
+        YEAR => 2008,
+        DATE_START => '2008-04-02',
+        DATE_END => '2008-04-02'
+      },
+      '2009' =>
+      {
+        YEAR => 2009,
+        DATE_START => '2009-04-10',
+        DATE_END => '2009-04-10'
+      },
+    }
+  },
+
   'Pärnu Festival' =>
   {
     ORGANIZATION => 'SBL',
@@ -908,6 +933,44 @@ my %TOURNAMENTS_FINLAND =
             DATE_START => '2013-07-25',
             DATE_END => '2013-07-25'
           } 
+        }
+      },
+    }
+  },
+
+  'Jyväskylä Open Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2008' =>
+      {
+        MEET => 'Jyväskylä Easter Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-04-02',
+            DATE_END => '2008-04-02'
+          },
+        }
+      },
+      '2009' =>
+      {
+        MEET => 'Jyväskylä Easter Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-04-10',
+            DATE_END => '2009-04-10'
+          },
         }
       },
     }

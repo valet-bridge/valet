@@ -130,7 +130,7 @@ my %TOURNAMENTS_JORDAN =
           {
             YEAR => 2013,
             major => 'SESSION',
-            DATE_START => '2013-11-08',
+            DATE_START => '2013-11-06',
             DATE_END => '2013-11-08'
           } 
         }
@@ -178,7 +178,7 @@ my %TOURNAMENTS_JORDAN =
           {
             YEAR => 2015,
             major => 'SESSION',
-            DATE_START => '2015-11-05',
+            DATE_START => '2015-11-04',
             DATE_END => '2015-11-07'
           } 
         }
@@ -234,6 +234,19 @@ my %TOURNAMENTS_JORDAN =
 
     EDITIONS =>
     {
+      '2013' =>
+      {
+        MEET => 'Jordan Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-11-09',
+            DATE_END => '2013-11-10'
+          } 
+        }
+      },
       '2014' =>
       {
         MEET => 'Jordan Bridge Festival',

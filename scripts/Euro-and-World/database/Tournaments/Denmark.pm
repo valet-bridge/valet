@@ -183,21 +183,7 @@ my %TOURNAMENTS_DENMARK =
           } 
         }
       },
-      '2013A' =>
-      {
-        MEET => 'Copenhagen Invitational',
-        SCORING => 'MP',
-        CHAPTERS => 
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2013,
-            DATE_START => '2013-02-21',
-            DATE_END => '2013-02-21'
-          } 
-        }
-      },
-      '2013B' =>
+      '2013' =>
       {
         MEET => 'Copenhagen Invitational',
         SCORING => 'IMP',
@@ -308,6 +294,19 @@ my %TOURNAMENTS_DENMARK =
 
     EDITIONS =>
     {
+      '2013' =>
+      {
+        MEET => 'Copenhagen Invitational',
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-02-21',
+            DATE_END => '2013-02-21'
+          } 
+        }
+      },
       '2015' =>
       {
         MEET => 'Copenhagen Invitational',

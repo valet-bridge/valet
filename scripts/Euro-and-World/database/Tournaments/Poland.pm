@@ -658,6 +658,25 @@ my %MEETS_POLAND =
     }
   },
 
+  'Polish School Championship' =>
+  {
+    ORGANIZATION => 'PZBS',
+    COUNTRY => 'Poland',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    AGE => 'Schools',
+
+    EDITIONS => 
+    {
+      '2012' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-06-07',
+        DATE_END => '2012-06-07'
+      },
+    }
+  },
+
   'Poznan Congress' =>
   {
     ORGANIZATION => 'PZBS',
@@ -2895,6 +2914,19 @@ my %TOURNAMENTS_POLAND =
       },
       '2016D' =>
       {
+        CITY => 'Dąbrowa Gornicza',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-06-17',
+            DATE_END => '2016-06-19'
+          },
+        }
+      },
+      '2016E' =>
+      {
         # https://wyniki.pzbs.pl/2016/baltycki/
         MEET => 'Baltic Congress',
         CHAPTERS =>
@@ -3725,6 +3757,19 @@ my %TOURNAMENTS_POLAND =
           },
         }
       },
+      '2014' =>
+      {
+        MEET => 'Polish Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-11-22',
+            DATE_END => '2014-11-23'
+          } 
+        }
+      },
       '2015' =>
       {
         # https://wyniki.pzbs.pl/2015/kjb/
@@ -3734,9 +3779,8 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2015,
-            major => 'ROUND',
             DATE_START => '2015-11-21',
-            DATE_END => '2015-11-21'
+            DATE_END => '2015-11-22'
           } 
         }
       },
@@ -3920,7 +3964,7 @@ my %TOURNAMENTS_POLAND =
           },
         }
       },
-      '2011' =>
+      '2011A' =>
       {
         # https://s3.eu-central-1.amazonaws.com/kongres.brydz.wlkp.pl/wyniki2011/W-sb2m.html
         MEET => 'Poznan Congress',
@@ -3932,6 +3976,20 @@ my %TOURNAMENTS_POLAND =
             major => 'SESSION',
             DATE_START => '2011-04-30',
             DATE_END => '2011-04-30'
+          } 
+        }
+      },
+      '2011B' =>
+      {
+        # http://www.kongres-slawa.pl/2011/k4.html
+        MEET => 'Slawa Congress',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-07-09',
+            DATE_END => '2011-07-09'
           } 
         }
       },
@@ -3947,6 +4005,19 @@ my %TOURNAMENTS_POLAND =
             major => 'ROUND',
             DATE_START => '2012-05-01',
             DATE_END => '2012-05-01'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'Polish Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-04-29',
+            DATE_END => '2013-04-29'
           } 
         }
       },
@@ -4134,6 +4205,34 @@ my %TOURNAMENTS_POLAND =
             major => 'ROUND',
             DATE_START => '2012-03-30',
             DATE_END => '2012-03-30'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'Polish Championships',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-05-03',
+            DATE_END => '2013-05-04'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Polish Championships',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-05-03',
+            DATE_END => '2014-05-04'
           } 
         }
       },
@@ -5366,21 +5465,41 @@ my %TOURNAMENTS_POLAND =
     }
   },
 
-  'Polish School Championship',
+  'Polish School Pairs',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        MEET => 'Polish School Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-06-07',
+            DATE_END => '2012-06-07'
+          },
+        }
+      },
+    }
+  },
+
+  'Polish School Teams',
+  {
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'U18', # Unclear
 
     EDITIONS =>
     {
       '2010' =>
       {
+        MEET => 'Polish School Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -5399,6 +5518,19 @@ my %TOURNAMENTS_POLAND =
             DATE_START => '2010-06-13',
             DATE_END => '2010-06-13'
           } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'Polish School Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-06-08',
+            DATE_END => '2012-06-08'
+          },
         }
       },
     }
@@ -5574,6 +5706,35 @@ my %TOURNAMENTS_POLAND =
             major => 'ROUND',
             DATE_START => '2016-05-01',
             DATE_END => '2016-05-02'
+          } 
+        }
+      },
+    }
+  },
+
+  'Polish Women Pairs',
+  {
+    ORGANIZATION => 'PZBS',
+    COUNTRY => 'Poland',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        MEET => 'Polish Championships',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-05-02',
+            DATE_END => '2014-05-03'
           } 
         }
       },

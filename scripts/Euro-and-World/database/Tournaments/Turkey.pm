@@ -13,6 +13,24 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_TURKEY =
 (
+  'Assael Festival' =>
+  {
+    ORGANIZATION => 'TBF',
+    COUNTRY => 'Turkey',
+    CITY => 'Cesme',
+    ZONE => 'Europe',
+
+    EDITIONS => 
+    {
+      '2014' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-06-03',
+        DATE_END => '2014-06-08'
+      },
+    }
+  },
+
   'Bodrum Peninsula Festival' =>
   {
     ORGANIZATION => 'TBF',
@@ -152,6 +170,35 @@ my %MEETS_TURKEY =
 
 my %TOURNAMENTS_TURKEY =
 (
+  'Aegean Open Teams',
+  {
+    ORGANIZATION => 'TBF',
+    CITY => 'Izmir',
+    COUNTRY => 'Turkey',
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-06-29',
+            DATE_END => '2012-07-01'
+          },
+        }
+      },
+    }
+  },
+
   'Anatolian Club Teams',
   {
     ORGANIZATION => 'TBF',
@@ -1219,7 +1266,7 @@ my %TOURNAMENTS_TURKEY =
   {
     ORGANIZATION => 'TBF',
     COUNTRY => 'Turkey',
-    ORIGIN => 'Regional',
+    ORIGIN => 'Pro-Am',
     ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
@@ -1256,6 +1303,20 @@ my %TOURNAMENTS_TURKEY =
           },
         }
       },
+      '2014' =>
+      {
+        MEET => 'Assael Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-06-04',
+            DATE_END => '2016-02-04'
+          },
+        }
+      },
+
     }
   },
 
@@ -1282,6 +1343,35 @@ my %TOURNAMENTS_TURKEY =
             YEAR => 2016,
             DATE_START => '2016-02-07',
             DATE_END => '2016-02-07'
+          },
+        }
+      },
+    }
+  },
+
+  'Solakoglu IMP Pairs',
+  {
+    ORGANIZATION => 'TBF',
+    COUNTRY => 'Turkey',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        MEET => 'Assael Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-06-03',
+            DATE_END => '2016-02-06'
           },
         }
       },

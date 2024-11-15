@@ -3788,6 +3788,45 @@ my %TOURNAMENTS_INDONESIA =
     }
   },
 
+  'West Java Open Teams' =>
+  {
+    ORGANIZATION => 'GABSI',
+    COUNTRY => 'Indonesia',
+    ORIGIN => 'Regional',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-07-07',
+            DATE_END => '2010-07-09'
+          },
+        }
+      },
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-11-16',
+            DATE_END => '2014-11-17'
+          },
+        }
+      },
+    }
+  },
 );
 
 

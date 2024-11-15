@@ -21,6 +21,7 @@ my @MULTI_WORDS =
   'Luczniczka Meeting',
   'Palace Cup',
   'Polish Championships',
+  'Polish School Championship',
   'Poznan Congress',
   'Slawa Congress',
   'Warsaw Grand Prix',
@@ -42,11 +43,14 @@ my %MULTI_TYPOS =
     'international baltic congress'],
   'Krakow Congress' => ['krakow meeting'],
   'Luczniczka Meeting' => ['meeting luczniczka'],
-  'Polish Pairs Championship' => [
-    'pairs championship od poland',
-    'pairs championship of poland'],
-  'Polish Schools Championship' => [
+  # 'Polish Championships' => [
+    # 'polish championship'],
+  # 'Polish Pairs Championship' => [
+    # 'pairs championship od poland',
+    # 'pairs championship of poland'],
+  'Polish School Championship' => [
     'polish schools champ',
+    'polish Schools championship',
     'polish schools champs'],
   'Polish Youth Olympiad' => ['oom'],
   'Poznan Congress' => [
@@ -54,7 +58,11 @@ my %MULTI_TYPOS =
     'kongres poznanski',
     'poznan bridge congress',
     'poznanski kongres brydzowy'],
-  'Slawa Congress' => ['slava congress'],
+  'Slawa Congress' => [
+    'kongres slawa',
+    'slava congress',
+    's³awa turniej kongresowy',
+    'turniej kongresowy slawa'],
   'Zulawski Congress' => [
     'mityng zulawski',
     "kongres \"zulawski\"",

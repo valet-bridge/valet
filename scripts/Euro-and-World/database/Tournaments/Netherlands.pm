@@ -37,6 +37,24 @@ my %MEETS_NETHERLANDS =
         DATE_END => '2016-08-20'
       },
     }
+  },
+
+  'VVE Beheer Bridge Week',
+  {
+    ORGANIZATION => 'NBB',
+    CITY => 'The Hague',
+    COUNTRY => 'Netherlands',
+    ORIGIN => 'National',
+
+    EDITIONS => 
+    {
+      '2013' =>
+      {
+        YEAR => 2009,
+        DATE_START => '2009-08-07',
+        DATE_END => '2009-08-08'
+      },
+    }
   }
 );
 
@@ -1021,6 +1039,31 @@ my %TOURNAMENTS_NETHERLANDS =
             minor => 'ROUND',
             DATE_START => '2016-03-05',
             DATE_END => '2016-03-06'
+          } 
+        }
+      },
+    }
+  },
+
+  'VVE Beheer Open Teams',
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        MEET => 'VVE Beheer Bridge Week',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-08-07',
+            DATE_END => '2009-08-08'
           } 
         }
       },

@@ -21,7 +21,6 @@ my @MULTI_WORDS =
   'Indonesian National Sports Week',
   'Indonesian Student Championship',
   'Indonesian University Championship',
-  'West Java Regional',
 );
 
 my %MULTI_TYPOS =
@@ -42,7 +41,8 @@ my %MULTI_TYPOS =
     'indonesian games',
     'indonesian nasional games'],
   'Indonesian National Pre-Sports Week' => ['pra pon'],
-  'Indonesian National Sports Week' => ['indonesia week',
+  'Indonesian National Sports Week' => [
+    'indonesia week',
     'indonesian national sports weeks'],
   'Indonesian Student Championship' => [
     'indonesian student championships',
@@ -50,11 +50,6 @@ my %MULTI_TYPOS =
     'indonesian students championships'],
   'Indonesian University Championship' => [
     'indonesian university championships'],
-  'West Java Regional' => [
-    'regional west java',
-    'west java regional games', 
-    'west java regional sport games',
-    'west java regional spots event'],
 );
 
 my %SINGLE_TYPOS =

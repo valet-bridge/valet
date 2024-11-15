@@ -198,8 +198,8 @@ my %TOURNAMENTS_GREECE =
           'C0' => 
           {
             YEAR => 2009,
-            DATE_START => '2009-09-17',
-            DATE_END => '2009-09-19'
+            DATE_START => '2009-08-17',
+            DATE_END => '2009-08-19'
           },
         }
       },

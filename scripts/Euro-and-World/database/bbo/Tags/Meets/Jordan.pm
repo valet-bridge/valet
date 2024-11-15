@@ -14,13 +14,14 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
-  'Amman Bridge Festival',
   'Jordan Bridge Festival',
 );
 
 my %MULTI_TYPOS =
 (
   'Jordan Bridge Festival' => [
+    'amman bridge festival',
+    'amman festival',
     'jordab festival',
     'jordan festival',
     'jordan b_ festival',

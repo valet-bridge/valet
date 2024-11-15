@@ -3298,12 +3298,20 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2010,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-01-08',
+            DATE_END => '2010-01-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2010-01-08',
             DATE_END => '2010-01-09'
           },
-          'C1' => 
+          'C2' => 
           {
             YEAR => 2010,
             STAGE => 'Final',
