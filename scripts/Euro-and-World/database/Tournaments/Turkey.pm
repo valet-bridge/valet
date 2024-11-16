@@ -31,6 +31,25 @@ my %MEETS_TURKEY =
     }
   },
 
+  'Cappadocia Fairy Chimneys Festival' =>
+  {
+    ORGANIZATION => 'TBF',
+    COUNTRY => 'Turkey',
+    REGION => 'Cappadocia',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+
+    EDITIONS => 
+    {
+      '2009' =>
+      {
+        YEAR => 2009,
+        DATE_START => '2009-07-21',
+        DATE_END => '2009-07-21'
+      },
+    }
+  },
+
   'Bodrum Peninsula Festival' =>
   {
     ORGANIZATION => 'TBF',
@@ -84,6 +103,25 @@ my %MEETS_TURKEY =
         YEAR => 2016,
         DATE_START => '2016-02-07',
         DATE_END => '2016-02-07'
+      },
+    }
+  },
+
+  'Turkish-Greek Friendship Festival' =>
+  {
+    ORGANIZATION => 'TBF',
+    COUNTRY => 'Turkey',
+    ORIGIN => 'Transnational',
+    ZONE => 'Europe',
+
+    EDITIONS => 
+    {
+      '2011' =>
+      {
+        ORDINAL => 3,
+        YEAR => 2011,
+        DATE_START => '2011-09-09',
+        DATE_END => '2011-09-09'
       },
     }
   },
@@ -530,6 +568,70 @@ my %TOURNAMENTS_TURKEY =
             YEAR => 2014,
             DATE_START => '2014-07-25',
             DATE_END => '2014-07-25'
+          },
+        }
+      },
+    }
+  },
+
+  'Cappadocia Open Pairs' =>
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        MEET => 'Cappadocia Fairy Chimneys Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-10-24',
+            DATE_END => '2009-10-24'
+          },
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'Cappadocia Fairy Chimneys Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-10-23',
+            DATE_END => '2010-10-24'
+          },
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Cappadocia Fairy Chimneys Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-11-19',
+            DATE_END => '2011-11-19'
+          },
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'Cappadocia Fairy Chimneys Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-11-03',
+            DATE_END => '2012-11-03'
           },
         }
       },
@@ -992,6 +1094,31 @@ my %TOURNAMENTS_TURKEY =
     }
   },
 
+  'Mersin Open Pairs',
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        MEET => 'Mersin Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-09-25',
+            DATE_END => '2011-09-25'
+          },
+        }
+      },
+    }
+  },
+
   'Mersin Open Patton Teams',
   {
     ORGANIZATION => 'TBF',
@@ -1446,6 +1573,69 @@ my %TOURNAMENTS_TURKEY =
             major => 'SEGMENT',
             DATE_START => '2016-06-05',
             DATE_END => '2016-06-05'
+          },
+        }
+      },
+    }
+  },
+
+  'Turkish-Greek Open Pairs',
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        MEET => 'Turkish-Greek Friendship Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-09-09',
+            DATE_END => '2011-09-10'
+          },
+        }
+      },
+    }
+  },
+
+  'Turkish-Greek Open Teams',
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        MEET => 'Turkish-Greek Friendship Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-09-24',
+            DATE_END => '2010-09-24'
+          },
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Turkish-Greek Friendship Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-09-11',
+            DATE_END => '2011-09-12'
           },
         }
       },

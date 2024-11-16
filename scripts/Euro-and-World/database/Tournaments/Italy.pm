@@ -13,6 +13,24 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_ITALY =
 (
+  'Festival della Matematica' =>
+  {
+    ORGANIZATION => 'FIGB',
+    COUNTRY => 'Italy',
+    ORIGIN => 'International',
+    ZONE => 'Europe',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        YEAR => 2009,
+        DATE_START => '2009-03-22',
+        DATE_END => '2009-03-22'
+      },
+    }
+  },
+
   'Italian Club Championship' =>
   {
     ORGANIZATION => 'FIGB',
@@ -3743,6 +3761,31 @@ my %TOURNAMENTS_ITALY =
           }
         }
       }
+    }
+  },
+
+  'Festival della Matematica Open Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        MEET => 'Festival della Matematica',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            YEAR => 2009,
+            DATE_START => '2009-03-22',
+            DATE_END => '2009-03-22'
+          }
+        }
+      },
     }
   },
 

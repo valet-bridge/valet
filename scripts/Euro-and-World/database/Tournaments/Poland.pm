@@ -30,6 +30,14 @@ my %MEETS_POLAND =
 
     EDITIONS => 
     {
+      '2009' =>
+      {
+        ORDINAL => 49,
+        YEAR => 2010,
+        CITY => 'Sopot',
+        DATE_START => '2010-07-21',
+        DATE_END => '2010-07-22'
+      },
       '2010' =>
       {
         # https://bridge.gda.pl/kongres/10/k_baltycki10.htm
@@ -654,6 +662,25 @@ my %MEETS_POLAND =
         YEAR => 2016,
         DATE_START => '2016-04-30',
         DATE_END => '2016-05-03'
+      },
+    }
+  },
+
+  'Polish Pairs Championship' =>
+  {
+    ORGANIZATION => 'PZBS',
+    COUNTRY => 'Poland',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+
+    EDITIONS => 
+    {
+      '2006' =>
+      {
+        YEAR => 2006,
+        DATE_START => '2006-05-07',
+        DATE_END => '2006-05-07'
       },
     }
   },
@@ -2478,6 +2505,19 @@ my %TOURNAMENTS_POLAND =
     {
       '2009A' =>
       {
+        CITY => 'Staszic',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-03-08',
+            DATE_END => '2009-03-08'
+          } 
+        }
+      },
+      '2009B' =>
+      {
         MEET => 'Poznan Congress',
 
         CHAPTERS =>
@@ -2490,20 +2530,21 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2009B' =>
+      '2009C' =>
       {
-        CITY => 'Staszic',
+        MEET => 'Baltic Congress',
+
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2009,
-            DATE_START => '2009-03-08',
-            DATE_END => '2009-03-08'
+            DATE_START => '2009-07-21',
+            DATE_END => '2009-07-22'
           } 
         }
       },
-      '2009C' =>
+      '2009D' =>
       {
         MEET => 'Warsaw Grand Prix',
         CHAPTERS =>
@@ -3943,7 +3984,6 @@ my %TOURNAMENTS_POLAND =
     ORIGIN => 'National',
     ZONE => 'Europe',
     FORM => 'Pairs',
-    SCORING => 'MP',
     GENDER => 'Mixed',
     AGE => 'Open',
 
@@ -3952,7 +3992,7 @@ my %TOURNAMENTS_POLAND =
       '2009' =>
       {
         MEET => 'Poznan Congress',
-
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'C0' => 
@@ -3968,6 +4008,7 @@ my %TOURNAMENTS_POLAND =
       {
         # https://s3.eu-central-1.amazonaws.com/kongres.brydz.wlkp.pl/wyniki2011/W-sb2m.html
         MEET => 'Poznan Congress',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3983,6 +4024,7 @@ my %TOURNAMENTS_POLAND =
       {
         # http://www.kongres-slawa.pl/2011/k4.html
         MEET => 'Slawa Congress',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3997,6 +4039,7 @@ my %TOURNAMENTS_POLAND =
       {
         # https://wyniki.pzbs.pl/2012/mmm/W-mxt.html
         MEET => 'Polish Championships',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4004,13 +4047,14 @@ my %TOURNAMENTS_POLAND =
             YEAR => 2012,
             major => 'ROUND',
             DATE_START => '2012-05-01',
-            DATE_END => '2012-05-01'
+            DATE_END => '2012-05-02'
           } 
         }
       },
       '2013' =>
       {
         MEET => 'Polish Championships',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4025,6 +4069,7 @@ my %TOURNAMENTS_POLAND =
       {
         # https://wyniki.pzbs.pl/2014/mpp/W-mxtf.html
         MEET => 'Polish Championships',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4040,7 +4085,7 @@ my %TOURNAMENTS_POLAND =
       {
         # https://wyniki.pzbs.pl/2015/mpp/W-mxtf.html
         MEET => 'Polish Championships',
-
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4056,7 +4101,7 @@ my %TOURNAMENTS_POLAND =
       {
         # https://wyniki.pzbs.pl/2016/mpp/W-openf2.html
         MEET => 'Polish Championships',
-
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4115,6 +4160,20 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
+      '2006' =>
+      {
+        MEET => 'Polish Pairs Championship',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            DATE_START => '2006-05-07',
+            DATE_END => '2006-05-07'
+          } 
+        }
+      },
       '2007' =>
       {
         MEET => 'Polish Championships',
@@ -4169,7 +4228,7 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2011' =>
+      '2011A' =>
       {
         # https://s3.eu-central-1.amazonaws.com/kongres.brydz.wlkp.pl/wyniki2011/W-sb1.html
         MEET => 'Poznan Congress',
@@ -4185,7 +4244,48 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2012' =>
+      '2011B' =>
+      {
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-05-14',
+            DATE_END => '2011-05-15'
+          } 
+        }
+      },
+      '2011C' =>
+      {
+        MEET => 'Slawa Congress',
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-07-12',
+            DATE_END => '2011-07-12'
+          } 
+        }
+      },
+      '2011D' =>
+      {
+        MEET => 'Slawa Congress',
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-07-14',
+            DATE_END => '2011-07-15'
+          } 
+        }
+      },
+      '2012A' =>
       {
         # http://wengorz.waw.pl/top2012/
         SCORING => 'IMP',
@@ -4205,6 +4305,20 @@ my %TOURNAMENTS_POLAND =
             major => 'ROUND',
             DATE_START => '2012-03-30',
             DATE_END => '2012-03-30'
+          } 
+        }
+      },
+      '2012B' =>
+      {
+        MEET => 'Polish Pairs Championship',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-05-05',
+            DATE_END => '2012-05-06'
           } 
         }
       },

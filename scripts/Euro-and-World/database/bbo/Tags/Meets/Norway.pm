@@ -23,8 +23,7 @@ my %MULTI_TYPOS =
   'Norwegian District Championship' => [
     'norw district', 
     'norway regional champship',
-    'norwegian district',
-    'norwegian regional chship'],
+    'norwegian district'],
 );
 
 my %SINGLE_TYPOS =

@@ -20,7 +20,6 @@ my @MULTI_WORDS =
   'Marmara Festival',
   'Mersin Bridge Festival',
   'Sivrioglu Festival',
-  'Turkish Autumn Festival',
   'Turkish-Greek Friendship Festival',
   'Turkish Open Trials', # TODO Is this a Meet?
   'Turkish Winter Championships',
@@ -31,13 +30,16 @@ my %MULTI_TYPOS =
 (
   'Bodrum Peninsula Festival' => ['bodrum yarýmada bric festivali'],
   'Cappadocia Fairy Chimneys Festival' => [
-    'kapadokya brýç festývalý'],
+    'cappadocia bridge fest',
+    'kapadokya brýç festývalý',
+    'sonbahar bridge festival'],
   'Marmara Festival' => ['festival marmara'],
   'Mersin Bridge Festival' => [
+    'international bridge festival mersin_turkey',
     'mersin bridge fest',
     'mersin brdige festival'],
-  'Turkish Autumn Festival' => ['sonbahar bridge festival'],
   'Turkish-Greek Friendship Festival' => [
+    'greek-turkish festival',
     'greek-turkish friendship festival'],
   'Turkish Open Trials' => [
     'turkey open national team selection',

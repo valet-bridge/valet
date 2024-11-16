@@ -27,128 +27,81 @@ my %MEETS_ASIA =
         ORDINAL => 43,
         CITY => 'Seoul',
         COUNTRY => 'South Korea',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2005,
-            DATE_START => '2005-06-23',
-            DATE_END => '2005-07-03'
-          } 
-        }
+        YEAR => 2005,
+        DATE_START => '2005-06-23',
+        DATE_END => '2005-07-03'
       },
       '2006' =>
       {
         ORDINAL => 44,
         CITY => 'Shanghai',
         COUNTRY => 'China',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            # Dates are just a guess.
-            YEAR => 2006,
-            DATE_START => '2006-08-24',
-            DATE_END => '2006-08-29'
-          } 
-        }
+        # Dates are just a guess.
+        YEAR => 2006,
+        DATE_START => '2006-08-24',
+        DATE_END => '2006-08-29'
       },
       '2007' =>
       {
         ORDINAL => 45,
         CITY => 'Bandung',
         COUNTRY => 'Indonesia',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2007,
-            DATE_START => '2007-06-04',
-            DATE_END => '2007-06-13'
-          } 
-        }
+        YEAR => 2007,
+        DATE_START => '2007-06-04',
+        DATE_END => '2007-06-13'
       },
       '2008' =>
       {
         # Probably a PABF championship and not really
         # the official ABPF one.  Also the date is suspect --
         # probably 2008.
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2008,
-            DATE_START => '2008-09-10',
-            DATE_END => '2008-09-10'
-          } 
-        }
+        YEAR => 2008,
+        DATE_START => '2008-09-10',
+        DATE_END => '2008-09-10'
       },
       '2009' =>
       {
         ORDINAL => 46,
         CITY => 'Macau',
         COUNTRY => 'Macau',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2009,
-            DATE_START => '2009-06-18',
-            DATE_END => '2009-06-28'
-          } 
-        }
+        YEAR => 2009,
+        DATE_START => '2009-06-18',
+        DATE_END => '2009-06-28'
       },
       '2010' =>
       {
         ORDINAL => 47,
         CITY => 'Hamilton',
         COUNTRY => 'New Zealand',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2010,
-            DATE_START => '2010-05-23',
-            DATE_END => '2010-05-29'
-          } 
-        }
+        YEAR => 2010,
+        DATE_START => '2010-05-23',
+        DATE_END => '2010-05-29'
       },
       '2011' =>
       {
         ORDINAL => 48,
         CITY => 'Kuala Lumpur',
         COUNTRY => 'Malaysia',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2010,
-            DATE_START => '2010-05-23',
-            DATE_END => '2010-05-29'
-          } 
-        }
+        YEAR => 2011,
+        DATE_START => '2011-05-23',
+        DATE_END => '2011-05-29'
+      },
+      '2012' =>
+      {
+        YEAR => 2012,
+        CITY => 'Fukuoka',
+        COUNTRY => 'Japan',
+        DATE_START => '2012-08-25',
+        DATE_END => '2012-09-02'
       },
       '2013' =>
       {
         ORDINAL => 49,
         CITY => 'Hong Kong',
         COUNTRY => 'Hong Kong',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2013,
-            DATE_START => '2013-06-07',
-            DATE_END => '2013-06-16'
-          } 
-        }
+        YEAR => 2013,
+        DATE_START => '2013-06-07',
+        DATE_END => '2013-06-16'
       },
       '2015' =>
       {
@@ -156,16 +109,9 @@ my %MEETS_ASIA =
         ORDINAL => 50,
         CITY => 'Bangkok',
         COUNTRY => 'Thailand',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2015,
-            DATE_START => '2015-05-20',
-            DATE_END => '2015-05-31'
-          } 
-        }
+        YEAR => 2015,
+        DATE_START => '2015-05-20',
+        DATE_END => '2015-05-31'
       },
       '2017' =>
       {
@@ -173,16 +119,9 @@ my %MEETS_ASIA =
         ORDINAL => 51,
         CITY => 'Seoul',
         COUNTRY => 'South Korea',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2017,
-            DATE_START => '2017-05-28',
-            DATE_END => '2017-06-07'
-          } 
-        }
+        YEAR => 2017,
+        DATE_START => '2017-05-28',
+        DATE_END => '2017-06-07'
       },
       '2019' =>
       {
@@ -190,16 +129,9 @@ my %MEETS_ASIA =
         ORDINAL => 52,
         CITY => 'Singapore',
         COUNTRY => 'Singapore',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2019,
-            DATE_START => '2019-06-11',
-            DATE_END => '2019-06-20'
-          } 
-        }
+        YEAR => 2019,
+        DATE_START => '2019-06-11',
+        DATE_END => '2019-06-20'
       },
       '2023' =>
       {
@@ -207,16 +139,9 @@ my %MEETS_ASIA =
         ORDINAL => 53,
         CITY => 'Hong Kong',
         COUNTRY => 'Hong Kong',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2023,
-            DATE_START => '2023-06-09',
-            DATE_END => '2023-06-17'
-          } 
-        }
+        YEAR => 2023,
+        DATE_START => '2023-06-09',
+        DATE_END => '2023-06-17'
       },
     }
   },
@@ -231,45 +156,25 @@ my %MEETS_ASIA =
     {
       '2006' =>
       {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            # Guess.
-            YEAR => 2006,
-            DATE_START => '2006-06-10',
-            DATE_END => '2006-06-10'
-          } 
-        }
+        # Guess.
+        YEAR => 2006,
+        DATE_START => '2006-06-10',
+        DATE_END => '2006-06-10'
       },
       '2010' =>
       {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            # Guess.
-            YEAR => 2010,
-            DATE_START => '2010-05-24',
-            DATE_END => '2010-05-29'
-          } 
-        }
+        YEAR => 2010,
+        DATE_START => '2010-05-24',
+        DATE_END => '2010-05-29'
       },
       '2013' =>
       {
         ORDINAL => 19,
         CITY => 'Wuhan',
         COUNTRY => 'China',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2013,
-            DATE_START => '2013-08-19',
-            DATE_END => '2013-09-25'
-          } 
-        }
+        YEAR => 2013,
+        DATE_START => '2013-08-19',
+        DATE_END => '2013-09-25'
       },
     }
   },
@@ -288,80 +193,45 @@ my %MEETS_ASIA =
         ORDINAL => 30,
         CITY => 'Semarang',
         COUNTRY => 'Indonesia',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2008,
-            DATE_START => '2008-12-03',
-            DATE_END => '2008-12-07'
-          } 
-        }
+        YEAR => 2008,
+        DATE_START => '2008-12-03',
+        DATE_END => '2008-12-07'
       },
       '2009' =>
       {
         ORDINAL => 31,
         CITY => 'Kuala Lumpur',
         COUNTRY => 'Malaysia',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2009,
-            DATE_START => '2009-12-05',
-            DATE_END => '2009-12-09'
-          } 
-        }
+        YEAR => 2009,
+        DATE_START => '2009-12-05',
+        DATE_END => '2009-12-09'
       },
       '2010' =>
       {
         ORDINAL => 32,
         CITY => 'Bangkok',
         COUNTRY => 'Thailand',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2010,
-            DATE_START => '2010-11-21',
-            DATE_END => '2010-11-24'
-          } 
-        }
+        YEAR => 2010,
+        DATE_START => '2010-11-21',
+        DATE_END => '2010-11-24'
       },
       '2012' =>
       {
         ORDINAL => 34,
         CITY => 'Bali',
         COUNTRY => 'Indonesia',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2012,
-            DATE_START => '2012-12-05',
-            DATE_END => '2012-12-09'
-          } 
-        }
+        YEAR => 2012,
+        DATE_START => '2012-12-05',
+        DATE_END => '2012-12-09'
       },
       '2015' =>
       {
         ORDINAL => 37,
         CITY => 'Bangkok',
         COUNTRY => 'Thailand',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2015,
-            DATE_START => '2015-12-03',
-            DATE_END => '2015-12-06'
-          } 
-        }
+        YEAR => 2015,
+        DATE_START => '2015-12-03',
+        DATE_END => '2015-12-06'
       },
     }
   },
@@ -380,16 +250,9 @@ my %MEETS_ASIA =
         ORDINAL => 2,
         CITY => 'Jinhua',
         COUNTRY => 'China',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2014,
-            DATE_START => '2014-06-12',
-            DATE_END => '2014-06-22'
-          } 
-        }
+        YEAR => 2014,
+        DATE_START => '2014-06-12',
+        DATE_END => '2014-06-22'
       },
       '2018' =>
       {
@@ -397,16 +260,9 @@ my %MEETS_ASIA =
         ORDINAL => 3,
         CITY => 'Goa',
         COUNTRY => 'India',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2018,
-            DATE_START => '2018-06-04',
-            DATE_END => '2018-06-10'
-          } 
-        }
+        YEAR => 2018,
+        DATE_START => '2018-06-04',
+        DATE_END => '2018-06-10'
       },
       '2022' =>
       {
@@ -414,16 +270,9 @@ my %MEETS_ASIA =
         ORDINAL => 4,
         CITY => 'Jakarta',
         COUNTRY => 'Indonesia',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2022,
-            DATE_START => '2022-10-19',
-            DATE_END => '2022-10-25'
-          } 
-        }
+        YEAR => 2022,
+        DATE_START => '2022-10-19',
+        DATE_END => '2022-10-25'
       },
     }
   },
@@ -441,16 +290,9 @@ my %MEETS_ASIA =
         ORDINAL => 26,
         CITY => 'Jakarta',
         COUNTRY => 'Indonesia',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2011,
-            DATE_START => '2011-09-08',
-            DATE_END => '2011-09-21'
-          } 
-        }
+        YEAR => 2011,
+        DATE_START => '2011-09-08',
+        DATE_END => '2011-09-21'
       },
     }
   },
@@ -550,12 +392,25 @@ my %TOURNAMENTS_ASIA =
           'C1' => 
           {
             YEAR => 2010,
-            DATE_START => '2010-05-26',
             STAGE => 'Round-robin',
             major => 'ROUND',
             minor => 'MATCH',
+            DATE_START => '2010-05-26',
             DATE_END => '2010-05-29'
           } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'APBF Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-09-02',
+            DATE_END => '2012-09-02'
+          },
         }
       },
       '2013' =>

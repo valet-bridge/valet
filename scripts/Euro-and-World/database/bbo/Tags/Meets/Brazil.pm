@@ -15,6 +15,7 @@ our @EXPORT = qw(set_hash);
 my @MULTI_WORDS =
 (
   'Brazilian Trials',
+  'Buzios Festival',
 );
 
 my %MULTI_TYPOS =
@@ -22,6 +23,10 @@ my %MULTI_TYPOS =
   'Brazilian Trials' => [
     'brazilian team trials',
     'brazilian teams trials'],
+  'Buzios Festival' => [
+    'bruzios bridge festival',
+    'buzios brazil bridge festival',
+    'buzios bridge festival'],
 );
 
 my %SINGLE_TYPOS =

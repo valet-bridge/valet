@@ -136,6 +136,7 @@ my %MULTI_TYPOS =
     'telkom speedy',
     'telkom indonesian open'],
   'West Java Open Teams' => [
+    'banten sports week',
     'regional west java',
     'west java regional',
     'west java regional games',

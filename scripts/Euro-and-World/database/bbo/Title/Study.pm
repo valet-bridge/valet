@@ -184,6 +184,8 @@ my @LOCAL_SUBS =
     CORR => 'Lozenets Bridge Festival' },
   { START => 10525, END => 10540, TEXT => 'Hindusthan Club',
     CORR => 'Hindusthan Club Teams' },
+  { START => 10541, END => 10566, TEXT => 'kongresowy tu*rniej teamów',
+    CORR => 'Baltic Congress - Teams' },
   { START => 10907, END => 10922, TEXT => 'GP Warszawy',
     CORR => 'Grand Prix of Poland Teams' },
   { START => 11116, END => 11159, TEXT => 'Pula',

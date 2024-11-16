@@ -86,7 +86,25 @@ my %MEETS_BRAZIL =
         DATE_END => '2016-03-27'
       },
     }
-  }
+  },
+
+  'Buzios Festival',
+  {
+    ORGANIZATION => 'FBB',
+    COUNTRY => 'Brazil',
+    ORIGIN => 'National',
+    ZONE => 'South America',
+
+    EDITIONS => 
+    {
+      '2011' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-08-20',
+        DATE_END => '2011-08-20'
+      },
+    }
+  },
 );
 
 my %TOURNAMENTS_BRAZIL =
@@ -651,6 +669,31 @@ my %TOURNAMENTS_BRAZIL =
           } 
         }
         # Link
+      },
+    }
+  },
+
+  'Buzios Open Teams',
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        MEET => 'Buzios Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-08-20',
+            DATE_END => '2011-08-20'
+          } 
+        }
       },
     }
   },

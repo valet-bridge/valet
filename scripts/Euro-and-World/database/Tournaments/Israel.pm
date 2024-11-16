@@ -21,7 +21,6 @@ my %MEETS_ISRAEL =
     ORGANIZATION => 'IBF',
     CITY => 'Tel Aviv',
     COUNTRY => 'Israel',
-    ORIGIN => 'National',
     ZONE => 'Europe',
 
     EDITIONS =>
@@ -137,6 +136,24 @@ my %MEETS_ISRAEL =
         YEAR => 2024,
         DATE_START => '2024-05-30',
         DATE_END => '2024-06-05'
+      },
+    }
+  },
+
+  'Israel Grand Prix' =>
+  {
+    ORGANIZATION => 'IBF',
+    COUNTRY => 'Israel',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-09-02',
+        DATE_END => '2010-09-03'
       },
     }
   },
@@ -604,6 +621,48 @@ my %TOURNAMENTS_ISRAEL =
     }
   },
 
+  'Israel Individual' =>
+  {
+    ORGANIZATION => 'IBF',
+    COUNTRY => 'Israel',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Individual',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        MEET => 'Israel Grand Prix',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-09-03',
+            DATE_END => '2010-09-03'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Israel Grand Prix',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-06-11',
+            DATE_END => '2011-06-11'
+          } 
+        }
+      },
+    }
+  },
+
   'Israel IMP Pairs' =>
   {
     ORGANIZATION => 'IBF',
@@ -653,6 +712,19 @@ my %TOURNAMENTS_ISRAEL =
             YEAR => 2010,
             DATE_START => '2010-09-02',
             DATE_END => '2010-09-03'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Israel Grand Prix',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-06-09',
+            DATE_END => '2011-06-09'
           } 
         }
       },
@@ -1000,6 +1072,18 @@ my %TOURNAMENTS_ISRAEL =
           } 
         }
       },
+      '2008' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-09-10',
+            DATE_END => '2008-09-10'
+          } 
+        }
+      },
       '2009' =>
       {
         CHAPTERS =>
@@ -1012,7 +1096,7 @@ my %TOURNAMENTS_ISRAEL =
           } 
         }
       },
-      '2010' =>
+      '2010A' =>
       {
         CHAPTERS =>
         {
@@ -1023,6 +1107,18 @@ my %TOURNAMENTS_ISRAEL =
             major => 'SEGMENT',
             DATE_START => '2010-08-28',
             DATE_END => '2010-08-28'
+          } 
+        }
+      },
+      '2010B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-09-04',
+            DATE_END => '2010-09-04'
           } 
         }
       },
@@ -1325,6 +1421,19 @@ my %TOURNAMENTS_ISRAEL =
           } 
         }
       },
+      '2009' =>
+      {
+        MEET => 'Red Sea International Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-11-12',
+            DATE_END => '2009-11-12'
+          } 
+        }
+      },
       '2011' =>
       {
         MEET => 'Red Sea International Festival',
@@ -1404,19 +1513,6 @@ my %TOURNAMENTS_ISRAEL =
             YEAR => 2009,
             DATE_START => '2009-11-07',
             DATE_END => '2009-11-08'
-          } 
-        }
-      },
-      '2011' =>
-      {
-        MEET => 'Red Sea International Festival',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2011,
-            DATE_START => '2011-06-08',
-            DATE_END => '2011-06-09'
           } 
         }
       },

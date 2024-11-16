@@ -1482,14 +1482,14 @@ my %TOURNAMENTS_INDONESIA =
       },
       '2012' =>
       {
-        MEET => 'Indonesian National Pre-Sports Week',
+        MEET => 'Indonesian National Sports Week',
         CHAPTERS =>
         {
           'C0' => 
           {
             YEAR => 2012,
             DATE_START => '2012-09-14',
-            DATE_END => '2012-09-18'
+            DATE_END => '2012-09-19'
           },
         }
       },
@@ -2625,7 +2625,7 @@ my %TOURNAMENTS_INDONESIA =
 
     EDITIONS =>
     {
-      '2012' =>
+      '2012A' =>
       {
         MEET => 'Indonesian National Sports Week',
         CHAPTERS =>
@@ -2635,6 +2635,19 @@ my %TOURNAMENTS_INDONESIA =
             YEAR => 2012,
             DATE_START => '2012-09-12',
             DATE_END => '2012-09-13'
+          } 
+        }
+      },
+      '2012B' =>
+      {
+        MEET => 'Indonesian National Sports Week',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-09-15',
+            DATE_END => '2012-09-16'
           } 
         }
       },
@@ -2718,6 +2731,19 @@ my %TOURNAMENTS_INDONESIA =
             major => 'SEGMENT',
             DATE_START => '2008-07-16',
             DATE_END => '2008-07-16'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Indonesian National Pre-Sports Week',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-10-05',
+            DATE_END => '2011-10-05'
           } 
         }
       },
@@ -3801,7 +3827,7 @@ my %TOURNAMENTS_INDONESIA =
 
     EDITIONS =>
     {
-      '2010' =>
+      '2010A' =>
       {
         CHAPTERS =>
         {
@@ -3810,6 +3836,18 @@ my %TOURNAMENTS_INDONESIA =
             YEAR => 2010,
             DATE_START => '2010-07-07',
             DATE_END => '2010-07-09'
+          },
+        }
+      },
+      '2010B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-11-29',
+            DATE_END => '2010-11-29'
           },
         }
       },

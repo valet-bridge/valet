@@ -175,7 +175,26 @@ my %MEETS_SWEDEN =
         DATE_END => '2012-04-28'
       },
     }
-  }
+  },
+
+  'Umea Bridgefestival' =>
+  {
+    ORGANIZATION => 'SBF',
+    COUNTRY => 'Sweden',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+
+    EDITIONS => 
+    {
+      '2006' =>
+      {
+        YEAR => 2006,
+        CITY => 'Umea',
+        DATE_START => '2006-07-06',
+        DATE_END => '2006-07-06'
+      },
+    }
+  },
 );
 
 my %TOURNAMENTS_SWEDEN =
@@ -2229,6 +2248,31 @@ my %TOURNAMENTS_SWEDEN =
             major => 'SEGMENT',
             DATE_START => '2011-12-12',
             DATE_END => '2011-12-14'
+          } 
+        }
+      },
+    }
+  },
+
+  'Umea Open Teams',
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2006' =>
+      {
+        MEET => 'Umea Bridgefestival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            DATE_START => '2006-07-05',
+            DATE_END => '2006-07-06'
           } 
         }
       },

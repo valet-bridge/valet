@@ -155,21 +155,7 @@ my %TOURNAMENTS_DENMARK =
 
     EDITIONS =>
     {
-      '2010A' =>
-      {
-        MEET => 'Copenhagen Invitational',
-        SCORING => 'MP',
-        CHAPTERS => 
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2010,
-            DATE_START => '2010-11-04',
-            DATE_END => '2010-11-04'
-          } 
-        }
-      },
-      '2010B' =>
+      '2010' =>
       {
         MEET => 'Copenhagen Invitational',
         SCORING => 'IMP',
