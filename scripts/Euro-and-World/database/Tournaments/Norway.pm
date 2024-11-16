@@ -2896,6 +2896,19 @@ my %TOURNAMENTS_NORWAY =
           } 
         }
       },
+      '2010' =>
+      {
+        MEET => 'Norwegian District Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-10-19',
+            DATE_END => '2010-10-19'
+          } 
+        }
+      },
       '2012A' =>
       {
         CHAPTERS =>

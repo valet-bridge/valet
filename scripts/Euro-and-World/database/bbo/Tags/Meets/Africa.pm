@@ -16,6 +16,7 @@ my @MULTI_WORDS =
 (
   'African Zonal Championships',
   'Fes Festival',
+  'Marmara Festival',
 );
 
 my %MULTI_TYPOS =
@@ -36,6 +37,8 @@ my %MULTI_TYPOS =
     'festival de fez',
     'festival fes', 
     'festival international de fès'],
+  'Marmara Festival' => [
+    'festival marmara'],
 );
 
 my %SINGLE_TYPOS =

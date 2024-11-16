@@ -93,6 +93,25 @@ my %MEETS_AFRICA =
       },
     }
   },
+
+  'Marmara Festival' =>
+  {
+    ORGANIZATION => 'AfBF',
+    ORIGIN => 'International',
+    CITY => 'Marrakech',
+    COUNTRY => 'Morocco',
+    ZONE => 'Africa',
+
+    EDITIONS => 
+    {
+      '2009' =>
+      {
+        YEAR => 2009,
+        DATE_START => '2009-01-05',
+        DATE_END => '2009-01-05'
+      },
+    }
+  },
 );
 
 my %TOURNAMENTS_AFRICA =
@@ -306,6 +325,56 @@ my %TOURNAMENTS_AFRICA =
             major => 'ROUND',
             DATE_START => '2015-05-08',
             DATE_END => '2015-05-13'
+          } 
+        }
+      },
+    }
+  },
+
+  'Marmara Mixed Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        MEET => 'Marmara Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-01-05',
+            DATE_END => '2009-01-05'
+          } 
+        }
+      },
+    }
+  },
+
+  'Marmara Open Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2009' =>
+      {
+        MEET => 'Marmara Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-01-05',
+            DATE_END => '2009-01-05'
           } 
         }
       },

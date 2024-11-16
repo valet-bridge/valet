@@ -17,7 +17,6 @@ my @MULTI_WORDS =
   'Assael Festival',
   'Bodrum Peninsula Festival',
   'Cappadocia Fairy Chimneys Festival',
-  'Marmara Festival',
   'Mersin Bridge Festival',
   'Sivrioglu Festival',
   'Turkish-Greek Friendship Festival',
@@ -33,7 +32,6 @@ my %MULTI_TYPOS =
     'cappadocia bridge fest',
     'kapadokya brýç festývalý',
     'sonbahar bridge festival'],
-  'Marmara Festival' => ['festival marmara'],
   'Mersin Bridge Festival' => [
     'international bridge festival mersin_turkey',
     'mersin bridge fest',

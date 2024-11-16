@@ -157,6 +157,24 @@ my %MEETS_BULGARIA =
     }
   },
 
+  'Cherven Briag Festival' =>
+  {
+    ORGANIZATION => 'BuBF',
+    CITY => 'Cherven Briag',
+    COUNTRY => 'Bulgaria',
+    ZONE => 'Europe',
+
+    EDITIONS => 
+    {
+      '2011' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-06-18',
+        DATE_END => '2011-06-19'
+      },
+    }
+  },
+
   'Dobrich Bridge Festival' =>
   {
     ORGANIZATION => 'BuBF',
@@ -970,6 +988,20 @@ my %TOURNAMENTS_BULGARIA =
 
     EDITIONS =>
     {
+      '2010' =>
+      {
+        ORDINAL => 2,
+        MEET => 'Cherven Briag Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-06-18',
+            DATE_END => '2011-06-19'
+          } 
+        }
+      },
       '2012' =>
       {
         ORDINAL => 3,

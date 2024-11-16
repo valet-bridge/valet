@@ -16,7 +16,6 @@ my @MULTI_WORDS =
 (
   'Israel Grand Prix',
   'Israel Bridge Festival',
-  'Red Beach Festival',
   'Red Sea International Festival'
 );
 
@@ -31,9 +30,6 @@ my %MULTI_TYPOS =
     'israel int_ festival',
     'israel international festival',
     'israeli fest_'],
-  'Red Beach Festival' => [
-    'read beach festival', 
-    'red beach festival'], 
   'Red Sea International Festival' => [
     'dr_ rand masters',
     'dr. rand masters',

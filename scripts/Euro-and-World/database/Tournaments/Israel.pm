@@ -711,7 +711,7 @@ my %TOURNAMENTS_ISRAEL =
           {
             YEAR => 2010,
             DATE_START => '2010-09-02',
-            DATE_END => '2010-09-03'
+            DATE_END => '2010-09-04'
           } 
         }
       },
