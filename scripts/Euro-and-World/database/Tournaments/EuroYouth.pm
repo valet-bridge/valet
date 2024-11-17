@@ -486,14 +486,14 @@ my %TOURNAMENTS_EURO_YOUTH =
           },
           'C1' => 
           {
-            YEAR => 2012,
+            YEAR => 2010,
             STAGE => 'Semifinal',
             DATE_START => '2010-07-16',
             DATE_END => '2010-07-16'
           },
           'C2' => 
           {
-            YEAR => 2012,
+            YEAR => 2010,
             STAGE => 'Final',
             DATE_START => '2010-07-17',
             DATE_END => '2010-07-17'
@@ -1002,14 +1002,14 @@ my %TOURNAMENTS_EURO_YOUTH =
           },
           'C1' => 
           {
-            YEAR => 2012,
+            YEAR => 2010,
             STAGE => 'Semifinal',
             DATE_START => '2010-07-16',
             DATE_END => '2010-07-16'
           },
           'C2' => 
           {
-            YEAR => 2012,
+            YEAR => 2010,
             STAGE => 'Final',
             DATE_START => '2010-07-17',
             DATE_END => '2010-07-17'
@@ -1433,14 +1433,14 @@ my %TOURNAMENTS_EURO_YOUTH =
           },
           'C1' => 
           {
-            YEAR => 2012,
+            YEAR => 2010,
             STAGE => 'Semifinal',
             DATE_START => '2010-07-16',
             DATE_END => '2010-07-16'
           },
           'C2' => 
           {
-            YEAR => 2012,
+            YEAR => 2010,
             STAGE => 'Final',
             DATE_START => '2010-07-17',
             DATE_END => '2010-07-17'

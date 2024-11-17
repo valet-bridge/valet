@@ -3030,7 +3030,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2020,
             DATE_START => '2020-05-15',
-            DATE_END => '2021-05-17'
+            DATE_END => '2020-05-17'
           },
         }
       },

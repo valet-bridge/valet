@@ -1440,12 +1440,12 @@ my %TOURNAMENTS_SUPRA =
       },
       '2007' =>
       {
+        ORDINAL => 11,
+        CITY => 'Shanghai',
+        COUNTRY => 'China',
+
         CHAPTERS =>
         {
-          ORDINAL => 11,
-          CITY => 'Shanghai',
-          COUNTRY => 'China',
-
           'SINGLE' => 
           {
             YEAR => 2007,
@@ -1458,12 +1458,12 @@ my %TOURNAMENTS_SUPRA =
       },
       '2008' =>
       {
+        ORDINAL => 12,
+        CITY => 'Las Vegas',
+        COUNTRY => 'USA',
+
         CHAPTERS =>
         {
-          ORDINAL => 12,
-          CITY => 'Las Vegas',
-          COUNTRY => 'USA',
-
           'SINGLE' => 
           {
             YEAR => 2008,

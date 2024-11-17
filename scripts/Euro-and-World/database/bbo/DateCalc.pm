@@ -59,4 +59,12 @@ sub distance
 }
 
 
+sub days_before
+{
+  my ($self, $dobj) = @_;
+
+  return ($dobj->{BASE} -$self->{BASE}) / $daysec;
+}
+
+
 1;

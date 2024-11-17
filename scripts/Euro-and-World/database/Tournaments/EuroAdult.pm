@@ -359,7 +359,7 @@ my %MEETS_EUROADULT =
       '2022' =>
       {
         # http://db.eurobridge.org/repository/competitions/22Madeira/microsite/results.htm
-        YEAR => 2023,
+        YEAR => 2022,
         CITY => 'Madeira',
         COUNTRY => 'Portugal',
         DATE_START => '2022-06-12',
@@ -452,8 +452,8 @@ my %MEETS_EUROADULT =
         ORDINAL => 7,
         CITY => 'Tromso',
         COUNTRY => 'Norway',
-        DATE_START => '2016-06-27',
-        DATE_END => '2016-07-11'
+        DATE_START => '2015-06-27',
+        DATE_END => '2015-07-11'
       },
       '2017' =>
       {
@@ -2822,7 +2822,7 @@ my %TOURNAMENTS_EUROADULT =
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2023-10-25',
-            DATE_END => '2023-10-17'
+            DATE_END => '2023-10-27'
           } 
         }
       },
@@ -4015,7 +4015,7 @@ my %TOURNAMENTS_EUROADULT =
             MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2003-06-21',
-            DATE_END => '2003-06-12'
+            DATE_END => '2003-06-22'
           },
           'C2' => 
           {

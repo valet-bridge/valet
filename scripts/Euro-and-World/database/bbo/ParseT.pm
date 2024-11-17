@@ -8,6 +8,7 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 use Time::HiRes qw(time);
+use Try::Tiny;
 
 use lib '.';
 use lib '..';
@@ -283,6 +284,130 @@ sub init_links
       $set_method->($callback_method);
     }
   }
+
+  $self->check_consistency();
+}
+
+
+sub check_dates
+{
+  my ($text, $tag, $year, $date_start, $date_end) = @_;
+
+  # Years must match.
+  # Dates must not be too far apart.
+
+  my $real_year = '';
+  my $real_year2 = '';
+  if (length $year == 4)
+  {
+    $real_year = $year;
+  }
+  elsif ($year =~ /^(\d\d\d\d)[A-F]$/)
+  {
+    $real_year = $1;
+  }
+  elsif ($year =~ /^(\d\d)(\d\d)-(\d\d)$/)
+  {
+    $real_year = $1 . $2;
+    $real_year2 = $1 . $3;
+  }
+  elsif ($year ne '')
+  {
+    warn "$text: $year is not a year-like format";
+  }
+
+  if ($year ne '' && $year ne $real_year)
+  {
+    warn "$text: $year != $real_year";
+  }
+
+  my $d1 = DateCalc->new();
+  try
+  {
+    $d1->set_by_field($date_start);
+  }
+  catch
+  {
+    warn "$text: $date_start is not a starting date";
+  };
+
+  my $d2 = DateCalc->new();
+  try
+  {
+    $d2->set_by_field($date_end);
+  }
+  catch
+  {
+    warn "$text: $date_end is not an ending date";
+  };
+
+  my $delta = $d1->days_before($d2);
+  if ($delta < 0 || $delta > 15)
+  {
+    warn "$text: Delta $delta" unless
+      ($text =~ /^Meet Italy Cup/ ||
+       $text =~ /^Meet Italian Club Championship/ ||
+       $text =~ /^Meet Argentinian Trials/);
+  }
+
+  if (! defined $date_start)
+  {
+    warn "$text";
+  }
+
+  $date_start =~ /^(\d\d\d\d)/;
+  my $y1 = $1;
+  $date_end =~ /^(\d\d\d\d)/;
+  my $y2 = $1;
+
+  if ($real_year ne '' && $y1 ne $real_year)
+  {
+    warn "$text: $date_start not same year as $year";
+  }
+
+  if ($real_year2 ne '' && $y2 ne $real_year2)
+  {
+    warn "$text: $date_end not same year as end of $year";
+  }
+  elsif ($real_year ne '' && $y2 ne $real_year)
+  {
+    warn "$text: $date_end not same year as $year";
+  }
+}
+
+
+sub check_consistency
+{
+  my ($self) = @_;
+
+  for my $meet (sort keys %{$self->{MEET}})
+  {
+    my $editions = $self->{MEET}{$meet}{EDITIONS};
+    for my $tag (sort keys %$editions)
+    {
+      my $edition = $editions->{$tag};
+      my $year = $edition->{YEAR} // '';
+      check_dates("Meet $meet, $tag", $tag, $year,
+        $edition->{DATE_START}, $edition->{DATE_END});
+    }
+  }
+
+  for my $tournament (sort keys %{$self->{TOURNAMENT}})
+  {
+    my $editions = $self->{TOURNAMENT}{$tournament}{EDITIONS};
+    for my $tag (sort keys %$editions)
+    {
+      my $edition = $editions->{$tag};
+      for my $ctag (sort keys %{$edition->{CHAPTERS}})
+      {
+        my $chapter = $edition->{CHAPTERS}{$ctag};
+        my $year = $chapter->{YEAR} // '';
+        check_dates("Tname $tournament, $tag, $ctag", $tag, $year,
+          $chapter->{DATE_START}, $chapter->{DATE_END});
+      }
+    }
+  }
+
 }
 
 

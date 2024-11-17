@@ -48,7 +48,7 @@ my %TOURNAMENTS_CZECH =
           },
           'C1' => 
           {
-            YEAR => 2009,
+            YEAR => 2007,
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2007-05-31',

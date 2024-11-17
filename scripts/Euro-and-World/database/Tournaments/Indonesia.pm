@@ -2021,7 +2021,7 @@ my %TOURNAMENTS_INDONESIA =
           {
             YEAR => 2015,
             DATE_START => '2015-09-07',
-            DATE_END => '2015-10-10'
+            DATE_END => '2015-09-10'
           } 
         }
       },

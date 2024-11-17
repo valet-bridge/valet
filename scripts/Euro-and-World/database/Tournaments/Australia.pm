@@ -110,7 +110,7 @@ my %MEETS_AUSTRALIA =
         YEAR => 2017,
         CITY => 'Canberra',
         DATE_START => '2017-07-15',
-        DATE_END => '2017-08-27'
+        DATE_END => '2017-07-27'
       },
       '2018' =>
       {
@@ -924,295 +924,169 @@ my %MEETS_AUSTRALIA =
       {
         # https://www.abfevents.com.au/events/vcc/2004/
         CITY => 'Melbourne',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2004,
-            DATE_START => '2004-06-10',
-            DATE_END => '2004-06-14'
-          },
-        }
+        YEAR => 2004,
+        DATE_START => '2004-06-10',
+        DATE_END => '2004-06-14'
       },
       '2005' =>
       {
         # https://www.abfevents.com.au/events/vcc/2005/
         CITY => 'Melbourne',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2005,
-            DATE_START => '2005-06-09',
-            DATE_END => '2005-06-13'
-          },
-        }
+        YEAR => 2005,
+        DATE_START => '2005-06-09',
+        DATE_END => '2005-06-13'
       },
       '2006' =>
       {
         # https://www.abfevents.com.au/events/vcc/2006/
         CITY => 'Melbourne',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2006,
-            DATE_START => '2006-06-08',
-            DATE_END => '2006-06-12'
-          },
-        }
+        YEAR => 2006,
+        DATE_START => '2006-06-08',
+        DATE_END => '2006-06-12'
       },
       '2007' =>
       {
         # https://www.abfevents.com.au/events/vcc/2007/
         CITY => 'Melbourne',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2007,
-            DATE_START => '2007-06-07',
-            DATE_END => '2007-06-11'
-          },
-        }
+        YEAR => 2007,
+        DATE_START => '2007-06-07',
+        DATE_END => '2007-06-11'
       },
       '2008' =>
       {
         # https://www.abfevents.com.au/events/vcc/2008/
         CITY => 'Melbourne',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2008,
-            DATE_START => '2008-06-05',
-            DATE_END => '2008-06-09'
-          },
-        }
+        YEAR => 2008,
+        DATE_START => '2008-06-05',
+        DATE_END => '2008-06-09'
       },
       '2009' =>
       {
         # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=09VCCC&header=abf
         CITY => 'Melbourne',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2009,
-            DATE_START => '2010-06-04',
-            DATE_END => '2010-06-08'
-          },
-        }
+        YEAR => 2009,
+        DATE_START => '2009-06-04',
+        DATE_END => '2009-06-08'
       },
       '2010' =>
       {
         # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=vccc10&header=abf
         CITY => 'Melbourne',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2010,
-            DATE_START => '2010-06-10',
-            DATE_END => '2010-06-14'
-          },
-        }
+        YEAR => 2010,
+        DATE_START => '2010-06-10',
+        DATE_END => '2010-06-14'
       },
       '2011' =>
       {
         # https://abfevents.com.au/events/results/results.asp?yr=2011&dir=vcc
         CITY => 'Melbourne',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2011,
-            DATE_START => '2011-06-09',
-            DATE_END => '2011-06-13'
-          },
-        }
+        YEAR => 2011,
+        DATE_START => '2011-06-09',
+        DATE_END => '2011-06-13'
       },
       '2012' =>
       {
         CITY => 'Melbourne',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2012,
-            DATE_START => '2012-06-07',
-            DATE_END => '2012-06-11'
-          },
-        }
+        YEAR => 2012,
+        DATE_START => '2012-06-07',
+        DATE_END => '2012-06-11'
       },
       '2013' =>
       {
         # https://www.abfevents.com.au/events/vcc/2013/
         CITY => 'Melbourne',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2013,
-            DATE_START => '2013-06-06',
-            DATE_END => '2013-06-10'
-          },
-        }
+        YEAR => 2013,
+        DATE_START => '2013-06-06',
+        DATE_END => '2013-06-10'
       },
       '2014' =>
       {
         # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?header=abf&code=14VCCC
         CITY => 'Melbourne',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2014,
-            DATE_START => '2014-06-05',
-            DATE_END => '2014-06-09'
-          },
-        }
+        YEAR => 2014,
+        DATE_START => '2014-06-05',
+        DATE_END => '2014-06-09'
       },
       '2015' =>
       {
         # https://abfevents.com.au/events/results/results.asp?yr=2015&dir=vcc
         CITY => 'Melbourne',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2015,
-            DATE_START => '2015-06-04',
-            DATE_END => '2015-06-08'
-          },
-        }
+        YEAR => 2015,
+        DATE_START => '2015-06-04',
+        DATE_END => '2015-06-08'
       },
       '2016' =>
       {
         # https://www.abfevents.com.au/events/vcc/2016/
         CITY => 'Melbourne',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2016,
-            DATE_START => '2016-06-09',
-            DATE_END => '2016-06-13'
-          },
-        }
+        YEAR => 2016,
+        DATE_START => '2016-06-09',
+        DATE_END => '2016-06-13'
       },
       '2017' =>
       {
         # https://www.abfevents.com.au/events/vcc/2017/
         CITY => 'Melbourne',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2017,
-            DATE_START => '2017-06-08',
-            DATE_END => '2017-06-12'
-          },
-        }
+        YEAR => 2017,
+        DATE_START => '2017-06-08',
+        DATE_END => '2017-06-12'
       },
       '2018' =>
       {
         # https://www.abfevents.com.au/events/vcc/2018/
         CITY => 'Melbourne',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2018,
-            DATE_START => '2018-06-07',
-            DATE_END => '2018-07-11'
-          },
-        }
+        YEAR => 2018,
+        DATE_START => '2018-06-07',
+        DATE_END => '2018-06-11'
       },
       '2019' =>
       {
         # https://www.abfevents.com.au/events/vcc/2019/
         CITY => 'Melbourne',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2019,
-            DATE_START => '2019-06-06',
-            DATE_END => '2019-06-10'
-          },
-        }
+        YEAR => 2019,
+        DATE_START => '2019-06-06',
+        DATE_END => '2019-06-10'
       },
       '2020' =>
       {
         # https://www.abf.com.au/event/2020-victor-champion-cup/
         # https://www.abfevents.com.au/events/vcc/2020/
         CITY => 'Melbourne',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2020,
-            DATE_START => '2020-06-04',
-            DATE_END => '2020-06-08'
-          },
-        }
+        YEAR => 2020,
+        DATE_START => '2020-06-04',
+        DATE_END => '2020-06-08'
       },
       '2021' =>
       {
         # https://www.abf.com.au/event/2021-victor-champion-cup/
         CITY => 'Melbourne',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2021,
-            DATE_START => '2021-08-26',
-            DATE_END => '2021-08-29'
-          },
-        }
+        YEAR => 2021,
+        DATE_START => '2021-08-26',
+        DATE_END => '2021-08-29'
       },
       '2022' =>
       {
         # https://www.abf.com.au/event/2022-victor-champion-cup/
         CITY => 'Melbourne',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2022,
-            DATE_START => '2022-09-06',
-            DATE_END => '2022-09-13'
-          },
-        }
+        YEAR => 2022,
+        DATE_START => '2022-09-06',
+        DATE_END => '2022-09-13'
       },
       '2023' =>
       {
         # https://www.abf.com.au/event/2023-victor-champion-cup/
         CITY => 'Moonee Ponds',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2023,
-            DATE_START => '2023-06-08',
-            DATE_END => '2023-06-12'
-          },
-        }
+        YEAR => 2023,
+        DATE_START => '2023-06-08',
+        DATE_END => '2023-06-12'
       },
       '2024' =>
       {
         # https://www.abf.com.au/event/2024-victor-champion-cup/
         CITY => 'Moonee Ponds',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2024,
-            DATE_START => '2024-06-06',
-            DATE_END => '2024-06-10'
-          },
-        }
+        YEAR => 2024,
+        DATE_START => '2024-06-06',
+        DATE_END => '2024-06-10'
       },
     }
   },
@@ -5842,7 +5716,7 @@ my %TOURNAMENTS_AUSTRALIA =
 
     EDITIONS =>
     {
-      '2004' =>
+      '2013' =>
       {
         MEET => 'Victor Champion Cup',
         CHAPTERS =>

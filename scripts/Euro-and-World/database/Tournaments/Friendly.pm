@@ -804,7 +804,7 @@ my %TOURNAMENTS_FRIENDLY =
         {
           'SINGLE' => 
           {
-            YEAR => 2006,
+            YEAR => 2007,
             major => 'SEGMENT',
             DATE_START => '2007-05-15',
             DATE_END => '2007-05-15'

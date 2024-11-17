@@ -54,16 +54,16 @@ my %MEETS_NEWZEALAND =
         # http://www.tournaments.nzbridgeclub.org/resultslistbyheadevent.asp?umbid=247
         YEAR => 2018,
         CITY => 'Hamilton',
-        DATE_START => '2017-09-28',
-        DATE_END => '2017-10-06'
+        DATE_START => '2018-09-28',
+        DATE_END => '2018-10-06'
       },
       '2019' =>
       {
         # https://tournaments.nzbridgeclub.org/resultslistbyheadevent.asp?umbid=339
         YEAR => 2019,
         CITY => 'Hamilton',
-        DATE_START => '2017-09-27',
-        DATE_END => '2017-10-05'
+        DATE_START => '2019-09-27',
+        DATE_END => '2019-10-05'
       },
       '2023' =>
       {
@@ -536,21 +536,21 @@ my %TOURNAMENTS_NEWZEALAND =
         {
           'C0' => 
           {
-            YEAR => 2017,
+            YEAR => 2023,
             STAGE => 'Quarterfinal',
             DATE_START => '2023-09-28',
             DATE_END => '2023-09-28'
           },
           'C1' => 
           {
-            YEAR => 2017,
+            YEAR => 2023,
             STAGE => 'Semifinal',
             DATE_START => '2023-09-28',
             DATE_END => '2023-09-29'
           },
           'C2' => 
           {
-            YEAR => 2017,
+            YEAR => 2023,
             STAGE => 'Final',
             DATE_START => '2023-09-29',
             DATE_END => '2023-09-29'

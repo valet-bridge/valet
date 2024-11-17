@@ -92,7 +92,7 @@ my %MEETS_USA =
         YEAR => 2007,
         CITY => 'St. Louis',
         DATE_START => '2007-03-08',
-        DATE_END => '2007-04-18'
+        DATE_END => '2007-03-18'
       },
       '2007B' =>
       {
@@ -2967,7 +2967,7 @@ my %TOURNAMENTS_USA =
         {
           'SINGLE' => 
           {
-            YEAR => 2023,
+            YEAR => 2024,
             DATE_START => '2024-05-01',
             DATE_END => '2024-05-08'
           } 
@@ -3663,8 +3663,8 @@ my %TOURNAMENTS_USA =
           'SINGLE' => 
           {
             YEAR => 2017,
-            DATE_START => '2017-05-17',
-            DATE_END => '2017-05-15'
+            DATE_START => '2017-05-15',
+            DATE_END => '2017-05-17'
           } 
         }
       },

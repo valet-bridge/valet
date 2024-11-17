@@ -70,8 +70,8 @@ my %MEETS_SWEDEN =
         YEAR => 2014,
         CITY => 'Örebro',
         COUNTRY => 'Sweden',
-        DATE_START => '2013-07-25',
-        DATE_END => '2013-08-03'
+        DATE_START => '2014-07-25',
+        DATE_END => '2014-08-03'
       },
       '2015' =>
       {
@@ -1736,7 +1736,7 @@ my %TOURNAMENTS_SWEDEN =
             CITY => 'Örebro',
             COUNTRY => 'Sweden',
             DATE_START => '2018-05-10',
-            DATE_END => '2018-06-13'
+            DATE_END => '2018-05-13'
           } 
         }
       },

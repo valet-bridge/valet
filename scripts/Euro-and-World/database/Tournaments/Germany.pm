@@ -26,8 +26,8 @@ my %MEETS_GERMANY =
         ORDINAL => '1st',
         YEAR => 2013,
         CITY => 'Berlin',
-        DATE_START => '2014-08-10',
-        DATE_END => '2014-08-18'
+        DATE_START => '2013-08-10',
+        DATE_END => '2013-08-18'
       },
 
       '2014' =>
@@ -44,8 +44,8 @@ my %MEETS_GERMANY =
         ORDINAL => '3rd',
         YEAR => 2015,
         CITY => 'Berlin',
-        DATE_START => '2014-08-15',
-        DATE_END => '2014-08-23'
+        DATE_START => '2015-08-15',
+        DATE_END => '2015-08-23'
       },
 
       '2016' =>
@@ -53,8 +53,8 @@ my %MEETS_GERMANY =
         ORDINAL => '4th',
         YEAR => 2016,
         CITY => 'Berlin',
-        DATE_START => '2014-08-20',
-        DATE_END => '2014-08-28'
+        DATE_START => '2016-08-20',
+        DATE_END => '2016-08-28'
       }
     }
   }
@@ -319,12 +319,11 @@ my %TOURNAMENTS_GERMANY =
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=315&site=0&kl=0
         ORDINAL => 27,
+        YEAR => 2013,
+        CITY => 'Kassel',
 
         CHAPTERS => 
         {
-          YEAR => 2013,
-          CITY => 'Kassel',
-
           'WEEKEND 1' =>
           {
             DATE_START => '2013-01-19',
@@ -357,12 +356,11 @@ my %TOURNAMENTS_GERMANY =
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=687&submit=Anzeigen
         ORDINAL => 28,
+        YEAR => 2014,
+        CITY => 'Kassel',
 
         CHAPTERS => 
         {
-          YEAR => 2014,
-          CITY => 'Kassel',
-
           'WEEKEND 1' =>
           {
             DATE_START => '2014-01-18',
@@ -397,12 +395,11 @@ my %TOURNAMENTS_GERMANY =
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=1143&site=0&kl=0
         ORDINAL => 29,
+        YEAR => 2015,
+        CITY => 'Kassel',
 
         CHAPTERS => 
         {
-          YEAR => 2015,
-          CITY => 'Kassel',
-
           'WEEKEND 1' =>
           {
             DATE_START => '2015-01-24',
@@ -437,12 +434,11 @@ my %TOURNAMENTS_GERMANY =
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=14602&site=0&kl=0
         ORDINAL => 30,
+        YEAR => 2016,
+        CITY => 'Kassel',
 
         CHAPTERS => 
         {
-          YEAR => 2016,
-          CITY => 'Kassel',
-
           'WEEKEND 1' =>
           {
             DATE_START => '2016-01-23',
@@ -477,12 +473,11 @@ my %TOURNAMENTS_GERMANY =
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=13842&site=0&kl=0
         ORDINAL => 31,
+        YEAR => 2017,
+        CITY => 'Kassel',
 
         CHAPTERS => 
         {
-          YEAR => 2017,
-          CITY => 'Kassel',
-
           'WEEKEND 1' =>
           {
             DATE_START => '2017-01-28',
@@ -517,12 +512,11 @@ my %TOURNAMENTS_GERMANY =
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=8827&submit=Anzeigen
         ORDINAL => 32,
+        YEAR => 2018,
+        CITY => 'Kassel',
 
         CHAPTERS => 
         {
-          YEAR => 2018,
-          CITY => 'Kassel',
-
           'WEEKEND 1' =>
           {
             DATE_START => '2018-01-20',
@@ -557,12 +551,11 @@ my %TOURNAMENTS_GERMANY =
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=9737&site=0&kl=0
         ORDINAL => 33,
+        YEAR => 2019,
+        CITY => 'Kassel',
 
         CHAPTERS => 
         {
-          YEAR => 2019,
-          CITY => 'Kassel',
-
           'WEEKEND 1' =>
           {
             DATE_START => '2019-01-19',
@@ -597,12 +590,11 @@ my %TOURNAMENTS_GERMANY =
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=16553&site=0&kl=0
         ORDINAL => 34,
+        YEAR => 2020,
+        CITY => 'Kassel',
 
         CHAPTERS => 
         {
-          YEAR => 2020,
-          CITY => 'Kassel',
-
           'WEEKEND 1' =>
           {
             DATE_START => '2020-01-11',
@@ -637,12 +629,11 @@ my %TOURNAMENTS_GERMANY =
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=19017&submit=Anzeigen
         ORDINAL => 35,
+        YEAR => 2022,
+        CITY => 'Niedernhausen',
 
         CHAPTERS => 
         {
-          YEAR => 2022,
-          CITY => 'Niedernhausen',
-
           'WEEKEND 1' =>
           {
             DATE_START => '2022-02-05',
@@ -677,12 +668,11 @@ my %TOURNAMENTS_GERMANY =
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=22923&site=0&kl=0
         ORDINAL => 36,
+        YEAR => 2023,
+        CITY => 'Niedernhausen',
 
         CHAPTERS => 
         {
-          YEAR => 2023,
-          CITY => 'Niedernhausen',
-
           'WEEKEND 1' =>
           {
             DATE_START => '2023-02-11',
@@ -717,12 +707,11 @@ my %TOURNAMENTS_GERMANY =
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=29362&submit=Anzeigen
         ORDINAL => 37,
+        YEAR => 2024,
+        CITY => 'Niedernhausen',
 
         CHAPTERS => 
         {
-          YEAR => 2024,
-          CITY => 'Niedernhausen',
-
           'WEEKEND 1' =>
           {
             DATE_START => '2024-01-20',
@@ -1651,7 +1640,7 @@ my %TOURNAMENTS_GERMANY =
             YEAR => 2021,
             major => 'SESSION',
             DATE_START => '2021-08-18', # Estimated
-            DATE_END => '2021-09-19'
+            DATE_END => '2021-08-19'
           } 
         }
       },
@@ -2207,10 +2196,9 @@ my %TOURNAMENTS_GERMANY =
       {
         CHAPTERS => 
         {
-          YEAR => 2016,
-          CITY => '',
           'WEEKEND 1' => 
           {
+            YEAR => 2016,
             DATE_START => '2016-02-27',
             DATE_END => '2016-02-28',
             major => 'ROUND',
@@ -2218,6 +2206,7 @@ my %TOURNAMENTS_GERMANY =
           },
           'WEEKEND 2' => 
           {
+            YEAR => 2016,
             DATE_START => '2016-03-12',
             DATE_END => '2016-03-13',
             major => 'ROUND',
@@ -2465,7 +2454,7 @@ my %TOURNAMENTS_GERMANY =
         {
           'C0' => 
           {
-            YEAR => 2017,
+            YEAR => 2018,
             CITY => 'Berlin',
             STAGE => 'Round-robin',
             major => 'ROUND',
@@ -2474,7 +2463,7 @@ my %TOURNAMENTS_GERMANY =
           },
           'C1' => 
           {
-            YEAR => 2017,
+            YEAR => 2018,
             CITY => 'Berlin',
             MOVEMENT => 'Swiss',
             major => 'ROUND',
@@ -2532,7 +2521,7 @@ my %TOURNAMENTS_GERMANY =
         {
           'SINGLE' => 
           {
-            YEAR => 2013,
+            YEAR => 2011,
             CITY => 'Darmstadt',
             DATE_START => '2011-11-12',
             DATE_END => '2011-11-13'

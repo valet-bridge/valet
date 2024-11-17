@@ -433,7 +433,7 @@ my %MEETS_WORLD =
         CITY => 'Lyon',
         COUNTRY => 'France',
         DATE_START => '2017-08-12',
-        DATE_END => '2017-12-26'
+        DATE_END => '2017-08-26'
       },
       '2019' =>
       {
@@ -5016,7 +5016,7 @@ my %TOURNAMENTS_WORLD =
           } 
         }
       },
-      '2012' =>
+      '2012A' =>
       {
         MEET => 'World Mind Games',
         CHAPTERS =>
@@ -5069,6 +5069,21 @@ my %TOURNAMENTS_WORLD =
             DATE_START => '2012-08-21',
             DATE_END => '2012-08-23'
           } 
+        }
+      },
+      '2012B' =>
+      {
+        MEET => 'World Mind Games',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2012-12-13',
+            DATE_END => '2012-12-14'
+          },
         }
       },
       '2014' =>
@@ -5167,7 +5182,7 @@ my %TOURNAMENTS_WORLD =
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-08-11',
-            DATE_END => '2012-12-14'
+            DATE_END => '2012-08-14'
           },
           'C1' => 
           {
@@ -5175,7 +5190,7 @@ my %TOURNAMENTS_WORLD =
             STAGE => 'Rof16',
             major => 'SEGMENT',
             DATE_START => '2012-08-15',
-            DATE_END => '2012-12-16'
+            DATE_END => '2012-08-16'
           },
           'C2' => 
           {
@@ -5183,7 +5198,7 @@ my %TOURNAMENTS_WORLD =
             STAGE => 'Quarterfinal',
             major => 'SEGMENT',
             DATE_START => '2012-08-17',
-            DATE_END => '2012-12-18'
+            DATE_END => '2012-08-18'
           },
           'C3' => 
           {
@@ -5191,7 +5206,7 @@ my %TOURNAMENTS_WORLD =
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2012-08-19',
-            DATE_END => '2012-12-20'
+            DATE_END => '2012-08-20'
           },
           'C4' => 
           {
@@ -5199,7 +5214,7 @@ my %TOURNAMENTS_WORLD =
             STAGE => 'Playoff',
             major => 'SEGMENT',
             DATE_START => '2012-08-21',
-            DATE_END => '2012-12-22'
+            DATE_END => '2012-08-22'
           },
           'C5' => 
           {
@@ -5207,7 +5222,7 @@ my %TOURNAMENTS_WORLD =
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2012-08-21',
-            DATE_END => '2012-12-22'
+            DATE_END => '2012-08-22'
           } 
         }
       },

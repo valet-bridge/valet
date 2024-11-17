@@ -223,7 +223,7 @@ my %TOURNAMENTS_MIDDLEEAST =
             YEAR => 2009,
             STAGE => 'Semifinal',
             major => 'SEGMENT',
-            DATE_START => '2009-06-02',
+            DATE_START => '2009-07-02',
             DATE_END => '2009-07-03'
           },
           'C2' => 
@@ -231,7 +231,7 @@ my %TOURNAMENTS_MIDDLEEAST =
             YEAR => 2009,
             STAGE => 'Final',
             major => 'SEGMENT',
-            DATE_START => '2009-06-04',
+            DATE_START => '2009-07-04',
             DATE_END => '2009-07-04'
           } 
         }
@@ -373,7 +373,7 @@ my %TOURNAMENTS_MIDDLEEAST =
             YEAR => 2015,
             major => 'ROUND',
             DATE_START => '2015-05-28',
-            DATE_END => '2015-06-31'
+            DATE_END => '2015-05-31'
           },
           'C1' => 
           {
@@ -666,9 +666,21 @@ my %TOURNAMENTS_MIDDLEEAST =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          # TODO Unchecked
+          'C0' => 
           {
             # Looks like 2020-10-06 RR, maybe 2020-10-25 to 27 KO.
+            YEAR => 2016,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2016-10-06',
+            DATE_END => '2016-10-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-10-25',
+            DATE_END => '2016-10-27'
           }
         }
       },
@@ -687,7 +699,7 @@ my %TOURNAMENTS_MIDDLEEAST =
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2022-09-28',
-            DATE_END => '2022-10-30'
+            DATE_END => '2022-09-30'
           },
           'C1' => 
           {

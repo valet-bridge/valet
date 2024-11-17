@@ -1,22 +1,20 @@
-Consistencies:
-- Dates
-  - In Tname and Meet separately
-    - is a date
-    - Must have a and b
-    - max 14 days apart, a <= b, YEAR matches if present
-    - Tag is either year (if present) or year ABD or year-yy
+Check when reading Tournaments:
+- If MEET, then 
   - Add a Tname meet tag if not same as Tname tag
-  - Both Tname and Meet present
-    - Meet tag present as expected
-    - date1 >= date1, date2 <= date2, year matches if present
-    - Look for Tname that could be Meet but isn't
+  - dates contained
+
+- Dates
+  - Look for Tname that could be within some Meet in file but isn't
+
+  - Field values are known for ORG, COUNTRY, ZONE, REGION etc.
+  - If set, they match, e.g. city and country
+
+Consistencies:
 - Names of Tname and Meet separately
   - Same list for each file (no extras)
 - Usage
   - All chapters of Tname used (maybe up to 2016 or in interval)
   - Dates in Tname as tight as possible
-  - Field values are known for ORG, COUNTRY, ZONE, REGION etc.
-  - If set, they match, e.g. city and country
 - Counters
   - Chapters with counters in data, but not set
   - All same STAGE in chapter if STAGE is present

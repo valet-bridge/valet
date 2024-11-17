@@ -335,8 +335,8 @@ my %MEETS_ISRAEL =
         CITY => 'Eilat',
         COUNTRY => 'Israel',
         YEAR => 2017,
-        DATE_START => '2018-11-09',
-        DATE_END => '2019-11-19'
+        DATE_START => '2017-11-09',
+        DATE_END => '2017-11-19'
       },
       '2018' =>
       {
@@ -345,7 +345,7 @@ my %MEETS_ISRAEL =
         COUNTRY => 'Israel',
         YEAR => 2018,
         DATE_START => '2018-11-08',
-        DATE_END => '2019-11-18'
+        DATE_END => '2018-11-18'
       },
       '2019' =>
       {

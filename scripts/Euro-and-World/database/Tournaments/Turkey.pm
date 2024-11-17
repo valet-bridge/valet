@@ -1439,7 +1439,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2014,
             DATE_START => '2014-06-04',
-            DATE_END => '2016-02-04'
+            DATE_END => '2014-06-04'
           },
         }
       },
@@ -1498,7 +1498,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2014,
             DATE_START => '2014-06-03',
-            DATE_END => '2016-02-06'
+            DATE_END => '2014-06-06'
           },
         }
       },

@@ -445,12 +445,12 @@ my %MEETS_INDIA =
         DATE_START => '2004-12-07',
         DATE_END => '2004-12-17'
       },
-      '2005' =>
+      '2005-06' =>
       {
         ORDINAL => 47,
         CITY => 'Chennai',
         DATE_START => '2005-12-27',
-        DATE_END => '2005-01-05'
+        DATE_END => '2006-01-05'
       },
       '2007' =>
       {
@@ -503,7 +503,7 @@ my %MEETS_INDIA =
         CITY => 'Ahmedabad',
         YEAR => 2013,
         DATE_START => '2013-12-20', # More dates
-        DATE_END => '2013-12-10'
+        DATE_END => '2013-12-20'
       },
       '2014' =>
       {
@@ -592,7 +592,7 @@ my %MEETS_INDIA =
       {
         YEAR => 2010,
         DATE_START => '2010-01-07',
-        DATE_END => '2012-01-07'
+        DATE_END => '2010-01-07'
       },
     }
   },

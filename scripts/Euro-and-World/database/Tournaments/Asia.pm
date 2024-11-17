@@ -174,7 +174,7 @@ my %MEETS_ASIA =
         COUNTRY => 'China',
         YEAR => 2013,
         DATE_START => '2013-08-19',
-        DATE_END => '2013-09-25'
+        DATE_END => '2013-08-25'
       },
     }
   },

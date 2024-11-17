@@ -44,97 +44,121 @@ my %MEETS_DENMARK =
       {
         # https://bridge.dk/2011/
         YEAR => 2011,
-        CITY => 'Copenhagen',
-        DATE_START => '2011-xx-xx',
-        DATE_END => '2011-xx-xx'
+        CITY => 'Svendborg',
+        DATE_START => '2011-07-09',
+        DATE_END => '2011-07-17'
       },
       '2012' =>
       {
         # https://bridge.dk/2012/
         YEAR => 2012,
-        CITY => 'Copenhagen',
-        DATE_START => '2012-xx-xx',
-        DATE_END => '2012-xx-xx'
+        CITY => 'Svendborg',
+        DATE_START => '2012-07-09',
+        DATE_END => '2012-07-15'
       },
       '2013' =>
       {
         # https://bridge.dk/2013/
         YEAR => 2013,
-        CITY => 'Copenhagen',
-        DATE_START => '2013-xx-xx',
-        DATE_END => '2013-xx-xx'
+        CITY => 'Svendborg',
+        DATE_START => '2013-07-09',
+        DATE_END => '2013-07-14'
       },
       '2014' =>
       {
         # https://bridge.dk/2014/
         YEAR => 2014,
-        CITY => 'Copenhagen',
-        DATE_START => '2014-xx-xx',
-        DATE_END => '2014-xx-xx'
+        CITY => 'Svendborg',
+        DATE_START => '2014-07-08',
+        DATE_END => '2014-07-13'
       },
       '2015' =>
       {
         # https://bridge.dk/2015/
         YEAR => 2015,
-        CITY => 'Copenhagen',
-        DATE_START => '2015-xx-xx',
-        DATE_END => '2015-xx-xx'
+        CITY => 'Svendborg',
+        DATE_START => '2015-07-03',
+        DATE_END => '2015-07-12'
       },
       '2016' =>
       {
         # https://bridge.dk/2016/
         YEAR => 2016,
-        CITY => 'Copenhagen',
-        DATE_START => '2016-xx-xx',
-        DATE_END => '2016-xx-xx'
+        CITY => 'Svendborg',
+        DATE_START => '2016-07-10',
+        DATE_END => '2016-07-14'
       },
       '2017' =>
       {
         # https://bridge.dk/2017/
         YEAR => 2017,
-        CITY => 'Copenhagen',
-        DATE_START => '2017-xx-xx',
-        DATE_END => '2017-xx-xx'
+        CITY => 'Svendborg',
+        DATE_START => '2017-07-10',
+        DATE_END => '2017-07-14'
       },
       '2018' =>
       {
         # https://bridge.dk/2018/
         YEAR => 2018,
-        CITY => 'Copenhagen',
-        DATE_START => '2018-xx-xx',
-        DATE_END => '2018-xx-xx'
+        CITY => 'Svendborg',
+        DATE_START => '2018-07-09',
+        DATE_END => '2018-07-13'
       },
       '2019' =>
       {
         # https://bridge.dk/2019/
         YEAR => 2019,
-        CITY => 'Copenhagen',
-        DATE_START => '2019-xx-xx',
-        DATE_END => '2019-xx-xx'
+        CITY => 'Svendborg',
+        DATE_START => '2019-07-05',
+        DATE_END => '2019-07-14'
+      },
+      '2020' =>
+      {
+        # https://bridge.dk/2020/
+        YEAR => 2020,
+        CITY => 'Svendborg', # Probably cancelled
+        DATE_START => '2020-07-03',
+        DATE_END => '2020-07-12'
+      },
+      '2021' =>
+      {
+        # https://bridge.dk/2021/
+        YEAR => 2021,
+        CITY => 'Online',
+        DATE_START => '2021-07-09',
+        DATE_END => '2021-07-18'
       },
       '2022' =>
       {
         # https://bridge.dk/2022/
         YEAR => 2022,
-        CITY => 'Copenhagen',
-        DATE_START => '2022-xx-xx',
-        DATE_END => '2022-xx-xx'
+        CITY => 'Svendborg',
+        DATE_START => '2022-07-08',
+        DATE_END => '2022-07-17'
       },
       '2023' =>
       {
         # https://bridge.dk/2023/
         YEAR => 2023,
-        CITY => 'Copenhagen',
-        DATE_START => '2023-xx-xx',
-        DATE_END => '2023-xx-xx'
+        CITY => 'Svendborg',
+        DATE_START => '2023-07-08',
+        DATE_END => '2023-07-15'
       },
       '2024' =>
       {
         # https://bridge.dk/2024/
         YEAR => 2024,
-        CITY => 'Copenhagen',
-        DATE_START => '2024-xx-xx',
-        DATE_END => '2024-xx-xx'
+        CITY => 'Svendborg',
+        DATE_START => '2024-07-06',
+        DATE_END => '2024-07-13'
+      },
+      '2025' =>
+      {
+        # https://bridge.dk/2025/
+        YEAR => 2025,
+        CITY => 'Svendborg',
+        DATE_START => '2025-07-04',
+        DATE_END => '2025-07-12'
       },
     }
   }
@@ -1717,8 +1741,8 @@ my %TOURNAMENTS_DENMARK =
             WEEKEND => 5,
             STAGE => 'Final',
             CITY => 'Aarhus',
-            DATE_START => '2021-04-24',
-            DATE_END => '2021-04-24'
+            DATE_START => '2022-04-24',
+            DATE_END => '2022-04-24'
           }
         }
       },
@@ -1919,10 +1943,10 @@ my %TOURNAMENTS_DENMARK =
 
       '2018' =>
       {
+        CITY => 'Vejle',
         CHAPTERS => 
         {
           # https://www2.bridge.dk/Default.aspx?ID=17866#26511
-          CITY => 'Vejle',
           'SINGLE' => 
           {
             YEAR => 2018,
@@ -1934,10 +1958,10 @@ my %TOURNAMENTS_DENMARK =
 
       '2019' =>
       {
+        CITY => 'Vejle',
         CHAPTERS => 
         {
           # https://www2.bridge.dk/Default.aspx?ID=23451#DM_Juniorhold
-          CITY => 'Vejle',
           'SINGLE' => 
           {
             YEAR => 2018,

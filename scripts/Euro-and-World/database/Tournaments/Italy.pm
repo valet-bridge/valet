@@ -363,7 +363,7 @@ my %MEETS_ITALY =
         YEAR => 2022,
         CITY => 'Salsomaggiore',
         DATE_START => '2022-10-12',
-        DATE_END => '2022-20-11'
+        DATE_END => '2022-10-30'
       },
       '2023' =>
       {
@@ -2988,12 +2988,11 @@ my %TOURNAMENTS_ITALY =
     {
       '2014' =>
       {
+        # https://www.federbridge.it/campionati/2014/SSSQOP/indice.asp
+        YEAR => 2014,
+        CITY => 'Salsomaggiore',
         CHAPTERS => 
         {
-        YEAR => 2014,
-          CITY => 'Salsomaggiore',
-          # https://www.federbridge.it/campionati/2014/SSSQOP/indice.asp
-
           'C0' =>
           {
             MOVEMENT => 'Swiss',

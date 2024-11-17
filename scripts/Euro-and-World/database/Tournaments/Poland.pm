@@ -382,8 +382,8 @@ my %MEETS_POLAND =
       {
         # https://wyniki.pzbs.pl/2013/_gpp/03krakow/13kwgpp.html
         YEAR => 2013,
-        DATE_START => '2014-03-22', # Dates are a guess
-        DATE_END => '2014-03-24'
+        DATE_START => '2013-03-22', # Dates are a guess
+        DATE_END => '2013-03-24'
       },
       '2014' =>
       {
@@ -854,7 +854,7 @@ my %MEETS_POLAND =
       {
         # http://kongresy.brydz.wlkp.pl/index.php/harmonogram-wyniki-2022/
         ORDINAL => 61,
-        YEAR => 2021,
+        YEAR => 2022,
         DATE_START => '2022-04-29',
         DATE_END => '2022-05-03'
       },
@@ -1277,7 +1277,7 @@ my %MEETS_POLAND =
         # https://wyniki.pzbs.pl/2014/_gpp/07wroclaw/
         ORDINAL => 35,
         CITY => 'Wroclaw',
-        YEAR => 2015,
+        YEAR => 2014,
         DATE_START => '2014-05-23',
         DATE_END => '2014-05-25'
       },
@@ -2130,9 +2130,9 @@ my %TOURNAMENTS_POLAND =
       },
       '2013A' =>
       {
+        MEET => 'Zulawski Congress',
         CHAPTERS =>
         {
-          MEET => 'Zulawski Congress',
           'SINGLE' => 
           {
             YEAR => 2013,
@@ -2271,9 +2271,9 @@ my %TOURNAMENTS_POLAND =
       },
       '2014B' =>
       {
+        CITY => 'Bydgoszcz',
         CHAPTERS =>
         {
-          CITY => 'Bydgoszcz',
           'SINGLE' => 
           {
             YEAR => 2014,
@@ -2285,9 +2285,9 @@ my %TOURNAMENTS_POLAND =
       },
       '2014C' =>
       {
+        MEET => 'Krakow Congress',
         CHAPTERS =>
         {
-          MEET => 'Krakow Congress',
           'SINGLE' => 
           {
             YEAR => 2014,
