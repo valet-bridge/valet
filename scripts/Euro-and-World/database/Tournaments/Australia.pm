@@ -4955,8 +4955,8 @@ my %TOURNAMENTS_AUSTRALIA =
           'SINGLE' => 
           {
             YEAR => 2005,
-            DATE_START => '2005-02-27',
-            DATE_END => '2005-02-27'
+            DATE_START => '2005-02-26',
+            DATE_END => '2005-02-26'
           } 
         }
       },
@@ -4968,8 +4968,8 @@ my %TOURNAMENTS_AUSTRALIA =
           'SINGLE' => 
           {
             YEAR => 2006,
-            DATE_START => '2006-02-26',
-            DATE_END => '2006-02-26'
+            DATE_START => '2006-02-25',
+            DATE_END => '2006-02-25'
           } 
         }
       },
@@ -4997,16 +4997,16 @@ my %TOURNAMENTS_AUSTRALIA =
             STAGE => 'Semifinal',
             major => 'MATCH',
             minor => 'SEGMENT',
-            DATE_START => '2008-03-03',
-            DATE_END => '2008-03-03'
+            DATE_START => '2008-03-01',
+            DATE_END => '2008-03-01'
           },
           'C1' => 
           {
             YEAR => 2008,
             STAGE => 'Final',
             major => 'SEGMENT',
-            DATE_START => '2008-03-03',
-            DATE_END => '2008-03-03'
+            DATE_START => '2008-03-01',
+            DATE_END => '2008-03-01'
           } 
         }
       },

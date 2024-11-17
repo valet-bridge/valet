@@ -176,6 +176,15 @@ my %MEETS_ASIA =
         DATE_START => '2013-08-19',
         DATE_END => '2013-08-25'
       },
+      '2015' =>
+      {
+        ORDINAL => 20,
+        CITY => 'Bangkok',
+        COUNTRY => 'Thailand',
+        YEAR => 2015,
+        DATE_START => '2015-04-01',
+        DATE_END => '2015-04-07'
+      },
     }
   },
 

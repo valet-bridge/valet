@@ -309,15 +309,15 @@ my %MEETS_INDIA =
         ORDINAL => 1,
         CITY => 'Nashik',
         YEAR => 2011,
-        DATE_START => '2011-03-14', # More dates
-        DATE_END => '2011-03-15'
+        DATE_START => '2011-03-14',
+        DATE_END => '2011-03-16'
       },
       '2012' =>
       {
         ORDINAL => 2,
         YEAR => 2012,
-        DATE_START => '2012-06-19', # More dates
-        DATE_END => '2012-06-20'
+        DATE_START => '2012-06-19',
+        DATE_END => '2012-06-21'
       },
       '2013' =>
       {
@@ -465,12 +465,12 @@ my %MEETS_INDIA =
         ORDINAL => 50,
         CITY => 'Kanpur',
         DATE_START => '2008-11-12',
-        DATE_END => '2008-11-21'
+        DATE_END => '2008-11-23'
       },
       '2009' =>
       {
         ORDINAL => 51,
-        DATE_START => '2009-12-24', # More dates
+        DATE_START => '2009-12-18',
         DATE_END => '2009-12-24'
       },
       '2010' =>
@@ -502,8 +502,8 @@ my %MEETS_INDIA =
         ORDINAL => 55,
         CITY => 'Ahmedabad',
         YEAR => 2013,
-        DATE_START => '2013-12-20', # More dates
-        DATE_END => '2013-12-20'
+        DATE_START => '2013-12-20',
+        DATE_END => '2013-12-23'
       },
       '2014' =>
       {

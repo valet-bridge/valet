@@ -286,6 +286,7 @@ sub init_links
   }
 
   $self->check_consistency();
+  exit;
 }
 
 
@@ -376,6 +377,31 @@ sub check_dates
 }
 
 
+sub check_meet_ref
+{
+  my ($self, $text, $meet, $mtag, $date_start, $date_end) = @_;
+
+  my $date = DateCalc->new();
+  $date->set_by_field($date_start);
+
+  my $mdate1 = $self->{MEET}{$meet}{EDITIONS}{$mtag}{DATE_START};
+  my $mdate2 = $self->{MEET}{$meet}{EDITIONS}{$mtag}{DATE_END};
+
+  my $dist = $date->distance($mdate1, $mdate2);
+  if ($dist != 0)
+  {
+    warn "$text: $date_start outside of $mdate1 to $mdate2";
+  }
+
+  $date->set_by_field($date_end);
+  $dist = $date->distance($mdate1, $mdate2);
+  if ($dist != 0)
+  {
+    warn "$text: $date_end outside of $mdate1 to $mdate2";
+  }
+}
+
+
 sub check_consistency
 {
   my ($self) = @_;
@@ -398,16 +424,40 @@ sub check_consistency
     for my $tag (sort keys %$editions)
     {
       my $edition = $editions->{$tag};
+
+      my $mtag = '';
+      my $mchapter;
+      if (exists $edition->{MEET})
+      {
+        my $meet = $edition->{MEET};
+        $mtag = $edition->{MEET_TAG} // $tag;
+        if (exists $self->{MEET}{$meet}{EDITIONS}{$mtag})
+        {
+          $mchapter = $self->{MEET}{$meet}{EDITIONS}{$mtag};
+        }
+        else
+        {
+          warn "Tname $tournament, $tag: Meet $meet, $mtag not found";
+          $mtag = '';
+        }
+      }
+
       for my $ctag (sort keys %{$edition->{CHAPTERS}})
       {
         my $chapter = $edition->{CHAPTERS}{$ctag};
         my $year = $chapter->{YEAR} // '';
         check_dates("Tname $tournament, $tag, $ctag", $tag, $year,
           $chapter->{DATE_START}, $chapter->{DATE_END});
+
+        if ($mtag)
+        {
+          $self->check_meet_ref("Tname $tournament, $tag", 
+            $edition->{MEET}, $mtag,
+            $chapter->{DATE_START}, $chapter->{DATE_END});
+        }
       }
     }
   }
-
 }
 
 

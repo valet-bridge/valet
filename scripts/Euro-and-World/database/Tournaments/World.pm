@@ -405,8 +405,8 @@ my %MEETS_WORLD =
         YEAR => 2011,
         CITY => 'Veldhoven',
         COUNTRY => 'Netherlands',
-        DATE_START => '2011-09-15',
-        DATE_END => '2011-09-29'
+        DATE_START => '2011-10-15',
+        DATE_END => '2011-10-29'
       },
       '2013' =>
       {

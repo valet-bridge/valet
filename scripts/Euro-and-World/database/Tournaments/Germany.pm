@@ -23,38 +23,59 @@ my %MEETS_GERMANY =
     {
       '2013' =>
       {
-        ORDINAL => '1st',
+        ORDINAL => 1,
         YEAR => 2013,
         CITY => 'Berlin',
         DATE_START => '2013-08-10',
         DATE_END => '2013-08-18'
       },
-
       '2014' =>
       {
-        ORDINAL => '2nd',
+        ORDINAL => 2,
         YEAR => 2014,
         CITY => 'Berlin',
         DATE_START => '2014-08-16',
         DATE_END => '2014-08-24'
       },
-
       '2015' =>
       {
-        ORDINAL => '3rd',
+        ORDINAL => 3,
         YEAR => 2015,
         CITY => 'Berlin',
         DATE_START => '2015-08-15',
         DATE_END => '2015-08-23'
       },
-
       '2016' =>
       {
-        ORDINAL => '4th',
+        ORDINAL => 4,
         YEAR => 2016,
         CITY => 'Berlin',
         DATE_START => '2016-08-20',
         DATE_END => '2016-08-28'
+      },
+      '2017' =>
+      {
+        ORDINAL => 5,
+        YEAR => 2017,
+        CITY => 'Berlin',
+        DATE_START => '2017-08-10',
+        DATE_END => '2017-08-17'
+      },
+      '2018' =>
+      {
+        ORDINAL => 6,
+        YEAR => 2018,
+        CITY => 'Berlin',
+        DATE_START => '2018-07-22',
+        DATE_END => '2018-07-29'
+      },
+      '2019' =>
+      {
+        ORDINAL => 7,
+        YEAR => 2019,
+        CITY => 'Berlin',
+        DATE_START => '2019-08-24',
+        DATE_END => '2019-09-01'
       }
     }
   }

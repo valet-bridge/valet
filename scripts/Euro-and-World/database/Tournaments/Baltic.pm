@@ -286,6 +286,48 @@ my %MEETS_BALTIC =
         DATE_START => '2004-05-29',
         DATE_END => '2004-05-29'
       },
+      '2005' =>
+      {
+        YEAR => 2005,
+        DATE_START => '2005-05-31',
+        DATE_END => '2005-05-31'
+      },
+      '2006' =>
+      {
+        YEAR => 2006,
+        DATE_START => '2006-05-26',
+        DATE_END => '2006-05-26'
+      },
+      '2007' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-05-30',
+        DATE_END => '2007-05-31'
+      },
+      '2008' =>
+      {
+        YEAR => 2008,
+        DATE_START => '2008-06-03',
+        DATE_END => '2008-06-03'
+      },
+      '2009' =>
+      {
+        YEAR => 2009,
+        DATE_START => '2009-05-29',
+        DATE_END => '2009-05-30'
+      },
+      '2010' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-05-28',
+        DATE_END => '2010-05-29'
+      },
+      '2011' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-05-27',
+        DATE_END => '2011-05-28'
+      },
       '2012' =>
       {
         # https://old.bridge.ee/festival/5SFG_fest12.htm

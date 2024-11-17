@@ -22,11 +22,11 @@ my %MEETS_RUSSIA =
 
     EDITIONS => 
     {
-      '2015' =>
+      '2013' =>
       {
         YEAR => 2013,
         DATE_START => '2013-12-21',
-        DATE_END => '2013-12-21'
+        DATE_END => '2013-12-22'
       },
     }
   }

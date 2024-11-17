@@ -176,7 +176,7 @@ my %MEETS_TURKEY =
       {
         YEAR => 2012,
         DATE_START => '2012-02-23',
-        DATE_END => '2012-02-23'
+        DATE_END => '2012-02-28'
       },
     }
   },

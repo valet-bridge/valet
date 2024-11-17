@@ -24,8 +24,201 @@ my %MEETS_USA =
 
     EDITIONS => 
     {
+      '1996A' =>
+      {
+        ORDINAL => 39,
+        YEAR => 1996,
+        CITY => 'Philadelphia',
+        DATE_START => '1996-03-01',
+        DATE_END => '1996-03-10'
+      },
+      '1996B' =>
+      {
+        ORDINAL => 68,
+        YEAR => 1996,
+        CITY => 'Miami Beach',
+        DATE_START => '1996-08-01',
+        DATE_END => '1996-08-11'
+      },
+      '1996C' =>
+      {
+        ORDINAL => 70,
+        YEAR => 1996,
+        CITY => 'San Francisco',
+        DATE_START => '1996-11-21',
+        DATE_END => '1996-12-01'
+      },
+      '1997A' =>
+      {
+        ORDINAL => 40,
+        YEAR => 1997,
+        CITY => 'Dallas',
+        DATE_START => '1997-03-06',
+        DATE_END => '1997-03-16'
+      },
+      '1997B' =>
+      {
+        ORDINAL => 69,
+        YEAR => 1997,
+        CITY => 'Albuquerque',
+        DATE_START => '1997-07-24',
+        DATE_END => '1997-08-03'
+      },
+      '1997C' =>
+      {
+        ORDINAL => 71,
+        YEAR => 1997,
+        CITY => 'St. Louis',
+        DATE_START => '1997-11-20',
+        DATE_END => '1997-11-30'
+      },
+      '1998A' =>
+      {
+        ORDINAL => 41,
+        YEAR => 1998,
+        CITY => 'Reno',
+        DATE_START => '1998-03-19',
+        DATE_END => '1998-03-29'
+      },
+      '1998B' =>
+      {
+        ORDINAL => 70,
+        YEAR => 1998,
+        CITY => 'Chicago',
+        DATE_START => '1998-07-23',
+        DATE_END => '1998-08-02'
+      },
+      '1998C' =>
+      {
+        ORDINAL => 72,
+        YEAR => 1998,
+        CITY => 'Orlando',
+        DATE_START => '1998-11-19',
+        DATE_END => '1998-11-29'
+      },
+      '1999A' =>
+      {
+        ORDINAL => 42,
+        YEAR => 1999,
+        CITY => 'Vancouver',
+        DATE_START => '1999-03-18',
+        DATE_END => '1999-03-28'
+      },
+      '1999B' =>
+      {
+        ORDINAL => 71,
+        YEAR => 1999,
+        CITY => 'San Antonio',
+        DATE_START => '1999-07-21',
+        DATE_END => '1999-07-31'
+      },
+      '1999C' =>
+      {
+        ORDINAL => 73,
+        YEAR => 1999,
+        CITY => 'Boston',
+        DATE_START => '1999-11-18',
+        DATE_END => '1999-11-18'
+      },
+      '2000A' =>
+      {
+        ORDINAL => 43,
+        YEAR => 2000,
+        CITY => 'Cincinnati',
+        DATE_START => '2000-03-19',
+        DATE_END => '2000-03-29'
+      },
+      '2000B' =>
+      {
+        ORDINAL => 72,
+        YEAR => 2000,
+        CITY => 'Anaheim',
+        DATE_START => '2000-08-10',
+        DATE_END => '2000-08-20'
+      },
+      '2000C' =>
+      {
+        ORDINAL => 74,
+        YEAR => 2000,
+        CITY => 'Birmingham',
+        DATE_START => '2001-11-16',
+        DATE_END => '2001-11-26'
+      },
+      '2001A' =>
+      {
+        ORDINAL => 44,
+        YEAR => 2001,
+        CITY => 'Kansas City',
+        DATE_START => '2001-03-15',
+        DATE_END => '2001-03-25'
+      },
+      '2001B' =>
+      {
+        ORDINAL => 73,
+        YEAR => 2001,
+        CITY => 'Toronto',
+        DATE_START => '2001-07-19',
+        DATE_END => '2001-07-29'
+      },
+      '2001C' =>
+      {
+        ORDINAL => 75,
+        YEAR => 2001,
+        CITY => 'Las Vegas',
+        DATE_START => '2001-11-18',
+        DATE_END => '2001-11-27'
+      },
+      '2002A' =>
+      {
+        ORDINAL => 45,
+        YEAR => 2002,
+        CITY => 'Houston',
+        DATE_START => '2002-03-07',
+        DATE_END => '2002-03-17'
+      },
+      '2002B' =>
+      {
+        ORDINAL => 74,
+        YEAR => 2002,
+        CITY => 'Washington, DC',
+        DATE_START => '2002-07-18',
+        DATE_END => '2002-07-28'
+      },
+      '2002C' =>
+      {
+        ORDINAL => 76,
+        YEAR => 2002,
+        CITY => 'Phoenix',
+        DATE_START => '2002-11-28',
+        DATE_END => '2002-12-08'
+      },
+      '2003A' =>
+      {
+        ORDINAL => 46,
+        YEAR => 2003,
+        CITY => 'Philadelphia',
+        DATE_START => '2003-03-06',
+        DATE_END => '2003-03-16'
+      },
+      '2003B' =>
+      {
+        ORDINAL => 75,
+        YEAR => 2003,
+        CITY => 'Long Beach',
+        DATE_START => '2003-07-17',
+        DATE_END => '2003-07-27'
+      },
+      '2003C' =>
+      {
+        ORDINAL => 77,
+        YEAR => 2003,
+        CITY => 'New Orleans',
+        DATE_START => '2003-11-20',
+        DATE_END => '2003-11-30'
+      },
       '2004A' =>
       {
+        ORDINAL => 47,
         YEAR => 2004,
         CITY => 'Reno',
         DATE_START => '2004-03-18',
@@ -33,6 +226,7 @@ my %MEETS_USA =
       },
       '2004B' =>
       {
+        ORDINAL => 76,
         YEAR => 2004,
         CITY => 'New York City',
         DATE_START => '2004-07-21',
@@ -40,6 +234,7 @@ my %MEETS_USA =
       },
       '2004C' =>
       {
+        ORDINAL => 78,
         YEAR => 2004,
         CITY => 'Orlando',
         DATE_START => '2004-11-19',
@@ -47,6 +242,7 @@ my %MEETS_USA =
       },
       '2005A' =>
       {
+        ORDINAL => 48,
         YEAR => 2005,
         CITY => 'Pittsburgh',
         DATE_START => '2005-03-10',
@@ -54,6 +250,7 @@ my %MEETS_USA =
       },
       '2005B' =>
       {
+        ORDINAL => 77,
         YEAR => 2005,
         CITY => 'Atlanta',
         DATE_START => '2005-07-21',
@@ -61,6 +258,7 @@ my %MEETS_USA =
       },
       '2005C' =>
       {
+        ORDINAL => 79,
         YEAR => 2005,
         CITY => 'Denver',
         DATE_START => '2005-11-21',
@@ -68,6 +266,7 @@ my %MEETS_USA =
       },
       '2006A' =>
       {
+        ORDINAL => 49,
         YEAR => 2006,
         CITY => 'Dallas',
         DATE_START => '2006-03-30',
@@ -75,6 +274,7 @@ my %MEETS_USA =
       },
       '2006B' =>
       {
+        ORDINAL => 78,
         YEAR => 2006,
         CITY => 'Chicago',
         DATE_START => '2006-07-13',
@@ -82,13 +282,15 @@ my %MEETS_USA =
       },
       '2006C' =>
       {
-        YEAR => 2006,
+        ORDINAL => 79, # Should be 80?
+        YEAR => 2006, 
         CITY => 'Honolulu',
         DATE_START => '2006-11-16',
-        DATE_END => '2006-11-26'
+        DATE_END => '2006-11-27'
       },
       '2007A' =>
       {
+        ORDINAL => 50,
         YEAR => 2007,
         CITY => 'St. Louis',
         DATE_START => '2007-03-08',
@@ -96,6 +298,7 @@ my %MEETS_USA =
       },
       '2007B' =>
       {
+        ORDINAL => 79,
         YEAR => 2007,
         CITY => 'Nashville',
         DATE_START => '2007-07-19',
@@ -103,6 +306,7 @@ my %MEETS_USA =
       },
       '2007C' =>
       {
+        ORDINAL => 81,
         YEAR => 2007,
         CITY => 'San Francisco',
         DATE_START => '2007-11-22',
@@ -110,6 +314,7 @@ my %MEETS_USA =
       },
       '2008A' =>
       {
+        ORDINAL => 51,
         YEAR => 2008,
         CITY => 'Detroit',
         DATE_START => '2008-03-06',
@@ -117,13 +322,15 @@ my %MEETS_USA =
       },
       '2008B' =>
       {
+        ORDINAL => 80,
         YEAR => 2008,
         CITY => 'Las Vegas',
-        DATE_START => '2008-07-17',
+        DATE_START => '2008-07-16',
         DATE_END => '2008-07-27'
       },
       '2008C' =>
       {
+        ORDINAL => 81,
         YEAR => 2008,
         CITY => 'Boston',
         DATE_START => '2008-11-20',
@@ -131,6 +338,7 @@ my %MEETS_USA =
       },
       '2009A' =>
       {
+        ORDINAL => 52,
         YEAR => 2009,
         CITY => 'Houston',
         DATE_START => '2009-03-12',
@@ -138,13 +346,15 @@ my %MEETS_USA =
       },
       '2009B' =>
       {
+        ORDINAL => 81,
         YEAR => 2009,
         CITY => 'Washington DC',
-        DATE_START => '2009-07-23',
+        DATE_START => '2009-07-22',
         DATE_END => '2009-08-02'
       },
       '2009C' =>
       {
+        ORDINAL => 83,
         YEAR => 2009,
         CITY => 'San Diego',
         DATE_START => '2009-11-26',
@@ -152,13 +362,15 @@ my %MEETS_USA =
       },
       '2010A' =>
       {
+        ORDINAL => 53,
         YEAR => 2010,
         CITY => 'Reno',
         DATE_START => '2010-03-11',
-        DATE_END => '2010-03-21'
+        DATE_END => '2010-03-22'
       },
       '2010B' =>
       {
+        ORDINAL => 82,
         YEAR => 2010,
         CITY => 'New Orleans',
         DATE_START => '2010-07-22',
@@ -166,6 +378,7 @@ my %MEETS_USA =
       },
       '2010C' =>
       {
+        ORDINAL => 83,
         YEAR => 2010,
         CITY => 'Orlando',
         DATE_START => '2010-11-25',
@@ -173,6 +386,7 @@ my %MEETS_USA =
       },
       '2011A' =>
       {
+        ORDINAL => 54,
         YEAR => 2011,
         CITY => 'Louisville',
         DATE_START => '2011-03-10',
@@ -180,6 +394,7 @@ my %MEETS_USA =
       },
       '2011B' =>
       {
+        ORDINAL => 83,
         YEAR => 2011,
         CITY => 'Toronto',
         DATE_START => '2011-07-21',
@@ -187,6 +402,7 @@ my %MEETS_USA =
       },
       '2011C' =>
       {
+        ORDINAL => 85,
         YEAR => 2011,
         CITY => 'Seattle',
         DATE_START => '2011-11-24',
@@ -194,6 +410,7 @@ my %MEETS_USA =
       },
       '2012A' =>
       {
+        ORDINAL => 55,
         YEAR => 2012,
         CITY => 'Memphis',
         DATE_START => '2012-03-15',
@@ -201,6 +418,7 @@ my %MEETS_USA =
       },
       '2012B' =>
       {
+        ORDINAL => 84,
         YEAR => 2012,
         CITY => 'Philadelphia',
         DATE_START => '2012-07-12',
@@ -208,20 +426,23 @@ my %MEETS_USA =
       },
       '2012C' =>
       {
+        ORDINAL => 85,
         YEAR => 2012,
         CITY => 'New Orleans',
         DATE_START => '2012-11-22',
-        DATE_END => '2012-12-02'
+        DATE_END => '2012-12-03'
       },
       '2013A' =>
       {
+        ORDINAL => 56,
         YEAR => 2013,
         CITY => 'St. Louis',
         DATE_START => '2013-03-14',
-        DATE_END => '2013-03-24'
+        DATE_END => '2013-03-25'
       },
       '2013B' =>
       {
+        ORDINAL => 85,
         YEAR => 2013,
         CITY => 'Atlanta',
         DATE_START => '2013-08-01',
@@ -229,20 +450,23 @@ my %MEETS_USA =
       },
       '2013C' =>
       {
+        ORDINAL => 87,
         YEAR => 2013,
         CITY => 'Phoenix',
         DATE_START => '2013-11-28',
-        DATE_END => '2013-12-08'
+        DATE_END => '2013-12-09'
       },
       '2014A' =>
       {
+        ORDINAL => 57,
         YEAR => 2014,
         CITY => 'Dallas',
         DATE_START => '2014-03-19',
-        DATE_END => '2014-03-30'
+        DATE_END => '2014-03-31'
       },
       '2014B' =>
       {
+        ORDINAL => 86,
         YEAR => 2014,
         CITY => 'Las Vegas',
         DATE_START => '2014-07-17',
@@ -250,20 +474,23 @@ my %MEETS_USA =
       },
       '2014C' =>
       {
+        ORDINAL => 87,
         YEAR => 2014,
         CITY => 'Providence',
         DATE_START => '2014-11-27',
-        DATE_END => '2014-12-07'
+        DATE_END => '2014-12-08'
       },
       '2015A' =>
       {
+        ORDINAL => 58,
         YEAR => 2015,
         CITY => 'New Orleans',
         DATE_START => '2015-03-12',
-        DATE_END => '2015-03-22'
+        DATE_END => '2015-03-23'
       },
       '2015B' =>
       {
+        ORDINAL => 87,
         YEAR => 2015,
         CITY => 'Chicago',
         DATE_START => '2015-08-06',
@@ -271,20 +498,23 @@ my %MEETS_USA =
       },
       '2015C' =>
       {
+        ORDINAL => 88,
         YEAR => 2015,
         CITY => 'Denver',
         DATE_START => '2015-11-26',
-        DATE_END => '2015-12-06'
+        DATE_END => '2015-12-07'
       },
       '2016A' =>
       {
+        ORDINAL => 59,
         YEAR => 2016,
         CITY => 'Reno',
         DATE_START => '2016-03-09',
-        DATE_END => '2016-03-20'
+        DATE_END => '2016-03-21'
       },
       '2016B' =>
       {
+        ORDINAL => 88,
         YEAR => 2016,
         CITY => 'Washington DC',
         DATE_START => '2016-07-20',
@@ -292,6 +522,7 @@ my %MEETS_USA =
       },
       '2016C' =>
       {
+        ORDINAL => 89,
         YEAR => 2016,
         CITY => 'Orlando',
         DATE_START => '2016-11-24',
@@ -299,6 +530,7 @@ my %MEETS_USA =
       },
       '2017A' =>
       {
+        ORDINAL => 60,
         YEAR => 2017,
         CITY => 'Kansas City',
         DATE_START => '2017-03-08',
@@ -306,6 +538,7 @@ my %MEETS_USA =
       },
       '2017B' =>
       {
+        ORDINAL => 89,
         YEAR => 2017,
         CITY => 'Toronto',
         DATE_START => '2017-07-19',
@@ -313,6 +546,7 @@ my %MEETS_USA =
       },
       '2017C' =>
       {
+        ORDINAL => 90,
         YEAR => 2017,
         CITY => 'San Diego',
         DATE_START => '2017-11-23',
@@ -320,6 +554,7 @@ my %MEETS_USA =
       },
       '2018A' =>
       {
+        ORDINAL => 61,
         YEAR => 2018,
         CITY => 'Philadelphia',
         DATE_START => '2018-03-07',
@@ -327,6 +562,7 @@ my %MEETS_USA =
       },
       '2018B' =>
       {
+        ORDINAL => 90,
         YEAR => 2018,
         CITY => 'Atlanta',
         DATE_START => '2018-07-25',
@@ -334,6 +570,7 @@ my %MEETS_USA =
       },
       '2018C' =>
       {
+        ORDINAL => 91,
         YEAR => 2018,
         CITY => 'Honolulu',
         DATE_START => '2018-11-22',
@@ -341,6 +578,7 @@ my %MEETS_USA =
       },
       '2019A' =>
       {
+        ORDINAL => 61, # Should be 62?
         YEAR => 2019,
         CITY => 'Memphis',
         DATE_START => '2019-03-20',
@@ -348,6 +586,7 @@ my %MEETS_USA =
       },
       '2019B' =>
       {
+        ORDINAL => 91,
         YEAR => 2019,
         CITY => 'Las Vegas',
         DATE_START => '2019-07-17',
@@ -355,6 +594,7 @@ my %MEETS_USA =
       },
       '2019C' =>
       {
+        ORDINAL => 92,
         YEAR => 2019,
         CITY => 'San Francisco',
         DATE_START => '2019-11-28',
@@ -362,6 +602,7 @@ my %MEETS_USA =
       },
       '2021C' =>
       {
+        ORDINAL => 93,
         YEAR => 2021,
         CITY => 'Austin',
         DATE_START => '2021-11-25',
@@ -369,6 +610,7 @@ my %MEETS_USA =
       },
       '2022A' =>
       {
+        ORDINAL => 62,
         YEAR => 2022,
         CITY => 'Reno',
         DATE_START => '2022-03-09',
@@ -376,6 +618,7 @@ my %MEETS_USA =
       },
       '2022B' =>
       {
+        ORDINAL => 92,
         YEAR => 2022,
         CITY => 'Providence',
         DATE_START => '2022-07-13',
@@ -383,6 +626,7 @@ my %MEETS_USA =
       },
       '2022C' =>
       {
+        ORDINAL => 94,
         YEAR => 2022,
         CITY => 'Phoenix',
         DATE_START => '2022-11-24',
@@ -390,6 +634,7 @@ my %MEETS_USA =
       },
       '2023A' =>
       {
+        ORDINAL => 63,
         YEAR => 2023,
         CITY => 'New Orleans',
         DATE_START => '2023-03-09',
@@ -397,6 +642,7 @@ my %MEETS_USA =
       },
       '2023B' =>
       {
+        ORDINAL => 93,
         YEAR => 2023,
         CITY => 'Chicago',
         DATE_START => '2023-07-12',
@@ -404,6 +650,7 @@ my %MEETS_USA =
       },
       '2023C' =>
       {
+        ORDINAL => 95,
         YEAR => 2023,
         CITY => 'Atlanta',
         DATE_START => '2023-11-23',
@@ -411,6 +658,7 @@ my %MEETS_USA =
       },
       '2024A' =>
       {
+        ORDINAL => 64,
         YEAR => 2024,
         CITY => 'Louisville',
         DATE_START => '2024-03-13',
@@ -418,6 +666,7 @@ my %MEETS_USA =
       },
       '2024B' =>
       {
+        ORDINAL => 94,
         YEAR => 2024,
         CITY => 'Toronto',
         DATE_START => '2024-07-17',
@@ -425,6 +674,7 @@ my %MEETS_USA =
       },
       '2024C' =>
       {
+        ORDINAL => 96,
         YEAR => 2024,
         CITY => 'Las Vegas',
         DATE_START => '2024-11-28',
@@ -444,6 +694,31 @@ my %MEETS_USA =
 
     EDITIONS => 
     {
+      '1997' =>
+      {
+        YEAR => 1997,
+        DATE_START => '1997-06-06',
+        DATE_END => '1997-06-09'
+      },
+      '1998' =>
+      {
+        YEAR => 1998,
+        CITY => 'Tunica',
+        DATE_START => '1998-06-17',
+        DATE_END => '1998-06-20'
+      },
+      '1999' =>
+      {
+        YEAR => 1999,
+        DATE_START => '1999-06-17',
+        DATE_END => '1999-06-19'
+      },
+      '2000' =>
+      {
+        YEAR => 2000,
+        DATE_START => '2000-06-14',
+        DATE_END => '2000-06-17'
+      },
       '2001' =>
       {
         YEAR => 2001,
@@ -479,6 +754,13 @@ my %MEETS_USA =
         DATE_START => '2006-08-19',
         DATE_END => '2006-08-27'
       },
+      '2007' =>
+      {
+        YEAR => 2007,
+        CITY => 'Schaumburg',
+        DATE_START => '2007-06-08',
+        DATE_END => '2007-06-11'
+      },
       '2008' =>
       {
         # Approximate
@@ -491,23 +773,148 @@ my %MEETS_USA =
         YEAR => 2009,
         CITY => 'White Plains',
         DATE_START => '2009-06-06',
-        DATE_END => '2009-06-14'
+        DATE_END => '2009-06-15'
       },
-      '2013-14' =>
+      '2010' =>
       {
-        CITY => 'Atlanta',
-        DATE_START => '2013-12-31',
-        DATE_END => '2014-01-02'
+        YEAR => 2010,
+        CITY => 'White Plains',
+        DATE_START => '2010-06-20',
+        DATE_END => '2010-06-27'
+      },
+      '2011' =>
+      {
+        YEAR => 2011,
+        CITY => 'Las Vegas',
+        DATE_START => '2011-05-10',
+        DATE_END => '2011-05-17'
+      },
+      '2012' =>
+      {
+        YEAR => 2012,
+        CITY => 'Schaumburg',
+        DATE_START => '2012-04-27',
+        DATE_END => '2012-05-06'
+      },
+      '2013' =>
+      {
+        YEAR => 2013,
+        CITY => 'Orlando',
+        DATE_START => '2013-06-01',
+        DATE_END => '2013-06-10'
+      },
+      '2014' =>
+      {
+        YEAR => 2014,
+        CITY => 'Phoenix',
+        DATE_START => '2014-05-11',
+        DATE_END => '2014-05-19'
+      },
+      '2015' =>
+      {
+        YEAR => 2015,
+        CITY => 'Schaumburg',
+        DATE_START => '2015-05-11',
+        DATE_END => '2015-05-17'
       },
       '2016' =>
       {
         YEAR => 2016,
-        DATE_START => '2016-08-01',
-        DATE_END => '2016-08-03'
+        CITY => 'Denver',
+        DATE_START => '2016-05-08',
+        DATE_END => '2016-05-15'
+      },
+      '2017' =>
+      {
+        YEAR => 2017,
+        CITY => 'Schaumburg',
+        DATE_START => '2017-04-30',
+        DATE_END => '2017-05-06'
+      },
+      '2018' =>
+      {
+        YEAR => 2018,
+        CITY => 'Houston',
+        DATE_START => '2018-05-11',
+        DATE_END => '2018-05-20'
+      },
+      '2019' =>
+      {
+        YEAR => 2019,
+        CITY => 'Schaumburg',
+        DATE_START => '2019-05-10',
+        DATE_END => '2019-05-19'
+      },
+      '2021' =>
+      {
+        YEAR => 2021,
+        CITY => 'Schaumburg',
+        DATE_START => '2021-10-05',
+        DATE_END => '2021-10-12'
+      },
+      '2022' =>
+      {
+        YEAR => 2022,
+        CITY => 'Schaumburg',
+        DATE_START => '2022-05-16',
+        DATE_END => '2022-05-23'
+      },
+      '2023' =>
+      {
+        YEAR => 2023,
+        CITY => 'Schaumburg',
+        DATE_START => '2023-05-01',
+        DATE_END => '2023-05-08'
+      },
+      '2024' =>
+      {
+        YEAR => 2024,
+        CITY => 'Schaumburg',
+        DATE_START => '2024-05-01',
+        DATE_END => '2024-05-08'
       },
     }
   },
 
+  'United States Youth Bridge Championship' =>
+  {
+    # https://usbf.org/past-tournaments/past-usbf-tournaments/index.php
+
+    ORGANIZATION => 'USBF',
+    COUNTRY => 'USA',
+    ORIGIN => 'National',
+    ZONE => 'North America',
+
+    EDITIONS => 
+    {
+      '2013-14' =>
+      {
+        CITY => 'Atlanta',
+        DATE_START => '2013-12-29',
+        DATE_END => '2014-01-02'
+      },
+      '2015-16' =>
+      {
+        DATE_START => '2015-12-28',
+        DATE_END => '2015-12-30'
+      },
+      '2017-18' =>
+      {
+        DATE_START => '2017-12-27',
+        DATE_END => '2017-12-31'
+      },
+      '2019-20' =>
+      {
+        DATE_START => '2019-12-27',
+        DATE_END => '2019-12-31'
+      },
+      '2024-25' =>
+      {
+        DATE_START => '2024-12-27',
+        DATE_END => '2025-01-02'
+      },
+    }
+  },
 );
 
 my %TOURNAMENTS_USA =
@@ -524,6 +931,7 @@ my %TOURNAMENTS_USA =
       '2007' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2007B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -539,10 +947,6 @@ my %TOURNAMENTS_USA =
 
   'Collegiate Bowl' => 
   {
-    ORGANIZATION => 'ACBL',
-    COUNTRY => 'USA',
-    ORIGIN => 'National',
-    ZONE => 'North America',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -552,6 +956,8 @@ my %TOURNAMENTS_USA =
     {
       '2014' =>
       {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2014B',
         CHAPTERS =>
         {
           'C0' => 
@@ -582,6 +988,8 @@ my %TOURNAMENTS_USA =
       },
       '2015' =>
       {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2015B',
         CHAPTERS =>
         {
           'C0' => 
@@ -612,6 +1020,8 @@ my %TOURNAMENTS_USA =
       },
       '2016' =>
       {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2016B',
         CHAPTERS =>
         {
           'C0' => 
@@ -645,10 +1055,6 @@ my %TOURNAMENTS_USA =
 
   'Grand National Teams' => 
   {
-    ORGANIZATION => 'ACBL',
-    COUNTRY => 'USA',
-    ORIGIN => 'National',
-    ZONE => 'North America',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -659,6 +1065,7 @@ my %TOURNAMENTS_USA =
       '2010' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2010B',
         CHAPTERS =>
         {
           'C0' => 
@@ -682,6 +1089,7 @@ my %TOURNAMENTS_USA =
       '2011' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2011B',
         CHAPTERS =>
         {
           'C0' => 
@@ -697,6 +1105,7 @@ my %TOURNAMENTS_USA =
       '2012' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2012B',
         CHAPTERS =>
         {
           'C0' => 
@@ -720,6 +1129,7 @@ my %TOURNAMENTS_USA =
       '2013' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2013B',
         CHAPTERS =>
         {
           'C0' => 
@@ -743,6 +1153,7 @@ my %TOURNAMENTS_USA =
       '2014' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2014B',
         CHAPTERS =>
         {
           'C0' => 
@@ -766,6 +1177,7 @@ my %TOURNAMENTS_USA =
       '2015' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2015B',
         CHAPTERS =>
         {
           'C0' => 
@@ -789,6 +1201,7 @@ my %TOURNAMENTS_USA =
       '2016' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2016B',
         CHAPTERS =>
         {
           'C0' => 
@@ -931,6 +1344,7 @@ my %TOURNAMENTS_USA =
       '2004' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2004C',
         CHAPTERS =>
         {
           'C0' => 
@@ -954,6 +1368,7 @@ my %TOURNAMENTS_USA =
       '2006' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2006C',
         CHAPTERS =>
         {
           'C0' => 
@@ -976,6 +1391,7 @@ my %TOURNAMENTS_USA =
       '2007' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2007C',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -991,6 +1407,7 @@ my %TOURNAMENTS_USA =
       '2008' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2008C',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1006,6 +1423,7 @@ my %TOURNAMENTS_USA =
       '2009' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2009C',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1021,6 +1439,7 @@ my %TOURNAMENTS_USA =
       '2010' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2010C',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1036,6 +1455,7 @@ my %TOURNAMENTS_USA =
       '2011' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2011C',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1051,6 +1471,7 @@ my %TOURNAMENTS_USA =
       '2012' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2012C',
         CHAPTERS =>
         {
           'C0' => 
@@ -1074,6 +1495,7 @@ my %TOURNAMENTS_USA =
       '2013' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2013C',
         CHAPTERS =>
         {
           'C0' => 
@@ -1097,6 +1519,7 @@ my %TOURNAMENTS_USA =
       '2014' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2014C',
         CHAPTERS =>
         {
           'C0' => 
@@ -1121,6 +1544,7 @@ my %TOURNAMENTS_USA =
       '2015' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2015C',
         CHAPTERS =>
         {
           'C0' => 
@@ -1166,6 +1590,7 @@ my %TOURNAMENTS_USA =
       '1996' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '1996B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1181,6 +1606,7 @@ my %TOURNAMENTS_USA =
       '1997' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '1997B',
         CHAPTERS =>
         {
           'C0' => 
@@ -1216,6 +1642,7 @@ my %TOURNAMENTS_USA =
       '1998' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '1998B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1231,6 +1658,7 @@ my %TOURNAMENTS_USA =
       '1999' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '1999B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1246,6 +1674,7 @@ my %TOURNAMENTS_USA =
       '2000' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2000B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1261,6 +1690,7 @@ my %TOURNAMENTS_USA =
       '2001' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2001B',
         CHAPTERS =>
         {
           'C0' => 
@@ -1317,6 +1747,7 @@ my %TOURNAMENTS_USA =
       '2004' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2004B',
         CHAPTERS =>
         {
           'C0' => 
@@ -1340,6 +1771,7 @@ my %TOURNAMENTS_USA =
       '2005' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2005B',
         CHAPTERS =>
         {
           'C0' => 
@@ -1363,6 +1795,7 @@ my %TOURNAMENTS_USA =
       '2006' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2006B',
         CHAPTERS =>
         {
           'C0' => 
@@ -1418,6 +1851,7 @@ my %TOURNAMENTS_USA =
       '2007' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2007B',
         CHAPTERS =>
         {
           'C0' => 
@@ -1457,6 +1891,7 @@ my %TOURNAMENTS_USA =
       '2008' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2008B',
         CHAPTERS =>
         {
           'C0' => 
@@ -1512,6 +1947,7 @@ my %TOURNAMENTS_USA =
       '2009' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2009B',
         CHAPTERS =>
         {
           'C0' => 
@@ -1567,6 +2003,7 @@ my %TOURNAMENTS_USA =
       '2010' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2010B',
         CHAPTERS =>
         {
           'C0' => 
@@ -1614,6 +2051,7 @@ my %TOURNAMENTS_USA =
       '2011' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2011B',
         CHAPTERS =>
         {
           'C0' => 
@@ -1661,6 +2099,7 @@ my %TOURNAMENTS_USA =
       '2012' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2012B',
         CHAPTERS =>
         {
           'C0' => 
@@ -1708,6 +2147,7 @@ my %TOURNAMENTS_USA =
       '2013' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2013B',
         CHAPTERS =>
         {
           'C0' => 
@@ -1755,6 +2195,7 @@ my %TOURNAMENTS_USA =
       '2014' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2014B',
         CHAPTERS =>
         {
           'C0' => 
@@ -1802,6 +2243,7 @@ my %TOURNAMENTS_USA =
       '2015' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2015B',
         CHAPTERS =>
         {
           'C0' => 
@@ -1849,6 +2291,7 @@ my %TOURNAMENTS_USA =
       '2016' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2016B',
         CHAPTERS =>
         {
           'C0' => 
@@ -1908,6 +2351,7 @@ my %TOURNAMENTS_USA =
       '2004' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2004C',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1925,9 +2369,6 @@ my %TOURNAMENTS_USA =
 
   'US Girls Trials',
   {
-    ORGANIZATION => 'USBF',
-    COUNTRY => 'USA',
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -1938,7 +2379,7 @@ my %TOURNAMENTS_USA =
       '2013-14' =>
       {
         # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2013-junior-usbc/index.php
-        CITY => 'Atlanta',
+        MEET => 'United States Youth Bridge Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1950,8 +2391,9 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2015' =>
+      '2015-16' =>
       {
+        MEET => 'United States Youth Bridge Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1978,8 +2420,9 @@ my %TOURNAMENTS_USA =
 
     EDITIONS =>
     {
-      '2013' =>
+      '2013-14' =>
       {
+        MEET => 'United States Youth Bridge Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1996,9 +2439,6 @@ my %TOURNAMENTS_USA =
 
   'US Junior Trials',
   {
-    ORGANIZATION => 'USBF',
-    COUNTRY => 'USA',
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2008,6 +2448,8 @@ my %TOURNAMENTS_USA =
     {
       '2008' =>
       {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2008B',
         CHAPTERS =>
         {
           'C0' => 
@@ -2030,6 +2472,8 @@ my %TOURNAMENTS_USA =
       },
       '2009' =>
       {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2009B',
         CHAPTERS =>
         {
           'C0' => 
@@ -2053,8 +2497,7 @@ my %TOURNAMENTS_USA =
       '2013-14' =>
       {
         # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2013-junior-usbc/index.php
-        MEET => 'United States Bridge Championship',
-        CITY => 'Atlanta',
+        MEET => 'United States Youth Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -2073,9 +2516,9 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2015' =>
+      '2015-16' =>
       {
-        MEET => 'United States Bridge Championship',
+        MEET => 'United States Youth Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -2096,10 +2539,10 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2017' =>
+      '2017-18' =>
       {
         # https://www.usbf.org/2017-michael-seamon-junior-usbcs/2017-junior-usbc
-        CITY => 'Atlanta',
+        MEET => 'United States Youth Bridge Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2110,10 +2553,10 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2019' =>
+      '2019-20' =>
       {
         # https://www.usbf.org/2019-michael-seamon-jusbc/2019-michael-seamon-jusbc
-        CITY => 'Atlanta',
+        MEET => 'United States Youth Bridge Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2124,10 +2567,10 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2024' =>
+      '2024-25' =>
       {
         # https://www.usbf.org/2024-sam-amer-jusbc/2024-sam-amer-jusbc/index.php
-        CITY => 'Atlanta',
+        MEET => 'United States Youth Bridge Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2142,9 +2585,6 @@ my %TOURNAMENTS_USA =
 
   'US Open Trials',
   {
-    ORGANIZATION => 'USBF',
-    COUNTRY => 'USA',
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2156,6 +2596,7 @@ my %TOURNAMENTS_USA =
     {
       '1997' =>
       {
+        MEET => 'United States Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -2176,7 +2617,7 @@ my %TOURNAMENTS_USA =
       },
       '1998' =>
       {
-        CITY => 'Tunica',
+        MEET => 'United States Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -2199,6 +2640,7 @@ my %TOURNAMENTS_USA =
       },
       '1999' =>
       {
+        MEET => 'United States Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -2220,6 +2662,7 @@ my %TOURNAMENTS_USA =
       },
       '2000' =>
       {
+        MEET => 'United States Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -2320,8 +2763,7 @@ my %TOURNAMENTS_USA =
       '2005' =>
       {
         # https://www.usbf.org/2005-open-usbc/2005-united-states-bridge-championship
-        CITY => 'Houston',
-
+        MEET => 'United States Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -2409,8 +2851,7 @@ my %TOURNAMENTS_USA =
       '2007' =>
       {
         # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2007-open-usbc/index.php
-        CITY => 'Schaumberg',
-
+        MEET => 'United States Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -2490,7 +2931,6 @@ my %TOURNAMENTS_USA =
       {
         # https://www.usbf.org/2009-open-usbc/2009-usbc-daily-bulletin
         MEET => 'United States Bridge Championship',
-
         CHAPTERS =>
         {
           'C0' => 
@@ -2587,8 +3027,7 @@ my %TOURNAMENTS_USA =
       '2010' =>
       {
         # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2010-open-usbc/index.php
-        CITY => 'White Plains',
-
+        MEET => 'United States Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -2628,8 +3067,7 @@ my %TOURNAMENTS_USA =
       '2011' =>
       {
         # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2011-open-usbc/index.php
-        CITY => 'Las Vegas',
-
+        MEET => 'United States Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -2669,8 +3107,7 @@ my %TOURNAMENTS_USA =
       '2012' =>
       {
         # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2012-open-usbc/index.php
-        CITY => 'Schaumburg',
-
+        MEET => 'United States Bridge Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2684,8 +3121,7 @@ my %TOURNAMENTS_USA =
       '2013' =>
       {
         # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2013-open-usbc/index.php
-        CITY => 'Orlando',
-
+        MEET => 'United States Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -2773,8 +3209,7 @@ my %TOURNAMENTS_USA =
       '2014' =>
       {
         # https://www.usbf.org/2014-open-usbc/2014-open-usbc
-        CITY => 'Phoenix',
-
+        MEET => 'United States Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -2814,8 +3249,7 @@ my %TOURNAMENTS_USA =
       '2015' =>
       {
         # https://www.usbf.org/2015-open-usbc/2015-open-usbc
-        CITY => 'Schaumburg',
-
+        MEET => 'United States Bridge Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2830,8 +3264,6 @@ my %TOURNAMENTS_USA =
       {
         # https://www.usbf.org/2016-open-usbc/2016-open-usbc
         MEET => 'United States Bridge Championship',
-        CITY => 'Denver',
-
         CHAPTERS =>
         {
           'C0' => 
@@ -2871,8 +3303,7 @@ my %TOURNAMENTS_USA =
       '2017' =>
       {
         # https://www.usbf.org/2017-open-usbc/2017-open-usbc/2017-open-usbc-results/index.php
-        CITY => 'Schaumburg',
-
+        MEET => 'United States Bridge Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2886,8 +3317,7 @@ my %TOURNAMENTS_USA =
       '2018' =>
       {
         # https://www.usbf.org/2018-open-usbc/2018-open-usbc
-        CITY => 'Houston',
-
+        MEET => 'United States Bridge Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2901,8 +3331,7 @@ my %TOURNAMENTS_USA =
       '2019' =>
       {
         # https://www.usbf.org/2019-open-usbc/2019-open-usbc
-        CITY => 'Schaumburg',
-
+        MEET => 'United States Bridge Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2916,8 +3345,7 @@ my %TOURNAMENTS_USA =
       '2021' =>
       {
         # https://www.usbf.org/2021-open-usbc/2021-open-usbc/index.php
-        CITY => 'Schaumburg',
-
+        MEET => 'United States Bridge Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2931,8 +3359,7 @@ my %TOURNAMENTS_USA =
       '2022' =>
       {
         # https://www.usbf.org/2022-open-usbc/2022-open-usbc/index.php
-        CITY => 'Schaumburg',
-
+        MEET => 'United States Bridge Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2946,8 +3373,7 @@ my %TOURNAMENTS_USA =
       '2023' =>
       {
         # https://www.usbf.org/2023-usbcs/2023-usbcs/index.php
-        CITY => 'Schaumburg',
-
+        MEET => 'United States Bridge Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2961,8 +3387,7 @@ my %TOURNAMENTS_USA =
       '2024' =>
       {
         # https://www.usbf.org/2024-united-states-bridge-championships/2024-united-states-bridge-championships/index.php
-        CITY => 'Schaumburg',
-
+        MEET => 'United States Bridge Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2990,7 +3415,6 @@ my %TOURNAMENTS_USA =
     {
       '2016' =>
       {
-        MEET => 'United States Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -3017,7 +3441,7 @@ my %TOURNAMENTS_USA =
       '2004' =>
       {
         MEET => 'North American Bridge Championship',
-
+        MEET_TAG => '2004C',
         CHAPTERS =>
         {
           'C0' => 
@@ -3050,7 +3474,7 @@ my %TOURNAMENTS_USA =
       {
         # https://s3.amazonaws.com/cdn.acbl.org/nabc/2006/03/results/November19.html
         MEET => 'North American Bridge Championship',
-
+        MEET_TAG => '2006C',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3063,30 +3487,32 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2007A' =>
-      {
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2007,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2007-07-05',
-            DATE_END => '2007-07-05'
-          },
-          'C1' => 
-          {
-            YEAR => 2007,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2007-07-05',
-            DATE_END => '2007-07-05'
-          } 
-        }
-      },
       '2007B' =>
       {
+        MEET => 'North American Bridge Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-07-05',
+            DATE_END => '2007-07-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-07-05',
+            DATE_END => '2007-07-05'
+          } 
+        }
+      },
+      '2007C' =>
+      {
+        MEET => 'North American Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -3107,8 +3533,9 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2008A' =>
+      '2008B' =>
       {
+        MEET => 'North American Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -3137,8 +3564,9 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2008B' =>
+      '2008C' =>
       {
+        MEET => 'North American Bridge Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3151,7 +3579,7 @@ my %TOURNAMENTS_USA =
           },
         }
       },
-      '2009A' =>
+      '2009C' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -3174,7 +3602,7 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2010' =>
+      '2010C' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -3215,6 +3643,7 @@ my %TOURNAMENTS_USA =
       },
       '2011A' =>
       {
+        # TODO What is this? A Meet?
         CHAPTERS =>
         {
           'C0' => 
@@ -3251,7 +3680,7 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2011B' =>
+      '2011C' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -3276,6 +3705,7 @@ my %TOURNAMENTS_USA =
       },
       '2012A' =>
       {
+        # TODO What is this? A Meet?
         CHAPTERS =>
         {
           'C0' => 
@@ -3312,7 +3742,7 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2012B' =>
+      '2012C' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -3343,7 +3773,7 @@ my %TOURNAMENTS_USA =
           },
         }
       },
-      '2013' =>
+      '2013C' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -3382,7 +3812,7 @@ my %TOURNAMENTS_USA =
           },
         }
       },
-      '2014' =>
+      '2014C' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -3413,7 +3843,7 @@ my %TOURNAMENTS_USA =
           },
         }
       },
-      '2015' =>
+      '2015C' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -4294,7 +4724,7 @@ my %TOURNAMENTS_USA =
       },
       '2015' =>
       {
-        MEET => 'United States Bridge Championship',
+        MEET => 'United States Youth Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -4371,7 +4801,7 @@ my %TOURNAMENTS_USA =
 
     EDITIONS =>
     {
-      '1997' =>
+      '1997A' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -4384,7 +4814,7 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '1998' =>
+      '1998A' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -4399,7 +4829,7 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '1999' =>
+      '1999A' =>
       {
         MEET => 'North American Bridge Championship',
         CITY => 'Vancouver',
@@ -4415,7 +4845,7 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2000' =>
+      '2000A' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -4430,7 +4860,7 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2001' =>
+      '2001A' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -4445,7 +4875,7 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2002' =>
+      '2002A' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -4468,7 +4898,7 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2004' =>
+      '2004A' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -4491,7 +4921,7 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2005' =>
+      '2005A' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -4524,7 +4954,7 @@ my %TOURNAMENTS_USA =
           },
         }
       },
-      '2006' =>
+      '2006A' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -4555,7 +4985,7 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2007' =>
+      '2007A' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -4594,7 +5024,7 @@ my %TOURNAMENTS_USA =
           },
         }
       },
-      '2008' =>
+      '2008A' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -4633,7 +5063,7 @@ my %TOURNAMENTS_USA =
           },
         }
       },
-      '2009' =>
+      '2009A' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -4680,7 +5110,7 @@ my %TOURNAMENTS_USA =
           },
         }
       },
-      '2010' =>
+      '2010A' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -4735,7 +5165,7 @@ my %TOURNAMENTS_USA =
           },
         }
       },
-      '2011' =>
+      '2011A' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -4782,7 +5212,7 @@ my %TOURNAMENTS_USA =
           },
         }
       },
-      '2012' =>
+      '2012A' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -4829,7 +5259,7 @@ my %TOURNAMENTS_USA =
           },
         }
       },
-      '2013' =>
+      '2013A' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -4876,7 +5306,7 @@ my %TOURNAMENTS_USA =
           },
         }
       },
-      '2014' =>
+      '2014A' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -4923,7 +5353,7 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2015' =>
+      '2015A' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -4962,7 +5392,7 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2016' =>
+      '2016A' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -5029,7 +5459,7 @@ my %TOURNAMENTS_USA =
 
     EDITIONS =>
     {
-      '1998' =>
+      '1998B' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -5044,7 +5474,7 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2004' =>
+      '2004B' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -5059,7 +5489,7 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2005' =>
+      '2005B' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -5074,7 +5504,7 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2006' =>
+      '2006B' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -5088,7 +5518,7 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2007' =>
+      '2007B' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -5103,7 +5533,7 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2009' =>
+      '2009B' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -5118,7 +5548,7 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2010' =>
+      '2010B' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -5133,7 +5563,7 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2011' =>
+      '2011B' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -5148,7 +5578,7 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2012' =>
+      '2012B' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -5171,7 +5601,7 @@ my %TOURNAMENTS_USA =
           },
         }
       },
-      '2013' =>
+      '2013B' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -5194,7 +5624,7 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2014' =>
+      '2014B' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -5217,7 +5647,7 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2015' =>
+      '2015B' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
@@ -5240,7 +5670,7 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2016' =>
+      '2016B' =>
       {
         MEET => 'North American Bridge Championship',
         CHAPTERS =>
