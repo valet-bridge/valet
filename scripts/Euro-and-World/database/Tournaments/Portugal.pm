@@ -23,12 +23,36 @@ my %MEETS_PORTUGAL =
 
     EDITIONS =>
     {
+      '2011' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-10-03',
+        DATE_END => '2011-10-04'
+      },
+      '2012' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-10-05',
+        DATE_END => '2012-10-06'
+      },
+      '2013' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-09-27',
+        DATE_END => '2013-09-28'
+      },
+      '2014' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-10-04',
+        DATE_END => '2014-10-05'
+      },
       '2015' =>
       {
         ORDINAL => 19,
         YEAR => 2015,
         DATE_START => '2015-10-03',
-        DATE_END => '2015-10-03'
+        DATE_END => '2015-10-04'
       },
     }
   },
@@ -74,11 +98,17 @@ my %MEETS_PORTUGAL =
 
     EDITIONS =>
     {
+      '2015' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-03-13',
+        DATE_END => '2015-03-15'
+      },
       '2016' =>
       {
         YEAR => 2016,
         DATE_START => '2016-03-19',
-        DATE_END => '2016-03-19'
+        DATE_END => '2016-03-20'
       },
     }
   },

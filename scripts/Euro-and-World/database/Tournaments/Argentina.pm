@@ -42,17 +42,29 @@ my %MEETS_ARGENTINA =
 
     EDITIONS => 
     {
+      '2005' =>
+      {
+        YEAR => 2005,
+        DATE_START => '2005-12-11',
+        DATE_END => '2005-12-12'
+      },
       '2006' =>
       {
         YEAR => 2006,
         DATE_START => '2006-12-17',
         DATE_END => '2006-12-17'
       },
+      '2010' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-12-12',
+        DATE_END => '2010-12-12'
+      },
       '2012' =>
       {
         YEAR => 2012,
         DATE_START => '2012-12-05',
-        DATE_END => '2012-12-08'
+        DATE_END => '2012-12-09'
       },
       '2015' =>
       {

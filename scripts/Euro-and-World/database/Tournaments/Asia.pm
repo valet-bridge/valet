@@ -197,6 +197,24 @@ my %MEETS_ASIA =
 
     EDITIONS =>
     {
+      '2006' =>
+      {
+        ORDINAL => 28,
+        CITY => 'Singapore',
+        COUNTRY => 'Singapore',
+        YEAR => 2006,
+        DATE_START => '2006-12-15',
+        DATE_END => '2006-12-17'
+      },
+      '2007' =>
+      {
+        ORDINAL => 29,
+        CITY => 'Makati City',
+        COUNTRY => 'Philippines',
+        YEAR => 2007,
+        DATE_START => '2007-12-07',
+        DATE_END => '2007-12-11'
+      },
       '2008' =>
       {
         ORDINAL => 30,
@@ -224,6 +242,15 @@ my %MEETS_ASIA =
         DATE_START => '2010-11-21',
         DATE_END => '2010-11-24'
       },
+      '2011' =>
+      {
+        ORDINAL => 33,
+        CITY => 'Singapore',
+        COUNTRY => 'Singapore',
+        YEAR => 2011,
+        DATE_START => '2011-12-03',
+        DATE_END => '2011-12-07'
+      },
       '2012' =>
       {
         ORDINAL => 34,
@@ -232,6 +259,24 @@ my %MEETS_ASIA =
         YEAR => 2012,
         DATE_START => '2012-12-05',
         DATE_END => '2012-12-09'
+      },
+      '2013' =>
+      {
+        ORDINAL => 35,
+        CITY => 'Makati City',
+        COUNTRY => 'Philippines',
+        YEAR => 2013,
+        DATE_START => '2013-11-27',
+        DATE_END => '2013-12-01'
+      },
+      '2014' =>
+      {
+        ORDINAL => 36,
+        CITY => 'Kuala Lumpur',
+        COUNTRY => 'Malaysia',
+        YEAR => 2014,
+        DATE_START => '2014-11-26',
+        DATE_END => '2014-11-30'
       },
       '2015' =>
       {
@@ -1327,7 +1372,6 @@ my %TOURNAMENTS_ASIA =
       '2008A' =>
       {
         # Suspect -- PABF rather than APBF?
-        MEET => 'ASEAN Club Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1343,6 +1387,7 @@ my %TOURNAMENTS_ASIA =
       '2008B' =>
       {
         MEET => 'ASEAN Club Championship',
+        MEET_TAG => '2008',
         CHAPTERS =>
         {
           'SINGLE' => 

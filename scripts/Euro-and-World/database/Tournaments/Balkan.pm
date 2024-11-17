@@ -43,7 +43,7 @@ my %MEETS_BALKAN =
         CITY => 'Stara Zagora',
         COUNTRY => 'Bulgaria',
         YEAR => 2010,
-        DATE_START => '2010-10-01',
+        DATE_START => '2010-09-29',
         DATE_END => '2010-10-03'
       },
       '2011' =>
@@ -51,6 +51,12 @@ my %MEETS_BALKAN =
         YEAR => 2011,
         DATE_START => '2011-09-19',
         DATE_END => '2011-09-21'
+      },
+      '2013' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-10-02',
+        DATE_END => '2013-10-03'
       },
       '2019' =>
       {
@@ -94,6 +100,31 @@ my %MEETS_BALKAN =
         YEAR => 2008,
         DATE_START => '2008-05-04',
         DATE_END => '2008-05-04'
+      },
+
+      '2009' =>
+      {
+        YEAR => 2009,
+        DATE_START => '2009-05-01',
+        DATE_END => '2009-05-03'
+      },
+      '2010' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-04-10',
+        DATE_END => '2010-04-11'
+      },
+      '2011' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-04-28',
+        DATE_END => '2011-04-30'
+      },
+      '2013' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-04-28',
+        DATE_END => '2013-04-29'
       },
     }
   },

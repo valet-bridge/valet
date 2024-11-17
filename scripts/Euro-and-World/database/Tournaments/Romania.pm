@@ -30,7 +30,7 @@ my %MEETS_ROMANIA =
       {
         YEAR => 2009,
         DATE_START => '2009-11-19',
-        DATE_END => '2009-11-19'
+        DATE_END => '2009-11-22'
       },
     }
   },

@@ -36,7 +36,7 @@ my %MEETS_BALTIC =
         YEAR => 2011,
         CITY => 'Vilnius',
         COUNTRY => 'Lithuania',
-        DATE_START => '2011-05-01',
+        DATE_START => '2011-04-30',
         DATE_END => '2011-05-02'
       },
       '2012' =>
