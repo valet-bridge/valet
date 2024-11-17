@@ -3834,7 +3834,25 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2010,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2010-07-07',
+            DATE_END => '2010-07-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-07-08',
+            DATE_END => '2010-07-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-07-08',
             DATE_END => '2010-07-09'
           },
         }
@@ -3858,7 +3876,17 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2014-11-16',
+            DATE_END => '2014-11-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-11-17',
             DATE_END => '2014-11-17'
           },
         }

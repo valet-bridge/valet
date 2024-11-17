@@ -5117,9 +5117,20 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET => 'Gold Coast Congress',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2008,
+            STAGE => 'Semifinal',
+            major => 'MATCH',
+            minor => 'SEGMENT',
+            DATE_START => '2008-03-03',
+            DATE_END => '2008-03-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2008-03-03',
             DATE_END => '2008-03-03'
           } 
@@ -5143,10 +5154,29 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET => 'Gold Coast Congress',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2010,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2010-03-04',
+            DATE_END => '2010-03-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-03-04',
+            DATE_END => '2010-03-05'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-03-05',
             DATE_END => '2010-03-06'
           } 
         }
@@ -5169,10 +5199,28 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET => 'Gold Coast Congress',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2012-03-01',
+            DATE_END => '2012-03-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-03-01',
+            DATE_END => '2012-03-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-03-02',
             DATE_END => '2012-03-03'
           } 
         }
@@ -5182,12 +5230,30 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET => 'Gold Coast Congress',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2013-03-01',
+            DATE_END => '2013-03-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-03-01',
+            DATE_END => '2013-03-01'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-03-02',
             DATE_END => '2013-03-02'
-          } 
+          },
         }
       },
       '2014' =>
@@ -5195,10 +5261,28 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET => 'Gold Coast Congress',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2014-02-28',
+            DATE_END => '2014-02-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-02-28',
+            DATE_END => '2014-02-28'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-03-01',
             DATE_END => '2014-03-01'
           } 
         }
@@ -5208,10 +5292,28 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET => 'Gold Coast Congress',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2015-02-27',
+            DATE_END => '2015-02-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-02-27',
+            DATE_END => '2015-02-27'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-02-28',
             DATE_END => '2015-02-28'
           } 
         }
@@ -5221,10 +5323,28 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET => 'Gold Coast Congress',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2016-02-26',
+            DATE_END => '2016-02-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-02-26',
+            DATE_END => '2016-02-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-02-27',
             DATE_END => '2016-02-27'
           } 
         }

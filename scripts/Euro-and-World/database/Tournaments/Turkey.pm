@@ -2870,7 +2870,49 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2012-02-23',
+            DATE_END => '2012-02-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Rof32',
+            major => 'SEGMENT',
+            DATE_START => '2012-02-24',
+            DATE_END => '2012-02-25'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2012-02-25',
+            DATE_END => '2012-02-26'
+          },
+          'C3' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-02-26',
+            DATE_END => '2012-02-27'
+          },
+          'C4' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-02-27',
+            DATE_END => '2012-02-27'
+          },
+          'C5' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-02-28',
             DATE_END => '2012-02-28'
           },
         }

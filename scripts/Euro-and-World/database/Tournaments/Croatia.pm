@@ -287,6 +287,7 @@ my %TOURNAMENTS_CROATIA =
           'C0' => 
           {
             YEAR => 2005,
+            major => 'SEGMENT',
             DATE_START => '2005-09-18',
             DATE_END => '2005-09-18'
           },
@@ -313,6 +314,8 @@ my %TOURNAMENTS_CROATIA =
           'C0' => 
           {
             YEAR => 2007,
+            major => 'MATCH',
+            minor => 'SEGMENT',
             DATE_START => '2007-09-20',
             DATE_END => '2007-09-20'
           },
@@ -326,8 +329,17 @@ my %TOURNAMENTS_CROATIA =
           'C0' => 
           {
             YEAR => 2008,
+            major => 'MATCH',
             DATE_START => '2008-09-27',
             DATE_END => '2008-09-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Round-robin',
+            major => 'MATCH',
+            DATE_START => '2008-09-28',
+            DATE_END => '2008-09-28'
           },
         }
       },
@@ -339,6 +351,7 @@ my %TOURNAMENTS_CROATIA =
           'C0' => 
           {
             YEAR => 2009,
+            major => 'MATCH',
             DATE_START => '2009-09-09',
             DATE_END => '2009-09-10'
           },

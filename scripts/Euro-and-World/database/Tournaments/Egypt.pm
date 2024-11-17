@@ -51,9 +51,27 @@ my %TOURNAMENTS_EGYPT =
         MEET => 'Cairo Bridge Festival',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-02-25',
+            DATE_END => '2009-02-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-02-25',
+            DATE_END => '2009-02-25'
+          },
+          'C2' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2009-02-25',
             DATE_END => '2009-02-25'
           } 

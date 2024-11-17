@@ -3368,7 +3368,33 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Pre-Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2016-01-08',
+            DATE_END => '2016-01-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-01-08',
+            DATE_END => '2016-01-09'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-01-09',
+            DATE_END => '2016-01-09'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-01-10',
             DATE_END => '2016-01-10'
           },
         },

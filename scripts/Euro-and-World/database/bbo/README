@@ -1,55 +1,63 @@
-cook.pl:
-- Add the single typos before splitting further
-- Split Tname
-- Split Meet
-
-Philadelphia Solomon Teams is an odd Tname
-
-digest.pl: 
-- Look for missing TNAME or indeed missing completely
-- Speed up, esp. compatibility()?
-
-Should we already map Juniors to U26?
-
 Consistencies:
-- Dates in Meet vs matching tournament
-- Dates of Tournament C's as tight as possible
-- Tournaments and Meets per file match (no extras on either side)
+- Dates
+  - In Tname and Meet separately
+    - is a date
+    - Must have a and b
+    - max 14 days apart, a <= b, YEAR matches if present
+    - Tag is either year (if present) or year ABD or year-yy
+  - Add a Tname meet tag if not same as Tname tag
+  - Both Tname and Meet present
+    - Meet tag present as expected
+    - date1 >= date1, date2 <= date2, year matches if present
+    - Look for Tname that could be Meet but isn't
+- Names of Tname and Meet separately
+  - Same list for each file (no extras)
+- Usage
+  - All chapters of Tname used (maybe up to 2016 or in interval)
+  - Dates in Tname as tight as possible
+  - Field values are known for ORG, COUNTRY, ZONE, REGION etc.
+  - If set, they match, e.g. city and country
+- Counters
+  - Chapters with counters in data, but not set
+  - All same STAGE in chapter if STAGE is present
+
+Fields
+- Move YEAR up to above CHAPTERS
+- 15847 IMP, SCORING
+- 46289 EVENT_ORIGIN
+- 46284 TITLE_SPONSOR
+- 45865 MEET ought to be up in the title
+- 45785 two TITLE_CITY?
+- In general not two of anything meaningful
+
+
 - Output a spreadsheet, look at org, country, origin, zone
-- All chapters used
-- Every BBONO has a TNAME (or gets one when looked up)
-- Tournaments happening at the same time as meets, but not linked
 
 Fields
 - All fields used
 - Move fields up
-- Fields in tournaments exist in e.g. Country, Zone
+- Final form of output, e.g. TITLE_MEET,
+  TOURNAMENT_CITY
+- TITLE_MEET comes out if MEET, e.g. 3620 Pula Bridge Festival
 - Stats of fields used at different levels; avg # fields?
+- Italian Mixed Pairs 2014: YEAR stays at BBONO level
 
+In some cases like Final, could perhaps pull up the team names
+to the chapter level in the output!  That might mean splitting
+the SF too.
 
-Util.pm 450:
-Need to set the Age from Girls to Juniors, but Token is not passed in
+Check manually per country file
 
-India:
-Retest India, looking for Winter Nationals
+---
 
-USA:
-Reisinger mostly OK, but Semifinal 2015: SESSION, SEGMENT
-Session 1 goes to segment 9, session 2 goes to segment 10
-When both major/minor, should have per-major maximum.
+Should we already map Juniors to U26?
 
-Romanian Second League, 2009:
-TITLE_CITY
-TITLE_SERIES
-e.g. 11598
-
-TITLE_MEET, e.g. 8202
+Philadelphia Solomon Teams is an odd Tname
 
 22029, not all TEAM1_FORM and TEAM2_FORM go away?
 
-
-Euro Youth Teams:
-Will parse at some point, but the proper allocation is *hard*
+Cornell in Australian tournaments is not Cornell University, e.g.
+27126
 
 VERBOSE flag in RegCounter, for new countries or datasets.
 
@@ -57,10 +65,6 @@ Store pdf's showing also player names
 
 Scrapers:
 Maybe store scraped pdf's of URL's when available?
-
-13496: Why is Israel not picked up as a team country?
-39011: Why still TEAM1_COUNTRY, TEAM2_COUNTRY?
-There are some counters 0_..., e.g. 5203
 
 * Activate KDEBUG in Knowledge.pm
 * Can we limit TWORD to actual multi-purpose tournament and not

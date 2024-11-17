@@ -1460,8 +1460,24 @@ my %TOURNAMENTS_BALTIC =
           'C0' => 
           {
             YEAR => 2007,
+            major => 'ROUND',
             DATE_START => '2007-05-30',
             DATE_END => '2007-05-30'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Semifinal',
+            major => 'HALF',
+            DATE_START => '2007-05-31',
+            DATE_END => '2007-05-31'
+          },
+          'C2' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            DATE_START => '2007-05-31',
+            DATE_END => '2007-05-31'
           },
         }
       },

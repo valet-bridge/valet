@@ -2536,10 +2536,28 @@ my %TOURNAMENTS_POLAND =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2009-07-21',
+            DATE_END => '2009-07-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-07-22',
+            DATE_END => '2009-07-22'
+          },
+          'C2' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-07-22',
             DATE_END => '2009-07-22'
           } 
         }
@@ -5595,8 +5613,17 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2012,
+            major => 'SEGMENT',
             DATE_START => '2012-06-07',
             DATE_END => '2012-06-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-06-08',
+            DATE_END => '2012-06-08'
           },
         }
       },
@@ -5642,6 +5669,24 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Qualifying',
+            major => 'MATCH',
+            DATE_START => '2012-06-08',
+            DATE_END => '2012-06-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-06-08',
+            DATE_END => '2012-06-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2012-06-08',
             DATE_END => '2012-06-08'
           },
