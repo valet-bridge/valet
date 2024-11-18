@@ -15,33 +15,28 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_ARGENTINA =
 (
-  'Argentinian Trials' =>
-  {
-    ORGANIZATION => 'ABA',
-    COUNTRY => 'Argentina',
-    ORIGIN => 'National',
-    ZONE => 'South America',
-
-    EDITIONS => 
-    {
-      '2012' =>
-      {
-        YEAR => 2012,
-        DATE_START => '2012-04-14',
-        DATE_END => '2012-11-05'
-      },
-    }
-  },
-
   'Mar del Plata Festival' =>
   {
     ORGANIZATION => 'ABA',
+    CITY => 'Mar del Plata',
     COUNTRY => 'Argentina',
     ORIGIN => 'National',
     ZONE => 'South America',
 
     EDITIONS => 
     {
+      '2002' =>
+      {
+        YEAR => 2002,
+        DATE_START => '2002-12-07',
+        DATE_END => '2002-12-15'
+      },
+      '2003' =>
+      {
+        YEAR => 2003,
+        DATE_START => '2003-12-06',
+        DATE_END => '2003-12-14'
+      },
       '2005' =>
       {
         YEAR => 2005,
@@ -51,19 +46,44 @@ my %MEETS_ARGENTINA =
       '2006' =>
       {
         YEAR => 2006,
-        DATE_START => '2006-12-17',
-        DATE_END => '2006-12-17'
+        DATE_START => '2006-12-01',
+        DATE_END => '2006-12-10'
+      },
+      '2007' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-11-30',
+        DATE_END => '2007-12-12'
+      },
+      '2008' =>
+      {
+        YEAR => 2008,
+        DATE_START => '2008-12-01',
+        DATE_END => '2008-12-07'
+      },
+      '2009' =>
+      {
+        YEAR => 2009,
+        DATE_START => '2009-11-27',
+        DATE_END => '2009-12-05'
       },
       '2010' =>
       {
         YEAR => 2010,
-        DATE_START => '2010-12-12',
+        DATE_START => '2010-12-05',
         DATE_END => '2010-12-12'
+      },
+      '2011' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-12-02',
+        DATE_END => '2011-12-11'
       },
       '2012' =>
       {
+        # Listed on Great Bridge Links as one week earlier.
         YEAR => 2012,
-        DATE_START => '2012-12-05',
+        DATE_START => '2012-11-30',
         DATE_END => '2012-12-09'
       },
       '2015' =>
@@ -71,6 +91,30 @@ my %MEETS_ARGENTINA =
         YEAR => 2015,
         DATE_START => '2015-12-06',
         DATE_END => '2015-12-06'
+      },
+      '2019' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-12-06',
+        DATE_END => '2019-12-15'
+      },
+      '2020' =>
+      {
+        YEAR => 2020, # Online
+        DATE_START => '2020-11-28',
+        DATE_END => '2020-12-06'
+      },
+      '2021' =>
+      {
+        YEAR => 2021,
+        DATE_START => '2021-12-03',
+        DATE_END => '2021-12-11'
+      },
+      '2022' =>
+      {
+        YEAR => 2022,
+        DATE_START => '2022-12-02',
+        DATE_END => '2022-12-10'
       },
     }
   }
@@ -481,9 +525,6 @@ my %TOURNAMENTS_ARGENTINA =
       },
       '2010' =>
       {
-        # 
-        MEET => 'Argentinian Trials',
-
         CHAPTERS =>
         {
           'C0' => 
@@ -511,8 +552,6 @@ my %TOURNAMENTS_ARGENTINA =
       '2012' =>
       {
         # https://csbnews.org/2013-argentine-trials-the-gran-final-1st-match-rizzo-angeleri/
-        MEET => 'Argentinian Trials',
-
         CHAPTERS =>
         {
           'C0' => 
@@ -620,34 +659,6 @@ my %TOURNAMENTS_ARGENTINA =
     }
   },
 
-  'Argentinian Women Teams',
-  {
-    ORGANIZATION => 'ABA',
-    COUNTRY => 'Argentina',
-    ORIGIN => 'National',
-    ZONE => 'South America',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Women',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
-          } 
-        }
-      },
-    }
-  },
-
   'Argentinian Women Trials',
   {
     GENDER => 'Women',
@@ -657,7 +668,6 @@ my %TOURNAMENTS_ARGENTINA =
     {
       '2010' =>
       {
-        MEET => 'Argentinian Trials',
         CHAPTERS =>
         {
           'C0' => 
@@ -682,7 +692,6 @@ my %TOURNAMENTS_ARGENTINA =
       },
       '2011' =>
       {
-        MEET => 'Argentinian Trials',
         CHAPTERS =>
         {
           'C0' => 
@@ -699,7 +708,6 @@ my %TOURNAMENTS_ARGENTINA =
       '2012' =>
       {
         # https://csbnews.org/2013-argentine-trials-the-gran-final-1st-match-rizzo-angeleri/
-        MEET => 'Argentinian Trials',
         CHAPTERS =>
         {
           'C0' => 
@@ -800,16 +808,16 @@ my %TOURNAMENTS_ARGENTINA =
             YEAR => 2006,
             STAGE => 'Semifinal',
             major => 'SEGMENT',
-            DATE_START => '2006-12-17',
-            DATE_END => '2006-12-17'
+            DATE_START => '2006-12-10',
+            DATE_END => '2006-12-10'
           },
           'C1' => 
           {
             YEAR => 2006,
             STAGE => 'Final',
             major => 'SEGMENT',
-            DATE_START => '2006-12-17',
-            DATE_END => '2006-12-17'
+            DATE_START => '2006-12-10',
+            DATE_END => '2006-12-10'
           } 
         }
       },

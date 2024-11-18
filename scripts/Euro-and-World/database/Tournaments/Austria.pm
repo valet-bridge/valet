@@ -16,24 +16,77 @@ my %MEETS_AUSTRIA =
   'Mautern Bridge Festival' =>
   {
     ORGANIZATION => 'ÖBV',
-    CITY => 'Mautern',
     COUNTRY => 'Austria',
     ORIGIN => 'Transnational',
     ZONE => 'Europe',
 
     EDITIONS =>
     {
+      '2013' =>
+      {
+        YEAR => 2013,
+        CITY => 'Mautern',
+        DATE_START => '2013-08-04',
+        DATE_END => '2013-08-09'
+      },
       '2015' =>
       {
         YEAR => 2015,
+        CITY => 'Mautern',
         DATE_START => '2015-08-05',
         DATE_END => '2015-08-06'
       },
       '2016' =>
       {
         YEAR => 2016,
+        CITY => 'Mautern',
         DATE_START => '2016-08-10',
         DATE_END => '2016-08-11'
+      },
+      '2018' =>
+      {
+        # https://www.bridgeaustria.at/turnier/wachauer-bridgewoche-mautern/
+        ORDINAL => 50,
+        YEAR => 2018,
+        CITY => 'Mautern',
+        DATE_START => '2018-05-05',
+        DATE_END => '2018-05-10'
+      },
+      '2019' =>
+      {
+        # https://www.bridgeaustria.at/turnier/wachauer-bridgewoche-mautern-2019/
+        ORDINAL => 51,
+        YEAR => 2019,
+        CITY => 'Mautern',
+        DATE_START => '2019-08-04',
+        DATE_END => '2019-08-10'
+      },
+      '2022' =>
+      {
+        # https://www.bridgeaustria.at/turnier/wachauer-bridgewoche-mautern-4/
+        ORDINAL => 52,
+        YEAR => 2022,
+        DATE_START => '2022-08-07',
+        DATE_END => '2022-08-12'
+      },
+      '2023' =>
+      {
+        # https://www.bridgeaustria.at/turnier/int-bridgefestival-tulln/
+        # https://www.bridgewoche.at/?page_id=2
+        ORDINAL => 53,
+        YEAR => 2023,
+        CITY => 'Tulln',
+        DATE_START => '2023-08-06',
+        DATE_END => '2023-08-12'
+      },
+      '2024' =>
+      {
+        # https://www.bridgewoche.at/?page_id=294
+        ORDINAL => 54,
+        YEAR => 2024,
+        CITY => 'Tulln',
+        DATE_START => '2024-08-04',
+        DATE_END => '2024-08-10'
       },
     }
   },

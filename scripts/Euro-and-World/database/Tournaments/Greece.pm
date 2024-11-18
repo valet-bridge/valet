@@ -18,11 +18,10 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_GREECE =
 (
-  'Crete Bridge Festival' =>
+  'Greek Islands Festival' =>
   {
     ORGANIZATION => 'EOM',
     COUNTRY => 'Greece',
-    REGION => 'Crete',
     ORIGIN => 'National',
     ZONE => 'Europe',
 
@@ -31,8 +30,63 @@ my %MEETS_GREECE =
       '2007' =>
       {
         YEAR => 2007,
+        REGION => 'Crete',
         DATE_START => '2007-09-02',
         DATE_END => '2007-09-02'
+      },
+      '2008' =>
+      {
+        YEAR => 2008,
+        DATE_START => '2008-09-10',
+        DATE_END => '2008-09-10'
+      },
+      '2009' =>
+      {
+        YEAR => 2009,
+        DATE_START => '2009-08-17',
+        DATE_END => '2009-08-22'
+      },
+      '2010' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-08-29',
+        DATE_END => '2010-09-03'
+      },
+      '2011' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-08-28',
+        DATE_END => '2011-09-03'
+      },
+      '2012' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-08-30',
+        DATE_END => '2012-08-31'
+      },
+      '2013' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-09-06',
+        DATE_END => '2013-09-07'
+      },
+      '2014' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-08-29',
+        DATE_END => '2014-08-30'
+      },
+      '2015' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-09-09',
+        DATE_END => '2015-09-10'
+      },
+      '2016' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-08-25',
+        DATE_END => '2016-08-26'
       },
     }
   },
@@ -85,7 +139,7 @@ my %TOURNAMENTS_GREECE =
     {
       '2007' =>
       {
-        MEET => 'Crete Bridge Festival',
+        MEET => 'Greek Islands Festival',
         CHAPTERS =>
         {
           'C0' => 
@@ -166,7 +220,7 @@ my %TOURNAMENTS_GREECE =
     {
       '2007' =>
       {
-        MEET => 'Crete Bridge Festival',
+        MEET => 'Greek Islands Festival',
         CHAPTERS =>
         {
           'C0' => 
@@ -247,7 +301,7 @@ my %TOURNAMENTS_GREECE =
     {
       '2007' =>
       {
-        MEET => 'Crete Bridge Festival',
+        MEET => 'Greek Islands Festival',
         CHAPTERS =>
         {
           'C0' => 

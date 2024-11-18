@@ -11,6 +11,8 @@ package Tournaments::Thailand;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+# https://results.cblt.or.th/history/
+
 my %MEETS_THAILAND =
 (
   'Bangkok Bridge Festival' =>
@@ -23,11 +25,29 @@ my %MEETS_THAILAND =
 
     EDITIONS => 
     {
-      '2000' =>
+      '2013' =>
       {
-        YEAR => 2000,
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
+        YEAR => 2013,
+        DATE_START => '2013-01-30',
+        DATE_END => '2013-02-03'
+      },
+      '2014' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-04-05',
+        DATE_END => '2014-04-09'
+      },
+      '2017' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-04-05',
+        DATE_END => '2017-04-09'
+      },
+      '2019' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-03-30',
+        DATE_END => '2019-04-03'
       },
     }
   },
@@ -41,11 +61,11 @@ my %MEETS_THAILAND =
 
     EDITIONS => 
     {
-      '2000' =>
+      '2014' =>
       {
-        YEAR => 2000,
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
+        YEAR => 2014,
+        DATE_START => '2014-12-13',
+        DATE_END => '2014-12-16'
       },
     }
   },

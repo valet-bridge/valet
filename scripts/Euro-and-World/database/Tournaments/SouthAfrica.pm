@@ -22,11 +22,41 @@ my %MEETS_SOUTHAFRICA =
 
     EDITIONS =>
     {
+      '2008' =>
+      {
+        YEAR => 2008,
+        DATE_START => '2008-05-14',
+        DATE_END => '2008-05-14'
+      },
+      '2009' =>
+      {
+        YEAR => 2009,
+        DATE_START => '2009-05-11',
+        DATE_END => '2009-05-12'
+      },
+      '2010' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-05-10',
+        DATE_END => '2010-05-11'
+      },
+      '2012' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-05-14',
+        DATE_END => '2012-05-15'
+      },
+      '2013' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-04-11',
+        DATE_END => '2013-04-12'
+      },
       '2016' =>
       {
         YEAR => 2016,
         DATE_START => '2016-05-17',
-        DATE_END => '2016-05-17'
+        DATE_END => '2016-05-19'
       },
     }
   },
@@ -78,10 +108,6 @@ my %TOURNAMENTS_SOUTHAFRICA =
 
   'South African Open Teams' =>
   {
-    ORGANIZATION => 'SABF',
-    COUNTRY => 'South Africa',
-    ORIGIN => 'National',
-    ZONE => 'Africa',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -91,6 +117,7 @@ my %TOURNAMENTS_SOUTHAFRICA =
     {
       '2008' =>
       {
+        MEET => 'South African Congress',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -105,6 +132,7 @@ my %TOURNAMENTS_SOUTHAFRICA =
       },
       '2009' =>
       {
+        MEET => 'South African Congress',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -119,6 +147,7 @@ my %TOURNAMENTS_SOUTHAFRICA =
       },
       '2010' =>
       {
+        MEET => 'South African Congress',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -133,6 +162,7 @@ my %TOURNAMENTS_SOUTHAFRICA =
       },
       '2012' =>
       {
+        MEET => 'South African Congress',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -147,6 +177,7 @@ my %TOURNAMENTS_SOUTHAFRICA =
       },
       '2013' =>
       {
+        MEET => 'South African Congress',
         CHAPTERS =>
         {
           'SINGLE' => 

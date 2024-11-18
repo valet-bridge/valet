@@ -16,74 +16,74 @@ use lib '..';
 use DateCalc;
 use EntryT;
 
-use Tournaments::Friendly;
+use Tournaments::Friendly; #
 
 use Tournaments::Africa;
 use Tournaments::Argentina;
-use Tournaments::Asia;
-use Tournaments::Australia;
+use Tournaments::Asia; #
+use Tournaments::Australia; #
 use Tournaments::Austria;
-use Tournaments::Balkan;
-use Tournaments::Baltic;
+use Tournaments::Balkan; #
+use Tournaments::Baltic; #
 use Tournaments::Belarus;
 use Tournaments::Belgium;
-use Tournaments::Bolivia;
-use Tournaments::Brazil;
-use Tournaments::Bulgaria;
-use Tournaments::Canada;
-use Tournaments::CentralAmerica;
+use Tournaments::Bolivia; #
+use Tournaments::Brazil; #
+use Tournaments::Bulgaria; #
+use Tournaments::Canada; #
+use Tournaments::CentralAmerica; #
 use Tournaments::Chile;
-use Tournaments::China;
+use Tournaments::China; #
 use Tournaments::Czech;
-use Tournaments::Croatia;
-use Tournaments::Denmark;
+use Tournaments::Croatia; #
+use Tournaments::Denmark; #
 use Tournaments::Ecuador;
 use Tournaments::Egypt;
-use Tournaments::EuroAdult;
-use Tournaments::EuroYouth;
+use Tournaments::EuroAdult; #
+use Tournaments::EuroYouth; #
 use Tournaments::Faroe;
-use Tournaments::Finland;
-use Tournaments::France;
-use Tournaments::Germany;
+use Tournaments::Finland; #
+use Tournaments::France; #
+use Tournaments::Germany; #
 use Tournaments::Greece;
 use Tournaments::HongKong;
-use Tournaments::Hungary;
-use Tournaments::Iceland;
-use Tournaments::India;
-use Tournaments::Indonesia;
+use Tournaments::Hungary; #
+use Tournaments::Iceland; #
+use Tournaments::India; #
+use Tournaments::Indonesia; #
 use Tournaments::Ireland;
-use Tournaments::Israel;
-use Tournaments::Italy;
+use Tournaments::Israel; #
+use Tournaments::Italy; #
 use Tournaments::Japan;
 use Tournaments::Jordan;
 use Tournaments::Lebanon;
 use Tournaments::MiddleEast;
 use Tournaments::Monaco;
-use Tournaments::Netherlands;
-use Tournaments::NewZealand;
-use Tournaments::Nordic;
-use Tournaments::Norway;
+use Tournaments::Netherlands; #
+use Tournaments::NewZealand; #
+use Tournaments::Nordic; #
+use Tournaments::Norway; #
 use Tournaments::Pakistan;
-use Tournaments::Poland;
-use Tournaments::Portugal;
-use Tournaments::Romania;
-use Tournaments::Russia;
+use Tournaments::Poland; #
+use Tournaments::Portugal; #
+use Tournaments::Romania; #
+use Tournaments::Russia; #
 use Tournaments::Serbia;
-use Tournaments::Slovakia;
+use Tournaments::Slovakia; #
 use Tournaments::Singapore;
 use Tournaments::SouthAfrica;
-use Tournaments::SouthAmerica;
-use Tournaments::Spain;
-use Tournaments::Supra;
-use Tournaments::Sweden;
-use Tournaments::Switzerland;
+use Tournaments::SouthAmerica; #
+use Tournaments::Spain; #
+use Tournaments::Supra; #
+use Tournaments::Sweden; #
+use Tournaments::Switzerland; #
 use Tournaments::Taipei;
 use Tournaments::Thailand;
-use Tournaments::Turkey;
-use Tournaments::UK;
-use Tournaments::USA;
+use Tournaments::Turkey; #
+use Tournaments::UK; #
+use Tournaments::USA; #
 use Tournaments::Venezuela;
-use Tournaments::World;
+use Tournaments::World; #
 
 
 my %DIVISIONS =

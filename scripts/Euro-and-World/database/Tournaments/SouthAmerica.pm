@@ -205,12 +205,12 @@ my %TOURNAMENTS_SOUTHAMERICA =
 
     EDITIONS =>
     {
-      '2006' =>
+      '2006A' =>
       {
         MEET => 'South American Team Championship',
+        MEET_TAG => '2006',
         CHAPTERS =>
         {
-          # Dates are messed up here.  There are two championships.
           'C0' => 
           {
             YEAR => 2006,
@@ -227,7 +227,15 @@ my %TOURNAMENTS_SOUTHAMERICA =
             DATE_START => '2006-05-02',
             DATE_END => '2006-05-02'
           },
-          'C2' => 
+        }
+      },
+      '2006B' =>
+      {
+        MEET => 'South American Team Championship',
+        MEET_TAG => '2006',
+        CHAPTERS =>
+        {
+          'C0' => 
           {
             YEAR => 2006,
             STAGE => 'Semifinal',
@@ -235,7 +243,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
             DATE_START => '2006-05-03',
             DATE_END => '2006-05-03'
           },
-          'C3' => 
+          'C1' => 
           {
             YEAR => 2006,
             STAGE => 'Final',
@@ -782,6 +790,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2011' =>
       {
+       # Could be Trials -- move to below
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -956,6 +965,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       {
         CHAPTERS =>
         {
+          # Could be Trials
           'C0' => 
           {
             YEAR => 2015,

@@ -94,7 +94,7 @@ my %MEETS_AFRICA =
       '2011' =>
       {
         YEAR => 2011,
-        DATE_START => '2011-03-16',
+        DATE_START => '2011-03-12',
         DATE_END => '2011-03-17'
       },
     }
@@ -124,9 +124,6 @@ my %TOURNAMENTS_AFRICA =
 (
   'African Zonal Open Teams' =>
   {
-    ORGANIZATION => 'AfBF',
-    ORIGIN => 'International',
-    ZONE => 'Africa',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -224,9 +221,6 @@ my %TOURNAMENTS_AFRICA =
 
   'African Zonal Senior Teams' =>
   {
-    ORGANIZATION => 'AfBF',
-    ORIGIN => 'International',
-    ZONE => 'Africa',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -267,9 +261,6 @@ my %TOURNAMENTS_AFRICA =
 
   'African Zonal Women Teams' =>
   {
-    ORGANIZATION => 'AfBF',
-    ORIGIN => 'International',
-    ZONE => 'Africa',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -389,9 +380,6 @@ my %TOURNAMENTS_AFRICA =
 
   'Morocco Open Pairs' =>
   {
-    ORGANIZATION => 'AfBF',
-    ORIGIN => 'International',
-    ZONE => 'Africa',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -430,9 +418,6 @@ my %TOURNAMENTS_AFRICA =
 
   'Morocco Patton Teams' =>
   {
-    ORGANIZATION => 'AfBF',
-    ORIGIN => 'International',
-    ZONE => 'Africa',
     FORM => 'Teams',
     SCORING => 'Patton',
     GENDER => 'Open',

@@ -36,38 +36,47 @@ my %MEETS_JORDAN =
       {
         ORDINAL => 31,
         YEAR => 2013,
-        DATE_START => '2013-11-08',
-        DATE_END => '2013-11-08'
+        DATE_START => '2013-11-06',
+        DATE_END => '2013-11-10'
       },
       '2014' =>
       {
-        ORDINAL => 32,
+        ORDINAL => 33,
+        CITY => 'Amman',
         YEAR => 2014,
-        DATE_START => '2014-11-06',
-        DATE_END => '2014-11-08'
+        DATE_START => '2014-11-04',
+        DATE_END => '2014-11-09'
       },
-      '2015A' =>
+      '2015' =>
       {
+        ORDINAL => 34,
+        CITY => 'Amman',
         YEAR => 2015,
-        DATE_START => '2015-05-03',
-        DATE_END => '2015-05-06'
-      },
-      '2015B' =>
-      {
-        YEAR => 2015,
-        DATE_START => '2015-11-05',
+        DATE_START => '2015-11-04',
         DATE_END => '2015-11-11'
       },
       '2016' =>
       {
+        ORDINAL => 35,
         YEAR => 2016,
-        DATE_START => '2016-04-04',
-        DATE_END => '2016-04-05'
+        CITY => 'Amman',
+        DATE_START => '2016-10-19',
+        DATE_END => '2016-10-23'
+      },
+      '2018' =>
+      {
+        ORDINAL => 37,
+        YEAR => 2018,
+        CITY => 'Amman',
+        DATE_START => '2018-10-17',
+        DATE_END => '2018-10-21'
       },
       '2019' =>
       {
         # https://bridgescanner.com/event/annual-jordan-international-bridge-festival-2019
+        ORDINAL => 38,
         YEAR => 2019,
+        CITY => 'Amman',
         DATE_START => '2019-10-16',
         DATE_END => '2019-10-16'
       },
@@ -93,11 +102,88 @@ my %MEETS_JORDAN =
         DATE_END => '2024-09-30'
       },
     }
-  }
+  },
+
+  'Jordan Spring Festival' =>
+  {
+    ORGANIZATION => 'JBA',
+    COUNTRY => 'Jordan',
+    ORIGIN => 'National',
+    ZONE => 'Africa',
+
+    EDITIONS => 
+    {
+      '2015' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-05-03',
+        DATE_END => '2015-05-06'
+      },
+      '2016' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-04-04',
+        DATE_END => '2016-04-05'
+      },
+    }
+  },
 );
 
 my %TOURNAMENTS_JORDAN =
 (
+  'Jordan Mixed Pairs' => 
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        MEET => 'Jordan Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-11-09',
+            DATE_END => '2013-11-10'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Jordan Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'SESSION',
+            DATE_START => '2014-11-08',
+            DATE_END => '2014-11-09'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Jordan Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'SESSION',
+            DATE_START => '2015-11-07',
+            DATE_END => '2015-11-11'
+          } 
+        }
+      },
+    }
+  },
+
   'Jordan Open Pairs' => 
   {
     FORM => 'Pairs',
@@ -149,27 +235,7 @@ my %TOURNAMENTS_JORDAN =
           } 
         }
       },
-      '2015A' =>
-      {
-        MEET => 'Jordan Bridge Festival',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2015,
-            major => 'SESSION',
-            DATE_START => '2015-05-03',
-            DATE_END => '2015-05-04'
-          },
-          'C1' => 
-          {
-            YEAR => 2015,
-            DATE_START => '2015-05-19',
-            DATE_END => '2015-05-26'
-          },
-        }
-      },
-      '2015B' =>
+      '2015' =>
       {
         MEET => 'Jordan Bridge Festival',
         CHAPTERS =>
@@ -180,19 +246,6 @@ my %TOURNAMENTS_JORDAN =
             major => 'SESSION',
             DATE_START => '2015-11-04',
             DATE_END => '2015-11-07'
-          } 
-        }
-      },
-      '2016' =>
-      {
-        MEET => 'Jordan Bridge Festival',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2016,
-            DATE_START => '2016-04-04',
-            DATE_END => '2016-04-04'
           } 
         }
       },
@@ -225,7 +278,7 @@ my %TOURNAMENTS_JORDAN =
     }
   },
 
-  'Jordan Mixed Pairs' => 
+  'Jordan Spring Mixed Pairs' => 
   {
     FORM => 'Pairs',
     SCORING => 'MP',
@@ -234,36 +287,9 @@ my %TOURNAMENTS_JORDAN =
 
     EDITIONS =>
     {
-      '2013' =>
+      '2015' =>
       {
-        MEET => 'Jordan Bridge Festival',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2013,
-            DATE_START => '2013-11-09',
-            DATE_END => '2013-11-10'
-          } 
-        }
-      },
-      '2014' =>
-      {
-        MEET => 'Jordan Bridge Festival',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2014,
-            major => 'SESSION',
-            DATE_START => '2014-11-08',
-            DATE_END => '2014-11-09'
-          } 
-        }
-      },
-      '2015A' =>
-      {
-        MEET => 'Jordan Bridge Festival',
+        MEET => 'Jordan Spring Festival',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -275,23 +301,9 @@ my %TOURNAMENTS_JORDAN =
           } 
         }
       },
-      '2015B' =>
-      {
-        MEET => 'Jordan Bridge Festival',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2015,
-            major => 'SESSION',
-            DATE_START => '2015-11-07',
-            DATE_END => '2015-11-11'
-          } 
-        }
-      },
       '2016' =>
       {
-        MEET => 'Jordan Bridge Festival',
+        MEET => 'Jordan Spring Festival',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -299,6 +311,65 @@ my %TOURNAMENTS_JORDAN =
             YEAR => 2016,
             DATE_START => '2016-04-05',
             DATE_END => '2016-04-05'
+          } 
+        }
+      },
+    }
+  },
+
+  'Jordan Spring Open Pairs' => 
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2015A' =>
+      {
+        MEET => 'Jordan Spring Festival',
+        MEET_TAG => '2015',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            major => 'SESSION',
+            DATE_START => '2015-05-03',
+            DATE_END => '2015-05-04'
+          },
+        }
+      },
+      '2015B' =>
+      {
+        # Something to do with BFAME starting 2015-05-27?
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-05-19',
+            DATE_END => '2015-05-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-05-26',
+            DATE_END => '2015-05-26'
+          },
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Jordan Spring Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-04-04',
+            DATE_END => '2016-04-04'
           } 
         }
       },

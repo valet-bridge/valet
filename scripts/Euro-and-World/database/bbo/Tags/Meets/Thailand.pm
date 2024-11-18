@@ -24,7 +24,10 @@ my %MULTI_TYPOS =
 
 my %SINGLE_TYPOS =
 (
-  'Bangkok Bridge Festival' => ['bbf', 'bff'],
+  'Bangkok Bridge Festival' => [
+    'amazing thailand bridge festival',
+    'bbf', 
+    'bff'],
 );
 
 sub set_hash

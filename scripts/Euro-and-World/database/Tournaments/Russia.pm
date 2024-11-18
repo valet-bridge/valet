@@ -36,7 +36,7 @@ my %TOURNAMENTS_RUSSIA =
 (
   'BKBT Teams' =>
   {
-    # Unclear
+    # Unclear.  Potentially Slava Cup?
     ORGANIZATION => 'RBL',
     COUNTRY => 'Russia',
     ORIGIN => 'International',
@@ -807,7 +807,6 @@ my %TOURNAMENTS_RUSSIA =
       },
     }
   },
-
 
 );
 
