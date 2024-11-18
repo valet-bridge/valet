@@ -679,6 +679,7 @@ my %TOURNAMENTS_CHINA =
           },
           'C4' => 
           {
+            # TODO Something else?
             YEAR => 2006,
             DATE_START => '2006-10-04',
             DATE_END => '2006-10-04'
@@ -700,6 +701,7 @@ my %TOURNAMENTS_CHINA =
       },
       '2012' =>
       {
+        # TODO Something else?
         CHAPTERS =>
         {
           'C0' => 

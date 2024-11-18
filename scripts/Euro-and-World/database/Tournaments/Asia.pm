@@ -79,6 +79,7 @@ my %MEETS_ASIA =
       },
       '2011' =>
       {
+        # TODO Look up vs below
         ORDINAL => 48,
         CITY => 'Kuala Lumpur',
         COUNTRY => 'Malaysia',
@@ -298,6 +299,13 @@ my %MEETS_ASIA =
 
     EDITIONS =>
     {
+      '2010' =>
+      {
+        ORDINAL => 1,
+        YEAR => 2010,
+        DATE_START => '2010-08-30',
+        DATE_END => '2010-09-05'
+      },
       '2014' =>
       {
         # https://www.ccba.org.cn/Tour/TourIndex.aspx?tourid=3989
@@ -341,12 +349,13 @@ my %MEETS_ASIA =
     {
       '2011' =>
       {
+        # TODO Look up, find more of them
         ORDINAL => 26,
         CITY => 'Jakarta',
         COUNTRY => 'Indonesia',
         YEAR => 2011,
-        DATE_START => '2011-09-08',
-        DATE_END => '2011-09-21'
+        DATE_START => '2011-11-10',
+        DATE_END => '2011-11-21'
       },
     }
   },
@@ -1870,6 +1879,7 @@ my %TOURNAMENTS_ASIA =
 
   'Indonesian SEA Open Team Trials' =>
   {
+    # TODO Could be Indonesian tournament
     ORGANIZATION => 'APBF',
     ORIGIN => 'International',
     ZONE => 'Asia Pacific',
@@ -1882,7 +1892,6 @@ my %TOURNAMENTS_ASIA =
     {
       '2011' =>
       {
-        MEET => 'Southeast Asian Games',
         CHAPTERS =>
         {
           'SINGLE' => 

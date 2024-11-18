@@ -51,7 +51,7 @@ my %MEETS_CROATIA =
       {
         YEAR => 2009,
         DATE_START => '2009-09-09',
-        DATE_END => '2009-09-09'
+        DATE_END => '2009-09-10'
       },
       '2010' =>
       {
@@ -80,7 +80,7 @@ my %MEETS_CROATIA =
       '2014' =>
       {
         YEAR => 2014,
-        DATE_START => '2014-09-10',
+        DATE_START => '2014-09-07',
         DATE_END => '2014-09-11'
       },
       '2015' =>

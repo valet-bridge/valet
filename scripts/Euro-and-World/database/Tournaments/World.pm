@@ -280,7 +280,7 @@ my %MEETS_WORLD =
         CITY => 'Beijing',
         COUNTRY => 'China',
         DATE_START => '2011-12-09',
-        DATE_END => '2011-12-15'
+        DATE_END => '2011-12-16'
       },
       '2012A' =>
       {
@@ -3399,6 +3399,7 @@ my %TOURNAMENTS_WORLD =
       '2012' =>
       {
         MEET => 'World Mind Games',
+        MEET_TAG => '2012A',
         CHAPTERS =>
         {
           'C0' => 
@@ -4075,7 +4076,7 @@ my %TOURNAMENTS_WORLD =
 
     EDITIONS =>
     {
-      'SINGLE' =>
+      '2006' =>
       {
         MEET => 'World Youth Championships',
         CHAPTERS =>
@@ -4706,6 +4707,7 @@ my %TOURNAMENTS_WORLD =
       '2012' =>
       {
         MEET => 'World Mind Games',
+        MEET_TAG => '2012B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4747,6 +4749,7 @@ my %TOURNAMENTS_WORLD =
       '2012' =>
       {
         MEET => 'World Mind Games',
+        MEET_TAG => '2012B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4788,6 +4791,7 @@ my %TOURNAMENTS_WORLD =
       '2012' =>
       {
         MEET => 'World Mind Games',
+        MEET_TAG => '2012B',
         CHAPTERS =>
         {
           'C0' => 
@@ -5174,6 +5178,7 @@ my %TOURNAMENTS_WORLD =
       '2012' =>
       {
         MEET => 'World Mind Games',
+        MEET_TAG => '2012A',
         CHAPTERS =>
         {
           'C0' => 
@@ -5388,6 +5393,7 @@ my %TOURNAMENTS_WORLD =
       '2012' =>
       {
         MEET => 'World Mind Games',
+        MEET_TAG => '2012B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -5457,6 +5463,7 @@ my %TOURNAMENTS_WORLD =
       '2012' =>
       {
         MEET => 'World Mind Games',
+        MEET_TAG => '2012B',
         CHAPTERS =>
         {
           'SINGLE' => 

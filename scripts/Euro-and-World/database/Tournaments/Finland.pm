@@ -56,6 +56,12 @@ my %MEETS_FINLAND =
         DATE_START => '2007-10-22',
         DATE_END => '2007-10-22'
       },
+      '2008' =>
+      {
+        YEAR => 2008,
+        DATE_START => '2008-07-16',
+        DATE_END => '2008-07-16'
+      }
     }
   },
 );

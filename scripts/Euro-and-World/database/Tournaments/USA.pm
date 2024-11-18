@@ -141,8 +141,8 @@ my %MEETS_USA =
         ORDINAL => 74,
         YEAR => 2000,
         CITY => 'Birmingham',
-        DATE_START => '2001-11-16',
-        DATE_END => '2001-11-26'
+        DATE_START => '2000-11-16',
+        DATE_END => '2000-11-26'
       },
       '2001A' =>
       {
@@ -422,7 +422,7 @@ my %MEETS_USA =
         YEAR => 2012,
         CITY => 'Philadelphia',
         DATE_START => '2012-07-12',
-        DATE_END => '2012-07-22'
+        DATE_END => '2012-07-23'
       },
       '2012C' =>
       {
@@ -446,7 +446,7 @@ my %MEETS_USA =
         YEAR => 2013,
         CITY => 'Atlanta',
         DATE_START => '2013-08-01',
-        DATE_END => '2013-08-11'
+        DATE_END => '2013-08-12'
       },
       '2013C' =>
       {
@@ -470,7 +470,7 @@ my %MEETS_USA =
         YEAR => 2014,
         CITY => 'Las Vegas',
         DATE_START => '2014-07-17',
-        DATE_END => '2014-07-27'
+        DATE_END => '2014-07-28'
       },
       '2014C' =>
       {
@@ -494,7 +494,7 @@ my %MEETS_USA =
         YEAR => 2015,
         CITY => 'Chicago',
         DATE_START => '2015-08-06',
-        DATE_END => '2015-08-16'
+        DATE_END => '2015-08-17'
       },
       '2015C' =>
       {
@@ -518,7 +518,7 @@ my %MEETS_USA =
         YEAR => 2016,
         CITY => 'Washington DC',
         DATE_START => '2016-07-20',
-        DATE_END => '2016-07-31'
+        DATE_END => '2016-08-01'
       },
       '2016C' =>
       {
@@ -814,7 +814,7 @@ my %MEETS_USA =
       {
         YEAR => 2015,
         CITY => 'Schaumburg',
-        DATE_START => '2015-05-11',
+        DATE_START => '2015-05-08',
         DATE_END => '2015-05-17'
       },
       '2016' =>
@@ -895,8 +895,8 @@ my %MEETS_USA =
       },
       '2015-16' =>
       {
-        DATE_START => '2015-12-28',
-        DATE_END => '2015-12-30'
+        DATE_START => '2015-12-27',
+        DATE_END => '2015-12-31'
       },
       '2017-18' =>
       {
@@ -1755,16 +1755,16 @@ my %TOURNAMENTS_USA =
             YEAR => 2004,
             STAGE => 'Semifinal',
             major => 'SEGMENT',
-            DATE_START => '2004-07-15',
-            DATE_END => '2004-07-16'
+            DATE_START => '2004-07-28',
+            DATE_END => '2004-07-29'
           },
           'C1' => 
           {
             YEAR => 2004,
             STAGE => 'Final',
             major => 'SEGMENT',
-            DATE_START => '2004-07-17',
-            DATE_END => '2004-07-18'
+            DATE_START => '2004-07-30',
+            DATE_END => '2004-07-31'
           } 
         }
       },
@@ -4054,7 +4054,6 @@ my %TOURNAMENTS_USA =
       '2015' =>
       {
         # https://www.usbf.org/2024-united-states-bridge-championships/2024-united-states-bridge-championships/index.php
-        MEET => 'United States Bridge Championship',
         CITY => 'Schaumburg',
 
         CHAPTERS =>
@@ -4070,7 +4069,6 @@ my %TOURNAMENTS_USA =
       '2016' =>
       {
         # https://www.usbf.org/2016-senior-usbc/2016-senior-usbc
-        MEET => 'United States Bridge Championship',
         CITY => 'Denver',
 
         CHAPTERS =>
@@ -4546,7 +4544,6 @@ my %TOURNAMENTS_USA =
       '2015' =>
       {
         # https://www.usbf.org/2015-women-s-usbc/2015-women-s-usbc
-        MEET => 'United States Bridge Championship',
         CITY => 'Fort Lauderdale',
 
         CHAPTERS =>
@@ -4725,6 +4722,7 @@ my %TOURNAMENTS_USA =
       '2015' =>
       {
         MEET => 'United States Youth Bridge Championship',
+        MEET_TAG => '2015-16',
         CHAPTERS =>
         {
           'C0' => 
@@ -4885,16 +4883,16 @@ my %TOURNAMENTS_USA =
             YEAR => 2002,
             STAGE => 'Semifinal',
             major => 'SEGMENT',
-            DATE_START => '2002-03-21',
-            DATE_END => '2002-03-21'
+            DATE_START => '2002-03-14',
+            DATE_END => '2002-03-15'
           },
           'C1' => 
           {
             YEAR => 2002,
             STAGE => 'Final',
             major => 'SEGMENT',
-            DATE_START => '2002-03-22',
-            DATE_END => '2002-03-23'
+            DATE_START => '2002-03-16',
+            DATE_END => '2002-03-17'
           } 
         }
       },
@@ -5513,8 +5511,8 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2006,
             STAGE => 'Final',
-            DATE_START => '2006-07-24',
-            DATE_END => '2006-07-24'
+            DATE_START => '2006-07-23',
+            DATE_END => '2006-07-23'
           } 
         }
       },

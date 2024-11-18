@@ -131,7 +131,7 @@ my %MEETS_EURO_YOUTH =
         CITY => 'Vienna',
         COUNTRY => 'Austria',
         DATE_START => '1998-07-16',
-        DATE_END => '1998-07-16'
+        DATE_END => '1998-07-26'
       },
 
       '2000' =>
@@ -219,7 +219,7 @@ my %MEETS_EURO_YOUTH =
         CITY => 'Wroclaw',
         COUNTRY => 'Poland',
         DATE_START => '2013-07-12',
-        DATE_END => '2013-07-19'
+        DATE_END => '2013-07-20'
       },
 
       '2015' =>
@@ -1671,7 +1671,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2017,
             STAGE => 'Round-robin',
-            DATE_START => '2017-07-07',
+            DATE_START => '2017-07-09',
             DATE_END => '2017-07-15'
           }
         }

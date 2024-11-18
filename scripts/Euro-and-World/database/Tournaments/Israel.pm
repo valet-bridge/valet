@@ -153,25 +153,7 @@ my %MEETS_ISRAEL =
       {
         YEAR => 2010,
         DATE_START => '2010-09-02',
-        DATE_END => '2010-09-03'
-      },
-    }
-  },
-
-  'Red Beach Festival' =>
-  {
-    ORGANIZATION => 'IBF',
-    COUNTRY => 'Israel',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        YEAR => 2000,
-        DATE_START => '2000-11-05',
-        DATE_END => '2000-11-12'
+        DATE_END => '2010-09-04'
       },
     }
   },

@@ -223,8 +223,8 @@ my %MEETS_EUROADULT =
         ORDINAL => 21,
         CITY => 'Dubrovnik',
         COUNTRY => 'Croatia',
-        DATE_START => '2023-09-09',
-        DATE_END => '2023-09-11'
+        DATE_START => '2023-11-09',
+        DATE_END => '2023-11-11'
       },
     }
   },
