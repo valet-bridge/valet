@@ -630,8 +630,6 @@ my %TOURNAMENTS_BRAZIL =
     {
       '2007' =>
       {
-        MEET => 'Brazilian Trials',
-
         CHAPTERS =>
         {
           'SINGLE' => 

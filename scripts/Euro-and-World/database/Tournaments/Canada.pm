@@ -134,8 +134,8 @@ my %MEETS_CANADA =
         # https://cbf.ca/BWeek/17files/standings.shtml
         YEAR => 2017,
         CITY => 'Winnipeg',
-        DATE_START => '2017-04-29',
-        DATE_END => '2017-05-07'
+        DATE_START => '2017-05-21',
+        DATE_END => '2017-05-29'
       },
       '2018' =>
       {
@@ -158,8 +158,8 @@ my %MEETS_CANADA =
         # https://cbf.ca/BWeek/23files/standings.shtml
         YEAR => 2023,
         CITY => 'Niagara Falls',
-        DATE_START => '2023-05-04',
-        DATE_END => '2023-05-12'
+        DATE_START => '2023-05-09',
+        DATE_END => '2023-05-19'
       },
       '2024' =>
       {

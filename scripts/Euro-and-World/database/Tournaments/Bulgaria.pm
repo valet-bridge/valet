@@ -172,6 +172,12 @@ my %MEETS_BULGARIA =
         DATE_START => '2011-06-18',
         DATE_END => '2011-06-19'
       },
+      '2012' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-09-22',
+        DATE_END => '2012-09-23'
+      },
     }
   },
 
@@ -207,6 +213,12 @@ my %MEETS_BULGARIA =
         YEAR => 2014,
         DATE_START => '2014-04-10',
         DATE_END => '2014-04-13'
+      },
+      '2015' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-04-18',
+        DATE_END => '2015-04-19'
       },
       '2016' =>
       {
@@ -277,11 +289,23 @@ my %MEETS_BULGARIA =
 
     EDITIONS => 
     {
+      '2009' =>
+      {
+        YEAR => 2009,
+        DATE_START => '2009-05-30',
+        DATE_END => '2009-05-31'
+      },
+      '2010' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-05-29',
+        DATE_END => '2010-05-30'
+      },
       '2015' =>
       {
         YEAR => 2015,
         DATE_START => '2015-06-13',
-        DATE_END => '2015-06-13'
+        DATE_END => '2015-06-14'
       },
     }
   },
@@ -320,6 +344,12 @@ my %MEETS_BULGARIA =
         DATE_START => '2011-04-28',
         DATE_END => '2011-05-01'
       },
+      '2012' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-05-05',
+        DATE_END => '2012-05-06'
+      },
       '2013' =>
       {
         # https://www.bridge.bg/en/tournaments/1211-32nd-International-Bridge-Festival-Plovdiv-2013
@@ -342,7 +372,13 @@ my %MEETS_BULGARIA =
         ORDINAL => 34,
         YEAR => 2015,
         DATE_START => '2015-04-29',
-        DATE_END => '2015-05-02'
+        DATE_END => '2015-05-03'
+      },
+      '2016' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-05-07',
+        DATE_END => '2016-05-08'
       },
       '2017' =>
       {
@@ -406,7 +442,7 @@ my %MEETS_BULGARIA =
         ORDINAL => 18,
         YEAR => 2010,
         DATE_START => '2010-05-15',
-        DATE_END => '2010-05-15'
+        DATE_END => '2010-05-16'
       },
       '2011' =>
       {
@@ -436,11 +472,17 @@ my %MEETS_BULGARIA =
 
     EDITIONS => 
     {
+      '2014' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-09-21',
+        DATE_END => '2014-09-22'
+      },
       '2015' =>
       {
         YEAR => 2015,
         DATE_START => '2015-09-21',
-        DATE_END => '2015-09-21'
+        DATE_END => '2015-09-22'
       },
     }
   },
@@ -455,10 +497,40 @@ my %MEETS_BULGARIA =
 
     EDITIONS => 
     {
+      '2006' =>
+      {
+        YEAR => 2006,
+        DATE_START => '2006-10-17',
+        DATE_END => '2006-10-17'
+      },
+      '2007' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-10-21',
+        DATE_END => '2007-10-22'
+      },
+      '2009' =>
+      {
+        YEAR => 2009,
+        DATE_START => '2009-10-10',
+        DATE_END => '2009-10-11'
+      },
+      '2010' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-10-02',
+        DATE_END => '2010-10-03'
+      },
+      '2011' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-10-08',
+        DATE_END => '2011-10-09'
+      },
       '2012' =>
       {
         YEAR => 2012,
-        DATE_START => '2012-10-07',
+        DATE_START => '2012-10-06',
         DATE_END => '2012-10-07'
       },
       '2013' =>
@@ -521,7 +593,7 @@ my %MEETS_BULGARIA =
         ORDINAL => 39,
         YEAR => 2015,
         DATE_START => '2015-08-11',
-        DATE_END => '2015-08-15'
+        DATE_END => '2015-08-16'
       },
       '2016' =>
       {
@@ -988,10 +1060,10 @@ my %TOURNAMENTS_BULGARIA =
 
     EDITIONS =>
     {
-      '2010' =>
+      '2011' =>
       {
-        ORDINAL => 2,
         MEET => 'Cherven Briag Festival',
+        ORDINAL => 2,
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1004,6 +1076,7 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2012' =>
       {
+        MEET => 'Cherven Briag Festival',
         ORDINAL => 3,
         CHAPTERS =>
         {
@@ -1561,6 +1634,7 @@ my %TOURNAMENTS_BULGARIA =
     {
       '2006' =>
       {
+        MEET => 'Stara Zagora Bridge Festival',
         CHAPTERS =>
         {
           'C0' => 
@@ -1573,6 +1647,7 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2007' =>
       {
+        MEET => 'Stara Zagora Bridge Festival',
         CHAPTERS =>
         {
           'C0' => 
@@ -1601,6 +1676,7 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2009' =>
       {
+        MEET => 'Stara Zagora Bridge Festival',
         CHAPTERS =>
         {
           'C0' => 
@@ -1629,6 +1705,7 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2010' =>
       {
+        MEET => 'Stara Zagora Bridge Festival',
         CHAPTERS =>
         {
           'C0' => 
@@ -1641,6 +1718,7 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2011' =>
       {
+        MEET => 'Stara Zagora Bridge Festival',
         CHAPTERS =>
         {
           'C0' => 

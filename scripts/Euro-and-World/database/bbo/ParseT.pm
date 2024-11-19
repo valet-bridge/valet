@@ -28,10 +28,10 @@ use Tournaments::Baltic;
 use Tournaments::Belarus;
 use Tournaments::Belgium;
 use Tournaments::Bolivia;
-use Tournaments::Brazil; #
-use Tournaments::Bulgaria; #
-use Tournaments::Canada; #
-use Tournaments::CentralAmerica; #
+use Tournaments::Brazil;
+use Tournaments::Bulgaria;
+use Tournaments::Canada;
+use Tournaments::CentralAmerica;
 use Tournaments::Chile;
 use Tournaments::China; #
 use Tournaments::Czech;
