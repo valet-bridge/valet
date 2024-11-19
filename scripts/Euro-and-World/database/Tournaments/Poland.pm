@@ -33,10 +33,10 @@ my %MEETS_POLAND =
       '2009' =>
       {
         ORDINAL => 49,
-        YEAR => 2010,
+        YEAR => 2009,
         CITY => 'Sopot',
-        DATE_START => '2010-07-21',
-        DATE_END => '2010-07-22'
+        DATE_START => '2009-07-21',
+        DATE_END => '2009-07-22'
       },
       '2010' =>
       {
@@ -298,7 +298,7 @@ my %MEETS_POLAND =
         # ?
         ORDINAL => 22,
         YEAR => 2013,
-        DATE_START => '2013-10-04',
+        DATE_START => '2013-10-03',
         DATE_END => '2013-10-06'
       },
       '2014' =>
@@ -637,12 +637,12 @@ my %MEETS_POLAND =
       {
         YEAR => 2012,
         DATE_START => '2012-05-01', # Estimated
-        DATE_END => '2012-05-04'
+        DATE_END => '2012-05-05'
       },
       '2013' =>
       {
         YEAR => 2013,
-        DATE_START => '2013-04-30', # Estimated
+        DATE_START => '2013-04-29', # Estimated
         DATE_END => '2013-05-04'
       },
       '2014' =>
@@ -682,6 +682,12 @@ my %MEETS_POLAND =
         DATE_START => '2006-05-07',
         DATE_END => '2006-05-07'
       },
+      '2012' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-05-05',
+        DATE_END => '2012-05-06'
+      },
     }
   },
 
@@ -695,11 +701,17 @@ my %MEETS_POLAND =
 
     EDITIONS => 
     {
+      '2010' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-06-12',
+        DATE_END => '2010-06-13'
+      },
       '2012' =>
       {
         YEAR => 2012,
         DATE_START => '2012-06-07',
-        DATE_END => '2012-06-07'
+        DATE_END => '2012-06-08'
       },
     }
   },
@@ -744,7 +756,7 @@ my %MEETS_POLAND =
         ORDINAL => 47,
         YEAR => 2007,
         DATE_START => '2007-06-08',
-        DATE_END => '2007-06-10'
+        DATE_END => '2007-06-11'
       },
       '2008' =>
       {
@@ -1817,6 +1829,7 @@ my %TOURNAMENTS_POLAND =
       '2009B' =>
       {
         MEET => 'Poznan Congress',
+        MEET_TAG => '2009',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1831,6 +1844,7 @@ my %TOURNAMENTS_POLAND =
       '2009C' =>
       {
         MEET => 'Boleslawiec Festival',
+        MEET_TAG => '2009',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1868,6 +1882,7 @@ my %TOURNAMENTS_POLAND =
       '2010A' =>
       {
         MEET => 'Zulawski Congress',
+        MEET_TAG => '2010',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1897,6 +1912,7 @@ my %TOURNAMENTS_POLAND =
       '2010C' =>
       {
         MEET => 'Poznan Congress',
+        MEET_TAG => '2010',
         CHAPTERS =>
         {
           'C0' => 
@@ -1936,6 +1952,7 @@ my %TOURNAMENTS_POLAND =
       '2010D' =>
       {
         MEET => 'Boleslawiec Festival',
+        MEET_TAG => '2010',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1963,6 +1980,7 @@ my %TOURNAMENTS_POLAND =
       '2011A' =>
       {
         MEET => 'Zulawski Congress',
+        MEET_TAG => '2011',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1977,6 +1995,7 @@ my %TOURNAMENTS_POLAND =
       '2011B' =>
       {
         MEET => 'Boleslawiec Festival',
+        MEET_TAG => '2011',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2005,6 +2024,7 @@ my %TOURNAMENTS_POLAND =
       '2012A' =>
       {
         MEET => 'Zulawski Congress',
+        MEET_TAG => '2012',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2020,6 +2040,7 @@ my %TOURNAMENTS_POLAND =
       '2012B' =>
       {
         MEET => 'Zulawski Congress',
+        MEET_TAG => '2012',
         CHAPTERS =>
         {
           'C0' => 
@@ -2034,6 +2055,7 @@ my %TOURNAMENTS_POLAND =
       '2012C' =>
       {
         MEET => 'Krakow Congress',
+        MEET_TAG => '2012',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2049,6 +2071,7 @@ my %TOURNAMENTS_POLAND =
       '2012D' =>
       {
         MEET => 'Wroclaw Meeting',
+        MEET_TAG => '2012',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2063,6 +2086,7 @@ my %TOURNAMENTS_POLAND =
       '2012E' =>
       {
         MEET => 'Poznan Congress',
+        MEET_TAG => '2012',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2091,6 +2115,7 @@ my %TOURNAMENTS_POLAND =
       '2012G' =>
       {
         MEET => 'Boleslawiec Festival',
+        MEET_TAG => '2012',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2131,6 +2156,7 @@ my %TOURNAMENTS_POLAND =
       '2013A' =>
       {
         MEET => 'Zulawski Congress',
+        MEET_TAG => '2013',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2145,6 +2171,7 @@ my %TOURNAMENTS_POLAND =
       '2013B' =>
       {
         MEET => 'Krakow Congress',
+        MEET_TAG => '2013',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2159,6 +2186,7 @@ my %TOURNAMENTS_POLAND =
       '2013C' =>
       {
         MEET => 'Wroclaw Meeting',
+        MEET_TAG => '2013',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2173,6 +2201,7 @@ my %TOURNAMENTS_POLAND =
       '2013D' =>
       {
         MEET => 'Poznan Congress',
+        MEET_TAG => '2013',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2187,6 +2216,7 @@ my %TOURNAMENTS_POLAND =
       '2013E' =>
       {
         MEET => 'Slawa Congress',
+        MEET_TAG => '2013',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2201,6 +2231,7 @@ my %TOURNAMENTS_POLAND =
       '2013F' =>
       {
         MEET => 'Baltic Congress',
+        MEET_TAG => '2013',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2215,6 +2246,7 @@ my %TOURNAMENTS_POLAND =
       '2013G' =>
       {
         MEET => 'Boleslawiec Festival',
+        MEET_TAG => '2013',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2258,6 +2290,7 @@ my %TOURNAMENTS_POLAND =
       '2014A' =>
       {
         MEET => 'Zulawski Congress',
+        MEET_TAG => '2014',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2286,6 +2319,7 @@ my %TOURNAMENTS_POLAND =
       '2014C' =>
       {
         MEET => 'Krakow Congress',
+        MEET_TAG => '2014',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2300,6 +2334,7 @@ my %TOURNAMENTS_POLAND =
       '2014D' =>
       {
         MEET => 'Wroclaw Meeting',
+        MEET_TAG => '2014',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2314,6 +2349,7 @@ my %TOURNAMENTS_POLAND =
       '2014E' =>
       {
         MEET => 'Slawa Congress',
+        MEET_TAG => '2014',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2328,6 +2364,7 @@ my %TOURNAMENTS_POLAND =
       '2014F' =>
       {
         MEET => 'Baltic Congress',
+        MEET_TAG => '2014',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2342,6 +2379,7 @@ my %TOURNAMENTS_POLAND =
       '2014G' =>
       {
         MEET => 'Boleslawiec Festival',
+        MEET_TAG => '2014',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2370,6 +2408,7 @@ my %TOURNAMENTS_POLAND =
       '2015A' =>
       {
         MEET => 'Beskids Slam',
+        MEET_TAG => '2015',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2384,6 +2423,7 @@ my %TOURNAMENTS_POLAND =
       '2015B' =>
       {
         MEET => 'Krakow Congress',
+        MEET_TAG => '2015',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2398,6 +2438,7 @@ my %TOURNAMENTS_POLAND =
       '2015C' =>
       {
         MEET => 'Luczniczka Meeting',
+        MEET_TAG => '2015',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2412,6 +2453,7 @@ my %TOURNAMENTS_POLAND =
       '2015D' =>
       {
         MEET => 'Boleslawiec Festival',
+        MEET_TAG => '2015',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2439,6 +2481,7 @@ my %TOURNAMENTS_POLAND =
       '2016A' =>
       {
         MEET => 'Beskids Slam',
+        MEET_TAG => '2016',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2453,6 +2496,7 @@ my %TOURNAMENTS_POLAND =
       '2016B' =>
       {
         MEET => 'Luczniczka Meeting',
+        MEET_TAG => '2016',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2468,6 +2512,7 @@ my %TOURNAMENTS_POLAND =
       '2016C' =>
       {
         MEET => 'Poznan Congress',
+        MEET_TAG => '2016',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2519,7 +2564,7 @@ my %TOURNAMENTS_POLAND =
       '2009B' =>
       {
         MEET => 'Poznan Congress',
-
+        MEET_TAG => '2009',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2533,7 +2578,7 @@ my %TOURNAMENTS_POLAND =
       '2009C' =>
       {
         MEET => 'Baltic Congress',
-
+        MEET_TAG => '2009',
         CHAPTERS =>
         {
           'C0' => 
@@ -2565,6 +2610,7 @@ my %TOURNAMENTS_POLAND =
       '2009D' =>
       {
         MEET => 'Warsaw Grand Prix',
+        MEET_TAG => '2009',
         CHAPTERS =>
         {
           'C0' => 
@@ -2602,6 +2648,7 @@ my %TOURNAMENTS_POLAND =
       '2012A' =>
       {
         MEET => 'Krakow Congress',
+        MEET_TAG => '2012',
         CHAPTERS =>
         {
           'C0' => 
@@ -2638,6 +2685,7 @@ my %TOURNAMENTS_POLAND =
       '2012B' =>
       {
         MEET => 'Slawa Congress',
+        MEET_TAG => '2012',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2652,6 +2700,7 @@ my %TOURNAMENTS_POLAND =
       '2013A' =>
       {
         MEET => 'Zulawski Congress',
+        MEET_TAG => '2013',
         CHAPTERS =>
         {
           'C0' => 
@@ -2680,6 +2729,7 @@ my %TOURNAMENTS_POLAND =
       '2013B' =>
       {
         MEET => 'Poznan Congress',
+        MEET_TAG => '2013',
         CHAPTERS =>
         {
           'C0' => 
@@ -2703,6 +2753,7 @@ my %TOURNAMENTS_POLAND =
       '2013C' =>
       {
         MEET => 'Slawa Congress',
+        MEET_TAG => '2013',
         CHAPTERS =>
         {
           'C0' => 
@@ -2742,6 +2793,7 @@ my %TOURNAMENTS_POLAND =
       '2013D' =>
       {
         MEET => 'Baltic Congress',
+        MEET_TAG => '2013',
         CHAPTERS =>
         {
           'C0' => 
@@ -2789,6 +2841,7 @@ my %TOURNAMENTS_POLAND =
       '2013E' =>
       {
         MEET => 'Boleslawiec Festival',
+        MEET_TAG => '2013',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2833,6 +2886,7 @@ my %TOURNAMENTS_POLAND =
       '2014A' =>
       {
         MEET => 'Luczniczka Meeting',
+        MEET_TAG => '2014',
         CHAPTERS =>
         {
           'C0' => 
@@ -2865,6 +2919,7 @@ my %TOURNAMENTS_POLAND =
       {
         # https://wyniki.pzbs.pl/2014/_gpp/07wroclaw/t/fleaderb.html?1401096198
         MEET => 'Wroclaw Meeting',
+        MEET_TAG => '2014',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2879,6 +2934,7 @@ my %TOURNAMENTS_POLAND =
       '2015A' =>
       {
         MEET => 'Krakow Congress',
+        MEET_TAG => '2015',
         CHAPTERS =>
         {
           'C0' => 
@@ -2901,6 +2957,7 @@ my %TOURNAMENTS_POLAND =
       '2015B' =>
       {
         MEET => 'Luczniczka Meeting',
+        MEET_TAG => '2015',
         CHAPTERS =>
         {
           'C0' => 
@@ -2923,6 +2980,7 @@ my %TOURNAMENTS_POLAND =
       '2016A' =>
       {
         MEET => 'Zulawski Congress',
+        MEET_TAG => '2016',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2937,6 +2995,7 @@ my %TOURNAMENTS_POLAND =
       '2016B' =>
       {
         MEET => 'Luczniczka Meeting',
+        MEET_TAG => '2016',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2951,6 +3010,7 @@ my %TOURNAMENTS_POLAND =
       '2016C' =>
       {
         MEET => 'Poznan Congress',
+        MEET_TAG => '2016',
         CHAPTERS =>
         {
           'C0' => 
@@ -2988,6 +3048,7 @@ my %TOURNAMENTS_POLAND =
       {
         # https://wyniki.pzbs.pl/2016/baltycki/
         MEET => 'Baltic Congress',
+        MEET_TAG => '2016',
         CHAPTERS =>
         {
           'C0' => 
@@ -3429,7 +3490,6 @@ my %TOURNAMENTS_POLAND =
     {
       '2006' =>
       {
-        MEET => 'Warsaw Grand Prix',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3818,7 +3878,6 @@ my %TOURNAMENTS_POLAND =
       },
       '2014' =>
       {
-        MEET => 'Polish Championships',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4026,6 +4085,7 @@ my %TOURNAMENTS_POLAND =
       {
         # https://s3.eu-central-1.amazonaws.com/kongres.brydz.wlkp.pl/wyniki2011/W-sb2m.html
         MEET => 'Poznan Congress',
+        MEET_TAG => '2011',
         SCORING => 'MP',
         CHAPTERS =>
         {
@@ -4042,6 +4102,7 @@ my %TOURNAMENTS_POLAND =
       {
         # http://www.kongres-slawa.pl/2011/k4.html
         MEET => 'Slawa Congress',
+        MEET_TAG => '2011',
         SCORING => 'IMP',
         CHAPTERS =>
         {
@@ -4250,6 +4311,7 @@ my %TOURNAMENTS_POLAND =
       {
         # https://s3.eu-central-1.amazonaws.com/kongres.brydz.wlkp.pl/wyniki2011/W-sb1.html
         MEET => 'Poznan Congress',
+        MEET_TAG => '2011',
         SCORING => 'MP',
         CHAPTERS =>
         {
@@ -4278,6 +4340,7 @@ my %TOURNAMENTS_POLAND =
       '2011C' =>
       {
         MEET => 'Slawa Congress',
+        MEET_TAG => '2011',
         SCORING => 'IMP',
         CHAPTERS =>
         {
@@ -4292,6 +4355,7 @@ my %TOURNAMENTS_POLAND =
       '2011D' =>
       {
         MEET => 'Slawa Congress',
+        MEET_TAG => '2011',
         SCORING => 'IMP',
         CHAPTERS =>
         {
@@ -4329,6 +4393,7 @@ my %TOURNAMENTS_POLAND =
       '2012B' =>
       {
         MEET => 'Polish Pairs Championship',
+        MEET_TAG => '2012',
         SCORING => 'MP',
         CHAPTERS =>
         {
@@ -4453,6 +4518,7 @@ my %TOURNAMENTS_POLAND =
       '2010A' =>
       {
         MEET => 'Zulawski Congress',
+        MEET_TAG => '2010',
         CHAPTERS =>
         {
           'C0' => 
@@ -4489,6 +4555,7 @@ my %TOURNAMENTS_POLAND =
       '2010B' =>
       {
         MEET => 'Baltic Congress',
+        MEET_TAG => '2010',
         CHAPTERS =>
         {
           'C0' => 
@@ -4528,6 +4595,7 @@ my %TOURNAMENTS_POLAND =
       '2012A' =>
       {
         MEET => 'Polish Championships',
+        MEET_TAG => '2012',
         CHAPTERS =>
         {
           'C0' => 
@@ -4575,6 +4643,7 @@ my %TOURNAMENTS_POLAND =
       '2012B' =>
       {
         MEET => 'Baltic Congress',
+        MEET_TAG => '2012',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4636,6 +4705,7 @@ my %TOURNAMENTS_POLAND =
       '2014A' =>
       {
         MEET => 'Zulawski Congress',
+        MEET_TAG => '2014',
         CHAPTERS =>
         {
           'C0' => 
@@ -4690,6 +4760,7 @@ my %TOURNAMENTS_POLAND =
       '2015A' =>
       {
         MEET => 'Zulawski Congress',
+        MEET_TAG => '2015',
         CHAPTERS =>
         {
           'C0' => 

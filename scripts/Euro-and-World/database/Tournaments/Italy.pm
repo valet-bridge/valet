@@ -354,6 +354,13 @@ my %MEETS_ITALY =
         DATE_START => '2019-10-10',
         DATE_END => '2019-11-24'
       },
+      '2020' =>
+      {
+        YEAR => 2020,
+        CITY => 'Salsomaggiore',
+        DATE_START => '2020-10-28',
+        DATE_END => '2020-10-30'
+      },
       '2022' =>
       {
         # https://www.federbridge.it/campionati/2022/CI/programma.asp?ciType=OI
@@ -2603,7 +2610,6 @@ my %TOURNAMENTS_ITALY =
       },
       '2022' =>
       {
-        MEET => 'Italy Cup',
         CHAPTERS => 
         {
           'C0' =>
@@ -3277,7 +3283,7 @@ my %TOURNAMENTS_ITALY =
           }
         }
       },
-      '2020' =>
+      '2022' =>
       {
         MEET => 'Italy Cup',
         CHAPTERS => 
@@ -3524,6 +3530,7 @@ my %TOURNAMENTS_ITALY =
       '2013A' =>
       {
         MEET => 'Italian Club Championship',
+        MEET_TAG => '2013',
         CHAPTERS => 
         {
           'C0' =>
@@ -3538,6 +3545,7 @@ my %TOURNAMENTS_ITALY =
       '2013B' =>
       {
         MEET => 'Italy Cup',
+        MEET_TAG => '2013',
         CHAPTERS => 
         {
           'C0' =>
@@ -3685,7 +3693,6 @@ my %TOURNAMENTS_ITALY =
       },
       '2022' =>
       {
-        MEET => 'Italy Cup',
         CHAPTERS => 
         {
           'C0' =>

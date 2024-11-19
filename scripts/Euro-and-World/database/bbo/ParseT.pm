@@ -53,7 +53,7 @@ use Tournaments::India; #
 use Tournaments::Indonesia; #
 use Tournaments::Ireland;
 use Tournaments::Israel; #
-use Tournaments::Italy; #
+use Tournaments::Italy;
 use Tournaments::Japan;
 use Tournaments::Jordan;
 use Tournaments::Lebanon;
@@ -61,10 +61,10 @@ use Tournaments::MiddleEast;
 use Tournaments::Monaco;
 use Tournaments::Netherlands; #
 use Tournaments::NewZealand; #
-use Tournaments::Nordic; #
+use Tournaments::Nordic;
 use Tournaments::Norway; #
 use Tournaments::Pakistan;
-use Tournaments::Poland; #
+use Tournaments::Poland;
 use Tournaments::Portugal;
 use Tournaments::Romania; #
 use Tournaments::Russia; # Make Slava Cup a Meet
