@@ -58,7 +58,9 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  'Alex Nurdin Cup' => ['test event sea games'],
+  'Alex Nurdin Cup' => [
+    'indonesian sea open team trials',
+    'test event sea games'],
   'FTBC Tanjungpura University' => ['ftbc university tanjungpura'],
   'Gabrial UI Bastaman Cup' => [
     'bastaman cup',

@@ -1,3 +1,5 @@
+Add a Weekday adder to a Perl file, simple grep, add comment at end
+
 Check when reading Tournaments:
 - If MEET, then 
   - Add a Tname meet tag if not same as Tname tag

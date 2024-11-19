@@ -29,7 +29,6 @@ my @MULTI_WORDS =
   'Asia Open Teams Cup',
   'Asia Women Teams Cup',
   'Asian University Championship',
-  'Indonesian SEA Open Team Trials',
   'SEA Open Teams',
   'South Pacific Open Teams',
   'Yeh Bros Pairs Cup',

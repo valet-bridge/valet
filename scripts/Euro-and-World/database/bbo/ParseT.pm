@@ -20,7 +20,7 @@ use Tournaments::Friendly; #
 
 use Tournaments::Africa;
 use Tournaments::Argentina;
-use Tournaments::Asia; #
+use Tournaments::Asia;
 use Tournaments::Australia; #
 use Tournaments::Austria;
 use Tournaments::Balkan; #
@@ -69,12 +69,12 @@ use Tournaments::Portugal; #
 use Tournaments::Romania; #
 use Tournaments::Russia; # Make Slava Cup a Meet
 use Tournaments::Serbia;
-use Tournaments::Slovakia; #
+use Tournaments::Slovakia;
 use Tournaments::Singapore;
 use Tournaments::SouthAfrica;
 use Tournaments::SouthAmerica; #
 use Tournaments::Spain; #
-use Tournaments::Supra; #
+use Tournaments::Supra;
 use Tournaments::Sweden; #
 use Tournaments::Switzerland; #
 use Tournaments::Taipei;

@@ -291,7 +291,9 @@ my %TOURNAMENTS_INDONESIA =
           'SINGLE' => 
           {
             YEAR => 2011,
-            DATE_START => '2011-09-09',
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2011-09-08',
             DATE_END => '2011-09-11'
           },
         }

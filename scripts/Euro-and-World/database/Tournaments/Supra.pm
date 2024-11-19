@@ -134,6 +134,14 @@ my %MEETS_SUPRA =
         DATE_START => '2007-05-09',
         DATE_END => '2007-05-13'
       },
+      '2008' =>
+      {
+        CITY => 'Las Vegas',
+        COUNTRY => 'USA',
+        YEAR => 2008,
+        DATE_START => '2008-05-07',
+        DATE_END => '2008-05-11'
+      },
       '2009' =>
       {
         ORDINAL => 35,
@@ -149,7 +157,7 @@ my %MEETS_SUPRA =
         COUNTRY => 'USA',
         YEAR => 2010,
         DATE_START => '2010-05-05',
-        DATE_END => '2010-05-06'
+        DATE_END => '2010-05-09'
       },
       '2011' =>
       {
@@ -157,7 +165,7 @@ my %MEETS_SUPRA =
         COUNTRY => 'USA',
         YEAR => 2011,
         DATE_START => '2011-05-04',
-        DATE_END => '2011-05-05'
+        DATE_END => '2011-05-08'
       },
       '2012A' =>
       {
@@ -189,7 +197,7 @@ my %MEETS_SUPRA =
         COUNTRY => 'Monaco',
         YEAR => 2014,
         DATE_START => '2014-09-01',
-        DATE_END => '2014-09-05'
+        DATE_END => '2014-09-06'
       },
       '2015' =>
       {
@@ -694,6 +702,7 @@ my %TOURNAMENTS_SUPRA =
       '2012' =>
       {
         MEET => 'Cavendish Invitational',
+        MEET_TAG => '2012B',
         SCORING => 'IMP',
         CHAPTERS =>
         {
@@ -951,6 +960,7 @@ my %TOURNAMENTS_SUPRA =
       '2012' =>
       {
         MEET => 'Cavendish Invitational',
+        MEET_TAG => '2012B',
         CHAPTERS =>
         {
           'C0' => 
@@ -1004,6 +1014,7 @@ my %TOURNAMENTS_SUPRA =
       '2014A' =>
       {
         MEET => 'Cavendish Invitational',
+        MEET_TAG => '2014',
         CHAPTERS =>
         {
           'C0' => 
@@ -1027,6 +1038,7 @@ my %TOURNAMENTS_SUPRA =
       '2014B' =>
       {
         MEET => 'Cavendish Invitational',
+        MEET_TAG => '2014',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1788,87 +1800,6 @@ my %TOURNAMENTS_SUPRA =
       },
     }
   },
-
-  # ---
-
-  "New Year's Teams" =>
-  {
-    ORIGIN => 'International',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2015' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2015,
-            DATE_START => '2015-01-17',
-            DATE_END => '2015-01-17'
-          } 
-        }
-      },
-    }
-  },
-
-  'Spring Nationals' =>
-  {
-    ORIGIN => 'International',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2015' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2015,
-            DATE_START => '2015-01-17',
-            DATE_END => '2015-01-17'
-          } 
-        }
-      },
-    }
-  },
-
-  'Transnational Open Teams' =>
-  {
-    ORIGIN => 'International',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2015' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2015,
-            DATE_START => '2015-01-17',
-            DATE_END => '2015-01-17'
-          } 
-        }
-      },
-    }
-  },
-
 
 );
 

@@ -79,13 +79,14 @@ my %MEETS_ASIA =
       },
       '2011' =>
       {
-        # TODO Look up vs below
+        # http://www.mcba.org.my/
+        # http://www.mcba.org.my/2011apbf.pdf
         ORDINAL => 48,
         CITY => 'Kuala Lumpur',
         COUNTRY => 'Malaysia',
         YEAR => 2011,
-        DATE_START => '2011-05-23',
-        DATE_END => '2011-05-29'
+        DATE_START => '2011-06-15',
+        DATE_END => '2011-06-24'
       },
       '2012' =>
       {
@@ -349,13 +350,24 @@ my %MEETS_ASIA =
     {
       '2011' =>
       {
-        # TODO Look up, find more of them
+        # https://en.wikipedia.org/wiki/Bridge_at_the_2011_SEA_Games
         ORDINAL => 26,
         CITY => 'Jakarta',
         COUNTRY => 'Indonesia',
         YEAR => 2011,
         DATE_START => '2011-11-10',
         DATE_END => '2011-11-21'
+      },
+      '2013' =>
+      {
+        # https://en.wikipedia.org/wiki/2013_SEA_Games
+        # May have dropped bridge again.
+        ORDINAL => 27,
+        CITY => 'Nay Pyi Taw',
+        COUNTRY => 'Myanmar',
+        YEAR => 2013,
+        DATE_START => '2013-12-11',
+        DATE_END => '2013-12-22'
       },
     }
   },
@@ -1871,36 +1883,6 @@ my %TOURNAMENTS_ASIA =
             minor => 'ROUND',
             DATE_START => '2009-11-25',
             DATE_END => '2009-11-30'
-          } 
-        }
-      },
-    }
-  },
-
-  'Indonesian SEA Open Team Trials' =>
-  {
-    # TODO Could be Indonesian tournament
-    ORGANIZATION => 'APBF',
-    ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2011' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2011,
-            STAGE => 'Round-robin',
-            major => 'ROUND',
-            DATE_START => '2011-09-08',
-            DATE_END => '2011-09-11'
           } 
         }
       },

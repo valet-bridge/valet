@@ -69,7 +69,7 @@ my %MEETS_AUSTRALIA =
         # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=12ANCD&header=abf
         YEAR => 2012,
         CITY => 'Darwin',
-        DATE_START => '2012-07-14',
+        DATE_START => '2012-07-12',
         DATE_END => '2012-07-19'
       },
       '2013' =>
@@ -506,7 +506,7 @@ my %MEETS_AUSTRALIA =
         YEAR => 2005,
         CITY => 'Canberra',
         DATE_START => '2005-01-11',
-        DATE_END => '2005-01-24'
+        DATE_END => '2005-01-25'
       },
       '2006' =>
       {
@@ -2468,6 +2468,7 @@ my %TOURNAMENTS_AUSTRALIA =
       '2015A' =>
       {
         MEET => 'Australian Summer Festival',
+        MEET_TAG => '2015',
         CHAPTERS =>
         {
           'C0' => 
@@ -2491,6 +2492,7 @@ my %TOURNAMENTS_AUSTRALIA =
       '2015B' =>
       {
         MEET => 'Australian ANC Championships',
+        MEET_TAG => '2015',
         CHAPTERS =>
         {
           'C0' => 
@@ -2567,6 +2569,7 @@ my %TOURNAMENTS_AUSTRALIA =
       '2005B' =>
       {
         MEET => 'Australian ANC Championships',
+        MEET_TAG => '2005',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2633,6 +2636,7 @@ my %TOURNAMENTS_AUSTRALIA =
       '2008B' =>
       {
         MEET => 'Australian ANC Championships',
+        MEET_TAG => '2008',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2670,6 +2674,7 @@ my %TOURNAMENTS_AUSTRALIA =
       '2009B' =>
       {
         MEET => 'Australian ANC Championships',
+        MEET_TAG => '2009',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2699,6 +2704,7 @@ my %TOURNAMENTS_AUSTRALIA =
       '2010B' =>
       {
         MEET => 'Australian ANC Championships',
+        MEET_TAG => '2010',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2753,6 +2759,7 @@ my %TOURNAMENTS_AUSTRALIA =
       '2011B' =>
       {
         MEET => 'Australian ANC Championships',
+        MEET_TAG => '2011',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2793,6 +2800,7 @@ my %TOURNAMENTS_AUSTRALIA =
       '2012B' =>
       {
         MEET => 'Australian ANC Championships',
+        MEET_TAG => '2012',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2885,6 +2893,7 @@ my %TOURNAMENTS_AUSTRALIA =
       '2015B' =>
       {
         MEET => 'Australian ANC Championships',
+        MEET_TAG => '2015',
         CHAPTERS =>
         {
           'C0' => 
@@ -2921,6 +2930,20 @@ my %TOURNAMENTS_AUSTRALIA =
       },
       '2016B' =>
       {
+        MEET => 'Australian ANC Championships',
+        MEET_TAG => '2016',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-07-01',
+            DATE_END => '2016-07-01'
+          } 
+        }
+      },
+      '2016C' =>
+      {
         # http://abfevents.com.au/events/playoffs/2017/open/
         CITY => 'Canberra',
         CHAPTERS =>
@@ -2930,19 +2953,6 @@ my %TOURNAMENTS_AUSTRALIA =
             YEAR => 2016,
             DATE_START => '2016-11-12',
             DATE_END => '2016-11-17'
-          } 
-        }
-      },
-      '2016C' =>
-      {
-        MEET => 'Australian ANC Championships',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2016,
-            DATE_START => '2016-07-01',
-            DATE_END => '2016-07-01'
           } 
         }
       },
@@ -3176,6 +3186,7 @@ my %TOURNAMENTS_AUSTRALIA =
       '2008B' =>
       {
         MEET => 'Australian ANC Championships',
+        MEET_TAG => '2008',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3229,6 +3240,7 @@ my %TOURNAMENTS_AUSTRALIA =
       '2010B' =>
       {
         MEET => 'Australian ANC Championships',
+        MEET_TAG => '2010',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3275,7 +3287,7 @@ my %TOURNAMENTS_AUSTRALIA =
       '2011B' =>
       {
         MEET => 'Australian ANC Championships',
-
+        MEET_TAG => '2011',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3316,6 +3328,7 @@ my %TOURNAMENTS_AUSTRALIA =
       '2012B' =>
       {
         MEET => 'Australian ANC Championships',
+        MEET_TAG => '2012',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3346,6 +3359,7 @@ my %TOURNAMENTS_AUSTRALIA =
       '2013B' =>
       {
         MEET => 'Australian ANC Championships',
+        MEET_TAG => '2013',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3393,6 +3407,7 @@ my %TOURNAMENTS_AUSTRALIA =
       '2015B' =>
       {
         MEET => 'Australian ANC Championships',
+        MEET_TAG => '2015',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3423,6 +3438,7 @@ my %TOURNAMENTS_AUSTRALIA =
       '2016B' =>
       {
         MEET => 'Australian ANC Championships',
+        MEET_TAG => '2016',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3735,8 +3751,8 @@ my %TOURNAMENTS_AUSTRALIA =
             YEAR => 2007,
             STAGE => 'Final',
             major => 'SEGMENT',
-            DATE_START => '2007-11-05',
-            DATE_END => '2007-11-05'
+            DATE_START => '2007-11-01',
+            DATE_END => '2007-11-01'
           } 
         }
       },
@@ -3841,8 +3857,8 @@ my %TOURNAMENTS_AUSTRALIA =
             YEAR => 2007,
             STAGE => 'Final',
             major => 'SEGMENT',
-            DATE_START => '2007-11-05',
-            DATE_END => '2007-11-05'
+            DATE_START => '2007-11-01',
+            DATE_END => '2007-11-01'
           } 
         }
       },
@@ -3950,6 +3966,7 @@ my %TOURNAMENTS_AUSTRALIA =
       '2005B' =>
       {
         MEET => 'Australian ANC Championships',
+        MEET_TAG => '2005',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4010,6 +4027,7 @@ my %TOURNAMENTS_AUSTRALIA =
       '2008B' =>
       {
         MEET => 'Australian ANC Championships',
+        MEET_TAG => '2008',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4048,6 +4066,7 @@ my %TOURNAMENTS_AUSTRALIA =
       '2009B' =>
       {
         MEET => 'Australian ANC Championships',
+        MEET_TAG => '2009',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4077,6 +4096,7 @@ my %TOURNAMENTS_AUSTRALIA =
       '2010B' =>
       {
         MEET => 'Australian ANC Championships',
+        MEET_TAG => '2010',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4115,6 +4135,7 @@ my %TOURNAMENTS_AUSTRALIA =
       '2011B' =>
       {
         MEET => 'Australian ANC Championships',
+        MEET_TAG => '2011',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4147,6 +4168,7 @@ my %TOURNAMENTS_AUSTRALIA =
       '2012B' =>
       {
         MEET => 'Australian ANC Championships',
+        MEET_TAG => '2012',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4174,7 +4196,7 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2013B' =>
+      '2013' =>
       {
         MEET => 'Australian ANC Championships',
         CHAPTERS =>
@@ -4234,6 +4256,7 @@ my %TOURNAMENTS_AUSTRALIA =
       '2015B' =>
       {
         MEET => 'Australian ANC Championships',
+        MEET_TAG => '2015',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4264,6 +4287,7 @@ my %TOURNAMENTS_AUSTRALIA =
       '2016B' =>
       {
         MEET => 'Australian ANC Championships',
+        MEET_TAG => '2016',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4540,22 +4564,23 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2008,
             major => 'ROUND',
-            DATE_START => '2008-01-21',
-            DATE_END => '2008-01-21'
+            DATE_START => '2008-01-18',
+            DATE_END => '2008-01-18'
           },
           'C1' => 
           {
             YEAR => 2008,
             STAGE => 'Final',
             major => 'SEGMENT',
-            DATE_START => '2008-01-22',
-            DATE_END => '2008-01-22'
+            DATE_START => '2008-01-19',
+            DATE_END => '2008-01-19'
           } 
         }
       },
       '2010A' =>
       {
         MEET => 'Australian Youth Week',
+        MEET_TAG => '2010',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4571,6 +4596,7 @@ my %TOURNAMENTS_AUSTRALIA =
       '2010B' =>
       {
         MEET => 'Australian ANC Championships',
+        MEET_TAG => '2010',
         CHAPTERS =>
         {
           'SINGLE' => 
