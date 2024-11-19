@@ -3489,7 +3489,7 @@ my %TOURNAMENTS_USA =
       },
       '2007B' =>
       {
-        MEET => 'North American Bridge Championship',
+        # Probably not at an NABC.
         CHAPTERS =>
         {
           'C0' => 
@@ -3520,22 +3520,22 @@ my %TOURNAMENTS_USA =
             YEAR => 2007,
             STAGE => 'Final',
             major => 'SEGMENT',
-            DATE_START => '2007-12-10',
-            DATE_END => '2007-12-10'
+            DATE_START => '2007-12-02',
+            DATE_END => '2007-12-02'
           },
           'C1' => 
           {
             YEAR => 2007,
             STAGE => 'Semifinal',
             major => 'SEGMENT',
-            DATE_START => '2007-12-10',
-            DATE_END => '2007-12-10'
+            DATE_START => '2007-12-02',
+            DATE_END => '2007-12-02'
           } 
         }
       },
       '2008B' =>
       {
-        MEET => 'North American Bridge Championship',
+        # Probably not at an NABC.
         CHAPTERS =>
         {
           'C0' => 
@@ -3643,7 +3643,7 @@ my %TOURNAMENTS_USA =
       },
       '2011A' =>
       {
-        # TODO What is this? A Meet?
+        # https://usbf.org/2011-senior-usbc/2011-susbc-daily-bulletin
         CHAPTERS =>
         {
           'C0' => 
@@ -3705,7 +3705,7 @@ my %TOURNAMENTS_USA =
       },
       '2012A' =>
       {
-        # TODO What is this? A Meet?
+        # https://usbf.org/2012-senior-usbc/2012-susbc-daily-bulletin
         CHAPTERS =>
         {
           'C0' => 
@@ -4685,6 +4685,7 @@ my %TOURNAMENTS_USA =
       '2010' =>
       {
         # https://www.usbf.org/2010-junior-usbc/2010-under-21-trials
+        MEET => 'United States Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -4709,6 +4710,8 @@ my %TOURNAMENTS_USA =
       '2013' =>
       {
         # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2013-junior-usbc/index.php
+        MEET => 'United States Youth Bridge Championship',
+        MEET_TAG => '2013-14',
         CITY => 'Atlanta',
         CHAPTERS =>
         {

@@ -81,9 +81,9 @@ use Tournaments::Taipei;
 use Tournaments::Thailand;
 use Tournaments::Turkey; #
 use Tournaments::UK;
-use Tournaments::USA; #
+use Tournaments::USA;
 use Tournaments::Venezuela;
-use Tournaments::World; #
+use Tournaments::World;
 
 
 my %DIVISIONS =

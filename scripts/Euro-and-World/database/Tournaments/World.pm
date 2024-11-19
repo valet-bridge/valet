@@ -4430,8 +4430,8 @@ my %TOURNAMENTS_WORLD =
             YEAR => 2006,
             STAGE => 'Round-robin',
             major => 'ROUND',
-            DATE_START => '2006-10-31',
-            DATE_END => '2006-10-31'
+            DATE_START => '2006-10-26',
+            DATE_END => '2006-10-26'
           } 
         }
       },
@@ -4445,8 +4445,8 @@ my %TOURNAMENTS_WORLD =
             YEAR => 2008,
             STAGE => 'Round-robin',
             major => 'ROUND',
-            DATE_START => '2008-09-10',
-            DATE_END => '2008-09-10'
+            DATE_START => '2008-09-08',
+            DATE_END => '2008-09-08'
           } 
         }
       },
