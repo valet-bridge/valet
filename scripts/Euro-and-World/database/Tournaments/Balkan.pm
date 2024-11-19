@@ -20,11 +20,23 @@ my %MEETS_BALKAN =
 
     EDITIONS => 
     {
+      '2006' =>
+      {
+        YEAR => 2006,
+        DATE_START => '2006-10-17',
+        DATE_END => '2006-10-17'
+      },
       '2007' =>
       {
         YEAR => 2007,
         DATE_START => '2007-10-22',
         DATE_END => '2007-10-22'
+      },
+      '2008' =>
+      {
+        YEAR => 2008,
+        DATE_START => '2008-11-23',
+        DATE_END => '2008-11-23'
       },
       '2009' =>
       {
@@ -58,6 +70,30 @@ my %MEETS_BALKAN =
         DATE_START => '2013-10-02',
         DATE_END => '2013-10-03'
       },
+      '2015' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-10-14',
+        DATE_END => '2015-10-15'
+      },
+      '2016' =>
+      {
+        ORDINAL => 9,
+        CITY => 'Stara Zagora',
+        COUNTRY => 'Bulgaria',
+        YEAR => 2016,
+        DATE_START => '2016-10-04',
+        DATE_END => '2016-10-08'
+      },
+      '2018' =>
+      {
+        ORDINAL => 11,
+        CITY => 'Stara Zagora',
+        COUNTRY => 'Bulgaria',
+        YEAR => 2018,
+        DATE_START => '2018-10-03',
+        DATE_END => '2018-10-04'
+      },
       '2019' =>
       {
         # https://8bbc.neo-bridge.org/
@@ -67,6 +103,14 @@ my %MEETS_BALKAN =
         YEAR => 2019,
         DATE_START => '2019-10-04',
         DATE_END => '2019-10-06'
+      },
+      '2021' =>
+      {
+        # https://www.bridge.bg/en/tournaments_results/5022-XIII-Balkaniada-po-bridj-finali
+        ORDINAL => 13,
+        YEAR => 2021,
+        DATE_START => '2021-10-06',
+        DATE_END => '2021-10-10'
       },
       '2022' =>
       {
@@ -351,6 +395,7 @@ my %TOURNAMENTS_BALKAN =
     {
       '2006' =>
       {
+        MEET => 'Balkan Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -380,6 +425,7 @@ my %TOURNAMENTS_BALKAN =
       },
       '2008' =>
       {
+        MEET => 'Balkan Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -503,6 +549,7 @@ my %TOURNAMENTS_BALKAN =
       },
       '2015' =>
       {
+        MEET => 'Balkan Championship',
         CHAPTERS =>
         {
           'C0' => 

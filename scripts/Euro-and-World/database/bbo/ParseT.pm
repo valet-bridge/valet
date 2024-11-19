@@ -23,8 +23,8 @@ use Tournaments::Argentina;
 use Tournaments::Asia;
 use Tournaments::Australia; #
 use Tournaments::Austria;
-use Tournaments::Balkan; #
-use Tournaments::Baltic; #
+use Tournaments::Balkan;
+use Tournaments::Baltic;
 use Tournaments::Belarus;
 use Tournaments::Belgium;
 use Tournaments::Bolivia;
@@ -36,14 +36,14 @@ use Tournaments::Chile;
 use Tournaments::China; #
 use Tournaments::Czech;
 use Tournaments::Croatia;
-use Tournaments::Denmark; #
+use Tournaments::Denmark;
 use Tournaments::Ecuador;
 use Tournaments::Egypt;
 use Tournaments::EuroAdult;
 use Tournaments::EuroYouth;
 use Tournaments::Faroe;
 use Tournaments::Finland; #
-use Tournaments::France; #
+use Tournaments::France;
 use Tournaments::Germany; #
 use Tournaments::Greece;
 use Tournaments::HongKong;
@@ -65,7 +65,7 @@ use Tournaments::Nordic; #
 use Tournaments::Norway; #
 use Tournaments::Pakistan;
 use Tournaments::Poland; #
-use Tournaments::Portugal; #
+use Tournaments::Portugal;
 use Tournaments::Romania; #
 use Tournaments::Russia; # Make Slava Cup a Meet
 use Tournaments::Serbia;

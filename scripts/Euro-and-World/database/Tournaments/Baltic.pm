@@ -289,7 +289,7 @@ my %MEETS_BALTIC =
       '2005' =>
       {
         YEAR => 2005,
-        DATE_START => '2005-05-31',
+        DATE_START => '2005-05-26',
         DATE_END => '2005-05-31'
       },
       '2006' =>
@@ -313,20 +313,20 @@ my %MEETS_BALTIC =
       '2009' =>
       {
         YEAR => 2009,
-        DATE_START => '2009-05-29',
-        DATE_END => '2009-05-30'
+        DATE_START => '2009-05-28',
+        DATE_END => '2009-05-31'
       },
       '2010' =>
       {
         YEAR => 2010,
-        DATE_START => '2010-05-28',
-        DATE_END => '2010-05-29'
+        DATE_START => '2010-05-26',
+        DATE_END => '2010-05-30'
       },
       '2011' =>
       {
         YEAR => 2011,
         DATE_START => '2011-05-27',
-        DATE_END => '2011-05-28'
+        DATE_END => '2011-05-29'
       },
       '2012' =>
       {
@@ -447,18 +447,21 @@ my %MEETS_BALTIC =
       },
       '2010' =>
       {
+        ORDINAL => 37,
         YEAR => 2010,
         DATE_START => '2010-09-16',
         DATE_END => '2010-09-19'
       },
       '2011' =>
       {
+        ORDINAL => 38,
         YEAR => 2011,
         DATE_START => '2011-09-29',
         DATE_END => '2011-10-02'
       },
       '2012' =>
       {
+        ORDINAL => 39,
         YEAR => 2012,
         DATE_START => '2012-10-25',
         DATE_END => '2012-10-28'
@@ -466,15 +469,30 @@ my %MEETS_BALTIC =
       '2013' =>
       {
         # https://bridgescanner.com/event/vilnius-cup-2013
+        ORDINAL => 40,
         YEAR => 2013,
         DATE_START => '2013-08-29',
         DATE_END => '2013-09-01'
+      },
+      '2014' =>
+      {
+        ORDINAL => 41,
+        YEAR => 2014,
+        DATE_START => '2014-09-18',
+        DATE_END => '2014-09-21'
       },
       '2015' =>
       {
         YEAR => 2015,
         DATE_START => '2015-09-04',
         DATE_END => '2015-09-06'
+      },
+      # https://wyniki.pzbs.pl/2016/vilnius/16vilqleaderb.html
+      '2017' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-09-15',
+        DATE_END => '2017-09-17'
       },
       '2018' =>
       {
@@ -572,7 +590,9 @@ my %TOURNAMENTS_BALTIC =
       },
       '2012' =>
       {
-        MEET => 'Baltic Cup',
+        # This is not Baltic Cup, but something like
+        # Baltic Teams Cup.
+        # http://bridge.ee/BL/BTC12.htm
         CHAPTERS =>
         {
           'C0' => 
@@ -703,37 +723,6 @@ my %TOURNAMENTS_BALTIC =
     }
   },
 
-  # TODO Probably the same as Estonian Open Teams?
-  'Estonian First League' =>
-  {
-    ORGANIZATION => 'EstBL',
-    COUNTRY => 'Estonia',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2013' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2013,
-            STAGE => 'Final',
-            major => 'ROUND',
-            DATE_START => '2013-04-06',
-            DATE_END => '2013-04-07'
-          } 
-        }
-      },
-    }
-  },
-
   'Estonian Open Pair Trials' =>
   {
     ORGANIZATION => 'LaBF',
@@ -856,6 +845,20 @@ my %TOURNAMENTS_BALTIC =
           } 
         }
       },
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2013-04-06',
+            DATE_END => '2013-04-07'
+          } 
+        }
+      },
     }
   },
 
@@ -912,6 +915,7 @@ my %TOURNAMENTS_BALTIC =
     {
       '2009' =>
       {
+        MEET => 'Tallinn Bridge Festival',
         SCORING => 'MP',
         CHAPTERS =>
         {
@@ -925,6 +929,7 @@ my %TOURNAMENTS_BALTIC =
       },
       '2010' =>
       {
+        MEET => 'Tallinn Bridge Festival',
         SCORING => 'MP',
         CHAPTERS =>
         {
@@ -938,6 +943,7 @@ my %TOURNAMENTS_BALTIC =
       },
       '2011' =>
       {
+        MEET => 'Tallinn Bridge Festival',
         SCORING => 'IMP',
         CHAPTERS =>
         {
@@ -1346,6 +1352,7 @@ my %TOURNAMENTS_BALTIC =
     {
       '2005' =>
       {
+        MEET => 'Tallinn Bridge Festival',
         SCORING => 'IMP',
         CHAPTERS =>
         {
@@ -1359,6 +1366,7 @@ my %TOURNAMENTS_BALTIC =
       },
       '2009' =>
       {
+        MEET => 'Tallinn Bridge Festival',
         SCORING => 'IMP',
         CHAPTERS =>
         {
@@ -1372,6 +1380,7 @@ my %TOURNAMENTS_BALTIC =
       },
       '2010' =>
       {
+        MEET => 'Tallinn Bridge Festival',
         SCORING => 'IMP',
         CHAPTERS =>
         {
@@ -1385,6 +1394,7 @@ my %TOURNAMENTS_BALTIC =
       },
       '2012' =>
       {
+        MEET => 'Tallinn Bridge Festival',
         SCORING => 'IMP',
         CHAPTERS =>
         {
@@ -1664,6 +1674,7 @@ my %TOURNAMENTS_BALTIC =
       '2010A' =>
       {
         MEET => 'Vilnius Cup',
+        MEET_TAG => '2010',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1678,6 +1689,7 @@ my %TOURNAMENTS_BALTIC =
       '2010B' =>
       {
         MEET => 'Vilnius Cup',
+        MEET_TAG => '2010',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1763,6 +1775,7 @@ my %TOURNAMENTS_BALTIC =
       '2009A' =>
       {
         MEET => 'Vilnius Cup',
+        MEET_TAG => '2009',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1777,6 +1790,7 @@ my %TOURNAMENTS_BALTIC =
       '2009B' =>
       {
         MEET => 'Vilnius Cup',
+        MEET_TAG => '2009',
         CHAPTERS =>
         {
           'SINGLE' => 

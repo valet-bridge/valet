@@ -15,7 +15,6 @@ our @EXPORT = qw(set_hash);
 my @MULTI_WORDS =
 (
   'Baltic Open Teams',
-  'Estonian First League',
   'Estonian Open Pair Trials',
   'Estonian Open Teams',
   'Estonian-Latvian Open Team Trials',
@@ -37,11 +36,15 @@ my %MULTI_TYPOS =
   'Baltic Open Teams' => [
     'baltic open teams cup',
     'baltic teams cup'],
-  'Estonian First League' => ['estonian a- league',
+  'Estonian Open Teams' => [
+    'est teams champs',
     'estonia a- league'],
-  'Estonian Open Teams' => ['estonian team championship',
-    'estonian team championships', 'estonian open teams',
-    'estonia teams championships', 'est teams champs',
+    'estonia teams championships', 
+    'estonian a- league',
+    'estonian first league',
+    'estonian open teams',
+    'estonian team championship',
+    'estonian team championships', 
     'estonian teams championships'],
   'Estonian Open Pair Trials' => [
     'estonian open trials',

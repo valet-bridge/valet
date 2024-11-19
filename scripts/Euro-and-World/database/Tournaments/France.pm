@@ -218,6 +218,7 @@ my %TOURNAMENTS_FRANCE =
       '2010A' =>
       {
         MEET => 'Mondial de Deauville',
+        MEET_TAG => '2010',
         CHAPTERS =>
         {
           'C0' => 
@@ -239,6 +240,7 @@ my %TOURNAMENTS_FRANCE =
       '2010B' =>
       {
         MEET => 'Mondial de Deauville',
+        MEET_TAG => '2010',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -253,6 +255,7 @@ my %TOURNAMENTS_FRANCE =
       '2011A' =>
       {
         MEET => 'Mondial de Deauville',
+        MEET_TAG => '2011',
         CHAPTERS =>
         {
           'C0' => 
@@ -274,6 +277,7 @@ my %TOURNAMENTS_FRANCE =
       '2011B' =>
       {
         MEET => 'Mondial de Deauville',
+        MEET_TAG => '2011',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1742,36 +1746,6 @@ my %TOURNAMENTS_FRANCE =
             major => 'ROUND',
             DATE_START => '2008-05-04',
             DATE_END => '2008-05-04'
-          } 
-        }
-      },
-    }
-  },
-
-  'Mondial de Deauville',
-  {
-    ORGANIZATION => 'FFB',
-    COUNTRY => 'France',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        MEET => 'Meet name',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
           } 
         }
       },

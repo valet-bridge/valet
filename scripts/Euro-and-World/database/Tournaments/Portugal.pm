@@ -11,38 +11,66 @@ package Tournaments::Portugal;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+# https://quintonaipe.com/festiv0607/festivais.html
+
 my %MEETS_PORTUGAL =
 (
   'Azores Festival' =>
   {
     ORGANIZATION => 'FPB',
     COUNTRY => 'Portugal',
-    CITY => 'Lisbon',
+    REGION => 'Azores',
     ORIGIN => 'International',
     ZONE => 'Europe',
 
     EDITIONS =>
     {
+      '2003' =>
+      {
+        ORDINAL => 7,
+        CITY => 'Sao Miguel',
+        YEAR => 2003,
+        DATE_START => '2003-08-13',
+        DATE_END => '2003-08-17'
+      },
+      '2008' =>
+      {
+        ORDINAL => 12,
+        YEAR => 2008,
+        DATE_START => '2008-10-01',
+        DATE_END => '2008-10-03'
+      },
+      '2009' =>
+      {
+        ORDINAL => 13,
+        YEAR => 2009,
+        DATE_START => '2009-10-01',
+        DATE_END => '2009-10-05'
+      },
       '2011' =>
       {
+        ORDINAL => 15,
         YEAR => 2011,
         DATE_START => '2011-10-03',
         DATE_END => '2011-10-04'
       },
       '2012' =>
       {
+        ORDINAL => 16,
         YEAR => 2012,
         DATE_START => '2012-10-05',
         DATE_END => '2012-10-06'
       },
       '2013' =>
       {
+        ORDINAL => 17,
         YEAR => 2013,
         DATE_START => '2013-09-27',
         DATE_END => '2013-09-28'
       },
       '2014' =>
       {
+        ORDINAL => 18,
         YEAR => 2014,
         DATE_START => '2014-10-04',
         DATE_END => '2014-10-05'
@@ -53,6 +81,36 @@ my %MEETS_PORTUGAL =
         YEAR => 2015,
         DATE_START => '2015-10-03',
         DATE_END => '2015-10-04'
+      },
+      '2016' =>
+      {
+        ORDINAL => 20,
+        CITY => 'Ponta Delgada',
+        YEAR => 2016,
+        DATE_START => '2016-10-01',
+        DATE_END => '2016-10-05'
+      },
+      '2017' =>
+      {
+        ORDINAL => 21,
+        YEAR => 2017,
+        DATE_START => '2017-10-04',
+        DATE_END => '2017-10-04'
+      },
+      '2019' =>
+      {
+        ORDINAL => 23,
+        CITY => 'Ponta Delgada',
+        YEAR => 2019,
+        DATE_START => '2019-10-01',
+        DATE_END => '2019-10-06'
+      },
+      '2020' =>
+      {
+        CITY => 'Ponta Delgada',
+        YEAR => 2020,
+        DATE_START => '2020-10-01',
+        DATE_END => '2020-10-05'
       },
     }
   },
@@ -67,23 +125,117 @@ my %MEETS_PORTUGAL =
 
     EDITIONS =>
     {
+      '2002' =>
+      {
+        ORDINAL => 17,
+        YEAR => 2002,
+        DATE_START => '2002-04-23',
+        DATE_END => '2002-04-28'
+      },
+      '2003' =>
+      {
+        ORDINAL => 18,
+        YEAR => 2003,
+        DATE_START => '2003-04-22',
+        DATE_END => '2003-04-27'
+      },
+      '2004' =>
+      {
+        ORDINAL => 19,
+        YEAR => 2004,
+        DATE_START => '2004-04-20',
+        DATE_END => '2004-04-26'
+      },
+      '2005' =>
+      {
+        ORDINAL => 20,
+        YEAR => 2005,
+        DATE_START => '2005-04-19',
+        DATE_END => '2005-04-24'
+      },
+      '2006' =>
+      {
+        ORDINAL => 21,
+        YEAR => 2006,
+        DATE_START => '2006-04-18',
+        DATE_END => '2006-04-23'
+      },
+      '2007' =>
+      {
+        ORDINAL => 22,
+        YEAR => 2007,
+        DATE_START => '2007-04-17',
+        DATE_END => '2007-04-22'
+      },
+      '2008' =>
+      {
+        ORDINAL => 23,
+        YEAR => 2008,
+        DATE_START => '2008-05-04',
+        DATE_END => '2008-05-04'
+      },
+      '2009' =>
+      {
+        ORDINAL => 24,
+        YEAR => 2009,
+        DATE_START => '2009-04-14',
+        DATE_END => '2009-04-16'
+      },
       '2010' =>
       {
+        ORDINAL => 25,
         YEAR => 2010,
         DATE_START => '2010-04-20',
         DATE_END => '2010-04-22'
       },
       '2011' =>
       {
+        ORDINAL => 26,
         YEAR => 2011,
         DATE_START => '2011-05-10',
         DATE_END => '2011-05-12'
       },
+      '2012' =>
+      {
+        ORDINAL => 27,
+        YEAR => 2012,
+        DATE_START => '2012-04-24',
+        DATE_END => '2012-04-26'
+      },
       '2013' =>
       {
+        ORDINAL => 28,
         YEAR => 2013,
         DATE_START => '2013-05-14',
         DATE_END => '2013-05-17'
+      },
+      '2014' =>
+      {
+        ORDINAL => 29,
+        YEAR => 2014,
+        DATE_START => '2014-04-22',
+        DATE_END => '2014-04-24'
+      },
+      '2015' =>
+      {
+        ORDINAL => 30,
+        YEAR => 2015,
+        DATE_START => '2015-05-19',
+        DATE_END => '2015-05-24'
+      },
+      '2016' =>
+      {
+        ORDINAL => 31,
+        YEAR => 2016,
+        DATE_START => '2016-05-24',
+        DATE_END => '2016-05-29'
+      },
+      '2017' =>
+      {
+        ORDINAL => 32,
+        YEAR => 2017,
+        DATE_START => '2017-05-09',
+        DATE_END => '2017-05-14'
       },
     }
   },
@@ -172,27 +324,58 @@ my %MEETS_PORTUGAL =
       },
       '2012' =>
       {
+        # https://www.bridge-madeira.com/2012-results/
         YEAR => 2012,
-        DATE_START => '2012-11-09',
+        DATE_START => '2012-11-05',
         DATE_END => '2012-11-11'
       },
       '2013' =>
       {
+        # https://www.bridge-madeira.com/2013-results/
+        ORDINAL => 17,
         YEAR => 2013,
-        DATE_START => '2013-11-08',
+        DATE_START => '2013-11-04',
         DATE_END => '2013-11-10'
       },
       '2014' =>
       {
+        # https://www.bridge-madeira.com/2014-results/
+        ORDINAL => 18,
         YEAR => 2014,
-        DATE_START => '2014-11-07',
+        DATE_START => '2014-11-03',
         DATE_END => '2014-11-09'
       },
       '2015' =>
       {
+        #   # https://www.bridge-madeira.com/2015-results/
+        ORDINAL => 18,
         YEAR => 2015,
-        DATE_START => '2015-11-06',
+        DATE_START => '2015-10-29',
         DATE_END => '2015-11-08'
+      },
+      '2016' =>
+      {
+        # https://www.bridge-madeira.com/2016-results/
+        ORDINAL => 19,
+        YEAR => 2016,
+        DATE_START => '2016-11-03',
+        DATE_END => '2016-11-13'
+      },
+      '2017' =>
+      {
+        # https://www.bridge-madeira.com/2017-results/
+        ORDINAL => 20,
+        YEAR => 2017,
+        DATE_START => '2017-11-02',
+        DATE_END => '2017-11-13'
+      },
+      '2018' =>
+      {
+        # https://www.bridge-madeira.com/2018-results/
+        ORDINAL => 21,
+        YEAR => 2018,
+        DATE_START => '2018-11-01',
+        DATE_END => '2018-11-12'
       },
       '2019' =>
       {
@@ -571,7 +754,6 @@ my %TOURNAMENTS_PORTUGAL =
             YEAR => 2015,
             MOVEMENT => 'Swiss',
             major => 'ROUND',
-            DATE_START => '2014-11-07',
             DATE_START => '2015-11-06',
             DATE_END => '2015-11-08'
           } 
@@ -596,19 +778,21 @@ my %TOURNAMENTS_PORTUGAL =
     {
       '2004' =>
       {
+        MEET => 'Estoril Bridge Festival',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2004,
             major => 'ROUND',
-            DATE_START => '2004-04-28',
-            DATE_END => '2004-04-28'
+            DATE_START => '2004-04-26',
+            DATE_END => '2004-04-26'
           } 
         }
       },
       '2005' =>
       {
+        MEET => 'Estoril Bridge Festival',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -623,6 +807,7 @@ my %TOURNAMENTS_PORTUGAL =
       },
       '2007' =>
       {
+        MEET => 'Estoril Bridge Festival',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -630,13 +815,15 @@ my %TOURNAMENTS_PORTUGAL =
             YEAR => 2007,
             MOVEMENT => 'Swiss',
             major => 'ROUND',
-            DATE_START => '2007-04-24',
-            DATE_END => '2007-04-24'
+            DATE_START => '2007-04-22',
+            DATE_END => '2007-04-22'
           } 
         }
       },
       '2008' =>
       {
+        # TODO Dates probably wrong
+        MEET => 'Estoril Bridge Festival',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -651,6 +838,7 @@ my %TOURNAMENTS_PORTUGAL =
       },
       '2009' =>
       {
+        MEET => 'Estoril Bridge Festival',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -691,6 +879,7 @@ my %TOURNAMENTS_PORTUGAL =
       },
       '2012' =>
       {
+        MEET => 'Estoril Bridge Festival',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -717,6 +906,7 @@ my %TOURNAMENTS_PORTUGAL =
       },
       '2014' =>
       {
+        MEET => 'Estoril Bridge Festival',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -731,6 +921,7 @@ my %TOURNAMENTS_PORTUGAL =
       '2015' =>
       {
         # https://fpbridge.pt/_wp/wp-content/uploads/2015/08/2015-Festival-Estoril-Pares-Final.pdf
+        MEET => 'Estoril Bridge Festival',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -745,6 +936,7 @@ my %TOURNAMENTS_PORTUGAL =
       '2016' =>
       {
         # https://fpbridge.pt/_wp/wp-content/uploads/2016/05/2016-Grande-Pr%C3%A9mio-Portugal-Equipas.pdf
+        MEET => 'Estoril Bridge Festival',
         CHAPTERS =>
         {
           'SINGLE' => 

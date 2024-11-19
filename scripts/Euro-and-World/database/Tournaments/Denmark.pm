@@ -22,12 +22,30 @@ my %MEETS_DENMARK =
 
     EDITIONS =>
     {
+      '2010' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-11-04',
+        DATE_END => '2010-11-07'
+      },
+      '2013' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-02-21',
+        DATE_END => '2013-02-24'
+      },
       '2014' =>
       {
         YEAR => 2014,
         DATE_START => '2014-12-13',
-        DATE_END => '2014-12-13'
+        DATE_END => '2014-12-14'
       },
+      '2015' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-01-15',
+        DATE_END => '2015-01-18'
+      }
     }
   },
 
@@ -40,6 +58,21 @@ my %MEETS_DENMARK =
 
     EDITIONS =>
     {
+      '2009' =>
+      {
+        YEAR => 2009,
+        CITY => 'Svendborg',
+        DATE_START => '2009-07-08',
+        DATE_END => '2009-07-12'
+      },
+
+      '2010' =>
+      {
+        YEAR => 2010,
+        CITY => 'Svendborg',
+        DATE_START => '2010-07-12',
+        DATE_END => '2010-07-18'
+      },
       '2011' =>
       {
         # https://bridge.dk/2011/
@@ -53,7 +86,7 @@ my %MEETS_DENMARK =
         # https://bridge.dk/2012/
         YEAR => 2012,
         CITY => 'Svendborg',
-        DATE_START => '2012-07-09',
+        DATE_START => '2012-07-07',
         DATE_END => '2012-07-15'
       },
       '2013' =>
@@ -61,7 +94,7 @@ my %MEETS_DENMARK =
         # https://bridge.dk/2013/
         YEAR => 2013,
         CITY => 'Svendborg',
-        DATE_START => '2013-07-09',
+        DATE_START => '2013-07-06',
         DATE_END => '2013-07-14'
       },
       '2014' =>
@@ -69,7 +102,7 @@ my %MEETS_DENMARK =
         # https://bridge.dk/2014/
         YEAR => 2014,
         CITY => 'Svendborg',
-        DATE_START => '2014-07-08',
+        DATE_START => '2014-07-05',
         DATE_END => '2014-07-13'
       },
       '2015' =>
@@ -85,24 +118,24 @@ my %MEETS_DENMARK =
         # https://bridge.dk/2016/
         YEAR => 2016,
         CITY => 'Svendborg',
-        DATE_START => '2016-07-10',
-        DATE_END => '2016-07-14'
+        DATE_START => '2016-07-09',
+        DATE_END => '2016-07-17'
       },
       '2017' =>
       {
         # https://bridge.dk/2017/
         YEAR => 2017,
         CITY => 'Svendborg',
-        DATE_START => '2017-07-10',
-        DATE_END => '2017-07-14'
+        DATE_START => '2017-07-08',
+        DATE_END => '2017-07-16'
       },
       '2018' =>
       {
         # https://bridge.dk/2018/
         YEAR => 2018,
         CITY => 'Svendborg',
-        DATE_START => '2018-07-09',
-        DATE_END => '2018-07-13'
+        DATE_START => '2018-07-08',
+        DATE_END => '2018-07-15'
       },
       '2019' =>
       {
