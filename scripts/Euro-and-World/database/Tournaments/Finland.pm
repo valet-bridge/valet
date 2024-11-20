@@ -26,6 +26,12 @@ my %MEETS_FINLAND =
 
     EDITIONS =>
     {
+      '2005' =>
+      {
+        YEAR => 2005,
+        DATE_START => '2005-03-28',
+        DATE_END => '2005-03-29'
+      },
       '2008' =>
       {
         YEAR => 2008,
@@ -260,35 +266,6 @@ my %TOURNAMENTS_FINLAND =
             major => 'SEGMENT',
             DATE_START => '2016-07-29',
             DATE_END => '2016-07-29'
-          } 
-        }
-      },
-    }
-  },
-
-  'Finnish Easter Teams' =>
-  {
-    ORGANIZATION => 'SBL',
-    COUNTRY => 'Finland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2005' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2005,
-            major => 'ROUND',
-            DATE_START => '2005-03-28',
-            DATE_END => '2005-03-29'
           } 
         }
       },
@@ -953,6 +930,20 @@ my %TOURNAMENTS_FINLAND =
 
     EDITIONS =>
     {
+      '2005' =>
+      {
+        MEET => 'Jyväskylä Easter Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2005,
+            major => 'ROUND',
+            DATE_START => '2005-03-28',
+            DATE_END => '2005-03-29'
+          } 
+        }
+      },
       '2008' =>
       {
         MEET => 'Jyväskylä Easter Bridge Festival',

@@ -42,9 +42,9 @@ use Tournaments::Egypt;
 use Tournaments::EuroAdult;
 use Tournaments::EuroYouth;
 use Tournaments::Faroe;
-use Tournaments::Finland; #
+use Tournaments::Finland;
 use Tournaments::France;
-use Tournaments::Germany; #
+use Tournaments::Germany;
 use Tournaments::Greece;
 use Tournaments::HongKong;
 use Tournaments::Hungary; #

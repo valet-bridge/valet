@@ -59,7 +59,7 @@ my %MEETS_GERMANY =
         YEAR => 2017,
         CITY => 'Berlin',
         DATE_START => '2017-08-10',
-        DATE_END => '2017-08-17'
+        DATE_END => '2017-08-18'
       },
       '2018' =>
       {
@@ -76,7 +76,25 @@ my %MEETS_GERMANY =
         CITY => 'Berlin',
         DATE_START => '2019-08-24',
         DATE_END => '2019-09-01'
-      }
+      },
+      '2021' => 
+      {
+        YEAR => 2021,
+        DATE_START => '2021-08-14',
+        DATE_END => '2021-08-21'
+      },
+      '2022' => 
+      {
+        YEAR => 2022,
+        DATE_START => '2022-08-04',
+        DATE_END => '2022-08-05'
+      },
+      '2023' => 
+      {
+        YEAR => 2023,
+        DATE_START => '2023-04-18',
+        DATE_END => '2023-04-19'
+      },
     }
   }
 );
@@ -1599,15 +1617,15 @@ my %TOURNAMENTS_GERMANY =
         # https://ergebnisse.bridge-verband.de/index.php?turid=5040&site=0&kl=0
         MEET => 'German Championship Week',
         ORDINAL => '74th',
-        CITY => 'Darmstadt',
+        CITY => 'Berlin',
         CHAPTERS => 
         {
           'SINGLE' =>
           {
             YEAR => 2017,
             major => 'SESSION',
-            DATE_START => '2017-08-24',
-            DATE_END => '2017-08-25'
+            DATE_START => '2017-08-12',
+            DATE_END => '2017-08-13'
           } 
         }
       },
@@ -1617,15 +1635,15 @@ my %TOURNAMENTS_GERMANY =
         # https://ergebnisse.bridge-verband.de/index.php?turid=7502&site=0&kl=0
         MEET => 'German Championship Week',
         ORDINAL => '75th',
-        CITY => 'Darmstadt',
+        CITY => 'Berlin',
         CHAPTERS => 
         {
           'SINGLE' =>
           {
             YEAR => 2018,
             major => 'SESSION',
-            DATE_START => '2018-08-28',
-            DATE_END => '2018-08-29'
+            DATE_START => '2018-07-28',
+            DATE_END => '2018-07-29'
           } 
         }
       },
@@ -1635,7 +1653,7 @@ my %TOURNAMENTS_GERMANY =
         # https://ergebnisse.bridge-verband.de/index.php?turid=10950&site=0&kl=0
         MEET => 'German Championship Week',
         ORDINAL => '76th',
-        CITY => 'Darmstadt',
+        CITY => 'Berlin',
         CHAPTERS => 
         {
           'SINGLE' =>
@@ -1653,7 +1671,7 @@ my %TOURNAMENTS_GERMANY =
         # https://ergebnisse.bridge-verband.de/index.php?turid=15544&site=0&kl=0
         MEET => 'German Championship Week',
         ORDINAL => '77th',
-        CITY => 'Darmstadt',
+        CITY => 'Berlin',
         CHAPTERS => 
         {
           'SINGLE' =>
@@ -1958,8 +1976,7 @@ my %TOURNAMENTS_GERMANY =
       '2017' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=13841&site=0&kl=0
-        MEET => 'German Championship Week',
-        ORDINAL => '69th',
+        CITY => 'Kassel',
         CHAPTERS => 
         {
           'C0' => 
@@ -1967,16 +1984,16 @@ my %TOURNAMENTS_GERMANY =
             YEAR => 2017,
             MOVEMENT => 'Swiss',
             major => 'ROUND',
-            DATE_START => '2017-08-26',
-            DATE_END => '2017-08-27'
+            DATE_START => '2017-05-26',
+            DATE_END => '2017-05-27'
           },
           'C1' => 
           {
             YEAR => 2017,
             STAGE => 'Round-robin',
             major => 'ROUND',
-            DATE_START => '2017-08-27',
-            DATE_END => '2017-08-28'
+            DATE_START => '2017-05-27',
+            DATE_END => '2017-05-28'
           } 
         }
       },
