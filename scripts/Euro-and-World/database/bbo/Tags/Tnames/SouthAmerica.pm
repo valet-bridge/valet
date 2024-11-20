@@ -19,7 +19,7 @@ my @MULTI_WORDS =
   'South American Open Teams',
   'South American Open Trials',
   'South American Senior Trials',
-  'South American Seniors Teams',
+  'South American Senior Teams',
   'South American Women Teams',
   'South American Women Trials',
 );
@@ -39,8 +39,9 @@ my %MULTI_TYPOS =
     'southamerican open championship',
     'sudamericano libre equipos',
     'sudamericano libres'],
+  'South American Senior Trials' => [
+    'clasificacion sudamericano seniors'],
   'South American Senior Teams' => [
-    'clasificacion sudamericano seniors',
     'south american senior championship'],
   'South American Women Teams' => [
     'clasificatoria damas equipos',

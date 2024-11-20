@@ -67,19 +67,19 @@ use Tournaments::Pakistan;
 use Tournaments::Poland;
 use Tournaments::Portugal;
 use Tournaments::Romania; #
-use Tournaments::Russia; # Make Slava Cup a Meet
+use Tournaments::Russia;
 use Tournaments::Serbia;
 use Tournaments::Slovakia;
 use Tournaments::Singapore;
 use Tournaments::SouthAfrica;
-use Tournaments::SouthAmerica; #
-use Tournaments::Spain; #
+use Tournaments::SouthAmerica;
+use Tournaments::Spain;
 use Tournaments::Supra;
-use Tournaments::Sweden; #
-use Tournaments::Switzerland; #
+use Tournaments::Sweden;
+use Tournaments::Switzerland;
 use Tournaments::Taipei;
 use Tournaments::Thailand;
-use Tournaments::Turkey; #
+use Tournaments::Turkey;
 use Tournaments::UK;
 use Tournaments::USA;
 use Tournaments::Venezuela;

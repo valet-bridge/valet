@@ -172,7 +172,7 @@ my %MEETS_SWEDEN =
       {
         YEAR => 2012,
         DATE_START => '2012-04-27',
-        DATE_END => '2012-04-28'
+        DATE_END => '2012-04-29'
       },
     }
   },
@@ -190,7 +190,7 @@ my %MEETS_SWEDEN =
       {
         YEAR => 2006,
         CITY => 'Umea',
-        DATE_START => '2006-07-06',
+        DATE_START => '2006-07-05',
         DATE_END => '2006-07-06'
       },
     }

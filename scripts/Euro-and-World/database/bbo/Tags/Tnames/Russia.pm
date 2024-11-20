@@ -14,7 +14,6 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
-  'BKBT Teams',
   'Moscow Sunday Times Pairs',
   'Moscow Sunday Times Teams',
   'NN Cup',
@@ -26,7 +25,6 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  'BKBT Teams' => ['bkbt match'],
   'NN Cup' => [
     'goulyash by e. gladysh',
     'goulyash by e_gladysh',
@@ -37,6 +35,8 @@ my %MULTI_TYPOS =
     'russian team championship'],
   'Russian Premier League' => ['russian premiere league'],
   'Slava Cup' => [
+    'bkbt match',
+    'bkbt teams',
     'cup slava', 
     'salava cup'],
 );

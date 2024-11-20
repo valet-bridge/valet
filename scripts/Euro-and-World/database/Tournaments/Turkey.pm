@@ -11,6 +11,8 @@ package Tournaments::Turkey;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+# Surely there is more structure here than I have discovered.
+
 my %MEETS_TURKEY =
 (
   'Assael Festival' =>
@@ -44,8 +46,26 @@ my %MEETS_TURKEY =
       '2009' =>
       {
         YEAR => 2009,
-        DATE_START => '2009-07-21',
-        DATE_END => '2009-07-21'
+        DATE_START => '2009-10-24',
+        DATE_END => '2009-10-24'
+      },
+      '2010' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-10-23',
+        DATE_END => '2010-10-24'
+      },
+      '2011' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-11-19',
+        DATE_END => '2011-11-19'
+      },
+      '2012' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-11-03',
+        DATE_END => '2012-11-03'
       },
     }
   },
@@ -79,6 +99,24 @@ my %MEETS_TURKEY =
 
     EDITIONS => 
     {
+      '2011' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-09-23',
+        DATE_END => '2011-09-25'
+      },
+      '2013' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-09-20',
+        DATE_END => '2013-09-20'
+      },
+      '2014' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-09-12',
+        DATE_END => '2014-09-12'
+      },
       '2015' =>
       {
         YEAR => 2015,
@@ -116,12 +154,18 @@ my %MEETS_TURKEY =
 
     EDITIONS => 
     {
+      '2010' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-09-24',
+        DATE_END => '2010-09-24'
+      },
       '2011' =>
       {
         ORDINAL => 3,
         YEAR => 2011,
         DATE_START => '2011-09-09',
-        DATE_END => '2011-09-09'
+        DATE_END => '2011-09-12'
       },
     }
   },
@@ -172,11 +216,104 @@ my %MEETS_TURKEY =
 
     EDITIONS => 
     {
+      '2007' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-03-19',
+        DATE_END => '2007-03-19'
+      },
+      '2008' =>
+      {
+        YEAR => 2008,
+        DATE_START => '2008-03-03',
+        DATE_END => '2008-03-03'
+      },
+      '2009' =>
+      {
+        YEAR => 2009,
+        DATE_START => '2009-03-06',
+        DATE_END => '2009-03-11'
+      },
+      '2010' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-03-05',
+        DATE_END => '2010-03-10'
+      },
+      '2011' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-03-04',
+        DATE_END => '2011-03-09'
+      },
       '2012' =>
       {
         YEAR => 2012,
         DATE_START => '2012-02-23',
         DATE_END => '2012-02-28'
+      },
+      '2013' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-03-10',
+        DATE_END => '2013-03-16'
+      },
+      '2014' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-03-01',
+        DATE_END => '2014-03-07'
+      },
+      '2015' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-02-28',
+        DATE_END => '2015-03-07'
+      },
+      '2016' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-03-05',
+        DATE_END => '2016-03-12'
+      },
+      '2017' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-03-25',
+        DATE_END => '2017-03-28'
+      },
+      '2018' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-03-17',
+        DATE_END => '2018-03-24'
+      },
+      '2019' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-02-02',
+        DATE_END => '2019-02-09'
+      },
+      '2020' =>
+      {
+        YEAR => 2020,
+        CITY => 'Antalya',
+        DATE_START => '2020-01-23',
+        DATE_END => '2020-01-26'
+      },
+      '2023' =>
+      {
+        YEAR => 2023,
+        CITY => 'Antalya',
+        DATE_START => '2023-01-26',
+        DATE_END => '2023-01-29'
+      },
+      '2024' =>
+      {
+        YEAR => 2024,
+        CITY => 'Antalya',
+        DATE_START => '2024-01-25',
+        DATE_END => '2024-01-28'
       },
     }
   },
@@ -586,6 +723,7 @@ my %TOURNAMENTS_TURKEY =
       '2009' =>
       {
         MEET => 'Cappadocia Fairy Chimneys Festival',
+        MEET_TAG => '2009',
         CHAPTERS =>
         {
           'C0' => 
@@ -2668,6 +2806,7 @@ my %TOURNAMENTS_TURKEY =
     {
       '2007' =>
       {
+        MEET => 'Turkish Winter Championships',
         CHAPTERS =>
         {
           'C0' => 
@@ -2681,6 +2820,7 @@ my %TOURNAMENTS_TURKEY =
       },
       '2008' =>
       {
+        MEET => 'Turkish Winter Championships',
         CHAPTERS =>
         {
           'C0' => 
@@ -2703,6 +2843,7 @@ my %TOURNAMENTS_TURKEY =
       },
       '2009' =>
       {
+        MEET => 'Turkish Winter Championships',
         CHAPTERS =>
         {
           'C0' => 
@@ -2757,6 +2898,7 @@ my %TOURNAMENTS_TURKEY =
       },
       '2010' =>
       {
+        MEET => 'Turkish Winter Championships',
         CHAPTERS =>
         {
           'C0' => 
@@ -2919,6 +3061,7 @@ my %TOURNAMENTS_TURKEY =
       },
       '2013' =>
       {
+        MEET => 'Turkish Winter Championships',
         CHAPTERS =>
         {
           'C0' => 
@@ -2989,6 +3132,7 @@ my %TOURNAMENTS_TURKEY =
       '2014' =>
       {
         # http://clubs.vugraph.com/tbricfed/calendar.php?month=3&year=2014
+        MEET => 'Turkish Winter Championships',
         CHAPTERS =>
         {
           'C0' => 
@@ -3061,6 +3205,7 @@ my %TOURNAMENTS_TURKEY =
       {
         # http://clubs.vugraph.com/tbricfed/calendar.php?month=2&year=2015
         # http://clubs.vugraph.com/tbricfed/calendar.php?month=3&year=2015
+        MEET => 'Turkish Winter Championships',
         CHAPTERS =>
         {
           'C0' => 
@@ -3121,6 +3266,7 @@ my %TOURNAMENTS_TURKEY =
       '2016' =>
       {
         # http://clubs.vugraph.com/tbricfed/calendar.php?month=3&year=2016
+        MEET => 'Turkish Winter Championships',
         CHAPTERS =>
         {
           'C0' => 
@@ -3175,7 +3321,6 @@ my %TOURNAMENTS_TURKEY =
     {
       '2012' =>
       {
-        MEET => 'Turkish Winter Championships',
         CHAPTERS =>
         {
           'C0' => 

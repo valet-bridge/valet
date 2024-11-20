@@ -175,7 +175,7 @@ my %MEETS_SOUTHAMERICA =
       '2011' =>
       {
         YEAR => 2011,
-        DATE_START => '2011-03-27',
+        DATE_START => '2011-03-26',
         DATE_END => '2011-04-03'
       },
       '2014' =>
@@ -788,20 +788,6 @@ my %TOURNAMENTS_SOUTHAMERICA =
           } 
         }
       },
-      '2011' =>
-      {
-       # Could be Trials -- move to below
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2011,
-            major => 'ROUND',
-            DATE_START => '2011-03-26',
-            DATE_END => '2011-03-26'
-          } 
-        }
-      },
       '2015' =>
       {
         MEET => 'South American Team Championship',
@@ -846,7 +832,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
           {
             YEAR => 2011,
             major => 'ROUND',
-            DATE_START => '2011-03-27',
+            DATE_START => '2011-03-26',
             DATE_END => '2011-03-27'
           } 
         }
@@ -1028,6 +1014,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
     {
       '2011' =>
       {
+        MEET => 'South American Trials',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1056,6 +1043,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2015' =>
       {
+        MEET => 'South American Trials',
         CHAPTERS =>
         {
           'SINGLE' => 
