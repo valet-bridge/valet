@@ -35,11 +35,17 @@ my %MEETS_FRIENDLY =
         DATE_START => '2013-05-18',
         DATE_END => '2013-05-18'
       },
-      '2014' =>
+      '2014A' =>
       {
         YEAR => 2014,
         DATE_START => '2014-05-18',
         DATE_END => '2014-05-18'
+      },
+      '2014B' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-11-02',
+        DATE_END => '2014-11-02'
       },
       '2015' =>
       {
@@ -60,11 +66,17 @@ my %MEETS_FRIENDLY =
         DATE_START => '2004-11-29',
         DATE_END => '2004-11-29'
       },
-      '2005' =>
+      '2005A' =>
       {
         YEAR => 2005,
         DATE_START => '2005-02-17',
         DATE_END => '2005-02-17'
+      },
+      '2005B' =>
+      {
+        YEAR => 2005,
+        DATE_START => '2005-05-22',
+        DATE_END => '2005-05-22'
       },
       '2007' =>
       {
@@ -162,6 +174,12 @@ my %MEETS_FRIENDLY =
         YEAR => 2010,
         DATE_START => '2010-06-04',
         DATE_END => '2010-06-05'
+      },
+      '2010D' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-11-27',
+        DATE_END => '2010-11-27'
       },
       '2011A' =>
       {
@@ -268,6 +286,12 @@ my %MEETS_FRIENDLY =
       '2013E' =>
       {
         YEAR => 2013,
+        DATE_START => '2013-06-25',
+        DATE_END => '2013-06-25'
+      },
+      '2013F' =>
+      {
+        YEAR => 2013,
         DATE_START => '2013-10-06',
         DATE_END => '2013-10-06'
       },
@@ -304,6 +328,12 @@ my %MEETS_FRIENDLY =
       '2014F' =>
       {
         YEAR => 2014,
+        DATE_START => '2014-05-24',
+        DATE_END => '2014-05-25'
+      },
+      '2014G' =>
+      {
+        YEAR => 2014,
         DATE_START => '2014-06-08',
         DATE_END => '2014-06-08'
       },
@@ -312,6 +342,18 @@ my %MEETS_FRIENDLY =
         YEAR => 2015,
         DATE_START => '2015-10-18',
         DATE_END => '2015-10-18'
+      },
+      '2015B' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-10-30',
+        DATE_END => '2015-11-01'
+      },
+      '2015C' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-11-02',
+        DATE_END => '2015-11-02'
       },
       '2016A' =>
       {
@@ -356,6 +398,12 @@ my %MEETS_FRIENDLY =
         DATE_START => '2007-06-05',
         DATE_END => '2007-06-05'
       },
+      '2010' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-05-27',
+        DATE_END => '2010-05-27'
+      },
       '2015' =>
       {
         YEAR => 2015,
@@ -375,6 +423,270 @@ my %MEETS_FRIENDLY =
   {
     EDITIONS => 
     {
+      '2004' =>
+      {
+        YEAR => 2004,
+        DATE_START => '2004-05-09',
+        DATE_END => '2004-05-10'
+      },
+      '2007A' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-01-24',
+        DATE_END => '2007-01-24'
+      },
+      '2007B' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-02-22',
+        DATE_END => '2007-02-22'
+      },
+      '2007C' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-03-05',
+        DATE_END => '2007-03-06'
+      },
+      '2007D' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-04-16',
+        DATE_END => '2007-04-16'
+      },
+      '2007E' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-05-05',
+        DATE_END => '2007-05-06'
+      },
+      '2007F' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-06-01',
+        DATE_END => '2007-06-01'
+      },
+      '2007G' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-06-03',
+        DATE_END => '2007-06-03'
+      },
+      '2007H' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-06-05',
+        DATE_END => '2007-06-05'
+      },
+      '2007I' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-06-07',
+        DATE_END => '2007-06-07'
+      },
+      '2007J' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-06-08',
+        DATE_END => '2007-06-08'
+      },
+      '2007K' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-06-09',
+        DATE_END => '2007-06-09'
+      },
+      '2007L' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-09-02',
+        DATE_END => '2007-09-02'
+      },
+      '2007M' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-11-05',
+        DATE_END => '2007-11-05'
+      },
+      '2007N' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-12-10',
+        DATE_END => '2007-12-10'
+      },
+      '2008A' =>
+      {
+        YEAR => 2008,
+        DATE_START => '2008-04-16',
+        DATE_END => '2008-04-16'
+      },
+      '2008B' => 
+      {
+        YEAR => 2008,
+        DATE_START => '2008-05-04',
+        DATE_END => '2008-05-04'
+      },
+      '2008C' =>
+      {
+        YEAR => 2008,
+        DATE_START => '2008-09-27',
+        DATE_END => '2008-09-27'
+      },
+      '2009A' =>
+      {
+        YEAR => 2009,
+        DATE_START => '2009-02-22',
+        DATE_END => '2009-02-22'
+      },
+      '2009B' =>
+      {
+        YEAR => 2009,
+        DATE_START => '2009-05-13',
+        DATE_END => '2009-05-13'
+      },
+      '2010A' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-03-03',
+        DATE_END => '2010-03-03'
+      },
+      '2010B' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-05-20',
+        DATE_END => '2010-05-22'
+      },
+      '2011A' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-05-26',
+        DATE_END => '2011-05-29'
+      },
+      '2011B' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-08-23',
+        DATE_END => '2011-08-23'
+      },
+      '2011C' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-09-02',
+        DATE_END => '2011-09-03'
+      },
+      '2011D' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-10-02',
+        DATE_END => '2011-10-02'
+      },
+      '2012A' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-03-03',
+        DATE_END => '2012-03-03'
+      },
+      '2012B' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-04-06',
+        DATE_END => '2012-04-07'
+      },
+      '2012C' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-04-20',
+        DATE_END => '2012-04-21'
+      },
+      '2013A' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-01-19',
+        DATE_END => '2013-01-20'
+      },
+      '2013B' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-01-27',
+        DATE_END => '2013-01-27'
+      },
+      '2013C' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-06-07',
+        DATE_END => '2013-06-09'
+      },
+      '2014A' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-01-18',
+        DATE_END => '2014-01-19'
+      },
+      '2014B' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-05-16',
+        DATE_END => '2014-05-18'
+      },
+      '2014C' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-06-08',
+        DATE_END => '2014-06-08'
+      },
+      '2014D' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-07-08',
+        DATE_END => '2014-07-08'
+      },
+      '2014E' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-11-28',
+        DATE_END => '2014-11-30'
+      },
+      '2015A' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-02-21',
+        DATE_END => '2015-02-22'
+      },
+      '2015B' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-05-16',
+        DATE_END => '2015-05-17'
+      },
+      '2015C' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-06-03',
+        DATE_END => '2015-06-03'
+      },
+      '2015D' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-06-05',
+        DATE_END => '2015-06-07'
+      },
+      '2015E' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-06-13',
+        DATE_END => '2015-06-14'
+      },
+      '2015F' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-06-27',
+        DATE_END => '2015-06-28'
+      },
+      '2015G' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-09-05',
+        DATE_END => '2015-09-06'
+      },
       '2016A' =>
       {
         YEAR => 2016,
@@ -402,16 +714,22 @@ my %MEETS_FRIENDLY =
       '2016E' =>
       {
         YEAR => 2016,
+        DATE_START => '2016-05-19',
+        DATE_END => '2016-05-19'
+      },
+      '2016F' =>
+      {
+        YEAR => 2016,
         DATE_START => '2016-05-20',
         DATE_END => '2016-05-22'
       },
-      '2016F' =>
+      '2016G' =>
       {
         YEAR => 2016,
         DATE_START => '2016-05-28',
         DATE_END => '2016-05-28'
       },
-      '2016G' =>
+      '2016H' =>
       {
         YEAR => 2016,
         DATE_START => '2016-08-18',
@@ -468,6 +786,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2013' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2013A',
         GENDER => 'Open',
         AGE => 'Youngsters',
 
@@ -485,6 +804,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2014' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2014A',
         GENDER => 'Open',
         AGE => 'Youngsters',
 
@@ -502,6 +822,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2016G',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -533,6 +854,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2014' =>
       {
         MEET => 'Challenge Match',
+        MEET_TAG => '2014A',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -610,9 +932,10 @@ my %TOURNAMENTS_FRIENDLY =
 
     EDITIONS =>
     {
-      '2015' =>
+      '2015A' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2015F',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -644,6 +967,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2009' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2009B',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -676,6 +1000,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2012' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2012H',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -707,6 +1032,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2016A',
         MOVEMENT => 'Triangle',
         GENDER => 'Open',
         AGE => 'Open',
@@ -739,6 +1065,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2013' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2013B',
         GENDER => 'Open',
         AGE => 'Seniors',
 
@@ -756,6 +1083,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2014' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2014E',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -773,6 +1101,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2015' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2015A',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -804,6 +1133,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2006' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2006A',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -821,6 +1151,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2007A',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -838,6 +1169,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2010A' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2010C',
         GENDER => 'Open',
         AGE => 'Seniors',
 
@@ -855,6 +1187,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2010B' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2010C',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -873,6 +1206,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2012A' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2012B',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -890,6 +1224,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2012B' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2012E',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -907,6 +1242,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2015A' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2015B',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -924,6 +1260,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2015B' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2015C',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -942,6 +1279,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2016E',
         GENDER => 'Open',
         AGE => 'Youngsters',
 
@@ -970,7 +1308,7 @@ my %TOURNAMENTS_FRIENDLY =
 
     EDITIONS =>
     {
-      '2006' =>
+      '2010' =>
       {
         MEET => 'Friendly Pairs',
         GENDER => 'Open',
@@ -1003,6 +1341,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007A' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2007C',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -1021,6 +1360,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007B' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2007F',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1038,6 +1378,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007C' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2007G',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -1055,6 +1396,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007D' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2007I',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1072,6 +1414,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007E' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2007J',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -1089,6 +1432,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007F' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2007K',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1106,6 +1450,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2008A' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2008A',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -1123,6 +1468,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2008B' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2008C',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1140,6 +1486,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2015' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2015G',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -1158,6 +1505,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016A' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2016A',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1175,6 +1523,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016B' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2016B',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1192,6 +1541,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016C' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2016F',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1251,6 +1601,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2007M',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1279,29 +1630,52 @@ my %TOURNAMENTS_FRIENDLY =
 
     EDITIONS =>
     {
-      '2013' =>
+      '2013A' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2013B',
         GENDER => 'Open',
         AGE => 'Open',
 
         CHAPTERS =>
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 2013,
             major => 'ROUND',
             DATE_START => '2013-06-11',
             DATE_END => '2013-06-11'
           },
-          'C1' => 
+        }
+      },
+      '2013B' =>
+      {
+        MEET => 'Friendly Match',
+        MEET_TAG => '2013C',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
           {
             YEAR => 2013,
             major => 'ROUND',
             DATE_START => '2013-06-18',
             DATE_END => '2013-06-18'
           },
-          'C2' => 
+        }
+      },
+      '2013C' =>
+      {
+        MEET => 'Friendly Match',
+        MEET_TAG => '2013E',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
           {
             YEAR => 2013,
             major => 'ROUND',
@@ -1390,6 +1764,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2014' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2014C',
         GENDER => 'Open',
         AGE => 'Seniors',
 
@@ -1420,6 +1795,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2011' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2011B',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1451,6 +1827,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2005' =>
       {
         MEET => 'Exhibition Match',
+        MEET_TAG => '2005A',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1481,6 +1858,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2011' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2011C',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1512,6 +1890,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2014A' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2014C',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1529,6 +1908,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2014B' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2014G',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1546,6 +1926,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2015A' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2015A',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1577,6 +1958,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2014' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2014C',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1608,6 +1990,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2014' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2014B',
         GENDER => 'Open',
         AGE => 'Open',
         CITY => 'Hammamet',
@@ -1691,6 +2074,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2006A' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2006C',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1708,6 +2092,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007A' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2007B',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1725,6 +2110,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007B' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2007C',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1742,6 +2128,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2008A' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2008A',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1759,6 +2146,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2009A' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2009A',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1776,6 +2164,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2010A' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2010A',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1793,6 +2182,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2010B' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2010B',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1811,6 +2201,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2011A' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2011A',
         GENDER => 'Open',
         AGE => 'Seniors',
 
@@ -1829,6 +2220,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2011B' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2011A',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -1846,6 +2238,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2011C' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2011B',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1863,6 +2256,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2011D' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2011D',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1880,6 +2274,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2012A' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2012C',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -1897,6 +2292,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2012B' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2012D',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1931,6 +2327,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016A' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2016A',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1948,6 +2345,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016B' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2016C',
         GENDER => 'Open',
         AGE => 'Seniors',
 
@@ -1965,6 +2363,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016C' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2016C',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1983,6 +2382,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016D' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2016D',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -2000,6 +2400,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016E' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2016D',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2097,6 +2498,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007C' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2007E',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2114,6 +2516,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007D' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2007H',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2131,6 +2534,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007E' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2007L',
         GENDER => 'Open',
         AGE => 'Youngsters',
 
@@ -2148,6 +2552,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007F' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2007N',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -2165,6 +2570,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2008' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2008B',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2182,6 +2588,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2010A' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2010B',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2199,6 +2606,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2011A' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2011C',
         GENDER => 'Open',
         AGE => 'Seniors',
 
@@ -2216,6 +2624,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2011B' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2011D',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2233,6 +2642,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2012' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2012C',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2250,6 +2660,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2013' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2013C',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2268,6 +2679,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2014' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2014B',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2285,6 +2697,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2015A' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2015B',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -2302,6 +2715,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2015B' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2015D',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2319,6 +2733,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2016E',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2351,6 +2766,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2011' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2011A',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2369,6 +2785,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2012' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2012A',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2399,6 +2816,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2013' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2013F',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2430,6 +2848,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2006' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2006B',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -2447,6 +2866,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2012' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2012A',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2463,6 +2883,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2013' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2013A',
         GENDER => 'Open',
         AGE => 'Juniors',
 
@@ -2542,6 +2963,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2014' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2014D',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2559,6 +2981,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2015' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2015C',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2576,6 +2999,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2016H',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2607,6 +3031,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2014' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2014F',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2638,6 +3063,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2015' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2015E',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2669,6 +3095,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2005' =>
       {
         MEET => 'Exhibition Match',
+        MEET_TAG => '2005B',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2700,6 +3127,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2010' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2010D',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2731,6 +3159,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2009' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2009A',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2748,6 +3177,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2010' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2010A',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2795,6 +3225,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2014' =>
       {
         MEET => 'Challenge Match',
+        MEET_TAG => '2014B',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2826,6 +3257,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2014' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2014E',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2857,6 +3289,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2011' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2011E',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2875,6 +3308,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2012' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2012F',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2892,6 +3326,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2014' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2014D',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2923,6 +3358,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2012' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2012B',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -2954,6 +3390,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2007D',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2986,6 +3423,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2013' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2013D',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -3017,19 +3455,31 @@ my %TOURNAMENTS_FRIENDLY =
       '2016A' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2016C',
         GENDER => 'Open',
         AGE => 'Open',
 
         CHAPTERS =>
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 2016,
             major => 'ROUND',
             DATE_START => '2016-04-19',
             DATE_END => '2016-04-21'
           },
-          'C1' => 
+        }
+      },
+      '2016B' =>
+      {
+        MEET => 'Practice Match',
+        MEET_TAG => '2016D',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
           {
             YEAR => 2016,
             major => 'SESSION',
@@ -3057,6 +3507,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2016' =>
       {
         MEET => 'Friendly Match',
+        MEET_TAG => '2016B',
 
         CHAPTERS =>
         {

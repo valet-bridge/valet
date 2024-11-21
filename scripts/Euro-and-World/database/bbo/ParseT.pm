@@ -16,7 +16,7 @@ use lib '..';
 use DateCalc;
 use EntryT;
 
-use Tournaments::Friendly; #
+use Tournaments::Friendly;
 
 use Tournaments::Africa;
 use Tournaments::Argentina;
