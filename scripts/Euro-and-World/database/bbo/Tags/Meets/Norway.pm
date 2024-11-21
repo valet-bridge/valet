@@ -15,15 +15,10 @@ our @EXPORT = qw(set_hash);
 my @MULTI_WORDS =
 (
   'Norwegian Bridge Festival',
-  'Norwegian District Championship',
 );
 
 my %MULTI_TYPOS =
 (
-  'Norwegian District Championship' => [
-    'norw district', 
-    'norway regional champship',
-    'norwegian district'],
 );
 
 my %SINGLE_TYPOS =

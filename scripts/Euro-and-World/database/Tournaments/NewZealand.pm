@@ -25,9 +25,56 @@ my %MEETS_NEWZEALAND =
 
     EDITIONS => 
     {
+      '2005' =>
+      {
+        YEAR => 2005,
+        DATE_START => '2005-09-24',
+        DATE_END => '2005-09-25'
+      },
+      '2006' =>
+      {
+        YEAR => 2006,
+        DATE_START => '2006-07-02',
+        DATE_END => '2006-07-02'
+      },
+      '2007' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-09-29',
+        DATE_END => '2007-09-29'
+      },
+      '2008' =>
+      {
+        YEAR => 2008,
+        DATE_START => '2008-09-27',
+        DATE_END => '2008-09-27'
+      },
+      '2009' =>
+      {
+        YEAR => 2009,
+        DATE_START => '2009-09-24',
+        DATE_END => '2009-09-25'
+      },
+      '2010' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-09-24',
+        DATE_END => '2010-09-24'
+      },
+      '2011' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-07-15',
+        DATE_END => '2011-07-15'
+      },
+      '2012' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-09-28',
+        DATE_END => '2012-09-28'
+      },
       '2015' =>
       {
-        # 
         YEAR => 2015,
         CITY => 'Hamilton',
         DATE_START => '2015-09-26',
@@ -151,6 +198,7 @@ my %TOURNAMENTS_NEWZEALAND =
     {
       '2005' =>
       {
+        MEET => 'New Zealand National Congress',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -181,6 +229,7 @@ my %TOURNAMENTS_NEWZEALAND =
 
       '2007' =>
       {
+        MEET => 'New Zealand National Congress',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -197,6 +246,7 @@ my %TOURNAMENTS_NEWZEALAND =
       '2008' =>
       {
         # https://www.akbc.co.nz/blog/586960
+        MEET => 'New Zealand National Congress',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -212,6 +262,7 @@ my %TOURNAMENTS_NEWZEALAND =
 
       '2009' =>
       {
+        MEET => 'New Zealand National Congress',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -227,6 +278,7 @@ my %TOURNAMENTS_NEWZEALAND =
 
       '2010' =>
       {
+        MEET => 'New Zealand National Congress',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -255,7 +307,7 @@ my %TOURNAMENTS_NEWZEALAND =
 
       '2012' =>
       {
-        # During National Congress
+        MEET => 'New Zealand National Congress',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -605,7 +657,6 @@ my %TOURNAMENTS_NEWZEALAND =
     {
       '2009' =>
       {
-        MEET => 'New Zealand Trials',
         CHAPTERS =>
         {
           'C0' => 

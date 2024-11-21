@@ -48,7 +48,7 @@ my %MEETS_NETHERLANDS =
 
     EDITIONS => 
     {
-      '2013' =>
+      '2009' =>
       {
         YEAR => 2009,
         DATE_START => '2009-08-07',
@@ -760,7 +760,7 @@ my %TOURNAMENTS_NETHERLANDS =
     {
       '2013' =>
       {
-        MEET => 'The Hague Bridge Festival',
+        MEET => 'The Hague Bridge Experience',
         CHAPTERS =>
         {
           'SINGLE' => 

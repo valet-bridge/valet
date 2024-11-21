@@ -49,6 +49,13 @@ my %MEETS_INDONESIA =
         DATE_START => '2009-05-29',
         DATE_END => '2009-06-05'
       },
+      '2010' =>
+      {
+        # 
+        YEAR => 2010,
+        DATE_START => '2010-04-25',
+        DATE_END => '2010-05-01'
+      },
       '2011' =>
       {
         # http://kejurnas2011.org/hasil/kejurnas/ (Wayback Machine)
@@ -64,6 +71,13 @@ my %MEETS_INDONESIA =
         CITY => 'Jakarta',
         DATE_START => '2012-04-14',
         DATE_END => '2012-04-22'
+      },
+      '2013' =>
+      {
+        # 
+        YEAR => 2013,
+        DATE_START => '2013-05-17',
+        DATE_END => '2013-05-25'
       },
       '2014' =>
       {
@@ -197,7 +211,7 @@ my %MEETS_INDONESIA =
         # https://bridge.web.id/2011/prapon18/
         CITY => 'Pekanbaru',
         YEAR => 2011,
-        DATE_START => '2011-10-01',
+        DATE_START => '2011-09-30',
         DATE_END => '2011-10-08'
       },
       '2015' =>
@@ -1361,7 +1375,6 @@ my %TOURNAMENTS_INDONESIA =
     {
       '2012A' =>
       {
-        MEET => 'Indonesian National Sports Week',
         CHAPTERS =>
         {
           'C0' => 
@@ -1374,7 +1387,8 @@ my %TOURNAMENTS_INDONESIA =
       },
       '2012B' =>
       {
-        MEET => 'Indonesian National Sports Week',
+        MEET => 'Indonesian National Games',
+        MEET_TAG => '2012',
         CHAPTERS =>
         {
           'C0' => 
@@ -1484,7 +1498,7 @@ my %TOURNAMENTS_INDONESIA =
       },
       '2012' =>
       {
-        MEET => 'Indonesian National Sports Week',
+        MEET => 'Indonesian National Games',
         CHAPTERS =>
         {
           'C0' => 
@@ -1538,7 +1552,8 @@ my %TOURNAMENTS_INDONESIA =
       },
       '2012B' =>
       {
-        MEET => 'Indonesian National Sports Week',
+        MEET => 'Indonesian National Games',
+        MEET_TAG => '2012',
         CHAPTERS =>
         {
           'C0' => 
@@ -2629,7 +2644,6 @@ my %TOURNAMENTS_INDONESIA =
     {
       '2012A' =>
       {
-        MEET => 'Indonesian National Sports Week',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2642,7 +2656,6 @@ my %TOURNAMENTS_INDONESIA =
       },
       '2012B' =>
       {
-        MEET => 'Indonesian National Sports Week',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2751,7 +2764,6 @@ my %TOURNAMENTS_INDONESIA =
       },
       '2012' =>
       {
-        MEET => 'Indonesian National Sports Week',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2765,6 +2777,7 @@ my %TOURNAMENTS_INDONESIA =
       '2015A' =>
       {
         MEET => 'Indonesian National Championship Week',
+        MEET_TAG => '2015',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2779,6 +2792,7 @@ my %TOURNAMENTS_INDONESIA =
       '2015B' =>
       {
         MEET => 'Indonesian National Pre-Sports Week',
+        MEET_TAG => '2015',
         CHAPTERS =>
         {
           'SINGLE' => 

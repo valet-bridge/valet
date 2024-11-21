@@ -836,9 +836,6 @@ my %TOURNAMENTS_HUNGARY =
     }
   },
 
-
-
-
 );
 
 

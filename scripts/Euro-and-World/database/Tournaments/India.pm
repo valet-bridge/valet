@@ -11,6 +11,9 @@ package Tournaments::India;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+# Surely there is more structure here that I haven't found.
+# https://www.bridgewebs.com/cgi-bin/bwor/bw.cgi?club=bw&pid=display_page18
+
 my %MEETS_INDIA =
 (
   'All India HCL Tournament' =>
@@ -592,8 +595,50 @@ my %MEETS_INDIA =
       {
         YEAR => 2010,
         DATE_START => '2010-01-07',
-        DATE_END => '2010-01-07'
+        DATE_END => '2010-01-10'
       },
+      '2013' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-01-10',
+        DATE_END => '2013-01-13'
+      },
+      '2014' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-01-04',
+        DATE_END => '2014-01-06'
+      },
+      '2016' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-01-08',
+        DATE_END => '2016-01-10'
+      },
+      '2023A' =>
+      {
+        ORDINAL => 18,
+        YEAR => 2023,
+        CITY => 'Indore',
+        DATE_START => '2023-01-15',
+        DATE_END => '2023-01-20'
+      },
+      '2023B' =>
+      {
+        ORDINAL => 19,
+        YEAR => 2023,
+        CITY => 'Indore',
+        DATE_START => '2023-12-16',
+        DATE_END => '2023-12-19'
+      },
+      '2025' =>
+      {
+        ORDINAL => 20,
+        YEAR => 2025,
+        CITY => 'Indore',
+        DATE_START => '2025-01-07',
+        DATE_END => '2025-01-10'
+      }
     }
   },
 
@@ -606,13 +651,25 @@ my %MEETS_INDIA =
 
     EDITIONS => 
     {
-      '2012' =>
+      '2012A' =>
       {
         ORDINAL => 32,
         YEAR => 2012,
-        DATE_START => '2012-06-19', # More dates
-        DATE_END => '2012-06-20'
+        DATE_START => '2012-02-25',
+        DATE_END => '2012-02-28'
       },
+      '2012B' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-10-27',
+        DATE_END => '2012-10-28'
+      },
+      '2014' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-01-18',
+        DATE_END => '2014-01-20'
+      }
     }
   },
 
@@ -654,7 +711,7 @@ my %MEETS_INDIA =
         ORDINAL => 42,
         YEAR => 2012,
         CITY => 'Noida',
-        DATE_START => '2012-08-18',
+        DATE_START => '2012-08-17',
         DATE_END => '2012-08-19'
       },
     }
@@ -1193,6 +1250,7 @@ my %TOURNAMENTS_INDIA =
       '2013A' =>
       {
         MEET => 'Indian Summer Nationals',
+        MEET_TAG => '2013',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1208,6 +1266,7 @@ my %TOURNAMENTS_INDIA =
       '2013B' =>
       {
         MEET => 'Indian Winter Nationals',
+        MEET_TAG => '2013',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3108,6 +3167,7 @@ my %TOURNAMENTS_INDIA =
 
   'Madras Gymkhana Club Open' =>
   {
+    # https://www.bridgewebs.com/gymkhanachennai
     ORGANIZATION => 'BFI',
     COUNTRY => 'India',
     ORIGIN => 'National',
@@ -3183,6 +3243,42 @@ my %TOURNAMENTS_INDIA =
             major => 'ROUND',
             DATE_START => '2016-01-24',
             DATE_END => '2016-01-24'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-16',
+            DATE_END => '2020-01-19'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-01-05',
+            DATE_END => '2023-01-08'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-02-01',
+            DATE_END => '2024-02-04'
           } 
         }
       },
@@ -3418,6 +3514,7 @@ my %TOURNAMENTS_INDIA =
       '2012' =>
       {
         MEET => 'Maharashtra State Championship',
+        MEET_TAG => '2012A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3527,6 +3624,7 @@ my %TOURNAMENTS_INDIA =
       '2014A' =>
       {
         MEET => 'Maharashtra State Championship',
+        MEET_TAG => 2014,
         CHAPTERS =>
         {
           'C0' => 
@@ -3664,6 +3762,7 @@ my %TOURNAMENTS_INDIA =
 
   'Mohanlal Bhartia Memorial Grand Prix' =>
   {
+    # https://www.bridgewebs.com/bhartia/
     ORGANIZATION => 'BFI',
     COUNTRY => 'India',
     ORIGIN => 'National',
@@ -5905,8 +6004,10 @@ my %TOURNAMENTS_INDIA =
 
   'Willingdon Sports Club Swiss Pairs',
   {
+    # https://www.bridgewebs.com/willingdonbridge/
     ORGANIZATION => 'BFI',
     COUNTRY => 'India',
+    CITY => 'Mumbai',
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
     FORM => 'Pairs',
@@ -5940,6 +6041,91 @@ my %TOURNAMENTS_INDIA =
             major => 'ROUND',
             DATE_START => '2016-01-24',
             DATE_END => '2016-01-26'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-01-27',
+            DATE_END => '2017-01-29'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-01-26',
+            DATE_END => '2018-01-28'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-01-25',
+            DATE_END => '2019-01-27'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-24',
+            DATE_END => '2020-01-26'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            # Online
+            YEAR => 2022,
+            DATE_START => '2022-01-28',
+            DATE_END => '2022-01-30'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-01-27',
+            DATE_END => '2023-01-29'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-01-26',
+            DATE_END => '2024-01-28'
           } 
         }
       },

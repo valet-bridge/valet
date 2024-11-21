@@ -24,11 +24,41 @@ my %MEETS_NORWAY =
 
     EDITIONS => 
     {
+      '2005' =>
+      {
+        YEAR => 2005,
+        DATE_START => '2005-08-05',
+        DATE_END => '2005-08-05'
+      },
       '2006' =>
       {
         YEAR => 2006,
-        DATE_START => '2006-08-08',
-        DATE_END => '2006-08-08'
+        DATE_START => '2006-08-06',
+        DATE_END => '2006-08-09'
+      },
+      '2007' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-08-05',
+        DATE_END => '2007-08-05'
+      },
+      '2008' =>
+      {
+        YEAR => 2008,
+        DATE_START => '2008-08-12',
+        DATE_END => '2008-08-12'
+      },
+      '2009' =>
+      {
+        YEAR => 2009,
+        DATE_START => '2009-08-02',
+        DATE_END => '2009-08-09'
+      },
+      '2010' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-07-31',
+        DATE_END => '2010-08-07'
       },
       '2011' =>
       {
@@ -39,25 +69,25 @@ my %MEETS_NORWAY =
       '2012' =>
       {
         YEAR => 2012,
-        DATE_START => '2012-08-05',
-        DATE_END => '2012-08-09'
+        DATE_START => '2012-08-04',
+        DATE_END => '2012-08-11'
       },
       '2013' =>
       {
         YEAR => 2013,
-        DATE_START => '2013-08-04',
+        DATE_START => '2013-08-03',
         DATE_END => '2013-08-12'
       },
       '2014' =>
       {
         YEAR => 2014,
-        DATE_START => '2014-08-03',
+        DATE_START => '2014-08-02',
         DATE_END => '2014-08-10'
       },
       '2016' =>
       {
         YEAR => 2016,
-        DATE_START => '2016-07-30',
+        DATE_START => '2016-07-29',
         DATE_END => '2016-08-04'
       },
       '2017' =>
@@ -1250,6 +1280,8 @@ my %TOURNAMENTS_NORWAY =
       },
       '2014A' =>
       {
+        MEET => 'Norwegian Bridge Festival',
+        MEET_TAG => '2014',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2898,7 +2930,6 @@ my %TOURNAMENTS_NORWAY =
       },
       '2010' =>
       {
-        MEET => 'Norwegian District Championship',
         CHAPTERS =>
         {
           'SINGLE' => 

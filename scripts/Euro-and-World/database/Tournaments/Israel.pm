@@ -74,6 +74,13 @@ my %MEETS_ISRAEL =
         DATE_START => '2010-02-18',
         DATE_END => '2010-02-27'
       },
+      '2011' =>
+      {
+        ORDINAL => 45,
+        YEAR => 2011,
+        DATE_START => '2011-02-18',
+        DATE_END => '2011-02-18'
+      },
       '2012' =>
       {
         ORDINAL => 46,
@@ -155,6 +162,12 @@ my %MEETS_ISRAEL =
         DATE_START => '2010-09-02',
         DATE_END => '2010-09-04'
       },
+      '2011' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-06-09',
+        DATE_END => '2011-06-11'
+      },
     }
   },
 
@@ -171,7 +184,6 @@ my %MEETS_ISRAEL =
       {
         ORDINAL => 6,
         CITY => 'Eilat',
-        COUNTRY => 'Israel',
         YEAR => 2000,
         DATE_START => '2000-11-05',
         DATE_END => '2000-11-12'
@@ -180,7 +192,6 @@ my %MEETS_ISRAEL =
       {
         ORDINAL => 7,
         CITY => 'Eilat',
-        COUNTRY => 'Israel',
         YEAR => 2001,
         DATE_START => '2001-11-04',
         DATE_END => '2001-11-11'
@@ -189,7 +200,6 @@ my %MEETS_ISRAEL =
       {
         ORDINAL => 8,
         CITY => 'Eilat',
-        COUNTRY => 'Israel',
         YEAR => 2002,
         DATE_START => '2002-11-10',
         DATE_END => '2002-11-17'
@@ -198,7 +208,6 @@ my %MEETS_ISRAEL =
       {
         ORDINAL => 9,
         CITY => 'Eilat',
-        COUNTRY => 'Israel',
         YEAR => 2003,
         DATE_START => '2003-11-16',
         DATE_END => '2003-11-23'
@@ -207,7 +216,6 @@ my %MEETS_ISRAEL =
       {
         ORDINAL => 10,
         CITY => 'Eilat',
-        COUNTRY => 'Israel',
         YEAR => 2004,
         DATE_START => '2004-11-14',
         DATE_END => '2004-11-21'
@@ -216,7 +224,6 @@ my %MEETS_ISRAEL =
       {
         ORDINAL => 11,
         CITY => 'Eilat',
-        COUNTRY => 'Israel',
         YEAR => 2005,
         DATE_START => '2005-11-13',
         DATE_END => '2005-11-20'
@@ -225,7 +232,6 @@ my %MEETS_ISRAEL =
       {
         ORDINAL => 12,
         CITY => 'Eilat',
-        COUNTRY => 'Israel',
         YEAR => 2006,
         DATE_START => '2006-11-05',
         DATE_END => '2006-11-12'
@@ -234,7 +240,6 @@ my %MEETS_ISRAEL =
       {
         ORDINAL => 13,
         CITY => 'Eilat',
-        COUNTRY => 'Israel',
         YEAR => 2007,
         DATE_START => '2007-11-08',
         DATE_END => '2007-11-18'
@@ -243,7 +248,6 @@ my %MEETS_ISRAEL =
       {
         ORDINAL => 14,
         CITY => 'Eilat',
-        COUNTRY => 'Israel',
         YEAR => 2008,
         DATE_START => '2008-11-13',
         DATE_END => '2008-11-23'
@@ -252,16 +256,14 @@ my %MEETS_ISRAEL =
       {
         ORDINAL => 15,
         CITY => 'Eilat',
-        COUNTRY => 'Israel',
         YEAR => 2009,
-        DATE_START => '2009-11-15',
-        DATE_END => '2009-11-25'
+        DATE_START => '2009-11-07',
+        DATE_END => '2009-11-12'
       },
       '2010' =>
       {
         ORDINAL => 16,
         CITY => 'Eilat',
-        COUNTRY => 'Israel',
         YEAR => 2010,
         DATE_START => '2010-11-18',
         DATE_END => '2010-11-28'
@@ -270,7 +272,6 @@ my %MEETS_ISRAEL =
       {
         ORDINAL => 17,
         CITY => 'Eilat',
-        COUNTRY => 'Israel',
         YEAR => 2011,
         DATE_START => '2011-11-17',
         DATE_END => '2011-11-27'
@@ -279,16 +280,22 @@ my %MEETS_ISRAEL =
       {
         ORDINAL => 18,
         CITY => 'Eilat',
-        COUNTRY => 'Israel',
         YEAR => 2012,
         DATE_START => '2012-11-15',
         DATE_END => '2012-11-25'
+      },
+      '2013' =>
+      {
+        ORDINAL => 19,
+        CITY => 'Eilat',
+        YEAR => 2013,
+        DATE_START => '2013-11-21',
+        DATE_END => '2013-11-21'
       },
       '2014' =>
       {
         ORDINAL => 20,
         CITY => 'Eilat',
-        COUNTRY => 'Israel',
         YEAR => 2014,
         DATE_START => '2014-11-13',
         DATE_END => '2014-11-23'
@@ -297,7 +304,6 @@ my %MEETS_ISRAEL =
       {
         ORDINAL => 21,
         CITY => 'Eilat',
-        COUNTRY => 'Israel',
         YEAR => 2015,
         DATE_START => '2015-11-12',
         DATE_END => '2015-11-22'
@@ -306,7 +312,6 @@ my %MEETS_ISRAEL =
       {
         ORDINAL => 22,
         CITY => 'Eilat',
-        COUNTRY => 'Israel',
         YEAR => 2016,
         DATE_START => '2016-11-07',
         DATE_END => '2016-11-16'
@@ -315,7 +320,6 @@ my %MEETS_ISRAEL =
       {
         ORDINAL => 23,
         CITY => 'Eilat',
-        COUNTRY => 'Israel',
         YEAR => 2017,
         DATE_START => '2017-11-09',
         DATE_END => '2017-11-19'
@@ -324,7 +328,6 @@ my %MEETS_ISRAEL =
       {
         ORDINAL => 24,
         CITY => 'Eilat',
-        COUNTRY => 'Israel',
         YEAR => 2018,
         DATE_START => '2018-11-08',
         DATE_END => '2018-11-18'
@@ -333,7 +336,6 @@ my %MEETS_ISRAEL =
       {
         ORDINAL => 25,
         CITY => 'Eilat',
-        COUNTRY => 'Israel',
         YEAR => 2019,
         DATE_START => '2019-11-12',
         DATE_END => '2019-11-20'
@@ -341,7 +343,6 @@ my %MEETS_ISRAEL =
       '2021' =>
       {
         CITY => 'Eilat',
-        COUNTRY => 'Israel',
         YEAR => 2021,
         DATE_START => '2021-11-12',
         DATE_END => '2021-11-20'
@@ -349,7 +350,6 @@ my %MEETS_ISRAEL =
       '2022' =>
       {
         CITY => 'Eilat',
-        COUNTRY => 'Israel',
         YEAR => 2022,
         DATE_START => '2022-11-11',
         DATE_END => '2022-11-19'
@@ -357,7 +357,6 @@ my %MEETS_ISRAEL =
       '2023' =>
       {
         CITY => 'Eilat',
-        COUNTRY => 'Israel',
         YEAR => 2023,
         DATE_START => '2023-11-09',
         DATE_END => '2023-11-19'
@@ -365,7 +364,6 @@ my %MEETS_ISRAEL =
       '2024' =>
       {
         CITY => 'Eilat',
-        COUNTRY => 'Israel',
         YEAR => 2024,
         DATE_START => '2024-11-07',
         DATE_END => '2024-11-16'
@@ -1044,7 +1042,6 @@ my %TOURNAMENTS_ISRAEL =
     {
       '2006' =>
       {
-        MEET => 'Red Sea International Festival',
         CHAPTERS =>
         {
           'SINGLE' => 
