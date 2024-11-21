@@ -2061,7 +2061,6 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2012,
-            CITY => 'Krakow',
             major => 'SEGMENT',
             DATE_START => '2012-03-25',
             DATE_END => '2012-03-25'

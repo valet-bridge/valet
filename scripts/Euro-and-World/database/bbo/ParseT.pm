@@ -425,11 +425,12 @@ sub check_consistency
     {
       my $edition = $editions->{$tag};
 
+      my $meet = '';
       my $mtag = '';
       my $mchapter;
       if (exists $edition->{MEET})
       {
-        my $meet = $edition->{MEET};
+        $meet = $edition->{MEET};
         $mtag = $edition->{MEET_TAG} // $tag;
         if (exists $self->{MEET}{$meet}{EDITIONS}{$mtag})
         {
@@ -454,6 +455,63 @@ sub check_consistency
           $self->check_meet_ref("Tname $tournament, $tag", 
             $edition->{MEET}, $mtag,
             $chapter->{DATE_START}, $chapter->{DATE_END});
+        }
+
+        # Look for fields that get set more than once.
+        my %cumul = %$chapter;
+        for my $e (sort keys %$editions)
+        {
+          next if $e eq 'CHAPTERS' || $e =~ /^\d+$/;
+          if (! exists $cumul{$e})
+          {
+            $cumul{$e} = $editions->{$e};
+          }
+          elsif ($cumul{$e} ne $editions->{$e})
+          {
+            warn "Tname $tournament, $tag: Field $e reset";
+          }
+          else
+          {
+            warn "Tname $tournament, $tag: Field $e set twice";
+          }
+        }
+
+        if ($mtag)
+        {
+          for my $f (sort keys %{$self->{MEET}{$meet}})
+          {
+            next if $f eq 'EDITIONS';
+            if (! exists $cumul{$f})
+            {
+              $cumul{$f} = $self->{MEET}{$meet}{$f};
+            }
+            elsif ($cumul{$f} ne $self->{MEET}{$meet}{$f})
+            {
+              warn "Tname $tournament, $tag: Field $f reset in Meet";
+            }
+            else
+            {
+              warn "Tname $tournament, $tag: Field $f set again in Meet";
+            }
+          }
+
+          my $med = $self->{MEET}{$meet}{EDITIONS}{$mtag};
+          for my $f (sort keys %$med)
+          {
+            next if $f =~ /^DATE_/;
+            if (! exists $cumul{$f})
+            {
+              $cumul{$f} = $med->{$f};
+            }
+            elsif ($cumul{$f} ne $med->{$f})
+            {
+              warn "Tname $tournament, $tag: Field $f reset in Meet chapter";
+            }
+            elsif ($f ne 'YEAR')
+            {
+              warn "Tname $tournament, $tag: Field $f set again in Meet chapter";
+            }
+          }
         }
       }
     }

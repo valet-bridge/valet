@@ -1,19 +1,15 @@
 Add a Weekday adder to a Perl file, simple grep, add comment at end
 
-Check when reading Tournaments:
-- If MEET, then 
-  - Add a Tname meet tag if not same as Tname tag
-  - dates contained
+Check separately:
+- Names of Tname and Meet separately
+  - Same list for each file (no extras)
+- It Tname has no meet, would it have a compatible one in the file?
 
-- Dates
-  - Look for Tname that could be within some Meet in file but isn't
 
   - Field values are known for ORG, COUNTRY, ZONE, REGION etc.
   - If set, they match, e.g. city and country
 
 Consistencies:
-- Names of Tname and Meet separately
-  - Same list for each file (no extras)
 - Usage
   - All chapters of Tname used (maybe up to 2016 or in interval)
   - Dates in Tname as tight as possible

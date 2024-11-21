@@ -28,7 +28,6 @@ my %MEETS_SWEDEN =
       {
         YEAR => 2009,
         CITY => 'Örebro',
-        COUNTRY => 'Sweden',
         DATE_START => '2009-07-24', # Estimated
         DATE_END => '2009-08-02'
       },
@@ -36,7 +35,6 @@ my %MEETS_SWEDEN =
       {
         YEAR => 2010,
         CITY => 'Örebro',
-        COUNTRY => 'Sweden',
         DATE_START => '2010-07-28', # Estimated
         DATE_END => '2010-08-08'
       },
@@ -44,7 +42,6 @@ my %MEETS_SWEDEN =
       {
         YEAR => 2011,
         CITY => 'Örebro',
-        COUNTRY => 'Sweden',
         DATE_START => '2011-07-27', # Estimated
         DATE_END => '2011-08-07'
       },
@@ -52,7 +49,6 @@ my %MEETS_SWEDEN =
       {
         YEAR => 2012,
         CITY => 'Örebro',
-        COUNTRY => 'Sweden',
         DATE_START => '2012-07-25', # Estimated
         DATE_END => '2012-08-05'
       },
@@ -60,7 +56,6 @@ my %MEETS_SWEDEN =
       {
         YEAR => 2013,
         CITY => 'Örebro',
-        COUNTRY => 'Sweden',
         DATE_START => '2013-07-24', # Estimated
         DATE_END => '2013-08-04'
       },
@@ -69,7 +64,6 @@ my %MEETS_SWEDEN =
         # https://www.svenskbridge.se/festival-2014/nyheter/88
         YEAR => 2014,
         CITY => 'Örebro',
-        COUNTRY => 'Sweden',
         DATE_START => '2014-07-25',
         DATE_END => '2014-08-03'
       },
@@ -78,7 +72,6 @@ my %MEETS_SWEDEN =
         # https://www.svenskbridge.se/festival-2015/info
         YEAR => 2015,
         CITY => 'Örebro',
-        COUNTRY => 'Sweden',
         DATE_START => '2015-07-24',
         DATE_END => '2015-08-02'
       },
@@ -87,7 +80,6 @@ my %MEETS_SWEDEN =
         # https://www.svenskbridge.se/festival-2016/info
         YEAR => 2016,
         CITY => 'Örebro',
-        COUNTRY => 'Sweden',
         DATE_START => '2016-07-29',
         DATE_END => '2016-08-07'
       },
@@ -96,7 +88,6 @@ my %MEETS_SWEDEN =
         # https://www.svenskbridge.se/festival-2017/info
         YEAR => 2017,
         CITY => 'Örebro',
-        COUNTRY => 'Sweden',
         DATE_START => '2017-07-28',
         DATE_END => '2017-08-05'
       },
@@ -105,7 +96,6 @@ my %MEETS_SWEDEN =
         # https://www.svenskbridge.se/festival-2018/info
         YEAR => 2018,
         CITY => 'Örebro',
-        COUNTRY => 'Sweden',
         DATE_START => '2018-07-28',
         DATE_END => '2018-08-05'
       },
@@ -114,7 +104,6 @@ my %MEETS_SWEDEN =
         # https://www.svenskbridge.se/festival-2019/info
         YEAR => 2019,
         CITY => 'Örebro',
-        COUNTRY => 'Sweden',
         DATE_START => '2019-07-26',
         DATE_END => '2019-08-04'
       },
@@ -123,7 +112,6 @@ my %MEETS_SWEDEN =
         # https://www.svenskbridge.se/festival-2021/info
         YEAR => 2021,
         CITY => 'Online',
-        COUNTRY => 'Sweden',
         DATE_START => '2021-07-30',
         DATE_END => '2021-08-08'
       },
@@ -132,7 +120,6 @@ my %MEETS_SWEDEN =
         # https://www.svenskbridge.se/festival-2022/info
         YEAR => 2022,
         CITY => 'Örebro',
-        COUNTRY => 'Sweden',
         DATE_START => '2022-07-28',
         DATE_END => '2022-08-06'
       },
@@ -141,7 +128,6 @@ my %MEETS_SWEDEN =
         # https://www.svenskbridge.se/festival-2023/info
         YEAR => 2023,
         CITY => 'Örebro',
-        COUNTRY => 'Sweden',
         DATE_START => '2023-07-28',
         DATE_END => '2023-08-06'
       },
@@ -150,7 +136,6 @@ my %MEETS_SWEDEN =
         # https://www.svenskbridge.se/festival-2024/tavling
         YEAR => 2024,
         CITY => 'Örebro',
-        COUNTRY => 'Sweden',
         DATE_START => '2024-07-26',
         DATE_END => '2024-08-04'
       },
