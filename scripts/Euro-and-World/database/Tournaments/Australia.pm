@@ -2544,6 +2544,7 @@ my %TOURNAMENTS_AUSTRALIA =
     {
       '2005A' =>
       {
+        # https://abfevents.com.au/events/results/2005.html
         # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=05PLAY&abf=yes
         CITY => 'Sydney',
         CHAPTERS =>

@@ -21,7 +21,7 @@ use Tournaments::Friendly; #
 use Tournaments::Africa;
 use Tournaments::Argentina;
 use Tournaments::Asia;
-use Tournaments::Australia; #
+use Tournaments::Australia;
 use Tournaments::Austria;
 use Tournaments::Balkan;
 use Tournaments::Baltic;
@@ -33,7 +33,7 @@ use Tournaments::Bulgaria;
 use Tournaments::Canada;
 use Tournaments::CentralAmerica;
 use Tournaments::Chile;
-use Tournaments::China; #
+use Tournaments::China;
 use Tournaments::Czech;
 use Tournaments::Croatia;
 use Tournaments::Denmark;
