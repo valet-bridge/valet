@@ -21,18 +21,13 @@ my @MULTI_WORDS =
   'Luczniczka Meeting',
   'Palace Cup',
   'Polish Championships',
+  'Polish Pairs Championship',
   'Polish School Championship',
   'Poznan Congress',
   'Slawa Congress',
   'Warsaw Grand Prix',
   'Wroclaw Meeting',
   'Zulawski Congress',
-
-  # Unused?
-  'Polish Grand Prix',
-  'Polish Pairs Championship',
-  'Polish Youth Olympiad',
-  'Polish Schools Championship',
 );
 
 my %MULTI_TYPOS =
@@ -43,16 +38,10 @@ my %MULTI_TYPOS =
     'international baltic congress'],
   'Krakow Congress' => ['krakow meeting'],
   'Luczniczka Meeting' => ['meeting luczniczka'],
-  # 'Polish Championships' => [
-    # 'polish championship'],
-  # 'Polish Pairs Championship' => [
-    # 'pairs championship od poland',
-    # 'pairs championship of poland'],
   'Polish School Championship' => [
     'polish schools champ',
     'polish Schools championship',
     'polish schools champs'],
-  'Polish Youth Olympiad' => ['oom'],
   'Poznan Congress' => [
     'bridge meeting poznan',
     'kongres poznanski',
