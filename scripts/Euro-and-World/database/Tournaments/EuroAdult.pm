@@ -1516,12 +1516,20 @@ my %TOURNAMENTS_EUROADULT =
         MEET => 'European National Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-06-22',
+            DATE_END => '2014-06-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-06-29',
             DATE_END => '2014-07-01'
           } 
         }
@@ -1956,12 +1964,20 @@ my %TOURNAMENTS_EUROADULT =
         MEET => 'European National Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-06-22',
+            DATE_END => '2014-06-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-06-26',
             DATE_END => '2014-06-28'
           } 
         }

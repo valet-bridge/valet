@@ -91,11 +91,9 @@ my %MULTI_TYPOS =
     'tianjin bin hai cup',
     'tianjin binhai cup world men elite tournament'],
   'Venice Cup' => ['<venive <cup'],
-  'World Juniors Championship' => ['world juniors championships'],
   'World Masters Individual' => ['masters individual',
     'world masters'],
   'World Open Pairs' => ['world pairs championship'],
-  'World Seniors Championships' => ['world senior championship'],
   'World Transnational Open Teams' => [
     'world transnational teams'],
   'World University Teams' => [
@@ -115,7 +113,7 @@ my %SINGLE_TYPOS =
   'Venice Cup' => ['vc', 'venice'],
   'World Transnational Mixed Teams' => ['wtmt'],
   'World Transnational Open Teams' => ['wtot'],
-  'World University Championship' => ['wuc'],
+  'World University Teams' => ['wuc'],
 
 );
 

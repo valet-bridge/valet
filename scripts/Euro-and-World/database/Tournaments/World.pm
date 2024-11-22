@@ -4480,6 +4480,22 @@ my %TOURNAMENTS_WORLD =
           } 
         }
       },
+      '2014' =>
+      {
+        MEET => 'FISU World University Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2014-11-01',
+            DATE_END => '2014-11-06'
+          } 
+        }
+      },
       '2016' =>
       {
         MEET => 'FISU World University Championships',

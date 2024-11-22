@@ -32,6 +32,7 @@ my %MULTI_TYPOS =
     'european chamions cup',
     "european champion's cup",
     'european champions cup',
+    'european champs cup',
     "white house champions' cup",
     "whitehouse champions'cup",
     "whitehouse champions' cup"],
@@ -78,7 +79,8 @@ my %MULTI_TYPOS =
 
 my %SINGLE_TYPOS =
 (
-  'European National Championships' => ['ec'],
+  "European Champions' Cup" => ['ecc'],
+  'European National Championships' => ['ec', 'ebtc'],
   'European Transnational Championships' => ['eobc', 'eoc'],
   'European Winter Games' => ['ewg'],
 );

@@ -39,10 +39,8 @@ my @MULTI_WORDS =
   'Indonesian U18 Teams',
   'Indonesian U21 Pair Trials',
   'Indonesian U21 Teams',
-  'Indonesian U21 Trials',
   'Indonesian U26 Pair Trials',
   'Indonesian U26 Teams',
-  'Indonesian U26 Trials',
   'Indonesian U26 Women Pair Trials',
   'Indonesian U31 Teams',
   'Indonesian U31 Women Teams',
@@ -106,10 +104,6 @@ my %MULTI_TYPOS =
   'Indonesian Open Trials' => [
     'indonesian men national selection',
     'indonesian men selection'],
-  'Indonesian U21 Trials' => ['indonesian u21 selection',
-    'indonesia u21 selection', 'indoneian u21 selection',
-    'indonesian u21 selekction'],
-  'Indonesian U26 Trials' => ['indonesian u26 selection'],
   'Indonesian Women Trials' => [
     'indonesian women national selection'],
   "Kepri Governor's Cup" => [

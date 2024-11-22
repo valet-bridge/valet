@@ -60,6 +60,25 @@ my %MEETS_NETHERLANDS =
 
 my %TOURNAMENTS_NETHERLANDS =
 (
+  'White House Top 16',
+  {
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2000,
+            DATE_START => '2000-03-27',
+            DATE_END => '2000-03-28'
+          },
+        }
+      },
+    }
+  },
+
   'ArboNed Team Cup',
   {
     ORGANIZATION => 'NBB',
@@ -1605,6 +1624,54 @@ my %TOURNAMENTS_NETHERLANDS =
             major => 'ROUND',
             DATE_START => '2012-09-01',
             DATE_END => '2012-09-02'
+          } 
+        }
+      },
+    }
+  },
+
+  'White House Top 16',
+  {
+    ORGANIZATION => 'NBB',
+    COUNTRY => 'Netherlands',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2006' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2006-02-25',
+            DATE_END => '2006-02-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Semifinal',
+            major => 'SESSION',
+            minor => 'SEGMENT',
+            DATE_START => '2006-02-26',
+            DATE_END => '2006-02-26'
+          },
+          'C2' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SESSION',
+            minor => 'SEGMENT',
+            DATE_START => '2006-02-26',
+            DATE_END => '2006-02-26'
           } 
         }
       },

@@ -74,8 +74,11 @@ my %MULTI_TYPOS =
     'white house junior',
     'white house junior internationals',
     'whiteouse juniors'],
-  'White House Top 12' => ['modalfa top 12', 'witte huis top 12'],
-  'White House Top 16' => ['white house int. teams top 16',
+  'White House Top 12' => [
+    'modalfa top 12', 
+    'witte huis top 12'],
+  'White House Top 16' => [
+    'white house int. teams top 16',
     'white house int_ teams top 16',
     'white house international top 16 teams'],
 );

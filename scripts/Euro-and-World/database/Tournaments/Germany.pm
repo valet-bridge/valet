@@ -2734,7 +2734,7 @@ my %TOURNAMENTS_GERMANY =
     }
   },
 
-  'König Ludwig Nationen Cup' => 
+  'König Ludwig Cup' => 
   {
     ORGANIZATION => 'DBV',
     COUNTRY => 'Germany',

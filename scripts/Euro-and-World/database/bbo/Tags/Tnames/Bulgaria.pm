@@ -20,7 +20,6 @@ my @MULTI_WORDS =
   'Bulgarian Open Teams',
   'Bulgarian Open Trials',
   'Bulgarian Women Trials',
-  'Cherven Briag National Tournament',
   'Dobrich Open Teams',
   'Haskovski Mineralni Bani Open Pairs',
   'Haskovski Mineralni Bani Open Teams',
