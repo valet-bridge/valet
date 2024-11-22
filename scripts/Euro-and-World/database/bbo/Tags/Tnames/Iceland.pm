@@ -47,7 +47,7 @@ my %MULTI_TYPOS =
 
 my %SINGLE_TYPOS =
 (
-  'Icelandair Open' => ['icelandair'],
+  'Icelandair Open Teams' => ['icelandair'],
 );
 
 sub set_hash

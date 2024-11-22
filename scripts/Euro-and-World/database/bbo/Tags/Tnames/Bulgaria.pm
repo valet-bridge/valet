@@ -26,9 +26,11 @@ my @MULTI_WORDS =
   'Haskovski Mineralni Bani Open Teams',
   'Karlovo Open Pairs',
   'Karlovo Open Teams',
+  'Lozenets Open Teams',
   'Pleven Open Teams',
   'Plovdiv Open Teams',
   'Serdika Open Teams',
+  'Shumen Open Teams',
   'Stara Zagora Open Teams',
   'Varna Intercity Teams',
   'Varna Titan Open Teams'

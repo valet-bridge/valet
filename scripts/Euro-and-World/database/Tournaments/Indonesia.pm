@@ -2644,6 +2644,8 @@ my %TOURNAMENTS_INDONESIA =
     {
       '2012A' =>
       {
+        MEET => 'Indonesian National Games',
+        MEET_TAG => '2012',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2656,6 +2658,8 @@ my %TOURNAMENTS_INDONESIA =
       },
       '2012B' =>
       {
+        MEET => 'Indonesian National Games',
+        MEET_TAG => '2012',
         CHAPTERS =>
         {
           'SINGLE' => 

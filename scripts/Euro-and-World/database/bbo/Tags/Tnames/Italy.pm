@@ -14,13 +14,16 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
+  'Angelini Teams',
   'Bologna Trophy',
+  'Festival della Matematica Open Teams',
   'Italian Club Open Championship',
   'Italian Club Women Championship',
   'Italian Men Cup',
   'Italian Mixed Cup',
   'Italian Mixed Pairs',
   'Italian Mixed Teams',
+  'Italian O55 Cup',
   'Italian Open Cup',
   'Italian Open Teams',
   'Italian Open Trials',

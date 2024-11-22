@@ -17,6 +17,10 @@ my @MULTI_WORDS =
   'African Zonal Open Teams',
   'African Zonal Senior Teams',
   'African Zonal Women Teams',
+  'Marmara Mixed Teams',
+  'Marmara Open Teams',
+  'Morocco Open Pairs',
+  'Morocco Patton Teams',
   "Pigg's Peak All Africa",
 );
 

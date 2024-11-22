@@ -15,7 +15,11 @@ our @EXPORT = qw(set_hash);
 my @MULTI_WORDS =
 (
   'Atlantic Trade Bridge Cup',
+  'Pula Mixed Teams',
+  'Pula Open BAM Teams',
+  'Pula Open Teams',
   'Samobor Open Teams',
+  'Samobor Women Teams',
 );
 
 my %MULTI_TYPOS =

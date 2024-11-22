@@ -17,13 +17,15 @@ my @MULTI_WORDS =
   'Jordan Mixed Pairs',
   'Jordan Open Pairs',
   'Jordan Open Teams',
+  'Jordan Spring Mixed Pairs',
+  'Jordan Spring Open Pairs'
 );
 
 my %MULTI_TYPOS =
 (
   'Jordan Open Pairs' => [
     'jordanese open pairs'],
-  'Jordan Mixed Pairs' => [
+  'Jordan Spring Mixed Pairs' => [
     'jordan spring mix pairs',
     'jordan spring mixed pairs'],
 );

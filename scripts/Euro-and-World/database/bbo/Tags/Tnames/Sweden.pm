@@ -33,6 +33,7 @@ my @MULTI_WORDS =
   'Swedish Senior Team Trials',
   'Swedish Women Pair Trials',
   'Swedish Women Team Trials',
+  'Umea Open Teams',
 );
 
 my %MULTI_TYPOS =

@@ -18,6 +18,7 @@ my @MULTI_WORDS =
   'Brazilian Open Teams',
   'Brazilian Open Trials',
   'Brazilian Women Trials',
+  'Buzios Open Teams',
   'Rio de Janeiro Open Teams',
   'Rio de Janeiro Christmas Individual',
   'Roberto Taunay Cup',

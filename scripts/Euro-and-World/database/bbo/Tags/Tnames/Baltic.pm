@@ -23,6 +23,7 @@ my @MULTI_WORDS =
   'Lithuanian Open Teams',
   'Riga Invitational Pairs',
   'Riga Open Teams',
+  'Tallinn Invitational Pairs',
   'Towns Cup',
   'Vilnius BAM Pairs',
   'Vilnius Club Pairs',
@@ -38,7 +39,7 @@ my %MULTI_TYPOS =
     'baltic teams cup'],
   'Estonian Open Teams' => [
     'est teams champs',
-    'estonia a- league'],
+    'estonia a- league',
     'estonia teams championships', 
     'estonian a- league',
     'estonian first league',

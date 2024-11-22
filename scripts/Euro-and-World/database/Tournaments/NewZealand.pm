@@ -132,7 +132,13 @@ my %MEETS_NEWZEALAND =
 
     EDITIONS => 
     {
-      '2009' =>
+      '2009A' =>
+      {
+        YEAR => 2009,
+        DATE_START => '2009-03-23',
+        DATE_END => '2009-03-23'
+      },
+      '2009B' =>
       {
         YEAR => 2009,
         DATE_START => '2009-04-09',
@@ -187,7 +193,7 @@ my %TOURNAMENTS_NEWZEALAND =
   {
     ORGANIZATION => 'NZB',
     COUNTRY => 'New Zealand',
-    ORIGIN => 'Interprovince',
+    ORIGIN => 'National',
     ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -628,6 +634,7 @@ my %TOURNAMENTS_NEWZEALAND =
       '2009' =>
       {
         MEET => 'New Zealand Trials',
+        MEET_TAG => '2009B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -655,17 +662,25 @@ my %TOURNAMENTS_NEWZEALAND =
 
     EDITIONS =>
     {
-      '2009' =>
+      '2009A' =>
       {
+        MEET => 'New Zealand Trials',
         CHAPTERS =>
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 2009,
             DATE_START => '2009-03-23',
             DATE_END => '2009-03-23'
           },
-          'C1' => 
+        }
+      },
+      '2009B' =>
+      {
+        MEET => 'New Zealand Trials',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
           {
             YEAR => 2009,
             DATE_START => '2009-04-09',

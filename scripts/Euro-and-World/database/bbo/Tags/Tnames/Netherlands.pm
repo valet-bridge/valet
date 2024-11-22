@@ -26,6 +26,7 @@ my @MULTI_WORDS =
   'The Hague Pro-Am Pairs',
   'Top Circuit',
   'Top Circuit Teams',
+  'VVE Beheer Open Teams',
   'White House International',
   'White House Juniors',
   'White House Top 12',

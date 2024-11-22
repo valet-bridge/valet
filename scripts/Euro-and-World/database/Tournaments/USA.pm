@@ -518,7 +518,7 @@ my %MEETS_USA =
         YEAR => 2016,
         CITY => 'Washington DC',
         DATE_START => '2016-07-20',
-        DATE_END => '2016-08-01'
+        DATE_END => '2016-08-03'
       },
       '2016C' =>
       {
@@ -823,6 +823,22 @@ my %MEETS_USA =
         CITY => 'Denver',
         DATE_START => '2016-05-08',
         DATE_END => '2016-05-15'
+      },
+      '2016B' =>
+      {
+        # Trial
+        YEAR => 2016,
+        CITY => 'Denver',
+        DATE_START => '2016-05-30',
+        DATE_END => '2016-06-05'
+      },
+      '2016C' =>
+      {
+        # Trial
+        YEAR => 2016,
+        CITY => 'Denver',
+        DATE_START => '2016-06-17',
+        DATE_END => '2016-06-22'
       },
       '2017' =>
       {
@@ -3403,7 +3419,7 @@ my %TOURNAMENTS_USA =
 
   'US Mixed Teams',
   {
-    ORGANIZATION => 'USBF',
+    ORGANIZATION => 'ACBL',
     COUNTRY => 'USA',
     ORIGIN => 'National',
     FORM => 'Teams',
@@ -3415,6 +3431,8 @@ my %TOURNAMENTS_USA =
     {
       '2016' =>
       {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2016B',
         CHAPTERS =>
         {
           'C0' => 
@@ -4069,7 +4087,8 @@ my %TOURNAMENTS_USA =
       '2016' =>
       {
         # https://www.usbf.org/2016-senior-usbc/2016-senior-usbc
-        CITY => 'Denver',
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2016C',
 
         CHAPTERS =>
         {
@@ -4577,6 +4596,8 @@ my %TOURNAMENTS_USA =
       '2016' =>
       {
         # https://www.usbf.org/2016-women-s-usbc/2016-women-s-usbc
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2016B',
         CITY => 'Denver',
 
         CHAPTERS =>

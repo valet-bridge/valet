@@ -230,7 +230,7 @@ my %MULTI_TYPOS =
     'norw district',
     'norway regional champship',
     'norwegian district',
-    'norwegian district championship'],
+    'norwegian district championship',
     'norwegian regional chship vest-agder',
     'regional champship vest-agder',
     'regional chship vest-agder', 

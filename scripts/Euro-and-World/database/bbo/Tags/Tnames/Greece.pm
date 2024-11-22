@@ -15,13 +15,16 @@ our @EXPORT = qw(set_hash);
 my @MULTI_WORDS =
 (
   'Greek Central Regional Pairs',
+  'Greek Islands Mixed Pairs',
+  'Greek Islands Open Pairs',
   'Greek Islands Open Teams',
   'Greek Mixed Pairs',
   'Greek Northern Regional',
   'Greek Open Teams',
   'Greek Open Pair Trials',
   'Greek Open Team Trials',
-  'Greek Women Trials',
+  'Greek Women Pair Trials',
+  'Greek Women Team Trials',
   'Thanos Capayiannides Memorial Simultaneous',
 );
 

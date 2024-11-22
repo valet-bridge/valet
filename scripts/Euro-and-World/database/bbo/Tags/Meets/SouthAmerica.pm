@@ -35,6 +35,7 @@ my %MULTI_TYPOS =
     'sudamericano transnacional',
     'sudamerico transnacional'],
   'South American Trials' => [
+    'clasificacion sudamericano',
     'clasificatoria sudamericano',
     'clasificatorias sudamericano',
     'south americal trials'],

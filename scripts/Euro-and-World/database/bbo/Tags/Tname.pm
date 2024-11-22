@@ -9,7 +9,7 @@ use open ':std', ':encoding(UTF-8)';
 package Tags::Tname;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(set_hashes);
+our @EXPORT = qw(set_hashes set_masters);
 
 use Tags::Tnames::Africa;
 use Tags::Tnames::Argentina;
@@ -176,6 +176,19 @@ sub set_hashes
 
   $method->(\@MULTI_WORDS, \%MULTI_TYPOS,
     \@SINGLE_WORDS, \%SINGLE_TYPOS, $key);
+}
+
+
+sub set_masters
+{
+  my ($master, $key) = @_;
+
+  my (@multi_words, %multi_typos, @single_words, %single_typos);
+  $DIVISIONS{$key}->(\@multi_words, \%multi_typos, \%single_typos);
+
+  $master->{$_} = 1 for (@multi_words);
+  $master->{$_} = 1 for (sort keys %multi_typos);
+  $master->{$_} = 1 for (sort keys %single_typos);
 }
 
 1;

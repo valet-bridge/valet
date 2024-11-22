@@ -18,6 +18,7 @@ my @MULTI_WORDS =
   'APBF Junior Teams',
   'APBF Mixed Teams',
   'APBF Open Teams',
+  'APBF School Teams',
   'APBF Senior Teams',
   'APBF Women Teams',
   'APBF Youngster Teams',
@@ -29,8 +30,14 @@ my @MULTI_WORDS =
   'Asia Open Teams Cup',
   'Asia Women Teams Cup',
   'Asian University Championship',
+  'SEA Mixed Pairs',
+  'SEA Mixed Teams',
+  'SEA Open Pairs',
   'SEA Open Teams',
+  'SEA Women Pairs',
+  'SEA Women Teams',
   'South Pacific Open Teams',
+  'Yeh Bros Cup',
   'Yeh Bros Pairs Cup',
 );
 

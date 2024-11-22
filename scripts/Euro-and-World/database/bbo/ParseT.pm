@@ -17,6 +17,8 @@ use DateCalc;
 use LinksT;
 use EntryT;
 
+my $DEBUG_LINKS = 1;
+
 my @MEET_FIELDS = qw(ORGANIZATION SPONSOR COUNTRY REGION CITY LOCALITY 
   ORDINAL ORIGIN ZONE FORM SCORING GENDER AGE);
 
@@ -147,8 +149,7 @@ sub init_links
     }
   }
 
-  $self->check_consistency();
-  exit;
+  $self->check_consistency() if $DEBUG_LINKS;
 }
 
 
@@ -439,6 +440,11 @@ my (@times, $t0, $t1);
 sub get_edition_and_chapter
 {
   my ($self, $meet, $tname, $entry, $debug) = @_;
+
+  if ($meet ne '' && ! exists $self->{MEET}{$meet})
+  {
+    warn $entry->bbono() . " meet $meet not in structured list";
+  }
 
   my @tname_list;
   if (exists $self->{TOURNAMENT}{$tname})

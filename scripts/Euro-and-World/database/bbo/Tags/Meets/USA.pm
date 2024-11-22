@@ -16,6 +16,7 @@ my @MULTI_WORDS =
 (
   'North American Bridge Championship',
   'United States Bridge Championship',
+  'United States Youth Bridge Championship',
 );
 
 my %MULTI_TYPOS =
@@ -24,6 +25,8 @@ my %MULTI_TYPOS =
     'united states bridge championships',
     'us bridge championship',
     'u_s_b_c'], 
+  'United States Youth Bridge Championship' => [
+    'junior usbc'],
 );
 
 my %SINGLE_TYPOS =

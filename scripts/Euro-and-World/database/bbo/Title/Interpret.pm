@@ -272,7 +272,8 @@ sub post_process_maybe_rof
     if ($tname eq 'Spingold Teams' || 
         $tname eq 'Vanderbilt Teams' ||
         $tname eq 'Baze Senior Knock-out' ||
-        $tname eq 'United States Bridge Championship')
+        $tname eq 'United States Bridge Championship' ||
+        $tname eq 'United States Youth Bridge Championship')
     {
       $token->set_general('MARKER', 'STAGE', 'Rof' . $r);
       $chain->complete_if_last_is(0, 'EXPLAINED');
@@ -645,6 +646,7 @@ sub finish_ambiguous
     return 1;
   }
   elsif ($meet eq 'United States Bridge Championship' ||
+      $meet eq 'United States Youth Bridge Championship' ||
       $tname eq 'Gianarrigo Rona Trophy' ||
       $tname eq 'Prince Takamatsu Cup' ||
       $meet eq 'World Youth Open Championships' ||

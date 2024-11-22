@@ -11,7 +11,6 @@ Check separately:
 
 Consistencies:
 - Usage
-  - All chapters of Tname used (maybe up to 2016 or in interval)
   - Dates in Tname as tight as possible
 - Counters
   - Chapters with counters in data, but not set
@@ -42,8 +41,6 @@ In some cases like Final, could perhaps pull up the team names
 to the chapter level in the output!  That might mean splitting
 the SF too.
 
-Check manually per country file
-
 ---
 
 Should we already map Juniors to U26?
@@ -71,3 +68,15 @@ More general stuff
 
 Check the .ref files that modify qx against boards, lines
 (Output #lines from C++ as well?)
+
+Workflow
+--------
+In GitHub/Build/src:
+./reader -I ../../../bboD -Q 9=4=0=0 -v 63 > raw.txt
+Edit out the bottom lines
+Copy to GitHub/Valet/scripts/Euro-and-World/bbo
+
+perl cook.pl raw.txt > t
+Edit out the bottom lines
+
+perl digest t > d

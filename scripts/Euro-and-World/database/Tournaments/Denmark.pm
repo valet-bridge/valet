@@ -379,6 +379,28 @@ my %TOURNAMENTS_DENMARK =
     }
   },
 
+  'Danish Open Pairs Trials',
+  {
+    COUNTRY => 'Denmark',
+    ZONE => 'Europe',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2000,
+            DATE_START => '2000-10-25',
+            DATE_END => '2000-10-26'
+          } 
+        }
+      },
+    }
+  },
+
   'Danish Club Teams',
   {
     ORGANIZATION => 'DBF',
@@ -2587,7 +2609,36 @@ my %TOURNAMENTS_DENMARK =
     }
   },
 
-  'Danish Open Trials',
+  'Danish Open Pairs Trials',
+  {
+    ORGANIZATION => 'DBF',
+    COUNTRY => 'Denmark',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2010' =>
+      {
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            WEEKEND => 0,
+            DATE_START => '2010-03-27',
+            DATE_END => '2010-03-28'
+          },
+        }
+      },
+    }
+  },
+
+  'Danish Open Team Trials',
   {
     ORGANIZATION => 'DBF',
     COUNTRY => 'Denmark',
@@ -2607,22 +2658,22 @@ my %TOURNAMENTS_DENMARK =
           'C0' => 
           {
             YEAR => 2010,
-            WEEKEND => 0,
-            DATE_START => '2010-03-27',
-            DATE_END => '2010-03-28'
-          },
-          'C1' => 
-          {
-            YEAR => 2010,
             WEEKEND => 2,
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2010-05-01',
             DATE_END => '2010-05-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            WEEKEND => 2,
+            STAGE => 'Final',
+            DATE_START => '2010-05-02',
+            DATE_END => '2010-05-02'
           }
         }
       },
-
       '2012' =>
       {
         CHAPTERS => 

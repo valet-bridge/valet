@@ -20,7 +20,6 @@ my @MULTI_WORDS =
   'Finnish Open Trials',
   'Finnish Open Teams',
   'Finnish Senior Trials',
-  'Finnish Swiss Teams Championship',
   'Finnish Women Trials',
   'Hanko Open Teams',
   'Jyväskylä Open Teams',

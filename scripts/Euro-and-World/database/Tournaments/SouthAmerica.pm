@@ -819,7 +819,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'Seniors',
 
     EDITIONS =>
     {

@@ -113,11 +113,17 @@ my %MEETS_JORDAN =
 
     EDITIONS => 
     {
-      '2015' =>
+      '2015A' =>
       {
         YEAR => 2015,
         DATE_START => '2015-05-03',
         DATE_END => '2015-05-06'
+      },
+      '2015B' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-05-19',
+        DATE_END => '2015-05-26'
       },
       '2016' =>
       {
@@ -290,6 +296,7 @@ my %TOURNAMENTS_JORDAN =
       '2015' =>
       {
         MEET => 'Jordan Spring Festival',
+        MEET_TAG => '2015A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -329,7 +336,6 @@ my %TOURNAMENTS_JORDAN =
       '2015A' =>
       {
         MEET => 'Jordan Spring Festival',
-        MEET_TAG => '2015',
         CHAPTERS =>
         {
           'C0' => 
@@ -344,13 +350,14 @@ my %TOURNAMENTS_JORDAN =
       '2015B' =>
       {
         # Something to do with BFAME starting 2015-05-27?
+        MEET => 'Jordan Spring Festival',
         CHAPTERS =>
         {
           'C0' => 
           {
             YEAR => 2015,
             DATE_START => '2015-05-19',
-            DATE_END => '2015-05-19'
+            DATE_END => '2015-05-21'
           },
           'C1' => 
           {

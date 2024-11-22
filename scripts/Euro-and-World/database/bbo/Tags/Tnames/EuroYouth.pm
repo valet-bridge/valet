@@ -14,6 +14,7 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
+  'European School Teams',
   'European U16 Open Pairs',
   'European U16 Open Teams',
   'European U21 Open Pairs',
@@ -25,6 +26,7 @@ my @MULTI_WORDS =
   'European U26 Women Pairs',
   'European U26 Women Teams',
   'European U31 Open Pairs',
+  'European U31 Open Teams',
   "European U31 President's Cup",
   'European University Bridge Championship',
   'European University Team Championship',

@@ -16,6 +16,7 @@ my @MULTI_WORDS =
 (
   'Copenhagen Invitational Pairs',
   'Copenhagen Open Pairs',
+  'Copenhagen Pro-Am Pairs',
   'Danish Club Teams',
   'Danish Cup',
   'Danish First Division',
@@ -24,6 +25,7 @@ my @MULTI_WORDS =
   'Danish Mixed Teams',
   'Danish Open Pairs',
   'Danish Open Pairs Trials',
+  'Danish Open Team Trials',
   'Danish Open Teams',
   'Danish Open Trials',
   'Danish Women Pairs',
@@ -88,11 +90,9 @@ my %MULTI_TYPOS =
     'danish open',
     'danish open team',
     'danish open teams'],
-  'Danish Open Pairs Trials' => [
-    'danish team test',
-    'danish teams test'],
-  'Danish Open Trials' => [
+  'Danish Open Team Trials' => [
     'danish open team trials',
+    'danish team test',
     'danish team trial',
     'danish team trials',
     'denmark team test'],
@@ -105,7 +105,6 @@ my %MULTI_TYPOS =
 my %SINGLE_TYPOS =
 (
   'Copenhagen Invitational Pairs' => ['cbi'],
-  'Danish Championship' => ['dm'],
 );
 
 sub set_hash

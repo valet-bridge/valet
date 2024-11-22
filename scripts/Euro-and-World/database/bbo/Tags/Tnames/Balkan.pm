@@ -14,6 +14,8 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
+  'Balkan Friendship Open Pairs',
+  'Balkan Friendship Open Teams',
   'Balkan Intercity Cup',
   'Balkan Open Teams',
 );

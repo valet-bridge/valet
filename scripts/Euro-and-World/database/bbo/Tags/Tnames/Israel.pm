@@ -16,6 +16,9 @@ my @MULTI_WORDS =
 (
   'Four Nations Cup',
   'Israel Cup',
+  'Israel Festival Open Pairs',
+  'Israel Festival Open Teams',
+  'Israel Individual',
   'Israel Juniors Pairs',
   'Israel Juniors Trials',
   'Israel IMP Pairs',
@@ -28,6 +31,8 @@ my @MULTI_WORDS =
   'Maccabi Games',
   'Rand Pairs Cup',
   'Rand Teams Cup',
+  'Red Sea Invitational Pairs',
+  'Red Sea Open Swiss Teams',
 );
 
 my %MULTI_TYPOS =

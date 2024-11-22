@@ -645,11 +645,17 @@ my %MEETS_POLAND =
         DATE_START => '2013-04-29', # Estimated
         DATE_END => '2013-05-04'
       },
-      '2014' =>
+      '2014A' =>
       {
         YEAR => 2014,
         DATE_START => '2014-05-01',
         DATE_END => '2014-05-04'
+      },
+      '2014B' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-11-22',
+        DATE_END => '2014-11-23'
       },
       '2015' =>
       {
@@ -3877,6 +3883,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2014' =>
       {
+        MEET => 'Polish Championships',
+        MEET_TAG => '2014B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4147,6 +4155,7 @@ my %TOURNAMENTS_POLAND =
       {
         # https://wyniki.pzbs.pl/2014/mpp/W-mxtf.html
         MEET => 'Polish Championships',
+        MEET_TAG => '2014A',
         SCORING => 'MP',
         CHAPTERS =>
         {
@@ -4421,6 +4430,7 @@ my %TOURNAMENTS_POLAND =
       '2014' =>
       {
         MEET => 'Polish Championships',
+        MEET_TAG => '2014A',
         SCORING => 'MP',
         CHAPTERS =>
         {
@@ -5956,6 +5966,7 @@ my %TOURNAMENTS_POLAND =
       '2014' =>
       {
         MEET => 'Polish Championships',
+        MEET_TAG => '2014A',
         SCORING => 'MP',
         CHAPTERS =>
         {
