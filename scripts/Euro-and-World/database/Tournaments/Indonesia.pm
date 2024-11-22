@@ -139,7 +139,6 @@ my %MEETS_INDONESIA =
 
   'Indonesian National Games' =>
   {
-    # Seems to be the National Sports Week!
     # https://en.wikipedia.org/wiki/National_Sports_Week
     ORGANIZATION => 'GABSI',
     COUNTRY => 'Indonesia',

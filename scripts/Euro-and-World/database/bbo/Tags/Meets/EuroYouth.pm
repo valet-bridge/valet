@@ -32,7 +32,6 @@ my %MULTI_TYPOS =
 
 my %SINGLE_TYPOS =
 (
-  'European Youth Bridge Championship' => ['eybc'],
   'European Youth Pairs Championships' => ['eybpc', 'eypc'],
   'European Youth Team Championships' => ['eytc', 'jem'],
 );

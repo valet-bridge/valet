@@ -53,7 +53,6 @@ my %MULTI_TYPOS =
 my %SINGLE_TYPOS =
 (
   'Indonesian National Pre-Sports Week' => ['prapon'],
-  'Indonesian National Sports Week' => ['indonesia week', 'pon'],
 );
 
 sub set_hash
