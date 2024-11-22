@@ -17,6 +17,35 @@ my %MEETS_BOLIVIA =
 
 my %TOURNAMENTS_BOLIVIA =
 (
+  'Bolivian Open Pairs',
+  {
+    ORGANIZATION => 'ABB',
+    COUNTRY => 'Bolivia',
+    ORIGIN => 'National',
+    ZONE => 'South America',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        ORDINAL => 12,
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-11-16',
+            DATE_END => '2015-11-16'
+          },
+        }
+      },
+    }
+  },
+
   'Bolivian Open Teams' => 
   {
     ORGANIZATION => 'ABB',

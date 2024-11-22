@@ -533,6 +533,8 @@ my @LOCAL_SUBS =
     CORR => 'Norwegian Club Teams' },
   { START => 34365, END => 34372, TEXT => 'Grand Prix of Poland',
     CORR => 'Grand Prix of Poland Pairs' },
+  { START => 34444, END => 34526, TEXT => 'ANC Interstate Teams',
+    CORR => 'Australian ANC Championships - Open' },
   { START => 34548, END => 34554, TEXT => 'Grand Prix of Poland', 
     CORR => 'Grand Prix of Poland Pairs' },
   { START => 35213, END => 35234, TEXT => 'Cavendish',

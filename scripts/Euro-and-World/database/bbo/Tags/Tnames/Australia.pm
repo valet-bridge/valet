@@ -17,7 +17,6 @@ my @MULTI_WORDS =
   'Altman Swiss Pairs',
   'Australian Autumn National Open Teams',
   'Australian Grand National Open Teams',
-  'Australian Interstate Teams',
   'Australian Junior Teams',
   'Australian National Open Teams',
   'Australian National Senior Teams',
@@ -72,8 +71,6 @@ my %MULTI_TYPOS =
   'Australian Grand National Open Teams' => [
     'abf gnot',
     'grand national open teams'],
-  'Australian Interstate Teams' => [
-    'anc interstate teams'],
   'Australian Junior Teams' => [
     'anc juniors'],
   'Australian National Open Teams' => [
@@ -231,7 +228,7 @@ my %SINGLE_TYPOS =
   'Australian National Senior Teams' => ['nst'],
   'Australian National Women Teams' => ['nwt'],
   'Australian Spring Open Teams' => ['snot'],
-  'Bobby Evans Seniors Teams' => ['best'],
+  'Bobby Evans Senior Teams' => ['best'],
   "Linda Stern Women's Teams" => ['lswt'],
   'Victorian Pennant' => ['pennant'],
 );

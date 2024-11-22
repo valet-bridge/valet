@@ -165,6 +165,7 @@ my %FORM_CORRECTIONS = (
   'BFAME Friendship Pairs' => [
     28511,
     39167, 39168, 39169, 39170],
+  'Bolivian Open Pairs' => [41934],
   'Brasov Open Pairs' => [
     11908, 11910, 11918, 11919, 11930, 11931],
   'Buffett Cup Pairs' => [

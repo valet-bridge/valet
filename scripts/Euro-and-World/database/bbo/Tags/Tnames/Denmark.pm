@@ -27,7 +27,6 @@ my @MULTI_WORDS =
   'Danish Open Pairs Trials',
   'Danish Open Team Trials',
   'Danish Open Teams',
-  'Danish Open Trials',
   'Danish Women Pairs',
   'Hecht Cup',
   'Prince Henrik Trophy',

@@ -19,7 +19,8 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  'Bolivian Open Pairs' => ['bolivariano open pairs'],
+  'Bolivian Open Pairs' => [
+    'bolivariano open pairs'],
   'Bolivian Open Teams' => [
     'bbolivariano open teams',
     'bolivariano open teams',

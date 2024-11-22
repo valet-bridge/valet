@@ -2851,7 +2851,7 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2014' =>
+      '2014A' =>
       {
         # http://abfevents.com.au/events/playoffs/2014/ow/
         CITY => 'Canberra',
@@ -2864,6 +2864,20 @@ my %TOURNAMENTS_AUSTRALIA =
             minor => 'SEGMENT',
             DATE_START => '2014-02-05',
             DATE_END => '2014-02-09'
+          } 
+        }
+      },
+      '2014B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        MEET_TAG => '2014',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-07-13',
+            DATE_END => '2014-07-18'
           } 
         }
       },

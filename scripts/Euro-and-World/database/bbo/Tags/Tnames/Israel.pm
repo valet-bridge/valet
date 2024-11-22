@@ -15,7 +15,6 @@ our @EXPORT = qw(set_hash);
 my @MULTI_WORDS =
 (
   'Four Nations Cup',
-  'Israel Cup',
   'Israel Festival Open Pairs',
   'Israel Festival Open Teams',
   'Israel Individual',
@@ -40,10 +39,6 @@ my %MULTI_TYPOS =
   'Four Nations Cup' => [
     '4 nations cupn', 
     '4 nations cup'],
-  'Israel Cup' => [
-    'israel team cup',
-    'israel team of four cup',
-    'israeli teams cup'],
   'Israel Juniors Pairs' => [
     'israel juniours pairs',
     'israeli juniors pairs'],
@@ -63,11 +58,13 @@ my %MULTI_TYPOS =
     'israelairs champ_',
     'israeli team champ_'],
   'Israel Open Teams Cup' => [
+    'israel cup',
     'israel national team cup',
     'israel team cup',
     'israel team of four cup',
     'israel teams cup',
-    'israeli team cup'],
+    'israeli team cup',
+    'israeli teams cup'],
   'Israel Open Trials' => [
     'israel open team trials',
     'israel open trials',
