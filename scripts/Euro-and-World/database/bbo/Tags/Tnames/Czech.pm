@@ -21,15 +21,9 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  'Czech Championship' => [
-    'czech bridge championship',
-    'czech bridge championships'],
   'Czech First League' => [
     'czech bridge league', 
     'czech premier league'],
-  'Czech Team Championship' => [
-    'czech team championships',
-    'czech teams champ_'],
   'Czech First League' => [
     'czech 1st league', 
     'czech bridge league',

@@ -38,7 +38,6 @@ my @MULTI_WORDS =
   'Salvador Assael IMP Pairs',
   'Salvador Assael Pro-Am Pairs',
   'Sivrioglu BAM Teams',
-  'Sivrioglu IMP Pairs',
   'Solakoglu IMP Pairs',
   'Thrace Cup League',
   'Turkish-Greek Open Pairs',
@@ -164,7 +163,6 @@ my %MULTI_TYPOS =
     'turkiye acik takimlar sampiyonasi',
     'turkish national open teams'],
   'Turkish Swiss Mixed Teams' => ['turkey swiss mixed teams'],
-  'Turkish Teams Championship' => ['turkiye bric takimlar sampiyonasi'],
   'Turkish U16 Pairs' => [
     'turkey u16 championship'],
   'Turkish University Teams' => [
