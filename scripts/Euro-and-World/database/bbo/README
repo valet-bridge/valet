@@ -1,19 +1,27 @@
-Add a Weekday adder to a Perl file, simple grep, add comment at end
+
+Checks:
+- If Tname has no meet, would it have a compatible one in the file?
+- Values of fields, e.g. COUNTRY, CITY
+- Consistency of e.g. CITY and COUNTRY
+
+- Look over ORIGIN manually
+
+Duplicates/overlaps such as 23000, 23004, 23005
+
+Maybe special header formats
+BOARDS header 91 105 | actual 91 105 | counts 15 15 15 | 1384 lines
+BOARDS 91 105 | (1384,30,15)
+
+BOARDS header 61 75 | actual 61 75 | counts 14 15 14 | 735 lines
+BOARDS 61 75 (o68) | (735,29,15)
 
 Can also use #boards to check consistency.
 
-Check separately:
-- If Tname has no meet, would it have a compatible one in the file?
+5318 could split by GROUP if they all have one
 
-  - Field values are known for ORG, COUNTRY, ZONE, REGION etc.
-  - If set, they match, e.g. city and country
-
-Consistencies:
-- Usage
-  - Dates in Tname as tight as possible
+- Dates in Tname as tight as possible
 - Counters
-  - Chapters with counters in data, but not set
-  - All same STAGE in chapter if STAGE is present
+  - Chapters with counters/Stage in data, but not set in Tournaments
 
 Fields
 - Move YEAR up to above CHAPTERS
@@ -23,9 +31,6 @@ Fields
 - 45865 MEET ought to be up in the title
 - 45785 two TITLE_CITY?
 - In general not two of anything meaningful
-
-
-- Output a spreadsheet, look at org, country, origin, zone
 
 Fields
 - All fields used
@@ -41,8 +46,6 @@ to the chapter level in the output!  That might mean splitting
 the SF too.
 
 ---
-
-Should we already map Juniors to U26?
 
 Philadelphia Solomon Teams is an odd Tname
 
@@ -69,7 +72,7 @@ Check the .ref files that modify qx against boards, lines
 (Output #lines from C++ as well?)
 
 Workflow
---------
+========
 In GitHub/Build/src:
 ./reader -I ../../../bboD -Q 9=4=0=0 -v 63 > raw.txt
 Edit out the bottom lines
@@ -79,3 +82,13 @@ perl cook.pl raw.txt > t
 Edit out the bottom lines
 
 perl digest t > d
+
+Things that get modified to fix errors:
+- EntryT.pm, list of scoring adjustments (especially pairs tournaments)
+- Title/Study.pm, regex substitution of ranges of BBONO numbers
+- The .ref files
+
+Can look at weekdayss:
+foreach f (..$/Tournaments/*pm)
+perl weekday.pl $f > ../Tournaments/DATED/`basename $f`
+end

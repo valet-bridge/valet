@@ -67,4 +67,12 @@ sub days_before
 }
 
 
+sub day
+{
+  my ($self, $str) = @_;
+  my $t = Time::Piece->strptime($str, "%Y-%m-%d");
+  return $t->day;
+}
+
+
 1;

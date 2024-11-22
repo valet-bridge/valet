@@ -261,6 +261,7 @@ my @MULTI_WORDS =
   'Ilhas & Aredores',
   'India Blues',
   'Indian Mavericks',
+  'Indonesian National Sports Week',
   'Ingen Bagge',
   'Inverted Minors',
   'Isolated Menaces',
@@ -848,6 +849,7 @@ my %SINGLE_TYPOS =
 
   Imponderables => ['impoderables'],
   'India Blues' => ['indiablues'],
+  'Indonesian National Sports Week' => ['pon'],
 
   'Jamm & Co' => ['jamm'],
   'Joy Division' => ['joydivision'],
