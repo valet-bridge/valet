@@ -61,9 +61,6 @@ my %MULTI_TYPOS =
     'hellenic open team trials',
     'hellenic team trials',
     'hellenic teams trials'],
-  'Greek Women Trials' => [
-    'hellenic ladies team trials',
-    'hellenic ladies teams trials'],
   'Thanos Capayiannides Memorial Simultaneous' => [
     'thanos capayiannides'],
 );

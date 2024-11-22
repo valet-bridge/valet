@@ -34,7 +34,6 @@ my @MULTI_WORDS =
   'US Women Trials',
   'US Youngster Trials',
   'USBF Challenge Match',
-  'USBF Charity Match',
   'Vanderbilt Teams',
   'Wagar Teams',
 );
@@ -84,19 +83,19 @@ my %MULTI_TYPOS =
     'usbf senior team trials',
     'usbf senior trials',
     'usbf seniors trials'],
-  'US Women' => ['us womens championships'],
   'US Women Teams' => [
     'united states women bridge championship',
     "us women's bridge championship",
     "us women's bridge championhip",
     "united states women's bridge championship"],
-  'US Youngsters' => ['u-21 us'],
   'US Youngster Trials' => [
     'jusbc u21',
     'us u21 teams',
     'us u-21 trials',
     'u-21 us trials'],
-  'USBF Charity Match' => ['usbf jr/pro charity challenge match'],
+  'USBF Challenge Match' => [
+    'usbf charity match',
+    'usbf jr/pro charity challenge match'],
   'Vanderbilt Teams' => [
     'vanderbilt teams',
     'vanderbilt ko teams'],

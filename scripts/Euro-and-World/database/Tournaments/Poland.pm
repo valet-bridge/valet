@@ -5094,6 +5094,34 @@ my %TOURNAMENTS_POLAND =
     }
   },
 
+  'Polish Patton Pairs',
+  {
+    ORGANIZATION => 'PZBS',
+    COUNTRY => 'Poland',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Pairs',
+    SCORING => 'Patton',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            DATE_START => '2014-09-27',
+            DATE_END => '2014-09-27'
+          },
+        }
+      },
+    }
+  },
+
   'Polish Patton Teams',
   {
     FORM => 'Teams',
@@ -5232,6 +5260,55 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
+      '2002-03' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2003,
+            DATE_START => '2003-05-28',
+            DATE_END => '2003-05-28'
+          },
+        }
+      },
+      '2003-04' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2004,
+            DATE_START => '2004-05-03',
+            DATE_END => '2004-05-03'
+          },
+        }
+      },
+      '2004-05' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            # Dates probably more like May.
+            YEAR => 2005,
+            DATE_START => '2005-09-23',
+            DATE_END => '2005-09-24'
+          },
+        }
+      },
+      '2005-06' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            DATE_START => '2006-05-06',
+            DATE_END => '2006-05-07'
+          },
+        }
+      },
       '2006-07' =>
       {
         # https://stara.pzbs.pl/liga/liga2006_7/pierwsza/1liga20067.htm
@@ -5240,12 +5317,20 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2007,
+            STAGE => 'Round-Robin',
+            major => 'ROUND',
+            DATE_START => '2007-03-07',
+            DATE_END => '2007-03-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2007-06-06',
             DATE_END => '2007-06-07'
           },
-          'C1' => 
+          'C2' => 
           {
             YEAR => 2007,
             STAGE => 'Final',
@@ -5253,7 +5338,7 @@ my %TOURNAMENTS_POLAND =
             DATE_START => '2007-06-07',
             DATE_END => '2007-06-08'
           },
-          'C2' => 
+          'C3' => 
           {
             YEAR => 2007,
             STAGE => 'Bronze',
@@ -5365,12 +5450,36 @@ my %TOURNAMENTS_POLAND =
           'C2' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2011-02-26',
+            DATE_END => '2011-02-27'
+          },
+          'C3' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2011-03-04',
+            DATE_END => '2011-03-05'
+          },
+          'C4' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2011-03-12',
+            DATE_END => '2011-03-13'
+          },
+          'C5' => 
+          {
+            YEAR => 2011,
             STAGE => 'Quarterfinal',
             major => 'SEGMENT',
             DATE_START => '2011-03-26',
             DATE_END => '2011-03-27'
           },
-          'C3' => 
+          'C6' => 
           {
             YEAR => 2011,
             STAGE => 'Semifinal',
@@ -5378,7 +5487,7 @@ my %TOURNAMENTS_POLAND =
             DATE_START => '2011-05-19',
             DATE_END => '2011-05-20'
           },
-          'C4' => 
+          'C7' => 
           {
             YEAR => 2011,
             STAGE => 'Final',
@@ -5603,10 +5712,18 @@ my %TOURNAMENTS_POLAND =
             YEAR => 2015,
             STAGE => 'Playoff',
             major => 'SEGMENT',
+            DATE_START => '2015-04-18',
+            DATE_END => '2015-04-19'
+          },
+          'C5' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
             DATE_START => '2015-06-17',
             DATE_END => '2015-06-17'
           },
-          'C5' => 
+          'C6' => 
           {
             YEAR => 2015,
             STAGE => 'Semifinal',
@@ -5614,7 +5731,7 @@ my %TOURNAMENTS_POLAND =
             DATE_START => '2015-06-17',
             DATE_END => '2015-06-19'
           },
-          'C6' => 
+          'C7' => 
           {
             YEAR => 2015,
             STAGE => 'Final',
@@ -5622,7 +5739,7 @@ my %TOURNAMENTS_POLAND =
             DATE_START => '2015-06-19',
             DATE_END => '2015-06-20'
           },
-          'C7' => 
+          'C8' => 
           {
             YEAR => 2015,
             STAGE => 'Playoff',
@@ -5830,6 +5947,34 @@ my %TOURNAMENTS_POLAND =
             DATE_START => '2014-02-15',
             DATE_END => '2014-02-16'
           } 
+        }
+      },
+    }
+  },
+
+  'Polish Third League',
+  {
+    ORGANIZATION => 'PZBS',
+    COUNTRY => 'Poland',
+    ORIGIN => 'Regional',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-02-28',
+            DATE_END => '2015-02-28'
+          },
         }
       },
     }

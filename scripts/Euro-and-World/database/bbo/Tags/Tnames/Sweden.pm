@@ -32,7 +32,6 @@ my @MULTI_WORDS =
   'Swedish Premier League',
   'Swedish Senior Team Trials',
   'Swedish Women Pair Trials',
-  'Swedish Women Team Trials',
   'Umea Open Teams',
 );
 
@@ -64,9 +63,6 @@ my %MULTI_TYPOS =
     'swedish districts',
     'swedish disttrict',
     'swesish district'],
-  'Swedish Juniors Championship' => [
-    'swedish junior championships',
-    'swedish juniors cs'],
   'Swedish Juniors Pairs' => [
     'swedish junior pair championship',
     'swedish junior pairs championship',
@@ -102,7 +98,7 @@ my %MULTI_TYPOS =
 
 my %SINGLE_TYPOS =
 (
-  'Swedish Elite Series' => ['elitserien'],
+  'Swedish Premier League' => ['elitserien'],
 );
 
 sub set_hash
