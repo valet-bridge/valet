@@ -175,7 +175,7 @@ my %MEETS_CANADA =
 
 my %TOURNAMENTS_CANADA =
 (
-  'Canadian Mixed Teams Championship',
+  'Canadian Mixed Teams Championship' =>
   {
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -279,7 +279,7 @@ my %TOURNAMENTS_CANADA =
     }
   },
 
-  'Canadian National Teams Championship',
+  'Canadian National Teams Championship' =>
   {
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -910,7 +910,7 @@ my %TOURNAMENTS_CANADA =
     }
   },
 
-  'Canadian Seniors Teams Championship',
+  'Canadian Seniors Teams Championship' =>
   {
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -1310,7 +1310,7 @@ my %TOURNAMENTS_CANADA =
     }
   },
 
-  'Canadian Women Teams Championship',
+  'Canadian Women Teams Championship' =>
   {
     ZONE => 'North America',
     FORM => 'Teams',

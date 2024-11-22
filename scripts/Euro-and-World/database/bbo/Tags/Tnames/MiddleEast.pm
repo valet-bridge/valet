@@ -19,7 +19,6 @@ my @MULTI_WORDS =
   'BFAME Senior Teams',
   'BFAME Women Teams',
   'Pan Arab Inter-Club Championship',
-  'Yeh Bros Cup',
 );
 
 my %MULTI_TYPOS =
@@ -31,9 +30,6 @@ my %MULTI_TYPOS =
     'pan arab inter-club',
     'pan arab inter club',
     'pan arab interclub'],
-  'Yeh Bros Cup' => [
-    'yehbros cup', 
-    'yer bros cup'],
 );
 
 my %SINGLE_TYPOS =

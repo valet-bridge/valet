@@ -257,7 +257,7 @@ sub process_og_front
   }
   else
   {
-    $token->set_singleton('AGE', 'Juniors');
+    $token->set_singleton('AGE', 'U26');
   }
 
   my $token2 = Token->new();
@@ -294,11 +294,11 @@ sub process_letter_exact
 
   if ($letter eq 'J')
   {
-    $token->set_singleton('AGE', 'Juniors');
+    $token->set_singleton('AGE', 'U26');
   }
   elsif ($letter eq 'Y')
   {
-    $token->set_singleton('AGE', 'Youngsters');
+    $token->set_singleton('AGE', 'U21');
   }
   elsif ($letter eq 'K')
   {
@@ -324,7 +324,7 @@ sub process_g_front
   my $letter = uc($token0->value());
   die "Not G: $letter" unless $letter eq 'G';
 
-  $token0->set_singleton('AGE', 'Juniors');
+  $token0->set_singleton('AGE', 'U26');
 
   my $token1 = Token->new();
   $token1->copy_origin_from($token0);
@@ -380,7 +380,7 @@ sub process_ambiguous_counter_exact
   }
   elsif ($letter eq 'J')
   {
-    $token->set_general('SINGLETON', 'AGE', 'Juniors');
+    $token->set_general('SINGLETON', 'AGE', 'U26');
   }
   elsif ($letter eq 'K')
   {
@@ -409,7 +409,7 @@ sub process_ambiguous_counter_exact
   }
   elsif ($letter eq 'Y')
   {
-    $token->set_general('SINGLETON', 'AGE', 'Youngsters');
+    $token->set_general('SINGLETON', 'AGE', 'U21');
   }
   else
   {

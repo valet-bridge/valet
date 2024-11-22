@@ -85,9 +85,6 @@ my %MULTI_TYPOS =
 my %SINGLE_TYPOS =
 (
   'European University Bridge Championship' => ['eubc', 'eucb', 'euc'],
-  'European Youth Bridge Championship' => ['eybc'],
-  'European Youth Bridge Pairs Championship' => ['eybpc', 'eypc'],
-  'European Youth Bridge Teams Championship' => ['eytc', 'jem'],
 );
 
 sub set_hash

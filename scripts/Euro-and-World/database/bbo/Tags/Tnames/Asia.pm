@@ -58,7 +58,10 @@ my %MULTI_TYPOS =
     'south pacific zone 7 championship',
     'spbf championship',
     'zone 7 championship',
-    'zone 7 championships']
+    'zone 7 championships'],
+  'Yeh Bros Cup' => [
+    'yehbros cup',
+    'yer bros cup'],
 );
 
 my %SINGLE_TYPOS =

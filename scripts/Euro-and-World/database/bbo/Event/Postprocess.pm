@@ -120,7 +120,7 @@ sub post_process_disambiguate
     }
     elsif ($letter eq 'G')
     {
-      $token0->set_general('SINGLETON', 'AGE', 'Juniors');
+      $token0->set_general('SINGLETON', 'AGE', 'U26');
 
       my $token2 = Token->new();
       $token2->copy_origin_from($token0);
@@ -135,7 +135,7 @@ sub post_process_disambiguate
     }
     elsif ($letter eq 'J')
     {
-      $token0->set_general('SINGLETON', 'AGE', 'Juniors');
+      $token0->set_general('SINGLETON', 'AGE', 'U26');
 
       my $token2 = Token->new();
       $token2->copy_origin_from($token0);
@@ -185,7 +185,7 @@ sub post_process_disambiguate
     }
     elsif ($letter eq 'Y')
     {
-      $token0->set_general('SINGLETON', 'AGE', 'Youngsters');
+      $token0->set_general('SINGLETON', 'AGE', 'U21');
       $chain->complete_if_last_is(0, 'COMPLETE');
     }
     else

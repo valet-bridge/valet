@@ -1,5 +1,7 @@
 Add a Weekday adder to a Perl file, simple grep, add comment at end
 
+Can also use #boards to check consistency.
+
 Check separately:
 - Names of Tname and Meet separately
   - Same list for each file (no extras)

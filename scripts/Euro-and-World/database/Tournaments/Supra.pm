@@ -1167,7 +1167,7 @@ my %TOURNAMENTS_SUPRA =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
-    AGE => 'Juniors',
+    AGE => 'U26',
 
     EDITIONS =>
     {
@@ -1196,7 +1196,7 @@ my %TOURNAMENTS_SUPRA =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Juniors',
+    AGE => 'U26',
 
     EDITIONS =>
     {
@@ -1705,7 +1705,7 @@ my %TOURNAMENTS_SUPRA =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Juniors',
+    AGE => 'U26',
 
     EDITIONS =>
     {

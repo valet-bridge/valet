@@ -62,15 +62,6 @@ my %MULTI_TYPOS =
 
 my %SINGLE_TYPOS =
 (
-  Cavendish => [
-    'avendish', 
-    'caavendish', 
-    'cav',
-    'cavemdish', 
-    'cavendiish', 
-    'cavendiosh',
-    'cavvendish', 
-    'cavendsh'],
   'Paris Youth Open Teams' => ['ypob'],
 );
 

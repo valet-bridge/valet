@@ -447,7 +447,7 @@ sub singleton_tag_matches
     }
     elsif ($tag eq 'AGE' && $fix->{VALUE} eq 'Juniors')
     {
-      append_token($chain, 'SINGLETON', 'AGE', 'Juniors', $text, 
+      append_token($chain, 'SINGLETON', 'AGE', 'U26', $text, 
         $pos, $histo, $prefix);
 
       # Special case: Add an extra token.
@@ -462,7 +462,7 @@ sub singleton_tag_matches
     }
     elsif ($tag eq 'AGE' && $fix->{VALUE} eq 'Girls')
     {
-      append_token($chain, 'SINGLETON', 'AGE', 'Juniors', $text, 
+      append_token($chain, 'SINGLETON', 'AGE', 'U26', $text, 
         $pos, $histo, $prefix);
 
       # Special case: Add an extra token.

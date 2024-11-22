@@ -1106,7 +1106,7 @@ my %TOURNAMENTS_WORLD =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Juniors',
+    AGE => 'U26',
 
     EDITIONS =>
     {
@@ -2158,7 +2158,7 @@ my %TOURNAMENTS_WORLD =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
-    AGE => 'Juniors',
+    AGE => 'U26',
 
     EDITIONS =>
     {
@@ -3645,7 +3645,7 @@ my %TOURNAMENTS_WORLD =
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Women',
-    AGE => 'Juniors',
+    AGE => 'U26',
 
     EDITIONS =>
     {
@@ -3688,7 +3688,7 @@ my %TOURNAMENTS_WORLD =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
-    AGE => 'Juniors',
+    AGE => 'U26',
 
     EDITIONS =>
     {
@@ -3732,7 +3732,7 @@ my %TOURNAMENTS_WORLD =
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Juniors',
+    AGE => 'U26',
 
     EDITIONS =>
     {
@@ -3759,7 +3759,7 @@ my %TOURNAMENTS_WORLD =
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
-    AGE => 'Juniors',
+    AGE => 'U26',
 
     EDITIONS =>
     {
@@ -3832,7 +3832,7 @@ my %TOURNAMENTS_WORLD =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Juniors',
+    AGE => 'U26',
 
     EDITIONS =>
     {
@@ -4264,7 +4264,7 @@ my %TOURNAMENTS_WORLD =
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
-    AGE => 'Youngsters',
+    AGE => 'U21',
 
     EDITIONS =>
     {
@@ -4292,7 +4292,7 @@ my %TOURNAMENTS_WORLD =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Youngsters',
+    AGE => 'U21',
 
     EDITIONS =>
     {
@@ -4359,7 +4359,7 @@ my %TOURNAMENTS_WORLD =
     FORM => 'Teams',
     SCORING => 'BAM',
     GENDER => 'Open',
-    AGE => 'Juniors',
+    AGE => 'U26',
 
     EDITIONS =>
     {
@@ -4502,7 +4502,7 @@ my %TOURNAMENTS_WORLD =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Youngsters',
+    AGE => 'U21',
 
     EDITIONS =>
     {

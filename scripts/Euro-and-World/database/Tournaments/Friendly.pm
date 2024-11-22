@@ -788,7 +788,7 @@ my %TOURNAMENTS_FRIENDLY =
         MEET => 'Practice Match',
         MEET_TAG => '2013A',
         GENDER => 'Open',
-        AGE => 'Youngsters',
+        AGE => 'U21',
 
         CHAPTERS =>
         {
@@ -806,7 +806,7 @@ my %TOURNAMENTS_FRIENDLY =
         MEET => 'Practice Match',
         MEET_TAG => '2014A',
         GENDER => 'Open',
-        AGE => 'Youngsters',
+        AGE => 'U21',
 
         CHAPTERS =>
         {
@@ -1281,7 +1281,7 @@ my %TOURNAMENTS_FRIENDLY =
         MEET => 'Friendly Match',
         MEET_TAG => '2016E',
         GENDER => 'Open',
-        AGE => 'Youngsters',
+        AGE => 'U21',
 
         CHAPTERS =>
         {
@@ -2536,7 +2536,7 @@ my %TOURNAMENTS_FRIENDLY =
         MEET => 'Practice Match',
         MEET_TAG => '2007L',
         GENDER => 'Open',
-        AGE => 'Youngsters',
+        AGE => 'U21',
 
         CHAPTERS =>
         {
@@ -2885,7 +2885,7 @@ my %TOURNAMENTS_FRIENDLY =
         MEET => 'Friendly Match',
         MEET_TAG => '2013A',
         GENDER => 'Open',
-        AGE => 'Juniors',
+        AGE => 'U26',
 
         CHAPTERS =>
         {

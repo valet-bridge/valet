@@ -20,8 +20,11 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'European Youth Pairs Championships' => [
+    'european youth bridge pairs championship'],
   'European Youth Team Championships' => [
     'european youth bridge championship',
+    'european youth bridge teams championship',
     'european youth championships',
     'european youth championship',
     'youth european championship'],
@@ -29,6 +32,9 @@ my %MULTI_TYPOS =
 
 my %SINGLE_TYPOS =
 (
+  'European Youth Bridge Championship' => ['eybc'],
+  'European Youth Pairs Championships' => ['eybpc', 'eypc'],
+  'European Youth Team Championships' => ['eytc', 'jem'],
 );
 
 sub set_hash

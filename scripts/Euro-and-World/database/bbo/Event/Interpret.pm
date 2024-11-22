@@ -427,7 +427,7 @@ sub post_process_ambiguous_letters
 
   if ($field eq 'G')
   {
-    $token->set_general('SINGLETON', 'AGE', 'Juniors');
+    $token->set_general('SINGLETON', 'AGE', 'U26');
 
     my $token1 = Token->new();
     $token1->copy_origin_from($token);
@@ -440,7 +440,7 @@ sub post_process_ambiguous_letters
   }
   elsif ($field eq 'J')
   {
-    $token->set_general('SINGLETON', 'AGE', 'Juniors');
+    $token->set_general('SINGLETON', 'AGE', 'U26');
   }
   elsif ($field eq 'K')
   {
@@ -469,7 +469,7 @@ sub post_process_ambiguous_letters
   }
   elsif ($field eq 'Y')
   {
-    $token->set_general('SINGLETON', 'AGE', 'Youngsters');
+    $token->set_general('SINGLETON', 'AGE', 'U21');
   }
   else
   {

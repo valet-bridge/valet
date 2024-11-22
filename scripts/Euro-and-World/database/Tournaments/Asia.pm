@@ -383,7 +383,7 @@ my %TOURNAMENTS_ASIA =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
-    AGE => 'Juniors',
+    AGE => 'U26',
 
     EDITIONS =>
     {
@@ -430,7 +430,7 @@ my %TOURNAMENTS_ASIA =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Juniors',
+    AGE => 'U26',
 
     EDITIONS =>
     {
@@ -1270,7 +1270,7 @@ my %TOURNAMENTS_ASIA =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Youngsters',
+    AGE => 'U21',
 
     EDITIONS =>
     {
@@ -1745,7 +1745,7 @@ my %TOURNAMENTS_ASIA =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Youngsters',
+    AGE => 'U21',
 
     EDITIONS =>
     {

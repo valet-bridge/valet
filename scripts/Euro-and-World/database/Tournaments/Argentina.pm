@@ -122,7 +122,7 @@ my %MEETS_ARGENTINA =
 
 my %TOURNAMENTS_ARGENTINA =
 (
-  'Argentinian Club Teams',
+  'Argentinian Club Teams' =>
   {
     ORGANIZATION => 'ABA',
     COUNTRY => 'Argentina',
@@ -166,7 +166,7 @@ my %TOURNAMENTS_ARGENTINA =
     }
   },
 
-  'Argentinian Copa Republica',
+  'Argentinian Copa Republica' =>
   {
     ORGANIZATION => 'ABA',
     COUNTRY => 'Argentina',
@@ -243,7 +243,7 @@ my %TOURNAMENTS_ARGENTINA =
     }
   },
 
-  'Argentinian Flags Day Championship',
+  'Argentinian Flags Day Championship' =>
   {
     ORGANIZATION => 'ABA',
     COUNTRY => 'Argentina',
@@ -272,7 +272,7 @@ my %TOURNAMENTS_ARGENTINA =
     }
   },
 
-  'Argentinian Mixed Pairs',
+  'Argentinian Mixed Pairs' =>
   {
     ORGANIZATION => 'ABA',
     COUNTRY => 'Argentina',
@@ -301,7 +301,7 @@ my %TOURNAMENTS_ARGENTINA =
     }
   },
 
-  'Argentinian Mixed Teams',
+  'Argentinian Mixed Teams' =>
   {
     ORGANIZATION => 'ABA',
     COUNTRY => 'Argentina',
@@ -345,7 +345,7 @@ my %TOURNAMENTS_ARGENTINA =
     }
   },
 
-  'Argentinian Open Teams',
+  'Argentinian Open Teams' =>
   {
     ORGANIZATION => 'ABA',
     COUNTRY => 'Argentina',
@@ -467,7 +467,7 @@ my %TOURNAMENTS_ARGENTINA =
     }
   },
 
-  'Argentinian Open Trials',
+  'Argentinian Open Trials' =>
   {
     ORGANIZATION => 'ABA',
     COUNTRY => 'Argentina',
@@ -587,7 +587,7 @@ my %TOURNAMENTS_ARGENTINA =
     }
   },
 
-  'Argentinian Seniors Teams',
+  'Argentinian Seniors Teams' =>
   {
     ORGANIZATION => 'ABA',
     COUNTRY => 'Argentina',
@@ -616,7 +616,7 @@ my %TOURNAMENTS_ARGENTINA =
     }
   },
 
-  'Argentinian Senior Trials',
+  'Argentinian Senior Trials' =>
   {
     ORGANIZATION => 'ABA',
     COUNTRY => 'Argentina',
@@ -659,7 +659,35 @@ my %TOURNAMENTS_ARGENTINA =
     }
   },
 
-  'Argentinian Women Trials',
+  'Argentinian Women Club Teams' =>
+  {
+    ORGANIZATION => 'ABA',
+    COUNTRY => 'Argentina',
+    ORIGIN => 'National',
+    ZONE => 'South America',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            DATE_START => '2011-07-03',
+            DATE_END => '2011-07-03'
+          },
+        }
+      },
+    }
+  },
+
+  'Argentinian Women Trials' =>
   {
     GENDER => 'Women',
     AGE => 'Open',
@@ -725,7 +753,7 @@ my %TOURNAMENTS_ARGENTINA =
     }
   },
 
-  'Copa Zanalda River Plate',
+  'Copa Zanalda River Plate' =>
   {
     ORGANIZATION => 'ABA',
     COUNTRY => 'Argentina',
@@ -754,7 +782,7 @@ my %TOURNAMENTS_ARGENTINA =
     }
   },
 
-  'Mar del Plata Open Teams',
+  'Mar del Plata Open Teams' =>
   {
     ORGANIZATION => 'ABA',
     COUNTRY => 'Argentina',

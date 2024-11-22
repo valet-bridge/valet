@@ -887,6 +887,13 @@ my %TOURNAMENTS_EURO_YOUTH =
             YEAR => 2016,
             STAGE => 'Round-robin',
             DATE_START => '2016-07-13',
+            DATE_END => '2016-07-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            DATE_START => '2016-07-14',
             DATE_END => '2016-07-14'
           },
         }
@@ -933,32 +940,6 @@ my %TOURNAMENTS_EURO_YOUTH =
 
     EDITIONS =>
     {
-      '2023' =>
-      {
-        MEET => 'European Youth Pairs Championships',
-        CHAPTERS => 
-        {
-          'C0' => 
-          {
-            YEAR => 2023,
-            STAGE => 'Round-robin',
-            DATE_START => '2023-07-25',
-            DATE_END => '2023-07-26'
-          }
-        }
-      },
-    }
-  },
-
-  'European U26 Open Pairs' =>
-  {
-    ORIGIN => 'International',
-    GENDER => 'Open',
-    AGE => 'U26',
-    SCORING => 'MP',
-
-    EDITIONS =>
-    {
       '2008' =>
       {
         MEET => 'European Youth Pairs Championships',
@@ -988,6 +969,32 @@ my %TOURNAMENTS_EURO_YOUTH =
         }
       },
 
+      '2023' =>
+      {
+        MEET => 'European Youth Pairs Championships',
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Round-robin',
+            DATE_START => '2023-07-25',
+            DATE_END => '2023-07-26'
+          }
+        }
+      },
+    }
+  },
+
+  'European U26 Open Pairs' =>
+  {
+    ORIGIN => 'International',
+    GENDER => 'Open',
+    AGE => 'U26',
+    SCORING => 'MP',
+
+    EDITIONS =>
+    {
       '2010' =>
       {
         MEET => 'European Youth Pairs Championships',
@@ -1502,6 +1509,13 @@ my %TOURNAMENTS_EURO_YOUTH =
             YEAR => 2016,
             STAGE => 'Round-robin',
             DATE_START => '2016-07-15',
+            DATE_END => '2016-07-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            DATE_START => '2016-07-16',
             DATE_END => '2016-07-17'
           },
         }

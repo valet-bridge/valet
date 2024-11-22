@@ -24,7 +24,6 @@ my @MULTI_WORDS =
   'Argentinian Open Trials',
   'Argentinian Seniors Teams',
   'Argentinian Senior Trials',
-  'Argentinian Women Teams',
   'Argentinian Women Trials',
   'Copa Zanalda River Plate',
   'Mar del Plata Open Teams',

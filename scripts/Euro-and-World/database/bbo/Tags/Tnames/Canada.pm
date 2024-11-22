@@ -32,7 +32,7 @@ my %MULTI_TYPOS =
     'can open teams championship',
     'can open team championship',
     'can_ champ open'],
-  'Canadian Seniors Team Championship' => [
+  'Canadian Seniors Teams Championship' => [
     'canadian champ senior',
     'canadian champs senior',
     'canadian senior championship',

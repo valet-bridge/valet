@@ -144,7 +144,6 @@ my %MEETS_NORWAY =
 
 my %TOURNAMENTS_NORWAY =
 (
-
   'Bergen Grand Open Pairs' =>
   {
     ORGANIZATION => 'NBF',
