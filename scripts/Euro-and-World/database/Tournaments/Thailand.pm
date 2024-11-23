@@ -114,7 +114,6 @@ my %TOURNAMENTS_THAILAND =
 
   'Thailand Mixed Teams' =>
   {
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -140,7 +139,6 @@ my %TOURNAMENTS_THAILAND =
 
   'Thailand Open Teams' =>
   {
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -166,7 +164,6 @@ my %TOURNAMENTS_THAILAND =
 
   'Thailand Women Teams' =>
   {
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',

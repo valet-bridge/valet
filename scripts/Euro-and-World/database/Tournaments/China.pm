@@ -312,7 +312,6 @@ my %TOURNAMENTS_CHINA =
       {
         MEET => 'China Elite Tournament',
         MEET_TAG => '2011A',
-        CITY => 'Beijing',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -329,7 +328,6 @@ my %TOURNAMENTS_CHINA =
       {
         MEET => 'China Elite Tournament',
         MEET_TAG => '2012A',
-        CITY => 'Beijing',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1594,7 +1592,6 @@ my %TOURNAMENTS_CHINA =
       {
         MEET => 'China Elite Tournament',
         MEET_TAG => '2011B',
-        CITY => 'Beijing',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1611,7 +1608,6 @@ my %TOURNAMENTS_CHINA =
       {
         MEET => 'China Elite Tournament',
         MEET_TAG => '2012B',
-        CITY => 'Beijing',
         CHAPTERS =>
         {
           'SINGLE' => 

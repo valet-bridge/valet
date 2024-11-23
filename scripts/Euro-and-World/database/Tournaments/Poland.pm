@@ -1545,10 +1545,6 @@ my %TOURNAMENTS_POLAND =
 (
   'Andrzej Wilkosz Memorial Pairs',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -3152,7 +3148,7 @@ my %TOURNAMENTS_POLAND =
 
   'Józef Pochron Jubilee Pairs',
   {
-    aORM => 'Pairs',
+    FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',

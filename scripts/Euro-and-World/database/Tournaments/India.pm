@@ -2481,10 +2481,6 @@ my %TOURNAMENTS_INDIA =
 
   'Jaya Jain Memorial' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
-    ORIGIN => 'Regional',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -4069,7 +4065,6 @@ my %TOURNAMENTS_INDIA =
     ORIGIN => 'National',
     ZONE => 'Asia Pacific',
     FORM => 'Teams',
-    MOVEMENT => 'Swiss',
     SCORING => 'IAF',
     GENDER => 'Open',
     AGE => 'Open',
@@ -4083,6 +4078,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2014,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2014-09-19',
             DATE_END => '2014-09-21'
@@ -5153,10 +5149,6 @@ my %TOURNAMENTS_INDIA =
 
   'Ruia Silver Cup' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
-    ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

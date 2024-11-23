@@ -421,7 +421,6 @@ my %TOURNAMENTS_PORTUGAL =
 (
   'Azores Open Teams',
   {
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

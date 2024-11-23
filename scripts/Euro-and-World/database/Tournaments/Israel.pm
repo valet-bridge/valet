@@ -603,10 +603,6 @@ my %TOURNAMENTS_ISRAEL =
 
   'Israel Individual' =>
   {
-    ORGANIZATION => 'IBF',
-    COUNTRY => 'Israel',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Individual',
     SCORING => 'MP',
     GENDER => 'Open',

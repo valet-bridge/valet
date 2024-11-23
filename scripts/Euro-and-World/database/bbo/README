@@ -18,6 +18,8 @@ Data-based checks
 BOARDS
 Can use #boards to check consistency.
 
+TEAM NAMES vs International (not Transnational)
+
 Maybe special header formats
 BOARDS header 91 105 | actual 91 105 | counts 15 15 15 | 1384 lines
 BOARDS 91 105 | (1384,30,15)

@@ -277,6 +277,14 @@ my %MEETS_INDONESIA =
         DATE_START => '2014-12-08',
         DATE_END => '2014-12-16'
       },
+      '2015' =>
+      {
+        # https://bridge.web.id/2015/kejurnas-mhs/
+        CITY => 'Semarang',
+        YEAR => 2015,
+        DATE_START => '2015-11-03',
+        DATE_END => '2015-11-05'
+      },
     }
   },
 );
@@ -2004,10 +2012,7 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Pre-Sports Open Teams' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2150,10 +2155,6 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian U21 Teams' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
-    ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2196,7 +2197,6 @@ my %TOURNAMENTS_INDONESIA =
       {
         # https://bridge.web.id/2014/kejurnas-mhs/
         MEET => 'Indonesian Student Championship',
-        CITY => 'Surabaya',
 
         CHAPTERS =>
         {
@@ -2237,7 +2237,7 @@ my %TOURNAMENTS_INDONESIA =
       '2015' =>
       {
         # https://bridge.web.id/2015/kejurnas-mhs/
-        CITY => 'Semarang',
+        MEET => 'Indonesian Student Championship',
 
         CHAPTERS =>
         {
@@ -2326,10 +2326,6 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian U26 Teams' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
-    ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2374,7 +2370,6 @@ my %TOURNAMENTS_INDONESIA =
         # https://bridge.web.id/2014/kejurnas-mhs/
         MEET => 'Indonesian University Championship',
         ORDINAL => 16,
-        CITY => 'Surabaya',
 
         CHAPTERS =>
         {
@@ -2415,7 +2410,7 @@ my %TOURNAMENTS_INDONESIA =
       '2015' =>
       {
         # https://bridge.web.id/2015/kejurnas-mhs/
-        CITY => 'Semarang',
+        MEET => 'Indonesian University Championship',
 
         CHAPTERS =>
         {

@@ -765,10 +765,6 @@ my %TOURNAMENTS_NETHERLANDS =
 
   'The Hague Open Teams',
   {
-    ORGANIZATION => 'NBB',
-    COUNTRY => 'Netherlands',
-    CITY => 'The Hague',
-    ORIGIN => 'National',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -809,10 +805,6 @@ my %TOURNAMENTS_NETHERLANDS =
 
   'The Hague Pro-Am Pairs',
   {
-    ORGANIZATION => 'NBB',
-    COUNTRY => 'Netherlands',
-    CITY => 'The Hague',
-    ORIGIN => 'National',
     ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',

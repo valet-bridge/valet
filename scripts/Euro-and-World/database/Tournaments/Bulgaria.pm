@@ -1048,7 +1048,6 @@ my %TOURNAMENTS_BULGARIA =
 
   'Cherven Briag Open Teams' =>
   {
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

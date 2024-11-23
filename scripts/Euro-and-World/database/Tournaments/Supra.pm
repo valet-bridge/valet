@@ -389,7 +389,6 @@ my %TOURNAMENTS_SUPRA =
 
   'Buffett Cup Pairs' =>
   {
-    ORIGIN => 'International',
     FORM => 'Pairs',
     GENDER => 'Open',
     AGE => 'Open',
@@ -1172,8 +1171,6 @@ my %TOURNAMENTS_SUPRA =
       '2007' =>
       {
         MEET => 'Channel Trophy',
-        CITY => 'Utrecht',
-        COUNTRY => 'Netherlands',
         CHAPTERS =>
         {
           'SINGLE' => 

@@ -902,7 +902,6 @@ my %TOURNAMENTS_BALTIC =
 
   'Fortuna Cup' =>
   {
-    ZONE => 'Europe',
     FORM => 'Pairs',
     GENDER => 'Open',
     AGE => 'Open',

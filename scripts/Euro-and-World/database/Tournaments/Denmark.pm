@@ -204,7 +204,6 @@ my %TOURNAMENTS_DENMARK =
     FORM => 'Pairs',
     GENDER => 'Open',
     AGE => 'Open',
-    CITY => 'Copenhagen',
 
     EDITIONS =>
     {
