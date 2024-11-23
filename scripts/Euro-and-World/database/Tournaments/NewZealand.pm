@@ -220,6 +220,7 @@ my %TOURNAMENTS_NEWZEALAND =
 
       '2006' =>
       {
+        MEET => 'New Zealand National Congress',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -299,6 +300,7 @@ my %TOURNAMENTS_NEWZEALAND =
 
       '2011' =>
       {
+        MEET => 'New Zealand National Congress',
         CHAPTERS =>
         {
           'SINGLE' => 

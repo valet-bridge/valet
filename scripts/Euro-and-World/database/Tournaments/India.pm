@@ -597,6 +597,18 @@ my %MEETS_INDIA =
         DATE_START => '2010-01-07',
         DATE_END => '2010-01-10'
       },
+      '2011' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-01-04',
+        DATE_END => '2011-01-09'
+      },
+      '2012' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-01-06',
+        DATE_END => '2012-01-08'
+      },
       '2013' =>
       {
         YEAR => 2013,
@@ -608,6 +620,12 @@ my %MEETS_INDIA =
         YEAR => 2014,
         DATE_START => '2014-01-04',
         DATE_END => '2014-01-06'
+      },
+      '2015' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-01-09',
+        DATE_END => '2015-01-11'
       },
       '2016' =>
       {
@@ -725,7 +743,7 @@ my %TOURNAMENTS_INDIA =
   {
     ORGANIZATION => 'BFI',
     COUNTRY => 'India',
-    ORIGIN => 'National',
+    ORIGIN => 'Regional',
     ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -780,6 +798,8 @@ my %TOURNAMENTS_INDIA =
       },
       '2015' =>
       {
+        # Probably 'Goa Bridge Festival', but collides with
+        # Shree Keni Trophy?
         CHAPTERS =>
         {
           'C0' => 
@@ -2467,7 +2487,7 @@ my %TOURNAMENTS_INDIA =
   {
     ORGANIZATION => 'BFI',
     COUNTRY => 'India',
-    ORIGIN => 'National',
+    ORIGIN => 'Regional',
     ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -2478,6 +2498,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2012' =>
       {
+        MEET => 'Uttar Pradesh State Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2715,6 +2736,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2010' =>
       {
+        MEET => 'Maharaja Holkar National Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2727,6 +2749,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2011' =>
       {
+        MEET => 'Maharaja Holkar National Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -2764,6 +2787,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2012' =>
       {
+        MEET => 'Maharaja Holkar National Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -2794,6 +2818,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2015' =>
       {
+        MEET => 'Maharaja Holkar National Championship',
         CHAPTERS =>
         {
           'C0' => 

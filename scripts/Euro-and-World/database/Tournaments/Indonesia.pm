@@ -2195,6 +2195,7 @@ my %TOURNAMENTS_INDONESIA =
       '2014' =>
       {
         # https://bridge.web.id/2014/kejurnas-mhs/
+        MEET => 'Indonesian Student Championship',
         CITY => 'Surabaya',
 
         CHAPTERS =>
@@ -2371,6 +2372,7 @@ my %TOURNAMENTS_INDONESIA =
       '2014' =>
       {
         # https://bridge.web.id/2014/kejurnas-mhs/
+        MEET => 'Indonesian University Championship',
         ORDINAL => 16,
         CITY => 'Surabaya',
 
@@ -2767,6 +2769,7 @@ my %TOURNAMENTS_INDONESIA =
       },
       '2012' =>
       {
+        MEET => 'Indonesian National Games',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2891,8 +2894,10 @@ my %TOURNAMENTS_INDONESIA =
           },
         }
       },
-      '2007' =>
+      '2007A' =>
       {
+        MEET => 'Indonesian National Championship Week',
+        MEET_TAG => '2007',
         ORDINAL => 4,
         CHAPTERS =>
         {
@@ -2905,7 +2910,14 @@ my %TOURNAMENTS_INDONESIA =
             DATE_START => '2007-05-15',
             DATE_END => '2007-05-15'
           },
-          'C1' => 
+        }
+      },
+      '2007B' =>
+      {
+        ORDINAL => 4,
+        CHAPTERS =>
+        {
+          'C0' => 
           {
             YEAR => 2007,
             STAGE => 'Final',
@@ -2913,7 +2925,7 @@ my %TOURNAMENTS_INDONESIA =
             DATE_START => '2007-08-12',
             DATE_END => '2007-08-12'
           },
-          'C2' => 
+          'C1' => 
           {
             YEAR => 2007,
             MOVEMENT => 'Swiss',
@@ -3070,7 +3082,7 @@ my %TOURNAMENTS_INDONESIA =
           } 
         }
       },
-      '2014' =>
+      '2014A' =>
       {
         # https://bridge.web.id/2014/kepri/
         ORDINAL => 11,
@@ -3095,7 +3107,19 @@ my %TOURNAMENTS_INDONESIA =
             DATE_START => '2014-08-30',
             DATE_END => '2014-08-31'
           },
-          'C2' => 
+        }
+      },
+      '2014B' =>
+      {
+        # https://bridge.web.id/2014/kepri/
+        MEET => 'Indonesian National Championship Week',
+        MEET_TAG => '2014',
+        ORDINAL => 11,
+        CITY => 'Batam',
+
+        CHAPTERS =>
+        {
+          'C0' => 
           {
             YEAR => 2014,
             MOVEMENT => 'Swiss',
@@ -3254,12 +3278,13 @@ my %TOURNAMENTS_INDONESIA =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'U31',
 
     EDITIONS =>
     {
       '2014' =>
       {
+        MEET => 'Indonesian University Championship',
         CHAPTERS =>
         {
           'SINGLE' => 

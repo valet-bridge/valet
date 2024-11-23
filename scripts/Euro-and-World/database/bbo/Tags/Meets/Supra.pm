@@ -22,7 +22,10 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  'Buffett Cup' => ['buffet cup', 'bufett cup'],
+  'Buffett Cup' => [
+    'bufett cup',
+    'buffet cup', 
+    'buffett cups'], 
   'Channel Trophy' => ['channel trpohy'],
   'Neighbor Challenge' => ['neighbour challenge'],
 );

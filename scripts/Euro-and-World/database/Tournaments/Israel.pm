@@ -1092,6 +1092,8 @@ my %TOURNAMENTS_ISRAEL =
       },
       '2010B' =>
       {
+        MEET => 'Israel Grand Prix',
+        MEET_TAG => '2010',
         CHAPTERS =>
         {
           'SINGLE' => 

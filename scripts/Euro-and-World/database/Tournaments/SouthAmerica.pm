@@ -651,11 +651,11 @@ my %TOURNAMENTS_SOUTHAMERICA =
           } 
         }
       },
-      '2015' =>
+      '2015A' =>
       {
         CHAPTERS =>
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 2015,
             STAGE => 'Final',
@@ -663,7 +663,15 @@ my %TOURNAMENTS_SOUTHAMERICA =
             DATE_START => '2015-03-07',
             DATE_END => '2015-03-08'
           },
-          'C1' => 
+        }
+      },
+      '2015B' =>
+      {
+        MEET => 'South American Team Championship',
+        MEET_TAG => '2015',
+        CHAPTERS =>
+        {
+          'C0' => 
           {
             YEAR => 2015,
             STAGE => 'Round-robin',
@@ -671,7 +679,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
             DATE_START => '2015-05-11',
             DATE_END => '2015-05-14'
           },
-          'C2' => 
+          'C1' => 
           {
             YEAR => 2015,
             STAGE => 'Semifinal',
@@ -679,7 +687,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
             DATE_START => '2015-05-14',
             DATE_END => '2015-05-15'
           },
-          'C3' => 
+          'C2' => 
           {
             YEAR => 2015,
             STAGE => 'Final',
@@ -947,12 +955,12 @@ my %TOURNAMENTS_SOUTHAMERICA =
           } 
         }
       },
-      '2015' =>
+      '2015A' =>
       {
         CHAPTERS =>
         {
           # Could be Trials
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 2015,
             STAGE => 'Final',
@@ -960,7 +968,15 @@ my %TOURNAMENTS_SOUTHAMERICA =
             DATE_START => '2015-03-08',
             DATE_END => '2015-03-09'
           },
-          'C1' => 
+        }
+      },
+      '2015B' =>
+      {
+        MEET => 'South American Team Championship',
+        MEET_TAG => '2015',
+        CHAPTERS =>
+        {
+          'C0' => 
           {
             YEAR => 2015,
             STAGE => 'Round-robin',
@@ -968,7 +984,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
             DATE_START => '2015-05-11',
             DATE_END => '2015-05-13'
           },
-          'C2' => 
+          'C1' => 
           {
             YEAR => 2015,
             STAGE => 'Semifinal',
@@ -976,7 +992,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
             DATE_START => '2015-05-15',
             DATE_END => '2015-05-15'
           },
-          'C3' => 
+          'C2' => 
           {
             YEAR => 2015,
             STAGE => 'Final',

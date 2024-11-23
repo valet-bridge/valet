@@ -70,6 +70,7 @@ my %MULTI_TYPOS =
     'trofeo challenger città di roma'],
   'Torneo di Roma' => ['angelini teams'],
   'Viareggio Cup' => [
+    'torneo internazionale coppie viareggio',
     'coppie viareggio'],
 );
 

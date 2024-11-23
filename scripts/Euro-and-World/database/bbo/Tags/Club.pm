@@ -233,6 +233,7 @@ my @MULTI_WORDS =
   'Isparta Club',
   'Istanbul Sports',
   'Izmir BSB',
+  'Jaipur Club',
   'Jakarta BBG',
   'Jessheim BK',
   'Jomtien Bridge Club',

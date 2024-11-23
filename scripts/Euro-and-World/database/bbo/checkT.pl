@@ -10,20 +10,48 @@ use lib '.';
 use lib './Tags';
 
 use LinksT;
+use DateCalc;
 use Tags::Tname;
 use Tags::Meet;
 
-my $debug = 0;
-my $debug_division = 'PAKISTAN';
+my $debug;
+my $debug_division = '';
 
 my (%links_t, %links_m);
 my (%links_thash, %links_mhash);
+
+my %IGNORE_MEETS = (
+  'APBF Women Elite Tournament|2006|C2' => 
+    'FISU World University Championships',
+  'APBF Women Elite Tournament|2006|C3' =>
+    'FISU World University Championships',
+  'Bologna Trophy|2014|C0' => 'Italy Cup',
+  'Torneo di Roma|2014|C0' => 'Italy Cup',
+  'Viareggio Cup|2005|C0' => 'Italian Club Championship',
+  'Polish Premier League|2012|C2' => 'Zulawski Congress',
+  'Polish Premier League|2013|C2' => 'Zulawski Congress',
+  'All India Bangur Cement Hindusthan Club|2015|C0' =>
+    'Goa Bridge Festival',
+  'All India Bangur Cement Hindusthan Club|2015|C1' =>
+    'Goa Bridge Festival',
+  'Izmir Winter Teams Cup|2016|SINGLE' => 'Sivrioglu Festival'
+);
 
 
 # Check that tournaments and Tname/Meet have the same primary names.
 # Also check that whether a tournament would have a compatible meet.
 
-die "perl digest.pl cooked.txt" unless ($#ARGV == -1);
+die "perl checkT.pl [INDONESIA]" unless ($#ARGV <= 0);
+
+if ($#ARGV == 0)
+{
+  $debug = 1;
+  $debug_division = $ARGV[0];
+}
+else
+{
+  $debug = 0;
+}
 
 my %divisionsT;
 LinksT::init_linksT(\%divisionsT);
@@ -40,6 +68,7 @@ if ($debug)
     \%links_thash, \%tname_hash);
   check_same_hash("Meet", $debug_division,
     \%links_mhash, \%meet_hash);
+  suggest_meets($debug_division);
 }
 else
 {
@@ -55,6 +84,7 @@ else
       \%links_thash, \%tname_hash);
     check_same_hash("Meet", $key,
       \%links_mhash, \%meet_hash);
+  suggest_meets($key);
   }
 }
 
@@ -103,4 +133,54 @@ sub check_same_hash
   }
 }
 
+
+sub suggest_meets
+{
+  my ($key) = @_;
+
+  my @keys = sort keys %links_t;
+  return unless $#keys == 0;
+
+  for my $tname (sort keys %{$links_t{$keys[0]}})
+  {
+    my $editions = $links_t{$keys[0]}{$tname}{EDITIONS};
+    for my $tag (sort keys %$editions)
+    {
+      my $edition = $editions->{$tag};
+      next if exists $edition->{MEET};
+
+      for my $ctag (sort keys %{$edition->{CHAPTERS}})
+      {
+        my $chapter = $edition->{CHAPTERS}{$ctag};
+        my $cdate1 = $chapter->{DATE_START};
+        my $cdate2 = $chapter->{DATE_END};
+
+        for my $meet (sort keys %{$links_m{$keys[0]}})
+        {
+          my $meditions = $links_m{$keys[0]}{$meet}{EDITIONS};
+          for my $mtag (sort keys %$meditions)
+          {
+            my $mchapter = $meditions->{$mtag};
+            my $mdate1 = $mchapter->{DATE_START};
+            my $mdate2 = $mchapter->{DATE_END};
+
+            # warn "$tname, $ctag: $cdate1, $mdate1";
+
+            my $tdate = DateCalc->new();
+            $tdate->set_by_field($cdate1);
+            next unless $tdate->distance($mdate1, $mdate2) == 0;
+
+            $tdate->set_by_field($cdate2);
+            next unless $tdate->distance($mdate1, $mdate2) == 0;
+
+            my $str = $tname . '|' . $mtag . '|' . $ctag;
+            next if exists $IGNORE_MEETS{$str};
+
+            warn "$tname, $ctag: Matches meet $meet, $mtag?";
+          }
+        }
+      }
+    }
+  }
+}
 

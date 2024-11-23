@@ -1635,6 +1635,7 @@ my %TOURNAMENTS_POLAND =
     {
       '2015' =>
       {
+        MEET => 'Palace Cup',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2309,6 +2310,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2014B' =>
       {
+        MEET => 'Luczniczka Meeting',
+        MEET_TAG => '2014',
         CITY => 'Bydgoszcz',
         CHAPTERS =>
         {
@@ -3166,6 +3169,8 @@ my %TOURNAMENTS_POLAND =
       '2014' =>
       {
         # https://wyniki.pzbs.pl/2014/mppimp/W-impa.html
+        MEET => 'Polish Championships',
+        MEET_TAG => '2014B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -5109,6 +5114,7 @@ my %TOURNAMENTS_POLAND =
     {
       '2014' =>
       {
+        MEET => 'Boleslawiec Festival',
         CHAPTERS => 
         {
           'SINGLE' => 
@@ -6082,6 +6088,7 @@ my %TOURNAMENTS_POLAND =
       '2016' =>
       {
         # https://wyniki.pzbs.pl/2016/mpp/W-u25.html
+        MEET => 'Polish Championships',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -6167,6 +6174,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2012' =>
       {
+        MEET => 'Luczniczka Meeting',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -6416,6 +6424,7 @@ my %TOURNAMENTS_POLAND =
       # https://wyniki.pzbs.pl/2013/130530zlot/W-13zlotmax1.html
       '2013' =>
       {
+        MEET => 'Poznan Congress',
         CITY => 'Warsaw',
         CHAPTERS =>
         {

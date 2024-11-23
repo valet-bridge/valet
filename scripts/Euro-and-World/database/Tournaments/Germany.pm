@@ -1435,6 +1435,7 @@ my %TOURNAMENTS_GERMANY =
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=24659&site=0&kl=0
         ORDINAL => '16th',
+        MEET => 'German Championship Week',
         CITY => 'Wetzlar',
 
         CHAPTERS => 

@@ -224,7 +224,7 @@ my %MEETS_ASIA =
         COUNTRY => 'Indonesia',
         YEAR => 2008,
         DATE_START => '2008-12-03',
-        DATE_END => '2008-12-07'
+        DATE_END => '2008-12-08'
       },
       '2009' =>
       {
@@ -1392,7 +1392,8 @@ my %TOURNAMENTS_ASIA =
       },
       '2008A' =>
       {
-        # Suspect -- PABF rather than APBF?
+        MEET => 'APBF Championships',
+        MEET_TAG => '2008',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1411,13 +1412,21 @@ my %TOURNAMENTS_ASIA =
         MEET_TAG => '2008',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2008,
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2008-12-07',
             DATE_END => '2008-12-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2008-12-08',
+            DATE_END => '2008-12-08'
           } 
         }
       },

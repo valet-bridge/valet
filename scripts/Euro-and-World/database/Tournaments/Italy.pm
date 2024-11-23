@@ -211,8 +211,6 @@ my %MEETS_ITALY =
     COUNTRY => 'Italy',
     ORIGIN => 'National',
     ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
 
     EDITIONS =>
     {
@@ -370,7 +368,7 @@ my %MEETS_ITALY =
         YEAR => 2022,
         CITY => 'Salsomaggiore',
         DATE_START => '2022-10-12',
-        DATE_END => '2022-10-30'
+        DATE_END => '2022-11-01'
       },
       '2023' =>
       {
@@ -1225,6 +1223,8 @@ my %TOURNAMENTS_ITALY =
   # of Men into Open in the original files.
   'Italian Men Cup' =>
   {
+    FORM => 'Teams',
+    SCORING => 'IMP',
     GENDER => 'Men',
     AGE => 'Open',
 
@@ -1389,6 +1389,8 @@ my %TOURNAMENTS_ITALY =
 
   'Italian Mixed Cup' =>
   {
+    FORM => 'Teams',
+    SCORING => 'IMP',
     GENDER => 'Mixed',
     AGE => 'Open',
 
@@ -1748,6 +1750,7 @@ my %TOURNAMENTS_ITALY =
     {
       '2014' =>
       {
+        MEET => 'Italy Cup',
         YEAR => 2014,
         CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2014/CXCCMX/indice.asp
@@ -1764,6 +1767,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2015' =>
       {
+        MEET => 'Italy Cup',
         YEAR => 2015,
         CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2015/CXCCMX/indice.asp
@@ -1781,6 +1785,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2016' =>
       {
+        MEET => 'Italy Cup',
         YEAR => 2016,
         CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2016/CXCCMX/indice.asp
@@ -1798,6 +1803,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2017' =>
       {
+        MEET => 'Italy Cup',
         YEAR => 2017,
         CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2017/CXCCMX/indice.asp
@@ -1815,6 +1821,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2018' =>
       {
+        MEET => 'Italy Cup',
         YEAR => 2018,
         CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2018/CXCCMX/indice.asp
@@ -1832,6 +1839,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2019' =>
       {
+        MEET => 'Italy Cup',
         YEAR => 2019,
         CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2019/CXCCMX/indice.asp
@@ -1849,6 +1857,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2022' =>
       {
+        MEET => 'Italy Cup',
         YEAR => 2022,
         CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2022/CXCCMX/indice.asp
@@ -1866,6 +1875,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2023' =>
       {
+        MEET => 'Italy Cup',
         YEAR => 2023,
         CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2023/CXCCLBMX/indice.asp
@@ -2120,6 +2130,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2024' =>
       {
+        MEET => 'Italy Cup',
         YEAR => 2024,
         CITY => 'Salsomaggiore',
         # Not yet available
@@ -2141,6 +2152,8 @@ my %TOURNAMENTS_ITALY =
 
   'Italian Open Cup' =>
   {
+    FORM => 'Teams',
+    SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
@@ -3035,6 +3048,8 @@ my %TOURNAMENTS_ITALY =
 
   'Italian O55 Cup' =>
   {
+    FORM => 'Teams',
+    SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'O55',
 
@@ -3060,6 +3075,8 @@ my %TOURNAMENTS_ITALY =
 
   'Italian Senior Cup' =>
   {
+    FORM => 'Teams',
+    SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Seniors',
 
@@ -3460,6 +3477,8 @@ my %TOURNAMENTS_ITALY =
 
   'Italian Women Cup' =>
   {
+    FORM => 'Teams',
+    SCORING => 'IMP',
     GENDER => 'Women',
     AGE => 'Open',
 

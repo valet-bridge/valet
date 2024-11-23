@@ -403,6 +403,7 @@ my %TOURNAMENTS_NORWAY =
 
     EDITIONS =>
     {
+      # The dates are rough guesses based on their BBO numbers.
       '2005' =>
       {
         CHAPTERS =>
@@ -411,8 +412,8 @@ my %TOURNAMENTS_NORWAY =
           {
             YEAR => 2005,
             major => 'MATCH',
-            DATE_START => '2005-10-21',
-            DATE_END => '2005-10-23'
+            DATE_START => '2005-05-21',
+            DATE_END => '2005-05-23'
           } 
         }
       },
@@ -424,8 +425,8 @@ my %TOURNAMENTS_NORWAY =
           {
             YEAR => 2006,
             major => 'MATCH',
-            DATE_START => '2006-08-09',
-            DATE_END => '2006-08-09'
+            DATE_START => '2006-05-09',
+            DATE_END => '2006-05-09'
           } 
         }
       },
@@ -437,8 +438,8 @@ my %TOURNAMENTS_NORWAY =
           {
             YEAR => 2007,
             major => 'MATCH',
-            DATE_START => '2007-08-27',
-            DATE_END => '2007-08-27'
+            DATE_START => '2007-05-27',
+            DATE_END => '2007-05-27'
           } 
         }
       },

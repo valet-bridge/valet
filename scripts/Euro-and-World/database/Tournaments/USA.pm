@@ -4367,6 +4367,7 @@ my %TOURNAMENTS_USA =
       },
       '2008' =>
       {
+        MEET => 'United States Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 

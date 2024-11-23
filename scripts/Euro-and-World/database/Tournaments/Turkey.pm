@@ -2734,6 +2734,7 @@ my %TOURNAMENTS_TURKEY =
       '2016' =>
       {
         # http://clubs.vugraph.com/tbricfed/calendar.php?month=7&year=2016
+        MEET => 'Turkish Open Trials',
         CHAPTERS =>
         {
           'SINGLE' => 

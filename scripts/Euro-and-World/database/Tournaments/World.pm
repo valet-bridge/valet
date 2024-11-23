@@ -2113,6 +2113,7 @@ my %TOURNAMENTS_WORLD =
     {
       '2006' =>
       {
+        # Maybe at 'FISU World University Championship',
         CHAPTERS =>
         {
           'C0' => 

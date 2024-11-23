@@ -176,7 +176,8 @@ my %MULTI_TYPOS =
     'karnik vaidya open',
     'karnik-vaidya annual'],
   'L C Sunil Rajendra Memorial' => ['l_c_sunil rajendra memorial'],
-  'Lalit Mohanka Memorial' => ['lalit mohanka memorials'],
+  'Lalit Mohanka Memorial' => [
+    'lalit mohanka memorials'],
   'Lokmanya Jubilee' => [
     'lokmanya ss silver jubilee',
     'lokmanya ss siver jubliee', 

@@ -6033,11 +6033,12 @@ my %TOURNAMENTS_AUSTRALIA =
         {
           'SINGLE' => 
           {
+            # Estimated.
             YEAR => 2008,
             STAGE => 'Playoff',
             major => 'SEGMENT',
-            DATE_START => '2008-05-04',
-            DATE_END => '2008-05-04'
+            DATE_START => '2008-04-04',
+            DATE_END => '2008-04-04'
           },
         }
       },

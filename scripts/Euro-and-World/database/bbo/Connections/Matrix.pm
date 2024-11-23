@@ -577,6 +577,7 @@ my %CITY_TO_CLUB =
     'Buca Sports', 'Goztepe Hilal SK', 'Izmir BSB', 'Sirinyer Sports', 
     'Ege Club', 'Karsiyaka BSK', 'Narlidere Club', 'Cimentas Club', 
     'Konak Club'],
+  Jaipur => ['Jaipur Club'],
   Jakarta => ['Bhinneka Bridge Club', 'Gabrial University of Indonesia', 
     'Jakarta BBG', 'Pelatnas', 'Siwo Persatuan Wartawan Indonesia', 
     'Pertamina BC', 'EIBC Jakarta'],

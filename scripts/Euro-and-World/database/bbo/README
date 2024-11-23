@@ -1,12 +1,22 @@
-
 Checks:
-- If Tname has no meet, would it have a compatible one in the file?
-- Values of fields, e.g. COUNTRY, CITY
-- Consistency of e.g. CITY and COUNTRY
+
+Values of fields, e.g. COUNTRY, CITY
+- Loop tournament, {EDITIONS} years, {CHAPTERS} tags
+  - Roll up the flat header, implemented  in ParseT check_consistency
+  - Check each field against Whole (must be a correct top-level value)
+  - If in Matrix, look up and check implications, e.g. CITY -> COUNTRY
 
 - Look over ORIGIN manually
 
-Duplicates/overlaps such as 23000, 23004, 23005
+CLEANUP
+No Tword anymore?
+
+-----
+
+Data-based checks
+
+BOARDS
+Can use #boards to check consistency.
 
 Maybe special header formats
 BOARDS header 91 105 | actual 91 105 | counts 15 15 15 | 1384 lines
@@ -15,13 +25,15 @@ BOARDS 91 105 | (1384,30,15)
 BOARDS header 61 75 | actual 61 75 | counts 14 15 14 | 735 lines
 BOARDS 61 75 (o68) | (735,29,15)
 
-Can also use #boards to check consistency.
+DATES
+Tname dates as tight as possible?
 
-5318 could split by GROUP if they all have one
+COUNTERS
+Chapters with counters/Stage in data, but not set in Tournaments
 
-- Dates in Tname as tight as possible
-- Counters
-  - Chapters with counters/Stage in data, but not set in Tournaments
+FIELD_BASED OUTPUTS
+- 5318 could split by GROUP if they all have one
+- Duplicates/overlaps such as 23000, 23004, 23005
 
 Fields
 - Move YEAR up to above CHAPTERS
@@ -56,14 +68,7 @@ Cornell in Australian tournaments is not Cornell University, e.g.
 
 VERBOSE flag in RegCounter, for new countries or datasets.
 
-Store pdf's showing also player names
-
-Scrapers:
-Maybe store scraped pdf's of URL's when available?
-
 * Activate KDEBUG in Knowledge.pm
-* Can we limit TWORD to actual multi-purpose tournament and not
-  single words?
 
 More general stuff
 ------------------
