@@ -70,6 +70,7 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   Championship
   Fluff
+  Tournament
   Uninformative
 );
 
@@ -92,6 +93,9 @@ my %SINGLE_TYPOS =
     'krs', 'ktp', 'ld', 'min', 'mr', 'nc', 'nk', 'no', 'npc', 'nr', 'ns',
     'og', 'pc', 'se', 'tc', 'te', 'teh', 'th', 'the', 'tn',
     'ts', 'tv', 'und', 'vsa', 'vsb', 'vw','xy', 'yz', 'zw'],
+  Tournament => ['tourn', 'tourname', 'tourney', 'turnament',
+    'tourmanent', 'tourna', 'tournamnt', 'toernooi', 'turneringen',
+    'tounoi', 'torneo', 'tournoi', 'turniej', 'trniej'],
   Uninformative => ['?', '*',
     'ab', 'am', 'alumni', 'anniversary', 'annual', 'any', 'away',
     'alle', 'best', 'bridge', 'bric', 'bdg',

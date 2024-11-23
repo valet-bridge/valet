@@ -29,7 +29,6 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   Club 
   Cup
-  Tournament 
   Training 
   Trial 
 );
@@ -38,9 +37,6 @@ my %SINGLE_TYPOS =
 (
   Club => ['clubs', 'clut', 'clybs'],
   Cup => ['cups', 'coppa'],
-  Tournament => ['tourn', 'tourname', 'tourney', 'turnament', 
-    'tourmanent', 'tourna', 'tournamnt', 'toernooi', 'turneringen', 
-    'tounoi', 'torneo', 'tournoi', 'turniej', 'trniej'],
   Trial => ['trials', 'trail', 'trails', 'triaals',
     'selection', 'seleccion', 'selección', 'select',
     'selections', 'selekction', 'selelection', 'sélection', 'selectio',
