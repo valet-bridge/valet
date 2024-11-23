@@ -34,6 +34,9 @@ my %MULTI_TYPOS =
     'BBO 7', 'BBO 8', 'BBO 9', 'BBO - 2',
     'bbvg', 'bbovg', 'vg1', 'vg2', 'vg3', 'vg 1', 'vg 2', 'vg 3',
     'vmg 1'],
+  Championship => ["ch'ship", 'ch.ship', "champion's",
+    "championship's", "chmpionship's", 'champion ship',
+    'championship flight', 'championship flt'],
   'Empty Words' => ['Around 52 cards in 80 years',
     'before bermuda bowl', 'best play', 'bridge master champion', 
     'bridge master champions', 'by joe pochron',
@@ -65,12 +68,23 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  Championship
   Fluff
   Uninformative
 );
 
 my %SINGLE_TYPOS =
 (
+  Championship => ['champ', 'champion', 'champions',
+    'championshi', 'championships', 'championsihp', 'champioship',
+    'champs', 'chams', 'chmp', 'chmapionship', 'chship', 'chships',
+    'chamionship', 'chammp', 'cham', 'champhionship', 'champhionships',
+    'champi', 'champinonship', 'chamiponship', 'champinships',
+    'champiomship', 'championchips', 'championhip', 'championsship',
+    'champonship', 'chamrionship', 'chapionship', 'chapmionship',
+    'chmpionship', 'championhips', 'champions<92>', 'chaionships',
+    'chamapionship', 'champiosnhip', 'meistershaft', 'cs',
+    'champinship', 'campeonato'],
   Fluff => ['>', 'aa', 'abd', 'aft', 'and', 'as', 'at', 'av',
     'b!', 'bbo', 'bboz', 'bt', 'bv', 'by',
     'de', 'des', 'ds', 'du', 'dw', 'dwii', 'enc', 'eve', 'ew',

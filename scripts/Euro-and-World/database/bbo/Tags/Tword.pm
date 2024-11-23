@@ -14,14 +14,10 @@ our @EXPORT = qw(set_hashes);
 my @MULTI_WORDS =
 (
   'First Division',
-  'Invitational Bridge Meeting'
 );
 
 my %MULTI_TYPOS =
 (
-  Championship => ["ch'ship", 'ch.ship', "champion's",
-    "championship's", "chmpionship's", 'champion ship',
-    'championship flight', 'championship flt'],
   'First Division' => ['1_ division', '1st division', 'd1', 
     'division1', 'division 1', 'i liga', '1_division', 'a division'],
   Trial => [
@@ -31,7 +27,6 @@ my %MULTI_TYPOS =
 
   # Challenge 
 my @SINGLE_WORDS = qw(
-  Championship 
   Club 
   Cup
   Tournament 
@@ -41,16 +36,6 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  Championship => ['champ', 'champion', 'champions', 
-    'championshi', 'championships', 'championsihp', 'champioship', 
-    'champs', 'chams', 'chmp', 'chmapionship', 'chship', 'chships', 
-    'chamionship', 'chammp', 'cham', 'champhionship', 'champhionships', 
-    'champi', 'champinonship', 'chamiponship', 'champinships',
-    'champiomship', 'championchips', 'championhip', 'championsship',
-    'champonship', 'chamrionship', 'chapionship', 'chapmionship', 
-    'chmpionship', 'championhips', 'champions', 'chaionships',
-    'chamapionship', 'champiosnhip', 'meistershaft', 'cs',
-    'champinship', 'campeonato'],
   Club => ['clubs', 'clut', 'clybs'],
   Cup => ['cups', 'coppa'],
   Tournament => ['tourn', 'tourname', 'tourney', 'turnament', 
