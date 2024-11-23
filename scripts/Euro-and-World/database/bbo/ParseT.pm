@@ -435,6 +435,7 @@ sub check_consistency
         }
 
         my %cumul2;
+        # next;
         my $errstr = "$tournament, $tag, $ctag";
         $self->get_all_fields($tournament, $tag, $ctag, \%cumul2);
 

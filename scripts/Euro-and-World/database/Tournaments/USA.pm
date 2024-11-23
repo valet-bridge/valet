@@ -234,6 +234,7 @@ my %MEETS_USA =
       },
       '2004C' =>
       {
+        # Senior Teams
         ORDINAL => 78,
         YEAR => 2004,
         CITY => 'Orlando',
@@ -282,6 +283,7 @@ my %MEETS_USA =
       },
       '2006C' =>
       {
+        # Senior Teams
         ORDINAL => 79, # Should be 80?
         YEAR => 2006, 
         CITY => 'Honolulu',
@@ -306,6 +308,7 @@ my %MEETS_USA =
       },
       '2007C' =>
       {
+        # Senior Teams
         ORDINAL => 81,
         YEAR => 2007,
         CITY => 'San Francisco',
@@ -330,6 +333,7 @@ my %MEETS_USA =
       },
       '2008C' =>
       {
+        # Senior Teams
         ORDINAL => 81,
         YEAR => 2008,
         CITY => 'Boston',
@@ -354,6 +358,7 @@ my %MEETS_USA =
       },
       '2009C' =>
       {
+        # Senior Teams
         ORDINAL => 83,
         YEAR => 2009,
         CITY => 'San Diego',
@@ -378,6 +383,7 @@ my %MEETS_USA =
       },
       '2010C' =>
       {
+        # Senior Teams
         ORDINAL => 83,
         YEAR => 2010,
         CITY => 'Orlando',
@@ -402,6 +408,7 @@ my %MEETS_USA =
       },
       '2011C' =>
       {
+        # Senior Teams
         ORDINAL => 85,
         YEAR => 2011,
         CITY => 'Seattle',
@@ -426,6 +433,7 @@ my %MEETS_USA =
       },
       '2012C' =>
       {
+        # Senior Teams
         ORDINAL => 85,
         YEAR => 2012,
         CITY => 'New Orleans',
@@ -450,6 +458,7 @@ my %MEETS_USA =
       },
       '2013C' =>
       {
+        # Senior Teams
         ORDINAL => 87,
         YEAR => 2013,
         CITY => 'Phoenix',
@@ -474,6 +483,7 @@ my %MEETS_USA =
       },
       '2014C' =>
       {
+        # Senior Teams
         ORDINAL => 87,
         YEAR => 2014,
         CITY => 'Providence',
@@ -498,6 +508,7 @@ my %MEETS_USA =
       },
       '2015C' =>
       {
+        # Senior Teams
         ORDINAL => 88,
         YEAR => 2015,
         CITY => 'Denver',
@@ -696,12 +707,14 @@ my %MEETS_USA =
     {
       '1997' =>
       {
+        # Open Trials
         YEAR => 1997,
         DATE_START => '1997-06-06',
         DATE_END => '1997-06-09'
       },
       '1998' =>
       {
+        # Open Trials
         YEAR => 1998,
         CITY => 'Tunica',
         DATE_START => '1998-06-17',
@@ -709,116 +722,246 @@ my %MEETS_USA =
       },
       '1999' =>
       {
+        # Open Trials
         YEAR => 1999,
         DATE_START => '1999-06-17',
         DATE_END => '1999-06-19'
       },
       '2000' =>
       {
+        # Open Trials
         YEAR => 2000,
         DATE_START => '2000-06-14',
         DATE_END => '2000-06-17'
       },
-      '2001' =>
+      '2001A' =>
       {
+        # Open Trials
         YEAR => 2001,
         CITY => 'Houston',
         DATE_START => '2001-05-11',
         DATE_END => '2001-05-20'
       },
+      '2001B' =>
+      {
+        # Women Trials (estimated)
+        YEAR => 2001,
+        DATE_START => '2001-06-16',
+        DATE_END => '2001-06-19'
+      },
       '2002' =>
       {
+        # Open Trials
         YEAR => 2002,
         CITY => 'Houston',
         DATE_START => '2002-05-10',
         DATE_END => '2002-05-19'
       },
-      '2004' =>
+      '2004A' =>
       {
+        # Women Trials
+        YEAR => 2004,
+        DATE_START => '2004-05-31',
+        DATE_END => '2004-06-02'
+      },
+      '2004B' =>
+      {
+        # Open Trials
         YEAR => 2004,
         CITY => 'Memphis',
         DATE_START => '2004-06-04',
         DATE_END => '2004-06-13'
       },
-      '2005' =>
+      '2004C' =>
+      {
+        # Senior Trials
+        YEAR => 2004,
+        DATE_START => '2004-06-24',
+        DATE_END => '2004-06-25'
+      },
+      '2005A' =>
       {
         YEAR => 2005,
         CITY => 'Houston',
         DATE_START => '2005-05-13',
         DATE_END => '2005-05-22'
       },
-      '2006' =>
+      '2005B' =>
       {
+        # Women Trials
+        YEAR => 2005,
+        CITY => 'Las Vegas',
+        DATE_START => '2005-06-05',
+        DATE_END => '2005-06-13'
+      },
+      '2005C' =>
+      {
+        # Senior Trials
+        YEAR => 2005,
+        CITY => 'San Antonio',
+        DATE_START => '2005-07-04',
+        DATE_END => '2005-07-07'
+      },
+      '2006A' =>
+      {
+        # Women Trials, dates unclear.
+        YEAR => 2006,
+        DATE_START => '2006-06-12',
+        DATE_END => '2006-06-12'
+      },
+      '2006B' =>
+      {
+        # Open Trials
         YEAR => 2006,
         CITY => 'White Plains',
         DATE_START => '2006-08-19',
         DATE_END => '2006-08-27'
       },
-      '2007' =>
+      '2007A' =>
       {
+        # Women Trials
         YEAR => 2007,
         CITY => 'Schaumburg',
-        DATE_START => '2007-06-08',
+        DATE_START => '2007-06-01',
+        DATE_END => '2007-06-07'
+      },
+      '2007B' =>
+      {
+        # Open & Senior Trials
+        YEAR => 2007,
+        CITY => 'Schaumburg',
+        DATE_START => '2007-06-05',
         DATE_END => '2007-06-11'
       },
-      '2008' =>
+      '2008A' =>
       {
-        # Approximate
+        # Open & Women Trials (approximate)
         YEAR => 2008,
         DATE_START => '2008-06-03',
         DATE_END => '2008-06-07'
       },
-      '2009' =>
+      '2008C' =>
       {
+        # Senior Trials (approximate)
+        YEAR => 2008,
+        DATE_START => '2008-06-21',
+        DATE_END => '2008-06-21'
+      },
+      '2009A' =>
+      {
+        # Women Trials
+        YEAR => 2009,
+        CITY => 'Sacramento',
+        DATE_START => '2009-05-24',
+        DATE_END => '2009-05-29'
+      },
+      '2009B' =>
+      {
+        # Open Trials
         YEAR => 2009,
         CITY => 'White Plains',
         DATE_START => '2009-06-06',
         DATE_END => '2009-06-15'
       },
+      '2009C' =>
+      {
+        # Senior Trials
+        YEAR => 2009,
+        CITY => 'Summerlin',
+        DATE_START => '2009-07-06',
+        DATE_END => '2009-07-10'
+      },
       '2010' =>
       {
+        # Open Trials
         YEAR => 2010,
         CITY => 'White Plains',
         DATE_START => '2010-06-20',
         DATE_END => '2010-06-27'
       },
-      '2011' =>
+      '2011A' =>
       {
+        # Open Trials
         YEAR => 2011,
         CITY => 'Las Vegas',
         DATE_START => '2011-05-10',
         DATE_END => '2011-05-17'
       },
-      '2012' =>
+      '2011B' =>
       {
+        # Senior & Women Trials
+        YEAR => 2011,
+        CITY => 'Detroit',
+        DATE_START => '2011-06-05',
+        DATE_END => '2011-06-11'
+      },
+      '2012A' =>
+      {
+        # Open Trials
         YEAR => 2012,
         CITY => 'Schaumburg',
         DATE_START => '2012-04-27',
         DATE_END => '2012-05-06'
       },
-      '2013' =>
+      '2012B' =>
       {
+        # Senior & Women Trials
+        YEAR => 2012,
+        CITY => 'Schaumburg',
+        DATE_START => '2012-06-01',
+        DATE_END => '2012-06-07'
+      },
+      '2013A' =>
+      {
+        # Open Trials
         YEAR => 2013,
         CITY => 'Orlando',
         DATE_START => '2013-06-01',
         DATE_END => '2013-06-10'
       },
+      '2013B' =>
+      {
+        # Senior & Women Trials
+        YEAR => 2013,
+        CITY => 'Orlando',
+        DATE_START => '2013-07-12',
+        DATE_END => '2013-07-20'
+      },
       '2014' =>
       {
+        # Open Trials
         YEAR => 2014,
         CITY => 'Phoenix',
         DATE_START => '2014-05-11',
         DATE_END => '2014-05-19'
       },
-      '2015' =>
+      '2015A' =>
       {
+        # Women Trials
+        YEAR => 2015,
+        CITY => 'Fort Lauderdale',
+        DATE_START => '2015-04-14',
+        DATE_END => '2015-04-18'
+      },
+      '2015B' =>
+      {
+        # Open Trials
         YEAR => 2015,
         CITY => 'Schaumburg',
         DATE_START => '2015-05-08',
         DATE_END => '2015-05-17'
       },
-      '2016' =>
+      '2015C' =>
       {
+        # Senior Trials
+        YEAR => 2015,
+        CITY => 'Schaumburg',
+        DATE_START => '2015-06-05',
+        DATE_END => '2015-06-13'
+      },
+      '2016A' =>
+      {
+        # Open Trials
         YEAR => 2016,
         CITY => 'Denver',
         DATE_START => '2016-05-08',
@@ -826,7 +969,7 @@ my %MEETS_USA =
       },
       '2016B' =>
       {
-        # Trial
+        # Women Trials
         YEAR => 2016,
         CITY => 'Denver',
         DATE_START => '2016-05-30',
@@ -834,61 +977,116 @@ my %MEETS_USA =
       },
       '2016C' =>
       {
-        # Trial
+        # Senior Trials
         YEAR => 2016,
         CITY => 'Denver',
         DATE_START => '2016-06-17',
         DATE_END => '2016-06-22'
       },
-      '2017' =>
+      '2017A' =>
       {
+        # Open Trials
         YEAR => 2017,
         CITY => 'Schaumburg',
         DATE_START => '2017-04-30',
         DATE_END => '2017-05-06'
       },
+      '2017B' =>
+      {
+        # Women Trials
+        YEAR => 2017,
+        CITY => 'Schaumburg',
+        DATE_START => '2017-05-04',
+        DATE_END => '2017-05-11'
+      },
+      '2017C' =>
+      {
+        # Senior Trials
+        YEAR => 2017,
+        CITY => 'Schaumburg',
+        DATE_START => '2017-05-15',
+        DATE_END => '2017-05-17'
+      },
       '2018' =>
       {
+        # Open Trials
         YEAR => 2018,
         CITY => 'Houston',
         DATE_START => '2018-05-11',
         DATE_END => '2018-05-20'
       },
-      '2019' =>
+      '2019A' =>
       {
+        # Open & Women Trials
         YEAR => 2019,
         CITY => 'Schaumburg',
         DATE_START => '2019-05-10',
-        DATE_END => '2019-05-19'
+        DATE_END => '2019-05-20'
       },
-      '2021' =>
+      '2019B' =>
       {
+        # Senior Trials
+        YEAR => 2019,
+        CITY => 'Schaumburg',
+        DATE_START => '2019-05-31',
+        DATE_END => '2019-06-01'
+      },
+      '2021A' =>
+      {
+        # Open Trials
         YEAR => 2021,
         CITY => 'Schaumburg',
         DATE_START => '2021-10-05',
         DATE_END => '2021-10-12'
       },
+      '2021B' =>
+      {
+        # Senior Trials
+        YEAR => 2021,
+        CITY => 'Schaumburg',
+        DATE_START => '2021-10-23',
+        DATE_END => '2021-10-30'
+      },
       '2022' =>
       {
+        # Open Trials
         YEAR => 2022,
         CITY => 'Schaumburg',
         DATE_START => '2022-05-16',
         DATE_END => '2022-05-23'
       },
-      '2023' =>
+      '2023A' =>
       {
+        # Open Trials
         YEAR => 2023,
         CITY => 'Schaumburg',
         DATE_START => '2023-05-01',
         DATE_END => '2023-05-08'
       },
-      '2024' =>
+      '2023B' =>
       {
+        # Senior & Women Trials
+        YEAR => 2023,
+        CITY => 'Schaumburg',
+        DATE_START => '2023-05-19',
+        DATE_END => '2023-05-25'
+      },
+      '2024A' =>
+      {
+        # Open Trials
         YEAR => 2024,
         CITY => 'Schaumburg',
         DATE_START => '2024-05-01',
         DATE_END => '2024-05-08'
       },
+      '2024B' =>
+      {
+        # Senior & Women Trials
+        YEAR => 2024,
+        CITY => 'Schaumburg',
+        DATE_START => '2024-05-19',
+        DATE_END => '2024-05-26'
+      }
     }
   },
 
@@ -2426,9 +2624,6 @@ my %TOURNAMENTS_USA =
 
   'US Juniors Training',
   {
-    ORGANIZATION => 'USBF',
-    COUNTRY => 'USA',
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2702,6 +2897,7 @@ my %TOURNAMENTS_USA =
       '2001' =>
       {
         MEET => 'United States Bridge Championship',
+        MEET_TAG => '2001A',
         CHAPTERS =>
         {
           'C0' => 
@@ -2748,6 +2944,7 @@ my %TOURNAMENTS_USA =
       '2004' =>
       {
         MEET => 'United States Bridge Championship',
+        MEET_TAG => '2004B',
         CHAPTERS =>
         {
           'C0' => 
@@ -2780,6 +2977,7 @@ my %TOURNAMENTS_USA =
       {
         # https://www.usbf.org/2005-open-usbc/2005-united-states-bridge-championship
         MEET => 'United States Bridge Championship',
+        MEET_TAG => '2005A',
         CHAPTERS =>
         {
           'C0' => 
@@ -2820,6 +3018,7 @@ my %TOURNAMENTS_USA =
       {
         # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2006-open-usbc/index.php
         MEET => 'United States Bridge Championship',
+        MEET_TAG => '2006B',
         CHAPTERS =>
         {
           'C0' => 
@@ -2868,6 +3067,7 @@ my %TOURNAMENTS_USA =
       {
         # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2007-open-usbc/index.php
         MEET => 'United States Bridge Championship',
+        MEET_TAG => '2007B',
         CHAPTERS =>
         {
           'C0' => 
@@ -2907,6 +3107,7 @@ my %TOURNAMENTS_USA =
       '2008' =>
       {
         MEET => 'United States Bridge Championship',
+        MEET_TAG => '2008A',
         CHAPTERS =>
         {
           'C0' => 
@@ -2947,6 +3148,7 @@ my %TOURNAMENTS_USA =
       {
         # https://www.usbf.org/2009-open-usbc/2009-usbc-daily-bulletin
         MEET => 'United States Bridge Championship',
+        MEET_TAG => '2009B',
         CHAPTERS =>
         {
           'C0' => 
@@ -3084,6 +3286,7 @@ my %TOURNAMENTS_USA =
       {
         # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2011-open-usbc/index.php
         MEET => 'United States Bridge Championship',
+        MEET_TAG => '2011A',
         CHAPTERS =>
         {
           'C0' => 
@@ -3124,6 +3327,7 @@ my %TOURNAMENTS_USA =
       {
         # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2012-open-usbc/index.php
         MEET => 'United States Bridge Championship',
+        MEET_TAG => '2012A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3138,6 +3342,7 @@ my %TOURNAMENTS_USA =
       {
         # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2013-open-usbc/index.php
         MEET => 'United States Bridge Championship',
+        MEET_TAG => '2013A',
         CHAPTERS =>
         {
           'C0' => 
@@ -3266,6 +3471,7 @@ my %TOURNAMENTS_USA =
       {
         # https://www.usbf.org/2015-open-usbc/2015-open-usbc
         MEET => 'United States Bridge Championship',
+        MEET_TAG => '2015B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3280,6 +3486,7 @@ my %TOURNAMENTS_USA =
       {
         # https://www.usbf.org/2016-open-usbc/2016-open-usbc
         MEET => 'United States Bridge Championship',
+        MEET_TAG => '2016A',
         CHAPTERS =>
         {
           'C0' => 
@@ -3320,6 +3527,7 @@ my %TOURNAMENTS_USA =
       {
         # https://www.usbf.org/2017-open-usbc/2017-open-usbc/2017-open-usbc-results/index.php
         MEET => 'United States Bridge Championship',
+        MEET_TAG => '2017A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3348,6 +3556,7 @@ my %TOURNAMENTS_USA =
       {
         # https://www.usbf.org/2019-open-usbc/2019-open-usbc
         MEET => 'United States Bridge Championship',
+        MEET_TAG => '2019A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3362,6 +3571,7 @@ my %TOURNAMENTS_USA =
       {
         # https://www.usbf.org/2021-open-usbc/2021-open-usbc/index.php
         MEET => 'United States Bridge Championship',
+        MEET_TAG => '2021A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3390,6 +3600,7 @@ my %TOURNAMENTS_USA =
       {
         # https://www.usbf.org/2023-usbcs/2023-usbcs/index.php
         MEET => 'United States Bridge Championship',
+        MEET_TAG => '2023A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3404,6 +3615,7 @@ my %TOURNAMENTS_USA =
       {
         # https://www.usbf.org/2024-united-states-bridge-championships/2024-united-states-bridge-championships/index.php
         MEET => 'United States Bridge Championship',
+        MEET_TAG => '2024A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3419,9 +3631,6 @@ my %TOURNAMENTS_USA =
 
   'US Mixed Teams',
   {
-    ORGANIZATION => 'ACBL',
-    COUNTRY => 'USA',
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -3505,32 +3714,10 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2007B' =>
-      {
-        # Probably not at an NABC.
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2007,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2007-07-05',
-            DATE_END => '2007-07-05'
-          },
-          'C1' => 
-          {
-            YEAR => 2007,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2007-07-05',
-            DATE_END => '2007-07-05'
-          } 
-        }
-      },
-      '2007C' =>
+      '2007' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2007C',
         CHAPTERS =>
         {
           'C0' => 
@@ -3551,40 +3738,10 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2008B' =>
-      {
-        # Probably not at an NABC.
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2008,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2008-06-21',
-            DATE_END => '2008-06-21'
-          },
-          'C1' => 
-          {
-            YEAR => 2008,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2008-06-21',
-            DATE_END => '2008-06-21'
-          },
-          'C2' => 
-          {
-            YEAR => 2008,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2008-06-21',
-            DATE_END => '2008-06-21'
-          } 
-        }
-      },
-      '2008C' =>
+      '2008' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2008C',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3597,9 +3754,10 @@ my %TOURNAMENTS_USA =
           },
         }
       },
-      '2009C' =>
+      '2009' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2009C',
         CHAPTERS =>
         {
           'C0' => 
@@ -3620,9 +3778,10 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2010C' =>
+      '2010' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2010C',
         CHAPTERS =>
         {
           'C0' => 
@@ -3659,48 +3818,10 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2011A' =>
-      {
-        # https://usbf.org/2011-senior-usbc/2011-susbc-daily-bulletin
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2011,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2011-06-07',
-            DATE_END => '2011-06-09'
-          },
-          'C1' => 
-          {
-            YEAR => 2011,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2011-06-08',
-            DATE_END => '2011-06-09'
-          },
-          'C2' => 
-          {
-            YEAR => 2011,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2011-06-09',
-            DATE_END => '2011-06-11'
-          },
-          'C3' => 
-          {
-            YEAR => 2011,
-            STAGE => 'Playoff',
-            major => 'SEGMENT',
-            DATE_START => '2011-06-09',
-            DATE_END => '2011-06-11'
-          } 
-        }
-      },
-      '2011C' =>
+      '2011' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2011C',
         CHAPTERS =>
         {
           'C0' => 
@@ -3721,48 +3842,10 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2012A' =>
-      {
-        # https://usbf.org/2012-senior-usbc/2012-susbc-daily-bulletin
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2012,
-            STAGE => 'Rof16',
-            major => 'SEGMENT',
-            DATE_START => '2012-06-01',
-            DATE_END => '2012-06-02'
-          },
-          'C1' => 
-          {
-            YEAR => 2012,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2012-06-02',
-            DATE_END => '2012-06-04'
-          },
-          'C2' => 
-          {
-            YEAR => 2012,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2012-06-04',
-            DATE_END => '2012-06-05'
-          },
-          'C3' => 
-          {
-            YEAR => 2012,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2012-06-05',
-            DATE_END => '2012-06-07'
-          } 
-        }
-      },
-      '2012C' =>
+      '2012' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2012C',
         CHAPTERS =>
         {
           'C0' => 
@@ -3791,9 +3874,10 @@ my %TOURNAMENTS_USA =
           },
         }
       },
-      '2013C' =>
+      '2013' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2013C',
         CHAPTERS =>
         {
           'C0' => 
@@ -3830,9 +3914,10 @@ my %TOURNAMENTS_USA =
           },
         }
       },
-      '2014C' =>
+      '2014' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2014C',
         CHAPTERS =>
         {
           'C0' => 
@@ -3861,9 +3946,10 @@ my %TOURNAMENTS_USA =
           },
         }
       },
-      '2015C' =>
+      '2015' =>
       {
         MEET => 'North American Bridge Championship',
+        MEET_TAG => '2015C',
         CHAPTERS =>
         {
           'C0' => 
@@ -3905,9 +3991,6 @@ my %TOURNAMENTS_USA =
 
   'US Senior Trials',
   {
-    ORGANIZATION => 'USBF',
-    COUNTRY => 'USA',
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3917,6 +4000,8 @@ my %TOURNAMENTS_USA =
     {
       '2004' =>
       {
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2004C',
         CHAPTERS =>
         {
           'C0' => 
@@ -3940,8 +4025,8 @@ my %TOURNAMENTS_USA =
       '2005' =>
       {
         # https://www.usbf.org/2005-senior-usbc/2005-united-states-senior-bridge-championship
-        CITY => 'San Antonio',
-
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2005C',
         CHAPTERS =>
         {
           'C0' => 
@@ -3963,31 +4048,85 @@ my %TOURNAMENTS_USA =
       '2007' =>
       {
         # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2007-senior-usbc/index.php
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2007B',
         CHAPTERS =>
         {
           'C0' => 
           {
+            # USA1
             YEAR => 2007,
             STAGE => 'Semifinal',
             major => 'SEGMENT',
-            DATE_START => '2007-07-06',
-            DATE_END => '2007-07-06'
+            DATE_START => '2007-06-06',
+            DATE_END => '2007-06-07'
           },
           'C1' => 
           {
+            # USA2
+            YEAR => 2007,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-06-08',
+            DATE_END => '2007-06-09'
+          },
+          'C2' => 
+          {
+            # USA1
             YEAR => 2007,
             STAGE => 'Final',
             major => 'SEGMENT',
-            DATE_START => '2007-07-07',
-            DATE_END => '2007-07-08'
+            DATE_START => '2007-06-08',
+            DATE_END => '2007-06-09'
+          },
+          'C3' => 
+          {
+            # USA2
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-06-10',
+            DATE_END => '2007-06-11'
+          } 
+        }
+      },
+      '2008' =>
+      {
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2008C',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-06-21',
+            DATE_END => '2008-06-21'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-06-21',
+            DATE_END => '2008-06-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-06-21',
+            DATE_END => '2008-06-21'
           } 
         }
       },
       '2009' =>
       {
         # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2009-senior-usbc/index.php
-        CITY => 'Summerlin',
-
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2009C',
         CHAPTERS =>
         {
           'C0' => 
@@ -4027,38 +4166,98 @@ my %TOURNAMENTS_USA =
       '2011' =>
       {
         # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2011-senior-usbc/index.php
-        CITY => 'Detroit',
-
+        # https://usbf.org/2011-senior-usbc/2011-susbc-daily-bulletin
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2011B',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
             DATE_START => '2011-06-05',
-            DATE_END => '2011-06-10'
+            DATE_END => '2011-06-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-06-06',
+            DATE_END => '2011-06-07'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-06-08',
+            DATE_END => '2011-06-09'
+          },
+          'C3' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-06-10',
+            DATE_END => '2011-06-11'
+          },
+          'C4' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2011-06-10',
+            DATE_END => '2011-06-11'
           } 
         }
       },
       '2012' =>
       {
         # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2012-senior-usbc/index.php
-        CITY => 'Schaumburg',
-
+        # https://usbf.org/2012-senior-usbc/2012-susbc-daily-bulletin
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2012B',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
             DATE_START => '2012-06-01',
-            DATE_END => '2012-06-06'
+            DATE_END => '2012-06-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-06-02',
+            DATE_END => '2012-06-04'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-06-04',
+            DATE_END => '2012-06-05'
+          },
+          'C3' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-06-05',
+            DATE_END => '2012-06-07'
           } 
         }
       },
       '2013' =>
       {
         # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2013-senior-usbc/index.php
-        CITY => 'Orlando',
-
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2013B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4072,8 +4271,8 @@ my %TOURNAMENTS_USA =
       '2015' =>
       {
         # https://www.usbf.org/2024-united-states-bridge-championships/2024-united-states-bridge-championships/index.php
-        CITY => 'Schaumburg',
-
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2015C',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4089,7 +4288,6 @@ my %TOURNAMENTS_USA =
         # https://www.usbf.org/2016-senior-usbc/2016-senior-usbc
         MEET => 'United States Bridge Championship',
         MEET_TAG => '2016C',
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4103,8 +4301,8 @@ my %TOURNAMENTS_USA =
       '2017' =>
       {
         # https://www.usbf.org/2017-senior-usbc/2017-senior-usbc
-        CITY => 'Schaumburg',
-
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2017C',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4118,8 +4316,8 @@ my %TOURNAMENTS_USA =
       '2019' =>
       {
         # https://www.usbf.org/2019-senior-usbc/2019-senior-usbc
-        CITY => 'Schaumburg',
-
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2019B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4133,8 +4331,8 @@ my %TOURNAMENTS_USA =
       '2021' =>
       {
         # https://www.usbf.org/2021-senior-usbc/2021-senior-usbc/index.php
-        CITY => 'Schaumburg',
-
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2021B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4148,8 +4346,8 @@ my %TOURNAMENTS_USA =
       '2023' =>
       {
         # https://www.usbf.org/2023-usbcs/2023-usbcs/index.php
-        CITY => 'Schaumburg',
-
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2023B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4163,8 +4361,8 @@ my %TOURNAMENTS_USA =
       '2024' =>
       {
         # https://www.usbf.org/2024-united-states-bridge-championships/2024-united-states-bridge-championships/index.php
-        CITY => 'Schaumburg',
-
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2024B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4223,11 +4421,8 @@ my %TOURNAMENTS_USA =
     }
   },
 
-  'US Women Teams' =>
+  'US Women Trials',
   {
-    ORGANIZATION => 'USBF',
-    COUNTRY => 'USA',
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -4237,6 +4432,8 @@ my %TOURNAMENTS_USA =
     {
       '2001' =>
       {
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2001B',
         CHAPTERS =>
         {
           'C0' => 
@@ -4260,6 +4457,8 @@ my %TOURNAMENTS_USA =
       },
       '2004' =>
       {
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2004A',
         CHAPTERS =>
         {
           'C0' => 
@@ -4282,9 +4481,18 @@ my %TOURNAMENTS_USA =
       },
       '2005' =>
       {
+        # https://www.usbf.org/2005-women-s-usbc/2005-united-states-womens-bridge-championship
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2005B',
         CHAPTERS =>
         {
           'C0' => 
+          {
+            YEAR => 2005,
+            DATE_START => '2005-06-06',
+            DATE_END => '2005-06-09'
+          },
+          'C1' => 
           {
             YEAR => 2005,
             STAGE => 'Semifinal',
@@ -4292,7 +4500,7 @@ my %TOURNAMENTS_USA =
             DATE_START => '2005-06-10',
             DATE_END => '2005-06-11'
           },
-          'C1' => 
+          'C2' => 
           {
             YEAR => 2005,
             STAGE => 'Final',
@@ -4300,7 +4508,7 @@ my %TOURNAMENTS_USA =
             DATE_START => '2005-06-12',
             DATE_END => '2005-06-13'
           },
-          'C2' => 
+          'C3' => 
           {
             YEAR => 2005,
             STAGE => 'Playoff',
@@ -4312,6 +4520,8 @@ my %TOURNAMENTS_USA =
       },
       '2006' =>
       {
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2006A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4323,23 +4533,20 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2007A' =>
+      '2007' =>
       {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2007,
-            DATE_START => '2007-02-27',
-            DATE_END => '2007-02-28'
-          } 
-        }
-      },
-      '2007B' =>
-      {
+        # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2007-women-s-usbc/index.php
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2007A',
         CHAPTERS =>
         {
           'C0' => 
+          {
+            YEAR => 2007,
+            DATE_START => '2007-06-01',
+            DATE_END => '2007-06-04'
+          },
+          'C1' => 
           {
             YEAR => 2007,
             STAGE => 'Semifinal',
@@ -4347,7 +4554,7 @@ my %TOURNAMENTS_USA =
             DATE_START => '2007-06-05',
             DATE_END => '2007-06-05'
           },
-          'C1' => 
+          'C2' => 
           {
             YEAR => 2007,
             STAGE => 'Final',
@@ -4355,7 +4562,7 @@ my %TOURNAMENTS_USA =
             DATE_START => '2007-06-06',
             DATE_END => '2007-06-07'
           },
-          'C2' => 
+          'C3' => 
           {
             YEAR => 2007,
             STAGE => 'Playoff',
@@ -4368,6 +4575,7 @@ my %TOURNAMENTS_USA =
       '2008' =>
       {
         MEET => 'United States Bridge Championship',
+        MEET_TAG => '2008A',
         CHAPTERS =>
         {
           'C0' => 
@@ -4390,6 +4598,9 @@ my %TOURNAMENTS_USA =
       },
       '2009' =>
       {
+        # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2009-women-s-usbc/index.php
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2009A',
         CHAPTERS =>
         {
           'C0' => 
@@ -4420,6 +4631,8 @@ my %TOURNAMENTS_USA =
       },
       '2011' =>
       {
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2011B',
         CHAPTERS =>
         {
           'C0' => 
@@ -4442,6 +4655,8 @@ my %TOURNAMENTS_USA =
       },
       '2012' =>
       {
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2012B',
         CHAPTERS =>
         {
           'C0' => 
@@ -4462,69 +4677,11 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-    }
-  },
-
-  'US Women Trials',
-  {
-    ORGANIZATION => 'USBF',
-    COUNTRY => 'USA',
-    ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Women',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2005' =>
-      {
-        # https://www.usbf.org/2005-women-s-usbc/2005-united-states-womens-bridge-championship
-        CITY => 'Las Vegas',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2005,
-            DATE_START => '2005-06-06',
-            DATE_END => '2005-06-12'
-          } 
-        }
-      },
-      '2007' =>
-      {
-        # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2007-women-s-usbc/index.php
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2007,
-            DATE_START => '2007-06-01',
-            DATE_END => '2007-06-07'
-          } 
-        }
-      },
-      '2009' =>
-      {
-        # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2009-women-s-usbc/index.php
-        CITY => 'Sacramento',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2009,
-            DATE_START => '2009-05-24',
-            DATE_END => '2009-05-28'
-          } 
-        }
-      },
       '2013' =>
       {
         # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2013-women-s-usbc/index.php
-        CITY => 'Orlando',
-
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2013B',
         CHAPTERS =>
         {
           'C0' => 
@@ -4564,8 +4721,8 @@ my %TOURNAMENTS_USA =
       '2015' =>
       {
         # https://www.usbf.org/2015-women-s-usbc/2015-women-s-usbc
-        CITY => 'Fort Lauderdale',
-
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2015A',
         CHAPTERS =>
         {
           'C0' => 
@@ -4599,8 +4756,6 @@ my %TOURNAMENTS_USA =
         # https://www.usbf.org/2016-women-s-usbc/2016-women-s-usbc
         MEET => 'United States Bridge Championship',
         MEET_TAG => '2016B',
-        CITY => 'Denver',
-
         CHAPTERS =>
         {
           'C0' => 
@@ -4632,8 +4787,8 @@ my %TOURNAMENTS_USA =
       '2017' =>
       {
         # https://www.usbf.org/2017-women-s-usbc/2017-women-s-usbc
-        CITY => 'Schaumburg',
-
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2017B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4647,8 +4802,8 @@ my %TOURNAMENTS_USA =
       '2019' =>
       {
         # https://www.usbf.org/2019-women-s-usbc/2019-women-s-usbc
-        CITY => 'Schaumburg',
-
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2019A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4662,8 +4817,8 @@ my %TOURNAMENTS_USA =
       '2023' =>
       {
         # https://www.usbf.org/2023-usbcs/2023-usbcs/index.php
-        CITY => 'Schaumburg',
-
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2023B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4677,8 +4832,8 @@ my %TOURNAMENTS_USA =
       '2024' =>
       {
         # https://www.usbf.org/2024-united-states-bridge-championships/2024-united-states-bridge-championships/index.php
-        CITY => 'Schaumburg',
-
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2024B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4731,7 +4886,6 @@ my %TOURNAMENTS_USA =
         # https://www.usbf.org/usbcs-before-2014/usbf-tournaments-before-2014/2013-junior-usbc/index.php
         MEET => 'United States Youth Bridge Championship',
         MEET_TAG => '2013-14',
-        CITY => 'Atlanta',
         CHAPTERS =>
         {
           'SINGLE' => 

@@ -2869,14 +2869,25 @@ my %TOURNAMENTS_AUSTRALIA =
       },
       '2014B' =>
       {
+        # TODO Really U26, Women, ... it seems.
         MEET => 'Australian ANC Championships',
         MEET_TAG => '2014',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2014-07-13',
+            DATE_END => '2014-07-17'
+          } ,
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-07-17',
             DATE_END => '2014-07-18'
           } 
         }

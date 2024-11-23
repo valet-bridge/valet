@@ -30,7 +30,6 @@ my @MULTI_WORDS =
   'US Senior Teams',
   'US Senior Trials',
   'US University Trials',
-  'US Women Teams',
   'US Women Trials',
   'US Youngster Trials',
   'USBF Challenge Match',
@@ -83,8 +82,9 @@ my %MULTI_TYPOS =
     'usbf senior team trials',
     'usbf senior trials',
     'usbf seniors trials'],
-  'US Women Teams' => [
+  'US Women Trials' => [
     'united states women bridge championship',
+    'us women teams',
     "us women's bridge championship",
     "us women's bridge championhip",
     "united states women's bridge championship"],
@@ -119,8 +119,8 @@ my %SINGLE_TYPOS =
   'Spingold Teams' => ['spingold'],
   'US Junior Trials' => ['usjbc', 'jusbc'],
   'US Juniors Training' => ['jtp'],
-  'US Senior Teams' => ['ussbc'],
-  'US Women Teams' => [
+  'US Senior Trials' => ['ussbc'],
+  'US Women Trials' => [
     'uswbc',
     'uswbf',
     'uswc',

@@ -28,6 +28,7 @@ my %IGNORE_MEETS = (
   'Bologna Trophy|2014|C0' => 'Italy Cup',
   'Torneo di Roma|2014|C0' => 'Italy Cup',
   'Viareggio Cup|2005|C0' => 'Italian Club Championship',
+  'Polish Premier League|2006|C1' => 'Polish Pairs Championship',
   'Polish Premier League|2012|C2' => 'Zulawski Congress',
   'Polish Premier League|2013|C2' => 'Zulawski Congress',
   'All India Bangur Cement Hindusthan Club|2015|C0' =>

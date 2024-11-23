@@ -5243,9 +5243,19 @@ my %TOURNAMENTS_POLAND =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2003,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2003-05-27',
+            DATE_END => '2003-05-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2003,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2003-05-28',
             DATE_END => '2003-05-28'
           },
@@ -5255,9 +5265,19 @@ my %TOURNAMENTS_POLAND =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2004,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2004-05-02',
+            DATE_END => '2004-05-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2004,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2004-05-03',
             DATE_END => '2004-05-03'
           },
@@ -5267,11 +5287,21 @@ my %TOURNAMENTS_POLAND =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          # Dates probably more like May.
+          'C0' => 
           {
-            # Dates probably more like May.
             YEAR => 2005,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2005-09-23',
+            DATE_END => '2005-09-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2005-09-24',
             DATE_END => '2005-09-24'
           },
         }
@@ -5280,10 +5310,20 @@ my %TOURNAMENTS_POLAND =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2006,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2006-05-06',
+            DATE_END => '2006-05-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2006-05-07',
             DATE_END => '2006-05-07'
           },
         }
@@ -5295,9 +5335,10 @@ my %TOURNAMENTS_POLAND =
         {
           'C0' => 
           {
+            # Different tournament? Different dates?
             YEAR => 2007,
-            STAGE => 'Round-Robin',
-            major => 'ROUND',
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2007-03-07',
             DATE_END => '2007-03-07'
           },

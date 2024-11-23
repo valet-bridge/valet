@@ -758,6 +758,8 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2013,
             STAGE => 'Round-robin',
+            major => 'ROUND',
+            minor => 'MATCH',
             DATE_START => '2013-07-14',
             DATE_END => '2013-07-20'
           }
@@ -1657,6 +1659,8 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2013,
             STAGE => 'Round-robin',
+            major => 'ROUND',
+            minor => 'MATCH',
             DATE_START => '2013-07-14',
             DATE_END => '2013-07-20'
           }
