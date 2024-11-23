@@ -22,8 +22,6 @@ my %MULTI_TYPOS =
   Championship => ["ch'ship", 'ch.ship', "champion's",
     "championship's", "chmpionship's", 'champion ship',
     'championship flight', 'championship flt'],
-  Charity => ['the longest day charity match on the shortest day',
-    'the longest day charity on the shortest day'],
   'First Division' => ['1_ division', '1st division', 'd1', 
     'division1', 'division 1', 'i liga', '1_division', 'a division'],
   Trial => [
@@ -33,9 +31,7 @@ my %MULTI_TYPOS =
 
   # Challenge 
 my @SINGLE_WORDS = qw(
-  Bridge
   Championship 
-  Charity 
   Club 
   Cup
   Tournament 
@@ -45,8 +41,6 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  Bridge => ['brdige', 'briag', 'bric', 'bridg', 'brýç'],
-  'Business League' => ['blb'],
   Championship => ['champ', 'champion', 'champions', 
     'championshi', 'championships', 'championsihp', 'champioship', 
     'champs', 'chams', 'chmp', 'chmapionship', 'chship', 'chships', 
@@ -62,8 +56,6 @@ my %SINGLE_TYPOS =
   Tournament => ['tourn', 'tourname', 'tourney', 'turnament', 
     'tourmanent', 'tourna', 'tournamnt', 'toernooi', 'turneringen', 
     'tounoi', 'torneo', 'tournoi', 'turniej', 'trniej'],
-  Training => ['træning', 'practice', 'allenamento',
-    'entrenamiento'],
   Trial => ['trials', 'trail', 'trails', 'triaals',
     'selection', 'seleccion', 'selección', 'select',
     'selections', 'selekction', 'selelection', 'sélection', 'selectio',
