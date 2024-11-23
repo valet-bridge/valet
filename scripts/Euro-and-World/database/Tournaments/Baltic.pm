@@ -1339,10 +1339,6 @@ my %TOURNAMENTS_BALTIC =
 
   'Tallinn Invitational Pairs' =>
   {
-    ORGANIZATION => 'EstBL',
-    ORIGIN => 'Invitational',
-    CITY => 'Tallinn',
-    COUNTRY => 'Estonia',
     ZONE => 'Europe',
     FORM => 'Pairs',
     GENDER => 'Open',
@@ -1453,11 +1449,6 @@ my %TOURNAMENTS_BALTIC =
 
   'Towns Cup' =>
   {
-    ORGANIZATION => 'EstBL',
-    ORIGIN => 'National',
-    CITY => 'Tallinn',
-    COUNTRY => 'Estonia',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

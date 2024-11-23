@@ -4417,7 +4417,6 @@ my %TOURNAMENTS_WORLD =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'U31',
 
     EDITIONS =>
     {

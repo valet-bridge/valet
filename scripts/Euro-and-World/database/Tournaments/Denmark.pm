@@ -2890,10 +2890,6 @@ my %TOURNAMENTS_DENMARK =
 
   'Vinoble Open',
   {
-    ORGANIZATION => 'DBF',
-    COUNTRY => 'Denmark',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

@@ -150,6 +150,7 @@ sub init_links
   }
 
   $self->check_consistency() if $DEBUG_LINKS;
+  exit;
 }
 
 
@@ -265,6 +266,62 @@ sub check_meet_ref
 }
 
 
+sub cumulate_fields
+{
+  my ($self, $hash, $dupl_ok, $excludes, $errstr, $cumul) = @_;
+
+  for my $field (sort keys %$hash)
+  {
+    next if exists $excludes->{$field};
+    next if $field =~ /^\d\d\d\d/;
+
+    if (! exists $cumul->{$field})
+    {
+      $cumul->{$field} = $hash->{$field};
+    }
+    elsif ($cumul->{$field} ne $hash->{$field})
+    {
+      warn "$errstr Field $field reset";
+    }
+    elsif (! exists $dupl_ok->{$field})
+    {
+      warn "$errstr Field $field set twice";
+    }
+  }
+}
+
+
+sub get_all_fields
+{
+  my ($self, $tname, $edition, $chapter, $cumul) = @_;
+
+  my $errstr = "$tname, $edition, $chapter:";
+
+  my $t_header = $self->{TOURNAMENT}{$tname};
+  my $t_edition = $t_header->{EDITIONS}{$edition};
+  my $t_chapter = $t_edition->{CHAPTERS}{$chapter};
+
+  $self->cumulate_fields($t_header, 
+    {}, { EDITIONS => 1 }, $errstr, $cumul);
+  $self->cumulate_fields($t_edition, 
+    {}, { MEET_TAG => 1, CHAPTERS => 1 }, $errstr, $cumul);
+  $self->cumulate_fields($t_chapter, 
+    {}, { DATE_START => 1, DATE_END => 1 }, $errstr, $cumul);
+
+  return unless exists $t_edition->{MEET};
+
+  my $meet = $t_edition->{MEET};
+  my $meet_tag = $t_edition->{MEET_TAG} // $edition;
+  my $m_header = $self->{MEET}{$meet};
+  my $m_edition = $m_header->{EDITIONS}{$meet_tag};
+
+  $self->cumulate_fields($m_header, 
+    {}, { EDITIONS => 1 }, $errstr, $cumul);
+  $self->cumulate_fields($m_edition, 
+    { YEAR => 1 }, {}, $errstr, $cumul);
+}
+
+
 sub check_consistency
 {
   my ($self) = @_;
@@ -376,6 +433,35 @@ sub check_consistency
             }
           }
         }
+
+        my %cumul2;
+        my $errstr = "$tournament, $tag, $ctag";
+        $self->get_all_fields($tournament, $tag, $ctag, \%cumul2);
+
+        for my $k (sort keys %cumul2)
+        {
+          if (! exists $cumul{$k})
+          {
+            # warn "$errstr $k only in cumul2";
+          }
+          elsif ($cumul{$k} ne $cumul2{$k})
+          {
+            next if ($k eq 'DATE_START' || $k eq 'DATE_END' ||
+              $k =~ /^\d\d\d\d/);
+            warn "$errstr $k: $cumul{$k} vs $cumul2{$k}";
+          }
+        }
+
+        for my $k (sort keys %cumul)
+        {
+          if (! exists $cumul2{$k})
+          {
+            next if ($k eq 'DATE_START' || $k eq 'DATE_END' ||
+              $k =~ /^\d\d\d\d/);
+            warn "$errstr $k only in cumul";
+          }
+        }
+
       }
     }
   }

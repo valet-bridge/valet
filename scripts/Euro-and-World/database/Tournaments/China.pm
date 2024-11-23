@@ -32,7 +32,104 @@ my %MEETS_CHINA =
         DATE_END => '2006-05-29'
       },
     }
-  }
+  },
+
+  'China Elite Tournament' =>
+  {
+    ORGANIZATION => 'CCBA',
+    COUNTRY => 'China',
+    ORIGIN => 'National',
+    ZONE => 'Asia',
+
+    EDITIONS =>
+    {
+      '2011A' =>
+      {
+        CITY => 'Beijing',
+        YEAR => 2011,
+        DATE_START => '2011-02-19',
+        DATE_END => '2011-02-21'
+      },
+      '2011B' =>
+      {
+        CITY => 'Beijing',
+        YEAR => 2011,
+        DATE_START => '2011-05-26',
+        DATE_END => '2011-05-29'
+      },
+      '2011C' =>
+      {
+        CITY => 'Beijing',
+        YEAR => 2011,
+        DATE_START => '2011-09-06',
+        DATE_END => '2011-09-09'
+      },
+      '2012A' =>
+      {
+        CITY => 'Beijing',
+        YEAR => 2012,
+        DATE_START => '2012-03-22',
+        DATE_END => '2012-03-25'
+      },
+      '2012B' =>
+      {
+        CITY => 'Beijing',
+        YEAR => 2012,
+        DATE_START => '2012-06-18',
+        DATE_END => '2012-06-20'
+      },
+      '2012C' =>
+      {
+        CITY => 'Beijing',
+        YEAR => 2012,
+        DATE_START => '2012-11-16',
+        DATE_END => '2012-11-18'
+      },
+      '2013A' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-03-22',
+        DATE_END => '2013-03-24'
+      },
+      '2013B' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-05-31',
+        DATE_END => '2013-06-02'
+      },
+      '2013C' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-11-07',
+        DATE_END => '2013-11-10'
+      },
+      '2014A' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-04-07',
+        DATE_END => '2014-04-07'
+      },
+      '2014B' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-08-05',
+        DATE_END => '2014-08-08'
+      },
+      '2015A' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-04-25',
+        DATE_END => '2015-04-28'
+      },
+      '2015B' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-11-06',
+        DATE_END => '2015-11-08'
+      },
+    }
+  },
+
 );
 
 my %TOURNAMENTS_CHINA =
@@ -214,7 +311,7 @@ my %TOURNAMENTS_CHINA =
     }
   },
 
-  'China Elite Tournament' =>
+  'China Elite Spring Teams' =>
   {
     ORGANIZATION => 'CCBA',
     COUNTRY => 'China',
@@ -227,8 +324,10 @@ my %TOURNAMENTS_CHINA =
 
     EDITIONS =>
     {
-      '2011A' =>
+      '2011' =>
       {
+        MEET => 'China Elite Tournament',
+        MEET_TAG => '2011A',
         CITY => 'Beijing',
         CHAPTERS =>
         {
@@ -242,23 +341,10 @@ my %TOURNAMENTS_CHINA =
           } 
         }
       },
-      '2011B' =>
+      '2012' =>
       {
-        CITY => 'Beijing',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2011,
-            STAGE => 'Round-robin',
-            major => 'ROUND',
-            DATE_START => '2011-05-26',
-            DATE_END => '2011-05-29'
-          } 
-        }
-      },
-      '2012A' =>
-      {
+        MEET => 'China Elite Tournament',
+        MEET_TAG => '2012A',
         CITY => 'Beijing',
         CHAPTERS =>
         {
@@ -272,37 +358,10 @@ my %TOURNAMENTS_CHINA =
           } 
         }
       },
-      '2012B' =>
+      '2013' =>
       {
-        CITY => 'Beijing',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2012,
-            STAGE => 'Round-robin',
-            major => 'ROUND',
-            DATE_START => '2012-06-18',
-            DATE_END => '2012-06-20'
-          } 
-        }
-      },
-      '2012C' =>
-      {
-        CITY => 'Beijing',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2012,
-            major => 'ROUND',
-            DATE_START => '2012-11-16',
-            DATE_END => '2012-11-18'
-          } 
-        }
-      },
-      '2013A' =>
-      {
+        MEET => 'China Elite Tournament',
+        MEET_TAG => '2013A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -315,22 +374,42 @@ my %TOURNAMENTS_CHINA =
           } 
         }
       },
-      '2013B' =>
+    }
+  },
+
+  'China Elite Winter Teams' =>
+  {
+    ORGANIZATION => 'CCBA',
+    COUNTRY => 'China',
+    ORIGIN => 'National',
+    ZONE => 'Asia',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2012' =>
       {
+        MEET => 'China Elite Tournament',
+        MEET_TAG => '2012C',
+        CITY => 'Beijing',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2013,
-            STAGE => 'Round-robin',
+            YEAR => 2012,
             major => 'ROUND',
-            DATE_START => '2013-05-31',
-            DATE_END => '2013-06-02'
+            DATE_START => '2012-11-16',
+            DATE_END => '2012-11-18'
           } 
         }
       },
-      '2013C' =>
+      '2013' =>
       {
+        MEET => 'China Elite Tournament',
+        MEET_TAG => '2013C',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -342,47 +421,10 @@ my %TOURNAMENTS_CHINA =
           } 
         }
       },
-      '2014A' =>
+      '2015' =>
       {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2014,
-            major => 'ROUND',
-            DATE_START => '2014-04-07',
-            DATE_END => '2014-04-07'
-          } 
-        }
-      },
-      '2014B' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2014,
-            major => 'ROUND',
-            DATE_START => '2014-08-05',
-            DATE_END => '2014-08-08'
-          } 
-        }
-      },
-      '2015A' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2015,
-            major => 'ROUND',
-            DATE_START => '2015-04-25',
-            DATE_END => '2015-04-28'
-          } 
-        }
-      },
-      '2015B' =>
-      {
+        MEET => 'China Elite Tournament',
+        MEET_TAG => '2015B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -792,27 +834,6 @@ my %TOURNAMENTS_CHINA =
 
     EDITIONS =>
     {
-      '2011' =>
-      {
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2011,
-            STAGE => 'Semifinal',
-            DATE_START => '2011-05-29',
-            DATE_END => '2011-05-29'
-          },
-          'C1' => 
-          {
-            YEAR => 2011,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2011-05-29',
-            DATE_END => '2011-05-29'
-          } 
-        }
-      },
       '2015' =>
       {
         CHAPTERS =>
@@ -1580,6 +1601,142 @@ my %TOURNAMENTS_CHINA =
     }
   },
 
+  'Jinfan Open Teams Cup' =>
+  {
+    ORGANIZATION => 'CCBA',
+    COUNTRY => 'China',
+    ORIGIN => 'National',
+    ZONE => 'Asia',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        MEET => 'China Elite Tournament',
+        MEET_TAG => '2011B',
+        CITY => 'Beijing',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2011-05-26',
+            DATE_END => '2011-05-29'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'China Elite Tournament',
+        MEET_TAG => '2012B',
+        CITY => 'Beijing',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2012-06-18',
+            DATE_END => '2012-06-20'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'China Elite Tournament',
+        MEET_TAG => '2013B',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2013-05-31',
+            DATE_END => '2013-06-02'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'China Elite Tournament',
+        MEET_TAG => '2014A',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'ROUND',
+            DATE_START => '2014-04-07',
+            DATE_END => '2014-04-07'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'China Elite Tournament',
+        MEET_TAG => '2015A',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'ROUND',
+            DATE_START => '2015-04-25',
+            DATE_END => '2015-04-28'
+          } 
+        }
+      },
+    }
+  },
+
+  'Jinfan Mixed Teams Cup' =>
+  {
+    ORGANIZATION => 'CCBA',
+    COUNTRY => 'China',
+    ORIGIN => 'National',
+    ZONE => 'Asia',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        MEET => 'China Elite Tournament',
+        MEET_TAG => '2011B',
+        CITY => 'Beijing',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            DATE_START => '2011-05-29',
+            DATE_END => '2011-05-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-05-29',
+            DATE_END => '2011-05-29'
+          } 
+        }
+      },
+    }
+  },
+
   'JPD Cup' =>
   {
     ORGANIZATION => 'CCBA',
@@ -2107,10 +2264,6 @@ my %TOURNAMENTS_CHINA =
 
   'Zhejiang Huamen Cup' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
-    ORIGIN => 'National',
-    ZONE => 'Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2120,7 +2273,8 @@ my %TOURNAMENTS_CHINA =
     {
       '2011' =>
       {
-        CITY => 'Beijing',
+        MEET => 'China Elite Tournament',
+        MEET_TAG => '2011C',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2128,6 +2282,21 @@ my %TOURNAMENTS_CHINA =
             YEAR => 2011,
             DATE_START => '2011-09-06',
             DATE_END => '2011-09-09'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'China Elite Tournament',
+        MEET_TAG => '2014B',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2014,
+            major => 'ROUND',
+            DATE_START => '2014-08-05',
+            DATE_END => '2014-08-08'
           } 
         }
       },

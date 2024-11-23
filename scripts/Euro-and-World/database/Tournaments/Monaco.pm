@@ -99,10 +99,6 @@ my %TOURNAMENTS_MONACO =
 (
   'Patton de Monaco' => 
   {
-    ORGANIZATION => 'FMB',
-    COUNTRY => 'Monaco',
-    ORIGIN => 'International',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'Patton',
     GENDER => 'Open',

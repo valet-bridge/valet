@@ -1621,10 +1621,6 @@ my %TOURNAMENTS_BULGARIA =
 
   'Stara Zagora Open Teams' =>
   {
-    ORGANIZATION => 'BuBF',
-    COUNTRY => 'Bulgaria',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

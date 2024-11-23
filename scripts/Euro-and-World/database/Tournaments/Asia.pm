@@ -377,9 +377,6 @@ my %TOURNAMENTS_ASIA =
 (
   'APBF Girl Teams' =>
   {
-    ORGANIZATION => 'APBF',
-    ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -424,9 +421,6 @@ my %TOURNAMENTS_ASIA =
 
   'APBF Junior Teams' =>
   {
-    ORGANIZATION => 'APBF',
-    ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -543,9 +537,6 @@ my %TOURNAMENTS_ASIA =
 
   'APBF Mixed Teams' =>
   {
-    ORGANIZATION => 'APBF',
-    ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -610,9 +601,6 @@ my %TOURNAMENTS_ASIA =
 
   'APBF Open Teams' =>
   {
-    ORGANIZATION => 'APBF',
-    ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -863,9 +851,6 @@ my %TOURNAMENTS_ASIA =
 
   'APBF School Teams' =>
   {
-    ORGANIZATION => 'APBF',
-    ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -910,9 +895,6 @@ my %TOURNAMENTS_ASIA =
 
   'APBF Senior Teams' =>
   {
-    ORGANIZATION => 'APBF',
-    ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1083,9 +1065,6 @@ my %TOURNAMENTS_ASIA =
 
   'APBF Women Teams' =>
   {
-    ORGANIZATION => 'APBF',
-    ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -1264,9 +1243,6 @@ my %TOURNAMENTS_ASIA =
 
   'APBF Youngster Teams' =>
   {
-    ORGANIZATION => 'APBF',
-    ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1366,9 +1342,6 @@ my %TOURNAMENTS_ASIA =
 
   'ASEAN Mixed Club Teams' =>
   {
-    ORGANIZATION => 'APBF',
-    ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -1490,9 +1463,6 @@ my %TOURNAMENTS_ASIA =
 
   'ASEAN Open Club Pairs' =>
   {
-    ORGANIZATION => 'APBF',
-    ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -1533,9 +1503,6 @@ my %TOURNAMENTS_ASIA =
 
   'ASEAN Open Club Teams' =>
   {
-    ORGANIZATION => 'APBF',
-    ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1778,9 +1745,6 @@ my %TOURNAMENTS_ASIA =
 
   'Asia Open Teams Cup' =>
   {
-    ORGANIZATION => 'APBF',
-    ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1840,9 +1804,6 @@ my %TOURNAMENTS_ASIA =
 
   'Asia Women Teams Cup' =>
   {
-    ORGANIZATION => 'APBF',
-    ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -1900,9 +1861,6 @@ my %TOURNAMENTS_ASIA =
 
   'SEA Mixed Pairs' =>
   {
-    ORGANIZATION => 'APBF',
-    ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Mixed',
@@ -1928,9 +1886,6 @@ my %TOURNAMENTS_ASIA =
 
   'SEA Mixed Teams' =>
   {
-    ORGANIZATION => 'APBF',
-    ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -1965,9 +1920,6 @@ my %TOURNAMENTS_ASIA =
 
   'SEA Open Pairs' =>
   {
-    ORGANIZATION => 'APBF',
-    ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -1993,9 +1945,6 @@ my %TOURNAMENTS_ASIA =
 
   'SEA Open Teams' =>
   {
-    ORGANIZATION => 'APBF',
-    ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2021,9 +1970,6 @@ my %TOURNAMENTS_ASIA =
 
   'SEA Women Pairs' =>
   {
-    ORGANIZATION => 'APBF',
-    ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Women',
@@ -2049,9 +1995,6 @@ my %TOURNAMENTS_ASIA =
 
   'SEA Women Teams' =>
   {
-    ORGANIZATION => 'APBF',
-    ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',

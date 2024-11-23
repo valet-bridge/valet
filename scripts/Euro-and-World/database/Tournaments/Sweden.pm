@@ -844,7 +844,6 @@ my %TOURNAMENTS_SWEDEN =
       {
         # https://www.svenskbridge.se/svenska-cupen-2014/final
         CITY => 'Uppsala',
-        COUNTRY => 'Sweden',
 
         CHAPTERS =>
         {
@@ -882,7 +881,6 @@ my %TOURNAMENTS_SWEDEN =
       {
         # https://www.svenskbridge.se/svenska-cupen-2015/final
         CITY => 'Uppsala',
-        COUNTRY => 'Sweden',
 
         CHAPTERS =>
         {
@@ -924,23 +922,6 @@ my %TOURNAMENTS_SWEDEN =
       {
         # https://www.svenskbridge.se/svenska-cupen-2016/final
         CITY => 'Uppsala',
-        COUNTRY => 'Sweden',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2016,
-            DATE_START => '2016-11-10',
-            DATE_END => '2016-11-13'
-          } 
-        }
-      },
-      '2016' =>
-      {
-        # https://www.svenskbridge.se/svenska-cupen-2016/final
-        CITY => 'Uppsala',
-        COUNTRY => 'Sweden',
 
         CHAPTERS =>
         {
@@ -956,7 +937,6 @@ my %TOURNAMENTS_SWEDEN =
       {
         # https://www.svenskbridge.se/svenska-cupen-2017/final
         CITY => 'Uppsala',
-        COUNTRY => 'Sweden',
 
         CHAPTERS =>
         {
@@ -972,7 +952,6 @@ my %TOURNAMENTS_SWEDEN =
       {
         # https://www.svenskbridge.se/svenska-cupen-2018/final
         CITY => 'Uppsala',
-        COUNTRY => 'Sweden',
 
         CHAPTERS =>
         {
@@ -988,7 +967,6 @@ my %TOURNAMENTS_SWEDEN =
       {
         # https://www.svenskbridge.se/svenska-cupen-2021/final
         CITY => 'Uppsala',
-        COUNTRY => 'Sweden',
 
         CHAPTERS =>
         {
@@ -1019,7 +997,6 @@ my %TOURNAMENTS_SWEDEN =
       {
         # https://www.svenskbridge.se/svenska-cupen-2021/final
         CITY => 'Uppsala',
-        COUNTRY => 'Sweden',
 
         CHAPTERS =>
         {
@@ -1035,7 +1012,6 @@ my %TOURNAMENTS_SWEDEN =
       {
         # https://www.svenskbridge.se/svenska-cupen-2022/final
         CITY => 'Uppsala',
-        COUNTRY => 'Sweden',
 
         CHAPTERS =>
         {
@@ -1051,7 +1027,6 @@ my %TOURNAMENTS_SWEDEN =
       {
         # https://www.svenskbridge.se/svenska-cupen-2023/final
         CITY => 'Uppsala',
-        COUNTRY => 'Sweden',
 
         CHAPTERS =>
         {
@@ -1067,7 +1042,6 @@ my %TOURNAMENTS_SWEDEN =
       {
         # https://www.svenskbridge.se/svenska-cupen-2024/final
         CITY => 'Uppsala',
-        COUNTRY => 'Sweden',
 
         CHAPTERS =>
         {
@@ -1670,7 +1644,6 @@ my %TOURNAMENTS_SWEDEN =
           {
             YEAR => 2015,
             CITY => 'Örebro',
-            COUNTRY => 'Sweden',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2015-05-14',
@@ -1687,7 +1660,6 @@ my %TOURNAMENTS_SWEDEN =
           {
             YEAR => 2016,
             CITY => 'Örebro',
-            COUNTRY => 'Sweden',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2016-05-05',
@@ -1704,7 +1676,6 @@ my %TOURNAMENTS_SWEDEN =
           {
             YEAR => 2017,
             CITY => 'Örebro',
-            COUNTRY => 'Sweden',
             DATE_START => '2017-05-25',
             DATE_END => '2017-05-28'
           } 
@@ -1719,7 +1690,6 @@ my %TOURNAMENTS_SWEDEN =
           {
             YEAR => 2018,
             CITY => 'Örebro',
-            COUNTRY => 'Sweden',
             DATE_START => '2018-05-10',
             DATE_END => '2018-05-13'
           } 
@@ -1734,7 +1704,6 @@ my %TOURNAMENTS_SWEDEN =
           {
             YEAR => 2019,
             CITY => 'Örebro',
-            COUNTRY => 'Sweden',
             DATE_START => '2019-05-30',
             DATE_END => '2019-06-02'
           } 
@@ -1763,7 +1732,6 @@ my %TOURNAMENTS_SWEDEN =
           {
             YEAR => 2022,
             CITY => 'Örebro',
-            COUNTRY => 'Sweden',
             DATE_START => '2022-05-26',
             DATE_END => '2022-05-29'
           } 
@@ -1778,7 +1746,6 @@ my %TOURNAMENTS_SWEDEN =
           {
             YEAR => 2023,
             CITY => 'Örebro',
-            COUNTRY => 'Sweden',
             DATE_START => '2023-05-18',
             DATE_END => '2023-05-21'
           } 
@@ -1793,7 +1760,6 @@ my %TOURNAMENTS_SWEDEN =
           {
             YEAR => 2024,
             CITY => 'Örebro',
-            COUNTRY => 'Sweden',
             DATE_START => '2024-05-09',
             DATE_END => '2024-05-12'
           } 
@@ -1990,7 +1956,6 @@ my %TOURNAMENTS_SWEDEN =
       {
         # https://www.svenskbridge.se/allsvenskan-2014/div1-program
         CITY => 'Örebro',
-        COUNTRY => 'Sweden',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2007,7 +1972,6 @@ my %TOURNAMENTS_SWEDEN =
       {
         # https://www.svenskbridge.se/allsvenskan-2015/div1
         CITY => 'Örebro',
-        COUNTRY => 'Sweden',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2023,7 +1987,6 @@ my %TOURNAMENTS_SWEDEN =
       {
         # https://www.svenskbridge.se/allsvenskan-2016/div1
         CITY => 'Örebro',
-        COUNTRY => 'Sweden',
         CHAPTERS =>
         {
           'C0' => 
@@ -2046,7 +2009,6 @@ my %TOURNAMENTS_SWEDEN =
       {
         # https://www.svenskbridge.se/allsvenskan-2017/div1
         CITY => 'Örebro',
-        COUNTRY => 'Sweden',
 
         CHAPTERS =>
         {
@@ -2062,7 +2024,6 @@ my %TOURNAMENTS_SWEDEN =
       {
         # https://www.svenskbridge.se/allsvenskan-2018/div1
         CITY => 'Örebro',
-        COUNTRY => 'Sweden',
 
         CHAPTERS =>
         {
@@ -2078,7 +2039,6 @@ my %TOURNAMENTS_SWEDEN =
       {
         # https://www.svenskbridge.se/allsvenskan-2019/div1
         CITY => 'Örebro',
-        COUNTRY => 'Sweden',
 
         CHAPTERS =>
         {
@@ -2094,7 +2054,6 @@ my %TOURNAMENTS_SWEDEN =
       {
         # https://www.svenskbridge.se/allsvenskan-2021/div1
         CITY => 'Örebro',
-        COUNTRY => 'Sweden',
 
         CHAPTERS =>
         {
@@ -2110,7 +2069,6 @@ my %TOURNAMENTS_SWEDEN =
       {
         # https://www.svenskbridge.se/allsvenskan-2022/div1
         CITY => 'Örebro',
-        COUNTRY => 'Sweden',
 
         CHAPTERS =>
         {
@@ -2126,7 +2084,6 @@ my %TOURNAMENTS_SWEDEN =
       {
         # https://www.svenskbridge.se/allsvenskan-2023/div1
         CITY => 'Örebro',
-        COUNTRY => 'Sweden',
 
         CHAPTERS =>
         {
@@ -2142,7 +2099,6 @@ my %TOURNAMENTS_SWEDEN =
       {
         # https://www.svenskbridge.se/allsvenskan-2024/div1
         CITY => 'Örebro',
-        COUNTRY => 'Sweden',
 
         CHAPTERS =>
         {

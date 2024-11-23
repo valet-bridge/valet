@@ -1622,10 +1622,7 @@ my %TOURNAMENTS_POLAND =
 
   'bridge24.pl Trophy' =>
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -4068,10 +4065,6 @@ my %TOURNAMENTS_POLAND =
 
   'Polish Mixed Pairs',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     GENDER => 'Mixed',
     AGE => 'Open',
@@ -6410,10 +6403,6 @@ my %TOURNAMENTS_POLAND =
 
   'Warsaw Online Teams',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -6425,7 +6414,6 @@ my %TOURNAMENTS_POLAND =
       '2013' =>
       {
         MEET => 'Poznan Congress',
-        CITY => 'Warsaw',
         CHAPTERS =>
         {
           'C0' => 

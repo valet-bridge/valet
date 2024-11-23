@@ -906,7 +906,6 @@ my %TOURNAMENTS_ISRAEL =
       },
       '2009' =>
       {
-        # No link
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -921,7 +920,6 @@ my %TOURNAMENTS_ISRAEL =
       },
       '2010A' =>
       {
-        # No link
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -936,7 +934,6 @@ my %TOURNAMENTS_ISRAEL =
       },
       '2010B' =>
       {
-        # No link
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -951,7 +948,6 @@ my %TOURNAMENTS_ISRAEL =
       },
       '2011' =>
       {
-        # No link
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -966,7 +962,6 @@ my %TOURNAMENTS_ISRAEL =
       },
       '2012' =>
       {
-        # No link
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -981,7 +976,6 @@ my %TOURNAMENTS_ISRAEL =
       },
       '2013' =>
       {
-        # No link
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -996,7 +990,6 @@ my %TOURNAMENTS_ISRAEL =
       },
       '2015A' =>
       {
-        # No link
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1011,7 +1004,6 @@ my %TOURNAMENTS_ISRAEL =
       },
       '2015B' =>
       {
-        # No link
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1194,7 +1186,6 @@ my %TOURNAMENTS_ISRAEL =
     {
       '2006' =>
       {
-        # Link
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1208,7 +1199,6 @@ my %TOURNAMENTS_ISRAEL =
       },
       '2009' =>
       {
-        # Link
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1223,7 +1213,6 @@ my %TOURNAMENTS_ISRAEL =
       },
       '2012' =>
       {
-        # Link
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1238,7 +1227,6 @@ my %TOURNAMENTS_ISRAEL =
       },
       '2015A' =>
       {
-        # Link
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1252,7 +1240,6 @@ my %TOURNAMENTS_ISRAEL =
       },
       '2015B' =>
       {
-        # Link
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1312,7 +1299,6 @@ my %TOURNAMENTS_ISRAEL =
     {
       '2015' =>
       {
-        # No link
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1379,10 +1365,6 @@ my %TOURNAMENTS_ISRAEL =
 
   'Red Sea Invitational Pairs' =>
   {
-    ORGANIZATION => 'IBF',
-    COUNTRY => 'Israel',
-    ORIGIN => 'Invitational',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1473,10 +1455,6 @@ my %TOURNAMENTS_ISRAEL =
 
   'Red Sea Open Swiss Teams' =>
   {
-    ORGANIZATION => 'IBF',
-    COUNTRY => 'Israel',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     MOVEMENT => 'Swiss',
     SCORING => 'IMP',
@@ -1516,10 +1494,6 @@ my %TOURNAMENTS_ISRAEL =
 
   'Rand Pairs Cup' =>
   {
-    ORGANIZATION => 'IBF',
-    COUNTRY => 'Israel',
-    ORIGIN => 'Invitational',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1546,10 +1520,6 @@ my %TOURNAMENTS_ISRAEL =
 
   'Rand Teams Cup' =>
   {
-    ORGANIZATION => 'IBF',
-    COUNTRY => 'Israel',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

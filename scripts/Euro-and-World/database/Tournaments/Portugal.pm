@@ -764,10 +764,6 @@ my %TOURNAMENTS_PORTUGAL =
 
   'Portuguese Grand Prix',
   {
-    ORGANIZATION => 'FPB',
-    COUNTRY => 'Portugal',
-    CITY => 'Estoril',
-    ORIGIN => 'National',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',

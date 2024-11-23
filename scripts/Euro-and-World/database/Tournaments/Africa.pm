@@ -18,8 +18,6 @@ my %MEETS_AFRICA =
     ORGANIZATION => 'AfBF',
     ORIGIN => 'International',
     ZONE => 'Africa',
-    FORM => 'Teams',
-    SCORING => 'IMP',
 
     EDITIONS => 
     {

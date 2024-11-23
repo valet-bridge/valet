@@ -606,7 +606,7 @@ my %MEETS_INDIA =
       '2012' =>
       {
         YEAR => 2012,
-        DATE_START => '2012-01-06',
+        DATE_START => '2012-01-05',
         DATE_END => '2012-01-08'
       },
       '2013' =>
@@ -1255,10 +1255,6 @@ my %TOURNAMENTS_INDIA =
 
   'All India Open Pairs' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
-    ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -2723,10 +2719,6 @@ my %TOURNAMENTS_INDIA =
 
   'Kalani Trophy',
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
-    ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3385,10 +3377,6 @@ my %TOURNAMENTS_INDIA =
   'Maharaja Yeshwantrao Holkar National Teams' =>
   {
     # Could be the same as Kalani Trophy
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
-    ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3444,6 +3432,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2012' =>
       {
+        MEET => 'Maharaja Holkar National Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3525,10 +3514,6 @@ my %TOURNAMENTS_INDIA =
 
   'Maharashtra State Pairs' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
-    ORIGIN => 'Regional',
-    ZONE => 'Asia Pacific',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -4544,10 +4529,6 @@ my %TOURNAMENTS_INDIA =
 
   'Rajasthan Invitational Pairs' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
-    ORIGIN => 'Invitational',
-    ZONE => 'Asia Pacific',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -4603,10 +4584,6 @@ my %TOURNAMENTS_INDIA =
 
   'Rajasthan Invitational Teams' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
-    ORIGIN => 'Invitational',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -5961,10 +5938,6 @@ my %TOURNAMENTS_INDIA =
 
   'Uttar Pradesh State Pairs' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
-    ORIGIN => 'Regional',
-    ZONE => 'Asia Pacific',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -5990,10 +5963,6 @@ my %TOURNAMENTS_INDIA =
 
   'Uttar Pradesh State Teams' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
-    ORIGIN => 'Regional',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

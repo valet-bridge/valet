@@ -18,7 +18,8 @@ my @MULTI_WORDS =
   'All-China Open Teams',
   'All-China Women Teams',
   'Aoda Cup',
-  'China Elite Tournament',
+  'China Elite Spring Teams',
+  'China Elite Winter Teams',
   'China Friend City Senior Teams',
   'China Hosts Europe in Rome',
   'Chinese First League',
@@ -41,6 +42,8 @@ my @MULTI_WORDS =
   'JPD Cup',
   'Jianshe Cup',
   'Jili Cup',
+  'Jinfan Mixed Teams Cup',
+  'Jinfan Open Teams Cup',
   'Mountain Sea Cup',
   'Sanchen Cup',
   'Sanya Cup',
@@ -59,11 +62,6 @@ my %MULTI_TYPOS =
 (
   'China Friend City Senior Teams' => [
     'china friend city senior team tournament'],
-  'China Elite Tournament' => [
-    'china elite inivitational tournament',
-    'china bridge elite tournament',
-    'china bridge elite invitational tournament',
-    'bridge elite tournament china'],
   'Chinese First League' => [
     'china bridge club championship',
     'china first league',
@@ -105,6 +103,7 @@ my %MULTI_TYPOS =
     'hna openteams',
     'hna open team',
     "hna's hainan bridge tournament"],
+  'Jinfan Open Teams Cup' => ['jinfan cup'],
   'Shenhua Cup' => ['shen hua cup'],
   'Shenyang Spring Teams' => ['shenyang spring'],
   'Vanke Open Teams Cup' => [

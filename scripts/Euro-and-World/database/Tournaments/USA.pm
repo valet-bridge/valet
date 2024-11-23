@@ -4694,9 +4694,6 @@ my %TOURNAMENTS_USA =
 
   'US Youngster Trials',
   {
-    ORGANIZATION => 'USBF',
-    COUNTRY => 'USA',
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -4855,7 +4852,6 @@ my %TOURNAMENTS_USA =
       '1999A' =>
       {
         MEET => 'North American Bridge Championship',
-        CITY => 'Vancouver',
 
         CHAPTERS =>
         {

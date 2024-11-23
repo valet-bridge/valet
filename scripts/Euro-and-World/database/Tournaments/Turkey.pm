@@ -2794,10 +2794,6 @@ my %TOURNAMENTS_TURKEY =
 
   'Turkish Winter Open Teams',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
