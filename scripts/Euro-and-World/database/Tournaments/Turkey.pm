@@ -1259,10 +1259,6 @@ my %TOURNAMENTS_TURKEY =
 
   'Mersin Open Patton Teams',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
-    REGION => 'Mersin',
-    ORIGIN => 'National',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'Patton',
@@ -1587,10 +1583,6 @@ my %TOURNAMENTS_TURKEY =
 
   'Sivrioglu BAM Teams',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'BAM',
     GENDER => 'Open',
@@ -1616,10 +1608,6 @@ my %TOURNAMENTS_TURKEY =
 
   'Solakoglu IMP Pairs',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2720,10 +2708,6 @@ my %TOURNAMENTS_TURKEY =
 
   'Turkish U16 Pairs',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',

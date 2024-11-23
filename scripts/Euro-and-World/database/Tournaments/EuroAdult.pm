@@ -493,8 +493,6 @@ my %MEETS_EUROADULT =
     ORGANIZATION => 'EBL',
     ZONE => 'Europe',
     ORIGIN => 'Transnational',
-    GENDER => 'Open',
-    AGE => 'Open',
 
     EDITIONS =>
     {

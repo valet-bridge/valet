@@ -384,8 +384,6 @@ my %TOURNAMENTS_BALKAN =
 
   'Balkan Open Teams' => 
   {
-    ORIGIN => 'International',
-    ZONE => 'Balkan',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

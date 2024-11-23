@@ -1048,10 +1048,6 @@ my %TOURNAMENTS_BULGARIA =
 
   'Cherven Briag Open Teams' =>
   {
-    ORGANIZATION => 'BuBF',
-    COUNTRY => 'Bulgaria',
-    CITY => 'Cherven Briag',
-    ORIGIN => 'National',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -1094,10 +1090,6 @@ my %TOURNAMENTS_BULGARIA =
 
   'Dobrich Open Teams' =>
   {
-    ORGANIZATION => 'BuBF',
-    COUNTRY => 'Bulgaria',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

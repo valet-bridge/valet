@@ -349,7 +349,6 @@ my %TOURNAMENTS_SUPRA =
 (
   'Buffett Cup Individual' =>
   {
-    ORIGIN => 'International',
     FORM => 'Individual',
     GENDER => 'Open',
     AGE => 'Open',
@@ -447,7 +446,6 @@ my %TOURNAMENTS_SUPRA =
 
   'Buffett Cup Teams' =>
   {
-    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'BAM',
     GENDER => 'Open',
@@ -1203,8 +1201,6 @@ my %TOURNAMENTS_SUPRA =
       '2007' =>
       {
         MEET => 'Channel Trophy',
-        CITY => 'Utrecht',
-        COUNTRY => 'Netherlands',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1220,8 +1216,6 @@ my %TOURNAMENTS_SUPRA =
       '2008' =>
       {
         MEET => 'Channel Trophy',
-        CITY => 'London',
-        COUNTRY => 'England',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1236,8 +1230,6 @@ my %TOURNAMENTS_SUPRA =
       '2011' =>
       {
         MEET => 'Channel Trophy',
-        CITY => 'Utrecht',
-        COUNTRY => 'Netherlands',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1253,8 +1245,6 @@ my %TOURNAMENTS_SUPRA =
       '2012' =>
       {
         MEET => 'Channel Trophy',
-        CITY => 'London',
-        COUNTRY => 'England',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1269,8 +1259,6 @@ my %TOURNAMENTS_SUPRA =
       '2015' =>
       {
         MEET => 'Channel Trophy',
-        CITY => 'Utrecht',
-        COUNTRY => 'Netherlands',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1286,8 +1274,6 @@ my %TOURNAMENTS_SUPRA =
       '2016' =>
       {
         MEET => 'Channel Trophy',
-        CITY => 'London',
-        COUNTRY => 'England',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1301,8 +1287,6 @@ my %TOURNAMENTS_SUPRA =
       '2018' =>
       {
         MEET => 'Channel Trophy',
-        CITY => 'Lille',
-        COUNTRY => 'France',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1316,8 +1300,6 @@ my %TOURNAMENTS_SUPRA =
       '2019' =>
       {
         MEET => 'Channel Trophy',
-        CITY => 'Utrecht',
-        COUNTRY => 'Netherlands',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1332,8 +1314,6 @@ my %TOURNAMENTS_SUPRA =
       {
         # https://bridgescanner.com/event/channel-trophy-2021
         MEET => 'Channel Trophy',
-        CITY => 'Leuven',
-        COUNTRY => 'Belgium',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1348,8 +1328,6 @@ my %TOURNAMENTS_SUPRA =
       {
         # https://bridgescanner.com/event/channel-trophy-2022
         MEET => 'Channel Trophy',
-        CITY => 'Lille',
-        COUNTRY => 'France',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1378,8 +1356,6 @@ my %TOURNAMENTS_SUPRA =
       {
         # https://bridgescanner.com/event/channel-trophy-2024
         MEET => 'Channel Trophy',
-        CITY => 'London',
-        COUNTRY => 'England',
         CHAPTERS =>
         {
           'SINGLE' => 

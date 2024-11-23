@@ -67,10 +67,6 @@ my %TOURNAMENTS_ICELAND =
 (
   'Iceland Express Pairs' =>
   {
-    ORGANIZATION => 'IceBF',
-    COUNTRY => 'Iceland',
-    ORIGIN => 'Transnational',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     GENDER => 'Open',
     AGE => 'Open',
@@ -153,10 +149,6 @@ my %TOURNAMENTS_ICELAND =
 
   'Iceland Express Teams' =>
   {
-    ORGANIZATION => 'IceBF',
-    COUNTRY => 'Iceland',
-    ORIGIN => 'Transnational',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

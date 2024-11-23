@@ -323,10 +323,6 @@ my %TOURNAMENTS_BRAZIL =
 
   'Brazilian Open Trials',
   {
-    ORGANIZATION => 'FBB',
-    COUNTRY => 'Brazil',
-    ORIGIN => 'National',
-    ZONE => 'South America',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

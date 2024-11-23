@@ -1213,9 +1213,6 @@ my %TOURNAMENTS_GERMANY =
 
   'German Mixed Teams' => 
   {
-    ORGANIZATION => 'DBV',
-    COUNTRY => 'Germany',
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',

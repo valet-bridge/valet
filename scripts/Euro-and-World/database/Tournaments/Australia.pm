@@ -3745,10 +3745,6 @@ my %TOURNAMENTS_AUSTRALIA =
 
   'Australian Spring Senior Teams',
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
-    ORIGIN => 'National',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3851,10 +3847,6 @@ my %TOURNAMENTS_AUSTRALIA =
 
   "Australian Spring Women Teams",
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
-    ORIGIN => 'National',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -4815,7 +4807,6 @@ my %TOURNAMENTS_AUSTRALIA =
     {
       '2011' =>
       {
-        # No link
         CHAPTERS =>
         {
           'SINGLE' => 

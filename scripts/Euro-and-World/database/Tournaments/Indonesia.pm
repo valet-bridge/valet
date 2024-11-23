@@ -2570,10 +2570,6 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian U31 Women Teams' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
-    ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -2632,10 +2628,6 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Women Pairs' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
-    ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Women',
@@ -2689,7 +2681,6 @@ my %TOURNAMENTS_INDONESIA =
     {
       '2016' =>
       {
-        # Link
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3271,10 +3262,6 @@ my %TOURNAMENTS_INDONESIA =
 
   'Pahlawan Cup' => 
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
-    ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

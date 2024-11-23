@@ -168,10 +168,6 @@ my %TOURNAMENTS_ARGENTINA =
 
   'Argentinian Copa Republica' =>
   {
-    ORGANIZATION => 'ABA',
-    COUNTRY => 'Argentina',
-    ORIGIN => 'National',
-    ZONE => 'South America',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -784,10 +780,6 @@ my %TOURNAMENTS_ARGENTINA =
 
   'Mar del Plata Open Teams' =>
   {
-    ORGANIZATION => 'ABA',
-    COUNTRY => 'Argentina',
-    ORIGIN => 'National',
-    ZONE => 'South America',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

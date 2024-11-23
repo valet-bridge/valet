@@ -1931,8 +1931,6 @@ my %TOURNAMENTS_WORLD =
 
   'McConnell Cup' => 
   {
-    ORGANIZATION => 'WBF',
-    ZONE => 'World',
     ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',

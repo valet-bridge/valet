@@ -1686,9 +1686,6 @@ my %TOURNAMENTS_ASIA =
 
   'ASEAN Women Club Teams' =>
   {
-    ORGANIZATION => 'APBF',
-    ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -1715,9 +1712,6 @@ my %TOURNAMENTS_ASIA =
 
   'ASEAN Youngsters Club Teams' =>
   {
-    ORGANIZATION => 'APBF',
-    ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

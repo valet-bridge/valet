@@ -1737,10 +1737,6 @@ my %TOURNAMENTS_ITALY =
 
   'Italian Mixed Pairs' =>
   {
-    ORGANIZATION => 'FIGB',
-    COUNTRY => 'Italy',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Mixed',

@@ -136,10 +136,6 @@ my %TOURNAMENTS_CHINA =
 (
   'All-China Mixed Teams' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
-    ORIGIN => 'National',
-    ZONE => 'Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -183,10 +179,6 @@ my %TOURNAMENTS_CHINA =
 
   'All-China Open Teams' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
-    ORIGIN => 'National',
-    ZONE => 'Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -237,10 +229,6 @@ my %TOURNAMENTS_CHINA =
 
   'All-China Women Teams' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
-    ORIGIN => 'National',
-    ZONE => 'Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -313,10 +301,6 @@ my %TOURNAMENTS_CHINA =
 
   'China Elite Spring Teams' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
-    ORIGIN => 'National',
-    ZONE => 'Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -379,10 +363,6 @@ my %TOURNAMENTS_CHINA =
 
   'China Elite Winter Teams' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
-    ORIGIN => 'National',
-    ZONE => 'Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1603,10 +1583,6 @@ my %TOURNAMENTS_CHINA =
 
   'Jinfan Open Teams Cup' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
-    ORIGIN => 'National',
-    ZONE => 'Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1699,10 +1675,6 @@ my %TOURNAMENTS_CHINA =
 
   'Jinfan Mixed Teams Cup' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
-    ORIGIN => 'National',
-    ZONE => 'Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',

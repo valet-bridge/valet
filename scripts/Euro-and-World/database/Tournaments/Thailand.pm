@@ -76,7 +76,6 @@ my %TOURNAMENTS_THAILAND =
 (
   'Bangkok Open Teams' =>
   {
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

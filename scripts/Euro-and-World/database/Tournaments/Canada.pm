@@ -1312,7 +1312,6 @@ my %TOURNAMENTS_CANADA =
 
   'Canadian Women Teams Championship' =>
   {
-    ZONE => 'North America',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',

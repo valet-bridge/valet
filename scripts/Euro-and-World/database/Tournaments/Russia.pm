@@ -17,6 +17,7 @@ my %MEETS_RUSSIA =
   {
     ORGANIZATION => 'RBL',
     COUNTRY => 'Russia',
+    CITY => 'Moscow',
     ORIGIN => 'National',
     ZONE => 'Europe',
 
@@ -36,11 +37,6 @@ my %TOURNAMENTS_RUSSIA =
 (
   'Moscow Sunday Times Pairs',
   {
-    ORGANIZATION => 'RBL',
-    COUNTRY => 'Russia',
-    CITY => 'Moscow',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -67,11 +63,6 @@ my %TOURNAMENTS_RUSSIA =
 
   'Moscow Sunday Times Teams',
   {
-    ORGANIZATION => 'RBL',
-    COUNTRY => 'Russia',
-    CITY => 'Moscow',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

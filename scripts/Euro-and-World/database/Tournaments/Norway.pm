@@ -949,10 +949,6 @@ my %TOURNAMENTS_NORWAY =
 
   'Norwegian Mixed Pairs' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Mixed',
@@ -1091,10 +1087,6 @@ my %TOURNAMENTS_NORWAY =
 
   'Norwegian Mixed Teams' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -1136,10 +1128,6 @@ my %TOURNAMENTS_NORWAY =
 
   'Norwegian Open IMP Pairs' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1327,10 +1315,6 @@ my %TOURNAMENTS_NORWAY =
 
   'Norwegian Open Teams' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1806,10 +1790,6 @@ my %TOURNAMENTS_NORWAY =
 
   'Norwegian Swiss Pairs' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     MOVEMENT => 'Swiss',
     SCORING => 'MP',
@@ -1927,10 +1907,6 @@ my %TOURNAMENTS_NORWAY =
 
   'Norwegian Swiss Teams' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     MOVEMENT => 'Swiss',
     SCORING => 'IMP',

@@ -186,10 +186,6 @@ my %TOURNAMENTS_SWEDEN =
 (
   "Chairman's Cup" =>
   {
-    ORGANIZATION => 'SBF',
-    COUNTRY => 'Sweden',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

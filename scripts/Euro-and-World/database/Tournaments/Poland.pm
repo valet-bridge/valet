@@ -3152,11 +3152,7 @@ my %TOURNAMENTS_POLAND =
 
   'Józef Pochron Jubilee Pairs',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
-    FORM => 'Pairs',
+    aORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
@@ -3184,10 +3180,6 @@ my %TOURNAMENTS_POLAND =
 
   'Krakow Spring Teams',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3256,10 +3248,6 @@ my %TOURNAMENTS_POLAND =
 
   'Leszek Kwiatkowski Memorial Teams',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3789,10 +3777,6 @@ my %TOURNAMENTS_POLAND =
 
   'Polish Girls Trials',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',

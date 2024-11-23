@@ -126,10 +126,6 @@ my %TOURNAMENTS_GREECE =
 
   'Greek Islands Mixed Pairs' =>
   {
-    ORGANIZATION => 'EOM',
-    COUNTRY => 'Greece',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Mixed',
@@ -207,10 +203,6 @@ my %TOURNAMENTS_GREECE =
 
   'Greek Islands Open Pairs' =>
   {
-    ORGANIZATION => 'EOM',
-    COUNTRY => 'Greece',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -288,10 +280,6 @@ my %TOURNAMENTS_GREECE =
 
   'Greek Islands Open Teams' =>
   {
-    ORGANIZATION => 'EOM',
-    COUNTRY => 'Greece',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

@@ -421,10 +421,6 @@ my %TOURNAMENTS_PORTUGAL =
 (
   'Azores Open Teams',
   {
-    ORGANIZATION => 'FPB',
-    COUNTRY => 'Portugal',
-    REGION => 'Azores',
-    ORIGIN => 'International',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -569,7 +565,6 @@ my %TOURNAMENTS_PORTUGAL =
 
   'Madeira Open Teams',
   {
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

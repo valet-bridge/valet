@@ -902,10 +902,6 @@ my %TOURNAMENTS_BALTIC =
 
   'Fortuna Cup' =>
   {
-    ORGANIZATION => 'EstBL',
-    ORIGIN => 'National',
-    CITY => 'Tallinn',
-    COUNTRY => 'Estonia',
     ZONE => 'Europe',
     FORM => 'Pairs',
     GENDER => 'Open',
@@ -1339,7 +1335,6 @@ my %TOURNAMENTS_BALTIC =
 
   'Tallinn Invitational Pairs' =>
   {
-    ZONE => 'Europe',
     FORM => 'Pairs',
     GENDER => 'Open',
     AGE => 'Open',

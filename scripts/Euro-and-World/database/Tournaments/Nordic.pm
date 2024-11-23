@@ -374,8 +374,6 @@ my %TOURNAMENTS_NORDIC =
 
   'Nordic Open Teams',
   {
-    FORM => 'Teams',
-    SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
@@ -498,8 +496,6 @@ my %TOURNAMENTS_NORDIC =
 
   'Nordic Women Teams',
   {
-    FORM => 'Teams',
-    SCORING => 'IMP',
     GENDER => 'Women',
     AGE => 'Open',
 

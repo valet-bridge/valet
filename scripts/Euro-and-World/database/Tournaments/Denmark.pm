@@ -201,10 +201,6 @@ my %TOURNAMENTS_DENMARK =
 (
   'Copenhagen Invitational Pairs',
   {
-    ORGANIZATION => 'DBF',
-    COUNTRY => 'Denmark',
-    ORIGIN => 'Invitational',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     GENDER => 'Open',
     AGE => 'Open',
@@ -2254,10 +2250,6 @@ my %TOURNAMENTS_DENMARK =
 
   'Danish Open Pairs',
   {
-    ORGANIZATION => 'DBF',
-    COUNTRY => 'Denmark',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -2699,10 +2691,6 @@ my %TOURNAMENTS_DENMARK =
 
   'Danish Women Pairs',
   {
-    ORGANIZATION => 'DBF',
-    COUNTRY => 'Denmark',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Women',
