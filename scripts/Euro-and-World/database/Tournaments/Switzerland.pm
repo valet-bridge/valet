@@ -14,15 +14,18 @@ our @EXPORT = qw(set_links);
 # https://fsbridge.ch/de/le-bridge/
 # Not so easy to find results
 
+my %GLOBAL = (
+    ORGANIZATION => 'FSB',
+    COUNTRY => 'Switzerland',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+);
 
 my %MEETS_SWITZERLAND =
 (
   'Zurich Open' =>
   {
-    ORGANIZATION => 'FSB',
-    COUNTRY => 'Switzerland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     CITY => 'Zurich',
 
     EDITIONS => 
@@ -50,10 +53,7 @@ my %TOURNAMENTS_SWITZERLAND =
 (
   'Jean Besse Cup' =>
   {
-    ORGANIZATION => 'FSB',
-    COUNTRY => 'Switzerland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -79,10 +79,7 @@ my %TOURNAMENTS_SWITZERLAND =
 
   'Swiss Club Championship' =>
   {
-    ORGANIZATION => 'FSB',
-    COUNTRY => 'Switzerland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -221,10 +218,7 @@ my %TOURNAMENTS_SWITZERLAND =
 
   'Swiss Cup' =>
   {
-    ORGANIZATION => 'FSB',
-    COUNTRY => 'Switzerland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -377,10 +371,7 @@ my %TOURNAMENTS_SWITZERLAND =
 
   'Swiss Open IMP Pairs' =>
   {
-    ORGANIZATION => 'FSB',
-    COUNTRY => 'Switzerland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -419,10 +410,7 @@ my %TOURNAMENTS_SWITZERLAND =
 
   'Swiss Open Teams' =>
   {
-    ORGANIZATION => 'FSB',
-    COUNTRY => 'Switzerland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

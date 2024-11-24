@@ -17,6 +17,13 @@ our @EXPORT = qw(set_links);
 # Chinese Taipei is the Chinese name for Taiwan.
 # Taipei is the capital of Taiwan.
 
+my %GLOBAL = (
+  ORGANIZATION => 'CTCBA',
+  COUNTRY => 'Chinese Taipei',
+  ORIGIN => 'National',
+  ZONE => 'South East Asia'
+);
+
 my %MEETS_TAIPEI =
 (
 );
@@ -25,10 +32,7 @@ my %TOURNAMENTS_TAIPEI =
 (
   'Antonio Chong Cup' => 
   {
-    ORGANIZATION => 'CTCBA',
-    COUNTRY => 'Chinese Taipei',
-    ORIGIN => 'National',
-    ZONE => 'South East Asia',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -63,10 +67,7 @@ my %TOURNAMENTS_TAIPEI =
 
   'NTU Cup' => 
   {
-    ORGANIZATION => 'CTCBA',
-    COUNTRY => 'Chinese Taipei',
-    ORIGIN => 'National',
-    ZONE => 'South East Asia',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -379,10 +380,8 @@ my %TOURNAMENTS_TAIPEI =
 
   'Taiwan University Open Cup' => 
   {
-    ORGANIZATION => 'CTCBA',
-    COUNTRY => 'Chinese Taipei',
-    ORIGIN => 'National',
-    ZONE => 'South East Asia',
+    %GLOBAL,
+    ORIGIN => 'University',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -431,10 +430,8 @@ my %TOURNAMENTS_TAIPEI =
 
   'Taiwan University Teachers Cup' => 
   {
-    ORGANIZATION => 'CTCBA',
-    COUNTRY => 'Chinese Taipei',
-    ORIGIN => 'National',
-    ZONE => 'South East Asia',
+    %GLOBAL,
+    ORIGIN => 'University',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -461,10 +458,8 @@ my %TOURNAMENTS_TAIPEI =
 
   'Taiwan University Women Cup' => 
   {
-    ORGANIZATION => 'CTCBA',
-    COUNTRY => 'Chinese Taipei',
-    ORIGIN => 'National',
-    ZONE => 'South East Asia',
+    %GLOBAL,
+    ORIGIN => 'University',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -492,10 +487,7 @@ my %TOURNAMENTS_TAIPEI =
 
   'Taiwanese Open Trials' => 
   {
-    ORGANIZATION => 'CTCBA',
-    COUNTRY => 'Chinese Taipei',
-    ORIGIN => 'National',
-    ZONE => 'South East Asia',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -663,10 +655,7 @@ my %TOURNAMENTS_TAIPEI =
 
   'Taiwanese Senior Trials' => 
   {
-    ORGANIZATION => 'CTCBA',
-    COUNTRY => 'Chinese Taipei',
-    ORIGIN => 'National',
-    ZONE => 'South East Asia',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

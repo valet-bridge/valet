@@ -13,14 +13,19 @@ our @EXPORT = qw(set_links);
 
 # https://results.cblt.or.th/history/
 
+my %GLOBAL = (
+  ORGANIZATION => 'CBLT',
+  COUNTRY => 'Thailand',
+  ORIGIN => 'National',
+  ZONE => 'South East Asia'
+);
+
 my %MEETS_THAILAND =
 (
   'Bangkok Bridge Festival' =>
   {
-    ORGANIZATION => 'CBLT',
+    %GLOBAL,
     CITY => 'Bangkok',
-    COUNTRY => 'Thailand',
-    ORIGIN => 'National',
     ZONE => 'South East Asia',
 
     EDITIONS => 
@@ -54,9 +59,7 @@ my %MEETS_THAILAND =
 
   'Thailand National Games' =>
   {
-    ORGANIZATION => 'CBLT',
-    COUNTRY => 'Thailand',
-    ORIGIN => 'National',
+    %GLOBAL,
     ZONE => 'South East Asia',
 
     EDITIONS => 

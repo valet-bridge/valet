@@ -23,10 +23,7 @@ my %MEETS_SWEDEN =
 (
   'Swedish Bridge Festival' =>
   {
-    ORGANIZATION => 'SBF',
-    COUNTRY => 'Sweden',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
 
     # Start 6 days before end
     # End 3 days after
@@ -152,10 +149,7 @@ my %MEETS_SWEDEN =
 
   'Swedish Women Trials' =>
   {
-    ORGANIZATION => 'SBF',
-    COUNTRY => 'Sweden',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     GENDER => 'Women',
     AGE => 'Open',
 
@@ -172,10 +166,7 @@ my %MEETS_SWEDEN =
 
   'Umea Bridgefestival' =>
   {
-    ORGANIZATION => 'SBF',
-    COUNTRY => 'Sweden',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
 
     EDITIONS => 
     {
@@ -462,10 +453,7 @@ my %TOURNAMENTS_SWEDEN =
 
   'Filbyter Cup',
   {
-    ORGANIZATION => 'SBF',
-    COUNTRY => 'Sweden',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -732,10 +720,7 @@ my %TOURNAMENTS_SWEDEN =
 
   'Park Hotell Swiss Teams',
   {
-    ORGANIZATION => 'SBF',
-    COUNTRY => 'Sweden',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     MOVEMENT => 'Swiss',
     SCORING => 'IMP',
@@ -762,10 +747,7 @@ my %TOURNAMENTS_SWEDEN =
 
   'Stena Line Cup',
   {
-    ORGANIZATION => 'SBF',
-    COUNTRY => 'Sweden',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -800,11 +782,9 @@ my %TOURNAMENTS_SWEDEN =
 
   'Stockholm Teams',
   {
-    ORGANIZATION => 'SBF',
-    COUNTRY => 'Sweden',
-    CITY => 'Stockholm',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
+    CITY => 'Stockholm',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -831,10 +811,7 @@ my %TOURNAMENTS_SWEDEN =
 
   'Swedish Cup',
   {
-    ORGANIZATION => 'SBF',
-    COUNTRY => 'Sweden',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1060,10 +1037,8 @@ my %TOURNAMENTS_SWEDEN =
 
   'Swedish District Teams',
   {
-    ORGANIZATION => 'SBF',
-    COUNTRY => 'Sweden',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1163,10 +1138,7 @@ my %TOURNAMENTS_SWEDEN =
 
   'Swedish Juniors Pairs',
   {
-    ORGANIZATION => 'SBF',
-    COUNTRY => 'Sweden',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -1235,10 +1207,7 @@ my %TOURNAMENTS_SWEDEN =
 
   'Swedish Juniors Teams',
   {
-    ORGANIZATION => 'SBF',
-    COUNTRY => 'Sweden',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1371,10 +1340,7 @@ my %TOURNAMENTS_SWEDEN =
 
   'Swedish Mixed Teams',
   {
-    ORGANIZATION => 'SBF',
-    COUNTRY => 'Sweden',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -1514,10 +1480,7 @@ my %TOURNAMENTS_SWEDEN =
 
   'Swedish Open Teams',
   {
-    ORGANIZATION => 'SBF',
-    COUNTRY => 'Sweden',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1772,10 +1735,7 @@ my %TOURNAMENTS_SWEDEN =
 
   'Swedish Open Pair Trials',
   {
-    ORGANIZATION => 'SBF',
-    COUNTRY => 'Sweden',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Pairs',
     GENDER => 'Open',
     AGE => 'Open',
@@ -1817,10 +1777,7 @@ my %TOURNAMENTS_SWEDEN =
 
   'Swedish Open Team Trials',
   {
-    ORGANIZATION => 'SBF',
-    COUNTRY => 'Sweden',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1859,10 +1816,8 @@ my %TOURNAMENTS_SWEDEN =
 
   'Swedish Premier League',
   {
-    ORGANIZATION => 'SBF',
-    COUNTRY => 'Sweden',
+    %GLOBAL,
     ORIGIN => 'Interclub',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2117,10 +2072,7 @@ my %TOURNAMENTS_SWEDEN =
 
   'Swedish Senior Team Trials',
   {
-    ORGANIZATION => 'SBF',
-    COUNTRY => 'Sweden',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2170,10 +2122,8 @@ my %TOURNAMENTS_SWEDEN =
 
   'S:t Erik Championship Series',
   {
-    ORGANIZATION => 'SBF',
-    COUNTRY => 'Sweden',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
+    ORIGIN => 'Regional',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

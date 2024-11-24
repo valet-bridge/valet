@@ -13,15 +13,19 @@ our @EXPORT = qw(set_links);
 
 # There does not seem to exist a good website for Argentinian results.
 
+my %GLOBAL = (
+ ORGANIZATION => 'ABA',
+ COUNTRY => 'Argentina',
+ ZONE => 'South America',
+);
+
 my %MEETS_ARGENTINA =
 (
   'Mar del Plata Festival' =>
   {
-    ORGANIZATION => 'ABA',
+    %GLOBAL,
     CITY => 'Mar del Plata',
-    COUNTRY => 'Argentina',
     ORIGIN => 'National',
-    ZONE => 'South America',
 
     EDITIONS => 
     {
@@ -124,10 +128,8 @@ my %TOURNAMENTS_ARGENTINA =
 (
   'Argentinian Club Teams' =>
   {
-    ORGANIZATION => 'ABA',
-    COUNTRY => 'Argentina',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South America',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -241,10 +243,8 @@ my %TOURNAMENTS_ARGENTINA =
 
   'Argentinian Flags Day Championship' =>
   {
-    ORGANIZATION => 'ABA',
-    COUNTRY => 'Argentina',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South America',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -270,10 +270,8 @@ my %TOURNAMENTS_ARGENTINA =
 
   'Argentinian Mixed Pairs' =>
   {
-    ORGANIZATION => 'ABA',
-    COUNTRY => 'Argentina',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South America',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Mixed',
@@ -299,10 +297,8 @@ my %TOURNAMENTS_ARGENTINA =
 
   'Argentinian Mixed Teams' =>
   {
-    ORGANIZATION => 'ABA',
-    COUNTRY => 'Argentina',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South America',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -343,10 +339,8 @@ my %TOURNAMENTS_ARGENTINA =
 
   'Argentinian Open Teams' =>
   {
-    ORGANIZATION => 'ABA',
-    COUNTRY => 'Argentina',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South America',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -465,10 +459,8 @@ my %TOURNAMENTS_ARGENTINA =
 
   'Argentinian Open Trials' =>
   {
-    ORGANIZATION => 'ABA',
-    COUNTRY => 'Argentina',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South America',
     GENDER => 'Open',
     AGE => 'Open',
 
@@ -585,10 +577,8 @@ my %TOURNAMENTS_ARGENTINA =
 
   'Argentinian Seniors Teams' =>
   {
-    ORGANIZATION => 'ABA',
-    COUNTRY => 'Argentina',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South America',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -614,10 +604,8 @@ my %TOURNAMENTS_ARGENTINA =
 
   'Argentinian Senior Trials' =>
   {
-    ORGANIZATION => 'ABA',
-    COUNTRY => 'Argentina',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South America',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -657,10 +645,8 @@ my %TOURNAMENTS_ARGENTINA =
 
   'Argentinian Women Club Teams' =>
   {
-    ORGANIZATION => 'ABA',
-    COUNTRY => 'Argentina',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South America',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -751,10 +737,8 @@ my %TOURNAMENTS_ARGENTINA =
 
   'Copa Zanalda River Plate' =>
   {
-    ORGANIZATION => 'ABA',
-    COUNTRY => 'Argentina',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South America',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

@@ -11,6 +11,13 @@ package Tournaments::Venezuela;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'VBF',
+  COUNTRY => 'Venezuela',
+  ORIGIN => 'National',
+  ZONE => 'South America'
+);
+
 my %MEETS_VENEZUELA =
 (
 );
@@ -19,10 +26,7 @@ my %TOURNAMENTS_VENEZUELA =
 (
   'Venezuelan Mixed Teams' => 
   {
-    ORGANIZATION => 'VBF',
-    COUNTRY => 'Venezuela',
-    ORIGIN => 'National',
-    ZONE => 'South America',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -49,10 +53,7 @@ my %TOURNAMENTS_VENEZUELA =
 
   'Venezuelan Swiss Pairs' => 
   {
-    ORGANIZATION => 'VBF',
-    COUNTRY => 'Venezuela',
-    ORIGIN => 'National',
-    ZONE => 'South America',
+    %GLOBAL,
     FORM => 'Pairs',
     SCORING => 'MP', # Really?
     MOVEMENT => 'Swiss',

@@ -1,71 +1,55 @@
-Checks:
+FIELDS
 
-- Look over ORIGIN manually
+Tournaments, Meets
+- ParseT:get_all_fields should differentiate t_chapter from rest
+- The chapter info should only be YEAR, DATE_START, DATE_END,
+  STAGE, major, minor, MOVEMENT (if there, could be higher too)
+- ParseT should look up all such header pairs for {tname}{tag}
 
-CLEANUP
-No Tword anymore?
+BBO data
+- What goes in chapter-level:
+  DATE, STAGE, any counters, TEAM?_*, BOARDS
+  MOVEMENT and YEAR could go either way
+- Anything with TITLE_, EVENT_ is renamed, no collisions
+  but repetitions are OK; in the end no more Tword?
+  45865
+- n of m with n > m occasionally OK, but not always
 
-Need to separate MEET_ORDINAL FROM ORDINAL
+Could have a more compact BOARD format when all is accounted for
+
+Checks
+- Fields in chapter-level Tournaments
+- Note anything that is NOT matched by the best header
+  - Probably either add to header, or remove manually
+
+When matching up
+- Figure out where YEAR and MOVEMENT go
+- If there are counters in BBO, must be some in headers too
+- If there are major/minor, there must be counters too (1+, 2+)
+- MEET_ORDINAL vs ORDINAL
+- TEAM?_FORM can potentially go away if perfectly matched
+  If nothing left (22039), so be it
+
+When matched up
+- Tname date ranges as tight as possible? (Deviations noted but OK)
+- E.g. Semifinal could be split by match
+- GROUP could also be split on if it's in all the BBONO's
+  5318
+- #theoretical boards consistent within chapter? (16, 10, ...)
+- Multiple attempts at same segment of a match
+  23000, 23004, 23005 (candidates for skip files)
+- If International, should have only countries
+- If only countries, should be International
+
+Manual checks:
+- ORIGIN
 
 Global fields, started on top of Sweden
 Just add %GLOBAL first
 
------
-
-Data-based checks
-
-BOARDS
-Can use #boards to check consistency.
-
-TEAM NAMES vs International (not Transnational)
-
-Maybe special header formats
-BOARDS header 91 105 | actual 91 105 | counts 15 15 15 | 1384 lines
-BOARDS 91 105 | (1384,30,15)
-
-BOARDS header 61 75 | actual 61 75 | counts 14 15 14 | 735 lines
-BOARDS 61 75 (o68) | (735,29,15)
-
-DATES
-Tname dates as tight as possible?
-
-COUNTERS
-Chapters with counters/Stage in data, but not set in Tournaments
-
-FIELD_BASED OUTPUTS
-- 5318 could split by GROUP if they all have one
-- Duplicates/overlaps such as 23000, 23004, 23005
-
-Fields
-- Move YEAR up to above CHAPTERS
-- 15847 IMP, SCORING
-- 46289 EVENT_ORIGIN
-- 46284 TITLE_SPONSOR
-- 45865 MEET ought to be up in the title
-- 45785 two TITLE_CITY?
-- In general not two of anything meaningful
-
-Fields
-- All fields used
-- Move fields up
-- Final form of output, e.g. TITLE_MEET,
-  TOURNAMENT_CITY
-- TITLE_MEET comes out if MEET, e.g. 3620 Pula Bridge Festival
-- Stats of fields used at different levels; avg # fields?
-- Italian Mixed Pairs 2014: YEAR stays at BBONO level
-
-In some cases like Final, could perhaps pull up the team names
-to the chapter level in the output!  That might mean splitting
-the SF too.
+Cornell is not Cornell University, 27126
 
 ---
-
-Philadelphia Solomon Teams is an odd Tname
-
-22029, not all TEAM1_FORM and TEAM2_FORM go away?
-
-Cornell in Australian tournaments is not Cornell University, e.g.
-27126
 
 VERBOSE flag in RegCounter, for new countries or datasets.
 

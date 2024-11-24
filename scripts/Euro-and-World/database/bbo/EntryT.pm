@@ -1491,6 +1491,8 @@ sub fix_list_tags
 
   $self->delete_list_tag_if('TITLE_TWORD', 'Championship');
 
+  $self->transfer_list_tag('TITLE_MEET', 'MEET');
+
   $self->transfer_list_tag('DATE_ADDED', 'DATE');
   $self->transfer_list_tag('EVENT_DATE', 'DATE');
 

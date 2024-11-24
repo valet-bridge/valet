@@ -76,7 +76,7 @@ my %MEETS_AFRICA =
   'Fes Festival' =>
   {
     ORGANIZATION => 'AfBF',
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     CITY => 'Fes',
     COUNTRY => 'Morocco',
     ZONE => 'Africa',
@@ -101,7 +101,7 @@ my %MEETS_AFRICA =
   'Marmara Festival' =>
   {
     ORGANIZATION => 'AfBF',
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     CITY => 'Marrakech',
     COUNTRY => 'Morocco',
     ZONE => 'Africa',
@@ -455,7 +455,7 @@ my %TOURNAMENTS_AFRICA =
   "Pigg's Peak All Africa" =>
   {
     ORGANIZATION => 'AfBF',
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     ZONE => 'African Zone',
     CITY => 'Piggs Peak',
     COUNTRY => 'South Africa',
