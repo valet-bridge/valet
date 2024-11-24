@@ -1748,7 +1748,6 @@ my %TOURNAMENTS_ITALY =
       {
         MEET => 'Italy Cup',
         YEAR => 2014,
-        CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2014/CXCCMX/indice.asp
 
         CHAPTERS => 
@@ -1765,7 +1764,6 @@ my %TOURNAMENTS_ITALY =
       {
         MEET => 'Italy Cup',
         YEAR => 2015,
-        CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2015/CXCCMX/indice.asp
 
         CHAPTERS => 
@@ -1783,7 +1781,6 @@ my %TOURNAMENTS_ITALY =
       {
         MEET => 'Italy Cup',
         YEAR => 2016,
-        CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2016/CXCCMX/indice.asp
 
         CHAPTERS => 
@@ -1801,7 +1798,6 @@ my %TOURNAMENTS_ITALY =
       {
         MEET => 'Italy Cup',
         YEAR => 2017,
-        CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2017/CXCCMX/indice.asp
 
         CHAPTERS => 
@@ -1819,7 +1815,6 @@ my %TOURNAMENTS_ITALY =
       {
         MEET => 'Italy Cup',
         YEAR => 2018,
-        CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2018/CXCCMX/indice.asp
 
         CHAPTERS => 
@@ -1837,7 +1832,6 @@ my %TOURNAMENTS_ITALY =
       {
         MEET => 'Italy Cup',
         YEAR => 2019,
-        CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2019/CXCCMX/indice.asp
 
         CHAPTERS => 
@@ -1855,7 +1849,6 @@ my %TOURNAMENTS_ITALY =
       {
         MEET => 'Italy Cup',
         YEAR => 2022,
-        CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2022/CXCCMX/indice.asp
 
         CHAPTERS => 
@@ -1873,7 +1866,6 @@ my %TOURNAMENTS_ITALY =
       {
         MEET => 'Italy Cup',
         YEAR => 2023,
-        CITY => 'Salsomaggiore',
         # https://www.federbridge.it/campionati/2023/CXCCLBMX/indice.asp
 
         CHAPTERS => 
@@ -2128,9 +2120,7 @@ my %TOURNAMENTS_ITALY =
       {
         MEET => 'Italy Cup',
         YEAR => 2024,
-        CITY => 'Salsomaggiore',
         # Not yet available
-        # https://www.federbridge.it/campionati/2023/CXSQLBMX/indice.asp
 
         CHAPTERS => 
         {

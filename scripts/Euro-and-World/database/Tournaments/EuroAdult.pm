@@ -493,6 +493,8 @@ my %MEETS_EUROADULT =
     ORGANIZATION => 'EBL',
     ZONE => 'Europe',
     ORIGIN => 'Transnational',
+    GENDER => 'Open',
+    AGE => 'Open',
 
     EDITIONS =>
     {
@@ -5084,8 +5086,6 @@ my %TOURNAMENTS_EUROADULT =
   {
     FORM => 'Teams',
     SCORING => 'BAM',
-    GENDER => 'Open',
-    AGE => 'Open',
 
     EDITIONS =>
     {
@@ -5196,7 +5196,6 @@ my %TOURNAMENTS_EUROADULT =
       '2024' =>
       {
         MEET => 'European Winter Transnational Championships',
-
         CHAPTERS =>
         {
           'C0' => 

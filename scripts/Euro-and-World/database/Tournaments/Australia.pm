@@ -327,6 +327,375 @@ my %MEETS_AUSTRALIA =
     }
   },
 
+  'Australian Playoffs' =>
+  {
+    ORGANIZATION => 'AuBF',
+    COUNTRY => 'Australia',
+    ORIGIN => 'National',
+    ZONE => 'South Pacific',
+
+    EDITIONS => 
+    {
+      '2003A' =>
+      {
+        # Open and Women ("2003")
+        YEAR => 2003,
+        CITY => 'Sydney',
+        DATE_START => '2003-03-06',
+        DATE_END => '2003-03-09'
+      },
+      '2003B' =>
+      {
+        # Seniors ("2003")
+        YEAR => 2003,
+        DATE_START => '2003-04-04',
+        DATE_END => '2003-04-06'
+      },
+      '2004A' =>
+      {
+        # Open and Women ("2004")
+        YEAR => 2004,
+        CITY => 'Sydney',
+        DATE_START => '2004-03-04',
+        DATE_END => '2004-03-08'
+      },
+      '2004B' =>
+      {
+        # Seniors ("2004")
+        YEAR => 2004,
+        DATE_START => '2004-04-01',
+        DATE_END => '2004-04-05'
+      },
+      '2005A' =>
+      {
+        # Open and Women ("2005")
+        YEAR => 2005,
+        CITY => 'Sydney',
+        DATE_START => '2005-03-17',
+        DATE_END => '2005-03-21'
+      },
+      '2005B' =>
+      {
+        # Seniors ("2005")
+        YEAR => 2005,
+        DATE_START => '2005-04-14',
+        DATE_END => '2005-04-18'
+      },
+      '2006A' =>
+      {
+        # Open and Women ("2006")
+        YEAR => 2006,
+        CITY => 'Sydney',
+        DATE_START => '2006-03-23',
+        DATE_END => '2006-03-27'
+      },
+      '2006B' =>
+      {
+        # Seniors ("2006")
+        YEAR => 2006,
+        CITY => 'Sydney',
+        DATE_START => '2006-04-20',
+        DATE_END => '2006-04-24'
+      },
+      '2007A' =>
+      {
+        # Open and Women ("2007")
+        YEAR => 2007,
+        CITY => 'Sydney',
+        DATE_START => '2007-03-22',
+        DATE_END => '2007-03-26'
+      },
+      '2007B' =>
+      {
+        # Seniors ("2007")
+        YEAR => 2007,
+        CITY => 'Sydney',
+        DATE_START => '2007-04-19',
+        DATE_END => '2007-04-23'
+      },
+      '2008A' =>
+      {
+        # Open and Women ("2008")
+        YEAR => 2008,
+        CITY => 'Canberra',
+        DATE_START => '2008-03-26',
+        DATE_END => '2008-03-30'
+      },
+      '2008B' =>
+      {
+        # Seniors ("2008")
+        YEAR => 2008,
+        CITY => 'Sydney',
+        DATE_START => '2008-04-09',
+        DATE_END => '2008-04-13'
+      },
+      '2009A' =>
+      {
+        # Open and Women ("2009")
+        YEAR => 2009,
+        CITY => 'Sydney',
+        DATE_START => '2009-03-21',
+        DATE_END => '2009-03-26'
+      },
+      '2009B' =>
+      {
+        # Seniors ("2009")
+        YEAR => 2009,
+        CITY => 'Sydney',
+        DATE_START => '2009-04-16',
+        DATE_END => '2009-04-20'
+      },
+      '2010A' =>
+      {
+        # Open and Women ("2010")
+        YEAR => 2010,
+        CITY => 'Sydney',
+        DATE_START => '2010-03-20',
+        DATE_END => '2010-03-24'
+      },
+      '2010B' =>
+      {
+        # Seniors ("2010")
+        YEAR => 2010,
+        CITY => 'Sydney',
+        DATE_START => '2010-04-07',
+        DATE_END => '2010-04-11'
+      },
+      '2011A' =>
+      {
+        # Open and Women ("2011")
+        YEAR => 2011,
+        CITY => 'Sydney',
+        DATE_START => '2011-03-26',
+        DATE_END => '2011-03-31'
+      },
+      '2011B' =>
+      {
+        # Seniors ("2011")
+        YEAR => 2011,
+        CITY => 'Sydney',
+        DATE_START => '2011-04-06',
+        DATE_END => '2011-04-10'
+      },
+      '2012A' =>
+      {
+        # Open and Women ("2012")
+        YEAR => 2012,
+        CITY => 'Sydney',
+        DATE_START => '2012-03-31',
+        DATE_END => '2012-04-05'
+      },
+      '2012B' =>
+      {
+        # Seniors ("2012")
+        YEAR => 2012,
+        CITY => 'Sydney',
+        DATE_START => '2012-04-18',
+        DATE_END => '2012-04-22'
+      },
+      '2012C' =>
+      {
+        # Open and Women ("2013")
+        YEAR => 2012,
+        CITY => 'Sydney',
+        DATE_START => '2012-12-08',
+        DATE_END => '2012-12-13'
+      },
+      '2013' =>
+      {
+        # Seniors ("2013")
+        YEAR => 2013,
+        CITY => 'Canberra',
+        DATE_START => '2013-02-13',
+        DATE_END => '2013-02-17'
+      },
+      '2014A' =>
+      {
+        # Open and Women ("2014")
+        YEAR => 2014,
+        CITY => 'Canberra',
+        DATE_START => '2014-02-05',
+        DATE_END => '2014-02-09'
+      },
+      '2014B' =>
+      {
+        # Seniors ("2014")
+        YEAR => 2014,
+        CITY => 'Canberra',
+        DATE_START => '2014-04-03',
+        DATE_END => '2014-04-08'
+      },
+      '2015A' =>
+      {
+        # Open and Women ("2015")
+        YEAR => 2015,
+        CITY => 'Canberra',
+        DATE_START => '2015-01-31',
+        DATE_END => '2015-02-05'
+      },
+      '2015B' =>
+      {
+        # Seniors ("2015")
+        YEAR => 2015,
+        CITY => 'Canberra',
+        DATE_START => '2015-03-13',
+        DATE_END => '2015-03-18'
+      },
+      '2016A' =>
+      {
+        # Open ("2016")
+        YEAR => 2016,
+        CITY => 'Canberra',
+        DATE_START => '2016-02-06',
+        DATE_END => '2016-02-11'
+      },
+      '2016B' =>
+      {
+        # Seniors and Women ("2016")
+        YEAR => 2016,
+        CITY => 'Canberra',
+        DATE_START => '2016-03-12',
+        DATE_END => '2016-03-17'
+      },
+      '2016C' =>
+      {
+        # Open ("2017")
+        YEAR => 2016,
+        CITY => 'Canberra',
+        DATE_START => '2016-11-12',
+        DATE_END => '2016-11-17'
+      },
+      '2016D' =>
+      {
+        # Seniors and Women ("2017")
+        YEAR => 2016,
+        CITY => 'Canberra',
+        DATE_START => '2016-12-03',
+        DATE_END => '2016-12-08'
+      },
+      '2017A' =>
+      {
+        # Open ("2018")
+        YEAR => 2017,
+        CITY => 'Canberra',
+        DATE_START => '2017-11-12',
+        DATE_END => '2017-11-16'
+      },
+      '2017B' =>
+      {
+        # Seniors and Women ("2018")
+        YEAR => 2017,
+        CITY => 'Canberra',
+        DATE_START => '2017-12-03',
+        DATE_END => '2017-12-07'
+      },
+      '2018A' =>
+      {
+        # Open ("2019")
+        YEAR => 2018,
+        CITY => 'Canberra',
+        DATE_START => '2018-11-10',
+        DATE_END => '2018-11-15'
+      },
+      '2018B' =>
+      {
+        # Seniors and Women ("2019")
+        YEAR => 2018,
+        CITY => 'Canberra',
+        DATE_START => '2018-12-08',
+        DATE_END => '2018-12-13'
+      },
+      '2019A' =>
+      {
+        # Mixed ("2019")
+        YEAR => 2019,
+        CITY => 'Sydney',
+        DATE_START => '2019-01-25',
+        DATE_END => '2019-01-28'
+      },
+      '2019B' =>
+      {
+        # Open ("2020")
+        YEAR => 2019,
+        CITY => 'Canberra',
+        DATE_START => '2019-11-09',
+        DATE_END => '2019-11-14'
+      },
+      '2019C' =>
+      {
+        # Seniors and Women ("2020"),
+        YEAR => 2019,
+        CITY => 'Canberra',
+        DATE_START => '2019-12-07',
+        DATE_END => '2019-12-12'
+      },
+      '2020' =>
+      {
+        # Mixed ("2020"),
+        YEAR => 2020,
+        CITY => 'Sydney',
+        DATE_START => '2020-01-24',
+        DATE_END => '2020-01-27'
+      },
+      '2022A' =>
+      {
+        # Open, Seniors and Women ("2022")
+        YEAR => 2022,
+        CITY => 'Canberra',
+        DATE_START => '2022-04-18',
+        DATE_END => '2022-04-23'
+      },
+      '2022B' =>
+      {
+        # Open ("2023")
+        YEAR => 2022,
+        CITY => 'Canberra',
+        DATE_START => '2022-11-12',
+        DATE_END => '2022-11-17'
+      },
+      '2022C' =>
+      {
+        # Mixed ("2023")
+        YEAR => 2022,
+        CITY => 'Canberra',
+        DATE_START => '2022-12-03',
+        DATE_END => '2022-12-08'
+      },
+      '2023A' =>
+      {
+        # Open ("2024")
+        YEAR => 2023,
+        CITY => 'Canberra',
+        DATE_START => '2023-11-11',
+        DATE_END => '2023-11-16'
+      },
+      '2023B' =>
+      {
+        # Mixed ("2024")
+        YEAR => 2023,
+        CITY => 'Canberra',
+        DATE_START => '2023-12-09',
+        DATE_END => '2023-12-14'
+      },
+      '2024A' =>
+      {
+        # Open ("2025")
+        YEAR => 2024,
+        CITY => 'Canberra',
+        DATE_START => '2024-11-16',
+        DATE_END => '2024-11-21'
+      },
+      '2024B' =>
+      {
+        # Mixed ("2025")
+        YEAR => 2024,
+        CITY => 'Canberra',
+        DATE_START => '2024-12-07',
+        DATE_END => '2024-12-12'
+      },
+    }
+  },
+
   'Australian Spring Nationals' =>
   {
     ORGANIZATION => 'AuBF',
@@ -2531,10 +2900,6 @@ my %TOURNAMENTS_AUSTRALIA =
 
   'Australian Open Teams',
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
-    ORIGIN => 'National',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2542,11 +2907,169 @@ my %TOURNAMENTS_AUSTRALIA =
 
     EDITIONS =>
     {
-      '2005A' =>
+      '2005' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2005,
+            DATE_START => '2005-07-29',
+            DATE_END => '2005-07-29'
+          } 
+        }
+      },
+      '2008' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            DATE_START => '2008-08-08',
+            DATE_END => '2008-08-08'
+          } 
+        }
+      },
+      '2009' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            DATE_START => '2009-07-17',
+            DATE_END => '2009-07-18'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            DATE_START => '2010-07-19',
+            DATE_END => '2010-07-23'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-07-28',
+            DATE_END => '2011-07-28'
+          } 
+        }
+      },
+      '2012' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-07-12',
+            DATE_END => '2012-07-13'
+          } 
+        }
+      },
+      '2013' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-07-11',
+            DATE_END => '2013-07-12'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        # TODO Really U26, Women, ... it seems.
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2014-07-13',
+            DATE_END => '2014-07-17'
+          } ,
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-07-17',
+            DATE_END => '2014-07-18'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-07-16',
+            DATE_END => '2015-07-17'
+          },
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Australian ANC Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-07-01',
+            DATE_END => '2016-07-01'
+          } 
+        }
+      },
+    }
+  },
+
+  'Australian Open Trials',
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2005' =>
       {
         # https://abfevents.com.au/events/results/2005.html
         # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=05PLAY&abf=yes
-        CITY => 'Sydney',
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2005A',
         CHAPTERS =>
         {
           'C0' => 
@@ -2567,24 +3090,11 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2005B' =>
-      {
-        MEET => 'Australian ANC Championships',
-        MEET_TAG => '2005',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2005,
-            DATE_START => '2005-07-29',
-            DATE_END => '2005-07-29'
-          } 
-        }
-      },
       '2006' =>
       {
         # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=06PLAY&abf=yes
-        CITY => 'Sydney',
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2006A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2598,7 +3108,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2007' =>
       {
         # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=07PLAY&header=abf
-        CITY => 'Sydney',
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2007A',
         CHAPTERS =>
         {
           'C0' => 
@@ -2619,10 +3130,11 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2008A' =>
+      '2008' =>
       {
         # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=08PLAY&header=abf
-        CITY => 'Canberra',
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2008A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2634,24 +3146,11 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2008B' =>
-      {
-        MEET => 'Australian ANC Championships',
-        MEET_TAG => '2008',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2008,
-            DATE_START => '2008-08-08',
-            DATE_END => '2008-08-08'
-          } 
-        }
-      },
-      '2009A' =>
+      '2009' =>
       {
         # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=09PLAY&header=abf
-        CITY => 'Sydney',
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2009A',
         CHAPTERS =>
         {
           'C0' => 
@@ -2672,24 +3171,11 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2009B' =>
-      {
-        MEET => 'Australian ANC Championships',
-        MEET_TAG => '2009',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2009,
-            DATE_START => '2009-07-17',
-            DATE_END => '2009-07-18'
-          } 
-        }
-      },
-      '2010A' =>
+      '2010' =>
       {
         # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=10PLAY&header=abf
-        CITY => 'Sydney',
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2010A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2702,24 +3188,11 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2010B' =>
-      {
-        MEET => 'Australian ANC Championships',
-        MEET_TAG => '2010',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2010,
-            DATE_START => '2010-07-19',
-            DATE_END => '2010-07-23'
-          } 
-        }
-      },
-      '2011A' =>
+      '2011' =>
       {
         # https://abfevents.com.au/events/playoffs/2011/results/
-        CITY => 'Sydney',
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2011A',
         CHAPTERS =>
         {
           'C0' => 
@@ -2757,27 +3230,11 @@ my %TOURNAMENTS_AUSTRALIA =
           },
         }
       },
-      '2011B' =>
-      {
-        MEET => 'Australian ANC Championships',
-        MEET_TAG => '2011',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2011,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2011-07-28',
-            DATE_END => '2011-07-28'
-          } 
-        }
-      },
       '2012A' =>
       {
         # http://abfevents.com.au/events/results/results.asp?yr=2012&dir=owp
-        CITY => 'Sydney',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2012A',
         CHAPTERS =>
         {
           'C0' => 
@@ -2800,22 +3257,9 @@ my %TOURNAMENTS_AUSTRALIA =
       },
       '2012B' =>
       {
-        MEET => 'Australian ANC Championships',
-        MEET_TAG => '2012',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2012,
-            DATE_START => '2012-07-12',
-            DATE_END => '2012-07-13'
-          } 
-        }
-      },
-      '2012C' =>
-      {
         # http://abfevents.com.au/events/playoffs/2013/OW/results.asp
-        CITY => 'Canberra',
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2012C',
         CHAPTERS =>
         {
           'C0' => 
@@ -2836,25 +3280,11 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2013' =>
-      {
-        MEET => 'Australian ANC Championships',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2013,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2013-07-11',
-            DATE_END => '2013-07-12'
-          } 
-        }
-      },
-      '2014A' =>
+      '2014' =>
       {
         # http://abfevents.com.au/events/playoffs/2014/ow/
-        CITY => 'Canberra',
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2014A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2867,35 +3297,11 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2014B' =>
-      {
-        # TODO Really U26, Women, ... it seems.
-        MEET => 'Australian ANC Championships',
-        MEET_TAG => '2014',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2014,
-            STAGE => 'Round-robin',
-            major => 'ROUND',
-            DATE_START => '2014-07-13',
-            DATE_END => '2014-07-17'
-          } ,
-          'C1' => 
-          {
-            YEAR => 2014,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2014-07-17',
-            DATE_END => '2014-07-18'
-          } 
-        }
-      },
-      '2015A' =>
+      '2015' =>
       {
         # http://abfevents.com.au/events/playoffs/2015/OW/
-        CITY => 'Canberra',
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2015A',
         CHAPTERS =>
         {
           'C0' => 
@@ -2916,24 +3322,11 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2015B' =>
-      {
-        MEET => 'Australian ANC Championships',
-        MEET_TAG => '2015',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2015,
-            DATE_START => '2015-07-16',
-            DATE_END => '2015-07-17'
-          },
-        }
-      },
       '2016A' =>
       {
         # http://abfevents.com.au/events/playoffs/2016/open/
-        CITY => 'Canberra',
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2016A',
         CHAPTERS =>
         {
           'C0' => 
@@ -2956,22 +3349,9 @@ my %TOURNAMENTS_AUSTRALIA =
       },
       '2016B' =>
       {
-        MEET => 'Australian ANC Championships',
-        MEET_TAG => '2016',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2016,
-            DATE_START => '2016-07-01',
-            DATE_END => '2016-07-01'
-          } 
-        }
-      },
-      '2016C' =>
-      {
         # http://abfevents.com.au/events/playoffs/2017/open/
-        CITY => 'Canberra',
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2016C',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2985,7 +3365,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2017' =>
       {
         # http://abfevents.com.au/events/playoffs/2018/open/
-        CITY => 'Canberra',
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2017A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2999,7 +3380,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2018' =>
       {
         # http://abfevents.com.au/events/playoffs/2019/open/
-        CITY => 'Canberra',
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2018A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3013,7 +3395,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2019' =>
       {
         # http://abfevents.com.au/events/playoffs/2020/open/
-        CITY => 'Canberra',
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2019B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3027,7 +3410,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2022A' =>
       {
         # http://abfevents.com.au/events/playoffs/2022/ows/
-        CITY => 'Canberra',
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2022A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3041,7 +3425,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2022B' =>
       {
         # https://abfevents.com.au/events/playoffs/2023/open/
-        CITY => 'Canberra',
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2022B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3055,7 +3440,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2023' =>
       {
         # https://abfevents.com.au/events/results/results.asp?yr=2024&dir=opo
-        CITY => 'Canberra',
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2023A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3069,7 +3455,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2024' =>
       {
         # https://abfevents.com.au/events/playoffs/2025/open/
-        CITY => 'Canberra',
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2024A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3085,10 +3472,6 @@ my %TOURNAMENTS_AUSTRALIA =
 
   'Australian Senior Pairs',
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
-    ORIGIN => 'National',
-    ZONE => 'South Pacific',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3099,8 +3482,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2010' =>
       {
         # https://abfevents.com.au/events/results/results.asp?yr=2010&dir=spo
-        CITY => 'Sydney',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2010B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3115,8 +3498,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2014' =>
       {
         # http://abfevents.com.au/events/playoffs/2014/seniors/
-        CITY => 'Coogee',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2014B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3133,10 +3516,6 @@ my %TOURNAMENTS_AUSTRALIA =
 
   'Australian Senior Teams',
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
-    ORIGIN => 'National',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3147,8 +3526,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2006' =>
       {
         # http://www.abf.com.au/events/results/results.asp?yr=2006&dir=spo
-        CITY => 'Sydney',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2006B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3164,8 +3543,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2007' =>
       {
         # http://www.abf.com.au/events/results/results.asp?yr=2007&dir=spo
-        CITY => 'Sydney',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2007B',
         CHAPTERS =>
         {
           'C0' => 
@@ -3197,8 +3576,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2008A' =>
       {
         # https://abfevents.com.au/events/results/results.asp?yr=2008&dir=spo
-        CITY => 'Sydney',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2008B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3226,8 +3605,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2009' =>
       {
         # https://abfevents.com.au/events/results/results.asp?yr=2009&dir=spo
-        CITY => 'Sydney',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2009B',
         CHAPTERS =>
         {
           'C0' => 
@@ -3251,8 +3630,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2010A' =>
       {
         # https://abfevents.com.au/events/results/results.asp?yr=2010&dir=spo
-        CITY => 'Sydney',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2010B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3280,8 +3659,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2011A' =>
       {
         # https://abfevents.com.au/events/results/results.asp?yr=2011&dir=spo
-        CITY => 'Sydney',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2011B',
         CHAPTERS =>
         {
           'C0' => 
@@ -3329,8 +3708,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2012A' =>
       {
         # http://abfevents.com.au/events/results/results.asp?yr=2012&dir=spo
-        CITY => 'Sydney',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2012B',
         CHAPTERS =>
         {
           'C0' => 
@@ -3368,8 +3747,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2013A' =>
       {
         # http://abfevents.com.au/events/playoffs/2013/seniors/
-        CITY => 'Canberra',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2013',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3401,8 +3780,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2014' =>
       {
         # http://abfevents.com.au/events/playoffs/2014/seniors/
-        CITY => 'Canberra',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2014B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3416,8 +3795,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2015A' =>
       {
         # http://abfevents.com.au/events/playoffs/2015/seniors/
-        CITY => 'Canberra',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2015B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3447,8 +3826,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2016A' =>
       {
         # http://abfevents.com.au/events/playoffs/2016/SW/
-        CITY => 'Canberra',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2016B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3478,8 +3857,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2016C' =>
       {
         # http://abfevents.com.au/events/playoffs/2017/SW/
-        CITY => 'Canberra',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2016D',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3493,8 +3872,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2017' =>
       {
         # http://abfevents.com.au/events/playoffs/2018/sw/
-        CITY => 'Canberra',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2017B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3508,8 +3887,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2018' =>
       {
         # http://abfevents.com.au/events/playoffs/2019/SW/
-        CITY => 'Canberra',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2018B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3523,8 +3902,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2019' =>
       {
         # http://abfevents.com.au/events/playoffs/2020/sw/
-        CITY => 'Canberra',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2019C',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3538,8 +3917,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2022' =>
       {
         # http://abfevents.com.au/events/playoffs/2022/ows/
-        CITY => 'Canberra',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2022A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3945,10 +4324,6 @@ my %TOURNAMENTS_AUSTRALIA =
 
   "Australian Women Teams",
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
-    ORIGIN => 'National',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -3959,8 +4334,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2005A' =>
       {
         # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=05PLAY&abf=yes
-        CITY => 'Sydney',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2005A',
         CHAPTERS =>
         {
           'C0' => 
@@ -3998,8 +4373,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2006' =>
       {
         # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=06PLAY&abf=yes
-        CITY => 'Sydney',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2006A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4013,8 +4388,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2007' =>
       {
         # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=07PLAY&header=abf
-        CITY => 'Sydney',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2007A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4029,8 +4404,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2008A' =>
       {
         # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=08PLAY&header=abf
-        CITY => 'Canberra',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2008A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4059,8 +4434,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2009A' =>
       {
         # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=09PLAY&header=abf
-        CITY => 'Sydney',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2009A',
         CHAPTERS =>
         {
           'C0' => 
@@ -4098,8 +4473,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2010A' =>
       {
         # http://www.bridgeunlimited.com/bridge/ViewMasterEvent2?code=10PLAY&header=abf
-        CITY => 'Sydney',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2010A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4128,8 +4503,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2011A' =>
       {
         # https://abfevents.com.au/events/playoffs/2011/results/
-        CITY => 'Newtown',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2011A',
         CHAPTERS =>
         {
           'C0' => 
@@ -4169,8 +4544,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2012A' =>
       {
         # https://abfevents.com.au/events/results/results.asp?yr=2012&dir=owp
-        CITY => 'Sydney',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2012A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4200,8 +4575,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2012C' =>
       {
         # https://abfevents.com.au/events/playoffs/2013/OW/results.asp
-        CITY => 'Sydney',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2012C',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4232,8 +4607,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2014' =>
       {
         # https://abfevents.com.au/events/playoffs/2014/ow/
-        CITY => 'Sydney',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2014A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4249,8 +4624,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2015A' =>
       {
         # https://abfevents.com.au/events/playoffs/2015/OW/
-        CITY => 'Sydney',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2015A',
         CHAPTERS =>
         {
           'C0' => 
@@ -4288,8 +4663,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2016A' =>
       {
         # https://abfevents.com.au/events/playoffs/2016/SW/
-        CITY => 'Canberra',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2016B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4319,8 +4694,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2016C' =>
       {
         # https://abfevents.com.au/events/playoffs/2017/SW/
-        CITY => 'Canberra',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2016D',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4334,8 +4709,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2017' =>
       {
         # https://abfevents.com.au/events/playoffs/2018/sw/
-        CITY => 'Canberra',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2017B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4349,8 +4724,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2018' =>
       {
         # https://abfevents.com.au/events/playoffs/2019/SW/
-        CITY => 'Canberra',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2018B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4364,8 +4739,8 @@ my %TOURNAMENTS_AUSTRALIA =
       '2019' =>
       {
         # https://abfevents.com.au/events/playoffs/2020/sw/
-        CITY => 'Canberra',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2019C',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4379,15 +4754,15 @@ my %TOURNAMENTS_AUSTRALIA =
       '2022' =>
       {
         # https://abfevents.com.au/events/playoffs/2022/ows/
-        CITY => 'Canberra',
-
+        MEET => 'Australian Playoffs',
+        MEET_TAG => '2022A',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2022,
-            DATE_START => '2022-03-12',
-            DATE_END => '2022-03-17'
+            DATE_START => '2022-04-18',
+            DATE_END => '2022-04-23'
           } 
         }
       },

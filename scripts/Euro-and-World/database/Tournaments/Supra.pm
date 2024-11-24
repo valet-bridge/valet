@@ -1377,8 +1377,6 @@ my %TOURNAMENTS_SUPRA =
       '2007' =>
       {
         MEET => 'Channel Trophy',
-        CITY => 'Utrecht',
-        COUNTRY => 'Netherlands',
         CHAPTERS =>
         {
           'SINGLE' => 

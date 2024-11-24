@@ -613,10 +613,6 @@ my %TOURNAMENTS_BRAZIL =
 
   'Brazilian Women Trials',
   {
-    ORGANIZATION => 'FBB',
-    COUNTRY => 'Brazil',
-    ORIGIN => 'National',
-    ZONE => 'South America',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -626,6 +622,7 @@ my %TOURNAMENTS_BRAZIL =
     {
       '2007' =>
       {
+        MEET => 'Brazilian Trials',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -633,16 +630,14 @@ my %TOURNAMENTS_BRAZIL =
             YEAR => 2007,
             STAGE => 'Final',
             major => 'SEGMENT',
-            DATE_START => '2007-05-05',
-            DATE_END => '2007-05-05'
+            DATE_START => '2007-04-16',
+            DATE_END => '2007-04-16'
           } 
         }
-        # Link
       },
       '2016' =>
       {
         MEET => 'Brazilian Trials',
-
         CHAPTERS =>
         {
           'C0' => 
@@ -662,7 +657,6 @@ my %TOURNAMENTS_BRAZIL =
             DATE_END => '2016-03-27'
           } 
         }
-        # Link
       },
     }
   },

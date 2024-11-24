@@ -16,6 +16,7 @@ my @MULTI_WORDS =
 (
   'Australian ANC Championships',
   'Australian Autumn Nationals',
+  'Australian Playoffs',
   'Australian Spring Nationals',
   'Australian Summer Festival',
   'Australian Youth Week',

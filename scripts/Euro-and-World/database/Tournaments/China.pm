@@ -372,7 +372,6 @@ my %TOURNAMENTS_CHINA =
       {
         MEET => 'China Elite Tournament',
         MEET_TAG => '2012C',
-        CITY => 'Beijing',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1682,7 +1681,6 @@ my %TOURNAMENTS_CHINA =
       {
         MEET => 'China Elite Tournament',
         MEET_TAG => '2011B',
-        CITY => 'Beijing',
         CHAPTERS =>
         {
           'C0' => 

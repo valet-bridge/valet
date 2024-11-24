@@ -55,6 +55,7 @@ my @MULTI_WORDS =
   'PLN Cup',
   'PT Timah Invitational Teams',
   'Rector University of Brawijaya Cup',
+  'Riau Governor Cup',
   'Sarundajang Cup',
   'Semen Padang Cup',
   'Telkom Indonesia Open',
@@ -118,8 +119,7 @@ my %MULTI_TYPOS =
     'kepri governor cup',
     'kepri governors cup',
     'kepri international tournament',
-    'kepri international bridge tournament',
-    'riau governor cup'],
+    'kepri international bridge tournament'],
   'Pertamina Field Tambun Cup' => ['pertamina ep field tambun cup'],
   'PLN Cup' => ['pln fortuga'],
   'PT Timah Invitational Teams' => [

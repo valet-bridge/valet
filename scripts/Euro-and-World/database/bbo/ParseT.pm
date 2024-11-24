@@ -17,7 +17,7 @@ use DateCalc;
 use LinksT;
 use EntryT;
 
-my $DEBUG_LINKS = 1;
+my $DEBUG_LINKS = 0;
 
 my @MEET_FIELDS = qw(ORGANIZATION SPONSOR COUNTRY REGION CITY LOCALITY 
   ORDINAL ORIGIN ZONE FORM SCORING GENDER AGE);
@@ -150,7 +150,7 @@ sub init_links
   }
 
   $self->check_consistency() if $DEBUG_LINKS;
-  exit;
+  # exit;
 }
 
 
@@ -435,7 +435,7 @@ sub check_consistency
         }
 
         my %cumul2;
-        # next;
+        next;
         my $errstr = "$tournament, $tag, $ctag";
         $self->get_all_fields($tournament, $tag, $ctag, \%cumul2);
 

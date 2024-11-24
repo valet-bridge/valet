@@ -462,9 +462,21 @@ my %MEETS_POLAND =
 
     EDITIONS => 
     {
-      # 2006: No date found:
-      # https://stara.pzbs.pl/wyniki/2006/krajowe/gpp2006/06bydg/luczniczka2006.htm
-
+      '2004' =>
+      {
+        # Dates are a guess.
+        YEAR => 2004,
+        DATE_START => '2004-04-28',
+        DATE_END => '2004-04-28'
+      },
+      '2006' =>
+      {
+        # https://stara.pzbs.pl/wyniki/2006/krajowe/gpp2006/06bydg/luczniczka2006.htm
+        # Dates are a guess.
+        YEAR => 2006,
+        DATE_START => '2006-04-05',
+        DATE_END => '2006-04-09'
+      },
       '2007' =>
       {
         # https://stara.pzbs.pl/wyniki/2007/krajowe/gpp/11Bydgoszcz/LUCZ/LUCZ.html
@@ -626,12 +638,6 @@ my %MEETS_POLAND =
         YEAR => 2007,
         DATE_START => '2007-05-05', # Probably more days
         DATE_END => '2007-05-05'
-      },
-      '2012' =>
-      {
-        YEAR => 2012,
-        DATE_START => '2013-05-02', # Probably more days
-        DATE_END => '2013-05-05'
       },
       '2012' =>
       {
@@ -5074,10 +5080,6 @@ my %TOURNAMENTS_POLAND =
 
   'Polish Patton Pairs',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'Patton',
     GENDER => 'Open',
@@ -6088,10 +6090,6 @@ my %TOURNAMENTS_POLAND =
 
   'Polish U25 Trials',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -6119,11 +6117,8 @@ my %TOURNAMENTS_POLAND =
 
   'Polish Women Pairs',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
+    SCORING => 'MP',
     GENDER => 'Women',
     AGE => 'Open',
 
@@ -6133,7 +6128,6 @@ my %TOURNAMENTS_POLAND =
       {
         MEET => 'Polish Championships',
         MEET_TAG => '2014A',
-        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -6149,10 +6143,6 @@ my %TOURNAMENTS_POLAND =
 
   'Polish Women Trials',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -6160,8 +6150,10 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
+      # Guessing that 2004 and 2006 were also at this meet.
       '2004' =>
       {
+        MEET => 'Luczniczka Meeting',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -6175,6 +6167,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2006' =>
       {
+        MEET => 'Luczniczka Meeting',
         CHAPTERS =>
         {
           'SINGLE' => 

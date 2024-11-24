@@ -1856,6 +1856,22 @@ my %TOURNAMENTS_INDONESIA =
           } 
         }
       },
+      '2014' =>
+      {
+        # https://bridge.web.id/2014/kejurnas/
+        MEET => 'Indonesian National Championship Week',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2014-09-20',
+            DATE_END => '2014-09-21'
+          } 
+        }
+      },
     }
   },
 
@@ -2880,24 +2896,6 @@ my %TOURNAMENTS_INDONESIA =
           },
         }
       },
-      '2007A' =>
-      {
-        MEET => 'Indonesian National Championship Week',
-        MEET_TAG => '2007',
-        ORDINAL => 4,
-        CHAPTERS =>
-        {
-          # TODO Maybe one is Governor, one isn't?
-          'C0' => 
-          {
-            YEAR => 2007,
-            MOVEMENT => 'Swiss',
-            major => 'ROUND',
-            DATE_START => '2007-05-15',
-            DATE_END => '2007-05-15'
-          },
-        }
-      },
       '2007B' =>
       {
         ORDINAL => 4,
@@ -3068,7 +3066,7 @@ my %TOURNAMENTS_INDONESIA =
           } 
         }
       },
-      '2014A' =>
+      '2014' =>
       {
         # https://bridge.web.id/2014/kepri/
         ORDINAL => 11,
@@ -3076,7 +3074,6 @@ my %TOURNAMENTS_INDONESIA =
 
         CHAPTERS =>
         {
-          # TODO Maybe one is Governor, one isn't?
           'C0' => 
           {
             YEAR => 2014,
@@ -3093,26 +3090,6 @@ my %TOURNAMENTS_INDONESIA =
             DATE_START => '2014-08-30',
             DATE_END => '2014-08-31'
           },
-        }
-      },
-      '2014B' =>
-      {
-        # https://bridge.web.id/2014/kepri/
-        MEET => 'Indonesian National Championship Week',
-        MEET_TAG => '2014',
-        ORDINAL => 11,
-        CITY => 'Batam',
-
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2014,
-            MOVEMENT => 'Swiss',
-            major => 'ROUND',
-            DATE_START => '2014-09-20',
-            DATE_END => '2014-09-21'
-          } 
         }
       },
       '2015' =>
@@ -3493,6 +3470,34 @@ my %TOURNAMENTS_INDONESIA =
             major => 'ROUND',
             DATE_START => '2013-06-09',
             DATE_END => '2013-06-09'
+          },
+        }
+      },
+    }
+  },
+
+  'Riau Governor Cup' => 
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2007' =>
+      {
+        MEET => 'Indonesian National Championship Week',
+        ORDINAL => 4,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2007,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2007-05-15',
+            DATE_END => '2007-05-15'
           },
         }
       },
