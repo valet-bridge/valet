@@ -13,16 +13,19 @@ our @EXPORT = qw(set_links);
 
 # https://www.frbridge.ro/rezultate/index.html
 
+my %GLOBAL = (
+  ORGANIZATION => 'FRB',
+  COUNTRY => 'Romania',
+  ZONE => 'Europe',
+);
 
 my %MEETS_ROMANIA =
 (
   'Brasov Festival' =>
   {
-    ORGANIZATION => 'FRB',
-    CITY => 'Brasov',
-    COUNTRY => 'Romania',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Brasov',
 
     EDITIONS =>
     {
@@ -90,10 +93,8 @@ my %TOURNAMENTS_ROMANIA =
 
   'Romanian League',
   {
-    ORGANIZATION => 'FRB',
-    COUNTRY => 'Romania',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -240,10 +241,8 @@ my %TOURNAMENTS_ROMANIA =
 
   'Romanian Open Teams',
   {
-    ORGANIZATION => 'FRB',
-    COUNTRY => 'Romania',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -433,10 +432,8 @@ my %TOURNAMENTS_ROMANIA =
 
   'Romanian Open Trials',
   {
-    ORGANIZATION => 'FRB',
-    COUNTRY => 'Romania',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -527,10 +524,8 @@ my %TOURNAMENTS_ROMANIA =
 
   'Romanian Second League',
   {
-    ORGANIZATION => 'FRB',
-    COUNTRY => 'Romania',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

@@ -11,15 +11,19 @@ package Tournaments::Iceland;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'IceBF',
+  COUNTRY => 'Iceland',
+  ZONE => 'Europe',
+);
+
 my %MEETS_ICELAND =
 (
   'Reykjavik Bridge Festival' =>
   {
-    ORGANIZATION => 'IceBF',
-    COUNTRY => 'Iceland',
-    CITY => 'Reykjavik',
+    %GLOBAL,
     ORIGIN => 'Transnational',
-    ZONE => 'Europe',
+    CITY => 'Reykjavik',
 
     EDITIONS =>
     {
@@ -240,10 +244,8 @@ my %TOURNAMENTS_ICELAND =
 
   'Icelandair Open Pairs' =>
   {
-    ORGANIZATION => 'IceBF',
-    COUNTRY => 'Iceland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -269,10 +271,8 @@ my %TOURNAMENTS_ICELAND =
 
   'Icelandair Open Teams' =>
   {
-    ORGANIZATION => 'IceBF',
-    COUNTRY => 'Iceland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -350,10 +350,8 @@ my %TOURNAMENTS_ICELAND =
 
   'Icelandic Cup' =>
   {
-    ORGANIZATION => 'IceBF',
-    COUNTRY => 'Iceland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -590,10 +588,8 @@ my %TOURNAMENTS_ICELAND =
 
   'Icelandic Open Teams' =>
   {
-    ORGANIZATION => 'IceBF',
-    COUNTRY => 'Iceland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

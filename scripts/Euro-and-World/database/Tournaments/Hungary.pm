@@ -14,6 +14,12 @@ our @EXPORT = qw(set_links);
 # https://bridzs.hu/hu/versenyek-eredmenyek/ current
 # http://bridge.ecosoft.hu/leo/leo_show.php?y=2007&m=05 Wayback Machine
 
+my %GLOBAL = (
+  ORGANIZATION => 'MBSZ',
+  COUNTRY => 'Hungary',
+  ZONE => 'Europe',
+);
+
 my %MEETS_HUNGARY =
 (
 );
@@ -22,11 +28,9 @@ my %TOURNAMENTS_HUNGARY =
 (
   'Balaton Invitational Teams',
   {
-    ORGANIZATION => 'MBSZ',
-    COUNTRY => 'Hungary',
-    LOCALITY => 'Balaton',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    LOCALITY => 'Balaton',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -89,11 +93,9 @@ my %TOURNAMENTS_HUNGARY =
 
   'Balatonföldvár Open Teams',
   {
-    ORGANIZATION => 'MBSZ',
-    COUNTRY => 'Hungary',
-    CITY => 'Balatonföldvár',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Balatonföldvár',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -120,10 +122,8 @@ my %TOURNAMENTS_HUNGARY =
 
   'EcoSoft Cup',
   {
-    ORGANIZATION => 'MBSZ',
-    COUNTRY => 'Hungary',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -220,10 +220,8 @@ my %TOURNAMENTS_HUNGARY =
 
   'Hungarian Cup',
   {
-    ORGANIZATION => 'MBSZ',
-    COUNTRY => 'Hungary',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -477,10 +475,8 @@ my %TOURNAMENTS_HUNGARY =
 
   'Hungarian IMP Pairs',
   {
-    ORGANIZATION => 'MBSZ',
-    COUNTRY => 'Hungary',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -515,10 +511,8 @@ my %TOURNAMENTS_HUNGARY =
 
   'Hungarian Open Pairs',
   {
-    ORGANIZATION => 'MBSZ',
-    COUNTRY => 'Hungary',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -544,10 +538,8 @@ my %TOURNAMENTS_HUNGARY =
 
   'Hungarian Open Teams',
   {
-    ORGANIZATION => 'MBSZ',
-    COUNTRY => 'Hungary',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -712,10 +704,8 @@ my %TOURNAMENTS_HUNGARY =
 
   'Hungarian Open Trials',
   {
-    ORGANIZATION => 'MBSZ',
-    COUNTRY => 'Hungary',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -778,10 +768,8 @@ my %TOURNAMENTS_HUNGARY =
 
   'Hungarian Senior Trials',
   {
-    ORGANIZATION => 'MBSZ',
-    COUNTRY => 'Hungary',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -808,10 +796,8 @@ my %TOURNAMENTS_HUNGARY =
 
   'Hungarian Women Trials',
   {
-    ORGANIZATION => 'MBSZ',
-    COUNTRY => 'Hungary',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',

@@ -19,14 +19,18 @@ our @EXPORT = qw(set_links);
 # https://stara.pzbs.pl/imprezy/kal08.html
 # https://stara.pzbs.pl/imprezy/kal09.html
 
+my %GLOBAL = (
+  ORGANIZATION => 'PZBS',
+  COUNTRY => 'Poland',
+  ZONE => 'Europe',
+);
+
 my %MEETS_POLAND =
 (
   'Baltic Congress' =>
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
 
     EDITIONS => 
     {
@@ -170,11 +174,9 @@ my %MEETS_POLAND =
   'Beskids Slam' =>
   {
     # Seems to have stopped in 2019
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    CITY => 'Szczyrk',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Szczyrk',
 
     EDITIONS => 
     {
@@ -253,11 +255,9 @@ my %MEETS_POLAND =
 
   'Boleslawiec Festival' =>
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    CITY => 'Boleslawiec',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Boleslawiec',
 
     EDITIONS => 
     {
@@ -362,11 +362,9 @@ my %MEETS_POLAND =
   'Krakow Congress' =>
   {
     # This is Krakow Spring
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    CITY => 'Krakow',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Krakow',
 
     EDITIONS => 
     {
@@ -454,11 +452,9 @@ my %MEETS_POLAND =
   'Luczniczka Meeting' =>
   {
     # "Archer"
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    CITY => 'Bydgoszcz',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Bydgoszcz',
 
     EDITIONS => 
     {
@@ -594,10 +590,8 @@ my %MEETS_POLAND =
 
   'Palace Cup' =>
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     CITY => 'Warsaw',
-    ZONE => 'Europe',
 
     EDITIONS => 
     {
@@ -625,10 +619,8 @@ my %MEETS_POLAND =
 
   'Polish Championships' =>
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
 
     EDITIONS => 
     {
@@ -712,10 +704,8 @@ my %MEETS_POLAND =
 
   'Polish Grand Prix Pairs Legs' =>
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
 
     EDITIONS => 
     {
@@ -836,10 +826,8 @@ my %MEETS_POLAND =
 
   'Polish Grand Prix Teams Legs' =>
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
 
     EDITIONS => 
     {
@@ -868,10 +856,8 @@ my %MEETS_POLAND =
 
   'Polish Pairs Championship' =>
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
 
     EDITIONS => 
     {
@@ -892,10 +878,8 @@ my %MEETS_POLAND =
 
   'Polish School Championship' =>
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     AGE => 'Schools',
 
     EDITIONS => 
@@ -917,11 +901,9 @@ my %MEETS_POLAND =
 
   'Poznan Congress' =>
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    CITY => 'Poznan',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Poznan',
 
     EDITIONS => 
     {
@@ -1090,11 +1072,9 @@ my %MEETS_POLAND =
 
   'Slawa Congress' =>
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    CITY => 'Slawa',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Slawa',
 
     EDITIONS => 
     {
@@ -1248,11 +1228,9 @@ my %MEETS_POLAND =
 
   'Warsaw Grand Prix' =>
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    CITY => 'Warsaw',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Warsaw',
 
     EDITIONS => 
     {
@@ -1422,10 +1400,8 @@ my %MEETS_POLAND =
   'Wroclaw Meeting' =>
   {
     # Also "Blue Ribbon of the Oder"
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
 
     EDITIONS => 
     {
@@ -1569,10 +1545,8 @@ my %MEETS_POLAND =
 
   'Zulawski Congress' =>
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
 
     EDITIONS => 
     {
@@ -1765,10 +1739,8 @@ my %TOURNAMENTS_POLAND =
 
   'Bermuda Triangle Cup' =>
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'International',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1839,10 +1811,8 @@ my %TOURNAMENTS_POLAND =
 
   'Forest Trophy' =>
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3291,10 +3261,8 @@ my %TOURNAMENTS_POLAND =
 
   'Janina Wielkoszewska Memorial Open',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3487,10 +3455,8 @@ my %TOURNAMENTS_POLAND =
 
   'Mondi Cup' =>
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     GENDER => 'Open',
     AGE => 'Open',
@@ -3657,11 +3623,9 @@ my %TOURNAMENTS_POLAND =
 
   'Plock District League' =>
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    CITY => 'Plock',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Plock',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3785,10 +3749,8 @@ my %TOURNAMENTS_POLAND =
 
   'Polish Boys Championship',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     GENDER => 'Open',
     AGE => 'U18', # Unclear
@@ -3959,10 +3921,8 @@ my %TOURNAMENTS_POLAND =
 
   'Polish Girls Championship',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -4111,10 +4071,8 @@ my %TOURNAMENTS_POLAND =
 
   'Polish Individual Championship',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Individual',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -4231,10 +4189,8 @@ my %TOURNAMENTS_POLAND =
 
   'Polish Junior Pairs Trials',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -4402,10 +4358,8 @@ my %TOURNAMENTS_POLAND =
 
   'Polish Mixed Teams',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -5062,10 +5016,8 @@ my %TOURNAMENTS_POLAND =
 
   'Polish Open Trials',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -5446,10 +5398,8 @@ my %TOURNAMENTS_POLAND =
 
   'Polish Premier League',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -6132,10 +6082,8 @@ my %TOURNAMENTS_POLAND =
 
   'Polish Second League',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -6162,10 +6110,8 @@ my %TOURNAMENTS_POLAND =
 
   'Polish Senior Trials',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -6192,10 +6138,8 @@ my %TOURNAMENTS_POLAND =
 
   'Polish Third League',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -6220,10 +6164,8 @@ my %TOURNAMENTS_POLAND =
 
   'Polish U16 Pairs',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -6248,10 +6190,8 @@ my %TOURNAMENTS_POLAND =
 
   'Polish U16 Teams',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -6277,10 +6217,8 @@ my %TOURNAMENTS_POLAND =
 
   'Polish U20 Trials',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -6414,10 +6352,8 @@ my %TOURNAMENTS_POLAND =
 
   'Pomerania Cup',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -6532,10 +6468,8 @@ my %TOURNAMENTS_POLAND =
 
   'SPS Trophy',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -6664,10 +6598,8 @@ my %TOURNAMENTS_POLAND =
 
   'Wronie Summer Teams',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

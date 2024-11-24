@@ -13,6 +13,11 @@ our @EXPORT = qw(set_links);
 
 # No good source of old Belgian results.
 
+my %GLOBAL = (
+  ORGANIZATION => 'RBBF',
+  COUNTRY => 'Belgium',
+  ZONE => 'Europe',
+);
 
 my %MEETS_BELGIUM =
 (
@@ -22,10 +27,8 @@ my %TOURNAMENTS_BELGIUM =
 (
   'Belgian Open Pairs',
   {
-    ORGANIZATION => 'RBBF',
-    COUNTRY => 'Belgium',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -78,10 +81,8 @@ my %TOURNAMENTS_BELGIUM =
 
   'Belgian Open Teams',
   {
-    ORGANIZATION => 'RBBF',
-    COUNTRY => 'Belgium',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -206,10 +207,8 @@ my %TOURNAMENTS_BELGIUM =
 
   'Belgian Open Trials',
   {
-    ORGANIZATION => 'RBBF',
-    COUNTRY => 'Belgium',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -236,10 +235,8 @@ my %TOURNAMENTS_BELGIUM =
 
   'Belisol Invitational Pairs',
   {
-    ORGANIZATION => 'RBBF',
-    COUNTRY => 'Belgium',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
