@@ -11,17 +11,21 @@ package Tournaments::France;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'FFB',
+  COUNTRY => 'France',
+  ZONE => 'Europe',
+);
+
 my %MEETS_FRANCE =
 (
   'Mondial de Deauville' =>
   {
     # https://festival-international-bridge-deauville.com/#
 
-    ORGANIZATION => 'FFB',
-    COUNTRY => 'France',
-    CITY => 'Deauville',
+    %GLOBAL,
     ORIGIN => 'Transnational',
-    ZONE => 'Europe',
+    CITY => 'Deauville',
 
     EDITIONS => 
     {
@@ -116,10 +120,8 @@ my %TOURNAMENTS_FRANCE =
 (
   'Biarritz Hiver',
   {
-    ORGANIZATION => 'FFB',
-    COUNTRY => 'France',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'Patton',
     GENDER => 'Open',
@@ -466,10 +468,8 @@ my %TOURNAMENTS_FRANCE =
 
   'French Cup',
   {
-    ORGANIZATION => 'FFB',
-    COUNTRY => 'France',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -697,10 +697,8 @@ my %TOURNAMENTS_FRANCE =
 
   'French First Division',
   {
-    ORGANIZATION => 'FFB',
-    COUNTRY => 'France',
+    %GLOBAL,
     ORIGIN => 'Interclub',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1152,10 +1150,8 @@ my %TOURNAMENTS_FRANCE =
 
   'French Intercircle',
   {
-    ORGANIZATION => 'FFB',
-    COUNTRY => 'France',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1181,10 +1177,8 @@ my %TOURNAMENTS_FRANCE =
 
   'French Junior Trials',
   {
-    ORGANIZATION => 'FFB',
-    COUNTRY => 'France',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1236,10 +1230,8 @@ my %TOURNAMENTS_FRANCE =
 
   'French Mixed Teams',
   {
-    ORGANIZATION => 'FFB',
-    COUNTRY => 'France',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -1279,10 +1271,8 @@ my %TOURNAMENTS_FRANCE =
 
   'French Open Teams',
   {
-    ORGANIZATION => 'FFB',
-    COUNTRY => 'France',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1308,10 +1298,8 @@ my %TOURNAMENTS_FRANCE =
 
   'French Open Trials',
   {
-    ORGANIZATION => 'FFB',
-    COUNTRY => 'France',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1497,10 +1485,8 @@ my %TOURNAMENTS_FRANCE =
 
   'French Senior Trials',
   {
-    ORGANIZATION => 'FFB',
-    COUNTRY => 'France',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1646,10 +1632,8 @@ my %TOURNAMENTS_FRANCE =
 
   'French Women Trials',
   {
-    ORGANIZATION => 'FFB',
-    COUNTRY => 'France',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -1724,10 +1708,8 @@ my %TOURNAMENTS_FRANCE =
 
   'French U28 Trials',
   {
-    ORGANIZATION => 'FFB',
-    COUNTRY => 'France',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

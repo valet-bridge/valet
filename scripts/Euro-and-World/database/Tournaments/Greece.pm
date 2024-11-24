@@ -16,14 +16,19 @@ our @EXPORT = qw(set_links);
 # with Google Translate, but cumbersome.  At the moment there are
 # about 7130 pages.
 
+my %GLOBAL =
+(
+  ORGANIZATION => 'EOM',
+  COUNTRY => 'Greece',
+  ZONE => 'Europe',
+);
+
 my %MEETS_GREECE =
 (
   'Greek Islands Festival' =>
   {
-    ORGANIZATION => 'EOM',
-    COUNTRY => 'Greece',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
 
     EDITIONS =>
     {
@@ -96,10 +101,8 @@ my %TOURNAMENTS_GREECE =
 (
   'Greek Central Regional Pairs' =>
   {
-    ORGANIZATION => 'EOM',
-    COUNTRY => 'Greece',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -423,10 +426,8 @@ my %TOURNAMENTS_GREECE =
 
   'Greek Mixed Pairs' =>
   {
-    ORGANIZATION => 'EOM',
-    COUNTRY => 'Greece',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Mixed',
@@ -453,10 +454,8 @@ my %TOURNAMENTS_GREECE =
 
   'Greek Northern Regional' =>
   {
-    ORGANIZATION => 'EOM',
-    COUNTRY => 'Greece',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -483,10 +482,8 @@ my %TOURNAMENTS_GREECE =
   
   'Greek Open Teams' =>
   {
-    ORGANIZATION => 'EOM',
-    COUNTRY => 'Greece',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -635,10 +632,8 @@ my %TOURNAMENTS_GREECE =
 
   'Greek Open Pair Trials' =>
   {
-    ORGANIZATION => 'EOM',
-    COUNTRY => 'Greece',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -669,10 +664,8 @@ my %TOURNAMENTS_GREECE =
 
   'Greek Open Team Trials' =>
   {
-    ORGANIZATION => 'EOM',
-    COUNTRY => 'Greece',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -798,10 +791,8 @@ my %TOURNAMENTS_GREECE =
 
   'Greek Women Pair Trials' =>
   {
-    ORGANIZATION => 'EOM',
-    COUNTRY => 'Greece',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Women',
@@ -827,10 +818,8 @@ my %TOURNAMENTS_GREECE =
 
   'Greek Women Team Trials' =>
   {
-    ORGANIZATION => 'EOM',
-    COUNTRY => 'Greece',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -855,10 +844,8 @@ my %TOURNAMENTS_GREECE =
   
   'Thanos Capayiannides Memorial Simultaneous' =>
   {
-    ORGANIZATION => 'EOM',
-    COUNTRY => 'Greece',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',

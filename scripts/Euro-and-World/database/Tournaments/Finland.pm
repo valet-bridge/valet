@@ -13,16 +13,19 @@ our @EXPORT = qw(set_links);
 
 # http://www.bridgefinland.fi/bilbo/results.php
 
+my %GLOBAL = (
+  ORGANIZATION => 'SBL',
+  COUNTRY => 'Finland',
+  ZONE => 'Europe',
+);
 
 my %MEETS_FINLAND =
 (
   'Jyväskylä Easter Bridge Festival' =>
   {
-    ORGANIZATION => 'SBL',
-    CITY => 'Jyväskylä',
-    COUNTRY => 'Finland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Jyväskylä',
 
     EDITIONS =>
     {
@@ -49,10 +52,8 @@ my %MEETS_FINLAND =
 
   'Pärnu Festival' =>
   {
-    ORGANIZATION => 'SBL',
-    COUNTRY => 'Finland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
 
     EDITIONS =>
     {
@@ -76,10 +77,8 @@ my %TOURNAMENTS_FINLAND =
 (
   'Finnish Cup' =>
   {
-    ORGANIZATION => 'SBL',
-    COUNTRY => 'Finland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -274,10 +273,8 @@ my %TOURNAMENTS_FINLAND =
 
   'Finnish Open Pairs' =>
   {
-    ORGANIZATION => 'SBL',
-    COUNTRY => 'Finland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -438,10 +435,8 @@ my %TOURNAMENTS_FINLAND =
 
   'Finnish Open Pair Trials' =>
   {
-    ORGANIZATION => 'SBL',
-    COUNTRY => 'Finland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -468,10 +463,8 @@ my %TOURNAMENTS_FINLAND =
 
   'Finnish Open Teams' =>
   {
-    ORGANIZATION => 'SBL',
-    COUNTRY => 'Finland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -636,10 +629,8 @@ my %TOURNAMENTS_FINLAND =
 
   'Finnish Open Trials' =>
   {
-    ORGANIZATION => 'SBL',
-    COUNTRY => 'Finland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -682,10 +673,8 @@ my %TOURNAMENTS_FINLAND =
 
   'Finnish Senior Trials' =>
   {
-    ORGANIZATION => 'SBL',
-    COUNTRY => 'Finland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -741,10 +730,8 @@ my %TOURNAMENTS_FINLAND =
 
   'Finnish Swiss Pairs' =>
   {
-    ORGANIZATION => 'SBL',
-    COUNTRY => 'Finland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'IMP',
     MOVEMENT => 'Swiss',
@@ -828,10 +815,8 @@ my %TOURNAMENTS_FINLAND =
 
   'Finnish Women Trials' =>
   {
-    ORGANIZATION => 'SBL',
-    COUNTRY => 'Finland',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -859,11 +844,9 @@ my %TOURNAMENTS_FINLAND =
 
   'Hanko Open Teams' =>
   {
-    ORGANIZATION => 'SBL',
-    COUNTRY => 'Finland',
-    CITY => 'Hanko',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
+    CITY => 'Hanko',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -975,11 +958,9 @@ my %TOURNAMENTS_FINLAND =
 
   'Pärnu Summer Invitational Pairs' =>
   {
-    ORGANIZATION => 'SBL',
-    COUNTRY => 'Finland',
-    CITY => 'Pärnu',
+    %GLOBAL,
     ORIGIN => 'Invitational',
-    ZONE => 'Europe',
+    CITY => 'Pärnu',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -1031,11 +1012,9 @@ my %TOURNAMENTS_FINLAND =
 
   'Puutalo Open Teams' =>
   {
-    ORGANIZATION => 'SBL',
-    COUNTRY => 'Finland',
-    CITY => 'Puutalo',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
+    CITY => 'Puutalo',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1074,11 +1053,9 @@ my %TOURNAMENTS_FINLAND =
 
   'Salo Midsummer Juniors Teams' =>
   {
-    ORGANIZATION => 'SBL',
-    COUNTRY => 'Finland',
-    CITY => 'Salo',
+    %GLOBAL,
     ORIGIN => 'International',
-    ZONE => 'Europe',
+    CITY => 'Salo',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1104,11 +1081,9 @@ my %TOURNAMENTS_FINLAND =
 
   'Vadsø Open Pairs' =>
   {
-    ORGANIZATION => 'SBL',
-    COUNTRY => 'Finland',
-    CITY => 'Vadsø',
+    %GLOBAL,
     ORIGIN => 'International',
-    ZONE => 'Europe',
+    CITY => 'Vadsø',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
