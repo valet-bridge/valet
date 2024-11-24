@@ -11,6 +11,12 @@ package Tournaments::Pakistan;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'PBF',
+  COUNTRY => 'Pakistan',
+  ZONE => 'Asia Pacific',
+);
+
 my %MEETS_PAKISTAN =
 (
 );
@@ -19,10 +25,8 @@ my %TOURNAMENTS_PAKISTAN =
 (
   'Pakistan Day Open Teams' => 
   {
-    ORGANIZATION => 'PBF',
-    COUNTRY => 'Pakistan',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -48,10 +52,8 @@ my %TOURNAMENTS_PAKISTAN =
 
   'Pakistan Open Trials' => 
   {
-    ORGANIZATION => 'PBF',
-    COUNTRY => 'Pakistan',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

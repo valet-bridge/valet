@@ -11,14 +11,18 @@ package Tournaments::Germany;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'DBV',
+  COUNTRY => 'Germany',
+  ZONE => 'Europe',
+);
+
 my %MEETS_GERMANY =
 (
   'German Championship Week' =>
   {
-    ORGANIZATION => 'DBV',
-    COUNTRY => 'Germany',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
 
     EDITIONS =>
     {
@@ -89,10 +93,8 @@ my %MEETS_GERMANY =
 
   'German Championships' =>
   {
-    ORGANIZATION => 'DBV',
-    COUNTRY => 'Germany',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
 
     EDITIONS =>
     {
@@ -656,8 +658,7 @@ my %TOURNAMENTS_GERMANY =
 
   'German Bundesliga' => 
   {
-    ORGANIZATION => 'DBV',
-    COUNTRY => 'Germany',
+    %GLOBAL,
     ORIGIN => 'Interclub',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -1097,8 +1098,7 @@ my %TOURNAMENTS_GERMANY =
 
   'German Club Cup' => 
   {
-    ORGANIZATION => 'DBV',
-    COUNTRY => 'Germany',
+    %GLOBAL,
     ORIGIN => 'Interclub',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -2448,8 +2448,7 @@ my %TOURNAMENTS_GERMANY =
 
   'German Open Trials' => 
   {
-    ORGANIZATION => 'DBV',
-    COUNTRY => 'Germany',
+    %GLOBAL,
     ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -2546,8 +2545,7 @@ my %TOURNAMENTS_GERMANY =
 
   'German Team Trophy' => 
   {
-    ORGANIZATION => 'DBV',
-    COUNTRY => 'Germany',
+    %GLOBAL,
     ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -3023,10 +3021,8 @@ my %TOURNAMENTS_GERMANY =
 
   'König Ludwig Cup' => 
   {
-    ORGANIZATION => 'DBV',
-    COUNTRY => 'Germany',
+    %GLOBAL,
     ORIGIN => 'International',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',

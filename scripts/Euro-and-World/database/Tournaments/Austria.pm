@@ -11,14 +11,18 @@ package Tournaments::Austria;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'ÖBV',
+  COUNTRY => 'Austria',
+  ZONE => 'Europe',
+);
+
 my %MEETS_AUSTRIA =
 (
   'Mautern Bridge Festival' =>
   {
-    ORGANIZATION => 'ÖBV',
-    COUNTRY => 'Austria',
+    %GLOBAL,
     ORIGIN => 'Transnational',
-    ZONE => 'Europe',
 
     EDITIONS =>
     {
@@ -97,10 +101,8 @@ my %TOURNAMENTS_AUSTRIA =
 (
   'Austrian Open Teams' => 
   {
-    ORGANIZATION => 'ÖBV',
-    COUNTRY => 'Austria',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

@@ -11,15 +11,19 @@ package Tournaments::Russia;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'RBL',
+  COUNTRY => 'Russia',
+  ZONE => 'Europe',
+);
+
 my %MEETS_RUSSIA =
 (
   'Moscow Sunday Times' =>
   {
-    ORGANIZATION => 'RBL',
-    COUNTRY => 'Russia',
-    CITY => 'Moscow',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Moscow',
 
     EDITIONS => 
     {
@@ -89,10 +93,8 @@ my %TOURNAMENTS_RUSSIA =
 
   'NN Cup',
   {
-    ORGANIZATION => 'RBL',
-    COUNTRY => 'Russia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -389,10 +391,8 @@ my %TOURNAMENTS_RUSSIA =
 
   'Russian IMSA Cup',
   {
-    ORGANIZATION => 'RBL',
-    COUNTRY => 'Russia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -419,10 +419,8 @@ my %TOURNAMENTS_RUSSIA =
 
   'Russian Open Teams',
   {
-    ORGANIZATION => 'RBL',
-    COUNTRY => 'Russia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -471,10 +469,8 @@ my %TOURNAMENTS_RUSSIA =
 
   'Russian Premier League',
   {
-    ORGANIZATION => 'RBL',
-    COUNTRY => 'Russia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -509,11 +505,9 @@ my %TOURNAMENTS_RUSSIA =
 
   'Slava Cup',
   {
-    ORGANIZATION => 'RBL',
-    COUNTRY => 'Russia',
-    CITY => 'Moscow',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Moscow',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

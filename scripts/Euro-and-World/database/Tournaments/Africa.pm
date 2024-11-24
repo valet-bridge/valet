@@ -11,13 +11,17 @@ package Tournaments::Africa;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'AfBF',
+  ZONE => 'African Zone',
+);
+
 my %MEETS_AFRICA =
 (
   'African Zonal Championships' =>
   {
-    ORGANIZATION => 'AfBF',
+    %GLOBAL,
     ORIGIN => 'International',
-    ZONE => 'Africa',
 
     EDITIONS => 
     {
@@ -75,11 +79,10 @@ my %MEETS_AFRICA =
 
   'Fes Festival' =>
   {
-    ORGANIZATION => 'AfBF',
+    %GLOBAL,
     ORIGIN => 'Transnational',
-    CITY => 'Fes',
     COUNTRY => 'Morocco',
-    ZONE => 'Africa',
+    CITY => 'Fes',
 
     EDITIONS => 
     {
@@ -100,11 +103,10 @@ my %MEETS_AFRICA =
 
   'Marmara Festival' =>
   {
-    ORGANIZATION => 'AfBF',
+    %GLOBAL,
     ORIGIN => 'Transnational',
-    CITY => 'Marrakech',
     COUNTRY => 'Morocco',
-    ZONE => 'Africa',
+    CITY => 'Marrakech',
 
     EDITIONS => 
     {
@@ -454,11 +456,10 @@ my %TOURNAMENTS_AFRICA =
 
   "Pigg's Peak All Africa" =>
   {
-    ORGANIZATION => 'AfBF',
+    %GLOBAL,
     ORIGIN => 'Transnational',
-    ZONE => 'African Zone',
-    CITY => 'Piggs Peak',
     COUNTRY => 'South Africa',
+    CITY => 'Piggs Peak',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',

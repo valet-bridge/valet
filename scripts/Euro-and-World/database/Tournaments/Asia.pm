@@ -11,14 +11,18 @@ package Tournaments::Asia;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'APBF',
+  ZONE => 'Asia Pacific',
+);
+
 my %MEETS_ASIA =
 (
   'APBF Championships' =>
   {
     # https://www.hkcba.org/apbf.php
-    ORGANIZATION => 'APBF',
+    %GLOBAL,
     ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
 
     EDITIONS =>
     {
@@ -150,9 +154,8 @@ my %MEETS_ASIA =
 
   'APBF Youth Championships' =>
   {
-    ORGANIZATION => 'APBF',
+    %GLOBAL,
     ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
 
     EDITIONS =>
     {
@@ -193,9 +196,8 @@ my %MEETS_ASIA =
   'ASEAN Club Championship' =>
   {
     # 2013: https://tournament.aseanbridge.com/
-    ORGANIZATION => 'APBF',
+    %GLOBAL,
     ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
 
     EDITIONS =>
     {
@@ -294,9 +296,8 @@ my %MEETS_ASIA =
 
   'Asia Cup' =>
   {
-    ORGANIZATION => 'APBF',
+    %GLOBAL,
     ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
 
     EDITIONS =>
     {
@@ -342,9 +343,8 @@ my %MEETS_ASIA =
 
   'Southeast Asian Games' =>
   {
-    ORGANIZATION => 'APBF',
+    %GLOBAL,
     ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
 
     EDITIONS =>
     {
@@ -1825,9 +1825,8 @@ my %TOURNAMENTS_ASIA =
 
   'Asian University Championship' =>
   {
-    ORGANIZATION => 'APBF',
+    %GLOBAL,
     ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2025,9 +2024,8 @@ my %TOURNAMENTS_ASIA =
 
   'South Pacific Open Teams' =>
   {
-    ORGANIZATION => 'APBF',
+    %GLOBAL,
     ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

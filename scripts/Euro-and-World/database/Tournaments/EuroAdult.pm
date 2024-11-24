@@ -13,13 +13,16 @@ our @EXPORT = qw(set_links);
 
 # http://www.eurobridge.org/championship-archives/
 
+my %GLOBAL = (
+  ORGANIZATION => 'EBL',
+  ZONE => 'Europe',
+);
 
 my %MEETS_EUROADULT =
 (
   "European Champions' Cup" =>
   {
-    ORGANIZATION => 'EBL',
-    ZONE => 'Europe',
+    %GLOBAL,
     ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -231,8 +234,7 @@ my %MEETS_EUROADULT =
 
   'European National Championships' =>
   {
-    ORGANIZATION => 'EBL',
-    ZONE => 'Europe',
+    %GLOBAL,
 
     EDITIONS => 
     {
@@ -380,8 +382,7 @@ my %MEETS_EUROADULT =
 
   'European Transnational Championships' =>
   {
-    ORGANIZATION => 'EBL',
-    ZONE => 'Europe',
+    %GLOBAL,
 
     EDITIONS => 
     {
@@ -490,8 +491,7 @@ my %MEETS_EUROADULT =
 
   'European Winter Games' =>
   {
-    ORGANIZATION => 'EBL',
-    ZONE => 'Europe',
+    %GLOBAL,
     ORIGIN => 'Transnational',
     GENDER => 'Open',
     AGE => 'Open',
@@ -543,8 +543,7 @@ my %MEETS_EUROADULT =
 
   'European Winter Transnational Championships' =>
   {
-    ORGANIZATION => 'EBL',
-    ZONE => 'Europe',
+    %GLOBAL,
     ORIGIN => 'Transnational',
     GENDER => 'Open',
     AGE => 'Open',
@@ -566,9 +565,8 @@ my %MEETS_EUROADULT =
 
   'Generali European Championships' =>
   {
-    ORGANIZATION => 'EBL',
+    %GLOBAL,
     ORIGIN => 'International',
-    ZONE => 'Europe',
 
     EDITIONS => 
     {

@@ -14,14 +14,18 @@ our @EXPORT = qw(set_links);
 # Some names here:
 # https://www.egyptbridge.org/results
 
+my %GLOBAL = (
+  ORGANIZATION => 'EgBF',
+  COUNTRY => 'Egypt',
+  ZONE => 'African Zone',
+);
+
 my %MEETS_EGYPT =
 (
   'Cairo Bridge Festival' =>
   {
-    ORGANIZATION => 'EgBF',
-    COUNTRY => 'Egypt',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'African Zone',
 
     EDITIONS =>
     {
@@ -82,10 +86,8 @@ my %TOURNAMENTS_EGYPT =
 
   'Egyptian Cup' => 
   {
-    ORGANIZATION => 'EgBF',
-    COUNTRY => 'Egypt',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'African Zone',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -148,10 +150,8 @@ my %TOURNAMENTS_EGYPT =
 
   'Egyptian League' => 
   {
-    ORGANIZATION => 'EgBF',
-    COUNTRY => 'Egypt',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'African Zone',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

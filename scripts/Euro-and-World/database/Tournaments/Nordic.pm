@@ -11,13 +11,17 @@ package Tournaments::Nordic;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'NBU',
+  ZONE => 'Europe',
+);
+
 my %MEETS_NORDIC =
 (
   'Nordic Junior Championship',
   {
-    ORGANIZATION => 'NBU',
+    %GLOBAL,
     ORIGIN => 'International',
-    ZONE => 'Europe',
     AGE => 'U26',
     GENDER => 'Open',
 
@@ -70,9 +74,8 @@ my %MEETS_NORDIC =
 
   'Nordic Team Championship',
   {
-    ORGANIZATION => 'NBU',
+    %GLOBAL,
     ORIGIN => 'International',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
 
@@ -174,9 +177,8 @@ my %TOURNAMENTS_NORDIC =
 (
   'Nordic Cup',
   {
-    ORGANIZATION => 'NBU',
+    %GLOBAL,
     ORIGIN => 'International',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -466,9 +468,8 @@ my %TOURNAMENTS_NORDIC =
 
   'Nordic Security Pro-Am Pairs',
   {
-    ORGANIZATION => 'NBU',
+    %GLOBAL,
     ORIGIN => 'International',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

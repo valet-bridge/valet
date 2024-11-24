@@ -11,14 +11,18 @@ package Tournaments::Japan;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'JCBL',
+  COUNTRY => 'Japan',
+  ZONE => 'South East Asia',
+);
+
 my %MEETS_JAPAN =
 (
   'Yokohama Bridge Festival' =>
   {
-    ORGANIZATION => 'JCBL',
-    COUNTRY => 'Japan',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
 
     EDITIONS => 
     {
@@ -142,10 +146,8 @@ my %TOURNAMENTS_JAPAN =
 (
   'Japanese District KO Teams' => 
   {
-    ORGANIZATION => 'JCBL',
-    COUNTRY => 'Japan',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -171,10 +173,8 @@ my %TOURNAMENTS_JAPAN =
 
   'Japanese Open Trials' => 
   {
-    ORGANIZATION => 'JCBL',
-    COUNTRY => 'Japan',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -201,10 +201,8 @@ my %TOURNAMENTS_JAPAN =
 
   'Kanto Teams' => 
   {
-    ORGANIZATION => 'JCBL',
-    COUNTRY => 'Japan',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -685,10 +683,8 @@ my %TOURNAMENTS_JAPAN =
 
   'Prince Takamatsu Cup' => 
   {
-    ORGANIZATION => 'JCBL',
-    COUNTRY => 'Japan',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
