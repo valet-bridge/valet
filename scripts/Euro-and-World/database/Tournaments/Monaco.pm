@@ -11,15 +11,19 @@ package Tournaments::Monaco;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'FMB',
+  COUNTRY => 'Monaco',
+  ZONE => 'Europe',
+);
+
 my %MEETS_MONACO =
 (
   'Monaco International Festival' =>
   {
-    ORGANIZATION => 'FMB',
+    %GLOBAL,
     ORIGIN => 'International',
     CITY => 'Monte Carlo',
-    COUNTRY => 'Monaco',
-    ZONE => 'Europe',
 
     EDITIONS =>
     {
@@ -402,10 +406,8 @@ my %TOURNAMENTS_MONACO =
 
   'Prince Albert II Cup' => 
   {
-    ORGANIZATION => 'FMB',
-    COUNTRY => 'Monaco',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

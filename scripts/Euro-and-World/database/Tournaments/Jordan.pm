@@ -14,14 +14,18 @@ our @EXPORT = qw(set_links);
 # Some names here:
 # https://www.bridgewebs.com/cgi-bin/bwor/bw.cgi?club=jbf&pid=table_competitions_201
 
+my %GLOBAL = (
+  ORGANIZATION => 'JBA',
+  COUNTRY => 'Jordan',
+  ZONE => 'Africa',
+);
+
 my %MEETS_JORDAN =
 (
   'Jordan Bridge Festival' =>
   {
-    ORGANIZATION => 'JBA',
-    COUNTRY => 'Jordan',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Africa',
 
     EDITIONS => 
     {
@@ -106,10 +110,8 @@ my %MEETS_JORDAN =
 
   'Jordan Spring Festival' =>
   {
-    ORGANIZATION => 'JBA',
-    COUNTRY => 'Jordan',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Africa',
 
     EDITIONS => 
     {

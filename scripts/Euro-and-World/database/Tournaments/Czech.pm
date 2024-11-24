@@ -14,6 +14,11 @@ our @EXPORT = qw(set_links);
 # Records for the first league start in late 2016:
 # https://www.czechbridge.cz/tournaments
 
+my %GLOBAL = (
+  ORGANIZATION => 'CzFB',
+  COUNTRY => 'Czech Republic',
+  ZONE => 'Europe',
+);
 
 my %MEETS_CZECH =
 (
@@ -23,10 +28,8 @@ my %TOURNAMENTS_CZECH =
 (
   'Czech First League',
   {
-    ORGANIZATION => 'CzFB',
-    COUNTRY => 'Czech Republic',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -172,10 +175,8 @@ my %TOURNAMENTS_CZECH =
 
   'Czech Open',
   {
-    ORGANIZATION => 'CzFB',
-    COUNTRY => 'Czech Republic',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -221,11 +222,9 @@ my %TOURNAMENTS_CZECH =
 
   'Grand Prix of Prague',
   {
-    ORGANIZATION => 'CzFB',
-    CITY => 'Prague',
-    COUNTRY => 'Czech Republic',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Prague',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

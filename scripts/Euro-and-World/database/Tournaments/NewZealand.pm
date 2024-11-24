@@ -13,15 +13,18 @@ our @EXPORT = qw(set_links);
 
 # https://www.nzbridge.co.nz/results0.html
 
+my %GLOBAL = (
+  ORGANIZATION => 'NZB',
+  COUNTRY => 'New Zealand',
+  ZONE => 'South Pacific',
+);
 
 my %MEETS_NEWZEALAND =
 (
   'New Zealand Inter-Provincial Teams' =>
   {
-    ORGANIZATION => 'NZB',
-    COUNTRY => 'New Zealand',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South Pacific',
 
     EDITIONS => 
     {
@@ -86,10 +89,8 @@ my %MEETS_NEWZEALAND =
 
   'New Zealand National Congress' =>
   {
-    ORGANIZATION => 'NZB',
-    COUNTRY => 'New Zealand',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South Pacific',
 
     EDITIONS => 
     {
@@ -193,10 +194,8 @@ my %MEETS_NEWZEALAND =
 
   'New Zealand Trials' =>
   {
-    ORGANIZATION => 'NZB',
-    COUNTRY => 'New Zealand',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South Pacific',
 
     EDITIONS => 
     {
@@ -220,10 +219,8 @@ my %TOURNAMENTS_NEWZEALAND =
 (
   'Centre Island Open Teams' => 
   {
-    ORGANIZATION => 'NZB',
-    COUNTRY => 'New Zealand',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

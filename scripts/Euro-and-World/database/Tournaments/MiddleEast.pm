@@ -11,14 +11,18 @@ package Tournaments::MiddleEast;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'BFAME',
+  ZONE => 'Middle East',
+);
+
 my %MEETS_MIDDLEEAST =
 (
   'BFAME Championship' =>
   {
     # https://www.bridgewebs.com/cgi-bin/bwop/bw.cgi?club=bfame&pid=display_page2
-    ORGANIZATION => 'BFAME',
+    %GLOBAL,
     ORIGIN => 'International',
-    ZONE => 'Middle East',
 
     EDITIONS => 
     {
@@ -511,9 +515,8 @@ my %TOURNAMENTS_MIDDLEEAST =
 
   'Pan Arab Inter-Club Championship' => 
   {
-    ORGANIZATION => 'BFAME',
+    %GLOBAL,
     ORIGIN => 'Interclub',
-    ZONE => 'Middle East',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

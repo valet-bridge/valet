@@ -11,15 +11,19 @@ package Tournaments::Croatia;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'CrBF',
+  COUNTRY => 'Croatia',
+  ZONE => 'Europe',
+);
+
 my %MEETS_CROATIA =
 (
   'Pula Bridge Festival' =>
   {
-    ORGANIZATION => 'CrBF',
-    COUNTRY => 'Croatia',
-    CITY => 'Pula',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Pula',
 
     EDITIONS =>
     {
@@ -94,11 +98,9 @@ my %MEETS_CROATIA =
 
   'Samobor Bridge Meeting' =>
   {
-    ORGANIZATION => 'CrBF',
-    COUNTRY => 'Croatia',
-    CITY => 'Samobor',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Samobor',
 
     EDITIONS =>
     {
@@ -129,10 +131,8 @@ my %TOURNAMENTS_CROATIA =
 (
   'Atlantic Trade Bridge Cup' => 
   {
-    ORGANIZATION => 'CrBF',
-    COUNTRY => 'Croatia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

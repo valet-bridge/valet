@@ -15,13 +15,16 @@ our @EXPORT = qw(set_links);
 # http://www.confsudbridge.org/Torneos/
 # https://csbnews.org/ganadores-de-los-campeonatos-sudamericanos-19482015/
 
+my %GLOBAL = (
+  ORGANIZATION => 'CSB',
+  ZONE => 'South America',
+);
 
 my %MEETS_SOUTHAMERICA =
 (
   'South American Team Championship' =>
   {
-    ORGANIZATION => 'CSB',
-    ZONE => 'South America',
+    %GLOBAL,
     ORIGIN => 'International',
 
     EDITIONS => 
@@ -160,8 +163,7 @@ my %MEETS_SOUTHAMERICA =
 
   'South American Trials' =>
   {
-    ORGANIZATION => 'CSB',
-    ZONE => 'South America',
+    %GLOBAL,
     ORIGIN => 'Transnational',
 
     EDITIONS => 
@@ -778,8 +780,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2007' =>
       {
         # http://www.confsudbridge.org/Torneos/Tor_0003.aspx
-        ORGANIZATION => 'CSB',
-        ZONE => 'South America',
+        %GLOBAL,
         ORIGIN => 'International',
 
         CHAPTERS =>

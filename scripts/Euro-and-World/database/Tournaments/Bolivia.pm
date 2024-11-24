@@ -11,6 +11,12 @@ package Tournaments::Bolivia;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'ABB',
+  COUNTRY => 'Bolivia',
+  ZONE => 'South America',
+);
+
 my %MEETS_BOLIVIA =
 (
 );
@@ -19,10 +25,8 @@ my %TOURNAMENTS_BOLIVIA =
 (
   'Bolivian Open Pairs',
   {
-    ORGANIZATION => 'ABB',
-    COUNTRY => 'Bolivia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South America',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -48,10 +52,8 @@ my %TOURNAMENTS_BOLIVIA =
 
   'Bolivian Open Teams' => 
   {
-    ORGANIZATION => 'ABB',
-    COUNTRY => 'Bolivia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South America',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

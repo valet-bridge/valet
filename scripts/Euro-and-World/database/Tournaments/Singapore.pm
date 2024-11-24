@@ -11,6 +11,12 @@ package Tournaments::Singapore;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'SCBA',
+  COUNTRY => 'Singapore',
+  ZONE => 'Asia Pacific',
+);
+
 my %MEETS_SINGAPORE =
 (
 );
@@ -19,10 +25,8 @@ my %TOURNAMENTS_SINGAPORE =
 (
   'Pesta Sukan' => 
   {
-    ORGANIZATION => 'SCBA',
-    COUNTRY => 'Singapore',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -187,10 +191,8 @@ my %TOURNAMENTS_SINGAPORE =
 
   'Singapore Open Teams' => 
   {
-    ORGANIZATION => 'SCBA',
-    COUNTRY => 'Singapore',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

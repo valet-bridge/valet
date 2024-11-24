@@ -11,6 +11,12 @@ package Tournaments::HongKong;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'HKCBA',
+  COUNTRY => 'Hong Kong',
+  ZONE => 'South East Asia',
+);
+
 my %MEETS_HONGKONG =
 (
 );
@@ -19,10 +25,8 @@ my %TOURNAMENTS_HONGKONG =
 (
   'Hong Kong Inter-City Open Teams' => 
   {
-    ORGANIZATION => 'HKCBA',
-    COUNTRY => 'Hong Kong',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -223,10 +227,8 @@ my %TOURNAMENTS_HONGKONG =
 
   'Hong Kong Inter-City Women Teams' => 
   {
-    ORGANIZATION => 'HKCBA',
-    COUNTRY => 'Hong Kong',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -253,10 +255,8 @@ my %TOURNAMENTS_HONGKONG =
 
   'Hong Kong New Year Teams' =>
   {
-    ORGANIZATION => 'NZB',
-    COUNTRY => 'Hong Kong',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
