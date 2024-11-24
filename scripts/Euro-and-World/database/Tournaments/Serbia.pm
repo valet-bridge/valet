@@ -14,6 +14,13 @@ our @EXPORT = qw(set_links);
 # https://english.bridgeserbia.org/arhiva/
 # https://www.bridgeserbia.org/savez/turniri/Arhiva%20rezultata/
 
+my %GLOBAL = (
+  ORGANIZATION => 'BSS',
+  COUNTRY => 'Serbia',
+  ORIGIN => 'National',
+  ZONE => 'Europe',
+);
+
 my %MEETS_SERBIA =
 (
 );
@@ -22,10 +29,7 @@ my %TOURNAMENTS_SERBIA =
 (
   'Serbian Cup' =>
   {
-    ORGANIZATION => 'BSS',
-    COUNTRY => 'Serbia',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -187,10 +191,7 @@ my %TOURNAMENTS_SERBIA =
 
   'Serbian Inter-City Teams' =>
   {
-    ORGANIZATION => 'BSS',
-    COUNTRY => 'Serbia',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -226,10 +227,7 @@ my %TOURNAMENTS_SERBIA =
 
   'Serbian Open Teams' =>
   {
-    ORGANIZATION => 'BSS',
-    COUNTRY => 'Serbia',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -312,10 +310,7 @@ my %TOURNAMENTS_SERBIA =
 
   'Serbian Open Trials' =>
   {
-    ORGANIZATION => 'BSS',
-    COUNTRY => 'Serbia',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -375,10 +370,7 @@ my %TOURNAMENTS_SERBIA =
 
   'Serbian Premier League' =>
   {
-    ORGANIZATION => 'BSS',
-    COUNTRY => 'Serbia',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -476,10 +468,8 @@ my %TOURNAMENTS_SERBIA =
 
   'Vrnjacka Banja Open Teams' =>
   {
-    ORGANIZATION => 'BSS',
-    COUNTRY => 'Serbia',
-    CITY => 'Vrnjacka Banja',
-    ORIGIN => 'National',
+    %GLOBAL,
+    ORIGIN => 'Regional',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',

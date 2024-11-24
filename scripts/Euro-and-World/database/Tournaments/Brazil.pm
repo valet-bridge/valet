@@ -13,14 +13,18 @@ our @EXPORT = qw(set_links);
 
 # https://www.bridge.esp.br/historico.php, a bit spotty
 
+my %GLOBAL = (
+  ORGANIZATION => 'FBB',
+  COUNTRY => 'Brazil',
+  ORIGIN => 'National',
+  ZONE => 'South America',
+);
+
 my %MEETS_BRAZIL =
 (
   'Brazilian Trials',
   {
-    ORGANIZATION => 'FBB',
-    COUNTRY => 'Brazil',
-    ORIGIN => 'National',
-    ZONE => 'South America',
+    %GLOBAL,
 
     EDITIONS => 
     {
@@ -90,10 +94,7 @@ my %MEETS_BRAZIL =
 
   'Buzios Festival',
   {
-    ORGANIZATION => 'FBB',
-    COUNTRY => 'Brazil',
-    ORIGIN => 'National',
-    ZONE => 'South America',
+    %GLOBAL,
 
     EDITIONS => 
     {
@@ -111,10 +112,7 @@ my %TOURNAMENTS_BRAZIL =
 (
   'Brazilian Open Teams',
   {
-    ORGANIZATION => 'FBB',
-    COUNTRY => 'Brazil',
-    ORIGIN => 'National',
-    ZONE => 'South America',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -583,10 +581,7 @@ my %TOURNAMENTS_BRAZIL =
 
   'Brazilian Senior Trials',
   {
-    ORGANIZATION => 'FBB',
-    COUNTRY => 'Brazil',
-    ORIGIN => 'National',
-    ZONE => 'South America',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -688,10 +683,7 @@ my %TOURNAMENTS_BRAZIL =
 
   'Rio de Janeiro Open Teams',
   {
-    ORGANIZATION => 'FBB',
-    COUNTRY => 'Brazil',
-    ORIGIN => 'National',
-    ZONE => 'South America',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -739,10 +731,7 @@ my %TOURNAMENTS_BRAZIL =
 
   'Rio de Janeiro Christmas Individual',
   {
-    ORGANIZATION => 'FBB',
-    COUNTRY => 'Brazil',
-    ORIGIN => 'National',
-    ZONE => 'South America',
+    %GLOBAL,
     FORM => 'Individual',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -768,10 +757,7 @@ my %TOURNAMENTS_BRAZIL =
 
   'Roberto Taunay Cup',
   {
-    ORGANIZATION => 'FBB',
-    COUNTRY => 'Brazil',
-    ORIGIN => 'National',
-    ZONE => 'South America',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -797,10 +783,7 @@ my %TOURNAMENTS_BRAZIL =
 
   'Sao Paulo Cup',
   {
-    ORGANIZATION => 'FBB',
-    COUNTRY => 'Brazil',
-    ORIGIN => 'National',
-    ZONE => 'South America',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -961,10 +944,8 @@ my %TOURNAMENTS_BRAZIL =
 
   'Sao Paulo State Championship',
   {
-    ORGANIZATION => 'FBB',
-    COUNTRY => 'Brazil',
-    ORIGIN => 'National',
-    ZONE => 'South America',
+    %GLOBAL,
+    ORIGIN => 'Regional',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

@@ -11,6 +11,12 @@ package Tournaments::CentralAmerica;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'CACBF',
+  ORIGIN => 'International',
+  ZONE => 'Central America',
+);
+
 my %MEETS_CENTRALAMERICA =
 (
 );
@@ -21,9 +27,7 @@ my %TOURNAMENTS_CENTRALAMERICA =
   {
     # https://www.bridgewebs.com/cgi-bin/bwoq/bw.cgi?club=cacbf&pid=display_page31
 
-    ORGANIZATION => 'CACBF',
-    ORIGIN => 'International',
-    ZONE => 'Central America',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -116,9 +120,7 @@ my %TOURNAMENTS_CENTRALAMERICA =
   {
     # https://www.bridgewebs.com/cgi-bin/bwoq/bw.cgi?club=cacbf&pid=display_page31
 
-    ORGANIZATION => 'CACBF',
-    ORIGIN => 'International',
-    ZONE => 'Central America',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

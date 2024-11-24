@@ -162,7 +162,7 @@ my %MEETS_SOUTHAMERICA =
   {
     ORGANIZATION => 'CSB',
     ZONE => 'South America',
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
 
     EDITIONS => 
     {

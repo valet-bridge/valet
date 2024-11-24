@@ -11,14 +11,18 @@ package Tournaments::SouthAfrica;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'SABF',
+  COUNTRY => 'South Africa',
+  ORIGIN => 'National',
+  ZONE => 'African Zone',
+);
+
 my %MEETS_SOUTHAFRICA =
 (
   'South African Congress' =>
   {
-    ORGANIZATION => 'SABF',
-    COUNTRY => 'South Africa',
-    ORIGIN => 'National',
-    ZONE => 'African Zone',
+    %GLOBAL,
 
     EDITIONS =>
     {
@@ -66,10 +70,7 @@ my %TOURNAMENTS_SOUTHAFRICA =
 (
   'South African Inter-Province Teams' =>
   {
-    ORGANIZATION => 'SABF',
-    COUNTRY => 'South Africa',
-    ORIGIN => 'Interprovince',
-    ZONE => 'African Zone',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

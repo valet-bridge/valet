@@ -14,6 +14,13 @@ our @EXPORT = qw(set_links);
 # The Spanish results seem to be paywalled or not searchable.
 # https://www.aebridge.com/es
 
+my %GLOBAL = (
+  ORGANIZATION => 'AEB',
+  COUNTRY => 'Spain',
+  ORIGIN => 'National',
+  ZONE => 'Europe',
+);
+
 my %MEETS_SPAIN =
 (
 );
@@ -22,11 +29,8 @@ my %TOURNAMENTS_SPAIN =
 (
   'Las Palmas Simultaneous Pairs',
   {
-    ORGANIZATION => 'AEB',
-    COUNTRY => 'Spain',
+    %GLOBAL,
     CITY => 'Las Palmas',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -51,11 +55,8 @@ my %TOURNAMENTS_SPAIN =
 
   'Las Palmas Women Pairs',
   {
-    ORGANIZATION => 'AEB',
-    COUNTRY => 'Spain',
+    %GLOBAL,
     CITY => 'Las Palmas',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Women',
@@ -81,11 +82,8 @@ my %TOURNAMENTS_SPAIN =
 
   'Madrid Senior Teams',
   {
-    ORGANIZATION => 'AEB',
-    COUNTRY => 'Spain',
+    %GLOBAL,
     CITY => 'Madrid',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -112,10 +110,8 @@ my %TOURNAMENTS_SPAIN =
   'Open Catalunya Preferent Pairs',
   {
     # https://www.bridge.cat/
-    ORGANIZATION => 'AEB',
-    COUNTRY => 'Spain',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
+    ORIGIN => 'Regional',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -184,10 +180,8 @@ my %TOURNAMENTS_SPAIN =
   'Open Catalunya Preferent Teams',
   {
     # https://www.bridge.cat/
-    ORGANIZATION => 'AEB',
-    COUNTRY => 'Spain',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
+    ORIGIN => 'Regional',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -338,10 +332,7 @@ my %TOURNAMENTS_SPAIN =
 
   'Spanish Central Zone Teams',
   {
-    ORGANIZATION => 'AEB',
-    COUNTRY => 'Spain',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -368,10 +359,7 @@ my %TOURNAMENTS_SPAIN =
 
   'Spanish Mixed Teams',
   {
-    ORGANIZATION => 'AEB',
-    COUNTRY => 'Spain',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -397,10 +385,7 @@ my %TOURNAMENTS_SPAIN =
 
   'Spanish Open Teams',
   {
-    ORGANIZATION => 'AEB',
-    COUNTRY => 'Spain',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -519,10 +504,7 @@ my %TOURNAMENTS_SPAIN =
 
   'Spanish Open Trials',
   {
-    ORGANIZATION => 'AEB',
-    COUNTRY => 'Spain',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -549,10 +531,7 @@ my %TOURNAMENTS_SPAIN =
 
   'Spanish Senior Trials',
   {
-    ORGANIZATION => 'AEB',
-    COUNTRY => 'Spain',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

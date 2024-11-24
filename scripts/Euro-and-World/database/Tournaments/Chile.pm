@@ -18,6 +18,13 @@ our @EXPORT = qw(set_links);
 # https://fcb.cl/resultados/2022-12-10.htm
 # There is an archive, but how to search?
 
+my %GLOBAL = (
+  ORGANIZATION => 'FCB',
+  COUNTRY => 'Chile',
+  ORIGIN => 'National',
+  ZONE => 'South America',
+);
+
 my %MEETS_CHILE =
 (
 );
@@ -26,10 +33,7 @@ my %TOURNAMENTS_CHILE =
 (
   'Chilean Copa de Oro' =>
   {
-    ORGANIZATION => 'FCB',
-    COUNTRY => 'Chile',
-    ORIGIN => 'National',
-    ZONE => 'South America',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -126,10 +130,7 @@ my %TOURNAMENTS_CHILE =
 
   'Chilean Copa de Plata' =>
   {
-    ORGANIZATION => 'FCB',
-    COUNTRY => 'Chile',
-    ORIGIN => 'National',
-    ZONE => 'South America',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -154,10 +155,7 @@ my %TOURNAMENTS_CHILE =
 
   'Chilean Cup' =>
   {
-    ORGANIZATION => 'FCB',
-    COUNTRY => 'Chile',
-    ORIGIN => 'National',
-    ZONE => 'South America',
+    %GLOBAL,
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -198,10 +196,7 @@ my %TOURNAMENTS_CHILE =
 
   'Chilean Invitational Teams' =>
   {
-    ORGANIZATION => 'FCB',
-    COUNTRY => 'Chile',
-    ORIGIN => 'National',
-    ZONE => 'South America',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -227,10 +222,7 @@ my %TOURNAMENTS_CHILE =
 
   'Chilean Open Pairs' =>
   {
-    ORGANIZATION => 'FCB',
-    COUNTRY => 'Chile',
-    ORIGIN => 'National',
-    ZONE => 'South America',
+    %GLOBAL,
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -255,10 +247,7 @@ my %TOURNAMENTS_CHILE =
 
   'Chilean Open Teams' =>
   {
-    ORGANIZATION => 'FCB',
-    COUNTRY => 'Chile',
-    ORIGIN => 'National',
-    ZONE => 'South America',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -293,10 +282,7 @@ my %TOURNAMENTS_CHILE =
 
   'Chilean Open Trials' =>
   {
-    ORGANIZATION => 'FCB',
-    COUNTRY => 'Chile',
-    ORIGIN => 'National',
-    ZONE => 'South America',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -359,10 +345,7 @@ my %TOURNAMENTS_CHILE =
 
   'Chilean Senior Teams' =>
   {
-    ORGANIZATION => 'FCB',
-    COUNTRY => 'Chile',
-    ORIGIN => 'National',
-    ZONE => 'South America',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -397,10 +380,7 @@ my %TOURNAMENTS_CHILE =
 
   'Chilean Women Teams' =>
   {
-    ORGANIZATION => 'FCB',
-    COUNTRY => 'Chile',
-    ORIGIN => 'National',
-    ZONE => 'South America',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -427,10 +407,7 @@ my %TOURNAMENTS_CHILE =
 
   'Chilean Women Trials' =>
   {
-    ORGANIZATION => 'FCB',
-    COUNTRY => 'Chile',
-    ORIGIN => 'National',
-    ZONE => 'South America',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
