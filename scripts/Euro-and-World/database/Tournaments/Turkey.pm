@@ -13,14 +13,21 @@ our @EXPORT = qw(set_links);
 
 # Surely there is more structure here than I have discovered.
 
+my %GLOBAL = (
+  ORGANIZATION => 'TBF',
+  COUNTRY => 'Turkey',
+  ORIGIN => 'National',
+  ZONE => 'Europe',
+);
+
 my %MEETS_TURKEY =
 (
   'Assael Festival' =>
   {
     ORGANIZATION => 'TBF',
     COUNTRY => 'Turkey',
-    CITY => 'Cesme',
     ZONE => 'Europe',
+    CITY => 'Cesme',
 
     EDITIONS => 
     {
@@ -47,11 +54,8 @@ my %MEETS_TURKEY =
 
   'Cappadocia Fairy Chimneys Festival' =>
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
+    %GLOBAL,
     REGION => 'Cappadocia',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
 
     EDITIONS => 
     {
@@ -84,11 +88,8 @@ my %MEETS_TURKEY =
 
   'Bodrum Peninsula Festival' =>
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
+    %GLOBAL,
     CITY => 'Bodrum',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
 
     EDITIONS => 
     {
@@ -103,11 +104,8 @@ my %MEETS_TURKEY =
 
   'Mersin Bridge Festival' =>
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
+    %GLOBAL,
     CITY => 'Mersin',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
 
     EDITIONS => 
     {
@@ -140,11 +138,8 @@ my %MEETS_TURKEY =
 
   'Sivrioglu Festival' =>
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
+    %GLOBAL,
     CITY => 'Sivrioglu',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
 
     EDITIONS => 
     {
@@ -159,10 +154,8 @@ my %MEETS_TURKEY =
 
   'Turkish-Greek Friendship Festival' =>
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
+    %GLOBAL,
     ORIGIN => 'Transnational',
-    ZONE => 'Europe',
 
     EDITIONS => 
     {
@@ -184,10 +177,7 @@ my %MEETS_TURKEY =
 
   'Turkish Open Trials' =>
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
 
     EDITIONS => 
     {
@@ -221,10 +211,7 @@ my %MEETS_TURKEY =
 
   'Turkish Winter Championships' =>
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
 
     EDITIONS => 
     {
@@ -332,10 +319,7 @@ my %MEETS_TURKEY =
 
   'Turkish Women Trials' =>
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
 
     EDITIONS => 
     {
@@ -359,11 +343,9 @@ my %TOURNAMENTS_TURKEY =
 (
   'Aegean Open Teams',
   {
-    ORGANIZATION => 'TBF',
-    CITY => 'Izmir',
-    COUNTRY => 'Turkey',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
+    CITY => 'Izmir',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -388,10 +370,8 @@ my %TOURNAMENTS_TURKEY =
 
   'Anatolian Club Teams',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -431,10 +411,8 @@ my %TOURNAMENTS_TURKEY =
 
   'Anatolian Fall Teams',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -477,10 +455,8 @@ my %TOURNAMENTS_TURKEY =
 
   'Anatolian Spring Teams',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -542,10 +518,8 @@ my %TOURNAMENTS_TURKEY =
 
   'Ankara Summer Teams',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -610,10 +584,8 @@ my %TOURNAMENTS_TURKEY =
 
   'Balikcioglu Open Teams',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -790,10 +762,8 @@ my %TOURNAMENTS_TURKEY =
 
   'Fatih Kiral Pairs',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -818,11 +788,9 @@ my %TOURNAMENTS_TURKEY =
 
   'Gelibolu Peace Teams',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
+    %GLOBAL,
     CITY => 'Gelibolu',
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -861,10 +829,7 @@ my %TOURNAMENTS_TURKEY =
 
   'Goksu-Yalikavak Pairs',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -890,10 +855,7 @@ my %TOURNAMENTS_TURKEY =
 
   'Istanbul Summer Teams',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -933,10 +895,7 @@ my %TOURNAMENTS_TURKEY =
 
   'Istanbul Winter Teams',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1069,10 +1028,7 @@ my %TOURNAMENTS_TURKEY =
 
   'Izmir Teams Cup',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1107,10 +1063,7 @@ my %TOURNAMENTS_TURKEY =
 
   'Izmir Winter Teams Cup',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1186,10 +1139,8 @@ my %TOURNAMENTS_TURKEY =
 
   'Lüleburgaz Liberation Cup',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1216,11 +1167,9 @@ my %TOURNAMENTS_TURKEY =
 
   'Marmara Inter-Club Championship',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
-    REGION => 'Marmara',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
+    REGION => 'Marmara',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1335,10 +1284,7 @@ my %TOURNAMENTS_TURKEY =
 
   'Murat Kilercioglu Turkish Spring Teams',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1378,10 +1324,7 @@ my %TOURNAMENTS_TURKEY =
 
   'Necmettin Sunget Teams Cup',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1478,10 +1421,8 @@ my %TOURNAMENTS_TURKEY =
   {
     # https://bridgescanner.com/event/salvador-assael-aegean-pair-championship-2023
 
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP', # Really IAF, but hard to get through the code
     GENDER => 'Open',
@@ -1643,11 +1584,9 @@ my %TOURNAMENTS_TURKEY =
 
   'Thrace Cup League',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
-    REGION => 'Thrace',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
+    REGION => 'Thrace',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1780,10 +1719,8 @@ my %TOURNAMENTS_TURKEY =
 
   'Turkish Club Championship',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
+    %GLOBAL,
     ORIGIN => 'Interclub',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2199,10 +2136,8 @@ my %TOURNAMENTS_TURKEY =
 
   'Turkish East Mediterranean Teams',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2242,10 +2177,7 @@ my %TOURNAMENTS_TURKEY =
 
   'Turkish Junior Pairs',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -2272,10 +2204,7 @@ my %TOURNAMENTS_TURKEY =
 
   'Turkish Mixed Team Trials',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -2311,10 +2240,7 @@ my %TOURNAMENTS_TURKEY =
 
   'Turkish Mixed Teams',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -2370,10 +2296,7 @@ my %TOURNAMENTS_TURKEY =
 
   'Turkish Open Teams',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2686,10 +2609,7 @@ my %TOURNAMENTS_TURKEY =
 
   'Turkish Swiss Mixed Teams',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     MOVEMENT => 'Swiss',
     SCORING => 'IMP',
@@ -2744,10 +2664,7 @@ my %TOURNAMENTS_TURKEY =
 
   'Turkish University Teams',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3298,10 +3215,7 @@ my %TOURNAMENTS_TURKEY =
 
   'Turkish Winter Women Teams',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -3451,10 +3365,7 @@ my %TOURNAMENTS_TURKEY =
 
   'Turkish Women Teams',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -3541,10 +3452,7 @@ my %TOURNAMENTS_TURKEY =
 
   'Western Mediterranean Club Teams',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
-    ORIGIN => 'Regional',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

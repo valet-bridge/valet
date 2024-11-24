@@ -39,6 +39,7 @@ When matched up
 - Multiple attempts at same segment of a match
   23000, 23004, 23005 (candidates for skip files)
 - If International, should have only countries
+- If Interclub, should have only clubs
 - If only countries, should be International
 
 Manual checks:

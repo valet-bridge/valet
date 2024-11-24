@@ -470,7 +470,7 @@ my %TOURNAMENTS_SERBIA =
   {
     %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
+    CITY => 'Vrnjacka Banja',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
