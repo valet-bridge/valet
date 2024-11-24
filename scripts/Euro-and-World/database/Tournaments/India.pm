@@ -14,6 +14,12 @@ our @EXPORT = qw(set_links);
 # Surely there is more structure here that I haven't found.
 # https://www.bridgewebs.com/cgi-bin/bwor/bw.cgi?club=bw&pid=display_page18
 
+my %GLOBAL = (
+  ORGANIZATION => 'BFI',
+  COUNTRY => 'India',
+  ZONE => 'Asia Pacific',
+);
+
 my %MEETS_INDIA =
 (
   'All India HCL Tournament' =>
@@ -21,11 +27,9 @@ my %MEETS_INDIA =
     # Was called "All India" up to 2009, then
     # "HCL International".
 
-    ORGANIZATION => 'BFI',
+    %GLOBAL,
     SPONSOR => 'HCL',
-    COUNTRY => 'India',
     ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
 
     EDITIONS => 
     {
@@ -214,10 +218,8 @@ my %MEETS_INDIA =
 
   'Goa Bridge Festival' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Asia Pacific',
 
     EDITIONS => 
     {
@@ -269,10 +271,8 @@ my %MEETS_INDIA =
 
   'Indian South Zone Championship' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Asia Pacific',
 
     EDITIONS => 
     {
@@ -299,10 +299,8 @@ my %MEETS_INDIA =
 
   'Indian Summer Nationals' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
 
     EDITIONS => 
     {
@@ -427,10 +425,8 @@ my %MEETS_INDIA =
 
   'Indian Winter Nationals' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
 
     # https://www.bridgewebs.com/cgi-bin/bwoq/bw.cgi?club=winternationals&pid=display_page4
     # 2005 Chennai
@@ -590,10 +586,8 @@ my %MEETS_INDIA =
 
   'Maharaja Holkar National Championship'  =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
 
     EDITIONS => 
     {
@@ -668,10 +662,8 @@ my %MEETS_INDIA =
 
   'Maharashtra State Championship'  =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Asia Pacific',
 
     EDITIONS => 
     {
@@ -711,10 +703,8 @@ my %MEETS_INDIA =
 
   'Rajasthan Invitational Championship'  =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'Invitational',
-    ZONE => 'Asia Pacific',
 
     EDITIONS => 
     {
@@ -735,10 +725,8 @@ my %MEETS_INDIA =
 
   'Uttar Pradesh State Championship' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Asia Pacific',
 
     EDITIONS => 
     {
@@ -755,10 +743,8 @@ my %MEETS_INDIA =
 
   'West Indian Regional' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Asia Pacific',
 
     EDITIONS => 
     {
@@ -784,10 +770,8 @@ my %TOURNAMENTS_INDIA =
 (
   'All India Bangur Cement Hindusthan Club' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -868,10 +852,8 @@ my %TOURNAMENTS_INDIA =
 
   'All India Corporate Invitational Pairs' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Pairs',
     GENDER => 'Open',
     AGE => 'Open',
@@ -1371,10 +1353,8 @@ my %TOURNAMENTS_INDIA =
 
   'All India Shree Cement' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1433,10 +1413,8 @@ my %TOURNAMENTS_INDIA =
 
   'All India UTI Bank Masters Championship' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1471,10 +1449,8 @@ my %TOURNAMENTS_INDIA =
 
   'Ashok Kapur Memorial Swiss Pairs',
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Pairs',
     MOVEMENT => 'Swiss',
     GENDER => 'Open',
@@ -1543,10 +1519,8 @@ my %TOURNAMENTS_INDIA =
 
   'Bhabha Atomic Research Centre Open' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1573,10 +1547,8 @@ my %TOURNAMENTS_INDIA =
 
   'B L Rao Memorial Open' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1627,10 +1599,8 @@ my %TOURNAMENTS_INDIA =
 
   'Dainik Navjyoti All India Inter-State' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1673,10 +1643,8 @@ my %TOURNAMENTS_INDIA =
 
   'Delhi Gymkhana Club Open Pairs' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -1702,10 +1670,8 @@ my %TOURNAMENTS_INDIA =
 
   'Delhi Gymkhana Club Open Teams' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1957,10 +1923,8 @@ my %TOURNAMENTS_INDIA =
 
   'Hindusthan Club Teams' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1995,10 +1959,8 @@ my %TOURNAMENTS_INDIA =
 
   'Indian Inter-State Teams' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2131,10 +2093,8 @@ my %TOURNAMENTS_INDIA =
 
   'Indian Open Trials' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2304,10 +2264,8 @@ my %TOURNAMENTS_INDIA =
 
   'Indian Senior Trials' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2439,10 +2397,8 @@ my %TOURNAMENTS_INDIA =
 
   'Indian State Championship' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2478,10 +2434,8 @@ my %TOURNAMENTS_INDIA =
 
   'Indian Western Zone Championship' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2550,10 +2504,8 @@ my %TOURNAMENTS_INDIA =
 
   'Justice J M Lal All India Open Pairs' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -2578,10 +2530,8 @@ my %TOURNAMENTS_INDIA =
 
   'Justice J M Lal All India Open Teams' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2712,10 +2662,8 @@ my %TOURNAMENTS_INDIA =
 
   'Karnataka State Teams' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2883,10 +2831,8 @@ my %TOURNAMENTS_INDIA =
 
   'Karnik-Vaidya Open',
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2996,10 +2942,8 @@ my %TOURNAMENTS_INDIA =
 
   'Lalit Mohanka Memorial' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3162,10 +3106,8 @@ my %TOURNAMENTS_INDIA =
 
   'Lokmanya Jubilee',
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3192,10 +3134,8 @@ my %TOURNAMENTS_INDIA =
 
   'L C Sunil Rajendra Memorial' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -3222,10 +3162,8 @@ my %TOURNAMENTS_INDIA =
   'Madras Gymkhana Club Open' =>
   {
     # https://www.bridgewebs.com/gymkhanachennai
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     CITY => 'Chennai',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -3776,10 +3714,8 @@ my %TOURNAMENTS_INDIA =
   'Mohanlal Bhartia Memorial Grand Prix' =>
   {
     # https://www.bridgewebs.com/bhartia/
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -4037,10 +3973,8 @@ my %TOURNAMENTS_INDIA =
 
   'Mohanlal Bhartia Memorial Pairs' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -4067,10 +4001,8 @@ my %TOURNAMENTS_INDIA =
 
   'Nandu Oke Memorial IAF Swiss Pairs',
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IAF',
     GENDER => 'Open',
@@ -4119,10 +4051,8 @@ my %TOURNAMENTS_INDIA =
 
   'Narain Bhojwani Memorial',
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -4163,10 +4093,8 @@ my %TOURNAMENTS_INDIA =
 
   'Otters Inter-Club Teams',
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -4207,10 +4135,8 @@ my %TOURNAMENTS_INDIA =
 
   'Poddar National Masters' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -4373,10 +4299,8 @@ my %TOURNAMENTS_INDIA =
 
   'Prashant Desai Memorial' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -4411,11 +4335,9 @@ my %TOURNAMENTS_INDIA =
 
   'Pune State Level Open Teams' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     CITY => 'Pune',
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -4456,11 +4378,9 @@ my %TOURNAMENTS_INDIA =
 
   'PSN Sarma Centenary Memorial Pairs',
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
-    CITY => 'Chennai',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
+    CITY => 'Chennai',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -4486,11 +4406,9 @@ my %TOURNAMENTS_INDIA =
 
   'PSN Sarma Centenary Memorial Teams',
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
-    CITY => 'Chennai',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
+    CITY => 'Chennai',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -4517,10 +4435,8 @@ my %TOURNAMENTS_INDIA =
 
   'PYC Hindu Gymkhana Royale' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     CITY => 'Pune',
     FORM => 'Pairs',
     SCORING => 'IMP',
@@ -4547,10 +4463,8 @@ my %TOURNAMENTS_INDIA =
 
   'Rai Bahadur Modi Memorial All India Open' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -4698,10 +4612,8 @@ my %TOURNAMENTS_INDIA =
 
   'R N Bagla Memorial Pairs' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -4740,10 +4652,8 @@ my %TOURNAMENTS_INDIA =
 
   'R R Gupta Memorial Championship' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -4824,10 +4734,8 @@ my %TOURNAMENTS_INDIA =
 
   'R Ratnam Memorial' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -5348,9 +5256,9 @@ my %TOURNAMENTS_INDIA =
   {
     ORGANIZATION => 'MBA',
     COUNTRY => 'India',
+    ZONE => 'Asia Pacific',
     REGION => 'Maharashtra',
     ORIGIN => 'Regional',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -5561,11 +5469,9 @@ my %TOURNAMENTS_INDIA =
 
   'Thane Champion of Champions Teams',
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
-    CITY => 'Mulund',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
+    CITY => 'Mulund',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -5811,10 +5717,8 @@ my %TOURNAMENTS_INDIA =
 
   'Tolani Grand Prix' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -6041,11 +5945,9 @@ my %TOURNAMENTS_INDIA =
   'Willingdon Sports Club Swiss Pairs',
   {
     # https://www.bridgewebs.com/willingdonbridge/
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
-    CITY => 'Mumbai',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
+    CITY => 'Mumbai',
     FORM => 'Pairs',
     MOVEMENT => 'Swiss',
     SCORING => 'IMP',
@@ -6170,10 +6072,8 @@ my %TOURNAMENTS_INDIA =
 
   'WCG Open',
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

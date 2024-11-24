@@ -13,14 +13,19 @@ our @EXPORT = qw(set_links);
 
 # bridge.nl, Wayback Machine
 
+my %GLOBAL = (
+  ORGANIZATION => 'NBB',
+  COUNTRY => 'Netherlands',
+  ZONE => 'Europe'
+);
+
 my %MEETS_NETHERLANDS =
 (
   'The Hague Bridge Experience',
   {
-    ORGANIZATION => 'NBB',
-    COUNTRY => 'Netherlands',
-    CITY => 'The Hague',
+    %GLOBAL,
     ORIGIN => 'National',
+    CITY => 'The Hague',
 
     EDITIONS => 
     {
@@ -41,10 +46,9 @@ my %MEETS_NETHERLANDS =
 
   'VVE Beheer Bridge Week',
   {
-    ORGANIZATION => 'NBB',
-    CITY => 'The Hague',
-    COUNTRY => 'Netherlands',
+    %GLOBAL,
     ORIGIN => 'National',
+    CITY => 'The Hague',
 
     EDITIONS => 
     {
@@ -60,31 +64,10 @@ my %MEETS_NETHERLANDS =
 
 my %TOURNAMENTS_NETHERLANDS =
 (
-  'White House Top 16',
-  {
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        CHAPTERS => 
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            DATE_START => '2000-03-27',
-            DATE_END => '2000-03-28'
-          },
-        }
-      },
-    }
-  },
-
   'ArboNed Team Cup',
   {
-    ORGANIZATION => 'NBB',
-    COUNTRY => 'Netherlands',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -153,10 +136,8 @@ my %TOURNAMENTS_NETHERLANDS =
 
   'Arnhem Interbridge Tournament',
   {
-    ORGANIZATION => 'NBB',
-    COUNTRY => 'Netherlands',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -182,10 +163,8 @@ my %TOURNAMENTS_NETHERLANDS =
 
   'Carrousel Cup',
   {
-    ORGANIZATION => 'NBB',
-    COUNTRY => 'Netherlands',
+    %GLOBAL,
     ORIGIN => 'International',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -237,10 +216,8 @@ my %TOURNAMENTS_NETHERLANDS =
 
   'Dutch Knock-Out Cup',
   {
-    ORGANIZATION => 'NBB',
-    COUNTRY => 'Netherlands',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -267,10 +244,8 @@ my %TOURNAMENTS_NETHERLANDS =
 
   'Dutch Meesterklasse',
   {
-    ORGANIZATION => 'NBB',
-    COUNTRY => 'Netherlands',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -579,11 +554,9 @@ my %TOURNAMENTS_NETHERLANDS =
 
   'Forbo-Krommenie Nations Cup',
   {
-    ORGANIZATION => 'NBB',
+    %GLOBAL,
     SPONSOR => 'Forbo',
-    COUNTRY => 'Netherlands',
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -681,10 +654,8 @@ my %TOURNAMENTS_NETHERLANDS =
 
   'Jaap Kokkes Tournament',
   {
-    ORGANIZATION => 'NBB',
-    COUNTRY => 'Netherlands',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -723,10 +694,8 @@ my %TOURNAMENTS_NETHERLANDS =
 
   'Petit Grand Prix van Driene',
   {
-    ORGANIZATION => 'NBB',
-    COUNTRY => 'Netherlands',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -765,7 +734,6 @@ my %TOURNAMENTS_NETHERLANDS =
 
   'The Hague Open Teams',
   {
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -805,7 +773,6 @@ my %TOURNAMENTS_NETHERLANDS =
 
   'The Hague Pro-Am Pairs',
   {
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -831,10 +798,8 @@ my %TOURNAMENTS_NETHERLANDS =
 
   'Top Circuit Teams',
   {
-    ORGANIZATION => 'NBB',
-    COUNTRY => 'Netherlands',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -861,10 +826,8 @@ my %TOURNAMENTS_NETHERLANDS =
 
   'Top Circuit',
   {
-    ORGANIZATION => 'NBB',
-    COUNTRY => 'Netherlands',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     GENDER => 'Open',
     AGE => 'Open',
@@ -1083,10 +1046,8 @@ my %TOURNAMENTS_NETHERLANDS =
 
   'White House International',
   {
-    ORGANIZATION => 'NBB',
-    COUNTRY => 'Netherlands',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1180,10 +1141,8 @@ my %TOURNAMENTS_NETHERLANDS =
 
   'White House Juniors',
   {
-    ORGANIZATION => 'NBB',
-    COUNTRY => 'Netherlands',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1543,10 +1502,8 @@ my %TOURNAMENTS_NETHERLANDS =
 
   'White House Top 12',
   {
-    ORGANIZATION => 'NBB',
-    COUNTRY => 'Netherlands',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1624,10 +1581,8 @@ my %TOURNAMENTS_NETHERLANDS =
 
   'White House Top 16',
   {
-    ORGANIZATION => 'NBB',
-    COUNTRY => 'Netherlands',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
