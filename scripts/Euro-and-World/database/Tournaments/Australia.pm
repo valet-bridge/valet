@@ -10,17 +10,20 @@ package Tournaments::Australia;
 
 # https://www.abf.com.au/archives/#results
 
-
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
+
+my %GLOBAL = (
+  ORGANIZATION => 'AuBF',
+  COUNTRY => 'Australia',
+  ZONE => 'South Pacific',
+);
 
 my %MEETS_AUSTRALIA =
 (
   'Australian ANC Championships' =>
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
-    ZONE => 'South Pacific',
+    %GLOBAL,
 
     EDITIONS => 
     {
@@ -157,10 +160,8 @@ my %MEETS_AUSTRALIA =
 
   'Australian Autumn Nationals' =>
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South Pacific',
 
     EDITIONS => 
     {
@@ -329,10 +330,8 @@ my %MEETS_AUSTRALIA =
 
   'Australian Playoffs' =>
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South Pacific',
 
     EDITIONS => 
     {
@@ -698,10 +697,8 @@ my %MEETS_AUSTRALIA =
 
   'Australian Spring Nationals' =>
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South Pacific',
 
     EDITIONS => 
     {
@@ -862,10 +859,8 @@ my %MEETS_AUSTRALIA =
 
   'Australian Summer Festival' =>
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South Pacific',
 
     EDITIONS => 
     {
@@ -1026,10 +1021,9 @@ my %MEETS_AUSTRALIA =
 
   'Australian Youth Week' =>
   {
-    ORGANIZATION => 'AuBF',
+    %GLOBAL,
     COUNTRY => 'Australia',
     ORIGIN => 'National',
-    ZONE => 'South Pacific',
 
     EDITIONS => 
     {
@@ -1174,10 +1168,8 @@ my %MEETS_AUSTRALIA =
 
   'Gold Coast Congress' =>
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South Pacific',
 
     EDITIONS => 
     {
@@ -1282,10 +1274,8 @@ my %MEETS_AUSTRALIA =
 
   'Victor Champion Cup' =>
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South Pacific',
 
     EDITIONS =>
     {
@@ -1465,10 +1455,8 @@ my %TOURNAMENTS_AUSTRALIA =
 (
   'Altman Swiss Pairs',
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South Pacific',
     FORM => 'Pairs',
     MOVEMENT => 'Swiss',
     SCORING => 'IMP',
@@ -1699,10 +1687,8 @@ my %TOURNAMENTS_AUSTRALIA =
 
   'Australian Grand National Open Teams',
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -5108,10 +5094,8 @@ my %TOURNAMENTS_AUSTRALIA =
 
   'Australian Youth Tri Individual',
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South Pacific',
     FORM => 'Individual',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -5137,10 +5121,8 @@ my %TOURNAMENTS_AUSTRALIA =
 
   'Australian Youth Tri Pairs',
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South Pacific',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -5180,10 +5162,8 @@ my %TOURNAMENTS_AUSTRALIA =
 
   'Australian Youth Tri Teams',
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -5697,10 +5677,8 @@ my %TOURNAMENTS_AUSTRALIA =
 
   "Hans Rosendorff Memorial Women's Teams",
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -5726,10 +5704,8 @@ my %TOURNAMENTS_AUSTRALIA =
 
   'John Arkinstall State Teams',
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -5782,10 +5758,8 @@ my %TOURNAMENTS_AUSTRALIA =
 
   'Kings and Queens Blaine Howe Teams',
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -5868,10 +5842,8 @@ my %TOURNAMENTS_AUSTRALIA =
 
   'New South Wales Open Teams' =>
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -5912,10 +5884,8 @@ my %TOURNAMENTS_AUSTRALIA =
 
   'New South Wales Open Trials' =>
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -5955,10 +5925,8 @@ my %TOURNAMENTS_AUSTRALIA =
 
   'Northern Territory Gold Swiss Pairs' =>
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'South Pacific',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -5984,10 +5952,8 @@ my %TOURNAMENTS_AUSTRALIA =
 
   'Northern Territory Gold Teams' =>
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -6013,10 +5979,8 @@ my %TOURNAMENTS_AUSTRALIA =
 
   'Queensland Women Trials' =>
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -6042,10 +6006,8 @@ my %TOURNAMENTS_AUSTRALIA =
 
   'Queensland Senior Trials' =>
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -6071,10 +6033,8 @@ my %TOURNAMENTS_AUSTRALIA =
 
   'Smirnov Cup',
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -6320,10 +6280,8 @@ my %TOURNAMENTS_AUSTRALIA =
 
   'Victoria Cup' =>
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -6350,10 +6308,8 @@ my %TOURNAMENTS_AUSTRALIA =
 
   'Victorian Mixed Teams' =>
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -6379,10 +6335,8 @@ my %TOURNAMENTS_AUSTRALIA =
 
   'Victorian Open Trials' =>
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -6515,10 +6469,8 @@ my %TOURNAMENTS_AUSTRALIA =
 
   'Victorian Pennant' =>
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -6736,10 +6688,8 @@ my %TOURNAMENTS_AUSTRALIA =
 
   'Victorian Senior Trials' =>
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -6764,10 +6714,8 @@ my %TOURNAMENTS_AUSTRALIA =
 
   'Victorian Women Trials' =>
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'MP',
     GENDER => 'Women',
@@ -6792,10 +6740,8 @@ my %TOURNAMENTS_AUSTRALIA =
 
   'Victorian Youth Trials' =>
   {
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -6821,10 +6767,8 @@ my %TOURNAMENTS_AUSTRALIA =
   'Watermark Open Teams',
   {
     # https://nsw.bridgeaustralia.org/resultslistbm.asp
-    ORGANIZATION => 'AuBF',
-    COUNTRY => 'Australia',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

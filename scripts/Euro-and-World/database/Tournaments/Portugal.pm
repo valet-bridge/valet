@@ -13,15 +13,19 @@ our @EXPORT = qw(set_links);
 
 # https://quintonaipe.com/festiv0607/festivais.html
 
+my %GLOBAL = (
+  ORGANIZATION => 'FPB',
+  COUNTRY => 'Portugal',
+  ORIGIN => 'International',
+  ZONE => 'Europe',
+);
+
 my %MEETS_PORTUGAL =
 (
   'Azores Festival' =>
   {
-    ORGANIZATION => 'FPB',
-    COUNTRY => 'Portugal',
+    %GLOBAL,
     REGION => 'Azores',
-    ORIGIN => 'International',
-    ZONE => 'Europe',
 
     EDITIONS =>
     {
@@ -117,11 +121,8 @@ my %MEETS_PORTUGAL =
 
   'Estoril Bridge Festival' =>
   {
-    ORGANIZATION => 'FPB',
-    COUNTRY => 'Portugal',
+    %GLOBAL,
     CITY => 'Estoril',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
 
     EDITIONS =>
     {
@@ -242,11 +243,9 @@ my %MEETS_PORTUGAL =
 
   'Lisbon International Festival' =>
   {
-    ORGANIZATION => 'FPB',
-    COUNTRY => 'Portugal',
+    %GLOBAL,
     CITY => 'Lisbon',
     ORIGIN => 'International',
-    ZONE => 'Europe',
 
     EDITIONS =>
     {
@@ -267,10 +266,8 @@ my %MEETS_PORTUGAL =
 
   'Madeira International Festival' =>
   {
-    ORGANIZATION => 'FPB',
-    COUNTRY => 'Portugal',
+    %GLOBAL,
     ORIGIN => 'International',
-    ZONE => 'Europe',
 
     EDITIONS =>
     {
@@ -498,10 +495,8 @@ my %TOURNAMENTS_PORTUGAL =
 
   'FullBridge International Teams',
   {
-    ORGANIZATION => 'FPB',
-    COUNTRY => 'Portugal',
+    %GLOBAL,
     ORIGIN => 'International',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -527,6 +522,7 @@ my %TOURNAMENTS_PORTUGAL =
 
   'Lisbon Open Teams',
   {
+    FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
@@ -942,10 +938,7 @@ my %TOURNAMENTS_PORTUGAL =
 
   'Portuguese IMP Pairs',
   {
-    ORGANIZATION => 'FPB',
-    COUNTRY => 'Portugal',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -971,10 +964,7 @@ my %TOURNAMENTS_PORTUGAL =
 
   'Portuguese Open Teams',
   {
-    ORGANIZATION => 'FPB',
-    COUNTRY => 'Portugal',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1271,10 +1261,7 @@ my %TOURNAMENTS_PORTUGAL =
 
   'Portuguese Open Trials',
   {
-    ORGANIZATION => 'FPB',
-    COUNTRY => 'Portugal',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1380,10 +1367,7 @@ my %TOURNAMENTS_PORTUGAL =
 
   'Portuguese Northern Regional Open Teams',
   {
-    ORGANIZATION => 'FPB',
-    COUNTRY => 'Portugal',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1439,10 +1423,7 @@ my %TOURNAMENTS_PORTUGAL =
 
   'Rui Pinto Cup',
   {
-    ORGANIZATION => 'FPB',
-    COUNTRY => 'Portugal',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    %GLOBAL,
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

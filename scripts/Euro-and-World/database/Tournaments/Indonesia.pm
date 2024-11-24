@@ -11,13 +11,17 @@ package Tournaments::Indonesia;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'GABSI',
+  COUNTRY => 'Indonesia',
+  ZONE => 'Asia Pacific',
+);
+
 my %MEETS_INDONESIA =
 (
   'Indonesian National Championship Week' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
-    ZONE => 'Asia Pacific',
+    %GLOBAL,
 
     EDITIONS => 
     {
@@ -140,9 +144,7 @@ my %MEETS_INDONESIA =
   'Indonesian National Games' =>
   {
     # https://en.wikipedia.org/wiki/National_Sports_Week
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
-    ZONE => 'Asia Pacific',
+    %GLOBAL,
 
     EDITIONS => 
     {
@@ -199,9 +201,7 @@ my %MEETS_INDONESIA =
 
   'Indonesian National Pre-Sports Week' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
-    ZONE => 'Asia Pacific',
+    %GLOBAL,
 
     EDITIONS => 
     {
@@ -226,9 +226,7 @@ my %MEETS_INDONESIA =
 
   'Indonesian Student Championship' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
-    ZONE => 'Asia Pacific',
+    %GLOBAL,
 
     EDITIONS => 
     {
@@ -262,9 +260,7 @@ my %MEETS_INDONESIA =
 
   'Indonesian University Championship' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
-    ZONE => 'Asia Pacific',
+    %GLOBAL,
 
     EDITIONS => 
     {
@@ -300,10 +296,8 @@ my %TOURNAMENTS_INDONESIA =
 (
   'Alex Nurdin Cup' => 
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -331,10 +325,8 @@ my %TOURNAMENTS_INDONESIA =
 
   'Electric Cup' => 
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -361,11 +353,9 @@ my %TOURNAMENTS_INDONESIA =
 
   'FTBC Tanjungpura University' => 
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
-    CITY => 'Pontianak',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
+    CITY => 'Pontianak',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -450,10 +440,8 @@ my %TOURNAMENTS_INDONESIA =
 
   'Gabrial UI Bastaman Cup' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -524,11 +512,9 @@ my %TOURNAMENTS_INDONESIA =
 
   'Geologi Cup' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
-    SPONSOR => 'Telkom Indonesia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
+    SPONSOR => 'Telkom Indonesia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -688,10 +674,8 @@ my %TOURNAMENTS_INDONESIA =
 
   'IBWI Women Cup' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'BAM',
     GENDER => 'Women',
@@ -1318,10 +1302,8 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Invitational Teams' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1348,10 +1330,8 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Junior League Online' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1579,10 +1559,8 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Mixed Pair Trials' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Mixed',
@@ -1700,10 +1678,8 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Open Pair Trials' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Pairs',
     GENDER => 'Open',
     AGE => 'Open',
@@ -1880,10 +1856,8 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Open Trials' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1917,10 +1891,8 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Premier League' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2070,10 +2042,8 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian U16 Pair Trials' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -2128,10 +2098,8 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian U21 Pair Trials' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -2299,10 +2267,8 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian U26 Pair Trials' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -2472,10 +2438,8 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian U26 Women Pair Trials' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Women',
@@ -2682,10 +2646,8 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Women Pair Trials' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Women',
@@ -2817,10 +2779,8 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Women Trials' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -2847,10 +2807,8 @@ my %TOURNAMENTS_INDONESIA =
 
   "Kepri Governor's Cup" =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3197,10 +3155,8 @@ my %TOURNAMENTS_INDONESIA =
 
   'Menpora-Pertamina Cup' => 
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3262,10 +3218,8 @@ my %TOURNAMENTS_INDONESIA =
 
   'Pertamina Field Tambun Cup' => 
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3324,10 +3278,8 @@ my %TOURNAMENTS_INDONESIA =
 
   'PLN Cup' => 
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3396,10 +3348,8 @@ my %TOURNAMENTS_INDONESIA =
 
   'PT Timah Invitational Teams' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3440,11 +3390,9 @@ my %TOURNAMENTS_INDONESIA =
 
   'Rector University of Brawijaya Cup' => 
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
-    CITY => 'Malang',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
+    CITY => 'Malang',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3507,10 +3455,8 @@ my %TOURNAMENTS_INDONESIA =
 
   'Sarundajang Cup' => 
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
+    %GLOBAL,
     ORIGIN => 'International',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3578,11 +3524,9 @@ my %TOURNAMENTS_INDONESIA =
 
   'Semen Padang Cup' => 
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
-    CITY => 'Padang',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
+    CITY => 'Padang',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3617,11 +3561,9 @@ my %TOURNAMENTS_INDONESIA =
 
   'Telkom Indonesia Open' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
+    %GLOBAL,
     SPONSOR => 'Telkom Indonesia',
     ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3848,10 +3790,8 @@ my %TOURNAMENTS_INDONESIA =
 
   'West Java Open Teams' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

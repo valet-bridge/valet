@@ -13,15 +13,19 @@ our @EXPORT = qw(set_links);
 
 # https://main.bridge.co.il/results/archive/12
 
+my %GLOBAL = (
+  ORGANIZATION => 'IBF',
+  COUNTRY => 'Israel',
+  ZONE => 'Europe',
+);
+
 my %MEETS_ISRAEL =
 (
   'Israel Bridge Festival' =>
   {
     # http://www.ibf-festival.org/
-    ORGANIZATION => 'IBF',
+    %GLOBAL,
     CITY => 'Tel Aviv',
-    COUNTRY => 'Israel',
-    ZONE => 'Europe',
 
     EDITIONS =>
     {
@@ -149,10 +153,8 @@ my %MEETS_ISRAEL =
 
   'Israel Grand Prix' =>
   {
-    ORGANIZATION => 'IBF',
-    COUNTRY => 'Israel',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
 
     EDITIONS =>
     {
@@ -186,9 +188,7 @@ my %MEETS_ISRAEL =
   'Red Sea International Festival' =>
   {
     # https://www.bridgeredsea.com/previous-results
-    ORGANIZATION => 'IBF',
-    COUNTRY => 'Israel',
-    ZONE => 'Europe',
+    %GLOBAL,
 
     EDITIONS =>
     {
@@ -516,10 +516,8 @@ my %TOURNAMENTS_ISRAEL =
 
   'Israel Juniors Pairs' => 
   {
-    ORGANIZATION => 'IBF',
-    COUNTRY => 'Israel',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -573,10 +571,8 @@ my %TOURNAMENTS_ISRAEL =
 
   'Israel Juniors Trials' =>
   {
-    ORGANIZATION => 'IBF',
-    COUNTRY => 'Israel',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -720,10 +716,8 @@ my %TOURNAMENTS_ISRAEL =
 
   'Israel Open Pairs' =>
   {
-    ORGANIZATION => 'IBF',
-    COUNTRY => 'Israel',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -871,10 +865,8 @@ my %TOURNAMENTS_ISRAEL =
 
   'Israel Open Teams' =>
   {
-    ORGANIZATION => 'IBF',
-    COUNTRY => 'Israel',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1027,10 +1019,8 @@ my %TOURNAMENTS_ISRAEL =
 
   'Israel Open Teams Cup' =>
   {
-    ORGANIZATION => 'IBF',
-    COUNTRY => 'Israel',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1178,10 +1168,8 @@ my %TOURNAMENTS_ISRAEL =
 
   'Israel Open Trials' =>
   {
-    ORGANIZATION => 'IBF',
-    COUNTRY => 'Israel',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1262,10 +1250,8 @@ my %TOURNAMENTS_ISRAEL =
 
   'Israel School Trials' =>
   {
-    ORGANIZATION => 'IBF',
-    COUNTRY => 'Israel',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1291,10 +1277,8 @@ my %TOURNAMENTS_ISRAEL =
 
   'Israel Women Pairs' =>
   {
-    ORGANIZATION => 'IBF',
-    COUNTRY => 'Israel',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -1319,10 +1303,8 @@ my %TOURNAMENTS_ISRAEL =
 
   'Maccabi Games' =>
   {
-    ORGANIZATION => 'IBF',
-    COUNTRY => 'Israel',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
