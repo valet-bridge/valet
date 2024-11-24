@@ -11,14 +11,18 @@ package Tournaments::Denmark;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'DBF',
+  COUNTRY => 'Denmark',
+  ZONE => 'Europe',
+);
+
 my %MEETS_DENMARK =
 (
   'Copenhagen Invitational' =>
   {
-    ORGANIZATION => 'DBF',
+    %GLOBAL,
     CITY => 'Copenhagen',
-    COUNTRY => 'Denmark',
-    ZONE => 'Europe',
 
     EDITIONS =>
     {
@@ -51,10 +55,8 @@ my %MEETS_DENMARK =
 
   'Danish Bridge Festival' =>
   {
-    ORGANIZATION => 'DBF',
-    COUNTRY => 'Denmark',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
 
     EDITIONS =>
     {
@@ -198,10 +200,8 @@ my %MEETS_DENMARK =
 
   'Danish Championships' =>
   {
-    ORGANIZATION => 'DBF',
-    COUNTRY => 'Denmark',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
 
     EDITIONS =>
     {
@@ -287,10 +287,8 @@ my %TOURNAMENTS_DENMARK =
 
   'Copenhagen Open Pairs',
   {
-    ORGANIZATION => 'DBF',
-    COUNTRY => 'Denmark',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -416,10 +414,8 @@ my %TOURNAMENTS_DENMARK =
 
   'Danish Club Teams',
   {
-    ORGANIZATION => 'DBF',
-    COUNTRY => 'Denmark',
+    %GLOBAL,
     ORIGIN => 'Interclub',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -679,10 +675,8 @@ my %TOURNAMENTS_DENMARK =
 
   'Danish Cup',
   {
-    ORGANIZATION => 'DBF',
-    COUNTRY => 'Denmark',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1048,10 +1042,8 @@ my %TOURNAMENTS_DENMARK =
 
   'Danish First Division',
   {
-    ORGANIZATION => 'DBF',
-    COUNTRY => 'Denmark',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1931,10 +1923,8 @@ my %TOURNAMENTS_DENMARK =
 
   'Danish Junior Teams',
   {
-    ORGANIZATION => 'DBF',
-    COUNTRY => 'Denmark',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2227,10 +2217,8 @@ my %TOURNAMENTS_DENMARK =
 
   'Danish Mixed Teams',
   {
-    ORGANIZATION => 'DBF',
-    COUNTRY => 'Denmark',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -2617,10 +2605,8 @@ my %TOURNAMENTS_DENMARK =
 
   'Danish Open Pairs Trials',
   {
-    ORGANIZATION => 'DBF',
-    COUNTRY => 'Denmark',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -2646,10 +2632,8 @@ my %TOURNAMENTS_DENMARK =
 
   'Danish Open Team Trials',
   {
-    ORGANIZATION => 'DBF',
-    COUNTRY => 'Denmark',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2762,10 +2746,8 @@ my %TOURNAMENTS_DENMARK =
 
   'Hecht Cup',
   {
-    ORGANIZATION => 'DBF',
-    COUNTRY => 'Denmark',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     GENDER => 'Open',
     AGE => 'Open',
@@ -2829,10 +2811,8 @@ my %TOURNAMENTS_DENMARK =
 
   'Prince Henrik Trophy',
   {
-    ORGANIZATION => 'DBF',
-    COUNTRY => 'Denmark',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

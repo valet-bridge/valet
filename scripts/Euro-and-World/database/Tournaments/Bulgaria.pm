@@ -11,15 +11,19 @@ package Tournaments::Bulgaria;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'BuBF',
+  COUNTRY => 'Bulgaria',
+  ZONE => 'Europe',
+);
+
 my %MEETS_BULGARIA =
 (
   'Albena Bridge Festival' =>
   {
-    ORGANIZATION => 'BuBF',
-    CITY => 'Albena',
-    COUNTRY => 'Bulgaria',
+    %GLOBAL,
     ORIGIN => 'Transnational',
-    ZONE => 'Europe',
+    CITY => 'Albena',
 
     EDITIONS => 
     {
@@ -159,10 +163,8 @@ my %MEETS_BULGARIA =
 
   'Cherven Briag Festival' =>
   {
-    ORGANIZATION => 'BuBF',
+    %GLOBAL,
     CITY => 'Cherven Briag',
-    COUNTRY => 'Bulgaria',
-    ZONE => 'Europe',
 
     EDITIONS => 
     {
@@ -183,11 +185,9 @@ my %MEETS_BULGARIA =
 
   'Dobrich Bridge Festival' =>
   {
-    ORGANIZATION => 'BuBF',
-    CITY => 'Dobrich',
-    COUNTRY => 'Bulgaria',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Dobrich',
 
     EDITIONS => 
     {
@@ -281,11 +281,9 @@ my %MEETS_BULGARIA =
 
   'Lozenets Bridge Festival' =>
   {
-    ORGANIZATION => 'BuBF',
-    CITY => 'Lozenets',
-    COUNTRY => 'Bulgaria',
+    %GLOBAL,
     ORIGIN => 'Transnational',
-    ZONE => 'Europe',
+    CITY => 'Lozenets',
 
     EDITIONS => 
     {
@@ -312,11 +310,9 @@ my %MEETS_BULGARIA =
 
   'Plovdiv Bridge Festival' =>
   {
-    ORGANIZATION => 'BuBF',
-    CITY => 'Plovdiv',
-    COUNTRY => 'Bulgaria',
+    %GLOBAL,
     ORIGIN => 'Transnational',
-    ZONE => 'Europe',
+    CITY => 'Plovdiv',
 
     EDITIONS => 
     {
@@ -423,10 +419,8 @@ my %MEETS_BULGARIA =
 
   'Serdika Bridge Festival' =>
   {
-    ORGANIZATION => 'BuBF',
+    %GLOBAL,
     CITY => 'Sofia',
-    COUNTRY => 'Bulgaria',
-    ZONE => 'Europe',
 
     EDITIONS => 
     {
@@ -464,11 +458,9 @@ my %MEETS_BULGARIA =
 
   'Shumen Bridge Festival' =>
   {
-    ORGANIZATION => 'BuBF',
-    CITY => 'Shumen',
-    COUNTRY => 'Bulgaria',
+    %GLOBAL,
     ORIGIN => 'Transnational',
-    ZONE => 'Europe',
+    CITY => 'Shumen',
 
     EDITIONS => 
     {
@@ -489,11 +481,9 @@ my %MEETS_BULGARIA =
 
   'Stara Zagora Bridge Festival' =>
   {
-    ORGANIZATION => 'BuBF',
-    CITY => 'Stara Zagora',
-    COUNTRY => 'Bulgaria',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Stara Zagora',
 
     EDITIONS => 
     {
@@ -556,10 +546,8 @@ my %MEETS_BULGARIA =
 
   'Varna Bridge Festival' =>
   {
-    ORGANIZATION => 'BuBF',
+    %GLOBAL,
     CITY => 'Varna',
-    COUNTRY => 'Bulgaria',
-    ZONE => 'Europe',
 
     EDITIONS => 
     {
@@ -682,10 +670,8 @@ my %TOURNAMENTS_BULGARIA =
 
   'Asenovgrad Open Teams' =>
   {
-    ORGANIZATION => 'BuBF',
-    COUNTRY => 'Bulgaria',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -724,10 +710,8 @@ my %TOURNAMENTS_BULGARIA =
 
   'Bulgarian Open Pairs' =>
   {
-    ORGANIZATION => 'BuBF',
-    COUNTRY => 'Bulgaria',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     GENDER => 'Open',
     AGE => 'Open',
@@ -783,10 +767,8 @@ my %TOURNAMENTS_BULGARIA =
 
   'Bulgarian Open Teams' =>
   {
-    ORGANIZATION => 'BuBF',
-    COUNTRY => 'Bulgaria',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -880,10 +862,8 @@ my %TOURNAMENTS_BULGARIA =
 
   'Bulgarian Open Trials' =>
   {
-    ORGANIZATION => 'BuBF',
-    COUNTRY => 'Bulgaria',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -992,10 +972,8 @@ my %TOURNAMENTS_BULGARIA =
 
   'Bulgarian Women Trials' =>
   {
-    ORGANIZATION => 'BuBF',
-    COUNTRY => 'Bulgaria',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -1160,11 +1138,9 @@ my %TOURNAMENTS_BULGARIA =
 
   'Haskovski Mineralni Bani Open Pairs' =>
   {
-    ORGANIZATION => 'BuBF',
-    COUNTRY => 'Bulgaria',
-    CITY => 'Haskovski Mineralni Bani',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Haskovski Mineralni Bani',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -1189,11 +1165,9 @@ my %TOURNAMENTS_BULGARIA =
 
   'Haskovski Mineralni Bani Open Teams' =>
   {
-    ORGANIZATION => 'BuBF',
-    COUNTRY => 'Bulgaria',
-    CITY => 'Haskovski Mineralni Bani',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Haskovski Mineralni Bani',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1232,11 +1206,9 @@ my %TOURNAMENTS_BULGARIA =
 
   'Karlovo Open Pairs' =>
   {
-    ORGANIZATION => 'BuBF',
-    COUNTRY => 'Bulgaria',
-    CITY => 'Karlovo',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Karlovo',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -1263,11 +1235,9 @@ my %TOURNAMENTS_BULGARIA =
 
   'Karlovo Open Teams' =>
   {
-    ORGANIZATION => 'BuBF',
-    COUNTRY => 'Bulgaria',
-    CITY => 'Karlovo',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Karlovo',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1356,11 +1326,9 @@ my %TOURNAMENTS_BULGARIA =
 
   'Pleven Open Teams' =>
   {
-    ORGANIZATION => 'BuBF',
-    COUNTRY => 'Bulgaria',
-    CITY => 'Pleven',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Pleven',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

@@ -11,14 +11,18 @@ package Tournaments::Italy;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'FIGB',
+  COUNTRY => 'Italy',
+  ZONE => 'Europe',
+);
+
 my %MEETS_ITALY =
 (
   'Festival della Matematica' =>
   {
-    ORGANIZATION => 'FIGB',
-    COUNTRY => 'Italy',
+    %GLOBAL,
     ORIGIN => 'International',
-    ZONE => 'Europe',
 
     EDITIONS =>
     {
@@ -33,10 +37,8 @@ my %MEETS_ITALY =
 
   'Italian Club Championship' =>
   {
-    ORGANIZATION => 'FIGB',
-    COUNTRY => 'Italy',
+    %GLOBAL,
     ORIGIN => 'Interclub',
-    ZONE => 'Europe',
 
     EDITIONS =>
     {
@@ -205,10 +207,8 @@ my %MEETS_ITALY =
 
   'Italy Cup' =>
   {
-    ORGANIZATION => 'FIGB',
-    COUNTRY => 'Italy',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
 
     EDITIONS =>
     {
@@ -398,10 +398,8 @@ my %TOURNAMENTS_ITALY =
 (
   'Angelini Teams' =>
   {
-    ORGANIZATION => 'FIGB',
-    COUNTRY => 'Italy',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -426,11 +424,9 @@ my %TOURNAMENTS_ITALY =
 
   'Bologna Trophy' =>
   {
-    ORGANIZATION => 'FIGB',
-    COUNTRY => 'Italy',
-    CITY => 'Bologna',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Bologna',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1886,10 +1882,8 @@ my %TOURNAMENTS_ITALY =
 
   'Italian Mixed Teams' =>
   {
-    ORGANIZATION => 'FIGB',
-    COUNTRY => 'Italy',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -2689,10 +2683,8 @@ my %TOURNAMENTS_ITALY =
 
   'Italian Open Teams' =>
   {
-    ORGANIZATION => 'FIGB',
-    COUNTRY => 'Italy',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2981,10 +2973,8 @@ my %TOURNAMENTS_ITALY =
 
   'Italian Open Trials' =>
   {
-    ORGANIZATION => 'FIGB',
-    COUNTRY => 'Italy',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3376,10 +3366,8 @@ my %TOURNAMENTS_ITALY =
 
   'Italian Senior Trials' =>
   {
-    ORGANIZATION => 'FIGB',
-    COUNTRY => 'Italy',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3431,10 +3419,8 @@ my %TOURNAMENTS_ITALY =
 
   'Italian U36 Teams' =>
   {
-    ORGANIZATION => 'FIGB',
-    COUNTRY => 'Italy',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3803,11 +3789,9 @@ my %TOURNAMENTS_ITALY =
 
   'Milan Trophy' =>
   {
-    ORGANIZATION => 'FIGB',
-    COUNTRY => 'Italy',
-    CITY => 'Milan',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Milan',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3847,11 +3831,9 @@ my %TOURNAMENTS_ITALY =
 
   'Olona International Teams' =>
   {
-    ORGANIZATION => 'FIGB',
-    COUNTRY => 'Italy',
-    REGION => 'Olona',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    REGION => 'Olona',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3877,11 +3859,9 @@ my %TOURNAMENTS_ITALY =
 
   'Rome Challenger Trophy' =>
   {
-    ORGANIZATION => 'FIGB',
-    COUNTRY => 'Italy',
-    CITY => 'Rome',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Rome',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3906,11 +3886,9 @@ my %TOURNAMENTS_ITALY =
 
   'Torneo di Rastignano' =>
   {
-    ORGANIZATION => 'FIGB',
-    COUNTRY => 'Italy',
-    CITY => 'Rastignano',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Rastignano',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3999,11 +3977,9 @@ my %TOURNAMENTS_ITALY =
 
   'Torneo di Roma' =>
   {
-    ORGANIZATION => 'FIGB',
-    COUNTRY => 'Italy',
-    CITY => 'Rome',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Rome',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -4041,11 +4017,9 @@ my %TOURNAMENTS_ITALY =
 
   'Toscana Cup' =>
   {
-    ORGANIZATION => 'FIGB',
-    COUNTRY => 'Italy',
-    CITY => 'Viareggio',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Viareggio',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -4071,11 +4045,9 @@ my %TOURNAMENTS_ITALY =
 
   'Viareggio Cup' =>
   {
-    ORGANIZATION => 'FIGB',
-    COUNTRY => 'Italy',
-    CITY => 'Viareggio',
+    %GLOBAL,
     ORIGIN => 'International',
-    ZONE => 'Europe',
+    CITY => 'Viareggio',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',

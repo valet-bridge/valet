@@ -14,14 +14,18 @@ our @EXPORT = qw(set_links);
 # No real results, but confirmation of dates and locations:
 # https://www.ccba.org.cn/Tour/HistoryList.aspx
 
+my %GLOBAL = (
+  ORGANIZATION => 'CCBA',
+  COUNTRY => 'China',
+  ZONE => 'South East Asia',
+);
+
 my %MEETS_CHINA =
 (
   'All China Games' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
 
     EDITIONS => 
     {
@@ -36,10 +40,8 @@ my %MEETS_CHINA =
 
   'China Elite Tournament' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
 
     EDITIONS =>
     {
@@ -264,10 +266,8 @@ my %TOURNAMENTS_CHINA =
 
   'Aoda Cup' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -418,10 +418,8 @@ my %TOURNAMENTS_CHINA =
 
   'China Friend City Senior Teams' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -474,9 +472,9 @@ my %TOURNAMENTS_CHINA =
   {
     ORGANIZATION => 'CCBA',
     COUNTRY => 'Italy',
-    CITY => 'Rome',
+    ZONE => 'Europe',
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
+    CITY => 'Rome',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -502,10 +500,8 @@ my %TOURNAMENTS_CHINA =
 
   'Chinese Inter-City Teams' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -650,10 +646,8 @@ my %TOURNAMENTS_CHINA =
 
   'Chinese First League' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -800,10 +794,8 @@ my %TOURNAMENTS_CHINA =
 
   'Chinese Mixed Teams' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -846,10 +838,8 @@ my %TOURNAMENTS_CHINA =
 
   'Chinese Open Teams' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -892,10 +882,8 @@ my %TOURNAMENTS_CHINA =
 
   'Chinese Open Trials' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -921,10 +909,8 @@ my %TOURNAMENTS_CHINA =
 
   'Chinese Women Teams' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -967,10 +953,8 @@ my %TOURNAMENTS_CHINA =
 
   'Chung Hua Cup' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -997,10 +981,8 @@ my %TOURNAMENTS_CHINA =
 
   'Cross Strait Invitational' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1064,10 +1046,8 @@ my %TOURNAMENTS_CHINA =
 
   'Dongfeng Cup' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1110,10 +1090,8 @@ my %TOURNAMENTS_CHINA =
 
   'Dongming Knock-out Teams' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1140,10 +1118,8 @@ my %TOURNAMENTS_CHINA =
 
   'GHTD Cup' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1184,10 +1160,8 @@ my %TOURNAMENTS_CHINA =
 
   'Guangdong Club Championship' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1230,10 +1204,8 @@ my %TOURNAMENTS_CHINA =
 
   'Guangdong Elite Tournament' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1259,10 +1231,8 @@ my %TOURNAMENTS_CHINA =
 
   'Guangzhou-HK-Macau Interport' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1288,10 +1258,8 @@ my %TOURNAMENTS_CHINA =
 
   'Haikou Fitness Day' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1317,10 +1285,8 @@ my %TOURNAMENTS_CHINA =
 
   'High-Tech Zone Workers Invitational' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1371,11 +1337,9 @@ my %TOURNAMENTS_CHINA =
 
   'HNA Open Teams' =>
   {
-    ORGANIZATION => 'CCBA',
-    SPONSOR => 'Hainan Air',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
+    SPONSOR => 'Hainan Air',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1506,10 +1470,8 @@ my %TOURNAMENTS_CHINA =
 
   'Jianshe Cup' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
@@ -1551,10 +1513,8 @@ my %TOURNAMENTS_CHINA =
 
   'Jili Cup' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1705,10 +1665,8 @@ my %TOURNAMENTS_CHINA =
 
   'JPD Cup' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1750,11 +1708,9 @@ my %TOURNAMENTS_CHINA =
 
   'Mountain Sea Cup' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
-    CITY => 'Xiamen',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
+    CITY => 'Xiamen',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1780,10 +1736,8 @@ my %TOURNAMENTS_CHINA =
 
   'Sanchen Cup' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1810,10 +1764,8 @@ my %TOURNAMENTS_CHINA =
 
   'Sanya Cup' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1848,10 +1800,8 @@ my %TOURNAMENTS_CHINA =
 
   'Shenhua Cup' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1978,11 +1928,9 @@ my %TOURNAMENTS_CHINA =
 
   'Shenyang Spring Teams' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
-    CITY => 'Shenyang',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
+    CITY => 'Shenyang',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2016,11 +1964,9 @@ my %TOURNAMENTS_CHINA =
 
   'Shenzhen Lanpu Cup' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
-    CITY => 'Shenzhen',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
+    CITY => 'Shenzhen',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -2055,11 +2001,9 @@ my %TOURNAMENTS_CHINA =
 
   'Shenzhen Nangangdongli Cup' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
-    CITY => 'Shenzhen',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
+    CITY => 'Shenzhen',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2111,10 +2055,8 @@ my %TOURNAMENTS_CHINA =
   'Sunchime Fund Cup' =>
   {
     # Could be an Elite tournament.
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2141,10 +2083,8 @@ my %TOURNAMENTS_CHINA =
 
   'Tielu Jixie Invitational' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2171,10 +2111,8 @@ my %TOURNAMENTS_CHINA =
 
   'Vanke Open Teams Cup' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2199,10 +2137,8 @@ my %TOURNAMENTS_CHINA =
 
   'Xinyuan Cup' =>
   {
-    ORGANIZATION => 'CCBA',
-    COUNTRY => 'China',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

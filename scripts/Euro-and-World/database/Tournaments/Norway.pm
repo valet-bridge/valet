@@ -11,16 +11,20 @@ package Tournaments::Norway;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'NBF',
+  COUNTRY => 'Norway',
+  ZONE => 'Europe',
+);
+
 my %MEETS_NORWAY =
 (
   'Norwegian Bridge Festival' =>
   {
     # https://bridgefestival.no/resultater
 
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
 
     EDITIONS => 
     {
@@ -143,10 +147,8 @@ my %MEETS_NORWAY =
 
   'Norwegian Championships' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
 
     EDITIONS => 
     {
@@ -170,11 +172,9 @@ my %TOURNAMENTS_NORWAY =
 (
   'Bergen Grand Open Pairs' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
-    CITY => 'Bergen',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
+    CITY => 'Bergen',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -278,11 +278,9 @@ my %TOURNAMENTS_NORWAY =
 
   'FX Securities Pairs Cup' =>
   {
-    ORGANIZATION => 'NBF',
-    SPONSOR => 'FX Securities',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
+    SPONSOR => 'FX Securities',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -321,11 +319,9 @@ my %TOURNAMENTS_NORWAY =
 
   "Jessheim New Year's Pairs" =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
-    CITY => 'Jessheim',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
+    CITY => 'Jessheim',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -351,11 +347,9 @@ my %TOURNAMENTS_NORWAY =
 
   "Jessheim New Year's Teams" =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     CITY => 'Jessheim',
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
     MOVEMENT => 'Swiss',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -380,15 +374,10 @@ my %TOURNAMENTS_NORWAY =
     }
   },
 
-
-
-
   'Codan Teams Cup' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -416,10 +405,8 @@ my %TOURNAMENTS_NORWAY =
 
   'Farmen Invitational' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -472,11 +459,9 @@ my %TOURNAMENTS_NORWAY =
 
   'FOSS Grand Pairs' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
-    CITY => 'Fredrikstad',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    CITY => 'Fredrikstad',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -571,11 +556,9 @@ my %TOURNAMENTS_NORWAY =
 
   'Gardermoen Airport Hotel Pairs' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
-    LOCALITY => 'Gardermoen',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    LOCALITY => 'Gardermoen',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -601,11 +584,9 @@ my %TOURNAMENTS_NORWAY =
 
   'Gardermoen Airport Hotel Teams' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
-    LOCALITY => 'Gardermoen',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    LOCALITY => 'Gardermoen',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -631,10 +612,8 @@ my %TOURNAMENTS_NORWAY =
 
   'Marit Sveaas Open Pairs' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -660,10 +639,8 @@ my %TOURNAMENTS_NORWAY =
 
   'Mo i Rana Ladies Invitational' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'Invitational',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Women',
@@ -690,10 +667,8 @@ my %TOURNAMENTS_NORWAY =
 
   'Namsos Pairs Cup' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -719,10 +694,8 @@ my %TOURNAMENTS_NORWAY =
 
   'Norwegian Club Pairs' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -748,10 +721,8 @@ my %TOURNAMENTS_NORWAY =
 
   'Norwegian Club Teams' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'Interclub',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -944,10 +915,8 @@ my %TOURNAMENTS_NORWAY =
 
   'Norwegian Corporate Championship' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'Corporate',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1461,10 +1430,8 @@ my %TOURNAMENTS_NORWAY =
 
   'Norwegian Premier League' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1784,10 +1751,8 @@ my %TOURNAMENTS_NORWAY =
 
   'Norwegian Senior Teams' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2069,10 +2034,8 @@ my %TOURNAMENTS_NORWAY =
 
   'Norwegian Team Trials' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2111,10 +2074,8 @@ my %TOURNAMENTS_NORWAY =
 
   'Norwegian Women Invitational Pairs' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Women',
@@ -2217,10 +2178,8 @@ my %TOURNAMENTS_NORWAY =
 
   'Norwegian Women Teams' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -2273,10 +2232,8 @@ my %TOURNAMENTS_NORWAY =
 
   'Olrud Easter Mixed Pairs' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Mixed',
@@ -2302,10 +2259,8 @@ my %TOURNAMENTS_NORWAY =
 
   'Olrud Easter Swiss Pairs' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     MOVEMENT => 'Swiss',
     SCORING => 'MP',
@@ -2358,10 +2313,8 @@ my %TOURNAMENTS_NORWAY =
 
   'Olrud Easter Swiss Teams' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2506,10 +2459,8 @@ my %TOURNAMENTS_NORWAY =
 
   'Rondane Pairs Cup' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -2592,10 +2543,8 @@ my %TOURNAMENTS_NORWAY =
 
   'Rondane Teams Cup' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2678,10 +2627,8 @@ my %TOURNAMENTS_NORWAY =
 
   'Ragn-Sells International Open Pairs' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -2720,10 +2667,8 @@ my %TOURNAMENTS_NORWAY =
 
   'Rosfjord Swiss Teams' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2750,10 +2695,8 @@ my %TOURNAMENTS_NORWAY =
 
   'Ruter 7 Open Pairs' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     GENDER => 'Open',
     AGE => 'Open',
@@ -2813,10 +2756,8 @@ my %TOURNAMENTS_NORWAY =
 
   'Snåsa Pairs Cup' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -2842,10 +2783,8 @@ my %TOURNAMENTS_NORWAY =
 
   'Trondheim Pairs Cup' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -2872,10 +2811,8 @@ my %TOURNAMENTS_NORWAY =
 
   'Trondheim Teams Cup' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2903,11 +2840,9 @@ my %TOURNAMENTS_NORWAY =
 
   'Vest-Agder Regional Team Championship' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
-    REGION => 'Vest Agder',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
+    REGION => 'Vest Agder',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2969,10 +2904,8 @@ my %TOURNAMENTS_NORWAY =
 
   'Willy Brown Memorial Pairs' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
+    %GLOBAL,
     ORIGIN => 'Regional',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
