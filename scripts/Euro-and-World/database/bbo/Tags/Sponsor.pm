@@ -136,6 +136,7 @@ my @MULTI_WORDS =
   'Guiyuang Bank',
   'Haerbin Bingxue',
   'Hai Long',
+  'Hainan Air',
   'Hainan Shichuang',
   'Hainan Window',
   'Hangzhou Jinjiang',
@@ -632,7 +633,7 @@ my @SINGLE_WORDS = qw(
   EcoSoft Effcontrol Eimskip Eksprompt Elastron Elektrika Elektrociepl
   Energetyk Enorma Enterprise ESSO Evertrust
 
-  Fatek Forta Frissan FullBridge Funbridge
+  Fatek Forbo Forta Frissan FullBridge Funbridge
 
   GAMAX Gazprom Generali Geologi Genkad Gevalia Gillette Gomad 
   Gözgöz GSE

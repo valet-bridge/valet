@@ -1,11 +1,5 @@
 Checks:
 
-Values of fields, e.g. COUNTRY, CITY
-- Loop tournament, {EDITIONS} years, {CHAPTERS} tags
-  - Roll up the flat header, implemented  in ParseT check_consistency
-  - Check each field against Whole (must be a correct top-level value)
-  - If in Matrix, look up and check implications, e.g. CITY -> COUNTRY
-
 - Look over ORIGIN manually
 
 CLEANUP

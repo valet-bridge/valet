@@ -288,7 +288,7 @@ my %TOURNAMENTS_ARGENTINA =
           'SINGLE' => 
           {
             YEAR => 2016,
-            STAGE => 'Session',
+            major => 'SESSION',
             DATE_START => '2016-03-20',
             DATE_END => '2016-03-20'
           } 
@@ -591,8 +591,8 @@ my %TOURNAMENTS_ARGENTINA =
     ZONE => 'South America',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Seniors',
-    AGE => 'Open',
+    GENDER => 'Open',
+    AGE => 'Seniors',
 
     EDITIONS =>
     {

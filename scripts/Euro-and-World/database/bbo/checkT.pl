@@ -8,11 +8,24 @@ use open ':std', ':encoding(UTF-8)';
 
 use lib '.';
 use lib './Tags';
+use lib './Connections';
 
 use LinksT;
 use DateCalc;
 use Tags::Tname;
 use Tags::Meet;
+use Connections::Matrix;
+
+# Quite duplicative to read the tournaments and meets twice,
+# but it's only checker...
+use ParseT;
+
+use Whole;
+my $whole = Whole->new();
+$whole->init_hashes();
+
+Connections::Matrix::set_matrix($whole);
+$whole->check_static_consistency();
 
 my $debug;
 my $debug_division = '';
@@ -63,6 +76,9 @@ else
 my %divisionsT;
 LinksT::init_linksT(\%divisionsT);
 
+my $parseT = ParseT->new();
+$parseT->init_links($debug_division, $debug);
+
 if ($debug)
 {
   $divisionsT{$debug_division}->(\&set_linksT);
@@ -76,6 +92,7 @@ if ($debug)
   check_same_hash("Meet", $debug_division,
     \%links_mhash, \%meet_hash);
   suggest_meets($debug_division);
+  check_field_values($debug_division);
 }
 else
 {
@@ -92,6 +109,7 @@ else
     check_same_hash("Meet", $key,
       \%links_mhash, \%meet_hash);
   suggest_meets($key);
+  check_field_values($key);
   }
 }
 
@@ -184,6 +202,89 @@ sub suggest_meets
             next if exists $IGNORE_MEETS{$str};
 
             warn "$tname, $ctag: Matches meet $meet, $mtag?";
+          }
+        }
+      }
+    }
+  }
+}
+
+
+sub check_field_values
+{
+  my ($key) = @_;
+
+  my @keys = sort keys %links_t;
+  return unless $#keys == 0;
+
+  for my $tname (sort keys %{$links_t{$keys[0]}})
+  {
+    my $editions = $links_t{$keys[0]}{$tname}{EDITIONS};
+    for my $tag (sort keys %$editions)
+    {
+      my $edition = $editions->{$tag};
+      next if exists $edition->{MEET};
+
+      for my $ctag (sort keys %{$edition->{CHAPTERS}})
+      {
+        my $chapter = $edition->{CHAPTERS}{$ctag};
+        my $cdate1 = $chapter->{DATE_START};
+        my $cdate2 = $chapter->{DATE_END};
+
+        for my $meet (sort keys %{$links_m{$keys[0]}})
+        {
+          my $meditions = $links_m{$keys[0]}{$meet}{EDITIONS};
+          for my $mtag (sort keys %$meditions)
+          {
+            my $mchapter = $meditions->{$mtag};
+
+            my %cumul;
+            $parseT->get_all_fields($tname, $tag, $ctag, \%cumul);
+
+            for my $field (sort keys %cumul)
+            {
+              # TODO WEEKEND
+              # TODO Online as a city (wasn't there a special city?!)
+
+              next if ($field eq 'major' ||
+                $field eq 'minor' ||
+                $field eq 'WEEKEND' ||
+                $field eq 'YEAR');
+
+              next if ($field eq 'ORDINAL' && $cumul{$field} =~ /^\d+$/);
+              next if ($field eq 'CITY' && $cumul{$field} eq 'Online');
+              next if ($field eq 'AGE' && $cumul{$field} eq 'Open');
+
+              my $composite = $whole->get_multi($field, lc($cumul{$field}));
+              if (defined $composite)
+              {
+                if ($cumul{$field} ne $composite)
+                {
+                  print "$tname, $tag, $ctag: ",
+                    "field $field, value .$cumul{$field}., ",
+                    " got .$composite.\n";
+                }
+                next;
+              }
+
+              my $single = $whole->get_single($field, lc($cumul{$field}));
+              if (! defined $single->{CATEGORY})
+              {
+                print "$tname, $tag, $ctag: ",
+                  $cumul{$field}, ", $field: No singleton category\n";
+                next;
+              }
+
+              if ($cumul{$field} ne $single->{VALUE})
+              {
+               print "$tname, $tag, $ctag: ",
+                 "field $field, value .$cumul{$field}., ",
+                 " got single .", $single->{VALUE}, ".\n";
+              }
+            }
+
+            # warn "$tname, $tag, $ctag";
+
           }
         }
       }

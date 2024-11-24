@@ -446,7 +446,7 @@ my %TOURNAMENTS_DENMARK =
       '2009' =>
       {
         # https://www2.bridge.dk/Default.aspx?ID=18805#26986
-        CITY => 'Aarhus',
+        CITY => 'Århus',
         CHAPTERS => 
         {
           'SINGLE' => 
@@ -604,7 +604,7 @@ my %TOURNAMENTS_DENMARK =
       '2019' =>
       {
         # https://www2.bridge.dk/Default.aspx?ID=25136#30729
-        CITY => 'Aarhus',
+        CITY => 'Århus',
         CHAPTERS => 
         {
           'SINGLE' => 
@@ -1503,7 +1503,7 @@ my %TOURNAMENTS_DENMARK =
           'C3' => 
           {
             YEAR => 2016,
-            CITY => 'Aarhus',
+            CITY => 'Århus',
             WEEKEND => 4,
             major => 'ROUND',
             minor => 'SEGMENT',
@@ -1565,7 +1565,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2017,
             WEEKEND => 4,
-            CITY => 'Aarhus',
+            CITY => 'Århus',
             DATE_START => '2017-03-04',
             DATE_END => '2017-03-05'
           },
@@ -1574,7 +1574,7 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2017,
             WEEKEND => 5,
             STAGE => 'Semifinal',
-            CITY => 'Aarhus',
+            CITY => 'Århus',
             DATE_START => '2017-04-01',
             DATE_END => '2017-04-01'
           },
@@ -1583,7 +1583,7 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2017,
             WEEKEND => 5,
             STAGE => 'Final',
-            CITY => 'Aarhus',
+            CITY => 'Århus',
             DATE_START => '2017-04-02',
             DATE_END => '2017-04-02'
           }
@@ -1621,7 +1621,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2018,
             WEEKEND => 4,
-            CITY => 'Aarhus',
+            CITY => 'Århus',
             DATE_START => '2018-03-03',
             DATE_END => '2018-03-04'
           },
@@ -1656,7 +1656,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2018,
             WEEKEND => 1,
-            CITY => 'Aarhus',
+            CITY => 'Århus',
             DATE_START => '2018-11-17',
             DATE_END => '2018-11-18'
           },
@@ -1799,7 +1799,7 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2022,
             WEEKEND => 5,
             STAGE => 'Semifinal',
-            CITY => 'Aarhus',
+            CITY => 'Århus',
             DATE_START => '2022-04-23',
             DATE_END => '2022-04-23'
           },
@@ -1808,7 +1808,7 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2022,
             WEEKEND => 5,
             STAGE => 'Final',
-            CITY => 'Aarhus',
+            CITY => 'Århus',
             DATE_START => '2022-04-24',
             DATE_END => '2022-04-24'
           }
@@ -1938,7 +1938,7 @@ my %TOURNAMENTS_DENMARK =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Juniors',
+    AGE => 'U26',
 
     EDITIONS =>
     {

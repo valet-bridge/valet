@@ -189,7 +189,7 @@ my %TOURNAMENTS_NETHERLANDS =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Juniors',
+    AGE => 'U26',
 
     EDITIONS =>
     {
@@ -1187,7 +1187,7 @@ my %TOURNAMENTS_NETHERLANDS =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Juniors',
+    AGE => 'U26',
 
     EDITIONS =>
     {

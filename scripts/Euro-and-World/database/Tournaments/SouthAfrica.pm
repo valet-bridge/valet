@@ -18,7 +18,7 @@ my %MEETS_SOUTHAFRICA =
     ORGANIZATION => 'SABF',
     COUNTRY => 'South Africa',
     ORIGIN => 'National',
-    ZONE => 'Africa',
+    ZONE => 'African Zone',
 
     EDITIONS =>
     {
@@ -69,7 +69,7 @@ my %TOURNAMENTS_SOUTHAFRICA =
     ORGANIZATION => 'SABF',
     COUNTRY => 'South Africa',
     ORIGIN => 'Interprovince',
-    ZONE => 'Africa',
+    ZONE => 'African Zone',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

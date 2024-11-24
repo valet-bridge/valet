@@ -2905,7 +2905,7 @@ my %TOURNAMENTS_NORWAY =
   {
     ORGANIZATION => 'NBF',
     COUNTRY => 'Norway',
-    REGION => 'Vest-Agder',
+    REGION => 'Vest Agder',
     ORIGIN => 'Regional',
     ZONE => 'Europe',
     FORM => 'Teams',

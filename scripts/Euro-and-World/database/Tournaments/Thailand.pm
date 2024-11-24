@@ -21,7 +21,7 @@ my %MEETS_THAILAND =
     CITY => 'Bangkok',
     COUNTRY => 'Thailand',
     ORIGIN => 'National',
-    ZONE => 'Southeast Asia',
+    ZONE => 'South East Asia',
 
     EDITIONS => 
     {
@@ -57,7 +57,7 @@ my %MEETS_THAILAND =
     ORGANIZATION => 'CBLT',
     COUNTRY => 'Thailand',
     ORIGIN => 'National',
-    ZONE => 'Southeast Asia',
+    ZONE => 'South East Asia',
 
     EDITIONS => 
     {

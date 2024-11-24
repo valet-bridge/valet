@@ -1188,7 +1188,7 @@ my %TOURNAMENTS_FRANCE =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Juniors',
+    AGE => 'U26',
 
     EDITIONS =>
     {

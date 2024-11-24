@@ -523,7 +523,7 @@ my %TOURNAMENTS_ISRAEL =
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Juniors',
+    AGE => 'U26',
 
     EDITIONS =>
     {
@@ -580,7 +580,7 @@ my %TOURNAMENTS_ISRAEL =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Juniors',
+    AGE => 'U26',
 
     EDITIONS =>
     {

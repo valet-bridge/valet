@@ -160,7 +160,7 @@ my @SINGLE_WORDS = qw(
   Rajasthan Rajputana Ratchaburi Rhodes Rogaland Rosfjord 
   Sakarya Salten Shandong Shanxi Siberia Sichuan Silesia Silla Sindh 
   Sintang Skåne Slask Southland Sydvest
-  Tambun Tasmania Telemark Tianya
+  Tambun Tasmania Telemark Thrace Tianya
   Tigris Tinglin Tuncelý
   Uttarakhand
   Victoria Vojvodina

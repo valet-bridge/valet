@@ -991,7 +991,7 @@ my %TOURNAMENTS_FRIENDLY =
     ORGANIZATION => 'CCBA',
     COUNTRY => 'China',
     ORIGIN => 'National',
-    ZONE => 'Asia',
+    ZONE => 'Southeast Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
 

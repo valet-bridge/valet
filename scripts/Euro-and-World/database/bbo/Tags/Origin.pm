@@ -34,6 +34,7 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
+  Corporate
   Intercity 
   Interclub
   International
@@ -44,6 +45,7 @@ my @SINGLE_WORDS = qw(
   Interuniversity
   Invitational
   National
+  Regional
   Transnational
   University
   World

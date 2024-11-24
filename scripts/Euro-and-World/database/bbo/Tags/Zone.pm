@@ -14,9 +14,12 @@ our @EXPORT = qw(set_hashes);
 my @MULTI_WORDS =
 (
   'African Zone',
+  'Asia Pacific',
   'Central America and Caribbean',
+  'Middle East',
   'North America',
   'South America',
+  'South East Asia',
   'South Pacific'
 );
 
@@ -38,6 +41,7 @@ my @SINGLE_WORDS = qw(
   Global
   Mercosur
   Norden
+  World
 );
 
 my %SINGLE_TYPOS =

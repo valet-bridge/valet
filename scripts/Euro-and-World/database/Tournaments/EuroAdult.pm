@@ -503,7 +503,7 @@ my %MEETS_EUROADULT =
         # http://db.eurobridge.org/Repository/competitions/16Monaco/microSite/results.htm
         YEAR => 2016,
         ORDINAL => 1,
-        CITY => 'Monaco',
+        CITY => 'Monte Carlo',
         COUNTRY => 'Monaco',
         DATE_START => '2016-02-05',
         DATE_END => '2016-02-11'
@@ -513,7 +513,7 @@ my %MEETS_EUROADULT =
         # http://db.eurobridge.org/repository/competitions/18Monaco/microSite/results.htm
         YEAR => 2018,
         ORDINAL => 2,
-        CITY => 'Monaco',
+        CITY => 'Monte Carlo',
         COUNTRY => 'Monaco',
         DATE_START => '2018-02-17',
         DATE_END => '2018-02-23'
@@ -523,7 +523,7 @@ my %MEETS_EUROADULT =
         # http://db.eurobridge.org/repository/competitions/20Monaco/microSite/results.htm
         YEAR => 2020,
         ORDINAL => 3,
-        CITY => 'Monaco',
+        CITY => 'Monte Carlo',
         COUNTRY => 'Monaco',
         DATE_START => '2020-02-29',
         DATE_END => '2020-03-06'
@@ -2586,7 +2586,7 @@ my %TOURNAMENTS_EUROADULT =
       {
         # http://db.eurobridge.org/Repository/competitions/11SanMarino/minirama.html
         ORDINAL => 4,
-        CITY => 'San Marino',
+        CITY => 'San Marino City',
         COUNTRY => 'San Marino',
 
         CHAPTERS =>
@@ -2732,7 +2732,7 @@ my %TOURNAMENTS_EUROADULT =
       {
         # http://db.eurobridge.org/repository/competitions/17Monaco/microsite/small5/menu.html
         ORDINAL => 10,
-        CITY => 'Monaco',
+        CITY => 'Monte Carlo',
         COUNTRY => 'Monaco',
 
         CHAPTERS =>

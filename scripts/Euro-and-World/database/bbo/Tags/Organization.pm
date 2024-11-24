@@ -15,6 +15,7 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  'Bridge Academy Poland',
   'Bridge Great Britain',
   'CBA WZ',
   'Indonesian Ministry of Youth and Sports',
@@ -79,6 +80,7 @@ my %MULTI_TYPOS =
   ICBA => ['indore contract bridge association'],
   IceBF => ['icelandic bridge federation'],
   IBU => ['irish bridge union'],
+  IOC => ['international olympic committee'],
   JBA => ['j.b.a.', 'jordan bridge federation', 'j_b_a', 'j_ba'],
   JCBL => ['japanese contract bridge league'],
   KSBA => ['karnataka state bridge association'],
@@ -124,7 +126,7 @@ my @SINGLE_WORDS = qw(
   FIGB FFB FMB FSB
   GABSI
   HKCBA
-  IBF IBU IBWI ICBA
+  IBF IBU IBWI ICBA IOC
   JBA
   KSBA
   MBA MCBA

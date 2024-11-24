@@ -415,7 +415,7 @@ my %TOURNAMENTS_GERMANY =
 (
   'Bonn Nations Cup' =>
   {
-    ORGANIZATION => 'BC Bonn',
+    CLUB => 'BC Bonn',
     COUNTRY => 'Germany',
     CITY => 'Bonn',
     ORIGIN => 'International',
@@ -429,7 +429,7 @@ my %TOURNAMENTS_GERMANY =
     {
       '2004' =>
       {
-        ORDINAL => '19th',
+        ORDINAL => 19,
         CHAPTERS => 
         {
           'C0' =>
@@ -453,7 +453,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2005' =>
       {
-        ORDINAL => '20th',
+        ORDINAL => 20,
         CHAPTERS => 
         {
           'C0' =>
@@ -476,7 +476,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2006' =>
       {
-        ORDINAL => '21st',
+        ORDINAL => 21,
         CHAPTERS => 
         {
           'C0' =>
@@ -509,7 +509,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2007' =>
       {
-        ORDINAL => '22nd',
+        ORDINAL => 22,
         CHAPTERS => 
         {
           'C0' =>
@@ -533,7 +533,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2008' =>
       {
-        ORDINAL => '23rd',
+        ORDINAL => 23,
         CHAPTERS => 
         {
           'C0' =>
@@ -557,7 +557,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2009' =>
       {
-        ORDINAL => '24th',
+        ORDINAL => 24,
         CHAPTERS => 
         {
           'C0' =>
@@ -581,7 +581,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2010' =>
       {
-        ORDINAL => '25th',
+        ORDINAL => 25,
         CHAPTERS => 
         {
           'C0' =>
@@ -605,7 +605,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2011' =>
       {
-        ORDINAL => '26th',
+        ORDINAL => 26,
         CHAPTERS => 
         {
           'C0' =>
@@ -630,7 +630,7 @@ my %TOURNAMENTS_GERMANY =
       '2012' =>
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=222&site=0&kl=0
-        ORDINAL => '27th',
+        ORDINAL => 27,
         CHAPTERS => 
         {
           'C0' =>
@@ -2475,7 +2475,6 @@ my %TOURNAMENTS_GERMANY =
       '2012' => 
       {
         YEAR => 2012,
-        CITY => '',
         CHAPTERS => 
         {
           'WEEKEND 1' => 
@@ -2512,7 +2511,6 @@ my %TOURNAMENTS_GERMANY =
           'SINGLE' => 
           {
             YEAR => 2014,
-            CITY => '',
             major => 'ROUND',
             DATE_START => '2014-02-14',
             DATE_END => '2014-02-16'
@@ -2876,7 +2874,7 @@ my %TOURNAMENTS_GERMANY =
 
   "Gro's Supercup" => 
   {
-    ORGANIZATION => 'Kultcamp Rieneck',
+    CLUB => 'Kultcamp Rieneck',
     COUNTRY => 'Germany',
     CITY => 'Rieneck',
     ORIGIN => 'Invitational',
@@ -2890,7 +2888,7 @@ my %TOURNAMENTS_GERMANY =
     {
       '2010' => 
       {
-        ORDINAL => '1st',
+        ORDINAL => 1,
         CHAPTERS => 
         {
           'SINGLE' => 
@@ -2904,7 +2902,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2011' => 
       {
-        ORDINAL => '2nd',
+        ORDINAL => 2,
         CHAPTERS => 
         {
           'SINGLE' => 
@@ -2918,7 +2916,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2012' => 
       {
-        ORDINAL => '3rd',
+        ORDINAL => 3,
         CHAPTERS => 
         {
           'SINGLE' => 
@@ -2932,7 +2930,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2013' => 
       {
-        ORDINAL => '4th',
+        ORDINAL => 4,
         CHAPTERS => 
         {
           'C0' => 
@@ -2954,7 +2952,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2014' => 
       {
-        ORDINAL => '5th',
+        ORDINAL => 5,
         CHAPTERS => 
         {
           'C0' => 
@@ -2977,7 +2975,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2015' => 
       {
-        ORDINAL => '6th',
+        ORDINAL => 6,
         CHAPTERS => 
         {
           'C0' => 
@@ -3000,7 +2998,7 @@ my %TOURNAMENTS_GERMANY =
 
       '2016' => 
       {
-        ORDINAL => '7th',
+        ORDINAL => 7,
         CHAPTERS => 
         {
           'C0' => 
@@ -3038,7 +3036,7 @@ my %TOURNAMENTS_GERMANY =
     {
       '2009' =>
       {
-        ORDINAL => '2nd',
+        ORDINAL => 2,
         CITY => 'Bad Griesbach',
         CHAPTERS => 
         {

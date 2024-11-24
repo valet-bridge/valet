@@ -456,7 +456,7 @@ my %TOURNAMENTS_AFRICA =
   {
     ORGANIZATION => 'AfBF',
     ORIGIN => 'International',
-    ZONE => 'Africa',
+    ZONE => 'African Zone',
     CITY => 'Piggs Peak',
     COUNTRY => 'South Africa',
     FORM => 'Pairs',

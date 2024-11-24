@@ -13,19 +13,19 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
-  'IMPs Across the Field'
 );
 
 my %MULTI_TYPOS =
 (
   BAM => ['board-a-match', 'b-a-m'],
+  IAF => ['imps across the field'],
   IMP => ['butler scoring', "IMP's"],
   'IMPs Across the Field' => ["imp's across the field"],
   MP => ['match point'],
 );
 
 my @SINGLE_WORDS = qw(
-  MP IMP BAM Patton
+  MP IAF IMP BAM Patton
 );
 
 my %SINGLE_TYPOS =
@@ -33,7 +33,6 @@ my %SINGLE_TYPOS =
   MP => [qw(matchpoints machpoints macthpoints mpoints 
     matchpoint maxy mpp)],
   IMP => [qw(ýmp imps impy)],
-  'IMPs Across the Field' => ['iaf']
 );
 
 

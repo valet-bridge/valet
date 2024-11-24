@@ -2077,7 +2077,7 @@ my %TOURNAMENTS_ASIA =
   'Yeh Bros Pairs Cup' =>
   {
     ORIGIN => 'Invitational',
-    ZONE => 'Southeast Asia',
+    ZONE => 'South East Asia',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -2087,7 +2087,7 @@ my %TOURNAMENTS_ASIA =
     {
       '2009' =>
       {
-        CITY => 'Broadbeach Island',
+        CITY => 'Broadbeach',
         COUNTRY => 'Australia',
         CHAPTERS =>
         {
@@ -2105,7 +2105,7 @@ my %TOURNAMENTS_ASIA =
   'Yeh Bros Cup' =>
   {
     ORIGIN => 'Invitational',
-    ZONE => 'Southeast Asia',
+    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2228,7 +2228,7 @@ my %TOURNAMENTS_ASIA =
       },
       '2009' =>
       {
-        CITY => 'Broadbeach Island',
+        CITY => 'Broadbeach',
         COUNTRY => 'Australia',
         CHAPTERS =>
         {

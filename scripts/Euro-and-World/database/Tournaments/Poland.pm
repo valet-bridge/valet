@@ -3826,7 +3826,7 @@ my %TOURNAMENTS_POLAND =
     ORGANIZATION => 'Bridge Academy Poland',
     COUNTRY => 'Poland',
     CITY => 'Warsaw',
-    ORIGIN => 'Company',
+    ORIGIN => 'Corporate',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -3930,7 +3930,7 @@ my %TOURNAMENTS_POLAND =
     ORGANIZATION => 'Bridge Academy Poland',
     COUNTRY => 'Poland',
     CITY => 'Warsaw',
-    ORIGIN => 'Company',
+    ORIGIN => 'Corporate',
     ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
@@ -4197,7 +4197,7 @@ my %TOURNAMENTS_POLAND =
       '2013B' =>
       {
         # https://michzimny.pl/bridge/2013/indmp/
-        CITY => 'Tarnow',
+        CITY => 'Tarnów',
         CHAPTERS =>
         {
           'C0' => 

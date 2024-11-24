@@ -21,7 +21,7 @@ my %MEETS_EGYPT =
     ORGANIZATION => 'EgBF',
     COUNTRY => 'Egypt',
     ORIGIN => 'National',
-    ZONE => 'Africa',
+    ZONE => 'African Zone',
 
     EDITIONS =>
     {
@@ -85,7 +85,7 @@ my %TOURNAMENTS_EGYPT =
     ORGANIZATION => 'EgBF',
     COUNTRY => 'Egypt',
     ORIGIN => 'National',
-    ZONE => 'Africa',
+    ZONE => 'African Zone',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -151,7 +151,7 @@ my %TOURNAMENTS_EGYPT =
     ORGANIZATION => 'EgBF',
     COUNTRY => 'Egypt',
     ORIGIN => 'National',
-    ZONE => 'Africa',
+    ZONE => 'African Zone',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
