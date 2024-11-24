@@ -11,6 +11,11 @@ Values of fields, e.g. COUNTRY, CITY
 CLEANUP
 No Tword anymore?
 
+Need to separate MEET_ORDINAL FROM ORDINAL
+
+Global fields, started on top of Sweden
+Just add %GLOBAL first
+
 -----
 
 Data-based checks

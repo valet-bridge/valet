@@ -5231,8 +5231,6 @@ my %TOURNAMENTS_EUROADULT =
   {
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
 
     EDITIONS =>
     {
@@ -5433,17 +5431,14 @@ my %TOURNAMENTS_EUROADULT =
 
   'European Winter Transnational Teams' =>
   {
+    FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
 
     EDITIONS =>
     {
       '2024' =>
       {
         MEET => 'European Winter Transnational Championships',
-        ORDINAL => 1,
-
         CHAPTERS =>
         {
           'C0' => 

@@ -156,6 +156,18 @@ my %MEETS_ISRAEL =
 
     EDITIONS =>
     {
+      '2007' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-05-31',
+        DATE_END => '2007-05-31'
+      },
+      '2009' =>
+      {
+        YEAR => 2009,
+        DATE_START => '2009-03-28',
+        DATE_END => '2009-03-28'
+      },
       '2010' =>
       {
         YEAR => 2010,
@@ -641,10 +653,6 @@ my %TOURNAMENTS_ISRAEL =
 
   'Israel IMP Pairs' =>
   {
-    ORGANIZATION => 'IBF',
-    COUNTRY => 'Israel',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -654,6 +662,7 @@ my %TOURNAMENTS_ISRAEL =
     {
       '2007' =>
       {
+        MEET => 'Israel Grand Prix',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -667,6 +676,7 @@ my %TOURNAMENTS_ISRAEL =
       },
       '2009' =>
       {
+        MEET => 'Israel Grand Prix',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1080,7 +1090,6 @@ my %TOURNAMENTS_ISRAEL =
       },
       '2010B' =>
       {
-        MEET => 'Israel Grand Prix',
         MEET_TAG => '2010',
         CHAPTERS =>
         {

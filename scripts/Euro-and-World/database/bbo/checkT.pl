@@ -21,6 +21,7 @@ my (%links_t, %links_m);
 my (%links_thash, %links_mhash);
 
 my %IGNORE_MEETS = (
+  'Anatolian Club Teams|2012|C0' => 'Assael Festival',
   'APBF Women Elite Tournament|2006|C2' => 
     'FISU World University Championships',
   'APBF Women Elite Tournament|2006|C3' =>
@@ -28,6 +29,9 @@ my %IGNORE_MEETS = (
   'Bologna Trophy|2014|C0' => 'Italy Cup',
   'Torneo di Roma|2014|C0' => 'Italy Cup',
   'Viareggio Cup|2005|C0' => 'Italian Club Championship',
+  'Polish Individual Championship|2012A|C0' => 'Polish Championships',
+  # This is true, but too hard to track down other Open Trials.
+  'Polish Open Trials|2004|SINGLE' => 'Luczniczka Meeting',
   'Polish Premier League|2006|C1' => 'Polish Pairs Championship',
   'Polish Premier League|2012|C2' => 'Zulawski Congress',
   'Polish Premier League|2013|C2' => 'Zulawski Congress',
@@ -35,6 +39,8 @@ my %IGNORE_MEETS = (
     'Goa Bridge Festival',
   'All India Bangur Cement Hindusthan Club|2015|C1' =>
     'Goa Bridge Festival',
+  'Israel Open Teams Cup|2010|SINGLE' => 'Israel Grand Prix',
+  'Italian Mixed Teams|2024|C0' => 'Italy Cup', # For now
   'Izmir Winter Teams Cup|2016|SINGLE' => 'Sivrioglu Festival'
 );
 

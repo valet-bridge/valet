@@ -23,6 +23,7 @@ my @MULTI_WORDS =
   'Maharashtra State Championship',
   'Rajasthan Invitational Championship',
   'Uttar Pradesh State Championship',
+  'West Indian Regional'
 );
 
 my %MULTI_TYPOS =

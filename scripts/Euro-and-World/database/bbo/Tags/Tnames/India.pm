@@ -61,6 +61,7 @@ my @MULTI_WORDS =
   'PYC Hindu Gymkhana Royale',
   'Poddar National Masters',
   'Prashant Desai Memorial',
+  'Pune State Level Open Teams',
   'R N Bagla Memorial Pairs',
   'R R Gupta Memorial Championship',
   'R Ratnam Memorial',
@@ -202,11 +203,7 @@ my %MULTI_TYPOS =
   'Maharashtra State Teams' => [
     'mitravihar centenary state level',
     'mitravihar club centenary state level',
-    'mitravihar nasik centenary state level',
-    'prba open state level',
-    'prba statelevel',
-    'prba state level open',
-    'prba state level'],
+    'mitravihar nasik centenary state level'],
   'Mohan Sicka BAM Teams' => [
     'mohan sicka',
     'mohan sicka bam',
@@ -252,6 +249,11 @@ my %MULTI_TYPOS =
     'poddar nationals masters', 
     'podder national masters',
     'podder nationals masters'],
+  'Pune State Level Open Teams' => [
+    'prba open state level',
+    'prba statelevel',
+    'prba state level open',
+    'prba state level'],
   'R N Bagla Memorial Pairs' => [
     'bagla pairs royale',
     'r_n_bagla memorial pairs royale',

@@ -15,7 +15,8 @@ our @EXPORT = qw(set_hash);
 my @MULTI_WORDS =
 (
   'Copenhagen Invitational',
-  'Danish Bridge Festival'
+  'Danish Bridge Festival',
+  'Danish Championships'
 );
 
 my %MULTI_TYPOS =

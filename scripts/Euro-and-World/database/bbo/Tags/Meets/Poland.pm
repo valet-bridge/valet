@@ -21,6 +21,8 @@ my @MULTI_WORDS =
   'Luczniczka Meeting',
   'Palace Cup',
   'Polish Championships',
+  'Polish Grand Prix Pairs Legs',
+  'Polish Grand Prix Teams Legs',
   'Polish Pairs Championship',
   'Polish School Championship',
   'Poznan Congress',

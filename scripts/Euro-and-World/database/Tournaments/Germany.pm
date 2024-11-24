@@ -18,12 +18,13 @@ my %MEETS_GERMANY =
     ORGANIZATION => 'DBV',
     COUNTRY => 'Germany',
     ORIGIN => 'National',
+    ZONE => 'Europe',
 
     EDITIONS =>
     {
       '2013' =>
       {
-        ORDINAL => 1,
+        MEET_ORDINAL => 1,
         YEAR => 2013,
         CITY => 'Berlin',
         DATE_START => '2013-08-10',
@@ -31,7 +32,7 @@ my %MEETS_GERMANY =
       },
       '2014' =>
       {
-        ORDINAL => 2,
+        MEET_ORDINAL => 2,
         YEAR => 2014,
         CITY => 'Berlin',
         DATE_START => '2014-08-16',
@@ -39,7 +40,7 @@ my %MEETS_GERMANY =
       },
       '2015' =>
       {
-        ORDINAL => 3,
+        MEET_ORDINAL => 3,
         YEAR => 2015,
         CITY => 'Berlin',
         DATE_START => '2015-08-15',
@@ -47,7 +48,7 @@ my %MEETS_GERMANY =
       },
       '2016' =>
       {
-        ORDINAL => 4,
+        MEET_ORDINAL => 4,
         YEAR => 2016,
         CITY => 'Berlin',
         DATE_START => '2016-08-20',
@@ -55,7 +56,7 @@ my %MEETS_GERMANY =
       },
       '2017' =>
       {
-        ORDINAL => 5,
+        MEET_ORDINAL => 5,
         YEAR => 2017,
         CITY => 'Berlin',
         DATE_START => '2017-08-10',
@@ -63,7 +64,7 @@ my %MEETS_GERMANY =
       },
       '2018' =>
       {
-        ORDINAL => 6,
+        MEET_ORDINAL => 6,
         YEAR => 2018,
         CITY => 'Berlin',
         DATE_START => '2018-07-22',
@@ -71,7 +72,7 @@ my %MEETS_GERMANY =
       },
       '2019' =>
       {
-        ORDINAL => 7,
+        MEET_ORDINAL => 7,
         YEAR => 2019,
         CITY => 'Berlin',
         DATE_START => '2019-08-24',
@@ -79,24 +80,335 @@ my %MEETS_GERMANY =
       },
       '2021' => 
       {
-        YEAR => 2021,
+        MEET_YEAR => 2021,
         DATE_START => '2021-08-14',
         DATE_END => '2021-08-21'
       },
-      '2022' => 
+    }
+  },
+
+  'German Championships' =>
+  {
+    ORGANIZATION => 'DBV',
+    COUNTRY => 'Germany',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+
+    EDITIONS =>
+    {
+      '2006' =>
       {
-        YEAR => 2022,
-        DATE_START => '2022-08-04',
-        DATE_END => '2022-08-05'
+        # Open Teams
+        YEAR => 2006,
+        CITY => 'Kassel',
+        DATE_START => '2006-05-05',
+        DATE_END => '2006-05-07'
       },
-      '2023' => 
+      '2009A' =>
       {
+        # Mixed Teams
+        YEAR => 2009,
+        CITY => 'Kassel',
+        DATE_START => '2009-03-28',
+        DATE_END => '2009-03-29'
+      },
+      '2009B' =>
+      {
+        # Open Teams
+        YEAR => 2009,
+        CITY => 'Kassel',
+        DATE_START => '2009-06-05',
+        DATE_END => '2009-06-07'
+      },
+      '2009C' =>
+      {
+        # Open Pairs
+        YEAR => 2009,
+        DATE_START => '2009-09-09',
+        DATE_END => '2009-09-11'
+      },
+      '2009D' =>
+      {
+        # Open Pairs
+        YEAR => 2009,
+        CITY => 'Bonn',
+        DATE_START => '2009-10-03',
+        DATE_END => '2009-10-04'
+      },
+      '2009E' =>
+      {
+        # Senior Pairs
+        YEAR => 2009,
+        CITY => 'Bonn',
+        DATE_START => '2009-10-24',
+        DATE_END => '2009-10-25'
+      },
+      '2009F' =>
+      {
+        # Mixed Pairs
+        YEAR => 2009,
+        CITY => 'Bad Nauheim',
+        DATE_START => '2009-10-31',
+        DATE_END => '2009-11-01'
+      },
+      '2009G' =>
+      {
+        # Open (Rotteck) and Women Pairs
+        YEAR => 2009,
+        CITY => 'Bad Nauheim',
+        DATE_START => '2009-11-21',
+        DATE_END => '2009-11-22'
+      },
+      '2011A' =>
+      {
+        # Mixed Pairs
+        YEAR => 2011,
+        CITY => 'Darmstadt',
+        DATE_START => '2011-04-09',
+        DATE_END => '2011-04-10'
+      },
+      '2011B' =>
+      {
+        # Mixed Teams
+        YEAR => 2011,
+        CITY => 'Kassel',
+        DATE_START => '2011-05-14',
+        DATE_END => '2011-05-15'
+      },
+      '2011C' =>
+      {
+        # Open Teams
+        YEAR => 2011,
+        CITY => 'Kassel',
+        DATE_START => '2011-09-09',
+        DATE_END => '2011-09-11'
+      },
+      '2011D' =>
+      {
+        # Open Pairs
+        YEAR => 2011,
+        CITY => 'Bonn',
+        DATE_START => '2011-10-01',
+        DATE_END => '2011-10-02'
+      },
+      '2011E' =>
+      {
+        # Open (Rotteck) and Women Pairs
+        YEAR => 2011,
+        CITY => 'Darmstadt',
+        DATE_START => '2011-11-12',
+        DATE_END => '2011-11-13'
+      },
+      '2012A' =>
+      {
+        # Mixed Pairs
+        YEAR => 2012,
+        CITY => 'Darmstadt',
+        DATE_START => '2012-03-03',
+        DATE_END => '2012-03-04'
+      },
+      '2012B' =>
+      {
+        # Mixed Teams
+        YEAR => 2012,
+        CITY => 'Kassel',
+        DATE_START => '2012-04-14',
+        DATE_END => '2012-04-15'
+      },
+      '2012C' =>
+      {
+        # Senior Pairs
+        YEAR => 2012,
+        CITY => 'Darmstadt',
+        DATE_START => '2012-08-11',
+        DATE_END => '2012-08-12'
+      },
+      '2012D' =>
+      {
+        # Open Pairs
+        YEAR => 2012,
+        CITY => 'Bonn',
+        DATE_START => '2012-09-15',
+        DATE_END => '2012-09-16'
+      },
+      '2012E' =>
+      {
+        # Open Teams
+        YEAR => 2012,
+        CITY => 'Kassel',
+        DATE_START => '2012-09-28',
+        DATE_END => '2012-09-30'
+      },
+      '2012F' =>
+      {
+        # Open (Rotteck) and Women Pairs
+        YEAR => 2012,
+        CITY => 'Kassel',
+        DATE_START => '2012-11-10',
+        DATE_END => '2012-11-11'
+      },
+      '2013A' =>
+      {
+        # Senior Pairs
+        YEAR => 2013,
+        CITY => 'Darmstadt',
+        DATE_START => '2013-04-13',
+        DATE_END => '2013-04-14'
+      },
+      '2013B' =>
+      {
+        # Open (Rotteck) and Women Pairs
+        YEAR => 2013,
+        CITY => 'Darmstadt',
+        DATE_START => '2013-11-09',
+        DATE_END => '2013-11-10'
+      },
+      '2014A' =>
+      {
+        # Senior Pairs
+        YEAR => 2014,
+        CITY => 'Darmstadt',
+        DATE_START => '2014-09-20',
+        DATE_END => '2014-09-21'
+      },
+      '2014B' =>
+      {
+        # Open (Rotteck) and Women Pairs
+        YEAR => 2014,
+        CITY => 'Darmstadt',
+        DATE_START => '2014-11-01',
+        DATE_END => '2014-11-02'
+      },
+      '2015A' =>
+      {
+        # Senior Pairs
+        YEAR => 2015,
+        CITY => 'Darmstadt',
+        DATE_START => '2015-09-19',
+        DATE_END => '2015-09-20'
+      },
+      '2015B' =>
+      {
+        # Open Pairs
+        YEAR => 2015,
+        CITY => 'Darmstadt',
+        DATE_START => '2015-10-31',
+        DATE_END => '2015-11-01'
+      },
+      '2017A' =>
+      {
+        # Open Teams
+        YEAR => 2017,
+        CITY => 'Kassel',
+        DATE_START => '2017-05-26',
+        DATE_END => '2017-05-28'
+      },
+      '2018A' =>
+      {
+        # Open Teams
+        YEAR => 2018,
+        CITY => 'Kassel',
+        DATE_START => '2018-06-01',
+        DATE_END => '2018-06-03'
+      },
+      '2022A' =>
+      {
+        # Open Pairs, Women Pairs
+        YEAR => 2022,
+        CITY => 'Würzburg',
+        DATE_START => '2022-04-23',
+        DATE_END => '2022-04-24'
+      },
+      '2022B' =>
+      {
+        # Open Pairs, Senior Pairs
+        YEAR => 2022,
+        CITY => 'Darmstadt',
+        DATE_START => '2022-07-14',
+        DATE_END => '2022-07-17'
+      },
+      '2022C' =>
+      {
+        # Mixed Pairs and Teams
+        YEAR => 2022,
+        CITY => 'Magdeburg',
+        DATE_START => '2022-08-04',
+        DATE_END => '2022-08-07'
+      },
+      '2022D' =>
+      {
+        # Open Teams
+        YEAR => 2022,
+        CITY => 'Bamberg',
+        DATE_START => '2022-10-01',
+        DATE_END => '2022-10-03'
+      },
+      '2023A' =>
+      {
+        # Open Teams
         YEAR => 2023,
-        DATE_START => '2023-04-18',
-        DATE_END => '2023-04-19'
+        CITY => 'Bad Soden',
+        DATE_START => '2023-04-29',
+        DATE_END => '2023-05-01'
+      },
+      '2023B' =>
+      {
+        # Mixed Pairs and Teams
+        YEAR => 2023,
+        CITY => 'Wetzlar',
+        DATE_START => '2023-05-18',
+        DATE_END => '2023-05-21',
+      },
+      '2023C' =>
+      {
+        # Open Pairs, Senior Pairs
+        YEAR => 2023,
+        CITY => 'Magdeburg',
+        DATE_START => '2023-07-13',
+        DATE_END => '2023-07-16'
+      },
+      '2023D' =>
+      {
+        # Open Pairs, Women Pairs
+        YEAR => 2023,
+        CITY => 'Bad Soden',
+        DATE_START => '2023-10-28',
+        DATE_END => '2023-10-29'
+      },
+      '2024A' =>
+      {
+        # Open Teams
+        YEAR => 2024,
+        CITY => 'Niedernhausen',
+        DATE_START => '2024-04-12',
+        DATE_END => '2024-04-14'
+      },
+      '2024B' =>
+      {
+        # Mixed Pairs and Teams
+        YEAR => 2024,
+        CITY => 'Wetzlar',
+        DATE_START => '2024-05-09',
+        DATE_END => '2024-05-12'
+      },
+      '2024C' =>
+      {
+        # Open Pairs, Senior Pairs
+        YEAR => 2024,
+        CITY => 'Wetzlar',
+        DATE_START => '2024-06-13',
+        DATE_END => '2024-06-16'
+      },
+      '2024D' =>
+      {
+        # Open Pairs, Women Pairs
+        YEAR => 2024,
+        CITY => 'Bad Soden',
+        DATE_START => '2024-11-23',
+        DATE_END => '2024-11-24'
       },
     }
-  }
+  },
 );
 
 my %TOURNAMENTS_GERMANY =
@@ -625,7 +937,7 @@ my %TOURNAMENTS_GERMANY =
         }
       },
 
-      '2020' => 
+      '2020-21' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=16553&site=0&kl=0
         ORDINAL => 34,
@@ -1405,8 +1717,9 @@ my %TOURNAMENTS_GERMANY =
       '2022' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=19971&site=0&kl=0
-        ORDINAL => '15th',
-        MEET => 'German Championship Week',
+        MEET => 'German Championships',
+        MEET_TAG => '2022C',
+        ORDINAL => 15,
         CHAPTERS => 
         {
           'C0' => 
@@ -1431,10 +1744,9 @@ my %TOURNAMENTS_GERMANY =
       '2023' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=24659&site=0&kl=0
-        ORDINAL => '16th',
-        MEET => 'German Championship Week',
-        CITY => 'Wetzlar',
-
+        MEET => 'German Championships',
+        MEET_TAG => '2023B',
+        ORDINAL => 16,
         CHAPTERS => 
         {
           'C0' => 
@@ -1442,16 +1754,16 @@ my %TOURNAMENTS_GERMANY =
             YEAR => 2023,
             MOVEMENT => 'Swiss',
             major => 'ROUND',
-            DATE_START => '2023-04-18',
-            DATE_END => '2023-04-19'
+            DATE_START => '2023-05-18',
+            DATE_END => '2023-05-19'
           },
           'C1' => 
           {
             YEAR => 2023,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
-            DATE_START => '2023-04-18',
-            DATE_END => '2023-04-19'
+            DATE_START => '2023-05-18',
+            DATE_END => '2023-05-19'
           } 
         }
       },
@@ -1459,9 +1771,9 @@ my %TOURNAMENTS_GERMANY =
       '2024' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=32025&site=0&kl=0
-        ORDINAL => '17th',
-        CITY => 'Wetzlar',
-
+        MEET => 'German Championships',
+        MEET_TAG => '2024B',
+        ORDINAL => 17,
         CHAPTERS => 
         {
           'C0' => 
@@ -1487,9 +1799,6 @@ my %TOURNAMENTS_GERMANY =
 
   'German Open Pairs' =>
   {
-    ORGANIZATION => 'DBV',
-    COUNTRY => 'Germany',
-    ORIGIN => 'National',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -1499,8 +1808,10 @@ my %TOURNAMENTS_GERMANY =
     {
       '2009' => 
       {
-        ORDINAL => '6th',
-        CITY => 'Bad Nauheim',
+        # Rotteck
+        MEET => 'German Championships',
+        MEET_TAG => '2009G',
+        ORDINAL => 6,
         CHAPTERS => 
         {
           'SINGLE' =>
@@ -1512,11 +1823,12 @@ my %TOURNAMENTS_GERMANY =
           } 
         }
       },
-
       '2011' => 
       {
-        ORDINAL => '8th',
-        CITY => 'Darmstadt',
+        # Rotteck
+        MEET => 'German Championships',
+        MEET_TAG => '2011E',
+        ORDINAL => 8,
         CHAPTERS => 
         {
           'SINGLE' =>
@@ -1527,11 +1839,12 @@ my %TOURNAMENTS_GERMANY =
           } 
         }
       },
-
       '2012' => 
       {
-        ORDINAL => '9th',
-        CITY => 'Darmstadt',
+        # Rotteck
+        MEET => 'German Championships',
+        MEET_TAG => '2012F',
+        ORDINAL => 9,
         CHAPTERS => 
         {
           'SINGLE' =>
@@ -1543,11 +1856,12 @@ my %TOURNAMENTS_GERMANY =
           } 
         }
       },
-
       '2013' => 
       {
-        ORDINAL => '10th',
-        CITY => 'Darmstadt',
+        # Rotteck
+        MEET => 'German Championships',
+        MEET_TAG => '2013B',
+        ORDINAL => 10,
         CHAPTERS => 
         {
           'SINGLE' =>
@@ -1559,11 +1873,12 @@ my %TOURNAMENTS_GERMANY =
           } 
         }
       },
-
       '2014' => 
       {
-        ORDINAL => '11th',
-        CITY => 'Darmstadt',
+        # Rotteck
+        MEET => 'German Championships',
+        MEET_TAG => '2014B',
+        ORDINAL => 11,
         CHAPTERS => 
         {
           'SINGLE' =>
@@ -1575,11 +1890,12 @@ my %TOURNAMENTS_GERMANY =
           } 
         }
       },
-
       '2015' => 
       {
-        ORDINAL => '12th',
-        CITY => 'Darmstadt',
+        # Rotteck
+        MEET => 'German Championships',
+        MEET_TAG => '2015B',
+        ORDINAL => 12,
         CHAPTERS => 
         {
           'SINGLE' =>
@@ -1591,13 +1907,11 @@ my %TOURNAMENTS_GERMANY =
           } 
         }
       },
-
       '2016' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=15858&site=0&kl=0
         MEET => 'German Championship Week',
-        ORDINAL => '73rd',
-        CITY => 'Darmstadt',
+        ORDINAL => 73,
         CHAPTERS => 
         {
           'SINGLE' =>
@@ -1609,13 +1923,11 @@ my %TOURNAMENTS_GERMANY =
           } 
         }
       },
-
       '2017' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=5040&site=0&kl=0
         MEET => 'German Championship Week',
-        ORDINAL => '74th',
-        CITY => 'Berlin',
+        ORDINAL => 74,
         CHAPTERS => 
         {
           'SINGLE' =>
@@ -1627,13 +1939,11 @@ my %TOURNAMENTS_GERMANY =
           } 
         }
       },
-
       '2018' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=7502&site=0&kl=0
         MEET => 'German Championship Week',
-        ORDINAL => '75th',
-        CITY => 'Berlin',
+        ORDINAL => 75,
         CHAPTERS => 
         {
           'SINGLE' =>
@@ -1645,13 +1955,11 @@ my %TOURNAMENTS_GERMANY =
           } 
         }
       },
-
       '2019' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=10950&site=0&kl=0
         MEET => 'German Championship Week',
-        ORDINAL => '76th',
-        CITY => 'Berlin',
+        ORDINAL => 76,
         CHAPTERS => 
         {
           'SINGLE' =>
@@ -1663,13 +1971,11 @@ my %TOURNAMENTS_GERMANY =
           } 
         }
       },
-
       '2021' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=15544&site=0&kl=0
         MEET => 'German Championship Week',
-        ORDINAL => '77th',
-        CITY => 'Berlin',
+        ORDINAL => 77,
         CHAPTERS => 
         {
           'SINGLE' =>
@@ -1681,12 +1987,12 @@ my %TOURNAMENTS_GERMANY =
           } 
         }
       },
-
       '2022' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=19721&site=0&kl=0
-        ORDINAL => '78th',
-        CITY => 'Würzburg',
+        MEET => 'German Championships',
+        MEET_TAG => '2022A',
+        ORDINAL => 78,
         CHAPTERS => 
         {
           'SINGLE' =>
@@ -1698,12 +2004,11 @@ my %TOURNAMENTS_GERMANY =
           } 
         }
       },
-
       '2023' => 
       {
-        # None.
-        ORDINAL => '79th',
-        CITY => 'Würzburg',
+        MEET => 'German Championships',
+        MEET_TAG => '2023C',
+        ORDINAL => 79,
         CHAPTERS => 
         {
           'SINGLE' =>
@@ -1715,12 +2020,12 @@ my %TOURNAMENTS_GERMANY =
           } 
         }
       },
-
       '2024' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=32883&site=0&kl=0
-        ORDINAL => '80th',
-        CITY => 'Wetzlar',
+        MEET => 'German Championships',
+        MEET_TAG => '2024C',
+        ORDINAL => 80,
         CHAPTERS => 
         {
           'SINGLE' =>
@@ -1737,9 +2042,6 @@ my %TOURNAMENTS_GERMANY =
 
   'German Open Teams' => 
   {
-    ORGANIZATION => 'DBV',
-    COUNTRY => 'Germany',
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1755,13 +2057,13 @@ my %TOURNAMENTS_GERMANY =
       '2006' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=16696&site=0&kl=0
-        ORDINAL => '58th',
+        MEET => 'German Championships',
+        ORDINAL => 58,
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2006,
-            CITY => 'Kassel',
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2006-05-05',
@@ -1770,7 +2072,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2006,
-            CITY => 'Kassel',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2006-05-05',
@@ -1782,13 +2083,14 @@ my %TOURNAMENTS_GERMANY =
       '2009' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=15986&site=0&kl=0
-        ORDINAL => '61st',
+        MEET => 'German Championships',
+        MEET_TAG => '2009B',
+        ORDINAL => 61,
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2009,
-            CITY => 'Kassel',
             MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2009-06-05',
@@ -1797,7 +2099,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2009,
-            CITY => 'Kassel',
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2009-06-06',
@@ -1806,7 +2107,6 @@ my %TOURNAMENTS_GERMANY =
           'C2' => 
           {
             YEAR => 2009,
-            CITY => 'Kassel',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2009-06-07',
@@ -1814,17 +2114,17 @@ my %TOURNAMENTS_GERMANY =
           } 
         }
       },
-
       '2011' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=121&site=0&kl=0
-        ORDINAL => '63rd',
+        MEET => 'German Championships',
+        MEET_TAG => '2011C',
+        ORDINAL => 63,
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2011,
-            CITY => 'Kassel',
             MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2011-09-09',
@@ -1833,7 +2133,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2011,
-            CITY => 'Kassel',
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2011-09-10',
@@ -1842,7 +2141,6 @@ my %TOURNAMENTS_GERMANY =
           'C2' => 
           {
             YEAR => 2011,
-            CITY => 'Kassel',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2011-09-11',
@@ -1850,12 +2148,11 @@ my %TOURNAMENTS_GERMANY =
           } 
         }
       },
-
       '2013' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=121&site=0&kl=0
-        ORDINAL => '65th',
         MEET => 'German Championship Week',
+        ORDINAL => 65,
         CHAPTERS => 
         {
           'C0' => 
@@ -1884,11 +2181,10 @@ my %TOURNAMENTS_GERMANY =
           } 
         }
       },
-
       '2014' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=843&site=0&kl=0
-        ORDINAL => '66th',
+        ORDINAL => 66,
         MEET => 'German Championship Week',
         CHAPTERS => 
         {
@@ -1918,11 +2214,10 @@ my %TOURNAMENTS_GERMANY =
           } 
         }
       },
-
       '2015' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=1706&site=0&kl=0
-        ORDINAL => '67th',
+        ORDINAL => 67,
         MEET => 'German Championship Week',
         CHAPTERS => 
         {
@@ -1944,12 +2239,11 @@ my %TOURNAMENTS_GERMANY =
           } 
         }
       },
-
       '2016' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=3210&site=0&kl=0
         MEET => 'German Championship Week',
-        ORDINAL => '69th', # Or 68th -- not clear
+        ORDINAL => 69, # Or 68th -- not clear
         CHAPTERS => 
         {
           'C0' => 
@@ -1970,11 +2264,11 @@ my %TOURNAMENTS_GERMANY =
           } 
         }
       },
-
       '2017' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=13841&site=0&kl=0
-        CITY => 'Kassel',
+        MEET => 'German Championships',
+        MEET_TAG => '2017A',
         CHAPTERS => 
         {
           'C0' => 
@@ -1995,12 +2289,12 @@ my %TOURNAMENTS_GERMANY =
           } 
         }
       },
-
       '2018' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=8830&site=0&kl=0
-        ORDINAL => '70th',
-        CITY => 'Kassel',
+        MEET => 'German Championships',
+        MEET_TAG => '2018A',
+        ORDINAL => 70,
         CHAPTERS => 
         {
           'C0' => 
@@ -2021,12 +2315,11 @@ my %TOURNAMENTS_GERMANY =
           } 
         }
       },
-
       '2019' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=11140&site=0&kl=0
         MEET => 'German Championship Week',
-        ORDINAL => '71st',
+        ORDINAL => 71,
         CHAPTERS => 
         {
           'C0' => 
@@ -2047,12 +2340,11 @@ my %TOURNAMENTS_GERMANY =
           } 
         }
       },
-
       '2021' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=15580&site=0&kl=0
         MEET => 'German Championship Week',
-        ORDINAL => '72nd',
+        ORDINAL => 72,
         CHAPTERS => 
         {
           'C0' => 
@@ -2073,12 +2365,12 @@ my %TOURNAMENTS_GERMANY =
           } 
         }
       },
-
       '2022' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=20873&site=0&kl=0
-        ORDINAL => '73rd',
-        CITY => 'Bamberg',
+        MEET => 'German Championships',
+        MEET_TAG => '2022D',
+        ORDINAL => 73,
         CHAPTERS => 
         {
           'C0' => 
@@ -2099,12 +2391,12 @@ my %TOURNAMENTS_GERMANY =
           } 
         }
       },
-
       '2023' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=24381&site=0&kl=0
-        ORDINAL => '74th',
-        CITY => 'Niedernhausen',
+        MEET => 'German Championships',
+        MEET_TAG => '2023A',
+        ORDINAL => 74,
         CHAPTERS => 
         {
           'C0' => 
@@ -2125,12 +2417,12 @@ my %TOURNAMENTS_GERMANY =
           } 
         }
       },
-
       '2024' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=31334&site=0&kl=0
-        ORDINAL => '75th',
-        CITY => 'Niedernhausen',
+        MEET => 'German Championships',
+        MEET_TAG => '2024A',
+        ORDINAL => 75,
         CHAPTERS => 
         {
           'C0' => 
@@ -2269,7 +2561,7 @@ my %TOURNAMENTS_GERMANY =
       '2010' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=41&submit=Anzeigen
-        ORDINAL => '1st',
+        ORDINAL => 1,
         CHAPTERS => 
         {
           'C0' => 
@@ -2296,7 +2588,7 @@ my %TOURNAMENTS_GERMANY =
       '2011' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=84&site=0&kl=0
-        ORDINAL => '2nd',
+        ORDINAL => 2,
         CHAPTERS => 
         {
           'C0' => 
@@ -2323,7 +2615,7 @@ my %TOURNAMENTS_GERMANY =
       '2012' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=221&site=0&kl=0
-        ORDINAL => '3rd',
+        ORDINAL => 3,
         CHAPTERS => 
         {
           'C0' => 
@@ -2350,7 +2642,7 @@ my %TOURNAMENTS_GERMANY =
       '2013' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=373&site=0&kl=0
-        ORDINAL => '4th',
+        ORDINAL => 4,
         CHAPTERS => 
         {
           'C0' => 
@@ -2377,7 +2669,7 @@ my %TOURNAMENTS_GERMANY =
       '2014' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=704&site=0&kl=0
-        ORDINAL => '5th',
+        ORDINAL => 5,
         CHAPTERS => 
         {
           'C0' => 
@@ -2404,7 +2696,7 @@ my %TOURNAMENTS_GERMANY =
       '2015' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=1398&site=0&kl=0
-        ORDINAL => '6th',
+        ORDINAL => 6,
         CHAPTERS => 
         {
           'C0' => 
@@ -2431,7 +2723,7 @@ my %TOURNAMENTS_GERMANY =
       '2016' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=2657&site=0&kl=0
-        ORDINAL => '7th',
+        ORDINAL => 7,
         CHAPTERS => 
         {
           'C0' => 
@@ -2458,7 +2750,7 @@ my %TOURNAMENTS_GERMANY =
       '2017' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=4416&site=0&kl=0
-        ORDINAL => '8th',
+        ORDINAL => 8,
         CHAPTERS => 
         {
           'C0' => 
@@ -2485,7 +2777,7 @@ my %TOURNAMENTS_GERMANY =
       '2018' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=6873&site=0&kl=0
-        ORDINAL => '9th',
+        ORDINAL => 9,
         CHAPTERS => 
         {
           'C0' => 
@@ -2512,13 +2804,13 @@ my %TOURNAMENTS_GERMANY =
       '2019' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=9900&site=0&kl=0
-        ORDINAL => '10th',
+        ORDINAL => 10,
+        CITY => 'Berlin',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2019,
-            CITY => 'Berlin',
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2019-04-26',
@@ -2527,7 +2819,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2019,
-            CITY => 'Berlin',
             MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2019-04-26',
@@ -2540,9 +2831,6 @@ my %TOURNAMENTS_GERMANY =
 
   'German Women Pairs' => 
   {
-    ORGANIZATION => 'DBV',
-    COUNTRY => 'Germany',
-    ORIGIN => 'National',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Women',
@@ -2551,29 +2839,32 @@ my %TOURNAMENTS_GERMANY =
     EDITIONS =>
     {
       # https://ergebnisse.bridge-verband.de/index.php?turid=9900&site=0&kl=0
-      '2011' => {
-        ORDINAL => '56th',
+      '2011' => 
+      {
+        MEET => 'German Championships',
+        MEET_TAG => '2011E',
+        ORDINAL => 56,
         CHAPTERS => 
         {
           'SINGLE' => 
           {
             YEAR => 2011,
-            CITY => 'Darmstadt',
             DATE_START => '2011-11-12',
             DATE_END => '2011-11-13'
           } 
         }
       },
-
-      '2012' => {
+      '2012' => 
+      {
         # https://ergebnisse.bridge-verband.de/index.php?turid=288&site=0&kl=0
-        ORDINAL => '57th',
+        MEET => 'German Championships',
+        MEET_TAG => '2012F',
+        ORDINAL => 57,
         CHAPTERS => 
         {
           'SINGLE' => 
           {
             YEAR => 2012,
-            CITY => 'Darmstadt',
             major => 'SESSION',
             DATE_START => '2012-11-10',
             DATE_END => '2012-11-11'

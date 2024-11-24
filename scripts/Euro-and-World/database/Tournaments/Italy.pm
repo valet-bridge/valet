@@ -37,8 +37,6 @@ my %MEETS_ITALY =
     COUNTRY => 'Italy',
     ORIGIN => 'Interclub',
     ZONE => 'Europe',
-    FORM => 'Teams',
-    SCORING => 'IMP',
 
     EDITIONS =>
     {
@@ -471,6 +469,8 @@ my %TOURNAMENTS_ITALY =
 
   'Italian Club Open Championship' =>
   {
+    FORM => 'Teams',
+    SCORING => 'IMP',
     AGE => 'Open',
     GENDER => 'Open',
 
@@ -967,6 +967,8 @@ my %TOURNAMENTS_ITALY =
 
   'Italian Club Women Championship' =>
   {
+    FORM => 'Teams',
+    SCORING => 'IMP',
     AGE => 'Open',
     GENDER => 'Women',
 
@@ -2118,7 +2120,6 @@ my %TOURNAMENTS_ITALY =
       },
       '2024' =>
       {
-        MEET => 'Italy Cup',
         YEAR => 2024,
         # Not yet available
 

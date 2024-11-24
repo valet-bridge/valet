@@ -24,6 +24,18 @@ my %MEETS_TURKEY =
 
     EDITIONS => 
     {
+      '2012' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-05-20',
+        DATE_END => '2012-05-20'
+      },
+      '2013' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-06-02',
+        DATE_END => '2013-06-03'
+      },
       '2014' =>
       {
         YEAR => 2014,
@@ -1259,7 +1271,6 @@ my %TOURNAMENTS_TURKEY =
 
   'Mersin Open Patton Teams',
   {
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'Patton',
     GENDER => 'Open',
@@ -1525,10 +1536,7 @@ my %TOURNAMENTS_TURKEY =
 
   'Salvador Assael Pro-Am Pairs',
   {
-    ORGANIZATION => 'TBF',
-    COUNTRY => 'Turkey',
     ORIGIN => 'Pro-Am',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -1538,6 +1546,7 @@ my %TOURNAMENTS_TURKEY =
     {
       '2012' =>
       {
+        MEET => 'Assael Festival',
         CHAPTERS =>
         {
           'C0' => 
@@ -1552,6 +1561,7 @@ my %TOURNAMENTS_TURKEY =
       },
       '2013' =>
       {
+        MEET => 'Assael Festival',
         CHAPTERS =>
         {
           'C0' => 
@@ -2696,7 +2706,6 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2015,
-            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2015-12-16',
             DATE_END => '2015-12-18'

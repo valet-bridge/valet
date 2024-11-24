@@ -167,7 +167,7 @@ my %MEETS_INDONESIA =
         ORDINAL => 18,
         CITY => 'Pekanbaru',
         YEAR => 2012,
-        DATE_START => '2012-09-09',
+        DATE_START => '2012-09-03', # Really only 09, but needed
         DATE_END => '2012-09-20'
       },
       '2016' =>
@@ -249,6 +249,13 @@ my %MEETS_INDONESIA =
         YEAR => 2014,
         DATE_START => '2014-12-08',
         DATE_END => '2014-12-16'
+      },
+      '2015' =>
+      {
+        ORDINAL => 13,
+        YEAR => 2015,
+        DATE_START => '2015-11-03',
+        DATE_END => '2015-11-05'
       },
     }
   },
@@ -1435,8 +1442,6 @@ my %TOURNAMENTS_INDONESIA =
       '2004' =>
       {
         MEET => 'Indonesian National Games',
-        ORDINAL => 16,
-
         CHAPTERS =>
         {
           'C0' => 
@@ -1534,10 +1539,6 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Mixed Pairs' =>
   {
-    ORGANIZATION => 'GABSI',
-    COUNTRY => 'Indonesia',
-    ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Mixed',
@@ -1547,6 +1548,8 @@ my %TOURNAMENTS_INDONESIA =
     {
       '2012A' =>
       {
+        MEET => 'Indonesian National Games',
+        MEET_TAG => '2012',
         CHAPTERS =>
         {
           'C0' => 
@@ -2719,8 +2722,6 @@ my %TOURNAMENTS_INDONESIA =
       '2004' =>
       {
         MEET => 'Indonesian National Games',
-        ORDINAL => 16,
-
         CHAPTERS =>
         {
           'SINGLE' => 

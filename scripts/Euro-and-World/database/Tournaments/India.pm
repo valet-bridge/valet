@@ -282,6 +282,12 @@ my %MEETS_INDIA =
         DATE_START => '2014-07-20', # More dates
         DATE_END => '2014-07-21'
       },
+      '2015' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-12-19', # Might be something else
+        DATE_END => '2015-12-21'
+      },
       '2016' =>
       {
         YEAR => 2016,
@@ -687,7 +693,19 @@ my %MEETS_INDIA =
         YEAR => 2014,
         DATE_START => '2014-01-18',
         DATE_END => '2014-01-20'
-      }
+      },
+      '2015' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-05-02',
+        DATE_END => '2015-05-02'
+      },
+      '2016' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-06-25',
+        DATE_END => '2016-06-25'
+      },
     }
   },
 
@@ -731,6 +749,31 @@ my %MEETS_INDIA =
         CITY => 'Noida',
         DATE_START => '2012-08-17',
         DATE_END => '2012-08-19'
+      },
+    }
+  },
+
+  'West Indian Regional' =>
+  {
+    ORGANIZATION => 'BFI',
+    COUNTRY => 'India',
+    ORIGIN => 'Regional',
+    ZONE => 'Asia Pacific',
+
+    EDITIONS => 
+    {
+      '2011' =>
+      {
+        YEAR => 2011,
+        CITY => 'Mumbai',
+        DATE_START => '2011-01-17',
+        DATE_END => '2011-01-17'
+      },
+      '2012' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-01-15',
+        DATE_END => '2012-01-16'
       },
     }
   },
@@ -2870,10 +2913,6 @@ my %TOURNAMENTS_INDIA =
 
   'Krishnapatnam Port National Masters' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
-    ORIGIN => 'Regional',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2883,6 +2922,8 @@ my %TOURNAMENTS_INDIA =
     {
       '2015' =>
       {
+        # Not really sure.
+        MEET => 'Indian South Zone Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -3538,10 +3579,6 @@ my %TOURNAMENTS_INDIA =
 
   'Maharashtra State Teams' =>
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
-    ORIGIN => 'Regional',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3627,10 +3664,9 @@ my %TOURNAMENTS_INDIA =
           } 
         }
       },
-      '2014A' =>
+      '2014' =>
       {
         MEET => 'Maharashtra State Championship',
-        MEET_TAG => 2014,
         CHAPTERS =>
         {
           'C0' => 
@@ -3651,24 +3687,9 @@ my %TOURNAMENTS_INDIA =
           } 
         }
       },
-      '2014B' =>
+      '2015' =>
       {
-        # Not sure
-        CITY => 'Pune',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2014,
-            STAGE => 'Round-robin',
-            major => 'ROUND',
-            DATE_START => '2014-06-01',
-            DATE_END => '2014-06-01'
-          },
-        }
-      },
-      '2015A' =>
-      {
+        MEET => 'Maharashtra State Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3681,23 +3702,9 @@ my %TOURNAMENTS_INDIA =
           } 
         }
       },
-      '2015B' =>
-      {
-        # Not sure
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2015,
-            STAGE => 'Final',
-            major => 'ROUND',
-            DATE_START => '2015-05-24',
-            DATE_END => '2015-05-24'
-          } 
-        }
-      },
       '2016' =>
       {
+        MEET => 'Maharashtra State Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4396,6 +4403,51 @@ my %TOURNAMENTS_INDIA =
             major => 'ROUND',
             DATE_START => '2016-03-27',
             DATE_END => '2016-03-27'
+          } 
+        }
+      },
+    }
+  },
+
+  'Pune State Level Open Teams' =>
+  {
+    ORGANIZATION => 'BFI',
+    COUNTRY => 'India',
+    CITY => 'Pune',
+    ORIGIN => 'National',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2014-06-01',
+            DATE_END => '2014-06-01'
+          },
+        }
+      },
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2015-05-24',
+            DATE_END => '2015-05-24'
           } 
         }
       },
@@ -5428,10 +5480,6 @@ my %TOURNAMENTS_INDIA =
 
   'TATA Open',
   {
-    ORGANIZATION => 'BFI',
-    COUNTRY => 'India',
-    ORIGIN => 'National',
-    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -5472,6 +5520,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2011' =>
       {
+        MEET => 'West Indian Regional',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -5486,6 +5535,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2012' =>
       {
+        MEET => 'West Indian Regional',
         CHAPTERS =>
         {
           'C0' => 

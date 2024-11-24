@@ -627,7 +627,6 @@ my %MEETS_POLAND =
   {
     ORGANIZATION => 'PZBS',
     COUNTRY => 'Poland',
-    CITY => 'Poznan',
     ORIGIN => 'National',
     ZONE => 'Europe',
 
@@ -636,44 +635,233 @@ my %MEETS_POLAND =
       '2007' =>
       {
         YEAR => 2007,
+        CITY => 'Poznan',
         DATE_START => '2007-05-05', # Probably more days
         DATE_END => '2007-05-05'
       },
-      '2012' =>
+      '2011' => 
+      {
+        YEAR => 2011,
+        DATE_START => '2011-05-14',
+        DATE_END => '2011-05-15'
+      },
+      '2012A' =>
       {
         YEAR => 2012,
+        DATE_START => '2012-03-29',
+        DATE_END => '2012-03-30'
+      },
+      '2012B' =>
+      {
+        YEAR => 2012,
+        CITY => 'Poznan',
         DATE_START => '2012-05-01', # Estimated
         DATE_END => '2012-05-05'
       },
-      '2013' =>
+      '2013A' =>
       {
         YEAR => 2013,
+        CITY => 'Poznan',
         DATE_START => '2013-04-29', # Estimated
         DATE_END => '2013-05-04'
+      },
+      '2013B' =>
+      {
+         YEAR => 2013,
+        CITY => 'Krakow',
+         DATE_START => '2013-11-23',
+         DATE_END => '2013-11-23'
       },
       '2014A' =>
       {
         YEAR => 2014,
+        CITY => 'Poznan',
         DATE_START => '2014-05-01',
         DATE_END => '2014-05-04'
       },
       '2014B' =>
       {
         YEAR => 2014,
+        CITY => 'Krakow',
         DATE_START => '2014-11-22',
         DATE_END => '2014-11-23'
       },
-      '2015' =>
+      '2015A' =>
       {
         YEAR => 2015,
+        CITY => 'Poznan',
         DATE_START => '2015-04-30',
         DATE_END => '2015-05-04'
+      },
+      '2015B' =>
+      {
+        YEAR => 2015,
+        CITY => 'Krakow',
+        DATE_START => '2015-11-21',
+        DATE_END => '2015-11-22'
       },
       '2016' =>
       {
         YEAR => 2016,
+        CITY => 'Poznan',
         DATE_START => '2016-04-30',
         DATE_END => '2016-05-03'
+      },
+    }
+  },
+
+  'Polish Grand Prix Pairs Legs' =>
+  {
+    ORGANIZATION => 'PZBS',
+    COUNTRY => 'Poland',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+
+    EDITIONS => 
+    {
+      '2005' =>
+      {
+        CITY => 'Warsaw',
+        YEAR => 2005,
+        DATE_START => '2005-09-06',
+        DATE_END => '2005-09-06'
+      },
+      '2006' =>
+      {
+        CITY => 'Warsaw',
+        YEAR => 2006,
+        DATE_START => '2006-12-15',
+        DATE_END => '2006-12-17'
+      },
+      '2007A' =>
+      {
+        CITY => 'Lodz',
+        YEAR => 2007,
+        DATE_START => '2007-04-15',
+        DATE_END => '2007-04-15'
+      },
+      '2007B' =>
+      {
+        CITY => 'Warsaw',
+        YEAR => 2007,
+        DATE_START => '2007-12-14',
+        DATE_END => '2007-12-16'
+      },
+      '2008' =>
+      {
+        CITY => 'Warsaw',
+        YEAR => 2008,
+        DATE_START => '2008-12-19',
+        DATE_END => '2008-12-21'
+      },
+      '2009A' =>
+      {
+        CITY => 'Starachowice',
+        YEAR => 2009,
+        DATE_START => '2009-03-08',
+        DATE_END => '2009-03-08'
+      },
+      '2009B' =>
+      {
+        CITY => 'Starachowice',
+        YEAR => 2009,
+        DATE_START => '2009-12-18',
+        DATE_END => '2009-12-20'
+      },
+      '2010A' =>
+      {
+        CITY => 'Pila',
+        YEAR => 2010,
+        DATE_START => '2010-03-06',
+        DATE_END => '2010-03-07'
+      },
+      '2010B' =>
+      {
+        YEAR => 2010,
+        DATE_START => '2010-12-17',
+        DATE_END => '2010-12-19'
+      },
+      '2011' =>
+      {
+        YEAR => 2011,
+        DATE_START => '2011-12-16',
+        DATE_END => '2011-12-18'
+      },
+      '2012A' =>
+      {
+        CITY => 'Pulawy',
+        YEAR => 2012,
+        DATE_START => '2012-06-16',
+        DATE_END => '2012-06-16'
+      },
+      '2012B' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-12-14',
+        DATE_END => '2012-12-16'
+      },
+      '2012C' =>
+      {
+        YEAR => 2012,
+        DATE_START => '2012-12-17',
+        DATE_END => '2012-12-18'
+      },
+      '2013A' =>
+      {
+        CITY => 'Krakow',
+        YEAR => 2013,
+        DATE_START => '2013-11-24',
+        DATE_END => '2013-11-24'
+      },
+      '2013B' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-12-13',
+        DATE_END => '2013-12-15'
+      },
+      '2014' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-12-19',
+        DATE_END => '2014-12-21'
+      },
+      '2015' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-12-11',
+        DATE_END => '2015-12-13'
+      },
+    }
+  },
+
+  'Polish Grand Prix Teams Legs' =>
+  {
+    ORGANIZATION => 'PZBS',
+    COUNTRY => 'Poland',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+
+    EDITIONS => 
+    {
+      '2009' =>
+      {
+        CITY => 'Staszic',
+        YEAR => 2009,
+        DATE_START => '2009-03-08',
+        DATE_END => '2009-03-08'
+      },
+      '2013' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-12-19',
+        DATE_END => '2013-12-21'
+      },
+      '2016' =>
+      {
+        CITY => 'Dąbrowa Gornicza',
+        YEAR => 2016,
+        DATE_START => '2016-06-17',
+        DATE_END => '2016-06-19'
       },
     }
   },
@@ -684,7 +872,6 @@ my %MEETS_POLAND =
     COUNTRY => 'Poland',
     ORIGIN => 'National',
     ZONE => 'Europe',
-    FORM => 'Pairs',
 
     EDITIONS => 
     {
@@ -1702,10 +1889,6 @@ my %TOURNAMENTS_POLAND =
 
   'Grand Prix of Poland Pairs',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -1734,7 +1917,8 @@ my %TOURNAMENTS_POLAND =
       '2005A' =>
       {
         # https://stara.pzbs.pl/komunikaty/r2005/reg_gppt2005.htm
-        CITY => 'Warsaw',
+        MEET => 'Polish Grand Prix Pairs Legs',
+        MEET_TAG => '2005',
         CHAPTERS =>
         {
           'C0' => 
@@ -1762,7 +1946,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2006A' =>
       {
-        CITY => 'Warsaw',
+        MEET => 'Polish Grand Prix Pairs Legs',
+        MEET_TAG => '2006',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1776,7 +1961,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2007A' =>
       {
-        CITY => 'Lodz',
+        MEET => 'Polish Grand Prix Pairs Legs',
+        MEET_TAG => '2007A',
         CHAPTERS =>
         {
           # https://stara.pzbs.pl/wyniki/2007/krajowe/gpp/05lodz/3/3.html
@@ -1792,7 +1978,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2007B' =>
       {
-        CITY => 'Warsaw',
+        MEET => 'Polish Grand Prix Pairs Legs',
+        MEET_TAG => '2007B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1804,9 +1991,10 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2008A' =>
+      '2008' =>
       {
-        CITY => 'Warsaw',
+        MEET => 'Polish Grand Prix Pairs Legs',
+        MEET_TAG => '2008',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1820,7 +2008,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2009A' =>
       {
-        CITY => 'Starachowice',
+        MEET => 'Polish Grand Prix Pairs Legs',
+        MEET_TAG => '2009A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1865,7 +2054,8 @@ my %TOURNAMENTS_POLAND =
       '2009D' =>
       {
         # https://stara.pzbs.pl/wyniki/2009/krajowe/gpp/gppp2009final/www/el.html
-        CITY => 'Starachowice',
+        MEET => 'Polish Grand Prix Pairs Legs',
+        MEET_TAG => '2009B',
         CHAPTERS =>
         {
           'C0' => 
@@ -1902,7 +2092,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2010B' =>
       {
-        CITY => 'Pila',
+        MEET => 'Polish Grand Prix Pairs Legs',
+        MEET_TAG => '2010A',
         CHAPTERS =>
         {
           # https://michzimny.pl/bridge/2010/pila/W-gp.html
@@ -1973,6 +2164,8 @@ my %TOURNAMENTS_POLAND =
       '2010E' =>
       {
         # https://wyniki.pzbs.pl/2010/_gpp/final/f.html
+        MEET => 'Polish Grand Prix Pairs Legs',
+        MEET_TAG => '2010B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2015,6 +2208,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2011C' =>
       {
+        MEET => 'Polish Grand Prix Pairs Legs',
+        MEET_TAG => '2011',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2105,7 +2300,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2012F' =>
       {
-        CITY => 'Pulawy',
+        MEET => 'Polish Grand Prix Pairs Legs',
+        MEET_TAG => '2012A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2134,6 +2330,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2012H' =>
       {
+        MEET => 'Polish Grand Prix Pairs Legs',
+        MEET_TAG => '2012B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2148,6 +2346,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2012I' =>
       {
+        MEET => 'Polish Grand Prix Pairs Legs',
+        MEET_TAG => '2012C',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2265,7 +2465,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2013H' =>
       {
-        CITY => 'Krakow',
+        MEET => 'Polish Grand Prix Pairs Legs',
+        MEET_TAG => '2013A',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2279,6 +2480,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2013I' =>
       {
+        MEET => 'Polish Grand Prix Pairs Legs',
+        MEET_TAG => '2013B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2311,7 +2514,6 @@ my %TOURNAMENTS_POLAND =
       {
         MEET => 'Luczniczka Meeting',
         MEET_TAG => '2014',
-        CITY => 'Bydgoszcz',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2400,6 +2602,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2014H' =>
       {
+        MEET => 'Polish Grand Prix Pairs Legs',
+        MEET_TAG => '2014',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2475,6 +2679,8 @@ my %TOURNAMENTS_POLAND =
       '2015E' =>
       {
         # https://wyniki.pzbs.pl/2015/_gpp/fin/15gppfin2.html
+        MEET => 'Polish Grand Prix Pairs Legs',
+        MEET_TAG => '2015',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2557,7 +2763,8 @@ my %TOURNAMENTS_POLAND =
     {
       '2009A' =>
       {
-        CITY => 'Staszic',
+        MEET => 'Polish Grand Prix Teams Legs',
+        MEET_TAG => '2009',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2862,6 +3069,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2013F' =>
       {
+        MEET => 'Polish Grand Prix Teams Legs',
+        MEET_TAG => '2013',
         CHAPTERS =>
         {
           'C0' => 
@@ -3040,7 +3249,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2016D' =>
       {
-        CITY => 'Dąbrowa Gornicza',
+        MEET => 'Polish Grand Prix Teams Legs',
+        MEET_TAG => '2016',
         CHAPTERS =>
         {
           'C0' => 
@@ -3805,10 +4015,6 @@ my %TOURNAMENTS_POLAND =
 
   'Polish IMP Pairs',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3849,6 +4055,8 @@ my %TOURNAMENTS_POLAND =
       '2013' =>
       {
         # https://wyniki.pzbs.pl/2013/mppimp/W-impfin.html
+        MEET => 'Polish Championships',
+        MEET_TAG => '2013B',
         CHAPTERS =>
         {
           'C0' => 
@@ -3886,7 +4094,8 @@ my %TOURNAMENTS_POLAND =
       '2015' =>
       {
         # https://wyniki.pzbs.pl/2015/kjb/
-        CITY => 'Krakow',
+        MEET => 'Polish Championships',
+        MEET_TAG => '2015B',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4109,6 +4318,7 @@ my %TOURNAMENTS_POLAND =
       {
         # https://wyniki.pzbs.pl/2012/mmm/W-mxt.html
         MEET => 'Polish Championships',
+        MEET_TAG => '2012B',
         SCORING => 'MP',
         CHAPTERS =>
         {
@@ -4124,6 +4334,7 @@ my %TOURNAMENTS_POLAND =
       '2013' =>
       {
         MEET => 'Polish Championships',
+        MEET_TAG => '2013A',
         SCORING => 'MP',
         CHAPTERS =>
         {
@@ -4156,6 +4367,7 @@ my %TOURNAMENTS_POLAND =
       {
         # https://wyniki.pzbs.pl/2015/mpp/W-mxtf.html
         MEET => 'Polish Championships',
+        MEET_TAG => '2015A',
         SCORING => 'MP',
         CHAPTERS =>
         {
@@ -4221,10 +4433,6 @@ my %TOURNAMENTS_POLAND =
 
   'Polish Open Pairs',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     GENDER => 'Open',
     AGE => 'Open',
@@ -4318,6 +4526,8 @@ my %TOURNAMENTS_POLAND =
       },
       '2011B' =>
       {
+        MEET => 'Polish Championships',
+        MEET_TAG => '2011',
         SCORING => 'MP',
         CHAPTERS =>
         {
@@ -4362,6 +4572,8 @@ my %TOURNAMENTS_POLAND =
       '2012A' =>
       {
         # http://wengorz.waw.pl/top2012/
+        MEET => 'Polish Championships',
+        MEET_TAG => '2012A',
         SCORING => 'IMP',
         CHAPTERS =>
         {
@@ -4400,6 +4612,7 @@ my %TOURNAMENTS_POLAND =
       '2013' =>
       {
         MEET => 'Polish Championships',
+        MEET_TAG => '2013A',
         SCORING => 'MP',
         CHAPTERS =>
         {
@@ -4430,6 +4643,7 @@ my %TOURNAMENTS_POLAND =
       {
         # https://wyniki.pzbs.pl/2015/mpp/W-mxtf.html
         MEET => 'Polish Championships',
+        MEET_TAG => '2015A',
         SCORING => 'MP',
         CHAPTERS =>
         {
@@ -4588,7 +4802,7 @@ my %TOURNAMENTS_POLAND =
       '2012A' =>
       {
         MEET => 'Polish Championships',
-        MEET_TAG => '2012',
+        MEET_TAG => '2012B',
         CHAPTERS =>
         {
           'C0' => 
@@ -4651,6 +4865,7 @@ my %TOURNAMENTS_POLAND =
       '2013' =>
       {
         MEET => 'Polish Championships',
+        MEET_TAG => '2013A',
         CHAPTERS =>
         {
           'C0' => 
@@ -4860,6 +5075,7 @@ my %TOURNAMENTS_POLAND =
     {
       '2004' =>
       {
+        # 'Luczniczka Meeting', but don't want to find the others...
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -6386,10 +6602,6 @@ my %TOURNAMENTS_POLAND =
 
   'Staszek Wybranowski Memorial',
   {
-    ORGANIZATION => 'PZBS',
-    COUNTRY => 'Poland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

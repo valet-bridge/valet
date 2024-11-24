@@ -14,6 +14,7 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
+  'New Zealand Inter-Provincial Teams',
   'New Zealand National Congress',
   'New Zealand Trials',
 );

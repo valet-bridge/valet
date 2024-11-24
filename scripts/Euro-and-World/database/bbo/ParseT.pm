@@ -17,7 +17,7 @@ use DateCalc;
 use LinksT;
 use EntryT;
 
-my $DEBUG_LINKS = 0;
+my $DEBUG_LINKS = 1;
 
 my @MEET_FIELDS = qw(ORGANIZATION SPONSOR COUNTRY REGION CITY LOCALITY 
   ORDINAL ORIGIN ZONE FORM SCORING GENDER AGE);
@@ -150,7 +150,6 @@ sub init_links
   }
 
   $self->check_consistency() if $DEBUG_LINKS;
-  # exit;
 }
 
 
@@ -210,7 +209,8 @@ sub check_dates
   if ($delta < 0 || $delta > 15)
   {
     warn "$text: Delta $delta" unless
-      ($text =~ /^Meet Italy Cup/ ||
+      ($text =~ /^Meet Indonesian National Games/ ||
+       $text =~ /^Meet Italy Cup/ ||
        $text =~ /^Meet Italian Club Championship/ ||
        $text =~ /^Meet Argentinian Trials/);
   }
@@ -377,92 +377,8 @@ sub check_consistency
             $chapter->{DATE_START}, $chapter->{DATE_END});
         }
 
-        # Look for fields that get set more than once.
-        my %cumul = %$chapter;
-        for my $e (sort keys %$editions)
-        {
-          next if $e eq 'CHAPTERS' || $e =~ /^\d+$/;
-          if (! exists $cumul{$e})
-          {
-            $cumul{$e} = $editions->{$e};
-          }
-          elsif ($cumul{$e} ne $editions->{$e})
-          {
-            warn "Tname $tournament, $tag: Field $e reset";
-          }
-          else
-          {
-            warn "Tname $tournament, $tag: Field $e set twice";
-          }
-        }
-
-        if ($mtag)
-        {
-          for my $f (sort keys %{$self->{MEET}{$meet}})
-          {
-            next if $f eq 'EDITIONS';
-            if (! exists $cumul{$f})
-            {
-              $cumul{$f} = $self->{MEET}{$meet}{$f};
-            }
-            elsif ($cumul{$f} ne $self->{MEET}{$meet}{$f})
-            {
-              warn "Tname $tournament, $tag: Field $f reset in Meet";
-            }
-            else
-            {
-              warn "Tname $tournament, $tag: Field $f set again in Meet";
-            }
-          }
-
-          my $med = $self->{MEET}{$meet}{EDITIONS}{$mtag};
-          for my $f (sort keys %$med)
-          {
-            next if $f =~ /^DATE_/;
-            if (! exists $cumul{$f})
-            {
-              $cumul{$f} = $med->{$f};
-            }
-            elsif ($cumul{$f} ne $med->{$f})
-            {
-              warn "Tname $tournament, $tag: Field $f reset in Meet chapter";
-            }
-            elsif ($f ne 'YEAR')
-            {
-              warn "Tname $tournament, $tag: Field $f set again in Meet chapter";
-            }
-          }
-        }
-
-        my %cumul2;
-        next;
-        my $errstr = "$tournament, $tag, $ctag";
-        $self->get_all_fields($tournament, $tag, $ctag, \%cumul2);
-
-        for my $k (sort keys %cumul2)
-        {
-          if (! exists $cumul{$k})
-          {
-            # warn "$errstr $k only in cumul2";
-          }
-          elsif ($cumul{$k} ne $cumul2{$k})
-          {
-            next if ($k eq 'DATE_START' || $k eq 'DATE_END' ||
-              $k =~ /^\d\d\d\d/);
-            warn "$errstr $k: $cumul{$k} vs $cumul2{$k}";
-          }
-        }
-
-        for my $k (sort keys %cumul)
-        {
-          if (! exists $cumul2{$k})
-          {
-            next if ($k eq 'DATE_START' || $k eq 'DATE_END' ||
-              $k =~ /^\d\d\d\d/);
-            warn "$errstr $k only in cumul";
-          }
-        }
-
+        my %cumul;
+        $self->get_all_fields($tournament, $tag, $ctag, \%cumul);
       }
     }
   }

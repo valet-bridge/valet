@@ -282,9 +282,6 @@ my %TOURNAMENTS_NORDIC =
 
   'Nordic Junior Teams',
   {
-    FORM => 'Teams',
-    SCORING => 'IMP',
-
     EDITIONS =>
     {
       '2005' =>

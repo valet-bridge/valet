@@ -11,6 +11,14 @@ package Tournaments::Sweden;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL =
+(
+  ORGANIZATION => 'SBF',
+  COUNTRY => 'Sweden',
+  ORIGIN => 'National',
+  ZONE => 'Europe'
+);
+
 my %MEETS_SWEDEN =
 (
   'Swedish Bridge Festival' =>
@@ -794,6 +802,7 @@ my %TOURNAMENTS_SWEDEN =
   {
     ORGANIZATION => 'SBF',
     COUNTRY => 'Sweden',
+    CITY => 'Stockholm',
     ORIGIN => 'Regional',
     ZONE => 'Europe',
     FORM => 'Teams',
@@ -805,9 +814,6 @@ my %TOURNAMENTS_SWEDEN =
     {
       '2005' =>
       {
-        CITY => 'Stockholm',
-        COUNTRY => 'Sweden',
-
         CHAPTERS =>
         {
           'SINGLE' => 

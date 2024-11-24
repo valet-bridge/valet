@@ -16,6 +16,74 @@ our @EXPORT = qw(set_links);
 
 my %MEETS_NEWZEALAND =
 (
+  'New Zealand Inter-Provincial Teams' =>
+  {
+    ORGANIZATION => 'NZB',
+    COUNTRY => 'New Zealand',
+    ORIGIN => 'National',
+    ZONE => 'South Pacific',
+
+    EDITIONS => 
+    {
+      '2016' =>
+      {
+        CITY => 'Otago',
+        YEAR => 2016,
+        DATE_START => '2016-11-21',
+        DATE_END => '2016-11-24'
+      },
+      '2017' =>
+      {
+        CITY => 'Wellington',
+        YEAR => 2017,
+        DATE_START => '2017-11-24',
+        DATE_END => '2017-11-26'
+      },
+      '2018' =>
+      {
+        CITY => 'Auckland',
+        YEAR => 2018,
+        DATE_START => '2018-11-24',
+        DATE_END => '2018-11-26'
+      },
+      '2019' =>
+      {
+        CITY => 'Christchurch',
+        YEAR => 2019,
+        DATE_START => '2019-11-23',
+        DATE_END => '2019-11-24'
+      },
+      '2020' =>
+      {
+        CITY => 'Christchurch',
+        YEAR => 2020,
+        DATE_START => '2020-11-21',
+        DATE_END => '2020-11-23'
+      },
+      '2021' =>
+      {
+        CITY => 'Online',
+        YEAR => 2021,
+        DATE_START => '2021-11-19',
+        DATE_END => '2021-11-21'
+      },
+      '2022' =>
+      {
+        CITY => 'Online',
+        YEAR => 2022,
+        DATE_START => '2022-11-18',
+        DATE_END => '2022-11-20'
+      },
+      '2023' =>
+      {
+        CITY => 'Online',
+        YEAR => 2023,
+        DATE_START => '2023-11-24',
+        DATE_END => '2023-11-26'
+      }
+    }
+  },
+
   'New Zealand National Congress' =>
   {
     ORGANIZATION => 'NZB',
@@ -191,10 +259,6 @@ my %TOURNAMENTS_NEWZEALAND =
 
   'New Zealand Inter-Provincial Open Teams' => 
   {
-    ORGANIZATION => 'NZB',
-    COUNTRY => 'New Zealand',
-    ORIGIN => 'National',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -330,7 +394,7 @@ my %TOURNAMENTS_NEWZEALAND =
 
       '2016' =>
       {
-        CITY => 'Otago',
+        MEET => 'New Zealand Inter-Provincial Teams',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -345,7 +409,7 @@ my %TOURNAMENTS_NEWZEALAND =
       '2017' =>
       {
         # http://www.tournaments.nzbridgeclub.org/resultslistbyheadevent.asp?umbid=190
-        CITY => 'Wellington',
+        MEET => 'New Zealand Inter-Provincial Teams',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -360,7 +424,7 @@ my %TOURNAMENTS_NEWZEALAND =
       '2018' =>
       {
         # http://www.tournaments.nzbridgeclub.org/resultslistbyheadevent.asp?umbid=266
-        CITY => 'Auckland',
+        MEET => 'New Zealand Inter-Provincial Teams',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -375,7 +439,7 @@ my %TOURNAMENTS_NEWZEALAND =
       '2019' =>
       {
         # https://tournaments.nzbridgeclub.org/resultslistbyheadevent.asp?umbid=367
-        CITY => 'Christchurch',
+        MEET => 'New Zealand Inter-Provincial Teams',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -390,7 +454,7 @@ my %TOURNAMENTS_NEWZEALAND =
       '2020' =>
       {
         # https://tournaments.nzbridgeclub.org/resultslistbyheadevent.asp?umbid=405
-        CITY => 'Christchurch',
+        MEET => 'New Zealand Inter-Provincial Teams',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -404,7 +468,7 @@ my %TOURNAMENTS_NEWZEALAND =
 
       '2021' =>
       {
-        CITY => 'Online',
+        MEET => 'New Zealand Inter-Provincial Teams',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -419,7 +483,7 @@ my %TOURNAMENTS_NEWZEALAND =
       '2022' =>
       {
         # https://tournaments.nzbridgeclub.org/resultslistbyheadevent.asp?umbid=616
-        CITY => 'Online',
+        MEET => 'New Zealand Inter-Provincial Teams',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -434,7 +498,7 @@ my %TOURNAMENTS_NEWZEALAND =
       '2023' =>
       {
         # https://www.nzbridge.co.nz/2023-interprovincial-teams.html
-        CITY => 'Online',
+        MEET => 'New Zealand Inter-Provincial Teams',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -622,10 +686,6 @@ my %TOURNAMENTS_NEWZEALAND =
 
   'New Zealand Open Trials' => 
   {
-    ORGANIZATION => 'NZB',
-    COUNTRY => 'New Zealand',
-    ORIGIN => 'National',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -653,10 +713,6 @@ my %TOURNAMENTS_NEWZEALAND =
 
   'New Zealand Women Trials' => 
   {
-    ORGANIZATION => 'NZB',
-    COUNTRY => 'New Zealand',
-    ORIGIN => 'National',
-    ZONE => 'South Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',

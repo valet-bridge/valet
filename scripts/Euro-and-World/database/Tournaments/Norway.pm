@@ -139,7 +139,31 @@ my %MEETS_NORWAY =
         DATE_END => '2024-08-12'
       },
     }
-  }
+  },
+
+  'Norwegian Championships' =>
+  {
+    ORGANIZATION => 'NBF',
+    COUNTRY => 'Norway',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+
+    EDITIONS => 
+    {
+      '2014' =>
+      {
+        YEAR => 2014,
+        DATE_START => '2014-09-19',
+        DATE_END => '2014-09-21'
+      },
+      '2015' =>
+      {
+        YEAR => 2015,
+        DATE_START => '2015-09-18',
+        DATE_END => '2015-09-20'
+      },
+    }
+  },
 );
 
 my %TOURNAMENTS_NORWAY =
@@ -1153,10 +1177,6 @@ my %TOURNAMENTS_NORWAY =
 
   'Norwegian Open Pairs' =>
   {
-    ORGANIZATION => 'NBF',
-    COUNTRY => 'Norway',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -1283,6 +1303,8 @@ my %TOURNAMENTS_NORWAY =
       },
       '2014B' =>
       {
+        MEET => 'Norwegian Championships',
+        MEET_TAG => '2014',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1298,6 +1320,7 @@ my %TOURNAMENTS_NORWAY =
       '2015' =>
       {
         # No festival in 2015
+        MEET => 'Norwegian Championships',
         CHAPTERS =>
         {
           'SINGLE' => 

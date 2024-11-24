@@ -758,7 +758,6 @@ my %TOURNAMENTS_PORTUGAL =
 
   'Portuguese Grand Prix',
   {
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

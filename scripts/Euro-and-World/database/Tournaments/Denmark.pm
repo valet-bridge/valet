@@ -194,6 +194,24 @@ my %MEETS_DENMARK =
         DATE_END => '2025-07-12'
       },
     }
+  },
+
+  'Danish Championships' =>
+  {
+    ORGANIZATION => 'DBF',
+    COUNTRY => 'Denmark',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+
+    EDITIONS =>
+    {
+      '2003' =>
+      {
+        YEAR => 2003,
+        DATE_START => '2003-05-31',
+        DATE_END => '2003-05-31'
+      },
+    }
   }
 );
 
@@ -2415,10 +2433,6 @@ my %TOURNAMENTS_DENMARK =
 
   'Danish Open Teams',
   {
-    ORGANIZATION => 'DBF',
-    COUNTRY => 'Denmark',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2428,6 +2442,7 @@ my %TOURNAMENTS_DENMARK =
     {
       '2003' =>
       {
+        MEET => 'Danish Championships',
         CHAPTERS => 
         {
           'SINGLE' => 

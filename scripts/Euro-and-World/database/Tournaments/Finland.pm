@@ -1005,7 +1005,6 @@ my %TOURNAMENTS_FINLAND =
 
   'Pärnu Summer Open Teams' =>
   {
-    ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
