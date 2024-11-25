@@ -103,6 +103,8 @@ my %MULTI_TYPOS =
     'scottish cup plate'],
   'Scottish National League' => ['scotland national league'],
   'Spring Foursomes' => [
+    'schapiro spring fours',
+    'schapiro spring foursomes',
     'spring 4s',
     'spring fours',
     'schapirosfs'],

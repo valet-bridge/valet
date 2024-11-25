@@ -1,4 +1,27 @@
-Entry: Switch to using FScorr.
+EntryT::format()
+----------------
+Some TEAMx fields are lists:
+CAPTAIN
+COUNTRY
+There we have to check whether it's in the list of not, then push.
+"Multiple values" flag is not possible.
+
+FORM: If coming from TEAMx, then look up BBONO.
+Start with tname if we have it, then the raw number.
+(Make a list of numbers to tnames)
+
+BOARDS: Merge or flag.
+
+postprocess:
+
+ROF x should become STAGE Rofx. Check collision.
+
+Figure out what becomes of DAY, WEEKDAY. PERSON etc.
+In the end there shouldn't be that many fields.
+
+
+
+29280: Should be two TNAME's?
 
 FIELDS
 

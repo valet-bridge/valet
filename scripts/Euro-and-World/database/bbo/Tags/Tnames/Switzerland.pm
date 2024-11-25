@@ -27,7 +27,8 @@ my %MULTI_TYPOS =
 (
   'Jean Besse Cup' => [
     'cup jean besse', 
-    'cup jean besser'],
+    'cup jean besser',
+    'swiss cup jean besse'],
   'Swiss Club Championship' => [
     'interclub swiss team championship',
     'swiss interclubs',

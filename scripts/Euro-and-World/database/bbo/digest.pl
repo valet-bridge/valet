@@ -75,7 +75,7 @@ while ($entryT->read($fh))
     next;
   }
 
-  if ($entryT->bbono() eq 4656)
+  if ($entryT->bbono() eq 932)
   {
     # print "HERE\n";
   }
@@ -140,6 +140,9 @@ while ($entryT->read($fh))
 
 close $fh;
 exit if $debug_flag;
+
+# TODO
+exit;
 
 # for my $i (0 .. $#times)
 # {

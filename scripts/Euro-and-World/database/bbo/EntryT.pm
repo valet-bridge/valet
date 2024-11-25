@@ -53,7 +53,7 @@ my @CHAPTER_FIELDS = qw(
 my %CHAPTER_HASH_CHECK;
 $CHAPTER_HASH_CHECK{$_} = 1 for @CHAPTER_FIELDS;
 
-# ---
+# -----------------------------------------------------------
 
 my @HEADER_FIELDS_NEW = qw(
   MEET
@@ -79,6 +79,9 @@ my @HEADER_FIELDS_NEW = qw(
 
   AGE 
   GENDER
+
+  DATE_START
+  DATE_END
 );
 
 my %HEADER_HASH_NEW = (
@@ -87,38 +90,64 @@ my %HEADER_HASH_NEW = (
   TITLE_TNAME => 'TNAME',
 
   TITLE_ORIGIN => 'ORIGIN',
+  EVENT_ORIGIN => 'ORIGIN',
   TITLE_ORGANIZATION => 'ORGANIZATION',
   TITLE_SPONSOR => 'SPONSOR',
+  EVENT_SPONSOR => 'SPONSOR',
 
   TITLE_ZONE => 'ZONE',
   TITLE_COUNTRY => 'COUNTRY',
+  EVENT_COUNTRY => 'COUNTRY',
   TITLE_REGION => 'REGION',
   TITLE_CITY => 'CITY',
+  EVENT_CITY => 'CITY',
   TITLE_LOCALITY => 'LOCALITY',
   TITLE_CLUB => 'CLUB',
 
   TITLE_FORM => 'FORM',
+  EVENT_FORM => 'FORM',
   TEAM1_FORM => 'FORM',
   TEAM2_FORM => 'FORM',
   TITLE_SCORING => 'SCORING',
+  EVENT_SCORING => 'SCORING',
   TITLE_MOVEMENT => 'MOVEMENT',
 
   TITLE_AGE => 'AGE',
+  EVENT_AGE => 'AGE',
   TITLE_GENDER => 'GENDER',
+  EVENT_GENDER => 'GENDER',
+
+  TITLE_DATE_START => 'DATE_START',
+  TITLE_DATE_END => 'DATE_END',
 );
 
 $HEADER_HASH_NEW{$_} = $_ for @HEADER_FIELDS_NEW;
 
 my @CHAPTER_FIELDS_NEW = qw(
   YEAR
-  DATE_START
-  DATE_END
+  WEEKDAY
+  DATE_ADDED
   STAGE
   MOVEMENT
+  BOARDS
 );
 
 my %CHAPTER_HASH_NEW = (
   TITLE_YEAR => 'YEAR',
+  EVENT_YEAR => 'YEAR',
+
+  TITLE_WEEKDAY => 'WEEKDAY',
+  EVENT_WEEKDAY => 'WEEKDAY',
+
+  EVENT_DATE => 'DATE_ADDED',
+
+  TITLE_STAGE => 'STAGE',
+  EVENT_STAGE => 'STAGE',
+
+  TITLE_MOVEMENT => 'MOVEMENT',
+  EVENT_MOVEMENT => 'MOVEMENT',
+
+  EVENT_BOARDS => 'BOARDS',
 );
 
 $CHAPTER_HASH_NEW{$_} = $_ for @CHAPTER_FIELDS_NEW;
@@ -126,15 +155,96 @@ $CHAPTER_HASH_NEW{$_} = $_ for @CHAPTER_FIELDS_NEW;
 my @COUNTER_FIELDS_NEW = qw(
   WEEKEND
   SESSION
+  PHASE
+  FLIGHT
+  GROUP
   ROUND
   SEGMENT
+  SET
+  SECTION
+  STANZA
+  HALF
+  QUARTER
+  MATCH
+  TABLE
 );
 
 my %COUNTER_HASH_NEW = (
+  TITLE_WEEKEND => 'WEEKEND',
+  EVENT_WEEKEND => 'WEEKEND',
+
+  TITLE_SESSION => 'SESSION',
+  EVENT_SESSION => 'SESSION',
+
+  TITLE_PHASE => 'PHASE',
+
+  TITLE_FLIGHT => 'FLIGHT',
+
+  TITLE_GROUP => 'GROUP',
+  EVENT_GROUP => 'GROUP',
+
+  TITLE_ROUND => 'ROUND',
+  EVENT_ROUND => 'ROUND',
+
+  TITLE_SEGMENT => 'SEGMENT',
+  EVENT_SEGMENT => 'SEGMENT',
+
+  TITLE_SET => 'SET',
+  EVENT_SET => 'SET',
+
+  TITLE_SECTION => 'SECTION',
+  EVENT_SECTION => 'SECTION',
+
+  EVENT_STANZA => 'STANZA',
+
+  EVENT_HALF => 'HALF',
+
+  TITLE_QUARTER => 'QUARTER',
+  EVENT_QUARTER => 'QUARTER',
+
+  TITLE_MATCH => 'MATCH',
+  EVENT_MATCH => 'MATCH',
+
+  TITLE_TABLE => 'TABLE',
+  EVENT_TABLE => 'TABLE',
 );
 
 $COUNTER_HASH_NEW{$_} = $_ for @COUNTER_FIELDS_NEW;
 
+my @TEAM_FIELDS_NEW = qw(
+  SPONSOR
+  COUNTRY
+  NATIONALITY
+  ORGANIZATION
+  CAPTAIN
+  BOT
+  TEAM
+  ZONE
+  REGION
+  CITY
+  LOCALITY
+  CLUB
+  UNIVERSITY
+  FIRST
+  FUN
+  AGE
+  GENDER
+  OTHER
+);
+
+my %TEAM_HASH_NEW;
+$TEAM_HASH_NEW{$_} = $_ for @TEAM_FIELDS_NEW;
+
+my %MULTI_VALUED_TEAM_FIELD = (
+  'TEAM1_CAPTAIN' => ['TEAM1', 'CAPTAIN'],
+  'TEAM2_CAPTAIN' => ['TEAM2', 'CAPTAIN'],
+  'TEAM1_COUNTRY' => ['TEAM1', 'COUNTRY'],
+  'TEAM2_COUNTRY' => ['TEAM2', 'COUNTRY'],
+  'TEAM1_CITY' => ['TEAM1', 'CITY'],
+  'TEAM2_CITY' => ['TEAM2', 'CITY'],
+);
+
+# ------------------------------------------------
 
 my @PRUNE_HEADER_FIELDS = (
   ['TOURNAMENT_ORDINAL', 'TITLE_ORDINAL'],
@@ -227,9 +337,146 @@ sub copy_from_TMP
 }
 
 
+sub form_fixable
+{
+  my ($self, $new_field, $map, $stored_value, $new_value) = @_;
+
+  return (0, 0) unless $map eq 'FORM';
+
+  if (($stored_value eq 'Pairs' || $stored_value eq 'Individual') && 
+      $new_field =~ /^TEAM[12]/ &&
+      $new_value eq 'Teams')
+  {
+    # Probably keep Pairs/Individual.
+    if (exists $self->{HEADER}{TNAME} &&
+      FScorr::form_fixable($self->{HEADER}{TNAME}, $self->bbono()))
+    {
+      # Definitely OK.
+      return (1, $stored_value);
+    }
+    elsif (! exists $self->{HEADER}{TNAME} &&
+      FScorr::form_number_fixable($self->bbono()))
+    {
+      # Probably OK.
+      return (1, $stored_value);
+    }
+  }
+  elsif ($stored_value eq 'Teams' && 
+      $new_field !~ /^TEAM[12]/ &&
+      ($new_value eq 'Pairs' || $new_value eq 'Individual'))
+  {
+    # Probably the initial value was from a TEAM field,
+    # and now we get the correct value from another field.
+    if (exists $self->{HEADER}{TNAME} &&
+      FScorr::form_fixable($self->{HEADER}{TNAME}, $self->bbono()))
+    {
+      # Definitely OK.
+      return (1, $new_value);
+    }
+    elsif (! exists $self->{HEADER}{TNAME} &&
+      FScorr::form_number_fixable($self->bbono()))
+    {
+      # Probably OK.
+      return (1, $new_value);
+    }
+  }
+
+  return (0, 0);
+}
+
+
+sub format_group
+{
+  my ($self, $group, $field, $hash, $value) = @_;
+
+  return 0 unless exists $hash->{$field};
+  my $map = $hash->{$field};
+  if (exists $self->{$group}{$map} && $self->{$group}{$map} ne $value)
+  {
+    my ($ok, $fixed_value) = $self->form_fixable(
+        $field, $map, $self->{$group}{$map}, $value);
+
+    if ($ok)
+    {
+      $self->{$group}{$map} = $fixed_value;
+      delete $self->{$field};
+      return 1;
+    }
+    else
+    {
+      warn $self->bbono() . ": $group $map duplicated, " .
+        "$self->{$group}{$map} vs. $value";
+    }
+  }
+  $self->{$group}{$map} = $value;
+  delete $self->{$field};
+  return 1;
+}
+
+
+sub really_single_valued
+{
+  my ($self, $field) = @_;
+
+  # If they are all the same, also OK.
+  my $value = $self->{$field}[0];
+  for my $v (@{$self->{$field}})
+  {
+    return 0 unless $v eq $value;
+  }
+  return 1;
+}
+
+
 sub format
 {
   my ($self) = @_;
+
+  for my $field (sort keys %$self)
+  {
+    next if $field eq 'BBONO';
+    if (exists $MULTI_VALUED_TEAM_FIELD{$field})
+    {
+      my ($group, $map) = @{$MULTI_VALUED_TEAM_FIELD{$field}};
+      @{$self->{$group}{$map}} = @{$self->{$field}};
+      delete $self->{$field};
+      next;
+    }
+
+    if ($#{$self->{$field}} > 0 &&
+        ! $self->really_single_valued($field))
+    {
+      warn $self->bbono() . ": Field $field has multiple values";
+      next;
+    }
+
+    my $value = $self->{$field}[0];
+
+    next if $self->format_group('HEADER', $field, \%HEADER_HASH_NEW,
+      $value);
+
+    next if $self->format_group('CHAPTER', $field, \%CHAPTER_HASH_NEW,
+      $value);
+
+    next if $self->format_group('COUNTER', $field, \%COUNTER_HASH_NEW,
+      $value);
+
+    if ($field =~ /^TEAM1_(.+)$/)
+    {
+      my $map = $1;
+      next if $self->format_group('TEAM1', $map, \%TEAM_HASH_NEW,
+        $value);
+    }
+
+    if ($field =~ /^TEAM2_(.+)$/)
+    {
+      my $map = $1;
+      next if $self->format_group('TEAM2', $map, \%TEAM_HASH_NEW,
+        $value);
+    }
+
+    warn $self->bbono() . ": $field";
+  }
 }
 
 
@@ -958,6 +1205,5 @@ sub str_chapter
   return $self->str_by_ordered_fields(\@CHAPTER_FIELDS,
     \%CHAPTER_HASH_CHECK);
 }
-
 
 1;

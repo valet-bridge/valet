@@ -38,9 +38,15 @@ my %SCORING_CORRECTIONS = (
     44730, 44731, 44736, 44737, 44738, 44739, 44764, 44765, 44766]
 );
 
-  # 'Finnish Swiss Teams' => [
-    # 16711, 16718, 16719, 16720, 16723, 16724, 16727, 16728, 16730,
-    # 16731, 16736, 16739, 16742, 16743, 16746],
+my %SCORING_FLAT_LIST;
+for my $tname (keys %SCORING_CORRECTIONS)
+{
+  for my $bbono (@{$SCORING_CORRECTIONS{$tname}})
+  {
+    $SCORING_FLAT_LIST{$bbono} = $tname;
+  }
+}
+
 
 my %FORM_CORRECTIONS = (
   # Says Team 1, Team 2 in BBO file, but is pairs or individual
@@ -915,6 +921,15 @@ my %FORM_CORRECTIONS = (
     32511, 32515, 32549, 32561],
 );
 
+my %FORM_FLAT_LIST;
+for my $tname (keys %FORM_CORRECTIONS)
+{
+  for my $bbono (@{$FORM_CORRECTIONS{$tname}})
+  {
+    $FORM_FLAT_LIST{$bbono} = $tname;
+  }
+}
+
 
 sub form_fixable
 {
@@ -929,6 +944,13 @@ sub form_fixable
 }
 
 
+sub form_number_fixable
+{
+  my ($bbono) = @_;
+  return (exists $FORM_FLAT_LIST{$bbono} ? 1 : 0);
+}
+
+
 sub scoring_fixable
 {
   my ($tname, $bbono) = @_;
@@ -940,5 +962,14 @@ sub scoring_fixable
   }
   return 0;
 }
+
+
+sub scoring_number_fixable
+{
+  my ($bbono) = @_;
+  return (exists $SCORING_FLAT_LIST{$bbono} ? 1 : 0);
+}
+
+
 
 1;
