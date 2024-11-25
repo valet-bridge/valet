@@ -56,7 +56,6 @@ my %TOURNAMENTS_VENEZUELA =
     %GLOBAL,
     FORM => 'Pairs',
     SCORING => 'MP', # Really?
-    MOVEMENT => 'Swiss',
     GENDER => 'Open',
     AGE => 'Open',
 
@@ -69,6 +68,7 @@ my %TOURNAMENTS_VENEZUELA =
           'SINGLE' => 
           {
             YEAR => 2010,
+            MOVEMENT => 'Swiss',
             DATE_START => '2010-05-26',
             DATE_END => '2010-05-26'
           } 
@@ -81,6 +81,7 @@ my %TOURNAMENTS_VENEZUELA =
           'SINGLE' => 
           {
             YEAR => 2011,
+            MOVEMENT => 'Swiss',
             major => 'SESSION',
             DATE_START => '2011-04-04',
             DATE_END => '2011-04-06'

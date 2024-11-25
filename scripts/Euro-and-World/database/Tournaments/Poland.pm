@@ -5863,7 +5863,6 @@ my %TOURNAMENTS_POLAND =
         {
           'C0' => 
           {
-            CITY => 'Wroclaw',
             YEAR => 2014,
             major => 'ROUND',
             minor => 'SEGMENT',
@@ -5944,7 +5943,6 @@ my %TOURNAMENTS_POLAND =
         {
           'C0' => 
           {
-            CITY => 'Wroclaw',
             YEAR => 2015,
             major => 'ROUND',
             minor => 'SEGMENT',
@@ -5953,7 +5951,6 @@ my %TOURNAMENTS_POLAND =
           },
           'C1' => 
           {
-            CITY => 'Warsaw',
             YEAR => 2016,
             STAGE => 'Round-robin',
             major => 'ROUND',

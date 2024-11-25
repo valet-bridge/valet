@@ -1134,12 +1134,12 @@ my %TOURNAMENTS_GERMANY =
       '2006' => 
       {
         # https://ergebnisse.bridge-verband.de/error.html?errtype=1&auswcl=0&auswtid=16740
+        CITY => 'Düsseldorf',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2006,
-            CITY => 'Düsseldorf',
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2006-12-02',
@@ -1148,7 +1148,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2006,
-            CITY => 'Düsseldorf',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2006-12-02',
@@ -1160,12 +1159,12 @@ my %TOURNAMENTS_GERMANY =
       '2008' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=15954&site=0&kl=0
+        CITY => 'Bonn',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2008,
-            CITY => 'Bonn',
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2008-11-15',
@@ -1174,7 +1173,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2008,
-            CITY => 'Bonn',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2008-11-15',
@@ -1186,12 +1184,12 @@ my %TOURNAMENTS_GERMANY =
       '2009' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=15953&site=0&kl=0
+        CITY => 'Kassel',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2009,
-            CITY => 'Kassel',
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2009-11-28',
@@ -1200,7 +1198,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2009,
-            CITY => 'Kassel',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2009-11-28',
@@ -1212,12 +1209,12 @@ my %TOURNAMENTS_GERMANY =
       '2010' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=27254&submit=Anzeigen
+        CITY => 'Kassel',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2010,
-            CITY => 'Kassel',
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2010-11-27',
@@ -1226,7 +1223,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2010,
-            CITY => 'Kassel',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2010-11-27',
@@ -1238,12 +1234,12 @@ my %TOURNAMENTS_GERMANY =
       '2011' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=148&submit=Anzeigen
+        CITY => 'Bonn',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2011,
-            CITY => 'Bonn',
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2011-12-10',
@@ -1252,7 +1248,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2011,
-            CITY => 'Bonn',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2011-12-10',
@@ -1264,12 +1259,12 @@ my %TOURNAMENTS_GERMANY =
       '2012' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=301&site=0&kl=0
+        CITY => 'Kassel',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2012,
-            CITY => 'Kassel',
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2012-12-08',
@@ -1278,7 +1273,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2012,
-            CITY => 'Kassel',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2012-12-08',
@@ -1290,12 +1284,12 @@ my %TOURNAMENTS_GERMANY =
       '2013' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=603&site=0&kl=0
+        CITY => 'Kassel',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2013,
-            CITY => 'Kassel',
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2013-11-23',
@@ -1304,7 +1298,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2013,
-            CITY => 'Kassel',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2013-11-23',
@@ -1316,12 +1309,12 @@ my %TOURNAMENTS_GERMANY =
       '2014' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=1048&site=0&kl=0
+        CITY => 'Darmstadt',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2014,
-            CITY => 'Darmstadt',
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2014-11-22',
@@ -1330,7 +1323,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2014,
-            CITY => 'Darmstadt',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2014-11-22',
@@ -1342,12 +1334,12 @@ my %TOURNAMENTS_GERMANY =
       '2015' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=1996&site=0&kl=0
+        CITY => 'Darmstadt',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2015,
-            CITY => 'Darmstadt',
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2015-11-21',
@@ -1356,7 +1348,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2015,
-            CITY => 'Darmstadt',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2015-11-21',
@@ -1368,12 +1359,12 @@ my %TOURNAMENTS_GERMANY =
       '2016' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=3591&site=0&kl=0
+        CITY => 'Kassel',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2016,
-            CITY => 'Kassel',
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2016-11-19',
@@ -1382,7 +1373,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2016,
-            CITY => 'Kassel',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2016-11-19',
@@ -1394,12 +1384,12 @@ my %TOURNAMENTS_GERMANY =
       '2017' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=5671&site=0&kl=0
+        CITY => 'Kassel',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2017,
-            CITY => 'Kassel',
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2017-11-18',
@@ -1408,7 +1398,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2017,
-            CITY => 'Kassel',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2017-11-18',
@@ -1420,12 +1409,12 @@ my %TOURNAMENTS_GERMANY =
       '2018' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=8486&site=0&kl=0
+        CITY => 'Kassel',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2018,
-            CITY => 'Kassel',
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2018-11-17',
@@ -1434,7 +1423,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2018,
-            CITY => 'Kassel',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2018-11-17',
@@ -1446,12 +1434,12 @@ my %TOURNAMENTS_GERMANY =
       '2019' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=12105&site=0&kl=0
+        CITY => 'Kassel',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2019,
-            CITY => 'Kassel',
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2019-11-16',
@@ -1460,7 +1448,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2019,
-            CITY => 'Kassel',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2019-11-16',
@@ -1472,12 +1459,12 @@ my %TOURNAMENTS_GERMANY =
       '2023' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=28517&site=0&kl=0
+        CITY => 'Niedernhausen',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2023,
-            CITY => 'Niedernhausen',
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2023-12-02',
@@ -1486,7 +1473,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2023,
-            CITY => 'Niedernhausen',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2023-12-02',
@@ -1497,13 +1483,12 @@ my %TOURNAMENTS_GERMANY =
 
       '2024' => 
       {
-        # 
+        CITY => 'Wetzlar',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2024,
-            CITY => 'Wetzlar',
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2024-12-06',
@@ -1512,7 +1497,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2024,
-            CITY => 'Wetzlar',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2024-12-06',
@@ -2558,12 +2542,12 @@ my %TOURNAMENTS_GERMANY =
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=41&submit=Anzeigen
         ORDINAL => 1,
+        CITY => 'Bonn',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2010,
-            CITY => 'Bonn',
             STAGE => 'Qualifying',
             major => 'ROUND',
             DATE_START => '2010-05-14',
@@ -2572,7 +2556,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2010,
-            CITY => 'Bonn',
             MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2010-05-14',
@@ -2585,12 +2568,12 @@ my %TOURNAMENTS_GERMANY =
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=84&site=0&kl=0
         ORDINAL => 2,
+        CITY => 'Bonn',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2011,
-            CITY => 'Bonn',
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-06-03',
@@ -2599,7 +2582,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2011,
-            CITY => 'Bonn',
             MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2011-06-03',
@@ -2612,12 +2594,12 @@ my %TOURNAMENTS_GERMANY =
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=221&site=0&kl=0
         ORDINAL => 3,
+        CITY => 'Bonn',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2012,
-            CITY => 'Bonn',
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-05-18',
@@ -2626,7 +2608,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2012,
-            CITY => 'Bonn',
             MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2012-05-18',
@@ -2639,12 +2620,12 @@ my %TOURNAMENTS_GERMANY =
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=373&site=0&kl=0
         ORDINAL => 4,
+        CITY => 'Bonn',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2013,
-            CITY => 'Bonn',
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-05-08',
@@ -2653,7 +2634,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2013,
-            CITY => 'Bonn',
             MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2013-05-09',
@@ -2666,12 +2646,12 @@ my %TOURNAMENTS_GERMANY =
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=704&site=0&kl=0
         ORDINAL => 5,
+        CITY => 'Berlin',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2014,
-            CITY => 'Berlin',
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-05-02',
@@ -2680,7 +2660,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2014,
-            CITY => 'Berlin',
             MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2014-05-02',
@@ -2693,12 +2672,12 @@ my %TOURNAMENTS_GERMANY =
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=1398&site=0&kl=0
         ORDINAL => 6,
+        CITY => 'Berlin',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2015,
-            CITY => 'Berlin',
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-05-01',
@@ -2707,7 +2686,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2015,
-            CITY => 'Berlin',
             MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2015-05-01',
@@ -2720,12 +2698,12 @@ my %TOURNAMENTS_GERMANY =
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=2657&site=0&kl=0
         ORDINAL => 7,
+        CITY => 'Berlin',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2016,
-            CITY => 'Berlin',
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-04-29',
@@ -2734,7 +2712,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2016,
-            CITY => 'Berlin',
             MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2016-04-29',
@@ -2747,12 +2724,12 @@ my %TOURNAMENTS_GERMANY =
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=4416&site=0&kl=0
         ORDINAL => 8,
+        CITY => 'Berlin',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2017,
-            CITY => 'Berlin',
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2017-04-29',
@@ -2761,7 +2738,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2017,
-            CITY => 'Berlin',
             MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2017-04-29',
@@ -2774,12 +2750,12 @@ my %TOURNAMENTS_GERMANY =
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=6873&site=0&kl=0
         ORDINAL => 9,
+        CITY => 'Berlin',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2018,
-            CITY => 'Berlin',
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2018-04-29',
@@ -2788,7 +2764,6 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2018,
-            CITY => 'Berlin',
             MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2018-04-29',

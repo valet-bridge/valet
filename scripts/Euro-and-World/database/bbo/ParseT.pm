@@ -28,6 +28,11 @@ $MEET_FIELDS_HASH{$_} = 1 for @MEET_FIELDS;
 my @MEET_EDITION_FIELDS = qw(YEAR CITY);
 my @MEET_EDITION_PREFIXED_FIELDS = qw(ORDINAL DATE_START DATE_END);
 
+my @CHAPTER_FIELDS = qw(YEAR DATE_START DATE_END 
+  STAGE MOVEMENT WEEKEND SCORING major minor);
+my %CHAPTER_HASH;
+$CHAPTER_HASH{$_} = 1 for @CHAPTER_FIELDS;
+
 my @TOURNAMENT_EDITION_PREFIXED_FIELDS = qw(ORDINAL CITY);
 my @TOURNAMENT_CHAPTER_FIELDS = qw(YEAR MOVEMENT STAGE major minor);
 my @TOURNAMENT_MEET_FIELDS = qw(MEET);
@@ -291,22 +296,37 @@ sub cumulate_fields
 }
 
 
+sub check_chapter
+{
+  my ($chapter, $errstr) = @_;
+  for my $field (sort keys %$chapter)
+  {
+    if (! exists $CHAPTER_HASH{$field})
+    {
+      warn "$errstr: $field";
+    }
+  }
+}
+
+
 sub get_all_fields
 {
-  my ($self, $tname, $edition, $chapter, $cumul) = @_;
+  my ($self, $tname, $edition, $chapter, $cumul, $ch_data) = @_;
 
   my $errstr = "$tname, $edition, $chapter:";
 
   my $t_header = $self->{TOURNAMENT}{$tname};
   my $t_edition = $t_header->{EDITIONS}{$edition};
-  my $t_chapter = $t_edition->{CHAPTERS}{$chapter};
+
+  # Make a copy so we can't accidentally overwrite the original.
+  %$ch_data = %{$t_edition->{CHAPTERS}{$chapter}};
+
+  check_chapter($ch_data, $errstr);
 
   $self->cumulate_fields($t_header, 
     {}, { EDITIONS => 1 }, $errstr, $cumul);
   $self->cumulate_fields($t_edition, 
     {}, { MEET_TAG => 1, CHAPTERS => 1 }, $errstr, $cumul);
-  $self->cumulate_fields($t_chapter, 
-    {}, { DATE_START => 1, DATE_END => 1 }, $errstr, $cumul);
 
   return unless exists $t_edition->{MEET};
 
@@ -377,8 +397,9 @@ sub check_consistency
             $chapter->{DATE_START}, $chapter->{DATE_END});
         }
 
-        my %cumul;
-        $self->get_all_fields($tournament, $tag, $ctag, \%cumul);
+        my (%cumul, %ch_data);
+        $self->get_all_fields($tournament, $tag, $ctag, 
+          \%cumul, \%ch_data);
       }
     }
   }

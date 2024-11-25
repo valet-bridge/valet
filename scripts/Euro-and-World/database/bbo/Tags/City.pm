@@ -30,6 +30,7 @@ my @MULTI_WORDS =
   'El-Maadi',
   'Gaziantep Zeugma',
   'Gjøvik og Vardal',
+  'Gold Coast',
   'Greve Strand',
   'Haskovski Mineralni Bani',
   'Hong Kong City',
@@ -144,10 +145,10 @@ my @SINGLE_WORDS = qw(
 
   Baghdad Balchik Balaton Balatonföldvár Balikesir Balikpapan Ballerup 
   Ballymena Bamberg Bandung Bangalore Bangkok Banjarmasin Bansi Barcelona 
-  Batam Bath Batman Batu Begues Beijing Beirut Bekasi Belgrade Bengkalis
-  Bengkulu Beograd Bereket Bergen Bergues Berkeley Berlin Bhilwara 
-  Bhubaneshwar Biarritz Bielefeld Bikaner Bitung Blitar Bodrum Bodø 
-  Bogor Bogotá Boleslawiec Bologna Bonn Bordeaux Braila Brandbu 
+  Batam Bath Batman Batu Begues Beijing Beirut Bekasi Belgrade Belfast
+  Bengkalis Bengkulu Beograd Bereket Bergen Bergues Berkeley Berlin 
+  Bhilwara Bhubaneshwar Biarritz Bielefeld Bikaner Bitung Blitar Bodrum 
+  Bodø Bogor Bogotá Boleslawiec Bologna Bonn Bordeaux Braila Brandbu 
   Brasilia Brasov Bremen Brighton Brisbane Broadbeach Bromölla Bruges 
   Brussels Bucharest Budapest Burghausen Bursa Burdur Buzios Bydgoszcz 
   Bytom
@@ -168,9 +169,9 @@ my @SINGLE_WORDS = qw(
   Farsund Fethiye Firenze Flekkefjord Foca Fosnavåg Frankfurt 
   Fredrikstad Førde
 
-  Garches Gdansk Gdynia Gelibolu Genoa Gent Gevgelija Geyve Giza Glasgow 
-  Gnesta Gniezno Gorzow Gölcük Göteborg Gresik Grogol Groningen 
-  Guangdong Guangzhou Guayaquil Gudbrandsdal Gyor
+  Galway Garches Gdansk Gdynia Gelibolu Genoa Gent Gevgelija Geyve 
+  Giza Glasgow Gnesta Gniezno Gorzow Gölcük Göteborg Gresik 
+  Grogol Groningen Guangdong Guangzhou Guayaquil Gudbrandsdal Gyor
 
   Haderslev Hamar Hamburg Hammamet Hangzhou Hanko Hannover Harplinge 
   Harstad Hatay Havirov Heledia Helsinki Hendek Herning Hillerød 
@@ -201,18 +202,19 @@ my @SINGLE_WORDS = qw(
   Moradabad Morud Moscow Moss Mragowo Muðla Mulund Mumbai Munich 
 
   Nagpur Nagykanizsa Namsos Nanchang Nanchong Nancy Nanning Napoli 
-  Narvik Nashik Nazilli Näsby Nice Nicosia Niedernhausen Nijmegen 
-  Nilüfer Ningbo Niš Noida Norrbyskär Norrøna Nürnberg Nyon Nysa 
-  Nærbø Næstved Nøtterøy
+  Narvik Nashik Nazilli Näsby Newport Nice Nicosia Niedernhausen 
+  Nijmegen Nilüfer Ningbo Niš Noida Norrbyskär Norrøna Nürnberg 
+  Nyon Nysa Nærbø Næstved Nøtterøy
 
   Odense Ogndal Oldenburg Olrud Olsztyn Oltenita Opatija Orhangazi 
   Oslo Ostend Ottadalen Otepää Oxford Ozarow Örebro Överum
 
   Padang Padova Paimado Palembang Palermo Palma Palu Pamukkale Pancevo 
-  Panzhihua Pariaman Paris Pärnu Pattaya Pau Pecs Pekanbaru Pelotas 
-  Penajam Pernik Perth Perula Pesaro Pescara Petersfield Philadelphia
-  Pisa Pleven Plock Plovdiv Pontianak Popovo Porto Potsdam Poznan 
-  Prague Preslav Protaras Ptuj Pula Pulawy Pune Puri Pushkar Puutalo
+  Panzhihua Pariaman Paris Pärnu Pattaya Pau Pecs Peebles Pekanbaru 
+  Pelotas Penajam Pernik Perth Perula Pesaro Pescara Petersfield 
+  Philadelphia Pisa Pleven Plock Plovdiv Pontianak Popovo Porto 
+  Potsdam Poznan Prague Preslav Protaras Ptuj Pula Pulawy Pune 
+  Puri Pushkar Puutalo
 
   Qingdao
 
@@ -226,9 +228,9 @@ my @SINGLE_WORDS = qw(
   Shenzhen Shijiazhuang Shumen Sibiu Sidoarjo Siena Sindi Singsås 
   Siofok Sivas Skara Skawina Ski Skien Skopje Slagelse Slawa Sleman 
   Snåsa Sofia Solok Sopot Sortland Söke Split Stanford Stargard 
-  Stavanger Steinkjer Stockholm Stoholm Storsjöbygden Stureby 
-  Stuttgart Sukma Sukomoro Sumedang Sunndalsøra Surabaya Suzhou 
-  Svendborg Sydney Szczyrk Szeged Søborg Sørreisa
+  Stavanger Steinkjer Stirling Stockholm Stoholm Storsjöbygden 
+  Stureby Stuttgart Sukma Sukomoro Sumedang Sunndalsøra Surabaya 
+  Suzhou Svendborg Sydney Szczyrk Szeged Søborg Sørreisa
 
   Taicang Taichung Tainan Taizhou Takayama Tallinn Tambun Tarakan 
   Targoviste Tarnów Taskopru Täby Täfteå Tekýrdag Temuco Thane 

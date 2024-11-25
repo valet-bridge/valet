@@ -14,7 +14,7 @@ our @EXPORT = qw(set_links);
 my %GLOBAL = (
   ORGANIZATION => 'CACBF',
   ORIGIN => 'International',
-  ZONE => 'Central America',
+  ZONE => 'Central America and Caribbean',
 );
 
 my %MEETS_CENTRALAMERICA =

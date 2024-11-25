@@ -350,7 +350,6 @@ my %TOURNAMENTS_NORWAY =
     %GLOBAL,
     CITY => 'Jessheim',
     ORIGIN => 'Regional',
-    MOVEMENT => 'Swiss',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -365,6 +364,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2015,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2015-01-03',
             DATE_END => '2015-01-04'
@@ -1779,7 +1779,6 @@ my %TOURNAMENTS_NORWAY =
   'Norwegian Swiss Pairs' =>
   {
     FORM => 'Pairs',
-    MOVEMENT => 'Swiss',
     SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
@@ -1794,6 +1793,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2005,
+            MOVEMENT => 'Swiss',
             major => 'SESSION',
             DATE_START => '2005-08-05',
             DATE_END => '2005-08-05'
@@ -1808,6 +1808,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2006,
+            MOVEMENT => 'Swiss',
             major => 'SESSION',
             DATE_START => '2006-08-09',
             DATE_END => '2006-08-09'
@@ -1823,6 +1824,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2009,
+            MOVEMENT => 'Swiss',
             major => 'SESSION',
             DATE_START => '2009-08-03',
             DATE_END => '2009-08-04'
@@ -1838,6 +1840,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2010,
+            MOVEMENT => 'Swiss',
             major => 'SESSION',
             DATE_START => '2010-08-01',
             DATE_END => '2010-08-02'
@@ -1853,6 +1856,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2011,
+            MOVEMENT => 'Swiss',
             major => 'SESSION',
             DATE_START => '2011-07-31',
             DATE_END => '2011-08-01'
@@ -1868,6 +1872,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2012,
+            MOVEMENT => 'Swiss',
             major => 'SESSION',
             DATE_START => '2012-08-05',
             DATE_END => '2012-08-06'
@@ -1884,6 +1889,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2013,
+            MOVEMENT => 'Swiss',
             major => 'SESSION',
             DATE_START => '2013-08-04',
             DATE_END => '2013-08-05'
@@ -1896,7 +1902,6 @@ my %TOURNAMENTS_NORWAY =
   'Norwegian Swiss Teams' =>
   {
     FORM => 'Teams',
-    MOVEMENT => 'Swiss',
     SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
@@ -1911,6 +1916,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2006,
+            MOVEMENT => 'Swiss',
             major => 'MATCH',
             DATE_START => '2006-08-09',
             DATE_END => '2006-08-09'
@@ -1925,6 +1931,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2007,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2007-08-05',
             DATE_END => '2007-08-05'
@@ -1939,6 +1946,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2008,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2008-08-12',
             DATE_END => '2008-08-12'
@@ -1953,6 +1961,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2009,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2009-08-08',
             DATE_END => '2009-08-09'
@@ -1967,6 +1976,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2010,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2010-08-05',
             DATE_END => '2010-08-07'
@@ -1981,6 +1991,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2011,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2011-08-05',
             DATE_END => '2011-08-06'
@@ -1995,6 +2006,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2012,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2012-08-10',
             DATE_END => '2012-08-11'
@@ -2009,6 +2021,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2013,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2013-08-09',
             DATE_END => '2013-08-10'
@@ -2023,6 +2036,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2014,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2014-08-05',
             DATE_END => '2014-08-06'
@@ -2262,7 +2276,6 @@ my %TOURNAMENTS_NORWAY =
     %GLOBAL,
     ORIGIN => 'Regional',
     FORM => 'Pairs',
-    MOVEMENT => 'Swiss',
     SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
@@ -2276,6 +2289,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2008,
+            MOVEMENT => 'Swiss',
             major => 'SESSION',
             DATE_START => '2008-04-02',
             DATE_END => '2008-04-02'
@@ -2289,6 +2303,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2009,
+            MOVEMENT => 'Swiss',
             major => 'SESSION',
             DATE_START => '2009-04-04',
             DATE_END => '2009-04-05'
@@ -2302,6 +2317,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2010,
+            MOVEMENT => 'Swiss',
             major => 'SESSION',
             DATE_START => '2010-03-27',
             DATE_END => '2010-03-28'
@@ -2785,6 +2801,7 @@ my %TOURNAMENTS_NORWAY =
   {
     %GLOBAL,
     ORIGIN => 'Regional',
+    CITY => 'Trondheim',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -2799,7 +2816,6 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2011,
-            CITY => 'Trondheim',
             major => 'SESSION',
             DATE_START => '2011-05-07',
             DATE_END => '2011-05-07'
@@ -2813,6 +2829,7 @@ my %TOURNAMENTS_NORWAY =
   {
     %GLOBAL,
     ORIGIN => 'Regional',
+    CITY => 'Trondheim',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2828,7 +2845,6 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2011,
-            CITY => 'Trondheim',
             major => 'ROUND',
             DATE_START => '2011-05-08',
             DATE_END => '2011-05-08'

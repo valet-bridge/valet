@@ -1087,8 +1087,8 @@ my %TOURNAMENTS_DENMARK =
           },
           'C4' => 
           {
+            # Copenhagen
             YEAR => 2009,
-            CITY => 'Copenhagen',
             WEEKEND => 5,
             STAGE => 'Semifinal',
             major => 'SEGMENT',
@@ -1097,8 +1097,8 @@ my %TOURNAMENTS_DENMARK =
           },
           'C5' => 
           {
+            # Copenhagen
             YEAR => 2009,
-            CITY => 'Copenhagen',
             WEEKEND => 5,
             STAGE => 'Final',
             major => 'SEGMENT',
@@ -1144,8 +1144,8 @@ my %TOURNAMENTS_DENMARK =
           },
           'C4' => 
           {
+            # Asminderød'
             YEAR => 2010,
-            CITY => 'Asminderød',
             WEEKEND => 5,
             STAGE => 'Semifinal',
             major => 'SEGMENT',
@@ -1155,7 +1155,6 @@ my %TOURNAMENTS_DENMARK =
           'C5' => 
           {
             YEAR => 2010,
-            CITY => 'Asminderød',
             WEEKEND => 5,
             STAGE => 'Final',
             major => 'SEGMENT',
@@ -1201,8 +1200,8 @@ my %TOURNAMENTS_DENMARK =
           },
           'C4' => 
           {
+            # Copenhagen
             YEAR => 2011,
-            CITY => 'Copenhagen',
             WEEKEND => 5,
             STAGE => 'Semifinal',
             major => 'SEGMENT',
@@ -1211,8 +1210,8 @@ my %TOURNAMENTS_DENMARK =
           },
           'C5' => 
           {
+            # Copenhagen
             YEAR => 2011,
-            CITY => 'Copenhagen',
             WEEKEND => 5,
             STAGE => 'Final',
             major => 'SEGMENT',
@@ -1251,16 +1250,16 @@ my %TOURNAMENTS_DENMARK =
           },
           'C3' => 
           {
+            # Copenhagen
             YEAR => 2012,
-            CITY => 'Copenhagen',
             WEEKEND => 4,
             DATE_START => '2012-03-03',
             DATE_END => '2012-03-04'
           },
           'C4' => 
           {
+            # Copenhagen
             YEAR => 2012,
-            CITY => 'Copenhagen',
             WEEKEND => 5,
             STAGE => 'Semifinal',
             major => 'SEGMENT',
@@ -1269,8 +1268,8 @@ my %TOURNAMENTS_DENMARK =
           },
           'C5' => 
           {
+            # Copenhagen
             YEAR => 2012,
-            CITY => 'Copenhagen',
             WEEKEND => 5,
             STAGE => 'Final',
             major => 'SEGMENT',
@@ -1309,8 +1308,8 @@ my %TOURNAMENTS_DENMARK =
           },
           'C3' => 
           {
+            # Copenhagen
             YEAR => 2013,
-            CITY => 'Copenhagen',
             WEEKEND => 4,
             major => 'ROUND',
             minor => 'SEGMENT',
@@ -1319,8 +1318,8 @@ my %TOURNAMENTS_DENMARK =
           },
           'C4' => 
           {
+            # Copenhagen
             YEAR => 2013,
-            CITY => 'Copenhagen',
             WEEKEND => 5,
             STAGE => 'Semifinal',
             major => 'MATCH',
@@ -1330,8 +1329,8 @@ my %TOURNAMENTS_DENMARK =
           },
           'C5' => 
           {
+            # Copenhagen
             YEAR => 2013,
-            CITY => 'Copenhagen',
             WEEKEND => 5,
             STAGE => 'Final',
             major => 'SEGMENT',
@@ -1377,8 +1376,8 @@ my %TOURNAMENTS_DENMARK =
           },
           'C4' => 
           {
+            # Copenhagen'
             YEAR => 2014,
-            CITY => 'Copenhagen',
             WEEKEND => 5,
             STAGE => 'Semifinal',
             major => 'SEGMENT',
@@ -1387,8 +1386,8 @@ my %TOURNAMENTS_DENMARK =
           },
           'C5' => 
           {
+            # Copenhagen'
             YEAR => 2014,
-            CITY => 'Copenhagen',
             WEEKEND => 5,
             STAGE => 'Final',
             major => 'SEGMENT',
@@ -1429,8 +1428,8 @@ my %TOURNAMENTS_DENMARK =
           },
           'C3' => 
           {
+            # Copenhagen
             YEAR => 2015,
-            CITY => 'Copenhagen',
             WEEKEND => 4,
             major => 'ROUND',
             minor => 'SEGMENT',
@@ -1439,8 +1438,8 @@ my %TOURNAMENTS_DENMARK =
           },
           'C4' => 
           {
+            # Copenhagen
             YEAR => 2015,
-            CITY => 'Copenhagen',
             WEEKEND => 5,
             STAGE => 'Semifinal',
             major => 'SEGMENT',
@@ -1449,8 +1448,8 @@ my %TOURNAMENTS_DENMARK =
           },
           'C5' => 
           {
+            # Copenhagen
             YEAR => 2015,
-            CITY => 'Copenhagen',
             WEEKEND => 5,
             STAGE => 'Final',
             major => 'SEGMENT',
@@ -1476,8 +1475,8 @@ my %TOURNAMENTS_DENMARK =
           },
           'C1' => 
           {
+            # Copenhagen
             YEAR => 2015,
-            CITY => 'Copenhagen',
             WEEKEND => 2,
             major => 'ROUND',
             DATE_START => '2015-11-21',
@@ -1485,8 +1484,8 @@ my %TOURNAMENTS_DENMARK =
           },
           'C2' => 
           {
+            # Copenhagen
             YEAR => 2016,
-            CITY => 'Copenhagen',
             WEEKEND => 3,
             major => 'ROUND',
             DATE_START => '2016-01-16',
@@ -1494,8 +1493,8 @@ my %TOURNAMENTS_DENMARK =
           },
           'C3' => 
           {
+            # Århus
             YEAR => 2016,
-            CITY => 'Århus',
             WEEKEND => 4,
             major => 'ROUND',
             minor => 'SEGMENT',
@@ -1504,9 +1503,9 @@ my %TOURNAMENTS_DENMARK =
           },
           'C4' => 
           {
+            # Copenhagen
             YEAR => 2016,
             WEEKEND => 5,
-            CITY => 'Copenhagen',
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2016-04-02',
@@ -1514,8 +1513,8 @@ my %TOURNAMENTS_DENMARK =
           },
           'C5' => 
           {
+            # Copenhagen
             YEAR => 2016,
-            CITY => 'Copenhagen',
             WEEKEND => 5,
             STAGE => 'Final',
             major => 'SEGMENT',
@@ -1533,9 +1532,9 @@ my %TOURNAMENTS_DENMARK =
         {
           'C0' => 
           {
+            # Copenhagen
             YEAR => 2016,
             WEEKEND => 1,
-            CITY => 'Copenhagen',
             DATE_START => '2016-10-08',
             DATE_END => '2016-10-09'
           },
@@ -1555,27 +1554,27 @@ my %TOURNAMENTS_DENMARK =
           },
           'C3' => 
           {
+            # Århus
             YEAR => 2017,
             WEEKEND => 4,
-            CITY => 'Århus',
             DATE_START => '2017-03-04',
             DATE_END => '2017-03-05'
           },
           'C4' => 
           {
+            # Århus
             YEAR => 2017,
             WEEKEND => 5,
             STAGE => 'Semifinal',
-            CITY => 'Århus',
             DATE_START => '2017-04-01',
             DATE_END => '2017-04-01'
           },
           'C5' => 
           {
+            # Århus
             YEAR => 2017,
             WEEKEND => 5,
             STAGE => 'Final',
-            CITY => 'Århus',
             DATE_START => '2017-04-02',
             DATE_END => '2017-04-02'
           }
@@ -1611,27 +1610,27 @@ my %TOURNAMENTS_DENMARK =
           },
           'C3' => 
           {
+            # Århus
             YEAR => 2018,
             WEEKEND => 4,
-            CITY => 'Århus',
             DATE_START => '2018-03-03',
             DATE_END => '2018-03-04'
           },
           'C4' => 
           {
+            # Copenhagen
             YEAR => 2018,
             WEEKEND => 5,
             STAGE => 'Semifinal',
-            CITY => 'Copenhagen',
             DATE_START => '2018-04-07',
             DATE_END => '2018-04-07'
           },
           'C5' => 
           {
+            # Copenhagen
             YEAR => 2018,
             WEEKEND => 5,
             STAGE => 'Final',
-            CITY => 'Copenhagen',
             DATE_START => '2018-04-08',
             DATE_END => '2018-04-08'
           }
@@ -1646,9 +1645,9 @@ my %TOURNAMENTS_DENMARK =
         {
           'C0' => 
           {
+            # Århus
             YEAR => 2018,
             WEEKEND => 1,
-            CITY => 'Århus',
             DATE_START => '2018-11-17',
             DATE_END => '2018-11-18'
           },
@@ -1668,27 +1667,27 @@ my %TOURNAMENTS_DENMARK =
           },
           'C3' => 
           {
+            # Copenhagen
             YEAR => 2019,
             WEEKEND => 4,
-            CITY => 'Copenhagen',
             DATE_START => '2019-04-06',
             DATE_END => '2019-04-07'
           },
           'C4' => 
           {
+            # Copenhagen
             YEAR => 2019,
             WEEKEND => 5,
             STAGE => 'Semifinal',
-            CITY => 'Copenhagen',
             DATE_START => '2019-04-27',
             DATE_END => '2019-04-27'
           },
           'C5' => 
           {
+            # Copenhagen
             YEAR => 2019,
             WEEKEND => 5,
             STAGE => 'Final',
-            CITY => 'Copenhagen',
             DATE_START => '2019-04-28',
             DATE_END => '2019-04-28'
           }
@@ -1724,27 +1723,27 @@ my %TOURNAMENTS_DENMARK =
           },
           'C3' => 
           {
+            # Copenhagen
             YEAR => 2020,
             WEEKEND => 4,
-            CITY => 'Copenhagen',
             DATE_START => '2020-08-15',
             DATE_END => '2020-08-16'
           },
           'C4' => 
           {
+            # Copenhagen
             YEAR => 2020,
             WEEKEND => 5,
             STAGE => 'Semifinal',
-            CITY => 'Copenhagen',
             DATE_START => '2020-08-29',
             DATE_END => '2020-08-29'
           },
           'C5' => 
           {
+            # Copenhagen
             YEAR => 2020,
             WEEKEND => 5,
             STAGE => 'Final',
-            CITY => 'Copenhagen',
             DATE_START => '2020-08-30',
             DATE_END => '2020-08-30'
           }
@@ -1780,27 +1779,27 @@ my %TOURNAMENTS_DENMARK =
           },
           'C3' => 
           {
+            # Copenhagen
             YEAR => 2022,
             WEEKEND => 4,
-            CITY => 'Copenhagen',
             DATE_START => '2022-03-05',
             DATE_END => '2022-03-06'
           },
           'C4' => 
           {
+            # Århus
             YEAR => 2022,
             WEEKEND => 5,
             STAGE => 'Semifinal',
-            CITY => 'Århus',
             DATE_START => '2022-04-23',
             DATE_END => '2022-04-23'
           },
           'C5' => 
           {
+            # Århus
             YEAR => 2022,
             WEEKEND => 5,
             STAGE => 'Final',
-            CITY => 'Århus',
             DATE_START => '2022-04-24',
             DATE_END => '2022-04-24'
           }
@@ -1836,27 +1835,27 @@ my %TOURNAMENTS_DENMARK =
           },
           'C3' => 
           {
+            # Copenhagen
             YEAR => 2023,
             WEEKEND => 4,
-            CITY => 'Copenhagen',
             DATE_START => '2023-03-04',
             DATE_END => '2023-03-05'
           },
           'C4' => 
           {
+            # Copenhagen
             YEAR => 2023,
             WEEKEND => 5,
             STAGE => 'Semifinal',
-            CITY => 'Copenhagen',
             DATE_START => '2023-04-15',
             DATE_END => '2023-04-15'
           },
           'C5' => 
           {
+           # Copenhagen
             YEAR => 2023,
             WEEKEND => 5,
             STAGE => 'Final',
-            CITY => 'Copenhagen',
             DATE_START => '2023-04-16',
             DATE_END => '2023-04-16'
           }
@@ -1892,27 +1891,27 @@ my %TOURNAMENTS_DENMARK =
           },
           'C3' => 
           {
+            # Copenhagen
             YEAR => 2024,
             WEEKEND => 4,
-            CITY => 'Copenhagen',
             DATE_START => '2024-03-02',
             DATE_END => '2024-03-03'
           },
           'C4' => 
           {
+            # Copenhagen
             YEAR => 2024,
             WEEKEND => 5,
             STAGE => 'Semifinal',
-            CITY => 'Copenhagen',
             DATE_START => '2024-04-13',
             DATE_END => '2024-04-13'
           },
           'C5' => 
           {
+            # Copenhagen
             YEAR => 2024,
             WEEKEND => 5,
             STAGE => 'Final',
-            CITY => 'Copenhagen',
             DATE_START => '2024-04-14',
             DATE_END => '2024-04-14'
           }

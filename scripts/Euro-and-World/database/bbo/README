@@ -1,29 +1,46 @@
+Entry: Switch to using FScorr.
+
 FIELDS
 
 Tournaments, Meets
-- ParseT:get_all_fields should differentiate t_chapter from rest
-- The chapter info should only be YEAR, DATE_START, DATE_END,
-  STAGE, major, minor, MOVEMENT (if there, could be higher too)
-- ParseT should look up all such header pairs for {tname}{tag}
+- ParseT should look up all header pairs for {tname}{tag}
+  and store them
+- Also for a given Meet {meet}{tag}, list of tname, tag
+  that match it
 
 BBO data
 - What goes in chapter-level:
-  DATE, STAGE, any counters, TEAM?_*, BOARDS
-  MOVEMENT and YEAR could go either way
+  DATE, YEAR, STAGE, MOVEMENT, any counters, TEAM?_*, BOARDS
 - Anything with TITLE_, EVENT_ is renamed, no collisions
   but repetitions are OK; in the end no more Tword?
   45865
 - n of m with n > m occasionally OK, but not always
 
+New lookup of BBO data
+- If tname
+  - Scan tags, first for YEAR
+  - If stored version has meet, match this too
+  - If it doesn't, there shouldn't be a meet given
+
+  - Then match the rest of the header
+  - Then match the chapter
+  - When testing, flag anything that is not used in headers
+    Should perhaps be in header?
+
+- If no tname but meet
+  - Match YEAR first
+  - Then loop over tnames for each Meet that matches
+    (which means that it matches YEAR in Tname, I think)
+    - Scan all tags
+  - Then match the chapter
+  - When testing, flag anything that is not used in headers
+
+Do I really have to make RR a MOVEMENT, not a STAGE?
+Seems cleaner though.
+
 Could have a more compact BOARD format when all is accounted for
 
-Checks
-- Fields in chapter-level Tournaments
-- Note anything that is NOT matched by the best header
-  - Probably either add to header, or remove manually
-
 When matching up
-- Figure out where YEAR and MOVEMENT go
 - If there are counters in BBO, must be some in headers too
 - If there are major/minor, there must be counters too (1+, 2+)
 - MEET_ORDINAL vs ORDINAL
@@ -43,7 +60,7 @@ When matched up
 - If only countries, should be International
 
 Manual checks:
-- ORIGIN
+- ORIGIN: GLOBAL should never include it (dial back)
 
 Global fields, started on top of Sweden
 Just add %GLOBAL first

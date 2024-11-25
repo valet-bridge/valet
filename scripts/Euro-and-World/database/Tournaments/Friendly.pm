@@ -1033,7 +1033,6 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Friendly Match',
         MEET_TAG => '2016A',
-        MOVEMENT => 'Triangle',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1042,6 +1041,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2016,
+            MOVEMENT => 'Triangle',
             major => 'ROUND',
             DATE_START => '2016-02-19',
             DATE_END => '2016-02-21'

@@ -1458,7 +1458,6 @@ my %TOURNAMENTS_AUSTRALIA =
     %GLOBAL,
     ORIGIN => 'National',
     FORM => 'Pairs',
-    MOVEMENT => 'Swiss',
     SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
@@ -1472,6 +1471,7 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2011,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2011-04-13',
             DATE_END => '2011-04-13'
@@ -1479,6 +1479,7 @@ my %TOURNAMENTS_AUSTRALIA =
           'C1' => 
           {
             YEAR => 2011,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2011-04-20',
             DATE_END => '2011-04-20'
@@ -1486,6 +1487,7 @@ my %TOURNAMENTS_AUSTRALIA =
           'C2' => 
           {
             YEAR => 2011,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2011-04-27',
             DATE_END => '2011-04-27'
@@ -1493,6 +1495,7 @@ my %TOURNAMENTS_AUSTRALIA =
           'C3' => 
           {
             YEAR => 2011,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2011-05-04',
             DATE_END => '2011-05-04'
@@ -6087,7 +6090,6 @@ my %TOURNAMENTS_AUSTRALIA =
   'Victor Swiss Pairs',
   {
     FORM => 'Pairs',
-    MOVEMENT => 'Swiss',
     SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
@@ -6102,6 +6104,7 @@ my %TOURNAMENTS_AUSTRALIA =
           'SINGLE' => 
           {
             YEAR => 2013,
+            MOVEMENT => 'Swiss',
             major => 'SESSION',
             DATE_START => '2013-06-07',
             DATE_END => '2013-06-07'
@@ -6263,12 +6266,12 @@ my %TOURNAMENTS_AUSTRALIA =
       '2016' =>
       {
         MEET => 'Victor Champion Cup',
-        MOVEMENT => 'Swiss',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2016,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2016-06-11',
             DATE_END => '2016-06-13'

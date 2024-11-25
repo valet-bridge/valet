@@ -482,13 +482,13 @@ my %TOURNAMENTS_ARGENTINA =
       },
       '2007' =>
       {
+        FORM => 'Teams',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2007,
-            FORM => 'Teams',
-            SCORING => 'IMP',
             major => 'SEGMENT',
             DATE_START => '2007-04-23',
             DATE_END => '2007-04-23'
@@ -497,13 +497,13 @@ my %TOURNAMENTS_ARGENTINA =
       },
       '2009' =>
       {
+        FORM => 'Teams',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2009,
-            FORM => 'Teams',
-            SCORING => 'IMP',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2009-02-28',
@@ -513,13 +513,13 @@ my %TOURNAMENTS_ARGENTINA =
       },
       '2010' =>
       {
+        FORM => 'Teams',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'C0' => 
           {
             YEAR => 2010,
-            FORM => 'Teams',
-            SCORING => 'IMP',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2010-08-14',
@@ -528,8 +528,6 @@ my %TOURNAMENTS_ARGENTINA =
           'C1' => 
           {
             YEAR => 2010,
-            FORM => 'Teams',
-            SCORING => 'IMP',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2010-11-06',
@@ -537,34 +535,46 @@ my %TOURNAMENTS_ARGENTINA =
           },
         }
       },
-      '2012' =>
+      '2012A' =>
       {
         # https://csbnews.org/2013-argentine-trials-the-gran-final-1st-match-rizzo-angeleri/
+        FORM => 'Teams',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 2012,
-            FORM => 'Teams',
-            SCORING => 'IMP',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2012-04-14',
             DATE_END => '2012-04-15'
           },
-          'C1' => 
+        }
+      },
+      '2012B' =>
+      {
+        FORM => 'Pairs',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
           {
             YEAR => 2012,
-            FORM => 'Pairs',
-            SCORING => 'MP',
             DATE_START => '2012-10-25',
             DATE_END => '2012-10-28'
           },
-          'C2' => 
+        }
+      },
+      '2012' =>
+      {
+        FORM => 'Teams',
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
           {
             YEAR => 2012,
-            FORM => 'Teams',
-            SCORING => 'IMP',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2012-11-03',
@@ -678,21 +688,19 @@ my %TOURNAMENTS_ARGENTINA =
     {
       '2010' =>
       {
+        FORM => 'Teams',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'C0' => 
           {
             YEAR => 2010,
-            FORM => 'Teams',
-            SCORING => 'IMP',
             DATE_START => '2010-08-14',
             DATE_END => '2010-08-15'
           },
           'C1' => 
           {
             YEAR => 2010,
-            FORM => 'Teams',
-            SCORING => 'IMP',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2010-11-06',
@@ -702,13 +710,13 @@ my %TOURNAMENTS_ARGENTINA =
       },
       '2011' =>
       {
+        FORM => 'Teams',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'C0' => 
           {
             YEAR => 2011,
-            FORM => 'Teams',
-            SCORING => 'IMP',
             STAGE => 'Final',
             DATE_START => '2011-11-06',
             DATE_END => '2011-11-07'
@@ -723,8 +731,6 @@ my %TOURNAMENTS_ARGENTINA =
           'C0' => 
           {
             YEAR => 2012,
-            FORM => 'Teams',
-            SCORING => 'IMP',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2012-11-04',

@@ -291,7 +291,7 @@ my %TOURNAMENTS_SERBIA =
       {
         # https://www.bridgeserbia.org/arhiva/sezona2011/bss/zeps2011.html
         ORDINAL => 5,
-        CITY => 'Nis',
+        CITY => 'Niš',
 
         CHAPTERS =>
         {
@@ -381,12 +381,12 @@ my %TOURNAMENTS_SERBIA =
       '2009' =>
       {
         # https://www.bridgeserbia.org/arhiva/sezona2009/bss/ligasrb_2009.html
+        CITY => 'Vrnjacka Banja',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2009,
-            CITY => 'Vrnjacka Banja',
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2009-04-26',

@@ -81,7 +81,7 @@ my @SINGLE_WORDS = qw(
   Albania Andorra Angora Argentina Australia Austria 
   Bahrain Balkan Bangladesh Barbados Belarus Belgium Bermuda 
   Bolivia Bosnia Botswana Brazil Bulgaria
-  Canada Chile Colombia Croatia Cyprus
+  Canada Chile Colombia Croatia Cuba Cyprus
   Denmark 
   Ecuador Egypt England Estonia 
   Finland France

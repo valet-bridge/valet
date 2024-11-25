@@ -54,12 +54,16 @@ my %data;
 my (@times, $t0);
 
 my $entryT = EntryT->new();
+my $entry2T = EntryT->new();
 while ($entryT->read($fh))
 {
   if ($debug_flag && defined $debug_bbono)
   {
     next unless $entryT->bbono() eq $debug_bbono;
   }
+
+  $entry2T->copy_from_TMP($entryT);
+  $entry2T->format();
 
   my $meet = $entryT->field('TITLE_MEET');
   my $tname = $entryT->field('TITLE_TNAME');

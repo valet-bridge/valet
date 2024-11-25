@@ -782,13 +782,13 @@ my %TOURNAMENTS_SOUTHAMERICA =
         # http://www.confsudbridge.org/Torneos/Tor_0003.aspx
         %GLOBAL,
         ORIGIN => 'International',
+        CITY => 'Rio de Janeiro',
+        COUNTRY => 'Brazil',
 
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            CITY => 'Rio de Janeiro',
-            COUNTRY => 'Brazil',
             YEAR => 2007,
             STAGE => 'Final',
             major => 'SEGMENT',

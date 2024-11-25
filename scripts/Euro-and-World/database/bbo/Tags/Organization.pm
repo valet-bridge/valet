@@ -148,7 +148,6 @@ my %SINGLE_TYPOS =
   GABSI => ['iba'],
   'Indonesian Ministry of Youth and Sports' => ['menpora'],
   'Jilin Sheng Qiaopa' => ['jilinshengqiaopa'],
-  'Shanghai Contract Bridge Association' => ['scba']
 );
 
 

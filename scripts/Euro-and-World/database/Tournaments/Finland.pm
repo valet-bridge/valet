@@ -734,7 +734,6 @@ my %TOURNAMENTS_FINLAND =
     ORIGIN => 'National',
     FORM => 'Pairs',
     SCORING => 'IMP',
-    MOVEMENT => 'Swiss',
     GENDER => 'Open',
     AGE => 'Open',
 
@@ -748,6 +747,7 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' => 
           {
             YEAR => 2011,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2011-02-12',
             DATE_END => '2011-02-13'
@@ -762,6 +762,7 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' => 
           {
             YEAR => 2012,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2012-02-18',
             DATE_END => '2012-02-19'
@@ -776,6 +777,7 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' => 
           {
             YEAR => 2013,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2013-02-16',
             DATE_END => '2013-02-17'
@@ -790,6 +792,7 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' => 
           {
             YEAR => 2014,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2014-04-05',
             DATE_END => '2014-04-06'
@@ -804,6 +807,7 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' => 
           {
             YEAR => 2015,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2015-05-23',
             DATE_END => '2015-05-24'

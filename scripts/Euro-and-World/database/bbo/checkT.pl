@@ -231,62 +231,55 @@ sub check_field_values
         my $cdate1 = $chapter->{DATE_START};
         my $cdate2 = $chapter->{DATE_END};
 
-        for my $meet (sort keys %{$links_m{$keys[0]}})
+        my (%cumul, %chapter);
+        $parseT->get_all_fields($tname, $tag, $ctag, \%cumul, \%chapter);
+
+        my @fields = sort keys %cumul;
+        push @fields, sort keys %chapter;
+
+        for my $field (sort keys %cumul)
         {
-          my $meditions = $links_m{$keys[0]}{$meet}{EDITIONS};
-          for my $mtag (sort keys %$meditions)
+          # TODO WEEKEND
+          # TODO Online as a city (wasn't there a special city?!)
+
+          next if ($field eq 'major' ||
+            $field eq 'minor' ||
+            $field eq 'WEEKEND' ||
+            $field eq 'YEAR');
+
+          next if ($field eq 'ORDINAL' && $cumul{$field} =~ /^\d+$/);
+          next if ($field eq 'CITY' && $cumul{$field} eq 'Online');
+          next if ($field eq 'AGE' && $cumul{$field} eq 'Open');
+
+          my $composite = $whole->get_multi($field, lc($cumul{$field}));
+          if (defined $composite)
           {
-            my $mchapter = $meditions->{$mtag};
-
-            my %cumul;
-            $parseT->get_all_fields($tname, $tag, $ctag, \%cumul);
-
-            for my $field (sort keys %cumul)
+            if ($cumul{$field} ne $composite)
             {
-              # TODO WEEKEND
-              # TODO Online as a city (wasn't there a special city?!)
-
-              next if ($field eq 'major' ||
-                $field eq 'minor' ||
-                $field eq 'WEEKEND' ||
-                $field eq 'YEAR');
-
-              next if ($field eq 'ORDINAL' && $cumul{$field} =~ /^\d+$/);
-              next if ($field eq 'CITY' && $cumul{$field} eq 'Online');
-              next if ($field eq 'AGE' && $cumul{$field} eq 'Open');
-
-              my $composite = $whole->get_multi($field, lc($cumul{$field}));
-              if (defined $composite)
-              {
-                if ($cumul{$field} ne $composite)
-                {
-                  print "$tname, $tag, $ctag: ",
-                    "field $field, value .$cumul{$field}., ",
-                    " got .$composite.\n";
-                }
-                next;
-              }
-
-              my $single = $whole->get_single($field, lc($cumul{$field}));
-              if (! defined $single->{CATEGORY})
-              {
-                print "$tname, $tag, $ctag: ",
-                  $cumul{$field}, ", $field: No singleton category\n";
-                next;
-              }
-
-              if ($cumul{$field} ne $single->{VALUE})
-              {
-               print "$tname, $tag, $ctag: ",
-                 "field $field, value .$cumul{$field}., ",
-                 " got single .", $single->{VALUE}, ".\n";
-              }
+              print "$tname, $tag, $ctag: ",
+                "field $field, value .$cumul{$field}., ",
+                " got .$composite.\n";
             }
+            next;
+          }
 
-            # warn "$tname, $tag, $ctag";
+          my $single = $whole->get_single($field, lc($cumul{$field}));
+          if (! defined $single->{CATEGORY})
+          {
+            print "$tname, $tag, $ctag: ",
+              $cumul{$field}, ", $field: No singleton category\n";
+            next;
+          }
 
+          if ($cumul{$field} ne $single->{VALUE})
+          {
+           print "$tname, $tag, $ctag: ",
+             "field $field, value .$cumul{$field}., ",
+             " got single .", $single->{VALUE}, ".\n";
           }
         }
+
+        # warn "$tname, $tag, $ctag";
       }
     }
   }

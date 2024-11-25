@@ -21,9 +21,9 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Belarusian Belgian Bolivian Brazilian Bulgarian
   Argentinian Australian Austrian
-  Canadian Chilean Croatian Czech
+  Belarusian Belgian Bolivian Brazilian Bulgarian
+  Canadian Chilean Croatian Cuban Czech
   Dutch
   Egyptian English Estonian
   Faroese Finnish French

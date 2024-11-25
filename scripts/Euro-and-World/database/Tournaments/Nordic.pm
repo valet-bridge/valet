@@ -189,12 +189,12 @@ my %TOURNAMENTS_NORDIC =
       '2006' =>
       {
         # https://www.bridge.dk/turn/nordic_cup06/
+        CITY => 'Rottneros',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2006,
-            CITY => 'Rottneros',
             major => 'MATCH',
             minor => 'HALF',
             DATE_START => '2006-05-19',
@@ -206,12 +206,12 @@ my %TOURNAMENTS_NORDIC =
       {
         # https://arkiv.svenskbridge.se/e107_plugins/league/season.php?action=view&id=352
         ORDINAL => 12,
+        CITY => 'Rottneros',
         CHAPTERS =>
         {
           'C0' => 
           {
             YEAR => 2008,
-            CITY => 'Rottneros',
             major => 'ROUND',
             DATE_START => '2008-05-23',
             DATE_END => '2008-05-23'
@@ -219,7 +219,6 @@ my %TOURNAMENTS_NORDIC =
           'C1' => 
           {
             YEAR => 2008,
-            CITY => 'Rottneros',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2008-05-25',

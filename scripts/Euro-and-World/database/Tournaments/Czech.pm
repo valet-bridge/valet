@@ -15,7 +15,7 @@ our @EXPORT = qw(set_links);
 # https://www.czechbridge.cz/tournaments
 
 my %GLOBAL = (
-  ORGANIZATION => 'CzFB',
+  ORGANIZATION => 'CzBF',
   COUNTRY => 'Czech Republic',
   ZONE => 'Europe',
 );

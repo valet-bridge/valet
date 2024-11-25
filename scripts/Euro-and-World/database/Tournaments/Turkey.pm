@@ -2611,7 +2611,6 @@ my %TOURNAMENTS_TURKEY =
   {
     %GLOBAL,
     FORM => 'Teams',
-    MOVEMENT => 'Swiss',
     SCORING => 'IMP',
     GENDER => 'Mixed',
     AGE => 'Open',
@@ -2626,6 +2625,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2015,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2015-12-16',
             DATE_END => '2015-12-18'

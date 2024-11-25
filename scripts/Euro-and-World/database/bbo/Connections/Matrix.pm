@@ -92,7 +92,8 @@ my %COUNTRY_TO_CITY =
   Argentina => ['buenos aires', 'mar del plata', 'san luis'],
   Australia => [
     'adelaide', 'banora point', 'brisbane', 'broadbeach', 'cairns', 
-    'canberra', 'melbourne', 'perth', 'sydney', 'tweed heads'],
+    'canberra', 'gold coast', 'melbourne', 'perth', 'sydney', 
+    'tweed heads'],
   Austria => ['mautern', 'vienna'],
   Belarus => ['minsk'],
   Belgium => ['antwerpen', 'bruges', 'brussels', 'gent', 'leuven',
@@ -180,6 +181,7 @@ my %COUNTRY_TO_CITY =
     'tanjung pinang', 'tarakan', 'thane', 'thanjavur', 'tomohon', 
     'yogyakarta'],
   Iraq => ['baghdad'],
+  Ireland => ['galway'],
   Israel => ['tel aviv'],
   Italy => [
     'bologna', 'cannareggio', 'catania', 'cuneo', 'firenze', 'genoa', 
@@ -204,7 +206,7 @@ my %COUNTRY_TO_CITY =
     "'s-hertogenbosch", 'the hague', 'utrecht'],
   'New Zealand' => ['auckland', 'wellington'],
   'North Macedonia' => ['gevgelija', 'skopje'],
-  'Northern Ireland' => ['ballymena'],
+  'Northern Ireland' => ['belfast', 'ballymena'],
   Norway => [
     'arendal', 'bergen', 'bodø', 'brandbu', 'drammen', 'farsund', 
     'flekkefjord', 'fosnavåg', 'førde', 'gudbrandsdal', 
@@ -232,7 +234,7 @@ my %COUNTRY_TO_CITY =
     'oltenita', 'piatra neamt', 'sibiu', 'targoviste', 'timisoara'],
   Russia => ['lokotok', 'moscow', 'russia-pan', 'saint petersburg'],
   'San Marino' => ['san marino city'],
-  Scotland => ['edinburgh', 'glasgow'],
+  Scotland => ['edinburgh', 'glasgow', 'peebles', 'stirling'],
   Serbia => ['belgrade', 'beograd', 'jagodina', 'niš', 'novi sad', 
     'pancevo', 'vrnjacka banja'],
   Singapore => ['singapore city'],
@@ -274,7 +276,8 @@ my %COUNTRY_TO_CITY =
     'evanston', 'ithaca', 'kansas city', 'las vegas', 'new york city', 
     'philadelphia', 'salt lake city', 'st louis', 'stanford', 
     'urbana-champaign', 'waltham'],
-  Venezuela => ['caracas']
+  Venezuela => ['caracas'],
+  Wales => ['newport'],
 );
 
 
@@ -977,6 +980,7 @@ my %COUNTRY_TO_NATIONALITY =
   Canada => ['canadian'],
   Chile => ['chilean'],
   Croatia => ['croatian'],
+  Cuba => => ['cuban'],
   'Czech Republic' => ['czech'],
   Egypt => ['egyptian'],
   England => ['english'],

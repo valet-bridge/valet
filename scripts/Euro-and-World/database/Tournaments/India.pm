@@ -1452,7 +1452,6 @@ my %TOURNAMENTS_INDIA =
     %GLOBAL,
     ORIGIN => 'National',
     FORM => 'Pairs',
-    MOVEMENT => 'Swiss',
     GENDER => 'Open',
     AGE => 'Open',
 
@@ -1466,6 +1465,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2012,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2012-11-24',
             DATE_END => '2012-11-25'
@@ -1480,6 +1480,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2013,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2013-11-23',
             DATE_END => '2013-11-24'
@@ -1494,6 +1495,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2014,
+            MOVEMENT => 'Swiss',
             major => 'SESSION',
             DATE_START => '2014-11-22',
             DATE_END => '2014-11-23'
@@ -1508,6 +1510,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2015,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2015-11-28',
             DATE_END => '2015-11-29'
@@ -3558,13 +3561,13 @@ my %TOURNAMENTS_INDIA =
       '2012B' =>
       {
         MEET => 'Maharashtra State Championship',
+        CITY => 'Nashik',
         CHAPTERS =>
         {
           'C0' => 
           {
             # Not sure
             YEAR => 2012,
-            CITY => 'Nashik',
             STAGE => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-10-27',
@@ -3574,7 +3577,6 @@ my %TOURNAMENTS_INDIA =
           {
             # Not sure
             YEAR => 2012,
-            CITY => 'Nashik',
             STAGE => 'Quarterfinal',
             major => 'SEGMENT',
             DATE_START => '2012-10-27',
@@ -3584,7 +3586,6 @@ my %TOURNAMENTS_INDIA =
           {
             # Not sure
             YEAR => 2012,
-            CITY => 'Nashik',
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2012-10-27',
@@ -3594,7 +3595,6 @@ my %TOURNAMENTS_INDIA =
           {
             # Not sure
             YEAR => 2012,
-            CITY => 'Nashik',
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2012-10-28',
@@ -5949,7 +5949,6 @@ my %TOURNAMENTS_INDIA =
     ORIGIN => 'National',
     CITY => 'Mumbai',
     FORM => 'Pairs',
-    MOVEMENT => 'Swiss',
     SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
@@ -5963,6 +5962,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2015,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2015-01-23',
             DATE_END => '2015-01-25'
@@ -5976,6 +5976,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2016,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2016-01-24',
             DATE_END => '2016-01-26'
@@ -5989,6 +5990,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2017,
+            MOVEMENT => 'Swiss',
             DATE_START => '2017-01-27',
             DATE_END => '2017-01-29'
           } 
@@ -6001,6 +6003,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2018,
+            MOVEMENT => 'Swiss',
             DATE_START => '2018-01-26',
             DATE_END => '2018-01-28'
           } 
@@ -6013,6 +6016,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2019,
+            MOVEMENT => 'Swiss',
             DATE_START => '2019-01-25',
             DATE_END => '2019-01-27'
           } 
@@ -6025,6 +6029,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2020,
+            MOVEMENT => 'Swiss',
             DATE_START => '2020-01-24',
             DATE_END => '2020-01-26'
           } 
@@ -6038,6 +6043,7 @@ my %TOURNAMENTS_INDIA =
           {
             # Online
             YEAR => 2022,
+            MOVEMENT => 'Swiss',
             DATE_START => '2022-01-28',
             DATE_END => '2022-01-30'
           } 
@@ -6050,6 +6056,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2023,
+            MOVEMENT => 'Swiss',
             DATE_START => '2023-01-27',
             DATE_END => '2023-01-29'
           } 
@@ -6062,6 +6069,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2024,
+            MOVEMENT => 'Swiss',
             DATE_START => '2024-01-26',
             DATE_END => '2024-01-28'
           } 

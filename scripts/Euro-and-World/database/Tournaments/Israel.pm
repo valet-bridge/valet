@@ -1443,7 +1443,6 @@ my %TOURNAMENTS_ISRAEL =
   'Red Sea Open Swiss Teams' =>
   {
     FORM => 'Teams',
-    MOVEMENT => 'Swiss',
     SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
@@ -1458,6 +1457,7 @@ my %TOURNAMENTS_ISRAEL =
           'SINGLE' => 
           {
             YEAR => 2009,
+            MOVEMENT => 'Swiss',
             DATE_START => '2009-11-07',
             DATE_END => '2009-11-08'
           } 
@@ -1471,6 +1471,7 @@ my %TOURNAMENTS_ISRAEL =
           'SINGLE' => 
           {
             YEAR => 2015,
+            MOVEMENT => 'Swiss',
             DATE_START => '2015-11-21',
             DATE_END => '2015-11-21'
           } 

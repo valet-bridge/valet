@@ -722,7 +722,6 @@ my %TOURNAMENTS_SWEDEN =
   {
     %GLOBAL,
     FORM => 'Teams',
-    MOVEMENT => 'Swiss',
     SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
@@ -736,6 +735,7 @@ my %TOURNAMENTS_SWEDEN =
           'SINGLE' => 
           {
             YEAR => 2013,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2013-09-21',
             DATE_END => '2013-09-22'
@@ -1603,12 +1603,12 @@ my %TOURNAMENTS_SWEDEN =
       '2015' =>
       {
         # https://www.svenskbridge.se/sm-lag-2015/final
+        CITY => 'Örebro',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2015,
-            CITY => 'Örebro',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2015-05-14',
@@ -1619,12 +1619,12 @@ my %TOURNAMENTS_SWEDEN =
       '2016' =>
       {
         # https://www.svenskbridge.se/sm-lag-2016/final
+        CITY => 'Örebro',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2016,
-            CITY => 'Örebro',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2016-05-05',
@@ -1635,12 +1635,12 @@ my %TOURNAMENTS_SWEDEN =
       '2017' =>
       {
         # https://www.svenskbridge.se/sm-lag-2017/final
+        CITY => 'Örebro',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2017,
-            CITY => 'Örebro',
             DATE_START => '2017-05-25',
             DATE_END => '2017-05-28'
           } 
@@ -1649,12 +1649,12 @@ my %TOURNAMENTS_SWEDEN =
       '2018' =>
       {
         # https://www.svenskbridge.se/sm-lag-2018/final
+        CITY => 'Örebro',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2018,
-            CITY => 'Örebro',
             DATE_START => '2018-05-10',
             DATE_END => '2018-05-13'
           } 
@@ -1663,12 +1663,12 @@ my %TOURNAMENTS_SWEDEN =
       '2019' =>
       {
         # https://www.svenskbridge.se/sm-lag-2022/final
+        CITY => 'Örebro',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2019,
-            CITY => 'Örebro',
             DATE_START => '2019-05-30',
             DATE_END => '2019-06-02'
           } 
@@ -1677,12 +1677,12 @@ my %TOURNAMENTS_SWEDEN =
       '2021' =>
       {
         # https://www.svenskbridge.se/sm-lag-2021/final
+        CITY => 'Online',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2021,
-            CITY => 'Online',
             DATE_START => '2021-05-13',
             DATE_END => '2021-05-16'
           } 
@@ -1691,12 +1691,12 @@ my %TOURNAMENTS_SWEDEN =
       '2022' =>
       {
         # https://www.svenskbridge.se/sm-lag-2022/final
+        CITY => 'Örebro',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2022,
-            CITY => 'Örebro',
             DATE_START => '2022-05-26',
             DATE_END => '2022-05-29'
           } 
@@ -1705,12 +1705,12 @@ my %TOURNAMENTS_SWEDEN =
       '2023' =>
       {
         # https://www.svenskbridge.se/sm-lag-2023/final
+        CITY => 'Örebro',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2023,
-            CITY => 'Örebro',
             DATE_START => '2023-05-18',
             DATE_END => '2023-05-21'
           } 
@@ -1719,12 +1719,12 @@ my %TOURNAMENTS_SWEDEN =
       '2024' =>
       {
         # https://www.svenskbridge.se/sm-lag-2024/final
+        CITY => 'Örebro',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2024,
-            CITY => 'Örebro',
             DATE_START => '2024-05-09',
             DATE_END => '2024-05-12'
           } 

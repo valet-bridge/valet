@@ -894,13 +894,13 @@ my %TOURNAMENTS_UK =
       },
       '2018' =>
       {
+        COUNTRY => 'Australia',
+        CITY => 'Gold Coast',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2018,
-            COUNTRY => 'Australia',
-            CITY => 'Gold Coast',
             DATE_START => '2018-02-14',
             DATE_END => '2018-02-18'
           },
@@ -1810,7 +1810,7 @@ my %TOURNAMENTS_UK =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Juniors',
+    AGE => 'U26',
 
     EDITIONS =>
     {
