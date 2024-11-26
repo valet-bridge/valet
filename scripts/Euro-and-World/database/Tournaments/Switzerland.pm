@@ -61,6 +61,19 @@ my %TOURNAMENTS_SWITZERLAND =
 
     EDITIONS =>
     {
+      '2010' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            major => 'SEGMENT',
+            DATE_START => '2010-06-13',
+            DATE_END => '2010-06-13'
+          } 
+        }
+      },
       '2011' =>
       {
         CHAPTERS =>

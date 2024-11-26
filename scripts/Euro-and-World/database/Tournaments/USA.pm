@@ -1947,7 +1947,7 @@ my %TOURNAMENTS_USA =
             YEAR => 2001,
             STAGE => 'Semifinal',
             DATE_START => '2001-07-25',
-            DATE_END => '2001-07-26'
+            DATE_END => '2001-07-27'
           },
           'C6' => 
           {

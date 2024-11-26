@@ -68,6 +68,7 @@ my @HEADER_FIELDS_NEW = qw(
 
   ZONE
   COUNTRY
+  NATIONALITY
   REGION
   CITY
   LOCALITY
@@ -98,6 +99,7 @@ my %HEADER_HASH_NEW = (
   TITLE_ZONE => 'ZONE',
   TITLE_COUNTRY => 'COUNTRY',
   EVENT_COUNTRY => 'COUNTRY',
+  TITLE_NATIONALITY => 'NATIONALITY',
   TITLE_REGION => 'REGION',
   TITLE_CITY => 'CITY',
   EVENT_CITY => 'CITY',
@@ -158,6 +160,11 @@ my @COUNTER_FIELDS_NEW = qw(
   PHASE
   FLIGHT
   GROUP
+  COLOR
+  DAY
+  YEAR_MONTH
+  MONTH_DAY
+  TIME
   ROUND
   SEGMENT
   SET
@@ -167,6 +174,7 @@ my @COUNTER_FIELDS_NEW = qw(
   QUARTER
   MATCH
   TABLE
+  PLACE
 );
 
 my %COUNTER_HASH_NEW = (
@@ -183,6 +191,16 @@ my %COUNTER_HASH_NEW = (
   TITLE_GROUP => 'GROUP',
   EVENT_GROUP => 'GROUP',
 
+  EVENT_COLOR => 'COLOR',
+
+  TITLE_DAY => 'DAY',
+  EVENT_DAY => 'DAY',
+
+  EVENT_YEAR_MONTH => 'YEAR_MONTH',
+  EVENT_MONTH_DAY => 'MONTH_DAY',
+
+  TITLE_TIME => 'TIME',
+
   TITLE_ROUND => 'ROUND',
   EVENT_ROUND => 'ROUND',
 
@@ -197,6 +215,7 @@ my %COUNTER_HASH_NEW = (
 
   EVENT_STANZA => 'STANZA',
 
+  TITLE_HALF => 'HALF',
   EVENT_HALF => 'HALF',
 
   TITLE_QUARTER => 'QUARTER',
@@ -207,6 +226,8 @@ my %COUNTER_HASH_NEW = (
 
   TITLE_TABLE => 'TABLE',
   EVENT_TABLE => 'TABLE',
+
+  EVENT_PLACE => 'PLACE',
 );
 
 $COUNTER_HASH_NEW{$_} = $_ for @COUNTER_FIELDS_NEW;
@@ -240,8 +261,12 @@ my %MULTI_VALUED_TEAM_FIELD = (
   'TEAM2_CAPTAIN' => ['TEAM2', 'CAPTAIN'],
   'TEAM1_COUNTRY' => ['TEAM1', 'COUNTRY'],
   'TEAM2_COUNTRY' => ['TEAM2', 'COUNTRY'],
+  'TEAM1_REGION' => ['TEAM1', 'REGION'],
+  'TEAM2_REGION' => ['TEAM2', 'REGION'],
   'TEAM1_CITY' => ['TEAM1', 'CITY'],
   'TEAM2_CITY' => ['TEAM2', 'CITY'],
+  'TEAM1_ORIGIN' => ['TEAM1', 'ORIGIN'],
+  'TEAM2_ORIGIN' => ['TEAM2', 'ORIGIN'],
 );
 
 # ------------------------------------------------
@@ -385,6 +410,70 @@ sub form_fixable
 }
 
 
+sub boards_fixable_ordered
+{
+  my ($self, $boards_range, $header_range) = @_;
+
+  if ($boards_range !~ /^(\d+)-(\d+)$/)
+  {
+    die $self->bbono() . ": Not a board range: $boards_range";
+  }
+  my ($newb1, $newb2) = ($1, $2);
+
+  if ($header_range !~ /^header (\d+) (\d+)/)
+  {
+    die $self->bbono() . ": Not an automatic board range: $header_range";
+  }
+  my ($header1, $header2) = ($1, $2);
+  if ($header1 != $newb1 || $header2 != $newb2)
+  {
+    die $self->bbono() . ": different board ranges";
+  }
+}
+
+
+sub boards_fixable
+{
+  my ($self, $new_field, $map, $stored_value, $new_value) = @_;
+
+  return (0, 0) unless $map eq 'BOARDS';
+
+  if ($new_field eq 'BOARDS')
+  {
+    $self->boards_fixable_ordered($stored_value, $new_value);
+    return (1, $stored_value);
+  }
+  else
+  {
+    $self->boards_fixable_ordered($new_value, $stored_value);
+    return (1, $new_value);
+  }
+
+  return (0, 0);
+}
+
+
+sub scoring_fixable
+{
+  my ($self, $new_field, $map, $stored_value, $new_value) = @_;
+
+  return (0, 0) unless $map eq 'SCORING';
+
+  if ($new_value eq 'Patton' && 
+      ($stored_value eq 'IMP' || $stored_value eq 'BAM'))
+  {
+    return (1, 'Patton');
+  }
+  elsif (($new_value eq 'IMP' || $new_value eq 'BAM') && 
+      $stored_value eq 'Patton')
+  {
+    return (1, 'Patton');
+  }
+
+  return (0, 0);
+}
+
+
 sub format_group
 {
   my ($self, $group, $field, $hash, $value) = @_;
@@ -402,11 +491,29 @@ sub format_group
       delete $self->{$field};
       return 1;
     }
-    else
+
+    ($ok, $fixed_value) = $self->boards_fixable(
+        $field, $map, $self->{$group}{$map}, $value);
+
+    if ($ok)
     {
-      warn $self->bbono() . ": $group $map duplicated, " .
-        "$self->{$group}{$map} vs. $value";
+      $self->{$group}{$map} = $fixed_value;
+      delete $self->{$field};
+      return 1;
     }
+
+    ($ok, $fixed_value) = $self->scoring_fixable(
+        $field, $map, $self->{$group}{$map}, $value);
+
+    if ($ok)
+    {
+      $self->{$group}{$map} = $fixed_value;
+      delete $self->{$field};
+      return 1;
+    }
+
+    warn $self->bbono() . ": $group $map duplicated, " .
+      "$self->{$group}{$map} vs. $value";
   }
   $self->{$group}{$map} = $value;
   delete $self->{$field};

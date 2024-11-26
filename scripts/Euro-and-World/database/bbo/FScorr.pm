@@ -8,6 +8,7 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
+# TODO Probably this whole number block is not needed?
 my %SCORING_CORRECTIONS = (
   # Says P in BBO file, but is IMPs
   # Or says I in BBO file, but is MPs
