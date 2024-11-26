@@ -1,3 +1,20 @@
+297 STAGE       Make 'Round-robin' a MOVEMENT
+ 81 ROF         Fix in cook.pl
+ 20 CITY
+ 45 NUMERAL
+ 53 YEAR
+ 23 AGE
+ 15 COUNTRY
+ 59 PERSON
+ 38 ROUND
+ 13 LETTER
+ 51 TNAME
+--
+774
+
+Don't need Tword.pm anymore?
+
+
 EntryT::format()
 ----------------
 Some TEAMx fields are lists:

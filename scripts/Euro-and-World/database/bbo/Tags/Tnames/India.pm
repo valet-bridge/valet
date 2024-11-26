@@ -147,6 +147,7 @@ my %MULTI_TYPOS =
     'indian senior team selection trial',
     'indian senior team selection trials',
     'indian senior teams selection',
+    'indian senior teams selection trial',
     'indian senior teams selection trials',
     'indian seniors team selection trials',
     'indian seniors team trials',

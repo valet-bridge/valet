@@ -63,6 +63,7 @@ my %MULTI_TYPOS =
     'us itt trials',
     'usa international team trials',
     'usa itt',
+    'usa itt trials',
     'usa team trial'],
   'US Senior Teams' => [
     'baze senior knock-out',
