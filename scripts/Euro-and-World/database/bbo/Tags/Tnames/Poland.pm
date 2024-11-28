@@ -14,7 +14,6 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
-  'Andrzej Wilkosz Memorial Pairs',
   'Bermuda Triangle Cup',
   'bridge24.pl Trophy',
   'Forest Trophy',
@@ -71,7 +70,6 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  'Andrzej Wilkosz Memorial Pairs' => ['a_ wilkosz pro memoriam'],
   'Bermuda Triangle Cup' => ['bermuda triangle teams cup'],
   'bridge24.pl Trophy' => ['bridge24_pl trophy'],
   'Forest Trophy' => ['forest bridge trophy'],

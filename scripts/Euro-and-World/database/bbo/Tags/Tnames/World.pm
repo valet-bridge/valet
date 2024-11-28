@@ -79,6 +79,8 @@ my %MULTI_TYPOS =
   'Huayuan Cup' => [
     'hua yuan cup'],
   'IMSA Elite Women Teams' => [
+    'hua yuan cup world women elite tournament',
+    'huayuan cup world women elite tournament',
     'women elite tournament',
     "women's bridge elite tournament",
     "women's elite tournament",
@@ -86,6 +88,7 @@ my %MULTI_TYPOS =
   'McConnell Cup' => ['mc connell'],
   'Oly-Star Cup' => [
     "oly-star cup women's bridge elite tournament",
+    "oly-star cup women's elite tournament",
     "oly-star cup women's bridge grand prix"],
   'Tianjin Binhai Cup' => [
     'tianjin bin hai cup',

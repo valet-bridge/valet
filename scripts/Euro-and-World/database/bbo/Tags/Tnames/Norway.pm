@@ -15,7 +15,6 @@ our @EXPORT = qw(set_hash);
 my @MULTI_WORDS =
 (
   'Bergen Grand Open Pairs',
-  'Codan Teams Cup',
   'Farmen Invitational',
   'FOSS Grand Pairs',
   'FX Securities Pairs Cup',
@@ -66,7 +65,7 @@ my %MULTI_TYPOS =
     'bergen storturnering mester',
     'bergen stor mester',
     'bst mester'],
-  'Codan Teams Cup' => ['codan cup'],  'FOSS Grand Pairs' => [
+  'FOSS Grand Pairs' => [
     'foss grnad tourn',
     'foss grand tourney',
     'foss grand torunament',
@@ -96,6 +95,8 @@ my %MULTI_TYPOS =
     'marit sveaas tournament'],
   'Namsos Pairs Cup' => ['namsos cup'],
   'Norwegian Club Teams' => [
+    'codan cup',  
+    'codan teams cup',
     'club team championship norway',
     'nor club teams ch_ship',
     'nor_club teams ch_ship',

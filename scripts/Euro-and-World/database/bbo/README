@@ -1,44 +1,16 @@
-297 STAGE       Make 'Round-robin' a MOVEMENT
- 81 ROF         Fix in cook.pl
- 20 CITY
- 45 NUMERAL
- 53 YEAR
- 23 AGE
- 15 COUNTRY
- 59 PERSON
- 38 ROUND
- 13 LETTER
- 51 TNAME
---
-774
+Fields:
+Old way (T's still OK?)
+Round-robin -> Movement
+Old way
+New way, but keep old print-out
+New print-out way
+Get rid of old way
 
 Don't need Tword.pm anymore?
-
-
-EntryT::format()
-----------------
-Some TEAMx fields are lists:
-CAPTAIN
-COUNTRY
-There we have to check whether it's in the list of not, then push.
-"Multiple values" flag is not possible.
-
-FORM: If coming from TEAMx, then look up BBONO.
-Start with tname if we have it, then the raw number.
-(Make a list of numbers to tnames)
-
-BOARDS: Merge or flag.
-
-postprocess:
-
-ROF x should become STAGE Rofx. Check collision.
 
 Figure out what becomes of DAY, WEEKDAY. PERSON etc.
 In the end there shouldn't be that many fields.
 
-
-
-29280: Should be two TNAME's?
 
 FIELDS
 
@@ -47,14 +19,6 @@ Tournaments, Meets
   and store them
 - Also for a given Meet {meet}{tag}, list of tname, tag
   that match it
-
-BBO data
-- What goes in chapter-level:
-  DATE, YEAR, STAGE, MOVEMENT, any counters, TEAM?_*, BOARDS
-- Anything with TITLE_, EVENT_ is renamed, no collisions
-  but repetitions are OK; in the end no more Tword?
-  45865
-- n of m with n > m occasionally OK, but not always
 
 New lookup of BBO data
 - If tname

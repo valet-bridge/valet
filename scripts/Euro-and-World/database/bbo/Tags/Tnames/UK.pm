@@ -108,6 +108,7 @@ my %MULTI_TYPOS =
   'Spring Foursomes' => [
     'schapiro spring fours',
     'schapiro spring foursomes',
+    'schapiro spring 4s',
     'spring 4s',
     'spring fours',
     'schapirosfs'],

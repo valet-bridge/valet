@@ -396,32 +396,6 @@ my %MEETS_ITALY =
 
 my %TOURNAMENTS_ITALY =
 (
-  'Angelini Teams' =>
-  {
-    %GLOBAL,
-    ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2012' =>
-      {
-        YEAR => 2012,
-        CHAPTERS => 
-        {
-          'C0' =>
-          {
-            DATE_START => '2012-10-06',
-            DATE_END => '2012-10-06'
-          }
-        }
-      },
-    }
-  },
-
   'Bologna Trophy' =>
   {
     %GLOBAL,
@@ -3987,6 +3961,18 @@ my %TOURNAMENTS_ITALY =
 
     EDITIONS =>
     {
+      '2012' =>
+      {
+        YEAR => 2012,
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            DATE_START => '2012-10-06',
+            DATE_END => '2012-10-06'
+          }
+        }
+      },
       '2013' =>
       {
         YEAR => 2013,
@@ -4062,8 +4048,8 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            DATE_START => '2005-04-08',
-            DATE_END => '2005-04-08'
+            DATE_START => '2005-01-06',
+            DATE_END => '2005-01-06'
           }
         }
       },

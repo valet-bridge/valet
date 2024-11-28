@@ -1615,7 +1615,7 @@ my %TOURNAMENTS_EURO_YOUTH =
             YEAR => 2007,
             STAGE => 'Round-robin',
             DATE_START => '2007-07-11',
-            DATE_END => '2007-07-16'
+            DATE_END => '2007-07-18'
           }
         }
       },

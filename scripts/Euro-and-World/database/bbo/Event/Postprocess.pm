@@ -57,6 +57,16 @@ sub post_process_stand_alone_doubles
     die "Expected separator" unless $token1->category() eq 'SEPARATOR';
 
     if ($token0->category() eq 'ITERATOR' &&
+        $token0->field() eq 'ROF' &&
+        $token2->category() eq 'COUNTER' &&
+        $token2->field() eq 'NUMERAL')
+    {
+      $token0->merge_origin($token2);
+      $token0->set_general('SINGLETON', 'STAGE', 'Rof' . $token2->value());
+      $chain->delete(1, 2);
+      $chain->complete_if_last_is(0, 'COMPLETE');
+    }
+    elsif ($token0->category() eq 'ITERATOR' &&
         $token2->category() eq 'COUNTER')
     {
       if ($token0->field() eq 'AMBIGUOUS')

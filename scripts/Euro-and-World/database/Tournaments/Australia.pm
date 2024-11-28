@@ -2993,7 +2993,6 @@ my %TOURNAMENTS_AUSTRALIA =
       },
       '2014' =>
       {
-        # TODO Really U26, Women, ... it seems.
         MEET => 'Australian ANC Championships',
         CHAPTERS =>
         {
@@ -3766,7 +3765,7 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2014' =>
+      '2014A' =>
       {
         # http://abfevents.com.au/events/playoffs/2014/seniors/
         MEET => 'Australian Playoffs',
@@ -3778,6 +3777,30 @@ my %TOURNAMENTS_AUSTRALIA =
             YEAR => 2014,
             DATE_START => '2014-04-04',
             DATE_END => '2014-04-08'
+          } 
+        }
+      },
+      '2014B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        MEET_TAG => '2014',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2014-07-13',
+            DATE_END => '2014-07-17'
+          } ,
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-07-17',
+            DATE_END => '2014-07-18'
           } 
         }
       },
@@ -4610,6 +4633,30 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
+      '2014B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        MEET_TAG => '2014',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2014-07-13',
+            DATE_END => '2014-07-17'
+          } ,
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-07-17',
+            DATE_END => '2014-07-18'
+          } 
+        }
+      },
       '2015A' =>
       {
         # https://abfevents.com.au/events/playoffs/2015/OW/
@@ -5040,9 +5087,10 @@ my %TOURNAMENTS_AUSTRALIA =
           } 
         }
       },
-      '2014' =>
+      '2014A' =>
       {
         MEET => 'Australian Youth Week',
+        MEET_TAG => '2014',
         CHAPTERS =>
         {
           'C0' => 
@@ -5060,6 +5108,30 @@ my %TOURNAMENTS_AUSTRALIA =
             major => 'SEGMENT',
             DATE_START => '2014-01-19',
             DATE_END => '2014-01-19'
+          } 
+        }
+      },
+      '2014B' =>
+      {
+        MEET => 'Australian ANC Championships',
+        MEET_TAG => '2014',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2014-07-13',
+            DATE_END => '2014-07-17'
+          } ,
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-07-17',
+            DATE_END => '2014-07-18'
           } 
         }
       },

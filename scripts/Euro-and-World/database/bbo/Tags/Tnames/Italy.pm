@@ -14,7 +14,6 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
-  'Angelini Teams',
   'Bologna Trophy',
   'Festival della Matematica Open Teams',
   'Italian Club Open Championship',
@@ -68,7 +67,9 @@ my %MULTI_TYPOS =
   'Rome Challenger Trophy' => [
     'challenge trofeo città di roma',
     'trofeo challenger città di roma'],
-  'Torneo di Roma' => ['angelini teams'],
+  'Torneo di Roma' => [
+    'angelini teams',
+    'torneo di roma angelini'],
   'Viareggio Cup' => [
     'torneo internazionale coppie viareggio',
     'coppie viareggio'],

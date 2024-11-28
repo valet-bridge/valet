@@ -1710,33 +1710,6 @@ my %MEETS_POLAND =
 
 my %TOURNAMENTS_POLAND =
 (
-  'Andrzej Wilkosz Memorial Pairs',
-  {
-    FORM => 'Pairs',
-    SCORING => 'MP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2014' =>
-      {
-        # https://wyniki.pzbs.pl/2014/_gpp/04krakow/W-gpp2014.html
-        MEET => 'Krakow Congress',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2014,
-            major => 'SESSION',
-            DATE_START => '2014-03-30',
-            DATE_END => '2014-03-30'
-          } 
-        }
-      },
-    }
-  },
-
   'Bermuda Triangle Cup' =>
   {
     %GLOBAL,
@@ -2497,6 +2470,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2014C' =>
       {
+        # https://wyniki.pzbs.pl/2014/_gpp/04krakow/W-gpp2014.html
         MEET => 'Krakow Congress',
         MEET_TAG => '2014',
         CHAPTERS =>
@@ -2504,7 +2478,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2014,
-            major => 'ROUND',
+            major => 'SESSION',
             DATE_START => '2014-03-30',
             DATE_END => '2014-03-30'
           } 

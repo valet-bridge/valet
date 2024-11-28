@@ -100,6 +100,7 @@ my @MULTI_WORDS =
   'Dr. Ashwani Mehta',
   'Duronto Rajshahi',
   'Edmund Tse',
+  'Eduardo Pinto',
   'Efrat Oren',
   'El Baz',
   'Ellena Moskovsky',
@@ -717,7 +718,7 @@ my @SINGLE_WORDS = qw(
   Lambardi Lanciano Lane Langer Lantaron Lanzarotti Larsen 
   Larssen Lasserre Lauria Lavín Lavings Law Lawy Lay Lazer Lazkar 
   Leao Lebatteux Lebel Lebi Lebowitz Leca Lechtman Lehtinen Lee 
-  Leenhardt Legras Leiro Lena Lengy Leptirici Lerner 
+  Leenhardt Legras Leiro Lena Lencastre Lengy Leptirici Lerner 
   Lesniewski Lesnik Lester Lev Levi Levinger Levin Levine Levoy 
   Levski Lewis Lhuissier Li Lian Libbrecht Libman Lie Lien 
   Liu Liggins Lilienstein Lillevik Lilley Limor Linczmayer Lindner 

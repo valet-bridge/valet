@@ -65,6 +65,8 @@ my @HEADER_FIELDS_NEW = qw(
   ORIGIN
   ORGANIZATION
   SPONSOR
+  PERSON
+  CLUB
 
   ZONE
   COUNTRY
@@ -93,14 +95,20 @@ my %HEADER_HASH_NEW = (
   TITLE_ORIGIN => 'ORIGIN',
   EVENT_ORIGIN => 'ORIGIN',
   TITLE_ORGANIZATION => 'ORGANIZATION',
+  EVENT_ORGANIZATION => 'ORGANIZATION',
   TITLE_SPONSOR => 'SPONSOR',
   EVENT_SPONSOR => 'SPONSOR',
+  TITLE_PERSON => 'PERSON',
+  EVENT_PERSON => 'PERSON',
+  TITLE_CLUB => 'CLUB',
+  EVENT_CLUB => 'CLUB',
 
   TITLE_ZONE => 'ZONE',
   TITLE_COUNTRY => 'COUNTRY',
   EVENT_COUNTRY => 'COUNTRY',
   TITLE_NATIONALITY => 'NATIONALITY',
   TITLE_REGION => 'REGION',
+  EVENT_REGION => 'REGION',
   TITLE_CITY => 'CITY',
   EVENT_CITY => 'CITY',
   TITLE_LOCALITY => 'LOCALITY',
@@ -141,6 +149,7 @@ my %CHAPTER_HASH_NEW = (
   TITLE_WEEKDAY => 'WEEKDAY',
   EVENT_WEEKDAY => 'WEEKDAY',
 
+  TITLE_DATE => 'DATE_ADDED',
   EVENT_DATE => 'DATE_ADDED',
 
   TITLE_STAGE => 'STAGE',
@@ -227,6 +236,7 @@ my %COUNTER_HASH_NEW = (
   TITLE_TABLE => 'TABLE',
   EVENT_TABLE => 'TABLE',
 
+  TITLE_PLACE => 'PLACE',
   EVENT_PLACE => 'PLACE',
 );
 
@@ -259,6 +269,8 @@ $TEAM_HASH_NEW{$_} = $_ for @TEAM_FIELDS_NEW;
 my %MULTI_VALUED_TEAM_FIELD = (
   'TEAM1_CAPTAIN' => ['TEAM1', 'CAPTAIN'],
   'TEAM2_CAPTAIN' => ['TEAM2', 'CAPTAIN'],
+  'TEAM1_SPONSOR' => ['TEAM1', 'SPONSOR'],
+  'TEAM2_SPONSOR' => ['TEAM2', 'SPONSOR'],
   'TEAM1_COUNTRY' => ['TEAM1', 'COUNTRY'],
   'TEAM2_COUNTRY' => ['TEAM2', 'COUNTRY'],
   'TEAM1_REGION' => ['TEAM1', 'REGION'],
@@ -267,6 +279,20 @@ my %MULTI_VALUED_TEAM_FIELD = (
   'TEAM2_CITY' => ['TEAM2', 'CITY'],
   'TEAM1_ORIGIN' => ['TEAM1', 'ORIGIN'],
   'TEAM2_ORIGIN' => ['TEAM2', 'ORIGIN'],
+);
+
+my %POST_PROCESS_FIELD = (
+  'TITLE_YEAR' => 'YEAR',
+  'EVENT_YEAR' => 'YEAR',
+
+  'TITLE_DATE' => 'DATE_ADDED',
+  'EVENT_DATE' => 'DATE_ADDED',
+
+  'TITLE_STAGE' => 'STAGE',
+  'EVENT_STAGE' => 'STAGE',
+
+  'TITLE_TEAM1_COUNTRY' => 'TEAM1_COUNTRY',
+  'TITLE_TEAM2_COUNTRY' => 'TEAM2_COUNTRY',
 );
 
 # ------------------------------------------------
@@ -474,6 +500,36 @@ sub scoring_fixable
 }
 
 
+sub stage_fixable
+{
+  my ($self, $new_field, $map, $stored_value, $new_value) = @_;
+
+  return (0, 0) unless $map eq 'STAGE';
+
+  # TODO When 'Round-robin' becomes a movement rather than a stage,
+  # we won't need this test.
+  if ($stored_value eq 'Round-robin')
+  {
+    (return 1, $new_value);
+  }
+  elsif ($new_value eq 'Round-robin')
+  {
+    (return 1, $stored_value);
+  }
+  elsif ($stored_value eq 'Knock-out' && $new_value =~ /[Ffinal]/)
+  {
+    (return 1, $new_value);
+  }
+  elsif ($new_value eq 'Knock-out' && $stored_value =~ /[Ffinal]/)
+  {
+    (return 1, $stored_value);
+  }
+
+  warn "STAGE: $stored_value vs $new_value";
+  return (0, 0);
+}
+
+
 sub format_group
 {
   my ($self, $group, $field, $hash, $value) = @_;
@@ -512,6 +568,16 @@ sub format_group
       return 1;
     }
 
+    ($ok, $fixed_value) = $self->stage_fixable(
+        $field, $map, $self->{$group}{$map}, $value);
+
+    if ($ok)
+    {
+      $self->{$group}{$map} = $fixed_value;
+      delete $self->{$field};
+      return 1;
+    }
+
     warn $self->bbono() . ": $group $map duplicated, " .
       "$self->{$group}{$map} vs. $value";
   }
@@ -535,9 +601,49 @@ sub really_single_valued
 }
 
 
+sub format_two_years
+{
+  my ($self, $year1, $year2) = @_;
+
+  # One must agree with DATE_ADDED and one must be adjacent.
+  return 0 unless $year1 == $year2 || $year1 + 1 == $year2;
+
+  return 0 unless exists $self->{CHAPTER}{DATE_ADDED};
+  my $d = Time::Piece->strptime($self->{CHAPTER}{DATE_ADDED}, "%Y-%m-%d");
+  my $y = $d->year;
+
+  return ($y == $year1 || $y == $year2);
+}
+
+
+sub post_process_year
+{
+  my ($self, $field, $value_list) = @_;
+
+  my $count = 1 + $#$value_list;
+  if ($count == 1)
+  {
+    return 1 if 
+      $self->format_group('CHAPTER', $field, \%CHAPTER_HASH_NEW,
+      $value_list->[0]);
+  }
+  elsif ($count == 2)
+  {
+    if ($self->format_two_years($value_list->[0], $value_list->[1]))
+    {
+      delete $self->{$field};
+      return 1;
+    }
+  }
+  return 0;
+}
+
+
 sub format
 {
   my ($self) = @_;
+
+  my %postproc;
 
   for my $field (sort keys %$self)
   {
@@ -547,6 +653,13 @@ sub format
       my ($group, $map) = @{$MULTI_VALUED_TEAM_FIELD{$field}};
       @{$self->{$group}{$map}} = @{$self->{$field}};
       delete $self->{$field};
+      next;
+    }
+
+    if (exists $POST_PROCESS_FIELD{$field})
+    {
+      # $self gets deleted later.
+      push @{$postproc{$field}}, @{$self->{$field}};
       next;
     }
 
@@ -583,6 +696,58 @@ sub format
     }
 
     warn $self->bbono() . ": $field";
+  }
+
+  for my $field (sort keys %postproc)
+  {
+    my $count = 1 + $#{$postproc{$field}};
+    if ($field eq 'TITLE_YEAR' || $field eq 'EVENT_YEAR')
+    {
+      next if $self->post_process_year($field, $postproc{$field});
+      warn $self->bbono() . ": $field ($count)";
+    }
+    elsif ($field eq 'TITLE_DATE' || $field eq 'EVENT_DATE')
+    {
+      if ($count == 1)
+      {
+        # Should match DATE_ADDED if present.
+        next if $self->format_group('CHAPTER', $field, \%CHAPTER_HASH_NEW,
+          $postproc{$field}[0]);
+      }
+
+      warn $self->bbono() . ": $field ($count)";
+    }
+    elsif ($field eq 'TITLE_STAGE' || $field eq 'EVENT_STAGE')
+    {
+      my $error_flag = 0;
+      for my $value (@{$postproc{$field}})
+      {
+        next if $self->format_group('CHAPTER', $field, \%CHAPTER_HASH_NEW,
+          $value);
+      }
+
+      next unless $error_flag;
+    }
+    elsif ($field eq 'TITLE_TEAM1_COUNTRY' || 
+        $field eq 'TITLE_TEAM2_COUNTRY')
+    {
+      if ($field !~ /^TITLE_(TEAM\d)_(.+)$/)
+      {
+        warn $self->bbono() . ": $field ($count)";
+        next;
+      }
+
+      my ($team, $map) = ($1, $2);
+
+      if ($self->format_group($team, $map, \%TEAM_HASH_NEW,
+        $postproc{$field}[0]))
+      {
+        delete $self->{$field};
+        next;
+      }
+    }
+
+    warn $self->bbono() . ": $field ($count)";
   }
 }
 

@@ -91,7 +91,7 @@ my %TOURNAMENTS_HUNGARY =
     }
   },
 
-  'Balatonföldvár Open Teams',
+  'EcoSoft Cup',
   {
     %GLOBAL,
     ORIGIN => 'National',
@@ -117,20 +117,6 @@ my %TOURNAMENTS_HUNGARY =
           } 
         }
       },
-    }
-  },
-
-  'EcoSoft Cup',
-  {
-    %GLOBAL,
-    ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
       '2011' =>
       {
         CHAPTERS =>

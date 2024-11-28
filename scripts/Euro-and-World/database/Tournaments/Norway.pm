@@ -374,35 +374,6 @@ my %TOURNAMENTS_NORWAY =
     }
   },
 
-  'Codan Teams Cup' =>
-  {
-    %GLOBAL,
-    ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2015' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2015,
-            STAGE => 'Final',
-            major => 'ROUND',
-            minor => 'SEGMENT',
-            DATE_START => '2015-05-28',
-            DATE_END => '2015-05-30'
-          } 
-        }
-      },
-    }
-  },
-
   'Farmen Invitational' =>
   {
     %GLOBAL,
@@ -892,6 +863,21 @@ my %TOURNAMENTS_NORWAY =
             minor => 'SEGMENT',
             DATE_START => '2014-05-28',
             DATE_END => '2014-05-31'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2015-05-28',
+            DATE_END => '2015-05-30'
           } 
         }
       },

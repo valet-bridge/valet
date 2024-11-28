@@ -264,7 +264,17 @@ sub post_process_markers
     my $token0 = $chain->check_out(0);
     my $token1 = $chain->check_out(1);
 
-    if ($token0->category() eq 'ITERATOR' && 
+    if ($token0->category() eq 'ITERATOR' &&
+        $token0->field() eq 'ROF' &&
+        $token1->category() eq 'COUNTER' &&
+        $token1->field() eq 'NUMERAL')
+    {
+      $token0->merge_origin($token1);
+      $token0->set_general('SINGLETON', 'STAGE', "Rof" . $token1->value());
+      $chain->delete(1, 1);
+      $chain->complete_if_last_is(0, 'COMPLETE');
+    }
+    elsif ($token0->category() eq 'ITERATOR' && 
         ($token1->category() eq 'COUNTER' || 
          $token1->category() eq 'AMBIGUOUS'))
     {

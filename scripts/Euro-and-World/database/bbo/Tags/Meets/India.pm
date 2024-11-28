@@ -68,6 +68,7 @@ my %MULTI_TYPOS =
     'maharaja holkar championship',
     'maharaja holkar national open championship',
     'maharaja holkar national tournament',
+    'maharaja holkar tournament',
     'm yeshwantrao holkar national bridge championship'],
   'Maharashtra State Championship' => [
     'maharashtra championship',

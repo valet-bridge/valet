@@ -126,6 +126,7 @@ my @MULTI_WORDS =
   "Captain's Four",
   'Card Warriors',
   'Casino Floor',
+  'Cathy & Ewa',
   'Cat Daddy',
   'Circle the World',
   'Cim Bom Bom',

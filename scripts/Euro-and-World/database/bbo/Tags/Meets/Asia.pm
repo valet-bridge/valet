@@ -38,6 +38,7 @@ my %MULTI_TYPOS =
     'asean bridge club',
     'asean bridge club championship',
     'asean bridge club championships',
+    'asean bridge club open championship',
     'asean bridge club open championships',
     'asean bridg club championship',
     "asean bridge c'ship",

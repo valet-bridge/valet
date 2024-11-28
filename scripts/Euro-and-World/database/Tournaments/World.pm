@@ -1835,6 +1835,48 @@ my %TOURNAMENTS_WORLD =
 
     EDITIONS =>
     {
+      '2011' =>
+      {
+        CITY => 'Beijing',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            DATE_START => '2011-09-05',
+            DATE_END => '2011-09-07'
+          },
+        }
+      },
+      '2013' =>
+      {
+        CITY => 'Beijing',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            major => 'ROUND',
+            DATE_START => '2013-10-14',
+            DATE_END => '2013-10-16'
+          },
+        }
+      },
+      '2015' =>
+      {
+        CITY => 'Beijing',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'ROUND',
+            DATE_START => '2015-11-09',
+            DATE_END => '2015-11-11'
+          },
+        }
+      },
       '2016' =>
       {
         MEET => 'IMSA Elite Mind Games',
