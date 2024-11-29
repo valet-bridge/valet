@@ -1,39 +1,17 @@
 Fields:
-New way: Match to field lookup, but only for comparison
-New print-out way
-Get rid of old way
+Move on down in digest.pl:
+- Prune Entry
+- Update list
+- See what it does to printing
+  - Figure out what becomes of DAY, WEEKDAY. PERSON etc.
+  - In the end there shouldn't be that many fields.
+  - When testing, flag anything that is not used in headers
 
 Don't need Tword.pm anymore?
 
-Figure out what becomes of DAY, WEEKDAY. PERSON etc.
-In the end there shouldn't be that many fields.
 
 ORDINAL, MEET_ORDINAL: Probably set the latter when we have
 MEET and not TNAME?
-
-FIELDS
-
-New lookup of BBO data
-- If tname
-  - Scan tags, first for YEAR
-  - If stored version has meet, match this too
-  - If it doesn't, there shouldn't be a meet given
-
-  - Then match the rest of the header
-  - Then match the chapter
-  - When testing, flag anything that is not used in headers
-    Should perhaps be in header?
-
-- If no tname but meet
-  - Match YEAR first
-  - Then loop over tnames for each Meet that matches
-    (which means that it matches YEAR in Tname, I think)
-    - Scan all tags
-  - Then match the chapter
-  - When testing, flag anything that is not used in headers
-
-Do I really have to make RR a MOVEMENT, not a STAGE?
-Seems cleaner though.
 
 Could have a more compact BOARD format when all is accounted for
 

@@ -62,8 +62,13 @@ while ($entryT->read($fh))
     next unless $entryT->bbono() eq $debug_bbono;
   }
 
+  $t0 = time();
   $entry2T->copy_from_TMP($entryT);
+  $times[0] += time() - $t0;
+
+  $t0 = time();
   $entry2T->format();
+  $times[1] += time() - $t0;
 
   my $meet = $entryT->field('TITLE_MEET');
   my $tname = $entryT->field('TITLE_TNAME');
@@ -89,10 +94,9 @@ while ($entryT->read($fh))
     }
   }
 
-  # Kludge.
   $t0 = time();
   $entryT->fix_some_fields();
-  $times[0] += time() - $t0;
+  $times[2] += time() - $t0;
 
   # This could set tname if it was previously unset!
   my ($edition, $chapter);
@@ -100,7 +104,7 @@ while ($entryT->read($fh))
   $t0 = time();
   ($tname, $edition, $chapter) =
     $parseT->get_edition_and_chapter($meet, $tname, $entry2T, $debug_flag);
-  $times[1] += time() - $t0;
+  $times[3] += time() - $t0;
 
   if ($tname eq '')
   {
@@ -124,16 +128,21 @@ while ($entryT->read($fh))
   $t0 = time();
   my ($header_entry, $chapter_entry) = 
     $parseT->set_header_entry($tname, $edition, $chapter);
-  $times[2] += time() - $t0;
+  $times[4] += time() - $t0;
+
+  $t0 = time();
+  my ($header_entry2, $chapter_entry2) = 
+    $parseT->get_header_entry_new($tname, $edition, $chapter);
+  $times[5] += time() - $t0;
 
   $t0 = time();
   $entryT->prune_using($header_entry, $chapter_entry);
-  $times[3] += time() - $t0;
+  $times[6] += time() - $t0;
 
   $t0 = time();
   $entryT->update_tournaments(\%data, $tname, $edition, $chapter,
     $header_entry, $chapter_entry);
-  $times[4] += time() - $t0;
+  $times[7] += time() - $t0;
 
   $num_matches++;
   $hist_matches{$tname}++;

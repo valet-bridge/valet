@@ -663,6 +663,15 @@ sub transfer_field
 }
 
 
+sub get_header_entry_new
+{
+  my ($self, $tname, $edition, $chapter) = @_;
+
+  return ($self->{T_HEADERS}{$tname}{$edition},
+    $self->{TOURNAMENT}{$tname}{EDITIONS}{$edition}{CHAPTERS}{$chapter}); 
+}
+
+
 sub set_header_entry
 {
   my ($self, $tname, $edition_str, $chapter_str) = @_;
