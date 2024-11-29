@@ -1502,7 +1502,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-04-27',
             DATE_END => '2013-04-28'
@@ -1645,7 +1645,7 @@ my %TOURNAMENTS_SUPRA =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-09-17',
             DATE_END => '2015-09-17'

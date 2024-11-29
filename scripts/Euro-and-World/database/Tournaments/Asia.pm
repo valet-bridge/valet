@@ -392,7 +392,7 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'SESSION',
             minor => 'ROUND',
             DATE_START => '2013-08-21',
@@ -408,7 +408,7 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'SESSION',
             minor => 'ROUND',
             DATE_START => '2015-04-03',
@@ -436,7 +436,7 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2006,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'MATCH',
             DATE_START => '2006-06-10',
@@ -452,7 +452,7 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2010,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'MATCH',
             DATE_START => '2010-05-24',
@@ -461,7 +461,7 @@ my %TOURNAMENTS_ASIA =
           'C1' => 
           {
             YEAR => 2010,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'MATCH',
             DATE_START => '2010-05-26',
@@ -490,7 +490,7 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'SESSION',
             minor => 'ROUND',
             DATE_START => '2013-08-20',
@@ -499,7 +499,7 @@ my %TOURNAMENTS_ASIA =
           'C1' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'SESSION',
             minor => 'ROUND',
             DATE_START => '2013-08-24',
@@ -515,7 +515,7 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'SESSION',
             minor => 'ROUND',
             DATE_START => '2015-04-01',
@@ -524,7 +524,7 @@ my %TOURNAMENTS_ASIA =
           'C1' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'SESSION',
             minor => 'ROUND',
             DATE_START => '2015-04-05',
@@ -663,7 +663,7 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2007,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'MATCH',
             DATE_START => '2007-06-04',
@@ -697,7 +697,7 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2008,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2008-09-10',
             DATE_END => '2008-09-10'
@@ -767,7 +767,7 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'MATCH',
             DATE_START => '2011-06-15',
@@ -805,7 +805,7 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'SESSION',
             minor => 'ROUND',
             DATE_START => '2013-06-07',
@@ -829,7 +829,7 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'SESSION',
             minor => 'ROUND',
             DATE_START => '2015-05-21',
@@ -866,7 +866,7 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2006,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'MATCH',
             DATE_START => '2006-06-10',
@@ -926,7 +926,7 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2007,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'MATCH',
             DATE_START => '2007-06-04',
@@ -952,7 +952,7 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2008,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2008-09-10',
             DATE_END => '2008-09-10'
@@ -1019,7 +1019,7 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'SESSION',
             minor => 'ROUND',
             DATE_START => '2013-06-07',
@@ -1043,7 +1043,7 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'SESSION',
             minor => 'ROUND',
             DATE_START => '2015-05-21',
@@ -1096,7 +1096,7 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2007,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'MATCH',
             DATE_START => '2007-06-05',
@@ -1129,7 +1129,7 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2008,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2008-09-10',
@@ -1205,7 +1205,7 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'SESSION',
             minor => 'ROUND',
             DATE_START => '2013-06-08',
@@ -1221,7 +1221,7 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'SESSION',
             minor => 'ROUND',
             DATE_START => '2015-05-21',
@@ -1258,7 +1258,7 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2007,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'SESSION',
             minor => 'ROUND',
             DATE_START => '2007-06-08',
@@ -1275,7 +1275,7 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2008,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2008-09-10',
             DATE_END => '2008-09-10'
@@ -1313,7 +1313,7 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'SESSION',
             minor => 'ROUND',
             DATE_START => '2013-08-21',
@@ -1329,7 +1329,7 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'SESSION',
             minor => 'ROUND',
             DATE_START => '2015-04-02',
@@ -1388,7 +1388,7 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2008,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2008-12-07',
             DATE_END => '2008-12-07'
@@ -1754,7 +1754,7 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2010,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2010-08-31',
             DATE_END => '2010-09-04'
@@ -1769,7 +1769,7 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'SESSION',
             minor => 'ROUND',
             DATE_START => '2014-06-13',
@@ -1813,7 +1813,7 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2010,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2010-08-30',
             DATE_END => '2010-09-05'
@@ -1841,7 +1841,7 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2009,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'SESSION',
             minor => 'ROUND',
             DATE_START => '2009-11-25',
@@ -1894,7 +1894,7 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             DATE_START => '2011-11-15',
             DATE_END => '2011-11-17'
           },
@@ -2003,7 +2003,7 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'SESSION',
             minor => 'ROUND',
             DATE_START => '2011-11-10',
@@ -2040,7 +2040,7 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2005,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2005-05-18',
             DATE_END => '2005-05-18'

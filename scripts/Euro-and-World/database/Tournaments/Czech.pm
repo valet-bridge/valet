@@ -191,7 +191,7 @@ my %TOURNAMENTS_CZECH =
           'C0' => 
           {
             YEAR => 2005,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2005-07-15',
             DATE_END => '2005-07-17'

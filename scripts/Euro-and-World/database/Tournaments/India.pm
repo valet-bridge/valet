@@ -786,7 +786,7 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-07-27',
             DATE_END => '2012-07-28'
@@ -794,7 +794,7 @@ my %TOURNAMENTS_INDIA =
           'C1' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-07-29',
             DATE_END => '2012-07-29'
@@ -808,7 +808,7 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-07-27',
             DATE_END => '2013-07-27'
@@ -816,7 +816,7 @@ my %TOURNAMENTS_INDIA =
           'C1' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-07-28',
             DATE_END => '2013-07-28'
@@ -832,7 +832,7 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-07-24',
             DATE_END => '2015-07-25'
@@ -840,7 +840,7 @@ my %TOURNAMENTS_INDIA =
           'C1' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-07-26',
             DATE_END => '2015-07-26'
@@ -1369,7 +1369,7 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-10-15',
             DATE_END => '2011-10-16'
@@ -1377,7 +1377,7 @@ my %TOURNAMENTS_INDIA =
           'C1' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-11-11',
             DATE_END => '2011-11-12'
@@ -1566,7 +1566,7 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-07-14',
             DATE_END => '2012-07-14'
@@ -1689,7 +1689,7 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-11-25',
             DATE_END => '2011-11-26'
@@ -1773,7 +1773,7 @@ my %TOURNAMENTS_INDIA =
           'C1' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-11-30',
             DATE_END => '2012-12-01'
@@ -1942,7 +1942,7 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2009,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2009-07-18',
             DATE_END => '2009-07-18'
@@ -1950,7 +1950,7 @@ my %TOURNAMENTS_INDIA =
           'C1' => 
           {
             YEAR => 2009,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2009-07-19',
             DATE_END => '2009-07-19'
@@ -2283,7 +2283,7 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'SESSION',
             minor => 'ROUND',
             DATE_START => '2011-05-06',
@@ -2306,7 +2306,7 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-07-07',
             DATE_END => '2012-07-07'
@@ -2336,7 +2336,7 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2013,
-            MOVEMENT => 'Swiss',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-04-15',
             DATE_END => '2013-04-16'
@@ -2417,7 +2417,7 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-11-09',
             DATE_END => '2013-11-09'
@@ -2961,7 +2961,7 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-03-25',
             DATE_END => '2011-03-26'
@@ -2969,7 +2969,7 @@ my %TOURNAMENTS_INDIA =
           'C1' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-03-27',
             DATE_END => '2011-03-27'
@@ -3013,7 +3013,7 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-03-23',
             DATE_END => '2013-03-23'
@@ -3182,7 +3182,7 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-01-19',
             DATE_END => '2012-01-20'
@@ -3220,7 +3220,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-01-18',
             DATE_END => '2015-01-18'
@@ -3234,7 +3234,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-01-24',
             DATE_END => '2016-01-24'
@@ -3568,7 +3568,7 @@ my %TOURNAMENTS_INDIA =
           {
             # Not sure
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-10-27',
             DATE_END => '2012-10-28'
@@ -3610,7 +3610,7 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-01-18',
             DATE_END => '2014-01-18'
@@ -3618,7 +3618,7 @@ my %TOURNAMENTS_INDIA =
           'C1' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-01-19',
             DATE_END => '2014-01-19'
@@ -3648,7 +3648,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-06-25',
             DATE_END => '2016-06-25'
@@ -3760,7 +3760,8 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2011,
-            MOVEMENT => 'Swiss',
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-02-10',
             DATE_END => '2011-02-11'
@@ -3768,12 +3769,21 @@ my %TOURNAMENTS_INDIA =
           'C1' => 
           {
             YEAR => 2011,
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2011-02-11',
+            DATE_END => '2011-02-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
             STAGE => 'Quarterfinal',
             major => 'SEGMENT',
             DATE_START => '2011-02-11',
             DATE_END => '2011-02-11'
           },
-          'C2' => 
+          'C3' => 
           {
             YEAR => 2011,
             STAGE => 'Semifinal',
@@ -3781,7 +3791,7 @@ my %TOURNAMENTS_INDIA =
             DATE_START => '2011-02-12',
             DATE_END => '2011-02-12'
           },
-          'C3' => 
+          'C4' => 
           {
             YEAR => 2011,
             STAGE => 'Final',
@@ -3799,7 +3809,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2012,
             MOVEMENT => 'Swiss',
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-02-10',
             DATE_END => '2012-02-10'
@@ -4233,7 +4243,7 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-10-24',
             DATE_END => '2013-10-25'
@@ -4323,7 +4333,7 @@ my %TOURNAMENTS_INDIA =
           'C1' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-03-27',
             DATE_END => '2016-03-27'
@@ -4352,7 +4362,7 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-06-01',
             DATE_END => '2014-06-01'
@@ -4506,7 +4516,7 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-05-03',
             DATE_END => '2013-05-04'
@@ -4561,7 +4571,7 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-05-03',
             DATE_END => '2013-05-04'
@@ -4592,7 +4602,7 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-03-07',
             DATE_END => '2014-03-08'
@@ -4668,7 +4678,7 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-03-12',
             DATE_END => '2015-03-13'
@@ -4932,7 +4942,7 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2011-12-06',
@@ -5124,7 +5134,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2010,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2010-12-12',
             DATE_END => '2010-12-12'
@@ -5165,7 +5175,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-07-21',
             DATE_END => '2013-07-21'
@@ -5211,7 +5221,7 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-07-25',
             DATE_END => '2015-07-25'
@@ -5219,7 +5229,7 @@ my %TOURNAMENTS_INDIA =
           'C1' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-07-26',
             DATE_END => '2015-07-26'
@@ -5273,7 +5283,7 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-07-17',
             DATE_END => '2011-07-18'
@@ -5324,7 +5334,8 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-06-21',
             DATE_END => '2014-06-22'
@@ -5333,6 +5344,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2014,
             STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
             major => 'SEGMENT',
             DATE_START => '2014-06-22',
             DATE_END => '2014-06-22'
@@ -5346,7 +5358,7 @@ my %TOURNAMENTS_INDIA =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-07-04',
             DATE_END => '2015-07-04'
@@ -5354,7 +5366,7 @@ my %TOURNAMENTS_INDIA =
           'C1' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-07-05',
             DATE_END => '2015-07-05'
@@ -5932,7 +5944,7 @@ my %TOURNAMENTS_INDIA =
           'C1' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-08-18',
             DATE_END => '2012-08-18'

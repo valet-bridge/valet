@@ -816,7 +816,7 @@ my %TOURNAMENTS_UK =
           'C0' => 
           {
             YEAR => 2010,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2010-10-24',
             DATE_END => '2010-10-27'
@@ -848,7 +848,7 @@ my %TOURNAMENTS_UK =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'MATCH',
             DATE_START => '2014-09-07',
@@ -3010,7 +3010,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-05-20',
             DATE_END => '2016-05-22'

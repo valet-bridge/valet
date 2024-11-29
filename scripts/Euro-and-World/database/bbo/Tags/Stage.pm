@@ -15,7 +15,6 @@ my @MULTI_WORDS =
 (
   'Knock-out',
   'Pre-Quarterfinal',
-  'Round-robin'
 );
 
 my %MULTI_TYPOS =
@@ -52,13 +51,6 @@ my %MULTI_TYPOS =
   Rof32 => ['round of 32', 'rd of 32', 'rnd of 32', 'rof 32', 'r of 32'],
   Rof64 => ['round of 64', 'rd of 64'],
   Rof128 => ['round of 128', 'rof 128'],
-  # In India, Super League seems to be not a tournament per se,
-  # but more of a round-robin stage(?).
-  'Round-robin' => ['round robin', 'raound robin', 'r robin', 'r_robin',
-    'roun robin', 'round roubin', 'round ronin', 'round bobin',
-    'r_r', 'grup maçlari', 'group stage',
-    'super league rr', 'super league', 'superleague', 'super leahue', 
-    'sup league', 'sup leg', 'sup l', 'sup-l', 'sl', 's l'],
   Semifinal => ['semi final', 'semi finals', 'semi-fiinal', 
     's_f', 's.f.', 's f',
     'semi-final', 'semi-finals', 'round of 4', 'round-of-four',
@@ -117,7 +109,6 @@ my %SINGLE_TYPOS =
   Repechage => ['repcharge', 'repercharge'],
   Rof12 => ['r12a', 'r12b'],
   Rof16 => ['ottavi', 'r16a', 'r16b', 'r16c', 'r16d'],
-  'Round-robin' => ['rr', 'roundrobin', 'rrr', 'rrobin'],
   Semifinal => ['semifinals', 'semifinale', 'semifimals', 'semifi',
     'semif', 'semis', 'sf', 'sfa', 'sfb', 'semi', 'semifianls',
     'semýfýnal', 'sfinals', 'sefi', 'semifinales', 'semifinali', 

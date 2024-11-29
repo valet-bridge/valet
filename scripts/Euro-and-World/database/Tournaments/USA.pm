@@ -1177,7 +1177,7 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'MATCH',
             DATE_START => '2014-07-19',
             DATE_END => '2014-07-20'
@@ -4904,7 +4904,7 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-12-27',
             DATE_END => '2015-12-29'

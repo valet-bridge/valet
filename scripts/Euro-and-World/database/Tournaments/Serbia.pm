@@ -247,7 +247,7 @@ my %TOURNAMENTS_SERBIA =
           'C0' => 
           {
             YEAR => 2009,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2009-07-03',
             DATE_END => '2009-07-04'
@@ -272,7 +272,7 @@ my %TOURNAMENTS_SERBIA =
           'C0' => 
           {
             YEAR => 2010,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2010-05-28',
             DATE_END => '2010-05-29'
@@ -298,7 +298,7 @@ my %TOURNAMENTS_SERBIA =
           'SINGLE' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-05-28',
             DATE_END => '2011-05-29'
@@ -387,7 +387,7 @@ my %TOURNAMENTS_SERBIA =
           'SINGLE' => 
           {
             YEAR => 2009,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2009-04-26',
             DATE_END => '2009-04-26'

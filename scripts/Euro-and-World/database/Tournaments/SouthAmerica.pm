@@ -560,7 +560,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'C0' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-05-29',
             DATE_END => '2012-05-31'
@@ -591,7 +591,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-05-27',
             DATE_END => '2013-05-28'
@@ -599,7 +599,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'C1' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-05-29',
             DATE_END => '2013-05-30'
@@ -630,7 +630,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-05-19',
             DATE_END => '2014-05-23'
@@ -676,7 +676,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-05-11',
             DATE_END => '2015-05-14'
@@ -707,7 +707,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'C0' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-05-30',
             DATE_END => '2016-06-01'
@@ -805,7 +805,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-05-11',
             DATE_END => '2015-05-13'
@@ -980,7 +980,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-05-11',
             DATE_END => '2015-05-13'

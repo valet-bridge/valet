@@ -604,7 +604,7 @@ my %TOURNAMENTS_ICELAND =
           'C0' => 
           {
             YEAR => 2005,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2005-03-25',
             DATE_END => '2005-03-26'
@@ -668,7 +668,7 @@ my %TOURNAMENTS_ICELAND =
           'C0' => 
           {
             YEAR => 2010,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2010-04-22',
             DATE_END => '2010-04-24'
@@ -712,7 +712,7 @@ my %TOURNAMENTS_ICELAND =
           'C0' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-04-19',
             DATE_END => '2012-04-21'
@@ -734,7 +734,7 @@ my %TOURNAMENTS_ICELAND =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-04-25',
             DATE_END => '2013-04-27'
@@ -756,7 +756,7 @@ my %TOURNAMENTS_ICELAND =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-04-24',
             DATE_END => '2014-04-26'
@@ -778,7 +778,7 @@ my %TOURNAMENTS_ICELAND =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-04-23',
             DATE_END => '2015-04-25'
@@ -800,7 +800,7 @@ my %TOURNAMENTS_ICELAND =
           'C0' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-04-21',
             DATE_END => '2016-04-23'

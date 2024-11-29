@@ -296,7 +296,7 @@ my %TOURNAMENTS_BALKAN =
           'C0' => 
           {
             YEAR => 2009,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2009-10-07',
             DATE_END => '2009-10-08'
@@ -364,7 +364,7 @@ my %TOURNAMENTS_BALKAN =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-10-02',
             DATE_END => '2014-10-02'
@@ -399,7 +399,7 @@ my %TOURNAMENTS_BALKAN =
           'SINGLE' => 
           {
             YEAR => 2006,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2006-10-17',
             DATE_END => '2006-10-17'
@@ -414,7 +414,7 @@ my %TOURNAMENTS_BALKAN =
           'SINGLE' => 
           {
             YEAR => 2007,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2007-10-22',
             DATE_END => '2007-10-22'
@@ -443,7 +443,7 @@ my %TOURNAMENTS_BALKAN =
           'C0' => 
           {
             YEAR => 2009,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2009-11-24',
             DATE_END => '2009-11-25'
@@ -524,7 +524,7 @@ my %TOURNAMENTS_BALKAN =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-10-02',
             DATE_END => '2013-10-03'
@@ -553,7 +553,7 @@ my %TOURNAMENTS_BALKAN =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-10-14',
             DATE_END => '2015-10-15'

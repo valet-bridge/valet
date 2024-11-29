@@ -948,7 +948,7 @@ my %TOURNAMENTS_FRANCE =
           'C1' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2012-09-29',
@@ -957,7 +957,7 @@ my %TOURNAMENTS_FRANCE =
           'C2' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2012-10-20',
@@ -966,7 +966,7 @@ my %TOURNAMENTS_FRANCE =
           'C3' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2012-10-27',
@@ -1051,7 +1051,7 @@ my %TOURNAMENTS_FRANCE =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-09-13',
             DATE_END => '2014-09-14'
@@ -1075,7 +1075,7 @@ my %TOURNAMENTS_FRANCE =
           'C3' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2014-11-22',
@@ -1460,7 +1460,7 @@ my %TOURNAMENTS_FRANCE =
           'SINGLE' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-04-14',
             DATE_END => '2014-04-21'
@@ -1683,7 +1683,7 @@ my %TOURNAMENTS_FRANCE =
           'SINGLE' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-04-19',
             DATE_END => '2014-04-19'

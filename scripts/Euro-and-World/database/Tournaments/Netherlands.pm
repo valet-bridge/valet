@@ -1157,7 +1157,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'C0' => 
           {
             YEAR => 2006,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             DATE_START => '2006-03-26',
             DATE_END => '2006-03-26'
           },
@@ -1211,7 +1211,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'C0' => 
           {
             YEAR => 2008,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2008-03-19',
             DATE_END => '2008-03-19'
@@ -1241,7 +1241,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'C0' => 
           {
             YEAR => 2009,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2009-03-09',
             DATE_END => '2009-03-12'
@@ -1271,7 +1271,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'C0' => 
           {
             YEAR => 2010,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2010-03-22',
             DATE_END => '2010-03-25'
@@ -1301,7 +1301,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'C0' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-03-21',
             DATE_END => '2011-03-24'
@@ -1331,7 +1331,8 @@ my %TOURNAMENTS_NETHERLANDS =
           'C0' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-03-26',
             DATE_END => '2012-03-28'
@@ -1420,7 +1421,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-03-30',
             DATE_END => '2015-03-31'
@@ -1458,7 +1459,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'C0' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-03-21',
             DATE_END => '2016-03-22'
@@ -1597,7 +1598,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'C0' => 
           {
             YEAR => 2006,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2006-02-25',
             DATE_END => '2006-02-25'

@@ -179,7 +179,7 @@ my %TOURNAMENTS_CROATIA =
           'C0' => 
           {
             YEAR => 2008,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2008-05-24',
             DATE_END => '2008-05-24'
@@ -360,7 +360,7 @@ my %TOURNAMENTS_CROATIA =
           'C1' => 
           {
             YEAR => 2008,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'MATCH',
             DATE_START => '2008-09-28',
             DATE_END => '2008-09-28'
@@ -522,7 +522,7 @@ my %TOURNAMENTS_CROATIA =
           'C0' => 
           {
             YEAR => 2006,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2006-05-27',
             DATE_END => '2006-05-28'

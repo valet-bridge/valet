@@ -600,7 +600,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-05-17',
             DATE_END => '2012-05-17'
@@ -608,7 +608,7 @@ my %TOURNAMENTS_TURKEY =
           'C1' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-05-24',
             DATE_END => '2012-05-24'
@@ -616,7 +616,7 @@ my %TOURNAMENTS_TURKEY =
           'C2' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-05-31',
             DATE_END => '2012-05-31'
@@ -624,7 +624,7 @@ my %TOURNAMENTS_TURKEY =
           'C3' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-06-07',
             DATE_END => '2012-06-07'
@@ -1001,7 +1001,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-01-24',
             DATE_END => '2015-01-31'
@@ -1016,7 +1016,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-01-30',
             DATE_END => '2016-01-31'
@@ -1113,7 +1113,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-01-25',
             DATE_END => '2015-01-25'
@@ -1127,7 +1127,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-02-07',
             DATE_END => '2016-02-07'
@@ -1616,7 +1616,7 @@ my %TOURNAMENTS_TURKEY =
           'C2' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-07-11',
             DATE_END => '2014-07-13'
@@ -1631,7 +1631,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2015,
             major => 'ROUND',
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-05-16',
             DATE_END => '2015-05-19'
@@ -1737,7 +1737,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2009,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2009-07-31',
             DATE_END => '2009-08-02'
@@ -1831,7 +1831,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-08-19',
             DATE_END => '2011-08-20'
@@ -1887,7 +1887,7 @@ my %TOURNAMENTS_TURKEY =
           'C1' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-08-30',
             DATE_END => '2012-08-31'
@@ -1946,7 +1946,7 @@ my %TOURNAMENTS_TURKEY =
           'C2' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'SEGMENT',
             DATE_START => '2013-08-24',
             DATE_END => '2013-08-25'
@@ -2001,7 +2001,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-08-03',
             DATE_END => '2014-08-04'
@@ -2064,7 +2064,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-05-17',
             DATE_END => '2015-05-19'
@@ -2124,7 +2124,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'SEGMENT',
             DATE_START => '2016-08-26',
             DATE_END => '2016-08-28'
@@ -2309,14 +2309,23 @@ my %TOURNAMENTS_TURKEY =
         # http://clubs.vugraph.com/tbricfed/calendar.php?month=4&year=2009
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
-            MOVEMENT => 'Swiss',
-            STAGE => 'Round-robin',
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Round-robin',
             major => 'SESSION',
             minor => 'ROUND',
             DATE_START => '2009-04-26',
+            DATE_END => '2009-04-26'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            MOVEMENT => 'Swiss',
+            major => 'SESSION',
+            minor => 'ROUND',
+            DATE_START => '2009-04-27',
             DATE_END => '2009-04-30'
           } 
         }
@@ -2537,7 +2546,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-07-01',
             DATE_END => '2016-07-03'
@@ -2692,7 +2701,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-03-28',
             DATE_END => '2013-03-28'
@@ -2733,7 +2742,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2008,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2008-03-03',
             DATE_END => '2008-03-03'
@@ -2756,7 +2765,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2009,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2009-03-06',
             DATE_END => '2009-03-07'
@@ -2811,7 +2820,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2010,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2010-03-05',
             DATE_END => '2010-03-06'
@@ -2866,7 +2875,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-03-04',
             DATE_END => '2011-03-05'
@@ -2919,7 +2928,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-02-23',
             DATE_END => '2012-02-24'
@@ -2974,7 +2983,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-03-10',
             DATE_END => '2013-03-11'
@@ -3045,7 +3054,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-03-01',
             DATE_END => '2014-03-02'
@@ -3118,7 +3127,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-02-28',
             DATE_END => '2015-03-02'
@@ -3274,7 +3283,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'SEGMENT',
             DATE_START => '2014-02-21',
             DATE_END => '2014-02-23'
@@ -3289,7 +3298,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-02-20',
             DATE_END => '2015-02-22'
@@ -3319,6 +3328,7 @@ my %TOURNAMENTS_TURKEY =
             YEAR => 2010,
             STAGE => 'Final',
             major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2010-04-05',
             DATE_END => '2010-04-08'
           } 

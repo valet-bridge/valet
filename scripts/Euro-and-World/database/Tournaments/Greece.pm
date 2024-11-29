@@ -499,7 +499,7 @@ my %TOURNAMENTS_GREECE =
           'C0' => 
           {
             YEAR => 2010,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2010-03-19',
             DATE_END => '2010-03-20'

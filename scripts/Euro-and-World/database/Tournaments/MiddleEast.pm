@@ -185,7 +185,7 @@ my %TOURNAMENTS_MIDDLEEAST =
           'C0' => 
           {
             YEAR => 2001,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2001-06-02',
             DATE_END => '2001-06-02'
@@ -216,7 +216,7 @@ my %TOURNAMENTS_MIDDLEEAST =
           'C0' => 
           {
             YEAR => 2009,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'MATCH',
             DATE_START => '2009-06-26',
@@ -248,7 +248,7 @@ my %TOURNAMENTS_MIDDLEEAST =
           'C0' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-05-26',
             DATE_END => '2011-05-30'
@@ -271,7 +271,7 @@ my %TOURNAMENTS_MIDDLEEAST =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-06-05',
             DATE_END => '2013-06-09'
@@ -302,7 +302,7 @@ my %TOURNAMENTS_MIDDLEEAST =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-05-28',
             DATE_END => '2015-06-01'
@@ -360,7 +360,7 @@ my %TOURNAMENTS_MIDDLEEAST =
           'SINGLE' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-06-05',
             DATE_END => '2013-06-10'
@@ -432,7 +432,7 @@ my %TOURNAMENTS_MIDDLEEAST =
           'C0' => 
           {
             YEAR => 2009,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'MATCH',
             DATE_START => '2009-06-26',
@@ -456,7 +456,7 @@ my %TOURNAMENTS_MIDDLEEAST =
           'SINGLE' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2011-05-26',
@@ -472,7 +472,7 @@ my %TOURNAMENTS_MIDDLEEAST =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-06-05',
             DATE_END => '2013-06-09'
@@ -495,7 +495,7 @@ my %TOURNAMENTS_MIDDLEEAST =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-05-28',
             DATE_END => '2015-06-01'
@@ -532,7 +532,7 @@ my %TOURNAMENTS_MIDDLEEAST =
           'C0' => 
           {
             YEAR => 2008,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'MATCH',
             DATE_START => '2008-06-03',
@@ -565,7 +565,7 @@ my %TOURNAMENTS_MIDDLEEAST =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-11-07',
             DATE_END => '2013-11-08'
@@ -598,7 +598,7 @@ my %TOURNAMENTS_MIDDLEEAST =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-11-05',
             DATE_END => '2014-11-07'
@@ -631,7 +631,7 @@ my %TOURNAMENTS_MIDDLEEAST =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-11-04',
             DATE_END => '2015-11-07'
@@ -674,7 +674,7 @@ my %TOURNAMENTS_MIDDLEEAST =
           {
             # Looks like 2020-10-06 RR, maybe 2020-10-25 to 27 KO.
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-10-06',
             DATE_END => '2016-10-06'
@@ -699,7 +699,7 @@ my %TOURNAMENTS_MIDDLEEAST =
           'C0' => 
           {
             YEAR => 2022,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2022-09-28',
             DATE_END => '2022-09-30'

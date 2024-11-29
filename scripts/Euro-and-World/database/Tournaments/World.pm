@@ -681,7 +681,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 1997,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '1997-10-20',
             DATE_END => '1997-10-25'
@@ -728,7 +728,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2000,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2000-01-08',
             DATE_END => '2000-01-14'
@@ -775,7 +775,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2001,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2001-10-22',
             DATE_END => '2001-10-27'
@@ -822,7 +822,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2005,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2005-10-23',
             DATE_END => '2005-10-29'
@@ -869,7 +869,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2007,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'MATCH',
             DATE_START => '2007-09-30',
@@ -917,7 +917,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2009,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2009-08-30',
             DATE_END => '2009-09-05'
@@ -964,7 +964,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-10-16',
             DATE_END => '2011-10-22'
@@ -1011,7 +1011,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-09-17',
             DATE_END => '2013-09-23'
@@ -1058,7 +1058,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-09-27',
             DATE_END => '2015-10-03'
@@ -1118,7 +1118,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2005,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'MATCH',
             DATE_START => '2005-08-08',
@@ -1161,7 +1161,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2006,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2006-07-30',
             DATE_END => '2006-08-05'
@@ -1223,7 +1223,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-07-26',
             DATE_END => '2012-07-31'
@@ -1262,7 +1262,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-08-04',
             DATE_END => '2016-08-09'
@@ -1323,7 +1323,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2005,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2005-10-23',
             DATE_END => '2005-10-29'
@@ -1370,7 +1370,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2007,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'MATCH',
             DATE_START => '2007-09-30',
@@ -1418,7 +1418,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2009,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2009-08-30',
             DATE_END => '2009-09-05'
@@ -1465,7 +1465,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-10-16',
             DATE_END => '2011-10-22'
@@ -1512,7 +1512,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-09-17',
             DATE_END => '2013-09-23'
@@ -1559,7 +1559,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-09-27',
             DATE_END => '2015-10-03'
@@ -1753,7 +1753,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-02-26',
             DATE_END => '2016-02-27'
@@ -1885,7 +1885,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-02-26',
             DATE_END => '2016-02-27'
@@ -1946,7 +1946,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2002,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             DATE_START => '2002-02-02',
             DATE_END => '2002-02-02'
           },
@@ -2046,7 +2046,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-07-12',
             DATE_END => '2011-07-21'
@@ -2084,7 +2084,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-06-06',
             DATE_END => '2012-06-08'
@@ -2114,7 +2114,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-07-10',
             DATE_END => '2013-07-12'
@@ -2159,7 +2159,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2006,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2006-10-18',
             DATE_END => '2006-10-19'
@@ -2239,7 +2239,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-08-14',
             DATE_END => '2014-08-18'
@@ -2286,7 +2286,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-08-04',
             DATE_END => '2016-08-08'
@@ -2339,7 +2339,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 1998,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '1998-08-24',
             DATE_END => '1998-08-26'
@@ -2402,7 +2402,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2002,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2002-08-20',
             DATE_END => '2002-08-22'
@@ -2465,7 +2465,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2006,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2006-06-13',
             DATE_END => '2006-06-15'
@@ -2528,7 +2528,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2010,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2010-10-05',
             DATE_END => '2010-10-07'
@@ -2668,7 +2668,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-09-11',
             DATE_END => '2011-09-14'
@@ -2696,7 +2696,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 1997,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '1997-10-20',
             DATE_END => '1997-10-25'
@@ -2743,7 +2743,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2000,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2000-01-08',
             DATE_END => '2000-01-14'
@@ -2790,7 +2790,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2005,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2005-10-23',
             DATE_END => '2005-10-29'
@@ -2837,7 +2837,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2007,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'MATCH',
             DATE_START => '2007-09-30',
@@ -2885,7 +2885,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2009,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2009-08-30',
             DATE_END => '2009-09-05'
@@ -2932,7 +2932,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-10-16',
             DATE_END => '2011-10-22'
@@ -2979,7 +2979,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-09-17',
             DATE_END => '2013-09-23'
@@ -3026,7 +3026,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-09-27',
             DATE_END => '2015-10-03'
@@ -3497,7 +3497,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2009,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2009-09-07',
             DATE_END => '2009-09-10'
@@ -3536,7 +3536,8 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2011-10-24',
             DATE_END => '2011-10-27'
@@ -3583,7 +3584,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-09-24',
             DATE_END => '2013-09-26'
@@ -3630,7 +3631,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-10-04',
             DATE_END => '2015-10-06'
@@ -3741,7 +3742,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-08-24',
             DATE_END => '2015-08-24'
@@ -3885,7 +3886,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2009,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2009-08-15',
             DATE_END => '2009-08-17'
@@ -4018,7 +4019,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-08-14',
             DATE_END => '2014-08-19'
@@ -4125,7 +4126,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2006,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2006-08-03',
             DATE_END => '2006-08-04'
@@ -4179,7 +4180,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2004,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2004-10-23',
             DATE_END => '2004-10-29'
@@ -4265,7 +4266,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2004,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2004-10-24',
             DATE_END => '2004-10-29'
@@ -4345,7 +4346,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-08-06',
             DATE_END => '2013-08-06'
@@ -4368,7 +4369,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-08-24',
             DATE_END => '2015-08-25'
@@ -4468,7 +4469,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2006,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2006-10-26',
             DATE_END => '2006-10-26'
@@ -4483,7 +4484,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2008,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2008-09-08',
             DATE_END => '2008-09-08'
@@ -4498,7 +4499,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2010,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2010-08-03',
             DATE_END => '2010-08-09'
@@ -4513,7 +4514,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-07-10',
             DATE_END => '2012-07-15'
@@ -4528,7 +4529,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2014-11-01',
@@ -4570,7 +4571,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2006,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2006-08-03',
             DATE_END => '2006-08-08'
@@ -4600,7 +4601,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-07-27',
             DATE_END => '2012-07-31'
@@ -4647,7 +4648,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-08-14',
             DATE_END => '2014-08-18'
@@ -4694,7 +4695,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-08-04',
             DATE_END => '2016-08-09'
@@ -4876,7 +4877,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-12-12',
             DATE_END => '2013-12-13'
@@ -5009,7 +5010,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2008,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'MATCH',
             DATE_START => '2008-10-04',
@@ -5061,7 +5062,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-12-10',
             DATE_END => '2011-12-11'
@@ -5084,7 +5085,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-08-10',
             DATE_END => '2012-08-14'
@@ -5139,7 +5140,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-12-13',
             DATE_END => '2012-12-14'
@@ -5154,7 +5155,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-12-11',
             DATE_END => '2014-12-12'
@@ -5190,7 +5191,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2008,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2008-10-04',
             DATE_END => '2008-10-11'
@@ -5240,7 +5241,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-08-11',
             DATE_END => '2012-08-14'
@@ -5308,7 +5309,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2008,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2008-10-06',
             DATE_END => '2008-10-07'
@@ -5352,7 +5353,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2008,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2008-10-04',
             DATE_END => '2008-10-07'
@@ -5388,7 +5389,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2008,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2008-10-04',
             DATE_END => '2008-10-11'
@@ -5580,7 +5581,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2008,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'MATCH',
             DATE_START => '2008-10-04',
@@ -5647,7 +5648,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-08-11',
             DATE_END => '2012-08-14'
@@ -5717,7 +5718,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-12-12',
             DATE_END => '2013-12-13'
@@ -5748,7 +5749,7 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-12-11',
             DATE_END => '2014-12-12'

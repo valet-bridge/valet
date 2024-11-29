@@ -566,7 +566,7 @@ my %TOURNAMENTS_BALTIC =
           'C0' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-04-30',
             DATE_END => '2011-04-30'
@@ -598,7 +598,7 @@ my %TOURNAMENTS_BALTIC =
           'C0' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-05-26',
             DATE_END => '2012-05-26'
@@ -652,7 +652,7 @@ my %TOURNAMENTS_BALTIC =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-04-26',
             DATE_END => '2014-04-27'
@@ -682,7 +682,7 @@ my %TOURNAMENTS_BALTIC =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-04-25',
             DATE_END => '2015-04-25'

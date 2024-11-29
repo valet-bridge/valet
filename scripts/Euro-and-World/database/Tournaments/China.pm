@@ -317,7 +317,7 @@ my %TOURNAMENTS_CHINA =
           'SINGLE' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-02-19',
             DATE_END => '2011-02-21'
@@ -333,7 +333,7 @@ my %TOURNAMENTS_CHINA =
           'SINGLE' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-03-22',
             DATE_END => '2012-03-25'
@@ -349,7 +349,7 @@ my %TOURNAMENTS_CHINA =
           'SINGLE' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-03-22',
             DATE_END => '2013-03-24'
@@ -516,7 +516,7 @@ my %TOURNAMENTS_CHINA =
           'C0' => 
           {
             YEAR => 2009,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2009-08-18',
             DATE_END => '2009-08-21'
@@ -554,7 +554,7 @@ my %TOURNAMENTS_CHINA =
           'C0' => 
           {
             YEAR => 2010,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2010-08-11',
             DATE_END => '2010-08-13'
@@ -758,7 +758,7 @@ my %TOURNAMENTS_CHINA =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-10-19',
             DATE_END => '2013-10-23'
@@ -854,7 +854,7 @@ my %TOURNAMENTS_CHINA =
           'C0' => 
           {
             YEAR => 2007,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2007-04-15',
             DATE_END => '2007-04-15'
@@ -925,7 +925,7 @@ my %TOURNAMENTS_CHINA =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-04-12',
             DATE_END => '2014-04-15'
@@ -997,7 +997,7 @@ my %TOURNAMENTS_CHINA =
           'C0' => 
           {
             YEAR => 2006,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2006-11-12',
             DATE_END => '2006-11-12'
@@ -1556,7 +1556,7 @@ my %TOURNAMENTS_CHINA =
           'SINGLE' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-05-26',
             DATE_END => '2011-05-29'
@@ -1572,7 +1572,7 @@ my %TOURNAMENTS_CHINA =
           'SINGLE' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-06-18',
             DATE_END => '2012-06-20'
@@ -1588,7 +1588,7 @@ my %TOURNAMENTS_CHINA =
           'SINGLE' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-05-31',
             DATE_END => '2013-06-02'
@@ -1681,7 +1681,7 @@ my %TOURNAMENTS_CHINA =
           'C0' => 
           {
             YEAR => 2006,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2006-03-29',
             DATE_END => '2006-03-29'
@@ -2018,7 +2018,7 @@ my %TOURNAMENTS_CHINA =
           'C0' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'SEGMENT',
             DATE_START => '2011-10-02',
             DATE_END => '2011-10-04'
@@ -2154,7 +2154,7 @@ my %TOURNAMENTS_CHINA =
           'SINGLE' => 
           {
             YEAR => 2010,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2010-06-11',
             DATE_END => '2010-06-13'

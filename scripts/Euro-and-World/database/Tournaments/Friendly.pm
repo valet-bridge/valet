@@ -1495,7 +1495,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-09-05',
             DATE_END => '2015-09-06'

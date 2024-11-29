@@ -553,7 +553,7 @@ my %TOURNAMENTS_BRAZIL =
           'C0' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-03-21',
             DATE_END => '2016-03-23'

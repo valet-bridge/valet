@@ -1867,7 +1867,7 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2005,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             DATE_START => '2005-09-06',
             DATE_END => '2005-09-06'
           },
@@ -2074,7 +2074,7 @@ my %TOURNAMENTS_POLAND =
           'C2' => 
           {
             YEAR => 2010,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2010-06-05',
             DATE_END => '2010-06-05'
@@ -2774,7 +2774,7 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2009,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2009-08-29',
             DATE_END => '2009-08-29'
@@ -2893,7 +2893,7 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-06-01',
             DATE_END => '2013-06-01'
@@ -2917,7 +2917,7 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-07-08',
             DATE_END => '2013-07-08'
@@ -3020,7 +3020,7 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-12-19',
             DATE_END => '2013-12-20'
@@ -3052,7 +3052,7 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-03-15',
             DATE_END => '2014-03-15'
@@ -3123,7 +3123,7 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-03-29',
             DATE_END => '2015-03-29'
@@ -3569,7 +3569,7 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-04-01',
             DATE_END => '2016-04-01'
@@ -3652,7 +3652,7 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2007,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2007-05-26',
             DATE_END => '2007-05-26'
@@ -4621,7 +4621,7 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2007,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2007-06-10',
             DATE_END => '2007-06-10'
@@ -4696,7 +4696,7 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2010,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2010-07-19',
             DATE_END => '2010-07-20'
@@ -4736,7 +4736,7 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-05-02',
             DATE_END => '2012-05-02'
@@ -4799,7 +4799,7 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-04-30',
             DATE_END => '2013-04-30'
@@ -4933,7 +4933,7 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-12-17',
             DATE_END => '2015-12-18'
@@ -5033,7 +5033,7 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2007,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2007-01-23',
             DATE_END => '2007-01-23'
@@ -5846,7 +5846,7 @@ my %TOURNAMENTS_POLAND =
           'C1' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2015-01-02',
@@ -5926,7 +5926,7 @@ my %TOURNAMENTS_POLAND =
           'C1' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2016-01-08',
@@ -6621,7 +6621,7 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-03-04',
             DATE_END => '2016-03-04'

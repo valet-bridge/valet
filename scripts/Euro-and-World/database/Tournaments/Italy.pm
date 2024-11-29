@@ -685,7 +685,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2014-09-25',
@@ -735,7 +735,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2016-05-19',
@@ -764,7 +764,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2017-05-18',
@@ -793,7 +793,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2018-04-05',
@@ -822,7 +822,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2019-04-04',
@@ -851,7 +851,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2020-02-20',
@@ -873,7 +873,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2022-09-22',
@@ -895,7 +895,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2023-02-23',
@@ -917,7 +917,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2024-02-29',
@@ -1020,7 +1020,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2017-05-18',
@@ -1049,7 +1049,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2018-04-05',
@@ -1078,7 +1078,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2019-04-04',
@@ -1107,7 +1107,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2020-02-20',
@@ -1129,7 +1129,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2022-09-22',
@@ -1151,7 +1151,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2023-02-23',
@@ -1173,7 +1173,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2024-02-29',
@@ -1875,7 +1875,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2010-10-29',
             DATE_END => '2010-11-01'
@@ -1892,7 +1892,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-10-30',
             DATE_END => '2011-11-01'
@@ -1909,7 +1909,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-11-01',
             DATE_END => '2012-11-04'
@@ -1926,7 +1926,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-05-30',
             DATE_END => '2013-06-02'
@@ -1943,7 +1943,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-05-30',
             DATE_END => '2014-06-02'
@@ -1960,7 +1960,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-05-30',
             DATE_END => '2015-06-02'
@@ -1977,7 +1977,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-06-02',
             DATE_END => '2016-06-05'
@@ -1994,7 +1994,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2017-06-01',
             DATE_END => '2017-06-04'
@@ -2011,7 +2011,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2018-05-31',
             DATE_END => '2018-06-03'
@@ -2028,7 +2028,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2019-05-30',
             DATE_END => '2019-06-02'
@@ -2045,7 +2045,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2021-11-18',
             DATE_END => '2021-11-21'
@@ -2062,7 +2062,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2022-05-02',
             DATE_END => '2022-05-06'
@@ -2079,7 +2079,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2023-06-01',
             DATE_END => '2023-06-04'
@@ -2095,7 +2095,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2024-11-07',
             DATE_END => '2024-11-10'
@@ -2697,7 +2697,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2006-04-23',
             DATE_END => '2006-04-25'
@@ -2714,7 +2714,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2010-04-29',
             DATE_END => '2010-05-02'
@@ -2731,7 +2731,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-04-28',
             DATE_END => '2011-05-01'
@@ -2748,7 +2748,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-04-28',
             DATE_END => '2012-05-01'
@@ -2765,7 +2765,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-04-25',
             DATE_END => '2013-04-28'
@@ -2782,7 +2782,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-04-24',
             DATE_END => '2014-04-27'
@@ -2799,7 +2799,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-04-30',
             DATE_END => '2015-05-03'
@@ -2816,7 +2816,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-04-22',
             DATE_END => '2016-04-25'
@@ -2833,7 +2833,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2017-04-22',
             DATE_END => '2017-04-25'
@@ -2850,7 +2850,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2018-04-28',
             DATE_END => '2018-05-01'
@@ -2867,7 +2867,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2019-04-25',
             DATE_END => '2019-04-28'
@@ -2884,7 +2884,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2021-10-29',
             DATE_END => '2021-11-01'
@@ -2901,7 +2901,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2022-04-22',
             DATE_END => '2022-04-25'
@@ -2918,7 +2918,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2023-04-28',
             DATE_END => '2023-05-01'
@@ -2935,7 +2935,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2024-09-26',
             DATE_END => '2024-09-29'
@@ -3040,7 +3040,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2014-09-11',
@@ -3366,7 +3366,7 @@ my %TOURNAMENTS_ITALY =
           },
           'C1' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-03-09',
             DATE_END => '2014-03-09'
@@ -3412,7 +3412,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-03-25',
             DATE_END => '2016-03-26'
@@ -3565,7 +3565,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2017-05-18',

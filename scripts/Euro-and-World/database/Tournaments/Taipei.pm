@@ -670,7 +670,7 @@ my %TOURNAMENTS_TAIPEI =
           'SINGLE' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'SESSION',
             minor => 'ROUND',
             DATE_START => '2016-01-08',

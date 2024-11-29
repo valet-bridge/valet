@@ -437,7 +437,7 @@ my %TOURNAMENTS_GERMANY =
           'C0' =>
           {
             YEAR => 2004,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2004-05-19',
             DATE_END => '2004-05-20'
@@ -461,7 +461,7 @@ my %TOURNAMENTS_GERMANY =
           'C0' =>
           {
             YEAR => 2005,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2005-05-04',
             DATE_END => '2005-05-05'
@@ -517,7 +517,7 @@ my %TOURNAMENTS_GERMANY =
           'C0' =>
           {
             YEAR => 2007,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2007-05-16',
             DATE_END => '2007-05-17'
@@ -541,7 +541,7 @@ my %TOURNAMENTS_GERMANY =
           'C0' =>
           {
             YEAR => 2008,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2008-04-30',
             DATE_END => '2008-05-01'
@@ -565,7 +565,7 @@ my %TOURNAMENTS_GERMANY =
           'C0' =>
           {
             YEAR => 2009,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2009-05-20',
             DATE_END => '2009-05-21'
@@ -589,7 +589,7 @@ my %TOURNAMENTS_GERMANY =
           'C0' =>
           {
             YEAR => 2010,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2010-05-12',
             DATE_END => '2010-05-13'
@@ -613,7 +613,7 @@ my %TOURNAMENTS_GERMANY =
           'C0' =>
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-06-01',
             DATE_END => '2011-06-02'
@@ -638,7 +638,7 @@ my %TOURNAMENTS_GERMANY =
           'C0' =>
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-05-16',
             DATE_END => '2012-05-17'
@@ -683,7 +683,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 1,
             major => 'ROUND',
             minor => 'SEGMENT',
-            STAGE => 'Round-robin'
+            MOVEMENT => 'Round-robin'
           },
           'WEEKEND 2' =>
           {
@@ -692,14 +692,14 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 2,
             major => 'ROUND',
             minor => 'SEGMENT',
-            STAGE => 'Round-robin'
+            MOVEMENT => 'Round-robin'
           },
           'WEEKEND 3' =>
           {
             DATE_START => '2013-03-02',
             DATE_END => '2013-03-03',
             WEEKEND => 3,
-            STAGE => 'Round-robin'
+            MOVEMENT => 'Round-robin'
           } 
         }
       },
@@ -718,7 +718,7 @@ my %TOURNAMENTS_GERMANY =
             DATE_START => '2014-01-18',
             DATE_END => '2014-01-19',
             WEEKEND => 1,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT'
           },
@@ -727,7 +727,7 @@ my %TOURNAMENTS_GERMANY =
             DATE_START => '2014-03-15',
             DATE_END => '2014-03-16',
             WEEKEND => 2,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT'
           },
@@ -736,7 +736,7 @@ my %TOURNAMENTS_GERMANY =
             DATE_START => '2014-04-05',
             DATE_END => '2014-04-06',
             WEEKEND => 3,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT'
           } 
@@ -757,7 +757,7 @@ my %TOURNAMENTS_GERMANY =
             DATE_START => '2015-01-24',
             DATE_END => '2015-01-25',
             WEEKEND => 1,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT'
           },
@@ -766,7 +766,7 @@ my %TOURNAMENTS_GERMANY =
             DATE_START => '2015-03-07',
             DATE_END => '2015-03-08',
             WEEKEND => 2,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT'
           },
@@ -775,7 +775,7 @@ my %TOURNAMENTS_GERMANY =
             DATE_START => '2015-04-25',
             DATE_END => '2015-04-26',
             WEEKEND => 3,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT'
           } 
@@ -798,7 +798,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 1,
             major => 'ROUND',
             minor => 'SEGMENT',
-            STAGE => 'Round-robin'
+            MOVEMENT => 'Round-robin'
           },
           'WEEKEND 2' =>
           {
@@ -807,7 +807,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 2,
             major => 'ROUND',
             minor => 'SEGMENT',
-            STAGE => 'Round-robin'
+            MOVEMENT => 'Round-robin'
           },
           'WEEKEND 3' =>
           {
@@ -816,7 +816,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 3,
             major => 'ROUND',
             minor => 'SEGMENT',
-            STAGE => 'Round-robin'
+            MOVEMENT => 'Round-robin'
           } 
         }
       },
@@ -837,7 +837,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 1,
             major => 'ROUND',
             minor => 'SEGMENT',
-            STAGE => 'Round-robin'
+            MOVEMENT => 'Round-robin'
           },
           'WEEKEND 2' =>
           {
@@ -846,7 +846,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 2,
             major => 'ROUND',
             minor => 'SEGMENT',
-            STAGE => 'Round-robin'
+            MOVEMENT => 'Round-robin'
           },
           'WEEKEND 3' =>
           {
@@ -855,7 +855,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 3,
             major => 'ROUND',
             minor => 'SEGMENT',
-            STAGE => 'Round-robin'
+            MOVEMENT => 'Round-robin'
           } 
         }
       },
@@ -876,7 +876,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 1,
             major => 'ROUND',
             minor => 'SEGMENT',
-            STAGE => 'Round-robin'
+            MOVEMENT => 'Round-robin'
           },
           'WEEKEND 2' =>
           {
@@ -885,7 +885,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 2,
             major => 'ROUND',
             minor => 'SEGMENT',
-            STAGE => 'Round-robin'
+            MOVEMENT => 'Round-robin'
           },
           'WEEKEND 3' =>
           {
@@ -894,7 +894,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 3,
             major => 'ROUND',
             minor => 'SEGMENT',
-            STAGE => 'Round-robin'
+            MOVEMENT => 'Round-robin'
           } 
         }
       },
@@ -915,7 +915,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 1,
             major => 'ROUND',
             minor => 'SEGMENT',
-            STAGE => 'Round-robin'
+            MOVEMENT => 'Round-robin'
           },
           'WEEKEND 2' =>
           {
@@ -924,7 +924,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 2,
             major => 'ROUND',
             minor => 'SEGMENT',
-            STAGE => 'Round-robin'
+            MOVEMENT => 'Round-robin'
           },
           'WEEKEND 3' =>
           {
@@ -933,7 +933,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 3,
             major => 'ROUND',
             minor => 'SEGMENT',
-            STAGE => 'Round-robin'
+            MOVEMENT => 'Round-robin'
           } 
         }
       },
@@ -954,7 +954,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 1,
             major => 'ROUND',
             minor => 'SEGMENT',
-            STAGE => 'Round-robin'
+            MOVEMENT => 'Round-robin'
           },
           'WEEKEND 2' =>
           {
@@ -963,7 +963,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 2,
             major => 'ROUND',
             minor => 'SEGMENT',
-            STAGE => 'Round-robin'
+            MOVEMENT => 'Round-robin'
           },
           'WEEKEND 3' =>
           {
@@ -972,7 +972,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 3,
             major => 'ROUND',
             minor => 'SEGMENT',
-            STAGE => 'Round-robin'
+            MOVEMENT => 'Round-robin'
           } 
         }
       },
@@ -993,7 +993,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 1,
             major => 'ROUND',
             minor => 'SEGMENT',
-            STAGE => 'Round-robin'
+            MOVEMENT => 'Round-robin'
           },
           'WEEKEND 2' =>
           {
@@ -1002,7 +1002,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 2,
             major => 'ROUND',
             minor => 'SEGMENT',
-            STAGE => 'Round-robin'
+            MOVEMENT => 'Round-robin'
           },
           'WEEKEND 3' =>
           {
@@ -1011,7 +1011,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 3,
             major => 'ROUND',
             minor => 'SEGMENT',
-            STAGE => 'Round-robin'
+            MOVEMENT => 'Round-robin'
           } 
         }
       },
@@ -1032,7 +1032,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 1,
             major => 'ROUND',
             minor => 'SEGMENT',
-            STAGE => 'Round-robin'
+            MOVEMENT => 'Round-robin'
           },
           'WEEKEND 2' =>
           {
@@ -1041,7 +1041,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 2,
             major => 'ROUND',
             minor => 'SEGMENT',
-            STAGE => 'Round-robin'
+            MOVEMENT => 'Round-robin'
           },
           'WEEKEND 3' =>
           {
@@ -1050,7 +1050,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 3,
             major => 'ROUND',
             minor => 'SEGMENT',
-            STAGE => 'Round-robin'
+            MOVEMENT => 'Round-robin'
           } 
         }
       },
@@ -1071,7 +1071,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 1,
             major => 'ROUND',
             minor => 'SEGMENT',
-            STAGE => 'Round-robin'
+            MOVEMENT => 'Round-robin'
           },
           'WEEKEND 2' =>
           {
@@ -1080,7 +1080,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 2,
             major => 'ROUND',
             minor => 'SEGMENT',
-            STAGE => 'Round-robin'
+            MOVEMENT => 'Round-robin'
           },
           'WEEKEND 3' =>
           {
@@ -1089,7 +1089,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 3,
             major => 'ROUND',
             minor => 'SEGMENT',
-            STAGE => 'Round-robin'
+            MOVEMENT => 'Round-robin'
           } 
         }
       }
@@ -2241,7 +2241,7 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-08-27',
             DATE_END => '2016-08-28'
@@ -2266,7 +2266,7 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2017,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2017-05-27',
             DATE_END => '2017-05-28'
@@ -2292,7 +2292,7 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2018,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2018-06-01',
             DATE_END => '2018-06-03'
@@ -2317,7 +2317,7 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2019,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2019-08-31',
             DATE_END => '2019-09-01'
@@ -2342,7 +2342,7 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2021,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2021-08-20',
             DATE_END => '2021-08-21'
@@ -2368,7 +2368,7 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2022,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2022-10-01',
             DATE_END => '2022-10-03'
@@ -2394,7 +2394,7 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2023,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2023-04-29',
             DATE_END => '2023-05-01'
@@ -2420,7 +2420,7 @@ my %TOURNAMENTS_GERMANY =
           'C1' => 
           {
             YEAR => 2024,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2024-04-12',
             DATE_END => '2024-04-14'
@@ -2464,7 +2464,7 @@ my %TOURNAMENTS_GERMANY =
           {
             DATE_START => '2012-01-20',
             DATE_END => '2012-01-22',
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             WEEKEND => 1
           },
@@ -2574,7 +2574,7 @@ my %TOURNAMENTS_GERMANY =
           'C0' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-06-03',
             DATE_END => '2011-06-03'
@@ -2600,7 +2600,7 @@ my %TOURNAMENTS_GERMANY =
           'C0' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-05-18',
             DATE_END => '2012-05-18'
@@ -2626,7 +2626,7 @@ my %TOURNAMENTS_GERMANY =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-05-08',
             DATE_END => '2013-05-08'
@@ -2652,7 +2652,7 @@ my %TOURNAMENTS_GERMANY =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-05-02',
             DATE_END => '2014-05-02'
@@ -2678,7 +2678,7 @@ my %TOURNAMENTS_GERMANY =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-05-01',
             DATE_END => '2015-05-01'
@@ -2704,7 +2704,7 @@ my %TOURNAMENTS_GERMANY =
           'C0' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-04-29',
             DATE_END => '2016-04-29'
@@ -2730,7 +2730,7 @@ my %TOURNAMENTS_GERMANY =
           'C0' => 
           {
             YEAR => 2017,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2017-04-29',
             DATE_END => '2017-05-01'
@@ -2756,7 +2756,7 @@ my %TOURNAMENTS_GERMANY =
           'C0' => 
           {
             YEAR => 2018,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2018-04-29',
             DATE_END => '2018-05-01'
@@ -2782,7 +2782,7 @@ my %TOURNAMENTS_GERMANY =
           'C0' => 
           {
             YEAR => 2019,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2019-04-26',
             DATE_END => '2019-04-28'

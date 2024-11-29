@@ -630,7 +630,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-06-28',
             DATE_END => '2012-06-30'
@@ -1440,7 +1440,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-05-02',
             DATE_END => '2015-05-03'
@@ -1608,7 +1608,7 @@ my %TOURNAMENTS_BULGARIA =
           'C0' => 
           {
             YEAR => 2007,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2007-10-21',
             DATE_END => '2007-10-21'
@@ -1637,7 +1637,7 @@ my %TOURNAMENTS_BULGARIA =
           'C0' => 
           {
             YEAR => 2009,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2009-10-10',
             DATE_END => '2009-10-11'
@@ -1679,7 +1679,7 @@ my %TOURNAMENTS_BULGARIA =
           'C0' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-10-08',
             DATE_END => '2011-10-08'

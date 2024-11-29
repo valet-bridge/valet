@@ -321,7 +321,7 @@ my %TOURNAMENTS_NORDIC =
           'SINGLE' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2011-04-21',
@@ -337,7 +337,7 @@ my %TOURNAMENTS_NORDIC =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-03-28',
             DATE_END => '2013-03-30'
@@ -360,7 +360,7 @@ my %TOURNAMENTS_NORDIC =
           'SINGLE' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-04-04',
             DATE_END => '2015-04-06'
@@ -385,7 +385,7 @@ my %TOURNAMENTS_NORDIC =
           'SINGLE' => 
           {
             YEAR => 2005,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2005-07-01',
             DATE_END => '2005-07-04'

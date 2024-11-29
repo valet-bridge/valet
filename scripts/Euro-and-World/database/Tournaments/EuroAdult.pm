@@ -618,7 +618,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2003,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2003-10-10',
             DATE_END => '2003-10-11'
@@ -649,7 +649,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2004,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2004-10-07',
             DATE_END => '2004-10-08'
@@ -680,7 +680,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2005,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2005-10-13',
             DATE_END => '2005-10-14'
@@ -711,7 +711,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2006,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2006-10-12',
             DATE_END => '2006-10-13'
@@ -750,7 +750,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2007,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2007-11-08',
             DATE_END => '2007-11-09'
@@ -789,7 +789,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2008,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2008-11-06',
             DATE_END => '2008-11-07'
@@ -867,7 +867,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2010,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2010-11-11',
             DATE_END => '2010-11-12'
@@ -912,7 +912,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-11-17',
             DATE_END => '2011-11-18'
@@ -951,7 +951,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-11-15',
             DATE_END => '2012-11-17'
@@ -982,7 +982,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-11-14',
             DATE_END => '2013-11-15'
@@ -1021,7 +1021,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-11-13',
             DATE_END => '2014-11-14'
@@ -1052,7 +1052,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-11-12',
             DATE_END => '2015-11-13'
@@ -1083,7 +1083,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-11-10',
             DATE_END => '2016-11-11'
@@ -1114,7 +1114,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2017,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2017-11-09',
             DATE_END => '2017-11-10'
@@ -1145,7 +1145,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2018,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2018-11-08',
             DATE_END => '2018-11-09'
@@ -1176,7 +1176,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2019,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2019-11-14',
             DATE_END => '2019-11-15'
@@ -1207,7 +1207,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2021,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2021-11-11',
             DATE_END => '2021-11-12'
@@ -1238,7 +1238,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2022,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2022-11-10',
             DATE_END => '2022-11-11'
@@ -1269,7 +1269,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2023,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2023-11-09',
             DATE_END => '2023-11-10'
@@ -1313,7 +1313,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2022,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2022-06-16',
             DATE_END => '2022-06-22'
@@ -1329,7 +1329,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2024,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2024-06-28',
             DATE_END => '2024-07-04'
@@ -1357,7 +1357,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 1996,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '1996-06-15',
             DATE_END => '1996-06-28'
@@ -1373,7 +1373,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 1998,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '1998-06-12',
             DATE_END => '1998-06-26'
@@ -1389,7 +1389,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2000,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2000-06-17',
             DATE_END => '2000-06-30'
@@ -1405,7 +1405,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2002,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2002-06-16',
             DATE_END => '2002-06-29'
@@ -1421,7 +1421,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2004,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2004-06-20',
             DATE_END => '2004-07-03'
@@ -1437,7 +1437,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2006,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2006-08-13',
@@ -1454,7 +1454,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2008,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2008-06-15',
             DATE_END => '2008-06-21'
@@ -1478,7 +1478,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2010,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2010-06-23',
             DATE_END => '2010-06-29'
@@ -1517,7 +1517,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-06-22',
             DATE_END => '2014-06-29'
@@ -1541,7 +1541,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-06-16',
             DATE_END => '2016-06-25'
@@ -1557,7 +1557,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2018,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2018-06-06',
             DATE_END => '2018-06-16'
@@ -1573,7 +1573,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2022,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2022-06-12',
             DATE_END => '2022-06-22'
@@ -1589,7 +1589,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2024,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2024-06-24',
             DATE_END => '2024-07-04'
@@ -1805,7 +1805,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 1996,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '1996-06-21',
             DATE_END => '1996-06-27'
@@ -1821,7 +1821,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 1998,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '1998-06-17',
             DATE_END => '1998-06-25'
@@ -1837,7 +1837,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2000,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2000-06-21',
             DATE_END => '2000-06-30'
@@ -1853,7 +1853,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2002,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2002-06-19',
             DATE_END => '2002-06-28'
@@ -1869,7 +1869,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2004,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2004-06-23',
             DATE_END => '2004-06-30'
@@ -1893,7 +1893,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2006,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2006-08-17',
             DATE_END => '2006-08-23'
@@ -1917,7 +1917,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2008,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2008-06-21',
             DATE_END => '2008-06-27'
@@ -1933,7 +1933,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2010,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2010-06-26',
             DATE_END => '2010-07-03'
@@ -1949,7 +1949,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-06-16',
             DATE_END => '2012-06-23'
@@ -1965,7 +1965,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2014-06-22',
             DATE_END => '2014-06-26'
@@ -1989,7 +1989,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-06-19',
             DATE_END => '2016-06-25'
@@ -2005,7 +2005,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2018,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2018-06-10',
             DATE_END => '2018-06-16'
@@ -2021,7 +2021,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2022,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2022-06-16',
             DATE_END => '2022-06-22'
@@ -2037,7 +2037,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2024,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2024-06-28',
             DATE_END => '2024-07-04'
@@ -2253,7 +2253,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 1996,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '1996-06-18',
             DATE_END => '1996-06-27'
@@ -2269,7 +2269,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 1998,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '1998-06-16',
             DATE_END => '1998-06-25'
@@ -2285,7 +2285,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2000,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2000-06-20',
             DATE_END => '2000-06-29'
@@ -2301,7 +2301,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2002,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2002-06-19',
             DATE_END => '2002-06-28'
@@ -2317,7 +2317,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2004,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2004-06-20',
             DATE_END => '2004-07-02'
@@ -2333,7 +2333,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2006,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2006-08-17',
             DATE_END => '2006-08-25'
@@ -2349,7 +2349,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2008,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2008-06-19',
             DATE_END => '2008-06-27'
@@ -2365,7 +2365,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2010,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2010-06-23',
             DATE_END => '2010-07-02'
@@ -2381,7 +2381,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-06-13',
             DATE_END => '2012-06-22'
@@ -2397,7 +2397,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-06-22',
             DATE_END => '2014-07-01'
@@ -2413,7 +2413,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-06-19',
             DATE_END => '2016-06-25'
@@ -2429,7 +2429,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2018,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2018-06-10',
             DATE_END => '2018-06-16'
@@ -2445,7 +2445,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2022,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2022-06-16',
             DATE_END => '2022-06-22'
@@ -2461,7 +2461,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2024,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2024-06-28',
             DATE_END => '2024-07-04'
@@ -2494,7 +2494,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2007,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2007-11-07',
             DATE_END => '2007-11-09'
@@ -2514,7 +2514,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2009,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2009-09-28',
             DATE_END => '2009-09-29'
@@ -2557,7 +2557,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2010,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2010-09-21',
             DATE_END => '2010-09-22'
@@ -2592,7 +2592,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-09-14',
             DATE_END => '2011-09-15'
@@ -2627,7 +2627,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-09-24',
             DATE_END => '2012-09-25'
@@ -2662,7 +2662,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-09-24',
             DATE_END => '2013-09-26'
@@ -2681,7 +2681,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-10-01',
             DATE_END => '2014-10-03'
@@ -2700,7 +2700,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-10-27',
             DATE_END => '2015-10-29'
@@ -2719,7 +2719,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-11-02',
             DATE_END => '2016-11-04'
@@ -2738,7 +2738,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2017,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2017-10-20',
             DATE_END => '2017-10-22'
@@ -2757,7 +2757,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2018,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2018-10-25',
             DATE_END => '2018-10-27'
@@ -2776,7 +2776,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2019,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2019-10-21',
             DATE_END => '2019-10-23'
@@ -2795,7 +2795,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2021,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2021-09-28',
             DATE_END => '2021-09-30'
@@ -2814,7 +2814,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2022,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2022-11-01',
             DATE_END => '2022-11-03'
@@ -2833,7 +2833,7 @@ my %TOURNAMENTS_EUROADULT =
           'SINGLE' => 
           {
             YEAR => 2023,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2023-10-25',
             DATE_END => '2023-10-27'
@@ -3156,7 +3156,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2003,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2003-06-14',
             DATE_END => '2003-06-14'
@@ -3219,7 +3219,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2005,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2005-06-18',
             DATE_END => '2005-06-18'
@@ -3280,7 +3280,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2007,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2007-06-16',
             DATE_END => '2007-06-16'
@@ -3406,7 +3406,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-06-18',
             DATE_END => '2011-06-18'
@@ -3499,7 +3499,8 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2015-06-27',
             DATE_END => '2015-06-28'
@@ -3546,7 +3547,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2017,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2017-06-10',
             DATE_END => '2017-06-11'
@@ -3593,7 +3594,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2019,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2019-06-15',
             DATE_END => '2019-06-16'
@@ -3648,7 +3649,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2023,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2023-06-03',
             DATE_END => '2023-06-04'
@@ -4018,7 +4019,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2003,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2003-06-20',
             DATE_END => '2003-06-21'
@@ -4081,7 +4082,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2005,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2005-06-24',
             DATE_END => '2005-06-25'
@@ -4143,7 +4144,8 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2007,
-            STAGE => 'Round-robin',
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2007-06-22',
             DATE_END => '2007-06-23'
@@ -4151,6 +4153,7 @@ my %TOURNAMENTS_EUROADULT =
           'C1' => 
           {
             YEAR => 2007,
+            STAGE => 'Qualifying',
             MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2007-06-23',
@@ -4269,7 +4272,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-06-24',
             DATE_END => '2011-06-25'
@@ -4429,7 +4432,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2017,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2017-06-17',
             DATE_END => '2017-06-18'
@@ -4476,7 +4479,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2019,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2019-06-22',
             DATE_END => '2019-06-23'
@@ -4531,7 +4534,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2023,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2023-06-10',
             DATE_END => '2023-06-12'
@@ -4599,7 +4602,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2003,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2003-06-20',
             DATE_END => '2003-06-23'
@@ -4646,7 +4649,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2005,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2005-06-24',
             DATE_END => '2005-06-27'
@@ -4685,7 +4688,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2007,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2007-06-22',
             DATE_END => '2007-06-25'
@@ -4732,7 +4735,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2009,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2009-06-19',
             DATE_END => '2009-06-22'
@@ -4779,7 +4782,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2011,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-06-24',
             DATE_END => '2011-06-26'
@@ -4849,7 +4852,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-07-04',
             DATE_END => '2015-07-05'
@@ -4880,7 +4883,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2017,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2017-06-17',
             DATE_END => '2017-06-18'
@@ -4919,7 +4922,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2019,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2019-06-22',
             DATE_END => '2019-06-23'
@@ -4958,7 +4961,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2023,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2023-06-03',
             DATE_END => '2023-06-05'
@@ -5241,7 +5244,8 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2016-02-05',
             DATE_END => '2016-02-07'
@@ -5289,7 +5293,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2018,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2018-02-17',
             DATE_END => '2018-02-19'
@@ -5337,7 +5341,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2020,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2020-02-29',
             DATE_END => '2020-03-02'
@@ -5385,7 +5389,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2023,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2023-04-21',
             DATE_END => '2023-04-23'
@@ -5442,7 +5446,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2024,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2024-04-15',
             DATE_END => '2024-04-17'
@@ -5499,7 +5503,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2023,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2023-11-09',
             DATE_END => '2023-11-10'

@@ -244,7 +244,7 @@ my %TOURNAMENTS_JAPAN =
           'C0' => 
           {
             YEAR => 2001,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2001-02-08',
             DATE_END => '2001-02-08'
@@ -283,7 +283,7 @@ my %TOURNAMENTS_JAPAN =
           'C0' => 
           {
             YEAR => 2005,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2005-02-08',
             DATE_END => '2005-02-09'
@@ -361,7 +361,7 @@ my %TOURNAMENTS_JAPAN =
           'C0' => 
           {
             YEAR => 2007,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'MATCH',
             DATE_START => '2007-02-08',
             DATE_END => '2007-02-08'
@@ -400,7 +400,7 @@ my %TOURNAMENTS_JAPAN =
           'C0' => 
           {
             YEAR => 2008,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'MATCH',
             DATE_START => '2008-02-07',
             DATE_END => '2008-02-07'

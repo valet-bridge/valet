@@ -449,7 +449,7 @@ my %TOURNAMENTS_RUSSIA =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-09-11',
             DATE_END => '2014-09-13'
@@ -485,7 +485,7 @@ my %TOURNAMENTS_RUSSIA =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-09-17',
             DATE_END => '2015-09-19'
@@ -630,7 +630,7 @@ my %TOURNAMENTS_RUSSIA =
           'C0' => 
           {
             YEAR => 2012,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2012-02-17',
@@ -662,7 +662,7 @@ my %TOURNAMENTS_RUSSIA =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-02-22',
             DATE_END => '2013-02-23'
@@ -694,7 +694,7 @@ my %TOURNAMENTS_RUSSIA =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-02-21',
             DATE_END => '2014-02-22'
@@ -718,7 +718,7 @@ my %TOURNAMENTS_RUSSIA =
           'C0' => 
           {
             YEAR => 2015,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-02-20',
             DATE_END => '2015-02-21'
@@ -750,7 +750,7 @@ my %TOURNAMENTS_RUSSIA =
           'C0' => 
           {
             YEAR => 2016,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-02-19',
             DATE_END => '2016-02-20'

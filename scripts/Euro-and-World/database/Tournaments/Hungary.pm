@@ -45,7 +45,7 @@ my %TOURNAMENTS_HUNGARY =
           'C0' => 
           {
             YEAR => 2013,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-12-06',
             DATE_END => '2013-12-07'
@@ -67,7 +67,7 @@ my %TOURNAMENTS_HUNGARY =
           'C0' => 
           {
             YEAR => 2014,
-            STAGE => 'Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-05-15',
             DATE_END => '2014-05-17'
