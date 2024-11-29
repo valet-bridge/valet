@@ -11,12 +11,6 @@ In the end there shouldn't be that many fields.
 
 FIELDS
 
-Tournaments, Meets
-- ParseT should look up all header pairs for {tname}{tag}
-  and store them
-- Also for a given Meet {meet}{tag}, list of tname, tag
-  that match it
-
 New lookup of BBO data
 - If tname
   - Scan tags, first for YEAR
