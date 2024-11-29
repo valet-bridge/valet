@@ -109,7 +109,7 @@ while ($entryT->read($fh))
       $edition ne $edition2 ||
       $chapter ne $chapter2)
   {
-    # warn $entryT->bbono() . " conflict: ($tname, $edition, $chapter) vs ($tname2, $edition2, $chapter2)";
+    warn $entryT->bbono() . " conflict: ($tname, $edition, $chapter) vs ($tname2, $edition2, $chapter2)";
   }
 
   if ($tname eq '')

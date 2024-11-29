@@ -1699,7 +1699,7 @@ my %TOURNAMENTS_UK =
 
     EDITIONS =>
     {
-      '2013' =>
+      '2014' =>
       {
         CHAPTERS =>
         {

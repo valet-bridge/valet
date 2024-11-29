@@ -3992,7 +3992,7 @@ my %TOURNAMENTS_INDIA =
 
     EDITIONS =>
     {
-      '2010' =>
+      '2011' =>
       {
         CHAPTERS =>
         {
