@@ -490,6 +490,44 @@ sub compatibility
 }
 
 
+sub compatibility_new
+{
+  # Not a class method.
+  my ($header, $entry, $form_fixable, $scoring_fixable) = @_;
+
+  my $hits = 0;
+  my $conflicts = 0;
+
+  for my $key (keys %$entry)
+  {
+    next unless exists $header->{$key};
+    my $header_value = $header->{$key};
+    my $entry_value = $entry->{$key};
+
+    if ($entry_value eq $header_value)
+    {
+      $hits++;
+    }
+    elsif ($key eq 'SCORING' && 
+        (exists $SCORING_HASH{$entry_value}{$header_value} ||
+        $scoring_fixable))
+    {
+      $hits++;
+    }
+    elsif ($key eq 'FORM' && $form_fixable)
+    {
+      $entry->{$key} = $header_value;
+      $hits++;
+    }
+    else
+    {
+      $conflicts++;
+    }
+  }
+  return ($hits, $conflicts);
+}
+
+
 my (@times, $t0, $t1);
 
 sub get_edition_and_chapter
@@ -658,22 +696,22 @@ sub get_tname_list
   my ($self, $meet, $tname, $entry, $tname_list) = @_;
 
   # It's useful to screen by the year of the entry.
-  my $entry_year = $entry->field('YEAR');
+  my $entry_year = $entry->chapter_field('YEAR');
   if ($entry_year eq '')
   {
-    $entry->field('DATE_ADDED') =~ /^(\d\d\d\d)/;
+    $entry->chapter_field('DATE_ADDED') =~ /^(\d\d\d\d)/;
     $entry_year = $1;
   }
 
   if (exists $self->{TOURNAMENT}{$tname})
   {
-    for my $edition (keys %{$self->{TOURNAMENT}{EDITIONS}})
+    for my $edition (keys %{$self->{TOURNAMENT}{$tname}{EDITIONS}})
     {
       if ($edition =~ /^(\d\d\d\d)[A-Z]{0,1}$/)
       {
         next unless $1 eq $entry_year;
       }
-      push @$tname_list, [ TNAME => $tname, EDITION => $edition ];
+      push @$tname_list, { TNAME => $tname, EDITION => $edition };
     }
   }
   elsif ($meet ne '' && exists $self->{MEET}{$meet})
@@ -685,7 +723,7 @@ sub get_tname_list
       {
         next unless $1 eq $entry_year;
       }
-      push @$tname_list, @{$m->{$edition}};
+      push @$tname_list, %{$m->{$edition}};
     }
   }
   else
@@ -706,14 +744,16 @@ sub update_chapter_match
 {
   my ($self, $header, $target, $t_hits, 
     $tname, $edition_str, $chapter_str, 
+    $form_fixable, $scoring_fixable,
     $best, $entry, $debug) = @_;
 
-  my $edition = $self->{TOURNAMENTS}{$tname}{EDITION}{$edition_str};
+  my $edition = $self->{TOURNAMENT}{$tname}{EDITIONS}{$edition_str};
   my $chapter = $edition->{CHAPTERS}{$chapter_str};
   return unless ref($chapter) eq 'HASH';
 
-  my ($c_hits, $c_conflicts) = compatibility($chapter, $entry);
-  next unless $c_conflicts == 0;
+  my ($c_hits, $c_conflicts) = compatibility_new(
+    $chapter, $entry->{CHAPTER}, $form_fixable, $scoring_fixable);
+  return unless $c_conflicts == 0;
 
   my $hits = $t_hits + $c_hits;
 
@@ -768,7 +808,7 @@ sub get_edition_and_chapter_new
   return ($tname, '', '') unless $#tname_list >= 0;
 
   my $target = DateCalc->new();
-  $target->set_by_field($entry->field('DATE_ADDED'));
+  $target->set_by_field($entry->{CHAPTER}{DATE_ADDED});
 
   my %best;
   $best{LOWEST_DIST} = 9999;
@@ -782,16 +822,22 @@ sub get_edition_and_chapter_new
     my $edition_cand = $tname_entry->{EDITION};
 
     my $t = $self->{T_HEADERS}{$tname_cand}{$edition_cand};
-    my ($t_hits, $t_conflicts) = compatibility($t, $entry);
+    my $form_fixable = FScorr::form_fixable($tname_cand, $entry->bbono());
+    my $scoring_fixable = 
+      FScorr::scoring_fixable($tname_cand, $entry->bbono());
+
+    my ($t_hits, $t_conflicts) = compatibility_new(
+      $t, $entry->{HEADER}, $form_fixable, $scoring_fixable);
     next if $t_conflicts > 0;
 
     $t0 = time();
     my $edition = 
-      $self->{TOURNAMENTS}{$tname_cand}{EDITION}{$edition_cand};
+      $self->{TOURNAMENT}{$tname_cand}{EDITIONS}{$edition_cand};
     for my $chapter_str (keys %{$edition->{CHAPTERS}})
     {
-      $self->update_header_match($t, $target, $t_hits,
-        $tname_cand, $edition_cand, $chapter_str,
+      $self->update_chapter_match($t, $target, $t_hits,
+        $tname_cand, $edition_cand, $chapter_str, 
+        $form_fixable, $scoring_fixable,
         \%best, $entry, $debug);
     }
     $times[1] += time() - $t0;

@@ -4013,7 +4013,7 @@ my %TOURNAMENTS_INDIA =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
+    FORM => 'Pairs',
     SCORING => 'IAF',
     GENDER => 'Open',
     AGE => 'Open',

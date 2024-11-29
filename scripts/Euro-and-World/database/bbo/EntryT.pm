@@ -78,7 +78,6 @@ my @HEADER_FIELDS_NEW = qw(
 
   FORM
   SCORING
-  MOVEMENT
 
   AGE 
   GENDER
@@ -120,7 +119,6 @@ my %HEADER_HASH_NEW = (
   TEAM2_FORM => 'FORM',
   TITLE_SCORING => 'SCORING',
   EVENT_SCORING => 'SCORING',
-  TITLE_MOVEMENT => 'MOVEMENT',
 
   TITLE_AGE => 'AGE',
   EVENT_AGE => 'AGE',
@@ -1383,6 +1381,13 @@ sub field
   {
     return '';
   }
+}
+
+
+sub chapter_field
+{
+  my ($self, $field) = @_;
+  return $self->{CHAPTER}{$field} // '';
 }
 
 

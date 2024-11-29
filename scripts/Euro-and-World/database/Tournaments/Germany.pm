@@ -1519,7 +1519,7 @@ my %TOURNAMENTS_GERMANY =
       '2014' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=842&site=0&kl=0
-        ORDINAL => '8th',
+        ORDINAL => 8,
         MEET => 'German Championship Week',
         CHAPTERS => 
         {
@@ -1553,7 +1553,7 @@ my %TOURNAMENTS_GERMANY =
       '2015' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=1689&site=0&kl=0
-        ORDINAL => '9th',
+        ORDINAL => 9,
         MEET => 'German Championship Week',
         CHAPTERS => 
         {
@@ -1571,7 +1571,7 @@ my %TOURNAMENTS_GERMANY =
       '2016' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=3180&site=0&kl=0
-        ORDINAL => '10th',
+        ORDINAL => 10,
         MEET => 'German Championship Week',
         CHAPTERS => 
         {
@@ -1597,7 +1597,7 @@ my %TOURNAMENTS_GERMANY =
       '2017' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=5039&site=0&kl=0
-        ORDINAL => '11th',
+        ORDINAL => 11,
         MEET => 'German Championship Week',
         CHAPTERS => 
         {
@@ -1623,7 +1623,7 @@ my %TOURNAMENTS_GERMANY =
       '2018' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=7444&site=0&kl=0
-        ORDINAL => '12th',
+        ORDINAL => 12,
         MEET => 'German Championship Week',
         CHAPTERS => 
         {
@@ -1649,7 +1649,7 @@ my %TOURNAMENTS_GERMANY =
       '2019' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=10947&site=0&kl=0
-        ORDINAL => '13th',
+        ORDINAL => 13,
         MEET => 'German Championship Week',
         CHAPTERS => 
         {
@@ -1675,7 +1675,7 @@ my %TOURNAMENTS_GERMANY =
       '2021' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=15504&site=0&kl=0
-        ORDINAL => '14th',
+        ORDINAL => 14,
         MEET => 'German Championship Week',
         CHAPTERS => 
         {

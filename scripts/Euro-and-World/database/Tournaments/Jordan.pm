@@ -38,7 +38,7 @@ my %MEETS_JORDAN =
       },
       '2013' =>
       {
-        ORDINAL => 31,
+        ORDINAL => 32,
         YEAR => 2013,
         DATE_START => '2013-11-06',
         DATE_END => '2013-11-10'

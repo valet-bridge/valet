@@ -135,7 +135,7 @@ my %MEETS_SOUTHAMERICA =
       '2014' =>
       {
         # http://santiago2014.csbnews.org/
-        ORDINAL => 64,
+        MEET_ORDINAL => 64,
         CITY => 'Santiago',
         COUNTRY => 'Chile',
         YEAR => 2014,
@@ -336,6 +336,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2014' =>
       {
+        ORDINAL => 5,
         MEET => 'South American Team Championship',
         CHAPTERS =>
         {

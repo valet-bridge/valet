@@ -8,6 +8,8 @@ Don't need Tword.pm anymore?
 Figure out what becomes of DAY, WEEKDAY. PERSON etc.
 In the end there shouldn't be that many fields.
 
+ORDINAL, MEET_ORDINAL: Probably set the latter when we have
+MEET and not TNAME?
 
 FIELDS
 

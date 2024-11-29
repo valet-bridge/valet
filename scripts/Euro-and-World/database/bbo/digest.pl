@@ -54,7 +54,7 @@ my %data;
 my (@times, $t0);
 
 my $entryT = EntryT->new();
-# my $entry2T = EntryT->new();
+my $entry2T = EntryT->new();
 while ($entryT->read($fh))
 {
   if ($debug_flag && defined $debug_bbono)
@@ -62,8 +62,8 @@ while ($entryT->read($fh))
     next unless $entryT->bbono() eq $debug_bbono;
   }
 
-  # $entry2T->copy_from_TMP($entryT);
-  # $entry2T->format();
+  $entry2T->copy_from_TMP($entryT);
+  $entry2T->format();
 
   my $meet = $entryT->field('TITLE_MEET');
   my $tname = $entryT->field('TITLE_TNAME');
@@ -75,7 +75,7 @@ while ($entryT->read($fh))
     next;
   }
 
-  if ($entryT->bbono() eq 932)
+  if ($entryT->bbono() eq 46333)
   {
     # print "HERE\n";
   }
@@ -100,6 +100,16 @@ while ($entryT->read($fh))
   ($tname, $edition, $chapter) =
     $parseT->get_edition_and_chapter($meet, $tname, $entryT, $debug_flag);
   $times[1] += time() - $t0;
+
+  my ($tname2, $edition2, $chapter2) =
+    $parseT->get_edition_and_chapter_new($meet, $tname, $entry2T, $debug_flag);
+
+  if ($tname ne $tname2 ||
+      $edition ne $edition2 ||
+      $chapter ne $chapter2)
+  {
+    # warn $entryT->bbono() . " conflict: ($tname, $edition, $chapter) vs ($tname2, $edition2, $chapter2)";
+  }
 
   if ($tname eq '')
   {
@@ -142,7 +152,7 @@ close $fh;
 exit if $debug_flag;
 
 # TODO
-# exit;
+exit;
 
 # for my $i (0 .. $#times)
 # {

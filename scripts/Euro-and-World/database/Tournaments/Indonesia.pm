@@ -242,7 +242,7 @@ my %MEETS_INDONESIA =
       '2014' =>
       {
         # https://bridge.web.id/2014/kejurnas-mhs/
-        ORDINAL => 12,
+        ORDINAL => 11,
         CITY => 'Surabaya',
         YEAR => 2014,
         DATE_START => '2014-12-08',
@@ -250,7 +250,7 @@ my %MEETS_INDONESIA =
       },
       '2015' =>
       {
-        ORDINAL => 13,
+        ORDINAL => 12,
         YEAR => 2015,
         DATE_START => '2015-11-03',
         DATE_END => '2015-11-05'

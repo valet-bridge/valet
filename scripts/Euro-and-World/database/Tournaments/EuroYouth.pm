@@ -27,7 +27,7 @@ my %MEETS_EURO_YOUTH =
       '2008' =>
       {
         # http://db.eurobridge.org/Repository/competitions/08Wroclaw/Results.htm
-        ORDINAL => '9th',
+        ORDINAL => 9,
         YEAR => 2008,
         CITY => 'Wroclaw',
         COUNTRY => 'Poland',
@@ -38,7 +38,7 @@ my %MEETS_EURO_YOUTH =
       '2010' =>
       {
         # http://db.eurobridge.org/Repository/competitions/10Opatija/Results.htm
-        ORDINAL => '10th',
+        ORDINAL => 10,
         YEAR => 2010,
         CITY => 'Opatija',
         COUNTRY => 'Croatia',
@@ -49,7 +49,7 @@ my %MEETS_EURO_YOUTH =
       '2012' =>
       {
         # http://db.eurobridge.org/Repository/competitions/12Vejle/microSite/Results.htm
-        ORDINAL => '11th',
+        ORDINAL => 11,
         YEAR => 2012,
         CITY => 'Vejle',
         COUNTRY => 'Denmark',
@@ -60,7 +60,7 @@ my %MEETS_EURO_YOUTH =
       '2014' =>
       {
         # http://db.eurobridge.org/Repository/competitions/14Burghausen/microSite/results.htm
-        ORDINAL => '12th',
+        ORDINAL => 12,
         YEAR => 2014,
         CITY => 'Burghausen',
         COUNTRY => 'Germany',
@@ -71,7 +71,7 @@ my %MEETS_EURO_YOUTH =
       '2016' =>
       {
         # http://db.eurobridge.org/Repository/competitions/16Liepaja/microSite/results.htm
-        ORDINAL => '13th',
+        ORDINAL => 13,
         YEAR => 2016,
         CITY => 'Liepaja',
         COUNTRY => 'Latvia',
@@ -82,7 +82,7 @@ my %MEETS_EURO_YOUTH =
       '2018' =>
       {
         # http://db.eurobridge.org/Repository/competitions/18opatija/microsite/results.htm
-        ORDINAL => '14th',
+        ORDINAL => 14,
         YEAR => 2018,
         CITY => 'Opatija',
         COUNTRY => 'Croatia',
@@ -93,7 +93,7 @@ my %MEETS_EURO_YOUTH =
       '2023' =>
       {
         # http://db.eurobridge.org/repository/competitions/23Veldhoven/microsite/results.htm
-        ORDINAL => '15th',
+        ORDINAL => 15,
         YEAR => 2023,
         CITY => 'Veldhoven',
         COUNTRY => 'Netherlands',
@@ -115,7 +115,7 @@ my %MEETS_EURO_YOUTH =
       '1996' =>
       {
         # http://db.eurobridge.org/Repository/competitions/96Cardiff/cardiff.htm
-        ORDINAL => '15th',
+        ORDINAL => 15,
         YEAR => 1996,
         CITY => 'Cardiff',
         COUNTRY => 'Great Britain',
@@ -126,7 +126,7 @@ my %MEETS_EURO_YOUTH =
       '1998' =>
       {
         # http://db.eurobridge.org/Repository/competitions/98Vienna/vienna.htm
-        ORDINAL => '16th',
+        ORDINAL => 16,
         YEAR => 1998,
         CITY => 'Vienna',
         COUNTRY => 'Austria',
@@ -137,7 +137,7 @@ my %MEETS_EURO_YOUTH =
       '2000' =>
       {
         # http://db.eurobridge.org/Repository/competitions/00Antalya/antalya.htm#table
-        ORDINAL => '17th',
+        ORDINAL => 17,
         YEAR => 2000,
         CITY => 'Antalya',
         COUNTRY => 'Turkey',
@@ -148,7 +148,7 @@ my %MEETS_EURO_YOUTH =
       '2002' =>
       {
         # http://db.eurobridge.org/Repository/competitions/02Torquay/Torquay.htm
-        ORDINAL => '18th',
+        ORDINAL => 18,
         YEAR => 2002,
         CITY => 'Torquay',
         COUNTRY => 'England',
@@ -159,7 +159,7 @@ my %MEETS_EURO_YOUTH =
       '2004' =>
       {
         # http://db.eurobridge.org/Repository/competitions/04Prague/Results.htm
-        ORDINAL => '19th',
+        ORDINAL => 19,
         YEAR => 2004,
         CITY => 'Prague',
         COUNTRY => 'Czech Republic',
@@ -170,7 +170,7 @@ my %MEETS_EURO_YOUTH =
       '2005' =>
       {
         # http://db.eurobridge.org/Repository/competitions/05Riccione/Results.htm
-        ORDINAL => '20th',
+        ORDINAL => 20,
         YEAR => 2005,
         CITY => 'Riccione',
         COUNTRY => 'Italy',
@@ -181,7 +181,7 @@ my %MEETS_EURO_YOUTH =
       '2007' =>
       {
         # http://db.eurobridge.org/Repository/competitions/07Jesolo/Results.htm
-        ORDINAL => '21st',
+        ORDINAL => 21,
         YEAR => 2007,
         CITY => 'Jesolo',
         COUNTRY => 'Italy',
@@ -192,7 +192,7 @@ my %MEETS_EURO_YOUTH =
       '2009' =>
       {
         # http://db.eurobridge.org/Repository/competitions/09Brasov/Results.htm
-        ORDINAL => '22nd',
+        ORDINAL => 22,
         YEAR => 2009,
         CITY => 'Brasov',
         COUNTRY => 'Romania',
@@ -203,7 +203,7 @@ my %MEETS_EURO_YOUTH =
       '2011' =>
       {
         # http://db.eurobridge.org/Repository/competitions/11Albena/microSite/Results.htm
-        ORDINAL => '23rd',
+        ORDINAL => 23,
         YEAR => 2011,
         CITY => 'Albena',
         COUNTRY => 'Bulgaria',
@@ -214,7 +214,7 @@ my %MEETS_EURO_YOUTH =
       '2013' =>
       {
         # http://db.eurobridge.org/Repository/competitions/13Wroclaw/microSite/Results.htm
-        ORDINAL => '24th',
+        ORDINAL => 24,
         YEAR => 2013,
         CITY => 'Wroclaw',
         COUNTRY => 'Poland',
@@ -225,7 +225,7 @@ my %MEETS_EURO_YOUTH =
       '2015' =>
       {
         # http://db.eurobridge.org/Repository/competitions/15TromsoYouth/microSite/results.htm
-        ORDINAL => '25th',
+        ORDINAL => 25,
         YEAR => 2015,
         CITY => 'Tromso',
         COUNTRY => 'Norway',
@@ -236,7 +236,7 @@ my %MEETS_EURO_YOUTH =
       '2017' =>
       {
         # http://db.eurobridge.org/repository/competitions/17samorin/microsite/results.htm
-        ORDINAL => '26th',
+        ORDINAL => 26,
         YEAR => 2017,
         CITY => 'Samorin',
         COUNTRY => 'Slovakia',
@@ -247,7 +247,7 @@ my %MEETS_EURO_YOUTH =
       '2019' =>
       {
         # http://db.eurobridge.org/repository/competitions/19stokke/microsite/results.htm
-        ORDINAL => '27th',
+        ORDINAL => 27,
         YEAR => 2019,
         CITY => 'Oslo',
         COUNTRY => 'Norway',
@@ -258,7 +258,7 @@ my %MEETS_EURO_YOUTH =
       '2023' =>
       {
         # http://db.eurobridge.org/repository/competitions/22Veldhoven/microsite/results.htm
-        ORDINAL => '28th',
+        ORDINAL => 28,
         YEAR => 2023,
         CITY => 'Veldhoven',
         COUNTRY => 'Netherlands',
@@ -269,7 +269,7 @@ my %MEETS_EURO_YOUTH =
       '2024' =>
       {
         # http://db.eurobridge.org/repository/competitions/24wroclaw/microsite/results.htm
-        ORDINAL => '29th',
+        ORDINAL => 29,
         YEAR => 2024,
         CITY => 'Wroclaw',
         COUNTRY => 'Poland',

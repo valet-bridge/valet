@@ -30,7 +30,7 @@ my %MEETS_BULGARIA =
       '2008' =>
       {
         # https://www.bridgealbena.org/Albena/results2008.html
-        ORDINAL => 32,
+        ORDINAL => 26,
         YEAR => 2008,
         DATE_START => '2008-06-17',
         DATE_END => '2008-06-28'
@@ -38,7 +38,7 @@ my %MEETS_BULGARIA =
       '2009' =>
       {
         # https://www.bridgealbena.org/Albena/results2009.html
-        ORDINAL => 33,
+        ORDINAL => 27,
         YEAR => 2009,
         DATE_START => '2009-06-16',
         DATE_END => '2009-06-27'
@@ -46,7 +46,7 @@ my %MEETS_BULGARIA =
       '2010' =>
       {
         # https://www.bridgealbena.org/Albena/results2010.html
-        ORDINAL => 34,
+        ORDINAL => 28,
         YEAR => 2010,
         DATE_START => '2010-06-22',
         DATE_END => '2010-07-03'
@@ -54,7 +54,7 @@ my %MEETS_BULGARIA =
       '2011' =>
       {
         # https://www.bridgealbena.org/Albena/results2011.html
-        ORDINAL => 35,
+        ORDINAL => 29,
         YEAR => 2011,
         DATE_START => '2011-06-21',
         DATE_END => '2011-07-02'
@@ -62,7 +62,7 @@ my %MEETS_BULGARIA =
       '2012' =>
       {
         # https://www.bridgealbena.org/Albena/results2012.html
-        ORDINAL => 36,
+        ORDINAL => 30,
         YEAR => 2012,
         DATE_START => '2012-06-19',
         DATE_END => '2012-06-30'
@@ -70,7 +70,7 @@ my %MEETS_BULGARIA =
       '2013' =>
       {
         # https://www.bridgealbena.org/Albena/results2013.html
-        ORDINAL => 37,
+        ORDINAL => 31,
         YEAR => 2013,
         DATE_START => '2013-06-18',
         DATE_END => '2013-06-29'
@@ -78,7 +78,7 @@ my %MEETS_BULGARIA =
       '2014' =>
       {
         # https://www.bridgealbena.org/Albena/results2014.html
-        ORDINAL => 38,
+        ORDINAL => 32,
         YEAR => 2014,
         DATE_START => '2014-06-24',
         DATE_END => '2014-07-06'
@@ -86,7 +86,7 @@ my %MEETS_BULGARIA =
       '2015' =>
       {
         # https://www.bridgealbena.org/Albena/results2015.html
-        ORDINAL => 39,
+        ORDINAL => 33,
         YEAR => 2015,
         DATE_START => '2015-06-24',
         DATE_END => '2015-07-06'
@@ -94,7 +94,7 @@ my %MEETS_BULGARIA =
       '2016' =>
       {
         # https://www.bridgealbena.org/Albena/results2016.html
-        ORDINAL => 40,
+        ORDINAL => 34,
         YEAR => 2016,
         DATE_START => '2016-06-28',
         DATE_END => '2016-07-10'
@@ -102,7 +102,7 @@ my %MEETS_BULGARIA =
       '2017' =>
       {
         # https://www.bridgealbena.org/Albena/results2017.html
-        ORDINAL => 41,
+        ORDINAL => 35,
         YEAR => 2017,
         DATE_START => '2017-06-27',
         DATE_END => '2017-07-09'
@@ -110,7 +110,7 @@ my %MEETS_BULGARIA =
       '2018' =>
       {
         # https://www.bridgealbena.org/Albena/results2018.html
-        ORDINAL => 42,
+        ORDINAL => 36,
         YEAR => 2018,
         DATE_START => '2018-06-27',
         DATE_END => '2018-07-09'
@@ -118,7 +118,7 @@ my %MEETS_BULGARIA =
       '2019' =>
       {
         # https://www.bridgealbena.org/Albena/results2019.html
-        ORDINAL => 43,
+        ORDINAL => 37,
         YEAR => 2019,
         DATE_START => '2019-06-25',
         DATE_END => '2019-07-07'
@@ -126,6 +126,7 @@ my %MEETS_BULGARIA =
       '2020' =>
       {
         # https://www.bridgealbena.org/Albena/results2020.html
+        ORDINAL => 38,
         YEAR => 2020,
         DATE_START => '2020-06-23',
         DATE_END => '2020-07-05'
@@ -133,6 +134,7 @@ my %MEETS_BULGARIA =
       '2021' =>
       {
         # https://www.bridgealbena.org/Albena/results2021.html
+        ORDINAL => 39,
         YEAR => 2021,
         DATE_START => '2021-06-25',
         DATE_END => '2021-07-04'
@@ -140,6 +142,7 @@ my %MEETS_BULGARIA =
       '2022' =>
       {
         # https://www.bridgealbena.org/Albena/results2022.html
+        ORDINAL => 40,
         YEAR => 2022,
         DATE_START => '2022-06-24',
         DATE_END => '2022-07-03'
@@ -147,6 +150,7 @@ my %MEETS_BULGARIA =
       '2023' =>
       {
         # https://www.bridgealbena.org/Albena/results2023.html
+        ORDINAL => 41,
         YEAR => 2023,
         DATE_START => '2023-06-30',
         DATE_END => '2023-07-09'
@@ -154,6 +158,7 @@ my %MEETS_BULGARIA =
       '2024' =>
       {
         # https://www.bridgealbena.org/Albena/results2024.html
+        ORDINAL => 22,
         YEAR => 2024,
         DATE_START => '2024-06-28',
         DATE_END => '2024-07-07'
@@ -448,7 +453,8 @@ my %MEETS_BULGARIA =
       },
       '2012' =>
       {
-        ORDINAL => 20,
+        # It seems they are both the 19th?!
+        ORDINAL => 19,
         YEAR => 2012,
         DATE_START => '2012-05-19',
         DATE_END => '2012-05-20'
@@ -660,8 +666,8 @@ my %TOURNAMENTS_BULGARIA =
           {
             YEAR => 2016,
             major => 'ROUND',
-            DATE_START => '2016-07-03',
-            DATE_END => '2016-07-10'
+            DATE_START => '2016-07-07',
+            DATE_END => '2016-07-09'
           } 
         }
       },

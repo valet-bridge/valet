@@ -221,7 +221,7 @@ sub post_process_captains
 
 sub post_process_leading_number
 {
-  my ($chains, $teams, $bbono) = @_;
+  my ($chains, $knowledge, $bbono) = @_;
 
   return unless $#$chains >= 0;
   my $chain = $chains->[0];
@@ -233,8 +233,15 @@ sub post_process_leading_number
   my $field = $token->field();
   if ($field eq 'NUMERAL' || $field eq 'ORDINAL' || $field eq 'ROMAN')
   {
-    $token->set_general('COUNTER', 'ORDINAL', $token->value());
-    $chain->complete_if_last_is(0, 'EXPLAINED');
+    if ($knowledge->get_field('TNAME', $bbono) eq 'Reisinger BAM Teams')
+    {
+      $chain->complete_if_last_is(0, 'KILLED');
+    }
+    else
+    {
+      $token->set_general('COUNTER', 'ORDINAL', $token->value());
+      $chain->complete_if_last_is(0, 'EXPLAINED');
+    }
   }
   elsif ($field eq 'PARTICLE' && lc($token->value()) eq 'vs')
   {
@@ -869,7 +876,6 @@ sub deteam
 
   post_process_title_teams($chains, $teams, $bbono);
   post_process_captains($chains, $bbono);
-  post_process_leading_number($chains, $bbono);
 }
 
 
@@ -884,6 +890,7 @@ sub finish
 
   # A special case: There are both players and tournaments with
   # Silver and Gold in them.
+  post_process_leading_number($chains_title, $knowledge, $bbono);
   fix_metals($chains_title, $knowledge, $bbono);
 
   my (@stretches, @actives);
