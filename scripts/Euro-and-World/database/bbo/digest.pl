@@ -75,7 +75,7 @@ while ($entryT->read($fh))
     next;
   }
 
-  if ($entryT->bbono() eq 46333)
+  if ($entryT->bbono() eq 2612)
   {
     # print "HERE\n";
   }
@@ -96,13 +96,14 @@ while ($entryT->read($fh))
 
   # This could set tname if it was previously unset!
   my ($edition, $chapter);
+  my $tname_orig = $tname;
   $t0 = time();
   ($tname, $edition, $chapter) =
     $parseT->get_edition_and_chapter($meet, $tname, $entryT, $debug_flag);
   $times[1] += time() - $t0;
 
   my ($tname2, $edition2, $chapter2) =
-    $parseT->get_edition_and_chapter_new($meet, $tname, $entry2T, $debug_flag);
+    $parseT->get_edition_and_chapter_new($meet, $tname_orig, $entry2T, $debug_flag);
 
   if ($tname ne $tname2 ||
       $edition ne $edition2 ||

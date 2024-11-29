@@ -44,7 +44,7 @@ my %MEETS_INDONESIA =
         # 
         YEAR => 2008,
         DATE_START => '2008-05-04',
-        DATE_END => '2008-05-04'
+        DATE_END => '2008-05-05'
       },
       '2009' =>
       {
@@ -816,7 +816,15 @@ my %TOURNAMENTS_INDONESIA =
         MEET => 'Indonesian National Championship Week',
         CHAPTERS =>
         {
-          'C0' => 
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2015-05-10',
+            DATE_END => '2015-05-12'
+          } ,
+          'C1' => 
           {
             YEAR => 2015,
             STAGE => 'Semifinal',
@@ -824,7 +832,7 @@ my %TOURNAMENTS_INDONESIA =
             DATE_START => '2015-05-13',
             DATE_END => '2015-05-13'
           },
-          'C1' => 
+          'C2' => 
           {
             YEAR => 2015,
             STAGE => 'Final',
@@ -857,22 +865,29 @@ my %TOURNAMENTS_INDONESIA =
             YEAR => 2008,
             STAGE => 'Qualifying',
             major => 'ROUND',
-            DATE_START => '2008-05-04',
-            DATE_END => '2008-05-04'
+            DATE_START => '2008-05-05',
+            DATE_END => '2008-05-05'
           },
           'C1' => 
           {
             YEAR => 2008,
-            STAGE => 'Semifinal',
-            DATE_START => '2008-05-04',
-            DATE_END => '2008-05-04'
+            STAGE => 'Quarterfinal',
+            DATE_START => '2008-05-05',
+            DATE_END => '2008-05-05'
           },
           'C2' => 
           {
             YEAR => 2008,
+            STAGE => 'Semifinal',
+            DATE_START => '2008-05-05',
+            DATE_END => '2008-05-05'
+          },
+          'C3' => 
+          {
+            YEAR => 2008,
             STAGE => 'Final',
-            DATE_START => '2008-05-04',
-            DATE_END => '2008-05-04'
+            DATE_START => '2008-05-05',
+            DATE_END => '2008-05-05'
           } 
         }
       },
@@ -1136,12 +1151,35 @@ my %TOURNAMENTS_INDONESIA =
     {
       '2008' =>
       {
+        # TODO Same as Inter-City for this year?
         MEET => 'Indonesian National Championship Week',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2008,
+            STAGE => 'Qualifying',
+            DATE_START => '2008-05-04',
+            DATE_END => '2008-05-04'
+          } ,
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Quarterfinal',
+            DATE_START => '2008-05-04',
+            DATE_END => '2008-05-04'
+          },
+          'C2' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Semifinal',
+            DATE_START => '2008-05-04',
+            DATE_END => '2008-05-04'
+          },
+          'C3' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
             DATE_START => '2008-05-04',
             DATE_END => '2008-05-04'
           } 
@@ -1248,21 +1286,6 @@ my %TOURNAMENTS_INDONESIA =
             minor => 'SEGMENT',
             DATE_START => '2014-09-16',
             DATE_END => '2014-09-17'
-          } 
-        }
-      },
-      '2015' =>
-      {
-        MEET => 'Indonesian National Championship Week',
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2015,
-            MOVEMENT => 'Round-robin',
-            major => 'ROUND',
-            DATE_START => '2015-05-10',
-            DATE_END => '2015-05-12'
           } 
         }
       },
@@ -3464,7 +3487,7 @@ my %TOURNAMENTS_INDONESIA =
 
     EDITIONS =>
     {
-      '2014' =>
+      '2015A' =>
       {
         # Could be another similar tournament?
         CHAPTERS =>
@@ -3487,7 +3510,7 @@ my %TOURNAMENTS_INDONESIA =
           },
         }
       },
-      '2015' =>
+      '2015B' =>
       {
         # https://bridge.web.id/2015/sarundajang/
         CHAPTERS =>

@@ -1640,7 +1640,7 @@ my %TOURNAMENTS_UK =
       '2014' =>
       {
         # https://www.ebu.co.uk/results/17
-        FORM => 'Teams',
+        FORM => 'Pairs',
         SCORING => 'IMP',
         CHAPTERS =>
         {
@@ -1670,7 +1670,7 @@ my %TOURNAMENTS_UK =
       '2016' =>
       {
         # https://www.ebu.co.uk/results/461
-        FORM => 'Teams',
+        FORM => 'Pairs',
         SCORING => 'IMP',
         CHAPTERS =>
         {

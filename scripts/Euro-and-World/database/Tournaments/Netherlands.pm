@@ -24,7 +24,6 @@ my %MEETS_NETHERLANDS =
   'The Hague Bridge Experience',
   {
     %GLOBAL,
-    ORIGIN => 'National',
     CITY => 'The Hague',
 
     EDITIONS => 
@@ -734,6 +733,7 @@ my %TOURNAMENTS_NETHERLANDS =
 
   'The Hague Open Teams',
   {
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -773,6 +773,7 @@ my %TOURNAMENTS_NETHERLANDS =
 
   'The Hague Pro-Am Pairs',
   {
+    ORIGIN => 'Pro-Am',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',

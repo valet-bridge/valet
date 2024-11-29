@@ -403,7 +403,7 @@ sub set_lookup_links
           $mchapter = $self->{MEET}{$meet}{EDITIONS}{$mtag};
 
           push @{$self->{M_LINKS}{$meet}{$mtag}},
-            [ TNAME => $tournament, EDITION => $tag ];
+            { TNAME => $tournament, EDITION => $tag };
         }
         else
         {
@@ -723,7 +723,7 @@ sub get_tname_list
       {
         next unless $1 eq $entry_year;
       }
-      push @$tname_list, %{$m->{$edition}};
+      push @$tname_list, @{$m->{$edition}};
     }
   }
   else
@@ -791,7 +791,7 @@ sub update_chapter_match
   {
     $best->{EQUAL_COLLISION} = 1;
     $best->{COLLISION_STR} = $entry->bbono() . 
-      " double zero, ($tname, $edition_str, $chapter_str) vs (" .
+      " double ZERO, ($tname, $edition_str, $chapter_str) vs (" .
       str_or_equal($best->{LOWEST_TNAME}, $tname) . ", " .
       str_or_equal($best->{LOWEST_EDITION}, $edition_str) . ", " .
       str_or_equal($best->{LOWEST_CHAPTER}, $chapter_str) . ")";
@@ -858,7 +858,7 @@ sub get_edition_and_chapter_new
   else
   {
     warn $entry->bbono() . 
-      " not found (dist $best{LOWEST_DIST}): " .
+      " not found (DIST $best{LOWEST_DIST}): " .
       "$tname, " . $entry->field('DATE_ADDED');
     return ($tname, '', '');
   }

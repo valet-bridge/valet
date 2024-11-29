@@ -966,7 +966,7 @@ my %MEETS_POLAND =
       '2011' =>
       {
         # https://kongres.brydz.wlkp.pl/arch2011
-        ORDINAL => 51,
+        MEET_ORDINAL => 51,
         YEAR => 2011,
         DATE_START => '2011-04-30',
         DATE_END => '2011-05-03'
@@ -6517,6 +6517,7 @@ my %TOURNAMENTS_POLAND =
       '2011' =>
       {
         # https://s3.eu-central-1.amazonaws.com/kongres.brydz.wlkp.pl/wyniki2011/W-sb2.html
+        ORDINAL => 8,
         MEET => 'Poznan Congress',
         CHAPTERS =>
         {

@@ -26,7 +26,7 @@ my %MEETS_SWITZERLAND =
   'Zurich Open' =>
   {
     %GLOBAL,
-    CITY => 'Zurich',
+    CITY => 'Zürich',
 
     EDITIONS => 
     {
