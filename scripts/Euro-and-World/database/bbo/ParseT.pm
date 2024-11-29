@@ -41,19 +41,6 @@ my @TOURNAMENT_FIELDS = qw(CLUB ORGANIZATION SPONSOR LOCALITY COUNTRY
 my %TOURNAMENT_FIELDS_HASH;
 $TOURNAMENT_FIELDS_HASH{$_} = 1 for @TOURNAMENT_FIELDS;
 
-my %COMPATIBILITIES = (
-  COUNTRY => ['COUNTRY'],
-  CITY => ['TITLE_CITY'],
-  FORM => ['TITLE_FORM', 'EVENT_FORM'],
-  AGE => ['TITLE_AGE', 'EVENT_AGE'],
-  GENDER => ['TITLE_GENDER', 'EVENT_GENDER'],
-  MOVEMENT => ['EVENT_MOVEMENT', 'TITLE_MOVEMENT'],
-  SCORING => ['SCORING'],
-  STAGE => ['EVENT_STAGE', 'TITLE_STAGE', 'TITLE_ROF'],
-  SEGMENT => ['HALF'],
-  MATCH => ['TITLE_MATCH', 'EVENT_MATCH']
-);
-
 my %SCORING_HASH = (
   'B' => {'B' => 1, 'BAM' => 1},
   'I' => {'IMP' => 1, 'I' => 1},
@@ -437,60 +424,7 @@ sub set_lookup_links
 }
 
 
-sub lookup_among_fields
-{
-  my ($entry, $key) = @_;
-  return '' unless defined $COMPATIBILITIES{$key};
-  for my $ckey (@{$COMPATIBILITIES{$key}})
-  {
-    my $value = $entry->field($ckey);
-    return $value unless $value eq '';
-  }
-  return '';
-}
-
-
 sub compatibility
-{
-  # Not a class method.
-  my ($header, $entry) = @_;
-
-  my $hits = 0;
-  my $conflicts = 0;
-
-  for my $key (keys %$header)
-  {
-    next if $key =~ /[a-z]/; # Skip internal information
-    my $value = lookup_among_fields($entry, $key);
-    next if $value eq '';
-
-    if ($value eq $header->{$key})
-    {
-      $hits++;
-    }
-    elsif ($key eq 'STAGE' && 
-      $header->{$key} =~ /^Rof(\d+)$/ &&
-      $1 eq $value)
-    {
-      # Kludge because header may say STAGE and entry may
-      # say TITLE_ROF 16.  Should probably be prevented.
-      $hits++;
-    }
-    elsif ($key eq 'SCORING' && 
-        exists $SCORING_HASH{$value}{$header->{$key}})
-    {
-      $hits++;
-    }
-    else
-    {
-      $conflicts++;
-    }
-  }
-  return ($hits, $conflicts);
-}
-
-
-sub compatibility_new
 {
   # Not a class method.
   my ($header, $entry, $form_fixable, $scoring_fixable) = @_;
@@ -529,167 +463,6 @@ sub compatibility_new
 
 
 my (@times, $t0, $t1);
-
-sub get_edition_and_chapter
-{
-  my ($self, $meet, $tname, $entry, $debug) = @_;
-
-  if ($meet ne '' && ! exists $self->{MEET}{$meet})
-  {
-    warn $entry->bbono() . " meet $meet not in structured list";
-  }
-
-  my @tname_list;
-  if (exists $self->{TOURNAMENT}{$tname})
-  {
-    # Use tname if given.
-    push @tname_list, $tname;
-  }
-  elsif ($meet ne '')
-  {
-    # Look for tournaments with the right meet in at least
-    # one edition.
-    $t0 = time();
-    for my $tname (keys %{$self->{TOURNAMENT}})
-    {
-      my $t = $self->{TOURNAMENT}{$tname};
-
-      next unless exists $self->{T_MEET}{$tname}{$meet};
-
-      $t1 = time();
-      my ($hits, $conflicts) = compatibility($t, $entry);
-      $times[2] += time() - $t1;
-      next if $conflicts > 0;
-
-      $t1 = time();
-      for my $edition_str (keys %{$t->{EDITIONS}})
-      {
-        my $edition = $t->{EDITIONS}{$edition_str};
-
-        if (exists $edition->{MEET} && $edition->{MEET} eq $meet)
-        {
-          push @tname_list, $tname;
-          last;
-        }
-      }
-      $times[3] += time() - $t1;
-    }
-    $times[0] += time() - $t0;
-
-    if ($#tname_list == -1 && exists $self->{MEET}{$meet})
-    {
-      warn $entry->bbono() . " not found: meet $meet, " . 
-        $entry->field('DATE_ADDED');
-    }
-  }
-  return ($tname, '', '') unless $#tname_list >= 0;
-
-  my $target = DateCalc->new();
-  $target->set_by_field($entry->field('DATE_ADDED'));
-
-  my $lowest_dist = 9999;
-  my $lowest_hits = 0;
-  my ($lowest_tname, $lowest_edition, $lowest_chapter, $lowest_opens);
-  my $equal_collision = 0;
-  my $collision_str = '';
-
-  for my $tname (@tname_list)
-  {
-    my $t = $self->{TOURNAMENT}{$tname};
-    my ($t_hits, $t_conflicts) = compatibility($t, $entry);
-    next if $t_conflicts > 0;
-
-    for my $edition_str (keys %{$t->{EDITIONS}})
-    {
-      my $edition = $t->{EDITIONS}{$edition_str};
-      my ($e_hits, $e_conflicts) = compatibility($edition, $entry);
-      next if $e_conflicts > 0;
-
-      my ($m_hits, $m_conflicts) = (0, 0);
-      my $t_meet;
-      if (exists $edition->{MEET} && $meet ne '')
-      {
-        next unless ($edition->{MEET} eq $meet);
-        $t_meet = $self->{MEET}{$meet};
-        my ($m_hits, $m_conflicts) = compatibility($t_meet, $entry);
-        next unless $m_conflicts == 0;
-      }
-
-      $t0 = time();
-      for my $chapter_str (keys %{$edition->{CHAPTERS}})
-      {
-        my $chapter = $edition->{CHAPTERS}{$chapter_str};
-        next unless ref($chapter) eq 'HASH';
-
-        my ($c_hits, $c_conflicts) = compatibility($chapter, $entry);
-        next unless $c_conflicts == 0;
-
-        my $hits = $t_hits + $m_hits + $e_hits + $c_hits;
-
-        my $opens = 
-          (exists $t->{GENDER} && $t->{GENDER} eq 'Open' ? 1 : 0) +
-          (exists $t->{AGE} && $t->{AGE} eq 'Open' ? 1 : 0);
-
-        my $dist = $target->distance(
-          $chapter->{DATE_START},
-          $chapter->{DATE_END});
-
-        if ($debug)
-        {
-          print "$tname, $edition_str, $chapter_str: ";
-          print "Hits $hits, Open $opens, Dist $dist\n";
-        }
-
-        if (($dist < $lowest_dist) ||
-            ($dist == $lowest_dist && $hits > $lowest_hits) ||
-            ($dist == $lowest_dist && $hits == $lowest_hits &&
-             $opens > $lowest_opens))
-        {
-          print "        SWITCHING: dist now $dist\n" if $debug;
-          $lowest_dist = $dist;
-          $lowest_tname = $tname;
-          $lowest_edition = $edition_str;
-          $lowest_chapter = $chapter_str;
-          $lowest_hits = $hits;
-          $lowest_opens = $opens;
-          $equal_collision = 0;
-        }
-        elsif ($dist == 0 && 
-            $hits == $lowest_hits && 
-            $opens == $lowest_opens)
-        {
-          $equal_collision = 1;
-          $collision_str = $entry->bbono() . 
-            " double zero, ($tname, $edition_str, $chapter_str) vs (" .
-            ($lowest_tname eq $tname ? '=' : $lowest_tname) . ", " .
-            ($lowest_edition eq $edition_str ? '=' : $lowest_edition) . 
-            ", " .
-            ($lowest_chapter eq $chapter_str ? '=' : $lowest_chapter) . 
-            ")";
-        }
-      }
-      $times[1] += time() - $t0;
-    }
-  }
-
-  if ($equal_collision)
-  {
-    warn $collision_str;
-  }
-
-  if ($lowest_dist == 0)
-  {
-    # 'Within one week' would be 7.
-    return ($lowest_tname, $lowest_edition, $lowest_chapter);
-  }
-  else
-  {
-    warn $entry->bbono() . " not found (dist $lowest_dist): " .
-      "$tname, " . $entry->field('DATE_ADDED');
-    return ($tname, '', '');
-  }
-}
-
 
 sub get_tname_list
 {
@@ -751,7 +524,7 @@ sub update_chapter_match
   my $chapter = $edition->{CHAPTERS}{$chapter_str};
   return unless ref($chapter) eq 'HASH';
 
-  my ($c_hits, $c_conflicts) = compatibility_new(
+  my ($c_hits, $c_conflicts) = compatibility(
     $chapter, $entry->{CHAPTER}, $form_fixable, $scoring_fixable);
   return unless $c_conflicts == 0;
 
@@ -799,7 +572,7 @@ sub update_chapter_match
 }
 
 
-sub get_edition_and_chapter_new
+sub get_edition_and_chapter
 {
   my ($self, $meet, $tname, $entry, $debug) = @_;
 
@@ -826,7 +599,7 @@ sub get_edition_and_chapter_new
     my $scoring_fixable = 
       FScorr::scoring_fixable($tname_cand, $entry->bbono());
 
-    my ($t_hits, $t_conflicts) = compatibility_new(
+    my ($t_hits, $t_conflicts) = compatibility(
       $t, $entry->{HEADER}, $form_fixable, $scoring_fixable);
     next if $t_conflicts > 0;
 
