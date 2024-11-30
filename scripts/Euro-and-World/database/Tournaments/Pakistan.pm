@@ -128,6 +128,7 @@ my %TOURNAMENTS_PAKISTAN =
       },
       '2012' =>
       {
+        SPONSOR => 'Kayseria',
         CHAPTERS =>
         {
           'C0' => 

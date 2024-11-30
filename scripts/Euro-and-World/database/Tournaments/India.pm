@@ -291,6 +291,7 @@ my %MEETS_INDIA =
       '2016' =>
       {
         ORDINAL => 54,
+        SPONSOR => 'Krishnapatnam Port',
         YEAR => 2016,
         DATE_START => '2016-08-13', # More dates
         DATE_END => '2016-08-14'
@@ -620,6 +621,7 @@ my %MEETS_INDIA =
       '2014' =>
       {
         YEAR => 2014,
+        CITY => 'Indore',
         DATE_START => '2014-01-04',
         DATE_END => '2014-01-06'
       },
@@ -632,6 +634,7 @@ my %MEETS_INDIA =
       '2016' =>
       {
         YEAR => 2016,
+        CITY => 'Indore',
         DATE_START => '2016-01-08',
         DATE_END => '2016-01-10'
       },
@@ -692,6 +695,8 @@ my %MEETS_INDIA =
       },
       '2015' =>
       {
+        ORDINAL => 35,
+        CITY => 'Nasik',
         YEAR => 2015,
         DATE_START => '2015-05-02',
         DATE_END => '2015-05-02'
@@ -714,6 +719,7 @@ my %MEETS_INDIA =
     {
       '2013' =>
       {
+        CITY => 'Pushkar',
         YEAR => 2013,
         DATE_START => '2013-05-03',
         DATE_END => '2013-05-05'
@@ -1495,6 +1501,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2014' =>
       {
+        CITY => 'Mumbai',
         SCORING => 'MP',
         CHAPTERS =>
         {
@@ -1510,6 +1517,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2015' =>
       {
+        CITY => 'Pune',
         SCORING => 'IMP',
         CHAPTERS =>
         {
@@ -1681,6 +1689,7 @@ my %TOURNAMENTS_INDIA =
   {
     %GLOBAL,
     ORIGIN => 'National',
+    CITY => 'Delhi',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2009,6 +2018,8 @@ my %TOURNAMENTS_INDIA =
       },
       '2013' =>
       {
+        ORDINAL => 3,
+        CITY => 'Varanasi',
         CHAPTERS =>
         {
           'C0' => 
@@ -2069,6 +2080,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2015' =>
       {
+        ORDINAL => 5,
         CITY => 'Nagpur',
         CHAPTERS =>
         {
@@ -2188,6 +2200,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2014' =>
       {
+        CITY => 'Delhi',
         CHAPTERS =>
         {
           'C0' => 
@@ -2249,6 +2262,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2016' =>
       {
+        REGION => 'Goa',
         CHAPTERS =>
         {
           'C0' => 
@@ -2338,6 +2352,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2013' =>
       {
+        CITY => 'Chennai',
         CHAPTERS =>
         {
           'C0' => 
@@ -2368,6 +2383,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2015' =>
       {
+        CITY => 'Mumbai',
         CHAPTERS =>
         {
           'C0' => 
@@ -2419,6 +2435,8 @@ my %TOURNAMENTS_INDIA =
       # TODO Same as Indian Inter-State Teams?
       '2013' =>
       {
+        SPONSOR => 'Indian Oil',
+        CITY => 'Nasik',
         CHAPTERS =>
         {
           'C0' => 
@@ -2525,6 +2543,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2013' =>
       {
+        CITY => 'Pune',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2625,6 +2644,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2014' =>
       {
+        CITY => 'Pune',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2639,6 +2659,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2015' =>
       {
+        ORDINAL => 9,
         CHAPTERS =>
         {
           'C0' => 
@@ -4032,6 +4053,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2014' =>
       {
+        CITY => 'Mumbai',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4046,6 +4068,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2016' =>
       {
+        ORDINAL => 2,
         CHAPTERS =>
         {
           'C0' => 
@@ -4248,6 +4271,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2013' =>
       {
+        CITY => 'Kolkata',
         CHAPTERS =>
         {
           'C0' => 
@@ -4286,6 +4310,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2014' =>
       {
+        CITY => 'Pune',
         CHAPTERS =>
         {
           'C0' => 
@@ -4330,6 +4355,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2016' =>
       {
+        CITY => 'Nasik',
         CHAPTERS =>
         {
           'C0' => 
@@ -4367,6 +4393,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2014' =>
       {
+        SPONSOR => 'Jain Group',
         CHAPTERS =>
         {
           'C0' => 
@@ -4683,6 +4710,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2015' =>
       {
+        CITY => 'Delhi',
         CHAPTERS =>
         {
           'C0' => 
@@ -4721,6 +4749,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2016' =>
       {
+        CITY => 'Delhi',
         CHAPTERS =>
         {
           'C0' => 
@@ -5340,6 +5369,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2014' =>
       {
+        CITY => 'Pune',
         CHAPTERS =>
         {
           'C0' => 
@@ -5364,6 +5394,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2015' =>
       {
+        CITY => 'Pune',
         CHAPTERS =>
         {
           'C0' => 
@@ -5386,6 +5417,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2016' =>
       {
+        CITY => 'Mumbai',
         CHAPTERS =>
         {
           'C0' => 

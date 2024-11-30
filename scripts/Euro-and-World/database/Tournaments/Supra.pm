@@ -578,6 +578,7 @@ my %TOURNAMENTS_SUPRA =
       '2001' =>
       {
         MEET => 'Cavendish Invitational',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -769,6 +770,7 @@ my %TOURNAMENTS_SUPRA =
       '2015' =>
       {
         MEET => 'Cavendish Invitational',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'C0' => 
@@ -1114,6 +1116,7 @@ my %TOURNAMENTS_SUPRA =
       '2014' =>
       {
         MEET => 'Cavendish Invitational',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'C0' => 

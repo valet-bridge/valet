@@ -1024,7 +1024,19 @@ sub prune_using_new
     if ($evalue eq $header->{$ekey})
     {
       delete $self->{HEADER}{$ekey};
+      next;
     }
+
+    if ($ekey eq 'SCORING')
+    {
+      if (($header->{$ekey} eq 'IAF' || $header->{$ekey} eq 'Patton') &&
+          $evalue eq 'IMP')
+      {
+        delete $self->{HEADER}{$ekey};
+        next;
+      }
+    }
+
     else
     {
       warn $self->bbono() . ": Header " . $header->{$ekey} .

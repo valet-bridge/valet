@@ -236,6 +236,7 @@ my %TOURNAMENTS_NORWAY =
       },
       '2011' =>
       {
+        SPONSOR => 'Ragn Sells',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -414,6 +415,7 @@ my %TOURNAMENTS_NORWAY =
       },
       '2007' =>
       {
+        ORDINAL => 4,
         CHAPTERS =>
         {
           'SINGLE' => 

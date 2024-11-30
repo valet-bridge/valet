@@ -62,6 +62,7 @@ my %TOURNAMENTS_HUNGARY =
       },
       '2014' =>
       {
+        ORDINAL => 2,
         CHAPTERS =>
         {
           'C0' => 
@@ -189,6 +190,7 @@ my %TOURNAMENTS_HUNGARY =
       },
       '2016' =>
       {
+        ORDINAL => 27,
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -231,6 +233,7 @@ my %TOURNAMENTS_HUNGARY =
       },
       '2005' =>
       {
+        CITY => 'Siofok',
         CHAPTERS =>
         {
           'C0' => 

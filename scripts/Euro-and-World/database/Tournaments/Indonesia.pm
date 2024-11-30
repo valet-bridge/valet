@@ -55,7 +55,7 @@ my %MEETS_INDONESIA =
       },
       '2010' =>
       {
-        # 
+        ORDINAL => 49,
         YEAR => 2010,
         DATE_START => '2010-04-25',
         DATE_END => '2010-05-01'
@@ -720,6 +720,7 @@ my %TOURNAMENTS_INDONESIA =
       '2009' =>
       {
         MEET => 'Indonesian National Championship Week',
+        REGION => 'Gorontalo',
         CHAPTERS =>
         {
           'C0' => 
@@ -1718,12 +1719,12 @@ my %TOURNAMENTS_INDONESIA =
     {
       '2006' =>
       {
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2006,
-            SCORING => 'IMP',
             major => 'ROUND',
             DATE_START => '2006-11-27',
             DATE_END => '2006-11-27'
@@ -3389,6 +3390,8 @@ my %TOURNAMENTS_INDONESIA =
     {
       '2011' =>
       {
+        ORDINAL => 3,
+        CITY => 'Malang',
         CHAPTERS =>
         {
           'C0' => 

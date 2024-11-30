@@ -830,6 +830,7 @@ my %TOURNAMENTS_NETHERLANDS =
   {
     %GLOBAL,
     ORIGIN => 'National',
+    CLUB => 'Witte Huis',
     FORM => 'Pairs',
     GENDER => 'Open',
     AGE => 'Open',

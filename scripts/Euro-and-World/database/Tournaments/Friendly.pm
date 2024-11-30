@@ -2244,6 +2244,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Friendly Match',
         MEET_TAG => '2011B',
+        CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2262,6 +2263,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Friendly Match',
         MEET_TAG => '2011D',
+        CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2438,6 +2440,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007' =>
       {
         MEET => 'Friendly Pairs',
+        CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2469,6 +2472,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007A' =>
       {
         MEET => 'Practice Match',
+        CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2559,6 +2563,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Practice Match',
         MEET_TAG => '2007L',
+        CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'U21',
 
@@ -2577,6 +2582,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Practice Match',
         MEET_TAG => '2007N',
+        CLUB => "'t Onstein",
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -2595,9 +2601,9 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Practice Match',
         MEET_TAG => '2008B',
+        CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'Open',
-        CLUB => "'t Onstein",
 
         CHAPTERS =>
         {
@@ -2812,6 +2818,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Practice Match',
         MEET_TAG => '2012A',
+        CITY => 'Namsos',
         GENDER => 'Open',
         AGE => 'Open',
 

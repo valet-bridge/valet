@@ -64,6 +64,8 @@ my %MEETS_BALKAN =
       '2011' =>
       {
         ORDINAL => 6,
+        CITY => 'Mersin',
+        COUNTRY => 'Turkey',
         YEAR => 2011,
         DATE_START => '2011-09-19',
         DATE_END => '2011-09-21'

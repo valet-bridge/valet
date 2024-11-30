@@ -509,6 +509,7 @@ my %TOURNAMENTS_SWITZERLAND =
       '2012' =>
       {
         MEET => 'Zurich Open',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'C0' => 

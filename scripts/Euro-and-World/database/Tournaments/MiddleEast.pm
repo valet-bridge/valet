@@ -558,6 +558,7 @@ my %TOURNAMENTS_MIDDLEEAST =
       },
       '2013' =>
       {
+        ORDINAL => 5,
         CITY => 'Amman',
         COUNTRY => 'Jordan',
         CHAPTERS =>

@@ -2298,6 +2298,7 @@ my %TOURNAMENTS_UK =
       },
       '2013' =>
       {
+        CLUB => 'Royal Air Force Club',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3549,7 +3550,7 @@ my %TOURNAMENTS_UK =
     ORGANIZATION => 'WBU',
     ORIGIN => 'National',
     ZONE => 'Europe',
-    COUNTRY => 'Scotland',
+    COUNTRY => 'Wales',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -3579,7 +3580,7 @@ my %TOURNAMENTS_UK =
     ORGANIZATION => 'WBU',
     ORIGIN => 'National',
     ZONE => 'Europe',
-    COUNTRY => 'Scotland',
+    COUNTRY => 'Wales',
     FORM => 'Pairs',
     GENDER => 'Open',
     AGE => 'Open',

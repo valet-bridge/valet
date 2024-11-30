@@ -2757,12 +2757,12 @@ my %TOURNAMENTS_DENMARK =
     {
       '2004' =>
       {
+        SCORING => 'MP',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2004,
-            SCORING => 'MP',
             DATE_START => '2004-09-27',
             DATE_END => '2004-09-27'
           },
@@ -2770,12 +2770,12 @@ my %TOURNAMENTS_DENMARK =
       },
       '2005' =>
       {
+        SCORING => 'MP',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2005,
-            SCORING => 'MP',
             DATE_START => '2005-09-28',
             DATE_END => '2005-09-28'
           },
@@ -2783,12 +2783,12 @@ my %TOURNAMENTS_DENMARK =
       },
       '2006' =>
       {
+        SCORING => 'IMP',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2006,
-            SCORING => 'IMP',
             DATE_START => '2006-09-11',
             DATE_END => '2006-09-11'
           },
@@ -2796,12 +2796,12 @@ my %TOURNAMENTS_DENMARK =
       },
       '2007' =>
       {
+        SCORING => 'MP',
         CHAPTERS => 
         {
           'C0' => 
           {
             YEAR => 2007,
-            SCORING => 'MP',
             DATE_START => '2007-09-20',
             DATE_END => '2007-09-20'
           },
