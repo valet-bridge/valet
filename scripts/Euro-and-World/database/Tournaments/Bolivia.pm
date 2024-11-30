@@ -117,6 +117,7 @@ my %TOURNAMENTS_BOLIVIA =
       },
       '2015' =>
       {
+        ORDINAL => 12,
         CHAPTERS =>
         {
           'C0' => 

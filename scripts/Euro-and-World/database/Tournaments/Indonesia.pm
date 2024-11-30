@@ -211,6 +211,7 @@ my %MEETS_INDONESIA =
         # https://bridge.web.id/2011/prapon18/
         ORDINAL => 18,
         CITY => 'Pekanbaru',
+        REGION => 'Kepulauan Riau',
         YEAR => 2011,
         DATE_START => '2011-09-30',
         DATE_END => '2011-10-08'
@@ -267,9 +268,11 @@ my %MEETS_INDONESIA =
 
     EDITIONS => 
     {
+      # The ordinals are strange.
       '2012' =>
       {
         # https://bridge.web.id/2012/mhs/
+        ORDINAL => 14,
         CITY => 'Jakarta',
         YEAR => 2012,
         DATE_START => '2012-05-16',
@@ -369,6 +372,7 @@ my %TOURNAMENTS_INDONESIA =
     {
       '2015' =>
       {
+        ORDINAL => 17,
         CHAPTERS =>
         {
           'C0' => 
@@ -910,6 +914,7 @@ my %TOURNAMENTS_INDONESIA =
       '2009' =>
       {
         MEET => 'Indonesian National Championship Week',
+        REGION => 'Gorontalo',
         CHAPTERS =>
         {
           'C0' => 
@@ -2545,6 +2550,7 @@ my %TOURNAMENTS_INDONESIA =
       '2014' =>
       {
         MEET => 'Indonesian University Championship',
+        ORDINAL => 16,
         CHAPTERS =>
         {
           'C0' => 
@@ -3713,6 +3719,7 @@ my %TOURNAMENTS_INDONESIA =
       '2014' =>
       {
         # https://bridge.web.id/telkom/2014/
+        ORDINAL => 5,
         CITY => 'Bandung',
         CHAPTERS =>
         {
@@ -3886,6 +3893,7 @@ my %TOURNAMENTS_INDONESIA =
       },
       '2014' =>
       {
+        ORDINAL => 12,
         CHAPTERS =>
         {
           'C0' => 

@@ -613,7 +613,7 @@ sub get_edition_and_chapter
         $form_fixable, $scoring_fixable,
         \%best, $entry, $debug);
     }
-    $times[1] += time() - $t0;
+    $times[0] += time() - $t0;
   }
 
   if ($best{EQUAL_COLLISION})

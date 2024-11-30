@@ -697,6 +697,7 @@ my %MEETS_INDIA =
       '2014' =>
       {
         ORDINAL => 34,
+        CITY => 'Dombivli',
         YEAR => 2014,
         DATE_START => '2014-01-18',
         DATE_END => '2014-01-20'
@@ -728,7 +729,6 @@ my %MEETS_INDIA =
     {
       '2013' =>
       {
-        ORDINAL => 30,
         CITY => 'Pushkar',
         YEAR => 2013,
         DATE_START => '2013-05-03',
@@ -736,6 +736,8 @@ my %MEETS_INDIA =
       },
       '2014' =>
       {
+        ORDINAL => 30,
+        CITY => 'Kota',
         YEAR => 2014,
         DATE_START => '2014-03-07',
         DATE_END => '2014-03-09'
@@ -756,6 +758,7 @@ my %MEETS_INDIA =
         ORDINAL => 42,
         YEAR => 2012,
         CITY => 'Noida',
+        CLUB => 'AVI Club Noida',
         DATE_START => '2012-08-17',
         DATE_END => '2012-08-19'
       },
@@ -916,6 +919,7 @@ my %TOURNAMENTS_INDIA =
       '2016' =>
       {
         ORDINAL => 5,
+        CITY => 'Mumbai',
         SCORING => 'IMP',
         CHAPTERS =>
         {
@@ -1520,7 +1524,9 @@ my %TOURNAMENTS_INDIA =
       },
       '2014' =>
       {
+        ORDINAL => 3,
         CITY => 'Mumbai',
+        CLUB => 'Bombay Gymkhana Club',
         SCORING => 'MP',
         CHAPTERS =>
         {
@@ -2688,6 +2694,7 @@ my %TOURNAMENTS_INDIA =
       '2015' =>
       {
         ORDINAL => 9,
+        CITY => 'Pune',
         CHAPTERS =>
         {
           'C0' => 
@@ -3278,6 +3285,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2015' =>
       {
+        SPONSOR => 'TTK Healthcare',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3292,7 +3300,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2016' =>
       {
-        SPONSOR => 'TTK HealthcarE',
+        SPONSOR => 'TTK Healthcare',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3944,6 +3952,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2014' =>
       {
+        CITY => 'Delhi',
         CHAPTERS =>
         {
           'C0' => 
@@ -4834,6 +4843,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2014' =>
       {
+        CITY => 'Chennai',
         CHAPTERS =>
         {
           'C0' => 
@@ -6055,6 +6065,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2015' =>
       {
+        ORDINAL => 1,
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -6069,6 +6080,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2016' =>
       {
+        ORDINAL => 2,
         CHAPTERS =>
         {
           'SINGLE' => 

@@ -1723,6 +1723,7 @@ my %TOURNAMENTS_POLAND =
     {
       '2007' =>
       {
+        ORDINAL => 6,
         CHAPTERS =>
         {
           'C0' =>
@@ -1857,11 +1858,12 @@ my %TOURNAMENTS_POLAND =
 
     EDITIONS =>
     {
-      '2005A' =>
+      '2005' =>
       {
         # https://stara.pzbs.pl/komunikaty/r2005/reg_gppt2005.htm
         MEET => 'Polish Grand Prix Pairs Legs',
         MEET_TAG => '2005',
+        SPONSOR => 'Powszechna Kasa Oszczędności Bank Polski',
         CHAPTERS =>
         {
           'C0' => 
@@ -1887,10 +1889,11 @@ my %TOURNAMENTS_POLAND =
           } 
         }
       },
-      '2006A' =>
+      '2006' =>
       {
         MEET => 'Polish Grand Prix Pairs Legs',
         MEET_TAG => '2006',
+        SPONSOR => 'Prokom',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1953,6 +1956,7 @@ my %TOURNAMENTS_POLAND =
       {
         MEET => 'Polish Grand Prix Pairs Legs',
         MEET_TAG => '2009A',
+        ORDINAL => 13,
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2156,6 +2160,7 @@ my %TOURNAMENTS_POLAND =
       {
         MEET => 'Polish Grand Prix Pairs Legs',
         MEET_TAG => '2011',
+        SPONSOR => 'Budimex',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2233,6 +2238,7 @@ my %TOURNAMENTS_POLAND =
       {
         MEET => 'Poznan Congress',
         MEET_TAG => '2012',
+        SPONSOR => 'Budimex',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2353,6 +2359,7 @@ my %TOURNAMENTS_POLAND =
       {
         MEET => 'Poznan Congress',
         MEET_TAG => '2013',
+        SPONSOR => 'Budimex',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2428,6 +2435,7 @@ my %TOURNAMENTS_POLAND =
       {
         MEET => 'Polish Grand Prix Pairs Legs',
         MEET_TAG => '2013B',
+        SPONSOR => 'Budimex',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2774,6 +2782,7 @@ my %TOURNAMENTS_POLAND =
       {
         MEET => 'Warsaw Grand Prix',
         MEET_TAG => '2009',
+        SPONSOR => 'Prestige Development',
         CHAPTERS =>
         {
           'C0' => 
@@ -3980,6 +3989,7 @@ my %TOURNAMENTS_POLAND =
       '2011' =>
       {
         MEET => 'Poznan Congress',
+        SPONSOR => 'Budimex',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -4902,6 +4912,7 @@ my %TOURNAMENTS_POLAND =
       {
         MEET => 'Zulawski Congress',
         MEET_TAG => '2015',
+        CLUB => 'Ruch AZS',
         CHAPTERS =>
         {
           'C0' => 
@@ -6125,6 +6136,7 @@ my %TOURNAMENTS_POLAND =
     {
       '2015' =>
       {
+        REGION => 'Pomerania',
         CHAPTERS => 
         {
           'SINGLE' => 
@@ -6393,6 +6405,7 @@ my %TOURNAMENTS_POLAND =
       },
       '2014' =>
       {
+        CITY => 'Gdansk',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -6420,6 +6433,7 @@ my %TOURNAMENTS_POLAND =
       '2014' =>
       {
         MEET => 'Krakow Congress',
+        ORDINAL => 3,
         CHAPTERS =>
         {
           'C0' => 

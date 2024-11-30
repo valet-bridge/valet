@@ -68,6 +68,7 @@ my %TOURNAMENTS_SERBIA =
         # https://www.bridgeserbia.org/arhiva/sezona2012/bss/kup2011.html
         ORDINAL => 6,
         CITY => 'Belgrade',
+        PERSON => 'Rade Antic',
 
         CHAPTERS =>
         {
@@ -92,6 +93,7 @@ my %TOURNAMENTS_SERBIA =
         # https://www.bridgeserbia.org/arhiva/sezona2013/bss/kup2012.html
         ORDINAL => 7,
         CITY => 'Belgrade',
+        PERSON => 'Rade Antic',
 
         CHAPTERS =>
         {
@@ -116,6 +118,7 @@ my %TOURNAMENTS_SERBIA =
         # https://www.bridgeserbia.org/arhiva/sezona2014/bss/kup2013.html
         ORDINAL => 8,
         CITY => 'Belgrade',
+        PERSON => 'Rade Antic',
 
         CHAPTERS =>
         {
@@ -141,6 +144,7 @@ my %TOURNAMENTS_SERBIA =
       {
         # https://www.bridgeserbia.org/savez/turniri/Arhiva%20rezultata/09.%20sezona%202014%E2%88%9515/Kup%20Srbije%202015/
         ORDINAL => 9,
+        PERSON => 'Rade Antic',
 
         CHAPTERS =>
         {
@@ -202,7 +206,8 @@ my %TOURNAMENTS_SERBIA =
     {
       '2012' =>
       {
-        # No link
+        ORDINAL => 3,
+        CITY => 'Novi Sad',
         CHAPTERS =>
         {
           'C0' => 
