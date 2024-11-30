@@ -1017,6 +1017,15 @@ sub prune_using_new
         delete $self->{HEADER}{TNAME};
         next;
       }
+      if ($ekey eq 'ORDINAL')
+      {
+       if (exists $header->{MEET_ORDINAL} &&
+           $evalue eq $header->{MEET_ORDINAL})
+       {
+         delete $self->{HEADER}{ORDINAL};
+         next;
+       }
+      }
       print $self->bbono(), ": No $ekey (", $header->{COUNTRY}, ")\n";
       next;
     }

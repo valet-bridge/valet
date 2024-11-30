@@ -816,6 +816,7 @@ my %TOURNAMENTS_UK =
       },
       '2010' =>
       {
+        ORDINAL => 3,
         COUNTRY => 'India',
         CITY => 'Delhi',
         CHAPTERS =>
@@ -1468,6 +1469,7 @@ my %TOURNAMENTS_UK =
     ORGANIZATION => 'EBU',
     ORIGIN => 'National',
     ZONE => 'Europe',
+    COUNTRY => 'England',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -1815,6 +1817,7 @@ my %TOURNAMENTS_UK =
   'Junior Camrose' => 
   {
     # https://www.bridgewebs.com/bgb/Junior%20Camrose%20Winners.htm
+    ORGANIZATION => 'BGB',
     ORIGIN => 'International',
     ZONE => 'Europe',
     FORM => 'Teams',
@@ -2393,6 +2396,8 @@ my %TOURNAMENTS_UK =
       },
       '2016' =>
       {
+        CITY => 'Edinburgh',
+        COUNTRY => 'Scotland',
         CHAPTERS =>
         {
           'SINGLE' => 

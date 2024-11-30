@@ -55,7 +55,7 @@ my %MEETS_INDONESIA =
       },
       '2010' =>
       {
-        ORDINAL => 49,
+        ORDINAL => 48,
         YEAR => 2010,
         DATE_START => '2010-04-25',
         DATE_END => '2010-05-01'
@@ -263,6 +263,7 @@ my %MEETS_INDONESIA =
   'Indonesian University Championship' =>
   {
     %GLOBAL,
+    ORIGIN => 'University',
 
     EDITIONS => 
     {
@@ -285,6 +286,7 @@ my %MEETS_INDONESIA =
       '2015' =>
       {
         # https://bridge.web.id/2015/kejurnas-mhs/
+        ORDINAL => 14,
         CITY => 'Semarang',
         YEAR => 2015,
         DATE_START => '2015-11-03',
@@ -404,6 +406,7 @@ my %TOURNAMENTS_INDONESIA =
       },
       '2016' =>
       {
+        ORDINAL => 18,
         CHAPTERS =>
         {
           'C0' => 
@@ -545,6 +548,7 @@ my %TOURNAMENTS_INDONESIA =
       },
       '2009' =>
       {
+        ORDINAL => 9,
         CITY => 'Bandung',
         CHAPTERS =>
         {
@@ -568,6 +572,7 @@ my %TOURNAMENTS_INDONESIA =
       },
       '2010' =>
       {
+        ORDINAL => 10,
         CITY => 'Bandung',
         CHAPTERS =>
         {
@@ -592,6 +597,7 @@ my %TOURNAMENTS_INDONESIA =
       '2011' =>
       {
         #  https://bridge.web.id/geologi/
+        ORDINAL => 11,
         CITY => 'Bandung',
         CHAPTERS =>
         {
@@ -606,6 +612,7 @@ my %TOURNAMENTS_INDONESIA =
       '2012' =>
       {
         # https://bridge.web.id/geologi/2012/
+        ORDINAL => 12,
         CITY => 'Bandung',
         CHAPTERS =>
         {
@@ -630,6 +637,7 @@ my %TOURNAMENTS_INDONESIA =
       '2013' =>
       {
         # https://bridge.web.id/geologi/2013/
+        ORDINAL => 13,
         CITY => 'Bandung',
         CHAPTERS =>
         {
@@ -1734,12 +1742,12 @@ my %TOURNAMENTS_INDONESIA =
       '2016' =>
       {
         # https://bridge.web.id/2016/seleknas2/
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'C0' => 
           {
             YEAR => 2016,
-            SCORING => 'MP',
             STAGE => 'Semifinal',
             major => 'SESSION',
             DATE_START => '2016-03-09',
@@ -1748,7 +1756,6 @@ my %TOURNAMENTS_INDONESIA =
           'C1' => 
           {
             YEAR => 2016,
-            SCORING => 'MP',
             STAGE => 'Final',
             major => 'SESSION',
             DATE_START => '2016-03-11',
@@ -3283,6 +3290,7 @@ my %TOURNAMENTS_INDONESIA =
       '2012' =>
       {
         # https://bridge.web.id/2012/pertamina/
+        ORDINAL => 2,
         CITY => 'Bekasi',
         CHAPTERS =>
         {
@@ -3570,6 +3578,7 @@ my %TOURNAMENTS_INDONESIA =
     {
       '2012' =>
       {
+        ORDINAL => 9,
         CHAPTERS =>
         {
           'C0' => 

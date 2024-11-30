@@ -50,6 +50,7 @@ my %MEETS_SUPRA =
 
   'Cavendish Invitational' =>
   {
+    # TODO Split in Las Vegas and Monaco?
     ORIGIN => 'Invitational',
 
     EDITIONS =>
@@ -770,7 +771,7 @@ my %TOURNAMENTS_SUPRA =
       '2015' =>
       {
         MEET => 'Cavendish Invitational',
-        SCORING => 'IMP',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'C0' => 
@@ -1616,6 +1617,7 @@ my %TOURNAMENTS_SUPRA =
       },
       '2014' =>
       {
+        ORDINAL => 2,
         CHAPTERS =>
         {
           'C0' => 

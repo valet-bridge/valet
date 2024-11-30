@@ -212,7 +212,7 @@ my %TOURNAMENTS_JAPAN =
     {
       '2005' =>
       {
-        SPONSOR => 'Kanto Teams',
+        SPONSOR => 'MONBU Japanese Ministry',
         CHAPTERS =>
         {
           'SINGLE' => 

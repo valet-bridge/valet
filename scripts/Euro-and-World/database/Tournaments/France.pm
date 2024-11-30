@@ -62,7 +62,7 @@ my %MEETS_FRANCE =
       '2014' =>
       {
         YEAR => 2014,
-        SPONSOR =>' Jet Immo',
+        SPONSOR => 'Jet Immo',
         DATE_START => '2014-07-18',
         DATE_END => '2014-07-26'
       },

@@ -595,7 +595,7 @@ my %TOURNAMENTS_CHINA =
       },
       '2011' =>
       {
-        SPONSOR => 'China Resources',
+        SPONSOR => 'L&Y Law',
         CHAPTERS =>
         {
           'SINGLE' => 

@@ -2491,6 +2491,7 @@ my %TOURNAMENTS_POLAND =
       {
         MEET => 'Wroclaw Meeting',
         MEET_TAG => '2014',
+        SPONSOR => 'Budimex',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2551,6 +2552,7 @@ my %TOURNAMENTS_POLAND =
       {
         MEET => 'Polish Grand Prix Pairs Legs',
         MEET_TAG => '2014',
+        SPONSOR => 'Budimex',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3083,6 +3085,7 @@ my %TOURNAMENTS_POLAND =
         # https://wyniki.pzbs.pl/2014/_gpp/07wroclaw/t/fleaderb.html?1401096198
         MEET => 'Wroclaw Meeting',
         MEET_TAG => '2014',
+        CLUB => 'Ruch AZS',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3729,7 +3732,7 @@ my %TOURNAMENTS_POLAND =
     %GLOBAL,
     ORIGIN => 'National',
     FORM => 'Pairs',
-    SCORING => 'BAM',
+    SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'U18', # Unclear
 

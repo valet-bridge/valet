@@ -683,6 +683,10 @@ my %TOURNAMENTS_ARGENTINA =
 
   'Argentinian Women Trials' =>
   {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
     GENDER => 'Women',
     AGE => 'Open',
 

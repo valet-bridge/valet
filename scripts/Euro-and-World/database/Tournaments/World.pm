@@ -427,7 +427,7 @@ my %MEETS_WORLD =
       '2013' =>
       {
         # http://db.worldbridge.org/Repository/tourn/Bali.13/microSite/results.htm
-        ORDINAL => 41,
+        MEET_ORDINAL => 41,
         YEAR => 2013,
         CITY => 'Bali',
         COUNTRY => 'Indonesia',

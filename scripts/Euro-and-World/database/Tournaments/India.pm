@@ -278,12 +278,15 @@ my %MEETS_INDIA =
     {
       '2014' =>
       {
+        ORDINAL => 52,
+        REGION => 'Goa',
         YEAR => 2014,
         DATE_START => '2014-07-20', # More dates
         DATE_END => '2014-07-21'
       },
       '2015' =>
       {
+        ORDINAL => 53,
         YEAR => 2015,
         DATE_START => '2015-12-19', # Might be something else
         DATE_END => '2015-12-21'
@@ -324,6 +327,7 @@ my %MEETS_INDIA =
       '2012' =>
       {
         ORDINAL => 2,
+        REGION => 'Goa',
         YEAR => 2012,
         DATE_START => '2012-06-19',
         DATE_END => '2012-06-21'
@@ -332,6 +336,7 @@ my %MEETS_INDIA =
       {
         ORDINAL => 3,
         YEAR => 2013,
+        CITY => 'Pune',
         DATE_START => '2013-02-18', # More dates
         DATE_END => '2013-02-20'
       },
@@ -607,7 +612,9 @@ my %MEETS_INDIA =
       },
       '2012' =>
       {
+        ORDINAL => 9,
         YEAR => 2012,
+        CITY => 'Indore',
         DATE_START => '2012-01-05',
         DATE_END => '2012-01-08'
       },
@@ -615,6 +622,7 @@ my %MEETS_INDIA =
       {
         ORDINAL => 10,
         YEAR => 2013,
+        CITY => 'Indore',
         DATE_START => '2013-01-10',
         DATE_END => '2013-01-13'
       },
@@ -696,13 +704,14 @@ my %MEETS_INDIA =
       '2015' =>
       {
         ORDINAL => 35,
-        CITY => 'Nasik',
+        CITY => 'Nashik',
         YEAR => 2015,
         DATE_START => '2015-05-02',
         DATE_END => '2015-05-02'
       },
       '2016' =>
       {
+        CITY => 'Pune',
         YEAR => 2016,
         DATE_START => '2016-06-25',
         DATE_END => '2016-06-25'
@@ -719,6 +728,7 @@ my %MEETS_INDIA =
     {
       '2013' =>
       {
+        ORDINAL => 30,
         CITY => 'Pushkar',
         YEAR => 2013,
         DATE_START => '2013-05-03',
@@ -737,6 +747,7 @@ my %MEETS_INDIA =
   {
     %GLOBAL,
     ORIGIN => 'Regional',
+    REGION => 'Uttar Pradesh',
 
     EDITIONS => 
     {
@@ -791,6 +802,9 @@ my %TOURNAMENTS_INDIA =
     {
       '2012' =>
       {
+        ORDINAL => 6,
+        SPONSOR => 'Bangur Cement',
+        CITY => 'Kolkata',
         CHAPTERS =>
         {
           'C0' => 
@@ -863,7 +877,7 @@ my %TOURNAMENTS_INDIA =
   'All India Corporate Invitational Pairs' =>
   {
     %GLOBAL,
-    ORIGIN => 'National',
+    ORIGIN => 'Invitational',
     FORM => 'Pairs',
     GENDER => 'Open',
     AGE => 'Open',
@@ -872,6 +886,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2012' =>
       {
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -886,6 +901,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2013' =>
       {
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -899,12 +915,13 @@ my %TOURNAMENTS_INDIA =
       },
       '2016' =>
       {
+        ORDINAL => 5,
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2016,
-            SCORING => 'IMP',
             major => 'SESSION',
             DATE_START => '2016-08-27',
             DATE_END => '2016-08-27'
@@ -1374,6 +1391,8 @@ my %TOURNAMENTS_INDIA =
     {
       '2011' =>
       {
+        CITY => 'Kolkata',
+        CLUB => 'Jaipur Club',
         CHAPTERS =>
         {
           'C0' => 
@@ -1575,6 +1594,9 @@ my %TOURNAMENTS_INDIA =
     {
       '2012' =>
       {
+        ORDINAL => 20,
+        CITY => 'Hyderabad',
+        CLUB => 'Jubilee Hills International Centre',
         CHAPTERS =>
         {
           'C0' => 
@@ -1952,6 +1974,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2009' =>
       {
+        CITY => 'Kolkata',
         CHAPTERS =>
         {
           'C0' => 
@@ -2178,6 +2201,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2013' =>
       {
+        CITY => 'Pune',
         CHAPTERS =>
         {
           'C0' => 
@@ -2406,6 +2430,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2016' =>
       {
+        REGION => 'Goa',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2436,7 +2461,7 @@ my %TOURNAMENTS_INDIA =
       '2013' =>
       {
         SPONSOR => 'Indian Oil',
-        CITY => 'Nasik',
+        CITY => 'Nashik',
         CHAPTERS =>
         {
           'C0' => 
@@ -2473,6 +2498,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2005' =>
       {
+        CITY => 'Mumbai',
         CHAPTERS =>
         {
           'C0' => 
@@ -2516,6 +2542,7 @@ my %TOURNAMENTS_INDIA =
       '2012' =>
       {
         MEET => 'Uttar Pradesh State Championship',
+        CLUB => 'AVI Club Noida',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2614,6 +2641,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2013' =>
       {
+        CITY => 'Pune',
         CHAPTERS =>
         {
           'C0' => 
@@ -2704,6 +2732,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2012' =>
       {
+        CITY => 'Bangalore',
         CHAPTERS =>
         {
           'C0' => 
@@ -2798,6 +2827,7 @@ my %TOURNAMENTS_INDIA =
       '2012' =>
       {
         MEET => 'Maharaja Holkar National Championship',
+        CITY => 'Indore',
         CHAPTERS =>
         {
           'C0' => 
@@ -2985,6 +3015,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2011' =>
       {
+        CLUB => 'Calcutta Cricket & Football Club',
         CHAPTERS =>
         {
           'C0' => 
@@ -3007,6 +3038,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2012' =>
       {
+        CITY => 'Kolkata',
         CHAPTERS =>
         {
           'C0' => 
@@ -3207,6 +3239,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2012' =>
       {
+        ORDINAL => 2,
         CHAPTERS =>
         {
           'C0' => 
@@ -3965,6 +3998,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2015' =>
       {
+        CITY => 'Delhi',
         CHAPTERS =>
         {
           'C0' => 
@@ -3988,6 +4022,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2016' =>
       {
+        CITY => 'Delhi',
         CHAPTERS =>
         {
           'C0' => 
@@ -4096,6 +4131,8 @@ my %TOURNAMENTS_INDIA =
   {
     %GLOBAL,
     ORIGIN => 'National',
+    CLUB => 'Otters Club',
+    CITY => 'Mumbai',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -4138,6 +4175,7 @@ my %TOURNAMENTS_INDIA =
   {
     %GLOBAL,
     ORIGIN => 'National',
+    CITY => 'Mumbai',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -4355,7 +4393,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2016' =>
       {
-        CITY => 'Nasik',
+        CITY => 'Nashik',
         CHAPTERS =>
         {
           'C0' => 
@@ -4710,6 +4748,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2015' =>
       {
+        ORDINAL => 1,
         CITY => 'Delhi',
         CHAPTERS =>
         {
@@ -4749,6 +4788,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2016' =>
       {
+        ORDINAL => 2,
         CITY => 'Delhi',
         CHAPTERS =>
         {
@@ -5417,6 +5457,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2016' =>
       {
+        SPONSOR => 'Samadhan Academy',
         CITY => 'Mumbai',
         CHAPTERS =>
         {
@@ -5453,6 +5494,7 @@ my %TOURNAMENTS_INDIA =
       '2010' =>
       {
         MEET => 'Indian Summer Nationals',
+        SPONSOR => 'Tata Consulting Services',
         CHAPTERS =>
         {
           'C0' => 
@@ -5607,6 +5649,7 @@ my %TOURNAMENTS_INDIA =
       '2012' =>
       {
         MEET => 'Indian Summer Nationals',
+        REGION => 'Goa',
         CHAPTERS =>
         {
           'C0' => 

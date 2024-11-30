@@ -288,6 +288,7 @@ my %TOURNAMENTS_NORDIC =
     {
       '2005' =>
       {
+        # TODO Is this one used?
         MEET => 'Nordic Team Championship',
         GENDER => 'Open',
         AGE => 'U26',
@@ -321,6 +322,8 @@ my %TOURNAMENTS_NORDIC =
       '2011' =>
       {
         MEET => 'Nordic Junior Championship',
+        FORM => 'Teams',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -362,6 +365,8 @@ my %TOURNAMENTS_NORDIC =
       '2015' =>
       {
         MEET => 'Nordic Junior Championship',
+        FORM => 'Teams',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 

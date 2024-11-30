@@ -176,6 +176,7 @@ my %MEETS_BALKAN =
       },
       '2013' =>
       {
+        ORDINAL => 7,
         YEAR => 2013,
         DATE_START => '2013-04-28',
         DATE_END => '2013-04-29'
@@ -331,6 +332,9 @@ my %TOURNAMENTS_BALKAN =
       },
       '2011' =>
       {
+        ORDINAL => 3,
+        CITY => 'Stara Zagora',
+        COUNTRY => 'Bulgaria',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -344,6 +348,9 @@ my %TOURNAMENTS_BALKAN =
       },
       '2012' =>
       {
+        ORDINAL => 4,
+        CITY => 'Stara Zagora',
+        COUNTRY => 'Bulgaria',
         CHAPTERS =>
         {
           'C0' => 
@@ -371,6 +378,7 @@ my %TOURNAMENTS_BALKAN =
       },
       '2014' =>
       {
+        ORDINAL => 5,
         CHAPTERS =>
         {
           'C0' => 

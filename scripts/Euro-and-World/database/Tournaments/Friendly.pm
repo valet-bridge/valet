@@ -1757,6 +1757,7 @@ my %TOURNAMENTS_FRIENDLY =
     ORGANIZATION => 'MBSZ',
     CITY => 'Budapest',
     COUNTRY => 'Hungary',
+    CITY => 'Budapest',
     ORIGIN => 'National',
     ZONE => 'Europe',
     FORM => 'Teams',
