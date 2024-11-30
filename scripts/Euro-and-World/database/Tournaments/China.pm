@@ -1020,7 +1020,6 @@ my %TOURNAMENTS_CHINA =
       {
         ORDINAL => 1,
         CITY => 'Kunshan',
-        COUNTRY => 'China',
         CHAPTERS =>
         {
           'C0' => 
@@ -1061,7 +1060,6 @@ my %TOURNAMENTS_CHINA =
       {
         ORDINAL => 1,
         CITY => 'Taicang',
-        COUNTRY => 'China',
         CHAPTERS =>
         {
           'SINGLE' => 

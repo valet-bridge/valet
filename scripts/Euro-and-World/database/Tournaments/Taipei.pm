@@ -197,6 +197,7 @@ my %TOURNAMENTS_TAIPEI =
       },
       '2011' =>
       {
+        ORDINAL => 18,
         CHAPTERS =>
         {
           'C0' => 

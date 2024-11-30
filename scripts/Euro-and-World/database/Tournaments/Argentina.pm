@@ -694,8 +694,6 @@ my %TOURNAMENTS_ARGENTINA =
     {
       '2010' =>
       {
-        FORM => 'Teams',
-        SCORING => 'IMP',
         CHAPTERS =>
         {
           'C0' => 
@@ -716,8 +714,6 @@ my %TOURNAMENTS_ARGENTINA =
       },
       '2011' =>
       {
-        FORM => 'Teams',
-        SCORING => 'IMP',
         CHAPTERS =>
         {
           'C0' => 

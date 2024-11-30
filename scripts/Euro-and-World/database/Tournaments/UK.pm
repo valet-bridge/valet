@@ -516,6 +516,8 @@ my %TOURNAMENTS_UK =
       },
       '2005' =>
       {
+        CITY => 'Ballymena',
+        COUNTRY => 'Northern Ireland',
         CHAPTERS =>
         {
           'C0' => 
@@ -534,8 +536,6 @@ my %TOURNAMENTS_UK =
           'C2' => 
           {
             YEAR => 2005,
-            CITY => 'Ballymena',
-            COUNTRY => 'Northern Ireland',
             WEEKEND => 2,
             DATE_START => '2005-03-14',
             DATE_END => '2005-03-17'
@@ -543,8 +543,6 @@ my %TOURNAMENTS_UK =
           'C3' => 
           {
             YEAR => 2005,
-            CITY => 'Ballymena',
-            COUNTRY => 'Northern Ireland',
             DATE_START => '2005-03-25',
             DATE_END => '2005-03-28'
           },
@@ -1050,6 +1048,7 @@ my %TOURNAMENTS_UK =
       },
       '2008B' =>
       {
+        CITY => 'Brighton',
         CHAPTERS =>
         {
           'C0' => 
@@ -1960,6 +1959,8 @@ my %TOURNAMENTS_UK =
       },
       '2016' =>
       {
+        CITY => 'Edinburgh',
+        COUNTRY => 'Scotland',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3594,12 +3595,12 @@ my %TOURNAMENTS_UK =
     {
       '2011' =>
       {
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2011,
-            SCORING => 'MP',
             major => 'MATCH',
             DATE_START => '2011-10-15',
             DATE_END => '2011-10-16'
@@ -3608,12 +3609,12 @@ my %TOURNAMENTS_UK =
       },
       '2012' =>
       {
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2012,
-            SCORING => 'IMP',
             major => 'ROUND',
             DATE_START => '2012-10-20',
             DATE_END => '2012-10-21'
@@ -3622,12 +3623,12 @@ my %TOURNAMENTS_UK =
       },
       '2013' =>
       {
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2013,
-            SCORING => 'MP',
             major => 'MATCH',
             DATE_START => '2013-10-19',
             DATE_END => '2013-10-20'

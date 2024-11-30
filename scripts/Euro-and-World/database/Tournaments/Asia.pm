@@ -357,6 +357,7 @@ my %MEETS_ASIA =
         # https://en.wikipedia.org/wiki/Bridge_at_the_2011_SEA_Games
         ORDINAL => 26,
         CITY => 'Jakarta',
+        REGION => 'South Sumatra',
         COUNTRY => 'Indonesia',
         YEAR => 2011,
         DATE_START => '2011-11-10',
@@ -1840,6 +1841,7 @@ my %TOURNAMENTS_ASIA =
     {
       '2009' =>
       {
+        ORDINAL => 1,
         CHAPTERS =>
         {
           'SINGLE' => 

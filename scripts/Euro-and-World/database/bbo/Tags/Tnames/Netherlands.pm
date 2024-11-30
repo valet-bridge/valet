@@ -62,8 +62,11 @@ my %MULTI_TYPOS =
   'Petit Grand Prix van Driene' => [
     'petit grand prix',
     'grand prix van driene'],
-  'Top Circuit' => ['melchemie top circuit',
-    'ing bank top circuit', 'witte huis topcircuit'],
+  'Top Circuit' => [
+    'top circuit',
+    'dutch top circuit', 
+    'top circuit', 
+    'witte huis topcircuit'],
   'White House International' => [
     'white house international teams',
     'white house top 16',

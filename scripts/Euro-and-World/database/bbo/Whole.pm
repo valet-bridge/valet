@@ -186,6 +186,15 @@ sub set_matrix_link
 }
 
 
+sub get_matrix_element
+{
+  my ($self, $from, $to, $value) = @_;
+  # 'to' might be 'NATIONALITY', 'from' might be 'COUNTRY'.
+  # 'value' would be a possible nationality.
+  return $self->{MATRIX}{$from}{$to}{$value} // '';
+}
+
+
 sub check_consistency_scalar
 {
   my ($self, $tag_from, $tag_to, $value_from, $value_to, $errstr) = @_;

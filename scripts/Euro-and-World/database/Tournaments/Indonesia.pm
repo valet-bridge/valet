@@ -161,6 +161,7 @@ my %MEETS_INDONESIA =
       {
         ORDINAL => 17,
         CITY => 'Tarakan',
+        REGION => 'East Borneo',
         YEAR => 2008,
         DATE_START => '2008-07-06',
         DATE_END => '2008-07-17'
@@ -272,7 +273,7 @@ my %MEETS_INDONESIA =
       '2012' =>
       {
         # https://bridge.web.id/2012/mhs/
-        ORDINAL => 14,
+        MEET_ORDINAL => 14,
         CITY => 'Jakarta',
         YEAR => 2012,
         DATE_START => '2012-05-16',
@@ -281,6 +282,7 @@ my %MEETS_INDONESIA =
       '2014' =>
       {
         # https://bridge.web.id/2014/kejurnas-mhs/
+        MEET_ORDINAL => 16,
         CITY => 'Surabaya',
         YEAR => 2014,
         DATE_START => '2014-12-08',
@@ -289,7 +291,7 @@ my %MEETS_INDONESIA =
       '2015' =>
       {
         # https://bridge.web.id/2015/kejurnas-mhs/
-        ORDINAL => 14,
+        MEET_ORDINAL => 14, # TODO Used? Should be 17 or so?
         CITY => 'Semarang',
         YEAR => 2015,
         DATE_START => '2015-11-03',
@@ -704,6 +706,7 @@ my %TOURNAMENTS_INDONESIA =
     {
       '2010' =>
       {
+        ORDINAL => 45,
         CHAPTERS =>
         {
           'C0' => 
@@ -2364,7 +2367,6 @@ my %TOURNAMENTS_INDONESIA =
       '2012' =>
       {
         MEET => 'Indonesian University Championship',
-        ORDINAL => 14,
         CHAPTERS =>
         {
           'C0' => 

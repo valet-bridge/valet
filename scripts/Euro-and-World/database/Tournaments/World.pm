@@ -1621,6 +1621,8 @@ my %TOURNAMENTS_WORLD =
   'Huayuan Cup' => 
   {
     ORIGIN => 'International',
+    CITY => 'Beijing',
+    COUNTRY => 'China',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -1630,7 +1632,6 @@ my %TOURNAMENTS_WORLD =
     {
       '2006' =>
       {
-        CITY => 'Beijing',
         CHAPTERS =>
         {
           'C0' => 
@@ -1653,7 +1654,6 @@ my %TOURNAMENTS_WORLD =
       },
       '2011' =>
       {
-        CITY => 'Beijing',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1667,7 +1667,6 @@ my %TOURNAMENTS_WORLD =
       },
       '2013' =>
       {
-        CITY => 'Beijing',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1681,7 +1680,6 @@ my %TOURNAMENTS_WORLD =
       },
       '2015' =>
       {
-        CITY => 'Beijing',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2058,6 +2056,7 @@ my %TOURNAMENTS_WORLD =
     {
       '2011' =>
       {
+        ORDINAL => 1,
         CHAPTERS =>
         {
           'C0' => 
@@ -2096,6 +2095,7 @@ my %TOURNAMENTS_WORLD =
       },
       '2012' =>
       {
+        ORDINAL => 2,
         CHAPTERS =>
         {
           'C0' => 
@@ -2126,6 +2126,7 @@ my %TOURNAMENTS_WORLD =
       },
       '2013' =>
       {
+        ORDINAL => 3,
         CHAPTERS =>
         {
           'C0' => 
@@ -3598,6 +3599,7 @@ my %TOURNAMENTS_WORLD =
       '2013' =>
       {
         MEET => 'World Team Championships',
+        ORDINAL => 9,
         CHAPTERS =>
         {
           'C0' => 

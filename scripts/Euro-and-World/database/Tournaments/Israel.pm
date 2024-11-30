@@ -1484,6 +1484,7 @@ my %TOURNAMENTS_ISRAEL =
 
   'Rand Pairs Cup' =>
   {
+    ORIGIN => 'Invitational',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',

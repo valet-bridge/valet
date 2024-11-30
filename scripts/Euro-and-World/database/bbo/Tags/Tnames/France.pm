@@ -48,6 +48,7 @@ my %MULTI_TYPOS =
     'dn0_4 d1',
     'dno0_4 d1',
     'dn1',
+    'dn1 french',
     'divisionnationale 1',
     'division natinale open _ 4 d1',
     'division nationale',

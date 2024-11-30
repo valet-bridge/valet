@@ -64,7 +64,8 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   'Aegean Open Teams' => [
-    'aegean championships' ],
+    'aegean championships',
+    'turkish clubs championship aegean playoffs'],
   'Anatolian Club Teams' => [
     'anatolian club qualifying',
     'eastern anatolian qualification',

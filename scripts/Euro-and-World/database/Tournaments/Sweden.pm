@@ -1048,6 +1048,7 @@ my %TOURNAMENTS_SWEDEN =
     {
       '2010' =>
       {
+        CITY => 'Göteborg',
         CHAPTERS =>
         {
           'C0' => 
@@ -1070,8 +1071,34 @@ my %TOURNAMENTS_SWEDEN =
           } 
         }
       },
-      '2011' =>
+      '2011A' =>
       {
+        CITY => 'Göteborg',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2011-02-26',
+            DATE_END => '2011-02-27'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2011-03-13',
+            DATE_END => '2011-03-13'
+          } 
+        }
+      },
+      '2011B' =>
+      {
+        CITY => 'Linköping',
         CHAPTERS =>
         {
           'C0' => 
@@ -1118,8 +1145,25 @@ my %TOURNAMENTS_SWEDEN =
           } 
         }
       },
-      '2013' =>
+      '2013A' =>
       {
+        CITY => 'Göteborg',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2013-03-09',
+            DATE_END => '2013-03-10'
+          } 
+        }
+      },
+      '2013B' =>
+      {
+        CITY => 'Linköping',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1800,6 +1844,7 @@ my %TOURNAMENTS_SWEDEN =
       },
       '2015' =>
       {
+        CITY => 'Tofta',
         CHAPTERS =>
         {
           'SINGLE' => 

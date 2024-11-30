@@ -686,6 +686,9 @@ my @LOCAL_SUBS =
   { START => 45792, END => 45816, TEXT => 'Zagreb - Rijeka', 
     CORR => 'Zagreb' },
   { START => 46016, END => 46058, TEXT => 'USBC', CORR => 'NABC' },
+  { START => 46400, END => 46478, 
+    TEXT => 'Turkish Club Teams Championship - Aegean Playoffs', 
+    CORR => 'Aegean Open Teams' },
 );
 
 

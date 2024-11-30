@@ -1778,7 +1778,7 @@ my %TOURNAMENTS_FRIENDLY =
           {
             YEAR => 2014,
             DATE_START => '2014-04-18',
-            DATE_END => '2014-04-18'
+            DATE_END => '2014-04-20'
           } 
         }
       },
@@ -2097,6 +2097,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Friendly Match',
         MEET_TAG => '2007B',
+        CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2115,6 +2116,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Friendly Match',
         MEET_TAG => '2007C',
+        CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2301,6 +2303,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Friendly Match',
         MEET_TAG => '2012D',
+        CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2508,6 +2511,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007C' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2007D',
         CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'Open',
@@ -2546,6 +2550,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Practice Match',
         MEET_TAG => '2007H',
+        CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2676,6 +2681,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Practice Match',
         MEET_TAG => '2012C',
+        CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2851,6 +2857,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Friendly Match',
         MEET_TAG => '2013F',
+        SPONSOR => 'Bridge Winners',
         GENDER => 'Open',
         AGE => 'Open',
 

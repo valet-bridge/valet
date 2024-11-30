@@ -2484,6 +2484,7 @@ my %TOURNAMENTS_POLAND =
         # https://wyniki.pzbs.pl/2014/_gpp/04krakow/W-gpp2014.html
         MEET => 'Krakow Congress',
         MEET_TAG => '2014',
+        PERSON => 'Andrzej Wilkosz',
         CHAPTERS =>
         {
           'SINGLE' => 

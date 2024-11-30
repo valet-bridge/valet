@@ -375,6 +375,32 @@ my %TOURNAMENTS_TURKEY =
           },
         }
       },
+      '2013' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            DATE_START => '2013-07-12',
+            DATE_END => '2013-07-14'
+          },
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            MOVEMENT => 'Round-robin',
+            major => 'SEGMENT',
+            DATE_START => '2016-08-26',
+            DATE_END => '2016-08-28'
+          } 
+        }
+      },
     }
   },
 
@@ -1959,18 +1985,12 @@ my %TOURNAMENTS_TURKEY =
           'C1' => 
           {
             YEAR => 2013,
-            DATE_START => '2013-07-12',
-            DATE_END => '2013-07-14'
-          },
-          'C2' => 
-          {
-            YEAR => 2013,
             MOVEMENT => 'Round-robin',
             major => 'SEGMENT',
             DATE_START => '2013-08-24',
             DATE_END => '2013-08-25'
           },
-          'C3' => 
+          'C2' => 
           {
             YEAR => 2013,
             STAGE => 'Rof32',
@@ -1978,7 +1998,7 @@ my %TOURNAMENTS_TURKEY =
             DATE_START => '2013-08-25',
             DATE_END => '2013-08-26'
           },
-          'C4' => 
+          'C3' => 
           {
             YEAR => 2013,
             STAGE => 'Rof16',
@@ -1986,7 +2006,7 @@ my %TOURNAMENTS_TURKEY =
             DATE_START => '2013-08-26',
             DATE_END => '2013-08-27'
           },
-          'C5' => 
+          'C4' => 
           {
             YEAR => 2013,
             STAGE => 'Quarterfinal',
@@ -1994,7 +2014,7 @@ my %TOURNAMENTS_TURKEY =
             DATE_START => '2013-08-27',
             DATE_END => '2013-08-28'
           },
-          'C6' => 
+          'C5' => 
           {
             YEAR => 2013,
             STAGE => 'Semifinal',
@@ -2002,7 +2022,7 @@ my %TOURNAMENTS_TURKEY =
             DATE_START => '2013-08-28',
             DATE_END => '2013-08-28'
           },
-          'C7' => 
+          'C6' => 
           {
             YEAR => 2013,
             STAGE => 'Final',
@@ -2132,21 +2152,6 @@ my %TOURNAMENTS_TURKEY =
             major => 'SEGMENT',
             DATE_START => '2015-08-27',
             DATE_END => '2015-08-27'
-          } 
-        }
-      },
-      '2016' =>
-      {
-
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2016,
-            MOVEMENT => 'Round-robin',
-            major => 'SEGMENT',
-            DATE_START => '2016-08-26',
-            DATE_END => '2016-08-28'
           } 
         }
       },

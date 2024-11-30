@@ -11,7 +11,16 @@ use open ':std', ':encoding(UTF-8)';
 use Time::Piece;
 
 use lib '.';
+use lib './Connections';
+
 use FScorr;
+use Connections::Matrix;
+
+use Whole;
+my $whole = Whole->new();
+$whole->init_hashes();
+
+Connections::Matrix::set_matrix($whole);
 
 my @HEADER_FIELDS = qw(
   TOURNAMENT_NAME
@@ -1017,15 +1026,28 @@ sub prune_using_new
         delete $self->{HEADER}{TNAME};
         next;
       }
+
       if ($ekey eq 'ORDINAL')
       {
-       if (exists $header->{MEET_ORDINAL} &&
-           $evalue eq $header->{MEET_ORDINAL})
-       {
-         delete $self->{HEADER}{ORDINAL};
-         next;
-       }
+        if (exists $header->{MEET_ORDINAL} &&
+          $evalue eq $header->{MEET_ORDINAL})
+        {
+          delete $self->{HEADER}{ORDINAL};
+          next;
+        }
       }
+
+      if ($ekey eq 'NATIONALITY' && exists $header->{COUNTRY})
+      {
+        my $single = $whole->get_matrix_element('NATIONALITY',
+          'COUNTRY', lc($evalue));
+        if ($single eq $header->{COUNTRY})
+        {
+          delete $self->{HEADER}{NATIONALITY};
+          next;
+        }
+      }
+
       print $self->bbono(), ": No $ekey (", $header->{COUNTRY}, ")\n";
       next;
     }

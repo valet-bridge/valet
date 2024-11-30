@@ -889,13 +889,12 @@ my %TOURNAMENTS_INDIA =
     {
       '2012' =>
       {
-        SCORING => 'IMP',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2012,
-            SCORING => 'MP',
             major => 'SESSION',
             DATE_START => '2012-09-16',
             DATE_END => '2012-09-16'
@@ -910,7 +909,6 @@ my %TOURNAMENTS_INDIA =
           'SINGLE' => 
           {
             YEAR => 2013,
-            SCORING => 'MP',
             DATE_START => '2013-09-28',
             DATE_END => '2013-09-28'
           } 
@@ -2548,7 +2546,6 @@ my %TOURNAMENTS_INDIA =
       '2012' =>
       {
         MEET => 'Uttar Pradesh State Championship',
-        CLUB => 'AVI Club Noida',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2834,7 +2831,6 @@ my %TOURNAMENTS_INDIA =
       '2012' =>
       {
         MEET => 'Maharaja Holkar National Championship',
-        CITY => 'Indore',
         CHAPTERS =>
         {
           'C0' => 
@@ -5659,7 +5655,6 @@ my %TOURNAMENTS_INDIA =
       '2012' =>
       {
         MEET => 'Indian Summer Nationals',
-        REGION => 'Goa',
         CHAPTERS =>
         {
           'C0' => 

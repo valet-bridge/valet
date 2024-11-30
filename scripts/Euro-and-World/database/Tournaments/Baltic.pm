@@ -1829,15 +1829,45 @@ my %TOURNAMENTS_BALTIC =
   {
     ORIGIN => 'Invitational',
     FORM => 'Pairs',
-    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
+      '2009' =>
+      {
+        MEET => 'Vilnius Cup',
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2009,
+            major => 'SESSION',
+            DATE_START => '2009-10-01',
+            DATE_END => '2009-10-01'
+          } 
+        }
+      },
+      '2010' =>
+      {
+        MEET => 'Vilnius Cup',
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2010,
+            major => 'SESSION',
+            DATE_START => '2010-09-16',
+            DATE_END => '2010-09-16'
+          } 
+        }
+      },
       '2011' =>
       {
         MEET => 'Vilnius Cup',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1852,6 +1882,7 @@ my %TOURNAMENTS_BALTIC =
       '2012' =>
       {
         MEET => 'Vilnius Cup',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1866,6 +1897,7 @@ my %TOURNAMENTS_BALTIC =
       '2013' =>
       {
         MEET => 'Vilnius Cup',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 

@@ -159,6 +159,8 @@ my %MEETS_BALKAN =
       '2009' =>
       {
         YEAR => 2009,
+        CITY => 'Thessaloniki',
+        COUNTRY => 'Greece',
         DATE_START => '2009-05-01',
         DATE_END => '2009-05-03'
       },

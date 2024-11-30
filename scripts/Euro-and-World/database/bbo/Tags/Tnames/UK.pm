@@ -89,6 +89,7 @@ my %MULTI_TYPOS =
     "england ladies' trials",
     'english ladies trials',
     "english ladies' trials",
+    'english lady milne trials',
     'lady milne trials'],
   'Garden Cities Teams' => ['garden cities'],
   'Glasgow Transnational Open Teams' => ['tnt glasgow'],

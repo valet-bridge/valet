@@ -30,6 +30,7 @@ my %MEETS_NETHERLANDS =
     {
       '2013' =>
       {
+        ORDINAL => 23,
         YEAR => 2013,
         DATE_START => '2013-08-29',
         DATE_END => '2013-08-30'
@@ -704,6 +705,7 @@ my %TOURNAMENTS_NETHERLANDS =
     {
       '2007' =>
       {
+        SPONSOR => 'Twentebelt',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -717,6 +719,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2011' =>
       {
+        SPONSOR => 'Twentebelt',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -840,6 +843,7 @@ my %TOURNAMENTS_NETHERLANDS =
       '1998' =>
       {
         SCORING => 'MP',
+        SPONSOR => 'ING Bank',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -855,6 +859,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '1999' =>
       {
+        SPONSOR => 'ING Bank',
         SCORING => 'MP',
         CHAPTERS =>
         {
@@ -872,6 +877,7 @@ my %TOURNAMENTS_NETHERLANDS =
       '2000' =>
       {
         ORDINAL => 3,
+        SPONSOR => 'ING Bank',
         SCORING => 'MP',
         CHAPTERS =>
         {
@@ -887,6 +893,7 @@ my %TOURNAMENTS_NETHERLANDS =
       '2002' =>
       {
         SCORING => 'MP',
+        SPONSOR => 'Melchemie',
         CHAPTERS =>
         {
           'SINGLE' => 
