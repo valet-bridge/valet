@@ -1311,6 +1311,8 @@ my %TOURNAMENTS_FRIENDLY =
       '2010' =>
       {
         MEET => 'Friendly Pairs',
+        CLUB => 'BC Saint Honoré',
+        CITY => 'Paris',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1397,6 +1399,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Practice Match',
         MEET_TAG => '2007I',
+        SPONSOR => 'Multicoms',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2498,6 +2501,24 @@ my %TOURNAMENTS_FRIENDLY =
       '2007C' =>
       {
         MEET => 'Practice Match',
+        CLUB => "'t Onstein",
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2007,
+            major => 'SEGMENT',
+            DATE_START => '2007-04-16',
+            DATE_END => '2007-04-16'
+          } 
+        }
+      },
+      '2007D' =>
+      {
+        MEET => 'Practice Match',
         MEET_TAG => '2007E',
         GENDER => 'Open',
         AGE => 'Open',
@@ -2513,7 +2534,7 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2007D' =>
+      '2007E' =>
       {
         MEET => 'Practice Match',
         MEET_TAG => '2007H',
@@ -2531,7 +2552,7 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2007E' =>
+      '2007F' =>
       {
         MEET => 'Practice Match',
         MEET_TAG => '2007L',
@@ -2549,7 +2570,7 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2007F' =>
+      '2007G' =>
       {
         MEET => 'Practice Match',
         MEET_TAG => '2007N',
@@ -2573,6 +2594,7 @@ my %TOURNAMENTS_FRIENDLY =
         MEET_TAG => '2008B',
         GENDER => 'Open',
         AGE => 'Open',
+        CLUB => "'t Onstein",
 
         CHAPTERS =>
         {

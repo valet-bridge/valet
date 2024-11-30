@@ -113,6 +113,7 @@ my %MEETS_ASIA =
       {
         # https://www.ccba.org.cn/Tour/TourIndex.aspx?tourid=5827
         ORDINAL => 50,
+        SPONSOR => 'Bangkok Bank',
         CITY => 'Bangkok',
         COUNTRY => 'Thailand',
         YEAR => 2015,
@@ -184,6 +185,7 @@ my %MEETS_ASIA =
       '2015' =>
       {
         ORDINAL => 20,
+        SPONSOR => 'Bangkok Bank',
         CITY => 'Bangkok',
         COUNTRY => 'Thailand',
         YEAR => 2015,
@@ -204,6 +206,7 @@ my %MEETS_ASIA =
       '2006' =>
       {
         ORDINAL => 28,
+        SPONSOR => 'Saniva',
         CITY => 'Singapore',
         COUNTRY => 'Singapore',
         YEAR => 2006,
@@ -285,6 +288,7 @@ my %MEETS_ASIA =
       '2015' =>
       {
         ORDINAL => 37,
+        SPONSOR => 'Bangkok Bank',
         CITY => 'Bangkok',
         COUNTRY => 'Thailand',
         YEAR => 2015,

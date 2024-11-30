@@ -1972,6 +1972,7 @@ my %TOURNAMENTS_DENMARK =
 
       '2013' =>
       {
+        SPONSOR => 'Nordfyns Finans',
         CHAPTERS => 
         {
           'SINGLE' => 
@@ -2445,6 +2446,7 @@ my %TOURNAMENTS_DENMARK =
       '2009' =>
       {
         MEET => 'Danish Bridge Festival',
+        SPONSOR => 'XP Digital',
         CHAPTERS => 
         {
           'C0' => 

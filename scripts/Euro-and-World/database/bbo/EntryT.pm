@@ -1004,6 +1004,36 @@ sub prune_using
 }
 
 
+sub prune_using_new
+{
+  my ($self, $header, $chapter) = @_;
+
+  while (my ($ekey, $evalue) = each %{$self->{HEADER}})
+  {
+    if (! exists $header->{$ekey})
+    {
+      if ($ekey eq 'TNAME')
+      {
+        delete $self->{HEADER}{TNAME};
+        next;
+      }
+      print $self->bbono(), ": No $ekey (", $header->{COUNTRY}, ")\n";
+      next;
+    }
+
+    if ($evalue eq $header->{$ekey})
+    {
+      delete $self->{HEADER}{$ekey};
+    }
+    else
+    {
+      warn $self->bbono() . ": Header " . $header->{$ekey} .
+        " vs. $evalue";
+    }
+  }
+}
+
+
 sub find_tname_index
 {
   # Not a class method.

@@ -539,6 +539,8 @@ my %TOURNAMENTS_UK =
           'C3' => 
           {
             YEAR => 2005,
+            CITY => 'Ballymena',
+            COUNTRY => 'Northern Ireland',
             DATE_START => '2005-03-25',
             DATE_END => '2005-03-28'
           },

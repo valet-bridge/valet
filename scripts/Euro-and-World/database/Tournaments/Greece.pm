@@ -34,6 +34,7 @@ my %MEETS_GREECE =
     {
       '2007' =>
       {
+        ORDINAL =>  2,
         YEAR => 2007,
         REGION => 'Crete',
         DATE_START => '2007-09-02',
@@ -41,54 +42,68 @@ my %MEETS_GREECE =
       },
       '2008' =>
       {
+        ORDINAL => 3,
+        SPONSOR => 'Fantoni Vacations',
         YEAR => 2008,
         DATE_START => '2008-09-10',
         DATE_END => '2008-09-10'
       },
       '2009' =>
       {
+        ORDINAL => 4,
+        SPONSOR => 'Fantoni Vacations',
         YEAR => 2009,
+        REGION => 'Rhodes',
         DATE_START => '2009-08-17',
         DATE_END => '2009-08-22'
       },
       '2010' =>
       {
+        ORDINAL => 5,
+        SPONSOR => 'Fantoni Vacations',
         YEAR => 2010,
         DATE_START => '2010-08-29',
         DATE_END => '2010-09-03'
       },
       '2011' =>
       {
+        ORDINAL => 6,
+        SPONSOR => 'Fantoni Vacations',
         YEAR => 2011,
         DATE_START => '2011-08-28',
         DATE_END => '2011-09-03'
       },
       '2012' =>
       {
+        ORDINAL => 7,
         YEAR => 2012,
         DATE_START => '2012-08-30',
         DATE_END => '2012-08-31'
       },
       '2013' =>
       {
+        ORDINAL => 8,
         YEAR => 2013,
         DATE_START => '2013-09-06',
         DATE_END => '2013-09-07'
       },
       '2014' =>
       {
+        ORDINAL => 9,
         YEAR => 2014,
         DATE_START => '2014-08-29',
         DATE_END => '2014-08-30'
       },
       '2015' =>
       {
+        ORDINAL => 10,
         YEAR => 2015,
         DATE_START => '2015-09-09',
         DATE_END => '2015-09-10'
       },
       '2016' =>
       {
+        ORDINAL => 11,
         YEAR => 2016,
         DATE_START => '2016-08-25',
         DATE_END => '2016-08-26'
@@ -557,6 +572,7 @@ my %TOURNAMENTS_GREECE =
       },
       '2013' =>
       {
+        ORDINAL => 47,
         CHAPTERS =>
         {
           'C0' => 
@@ -579,6 +595,7 @@ my %TOURNAMENTS_GREECE =
       },
       '2014' =>
       {
+        ORDINAL => 48,
         CHAPTERS =>
         {
           'C0' => 
@@ -601,6 +618,7 @@ my %TOURNAMENTS_GREECE =
       },
       '2015' =>
       {
+        ORDINAL => 49,
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -615,6 +633,7 @@ my %TOURNAMENTS_GREECE =
       },
       '2016' =>
       {
+        ORDINAL => 50,
         CHAPTERS =>
         {
           'SINGLE' => 

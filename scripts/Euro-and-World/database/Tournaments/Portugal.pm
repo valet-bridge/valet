@@ -974,6 +974,7 @@ my %TOURNAMENTS_PORTUGAL =
     {
       '2008' =>
       {
+        CITY => 'Porto',
         CHAPTERS =>
         {
           'SINGLE' => 

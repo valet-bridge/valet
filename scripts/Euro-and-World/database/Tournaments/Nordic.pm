@@ -288,6 +288,8 @@ my %TOURNAMENTS_NORDIC =
       '2005' =>
       {
         MEET => 'Nordic Team Championship',
+        GENDER => 'Open',
+        AGE => 'U26',
         CHAPTERS =>
         {
           'SINGLE' => 

@@ -1352,6 +1352,7 @@ my %TOURNAMENTS_ISRAEL =
 
   'Red Sea Invitational Pairs' =>
   {
+    ORIGIN => 'Invitational',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',

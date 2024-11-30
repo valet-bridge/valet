@@ -23,7 +23,7 @@ my %MEETS_BULGARIA =
   {
     %GLOBAL,
     ORIGIN => 'Transnational',
-    CITY => 'Albena',
+    LOCALITY => 'Albena',
 
     EDITIONS => 
     {
@@ -221,6 +221,7 @@ my %MEETS_BULGARIA =
       },
       '2015' =>
       {
+        ORDINAL => 30,
         YEAR => 2015,
         DATE_START => '2015-04-18',
         DATE_END => '2015-04-19'
@@ -300,12 +301,14 @@ my %MEETS_BULGARIA =
       },
       '2010' =>
       {
+        ORDINAL => 11,
         YEAR => 2010,
         DATE_START => '2010-05-29',
         DATE_END => '2010-05-30'
       },
       '2015' =>
       {
+        ORDINAL => 16,
         YEAR => 2015,
         DATE_START => '2015-06-13',
         DATE_END => '2015-06-14'
@@ -347,6 +350,7 @@ my %MEETS_BULGARIA =
       },
       '2012' =>
       {
+        ORDINAL => 31,
         YEAR => 2012,
         DATE_START => '2012-05-05',
         DATE_END => '2012-05-06'
@@ -377,6 +381,7 @@ my %MEETS_BULGARIA =
       },
       '2016' =>
       {
+        ORDINAL => 35,
         YEAR => 2016,
         DATE_START => '2016-05-07',
         DATE_END => '2016-05-08'
@@ -472,12 +477,14 @@ my %MEETS_BULGARIA =
     {
       '2014' =>
       {
+        ORDINAL => 1,
         YEAR => 2014,
         DATE_START => '2014-09-21',
         DATE_END => '2014-09-22'
       },
       '2015' =>
       {
+        ORDINAL => 2,
         YEAR => 2015,
         DATE_START => '2015-09-21',
         DATE_END => '2015-09-22'
@@ -495,54 +502,63 @@ my %MEETS_BULGARIA =
     {
       '2006' =>
       {
+        ORDINAL => 25,
         YEAR => 2006,
         DATE_START => '2006-10-17',
         DATE_END => '2006-10-17'
       },
       '2007' =>
       {
+        ORDINAL => 26,
         YEAR => 2007,
         DATE_START => '2007-10-21',
         DATE_END => '2007-10-22'
       },
       '2009' =>
       {
+        ORDINAL => 28,
         YEAR => 2009,
         DATE_START => '2009-10-10',
         DATE_END => '2009-10-11'
       },
       '2010' =>
       {
+        ORDINAL => 29,
         YEAR => 2010,
         DATE_START => '2010-10-02',
         DATE_END => '2010-10-03'
       },
       '2011' =>
       {
+        ORDINAL => 30,
         YEAR => 2011,
         DATE_START => '2011-10-08',
         DATE_END => '2011-10-09'
       },
       '2012' =>
       {
+        ORDINAL => 31,
         YEAR => 2012,
         DATE_START => '2012-10-06',
         DATE_END => '2012-10-07'
       },
       '2013' =>
       {
+        ORDINAL => 32,
         YEAR => 2013,
         DATE_START => '2013-10-05',
         DATE_END => '2013-10-06'
       },
       '2014' =>
       {
+        ORDINAL => 33,
         YEAR => 2014,
         DATE_START => '2014-10-04',
         DATE_END => '2014-10-05'
       },
       '2015' =>
       {
+        ORDINAL => 34,
         YEAR => 2015,
         DATE_START => '2015-10-17',
         DATE_END => '2015-10-18'
@@ -631,6 +647,7 @@ my %TOURNAMENTS_BULGARIA =
       '2012' =>
       {
         MEET => 'Albena Bridge Festival',
+        SPONSOR => 'Vinex Preslav',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -678,6 +695,7 @@ my %TOURNAMENTS_BULGARIA =
   {
     %GLOBAL,
     ORIGIN => 'National',
+    CITY => 'Asenovgrad',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -687,6 +705,7 @@ my %TOURNAMENTS_BULGARIA =
     {
       '2015' =>
       {
+        ORDINAL => 1,
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -700,6 +719,7 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2016' =>
       {
+        ORDINAL => 2,
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1032,6 +1052,7 @@ my %TOURNAMENTS_BULGARIA =
 
   'Cherven Briag Open Teams' =>
   {
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1265,6 +1286,7 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2016' =>
       {
+        ORDINAL => 11,
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1344,6 +1366,7 @@ my %TOURNAMENTS_BULGARIA =
     {
       '2012' =>
       {
+        ORDINAL => 33,
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1358,6 +1381,7 @@ my %TOURNAMENTS_BULGARIA =
       },
       '2013' =>
       {
+        ORDINAL => 34,
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1372,6 +1396,7 @@ my %TOURNAMENTS_BULGARIA =
       '2014' =>
       {
         # https://www.bridge.bg/en/tournaments/2117-XXV-Bridj-turnir-Gabi
+        ORDINAL => 35,
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1722,6 +1747,7 @@ my %TOURNAMENTS_BULGARIA =
       '2013' =>
       {
         MEET => 'Stara Zagora Bridge Festival',
+        SPONSOR => 'Vito',
         CHAPTERS =>
         {
           'C0' => 

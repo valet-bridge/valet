@@ -3775,6 +3775,7 @@ my %TOURNAMENTS_ITALY =
     {
       '2012' =>
       {
+        ORDINAL => 41,
         YEAR => 2012,
         CHAPTERS => 
         {
@@ -3872,6 +3873,7 @@ my %TOURNAMENTS_ITALY =
     {
       '2012' =>
       {
+        ORDINAL => 5,
         YEAR => 2012,
         CHAPTERS => 
         {
@@ -3885,6 +3887,7 @@ my %TOURNAMENTS_ITALY =
       },
       '2013' =>
       {
+        ORDINAL => 6,
         YEAR => 2013,
         CHAPTERS => 
         {

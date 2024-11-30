@@ -140,9 +140,13 @@ while ($entryT->read($fh))
   $times[6] += time() - $t0;
 
   $t0 = time();
+  $entry2T->prune_using_new($header_entry2, $chapter_entry2);
+  $times[7] += time() - $t0;
+
+  $t0 = time();
   $entryT->update_tournaments(\%data, $tname, $edition, $chapter,
     $header_entry, $chapter_entry);
-  $times[7] += time() - $t0;
+  $times[8] += time() - $t0;
 
   $num_matches++;
   $hist_matches{$tname}++;

@@ -25,6 +25,7 @@ my %MEETS_WORLD =
       '2006' =>
       {
         # https://www.fisu.net/events/2006-fisu-world-university-championships-bridge/?utm_source=results
+        ORDINAL => 3,
         YEAR => 2006,
         CITY => 'Tianjin',
         COUNTRY => 'China',
@@ -34,6 +35,7 @@ my %MEETS_WORLD =
       '2008' =>
       {
         # https://www.fisu.net/events/2008-fisu-world-university-championships-bridge/?utm_source=results
+        ORDINAL => 4,
         YEAR => 2008,
         CITY => 'Lodz',
         COUNTRY => 'Poland',
@@ -43,6 +45,7 @@ my %MEETS_WORLD =
       '2010' =>
       {
         # https://www.fisu.net/events/2010-fisu-world-university-championships-bridge/?utm_source=results
+        ORDINAL => 5,
         YEAR => 2010,
         CITY => 'Kaohsiung',
         COUNTRY => 'Chinese Taipei',
@@ -52,6 +55,7 @@ my %MEETS_WORLD =
       '2012' =>
       {
         # https://www.fisu.net/events/2012-fisu-world-university-championships-bridge/?utm_source=results
+        ORDINAL => 6,
         YEAR => 2012,
         CITY => 'Reims',
         COUNTRY => 'France',
@@ -61,6 +65,7 @@ my %MEETS_WORLD =
       '2014' =>
       {
         # https://www.fisu.net/events/2014-fisu-world-university-championships-bridge/?utm_source=results
+        ORDINAL => 7,
         YEAR => 2014,
         CITY => 'Opatija',
         COUNTRY => 'Croatia',
@@ -70,6 +75,7 @@ my %MEETS_WORLD =
       '2016' =>
       {
         # https://www.fisu.net/events/2016-fisu-world-university-championships-bridge/?utm_source=results
+        ORDINAL => 8,
         YEAR => 2016,
         CITY => 'Lodz',
         COUNTRY => 'Poland',
@@ -230,6 +236,8 @@ my %MEETS_WORLD =
       '2014' =>
       {
         # http://db.worldbridge.org/Repository/tourn/Sanya.14/microSite/results.htm
+        SPONSOR => 'Red Bull',
+        ORDINAL => 14,
         YEAR => 2014,
         CITY => 'Sanya',
         COUNTRY => 'China',
@@ -286,6 +294,7 @@ my %MEETS_WORLD =
       {
         # http://db.worldbridge.org/Repository/tourn/Lille.12/microSite/Lille.htm
         YEAR => 2012,
+        ORDINAL => 2,
         CITY => 'Lille',
         COUNTRY => 'France',
         DATE_START => '2012-08-09',
@@ -294,6 +303,7 @@ my %MEETS_WORLD =
       '2012B' =>
       {
         # No link
+        SPONSOR => 'SportAccord',
         YEAR => 2012,
         CITY => 'Beijing',
         COUNTRY => 'China',
@@ -312,6 +322,8 @@ my %MEETS_WORLD =
       '2014' =>
       {
         # http://db.worldbridge.org/Repository/tourn/Beijing.14/microSite/results.htm
+        SPONSOR => 'SportAccord',
+        ORDINAL => 4,
         YEAR => 2014,
         CITY => 'Beijing',
         COUNTRY => 'China',
@@ -384,6 +396,7 @@ my %MEETS_WORLD =
       '2007' =>
       {
         # http://db.worldbridge.org/Repository/tourn/Shanghai.07/Shanghai.htm
+        ORDINAL => 38,
         YEAR => 2007,
         CITY => 'Shanghai',
         COUNTRY => 'China',
@@ -3121,6 +3134,7 @@ my %TOURNAMENTS_WORLD =
       {
         # http://db.worldbridge.org/Repository/tourn/Athens.00/Athens.htm
         ORDINAL => 5,
+        SPONSOR => 'Generali',
         CITY => 'Athens',
         COUNTRY => 'Greece',
         CHAPTERS =>
@@ -3138,6 +3152,7 @@ my %TOURNAMENTS_WORLD =
       {
         # http://db.worldbridge.org/Repository/tourn/Verona.04/Results.htm
         ORDINAL => 6,
+        SPONSOR => 'Generali',
         CITY => 'Verona',
         COUNTRY => 'Italy',
         CHAPTERS =>

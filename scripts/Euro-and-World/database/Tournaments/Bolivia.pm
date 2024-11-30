@@ -63,6 +63,7 @@ my %TOURNAMENTS_BOLIVIA =
     {
       '2004' =>
       {
+        ORDINAL => 7,
         CHAPTERS =>
         {
           'C0' => 

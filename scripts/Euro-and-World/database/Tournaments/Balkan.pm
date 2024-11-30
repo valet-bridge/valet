@@ -291,6 +291,8 @@ my %TOURNAMENTS_BALKAN =
     {
       '2009' =>
       {
+        CITY => 'Stara Zagora',
+        COUNTRY => 'Bulgaria',
         CHAPTERS =>
         {
           'C0' => 

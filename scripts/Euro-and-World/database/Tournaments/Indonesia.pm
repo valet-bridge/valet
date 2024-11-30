@@ -442,6 +442,7 @@ my %TOURNAMENTS_INDONESIA =
   {
     %GLOBAL,
     ORIGIN => 'National',
+    CLUB => 'Gabrial University of Indonesia',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -451,6 +452,7 @@ my %TOURNAMENTS_INDONESIA =
     {
       '2008' =>
       {
+        ORDINAL => 2,
         CHAPTERS =>
         {
           'SINGLE' => 

@@ -626,6 +626,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2014' =>
       {
         MEET => 'South American Team Championship',
+        ORDINAL => 5,
         CHAPTERS =>
         {
           'C0' => 
@@ -945,6 +946,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2014' =>
       {
         MEET => 'South American Team Championship',
+        ORDINAL => 5,
         CHAPTERS =>
         {
           'SINGLE' => 

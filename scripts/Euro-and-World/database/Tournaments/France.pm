@@ -62,6 +62,7 @@ my %MEETS_FRANCE =
       '2014' =>
       {
         YEAR => 2014,
+        SPONSOR =>' Jet Immo',
         DATE_START => '2014-07-18',
         DATE_END => '2014-07-26'
       },
@@ -131,6 +132,7 @@ my %TOURNAMENTS_FRANCE =
     {
       '2016' =>
       {
+        SPONSOR => 'Lavazza',
         CHAPTERS =>
         {
           'C0' => 

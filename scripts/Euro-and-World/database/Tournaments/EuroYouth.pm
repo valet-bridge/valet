@@ -195,6 +195,7 @@ my %MEETS_EURO_YOUTH =
         ORDINAL => 22,
         YEAR => 2009,
         CITY => 'Brasov',
+        LOCALITY => 'Poiana Brasov',
         COUNTRY => 'Romania',
         DATE_START => '2009-07-09',
         DATE_END => '2009-07-18'
@@ -205,7 +206,7 @@ my %MEETS_EURO_YOUTH =
         # http://db.eurobridge.org/Repository/competitions/11Albena/microSite/Results.htm
         ORDINAL => 23,
         YEAR => 2011,
-        CITY => 'Albena',
+        LOCALITY => 'Albena',
         COUNTRY => 'Bulgaria',
         DATE_START => '2011-07-14',
         DATE_END => '2011-07-23'

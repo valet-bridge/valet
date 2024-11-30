@@ -32,6 +32,7 @@ my %MEETS_THAILAND =
     {
       '2013' =>
       {
+        SPONSOR => 'Metropolitan Electricity Authority',
         YEAR => 2013,
         DATE_START => '2013-01-30',
         DATE_END => '2013-02-03'
@@ -66,6 +67,7 @@ my %MEETS_THAILAND =
     {
       '2014' =>
       {
+        ORDINAL => 43,
         YEAR => 2014,
         DATE_START => '2014-12-13',
         DATE_END => '2014-12-16'

@@ -1334,6 +1334,7 @@ my %TOURNAMENTS_BALTIC =
 
   'Tallinn Invitational Pairs' =>
   {
+    ORIGIN => 'Invitational',
     FORM => 'Pairs',
     GENDER => 'Open',
     AGE => 'Open',

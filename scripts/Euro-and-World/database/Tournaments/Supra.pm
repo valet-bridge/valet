@@ -1682,6 +1682,7 @@ my %TOURNAMENTS_SUPRA =
     {
       '2013' =>
       {
+        ORDINAL => 1,
         CHAPTERS =>
         {
           'C0' => 
@@ -1712,6 +1713,7 @@ my %TOURNAMENTS_SUPRA =
       },
       '2015' =>
       {
+        ORDINAL => 2,
         CHAPTERS =>
         {
           'C0' => 

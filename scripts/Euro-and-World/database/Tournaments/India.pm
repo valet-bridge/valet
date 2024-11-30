@@ -290,6 +290,7 @@ my %MEETS_INDIA =
       },
       '2016' =>
       {
+        ORDINAL => 54,
         YEAR => 2016,
         DATE_START => '2016-08-13', # More dates
         DATE_END => '2016-08-14'

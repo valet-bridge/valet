@@ -31,6 +31,7 @@ my %MEETS_CHINA =
     {
       '2006' =>
       {
+        ORDINAL => 3,
         YEAR => 2006,
         DATE_START => '2006-05-26',
         DATE_END => '2006-05-29'
@@ -47,6 +48,7 @@ my %MEETS_CHINA =
     {
       '2011A' =>
       {
+        ORDINAL => 1,
         CITY => 'Beijing',
         YEAR => 2011,
         DATE_START => '2011-02-19',
@@ -54,6 +56,7 @@ my %MEETS_CHINA =
       },
       '2011B' =>
       {
+        ORDINAL => 2,
         CITY => 'Beijing',
         YEAR => 2011,
         DATE_START => '2011-05-26',
@@ -61,6 +64,7 @@ my %MEETS_CHINA =
       },
       '2011C' =>
       {
+        ORDINAL => 3,
         CITY => 'Beijing',
         YEAR => 2011,
         DATE_START => '2011-09-06',
@@ -68,6 +72,7 @@ my %MEETS_CHINA =
       },
       '2012A' =>
       {
+        ORDINAL => 5,
         CITY => 'Beijing',
         YEAR => 2012,
         DATE_START => '2012-03-22',
@@ -75,6 +80,7 @@ my %MEETS_CHINA =
       },
       '2012B' =>
       {
+        ORDINAL => 6,
         CITY => 'Beijing',
         YEAR => 2012,
         DATE_START => '2012-06-18',
@@ -82,6 +88,7 @@ my %MEETS_CHINA =
       },
       '2012C' =>
       {
+        ORDINAL => 8,
         CITY => 'Beijing',
         YEAR => 2012,
         DATE_START => '2012-11-16',
@@ -89,42 +96,49 @@ my %MEETS_CHINA =
       },
       '2013A' =>
       {
+        ORDINAL => 9,
         YEAR => 2013,
         DATE_START => '2013-03-22',
         DATE_END => '2013-03-24'
       },
       '2013B' =>
       {
+        ORDINAL => 10,
         YEAR => 2013,
         DATE_START => '2013-05-31',
         DATE_END => '2013-06-02'
       },
       '2013C' =>
       {
+        ORDINAL => 11,
         YEAR => 2013,
         DATE_START => '2013-11-07',
         DATE_END => '2013-11-10'
       },
       '2014A' =>
       {
+        ORDINAL => 12,
         YEAR => 2014,
         DATE_START => '2014-04-07',
         DATE_END => '2014-04-07'
       },
       '2014B' =>
       {
+        ORDINAL => 13,
         YEAR => 2014,
         DATE_START => '2014-08-05',
         DATE_END => '2014-08-08'
       },
       '2015A' =>
       {
+        ORDINAL => 15,
         YEAR => 2015,
         DATE_START => '2015-04-25',
         DATE_END => '2015-04-28'
       },
       '2015B' =>
       {
+        ORDINAL => 17,
         YEAR => 2015,
         DATE_START => '2015-11-06',
         DATE_END => '2015-11-08'
@@ -277,6 +291,7 @@ my %TOURNAMENTS_CHINA =
     {
       '2008' =>
       {
+        CITY => 'Shenyang',
         CHAPTERS =>
         {
           'C0' => 
@@ -429,6 +444,7 @@ my %TOURNAMENTS_CHINA =
     {
       '2016' =>
       {
+        ORDINAL => 27,
         CHAPTERS =>
         {
           'C0' => 
@@ -579,6 +595,7 @@ my %TOURNAMENTS_CHINA =
       },
       '2011' =>
       {
+        SPONSOR => 'China Resources',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -655,8 +672,9 @@ my %TOURNAMENTS_CHINA =
 
     EDITIONS =>
     {
-      '2006' =>
+      '2006A' =>
       {
+        CITY => 'Xian',
         CHAPTERS =>
         {
           'C0' => 
@@ -690,9 +708,16 @@ my %TOURNAMENTS_CHINA =
             DATE_START => '2006-08-09',
             DATE_END => '2006-08-09'
           },
+        }
+      },
+      '2006B' =>
+      {
+        # TODO Something else?
+        CITY => 'Xiantao',
+        CHAPTERS =>
+        {
           'C4' => 
           {
-            # TODO Something else?
             YEAR => 2006,
             DATE_START => '2006-10-04',
             DATE_END => '2006-10-04'
@@ -893,6 +918,7 @@ my %TOURNAMENTS_CHINA =
     {
       '2008' =>
       {
+        CITY => 'Shenyang',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -992,6 +1018,9 @@ my %TOURNAMENTS_CHINA =
     {
       '2006' =>
       {
+        ORDINAL => 1,
+        CITY => 'Kunshan',
+        COUNTRY => 'China',
         CHAPTERS =>
         {
           'C0' => 
@@ -1030,6 +1059,9 @@ my %TOURNAMENTS_CHINA =
       },
       '2007' =>
       {
+        ORDINAL => 1,
+        CITY => 'Taicang',
+        COUNTRY => 'China',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1101,6 +1133,7 @@ my %TOURNAMENTS_CHINA =
     {
       '2006' =>
       {
+        CITY => 'Beijing',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1162,6 +1195,7 @@ my %TOURNAMENTS_CHINA =
   {
     %GLOBAL,
     ORIGIN => 'National',
+    CLUB => 'Guangdong Club',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1171,6 +1205,7 @@ my %TOURNAMENTS_CHINA =
     {
       '2011' =>
       {
+        ORDINAL => 3,
         CHAPTERS =>
         {
           'C0' => 
@@ -1349,6 +1384,7 @@ my %TOURNAMENTS_CHINA =
     {
       '2011' =>
       {
+        ORDINAL => 3,
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1364,6 +1400,7 @@ my %TOURNAMENTS_CHINA =
       },
       '2012' =>
       {
+        ORDINAL => 4,
         CHAPTERS =>
         {
           'C0' => 
@@ -1386,6 +1423,7 @@ my %TOURNAMENTS_CHINA =
       },
       '2013' =>
       {
+        ORDINAL => 5,
         CHAPTERS =>
         {
           'C0' => 
@@ -1747,6 +1785,7 @@ my %TOURNAMENTS_CHINA =
     {
       '2008' =>
       {
+        CITY => 'Beijing',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1802,6 +1841,7 @@ my %TOURNAMENTS_CHINA =
   {
     %GLOBAL,
     ORIGIN => 'National',
+    CITY => 'Beijing',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1811,6 +1851,7 @@ my %TOURNAMENTS_CHINA =
     {
       '2006' =>
       {
+        ORDINAL => 2,
         CHAPTERS =>
         {
           'C0' => 
@@ -1832,6 +1873,7 @@ my %TOURNAMENTS_CHINA =
       },
       '2007' =>
       {
+        ORDINAL => 3,
         CHAPTERS =>
         {
           'C0' => 
@@ -1870,6 +1912,7 @@ my %TOURNAMENTS_CHINA =
       },
       '2008' =>
       {
+        ORDINAL => 4,
         CHAPTERS =>
         {
           'C0' => 
@@ -1897,6 +1940,7 @@ my %TOURNAMENTS_CHINA =
       },
       '2009' =>
       {
+        ORDINAL => 5,
         CHAPTERS =>
         {
           'C0' => 
