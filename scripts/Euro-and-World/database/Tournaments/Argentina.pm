@@ -468,6 +468,8 @@ my %TOURNAMENTS_ARGENTINA =
     {
       '2006' =>
       {
+        FORM => 'Teams',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 

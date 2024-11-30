@@ -239,6 +239,7 @@ my %TOURNAMENTS_NORDIC =
       '2010' =>
       {
         MEET => 'Nordic Junior Championship',
+        ORDINAL => 1,
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -304,6 +305,8 @@ my %TOURNAMENTS_NORDIC =
       '2009' =>
       {
         MEET => 'Nordic Junior Championship',
+        FORM => 'Teams',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -334,6 +337,8 @@ my %TOURNAMENTS_NORDIC =
       '2013' =>
       {
         MEET => 'Nordic Junior Championship',
+        FORM => 'Teams',
+        SCORING => 'IMP',
         CHAPTERS =>
         {
           'C0' => 

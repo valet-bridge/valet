@@ -165,6 +165,7 @@ my %TOURNAMENTS_SERBIA =
       '2015' =>
       {
         # https://www.bridgeserbia.org/savez/turniri/Arhiva%20rezultata/10.%20sezona%202015%E2%88%9516/11.%20Kup%20Srbije%20Rade%20Antic/
+        ORDINAL => 10,
 
         CHAPTERS =>
         {

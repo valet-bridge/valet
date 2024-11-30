@@ -20,6 +20,7 @@ my %TOURNAMENTS_UK =
   'British Gold Cup' => 
   {
     # https://www.bridgewebs.com/cgi-bin/bwor/bw.cgi?club=bgb&pid=docs_Gold%20Cup%20Roll%20of%20Honour.htm
+    ORGANIZATION => 'BGB',
     ORIGIN => 'International',
     ZONE => 'Europe',
     FORM => 'Teams',
@@ -533,6 +534,9 @@ my %TOURNAMENTS_UK =
           'C2' => 
           {
             YEAR => 2005,
+            CITY => 'Ballymena',
+            COUNTRY => 'Northern Ireland',
+            WEEKEND => 2,
             DATE_START => '2005-03-14',
             DATE_END => '2005-03-17'
           },
@@ -726,6 +730,7 @@ my %TOURNAMENTS_UK =
       },
       '2015' =>
       {
+        CITY => 'Edinburgh',
         CHAPTERS =>
         {
           'C0' => 
@@ -943,6 +948,7 @@ my %TOURNAMENTS_UK =
     ORGANIZATION => 'EBU',
     ORIGIN => 'National',
     ZONE => 'Europe',
+    COUNTRY => 'England',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1028,6 +1034,7 @@ my %TOURNAMENTS_UK =
       },
       '2008A' =>
       {
+        CITY => 'Brighton',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1522,6 +1529,7 @@ my %TOURNAMENTS_UK =
     ORGANIZATION => 'EBU',
     ORIGIN => 'National',
     ZONE => 'Europe',
+    COUNTRY => 'England',
     GENDER => 'Women',
     AGE => 'Open',
 

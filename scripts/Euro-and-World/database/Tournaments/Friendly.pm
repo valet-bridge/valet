@@ -2168,6 +2168,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Friendly Match',
         MEET_TAG => '2010A',
+        CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2186,6 +2187,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Friendly Match',
         MEET_TAG => '2010B',
+        CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2520,6 +2522,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Practice Match',
         MEET_TAG => '2007E',
+        CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2611,6 +2614,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Practice Match',
         MEET_TAG => '2010B',
+        CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'Open',
 

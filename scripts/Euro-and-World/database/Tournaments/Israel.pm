@@ -1314,6 +1314,7 @@ my %TOURNAMENTS_ISRAEL =
     {
       '2005' =>
       {
+        ORDINAL => 17,
         CHAPTERS =>
         {
           'SINGLE' => 

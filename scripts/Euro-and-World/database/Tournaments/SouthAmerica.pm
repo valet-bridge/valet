@@ -154,6 +154,8 @@ my %MEETS_SOUTHAMERICA =
       },
       '2016' =>
       {
+        CITY => 'Medellin',
+        COUNTRY => 'Colombia',
         YEAR => 2016,
         DATE_START => '2016-05-25',
         DATE_END => '2016-06-04'

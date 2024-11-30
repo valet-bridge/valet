@@ -810,6 +810,7 @@ my %TOURNAMENTS_NETHERLANDS =
     {
       '2007' =>
       {
+        CLUB => "'t Onstein",
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -869,6 +870,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2000' =>
       {
+        ORDINAL => 3,
         SCORING => 'MP',
         CHAPTERS =>
         {
@@ -1567,6 +1569,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2012' =>
       {
+        ORDINAL => 13,
         CHAPTERS =>
         {
           'SINGLE' => 

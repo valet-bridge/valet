@@ -61,24 +61,28 @@ my %MEETS_TURKEY =
     {
       '2009' =>
       {
+        ORDINAL => 3,
         YEAR => 2009,
         DATE_START => '2009-10-24',
         DATE_END => '2009-10-24'
       },
       '2010' =>
       {
+        ORDINAL => 4,
         YEAR => 2010,
         DATE_START => '2010-10-23',
         DATE_END => '2010-10-24'
       },
       '2011' =>
       {
+        ORDINAL => 5,
         YEAR => 2011,
         DATE_START => '2011-11-19',
         DATE_END => '2011-11-19'
       },
       '2012' =>
       {
+        ORDINAL => 6,
         YEAR => 2012,
         DATE_START => '2012-11-03',
         DATE_END => '2012-11-03'
@@ -111,24 +115,28 @@ my %MEETS_TURKEY =
     {
       '2011' =>
       {
+        ORDINAL => 27,
         YEAR => 2011,
         DATE_START => '2011-09-23',
         DATE_END => '2011-09-25'
       },
       '2013' =>
       {
+        ORDINAL => 29,
         YEAR => 2013,
         DATE_START => '2013-09-20',
         DATE_END => '2013-09-20'
       },
       '2014' =>
       {
+        ORDINAL => 30,
         YEAR => 2014,
         DATE_START => '2014-09-12',
         DATE_END => '2014-09-12'
       },
       '2015' =>
       {
+        ORDINAL => 31,
         YEAR => 2015,
         DATE_START => '2015-09-11',
         DATE_END => '2015-09-11'
@@ -161,6 +169,7 @@ my %MEETS_TURKEY =
     {
       '2010' =>
       {
+        ORDINAL => 2,
         YEAR => 2010,
         DATE_START => '2010-09-24',
         DATE_END => '2010-09-24'
@@ -195,6 +204,7 @@ my %MEETS_TURKEY =
       },
       '2012' =>
       {
+        CITY => 'Mersin',
         YEAR => 2012,
         DATE_START => '2012-07-11',
         DATE_END => '2012-07-13'
@@ -422,6 +432,7 @@ my %TOURNAMENTS_TURKEY =
     {
       '2011' =>
       {
+        CITY => 'Istanbul',
         CHAPTERS =>
         {
           'C0' => 
@@ -493,6 +504,7 @@ my %TOURNAMENTS_TURKEY =
       },
       '2011' =>
       {
+        CITY => 'Istanbul',
         CHAPTERS =>
         {
           'C0' => 
@@ -800,6 +812,7 @@ my %TOURNAMENTS_TURKEY =
     {
       '2007' =>
       {
+        ORDINAL => 1,
         CHAPTERS =>
         {
           'C0' => 
@@ -813,6 +826,7 @@ my %TOURNAMENTS_TURKEY =
       },
       '2008' =>
       {
+        ORDINAL => 2,
         CHAPTERS =>
         {
           'C0' => 
@@ -1334,6 +1348,7 @@ my %TOURNAMENTS_TURKEY =
     {
       '2009' =>
       {
+        ORDINAL => 9,
         CHAPTERS =>
         {
           'C0' => 
@@ -1364,6 +1379,7 @@ my %TOURNAMENTS_TURKEY =
       },
       '2010' =>
       {
+        ORDINAL => 10,
         CHAPTERS =>
         {
           'C0' => 
@@ -1394,6 +1410,7 @@ my %TOURNAMENTS_TURKEY =
       },
       '2011' =>
       {
+        ORDINAL => 11,
         CHAPTERS =>
         {
           'C0' => 
@@ -1453,6 +1470,7 @@ my %TOURNAMENTS_TURKEY =
       },
       '2015' =>
       {
+        ORDINAL => 3,
         CHAPTERS =>
         {
           'C0' => 
@@ -1874,6 +1892,7 @@ my %TOURNAMENTS_TURKEY =
       {
         # http://clubs.vugraph.com/tbricfed/calendar.php?month=8&year=2012
         # http://clubs.vugraph.com/tbricfed/calendar.php?month=9&year=2012
+        CITY => 'Mardin',
         CHAPTERS =>
         {
           'C0' => 
@@ -2349,6 +2368,7 @@ my %TOURNAMENTS_TURKEY =
       '2011' =>
       {
         # http://clubs.vugraph.com/tbricfed/calendar.php?month=5&year=2011
+        CITY => 'Antalya',
         CHAPTERS =>
         {
           'C0' => 
@@ -2374,6 +2394,7 @@ my %TOURNAMENTS_TURKEY =
       '2012' =>
       {
         # http://clubs.vugraph.com/tbricfed/calendar.php?month=5&year=2012
+        CITY => 'Antalya',
         CHAPTERS =>
         {
           'C0' => 
@@ -3293,6 +3314,7 @@ my %TOURNAMENTS_TURKEY =
       '2015' =>
       {
         # http://clubs.vugraph.com/tbricfed/calendar.php?month=2&year=2015
+        PERSON => 'Özgecan Aslan',
         CHAPTERS =>
         {
           'SINGLE' => 

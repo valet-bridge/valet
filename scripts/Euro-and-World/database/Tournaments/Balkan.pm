@@ -22,18 +22,21 @@ my %MEETS_BALKAN =
     {
       '2006' =>
       {
+        ORDINAL => 1,
         YEAR => 2006,
         DATE_START => '2006-10-17',
         DATE_END => '2006-10-17'
       },
       '2007' =>
       {
+        ORDINAL => 2,
         YEAR => 2007,
         DATE_START => '2007-10-22',
         DATE_END => '2007-10-22'
       },
       '2008' =>
       {
+        ORDINAL => 3,
         YEAR => 2008,
         DATE_START => '2008-11-23',
         DATE_END => '2008-11-23'
@@ -60,18 +63,23 @@ my %MEETS_BALKAN =
       },
       '2011' =>
       {
+        ORDINAL => 6,
         YEAR => 2011,
         DATE_START => '2011-09-19',
         DATE_END => '2011-09-21'
       },
       '2013' =>
       {
+        ORDINAL => 7,
         YEAR => 2013,
         DATE_START => '2013-10-02',
         DATE_END => '2013-10-03'
       },
       '2015' =>
       {
+        ORDINAL => 8,
+        CITY => 'Stara Zagora',
+        COUNTRY => 'Bulgaria',
         YEAR => 2015,
         DATE_START => '2015-10-14',
         DATE_END => '2015-10-15'

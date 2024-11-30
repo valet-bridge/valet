@@ -251,6 +251,7 @@ my %MEETS_PORTUGAL =
     {
       '2015' =>
       {
+        ORDINAL => 1,
         YEAR => 2015,
         DATE_START => '2015-03-13',
         DATE_END => '2015-03-15'

@@ -578,6 +578,7 @@ my %MEETS_EUROADULT =
   {
     %GLOBAL,
     ORIGIN => 'International',
+    SPONSOR => 'Generali',
 
     EDITIONS => 
     {
@@ -5583,6 +5584,7 @@ my %TOURNAMENTS_EUROADULT =
       '2001' =>
       {
         MEET => 'Generali European Championships',
+        ORDINAL => 45,
         CHAPTERS =>
         {
           'C0' => 

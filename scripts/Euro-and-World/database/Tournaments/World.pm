@@ -361,6 +361,7 @@ my %MEETS_WORLD =
       {
         # http://db.worldbridge.org/Repository/tourn/Bermuda.00/default.htm
         YEAR => 2000,
+        SPONSOR => 'Orbis Investment Management',
         CITY => 'Southampton',
         COUNTRY => 'Bermuda',
         DATE_START => '2000-01-08',
@@ -406,6 +407,7 @@ my %MEETS_WORLD =
       '2009' =>
       {
         # http://db.worldbridge.org/Repository/tourn/SaoPaulo.09/SaoPaulo.htm
+        ORDINAL => 39,
         YEAR => 2009,
         CITY => 'São Paulo',
         COUNTRY => 'Brazil',
@@ -415,6 +417,7 @@ my %MEETS_WORLD =
       '2011' =>
       {
         # http://db.worldbridge.org/Repository/tourn/Veldhoven.11/Veldhoven.htm
+        ORDINAL => 40,
         YEAR => 2011,
         CITY => 'Veldhoven',
         COUNTRY => 'Netherlands',
@@ -424,6 +427,7 @@ my %MEETS_WORLD =
       '2013' =>
       {
         # http://db.worldbridge.org/Repository/tourn/Bali.13/microSite/results.htm
+        ORDINAL => 41,
         YEAR => 2013,
         CITY => 'Bali',
         COUNTRY => 'Indonesia',

@@ -37,6 +37,7 @@ my %TOURNAMENTS_CENTRALAMERICA =
     {
       '2007' =>
       {
+        ORDINAL => 24,
         CHAPTERS =>
         {
           'C0' => 

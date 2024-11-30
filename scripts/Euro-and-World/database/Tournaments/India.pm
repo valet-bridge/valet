@@ -612,6 +612,7 @@ my %MEETS_INDIA =
       },
       '2013' =>
       {
+        ORDINAL => 10,
         YEAR => 2013,
         DATE_START => '2013-01-10',
         DATE_END => '2013-01-13'
@@ -677,12 +678,14 @@ my %MEETS_INDIA =
       },
       '2012B' =>
       {
+        ORDINAL => 33,
         YEAR => 2012,
         DATE_START => '2012-10-27',
         DATE_END => '2012-10-28'
       },
       '2014' =>
       {
+        ORDINAL => 34,
         YEAR => 2014,
         DATE_START => '2014-01-18',
         DATE_END => '2014-01-20'
@@ -1460,6 +1463,7 @@ my %TOURNAMENTS_INDIA =
     {
       '2012' =>
       {
+        ORDINAL => 1,
         SCORING => 'IMP',
         CHAPTERS =>
         {
@@ -1475,6 +1479,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2013' =>
       {
+        ORDINAL => 2,
         SCORING => 'IMP',
         CHAPTERS =>
         {
@@ -2064,6 +2069,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2015' =>
       {
+        CITY => 'Nagpur',
         CHAPTERS =>
         {
           'C0' => 
@@ -2874,6 +2880,7 @@ my %TOURNAMENTS_INDIA =
       {
         # Not really sure.
         MEET => 'Indian South Zone Championship',
+        CITY => 'Hyderabad',
         CHAPTERS =>
         {
           'C0' => 
@@ -3009,6 +3016,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2013' =>
       {
+        CITY => 'Kolkata',
         CHAPTERS =>
         {
           'C0' => 
@@ -3230,6 +3238,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2016' =>
       {
+        SPONSOR => 'TTK HealthcarE',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -5306,6 +5315,7 @@ my %TOURNAMENTS_INDIA =
       },
       '2013' =>
       {
+        CITY => 'Pune',
         CHAPTERS =>
         {
           'C0' => 

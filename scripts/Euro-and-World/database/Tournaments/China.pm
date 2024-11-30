@@ -1133,7 +1133,7 @@ my %TOURNAMENTS_CHINA =
     {
       '2006' =>
       {
-        CITY => 'Beijing',
+        CITY => 'Shanghai',
         CHAPTERS =>
         {
           'SINGLE' => 

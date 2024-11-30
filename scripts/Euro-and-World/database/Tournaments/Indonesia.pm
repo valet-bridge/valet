@@ -63,6 +63,7 @@ my %MEETS_INDONESIA =
       '2011' =>
       {
         # http://kejurnas2011.org/hasil/kejurnas/ (Wayback Machine)
+        ORDINAL => 49,
         YEAR => 2011,
         DATE_START => '2011-06-05',
         DATE_END => '2011-06-12'
@@ -78,7 +79,7 @@ my %MEETS_INDONESIA =
       },
       '2013' =>
       {
-        # 
+        ORDINAL => 51,
         YEAR => 2013,
         DATE_START => '2013-05-17',
         DATE_END => '2013-05-25'
@@ -208,6 +209,7 @@ my %MEETS_INDONESIA =
       '2011' =>
       {
         # https://bridge.web.id/2011/prapon18/
+        ORDINAL => 18,
         CITY => 'Pekanbaru',
         YEAR => 2011,
         DATE_START => '2011-09-30',
@@ -467,6 +469,7 @@ my %TOURNAMENTS_INDONESIA =
       },
       '2009' =>
       {
+        ORDINAL => 3,
         CHAPTERS =>
         {
           'C0' => 
@@ -489,6 +492,7 @@ my %TOURNAMENTS_INDONESIA =
       },
       '2010' =>
       {
+        ORDINAL => 4,
         CHAPTERS =>
         {
           'C0' => 
@@ -650,6 +654,7 @@ my %TOURNAMENTS_INDONESIA =
       '2014' =>
       {
         # https://bridge.web.id/geologi/2014/
+        ORDINAL => 14,
         CITY => 'Bandung',
         CHAPTERS =>
         {
@@ -3427,6 +3432,7 @@ my %TOURNAMENTS_INDONESIA =
     {
       '2013' =>
       {
+        ORDINAL => 2,
         CHAPTERS =>
         {
           'C0' => 

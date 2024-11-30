@@ -2053,6 +2053,7 @@ my %TOURNAMENTS_POLAND =
       {
         MEET => 'Poznan Congress',
         MEET_TAG => '2010',
+        SPONSOR => 'Budimex',
         CHAPTERS =>
         {
           'C0' => 
@@ -2109,6 +2110,7 @@ my %TOURNAMENTS_POLAND =
         # https://wyniki.pzbs.pl/2010/_gpp/final/f.html
         MEET => 'Polish Grand Prix Pairs Legs',
         MEET_TAG => '2010B',
+        SPONSOR => 'Budimex',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2137,6 +2139,7 @@ my %TOURNAMENTS_POLAND =
       '2011B' =>
       {
         MEET => 'Boleslawiec Festival',
+        SPONSOR => 'Budimex',
         MEET_TAG => '2011',
         CHAPTERS =>
         {
@@ -3726,12 +3729,13 @@ my %TOURNAMENTS_POLAND =
     %GLOBAL,
     ORIGIN => 'National',
     FORM => 'Pairs',
+    SCORING => 'BAM',
     GENDER => 'Open',
     AGE => 'U18', # Unclear
 
     EDITIONS =>
     {
-      '2013a' =>
+      '2013' =>
       {
         # https://www.pzbs.pl/wyniki-mlodziezowe
         CHAPTERS =>
@@ -3739,7 +3743,6 @@ my %TOURNAMENTS_POLAND =
           'C0' => 
           {
             YEAR => 2013,
-            SCORING => 'BAM',
             major => 'SESSION',
             DATE_START => '2013-04-11',
             DATE_END => '2013-04-12'
@@ -3747,7 +3750,6 @@ my %TOURNAMENTS_POLAND =
           'C1' => 
           {
             YEAR => 2013,
-            SCORING => 'IMP',
             major => 'SESSION',
             DATE_START => '2013-04-13',
             DATE_END => '2013-04-14'
