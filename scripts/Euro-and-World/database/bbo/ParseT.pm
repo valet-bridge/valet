@@ -303,6 +303,8 @@ sub get_header_fields
   my $t_header = $self->{TOURNAMENT}{$tname};
   my $t_edition = $t_header->{EDITIONS}{$edition};
 
+  $t_header->{TOURNAMENT_NAME} = $tname;
+
   $self->cumulate_fields($t_header, 
     {}, { EDITIONS => 1 }, $errstr, $cumul);
   $self->cumulate_fields($t_edition, 

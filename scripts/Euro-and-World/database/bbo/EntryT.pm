@@ -7,6 +7,7 @@ use warnings;
 use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
+use Storable qw(dclone);
 
 use Time::Piece;
 
@@ -1185,6 +1186,54 @@ sub update_tournaments
   my $dindex = 1 + $#{$dchapter->{LIST}};
   $dchapter->{LIST}[$dindex] = EntryT->new();
   $dchapter->{LIST}[$dindex]->set($self);
+}
+
+
+sub push_datum
+{
+  my ($self, $date_list, $tname, $edition, $chapter,
+    $header_entry, $chapter_entry) = @_;
+  
+  push @$date_list,
+    { 
+      TNAME => $tname,
+      EDITION => $edition,
+      CHAPTER => $chapter,
+      HEADER_REF => $header_entry,
+      CHAPTER_REF => $chapter_entry,
+      BBOLIST => [dclone($self)]
+    };
+}
+
+
+sub update_tournaments_new
+{
+  my ($self, $data, $tname, $edition, $chapter,
+    $header_entry, $chapter_entry) = @_;
+
+  my $date_start = $chapter_entry->{DATE_START};
+  if (! exists $data->{$date_start})
+  {
+    $self->push_datum(\@{$data->{$date_start}},
+      $tname, $edition, $chapter, $header_entry, $chapter_entry);
+    return;
+  }
+
+  my $anchor = $data->{$date_start};
+  for my $i (0 .. $#$anchor)
+  {
+    my $datum = $anchor->[$i];
+    if ($datum->{TNAME} eq $tname &&
+        $datum->{EDITION} eq $edition &&
+        $datum->{CHAPTER} eq $chapter)
+    {
+      push @{$datum->{BBOLIST}}, dclone($self);
+      return;
+    }
+  }
+
+  $self->push_datum($anchor, 
+    $tname, $edition, $chapter, $header_entry, $chapter_entry);
 }
 
 

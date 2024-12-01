@@ -51,6 +51,7 @@ my $num_matches = 0;
 my %hist_matches;
 
 my %data;
+my %data_new;
 my (@times, $t0);
 
 my $entryT = EntryT->new();
@@ -147,6 +148,11 @@ while ($entryT->read($fh))
   $entryT->update_tournaments(\%data, $tname, $edition, $chapter,
     $header_entry, $chapter_entry);
   $times[8] += time() - $t0;
+
+  $t0 = time();
+  $entryT->update_tournaments_new(\%data_new, $tname, $edition, $chapter,
+    $header_entry2, $chapter_entry2);
+  $times[9] += time() - $t0;
 
   $num_matches++;
   $hist_matches{$tname}++;
