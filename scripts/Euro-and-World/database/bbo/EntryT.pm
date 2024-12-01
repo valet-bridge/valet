@@ -859,153 +859,7 @@ sub fix_some_fields
 }
 
 
-sub prune_field_using
-{
-  my ($self, $field, $value, $header) = @_;
-
-  return unless defined $self->{$field};
-  my $len = $#{$self->{$field}};
-  for my $i (0 .. $len)
-  {
-    if ($self->{$field}[$i] eq $value)
-    {
-      if ($len == 0)
-      {
-        delete $self->{$field};
-      }
-      else
-      {
-        splice(@{$self->{$field}}, $i, 1);
-      }
-      return;
-    }
-  }
-
-  if ($field eq 'SCORING')
-  {
-    die "Multiple scoring values" unless $len == 0;
-    my $read = $self->{$field}[0];
-    if (($read eq 'I' && $value eq 'IMP') ||
-        ($read eq 'P' && ($value eq 'MP' || $value eq 'Pairs')))
-    {
-      delete $self->{$field};
-      return;
-    }
-
-    if ($read eq 'B' && $value eq 'BAM')
-    {
-      delete $self->{$field};
-      return;
-    }
-
-    if (($read eq 'P' && $value eq 'IMP') ||
-        ($read eq 'I' && $value eq 'MP'))
-    {
-      if (exists $header->{TOURNAMENT_NAME})
-      {
-        if (FScorr::scoring_fixable($header->{TOURNAMENT_NAME}, 
-           $self->{BBONO}))
-        {
-          # Value is deemed correct.
-          delete $self->{$field};
-          return;
-        }
-      }
-
-      warn "$self->{BBONO}, $header->{TOURNAMENT_NAME}: Scoring";
-      return;
-    }
-  }
-  elsif ($field eq 'TEAM1_FORM' || $field eq 'TEAM2_FORM')
-  {
-    die "Multiple form values" unless $len == 0;
-    my $read = $self->{$field}[0];
-    if (($read eq 'Teams' || $read eq 'Pairs') && 
-        ($value eq 'Pairs' || $value eq 'Individual'))
-    {
-      if (exists $header->{TOURNAMENT_NAME})
-      {
-        if (FScorr::form_fixable( $header->{TOURNAMENT_NAME}, 
-          $self->{BBONO}))
-        {
-          # Value is deemed correct.
-          delete $self->{$field};
-          return;
-        }
-      }
-
-      warn "$self->{BBONO}, $header->{TOURNAMENT_NAME}, $field: " .
-        "Form $read, $value";
-      return;
-    }
-  }
-  elsif ($field eq 'TITLE_ORDINAL')
-  {
-    die "Multiple ordinal values" unless $len == 0;
-    my $read = $self->{$field}[0];
-    if ($value !~ /^(\d+)([a-z]+)$/)
-    {
-      die "Strange ordinal: $value";
-    }
-
-    my ($number, $ending) = ($1, $2);
-
-    if ($read ne $number)
-    {
-      die "Ordinal $read is not $number";
-    }
-
-    if ($ending ne 'st' && $ending ne 'nd' &&
-        $ending ne 'rd' && $ending ne 'th')
-    {
-      die "Ordinal ending: $value";
-    }
-
-    delete $self->{$field};
-    return;
-  }
-  elsif ($field eq 'TITLE_STAGE')
-  {
-    die "Multiple ordinal values" unless $len == 0;
-    my $read = $self->{$field}[0];
-
-    if ($read eq 'Final' || $read eq 'Playoff')
-    {
-      delete $self->{$field};
-      return;
-    }
-  }
-
-
-  warn "$self->{BBONO}, pruning field $field, value $value, but have " .
-    join '|', @{$self->{$field}};
-}
-
-
 sub match_letter_to_number
-{
-  my ($self) = @_;
-
-  for my $field (qw(TITLE_MATCH EVENT_MATCH EVENT_SESSION))
-  {
-    next unless defined $self->{$field};
-    my $len = $#{$self->{$field}};
-    next unless $len == 0;
-
-    my $value = uc($self->{$field}[0]);
-    if ($value =~ /^[A-E]$/)
-    {
-      $self->{$field}[0] = ord($value) - ord('A') + 1;
-    }
-    elsif ($value =~ /^\d+[A-D] [oO][fF] \d+$/)
-    {
-      $self->{$field}[0] =~ s/[A-D]//;
-    }
-  }
-}
-
-
-sub match_letter_to_number_new
 {
   my ($self) = @_;
 
@@ -1035,7 +889,7 @@ sub prune_using
 {
   my ($self, $header, $chapter) = @_;
 
-  $self->match_letter_to_number_new();
+  $self->match_letter_to_number();
 
   while (my ($ekey, $evalue) = each %{$self->{HEADER}})
   {
@@ -1106,62 +960,6 @@ sub prune_using
     {
       warn $self->bbono() . ": Chapter " . $chapter->{$ckey} .
         " vs. $cvalue";
-    }
-  }
-}
-
-
-sub find_tname_index
-{
-  # Not a class method.
-  # For a given DATE_START.
-  my ($data, $date_start, $header, $index) = @_;
-  return 0 unless exists $data->{$date_start};
-
-  my @hits;
-  for my $i (0 .. $#{$data->{$date_start}})
-  {
-    my $ok = 1;
-    my $datum = $data->{$date_start}[$i]{HEADER};
-    for my $field (keys %$header)
-    {
-      if (exists $datum->{$field} && 
-          $datum->{$field} ne $header->{$field})
-      {
-        $ok = 0;
-        last;
-      }
-    }
-    push @hits, $i if $ok;
-  }
-  
-  if ($#hits == 0)
-  {
-    $$index = $hits[0];
-    return 1;
-  }
-
-  return 0 if $#hits == -1;
-
-  warn "Confused $#hits";
-  return 0;
-}
-
-
-sub check_tname
-{
-  my ($self, $datum, $tname, $edition, $header_entry) = @_;
-
-  if ($datum->{TOURNAMENT_NAME} ne $tname)
-  {
-    warn "$self->{BBONO}: $datum->{TNAME} vs $tname";
-  }
-
-  for my $key (keys %$header_entry)
-  {
-    if (exists $datum->{$key} && $datum->{$key} ne $header_entry->{$key})
-    {
-      warn "$self->{BBONO}, $key: $datum->{$key} vs $header_entry->{$key}";
     }
   }
 }
