@@ -107,7 +107,6 @@ my %data_new;
 my (@times, $t0);
 
 my $entryT = EntryT->new();
-my $entry2T = EntryT->new();
 while ($entryT->read($fh))
 {
   if ($debug_flag && defined $debug_bbono)
@@ -121,15 +120,14 @@ while ($entryT->read($fh))
   }
 
   $t0 = time();
-  $entry2T->copy_from_TMP($entryT);
   $times[0] += time() - $t0;
 
   $t0 = time();
-  $entry2T->format();
+  $entryT->format();
   $times[1] += time() - $t0;
 
-  my $meet = $entryT->field('TITLE_MEET');
-  my $tname = $entryT->field('TITLE_TNAME');
+  my $meet = $entryT->header_field('MEET');
+  my $tname = $entryT->header_field('TNAME');
   print "Starting with:\nMeet $meet\nTname $tname\n\n" if $debug_flag;
 
   if ($meet eq '' && $tname eq '')
@@ -147,21 +145,23 @@ while ($entryT->read($fh))
     }
   }
 
-  $t0 = time();
-  $entryT->fix_some_fields();
-  $times[2] += time() - $t0;
-
   # This could set tname if it was previously unset!
   my ($edition, $chapter);
 
   $t0 = time();
   ($tname, $edition, $chapter) =
-    $parseT->get_edition_and_chapter($meet, $tname, $entry2T, $debug_flag);
-  $times[3] += time() - $t0;
+    $parseT->get_edition_and_chapter($meet, $tname, $entryT, $debug_flag);
+  $times[2] += time() - $t0;
 
   if ($tname eq '')
   {
     warn $entryT->bbono() . ": no TNAME found for meet $meet";
+    next;
+  }
+  if ($edition eq '')
+  {
+    warn $entryT->bbono() . ": no EDITION found for meet $meet";
+    next;
   }
 
   if ($debug_flag)
@@ -170,7 +170,6 @@ while ($entryT->read($fh))
     print $entryT->str_as_read();
     print "Tname $tname\nEdition $edition\nChapter $chapter\n";
   }
-  next if $edition eq '';
 
   if ($EXPLORE_TOURNAMENTS == 2)
   {
@@ -178,33 +177,19 @@ while ($entryT->read($fh))
     next;
   }
 
-  # $t0 = time();
-  # my ($header_entry, $chapter_entry) = 
-    # $parseT->set_header_entry($tname, $edition, $chapter);
-  # $times[4] += time() - $t0;
+  $t0 = time();
+  my ($header_entry, $chapter_entry) = 
+    $parseT->get_header_entry_new($tname, $edition, $chapter);
+  $times[3] += time() - $t0;
 
   $t0 = time();
-  my ($header_entry2, $chapter_entry2) = 
-    $parseT->get_header_entry_new($tname, $edition, $chapter);
+  $entryT->prune_using_new($header_entry, $chapter_entry);
   $times[4] += time() - $t0;
 
-  # $t0 = time();
-  # $entryT->prune_using($header_entry, $chapter_entry);
-  # $times[6] += time() - $t0;
-
   $t0 = time();
-  $entry2T->prune_using_new($header_entry2, $chapter_entry2);
+  $entryT->update_tournaments_new(\%data_new, $tname, $edition, $chapter,
+    $header_entry, $chapter_entry);
   $times[5] += time() - $t0;
-
-  # $t0 = time();
-  # $entryT->update_tournaments(\%data, $tname, $edition, $chapter,
-    # $header_entry, $chapter_entry);
-  # $times[8] += time() - $t0;
-
-  $t0 = time();
-  $entry2T->update_tournaments_new(\%data_new, $tname, $edition, $chapter,
-    $header_entry2, $chapter_entry2);
-  $times[6] += time() - $t0;
 
   $num_matches++;
   $hist_matches{$tname}++;
@@ -290,7 +275,7 @@ for my $date_start (sort keys %data_new)
 
       for my $bbo (@{$datum_t->{BBOLIST}})
       {
-        print $bbo->str_as_read_new();
+        print $bbo->str_as_read();
       }
     }
   }

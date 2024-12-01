@@ -1594,19 +1594,10 @@ sub number
 }
 
 
-sub field
+sub header_field
 {
   my ($self, $field) = @_;
-
-  if (exists $self->{$field})
-  {
-# TODO For now.  What is there is more than one?
-    return $self->{$field}[0];
-  }
-  else
-  {
-    return '';
-  }
+  return $self->{HEADER}{$field} // '';
 }
 
 
@@ -1631,51 +1622,7 @@ sub bbono
 }
 
 
-sub str_fields
-{
-  my ($self, $key) = @_;
-
-  my $s = '';
-  for my $v (@{$self->{$key}})
-  {
-    $s .= "$key $v\n";
-  }
-  return $s;
-}
-
-
 sub str_as_read
-{
-  my ($self) = @_;
-
-  my $s;
-  $s = "BBONO $self->{BBONO}\n";
-
-  for my $key (qw(YEAR DATE PHASE SECTION SESSION 
-    ROUND MATCH SEGMENT HALF TABLE))
-  {
-    $s .= $self->str_fields($key) if exists $self->{$key};
-  }
-
-  for my $order (qw(TITLE_ DATE_ EVENT_ TEAM1_ TEAM2_))
-  {
-    for my $key (sort keys %$self)
-    {
-      if ($key =~ /^$order/)
-      {
-        $s .= $self->str_fields($key);
-      }
-    }
-  }
-
-  $s .= $self->str_fields('BOARDS') if exists $self->{BOARDS};
-  $s .= $self->str_fields('SCORING') if exists $self->{SCORING};
-
-  return "$s\n";
-}
-
-
-sub str_as_read_new
 {
   my ($self) = @_;
 
@@ -1713,48 +1660,6 @@ sub str_as_read_new
   }
 
   return "$s\n";
-}
-
-
-sub str_by_ordered_fields
-{
-  my ($self, $fields, $check_fields) = @_;
-
-  my $s = '';
-
-  for my $key (@$fields)
-  {
-    # This form of an entry only has one value per key.
-    $s .= "$key $self->{$key}\n" if exists $self->{$key};
-  }
-
-  for my $key (keys %$self)
-  {
-    next if $key =~ /[a-z]/; # E.g., 'major' and 'minor'
-    warn "Unprinted field $key" unless exists $check_fields->{$key};
-if (! exists $check_fields->{$key})
-{
-print "WARNING: Unprinted $key\n";
-}
-  }
-
-  return "$s\n";
-}
-
-
-sub str_header
-{
-  my ($self) = @_;
-  return $self->str_by_ordered_fields(\@HEADER_FIELDS,
-    \%HEADER_HASH_CHECK);
-}
-
-
-sub str_chapter
-{
-  my ($self) = @_;
-  return $self->str_by_ordered_fields(\@CHAPTER_FIELDS,
-    \%CHAPTER_HASH_CHECK);
 }
 
 1;
