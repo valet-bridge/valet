@@ -179,7 +179,7 @@ while ($entryT->read($fh))
 
   $t0 = time();
   my ($header_entry, $chapter_entry) = 
-    $parseT->get_header_entry_new($tname, $edition, $chapter);
+    $parseT->get_header_entry($tname, $edition, $chapter);
   $times[3] += time() - $t0;
 
   $t0 = time();

@@ -23,17 +23,10 @@ my @MEET_FIELDS = qw(ORGANIZATION SPONSOR COUNTRY REGION CITY LOCALITY
 my %MEET_FIELDS_HASH;
 $MEET_FIELDS_HASH{$_} = 1 for @MEET_FIELDS;
 
-my @MEET_EDITION_FIELDS = qw(YEAR CITY);
-my @MEET_EDITION_PREFIXED_FIELDS = qw(ORDINAL DATE_START DATE_END);
-
 my @CHAPTER_FIELDS = qw(YEAR DATE_START DATE_END 
   STAGE MOVEMENT WEEKEND SCORING major minor);
 my %CHAPTER_HASH;
 $CHAPTER_HASH{$_} = 1 for @CHAPTER_FIELDS;
-
-my @TOURNAMENT_EDITION_PREFIXED_FIELDS = qw(ORDINAL CITY);
-my @TOURNAMENT_CHAPTER_FIELDS = qw(YEAR MOVEMENT STAGE major minor);
-my @TOURNAMENT_MEET_FIELDS = qw(MEET);
 
 my @TOURNAMENT_FIELDS = qw(CLUB ORGANIZATION SPONSOR LOCALITY COUNTRY 
   REGION CITY ORIGIN ZONE FORM SCORING MOVEMENT GENDER AGE);
@@ -649,134 +642,12 @@ sub print_times
 }
 
 
-sub transfer_field
-{
-  # Not a class method.
-  my ($fields, $field, $value) = @_;
-
-  return unless defined $value;
-
-  if (exists $fields->{$field} && $fields->{$field} ne $value)
-  {
-    die "Trying to reset from $fields->{$field} to $value";
-  }
-
-  $fields->{$field} = $value;
-}
-
-
-sub get_header_entry_new
+sub get_header_entry
 {
   my ($self, $tname, $edition, $chapter) = @_;
 
   return ($self->{T_HEADERS}{$tname}{$edition},
     $self->{TOURNAMENT}{$tname}{EDITIONS}{$edition}{CHAPTERS}{$chapter}); 
-}
-
-
-sub set_header_entry
-{
-  my ($self, $tname, $edition_str, $chapter_str) = @_;
-
-  my $entry = EntryT->new();
-  my %fields;
-
-  my $chapter_entry = EntryT->new();
-  my %chapter_fields;
-
-  # In principle we can override meeting-level data with other data,
-  # but I'd like to keep it sparse.
-
-  my $tournament = $self->{TOURNAMENT}{$tname};
-  my $t_edition = $tournament->{EDITIONS}{$edition_str};
-  my $t_chapter = $t_edition->{CHAPTERS}{$chapter_str};
-
-  transfer_field(\%fields, 'TOURNAMENT_NAME', $tname);
-
-  if (exists $t_edition->{MEET})
-  {
-    # TODO Edition string not required to be the same?
-    my $meet_str = $t_edition->{MEET};
-    my $meet = $self->{MEET}{$meet_str};
-    my $m_edition = $meet->{EDITIONS}{$edition_str};
-
-    for my $mfield (@MEET_FIELDS)
-    {
-      transfer_field(\%fields, $mfield, $meet->{$mfield});
-    }
-
-    for my $mfield (@MEET_EDITION_FIELDS)
-    {
-      transfer_field(\%fields, $mfield, $m_edition->{$mfield});
-    }
-
-    for my $mfield (@MEET_EDITION_PREFIXED_FIELDS)
-    {
-      transfer_field(\%fields, 'MEET_' . $mfield, $meet->{$mfield});
-    }
-  }
-
-  for my $tfield (@TOURNAMENT_FIELDS)
-  {
-    if (exists $tournament->{$tfield})
-    {
-      transfer_field(\%fields, $tfield, $tournament->{$tfield});
-    }
-  }
-
-  for my $tfield (@TOURNAMENT_EDITION_PREFIXED_FIELDS)
-  {
-    if (exists $t_edition->{$tfield})
-    {
-      transfer_field(\%fields, 'TOURNAMENT_' . $tfield, 
-        $t_edition->{$tfield});
-    }
-  }
-
-  $entry->set(\%fields);
-
-  for my $tfield (@TOURNAMENT_CHAPTER_FIELDS)
-  {
-    if (exists $t_chapter->{$tfield})
-    {
-      transfer_field(\%chapter_fields, $tfield, $t_chapter->{$tfield});
-    }
-  }
-
-  for my $mfield (@TOURNAMENT_MEET_FIELDS)
-  {
-    if (exists $t_edition->{$mfield})
-    {
-      transfer_field(\%chapter_fields, $mfield, $t_edition->{$mfield});
-    }
-  }
-
-  for my $dfield (qw(DATE_START DATE_END))
-  {
-    if (exists $t_chapter->{$dfield} &&
-        exists $fields{MEET_DATE_START} &&
-        exists $fields{MEET_DATE_END})
-    {
-      my $datecalc = DateCalc->new();
-      $datecalc->set_by_field($t_chapter->{$dfield});
-      if (! date_calc->inside($fields{MEET_DATE_START},
-        $fields{MEET_DATE_END}))
-      {
-        die "$t_chapter->{$dfield} is not inside " .
-          $fields{MEET_DATE_START} . " to " .
-          $fields{MEET_DATE_END};
-      }
-    }
-  }
-
-  transfer_field(\%chapter_fields, 'DATE_START', $t_chapter->{DATE_START});
-  transfer_field(\%chapter_fields, 'DATE_END', $t_chapter->{DATE_END});
-  transfer_field(\%chapter_fields, 'WEEKEND', $t_chapter->{WEEKEND});
-  transfer_field(\%chapter_fields, 'MOVEMENT', $t_chapter->{MOVEMENT});
-
-  $chapter_entry->set(\%chapter_fields);
-
-  return ($entry, $chapter_entry);
 }
 
 

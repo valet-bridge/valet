@@ -147,6 +147,7 @@ my @COUNTER_FIELDS_NEW = qw(
   PLACE
 );
 
+# TODO WEEKEND goes in CHAPTER?
 my %COUNTER_HASH_NEW = (
   TITLE_WEEKEND => 'WEEKEND',
   EVENT_WEEKEND => 'WEEKEND',
@@ -222,8 +223,8 @@ my @TEAM_FIELDS_NEW = qw(
   OTHER
 );
 
-my %TEAM_HASH_NEW;
-$TEAM_HASH_NEW{$_} = $_ for @TEAM_FIELDS_NEW;
+my %TEAM_HASH;
+$TEAM_HASH{$_} = $_ for @TEAM_FIELDS_NEW;
 
 my @MULTI_VALUED_TEAM_LIST = qw(
   CAPTAIN
@@ -283,32 +284,6 @@ my %SKIP_BBO = (
   COLOR => 1
 );
 
-# ------------------------------------------------
-
-my @PRUNE_HEADER_FIELDS = (
-  ['TOURNAMENT_ORDINAL', 'TITLE_ORDINAL'],
-  ['TOURNAMENT_NAME', 'TITLE_TNAME'],
-  ['YEAR', 'TITLE_YEAR'],
-  ['ZONE', 'TITLE_ZONE'],
-  ['ORIGIN', 'TITLE_ORIGIN'],
-  ['COUNTRY', 'TITLE_COUNTRY'],
-  ['CITY', 'TITLE_CITY'],
-  ['ORGANIZATION', 'TITLE_ORGANIZATION'],
-  ['FORM', 'TITLE_FORM'],
-  ['FORM', 'TEAM1_FORM'],
-  ['FORM', 'TEAM2_FORM'],
-  ['SCORING', 'TITLE_SCORING'],
-  ['SCORING', 'SCORING'],
-  ['AGE', 'TITLE_AGE'],
-  ['GENDER', 'TITLE_GENDER']
-);
-
-my @PRUNE_CHAPTER_FIELDS = (
-  ['YEAR', 'TITLE_YEAR'],
-  ['MOVEMENT', 'EVENT_MOVEMENT'],
-  ['STAGE', 'TITLE_STAGE'],
-  ['STAGE', 'EVENT_STAGE']
-);
 
 
 sub new
@@ -672,14 +647,14 @@ sub format
     if ($field =~ /^TEAM1_(.+)$/)
     {
       my $map = $1;
-      next if $self->format_group('TEAM1', $map, \%TEAM_HASH_NEW,
+      next if $self->format_group('TEAM1', $map, \%TEAM_HASH,
         $value);
     }
 
     if ($field =~ /^TEAM2_(.+)$/)
     {
       my $map = $1;
-      next if $self->format_group('TEAM2', $map, \%TEAM_HASH_NEW,
+      next if $self->format_group('TEAM2', $map, \%TEAM_HASH,
         $value);
     }
 
@@ -727,7 +702,7 @@ sub format
 
       my ($team, $map) = ($1, $2);
 
-      $self->format_multi_group($team, $map, \%TEAM_HASH_NEW,
+      $self->format_multi_group($team, $map, \%TEAM_HASH,
         $postproc{$field}[0]);
       delete $self->{$field};
       next;
