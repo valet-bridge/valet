@@ -50,7 +50,6 @@ my %LAST_NUM_DESTROY =
   DESTROY => 1,
   FORM => 1,
   TNAME => 1,
-  TWORD => 1,
   YEAR => 1
 );
 
@@ -85,7 +84,6 @@ my %NUM_VALID =
   FORM => 1,
   STAGE => 1,
   TNAME => 1,
-  TWORD => 1,
   DESTROY => 1
 );
 
@@ -163,7 +161,6 @@ my %SANDWICH_LEFT_ORDINAL =
 my %SANDWICH_RIGHT_ORDINAL =
 (
   TNAME => 1,
-  TWORD => 1,
   REGION => 1
 );
 

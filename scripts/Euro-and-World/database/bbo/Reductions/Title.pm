@@ -73,7 +73,7 @@ our @TITLE_REDUCTIONS =
     PATTERN =>
     [
       { CATEGORY => ['SINGLETON'], 
-        FIELD => ['TNAME', 'TWORD', 'MEET', 'ORIGIN', 'MOVEMENT',
+        FIELD => ['TNAME', 'MEET', 'ORIGIN', 'MOVEMENT',
           'PERSON', 'YEAR', 'DATE', 'WEEKDAY',
           'ZONE', 'NATIONALITY',
           'LOCALITY', 'GENDER', 'AGE',

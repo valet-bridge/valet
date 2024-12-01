@@ -8,8 +8,6 @@ Resolve WARNING in d
 
 Somehow unify all the field lists in Fields.pm
 
-Don't need Tword.pm anymore?
-
 ORDINAL, MEET_ORDINAL: Probably set the latter when we have
 MEET and not TNAME?
 
@@ -70,7 +68,7 @@ Things that get modified to fix errors:
 - Title/Study.pm, regex substitution of ranges of BBONO numbers
 - The .ref files
 
-Can look at weekdayss:
+Can look at weekdays:
 foreach f (..$/Tournaments/*pm)
 perl weekday.pl $f > ../Tournaments/DATED/`basename $f`
 end

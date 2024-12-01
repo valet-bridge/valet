@@ -180,8 +180,10 @@ my %MULTI_TYPOS =
   'Polish U25 Trials' => ['poish u25 trials'],
   'Polish Women Pairs' => [
     'women pairs championship of poland'],
-  'Polish Women Trials' => ['polish trials women',
-    'polish trials ladies', 'woman trial poland',
+  'Polish Women Trials' => [
+    'polish trials women',
+    'polish trials ladies', 
+    'woman trial poland',
     "polish bridge union women's trials"],
   'Pomerania Cup' => [
     'grand prix of greater poland voivodeship',

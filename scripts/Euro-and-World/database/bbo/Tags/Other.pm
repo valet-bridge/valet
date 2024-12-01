@@ -160,6 +160,7 @@ my @MULTI_WORDS =
 
   'Kacho Fugetsu',
   'KaiCheng RL',
+  'Kawanua Selection',
   'Ke Da',
   'Kent Romeos venner',
   "Kitty's",

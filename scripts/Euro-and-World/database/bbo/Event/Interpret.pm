@@ -323,57 +323,6 @@ sub post_process_tname
 }
 
 
-sub post_process_tword
-{
-  my ($chains, $chains_title, $bbono) = @_;
-
-  for my $chain (@$chains)
-  {
-    next if $chain->status() eq 'KILLED';
-    next unless $chain->last() == 0;
-
-    my $token = $chain->check_out(0);
-    my $field = $token->field();
-    next unless $field eq 'TWORD';
-
-    my $value = $token->value();
-    if ($value eq 'First Half')
-    {
-      $token->set_general('ITERATOR', 'HALF', 1);
-      $chain->complete('EXPLAINED');
-    }
-    elsif ($value eq 'Second Half')
-    {
-      $token->set_general('ITERATOR', 'HALF', 2);
-      $chain->complete('EXPLAINED');
-    }
-    elsif ($value eq 'Open Room')
-    {
-      $token->set_general('ITERATOR', 'ROOM', 'Open');
-      $chain->complete('EXPLAINED');
-    }
-    elsif ($value eq 'Closed Room')
-    {
-      $token->set_general('ITERATOR', 'ROOM', 'Closed');
-      $chain->complete('EXPLAINED');
-    }
-    elsif ($value eq 'Second Place')
-    {
-      $token->set_general('ITERATOR', 'PLACE', 2);
-      $chain->complete('EXPLAINED');
-    }
-    elsif ($value eq 'Championship' || $value eq 'Tournament')
-    {
-      $chain->complete('KILLED');
-    }
-    else
-    {
-      $chain->complete('EXPLAINED');
-    }
-  }
-}
-
-
 sub post_process_match
 {
   my ($chains, $teams) = @_;
@@ -1086,7 +1035,7 @@ sub post_process_single_active
   if ($form eq '')
   {
     my $scoring = $knowledge->get_field('SCORING', $bbono);
-    # TODO This is not clean.  Should go by TNAME or TWORD.
+    # TODO This is not clean.  Should go by TNAME.
     $form = ($scoring eq 'IMP' || $scoring eq 'I' ||
       $scoring eq 'BAM' || $scoring eq 'B' ?  
       'Teams' : 'Pairs');
@@ -1336,7 +1285,6 @@ sub interpret
   post_process_countries($chains, $teams);
   post_process_meet($chains, $chains_title, $bbono);
   post_process_tname($chains, $chains_title, $bbono);
-  post_process_tword($chains, $chains_title, $bbono);
   post_process_match($chains, $bbono);
   post_process_ambiguous_letters($chains);
 

@@ -50,7 +50,6 @@ my @TAG_ORDER = qw(
   SCORING
   FORM
   MOVEMENT
-  TWORD
   ORIGIN
   MEET
   TIME

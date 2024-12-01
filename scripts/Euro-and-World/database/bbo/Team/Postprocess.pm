@@ -60,11 +60,6 @@ sub post_process_single_numeral
       # Get rid of the stray A-C.
       $chain->complete_if_last_is(0, 'KILLED');
     }
-    elsif ($token0->field() eq 'TWORD' &&
-        $token0->value() eq 'Premier League')
-    {
-      $chain->complete_if_last_is(0, 'EXPLAINED');
-    }
   }
 }
 

@@ -23,7 +23,6 @@ my @TAG_ORDER = qw(
   MEET
   TNAME
   DESTROY
-  TWORD
   ORIGIN
   CLUB
 

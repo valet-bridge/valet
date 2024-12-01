@@ -44,7 +44,6 @@ use Tags::Sponsor;
 use Tags::Stage;
 use Tags::Time;
 use Tags::Tname;
-use Tags::Tword;
 use Tags::University;
 use Tags::Weekday;
 use Tags::Zone;
@@ -86,7 +85,6 @@ my %TAGS =
   STAGE => \&Tags::Stage::set_hashes,
   TIME => \&Tags::Time::set_hashes,
   TNAME => \&Tags::Tname::set_hashes,
-  TWORD => \&Tags::Tword::set_hashes,
   UNIVERSITY => \&Tags::University::set_hashes,
   WEEKDAY => \&Tags::Weekday::set_hashes,
   ZONE => \&Tags::Zone::set_hashes

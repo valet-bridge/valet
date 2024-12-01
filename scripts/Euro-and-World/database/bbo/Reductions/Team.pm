@@ -67,22 +67,6 @@ our @TEAM_REDUCTIONS =
     COMPLETION => 1
   },
 
-  # Kill the stand-alone word 'bridge' etc.
-  {
-    PATTERN =>
-    [
-      { CATEGORY => ['SINGLETON'], FIELD => ['TWORD'],
-        VALUE => ['Bridge', 'Challenge', 'Championship',
-          'Commercial', 'Sunday', 'Tournament', 'Trial'] }
-    ],
-    ANCHOR => 'EXACT',
-    KEEP_LAST => 0,
-    METHOD => \&Patterns::Chainify::process_kill,
-    SPLIT_FRONT => 0,
-    SPLIT_BACK => 0,
-    COMPLETION => 1
-  },
-
   # Kill 'Sunday'.
   {
     PATTERN =>
