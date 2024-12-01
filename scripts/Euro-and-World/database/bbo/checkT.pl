@@ -251,7 +251,11 @@ sub check_field_values
           next if ($field eq 'CITY' && $cumul{$field} eq 'Online');
           next if ($field eq 'AGE' && $cumul{$field} eq 'Open');
 
-          my $composite = $whole->get_multi($field, lc($cumul{$field}));
+          my $lookup_field = ($field eq 'TOURNAMENT_NAME' ?
+            'TNAME' : $field);
+
+          my $composite = $whole->get_multi($lookup_field, 
+            lc($cumul{$field}));
           if (defined $composite)
           {
             if ($cumul{$field} ne $composite)
@@ -263,7 +267,8 @@ sub check_field_values
             next;
           }
 
-          my $single = $whole->get_single($field, lc($cumul{$field}));
+          my $single = $whole->get_single($lookup_field, 
+            lc($cumul{$field}));
           if (! defined $single->{CATEGORY})
           {
             print "$tname, $tag, $ctag: ",

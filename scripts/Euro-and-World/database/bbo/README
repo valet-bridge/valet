@@ -4,8 +4,6 @@ That way there should be the right number of fields.
 Output in d of counters should be in order major, minor,
 others.
 
-perl checkT.pm is broken?
-
 Resolve WARNING in d
 
 Somehow unify all the field lists in Fields.pm

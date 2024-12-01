@@ -30,6 +30,7 @@ my @MULTI_WORDS =
   'White House International',
   'White House Juniors',
   'White House Top 12',
+  'White House Top 16',
 );
 
 my %MULTI_TYPOS =
@@ -69,7 +70,6 @@ my %MULTI_TYPOS =
     'witte huis topcircuit'],
   'White House International' => [
     'white house international teams',
-    'white house top 16',
     'white house tournament teams'],
   'White House Juniors' => [
     'qhite house juniors',
