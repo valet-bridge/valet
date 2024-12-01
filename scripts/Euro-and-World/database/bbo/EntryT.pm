@@ -1081,17 +1081,35 @@ sub find_tname_index
 {
   # Not a class method.
   # For a given DATE_START.
-  my ($data, $date_start, $tname, $index) = @_;
+  my ($data, $date_start, $header, $index) = @_;
   return 0 unless exists $data->{$date_start};
 
+  my @hits;
   for my $i (0 .. $#{$data->{$date_start}})
   {
-    if ($data->{$date_start}[$i]{HEADER}{TOURNAMENT_NAME} eq $tname)
+    my $ok = 1;
+    my $datum = $data->{$date_start}[$i]{HEADER};
+    for my $field (keys %$header)
     {
-      $$index = $i;
-      return 1;
+      if (exists $datum->{$field} && 
+          $datum->{$field} ne $header->{$field})
+      {
+        $ok = 0;
+        last;
+      }
     }
+    push @hits, $i if $ok;
   }
+  
+  if ($#hits == 0)
+  {
+    $$index = $hits[0];
+    return 1;
+  }
+
+  return 0 if $#hits == -1;
+
+  warn "Confused $#hits";
   return 0;
 }
 
@@ -1140,7 +1158,7 @@ sub update_tournaments
 
   my $tindex;
   if (find_tname_index($data, $chapter_entry->{DATE_START},
-    $tname, \$tindex))
+    $header_entry, \$tindex))
   {
     my $dhdr = $data->{$chapter_entry->{DATE_START}}[$tindex]{HEADER};
     $self->check_tname($dhdr, $tname, $edition, $header_entry);

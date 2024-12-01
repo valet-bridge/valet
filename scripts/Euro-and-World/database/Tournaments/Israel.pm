@@ -414,6 +414,7 @@ my %TOURNAMENTS_ISRAEL =
 
   'Israel Festival Open Pairs' =>
   {
+    ORIGIN => 'Invitational',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',

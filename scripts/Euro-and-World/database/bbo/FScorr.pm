@@ -8,7 +8,6 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
-# TODO Probably this whole number block is not needed?
 my %SCORING_CORRECTIONS = (
   # Says P in BBO file, but is IMPs
   # Or says I in BBO file, but is MPs
@@ -804,7 +803,8 @@ my %FORM_CORRECTIONS = (
     11410, 11413, 11414, 11420, 11421, 11423, 11424,
     20193, 20194],
   'Vilnius Open Pairs' => [
-    11340, 11341, 11342, 11343, 11344, 11345, 11346, 11347],
+    11340, 11341, 11342, 11343, 11344, 11345, 11346, 11347,
+    15275, 15276, 15277, 15278],
   'Welsh Invitational Pairs' => [11241],
   'Welsh Open Trials' => [
     20468, 20475, 20487, 20488, 20517, 20532, 20542, 20549,

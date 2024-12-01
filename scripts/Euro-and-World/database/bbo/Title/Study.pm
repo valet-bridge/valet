@@ -377,7 +377,7 @@ my @LOCAL_SUBS =
     CORR => 'Istanbul Winter Teams' },
   { START => 22117, END => 22135, TEXT => 'Maharashtra State Championship',
     CORR => 'Maharashtra State Pairs' },
-  { START => 22149, END => 22252, TEXT => 'Zurich',
+  { START => 22228, END => 22252, TEXT => 'Zurich',
     CORR => 'Zurich Open Teams' },
   { START => 22390, END => 22404, 
     TEXT => 'Teams Tournament - Cracow Poland',

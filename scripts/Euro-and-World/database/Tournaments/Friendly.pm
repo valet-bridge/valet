@@ -450,64 +450,70 @@ my %MEETS_FRIENDLY =
       '2007D' =>
       {
         YEAR => 2007,
+        DATE_START => '2007-04-15',
+        DATE_END => '2007-04-15'
+      },
+      '2007E' =>
+      {
+        YEAR => 2007,
         DATE_START => '2007-04-16',
         DATE_END => '2007-04-16'
       },
-      '2007E' =>
+      '2007F' =>
       {
         YEAR => 2007,
         DATE_START => '2007-05-05',
         DATE_END => '2007-05-06'
       },
-      '2007F' =>
+      '2007G' =>
       {
         YEAR => 2007,
         DATE_START => '2007-06-01',
         DATE_END => '2007-06-01'
       },
-      '2007G' =>
+      '2007H' =>
       {
         YEAR => 2007,
         DATE_START => '2007-06-03',
         DATE_END => '2007-06-03'
       },
-      '2007H' =>
+      '2007I' =>
       {
         YEAR => 2007,
         DATE_START => '2007-06-05',
         DATE_END => '2007-06-05'
       },
-      '2007I' =>
+      '2007J' =>
       {
         YEAR => 2007,
         DATE_START => '2007-06-07',
         DATE_END => '2007-06-07'
       },
-      '2007J' =>
+      '2007K' =>
       {
         YEAR => 2007,
         DATE_START => '2007-06-08',
         DATE_END => '2007-06-08'
       },
-      '2007K' =>
+      '2007L' =>
       {
         YEAR => 2007,
         DATE_START => '2007-06-09',
         DATE_END => '2007-06-09'
       },
-      '2007L' =>
+      '2007M' =>
       {
         YEAR => 2007,
         DATE_START => '2007-09-02',
         DATE_END => '2007-09-02'
       },
-      '2007M' =>
+      '2007N' =>
       {
         YEAR => 2007,
         DATE_START => '2007-11-05',
         DATE_END => '2007-11-05'
       },
-      '2007N' =>
+      '2007O' =>
       {
         YEAR => 2007,
         DATE_START => '2007-12-10',
@@ -1362,7 +1368,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007B' =>
       {
         MEET => 'Practice Match',
-        MEET_TAG => '2007F',
+        MEET_TAG => '2007G',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1380,7 +1386,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007C' =>
       {
         MEET => 'Practice Match',
-        MEET_TAG => '2007G',
+        MEET_TAG => '2007H',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -1398,7 +1404,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007D' =>
       {
         MEET => 'Practice Match',
-        MEET_TAG => '2007I',
+        MEET_TAG => '2007J',
         SPONSOR => 'Multicoms',
         GENDER => 'Open',
         AGE => 'Open',
@@ -1417,7 +1423,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007E' =>
       {
         MEET => 'Practice Match',
-        MEET_TAG => '2007J',
+        MEET_TAG => '2007K',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -1435,7 +1441,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007F' =>
       {
         MEET => 'Practice Match',
-        MEET_TAG => '2007K',
+        MEET_TAG => '2007L',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1604,7 +1610,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007' =>
       {
         MEET => 'Practice Match',
-        MEET_TAG => '2007M',
+        MEET_TAG => '2007N',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -2511,7 +2517,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007C' =>
       {
         MEET => 'Practice Match',
-        MEET_TAG => '2007D',
+        MEET_TAG => '2007E',
         CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'Open',
@@ -2530,7 +2536,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007D' =>
       {
         MEET => 'Practice Match',
-        MEET_TAG => '2007E',
+        MEET_TAG => '2007F',
         CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'Open',
@@ -2549,7 +2555,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007E' =>
       {
         MEET => 'Practice Match',
-        MEET_TAG => '2007H',
+        MEET_TAG => '2007I',
         CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'Open',
@@ -2568,7 +2574,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007F' =>
       {
         MEET => 'Practice Match',
-        MEET_TAG => '2007L',
+        MEET_TAG => '2007M',
         CLUB => "'t Onstein",
         GENDER => 'Open',
         AGE => 'U21',
@@ -2587,7 +2593,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2007G' =>
       {
         MEET => 'Practice Match',
-        MEET_TAG => '2007N',
+        MEET_TAG => '2007O',
         CLUB => "'t Onstein",
         GENDER => 'Women',
         AGE => 'Open',
@@ -3441,8 +3447,8 @@ my %TOURNAMENTS_FRIENDLY =
           {
             YEAR => 2007,
             major => 'SEGMENT',
-            DATE_START => '2007-04-16',
-            DATE_END => '2007-04-16'
+            DATE_START => '2007-04-15',
+            DATE_END => '2007-04-15'
           },
         }
       },
