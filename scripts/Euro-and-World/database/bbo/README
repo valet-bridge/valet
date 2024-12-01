@@ -6,8 +6,6 @@ others.
 
 perl checkT.pm is broken?
 
-Clean up code
-
 Resolve WARNING in d
 
 Somehow unify all the field lists in Fields.pm

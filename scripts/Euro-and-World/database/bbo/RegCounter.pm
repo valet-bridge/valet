@@ -50,51 +50,6 @@ sub register
 {
   my ($self, $entry) = @_;
 
-  for my $field (@FIELDS)
-  {
-    my $value = $entry->field($field);
-    next unless $value ne '';
-
-    my $bbono = $entry->bbono();
-
-    $self->{BBOHIST}{$bbono}{$field}++;
-    $self->{BBOCOUNT}{$bbono}++;
-    $self->{COUNTER}{$field}{COUNT}++;
-
-    # Basically just take the leading number.
-    # This is also what gets sorted on.
-
-    if ($value =~ /^\d+$/ || $value eq 'last')
-    {
-      $self->{COUNTER}{$field}{SIMPLE}++;
-    }
-    elsif ($value =~ /^\d+ of (\d+)$/ ||
-        $value =~ /^\d+-\d+ of (\d+)$/)
-    {
-      my $end = $1;
-      $self->{COUNTER}{$field}{OF}++;
-      $self->{COUNTER}{$field}{ENDS}{$end}++;
-    }
-    elsif ($value =~ /^\d+-\d+$/)
-    {
-      $self->{COUNTER}{$field}{SIMPLE}++;
-    }
-    elsif ($value =~ /^\d+[A-Da-d]$/)
-    {
-      $self->{COUNTER}{$field}{SIMPLE}++;
-    }
-    else
-    {
-      warn "$bbono: Haven't learned $value";
-    }
-  }
-}
-
-
-sub register_new
-{
-  my ($self, $entry) = @_;
-
   my $bbono = $entry->bbono();
   my $counters = $entry->get_counter_ref();
   while (my ($field, $value) = each %$counters)

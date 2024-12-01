@@ -260,7 +260,7 @@ for my $date_start (sort keys %data_new)
       my $reg_counter = RegCounter->new();
       for my $bbo (@{$datum_t->{BBOLIST}})
       {
-        $reg_counter->register_new($bbo);
+        $reg_counter->register($bbo);
       }
       $reg_counter->analyze();
       print $reg_counter->str_analysis() . "\n" if $VERBOSE;
