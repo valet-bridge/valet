@@ -14,7 +14,6 @@ our @EXPORT = qw(set_links);
 my %GLOBAL = (
   ORGANIZATION => 'SABF',
   COUNTRY => 'South Africa',
-  ORIGIN => 'National',
   ZONE => 'African Zone',
 );
 
@@ -23,6 +22,7 @@ my %MEETS_SOUTHAFRICA =
   'South African Congress' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
 
     EDITIONS =>
     {
@@ -71,6 +71,7 @@ my %TOURNAMENTS_SOUTHAFRICA =
   'South African Inter-Province Teams' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

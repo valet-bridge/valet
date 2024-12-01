@@ -40,7 +40,7 @@ my %MEETS_SOUTHAMERICA =
       '2005' =>
       {
         # ttp://www.confsudbridge.org/Torneos/Tor_0001.aspx
-        ORDINAL => 55,
+        MEET_ORDINAL => 55,
         CITY => 'Montevideo',
         COUNTRY => 'Uruguay',
         YEAR => 2005,
@@ -50,7 +50,7 @@ my %MEETS_SOUTHAMERICA =
       '2006' =>
       {
         # http://www.confsudbridge.org/Torneos/Tor_0002.aspx
-        ORDINAL => 56,
+        MEET_ORDINAL => 56,
         CITY => 'Cartagena',
         COUNTRY => 'Colombia',
         YEAR => 2006,
@@ -60,7 +60,7 @@ my %MEETS_SOUTHAMERICA =
       '2007' =>
       {
         # http://www.confsudbridge.org/Torneos/Tor_0004.aspx
-        ORDINAL => 57,
+        MEET_ORDINAL => 57,
         CITY => 'Quito',
         COUNTRY => 'Ecuador',
         YEAR => 2007,
@@ -71,7 +71,7 @@ my %MEETS_SOUTHAMERICA =
       {
         # http://www.confsudbridge.org/torneos/sudamericano2008.aspx
         # 58th South American
-        ORDINAL => 58,
+        MEET_ORDINAL => 58,
         CITY => 'Lima',
         COUNTRY => 'Peru',
         YEAR => 2008,
@@ -81,7 +81,7 @@ my %MEETS_SOUTHAMERICA =
       '2009' =>
       {
         # http://www.confsudbridge.org/torneos/sudamericano2009.aspx
-        ORDINAL => 59,
+        MEET_ORDINAL => 59,
         CITY => 'Santiago',
         COUNTRY => 'Chile',
         YEAR => 2009,
@@ -92,7 +92,7 @@ my %MEETS_SOUTHAMERICA =
       {
         # http://www.confsudbridge.org/torneos/mardelplata2010.htm
         # 3rd Transnational
-        ORDINAL => 60,
+        MEET_ORDINAL => 60,
         CITY => 'Mar Del Plata',
         COUNTRY => 'Argentina',
         YEAR => 2010,
@@ -103,7 +103,7 @@ my %MEETS_SOUTHAMERICA =
       {
         # http://www.confsudbridge.org/torneos/sudampar2011.aspx
         # 61st South American
-        ORDINAL => 61,
+        MEET_ORDINAL => 61,
         CITY => 'Asuncion',
         COUNTRY => 'Paraguay',
         YEAR => 2011,
@@ -114,7 +114,7 @@ my %MEETS_SOUTHAMERICA =
       {
         # http://www.confsudbridge.org/Torneos/montevideo2012.htm
         # 4th Transnational
-        ORDINAL => 62,
+        MEET_ORDINAL => 62,
         CITY => 'Montevideo',
         COUNTRY => 'Uruguay',
         YEAR => 2012,
@@ -125,7 +125,7 @@ my %MEETS_SOUTHAMERICA =
       {
         # http://angra2013.csbnews.org/
         # http://www.confsudbridge.org/Torneos/angra2013.htm
-        ORDINAL => 63,
+        MEET_ORDINAL => 63,
         CITY => 'Angra dos Reis',
         COUNTRY => 'Brazil',
         YEAR => 2013,
@@ -145,7 +145,7 @@ my %MEETS_SOUTHAMERICA =
       '2015' =>
       {
         # http://buenosaires2015.csbnews.org/
-        ORDINAL => 65,
+        MEET_ORDINAL => 65,
         CITY => 'Buenos Aires',
         COUNTRY => 'Argentina',
         YEAR => 2015,

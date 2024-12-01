@@ -34,7 +34,7 @@ my %MEETS_GREECE =
     {
       '2007' =>
       {
-        ORDINAL =>  2,
+        MEET_ORDINAL =>  2,
         YEAR => 2007,
         REGION => 'Crete',
         DATE_START => '2007-09-02',
@@ -42,7 +42,7 @@ my %MEETS_GREECE =
       },
       '2008' =>
       {
-        ORDINAL => 3,
+        MEET_ORDINAL => 3,
         SPONSOR => 'Fantoni Vacations',
         YEAR => 2008,
         DATE_START => '2008-09-10',
@@ -50,7 +50,7 @@ my %MEETS_GREECE =
       },
       '2009' =>
       {
-        ORDINAL => 4,
+        MEET_ORDINAL => 4,
         SPONSOR => 'Fantoni Vacations',
         YEAR => 2009,
         REGION => 'Rhodes',
@@ -59,7 +59,7 @@ my %MEETS_GREECE =
       },
       '2010' =>
       {
-        ORDINAL => 5,
+        MEET_ORDINAL => 5,
         SPONSOR => 'Fantoni Vacations',
         YEAR => 2010,
         DATE_START => '2010-08-29',
@@ -67,7 +67,7 @@ my %MEETS_GREECE =
       },
       '2011' =>
       {
-        ORDINAL => 6,
+        MEET_ORDINAL => 6,
         SPONSOR => 'Fantoni Vacations',
         YEAR => 2011,
         DATE_START => '2011-08-28',
@@ -75,35 +75,35 @@ my %MEETS_GREECE =
       },
       '2012' =>
       {
-        ORDINAL => 7,
+        MEET_ORDINAL => 7,
         YEAR => 2012,
         DATE_START => '2012-08-30',
         DATE_END => '2012-08-31'
       },
       '2013' =>
       {
-        ORDINAL => 8,
+        MEET_ORDINAL => 8,
         YEAR => 2013,
         DATE_START => '2013-09-06',
         DATE_END => '2013-09-07'
       },
       '2014' =>
       {
-        ORDINAL => 9,
+        MEET_ORDINAL => 9,
         YEAR => 2014,
         DATE_START => '2014-08-29',
         DATE_END => '2014-08-30'
       },
       '2015' =>
       {
-        ORDINAL => 10,
+        MEET_ORDINAL => 10,
         YEAR => 2015,
         DATE_START => '2015-09-09',
         DATE_END => '2015-09-10'
       },
       '2016' =>
       {
-        ORDINAL => 11,
+        MEET_ORDINAL => 11,
         YEAR => 2016,
         DATE_START => '2016-08-25',
         DATE_END => '2016-08-26'

@@ -26,7 +26,7 @@ my %MEETS_USA =
     {
       '1996A' =>
       {
-        ORDINAL => 39,
+        MEET_ORDINAL => 39,
         YEAR => 1996,
         CITY => 'Philadelphia',
         DATE_START => '1996-03-01',
@@ -34,7 +34,7 @@ my %MEETS_USA =
       },
       '1996B' =>
       {
-        ORDINAL => 68,
+        MEET_ORDINAL => 68,
         YEAR => 1996,
         CITY => 'Miami Beach',
         DATE_START => '1996-08-01',
@@ -42,7 +42,7 @@ my %MEETS_USA =
       },
       '1996C' =>
       {
-        ORDINAL => 70,
+        MEET_ORDINAL => 70,
         YEAR => 1996,
         CITY => 'San Francisco',
         DATE_START => '1996-11-21',
@@ -50,7 +50,7 @@ my %MEETS_USA =
       },
       '1997A' =>
       {
-        ORDINAL => 40,
+        MEET_ORDINAL => 40,
         YEAR => 1997,
         CITY => 'Dallas',
         DATE_START => '1997-03-06',
@@ -58,7 +58,7 @@ my %MEETS_USA =
       },
       '1997B' =>
       {
-        ORDINAL => 69,
+        MEET_ORDINAL => 69,
         YEAR => 1997,
         CITY => 'Albuquerque',
         DATE_START => '1997-07-24',
@@ -66,7 +66,7 @@ my %MEETS_USA =
       },
       '1997C' =>
       {
-        ORDINAL => 71,
+        MEET_ORDINAL => 71,
         YEAR => 1997,
         CITY => 'St. Louis',
         DATE_START => '1997-11-20',
@@ -74,7 +74,7 @@ my %MEETS_USA =
       },
       '1998A' =>
       {
-        ORDINAL => 41,
+        MEET_ORDINAL => 41,
         YEAR => 1998,
         CITY => 'Reno',
         DATE_START => '1998-03-19',
@@ -82,7 +82,7 @@ my %MEETS_USA =
       },
       '1998B' =>
       {
-        ORDINAL => 70,
+        MEET_ORDINAL => 70,
         YEAR => 1998,
         CITY => 'Chicago',
         DATE_START => '1998-07-23',
@@ -90,7 +90,7 @@ my %MEETS_USA =
       },
       '1998C' =>
       {
-        ORDINAL => 72,
+        MEET_ORDINAL => 72,
         YEAR => 1998,
         CITY => 'Orlando',
         DATE_START => '1998-11-19',
@@ -98,7 +98,7 @@ my %MEETS_USA =
       },
       '1999A' =>
       {
-        ORDINAL => 42,
+        MEET_ORDINAL => 42,
         YEAR => 1999,
         CITY => 'Vancouver',
         DATE_START => '1999-03-18',
@@ -106,7 +106,7 @@ my %MEETS_USA =
       },
       '1999B' =>
       {
-        ORDINAL => 71,
+        MEET_ORDINAL => 71,
         YEAR => 1999,
         CITY => 'San Antonio',
         DATE_START => '1999-07-21',
@@ -114,7 +114,7 @@ my %MEETS_USA =
       },
       '1999C' =>
       {
-        ORDINAL => 73,
+        MEET_ORDINAL => 73,
         YEAR => 1999,
         CITY => 'Boston',
         DATE_START => '1999-11-18',
@@ -122,7 +122,7 @@ my %MEETS_USA =
       },
       '2000A' =>
       {
-        ORDINAL => 43,
+        MEET_ORDINAL => 43,
         YEAR => 2000,
         CITY => 'Cincinnati',
         DATE_START => '2000-03-19',
@@ -130,7 +130,7 @@ my %MEETS_USA =
       },
       '2000B' =>
       {
-        ORDINAL => 72,
+        MEET_ORDINAL => 72,
         YEAR => 2000,
         CITY => 'Anaheim',
         DATE_START => '2000-08-10',
@@ -138,7 +138,7 @@ my %MEETS_USA =
       },
       '2000C' =>
       {
-        ORDINAL => 74,
+        MEET_ORDINAL => 74,
         YEAR => 2000,
         CITY => 'Birmingham',
         DATE_START => '2000-11-16',
@@ -146,7 +146,7 @@ my %MEETS_USA =
       },
       '2001A' =>
       {
-        ORDINAL => 44,
+        MEET_ORDINAL => 44,
         YEAR => 2001,
         CITY => 'Kansas City',
         DATE_START => '2001-03-15',
@@ -154,7 +154,7 @@ my %MEETS_USA =
       },
       '2001B' =>
       {
-        ORDINAL => 73,
+        MEET_ORDINAL => 73,
         YEAR => 2001,
         CITY => 'Toronto',
         DATE_START => '2001-07-19',
@@ -162,7 +162,7 @@ my %MEETS_USA =
       },
       '2001C' =>
       {
-        ORDINAL => 75,
+        MEET_ORDINAL => 75,
         YEAR => 2001,
         CITY => 'Las Vegas',
         DATE_START => '2001-11-18',
@@ -170,7 +170,7 @@ my %MEETS_USA =
       },
       '2002A' =>
       {
-        ORDINAL => 45,
+        MEET_ORDINAL => 45,
         YEAR => 2002,
         CITY => 'Houston',
         DATE_START => '2002-03-07',
@@ -178,7 +178,7 @@ my %MEETS_USA =
       },
       '2002B' =>
       {
-        ORDINAL => 74,
+        MEET_ORDINAL => 74,
         YEAR => 2002,
         CITY => 'Washington, DC',
         DATE_START => '2002-07-18',
@@ -186,7 +186,7 @@ my %MEETS_USA =
       },
       '2002C' =>
       {
-        ORDINAL => 76,
+        MEET_ORDINAL => 76,
         YEAR => 2002,
         CITY => 'Phoenix',
         DATE_START => '2002-11-28',
@@ -194,7 +194,7 @@ my %MEETS_USA =
       },
       '2003A' =>
       {
-        ORDINAL => 46,
+        MEET_ORDINAL => 46,
         YEAR => 2003,
         CITY => 'Philadelphia',
         DATE_START => '2003-03-06',
@@ -202,7 +202,7 @@ my %MEETS_USA =
       },
       '2003B' =>
       {
-        ORDINAL => 75,
+        MEET_ORDINAL => 75,
         YEAR => 2003,
         CITY => 'Long Beach',
         DATE_START => '2003-07-17',
@@ -210,7 +210,7 @@ my %MEETS_USA =
       },
       '2003C' =>
       {
-        ORDINAL => 77,
+        MEET_ORDINAL => 77,
         YEAR => 2003,
         CITY => 'New Orleans',
         DATE_START => '2003-11-20',
@@ -218,7 +218,7 @@ my %MEETS_USA =
       },
       '2004A' =>
       {
-        ORDINAL => 47,
+        MEET_ORDINAL => 47,
         YEAR => 2004,
         CITY => 'Reno',
         DATE_START => '2004-03-18',
@@ -226,7 +226,7 @@ my %MEETS_USA =
       },
       '2004B' =>
       {
-        ORDINAL => 76,
+        MEET_ORDINAL => 76,
         YEAR => 2004,
         CITY => 'New York City',
         DATE_START => '2004-07-21',
@@ -235,7 +235,7 @@ my %MEETS_USA =
       '2004C' =>
       {
         # Senior Teams
-        ORDINAL => 78,
+        MEET_ORDINAL => 78,
         YEAR => 2004,
         CITY => 'Orlando',
         DATE_START => '2004-11-19',
@@ -243,7 +243,7 @@ my %MEETS_USA =
       },
       '2005A' =>
       {
-        ORDINAL => 48,
+        MEET_ORDINAL => 48,
         YEAR => 2005,
         CITY => 'Pittsburgh',
         DATE_START => '2005-03-10',
@@ -251,7 +251,7 @@ my %MEETS_USA =
       },
       '2005B' =>
       {
-        ORDINAL => 77,
+        MEET_ORDINAL => 77,
         YEAR => 2005,
         CITY => 'Atlanta',
         DATE_START => '2005-07-21',
@@ -259,7 +259,7 @@ my %MEETS_USA =
       },
       '2005C' =>
       {
-        ORDINAL => 79,
+        MEET_ORDINAL => 79,
         YEAR => 2005,
         CITY => 'Denver',
         DATE_START => '2005-11-21',
@@ -267,7 +267,7 @@ my %MEETS_USA =
       },
       '2006A' =>
       {
-        ORDINAL => 49,
+        MEET_ORDINAL => 49,
         YEAR => 2006,
         CITY => 'Dallas',
         DATE_START => '2006-03-30',
@@ -275,7 +275,7 @@ my %MEETS_USA =
       },
       '2006B' =>
       {
-        ORDINAL => 78,
+        MEET_ORDINAL => 78,
         YEAR => 2006,
         CITY => 'Chicago',
         DATE_START => '2006-07-13',
@@ -284,7 +284,7 @@ my %MEETS_USA =
       '2006C' =>
       {
         # Senior Teams
-        ORDINAL => 79, # Should be 80?
+        MEET_ORDINAL => 79, # Should be 80?
         YEAR => 2006, 
         CITY => 'Honolulu',
         DATE_START => '2006-11-16',
@@ -292,7 +292,7 @@ my %MEETS_USA =
       },
       '2007A' =>
       {
-        ORDINAL => 50,
+        MEET_ORDINAL => 50,
         YEAR => 2007,
         CITY => 'St. Louis',
         DATE_START => '2007-03-08',
@@ -300,7 +300,7 @@ my %MEETS_USA =
       },
       '2007B' =>
       {
-        ORDINAL => 79,
+        MEET_ORDINAL => 79,
         YEAR => 2007,
         CITY => 'Nashville',
         DATE_START => '2007-07-19',
@@ -309,7 +309,7 @@ my %MEETS_USA =
       '2007C' =>
       {
         # Senior Teams
-        ORDINAL => 81,
+        MEET_ORDINAL => 81,
         YEAR => 2007,
         CITY => 'San Francisco',
         DATE_START => '2007-11-22',
@@ -317,7 +317,7 @@ my %MEETS_USA =
       },
       '2008A' =>
       {
-        ORDINAL => 51,
+        MEET_ORDINAL => 51,
         YEAR => 2008,
         CITY => 'Detroit',
         DATE_START => '2008-03-06',
@@ -325,7 +325,7 @@ my %MEETS_USA =
       },
       '2008B' =>
       {
-        ORDINAL => 80,
+        MEET_ORDINAL => 80,
         YEAR => 2008,
         CITY => 'Las Vegas',
         DATE_START => '2008-07-16',
@@ -334,7 +334,7 @@ my %MEETS_USA =
       '2008C' =>
       {
         # Senior Teams
-        ORDINAL => 81,
+        MEET_ORDINAL => 81,
         YEAR => 2008,
         CITY => 'Boston',
         DATE_START => '2008-11-20',
@@ -342,7 +342,7 @@ my %MEETS_USA =
       },
       '2009A' =>
       {
-        ORDINAL => 52,
+        MEET_ORDINAL => 52,
         YEAR => 2009,
         CITY => 'Houston',
         DATE_START => '2009-03-12',
@@ -350,7 +350,7 @@ my %MEETS_USA =
       },
       '2009B' =>
       {
-        ORDINAL => 81,
+        MEET_ORDINAL => 81,
         YEAR => 2009,
         CITY => 'Washington DC',
         DATE_START => '2009-07-22',
@@ -359,7 +359,7 @@ my %MEETS_USA =
       '2009C' =>
       {
         # Senior Teams
-        ORDINAL => 83,
+        MEET_ORDINAL => 83,
         YEAR => 2009,
         CITY => 'San Diego',
         DATE_START => '2009-11-26',
@@ -367,7 +367,7 @@ my %MEETS_USA =
       },
       '2010A' =>
       {
-        ORDINAL => 53,
+        MEET_ORDINAL => 53,
         YEAR => 2010,
         CITY => 'Reno',
         DATE_START => '2010-03-11',
@@ -375,7 +375,7 @@ my %MEETS_USA =
       },
       '2010B' =>
       {
-        ORDINAL => 82,
+        MEET_ORDINAL => 82,
         YEAR => 2010,
         CITY => 'New Orleans',
         DATE_START => '2010-07-22',
@@ -384,7 +384,7 @@ my %MEETS_USA =
       '2010C' =>
       {
         # Senior Teams
-        ORDINAL => 83,
+        MEET_ORDINAL => 83,
         YEAR => 2010,
         CITY => 'Orlando',
         DATE_START => '2010-11-25',
@@ -392,7 +392,7 @@ my %MEETS_USA =
       },
       '2011A' =>
       {
-        ORDINAL => 54,
+        MEET_ORDINAL => 54,
         YEAR => 2011,
         CITY => 'Louisville',
         DATE_START => '2011-03-10',
@@ -400,7 +400,7 @@ my %MEETS_USA =
       },
       '2011B' =>
       {
-        ORDINAL => 83,
+        MEET_ORDINAL => 83,
         YEAR => 2011,
         CITY => 'Toronto',
         DATE_START => '2011-07-21',
@@ -409,7 +409,7 @@ my %MEETS_USA =
       '2011C' =>
       {
         # Senior Teams
-        ORDINAL => 85,
+        MEET_ORDINAL => 85,
         YEAR => 2011,
         CITY => 'Seattle',
         DATE_START => '2011-11-24',
@@ -417,7 +417,7 @@ my %MEETS_USA =
       },
       '2012A' =>
       {
-        ORDINAL => 55,
+        MEET_ORDINAL => 55,
         YEAR => 2012,
         CITY => 'Memphis',
         DATE_START => '2012-03-15',
@@ -425,7 +425,7 @@ my %MEETS_USA =
       },
       '2012B' =>
       {
-        ORDINAL => 84,
+        MEET_ORDINAL => 84,
         YEAR => 2012,
         CITY => 'Philadelphia',
         DATE_START => '2012-07-12',
@@ -434,7 +434,7 @@ my %MEETS_USA =
       '2012C' =>
       {
         # Senior Teams
-        ORDINAL => 85,
+        MEET_ORDINAL => 85,
         YEAR => 2012,
         CITY => 'New Orleans',
         DATE_START => '2012-11-22',
@@ -442,7 +442,7 @@ my %MEETS_USA =
       },
       '2013A' =>
       {
-        ORDINAL => 56,
+        MEET_ORDINAL => 56,
         YEAR => 2013,
         CITY => 'St. Louis',
         DATE_START => '2013-03-14',
@@ -450,7 +450,7 @@ my %MEETS_USA =
       },
       '2013B' =>
       {
-        ORDINAL => 85,
+        MEET_ORDINAL => 85,
         YEAR => 2013,
         CITY => 'Atlanta',
         DATE_START => '2013-08-01',
@@ -459,7 +459,7 @@ my %MEETS_USA =
       '2013C' =>
       {
         # Senior Teams
-        ORDINAL => 87,
+        MEET_ORDINAL => 87,
         YEAR => 2013,
         CITY => 'Phoenix',
         DATE_START => '2013-11-28',
@@ -467,7 +467,7 @@ my %MEETS_USA =
       },
       '2014A' =>
       {
-        ORDINAL => 57,
+        MEET_ORDINAL => 57,
         YEAR => 2014,
         CITY => 'Dallas',
         DATE_START => '2014-03-19',
@@ -475,7 +475,7 @@ my %MEETS_USA =
       },
       '2014B' =>
       {
-        ORDINAL => 86,
+        MEET_ORDINAL => 86,
         YEAR => 2014,
         CITY => 'Las Vegas',
         DATE_START => '2014-07-17',
@@ -484,7 +484,7 @@ my %MEETS_USA =
       '2014C' =>
       {
         # Senior Teams
-        ORDINAL => 87,
+        MEET_ORDINAL => 87,
         YEAR => 2014,
         CITY => 'Providence',
         DATE_START => '2014-11-27',
@@ -492,7 +492,7 @@ my %MEETS_USA =
       },
       '2015A' =>
       {
-        ORDINAL => 58,
+        MEET_ORDINAL => 58,
         YEAR => 2015,
         CITY => 'New Orleans',
         DATE_START => '2015-03-12',
@@ -500,7 +500,7 @@ my %MEETS_USA =
       },
       '2015B' =>
       {
-        ORDINAL => 87,
+        MEET_ORDINAL => 87,
         YEAR => 2015,
         CITY => 'Chicago',
         DATE_START => '2015-08-06',
@@ -509,7 +509,7 @@ my %MEETS_USA =
       '2015C' =>
       {
         # Senior Teams
-        ORDINAL => 88,
+        MEET_ORDINAL => 88,
         YEAR => 2015,
         CITY => 'Denver',
         DATE_START => '2015-11-26',
@@ -517,7 +517,7 @@ my %MEETS_USA =
       },
       '2016A' =>
       {
-        ORDINAL => 59,
+        MEET_ORDINAL => 59,
         YEAR => 2016,
         CITY => 'Reno',
         DATE_START => '2016-03-09',
@@ -525,7 +525,7 @@ my %MEETS_USA =
       },
       '2016B' =>
       {
-        ORDINAL => 88,
+        MEET_ORDINAL => 88,
         YEAR => 2016,
         CITY => 'Washington DC',
         DATE_START => '2016-07-20',
@@ -533,7 +533,7 @@ my %MEETS_USA =
       },
       '2016C' =>
       {
-        ORDINAL => 89,
+        MEET_ORDINAL => 89,
         YEAR => 2016,
         CITY => 'Orlando',
         DATE_START => '2016-11-24',
@@ -541,7 +541,7 @@ my %MEETS_USA =
       },
       '2017A' =>
       {
-        ORDINAL => 60,
+        MEET_ORDINAL => 60,
         YEAR => 2017,
         CITY => 'Kansas City',
         DATE_START => '2017-03-08',
@@ -549,7 +549,7 @@ my %MEETS_USA =
       },
       '2017B' =>
       {
-        ORDINAL => 89,
+        MEET_ORDINAL => 89,
         YEAR => 2017,
         CITY => 'Toronto',
         DATE_START => '2017-07-19',
@@ -557,7 +557,7 @@ my %MEETS_USA =
       },
       '2017C' =>
       {
-        ORDINAL => 90,
+        MEET_ORDINAL => 90,
         YEAR => 2017,
         CITY => 'San Diego',
         DATE_START => '2017-11-23',
@@ -565,7 +565,7 @@ my %MEETS_USA =
       },
       '2018A' =>
       {
-        ORDINAL => 61,
+        MEET_ORDINAL => 61,
         YEAR => 2018,
         CITY => 'Philadelphia',
         DATE_START => '2018-03-07',
@@ -573,7 +573,7 @@ my %MEETS_USA =
       },
       '2018B' =>
       {
-        ORDINAL => 90,
+        MEET_ORDINAL => 90,
         YEAR => 2018,
         CITY => 'Atlanta',
         DATE_START => '2018-07-25',
@@ -581,7 +581,7 @@ my %MEETS_USA =
       },
       '2018C' =>
       {
-        ORDINAL => 91,
+        MEET_ORDINAL => 91,
         YEAR => 2018,
         CITY => 'Honolulu',
         DATE_START => '2018-11-22',
@@ -589,7 +589,7 @@ my %MEETS_USA =
       },
       '2019A' =>
       {
-        ORDINAL => 61, # Should be 62?
+        MEET_ORDINAL => 61, # Should be 62?
         YEAR => 2019,
         CITY => 'Memphis',
         DATE_START => '2019-03-20',
@@ -597,7 +597,7 @@ my %MEETS_USA =
       },
       '2019B' =>
       {
-        ORDINAL => 91,
+        MEET_ORDINAL => 91,
         YEAR => 2019,
         CITY => 'Las Vegas',
         DATE_START => '2019-07-17',
@@ -605,7 +605,7 @@ my %MEETS_USA =
       },
       '2019C' =>
       {
-        ORDINAL => 92,
+        MEET_ORDINAL => 92,
         YEAR => 2019,
         CITY => 'San Francisco',
         DATE_START => '2019-11-28',
@@ -613,7 +613,7 @@ my %MEETS_USA =
       },
       '2021C' =>
       {
-        ORDINAL => 93,
+        MEET_ORDINAL => 93,
         YEAR => 2021,
         CITY => 'Austin',
         DATE_START => '2021-11-25',
@@ -621,7 +621,7 @@ my %MEETS_USA =
       },
       '2022A' =>
       {
-        ORDINAL => 62,
+        MEET_ORDINAL => 62,
         YEAR => 2022,
         CITY => 'Reno',
         DATE_START => '2022-03-09',
@@ -629,7 +629,7 @@ my %MEETS_USA =
       },
       '2022B' =>
       {
-        ORDINAL => 92,
+        MEET_ORDINAL => 92,
         YEAR => 2022,
         CITY => 'Providence',
         DATE_START => '2022-07-13',
@@ -637,7 +637,7 @@ my %MEETS_USA =
       },
       '2022C' =>
       {
-        ORDINAL => 94,
+        MEET_ORDINAL => 94,
         YEAR => 2022,
         CITY => 'Phoenix',
         DATE_START => '2022-11-24',
@@ -645,7 +645,7 @@ my %MEETS_USA =
       },
       '2023A' =>
       {
-        ORDINAL => 63,
+        MEET_ORDINAL => 63,
         YEAR => 2023,
         CITY => 'New Orleans',
         DATE_START => '2023-03-09',
@@ -653,7 +653,7 @@ my %MEETS_USA =
       },
       '2023B' =>
       {
-        ORDINAL => 93,
+        MEET_ORDINAL => 93,
         YEAR => 2023,
         CITY => 'Chicago',
         DATE_START => '2023-07-12',
@@ -661,7 +661,7 @@ my %MEETS_USA =
       },
       '2023C' =>
       {
-        ORDINAL => 95,
+        MEET_ORDINAL => 95,
         YEAR => 2023,
         CITY => 'Atlanta',
         DATE_START => '2023-11-23',
@@ -669,7 +669,7 @@ my %MEETS_USA =
       },
       '2024A' =>
       {
-        ORDINAL => 64,
+        MEET_ORDINAL => 64,
         YEAR => 2024,
         CITY => 'Louisville',
         DATE_START => '2024-03-13',
@@ -677,7 +677,7 @@ my %MEETS_USA =
       },
       '2024B' =>
       {
-        ORDINAL => 94,
+        MEET_ORDINAL => 94,
         YEAR => 2024,
         CITY => 'Toronto',
         DATE_START => '2024-07-17',
@@ -685,7 +685,7 @@ my %MEETS_USA =
       },
       '2024C' =>
       {
-        ORDINAL => 96,
+        MEET_ORDINAL => 96,
         YEAR => 2024,
         CITY => 'Las Vegas',
         DATE_START => '2024-11-28',

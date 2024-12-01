@@ -83,7 +83,7 @@ my %MEETS_NORDIC =
     {
       '2005' =>
       {
-        ORDINAL => 29,
+        MEET_ORDINAL => 29,
         CITY => 'Vingsted',
         COUNTRY => 'Denmark',
         YEAR => 2005,
@@ -92,14 +92,14 @@ my %MEETS_NORDIC =
       },
       '2007' =>
       {
-        ORDINAL => 30,
+        MEET_ORDINAL => 30,
         YEAR => 2007,
         DATE_START => '2007-06-05',
         DATE_END => '2007-06-09'
       },
       '2009' =>
       {
-        ORDINAL => 31,
+        MEET_ORDINAL => 31,
         YEAR => 2009,
         CITY => 'Turussa',
         COUNTRY => 'Finland',
@@ -108,7 +108,7 @@ my %MEETS_NORDIC =
       },
       '2011' =>
       {
-        ORDINAL => 32,
+        MEET_ORDINAL => 32,
         YEAR => 2011,
         DATE_START => '2011-05-27',
         DATE_END => '2011-05-29'
@@ -116,7 +116,7 @@ my %MEETS_NORDIC =
       '2013' =>
       {
         # https://csbnews.org/iceland-nordic-teams-championships-2013/
-        ORDINAL => 33,
+        MEET_ORDINAL => 33,
         YEAR => 2013,
         CITY => 'Keflavik',
         COUNTRY => 'Iceland',
@@ -125,7 +125,7 @@ my %MEETS_NORDIC =
       },
       '2015' =>
       {
-        ORDINAL => 34,
+        MEET_ORDINAL => 34,
         YEAR => 2015,
         DATE_START => '2015-05-21',
         DATE_END => '2015-05-24'
@@ -133,7 +133,7 @@ my %MEETS_NORDIC =
       '2017' =>
       {
         # https://www2.bridge.dk/Default.aspx?ID=21886
-        ORDINAL => 35,
+        MEET_ORDINAL => 35,
         YEAR => 2017,
         CITY => 'Horsens',
         COUNTRY => 'Denmark',
@@ -143,7 +143,7 @@ my %MEETS_NORDIC =
       '2019' =>
       {
         # https://kvangraven.no/historikk/nordic-championship-2019/
-        ORDINAL => 36,
+        MEET_ORDINAL => 36,
         YEAR => 2019,
         CITY => 'Kristiansand',
         COUNTRY => 'Norway',
@@ -153,7 +153,7 @@ my %MEETS_NORDIC =
       '2021' =>
       {
         # https://www2.bridge.dk/Default.aspx?ID=25470
-        ORDINAL => 37,
+        MEET_ORDINAL => 37,
         YEAR => 2021,
         CITY => 'Online',
         DATE_START => '2021-05-29',
@@ -162,7 +162,7 @@ my %MEETS_NORDIC =
       '2023' =>
       {
         # https://www.svenskbridge.se/nm-2023/info
-        ORDINAL => 38,
+        MEET_ORDINAL => 38,
         YEAR => 2023,
         CITY => 'Örebro',
         COUNTRY => 'Sweden',

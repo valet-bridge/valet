@@ -29,7 +29,7 @@ my %MEETS_JAPAN =
       '2001' =>
       {
         # https://www.jcbl.or.jp/home/English/bf/past/6th/tabid/235/Default.aspx
-        ORDINAL => 6,
+        MEET_ORDINAL => 6,
         YEAR => 2001,
         DATE_START => '2001-02-07',
         DATE_END => '2001-02-11'
@@ -37,7 +37,7 @@ my %MEETS_JAPAN =
       '2005' =>
       {
         # https://www.jcbl.or.jp/home/English/bf/past/10th/tabid/231/Default.aspx
-        ORDINAL => 10,
+        MEET_ORDINAL => 10,
         YEAR => 2005,
         DATE_START => '2005-02-08',
         DATE_END => '2005-02-13'
@@ -45,7 +45,7 @@ my %MEETS_JAPAN =
       '2006' =>
       {
         # https://www.jcbl.or.jp/home/English/bf/past/11th/tabid/230/Default.aspx
-        ORDINAL => 11,
+        MEET_ORDINAL => 11,
         YEAR => 2006,
         DATE_START => '2006-02-07',
         DATE_END => '2006-02-12'
@@ -53,7 +53,7 @@ my %MEETS_JAPAN =
       '2007' =>
       {
         # https://www.jcbl.or.jp/home/English/bf/past/12th/tabid/229/Default.aspx
-        ORDINAL => 12,
+        MEET_ORDINAL => 12,
         YEAR => 2007,
         DATE_START => '2007-02-07',
         DATE_END => '2007-02-12'
@@ -61,7 +61,7 @@ my %MEETS_JAPAN =
       '2008' =>
       {
         # https://www.jcbl.or.jp/home/English/bf/past/13th/tabid/228/Default.aspx
-        ORDINAL => 13,
+        MEET_ORDINAL => 13,
         YEAR => 2008,
         DATE_START => '2008-02-06',
         DATE_END => '2008-02-11'
@@ -69,7 +69,7 @@ my %MEETS_JAPAN =
       '2009' =>
       {
         # https://www.jcbl.or.jp/home/English/bf/past/14th/tabid/227/Default.aspx
-        ORDINAL => 14,
+        MEET_ORDINAL => 14,
         YEAR => 2009,
         DATE_START => '2009-02-10',
         DATE_END => '2009-02-15'
@@ -77,7 +77,7 @@ my %MEETS_JAPAN =
       '2010' =>
       {
         # https://www.jcbl.or.jp/home/English/bf/past/15th/tabid/226/Default.aspx
-        ORDINAL => 15,
+        MEET_ORDINAL => 15,
         YEAR => 2010,
         DATE_START => '2010-02-08',
         DATE_END => '2010-02-14'
@@ -85,7 +85,7 @@ my %MEETS_JAPAN =
       '2011' =>
       {
         # https://www.jcbl.or.jp/home/English/bf/past/16th/tabid/225/Default.aspx
-        ORDINAL => 16,
+        MEET_ORDINAL => 16,
         YEAR => 2011,
         DATE_START => '2011-02-07',
         DATE_END => '2011-02-13'
@@ -93,7 +93,7 @@ my %MEETS_JAPAN =
       '2012' =>
       {
         # https://www.jcbl.or.jp/home/English/bf/past/16th/tabid/225/Default.aspx
-        ORDINAL => 17,
+        MEET_ORDINAL => 17,
         YEAR => 2012,
         DATE_START => '2012-02-06',
         DATE_END => '2012-02-12'
@@ -101,7 +101,7 @@ my %MEETS_JAPAN =
       '2013' =>
       {
         # https://www.jcbl.or.jp/home/English/bf/past/18th/tabid/1125/Default.aspx
-        ORDINAL => 18,
+        MEET_ORDINAL => 18,
         YEAR => 2013,
         DATE_START => '2013-04-16',
         DATE_END => '2013-04-21'
@@ -109,7 +109,7 @@ my %MEETS_JAPAN =
       '2014' =>
       {
         # https://www.jcbl.or.jp/home/English/bf/past/19th/tabid/1190/Default.aspx
-        ORDINAL => 19,
+        MEET_ORDINAL => 19,
         YEAR => 2014,
         DATE_START => '2014-02-11',
         DATE_END => '2014-02-16'
@@ -117,7 +117,7 @@ my %MEETS_JAPAN =
       '2015' =>
       {
         # https://www.jcbl.or.jp/home/English/bf/past/20th/tabid/1191/Default.aspx
-        ORDINAL => 20,
+        MEET_ORDINAL => 20,
         YEAR => 2015,
         DATE_START => '2015-02-10',
         DATE_END => '2015-02-15'
@@ -125,7 +125,7 @@ my %MEETS_JAPAN =
       '2017' =>
       {
         # https://www.jcbl.or.jp/home/English/bf/past/21st/tabid/1429/Default.aspx
-        ORDINAL => 21,
+        MEET_ORDINAL => 21,
         YEAR => 2017,
         DATE_START => '2017-02-07',
         DATE_END => '2017-02-12'
@@ -133,7 +133,7 @@ my %MEETS_JAPAN =
       '2019' =>
       {
         # https://www.jcbl.or.jp/home/English/bf/22nd/tabid/1574/Default.aspx
-        ORDINAL => 22,
+        MEET_ORDINAL => 22,
         YEAR => 2019,
         DATE_START => '2019-02-19',
         DATE_END => '2019-02-24'

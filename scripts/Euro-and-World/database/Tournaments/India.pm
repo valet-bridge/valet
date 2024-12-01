@@ -36,7 +36,7 @@ my %MEETS_INDIA =
       '2003' =>
       {
         # https://hcl-bridge.com/archive/2003-2/
-        ORDINAL => 1,
+        MEET_ORDINAL => 1,
         CITY => 'Delhi',
         YEAR => 2003,
         DATE_START => '2003-12-18',
@@ -45,7 +45,7 @@ my %MEETS_INDIA =
       '2004' =>
       {
         # https://hcl-bridge.com/archive/2004-2/
-        ORDINAL => 2,
+        MEET_ORDINAL => 2,
         CITY => 'Delhi',
         YEAR => 2004,
         DATE_START => '2004-08-12',
@@ -54,7 +54,7 @@ my %MEETS_INDIA =
       '2005' =>
       {
         # https://hcl-bridge.com/archive/2005-2/
-        ORDINAL => 3,
+        MEET_ORDINAL => 3,
         CITY => 'Noida',
         YEAR => 2005,
         DATE_START => '2005-08-12',
@@ -63,7 +63,7 @@ my %MEETS_INDIA =
       '2006' =>
       {
         # https://hcl-bridge.com/archive/2006-2/
-        ORDINAL => 4,
+        MEET_ORDINAL => 4,
         CITY => 'Noida',
         YEAR => 2006,
         DATE_START => '2006-08-12',
@@ -72,7 +72,7 @@ my %MEETS_INDIA =
       '2007' =>
       {
         # https://hcl-bridge.com/archive/2007-2/
-        ORDINAL => 5,
+        MEET_ORDINAL => 5,
         CITY => 'Noida',
         YEAR => 2007,
         DATE_START => '2007-08-16',
@@ -81,7 +81,7 @@ my %MEETS_INDIA =
       '2008' =>
       {
         # https://hcl-bridge.com/archive/2008-2/
-        ORDINAL => 6,
+        MEET_ORDINAL => 6,
         CITY => 'Noida',
         YEAR => 2008,
         DATE_START => '2008-09-04',
@@ -90,7 +90,7 @@ my %MEETS_INDIA =
       '2009' =>
       {
         # https://hcl-bridge.com/archive/2009-2/
-        ORDINAL => 7,
+        MEET_ORDINAL => 7,
         CITY => 'Noida',
         YEAR => 2009,
         DATE_START => '2009-08-13',
@@ -99,7 +99,7 @@ my %MEETS_INDIA =
       '2010' =>
       {
         # https://hcl-bridge.com/archive/2010-2/
-        ORDINAL => 8,
+        MEET_ORDINAL => 8,
         CITY => 'Noida',
         YEAR => 2010,
         DATE_START => '2010-10-30',
@@ -108,7 +108,7 @@ my %MEETS_INDIA =
       '2011' =>
       {
         # https://hcl-bridge.com/archive/2011-2/
-        ORDINAL => 9,
+        MEET_ORDINAL => 9,
         CITY => 'Noida',
         YEAR => 2011,
         DATE_START => '2011-09-08',
@@ -117,7 +117,7 @@ my %MEETS_INDIA =
       '2012' =>
       {
         # https://hcl-bridge.com/archive/2012-2/
-        ORDINAL => 10,
+        MEET_ORDINAL => 10,
         CITY => 'Delhi',
         YEAR => 2012,
         DATE_START => '2012-08-30',
@@ -126,7 +126,7 @@ my %MEETS_INDIA =
       '2013' =>
       {
         # https://hcl-bridge.com/archive/2013-2/
-        ORDINAL => 11,
+        MEET_ORDINAL => 11,
         CITY => 'Delhi',
         YEAR => 2013,
         DATE_START => '2013-08-08',
@@ -135,7 +135,7 @@ my %MEETS_INDIA =
       '2014' =>
       {
         # https://hcl-bridge.com/archive/2014-2/
-        ORDINAL => 12,
+        MEET_ORDINAL => 12,
         CITY => 'Delhi',
         YEAR => 2014,
         DATE_START => '2014-08-17',
@@ -144,7 +144,7 @@ my %MEETS_INDIA =
       '2015' =>
       {
         # https://hcl-bridge.com/archive/2015-2/
-        ORDINAL => 13,
+        MEET_ORDINAL => 13,
         CITY => 'Delhi',
         YEAR => 2015,
         DATE_START => '2015-08-20',
@@ -153,7 +153,7 @@ my %MEETS_INDIA =
       '2016' =>
       {
         # https://hcl-bridge.com/archive/2016-2/
-        ORDINAL => 14,
+        MEET_ORDINAL => 14,
         CITY => 'Delhi',
         YEAR => 2016,
         DATE_START => '2016-10-19',
@@ -162,7 +162,7 @@ my %MEETS_INDIA =
       '2017' =>
       {
         # https://hcl-bridge.com/archive/2017-2/
-        ORDINAL => 15,
+        MEET_ORDINAL => 15,
         CITY => 'Delhi',
         YEAR => 2017,
         DATE_START => '2017-09-12',
@@ -171,7 +171,7 @@ my %MEETS_INDIA =
       '2018' =>
       {
         # https://hcl-bridge.com/archive/2018-2/
-        ORDINAL => 16,
+        MEET_ORDINAL => 16,
         CITY => 'Delhi',
         YEAR => 2018,
         DATE_START => '2018-08-09',
@@ -180,7 +180,7 @@ my %MEETS_INDIA =
       '2019' =>
       {
         # https://hcl-bridge.com/archive/2019-2/
-        ORDINAL => 17,
+        MEET_ORDINAL => 17,
         CITY => 'Delhi',
         YEAR => 2019,
         DATE_START => '2019-08-05',
@@ -189,7 +189,7 @@ my %MEETS_INDIA =
       '2021' =>
       {
         # https://hcl-bridge.com/archive/2021-2/
-        ORDINAL => 18,
+        MEET_ORDINAL => 18,
         CITY => 'Online',
         YEAR => 2021,
         DATE_START => '2021-09-18',
@@ -198,7 +198,7 @@ my %MEETS_INDIA =
       '2022' =>
       {
         # https://hcl-bridge.com/archive/2022-2/
-        ORDINAL => 19,
+        MEET_ORDINAL => 19,
         CITY => 'Gurgaon',
         YEAR => 2023,
         DATE_START => '2023-10-31',
@@ -207,7 +207,7 @@ my %MEETS_INDIA =
       '2023' =>
       {
         # https://hcl-bridge.com/archive/2023-2/
-        ORDINAL => 20,
+        MEET_ORDINAL => 20,
         CITY => 'Delhi',
         YEAR => 2023,
         DATE_START => '2023-10-31',
@@ -278,7 +278,7 @@ my %MEETS_INDIA =
     {
       '2014' =>
       {
-        ORDINAL => 52,
+        MEET_ORDINAL => 52,
         REGION => 'Goa',
         YEAR => 2014,
         DATE_START => '2014-07-20', # More dates
@@ -286,14 +286,14 @@ my %MEETS_INDIA =
       },
       '2015' =>
       {
-        ORDINAL => 53,
+        MEET_ORDINAL => 53,
         YEAR => 2015,
         DATE_START => '2015-12-19', # Might be something else
         DATE_END => '2015-12-21'
       },
       '2016' =>
       {
-        ORDINAL => 54,
+        MEET_ORDINAL => 54,
         SPONSOR => 'Krishnapatnam Port',
         YEAR => 2016,
         DATE_START => '2016-08-13', # More dates
@@ -311,14 +311,14 @@ my %MEETS_INDIA =
     {
       '2010' =>
       {
-        ORDINAL => 41,
+        MEET_ORDINAL => 41,
         YEAR => 2010,
         DATE_START => '2010-06-18', # More dates
         DATE_END => '2010-06-20'
       },
       '2011' =>
       {
-        ORDINAL => 1,
+        MEET_ORDINAL => 1,
         CITY => 'Nashik',
         YEAR => 2011,
         DATE_START => '2011-03-14',
@@ -326,7 +326,7 @@ my %MEETS_INDIA =
       },
       '2012' =>
       {
-        ORDINAL => 2,
+        MEET_ORDINAL => 2,
         REGION => 'Goa',
         YEAR => 2012,
         DATE_START => '2012-06-19',
@@ -334,7 +334,7 @@ my %MEETS_INDIA =
       },
       '2013' =>
       {
-        ORDINAL => 3,
+        MEET_ORDINAL => 3,
         YEAR => 2013,
         CITY => 'Pune',
         DATE_START => '2013-02-18', # More dates
@@ -342,7 +342,7 @@ my %MEETS_INDIA =
       },
       '2014' =>
       {
-        ORDINAL => 4,
+        MEET_ORDINAL => 4,
         CITY => 'Nashik',
         YEAR => 2014,
         DATE_START => '2014-04-21',
@@ -350,7 +350,7 @@ my %MEETS_INDIA =
       },
       '2015' =>
       {
-        ORDINAL => 5,
+        MEET_ORDINAL => 5,
         CITY => 'Bangalore',
         YEAR => 2015,
         DATE_START => '2015-06-17',
@@ -358,7 +358,7 @@ my %MEETS_INDIA =
       },
       '2016' =>
       {
-        ORDINAL => 6,
+        MEET_ORDINAL => 6,
         CITY => 'Bangalore',
         YEAR => 2016,
         DATE_START => '2016-07-06',
@@ -367,7 +367,7 @@ my %MEETS_INDIA =
       '2017' =>
       {
         # https://www.bridgewebs.com/cgi-bin/bwor/bw.cgi?club=summernationals&pid=display_page11
-        ORDINAL => 7,
+        MEET_ORDINAL => 7,
         CITY => 'Nashik',
         YEAR => 2017,
         DATE_START => '2017-06-17',
@@ -376,7 +376,7 @@ my %MEETS_INDIA =
       '2018' =>
       {
         # https://www.bridgewebs.com/cgi-bin/bwor/bw.cgi?club=summernationals&pid=display_page15
-        ORDINAL => 8,
+        MEET_ORDINAL => 8,
         CITY => 'Ahmedabad',
         YEAR => 2018,
         DATE_START => '2018-06-24',
@@ -385,7 +385,7 @@ my %MEETS_INDIA =
       '2019' =>
       {
         # https://www.bridgewebs.com/cgi-bin/bwor/bw.cgi?club=summernationals&pid=display_page1
-        ORDINAL => 9,
+        MEET_ORDINAL => 9,
         CITY => 'Pune',
         YEAR => 2019,
         DATE_START => '2019-06-01',
@@ -394,7 +394,7 @@ my %MEETS_INDIA =
       '2021' =>
       {
         # https://www.bridgewebs.com/cgi-bin/bwor/bw.cgi?club=summernationals&pid=display_page30
-        ORDINAL => 10,
+        MEET_ORDINAL => 10,
         YEAR => 2021,
         DATE_START => '2021-06-19',
         DATE_END => '2021-06-27'
@@ -402,7 +402,7 @@ my %MEETS_INDIA =
       '2022' =>
       {
         # https://bfi.net.in/tournament/11-tolani-summer-national-bridge-championship-2022/
-        ORDINAL => 11,
+        MEET_ORDINAL => 11,
         CITY => 'Bangalore',
         YEAR => 2022,
         DATE_START => '2022-06-28',
@@ -412,7 +412,7 @@ my %MEETS_INDIA =
       {
         # From here on not Tolani, but Mavericks
         # https://www.bridgewebs.com/cgi-bin/bwor/bw.cgi?club=summernationals&pid=display_page38
-        ORDINAL => 1,
+        MEET_ORDINAL => 1,
         CITY => 'Goa',
         YEAR => 2023,
         DATE_START => '2023-06-20',
@@ -421,7 +421,7 @@ my %MEETS_INDIA =
       '2024' =>
       {
         # https://www.bridgewebs.com/cgi-bin/bwor/bw.cgi?club=summernationals&pid=display_page46
-        ORDINAL => 2,
+        MEET_ORDINAL => 2,
         CITY => 'Mangalore',
         YEAR => 2024,
         DATE_START => '2024-06-05',
@@ -451,7 +451,7 @@ my %MEETS_INDIA =
     {
       '2004' =>
       {
-        ORDINAL => 46,
+        MEET_ORDINAL => 46,
         CITY => 'Visakhapatnam',
         YEAR => 2004,
         DATE_START => '2004-12-07',
@@ -459,14 +459,14 @@ my %MEETS_INDIA =
       },
       '2005-06' =>
       {
-        ORDINAL => 47,
+        MEET_ORDINAL => 47,
         CITY => 'Chennai',
         DATE_START => '2005-12-27',
         DATE_END => '2006-01-05'
       },
       '2007' =>
       {
-        ORDINAL => 49,
+        MEET_ORDINAL => 49,
         CITY => 'Bharuch',
         YEAR => 2007,
         DATE_START => '2007-12-22', # More dates
@@ -474,20 +474,20 @@ my %MEETS_INDIA =
       },
       '2008' =>
       {
-        ORDINAL => 50,
+        MEET_ORDINAL => 50,
         CITY => 'Kanpur',
         DATE_START => '2008-11-12',
         DATE_END => '2008-11-23'
       },
       '2009' =>
       {
-        ORDINAL => 51,
+        MEET_ORDINAL => 51,
         DATE_START => '2009-12-18',
         DATE_END => '2009-12-24'
       },
       '2010' =>
       {
-        ORDINAL => 52,
+        MEET_ORDINAL => 52,
         CITY => 'Kolkata',
         YEAR => 2010,
         DATE_START => '2010-12-12', # More dates
@@ -495,7 +495,7 @@ my %MEETS_INDIA =
       },
       '2011' =>
       {
-        ORDINAL => 53,
+        MEET_ORDINAL => 53,
         CITY => 'Chennai',
         YEAR => 2011,
         DATE_START => '2011-12-06', # More dates
@@ -503,7 +503,7 @@ my %MEETS_INDIA =
       },
       '2012' =>
       {
-        ORDINAL => 54,
+        MEET_ORDINAL => 54,
         YEAR => 2012,
         CITY => 'Kolkata',
         DATE_START => '2012-12-16',
@@ -511,7 +511,7 @@ my %MEETS_INDIA =
       },
       '2013' =>
       {
-        ORDINAL => 55,
+        MEET_ORDINAL => 55,
         CITY => 'Ahmedabad',
         YEAR => 2013,
         DATE_START => '2013-12-20',
@@ -519,7 +519,7 @@ my %MEETS_INDIA =
       },
       '2014' =>
       {
-        ORDINAL => 56,
+        MEET_ORDINAL => 56,
         CITY => 'Jaipur',
         YEAR => 2014,
         DATE_START => '2014-12-18', # More dates
@@ -527,7 +527,7 @@ my %MEETS_INDIA =
       },
       '2015' =>
       {
-        ORDINAL => 57,
+        MEET_ORDINAL => 57,
         CITY => 'Pune',
         YEAR => 2015,
         DATE_START => '2015-11-20', # More dates
@@ -537,7 +537,7 @@ my %MEETS_INDIA =
       {
         # No explicit results links for whole Nationals, but
         # https://www.bridgewebs.com/cgi-bin/bwoq/bw.cgi?club=winternationals&pid=docs_Full%20Brochure.pdf
-        ORDINAL => 58,
+        MEET_ORDINAL => 58,
         YEAR => 2016,
         CITY => 'Jaipur',
         DATE_START => '2016-12-12',
@@ -546,7 +546,7 @@ my %MEETS_INDIA =
       '2017' =>
       {
         # https://www.bridgewebs.com/cgi-bin/bwoq/bw.cgi?club=winternationals&pid=display_page14
-        ORDINAL => 59,
+        MEET_ORDINAL => 59,
         YEAR => 2017,
         CITY => 'Visakhapatnam',
         DATE_START => '2017-12-16',
@@ -555,7 +555,7 @@ my %MEETS_INDIA =
       '2018' =>
       {
         # https://www.bridgewebs.com/cgi-bin/bwoq/bw.cgi?club=winternationals&pid=display_page25
-        ORDINAL => 60,
+        MEET_ORDINAL => 60,
         YEAR => 2018,
         CITY => 'Chennai',
         DATE_START => '2018-12-09',
@@ -564,7 +564,7 @@ my %MEETS_INDIA =
       '2019' =>
       {
         # https://www.bridgewebs.com/cgi-bin/bwoq/bw.cgi?club=winternationals&pid=display_page30
-        ORDINAL => 61,
+        MEET_ORDINAL => 61,
         YEAR => 2019,
         CITY => 'Kolkata',
         DATE_START => '2019-12-08',
@@ -573,7 +573,7 @@ my %MEETS_INDIA =
       '2022' =>
       {
         # https://www.bridgewebs.com/cgi-bin/bwoq/bw.cgi?club=winternationals&pid=display_page13
-        ORDINAL => 64,
+        MEET_ORDINAL => 64,
         YEAR => 2022,
         CITY => 'Jabalpur',
         DATE_START => '2022-12-03',
@@ -582,7 +582,7 @@ my %MEETS_INDIA =
       '2024' =>
       {
         # https://www.bridgewebs.com/cgi-bin/bwoq/bw.cgi?club=winternationals&pid=display_page59
-        ORDINAL => 65,
+        MEET_ORDINAL => 65,
         YEAR => 2024,
         CITY => 'Jabalpur',
         DATE_START => '2024-01-03',
@@ -612,7 +612,7 @@ my %MEETS_INDIA =
       },
       '2012' =>
       {
-        ORDINAL => 9,
+        MEET_ORDINAL => 9,
         YEAR => 2012,
         CITY => 'Indore',
         DATE_START => '2012-01-05',
@@ -620,7 +620,7 @@ my %MEETS_INDIA =
       },
       '2013' =>
       {
-        ORDINAL => 10,
+        MEET_ORDINAL => 10,
         YEAR => 2013,
         CITY => 'Indore',
         DATE_START => '2013-01-10',
@@ -648,7 +648,7 @@ my %MEETS_INDIA =
       },
       '2023A' =>
       {
-        ORDINAL => 18,
+        MEET_ORDINAL => 18,
         YEAR => 2023,
         CITY => 'Indore',
         DATE_START => '2023-01-15',
@@ -656,7 +656,7 @@ my %MEETS_INDIA =
       },
       '2023B' =>
       {
-        ORDINAL => 19,
+        MEET_ORDINAL => 19,
         YEAR => 2023,
         CITY => 'Indore',
         DATE_START => '2023-12-16',
@@ -664,7 +664,7 @@ my %MEETS_INDIA =
       },
       '2025' =>
       {
-        ORDINAL => 20,
+        MEET_ORDINAL => 20,
         YEAR => 2025,
         CITY => 'Indore',
         DATE_START => '2025-01-07',
@@ -682,21 +682,21 @@ my %MEETS_INDIA =
     {
       '2012A' =>
       {
-        ORDINAL => 32,
+        MEET_ORDINAL => 32,
         YEAR => 2012,
         DATE_START => '2012-02-25',
         DATE_END => '2012-02-28'
       },
       '2012B' =>
       {
-        ORDINAL => 33,
+        MEET_ORDINAL => 33,
         YEAR => 2012,
         DATE_START => '2012-10-27',
         DATE_END => '2012-10-28'
       },
       '2014' =>
       {
-        ORDINAL => 34,
+        MEET_ORDINAL => 34,
         CITY => 'Dombivli',
         YEAR => 2014,
         DATE_START => '2014-01-18',
@@ -704,7 +704,7 @@ my %MEETS_INDIA =
       },
       '2015' =>
       {
-        ORDINAL => 35,
+        MEET_ORDINAL => 35,
         CITY => 'Nashik',
         YEAR => 2015,
         DATE_START => '2015-05-02',
@@ -736,7 +736,7 @@ my %MEETS_INDIA =
       },
       '2014' =>
       {
-        ORDINAL => 30,
+        MEET_ORDINAL => 30,
         CITY => 'Kota',
         YEAR => 2014,
         DATE_START => '2014-03-07',
@@ -755,7 +755,7 @@ my %MEETS_INDIA =
     {
       '2012' =>
       {
-        ORDINAL => 42,
+        MEET_ORDINAL => 42,
         YEAR => 2012,
         CITY => 'Noida',
         CLUB => 'AVI Club Noida',

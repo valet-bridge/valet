@@ -28,7 +28,7 @@ my %MEETS_ASIA =
     {
       '2005' =>
       {
-        ORDINAL => 43,
+        MEET_ORDINAL => 43,
         CITY => 'Seoul',
         COUNTRY => 'South Korea',
         YEAR => 2005,
@@ -37,7 +37,7 @@ my %MEETS_ASIA =
       },
       '2006' =>
       {
-        ORDINAL => 44,
+        MEET_ORDINAL => 44,
         CITY => 'Shanghai',
         COUNTRY => 'China',
         # Dates are just a guess.
@@ -47,7 +47,7 @@ my %MEETS_ASIA =
       },
       '2007' =>
       {
-        ORDINAL => 45,
+        MEET_ORDINAL => 45,
         CITY => 'Bandung',
         COUNTRY => 'Indonesia',
         YEAR => 2007,
@@ -65,7 +65,7 @@ my %MEETS_ASIA =
       },
       '2009' =>
       {
-        ORDINAL => 46,
+        MEET_ORDINAL => 46,
         CITY => 'Macau',
         COUNTRY => 'Macau',
         YEAR => 2009,
@@ -74,7 +74,7 @@ my %MEETS_ASIA =
       },
       '2010' =>
       {
-        ORDINAL => 47,
+        MEET_ORDINAL => 47,
         CITY => 'Hamilton',
         COUNTRY => 'New Zealand',
         YEAR => 2010,
@@ -85,7 +85,7 @@ my %MEETS_ASIA =
       {
         # http://www.mcba.org.my/
         # http://www.mcba.org.my/2011apbf.pdf
-        ORDINAL => 48,
+        MEET_ORDINAL => 48,
         CITY => 'Kuala Lumpur',
         COUNTRY => 'Malaysia',
         YEAR => 2011,
@@ -102,7 +102,7 @@ my %MEETS_ASIA =
       },
       '2013' =>
       {
-        ORDINAL => 49,
+        MEET_ORDINAL => 49,
         CITY => 'Hong Kong',
         COUNTRY => 'Hong Kong',
         YEAR => 2013,
@@ -112,7 +112,7 @@ my %MEETS_ASIA =
       '2015' =>
       {
         # https://www.ccba.org.cn/Tour/TourIndex.aspx?tourid=5827
-        ORDINAL => 50,
+        MEET_ORDINAL => 50,
         SPONSOR => 'Bangkok Bank',
         CITY => 'Bangkok',
         COUNTRY => 'Thailand',
@@ -123,7 +123,7 @@ my %MEETS_ASIA =
       '2017' =>
       {
         # https://www.ccba.org.cn/Tour/TourIndex.aspx?tourid=7822
-        ORDINAL => 51,
+        MEET_ORDINAL => 51,
         CITY => 'Seoul',
         COUNTRY => 'South Korea',
         YEAR => 2017,
@@ -133,7 +133,7 @@ my %MEETS_ASIA =
       '2019' =>
       {
         # https://www.ccba.org.cn/Tour/TourIndex.aspx?tourid=14478
-        ORDINAL => 52,
+        MEET_ORDINAL => 52,
         CITY => 'Singapore',
         COUNTRY => 'Singapore',
         YEAR => 2019,
@@ -143,7 +143,7 @@ my %MEETS_ASIA =
       '2023' =>
       {
         # https://www.ccba.org.cn/Tour/TourIndex.aspx?tourid=23144
-        ORDINAL => 53,
+        MEET_ORDINAL => 53,
         CITY => 'Hong Kong',
         COUNTRY => 'Hong Kong',
         YEAR => 2023,
@@ -175,7 +175,7 @@ my %MEETS_ASIA =
       },
       '2013' =>
       {
-        ORDINAL => 19,
+        MEET_ORDINAL => 19,
         CITY => 'Wuhan',
         COUNTRY => 'China',
         YEAR => 2013,
@@ -184,7 +184,7 @@ my %MEETS_ASIA =
       },
       '2015' =>
       {
-        ORDINAL => 20,
+        MEET_ORDINAL => 20,
         SPONSOR => 'Bangkok Bank',
         CITY => 'Bangkok',
         COUNTRY => 'Thailand',
@@ -205,7 +205,7 @@ my %MEETS_ASIA =
     {
       '2006' =>
       {
-        ORDINAL => 28,
+        MEET_ORDINAL => 28,
         SPONSOR => 'Saniva',
         CITY => 'Singapore',
         COUNTRY => 'Singapore',
@@ -215,7 +215,7 @@ my %MEETS_ASIA =
       },
       '2007' =>
       {
-        ORDINAL => 29,
+        MEET_ORDINAL => 29,
         CITY => 'Makati City',
         COUNTRY => 'Philippines',
         YEAR => 2007,
@@ -224,7 +224,7 @@ my %MEETS_ASIA =
       },
       '2008' =>
       {
-        ORDINAL => 30,
+        MEET_ORDINAL => 30,
         CITY => 'Semarang',
         COUNTRY => 'Indonesia',
         YEAR => 2008,
@@ -233,7 +233,7 @@ my %MEETS_ASIA =
       },
       '2009' =>
       {
-        ORDINAL => 31,
+        MEET_ORDINAL => 31,
         CITY => 'Kuala Lumpur',
         COUNTRY => 'Malaysia',
         YEAR => 2009,
@@ -242,7 +242,7 @@ my %MEETS_ASIA =
       },
       '2010' =>
       {
-        ORDINAL => 32,
+        MEET_ORDINAL => 32,
         CITY => 'Bangkok',
         COUNTRY => 'Thailand',
         YEAR => 2010,
@@ -251,7 +251,7 @@ my %MEETS_ASIA =
       },
       '2011' =>
       {
-        ORDINAL => 33,
+        MEET_ORDINAL => 33,
         CITY => 'Singapore',
         COUNTRY => 'Singapore',
         YEAR => 2011,
@@ -260,7 +260,7 @@ my %MEETS_ASIA =
       },
       '2012' =>
       {
-        ORDINAL => 34,
+        MEET_ORDINAL => 34,
         CITY => 'Bali',
         COUNTRY => 'Indonesia',
         YEAR => 2012,
@@ -269,7 +269,7 @@ my %MEETS_ASIA =
       },
       '2013' =>
       {
-        ORDINAL => 35,
+        MEET_ORDINAL => 35,
         CITY => 'Makati City',
         COUNTRY => 'Philippines',
         YEAR => 2013,
@@ -278,7 +278,7 @@ my %MEETS_ASIA =
       },
       '2014' =>
       {
-        ORDINAL => 36,
+        MEET_ORDINAL => 36,
         CITY => 'Kuala Lumpur',
         COUNTRY => 'Malaysia',
         YEAR => 2014,
@@ -287,7 +287,7 @@ my %MEETS_ASIA =
       },
       '2015' =>
       {
-        ORDINAL => 37,
+        MEET_ORDINAL => 37,
         SPONSOR => 'Bangkok Bank',
         CITY => 'Bangkok',
         COUNTRY => 'Thailand',
@@ -307,7 +307,7 @@ my %MEETS_ASIA =
     {
       '2010' =>
       {
-        ORDINAL => 1,
+        MEET_ORDINAL => 1,
         YEAR => 2010,
         DATE_START => '2010-08-30',
         DATE_END => '2010-09-05'
@@ -315,7 +315,7 @@ my %MEETS_ASIA =
       '2014' =>
       {
         # https://www.ccba.org.cn/Tour/TourIndex.aspx?tourid=3989
-        ORDINAL => 2,
+        MEET_ORDINAL => 2,
         CITY => 'Jinhua',
         COUNTRY => 'China',
         YEAR => 2014,
@@ -325,7 +325,7 @@ my %MEETS_ASIA =
       '2018' =>
       {
         # https://www.ccba.org.cn/Tour/TourIndex.aspx?tourid=11713
-        ORDINAL => 3,
+        MEET_ORDINAL => 3,
         CITY => 'Goa',
         COUNTRY => 'India',
         YEAR => 2018,
@@ -335,7 +335,7 @@ my %MEETS_ASIA =
       '2022' =>
       {
         # https://www.ccba.org.cn/Tour/TourIndex.aspx?tourid=22055
-        ORDINAL => 4,
+        MEET_ORDINAL => 4,
         CITY => 'Jakarta',
         COUNTRY => 'Indonesia',
         YEAR => 2022,
@@ -355,7 +355,7 @@ my %MEETS_ASIA =
       '2011' =>
       {
         # https://en.wikipedia.org/wiki/Bridge_at_the_2011_SEA_Games
-        ORDINAL => 26,
+        MEET_ORDINAL => 26,
         CITY => 'Jakarta',
         REGION => 'South Sumatra',
         COUNTRY => 'Indonesia',
@@ -367,7 +367,7 @@ my %MEETS_ASIA =
       {
         # https://en.wikipedia.org/wiki/2013_SEA_Games
         # May have dropped bridge again.
-        ORDINAL => 27,
+        MEET_ORDINAL => 27,
         CITY => 'Nay Pyi Taw',
         COUNTRY => 'Myanmar',
         YEAR => 2013,

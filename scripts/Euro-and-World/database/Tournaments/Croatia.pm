@@ -29,77 +29,77 @@ my %MEETS_CROATIA =
     {
       '2005' =>
       {
-        ORDINAL => 44,
+        MEET_ORDINAL => 44,
         YEAR => 2005,
         DATE_START => '2005-09-18',
         DATE_END => '2005-09-18'
       },
       '2006' =>
       {
-        ORDINAL => 45,
+        MEET_ORDINAL => 45,
         YEAR => 2006,
         DATE_START => '2006-09-25',
         DATE_END => '2006-09-25'
       },
       '2007' =>
       {
-        ORDINAL => 46,
+        MEET_ORDINAL => 46,
         YEAR => 2007,
         DATE_START => '2007-09-20',
         DATE_END => '2007-09-20'
       },
       '2008' =>
       {
-        ORDINAL => 47,
+        MEET_ORDINAL => 47,
         YEAR => 2008,
         DATE_START => '2008-09-27',
         DATE_END => '2008-09-28'
       },
       '2009' =>
       {
-        ORDINAL => 48,
+        MEET_ORDINAL => 48,
         YEAR => 2009,
         DATE_START => '2009-09-09',
         DATE_END => '2009-09-10'
       },
       '2010' =>
       {
-        ORDINAL => 49,
+        MEET_ORDINAL => 49,
         YEAR => 2010,
         DATE_START => '2010-09-08',
         DATE_END => '2010-09-09'
       },
       '2011' =>
       {
-        ORDINAL => 50,
+        MEET_ORDINAL => 50,
         YEAR => 2011,
         DATE_START => '2011-09-07',
         DATE_END => '2011-09-08'
       },
       '2012' =>
       {
-        ORDINAL => 51,
+        MEET_ORDINAL => 51,
         YEAR => 2012,
         DATE_START => '2012-09-12',
         DATE_END => '2012-09-13'
       },
       '2013' =>
       {
-        ORDINAL => 52,
+        MEET_ORDINAL => 52,
         YEAR => 2013,
         DATE_START => '2013-09-11',
         DATE_END => '2013-09-12'
       },
       '2014' =>
       {
-        ORDINAL => 53,
+        MEET_ORDINAL => 53,
         YEAR => 2014,
         DATE_START => '2014-09-07',
         DATE_END => '2014-09-11'
       },
       '2015' =>
       {
-        ORDINAL => 54,
+        MEET_ORDINAL => 54,
         YEAR => 2015,
         DATE_START => '2015-09-05',
         DATE_END => '2015-09-11'
@@ -117,21 +117,21 @@ my %MEETS_CROATIA =
     {
       '2004' =>
       {
-        ORDINAL => 3,
+        MEET_ORDINAL => 3,
         YEAR => 2004,
         DATE_START => '2004-05-22',
         DATE_END => '2004-05-24'
       },
       '2005' =>
       {
-        ORDINAL => 4,
+        MEET_ORDINAL => 4,
         YEAR => 2005,
         DATE_START => '2005-05-29',
         DATE_END => '2005-05-31'
       },
       '2006' =>
       {
-        ORDINAL => 5,
+        MEET_ORDINAL => 5,
         YEAR => 2006,
         DATE_START => '2006-05-27',
         DATE_END => '2006-05-28'

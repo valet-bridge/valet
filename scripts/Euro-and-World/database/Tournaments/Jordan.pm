@@ -31,21 +31,21 @@ my %MEETS_JORDAN =
     {
       '2011' =>
       {
-        ORDINAL => 30,
+        MEET_ORDINAL => 30,
         YEAR => 2011,
         DATE_START => '2011-12-01',
         DATE_END => '2011-12-04'
       },
       '2013' =>
       {
-        ORDINAL => 32,
+        MEET_ORDINAL => 32,
         YEAR => 2013,
         DATE_START => '2013-11-06',
         DATE_END => '2013-11-10'
       },
       '2014' =>
       {
-        ORDINAL => 33,
+        MEET_ORDINAL => 33,
         CITY => 'Amman',
         YEAR => 2014,
         DATE_START => '2014-11-04',
@@ -53,7 +53,7 @@ my %MEETS_JORDAN =
       },
       '2015' =>
       {
-        ORDINAL => 34,
+        MEET_ORDINAL => 34,
         CITY => 'Amman',
         YEAR => 2015,
         DATE_START => '2015-11-04',
@@ -61,7 +61,7 @@ my %MEETS_JORDAN =
       },
       '2016' =>
       {
-        ORDINAL => 35,
+        MEET_ORDINAL => 35,
         YEAR => 2016,
         CITY => 'Amman',
         DATE_START => '2016-10-19',
@@ -69,7 +69,7 @@ my %MEETS_JORDAN =
       },
       '2018' =>
       {
-        ORDINAL => 37,
+        MEET_ORDINAL => 37,
         YEAR => 2018,
         CITY => 'Amman',
         DATE_START => '2018-10-17',
@@ -78,7 +78,7 @@ my %MEETS_JORDAN =
       '2019' =>
       {
         # https://bridgescanner.com/event/annual-jordan-international-bridge-festival-2019
-        ORDINAL => 38,
+        MEET_ORDINAL => 38,
         YEAR => 2019,
         CITY => 'Amman',
         DATE_START => '2019-10-16',

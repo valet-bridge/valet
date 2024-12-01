@@ -16,7 +16,6 @@ our @EXPORT = qw(set_links);
 my %GLOBAL = (
   ORGANIZATION => 'FPB',
   COUNTRY => 'Portugal',
-  ORIGIN => 'International',
   ZONE => 'Europe',
 );
 
@@ -25,6 +24,7 @@ my %MEETS_PORTUGAL =
   'Azores Festival' =>
   {
     %GLOBAL,
+    ORIGIN => 'International',
     REGION => 'Azores',
 
     EDITIONS =>
@@ -122,6 +122,7 @@ my %MEETS_PORTUGAL =
   'Estoril Bridge Festival' =>
   {
     %GLOBAL,
+    ORIGIN => 'International',
     CITY => 'Estoril',
 
     EDITIONS =>
@@ -244,8 +245,8 @@ my %MEETS_PORTUGAL =
   'Lisbon International Festival' =>
   {
     %GLOBAL,
-    CITY => 'Lisbon',
     ORIGIN => 'International',
+    CITY => 'Lisbon',
 
     EDITIONS =>
     {
@@ -940,6 +941,7 @@ my %TOURNAMENTS_PORTUGAL =
   'Portuguese IMP Pairs',
   {
     %GLOBAL,
+    ORIGIN => 'International',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -966,6 +968,7 @@ my %TOURNAMENTS_PORTUGAL =
   'Portuguese Open Teams',
   {
     %GLOBAL,
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1264,6 +1267,7 @@ my %TOURNAMENTS_PORTUGAL =
   'Portuguese Open Trials',
   {
     %GLOBAL,
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1370,6 +1374,7 @@ my %TOURNAMENTS_PORTUGAL =
   'Portuguese Northern Regional Open Teams',
   {
     %GLOBAL,
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1426,6 +1431,7 @@ my %TOURNAMENTS_PORTUGAL =
   'Rui Pinto Cup',
   {
     %GLOBAL,
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

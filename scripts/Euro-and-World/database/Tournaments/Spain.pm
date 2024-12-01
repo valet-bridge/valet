@@ -17,7 +17,6 @@ our @EXPORT = qw(set_links);
 my %GLOBAL = (
   ORGANIZATION => 'AEB',
   COUNTRY => 'Spain',
-  ORIGIN => 'National',
   ZONE => 'Europe',
 );
 
@@ -30,6 +29,7 @@ my %TOURNAMENTS_SPAIN =
   'Las Palmas Simultaneous Pairs',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     CITY => 'Las Palmas',
     FORM => 'Pairs',
     SCORING => 'MP',
@@ -56,6 +56,7 @@ my %TOURNAMENTS_SPAIN =
   'Las Palmas Women Pairs',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     CITY => 'Las Palmas',
     FORM => 'Pairs',
     SCORING => 'MP',
@@ -83,6 +84,7 @@ my %TOURNAMENTS_SPAIN =
   'Madrid Senior Teams',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     CITY => 'Madrid',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -335,6 +337,7 @@ my %TOURNAMENTS_SPAIN =
   'Spanish Central Zone Teams',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -362,6 +365,7 @@ my %TOURNAMENTS_SPAIN =
   'Spanish Mixed Teams',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -388,6 +392,7 @@ my %TOURNAMENTS_SPAIN =
   'Spanish Open Teams',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -507,6 +512,7 @@ my %TOURNAMENTS_SPAIN =
   'Spanish Open Trials',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -535,6 +541,7 @@ my %TOURNAMENTS_SPAIN =
   'Spanish Senior Trials',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

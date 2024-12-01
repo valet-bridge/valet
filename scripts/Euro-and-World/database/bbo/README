@@ -8,9 +8,6 @@ Resolve WARNING in d
 
 Somehow unify all the field lists in Fields.pm
 
-ORDINAL, MEET_ORDINAL: Probably set the latter when we have
-MEET and not TNAME?
-
 Could have a more compact BOARD format when all is accounted for
 
 When matching up
@@ -30,12 +27,6 @@ When matched up
 - If International, should have only countries
 - If Interclub, should have only clubs
 - If only countries, should be International
-
-Manual checks:
-- ORIGIN: GLOBAL should never include it (dial back)
-
-Global fields, started on top of Sweden
-Just add %GLOBAL first
 
 Cornell is not Cornell University, 27126
 

@@ -31,119 +31,119 @@ my %MEETS_ISRAEL =
     {
       '2001' =>
       {
-        ORDINAL => 35,
+        MEET_ORDINAL => 35,
         YEAR => 2001,
         DATE_START => '2001-02-08',
         DATE_END => '2001-02-17'
       },
       '2003' =>
       {
-        ORDINAL => 37,
+        MEET_ORDINAL => 37,
         YEAR => 2003,
         DATE_START => '2003-02-13',
         DATE_END => '2003-02-22'
       },
       '2004' =>
       {
-        ORDINAL => 38,
+        MEET_ORDINAL => 38,
         YEAR => 2004,
         DATE_START => '2004-02-12',
         DATE_END => '2004-02-21'
       },
       '2006' =>
       {
-        ORDINAL => 40,
+        MEET_ORDINAL => 40,
         YEAR => 2006,
         DATE_START => '2006-02-09',
         DATE_END => '2006-02-19'
       },
       '2007' =>
       {
-        ORDINAL => 41,
+        MEET_ORDINAL => 41,
         YEAR => 2007,
         DATE_START => '2007-02-08',
         DATE_END => '2007-02-17'
       },
       '2009' =>
       {
-        ORDINAL => 43,
+        MEET_ORDINAL => 43,
         YEAR => 2009,
         DATE_START => '2009-02-05',
         DATE_END => '2009-02-14'
       },
       '2010' =>
       {
-        ORDINAL => 44,
+        MEET_ORDINAL => 44,
         YEAR => 2010,
         DATE_START => '2010-02-18',
         DATE_END => '2010-02-27'
       },
       '2011' =>
       {
-        ORDINAL => 45,
+        MEET_ORDINAL => 45,
         YEAR => 2011,
         DATE_START => '2011-02-18',
         DATE_END => '2011-02-18'
       },
       '2012' =>
       {
-        ORDINAL => 46,
+        MEET_ORDINAL => 46,
         YEAR => 2012,
         DATE_START => '2012-02-02',
         DATE_END => '2012-02-11'
       },
       '2013' =>
       {
-        ORDINAL => 47,
+        MEET_ORDINAL => 47,
         YEAR => 2013,
         DATE_START => '2013-02-09',
         DATE_END => '2013-02-15'
       },
       '2014' =>
       {
-        ORDINAL => 48,
+        MEET_ORDINAL => 48,
         YEAR => 2014,
         DATE_START => '2014-02-20',
         DATE_END => '2014-02-26'
       },
       '2016' =>
       {
-        ORDINAL => 50,
+        MEET_ORDINAL => 50,
         YEAR => 2016,
         DATE_START => '2016-06-03',
         DATE_END => '2016-06-09'
       },
       '2017' =>
       {
-        ORDINAL => 51,
+        MEET_ORDINAL => 51,
         YEAR => 2017,
         DATE_START => '2017-06-30',
         DATE_END => '2017-07-06'
       },
       '2018' =>
       {
-        ORDINAL => 52,
+        MEET_ORDINAL => 52,
         YEAR => 2018,
         DATE_START => '2018-06-22',
         DATE_END => '2018-06-28'
       },
       '2019' =>
       {
-        ORDINAL => 53,
+        MEET_ORDINAL => 53,
         YEAR => 2019,
         DATE_START => '2019-05-31',
         DATE_END => '2019-06-06'
       },
       '2022' =>
       {
-        ORDINAL => 54,
+        MEET_ORDINAL => 54,
         YEAR => 2022,
         DATE_START => '2022-07-07',
         DATE_END => '2022-07-14'
       },
       '2024' =>
       {
-        ORDINAL => 56,
+        MEET_ORDINAL => 56,
         YEAR => 2024,
         DATE_START => '2024-05-30',
         DATE_END => '2024-06-05'
@@ -194,7 +194,7 @@ my %MEETS_ISRAEL =
     {
       '2000' =>
       {
-        ORDINAL => 6,
+        MEET_ORDINAL => 6,
         CITY => 'Eilat',
         YEAR => 2000,
         DATE_START => '2000-11-05',
@@ -202,7 +202,7 @@ my %MEETS_ISRAEL =
       },
       '2001' =>
       {
-        ORDINAL => 7,
+        MEET_ORDINAL => 7,
         CITY => 'Eilat',
         YEAR => 2001,
         DATE_START => '2001-11-04',
@@ -210,7 +210,7 @@ my %MEETS_ISRAEL =
       },
       '2002' =>
       {
-        ORDINAL => 8,
+        MEET_ORDINAL => 8,
         CITY => 'Eilat',
         YEAR => 2002,
         DATE_START => '2002-11-10',
@@ -218,7 +218,7 @@ my %MEETS_ISRAEL =
       },
       '2003' =>
       {
-        ORDINAL => 9,
+        MEET_ORDINAL => 9,
         CITY => 'Eilat',
         YEAR => 2003,
         DATE_START => '2003-11-16',
@@ -226,7 +226,7 @@ my %MEETS_ISRAEL =
       },
       '2004' =>
       {
-        ORDINAL => 10,
+        MEET_ORDINAL => 10,
         CITY => 'Eilat',
         YEAR => 2004,
         DATE_START => '2004-11-14',
@@ -234,7 +234,7 @@ my %MEETS_ISRAEL =
       },
       '2005' =>
       {
-        ORDINAL => 11,
+        MEET_ORDINAL => 11,
         CITY => 'Eilat',
         YEAR => 2005,
         DATE_START => '2005-11-13',
@@ -242,7 +242,7 @@ my %MEETS_ISRAEL =
       },
       '2006' =>
       {
-        ORDINAL => 12,
+        MEET_ORDINAL => 12,
         CITY => 'Eilat',
         YEAR => 2006,
         DATE_START => '2006-11-05',
@@ -250,7 +250,7 @@ my %MEETS_ISRAEL =
       },
       '2007' =>
       {
-        ORDINAL => 13,
+        MEET_ORDINAL => 13,
         CITY => 'Eilat',
         YEAR => 2007,
         DATE_START => '2007-11-08',
@@ -258,7 +258,7 @@ my %MEETS_ISRAEL =
       },
       '2008' =>
       {
-        ORDINAL => 14,
+        MEET_ORDINAL => 14,
         CITY => 'Eilat',
         YEAR => 2008,
         DATE_START => '2008-11-13',
@@ -266,7 +266,7 @@ my %MEETS_ISRAEL =
       },
       '2009' =>
       {
-        ORDINAL => 15,
+        MEET_ORDINAL => 15,
         CITY => 'Eilat',
         YEAR => 2009,
         DATE_START => '2009-11-07',
@@ -274,7 +274,7 @@ my %MEETS_ISRAEL =
       },
       '2010' =>
       {
-        ORDINAL => 16,
+        MEET_ORDINAL => 16,
         CITY => 'Eilat',
         YEAR => 2010,
         DATE_START => '2010-11-18',
@@ -282,7 +282,7 @@ my %MEETS_ISRAEL =
       },
       '2011' =>
       {
-        ORDINAL => 17,
+        MEET_ORDINAL => 17,
         CITY => 'Eilat',
         YEAR => 2011,
         DATE_START => '2011-11-17',
@@ -290,7 +290,7 @@ my %MEETS_ISRAEL =
       },
       '2012' =>
       {
-        ORDINAL => 18,
+        MEET_ORDINAL => 18,
         CITY => 'Eilat',
         YEAR => 2012,
         DATE_START => '2012-11-15',
@@ -298,7 +298,7 @@ my %MEETS_ISRAEL =
       },
       '2013' =>
       {
-        ORDINAL => 19,
+        MEET_ORDINAL => 19,
         CITY => 'Eilat',
         YEAR => 2013,
         DATE_START => '2013-11-21',
@@ -306,7 +306,7 @@ my %MEETS_ISRAEL =
       },
       '2014' =>
       {
-        ORDINAL => 20,
+        MEET_ORDINAL => 20,
         CITY => 'Eilat',
         YEAR => 2014,
         DATE_START => '2014-11-13',
@@ -314,7 +314,7 @@ my %MEETS_ISRAEL =
       },
       '2015' =>
       {
-        ORDINAL => 21,
+        MEET_ORDINAL => 21,
         CITY => 'Eilat',
         YEAR => 2015,
         DATE_START => '2015-11-12',
@@ -322,7 +322,7 @@ my %MEETS_ISRAEL =
       },
       '2016' =>
       {
-        ORDINAL => 22,
+        MEET_ORDINAL => 22,
         CITY => 'Eilat',
         YEAR => 2016,
         DATE_START => '2016-11-07',
@@ -330,7 +330,7 @@ my %MEETS_ISRAEL =
       },
       '2017' =>
       {
-        ORDINAL => 23,
+        MEET_ORDINAL => 23,
         CITY => 'Eilat',
         YEAR => 2017,
         DATE_START => '2017-11-09',
@@ -338,7 +338,7 @@ my %MEETS_ISRAEL =
       },
       '2018' =>
       {
-        ORDINAL => 24,
+        MEET_ORDINAL => 24,
         CITY => 'Eilat',
         YEAR => 2018,
         DATE_START => '2018-11-08',
@@ -346,7 +346,7 @@ my %MEETS_ISRAEL =
       },
       '2019' =>
       {
-        ORDINAL => 25,
+        MEET_ORDINAL => 25,
         CITY => 'Eilat',
         YEAR => 2019,
         DATE_START => '2019-11-12',

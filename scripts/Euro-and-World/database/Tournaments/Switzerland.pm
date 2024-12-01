@@ -15,10 +15,9 @@ our @EXPORT = qw(set_links);
 # Not so easy to find results
 
 my %GLOBAL = (
-    ORGANIZATION => 'FSB',
-    COUNTRY => 'Switzerland',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+  ORGANIZATION => 'FSB',
+  COUNTRY => 'Switzerland',
+  ZONE => 'Europe',
 );
 
 my %MEETS_SWITZERLAND =
@@ -26,6 +25,7 @@ my %MEETS_SWITZERLAND =
   'Zurich Open' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     CITY => 'Zürich',
 
     EDITIONS => 
@@ -54,6 +54,7 @@ my %TOURNAMENTS_SWITZERLAND =
   'Jean Besse Cup' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -93,6 +94,7 @@ my %TOURNAMENTS_SWITZERLAND =
   'Swiss Club Championship' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -232,6 +234,7 @@ my %TOURNAMENTS_SWITZERLAND =
   'Swiss Cup' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -385,6 +388,7 @@ my %TOURNAMENTS_SWITZERLAND =
   'Swiss Open IMP Pairs' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -424,6 +428,7 @@ my %TOURNAMENTS_SWITZERLAND =
   'Swiss Open Teams' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

@@ -16,7 +16,6 @@ our @EXPORT = qw(set_links);
 my %GLOBAL = (
   ORGANIZATION => 'CBLT',
   COUNTRY => 'Thailand',
-  ORIGIN => 'National',
   ZONE => 'South East Asia'
 );
 
@@ -25,6 +24,7 @@ my %MEETS_THAILAND =
   'Bangkok Bridge Festival' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     CITY => 'Bangkok',
     ZONE => 'South East Asia',
 
@@ -61,13 +61,14 @@ my %MEETS_THAILAND =
   'Thailand National Games' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     ZONE => 'South East Asia',
 
     EDITIONS => 
     {
       '2014' =>
       {
-        ORDINAL => 43,
+        MEET_ORDINAL => 43,
         YEAR => 2014,
         DATE_START => '2014-12-13',
         DATE_END => '2014-12-16'

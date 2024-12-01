@@ -21,7 +21,6 @@ our @EXPORT = qw(set_links);
 my %GLOBAL = (
   ORGANIZATION => 'FCB',
   COUNTRY => 'Chile',
-  ORIGIN => 'National',
   ZONE => 'South America',
 );
 
@@ -34,6 +33,7 @@ my %TOURNAMENTS_CHILE =
   'Chilean Copa de Oro' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -131,6 +131,7 @@ my %TOURNAMENTS_CHILE =
   'Chilean Copa de Plata' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -156,6 +157,7 @@ my %TOURNAMENTS_CHILE =
   'Chilean Cup' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -197,6 +199,7 @@ my %TOURNAMENTS_CHILE =
   'Chilean Invitational Teams' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -223,6 +226,7 @@ my %TOURNAMENTS_CHILE =
   'Chilean Open Pairs' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -248,6 +252,7 @@ my %TOURNAMENTS_CHILE =
   'Chilean Open Teams' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -283,6 +288,7 @@ my %TOURNAMENTS_CHILE =
   'Chilean Open Trials' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -346,6 +352,7 @@ my %TOURNAMENTS_CHILE =
   'Chilean Senior Teams' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -381,6 +388,7 @@ my %TOURNAMENTS_CHILE =
   'Chilean Women Teams' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -408,6 +416,7 @@ my %TOURNAMENTS_CHILE =
   'Chilean Women Trials' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',

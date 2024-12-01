@@ -157,112 +157,112 @@ my %MEETS_BALTIC =
     {
       '2009' =>
       {
-        ORDINAL => 3,
+        MEET_ORDINAL => 3,
         YEAR => 2009,
         DATE_START => '2009-08-19',
         DATE_END => '2009-08-23'
       },
       '2010' =>
       {
-        ORDINAL => 4,
+        MEET_ORDINAL => 4,
         YEAR => 2010,
         DATE_START => '2010-08-18',
         DATE_END => '2010-08-22'
       },
       '2011' =>
       {
-        ORDINAL => 5,
+        MEET_ORDINAL => 5,
         YEAR => 2011,
         DATE_START => '2011-08-17',
         DATE_END => '2011-08-21'
       },
       '2012' =>
       {
-        ORDINAL => 6,
+        MEET_ORDINAL => 6,
         YEAR => 2012,
         DATE_START => '2012-08-29',
         DATE_END => '2012-09-01'
       },
       '2013' =>
       {
-        ORDINAL => 7,
+        MEET_ORDINAL => 7,
         YEAR => 2013,
         DATE_START => '2013-08-21',
         DATE_END => '2013-08-25'
       },
       '2014' =>
       {
-        ORDINAL => 8,
+        MEET_ORDINAL => 8,
         YEAR => 2014,
         DATE_START => '2014-08-13',
         DATE_END => '2014-08-17'
       },
       '2015' =>
       {
-        ORDINAL => 9,
+        MEET_ORDINAL => 9,
         YEAR => 2015,
         DATE_START => '2015-08-19',
         DATE_END => '2015-08-23'
       },
       '2016' =>
       {
-        ORDINAL => 10,
+        MEET_ORDINAL => 10,
         YEAR => 2016,
         DATE_START => '2016-08-17',
         DATE_END => '2016-08-21'
       },
       '2017' =>
       {
-        ORDINAL => 11,
+        MEET_ORDINAL => 11,
         YEAR => 2017,
         DATE_START => '2017-08-09',
         DATE_END => '2017-08-13'
       },
       '2018' =>
       {
-        ORDINAL => 12,
+        MEET_ORDINAL => 12,
         YEAR => 2018,
         DATE_START => '2018-08-15',
         DATE_END => '2018-08-19'
       },
       '2019' =>
       {
-        ORDINAL => 13,
+        MEET_ORDINAL => 13,
         YEAR => 2019,
         DATE_START => '2019-08-14',
         DATE_END => '2019-08-18'
       },
       '2020' =>
       {
-        ORDINAL => 14,
+        MEET_ORDINAL => 14,
         YEAR => 2020,
         DATE_START => '2020-08-12',
         DATE_END => '2020-08-16'
       },
       '2021' =>
       {
-        ORDINAL => 15,
+        MEET_ORDINAL => 15,
         YEAR => 2021,
         DATE_START => '2021-08-11',
         DATE_END => '2021-08-15'
       },
       '2022' =>
       {
-        ORDINAL => 16,
+        MEET_ORDINAL => 16,
         YEAR => 2022,
         DATE_START => '2022-08-10',
         DATE_END => '2022-08-14'
       },
       '2023' =>
       {
-        ORDINAL => 17,
+        MEET_ORDINAL => 17,
         YEAR => 2023,
         DATE_START => '2023-09-06',
         DATE_END => '2023-09-10'
       },
       '2024' =>
       {
-        ORDINAL => 18,
+        MEET_ORDINAL => 18,
         YEAR => 2024,
         DATE_START => '2024-08-21',
         DATE_END => '2024-08-25'
@@ -331,7 +331,7 @@ my %MEETS_BALTIC =
       '2012' =>
       {
         # https://old.bridge.ee/festival/5SFG_fest12.htm
-        ORDINAL => 45,
+        MEET_ORDINAL => 45,
         YEAR => 2012,
         DATE_START => '2012-09-27',
         DATE_END => '2012-09-30'
@@ -339,7 +339,7 @@ my %MEETS_BALTIC =
       '2013' =>
       {
         # https://old.bridge.ee/festival/fest13.htm
-        ORDINAL => 46,
+        MEET_ORDINAL => 46,
         YEAR => 2013,
         DATE_START => '2013-05-22',
         DATE_END => '2013-05-26'
@@ -347,7 +347,7 @@ my %MEETS_BALTIC =
       '2014' =>
       {
         # https://old.bridge.ee/festival/fest14.htm
-        ORDINAL => 47,
+        MEET_ORDINAL => 47,
         YEAR => 2014,
         DATE_START => '2014-05-21',
         DATE_END => '2014-05-25'
@@ -355,56 +355,56 @@ my %MEETS_BALTIC =
       '2015' =>
       {
         # https://old.bridge.ee/festival/fest15.htm
-        ORDINAL => 48,
+        MEET_ORDINAL => 48,
         YEAR => 2015,
         DATE_START => '2015-05-27',
         DATE_END => '2015-05-31'
       },
       '2016' =>
       {
-        ORDINAL => 49,
+        MEET_ORDINAL => 49,
         YEAR => 2016,
         DATE_START => '2016-05-25',
         DATE_END => '2016-05-29'
       },
       '2017' =>
       {
-        ORDINAL => 50,
+        MEET_ORDINAL => 50,
         YEAR => 2017,
         DATE_START => '2017-05-25',
         DATE_END => '2017-05-29'
       },
       '2018' =>
       {
-        ORDINAL => 51,
+        MEET_ORDINAL => 51,
         YEAR => 2018,
         DATE_START => '2018-04-24',
         DATE_END => '2018-04-28'
       },
       '2019' =>
       {
-        ORDINAL => 52,
+        MEET_ORDINAL => 52,
         YEAR => 2019,
         DATE_START => '2019-05-02',
         DATE_END => '2019-05-05'
       },
       '2022' =>
       {
-        ORDINAL => 53,
+        MEET_ORDINAL => 53,
         YEAR => 2022,
         DATE_START => '2022-04-20',
         DATE_END => '2022-04-24'
       },
       '2023' =>
       {
-        ORDINAL => 54,
+        MEET_ORDINAL => 54,
         YEAR => 2023,
         DATE_START => '2023-05-25',
         DATE_END => '2023-05-28'
       },
       '2024' =>
       {
-        ORDINAL => 55,
+        MEET_ORDINAL => 55,
         YEAR => 2024,
         DATE_START => '2024-05-16',
         DATE_END => '2024-05-19'
@@ -447,21 +447,21 @@ my %MEETS_BALTIC =
       },
       '2010' =>
       {
-        ORDINAL => 37,
+        MEET_ORDINAL => 37,
         YEAR => 2010,
         DATE_START => '2010-09-16',
         DATE_END => '2010-09-19'
       },
       '2011' =>
       {
-        ORDINAL => 38,
+        MEET_ORDINAL => 38,
         YEAR => 2011,
         DATE_START => '2011-09-29',
         DATE_END => '2011-10-02'
       },
       '2012' =>
       {
-        ORDINAL => 39,
+        MEET_ORDINAL => 39,
         YEAR => 2012,
         DATE_START => '2012-10-25',
         DATE_END => '2012-10-28'
@@ -469,14 +469,14 @@ my %MEETS_BALTIC =
       '2013' =>
       {
         # https://bridgescanner.com/event/vilnius-cup-2013
-        ORDINAL => 40,
+        MEET_ORDINAL => 40,
         YEAR => 2013,
         DATE_START => '2013-08-29',
         DATE_END => '2013-09-01'
       },
       '2014' =>
       {
-        ORDINAL => 41,
+        MEET_ORDINAL => 41,
         YEAR => 2014,
         DATE_START => '2014-09-18',
         DATE_END => '2014-09-21'

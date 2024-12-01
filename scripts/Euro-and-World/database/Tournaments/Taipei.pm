@@ -20,7 +20,6 @@ our @EXPORT = qw(set_links);
 my %GLOBAL = (
   ORGANIZATION => 'CTCBA',
   COUNTRY => 'Chinese Taipei',
-  ORIGIN => 'National',
   ZONE => 'South East Asia'
 );
 
@@ -33,6 +32,7 @@ my %TOURNAMENTS_TAIPEI =
   'Antonio Chong Cup' => 
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -68,6 +68,7 @@ my %TOURNAMENTS_TAIPEI =
   'NTU Cup' => 
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -489,6 +490,7 @@ my %TOURNAMENTS_TAIPEI =
   'Taiwanese Open Trials' => 
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -657,6 +659,7 @@ my %TOURNAMENTS_TAIPEI =
   'Taiwanese Senior Trials' => 
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

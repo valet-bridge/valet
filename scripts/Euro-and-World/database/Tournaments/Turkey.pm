@@ -16,7 +16,6 @@ our @EXPORT = qw(set_links);
 my %GLOBAL = (
   ORGANIZATION => 'TBF',
   COUNTRY => 'Turkey',
-  ORIGIN => 'National',
   ZONE => 'Europe',
 );
 
@@ -55,6 +54,7 @@ my %MEETS_TURKEY =
   'Cappadocia Fairy Chimneys Festival' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     REGION => 'Cappadocia',
 
     EDITIONS => 
@@ -93,6 +93,7 @@ my %MEETS_TURKEY =
   'Bodrum Peninsula Festival' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     CITY => 'Bodrum',
 
     EDITIONS => 
@@ -109,6 +110,7 @@ my %MEETS_TURKEY =
   'Mersin Bridge Festival' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     CITY => 'Mersin',
 
     EDITIONS => 
@@ -147,6 +149,7 @@ my %MEETS_TURKEY =
   'Sivrioglu Festival' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     CITY => 'Sivrioglu',
 
     EDITIONS => 
@@ -187,6 +190,7 @@ my %MEETS_TURKEY =
   'Turkish Open Trials' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
 
     EDITIONS => 
     {
@@ -222,6 +226,7 @@ my %MEETS_TURKEY =
   'Turkish Winter Championships' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
 
     EDITIONS => 
     {
@@ -330,6 +335,7 @@ my %MEETS_TURKEY =
   'Turkish Women Trials' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
 
     EDITIONS => 
     {
@@ -870,6 +876,7 @@ my %TOURNAMENTS_TURKEY =
   'Goksu-Yalikavak Pairs',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -896,6 +903,7 @@ my %TOURNAMENTS_TURKEY =
   'Istanbul Summer Teams',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -936,6 +944,7 @@ my %TOURNAMENTS_TURKEY =
   'Istanbul Winter Teams',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1069,6 +1078,7 @@ my %TOURNAMENTS_TURKEY =
   'Izmir Teams Cup',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1104,6 +1114,7 @@ my %TOURNAMENTS_TURKEY =
   'Izmir Winter Teams Cup',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1325,6 +1336,7 @@ my %TOURNAMENTS_TURKEY =
   'Murat Kilercioglu Turkish Spring Teams',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1365,6 +1377,7 @@ my %TOURNAMENTS_TURKEY =
   'Necmettin Sunget Teams Cup',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2202,6 +2215,7 @@ my %TOURNAMENTS_TURKEY =
   'Turkish Junior Pairs',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -2229,6 +2243,7 @@ my %TOURNAMENTS_TURKEY =
   'Turkish Mixed Team Trials',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -2265,6 +2280,7 @@ my %TOURNAMENTS_TURKEY =
   'Turkish Mixed Teams',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -2321,6 +2337,7 @@ my %TOURNAMENTS_TURKEY =
   'Turkish Open Teams',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2645,6 +2662,7 @@ my %TOURNAMENTS_TURKEY =
   'Turkish Swiss Mixed Teams',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -2700,6 +2718,7 @@ my %TOURNAMENTS_TURKEY =
   'Turkish University Teams',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3251,6 +3270,7 @@ my %TOURNAMENTS_TURKEY =
   'Turkish Winter Women Teams',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -3403,6 +3423,7 @@ my %TOURNAMENTS_TURKEY =
   'Turkish Women Teams',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -3490,6 +3511,7 @@ my %TOURNAMENTS_TURKEY =
   'Western Mediterranean Club Teams',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

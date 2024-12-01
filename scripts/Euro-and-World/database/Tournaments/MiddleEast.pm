@@ -28,7 +28,7 @@ my %MEETS_MIDDLEEAST =
     {
       '2001' =>
       {
-        ORDINAL => 11,
+        MEET_ORDINAL => 11,
         CITY => 'Manama',
         COUNTRY => 'Bahrain',
         YEAR => 2001,
@@ -37,7 +37,7 @@ my %MEETS_MIDDLEEAST =
       },
       '2003' =>
       {
-        ORDINAL => 12,
+        MEET_ORDINAL => 12,
         CITY => 'Amman',
         COUNTRY => 'Jordan',
         YEAR => 2003,
@@ -46,7 +46,7 @@ my %MEETS_MIDDLEEAST =
       },
       '2005' =>
       {
-        ORDINAL => 13,
+        MEET_ORDINAL => 13,
         CITY => 'Amman',
         COUNTRY => 'Jordan',
         YEAR => 2005,
@@ -55,7 +55,7 @@ my %MEETS_MIDDLEEAST =
       },
       '2007' =>
       {
-        ORDINAL => 14,
+        MEET_ORDINAL => 14,
         CITY => 'Karachi',
         COUNTRY => 'Pakistan',
         YEAR => 2007,
@@ -64,7 +64,7 @@ my %MEETS_MIDDLEEAST =
       },
       '2009' =>
       {
-        ORDINAL => 15,
+        MEET_ORDINAL => 15,
         CITY => 'Amman',
         COUNTRY => 'Jordan',
         YEAR => 2009,
@@ -73,7 +73,7 @@ my %MEETS_MIDDLEEAST =
       },
       '2011' =>
       {
-        ORDINAL => 16,
+        MEET_ORDINAL => 16,
         CITY => 'Chennai',
         COUNTRY => 'India',
         YEAR => 2011,
@@ -82,7 +82,7 @@ my %MEETS_MIDDLEEAST =
       },
       '2013' =>
       {
-        ORDINAL => 17,
+        MEET_ORDINAL => 17,
         CITY => 'Ahmedabad',
         COUNTRY => 'India',
         YEAR => 2013,
@@ -91,7 +91,7 @@ my %MEETS_MIDDLEEAST =
       },
       '2015' =>
       {
-        ORDINAL => 18,
+        MEET_ORDINAL => 18,
         CITY => 'Amman',
         COUNTRY => 'Jordan',
         YEAR => 2015,
@@ -100,7 +100,7 @@ my %MEETS_MIDDLEEAST =
       },
       '2017' =>
       {
-        ORDINAL => 19,
+        MEET_ORDINAL => 19,
         CITY => 'Dubai',
         COUNTRY => 'UAE',
         YEAR => 2017,
@@ -109,7 +109,7 @@ my %MEETS_MIDDLEEAST =
       },
       '2019' =>
       {
-        ORDINAL => 20,
+        MEET_ORDINAL => 20,
         CITY => 'Amman',
         COUNTRY => 'Jordan',
         YEAR => 2019,
@@ -118,7 +118,7 @@ my %MEETS_MIDDLEEAST =
       },
       '2021' =>
       {
-        ORDINAL => 21,
+        MEET_ORDINAL => 21,
         CITY => 'Online',
         YEAR => 2021,
         DATE_START => '2021-12-08',

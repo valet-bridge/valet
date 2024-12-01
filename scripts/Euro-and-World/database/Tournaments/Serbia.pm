@@ -17,7 +17,6 @@ our @EXPORT = qw(set_links);
 my %GLOBAL = (
   ORGANIZATION => 'BSS',
   COUNTRY => 'Serbia',
-  ORIGIN => 'National',
   ZONE => 'Europe',
 );
 
@@ -30,6 +29,7 @@ my %TOURNAMENTS_SERBIA =
   'Serbian Cup' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -197,6 +197,7 @@ my %TOURNAMENTS_SERBIA =
   'Serbian Inter-City Teams' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -234,6 +235,7 @@ my %TOURNAMENTS_SERBIA =
   'Serbian Open Teams' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -317,6 +319,7 @@ my %TOURNAMENTS_SERBIA =
   'Serbian Open Trials' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -377,6 +380,7 @@ my %TOURNAMENTS_SERBIA =
   'Serbian Premier League' =>
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

@@ -14,7 +14,6 @@ our @EXPORT = qw(set_links);
 my %GLOBAL = (
   ORGANIZATION => 'VBF',
   COUNTRY => 'Venezuela',
-  ORIGIN => 'National',
   ZONE => 'South America'
 );
 
@@ -27,6 +26,7 @@ my %TOURNAMENTS_VENEZUELA =
   'Venezuelan Mixed Teams' => 
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -54,6 +54,7 @@ my %TOURNAMENTS_VENEZUELA =
   'Venezuelan Swiss Pairs' => 
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Pairs',
     SCORING => 'MP', # Really?
     GENDER => 'Open',

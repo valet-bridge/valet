@@ -145,7 +145,7 @@ my %MEETS_SUPRA =
       },
       '2009' =>
       {
-        ORDINAL => 35,
+        MEET_ORDINAL => 35,
         CITY => 'Las Vegas',
         COUNTRY => 'USA',
         YEAR => 2009,

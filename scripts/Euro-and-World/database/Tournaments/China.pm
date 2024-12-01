@@ -31,7 +31,7 @@ my %MEETS_CHINA =
     {
       '2006' =>
       {
-        ORDINAL => 3,
+        MEET_ORDINAL => 3,
         YEAR => 2006,
         DATE_START => '2006-05-26',
         DATE_END => '2006-05-29'
@@ -48,7 +48,7 @@ my %MEETS_CHINA =
     {
       '2011A' =>
       {
-        ORDINAL => 1,
+        MEET_ORDINAL => 1,
         CITY => 'Beijing',
         YEAR => 2011,
         DATE_START => '2011-02-19',
@@ -56,7 +56,7 @@ my %MEETS_CHINA =
       },
       '2011B' =>
       {
-        ORDINAL => 2,
+        MEET_ORDINAL => 2,
         CITY => 'Beijing',
         YEAR => 2011,
         DATE_START => '2011-05-26',
@@ -64,7 +64,7 @@ my %MEETS_CHINA =
       },
       '2011C' =>
       {
-        ORDINAL => 3,
+        MEET_ORDINAL => 3,
         CITY => 'Beijing',
         YEAR => 2011,
         DATE_START => '2011-09-06',
@@ -72,7 +72,7 @@ my %MEETS_CHINA =
       },
       '2012A' =>
       {
-        ORDINAL => 5,
+        MEET_ORDINAL => 5,
         CITY => 'Beijing',
         YEAR => 2012,
         DATE_START => '2012-03-22',
@@ -80,7 +80,7 @@ my %MEETS_CHINA =
       },
       '2012B' =>
       {
-        ORDINAL => 6,
+        MEET_ORDINAL => 6,
         CITY => 'Beijing',
         YEAR => 2012,
         DATE_START => '2012-06-18',
@@ -88,7 +88,7 @@ my %MEETS_CHINA =
       },
       '2012C' =>
       {
-        ORDINAL => 8,
+        MEET_ORDINAL => 8,
         CITY => 'Beijing',
         YEAR => 2012,
         DATE_START => '2012-11-16',
@@ -96,49 +96,49 @@ my %MEETS_CHINA =
       },
       '2013A' =>
       {
-        ORDINAL => 9,
+        MEET_ORDINAL => 9,
         YEAR => 2013,
         DATE_START => '2013-03-22',
         DATE_END => '2013-03-24'
       },
       '2013B' =>
       {
-        ORDINAL => 10,
+        MEET_ORDINAL => 10,
         YEAR => 2013,
         DATE_START => '2013-05-31',
         DATE_END => '2013-06-02'
       },
       '2013C' =>
       {
-        ORDINAL => 11,
+        MEET_ORDINAL => 11,
         YEAR => 2013,
         DATE_START => '2013-11-07',
         DATE_END => '2013-11-10'
       },
       '2014A' =>
       {
-        ORDINAL => 12,
+        MEET_ORDINAL => 12,
         YEAR => 2014,
         DATE_START => '2014-04-07',
         DATE_END => '2014-04-07'
       },
       '2014B' =>
       {
-        ORDINAL => 13,
+        MEET_ORDINAL => 13,
         YEAR => 2014,
         DATE_START => '2014-08-05',
         DATE_END => '2014-08-08'
       },
       '2015A' =>
       {
-        ORDINAL => 15,
+        MEET_ORDINAL => 15,
         YEAR => 2015,
         DATE_START => '2015-04-25',
         DATE_END => '2015-04-28'
       },
       '2015B' =>
       {
-        ORDINAL => 17,
+        MEET_ORDINAL => 17,
         YEAR => 2015,
         DATE_START => '2015-11-06',
         DATE_END => '2015-11-08'

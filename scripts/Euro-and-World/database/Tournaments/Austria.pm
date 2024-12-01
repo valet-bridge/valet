@@ -50,7 +50,7 @@ my %MEETS_AUSTRIA =
       '2018' =>
       {
         # https://www.bridgeaustria.at/turnier/wachauer-bridgewoche-mautern/
-        ORDINAL => 50,
+        MEET_ORDINAL => 50,
         YEAR => 2018,
         CITY => 'Mautern',
         DATE_START => '2018-05-05',
@@ -59,7 +59,7 @@ my %MEETS_AUSTRIA =
       '2019' =>
       {
         # https://www.bridgeaustria.at/turnier/wachauer-bridgewoche-mautern-2019/
-        ORDINAL => 51,
+        MEET_ORDINAL => 51,
         YEAR => 2019,
         CITY => 'Mautern',
         DATE_START => '2019-08-04',
@@ -68,7 +68,7 @@ my %MEETS_AUSTRIA =
       '2022' =>
       {
         # https://www.bridgeaustria.at/turnier/wachauer-bridgewoche-mautern-4/
-        ORDINAL => 52,
+        MEET_ORDINAL => 52,
         YEAR => 2022,
         DATE_START => '2022-08-07',
         DATE_END => '2022-08-12'
@@ -77,7 +77,7 @@ my %MEETS_AUSTRIA =
       {
         # https://www.bridgeaustria.at/turnier/int-bridgefestival-tulln/
         # https://www.bridgewoche.at/?page_id=2
-        ORDINAL => 53,
+        MEET_ORDINAL => 53,
         YEAR => 2023,
         CITY => 'Tulln',
         DATE_START => '2023-08-06',
@@ -86,7 +86,7 @@ my %MEETS_AUSTRIA =
       '2024' =>
       {
         # https://www.bridgewoche.at/?page_id=294
-        ORDINAL => 54,
+        MEET_ORDINAL => 54,
         YEAR => 2024,
         CITY => 'Tulln',
         DATE_START => '2024-08-04',

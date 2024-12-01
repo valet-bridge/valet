@@ -25,7 +25,7 @@ my %MEETS_WORLD =
       '2006' =>
       {
         # https://www.fisu.net/events/2006-fisu-world-university-championships-bridge/?utm_source=results
-        ORDINAL => 3,
+        MEET_ORDINAL => 3,
         YEAR => 2006,
         CITY => 'Tianjin',
         COUNTRY => 'China',
@@ -35,7 +35,7 @@ my %MEETS_WORLD =
       '2008' =>
       {
         # https://www.fisu.net/events/2008-fisu-world-university-championships-bridge/?utm_source=results
-        ORDINAL => 4,
+        MEET_ORDINAL => 4,
         YEAR => 2008,
         CITY => 'Lodz',
         COUNTRY => 'Poland',
@@ -45,7 +45,7 @@ my %MEETS_WORLD =
       '2010' =>
       {
         # https://www.fisu.net/events/2010-fisu-world-university-championships-bridge/?utm_source=results
-        ORDINAL => 5,
+        MEET_ORDINAL => 5,
         YEAR => 2010,
         CITY => 'Kaohsiung',
         COUNTRY => 'Chinese Taipei',
@@ -55,7 +55,7 @@ my %MEETS_WORLD =
       '2012' =>
       {
         # https://www.fisu.net/events/2012-fisu-world-university-championships-bridge/?utm_source=results
-        ORDINAL => 6,
+        MEET_ORDINAL => 6,
         YEAR => 2012,
         CITY => 'Reims',
         COUNTRY => 'France',
@@ -65,7 +65,7 @@ my %MEETS_WORLD =
       '2014' =>
       {
         # https://www.fisu.net/events/2014-fisu-world-university-championships-bridge/?utm_source=results
-        ORDINAL => 7,
+        MEET_ORDINAL => 7,
         YEAR => 2014,
         CITY => 'Opatija',
         COUNTRY => 'Croatia',
@@ -75,7 +75,7 @@ my %MEETS_WORLD =
       '2016' =>
       {
         # https://www.fisu.net/events/2016-fisu-world-university-championships-bridge/?utm_source=results
-        ORDINAL => 8,
+        MEET_ORDINAL => 8,
         YEAR => 2016,
         CITY => 'Lodz',
         COUNTRY => 'Poland',

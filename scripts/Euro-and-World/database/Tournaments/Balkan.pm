@@ -22,21 +22,21 @@ my %MEETS_BALKAN =
     {
       '2006' =>
       {
-        ORDINAL => 1,
+        MEET_ORDINAL => 1,
         YEAR => 2006,
         DATE_START => '2006-10-17',
         DATE_END => '2006-10-17'
       },
       '2007' =>
       {
-        ORDINAL => 2,
+        MEET_ORDINAL => 2,
         YEAR => 2007,
         DATE_START => '2007-10-22',
         DATE_END => '2007-10-22'
       },
       '2008' =>
       {
-        ORDINAL => 3,
+        MEET_ORDINAL => 3,
         YEAR => 2008,
         DATE_START => '2008-11-23',
         DATE_END => '2008-11-23'
@@ -44,7 +44,7 @@ my %MEETS_BALKAN =
       '2009' =>
       {
         # balkanbridge.org on Wayback Machine
-        ORDINAL => 4,
+        MEET_ORDINAL => 4,
         CITY => 'Novi Sad',
         COUNTRY => 'Serbia',
         YEAR => 2009,
@@ -54,7 +54,7 @@ my %MEETS_BALKAN =
       '2010' =>
       {
         # https://5bbc.neo-bridge.org/topframe.html
-        ORDINAL => 5,
+        MEET_ORDINAL => 5,
         CITY => 'Stara Zagora',
         COUNTRY => 'Bulgaria',
         YEAR => 2010,
@@ -63,7 +63,7 @@ my %MEETS_BALKAN =
       },
       '2011' =>
       {
-        ORDINAL => 6,
+        MEET_ORDINAL => 6,
         CITY => 'Mersin',
         COUNTRY => 'Turkey',
         YEAR => 2011,
@@ -72,14 +72,14 @@ my %MEETS_BALKAN =
       },
       '2013' =>
       {
-        ORDINAL => 7,
+        MEET_ORDINAL => 7,
         YEAR => 2013,
         DATE_START => '2013-10-02',
         DATE_END => '2013-10-03'
       },
       '2015' =>
       {
-        ORDINAL => 8,
+        MEET_ORDINAL => 8,
         CITY => 'Stara Zagora',
         COUNTRY => 'Bulgaria',
         YEAR => 2015,
@@ -88,7 +88,7 @@ my %MEETS_BALKAN =
       },
       '2016' =>
       {
-        ORDINAL => 9,
+        MEET_ORDINAL => 9,
         CITY => 'Stara Zagora',
         COUNTRY => 'Bulgaria',
         YEAR => 2016,
@@ -97,7 +97,7 @@ my %MEETS_BALKAN =
       },
       '2018' =>
       {
-        ORDINAL => 11,
+        MEET_ORDINAL => 11,
         CITY => 'Stara Zagora',
         COUNTRY => 'Bulgaria',
         YEAR => 2018,
@@ -107,7 +107,7 @@ my %MEETS_BALKAN =
       '2019' =>
       {
         # https://8bbc.neo-bridge.org/
-        ORDINAL => 12,
+        MEET_ORDINAL => 12,
         CITY => 'Stara Zagora',
         COUNTRY => 'Bulgaria',
         YEAR => 2019,
@@ -117,7 +117,7 @@ my %MEETS_BALKAN =
       '2021' =>
       {
         # https://www.bridge.bg/en/tournaments_results/5022-XIII-Balkaniada-po-bridj-finali
-        ORDINAL => 13,
+        MEET_ORDINAL => 13,
         YEAR => 2021,
         DATE_START => '2021-10-06',
         DATE_END => '2021-10-10'
@@ -125,14 +125,14 @@ my %MEETS_BALKAN =
       '2022' =>
       {
         # https://www.bridge.bg/en/tournaments_results/5513-14-Balkan-Championship-Finals
-        ORDINAL => 14,
+        MEET_ORDINAL => 14,
         YEAR => 2022,
         DATE_START => '2022-10-05',
         DATE_END => '2022-10-09'
       },
       '2023' =>
       {
-        ORDINAL => 15,
+        MEET_ORDINAL => 15,
         CITY => 'Stara Zagora',
         COUNTRY => 'Bulgaria',
         YEAR => 2023,
@@ -178,7 +178,7 @@ my %MEETS_BALKAN =
       },
       '2013' =>
       {
-        ORDINAL => 7,
+        MEET_ORDINAL => 7,
         YEAR => 2013,
         DATE_START => '2013-04-28',
         DATE_END => '2013-04-29'

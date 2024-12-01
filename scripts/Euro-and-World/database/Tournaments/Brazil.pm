@@ -16,7 +16,6 @@ our @EXPORT = qw(set_links);
 my %GLOBAL = (
   ORGANIZATION => 'FBB',
   COUNTRY => 'Brazil',
-  ORIGIN => 'National',
   ZONE => 'South America',
 );
 
@@ -25,6 +24,7 @@ my %MEETS_BRAZIL =
   'Brazilian Trials',
   {
     %GLOBAL,
+    ORIGIN => 'National',
 
     EDITIONS => 
     {
@@ -95,6 +95,7 @@ my %MEETS_BRAZIL =
   'Buzios Festival',
   {
     %GLOBAL,
+    ORIGIN => 'National',
 
     EDITIONS => 
     {
@@ -113,6 +114,7 @@ my %TOURNAMENTS_BRAZIL =
   'Brazilian Open Teams',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -582,6 +584,7 @@ my %TOURNAMENTS_BRAZIL =
   'Brazilian Senior Trials',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -684,6 +687,7 @@ my %TOURNAMENTS_BRAZIL =
   'Rio de Janeiro Open Teams',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -732,6 +736,7 @@ my %TOURNAMENTS_BRAZIL =
   'Rio de Janeiro Christmas Individual',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Individual',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -758,6 +763,7 @@ my %TOURNAMENTS_BRAZIL =
   'Roberto Taunay Cup',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -784,6 +790,7 @@ my %TOURNAMENTS_BRAZIL =
   'Sao Paulo Cup',
   {
     %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

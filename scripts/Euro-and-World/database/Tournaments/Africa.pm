@@ -44,7 +44,7 @@ my %MEETS_AFRICA =
       },
       '2009' =>
       {
-        ORDINAL => 5,
+        MEET_ORDINAL => 5,
         YEAR => 2009,
         CITY => 'Sharm el Sheikh',
         COUNTRY => 'Egypt',
@@ -113,7 +113,7 @@ my %MEETS_AFRICA =
     {
       '2009' =>
       {
-        ORDINAL => 1,
+        MEET_ORDINAL => 1,
         YEAR => 2009,
         DATE_START => '2009-01-05',
         DATE_END => '2009-01-05'

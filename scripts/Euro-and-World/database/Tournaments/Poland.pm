@@ -36,7 +36,7 @@ my %MEETS_POLAND =
     {
       '2009' =>
       {
-        ORDINAL => 49,
+        MEET_ORDINAL => 49,
         YEAR => 2009,
         CITY => 'Sopot',
         DATE_START => '2009-07-21',
@@ -45,7 +45,7 @@ my %MEETS_POLAND =
       '2010' =>
       {
         # https://bridge.gda.pl/kongres/10/k_baltycki10.htm
-        ORDINAL => 50,
+        MEET_ORDINAL => 50,
         YEAR => 2010,
         CITY => 'Sopot',
         DATE_START => '2010-07-14',
@@ -54,7 +54,7 @@ my %MEETS_POLAND =
       '2011' =>
       {
         # https://wyniki.pzbs.pl/2011/baltycki/
-        ORDINAL => 51,
+        MEET_ORDINAL => 51,
         YEAR => 2011,
         CITY => 'Sopot',
         DATE_START => '2011-07-21',
@@ -63,7 +63,7 @@ my %MEETS_POLAND =
       '2012' =>
       {
         # https://wyniki.pzbs.pl/2012/baltycki/
-        ORDINAL => 52,
+        MEET_ORDINAL => 52,
         YEAR => 2012,
         CITY => 'Sopot',
         DATE_START => '2012-07-26',
@@ -72,7 +72,7 @@ my %MEETS_POLAND =
       '2013' =>
       {
         # https://wyniki.pzbs.pl/2013/baltycki/
-        ORDINAL => 53,
+        MEET_ORDINAL => 53,
         YEAR => 2013,
         CITY => 'Sopot',
         DATE_START => '2013-07-19',
@@ -81,7 +81,7 @@ my %MEETS_POLAND =
       '2014' =>
       {
         # https://wyniki.pzbs.pl/2014/baltycki/
-        ORDINAL => 54,
+        MEET_ORDINAL => 54,
         YEAR => 2014,
         CITY => 'Sopot',
         DATE_START => '2014-07-18',
@@ -90,7 +90,7 @@ my %MEETS_POLAND =
       '2015' =>
       {
         # https://wyniki.pzbs.pl/2015/baltycki/
-        ORDINAL => 55,
+        MEET_ORDINAL => 55,
         YEAR => 2015,
         CITY => 'Sopot',
         DATE_START => '2015-07-17',
@@ -99,7 +99,7 @@ my %MEETS_POLAND =
       '2016' =>
       {
         # https://wyniki.pzbs.pl/2016/baltycki/
-        ORDINAL => 56,
+        MEET_ORDINAL => 56,
         YEAR => 2016,
         CITY => 'Sopot',
         DATE_START => '2016-07-22',
@@ -108,7 +108,7 @@ my %MEETS_POLAND =
       '2017' =>
       {
         # https://wyniki.pzbs.pl/2017/baltycki/
-        ORDINAL => 57,
+        MEET_ORDINAL => 57,
         YEAR => 2017,
         CITY => 'Sopot',
         DATE_START => '2017-08-04',
@@ -117,7 +117,7 @@ my %MEETS_POLAND =
       '2018' =>
       {
         # https://wyniki.pzbs.pl/2018/baltycki/
-        ORDINAL => 58,
+        MEET_ORDINAL => 58,
         YEAR => 2018,
         CITY => 'Sopot',
         DATE_START => '2018-08-03',
@@ -126,7 +126,7 @@ my %MEETS_POLAND =
       '2019' =>
       {
         # https://wyniki.pzbs.pl/2019/baltycki/
-        ORDINAL => 59,
+        MEET_ORDINAL => 59,
         YEAR => 2019,
         CITY => 'Sopot',
         DATE_START => '2019-08-02',
@@ -135,7 +135,7 @@ my %MEETS_POLAND =
       '2021' =>
       {
         # https://wyniki.pzbs.pl/2021/baltycki/
-        ORDINAL => 60,
+        MEET_ORDINAL => 60,
         YEAR => 2021,
         CITY => 'Sopot',
         DATE_START => '2021-08-06',
@@ -144,7 +144,7 @@ my %MEETS_POLAND =
       '2022' =>
       {
         # https://wyniki.pzbs.pl/2022/baltycki/
-        ORDINAL => 61,
+        MEET_ORDINAL => 61,
         YEAR => 2022,
         CITY => 'Sopot',
         DATE_START => '2022-07-15',
@@ -153,7 +153,7 @@ my %MEETS_POLAND =
       '2023' =>
       {
         # https://wyniki.pzbs.pl/2023/baltycki/
-        ORDINAL => 62,
+        MEET_ORDINAL => 62,
         YEAR => 2023,
         CITY => 'Sopot',
         DATE_START => '2023-07-28',
@@ -162,7 +162,7 @@ my %MEETS_POLAND =
       '2024' =>
       {
         # https://wyniki.pzbs.pl/2024/baltycki/
-        ORDINAL => 63,
+        MEET_ORDINAL => 63,
         YEAR => 2024,
         CITY => 'Sopot',
         DATE_START => '2024-07-26',
@@ -197,7 +197,7 @@ my %MEETS_POLAND =
       '2013' =>
       {
         # https://wyniki.pzbs.pl/2013/131108szczyrk/
-        ORDINAL => 1,
+        MEET_ORDINAL => 1,
         YEAR => 2013,
         DATE_START => '2013-11-08',
         DATE_END => '2013-11-11'
@@ -205,7 +205,7 @@ my %MEETS_POLAND =
       '2014' =>
       {
         # https://wyniki.pzbs.pl/2014/_gpp/02szczyrk/W-14szgpp.html
-        ORDINAL => 2,
+        MEET_ORDINAL => 2,
         YEAR => 2014,
         DATE_START => '2014-02-03',
         DATE_END => '2014-02-08'
@@ -213,7 +213,7 @@ my %MEETS_POLAND =
       '2015' =>
       {
         # https://wyniki.pzbs.pl/2015/_gpp/01szczyrk/W-15szgpp.html
-        ORDINAL => 3,
+        MEET_ORDINAL => 3,
         YEAR => 2015,
         DATE_START => '2015-02-09',
         DATE_END => '2015-02-15'
@@ -221,7 +221,7 @@ my %MEETS_POLAND =
       '2016' =>
       {
         # https://www.pzbs.pl/wyniki/kadra/2016/jun/szlem.html
-        ORDINAL => 4,
+        MEET_ORDINAL => 4,
         YEAR => 2016,
         DATE_START => '2016-02-15',
         DATE_END => '2016-02-21'
@@ -229,7 +229,7 @@ my %MEETS_POLAND =
       '2017' =>
       {
         # https://wyniki.pzbs.pl/2017/gpp/01szczyrk/szlem.html
-        ORDINAL => 5,
+        MEET_ORDINAL => 5,
         YEAR => 2017,
         DATE_START => '2017-02-06',
         DATE_END => '2017-02-12'
@@ -237,7 +237,7 @@ my %MEETS_POLAND =
       '2018' =>
       {
         # https://wyniki.pzbs.pl/2018/gpp/01szczyrk/
-        ORDINAL => 6,
+        MEET_ORDINAL => 6,
         YEAR => 2018,
         DATE_START => '2018-02-02',
         DATE_END => '2018-02-04'
@@ -245,7 +245,7 @@ my %MEETS_POLAND =
       '2019' =>
       {
         # https://wyniki.pzbs.pl/2019/gpp/szczyrk/
-        ORDINAL => 7,
+        MEET_ORDINAL => 7,
         YEAR => 2019,
         DATE_START => '2019-01-11',
         DATE_END => '2019-01-13'
@@ -264,7 +264,7 @@ my %MEETS_POLAND =
       '2009' =>
       {
         # ?
-        ORDINAL => 18,
+        MEET_ORDINAL => 18,
         YEAR => 2009,
         DATE_START => '2009-09-18',
         DATE_END => '2009-09-20'
@@ -272,7 +272,7 @@ my %MEETS_POLAND =
       '2010' =>
       {
         # https://www.pzbs.pl/wyniki-archiwum/wyniki2010/471-19-boleslawiecka-trzydniowka-wyniki
-        ORDINAL => 19,
+        MEET_ORDINAL => 19,
         YEAR => 2010,
         DATE_START => '2010-10-01',
         DATE_END => '2010-10-03'
@@ -280,7 +280,7 @@ my %MEETS_POLAND =
       '2011' =>
       {
         # https://wyniki.pzbs.pl/2011/110916boles/program.htm
-        ORDINAL => 20,
+        MEET_ORDINAL => 20,
         YEAR => 2011,
         DATE_START => '2011-09-16',
         DATE_END => '2011-09-18'
@@ -288,7 +288,7 @@ my %MEETS_POLAND =
       '2012' =>
       {
         # https://wyniki.pzbs.pl/2012/0920-boles/program.htm
-        ORDINAL => 21,
+        MEET_ORDINAL => 21,
         YEAR => 2012,
         DATE_START => '2012-09-21',
         DATE_END => '2012-09-23'
@@ -296,7 +296,7 @@ my %MEETS_POLAND =
       '2013' =>
       {
         # ?
-        ORDINAL => 22,
+        MEET_ORDINAL => 22,
         YEAR => 2013,
         DATE_START => '2013-10-03',
         DATE_END => '2013-10-06'
@@ -304,7 +304,7 @@ my %MEETS_POLAND =
       '2014' =>
       {
         # https://wyniki.pzbs.pl/2014/_gpp/13boles/program.htm
-        ORDINAL => 23,
+        MEET_ORDINAL => 23,
         YEAR => 2014,
         DATE_START => '2014-09-25',
         DATE_END => '2014-09-28'
@@ -312,7 +312,7 @@ my %MEETS_POLAND =
       '2015' =>
       {
         # https://wyniki.pzbs.pl/2015/_gpp/14boleslawiec/program.htm
-        ORDINAL => 24,
+        MEET_ORDINAL => 24,
         YEAR => 2015,
         DATE_START => '2015-09-17',
         DATE_END => '2015-09-20'
@@ -320,7 +320,7 @@ my %MEETS_POLAND =
       '2016' =>
       {
         # https://wyniki.pzbs.pl/2016/_gpp/15boles/program.htm
-        ORDINAL => 25,
+        MEET_ORDINAL => 25,
         YEAR => 2016,
         DATE_START => '2016-09-22',
         DATE_END => '2016-09-25'
@@ -328,7 +328,7 @@ my %MEETS_POLAND =
       '2017' =>
       {
         # https://wyniki.pzbs.pl/2017/gpp/1718boles/program.htm
-        ORDINAL => 26,
+        MEET_ORDINAL => 26,
         YEAR => 2017,
         DATE_START => '2017-09-22',
         DATE_END => '2017-09-24'
@@ -336,7 +336,7 @@ my %MEETS_POLAND =
       '2018' =>
       {
         # https://wyniki.pzbs.pl/2018/gpp1819/boles/program.htm
-        ORDINAL => 27,
+        MEET_ORDINAL => 27,
         YEAR => 2018,
         DATE_START => '2018-09-20',
         DATE_END => '2018-09-23'
@@ -344,7 +344,7 @@ my %MEETS_POLAND =
       '2019' =>
       {
         # https://wyniki.pzbs.pl/2019/gpp1920/01boles/program.htm
-        ORDINAL => 28,
+        MEET_ORDINAL => 28,
         YEAR => 2019,
         DATE_START => '2019-09-19',
         DATE_END => '2019-09-23'
@@ -371,7 +371,7 @@ my %MEETS_POLAND =
       '2012' =>
       {
         # https://wyniki.pzbs.pl/2012/gpp/05bydgoszcz/W-bydgpp.html
-        ORDINAL => 49,
+        MEET_ORDINAL => 49,
         YEAR => 2012,
         DATE_START => '2012-03-23', # Dates are a guess
         DATE_END => '2012-03-25'
@@ -476,7 +476,7 @@ my %MEETS_POLAND =
       '2007' =>
       {
         # https://stara.pzbs.pl/wyniki/2007/krajowe/gpp/11Bydgoszcz/LUCZ/LUCZ.html
-        ORDINAL => 44,
+        MEET_ORDINAL => 44,
         YEAR => 2007,
         DATE_START => '2007-07-15', # Probably more days
         DATE_END => '2007-07-15'
@@ -484,7 +484,7 @@ my %MEETS_POLAND =
       '2009' =>
       {
         # https://stara.pzbs.pl/wyniki/2009/krajowe/gpp/07bydgoszcz/luczniczka2009.html
-        ORDINAL => 46,
+        MEET_ORDINAL => 46,
         YEAR => 2009,
         DATE_START => '2009-06-05',
         DATE_END => '2009-06-07'
@@ -492,7 +492,7 @@ my %MEETS_POLAND =
       '2010' =>
       {
         # https://www.pzbs.pl/wyniki-archiwum/wyniki2010/222-47-ogolnopolski-kongres-brydzowy-luczniczka-wyniki
-        ORDINAL => 47,
+        MEET_ORDINAL => 47,
         YEAR => 2010,
         DATE_START => '2010-06-26',
         DATE_END => '2010-06-28'
@@ -500,7 +500,7 @@ my %MEETS_POLAND =
       '2011' =>
       {
         # http://kpzbs.host4u.pl/wyniki/GP2011/Luczniczka/luczniczka.html
-        ORDINAL => 48,
+        MEET_ORDINAL => 48,
         YEAR => 2011,
         DATE_START => '2011-06-10',
         DATE_END => '2011-06-12'
@@ -508,7 +508,7 @@ my %MEETS_POLAND =
       '2012' =>
       {
         # https://wyniki.pzbs.pl/2012/gpp/05bydgoszcz/W-bydgpp.html
-        ORDINAL => 49,
+        MEET_ORDINAL => 49,
         YEAR => 2012,
         DATE_START => '2012-04-27', # Guess
         DATE_END => '2012-04-29'
@@ -516,7 +516,7 @@ my %MEETS_POLAND =
       '2013' =>
       {
         # https://wyniki.pzbs.pl/2013/_gpp/08bydgoszcz/gp.html
-        ORDINAL => 50,
+        MEET_ORDINAL => 50,
         YEAR => 2013,
         DATE_START => '2013-06-14',
         DATE_END => '2013-06-16'
@@ -524,7 +524,7 @@ my %MEETS_POLAND =
       '2014' =>
       {
         # http://www.kpzbs.host4u.pl/wyniki/2014/luczniczka/luczniczka2014.html
-        ORDINAL => 51,
+        MEET_ORDINAL => 51,
         YEAR => 2014,
         DATE_START => '2014-03-14',
         DATE_END => '2014-03-16'
@@ -532,7 +532,7 @@ my %MEETS_POLAND =
       '2015' =>
       {
         # https://wyniki.pzbs.pl/2015/_gpp/04bydgoszcz/
-        ORDINAL => 52,
+        MEET_ORDINAL => 52,
         YEAR => 2015,
         DATE_START => '2015-03-27',
         DATE_END => '2015-03-29'
@@ -540,7 +540,7 @@ my %MEETS_POLAND =
       '2016' =>
       {
         # https://wyniki.pzbs.pl/2016/_gpp/06bydgoszcz/
-        ORDINAL => 53,
+        MEET_ORDINAL => 53,
         YEAR => 2016,
         DATE_START => '2016-05-13',
         DATE_END => '2016-05-15'
@@ -548,7 +548,7 @@ my %MEETS_POLAND =
       '2017' =>
       {
         # https://wyniki.pzbs.pl/2017/gpp/06bydgoszcz/
-        ORDINAL => 54,
+        MEET_ORDINAL => 54,
         YEAR => 2017,
         DATE_START => '2017-05-12',
         DATE_END => '2017-05-14'
@@ -556,7 +556,7 @@ my %MEETS_POLAND =
       '2018' =>
       {
         # http://kpzbs.host4u.pl/wyniki/2018/Luczniczka/Luczniczka2018.html
-        ORDINAL => 55,
+        MEET_ORDINAL => 55,
         YEAR => 2018,
         DATE_START => '2018-07-27',
         DATE_END => '2018-07-29'
@@ -564,7 +564,7 @@ my %MEETS_POLAND =
       '2019' =>
       {
         # http://kpzbs.host4u.pl/wyniki/2019/Luczniczka/Luczniczka2019.html
-        ORDINAL => 56,
+        MEET_ORDINAL => 56,
         YEAR => 2019,
         DATE_START => '2019-07-19',
         DATE_END => '2019-07-21'
@@ -572,7 +572,7 @@ my %MEETS_POLAND =
       '2023' =>
       {
         # http://kpzbs.host4u.pl/zaproszenia/2023/luczniczka59.html
-        ORDINAL => 59,
+        MEET_ORDINAL => 59,
         YEAR => 2023,
         DATE_START => '2023-04-14',
         DATE_END => '2023-04-16'
@@ -580,7 +580,7 @@ my %MEETS_POLAND =
       '2024' =>
       {
         # http://kpzbs.host4u.pl/zaproszenia/2024/luczniczka60.html
-        ORDINAL => 60,
+        MEET_ORDINAL => 60,
         YEAR => 2024,
         DATE_START => '2024-07-19',
         DATE_END => '2024-07-21'
@@ -910,7 +910,7 @@ my %MEETS_POLAND =
       '2004' =>
       {
         # https://stara.pzbs.pl/wyniki/2004/krajowe/gpp2004/6poznan/poznanski.htm
-        ORDINAL => 44,
+        MEET_ORDINAL => 44,
         YEAR => 2004,
         DATE_START => '2004-06-03',
         DATE_END => '2004-06-06'
@@ -918,7 +918,7 @@ my %MEETS_POLAND =
       '2005' =>
       {
         # https://stara.pzbs.pl/wyniki/2005/krajowe/gppolski/07poznan/poznan2005.htm
-        ORDINAL => 45,
+        MEET_ORDINAL => 45,
         YEAR => 2005,
         DATE_START => '2005-06-11',
         DATE_END => '2005-06-12'
@@ -926,7 +926,7 @@ my %MEETS_POLAND =
       '2006' =>
       {
         # https://stara.pzbs.pl/wyniki/2006/arajowe/poznanski06/poznanski2006.htm
-        ORDINAL => 46,
+        MEET_ORDINAL => 46,
         YEAR => 2006,
         DATE_START => '2006-06-30',
         DATE_END => '2006-07-02'
@@ -934,7 +934,7 @@ my %MEETS_POLAND =
       '2007' =>
       {
         # https://stara.pzbs.pl/wyniki/2007/krajowe/gpp/09poznan/poznanski2007.htm
-        ORDINAL => 47,
+        MEET_ORDINAL => 47,
         YEAR => 2007,
         DATE_START => '2007-06-08',
         DATE_END => '2007-06-11'
@@ -942,7 +942,7 @@ my %MEETS_POLAND =
       '2008' =>
       {
         # https://kongres.brydz.wlkp.pl/arch2008
-        ORDINAL => 48,
+        MEET_ORDINAL => 48,
         YEAR => 2008,
         DATE_START => '2008-05-22',
         DATE_END => '2008-05-25'
@@ -950,7 +950,7 @@ my %MEETS_POLAND =
       '2009' =>
       {
         # https://kongres.brydz.wlkp.pl/arch2009
-        ORDINAL => 49,
+        MEET_ORDINAL => 49,
         YEAR => 2009,
         DATE_START => '2009-06-11',
         DATE_END => '2009-06-14'
@@ -958,7 +958,7 @@ my %MEETS_POLAND =
       '2010' =>
       {
         # https://kongres.brydz.wlkp.pl/arch2010
-        ORDINAL => 50,
+        MEET_ORDINAL => 50,
         YEAR => 2010,
         DATE_START => '2010-06-03',
         DATE_END => '2010-06-06'
@@ -974,7 +974,7 @@ my %MEETS_POLAND =
       '2012' =>
       {
         # https://kongres.brydz.wlkp.pl/arch2012
-        ORDINAL => 52,
+        MEET_ORDINAL => 52,
         YEAR => 2012,
         DATE_START => '2012-06-01',
         DATE_END => '2012-06-03'
@@ -982,7 +982,7 @@ my %MEETS_POLAND =
       '2013' =>
       {
         # https://kongres.brydz.wlkp.pl/arch2013
-        ORDINAL => 53,
+        MEET_ORDINAL => 53,
         YEAR => 2013,
         DATE_START => '2013-05-30',
         DATE_END => '2013-06-02'
@@ -990,7 +990,7 @@ my %MEETS_POLAND =
       '2014' =>
       {
         # https://kongres.brydz.wlkp.pl/arch2014
-        ORDINAL => 54,
+        MEET_ORDINAL => 54,
         YEAR => 2014,
         DATE_START => '2014-06-05',
         DATE_END => '2014-06-08'
@@ -998,7 +998,7 @@ my %MEETS_POLAND =
       '2015' =>
       {
         # https://kongres.brydz.wlkp.pl/arch2015
-        ORDINAL => 55,
+        MEET_ORDINAL => 55,
         YEAR => 2015,
         DATE_START => '2015-06-03',
         DATE_END => '2015-06-07'
@@ -1006,7 +1006,7 @@ my %MEETS_POLAND =
       '2016' =>
       {
         # https://kongres.brydz.wlkp.pl/arch2016
-        ORDINAL => 56,
+        MEET_ORDINAL => 56,
         YEAR => 2016,
         DATE_START => '2016-05-25',
         DATE_END => '2016-05-29'
@@ -1014,7 +1014,7 @@ my %MEETS_POLAND =
       '2017' =>
       {
         # https://kongres.brydz.wlkp.pl/arch2017
-        ORDINAL => 57,
+        MEET_ORDINAL => 57,
         YEAR => 2017,
         DATE_START => '2017-06-15',
         DATE_END => '2017-06-18'
@@ -1022,7 +1022,7 @@ my %MEETS_POLAND =
       '2018' =>
       {
         # https://kongres.brydz.wlkp.pl/arch2018
-        ORDINAL => 58,
+        MEET_ORDINAL => 58,
         YEAR => 2018,
         DATE_START => '2018-05-30',
         DATE_END => '2018-06-03'
@@ -1030,7 +1030,7 @@ my %MEETS_POLAND =
       '2019' =>
       {
         # https://kongres.brydz.wlkp.pl/arch2019
-        ORDINAL => 59,
+        MEET_ORDINAL => 59,
         YEAR => 2019,
         DATE_START => '2019-06-19',
         DATE_END => '2019-06-23'
@@ -1038,7 +1038,7 @@ my %MEETS_POLAND =
       '2021' =>
       {
         # http://60pkb.e-pab.pl/
-        ORDINAL => 60,
+        MEET_ORDINAL => 60,
         YEAR => 2021,
         DATE_START => '2021-09-23',
         DATE_END => '2021-09-26'
@@ -1046,7 +1046,7 @@ my %MEETS_POLAND =
       '2022' =>
       {
         # http://kongresy.brydz.wlkp.pl/index.php/harmonogram-wyniki-2022/
-        ORDINAL => 61,
+        MEET_ORDINAL => 61,
         YEAR => 2022,
         DATE_START => '2022-04-29',
         DATE_END => '2022-05-03'
@@ -1054,7 +1054,7 @@ my %MEETS_POLAND =
       '2023' =>
       {
         # https://kongrespoznanski.pl/historia/pkb-2023/
-        ORDINAL => 62,
+        MEET_ORDINAL => 62,
         YEAR => 2023,
         DATE_START => '2023-04-29',
         DATE_END => '2023-05-03'
@@ -1062,7 +1062,7 @@ my %MEETS_POLAND =
       '2024' =>
       {
         # https://kongrespoznanski.pl/
-        ORDINAL => 63,
+        MEET_ORDINAL => 63,
         YEAR => 2024,
         DATE_START => '2024-05-01',
         DATE_END => '2024-05-04'
@@ -1081,7 +1081,7 @@ my %MEETS_POLAND =
       '2007' =>
       {
         # No link
-        ORDINAL => 50,
+        MEET_ORDINAL => 50,
         YEAR => 2007,
         DATE_START => '2007-07-06',
         DATE_END => '2007-07-15'
@@ -1089,7 +1089,7 @@ my %MEETS_POLAND =
       '2008' =>
       {
         # No link
-        ORDINAL => 51,
+        MEET_ORDINAL => 51,
         YEAR => 2008,
         DATE_START => '2008-07-04',
         DATE_END => '2008-07-13'
@@ -1097,7 +1097,7 @@ my %MEETS_POLAND =
       '2009' =>
       {
         # No link
-        ORDINAL => 52,
+        MEET_ORDINAL => 52,
         YEAR => 2009,
         DATE_START => '2009-07-03',
         DATE_END => '2009-07-11'
@@ -1105,7 +1105,7 @@ my %MEETS_POLAND =
       '2010' =>
       {
         # https://wyniki.pzbs.pl/2010/slawa/
-        ORDINAL => 53,
+        MEET_ORDINAL => 53,
         YEAR => 2010,
         DATE_START => '2010-07-02',
         DATE_END => '2010-07-11'
@@ -1113,7 +1113,7 @@ my %MEETS_POLAND =
       '2011' =>
       {
         # https://www.kongres-slawa.pl/harmonogram/2011
-        ORDINAL => 54,
+        MEET_ORDINAL => 54,
         YEAR => 2011,
         DATE_START => '2011-07-08',
         DATE_END => '2011-07-17'
@@ -1121,7 +1121,7 @@ my %MEETS_POLAND =
       '2012' =>
       {
         # https://www.kongres-slawa.pl/harmonogram/2012
-        ORDINAL => 55,
+        MEET_ORDINAL => 55,
         YEAR => 2012,
         DATE_START => '2012-07-06',
         DATE_END => '2012-07-15'
@@ -1129,7 +1129,7 @@ my %MEETS_POLAND =
       '2013' =>
       {
         # https://www.kongres-slawa.pl/harmonogram/2013
-        ORDINAL => 56,
+        MEET_ORDINAL => 56,
         YEAR => 2013,
         DATE_START => '2013-07-05',
         DATE_END => '2013-07-14'
@@ -1137,7 +1137,7 @@ my %MEETS_POLAND =
       '2014' =>
       {
         # https://www.kongres-slawa.pl/harmonogram/2014
-        ORDINAL => 57,
+        MEET_ORDINAL => 57,
         YEAR => 2014,
         DATE_START => '2014-07-03',
         DATE_END => '2014-07-12'
@@ -1145,7 +1145,7 @@ my %MEETS_POLAND =
       '2015' =>
       {
         # https://www.kongres-slawa.pl/harmonogram/2015
-        ORDINAL => 58,
+        MEET_ORDINAL => 58,
         YEAR => 2015,
         DATE_START => '2015-07-02',
         DATE_END => '2015-07-11'
@@ -1153,7 +1153,7 @@ my %MEETS_POLAND =
       '2016' =>
       {
         # https://www.kongres-slawa.pl/harmonogram/2016
-        ORDINAL => 59,
+        MEET_ORDINAL => 59,
         YEAR => 2016,
         DATE_START => '2016-06-30',
         DATE_END => '2016-07-09'
@@ -1161,7 +1161,7 @@ my %MEETS_POLAND =
       '2017' =>
       {
         # https://www.kongres-slawa.pl/harmonogram/2017
-        ORDINAL => 60,
+        MEET_ORDINAL => 60,
         YEAR => 2017,
         DATE_START => '2017-06-29',
         DATE_END => '2017-07-08'
@@ -1169,7 +1169,7 @@ my %MEETS_POLAND =
       '2018' =>
       {
         # https://www.kongres-slawa.pl/harmonogram/2018
-        ORDINAL => 61,
+        MEET_ORDINAL => 61,
         YEAR => 2018,
         DATE_START => '2018-06-28',
         DATE_END => '2018-07-07'
@@ -1177,7 +1177,7 @@ my %MEETS_POLAND =
       '2019' =>
       {
         # https://www.kongres-slawa.pl/harmonogram/2019
-        ORDINAL => 62,
+        MEET_ORDINAL => 62,
         YEAR => 2019,
         DATE_START => '2019-06-27',
         DATE_END => '2019-07-06'
@@ -1187,7 +1187,7 @@ my %MEETS_POLAND =
         # https://www.kongres-slawa.pl/harmonogram/2020
         # Probably did not take place
         YEAR => 2020,
-        ORDINAL => 63,
+        MEET_ORDINAL => 63,
         DATE_START => '2020-07-02',
         DATE_END => '2020-07-11'
       },
@@ -1195,7 +1195,7 @@ my %MEETS_POLAND =
       {
         # https://www.kongres-slawa.pl/harmonogram/2021
         YEAR => 2021,
-        ORDINAL => 64,
+        MEET_ORDINAL => 64,
         DATE_START => '2021-06-24',
         DATE_END => '2021-07-03'
       },
@@ -1203,7 +1203,7 @@ my %MEETS_POLAND =
       {
         # https://www.kongres-slawa.pl/harmonogram/2022
         YEAR => 2022,
-        ORDINAL => 65,
+        MEET_ORDINAL => 65,
         DATE_START => '2022-06-23',
         DATE_END => '2022-07-02'
       },
@@ -1211,7 +1211,7 @@ my %MEETS_POLAND =
       {
         # https://www.kongres-slawa.pl/harmonogram/2023
         YEAR => 2023,
-        ORDINAL => 66,
+        MEET_ORDINAL => 66,
         DATE_START => '2023-06-22',
         DATE_END => '2023-07-01'
       },
@@ -1219,7 +1219,7 @@ my %MEETS_POLAND =
       {
         # https://www.kongres-slawa.pl/harmonogram/2024
         YEAR => 2024,
-        ORDINAL => 67,
+        MEET_ORDINAL => 67,
         DATE_START => '2024-06-20',
         DATE_END => '2024-06-29'
       },
@@ -1237,7 +1237,7 @@ my %MEETS_POLAND =
       '2004' =>
       {
         # https://www.warsbrydz.pl/GPW2004/support/program.htm
-        ORDINAL => 32,
+        MEET_ORDINAL => 32,
         YEAR => 2004,
         DATE_START => '2004-08-20',
         DATE_END => '2004-08-29'
@@ -1245,7 +1245,7 @@ my %MEETS_POLAND =
       '2005' =>
       {
         # https://www.warsbrydz.pl/GPW2005/support/program.htm
-        ORDINAL => 33,
+        MEET_ORDINAL => 33,
         YEAR => 2005,
         DATE_START => '2005-08-19',
         DATE_END => '2005-08-28'
@@ -1253,7 +1253,7 @@ my %MEETS_POLAND =
       '2006' =>
       {
         # https://www.warsbrydz.pl/GPW2006/support/program.htm
-        ORDINAL => 34,
+        MEET_ORDINAL => 34,
         YEAR => 2006,
         DATE_START => '2006-08-25',
         DATE_END => '2006-09-03'
@@ -1261,7 +1261,7 @@ my %MEETS_POLAND =
       '2007' =>
       {
         # https://www.warsbrydz.pl/GPW/GPW2007/gp2007.htm
-        ORDINAL => 35,
+        MEET_ORDINAL => 35,
         YEAR => 2007,
         DATE_START => '2007-08-24',
         DATE_END => '2007-09-02'
@@ -1269,7 +1269,7 @@ my %MEETS_POLAND =
       '2008' =>
       {
         # https://www.warsbrydz.pl/gpw/gpw2008/gp2008.php?main=2
-        ORDINAL => 36,
+        MEET_ORDINAL => 36,
         YEAR => 2008,
         DATE_START => '2008-08-21',
         DATE_END => '2008-08-31'
@@ -1277,7 +1277,7 @@ my %MEETS_POLAND =
       '2009' =>
       {
         # https://www.warsbrydz.pl/gpw/gpw2009/gp2009.php?main=2
-        ORDINAL => 37,
+        MEET_ORDINAL => 37,
         YEAR => 2009,
         DATE_START => '2009-08-20',
         DATE_END => '2009-08-30'
@@ -1285,7 +1285,7 @@ my %MEETS_POLAND =
       '2010' =>
       {
         # https://www.warsbrydz.pl/gpw/gpw2010/gp2010.php?main=2
-        ORDINAL => 38,
+        MEET_ORDINAL => 38,
         YEAR => 2010,
         DATE_START => '2010-08-20',
         DATE_END => '2010-08-29'
@@ -1293,7 +1293,7 @@ my %MEETS_POLAND =
       '2011' =>
       {
         # https://www.warsbrydz.pl/gpw/gpw2011/gp2011.php?main=2
-        ORDINAL => 39,
+        MEET_ORDINAL => 39,
         YEAR => 2011,
         DATE_START => '2011-08-18',
         DATE_END => '2011-08-28'
@@ -1301,7 +1301,7 @@ my %MEETS_POLAND =
       '2012' =>
       {
         # https://www.warsbrydz.pl/gpw/gpw2012/gp2012.php?main=2
-        ORDINAL => 40,
+        MEET_ORDINAL => 40,
         YEAR => 2012,
         DATE_START => '2012-08-24',
         DATE_END => '2012-09-02'
@@ -1309,7 +1309,7 @@ my %MEETS_POLAND =
       '2013' =>
       {
         # https://www.warsbrydz.pl/gpw/gpw2013/gp2013.php?main=2
-        ORDINAL => 41,
+        MEET_ORDINAL => 41,
         YEAR => 2013,
         DATE_START => '2013-08-23',
         DATE_END => '2013-09-01'
@@ -1317,7 +1317,7 @@ my %MEETS_POLAND =
       '2014' =>
       {
         # https://www.warsbrydz.pl/gpw/gpw2014/gp2014.php?main=2
-        ORDINAL => 42,
+        MEET_ORDINAL => 42,
         YEAR => 2014,
         DATE_START => '2014-08-22',
         DATE_END => '2014-08-31'
@@ -1325,7 +1325,7 @@ my %MEETS_POLAND =
       '2015' =>
       {
         # https://www.warsbrydz.pl/gpw/gpw2015/gp2015.php?main=2
-        ORDINAL => 43,
+        MEET_ORDINAL => 43,
         YEAR => 2015,
         DATE_START => '2015-08-21',
         DATE_END => '2015-08-30'
@@ -1333,7 +1333,7 @@ my %MEETS_POLAND =
       '2016' =>
       {
         # https://www.warsbrydz.pl/gpw/gpw2016/gp2016.php?main=2
-        ORDINAL => 44,
+        MEET_ORDINAL => 44,
         YEAR => 2016,
         DATE_START => '2016-08-19',
         DATE_END => '2016-08-28'
@@ -1341,7 +1341,7 @@ my %MEETS_POLAND =
       '2017' =>
       {
         # https://www.warsbrydz.pl/gpw/gpw2017/gp2017.php?main=2
-        ORDINAL => 45,
+        MEET_ORDINAL => 45,
         YEAR => 2017,
         DATE_START => '2017-08-18',
         DATE_END => '2017-08-27'
@@ -1349,7 +1349,7 @@ my %MEETS_POLAND =
       '2018' =>
       {
         # https://www.warsbrydz.pl/gpw/gpw2018/gp2018.php?main=2
-        ORDINAL => 46,
+        MEET_ORDINAL => 46,
         YEAR => 2018,
         DATE_START => '2018-08-24',
         DATE_END => '2018-09-02'
@@ -1357,7 +1357,7 @@ my %MEETS_POLAND =
       '2019' =>
       {
         # https://www.warsbrydz.pl/GPW/GPW2019/new_program.php
-        ORDINAL => 47,
+        MEET_ORDINAL => 47,
         YEAR => 2019,
         DATE_START => '2019-08-23',
         DATE_END => '2019-09-01'
@@ -1365,7 +1365,7 @@ my %MEETS_POLAND =
       '2021' =>
       {
         # https://www.warsbrydz.pl/GPW/GPW2021/new_program.php
-        ORDINAL => 48,
+        MEET_ORDINAL => 48,
         YEAR => 2021,
         DATE_START => '2021-08-25',
         DATE_END => '2021-08-29'
@@ -1373,7 +1373,7 @@ my %MEETS_POLAND =
       '2022' =>
       {
         # https://www.warsbrydz.pl/GPW/GPW2022/new_program.php
-        ORDINAL => 49,
+        MEET_ORDINAL => 49,
         YEAR => 2022,
         DATE_START => '2022-07-29',
         DATE_END => '2022-08-07'
@@ -1381,7 +1381,7 @@ my %MEETS_POLAND =
       '2023' =>
       {
         # https://www.warsbrydz.pl/GPW/GPW2023/new_program.php
-        ORDINAL => 50,
+        MEET_ORDINAL => 50,
         YEAR => 2023,
         DATE_START => '2023-08-18',
         DATE_END => '2023-08-27'
@@ -1389,7 +1389,7 @@ my %MEETS_POLAND =
       '2024' =>
       {
         # https://www.warsbrydz.pl/GPW/GPW2024/new_program.php
-        ORDINAL => 51,
+        MEET_ORDINAL => 51,
         YEAR => 2024,
         DATE_START => '2024-08-16',
         DATE_END => '2024-08-25'
@@ -1408,7 +1408,7 @@ my %MEETS_POLAND =
       '2008' =>
       {
         # Link on https://stara.pzbs.pl/imprezy/kal08.html
-        ORDINAL => 29,
+        MEET_ORDINAL => 29,
         CITY => 'Wroclaw',
         YEAR => 2008,
         DATE_START => '2008-05-09',
@@ -1417,7 +1417,7 @@ my %MEETS_POLAND =
       '2009' =>
       {
         # https://stara.pzbs.pl/imprezy/OTP/2009/bwodry2009.html
-        ORDINAL => 30,
+        MEET_ORDINAL => 30,
         CITY => 'Wroclaw',
         YEAR => 2009,
         DATE_START => '2009-05-08',
@@ -1426,7 +1426,7 @@ my %MEETS_POLAND =
       '2010' =>
       {
         # https://michzimny.pl/bridge/2010/wroclaw/
-        ORDINAL => 31,
+        MEET_ORDINAL => 31,
         CITY => 'Wroclaw',
         YEAR => 2010,
         DATE_START => '2010-05-07',
@@ -1435,7 +1435,7 @@ my %MEETS_POLAND =
       '2011' =>
       {
         # https://michzimny.pl/bridge/2011/wroclaw/
-        ORDINAL => 32,
+        MEET_ORDINAL => 32,
         CITY => 'Wroclaw',
         YEAR => 2011,
         DATE_START => '2011-05-06',
@@ -1444,7 +1444,7 @@ my %MEETS_POLAND =
       '2012' =>
       {
         # https://michzimny.pl/bridge/2012/wroclaw/
-        ORDINAL => 33,
+        MEET_ORDINAL => 33,
         CITY => 'Wroclaw',
         YEAR => 2012,
         DATE_START => '2012-05-25',
@@ -1453,7 +1453,7 @@ my %MEETS_POLAND =
       '2013' =>
       {
         # https://michzimny.pl/bridge/2013/wroclaw/
-        ORDINAL => 34,
+        MEET_ORDINAL => 34,
         CITY => 'Wroclaw',
         YEAR => 2013,
         DATE_START => '2013-05-24',
@@ -1462,7 +1462,7 @@ my %MEETS_POLAND =
       '2014' =>
       {
         # https://wyniki.pzbs.pl/2014/_gpp/07wroclaw/
-        ORDINAL => 35,
+        MEET_ORDINAL => 35,
         CITY => 'Wroclaw',
         YEAR => 2014,
         DATE_START => '2014-05-23',
@@ -1471,7 +1471,7 @@ my %MEETS_POLAND =
       '2015' =>
       {
         # https://wyniki.pzbs.pl/2015/_gpp/07wroclaw/
-        ORDINAL => 36,
+        MEET_ORDINAL => 36,
         CITY => 'Wroclaw',
         YEAR => 2015,
         DATE_START => '2015-05-22',
@@ -1480,7 +1480,7 @@ my %MEETS_POLAND =
       '2016' =>
       {
         # https://wyniki.pzbs.pl/2016/_gpp/07wroclaw/
-        ORDINAL => 37,
+        MEET_ORDINAL => 37,
         CITY => 'Wroclaw',
         YEAR => 2016,
         DATE_START => '2016-05-20',
@@ -1489,7 +1489,7 @@ my %MEETS_POLAND =
       '2017' =>
       {
         # https://wyniki.pzbs.pl/2017/gpp/07wroclaw/
-        ORDINAL => 38,
+        MEET_ORDINAL => 38,
         CITY => 'Wroclaw',
         YEAR => 2017,
         DATE_START => '2017-05-26',
@@ -1498,7 +1498,7 @@ my %MEETS_POLAND =
       '2018' =>
       {
         # https://wyniki.pzbs.pl/2018/gpp/wroclaw/
-        ORDINAL => 39,
+        MEET_ORDINAL => 39,
         CITY => 'Wroclaw',
         YEAR => 2018,
         DATE_START => '2018-05-18',
@@ -1507,7 +1507,7 @@ my %MEETS_POLAND =
       '2019' =>
       {
         # https://wyniki.pzbs.pl/2019/gpp/wroclaw/
-        ORDINAL => 40,
+        MEET_ORDINAL => 40,
         CITY => 'Wroclaw',
         YEAR => 2019,
         DATE_START => '2019-05-24',
@@ -1516,7 +1516,7 @@ my %MEETS_POLAND =
       '2022' =>
       {
         # https://wyniki.pzbs.pl/2022/wroclaw/
-        ORDINAL => 41,
+        MEET_ORDINAL => 41,
         CITY => 'Wroclaw',
         YEAR => 2022,
         DATE_START => '2022-05-20',
@@ -1525,7 +1525,7 @@ my %MEETS_POLAND =
       '2023' =>
       {
         # https://wyniki.pzbs.pl/2023/wroclaw/
-        ORDINAL => 42,
+        MEET_ORDINAL => 42,
         CITY => 'Wroclaw',
         YEAR => 2023,
         DATE_START => '2023-05-12',
@@ -1534,7 +1534,7 @@ my %MEETS_POLAND =
       '2024' =>
       {
         # https://wyniki.pzbs.pl/2024/wroclaw/
-        ORDINAL => 43,
+        MEET_ORDINAL => 43,
         CITY => 'Wroclaw',
         YEAR => 2024,
         DATE_START => '2024-05-17',
@@ -1553,7 +1553,7 @@ my %MEETS_POLAND =
       '2007' =>
       {
         # http://www.bridge.elblag.com.pl/zulawski07/index.html
-        ORDINAL => 10,
+        MEET_ORDINAL => 10,
         CITY => 'Elblag',
         YEAR => 2007,
         DATE_START => '2007-02-23',
@@ -1562,7 +1562,7 @@ my %MEETS_POLAND =
       '2008' =>
       {
         # http://www.bridge.elblag.com.pl/zulawski08/index.html
-        ORDINAL => 11,
+        MEET_ORDINAL => 11,
         CITY => 'Elblag',
         YEAR => 2008,
         DATE_START => '2008-02-22',
@@ -1571,7 +1571,7 @@ my %MEETS_POLAND =
       '2009' =>
       {
         # http://www.bridge.elblag.com.pl/zulawski09/index.html
-        ORDINAL => 12,
+        MEET_ORDINAL => 12,
         CITY => 'Elblag',
         YEAR => 2009,
         DATE_START => '2009-02-20',
@@ -1580,7 +1580,7 @@ my %MEETS_POLAND =
       '2010' =>
       {
         # http://www.bridge.elblag.com.pl/zulawski10/index.html
-        ORDINAL => 13,
+        MEET_ORDINAL => 13,
         CITY => 'Elblag',
         YEAR => 2010,
         DATE_START => '2010-02-19',
@@ -1589,7 +1589,7 @@ my %MEETS_POLAND =
       '2011' =>
       {
         # https://wyniki.pzbs.pl/2011/_gpp/01elblag/W-egpp.html
-        ORDINAL => 14,
+        MEET_ORDINAL => 14,
         CITY => 'Elblag',
         YEAR => 2011,
         DATE_START => '2011-02-18',
@@ -1598,7 +1598,7 @@ my %MEETS_POLAND =
       '2012' =>
       {
         # https://wyniki.pzbs.pl/2011/_gpp/2012/01elblag/
-        ORDINAL => 15,
+        MEET_ORDINAL => 15,
         CITY => 'Elblag',
         YEAR => 2012,
         DATE_START => '2012-02-10',
@@ -1607,7 +1607,7 @@ my %MEETS_POLAND =
       '2013' =>
       {
         # https://wyniki.pzbs.pl/2013/_gpp/02elblag/wyniki/
-        ORDINAL => 16,
+        MEET_ORDINAL => 16,
         CITY => 'Elblag',
         YEAR => 2013,
         DATE_START => '2013-03-08',
@@ -1616,7 +1616,7 @@ my %MEETS_POLAND =
       '2014' =>
       {
         # https://wyniki.pzbs.pl/2014/_gpp/01elblag/
-        ORDINAL => 17,
+        MEET_ORDINAL => 17,
         CITY => 'Elblag',
         YEAR => 2014,
         DATE_START => '2014-01-24',
@@ -1625,7 +1625,7 @@ my %MEETS_POLAND =
       '2015' =>
       {
         # https://wyniki.pzbs.pl/2015/_gpp/02elblag/
-        ORDINAL => 18,
+        MEET_ORDINAL => 18,
         CITY => 'Elblag',
         YEAR => 2015,
         DATE_START => '2015-03-06',
@@ -1634,7 +1634,7 @@ my %MEETS_POLAND =
       '2016' =>
       {
         # https://wyniki.pzbs.pl/2016/_gpp/02elblag/
-        ORDINAL => 19,
+        MEET_ORDINAL => 19,
         CITY => 'Elblag',
         YEAR => 2016,
         DATE_START => '2016-03-04',
@@ -1643,7 +1643,7 @@ my %MEETS_POLAND =
       '2017' =>
       {
         # https://wyniki.pzbs.pl/2017/gpp/02elblag/
-        ORDINAL => 20,
+        MEET_ORDINAL => 20,
         CITY => 'Elblag',
         YEAR => 2017,
         DATE_START => '2017-03-03',
@@ -1652,7 +1652,7 @@ my %MEETS_POLAND =
       '2018' =>
       {
         # https://wyniki.pzbs.pl/2018/gpp/06elblag/
-        ORDINAL => 21,
+        MEET_ORDINAL => 21,
         CITY => 'Elblag',
         YEAR => 2018,
         DATE_START => '2018-03-01',
@@ -1661,7 +1661,7 @@ my %MEETS_POLAND =
       '2019' =>
       {
         # https://wyniki.pzbs.pl/2019/gpp/elblag/
-        ORDINAL => 22,
+        MEET_ORDINAL => 22,
         CITY => 'Elblag',
         YEAR => 2019,
         DATE_START => '2019-03-07',
@@ -1670,7 +1670,7 @@ my %MEETS_POLAND =
       '2020' =>
       {
         # https://wyniki.pzbs.pl/2020/elblag/
-        ORDINAL => 23,
+        MEET_ORDINAL => 23,
         CITY => 'Elblag',
         YEAR => 2020,
         DATE_START => '2020-01-22',
@@ -1679,7 +1679,7 @@ my %MEETS_POLAND =
       '2022' =>
       {
         # https://wyniki.pzbs.pl/2022/elblag/
-        ORDINAL => 25,
+        MEET_ORDINAL => 25,
         CITY => 'Krynica Morska',
         YEAR => 2022,
         DATE_START => '2022-10-06',
@@ -1688,7 +1688,7 @@ my %MEETS_POLAND =
       '2023' =>
       {
         # https://wyniki.pzbs.pl/2023/elblag/
-        ORDINAL => 26,
+        MEET_ORDINAL => 26,
         CITY => 'Warlity Wielkie',
         YEAR => 2023,
         DATE_START => '2023-03-02',
@@ -1697,7 +1697,7 @@ my %MEETS_POLAND =
       '2024' =>
       {
         # https://wyniki.pzbs.pl/2024/elblag/
-        ORDINAL => 27,
+        MEET_ORDINAL => 27,
         CITY => 'Warlity Wielkie',
         YEAR => 2024,
         DATE_START => '2024-02-29',

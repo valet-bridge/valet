@@ -13,7 +13,6 @@ our @EXPORT = qw(set_links);
 
 my %GLOBAL = (
   ORGANIZATION => 'CACBF',
-  ORIGIN => 'International',
   ZONE => 'Central America and Caribbean',
 );
 
@@ -28,6 +27,7 @@ my %TOURNAMENTS_CENTRALAMERICA =
     # https://www.bridgewebs.com/cgi-bin/bwoq/bw.cgi?club=cacbf&pid=display_page31
 
     %GLOBAL,
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -122,6 +122,7 @@ my %TOURNAMENTS_CENTRALAMERICA =
     # https://www.bridgewebs.com/cgi-bin/bwoq/bw.cgi?club=cacbf&pid=display_page31
 
     %GLOBAL,
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

@@ -33,7 +33,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/Repository/competitions/03Rome/Results.htm
         YEAR => 2003,
-        ORDINAL => 2,
+        MEET_ORDINAL => 2,
         CITY => 'Rome',
         COUNTRY => 'Italy',
         DATE_START => '2003-10-10',
@@ -43,7 +43,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/Repository/competitions/04Barcelona/Results.htm
         YEAR => 2004,
-        ORDINAL => 3,
+        MEET_ORDINAL => 3,
         CITY => 'Barcelona',
         COUNTRY => 'Spain',
         DATE_START => '2004-10-07',
@@ -53,7 +53,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/Repository/competitions/05Brussels/Results.htm
         YEAR => 2005,
-        ORDINAL => 4,
+        MEET_ORDINAL => 4,
         CITY => 'Brussels',
         COUNTRY => 'Belgium',
         DATE_START => '2005-10-13',
@@ -63,7 +63,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/Repository/competitions/06Rome/Results.htm
         YEAR => 2006,
-        ORDINAL => 5,
+        MEET_ORDINAL => 5,
         CITY => 'Rome',
         COUNTRY => 'Italy',
         DATE_START => '2006-10-12',
@@ -73,7 +73,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/Repository/competitions/07Wroclaw/Results.htm
         YEAR => 2007,
-        ORDINAL => 6,
+        MEET_ORDINAL => 6,
         CITY => 'Wroclaw',
         COUNTRY => 'Poland',
         DATE_START => '2007-11-08',
@@ -83,7 +83,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/Repository/competitions/08Amsterdam/Results.htm
         YEAR => 2008,
-        ORDINAL => 7,
+        MEET_ORDINAL => 7,
         CITY => 'Amsterdam',
         COUNTRY => 'Netherlands',
         DATE_START => '2008-11-06',
@@ -93,7 +93,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/Repository/competitions/09Paris/Results.htm
         YEAR => 2009,
-        ORDINAL => 8,
+        MEET_ORDINAL => 8,
         CITY => 'Paris',
         COUNTRY => 'France',
         DATE_START => '2009-10-15',
@@ -103,7 +103,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/Repository/competitions/10Izmir/Results.htm
         YEAR => 2010,
-        ORDINAL => 9,
+        MEET_ORDINAL => 9,
         CITY => 'Izmir',
         COUNTRY => 'Turkey',
         DATE_START => '2010-11-11',
@@ -113,7 +113,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/Repository/competitions/11BadHonnef/Results.html
         YEAR => 2011,
-        ORDINAL => 10,
+        MEET_ORDINAL => 10,
         CITY => 'Bad Honnef',
         COUNTRY => 'Germany',
         DATE_START => '2011-11-17',
@@ -123,7 +123,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/Repository/competitions/12Eilat/Microsite/Results.html
         YEAR => 2012,
-        ORDINAL => 11,
+        MEET_ORDINAL => 11,
         CITY => 'Eilat',
         COUNTRY => 'Israel',
         DATE_START => '2012-11-15',
@@ -133,7 +133,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/Repository/competitions/13Opatija/microSite/Results.htm
         YEAR => 2013,
-        ORDINAL => 12,
+        MEET_ORDINAL => 12,
         CITY => 'Opatija',
         COUNTRY => 'Croatia',
         DATE_START => '2013-11-14',
@@ -143,7 +143,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/Repository/competitions/14Milan/microSite/Results.htm
         YEAR => 2014,
-        ORDINAL => 13,
+        MEET_ORDINAL => 13,
         CITY => 'Milan',
         COUNTRY => 'Italy',
         DATE_START => '2014-11-13',
@@ -153,7 +153,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/Repository/competitions/15MiltonKeynes/microSite/results.htm
         YEAR => 2015,
-        ORDINAL => 14,
+        MEET_ORDINAL => 14,
         CITY => 'Milton Keynes',
         COUNTRY => 'England',
         DATE_START => '2015-11-12',
@@ -163,7 +163,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/Repository/competitions/16Zagreb/microSite/results.htm
         YEAR => 2016,
-        ORDINAL => 15,
+        MEET_ORDINAL => 15,
         CITY => 'Zagreb',
         COUNTRY => 'Croatia',
         DATE_START => '2016-11-10',
@@ -173,7 +173,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/repository/competitions/17riga/microsite/results.htm
         YEAR => 2017,
-        ORDINAL => 16,
+        MEET_ORDINAL => 16,
         CITY => 'Riga',
         COUNTRY => 'Latvia',
         DATE_START => '2017-11-09',
@@ -183,7 +183,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/repository/competitions/18Eilat/microSite/results.htm
         YEAR => 2018,
-        ORDINAL => 17,
+        MEET_ORDINAL => 17,
         CITY => 'Eilat',
         COUNTRY => 'Israel',
         DATE_START => '2018-11-08',
@@ -193,7 +193,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/Repository/competitions/19bucharest/microSite/results.htm
         YEAR => 2019,
-        ORDINAL => 18,
+        MEET_ORDINAL => 18,
         CITY => 'Bucharest',
         COUNTRY => 'Romania',
         DATE_START => '2019-11-14',
@@ -203,7 +203,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/repository/competitions/21Pezinok/microsite/results.htm
         YEAR => 2021,
-        ORDINAL => 19,
+        MEET_ORDINAL => 19,
         CITY => 'Pezinok',
         COUNTRY => 'Slovakia',
         DATE_START => '2021-11-11',
@@ -213,7 +213,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/repository/competitions/22Helsinki/microsite/results.htm
         YEAR => 2022,
-        ORDINAL => 20,
+        MEET_ORDINAL => 20,
         CITY => 'Helsinki',
         COUNTRY => 'Finland',
         DATE_START => '2022-11-10',
@@ -223,7 +223,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/repository/competitions/23Dubrovnik/microsite/results.htm
         YEAR => 2023,
-        ORDINAL => 21,
+        MEET_ORDINAL => 21,
         CITY => 'Dubrovnik',
         COUNTRY => 'Croatia',
         DATE_START => '2023-11-09',
@@ -241,7 +241,7 @@ my %MEETS_EUROADULT =
       '1996' =>
       {
         # http://db.eurobridge.org/Repository/competitions/97Montecatini/Montecatini.htm#table
-        ORDINAL => 43,
+        MEET_ORDINAL => 43,
         YEAR => 1996,
         CITY => 'Montecatini',
         COUNTRY => 'Italy',
@@ -252,7 +252,7 @@ my %MEETS_EUROADULT =
       '1998' =>
       {
         # http://db.eurobridge.org/Repository/competitions/99Malta/malta.htm#table
-        ORDINAL => 44,
+        MEET_ORDINAL => 44,
         YEAR => 1998,
         CITY => 'Valletta',
         COUNTRY => 'Malta',
@@ -263,7 +263,7 @@ my %MEETS_EUROADULT =
       '2000' =>
       {
         # http://db.eurobridge.org/Repository/competitions/01Tenerife/ResultsMain.htm
-        ORDINAL => 45,
+        MEET_ORDINAL => 45,
         YEAR => 2000,
         CITY => 'Tenerife',
         COUNTRY => 'Spain',
@@ -274,7 +274,7 @@ my %MEETS_EUROADULT =
       '2002' =>
       {
         # http://db.eurobridge.org/Repository/competitions/02Salsomaggiore/Results.htm
-        ORDINAL => 46,
+        MEET_ORDINAL => 46,
         YEAR => 2002,
         CITY => 'Salgomaggiore',
         COUNTRY => 'Italy',
@@ -285,7 +285,7 @@ my %MEETS_EUROADULT =
       '2004' =>
       {
         # http://db.eurobridge.org/Repository/competitions/04Malmo/Results.htm
-        ORDINAL => 47,
+        MEET_ORDINAL => 47,
         YEAR => 2004,
         CITY => 'Malmö',
         COUNTRY => 'Sweden',
@@ -296,7 +296,7 @@ my %MEETS_EUROADULT =
       '2006' =>
       {
         # http://db.eurobridge.org/Repository/competitions/06Warsaw/Results.htm
-        ORDINAL => 48,
+        MEET_ORDINAL => 48,
         YEAR => 2006,
         CITY => 'Warsaw',
         COUNTRY => 'Poland',
@@ -307,7 +307,7 @@ my %MEETS_EUROADULT =
       '2008' =>
       {
         # http://db.eurobridge.org/Repository/competitions/08Pau/Results.htm
-        ORDINAL => 49,
+        MEET_ORDINAL => 49,
         YEAR => 2008,
         CITY => 'Pau',
         COUNTRY => 'France',
@@ -318,7 +318,7 @@ my %MEETS_EUROADULT =
       '2010' =>
       {
         # http://db.eurobridge.org/Repository/competitions/10Ostend/Results.htm
-        ORDINAL => 50,
+        MEET_ORDINAL => 50,
         YEAR => 2010,
         CITY => 'Ostend',
         COUNTRY => 'Belgium',
@@ -329,7 +329,7 @@ my %MEETS_EUROADULT =
       '2012' =>
       {
         # http://db.eurobridge.org/Repository/competitions/12Dublin/microSite/Results.htm
-        ORDINAL => 51,
+        MEET_ORDINAL => 51,
         YEAR => 2012,
         CITY => 'Dublin',
         COUNTRY => 'Ireland',
@@ -340,7 +340,7 @@ my %MEETS_EUROADULT =
       '2014' =>
       {
         # http://db.eurobridge.org/Repository/competitions/14Opatija/microSite/results.htm
-        ORDINAL => 52,
+        MEET_ORDINAL => 52,
         YEAR => 2014,
         CITY => 'Opatija',
         COUNTRY => 'Croatia',
@@ -351,7 +351,7 @@ my %MEETS_EUROADULT =
       '2016' =>
       {
         # http://db.eurobridge.org/Repository/competitions/16Budapest/microSite/results.htm
-        ORDINAL => 53,
+        MEET_ORDINAL => 53,
         YEAR => 2016,
         CITY => 'Budapest',
         COUNTRY => 'Hungary',
@@ -401,7 +401,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/Repository/competitions/03Menton/Menton.htm
         YEAR => 2003,
-        ORDINAL => 1,
+        MEET_ORDINAL => 1,
         CITY => 'Menton',
         COUNTRY => 'France',
         DATE_START => '2003-06-14',
@@ -411,7 +411,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/Repository/competitions/05Tenerife/Tenerife.htm
         YEAR => 2005,
-        ORDINAL => 2,
+        MEET_ORDINAL => 2,
         CITY => 'Tenerife',
         COUNTRY => 'Spain',
         DATE_START => '2005-06-18',
@@ -421,7 +421,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/Repository/competitions/07Antalya/Antalya.htm
         YEAR => 2007,
-        ORDINAL => 3,
+        MEET_ORDINAL => 3,
         CITY => 'Antalya',
         COUNTRY => 'Turkey',
         DATE_START => '2007-06-15',
@@ -431,7 +431,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/Repository/competitions/09Sanremo/Sanremo.htm
         YEAR => 2009,
-        ORDINAL => 4,
+        MEET_ORDINAL => 4,
         CITY => 'San Remo',
         COUNTRY => 'Italy',
         DATE_START => '2009-06-12',
@@ -441,7 +441,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/Repository/competitions/11Poznan/Results.htm#Pairs
         YEAR => 2011,
-        ORDINAL => 5,
+        MEET_ORDINAL => 5,
         CITY => 'Poznan',
         COUNTRY => 'Poland',
         DATE_START => '2011-06-17',
@@ -451,7 +451,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/Repository/competitions/13Oostende/microSite/Information.htm
         YEAR => 2013,
-        ORDINAL => 6,
+        MEET_ORDINAL => 6,
         CITY => 'Ostend',
         COUNTRY => 'Belgium',
         DATE_START => '2013-06-15',
@@ -461,7 +461,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/Repository/competitions/15Tromso/microSite/results.htm
         YEAR => 2015,
-        ORDINAL => 7,
+        MEET_ORDINAL => 7,
         CITY => 'Tromso',
         COUNTRY => 'Norway',
         DATE_START => '2015-06-27',
@@ -471,7 +471,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/repository/competitions/17montecatini/microsite/results.htm
         YEAR => 2017,
-        ORDINAL => 8,
+        MEET_ORDINAL => 8,
         CITY => 'Montecatini',
         COUNTRY => 'Italy',
         DATE_START => '2017-06-10',
@@ -481,7 +481,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/repository/competitions/19istanbul/microsite/results.htm
         YEAR => 2019,
-        ORDINAL => 9,
+        MEET_ORDINAL => 9,
         CITY => 'Istanbul',
         COUNTRY => 'Turkey',
         DATE_START => '2019-06-15',
@@ -491,7 +491,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/repository/competitions/23Strasbourg/microsite/results.htm
         YEAR => 2023,
-        ORDINAL => 10,
+        MEET_ORDINAL => 10,
         CITY => 'Strasbourg',
         COUNTRY => 'France',
         DATE_START => '2023-06-03',
@@ -513,7 +513,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/Repository/competitions/16Monaco/microSite/results.htm
         YEAR => 2016,
-        ORDINAL => 1,
+        MEET_ORDINAL => 1,
         CITY => 'Monte Carlo',
         COUNTRY => 'Monaco',
         DATE_START => '2016-02-05',
@@ -523,7 +523,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/repository/competitions/18Monaco/microSite/results.htm
         YEAR => 2018,
-        ORDINAL => 2,
+        MEET_ORDINAL => 2,
         CITY => 'Monte Carlo',
         COUNTRY => 'Monaco',
         DATE_START => '2018-02-17',
@@ -533,7 +533,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/repository/competitions/20Monaco/microSite/results.htm
         YEAR => 2020,
-        ORDINAL => 3,
+        MEET_ORDINAL => 3,
         CITY => 'Monte Carlo',
         COUNTRY => 'Monaco',
         DATE_START => '2020-02-29',
@@ -543,7 +543,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/repository/competitions/23Tignes/microsite/results.htm
         YEAR => 2023,
-        ORDINAL => 4,
+        MEET_ORDINAL => 4,
         CITY => 'Tignes',
         COUNTRY => 'France',
         DATE_START => '2023-04-21',
@@ -565,7 +565,7 @@ my %MEETS_EUROADULT =
       {
         # http://db.eurobridge.org/repository/competitions/24AlpedHuez/microsite/results.htm
         YEAR => 2024,
-        ORDINAL => 1,
+        MEET_ORDINAL => 1,
         CITY => "Alpe d'Huez",
         COUNTRY => 'France',
         DATE_START => '2024-04-15',
