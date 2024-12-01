@@ -1511,11 +1511,18 @@ my %TOURNAMENTS_EUROADULT =
         MEET => 'European National Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
             major => 'ROUND',
             DATE_START => '2012-06-13',
+            DATE_END => '2012-06-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            major => 'SEGMENT',
+            DATE_START => '2012-06-20',
             DATE_END => '2012-06-23'
           } 
         }

@@ -90,6 +90,48 @@ sub register
 }
 
 
+sub register_new
+{
+  my ($self, $entry) = @_;
+
+  my $bbono = $entry->bbono();
+  my $counters = $entry->get_counter_ref();
+  while (my ($field, $value) = each %$counters)
+  {
+    $self->{BBOHIST}{$bbono}{$field}++;
+    $self->{BBOCOUNT}{$bbono}++;
+    $self->{COUNTER}{$field}{COUNT}++;
+
+    # Basically just take the leading number.
+    # This is also what gets sorted on.
+
+    if ($value =~ /^\d+$/ || $value eq 'last')
+    {
+      $self->{COUNTER}{$field}{SIMPLE}++;
+    }
+    elsif ($value =~ /^\d+ of (\d+)$/ ||
+        $value =~ /^\d+-\d+ of (\d+)$/)
+    {
+      my $end = $1;
+      $self->{COUNTER}{$field}{OF}++;
+      $self->{COUNTER}{$field}{ENDS}{$end}++;
+    }
+    elsif ($value =~ /^\d+-\d+$/)
+    {
+      $self->{COUNTER}{$field}{SIMPLE}++;
+    }
+    elsif ($value =~ /^\d+[A-Da-d]$/)
+    {
+      $self->{COUNTER}{$field}{SIMPLE}++;
+    }
+    else
+    {
+      warn "$bbono: Haven't learned $value";
+    }
+  }
+}
+
+
 sub has_of_structure
 {
   # Not a class method.
@@ -210,27 +252,21 @@ sub get_assigned_fields
 {
   my ($self, $entry) = @_;
 
-  my $v1 = $entry->number('major');
-  if ($v1 eq '')
+  if (! exists $entry->{major})
   {
     $self->{ASSIGNED_FIELDS} = 0;
+    return;
   }
-  else
-  {
-    $self->{ASSIGNED}[0] = $v1;
+  $self->{ASSIGNED}[0] = $entry->{major};
 
-    my $v2 = $entry->number('minor');
-    if ($v2 eq '')
-    {
-      $self->{ASSIGNED_FIELDS} = 1;
-    }
-    else
-    {
-      $self->{ASSIGNED_FIELDS} = 2;
-      $self->{ASSIGNED}[1] = $v2;
-    }
-    # TODO Maybe there should be a third assigned level possible.
+  if (! exists $entry->{minor})
+  {
+    $self->{ASSIGNED_FIELDS} = 1;
+    return;
   }
+
+  $self->{ASSIGNED_FIELDS} = 2;
+  $self->{ASSIGNED}[1] = $entry->{minor};
 }
 
 

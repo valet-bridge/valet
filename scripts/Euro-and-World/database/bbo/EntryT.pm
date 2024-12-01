@@ -166,6 +166,9 @@ my %CHAPTER_HASH_NEW = (
   TITLE_MOVEMENT => 'MOVEMENT',
   EVENT_MOVEMENT => 'MOVEMENT',
 
+  TITLE_COLOR => 'COLOR',
+  EVENT_COLOR => 'COLOR',
+
   EVENT_BOARDS => 'BOARDS',
 );
 
@@ -177,7 +180,6 @@ my @COUNTER_FIELDS_NEW = qw(
   PHASE
   FLIGHT
   GROUP
-  COLOR
   DAY
   YEAR_MONTH
   MONTH_DAY
@@ -207,8 +209,6 @@ my %COUNTER_HASH_NEW = (
 
   TITLE_GROUP => 'GROUP',
   EVENT_GROUP => 'GROUP',
-
-  EVENT_COLOR => 'COLOR',
 
   TITLE_DAY => 'DAY',
   EVENT_DAY => 'DAY',
@@ -274,20 +274,34 @@ my @TEAM_FIELDS_NEW = qw(
 my %TEAM_HASH_NEW;
 $TEAM_HASH_NEW{$_} = $_ for @TEAM_FIELDS_NEW;
 
-my %MULTI_VALUED_TEAM_FIELD = (
-  'TEAM1_CAPTAIN' => ['TEAM1', 'CAPTAIN'],
-  'TEAM2_CAPTAIN' => ['TEAM2', 'CAPTAIN'],
-  'TEAM1_SPONSOR' => ['TEAM1', 'SPONSOR'],
-  'TEAM2_SPONSOR' => ['TEAM2', 'SPONSOR'],
-  'TEAM1_COUNTRY' => ['TEAM1', 'COUNTRY'],
-  'TEAM2_COUNTRY' => ['TEAM2', 'COUNTRY'],
-  'TEAM1_REGION' => ['TEAM1', 'REGION'],
-  'TEAM2_REGION' => ['TEAM2', 'REGION'],
-  'TEAM1_CITY' => ['TEAM1', 'CITY'],
-  'TEAM2_CITY' => ['TEAM2', 'CITY'],
-  'TEAM1_ORIGIN' => ['TEAM1', 'ORIGIN'],
-  'TEAM2_ORIGIN' => ['TEAM2', 'ORIGIN'],
+my @MULTI_VALUED_TEAM_LIST = qw(
+  CAPTAIN
+  SPONSOR
+  BOT
+  ORGANIZATION
+  CLUB
+  UNIVERSITY
+  FIRST
+  FUN
+  GENDER
+  AGE
+  OTHER
+  ZONE
+  COUNTRY
+  NATIONALITY
+  REGION
+  CITY
+  LOCALITY
+  ORIGIN
 );
+
+my %MULTI_VALUED_TEAM_FIELD;
+
+for my $mv (@MULTI_VALUED_TEAM_LIST)
+{
+  $MULTI_VALUED_TEAM_FIELD{'TEAM1_' . $mv} = ['TEAM1', $mv];
+  $MULTI_VALUED_TEAM_FIELD{'TEAM2_' . $mv} = ['TEAM2', $mv];
+}
 
 my %POST_PROCESS_FIELD = (
   'TITLE_YEAR' => 'YEAR',
@@ -301,6 +315,14 @@ my %POST_PROCESS_FIELD = (
 
   'TITLE_TEAM1_COUNTRY' => 'TEAM1_COUNTRY',
   'TITLE_TEAM2_COUNTRY' => 'TEAM2_COUNTRY',
+);
+
+my %SKIP_BBO = (
+  BOARDS => 1,
+  DATE_ADDED => 1,
+  STAGE => 1,
+  MOVEMENT => 1,
+  YEAR => 1
 );
 
 # ------------------------------------------------
@@ -595,6 +617,15 @@ sub format_group
 }
 
 
+sub format_multi_group
+{
+  my ($self, $group, $field, $hash, $value) = @_;
+
+  my $map = $hash->{$field};
+  push @{$self->{$group}{$map}}, $value;
+}
+
+
 sub really_single_valued
 {
   my ($self, $field) = @_;
@@ -747,12 +778,10 @@ sub format
 
       my ($team, $map) = ($1, $2);
 
-      if ($self->format_group($team, $map, \%TEAM_HASH_NEW,
-        $postproc{$field}[0]))
-      {
-        delete $self->{$field};
-        next;
-      }
+      $self->format_multi_group($team, $map, \%TEAM_HASH_NEW,
+        $postproc{$field}[0]);
+      delete $self->{$field};
+      next;
     }
 
     warn $self->bbono() . ": $field ($count)";
@@ -976,6 +1005,27 @@ sub match_letter_to_number
 }
 
 
+sub match_letter_to_number_new
+{
+  my ($self) = @_;
+
+  for my $field (qw(MATCH SESSION SECTION GROUP FLIGHT POOL TABLE))
+  {
+    next unless defined $self->{COUNTER}{$field};
+
+    my $value = uc($self->{COUNTER}{$field});
+    if ($value =~ /^[A-E]$/)
+    {
+      $self->{COUNTER}{$field} = ord($value) - ord('A') + 1;
+    }
+    elsif ($value =~ /^\d+[A-D] [oO][fF] \d+$/)
+    {
+      $self->{COUNTER}{$field} =~ s/[A-D]//;
+    }
+  }
+}
+
+
 sub prune_using
 {
   my ($self, $header, $chapter) = @_;
@@ -1017,6 +1067,8 @@ sub prune_using
 sub prune_using_new
 {
   my ($self, $header, $chapter) = @_;
+
+  $self->match_letter_to_number_new();
 
   while (my ($ekey, $evalue) = each %{$self->{HEADER}})
   {
@@ -1073,6 +1125,20 @@ sub prune_using_new
     {
       warn $self->bbono() . ": Header " . $header->{$ekey} .
         " vs. $evalue";
+    }
+  }
+
+  while (my ($ckey, $cvalue) = each %{$self->{CHAPTER}})
+  {
+    next unless exists $chapter->{$ckey};
+    if ($cvalue eq $chapter->{$ckey})
+    {
+      delete $self->{CHAPTER}{$ckey};
+    }
+    else
+    {
+      warn $self->bbono() . ": Chapter " . $chapter->{$ckey} .
+        " vs. $cvalue";
     }
   }
 }
@@ -1269,6 +1335,18 @@ sub tag_list_contains
 }
 
 
+sub counter_list_contains
+{
+  my ($self, $tag, $value) = @_;
+
+  for my $v (@{$self->{COUNTER}{$tag}})
+  {
+    return 1 if ($v eq $value);
+  }
+  return 0;
+}
+
+
 sub transfer_list_tag
 {
   my ($self, $tag_from, $tag_to) = @_;
@@ -1290,6 +1368,24 @@ sub transfer_list_tag
     }
   }
   delete $self->{$tag_from};
+}
+
+
+sub transfer_counter_tag
+{
+  my ($self, $tag_from, $tag_to) = @_;
+
+  return unless exists $self->{COUNTER}{$tag_from};
+
+  if (! exists $self->{COUNTER}{$tag_to})
+  {
+    $self->{COUNTER}{$tag_to} = $self->{COUNTER}{$tag_from};
+    delete $self->{COUNTER}{$tag_from};
+    return;
+  }
+
+  $self->{COUNTER}{$tag_to} = $self->{COUNTER}{$tag_from};
+  delete $self->{COUNTER}{$tag_from};
 }
 
 
@@ -1377,17 +1473,17 @@ sub fix_counters
 
   for my $field (keys %$field_map)
   {
-    next unless exists $self->{$field};
+    next unless exists $self->{COUNTER}{$field};
 
     if ($field_map->{$field} ne $field)
     {
       if ($field_map->{$field} eq 'TO_DELETE')
       {
-        delete $self->{$field};
+        delete $self->{COUNTER}{$field};
       }
       else
       {
-        $self->transfer_list_tag($field, $field_map->{$field});
+        $self->transfer_counter_tag($field, $field_map->{$field});
       }
     }
   }
@@ -1399,16 +1495,13 @@ sub fix_counters
     next unless exists $field_map->{$orig_field};
     my $mapped = $field_map->{$orig_field};
     next if $mapped eq 'TO_DELETE';
-    next unless exists $self->{$mapped};
+    next unless exists $self->{COUNTER}{$mapped};
 
     # So we still have the ones mapped to themselves here.
-    for my $i (0 .. $#{$self->{$mapped}})
+    my $value = $self->{COUNTER}{$mapped};
+    if ($value =~ /^(\d+)$/)
     {
-      my $value = $self->{$mapped}[$i];
-      if ($value =~ /^(\d+)$/)
-      {
-        $self->{$mapped}[$i] .= " of " . $of_map->{$orig_field};
-      }
+      $self->{COUNTER}{$mapped} .= " of " . $of_map->{$orig_field};
     }
   }
 }
@@ -1421,26 +1514,17 @@ sub spaceship
   # This is a sorting operator.
   for my $field (@$priorities)
   {
-    if (exists $self->{$field})
+    if (exists $self->{COUNTER}{$field})
     {
-      if (! exists $other->{$field})
+      if (! exists $other->{COUNTER}{$field})
       {
         # Empty is ranked before full.
         return 1;
       }
       else
       {
-        if ($#{$self->{$field}} != 0)
-        {
-          die "Need a single value: $field, " . $self->str_as_read();
-        }
-        if ($#{$other->{$field}} != 0)
-        {
-          die "Need a single value: $field, " . $other->str_as_read();
-        }
-
-        my $value_self = $self->{$field}[0];
-        my $value_other = $other->{$field}[0];
+        my $value_self = $self->{COUNTER}{$field};
+        my $value_other = $other->{COUNTER}{$field};
 
         my $num_self;
         if ($value_self eq 'last')
@@ -1474,20 +1558,17 @@ sub spaceship
         return 1 if ($num_self > $num_other);
       }
     }
-    elsif (exists $other->{$field})
+    elsif (exists $other->{COUNTER}{$field})
     {
       # Empty is ranked before full.
       return -1;
     }
   }
 
-  if (exists $self->{DATE} && exists $other->{DATE})
-  {
-    my $d0 = Time::Piece->strptime($self->{DATE}[0], "%Y-%m-%d");
-    my $d1 = Time::Piece->strptime($other->{DATE}[0], "%Y-%m-%d");
-    return -1 if ($d0 < $d1);
-    return 1 if ($d1 < $d0);
-  }
+  my $d0 = Time::Piece->strptime($self->{CHAPTER}{DATE_ADDED}, "%Y-%m-%d");
+  my $d1 = Time::Piece->strptime($other->{CHAPTER}{DATE_ADDED}, "%Y-%m-%d");
+  return -1 if ($d0 < $d1);
+  return 1 if ($d1 < $d0);
 
   return $self->{BBONO} <=> $other->{BBONO};
 }
@@ -1528,6 +1609,13 @@ sub chapter_field
 {
   my ($self, $field) = @_;
   return $self->{CHAPTER}{$field} // '';
+}
+
+
+sub get_counter_ref
+{
+  my ($self) = @_;
+  return $self->{COUNTER};
 }
 
 
@@ -1577,6 +1665,45 @@ sub str_as_read
 
   $s .= $self->str_fields('BOARDS') if exists $self->{BOARDS};
   $s .= $self->str_fields('SCORING') if exists $self->{SCORING};
+
+  return "$s\n";
+}
+
+
+sub str_as_read_new
+{
+  my ($self) = @_;
+
+  my $s;
+  $s = "BBONO $self->{BBONO}\n";
+
+  for my $ckey (qw(DATE_ADDED BOARDS))
+  {
+    $s .= "$ckey " . $self->{CHAPTER}{$ckey} . "\n";
+  }
+
+  for my $ckey (keys %{$self->{CHAPTER}})
+  {
+    next if exists $SKIP_BBO{$ckey};
+    warn $self->{BBONO} . ": $ckey in CHAPTER?";
+  }
+
+  for my $ckey (sort keys %{$self->{COUNTER}})
+  {
+    $s .= "$ckey " . $self->{COUNTER}{$ckey} . "\n";
+  }
+
+  for my $order (qw(TEAM1 TEAM2))
+  {
+    for my $key (sort keys %{$self->{$order}})
+    {
+      my $ok = "${order}_$key ";
+      for my $v (@{$self->{$order}{$key}})
+      {
+        $s .= "$ok$v\n";
+      }
+    }
+  }
 
   return "$s\n";
 }

@@ -1,14 +1,6 @@
-Fields:
-Move on down in digest.pl:
-- Prune Entry
-- Update list
-- See what it does to printing
-  - Figure out what becomes of DAY, WEEKDAY. PERSON etc.
-  - In the end there shouldn't be that many fields.
-  - When testing, flag anything that is not used in headers
+Using ASIA as an argument to digest.pl is broken
 
 Don't need Tword.pm anymore?
-
 
 ORDINAL, MEET_ORDINAL: Probably set the latter when we have
 MEET and not TNAME?
@@ -18,7 +10,6 @@ Could have a more compact BOARD format when all is accounted for
 When matching up
 - If there are counters in BBO, must be some in headers too
 - If there are major/minor, there must be counters too (1+, 2+)
-- MEET_ORDINAL vs ORDINAL
 - TEAM?_FORM can potentially go away if perfectly matched
   If nothing left (22039), so be it
 
