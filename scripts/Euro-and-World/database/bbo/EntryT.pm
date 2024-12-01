@@ -1035,44 +1035,6 @@ sub prune_using
 {
   my ($self, $header, $chapter) = @_;
 
-  for my $pair (@PRUNE_HEADER_FIELDS)
-  {
-    $self->prune_field_using($pair->[1], $header->{$pair->[0]}, $header) if
-      exists $header->{$pair->[0]};
-  }
-
-  for my $pair (@PRUNE_CHAPTER_FIELDS)
-  {
-    $self->prune_field_using($pair->[1], $chapter->{$pair->[0]}, $header) if
-      exists $chapter->{$pair->[0]};
-  }
-
-  $self->match_letter_to_number();
-
-  # This is not so clean -- modifying a method argument.
-  if (exists $header->{YEAR} && exists $chapter->{YEAR})
-  {
-    if ($header->{YEAR} ne $chapter->{YEAR})
-    {
-      die "$self->{BBONO}, different years: $header->{YEAR} vs $chapter->{YEAR}";
-    }
-    delete $chapter->{YEAR};
-  }
-
-  # This is not so clean -- modifying a method argument.
-  $header->transfer_list_tag_from($self, 'TITLE_ORDINAL', 'ORDINAL');
-  $header->transfer_list_tag_from($self, 'TITLE_COUNTRY', 'COUNTRY');
-  $header->transfer_list_tag_from($self, 'TITLE_LOCALITY', 'LOCALITY');
-
-
-  # TODO TWORD?
-}
-
-
-sub prune_using_new
-{
-  my ($self, $header, $chapter) = @_;
-
   $self->match_letter_to_number_new();
 
   while (my ($ekey, $evalue) = each %{$self->{HEADER}})
@@ -1223,43 +1185,6 @@ sub check_chapter
 }
 
 
-sub update_tournaments
-{
-  my ($self, $data, $tname, $edition, $chapter,
-    $header_entry, $chapter_entry) = @_;
-
-  my $tindex;
-  if (find_tname_index($data, $chapter_entry->{DATE_START},
-    $header_entry, \$tindex))
-  {
-    my $dhdr = $data->{$chapter_entry->{DATE_START}}[$tindex]{HEADER};
-    $self->check_tname($dhdr, $tname, $edition, $header_entry);
-  }
-  else
-  {
-    $tindex = 1 + $#{$data->{$chapter_entry->{DATE_START}}};
-  }
-
-  $data->{$chapter_entry->{DATE_START}}[$tindex]{HEADER} //= EntryT->new();
-  my $datum = $data->{$chapter_entry->{DATE_START}}[$tindex];
-  $datum->{HEADER}->set($header_entry);
-
-  if (exists $datum->{CHAPTER}{$chapter})
-  {
-    my $dchapter = $datum->{CHAPTER}{$chapter};
-    $self->check_chapter($dchapter, $chapter_entry);
-  }
-
-  $datum->{CHAPTER}{$chapter}{HEADER} //= EntryT->new();
-  my $dchapter = $datum->{CHAPTER}{$chapter};
-  $dchapter->{HEADER}->set($chapter_entry);
-
-  my $dindex = 1 + $#{$dchapter->{LIST}};
-  $dchapter->{LIST}[$dindex] = EntryT->new();
-  $dchapter->{LIST}[$dindex]->set($self);
-}
-
-
 sub push_datum
 {
   my ($self, $date_list, $tname, $edition, $chapter,
@@ -1277,7 +1202,7 @@ sub push_datum
 }
 
 
-sub update_tournaments_new
+sub update_tournaments
 {
   my ($self, $data, $tname, $edition, $chapter,
     $header_entry, $chapter_entry) = @_;
@@ -1308,38 +1233,6 @@ sub update_tournaments_new
 }
 
 
-sub delete_list_tag_if
-{
-  my ($self, $tag, $value) = @_;
-
-  return unless exists $self->{$tag};
-  for my $n (reverse 0 .. $#{$self->{$tag}})
-  {
-    if ($self->{$tag}[$n] eq $value)
-    {
-      splice(@{$self->{$tag}}, $n, 1);
-    }
-  }
-
-  if ($#{$self->{$tag}} == -1)
-  {
-    delete $self->{TITLE_TWORD};
-  }
-}
-
-
-sub tag_list_contains
-{
-  my ($self, $tag, $value) = @_;
-
-  for my $v (@{$self->{$tag}})
-  {
-    return 1 if ($v eq $value);
-  }
-  return 0;
-}
-
-
 sub counter_list_contains
 {
   my ($self, $tag, $value) = @_;
@@ -1349,30 +1242,6 @@ sub counter_list_contains
     return 1 if ($v eq $value);
   }
   return 0;
-}
-
-
-sub transfer_list_tag
-{
-  my ($self, $tag_from, $tag_to) = @_;
-
-  return unless exists $self->{$tag_from};
-
-  if (! exists $self->{$tag_to})
-  {
-    @{$self->{$tag_to}} = @{$self->{$tag_from}};
-    delete $self->{$tag_from};
-    return;
-  }
-
-  for my $value (@{$self->{$tag_from}})
-  {
-    if (! $self->tag_list_contains($tag_to, $value))
-    {
-      push @{$self->{$tag_to}}, $value;
-    }
-  }
-  delete $self->{$tag_from};
 }
 
 
@@ -1391,84 +1260,6 @@ sub transfer_counter_tag
 
   $self->{COUNTER}{$tag_to} = $self->{COUNTER}{$tag_from};
   delete $self->{COUNTER}{$tag_from};
-}
-
-
-sub transfer_list_tag_from
-{
-  my ($self, $from, $tag_from, $tag_to) = @_;
-
-  return unless exists $from->{$tag_from};
-  if ($#{$from->{$tag_from}} != 0)
-  {
-    die "Need exactly one $tag_from";
-  }
-
-  my $value_from = $from->field($tag_from);
-
-  if (exists $self->{$tag_to})
-  {
-    if ($self->field($tag_to) ne $value_from)
-    {
-      die "Attempting to rewrite $tag_to";
-    }
-  }
-  else
-  {
-    $self->{$tag_to} = $value_from;
-  }
-
-  delete $from->{$tag_from};
-}
-
-
-sub fix_list_tags
-{
-  my ($self) = @_;
-
-  $self->delete_list_tag_if('TITLE_TWORD', 'Championship');
-
-  $self->transfer_list_tag('TITLE_MEET', 'MEET');
-
-  $self->transfer_list_tag('DATE_ADDED', 'DATE');
-  $self->transfer_list_tag('EVENT_DATE', 'DATE');
-
-  $self->transfer_list_tag('TITLE_SESSION', 'SESSION');
-  $self->transfer_list_tag('EVENT_SESSION', 'SESSION');
-
-  $self->transfer_list_tag('EVENT_SECTION', 'SECTION');
-
-  $self->transfer_list_tag('TITLE_SEGMENT', 'SEGMENT');
-  $self->transfer_list_tag('EVENT_SEGMENT', 'SEGMENT');
-
-  $self->transfer_list_tag('TITLE_STANZA', 'STANZA');
-  $self->transfer_list_tag('EVENT_STANZA', 'STANZA');
-
-  $self->transfer_list_tag('TITLE_SET', 'SET');
-  $self->transfer_list_tag('EVENT_SET', 'SET');
-
-  $self->transfer_list_tag('EVENT_AGE', 'AGE');
-
-  $self->transfer_list_tag('EVENT_GENDER', 'GENDER');
-
-  $self->transfer_list_tag('EVENT_HALF', 'HALF');
-
-  $self->transfer_list_tag('TITLE_ROUND', 'ROUND');
-  $self->transfer_list_tag('EVENT_ROUND', 'ROUND');
-
-  $self->transfer_list_tag('TITLE_MATCH', 'MATCH');
-  $self->transfer_list_tag('EVENT_MATCH', 'MATCH');
-
-  $self->transfer_list_tag('TITLE_QUARTER', 'QUARTER');
-  $self->transfer_list_tag('EVENT_QUARTER', 'QUARTER');
-
-  $self->transfer_list_tag('EVENT_MATCH', 'MATCH');
-
-  $self->transfer_list_tag('TITLE_YEAR', 'YEAR');
-
-  $self->transfer_list_tag('TITLE_PHASE', 'PHASE');
-
-  $self->transfer_list_tag('TITLE_TABLE', 'TABLE');
 }
 
 
@@ -1576,21 +1367,6 @@ sub spaceship
   return 1 if ($d1 < $d0);
 
   return $self->{BBONO} <=> $other->{BBONO};
-}
-
-
-sub number
-{
-  my ($self, $field) = @_;
-
-  if (exists $self->{$field})
-  {
-    return $self->{$field};
-  }
-  else
-  {
-    return '';
-  }
 }
 
 

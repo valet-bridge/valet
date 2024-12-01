@@ -183,11 +183,11 @@ while ($entryT->read($fh))
   $times[3] += time() - $t0;
 
   $t0 = time();
-  $entryT->prune_using_new($header_entry, $chapter_entry);
+  $entryT->prune_using($header_entry, $chapter_entry);
   $times[4] += time() - $t0;
 
   $t0 = time();
-  $entryT->update_tournaments_new(\%data_new, $tname, $edition, $chapter,
+  $entryT->update_tournaments(\%data_new, $tname, $edition, $chapter,
     $header_entry, $chapter_entry);
   $times[5] += time() - $t0;
 
