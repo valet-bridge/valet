@@ -24,48 +24,6 @@ $whole->init_hashes();
 Connections::Matrix::set_matrix($whole);
 
 my @HEADER_FIELDS = qw(
-  TOURNAMENT_NAME
-  TOURNAMENT_CITY
-  YEAR
-  TOURNAMENT_ORDINAL
-  ORDINAL
-  SPONSOR
-  ZONE
-  ORIGIN
-  COUNTRY
-  LOCALITY
-  REGION
-  CITY
-  ORGANIZATION
-  CLUB
-  FORM
-  SCORING
-  MOVEMENT
-  AGE 
-  GENDER
-);
-
-my %HEADER_HASH_CHECK;
-$HEADER_HASH_CHECK{$_} = 1 for @HEADER_FIELDS;
-
-my @CHAPTER_FIELDS = qw(
-  YEAR
-  MEET
-  WEEKEND
-  AGE
-  GENDER
-  DATE_START
-  DATE_END
-  MOVEMENT
-  STAGE
-);
-
-my %CHAPTER_HASH_CHECK;
-$CHAPTER_HASH_CHECK{$_} = 1 for @CHAPTER_FIELDS;
-
-# -----------------------------------------------------------
-
-my @HEADER_FIELDS_NEW = qw(
   MEET
   MEET_ORDINAL
 
@@ -96,7 +54,7 @@ my @HEADER_FIELDS_NEW = qw(
   DATE_END
 );
 
-my %HEADER_HASH_NEW = (
+my %HEADER_HASH = (
   TITLE_MEET => 'MEET',
   TITLE_ORDINAL => 'ORDINAL', # Could be MEET_ORDINAL as well
   TITLE_TNAME => 'TNAME',
@@ -139,7 +97,7 @@ my %HEADER_HASH_NEW = (
   TITLE_DATE_END => 'DATE_END',
 );
 
-$HEADER_HASH_NEW{$_} = $_ for @HEADER_FIELDS_NEW;
+$HEADER_HASH{$_} = $_ for @HEADER_FIELDS;
 
 my @CHAPTER_FIELDS_NEW = qw(
   YEAR
@@ -406,15 +364,6 @@ sub set
   {
     $self->{$tag} = $fields->{$tag};
   }
-}
-
-
-sub copy_from_TMP
-{
-  # Shouldn't need this method long-term.
-  my ($self, $other) = @_;
-  %$self = ();
-  %$self = %$other;
 }
 
 
@@ -711,7 +660,7 @@ sub format
 
     my $value = $self->{$field}[0];
 
-    next if $self->format_group('HEADER', $field, \%HEADER_HASH_NEW,
+    next if $self->format_group('HEADER', $field, \%HEADER_HASH,
       $value);
 
     next if $self->format_group('CHAPTER', $field, \%CHAPTER_HASH_NEW,
@@ -785,76 +734,6 @@ sub format
     }
 
     warn $self->bbono() . ": $field ($count)";
-  }
-}
-
-
-sub fix_some_fields
-{
-  my ($self) = @_;
-  if (exists $self->{TITLE_ROF})
-  {
-    if (exists $self->{TITLE_STAGE})
-    {
-      warn "Confused";
-      return;
-    }
-    for my $v (@{$self->{TITLE_ROF}})
-    {
-      push @{$self->{TITLE_STAGE}}, 'Rof' . $v;
-    }
-    delete $self->{TITLE_ROF};
-  }
-
-  if (exists $self->{EVENT_ROF})
-  {
-    if (exists $self->{EVENT_STAGE})
-    {
-      warn "Confused";
-      return;
-    }
-    for my $v (@{$self->{EVENT_ROF}})
-    {
-      push @{$self->{EVENT_STAGE}}, 'Rof' . $v;
-    }
-    delete $self->{EVENT_ROF};
-  }
-
-  if ($self->field('TITLE_TNAME') eq 'Reisinger BAM Teams')
-  {
-    if ($self->field('TITLE_ORDINAL'))
-    {
-      delete $self->{TITLE_ORDINAL};
-    }
-  }
-
-  if ($self->field('TITLE_TNAME') =~ /Patton/i &&
-      ($self->field('SCORING') eq 'IMP' ||
-       $self->field('SCORING') eq 'IMP'))
-  {
-    delete $self->{SCORING};
-    push @{$self->{SCORING}}, 'Patton';
-  }
-
-  if ($self->field('TITLE_TNAME') =~ /\bIAF\b/ &&
-      $self->field('SCORING') eq 'IMP')
-  {
-    delete $self->{SCORING};
-    push @{$self->{SCORING}}, 'IAF';
-  }
-
-  if ($self->field('EVENT_SCORING') =~ /Patton/i &&
-      ($self->field('SCORING') eq 'IMP' ||
-       $self->field('SCORING') eq 'BAM'))
-  {
-    delete $self->{SCORING};
-    push @{$self->{SCORING}}, 'Patton';
-  }
-
-  if (exists $self->{TITLE_COUNTRY})
-  {
-    @{$self->{COUNTRY}} = @{$self->{TITLE_COUNTRY}};
-    delete $self->{TITLE_COUNTRY};
   }
 }
 
