@@ -901,6 +901,7 @@ my %TOURNAMENTS_NETHERLANDS =
             YEAR => 2002,
             STAGE => 'Final',
             major => 'SESSION',
+            minor => 'GROUP',
             DATE_START => '2002-03-30',
             DATE_END => '2002-04-01'
           } 

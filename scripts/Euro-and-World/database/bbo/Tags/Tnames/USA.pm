@@ -44,7 +44,10 @@ my %MULTI_TYPOS =
     'collegiate championship',
     'collegiate championships', 
     'collegiate champs'],
-  'Grand National Teams' => ['gnt championship'],
+  'Grand National Teams' => [
+    'gnt championship flt',
+    'gnt championship flight',
+    'gnt championship'],
   "Missouri Braggin' Rights" => ['bragging rights'],
   'Philadelphia Solomon Teams' => [
     'solomon teams'],

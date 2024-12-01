@@ -52,10 +52,16 @@ $HEADER_ORDERED_HASH{$_} = 1 for @HEADER_ORDERED;
 
 my @CHAPTER_ORDERED = qw(
   YEAR
+  YEAR_MONTH
+  MONTH_DAY
+  DAY
   DATE_START
   DATE_END
+  WEEKDAY
+  WEEKEND
   STAGE
   MOVEMENT
+  COLOR
 );
 
 my %CHAPTER_ORDERED_HASH;
@@ -109,7 +115,7 @@ while ($entryT->read($fh))
     next unless $entryT->bbono() eq $debug_bbono;
   }
 
-  if ($entryT->bbono() eq 201)
+  if ($entryT->bbono() eq 22149)
   {
     print "HERE\n";
   }
@@ -172,33 +178,33 @@ while ($entryT->read($fh))
     next;
   }
 
-  $t0 = time();
-  my ($header_entry, $chapter_entry) = 
-    $parseT->set_header_entry($tname, $edition, $chapter);
-  $times[4] += time() - $t0;
+  # $t0 = time();
+  # my ($header_entry, $chapter_entry) = 
+    # $parseT->set_header_entry($tname, $edition, $chapter);
+  # $times[4] += time() - $t0;
 
   $t0 = time();
   my ($header_entry2, $chapter_entry2) = 
     $parseT->get_header_entry_new($tname, $edition, $chapter);
-  $times[5] += time() - $t0;
+  $times[4] += time() - $t0;
 
-  $t0 = time();
-  $entryT->prune_using($header_entry, $chapter_entry);
-  $times[6] += time() - $t0;
+  # $t0 = time();
+  # $entryT->prune_using($header_entry, $chapter_entry);
+  # $times[6] += time() - $t0;
 
   $t0 = time();
   $entry2T->prune_using_new($header_entry2, $chapter_entry2);
-  $times[7] += time() - $t0;
+  $times[5] += time() - $t0;
 
-  $t0 = time();
-  $entryT->update_tournaments(\%data, $tname, $edition, $chapter,
-    $header_entry, $chapter_entry);
-  $times[8] += time() - $t0;
+  # $t0 = time();
+  # $entryT->update_tournaments(\%data, $tname, $edition, $chapter,
+    # $header_entry, $chapter_entry);
+  # $times[8] += time() - $t0;
 
   $t0 = time();
   $entry2T->update_tournaments_new(\%data_new, $tname, $edition, $chapter,
     $header_entry2, $chapter_entry2);
-  $times[9] += time() - $t0;
+  $times[6] += time() - $t0;
 
   $num_matches++;
   $hist_matches{$tname}++;
@@ -298,53 +304,8 @@ for my $key (sort keys %hist_matches)
 print '-' x 48 . "\n";
 printf("%-42s %5d\n", "Number of matches", $num_matches);
 
-
 exit;
-for my $date_start (sort keys %data)
-{
-if ($date_start eq '2003-02-02')
-{
-  # print "HERE\n";
-}
-  for my $dno (0 .. $#{$data{$date_start}})
-  {
-    my $datum = $data{$date_start}[$dno];
-    print $datum->{HEADER}->str_header();
 
-    for my $chapter (sort keys %{$datum->{CHAPTER}})
-    {
-      my $cptr = $datum->{CHAPTER}{$chapter};
-      print $cptr->{HEADER}->str_chapter();
-
-      for my $i (0 .. $#{$cptr->{LIST}})
-      {
-        $cptr->{LIST}[$i]->fix_list_tags();
-      }
-
-      my $reg_counter = RegCounter->new();
-      for my $i (0 .. $#{$cptr->{LIST}})
-      {
-        $reg_counter->register($cptr->{LIST}[$i]);
-      }
-      $reg_counter->analyze();
-
-      print $reg_counter->str_analysis() . "\n" if $VERBOSE;
-
-      # This will use 'major' and 'minor' if present.
-      $reg_counter->align($cptr->{HEADER});
-      print $reg_counter->str_field_map() if $VERBOSE;
-
-      $reg_counter->fix_counters($cptr->{LIST});
-
-      $reg_counter->sort_counters($cptr->{LIST});
-
-      for my $i (0 .. $#{$cptr->{LIST}})
-      {
-        print $cptr->{LIST}[$i]->str_as_read();
-      }
-    }
-  }
-}
 
 sub str_header
 {

@@ -32,7 +32,7 @@ my %MEETS_SWITZERLAND =
     {
       '2012' =>
       {
-        DATE_START => '2012-03-02',
+        DATE_START => '2012-03-01',
         DATE_END => '2012-03-04'
       },
       '2013' =>
@@ -467,6 +467,20 @@ my %TOURNAMENTS_SWITZERLAND =
 
     EDITIONS =>
     {
+      '2012' =>
+      {
+        MEET => 'Zurich Open',
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2012,
+            DATE_START => '2012-03-01',
+            DATE_END => '2012-03-03'
+          } 
+        }
+      },
       '2013' =>
       {
         MEET => 'Zurich Open',

@@ -21,6 +21,8 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'North American Bridge Championship' => [
+    'fall nabc'],
   'United States Bridge Championship' => [
     'united states bridge championships',
     'us bridge championship',

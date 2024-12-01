@@ -143,39 +143,32 @@ $HEADER_HASH_NEW{$_} = $_ for @HEADER_FIELDS_NEW;
 
 my @CHAPTER_FIELDS_NEW = qw(
   YEAR
-  WEEKDAY
+  YEAR_MONTH
+  MONTH_DAY
+  DAY
   DATE_ADDED
+  WEEKDAY
+  WEEKEND
+  TIME
+  BOARDS
   STAGE
   MOVEMENT
-  BOARDS
+  COLOR
 );
 
-my %CHAPTER_HASH_NEW = (
-  TITLE_YEAR => 'YEAR',
-  EVENT_YEAR => 'YEAR',
-
-  TITLE_WEEKDAY => 'WEEKDAY',
-  EVENT_WEEKDAY => 'WEEKDAY',
-
-  TITLE_DATE => 'DATE_ADDED',
-  EVENT_DATE => 'DATE_ADDED',
-
-  TITLE_STAGE => 'STAGE',
-  EVENT_STAGE => 'STAGE',
-
-  TITLE_MOVEMENT => 'MOVEMENT',
-  EVENT_MOVEMENT => 'MOVEMENT',
-
-  TITLE_COLOR => 'COLOR',
-  EVENT_COLOR => 'COLOR',
-
-  EVENT_BOARDS => 'BOARDS',
-);
+my %CHAPTER_HASH_NEW;
+for my $cf (@CHAPTER_FIELDS_NEW)
+{
+  next if $cf eq 'DATE_ADDED';
+  $CHAPTER_HASH_NEW{'TITLE_' . $cf} = $cf;
+  $CHAPTER_HASH_NEW{'EVENT_' . $cf} = $cf;
+}
+$CHAPTER_HASH_NEW{TITLE_DATE} = 'DATE_ADDED';
+$CHAPTER_HASH_NEW{EVENT_DATE} = 'DATE_ADDED';
 
 $CHAPTER_HASH_NEW{$_} = $_ for @CHAPTER_FIELDS_NEW;
 
 my @COUNTER_FIELDS_NEW = qw(
-  WEEKEND
   SESSION
   PHASE
   FLIGHT
@@ -318,11 +311,18 @@ my %POST_PROCESS_FIELD = (
 );
 
 my %SKIP_BBO = (
-  BOARDS => 1,
+  YEAR => 1,
+  YEAR_MONTH => 1,
+  MONTH_DAY => 1,
+  DAY => 1,
   DATE_ADDED => 1,
+  WEEKDAY => 1,
+  WEEKEND => 1,
+  TIME => 1,
+  BOARDS => 1,
   STAGE => 1,
   MOVEMENT => 1,
-  YEAR => 1
+  COLOR => 1
 );
 
 # ------------------------------------------------
@@ -1014,9 +1014,14 @@ sub match_letter_to_number_new
     next unless defined $self->{COUNTER}{$field};
 
     my $value = uc($self->{COUNTER}{$field});
-    if ($value =~ /^[A-E]$/)
+    if ($value =~ /^[A-K]$/)
     {
       $self->{COUNTER}{$field} = ord($value) - ord('A') + 1;
+    }
+    elsif ($value eq 'U')
+    {
+      # As V "is" 5...
+      $self->{COUNTER}{$field} = 4;
     }
     elsif ($value =~ /^\d+[A-D] [oO][fF] \d+$/)
     {
@@ -1677,8 +1682,10 @@ sub str_as_read_new
   my $s;
   $s = "BBONO $self->{BBONO}\n";
 
-  for my $ckey (qw(DATE_ADDED BOARDS))
+  for my $ckey (@CHAPTER_FIELDS_NEW)
   {
+    next if $ckey eq 'YEAR';
+    next unless exists $self->{CHAPTER}{$ckey};
     $s .= "$ckey " . $self->{CHAPTER}{$ckey} . "\n";
   }
 

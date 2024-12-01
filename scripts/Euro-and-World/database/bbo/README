@@ -1,3 +1,17 @@
+Maybe add an 'ignore' to Tournament, so ignore => 'GROUP'.
+That way there should be the right number of fields.
+
+Output in d of counters should be in order major, minor,
+others.
+
+perl checkT.pm is broken?
+
+Clean up code
+
+Resolve WARNING in d
+
+Somehow unify all the field lists in Fields.pm
+
 Using ASIA as an argument to digest.pl is broken
 
 Don't need Tword.pm anymore?

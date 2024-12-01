@@ -44,6 +44,7 @@ my %ITERATORS_MAJOR_MINOR = (
   'Chinese First League' => ['SESSION', 'ROUND'],
   'Codan Teams Cup' => ['ROUND', 'SEGMENT'],
   'Dongming Knock-out Teams' => ['ROUND', 'SEGMENT'],
+  'European Transnational Championships' => ['TABLE', 'ROUND'],
   'French First Division' => ['ROUND', 'SEGMENT'],
   'GHTD Cup' => ['ROUND', 'SEGMENT'],
   'Indian Senior Trials' => ['SESSION', 'ROUND'],
@@ -771,7 +772,7 @@ sub active_number_pairs
 
 sub active_nl_teams
 {
-  my ($knowledge, $mask ,
+  my ($knowledge, $meet, $mask,
     $chains, $chain, $cno, $token, $value, $bbono) = @_;
 
   $value =~ /^(\d+)([A-Za-z]+)$/;
@@ -790,7 +791,8 @@ sub active_nl_teams
     $token->set_general('MARKER', 'MATCH', $number);
     $chain->complete('EXPLAINED');
   }
-  elsif ($letter eq 'F' && $number <= 8)
+  elsif ($letter eq 'F' && 
+    ($number <= 8 || $meet eq 'European National Championships'))
   {
     print "$bbono ETRACE-NLTEAMS-3\n" if $TRACE;
     one_to_two_chains($chains, $chain, $cno, $token,
@@ -1077,6 +1079,7 @@ sub post_process_single_active
   my $value = $token->value();
 
   my $tname = $knowledge->get_field('TNAME', $bbono);
+  my $meet = $knowledge->get_field('MEET', $bbono);
   my $form = $knowledge->get_field('FORM', $bbono);
   my $mask = $knowledge->get_iter_mask($bbono);
 
@@ -1104,7 +1107,7 @@ sub post_process_single_active
   }
   elsif ($field eq 'NL')
   {
-    return if active_nl_teams($knowledge, $mask,
+    return if active_nl_teams($knowledge, $meet, $mask,
       $chains, $chain, $cno, $token, $value, $bbono);
   }
   elsif ($field eq 'AMBIGUOUS')
