@@ -1109,45 +1109,6 @@ my %TOURNAMENTS_NETHERLANDS =
           } 
         }
       },
-      '2008' =>
-      {
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2008,
-            major => 'ROUND',
-            minor => 'SEGMENT',
-            DATE_START => '2008-03-02',
-            DATE_END => '2008-03-02'
-          },
-          'C1' => 
-          {
-            YEAR => 2008,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2008-03-03',
-            DATE_END => '2008-03-03'
-          },
-          'C2' => 
-          {
-            YEAR => 2008,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2008-03-03',
-            DATE_END => '2008-03-03'
-          },
-          'C3' => 
-          {
-            # Unclear what this really is
-            YEAR => 2008,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2008-03-04',
-            DATE_END => '2008-03-04'
-          } 
-        }
-      },
     }
   },
 
@@ -1633,6 +1594,45 @@ my %TOURNAMENTS_NETHERLANDS =
             minor => 'SEGMENT',
             DATE_START => '2006-02-26',
             DATE_END => '2006-02-26'
+          } 
+        }
+      },
+      '2008' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2008,
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2008-03-02',
+            DATE_END => '2008-03-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-03-03',
+            DATE_END => '2008-03-03'
+          },
+          'C2' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-03-03',
+            DATE_END => '2008-03-03'
+          },
+          'C3' => 
+          {
+            # Unclear what this really is
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2008-03-04',
+            DATE_END => '2008-03-04'
           } 
         }
       },

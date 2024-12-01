@@ -8,8 +8,6 @@ Resolve WARNING in d
 
 Somehow unify all the field lists in Fields.pm
 
-Using ASIA as an argument to digest.pl is broken
-
 Don't need Tword.pm anymore?
 
 ORDINAL, MEET_ORDINAL: Probably set the latter when we have

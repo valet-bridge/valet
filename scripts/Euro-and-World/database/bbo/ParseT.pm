@@ -461,7 +461,7 @@ my (@times, $t0, $t1);
 
 sub get_tname_list
 {
-  my ($self, $meet, $tname, $entry, $tname_list) = @_;
+  my ($self, $meet, $tname, $entry, $tname_list, $debug) = @_;
 
   # It's useful to screen by the year of the entry.
   my $entry_year = $entry->chapter_field('YEAR');
@@ -496,7 +496,8 @@ sub get_tname_list
   }
   else
   {
-    warn $entry->bbono() . " meet $meet, tname $tname not found";
+    warn $entry->bbono() . " meet $meet, tname $tname not found"
+      unless $debug;
   }
 }
 
@@ -569,10 +570,11 @@ sub update_chapter_match
 
 sub get_edition_and_chapter
 {
-  my ($self, $meet, $tname, $entry, $debug) = @_;
+  my ($self, $meet, $tname, $entry, $debug, $division_flag) = @_;
 
   my @tname_list;
-  $self->get_tname_list($meet, $tname, $entry, \@tname_list);
+  $self->get_tname_list($meet, $tname, $entry, \@tname_list, 
+    $division_flag);
   return ($tname, '', '') unless $#tname_list >= 0;
 
   my $target = DateCalc->new();

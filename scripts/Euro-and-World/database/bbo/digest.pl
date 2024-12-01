@@ -132,7 +132,7 @@ while ($entryT->read($fh))
 
   if ($meet eq '' && $tname eq '')
   {
-    warn $entryT->bbono() . " not found at all";
+    warn $entryT->bbono() . " not found at all" unless $division_flag;
     next;
   }
 
@@ -150,17 +150,20 @@ while ($entryT->read($fh))
 
   $t0 = time();
   ($tname, $edition, $chapter) =
-    $parseT->get_edition_and_chapter($meet, $tname, $entryT, $debug_flag);
+    $parseT->get_edition_and_chapter($meet, $tname, $entryT, 
+      $debug_flag, $division_flag);
   $times[2] += time() - $t0;
 
   if ($tname eq '')
   {
-    warn $entryT->bbono() . ": no TNAME found for meet $meet";
+    warn $entryT->bbono() . ": no TNAME found for meet $meet"
+      unless $division_flag;
     next;
   }
   if ($edition eq '')
   {
-    warn $entryT->bbono() . ": no EDITION found for meet $meet";
+    warn $entryT->bbono() . ": no EDITION found for meet $meet"
+      unless $division_flag;
     next;
   }
 
