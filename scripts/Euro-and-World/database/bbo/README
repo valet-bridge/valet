@@ -1,10 +1,14 @@
-Maybe add an 'ignore' to Tournament, so ignore => 'GROUP'.
+Add an 'ignore' to Tournament, so ignore => 'GROUP'.
 That way there should be the right number of fields.
+
+Add 'cluster'.  Must then be present?!
+
+Add automatic clustering of e.g. Semifinal.
+
+If MOVEMENT/STAGE, must be present in chapter header.
 
 Output in d of counters should be in order major, minor,
 others.
-
-Resolve WARNING in d
 
 Somehow unify all the field lists in Fields.pm
 
@@ -29,6 +33,7 @@ When matched up
 - If only countries, should be International
 
 Cornell is not Cornell University, 27126
+ONly place 24529 34549
 
 ---
 

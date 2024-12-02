@@ -629,7 +629,7 @@ sub get_edition_and_chapter
   {
     warn $entry->bbono() . 
       " not found (DIST $best{LOWEST_DIST}): " .
-      "$tname, " . $entry->field('DATE_ADDED');
+      "$tname, " . $entry->{CHAPTER}{DATE_ADDED};
     return ($tname, '', '');
   }
 }
