@@ -4175,6 +4175,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 1996,
+            STAGE => 'Final',
             DATE_START => '1996-10-31',
             DATE_END => '1996-11-02'
           },
@@ -4185,10 +4186,52 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Olympiad',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2000,
-            DATE_START => '2000-08-26',
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Round-robin',
+            DATE_START => '2000-08-27',
+            DATE_END => '2000-09-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2000,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2000-09-03',
+            DATE_END => '2000-09-03'
+          },
+          'C2' => 
+          {
+            YEAR => 2000,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2000-09-04',
+            DATE_END => '2000-09-04'
+          },
+          'C3' => 
+          {
+            YEAR => 2000,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2000-09-05',
+            DATE_END => '2000-09-06'
+          },
+          'C4' => 
+          {
+            YEAR => 2000,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2000-09-07',
+            DATE_END => '2000-09-07'
+          },
+          'C5' => 
+          {
+            YEAR => 2000,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2000-09-07',
             DATE_END => '2000-09-09'
           },
         }

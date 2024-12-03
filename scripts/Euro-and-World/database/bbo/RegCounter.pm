@@ -48,7 +48,7 @@ sub new
 
 sub register
 {
-  my ($self, $entry) = @_;
+  my ($self, $entry, $chapter, $tname) = @_;
 
   my $bbono = $entry->bbono();
   my $counters = $entry->get_counter_ref();
@@ -84,6 +84,18 @@ sub register
     {
       warn "$bbono: Haven't learned $value";
     }
+  }
+
+  if ($entry->chapter_field('STAGE') ne '' &&
+    ! exists $chapter->{STAGE})
+  {
+    warn "$bbono, $tname: STAGE not in chapter";
+  }
+
+  if ($entry->chapter_field('MOVEMENT') ne '' &&
+    ! exists $chapter->{MOVEMENT})
+  {
+    warn "$bbono, $tname: MOVEMENT not in chapter";
   }
 }
 

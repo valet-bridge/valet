@@ -169,6 +169,7 @@ my %TOURNAMENTS_AFRICA =
           'SINGLE' => 
           {
             YEAR => 2009,
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'MATCH',
             DATE_START => '2009-05-31',
@@ -292,6 +293,7 @@ my %TOURNAMENTS_AFRICA =
           'SINGLE' => 
           {
             YEAR => 2009,
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'MATCH',
             DATE_START => '2009-05-31',

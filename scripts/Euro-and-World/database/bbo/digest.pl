@@ -240,7 +240,7 @@ for my $date_start (sort keys %data_new)
 {
   if ($date_start eq '2015-10-30')
   {
-    print "HERE\n";
+    # print "HERE\n";
   }
 
   my $dlist = $data_new{$date_start};
@@ -263,7 +263,8 @@ for my $date_start (sort keys %data_new)
       my $reg_counter = RegCounter->new();
       for my $bbo (@{$datum_t->{BBOLIST}})
       {
-        $reg_counter->register($bbo);
+        $reg_counter->register($bbo, $datum_t->{CHAPTER_REF},
+          $datum->{HEADER_REF}{TOURNAMENT_NAME});
       }
       $reg_counter->analyze();
       print $reg_counter->str_analysis() . "\n" if $VERBOSE;

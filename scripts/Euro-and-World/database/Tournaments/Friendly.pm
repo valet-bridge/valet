@@ -1620,6 +1620,7 @@ my %TOURNAMENTS_FRIENDLY =
           {
             YEAR => 2007,
             major => 'SET',
+            MOVEMENT => 'Goulash',
             DATE_START => '2007-11-05',
             DATE_END => '2007-11-05'
           } 
@@ -3055,6 +3056,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2016,
+            STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2016-08-18',
             DATE_END => '2016-08-20'
@@ -3345,6 +3347,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2011,
+            STAGE => 'Knock-out',
             major => 'SESSION',
             minor => 'SEGMENT',
             DATE_START => '2011-10-08',

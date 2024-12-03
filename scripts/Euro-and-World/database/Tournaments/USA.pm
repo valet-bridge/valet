@@ -3647,10 +3647,27 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2016-08-01',
+            DATE_END => '2016-08-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-08-02',
+            DATE_END => '2016-08-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-08-03',
             DATE_END => '2016-08-03'
           },
-
         }
       },
     }
