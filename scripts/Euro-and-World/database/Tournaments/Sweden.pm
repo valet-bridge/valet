@@ -1833,11 +1833,28 @@ my %TOURNAMENTS_SWEDEN =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2005,
+            STAGE => 'Qualifying',
             major => 'ROUND',
             DATE_START => '2005-04-08',
+            DATE_END => '2005-04-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Semifinal',
+            major => 'ROUND',
+            DATE_START => '2005-04-09',
+            DATE_END => '2005-04-09'
+          },
+          'C2' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2005-04-10',
             DATE_END => '2005-04-10'
           } 
         }
@@ -2209,6 +2226,8 @@ my %TOURNAMENTS_SWEDEN =
           'SINGLE' => 
           {
             YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2006-07-05',
             DATE_END => '2006-07-06'
           } 

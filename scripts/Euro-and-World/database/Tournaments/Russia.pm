@@ -235,6 +235,7 @@ my %TOURNAMENTS_RUSSIA =
           {
             YEAR => 2011,
             STAGE => 'Quarterfinal',
+            MOVEMENT => 'Goulash',
             major => 'SEGMENT',
             DATE_START => '2011-10-08',
             DATE_END => '2011-10-08'
@@ -243,6 +244,7 @@ my %TOURNAMENTS_RUSSIA =
           {
             YEAR => 2011,
             STAGE => 'Semifinal',
+            MOVEMENT => 'Goulash',
             major => 'SEGMENT',
             DATE_START => '2011-10-08',
             DATE_END => '2011-10-08'
@@ -251,6 +253,7 @@ my %TOURNAMENTS_RUSSIA =
           {
             YEAR => 2011,
             STAGE => 'Final',
+            MOVEMENT => 'Goulash',
             major => 'SEGMENT',
             DATE_START => '2011-10-09',
             DATE_END => '2011-10-09'
@@ -266,6 +269,7 @@ my %TOURNAMENTS_RUSSIA =
           {
             YEAR => 2012,
             STAGE => 'Quarterfinal',
+            MOVEMENT => 'Goulash',
             major => 'SEGMENT',
             DATE_START => '2012-09-29',
             DATE_END => '2012-09-29'
@@ -274,6 +278,7 @@ my %TOURNAMENTS_RUSSIA =
           {
             YEAR => 2012,
             STAGE => 'Semifinal',
+            MOVEMENT => 'Goulash',
             major => 'SEGMENT',
             DATE_START => '2012-09-29',
             DATE_END => '2012-09-29'
@@ -282,6 +287,7 @@ my %TOURNAMENTS_RUSSIA =
           {
             YEAR => 2012,
             STAGE => 'Final',
+            MOVEMENT => 'Goulash',
             major => 'SEGMENT',
             DATE_START => '2012-09-30',
             DATE_END => '2012-09-30'
@@ -297,6 +303,7 @@ my %TOURNAMENTS_RUSSIA =
           {
             YEAR => 2013,
             STAGE => 'Semifinal',
+            MOVEMENT => 'Goulash',
             major => 'SEGMENT',
             DATE_START => '2013-10-05',
             DATE_END => '2013-10-05'
@@ -305,6 +312,7 @@ my %TOURNAMENTS_RUSSIA =
           {
             YEAR => 2013,
             STAGE => 'Final',
+            MOVEMENT => 'Goulash',
             major => 'SEGMENT',
             DATE_START => '2013-10-06',
             DATE_END => '2013-10-06'
@@ -358,6 +366,7 @@ my %TOURNAMENTS_RUSSIA =
           {
             YEAR => 2015,
             STAGE => 'Semifinal',
+            MOVEMENT => 'Goulash',
             major => 'SEGMENT',
             DATE_START => '2015-11-07',
             DATE_END => '2015-11-07'
@@ -366,6 +375,7 @@ my %TOURNAMENTS_RUSSIA =
           {
             YEAR => 2015,
             STAGE => 'Final',
+            MOVEMENT => 'Goulash',
             major => 'SEGMENT',
             DATE_START => '2015-11-08',
             DATE_END => '2015-11-08'

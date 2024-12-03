@@ -69,6 +69,7 @@ my %TOURNAMENTS_SWITZERLAND =
           'SINGLE' => 
           {
             YEAR => 2010,
+            STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2010-06-13',
             DATE_END => '2010-06-13'
@@ -82,6 +83,7 @@ my %TOURNAMENTS_SWITZERLAND =
           'SINGLE' => 
           {
             YEAR => 2011,
+            STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2011-06-12',
             DATE_END => '2011-06-12'

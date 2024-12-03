@@ -886,6 +886,8 @@ my %TOURNAMENTS_PORTUGAL =
           'SINGLE' => 
           {
             YEAR => 2013,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2013-05-14',
             DATE_END => '2013-05-17'
           } 
@@ -1148,6 +1150,8 @@ my %TOURNAMENTS_PORTUGAL =
           'C3' => 
           {
             YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2013-11-24',
             DATE_END => '2013-11-24'
           },
@@ -1355,6 +1359,7 @@ my %TOURNAMENTS_PORTUGAL =
           'C0' => 
           {
             YEAR => 2012,
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-01-20',
             DATE_END => '2012-01-22'

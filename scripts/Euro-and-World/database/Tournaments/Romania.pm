@@ -539,12 +539,20 @@ my %TOURNAMENTS_ROMANIA =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
-            minor => 'SEGMENT',
             DATE_START => '2009-10-17',
+            DATE_END => '2009-10-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2009-10-18',
             DATE_END => '2009-10-18'
           } 
         }

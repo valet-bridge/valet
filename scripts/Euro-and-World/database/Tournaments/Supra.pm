@@ -419,6 +419,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2010,
+            STAGE => 'Final',
             major => 'SESSION',
             DATE_START => '2010-09-13',
             DATE_END => '2010-09-13'
@@ -488,6 +489,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2012,
+            STAGE => 'Final',
             major => 'ROUND',
             minor => 'MATCH',
             DATE_START => '2012-09-11',
@@ -1045,6 +1047,8 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2014,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2014-09-06',
             DATE_END => '2014-09-06'
           } 

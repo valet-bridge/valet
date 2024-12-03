@@ -1924,6 +1924,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2013,
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SET',
             DATE_START => '2013-02-16',

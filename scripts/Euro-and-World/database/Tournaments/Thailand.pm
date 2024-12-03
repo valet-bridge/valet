@@ -94,10 +94,29 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Bangkok Bridge Festival',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2013,
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2013-01-31',
+            DATE_END => '2013-02-02'
+          },
+          'C1' =>
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-02-03',
+            DATE_END => '2013-02-03'
+          },
+          'C2' =>
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-02-03',
             DATE_END => '2013-02-03'
           },
         }
@@ -107,10 +126,28 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Bangkok Bridge Festival',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2014,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2014-04-06',
+            DATE_END => '2014-04-08'
+          },
+          'C1' =>
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-04-09',
+            DATE_END => '2014-04-09'
+          },
+          'C2' =>
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-04-09',
             DATE_END => '2014-04-09'
           },
         }
@@ -135,8 +172,10 @@ my %TOURNAMENTS_THAILAND =
           'SINGLE' =>
           {
             YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2014-12-13',
-            DATE_END => '2014-12-16'
+            DATE_END => '2014-12-14'
           },
         }
       },
@@ -157,10 +196,28 @@ my %TOURNAMENTS_THAILAND =
         MEET => 'Thailand National Games',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
             YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2014-12-13',
+            DATE_END => '2014-12-13'
+          },
+          'C1' =>
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-12-15',
+            DATE_END => '2014-12-15'
+          },
+          'C2' =>
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-12-16',
             DATE_END => '2014-12-16'
           },
         }
@@ -185,8 +242,10 @@ my %TOURNAMENTS_THAILAND =
           'SINGLE' =>
           {
             YEAR => 2014,
-            DATE_START => '2014-12-13',
-            DATE_END => '2014-12-16'
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-12-15',
+            DATE_END => '2014-12-15'
           },
         }
       },

@@ -289,6 +289,7 @@ my %TOURNAMENTS_SERBIA =
           {
             YEAR => 2010,
             STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
             major => 'SEGMENT',
             DATE_START => '2010-05-30',
             DATE_END => '2010-05-30'
