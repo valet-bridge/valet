@@ -1521,7 +1521,9 @@ my %TOURNAMENTS_EUROADULT =
           'C1' => 
           {
             YEAR => 2012,
-            major => 'SEGMENT',
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2012-06-20',
             DATE_END => '2012-06-23'
           } 
@@ -5032,6 +5034,17 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2007,
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2007-06-28',
+            DATE_END => '2007-06-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2007-06-28',
             DATE_END => '2007-06-28'
           },
@@ -5045,7 +5058,17 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2009-06-23',
+            DATE_END => '2009-06-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-06-24',
             DATE_END => '2009-06-24'
           },
         }
@@ -5058,6 +5081,16 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-06-28',
+            DATE_END => '2011-06-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2011-06-28',
             DATE_END => '2011-06-29'
           },
@@ -5071,6 +5104,16 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-06-24',
+            DATE_END => '2013-06-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2013-06-24',
             DATE_END => '2013-06-24'
           },

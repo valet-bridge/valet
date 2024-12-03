@@ -1954,10 +1954,28 @@ my %TOURNAMENTS_EURO_YOUTH =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2013-10-01',
+            DATE_END => '2013-10-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-10-04',
+            DATE_END => '2013-10-04'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-10-04',
             DATE_END => '2013-10-04'
           },
         }

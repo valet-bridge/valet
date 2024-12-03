@@ -598,11 +598,44 @@ my %TOURNAMENTS_CHINA =
         SPONSOR => 'L&Y Law',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Qualifying',
             major => 'ROUND',
             DATE_START => '2011-08-02',
+            DATE_END => '2011-08-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2011-08-04',
+            DATE_END => '2011-08-05'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-08-05',
+            DATE_END => '2011-08-06'
+          },
+          'C3' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-08-06',
+            DATE_END => '2011-08-06'
+          },
+          'C4' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-08-06',
             DATE_END => '2011-08-07'
           } 
         }
@@ -650,10 +683,36 @@ my %TOURNAMENTS_CHINA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2015-07-29',
+            DATE_END => '2015-07-31'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-01',
+            DATE_END => '2015-08-01'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-01',
+            DATE_END => '2015-08-01'
+          },
+          'C3' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-02',
             DATE_END => '2015-08-02'
           } 
         }
@@ -1137,8 +1196,8 @@ my %TOURNAMENTS_CHINA =
           'SINGLE' => 
           {
             YEAR => 2006,
-            major => 'ROUND',
-            minor => 'SEGMENT',
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2006-11-13',
             DATE_END => '2006-11-13'
           } 
@@ -2166,10 +2225,37 @@ my %TOURNAMENTS_CHINA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2012-07-13',
+            DATE_END => '2012-07-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-07-14',
+            DATE_END => '2012-07-14'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-07-14',
+            DATE_END => '2012-07-15'
+          },
+          'C3' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-07-15',
             DATE_END => '2012-07-15'
           } 
         }
@@ -2224,6 +2310,7 @@ my %TOURNAMENTS_CHINA =
           'SINGLE' => 
           {
             YEAR => 2011,
+            MOVEMENT => 'Round-robin',
             DATE_START => '2011-09-06',
             DATE_END => '2011-09-09'
           } 

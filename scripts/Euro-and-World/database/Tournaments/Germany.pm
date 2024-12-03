@@ -3011,10 +3011,28 @@ my %TOURNAMENTS_GERMANY =
         CITY => 'Bad Griesbach',
         CHAPTERS => 
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2009-04-24',
+            DATE_END => '2009-04-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-04-25',
+            DATE_END => '2009-04-25'
+          },
+          'C2' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2009-04-26',
             DATE_END => '2009-04-26'
           } 
         }

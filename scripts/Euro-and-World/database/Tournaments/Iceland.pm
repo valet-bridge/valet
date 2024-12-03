@@ -234,6 +234,8 @@ my %TOURNAMENTS_ICELAND =
           'SINGLE' => 
           {
             YEAR => 2016,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2016-01-30',
             DATE_END => '2016-01-31'
           } 

@@ -406,6 +406,7 @@ my %TOURNAMENTS_FRANCE =
           'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Final',
             major => 'SESSION',
             minor => 'SEGMENT',
             DATE_START => '2013-07-19',
@@ -978,6 +979,7 @@ my %TOURNAMENTS_FRANCE =
           {
             YEAR => 2013,
             STAGE => 'Semifinal',
+            MOVEMENT => 'Round-robin',
             major => 'SEGMENT',
             DATE_START => '2013-01-25',
             DATE_END => '2013-01-25'
@@ -1384,13 +1386,15 @@ my %TOURNAMENTS_FRANCE =
           'C0' => 
           {
             YEAR => 2008,
-            major => 'SEGMENT',
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2008-04-02',
             DATE_END => '2008-04-02'
           },
           'C1' => 
           {
             YEAR => 2008,
+            STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2008-04-03',
             DATE_END => '2008-04-03'

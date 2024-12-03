@@ -48,12 +48,16 @@ my %TOURNAMENTS_CHILE =
           'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2011-03-17',
             DATE_END => '2011-03-17'
           },
           'C1' => 
           {
             YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2011-03-24',
             DATE_END => '2011-03-24'
           },
@@ -66,12 +70,16 @@ my %TOURNAMENTS_CHILE =
           'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2012-03-22',
             DATE_END => '2012-03-22'
           },
           'C1' => 
           {
             YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2012-03-29',
             DATE_END => '2012-03-29'
           },
@@ -84,6 +92,8 @@ my %TOURNAMENTS_CHILE =
           'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2013-04-12',
             DATE_END => '2013-04-12'
           },
@@ -96,6 +106,8 @@ my %TOURNAMENTS_CHILE =
           'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2014-04-11',
             DATE_END => '2014-04-11'
           },
@@ -108,6 +120,8 @@ my %TOURNAMENTS_CHILE =
           'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2015-04-10',
             DATE_END => '2015-04-10'
           },
@@ -120,6 +134,8 @@ my %TOURNAMENTS_CHILE =
           'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2016-04-05',
             DATE_END => '2016-04-05'
           },
@@ -146,6 +162,8 @@ my %TOURNAMENTS_CHILE =
           'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2013-04-12',
             DATE_END => '2013-04-12'
           },
@@ -214,6 +232,7 @@ my %TOURNAMENTS_CHILE =
           'SINGLE' => 
           {
             YEAR => 2011,
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-04-02',
             DATE_END => '2011-04-02'
@@ -303,6 +322,7 @@ my %TOURNAMENTS_CHILE =
           'SINGLE' => 
           {
             YEAR => 2010,
+            STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2010-11-20',
             DATE_END => '2010-11-21'

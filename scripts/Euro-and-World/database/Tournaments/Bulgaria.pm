@@ -767,6 +767,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2013,
+            STAGE => 'Final',
             major => 'ROUND',
             DATE_START => '2013-01-26',
             DATE_END => '2013-01-27'
@@ -810,7 +811,8 @@ my %TOURNAMENTS_BULGARIA =
           {
             YEAR => 2009,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2009-03-13',
             DATE_END => '2009-03-15'
           },
@@ -852,6 +854,8 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2014,
+            STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2014-02-06',
             DATE_END => '2014-02-09'
           },
@@ -864,6 +868,8 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2015,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-01-29',
             DATE_END => '2015-02-01'
@@ -877,6 +883,8 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2016,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-02-04',
             DATE_END => '2016-02-07'
@@ -1206,11 +1214,26 @@ my %TOURNAMENTS_BULGARIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
+            STAGE => 'Qualifying',
             major => 'ROUND',
             DATE_START => '2009-06-06',
+            DATE_END => '2009-06-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Semifinal',
+            DATE_START => '2009-06-07',
+            DATE_END => '2009-06-07'
+          },
+          'C2' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            DATE_START => '2009-06-07',
             DATE_END => '2009-06-07'
           } 
         }
@@ -1276,9 +1299,19 @@ my %TOURNAMENTS_BULGARIA =
       {
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2009,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-03-01',
+            DATE_END => '2009-03-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2009-03-01',
             DATE_END => '2009-03-01'
           } 
@@ -1318,6 +1351,8 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2009,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2009-05-30',
             DATE_END => '2009-05-31'
           } 
@@ -1328,10 +1363,28 @@ my %TOURNAMENTS_BULGARIA =
         MEET => 'Lozenets Bridge Festival',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2010,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2010-05-29',
+            DATE_END => '2010-05-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-05-30',
+            DATE_END => '2010-05-30'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-05-30',
             DATE_END => '2010-05-30'
           } 
         }
@@ -1562,6 +1615,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2012,
+            STAGE => 'Final',
             major => 'ROUND',
             DATE_START => '2012-05-19',
             DATE_END => '2012-05-20'
@@ -1588,6 +1642,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2014,
+            STAGE => 'Final',
             DATE_START => '2014-09-21',
             DATE_END => '2014-09-22'
           } 
@@ -1626,6 +1681,16 @@ my %TOURNAMENTS_BULGARIA =
           'C0' => 
           {
             YEAR => 2006,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-10-17',
+            DATE_END => '2006-10-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2006-10-17',
             DATE_END => '2006-10-17'
           },
@@ -1697,7 +1762,24 @@ my %TOURNAMENTS_BULGARIA =
           'C0' => 
           {
             YEAR => 2010,
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2010-10-02',
+            DATE_END => '2010-10-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            DATE_START => '2010-10-03',
+            DATE_END => '2010-10-03'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            DATE_START => '2010-10-03',
             DATE_END => '2010-10-03'
           },
         }
@@ -1739,7 +1821,25 @@ my %TOURNAMENTS_BULGARIA =
           'C0' => 
           {
             YEAR => 2012,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2012-10-06',
+            DATE_END => '2012-10-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-10-07',
+            DATE_END => '2012-10-07'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-10-07',
             DATE_END => '2012-10-07'
           },
         }
@@ -1753,7 +1853,24 @@ my %TOURNAMENTS_BULGARIA =
           'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2013-10-05',
+            DATE_END => '2013-10-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            DATE_START => '2013-10-06',
+            DATE_END => '2013-10-06'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            DATE_START => '2013-10-06',
             DATE_END => '2013-10-06'
           },
         }
@@ -1766,7 +1883,22 @@ my %TOURNAMENTS_BULGARIA =
           'C0' => 
           {
             YEAR => 2014,
+            MOVEMENT => 'Round-robin',
             DATE_START => '2014-10-04',
+            DATE_END => '2014-10-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            DATE_START => '2014-10-04',
+            DATE_END => '2014-10-04'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            DATE_START => '2014-10-05',
             DATE_END => '2014-10-05'
           },
         }
@@ -1779,7 +1911,15 @@ my %TOURNAMENTS_BULGARIA =
           'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Semifinal',
             DATE_START => '2015-10-17',
+            DATE_END => '2015-10-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            DATE_START => '2015-10-18',
             DATE_END => '2015-10-18'
           },
         }
