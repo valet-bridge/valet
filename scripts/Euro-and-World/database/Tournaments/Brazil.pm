@@ -254,6 +254,7 @@ my %TOURNAMENTS_BRAZIL =
           {
             YEAR => 2011,
             STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
             major => 'SEGMENT',
             DATE_START => '2011-09-09',
             DATE_END => '2011-09-10'
@@ -676,6 +677,8 @@ my %TOURNAMENTS_BRAZIL =
           'SINGLE' => 
           {
             YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2011-08-20',
             DATE_END => '2011-08-20'
           } 

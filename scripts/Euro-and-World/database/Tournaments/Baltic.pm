@@ -853,6 +853,7 @@ my %TOURNAMENTS_BALTIC =
           {
             YEAR => 2013,
             STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-04-06',
             DATE_END => '2013-04-07'
@@ -1472,6 +1473,16 @@ my %TOURNAMENTS_BALTIC =
           'C0' => 
           {
             YEAR => 2005,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2005-05-31',
+            DATE_END => '2005-05-31'
+          },
+          'C1' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2005-05-31',
             DATE_END => '2005-05-31'
           },
@@ -1709,6 +1720,7 @@ my %TOURNAMENTS_BALTIC =
           'SINGLE' => 
           {
             YEAR => 2013,
+            MOVEMENT => 'Barometer',
             major => 'ROUND',
             DATE_START => '2013-08-29',
             DATE_END => '2013-08-31'
@@ -1930,6 +1942,7 @@ my %TOURNAMENTS_BALTIC =
           'SINGLE' => 
           {
             YEAR => 2005,
+            STAGE => 'Final',
             major => 'ROUND',
             DATE_START => '2005-10-02',
             DATE_END => '2005-10-02'
@@ -2016,6 +2029,7 @@ my %TOURNAMENTS_BALTIC =
           'C0' => 
           {
             YEAR => 2011,
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-09-30',
             DATE_END => '2011-09-30'
@@ -2046,6 +2060,7 @@ my %TOURNAMENTS_BALTIC =
           'C0' => 
           {
             YEAR => 2012,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2012-10-26',
             DATE_END => '2012-10-26'

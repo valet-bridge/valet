@@ -482,7 +482,25 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2012,
-            DATE_START => '2012-09-02',
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2012-08-27',
+            DATE_END => '2012-08-31'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-09-01',
+            DATE_END => '2012-09-01'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-09-01',
             DATE_END => '2012-09-02'
           },
         }
@@ -797,7 +815,25 @@ my %TOURNAMENTS_ASIA =
           'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2012-08-27',
+            DATE_END => '2012-08-31'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-09-01',
+            DATE_END => '2012-09-01'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-09-01',
             DATE_END => '2012-09-02'
           },
         }
@@ -1008,10 +1044,28 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2012-08-27',
+            DATE_END => '2012-08-31'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-09-01',
+            DATE_END => '2012-09-01'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-09-01',
             DATE_END => '2012-09-02'
           } 
         }
@@ -1194,12 +1248,30 @@ my %TOURNAMENTS_ASIA =
         MEET => 'APBF Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2012-08-27',
+            DATE_END => '2012-08-31'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-09-01',
+            DATE_END => '2012-09-01'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-09-01',
             DATE_END => '2012-09-02'
-          } 
+          },
         }
       },
       '2013' =>
@@ -1457,6 +1529,7 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2015,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2015-12-03',
             DATE_END => '2015-12-06'
@@ -1956,11 +2029,20 @@ my %TOURNAMENTS_ASIA =
         MEET => 'Southeast Asian Games',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            MOVEMENT => 'Round-robin',
             DATE_START => '2011-11-10',
-            DATE_END => '2011-11-21'
+            DATE_END => '2011-11-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-11-14',
+            DATE_END => '2011-11-15'
           } 
         }
       },
@@ -2098,6 +2180,7 @@ my %TOURNAMENTS_ASIA =
           'C0' =>
           {
             YEAR => 2009,
+            STAGE => 'Final',
             DATE_START => '2009-03-02',
             DATE_END => '2009-03-02'
           },
@@ -2365,6 +2448,7 @@ my %TOURNAMENTS_ASIA =
           {
             YEAR => 2015,
             STAGE => 'Qualifying',
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2015-04-08',
             DATE_END => '2015-04-09'

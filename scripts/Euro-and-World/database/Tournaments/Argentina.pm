@@ -259,6 +259,7 @@ my %TOURNAMENTS_ARGENTINA =
           'SINGLE' => 
           {
             YEAR => 2007,
+            STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2007-06-20',
             DATE_END => '2007-06-20'
@@ -673,6 +674,7 @@ my %TOURNAMENTS_ARGENTINA =
           'SINGLE' => 
           {
             YEAR => 2011,
+            STAGE => 'Final',
             DATE_START => '2011-07-03',
             DATE_END => '2011-07-03'
           },
@@ -699,6 +701,7 @@ my %TOURNAMENTS_ARGENTINA =
           'C0' => 
           {
             YEAR => 2010,
+            STAGE => 'Final',
             DATE_START => '2010-08-14',
             DATE_END => '2010-08-15'
           },

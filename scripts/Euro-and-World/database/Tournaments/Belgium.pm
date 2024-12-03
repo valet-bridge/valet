@@ -70,6 +70,7 @@ my %TOURNAMENTS_BELGIUM =
           'SINGLE' => 
           {
             YEAR => 2011,
+            STAGE => 'Final',
             major => 'SESSION',
             DATE_START => '2011-05-21',
             DATE_END => '2011-05-21'
