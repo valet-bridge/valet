@@ -476,10 +476,36 @@ my %TOURNAMENTS_JAPAN =
         MEET => 'Yokohama Bridge Festival',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2010,
+            STAGE => 'Qualifying',
+            major => 'MATCH',
             DATE_START => '2010-02-08',
+            DATE_END => '2010-02-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-02-11',
+            DATE_END => '2010-02-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-02-12',
+            DATE_END => '2010-02-12'
+          },
+          'C3' => 
+          {
+            YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2010-02-12',
             DATE_END => '2010-02-13'
           } 
         }

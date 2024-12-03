@@ -3460,6 +3460,8 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             major => 'SEGMENT',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2005-12-10',
             DATE_END => '2005-12-10'
           }
@@ -3996,7 +3998,23 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2014-10-11',
+            DATE_END => '2014-10-11'
+          },
+          'C1' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-10-12',
+            DATE_END => '2014-10-12'
+          },
+          'C2' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-10-12',
             DATE_END => '2014-10-12'
           }
         }
@@ -4051,6 +4069,7 @@ my %TOURNAMENTS_ITALY =
         {
           'C0' =>
           {
+            STAGE => 'Final',
             DATE_START => '2005-01-06',
             DATE_END => '2005-01-06'
           }

@@ -156,6 +156,33 @@ my %TOURNAMENTS_MONACO =
           'C0' => 
           {
             YEAR => 2008,
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Round-robin',
+            major => 'SEGMENT',
+            DATE_START => '2008-11-09',
+            DATE_END => '2008-11-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-11-09',
+            DATE_END => '2008-11-09'
+          },
+          'C2' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2008-11-09',
+            DATE_END => '2008-11-09'
+          },
+          'C3' => 
+          {
+            YEAR => 2008,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2008-11-09',
             DATE_END => '2008-11-09'
           },
