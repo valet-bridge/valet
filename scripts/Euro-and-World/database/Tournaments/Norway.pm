@@ -421,6 +421,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2007,
+            MOVEMENT => 'Round-robin',
             major => 'MATCH',
             DATE_START => '2007-05-27',
             DATE_END => '2007-05-27'
@@ -751,6 +752,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2007,
+            STAGE => 'Semifinal',
             major => 'ROUND',
             minor => 'HALF',
             DATE_START => '2007-05-31',
@@ -891,6 +893,8 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2016,
+            STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2016-06-02',
@@ -1717,6 +1721,7 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2015,
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2015-11-06',
@@ -1725,6 +1730,7 @@ my %TOURNAMENTS_NORWAY =
           'C1' => 
           {
             YEAR => 2016,
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
             DATE_START => '2016-02-06',
@@ -2024,6 +2030,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2014,
+            STAGE => 'Qualifying',
             MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2014-08-05',
@@ -2620,6 +2627,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2014,
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2014-10-05',
             DATE_END => '2014-10-05'
@@ -2873,6 +2881,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2010,
+            STAGE => 'Final',
             DATE_START => '2010-10-19',
             DATE_END => '2010-10-19'
           } 
@@ -2885,6 +2894,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2012,
+            STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2012-01-13',
             DATE_END => '2012-01-13'
@@ -2898,6 +2908,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2012,
+            STAGE => 'Final',
             DATE_START => '2012-11-21',
             DATE_END => '2012-11-21'
           } 
