@@ -1741,6 +1741,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2016,
+            STAGE => 'Final',
             major => 'SESSION',
             DATE_START => '2016-02-29',
             DATE_END => '2016-03-03'
@@ -1804,6 +1805,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2016,
+            STAGE => 'Final',
             major => 'SESSION',
             DATE_START => '2016-03-02',
             DATE_END => '2016-03-03'
@@ -1831,6 +1833,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2016,
+            STAGE => 'Final',
             major => 'SESSION',
             DATE_START => '2016-02-29',
             DATE_END => '2016-03-03'
@@ -2241,10 +2244,36 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Youth Championships',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2012-07-25',
+            DATE_END => '2012-07-31'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-01',
+            DATE_END => '2012-08-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-03',
+            DATE_END => '2012-08-03'
+          },
+          'C3' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-08-03',
             DATE_END => '2012-08-04'
           } 
         }
@@ -3104,6 +3133,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2014-08-14',
             DATE_END => '2014-08-18'
           } 
@@ -3117,6 +3148,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2016-08-04',
             DATE_END => '2016-08-13'
           } 
@@ -4314,11 +4347,54 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Olympiad',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2000,
-            DATE_START => '2000-08-26',
-            DATE_END => '2000-09-09'
+            STAGE => 'Qualifying',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2000-08-27',
+            DATE_END => '2000-09-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2000,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2000-09-03',
+            DATE_END => '2000-09-03'
+          },
+          'C2' => 
+          {
+            YEAR => 2000,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2000-09-04',
+            DATE_END => '2000-09-04'
+          },
+          'C3' => 
+          {
+            YEAR => 2000,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2000-09-05',
+            DATE_END => '2000-09-06'
+          },
+          'C4' => 
+          {
+            YEAR => 2000,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2000-09-07',
+            DATE_END => '2000-09-07'
+          },
+          'C5' => 
+          {
+            YEAR => 2000,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2000-09-07',
+            DATE_END => '2000-09-08'
           },
         }
       },
@@ -4991,6 +5067,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2014,
+            STAGE => 'Final',
             major => 'ROUND',
             DATE_START => '2014-12-16',
             DATE_END => '2014-12-17'
@@ -5074,16 +5151,18 @@ my %TOURNAMENTS_WORLD =
           'C0' => 
           {
             YEAR => 2008,
+            STAGE => 'Qualifying',
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'MATCH',
             DATE_START => '2008-10-04',
-            DATE_END => '2008-10-11'
+            DATE_END => '2008-10-10'
           },
           'C1' => 
           {
             YEAR => 2008,
             STAGE => 'Quarterfinal',
+            MOVEMENT => 'Round-robin',
             major => 'SEGMENT',
             minor => 'MATCH',
             DATE_START => '2008-10-11',
@@ -5093,6 +5172,7 @@ my %TOURNAMENTS_WORLD =
           {
             YEAR => 2008,
             STAGE => 'Semifinal',
+            MOVEMENT => 'Round-robin',
             major => 'SEGMENT',
             minor => 'MATCH',
             DATE_START => '2008-10-14',
@@ -5618,6 +5698,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2014,
+            STAGE => 'Final',
             major => 'SESSION',
             DATE_START => '2014-12-14',
             DATE_END => '2014-12-17'

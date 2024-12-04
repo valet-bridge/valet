@@ -282,8 +282,16 @@ sub post_process_maybe_rof
         $tname eq 'United States Bridge Championship' ||
         $tname eq 'United States Youth Bridge Championship')
     {
-      $token->set_general('MARKER', 'STAGE', 'Rof' . $r);
-      $chain->complete_if_last_is(0, 'EXPLAINED');
+      if ($r == 8)
+      {
+        $token->set_general('MARKER', 'STAGE', 'Quarterfinal');
+        $chain->complete_if_last_is(0, 'EXPLAINED');
+      }
+      else
+      {
+        $token->set_general('MARKER', 'STAGE', 'Rof' . $r);
+        $chain->complete_if_last_is(0, 'EXPLAINED');
+      }
     }
   }
 }

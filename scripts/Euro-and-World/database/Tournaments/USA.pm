@@ -1151,6 +1151,8 @@ my %TOURNAMENTS_USA =
           'SINGLE' => 
           {
             YEAR => 2007,
+            STAGE => 'Final',
+            major => 'QUARTER',
             DATE_START => '2007-07-24',
             DATE_END => '2007-07-24'
           },
@@ -1472,6 +1474,7 @@ my %TOURNAMENTS_USA =
           'C0' => 
           {
             YEAR => 2010,
+            STAGE => 'Final',
             DATE_START => '2010-08-14',
             DATE_END => '2010-08-14'
           },
@@ -1501,6 +1504,7 @@ my %TOURNAMENTS_USA =
           'SINGLE' => 
           {
             YEAR => 2010,
+            STAGE => 'Final',
             DATE_START => '2010-05-15',
             DATE_END => '2010-05-15'
           },
@@ -1526,6 +1530,7 @@ my %TOURNAMENTS_USA =
           'SINGLE' => 
           {
             YEAR => 2013,
+            STAGE => 'Final',
             DATE_START => '2013-09-11',
             DATE_END => '2013-09-11'
           },
@@ -1538,6 +1543,7 @@ my %TOURNAMENTS_USA =
           'SINGLE' => 
           {
             YEAR => 2014,
+            STAGE => 'Final',
             DATE_START => '2014-11-05',
             DATE_END => '2014-11-05'
           },
@@ -3330,12 +3336,38 @@ my %TOURNAMENTS_USA =
         MEET_TAG => '2012A',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
-            DATE_START => '2012-04-27',
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2012-04-29',
+            DATE_END => '2012-04-30'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-05-01',
+            DATE_END => '2012-05-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-05-03',
+            DATE_END => '2012-05-04'
+          },
+          'C3' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-05-05',
             DATE_END => '2012-05-06'
-          } 
+          },
         }
       },
       '2013' =>
@@ -3474,12 +3506,38 @@ my %TOURNAMENTS_USA =
         MEET_TAG => '2015B',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
-            DATE_START => '2015-05-08',
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2015-05-10',
+            DATE_END => '2015-05-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-05-12',
+            DATE_END => '2015-05-14'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-05-14',
+            DATE_END => '2015-05-16'
+          },
+          'C3' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-05-16',
             DATE_END => '2015-05-17'
-          } 
+          },
         }
       },
       '2016' =>
@@ -4277,12 +4335,62 @@ my %TOURNAMENTS_USA =
         MEET_TAG => '2013B',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
-            DATE_START => '2013-07-12',
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-07-13',
+            DATE_END => '2013-07-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-07-15',
+            DATE_END => '2013-07-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-07-16',
+            DATE_END => '2013-07-17'
+          },
+          'C3' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2013-07-16',
+            DATE_END => '2013-07-16'
+          },
+          'C4' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-07-16',
+            DATE_END => '2013-07-18'
+          },
+          'C5' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-07-18',
+            DATE_END => '2013-07-19'
+          },
+          'C6' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-07-19',
             DATE_END => '2013-07-20'
-          } 
+          },
         }
       },
       '2015' =>
@@ -4292,12 +4400,54 @@ my %TOURNAMENTS_USA =
         MEET_TAG => '2015C',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
-            DATE_START => '2015-06-05',
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-06-07',
+            DATE_END => '2015-06-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-06-08',
+            DATE_END => '2015-06-09'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-06-09',
+            DATE_END => '2015-06-10'
+          },
+          'C3' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-06-10',
+            DATE_END => '2015-06-11'
+          },
+          'C4' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-06-11',
+            DATE_END => '2015-06-12'
+          },
+          'C5' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-06-12',
             DATE_END => '2015-06-13'
-          } 
+          },
         }
       },
       '2016' =>
@@ -4307,10 +4457,36 @@ my %TOURNAMENTS_USA =
         MEET_TAG => '2016C',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2016,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
             DATE_START => '2016-06-17',
+            DATE_END => '2016-06-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-06-19',
+            DATE_END => '2016-06-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-06-20',
+            DATE_END => '2016-06-21'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-06-21',
             DATE_END => '2016-06-22'
           } 
         }
@@ -4905,9 +5081,19 @@ my %TOURNAMENTS_USA =
         MEET_TAG => '2013-14',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          # Actually there are two of each.
+          'C0' => 
           {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2013-12-31',
+            DATE_END => '2014-01-02'
+          },
+          'C1' => 
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-01-01',
             DATE_END => '2014-01-02'
           } 
         }
@@ -5000,6 +5186,7 @@ my %TOURNAMENTS_USA =
           'SINGLE' => 
           {
             YEAR => 1997,
+            STAGE => 'Final',
             DATE_START => '1997-03-14',
             DATE_END => '1997-03-14'
           } 

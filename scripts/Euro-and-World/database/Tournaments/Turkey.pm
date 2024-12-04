@@ -388,6 +388,8 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2013,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2013-07-12',
             DATE_END => '2013-07-14'
           },
@@ -514,6 +516,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2007,
+            STAGE => 'Final',
             DATE_START => '2007-04-16',
             DATE_END => '2007-04-16'
           },
@@ -731,6 +734,21 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            DATE_START => '2014-07-25',
+            DATE_END => '2014-07-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            DATE_START => '2014-07-25',
+            DATE_END => '2014-07-25'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
             DATE_START => '2014-07-25',
             DATE_END => '2014-07-25'
           },
@@ -757,6 +775,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2009,
+            STAGE => 'Final',
             DATE_START => '2009-10-24',
             DATE_END => '2009-10-24'
           },
@@ -770,6 +789,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2010,
+            STAGE => 'Final',
             DATE_START => '2010-10-23',
             DATE_END => '2010-10-24'
           },
@@ -822,6 +842,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Final',
             DATE_START => '2011-06-11',
             DATE_END => '2011-06-11'
           },
@@ -1050,6 +1071,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2015,
+            STAGE => 'Final',
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-01-24',
@@ -1065,6 +1087,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2016,
+            STAGE => 'Final',
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-01-30',
@@ -1164,6 +1187,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2015,
+            STAGE => 'Final',
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-01-25',
@@ -1178,6 +1202,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2016,
+            STAGE => 'Playoff',
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2016-02-07',
@@ -1261,6 +1286,7 @@ my %TOURNAMENTS_TURKEY =
           'SINGLE' => 
           {
             YEAR => 2011,
+            STAGE => 'Final',
             DATE_START => '2011-09-25',
             DATE_END => '2011-09-25'
           },
@@ -1283,9 +1309,35 @@ my %TOURNAMENTS_TURKEY =
         MEET => 'Mersin Bridge Festival',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Rof16',
+            major => 'Round',
+            DATE_START => '2011-09-23',
+            DATE_END => '2011-09-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Quarterfinal',
+            major => 'Round',
+            DATE_START => '2011-09-23',
+            DATE_END => '2011-09-23'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'Round',
+            DATE_START => '2011-09-23',
+            DATE_END => '2011-09-23'
+          },
+          'C3' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'Round',
             DATE_START => '2011-09-23',
             DATE_END => '2011-09-23'
           },
@@ -1296,9 +1348,35 @@ my %TOURNAMENTS_TURKEY =
         MEET => 'Mersin Bridge Festival',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2013-09-20',
+            DATE_END => '2013-09-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-09-20',
+            DATE_END => '2013-09-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-09-20',
+            DATE_END => '2013-09-20'
+          },
+          'C3' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2013-09-20',
             DATE_END => '2013-09-20'
           },
@@ -1309,9 +1387,35 @@ my %TOURNAMENTS_TURKEY =
         MEET => 'Mersin Bridge Festival',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2014-09-12',
+            DATE_END => '2014-09-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-09-12',
+            DATE_END => '2014-09-12'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-09-12',
+            DATE_END => '2014-09-12'
+          },
+          'C3' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2014-09-12',
             DATE_END => '2014-09-12'
           },
@@ -1322,9 +1426,35 @@ my %TOURNAMENTS_TURKEY =
         MEET => 'Mersin Bridge Festival',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            STAGE => 'Rof16',
+            major => 'SEGMENT',
+            DATE_START => '2015-09-11',
+            DATE_END => '2015-09-11'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-09-11',
+            DATE_END => '2015-09-11'
+          },
+          'C2' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2015-09-11',
+            DATE_END => '2015-09-11'
+          },
+          'C3' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2015-09-11',
             DATE_END => '2015-09-11'
           },
@@ -1606,6 +1736,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2016,
+            MOVEMENT => 'Swiss',
             DATE_START => '2016-02-07',
             DATE_END => '2016-02-07'
           },
@@ -1631,7 +1762,17 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2014,
+            STAGE => 'Elimination',
+            major => 'SESSION',
             DATE_START => '2014-06-03',
+            DATE_END => '2014-06-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SESSION',
+            DATE_START => '2014-06-05',
             DATE_END => '2014-06-06'
           },
         }
@@ -1962,6 +2103,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2012,
             STAGE => 'Quarterfinal',
+            MOVEMENT => 'Round-robin',
             major => 'SEGMENT',
             DATE_START => '2012-09-01',
             DATE_END => '2012-09-02'
@@ -1970,6 +2112,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2012,
             STAGE => 'Semifinal',
+            MOVEMENT => 'Round-robin',
             major => 'SEGMENT',
             DATE_START => '2012-09-02',
             DATE_END => '2012-09-02'
@@ -1978,6 +2121,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2012,
             STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
             major => 'SEGMENT',
             DATE_START => '2012-09-03',
             DATE_END => '2012-09-03'
@@ -3285,7 +3429,25 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2012,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2012-03-17',
+            DATE_END => '2012-03-17'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-03-17',
+            DATE_END => '2012-03-18'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-03-18',
             DATE_END => '2012-03-18'
           },
         }
