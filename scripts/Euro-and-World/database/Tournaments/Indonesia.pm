@@ -546,6 +546,7 @@ my %TOURNAMENTS_INDONESIA =
           {
             YEAR => 2007,
             STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
             major => 'SESSION',
             DATE_START => '2007-06-05',
             DATE_END => '2007-06-05'
@@ -570,6 +571,7 @@ my %TOURNAMENTS_INDONESIA =
           {
             YEAR => 2009,
             STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2009-12-19',
             DATE_END => '2009-12-20'
@@ -659,6 +661,7 @@ my %TOURNAMENTS_INDONESIA =
           {
             YEAR => 2013,
             STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2013-07-27',
             DATE_END => '2013-07-28'
@@ -684,6 +687,7 @@ my %TOURNAMENTS_INDONESIA =
           {
             YEAR => 2014,
             STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-07-12',
             DATE_END => '2014-07-13'
@@ -924,6 +928,7 @@ my %TOURNAMENTS_INDONESIA =
           {
             YEAR => 2009,
             STAGE => 'Qualifying',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2009-06-01',
             DATE_END => '2009-06-02'
@@ -940,6 +945,7 @@ my %TOURNAMENTS_INDONESIA =
           {
             YEAR => 2009,
             STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2009-06-03',
             DATE_END => '2009-06-05'
@@ -1543,7 +1549,25 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2012,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2012-09-14',
+            DATE_END => '2012-09-16'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-09-17',
+            DATE_END => '2012-09-17'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-09-18',
             DATE_END => '2012-09-19'
           },
         }
@@ -1556,7 +1580,17 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2015,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2015-09-07',
+            DATE_END => '2015-09-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2015-09-11',
             DATE_END => '2015-09-11'
           },
         }
@@ -1582,6 +1616,8 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2012,
+            MOVEMENT => 'Round-robin',
+            major => 'SESSION',
             DATE_START => '2012-09-03',
             DATE_END => '2012-09-03'
           },
@@ -1632,6 +1668,7 @@ my %TOURNAMENTS_INDONESIA =
           'C1' => 
           {
             YEAR => 2016,
+            MOVEMENT => 'Round-robin',
             major => 'SESSION',
             minor => 'ROUND',
             DATE_START => '2016-03-18',
@@ -1816,6 +1853,7 @@ my %TOURNAMENTS_INDONESIA =
           {
             YEAR => 2007,
             STAGE => 'Semifinal',
+            MOVEMENT => 'Round-robin',
             major => 'SEGMENT',
             DATE_START => '2007-05-15',
             DATE_END => '2007-05-15'
@@ -1824,6 +1862,7 @@ my %TOURNAMENTS_INDONESIA =
           {
             YEAR => 2007,
             STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
             major => 'SEGMENT',
             DATE_START => '2007-05-15',
             DATE_END => '2007-05-15'
@@ -2039,6 +2078,8 @@ my %TOURNAMENTS_INDONESIA =
           'C6' => 
           {
             YEAR => 2010,
+            STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2010-04-16',
             DATE_END => '2010-04-18'
           },
@@ -2062,10 +2103,28 @@ my %TOURNAMENTS_INDONESIA =
         MEET => 'Indonesian National Pre-Sports Week',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2011-09-30',
+            DATE_END => '2011-10-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-10-04',
+            DATE_END => '2011-10-04'
+          },
+          'C2' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-10-05',
             DATE_END => '2011-10-05'
           } 
         }
@@ -2075,10 +2134,19 @@ my %TOURNAMENTS_INDONESIA =
         MEET => 'Indonesian National Pre-Sports Week',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2015,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2015-09-07',
+            DATE_END => '2015-09-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2015,
+            STAGE => 'Playoff',
+            DATE_START => '2015-09-10',
             DATE_END => '2015-09-10'
           } 
         }
@@ -2708,6 +2776,7 @@ my %TOURNAMENTS_INDONESIA =
           'SINGLE' => 
           {
             YEAR => 2016,
+            STAGE => 'Qualifying',
             major => 'ROUND',
             DATE_START => '2016-03-06',
             DATE_END => '2016-03-08'
@@ -2773,6 +2842,7 @@ my %TOURNAMENTS_INDONESIA =
           'SINGLE' => 
           {
             YEAR => 2011,
+            STAGE => 'Final',
             DATE_START => '2011-10-05',
             DATE_END => '2011-10-05'
           } 
@@ -2783,10 +2853,28 @@ my %TOURNAMENTS_INDONESIA =
         MEET => 'Indonesian National Games',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2012,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2012-09-14',
+            DATE_END => '2012-09-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2012-09-16',
+            DATE_END => '2012-09-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2012-09-17',
             DATE_END => '2012-09-18'
           } 
         }
@@ -2800,6 +2888,7 @@ my %TOURNAMENTS_INDONESIA =
           'SINGLE' => 
           {
             YEAR => 2015,
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-05-10',
             DATE_END => '2015-05-10'
@@ -2815,6 +2904,8 @@ my %TOURNAMENTS_INDONESIA =
           'SINGLE' => 
           {
             YEAR => 2015,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2015-09-10',
             DATE_END => '2015-09-10'
           } 
@@ -2987,6 +3078,7 @@ my %TOURNAMENTS_INDONESIA =
           {
             YEAR => 2010,
             STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
             major => 'SEGMENT',
             DATE_START => '2010-11-06',
             DATE_END => '2010-11-07'
@@ -3013,6 +3105,7 @@ my %TOURNAMENTS_INDONESIA =
           {
             YEAR => 2011,
             STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-07-23',
             DATE_END => '2011-07-24'
@@ -3039,6 +3132,7 @@ my %TOURNAMENTS_INDONESIA =
           {
             YEAR => 2012,
             STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
             major => 'SEGMENT',
             DATE_START => '2012-11-24',
             DATE_END => '2012-11-25'
@@ -3065,6 +3159,7 @@ my %TOURNAMENTS_INDONESIA =
           {
             YEAR => 2013,
             STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
             major => 'SEGMENT',
             DATE_START => '2013-11-09',
             DATE_END => '2013-11-10'
@@ -3091,6 +3186,7 @@ my %TOURNAMENTS_INDONESIA =
           {
             YEAR => 2014,
             STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
             major => 'SEGMENT',
             DATE_START => '2014-08-30',
             DATE_END => '2014-08-31'
@@ -3314,6 +3410,7 @@ my %TOURNAMENTS_INDONESIA =
           {
             YEAR => 2012,
             STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2012-07-14',
             DATE_END => '2012-07-15'
@@ -3664,6 +3761,7 @@ my %TOURNAMENTS_INDONESIA =
           {
             YEAR => 2011,
             STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2011-07-09',
             DATE_END => '2011-07-10'
@@ -3737,6 +3835,7 @@ my %TOURNAMENTS_INDONESIA =
           {
             YEAR => 2014,
             STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2014-05-31',
             DATE_END => '2014-06-01'
@@ -3761,6 +3860,7 @@ my %TOURNAMENTS_INDONESIA =
           {
             YEAR => 2015,
             STAGE => 'Final',
+            MOVEMENT => 'Round-robin',
             major => 'ROUND',
             DATE_START => '2015-11-28',
             DATE_END => '2015-11-29'
@@ -3888,6 +3988,8 @@ my %TOURNAMENTS_INDONESIA =
           'C0' => 
           {
             YEAR => 2010,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2010-11-29',
             DATE_END => '2010-11-29'
           },
