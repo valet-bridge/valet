@@ -23,7 +23,7 @@ my %MEETS_EUROADULT =
   "European Champions' Cup" =>
   {
     %GLOBAL,
-    ORIGIN => 'International',
+    ORIGIN => 'Interclub',
     FORM => 'Teams',
     SCORING => 'IMP',
 

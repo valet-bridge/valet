@@ -108,8 +108,8 @@ else
       \%links_thash, \%tname_hash);
     check_same_hash("Meet", $key,
       \%links_mhash, \%meet_hash);
-  suggest_meets($key);
-  check_field_values($key);
+    suggest_meets($key);
+    check_field_values($key);
   }
 }
 

@@ -1,3 +1,6 @@
+Origin:
+If not International, should not consist of countries.
+
 Add an 'ignore' to Tournament, so ignore => 'GROUP'.
 That way there should be the right number of fields.
 
@@ -5,12 +8,25 @@ Add 'cluster'.  Must then be present?!
 
 Add automatic clustering of e.g. Semifinal.
 
+Add ability to hardwire STAGE/MOVEMENT:
+STAGE => 'Segment|Session|Set|2'
+
 If MOVEMENT/STAGE, must be present in chapter header.
+If in chapter header, must be in at least one BBO?
 
 Output in d of counters should be in order major, minor,
 others.
 
 Somehow unify all the field lists in Fields.pm
+
+Quick script to make histogram of a tag (ORIGIN) in t.
+
+Are pairs tournaments even useable?  Do player names work?
+6629 has a long list of player names
+
+45965 'Women' in TEAM2_GENDER can go when this is chapter gender.
+
+6758 Green is color, not captain
 
 Could have a more compact BOARD format when all is accounted for
 
@@ -66,5 +82,5 @@ Things that get modified to fix errors:
 
 Can look at weekdays:
 foreach f (..$/Tournaments/*pm)
-perl weekday.pl $f > ../Tournaments/DATED/`basename $f`
+  perl weekday.pl $f > ../Tournaments/DATED/`basename $f`
 end

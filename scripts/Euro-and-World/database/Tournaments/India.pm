@@ -29,7 +29,7 @@ my %MEETS_INDIA =
 
     %GLOBAL,
     SPONSOR => 'HCL',
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
 
     EDITIONS => 
     {

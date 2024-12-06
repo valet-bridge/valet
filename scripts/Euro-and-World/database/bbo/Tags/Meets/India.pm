@@ -40,6 +40,7 @@ my %MULTI_TYPOS =
     'hcl international open championship',
     'hcl open',
     'hcl open championship',
+    'hcl open international',
     'hcl open international tournament',
     'hcl open tournament'],
   'Indian South Zone Championship' => [

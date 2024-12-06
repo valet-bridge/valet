@@ -955,6 +955,54 @@ sub fix_counters
 }
 
 
+my %ORIGIN_COMPATIBILITY = (
+  Intercity => {CITY => 1, CLUB => 1},
+  Interclub => {
+    CITY => 1, 
+    CLUB => 1, 
+    COUNTRY => 1,
+    ORGANIZATION => 1,
+    REGION => 1, 
+    SPONSOR => 1},
+  International => {COUNTRY => 1},
+  Interprovince => {CITY => 1, REGION => 1},
+  Interregional => {CITY => 1, REGION => 1},
+  Interstate => {CITY => 1, REGION => 1},
+  Interuniversity => {CITY => 1, UNIVERSITY => 1},
+  University => {CITY => 1, UNIVERSITY => 1},
+);
+
+sub check_fields
+{
+  my ($self, $header) = @_;
+
+  if (exists $header->{ORIGIN} &&
+      exists $ORIGIN_COMPATIBILITY{$header->{ORIGIN}})
+  {
+    my $origin = $header->{ORIGIN};
+    my $ok_hash = $ORIGIN_COMPATIBILITY{$origin};
+    for my $team (qw(TEAM1 TEAM2))
+    {
+      for my $field (sort keys %{$self->{$team}})
+      {
+        if (! exists $ok_hash->{$field})
+        {
+          warn $self->{BBONO} . ": $field does not match $origin";
+        }
+      }
+    }
+  }
+
+  if (exists $header->{HEADER}{GENDER})
+  {
+  }
+
+  if (exists $header->{HEADER}{AGE})
+  {
+  }
+}
+
+
 sub spaceship
 {
   my ($self, $other, $priorities) = @_;

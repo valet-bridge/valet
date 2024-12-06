@@ -22,7 +22,7 @@ my %MEETS_ASIA =
   {
     # https://www.hkcba.org/apbf.php
     %GLOBAL,
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
 
     EDITIONS =>
     {
@@ -199,7 +199,7 @@ my %MEETS_ASIA =
   {
     # 2013: https://tournament.aseanbridge.com/
     %GLOBAL,
-    ORIGIN => 'International',
+    ORIGIN => 'Interclub',
 
     EDITIONS =>
     {
