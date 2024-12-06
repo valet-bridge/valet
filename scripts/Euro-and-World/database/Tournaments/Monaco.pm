@@ -22,7 +22,7 @@ my %MEETS_MONACO =
   'Monaco International Festival' =>
   {
     %GLOBAL,
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     CITY => 'Monte Carlo',
 
     EDITIONS =>

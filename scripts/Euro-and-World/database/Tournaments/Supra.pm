@@ -17,7 +17,7 @@ my %MEETS_SUPRA =
 (
   'Buffett Cup' =>
   {
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
 
     EDITIONS =>
     {
@@ -1201,13 +1201,13 @@ my %TOURNAMENTS_SUPRA =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'U26',
 
     EDITIONS =>
     {
       '2007' =>
       {
         MEET => 'Channel Trophy',
+        AGE => 'U26',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1223,6 +1223,7 @@ my %TOURNAMENTS_SUPRA =
       '2008' =>
       {
         MEET => 'Channel Trophy',
+        AGE => 'U25',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1237,6 +1238,7 @@ my %TOURNAMENTS_SUPRA =
       '2011' =>
       {
         MEET => 'Channel Trophy',
+        AGE => 'U26',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1252,6 +1254,7 @@ my %TOURNAMENTS_SUPRA =
       '2012' =>
       {
         MEET => 'Channel Trophy',
+        AGE => 'U26',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1266,6 +1269,7 @@ my %TOURNAMENTS_SUPRA =
       '2015' =>
       {
         MEET => 'Channel Trophy',
+        AGE => 'U26',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1281,6 +1285,7 @@ my %TOURNAMENTS_SUPRA =
       '2016' =>
       {
         MEET => 'Channel Trophy',
+        AGE => 'U26',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1294,6 +1299,7 @@ my %TOURNAMENTS_SUPRA =
       '2018' =>
       {
         MEET => 'Channel Trophy',
+        AGE => 'U26',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1307,6 +1313,7 @@ my %TOURNAMENTS_SUPRA =
       '2019' =>
       {
         MEET => 'Channel Trophy',
+        AGE => 'U26',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1321,6 +1328,7 @@ my %TOURNAMENTS_SUPRA =
       {
         # https://bridgescanner.com/event/channel-trophy-2021
         MEET => 'Channel Trophy',
+        AGE => 'U26',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1335,6 +1343,7 @@ my %TOURNAMENTS_SUPRA =
       {
         # https://bridgescanner.com/event/channel-trophy-2022
         MEET => 'Channel Trophy',
+        AGE => 'U26',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1349,6 +1358,7 @@ my %TOURNAMENTS_SUPRA =
       {
         # https://bridgescanner.com/event/channel-trophy-2023
         MEET => 'Channel Trophy',
+        AGE => 'U26',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1363,6 +1373,7 @@ my %TOURNAMENTS_SUPRA =
       {
         # https://bridgescanner.com/event/channel-trophy-2024
         MEET => 'Channel Trophy',
+        AGE => 'U26',
         CHAPTERS =>
         {
           'SINGLE' => 

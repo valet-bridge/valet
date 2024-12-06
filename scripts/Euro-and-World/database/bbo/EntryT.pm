@@ -15,6 +15,7 @@ use lib '.';
 use lib './Connections';
 
 use FScorr;
+use OGAcorr;
 use Connections::Matrix;
 
 use Whole;
@@ -816,6 +817,25 @@ sub prune_using
         " vs. $cvalue";
     }
   }
+
+  for my $team (qw(TEAM1 TEAM2))
+  {
+    while (my ($ckey, $cvalue) = each %{$self->{$team}})
+    {
+      next unless $ckey eq 'GENDER' || $ckey eq 'AGE';
+      next unless exists $header->{$ckey};
+      if ($#$cvalue == 0 && $header->{$ckey} eq $cvalue->[0])
+      {
+        delete $self->{$team}{$ckey};
+      }
+      else
+      {
+        # warn $self->bbono() . ": " .
+          # $header->{TOURNAMENT_NAME} . ", chapter " . $header->{$ckey} .
+          # " vs. $cvalue->[0]";
+      }
+    }
+  }
 }
 
 
@@ -961,15 +981,20 @@ my %ORIGIN_COMPATIBILITY = (
     CITY => 1, 
     CLUB => 1, 
     COUNTRY => 1,
+    LOCALITY => 1,
     ORGANIZATION => 1,
     REGION => 1, 
     SPONSOR => 1},
-  International => {COUNTRY => 1},
+  International => {
+    COUNTRY => 1},
   Interprovince => {CITY => 1, REGION => 1},
   Interregional => {CITY => 1, REGION => 1},
   Interstate => {CITY => 1, REGION => 1},
   Interuniversity => {CITY => 1, UNIVERSITY => 1},
-  University => {CITY => 1, UNIVERSITY => 1},
+  University => {
+    CITY => 1, 
+    COUNTRY => 1,
+    UNIVERSITY => 1},
 );
 
 sub check_fields
@@ -987,7 +1012,21 @@ sub check_fields
       {
         if (! exists $ok_hash->{$field})
         {
-          warn $self->{BBONO} . ": $field does not match $origin";
+          if (exists $self->{HEADER}{TNAME} &&
+            OGAcorr::origin_fixable($self->{HEADER}{TNAME}, $self->bbono()))
+          {
+            # Definitely OK.
+          }
+          elsif (! exists $self->{HEADER}{TNAME} &&
+            OGAcorr::origin_number_fixable($self->bbono()))
+          {
+            # Probably OK.
+          }
+          else
+          {
+            warn $self->{BBONO} . 
+              ": $header->{TOURNAMENT_NAME}, $field does not match $origin";
+          }
         }
       }
     }

@@ -701,7 +701,7 @@ my %TOURNAMENTS_FRANCE =
   'French First Division',
   {
     %GLOBAL,
-    ORIGIN => 'Interclub',
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

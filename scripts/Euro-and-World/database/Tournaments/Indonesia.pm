@@ -3603,7 +3603,7 @@ my %TOURNAMENTS_INDONESIA =
   'Sarundajang Cup' => 
   {
     %GLOBAL,
-    ORIGIN => 'International',
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

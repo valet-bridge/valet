@@ -21,7 +21,7 @@ my %TOURNAMENTS_UK =
   {
     # https://www.bridgewebs.com/cgi-bin/bwor/bw.cgi?club=bgb&pid=docs_Gold%20Cup%20Roll%20of%20Honour.htm
     ORGANIZATION => 'BGB',
-    ORIGIN => 'International',
+    ORIGIN => 'National',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -1074,7 +1074,7 @@ my %TOURNAMENTS_UK =
   'English Premier League' => 
   {
     ORGANIZATION => 'EBU',
-    ORIGIN => 'Interclub',
+    ORIGIN => 'National',
     ZONE => 'Europe',
     COUNTRY => 'England',
     FORM => 'Teams',
@@ -2589,7 +2589,7 @@ my %TOURNAMENTS_UK =
   {
     # https://www.sbu.org.uk/results/archived-results
     ORGANIZATION => 'SBU',
-    ORIGIN => 'Interclub',
+    ORIGIN => 'National',
     ZONE => 'Europe',
     COUNTRY => 'Scotland',
     FORM => 'Teams',
@@ -3117,7 +3117,7 @@ my %TOURNAMENTS_UK =
   'TGR Auction Pairs' => 
   {
     # https://www.bridgewebs.com/tgrs/
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     ZONE => 'Europe',
     COUNTRY => 'England',
     FORM => 'Pairs',
@@ -3224,7 +3224,7 @@ my %TOURNAMENTS_UK =
   'TGR Auction Teams' => 
   {
     # https://www.bridgewebs.com/tgrs/
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     ZONE => 'Europe',
     COUNTRY => 'England',
     FORM => 'Teams',

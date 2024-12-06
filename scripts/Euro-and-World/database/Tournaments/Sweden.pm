@@ -1879,7 +1879,7 @@ my %TOURNAMENTS_SWEDEN =
   'Swedish Premier League',
   {
     %GLOBAL,
-    ORIGIN => 'Interclub',
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

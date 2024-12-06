@@ -38,7 +38,7 @@ my %MEETS_ITALY =
   'Italian Club Championship' =>
   {
     %GLOBAL,
-    ORIGIN => 'Interclub',
+    ORIGIN => 'National',
 
     EDITIONS =>
     {

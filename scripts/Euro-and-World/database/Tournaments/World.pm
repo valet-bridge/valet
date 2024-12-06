@@ -1991,7 +1991,7 @@ my %TOURNAMENTS_WORLD =
 
   'McConnell Cup' => 
   {
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -2049,7 +2049,7 @@ my %TOURNAMENTS_WORLD =
 
   'Oly-Star Cup' => 
   {
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -2370,7 +2370,7 @@ my %TOURNAMENTS_WORLD =
 
   'Rosenblum Cup' => 
   {
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3238,7 +3238,7 @@ my %TOURNAMENTS_WORLD =
 
   'World Mixed Teams' => 
   {
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',

@@ -1063,7 +1063,7 @@ my %TOURNAMENTS_FINLAND =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'U26',
+    AGE => 'U25',
 
     EDITIONS =>
     {

@@ -395,6 +395,7 @@ my @MULTI_WORDS =
   'Yalikavak SK',
   'Yarimca SK',
   'Yatagan SK',
+  'Young Chelsea Bridge Club',
   'Zhong Jian Club',
   'Zurich Enge',
   'Østfold og Follo',
@@ -638,6 +639,7 @@ my %MULTI_TYPOS =
   'Yalikavak SK' => ['yalikavak bld sk', 'Yalikavak Belediye',
     'Yalikavak Bric IHT', 'yalikavak bld'],
   'Yarimca SK' => ['yarimca s.k', 'Yarýmca SK'],
+  'Young Chelsea Bridge Club' => ['young chelsea'],
   'Østfold og Follo' => ['østfold/follo', 'østfold&follo'],
   'Øvre Ottadalen' => ['øvre ottadal'],
   'Århus BK' => ['Aarhus BK', 'Århus Bridgeklub', 'Aarhus Bridgeklub']

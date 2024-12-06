@@ -1,3 +1,15 @@
+AGE and GENDER:
+It seems to be a common occurrence that
+- There are two tournaments available that only differ
+  in AGE/GENDER (let's say > 1 option)
+- The two teams both have some AGE/GENDER that is not
+  in EntryT as such
+- This AGE/GENDER would make one of the tournaments
+  the clear choice.
+So I suppose we could mark this in $entryT->{HINTS}
+{AGE} and {GENDER}
+
+
 Origin:
 If not International, should not consist of countries.
 

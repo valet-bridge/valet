@@ -24,7 +24,7 @@ my %MEETS_PORTUGAL =
   'Azores Festival' =>
   {
     %GLOBAL,
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     REGION => 'Azores',
 
     EDITIONS =>
@@ -122,7 +122,7 @@ my %MEETS_PORTUGAL =
   'Estoril Bridge Festival' =>
   {
     %GLOBAL,
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     CITY => 'Estoril',
 
     EDITIONS =>
@@ -245,7 +245,7 @@ my %MEETS_PORTUGAL =
   'Lisbon International Festival' =>
   {
     %GLOBAL,
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     CITY => 'Lisbon',
 
     EDITIONS =>
@@ -269,7 +269,7 @@ my %MEETS_PORTUGAL =
   'Madeira International Festival' =>
   {
     %GLOBAL,
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
 
     EDITIONS =>
     {
@@ -498,7 +498,7 @@ my %TOURNAMENTS_PORTUGAL =
   'FullBridge International Teams',
   {
     %GLOBAL,
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -943,7 +943,7 @@ my %TOURNAMENTS_PORTUGAL =
   'Portuguese IMP Pairs',
   {
     %GLOBAL,
-    ORIGIN => 'International',
+    ORIGIN => 'National',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -970,7 +970,7 @@ my %TOURNAMENTS_PORTUGAL =
   'Portuguese Open Teams',
   {
     %GLOBAL,
-    ORIGIN => 'International',
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1271,7 +1271,7 @@ my %TOURNAMENTS_PORTUGAL =
   'Portuguese Open Trials',
   {
     %GLOBAL,
-    ORIGIN => 'International',
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1379,7 +1379,7 @@ my %TOURNAMENTS_PORTUGAL =
   'Portuguese Northern Regional Open Teams',
   {
     %GLOBAL,
-    ORIGIN => 'International',
+    ORIGIN => 'Regional',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1436,7 +1436,7 @@ my %TOURNAMENTS_PORTUGAL =
   'Rui Pinto Cup',
   {
     %GLOBAL,
-    ORIGIN => 'International',
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

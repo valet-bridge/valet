@@ -1119,12 +1119,12 @@ my %TOURNAMENTS_NETHERLANDS =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'U26',
 
     EDITIONS =>
     {
       '2006' =>
       {
+        AGE => 'U26',
         CHAPTERS =>
         {
           'C0' => 
@@ -1152,6 +1152,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2007' =>
       {
+        AGE => 'U26',
         CHAPTERS =>
         {
           'C0' => 
@@ -1179,6 +1180,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2008' =>
       {
+        AGE => 'U25',
         CHAPTERS =>
         {
           'C0' => 
@@ -1209,6 +1211,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2009' =>
       {
+        AGE => 'U26',
         CHAPTERS =>
         {
           'C0' => 
@@ -1239,6 +1242,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2010' =>
       {
+        AGE => 'U26',
         CHAPTERS =>
         {
           'C0' => 
@@ -1269,6 +1273,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2011' =>
       {
+        AGE => 'U26',
         CHAPTERS =>
         {
           'C0' => 
@@ -1299,6 +1304,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2012' =>
       {
+        AGE => 'U26',
         CHAPTERS =>
         {
           'C0' => 
@@ -1330,6 +1336,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2013' =>
       {
+        AGE => 'U26',
         CHAPTERS =>
         {
           'C0' => 
@@ -1360,6 +1367,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2014' =>
       {
+        AGE => 'U26',
         CHAPTERS =>
         {
           'C0' => 
@@ -1389,6 +1397,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2015' =>
       {
+        AGE => 'U26',
         CHAPTERS =>
         {
           'C0' => 
@@ -1427,6 +1436,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2016' =>
       {
+        AGE => 'U26',
         CHAPTERS =>
         {
           'C0' => 

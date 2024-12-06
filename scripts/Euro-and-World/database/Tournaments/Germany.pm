@@ -2530,7 +2530,7 @@ my %TOURNAMENTS_GERMANY =
   'German Team Trophy' => 
   {
     %GLOBAL,
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

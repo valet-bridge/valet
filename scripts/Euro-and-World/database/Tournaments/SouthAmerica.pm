@@ -25,7 +25,6 @@ my %MEETS_SOUTHAMERICA =
   'South American Team Championship' =>
   {
     %GLOBAL,
-    ORIGIN => 'International',
 
     EDITIONS => 
     {
@@ -202,6 +201,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
 (
   'South American Junior Teams',
   {
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -306,6 +306,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
 
   'South American Open Pairs',
   {
+    ORIGIN => 'International',
     FORM => 'Pairs',
     SCORING => 'MP',
     GENDER => 'Open',
@@ -387,6 +388,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
 
   'South American Open Teams',
   {
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -774,6 +776,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
 
   'South American Senior Teams',
   {
+    ORIGIN => 'International',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -855,6 +858,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
 
   'South American Women Teams',
   {
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',

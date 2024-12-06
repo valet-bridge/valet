@@ -2520,7 +2520,7 @@ my %TOURNAMENTS_FRIENDLY =
         MEET => 'Practice Match',
         MEET_TAG => '2007E',
         CLUB => "'t Onstein",
-        GENDER => 'Open',
+        GENDER => 'Women',
         AGE => 'Open',
 
         CHAPTERS =>

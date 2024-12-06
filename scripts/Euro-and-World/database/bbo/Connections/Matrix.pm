@@ -624,7 +624,10 @@ my %CITY_TO_CLUB =
     'Núcleo De Bridge Do Círculo', 'Sporting Lisbon'],
   Lodi => ['Fanfulla'],
   Lom => ['Øvre Ottadalen'],
-  London => ['TGR', 'Royal Air Force Club'],
+  London => [
+    'Royal Air Force Club',
+    'TGR', 
+    'Young Chelsea Bridge Club'],
   Luleburgaz => ['LÜKSAD'],
   Lyon => ['BC Brotteaux'],
   Makassar => ['Makassar Utama'],

@@ -2005,7 +2005,7 @@ my %TOURNAMENTS_BULGARIA =
 
   'Varna Titan Open Teams' =>
   {
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
