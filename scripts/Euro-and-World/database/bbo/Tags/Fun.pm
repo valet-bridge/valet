@@ -25,7 +25,6 @@ my @MULTI_WORDS =
   '3 troll og en bukk',
   '3..2..1..Meins!',
   '4 Hjerter',
-  '4 Jacks',
   '4 Nat',
   '4 Trèfles',
   '40 Årskrisa',
@@ -108,7 +107,6 @@ my @MULTI_WORDS =
   'Boye B Fan Club',
   "Boys'n' Girls",
   'Brian Is Beautiful',
-  'Bridge am Grün',
   'Bridge Fan',
   'Bridge Friends',
   'Bridge Lovers',
@@ -449,7 +447,6 @@ my @MULTI_WORDS =
   'Seven Eleven',
   'SHE-D',
   'Shining Pig',
-  'Shooting',
   'Shy Ant',
   'Siderkongen og kidz',
   'Silence BC',
@@ -467,7 +464,6 @@ my @MULTI_WORDS =
   "Soalitt`s disipler",
   'Space Mutants',
   'Spade Ace',
-  'Spar K',
   'Spiders from Mars',
   'Spiel mir das Lied',
   'Spjett Spjong',
@@ -588,7 +584,6 @@ my @MULTI_WORDS =
   'Yarralumla Yabbies',
   'YOI Returns',
   'Young Guns',
-  'Young Sharks',
   'Young Warriors',
   'Young Driver',
   'Young Swedes',
@@ -626,7 +621,6 @@ my %MULTI_TYPOS =
   BNMR => ['b n m r'],
   'Boro Boss' => ['boro-boss'],
   'Brian Is Beautiful' => ['brian is beatiful'],
-  'Bridge am Grün' => ['bridge am gruen'],
   'Butterfly from HK' => ['babochka s hk'],
 
   'Ca. et halvt tonn' => ['ca et halvt tonn'],
@@ -747,7 +741,7 @@ my @SINGLE_WORDS = qw(
    Bachelor Badger Badminton Bager Banana Bananasplit BarDeZi 
    Barracuda Barsss Baryton Beauty BeRe Bingbang Binkie Blackwood 
    Bling Blondie Blues Blueberry Blues Bolero Boogies Boomz 
-   BOVE Bricklayer Bridgekameratene Bridgeministeriet Brigada Brother 
+   BOVE Bricklayer Bridgeministeriet Brigada Brother 
    Brudarna Bubba Buddies Bulk Bulldozer Bumerangas Bunnies
 
    Cancan Cardtossers Cargo Cartoon Casuals Censored Challengers 
@@ -783,12 +777,12 @@ my @SINGLE_WORDS = qw(
    Maestroi Magi Magic Magister Maharaja Major MajorB Majorn Majority 
    Mars Marvelous Masdjävlar Mask Masters Matrix Maven Maxi Mercury 
    Meta Midas Milady Mirage Mismatch Mixarna Mjøskameratne MMMM 
-   Mongos Multivariant Mustang Måsen
+   Mongos Måsen
 
    Natural Naturalists Nemesis Neverclaim Nightingale Noctis 
 
    Octopussy Okay Olavsfestdagene Olrudbanden Olsenbanden Onyx 
-   Opal Opera Opps Optimus Orthodoxi Orthodox Osss Outsiders Overivrig 
+   Opal Opera Opps Optimus Osss Outsiders Overivrig 
 
    Pacers Pacific Paradigma Partizan Patriot Patron Pegasus Perestrojka 
    Pontiac Potlimit Potteplante Powerchicks Preempters Pretendents 
@@ -803,7 +797,7 @@ my @SINGLE_WORDS = qw(
    Silverfox Simple Sindbad Singapole Sirius Sjøsamen Skip Skitur 
    Slappfisker Slufsa Småveitjan Snapper Snipers Soho Sonata Spark 
    Spartans Specialist Spekkhogger Squeeze Stampede Star Starmen 
-   Statusquo Stayman Stifinnern Storeslemmen Strategen Streamline 
+   Statusquo Stayman Stifinnern Strategen Streamline 
    Stålfarfar Sunset Sunshine Syttisju Sømnakameratene Såpeopera
 
    Takeoff Tannlegene Taurus Tbone Tempo Tequendama Theme Tibetmunkene 

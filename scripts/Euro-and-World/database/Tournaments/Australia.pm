@@ -5565,12 +5565,20 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2006,
+            STAGE => 'Repechage',
+            major => 'SEGMENT',
+            DATE_START => '2006-02-24',
+            DATE_END => '2006-02-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2006-02-25',
             DATE_END => '2006-02-25'
           },
-          'C1' => 
+          'C2' => 
           {
             YEAR => 2006,
             STAGE => 'Final',
@@ -5585,7 +5593,23 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET => 'Gold Coast Congress',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Repechage',
+            major => 'SEGMENT',
+            DATE_START => '2007-02-24',
+            DATE_END => '2007-02-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-02-24',
+            DATE_END => '2007-02-24'
+          },
+          'C2' => 
           {
             YEAR => 2007,
             STAGE => 'Final',

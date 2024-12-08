@@ -1271,6 +1271,53 @@ my %TOURNAMENTS_WORLD =
           } 
         }
       },
+      '2014' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2014-08-14',
+            DATE_END => '2014-08-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-20',
+            DATE_END => '2014-08-20'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-21',
+            DATE_END => '2014-08-21'
+          },
+          'C3' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-22',
+            DATE_END => '2014-08-22'
+          },
+          'C4' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-22',
+            DATE_END => '2014-08-23'
+          } 
+        }
+      },
       '2016' =>
       {
         MEET => 'World Youth Championships',
@@ -1620,7 +1667,6 @@ my %TOURNAMENTS_WORLD =
 
   'Huayuan Cup' => 
   {
-    ORIGIN => 'International',
     CITY => 'Beijing',
     COUNTRY => 'China',
     FORM => 'Teams',
@@ -1632,6 +1678,7 @@ my %TOURNAMENTS_WORLD =
     {
       '2006' =>
       {
+        ORIGIN => 'Transnational',
         CHAPTERS =>
         {
           'C0' => 
@@ -1654,6 +1701,7 @@ my %TOURNAMENTS_WORLD =
       },
       '2011' =>
       {
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1667,6 +1715,7 @@ my %TOURNAMENTS_WORLD =
       },
       '2013' =>
       {
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1680,6 +1729,7 @@ my %TOURNAMENTS_WORLD =
       },
       '2015' =>
       {
+        ORIGIN => 'International',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -2700,7 +2750,7 @@ my %TOURNAMENTS_WORLD =
 
   'Tianjin Binhai Cup' => 
   {
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Men',
@@ -3780,7 +3830,7 @@ my %TOURNAMENTS_WORLD =
 
   'World Open Girl Teams' =>
   {
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Women',
@@ -3924,7 +3974,7 @@ my %TOURNAMENTS_WORLD =
 
   'World Open Junior Teams' =>
   {
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -4062,53 +4112,6 @@ my %TOURNAMENTS_WORLD =
             major => 'SEGMENT',
             DATE_START => '2013-08-09',
             DATE_END => '2013-08-09'
-          } 
-        }
-      },
-      '2014' =>
-      {
-        MEET => 'World Youth Championships',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2014,
-            MOVEMENT => 'Round-robin',
-            major => 'ROUND',
-            DATE_START => '2014-08-14',
-            DATE_END => '2014-08-19'
-          },
-          'C1' => 
-          {
-            YEAR => 2014,
-            STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            DATE_START => '2014-08-20',
-            DATE_END => '2014-08-20'
-          },
-          'C2' => 
-          {
-            YEAR => 2014,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2014-08-21',
-            DATE_END => '2014-08-21'
-          },
-          'C3' => 
-          {
-            YEAR => 2014,
-            STAGE => 'Playoff',
-            major => 'SEGMENT',
-            DATE_START => '2014-08-22',
-            DATE_END => '2014-08-22'
-          },
-          'C4' => 
-          {
-            YEAR => 2014,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2014-08-22',
-            DATE_END => '2014-08-23'
           } 
         }
       },
@@ -4470,7 +4473,7 @@ my %TOURNAMENTS_WORLD =
 
   'World Open Youngster Teams' =>
   {
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

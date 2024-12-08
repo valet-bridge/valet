@@ -13,6 +13,7 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  '4 Jacks',
   "'t Onstein",
   'Aachener BC',
   'ABB BK',
@@ -40,6 +41,7 @@ my @MULTI_WORDS =
   'ASD Reggio Emilia',
   'ASD Tennis Roma',
   'ASD Villa Fabbriche',
+  'Aso Pika',
   'Atakoy BSK',
   'Atakum Club',
   'Atletik Basket',
@@ -126,11 +128,13 @@ my @MULTI_WORDS =
   'Bornova BSK',
   'BP Batam',
   'Bridge Académie Toulouse',
+  'Bridge am Grün',
   'Bridge Bologna',
   'Bridge House',
   'Bridge Turó',
   'Bridge Tunas Cahaya',
   'Bridgeclub Oog',
+  'Bridgekameratene',
   'Brussels Bridge Club',
   'Bombay Gymkhana Club',
   'Bozdogan Club',
@@ -251,6 +255,7 @@ my @MULTI_WORDS =
   'Kocaeli BSSK',
   'Kocamustafapasa SK',
   'Konak Club',
+  'Konga BK',
   'Kota Club',
   'Koycegiz BSK',
   'Köln Lindenthal BC',
@@ -263,6 +268,7 @@ my @MULTI_WORDS =
   'Kusadasi BSK',
   'Laksamana BSP',
   'Lindesbergs BS',
+  'Lyngdal/Farsund',
   'Madras Gymkhana Club',
   'Maesa Palu',
   'Major Hosgoru',
@@ -282,6 +288,7 @@ my @MULTI_WORDS =
   'Moss BK',
   'Muðla GSK',
   'Muratpasa Club',
+  'Mustang Semarang',
   'Møre og Romsdal',
   'NDC Den Hommel',
   'Nachteulen Leverkusen',
@@ -311,6 +318,7 @@ my @MULTI_WORDS =
   'Ogndal BK',
   'One Eyed Jacks',
   'Orhangazi SK',
+  'Orthodoxi BC',
   'Otters Club',
   'Padova Bridge SS',
   'Pamukkale SK',
@@ -345,6 +353,7 @@ my @MULTI_WORDS =
   'Shaoguan BA',
   'Sharja Club',
   'Shemokh Club',
+  'Shooting Club',
   'Shou Chuang',
   'Singsås BK',
   'Siwo Persatuan Wartawan Indonesia',
@@ -357,12 +366,14 @@ my @MULTI_WORDS =
   'S:t Erik',
   'Sortland BK',
   'Söke BSK',
+  'Spar K',
   'SPG Club',
   'Sporting Lisbon',
   'SSD Angelini Bridge',
   'Star Bridge Roma',
   'Stavanger BK',
   'Steinkjer BK',
+  'Storeslemmen',
   'Storsjöbygdens BK',
   'Studentenes BK',
   'Suleymanpasa Club',
@@ -396,6 +407,7 @@ my @MULTI_WORDS =
   'Yarimca SK',
   'Yatagan SK',
   'Young Chelsea Bridge Club',
+  'Young Sharks',
   'Zhong Jian Club',
   'Zurich Enge',
   'Østfold og Follo',
@@ -454,13 +466,17 @@ my %MULTI_TYPOS =
   'BC Rennais' => ['b.c. rennais', 'b.c rennais'],
   'BC Universität Mannheim' => ['bc uni mannheim'],
   'BCN Almirall' => ['bcn-almirall', 'bcn - almirall'],
-  'Bengkalis PT BSP' => ['pt bsp'],
+  'Bengkalis PT BSP' => ['pt bsp', 'bengkalis pt'],
   'Bergen Akademiske' => ['bergen ak', 'bergen akad', 'bergen akadem',
     'bergen akademisk', 'bergen abk', 'begen ak', 'bergen akadem bk',
     'bergen ak bk'],
   Besiktas => ['besiktas jk'],
-  'Bhinneka Bridge Club' => ['bhinneka bridge clu',
-    'bhineka bridge club', 'bhinneke bridge clu'],
+  'Bhinneka Bridge Club' => [
+    'bhinneka bridge clu',
+    'bhineka bridge club', 
+    'bhinneke bridge clu',
+    'bhineka garuda',
+    'bhinneka garuda'],
   'Bielski Klub Brydżowy GOK cards' => ['gok-cards bielsk',
     'gok-ard bielsk'],
   'BK 83 Slagelse' => ['bridge 83'],
@@ -470,6 +486,7 @@ my %MULTI_TYPOS =
     'smile bk lavec', 'bk lavek smile', 'bk lavec', 'enjoy bk lavec'],
   'Bodrum BSK' => ['bodrum b.s.k.', 'bodrum bric kulubu', 'bodrum bc',
     'bodrum bric sk'],
+  'Bodø BK Lyn' => ['bodø lyn'],
   'Bogazici BSK' => ['bogaz ici bsk', 'boðazici bsk', 'boðazýçý bsk',
     'boðazýçý s.k.', 'bogazici bsk'],
   'Bombay Gymkhana Club' => ['bombay gym', 'bomay gym'],
@@ -479,6 +496,7 @@ my %MULTI_TYPOS =
   'Bozdogan Club' => ['bozdogan bld'],
   'Bridge Académie Toulouse' => ['b.academie toulouse', 
     'bridge academie toulouse', 'bridge académie', 'bridge academie'],
+  'Bridge am Grün' => ['bridge am gruen'],
   'Bridge House' => ['b.house', 'b. house'],
   'Bridge Turó' => ['b. turó', 'b.turó', 'b.turo'],
   'Bridgeclub Oog' => ['bc oog in al'],
@@ -571,7 +589,8 @@ my %MULTI_TYPOS =
   'Majör Boğaziçi' => ['major b', 'major bogazici',
     'majör boðaziçi', 'major bogazici bsk'],
   'Malatya BSK' => ['Malatya Briç SK', 'Malatya Bric SK',
-    'Malatya Brýç Spor', 'Malatya SK'],
+    'Malatya Brýç Spor', 'Malatya SK', 'Malatya Basket',
+    'Malatya BEM'],
   'Malatya Yildiz Dogu' => ['malatya yldz/dogu', 'malatya yildiz bsk'],
    Malatyagücü => ['malatya gucu', 'malatya gücü', '1932 malatya gucu'],
   'Manisa BSK' => ['manisa bbsk', 'manisa b.s.b'],
@@ -597,6 +616,7 @@ my %MULTI_TYPOS =
   'One Eyed Jacks' => ['one-eyed jacks', 'one.eyed jacks'],
   'Otters Club' => ["otters' club", "otter's club", "otter's"],
   'Pamukkale SK' => ['pamuk sk', 'pamukkale bsk', 'pamukkale bric'],
+  Polýsgücü => ['polýs gücü s', 'polýs gücü', 'polis gucu', 'polisgucu'],
   'Pudong Club' => ['pu dong club'],
   'Quantum BC' => ['bc quantum'],
   'Qi Zhong Club' => ['qi zhong'],
@@ -604,7 +624,7 @@ my %MULTI_TYPOS =
   'RBSC Polo Club' => ['polo club'],
   'Romana Bridge' => ['romana br'],
   'Rumah Sakit Umum Daerah Pekanbaru' => ['rsud pekanbaru'],
-  'Swara Kita BS' => ['Swara Kita B.S', 'swara kita b. sulut'],
+  'Samsun BK' => ['samsun bsk'],
   'Seferihisar Municipality' => ['seferihisar bld-ege',
     'seferihisar bld', 'Narlidere Bld', 'Narlýdere Belediye'],
   'Shou Chuang' => ['shou chuang club'],
@@ -617,6 +637,7 @@ my %MULTI_TYPOS =
   'Star Bridge Roma' => ['star br. roma'],
   'Studentenes BK' => ['studentene bk'],
   'Suleymanpasa Club' => ['Suleymanpasa Bld SP'],
+  'Swara Kita BS' => ['Swara Kita B.S', 'swara kita b. sulut'],
   "'t Onstein" => ["bc't onsten", 'at onstein', 't onstein',
     "bc 't onstein"],
   'Taskopru Club' => ['Taskopru Hýz'],
@@ -652,15 +673,15 @@ my @SINGLE_WORDS = qw(
   EIBC Fanfulla Fenerbahce
   Galata Galatasaray 
   Hoppklubbene Hosgoru 
-  Jeofizik JZD
-  Karlsruher Kløverknekt 
+  Jeofizik Juniorklubben JZD
+  Karlsruher Kløverknekt KPPM
   Lavec LÜKSAD
   Locomotiva
   Malatyagücü Matunga Mo Mragowia
   NBK
-  Pelatnas
+  Pelatnas Polýsgücü
   Qizhong
-  Sivasspor Solli Spezia Spojnia
+  Sitespor Sivasspor Solli Spezia Spojnia
   TGR Tonyaspor Trifolium
   Unia Uppsalabridgen
   Västeråsbridgen Vestri
@@ -738,6 +759,7 @@ my %SINGLE_TYPOS =
   'Nuovo Bridge Insieme' => ['nbi'],
   'OBK Kløverknekt' => ['kløverknekt'],
   'Odisha Secretariat Recreation Club' => ['osrc'],
+  'Orthodoxi BC' => ['orthodox', 'orthodoxi'],
   'Otters Club' => ['otters'],
   'Pamukkale SK' => ['pamukspor'],
   'Porto Club' => ['cbp'],
@@ -745,11 +767,12 @@ my %SINGLE_TYPOS =
   'Royal Air Force Club' => ['rac'],
   'Ruch AZS' => ['ruch'],
   'Sekolah Bridge Tonaas Wangko' => ['sbtw'],
+  'Shooting Club' => ['shooting'],
   'Sirinyer Sports' => ['sirinyerspor'],
   'Smedstadens BK' => ['smedstadens'],
   'SPG Club' => ['spg'],
   Spojnia => ['Spójnia'],
-  'Studentenes BK' => ['studentenes'],
+  'Studentenes BK' => ['studentenes', 'studentene'],
   "'t Onstein" => ['onstein'],
   'Tennis Club Parioli' => ['tcp', 'rm'],
   TGR => ['tgrs'],

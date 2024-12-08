@@ -199,7 +199,7 @@ my %MEETS_ASIA =
   {
     # 2013: https://tournament.aseanbridge.com/
     %GLOBAL,
-    ORIGIN => 'Interclub',
+    ORIGIN => 'Transnational',
 
     EDITIONS =>
     {
@@ -301,7 +301,7 @@ my %MEETS_ASIA =
   'Asia Cup' =>
   {
     %GLOBAL,
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
 
     EDITIONS =>
     {
@@ -1904,7 +1904,7 @@ my %TOURNAMENTS_ASIA =
   'Asian University Championship' =>
   {
     %GLOBAL,
-    ORIGIN => 'International',
+    ORIGIN => 'University',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

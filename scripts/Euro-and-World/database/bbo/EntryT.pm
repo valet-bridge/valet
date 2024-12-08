@@ -711,6 +711,19 @@ sub format
 
     warn $self->bbono() . ": $field ($count)";
   }
+
+  # It can happen that both teams are given as e.g. Women, and this
+  # can be useful to determine the tournament (there may be two
+  # simultaneous ones, one Open and one Women).
+  for my $field (qw(GENDER AGE))
+  {
+    if (exists $self->{TEAM1}{$field} &&
+        exists $self->{TEAM2}{$field} &&
+        $self->{TEAM1}{$field} eq $self->{TEAM2}{$field})
+    {
+      $self->{HINT}{$field} = $self->{TEAM1}{$field};
+    }
+  }
 }
 
 
@@ -976,24 +989,36 @@ sub fix_counters
 
 
 my %ORIGIN_COMPATIBILITY = (
-  Intercity => {CITY => 1, CLUB => 1},
-  Interclub => {
+  Intercity => {
     CITY => 1, 
-    CLUB => 1, 
-    COUNTRY => 1,
+    CLUB => 1,
+    REGION => 1},
+  Interclub => {
     LOCALITY => 1,
-    ORGANIZATION => 1,
+    CLUB => 1, 
+    UNIVERSITY => 1,
+    CITY => 1, 
     REGION => 1, 
+    COUNTRY => 1,
+    ORGANIZATION => 1,
     SPONSOR => 1},
   International => {
     COUNTRY => 1},
-  Interprovince => {CITY => 1, REGION => 1},
-  Interregional => {CITY => 1, REGION => 1},
-  Interstate => {CITY => 1, REGION => 1},
-  Interuniversity => {CITY => 1, UNIVERSITY => 1},
-  University => {
+  Interprovince => {
     CITY => 1, 
+    REGION => 1},
+  Interregional => {
+    CITY => 1, 
+    REGION => 1},
+  Interstate => {
+    CITY => 1, 
+    REGION => 1},
+  University => {
+    LOCALITY => 1,
+    CITY => 1, 
+    CLUB => 1,
     COUNTRY => 1,
+    REGION => 1,
     UNIVERSITY => 1},
 );
 
@@ -1010,33 +1035,39 @@ sub check_fields
     {
       for my $field (sort keys %{$self->{$team}})
       {
-        if (! exists $ok_hash->{$field})
+        next if exists $ok_hash->{$field};
+        next if $field eq 'AGE' || $field eq 'GENDER';
+
+        my $tname = $header->{TOURNAMENT_NAME} // '';
+        if ($tname &&
+          OGAcorr::origin_fixable($tname, $self->bbono()))
         {
-          if (exists $self->{HEADER}{TNAME} &&
-            OGAcorr::origin_fixable($self->{HEADER}{TNAME}, $self->bbono()))
-          {
-            # Definitely OK.
-          }
-          elsif (! exists $self->{HEADER}{TNAME} &&
-            OGAcorr::origin_number_fixable($self->bbono()))
-          {
-            # Probably OK.
-          }
-          else
-          {
-            warn $self->{BBONO} . 
-              ": $header->{TOURNAMENT_NAME}, $field does not match $origin";
-          }
+          # Definitely OK.
+        }
+        elsif (! $tname && OGAcorr::origin_number_fixable($self->bbono()))
+        {
+          # Probably OK.
+        }
+        elsif ($tname && 
+          $field eq 'ORGANIZATION' && 
+          OGAcorr::origin_org_ok($tname))
+        {
+          # Camrose has an extra host team, for example.
+        }
+        else
+        {
+          warn $self->{BBONO} . 
+            ": $header->{TOURNAMENT_NAME}, $field does not match $origin";
         }
       }
     }
   }
 
-  if (exists $header->{HEADER}{GENDER})
+  if (exists $header->{GENDER})
   {
   }
 
-  if (exists $header->{HEADER}{AGE})
+  if (exists $header->{AGE})
   {
   }
 }

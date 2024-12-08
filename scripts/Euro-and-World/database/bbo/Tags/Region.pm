@@ -91,7 +91,7 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  Aceh => ['di aceh'],
+  Aceh => ['di aceh', 'n a d'],
   'Bekasi Regency' => ['kab.bekasi', 'kab. bekasi'],
   'Central Java' => ['jawa tengah', 'jateng'],
   'Bogor Regency' => ['kab bogor', 'kab.bogor pa'],
@@ -171,6 +171,7 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  Aceh => ['nad'],
   'Aegean Sea' => ['aegean'],
   'Australian Central Territory' => ['act'],
   'Bekasi Regency' => ['bekasi'],

@@ -1929,7 +1929,7 @@ my %TOURNAMENTS_BULGARIA =
 
   'Varna Intercity Teams' =>
   {
-    ORIGIN => 'Intercity',
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

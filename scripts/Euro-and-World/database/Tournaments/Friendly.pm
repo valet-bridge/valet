@@ -747,6 +747,38 @@ my %MEETS_FRIENDLY =
 
 my %TOURNAMENTS_FRIENDLY =
 (
+  'Argentina Friendly' => 
+  {
+    ORGANIZATION => 'ABA',
+    COUNTRY => 'Argentina',
+    ORIGIN => 'National',
+    ZONE => 'South America',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2012' =>
+      {
+        MEET => 'Friendly Match',
+        MEET_TAG => '2011A',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'SEGMENT',
+            DATE_START => '2011-04-06',
+            DATE_END => '2011-04-07'
+          } 
+        }
+      },
+    }
+  },
+
   'Australia Challenge' => 
   {
     ORGANIZATION => 'AuBF',
@@ -850,7 +882,7 @@ my %TOURNAMENTS_FRIENDLY =
   {
     ORGANIZATION => 'USBF',
     COUNTRY => 'USA',
-    ORIGIN => 'Interuniversity',
+    ORIGIN => 'University',
     ZONE => 'North America',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -1891,7 +1923,6 @@ my %TOURNAMENTS_FRIENDLY =
   {
     ORGANIZATION => 'FIGB',
     COUNTRY => 'Italy',
-    ORIGIN => 'International',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -1900,6 +1931,7 @@ my %TOURNAMENTS_FRIENDLY =
     {
       '2014A' =>
       {
+        ORIGIN => 'International',
         MEET => 'Friendly Match',
         MEET_TAG => '2014C',
         GENDER => 'Open',
@@ -1918,6 +1950,7 @@ my %TOURNAMENTS_FRIENDLY =
       },
       '2014B' =>
       {
+        ORIGIN => 'International',
         MEET => 'Friendly Match',
         MEET_TAG => '2014G',
         GENDER => 'Open',
@@ -1936,6 +1969,7 @@ my %TOURNAMENTS_FRIENDLY =
       },
       '2015A' =>
       {
+        ORIGIN => 'Transnational',
         MEET => 'Friendly Match',
         MEET_TAG => '2015A',
         GENDER => 'Open',
@@ -2068,7 +2102,7 @@ my %TOURNAMENTS_FRIENDLY =
       '2005C' =>
       {
         MEET => 'Friendly Match',
-        GENDER => 'Open',
+        GENDER => 'Women',
         AGE => 'Open',
 
         CHAPTERS =>
@@ -2086,7 +2120,25 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Friendly Match',
         MEET_TAG => '2006C',
-        GENDER => 'Open',
+        GENDER => 'Men',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2006,
+            major => 'SEGMENT',
+            DATE_START => '2006-05-14',
+            DATE_END => '2006-05-14'
+          } 
+        }
+      },
+      '2006B' =>
+      {
+        MEET => 'Friendly Match',
+        MEET_TAG => '2006C',
+        GENDER => 'Women',
         AGE => 'Open',
 
         CHAPTERS =>
@@ -2106,7 +2158,7 @@ my %TOURNAMENTS_FRIENDLY =
         MEET_TAG => '2007B',
         CLUB => "'t Onstein",
         GENDER => 'Open',
-        AGE => 'Open',
+        AGE => 'U21',
 
         CHAPTERS =>
         {

@@ -779,7 +779,7 @@ my %TOURNAMENTS_UK =
 
   'Commonwealth Nations Bridge Championships' => 
   {
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -1729,7 +1729,7 @@ my %TOURNAMENTS_UK =
 
   'Glasgow Transnational Open Teams' => 
   {
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     ZONE => 'Europe',
     COUNTRY => 'Scotland',
     CITY => 'Glasgow',
@@ -2175,7 +2175,7 @@ my %TOURNAMENTS_UK =
   'Lederer Memorial Trophy' => 
   {
     # https://lederertrophy.com/previous-winners/
-    ORIGIN => 'International',
+    ORIGIN => 'Invitational',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',

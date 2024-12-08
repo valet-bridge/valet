@@ -725,7 +725,7 @@ my @SINGLE_WORDS = qw(
   Lindstedt Llopart Locatelli Lockwood Longinotti 
   Lorentz Lorenzini Loreto Lormant Louchart Lovrecz Lowe Lubinski 
   Lucchesi Lucignano Ludewig Lund Luppi Lusk Lusky Lüßmann Lynch 
-  Lyngdal Lyngen
+  Lyngen
 
   Maas MacDonald Macedo Machado Madsen Magee Maggio Maglietta 
   Mahaffey Maia Maiolani Malarme Maksymetz Malaczynski Malani 

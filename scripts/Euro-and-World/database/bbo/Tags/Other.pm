@@ -29,7 +29,6 @@ my @MULTI_WORDS =
   "Archie's",
   "Asha's 4",
   'Asketické samice',
-  'Aso Pika',
   'AV Maria',
   'Avesta',
   'Aylan Kurdý',
@@ -46,7 +45,6 @@ my @MULTI_WORDS =
   'Besli Major',
   'Beto BO',
   'Bez Nazwy',
-  'Bhinneka Garuda',
   'Bimal Sicca',
   'BMW J',
   'Brans BS',
@@ -139,8 +137,6 @@ my @MULTI_WORDS =
 
   'Idea Bridge Torino',
   'IGB sports.com',
-  'Institute of Chemical Technology',
-  'Isen Mulang',
 
   'Jai Ganesh',
   'Jan Wellem',
@@ -327,7 +323,6 @@ my %MULTI_TYPOS =
   Ayan => ["ayan's"],
 
   'Beto BO' => ['beto b o'],
-  'Bhinneka Garuda' => ['bhineka garuda'],
   'Bridgerama Milan' => ['bridgerama mi'],
 
   "Chairman's Choice" => ["chairman's team"],
@@ -354,8 +349,6 @@ my %MULTI_TYPOS =
     'hungar olimpics', 'hungar olimpic'],
 
   'Idea Bridge Torino' => ['gs idea br. to', 'idea bridge'],
-  'Institute of Chemical Technology' => ['inst.of chem.tech.', 
-    'inst.of chem.techn.'],
 
   'Jan Wellem' => ['jan wel'],
   'Jian Hua Club' => ['jian hua'],
@@ -377,10 +370,7 @@ my %MULTI_TYPOS =
   'Multi Gen Indonesia' => ['multi gen ina'],
   'Møllers Team' => ['møllers t'],
 
-  NAD => ['n a d'],
-
   "Pal's Four" => ["pal's"],
-  Polýsgücü => ['polýs gücü s', 'polýs gücü', 'polis gucu', 'polisgucu'],
   "Pradeep's Four" => ["pradeep's 4", "Pradeep's Team"],
   "President's Team" => ["president's"],
   "Priya's Four" => ["priya's iv", "priya's4"],
@@ -442,13 +432,13 @@ my @SINGLE_WORDS = qw(
    Isrmany ITB Itnoraunz ITS IVAR Iza
 
    JanTC JAPCAN JAS JASS Jassica Javel Jaya Jecization Jinjing 
-   Jirin Jiujiu Joter Juanval Juls Juniorklubben Juste Justplay 
+   Jirin Jiujiu Joter Juanval Juls Juste Justplay 
    Jutek JuuTools
 
    Kaardivägi Kagama Kalbar Kalca Kalkarna Kaltim Kamyk Karaarslan 
    Kark Kasty Kasuang Katipunan KBA KBC Kebiya Kenlong Kerasus Kibe 
    Kjelskos Klasik Klio KMC Knösel Kodin Koiraperhe Kokoelma Kolbasti 
-   Komleposs Konga Kordam Korsikalý Kortai Koukouselis KPPM KrASK 
+   Komleposs Kordam Korsikalý Kortai Koukouselis KrASK 
    Kratos Krem Ksenia KSOS Kultur Kvazar Kwiecisty
 
    Lahjattomat LAKT Laleler Lancia Langy Laplas Lataka Lateria 
@@ -461,7 +451,7 @@ my @SINGLE_WORDS = qw(
    Monaconf Morot Mostingan Movember Mölnlycke MPEC MRSMC Muumio 
    Mýna Møremix 
 
-   NAD Nadide Narbisk Narre Necos Neduk Nessuno Nikotiimi 
+   Nadide Narbisk Narre Necos Neduk Nessuno Nikotiimi 
    Nislije NMRT NoNed Noralia Norsu NOS Noto NTiosagutta Nula
 
    Obezit OEI Ognisty Oksijen Olimp OMC Omega Omelas Onnela Onu 
@@ -471,7 +461,7 @@ my @SINGLE_WORDS = qw(
 
    Pagonia Palukas Panteros Pasam Pasanci Passé Patagonia Paulistas 
    PBL PCBA PDC Pennant Perjuangan Piast Piryoli Pjäxa PKM Pleschi 
-   Pleyada Plia PMC PMS Pojat Polirish Polus Polýsgücü Pompapompa 
+   Pleyada Plia PMC PMS Pojat Polirish Polus Pompapompa 
    Poss Prapar Prasetya Prijatelj Prim Primabridge Prosan Proto Ptacol 
    PTT Pude Pyon Pyton PZIM 
 
@@ -484,11 +474,11 @@ my @SINGLE_WORDS = qw(
    Sabari SAGG Salost Salvo Sansouci SANY Sargam SaTu Saty Sbamby 
    Sbanda SBC Scapros Schmuckles Scot SDK Senaattorit SFG SGG Shan 
    Shaoshen Sherdils SHHG Sigdonnemann Sigma Sihai Silbersee 
-   Simpleksas SISU Sitespor Sivves Siyabend Skalman Skaronga SKB 
+   Simpleksas SISU Sivves Siyabend Skalman Skaronga SKB 
    SKBS Skotii SKR Þlem Slostria SMBC SMJ SMK SNAP SNP Soba Sober 
    Sobers Sogn Solo Sonchel Soumitra Spamirs Spandan Spartak Spektr 
    Spin Spring Srimapuna Srykeir SSBC SSSR Stafani Stagge Starsbridge 
-   STB Steinars Steinlager Strata Studentene StZ St?vel Sucharek 
+   STB Steinars Steinlager Strata StZ St?vel Sucharek 
    SuHuQiaoYou SweDanes SweNor Swest Syabas SYL Syly SYT SZPAK 
    SZPAR Sør 
 

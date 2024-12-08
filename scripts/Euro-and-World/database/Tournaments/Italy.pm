@@ -22,7 +22,7 @@ my %MEETS_ITALY =
   'Festival della Matematica' =>
   {
     %GLOBAL,
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
 
     EDITIONS =>
     {

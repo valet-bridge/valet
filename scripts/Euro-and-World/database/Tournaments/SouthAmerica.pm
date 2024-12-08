@@ -209,34 +209,9 @@ my %TOURNAMENTS_SOUTHAMERICA =
 
     EDITIONS =>
     {
-      '2006A' =>
+      '2006' =>
       {
         MEET => 'South American Team Championship',
-        MEET_TAG => '2006',
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2006,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2006-05-01',
-            DATE_END => '2006-05-01'
-          },
-          'C1' => 
-          {
-            YEAR => 2006,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2006-05-02',
-            DATE_END => '2006-05-02'
-          },
-        }
-      },
-      '2006B' =>
-      {
-        MEET => 'South American Team Championship',
-        MEET_TAG => '2006',
         CHAPTERS =>
         {
           'C0' => 
@@ -440,6 +415,29 @@ my %TOURNAMENTS_SOUTHAMERICA =
             DATE_START => '2005-06-12',
             DATE_END => '2005-06-12'
           } 
+        }
+      },
+      '2006' =>
+      {
+        MEET => 'South American Team Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2006-05-01',
+            DATE_END => '2006-05-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2006-05-02',
+            DATE_END => '2006-05-02'
+          },
         }
       },
       '2007' =>
@@ -788,7 +786,6 @@ my %TOURNAMENTS_SOUTHAMERICA =
       {
         # http://www.confsudbridge.org/Torneos/Tor_0003.aspx
         %GLOBAL,
-        ORIGIN => 'International',
         CITY => 'Rio de Janeiro',
         COUNTRY => 'Brazil',
 

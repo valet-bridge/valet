@@ -10,9 +10,6 @@ So I suppose we could mark this in $entryT->{HINTS}
 {AGE} and {GENDER}
 
 
-Origin:
-If not International, should not consist of countries.
-
 Add an 'ignore' to Tournament, so ignore => 'GROUP'.
 That way there should be the right number of fields.
 
@@ -56,8 +53,6 @@ When matched up
 - #theoretical boards consistent within chapter? (16, 10, ...)
 - Multiple attempts at same segment of a match
   23000, 23004, 23005 (candidates for skip files)
-- If International, should have only countries
-- If Interclub, should have only clubs
 - If only countries, should be International
 
 Cornell is not Cornell University, 27126

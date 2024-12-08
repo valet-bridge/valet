@@ -15,7 +15,7 @@ my %MEETS_BALKAN =
 (
   'Balkan Championship' =>
   {
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     ZONE => 'Balkan',
 
     EDITIONS => 
@@ -144,7 +144,7 @@ my %MEETS_BALKAN =
 
   'Balkan Friendship Festival' =>
   {
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     ZONE => 'Balkan',
 
     EDITIONS => 
@@ -293,7 +293,7 @@ my %TOURNAMENTS_BALKAN =
 
   'Balkan Intercity Cup' => 
   {
-    ORIGIN => 'Intercity',
+    ORIGIN => 'National',
     ZONE => 'Balkan',
     FORM => 'Teams',
     SCORING => 'IMP',

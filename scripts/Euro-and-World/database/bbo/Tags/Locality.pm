@@ -14,6 +14,7 @@ our @EXPORT = qw(set_hashes);
 my @MULTI_WORDS =
 (
   'Fatih Karagümrük',
+  'Isen Mulang',
   'Poiana Brasov',
   'Saint Honoré'
 );

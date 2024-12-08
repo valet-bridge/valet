@@ -874,7 +874,7 @@ my %TOURNAMENTS_INDONESIA =
 
   'Indonesian Inter-Club Championship' =>
   {
-    ORIGIN => 'Interclub',
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3333,16 +3333,19 @@ my %TOURNAMENTS_INDONESIA =
 
   'Pahlawan Cup' => 
   {
+    %GLOBAL,
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'U31',
+    AGE => 'U28',
 
     EDITIONS =>
     {
       '2014' =>
       {
-        MEET => 'Indonesian University Championship',
+        # Happened during Indonesian University Championship,
+        # but does not look like a university tournament.
         CHAPTERS =>
         {
           'SINGLE' => 

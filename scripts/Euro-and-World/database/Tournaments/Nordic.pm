@@ -480,7 +480,7 @@ my %TOURNAMENTS_NORDIC =
   'Nordic Security Pro-Am Pairs',
   {
     %GLOBAL,
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

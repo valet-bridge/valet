@@ -27,6 +27,7 @@ my @MULTI_WORDS =
   'Brawijaya University',
   'Budapest University',
   'Chang Gung University',
+  'Charles University',
   'Chien Kuo Senior High School',
   'China Central University of Business',
   'Chung Hua University',
@@ -40,6 +41,7 @@ my @MULTI_WORDS =
   'Ege University',
   'Fu Jen Catholic University',
   'Gunadarma University',
+  'Høgskolen i Sør-Trøndelag',
   'Institut Teknologi Bandung',
   'ITS IKOMA',
   'ITÜ Vakfi',
@@ -152,6 +154,8 @@ my %MULTI_TYPOS =
   'National Taiwan University' => ['abc_e', 'btu-p', 'btu-u', 
     'btu-y', 'ntu-pac'],
   'Osmangazi University' => ['osmangazi uni'],
+  'Sekolah Tinggi Ilmu Statistik' => [
+    'stis multivariant'],
   'Selçuk University' =>['selçuk uni'],
   'Sukomoro Senior High School' => ['sman 1 sukomoro'],
   'Surabaya Senior High School' => ['shs surabaya'],
@@ -174,15 +178,18 @@ my %MULTI_TYPOS =
   'University of Jember' => ['univ jember'],
   'University of North Carolina' => ['u n. carolina'],
   'University of Rijeka' => ['uni of rijeka'],
+  'University of Tanjungpura' => ['untan', 'tanjungpura university'],
   'University of Warsaw' => ['uni warsaw', 'uw tg'],
   'University of Wroclaw' => ['uni wroclaw'],
-  'University of Tanjungpura' => ['untan', 'tanjungpura university'],
   'Universität Potsdam' => ['uni potsdam'],
   'Warsaw University of Technology' => ['warsaw ut'],
   'Wroclaw University of Science and Technology' => 
     ['polit wroclaw', 'polite wroclaw', 'polit wr', 'politechnika wr', 
     'azs pw', 'politehnica cluj', 'poli cluj', 'poli', 'azs invit'],
-  'Yildiz Technical University' => ['yildiz sp.']
+  'Yildiz Technical University' => ['yildiz sp.'],
+  'Zagreb University' => [
+    'inst.of chem.tech.',
+    'inst.of chem.techn.'],
 );
 
 my @SINGLE_WORDS = qw(
@@ -204,6 +211,7 @@ my %SINGLE_TYPOS =
   'École Polytechnique' => ['polytech'],
   'Fu Jen Catholic University' => ['fju'],
   'Gunadarma University' => ['gunadarma'],
+  'Høgskolen i Sør-Trøndelag' => ['hist'],
   'Institut Teknologi Bandung' => ['itb'],
   'Koc University' => ['koc'],
   'Makassar University' => ['mu'],
@@ -226,7 +234,7 @@ my %SINGLE_TYPOS =
   'Soochow University' => ['scu'],
   'Stanford University' => ['stanford'],
   'Sekolah Tinggi Ilmu Statistik' => ['stis'],
-  'Tarsus American College' => ['tarsus'],
+  'Tarsus American College' => ['tac', 'tarsus'],
   'Brawijaya University' => ['ub', 'brawijaya'],
   'Universitas Gadjah Mada' => ['ugm'],
   'Universitas Muhammadiyah Gresik' => ['unmuh'],

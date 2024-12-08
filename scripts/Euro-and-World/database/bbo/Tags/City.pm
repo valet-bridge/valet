@@ -59,6 +59,7 @@ my @MULTI_WORDS =
   'New York City',
   'Nové Město',
   'Novi Sad',
+  'Palangka Raya',
   'Piatra Neamt',
   'Piggs Peak',
   'Reggio Calabria',
@@ -140,8 +141,8 @@ my @SINGLE_WORDS = qw(
   Aabenraa Aachen Aalborg Adalar Adana Adapazan Adelaide Agresar 
   Ahmedabad Airmadidi Akhisar Aladag Alexandria Allahabad Altrincham 
   Alytus Ambon Amman Amsterdam Ankara Annecy Antalya Antony Antwerpen 
-  Aral Arendal Asenovec Asenovgrad Asminderød Assis Atakum Athens Atlanta 
-  Auckland Augsburg Ayacucho Aydin Ayvalik
+  Aqaba Aral Arendal Asenovec Asenovgrad Asminderød Assis Atakum 
+  Athens Atlanta Auckland Augsburg Ayacucho Aydin Ayvalik
 
   Baghdad Balchik Balaton Balatonföldvár Balikesir Balikpapan Ballerup 
   Ballymena Bamberg Bandung Bangalore Bangkok Banjarmasin Bansi Barcelona 
@@ -161,7 +162,7 @@ my @SINGLE_WORDS = qw(
 
   Dalian Darmstadt Datca Deauville Debrecen Delft Delhi Denizli Depok 
   Derpt Deva Diyarbakir Dimitrovgrad Dobrich Doha Dombivli Dongguan 
-  Drammen Dubrovnik Durban Düsseldorf
+  Drammen Dubai Dubrovnik Durban Düsseldorf
 
   Eastbourne Edinburgh Edirne Elblag Enschede Erzurum Esbjerg 
   Eskisehir Essen Estoril Evanston
@@ -174,8 +175,8 @@ my @SINGLE_WORDS = qw(
   Grogol Groningen Guangdong Guangzhou Guayaquil Gudbrandsdal Gyor
 
   Haderslev Hamar Hamburg Hammamet Hangzhou Hanko Hannover Harplinge 
-  Harstad Hatay Havirov Heledia Helsinki Hendek Herning Hillerød 
-  Hobro Hornbæk Hsinchu Huldretråkket Hyderabad
+  Harstad Hatay Havirov Heikendorf Heledia Helsinki Hendek Herning 
+  Hillerød Hobro Hornbæk Hsinchu Huldretråkket Hyderabad
 
   Iasi Indore Iskenderun Isparta Istanbul Ithaca Izmir
 
@@ -186,9 +187,10 @@ my @SINGLE_WORDS = qw(
   Kadirli Kalisz Kalundborg Kalyani Kanpur Kaohsiung Karimun Karlovo 
   Karlsruhe Karsiyaka Kashi Kassel Kastamonu Katowice Kayseri Kediri 
   Kedungwaru Keelung Kesten Ketsch Kiel Kielce Kiev Kinali Kirkeby 
-  Kirklarelý Kirsehir Klabat Kocaeli Kolbotn Kolkata Konya Kornik 
-  Kosice Kota Koycegiz Köln Krakow Kraljevica Kristiansand Kudus 
-  Kunshan Kuopio Kusadasi Kütahya Kverndalen Kyustendil Køge Kølabånn
+  Kirklarelý Kirsehir Klabat Kocaeli Kolbotn Kolkata Konga Konya 
+  Kornik Kosice Kota Koycegiz Köln Krakow Kraljevica Kristiansand 
+  Kudus Kunshan Kuopio Kusadasi Kütahya Kverndalen Kyustendil Køge 
+  Kølabånn
 
   Langkat Lanzhou Lappeenranta Larnaca Lecco Leiden Leksand Lerum 
   Leszno Leuven Leverkusen Lhokseumawe Liepaja Lille Lima Lincoln 

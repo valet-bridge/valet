@@ -27,7 +27,7 @@ my %MULTI_TYPOS =
     'inter provice', 'inter-province', 'inter-provinces'],
   Interregional => ['inter-regional', 'inter-region'],
   Interstate => ['inter-state', 'inter state', 'inter -state'],
-  Interuniversity => ['inter-universities'],
+  University => ['inter-universities'],
   Invitational => ['invitasi terbatas', 'the bridge club invitational t'],
   'Pro-Am' => ['play against the stars', 'play with the champs',
     'pro_am', 'pro am']
@@ -42,7 +42,6 @@ my @SINGLE_WORDS = qw(
   Interprovince
   Interregional
   Interstate
-  Interuniversity
   Invitational
   National
   Regional

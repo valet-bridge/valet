@@ -1713,7 +1713,7 @@ my %TOURNAMENTS_POLAND =
   'Bermuda Triangle Cup' =>
   {
     %GLOBAL,
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

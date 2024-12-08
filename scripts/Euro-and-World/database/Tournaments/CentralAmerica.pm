@@ -122,7 +122,7 @@ my %TOURNAMENTS_CENTRALAMERICA =
     # https://www.bridgewebs.com/cgi-bin/bwoq/bw.cgi?club=cacbf&pid=display_page31
 
     %GLOBAL,
-    ORIGIN => 'International',
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
