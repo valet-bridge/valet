@@ -3587,12 +3587,18 @@ my %TOURNAMENTS_AUSTRALIA =
         MEET_TAG => '2006B',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2006,
-            major => 'STAGE',
-            minor => 'ROUND',
+            major => 'ROUND',
             DATE_START => '2006-04-20',
+            DATE_END => '2006-04-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            major => 'ROUND',
+            DATE_START => '2006-04-23',
             DATE_END => '2006-04-24'
           } 
         }

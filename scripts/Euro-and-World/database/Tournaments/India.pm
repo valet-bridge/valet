@@ -4211,7 +4211,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2010,
             STAGE => 'Final',
-            MOVEMENT =>' Round-robin',
+            MOVEMENT => 'Round-robin',
             major => 'SEGMENT',
             DATE_START => '2010-01-30',
             DATE_END => '2010-01-31'
@@ -4227,6 +4227,7 @@ my %TOURNAMENTS_INDIA =
             YEAR => 2012,
             STAGE => 'Final',
             major => 'SEGMENT',
+            MOVEMENT => 'Round-robin',
             DATE_START => '2012-01-28',
             DATE_END => '2012-01-29'
           } 

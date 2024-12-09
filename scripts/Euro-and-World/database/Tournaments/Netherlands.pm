@@ -749,10 +749,19 @@ my %TOURNAMENTS_NETHERLANDS =
         MEET => 'The Hague Bridge Experience',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2013,
+            MOVEMENT => 'Round-robin',
             DATE_START => '2013-08-29',
+            DATE_END => '2013-08-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-08-30',
             DATE_END => '2013-08-30'
           } 
         }
@@ -819,6 +828,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2007,
+            STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2007-09-11',
             DATE_END => '2007-09-11'
@@ -1048,6 +1058,7 @@ my %TOURNAMENTS_NETHERLANDS =
           'SINGLE' => 
           {
             YEAR => 2009,
+            STAGE => 'Final',
             DATE_START => '2009-08-07',
             DATE_END => '2009-08-08'
           } 

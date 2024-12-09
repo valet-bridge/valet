@@ -762,7 +762,8 @@ my %TOURNAMENTS_GREECE =
           'C1' => 
           {
             YEAR => 2014,
-            major => 'SEGMENT',
+            major => 'SESSION',
+            minor => 'SEGMENT',
             DATE_START => '2014-02-21',
             DATE_END => '2014-02-23'
           },

@@ -303,17 +303,18 @@ sub get_header_fields
   $self->cumulate_fields($t_edition, 
     {}, { MEET_TAG => 1, CHAPTERS => 1 }, $errstr, $cumul);
 
-  return unless exists $t_edition->{MEET};
+  if (exists $t_edition->{MEET})
+  {
+    my $meet = $t_edition->{MEET};
+    my $meet_tag = $t_edition->{MEET_TAG} // $edition;
+    my $m_header = $self->{MEET}{$meet};
+    my $m_edition = $m_header->{EDITIONS}{$meet_tag};
 
-  my $meet = $t_edition->{MEET};
-  my $meet_tag = $t_edition->{MEET_TAG} // $edition;
-  my $m_header = $self->{MEET}{$meet};
-  my $m_edition = $m_header->{EDITIONS}{$meet_tag};
-
-  $self->cumulate_fields($m_header, 
-    {}, { EDITIONS => 1 }, $errstr, $cumul);
-  $self->cumulate_fields($m_edition, 
-    { YEAR => 1 }, {}, $errstr, $cumul);
+    $self->cumulate_fields($m_header, 
+      {}, { EDITIONS => 1 }, $errstr, $cumul);
+    $self->cumulate_fields($m_edition, 
+      { YEAR => 1 }, {}, $errstr, $cumul);
+  }
 }
 
 
@@ -336,17 +337,18 @@ sub get_all_fields
   $self->cumulate_fields($t_edition, 
     {}, { MEET_TAG => 1, CHAPTERS => 1 }, $errstr, $cumul);
 
-  return unless exists $t_edition->{MEET};
+  if (exists $t_edition->{MEET})
+  {
+    my $meet = $t_edition->{MEET};
+    my $meet_tag = $t_edition->{MEET_TAG} // $edition;
+    my $m_header = $self->{MEET}{$meet};
+    my $m_edition = $m_header->{EDITIONS}{$meet_tag};
 
-  my $meet = $t_edition->{MEET};
-  my $meet_tag = $t_edition->{MEET_TAG} // $edition;
-  my $m_header = $self->{MEET}{$meet};
-  my $m_edition = $m_header->{EDITIONS}{$meet_tag};
-
-  $self->cumulate_fields($m_header, 
-    {}, { EDITIONS => 1 }, $errstr, $cumul);
-  $self->cumulate_fields($m_edition, 
-    { YEAR => 1 }, {}, $errstr, $cumul);
+    $self->cumulate_fields($m_header, 
+      {}, { EDITIONS => 1 }, $errstr, $cumul);
+    $self->cumulate_fields($m_edition, 
+      { YEAR => 1 }, {}, $errstr, $cumul);
+  }
 }
 
 
@@ -457,6 +459,30 @@ sub compatibility
 }
 
 
+sub hint_score
+{
+  # Not a class method.
+  my ($header, $entry) = @_;
+
+  return 0 unless exists $entry->{HINT};
+
+  my $score = 0;
+  for my $field (keys %{$entry->{HINT}})
+  {
+    next unless exists $header->{$field};
+    if ($header->{$field} eq $entry->{HINT}{$field})
+    {
+      $score++;
+    }
+    else
+    {
+      return 0;
+    }
+  }
+  return $score;
+}
+
+
 my (@times, $t0, $t1);
 
 sub get_tname_list
@@ -530,6 +556,8 @@ sub update_chapter_match
     (exists $header->{GENDER} && $header->{GENDER} eq 'Open' ? 1 : 0) +
     (exists $header->{AGE} && $header->{AGE} eq 'Open' ? 1 : 0);
 
+  my $hscore = hint_score($header, $entry);
+
   my $dist = $target->distance(
     $chapter->{DATE_START},
     $chapter->{DATE_END});
@@ -543,7 +571,9 @@ sub update_chapter_match
   if (($dist < $best->{LOWEST_DIST}) ||
       ($dist == $best->{LOWEST_DIST} && $hits > $best->{LOWEST_HITS}) ||
       ($dist == $best->{LOWEST_DIST} && $hits == $best->{LOWEST_HITS} &&
-       $opens > $best->{LOWEST_OPENS}))
+        ($hscore > $best->{LOWEST_HINT_SCORE} ||
+          ($hscore == $best->{LOWEST_HINT_SCORE} &&
+             $opens > $best->{LOWEST_OPENS}))))
   {
     print "        SWITCHING: dist now $dist\n" if $debug;
     $best->{LOWEST_DIST} = $dist;
@@ -551,6 +581,7 @@ sub update_chapter_match
     $best->{LOWEST_EDITION} = $edition_str;
     $best->{LOWEST_CHAPTER} = $chapter_str;
     $best->{LOWEST_HITS} = $hits;
+    $best->{LOWEST_HINT_SCORE} = $hscore;
     $best->{LOWEST_OPENS} = $opens;
     $best->{EQUAL_COLLISION} = 0;
   }
@@ -583,6 +614,7 @@ sub get_edition_and_chapter
   my %best;
   $best{LOWEST_DIST} = 9999;
   $best{LOWEST_HITS} = 0;
+  $best{LOWEST_HINT_SCORE} = 0;
   $best{EQUAL_COLLISION} = 0;
   $best{COLLISION_STR} = '';
 

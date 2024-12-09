@@ -1,14 +1,8 @@
-AGE and GENDER:
-It seems to be a common occurrence that
-- There are two tournaments available that only differ
-  in AGE/GENDER (let's say > 1 option)
-- The two teams both have some AGE/GENDER that is not
-  in EntryT as such
-- This AGE/GENDER would make one of the tournaments
-  the clear choice.
-So I suppose we could mark this in $entryT->{HINTS}
-{AGE} and {GENDER}
-
+- Finish digest STAGE
+- When EntryT with hint prunes right, delete TEAM?_
+- Fix other AGE, GENDER (add tester to EntryT)
+- Add Zone -> Country
+- Look at rare entry fields (eliminate?)
 
 Add an 'ignore' to Tournament, so ignore => 'GROUP'.
 That way there should be the right number of fields.
@@ -18,7 +12,7 @@ Add 'cluster'.  Must then be present?!
 Add automatic clustering of e.g. Semifinal.
 
 Add ability to hardwire STAGE/MOVEMENT:
-STAGE => 'Segment|Session|Set|2'
+STAGE => 'Segment|Session|Set'
 
 If MOVEMENT/STAGE, must be present in chapter header.
 If in chapter header, must be in at least one BBO?
@@ -32,8 +26,6 @@ Quick script to make histogram of a tag (ORIGIN) in t.
 
 Are pairs tournaments even useable?  Do player names work?
 6629 has a long list of player names
-
-45965 'Women' in TEAM2_GENDER can go when this is chapter gender.
 
 6758 Green is color, not captain
 

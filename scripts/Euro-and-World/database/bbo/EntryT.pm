@@ -719,9 +719,9 @@ sub format
   {
     if (exists $self->{TEAM1}{$field} &&
         exists $self->{TEAM2}{$field} &&
-        $self->{TEAM1}{$field} eq $self->{TEAM2}{$field})
+        $self->{TEAM1}{$field}[0] eq $self->{TEAM2}{$field}[0])
     {
-      $self->{HINT}{$field} = $self->{TEAM1}{$field};
+      $self->{HINT}{$field} = $self->{TEAM1}{$field}[0];
     }
   }
 }
@@ -1036,7 +1036,7 @@ sub check_fields
       for my $field (sort keys %{$self->{$team}})
       {
         next if exists $ok_hash->{$field};
-        next if $field eq 'AGE' || $field eq 'GENDER';
+        # next if $field eq 'AGE' || $field eq 'GENDER';
 
         my $tname = $header->{TOURNAMENT_NAME} // '';
         if ($tname &&
