@@ -1022,6 +1022,167 @@ my %ORIGIN_COMPATIBILITY = (
     UNIVERSITY => 1},
 );
 
+my %ZONE_COMPATIBILITY =
+(
+  'African Zone' =>
+  {
+    Botswana => 1,
+    Egypt => 1,
+    Kenya => 1,
+    Mauritius => 1,
+    Morocco => 1,
+    Reunion => 1,
+    'South Africa' => 1,
+    Tunisia => 1,
+    Zimbabwe => 1,
+  },
+  'Asia Pacific' =>
+  {
+    Australia => 1,
+    China => 1,
+    'Chinese Taipei' => 1,
+    'French Polynesia' => 1,
+    'Hong Kong' => 1,
+    Indonesia => 1,
+    Japan => 1,
+    Macau => 1,
+    Malaysia => 1,
+    Mongolia => 1,
+    'New Zealand' => 1,
+    Philippines => 1,
+    Singapore => 1,
+    'South Korea' => 1,
+    Taiwan => 1,
+    Thailand => 1,
+  },
+  Balkan =>
+  {
+    Albania => 1,
+    'Bosnia & Herzegovina'=> 1,
+    Bulgaria => 1,
+    Croatia => 1,
+    Greece => 1,
+    'North Macedonia' => 1,
+    Romania => 1,
+    Serbia => 1,
+    Slovenia => 1,
+    Turkey => 1,
+  },
+  'Central America and Caribbean' =>
+  {
+    Barbados => 1,
+    Bermuda => 1,
+    'French Guyana' => 1,
+    Guadeloupe => 1,
+    'Netherlands Antilles' => 1,
+    'Trinidad and Tobago' => 1,
+  },
+  'Europe' =>
+  {
+    Andorra => 1,
+    Austria => 1,
+    Belarus => 1,
+    Belgium => 1,
+    Bosnia => 1,
+    'Bosnia & Herzegovina'=> 1,
+    Bulgaria => 1,
+    Croatia => 1,
+    Cyprus => 1,
+    'Czech Republic' => 1,
+    Denmark => 1,
+    England => 1,
+    Estonia => 1,
+    'Faroe Islands' => 1,
+    Finland => 1,
+    France => 1,
+    Georgia => 1,
+    Germany => 1,
+    'Great Britain' => 1,
+    Greece => 1,
+    Hungary => 1,
+    Iceland => 1,
+    Ireland => 1,
+    Israel => 1,
+    Italy => 1,
+    Latvia => 1,
+    Lebanon => 1,
+    Lithuania => 1,
+    Luxembourg => 1,
+    Malta => 1,
+    Monaco => 1,
+    Netherlands => 1,
+    'Northern Ireland' => 1,
+    Norway => 1,
+    Poland => 1,
+    Portugal => 1,
+    Romania => 1,
+    Russia => 1,
+    'San Marino' => 1,
+    Scotland => 1,
+    Serbia => 1,
+    'Serbia and Montenegro' => 1,
+    Slovakia => 1,
+    Slovenia => 1,
+    Spain => 1,
+    Sweden => 1,
+    Switzerland => 1,
+    Turkey => 1,
+    'United Kingdom' => 1,
+    Ukraine => 1,
+    Wales => 1,
+    Yugoslavia => 1,
+  },
+  'Middle East' => 
+  {
+    Bahrain => 1,
+    Bangladesh => 1,
+    Egypt => 1,
+    India => 1,
+    Jordan => 1,
+    Kuwait => 1,
+    Lebanon => 1,
+    Pakistan => 1,
+    Palestine => 1,
+    Qatar => 1,
+    'Saudi Arabia' => 1,
+    'Sri Lanka' => 1,
+    Syria => 1,
+    'United Arab Emirates' => 1,
+  },
+  'North America' =>
+  {
+    Canada => 1,
+    Mexico => 1,
+    USA => 1,
+  },
+  'South America' => 
+  {
+    Argentina => 1,
+    Brazil => 1,
+    Chile => 1,
+    Colombia => 1,
+    Ecuador => 1,
+    Peru => 1,
+    Singapore => 1,
+    Uruguay => 1,
+    Venezuela => 1,
+  },
+  'South East Asia' =>
+  {
+    China => 1,
+    'Chinese Taipei' => 1,
+    'Hong Kong' => 1,
+    Indonesia => 1,
+    'Macau' => 1,
+    Taiwan => 1,
+  },
+  'South Pacific' =>
+  {
+    Australia => 1,
+    'New Zealand' => 1
+  },
+);
+
 sub check_fields
 {
   my ($self, $header) = @_;
@@ -1059,6 +1220,34 @@ sub check_fields
           warn $self->{BBONO} . 
             ": $header->{TOURNAMENT_NAME}, $field does not match $origin";
         }
+      }
+    }
+  }
+
+  if (exists $header->{ZONE})
+  {
+    my $zone = $header->{ZONE};
+    return if $zone eq 'World'; # TODO !!!!! Don't return, just skip
+
+    my $origin = $header->{ORIGIN} // '';
+    return if $origin eq 'World' || $origin eq 'Invitational'; # TODO
+
+    my $ok_hash = $ZONE_COMPATIBILITY{$zone};
+
+    my @list;
+    push @list, @{$self->{HEADER}{COUNTRY}} 
+      if exists $self->{HEADER}{COUNTRY};
+    push @list, @{$self->{TEAM1}{COUNTRY}} 
+      if exists $self->{TEAM1}{COUNTRY};
+    push @list, @{$self->{TEAM2}{COUNTRY}} 
+      if exists $self->{TEAM2}{COUNTRY};
+
+    for my $country (@list)
+    {
+      if (! exists $ok_hash->{$country})
+      {
+        warn $self->{BBONO} . 
+          ": $header->{TOURNAMENT_NAME}, $country does not match ZONE $zone";
       }
     }
   }

@@ -963,8 +963,8 @@ my %TOURNAMENTS_FRIENDLY =
   {
     ORGANIZATION => 'CBF',
     COUNTRY => 'Canada',
-    ORIGIN => 'National',
-    ZONE => 'Europe',
+    ORIGIN => 'International',
+    ZONE => 'North America',
     FORM => 'Teams',
     SCORING => 'IMP',
 
@@ -3483,7 +3483,7 @@ my %TOURNAMENTS_FRIENDLY =
     ORGANIZATION => 'CTCBA',
     COUNTRY => 'Taiwan',
     ORIGIN => 'National',
-    ZONE => 'Asi',
+    ZONE => 'Asia Pacific',
     FORM => 'Teams',
     SCORING => 'IMP',
 
@@ -3516,7 +3516,7 @@ my %TOURNAMENTS_FRIENDLY =
     CITY => 'Hammamet',
     COUNTRY => 'Tunisia',
     ORIGIN => 'National',
-    ZONE => 'Africa',
+    ZONE => 'African Zone',
     FORM => 'Teams',
     SCORING => 'IMP',
 

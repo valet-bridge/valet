@@ -22,7 +22,7 @@ my %MEETS_JAPAN =
   'Yokohama Bridge Festival' =>
   {
     %GLOBAL,
-    ORIGIN => 'National',
+    ORIGIN => 'World',
 
     EDITIONS => 
     {
