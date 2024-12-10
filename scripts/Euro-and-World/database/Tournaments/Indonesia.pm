@@ -2945,7 +2945,7 @@ my %TOURNAMENTS_INDONESIA =
   "Kepri Governor's Cup" =>
   {
     %GLOBAL,
-    ORIGIN => 'National',
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3606,7 +3606,7 @@ my %TOURNAMENTS_INDONESIA =
   'Sarundajang Cup' => 
   {
     %GLOBAL,
-    ORIGIN => 'National',
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

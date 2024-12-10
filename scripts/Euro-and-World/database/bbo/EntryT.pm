@@ -1013,6 +1013,8 @@ my %ORIGIN_COMPATIBILITY = (
   Interstate => {
     CITY => 1, 
     REGION => 1},
+  Supranational => {
+    COUNTRY => 1},
   University => {
     LOCALITY => 1,
     CITY => 1, 
@@ -1022,6 +1024,8 @@ my %ORIGIN_COMPATIBILITY = (
     UNIVERSITY => 1},
 );
 
+# These are sometimes rather permissive, e.g. Israel in Balkan.
+
 my %ZONE_COMPATIBILITY =
 (
   'African Zone' =>
@@ -1029,6 +1033,7 @@ my %ZONE_COMPATIBILITY =
     Botswana => 1,
     Egypt => 1,
     Kenya => 1,
+    Madagascar => 1,
     Mauritius => 1,
     Morocco => 1,
     Reunion => 1,
@@ -1043,6 +1048,7 @@ my %ZONE_COMPATIBILITY =
     'Chinese Taipei' => 1,
     'French Polynesia' => 1,
     'Hong Kong' => 1,
+    India => 1,
     Indonesia => 1,
     Japan => 1,
     Macau => 1,
@@ -1062,6 +1068,7 @@ my %ZONE_COMPATIBILITY =
     Bulgaria => 1,
     Croatia => 1,
     Greece => 1,
+    Israel => 1,
     'North Macedonia' => 1,
     Romania => 1,
     Serbia => 1,
@@ -1076,6 +1083,31 @@ my %ZONE_COMPATIBILITY =
     Guadeloupe => 1,
     'Netherlands Antilles' => 1,
     'Trinidad and Tobago' => 1,
+  },
+  Commonwealth =>
+  {
+    Australia => 1,
+    Bangladesh => 1,
+    Barbados => 1,
+    Canada => 1,
+    England => 1,
+    Guernsey => 1,
+    India => 1,
+    'Isle of Man' => 1,
+    Jersey => 1,
+    Kenya => 1,
+    Malaysia => 1,
+    Malta => 1,
+    'Northern Ireland' => 1,
+    Pakistan => 1,
+    'New Zealand' => 1,
+    Scotland => 1,
+    Singapore => 1,
+    'South Africa' => 1,
+    'Sri Lanka' => 1,
+    Tanzania => 1,
+    Uganda => 1,
+    Wales => 1,
   },
   'Europe' =>
   {
@@ -1106,6 +1138,7 @@ my %ZONE_COMPATIBILITY =
     Italy => 1,
     Latvia => 1,
     Lebanon => 1,
+    Lichtenstein => 1,
     Lithuania => 1,
     Luxembourg => 1,
     Malta => 1,
@@ -1147,6 +1180,8 @@ my %ZONE_COMPATIBILITY =
     'Saudi Arabia' => 1,
     'Sri Lanka' => 1,
     Syria => 1,
+    Tunisia => 1,
+    Turkey => 1,
     'United Arab Emirates' => 1,
   },
   'North America' =>
@@ -1173,6 +1208,7 @@ my %ZONE_COMPATIBILITY =
     'Chinese Taipei' => 1,
     'Hong Kong' => 1,
     Indonesia => 1,
+    Japan => 1,
     'Macau' => 1,
     Taiwan => 1,
   },
@@ -1197,7 +1233,8 @@ sub check_fields
       for my $field (sort keys %{$self->{$team}})
       {
         next if exists $ok_hash->{$field};
-        # next if $field eq 'AGE' || $field eq 'GENDER';
+        next if $field eq 'AGE' || $field eq 'GENDER'; 
+        # TODO Comment out later
 
         my $tname = $header->{TOURNAMENT_NAME} // '';
         if ($tname &&
@@ -1229,8 +1266,15 @@ sub check_fields
     my $zone = $header->{ZONE};
     return if $zone eq 'World'; # TODO !!!!! Don't return, just skip
 
+    # Don't have to be from the zone.  'Supranational' is a more
+    # permissive form of 'International', so still between nations.
+    # 'Transnational' is not limited to nations.
     my $origin = $header->{ORIGIN} // '';
-    return if $origin eq 'World' || $origin eq 'Invitational'; # TODO
+    # TODO Don't return, just skip
+    return if 
+      $origin eq 'Supranational' || 
+      $origin eq 'Transnational' || 
+      $origin eq 'Invitational';
 
     my $ok_hash = $ZONE_COMPATIBILITY{$zone};
 

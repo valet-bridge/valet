@@ -45,6 +45,7 @@ my @SINGLE_WORDS = qw(
   Invitational
   National
   Regional
+  Supranational
   Transnational
   University
   World

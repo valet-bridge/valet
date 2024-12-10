@@ -1,7 +1,8 @@
-- Finish digest STAGE
+Get Zone to work.
+Look at merging some zones.
+
 - When EntryT with hint prunes right, delete TEAM?_
 - Fix other AGE, GENDER (add tester to EntryT)
-- Add Zone -> Country
 - Look at rare entry fields (eliminate?)
 
 Add an 'ignore' to Tournament, so ignore => 'GROUP'.

@@ -42,7 +42,6 @@ my %MEETS_CHINA =
   'China Elite Tournament' =>
   {
     %GLOBAL,
-    ORIGIN => 'National',
 
     EDITIONS =>
     {
@@ -316,6 +315,7 @@ my %TOURNAMENTS_CHINA =
 
   'China Elite Spring Teams' =>
   {
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -376,6 +376,7 @@ my %TOURNAMENTS_CHINA =
 
   'China Elite Winter Teams' =>
   {
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1635,6 +1636,7 @@ my %TOURNAMENTS_CHINA =
 
   'Jinfan Open Teams Cup' =>
   {
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1725,6 +1727,7 @@ my %TOURNAMENTS_CHINA =
 
   'Jinfan Mixed Teams Cup' =>
   {
+    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Mixed',
@@ -2157,7 +2160,7 @@ my %TOURNAMENTS_CHINA =
   {
     # Could be an Elite tournament.
     %GLOBAL,
-    ORIGIN => 'National',
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2294,6 +2297,7 @@ my %TOURNAMENTS_CHINA =
 
   'Zhejiang Huamen Cup' =>
   {
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

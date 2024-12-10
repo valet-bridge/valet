@@ -391,6 +391,7 @@ my @MULTI_WORDS =
   'Torino Allegra',
   'Toulouse BC',
   'Tromsø BK',
+  'UAE Club',
   'Usak SK',
   'Van Bric SK',
   'Vasa BK',

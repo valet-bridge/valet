@@ -164,7 +164,7 @@ my %TOURNAMENTS_NETHERLANDS =
   'Carrousel Cup',
   {
     %GLOBAL,
-    ORIGIN => 'International',
+    ORIGIN => 'Supranational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -556,7 +556,7 @@ my %TOURNAMENTS_NETHERLANDS =
   {
     %GLOBAL,
     SPONSOR => 'Forbo',
-    ORIGIN => 'National',
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1070,7 +1070,7 @@ my %TOURNAMENTS_NETHERLANDS =
   'White House International',
   {
     %GLOBAL,
-    ORIGIN => 'National',
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1126,7 +1126,7 @@ my %TOURNAMENTS_NETHERLANDS =
   'White House Juniors',
   {
     %GLOBAL,
-    ORIGIN => 'National',
+    ORIGIN => 'Supranational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1578,7 +1578,7 @@ my %TOURNAMENTS_NETHERLANDS =
   'White House Top 16',
   {
     %GLOBAL,
-    ORIGIN => 'National',
+    ORIGIN => 'Transnational',
     FORM => 'Pairs',
     SCORING => 'IMP',
     GENDER => 'Open',

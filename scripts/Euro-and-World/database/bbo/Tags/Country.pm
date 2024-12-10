@@ -79,7 +79,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Albania Andorra Angora Argentina Australia Austria 
-  Bahrain Balkan Bangladesh Barbados Belarus Belgium Bermuda 
+  Bahrain Bangladesh Barbados Belarus Belgium Bermuda 
   Bolivia Bosnia Botswana Brazil Bulgaria
   Canada Chile Colombia Croatia Cuba Cyprus
   Denmark 

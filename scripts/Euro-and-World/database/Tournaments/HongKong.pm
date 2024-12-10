@@ -26,7 +26,7 @@ my %TOURNAMENTS_HONGKONG =
   'Hong Kong Inter-City Open Teams' => 
   {
     %GLOBAL,
-    ORIGIN => 'National',
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

@@ -19,7 +19,7 @@ my %MEETS_USA =
 
     ORGANIZATION => 'ACBL',
     COUNTRY => 'USA',
-    ORIGIN => 'National',
+    ORIGIN => 'Transnational',
     ZONE => 'North America',
 
     EDITIONS => 

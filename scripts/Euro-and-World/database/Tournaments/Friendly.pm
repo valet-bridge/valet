@@ -751,14 +751,14 @@ my %TOURNAMENTS_FRIENDLY =
   {
     ORGANIZATION => 'ABA',
     COUNTRY => 'Argentina',
-    ORIGIN => 'National',
+    ORIGIN => 'International',
     ZONE => 'South America',
     FORM => 'Teams',
     SCORING => 'IMP',
 
     EDITIONS =>
     {
-      '2012' =>
+      '2011' =>
       {
         MEET => 'Friendly Match',
         MEET_TAG => '2011A',
@@ -996,7 +996,7 @@ my %TOURNAMENTS_FRIENDLY =
     ORGANIZATION => 'FCB',
     COUNTRY => 'Chile',
     ORIGIN => 'National',
-    ZONE => 'Europe',
+    ZONE => 'South America',
     FORM => 'Teams',
     SCORING => 'IMP',
 
@@ -1371,7 +1371,6 @@ my %TOURNAMENTS_FRIENDLY =
   {
     ORGANIZATION => 'FFB',
     COUNTRY => 'France',
-    ORIGIN => 'National',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -1382,6 +1381,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Practice Match',
         MEET_TAG => '2007C',
+        ORIGIN => 'Supranational',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -1401,6 +1401,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Practice Match',
         MEET_TAG => '2007G',
+        ORIGIN => 'National',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1419,6 +1420,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Practice Match',
         MEET_TAG => '2007H',
+        ORIGIN => 'National',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -1437,6 +1439,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Practice Match',
         MEET_TAG => '2007J',
+        ORIGIN => 'National',
         SPONSOR => 'Multicoms',
         GENDER => 'Open',
         AGE => 'Open',
@@ -1456,6 +1459,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Practice Match',
         MEET_TAG => '2007K',
+        ORIGIN => 'National',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -1474,6 +1478,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Practice Match',
         MEET_TAG => '2007L',
+        ORIGIN => 'National',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1492,6 +1497,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Practice Match',
         MEET_TAG => '2008A',
+        ORIGIN => 'National',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -1510,6 +1516,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Practice Match',
         MEET_TAG => '2008C',
+        ORIGIN => 'National',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1528,6 +1535,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Practice Match',
         MEET_TAG => '2015G',
+        ORIGIN => 'National',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -1547,6 +1555,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Practice Match',
         MEET_TAG => '2016A',
+        ORIGIN => 'National',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1565,6 +1574,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Practice Match',
         MEET_TAG => '2016B',
+        ORIGIN => 'National',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1583,6 +1593,7 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Practice Match',
         MEET_TAG => '2016F',
+        ORIGIN => 'National',
         GENDER => 'Open',
         AGE => 'Open',
 
@@ -1860,7 +1871,7 @@ my %TOURNAMENTS_FRIENDLY =
   {
     ORGANIZATION => 'IceBF',
     COUNTRY => 'Iceland',
-    ORIGIN => 'National',
+    ORIGIN => 'Supranational',
     ZONE => 'Europe',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -2026,7 +2037,7 @@ my %TOURNAMENTS_FRIENDLY =
     ORGANIZATION => 'FRM',
     COUNTRY => 'Morocco',
     ORIGIN => 'National',
-    ZONE => 'Africa',
+    ZONE => 'African Zone',
     FORM => 'Teams',
     SCORING => 'IMP',
 

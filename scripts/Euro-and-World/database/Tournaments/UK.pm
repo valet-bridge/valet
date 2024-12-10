@@ -780,7 +780,7 @@ my %TOURNAMENTS_UK =
   'Commonwealth Nations Bridge Championships' => 
   {
     ORIGIN => 'Transnational',
-    ZONE => 'Europe',
+    ZONE => 'Commonwealth',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

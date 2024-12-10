@@ -24,7 +24,7 @@ my %MEETS_THAILAND =
   'Bangkok Bridge Festival' =>
   {
     %GLOBAL,
-    ORIGIN => 'National',
+    ORIGIN => 'Transnational',
     CITY => 'Bangkok',
     ZONE => 'South East Asia',
 

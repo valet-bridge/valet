@@ -12,6 +12,7 @@ our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
 # No good source of old Belgian results.
+# https://www.rbbf.be/
 
 my %GLOBAL = (
   ORGANIZATION => 'RBBF',

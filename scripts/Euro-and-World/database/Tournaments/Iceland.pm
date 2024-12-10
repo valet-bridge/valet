@@ -591,7 +591,7 @@ my %TOURNAMENTS_ICELAND =
   'Icelandic Open Teams' =>
   {
     %GLOBAL,
-    ORIGIN => 'National',
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',

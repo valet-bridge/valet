@@ -1169,7 +1169,7 @@ my %MEETS_AUSTRALIA =
   'Gold Coast Congress' =>
   {
     %GLOBAL,
-    ORIGIN => 'National',
+    ORIGIN => 'Transnational',
 
     EDITIONS => 
     {
