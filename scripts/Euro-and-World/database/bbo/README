@@ -1,6 +1,3 @@
-Get Zone to work.
-Look at merging some zones.
-
 - When EntryT with hint prunes right, delete TEAM?_
 - Fix other AGE, GENDER (add tester to EntryT)
 - Look at rare entry fields (eliminate?)
@@ -84,3 +81,9 @@ Can look at weekdays:
 foreach f (..$/Tournaments/*pm)
   perl weekday.pl $f > ../Tournaments/DATED/`basename $f`
 end
+
+perl checkT.pl
+checks internal consistency of Tournament and Meet.
+
+perl checkB.pl t
+checks BBO entry field values vs. Tournament and Meet.

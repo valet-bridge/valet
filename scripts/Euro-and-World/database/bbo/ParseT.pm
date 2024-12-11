@@ -587,7 +587,8 @@ sub update_chapter_match
   }
   elsif ($dist == 0 && 
       $hits == $best->{LOWEST_HITS} && 
-      $opens == $best->{LOWEST_OPENS})
+      $opens == $best->{LOWEST_OPENS} &&
+      $hscore == $best->{LOWEST_HINT_SCORE})
   {
     $best->{EQUAL_COLLISION} = 1;
     $best->{COLLISION_STR} = $entry->bbono() . 

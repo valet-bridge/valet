@@ -988,312 +988,92 @@ sub fix_counters
 }
 
 
-my %ORIGIN_COMPATIBILITY = (
-  Intercity => {
-    CITY => 1, 
-    CLUB => 1,
-    REGION => 1},
-  Interclub => {
-    LOCALITY => 1,
-    CLUB => 1, 
-    UNIVERSITY => 1,
-    CITY => 1, 
-    REGION => 1, 
-    COUNTRY => 1,
-    ORGANIZATION => 1,
-    SPONSOR => 1},
-  International => {
-    COUNTRY => 1},
-  Interprovince => {
-    CITY => 1, 
-    REGION => 1},
-  Interregional => {
-    CITY => 1, 
-    REGION => 1},
-  Interstate => {
-    CITY => 1, 
-    REGION => 1},
-  Supranational => {
-    COUNTRY => 1},
-  University => {
-    LOCALITY => 1,
-    CITY => 1, 
-    CLUB => 1,
-    COUNTRY => 1,
-    REGION => 1,
-    UNIVERSITY => 1},
-);
+sub check_origin
+{
+  my ($self, $header) = @_;
 
-# These are sometimes rather permissive, e.g. Israel in Balkan.
+  my $origin = $header->{ORIGIN};
+  for my $team (qw(TEAM1 TEAM2))
+  {
+    for my $field (sort keys %{$self->{$team}})
+    {
+      next if OGAcorr::origin_team_field_ok($origin, $field);
+      # next if $field eq 'AGE' || $field eq 'GENDER'; 
+      # TODO Comment out later
 
-my %ZONE_COMPATIBILITY =
-(
-  'African Zone' =>
+      my $tname = $header->{TOURNAMENT_NAME} // '';
+      if ($tname &&
+        OGAcorr::origin_fixable($tname, $self->bbono()))
+      {
+        # Definitely OK.
+      }
+      elsif (! $tname && OGAcorr::origin_number_fixable($self->bbono()))
+      {
+        # Probably OK.
+      }
+      elsif ($tname && 
+        $field eq 'ORGANIZATION' && 
+        OGAcorr::origin_org_ok($tname))
+      {
+        # Camrose has an extra host team, for example.
+      }
+      else
+      {
+        warn $self->{BBONO} . 
+          ": $header->{TOURNAMENT_NAME}, $field does not match $origin";
+      }
+    }
+  }
+}
+
+
+sub check_zone
+{
+  my ($self, $header) = @_;
+  my $zone = $header->{ZONE};
+  return if $zone eq 'World';
+
+  # Don't have to be from the zone.  'Supranational' is a more
+  # permissive form of 'International', so still between nations.
+  # 'Transnational' is not limited to nations.
+  my $origin = $header->{ORIGIN} // '';
+  return if 
+    $origin eq 'Supranational' || 
+    $origin eq 'Transnational' || 
+    $origin eq 'Invitational';
+
+  my @list;
+  push @list, @{$self->{HEADER}{COUNTRY}} 
+    if exists $self->{HEADER}{COUNTRY};
+  push @list, @{$self->{TEAM1}{COUNTRY}} 
+    if exists $self->{TEAM1}{COUNTRY};
+  push @list, @{$self->{TEAM2}{COUNTRY}} 
+    if exists $self->{TEAM2}{COUNTRY};
+
+  for my $country (@list)
   {
-    Botswana => 1,
-    Egypt => 1,
-    Kenya => 1,
-    Madagascar => 1,
-    Mauritius => 1,
-    Morocco => 1,
-    Reunion => 1,
-    'South Africa' => 1,
-    Tunisia => 1,
-    Zimbabwe => 1,
-  },
-  'Asia Pacific' =>
-  {
-    Australia => 1,
-    China => 1,
-    'Chinese Taipei' => 1,
-    'French Polynesia' => 1,
-    'Hong Kong' => 1,
-    India => 1,
-    Indonesia => 1,
-    Japan => 1,
-    Macau => 1,
-    Malaysia => 1,
-    Mongolia => 1,
-    'New Zealand' => 1,
-    Philippines => 1,
-    Singapore => 1,
-    'South Korea' => 1,
-    Taiwan => 1,
-    Thailand => 1,
-  },
-  Balkan =>
-  {
-    Albania => 1,
-    'Bosnia & Herzegovina'=> 1,
-    Bulgaria => 1,
-    Croatia => 1,
-    Greece => 1,
-    Israel => 1,
-    'North Macedonia' => 1,
-    Romania => 1,
-    Serbia => 1,
-    Slovenia => 1,
-    Turkey => 1,
-  },
-  'Central America and Caribbean' =>
-  {
-    Barbados => 1,
-    Bermuda => 1,
-    'French Guyana' => 1,
-    Guadeloupe => 1,
-    'Netherlands Antilles' => 1,
-    'Trinidad and Tobago' => 1,
-  },
-  Commonwealth =>
-  {
-    Australia => 1,
-    Bangladesh => 1,
-    Barbados => 1,
-    Canada => 1,
-    England => 1,
-    Guernsey => 1,
-    India => 1,
-    'Isle of Man' => 1,
-    Jersey => 1,
-    Kenya => 1,
-    Malaysia => 1,
-    Malta => 1,
-    'Northern Ireland' => 1,
-    Pakistan => 1,
-    'New Zealand' => 1,
-    Scotland => 1,
-    Singapore => 1,
-    'South Africa' => 1,
-    'Sri Lanka' => 1,
-    Tanzania => 1,
-    Uganda => 1,
-    Wales => 1,
-  },
-  'Europe' =>
-  {
-    Andorra => 1,
-    Austria => 1,
-    Belarus => 1,
-    Belgium => 1,
-    Bosnia => 1,
-    'Bosnia & Herzegovina'=> 1,
-    Bulgaria => 1,
-    Croatia => 1,
-    Cyprus => 1,
-    'Czech Republic' => 1,
-    Denmark => 1,
-    England => 1,
-    Estonia => 1,
-    'Faroe Islands' => 1,
-    Finland => 1,
-    France => 1,
-    Georgia => 1,
-    Germany => 1,
-    'Great Britain' => 1,
-    Greece => 1,
-    Hungary => 1,
-    Iceland => 1,
-    Ireland => 1,
-    Israel => 1,
-    Italy => 1,
-    Latvia => 1,
-    Lebanon => 1,
-    Lichtenstein => 1,
-    Lithuania => 1,
-    Luxembourg => 1,
-    Malta => 1,
-    Monaco => 1,
-    Netherlands => 1,
-    'Northern Ireland' => 1,
-    Norway => 1,
-    Poland => 1,
-    Portugal => 1,
-    Romania => 1,
-    Russia => 1,
-    'San Marino' => 1,
-    Scotland => 1,
-    Serbia => 1,
-    'Serbia and Montenegro' => 1,
-    Slovakia => 1,
-    Slovenia => 1,
-    Spain => 1,
-    Sweden => 1,
-    Switzerland => 1,
-    Turkey => 1,
-    'United Kingdom' => 1,
-    Ukraine => 1,
-    Wales => 1,
-    Yugoslavia => 1,
-  },
-  'Middle East' => 
-  {
-    Bahrain => 1,
-    Bangladesh => 1,
-    Egypt => 1,
-    India => 1,
-    Jordan => 1,
-    Kuwait => 1,
-    Lebanon => 1,
-    Pakistan => 1,
-    Palestine => 1,
-    Qatar => 1,
-    'Saudi Arabia' => 1,
-    'Sri Lanka' => 1,
-    Syria => 1,
-    Tunisia => 1,
-    Turkey => 1,
-    'United Arab Emirates' => 1,
-  },
-  'North America' =>
-  {
-    Canada => 1,
-    Mexico => 1,
-    USA => 1,
-  },
-  'South America' => 
-  {
-    Argentina => 1,
-    Brazil => 1,
-    Chile => 1,
-    Colombia => 1,
-    Ecuador => 1,
-    Peru => 1,
-    Singapore => 1,
-    Uruguay => 1,
-    Venezuela => 1,
-  },
-  'South East Asia' =>
-  {
-    China => 1,
-    'Chinese Taipei' => 1,
-    'Hong Kong' => 1,
-    Indonesia => 1,
-    Japan => 1,
-    'Macau' => 1,
-    Taiwan => 1,
-  },
-  'South Pacific' =>
-  {
-    Australia => 1,
-    'New Zealand' => 1
-  },
-);
+    if (! OGAcorr::zone_country_ok($zone, $country))
+    {
+      warn $self->{BBONO} . 
+        ": $header->{TOURNAMENT_NAME}, $country does not match ZONE $zone";
+    }
+  }
+}
+
 
 sub check_fields
 {
   my ($self, $header) = @_;
 
   if (exists $header->{ORIGIN} &&
-      exists $ORIGIN_COMPATIBILITY{$header->{ORIGIN}})
+      OGAcorr::origin_checkable($header->{ORIGIN}))
   {
-    my $origin = $header->{ORIGIN};
-    my $ok_hash = $ORIGIN_COMPATIBILITY{$origin};
-    for my $team (qw(TEAM1 TEAM2))
-    {
-      for my $field (sort keys %{$self->{$team}})
-      {
-        next if exists $ok_hash->{$field};
-        next if $field eq 'AGE' || $field eq 'GENDER'; 
-        # TODO Comment out later
-
-        my $tname = $header->{TOURNAMENT_NAME} // '';
-        if ($tname &&
-          OGAcorr::origin_fixable($tname, $self->bbono()))
-        {
-          # Definitely OK.
-        }
-        elsif (! $tname && OGAcorr::origin_number_fixable($self->bbono()))
-        {
-          # Probably OK.
-        }
-        elsif ($tname && 
-          $field eq 'ORGANIZATION' && 
-          OGAcorr::origin_org_ok($tname))
-        {
-          # Camrose has an extra host team, for example.
-        }
-        else
-        {
-          warn $self->{BBONO} . 
-            ": $header->{TOURNAMENT_NAME}, $field does not match $origin";
-        }
-      }
-    }
+    $self->check_origin($header);
   }
 
   if (exists $header->{ZONE})
   {
-    my $zone = $header->{ZONE};
-    return if $zone eq 'World'; # TODO !!!!! Don't return, just skip
-
-    # Don't have to be from the zone.  'Supranational' is a more
-    # permissive form of 'International', so still between nations.
-    # 'Transnational' is not limited to nations.
-    my $origin = $header->{ORIGIN} // '';
-    # TODO Don't return, just skip
-    return if 
-      $origin eq 'Supranational' || 
-      $origin eq 'Transnational' || 
-      $origin eq 'Invitational';
-
-    my $ok_hash = $ZONE_COMPATIBILITY{$zone};
-
-    my @list;
-    push @list, @{$self->{HEADER}{COUNTRY}} 
-      if exists $self->{HEADER}{COUNTRY};
-    push @list, @{$self->{TEAM1}{COUNTRY}} 
-      if exists $self->{TEAM1}{COUNTRY};
-    push @list, @{$self->{TEAM2}{COUNTRY}} 
-      if exists $self->{TEAM2}{COUNTRY};
-
-    for my $country (@list)
-    {
-      if (! exists $ok_hash->{$country})
-      {
-        warn $self->{BBONO} . 
-          ": $header->{TOURNAMENT_NAME}, $country does not match ZONE $zone";
-      }
-    }
+    $self->check_zone($header);
   }
 
   if (exists $header->{GENDER})

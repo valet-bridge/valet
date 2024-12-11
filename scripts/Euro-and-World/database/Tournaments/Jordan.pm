@@ -17,7 +17,7 @@ our @EXPORT = qw(set_links);
 my %GLOBAL = (
   ORGANIZATION => 'JBA',
   COUNTRY => 'Jordan',
-  ZONE => 'Africa',
+  ZONE => 'African Zone',
 );
 
 my %MEETS_JORDAN =

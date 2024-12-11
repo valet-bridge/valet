@@ -974,6 +974,24 @@ my %TOURNAMENTS_FRIENDLY =
       {
         MEET => 'Practice Match',
         MEET_TAG => '2015F',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'SESSION',
+            DATE_START => '2015-06-27',
+            DATE_END => '2015-06-28'
+          } 
+        }
+      },
+      '2015B' =>
+      {
+        MEET => 'Practice Match',
+        MEET_TAG => '2015F',
         GENDER => 'Women',
         AGE => 'Open',
 
@@ -1029,7 +1047,7 @@ my %TOURNAMENTS_FRIENDLY =
     ORGANIZATION => 'CCBA',
     COUNTRY => 'China',
     ORIGIN => 'National',
-    ZONE => 'Southeast Asia',
+    ZONE => 'South East Asia',
     FORM => 'Teams',
     SCORING => 'IMP',
 

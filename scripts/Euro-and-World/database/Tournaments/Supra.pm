@@ -1193,6 +1193,21 @@ my %TOURNAMENTS_SUPRA =
           } 
         }
       },
+      '2015' =>
+      {
+        MEET => 'Channel Trophy',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'MATCH',
+            minor => 'SET',
+            DATE_START => '2015-12-18',
+            DATE_END => '2015-12-20'
+          } 
+        }
+      },
     }
   },
 
@@ -1391,13 +1406,13 @@ my %TOURNAMENTS_SUPRA =
   {
     FORM => 'Teams',
     SCORING => 'IMP',
-    AGE => 'Schools',
 
     EDITIONS =>
     {
       '2007' =>
       {
         MEET => 'Channel Trophy',
+        AGE => 'Schools',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1407,6 +1422,53 @@ my %TOURNAMENTS_SUPRA =
             minor => 'MATCH',
             DATE_START => '2007-12-21',
             DATE_END => '2007-12-23'
+          } 
+        }
+      },
+      '2008' =>
+      {
+        MEET => 'Channel Trophy',
+        AGE => 'U20',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2008,
+            minor => 'MATCH',
+            DATE_START => '2008-12-19',
+            DATE_END => '2008-12-21'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'Channel Trophy',
+        AGE => 'U20',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2011,
+            major => 'ROUND',
+            minor => 'HALF',
+            DATE_START => '2011-12-16',
+            DATE_END => '2011-12-18'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Channel Trophy',
+        AGE => 'U20',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'MATCH',
+            minor => 'SET',
+            DATE_START => '2015-12-18',
+            DATE_END => '2015-12-20'
           } 
         }
       },
