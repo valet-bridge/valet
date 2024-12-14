@@ -145,6 +145,31 @@ my %MEETS_CHINA =
     }
   },
 
+  'Chinese Club Championships' =>
+  {
+    EDITIONS => 
+    {
+      '2006A' =>
+      {
+        YEAR => 2006,
+        DATE_START => '2006-07-02',
+        DATE_END => '2006-07-06'
+      },
+      '2006B' =>
+      {
+        YEAR => 2006,
+        DATE_START => '2006-08-09',
+        DATE_END => '2006-08-09'
+      },
+      '2013' =>
+      {
+        YEAR => 2013,
+        DATE_START => '2013-10-19',
+        DATE_END => '2013-10-26'
+      },
+    }
+  },
+
 );
 
 my %TOURNAMENTS_CHINA =
@@ -734,17 +759,26 @@ my %TOURNAMENTS_CHINA =
     {
       '2006A' =>
       {
+        MEET => 'Chinese Club Championships',
         CITY => 'Xian',
         CHAPTERS =>
         {
-          'C0' => 
+          'SINGLE' => 
           {
             YEAR => 2006,
             major => 'ROUND',
             DATE_START => '2006-07-02',
             DATE_END => '2006-07-06'
           },
-          'C1' => 
+        }
+      },
+      '2006B' =>
+      {
+        MEET => 'Chinese Club Championships',
+        CITY => 'Xian',
+        CHAPTERS =>
+        {
+          'C0' => 
           {
             YEAR => 2006,
             STAGE => 'Semifinal',
@@ -752,7 +786,7 @@ my %TOURNAMENTS_CHINA =
             DATE_START => '2006-08-09',
             DATE_END => '2006-08-09'
           },
-          'C2' => 
+          'C1' => 
           {
             YEAR => 2006,
             STAGE => 'Bronze',
@@ -760,7 +794,7 @@ my %TOURNAMENTS_CHINA =
             DATE_START => '2006-08-09',
             DATE_END => '2006-08-09'
           },
-          'C3' => 
+          'C2' => 
           {
             YEAR => 2006,
             STAGE => 'Final',
@@ -770,7 +804,7 @@ my %TOURNAMENTS_CHINA =
           },
         }
       },
-      '2006B' =>
+      '2006C' =>
       {
         # TODO Something else?
         CITY => 'Xiantao',
@@ -838,6 +872,7 @@ my %TOURNAMENTS_CHINA =
       },
       '2013' =>
       {
+        MEET => 'Chinese Club Championships',
         CHAPTERS =>
         {
           'C0' => 
@@ -993,6 +1028,51 @@ my %TOURNAMENTS_CHINA =
     }
   },
 
+  'Chinese Women First League' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2013' =>
+      {
+        MEET => 'Chinese Club Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-10-23',
+            DATE_END => '2013-10-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-10-24',
+            DATE_END => '2013-10-25'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2013-10-25',
+            DATE_END => '2013-10-26'
+          },
+        }
+      },
+    }
+  },
+
   'Chinese Women Teams' =>
   {
     %GLOBAL,
@@ -1004,6 +1084,36 @@ my %TOURNAMENTS_CHINA =
 
     EDITIONS =>
     {
+      '2007' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2007,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2007-04-15',
+            DATE_END => '2007-04-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2007-04-16',
+            DATE_END => '2007-04-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2007,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2007-04-16',
+            DATE_END => '2007-04-16'
+          } 
+        }
+      },
       '2014' =>
       {
         CHAPTERS =>

@@ -90,12 +90,17 @@ while ($entryT->read($fh))
     next;
   }
 
+  if ($entryT->bbono() eq 2782)
+  {
+    # print "HERE\n";
+  }
+
   my ($header_entry, $chapter_entry) = 
     $parseT->get_header_entry($tname, $edition, $chapter);
 
   $entryT->prune_using($header_entry, $chapter_entry);
 
-  $entryT->check_fields($header_entry);
+  $entryT->check_fields($header_entry, $chapter_entry);
 }
 
 close $fh;

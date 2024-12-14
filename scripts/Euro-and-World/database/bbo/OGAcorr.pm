@@ -8,29 +8,246 @@ use v5.10;
 use utf8;
 use open ':std', ':encoding(UTF-8)';
 
+# Entire tournaments where multiple ages or genders explicitly play
+# against each other (as ages and genders).
+my %GENDER_SPECIAL = (
+  'Denmark Practice' => 
+  {
+    2015 => { Women => 1},
+  },
+  'Nordic Junior Teams' => 
+  {
+    2009 => { Women => 1},
+    2013 => { Women => 1},
+    2015 => { Women => 1},
+  },
+  'PT Timah Invitational Teams' =>
+  {
+    2011 => { Women => 1, Men => 1, Mixed => 1},
+  },
+  'White House Juniors' => 
+  {
+    2006 => { Women => 1},
+    2007 => { Women => 1},
+    2008 => { Women => 1},
+    2009 => { Women => 1},
+    2010 => { Women => 1},
+    2011 => { Women => 1},
+    2012 => { Women => 1},
+    2014 => { Women => 1},
+    2015 => { Women => 1},
+  },
+);
+
+my %AGE_SPECIAL = (
+  'Nordic Junior Teams' => 
+  {
+    2005 => { U21 => 1},
+    2010 => { U21 => 1},
+    2011 => { U20 => 1},
+    2013 => { U20 => 1},
+    2015 => { U16 => 1, U20 => 1},
+  },
+  'Taiwan Practice' =>
+  {
+    2007 => { U20 => 1},
+  },
+  'White House Juniors' => 
+  {
+    2006 => { U20 => 1},
+    2007 => { U20 => 1},
+    2008 => { U20 => 1},
+    2009 => { U20 => 1},
+    2010 => { U20 => 1},
+    2011 => { U20 => 1},
+    2012 => { U20 => 1},
+    2014 => { U20 => 1},
+    2015 => { U20 => 1},
+  },
+);
+
 my %ORIGIN_ACCEPTS = (
   # Says Youngsters in the team, but is Open tournament
   # (for example)
+  'Aegean Open Teams' => [
+    24034, 24046,
+    29284, 29332],
+  'Albena Open Teams' => [
+    45721],
+  'Alex Nurdin Cup' => [
+    19897, 19922, 19952],
+  'ArboNed Team Cup' => [
+     6471,  6472,  6473],
+  'Asenovgrad Open Teams' => [
+    39259],
+  'Azores Open Teams' => [
+    20287, 20288, 20299,
+    25644, 25646, 25649, 25668, 25678,
+    30503,
+    35824],
+  'Balkan Friendship Open Teams' => [
+     2173],
+  'Balkan Open Teams' => [
+    30575, 30590],
+  'Bolivian Open Teams' => [
+    30864, 30882, 31017],
   'Bonn Nations Cup' => [
      2637,
      8891,
      9846],
+  'Danish Open Teams' => [
+    19140, 19147, 19161, 19174,
+    29203, 29204, 29214, 29216, 29221, 29222,
+    34375],
+  'Danish Open Team Trials' => [
+    13619, 13624, 13634, 13640, 13647, 13654, 13663, 13671, 13676],
+  'European Transnational Open Teams' => [
+     4660,
+    18883, 18885, 18912, 18940, 18946, 18950],
+  'European Winter Games' => [
+    43148, 43167, 43173, 43183, 43194],
+  'Forest Trophy' => [
+    18138, 18142, 18147],
+  'Gabrial UI Bastaman Cup' => [
+     1276,  1277,
+    14815, 14835],
+  'Geologi Cup' => [
+     3673,  3674,
+    12213, 12219, 12235,
+    16228,
+    24629,
+    29601, 29609,34404],
   'German Open Teams' => [
+    19909, 19913,
     46399],
+  'German Team Trophy' => [
+    18396,
+    23413, 23441, 23352, 23373,
+    28022, 28030, 28044, 28047, 28063,
+    33282,
+    38526,
+    44382],
+  'Hong Kong Inter-City Bridge Championships' => [
+    45876],
   'Hungary Exhibition' => [
       719,  720,  722,  723,  724],
+  'Iceland Express Teams' => [
+    16611],
   'IMSA Elite Women Teams' => [
     30778],
+  'Indonesian Inter-Club Championship' => [
+    35550, 35559, 35582, 35589,
+    44635, 44638, 44639, 44644, 44649, 44651, 44664, 44665, 44667,
+    44669, 44670, 44672, 44673, 44678, 44762, 44767],
+  'Israel Open Trials' => [
+    22150, 22172, 22177, 22190, 22205, 22213],
   'Italy Friendly' => [
     41430, 41433],
+  "Kepri Governor's Cup" => [
+     4116,
+     8441,  8442,  8444,  8445,  8450,  8453,  8454,  8461,  8465,
+    10616, 10617, 10631, 10634, 10645, 10652,
+    15820,
+    19330, 19337,
+    35169, 15178, 35203,
+    40703, 40716, 40752, 40783, 40789,
+    46307, 46310, 46312],
+  'Krishnapatnam Port National Masters' => [
+    46272, 46281, 46282, 46283, 46284],
+  'Lederer Memorial Trophy' => [
+     2178,  2181,
+     3775,  3779,
+     8512,  8514,
+    31021, 31048,
+    37770, 37779,
+    43442, 43496],
+  'Menpora-Pertamina Cup' => [
+    41513, 41528, 41551, 41555, 41559, 41587, 41591],
+  'Mersin Patton Open Teams' => [
+    35420, 35428, 35431],
+  'NEC Cup' => [
+     3086,
+     8134,
+     9051,  9053,  9056,  9061,  9062,  9063,  9066,
+    12639, 12644, 12653,
+    16661,
+    21884, 21885, 21890, 21891, 21894, 21907, 21908, 21914, 21921,
+    21925,
+    27725, 27727, 27728, 27737, 27746, 27755, 27757, 27758, 27760,
+    27761, 27762, 27769, 27772, 27773, 27778,
+    32251, 32263, 32271, 32275, 32276, 32278, 32282,
+    37560, 37563, 37567, 37570, 37573],
+  'Norway Practice' => [
+    22211, 22214],
+  'Norwegian Open Teams' => [
+    34796, 34798],
+  'Norwegian Swiss Teams' => [
+     2573],
   'Pan Arab Inter-Club Championship' => [
     31174],
+  'Olrud Easter Swiss Teams' => [
+     3808,  3809,  3811,
+     8534,
+    13253,
+    17448],
+  'Patton de Monaco' => [
+     4420,  4421,  4423,  4428,  4430,
+    11487,
+    25707, 25709, 25716,
+    30792, 30793],
+  'Plovdiv Open Teams' => [
+    13620, 13641,
+    23118, 23119, 23137, 23140, 23145, 23153, 23155, 23174, 23177,
+    23181,
+    38566, 38571, 38585],
+  'Pula Open Teams' => [
+     3631, 
+     5652,
+    25299],
+  'Puutalo Open' => [
+     2926],
+  'Rosenblum Cup' => [
+    36069, 36072, 36081],
+  'Semen Padang Cup' => [
+    24083, 24086, 24089, 24092, 24096],
+  'Singapore Open Teams' => [
+     3380,  3381,  3382,  3383],
+  'Slava Cup' => [
+    43270, 43305, 43336, 43355, 43363, 43373],
+  'Stara Zagora Open Teams' => [
+    20362, 20367, 20370, 20371, 20379, 20370, 20379, 20386, 20394],
+  'Swedish Open Teams' => [
+    44479, 44480, 44485, 44486, 44495, 44497, 44509, 44518],
+  'Swiss Cup' => [
+    45208, 45214, 45216,45217],
+  'Swiss Open Teams' => [
+    44286, 44306, 44310, 44315],
+  'Telkom Indonesia Open' => [
+    14538, 14544, 14569, 14570, 14574,
+    19082,
+    22338, 22340, 22349,
+    27779,
+    33869, 33878, 33883, 33904, 33950,
+    42046, 42048, 42053, 42059, 42067, 42070, 42093, 42109],
   'Teltscher Trophy' => [
      9946,  9964,  9988,  9995,
     39014,
     44818, 44830, 44843, 44849],
   'The Hague Bridge Experience' => [
     46355],
+  'Torneo di Roma' => [
+    30729, 30743, 30770],
+  'Towns Cup' => [
+     2126,  2127,
+     9944,  9952,
+    18204, 18205,
+    33771,
+    44900],
+  'White House Top 16' => [
+     1329],
+  'Yeh Bros Cup' => [
+     9119,  9120,  9133,
+    27796, 27798, 27800, 27806, 27807, 27808, 27810, 27813],
 );
 
 my %ORIGIN_FLAT_LIST;
@@ -336,5 +553,24 @@ sub zone_country_ok
   return (exists $ZONE_COMPATIBILITY{$zone}{$country});
 }
 
+
+sub age_special
+{
+  my ($tname, $year, $value) = @_;
+  return 
+    exists $AGE_SPECIAL{$tname} &&
+    exists $AGE_SPECIAL{$tname}{$year} &&
+    exists $AGE_SPECIAL{$tname}{$year}{$value};
+}
+
+
+sub gender_special
+{
+  my ($tname, $year, $value) = @_;
+  return 
+    exists $GENDER_SPECIAL{$tname} &&
+    exists $GENDER_SPECIAL{$tname}{$year} &&
+    exists $GENDER_SPECIAL{$tname}{$year}{$value};
+}
 
 1;

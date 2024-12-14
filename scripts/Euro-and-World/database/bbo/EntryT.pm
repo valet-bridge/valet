@@ -998,8 +998,7 @@ sub check_origin
     for my $field (sort keys %{$self->{$team}})
     {
       next if OGAcorr::origin_team_field_ok($origin, $field);
-      # next if $field eq 'AGE' || $field eq 'GENDER'; 
-      # TODO Comment out later
+      next if $field eq 'AGE' || $field eq 'GENDER'; 
 
       my $tname = $header->{TOURNAMENT_NAME} // '';
       if ($tname &&
@@ -1009,6 +1008,7 @@ sub check_origin
       }
       elsif (! $tname && OGAcorr::origin_number_fixable($self->bbono()))
       {
+        die "UNTOUCHED?";
         # Probably OK.
       }
       elsif ($tname && 
@@ -1061,9 +1061,49 @@ sub check_zone
 }
 
 
+sub check_gender_age
+{
+  my ($self, $header, $chapter) = @_;
+
+  my $tname = $header->{TOURNAMENT_NAME} // '';
+  my $year = $chapter->{YEAR} // '';
+
+  return if OGAcorr::origin_number_fixable($self->bbono());
+
+  for my $field (qw(GENDER AGE))
+  {
+    next unless exists $header->{$field};
+    my $header_value = $header->{$field};
+
+    for my $team (qw(TEAM1 TEAM2))
+    {
+      next unless exists $self->{$team}{$field};
+      if ($#{$self->{$team}{$field}} > 0)
+      {
+        warn $self->{BBONO} . 
+          ": $tname, multi-valued $field read from BBO";
+        next;
+      }
+      my $value = $self->{$team}{$field}[0];
+      
+      next if $field eq 'AGE' && 
+        OGAcorr::age_special($tname, $year, $value);
+      next if $field eq 'GENDER' && 
+        OGAcorr::gender_special($tname, $year, $value);
+
+      if ($value ne $header_value)
+      {
+        warn $self->{BBONO} . 
+          ": $tname, $value does not match header $header_value";
+      }
+    }
+  }
+}
+
+
 sub check_fields
 {
-  my ($self, $header) = @_;
+  my ($self, $header, $chapter) = @_;
 
   if (exists $header->{ORIGIN} &&
       OGAcorr::origin_checkable($header->{ORIGIN}))
@@ -1076,13 +1116,7 @@ sub check_fields
     $self->check_zone($header);
   }
 
-  if (exists $header->{GENDER})
-  {
-  }
-
-  if (exists $header->{AGE})
-  {
-  }
+  $self->check_gender_age($header, $chapter);
 }
 
 

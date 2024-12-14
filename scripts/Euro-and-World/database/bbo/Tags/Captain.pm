@@ -48,6 +48,7 @@ my @MULTI_WORDS =
   'Benedicte Cronier',
   'Bimal Sicka',
   'Birkir Jonsson',
+  'Brian Senior',
   'Brigitta Fischer',
   'Buddy Shah',
   'C.V. Rao',
@@ -661,7 +662,7 @@ my @SINGLE_WORDS = qw(
   Gaede Gagliardi Gaglietto Gardiner Galinsky Gallus 
   Gana Gandoglia Ganzer Garateguy Garbosi Garg Garoufalis Garrido 
   Garrone Garvey Garner Gartaganis Gary Gaspar Gaviard Gawel Gawrys 
-  Gelberg Geller Generosi Gentili Georgescu Gerber Gerli 
+  Gelberg Geller Genc Generosi Gentili Georgescu Gerber Gerli 
   Gero Gerrard Geyer Gezer Ghionis Giangkos Giannessi Gidman 
   Gierulski Gigliotti Gilboa Gill Ginnan Ginossar Gioia Gitelman 
   Giura Gladiator Glanger Glasson Glopson Gobbi Goded Gold 
@@ -1052,7 +1053,7 @@ my %SINGLE_TYPOS =
   Schüller => ['schueller'],
   Schwartz => ['schwarz'],
   Selcuk => ['Selçuk'],
-  Senior => ['serior'],
+  'Brian Senior' => ['serior'],
   'Simon Gillis' => ['gillis'],
   Simson => ['simso'],
   Sinclair => ['sýnclaýr'],

@@ -22,49 +22,55 @@ my %MEETS_NORDIC =
   {
     %GLOBAL,
     ORIGIN => 'International',
-    AGE => 'U26',
     GENDER => 'Open',
 
     EDITIONS => 
     {
       '2009' =>
       {
+        AGE => 'U26',
         YEAR => 2009,
         DATE_START => '2009-04-09',
         DATE_END => '2009-04-12'
       },
       '2010' =>
       {
+        AGE => 'U26',
         YEAR => 2010,
         DATE_START => '2010-04-03',
         DATE_END => '2010-04-04'
       },
       '2011' =>
       {
+        AGE => 'U25',
         YEAR => 2011,
         DATE_START => '2011-04-21',
         DATE_END => '2011-04-24'
       },
       '2012' =>
       {
+        AGE => 'U26',
         YEAR => 2012,
         DATE_START => '2012-04-07',
         DATE_END => '2012-04-08'
       },
       '2013' =>
       {
+        AGE => 'U25',
         YEAR => 2013,
         DATE_START => '2013-03-28',
         DATE_END => '2013-03-31'
       },
       '2015' =>
       {
+        AGE => 'U25',
         YEAR => 2015,
         DATE_START => '2015-04-04',
         DATE_END => '2015-04-06'
       },
       '2016' =>
       {
+        AGE => 'U26',
         YEAR => 2016,
         DATE_START => '2016-03-26',
         DATE_END => '2016-03-27'

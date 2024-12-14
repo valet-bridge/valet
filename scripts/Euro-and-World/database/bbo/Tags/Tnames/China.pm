@@ -27,6 +27,7 @@ my @MULTI_WORDS =
   'Chinese Mixed Teams',
   'Chinese Open Teams',
   'Chinese Open Trials',
+  'Chinese Women First League',
   'Chinese Women Teams',
   'Chung Hua Cup',
   'Cross Strait Invitational',
@@ -63,10 +64,7 @@ my %MULTI_TYPOS =
   'China Friend City Senior Teams' => [
     'china friend city senior team tournament'],
   'Chinese First League' => [
-    'china bridge club championship',
     'china first league',
-    'chinese club championship',
-    'club championships china',
     'national club league china',
     'national club league',
     'the national class a club league'],

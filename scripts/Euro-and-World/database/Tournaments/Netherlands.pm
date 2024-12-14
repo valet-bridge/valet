@@ -1222,7 +1222,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2009' =>
       {
-        AGE => 'U26',
+        AGE => 'U25',
         CHAPTERS =>
         {
           'C0' => 
@@ -1253,7 +1253,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2010' =>
       {
-        AGE => 'U26',
+        AGE => 'U25',
         CHAPTERS =>
         {
           'C0' => 
@@ -1284,7 +1284,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2011' =>
       {
-        AGE => 'U26',
+        AGE => 'U25',
         CHAPTERS =>
         {
           'C0' => 
@@ -1315,7 +1315,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2012' =>
       {
-        AGE => 'U26',
+        AGE => 'U25',
         CHAPTERS =>
         {
           'C0' => 
@@ -1347,7 +1347,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2013' =>
       {
-        AGE => 'U26',
+        AGE => 'U25',
         CHAPTERS =>
         {
           'C0' => 
@@ -1378,7 +1378,7 @@ my %TOURNAMENTS_NETHERLANDS =
       },
       '2014' =>
       {
-        AGE => 'U26',
+        AGE => 'U25',
         CHAPTERS =>
         {
           'C0' => 

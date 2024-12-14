@@ -1815,6 +1815,50 @@ my %TOURNAMENTS_ASIA =
     }
   },
 
+  'Asia Junior Teams Cup' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U26',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        MEET => 'Asia Cup',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            MOVEMENT => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
+            DATE_START => '2014-06-13',
+            DATE_END => '2014-06-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-06-21',
+            DATE_END => '2014-06-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-06-22',
+            DATE_END => '2014-06-22'
+          } 
+        }
+      },
+    }
+  },
+
   'Asia Open Teams Cup' =>
   {
     FORM => 'Teams',
@@ -1874,6 +1918,50 @@ my %TOURNAMENTS_ASIA =
     }
   },
 
+  'Asia Senior Teams Cup' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Seniors',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        MEET => 'Asia Cup',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            MOVEMENT => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
+            DATE_START => '2014-06-13',
+            DATE_END => '2014-06-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-06-21',
+            DATE_END => '2014-06-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-06-22',
+            DATE_END => '2014-06-22'
+          } 
+        }
+      },
+    }
+  },
+
   'Asia Women Teams Cup' =>
   {
     FORM => 'Teams',
@@ -1895,6 +1983,38 @@ my %TOURNAMENTS_ASIA =
             major => 'ROUND',
             DATE_START => '2010-08-30',
             DATE_END => '2010-09-05'
+          } 
+        }
+      },
+      '2014' =>
+      {
+        MEET => 'Asia Cup',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            MOVEMENT => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
+            DATE_START => '2014-06-13',
+            DATE_END => '2014-06-20'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-06-21',
+            DATE_END => '2014-06-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-06-22',
+            DATE_END => '2014-06-22'
           } 
         }
       },

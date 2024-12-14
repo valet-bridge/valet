@@ -1610,6 +1610,25 @@ my %TOURNAMENTS_FRIENDLY =
       '2016C' =>
       {
         MEET => 'Practice Match',
+        MEET_TAG => '2016B',
+        ORIGIN => 'National',
+        GENDER => 'Women',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND',
+            DATE_START => '2016-04-16',
+            DATE_END => '2016-04-17'
+          },
+        }
+      },
+      '2016D' =>
+      {
+        MEET => 'Practice Match',
         MEET_TAG => '2016F',
         ORIGIN => 'National',
         GENDER => 'Open',
@@ -3523,7 +3542,7 @@ my %TOURNAMENTS_FRIENDLY =
         MEET => 'Practice Match',
         MEET_TAG => '2007D',
         GENDER => 'Open',
-        AGE => 'Open',
+        AGE => 'U25',
 
         CHAPTERS =>
         {
