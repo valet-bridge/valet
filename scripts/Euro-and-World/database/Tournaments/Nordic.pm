@@ -28,14 +28,14 @@ my %MEETS_NORDIC =
     {
       '2009' =>
       {
-        AGE => 'U26',
+        AGE => 'U25',
         YEAR => 2009,
         DATE_START => '2009-04-09',
         DATE_END => '2009-04-12'
       },
       '2010' =>
       {
-        AGE => 'U26',
+        AGE => 'U25',
         YEAR => 2010,
         DATE_START => '2010-04-03',
         DATE_END => '2010-04-04'
@@ -63,7 +63,7 @@ my %MEETS_NORDIC =
       },
       '2015' =>
       {
-        AGE => 'U25',
+        AGE => 'U26',
         YEAR => 2015,
         DATE_START => '2015-04-04',
         DATE_END => '2015-04-06'
@@ -575,7 +575,6 @@ my %TOURNAMENTS_NORDIC =
       },
       '2013' =>
       {
-        # TODO
         MEET => 'Nordic Team Championship',
         CHAPTERS =>
         {
@@ -584,6 +583,20 @@ my %TOURNAMENTS_NORDIC =
             YEAR => 2013,
             DATE_START => '2013-05-24',
             DATE_END => '2013-05-26'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        MEET => 'Nordic Team Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'ROUND',
+            DATE_START => '2015-05-21',
+            DATE_END => '2015-05-24'
           } 
         }
       },

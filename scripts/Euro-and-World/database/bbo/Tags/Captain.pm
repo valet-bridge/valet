@@ -216,6 +216,7 @@ my @MULTI_WORDS =
   'Maria João Lara',
   'Mariana Leitão',
   'Mariana Nogueira',
+  'Marianne Homme',
   'Mark Micha',
   'Maxim Henbest',
   'Migry Zur-Campanile',

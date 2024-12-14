@@ -236,6 +236,44 @@ my %TOURNAMENTS_HONGKONG =
 
     EDITIONS =>
     {
+      '2014' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2014-07-30',
+            DATE_END => '2014-07-31'
+          },
+          'C1' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-01',
+            DATE_END => '2014-08-01'
+          },
+          'C2' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-02',
+            DATE_END => '2014-08-03'
+          },
+          'C3' => 
+          {
+            YEAR => 2014,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-08-03',
+            DATE_END => '2014-08-03'
+          } 
+        }
+      },
       '2016' =>
       {
         CHAPTERS =>
