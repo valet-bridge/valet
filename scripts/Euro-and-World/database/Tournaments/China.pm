@@ -170,6 +170,36 @@ my %MEETS_CHINA =
     }
   },
 
+  'Chinese Team Championships' =>
+  {
+    EDITIONS =>
+    {
+      '2007' =>
+      {
+        YEAR => 2007,
+        DATE_START => '2007-04-15',
+        DATE_END => '2007-04-16'
+      },
+    }
+  },
+
+  'JPD Cup' =>
+  {
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2006' =>
+      {
+        YEAR => 2006,
+        DATE_START => '2006-03-29',
+        DATE_END => '2006-03-31'
+      },
+    }
+  },
+
 );
 
 my %TOURNAMENTS_CHINA =
@@ -969,6 +999,7 @@ my %TOURNAMENTS_CHINA =
     {
       '2007' =>
       {
+        MEET => 'Chinese Team Championships',
         CHAPTERS =>
         {
           'C0' => 
@@ -1086,6 +1117,7 @@ my %TOURNAMENTS_CHINA =
     {
       '2007' =>
       {
+        MEET => 'Chinese Team Championships',
         CHAPTERS =>
         {
           'C0' => 
@@ -1871,12 +1903,9 @@ my %TOURNAMENTS_CHINA =
     }
   },
 
-  'JPD Cup' =>
+  'JPD Open Cup' =>
   {
     %GLOBAL,
-    ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
@@ -1884,6 +1913,48 @@ my %TOURNAMENTS_CHINA =
     {
       '2006' =>
       {
+        MEET => 'JPD Cup',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2006,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2006-03-29',
+            DATE_END => '2006-03-29'
+          },
+          'C1' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Semifinal',
+            DATE_START => '2006-03-30',
+            DATE_END => '2006-03-30'
+          },
+          'C2' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2006-03-31',
+            DATE_END => '2006-03-31'
+          } 
+        }
+      },
+    }
+  },
+
+  'JPD Women Cup' =>
+  {
+    %GLOBAL,
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2006' =>
+      {
+        MEET => 'JPD Cup',
         CHAPTERS =>
         {
           'C0' => 

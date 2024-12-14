@@ -16,7 +16,9 @@ my @MULTI_WORDS =
 (
   'All China Games',
   'China Elite Tournament',
-  'Chinese Club Championships'
+  'Chinese Club Championships',
+  'Chinese Team Championships',
+  'JPD Cup'
 );
 
 my %MULTI_TYPOS =
@@ -31,6 +33,8 @@ my %MULTI_TYPOS =
     'china bridge club championship',
     'chinese club championship',
     'club championships china'],
+  'Chinese Team Championships' => [
+    'ccba championships'],
 );
 
 my %SINGLE_TYPOS =

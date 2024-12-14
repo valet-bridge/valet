@@ -63,7 +63,7 @@ my %MEETS_NORDIC =
       },
       '2015' =>
       {
-        AGE => 'U26',
+        AGE => 'U25',
         YEAR => 2015,
         DATE_START => '2015-04-04',
         DATE_END => '2015-04-06'

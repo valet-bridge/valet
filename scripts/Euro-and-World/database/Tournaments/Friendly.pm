@@ -2647,32 +2647,13 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2007,
-            major => 'ROUND',
+            major => 'SESSION',
             DATE_START => '2007-05-05',
             DATE_END => '2007-05-06'
           } 
         }
       },
       '2007E' =>
-      {
-        MEET => 'Practice Match',
-        MEET_TAG => '2007I',
-        CLUB => "'t Onstein",
-        GENDER => 'Open',
-        AGE => 'Open',
-
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2007,
-            major => 'SESSION',
-            DATE_START => '2007-06-05',
-            DATE_END => '2007-06-05'
-          } 
-        }
-      },
-      '2007F' =>
       {
         MEET => 'Practice Match',
         MEET_TAG => '2007M',
@@ -2691,7 +2672,7 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
-      '2007G' =>
+      '2007F' =>
       {
         MEET => 'Practice Match',
         MEET_TAG => '2007O',

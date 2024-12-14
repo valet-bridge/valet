@@ -93,7 +93,7 @@ my @LOCAL_SUBS =
     'United States Seniors Bridge Championship', 
     CORR => 'US Senior Trials' },
   { START => 3708, END => 3728, TEXT => 'CCBA Championships', 
-    CORR => 'Chinese Open Teams' },
+    CORR => 'Chinese Team Championships' },
   { START => 3729, END => 3738, TEXT => 'Stara Zagora 2007 Open Teams',
     CORR => 'Stara Zagora Open Teams 2007' },
   { START => 4118, END => 4133, TEXT => 'GP of Poland\s*-?\s*BAM',

@@ -474,6 +474,31 @@ my %TOURNAMENTS_ASIA =
           } 
         }
       },
+      '2011' =>
+      {
+        MEET => 'APBF Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'MATCH',
+            DATE_START => '2011-06-15',
+            DATE_END => '2011-06-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Playoff',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2011-06-23',
+            DATE_END => '2011-06-24'
+          } 
+        }
+      },
       '2012' =>
       {
         MEET => 'APBF Championships',
@@ -1039,6 +1064,31 @@ my %TOURNAMENTS_ASIA =
           } 
         }
       },
+      '2011' =>
+      {
+        MEET => 'APBF Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'MATCH',
+            DATE_START => '2011-06-15',
+            DATE_END => '2011-06-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Playoff',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2011-06-23',
+            DATE_END => '2011-06-24'
+          } 
+        }
+      },
       '2012' =>
       {
         MEET => 'APBF Championships',
@@ -1243,6 +1293,31 @@ my %TOURNAMENTS_ASIA =
           } 
         }
       },
+      '2011' =>
+      {
+        MEET => 'APBF Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'MATCH',
+            DATE_START => '2011-06-15',
+            DATE_END => '2011-06-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Playoff',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2011-06-23',
+            DATE_END => '2011-06-24'
+          } 
+        }
+      },
       '2012' =>
       {
         MEET => 'APBF Championships',
@@ -1379,6 +1454,31 @@ my %TOURNAMENTS_ASIA =
             minor => 'ROUND',
             DATE_START => '2010-05-25',
             DATE_END => '2010-05-29'
+          } 
+        }
+      },
+      '2011' =>
+      {
+        MEET => 'APBF Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            minor => 'MATCH',
+            DATE_START => '2011-06-15',
+            DATE_END => '2011-06-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Playoff',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2011-06-23',
+            DATE_END => '2011-06-24'
           } 
         }
       },

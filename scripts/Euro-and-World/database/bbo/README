@@ -1,5 +1,3 @@
-- When EntryT with hint prunes right, delete TEAM?_
-- Fix other AGE, GENDER (add tester to EntryT)
 - Look at rare entry fields (eliminate?)
 
 Add an 'ignore' to Tournament, so ignore => 'GROUP'.

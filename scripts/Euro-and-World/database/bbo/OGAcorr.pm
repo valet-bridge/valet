@@ -11,6 +11,10 @@ use open ':std', ':encoding(UTF-8)';
 # Entire tournaments where multiple ages or genders explicitly play
 # against each other (as ages and genders).
 my %GENDER_SPECIAL = (
+  'Australia Practice' =>
+  {
+    2016 => { U25 => 1},
+  },
   'Denmark Practice' => 
   {
     2015 => { Women => 1},
@@ -47,11 +51,17 @@ my %GENDER_SPECIAL = (
 my %AGE_SPECIAL = (
   'Nordic Junior Teams' => 
   {
-    2005 => { U21 => 1},
-    2010 => { U21 => 1},
+    2005 => { U20 => 1},
+    2009 => { U20 => 1},
+    2010 => { U20 => 1},
     2011 => { U20 => 1},
     2013 => { U20 => 1},
     2015 => { U16 => 1, U20 => 1},
+  },
+  'Poland Practice' =>
+  {
+    2014 => { U15 => 1},
+    2016 => { Seniors => 1},
   },
   'Salo Midsummer Juniors Teams' =>
   {
@@ -92,10 +102,14 @@ my %ORIGIN_ACCEPTS = (
     19897, 19922, 19952],
   'ArboNed Team Cup' => [
      6471,  6472,  6473],
+  'Argentina Friendly' => [
+    17357, 17359, 17360],
   'ASEAN Open Club Teams' => [
     26291],
   'Asenovgrad Open Teams' => [
     39259],
+  'Australia Practice' => [
+    44913, 44915, 44919, 44923],
   'Azores Open Teams' => [
     20287, 20288, 20299,
     25644, 25646, 25649, 25668, 25678,
@@ -120,11 +134,15 @@ my %ORIGIN_ACCEPTS = (
     25729, 25730,
     30860,
     41447],
+  'Chile Practice' => [
+     9790],
   'China Elite Winter Teams' => [
     31160, 31170],
   'Chinese Inter-City Teams' => [
     19454,
     24543, 24554, 24559, 24600],
+  'Cliff Wake Challenge' => [
+    31945],
   'Commonwealth Nations Bridge Championships' => [
     15693, 15696,
     35346, 35376],
@@ -149,6 +167,12 @@ my %ORIGIN_ACCEPTS = (
      6987],
   'Forest Trophy' => [
     18138, 18142, 18147],
+  'France Friendly' => [
+     4789],
+  'France Practice' => [
+     2658,  2659,  2660,  2661,
+     3768,
+    44845],
   'Gabrial UI Bastaman Cup' => [
      1276,  1277,
     11895,
@@ -240,6 +264,8 @@ my %ORIGIN_ACCEPTS = (
     27761, 27762, 27769, 27772, 27773, 27778,
     32251, 32263, 32271, 32275, 32276, 32278, 32282,
     37560, 37563, 37567, 37570, 37573],
+  'Netherlands Practice' => [
+    20249, 20250, 20258, 20260, 20263, 20264],
   'Norway Practice' => [
     22211, 22214],
   'Norwegian Open Teams' => [
@@ -277,6 +303,8 @@ my %ORIGIN_ACCEPTS = (
     25299],
   'Puutalo Open' => [
      2926],
+  'Rector University of Brawijaya Cup' => [
+    28662],
   'Rosenblum Cup' => [
     36069, 36072, 36081],
   'Semen Padang Cup' => [
