@@ -219,6 +219,7 @@ my @MULTI_WORDS =
   'Marianne Homme',
   'Mark Micha',
   'Maxim Henbest',
+  'Michael Cornell',
   'Migry Zur-Campanile',
   'Miguel Lima',
   'Miguel A. Ribeiro',
@@ -234,6 +235,7 @@ my @MULTI_WORDS =
   'Moni Diba',
   'Morris Chang',
   'Morten Jepsen',
+  'Murray Green',
   'Møller Jepsen',
   'N. Chakraborty',
   'Nabil Chaker',
@@ -670,7 +672,7 @@ my @SINGLE_WORDS = qw(
   Goldberg Goldenfield Goldman Goldstein Golebiowski Gomerov Gomes 
   Goodman Goraco Gordon Goren Gosney Gotard Gottlieb Goyal Göthe 
   Grabel Grabowska Gradignan Gradovsky Grainger Gramberg Granda
-  Green Greenberg Greenwood Grenside Grenthe Griffey Griffin Griffoni 
+  Greenberg Greenwood Grenside Grenthe Griffey Griffin Griffoni 
   Griffiths Grimeton Grigoriu Grimaldi Grisho Groenenboom Gromov Gromova 
   Gross Gromöller Gronaldo Grue Gruia Grunt Gruschow 
   Gruszczynski Grzelak Gu Guariglia Gudkov Gue Gueglio Guermani 

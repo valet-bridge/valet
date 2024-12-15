@@ -205,7 +205,6 @@ my %SINGLE_TYPOS =
   'Chien Kuo Senior High School' => ['ckbc'],
   'China Central University of Business' => ['ccub'],
   'Chung Hua University' => ['chu'],
-  'Cornell University' => ['cornell'],
   'Chung Hwa Medical and Pharmaceutical University' => ['cmu'],
   'Diponegoro University' => ['undip'],
   'École Polytechnique' => ['polytech'],

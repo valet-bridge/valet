@@ -41,7 +41,10 @@ my %IGNORE_MEETS = (
     'FISU World University Championships',
   'Bologna Trophy|2014|C0' => 'Italy Cup',
   'Torneo di Roma|2014|C0' => 'Italy Cup',
+  'Torneo di Roma|2014|C1' => 'Italy Cup',
+  'Torneo di Roma|2014|C2' => 'Italy Cup',
   'Viareggio Cup|2005|C0' => 'Italian Club Championship',
+  'Pahlawan Cup|2014|SINGLE' => 'Indonesian Student Championship',
   'Polish Individual Championship|2012A|C0' => 'Polish Championships',
   # This is true, but too hard to track down other Open Trials.
   'Polish Open Trials|2004|SINGLE' => 'Luczniczka Meeting',

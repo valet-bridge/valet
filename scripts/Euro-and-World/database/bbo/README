@@ -23,15 +23,12 @@ Quick script to make histogram of a tag (ORIGIN) in t.
 Are pairs tournaments even useable?  Do player names work?
 6629 has a long list of player names
 
-6758 Green is color, not captain
-
 Could have a more compact BOARD format when all is accounted for
 
 When matching up
 - If there are counters in BBO, must be some in headers too
 - If there are major/minor, there must be counters too (1+, 2+)
-- TEAM?_FORM can potentially go away if perfectly matched
-  If nothing left (22039), so be it
+  If nothing left in TEAM (22039), so be it
 
 When matched up
 - Tname date ranges as tight as possible? (Deviations noted but OK)
@@ -42,9 +39,6 @@ When matched up
 - Multiple attempts at same segment of a match
   23000, 23004, 23005 (candidates for skip files)
 - If only countries, should be International
-
-Cornell is not Cornell University, 27126
-ONly place 24529 34549
 
 ---
 
