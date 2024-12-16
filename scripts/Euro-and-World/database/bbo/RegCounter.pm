@@ -116,9 +116,41 @@ sub has_of_structure
 }
 
 
-sub analyze
+sub make_pre_map
 {
-  my ($self) = @_;
+  # Not really a class function.
+  my ($self, $chapter_header, $pre_map) = @_;
+
+  if (exists $chapter_header->{ignore})
+  {
+    my @a = split /\|/, $chapter_header->{ignore};
+    for my $ignore (@a)
+    {
+      $pre_map->{$ignore} = 'IGNORE';
+    }
+  }
+
+  for my $f (qw(major minor))
+  {
+    next unless exists $chapter_header->{$f};
+    my @a = split /\|/, $chapter_header->{$f};
+    next unless $#a > 0;
+    for my $i (1 .. $#a)
+    {
+      $pre_map->{$a[$i]} = $a[0];
+    }
+
+    $chapter_header->{$f} = $a[0];
+  }
+}
+
+
+sub get_leading_top_number
+{
+  my ($self, $top_no) = @_;
+
+  # Find the number of fields per BBONO that occurs the most.
+  # Return 0 if there are no fields, 1 otherwise.
 
   my @hist;
   for my $bbono (keys %{$self->{BBOCOUNT}})
@@ -126,20 +158,29 @@ sub analyze
     $hist[$self->{BBOCOUNT}{$bbono}]++;
   }
 
-  # Find the number of fields per BBONO that occurs most.
   my $top_count = 0;
-  my $top_no;
   for my $i (0 .. $#hist)
   {
     next unless exists $hist[$i];
     if ($hist[$i] > $top_count)
     {
       $top_count = $hist[$i];
-      $top_no = $i;
+      $$top_no = $i;
     }
   }
 
-  if ($top_count == 0)
+  return ($top_count > 0);
+
+
+}
+
+
+sub analyze
+{
+  my ($self) = @_;
+
+  my $top_no;
+  if (! $self->get_leading_top_number(\$top_no))
   {
     $self->{FORM} = 'EMPTY';
     return;
@@ -391,7 +432,7 @@ sub str_analysis
   for my $i (0 .. $num_fields-1)
   {
     my $field = $self->{ANALYSIS}[$i];
-    $s .= "FIELD $i: $field";
+    $s .= "FIELD $i count " . $self->{COUNTER}{$field}{COUNT} .  ": $field";
     if ($self->{OF}{$field})
     {
       $s .= " (of " . $self->{OF}{$field} . ")";

@@ -1311,7 +1311,6 @@ my %TOURNAMENTS_BULGARIA =
           {
             YEAR => 2009,
             STAGE => 'Final',
-            major => 'SEGMENT',
             DATE_START => '2009-03-01',
             DATE_END => '2009-03-01'
           } 
@@ -1375,7 +1374,6 @@ my %TOURNAMENTS_BULGARIA =
           {
             YEAR => 2010,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
             DATE_START => '2010-05-30',
             DATE_END => '2010-05-30'
           },
@@ -1383,7 +1381,6 @@ my %TOURNAMENTS_BULGARIA =
           {
             YEAR => 2010,
             STAGE => 'Final',
-            major => 'SEGMENT',
             DATE_START => '2010-05-30',
             DATE_END => '2010-05-30'
           } 
@@ -1690,7 +1687,6 @@ my %TOURNAMENTS_BULGARIA =
           {
             YEAR => 2006,
             STAGE => 'Final',
-            major => 'SEGMENT',
             DATE_START => '2006-10-17',
             DATE_END => '2006-10-17'
           },
@@ -1838,7 +1834,6 @@ my %TOURNAMENTS_BULGARIA =
           {
             YEAR => 2012,
             STAGE => 'Final',
-            major => 'SEGMENT',
             DATE_START => '2012-10-07',
             DATE_END => '2012-10-07'
           },

@@ -918,15 +918,23 @@ sub update_tournaments
 }
 
 
-sub counter_list_contains
+sub apply_pre_map
 {
-  my ($self, $tag, $value) = @_;
+  my ($self, $pre_map) = @_;
 
-  for my $v (@{$self->{COUNTER}{$tag}})
+  for my $mappable (keys %$pre_map)
   {
-    return 1 if ($v eq $value);
+    if (exists $self->{COUNTER}{$mappable})
+    {
+      if ($pre_map->{$mappable} ne 'IGNORE')
+      {
+        $self->{COUNTER}{$pre_map->{$mappable}} =
+          $self->{COUNTER}{$mappable};
+      }
+
+      delete $self->{COUNTER}{$mappable};
+    }
   }
-  return 0;
 }
 
 

@@ -1935,7 +1935,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2015,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2015-11-29',
             DATE_END => '2015-11-30'
           },
@@ -1943,7 +1943,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2015,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2015-11-30',
             DATE_END => '2015-11-30'
           } 
@@ -3717,7 +3717,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2010,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2010-07-19',
             DATE_END => '2010-07-23'
           } 
@@ -4606,7 +4606,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2010,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2010-07-19',
             DATE_END => '2010-07-23'
           } 

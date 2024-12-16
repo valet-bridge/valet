@@ -182,6 +182,7 @@ my %TOURNAMENTS_NETHERLANDS =
             YEAR => 2002,
             major => 'ROUND',
             minor => 'MATCH',
+            ignore => 'GROUP',
             DATE_START => '2002-05-23',
             DATE_END => '2002-05-26'
           } 

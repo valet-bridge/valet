@@ -1,3 +1,9 @@
+New fields
+- ignore
+- major, minor can have | format
+
+
+
 - Look at rare entry fields (eliminate?)
 
 Add an 'ignore' to Tournament, so ignore => 'GROUP'.
@@ -6,9 +12,6 @@ That way there should be the right number of fields.
 Add 'cluster'.  Must then be present?!
 
 Add automatic clustering of e.g. Semifinal.
-
-Add ability to hardwire STAGE/MOVEMENT:
-STAGE => 'Segment|Session|Set'
 
 If MOVEMENT/STAGE, must be present in chapter header.
 If in chapter header, must be in at least one BBO?

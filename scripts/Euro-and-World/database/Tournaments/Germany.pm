@@ -3023,7 +3023,6 @@ my %TOURNAMENTS_GERMANY =
           {
             YEAR => 2009,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
             DATE_START => '2009-04-25',
             DATE_END => '2009-04-25'
           },

@@ -1313,7 +1313,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2011,
             STAGE => 'Rof16',
-            major => 'Round',
+            major => 'ROUND',
             DATE_START => '2011-09-23',
             DATE_END => '2011-09-23'
           },
@@ -1321,7 +1321,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2011,
             STAGE => 'Quarterfinal',
-            major => 'Round',
+            major => 'SEGMENT',
             DATE_START => '2011-09-23',
             DATE_END => '2011-09-23'
           },
@@ -1329,7 +1329,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2011,
             STAGE => 'Semifinal',
-            major => 'Round',
+            major => 'SEGMENT',
             DATE_START => '2011-09-23',
             DATE_END => '2011-09-23'
           },
@@ -1337,7 +1337,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2011,
             STAGE => 'Final',
-            major => 'Round',
+            major => 'SEGMENT',
             DATE_START => '2011-09-23',
             DATE_END => '2011-09-23'
           },
@@ -1391,7 +1391,6 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2014,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
             DATE_START => '2014-09-12',
             DATE_END => '2014-09-12'
           },
@@ -1430,7 +1429,6 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2015,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
             DATE_START => '2015-09-11',
             DATE_END => '2015-09-11'
           },
@@ -1438,7 +1436,6 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2015,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
             DATE_START => '2015-09-11',
             DATE_END => '2015-09-11'
           },
@@ -1446,7 +1443,6 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2015,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
             DATE_START => '2015-09-11',
             DATE_END => '2015-09-11'
           },

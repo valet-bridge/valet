@@ -751,7 +751,6 @@ my %TOURNAMENTS_CHINA =
           {
             YEAR => 2015,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
             DATE_START => '2015-08-01',
             DATE_END => '2015-08-01'
           },

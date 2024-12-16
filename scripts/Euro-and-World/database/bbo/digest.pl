@@ -103,7 +103,6 @@ my $num_matches = 0;
 my %hist_matches;
 
 my %data;
-my %data_new;
 my (@times, $t0);
 
 my $entryT = EntryT->new();
@@ -190,7 +189,7 @@ while ($entryT->read($fh))
   $times[4] += time() - $t0;
 
   $t0 = time();
-  $entryT->update_tournaments(\%data_new, $tname, $edition, $chapter,
+  $entryT->update_tournaments(\%data, $tname, $edition, $chapter,
     $header_entry, $chapter_entry);
   $times[5] += time() - $t0;
 
@@ -212,22 +211,22 @@ exit if $debug_flag;
 # Keep track of (tournament, entry) pairs for this purpose.
 my %te_seen;
 my %te_list;
-for my $date_start (keys %data_new)
+for my $date_start (keys %data)
 {
-  my $len = $#{$data_new{$date_start}};
+  my $len = $#{$data{$date_start}};
   if ($len > 0)
   {
-    @{$data_new{$date_start}} = sort
+    @{$data{$date_start}} = sort
     {
       $a->{TNAME} cmp $b->{TNAME} ||
       $a->{EDITION} cmp $b->{EDITION} ||
       $a->{CHAPTER} cmp $b->{CHAPTER}
-    } @{$data_new{$date_start}};
+    } @{$data{$date_start}};
   }
 
   for my $i (0 .. $len)
   {
-    my $datum = $data_new{$date_start}[$i];
+    my $datum = $data{$date_start}[$i];
     $te_seen{$datum->{TNAME}}{$datum->{EDITION}} = 0;
     push @{$te_list{$datum->{TNAME}}{$datum->{EDITION}}},
       { DATE_START => $date_start, 
@@ -236,14 +235,14 @@ for my $date_start (keys %data_new)
   }
 }
 
-for my $date_start (sort keys %data_new)
+for my $date_start (sort keys %data)
 {
-  if ($date_start eq '2015-10-30')
+  if ($date_start eq '2002-05-23')
   {
-    # print "HERE\n";
+    print "HERE\n";
   }
 
-  my $dlist = $data_new{$date_start};
+  my $dlist = $data{$date_start};
   for my $dno (0 .. $#$dlist)
   {
     my $datum = $dlist->[$dno];
@@ -257,12 +256,18 @@ for my $date_start (sort keys %data_new)
 
     for my $t_ref (@tlist)
     {
-      my $datum_t = $data_new{$t_ref->{DATE_START}}[$t_ref->{INDEX}];
+      my $datum_t = $data{$t_ref->{DATE_START}}[$t_ref->{INDEX}];
       print str_chapter($datum_t->{CHAPTER_REF});
 
       my $reg_counter = RegCounter->new();
+
+      # Deal with 'ignore' and '|' formats for 'major' and 'minor'.
+      my %pre_map;
+      $reg_counter->make_pre_map($datum_t->{CHAPTER_REF}, \%pre_map);
+
       for my $bbo (@{$datum_t->{BBOLIST}})
       {
+        $bbo->apply_pre_map(\%pre_map);
         $reg_counter->register($bbo, $datum_t->{CHAPTER_REF},
           $datum->{HEADER_REF}{TOURNAMENT_NAME});
       }

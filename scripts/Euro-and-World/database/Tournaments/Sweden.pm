@@ -1853,7 +1853,7 @@ my %TOURNAMENTS_SWEDEN =
           {
             YEAR => 2005,
             STAGE => 'Final',
-            major => 'ROUND',
+            major => 'SEGMENT',
             DATE_START => '2005-04-10',
             DATE_END => '2005-04-10'
           } 

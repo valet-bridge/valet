@@ -4234,7 +4234,6 @@ my %TOURNAMENTS_WORLD =
           {
             YEAR => 2000,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
             DATE_START => '2000-09-03',
             DATE_END => '2000-09-03'
           },
@@ -4242,7 +4241,6 @@ my %TOURNAMENTS_WORLD =
           {
             YEAR => 2000,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
             DATE_START => '2000-09-04',
             DATE_END => '2000-09-04'
           },
@@ -4363,7 +4361,6 @@ my %TOURNAMENTS_WORLD =
           {
             YEAR => 2000,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
             DATE_START => '2000-09-03',
             DATE_END => '2000-09-03'
           },
@@ -4371,7 +4368,6 @@ my %TOURNAMENTS_WORLD =
           {
             YEAR => 2000,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
             DATE_START => '2000-09-04',
             DATE_END => '2000-09-04'
           },

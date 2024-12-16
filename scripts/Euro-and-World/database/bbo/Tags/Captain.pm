@@ -555,7 +555,7 @@ my %MULTI_TYPOS =
   'Shree Priya' => ['sree priya'],
   'Sigurdur Vilhjalmsson' => ['sigurður vilhjálmss'],
   'Sinan Göksu' => ['sinan goksu'],
-  'Sofia Costa Pessoa' => ['s.pessoa'],
+  'Sofia Costa Pessoa' => ['s.pessoa', 'sofia pessoa'],
   'Sunil Machhar' => ['sunil machar', 'sunil macchar',
     'sunal macchar', 'sunil maccher', 'sunil.macchar', 's machhar'],
   'Sverrir Þórisson' => ['sverrir þ'],
