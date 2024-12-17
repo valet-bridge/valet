@@ -1,53 +1,36 @@
-New fields
-- ignore
-- major, minor can have | format
+We now have 'ignore' and major => 'SEGMENT|ROUND' syntaxes.
+Can add a groupon => 'GROUP', but have to fill in GROUP
+values for a lot of missing GROUP values sometimes.
+Can add a groupon => 'AUTO' which does e.g. a Semifinal.
 
+Consistencies:
+MOVEMENT/STAGE
+- If present, must be present in chapter header.
+- If in chapter header, must be in at least one BBO?
 
+Counters:
+- If there are counters in BBO, must be some in headers too
+- If there are major/minor, there must be counters too (1+, 2+)
+- Maybe there should never be counters left over
 
+Misc.
+- Multiple attempts at same segment of a match
+  23000, 23004, 23005 (candidates for skip files)
+- Tname date ranges as tight as possible? (Deviations noted but OK)
+- If only countries, should be International
 - Look at rare entry fields (eliminate?)
 
-Add an 'ignore' to Tournament, so ignore => 'GROUP'.
-That way there should be the right number of fields.
+Outputs:
+- Output in d of counters should be in order major, minor, others.
+- Could have a more compact BOARD format when all is accounted for
 
-Add 'cluster'.  Must then be present?!
-
-Add automatic clustering of e.g. Semifinal.
-
-If MOVEMENT/STAGE, must be present in chapter header.
-If in chapter header, must be in at least one BBO?
-
-Output in d of counters should be in order major, minor,
-others.
-
-Somehow unify all the field lists in Fields.pm
-
-Quick script to make histogram of a tag (ORIGIN) in t.
+Code:
+- Somehow unify all the field lists in Fields.pm
 
 Are pairs tournaments even useable?  Do player names work?
 6629 has a long list of player names
 
-Could have a more compact BOARD format when all is accounted for
-
-When matching up
-- If there are counters in BBO, must be some in headers too
-- If there are major/minor, there must be counters too (1+, 2+)
-  If nothing left in TEAM (22039), so be it
-
-When matched up
-- Tname date ranges as tight as possible? (Deviations noted but OK)
-- E.g. Semifinal could be split by match
-- GROUP could also be split on if it's in all the BBONO's
-  5318
-- #theoretical boards consistent within chapter? (16, 10, ...)
-- Multiple attempts at same segment of a match
-  23000, 23004, 23005 (candidates for skip files)
-- If only countries, should be International
-
----
-
-VERBOSE flag in RegCounter, for new countries or datasets.
-
-* Activate KDEBUG in Knowledge.pm
+* Activate KDEBUG in Knowledge.pm (still meaningful?)
 
 More general stuff
 ------------------

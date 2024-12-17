@@ -271,7 +271,9 @@ for my $date_start (sort keys %data)
         $reg_counter->register($bbo, $datum_t->{CHAPTER_REF},
           $datum->{HEADER_REF}{TOURNAMENT_NAME});
       }
-      $reg_counter->analyze();
+      $reg_counter->analyze(
+        $datum_t->{HEADER_REF},
+        $datum_t->{CHAPTER_REF});
       print $reg_counter->str_analysis() . "\n" if $VERBOSE;
 
       # This will use 'major' and 'minor' if present.

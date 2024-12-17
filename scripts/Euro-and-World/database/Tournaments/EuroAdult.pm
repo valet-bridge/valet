@@ -4184,7 +4184,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2007,
             STAGE => 'Rof32',
-            major => 'SEGMENT',
+            major => 'SEGMENT|HALF',
             DATE_START => '2007-06-25',
             DATE_END => '2007-06-25'
           },
@@ -4256,6 +4256,7 @@ my %TOURNAMENTS_EUROADULT =
             YEAR => 2009,
             STAGE => 'Rof16',
             major => 'SEGMENT',
+            ignore => 'TABLE',
             DATE_START => '2009-06-22',
             DATE_END => '2009-06-22'
           },
@@ -4272,6 +4273,7 @@ my %TOURNAMENTS_EUROADULT =
             YEAR => 2009,
             STAGE => 'Semifinal',
             major => 'SEGMENT',
+            ignore => 'TABLE',
             DATE_START => '2009-06-23',
             DATE_END => '2009-06-23'
           },
@@ -4365,6 +4367,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2013,
             STAGE => 'Rof16',
+            major => 'SEGMENT',
             DATE_START => '2013-06-24',
             DATE_END => '2013-06-24'
           },
@@ -4372,6 +4375,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2013,
             STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
             DATE_START => '2013-06-24',
             DATE_END => '2013-06-24'
           },
@@ -4379,6 +4383,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2013,
             STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2013-06-25',
             DATE_END => '2013-06-25'
           },
@@ -4393,6 +4398,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2013,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2013-06-25',
             DATE_END => '2013-06-25'
           },
@@ -5641,6 +5647,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2001,
             STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2001-06-17',
             DATE_END => '2001-06-30'
           },

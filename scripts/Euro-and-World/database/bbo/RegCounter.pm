@@ -177,7 +177,7 @@ sub get_leading_top_number
 
 sub analyze
 {
-  my ($self) = @_;
+  my ($self, $header, $chapter) = @_;
 
   my $top_no;
   if (! $self->get_leading_top_number(\$top_no))
@@ -227,6 +227,22 @@ sub analyze
     die "Top number $first_zero";
   }
 
+  my $num_counters_given = 0;
+  $num_counters_given++ if exists $chapter->{major};
+  $num_counters_given++ if exists $chapter->{minor};
+
+  if ($first_zero == 0 && $first_zero != $num_counters_given)
+  {
+    warn "\n\nWARN $first_zero tops, $num_counters_given expected";
+    warn $header->{TOURNAMENT_NAME};
+    warn $header->{YEAR};
+    for my $bbono (keys %{$self->{BBOCOUNT}})
+    {
+      warn "  BBONO $bbono";
+    }
+    warn "---";
+  }
+
   # Keep only the enough for the most frequent number of counters.
   $top_no = $first_zero;
   $self->{NUM_FIELDS} = $top_no;
@@ -254,6 +270,20 @@ sub analyze
       print "WARNING: Contradictory OF structure for '$field'\n";
     }
   }
+
+  if ($first_zero != $num_counters_given)
+  {
+    warn "\n\nWARN $first_zero tops, $num_counters_given expected";
+    warn $header->{TOURNAMENT_NAME};
+    warn $header->{YEAR};
+    warn $self->str_analysis();
+    for my $bbono (keys %{$self->{BBOCOUNT}})
+    {
+      warn "  BBONO $bbono";
+    }
+    warn "---";
+  }
+
 }
 
 

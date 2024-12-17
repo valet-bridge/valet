@@ -155,7 +155,7 @@ my %TOURNAMENTS_AFRICA =
           'SINGLE' => 
           {
             YEAR => 2007,
-            major => 'MATCH',
+            major => 'ROUND|MATCH',
             DATE_START => '2007-04-14',
             DATE_END => '2007-04-14'
           } 
@@ -199,7 +199,7 @@ my %TOURNAMENTS_AFRICA =
           'SINGLE' => 
           {
             YEAR => 2013,
-            major => 'ROUND',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2013-05-05',
             DATE_END => '2013-05-11'
           } 
@@ -279,7 +279,7 @@ my %TOURNAMENTS_AFRICA =
           'SINGLE' => 
           {
             YEAR => 2007,
-            major => 'MATCH',
+            major => 'ROUND|MATCH',
             DATE_START => '2007-04-14',
             DATE_END => '2007-04-14'
           } 
@@ -309,7 +309,7 @@ my %TOURNAMENTS_AFRICA =
           'SINGLE' => 
           {
             YEAR => 2013,
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2013-05-05',
             DATE_END => '2013-05-11'
           } 
@@ -349,6 +349,7 @@ my %TOURNAMENTS_AFRICA =
           'SINGLE' => 
           {
             YEAR => 2009,
+            major => 'SESSION',
             DATE_START => '2009-01-05',
             DATE_END => '2009-01-05'
           } 
@@ -374,6 +375,7 @@ my %TOURNAMENTS_AFRICA =
           'SINGLE' => 
           {
             YEAR => 2009,
+            major => 'SESSION',
             DATE_START => '2009-01-05',
             DATE_END => '2009-01-05'
           } 
@@ -399,6 +401,7 @@ my %TOURNAMENTS_AFRICA =
           'SINGLE' => 
           {
             YEAR => 2010,
+            major => 'SESSION',
             DATE_START => '2010-03-12',
             DATE_END => '2010-03-14'
           } 
@@ -412,6 +415,7 @@ my %TOURNAMENTS_AFRICA =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'SESSION',
             DATE_START => '2011-03-12',
             DATE_END => '2011-03-13'
           } 
@@ -437,6 +441,7 @@ my %TOURNAMENTS_AFRICA =
           'SINGLE' => 
           {
             YEAR => 2010,
+            major => 'SESSION|SEGMENT',
             DATE_START => '2010-03-17',
             DATE_END => '2010-03-17'
           } 
@@ -450,6 +455,7 @@ my %TOURNAMENTS_AFRICA =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'SESSION',
             DATE_START => '2011-03-16',
             DATE_END => '2011-03-17'
           } 

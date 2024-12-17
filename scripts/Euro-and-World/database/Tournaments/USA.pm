@@ -1952,6 +1952,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2001,
             STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2001-07-25',
             DATE_END => '2001-07-27'
           },
@@ -1959,6 +1960,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2001,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2001-07-27',
             DATE_END => '2001-07-28'
           } 
@@ -2022,7 +2024,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2006,
             STAGE => 'Rof64',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND|QUARTER',
             DATE_START => '2006-07-14',
             DATE_END => '2006-07-14'
           },
@@ -2086,7 +2088,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2007,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2007-07-23',
             DATE_END => '2007-07-24'
           },
@@ -2398,7 +2400,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2013,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2013-08-10',
             DATE_END => '2013-08-11'
           },
@@ -5316,8 +5318,8 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2005,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            minor => 'MATCH',
+            major => 'SEGMENT|QUARTER',
+            ignore => 'MATCH',
             DATE_START => '2005-03-18',
             DATE_END => '2005-03-19'
           },
@@ -5890,6 +5892,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2006,
             STAGE => 'Final',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2006-07-23',
             DATE_END => '2006-07-23'
           } 
@@ -5964,7 +5967,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2012,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2012-07-18',
             DATE_END => '2012-07-19'
           },

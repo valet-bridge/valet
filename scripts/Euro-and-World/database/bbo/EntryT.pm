@@ -928,6 +928,11 @@ sub apply_pre_map
     {
       if ($pre_map->{$mappable} ne 'IGNORE')
       {
+        if (exists $self->{COUNTER}{$pre_map->{$mappable}})
+        {
+          die "$self->{BBONO}: " . 
+            "Mapping $mappable to $pre_map->{$mappable}, but exists";
+        }
         $self->{COUNTER}{$pre_map->{$mappable}} =
           $self->{COUNTER}{$mappable};
       }

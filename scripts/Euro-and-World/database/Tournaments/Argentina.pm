@@ -421,7 +421,7 @@ my %TOURNAMENTS_ARGENTINA =
           {
             YEAR => 2012,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2012-05-06',
             DATE_END => '2012-05-06'
           } 
@@ -524,7 +524,7 @@ my %TOURNAMENTS_ARGENTINA =
           {
             YEAR => 2010,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2010-08-14',
             DATE_END => '2010-08-15'
           },
@@ -549,7 +549,7 @@ my %TOURNAMENTS_ARGENTINA =
           {
             YEAR => 2012,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2012-04-14',
             DATE_END => '2012-04-15'
           },
@@ -675,6 +675,7 @@ my %TOURNAMENTS_ARGENTINA =
           {
             YEAR => 2011,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2011-07-03',
             DATE_END => '2011-07-03'
           },
@@ -702,6 +703,7 @@ my %TOURNAMENTS_ARGENTINA =
           {
             YEAR => 2010,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2010-08-14',
             DATE_END => '2010-08-15'
           },
@@ -737,7 +739,7 @@ my %TOURNAMENTS_ARGENTINA =
           {
             YEAR => 2012,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2012-11-04',
             DATE_END => '2012-11-05'
           },

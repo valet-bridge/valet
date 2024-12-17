@@ -684,7 +684,7 @@ my %TOURNAMENTS_WORLD =
           {
             YEAR => 1995,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '1995-10-08',
             DATE_END => '1995-10-10'
           },
@@ -4212,6 +4212,7 @@ my %TOURNAMENTS_WORLD =
           {
             YEAR => 1996,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '1996-10-31',
             DATE_END => '1996-11-02'
           },
@@ -4227,6 +4228,7 @@ my %TOURNAMENTS_WORLD =
             YEAR => 2000,
             STAGE => 'Qualifying',
             MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2000-08-27',
             DATE_END => '2000-09-02'
           },
