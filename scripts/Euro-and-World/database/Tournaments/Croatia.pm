@@ -194,7 +194,7 @@ my %TOURNAMENTS_CROATIA =
           {
             YEAR => 2008,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
+            major => 'ROUND|MATCH|SEGMENT',
             DATE_START => '2008-05-24',
             DATE_END => '2008-05-24'
           },
@@ -236,6 +236,7 @@ my %TOURNAMENTS_CROATIA =
           'C0' => 
           {
             YEAR => 2014,
+            major => 'ROUND|MATCH',
             DATE_START => '2014-09-07',
             DATE_END => '2014-09-07'
           },
@@ -249,6 +250,7 @@ my %TOURNAMENTS_CROATIA =
           'C0' => 
           {
             YEAR => 2015,
+            major => 'ROUND|MATCH',
             DATE_START => '2015-09-06',
             DATE_END => '2015-09-06'
           },
@@ -274,6 +276,7 @@ my %TOURNAMENTS_CROATIA =
           'C0' => 
           {
             YEAR => 2006,
+            major => 'ROUND',
             DATE_START => '2006-09-25',
             DATE_END => '2006-09-25'
           },
@@ -287,6 +290,7 @@ my %TOURNAMENTS_CROATIA =
           'C0' => 
           {
             YEAR => 2014,
+            major => 'ROUND|MATCH',
             DATE_START => '2014-09-08',
             DATE_END => '2014-09-08'
           },
@@ -300,6 +304,7 @@ my %TOURNAMENTS_CROATIA =
           'C0' => 
           {
             YEAR => 2015,
+            major => 'ROUND|MATCH',
             DATE_START => '2015-09-07',
             DATE_END => '2015-09-07'
           },
@@ -339,6 +344,7 @@ my %TOURNAMENTS_CROATIA =
           'C0' => 
           {
             YEAR => 2006,
+            major => 'ROUND',
             DATE_START => '2006-09-25',
             DATE_END => '2006-09-25'
           },
@@ -389,7 +395,7 @@ my %TOURNAMENTS_CROATIA =
           'C0' => 
           {
             YEAR => 2009,
-            major => 'MATCH',
+            major => 'ROUND|MATCH',
             DATE_START => '2009-09-09',
             DATE_END => '2009-09-10'
           },
@@ -403,6 +409,7 @@ my %TOURNAMENTS_CROATIA =
           'C0' => 
           {
             YEAR => 2010,
+            major => 'ROUND|MATCH',
             DATE_START => '2010-09-08',
             DATE_END => '2010-09-09'
           },
@@ -416,6 +423,7 @@ my %TOURNAMENTS_CROATIA =
           'C0' => 
           {
             YEAR => 2011,
+            major => 'ROUND|MATCH',
             DATE_START => '2011-09-07',
             DATE_END => '2011-09-08'
           },
@@ -429,6 +437,7 @@ my %TOURNAMENTS_CROATIA =
           'C0' => 
           {
             YEAR => 2012,
+            major => 'ROUND|MATCH',
             DATE_START => '2012-09-12',
             DATE_END => '2012-09-13'
           },
@@ -442,6 +451,7 @@ my %TOURNAMENTS_CROATIA =
           'C0' => 
           {
             YEAR => 2013,
+            major => 'ROUND',
             DATE_START => '2013-09-11',
             DATE_END => '2013-09-12'
           },
@@ -455,6 +465,7 @@ my %TOURNAMENTS_CROATIA =
           'C0' => 
           {
             YEAR => 2014,
+            major => 'ROUND|MATCH',
             DATE_START => '2014-09-10',
             DATE_END => '2014-09-11'
           },
@@ -496,6 +507,7 @@ my %TOURNAMENTS_CROATIA =
           'C0' => 
           {
             YEAR => 2004,
+            major => 'SEGMENT',
             DATE_START => '2004-05-22',
             DATE_END => '2004-05-24'
           },
@@ -580,6 +592,7 @@ my %TOURNAMENTS_CROATIA =
           'C0' => 
           {
             YEAR => 2004,
+            major => 'SEGMENT',
             DATE_START => '2004-05-22',
             DATE_END => '2004-05-24'
           },

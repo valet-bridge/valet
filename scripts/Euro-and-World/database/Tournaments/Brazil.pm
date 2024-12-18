@@ -269,7 +269,7 @@ my %TOURNAMENTS_BRAZIL =
           {
             YEAR => 2013,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2013-11-09',
             DATE_END => '2013-11-09'
           } 
@@ -389,7 +389,7 @@ my %TOURNAMENTS_BRAZIL =
           {
             YEAR => 2006,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2006-04-16',
             DATE_END => '2006-04-17'
           },
@@ -477,7 +477,7 @@ my %TOURNAMENTS_BRAZIL =
           {
             YEAR => 2009,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2009-04-11',
             DATE_END => '2009-04-12'
           } 
@@ -1147,7 +1147,7 @@ my %TOURNAMENTS_BRAZIL =
           {
             YEAR => 2016,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2016-05-22',
             DATE_END => '2016-05-22'
           } 

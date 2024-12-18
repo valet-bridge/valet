@@ -236,7 +236,7 @@ sub analyze
     warn "\n\nWARN $first_zero tops, $num_counters_given expected";
     warn $header->{TOURNAMENT_NAME};
     warn $header->{YEAR};
-    for my $bbono (keys %{$self->{BBOCOUNT}})
+    for my $bbono (sort keys %{$self->{BBOCOUNT}})
     {
       warn "  BBONO $bbono";
     }
@@ -277,7 +277,7 @@ sub analyze
     warn $header->{TOURNAMENT_NAME};
     warn $header->{YEAR};
     warn $self->str_analysis();
-    for my $bbono (keys %{$self->{BBOCOUNT}})
+    for my $bbono (sort keys %{$self->{BBOCOUNT}})
     {
       warn "  BBONO $bbono";
     }

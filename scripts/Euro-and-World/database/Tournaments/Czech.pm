@@ -67,7 +67,7 @@ my %TOURNAMENTS_CZECH =
           {
             YEAR => 2009,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2009-05-16',
             DATE_END => '2009-05-17'
           },
@@ -89,7 +89,7 @@ my %TOURNAMENTS_CZECH =
           {
             YEAR => 2012,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2012-04-21',
             DATE_END => '2012-04-21'
           },
@@ -164,7 +164,7 @@ my %TOURNAMENTS_CZECH =
           {
             YEAR => 2016,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2016-02-27',
             DATE_END => '2016-02-28'
           } 
@@ -212,6 +212,7 @@ my %TOURNAMENTS_CZECH =
           'SINGLE' => 
           {
             YEAR => 2006,
+            major => 'ROUND',
             DATE_START => '2006-08-09',
             DATE_END => '2006-08-09'
           } 

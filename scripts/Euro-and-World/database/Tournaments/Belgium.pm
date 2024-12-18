@@ -58,7 +58,7 @@ my %TOURNAMENTS_BELGIUM =
           'SINGLE' => 
           {
             YEAR => 2009,
-            major => 'SESSION',
+            major => 'SESSION|SECTION',
             DATE_START => '2009-05-16',
             DATE_END => '2009-05-16'
           } 
@@ -198,7 +198,7 @@ my %TOURNAMENTS_BELGIUM =
           {
             YEAR => 2016,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2016-01-31',
             DATE_END => '2016-01-31'
           } 
@@ -253,7 +253,7 @@ my %TOURNAMENTS_BELGIUM =
           'SINGLE' => 
           {
             YEAR => 2007,
-            major => 'ROUND',
+            major => 'ROUND|SESSION',
             DATE_START => '2007-04-16',
             DATE_END => '2007-04-16'
           } 

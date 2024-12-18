@@ -458,8 +458,7 @@ my %TOURNAMENTS_ASIA =
           {
             YEAR => 2010,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
-            minor => 'MATCH',
+            major => 'ROUND|MATCH',
             DATE_START => '2010-05-24',
             DATE_END => '2010-05-25'
           },
@@ -467,8 +466,7 @@ my %TOURNAMENTS_ASIA =
           {
             YEAR => 2010,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
-            minor => 'MATCH',
+            major => 'ROUND|MATCH',
             DATE_START => '2010-05-26',
             DATE_END => '2010-05-29'
           } 
@@ -883,6 +881,14 @@ my %TOURNAMENTS_ASIA =
             STAGE => 'Playoff',
             major => 'SEGMENT',
             DATE_START => '2013-06-15',
+            DATE_END => '2013-06-15'
+          },
+          'C2' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2013-06-16',
             DATE_END => '2013-06-16'
           } 
         }
@@ -1240,7 +1246,6 @@ my %TOURNAMENTS_ASIA =
             YEAR => 2008,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
-            minor => 'SEGMENT',
             DATE_START => '2008-09-10',
             DATE_END => '2008-09-10'
           },
@@ -1302,8 +1307,7 @@ my %TOURNAMENTS_ASIA =
           {
             YEAR => 2011,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
-            minor => 'MATCH',
+            major => 'ROUND|MATCH',
             DATE_START => '2011-06-15',
             DATE_END => '2011-06-22'
           },
@@ -1466,8 +1470,7 @@ my %TOURNAMENTS_ASIA =
           {
             YEAR => 2011,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
-            minor => 'MATCH',
+            major => 'ROUND|MATCH',
             DATE_START => '2011-06-15',
             DATE_END => '2011-06-22'
           },
@@ -1616,6 +1619,7 @@ my %TOURNAMENTS_ASIA =
           {
             YEAR => 2012,
             major => 'ROUND',
+            ignore => 'TABLE',
             DATE_START => '2012-12-05',
             DATE_END => '2012-12-09'
           } 
@@ -1671,6 +1675,7 @@ my %TOURNAMENTS_ASIA =
           {
             YEAR => 2012,
             major => 'SESSION',
+            ignore => 'GROUP',
             DATE_START => '2012-12-05',
             DATE_END => '2012-12-09'
           } 
@@ -1763,7 +1768,7 @@ my %TOURNAMENTS_ASIA =
           {
             YEAR => 2009,
             STAGE => 'Final',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2009-12-09',
             DATE_END => '2009-12-09'
           } 
@@ -1815,6 +1820,7 @@ my %TOURNAMENTS_ASIA =
           {
             YEAR => 2012,
             major => 'ROUND',
+            ignore => 'TABLE',
             DATE_START => '2012-12-05',
             DATE_END => '2012-12-06'
           },
@@ -1823,6 +1829,7 @@ my %TOURNAMENTS_ASIA =
             YEAR => 2012,
             STAGE => 'Qualifying',
             major => 'ROUND',
+            ignore => 'TABLE',
             DATE_START => '2012-12-07',
             DATE_END => '2012-12-08'
           },
@@ -1830,7 +1837,7 @@ my %TOURNAMENTS_ASIA =
           {
             YEAR => 2012,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'ROUND|SESSION|SEGMENT',
             DATE_START => '2012-12-09',
             DATE_END => '2012-12-09'
           } 
@@ -2194,6 +2201,8 @@ my %TOURNAMENTS_ASIA =
           {
             YEAR => 2011,
             MOVEMENT => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2011-11-15',
             DATE_END => '2011-11-17'
           },
@@ -2253,6 +2262,8 @@ my %TOURNAMENTS_ASIA =
           {
             YEAR => 2011,
             MOVEMENT => 'Round-robin',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2011-11-10',
             DATE_END => '2011-11-13'
           },
@@ -2260,7 +2271,7 @@ my %TOURNAMENTS_ASIA =
           {
             YEAR => 2011,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2011-11-14',
             DATE_END => '2011-11-15'
           } 

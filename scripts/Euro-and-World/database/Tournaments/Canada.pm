@@ -635,7 +635,7 @@ my %TOURNAMENTS_CANADA =
           {
             YEAR => 2014,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2014-05-09',
             DATE_END => '2014-05-10'
           } 
@@ -713,7 +713,7 @@ my %TOURNAMENTS_CANADA =
           {
             YEAR => 2016,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2016-05-28',
             DATE_END => '2016-05-29'
           } 
@@ -1160,7 +1160,7 @@ my %TOURNAMENTS_CANADA =
           {
             YEAR => 2016,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2016-05-29',
             DATE_END => '2016-05-29'
           } 
@@ -1374,7 +1374,7 @@ my %TOURNAMENTS_CANADA =
           {
             YEAR => 2010,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2010-06-03',
             DATE_END => '2010-06-03'
           } 
@@ -1436,7 +1436,7 @@ my %TOURNAMENTS_CANADA =
           {
             YEAR => 2012,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2012-05-03',
             DATE_END => '2012-05-03'
           } 
@@ -1482,7 +1482,7 @@ my %TOURNAMENTS_CANADA =
           {
             YEAR => 2016,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2016-05-23',
             DATE_END => '2016-05-24'
           } 

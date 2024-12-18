@@ -206,6 +206,7 @@ my %TOURNAMENTS_BALKAN =
           'C0' => 
           {
             YEAR => 2008,
+            major => 'SESSION',
             DATE_START => '2008-05-04',
             DATE_END => '2008-05-04'
           },
@@ -231,6 +232,7 @@ my %TOURNAMENTS_BALKAN =
           'C0' => 
           {
             YEAR => 2008,
+            major => 'SESSION|SEGMENT',
             DATE_START => '2008-05-04',
             DATE_END => '2008-05-04'
           },
@@ -244,6 +246,7 @@ my %TOURNAMENTS_BALKAN =
           'C0' => 
           {
             YEAR => 2009,
+            major => 'ROUND',
             DATE_START => '2009-05-01',
             DATE_END => '2009-05-03'
           },
@@ -257,6 +260,7 @@ my %TOURNAMENTS_BALKAN =
           'C0' => 
           {
             YEAR => 2010,
+            major => 'ROUND',
             DATE_START => '2010-04-10',
             DATE_END => '2010-04-11'
           },
@@ -270,6 +274,7 @@ my %TOURNAMENTS_BALKAN =
           'C0' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
             DATE_START => '2011-04-28',
             DATE_END => '2011-04-30'
           },
@@ -283,6 +288,7 @@ my %TOURNAMENTS_BALKAN =
           'C0' => 
           {
             YEAR => 2013,
+            major => 'ROUND',
             DATE_START => '2013-04-28',
             DATE_END => '2013-04-29'
           },

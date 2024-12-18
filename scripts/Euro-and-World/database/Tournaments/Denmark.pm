@@ -234,6 +234,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2010,
+            major => 'ROUND',
             DATE_START => '2010-11-05',
             DATE_END => '2010-11-07'
           } 
@@ -248,6 +249,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'ROUND',
             DATE_START => '2013-02-22',
             DATE_END => '2013-02-24'
           } 
@@ -263,6 +265,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2014,
             STAGE => 'Qualifying',
+            major => 'ROUND',
             DATE_START => '2014-12-13',
             DATE_END => '2014-12-14'
           } 
@@ -277,6 +280,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2015,
+            major => 'ROUND|SEGMENT',
             DATE_START => '2015-01-16',
             DATE_END => '2015-01-18'
           } 
@@ -330,6 +334,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2015,
+            major => 'SECTION',
             DATE_START => '2015-03-28',
             DATE_END => '2015-03-29'
           } 
@@ -369,6 +374,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'ROUND',
             DATE_START => '2013-02-21',
             DATE_END => '2013-02-21'
           } 
@@ -499,7 +505,8 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2012,
-            major => 'ROUND',
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2012-10-28',
             DATE_END => '2012-10-29'
           } 
@@ -514,6 +521,8 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2013,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
             DATE_START => '2013-10-26',
             DATE_END => '2013-10-27'
           } 
@@ -743,7 +752,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2010,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2010-11-27',
             DATE_END => '2010-11-27'
           },
@@ -751,7 +760,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2010,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2010-11-28',
             DATE_END => '2010-11-28'
           } 
@@ -792,6 +801,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2012,
             STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2012-09-29',
             DATE_END => '2012-09-29'
           },
@@ -1157,7 +1167,7 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2010,
             WEEKEND => 5,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2010-03-07',
             DATE_END => '2010-03-07'
           }
@@ -1214,7 +1224,7 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2011,
             WEEKEND => 5,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2011-03-06',
             DATE_END => '2011-03-06'
           }
@@ -1296,6 +1306,8 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2012,
             WEEKEND => 2,
+            major => 'ROUND|MATCH',
+            minor => 'HALF',
             DATE_START => '2012-11-10',
             DATE_END => '2012-11-11'
           },
@@ -1303,6 +1315,8 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2013,
             WEEKEND => 3,
+            major => 'ROUND|MATCH',
+            minor => 'SEGMENT|HALF',
             DATE_START => '2013-01-12',
             DATE_END => '2013-01-13'
           },
@@ -1333,7 +1347,7 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2013,
             WEEKEND => 5,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2013-04-07',
             DATE_END => '2013-04-07'
           }
@@ -1350,6 +1364,8 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2013,
             WEEKEND => 1,
+            major => 'ROUND|MATCH',
+            minor => 'HALF',
             DATE_START => '2013-10-05',
             DATE_END => '2013-10-06'
           },
@@ -1357,6 +1373,8 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2013,
             WEEKEND => 2,
+            major => 'ROUND|MATCH',
+            minor => 'SEGMENT|HALF',
             DATE_START => '2013-11-09',
             DATE_END => '2013-11-10'
           },
@@ -1364,6 +1382,8 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2014,
             WEEKEND => 3,
+            major => 'ROUND|MATCH',
+            minor => 'SEGMENT|HALF',
             DATE_START => '2014-01-11',
             DATE_END => '2014-01-12'
           },
@@ -1371,6 +1391,8 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2014,
             WEEKEND => 4,
+            major => 'ROUND|MATCH',
+            minor => 'SEGMENT|HALF',
             DATE_START => '2014-03-01',
             DATE_END => '2014-03-02'
           },
@@ -1407,6 +1429,8 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2014,
             WEEKEND => 1,
+            major => 'ROUND|MATCH',
+            minor => 'SEGMENT|HALF',
             DATE_START => '2014-10-04',
             DATE_END => '2014-10-05'
           },
@@ -1414,6 +1438,8 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2014,
             WEEKEND => 2,
+            major => 'ROUND|MATCH',
+            minor => 'SEGMENT|HALF',
             DATE_START => '2014-11-22',
             DATE_END => '2014-11-23'
           },
@@ -1498,7 +1524,7 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2016,
             WEEKEND => 4,
             major => 'ROUND',
-            minor => 'SEGMENT',
+            minor => 'SEGMENT|HALF',
             DATE_START => '2016-03-05',
             DATE_END => '2016-03-06'
           },
@@ -1948,7 +1974,7 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2012,
             WEEKEND => 2,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2012-03-17',
             DATE_END => '2012-03-17'
           },
@@ -1979,6 +2005,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'SEGMENT|ROUND',
             DATE_START => '2013-04-13',
             DATE_END => '2013-04-14'
           } 
@@ -2083,6 +2110,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2013,
             STAGE => 'Final',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2013-07-06',
             DATE_END => '2013-07-07'
           } 
@@ -2129,7 +2157,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2016,
             STAGE => 'Final',
-            major => 'SESSION',
+            major => 'SESSION|SECTION',
             DATE_START => '2016-07-09',
             DATE_END => '2016-07-10'
           } 
@@ -2316,6 +2344,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'SESSION',
             DATE_START => '2012-07-14',
             DATE_END => '2012-07-15'
           } 
@@ -2486,7 +2515,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2010,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2010-07-15',
             DATE_END => '2010-07-15'
           } 
@@ -2502,7 +2531,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2011,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2011-07-13',
             DATE_END => '2011-07-13'
           },
@@ -2526,7 +2555,7 @@ my %TOURNAMENTS_DENMARK =
           {
             YEAR => 2012,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2012-07-11',
             DATE_END => '2012-07-11'
           },
@@ -2589,6 +2618,8 @@ my %TOURNAMENTS_DENMARK =
           'C0' => 
           {
             YEAR => 2014,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND|MATCH',
             DATE_START => '2014-07-07',
             DATE_END => '2014-07-08'
           },
@@ -2623,7 +2654,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2010,
-            WEEKEND => 0,
+            major => 'SESSION',
             DATE_START => '2010-03-27',
             DATE_END => '2010-03-28'
           },
@@ -2680,7 +2711,7 @@ my %TOURNAMENTS_DENMARK =
           'C1' => 
           {
             YEAR => 2012,
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2012-04-13',
             DATE_END => '2012-04-15'
           } 
@@ -2764,6 +2795,7 @@ my %TOURNAMENTS_DENMARK =
           'C0' => 
           {
             YEAR => 2004,
+            major => 'SESSION',
             DATE_START => '2004-09-27',
             DATE_END => '2004-09-27'
           },
@@ -2777,6 +2809,7 @@ my %TOURNAMENTS_DENMARK =
           'C0' => 
           {
             YEAR => 2005,
+            major => 'SESSION|SEGMENT',
             DATE_START => '2005-09-28',
             DATE_END => '2005-09-28'
           },
@@ -2790,6 +2823,7 @@ my %TOURNAMENTS_DENMARK =
           'C0' => 
           {
             YEAR => 2006,
+            major => 'SESSION|SEGMENT',
             DATE_START => '2006-09-11',
             DATE_END => '2006-09-11'
           },
@@ -2840,7 +2874,6 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2004,
             STAGE => 'Final',
             major => 'SESSION',
-            minor => 'SEGMENT',
             DATE_START => '2004-10-08',
             DATE_END => '2004-10-08'
           },
