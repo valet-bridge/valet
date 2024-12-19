@@ -1802,6 +1802,7 @@ my %TOURNAMENTS_GERMANY =
           {
             YEAR => 2009,
             major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2009-11-21',
             DATE_END => '2009-11-22'
           } 
@@ -2494,7 +2495,7 @@ my %TOURNAMENTS_GERMANY =
           'SINGLE' => 
           {
             YEAR => 2014,
-            major => 'ROUND',
+            major => 'ROUND|SESSION|SEGMENT',
             DATE_START => '2014-02-14',
             DATE_END => '2014-02-16'
           } 
@@ -2508,9 +2509,9 @@ my %TOURNAMENTS_GERMANY =
           'WEEKEND 1' => 
           {
             YEAR => 2016,
+            major => 'ROUND|SESSION|SEGMENT',
             DATE_START => '2016-02-27',
             DATE_END => '2016-02-28',
-            major => 'ROUND',
             WEEKEND => 1
           },
           'WEEKEND 2' => 
@@ -2881,6 +2882,7 @@ my %TOURNAMENTS_GERMANY =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
             DATE_START => '2011-08-27',
             DATE_END => '2011-08-28'
           } 
@@ -2910,6 +2912,7 @@ my %TOURNAMENTS_GERMANY =
           {
             YEAR => 2013,
             STAGE => 'Qualifying',
+            ignore => 'TABLE',
             DATE_START => '2013-07-20',
             DATE_END => '2013-07-20'
           },
@@ -2917,6 +2920,7 @@ my %TOURNAMENTS_GERMANY =
           {
             YEAR => 2013,
             STAGE => 'Final',
+            ignore => 'TABLE',
             DATE_START => '2013-07-21',
             DATE_END => '2013-07-21'
           } 
@@ -2986,6 +2990,7 @@ my %TOURNAMENTS_GERMANY =
           {
             YEAR => 2016,
             STAGE => 'Final',
+            ignore => 'GROUP',
             DATE_START => '2016-05-16',
             DATE_END => '2016-05-16'
           } 

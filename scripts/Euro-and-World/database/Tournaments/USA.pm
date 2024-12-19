@@ -1603,6 +1603,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2006,
             STAGE => 'Final',
+            major => 'HALF',
             DATE_START => '2006-11-26',
             DATE_END => '2006-11-27'
           } 
@@ -1789,7 +1790,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2015,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2015-12-06',
             DATE_END => '2015-12-07'
           },
@@ -2648,6 +2649,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2013,
             major => 'MATCH',
+            ignore => 'TABLE',
             DATE_START => '2013-12-29',
             DATE_END => '2013-12-30'
           } 
@@ -3000,7 +3002,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2005,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND|SESSION',
             DATE_START => '2005-05-20',
             DATE_END => '2005-05-20'
           },
@@ -3752,7 +3754,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2004,
             STAGE => 'Quarterfinal',
-            major => 'QUARTER',
+            major => 'QUARTER|SEGMENT',
             DATE_START => '2004-11-26',
             DATE_END => '2004-11-26'
           },
@@ -3841,7 +3843,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2009,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2009-12-01',
             DATE_END => '2009-12-01'
           },
@@ -4085,7 +4087,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2004,
             STAGE => 'Semifinal',
-            major => 'QUARTER',
+            major => 'QUARTER|SEGMENT',
             DATE_START => '2004-06-24',
             DATE_END => '2004-06-24'
           },
@@ -4093,7 +4095,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2004,
             STAGE => 'Final',
-            major => 'QUARTER',
+            major => 'QUARTER|SEGMENT',
             DATE_START => '2004-06-25',
             DATE_END => '2004-06-25'
           } 

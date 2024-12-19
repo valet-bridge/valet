@@ -57,7 +57,7 @@ my %TOURNAMENTS_HONGKONG =
           {
             YEAR => 2006,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2006-08-12',
             DATE_END => '2006-08-12'
           },

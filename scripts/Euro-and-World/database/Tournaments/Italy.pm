@@ -738,6 +738,7 @@ my %TOURNAMENTS_ITALY =
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
             minor => 'SEGMENT',
+            ignore => 'TABLE',
             DATE_START => '2016-05-19',
             DATE_END => '2016-05-20'
           },
@@ -2326,6 +2327,7 @@ my %TOURNAMENTS_ITALY =
           {
             STAGE => 'Rof16',
             major => 'SEGMENT',
+            ignore => 'GROUP',
             DATE_START => '2013-11-21',
             DATE_END => '2013-11-21'
           },
@@ -2333,6 +2335,7 @@ my %TOURNAMENTS_ITALY =
           {
             STAGE => 'Quarterfinal',
             major => 'SEGMENT',
+            ignore => 'GROUP',
             DATE_START => '2013-11-21',
             DATE_END => '2013-11-22'
           },
@@ -2340,6 +2343,7 @@ my %TOURNAMENTS_ITALY =
           {
             STAGE => 'Semifinal',
             major => 'SEGMENT',
+            ignore => 'GROUP',
             DATE_START => '2013-11-22',
             DATE_END => '2013-11-22'
           },
@@ -2674,7 +2678,7 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             STAGE => => 'Qualifying',
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2004-04-28',
             DATE_END => '2004-04-30'
           },
@@ -3755,6 +3759,7 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             YEAR => 2009,
+            major => 'ROUND',
             DATE_START => '2009-03-22',
             DATE_END => '2009-03-22'
           }
@@ -3784,6 +3789,7 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             major => 'ROUND',
+            ignore => 'TABLE',
             DATE_START => '2012-12-08',
             DATE_END => '2012-12-09'
           }

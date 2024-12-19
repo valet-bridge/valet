@@ -394,7 +394,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2005,
-            major => 'MATCH',
+            major => 'MATCH|ROUND',
             DATE_START => '2005-05-21',
             DATE_END => '2005-05-23'
           } 
@@ -738,7 +738,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2006,
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             minor => 'HALF',
             DATE_START => '2006-05-28',
             DATE_END => '2006-05-28'
@@ -796,7 +796,7 @@ my %TOURNAMENTS_NORWAY =
           {
             YEAR => 2010,
             major => 'ROUND',
-            minor => 'HALF',
+            minor => 'HALF|SEGMENT',
             DATE_START => '2010-05-13',
             DATE_END => '2010-05-16'
           } 
@@ -1005,7 +1005,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2011,
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2011-07-30',
             DATE_END => '2011-07-30'
           } 
@@ -1212,7 +1212,7 @@ my %TOURNAMENTS_NORWAY =
           {
             YEAR => 2011,
             STAGE => 'Final',
-            major => 'SESSION',
+            major => 'SESSION|ROUND',
             DATE_START => '2011-08-02',
             DATE_END => '2011-08-04'
           } 
@@ -1226,7 +1226,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2012,
-            major => 'SESSION',
+            major => 'SESSION|ROUND',
             DATE_START => '2012-08-07',
             DATE_END => '2012-08-09'
           } 
@@ -1257,6 +1257,7 @@ my %TOURNAMENTS_NORWAY =
           {
             YEAR => 2014,
             STAGE => 'Final',
+            ignore => 'GROUP',
             DATE_START => '2014-08-08',
             DATE_END => '2014-08-09'
           } 
@@ -1661,7 +1662,7 @@ my %TOURNAMENTS_NORWAY =
           {
             YEAR => 2013,
             major => 'ROUND',
-            minor => 'SEGMENT',
+            minor => 'HALF|SEGMENT',
             DATE_START => '2013-02-09',
             DATE_END => '2013-02-10'
           } 
@@ -1926,7 +1927,7 @@ my %TOURNAMENTS_NORWAY =
           {
             YEAR => 2007,
             MOVEMENT => 'Swiss',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2007-08-05',
             DATE_END => '2007-08-05'
           } 
@@ -1956,7 +1957,7 @@ my %TOURNAMENTS_NORWAY =
           {
             YEAR => 2009,
             MOVEMENT => 'Swiss',
-            major => 'ROUND',
+            major => 'ROUND|SESSION',
             DATE_START => '2009-08-08',
             DATE_END => '2009-08-09'
           } 
@@ -2150,7 +2151,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2013,
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2013-10-26',
             DATE_END => '2013-10-26'
           } 
@@ -2392,7 +2393,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2009,
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2009-04-06',
             DATE_END => '2009-04-07'
           } 
@@ -2432,7 +2433,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2012,
-            major => 'MATCH',
+            major => 'MATCH|ROUND',
             DATE_START => '2012-04-01',
             DATE_END => '2012-04-02'
           } 
@@ -2487,7 +2488,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2010,
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2010-10-09',
             DATE_END => '2010-10-09'
           } 
@@ -2882,6 +2883,7 @@ my %TOURNAMENTS_NORWAY =
           {
             YEAR => 2010,
             STAGE => 'Final',
+            major => 'HALF',
             DATE_START => '2010-10-19',
             DATE_END => '2010-10-19'
           } 

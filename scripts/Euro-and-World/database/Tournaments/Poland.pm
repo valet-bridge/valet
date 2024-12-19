@@ -1931,7 +1931,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2007,
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2007-12-14',
             DATE_END => '2007-12-16'
           } 
@@ -2016,7 +2016,7 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2009,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2009-12-19',
             DATE_END => '2009-12-20'
           },
@@ -2121,6 +2121,8 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2010,
             STAGE => 'Final',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2010-12-17',
             DATE_END => '2010-12-19'
           } 
@@ -2262,7 +2264,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2012,
-            major => 'ROUND',
+            major => 'ROUND|SESSION|SEGMENT',
             DATE_START => '2012-06-16',
             DATE_END => '2012-06-16'
           } 
@@ -2384,7 +2386,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2013,
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2013-07-07',
             DATE_END => '2013-07-07'
           } 
@@ -2633,7 +2635,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2015,
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2015-09-20',
             DATE_END => '2015-09-20'
           } 
@@ -2650,6 +2652,8 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2015,
             STAGE => 'Final',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2015-12-11',
             DATE_END => '2015-12-13'
           } 
@@ -2804,7 +2808,7 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2009,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2009-08-30',
             DATE_END => '2009-08-30'
           },
@@ -2834,7 +2838,7 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2012,
             STAGE => 'Qualifying',
-            major => 'SEGMENT',
+            major => 'MATCH|SEGMENT',
             DATE_START => '2012-03-24',
             DATE_END => '2012-03-24'
           },
@@ -2842,6 +2846,7 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2012,
             STAGE => 'Quarterfinal',
+            major => 'MATCH',
             DATE_START => '2012-03-24',
             DATE_END => '2012-03-24'
           },
@@ -2849,6 +2854,7 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2012,
             STAGE => 'Semifinal',
+            major => 'MATCH',
             DATE_START => '2012-03-24',
             DATE_END => '2012-03-24'
           },
@@ -2856,6 +2862,7 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2012,
             STAGE => 'Final',
+            major => 'SEGMENT|MATCH',
             DATE_START => '2012-03-24',
             DATE_END => '2012-03-24'
           },
@@ -2893,6 +2900,7 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2013,
             STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2013-03-08',
             DATE_END => '2013-03-09'
           },
@@ -2900,6 +2908,7 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2013,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2013-03-09',
             DATE_END => '2013-03-09'
           } 
@@ -3459,7 +3468,7 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2011,
             STAGE => 'Final',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2011-05-03',
             DATE_END => '2011-05-03'
           } 
@@ -3681,6 +3690,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2006,
+            major => 'ROUND|SEGMENT',
             DATE_START => '2006-08-09',
             DATE_END => '2006-08-09'
           } 
@@ -3952,7 +3962,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2013,
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2013-04-11',
             DATE_END => '2013-04-14'
           } 
@@ -4018,9 +4028,18 @@ my %TOURNAMENTS_POLAND =
         SPONSOR => 'Budimex',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2011,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            DATE_START => '2011-05-01',
+            DATE_END => '2011-05-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
             major => 'ROUND',
             DATE_START => '2011-05-01',
             DATE_END => '2011-05-01'
@@ -4061,6 +4080,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2014,
+            major => 'ROUND',
             DATE_START => '2014-11-22',
             DATE_END => '2014-11-23'
           } 
@@ -4076,6 +4096,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2015,
+            major => 'ROUND',
             DATE_START => '2015-11-21',
             DATE_END => '2015-11-22'
           } 
@@ -4162,6 +4183,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'ROUND',
             DATE_START => '2013-04-12',
             DATE_END => '2013-04-13'
           } 
@@ -4264,7 +4286,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2011,
-            major => 'SESSION',
+            major => 'SESSION|ROUND',
             DATE_START => '2011-04-30',
             DATE_END => '2011-04-30'
           } 
@@ -4281,6 +4303,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'SESSION|SEGMENT',
             DATE_START => '2011-07-09',
             DATE_END => '2011-07-09'
           } 
@@ -4313,6 +4336,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'ROUND',
             DATE_START => '2013-04-29',
             DATE_END => '2013-04-29'
           } 
@@ -4392,7 +4416,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2007,
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2007-04-27',
             DATE_END => '2007-04-29'
           } 
@@ -4419,6 +4443,7 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2006,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2006-05-07',
             DATE_END => '2006-05-07'
           } 
@@ -4490,7 +4515,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2011,
-            major => 'SESSION',
+            major => 'SESSION|ROUND',
             DATE_START => '2011-04-30',
             DATE_END => '2011-04-30'
           } 
@@ -4506,6 +4531,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
             DATE_START => '2011-05-14',
             DATE_END => '2011-05-15'
           } 
@@ -4521,6 +4547,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'SESSION|SEGMENT',
             DATE_START => '2011-07-12',
             DATE_END => '2011-07-12'
           } 
@@ -4536,6 +4563,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'SESSION|SEGMENT',
             DATE_START => '2011-07-14',
             DATE_END => '2011-07-15'
           } 
@@ -4576,6 +4604,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'ROUND',
             DATE_START => '2012-05-05',
             DATE_END => '2012-05-06'
           } 
@@ -4591,6 +4620,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'ROUND',
             DATE_START => '2013-05-03',
             DATE_END => '2013-05-04'
           } 
@@ -4606,6 +4636,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2014,
+            major => 'ROUND|SEGMENT',
             DATE_START => '2014-05-03',
             DATE_END => '2014-05-04'
           } 
@@ -4639,6 +4670,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'ROUND',
             DATE_START => '2016-05-02',
             DATE_END => '2016-05-03'
           } 
@@ -5256,7 +5288,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2012,
-            major => 'SESSION',
+            major => 'SESSION|ROUND',
             DATE_START => '2012-06-02',
             DATE_END => '2012-06-02'
           } 
@@ -5283,6 +5315,7 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2014,
             STAGE => 'Final',
+            major => 'SESSION|MATCH',
             DATE_START => '2014-09-27',
             DATE_END => '2014-09-27'
           },
@@ -5317,6 +5350,7 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2009,
             STAGE => 'Final',
+            major => 'ROUND|MATCH',
             DATE_START => '2009-09-19',
             DATE_END => '2009-09-19'
           },
@@ -5376,7 +5410,7 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2013,
             STAGE => 'Final',
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2013-10-05',
             DATE_END => '2013-10-05'
           } 
@@ -5659,8 +5693,7 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2011,
             STAGE => 'Playoff',
-            major => 'ROUND',
-            minor => 'SEGMENT',
+            major => 'SEGMENT',
             DATE_START => '2011-02-26',
             DATE_END => '2011-02-27'
           },
@@ -5668,8 +5701,7 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2011,
             STAGE => 'Playoff',
-            major => 'ROUND',
-            minor => 'SEGMENT',
+            major => 'SEGMENT',
             DATE_START => '2011-03-04',
             DATE_END => '2011-03-05'
           },
@@ -5677,8 +5709,7 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2011,
             STAGE => 'Playoff',
-            major => 'ROUND',
-            minor => 'SEGMENT',
+            major => 'SEGMENT',
             DATE_START => '2011-03-12',
             DATE_END => '2011-03-13'
           },
@@ -5862,7 +5893,7 @@ my %TOURNAMENTS_POLAND =
           'C3' => 
           {
             YEAR => 2014,
-            major => 'SEGMENT',
+            major => 'SEGMENT|MATCH',
             DATE_START => '2014-04-11',
             DATE_END => '2014-04-12'
           },
@@ -6032,7 +6063,7 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2012,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SESSION|SEGMENT|MATCH',
             DATE_START => '2012-06-08',
             DATE_END => '2012-06-08'
           },
@@ -6181,6 +6212,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2015,
+            major => 'SEGMENT',
             DATE_START => '2015-02-28',
             DATE_END => '2015-02-28'
           },
@@ -6207,6 +6239,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'SESSION|SEGMENT',
             DATE_START => '2012-05-18',
             DATE_END => '2012-05-18'
           } 
@@ -6314,6 +6347,7 @@ my %TOURNAMENTS_POLAND =
           'SINGLE' => 
           {
             YEAR => 2014,
+            major => 'ROUND',
             DATE_START => '2014-05-02',
             DATE_END => '2014-05-03'
           } 

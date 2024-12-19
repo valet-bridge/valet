@@ -670,7 +670,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2004,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2004-10-09',
             DATE_END => '2004-10-09'
           },
@@ -709,7 +709,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2005,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2005-10-16',
             DATE_END => '2005-10-16'
           } 
@@ -771,7 +771,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2007,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2007-11-10',
             DATE_END => '2007-11-10'
           },
@@ -779,7 +779,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2007,
             STAGE => 'Playoff',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2007-11-11',
             DATE_END => '2007-11-11'
           },
@@ -849,7 +849,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2009,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2009-10-17',
             DATE_END => '2009-10-17'
           },
@@ -1081,7 +1081,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2015,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2015-11-14',
             DATE_END => '2015-11-14'
           } 
@@ -1434,7 +1434,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2004,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2004-06-20',
             DATE_END => '2004-07-03'
           } 
@@ -1468,6 +1468,7 @@ my %TOURNAMENTS_EUROADULT =
             YEAR => 2008,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
+            ignore => 'TABLE',
             DATE_START => '2008-06-15',
             DATE_END => '2008-06-21'
           },
@@ -1476,6 +1477,7 @@ my %TOURNAMENTS_EUROADULT =
             YEAR => 2008,
             STAGE => 'Final',
             major => 'ROUND',
+            ignore => 'TABLE',
             DATE_START => '2008-06-22',
             DATE_END => '2008-06-28'
           } 
@@ -1514,7 +1516,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2012,
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2012-06-13',
             DATE_END => '2012-06-19'
           },
@@ -1523,7 +1525,7 @@ my %TOURNAMENTS_EUROADULT =
             YEAR => 2012,
             STAGE => 'Final',
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2012-06-20',
             DATE_END => '2012-06-23'
           } 
@@ -1889,6 +1891,7 @@ my %TOURNAMENTS_EUROADULT =
         {
           'C0' => 
           {
+            # TODO C0 and C1 are jumbled up in BBO
             YEAR => 2004,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
@@ -2339,7 +2342,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2004,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2004-06-20',
             DATE_END => '2004-07-02'
           } 
@@ -2372,6 +2375,7 @@ my %TOURNAMENTS_EUROADULT =
             YEAR => 2008,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
+            ignore => 'TABLE',
             DATE_START => '2008-06-19',
             DATE_END => '2008-06-27'
           }
@@ -3035,6 +3039,8 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2013,
             STAGE => 'Final',
+            major => 'ROUND',
+            ignore => 'TABLE',
             DATE_START => '2013-06-17',
             DATE_END => '2013-06-18'
           },
@@ -3064,6 +3070,8 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2015,
             STAGE => 'Final',
+            major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2015-07-02',
             DATE_END => '2015-07-03'
           },
@@ -3500,6 +3508,7 @@ my %TOURNAMENTS_EUROADULT =
             # These two are not in the program!
             YEAR => 2013,
             STAGE => 'Bronze',
+            major => 'SEGMENT',
             DATE_START => '2013-06-19',
             DATE_END => '2013-06-21'
           },
@@ -3530,7 +3539,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2015,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2015-06-29',
             DATE_END => '2015-06-29'
           },
@@ -3538,7 +3547,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2015,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2015-06-29',
             DATE_END => '2015-06-29'
           },
@@ -3782,6 +3791,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2005,
             STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2005-07-01',
             DATE_END => '2005-07-02'
           },
@@ -3811,6 +3821,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2007,
             STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2007-06-29',
             DATE_END => '2007-06-30'
           },
@@ -3862,6 +3873,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2011,
             STAGE => 'Semifinal',
+            major => 'SESSION',
             DATE_START => '2011-06-29',
             DATE_END => '2011-06-30'
           },
@@ -3869,6 +3881,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2011,
             STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2011-07-01',
             DATE_END => '2011-07-02'
           },
@@ -3884,6 +3897,8 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2013,
             STAGE => 'Qualifying',
+            major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2013-06-25',
             DATE_END => '2013-06-26'
           },
@@ -3898,6 +3913,8 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2013,
             STAGE => 'Final',
+            major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2013-06-28',
             DATE_END => '2013-06-29'
           },
@@ -3927,6 +3944,8 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2015,
             STAGE => 'Final',
+            major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2015-07-10',
             DATE_END => '2015-07-11'
           },
@@ -4391,6 +4410,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2013,
             STAGE => 'Bronze',
+            major => 'SEGMENT',
             DATE_START => '2013-06-25',
             DATE_END => '2013-06-25'
           },
@@ -5176,7 +5196,8 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2016,
             STAGE => 'Final',
-            major => 'ROUND',
+            major => 'SEGMENT',
+            ignore => 'TABLE',
             DATE_START => '2016-02-10',
             DATE_END => '2016-02-11'
           },

@@ -219,6 +219,7 @@ my %TOURNAMENTS_NORDIC =
           {
             YEAR => 2008,
             major => 'ROUND',
+            minor => 'HALF',
             DATE_START => '2008-05-23',
             DATE_END => '2008-05-23'
           },
@@ -412,13 +413,14 @@ my %TOURNAMENTS_NORDIC =
       },
       '2007' =>
       {
-        # TODO
         MEET => 'Nordic Team Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             YEAR => 2007,
+            major => 'MATCH',
+            minor => 'HALF',
             DATE_START => '2007-06-05',
             DATE_END => '2007-06-09'
           } 
@@ -581,6 +583,7 @@ my %TOURNAMENTS_NORDIC =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'SEGMENT',
             DATE_START => '2013-05-24',
             DATE_END => '2013-05-26'
           } 

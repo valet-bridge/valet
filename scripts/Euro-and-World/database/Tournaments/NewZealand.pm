@@ -699,7 +699,7 @@ my %TOURNAMENTS_NEWZEALAND =
           'SINGLE' => 
           {
             YEAR => 2009,
-            major => 'ROUND',
+            major => 'ROUND|SESSION',
             DATE_START => '2009-04-09',
             DATE_END => '2009-04-11'
           } 
@@ -725,6 +725,7 @@ my %TOURNAMENTS_NEWZEALAND =
           'SINGLE' => 
           {
             YEAR => 2009,
+            major => 'ROUND',
             DATE_START => '2009-03-23',
             DATE_END => '2009-03-23'
           },
@@ -738,6 +739,7 @@ my %TOURNAMENTS_NEWZEALAND =
           'SINGLE' => 
           {
             YEAR => 2009,
+            major => 'ROUND',
             DATE_START => '2009-04-09',
             DATE_END => '2009-04-10'
           } 

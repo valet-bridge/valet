@@ -435,6 +435,7 @@ my %TOURNAMENTS_PORTUGAL =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
             DATE_START => '2011-10-03',
             DATE_END => '2011-10-04'
           } 
@@ -448,6 +449,7 @@ my %TOURNAMENTS_PORTUGAL =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'ROUND',
             DATE_START => '2012-10-05',
             DATE_END => '2012-10-06'
           } 
@@ -461,6 +463,7 @@ my %TOURNAMENTS_PORTUGAL =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'ROUND',
             DATE_START => '2013-09-27',
             DATE_END => '2013-09-28'
           } 
@@ -474,6 +477,7 @@ my %TOURNAMENTS_PORTUGAL =
           'SINGLE' => 
           {
             YEAR => 2014,
+            major => 'ROUND',
             DATE_START => '2014-10-04',
             DATE_END => '2014-10-05'
           } 
@@ -487,6 +491,7 @@ my %TOURNAMENTS_PORTUGAL =
           'SINGLE' => 
           {
             YEAR => 2015,
+            major => 'ROUND',
             DATE_START => '2015-10-03',
             DATE_END => '2015-10-04'
           } 
@@ -539,6 +544,7 @@ my %TOURNAMENTS_PORTUGAL =
           'SINGLE' => 
           {
             YEAR => 2015,
+            major => 'ROUND',
             DATE_START => '2015-03-13',
             DATE_END => '2015-03-15'
           } 
@@ -552,6 +558,7 @@ my %TOURNAMENTS_PORTUGAL =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'ROUND',
             DATE_START => '2016-03-19',
             DATE_END => '2016-03-20'
           } 
@@ -608,8 +615,7 @@ my %TOURNAMENTS_PORTUGAL =
           {
             YEAR => 2006,
             MOVEMENT => 'Swiss',
-            major => 'SESSION',
-            minor => 'ROUND',
+            major => 'ROUND|SESSION',
             DATE_START => '2006-11-13',
             DATE_END => '2006-11-13'
           } 
@@ -624,8 +630,7 @@ my %TOURNAMENTS_PORTUGAL =
           {
             YEAR => 2007,
             MOVEMENT => 'Swiss',
-            major => 'SESSION',
-            minor => 'ROUND',
+            major => 'ROUND|SESSION',
             DATE_START => '2007-11-25',
             DATE_END => '2007-11-25'
           } 
@@ -655,7 +660,7 @@ my %TOURNAMENTS_PORTUGAL =
           {
             YEAR => 2009,
             MOVEMENT => 'Swiss',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2009-11-06',
             DATE_END => '2009-11-08'
           } 
@@ -846,6 +851,7 @@ my %TOURNAMENTS_PORTUGAL =
           'SINGLE' => 
           {
             YEAR => 2010,
+            major => 'ROUND',
             DATE_START => '2010-04-20',
             DATE_END => '2010-04-22'
           } 
@@ -859,6 +865,7 @@ my %TOURNAMENTS_PORTUGAL =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
             DATE_START => '2011-05-10',
             DATE_END => '2011-05-12'
           } 
@@ -958,7 +965,7 @@ my %TOURNAMENTS_PORTUGAL =
           'SINGLE' => 
           {
             YEAR => 2014,
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2014-10-24',
             DATE_END => '2014-10-26'
           } 
@@ -988,7 +995,7 @@ my %TOURNAMENTS_PORTUGAL =
             # Estimated.
             YEAR => 2008,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2008-12-05',
             DATE_END => '2008-12-07'
           },
@@ -1002,7 +1009,7 @@ my %TOURNAMENTS_PORTUGAL =
           {
             YEAR => 2009,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2009-10-16',
             DATE_END => '2009-10-18'
           },
@@ -1030,17 +1037,9 @@ my %TOURNAMENTS_PORTUGAL =
           'C1' => 
           {
             YEAR => 2010,
-            STAGE => 'Knock-out',
-            major => 'SEGMENT',
-            DATE_START => '2010-12-03',
-            DATE_END => '2010-12-04'
-          },
-          'C2' => 
-          {
-            YEAR => 2010,
             STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2010-12-04',
+            major => 'ROUND|SEGMENT',
+            DATE_START => '2010-12-03',
             DATE_END => '2010-12-05'
           },
         }
@@ -1127,7 +1126,7 @@ my %TOURNAMENTS_PORTUGAL =
           'C0' => 
           {
             YEAR => 2013,
-            major => 'ROUND',
+            major => 'ROUND|SESSION',
             DATE_START => '2013-10-25',
             DATE_END => '2013-10-27'
           },
@@ -1164,7 +1163,7 @@ my %TOURNAMENTS_PORTUGAL =
           'SINGLE' => 
           {
             YEAR => 2014,
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2014-05-30',
             DATE_END => '2014-06-01'
           } 
@@ -1424,7 +1423,7 @@ my %TOURNAMENTS_PORTUGAL =
           {
             YEAR => 2009,
             STAGE => 'Final',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2009-06-05',
             DATE_END => '2009-06-06'
           } 

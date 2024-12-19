@@ -55,6 +55,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2004,
             STAGE => 'Final',
+            major => 'QUARTER',
             DATE_START => '2004-12-12',
             DATE_END => '2004-12-12'
           },
@@ -69,6 +70,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2005,
             STAGE => 'Final',
+            major => 'STANZA',
             DATE_START => '2005-12-10',
             DATE_END => '2005-12-11'
           },
@@ -83,6 +85,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2006,
             STAGE => 'Final',
+            major => 'STANZA|SEGMENT',
             DATE_START => '2006-12-09',
             DATE_END => '2006-12-10'
           },
@@ -562,7 +565,7 @@ my %TOURNAMENTS_UK =
           'C1' => 
           {
             YEAR => 2006,
-            major => 'ROUND',
+            major => 'ROUND|MATCH|SEGMENT',
             DATE_START => '2006-03-03',
             DATE_END => '2006-03-05'
           },
@@ -734,6 +737,8 @@ my %TOURNAMENTS_UK =
           'C0' => 
           {
             YEAR => 2015,
+            major => 'ROUND',
+            ignore => 'MATCH',
             DATE_START => '2015-01-09',
             DATE_END => '2015-01-11'
           },
@@ -769,6 +774,7 @@ my %TOURNAMENTS_UK =
           'C1' => 
           {
             YEAR => 2016,
+            major => 'MATCH',
             DATE_START => '2016-03-04',
             DATE_END => '2016-03-06'
           } 
@@ -1054,7 +1060,7 @@ my %TOURNAMENTS_UK =
           'C0' => 
           {
             YEAR => 2008,
-            major => 'ROUND',
+            major => 'MATCH|ROUND',
             DATE_START => '2008-08-27',
             DATE_END => '2008-08-27'
           },
@@ -1105,7 +1111,7 @@ my %TOURNAMENTS_UK =
           'C2' => 
           {
             YEAR => 2008,
-            major => 'MATCH',
+            major => 'MATCH|ROUND',
             DATE_START => '2008-11-23',
             DATE_END => '2008-11-23'
           },
@@ -1271,15 +1277,14 @@ my %TOURNAMENTS_UK =
           'C0' => 
           {
             YEAR => 2014,
-            major => 'MATCH',
+            major => 'MATCH|ROUND',
             DATE_START => '2014-09-20',
             DATE_END => '2014-09-21'
           },
           'C1' => 
           {
             YEAR => 2014,
-            major => 'MATCH',
-            minor => 'STANZA',
+            major => 'MATCH|STANZA',
             DATE_START => '2014-09-27',
             DATE_END => '2014-09-28'
           },
@@ -1314,7 +1319,7 @@ my %TOURNAMENTS_UK =
           'C2' => 
           {
             YEAR => 2015,
-            major => 'MATCH',
+            major => 'MATCH|ROUND',
             DATE_START => '2015-11-06',
             DATE_END => '2015-11-07'
           },
@@ -1598,6 +1603,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2010,
+            major => 'SESSION',
             DATE_START => '2010-01-22',
             DATE_END => '2010-01-24'
           },
@@ -1613,6 +1619,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'ROUND|MATCH',
             DATE_START => '2011-01-21',
             DATE_END => '2011-01-23'
           },
@@ -1628,6 +1635,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'SESSION',
             DATE_START => '2012-01-13',
             DATE_END => '2012-01-15'
           },
@@ -1643,6 +1651,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'SESSION|SET',
             DATE_START => '2013-01-25',
             DATE_END => '2013-01-27'
           },
@@ -1658,6 +1667,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2014,
+            major => 'SESSION',
             DATE_START => '2014-01-24',
             DATE_END => '2014-01-26'
           },
@@ -1673,6 +1683,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2015,
+            major => 'SESSION',
             DATE_START => '2015-01-23',
             DATE_END => '2015-01-25'
           },
@@ -1688,6 +1699,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'SESSION|SET',
             DATE_START => '2016-01-22',
             DATE_END => '2016-01-24'
           },
@@ -2191,7 +2203,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2004,
-            major => 'MATCH',
+            major => 'MATCH|ROUND',
             DATE_START => '2004-10-16',
             DATE_END => '2004-10-17'
           },
@@ -2269,7 +2281,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2010,
-            major => 'MATCH',
+            major => 'MATCH|ROUND',
             DATE_START => '2010-10-30',
             DATE_END => '2010-10-31'
           },
@@ -2559,7 +2571,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2014,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2014-12-09',
             DATE_END => '2014-12-09'
           },
@@ -2576,7 +2588,7 @@ my %TOURNAMENTS_UK =
             # Not sure what this is.
             YEAR => 2015,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'HALF|SEGMENT',
             DATE_START => '2015-02-01',
             DATE_END => '2015-02-01'
           },
@@ -2636,7 +2648,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2005,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2005-05-02',
             DATE_END => '2005-05-03'
           },
@@ -2987,7 +2999,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2013,
-            major => 'SESSION',
+            major => 'MATCH|SESSION',
             DATE_START => '2013-05-17',
             DATE_END => '2013-05-19'
           },
@@ -3135,6 +3147,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2010,
             major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2010-01-17',
             DATE_END => '2010-01-17'
           },
@@ -3148,6 +3161,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2011,
             major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2011-01-15',
             DATE_END => '2011-01-16'
           },
@@ -3616,7 +3630,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2012,
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2012-10-20',
             DATE_END => '2012-10-21'
           },
@@ -3681,7 +3695,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2010,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2010-09-19',
             DATE_END => '2010-09-19'
           },

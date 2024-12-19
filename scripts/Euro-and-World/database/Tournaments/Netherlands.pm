@@ -754,6 +754,7 @@ my %TOURNAMENTS_NETHERLANDS =
           {
             YEAR => 2013,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2013-08-29',
             DATE_END => '2013-08-29'
           },
@@ -1032,8 +1033,7 @@ my %TOURNAMENTS_NETHERLANDS =
           {
             YEAR => 2016,
             STAGE => 'Final',
-            major => 'SESSION',
-            minor => 'ROUND',
+            major => 'ROUND',
             DATE_START => '2016-03-05',
             DATE_END => '2016-03-06'
           } 
@@ -1060,6 +1060,7 @@ my %TOURNAMENTS_NETHERLANDS =
           {
             YEAR => 2009,
             STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2009-08-07',
             DATE_END => '2009-08-08'
           } 
@@ -1107,7 +1108,7 @@ my %TOURNAMENTS_NETHERLANDS =
           {
             YEAR => 2007,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2007-02-25',
             DATE_END => '2007-02-25'
           },
@@ -1143,6 +1144,7 @@ my %TOURNAMENTS_NETHERLANDS =
           {
             YEAR => 2006,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2006-03-26',
             DATE_END => '2006-03-26'
           },
@@ -1178,6 +1180,7 @@ my %TOURNAMENTS_NETHERLANDS =
           {
             YEAR => 2007,
             STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2007-03-29',
             DATE_END => '2007-03-29'
           },
@@ -1215,7 +1218,7 @@ my %TOURNAMENTS_NETHERLANDS =
           {
             YEAR => 2008,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2008-03-20',
             DATE_END => '2008-03-20'
           } 
@@ -1300,7 +1303,7 @@ my %TOURNAMENTS_NETHERLANDS =
           {
             YEAR => 2011,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2011-03-25',
             DATE_END => '2011-03-25'
           },
@@ -1371,7 +1374,7 @@ my %TOURNAMENTS_NETHERLANDS =
           {
             YEAR => 2013,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2013-03-21',
             DATE_END => '2013-03-22'
           } 
@@ -1455,7 +1458,7 @@ my %TOURNAMENTS_NETHERLANDS =
           {
             YEAR => 2016,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
+            major => 'ROUND|SESSION',
             DATE_START => '2016-03-21',
             DATE_END => '2016-03-22'
           },
@@ -1595,7 +1598,7 @@ my %TOURNAMENTS_NETHERLANDS =
           {
             YEAR => 2006,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
+            major => 'ROUND|SESSION',
             DATE_START => '2006-02-25',
             DATE_END => '2006-02-25'
           },
@@ -1603,8 +1606,7 @@ my %TOURNAMENTS_NETHERLANDS =
           {
             YEAR => 2006,
             STAGE => 'Semifinal',
-            major => 'SESSION',
-            minor => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2006-02-26',
             DATE_END => '2006-02-26'
           },
@@ -1612,8 +1614,7 @@ my %TOURNAMENTS_NETHERLANDS =
           {
             YEAR => 2006,
             STAGE => 'Final',
-            major => 'SESSION',
-            minor => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2006-02-26',
             DATE_END => '2006-02-26'
           } 
@@ -1652,7 +1653,7 @@ my %TOURNAMENTS_NETHERLANDS =
             # Unclear what this really is
             YEAR => 2008,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2008-03-04',
             DATE_END => '2008-03-04'
           } 

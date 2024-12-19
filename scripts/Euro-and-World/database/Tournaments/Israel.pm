@@ -499,7 +499,7 @@ my %TOURNAMENTS_ISRAEL =
           {
             YEAR => 2011,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2011-02-18',
             DATE_END => '2011-02-18'
           } 
@@ -550,7 +550,7 @@ my %TOURNAMENTS_ISRAEL =
           {
             YEAR => 2008,
             STAGE => 'Final',
-            major => 'SESSION',
+            major => 'SESSION|MATCH|SEGMENT',
             DATE_START => '2008-02-12',
             DATE_END => '2008-02-12'
           } 
@@ -643,6 +643,7 @@ my %TOURNAMENTS_ISRAEL =
           'SINGLE' => 
           {
             YEAR => 2010,
+            major => 'ROUND|SEGMENT',
             DATE_START => '2010-09-03',
             DATE_END => '2010-09-03'
           } 
@@ -656,6 +657,7 @@ my %TOURNAMENTS_ISRAEL =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
             DATE_START => '2011-06-11',
             DATE_END => '2011-06-11'
           } 
@@ -709,6 +711,7 @@ my %TOURNAMENTS_ISRAEL =
           'SINGLE' => 
           {
             YEAR => 2010,
+            major => 'ROUND|SESSION',
             DATE_START => '2010-09-02',
             DATE_END => '2010-09-04'
           } 
@@ -796,7 +799,7 @@ my %TOURNAMENTS_ISRAEL =
           {
             YEAR => 2011,
             STAGE => 'Final',
-            major => 'SESSION',
+            major => 'SESSION|ROUND|SEGMENT',
             DATE_START => '2011-05-14',
             DATE_END => '2011-05-14'
           } 
@@ -841,7 +844,7 @@ my %TOURNAMENTS_ISRAEL =
           {
             YEAR => 2014,
             STAGE => 'Final',
-            major => 'SESSION',
+            major => 'SESSION|ROUND|SEGMENT',
             DATE_START => '2014-07-05',
             DATE_END => '2014-07-05'
           } 
@@ -1095,7 +1098,7 @@ my %TOURNAMENTS_ISRAEL =
           {
             YEAR => 2010,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2010-08-28',
             DATE_END => '2010-08-28'
           } 
@@ -1122,7 +1125,7 @@ my %TOURNAMENTS_ISRAEL =
           {
             YEAR => 2011,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2011-08-27',
             DATE_END => '2011-08-27'
           } 
@@ -1247,7 +1250,7 @@ my %TOURNAMENTS_ISRAEL =
           {
             YEAR => 2012,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2012-03-02',
             DATE_END => '2012-03-03'
           } 
@@ -1260,7 +1263,7 @@ my %TOURNAMENTS_ISRAEL =
           'SINGLE' => 
           {
             YEAR => 2015,
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2015-05-08',
             DATE_END => '2015-05-10'
           } 
@@ -1443,6 +1446,7 @@ my %TOURNAMENTS_ISRAEL =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'ROUND',
             DATE_START => '2012-11-22',
             DATE_END => '2012-11-22'
           } 
@@ -1495,6 +1499,8 @@ my %TOURNAMENTS_ISRAEL =
           {
             YEAR => 2009,
             MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            minor => 'HALF',
             DATE_START => '2009-11-07',
             DATE_END => '2009-11-08'
           } 
@@ -1509,6 +1515,7 @@ my %TOURNAMENTS_ISRAEL =
           {
             YEAR => 2015,
             MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2015-11-21',
             DATE_END => '2015-11-21'
           } 

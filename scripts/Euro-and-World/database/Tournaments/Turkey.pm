@@ -376,6 +376,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2012,
+            major => 'ROUND',
             DATE_START => '2012-06-29',
             DATE_END => '2012-07-01'
           },
@@ -790,6 +791,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2010,
             STAGE => 'Final',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2010-10-23',
             DATE_END => '2010-10-24'
           },
@@ -803,6 +805,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2011,
+            major => 'SESSION|SEGMENT',
             DATE_START => '2011-11-19',
             DATE_END => '2011-11-19'
           },
@@ -816,6 +819,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2012,
+            major => 'SESSION',
             DATE_START => '2012-11-03',
             DATE_END => '2012-11-03'
           },
@@ -1001,7 +1005,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2010,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'MATCH|SEGMENT',
             DATE_START => '2010-02-20',
             DATE_END => '2010-02-21'
           } 
@@ -1073,7 +1077,7 @@ my %TOURNAMENTS_TURKEY =
             YEAR => 2015,
             STAGE => 'Final',
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2015-01-24',
             DATE_END => '2015-01-31'
           } 
@@ -1089,7 +1093,7 @@ my %TOURNAMENTS_TURKEY =
             YEAR => 2016,
             STAGE => 'Final',
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2016-01-30',
             DATE_END => '2016-01-31'
           } 
@@ -1398,7 +1402,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2014,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2014-09-12',
             DATE_END => '2014-09-12'
           },
@@ -1567,7 +1571,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2010,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|HALF',
             DATE_START => '2010-11-07',
             DATE_END => '2010-11-07'
           } 
@@ -1582,7 +1586,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2011,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION|ROUND',
             DATE_START => '2011-12-11',
             DATE_END => '2011-12-11'
           },
@@ -1590,7 +1594,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2011,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION|ROUND',
             DATE_START => '2011-12-11',
             DATE_END => '2011-12-11'
           } 
@@ -1627,7 +1631,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2013,
             STAGE => 'Final',
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2013-06-06',
             DATE_END => '2013-06-06'
           },
@@ -1733,6 +1737,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2016,
             MOVEMENT => 'Swiss',
+            major => 'ROUND',
             DATE_START => '2016-02-07',
             DATE_END => '2016-02-07'
           },
@@ -1767,7 +1772,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2014,
             STAGE => 'Final',
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2014-06-05',
             DATE_END => '2014-06-06'
           },
@@ -1865,6 +1870,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2011,
+            major => 'SESSION',
             DATE_START => '2011-09-09',
             DATE_END => '2011-09-10'
           },
@@ -1890,6 +1896,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2010,
+            major => 'ROUND',
             DATE_START => '2010-09-24',
             DATE_END => '2010-09-24'
           },
@@ -1903,6 +1910,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
             DATE_START => '2011-09-11',
             DATE_END => '2011-09-12'
           },
@@ -2083,7 +2091,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2012,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2012-08-30',
             DATE_END => '2012-08-31'
           },
@@ -2286,7 +2294,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2015,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2015-08-25',
             DATE_END => '2015-08-26'
           },
@@ -2294,7 +2302,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2015,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2015-08-26',
             DATE_END => '2015-08-26'
           },
@@ -2495,8 +2503,7 @@ my %TOURNAMENTS_TURKEY =
             YEAR => 2009,
             STAGE => 'Qualifying',
             MOVEMENT => 'Round-robin',
-            major => 'SESSION',
-            minor => 'ROUND',
+            major => 'ROUND',
             DATE_START => '2009-04-26',
             DATE_END => '2009-04-26'
           },
@@ -2619,6 +2626,7 @@ my %TOURNAMENTS_TURKEY =
             YEAR => 2014,
             MOVEMENT => 'Swiss',
             major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2014-05-06',
             DATE_END => '2014-05-06'
           },
@@ -2699,7 +2707,7 @@ my %TOURNAMENTS_TURKEY =
           'C0' => 
           {
             YEAR => 2010,
-            major => 'SESSION',
+            major => 'SESSION|ROUND',
             DATE_START => '2010-04-04',
             DATE_END => '2010-04-05'
           },
@@ -2707,7 +2715,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2010,
             STAGE => 'Semifinal',
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2010-04-06',
             DATE_END => '2010-04-07'
           },
@@ -2715,6 +2723,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2010,
             STAGE => 'Final',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2010-04-08',
             DATE_END => '2010-04-09'
           } 
@@ -2730,7 +2739,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2016,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
+            major => 'ROUND|SESSION',
             DATE_START => '2016-07-01',
             DATE_END => '2016-07-03'
           } 
@@ -2819,7 +2828,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2015,
             MOVEMENT => 'Swiss',
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2015-12-16',
             DATE_END => '2015-12-18'
           } 
@@ -3014,7 +3023,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2010,
             STAGE => 'Rof32',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2010-03-07',
             DATE_END => '2010-03-07'
           },
@@ -3022,7 +3031,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2010,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2010-03-07',
             DATE_END => '2010-03-08'
           },
@@ -3030,7 +3039,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2010,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2010-03-08',
             DATE_END => '2010-03-09'
           },
@@ -3093,6 +3102,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2011,
             STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2011-03-08',
             DATE_END => '2011-03-08'
           },
@@ -3100,6 +3110,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2011,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2011-03-09',
             DATE_END => '2011-03-09'
           },
@@ -3321,6 +3332,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2015,
             STAGE => 'Rof64',
+            major => 'MATCH',
             DATE_START => '2015-03-02',
             DATE_END => '2015-03-03'
           },
@@ -3328,6 +3340,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2015,
             STAGE => 'Rof32',
+            major => 'MATCH',
             DATE_START => '2015-03-03',
             DATE_END => '2015-03-04'
           },
@@ -3335,6 +3348,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2015,
             STAGE => 'Rof16',
+            major => 'MATCH',
             DATE_START => '2015-03-04',
             DATE_END => '2015-03-05'
           },
@@ -3398,7 +3412,7 @@ my %TOURNAMENTS_TURKEY =
           {
             YEAR => 2016,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2016-03-11',
             DATE_END => '2016-03-12'
           } 

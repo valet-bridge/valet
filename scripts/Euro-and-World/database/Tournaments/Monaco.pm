@@ -118,7 +118,8 @@ my %TOURNAMENTS_MONACO =
           'C0' => 
           {
             YEAR => 2007,
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
+            ignore => 'TABLE',
             DATE_START => '2007-11-10',
             DATE_END => '2007-11-10'
           },
@@ -197,6 +198,7 @@ my %TOURNAMENTS_MONACO =
           {
             YEAR => 2009,
             major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2009-10-09',
             DATE_END => '2009-10-10'
           },
@@ -367,7 +369,7 @@ my %TOURNAMENTS_MONACO =
             YEAR => 2014,
             STAGE => 'Qualifying',
             MOVEMENT => 'Swiss',
-            major => 'ROUND',
+            major => 'ROUND|SESSION',
             DATE_START => '2014-09-05',
             DATE_END => '2014-09-05'
           },

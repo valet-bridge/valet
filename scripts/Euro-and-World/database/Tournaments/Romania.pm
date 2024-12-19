@@ -58,6 +58,7 @@ my %TOURNAMENTS_ROMANIA =
           'SINGLE' => 
           {
             YEAR => 2009,
+            major => 'ROUND',
             DATE_START => '2009-11-21',
             DATE_END => '2009-11-22'
           } 
@@ -83,6 +84,7 @@ my %TOURNAMENTS_ROMANIA =
           'SINGLE' => 
           {
             YEAR => 2009,
+            major => 'ROUND',
             DATE_START => '2009-11-19',
             DATE_END => '2009-11-20'
           } 
@@ -183,14 +185,14 @@ my %TOURNAMENTS_ROMANIA =
           'C0' => 
           {
             YEAR => 2013,
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2013-11-01',
             DATE_END => '2013-11-03'
           },
           'C1' => 
           {
             YEAR => 2014,
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2014-02-14',
             DATE_END => '2014-02-16'
           }
@@ -369,7 +371,7 @@ my %TOURNAMENTS_ROMANIA =
           {
             YEAR => 2014,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2014-06-06',
             DATE_END => '2014-06-07'
           },
@@ -477,6 +479,7 @@ my %TOURNAMENTS_ROMANIA =
           'C0' => 
           {
             YEAR => 2012,
+            major => 'ROUND',
             DATE_START => '2012-01-27',
             DATE_END => '2012-01-29'
           },
@@ -513,7 +516,7 @@ my %TOURNAMENTS_ROMANIA =
           {
             YEAR => 2014,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2014-03-01',
             DATE_END => '2014-03-02'
           } 
@@ -544,6 +547,7 @@ my %TOURNAMENTS_ROMANIA =
             YEAR => 2009,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2009-10-17',
             DATE_END => '2009-10-17'
           },
@@ -551,7 +555,8 @@ my %TOURNAMENTS_ROMANIA =
           {
             YEAR => 2009,
             STAGE => 'Playoff',
-            major => 'SEGMENT',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2009-10-18',
             DATE_END => '2009-10-18'
           } 

@@ -567,7 +567,7 @@ my %TOURNAMENTS_MIDDLEEAST =
           {
             YEAR => 2013,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2013-11-07',
             DATE_END => '2013-11-08'
           },

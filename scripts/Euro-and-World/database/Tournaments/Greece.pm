@@ -159,6 +159,7 @@ my %TOURNAMENTS_GREECE =
           'C0' => 
           {
             YEAR => 2007,
+            major => 'SESSION',
             DATE_START => '2007-09-02',
             DATE_END => '2007-09-02'
           },
@@ -172,6 +173,7 @@ my %TOURNAMENTS_GREECE =
           'C0' => 
           {
             YEAR => 2008,
+            major => 'SESSION',
             DATE_START => '2008-09-10',
             DATE_END => '2008-09-10'
           },
@@ -185,6 +187,7 @@ my %TOURNAMENTS_GREECE =
           'C0' => 
           {
             YEAR => 2009,
+            major => 'SESSION',
             DATE_START => '2009-08-20',
             DATE_END => '2009-08-20'
           },
@@ -198,6 +201,7 @@ my %TOURNAMENTS_GREECE =
           'C0' => 
           {
             YEAR => 2010,
+            major => 'SESSION',
             DATE_START => '2010-09-01',
             DATE_END => '2010-09-01'
           },
@@ -211,6 +215,7 @@ my %TOURNAMENTS_GREECE =
           'C0' => 
           {
             YEAR => 2011,
+            major => 'SESSION',
             DATE_START => '2011-08-31',
             DATE_END => '2011-09-01'
           },
@@ -236,6 +241,7 @@ my %TOURNAMENTS_GREECE =
           'C0' => 
           {
             YEAR => 2007,
+            major => 'SESSION|SEGMENT',
             DATE_START => '2007-09-02',
             DATE_END => '2007-09-02'
           },
@@ -249,6 +255,7 @@ my %TOURNAMENTS_GREECE =
           'C0' => 
           {
             YEAR => 2008,
+            major => 'SESSION',
             DATE_START => '2008-09-10',
             DATE_END => '2008-09-10'
           },
@@ -262,6 +269,7 @@ my %TOURNAMENTS_GREECE =
           'C0' => 
           {
             YEAR => 2009,
+            major => 'SESSION',
             DATE_START => '2009-08-17',
             DATE_END => '2009-08-19'
           },
@@ -275,6 +283,7 @@ my %TOURNAMENTS_GREECE =
           'C0' => 
           {
             YEAR => 2010,
+            major => 'SESSION',
             DATE_START => '2010-08-29',
             DATE_END => '2010-08-31'
           },
@@ -288,6 +297,7 @@ my %TOURNAMENTS_GREECE =
           'C0' => 
           {
             YEAR => 2011,
+            major => 'SESSION',
             DATE_START => '2011-08-28',
             DATE_END => '2011-08-30'
           },
@@ -313,6 +323,7 @@ my %TOURNAMENTS_GREECE =
           'C0' => 
           {
             YEAR => 2007,
+            major => 'ROUND',
             DATE_START => '2007-09-02',
             DATE_END => '2007-09-02'
           },
@@ -326,6 +337,7 @@ my %TOURNAMENTS_GREECE =
           'C0' => 
           {
             YEAR => 2008,
+            major => 'ROUND',
             DATE_START => '2008-09-10',
             DATE_END => '2008-09-10'
           },
@@ -339,6 +351,7 @@ my %TOURNAMENTS_GREECE =
           'C0' => 
           {
             YEAR => 2009,
+            major => 'ROUND|SESSION',
             DATE_START => '2009-08-21',
             DATE_END => '2009-08-22'
           },
@@ -352,6 +365,7 @@ my %TOURNAMENTS_GREECE =
           'C0' => 
           {
             YEAR => 2010,
+            major => 'ROUND',
             DATE_START => '2010-09-02',
             DATE_END => '2010-09-03'
           },
@@ -379,6 +393,7 @@ my %TOURNAMENTS_GREECE =
           'C0' => 
           {
             YEAR => 2012,
+            major => 'ROUND',
             DATE_START => '2012-08-30',
             DATE_END => '2012-08-31'
           },
@@ -392,6 +407,7 @@ my %TOURNAMENTS_GREECE =
           'C0' => 
           {
             YEAR => 2013,
+            major => 'ROUND|SESSION',
             DATE_START => '2013-09-06',
             DATE_END => '2013-09-07'
           },
@@ -405,6 +421,7 @@ my %TOURNAMENTS_GREECE =
           'C0' => 
           {
             YEAR => 2014,
+            major => 'ROUND|SESSION',
             DATE_START => '2014-08-29',
             DATE_END => '2014-08-30'
           },
@@ -418,6 +435,7 @@ my %TOURNAMENTS_GREECE =
           'C0' => 
           {
             YEAR => 2015,
+            major => 'ROUND',
             DATE_START => '2015-09-09',
             DATE_END => '2015-09-10'
           },
@@ -431,6 +449,7 @@ my %TOURNAMENTS_GREECE =
           'C0' => 
           {
             YEAR => 2016,
+            major => 'ROUND|SEGMENT',
             DATE_START => '2016-08-25',
             DATE_END => '2016-08-26'
           },
@@ -523,8 +542,7 @@ my %TOURNAMENTS_GREECE =
           {
             YEAR => 2010,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            minor => 'HALF',
+            major => 'HALF|SEGMENT',
             DATE_START => '2010-03-21',
             DATE_END => '2010-03-21'
           },
@@ -532,8 +550,7 @@ my %TOURNAMENTS_GREECE =
           {
             YEAR => 2010,
             STAGE => 'Final',
-            major => 'SEGMENT',
-            minor => 'HALF',
+            major => 'HALF',
             DATE_START => '2010-03-21',
             DATE_END => '2010-03-21'
           } 
@@ -668,15 +685,16 @@ my %TOURNAMENTS_GREECE =
           {
             YEAR => 2010,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2010-01-22',
             DATE_END => '2010-01-24'
           },
           'C1' => 
           {
             YEAR => 2010,
+            major => 'ROUND',
             DATE_START => '2010-01-29',
-              DATE_END => '2010-01-31'
+            DATE_END => '2010-01-31'
           },
         }
       },

@@ -445,6 +445,7 @@ my %TOURNAMENTS_SWITZERLAND =
           'SINGLE' => 
           {
             YEAR => 2015,
+            major => 'MATCH',
             DATE_START => '2015-05-31',
             DATE_END => '2015-05-31'
           },
@@ -483,6 +484,7 @@ my %TOURNAMENTS_SWITZERLAND =
           'SINGLE' => 
           {
             YEAR => 2012,
+            major => 'SESSION',
             DATE_START => '2012-03-01',
             DATE_END => '2012-03-03'
           } 
@@ -497,6 +499,7 @@ my %TOURNAMENTS_SWITZERLAND =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'SESSION',
             DATE_START => '2013-03-01',
             DATE_END => '2013-03-02'
           } 
@@ -511,6 +514,7 @@ my %TOURNAMENTS_SWITZERLAND =
           'SINGLE' => 
           {
             YEAR => 2014,
+            major => 'SESSION',
             DATE_START => '2014-03-07',
             DATE_END => '2014-03-08'
           } 
@@ -542,6 +546,7 @@ my %TOURNAMENTS_SWITZERLAND =
           'C1' => 
           {
             YEAR => 2012,
+            major => 'ROUND|SESSION',
             DATE_START => '2012-03-04',
             DATE_END => '2012-03-04'
           } 
@@ -555,6 +560,7 @@ my %TOURNAMENTS_SWITZERLAND =
           'SINGLE' => 
           {
             YEAR => 2013,
+            major => 'ROUND',
             DATE_START => '2013-03-03',
             DATE_END => '2013-03-03'
           } 
@@ -568,6 +574,7 @@ my %TOURNAMENTS_SWITZERLAND =
           'SINGLE' => 
           {
             YEAR => 2014,
+            major => 'ROUND|SESSION',
             DATE_START => '2014-03-09',
             DATE_END => '2014-03-09'
           } 

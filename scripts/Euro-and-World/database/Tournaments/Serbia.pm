@@ -152,7 +152,7 @@ my %TOURNAMENTS_SERBIA =
           {
             YEAR => 2014,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2014-11-30',
             DATE_END => '2014-11-30'
           },
@@ -339,7 +339,7 @@ my %TOURNAMENTS_SERBIA =
           {
             YEAR => 2012,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2012-02-04',
             DATE_END => '2012-02-05'
           } 
