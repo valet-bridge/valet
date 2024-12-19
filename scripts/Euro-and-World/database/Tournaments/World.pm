@@ -887,8 +887,7 @@ my %TOURNAMENTS_WORLD =
           {
             YEAR => 2007,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
-            minor => 'MATCH',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2007-09-30',
             DATE_END => '2007-10-06'
           },
@@ -1435,8 +1434,8 @@ my %TOURNAMENTS_WORLD =
           {
             YEAR => 2007,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
-            minor => 'MATCH',
+            major => 'ROUND|SEGMENT',
+            ignore => 'MATCH',
             DATE_START => '2007-09-30',
             DATE_END => '2007-10-06'
           },
@@ -1538,7 +1537,7 @@ my %TOURNAMENTS_WORLD =
           {
             YEAR => 2011,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2011-10-23',
             DATE_END => '2011-10-24'
           },
@@ -3383,6 +3382,7 @@ my %TOURNAMENTS_WORLD =
             YEAR => 2006,
             STAGE => 'Final',
             major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2006-06-22',
             DATE_END => '2006-06-24'
           },
@@ -3804,7 +3804,7 @@ my %TOURNAMENTS_WORLD =
           {
             YEAR => 2013,
             STAGE => 'Final',
-            major => 'SESSION',
+            major => 'SESSION|ROUND',
             DATE_START => '2013-08-04',
             DATE_END => '2013-08-06'
           } 
@@ -3890,7 +3890,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2009,
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2009-08-20',
             DATE_END => '2009-08-23'
           } 
@@ -4281,7 +4281,7 @@ my %TOURNAMENTS_WORLD =
           {
             YEAR => 2004,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2004-10-23',
             DATE_END => '2004-10-29'
           },
@@ -4656,7 +4656,7 @@ my %TOURNAMENTS_WORLD =
           {
             YEAR => 2012,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2012-07-10',
             DATE_END => '2012-07-15'
           } 
@@ -4672,7 +4672,6 @@ my %TOURNAMENTS_WORLD =
             YEAR => 2014,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
-            minor => 'SEGMENT',
             DATE_START => '2014-11-01',
             DATE_END => '2014-11-06'
           } 
@@ -4686,6 +4685,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2016,
+            major => 'ROUND|SEGMENT',
             DATE_START => '2016-08-23',
             DATE_END => '2016-08-28'
           } 
@@ -5055,6 +5055,7 @@ my %TOURNAMENTS_WORLD =
           {
             YEAR => 2013,
             major => 'ROUND',
+            ignore => 'TABLE',
             DATE_START => '2013-12-16',
             DATE_END => '2013-12-18'
           } 
@@ -5111,6 +5112,7 @@ my %TOURNAMENTS_WORLD =
           {
             YEAR => 2013,
             major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2013-12-15',
             DATE_END => '2013-12-18'
           } 
@@ -5601,7 +5603,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2012,
-            major => 'ROUND',
+            major => 'ROUND|SESSION',
             DATE_START => '2012-12-18',
             DATE_END => '2012-12-19'
           } 
@@ -5686,6 +5688,7 @@ my %TOURNAMENTS_WORLD =
           {
             YEAR => 2013,
             major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2013-12-15',
             DATE_END => '2013-12-18'
           } 

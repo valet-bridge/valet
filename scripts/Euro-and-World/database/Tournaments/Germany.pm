@@ -502,7 +502,7 @@ my %TOURNAMENTS_GERMANY =
           {
             YEAR => 2006,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2006-05-24',
             DATE_END => '2006-05-25'
           } 
@@ -2510,6 +2510,7 @@ my %TOURNAMENTS_GERMANY =
           {
             YEAR => 2016,
             major => 'ROUND|SESSION|SEGMENT',
+            ignore => 'PHASE',
             DATE_START => '2016-02-27',
             DATE_END => '2016-02-28',
             WEEKEND => 1

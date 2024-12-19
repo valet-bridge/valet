@@ -364,7 +364,7 @@ my %TOURNAMENTS_SWEDEN =
           {
             YEAR => 2014,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2014-07-30',
             DATE_END => '2014-07-30'
           },
@@ -426,7 +426,7 @@ my %TOURNAMENTS_SWEDEN =
           {
             YEAR => 2016,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2016-08-02',
             DATE_END => '2016-08-02'
           },
@@ -434,7 +434,7 @@ my %TOURNAMENTS_SWEDEN =
           {
             YEAR => 2016,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2016-08-03',
             DATE_END => '2016-08-03'
           },
@@ -844,6 +844,7 @@ my %TOURNAMENTS_SWEDEN =
           {
             YEAR => 2014,
             STAGE => 'Semifinal',
+            major => 'SEGMENT',
             DATE_START => '2014-11-21',
             DATE_END => '2014-11-21'
           },
@@ -851,6 +852,7 @@ my %TOURNAMENTS_SWEDEN =
           {
             YEAR => 2014,
             STAGE => 'Final',
+            major => 'SEGMENT',
             DATE_START => '2014-11-22',
             DATE_END => '2014-11-23'
           } 
@@ -1359,7 +1361,7 @@ my %TOURNAMENTS_SWEDEN =
           {
             YEAR => 2015,
             STAGE => 'Final',
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2015-05-09',
             DATE_END => '2015-05-10'
           } 
@@ -1373,7 +1375,7 @@ my %TOURNAMENTS_SWEDEN =
           {
             YEAR => 2016,
             STAGE => 'Final',
-            major => 'ROUND',
+            major => 'ROUND|MATCH|SEGMENT',
             DATE_START => '2016-05-28',
             DATE_END => '2016-05-29'
           } 
@@ -2173,7 +2175,7 @@ my %TOURNAMENTS_SWEDEN =
           'SINGLE' => 
           {
             YEAR => 2012,
-            major => 'SESSION',
+            major => 'SESSION|ROUND',
             DATE_START => '2012-04-27',
             DATE_END => '2012-04-29'
           } 

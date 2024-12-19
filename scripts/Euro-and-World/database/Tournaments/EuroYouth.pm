@@ -540,6 +540,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2014,
             STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2014-07-16',
             DATE_END => '2014-07-16'
           }
@@ -731,6 +732,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2009,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2009-07-13',
             DATE_END => '2009-07-18'
           }
@@ -745,6 +747,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2011,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2011-07-17',
             DATE_END => '2011-07-23'
           }
@@ -775,6 +778,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2015,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2015-07-19',
             DATE_END => '2015-07-25'
           }
@@ -896,6 +900,8 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2016,
             STAGE => 'Final',
+            major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2016-07-14',
             DATE_END => '2016-07-14'
           },
@@ -966,6 +972,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2008,
             STAGE => 'Final',
+            major => 'ROUND',
             DATE_START => '2008-07-18',
             DATE_END => '2008-07-18'
           }
@@ -1037,6 +1044,7 @@ my %TOURNAMENTS_EURO_YOUTH =
             YEAR => 2012,
             MOVEMENT => 'Round-robin',
             major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2012-07-04',
             DATE_END => '2012-07-05'
           },
@@ -1045,6 +1053,7 @@ my %TOURNAMENTS_EURO_YOUTH =
             YEAR => 2012,
             STAGE => 'Final',
             major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2012-07-06',
             DATE_END => '2012-07-06'
           }
@@ -1067,6 +1076,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2014,
             STAGE => 'Final',
+            major => 'SESSION',
             DATE_START => '2014-07-16',
             DATE_END => '2014-07-16'
           }
@@ -1089,6 +1099,8 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2016,
             STAGE => 'Final',
+            major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2016-07-17',
             DATE_END => '2016-07-17'
           }
@@ -1244,6 +1256,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2007,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2007-07-11',
             DATE_END => '2007-07-21'
           }
@@ -1288,6 +1301,8 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2013,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'MATCH',
             DATE_START => '2013-07-12',
             DATE_END => '2013-07-20'
           }
@@ -1302,6 +1317,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2015,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2015-07-19',
             DATE_END => '2015-07-25'
           }
@@ -1383,6 +1399,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2007,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2007-07-20',
             DATE_END => '2007-07-21'
           }
@@ -1518,6 +1535,8 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2016,
             STAGE => 'Final',
+            major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2016-07-16',
             DATE_END => '2016-07-17'
           },
@@ -1601,6 +1620,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2005,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2005-07-18',
             DATE_END => '2005-07-23'
           }
@@ -1615,6 +1635,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2007,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2007-07-11',
             DATE_END => '2007-07-18'
           }
@@ -1645,7 +1666,7 @@ my %TOURNAMENTS_EURO_YOUTH =
             YEAR => 2011,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
-            minor => 'SEGMENT',
+            minor => 'SEGMENT|HALF',
             DATE_START => '2011-07-14',
             DATE_END => '2011-07-23'
           }
@@ -1676,6 +1697,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2015,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2015-07-19',
             DATE_END => '2015-07-25'
           }
@@ -1923,6 +1945,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           'SINGLE' => 
           {
             YEAR => 2009,
+            major => 'ROUND|MATCH',
             DATE_START => '2009-10-05',
             DATE_END => '2009-10-09'
           },
@@ -1940,6 +1963,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'ROUND|MATCH',
             DATE_START => '2011-09-19',
             DATE_END => '2011-09-23'
           },
@@ -1992,6 +2016,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           'SINGLE' => 
           {
             YEAR => 2015,
+            major => 'ROUND|MATCH',
             DATE_START => '2015-09-01',
             DATE_END => '2015-09-06'
           },
@@ -2059,6 +2084,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           'SINGLE' => 
           {
             YEAR => 2005,
+            major => 'ROUND',
             DATE_START => '2005-08-25',
             DATE_END => '2005-08-29'
           },
@@ -2078,6 +2104,7 @@ my %TOURNAMENTS_EURO_YOUTH =
             YEAR => 2007,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
+            ignore => 'TABLE',
             DATE_START => '2007-08-05',
             DATE_END => '2007-08-07'
           },

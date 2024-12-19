@@ -481,8 +481,7 @@ my %TOURNAMENTS_ASIA =
           {
             YEAR => 2011,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
-            minor => 'MATCH',
+            major => 'MATCH',
             DATE_START => '2011-06-15',
             DATE_END => '2011-06-22'
           },
@@ -1292,7 +1291,6 @@ my %TOURNAMENTS_ASIA =
           {
             YEAR => 2010,
             major => 'ROUND',
-            minor => 'MATCH',
             DATE_START => '2010-05-24',
             DATE_END => '2010-05-26'
           } 

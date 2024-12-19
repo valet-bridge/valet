@@ -435,8 +435,8 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2012,
-            major => 'SESSION',
-            minor => 'TABLE',
+            major => 'SESSION|SEGMENT',
+            ignore => 'TABLE',
             DATE_START => '2012-09-10',
             DATE_END => '2012-09-10'
           } 
@@ -491,7 +491,7 @@ my %TOURNAMENTS_SUPRA =
             YEAR => 2012,
             STAGE => 'Final',
             major => 'ROUND',
-            minor => 'MATCH',
+            ignore => 'MATCH|TABLE',
             DATE_START => '2012-09-11',
             DATE_END => '2012-09-13'
           } 
@@ -744,7 +744,7 @@ my %TOURNAMENTS_SUPRA =
           {
             YEAR => 2013,
             STAGE => 'Final',
-            major => 'SESSION',
+            major => 'SESSION|ROUND',
             DATE_START => '2013-10-25',
             DATE_END => '2013-10-25'
           } 
@@ -767,7 +767,7 @@ my %TOURNAMENTS_SUPRA =
           {
             YEAR => 2014,
             STAGE => 'Final',
-            major => 'SESSION|ROUND',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2014-09-05',
             DATE_END => '2014-09-05'
           } 
@@ -913,7 +913,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2008,
-            major => 'MATCH',
+            major => 'ROUND|MATCH',
             DATE_START => '2008-05-07',
             DATE_END => '2008-05-11'
           } 
@@ -927,7 +927,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2009,
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2009-05-06',
             DATE_END => '2009-05-10'
           } 
@@ -1051,6 +1051,7 @@ my %TOURNAMENTS_SUPRA =
             YEAR => 2014,
             MOVEMENT => 'Swiss',
             major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2014-09-06',
             DATE_END => '2014-09-06'
           } 

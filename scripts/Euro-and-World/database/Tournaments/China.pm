@@ -842,6 +842,7 @@ my %TOURNAMENTS_CHINA =
           'C4' => 
           {
             YEAR => 2006,
+            major => 'ROUND',
             DATE_START => '2006-10-04',
             DATE_END => '2006-10-04'
           } 
@@ -1410,24 +1411,30 @@ my %TOURNAMENTS_CHINA =
           'C0' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
             DATE_START => '2011-08-20',
             DATE_END => '2011-08-21'
           },
           'C1' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
             DATE_START => '2011-09-10',
             DATE_END => '2011-09-11'
           },
           'C2' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2011-09-20',
             DATE_END => '2011-09-20'
           },
           'C3' => 
           {
             YEAR => 2011,
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2011-10-07',
             DATE_END => '2011-10-07'
           } 
@@ -2495,6 +2502,7 @@ my %TOURNAMENTS_CHINA =
           {
             YEAR => 2011,
             MOVEMENT => 'Round-robin',
+            major => 'ROUND',
             DATE_START => '2011-09-06',
             DATE_END => '2011-09-09'
           } 

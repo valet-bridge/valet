@@ -1000,7 +1000,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2015,
-            major => 'SESSION',
+            major => 'SESSION|ROUND',
             DATE_START => '2015-06-27',
             DATE_END => '2015-06-28'
           } 
@@ -1216,7 +1216,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2007,
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2007-05-15',
             DATE_END => '2007-05-15'
           } 
@@ -1864,6 +1864,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2014,
+            major => 'SEGMENT|SESSION',
             DATE_START => '2014-04-18',
             DATE_END => '2014-04-20'
           } 
@@ -2213,7 +2214,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2007,
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2007-06-02',
             DATE_END => '2007-06-05'
           } 
@@ -2472,7 +2473,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2016,
-            major => 'ROUND',
+            major => 'SEGMENT|SESSION|ROUND',
             DATE_START => '2016-03-25',
             DATE_END => '2016-03-27'
           } 
@@ -3134,12 +3135,19 @@ my %TOURNAMENTS_FRIENDLY =
 
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND',
+            DATE_START => '2016-08-18',
+            DATE_END => '2016-08-19'
+          },
+          'C1' => 
           {
             YEAR => 2016,
             STAGE => 'Final',
             major => 'SEGMENT',
-            DATE_START => '2016-08-18',
+            DATE_START => '2016-08-20',
             DATE_END => '2016-08-20'
           } 
         }
@@ -3364,7 +3372,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2014,
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2014-11-02',
             DATE_END => '2014-11-02'
           } 

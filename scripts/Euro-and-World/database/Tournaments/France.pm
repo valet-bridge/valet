@@ -188,6 +188,7 @@ my %TOURNAMENTS_FRANCE =
           {
             YEAR => 2016,
             major => 'SESSION',
+            ignore => 'TABLE',
             DATE_START => '2016-07-30',
             DATE_END => '2016-07-30'
           } 
@@ -316,7 +317,7 @@ my %TOURNAMENTS_FRANCE =
           {
             YEAR => 2013,
             STAGE => 'Final',
-            major => 'SESSION',
+            major => 'SESSION|ROUND',
             DATE_START => '2013-07-22',
             DATE_END => '2013-07-23'
           } 
@@ -415,7 +416,7 @@ my %TOURNAMENTS_FRANCE =
           'C1' => 
           {
             YEAR => 2013,
-            major => 'SESSION',
+            major => 'SESSION|ROUND',
             DATE_START => '2013-07-22',
             DATE_END => '2013-07-24'
           } 
@@ -502,6 +503,7 @@ my %TOURNAMENTS_FRANCE =
           {
             YEAR => 2006,
             STAGE => 'Rof16',
+            major => 'HALF',
             DATE_START => '2006-12-17',
             DATE_END => '2006-12-17'
           },
@@ -1573,7 +1575,7 @@ my %TOURNAMENTS_FRANCE =
           {
             YEAR => 2008,
             STAGE => 'Rof16',
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2008-05-04',
             DATE_END => '2008-05-04'
           },
