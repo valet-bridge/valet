@@ -1,7 +1,26 @@
-We now have 'ignore' and major => 'SEGMENT|ROUND' syntaxes.
 Can add a groupon => 'GROUP', but have to fill in GROUP
 values for a lot of missing GROUP values sometimes.
 Can add a groupon => 'AUTO' which does e.g. a Semifinal.
+Should perhaps not turn Group A into 1 then anymore.
+
+If there is a groupon (not AUTO):
+- Wait with the print-out in digest.
+- Do everything except print.
+- Make buckets depending on group value ('none' is possible)
+  of bbono of references to them.
+- For each sorted bucket, print including the group in the header,
+  not in the chapter.
+- Try to guess the group.
+
+If there is an AUTO:
+- Must be Teams
+- Make a list of {team1 lexicographically}{team2} bbono refs.
+- Check that each {team1} has exactly 1 team2.
+
+
+SEGMENT only for team matches?
+SESSION for pairs, ROUND for teams?
+GROUP, PLACE, SECTION
 
 Consistencies:
 MOVEMENT/STAGE

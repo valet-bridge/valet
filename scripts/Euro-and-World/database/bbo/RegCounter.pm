@@ -46,6 +46,41 @@ sub new
 }
 
 
+sub register_groups
+{
+  my ($self, $entry, $chapter, $counters, $tname) = @_;
+  
+  my $groupon = $chapter->{groupon};
+  if (exists $counters->{$groupon})
+  {
+    my $gvalue = $counters->{$groupon};
+    push @{$self->{GROUPS}{$gvalue}}, $entry;
+
+    for my $team (qw(TEAM1 TEAM2))
+    {
+      my $concat = $entry->concat_team($team);
+
+      if (exists $self->{TEAM_TO_GROUP}{$concat})
+      {
+        if ($self->{TEAM_TO_GROUP}{$concat} ne $gvalue)
+        {
+          warn $tname . ", " . $entry->bbono() . ": Mismatch $gvalue vs. " .
+            $self->{TEAM_TO_GROUP}{$concat};
+        }
+      }
+      else
+      {
+        $self->{TEAM_TO_GROUP}{$concat} = $gvalue;
+      }
+    }
+  }
+  else
+  {
+    push @{$self->{GROUPS}{none}}, $entry;
+  }
+}
+
+
 sub register
 {
   my ($self, $entry, $chapter, $tname) = @_;
@@ -84,6 +119,11 @@ sub register
     {
       warn "$bbono: Haven't learned $value";
     }
+  }
+
+  if (exists $chapter->{groupon} && $chapter->{groupon} ne 'AUTO')
+  {
+    $self->register_groups($entry, $chapter, $counters, $tname);
   }
 
   if ($entry->chapter_field('STAGE') ne '' &&
@@ -231,7 +271,10 @@ sub analyze
   $num_counters_given++ if exists $chapter->{major};
   $num_counters_given++ if exists $chapter->{minor};
 
-  if ($first_zero == 0 && $first_zero != $num_counters_given)
+  my $debug_counters = 0;
+
+  if ($first_zero == 0 && $first_zero != $num_counters_given &&
+      $debug_counters)
   {
     warn "\n\nWARN $first_zero tops, $num_counters_given expected";
     warn $header->{TOURNAMENT_NAME};
@@ -271,7 +314,7 @@ sub analyze
     }
   }
 
-  if ($first_zero != $num_counters_given)
+  if ($first_zero != $num_counters_given && $debug_counters)
   {
     warn "\n\nWARN $first_zero tops, $num_counters_given expected";
     warn $header->{TOURNAMENT_NAME};

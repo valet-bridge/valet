@@ -237,7 +237,7 @@ for my $date_start (keys %data)
 
 for my $date_start (sort keys %data)
 {
-  if ($date_start eq '2002-05-23')
+  if ($date_start eq '2005-09-15')
   {
     print "HERE\n";
   }
@@ -257,7 +257,6 @@ for my $date_start (sort keys %data)
     for my $t_ref (@tlist)
     {
       my $datum_t = $data{$t_ref->{DATE_START}}[$t_ref->{INDEX}];
-      print str_chapter($datum_t->{CHAPTER_REF});
 
       my $reg_counter = RegCounter->new();
 
@@ -274,19 +273,32 @@ for my $date_start (sort keys %data)
       $reg_counter->analyze(
         $datum_t->{HEADER_REF},
         $datum_t->{CHAPTER_REF});
-      print $reg_counter->str_analysis() . "\n" if $VERBOSE;
 
       # This will use 'major' and 'minor' if present.
       $reg_counter->align($datum_t->{CHAPTER_REF});
-      print $reg_counter->str_field_map() if $VERBOSE;
 
       $reg_counter->fix_counters($datum_t->{BBOLIST});
 
-      $reg_counter->sort_counters($datum_t->{BBOLIST});
-
-      for my $bbo (@{$datum_t->{BBOLIST}})
+      my $chapter_str = str_chapter($datum_t->{CHAPTER_REF});
+      if (! exists $datum_t->{CHAPTER_REF}{groupon})
       {
-        print $bbo->str_as_read();
+        $reg_counter->sort_counters($datum_t->{BBOLIST});
+        print_chapter_verse($chapter_str, 
+          $reg_counter, $datum_t->{BBOLIST});
+      }
+      elsif ($datum_t->{CHAPTER_REF}{groupon} eq 'AUTO')
+      {
+        # For now
+        $reg_counter->sort_counters($datum_t->{BBOLIST});
+        print_chapter_verse($chapter_str, 
+          $reg_counter, $datum_t->{BBOLIST});
+      }
+      else
+      {
+        # For now
+        $reg_counter->sort_counters($datum_t->{BBOLIST});
+        print_chapter_verse($chapter_str, 
+          $reg_counter, $datum_t->{BBOLIST});
       }
     }
   }
@@ -339,5 +351,20 @@ sub str_chapter
   }
 
   return "$s\n";
+}
+
+
+sub print_chapter_verse
+{
+  my ($chapter_str, $reg_counter, $bbo_list) = @_;
+
+  print $chapter_str;
+  print $reg_counter->str_analysis() . "\n" if $VERBOSE;
+  print $reg_counter->str_field_map() if $VERBOSE;
+
+  for my $bbo (@$bbo_list)
+  {
+    print $bbo->str_as_read();
+  }
 }
 

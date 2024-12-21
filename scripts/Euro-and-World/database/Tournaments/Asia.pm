@@ -663,10 +663,20 @@ my %TOURNAMENTS_ASIA =
             YEAR => 2005,
             STAGE => 'Qualifying',
             major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2005-06-23',
-            DATE_END => '2005-07-01'
+            DATE_END => '2005-06-27'
           },
           'C1' => 
+          {
+            YEAR => 2005,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            ignore => 'GROUP',
+            DATE_START => '2005-06-28',
+            DATE_END => '2005-07-01'
+          },
+          'C2' => 
           {
             YEAR => 2005,
             STAGE => 'Bronze',
@@ -674,7 +684,7 @@ my %TOURNAMENTS_ASIA =
             DATE_START => '2005-07-02',
             DATE_END => '2005-07-03'
           },
-          'C2' => 
+          'C3' => 
           {
             YEAR => 2005,
             STAGE => 'Playoff',

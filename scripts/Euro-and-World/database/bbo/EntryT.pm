@@ -727,6 +727,19 @@ sub format
 }
 
 
+sub concat_team
+{
+  my ($self, $team) = @_;
+
+  my $concat = '';
+  for my $key (sort keys %{$self->{$team}})
+  {
+    $concat .= join(',', @{$self->{$team}{$key}}) . '|';
+  }
+  return $concat;
+}
+
+
 sub match_letter_to_number
 {
   my ($self) = @_;

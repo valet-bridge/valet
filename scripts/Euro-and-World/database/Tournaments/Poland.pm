@@ -5350,7 +5350,6 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2009,
             STAGE => 'Final',
-            major => 'ROUND|MATCH',
             DATE_START => '2009-09-19',
             DATE_END => '2009-09-19'
           },

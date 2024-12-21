@@ -2973,7 +2973,8 @@ my %TOURNAMENTS_INDONESIA =
           {
             YEAR => 2005,
             MOVEMENT => 'Round-robin',
-            major => 'SESSION',
+            groupon => 'GROUP',
+            major => 'ROUND',
             DATE_START => '2005-09-15',
             DATE_END => '2005-09-15'
           },
