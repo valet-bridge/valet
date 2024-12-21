@@ -688,7 +688,7 @@ my %TOURNAMENTS_ASIA =
           {
             YEAR => 2005,
             STAGE => 'Playoff',
-            major => 'ROUND',
+            major => 'SEGMENT',
             DATE_START => '2005-07-01',
             DATE_END => '2005-07-03'
           } 
@@ -848,7 +848,7 @@ my %TOURNAMENTS_ASIA =
           {
             YEAR => 2012,
             STAGE => 'Qualifying',
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2012-08-27',
             DATE_END => '2012-08-31'
           },
@@ -1113,7 +1113,7 @@ my %TOURNAMENTS_ASIA =
           {
             YEAR => 2012,
             STAGE => 'Qualifying',
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2012-08-27',
             DATE_END => '2012-08-31'
           },
@@ -1339,7 +1339,7 @@ my %TOURNAMENTS_ASIA =
           {
             YEAR => 2012,
             STAGE => 'Qualifying',
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2012-08-27',
             DATE_END => '2012-08-31'
           },
@@ -1545,7 +1545,7 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2006,
-            major => 'ROUND',
+            major => 'ROUND|SESSION',
             DATE_START => '2006-12-17',
             DATE_END => '2006-12-17'
           } 
@@ -2183,6 +2183,8 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2011,
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2011-11-10',
             DATE_END => '2011-11-21'
           } 
@@ -2563,6 +2565,7 @@ my %TOURNAMENTS_ASIA =
             YEAR => 2009,
             STAGE => 'Qualifying',
             major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2009-02-25',
             DATE_END => '2009-02-27'
           },

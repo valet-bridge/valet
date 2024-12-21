@@ -254,7 +254,7 @@ my %TOURNAMENTS_JAPAN =
           {
             YEAR => 2001,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2001-02-09',
             DATE_END => '2001-02-09'
           },
@@ -262,7 +262,7 @@ my %TOURNAMENTS_JAPAN =
           {
             YEAR => 2001,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2001-02-10',
             DATE_END => '2001-02-10'
           },
@@ -285,7 +285,7 @@ my %TOURNAMENTS_JAPAN =
           {
             YEAR => 2005,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2005-02-08',
             DATE_END => '2005-02-09'
           },
@@ -324,7 +324,7 @@ my %TOURNAMENTS_JAPAN =
           {
             YEAR => 2006,
             STAGE => 'Qualifying',
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2006-02-07',
             DATE_END => '2006-02-08'
           },

@@ -880,7 +880,7 @@ my %TOURNAMENTS_NETHERLANDS =
             # Guess
             YEAR => 1999,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '1999-06-11',
             DATE_END => '1999-06-13'
           } 

@@ -141,7 +141,7 @@ my %TOURNAMENTS_AFRICA =
           'SINGLE' => 
           {
             YEAR => 2005,
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2005-05-09',
             DATE_END => '2005-05-15'
           } 

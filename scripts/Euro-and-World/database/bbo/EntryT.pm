@@ -1014,6 +1014,29 @@ sub fix_counters
 }
 
 
+sub fix_of
+{
+  my ($self, $field_map, $of_map) = @_;
+
+  for my $field (@$field_map)
+  {
+if (! exists $of_map->{$field})
+{
+  warn $self->str_as_read();
+  return;
+}
+    next if $of_map->{$field} == 0;
+    next unless exists $self->{COUNTER}{$field};
+
+    my $value = $self->{COUNTER}{$field};
+    if ($value =~ /^(\d+)$/)
+    {
+      $self->{COUNTER}{$field} .= " of " . $of_map->{$field};
+    }
+  }
+}
+
+
 sub check_origin
 {
   my ($self, $header) = @_;

@@ -564,7 +564,7 @@ my %TOURNAMENTS_ISRAEL =
           {
             YEAR => 2009,
             STAGE => 'Final',
-            major => 'SESSION',
+            major => 'SESSION|ROUND',
             DATE_START => '2009-12-26',
             DATE_END => '2009-12-26'
           } 
@@ -754,7 +754,7 @@ my %TOURNAMENTS_ISRAEL =
           {
             YEAR => 2005,
             STAGE => 'Final',
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2005-06-04',
             DATE_END => '2005-06-04'
           } 
@@ -769,7 +769,7 @@ my %TOURNAMENTS_ISRAEL =
           {
             YEAR => 2008,
             STAGE => 'Final',
-            major => 'SESSION',
+            major => 'SESSION|ROUND',
             DATE_START => '2008-07-16',
             DATE_END => '2008-07-16'
           } 
@@ -784,7 +784,7 @@ my %TOURNAMENTS_ISRAEL =
           {
             YEAR => 2010,
             STAGE => 'Final',
-            major => 'SESSION',
+            major => 'SESSION|ROUND',
             DATE_START => '2010-06-05',
             DATE_END => '2010-06-05'
           } 
@@ -814,7 +814,7 @@ my %TOURNAMENTS_ISRAEL =
           {
             YEAR => 2012,
             STAGE => 'Final',
-            major => 'SESSION',
+            major => 'SESSION|ROUND',
             DATE_START => '2012-05-19',
             DATE_END => '2012-05-19'
           } 
@@ -829,7 +829,7 @@ my %TOURNAMENTS_ISRAEL =
           {
             YEAR => 2013,
             STAGE => 'Final',
-            major => 'SESSION',
+            major => 'SESSION|ROUND',
             DATE_START => '2013-06-01',
             DATE_END => '2013-06-01'
           } 
@@ -859,7 +859,7 @@ my %TOURNAMENTS_ISRAEL =
           {
             YEAR => 2015,
             STAGE => 'Final',
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2015-06-20',
             DATE_END => '2015-06-20'
           } 
@@ -874,7 +874,7 @@ my %TOURNAMENTS_ISRAEL =
           {
             YEAR => 2016,
             STAGE => 'Final',
-            major => 'SESSION',
+            major => 'SESSION|ROUND',
             DATE_START => '2016-05-21',
             DATE_END => '2016-05-21'
           } 

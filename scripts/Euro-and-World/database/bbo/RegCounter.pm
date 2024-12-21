@@ -11,6 +11,9 @@ use open ':std', ':encoding(UTF-8)';
 use lib '.';
 use lib '..';
 
+my $DEBUG_COUNTERS = 1;
+
+
 my @FIELDS = qw(PHASE FLIGHT GROUP SECTION
   SESSION MATCH ROUND QUARTER HALF 
   SEGMENT SET STANZA PLACE TABLE);
@@ -271,10 +274,8 @@ sub analyze
   $num_counters_given++ if exists $chapter->{major};
   $num_counters_given++ if exists $chapter->{minor};
 
-  my $debug_counters = 0;
-
   if ($first_zero == 0 && $first_zero != $num_counters_given &&
-      $debug_counters)
+      $DEBUG_COUNTERS)
   {
     warn "\n\nWARN $first_zero tops, $num_counters_given expected";
     warn $header->{TOURNAMENT_NAME};
@@ -314,11 +315,50 @@ sub analyze
     }
   }
 
-  if ($first_zero != $num_counters_given && $debug_counters)
+  if ($first_zero != $num_counters_given && $DEBUG_COUNTERS)
   {
     warn "\n\nWARN $first_zero tops, $num_counters_given expected";
     warn $header->{TOURNAMENT_NAME};
     warn $header->{YEAR};
+    warn $self->str_analysis();
+    for my $bbono (sort keys %{$self->{BBOCOUNT}})
+    {
+      warn "  BBONO $bbono";
+    }
+    warn "---";
+  }
+
+  return unless $DEBUG_COUNTERS;
+  if ($first_zero == $num_counters_given && 
+    $num_counters_given == 1)
+  {
+    if ($self->{ANALYSIS}[0] ne $chapter->{major})
+    {
+      warn "\n\nWARN $first_zero tops: major mismatch";
+      warn $header->{TOURNAMENT_NAME};
+      warn $header->{YEAR};
+      warn "$self->{ANALYSIS}[0] vs $chapter->{major}";
+      warn $self->str_analysis();
+      for my $bbono (sort keys %{$self->{BBOCOUNT}})
+      {
+        warn "  BBONO $bbono";
+      }
+      warn "---";
+    }
+  }
+  elsif ($first_zero == $num_counters_given && 
+      $num_counters_given == 2)
+  {
+    return if $self->{ANALYSIS}[0] eq $chapter->{major} &&
+        $self->{ANALYSIS}[1] eq $chapter->{minor};
+    return if $self->{ANALYSIS}[0] eq $chapter->{minor} &&
+        $self->{ANALYSIS}[1] eq $chapter->{major};
+
+    warn "\n\nWARN $first_zero tops: major/minor mismatch";
+    warn $header->{TOURNAMENT_NAME};
+    warn $header->{YEAR};
+    warn "$self->{ANALYSIS}[0] vs $chapter->{major}";
+    warn "$self->{ANALYSIS}[1] vs $chapter->{minor}";
     warn $self->str_analysis();
     for my $bbono (sort keys %{$self->{BBOCOUNT}})
     {
@@ -359,7 +399,6 @@ sub align
   # Look for pre-assigned counter names and match them up with
   # the ones we discovered ourselves.
   
-  $self->get_assigned_fields($entry);
   return unless $self->{ASSIGNED_FIELDS} > 0;
 
   if (exists $self->{FORM} && $self->{FORM} eq 'EMPTY')
@@ -462,9 +501,33 @@ sub fix_counters
 }
 
 
+sub fix_counters_new
+{
+  my ($self, $chapter_header, $map, $list) = @_;
+
+  $self->get_assigned_fields($chapter_header);
+  for my $entry (@$list)
+  {
+    $entry->fix_of($self->{ASSIGNED}, $self->{OF});
+  }
+}
+
+
 sub sort_counters
 {
   my ($self, $list) = @_;
+
+  @$list = sort
+  {
+    $a->spaceship($b, $self->{ASSIGNED});
+  }
+  @$list;
+}
+
+
+sub sort_counters_new
+{
+  my ($self, $entry, $list) = @_;
 
   @$list = sort
   {

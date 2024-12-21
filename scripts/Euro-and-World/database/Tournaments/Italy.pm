@@ -504,14 +504,14 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             STAGE => => 'Semifinal',
-            major => 'ROUND',
+            major => 'SEGMENT',
             DATE_START => '2006-09-28',
             DATE_END => '2006-09-29'
           } ,
           'C1' =>
           {
             STAGE => => 'Final',
-            major => 'ROUND',
+            major => 'SEGMENT',
             DATE_START => '2006-09-30',
             DATE_END => '2006-10-01'
           } 
@@ -525,14 +525,14 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             STAGE => => 'Semifinal',
-            major => 'ROUND',
+            major => 'SEGMENT',
             DATE_START => '2007-10-27',
             DATE_END => '2007-10-27'
           } ,
           'C1' =>
           {
             STAGE => => 'Final',
-            major => 'ROUND',
+            major => 'SEGMENT',
             DATE_START => '2007-10-28',
             DATE_END => '2007-10-28'
           } 
@@ -1260,14 +1260,14 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2008-12-12',
             DATE_END => '2008-12-12'
           },
           'C1' =>
           {
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2008-12-12',
             DATE_END => '2008-12-13'
           },
@@ -1419,14 +1419,14 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             STAGE => 'Rof32',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2015-10-28',
             DATE_END => '2015-10-28'
           },
           'C1' =>
           {
             STAGE => => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2015-10-28',
             DATE_END => '2015-10-29'
           },
@@ -2221,7 +2221,7 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2010-12-16',
             DATE_END => '2010-12-16'
           },
@@ -2256,7 +2256,7 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2011-12-16',
             DATE_END => '2011-12-16'
           },
@@ -2291,7 +2291,7 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2012-12-14',
             DATE_END => '2012-12-14'
           },
@@ -2350,7 +2350,7 @@ my %TOURNAMENTS_ITALY =
           'C3' =>
           {
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2013-11-22',
             DATE_END => '2013-11-24'
           }
@@ -2378,7 +2378,7 @@ my %TOURNAMENTS_ITALY =
           'C2' =>
           {
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2014-12-11',
             DATE_END => '2014-12-11'
           },
@@ -2413,7 +2413,7 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2015-11-19',
             DATE_END => '2015-11-19'
           },
@@ -2427,14 +2427,14 @@ my %TOURNAMENTS_ITALY =
           'C2' =>
           {
             STAGE => 'Semifinal',
-            major => 'ROUND',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2015-11-20',
             DATE_END => '2015-11-21'
           },
           'C3' =>
           {
             STAGE => 'Final',
-            major => 'ROUND',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2015-11-21',
             DATE_END => '2015-11-22'
           }
@@ -2685,7 +2685,7 @@ my %TOURNAMENTS_ITALY =
           'C1' =>
           {
             STAGE => 'Final',
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2004-05-01',
             DATE_END => '2004-05-02'
           },
@@ -3081,7 +3081,7 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2015-10-08',
             DATE_END => '2015-10-08'
           },

@@ -163,7 +163,7 @@ my %TOURNAMENTS_CROATIA =
           'C0' => 
           {
             YEAR => 2007,
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2007-05-26',
             DATE_END => '2007-05-26'
           },
@@ -521,7 +521,7 @@ my %TOURNAMENTS_CROATIA =
           'C0' => 
           {
             YEAR => 2005,
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2005-05-29',
             DATE_END => '2005-05-29'
           },

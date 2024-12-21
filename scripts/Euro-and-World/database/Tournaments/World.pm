@@ -2484,7 +2484,7 @@ my %TOURNAMENTS_WORLD =
           {
             YEAR => 1998,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '1998-09-01',
             DATE_END => '1998-09-01'
           },

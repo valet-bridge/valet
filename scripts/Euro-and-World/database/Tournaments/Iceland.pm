@@ -86,7 +86,7 @@ my %TOURNAMENTS_ICELAND =
           'SINGLE' => 
           {
             YEAR => 2010,
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2010-01-28',
             DATE_END => '2010-01-29'
           } 
@@ -172,7 +172,7 @@ my %TOURNAMENTS_ICELAND =
           'SINGLE' => 
           {
             YEAR => 2010,
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2010-01-30',
             DATE_END => '2010-01-31'
           } 
@@ -270,7 +270,7 @@ my %TOURNAMENTS_ICELAND =
           'SINGLE' => 
           {
             YEAR => 2008,
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2008-03-03',
             DATE_END => '2008-03-03'
           } 
@@ -336,7 +336,7 @@ my %TOURNAMENTS_ICELAND =
           'SINGLE' => 
           {
             YEAR => 2008,
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2008-03-03',
             DATE_END => '2008-03-03'
           } 
@@ -349,7 +349,7 @@ my %TOURNAMENTS_ICELAND =
           'SINGLE' => 
           {
             YEAR => 2013,
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2013-01-24',
             DATE_END => '2013-01-27'
           } 
@@ -637,7 +637,7 @@ my %TOURNAMENTS_ICELAND =
           {
             YEAR => 2007,
             STAGE => 'Final',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2007-04-16',
             DATE_END => '2007-04-16'
           } 
@@ -651,7 +651,7 @@ my %TOURNAMENTS_ICELAND =
           {
             YEAR => 2008,
             STAGE => 'Final',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2008-05-04',
             DATE_END => '2008-05-04'
           } 
@@ -665,7 +665,7 @@ my %TOURNAMENTS_ICELAND =
           {
             YEAR => 2009,
             STAGE => 'Final',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2009-04-23',
             DATE_END => '2009-04-26'
           } 
@@ -679,7 +679,7 @@ my %TOURNAMENTS_ICELAND =
           {
             YEAR => 2010,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2010-04-22',
             DATE_END => '2010-04-24'
           },
@@ -701,7 +701,7 @@ my %TOURNAMENTS_ICELAND =
           {
             YEAR => 2011,
             STAGE => 'Final',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2011-04-29',
             DATE_END => '2011-05-01'
           },
@@ -745,7 +745,7 @@ my %TOURNAMENTS_ICELAND =
           {
             YEAR => 2013,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2013-04-25',
             DATE_END => '2013-04-27'
           },
@@ -767,7 +767,7 @@ my %TOURNAMENTS_ICELAND =
           {
             YEAR => 2014,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2014-04-24',
             DATE_END => '2014-04-26'
           },
@@ -789,7 +789,7 @@ my %TOURNAMENTS_ICELAND =
           {
             YEAR => 2015,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2015-04-23',
             DATE_END => '2015-04-25'
           },

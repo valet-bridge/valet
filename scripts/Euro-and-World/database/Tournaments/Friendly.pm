@@ -770,7 +770,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2011,
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2011-04-06',
             DATE_END => '2011-04-07'
           } 
@@ -1864,7 +1864,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2014,
-            major => 'SEGMENT|SESSION',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2014-04-18',
             DATE_END => '2014-04-20'
           } 
@@ -2492,7 +2492,7 @@ my %TOURNAMENTS_FRIENDLY =
           {
             # Really same time, but easier to separate like this.
             YEAR => 2016,
-            major => 'ROUND',
+            major => 'SEGMENT',
             DATE_START => '2016-03-28',
             DATE_END => '2016-03-28'
           } 
@@ -2648,7 +2648,7 @@ my %TOURNAMENTS_FRIENDLY =
           'SINGLE' => 
           {
             YEAR => 2007,
-            major => 'SESSION',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2007-05-05',
             DATE_END => '2007-05-06'
           } 
@@ -3138,7 +3138,7 @@ my %TOURNAMENTS_FRIENDLY =
           'C0' => 
           {
             YEAR => 2016,
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2016-08-18',
             DATE_END => '2016-08-19'
           },

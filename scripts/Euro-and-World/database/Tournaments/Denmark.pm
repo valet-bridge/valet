@@ -538,7 +538,7 @@ my %TOURNAMENTS_DENMARK =
           'SINGLE' => 
           {
             YEAR => 2014,
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2014-10-25',
             DATE_END => '2014-10-26'
           } 
@@ -1449,7 +1449,7 @@ my %TOURNAMENTS_DENMARK =
             WEEKEND => 3,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
-            minor => 'SEGMENT',
+            minor => 'SEGMENT|HALF',
             DATE_START => '2015-01-10',
             DATE_END => '2015-01-11'
           },
@@ -1459,7 +1459,7 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2015,
             WEEKEND => 4,
             major => 'ROUND',
-            minor => 'SEGMENT',
+            minor => 'SEGMENT|HALF',
             DATE_START => '2015-03-07',
             DATE_END => '2015-03-08'
           },

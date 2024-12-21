@@ -493,8 +493,8 @@ my %TOURNAMENTS_GERMANY =
           {
             YEAR => 2006,
             STAGE => 'Consolation',
-            major => 'ROUND',
             MOVEMENT => 'Swiss',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2006-05-24',
             DATE_END => '2006-05-25'
           },
@@ -738,7 +738,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 3,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
-            minor => 'SEGMENT'
+            minor => 'SEGMENT|SESSION'
           } 
         }
       },
@@ -759,7 +759,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 1,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
-            minor => 'SEGMENT'
+            minor => 'SEGMENT|SESSION'
           },
           'WEEKEND 2' =>
           {
@@ -768,7 +768,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 2,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
-            minor => 'SEGMENT'
+            minor => 'SEGMENT|SESSION'
           },
           'WEEKEND 3' =>
           {
@@ -777,7 +777,7 @@ my %TOURNAMENTS_GERMANY =
             WEEKEND => 3,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
-            minor => 'SEGMENT'
+            minor => 'SEGMENT|SESSION'
           } 
         }
       },
@@ -797,7 +797,7 @@ my %TOURNAMENTS_GERMANY =
             DATE_END => '2016-01-24',
             WEEKEND => 1,
             major => 'ROUND',
-            minor => 'SEGMENT',
+            minor => 'SEGMENT|SESSION',
             MOVEMENT => 'Round-robin'
           },
           'WEEKEND 2' =>
@@ -806,7 +806,7 @@ my %TOURNAMENTS_GERMANY =
             DATE_END => '2016-02-21',
             WEEKEND => 2,
             major => 'ROUND',
-            minor => 'SEGMENT',
+            minor => 'SEGMENT|SESSION',
             MOVEMENT => 'Round-robin'
           },
           'WEEKEND 3' =>
@@ -815,7 +815,7 @@ my %TOURNAMENTS_GERMANY =
             DATE_END => '2016-03-06',
             WEEKEND => 3,
             major => 'ROUND',
-            minor => 'SEGMENT',
+            minor => 'SEGMENT|SESSION',
             MOVEMENT => 'Round-robin'
           } 
         }
@@ -2050,7 +2050,7 @@ my %TOURNAMENTS_GERMANY =
           {
             YEAR => 2006,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2006-05-05',
             DATE_END => '2006-05-07'
           },
@@ -2058,7 +2058,7 @@ my %TOURNAMENTS_GERMANY =
           {
             YEAR => 2006,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2006-05-05',
             DATE_END => '2006-05-07'
           } 
@@ -2451,7 +2451,7 @@ my %TOURNAMENTS_GERMANY =
           {
             DATE_START => '2003-10-07',
             DATE_END => '2003-10-08',
-            major => 'ROUND'
+            major => 'ROUND|SEGMENT'
           }
         }
       },
@@ -2520,7 +2520,7 @@ my %TOURNAMENTS_GERMANY =
             YEAR => 2016,
             DATE_START => '2016-03-12',
             DATE_END => '2016-03-13',
-            major => 'ROUND',
+            major => 'ROUND|SESSION',
             WEEKEND => 2,
             STAGE => 'Final'
           } 

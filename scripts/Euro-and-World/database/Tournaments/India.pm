@@ -1006,7 +1006,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2004,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2004-08-15',
             DATE_END => '2004-08-15'
           } 
@@ -1285,7 +1285,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2015,
             STAGE => 'Quarterfinal',
-            major => 'ROUND',
+            major => 'SEGMENT',
             DATE_START => '2015-08-22',
             DATE_END => '2015-08-22'
           },
@@ -1293,7 +1293,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2015,
             STAGE => 'Semifinal',
-            major => 'ROUND',
+            major => 'SEGMENT',
             DATE_START => '2015-08-22',
             DATE_END => '2015-08-22'
           },
@@ -1301,7 +1301,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2015,
             STAGE => 'Final',
-            major => 'ROUND',
+            major => 'SEGMENT',
             DATE_START => '2015-08-22',
             DATE_END => '2015-08-23'
           } 
@@ -1420,7 +1420,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2011,
             STAGE => 'Quarterfinal',
-            major => 'ROUND',
+            major => 'SEGMENT',
             DATE_START => '2011-11-12',
             DATE_END => '2011-11-12'
           },
@@ -1428,7 +1428,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2011,
             STAGE => 'Semifinal',
-            major => 'ROUND',
+            major => 'SEGMENT',
             DATE_START => '2011-11-12',
             DATE_END => '2011-11-12'
           },
@@ -1436,7 +1436,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2011,
             STAGE => 'Final',
-            major => 'ROUND',
+            major => 'SEGMENT',
             DATE_START => '2011-11-13',
             DATE_END => '2011-11-13'
           } 
@@ -2486,7 +2486,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2013,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'ROUND',
             DATE_START => '2013-11-10',
             DATE_END => '2013-11-10'
           } 
@@ -2982,7 +2982,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2016,
             STAGE => 'Pre-Quarterfinal',
-            major => 'SEGMENT',
+            major => 'ROUND',
             DATE_START => '2016-08-13',
             DATE_END => '2016-08-13'
           },
@@ -2990,7 +2990,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2016,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2016-08-13',
             DATE_END => '2016-08-13'
           },
@@ -2998,7 +2998,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2016,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2016-08-14',
             DATE_END => '2016-08-14'
           },
@@ -3006,7 +3006,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2016,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2016-08-14',
             DATE_END => '2016-08-14'
           } 
@@ -3451,7 +3451,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2009,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2009-12-24',
             DATE_END => '2009-12-24'
           } 
@@ -3582,7 +3582,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2016,
             STAGE => 'Pre-Quarterfinal',
-            major => 'SEGMENT',
+            major => 'ROUND',
             DATE_START => '2016-01-08',
             DATE_END => '2016-01-08'
           },
@@ -4013,7 +4013,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2014,
             STAGE => 'Rof64',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2014-03-14',
             DATE_END => '2014-03-14'
           },
@@ -4021,7 +4021,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2014,
             STAGE => 'Rof32',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2014-03-14',
             DATE_END => '2014-03-14'
           },
@@ -4029,7 +4029,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2014,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2014-03-15',
             DATE_END => '2014-03-15'
           },
@@ -4037,7 +4037,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2014,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2014-03-15',
             DATE_END => '2014-03-15'
           },
@@ -4045,7 +4045,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2014,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2014-03-15',
             DATE_END => '2014-03-15'
           },
@@ -5853,7 +5853,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2016,
             STAGE => 'Pre-Quarterfinal',
-            major => 'SEGMENT',
+            major => 'ROUND',
             DATE_START => '2016-07-07',
             DATE_END => '2016-07-07'
           },
@@ -5997,7 +5997,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2009,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2009-10-05',
             DATE_END => '2009-10-05'
           },

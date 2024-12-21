@@ -1606,7 +1606,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2011,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2011-05-01',
             DATE_END => '2011-05-02'
           } 
@@ -1711,7 +1711,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2006,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2006-11-19',
             DATE_END => '2006-11-19'
           },
@@ -1719,7 +1719,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2006,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2006-11-20',
             DATE_END => '2006-11-20'
           } 
@@ -2203,7 +2203,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2005,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2005-01-22',
             DATE_END => '2005-01-22'
           },
@@ -2313,7 +2313,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2008,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2008-01-25',
             DATE_END => '2008-01-25'
           },
@@ -2660,7 +2660,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2012,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2012-01-20',
             DATE_END => '2012-01-22'
           } 
@@ -3201,7 +3201,7 @@ my %TOURNAMENTS_AUSTRALIA =
           'SINGLE' => 
           {
             YEAR => 2008,
-            major => 'ROUND',
+            major => 'ROUND|SESSION',
             DATE_START => '2008-03-26',
             DATE_END => '2008-03-30'
           } 
@@ -3327,7 +3327,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2012,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2012-12-11',
             DATE_END => '2012-12-11'
           },
@@ -3351,8 +3351,8 @@ my %TOURNAMENTS_AUSTRALIA =
           'SINGLE' => 
           {
             YEAR => 2014,
-            major => 'ROUND',
-            minor => 'SEGMENT',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2014-02-05',
             DATE_END => '2014-02-09'
           } 
@@ -3790,7 +3790,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2012,
             MOVEMENT => 'Round-robin',
-            major => 'SEGMENT',
+            major => 'ROUND',
             DATE_START => '2012-04-18',
             DATE_END => '2012-04-20'
           },
@@ -4526,7 +4526,7 @@ my %TOURNAMENTS_AUSTRALIA =
           'SINGLE' => 
           {
             YEAR => 2008,
-            major => 'ROUND',
+            major => 'ROUND|SESSION',
             DATE_START => '2008-03-26',
             DATE_END => '2008-03-30'
           } 
@@ -5140,7 +5140,7 @@ my %TOURNAMENTS_AUSTRALIA =
           'SINGLE' => 
           {
             YEAR => 2010,
-            minor => 'SEGMENT|ROUND',
+            major => 'ROUND',
             DATE_START => '2010-01-15',
             DATE_END => '2010-01-16'
           } 
@@ -5183,7 +5183,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2012,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'ROUND',
             DATE_START => '2012-01-20',
             DATE_END => '2012-01-21'
           },
@@ -5191,7 +5191,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2012,
             STAGE => 'Repechage',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2012-01-21',
             DATE_END => '2012-01-22'
           } 
@@ -5405,7 +5405,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2012,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2012-11-01',
             DATE_END => '2012-11-01'
           } 
@@ -5611,7 +5611,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2007,
             STAGE => 'Repechage',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2007-02-24',
             DATE_END => '2007-02-24'
           },
@@ -5744,7 +5744,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2012,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2012-03-01',
             DATE_END => '2012-03-01'
           },
@@ -5752,7 +5752,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2012,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2012-03-01',
             DATE_END => '2012-03-02'
           },
@@ -6078,7 +6078,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2012,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2012-11-01',
             DATE_END => '2012-11-01'
           } 
@@ -6150,7 +6150,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2013,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2013-12-15',
             DATE_END => '2013-12-15'
           } 
@@ -6463,7 +6463,7 @@ my %TOURNAMENTS_AUSTRALIA =
           'SINGLE' => 
           {
             YEAR => 2010,
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2010-06-12',
             DATE_END => '2010-06-13'
           } 
@@ -6885,7 +6885,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2012,
             STAGE => 'Rof6',
-            major => 'SEGMENT',
+            major => 'ROUND',
             DATE_START => '2012-11-24',
             DATE_END => '2012-11-24'
           },
@@ -6986,7 +6986,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2016,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
+            major => 'ROUND|SESSION',
             DATE_START => '2016-04-03',
             DATE_END => '2016-04-09'
           } 
@@ -7014,7 +7014,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2016,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
+            major => 'ROUND|SESSION',
             DATE_START => '2016-04-16',
             DATE_END => '2016-04-16'
           } 

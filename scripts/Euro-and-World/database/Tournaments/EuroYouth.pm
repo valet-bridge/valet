@@ -2120,7 +2120,7 @@ my %TOURNAMENTS_EURO_YOUTH =
           {
             YEAR => 2007,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2007-08-08',
             DATE_END => '2007-08-08'
           },

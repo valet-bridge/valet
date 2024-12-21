@@ -1870,7 +1870,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 1998,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '1998-07-27',
             DATE_END => '1998-08-01'
           } 
@@ -5205,7 +5205,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 1998,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '1998-03-27',
             DATE_END => '1998-03-28'
           } 

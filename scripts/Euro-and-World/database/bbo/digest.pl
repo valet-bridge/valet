@@ -237,7 +237,7 @@ for my $date_start (keys %data)
 
 for my $date_start (sort keys %data)
 {
-  if ($date_start eq '2005-09-15')
+  if ($date_start eq '1999-06-11')
   {
     print "HERE\n";
   }
@@ -275,28 +275,35 @@ for my $date_start (sort keys %data)
         $datum_t->{CHAPTER_REF});
 
       # This will use 'major' and 'minor' if present.
-      $reg_counter->align($datum_t->{CHAPTER_REF});
+      # $reg_counter->align($datum_t->{CHAPTER_REF});
 
-      $reg_counter->fix_counters($datum_t->{BBOLIST});
+      # $reg_counter->fix_counters($datum_t->{BBOLIST});
+      $reg_counter->fix_counters_new($datum_t->{CHAPTER_REF},
+        \%pre_map, $datum_t->{BBOLIST});
 
       my $chapter_str = str_chapter($datum_t->{CHAPTER_REF});
       if (! exists $datum_t->{CHAPTER_REF}{groupon})
       {
-        $reg_counter->sort_counters($datum_t->{BBOLIST});
+        # $reg_counter->sort_counters($datum_t->{BBOLIST});
+        $reg_counter->sort_counters_new($datum_t->{CHAPTER_REF},
+          $datum_t->{BBOLIST});
         print_chapter_verse($chapter_str, 
           $reg_counter, $datum_t->{BBOLIST});
       }
       elsif ($datum_t->{CHAPTER_REF}{groupon} eq 'AUTO')
       {
         # For now
-        $reg_counter->sort_counters($datum_t->{BBOLIST});
+        # $reg_counter->sort_counters($datum_t->{BBOLIST});
+        $reg_counter->sort_counters_new($datum_t->{CHAPTER_REF},
+          $datum_t->{BBOLIST});
         print_chapter_verse($chapter_str, 
           $reg_counter, $datum_t->{BBOLIST});
       }
       else
       {
         # For now
-        $reg_counter->sort_counters($datum_t->{BBOLIST});
+        $reg_counter->sort_counters_new($datum_t->{CHAPTER_REF},
+          $datum_t->{BBOLIST});
         print_chapter_verse($chapter_str, 
           $reg_counter, $datum_t->{BBOLIST});
       }

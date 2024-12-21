@@ -515,7 +515,7 @@ my %TOURNAMENTS_CHINA =
           {
             YEAR => 2016,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2016-06-20',
             DATE_END => '2016-06-20'
           },
@@ -523,7 +523,7 @@ my %TOURNAMENTS_CHINA =
           {
             YEAR => 2016,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2016-06-20',
             DATE_END => '2016-06-20'
           },
@@ -531,7 +531,7 @@ my %TOURNAMENTS_CHINA =
           {
             YEAR => 2016,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2016-06-20',
             DATE_END => '2016-06-21'
           } 
@@ -751,6 +751,7 @@ my %TOURNAMENTS_CHINA =
           {
             YEAR => 2015,
             STAGE => 'Quarterfinal',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2015-08-01',
             DATE_END => '2015-08-01'
           },
@@ -758,7 +759,7 @@ my %TOURNAMENTS_CHINA =
           {
             YEAR => 2015,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2015-08-01',
             DATE_END => '2015-08-01'
           },
@@ -766,7 +767,7 @@ my %TOURNAMENTS_CHINA =
           {
             YEAR => 2015,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2015-08-02',
             DATE_END => '2015-08-02'
           } 
@@ -1679,7 +1680,7 @@ my %TOURNAMENTS_CHINA =
           {
             YEAR => 2015,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2015-10-09',
             DATE_END => '2015-10-09'
           },
@@ -2310,7 +2311,7 @@ my %TOURNAMENTS_CHINA =
           {
             YEAR => 2011,
             MOVEMENT => 'Round-robin',
-            major => 'SEGMENT',
+            major => 'ROUND',
             DATE_START => '2011-10-02',
             DATE_END => '2011-10-04'
           },
