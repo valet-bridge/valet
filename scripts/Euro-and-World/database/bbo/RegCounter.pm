@@ -42,20 +42,14 @@ sub register_groups
 
     for my $team (qw(TEAM1 TEAM2))
     {
-      my $concat = $entry->concat_team($team);
+      my $concat = lc($entry->concat_team($team));
+      next if $concat eq '';
 
-      if (exists $self->{TEAM_TO_GROUP}{$concat})
-      {
-        if ($self->{TEAM_TO_GROUP}{$concat} ne $gvalue)
-        {
-          warn $tname . ", " . $entry->bbono() . ": Mismatch $gvalue vs. " .
-            $self->{TEAM_TO_GROUP}{$concat};
-        }
-      }
-      else
-      {
-        $self->{TEAM_TO_GROUP}{$concat} = $gvalue;
-      }
+      # This can lead to overwrites which we accept as long as
+      # groups are later found.  For example, Buffett Cup has
+      # Europe in multiple places, but if they all have correct
+      # groups, it is OK.
+      $self->{TEAM_TO_GROUP}{$concat} = $gvalue;
     }
   }
   else
@@ -202,6 +196,56 @@ sub get_leading_top_number
 sub analyze
 {
   my ($self, $header, $chapter) = @_;
+
+  my $num_bbo_fields = 0;
+  for my $field (keys %{$self->{COUNTER}})
+  {
+    $self->{ANALYSIS}[$num_bbo_fields] = $field;
+
+    if (! exists $self->{COUNTER}{$field}{OF})
+    {
+      $self->{OF}{$field} = 0;
+    }
+    elsif (my $of_end = has_of_structure($self->{COUNTER}{$field}{ENDS}))
+    {
+      $self->{OF}{$field} = $of_end;
+    }
+    else
+    {
+      print "WARNING: Contradictory OF structure for '$field'\n";
+    }
+
+    $num_bbo_fields++;
+  }
+
+  $self->{NUM_FIELDS} = $num_bbo_fields;
+
+  my $num_chapter_fields = 0;
+  $num_chapter_fields++ if exists $chapter->{major};
+  $num_chapter_fields++ if exists $chapter->{minor};
+  $num_chapter_fields++ if exists $chapter->{groupon};
+
+  if ($num_bbo_fields != $num_chapter_fields && $DEBUG_COUNTERS)
+  {
+    warn "\n\nWARN $num_bbo_fields BBO, $num_chapter_fields chapter";
+    warn $header->{TOURNAMENT_NAME};
+    warn $header->{YEAR};
+    warn "major $chapter->{major}" if exists $chapter->{major};
+    warn "minor $chapter->{minor}" if exists $chapter->{minor};
+    warn "groupon $chapter->{groupon}" if exists $chapter->{groupon};
+    warn $self->str_analysis();
+    for my $bbono (sort keys %{$self->{BBOCOUNT}})
+    {
+      warn "  BBONO $bbono";
+    }
+    warn "---";
+  }
+
+
+  return;
+
+
+
 
   my $top_no;
   if (! $self->get_leading_top_number(\$top_no))
@@ -389,12 +433,12 @@ sub regroup
 {
   my ($self) = @_;
 
-  for my $i (0 .. $#{$self->{GROUPS}{none}})
+  for my $i (reverse 0 .. $#{$self->{GROUPS}{none}})
   {
     my $none = $self->{GROUPS}{none}[$i];
 
-    my $concat1 = $none->concat_team('TEAM1');
-    my $concat2 = $none->concat_team('TEAM2');
+    my $concat1 = lc($none->concat_team('TEAM1'));
+    my $concat2 = lc($none->concat_team('TEAM2'));
 
     my $group1 = $self->{TEAM_TO_GROUP}{$concat1} // '';
     my $group2 = $self->{TEAM_TO_GROUP}{$concat2} // '';
@@ -404,9 +448,24 @@ sub regroup
       push @{$self->{GROUPS}{$group1}}, $none;
       splice(@{$self->{GROUPS}{none}}, $i, 1);
     }
+    elsif ($group1 ne '' && $group2 eq '')
+    {
+      push @{$self->{GROUPS}{$group1}}, $none;
+      splice(@{$self->{GROUPS}{none}}, $i, 1);
+    }
+    elsif ($group1 eq '' && $group2 ne '')
+    {
+      push @{$self->{GROUPS}{$group2}}, $none;
+      splice(@{$self->{GROUPS}{none}}, $i, 1);
+    }
     else
     {
-      warn $none->bbono() . ": group1 $group1, group2 $group2";
+      warn $none->bbono() . " groups: $concat1: $group1, $concat2: $group2";
+
+      for my $key (sort keys %{$self->{TEAM_TO_GROUP}})
+      {
+        warn "  $key: " . $self->{TEAM_TO_GROUP}{$key};
+      }
     }
   }
 
@@ -432,6 +491,7 @@ sub sort_counters
 }
 
 
+# TODO delete again?
 sub sort_counters_new
 {
   my ($self, $entry, $list) = @_;

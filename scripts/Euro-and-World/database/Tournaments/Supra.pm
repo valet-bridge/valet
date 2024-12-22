@@ -379,6 +379,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2010,
+            groupon => 'GROUP',
             major => 'ROUND',
             DATE_START => '2010-09-15',
             DATE_END => '2010-09-16'
@@ -420,7 +421,8 @@ my %TOURNAMENTS_SUPRA =
           {
             YEAR => 2010,
             STAGE => 'Final',
-            major => 'SESSION',
+            groupon => 'GROUP',
+            major => 'SESSION|ROUND',
             DATE_START => '2010-09-13',
             DATE_END => '2010-09-13'
           } 
@@ -475,6 +477,7 @@ my %TOURNAMENTS_SUPRA =
           'SINGLE' => 
           {
             YEAR => 2010,
+            groupon => 'GROUP',
             major => 'ROUND',
             DATE_START => '2010-09-14',
             DATE_END => '2010-09-15'

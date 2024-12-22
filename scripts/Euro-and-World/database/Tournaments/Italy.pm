@@ -2350,6 +2350,7 @@ my %TOURNAMENTS_ITALY =
           {
             STAGE => 'Final',
             major => 'SEGMENT|ROUND',
+            ignore => 'GROUP',
             DATE_START => '2013-11-22',
             DATE_END => '2013-11-24'
           }

@@ -693,6 +693,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2005,
             MOVEMENT => 'Round-robin',
+            groupon => 'GROUP',
             major => 'ROUND',
             DATE_START => '2005-10-13',
             DATE_END => '2005-10-14'
@@ -724,6 +725,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2006,
             MOVEMENT => 'Round-robin',
+            groupon => 'GROUP',
             major => 'ROUND',
             DATE_START => '2006-10-12',
             DATE_END => '2006-10-13'
@@ -763,6 +765,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2007,
             MOVEMENT => 'Round-robin',
+            groupon => 'GROUP',
             major => 'ROUND',
             ignore => 'MATCH',
             DATE_START => '2007-11-08',
@@ -882,6 +885,7 @@ my %TOURNAMENTS_EUROADULT =
             YEAR => 2010,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2010-11-11',
             DATE_END => '2010-11-12'
           },
@@ -897,6 +901,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2010,
             STAGE => 'Consolation',
+            groupon => 'PLACE',
             major => 'SEGMENT|ROUND',
             DATE_START => '2010-11-13',
             DATE_END => '2010-11-14'
@@ -943,6 +948,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2011,
             STAGE => 'Playoff',
+            groupon => 'PLACE',
             major => 'SEGMENT',
             DATE_START => '2011-11-20',
             DATE_END => '2011-11-20'
@@ -1453,7 +1459,7 @@ my %TOURNAMENTS_EUROADULT =
             YEAR => 2006,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
-            minor => 'SEGMENT',
+            ignore => 'GROUP',
             DATE_START => '2006-08-13',
             DATE_END => '2006-08-26'
           } 
@@ -1495,6 +1501,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2010,
             MOVEMENT => 'Round-robin',
+            groupon => 'GROUP',
             major => 'ROUND',
             DATE_START => '2010-06-23',
             DATE_END => '2010-06-29'
@@ -1518,6 +1525,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2012,
+            groupon => 'GROUP',
             major => 'ROUND|MATCH',
             DATE_START => '2012-06-13',
             DATE_END => '2012-06-19'
@@ -1920,6 +1928,7 @@ my %TOURNAMENTS_EUROADULT =
             YEAR => 2006,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2006-08-17',
             DATE_END => '2006-08-23'
           },
@@ -1928,6 +1937,7 @@ my %TOURNAMENTS_EUROADULT =
             YEAR => 2006,
             STAGE => 'Final',
             major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2006-08-23',
             DATE_END => '2006-08-25'
           } 
@@ -1961,6 +1971,7 @@ my %TOURNAMENTS_EUROADULT =
             YEAR => 2010,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2010-06-26',
             DATE_END => '2010-07-03'
           }
@@ -2361,6 +2372,7 @@ my %TOURNAMENTS_EUROADULT =
             YEAR => 2006,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2006-08-17',
             DATE_END => '2006-08-25'
           } 
@@ -2394,6 +2406,7 @@ my %TOURNAMENTS_EUROADULT =
             YEAR => 2010,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2010-06-23',
             DATE_END => '2010-07-02'
           }
@@ -3019,6 +3032,8 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2011,
             STAGE => 'Final',
+            major => 'SESSION',
+            ignore => 'GROUP',
             DATE_START => '2011-06-23',
             DATE_END => '2011-06-23'
           },
@@ -3384,6 +3399,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2009,
             MOVEMENT => 'Swiss',
+            groupon => 'GROUP',
             major => 'ROUND',
             DATE_START => '2009-06-14',
             DATE_END => '2009-06-14'
@@ -3447,6 +3463,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2011,
             MOVEMENT => 'Swiss',
+            groupon => 'GROUP',
             major => 'ROUND',
             DATE_START => '2011-06-19',
             DATE_END => '2011-06-19'
@@ -3855,6 +3872,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2009,
             STAGE => 'Final',
+            groupon => 'GROUP',
             major => 'SESSION|ROUND',
             DATE_START => '2009-06-26',
             DATE_END => '2009-06-27'
@@ -3879,6 +3897,7 @@ my %TOURNAMENTS_EUROADULT =
             YEAR => 2011,
             STAGE => 'Semifinal',
             major => 'SESSION',
+            ignore => 'GROUP',
             DATE_START => '2011-06-29',
             DATE_END => '2011-06-30'
           },
@@ -3887,6 +3906,7 @@ my %TOURNAMENTS_EUROADULT =
             YEAR => 2011,
             STAGE => 'Final',
             major => 'SESSION',
+            ignore => 'GROUP',
             DATE_START => '2011-07-01',
             DATE_END => '2011-07-02'
           },
@@ -4263,6 +4283,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2009,
             MOVEMENT => 'Swiss',
+            groupon => 'GROUP',
             major => 'ROUND',
             DATE_START => '2009-06-20',
             DATE_END => '2009-06-21'
@@ -4321,6 +4342,7 @@ my %TOURNAMENTS_EUROADULT =
             YEAR => 2011,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2011-06-24',
             DATE_END => '2011-06-25'
           },
@@ -4328,6 +4350,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2011,
             MOVEMENT => 'Swiss',
+            groupon => 'GROUP',
             major => 'ROUND',
             DATE_START => '2011-06-25',
             DATE_END => '2011-06-26'

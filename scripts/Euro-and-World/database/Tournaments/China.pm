@@ -751,7 +751,6 @@ my %TOURNAMENTS_CHINA =
           {
             YEAR => 2015,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT|ROUND',
             DATE_START => '2015-08-01',
             DATE_END => '2015-08-01'
           },
@@ -2373,6 +2372,7 @@ my %TOURNAMENTS_CHINA =
           'SINGLE' => 
           {
             YEAR => 2012,
+            groupon => 'GROUP',
             major => 'ROUND',
             DATE_START => '2012-10-02',
             DATE_END => '2012-10-04'

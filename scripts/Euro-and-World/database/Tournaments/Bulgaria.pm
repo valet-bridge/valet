@@ -841,6 +841,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2013,
+            groupon => 'GROUP',
             major => 'ROUND',
             DATE_START => '2013-02-07',
             DATE_END => '2013-02-10'
@@ -855,7 +856,8 @@ my %TOURNAMENTS_BULGARIA =
           {
             YEAR => 2014,
             STAGE => 'Final',
-            major => 'ROUND',
+            groupon => 'GROUP',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2014-02-06',
             DATE_END => '2014-02-09'
           },
@@ -870,7 +872,8 @@ my %TOURNAMENTS_BULGARIA =
             YEAR => 2015,
             STAGE => 'Final',
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
+            groupon => 'GROUP',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2015-01-29',
             DATE_END => '2015-02-01'
           },
@@ -885,7 +888,8 @@ my %TOURNAMENTS_BULGARIA =
             YEAR => 2016,
             STAGE => 'Final',
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
+            groupon => 'GROUP',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2016-02-04',
             DATE_END => '2016-02-07'
           },
@@ -1482,6 +1486,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2010,
+            groupon => 'GROUP',
             major => 'ROUND',
             DATE_START => '2010-04-30',
             DATE_END => '2010-05-02'
@@ -1496,6 +1501,7 @@ my %TOURNAMENTS_BULGARIA =
           'SINGLE' => 
           {
             YEAR => 2012,
+            groupon => 'GROUP',
             major => 'ROUND',
             DATE_START => '2012-05-05',
             DATE_END => '2012-05-06'
@@ -1546,6 +1552,7 @@ my %TOURNAMENTS_BULGARIA =
           'C1' => 
           {
             YEAR => 2016,
+            groupon => 'GROUP',
             major => 'ROUND',
             DATE_START => '2016-05-08',
             DATE_END => '2016-05-08'
@@ -1602,6 +1609,7 @@ my %TOURNAMENTS_BULGARIA =
           {
             YEAR => 2011,
             major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2011-05-14',
             DATE_END => '2011-05-15'
           } 
@@ -1892,6 +1900,7 @@ my %TOURNAMENTS_BULGARIA =
           {
             YEAR => 2014,
             STAGE => 'Semifinal',
+            ignore => 'GROUP',
             DATE_START => '2014-10-04',
             DATE_END => '2014-10-04'
           },
@@ -1899,6 +1908,7 @@ my %TOURNAMENTS_BULGARIA =
           {
             YEAR => 2014,
             STAGE => 'Final',
+            ignore => 'GROUP',
             DATE_START => '2014-10-05',
             DATE_END => '2014-10-05'
           },
@@ -1913,6 +1923,8 @@ my %TOURNAMENTS_BULGARIA =
           {
             YEAR => 2015,
             STAGE => 'Semifinal',
+            major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2015-10-17',
             DATE_END => '2015-10-17'
           },

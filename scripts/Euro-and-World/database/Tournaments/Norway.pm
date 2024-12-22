@@ -463,6 +463,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2010,
+            groupon => 'GROUP',
             major => 'SESSION',
             DATE_START => '2010-08-28',
             DATE_END => '2010-08-29'
@@ -492,6 +493,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2012,
+            groupon => 'GROUP',
             major => 'SESSION',
             DATE_START => '2012-09-08',
             DATE_END => '2012-09-09'

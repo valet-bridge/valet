@@ -1561,7 +1561,8 @@ my %TOURNAMENTS_ASIA =
           {
             YEAR => 2008,
             STAGE => 'Qualifying',
-            major => 'ROUND',
+            major => 'ROUND|SESSION',
+            ignore => 'GROUP',
             DATE_START => '2008-09-10',
             DATE_END => '2008-09-10'
           },
@@ -1577,7 +1578,8 @@ my %TOURNAMENTS_ASIA =
           {
             YEAR => 2008,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
+            major => 'ROUND|SESSION',
+            ignore => 'GROUP',
             DATE_START => '2008-12-07',
             DATE_END => '2008-12-07'
           },
@@ -1740,6 +1742,7 @@ my %TOURNAMENTS_ASIA =
             STAGE => 'Qualifying',
             MOVEMENT => 'Swiss',
             major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2008-12-06',
             DATE_END => '2008-12-06'
           },
@@ -2183,6 +2186,7 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2011,
+            groupon => 'GROUP',
             major => 'SESSION',
             minor => 'ROUND',
             DATE_START => '2011-11-10',
@@ -2246,6 +2250,9 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2011,
+            groupon => 'GROUP',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2011-11-10',
             DATE_END => '2011-11-21'
           } 
@@ -2307,6 +2314,9 @@ my %TOURNAMENTS_ASIA =
           'SINGLE' => 
           {
             YEAR => 2011,
+            groupon => 'GROUP',
+            major => 'SESSION',
+            minor => 'ROUND',
             DATE_START => '2011-11-10',
             DATE_END => '2011-11-21'
           } 
@@ -2508,6 +2518,7 @@ my %TOURNAMENTS_ASIA =
             YEAR => 2007,
             STAGE => 'Knock-out',
             major => 'SEGMENT',
+            ignore => 'GROUP',
             DATE_START => '2007-03-03',
             DATE_END => '2007-03-04'
           },
@@ -2564,8 +2575,8 @@ my %TOURNAMENTS_ASIA =
           {
             YEAR => 2009,
             STAGE => 'Qualifying',
+            groupon => 'GROUP',
             major => 'ROUND',
-            minor => 'SEGMENT',
             DATE_START => '2009-02-25',
             DATE_END => '2009-02-27'
           },
@@ -2573,6 +2584,7 @@ my %TOURNAMENTS_ASIA =
           {
             YEAR => 2009,
             STAGE => 'Knock-out',
+            groupon => 'GROUP',
             major => 'MATCH',
             minor => 'SEGMENT',
             DATE_START => '2009-02-27',
@@ -2582,6 +2594,7 @@ my %TOURNAMENTS_ASIA =
           {
             YEAR => 2009,
             MOVEMENT => 'Triangle',
+            groupon => 'GROUP',
             major => 'MATCH',
             minor => 'SEGMENT',
             DATE_START => '2009-02-28',

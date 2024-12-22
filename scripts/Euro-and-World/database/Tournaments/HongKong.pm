@@ -41,6 +41,7 @@ my %TOURNAMENTS_HONGKONG =
           'C0' => 
           {
             YEAR => 2006,
+            groupon => 'SECTION',
             major => 'ROUND',
             DATE_START => '2006-08-09',
             DATE_END => '2006-08-09'

@@ -244,7 +244,8 @@ my %TOURNAMENTS_MONACO =
           'C1' => 
           {
             YEAR => 2011,
-            minor => 'ROUND',
+            groupon => 'GROUP',
+            major => 'ROUND',
             DATE_START => '2011-10-15',
             DATE_END => '2011-10-15'
           },
@@ -283,6 +284,7 @@ my %TOURNAMENTS_MONACO =
           {
             YEAR => 2012,
             STAGE => 'Qualifying',
+            groupon => 'GROUP',
             major => 'ROUND',
             DATE_START => '2012-10-12',
             DATE_END => '2012-10-13'

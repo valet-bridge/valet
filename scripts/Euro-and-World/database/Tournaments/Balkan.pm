@@ -472,6 +472,7 @@ my %TOURNAMENTS_BALKAN =
           {
             YEAR => 2009,
             MOVEMENT => 'Round-robin',
+            groupon => 'GROUP',
             major => 'ROUND',
             DATE_START => '2009-11-24',
             DATE_END => '2009-11-25'
@@ -510,6 +511,7 @@ my %TOURNAMENTS_BALKAN =
           'C0' => 
           {
             YEAR => 2010,
+            groupon => 'GROUP',
             major => 'ROUND',
             DATE_START => '2010-09-29',
             DATE_END => '2010-09-29'
@@ -582,6 +584,7 @@ my %TOURNAMENTS_BALKAN =
           {
             YEAR => 2015,
             MOVEMENT => 'Round-robin',
+            groupon => 'GROUP',
             major => 'ROUND',
             DATE_START => '2015-10-14',
             DATE_END => '2015-10-15'

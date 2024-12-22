@@ -2564,6 +2564,7 @@ my %TOURNAMENTS_WORLD =
           {
             YEAR => 2006,
             MOVEMENT => 'Round-robin',
+            groupon => 'GROUP',
             major => 'ROUND',
             DATE_START => '2006-06-13',
             DATE_END => '2006-06-15'
@@ -3278,7 +3279,7 @@ my %TOURNAMENTS_WORLD =
             YEAR => 2014,
             STAGE => 'Final',
             major => 'SESSION',
-            ignore => 'TABLE',
+            ignore => 'TABLE|GROUP',
             DATE_START => '2014-10-13',
             DATE_END => '2014-10-17'
           },
@@ -3645,6 +3646,7 @@ my %TOURNAMENTS_WORLD =
             STAGE => 'Qualifying',
             MOVEMENT => 'Swiss',
             major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2011-10-24',
             DATE_END => '2011-10-27'
           },
@@ -3894,6 +3896,7 @@ my %TOURNAMENTS_WORLD =
           {
             YEAR => 2009,
             major => 'SESSION|SEGMENT',
+            ignore => 'GROUP',
             DATE_START => '2009-08-20',
             DATE_END => '2009-08-23'
           } 
@@ -3994,6 +3997,7 @@ my %TOURNAMENTS_WORLD =
           {
             YEAR => 2009,
             MOVEMENT => 'Round-robin',
+            groupon => 'GROUP',
             major => 'ROUND',
             DATE_START => '2009-08-15',
             DATE_END => '2009-08-17'
@@ -4042,6 +4046,7 @@ my %TOURNAMENTS_WORLD =
             YEAR => 2011,
             MOVEMENT => 'Swiss',
             major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2011-08-22',
             DATE_END => '2011-08-23'
           },
@@ -4916,6 +4921,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2011,
+            groupon => 'GROUP',
             major => 'SESSION|SEGMENT|ROUND',
             DATE_START => '2011-12-14',
             DATE_END => '2011-12-16'
@@ -5000,6 +5006,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2011,
+            groupon => 'GROUP',
             major => 'ROUND',
             DATE_START => '2011-12-09',
             DATE_END => '2011-12-13'
@@ -5117,6 +5124,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2011,
+            groupon => 'GROUP',
             major => 'SESSION|SEGMENT',
             DATE_START => '2011-12-13',
             DATE_END => '2011-12-14'
@@ -5176,6 +5184,7 @@ my %TOURNAMENTS_WORLD =
             YEAR => 2008,
             STAGE => 'Qualifying',
             MOVEMENT => 'Round-robin',
+            groupon => 'GROUP',
             major => 'ROUND',
             DATE_START => '2008-10-04',
             DATE_END => '2008-10-10'
@@ -5186,7 +5195,7 @@ my %TOURNAMENTS_WORLD =
             STAGE => 'Quarterfinal',
             MOVEMENT => 'Round-robin',
             major => 'SEGMENT',
-            ignore => 'MATCH',
+            ignore => 'MATCH|GROUP',
             DATE_START => '2008-10-11',
             DATE_END => '2008-10-13'
           },
@@ -5228,6 +5237,7 @@ my %TOURNAMENTS_WORLD =
             YEAR => 2011,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2011-12-10',
             DATE_END => '2011-12-11'
           },
@@ -5357,6 +5367,7 @@ my %TOURNAMENTS_WORLD =
             YEAR => 2008,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2008-10-04',
             DATE_END => '2008-10-11'
           },
@@ -5605,6 +5616,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2011,
+            groupon => 'GROUP',
             major => 'SESSION|ROUND',
             DATE_START => '2011-12-14',
             DATE_END => '2011-12-16'
@@ -5675,6 +5687,7 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2011,
+            groupon => 'GROUP',
             major => 'SESSION',
             DATE_START => '2011-12-12',
             DATE_END => '2011-12-15'
@@ -5748,6 +5761,7 @@ my %TOURNAMENTS_WORLD =
           {
             YEAR => 2008,
             MOVEMENT => 'Round-robin',
+            groupon => 'GROUP',
             major => 'ROUND',
             DATE_START => '2008-10-04',
             DATE_END => '2008-10-11'
@@ -5793,12 +5807,22 @@ my %TOURNAMENTS_WORLD =
         MEET => 'World Mind Games',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
+          {
+            YEAR => 2011,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            ignore => 'GROUP',
+            DATE_START => '2011-12-10',
+            DATE_END => '2011-12-11'
+          },
+          'C1' => 
           {
             YEAR => 2011,
             STAGE => 'Final',
             major => 'SEGMENT',
-            DATE_START => '2011-12-10',
+            ignore => 'GROUP',
+            DATE_START => '2011-12-12',
             DATE_END => '2011-12-13'
           } 
         }

@@ -2244,7 +2244,8 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2006,
             STAGE => 'Qualifying',
-            major => 'SEGMENT',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2006-01-28',
             DATE_END => '2006-01-30'
           },

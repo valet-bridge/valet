@@ -845,6 +845,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
           'SINGLE' => 
           {
             YEAR => 2011,
+            groupon => 'PLACE',
             major => 'ROUND',
             DATE_START => '2011-03-26',
             DATE_END => '2011-03-27'

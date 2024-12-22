@@ -747,6 +747,7 @@ my %TOURNAMENTS_INDONESIA =
             YEAR => 2009,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2009-05-29',
             DATE_END => '2009-05-31'
           },
@@ -931,6 +932,7 @@ my %TOURNAMENTS_INDONESIA =
             STAGE => 'Qualifying',
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
+            ignore => 'GROUP',
             DATE_START => '2009-06-01',
             DATE_END => '2009-06-02'
           },

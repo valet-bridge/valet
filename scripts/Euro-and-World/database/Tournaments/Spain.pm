@@ -255,7 +255,8 @@ my %TOURNAMENTS_SPAIN =
           'C7' => 
           {
             YEAR => 2010,
-            major => 'SESSION',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2010-03-15',
             DATE_END => '2010-03-16'
           },
@@ -269,63 +270,72 @@ my %TOURNAMENTS_SPAIN =
           'C0' => 
           {
             YEAR => 2011,
-            major => 'SESSION',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2011-01-10',
             DATE_END => '2011-01-12'
           },
           'C1' => 
           {
             YEAR => 2011,
-            major => 'SESSION',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2011-01-17',
             DATE_END => '2011-01-17'
           },
           'C2' => 
           {
             YEAR => 2011,
-            major => 'SESSION',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2011-01-24',
             DATE_END => '2011-01-24'
           },
           'C3' => 
           {
             YEAR => 2011,
-            major => 'SESSION',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2011-01-31',
             DATE_END => '2011-01-31'
           },
           'C4' => 
           {
             YEAR => 2011,
-            major => 'SESSION',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2011-02-07',
             DATE_END => '2011-02-07'
           },
           'C5' => 
           {
             YEAR => 2011,
-            major => 'SESSION',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2011-02-14',
             DATE_END => '2011-02-14'
           },
           'C6' => 
           {
             YEAR => 2011,
-            major => 'SESSION',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2011-02-21',
             DATE_END => '2011-02-21'
           },
           'C7' => 
           {
             YEAR => 2011,
-            major => 'SESSION',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2011-02-28',
             DATE_END => '2011-02-28'
           },
           'C8' => 
           {
             YEAR => 2011,
-            major => 'SESSION',
+            major => 'ROUND',
+            minor => 'SEGMENT',
             DATE_START => '2011-03-07',
             DATE_END => '2011-03-07'
           }

@@ -732,6 +732,7 @@ sub concat_team
   my ($self, $team) = @_;
 
   my $concat = '';
+  return $concat unless exists $self->{$team};
   for my $key (sort keys %{$self->{$team}})
   {
     $concat .= join(',', @{$self->{$team}{$key}}) . '|';
@@ -982,6 +983,7 @@ sub fix_of
   {
 if (! exists $of_map->{$field})
 {
+  warn "Field $field has no OF map";
   warn $self->str_as_read();
   return;
 }
