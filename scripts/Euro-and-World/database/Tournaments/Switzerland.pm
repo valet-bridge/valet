@@ -445,7 +445,7 @@ my %TOURNAMENTS_SWITZERLAND =
           'SINGLE' => 
           {
             YEAR => 2015,
-            major => 'MATCH',
+            major => 'ROUND|MATCH',
             DATE_START => '2015-05-31',
             DATE_END => '2015-05-31'
           },
@@ -458,7 +458,7 @@ my %TOURNAMENTS_SWITZERLAND =
           'SINGLE' => 
           {
             YEAR => 2016,
-            major => 'SESSION',
+            major => 'ROUND|MATCH',
             DATE_START => '2016-04-17',
             DATE_END => '2016-04-17'
           },

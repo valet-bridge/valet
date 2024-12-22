@@ -519,7 +519,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2014,
-            major => 'SESSION',
+            major => 'SESSION|ROUND',
             DATE_START => '2014-09-06',
             DATE_END => '2014-09-07'
           } 
@@ -963,7 +963,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2006,
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2006-08-09',
             DATE_END => '2006-08-09'
           } 
@@ -991,7 +991,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2010,
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2010-07-31',
             DATE_END => '2010-08-01'
           } 
@@ -1167,7 +1167,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2006,
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2006-08-09',
             DATE_END => '2006-08-09'
           } 
@@ -1197,7 +1197,7 @@ my %TOURNAMENTS_NORWAY =
           {
             YEAR => 2010,
             STAGE => 'Final',
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2010-08-03',
             DATE_END => '2010-08-05'
           } 
@@ -1273,7 +1273,7 @@ my %TOURNAMENTS_NORWAY =
           {
             YEAR => 2014,
             STAGE => 'Final',
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2014-09-19',
             DATE_END => '2014-09-21'
           } 
@@ -1439,7 +1439,7 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2004,
-            major => 'ROUND',
+            major => 'ROUND|SESSION',
             DATE_START => '2004-11-13',
             DATE_END => '2004-11-13'
           },
@@ -1467,7 +1467,7 @@ my %TOURNAMENTS_NORWAY =
           'C0' => 
           {
             YEAR => 2005,
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2005-11-14',
             DATE_END => '2005-11-14'
           },
@@ -1836,7 +1836,7 @@ my %TOURNAMENTS_NORWAY =
           {
             YEAR => 2010,
             MOVEMENT => 'Swiss',
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2010-08-01',
             DATE_END => '2010-08-02'
           } 
@@ -1852,7 +1852,7 @@ my %TOURNAMENTS_NORWAY =
           {
             YEAR => 2011,
             MOVEMENT => 'Swiss',
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2011-07-31',
             DATE_END => '2011-08-01'
           } 
@@ -2073,7 +2073,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2016,
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2016-05-07',
             DATE_END => '2016-05-08'
           } 
@@ -2100,7 +2100,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2009,
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2009-10-31',
             DATE_END => '2009-10-31'
           } 
@@ -2138,7 +2138,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2012,
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2012-10-27',
             DATE_END => '2012-10-27'
           } 
@@ -2164,7 +2164,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2014,
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2014-10-25',
             DATE_END => '2014-10-25'
           } 
@@ -2177,7 +2177,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2015,
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2015-10-31',
             DATE_END => '2015-10-31'
           } 
@@ -2813,7 +2813,7 @@ my %TOURNAMENTS_NORWAY =
           'SINGLE' => 
           {
             YEAR => 2011,
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2011-05-07',
             DATE_END => '2011-05-07'
           } 

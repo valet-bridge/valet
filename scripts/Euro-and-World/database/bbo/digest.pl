@@ -115,7 +115,7 @@ while ($entryT->read($fh))
 
   if ($entryT->bbono() eq 27485)
   {
-    print "HERE\n";
+    # print "HERE\n";
   }
 
   $t0 = time();
@@ -237,7 +237,7 @@ for my $date_start (keys %data)
 
 for my $date_start (sort keys %data)
 {
-  if ($date_start eq '1999-06-11')
+  if ($date_start eq '2013-03-30')
   {
     print "HERE\n";
   }

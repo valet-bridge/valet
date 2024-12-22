@@ -127,7 +127,7 @@ my %TOURNAMENTS_MONACO =
           {
             YEAR => 2007,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|HALF',
             DATE_START => '2007-11-11',
             DATE_END => '2007-11-11'
           },
@@ -135,7 +135,7 @@ my %TOURNAMENTS_MONACO =
           {
             YEAR => 2007,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|HALF',
             DATE_START => '2007-11-11',
             DATE_END => '2007-11-11'
           },
@@ -159,7 +159,7 @@ my %TOURNAMENTS_MONACO =
             YEAR => 2008,
             STAGE => 'Qualifying',
             MOVEMENT => 'Round-robin',
-            major => 'SEGMENT',
+            major => 'ROUND|TABLE',
             DATE_START => '2008-11-09',
             DATE_END => '2008-11-09'
           },
@@ -252,7 +252,7 @@ my %TOURNAMENTS_MONACO =
           {
             YEAR => 2011,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2011-10-16',
             DATE_END => '2011-10-16'
           },
@@ -260,7 +260,7 @@ my %TOURNAMENTS_MONACO =
           {
             YEAR => 2011,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2011-10-16',
             DATE_END => '2011-10-16'
           },
@@ -268,7 +268,7 @@ my %TOURNAMENTS_MONACO =
           {
             YEAR => 2011,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2011-10-16',
             DATE_END => '2011-10-16'
           } 

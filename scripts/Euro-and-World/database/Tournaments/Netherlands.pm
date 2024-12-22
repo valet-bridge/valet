@@ -394,7 +394,7 @@ my %TOURNAMENTS_NETHERLANDS =
           {
             YEAR => 2006,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2006-02-07',
             DATE_END => '2006-02-07'
           } 
@@ -1272,7 +1272,7 @@ my %TOURNAMENTS_NETHERLANDS =
           {
             YEAR => 2010,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2010-03-26',
             DATE_END => '2010-03-26'
           },
@@ -1644,7 +1644,7 @@ my %TOURNAMENTS_NETHERLANDS =
           {
             YEAR => 2008,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2008-03-03',
             DATE_END => '2008-03-03'
           },

@@ -2586,7 +2586,6 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2013,
             STAGE => 'Final',
-            major => 'ROUND|SEGMENT',
             DATE_START => '2013-03-30',
             DATE_END => '2013-04-01'
           } 

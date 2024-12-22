@@ -290,7 +290,7 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' => 
           {
             YEAR => 2006,
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2006-11-13',
             DATE_END => '2006-11-14'
           } 
@@ -495,7 +495,7 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' => 
           {
             YEAR => 2007,
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2007-04-14',
             DATE_END => '2007-04-15'
           } 
@@ -554,8 +554,8 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' => 
           {
             YEAR => 2011,
-            major => 'MATCH',
-            minor => 'HALF',
+            major => 'MATCH|ROUND',
+            minor => 'SEGMENT|HALF',
             DATE_START => '2011-05-21',
             DATE_END => '2011-05-22'
           } 
@@ -586,7 +586,7 @@ my %TOURNAMENTS_FINLAND =
           {
             YEAR => 2013,
             STAGE => 'Final',
-            major => 'MATCH',
+            major => 'MATCH|ROUND',
             minor => 'SEGMENT',
             DATE_START => '2013-05-04',
             DATE_END => '2013-05-05'
@@ -926,7 +926,7 @@ my %TOURNAMENTS_FINLAND =
           'SINGLE' => 
           {
             YEAR => 2005,
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2005-03-28',
             DATE_END => '2005-03-29'
           } 

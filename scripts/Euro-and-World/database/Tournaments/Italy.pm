@@ -475,8 +475,7 @@ my %TOURNAMENTS_ITALY =
           'C0' =>
           {
             STAGE => => 'Qualifying',
-            major => 'ROUND',
-            minor => 'HALF',
+            major => 'SEGMENT',
             DATE_START => '2005-02-12',
             DATE_END => '2005-02-13'
           },

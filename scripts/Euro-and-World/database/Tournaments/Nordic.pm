@@ -227,7 +227,7 @@ my %TOURNAMENTS_NORDIC =
           {
             YEAR => 2008,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2008-05-25',
             DATE_END => '2008-05-25'
           } 
@@ -266,7 +266,7 @@ my %TOURNAMENTS_NORDIC =
           'SINGLE' => 
           {
             YEAR => 2012,
-            major => 'SESSION',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2012-04-07',
             DATE_END => '2012-04-08'
           } 
@@ -462,7 +462,7 @@ my %TOURNAMENTS_NORDIC =
           'SINGLE' => 
           {
             YEAR => 2013,
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2013-05-24',
             DATE_END => '2013-05-26'
           } 
@@ -476,7 +476,7 @@ my %TOURNAMENTS_NORDIC =
           'SINGLE' => 
           {
             YEAR => 2015,
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2015-05-21',
             DATE_END => '2015-05-24'
           } 
@@ -597,7 +597,7 @@ my %TOURNAMENTS_NORDIC =
           'SINGLE' => 
           {
             YEAR => 2015,
-            major => 'ROUND',
+            major => 'ROUND|MATCH',
             DATE_START => '2015-05-21',
             DATE_END => '2015-05-24'
           } 

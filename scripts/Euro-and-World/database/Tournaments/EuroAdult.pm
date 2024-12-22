@@ -764,6 +764,7 @@ my %TOURNAMENTS_EUROADULT =
             YEAR => 2007,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
+            ignore => 'MATCH',
             DATE_START => '2007-11-08',
             DATE_END => '2007-11-09'
           },
@@ -888,7 +889,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2010,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2010-11-13',
             DATE_END => '2010-11-13'
           },
@@ -896,8 +897,8 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2010,
             STAGE => 'Consolation',
-            major => 'SEGMENT',
-            DATE_START => '2010-11-14',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2010-11-13',
             DATE_END => '2010-11-14'
           },
           'C3' => 
@@ -1892,7 +1893,6 @@ my %TOURNAMENTS_EUROADULT =
         {
           'C0' => 
           {
-            # TODO C0 and C1 are jumbled up in BBO
             YEAR => 2004,
             MOVEMENT => 'Round-robin',
             major => 'ROUND|SEGMENT',
@@ -1903,7 +1903,7 @@ my %TOURNAMENTS_EUROADULT =
           {
             YEAR => 2004,
             STAGE => 'Final',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2004-07-01',
             DATE_END => '2004-07-03'
           } 

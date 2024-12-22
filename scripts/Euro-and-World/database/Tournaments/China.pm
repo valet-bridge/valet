@@ -1337,7 +1337,16 @@ my %TOURNAMENTS_CHINA =
         CITY => 'Shanghai',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
+          {
+            YEAR => 2006,
+            STAGE => 'Qualifying',
+            major => 'ROUND',
+            minor => 'SEGMENT',
+            DATE_START => '2006-11-12',
+            DATE_END => '2006-11-12'
+          },
+          'C1' => 
           {
             YEAR => 2006,
             STAGE => 'Final',

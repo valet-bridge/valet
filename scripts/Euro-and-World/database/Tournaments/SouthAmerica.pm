@@ -996,7 +996,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
           {
             YEAR => 2015,
             STAGE => 'Semifinal',
-            major => 'ROUND',
+            major => 'SEGMENT',
             DATE_START => '2015-05-15',
             DATE_END => '2015-05-15'
           },
@@ -1004,7 +1004,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
           {
             YEAR => 2015,
             STAGE => 'Final',
-            major => 'ROUND',
+            major => 'SEGMENT',
             DATE_START => '2015-05-16',
             DATE_END => '2015-05-16'
           } 

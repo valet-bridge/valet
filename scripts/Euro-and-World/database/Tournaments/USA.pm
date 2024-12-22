@@ -1571,7 +1571,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2004,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2004-11-29',
             DATE_END => '2004-11-29'
           },
@@ -1579,7 +1579,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2004,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2004-11-29',
             DATE_END => '2004-11-29'
           } 
@@ -1595,7 +1595,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2006,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2006-11-26',
             DATE_END => '2006-11-27'
           },
@@ -1603,7 +1603,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2006,
             STAGE => 'Final',
-            major => 'HALF',
+            major => 'SESSION|HALF',
             DATE_START => '2006-11-26',
             DATE_END => '2006-11-27'
           } 
@@ -1635,7 +1635,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2008,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SESSION',
             DATE_START => '2008-11-30',
             DATE_END => '2008-11-30'
           } 
@@ -1667,7 +1667,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2010,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SESSION',
             DATE_START => '2010-12-05',
             DATE_END => '2010-12-05'
           } 
@@ -1683,7 +1683,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2011,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SESSION|SEGMENT',
             DATE_START => '2011-12-04',
             DATE_END => '2011-12-04'
           } 
@@ -1707,7 +1707,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2012,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2012-12-02',
             DATE_END => '2012-12-03'
           },
@@ -1723,7 +1723,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2013,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SESSION',
             DATE_START => '2013-12-08',
             DATE_END => '2013-12-09'
           },
@@ -1731,7 +1731,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2013,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SESSION',
             DATE_START => '2013-12-08',
             DATE_END => '2013-12-09'
           } 
@@ -1747,7 +1747,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2014,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SESSION',
             DATE_START => '2014-12-06',
             DATE_END => '2014-12-07'
           },
@@ -1773,7 +1773,7 @@ my %TOURNAMENTS_USA =
             YEAR => 2015,
             STAGE => 'Semifinal',
             major => 'SESSION',
-            minor => 'SEGMENT',
+            minor => 'ROUND',
             DATE_START => '2015-12-05',
             DATE_END => '2015-12-05'
           },
@@ -1782,7 +1782,7 @@ my %TOURNAMENTS_USA =
             YEAR => 2015,
             STAGE => 'Semifinal',
             major => 'SESSION',
-            minor => 'SEGMENT',
+            minor => 'ROUND',
             DATE_START => '2015-12-06',
             DATE_END => '2015-12-06'
           },
@@ -1790,7 +1790,8 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2015,
             STAGE => 'Final',
-            major => 'SEGMENT|ROUND',
+            major => 'SESSION|SEGMENT|ROUND',
+            ignore => 'GROUP',
             DATE_START => '2015-12-06',
             DATE_END => '2015-12-07'
           },
@@ -1886,7 +1887,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 1999,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '1999-07-28',
             DATE_END => '1999-07-31'
           } 
@@ -2001,7 +2002,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2005,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|HALF',
             DATE_START => '2005-07-27',
             DATE_END => '2005-07-28'
           },
@@ -2009,7 +2010,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2005,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|HALF',
             DATE_START => '2005-07-29',
             DATE_END => '2005-07-30'
           } 
@@ -2033,7 +2034,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2006,
             STAGE => 'Rof32',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2006-07-15',
             DATE_END => '2006-07-15'
           },
@@ -2041,7 +2042,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2006,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2006-07-16',
             DATE_END => '2006-07-16'
           },
@@ -2049,7 +2050,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2006,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2006-07-17',
             DATE_END => '2006-07-18'
           },
@@ -2057,7 +2058,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2006,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2006-07-19',
             DATE_END => '2006-07-20'
           },
@@ -2065,7 +2066,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2006,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2006-07-21',
             DATE_END => '2006-07-22'
           },
@@ -2081,7 +2082,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2007,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2007-07-22',
             DATE_END => '2007-07-22'
           },
@@ -2097,7 +2098,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2007,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2007-07-25',
             DATE_END => '2007-07-26'
           },
@@ -2105,7 +2106,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2007,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2007-07-27',
             DATE_END => '2007-07-28'
           },
@@ -2121,7 +2122,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2008,
             STAGE => 'Rof64',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2008-07-19',
             DATE_END => '2008-07-19'
           },
@@ -2129,7 +2130,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2008,
             STAGE => 'Rof32',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2008-07-20',
             DATE_END => '2008-07-20'
           },
@@ -2137,7 +2138,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2008,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2008-07-21',
             DATE_END => '2008-07-21'
           },
@@ -2145,7 +2146,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2008,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2008-07-22',
             DATE_END => '2008-07-23'
           },
@@ -2153,7 +2154,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2008,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2008-07-24',
             DATE_END => '2008-07-25'
           },
@@ -2161,7 +2162,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2008,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2008-07-26',
             DATE_END => '2008-07-27'
           },
@@ -2177,7 +2178,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2009,
             STAGE => 'Rof64',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2009-07-28',
             DATE_END => '2009-07-28'
           },
@@ -2185,7 +2186,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2009,
             STAGE => 'Rof32',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2009-07-29',
             DATE_END => '2009-07-29'
           },
@@ -2193,7 +2194,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2009,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2009-07-30',
             DATE_END => '2009-07-30'
           },
@@ -2201,7 +2202,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2009,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2009-07-31',
             DATE_END => '2009-08-01'
           },
@@ -2209,7 +2210,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2009,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2009-08-01',
             DATE_END => '2009-08-02'
           },
@@ -2217,7 +2218,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2009,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2009-08-02',
             DATE_END => '2009-08-02'
           },
@@ -2994,7 +2995,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2005,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|SESSION',
             DATE_START => '2005-05-19',
             DATE_END => '2005-05-19'
           },
@@ -3084,7 +3085,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2007,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|ROUND',
             DATE_START => '2007-06-08',
             DATE_END => '2007-06-08'
           },
@@ -4804,7 +4805,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2009,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2009-05-25',
             DATE_END => '2009-05-25'
           },
@@ -5311,8 +5312,8 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2005,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
-            minor => 'MATCH',
+            major => 'SEGMENT|QUARTER',
+            ignore => 'MATCH',
             DATE_START => '2005-03-18',
             DATE_END => '2005-03-18'
           },
@@ -5329,7 +5330,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2005,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2005-03-20',
             DATE_END => '2005-03-20'
           },
@@ -5375,7 +5376,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2007,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2007-03-10',
             DATE_END => '2007-03-10'
           },
@@ -5383,7 +5384,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2007,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2007-03-11',
             DATE_END => '2007-03-12'
           },
@@ -5391,7 +5392,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2007,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2007-03-13',
             DATE_END => '2007-03-14'
           },
@@ -5399,7 +5400,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2007,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2007-03-15',
             DATE_END => '2007-03-16'
           },
@@ -5414,7 +5415,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2008,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2008-03-10',
             DATE_END => '2008-03-11'
           },
@@ -5422,7 +5423,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2008,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2008-03-11',
             DATE_END => '2008-03-12'
           },
@@ -5430,7 +5431,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2008,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2008-03-13',
             DATE_END => '2008-03-14'
           },
@@ -5438,7 +5439,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2008,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2008-03-15',
             DATE_END => '2008-03-16'
           },
@@ -5500,7 +5501,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2010,
             STAGE => 'Rof64',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2010-03-16',
             DATE_END => '2010-03-17'
           },
@@ -5508,7 +5509,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2010,
             STAGE => 'Rof32',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2010-03-17',
             DATE_END => '2010-03-18'
           },
@@ -5516,7 +5517,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2010,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2010-03-18',
             DATE_END => '2010-03-19'
           },
@@ -5524,7 +5525,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2010,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2010-03-19',
             DATE_END => '2010-03-20'
           },
@@ -5532,7 +5533,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2010,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2010-03-20',
             DATE_END => '2010-03-21'
           },
@@ -5540,7 +5541,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2010,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2010-03-21',
             DATE_END => '2010-03-22'
           },
@@ -5602,7 +5603,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2012,
             STAGE => 'Rof32',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2012-03-21',
             DATE_END => '2012-03-22'
           },
@@ -5610,7 +5611,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2012,
             STAGE => 'Rof16',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2012-03-22',
             DATE_END => '2012-03-23'
           },
@@ -5618,7 +5619,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2012,
             STAGE => 'Quarterfinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2012-03-23',
             DATE_END => '2012-03-24'
           },
@@ -5626,7 +5627,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2012,
             STAGE => 'Semifinal',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2012-03-24',
             DATE_END => '2012-03-25'
           },
@@ -5634,7 +5635,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2012,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2012-03-25',
             DATE_END => '2012-03-25'
           },
@@ -5909,7 +5910,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2007,
             STAGE => 'Final',
-            major => 'SEGMENT',
+            major => 'SEGMENT|QUARTER',
             DATE_START => '2007-07-27',
             DATE_END => '2007-07-27'
           } 

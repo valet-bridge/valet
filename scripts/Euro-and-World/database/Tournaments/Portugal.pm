@@ -837,7 +837,7 @@ my %TOURNAMENTS_PORTUGAL =
           {
             YEAR => 2009,
             MOVEMENT => 'Round-robin',
-            major => 'SEGMENT',
+            major => 'ROUND',
             DATE_START => '2009-04-14',
             DATE_END => '2009-04-16'
           } 
@@ -1051,7 +1051,7 @@ my %TOURNAMENTS_PORTUGAL =
           'C0' => 
           {
             YEAR => 2011,
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2011-11-18',
             DATE_END => '2011-11-20'
           },
@@ -1088,8 +1088,8 @@ my %TOURNAMENTS_PORTUGAL =
           'C0' => 
           {
             YEAR => 2012,
-            major => 'PHASE',
-            minor => 'ROUND',
+            major => 'SESSION',
+            ignore => 'PHASE',
             DATE_START => '2012-11-17',
             DATE_END => '2012-11-18'
           },
@@ -1294,7 +1294,7 @@ my %TOURNAMENTS_PORTUGAL =
           {
             YEAR => 2008,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2008-04-02',
             DATE_END => '2008-04-02'
           },
@@ -1302,7 +1302,7 @@ my %TOURNAMENTS_PORTUGAL =
           {
             YEAR => 2008,
             MOVEMENT => 'Round-robin',
-            major => 'ROUND',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2008-04-16',
             DATE_END => '2008-04-16'
           },
