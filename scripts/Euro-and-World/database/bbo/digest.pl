@@ -274,17 +274,25 @@ for my $date_start (sort keys %data)
         $datum_t->{HEADER_REF},
         $datum_t->{CHAPTER_REF});
 
-      # This will use 'major' and 'minor' if present.
-      # $reg_counter->align($datum_t->{CHAPTER_REF});
-
-      # $reg_counter->fix_counters($datum_t->{BBOLIST});
-      $reg_counter->fix_counters_new($datum_t->{CHAPTER_REF},
+      $reg_counter->fix_of($datum_t->{CHAPTER_REF},
         \%pre_map, $datum_t->{BBOLIST});
 
       my $chapter_str = str_chapter($datum_t->{CHAPTER_REF});
       if (! exists $datum_t->{CHAPTER_REF}{groupon})
       {
         # $reg_counter->sort_counters($datum_t->{BBOLIST});
+        # TODO
+        # For each bboloop:
+        #   Note {team1}{team2} lex order, also {2}{1}
+        #   No empty team string
+        # For each team1 exactly 1 team2 etc.
+        # Remove the non-lex pairs
+        # my %regroup;
+        # bboloop:
+        #   $reg_counter->autogroup($bbo, \%regroup);
+        # Print as below
+        # No GROUP field to punch out
+        #
         $reg_counter->sort_counters_new($datum_t->{CHAPTER_REF},
           $datum_t->{BBOLIST});
         print_chapter_verse($chapter_str, 
@@ -301,11 +309,27 @@ for my $date_start (sort keys %data)
       }
       else
       {
-        # For now
-        $reg_counter->sort_counters_new($datum_t->{CHAPTER_REF},
-          $datum_t->{BBOLIST});
-        print_chapter_verse($chapter_str, 
-          $reg_counter, $datum_t->{BBOLIST});
+        # TODO Remove the groupon field from the entry?!
+
+        # Attempt to fill in missing groups in bbo loop
+        my $regroup = $reg_counter->regroup();
+
+        print $chapter_str;
+        print $reg_counter->str_analysis() . "\n" if $VERBOSE;
+        print $reg_counter->str_field_map() if $VERBOSE;
+
+        for my $group (sort keys %$regroup)
+        {
+          print $datum_t->{CHAPTER_REF}{groupon}, " $group\n\n";
+          
+          $reg_counter->sort_counters_new($datum_t->{CHAPTER_REF},
+            $regroup->{$group});
+
+          for my $bbo (@{$regroup->{$group}})
+          {
+            print $bbo->str_as_read();
+          }
+        }
       }
     }
   }

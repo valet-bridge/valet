@@ -21,25 +21,6 @@ my @FIELDS = qw(PHASE FLIGHT GROUP SECTION
 my %FIELD_MAP;
 $FIELD_MAP{$FIELDS[$_]} = $_ for (0 .. $#FIELDS);
 
-# (given_field, present_field)
-my %CONFUSION_MATRIX;
-$CONFUSION_MATRIX{QUARTER}{SEGMENT} = 1;
-$CONFUSION_MATRIX{SET}{SEGMENT} = 1;
-$CONFUSION_MATRIX{STANZA}{SEGMENT} = 1;
-$CONFUSION_MATRIX{MATCH}{ROUND} = 1;
-$CONFUSION_MATRIX{ROUND}{MATCH} = 1;
-$CONFUSION_MATRIX{ROUND}{SEGMENT} = 1;
-$CONFUSION_MATRIX{ROUND}{SESSION} = 1;
-$CONFUSION_MATRIX{SEGMENT}{ROUND} = 1;
-$CONFUSION_MATRIX{SEGMENT}{MATCH} = 1;
-$CONFUSION_MATRIX{SEGMENT}{SESSION} = 1;
-$CONFUSION_MATRIX{SEGMENT}{HALF} = 1;
-$CONFUSION_MATRIX{SEGMENT}{QUARTER} = 1;
-$CONFUSION_MATRIX{SESSION}{SEGMENT} = 1;
-$CONFUSION_MATRIX{SESSION}{SECTION} = 1;
-$CONFUSION_MATRIX{SESSION}{ROUND} = 1;
-$CONFUSION_MATRIX{SESSION}{MATCH} = 1;
-
 
 sub new
 {
@@ -392,116 +373,7 @@ sub get_assigned_fields
 }
 
 
-sub align
-{
-  my ($self, $entry) = @_;
-
-  # Look for pre-assigned counter names and match them up with
-  # the ones we discovered ourselves.
-  
-  return unless $self->{ASSIGNED_FIELDS} > 0;
-
-  if (exists $self->{FORM} && $self->{FORM} eq 'EMPTY')
-  {
-    print "WARNING: Expecting some counter fields\n";
-    return;
-  }
-
-  # $self->{FIELD_MAP}: Maps fields actually present to actions.
-
-  # Note the fields from the analysis.
-  for my $i (0 .. $#{$self->{ANALYSIS}})
-  {
-    my $field = $self->{ANALYSIS}[$i];
-    $self->{ANALYSIS_FIELDS}{$field} = 1;
-  }
-
-  # For every given field, look for exact matches.
-  for my $i (0 .. $self->{ASSIGNED_FIELDS}-1)
-  {
-    my $field = $self->{ASSIGNED}[$i];
-    if (exists $self->{COUNTER}{$field})
-    {
-      $self->{FIELD_MAP}{$field} = $field;
-    }
-
-    # Take it out from unmatched analysis fields.
-    if (exists $self->{ANALYSIS_FIELDS}{$field})
-    {
-      delete $self->{ANALYSIS_FIELDS}{$field};
-    }
-  }
-
-  # Try to guess about unmatched, given fields.
-  for my $i (0 .. $self->{ASSIGNED_FIELDS}-1)
-  {
-    my $given_field = $self->{ASSIGNED}[$i];
-    next if exists $self->{FIELD_MAP}{$given_field};
-
-    for my $analysis_field (keys %{$self->{ANALYSIS_FIELDS}})
-    {
-      if (exists $CONFUSION_MATRIX{$given_field}{$analysis_field})
-      {
-        $self->{FIELD_MAP}{$analysis_field} = $given_field;
-        delete $self->{ANALYSIS_FIELDS}{$analysis_field};
-      }
-    }
-  }
-
-  # Look at any present, unmatched fields.
-  for my $present_field (keys %{$self->{COUNTER}})
-  {
-    next if exists $self->{FIELD_MAP}{$present_field};
-
-    my @confusion_list;
-    for my $i (0 .. $self->{ASSIGNED_FIELDS}-1)
-    {
-      my $given_field = $self->{ASSIGNED}[$i];
-      if (exists $CONFUSION_MATRIX{$given_field}{$present_field})
-      {
-        push @confusion_list, $given_field;
-      }
-    }
-
-    if ($#confusion_list == -1)
-    {
-      if ($present_field eq 'TABLE' || $present_field eq 'PHASE')
-      {
-        # Permit it.
-        $self->{FIELD_MAP}{$present_field} = $present_field;
-      }
-      else
-      {
-        # Not storing a match.
-        print "WARNING: Deleting unmatched field $present_field\n";
-        $self->{FIELD_MAP}{$present_field} = 'TO_DELETE';
-      }
-    }
-    elsif ($#confusion_list > 0)
-    {
-      print "WARNING: More than one match for unmatched field $present_field\n";
-      $self->{FIELD_MAP}{$present_field} = 'TO_DELETE';
-    }
-    else
-    {
-      $self->{FIELD_MAP}{$present_field} = $confusion_list[0];
-    }
-  }
-}
-
-
-sub fix_counters
-{
-  my ($self, $list) = @_;
-
-  for my $entry (@$list)
-  {
-    $entry->fix_counters($self->{FIELD_MAP}, $self->{OF});
-  }
-}
-
-
-sub fix_counters_new
+sub fix_of
 {
   my ($self, $chapter_header, $map, $list) = @_;
 
@@ -510,6 +382,41 @@ sub fix_counters_new
   {
     $entry->fix_of($self->{ASSIGNED}, $self->{OF});
   }
+}
+
+
+sub regroup
+{
+  my ($self) = @_;
+
+  for my $i (0 .. $#{$self->{GROUPS}{none}})
+  {
+    my $none = $self->{GROUPS}{none}[$i];
+
+    my $concat1 = $none->concat_team('TEAM1');
+    my $concat2 = $none->concat_team('TEAM2');
+
+    my $group1 = $self->{TEAM_TO_GROUP}{$concat1} // '';
+    my $group2 = $self->{TEAM_TO_GROUP}{$concat2} // '';
+
+    if ($group1 eq $group2 && $group1 ne '')
+    {
+      push @{$self->{GROUPS}{$group1}}, $none;
+      splice(@{$self->{GROUPS}{none}}, $i, 1);
+    }
+    else
+    {
+      warn $none->bbono() . ": group1 $group1, group2 $group2";
+    }
+  }
+
+  if (exists $self->{GROUPS}{none} &&
+      $#{$self->{GROUPS}{none}} == -1)
+  {
+    delete $self->{GROUPS}{none};
+  }
+
+  return $self->{GROUPS};
 }
 
 
