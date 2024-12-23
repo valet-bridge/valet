@@ -110,6 +110,11 @@ sub register
     {
       $self->{COUNTER}{$field}{SIMPLE}++;
     }
+    elsif ($field eq 'GROUP' && $value =~ /^[A-Ka-k]$/)
+    {
+      # But have to 'ignore' or 'groupon' GROUP then.
+      $self->{COUNTER}{$field}{SIMPLE}++;
+    }
     else
     {
       warn "$bbono: Haven't learned $value";
@@ -125,6 +130,7 @@ sub register
     else
     {
       $self->register_groups($entry, $chapter, $counters, $tname);
+      $entry->delete_counter($chapter->{groupon});
     }
   }
 

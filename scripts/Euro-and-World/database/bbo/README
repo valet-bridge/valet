@@ -1,36 +1,9 @@
-Should perhaps not turn Group A into 1 then anymore.
+Get rid of
+YEAR_MONTH
+MONTH_DAY
+TIME
+DAY
 
-SEGMENT only for team matches?
-SESSION for pairs, ROUND for teams?
-GROUP, PLACE, SECTION
-
-Consistencies:
-MOVEMENT/STAGE
-- If present, must be present in chapter header.
-- If in chapter header, must be in at least one BBO?
-
-Misc.
-- Multiple attempts at same segment of a match
-  23000, 23004, 23005 (candidates for skip files)
-- Tname date ranges as tight as possible? (Deviations noted but OK)
-- If only countries, should be International
-- Look at rare entry fields (eliminate?)
-
-Outputs:
-- Skip groupon entry in print-out.
-- Output in d of counters should be in order major, minor, others.
-
-Code:
-- Somehow unify all the field lists in Fields.pm
-
-Are pairs tournaments even useable?  Do player names work?
-6629 has a long list of player names
-
-More general stuff
-------------------
-
-Check the .ref files that modify qx against boards, lines
-(Output #lines from C++ as well?)
 
 Workflow
 ========
@@ -59,3 +32,19 @@ checks internal consistency of Tournament and Meet.
 
 perl checkB.pl t
 checks BBO entry field values vs. Tournament and Meet.
+
+
+Nice-to-have
+============
+
+MOVEMENT/STAGE
+- If present, must be present in chapter header.
+- If in chapter header, must be in at least one BBO
+
+Misc.
+- Multiple attempts at same segment of a match
+  23000, 23004, 23005 (candidates for skip files)
+- Tname date ranges as tight as possible? (Deviations noted but OK)
+- If only countries, should be International
+
+Check the .ref files that modify qx against boards, lines from BBO

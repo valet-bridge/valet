@@ -14,7 +14,7 @@ use EntryT;
 use RegCounter;
 
 my $EXPLORE_TOURNAMENTS = 0;
-my $VERBOSE = 1;
+my $VERBOSE = 0;
 
 my @HEADER_ORDERED = qw(
   MEET
@@ -115,7 +115,7 @@ while ($entryT->read($fh))
 
   if ($entryT->bbono() eq 3764)
   {
-    print "HERE\n";
+    # print "HERE\n";
   }
 
   $t0 = time();
@@ -239,7 +239,7 @@ for my $date_start (sort keys %data)
 {
   if ($date_start eq '2007-06-07')
   {
-    print "HERE\n";
+    # print "HERE\n";
   }
 
   my $dlist = $data{$date_start};
@@ -278,6 +278,8 @@ for my $date_start (sort keys %data)
         \%pre_map, $datum_t->{BBOLIST});
 
       my $chapter_str = str_chapter($datum_t->{CHAPTER_REF});
+      print '-' x 70, "\n\n";
+
       if (! exists $datum_t->{CHAPTER_REF}{groupon})
       {
         $reg_counter->sort_counters($datum_t->{BBOLIST});
@@ -308,8 +310,6 @@ for my $date_start (sort keys %data)
       }
       else
       {
-        # TODO Remove the groupon field from the entry?!
-
         # Attempt to fill in missing groups in bbo loop
         my $regroup = $reg_counter->regroup();
 
@@ -329,6 +329,8 @@ for my $date_start (sort keys %data)
         }
       }
     }
+    
+    print '=' x 70, "\n\n";
   }
 }
 

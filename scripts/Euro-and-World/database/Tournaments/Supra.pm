@@ -1208,7 +1208,7 @@ my %TOURNAMENTS_SUPRA =
           {
             YEAR => 2015,
             major => 'MATCH',
-            minor => 'SET',
+            minor => 'SEGMENT|SET',
             DATE_START => '2015-12-18',
             DATE_END => '2015-12-20'
           } 
@@ -1297,7 +1297,7 @@ my %TOURNAMENTS_SUPRA =
           {
             YEAR => 2015,
             major => 'MATCH',
-            minor => 'SET',
+            minor => 'SEGMENT|SET',
             DATE_START => '2015-12-18',
             DATE_END => '2015-12-20'
           } 
@@ -1472,7 +1472,7 @@ my %TOURNAMENTS_SUPRA =
           {
             YEAR => 2015,
             major => 'MATCH',
-            minor => 'SET',
+            minor => 'SEGMENT|SET',
             DATE_START => '2015-12-18',
             DATE_END => '2015-12-20'
           } 

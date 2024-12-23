@@ -70,7 +70,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2005,
             STAGE => 'Final',
-            major => 'STANZA',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2005-12-10',
             DATE_END => '2005-12-11'
           },
@@ -85,7 +85,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2006,
             STAGE => 'Final',
-            major => 'STANZA|SEGMENT',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2006-12-09',
             DATE_END => '2006-12-10'
           },
@@ -150,7 +150,7 @@ my %TOURNAMENTS_UK =
             YEAR => 2009,
             STAGE => 'Semifinal',
             groupon => 'AUTO',
-            major => 'SET',
+            major => 'SEGMENT|SET',
             DATE_START => '2009-12-12',
             DATE_END => '2009-12-12'
           },
@@ -158,7 +158,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2009,
             STAGE => 'Final',
-            major => 'SET',
+            major => 'SEGMENT|SET',
             DATE_START => '2009-12-13',
             DATE_END => '2009-12-13'
           },
@@ -175,7 +175,7 @@ my %TOURNAMENTS_UK =
             YEAR => 2010,
             STAGE => 'Semifinal',
             groupon => 'AUTO',
-            major => 'STANZA',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2010-12-11',
             DATE_END => '2010-12-11'
           },
@@ -183,7 +183,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2010,
             STAGE => 'Final',
-            major => 'STANZA',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2010-12-12',
             DATE_END => '2010-12-12'
           },
@@ -200,7 +200,7 @@ my %TOURNAMENTS_UK =
             YEAR => 2011,
             STAGE => 'Semifinal',
             groupon => 'AUTO',
-            major => 'STANZA',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2011-12-10',
             DATE_END => '2011-12-10'
           },
@@ -208,7 +208,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2011,
             STAGE => 'Final',
-            major => 'STANZA',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2011-12-11',
             DATE_END => '2011-12-11'
           },
@@ -225,7 +225,7 @@ my %TOURNAMENTS_UK =
             YEAR => 2012,
             STAGE => 'Semifinal',
             groupon => 'AUTO',
-            major => 'STANZA',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2012-12-08',
             DATE_END => '2012-12-08'
           },
@@ -233,7 +233,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2012,
             STAGE => 'Final',
-            major => 'STANZA',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2012-12-09',
             DATE_END => '2012-12-09'
           },
@@ -250,7 +250,7 @@ my %TOURNAMENTS_UK =
             YEAR => 2013,
             STAGE => 'Semifinal',
             groupon => 'AUTO',
-            major => 'STANZA',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2013-12-14',
             DATE_END => '2013-12-14'
           },
@@ -258,7 +258,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2013,
             STAGE => 'Final',
-            major => 'STANZA',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2013-12-15',
             DATE_END => '2013-12-15'
           },
@@ -275,7 +275,7 @@ my %TOURNAMENTS_UK =
             YEAR => 2014,
             STAGE => 'Semifinal',
             groupon => 'AUTO',
-            major => 'STANZA',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2014-12-13',
             DATE_END => '2014-12-13'
           },
@@ -283,7 +283,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2014,
             STAGE => 'Final',
-            major => 'STANZA',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2014-12-14',
             DATE_END => '2014-12-14'
           },
@@ -300,7 +300,7 @@ my %TOURNAMENTS_UK =
             YEAR => 2015,
             STAGE => 'Semifinal',
             groupon => 'AUTO',
-            major => 'STANZA',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2015-12-12',
             DATE_END => '2015-12-12'
           },
@@ -308,7 +308,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2015,
             STAGE => 'Final',
-            major => 'STANZA',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2015-12-13',
             DATE_END => '2015-12-13'
           },
@@ -643,7 +643,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2010,
             major => 'MATCH',
-            minor => 'STANZA',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2010-03-05',
             DATE_END => '2010-03-07'
           } 
@@ -665,7 +665,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2011,
             major => 'MATCH',
-            minor => 'STANZA',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2011-03-04',
             DATE_END => '2011-03-06'
           } 
@@ -701,7 +701,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2013,
             major => 'MATCH',
-            minor => 'STANZA',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2013-01-04',
             DATE_END => '2013-01-06'
           },
@@ -709,7 +709,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2013,
             major => 'MATCH',
-            minor => 'STANZA',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2013-03-01',
             DATE_END => '2013-03-03'
           } 
@@ -723,7 +723,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2014,
             major => 'MATCH',
-            minor => 'STANZA',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2014-01-10',
             DATE_END => '2014-01-12'
           },
@@ -731,7 +731,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2014,
             major => 'ROUND',
-            minor => 'STANZA',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2014-03-07',
             DATE_END => '2014-03-09'
           } 
@@ -761,7 +761,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2015,
             major => 'MATCH',
-            minor => 'STANZA',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2015-03-06',
             DATE_END => '2015-03-08'
           } 
@@ -775,7 +775,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2016,
             major => 'MATCH',
-            minor => 'STANZA',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2016-01-08',
             DATE_END => '2016-01-10'
           },
@@ -986,7 +986,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2006,
             STAGE => 'Final',
-            major => 'SET',
+            major => 'SEGMENT|SET',
             DATE_START => '2006-02-19',
             DATE_END => '2006-02-19'
           },
@@ -999,14 +999,14 @@ my %TOURNAMENTS_UK =
           'C0' => 
           {
             YEAR => 2006,
-            major => 'STANZA',
+            major => 'ROUND|STANZA',
             DATE_START => '2006-09-11',
             DATE_END => '2006-09-11'
           },
           'C1' => 
           {
             YEAR => 2006,
-            major => 'STANZA',
+            major => 'ROUND|STANZA',
             DATE_START => '2006-10-14',
             DATE_END => '2006-10-15'
           },
@@ -1041,7 +1041,7 @@ my %TOURNAMENTS_UK =
             YEAR => 2007,
             STAGE => 'Semifinal',
             groupon => 'AUTO',
-            major => 'SET',
+            major => 'SEGMENT|SET',
             DATE_START => '2007-11-25',
             DATE_END => '2007-11-25'
           },
@@ -1136,7 +1136,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2009,
             major => 'MATCH',
-            minor => 'STANZA',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2009-10-03',
             DATE_END => '2009-10-04'
           },
@@ -1144,7 +1144,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2009,
             major => 'MATCH',
-            minor => 'STANZA',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2009-10-24',
             DATE_END => '2009-10-24'
           },
@@ -1152,7 +1152,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2009,
             major => 'MATCH',
-            minor => 'STANZA',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2009-10-31',
             DATE_END => '2009-11-01'
           },
@@ -1175,7 +1175,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2010,
             major => 'MATCH',
-            minor => 'STANZA',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2010-09-11',
             DATE_END => '2010-09-12'
           },
@@ -1183,7 +1183,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2010,
             major => 'MATCH',
-            minor => 'STANZA',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2010-09-25',
             DATE_END => '2010-09-26'
           },
@@ -1214,7 +1214,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2011,
             major => 'MATCH',
-            minor => 'STANZA',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2011-09-30',
             DATE_END => '2011-10-02'
           },
@@ -1222,7 +1222,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2011,
             major => 'MATCH',
-            minor => 'SET',
+            minor => 'SEGMENT|SET',
             DATE_START => '2011-11-11',
             DATE_END => '2011-11-13'
           },
@@ -1237,14 +1237,14 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2012,
             major => 'MATCH',
-            minor => 'SET',
+            minor => 'SEGMENT|SET',
             DATE_START => '2012-09-22',
             DATE_END => '2012-09-23'
           },
           'C1' => 
           {
             YEAR => 2012,
-            major => 'STANZA',
+            major => 'ROUND|STANZA',
             DATE_START => '2012-10-27',
             DATE_END => '2012-10-28'
           },
@@ -1252,7 +1252,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2012,
             major => 'MATCH',
-            minor => 'STANZA',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2012-11-09',
             DATE_END => '2012-11-11'
           },
@@ -1426,7 +1426,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2015,
             major => 'MATCH',
-            minor => 'STANZA',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2015-12-18',
             DATE_END => '2015-12-20'
           },
@@ -1440,7 +1440,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2016,
             major => 'MATCH',
-            minor => 'STANZA',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2016-02-05',
             DATE_END => '2016-02-07'
           },
@@ -1523,7 +1523,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2012,
             STAGE => 'Semifinal',
-            major => 'SET',
+            major => 'SEGMENT|SET',
             DATE_START => '2012-09-02',
             DATE_END => '2012-09-02'
           },
@@ -1531,7 +1531,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2012,
             STAGE => 'Final',
-            major => 'STANZA',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2012-09-02',
             DATE_END => '2012-09-02'
           },
@@ -1560,14 +1560,14 @@ my %TOURNAMENTS_UK =
           'C0' => 
           {
             YEAR => 2006,
-            major => 'STANZA',
+            major => 'ROUND|STANZA',
             DATE_START => '2006-10-17',
             DATE_END => '2006-10-17'
           },
           'C1' => 
           {
             YEAR => 2006,
-            major => 'STANZA',
+            major => 'ROUND|STANZA',
             DATE_START => '2006-11-13',
             DATE_END => '2006-11-13'
           },
@@ -1948,7 +1948,7 @@ my %TOURNAMENTS_UK =
             YEAR => 2013,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
-            minor => 'SET',
+            minor => 'SEGMENT|SET',
             DATE_START => '2013-02-16',
             DATE_END => '2013-02-17'
           },
@@ -2086,7 +2086,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2009,
             major => 'MATCH',
-            minor => 'STANZA',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2009-04-17',
             DATE_END => '2009-04-19'
           },
@@ -2128,7 +2128,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2012,
             major => 'MATCH',
-            minor => 'STANZA',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2012-04-13',
             DATE_END => '2012-04-15'
           },
@@ -2142,7 +2142,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2013,
             major => 'MATCH',
-            minor => 'STANZA',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2013-04-12',
             DATE_END => '2013-04-14'
           },
@@ -2171,7 +2171,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2015,
             major => 'ROUND',
-            minor => 'STANZA',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2015-04-17',
             DATE_END => '2015-04-19'
           },
@@ -2185,7 +2185,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2016,
             major => 'MATCH',
-            minor => 'STANZA',
+            minor => 'SEGMENT|STANZA',
             DATE_START => '2016-04-15',
             DATE_END => '2016-04-17'
           },
@@ -2484,7 +2484,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2008,
             STAGE => 'Final',
-            major => 'STANZA',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2008-05-21',
             DATE_END => '2008-05-21'
           },
@@ -2512,7 +2512,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2010,
             STAGE => 'Final',
-            major => 'STANZA',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2010-05-15',
             DATE_END => '2010-05-15'
           },
@@ -2525,7 +2525,7 @@ my %TOURNAMENTS_UK =
           'SINGLE' => 
           {
             YEAR => 2011,
-            major => 'STANZA',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2011-05-14',
             DATE_END => '2011-05-14'
           },
@@ -2539,7 +2539,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2012,
             STAGE => 'Final',
-            major => 'STANZA',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2012-05-12',
             DATE_END => '2012-05-12'
           },
@@ -2553,7 +2553,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2013,
             STAGE => 'Final',
-            major => 'STANZA',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2013-05-11',
             DATE_END => '2013-05-11'
           },
@@ -2629,7 +2629,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2013,
             STAGE => 'Final',
-            major => 'STANZA',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2013-08-24',
             DATE_END => '2013-08-24'
           },
@@ -2727,7 +2727,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2008,
             STAGE => 'Final',
-            major => 'SET',
+            major => 'SEGMENT|SET',
             DATE_START => '2008-05-02',
             DATE_END => '2008-05-06'
           },
@@ -2865,7 +2865,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2014,
             STAGE => 'Semifinal',
-            major => 'STANZA',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2014-05-06',
             DATE_END => '2014-05-06'
           },
@@ -2873,7 +2873,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2014,
             STAGE => 'Final',
-            major => 'STANZA',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2014-05-06',
             DATE_END => '2014-05-06'
           },
@@ -2888,7 +2888,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2015,
             STAGE => 'Semifinal',
-            major => 'STANZA',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2015-05-01',
             DATE_END => '2015-05-05'
           },
@@ -2896,7 +2896,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2015,
             STAGE => 'Final',
-            major => 'STANZA',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2015-05-05',
             DATE_END => '2015-05-05'
           },
@@ -2920,7 +2920,7 @@ my %TOURNAMENTS_UK =
             YEAR => 2016,
             STAGE => 'Semifinal',
             groupon => 'AUTO',
-            major => 'STANZA',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2016-05-03',
             DATE_END => '2016-05-03'
           },
@@ -2928,7 +2928,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2016,
             STAGE => 'Final',
-            major => 'STANZA',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2016-05-03',
             DATE_END => '2016-05-03'
           },

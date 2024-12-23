@@ -1762,7 +1762,7 @@ my %TOURNAMENTS_FRANCE =
           'SINGLE' =>
           {
             YEAR => 2013,
-            major => 'STANZA',
+            major => 'SEGMENT|STANZA',
             DATE_START => '2013-08-23',
             DATE_END => '2013-08-25'
           }

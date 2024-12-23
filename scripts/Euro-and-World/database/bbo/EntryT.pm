@@ -128,24 +128,26 @@ $CHAPTER_HASH_NEW{EVENT_DATE} = 'DATE_ADDED';
 $CHAPTER_HASH_NEW{$_} = $_ for @CHAPTER_FIELDS_NEW;
 
 my @COUNTER_FIELDS_NEW = qw(
-  SESSION
   PHASE
   FLIGHT
   GROUP
+  SECTION
+  PLACE
+
   DAY
   YEAR_MONTH
   MONTH_DAY
   TIME
+
+  SESSION
   ROUND
+  MATCH
   SEGMENT
   SET
-  SECTION
   STANZA
   HALF
   QUARTER
-  MATCH
   TABLE
-  PLACE
 );
 
 # TODO WEEKEND goes in CHAPTER?
@@ -778,7 +780,7 @@ sub match_letter_to_number
 {
   my ($self) = @_;
 
-  for my $field (qw(MATCH SESSION SECTION GROUP FLIGHT POOL TABLE))
+  for my $field (qw(MATCH SESSION SECTION FLIGHT POOL TABLE))
   {
     next unless defined $self->{COUNTER}{$field};
 
@@ -1231,6 +1233,13 @@ sub get_counter_ref
 {
   my ($self) = @_;
   return $self->{COUNTER};
+}
+
+
+sub delete_counter
+{
+  my ($self, $counter) = @_;
+  delete $self->{COUNTER}{$counter};
 }
 
 
