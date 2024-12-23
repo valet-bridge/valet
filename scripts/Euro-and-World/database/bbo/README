@@ -19,7 +19,6 @@ Misc.
 Outputs:
 - Skip groupon entry in print-out.
 - Output in d of counters should be in order major, minor, others.
-- Could have a more compact BOARD format when all is accounted for
 
 Code:
 - Somehow unify all the field lists in Fields.pm

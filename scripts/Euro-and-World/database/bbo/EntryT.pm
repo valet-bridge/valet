@@ -422,12 +422,12 @@ sub boards_fixable
   if ($new_field eq 'BOARDS')
   {
     $self->boards_fixable_ordered($stored_value, $new_value);
-    return (1, $stored_value);
+    return (1, $new_value);
   }
   else
   {
     $self->boards_fixable_ordered($new_value, $stored_value);
-    return (1, $new_value);
+    return (1, $stored_value);
   }
 
   return (0, 0);
@@ -603,6 +603,37 @@ sub post_process_year
 }
 
 
+sub format_boards
+{
+  my ($self) = @_;
+  my $boards = $self->{CHAPTER}{BOARDS};
+  if ($boards !~ /^header (\d+) (\d+) \| actual (\d+) (\d+) \| counts (\d+) (\d+) (\d+) \| (\d+) lines$/)
+  {
+    warn $self->bbono() . ": Malformed boards, $boards";
+    return;
+  }
+
+  my ($h1, $h2, $a1, $a2, $c1, $c2, $c3, $lines) =
+    ($1, $2, $3, $4, $5, $6, $7, $8);
+
+  return unless $h1 == $a1 && $h2 == $a2;
+  my $count = $h2-$h1+1;
+
+  if ($c1 == $c2 && $c1 == $c3 && $c1 == $count)
+  {
+    $self->{CHAPTER}{BOARDS} = "$h1 $h2 | $lines lines";
+  }
+  elsif ($c1 == $count && $c2 == 0)
+  {
+    $self->{CHAPTER}{BOARDS} = "$h1 $h2 NS | $lines lines";
+  }
+  elsif ($c2 == $count && $c1 == 0)
+  {
+    $self->{CHAPTER}{BOARDS} = "$h1 $h2 EW | $lines lines";
+  }
+}
+
+
 sub format
 {
   my ($self) = @_;
@@ -724,6 +755,8 @@ sub format
       $self->{HINT}{$field} = $self->{TEAM1}{$field}[0];
     }
   }
+
+  $self->format_boards();
 }
 
 
