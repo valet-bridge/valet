@@ -260,6 +260,7 @@ my %TOURNAMENTS_ROMANIA =
           {
             YEAR => 2005,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2005-06-03',
             DATE_END => '2005-06-04'
@@ -282,6 +283,7 @@ my %TOURNAMENTS_ROMANIA =
           {
             YEAR => 2010,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2010-05-21',
             DATE_END => '2010-05-22'

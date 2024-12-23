@@ -670,7 +670,7 @@ my %MULTI_TYPOS =
 
   K1 => ['k01', 'k-1'],
   'Kasimirs Dream Team' => ['kasimirs dreamteam'],
-  "Keni's Dream" => ["keni's"],
+  "Keni's Dream" => ["keni's", "kini's", 'p.keni'],
   'Kick Back' => ['kick-back'],
 
   "L'Orange" => ["l' orange"],

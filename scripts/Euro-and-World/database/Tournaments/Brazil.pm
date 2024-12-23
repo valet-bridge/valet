@@ -533,6 +533,7 @@ my %TOURNAMENTS_BRAZIL =
           {
             YEAR => 2013,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2013-03-28',
             DATE_END => '2013-03-29'
@@ -565,6 +566,7 @@ my %TOURNAMENTS_BRAZIL =
           {
             YEAR => 2016,
             STAGE => 'Quarterfinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2016-03-23',
             DATE_END => '2016-03-24'
@@ -575,7 +577,15 @@ my %TOURNAMENTS_BRAZIL =
             STAGE => 'Semifinal',
             major => 'SEGMENT',
             DATE_START => '2016-03-24',
-            DATE_END => '2016-03-24'
+            DATE_END => '2016-03-25'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-03-25',
+            DATE_END => '2016-03-27'
           } 
         }
       },
@@ -640,14 +650,6 @@ my %TOURNAMENTS_BRAZIL =
         CHAPTERS =>
         {
           'C0' => 
-          {
-            YEAR => 2016,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2016-03-25',
-            DATE_END => '2016-03-25'
-          },
-          'C1' => 
           {
             YEAR => 2016,
             STAGE => 'Final',

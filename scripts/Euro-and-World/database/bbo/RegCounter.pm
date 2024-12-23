@@ -14,19 +14,36 @@ use lib '..';
 my $DEBUG_COUNTERS = 1;
 
 
-my @FIELDS = qw(PHASE FLIGHT GROUP SECTION
-  SESSION MATCH ROUND QUARTER HALF 
-  SEGMENT SET STANZA PLACE TABLE);
-
-my %FIELD_MAP;
-$FIELD_MAP{$FIELDS[$_]} = $_ for (0 .. $#FIELDS);
-
-
 sub new
 {
   my $class = shift;
   my $self = bless {}, $class;
   return $self;
+}
+
+
+sub register_auto
+{
+  my ($self, $entry, $chapter, $tname) = @_;
+
+  my $concat1 = lc($entry->concat_team('TEAM1'));
+  my $concat2 = lc($entry->concat_team('TEAM2'));
+  my ($concat_lo, $concat_hi);
+  if ($concat1 le $concat2)
+  {
+    $concat_lo = $concat1;
+    $concat_hi = $concat2;
+  }
+  else
+  {
+    $concat_lo = $concat2;
+    $concat_hi = $concat1;
+  }
+
+  push @{$self->{AUTOSYMM}{$concat1}{$concat2}}, $entry;
+  push @{$self->{AUTOSYMM}{$concat2}{$concat1}}, $entry;
+
+  push @{$self->{AUTO}{$concat1}{$concat2}}, $entry;
 }
 
 
@@ -99,9 +116,16 @@ sub register
     }
   }
 
-  if (exists $chapter->{groupon} && $chapter->{groupon} ne 'AUTO')
+  if (exists $chapter->{groupon})
   {
-    $self->register_groups($entry, $chapter, $counters, $tname);
+    if ($chapter->{groupon} eq 'AUTO')
+    {
+      $self->register_auto($entry, $chapter, $tname);
+    }
+    else
+    {
+      $self->register_groups($entry, $chapter, $counters, $tname);
+    }
   }
 
   if ($entry->chapter_field('STAGE') ne '' &&
@@ -163,36 +187,6 @@ sub make_pre_map
 }
 
 
-sub get_leading_top_number
-{
-  my ($self, $top_no) = @_;
-
-  # Find the number of fields per BBONO that occurs the most.
-  # Return 0 if there are no fields, 1 otherwise.
-
-  my @hist;
-  for my $bbono (keys %{$self->{BBOCOUNT}})
-  {
-    $hist[$self->{BBOCOUNT}{$bbono}]++;
-  }
-
-  my $top_count = 0;
-  for my $i (0 .. $#hist)
-  {
-    next unless exists $hist[$i];
-    if ($hist[$i] > $top_count)
-    {
-      $top_count = $hist[$i];
-      $$top_no = $i;
-    }
-  }
-
-  return ($top_count > 0);
-
-
-}
-
-
 sub analyze
 {
   my ($self, $header, $chapter) = @_;
@@ -223,7 +217,8 @@ sub analyze
   my $num_chapter_fields = 0;
   $num_chapter_fields++ if exists $chapter->{major};
   $num_chapter_fields++ if exists $chapter->{minor};
-  $num_chapter_fields++ if exists $chapter->{groupon};
+  $num_chapter_fields++ if (exists $chapter->{groupon} &&
+    $chapter->{groupon} ne 'AUTO');
 
   if ($num_bbo_fields != $num_chapter_fields && $DEBUG_COUNTERS)
   {
@@ -240,158 +235,6 @@ sub analyze
     }
     warn "---";
   }
-
-
-  return;
-
-
-
-
-  my $top_no;
-  if (! $self->get_leading_top_number(\$top_no))
-  {
-    $self->{FORM} = 'EMPTY';
-    return;
-  }
-
-  # Rank the fields by occurrence.
-  my @occur;
-  my $fno = 0;
-  for my $field (@FIELDS)
-  {
-    $occur[$fno]{FIELD} = $field;
-    $occur[$fno]{COUNT} = 0;
-    $fno++;
-  }
-
-  for my $field (keys %{$self->{COUNTER}})
-  {
-    $occur[$FIELD_MAP{$field}]{COUNT} += $self->{COUNTER}{$field}{COUNT};
-  }
-
-  @occur = sort { $b->{COUNT} <=> $a->{COUNT} } @occur;
-
-  my $first_zero = $#occur + 1;
-  for my $i (0 .. $#occur)
-  {
-    if ($occur[$i]{COUNT} == 0)
-    {
-      $first_zero = $i;
-      splice(@occur, $first_zero); 
-      last;
-    }
-  }
-
-  if ($first_zero > 3)
-  {
-    for my $bbono (keys %{$self->{BBOCOUNT}})
-    {
-      warn "BBONO $bbono";
-    }
-    for my $i (0 ..$#occur)
-    {
-      warn "$i $occur[$i]{FIELD} $occur[$i]{COUNT}\n";
-    }
-    die "Top number $first_zero";
-  }
-
-  my $num_counters_given = 0;
-  $num_counters_given++ if exists $chapter->{major};
-  $num_counters_given++ if exists $chapter->{minor};
-
-  if ($first_zero == 0 && $first_zero != $num_counters_given &&
-      $DEBUG_COUNTERS)
-  {
-    warn "\n\nWARN $first_zero tops, $num_counters_given expected";
-    warn $header->{TOURNAMENT_NAME};
-    warn $header->{YEAR};
-    for my $bbono (sort keys %{$self->{BBOCOUNT}})
-    {
-      warn "  BBONO $bbono";
-    }
-    warn "---";
-  }
-
-  # Keep only the enough for the most frequent number of counters.
-  $top_no = $first_zero;
-  $self->{NUM_FIELDS} = $top_no;
-  return if $top_no == 0;
-
-  # Re-sort by hierarchical order.
-  @occur = sort { $FIELD_MAP{$a->{FIELD}} <=> 
-      $FIELD_MAP{$b->{FIELD}} } @occur;
-
-  for my $i (0 .. $top_no-1)
-  {
-    my $field = $occur[$i]{FIELD};
-    $self->{ANALYSIS}[$i] = $field;
-
-    if (! exists $self->{COUNTER}{$field}{OF})
-    {
-      $self->{OF}{$field} = 0;
-    }
-    elsif (my $of_end = has_of_structure($self->{COUNTER}{$field}{ENDS}))
-    {
-      $self->{OF}{$field} = $of_end;
-    }
-    else
-    {
-      print "WARNING: Contradictory OF structure for '$field'\n";
-    }
-  }
-
-  if ($first_zero != $num_counters_given && $DEBUG_COUNTERS)
-  {
-    warn "\n\nWARN $first_zero tops, $num_counters_given expected";
-    warn $header->{TOURNAMENT_NAME};
-    warn $header->{YEAR};
-    warn $self->str_analysis();
-    for my $bbono (sort keys %{$self->{BBOCOUNT}})
-    {
-      warn "  BBONO $bbono";
-    }
-    warn "---";
-  }
-
-  return unless $DEBUG_COUNTERS;
-  if ($first_zero == $num_counters_given && 
-    $num_counters_given == 1)
-  {
-    if ($self->{ANALYSIS}[0] ne $chapter->{major})
-    {
-      warn "\n\nWARN $first_zero tops: major mismatch";
-      warn $header->{TOURNAMENT_NAME};
-      warn $header->{YEAR};
-      warn "$self->{ANALYSIS}[0] vs $chapter->{major}";
-      warn $self->str_analysis();
-      for my $bbono (sort keys %{$self->{BBOCOUNT}})
-      {
-        warn "  BBONO $bbono";
-      }
-      warn "---";
-    }
-  }
-  elsif ($first_zero == $num_counters_given && 
-      $num_counters_given == 2)
-  {
-    return if $self->{ANALYSIS}[0] eq $chapter->{major} &&
-        $self->{ANALYSIS}[1] eq $chapter->{minor};
-    return if $self->{ANALYSIS}[0] eq $chapter->{minor} &&
-        $self->{ANALYSIS}[1] eq $chapter->{major};
-
-    warn "\n\nWARN $first_zero tops: major/minor mismatch";
-    warn $header->{TOURNAMENT_NAME};
-    warn $header->{YEAR};
-    warn "$self->{ANALYSIS}[0] vs $chapter->{major}";
-    warn "$self->{ANALYSIS}[1] vs $chapter->{minor}";
-    warn $self->str_analysis();
-    for my $bbono (sort keys %{$self->{BBOCOUNT}})
-    {
-      warn "  BBONO $bbono";
-    }
-    warn "---";
-  }
-
 }
 
 
@@ -479,6 +322,43 @@ sub regroup
 }
 
 
+sub autogroup
+{
+  my ($self) = @_;
+
+  # Check $self->{AUTOSYMM}, pairs of teams only.
+  for my $concat1 (sort keys %{$self->{AUTOSYMM}})
+  {
+    my $ref1 = $self->{AUTOSYMM}{$concat1};
+    if (scalar keys %$ref1 != 1)
+    {
+      for my $concat2 (sort keys %$ref1)
+      {
+        for my $entry (@{$ref1->{$concat2}})
+        {
+          warn $entry->bbono() . ": AUTOGROUP $concat1, $concat2";
+        }
+      }
+      warn "---";
+    }
+  }
+
+  my %flat;
+  for my $concat1 (sort keys %{$self->{AUTO}})
+  {
+    my $ref1 = $self->{AUTO}{$concat1};
+    for my $concat2 (keys %$ref1)
+    {
+      # There is only ever one.
+      push @{$flat{$concat1 . $concat2}}, 
+        @{$self->{AUTO}{$concat1}{$concat2}};
+    }
+  }
+
+  return \%flat;
+}
+
+
 sub sort_counters
 {
   my ($self, $list) = @_;
@@ -488,38 +368,6 @@ sub sort_counters
     $a->spaceship($b, $self->{ASSIGNED});
   }
   @$list;
-}
-
-
-# TODO delete again?
-sub sort_counters_new
-{
-  my ($self, $entry, $list) = @_;
-
-  @$list = sort
-  {
-    $a->spaceship($b, $self->{ASSIGNED});
-  }
-  @$list;
-}
-
-
-sub str_field_map
-{
-  my ($self) = @_;
-
-  my $flag = 0;
-  my $s = '';
-  for my $field (sort keys %{$self->{FIELD_MAP}})
-  {
-    if ($self->{FIELD_MAP}{$field} ne $field)
-    {
-      $s .= "Mapping $field to " . $self->{FIELD_MAP}{$field} . "\n";
-      $flag = 1;
-    }
-  }
-  $s .= "\n" if $flag;
-  return $s;
 }
 
 

@@ -472,8 +472,9 @@ my %TOURNAMENTS_CANADA =
           {
             YEAR => 2010,
             STAGE => 'Semifinal',
-            groupon => 'FLIGHT',
+            groupon => 'AUTO',
             major => 'SEGMENT',
+            ignore => 'FLIGHT',
             DATE_START => '2010-06-03',
             DATE_END => '2010-06-03'
           },
@@ -629,6 +630,7 @@ my %TOURNAMENTS_CANADA =
           {
             YEAR => 2014,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2014-05-08',
             DATE_END => '2014-05-08'

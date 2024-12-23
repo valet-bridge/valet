@@ -957,24 +957,6 @@ sub apply_pre_map
 }
 
 
-sub transfer_counter_tag
-{
-  my ($self, $tag_from, $tag_to) = @_;
-
-  return unless exists $self->{COUNTER}{$tag_from};
-
-  if (! exists $self->{COUNTER}{$tag_to})
-  {
-    $self->{COUNTER}{$tag_to} = $self->{COUNTER}{$tag_from};
-    delete $self->{COUNTER}{$tag_from};
-    return;
-  }
-
-  $self->{COUNTER}{$tag_to} = $self->{COUNTER}{$tag_from};
-  delete $self->{COUNTER}{$tag_from};
-}
-
-
 sub fix_of
 {
   my ($self, $field_map, $of_map) = @_;

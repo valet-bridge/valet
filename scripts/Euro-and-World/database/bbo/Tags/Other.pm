@@ -332,7 +332,6 @@ my %MULTI_TYPOS =
 
   'Deceptive AHM' => ['deceptive  ahm'],
   'Delhi Gym Aces' => ['d g aces', 'dgc aces'],
-  DSM => ['d s m'],
 
   'El Gezira' => ['el-gezira'],
   'England and Pharon' => ['england plus pharon'],
@@ -410,7 +409,7 @@ my @SINGLE_WORDS = qw(
    CS CSTO Czteropak
 
    Dallas DanEng DanFar Dash Debonecos DeeJee Defne Demony Demýrbaþ 
-   DenmarS Deppo Dilligaf Dimmat Dingyuan Dino Dinos DJB Doki DSM 
+   DenmarS Deppo Dilligaf Dimmat Dingyuan Dino Dinos DJB Doki 
    Duros Dvizhenie 
 
    Econ Efsane Egesarpdoruk Eikka Ekenboda Ekoap Elektrownia 

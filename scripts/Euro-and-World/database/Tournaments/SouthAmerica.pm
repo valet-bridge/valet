@@ -496,6 +496,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
           {
             YEAR => 2009,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2009-05-21',
             DATE_END => '2009-05-22'
@@ -542,6 +543,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
           {
             YEAR => 2011,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2011-06-16',
             DATE_END => '2011-06-17'
@@ -612,6 +614,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
           {
             YEAR => 2013,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2013-05-30',
             DATE_END => '2013-05-31'
@@ -729,6 +732,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
           {
             YEAR => 2016,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2016-06-03',
             DATE_END => '2016-06-03'
@@ -938,7 +942,15 @@ my %TOURNAMENTS_SOUTHAMERICA =
         MEET => 'South American Team Championship',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
+          {
+            YEAR => 2013,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2013-05-30',
+            DATE_END => '2013-05-31'
+          },
+          'C1' => 
           {
             YEAR => 2013,
             STAGE => 'Final',

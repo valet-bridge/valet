@@ -612,7 +612,7 @@ my @SINGLE_WORDS = qw(
   Brachman Brady Brake Braithwaite Bramley Branco Brantsma Branzoiu
   Braun Brede Brenner Bretagne Brifman Brightling Brink Brockwell 
   Brod Brogeland Brown Brunet Bruun Brunzell Buch Buchen 
-  Buchlev Budkin Bujoh Buras Burrows Burgay Burke Buscaglia Buse 
+  Buchlev Budkin Buras Burrows Burgay Burke Buscaglia Buse 
   Busse Butland Butts Byrne Bytskevich Börgesson
 
   Cabiati Caggese Calandra Caldarelli Caley Caldwell Callaghan Callander
@@ -640,7 +640,7 @@ my @SINGLE_WORDS = qw(
   Delimpaltadakis Delpiano DeMartino Demir Demirbas Demme Denning 
   Deniz Desai Deutsch Dexterzy Dialinas Dionysopoulos 
   Dhir Dhondy Dialynas Diamond Dilks Dinkin Dixon 
-  Djurovic Dobbels Dobes Dobroiu Doecke Doksiadis Dolla Donatella 
+  Djurovic Dobbels Dobes Dobroiu Doecke Dolla Donatella 
   Donciu Donn Donzi Dossena Dovell Doub Doussot Doxiadis Drijver 
   Driver Dubini Duguet Duman Dumbovich Dumitrasciuc Dunitz Dunn 
   Duong Dupraz Dupuis Dupuy Durisotto Dutilloy Dworan Dyke
@@ -655,7 +655,7 @@ my @SINGLE_WORDS = qw(
   Farwell Favard Federighi Fegarty Feiler Fent Fergani 
   Ferramosca Ferrara Ferrari Fettes Fici Figlus Figueiredo 
   Filikci Filios Filip Finikiotis Finz Fioretti Fireman Firestone 
-  Fleisher Fleury Flierl Flock Flora Fonseca Ford Fordham 
+  Fleisher Fleury Flierl Flock Flora Fonseca Fordham 
   Fornaciari Fornasari Forrester Fortini Fossi Foster Fournier Fout 
   Fox Franchi Fraser Frazer Frazzetto Frencken Fredin Freed 
   Frey Friedland Friedlander Friis Frosztega 
@@ -758,7 +758,7 @@ my @SINGLE_WORDS = qw(
   Muzzio Mýzrak Mæsel Mønsted
 
   Nab Nadar Nader Naels Nagy Nahmias Naimuddin Naito Naniwada
-  Narasimhan Naqvi Narasinham Nardullo Natale Navneet Neale Negrin 
+  Narasimhan Naqvi Nardullo Natale Navneet Neale Negrin 
   Neill Nencini Netto Neuhauser Neulinger Neve Newell Newman 
   Ng Nickell Nieminen Nikolenkov Nikolov Nilsson 
   Nimhauser Ninos Nixon Nobel Noble Nordby Novoski Nowicki Nowosadzki 
@@ -888,6 +888,7 @@ my %SINGLE_TYPOS =
   Bertheau => ['berthau'],
   Blumental => ['blummental'],
   Bocchi => ['norby'],
+  Bojoh => ['bujoh'],
   'Brigitta Fischer' => ['fischer'],
   Brogeland => ['broge'],
   'Buddy Shah' => ['buddy'],
@@ -912,6 +913,7 @@ my %SINGLE_TYPOS =
   'Deniz Ruzgar Akyurek' => ['ruzgar'],
   'Diana Damyanova' => ['dianadamyanova'],
   'Dmitri Marchessini' => ['dmitri'],
+  'Doxiadis' => ['doksiadis'],
   "D'Orsi" => ['dorsi'],
   Dumbovich => ['dumbovic'],
   Eisenberg => ['einsenberg'],
@@ -967,6 +969,7 @@ my %SINGLE_TYPOS =
   Karlaftis => ['karlaytis'],
   'Kasper Konow' => ['konow'],
   Kazik => ['kazic'],
+  'Ken Ford' => ['ford'],
   Khandelwal => ['khandelwals', 'khandewal'],
   Kilvington => ['kilvigton'],
   Koivula => ['koivulat'],
@@ -987,7 +990,7 @@ my %SINGLE_TYPOS =
   Mane => ['mané'],
   'Manoel Peirao' => ['manoel'],
   'Manuel Capucho' => ['capucho'],
-  Manyawar => ['manyvar'],
+  Manyawar => ['manyvar', 'manyavar'],
   'Marc Kerlero de Rosbo' => ['kerlero'],
   Markowicz => ['markovics', 'markowitz'],
   'Maxim Henbest' => ['henbest'],
@@ -1002,6 +1005,7 @@ my %SINGLE_TYPOS =
   'Mohsen Kamel' => ['mohsenkamel'],
   'Moni Diba' => ['monidiba'],
   'Møller Jepsen' => ['møllerjepsen'],
+  Narasimhan => ['narasinham'],
   Nowosadzki => ['nowosad'],
   'Nuno Damaso' => ['damaso'],
   Olanski => ['olansk'],

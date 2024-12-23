@@ -5622,6 +5622,7 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2009,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2009-05-14',
             DATE_END => '2009-05-16'
@@ -5645,6 +5646,7 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2010,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2010-05-01',
             DATE_END => '2010-05-02'
@@ -5724,6 +5726,7 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2011,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2011-05-19',
             DATE_END => '2011-05-20'
@@ -5900,6 +5903,7 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2014,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2014-06-12',
             DATE_END => '2014-06-13'
@@ -6022,6 +6026,7 @@ my %TOURNAMENTS_POLAND =
             YEAR => 2016,
             STAGE => 'Semifinal',
             major => 'SEGMENT',
+            groupon => 'AUTO',
             DATE_START => '2016-06-09',
             DATE_END => '2016-06-10'
           },
@@ -6155,6 +6160,7 @@ my %TOURNAMENTS_POLAND =
           {
             YEAR => 2014,
             STAGE => 'Playoff',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2014-05-18',
             DATE_END => '2014-05-18'

@@ -124,6 +124,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2008,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2008-12-14',
             DATE_END => '2008-12-14'
@@ -148,6 +149,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2009,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SET',
             DATE_START => '2009-12-12',
             DATE_END => '2009-12-12'
@@ -172,6 +174,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2010,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'STANZA',
             DATE_START => '2010-12-11',
             DATE_END => '2010-12-11'
@@ -196,6 +199,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2011,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'STANZA',
             DATE_START => '2011-12-10',
             DATE_END => '2011-12-10'
@@ -220,6 +224,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2012,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'STANZA',
             DATE_START => '2012-12-08',
             DATE_END => '2012-12-08'
@@ -244,6 +249,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2013,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'STANZA',
             DATE_START => '2013-12-14',
             DATE_END => '2013-12-14'
@@ -268,6 +274,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2014,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'STANZA',
             DATE_START => '2014-12-13',
             DATE_END => '2014-12-13'
@@ -292,6 +299,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2015,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'STANZA',
             DATE_START => '2015-12-12',
             DATE_END => '2015-12-12'
@@ -969,6 +977,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2006,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2006-01-16',
             DATE_END => '2006-01-19'
@@ -1031,6 +1040,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2007,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SET',
             DATE_START => '2007-11-25',
             DATE_END => '2007-11-25'
@@ -2909,6 +2919,7 @@ my %TOURNAMENTS_UK =
           {
             YEAR => 2016,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'STANZA',
             DATE_START => '2016-05-03',
             DATE_END => '2016-05-03'

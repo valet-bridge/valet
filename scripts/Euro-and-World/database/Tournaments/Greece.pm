@@ -565,6 +565,7 @@ my %TOURNAMENTS_GREECE =
           {
             YEAR => 2011,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2011-05-06',
             DATE_END => '2011-05-07'
@@ -596,6 +597,7 @@ my %TOURNAMENTS_GREECE =
           {
             YEAR => 2013,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2013-04-05',
             DATE_END => '2013-04-06'
@@ -720,7 +722,7 @@ my %TOURNAMENTS_GREECE =
           'SINGLE' => 
           {
             YEAR => 2006,
-            major => 'SEGMENT',
+            major => 'ROUND|SEGMENT',
             DATE_START => '2006-02-25',
             DATE_END => '2006-02-26'
           } 
@@ -819,8 +821,8 @@ my %TOURNAMENTS_GREECE =
           {
             YEAR => 2016,
             STAGE => 'Final',
-            major => 'SESSION',
-            minor => 'SEGMENT',
+            major => 'SEGMENT',
+            ignore => 'SESSION',
             DATE_START => '2016-02-26',
             DATE_END => '2016-02-28'
           },

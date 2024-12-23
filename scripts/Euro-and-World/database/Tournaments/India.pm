@@ -2219,6 +2219,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2013,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2013-02-22',
             DATE_END => '2013-02-23'
@@ -2250,6 +2251,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2014,
             STAGE => 'Quarterfinal',
+            groupon => 'AUTO',
             major => 'SEGMENT|SESSION',
             DATE_START => '2014-08-13',
             DATE_END => '2014-08-13'
@@ -2258,6 +2260,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2014,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2014-08-14',
             DATE_END => '2014-08-15'
@@ -4330,6 +4333,7 @@ my %TOURNAMENTS_INDIA =
             YEAR => 2011,
             STAGE => 'Semifinal',
             major => 'SEGMENT',
+            groupon => 'AUTO',
             DATE_START => '2011-08-06',
             DATE_END => '2011-08-06'
           },
@@ -4975,6 +4979,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2006,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2006-01-01',
             DATE_END => '2006-01-01'
@@ -5108,6 +5113,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2011,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2011-12-09',
             DATE_END => '2011-12-09'
@@ -5139,6 +5145,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2012,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2012-12-19',
             DATE_END => '2012-12-20'
@@ -5170,6 +5177,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2013,
             STAGE => 'Quarterfinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2013-12-21',
             DATE_END => '2013-12-21'
@@ -5178,6 +5186,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2013,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2013-12-22',
             DATE_END => '2013-12-22'
@@ -5217,6 +5226,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2014,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2014-12-20',
             DATE_END => '2014-12-20'
@@ -5240,6 +5250,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2015,
             STAGE => 'Quarterfinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2015-11-20',
             DATE_END => '2015-11-20'
@@ -5248,6 +5259,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2015,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2015-11-21',
             DATE_END => '2015-11-21'
@@ -5757,6 +5769,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2013,
             STAGE => 'Quarterfinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2013-02-18',
             DATE_END => '2013-02-18'
@@ -5765,6 +5778,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2013,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2013-02-19',
             DATE_END => '2013-02-19'
@@ -5837,6 +5851,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2015,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2015-06-20',
             DATE_END => '2015-06-20'
@@ -5868,6 +5883,7 @@ my %TOURNAMENTS_INDIA =
           {
             YEAR => 2016,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2016-07-09',
             DATE_END => '2016-07-09'

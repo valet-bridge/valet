@@ -2203,6 +2203,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2005,
             STAGE => 'Rof16',
+            groupon => 'AUTO',
             major => 'SEGMENT|ROUND',
             DATE_START => '2005-01-22',
             DATE_END => '2005-01-22'
@@ -2211,6 +2212,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2005,
             STAGE => 'Quarterfinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             ignore => 'TABLE',
             DATE_START => '2005-01-23',
@@ -2253,6 +2255,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2006,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2006-01-28',
             DATE_END => '2006-01-30'
@@ -2330,6 +2333,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2008,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2008-01-27',
             DATE_END => '2008-01-27'
@@ -2369,6 +2373,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2010,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2010-01-23',
             DATE_END => '2010-01-24'
@@ -2410,6 +2415,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2011,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2011-01-29',
             DATE_END => '2011-01-30'
@@ -2433,6 +2439,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2012,
             STAGE => 'Quarterfinal',
+            groupon => 'AUTO',
             major => 'SEGMENT|ROUND',
             DATE_START => '2012-01-26',
             DATE_END => '2012-01-27'
@@ -2441,6 +2448,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2012,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2012-01-27',
             DATE_END => '2012-01-28'
@@ -2464,6 +2472,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2013,
             STAGE => 'Quarterfinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2013-01-25',
             DATE_END => '2013-01-25'
@@ -2472,6 +2481,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2013,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2013-01-26',
             DATE_END => '2013-01-26'
@@ -2495,6 +2505,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2014,
             STAGE => 'Quarterfinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2014-01-24',
             DATE_END => '2014-01-24'
@@ -2503,6 +2514,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2014,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2014-01-25',
             DATE_END => '2014-01-25'
@@ -2526,6 +2538,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2015,
             STAGE => 'Quarterfinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2015-01-23',
             DATE_END => '2015-01-23'
@@ -2534,6 +2547,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2015,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2015-01-24',
             DATE_END => '2015-01-24'
@@ -2557,6 +2571,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2016,
             STAGE => 'Quarterfinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2016-01-22',
             DATE_END => '2016-01-22'
@@ -2565,6 +2580,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2016,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2016-01-23',
             DATE_END => '2016-01-23'
@@ -2722,6 +2738,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2015,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2015-01-17',
             DATE_END => '2015-01-17'
@@ -2745,6 +2762,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2016,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2016-01-16',
             DATE_END => '2016-01-16'
@@ -3138,6 +3156,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2005,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2005-03-21',
             DATE_END => '2005-03-21'
@@ -4184,6 +4203,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2013,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2013-10-26',
             DATE_END => '2013-10-26'
@@ -4207,6 +4227,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2014,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2014-11-01',
             DATE_END => '2014-11-01'
@@ -4230,6 +4251,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2015,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2015-10-24',
             DATE_END => '2015-10-24'
@@ -4560,6 +4582,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2009,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2009-03-21',
             DATE_END => '2009-03-26'
@@ -5620,6 +5643,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2007,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2007-02-24',
             DATE_END => '2007-02-24'
@@ -5666,12 +5690,21 @@ my %TOURNAMENTS_AUSTRALIA =
           'C0' => 
           {
             YEAR => 2009,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2009-03-05',
+            DATE_END => '2009-03-05'
+          },
+          'C1' => 
+          {
+            YEAR => 2009,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2009-03-05',
             DATE_END => '2009-03-06'
           },
-          'C1' => 
+          'C2' => 
           {
             YEAR => 2009,
             STAGE => 'Final',
@@ -5698,12 +5731,21 @@ my %TOURNAMENTS_AUSTRALIA =
           'C1' => 
           {
             YEAR => 2010,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2010-03-04',
+            DATE_END => '2010-03-04'
+          },
+          'C2' => 
+          {
+            YEAR => 2010,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2010-03-04',
             DATE_END => '2010-03-05'
           },
-          'C2' => 
+          'C3' => 
           {
             YEAR => 2010,
             STAGE => 'Final',
@@ -5784,6 +5826,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2013,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2013-03-01',
             DATE_END => '2013-03-01'
@@ -5877,6 +5920,7 @@ my %TOURNAMENTS_AUSTRALIA =
           {
             YEAR => 2016,
             STAGE => 'Semifinal',
+            groupon => 'AUTO',
             major => 'SEGMENT',
             DATE_START => '2016-02-26',
             DATE_END => '2016-02-26'

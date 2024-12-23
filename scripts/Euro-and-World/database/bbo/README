@@ -1,16 +1,4 @@
-analyze:
-Delete dead code incl. follow-on code elsewhere (digest, EntryT)
-- Can remove FIELD_MAP? FIELDS?
-
-Skip groupon entry in print-out.
-
-Can add a groupon => 'AUTO' which does e.g. a Semifinal.
 Should perhaps not turn Group A into 1 then anymore.
-
-If there is an AUTO:
-- Must be Teams
-- Make a list of {team1 lexicographically}{team2} bbono refs.
-- Check that each {team1} has exactly 1 team2.
 
 SEGMENT only for team matches?
 SESSION for pairs, ROUND for teams?
@@ -29,6 +17,7 @@ Misc.
 - Look at rare entry fields (eliminate?)
 
 Outputs:
+- Skip groupon entry in print-out.
 - Output in d of counters should be in order major, minor, others.
 - Could have a more compact BOARD format when all is accounted for
 
@@ -37,8 +26,6 @@ Code:
 
 Are pairs tournaments even useable?  Do player names work?
 6629 has a long list of player names
-
-* Activate KDEBUG in Knowledge.pm (still meaningful?)
 
 More general stuff
 ------------------

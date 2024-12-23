@@ -176,7 +176,6 @@ my @MULTI_WORDS =
   'Kaushik Hyderabad',
   'KH Power',
   "Kini's Bangalore",
-  "Kini's Goa",
   'Klika Murcki',
   'Kombi Tondano',
   'Konga-Väster',
@@ -439,7 +438,7 @@ my %MULTI_TYPOS =
   'Data Steel' => ['datta steel'],
   'Dhampur Sugar' => ['dhampur sugar mills', 'dhampur sugars', 
     'dhampur suger mills', 'dhampor sugar mills', 'dhampu sugar mills',
-    'sugar mills'],
+    'sugar mills', 'd s m'],
   'Djarum Black' => ['djarum black capp', 'djarum black mild'],
   Djarum => ['djarum la', 'djarum mld'],
   'Dobre Zegary' => ['dobre_zegary', 'dobrezegary.pl'],
@@ -496,7 +495,6 @@ my %MULTI_TYPOS =
   'Kaushik Hyderabad' => ['kaushik hyd.'],
   'KH Power' => ['k h power'],
   "Kini's Bangalore" => ["kini's bengalore"],
-  "Kini's Goa" => ['p.keni goa'],
   'KONKRET Chelmno' => ['konkret che³mno'],
   'Krishnapatnam Port' => ['krishnapatam port'],
   'Kuncheng Group' => ['kucheng group'],
@@ -647,7 +645,7 @@ my @SINGLE_WORDS = qw(
   Lacznosc Laima Lavazza LCG Lianbo Likom Longjiangfu Lukomorie 
   Lyfjaver
 
-  Makus Malkia Manyavar Melchemie Mireo Modalfa Morgunblaðið 
+  Makus Malkia Melchemie Mireo Modalfa Morgunblaðið 
   Multicoms Myndform
 
   NALCO Nanyuan Navachaitanya Navayuga Nazwa NEC Nefka Niewiem Nongken 
@@ -700,7 +698,7 @@ my %SINGLE_TYPOS =
   Computerland => ['computerlan'],
   CONNECTOR => ['conector'],
   'Data Steel' => ['datasteel'],
-  'Dhampur Sugar' => ['dhampur'],
+  'Dhampur Sugar' => ['dhampur', 'dsm'],
   DISKI => ['dsi', 'dsý',],
   Eksprompt => ['ekspromt'],
   'Elektrik P3B' => ['elektrik', 'electric'],
