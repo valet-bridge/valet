@@ -163,6 +163,8 @@ while ($line = <$fh>)
   my @chains_title;
   push @chains_title, $chain_title;
 
+if (0)
+{
   Title::Study::study($whole, $chunk{BBONO}, $chunk{TITLE}, 
     $chain_title, \$unknown_titles);
 
@@ -175,6 +177,7 @@ while ($line = <$fh>)
 
   Title::Interpret::interpret($whole, \@chains_title,
     \$teams{SCORING}, $chunk{BBONO});
+}
 
 
   # TEAMS
@@ -206,6 +209,7 @@ while ($line = <$fh>)
     $stats_team->incr(\@{$chains_team{$team}});
   }
 
+next;
 
   # Try to figure out whether it is teams, pairs or individual.
 

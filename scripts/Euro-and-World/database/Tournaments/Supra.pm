@@ -603,11 +603,25 @@ my %TOURNAMENTS_SUPRA =
         SCORING => 'MP',
         CHAPTERS =>
         {
-          'SINGLE' => 
+          'C0' => 
           {
             YEAR => 2004,
             major => 'ROUND',
-            DATE_START => '2004-05-05',
+            DATE_START => '2004-05-07',
+            DATE_END => '2004-05-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2004,
+            major => 'ROUND',
+            DATE_START => '2004-05-08',
+            DATE_END => '2004-05-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2004,
+            major => 'ROUND',
+            DATE_START => '2004-05-09',
             DATE_END => '2004-05-09'
           } 
         }

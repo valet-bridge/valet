@@ -113,9 +113,9 @@ while ($entryT->read($fh))
     next unless $entryT->bbono() eq $debug_bbono;
   }
 
-  if ($entryT->bbono() eq 3764)
+  if ($entryT->bbono() eq 7664)
   {
-    # print "HERE\n";
+    print "HERE\n";
   }
 
   $t0 = time();

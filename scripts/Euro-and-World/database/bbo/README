@@ -1,8 +1,64 @@
-Get rid of
-YEAR_MONTH
-MONTH_DAY
-TIME
-DAY
+Next steps
+==========
+
+1. Get the old names into new form:
+- Read in ebl.txt
+- Read in status of names_full.txt
+- Read in simple names.txt (which is LAST First)
+- Output something like
+
+BBO 10299
+TEAM1_NAMES MECKSTROTH Jeff,RODWELL Eric,HAMPSON Geoff,LEVIN Bobby
+TEAM2_NAMES KOLATA Suleyman,KANDEMIR Ismail,YILMAZ M.Gokhan,GUR Okay
+TEAM1_PID EBL 3775, EBL 3777, EBL 8696, EBL 11125
+TEAM2_PID EBL 9461, EBL 18319, EBL 5881, EBL 18635
+
+Or 
+TEAM1_NAMES MECKSTROTH Jeff [EBL 3775],RODWELL Eric [EBL 3777],HAMPSON Geoff [EBL 8696],LEVIN Bobby [EBL 11125]
+
+Can leave out entire team if no names
+Can have no player ID (EBL open])
+Can have no player ('open')
+
+2. Get overview by tournament:
+- Read in new names file
+- Read in ebl.txt
+- Read in output of digest (potentially limited by AFRICA etc.)
+- Can also pick out specific tournament, even 2009A
+
+For each tournament (overall and for 2009A etc.):
+Count #BBO
+Count #BBO for which there are no 'open'
+Count #names
+Count #PID
+
+Output csv:
+tname, [2009A], gender, age, the four fields
+
+For each tournament that is not complete:
+BBO's OK ?
+BBO's not OK
+
+3. Get overview by player (output to file):
+The player data in some sensible form
+NAME
+COUNTRY
+EBL
+GENDER
+something about BIRTH, DEATH
+
+Partners with counts
+#times international, transnational, national, other
+
+4. Within a tournament (or country?):
+From a grep string, the matches (as before for each known player)
+The unrecognized players matching the grep string
+Each partner and their nationality
+
+5. A version that fixes the BBO file and also the player stats
+
+
+
 
 
 Workflow

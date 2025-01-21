@@ -868,6 +868,33 @@ sub prune_using
 
   while (my ($ckey, $cvalue) = each %{$self->{CHAPTER}})
   {
+    if ($ckey eq 'MONTH_DAY')
+    {
+      if ($self->{CHAPTER}{DATE_ADDED} =~ /$cvalue$/)
+      {
+        delete $self->{CHAPTER}{$ckey};
+      }
+      else
+      {
+        warn $self->bbono() . ": Chapter " . $chapter->{$ckey} .
+          " vs. $cvalue";
+      }
+      next;
+    }
+    elsif ($ckey eq 'YEAR_MONTH')
+    {
+      if ($self->{CHAPTER}{DATE_ADDED} =~ /^$cvalue/)
+      {
+        delete $self->{CHAPTER}{$ckey};
+      }
+      else
+      {
+        warn $self->bbono() . ": Chapter " . $chapter->{$ckey} .
+          " vs. $cvalue";
+      }
+      next;
+    }
+
     next unless exists $chapter->{$ckey};
     if ($cvalue eq $chapter->{$ckey})
     {

@@ -10,11 +10,11 @@ use open ':std', ':encoding(UTF-8)';
 # for each lin file.
 die "perl merge.pl" unless $#ARGV == -1;
 
-my $YEAR_FIRST = 2002;
+my $YEAR_FIRST = 2024;
 my $YEAR_LAST = 2024;
 
 my @MONTHS = qw(01 02 03 04 05 06 07 08 09 10 11 12);
-my $MONTH_FIRST = 0;
+my $MONTH_FIRST = 7;
 my $MONTH_LAST = 11;
 
 my $seqno = 0;
@@ -49,9 +49,11 @@ for my $year (reverse $YEAR_FIRST .. $YEAR_LAST)
   }
 }
 
+my $offset = 65927;
+
 my $len = $#data;
 for my $i (reverse 0 .. $len)
 {
   printf("%6d  %6d  %s\n",
-    $len-$i, $data[$i]{BBONO}, $data[$i]{DATE_ADDED});
+    $offset + $len - $i, $data[$i]{BBONO}, $data[$i]{DATE_ADDED});
 }
