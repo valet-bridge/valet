@@ -149,26 +149,26 @@ my @SINGLE_WORDS = qw(
   Batam Bath Batman Batu Begues Beijing Beirut Bekasi Belgrade Belfast
   Bengkalis Bengkulu Beograd Bereket Bergen Bergues Berkeley Berlin 
   Bhilwara Bhubaneshwar Biarritz Bielefeld Bikaner Bitung Blitar Bodrum 
-  Bodø Bogor Bogotá Boleslawiec Bologna Bonn Bordeaux Braila Brandbu 
-  Brasilia Brasov Bremen Brighton Brisbane Broadbeach Bromölla Bruges 
-  Brussels Bucharest Budapest Burghausen Bursa Burdur Buzios Bydgoszcz 
-  Bytom
+  Bodø Bogor Bogotá Boleslawiec Bologna Bonn Bordeaux Böblingen 
+  Braila Brandbu Brasilia Brasov Bremen Brighton Brisbane 
+  Broadbeach Bromölla Bruges Brussels Bucharest Budapest Burghausen 
+  Bursa Burdur Buzios Bydgoszcz Bytom
 
   Caen Cairns Cairo Canakkale Canberra Cannareggio Canterbury Caracas 
   Casablanca Cascais Catania Cerkezkoy Cesme Changhua Changzhou 
   Chaville Chelmno Chengdu Chennai Chepelare Chiayi Chicago 
-  Chongqing Chumphon Cimahi Cirebon Clichy Cluj Copenhagen Corlu 
-  Coventry Cuenca Cuneo
+  Chongqing Chumphon Cimahi Cirebon Claremont Clichy Cluj Copenhagen 
+  Corlu Coventry Craiova Cuenca Cuneo
 
   Dalian Darmstadt Datca Deauville Debrecen Delft Delhi Denizli Depok 
   Derpt Deva Diyarbakir Dimitrovgrad Dobrich Doha Dombivli Dongguan 
-  Drammen Dubai Dubrovnik Durban Düsseldorf
+  Dortmund Drammen Dubai Dubrovnik Durban Düsseldorf
 
   Eastbourne Edinburgh Edirne Elblag Enschede Erzurum Esbjerg 
   Eskisehir Essen Estoril Evanston
 
   Farsund Fethiye Firenze Flekkefjord Foca Fosnavåg Frankfurt 
-  Fredrikstad Førde
+  Fredrikstad Freiburg Fritzlar Fuzhou Førde
 
   Galway Garches Gdansk Gdynia Gelibolu Genoa Gent Gevgelija Geyve 
   Giza Glasgow Gnesta Gniezno Gorzow Gölcük Göteborg Gresik 
@@ -187,15 +187,15 @@ my @SINGLE_WORDS = qw(
   Kadirli Kalisz Kalundborg Kalyani Kanpur Kaohsiung Karimun Karlovo 
   Karlsruhe Karsiyaka Kashi Kassel Kastamonu Katowice Kayseri Kediri 
   Kedungwaru Keelung Kesten Ketsch Kiel Kielce Kiev Kinali Kirkeby 
-  Kirklarelý Kirsehir Klabat Kocaeli Kolbotn Kolkata Konga Konya 
-  Kornik Kosice Kota Koycegiz Köln Krakow Kraljevica Kristiansand 
-  Kudus Kunshan Kuopio Kusadasi Kütahya Kverndalen Kyustendil Køge 
-  Kølabånn
+  Kirklarelý Kirsehir Klabat Klepp Kleve Kocaeli Kolbotn Kolkata 
+  Konga Konya Kornik Kosice Kota Koycegiz Köln Kragerø Krakow 
+  Kraljevica Kristiansand Kudus Kunshan Kuopio Kusadasi Kütahya 
+  Kverndalen Kyoto Kyustendil Køge Kølabånn
 
-  Langkat Lanzhou Lappeenranta Larnaca Lecco Leiden Leksand Lerum 
-  Leszno Leuven Leverkusen Lhokseumawe Liepaja Lille Lima Lincoln 
-  Lindesberg Linköping Lisbon Liushu Ljubljana Lodi Lodz Lojdy 
-  Lokotok Lom London Lowicz Lublin Luleburgaz Lumajang Lyon
+  Langkat Lanzhou Lappeenranta Larnaca Lecco Leiden Leipzig Leksand 
+  Lerum Leszno Leuven Leverkusen Lhokseumawe Liepaja Lille Lima 
+  Lincoln Lindesberg Linköping Lisbon Liushu Ljubljana Lodi Lodz 
+  Lojdy Lokotok Lom London Lowicz Lublin Luleburgaz Lumajang Lyon
 
   Maastricht Madrid Magetan Makassar Malang Malatya Malmö Manado 
   Manchester Manisa Manna Mannheim Marbella Mardin Marrakech Marseille 
@@ -209,7 +209,8 @@ my @SINGLE_WORDS = qw(
   Nyon Nysa Nærbø Næstved Nøtterøy
 
   Odense Ogndal Oldenburg Olrud Olsztyn Oltenita Opatija Orhangazi 
-  Oslo Ostend Ottadalen Otepää Oxford Ozarow Örebro Överum
+  Osaka Ostend Oslo Osnabrück Ottadalen Otepää Oxford Ozarow 
+  Örebro Överum
 
   Padang Padova Paimado Palembang Palermo Palma Palu Pamukkale Pancevo 
   Panzhihua Pariaman Paris Pärnu Pattaya Pau Pecs Peebles Pekanbaru 
@@ -221,12 +222,12 @@ my @SINGLE_WORDS = qw(
   Qingdao
 
   Radkov Rakvere Rastignano Ravnkilde Rayong Reims Rennes Reykjavik 
-  Riau Rieneck Riga Rijeka Rimini Romana Rome Rotterdam Rottneros
-  Rzeszow Rødovre
+  Riau Rieneck Riga Rijeka Rimini Romana Rome Roskilde Rotterdam 
+  Rottneros Rzeszow Rødovre
 
   Saarbrücken Sabadell Salerno Salo Salsomaggiore Samarinda Samobor 
   Samsun Sandefjord Santiago Sanya Sarpsborg Secunderabad Seferihisar 
-  Semarang Senigallia Serang Shanghai Shaoguan Sharjah Shenyang 
+  Semarang Sendai Senigallia Serang Shanghai Shaoguan Sharjah Shenyang 
   Shenzhen Shijiazhuang Shumen Sibiu Sidoarjo Siena Sindi Singsås 
   Siofok Sivas Skara Skawina Ski Skien Skopje Slagelse Slawa Sleman 
   Snåsa Sofia Solok Sopot Sortland Söke Split Stanford Stargard 
@@ -234,10 +235,11 @@ my @SINGLE_WORDS = qw(
   Stureby Stuttgart Sukma Sukomoro Sumedang Sunndalsøra Surabaya 
   Suzhou Svendborg Sydney Szczyrk Szeged Søborg Sørreisa
 
-  Taicang Taichung Tainan Taizhou Takayama Tallinn Tambun Tarakan 
-  Targoviste Tarnów Taskopru Täby Täfteå Tekýrdag Temuco Thane 
-  Thanjavur Thessaloniki Thoisy Tianjin Timisoara Tire Tofta Tokyo 
-  Tomohon Tonya Torino Toulouse Tours Trieste Trondheim Tromsø Taoyuan
+  Taicang Taichung Tainan Taizhou Takayama Tallinn Tambun Taoyuan
+  Tarakan Targoviste Tarnów Taskopru Täby Täfteå Tekýrdag Temuco 
+  Thane Thanjavur Thessaloniki Thoisy Tianjin Tilburg Timisoara 
+  Tire Tofta Tokyo Tomohon Tonya Torino Toulouse Tours 
+  Trieste Trondheim Tromsø Tübingen 
 
   Udaipur Uddevalla Umeå Uppsala Usak Utrecht
 
@@ -245,8 +247,8 @@ my @SINGLE_WORDS = qw(
   Västerås Vejle Venice Verona Vestfold Vestvågøy Viareggio Vienna 
   Vikersund Vilnius Vorden Vraca
 
-  Waltham Warsaw Wellington Wetzlar Wisla Worcester Wroclaw Wronie 
-  Wuhan Wuxi
+  Waldsolms Waltham Warsaw Wellington Wetzlar Wiesbaden Wisla 
+  Worcester Wroclaw Wronie Wuhan Wuxi
 
   Xiamen Xian Xiantao Xinyi
 

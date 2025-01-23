@@ -14,6 +14,7 @@ our @EXPORT = qw(set_hashes);
 my @MULTI_WORDS =
 (
   'Aegean Sea',
+  'Andhra Pradesh',
   'Australian Central Territory',
   'Bekasi Regency',
   'Bisma Semarang',
@@ -35,6 +36,7 @@ my @MULTI_WORDS =
   'East Java',
   'East Kalimantan',
   'Eastern Cape',
+  'Fylke Innlandet',
   'Gabungan Malaku',
   'Garut Regency',
   'Java Bali',
@@ -55,6 +57,7 @@ my @MULTI_WORDS =
   'North Celebes',
   'North Sulawesi',
   'Northern Gauteng',
+  'Northern Norway',
   'Northern Territory',
   'Nusa Tenggara Barat',
   'Pearl River',
@@ -71,6 +74,7 @@ my @MULTI_WORDS =
   'South Sumatra',
   'South Sweden',
   'Suphan Buri',
+  'Sør-Trøndelag',
   'Tamil Nadu',
   'Troms og Ofoten',
   'Uttar Pradesh',
@@ -102,6 +106,7 @@ my %MULTI_TYPOS =
   'East Jakarta' => ['jakarta timur'],
   'East Java' => ['jawa timur', 'jatim'],
   'East Kalimantan' => ['kalimantan timur'],
+  'Fylke Innlandet' => ['hedmark og oppland'],
   'Garut Regency' => ['kab. garut'],
   Guangdong => ['guangdong province', 'guang dong'],
   Hubei => ['hu bei'],
@@ -138,7 +143,7 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Aceh Agder Akdeniz Akkad Anhui Ayrshire
-  Bali Banten Belitung Bengkayang Bihar Bornholm Bungo Buskerud
+  Badung Bali Banten Belitung Bengkayang Bihar Bornholm Bungo Buskerud
   Cappadocia Catalonia Corsica Crete
   Dersým Druts
   Eyjafjallajokull
@@ -147,13 +152,14 @@ my @SINGLE_WORDS = qw(
   Guizhou Gujarat
   Hainan Haixing Hatay Haugaland Hebei Hedmark Hegyvidék Hordaland
   Hubei Hunan
+  Iberia
   Jalisco Jharkhand Jiangsu Jilin
   Kansai Kanto Karnataka Kawanua Kayong Kedungwaru Kepri Kerala 
   Krabi
   Lampung Lebak Liaoning Liguria Lombok 
   Madeira Maharashtra Maluku Marmara Matopos Midtsjælland 
   Minahasa Missouri Mjøsa Muallim Munzur Mysia
-  Nordafjells Norrland Norrorts Nusantara
+  Nordafjells Norrland Norrorts Northland Nusantara
   Queensland
   Oberloiben Olona Orontes Otago
   Papua Pomerania Porong Punjab

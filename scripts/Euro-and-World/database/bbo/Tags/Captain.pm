@@ -21,6 +21,7 @@ my @MULTI_WORDS =
   'Ajit Mahadar',
   'Akin Ucar',
   'Alain Lévy',
+  'Alan Mould',
   'Aline Biondillo',
   'Alok Daga',
   'Alon Birman',
@@ -66,6 +67,7 @@ my @MULTI_WORDS =
   'Carlos Luis',
   'Carlos Santos',
   'Carlos Teixeira',
+  'Carole Puillet',
   'Chalermpol Wongwaiwit',
   'Charlie Lee',
   'Choo Wai Wong',
@@ -127,10 +129,12 @@ my @MULTI_WORDS =
   'Evgueni Gladysh',
   'Ewa Lasting',
   'Fatih Yayla',
+  'Fernando F. Santos',
   'Fernando Matos',
   'Filippo Palma',
   'Finn Kolesnik',
   'Flemming Dahl',
+  'Francesca de Lucchi',
   'Francisco Costa-Cabral',
   'Frímann Stefánsson',
   'G. Limmen',
@@ -161,7 +165,9 @@ my @MULTI_WORDS =
   'Henning Østergaard',
   'Hermann Friðriksson',
   'Hiroki Yokoi',
+  'Hjalmar S Palsson',
   'Hong NIU',
+  'Huijun Song',
   'Ilan Herbst',
   'Ingvar Erga',
   'Inocencio Almeida Araujo',
@@ -173,6 +179,7 @@ my @MULTI_WORDS =
   'J.C. Henriques',
   'J.E. Skjanni',
   'J.P. Goenka',
+  'Jacky Ip',
   'Jaggy Shivdasani',
   'Jan Jansma',
   'Jan-Olov Andersson',
@@ -186,6 +193,7 @@ my @MULTI_WORDS =
   'Jerzy Zaremba',
   'Jesper Buus Thomsen',
   'Jessica Hayman',
+  'Jin Zhuo',
   'João Fanha',
   'Joao Ferreira',
   'Joao Paes de Carvalho',
@@ -229,6 +237,7 @@ my @MULTI_WORDS =
   'Lanpikul Thongchairit',
   'Lars Peter Damgaard',
   'Lauge Pedersen',
+  'Lauren Travis',
   'Leif Thomsen',
   'Li Shu Yuan',
   'Li Xiao Lei',
@@ -241,6 +250,7 @@ my @MULTI_WORDS =
   'Mads Eyde',
   'Majka Cilleborg Bilde',
   'Manoel Peirao',
+  'Manoj Shah',
   'Manuel Capucho',
   'Manuel Neto',
   'Manuel Oliveira',
@@ -255,6 +265,7 @@ my @MULTI_WORDS =
   'Marius Bartnes',
   'Mark Gordon',
   'Mark Micha',
+  'Martine Rossard',
   'Mathias Bruun',
   'Maxim Henbest',
   'Maya Meera Sneha',
@@ -280,8 +291,9 @@ my @MULTI_WORDS =
   'Morten Jepsen',
   'Morten Klug',
   'Morten Lund Madsen',
+  'Morten Stege',
   'Murray Green',
-  'Møller Sørensen',
+  'Lars Møller Sørensen',
   'N. Chakraborty',
   'Nabil Chaker',
   'Nabil Edgtton',
@@ -298,14 +310,17 @@ my @MULTI_WORDS =
   'Olivier Bessis',
   'Ómar Freyr',
   'Omar Sharif',
+  'P.C. Gupta',
   'Palma Carlos',
   'Pankaj Kapadia',
   'Pankaj Mehta',
+  'Pascale Thuillez',
   'Patrick Choy',
   'Patrick Jourdain',
   'Paul Fireman',
   'Paul Hackett',
   'Paul Van Goor',
+  'Paula Leslie',
   'Paula Lima',
   'Paulo Dias',
   'Paulo Goncalves Pereira',
@@ -317,6 +332,7 @@ my @MULTI_WORDS =
   'Pedro Morbey',
   'Pedro Pratas',
   'Pedro Russo',
+  'Pedro Salgueiro',
   'Pedro Sampaio Nunes',
   'Peter de Vries',
   'Peter Schaltz',
@@ -349,6 +365,7 @@ my @MULTI_WORDS =
   'Reinaldo Timoteo',
   'Rita Choksi',
   'Rita Russo',
+  'Robyn Brazier',
   'Rodrigo Suares',
   'Ronnie Benin-Barr',
   'Rui Pinto',
@@ -368,6 +385,7 @@ my @MULTI_WORDS =
   'Saumitra Basu',
   'Sejr Andreas Jensen',
   'Signe Buus Thomsen',
+  'Shahar Zack',
   'Shashi Gupta',
   'Shekhar Banerjee',
   'Shih Yeh',
@@ -380,7 +398,9 @@ my @MULTI_WORDS =
   'Sinan Abi',
   'Sinan Göksu',
   'Sofia Costa Pessoa',
+  'Steen Schou',
   'Stefán Jóhannsson',
+  'Stefan Vilhjalmsson',
   'Stig Farholt',
   'Sunil Machhar',
   'Susanne Bohnsack',
@@ -391,6 +411,7 @@ my @MULTI_WORDS =
   'T.V. Joshi',
   'Teixeira-Reus',
   'Teresa Kay',
+  'Thomas Vang Larsen',
   'Tiago Canelas',
   'Tomi Gotard',
   'Tone Torkelsen Svendsen',
@@ -409,11 +430,11 @@ my @MULTI_WORDS =
   'Van Gestel',
   'Van Helsing',
   'Van Hoof',
-  'Thomas Vang Larsen',
   'Van Eijck',
   'Van Riel',
   'Van Zwol',
   'Varsha Jain',
+  'Vesth-Hansen',
   'Vijay Anand Singh',
   'Villas Boas',
   'Vincent LI',
@@ -423,6 +444,7 @@ my @MULTI_WORDS =
   'Ward Platt',
   'Wei Sender',
   'Weidong He',
+  'Wing Hung Fok',
   'Wu Xiao Bing',
   'Wubbo de Boer',
   'Xavier Michaud Larivière',
@@ -456,6 +478,7 @@ my %MULTI_TYPOS =
   'Amiya Ranjan Das' => ['a r dass'],
   'Andrea Landry'=> ['landry andrea'],
   Angelini => ['squadra angelýný', 'squadra angelini'],
+  'Anoop Dhawan' => ['anoop dhaon'],
   'Antonio Falcao' => ['falcão'],
   'Antonio Maria Campos' => ['antonio m campos', 'antonio maria campo'],
   'Artur S. Silva' => ['artur s silva'],
@@ -490,6 +513,7 @@ my %MULTI_TYPOS =
   'de Bruyne' => ['de Bruyune'],
   'de Falco' => ['di falco'],
   'de Knijff' => ['deknijff', 'di knijff'],
+  'Francesca de Lucchi' => ['de lucchi'],
   'de Tessieres' => ['de tessiere', 'de tessier', 'de tessie'],
   'D Banerjee' => ['prof d banerjee'],
   "D'Orsi" => ['d orsi', "d´orsi", "d`orsi", "d 'orsi"],
@@ -529,10 +553,11 @@ my %MULTI_TYPOS =
   'Hecht Johansen' => ['hecht-johansen', 'hect johansen'],
   Helekar => ['dr. helekar', 'dr.helekar'],
   'Hemant Jalan' => ['h.jalan', 'hemant  jalan'],
-  'Hemant Lall' => ['hemant lal', 'henant lal'],
+  'Hemant Lall' => ['hemant lal', 'henant lal', 'henant lall'],
   'Hemant Malse' => ['hemant- malse'],
   'Hermann Friðriksson' => ['Hermann Fridriksson'],
   'Hiroki Yokoi' => ['yokoi hiroki'],
+  'Huijun Song' => ['hui song'],
   'Ilan Herbst' => ['herbst i', 'herbst ilan', 'herbsr ilan'],
   'Inocencio Almeida Araujo' => ['inocencio arauj', 'inocêncio araújo',
     'inocencio'],
@@ -554,13 +579,26 @@ my %MULTI_TYPOS =
     'ze carlos henriques',
     'zé carlos henriques', 
     'josé c henriques'],
-  'J.E. Skjanni' => ['j.e.skanni', 'j.e.skjanni', 'je skjanni',
-    'je skjanni ehf'],
+  'J.E. Skjanni' => [
+    'j. e. skjanni',
+    'j e skjanni',
+    'j.e skjanni',
+    'j.e skjanni ehf',
+    'j.e.skanni', 
+    'j.e.skjanni', 
+    'j.e. skanni',
+    'j.e. skajnni ehf',
+    'j.e. skjanni ehf',
+    'je skjanni',
+    'je skjanni ehf',
+    'skjanni ehf'],
   'J.P. Goenka' => ['j.p.goenka'],
   'Jean le Poder' => ['le poder'],
   'Jennifer de Winter' => ['jen de winther', 'jan de winter'],
-  'Jesper Buus Thomsen' => ['jb thomsen'],
-  'Joao Paes de Carvalho' => ['j paes c'],
+  'Jesper Buus Thomsen' => ['jb thomsen', 'j. buus-thomsen'],
+  'Jin Zhuo' => ['jin shuo'],
+  'Joao Paes de Carvalho' => ['j paes c',
+    'paes de carvalho'],
   'João Fanha' => ['j.fanha', 'joao fanha', 'j. fanha',
     'j fanha'],
   'Joao Silva Neto' => ['silva neto'],
@@ -571,7 +609,10 @@ my %MULTI_TYPOS =
     'john moeller jepsen'],
   'John Holland' => ['j holland'],
   'Jón Baldursson' => ['jon baldursson'],
-  'Jorge Castanheira' => ['jorel8', 'castanheira'],
+  'Jorge Castanheira' => [
+    'jorel8', 
+    'castanheira',
+    'j.castanheira'],
   'José Moraes' => ['josé morae', 'jose moraes'],
   'Joshi Sanghi' => ['dr.joshi', "dr.sanghi'siv",
     "dr. joshi's - sangl", "dr. sanghvi's  vi", 'dr. joshi sangli'],
@@ -601,8 +642,11 @@ my %MULTI_TYPOS =
   "L'Écuyer" => ["l'ecuyer", 'lecuyer', 'l ecuyer', 'l"ecuyer',
     "l'equyer"],
   'Lanpikul Thongchairit' => ['dr. thongchai'],
+  'Lars Møller Sørensen' => ['Møller Sørensen',
+    'lm sørensen'],
   'Lars Peter Damgaard' => ['l p damgaard'],
   'Lauge Pedersen' => ['lauge-pedersen'],
+  'Lauren Travis' => ['l travis'],
   'Amir Levin' => ['levin amir'],
   Lhuissier => ["l'huissier"],
   'Lotan Fisher' => ['fisher lotan'],
@@ -615,6 +659,7 @@ my %MULTI_TYPOS =
   'Manuela Mouttet' => ['mme mouttet', 'mouttet'],
   'Marc ter Laare' => ['ter laare'],
   'Maria João Lara' => [
+    'mª joão lara',
     'm joao lara', 
     'm joão lara',
     'm. j. lara', 
@@ -628,6 +673,7 @@ my %MULTI_TYPOS =
     'maria joao lara'], 
   'Mariana Leitão' =>['mariana leitao'],
   'Marius Bartnes' => ['dr. bartnes'],
+  'Martine Rossard' => ['mme rossard'],
   'Maxim Henbest' => ['m.henbest'],
   'Maya Meera Sneha' => [
     'maaya meera', 
@@ -644,16 +690,20 @@ my %MULTI_TYPOS =
     'm. teixeira', 'm.teixeira'],
   'Mikud Mannid' => ['mikud-mannid'],
   'Mohit Mehta' => ['mohit mehata', 'mohit meheta'],
+  'Monica Jajoo' => ['monika jajoo', 'm.jajoo'],
   'N. Chakraborty' => ["n.c hakraborty's iv"],
   'Nabil Chaker' => ['chaker'],
   'Nabil Edgtton' => ['n edgtton', 'n.edgtton'],
+  'Nathan van Jole' => ['van jole'],
   'Nevena Senior' => ['n senior'],
   'Nuno Paz' => ['n paz'],
   "O'Rourke" => ['o rourke', 'o;rourke', "o'rouke"],
   'Ofek Tal' => ['ofel tal'],
   'Olivier Bessis' => ['bessis.o'],
+  'Pascale Thuillez' => ['mme thuillez'],
   'Patanè' => ["patane'"],
   'Paul Hackett' => ['p hackett', 'pd hackett', 'hackett p'],
+  'Paula Leslie' => ['p leslie'],
   'Paulo Goncalves Pereira' => [
     'p g pererira',
     'p g pereira', 
@@ -673,6 +723,7 @@ my %MULTI_TYPOS =
   'Paulo Roberto Brum' => ['brum p', 'brum.p.', 'p brum'],
   'Paulo Rocha Pinto' => ['paulo pinto', 'rocha pinto',
     'j.p.rocha pinto'],
+  'P.C. Gupta' => ['p c gupta'],
   'Pedro Madeira' => ['p. madeira', 'p madeira'],
   'Pedro Morbey' => ['p. morbey'],
   'Pedro Russo' => ['russo p'],
@@ -681,7 +732,8 @@ my %MULTI_TYPOS =
   'Piedade C. Real' => ['piedade c.real'],
   'Prakash Bandhari' => ['prakash bhandari'],
   'Prashant Desai' => ["prashant desai's"],
-  'Promila Saraf' => ['promila sorof', 'promils sarif'],
+  'Promila Saraf' => ['promila sorof', 'promils sarif',
+    'promils saraf'],
   Prusa => ['prusa m'],
   'R.K. Sinha' => ["r k sinha'siv", "r k sinha's lv", 'r k sinha'],
   'R.L. Kejriwal' => [
@@ -710,9 +762,11 @@ my %MULTI_TYPOS =
   'Rui Pinto' => ['ruin pinto', 'r.pinto'],
   'Rui Silva Santos' => ['rui santos', 'silva santos',
     'rui s. santos'],
+  'Rúnar Einarsson' => ['runar einarsson'],
   'Salim Yilankiran' => ['yilankiran'],
   'Sally Brock' => ['s brock'],
   'Satish Diwanji' => ['col. diwanji'],
+  'Shahar Zack' => ['zack shachar'],
   'Shih Yeh' => ['yeh shih'],
   'Shlomo Netzer' => ['netzer shlomo'],
   'Shree Priya' => ['sree priya'],
@@ -740,6 +794,7 @@ my %MULTI_TYPOS =
   'Ward Platt' => ['ward-platt', 'world platt', 'ward-pratt'],
   'Wei Sender' => ['wei-sender'],
   'Weidong He' => ['he wei dong'],
+  'Wing Hung Fok' => ['w h fok'],
   'Xavier Michaud Larivière' => ['michaud- lariviere',
     'michaud-lariviere', 'michaud lari'],
   'Yuval Lubinski' => ['lubinsky yuval']
@@ -855,7 +910,8 @@ my @SINGLE_WORDS = qw(
   Heskje Hill Hillman Hinden Hindon Hinge Hiraki Hirchwald Hirst Hitti 
   Hliapas Hobeika Hoff Hoffa Hoffman Hollands Hollman Honti Hooda 
   Hopfenheit Hornibrook Horowitz Horton Horwitz Howard Howe Hu 
-  Huang Hughes Hugon Hugony Hult Hung Hupe Hurworth Høgis Høyland 
+  Huang Huberschwiller Hughes Hugon Hugony Hult Hung Hupe Hurworth 
+  Høgis Høyland 
 
   Iacapraro Ichilcik Ilczuk Ilmez Ince Indemini Ingielewicz Iommi 
   Iontzeff Irens Ishidaya Ivatury Iversen Ivrig Iyer Izisel
@@ -918,8 +974,8 @@ my @SINGLE_WORDS = qw(
   Miszewska Mitra Mittelman Mirali Miura Mizel Mizrak Mohota 
   Mohtashami Molenaar Molenda Molina Molva Monachan Moni Monsegur 
   Montanari Mooney Moran Morath Morawski Moreira Morelli Morgan 
-  Mori Moritsch Morrison Morse Mortensen 
-  Moses Moskovsky Mossop Mott Mouiel Mpampou Mpanikas 
+  Mori Moritsch Morris Morrison Morse Mortensen 
+  Moses Moskovsky Mossop Mott Mouiel Mourgues Mpampou Mpanikas 
   Mpompolakis Mucha Mueller Mullamphy Muller Multon Mundell 
   Munksgaard Munson Munteanu Muntz Muriel Murray Mus Mutiara 
   Muzzio Mýzrak Mæsel Mønsted
@@ -946,8 +1002,8 @@ my @SINGLE_WORDS = qw(
   Pietraszek Piganeau Pilon Pineles Pinguello Pinto Piper Pisak 
   Pisani Pitt Plaut Poizat Pollack Pollak Polledro Polowan 
   Pont Popescu Popova Potier Potts Poulat Pownall Pozzi Pradhan 
-  Prescott Previde Priano Primavera Proukakis Procter Prohorov 
-  Prusa Pryor Puczynski Pulkrab Purkarthofer Pszczola
+  Preddy Prescott Previde Priano Primavera Proukakis Procter 
+  Prohorov Prusa Pryor Puczynski Pulkrab Purkarthofer Pszczola
 
   Quail Quantin Queran Quinn
 
@@ -958,36 +1014,37 @@ my @SINGLE_WORDS = qw(
   Ribera Ribery Ricard Ricci Richardson Richman Ridgway Riedel Riehm 
   Rietvink Rieusset Rigal Rigaud Riisnæs Rimstedt Ringuet Riolo Rios 
   Ritmeijer Rivers Rizzo Robb Robertson Robinson Robles 
-  Robson Rocafort Rocca Rodwell Rogoff Rohowsky Roll Romanin 
-  Romanski Rombaut Ronin Rosen Rosenberg Rosendorff Rosetta 
-  Rosenkrantz Rosenthal Rossard Rossi Rosti Rothfield Rothstein 
+  Robson Rocafort Rocca Rodwell Rogoff Rohowsky Rolfmeyer Roll Rolland
+  Romanin Romanski Rombaut Ronin Rosen Rosenberg Rosendorff Rosetta 
+  Rosenkrantz Rosenthal Rossi Rosti Rothfield Rothstein 
   Roussoglou Roussos Rubiés Rubin Rubins Rubio Rueda Ruia Russo Ryman
 
   Sabbag Sabbatini Sadek Saelensminde Saesseli Sahin Saina Sairanen 
   Sakirler Sakr Salama Salisbury Salliere Salman Salvador Sancaktar
   Sandberg Sanden Sandqvist Sankichi Sansom Santos Saporta 
-  Sapounakis Sargos Sarten Sarundajang Savchenko Savelli Savorani 
-  Savski Sawicki Sayaca Saydi Sayer Sayilkan Sayýlkan Sbarigia 
+  Sapounakis Sargos Sarten Sarundajang Sauvage Savchenko Savelli 
+  Savorani Savski Sawicki Sayaca Saydi Sayer Sayilkan Sayýlkan Sbarigia 
   Scanavino Scerri Schaltz Scherders Schermer Schlicker Schneider 
-  Schnetzer Scholes Schonning Schoolmann Schou Schuett Schulle 
+  Schnetzer Scholes Schonning Schoolmann Schuett Schulle 
   Schulz Schüller Schroeder Schreckenberger Scoltock Scudder 
   Scullin Schwartz Schwerdt Sealy Sebbane Seguineau Selberg Selcuk 
-  Seligman Semenov Semerci Sen Serenella Serf Serifoglu Serpoi 
-  Sesyilmaz Sezginsoy Shadyro Sharif Sharp Sher Sherman Shezifi 
-  Shields Shiels Shimamura Shimizu Shirogane Short Shudnev Shugart 
-  Shunta Silver Silverstein Silverstone Sime Simonsen Simpson Simson 
-  Sinclair Sivrioglu Sjodal Sjöqvist Skaanning Skelton Skjønnemann 
-  Skoglund Skorchev Skurec Skwark Small Smart Smilgajs Smith Smirnov 
-  Smolanko Snashall Snellers Snow Socha Sohlin Soldati Solheim Solimando 
-  Solodar Sonsini Soriano Sorkin Sosler Soukup Soulet Sowter 
-  Sörvoll Spangenberg Spector Spelmans Spiridonescu Spitalnick 
-  Spooner Sprung Squires Stabell Stamatov Stankovic Stansby Stark 
-  Stavrinos Steel Stegaroiu Steiner Stensson Stephenson Stern 
-  Steinberg Sternberg Stevens Stewart Stienen Stilling Stoichkov 
-  Stoltz Stoppa Street Stretz Strul Strøm Stuart Sulgrove Sveindal 
-  Sveinsson Svendsen Suarez Sugino Summers Sundelin Sundsten Sung 
-  Suñol Suresh Sutherlin Suwik Sütmen Svindahl Swarup Sweidan 
-  Sykioti Sylvan Symons Syversen Szalay Szenberg Szigethy Szots 
+  Seligman Selway Semenov Semerci Sen Serenella Serf Serifoglu 
+  Serpoi Sesyilmaz Setton Sezginsoy Shadyro Sharif Sharp Sher 
+  Sherman Shezifi Shields Shiels Shimamura Shimizu Shirogane Short 
+  Shudnev Shugart Shunta Silver Silverstein Silverstone Sime 
+  Simonsen Simpson Simson Sinclair Sivrioglu Sjodal Sjöqvist 
+  Skaanning Skelton Skjønnemann Skoglund Skorchev Skurec Skwark 
+  Small Smart Smilgajs Smith Smirnov Smolanko Snashall Snellers 
+  Snow Socha Sohlin Soldati Solheim Solimando Solodar Sonsini 
+  Soriano Sorkin Sosler Soukup Soulet Sowter Sörvoll Spangenberg 
+  Spector Spelmans Spiridonescu Spitalnick Spooner Sprung Squires 
+  Stabell Stamatov Stankovic Stansby Stark Stavrinos Steel 
+  Stegaroiu Steiner Stensson Stephenson Stern Steinberg Sternberg 
+  Stevens Stewart Stienen Stilling Stoichkov Stoltz Stoppa 
+  Street Stretz Strul Strøm Stuart Sulgrove Sveindal Sveinsson 
+  Svendsen Suarez Sugino Summers Sundelin Sundsten Sung Suñol 
+  Suresh Sutherlin Suwik Sütmen Svindahl Swarup Sweidan Sykioti 
+  Sylvan Symons Syversen Szalay Szenberg Szigethy Szots 
   Szymanowski Sørensen
 
   Tachev Tajima Talpur Tamburi Tamburrini Tan Tanaka Taner 
@@ -1026,7 +1083,7 @@ my @SINGLE_WORDS = qw(
   Zabunoglu Zago Zagor Zagorin Zajac Zaleski Zanalda Zambonini 
   Zaninotti Zarkesch Zatorski Zawada Zawislak Zeeberg Zenari 
   Zhan Zhao Zhaoheng Zhong Zhukov Zielinski Zimmermann Zipovski 
-  Zobu Zollo Zolotov Zorlu Zotti Zozis Zotos Zwart
+  Zobu Zochowska Zollo Zolotov Zorlu Zotti Zozis Zotos Zwart
 
   Övelius Özþahin
 );
@@ -1040,6 +1097,7 @@ my %SINGLE_TYPOS =
   'Alain Lévy' => ['levy', 'lévy'],
   'Aline Biondillo' => ['aline'],
   'Ajay Bagaria' => ['bagaria'],
+  'Alan Mould' => ['mould'],
   Allfrey => ['alfrey'],
   Altshuler => ['altschuler', 'altshuller'],
   'Alvares Ribeiro' => ['luisaribeiro'],
@@ -1050,7 +1108,7 @@ my %SINGLE_TYPOS =
   'Arunas Jankauskas' => ['arünas'],
   Avcioglu => ['avcýoðlu', 'avcioðlu'],
   Baleal => ['balelal'],
-  Bartley => ['bartley'],
+  Bartley => ['bartly'],
   Beale => ['beatle'],
   Beauchamp => ['bauchamp', 'beachamp'],
   Bertheau => ['berthau'],
@@ -1062,11 +1120,13 @@ my %SINGLE_TYPOS =
   'Buddy Shah' => ['buddy'],
   Bytskevich => ['bytskevitch'],
   'Carlos Ferreira' => ['ferreira'],
+  'Carole Puillet' => ['puillet'],
   'Chalermpol Wongwaiwit' => ['chalermpol'],
   'Christal Henner-Welland' => ['henner'],
   'Christophe Grosset' => ['grosset'],
   Ciechomski => ['ciechomek'],
   Combescure => ['combescur'],
+  Cooreman => ['cooremans'],
   Curo => ['curò'],
   'C.V. Rao' => ['cvrao'],
   Dabrowka => ['d¹brówka'],
@@ -1111,6 +1171,7 @@ my %SINGLE_TYPOS =
   'Hecht Johansen' => ['hecht'],
   Hoffman => ['hofman'],
   'Hong NIU' => ['hongniu'],
+  Huberschwiller => ['huberschwi'],
   'Ilan Bareket' => ['bareket'],
   'Ilan Herbst' => ['herbst'],
   Ilmez => ['Ýlmez'],
@@ -1165,6 +1226,7 @@ my %SINGLE_TYPOS =
   'Marc Kerlero de Rosbo' => ['kerlero'],
   'Marcelo Branco' => ['branco'],
   Markowicz => ['markovics', 'markowitz'],
+  'Martine Rossard' => ['rossard'],
   'Maxim Henbest' => ['henbest'],
   'Maya Meera Sneha' => ['mayameerasneha'],
   Meltzer => ['metzler'],
@@ -1219,6 +1281,7 @@ my %SINGLE_TYPOS =
   Rietvink => ['reitvink'],
   Riisnæs => ['riisnes', 'riisnaes'],
   Rizzo => ['rizzp'],
+  'Robyn Brazier' => ['brazier'],
   Rosenkrantz => ['rosenkranz'],
   Rosenthal => ['rosentahl'],
   Roussos => ['rousos'],
@@ -1232,7 +1295,7 @@ my %SINGLE_TYPOS =
   Sapounakis => ['sapounaki'],
   Schaltz => ['schalz', 'shaltz'],
   Schneider => ['scheinder'],
-  Schou => ['shhou'],
+  'Steen Schou' => ['schou', 'shhou'],
   Schüller => ['schueller'],
   Schwartz => ['schwarz'],
   Selcuk => ['Selçuk'],
