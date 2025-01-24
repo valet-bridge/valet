@@ -47,7 +47,10 @@ my @MULTI_WORDS =
   'Artur S. Silva',
   'Arun Bapat',
   'Arun Jain',
+  'Arun Joshi',
+  'Arun Kumar Sinha',
   'Arunas Jankauskas',
+  'Asa Levinger',
   'Ashish Malhotra',
   'Ashwin Mehta',
   'A.K. Bose',
@@ -59,6 +62,7 @@ my @MULTI_WORDS =
   'Brian Senior',
   'Brigitta Fischer',
   'Buddy Shah',
+  'Buus Thomsen',
   'Bøgh-Sørensen',
   'C.V. Rao',
   'Carlos Ferreira',
@@ -89,6 +93,7 @@ my @MULTI_WORDS =
   'de Krull',
   'de la Barrera',
   'de Livera',
+  'de Luca',
   'de Mendez',
   'de Michelis',
   'de Miguel',
@@ -123,6 +128,7 @@ my @MULTI_WORDS =
   'Enrique Pinto',
   'Erik Wied',
   'Erikas Vainikonis',
+  'Eriko Matsuo',
   'Erla Sigurjónsdóttir',
   'Erlend Skjetne',
   'Espinosa Paz',
@@ -157,21 +163,27 @@ my @MULTI_WORDS =
   'H.C. Nielsen',
   'Hana Shezifi',
   'Hans-Ove Sandin',
+  'Haoran Hoyin',
   'Hecht Johansen',
   'Helge Hesselberg',
   'Hemant Jalan',
   'Hemant Lall',
   'Hemant Malse',
   'Henning Østergaard',
+  'Henrik Lahrmann',
   'Hermann Friðriksson',
   'Hiroki Yokoi',
+  'Hiroya Abe',
   'Hjalmar S Palsson',
+  'Hjordis Eythorsdottir',
+  'Hjordis Sigurjonsdottir',
   'Hong NIU',
   'Huijun Song',
   'Ilan Herbst',
   'Ingvar Erga',
   'Inocencio Almeida Araujo',
   'Inon Liran',
+  'Ivan Abel',
   'J. Brigido',
   'J. Pereira de Sousa',
   'J. Pinheiro',
@@ -179,6 +191,7 @@ my @MULTI_WORDS =
   'J.C. Henriques',
   'J.E. Skjanni',
   'J.P. Goenka',
+  'Jacob Cornell',
   'Jacky Ip',
   'Jaggy Shivdasani',
   'Jan Jansma',
@@ -228,6 +241,7 @@ my @MULTI_WORDS =
   'Knud Harries',
   'Koch-Palmund',
   'Kristian Tylvad',
+  'Kristján Blöndal',
   'Kruse Petersen',
   'Krzysztof Strykier',
   'Kumar Vijay Anand',
@@ -244,6 +258,7 @@ my @MULTI_WORDS =
   'Lin Rong Qiang',
   'Lone Bilde',
   'Lotan Fisher',
+  'Lu Dong',
   'Luis Alvares Ribeiro',
   'Luis Brito',
   'Luis Oliveira',
@@ -270,6 +285,7 @@ my @MULTI_WORDS =
   'Maxim Henbest',
   'Maya Meera Sneha',
   'Mayda de Dios',
+  'Miao Yang',
   'Michael Cornell',
   'Michael Lipkin',
   'Migry Zur-Campanile',
@@ -295,6 +311,7 @@ my @MULTI_WORDS =
   'Murray Green',
   'Lars Møller Sørensen',
   'N. Chakraborty',
+  'N.R.K. Moorthi',
   'Nabil Chaker',
   'Nabil Edgtton',
   'Nathan van Jole',
@@ -350,10 +367,12 @@ my @MULTI_WORDS =
   'Prashant Desai',
   'Promila Saraf',
   'Quentin Robert',
+  'Qiao Ge',
   'Qing Gong',
   'R.K. Sinha',
   'R.L. Kejriwal',
   'R.S. Mishra',
+  'R Fernandes',
   'Radu Nistor',
   'Raghavendra Rajkumar',
   'Rahul Ravichandran',
@@ -388,9 +407,11 @@ my @MULTI_WORDS =
   'Shahar Zack',
   'Shashi Gupta',
   'Shekhar Banerjee',
+  'Sheng He Wang',
   'Shih Yeh',
   'Shlomo Netzer',
   'Shree Priya',
+  'Si Zheng',
   'Signe Thomsen',
   'Sigurdur Vilhjalmsson',
   'Simon Gillis',
@@ -398,6 +419,7 @@ my @MULTI_WORDS =
   'Sinan Abi',
   'Sinan Göksu',
   'Sofia Costa Pessoa',
+  'Song Hui',
   'Steen Schou',
   'Stefán Jóhannsson',
   'Stefan Vilhjalmsson',
@@ -436,9 +458,11 @@ my @MULTI_WORDS =
   'Varsha Jain',
   'Vesth-Hansen',
   'Vijay Anand Singh',
+  'Vijay K Khan',
   'Villas Boas',
   'Vincent LI',
   'Visalakshi Narayanan Ramamoorthy',
+  'W.W. Cho',
   'Waleed El Ahmady',
   'Wang Yuan Wei',
   'Ward Platt',
@@ -459,6 +483,7 @@ my @MULTI_WORDS =
   'Zelal Su',
   'Zhang De Zhong',
   'Zhang Xiao Feng',
+  'Zhong Jia',
   'Zia Mahmood',
   'ZHOU Tao'
 );
@@ -475,17 +500,25 @@ my %MULTI_TYPOS =
   'Alvares Ribeiro' => ['luis a ribeiro', 'luis a. ribeiro', 
     'álvares ribeiro'],
   'Alvensleben' => ['v.alvensleben', 'v. alvensleben'],
+  'Ami Zamir' => ['zamir ami'],
   'Amiya Ranjan Das' => ['a r dass'],
   'Andrea Landry'=> ['landry andrea'],
   Angelini => ['squadra angelýný', 'squadra angelini'],
-  'Anoop Dhawan' => ['anoop dhaon'],
+  'Anoop Dhawan' => [
+    'anoop dhaon', 
+    'anoop dawan',
+    'anoop dawand',
+    'anoop dhavan'],
   'Antonio Falcao' => ['falcão'],
   'Antonio Maria Campos' => ['antonio m campos', 'antonio maria campo'],
+  'Antonio Palma' => ['antónio palma'],
   'Artur S. Silva' => ['artur s silva'],
   'Arun Jain' => ['arunjain'],
+  'Asa Levinger' => ['leviger asa'],
   'Ashwin Mehta' => ['dr.ashwin meheta'],
   'A.K. Bose' => ["a.k.bose's iv", "a.k.bose'iv", "a k bose's 4",
     "a k bose's IV", 'a.k.bose'],
+  'Arun Kumar Sinha' => ['a k sinha', 'a.k.sinha'],
   'Ilan Bareket' => ['bareket ilan'],
   'Baneet Malhotra' => ['b malhotra'],
   'Benedicte Cronier' => ['mme cronier'],
@@ -525,6 +558,7 @@ my %MULTI_TYPOS =
   'Ellena Moskovsky' => ['e.moskovsky'],
   'Enrique Pinto' => ['e pinto'],
   'Erikas Vainikonis' => ['vainikonis e'],
+  'Eriko Matsuo' => ['matsuo eriko'],
   'Erla Sigurjónsdóttir' => ['erla sigurjónsdótti'],
   'Espinosa Paz' => ['espinoza paz'],
   'Flemming Dahl' => ['dahl'],
@@ -555,8 +589,12 @@ my %MULTI_TYPOS =
   'Hemant Jalan' => ['h.jalan', 'hemant  jalan'],
   'Hemant Lall' => ['hemant lal', 'henant lal', 'henant lall'],
   'Hemant Malse' => ['hemant- malse'],
+  'Henrik Lahrmann' => ['daddy lahrmann'],
   'Hermann Friðriksson' => ['Hermann Fridriksson'],
   'Hiroki Yokoi' => ['yokoi hiroki'],
+  'Hiroya Abe' => ['abe hiroya'],
+  'Hjordis Eythorsdottir' => ['hjordis eythorsdott'],
+  'Hjordis Sigurjonsdottir' => ['hjordis sigurjonsdo'],
   'Huijun Song' => ['hui song'],
   'Ilan Herbst' => ['herbst i', 'herbst ilan', 'herbsr ilan'],
   'Inocencio Almeida Araujo' => ['inocencio arauj', 'inocêncio araújo',
@@ -593,18 +631,22 @@ my %MULTI_TYPOS =
     'je skjanni ehf',
     'skjanni ehf'],
   'J.P. Goenka' => ['j.p.goenka'],
+  'Jacob Cornell' => ['cornell jacob'],
   'Jean le Poder' => ['le poder'],
   'Jennifer de Winter' => ['jen de winther', 'jan de winter'],
   'Jesper Buus Thomsen' => ['jb thomsen', 'j. buus-thomsen'],
   'Jin Zhuo' => ['jin shuo'],
-  'Joao Paes de Carvalho' => ['j paes c',
-    'paes de carvalho'],
   'João Fanha' => ['j.fanha', 'joao fanha', 'j. fanha',
     'j fanha'],
   'Joao Silva Neto' => ['silva neto'],
-  'Joao Paes de Carvalho' => ['j paes de carvalho',
-    'joao p. carvalho', 'j paes carvalho',
-    'joão p. carvalho', 'j.p.carvalho'],
+  'Joao Paes de Carvalho' => [
+    'j paes c',
+    'j paes carvalho',
+    'j paes de carvalho',
+    'j.p.carvalho',
+    'joao p. carvalho', 
+    'joão p. carvalho', 
+    'paes de carvalho'],
   'John Møller Jepsen' => ['møller jepsen',
     'john moeller jepsen'],
   'John Holland' => ['j holland'],
@@ -635,6 +677,7 @@ my %MULTI_TYPOS =
     'karl sigurhjartarso', 'karl sigurhjartarss'],
   'Modi Kenigsberg' => ['kenigsberg modi'],
   Kishan => ["kishan's iv"],
+  'Kristján Blöndal' => ['kristjan blondal'],
   'Krzysztof Strykier' => ['k.strykier'],
   'Kumar Vijay Anand' => ['kr. vijay anand', 'kr. vijayanand'],
   'Kurniadi Djauhari' => ['dee jee'],
@@ -647,7 +690,7 @@ my %MULTI_TYPOS =
   'Lars Peter Damgaard' => ['l p damgaard'],
   'Lauge Pedersen' => ['lauge-pedersen'],
   'Lauren Travis' => ['l travis'],
-  'Amir Levin' => ['levin amir'],
+  'Amir Levin' => ['levin amir', 'lavin amir'],
   Lhuissier => ["l'huissier"],
   'Lotan Fisher' => ['fisher lotan'],
   'Luis Alvares Ribeiro' => ['l.a. ribeiro'],
@@ -692,6 +735,7 @@ my %MULTI_TYPOS =
   'Mohit Mehta' => ['mohit mehata', 'mohit meheta'],
   'Monica Jajoo' => ['monika jajoo', 'm.jajoo'],
   'N. Chakraborty' => ["n.c hakraborty's iv"],
+  'N.R.K. Moorthi' => ['n r k moorthi'],
   'Nabil Chaker' => ['chaker'],
   'Nabil Edgtton' => ['n edgtton', 'n.edgtton'],
   'Nathan van Jole' => ['van jole'],
@@ -766,7 +810,8 @@ my %MULTI_TYPOS =
   'Salim Yilankiran' => ['yilankiran'],
   'Sally Brock' => ['s brock'],
   'Satish Diwanji' => ['col. diwanji'],
-  'Shahar Zack' => ['zack shachar'],
+  'Shahar Zack' => ['zack shachar', 'zack s',
+    'zavk shachar'],
   'Shih Yeh' => ['yeh shih'],
   'Shlomo Netzer' => ['netzer shlomo'],
   'Shree Priya' => ['sree priya'],
@@ -788,8 +833,10 @@ my %MULTI_TYPOS =
   Vithaya => ['dr.vithaya'],
   'van Prooijen'=> ['van proojen'],
   'Van den Bos' => ['van des bos'],
+  'Vijay K Khan' => ['vijay k klan'],
   'Thomas Vang Larsen' => ['van larsen', 'vang larsen',
     'vang-larsen', 'vanglarsen'],
+  'W.W. Cho' => ['WW Cho'],
   'Waleed El Ahmady' => ['el ahmady'],
   'Ward Platt' => ['ward-platt', 'world platt', 'ward-pratt'],
   'Wei Sender' => ['wei-sender'],
@@ -834,7 +881,7 @@ my @SINGLE_WORDS = qw(
   Brachman Brady Brake Braithwaite Bramley Brantsma Branzoiu
   Braun Brede Brenner Bretagne Brifman Brightling Brink Brockwell 
   Brod Brogeland Brown Brunet Bruun Brunzell Bryant Buch Buchen 
-  Buchlev Budkin Buras Burrows Burgay Burke Buscaglia Buse 
+  Buchlev Budkin Bunk Buras Burrows Burgay Burke Buscaglia Buse 
   Busse Butland Butts Byrne Bytskevich Börgesson
 
   Cabiati Caggese Calandra Caldarelli Caley Caldwell Callaghan Callander
@@ -843,17 +890,18 @@ my @SINGLE_WORDS = qw(
   Cardine Carbonnier Carcy Carmichael Carrasco Carruthers Carvalho 
   Casabona Casadei Casen Cassini Castelblanco Castelli Castells 
   Castner Cattani Cavalieri Cayne Cengiz Cernat Cernato Cernatovo 
-  Cerreto Cesati Chadwick Chai Chambers Chan Chang Charletoux 
-  Charlotte Charlsen Chassagne Chauvelot Chediak Cheek 
+  Cerreto Cesati Chadwick Chai Chamberlain Chambers Chan Chang 
+  Charletoux Charlotte Charlsen Chassagne Chauvelot Chediak Cheek 
   Chemla Cheng Chinchak Chizzoli Chopin Chottin Chrapot 
   Chubukov Ciccarelli Cichocki Ciechomski Cilleborg Cimon Cintra 
   Cionca Ciopettini Civale Cladius Clair Claret Clark Clarke Clausen 
-  Clement Clemmensen Close Coenraets Coglitore Cohen Cohler Cohner 
-  Colarossi Coldea Cole Coletta Collett Collins Combes Combescure 
-  Compton Connie Conti Cook Cooke Cooper Cooreman Cope Coren 
-  Coridakis Corlateanu Cormack Corssen Cossutta Counil Courtney 
-  Coutts Coyne Creet Crestey Creuheras Crichton Crompton Cronier 
-  Crouch Crzejdziak Cuevas Cullin Cummings Cuper Curo Çýloðlu Czímer
+  Clement Clemmensen Clerkin Close Coenraets Coglitore Cohen Cohler 
+  Cohner Colarossi Coldea Cole Coletta Collett Collins Combes 
+  Combescure Compton Connie Conti Cook Cooke Cooper Cooreman 
+  Cope Coren Coridakis Corlateanu Cormack Corssen Cossutta Counil 
+  Courtney Coutts Coyne Creet Crestey Creuheras Crichton Crompton 
+  Cronier Crouch Crzejdziak Cuevas Cullin Cummings Cuper Curo 
+  Çýloðlu Czímer
 
   Dabrowka Dahlberg Dalecki Dalia Dalley Damiani Damkor Dancewicz 
   Danta Dantan Darak Daskalakis Daugava Dauvergne Davies 
@@ -874,13 +922,13 @@ my @SINGLE_WORDS = qw(
 
   Fabbri Fagerlund Faidas Faigenbaum Failla Faivre Falay Falciai Falk 
   Fallenius Fallon Fantonakis Fantoni Farholt Faria Farias Farstad
-  Farwell Favard Federighi Fegarty Feiler Fent Fergani 
+  Farwell Favard Federighi Fegarty Feiler Fent Ferenci Fergani 
   Ferramosca Ferrara Ferrari Fettes Fici Figlus Figueiredo 
   Filikci Filios Filip Finikiotis Finz Fioretti Fireman Firestone 
-  Fleisher Fleury Flierl Flock Flora Fonseca Fordham 
+  Fleisher Fleury Flierl Flock Flora Fogaras Fonseca Fordham 
   Fornaciari Fornasari Forrester Fortini Fossi Foster Fournier Fout 
-  Fox Franchi Fraser Frazer Frazzetto Frencken Fredin Freed 
-  Frey Friedland Friedlander Friis Frosztega 
+  Fox Franceschetti Franchi Fraser Frazer Frazzetto Frencken 
+  Fredin Freed Frey Friedland Friedlander Friis Frosztega 
   Fruewirth Frukacz Frutos Fu Fucik Fuglestad Fuller Fung Furunes 
   Furuta Fyrun
 
@@ -989,11 +1037,12 @@ my @SINGLE_WORDS = qw(
   
   O'Brien O'Gorman O'Shea Ohno Ohrysko Oikonomou Oikonomopoulos
   Olanski Olker Ollikkala Olofsson Olsen Omran Oncu O'Rourke Ortega
-  Onstott Orhan Osaulenko Osofsky Oteyza Otvosi Oursel Outred 
-  Ozarar Ozbey Ozdil Ozenir Ozge Ozlen Ozsahin Ozturk Östberg Özbey
+  Onstott Orhan O'Shea Osaulenko Osofsky Oteyza Otvosi Oursel 
+  Outred Ozarar Ozbey Ozdil Ozenir Ozge Ozlen Ozsahin Ozturk Östberg 
+  Özbey
 
-  Pacareu Pacault Pacini Paganus Paiva Pajak Paladino Palau 
-  Palmeira Palmer Pals Panagaki Panto Panopoulos Papahatzis 
+  Pacareu Pacault Pacini Paganus Paiva Pajak Paladino Palatinus 
+  Palau Palmeira Palmer Pals Panagaki Panto Panopoulos Papahatzis 
   Papakyriakopoulos Papaxatzis Parker Partearroyo Parviainen Pasquarè
   Passarinho Passaro Passell Pastore Pattinson Pattison Paulissen 
   Pauncz Pavlicek Payen Pazur Peake Pedzinski Peirão Pekkinen Peksen 
@@ -1151,6 +1200,7 @@ my %SINGLE_TYPOS =
   'Waleed El Ahmady' => ['elahmady', 'elhamady'],
   Failla => ['faill'],
   'Francisco Costa-Cabral' => ['cabral'],
+  Franceschetti => ['franceschett'],
   'G. Limmen' => ['limmen'],
   'Gabriel Chagas' => ['chagas'],
   Gartaganis => ['gartaginas'],
@@ -1243,6 +1293,7 @@ my %SINGLE_TYPOS =
   Narasimhan => ['narasinham'],
   Nowosadzki => ['nowosad'],
   'Nuno Damaso' => ['damaso'],
+  Nystrom => ['nyström'],
   Olanski => ['olansk'],
   Oursel => ['ousel'],
   Ozdil => ['odzil'],

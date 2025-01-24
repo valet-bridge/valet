@@ -14,6 +14,7 @@ our @EXPORT = qw(set_hashes);
 my @MULTI_WORDS =
 (
   'Aegean Sea',
+  'Amnat Charoen',
   'Andhra Pradesh',
   'Australian Central Territory',
   'Bekasi Regency',
@@ -41,6 +42,8 @@ my @MULTI_WORDS =
   'Garut Regency',
   'Java Bali',
   'Kepulauan Riau',
+  'Kayong Utara',
+  'Khon Kaen',
   'Kutai Kartanegara',
   'KwaZulu Natal',
   'Lower Silesia',
@@ -48,6 +51,9 @@ my @MULTI_WORDS =
   'Midt Trøndelag',
   'Møre Romsdal',
   'Nakhon Nayok',
+  'Nakhon Pathom',
+  'Nakhon Sawan',
+  'Nakhon Si Thammarat',
   'New Caledonia',
   'New South Wales',
   'Nord Trøndelag',
@@ -63,8 +69,10 @@ my @MULTI_WORDS =
   'Pearl River',
   'Ren Shou',
   'Rio de Janeiro State',
+  'Sa Kaeo',
   'Samut Prakan',
   'Samut Sakhon',
+  'Si Sa Ket',
   'South Australia',
   'South Celebes',
   'South East Celebes',
@@ -111,12 +119,15 @@ my %MULTI_TYPOS =
   Guangdong => ['guangdong province', 'guang dong'],
   Hubei => ['hu bei'],
   Jiangsu => ['jiang su'],
+  Jilin => ['ji lin'],
   'Kutai Kartanegara' => ['kutai kartanega'],
   'Lower Silesia' => ['dolny slask'],
   Maharashtra => ['maharashtra e', 'maharashtra f',
     'maharashtra state'],
   Marmara => ['g.marm'],
   'Midt Trøndelag' => ['midt-trøndelag', 'midt-trondelag'],
+  'Møre Romsdal' => ['more og romsdal'],
+  'Nakhon Pathom' => ['nakhom prathom'],
   'Nord Trøndelag' => ['nord -trøndelag', 'nord-trøndelag',
     'nord-trløndelag'],
   'North Sulawesi' => ['notth sulawesi', 'north sulawsei',
@@ -124,11 +135,13 @@ my %MULTI_TYPOS =
   'North Minahasa' => ['minahasa utara'],
   'North Sumatra' => ['sumatera utara'],
   'Pearl River' => ['pearl riv', 'pearl r'],
+  Qiantang => ['qian tang'],
   Sichuan => ['si chuan'],
   'South Jakarta' => ['jakarta selatan'],
   'South Kalimantan' => ['kalimantan selatan', 'kalsel'],
   'South Sulawesi' => ['sulawesi selatan', 'sulsel'],
   'South Sumatra' => ['south sumatera', 'sumatera selatan', 'sumsel'],
+  'South Sweden' => ['south swden'],
   'Uttar Pradesh' => ['u.p.', 'up state'],
   'Vest Agder' => ['vest-agder'],
   'Val di Magra' => ['val magra'],
@@ -139,6 +152,7 @@ my %MULTI_TYPOS =
   'Western Australia' => ['wa'],
   'West Bengal' => ['west bengla', 'westbengal'],
   'West Java' => ['jawa barat', 'jabar'],
+  Zhejiang => ['zhe jiang']
 );
 
 my @SINGLE_WORDS = qw(
@@ -153,24 +167,25 @@ my @SINGLE_WORDS = qw(
   Hainan Haixing Hatay Haugaland Hebei Hedmark Hegyvidék Hordaland
   Hubei Hunan
   Iberia
-  Jalisco Jharkhand Jiangsu Jilin
-  Kansai Kanto Karnataka Kawanua Kayong Kedungwaru Kepri Kerala 
+  Jalisco Jharkhand Jiangsu Jiangxi Jilin
+  Kansai Kanto Karnataka Kawanua Kedungwaru Kepri Kerala 
   Krabi
   Lampung Lebak Liaoning Liguria Lombok 
   Madeira Maharashtra Maluku Marmara Matopos Midtsjælland 
   Minahasa Missouri Mjøsa Muallim Munzur Mysia
   Nordafjells Norrland Norrorts Northland Nusantara
-  Queensland
+  Queensland Qiantang
   Oberloiben Olona Orontes Otago
   Papua Pomerania Porong Punjab
   Rajasthan Rajputana Ratchaburi Rhodes Rogaland Rosfjord 
   Sakarya Salten Shandong Shanxi Siberia Sichuan Silesia Silla Sindh 
-  Sintang Skåne Slask Southland Sydvest
+  Sintang Skåne Slask Southland Suvalkija Sydvest
   Tambun Tasmania Telemark Thrace Tianya
   Tigris Tinglin Tuncelý
   Uttarakhand
   Victoria Vojvodina
   Wachau Waikato Wujin
+  Xinjiang
   Yongjia Yunnan
   Zhejiang
 );
@@ -192,6 +207,7 @@ my %SINGLE_TYPOS =
   Hunan => ['hunnan'],
   'Java Bali' => ['jb'],
   Kansai => ['kinki'],
+  'Kayong Utara' => ['kayong'],
   'Kepulauan Riau' => ['riau', 'kepri'],
   Marmara => ['marmar'],
   'Midt Trøndelag' => ['midttrøndelag'],
@@ -203,12 +219,14 @@ my %SINGLE_TYPOS =
   'North Sumatra' => ['sumut'],
   'Northern Territory' => ['nt'],
   Queensland => ['qld'],
+  Qiantang => ['Qiangtang'],
   Rajasthan => ['rajsthan'],
   'Samut Prakan' => ['samutprakan'],
   'Samut Sakhon' => ['samutsakhon'],
   Slask => ['l¹sk'],
   'South Australia' => ['sa'],
   'Suphan Buri' => ['suphanburi'],
+  Suvalkija => ['sudovia'],
   'Tamil Nadu' => ['tamilnadu'],
   Tinglin => ['tingling'],
   'Uttar Pradesh' => ['up', 'upba'],

@@ -28,8 +28,8 @@ my @SINGLE_WORDS = qw(
 
    Carlitos Cathy Cem Chiranjeev Claudili Conie
 
-   Dada Dadya Dahsyat Daniel Dauna Dawn Diana Didi Dido Diego Dieter 
-   Dion Dora Dukens 
+   Dada Dadya Dahsyat Daisy Daniel Dauna Dawn Diana Didi Dido Diego 
+   Dieter Dion Dora Dukens 
 
    Ece Edi Eliza Ellen Emre Eren Eric Erikas Erla Ewa
 
@@ -67,7 +67,7 @@ my @SINGLE_WORDS = qw(
    Shrikant Shuai Shushi Sid Siddheshwar Sigrid Simonetta Sindhu 
    Stefany Steliana Steve Sue Suz Svetla Swanand 
 
-   Tadeu Tamae Tita Tofi Toma Tushar 
+   Tadeu Tamae Tita Tofi Toma Tomas Tushar 
 
    Unlu 
 
