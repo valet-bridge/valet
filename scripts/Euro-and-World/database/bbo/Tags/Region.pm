@@ -17,10 +17,9 @@ my @MULTI_WORDS =
   'Amnat Charoen',
   'Andhra Pradesh',
   'Australian Central Territory',
-  'Bekasi Regency',
+  'Bangka Belitung',
   'Bisma Semarang',
   'Boeven Digoel',
-  'Bogor Regency',
   'Bone Bolango',
   'Central Anatolia',
   'Central Districts',
@@ -28,7 +27,7 @@ my @MULTI_WORDS =
   'Central Gauteng',
   'Central Java',
   'Central Sulawesi',
-  'Cianjur Regency',
+  'Kabupaten Cianjur',
   'Datca Yarimada',
   'District of Columbia',
   'Dogu Akdeniz',
@@ -36,12 +35,37 @@ my @MULTI_WORDS =
   'East Jakarta',
   'East Java',
   'East Kalimantan',
+  'East Nusa Tenggara',
   'Eastern Cape',
   'Fylke Innlandet',
   'Gabungan Malaku',
-  'Garut Regency',
+  'Indragiri Hulu',
   'Java Bali',
+  'Kabupaten Bekasi',
+  'Kabupaten Blitar',
+  'Kabupaten Bogor',
+  'Kabupaten Garut',
+  'Kabupaten Gresik',
+  'Kabupaten Jember',
+  'Kabupaten Karawang',
+  'Kabupaten Kepulauan Talaud',
+  'Kabupaten Ketapang',
+  'Kabupaten Kudus',
+  'Kabupaten Langkat',
+  'Kabupaten Lumajang',
+  'Kabupaten Minahasa',
+  'Kabupaten Nganjuk',
+  'Kabupaten Pacitan',
+  'Kabupaten Palu',
+  'Kabupaten Pamekasan',
+  'Kabupaten Pasuruan',
+  'Kabupaten Pessel',
+  'Kabupaten Sidoarjo',
+  'Kabupaten Sijunjung',
+  'Kabupaten Solok',
+  'Kapuas Hulu',
   'Kepulauan Riau',
+  'Kepulauan Seribu',
   'Kayong Utara',
   'Khon Kaen',
   'Kutai Kartanegara',
@@ -81,9 +105,11 @@ my @MULTI_WORDS =
   'South Sulawesi',
   'South Sumatra',
   'South Sweden',
+  'Southeast Sulawesi',
   'Suphan Buri',
   'Sør-Trøndelag',
   'Tamil Nadu',
+  'Tanah Laut',
   'Troms og Ofoten',
   'Uttar Pradesh',
   'Val di Magra',
@@ -95,6 +121,7 @@ my @MULTI_WORDS =
   'West Java',
   'West Kalimantan',
   'West Nusa Tenggara',
+  'West Sulawesi',
   'West Sumatra',
   'Western Australia',
   'Western Province',
@@ -104,22 +131,49 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   Aceh => ['di aceh', 'n a d'],
-  'Bekasi Regency' => ['kab.bekasi', 'kab. bekasi'],
-  'Central Java' => ['jawa tengah', 'jateng'],
-  'Bogor Regency' => ['kab bogor', 'kab.bogor pa'],
-  'Central Anatolia' => ['ic anadolu'],
-  'Central Sulawesi' => ['sulawesi tengah'],
-  'Cianjur Regency' => ['kab. cianjur', 'kab.cianjur'],
-  'Dogu Akdeniz' => ['dogu akdeniz region', 'akdeniz region'],
-  'East Jakarta' => ['jakarta timur'],
-  'East Java' => ['jawa timur', 'jatim'],
-  'East Kalimantan' => ['kalimantan timur'],
-  'Fylke Innlandet' => ['hedmark og oppland'],
-  'Garut Regency' => ['kab. garut'],
+  Borneo => ['borneo banua'],
+    'Central Java' => ['jawa tengah', 'jawah tengah', 'jateng'],
+    'Central Anatolia' => ['ic anadolu'],
+    'Central Sulawesi' => ['sulawesi tengah'],
+    'Dogu Akdeniz' => ['dogu akdeniz region', 'akdeniz region'],
+    'East Jakarta' => ['jakarta timur'],
+    'East Java' => ['jawa timur', 'jatim'],
+    'East Kalimantan' => ['kalimantan timur'],
+    'Fylke Innlandet' => ['hedmark og oppland'],
+  'East Nusa Tenggara' => ['nusa tenggara timur'],
   Guangdong => ['guangdong province', 'guang dong'],
   Hubei => ['hu bei'],
   Jiangsu => ['jiang su'],
   Jilin => ['ji lin'],
+    'Kabupaten Bekasi' => ['bekasi regency', 'kab bekasi',
+    'kab.bekasi', 'kab. bekasi'],
+  'Kabupaten Blitar' => ['kab blitar', 'kab. blitar'],
+  'Kabupaten Bogor' => ['kab. bogor', 'bogor regency',
+    'kab bogor', 'kab.bogor pa'],
+  'Kabupaten Cianjur' => ['cianjur regency',
+    'kab. cianjur', 'kab.cianjur'],
+  'Kabupaten Garut' => ['garut regency', 'kab. garut'],
+  'Kabupaten Gresik' => ['kab gresik', 'kab. gresik'],
+  'Kabupaten Jember' => ['kab jember', 'kab. jember'],
+  'Kabupaten Karawang' => ['kab. karawang'],
+  'Kabupaten Kepulauan Talaud' => ['kab. kep. talaud',
+    'kep. talaud'],
+  'Kabupaten Ketapang' => ['kab ketapang'],
+  'Kabupaten Kudus' => ['kab. kudus'],
+  'Kabupaten Langkat' => ['kab. langkat'],
+  'Kabupaten Lumajang' => ['kab lumajang', 'kab. lumajang'],
+  'Kabupaten Minahasa' => ['kab.minahasa', 'kab. minahasa'],
+  'Kabupaten Nganjuk' => ['kab nganjuk', 'kab. nganjuk'],
+  'Kabupaten Pacitan' => ['kab pacitan', 'kab. pacitan'],
+  'Kabupaten Palu' => ['kab palu'],
+  'Kabupaten Pamekasan' => ['kab pamekasan',
+    'kab. pamekasan'],
+  'Kabupaten Pasuruan' => ['kab pasuruan', 'kab. pasuruan',
+    'kab.pasuruan'],
+  'Kabupaten Sidoarjo' => ['kab sidoarjo', 'kab. sidoarjo'],
+  'Kabupaten Sijunjung' => ['kab.sijunjung'],
+  'Kabupaten Solok' => ['kab.solok'],
+  'Kepulauan Seribu' => ['kep.seribu'],
   'Kutai Kartanegara' => ['kutai kartanega'],
   'Lower Silesia' => ['dolny slask'],
   Maharashtra => ['maharashtra e', 'maharashtra f',
@@ -127,12 +181,13 @@ my %MULTI_TYPOS =
   Marmara => ['g.marm'],
   'Midt Trøndelag' => ['midt-trøndelag', 'midt-trondelag'],
   'Møre Romsdal' => ['more og romsdal'],
-  'Nakhon Pathom' => ['nakhom prathom'],
+  'Nakhon Pathom' => ['nakhom prathom', 'nakhon prathom'],
   'Nord Trøndelag' => ['nord -trøndelag', 'nord-trøndelag',
     'nord-trløndelag'],
   'North Sulawesi' => ['notth sulawesi', 'north sulawsei',
     'sulawesi utara', 'sulawasi utara'],
   'North Minahasa' => ['minahasa utara'],
+  'North Sulawesi' => ['sulawesi utara', 'sulawusi utara'],
   'North Sumatra' => ['sumatera utara'],
   'Pearl River' => ['pearl riv', 'pearl r'],
   Qiantang => ['qian tang'],
@@ -142,12 +197,14 @@ my %MULTI_TYPOS =
   'South Sulawesi' => ['sulawesi selatan', 'sulsel'],
   'South Sumatra' => ['south sumatera', 'sumatera selatan', 'sumsel'],
   'South Sweden' => ['south swden'],
+  'Southeast Sulawesi' => ['sulawesi tenggara'],
   'Uttar Pradesh' => ['u.p.', 'up state'],
   'Vest Agder' => ['vest-agder'],
   'Val di Magra' => ['val magra'],
   'Vest Finnmark' => ['vest-finnmark'],
   'West Kalimantan' => ['kalimantan barat'],
   'West Nusa Tenggara' => ['lombok tengah'],
+  'West Sulawesi' => ['sulawesi barat'],
   'West Sumatra' => ['west sumatera', 'sumatera barat', 'west sumatera'],
   'Western Australia' => ['wa'],
   'West Bengal' => ['west bengla', 'westbengal'],
@@ -157,7 +214,8 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Aceh Agder Akdeniz Akkad Anhui Ayrshire
-  Badung Bali Banten Belitung Bengkayang Bihar Bornholm Bungo Buskerud
+  Badung Bali Banten Belitung Bengkayang Bihar Borneo Bornholm 
+  Bungo Buskerud
   Cappadocia Catalonia Corsica Crete
   Dersým Druts
   Eyjafjallajokull
@@ -168,19 +226,19 @@ my @SINGLE_WORDS = qw(
   Hubei Hunan
   Iberia
   Jalisco Jharkhand Jiangsu Jiangxi Jilin
-  Kansai Kanto Karnataka Kawanua Kedungwaru Kepri Kerala 
+  Kansai Kanto Karadeniz Karnataka Kawanua Kedungwaru Kerala 
   Krabi
   Lampung Lebak Liaoning Liguria Lombok 
   Madeira Maharashtra Maluku Marmara Matopos Midtsjælland 
-  Minahasa Missouri Mjøsa Muallim Munzur Mysia
-  Nordafjells Norrland Norrorts Northland Nusantara
+  Minahasa Minang Missouri Mjøsa Muallim Munzur Mysia
+  Natuna Nordafjells Norrland Norrorts Northland Nusantara
   Queensland Qiantang
   Oberloiben Olona Orontes Otago
   Papua Pomerania Porong Punjab
   Rajasthan Rajputana Ratchaburi Rhodes Rogaland Rosfjord 
   Sakarya Salten Shandong Shanxi Siberia Sichuan Silesia Silla Sindh 
   Sintang Skåne Slask Southland Suvalkija Sydvest
-  Tambun Tasmania Telemark Thrace Tianya
+  Tambun Tasmania Telemark Telengana Thrace Tianya
   Tigris Tinglin Tuncelý
   Uttarakhand
   Victoria Vojvodina
@@ -195,7 +253,8 @@ my %SINGLE_TYPOS =
   Aceh => ['nad'],
   'Aegean Sea' => ['aegean'],
   'Australian Central Territory' => ['act'],
-  'Bekasi Regency' => ['bekasi'],
+  'Bangka Belitung' => ['babel'],
+  'Kabupaten Bekasi' => ['bekasi'],
   Cappadocia => ['kapadokya', 'kapodokya'],
   Catalonia => ['catalunya', 'cataluña'],
   'Central Sulawesi' => ['sulteng'],
@@ -206,6 +265,7 @@ my %SINGLE_TYPOS =
   Hordaland => ['hordland'],
   Hunan => ['hunnan'],
   'Java Bali' => ['jb'],
+  Karadeniz => ['karadenýz'],
   Kansai => ['kinki'],
   'Kayong Utara' => ['kayong'],
   'Kepulauan Riau' => ['riau', 'kepri'],
@@ -233,6 +293,7 @@ my %SINGLE_TYPOS =
   Uttarakhand => ['uttaranchal'],
   'Victoria' => ['vic', 'viic'],
   Vojvodina => ['voj'],
+  'West Sumatra' => ['sumbar'],
   'Østfold Follo' => ['ostfoldfollo']
 );
 

@@ -119,6 +119,7 @@ my @MULTI_WORDS =
   'Dr. Anand',
   'Dr. Ashwani Mehta',
   'Duronto Rajshahi',
+  'Ece Mizrahi',
   'Edmund Tse',
   'Eduardo Pinto',
   'Efrat Oren',
@@ -166,6 +167,7 @@ my @MULTI_WORDS =
   'Haoran Hoyin',
   'Hecht Johansen',
   'Helge Hesselberg',
+  'Hema Deora',
   'Hemant Jalan',
   'Hemant Lall',
   'Hemant Malse',
@@ -177,6 +179,7 @@ my @MULTI_WORDS =
   'Hjalmar S Palsson',
   'Hjordis Eythorsdottir',
   'Hjordis Sigurjonsdottir',
+  'Hong Hu',
   'Hong NIU',
   'Huijun Song',
   'Ilan Herbst',
@@ -234,10 +237,12 @@ my @MULTI_WORDS =
   'Kalpana Misra',
   'Kamal Kumar Nagori',
   'Kamlesh Gupta',
+  'Kardelen Can',
   'Karl Christian Baumann',
   'Karl Sigurhjartarson',
   'Kasper Konow',
   'Ken Ford',
+  'Kenten Hijau',
   'Knud Harries',
   'Koch-Palmund',
   'Kristian Tylvad',
@@ -246,6 +251,7 @@ my @MULTI_WORDS =
   'Krzysztof Strykier',
   'Kumar Vijay Anand',
   'Kurniadi Djauhari',
+  'Kusuma Dilaga',
   'Kwok-Fai Mak',
   "L'Écuyer",
   'Lanpikul Thongchairit',
@@ -327,6 +333,7 @@ my @MULTI_WORDS =
   'Olivier Bessis',
   'Ómar Freyr',
   'Omar Sharif',
+  'Ömer Abi',
   'P.C. Gupta',
   'Palma Carlos',
   'Pankaj Kapadia',
@@ -673,6 +680,7 @@ my %MULTI_TYPOS =
   'Kalpana Misra' => ['kalpana mishra'],
   'Kamal Kumar Nagori' => ['kamal naguri', "kamal naguri's"],
   'Kamlesh Gupta' => ['kamalesh gupta', 'k gupta iv'],
+  'Kardelen Can' => ['Can Kardelen'],
   'Karl Sigurhjartarson' => ['karl sigurhjartar', 'karl sigurhjartars',
     'karl sigurhjartarso', 'karl sigurhjartarss'],
   'Modi Kenigsberg' => ['kenigsberg modi'],
@@ -916,9 +924,10 @@ my @SINGLE_WORDS = qw(
   Duong Dupraz Dupuis Dupuy Durisotto Dutilloy Dworan Dyke
 
   Eaton Eber Ebery Economou Edgtton Efremov Efthimiou Eggeling 
-  Eide Eidi Eidingsen Eisenberg Ekeblad Eksi Elbaz Elias Ellestad 
-  Ellia Engel Elinescu Enrique Ergil Erhart Erichsen Eriksson Erk 
-  Erkel Ekþi Espiasse Esterson Esteruelas Evans Ewart Eykt
+  Eide Eidi Eidingsen Eisenberg Ekeblad Eksi Ekþi Elbaz Elias 
+  Ellestad Ellia Engel Elinescu Enrique Ergil Erhart Erichsen 
+  Eriksson Erk Erkel Erkin Espiasse Esterson Esteruelas Evans 
+  Ewart Eykt
 
   Fabbri Fagerlund Faidas Faigenbaum Failla Faivre Falay Falciai Falk 
   Fallenius Fallon Fantonakis Fantoni Farholt Faria Farias Farstad
@@ -938,7 +947,7 @@ my @SINGLE_WORDS = qw(
   Gelberg Geller Genc Generosi Gentili Georgescu Gerber Gerli 
   Gero Gerrard Geyer Gezer Ghionis Giangkos Giannessi Gidman 
   Gierulski Gigliotti Gilboa Gill Ginnan Ginossar Gioia Gitelman 
-  Giura Gladiator Glanger Glasson Glopson Gobbi Goded Gold 
+  Giura Gladiator Glanger Glasson Glopson Glyssner Gobbi Goded Gold 
   Goldberg Goldenfield Goldman Goldstein Golebiowski Gomerov Gomes 
   Goodman Goraco Gordon Goren Gosney Gotard Gottlieb Goyal Göthe 
   Grabel Grabowska Gradignan Gradovsky Grainger Gramberg Granda
@@ -973,7 +982,7 @@ my @SINGLE_WORDS = qw(
   Kabra Kachchu Kageling Kahyaoglu Kahn Kaiser Kalida Kalita Kalish 
   Kallifronas Kallsberg Kallunki Kalma Kalmin Kamat Kambancho 
   Kamil Kaminaris Kaminski Kamras Kannavos Kandemir Kane Kanetkar 
-  Kang Kapagiannidis Kaplan Kaptan Karadeniz Karamanlis 
+  Kang Kapagiannidis Kaplan Kaptan Karamanlis 
   Karavil Karayel Karlaftis Karpouzelis Kasapoglu Kasday Kasle 
   Kasler Kastel Kater Katsareli Katsutake Katz Kaushik Kay Kaya 
   Kaye Kazik Kazmierczak Keegan Kendrick Kenigsberg Kennedy Kenny 
@@ -1015,14 +1024,14 @@ my @SINGLE_WORDS = qw(
   Märsylä McAllister McCance McDonald McGann McGinley McGowan 
   McGrath McIntosh McKellar McLeish McLeod McKinnon McLeish 
   McManus McMahon McMullin McNamara Meckstroth Medik Medugno 
-  Medved Mehech Mejane Mello Mendoza Meltzer Merah Merblum 
-  Mesbur Messika Mestres Metselaar Meyer Meyers Meyouhas Mezei 
-  Michaud Michealakis Mickiewicz Miles Milgrim Mill Millar Miller 
-  Milne Milner Mina Miner Minzli Miozzi Miroglio 
-  Miszewska Mitra Mittelman Mirali Miura Mizel Mizrak Mohota 
-  Mohtashami Molenaar Molenda Molina Molva Monachan Moni Monsegur 
-  Montanari Mooney Moran Morath Morawski Moreira Morelli Morgan 
-  Mori Moritsch Morris Morrison Morse Mortensen 
+  Medved Mehech Mehrez Mejane Mello Mendoza Meltzer Merah 
+  Merblum Mesbur Messika Mestres Metselaar Meyer Meyers 
+  Meyouhas Mezei Michaud Michealakis Mickiewicz Miles Milgrim 
+  Mill Millar Miller Milne Milner Mina Miner Minzli Miozzi 
+  Miroglio Miszewska Mitra Mittelman Mirali Miura Mizel Mizrak 
+  Mohota Mohtashami Molenaar Molenda Molina Molva Monachan 
+  Moni Monsegur Montanari Mooney Moran Morath Morawski Moreira 
+  Morelli Morgan Mori Moritsch Morris Morrison Morse Mortensen 
   Moses Moskovsky Mossop Mott Mouiel Mourgues Mpampou Mpanikas 
   Mpompolakis Mucha Mueller Mullamphy Muller Multon Mundell 
   Munksgaard Munson Munteanu Muntz Muriel Murray Mus Mutiara 
@@ -1129,10 +1138,11 @@ my @SINGLE_WORDS = qw(
   Yadlin Yalman Yamada Yang Yarington Yates Yergýn
   Yezerski Yildiz Yilmaz Ying Yokoi Yoleri Yuen Yule
 
-  Zabunoglu Zago Zagor Zagorin Zajac Zaleski Zanalda Zambonini 
-  Zaninotti Zarkesch Zatorski Zawada Zawislak Zeeberg Zenari 
-  Zhan Zhao Zhaoheng Zhong Zhukov Zielinski Zimmermann Zipovski 
-  Zobu Zochowska Zollo Zolotov Zorlu Zotti Zozis Zotos Zwart
+  Zabunoglu Zago Zagor Zagorin Zajac Zakarian Zaleski Zanalda 
+  Zambonini Zaninotti Zarkesch Zatorski Zawada Zawislak Zeeberg 
+  Zenari Zhan Zhao Zhaoheng Zhong Zhukov Zielinski Zimmermann 
+  Zipovski Zobu Zochowska Zollo Zolotov Zorlu Zotti Zozis Zotos 
+  Zwart
 
   Övelius Özþahin
 );
@@ -1246,7 +1256,6 @@ my %SINGLE_TYPOS =
   Kandemir => ['kandemýr', 'kandermir'],
   Kannavos => ['kanavos'],
   'Kapagiannides' => ['kapagiannides'],
-  Karadeniz => ['karadenýz'],
   Karamanlis => ['karamanli'],
   Karlaftis => ['karlaytis'],
   'Kasper Konow' => ['konow'],

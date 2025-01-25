@@ -93,6 +93,7 @@ my @MULTI_WORDS =
   'Annas Fans',
   'Anti Revenge',
   'Anup Dhar',
+  'Apa Heili',
   'Apple Pie',
   'Applied Math',
   'April 30',
@@ -113,7 +114,10 @@ my @MULTI_WORDS =
   'bACEd in Austria',
   'Bad Beat',
   'Bad Man',
+  'Bağcı Döven',
+  'Bar-Su',
   'Bara brudar',
+  'Baris hemen simdi',
   'Barny Army',
   'BBO Lovers',
   'Bea & Family',
@@ -137,6 +141,7 @@ my @MULTI_WORDS =
   'Big L',
   'Big Makie',
   'Big Mi?',
+  'Bizim takim',
   'Bjuda på',
   'BK Gröna Kvistar',
   'Black Adders',
@@ -206,6 +211,7 @@ my @MULTI_WORDS =
   'Cha Cha Cha',
   'Chateau Latour',
   'Cherno More',
+  'China Development',
   'Circle the World',
   'Cim Bom Bom',
   'Cheap Tricks',
@@ -222,12 +228,14 @@ my @MULTI_WORDS =
   'Croatian Pirates',
   'Crush Lack',
   'Curry Eaters',
+  'CU+1',
 
   "D'Artagnan",
   'Daar gaan we',
   'Da Big Storm',
   'Dai Meng Yi Dao',
   'Daisy Chain',
+  'Dami Plus',
   'Dankjewel doe maar',
   'Daniel med vänner',
   'Danish Dynamite',
@@ -258,6 +266,7 @@ my @MULTI_WORDS =
   'Det nappar på kroke',
   'Deus vult',
   "Devil's Coup",
+  'DG Stalwarts',
   'Diamonds Are Forever',
   'Die Mauer',
   'Die Schönen und di',
@@ -309,9 +318,11 @@ my @MULTI_WORDS =
   'Endless Love',
   'England Swings',
   'Enjoy the Game',
+  'Eski Dostlar',
   'Essence of Chicken',
   'E.T & the Dummies',
   'Et par sama og 2 ens',
+  'EU Club',
   'EU oder so',
   'Euro Step',
   'European Aces',
@@ -417,6 +428,7 @@ my @MULTI_WORDS =
   'Gyllene Prag',
   'Gøta-Hesten',
 
+  'H.A.N.E',
   "Hagen's Heroes",
   'Half Amsterdams',
   'Han Solo',
@@ -464,6 +476,7 @@ my @MULTI_WORDS =
   'Ikke akkurat kjedelig',
   'Il Fante di Fiori',
   'Ilhas & Aredores',
+  'India All Star',
   'India Blues',
   'Indian Mavericks',
   'Indonesian National Sports Week',
@@ -473,6 +486,8 @@ my @MULTI_WORDS =
   'Iron Bank',
   'Is og brus',
   'Isolated Menaces',
+  'Istiklal Yolu',
+  'Israeli Dan',
   'Itinérants du bridge',
 
   'Ja re ja',
@@ -480,6 +495,8 @@ my @MULTI_WORDS =
   'Jaipur Jewels',
   'Jamm & Co',
   'Jane Doe',
+  'Jiangsu YY',
+  'Jim Team',
   'Jorunns disipler',
   'Josef and Cards',
   'Joy Division',
@@ -496,6 +513,8 @@ my @MULTI_WORDS =
   'K1',
   'K2',
   'K4',
+  'Kansai Union',
+  'Kanto Union',
   'Kapten Krok Crew',
   'Karachi Aces',
   'Karate Kids',
@@ -511,6 +530,7 @@ my @MULTI_WORDS =
   'King Geoffrey',
   'Kipp O`Hoi',
   'Kippe et al',
+  'Kisa metraj',
   'KL 4',
   'Klara färdiga slam',
   'House Klave',
@@ -521,8 +541,10 @@ my @MULTI_WORDS =
   'Koridor 10',
   'Kronisk kusma',
   'Kung Sune',
+  'Kungshamns Sega Gubbar',
   'Kurt quo vadis',
   'Kusinerna från land',
+  'Kuvayi Milliye',
   'Kvalen og nissene',
 
   "L'Orange",
@@ -581,6 +603,7 @@ my @MULTI_WORDS =
   'Lått løye',
 
   'M.O.',
+  'M. Green',
   "M' Orange",
   'Ma-Cartoon',
   'Maddes pojkar',
@@ -597,9 +620,11 @@ my @MULTI_WORDS =
   'Max 100',
   'Max-Nat',
   'Männer mit ELAN',
+  'MC 953',
   'MC Toss',
   'McIntosh Funclub',
   'Medium Rare',
+  'Mee Noey',
   'Meins bleibt meins',
   'Meisters Disciple',
   'Methods of Bridge',
@@ -631,6 +656,7 @@ my @MULTI_WORDS =
 
   "Narcotic's What?",
   'NASA ROFL',
+  'NasDem Bitung',
   'Nat-Max',
   'Nästan lammkött',
   'Nestors trappar upp',
@@ -683,6 +709,7 @@ my @MULTI_WORDS =
   'O.R.G',
   'Oceans4',
   'Occupy Taksim',
+  'octobridge.xyz',
   'Od Moze Do Moze',
   'odd-å-vi',
   'Odd Tore',
@@ -720,6 +747,7 @@ my @MULTI_WORDS =
   'Pay Toll',
   'Pearl of the Orient',
   'Pepsi-Colas',
+  'Pieni karhu',
   'Piger og drenger',
   'Pigerne på tur',
   'Pink Blend',
@@ -740,12 +768,14 @@ my @MULTI_WORDS =
   'På alerten',
 
   'Q of Di',
+  'Qiao Yi Dui',
   'Quatro Bruxas',
   'Que Mira Bobo',
   'Queen and Knights',
   'Queen of Hearts',
   'Queens Park Rangers',
   'Qiong Zhiyou',
+  'Quanzhou Development',
 
   'Ra Ma Ra Him',
   'Radio Communication',
@@ -766,7 +796,7 @@ my @MULTI_WORDS =
   'Repeat Bet',
   'Reps und Wodniansky',
   'Restricted Talent',
-  'Rett op i saksa',
+  'Rett opp i saksa',
   'Rimstedt Minus',
   'Rimstedt Power!',
   'Rising Star',
@@ -801,6 +831,7 @@ my @MULTI_WORDS =
   'Section 26',
   'Secret Shot',
   'Sektion UDV',
+  'Sensus Penduduk',
   'Seths vänner',
   'Seven Eleven',
   'SHE-D',
@@ -838,6 +869,7 @@ my @MULTI_WORDS =
   'Spiel mir das Lied',
   'Spjett Spjong',
   'Stabby with Youngsters',
+  'Stara Gara',
   'Steng Oslo nå!'.
   'Still Going Turbo',
   'Still Water Runners',
@@ -970,6 +1002,7 @@ my @MULTI_WORDS =
   'Tut tut',
   'Twitch Chat',
 
+  'Unguru Bulan',
   'Unholy Alliance',
   'Unlimited Intellect',
   'Unstable Evolution',
@@ -1033,11 +1066,13 @@ my @MULTI_WORDS =
   'www guts com',
 
   'X-Men',
+  "Xi'an Qiaoyou",
   'Xiu Xing Dui',
 
   'Y.Y.Y.D.',
   'Yali Capkini',
   'Yani and Friends',
+  'Yanjing Puzi',
   'Yarralumla Yabbies',
   'Yellow and Blue',
   'Yilu Pingan',
@@ -1054,8 +1089,10 @@ my @MULTI_WORDS =
   'Young Swedes',
   'Young Oldies',
   'Your name?',
+  'Yuruyen Kosk',
 
   'Zaza Boys',
+  'Zhejiang Development',
   'Zia and Friends',
   'Ziemlich gut',
   'Zimm Friends',
@@ -1085,6 +1122,7 @@ my %MULTI_TYPOS =
   'Apres-Bridge Champs' => ['apres bridge champs'],
 
   'Babes Amazones' => ['babes-amazones'],
+  'Bağcı Döven' => ['bagci doven'],
   Baneet => ["Baneet's IV"],
   Begijntje => ['begijnt je'],
   'Best uten kort' => ['best uden kort'],
@@ -1102,6 +1140,7 @@ my %MULTI_TYPOS =
   'Ca. et halvt tonn' => ['ca et halvt tonn'],
   'Californian Aces' => ['california aces'],
   "Captain's Four" => ['captains 4'],
+  'China Development' => ['zhongguo kaidi'],
   "Colonel's Team" => ["colonel's  team"],
   'Croatian Pirates' => ['cro pirates'],
   'Curry Eaters' => ['curry  eaters'],
@@ -1121,7 +1160,7 @@ my %MULTI_TYPOS =
   'Dronninga med prins' => ['drnninga og pri',
     'dronninga med pri', 'dronning og prinses'],
 
-  'Ebenius Crew' => ['ebeneius crew'],
+  'Ebenius Crew' => ['ebeneius crew', "ebeneius crew'"],
   'Eiydes discipler' => ['eiydes disciple'],
   'Elses Fanklubb' => ["elze`s fanklubb"],
   'En myra tre elefanter' => ['en myra tre elefant'],
@@ -1159,7 +1198,9 @@ my %MULTI_TYPOS =
   'Ice Jacks' => ['ice jack', 'ice jaks'],
   'Ikke akkurat kjedelig' => ['ikke akkurat kjedel'],
   'India Blues' => ['indian blues'],
-  'Indian Mavericks' => ['india mavericks', 'indian mavricks'],
+  'Indian Mavericks' => ['india mavericks', 'indian mavricks',
+    'mavericks all stars', 'mav prodigies', 'mavericks prodigies',
+    'maverick all star', 'maverick all stars'],
   'Itinérants du bridge' => ['iti du bridge', 'itin du bridge'],
 
   'Jamm & Co' => ['jamm & co.', 'jamm && co.'],
@@ -1170,6 +1211,8 @@ my %MULTI_TYPOS =
   "Keni's Dream" => ["keni's", "kini's", 'p.keni'],
   'Kick Back' => ['kick-back'],
   'King Geoffrey' => ['king groffrey'],
+  'Kisa metraj' => ['ksk kisa metraj'],
+  'Kungshamns Sega Gubbar' => ['kungshamns sega gub'],
 
   "L'Orange" => ["l' orange"],
   'La Linea med eller uten ball' => ['la linea med ell', 
@@ -1188,10 +1231,12 @@ my %MULTI_TYPOS =
     'lise(i)da'],
   'Lucky 13' => ['lucky13'],
 
+  'M. Green' => ['m green'],
   'Magic Eyes' => ['majic eyes', 'm e'],
   'Man Harr det man har' => ['man harr det man ha'],
   'Manchester United' => ['man u', 'man utd'],
   'Männer mit ELAN' => ['2 männer mit elan'],
+  'MC 953' => ['mc953', 'mc_953', 'mc  953'],
   'Mickey Two Clubs' => ['mickey 2c'],
   'Mind and Matter' => ['mindand matter'],
   'Missão Impossivel' => ['missão impossível'],
@@ -1217,6 +1262,7 @@ my %MULTI_TYPOS =
 
   'Pigerne på tur' => ['pigerne pa tur'],
 
+  'Quanzhou Development' => ['quanzhou fazhan'],
   'Queen and Knights' => ["queen's & knight"],
 
   'Rapan & Jezus' => ['rapan and ezis'],
@@ -1261,6 +1307,8 @@ my %MULTI_TYPOS =
     'tre rette og en'],
   'Troll i eske' => ['tre troll i eske', 'tre troll ...'],
 
+  'Unguru Bulan' => ['unguru  bulan', 'unguru bulanu'],
+
   'Victorious Secret' => ['victorius secret'],
 
   "We Don't Know Yet" => ['we dont know yet'],
@@ -1274,7 +1322,9 @@ my %MULTI_TYPOS =
 
   'Yellow and Blue' => ['yellow&blu'],
   'Young and Broke' => ['young&broke'],
-  'You Never Walk Alone' => ['you never walk']
+  'You Never Walk Alone' => ['you never walk'],
+
+  'Zhejiang Development' => ['zhejiang fazhan']
 );
 
 my @SINGLE_WORDS = qw(
@@ -1318,8 +1368,8 @@ my @SINGLE_WORDS = qw(
    Jernbaneverket JJJ Job Jocker JoJo Joker Journalists Jugermaister 
    Juice Jupiter Juubilar Juveniles
 
-   Kamelåså Kamikaze Kangaroo Kanin Karo Kartel Kat Kingkong Kings 
-   KISS KKKQ Kompisarna Kuglana Kuhmilch 
+   Kamelåså Kamikaze Kangaroo Kanin Karo Kartalite Kartel Kat Kayal
+   Kingkong Kings KISS KKKQ Kompisarna Kuglana Kuhmilch 
 
    Lady Laplanders Lazy Lebensohl Liggeunderlaget Lion Lions Lirarna 
    Liverbird Lucky LVBridgeBums Løwene
@@ -1334,25 +1384,26 @@ my @SINGLE_WORDS = qw(
    Octopussy Okay Olavsfestdagene Olrudbanden Olsenbanden Onyx 
    Opal Opera Opps Optimus Osss Outsiders Overivrig 
 
-   Pacers Pacific Paradigma Partizan Patriot Patron Pegasus Perestrojka 
-   Pontiac Potlimit Potteplante Powerchicks Preempters Pretendents 
-   Proteus Pusten Påskevennene
+   Pacers Pacific Pandeka Paradigma Partizan Patriot Patron 
+   Pegasus Perestrojka Pontiac Potlimit Potteplante Powerchicks 
+   Preempters Pretendents Proteus Pusten Påskevennene
 
-   Quasar Quattro Quintet Quinze
+   Qingyu Quasar Quattro Quintet Quinze
 
    Rampage Rapid Real Reklamtrion Reloaded Robocop Rollers Rovers 
 
    Sabres Saga Sailor Sakura Sakurai Saladmasters Salokin Sammartini
-   Sapphire Saturn Schneewittchen Scientists Secure Senator Show
+   Sapphire Saturn Schneewittchen Scientists Secure Senator 
+   Shengxing Show
    Silverfox Simple Sindbad Singapole Sirius Sjøsamen Skip Skitur 
    Slappfisker Slufsa Småveitjan Snapper Snipers Soho Sonata Spark 
    Spartans Specialist Spekkhogger Squeeze Stampede Star Starmen 
    Statusquo Stayman Stifinnern Strategen Streamline 
    Stålfarfar Sunset Sunshine Syttisju Sømnakameratene Såpeopera
 
-   Takeoff Tannlegene Taurus Tbone Tempo Tequendama Theme Theseus
-   Tibetmunkene Tigers Titanik Titans Tohundre Tolerant Torpedo 
-   Tosca Trèfles Triton Tsunami Tulip Tusio Tutu Tvist
+   Takeoff Tannlegene Taurus Tbone Tecza Tempo Tequendama Theme 
+   Theseus Tibetmunkene Tigers Titanik Titans Tohundre Tolerant 
+   Torpedo Tosca Trèfles Triton Tsunami Tulip Tusio Tutu Tvist
 
    UFO Ugh Ulvene Underdogs Unexpected Ungdomslaget Upplyfting 
    Utkantnorge 
@@ -1381,6 +1432,8 @@ my %SINGLE_TYPOS =
   Buaigh => ['buaijh'],
   Bulldozer => ['buldozer'],
 
+  'China Development' => ['zgkd'],
+
   'England Swings' => ['englandswings'],
 
   Fant4stic => ['fant4stc'],
@@ -1398,6 +1451,7 @@ my %SINGLE_TYPOS =
   'Indonesian National Sports Week' => ['pon'],
 
   'Jamm & Co' => ['jamm'],
+  'Jiangsu YY' => ['jsyy'],
   'Joy Division' => ['joydivision'],
   Jupiter => ['jupitor'],
 
@@ -1421,6 +1475,8 @@ my %SINGLE_TYPOS =
   Preempters => ['preemptors'],
   Pretendents => ['pretendentas'],
 
+  'Quanzhou Development' => ['qzfd'],
+
   'River Friend' => ['riverfriend'],
 
   Sammartini => ['sammarti'],
@@ -1440,7 +1496,9 @@ my %SINGLE_TYPOS =
   'Wild Griffins' => ['wildgriffin', 'wildgriffins'],
   'Winkiboy' => ['winkyboy'],
 
-  'YOI Returns' => ['yoi']
+  'YOI Returns' => ['yoi'],
+
+  'Zhejiang Development' => ['zjfz']
 );
 
 

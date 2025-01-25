@@ -15,7 +15,9 @@ my @MULTI_WORDS =
 (
   'Fatih Karagümrük',
   'Isen Mulang',
+  'Lawang Salapan',
   'Poiana Brasov',
+  'Raewaya Hills',
   'Saint Honoré'
 );
 
@@ -23,6 +25,7 @@ my %MULTI_TYPOS =
 (
   'Fatih Karagümrük' => ['fatih karagumruk', 'f karagumruk', 'fatih ksk',
     'Fatýh KSK'],
+  'Lawang Salapan' => ['lawang salapan kota'],
   Lozenets => ['vs lozenec', 'vv lozenets', 'v v lozenets'],
   Pudong => ['pu dong'],
   Taihu => ['tai hu']
@@ -32,19 +35,19 @@ my @SINGLE_WORDS = qw(
   Akçeşme Albena Amanora Arjasa Atakoy Avren
   Bahce Bahcesehir Balcova Baragnon Barrière Bayrampaþa Beroe Bieniewo 
   Bogazici Borivli Bormali Bornova Bozdogan Brotteaux Buca Buitenhof
-  Çayyolu Cemara Chelsea Chislehurst Courseulles
+  Çayyolu Cemara Changning Chelsea Chislehurst Courseulles
   Ege Esenkent
   Fatih Freidorf Fukien
   Gardermoen Göktürk Gundogan
   Heimdal Huochetou
   Jarville Jomtien
   Kadikoy Karaçay Kardelen Kartal Katok Kaylaka
-  Kocamustafapasa Konak Korwin Kucukcekmece Küp
+  Kocamustafapasa Konak Korwin Kucukcekmece Kurtulus Küp
   Lappee Leilem Lemvourgeio Losari Lozenets
   Maadi Makaliwe Manahasa Männiku Meski Mrzenci Muratpasa
   Nagbagan Narita Narlidere Niski
   Olgiata
-  Parioli Piloni Pinarbasi Polonezkoy Poncol Pudong
+  Parioli Piloni Pinarbasi Polonezkoy Poncol Pudong Puzhong
   Qiaoxie
   Palaiseau Pasham
   Radkov Recoleta Ridabu
@@ -76,6 +79,7 @@ my %SINGLE_TYPOS =
   Narlidere => ['narlýdere'],
   Olgiata => ['ola'],
   Parioli => ['paroli'],
+  'Raewaya Hills' => ['raewaya'],
   Serdika => ['serdica'],
   Wroble => ['wróble'],
   Yarimca => ['Yarýmca'],

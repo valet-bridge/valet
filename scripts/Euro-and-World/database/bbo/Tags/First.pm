@@ -24,7 +24,7 @@ my @SINGLE_WORDS = qw(
    Amul Andrzejki Anna Anni Anol Anuj Apaçý Apek Arangan Arnab Arno 
    Arunas Auni Ayan
 
-   Bauhinia Ben Beniaminek Berik Bilal Breno
+   Bauhinia Ben Beniaminek Berik Bilal Bodo Breno
 
    Carlitos Cathy Cem Chiranjeev Claudili Conie
 
@@ -50,9 +50,10 @@ my @SINGLE_WORDS = qw(
 
    Larry Lasse Lebron Leszek Leta Lili Loloc 
 
-   Macak Mach Madhav Mads Magnus Maija Maj Mali Malinka Manashda Manena 
-   Manno Mano Manu Manywar Margitta Marianne Mark Matilde Mats Mia 
-   Michal Mihai Mikke Miguel Milo Miro Moritz Munawar Myoni 
+   Macak Mach Madhav Mads Magnus Maija Maj Malaila Mali Malinka 
+   Manashda Manena Manno Mano Manu Manywar Margitta Marianne Mark 
+   Matilde Mats Mia Michal Mihai Mikke Miguel Milo Miro Moritz 
+   Munawar Myoni 
 
    Nabil Natalia Nathans Nico Nik Nikita Nikitopoulos Niko Nikos Nina 
    Nis Noriko 

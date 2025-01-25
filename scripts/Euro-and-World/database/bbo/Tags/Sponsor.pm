@@ -44,8 +44,11 @@ my @MULTI_WORDS =
   'Bank Negara Indonesia',
   'Bank Tabungan Negara',
   'Baroda Bank',
+  'Bayu Kencana',
   'Beijing Capital',
   'Beijing Cartoon',
+  'Beijing Century',
+  'Beijing Construction',
   'Beijing Dazhong',
   'Beijing Evertrust',
   'Beijing Huayuan',
@@ -104,7 +107,7 @@ my @MULTI_WORDS =
   'Darles Santerm',
   'Data Steel',
   'Dauna Winaza',
-  'Delft Brouw',
+  'Delfts Brouw',
   'Delta TV',
   'Dentgroup Nisantasi',
   'Dhampur Sugar',
@@ -115,10 +118,13 @@ my @MULTI_WORDS =
   'Doga Naturale',
   'domwaluty.pl',
   'Dongfang Tairong',
+  'Dragon Sports',
   'E-Service',
   'Easy Bridge',
+  'ECF Holding',
   'Eden Realty Kolkata',
   'eDOT Goa',
+  'Ekin Maden',
   'Eko-Al',
   'Elektromonta¯',
   'Elf Holding',
@@ -132,6 +138,7 @@ my @MULTI_WORDS =
   'Ferðaskrifstofa Vesturlands',
   'Fisk Seafood',
   'Fora Lastik',
+  'Forsa Yatcilik',
   'forumbridge.pl',
   'Fossen Eiendom',
   'FX Securities',
@@ -163,6 +170,7 @@ my @MULTI_WORDS =
   'Heng Yuan Xiang',
   'Hengsha Haijiu',
   'Hengsha Ke Ji',
+  'Hengzhou Group',
   'HF Verðbréf',
   'Holzhauer IT-Service',
   'Hong Kong Vico',
@@ -173,6 +181,7 @@ my @MULTI_WORDS =
   'Hotell Strand',
   'Hreint ehf',
   'Huangshi Qixing',
+  'Hubei Bank',
   'Hubei Dongfeng',
   'Hubei Yihua',
   'Hunan Tou Zhan',
@@ -192,6 +201,7 @@ my @MULTI_WORDS =
   'Interbud Plock',
   'Intobridge.com',
   'Íslenskur landbúnaður',
+  'Iso Karhu',
   'Jain Group',
   'Jasa Marga Jakarta',
   'Jet Immo',
@@ -202,11 +212,14 @@ my @MULTI_WORDS =
   'Jing Tie',
   'JP Morgan',
   'K.W. Tam',
+  'Kale Park',
+  'Karasu Mermer',
   'Kare Dam',
   'Kaushik Hyderabad',
   'Kedai Lae',
   'KH Power',
   "Kini's Bangalore",
+  'Kirmizi Beyaz',
   'Kjaran ehf',
   'Klika Murcki',
   'Kollgáta Arkitektúr',
@@ -241,6 +254,7 @@ my @MULTI_WORDS =
   'MB-Transit',
   'Mech-Ok',
   'Meditepe Tip',
+  'Mega Bekasi Hypermall',
   'Mega Giant',
   'Mega-Tech',
   'Mei Kuang',
@@ -264,16 +278,18 @@ my @MULTI_WORDS =
   'Novi Kod',
   'Nuo Hui Jian Kang',
   'OCI Copper',
+  'Odak Göz',
   'OICO Maesa',
   'Oly-Star',
   'Orbis Investment Management',
+  'Palma Karya Mandiri',
+  'Pan China Construction',
   'PD Real Estate',
   'PD Times',
   'PD Transnational',
-  'Palma Karya Mandiri',
-  'Pan China Construction',
   'Penajam PU',
   'Perbankan Jatim',
+  'PGN Jakarta',
   'Pharma Plus',
   'Phoenix Mills',
   'Poddar Developers',
@@ -317,9 +333,11 @@ my @MULTI_WORDS =
   'Sanya Tianze',
   'SAPW Poland',
   'Sarunta Waya',
+  'Sawahlunto Berkah',
   'Scania Bridgekonsul',
   'SD Associates',
   'SD Enterprises',
+  'SD Traders',
   'See Fah/Thai',
   'Semangat Baru Makassar',
   'Semen Gresik',
@@ -357,9 +375,11 @@ my @MULTI_WORDS =
   'Shree Radhey',
   'Sichuan Dahe',
   'Siji Changda',
+  'Sinode GMIM',
   'Siwik Holiday Mragowo',
   'Siwik Intertrade',
   'Skinney-Þinganes',
+  'SLG Skeidar',
   'Smart Max',
   'Société Générale',
   'Sölufélag Garðyrkjumanna',
@@ -374,6 +394,8 @@ my @MULTI_WORDS =
   'Stanicic Software',
   'Staryi Master',
   'Statu Denizcilik',
+  'Stonehill Capital',
+  'Stroiprodukt Kraich',
   'Sunchime Cartoon',
   'Sunchime Fund',
   'Sung Tao',
@@ -414,6 +436,7 @@ my @MULTI_WORDS =
   'Triglav Osiguranje',
   'TTK Healthcare',
   'Turkish Power',
+  'TVS Mobility',
   'TVS Tread',
   'Unia Leszno',
   'Unia Winkhaus',
@@ -423,6 +446,7 @@ my @MULTI_WORDS =
   'VBS Fjárfestingarbanki hf.',
   'Vidbot ehf',
   'Viego Regnskap',
+  'Villa Yustina',
   'Vinex Preslav',
   'Viru Valge',
   'VVE Beheer',
@@ -477,12 +501,14 @@ my %MULTI_TYPOS =
   'Bank Tabungan Negara' => ['bank btn'],
   'Baroda Bank' => ['baroda bang'],
   'Beidike' => ['bei di ke'],
-  'Beijing Wan Jia' => ['bei jing wan jia'],
+  'Beijing Century' => ['bei jing shi ji'],
+  'Beijing Construction' => ['beijing jianzhu'],
   'Beijing Huayuan' => ['beijing hua yuan', 'bj huayuan'],
   'Beijing Hull Technology' => ['beijing hull tech'],
   'Beijing Railway Bureau' => ['beijing ry. bureau'],
   'Beijing ShouChuang' => ['bj shouchuang'],
   'Beijing Trinergy' => ['beijing trinergyy'],
+  'Beijing Wan Jia' => ['bei jing wan jia'],
   'Beijing Yue Ze' => ['bei jing yue ze'],
   'PU Bitung' => ['bitung pu'],
   'Breki Jarðverk' => ['breki jarðverk ehf'],
@@ -537,7 +563,8 @@ my %MULTI_TYPOS =
   Djarum => ['djarum la', 'djarum mld'],
   'Dobre Zegary' => ['dobre_zegary', 'dobrezegary.pl'],
   'domwaluty.pl' => ['domwaluty_pl'],
-  Dongfeng => ['dongfeng automobile', 'dong feng', 'dongfeng qiche'],
+  Dongfeng => ['dongfeng automobile', 'dong feng', 'dongfeng qiche',
+    'dongfeng fengsheng'],
   'Easy Bridge' => ['eazy bridge'],
   EcoSoft => ['eco soft'],
   'Eden Realty Kolkata' => [
@@ -579,11 +606,13 @@ my %MULTI_TYPOS =
   'Hangzhou Jinjiang' => ['hangzhou jingjiang'],
   'Hengsha Haijiu' => ['hengsha jiuhai'],
   'Hengsha Ke Ji' => ['heng sha ke ji'],
+  'Hengzhou Group' => ['hengzhou j.r.j'],
   'HF Verðbréf' => ['h.f. verðbréf'],
   'Holzhauer IT-Service' => ['Holzhauer IT-Servi'],
   'Hótel Hamar' => ['hotel hamar'],
   'Hótel Norðurljós' => ['hotel nordurljos'],
   Huayuan => ['hua yuan'],
+  'Hubei Bank' => ['hu bei yin shang'],
   'Hubei Dongfeng' => ['hb dongfeng', 'hu bei dong feng qi'],
   'Hunan Tou Zhan' => ['hn  tuozhan'],
   'Il Bridge' => ['asd il bridge'],
@@ -642,9 +671,11 @@ my %MULTI_TYPOS =
   'Lögfræðistofa Bjarna' => ['lögfr.st bjarna', 'lögfr.stofa bjarna',
     'lögfr.stofa ´bjarna'],
   'Magpa-Grup' => ['magma-grup'],
-  'Malermester Mathisen' => ['malermester mathise'],
+  'Malermester Mathisen' => ['malermester mathise',
+    'malermester martins'],
   'Málning hf' => ['målning hf', 'malning hf'],
   'Meditepe Tip' => ['medýtepe tip', 'meditepe týp'],
+  'Mega Bekasi Hypermall' => ['mega bekasi', 'mega bekasi hyperma'],
   Modalfa => ['modalfa/umw'],
   'Mutiara Energy' => ['mutiara energy indo', 'mutiara energi indo',
     'mutiara energi p.', 'mutiara energi.p'],
@@ -652,6 +683,7 @@ my %MULTI_TYPOS =
   'Nangang Power' => ['nanguang power'],
   'Nanyuan' => ['nan-yuan'],
   'Nuo Hui Jian Kang' => ['nuohui jiankang'],
+  'Odak Göz' => ['odak goz'],
   'Oly-Star' => ['oly star'],
   'PD Times' => ['p d times', 'pd shidai', 'pd  shidai', 'pd  times'],
   'Pan China Construction' => ['pan-china const', 'pan china construct'],
@@ -689,7 +721,8 @@ my %MULTI_TYPOS =
   'Shanghai Automobile' => ['shanghai automoblie', 'sh  qiche',
     'sh qiche', 'shanghai auto'],
   'Shanghai Changyu' => ['sh chuangyu'],
-  'Shanghai Financial' => ['shanghai finance'],
+  'Shanghai Financial' => ['shanghai finance',
+    'shanghai caijing'],
   'Shanghai Gaohe' => ['shanghai gaowe'],
   'Shanghai Jiahua' => ['shanghai jia hua'],
   'Shanghai Ling Mu' => ['ling mu'],
@@ -768,8 +801,8 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   ABAX Abnegat Accenture Actavis Aerospace AIA Akaylar Akebono
-  Aklindo Allianz Altinay Apullum Aquatrans Arboned Argento Arkas 
-  Arma Artotec Asindo Avia Ayýntab
+  Aklindo Allianz Altinay Apical Apullum Aquatrans Arboned Argento 
+  Arkas Arma Artotec Asindo Avia Ayýntab
 
   Bajaj Baykar Beibao Beidike Belisol Bnerg BridgePlus Budimex
 
@@ -785,22 +818,22 @@ my @SINGLE_WORDS = qw(
 
   Fatek Forbo Forta Frissan FullBridge Funbridge
 
-  GAMAX Gazprom Generali Geologi Genkad Gevalia Gillette Gomad 
-  Gözgöz GSE
+  GAMAX GaoSuDa Gazprom Generali Geologi Genkad Gevalia Gillette Gomad 
+  Gözgöz Guowang GSE
 
   Hana Harke Haustak HCL HNA Honesta Hongyu Huachu Huayuan
 
   IBM IMAX Impress Indoarsip Intan Inteligent Interface Interkala
 
-  Jetox Jiegao Jinfan Junibacken
+  Jetox Jiegao Jinfan Jinshi Junibacken
 
   Kadimex Kancelaria Kayseria Kideko Kilogrupp Konstanta Kvika
 
   Lacznosc Laima Lavazza LCG Lianbo Likom Longjiangfu Lukomorie 
   Lyfjaver
 
-  Makus Malkia Melchemie Mireo Modalfa Morgunblaðið 
-  Multicoms Myndform
+  Makus Malkia Melchemie Metaforsa Mireo Mitratani Modalfa 
+  Morgunblaðið Multicoms Myndform
 
   NALCO Nanyuan Navachaitanya Navayuga Nazwa NEC Nefka Niewiem Nongken 
   Norco Nortemp NOTUS Näkösoppi
@@ -880,6 +913,7 @@ my %SINGLE_TYPOS =
   'Jasa Marga Jakarta' => ['jasamarga'],
   'Jilin Dingyuan' => ['jilindingyuan'],
   'Jin Rong' => ['jinrongjia'],
+  'Kale Park' => ['kalepark'],
   'KH Power' => ['khpower'],
   'Kideko' => ['kideco'],
   'KONKRET Chelmno' => ['konkret'],
@@ -888,6 +922,7 @@ my %SINGLE_TYPOS =
   'Lianzhong Shi Jie' => ['lianzhongshijie'],
   'Magpa-Grup' => ['magpa'],
   'Málning hf' => ['málning'],
+  Metaforsa => ['metaphorsa'],
   'Meilin Qing Cheng' => ['meilinqingcheng'],
   'Mei Kuang' => ['meikuang'],
   'Metropolitan Electricity Authority' => ['mea'],
@@ -911,6 +946,7 @@ my %SINGLE_TYPOS =
   'San Chen' => ['sanchen'],
   'SD Associates' => ['sdassociates'],
   'SD Enterprises' => ['sdenterprises', 'sdenterprizes'],
+  'SD Traders' => ['s.d.traders'],
   'Shanghai Automobile' => ['shangqi'],
   'Shanghai Media and Entertainment Group' => ['smeg'],
   'Shenzhen Lanpu' => ['lanpu'],
