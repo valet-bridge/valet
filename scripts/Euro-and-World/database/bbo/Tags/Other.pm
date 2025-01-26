@@ -316,7 +316,8 @@ my %MULTI_TYPOS =
 (
   'ABA Nuno Paz' => ['ABA - Nuno Paz', 'ABA-Nuno Paz'],
   'AIC' => ['a i c'],
-  'Air Traffic Management' => ['air traffic managem'],
+  'Air Traffic Management' => ['air traffic managem', 'air-trfc',
+    'air-trf'],
   'Aklindo Musi 88' => ['musi 88', 'musi88'],
   Arnab => ["arnab's"],
   Azores => ['açores team'],
@@ -364,6 +365,7 @@ my %MULTI_TYPOS =
   'Logos GPS' => ['logos gpg'],
 
   'Massachusetts Association' => ['massachussets assoc'],
+  'Mike Lawrence Club' => ['lawrence club'],
   MMRMC => ['mmrmc(pkb)'],
   'Mo i Raneran' => ['mo i raneran :)'],
   'Multi Gen Indonesia' => ['multi gen ina'],
@@ -383,6 +385,8 @@ my %MULTI_TYPOS =
   SMBC => ['s m b c'],
   'SM BTC' => ['sm-btc'],
   'Spring Foursomes' => ['spring 4s', 'spring fours', "spring 4's"],
+
+  "Tor Ivar's" => ['tor ivars'],
 
   'Valar Morghulis' => ['valar morgulis'],
 

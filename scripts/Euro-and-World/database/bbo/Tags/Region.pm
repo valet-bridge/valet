@@ -90,6 +90,7 @@ my @MULTI_WORDS =
   'Northern Norway',
   'Northern Territory',
   'Nusa Tenggara Barat',
+  'Park Firtina',
   'Pearl River',
   'Ren Shou',
   'Rio de Janeiro State',
@@ -110,6 +111,7 @@ my @MULTI_WORDS =
   'Sør-Trøndelag',
   'Tamil Nadu',
   'Tanah Laut',
+  'Tonk State',
   'Troms og Ofoten',
   'Uttar Pradesh',
   'Val di Magra',
@@ -214,12 +216,12 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Aceh Agder Akdeniz Akkad Anhui Ayrshire
-  Badung Bali Banten Belitung Bengkayang Bihar Borneo Bornholm 
-  Bungo Buskerud
+  Badung Bairrada Bali Banten Belitung Bengkayang Bihar Borneo 
+  Bornholm Bungo Buskerud
   Cappadocia Catalonia Corsica Crete
   Dersým Druts
   Eyjafjallajokull
-  Fjends Florida
+  Feixiang Fjends Florida
   Ganges Gansu Gauteng Goa Gorontalo Guangdong Guangxi 
   Guizhou Gujarat
   Hainan Haixing Hatay Haugaland Hebei Hedmark Hegyvidék Hordaland
@@ -244,7 +246,7 @@ my @SINGLE_WORDS = qw(
   Victoria Vojvodina
   Wachau Waikato Wujin
   Xinjiang
-  Yongjia Yunnan
+  Yongjia Yongjiang Yunnan
   Zhejiang
 );
 

@@ -48,7 +48,7 @@ my @SINGLE_WORDS = qw(
    Kamlakars Karin Kasiyahan Keni Kenji Kinga Kitty Kris Kriston 
    Krisztina 
 
-   Larry Lasse Lebron Leszek Leta Lili Loloc 
+   Larry Lasse Lea Lebron Leszek Leta Lili Loloc 
 
    Macak Mach Madhav Mads Magnus Maija Maj Malaila Mali Malinka 
    Manashda Manena Manno Mano Manu Manywar Margitta Marianne Mark 
@@ -70,7 +70,7 @@ my @SINGLE_WORDS = qw(
 
    Tadeu Tamae Tita Tofi Toma Tomas Tushar 
 
-   Unlu 
+   Umut Unlu
 
    Valentino Vicky Victor Virginia Vivi 
 

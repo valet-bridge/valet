@@ -23,6 +23,7 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'Brotteaux' => ['les brotteaux', 'les brotteax'],
   'Fatih Karagümrük' => ['fatih karagumruk', 'f karagumruk', 'fatih ksk',
     'Fatýh KSK'],
   'Lawang Salapan' => ['lawang salapan kota'],
@@ -56,7 +57,7 @@ my @SINGLE_WORDS = qw(
   Taihu Tengah Tianya
   Uccle Unaós
   Varbergshus Viþnelik
-  Wadas Wratislavia Wroble
+  Wadas Wratislavia Wroble Wujiang
   Yalikavak Yangpu Yarimca Yenisehir Yizhuang Yildirim Yuquan
   Zhujiang
 );

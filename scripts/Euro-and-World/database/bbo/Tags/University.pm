@@ -258,7 +258,7 @@ my %MULTI_TYPOS =
   'Universitas Gadjah Mada' => ['univ. gadjah mada',
     'univ. gajah mada'],
   'Universitas Negeri Malang' => ['univ. neg. malang'],
-  'University of Airlangga' => ['univ airlangga'],
+  'University of Airlangga' => ['univ airlangga', 'airlangga unv'],
   'Brawijaya University' => ['univ brawijaya', 'university of brawijaya'],
   'University of Bung Hatta' => ['univ bung hatta', 'univ. bung hatta'],
   'University of California at Berkeley' => ['cal berkeley',

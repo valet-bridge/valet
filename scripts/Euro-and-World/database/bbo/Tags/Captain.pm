@@ -57,6 +57,8 @@ my @MULTI_WORDS =
   'Ilan Bareket',
   'Baneet Malhotra',
   'Benedicte Cronier',
+  'Bé. Oliveira',
+  'Bharat Bhosale',
   'Bimal Sicka',
   'Birkir Jonsson',
   'Brian Senior',
@@ -111,6 +113,7 @@ my @MULTI_WORDS =
   'Dexter Morgan',
   'di Franco',
   'Diana Damyanova',
+  'Diane Gordy',
   'Ding Yuan',
   'Djordje Dunjic',
   'Dmitri Marchessini',
@@ -161,6 +164,7 @@ my @MULTI_WORDS =
   'Gunnar Sjökvist',
   'Gunnlaugur Sævarsson',
   'Gylfi Baldursson',
+  'H. Narsimhan',
   'H.C. Nielsen',
   'Hana Shezifi',
   'Hans-Ove Sandin',
@@ -279,6 +283,7 @@ my @MULTI_WORDS =
   'Marc ter Laare',
   'Marc Kerlero de Rosbo',
   'Marcelo Branco',
+  'Marele Urs',
   'Maria João Lara',
   'Mariana Leitão',
   'Mariana Nogueira',
@@ -406,6 +411,7 @@ my @MULTI_WORDS =
   'Sandip Chatterji',
   'Sandra Batista',
   'Sanjay Bhattacharya',
+  'Sara Silva',
   'Satish Diwanji',
   'Satish Modi',
   'Saumitra Basu',
@@ -529,8 +535,9 @@ my %MULTI_TYPOS =
   'Ilan Bareket' => ['bareket ilan'],
   'Baneet Malhotra' => ['b malhotra'],
   'Benedicte Cronier' => ['mme cronier'],
+  'Bé. Oliveira' => ['bé oliveira'],
   'Bimal Sicka' => ['bimal sikka'],
-  'Birkir Jonsson' => ['birkir j jonsson'],
+  'Birkir Jonsson' => ['birkir j jonsson', 'birkir jón jónsson'],
   Boaz => ['dr. boaz', "dr. boaz's"],
   Brogeland => ['brogeland fc'],
   'C.V. Rao' => ['c v rao', 'c. v. rao', 'c.v.rao', 'c.v.rao.', 'cv rao'],
@@ -588,6 +595,7 @@ my %MULTI_TYPOS =
   'Gudmundur Snorrason' => ['gudmundur snorra'],
   'Gunnar Björn Helgason' => ['gunnar björn h', 'gunnar björn'],
   'Gunnlaugur Sævarsson' => ['gunnlaugur sævars', 'Gunnlaugur Sævarsso'],
+  'H. Narsimhan' => ['h narsimhan'],
   'H.C. Nielsen' => ['hc nielsen'],
   'Hana Shezifi' => ['shezifi hana'],
   'Hans-Ove Sandin' => ['hans-ove', 'hans-ove crew'],
@@ -621,6 +629,7 @@ my %MULTI_TYPOS =
     'josé c. henriques', 
     'josé carlos henriqu',
     'josé henriques', 
+    'zc henriques',
     'ze carlos henriques',
     'zé carlos henriques', 
     'josé c henriques'],
@@ -870,7 +879,7 @@ my @SINGLE_WORDS = qw(
   Avci Avcioglu Avon Awad Ayda 
 
   Babacan Babsch Baiche Baietto Bailey Bajraj Baker Bakhshi 
-  Bakke Bakkeren Baldini Baldysz Baleal Ballebo Banikas Baran 
+  Bakke Bakkeren Baldini Baldysz Ballebo Banikas Baran 
   Barbone Barbosa Barel Barion Baris Baron Bart Bartley
   Barton Basabe Baseggio Basile Bassini Bathurst Batov Bauch Bavaresco 
   Baybarut Bayes Baze Bäckström Beauchamp Beale Beatty Beaumier
@@ -903,8 +912,9 @@ my @SINGLE_WORDS = qw(
   Chemla Cheng Chinchak Chizzoli Chopin Chottin Chrapot 
   Chubukov Ciccarelli Cichocki Ciechomski Cilleborg Cimon Cintra 
   Cionca Ciopettini Civale Cladius Clair Claret Clark Clarke Clausen 
-  Clement Clemmensen Clerkin Close Coenraets Coglitore Cohen Cohler 
-  Cohner Colarossi Coldea Cole Coletta Collett Collins Combes 
+  Clement Clemmensen Clemont Clerkin Close Coenraets Coglitore 
+  Cohen Cohler Cohner Colarossi Coldea Cole Coletta Collett Collins 
+  Combes 
   Combescure Compton Connie Conti Cook Cooke Cooper Cooreman 
   Cope Coren Coridakis Corlateanu Cormack Corssen Cossutta Counil 
   Courtney Coutts Coyne Creet Crestey Creuheras Crichton Crompton 
@@ -968,10 +978,10 @@ my @SINGLE_WORDS = qw(
   Hliapas Hobeika Hoff Hoffa Hoffman Hollands Hollman Honti Hooda 
   Hopfenheit Hornibrook Horowitz Horton Horwitz Howard Howe Hu 
   Huang Huberschwiller Hughes Hugon Hugony Hult Hung Hupe Hurworth 
-  Høgis Høyland 
+  Hyatt Høgis Høyland 
 
-  Iacapraro Ichilcik Ilczuk Ilmez Ince Indemini Ingielewicz Iommi 
-  Iontzeff Irens Ishidaya Ivatury Iversen Ivrig Iyer Izisel
+  Iacapraro Ichilcik Ilczuk Ilmez Ince Indemini Indzheva Ingielewicz 
+  Iommi Iontzeff Irens Ishidaya Ivatury Iversen Ivrig Iyer Izisel
 
   Jacob Jacobs Jagger Jagniewski Jagroop Jahnsen Jalowka Jamieson
   Janicki Janik Jankova Janiszewski Janowski Jansma Janssen Jarlot 
@@ -1098,7 +1108,7 @@ my @SINGLE_WORDS = qw(
   Spector Spelmans Spiridonescu Spitalnick Spooner Sprung Squires 
   Stabell Stamatov Stankovic Stansby Stark Stavrinos Steel 
   Stegaroiu Steiner Stensson Stephenson Stern Steinberg Sternberg 
-  Stevens Stewart Stienen Stilling Stoichkov Stoltz Stoppa 
+  Stevens Stewart Stienen Stilling Stoichkov Stokka Stoltz Stoppa 
   Street Stretz Strul Strøm Stuart Sulgrove Sveindal Sveinsson 
   Svendsen Suarez Sugino Summers Sundelin Sundsten Sung Suñol 
   Suresh Sutherlin Suwik Sütmen Svindahl Swarup Sweidan Sykioti 
@@ -1166,7 +1176,6 @@ my %SINGLE_TYPOS =
   Arcieri => ['arceri'],
   'Arunas Jankauskas' => ['arünas'],
   Avcioglu => ['avcýoðlu', 'avcioðlu'],
-  Baleal => ['balelal'],
   Bartley => ['bartly'],
   Beale => ['beatle'],
   Beauchamp => ['bauchamp', 'beachamp'],

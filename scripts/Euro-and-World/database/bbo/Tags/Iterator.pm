@@ -66,7 +66,7 @@ my %SINGLE_TYPOS =
   Set => ['sets'],
   Stage => ['stg'],
   Stanza => ['stanzas', 'stranza', 'stsnza', 'stan', 'stanzaq'],
-  Table => ['t', 'tisch']
+  Table => ['t', 'tisch', 'tafel']
 );
 
 
