@@ -71,6 +71,7 @@ my @MULTI_WORDS =
   'D-MaTK',
   "D'Coup",
   'D POK',
+  'Da Zhiran',
   'Dalian ABC',
   'Dalian BA',
   'Dalian Hong',
@@ -146,6 +147,7 @@ my @MULTI_WORDS =
   'Japan SAYN',
   'Jarum LA',
   'Jenny-Chang',
+  'Ji Jin',
   'Jia Zhou Ai Qiao',
   'Jian Hua Club',
   'Jie Fang He Ji',
@@ -160,6 +162,7 @@ my @MULTI_WORDS =
   'KaiCheng RL',
   'Kawanua Selection',
   'Ke Da',
+  'Keda Xiaoyou',
   'Kent Romeos venner',
   "Kitty's",
   'KM 23',
@@ -180,6 +183,7 @@ my @MULTI_WORDS =
   'Leonardonun Robotu',
   'Lew Lodzki',
   'Limo Puzzi',
+  'Little Top Bridge',
   'Logos GPS',
   'Los Feos',
   'Los Malos',
@@ -195,6 +199,7 @@ my @MULTI_WORDS =
   'Manny Herrings',
   'Marki-Macki',
   'Massachusetts Association',
+  'Mavý Ankara',
   'Meng Qing Xin',
   'Mike Lawrence Club',
   'Minas Trith',
@@ -306,8 +311,10 @@ my @MULTI_WORDS =
 
   'Wan Jian Club',
   'Wei De',
+  'Wei Ming Dui',
 
   'X.D.X.J',
+  'Xiao Jun Gan Dui',
   'XiBu VIP',
   'Xin Yuan',
 
@@ -317,6 +324,7 @@ my @MULTI_WORDS =
 
   'Zara Bridge',
   'Zen Ho',
+  'Zhong Jia Lian Dui',
   'Zuid West'
 );
 
@@ -344,6 +352,7 @@ my %MULTI_TYPOS =
 
   'Deceptive AHM' => ['deceptive  ahm'],
   'Delhi Gym Aces' => ['d g aces', 'dgc aces'],
+  'DK Notus' => ['notus df'],
 
   'El Gezira' => ['el-gezira'],
   'England and Pharon' => ['england plus pharon'],
@@ -362,6 +371,7 @@ my %MULTI_TYPOS =
   'Idea Bridge Torino' => ['gs idea br. to', 'idea bridge'],
 
   'Jan Wellem' => ['jan wel'],
+  'Ji Jin' => ['ji jing'],
   'Jian Hua Club' => ['jian hua'],
 
   Kebiya => ['ke bi ya', 'ke bi ya club'],
@@ -382,7 +392,7 @@ my %MULTI_TYPOS =
   'Multi Gen Indonesia' => ['multi gen ina'],
   'Møllers Team' => ['møllers t'],
 
-  Obezit => ['obezit tatilde', 'obezit intl'],
+  Obezit => ['obezit tatilde', 'obezit intl', 'öz obezýt'],
 
   "Pal's Four" => ["pal's"],
   "Pradeep's Four" => ["pradeep's 4", "Pradeep's Team"],
@@ -393,6 +403,7 @@ my %MULTI_TYPOS =
   'Rajjan' => ["rajjan's"],
 
   'Saevar Karl' => ['svaer karl'],
+  'San Sac' => ['zan zac'],
   'S.B.F.' => ['s.b.f'],
   'slaveykov.bg' => ['slaveikov.bg'],
   SMBC => ['s m b c'],
@@ -508,9 +519,10 @@ my @SINGLE_WORDS = qw(
 
    UAB Udarnik Úlfurinn Underberg UTU
 
-   Vahakabinetti Vakrandi Valen Valyo Vanko Varan Varoslu Vasallid 
-   Västanfläkten Veegees Vega* Veggen Verder Verons Vicho Vilmar 
-   Vilttiketju Vilttiukko Viña Voff Volta Vucko Vurgun Vürst Vytas
+   Vahaboðlu Vahakabinetti Vakrandi Valen Valyo Vanko Varan 
+   Varoslu Vasallid Västanfläkten Veegees Vega* Veggen Verder 
+   Verons Vicho Vilmar Vilttiketju Vilttiukko Viña Voff Volta 
+   Vucko Vurgun Vürst Vytas
 
    Wanghong WBack WBBA WBFIT WBGO WDP Weiqun Wengens Winatalya 
    WinBridge Winterfell WLKP Wolf WSWT
@@ -520,7 +532,7 @@ my @SINGLE_WORDS = qw(
    Ybs YBM Yaðmur Yamata Yansimasiz YeJun Yildizlar Yogakshema 
    Yokozuna YSD YYD YYY
 
-   Zabavljaci Zamek Zana Zaraz Zeyno Zhihaole Zimmkonis Zivac 
+   Zabavljaci Zamek Zana Zang Zaraz Zeyno Zhihaole Zimmkonis Zivac 
    ZKS Zmaj Zozoura Zurzits Zvanger Zweili
 
    Øssur
@@ -547,6 +559,7 @@ my %SINGLE_TYPOS =
 
   'HZ Connection' => ['hzconnection'],
 
+  'Ji Jin' => ['jijin'],
   Juls => ['julst'],
 
   Kibe => ['kýbe'],
@@ -565,7 +578,7 @@ my %SINGLE_TYPOS =
   Pagonia => ['pagonya'],
   Patagonia => ['patagonya'],
   Paulistas => ['paulistanas'],
-  'Polar Star' => ['polar star'],
+  'Polar Star' => ['polarstar'],
   Prasetya => ['prasetia'],
   "President's Team" => ['president', 'presidents'],
 

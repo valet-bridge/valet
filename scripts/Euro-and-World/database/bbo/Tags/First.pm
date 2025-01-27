@@ -13,6 +13,7 @@ our @EXPORT = qw(set_hashes);
 
 my @MULTI_WORDS =
 (
+  'Ding-Yu'
 );
 
 my %MULTI_TYPOS =
@@ -61,6 +62,8 @@ my @SINGLE_WORDS = qw(
    Oguzhan Olena Onirepsou Oyku 
 
    Paco Pal Paoli Paulette Paulina Pero Peter Petra Pia Piter 
+
+   Qingjun
 
    Rafael Ramkumar Rene Rica Rob Rike Rima Robertinho Robi 
 

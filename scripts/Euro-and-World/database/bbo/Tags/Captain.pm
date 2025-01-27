@@ -96,6 +96,7 @@ my @MULTI_WORDS =
   'de Knijff',
   'de Krull',
   'de la Barrera',
+  'de Leo',
   'de Livera',
   'de Luca',
   'de Mendez',
@@ -185,8 +186,11 @@ my @MULTI_WORDS =
   'Hjalmar S Palsson',
   'Hjordis Eythorsdottir',
   'Hjordis Sigurjonsdottir',
+  'Hon Hu',
+  'Hong Ju',
   'Hong Hu',
-  'Hong NIU',
+  'Hong Niu',
+  'Hong Ru',
   'Huijun Song',
   'Ilan Herbst',
   'Ingvar Erga',
@@ -196,6 +200,7 @@ my @MULTI_WORDS =
   'J. Brigido',
   'J. Pereira de Sousa',
   'J. Pinheiro',
+  'J. Thompson',
   'J. Tomljenovic',
   'J.C. Henriques',
   'J.E. Skjanni',
@@ -383,6 +388,7 @@ my @MULTI_WORDS =
   'Prashant Desai',
   'Promila Saraf',
   'Quentin Robert',
+  'Qi Quan',
   'Qiao Ge',
   'Qing Gong',
   'R.K. Sinha',
@@ -400,6 +406,7 @@ my @MULTI_WORDS =
   'Reinaldo Timoteo',
   'Rita Choksi',
   'Rita Russo',
+  'Roberto Barbosa',
   'Robyn Brazier',
   'Rodrigo Suares',
   'Ronnie Benin-Barr',
@@ -407,6 +414,7 @@ my @MULTI_WORDS =
   'Rui Silva Santos',
   'Rúnar Einarsson',
   'Rusen Abi',
+  'Ruyi Qiu',
   'Sadek Radwan',
   'Sainte Marie',
   'Sally Brock',
@@ -616,6 +624,7 @@ my %MULTI_TYPOS =
   'Hjordis Eythorsdottir' => ['hjordis eythorsdott'],
   'Hjordis Sigurjonsdottir' => ['hjordis sigurjonsdo'],
   'Huijun Song' => ['hui song'],
+  'Hong Ru' => ['hung-ru'],
   'Ilan Herbst' => ['herbst i', 'herbst ilan', 'herbsr ilan'],
   'Inocencio Almeida Araujo' => ['inocencio arauj', 'inocêncio araújo',
     'inocencio'],
@@ -823,6 +832,7 @@ my %MULTI_TYPOS =
   'Raul Guerreiro' => ['r guerreiro'],
   'Razvan Andrei Gheorghe' => ['gheorghe r'],
   'Rita Choksi' => ['rita chokshi'],
+  'Roberto Barbosa' => ['beto barbosa'],
   'Rodrigo Suares' => ['rodrigo soares'],
   'Ronnie Benin-Barr' => ['roni barr', 'barr-benin'],
   'R.S. Mishra' => ['r.s.mishra'],
@@ -830,6 +840,7 @@ my %MULTI_TYPOS =
   'Rui Silva Santos' => ['rui santos', 'silva santos',
     'rui s. santos'],
   'Rúnar Einarsson' => ['runar einarsson'],
+  'Ruyi Qiu' => ['qiu ruyi'],
   'Salim Yilankiran' => ['yilankiran'],
   'Sally Brock' => ['s brock'],
   'Satish Diwanji' => ['col. diwanji'],
@@ -915,7 +926,7 @@ my @SINGLE_WORDS = qw(
   Castner Cattani Cavalieri Cayne Cengiz Cernat Cernato Cernatovo 
   Cerreto Cesati Chadwick Chai Chamberlain Chambers Chan Chang 
   Charletoux Charlotte Charlsen Chassagne Chauvelot Chediak Cheek 
-  Chemla Cheng Chinchak Chizzoli Chopin Chottin Chrapot 
+  Chemla Cheng Chinchak Chitlangia Chizzoli Chopin Chottin Chrapot 
   Chubukov Ciccarelli Cichocki Ciechomski Cilleborg Cimon Cintra 
   Cionca Ciopettini Civale Cladius Clair Claret Clark Clarke Clausen 
   Clement Clemmensen Clemont Clerkin Close Coenraets Coglitore 
@@ -1009,9 +1020,9 @@ my @SINGLE_WORDS = qw(
   Kolankaya Kolata Kolesnik Kollnes Kolonkaya Konckier Kondoch 
   Konefal Koneru Kopecky Koppel Korbel Kordov Korkmaz Korkut Korth 
   Kosaka Kosti Kotányi Kotinas Kotronarou Koumetz Kovacs Kovachev 
-  Kovacich Kowalski Kozikowski Kökten Kranyak Krajewski Krausova 
-  Krawczyk Krekorian Kriegel Kriftner Kristensen Kroch Krochmalik 
-  Krolikowski Kubac Kujawa Kuokkanen Kurbalija Kutenik
+  Kovacich Kowalski Kozikowski Kökten Kraichev Krajewski Kranyak 
+  Krausova Krawczyk Krekorian Kriegel Kriftner Kristensen Kroch 
+  Krochmalik Krolikowski Kubac Kujawa Kuokkanen Kurbalija Kutenik
   Kutner Kvangraven Kwiatkowski Kwiecien Kwok Kyriakidou Kyrilenko
 
   Laan Labaere Lachowicz Laffineur Lagrange Lagree Lalanne Lall 
@@ -1198,6 +1209,7 @@ my %SINGLE_TYPOS =
   'Chalermpol Wongwaiwit' => ['chalermpol'],
   'Christal Henner-Welland' => ['henner'],
   'Christophe Grosset' => ['grosset'],
+  Chitlangia => ['chitalangia'],
   Ciechomski => ['ciechomek'],
   Combescure => ['combescur'],
   Cooreman => ['cooremans'],

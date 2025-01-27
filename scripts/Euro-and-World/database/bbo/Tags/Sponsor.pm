@@ -18,6 +18,7 @@ my @MULTI_WORDS =
   'Abadi Adimulia',
   'Adaro Energy',
   'Advisor Revisjon Norge',
+  'Aershan Haishen',
   'Agena Development',
   'Agsar Paints',
   'AJ Diament',
@@ -60,10 +61,15 @@ my @MULTI_WORDS =
   'Beijing Longxin',
   'Beijing Railway Bureau',
   'Beijing ShouChuang',
+  'Beijing Tianzhixing',
   'Beijing Trinergy',
   'Beijing Wan Jia',
+  'BeiJing Xiaoganju',
+  'BeiJing Xiaojungan',
   'Beijing Yue Ze',
   'Beijing Yindi',
+  'Betri Ferðir',
+  'Betri Frakkar',
   'Bokadirekt SE',
   'Bozzetto Azzurro',
   'Breki Jarðverk',
@@ -89,6 +95,7 @@ my @MULTI_WORDS =
   'Central Secretariat',
   'Century Insurance',
   'Chateau Rossenovo',
+  'Chengdu Zhongtai',
   'Chennai Online',
   'China Evertrust',
   'China Finance',
@@ -99,12 +106,16 @@ my @MULTI_WORDS =
   'China Resources',
   'China Trinergy',
   'Chinese Hailian',
+  'Chongqing Jianke',
+  'Chongqing Jinjian',
+  'Chongqing Shangyou',
   'Construction Kielce',
   'Consus Carbon',
   'Consus Oil',
   'Cuebids.com',
   'Cumhuriyet OOSK',
   'Dagensbridge.dk',
+  'Dalian Aoxin',
   'Dalian Dichan',
   'Dalli Cardillo',
   'Dama Kupa',
@@ -161,15 +172,20 @@ my @MULTI_WORDS =
   'Godfrey Phillips',
   'Gong Hang Jin Ying',
   'Guangdong Huachu Chemicals',
+  'Guangxi Tianhu',
   'Guangzhou Hongmian',
   'Guangzhou Huachu Chemicals',
+  'Guangzhou Mingjian',
   'Guangzhou Pearl River',
   'Guiyuang Bank',
+  'Guizhou Bangda',
   'Haerbin Bingxue',
   'Hai Long',
   'Hainan Air',
   'Hainan Shichuang',
   'Hainan Window',
+  'Haining Ziwei',
+  'Haiyang Ruixiang',
   'Hangzhou Jinjiang',
   'Heilongjiang Tea',
   'Heng Yuan Xiang',
@@ -177,6 +193,7 @@ my @MULTI_WORDS =
   'Hengsha Ke Ji',
   'Hengzhou Group',
   'HF Verðbréf',
+  'Ho-Hsing',
   'Holzhauer IT-Service',
   'Hong Kong Vico',
   'Hong Zhu',
@@ -185,10 +202,12 @@ my @MULTI_WORDS =
   'Hótel Norðurljós',
   'Hotell Strand',
   'Hreint ehf',
+  'Huabin Aoruijin',
   'Huangshi Qixing',
   'Hubei Bank',
   'Hubei Dongfeng',
   'Hubei Yihua',
+  'Hunan Mingkai',
   'Hunan Tou Zhan',
   'Iceland Express',
   'ICSA Groups',
@@ -211,10 +230,12 @@ my @MULTI_WORDS =
   'Jasa Marga Jakarta',
   'Jet Immo',
   'Jiang You',
+  'Jiangxi Hengkang',
   'Jilin Dingyuan',
   'Jin Rong',
   'Jin Jing',
   'Jing Tie',
+  'Jinsheng Development',
   'JP Morgan',
   'K.W. Tam',
   'Kale Park',
@@ -242,6 +263,7 @@ my @MULTI_WORDS =
   'LAPI Laboratories',
   'Latteria TS Rzepin',
   'Lekta ehf',
+  'Lianhua Keji',
   'Lianzhong Shi Jie',
   'Logi Smart',
   'Lögfræðiskrifstofa Islands',
@@ -297,31 +319,32 @@ my @MULTI_WORDS =
   'PD Transnational',
   'Penajam PU',
   'Perbankan Jatim',
+  'Perusahaan Listrik Negara',
   'PGN Jakarta',
   'Pharma Plus',
   'Phoenix Mills',
+  'Phoenix TV',
+  'Pliska XO',
+  'PLN Fortuga',
+  'PLN Suluttenggo',
   'Plovac Ploski',
   'Poddar Developers',
   'Poddar Housing',
+  'Polarman Regnskap',
+  'Ponar Unia',
+  'Powszechna Kasa Oszczędności Bank Polski',
+  'Prestige Development',
   'PRI Investment',
+  'Pro Consul',
   'PU Bitung',
   'PU Minsel',
   'PU Sulut',
-  'Perusahaan Listrik Negara',
+  'PT Bayu Buana Gemilang',
+  'PT Bumi Siak Pusako',
+  'Qianli Guangda',
   'QingLong KeJi',
   'Qingnian Qiche',
   'Quik Tea',
-  'Phoenix TV',
-  'Pliska XO',
-  'Polarman Regnskap',
-  'Powszechna Kasa Oszczędności Bank Polski',
-  'Ponar Unia',
-  'Pro Consul',
-  'PLN Fortuga',
-  'PLN Suluttenggo',
-  'Prestige Development',
-  'PT Bayu Buana Gemilang',
-  'PT Bumi Siak Pusako',
   'Ragn Sells',
   'Red Bull',
   'Red Cotton',
@@ -359,6 +382,7 @@ my @MULTI_WORDS =
   'Shanghai Gaohe',
   'Shanghai Jiahua',
   'Shanghai Jinchang',
+  'Zhejiang Jingfan',
   'Shanghai Ling Mu',
   'Shanghai Media and Entertainment Group',
   'Shanghai Qiche',
@@ -472,8 +496,10 @@ my @MULTI_WORDS =
   'Wuhan Dongfang',
   'Xiamen Xiashun',
   'Xiao Ying',
+  'Xin He Jin Tai',
   'XP Digital',
   'Yalu Group',
+  'Yanjin Puzi',
   'Yeh Bros',
   'Yibin China Resources',
   'Yi Tong',
@@ -490,6 +516,7 @@ my @MULTI_WORDS =
   'Zhejiang Jinjian',
   'Zhejiang Xinxiang',
   'Zhenjiang Hanbang',
+  'Zhenjiang Jingjiang',
   'Zhong Guo Ren Bao',
   'Zhong Liang Y LW',
   'Zhong Yuan',
@@ -531,6 +558,7 @@ my %MULTI_TYPOS =
   'Beijing Trinergy' => ['beijing trinergyy'],
   'Beijing Wan Jia' => ['bei jing wan jia'],
   'Beijing Yue Ze' => ['bei jing yue ze'],
+  'Betri Ferðir' => ['betri ferdir'],
   'PU Bitung' => ['bitung pu'],
   'Breki Jarðverk' => ['breki jarðverk ehf'],
   'Bridge for Business' => ['bridge for businnes'],
@@ -559,9 +587,11 @@ my %MULTI_TYPOS =
     'cr_ power'],
   'Chateau Rossenovo' => ['chatteau rossenovo', 'chatteu rossenovo',
     'chaetou rosenovo', 'shato rosenovo', 'shato rossenovo'],
+  'Chengdu Zhongtai' => ['Chengdu zt'],
   'China Global Times' => ['chinal global times', 'huan qiu Shi bao'],
   'China Trinergy' => ['chinatrinergy'],
   'CONNECTOR' => ['aj-connector', 'aj connector'],
+  'Dalian Aoxin' => ['da lian ao xin'],
   'Data Steel' => ['datta steel'],
   'Delta TV' => ['delta tv programs'],
   'Dentgroup Nisantasi' => ['dentgroup nýþantaþý'],
@@ -585,7 +615,7 @@ my %MULTI_TYPOS =
   'Dobre Zegary' => ['dobre_zegary', 'dobrezegary.pl'],
   'domwaluty.pl' => ['domwaluty_pl'],
   Dongfeng => ['dongfeng automobile', 'dong feng', 'dongfeng qiche',
-    'dongfeng fengsheng'],
+    'dongfeng fengsheng', 'dongfeng fengshen'],
   'Easy Bridge' => ['eazy bridge'],
   EcoSoft => ['eco soft'],
   'Eden Realty Kolkata' => [
@@ -627,7 +657,8 @@ my %MULTI_TYPOS =
   'Hangzhou Jinjiang' => ['hangzhou jingjiang'],
   'Hengsha Haijiu' => ['hengsha jiuhai'],
   'Hengsha Ke Ji' => ['heng sha ke ji'],
-  'Hengzhou Group' => ['hengzhou j.r.j', 'hengzhou jinrongjia'],
+  'Hengzhou Group' => ['hengzhou j.r.j', 'hengzhou jinrongjia',
+    'hengzhou jituan'],
   'HF Verðbréf' => ['h.f. verðbréf'],
   'Holzhauer IT-Service' => ['Holzhauer IT-Servi'],
   'Hótel Hamar' => ['hotel hamar'],
@@ -635,6 +666,7 @@ my %MULTI_TYPOS =
   Huayuan => ['hua yuan'],
   'Hubei Bank' => ['hu bei yin shang'],
   'Hubei Dongfeng' => ['hb dongfeng', 'hu bei dong feng qi'],
+  'Hunan Mingkai' => ['hu nan ming kai'],
   'Hunan Tou Zhan' => ['hn  tuozhan'],
   'Il Bridge' => ['asd il bridge'],
   Lavazza => ['il bridge - lavazza'],
@@ -663,6 +695,8 @@ my %MULTI_TYPOS =
   'Íslenskur landbúnaður' => ['íslenskur landbúnað'],
   'Jasa Marga Jakarta' => ['jasa marga'],
   'Jet Immo' => ['get immo', 'get-immo'],
+  'Jiangxi Hengkang' => ['jiang xi heng kang'],
+  'Jinsheng Development' => ['jinsheng fazhan'],
   'K.W. Tam' => ['k w tam', 'kw tam'],
   'Kaushik Hyderabad' => ['kaushik hyd.'],
   'KH Power' => ['k h power'],
@@ -755,6 +789,7 @@ my %MULTI_TYPOS =
     'shanghai caijing'],
   'Shanghai Gaohe' => ['shanghai gaowe'],
   'Shanghai Jiahua' => ['shanghai jia hua'],
+  'Shanghai Jingfan' => ['sh jingfan'],
   'Shanghai Ling Mu' => ['ling mu'],
   'Shanghai Qiche' => ['shanghai qi che'],
   'Shanghai Qihao' => ['sh qihao'],
@@ -762,9 +797,11 @@ my %MULTI_TYPOS =
   'Shanghai Zhongfu' => ['shang hai zhong fu'],
   'Shanxi Qinlian' => ['shan xi qin lian', 'shanxi qinlian',
     'qin lian club', 'qin lian'],
+  'Shengheng' => ['sheng-heng'],
   'Shenzhen Huabei' => ['shen zhen hua bei g'],
   'Shenzhen Nangang' => [
     'nan gang',
+    'nan gang dong li',
     'nangang dongli', 
     's.z. nangang power', 
     'shen zhen nan gang', 
@@ -840,8 +877,8 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   ABAX Abnegat Accenture Actavis Aerospace AIA Akaylar Akebono
-  Aklindo Allianz Altinay Apical Apullum Aquatrans Arboned Argento 
-  Arkas Arma Artotec Asindo Avia Ayýntab
+  Aklindo Allianz Altinay Apical Apullum Aquatrans Arboned 
+  Argento Arkas Arma Artotec Asindo Avia Ayýntab
 
   Bajaj Baykar Beibao Beidike Belisol Bnerg BridgePlus Budimex
 
@@ -860,7 +897,7 @@ my @SINGLE_WORDS = qw(
   GAMAX GaoSuDa Gazprom Generali Geologi Genkad Gevalia Gillette Gomad 
   Gözgöz Guowang GSE
 
-  Hana Harke Haustak HCL HNA Honesta Hongyu Huachu Huayuan
+  Hana Haoxin Harke Haustak HCL HNA Honesta Hongyu Huachu Huayuan
 
   IBM IMAX Impress Indoarsip Intan Inteligent Interface Interkala
 
@@ -882,13 +919,15 @@ my @SINGLE_WORDS = qw(
   P2TEL Paulaner Pealinn Penline Pertagas Pertamina Petroconas Pexis 
   Petro Pharon Pimara POLFA Praterm Prokom Printerikeskus Pufa Pusula
 
-  Qiaoyou
+  Qiaoyou Qinjia
 
   Raam Radex Ráðgjöf Ravebo Relpol Ruyi Ryka
 
-  Sagaplast Samsung Saniva Scandic Scania Sehati Sevtopolis Shichuang 
-  Shimuzu Shouchuang Signity Skeljungur Solakoglu Solox Sparisjóður 
-  SportAccord Srenniw SSDA Stalgast Stiga Struma Synective Syntex
+  Sagaplast Samsung Saniva Scandic Scania Sehati Sevtopolis Shengheng
+  Shichuang Shimuzu Shouchuang Sifute Signity Skeljungur Solakoglu 
+  Solox Sparisjóður 
+  SportAccord Srenniw SSDA Stalgast Stiga Stokrotka Struma Synective 
+  Synrey Syntex
 
   Tekser Telkom Termika Termoavion Termochem Timah Topeko Transearly 
   Tricon Tridaya Tryggingamiðstöðin Tsingtao Tundem Twentebelt
@@ -962,6 +1001,7 @@ my %SINGLE_TYPOS =
   'Kosmos Delhi' => ['kosmos'],
   'Krishnapatnam Port' => ['krishnapatnamport'],
   'Lianzhong Shi Jie' => ['lianzhongshijie'],
+  'Lv Hua' => ['lv hua'],
   'Magpa-Grup' => ['magpa'],
   'Málning hf' => ['málning'],
   Metaforsa => ['metaphorsa'],
@@ -980,6 +1020,7 @@ my %SINGLE_TYPOS =
   'Pro Consul' => ['proconsul', 'consul'],
   'PU Minsel' => ['minsel'],
   'Perusahaan Listrik Negara' => ['pln'],
+  'Phoenix TV' => ['fenghuang'],
   'PT Bayu Buana Gemilang' => ['bbg'],
   'Rigainvites.lv' => ['rigainvites'],
   'SAIC VW' => ['saic'],
@@ -1013,6 +1054,8 @@ my %SINGLE_TYPOS =
   'Viego Regnskap' => ['viego'],
   'Vinex Preslav' => ['vinex'],
   Wellwise => ['wellwiss'],
+  'Xiamen Xiashun' => ['xiashun'],
+  'Xin He Jin Tai' => ['xhjt'],
   'Yeh Bros' => ['yeh', 'yehbros'],
   'Zhejiang Huamen' => ['huamen'],
   'Zhejiang Jingfan' => ['jingfan']

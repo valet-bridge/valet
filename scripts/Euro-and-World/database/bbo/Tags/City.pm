@@ -30,6 +30,7 @@ my @MULTI_WORDS =
   'Courseulles-sur-Mer',
   'Cherven Briag',
   'Czech-Pan',
+  'Doliny Narwi',
   'El-Maadi',
   'Gaziantep Zeugma',
   'Gjøvik og Vardal',
@@ -115,13 +116,15 @@ my %MULTI_TYPOS =
   'Al-Rabwa' => ['rl-rabwa'],
   'Alba Iulia' => ['a iulia'],
   Banjarmasin => ['ksa banjarmasin'],
-  Helsinki => ['city of helsinki'],
+  Dalian => ['da lian'],
   Delhi => ['new delhi'],
   Diyarbakir => ['d.baki b.þ', 'd.bakir b.þ.', 'd.bakir y.þehýr', 
     'd.bakir yenýþehýr', 'd.bakýr b.þehir', 'd.bakir sur', 
     'd.bakýr sur', 'd.bakýr dicle'],
+  'Doliny Narwi' => ['dolina narwi'],
   'Gaziantep Zeugma' => ['g.antep zeugma'],
   Guangzhou => ['guang zhou'],
+  Helsinki => ['city of helsinki'],
   Istanbul => ['ýstanbul'],
   Jakarta => ['jak-tim', 'jak-sel', 'jakarta pusat', 'jakarta utara',
     'dki jaya'],
@@ -163,17 +166,17 @@ my @SINGLE_WORDS = qw(
   Aabenraa Aachen Aalborg Adalar Adana Adapazan Adelaide Agresar 
   Ahmedabad Airmadidi Akhisar Aladag Alcobaça Alexandria Aliaga 
   Allahabad Alta Altea Altinova Altrincham Alytus Ambon Amman 
-  Amsterdam Ankara Annecy Antalya Antony Antwerpen Aqaba Aral 
-  Arendal Asenovec Asenovgrad Askim Asminderød Assis Atakum 
+  Amsterdam Ankara Annecy Antakya Antalya Antony Antwerpen Aqaba 
+  Aral Arendal Asenovec Asenovgrad Askim Asminderød Assis Atakum 
   Atasehir Athens Atlanta Auckland Augsburg Ayacucho Aydin Ayvalik
 
   Babaeski Baghdad Balchik Balaton Balatonföldvár Balikesir Balikpapan 
   Ballerup Ballymena Bamberg Bandung Bangalore Bangkok Banjarmasin 
   Bansi Barcelona Barlinek Batam Bath Batikent Batman Batu Begues 
-  Beijing Beirut Bekasi Belgrade Belfast Bengkalis Bengkulu Beograd 
-  Bereket Bergen Bergues Berkeley Berlin Beyoglu Bhilwara Bhubaneshwar 
-  Biarritz Bielefeld Bikaner Bitung Blitar Bodrum 
-  Bodø Bogor Bogotá Boleslawiec Bologna Bonn Bordeaux Böblingen 
+  Beihai Beijing Beirut Bekasi Belgrade Belfast Bengkalis Bengkulu 
+  Beograd Bereket Bergen Bergues Berkeley Berlin Beyoglu Bhilwara 
+  Bhubaneshwar Bialystok Biarritz Bielefeld Bikaner Bitung Blitar 
+  Bodrum Bodø Bogor Bogotá Boleslawiec Bologna Bonn Bordeaux Böblingen 
   Braila Brandbu Brasilia Brasov Bremen Brevik Brighton Brisbane 
   Broadbeach Bromölla Bruges Brussels Bucharest Budapest Buffalo
   Burghausen Bursa Burdur Buzios Bydgoszcz Bytom Bø
@@ -201,9 +204,9 @@ my @SINGLE_WORDS = qw(
   Gümüşlük Gyor
 
   Haderslev Haikou Hamar Hamburg Hammamet Hangzhou Hanko Hannover 
-  Harplinge Harstad Haskovo Hatay Havirov Hedemora Heikendorf Heledia 
-  Helsinki Hendek Herning Hillerød Hobro Hornbæk Hsinchu Huldretråkket 
-  Hyderabad
+  Harplinge Harstad Haskovo Hatay Havirov Hebi Hedemora Heikendorf 
+  Heledia Helsinki Hendek Herning Hillerød Hobro Hornbæk Hsinchu 
+  Huldretråkket Hyderabad
 
   Iasi Indore Iskenderun Isparta Istanbul Ithaca Izmir
 
@@ -225,8 +228,8 @@ my @SINGLE_WORDS = qw(
   Lausanne Lecco Leiden Leipzig Leksand 
   Lerum Leszno Leuven Leverkusen Lhokseumawe Liepaja Lille Lima 
   Lincoln Lindesberg Linköping Lisbon Liushu Ljubljana Lodi Lodz 
-  Lojdy Lokotok Lom London Lowicz Lublin Ludvikabygden Lufeng 
-  Luleburgaz Lumajang Luzern Lyon
+  Lojdy Lokotok Lom Lomza London Lowicz Lublin Ludvikabygden 
+  Lufeng Luleburgaz Lumajang Luzern Lyon
 
   Maastricht Madrid Magetan Makassar Malang Malatya Malmö 
   Manado Manchester Manila Manisa Manna Mannheim Marbella Mardin 
@@ -235,8 +238,9 @@ my @SINGLE_WORDS = qw(
   Minsk Miramar Miskolc Monticiano Montpellier Moradabad Morud 
   Moscow Moss Mragowo Mudanya Muðla Mulund Mumbai Munich 
 
-  Nagari Nagpur Nagykanizsa Namsos Nanchang Nanchong Nancy Nanning 
-  Napoli Narlidere Narvik Nashik Nazilli Näsby Nesodden Newport 
+  Nagari Nagpur Nagykanizsa Namsos Nanchang Nanchong Nancy Nanjing
+  Nanning Napoli Narlidere Narvik Nashik Nazilli Näsby Neijiang
+  Nesodden Newport 
   Nganjuk Nice Nicosia Niedernhausen Nijmegen Nilüfer Ningbo 
   Niš Noida Norrbyskär Norrøna Nürnberg Nyon Nysa Nærbø Næstved 
   Nøtterøy
@@ -257,7 +261,7 @@ my @SINGLE_WORDS = qw(
 
   Radkov Rakvere Rastignano Ravnkilde Rayong Reims Rennes Reykjavik 
   Riau Rieneck Riga Rijeka Rimini Romana Rome Roskilde Rotterdam 
-  Rottneros Rubbestadneset Rzepin Rzeszow Rødovre
+  Rottneros Rubbestadneset Ruian Rzepin Rzeszow Rødovre
 
   Saarbrücken Sabadell Salerno Salo Salsomaggiore Samarinda Samobor 
   Samsun Sandefjord Santiago Sanya Sariyer Sarpsborg Sawahlunto
@@ -269,15 +273,16 @@ my @SINGLE_WORDS = qw(
   Ski Skien Skopje Slagelse Slawa Sleman Smedstad Smolyan Snåsa 
   Sofia Solok Sopot Sortland Söke Split Stanford Stargard Stavanger 
   Steinkjer Stirling Stockholm Stoholm Storsjöbygden Stureby 
-  Stuttgart Sukma Sukomoro Sumedang Sunndalsøra Surabaya Suzhou 
+  Stuttgart Sukma Sukomoro Sumedang Sunndalsøra Suqian Surabaya 
+  Suzhou 
   Svendborg Sydney Szczecinek Szczyrk Szeged Søborg Sørreisa
 
   Taicang Taichung Tainan Taiyuan Taizhou Takayama Tallinn Tambun 
   Taoyuan Tarakan Targoviste Tarnów Tasikmalaya Taskopru Täby 
-  Täfteå Tekýrdag Telmessos Temuco Thane Thanjavur Thessaloniki 
-  Thoisy Tianjin Tilburg Timisoara Tire Tofta Tokyo Tomohon Tonya 
-  Torino Toshima Toulouse Tours Trabzon Trieste Trondheim Tromsø 
-  Tula Tübingen 
+  Täfteå Tczew Tekýrdag Telmessos Temuco Thane Thanjavur 
+  Thessaloniki Thoisy Tianjin Tilburg Timisoara Tire Tofta Tokyo 
+  Tomohon Tonya Torino Toshima Toulouse Tours Trabzon Trieste 
+  Trondheim Tromsø Tula Tübingen 
 
   Udaipur Uddevalla Umeå Underberg Uppsala Usak Utrecht Uzunköprü
 
@@ -290,7 +295,8 @@ my @SINGLE_WORDS = qw(
 
   Xiamen Xian Xiantao Xinyi Xuzhou
 
-  Yambol Yanshi Yarýmca Yatagan Yizhuang Yokohama Yogyakarta Yuquan
+  Yambol Yanshi Yantai Yarýmca Yatagan Yizhuang Yokohama Yogyakarta 
+  Yuquan Yuzhou
 
   Zagreb Zavet Zegrze Zhaoqing Zhenjiang Zhongshan Zhuzhou Zigong 
   Zonguldak Zürich Zyrardow

@@ -139,6 +139,7 @@ my @MULTI_WORDS =
   'Beautiful Yan',
   'Berre Lækkert',
   'Beverly Hillbillies',
+  'Beyaz Marti',
   'Bid 72',
   'B.I.G.',
   'Big Bang',
@@ -452,11 +453,14 @@ my @MULTI_WORDS =
 
   'H.A.N.E',
   "Hagen's Heroes",
+  'Hai Na Bai Chuan',
+  'Hai Nan Nan Shan',
   'Half Amsterdams',
   'Han Solo',
   'Hands and Hearts',
   'Hannover Four',
   'Hansen Hurricanes',
+  'Hao Ran',
   'Happy Bridge',
   'Happy Couples',
   'Happy Hour',
@@ -512,6 +516,7 @@ my @MULTI_WORDS =
   'Istiklal Yolu',
   'Israeli Dan',
   'Itinérants du bridge',
+  'Iyi Takim',
 
   'Ja re ja',
   'Jacobo y Federico',
@@ -520,6 +525,7 @@ my @MULTI_WORDS =
   'Jane Doe',
   'Jiangsu YY',
   'Jim Team',
+  'JJ Match',
   'Jorunns disipler',
   'Josef and Cards',
   'Joy Division',
@@ -546,6 +552,7 @@ my @MULTI_WORDS =
   'Karlssons frestelse',
   'Karlstads vänner',
   'Kasimirs Dream Team',
+  'Katin kontit',
   'Katt-Bridge',
   'Keep Walking',
   "Keni's Dream",
@@ -880,11 +887,13 @@ my @MULTI_WORDS =
   'Section 26',
   'Secret Shot',
   'Sektion UDV',
+  'Sem Trunfo',
   'Sensus Penduduk',
   'Seths vänner',
   'Seven Eleven',
   'SHE-D',
   'Shenzhen Eagle',
+  'Shiba Inu',
   'Shining Pig',
   'Shiv Shakti',
   'Shojo Tyochin',
@@ -937,6 +946,7 @@ my @MULTI_WORDS =
   'Svenske og ulykke',
   'SWAT Squad',
   'Sweet Is Middle',
+  'Sydän Ja Sielu',
   'Syntax Error',
   'Søta bror',
 
@@ -947,11 +957,8 @@ my @MULTI_WORDS =
   'Tchin Tchin',
   'Tea for 2',
   'Tea Want',
-  'Team Bo a berg',
-  'Texan Aces',
-  'Texan and Turks',
-  'Texan and Yanks',
   'Team Awesome',
+  'Team Bo a berg',
   'Team Doc',
   'Team Mayhem',
   'Team NRK',
@@ -959,6 +966,10 @@ my @MULTI_WORDS =
   'Team Yoda',
   'Teddy Bear',
   'Tempo-Knektene',
+  'Texan Aces',
+  'Texan and Turks',
+  'Texan and Yanks',
+  'Teyzenýn Yerý',
   'The Four Guys',
   'The A Team',
   'The Abacus',
@@ -1032,6 +1043,7 @@ my @MULTI_WORDS =
   'Thick Toast',
   'Third Eye',
   'Thompson Station',
+  'Tian Guan',
   'Tiinan pojat',
   'Þorsteinn Svörfuður',
   'Thread & Needles',
@@ -1148,7 +1160,9 @@ my @MULTI_WORDS =
   'Young Swedes',
   'Young Oldies',
   'Your name?',
+  'Yu Yi Dui',
   'Yuruyen Kosk',
+  'Yuyi Xizi',
 
   'Zaza Boys',
   'Zhejiang Development',
@@ -1186,6 +1200,7 @@ my %MULTI_TYPOS =
   'Bağcı Döven' => ['bagci doven'],
   Baneet => ["Baneet's IV"],
   'Bangkok Kimono' => ['bangkok kimino'],
+  'Baris hemen simdi' => ['Barýþ Hemen Þimdi'],
   Begijntje => ['begijnt je'],
   'Best uten kort' => ['best uden kort'],
   'Beverly Hillbillies' => ['beverly hillbillie'],
@@ -1246,6 +1261,7 @@ my %MULTI_TYPOS =
   "Hagen's Heroes" => ["hagen`s heroes", 'hagens heroes'],
   Hammershark => ['hammershark deluxe'],
   'Hands and Hearts' => ['hands & hearts'],
+  'Hao Ran' => ['hao-ran'],
   'Heldige Olav' => ['heldige olav :)'],
   "Hell's Angels" => ['hells angels'],
   'Her vantar blaðsíðu' => ['her vantar bladsidu'],
@@ -1259,6 +1275,7 @@ my %MULTI_TYPOS =
   'Hvalen og tjukkasene' => ['hvalen og tjukkasne', 'hvalen & tjukkasene'],
   'Høyland & Kjell-Vidar' => ['høyland&kjell-vidar',
     'høyland&kjellvidar'],
+
   'Ice Jacks' => ['ice jack', 'ice jaks'],
   'Ikke akkurat kjedelig' => ['ikke akkurat kjedel'],
   'India Blues' => ['indian blues'],
@@ -1266,6 +1283,7 @@ my %MULTI_TYPOS =
     'mavericks all stars', 'mav prodigies', 'mavericks prodigies',
     'maverick all star', 'maverick all stars'],
   'Itinérants du bridge' => ['iti du bridge', 'itin du bridge'],
+  'Iyi Takim' => ['Ýyý Takim'],
 
   'Jamm & Co' => ['jamm & co.', 'jamm && co.'],
   'Junioren mit Upgrade' => ['junioren mit upgra'],
@@ -1340,6 +1358,7 @@ my %MULTI_TYPOS =
   'Sakurai' => ['japan sakurai'],
   'Sannas Änglar' => ['sannas äangler'],
   'Sektion UDV' => ['section udv'],
+  'Sem Trunfo' => ['sem trumfo'],
   'Silver Eagle' => ['silver  eagle'],
   'Sivves straffdubbl' => ['sivves straffdubbl.', 'sivves straffdbl',
      'sivves...'],
@@ -1392,6 +1411,7 @@ my %MULTI_TYPOS =
   'Yellow and Blue' => ['yellow&blu'],
   'Young and Broke' => ['young&broke'],
   'You Never Walk Alone' => ['you never walk'],
+  'Yuyi Xizi' => ['yuyi(xizi)'],
 
   'Zhejiang Development' => ['zhejiang fazhan']
 );
@@ -1421,9 +1441,9 @@ my @SINGLE_WORDS = qw(
    Eagles Eastward Eliminator Emerald Engineers Enigma Enjoy 
    Everest Evil 
 
-   Fantasia Fant4stic Farmen Farmers Fenesta Filosofene Finest 
-   Fisk Forfot Formidables Frenemies Friends Francophones Freak 
-   Frirond Frivolt 
+   Fantasia Fant4stic Farmen Farmers Fenesta Filbyter Filosofene 
+   Finest Fisk Forfot Formidables Frenemies Friends Francophones 
+   Freak Frirond Frivolt 
 
    Galaxy Gehaktmolen Gentle Geriatrix Geysir Giants GloryGlory 
    Goldcat Gosho Grand Grads Gris Gruken Guests Gulebjorn Gunsmoke 
@@ -1488,7 +1508,7 @@ my @SINGLE_WORDS = qw(
 
    Xman Xtrouble XXX XXXL XXXSL XXXXXYXY
 
-   Zombi Zorro Zugzwang 
+   Zhanma Zombi Zorro Zugzwang 
 );
 
 my %SINGLE_TYPOS =

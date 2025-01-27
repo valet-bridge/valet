@@ -28,8 +28,10 @@ my %MULTI_TYPOS =
     'Fatýh KSK'],
   'Lawang Salapan' => ['lawang salapan kota'],
   Lozenets => ['vs lozenec', 'vv lozenets', 'v v lozenets'],
+  Nanshan => ['nan shan'],
   Pudong => ['pu dong'],
-  Taihu => ['tai hu']
+  Taihu => ['tai hu'],
+  Wenang => ['wenang sp'],
 );
 
 my @SINGLE_WORDS = qw(
@@ -39,14 +41,15 @@ my @SINGLE_WORDS = qw(
   Çayyolu Cemara Changning Chelsea Chislehurst Courseulles
   Ege Esenkent
   Fatih Freidorf Fukien
-  Gardermoen Göktürk Gundogan
+  Gardermoen Göktürk Gucheng Gundogan
   Heimdal Hirabaug Huochetou
+  Incirli
   Jarville Jomtien
   Kadikoy Karaçay Kardelen Kartal Katok Kaylaka
   Kocamustafapasa Konak Korwin Kucukcekmece Kurtulus Küp
   Lappee Leilem Lemvourgeio Losari Lozenets
   Maadi Makaliwe Manahasa Männiku Meski Mrzenci Muratpasa
-  Nagbagan Narita Narlidere Niski
+  Nagbagan Nanshan Narita Narlidere Niski
   Olgiata
   Parioli Piloni Pinarbasi Polonezkoy Poncol Pudong Puzhong
   Qiaoxie
@@ -57,10 +60,10 @@ my @SINGLE_WORDS = qw(
   Taihu Tengah Tianya
   Uccle Unaós
   Varbergshus Viþnelik
-  Wadas Wratislavia Wroble Wujiang
+  Wadas Wenang Wratislavia Wroble Wujiang Wuyuanhe
   Yalikavak Yangpu Yarimca Yenisehir Yizhuang Yildirim Yuquan
   Yvelines
-  Zhujiang
+  Zaohe Zhujiang
 );
 
 my %SINGLE_TYPOS =

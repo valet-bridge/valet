@@ -145,8 +145,11 @@ my %MULTI_TYPOS =
     'Fylke Innlandet' => ['hedmark og oppland'],
   'East Nusa Tenggara' => ['nusa tenggara timur'],
   Guangdong => ['guangdong province', 'guang dong'],
+  Hainan => ['hai nan'],
+  Huabei => ['hua bei'],
   Hubei => ['hu bei'],
   Jiangsu => ['jiang su'],
+  Jiangxi => ['jiang xi'],
   Jilin => ['ji lin'],
     'Kabupaten Bekasi' => ['bekasi regency', 'kab bekasi',
     'kab.bekasi', 'kab. bekasi'],
@@ -225,8 +228,8 @@ my @SINGLE_WORDS = qw(
   Feixiang Fjends Florida
   Ganges Gansu Gauteng Goa Gorontalo Guangdong Guangxi 
   Guizhou Gujarat
-  Hainan Haixing Hatay Haugaland Hebei Hedmark Hegyvidék Hordaland
-  Hubei Hunan
+  Hainan Haixing Hatay Haugaland Hebei Hedmark Hegyvidék Henan
+  Hordaland Huabei Hubei Hunan
   Iberia
   Jalisco Jharkhand Jiangsu Jiangxi Jilin
   Kansai Kanto Karadeniz Karnataka Kawanua Kedungwaru Kerala 
