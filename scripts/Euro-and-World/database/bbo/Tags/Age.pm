@@ -45,7 +45,7 @@ my %SINGLE_TYPOS =
   U21 => [qw(youngster youngsters young youth yoth younth
     yongster yougerters genclik gençlik gençlýk genç)],
   U26 => [qw(juniiors juniores junior jrs jr jt junioor
-    junios juniot juniours junniors junor
+    junios juniot juniours junniors junor juniori
     yuniors yunior juniorit jun juniorerna
     students)],
   Girls => [qw(girl gir jenter dziewczêta)]

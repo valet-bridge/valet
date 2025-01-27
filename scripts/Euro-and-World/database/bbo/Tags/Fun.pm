@@ -60,6 +60,7 @@ my @MULTI_WORDS =
   '88 Merah Senior',
   '88 Senior',
 
+  'A Maze',
   'A Team',
   'A2',
   'Ace up Our Sleeve',
@@ -118,10 +119,12 @@ my @MULTI_WORDS =
   'Bad Beat',
   'Bad Man',
   'Bağcı Döven',
+  'Bangkok Kimono',
   'Bar-Su',
   'Bara brudar',
   'Baris hemen simdi',
   'Barny Army',
+  'Baska Yok',
   'Bastion Smaku',
   'BBO Lovers',
   'Bea & Family',
@@ -184,6 +187,7 @@ my @MULTI_WORDS =
   'Boye B Fan Club',
   "Boys'n' Girls",
   'Brian Is Beautiful',
+  'Bridge Code',
   'Bridge Fan',
   'Bridge Friends',
   'Bridge Hunters',
@@ -213,12 +217,14 @@ my @MULTI_WORDS =
   'Carstens Kofötter',
   'Casino Floor',
   'Casino Royal',
+  'Cast Bordo',
   'Cathy & Ewa',
   'Cat Daddy',
   'Cecils venner',
   'Cha Cha Cha',
   'Chateau Latour',
   'Cherno More',
+  'Czech i trzech',
   'China Development',
   'Circle the World',
   'Cim Bom Bom',
@@ -624,6 +630,7 @@ my @MULTI_WORDS =
   'Lucky 13',
   'Lupii Galbeni',
   'Lynx and Co',
+  'Lyubimetz 13',
   'Lått løye',
 
   'M W',
@@ -632,7 +639,9 @@ my @MULTI_WORDS =
   "M' Orange",
   'Ma-Cartoon',
   'Ma&&Mü@Ma2',
+  'Madam Mimm',
   'Maddes pojkar',
+  'Madera czyli chill',
   'Magic Eyes',
   'Magnus er best',
   'Mama Lauda',
@@ -667,6 +676,7 @@ my @MULTI_WORDS =
   'Modesty Blaise',
   'Molto Bene',
   'Monotone Memories',
+  'Monty Zeebergs FC',
   'Moo York Nix',
   'Moral Power',
   'Mostly Harmless',
@@ -814,10 +824,12 @@ my @MULTI_WORDS =
   'R1S5 Initials',
   'Ra Ma Ra Him',
   'Radio Communication',
+  'Radkov Trash',
   'Randers 2.0',
   'Randers 4.0',
   'Ranger Pink',
   'Rapan & Jezus',
+  'Real Maramma',
   'Red Ash',
   'Red Beach',
   'Red Hat',
@@ -854,6 +866,7 @@ my @MULTI_WORDS =
   'Ruter 9',
 
   'S(h)aman',
+  'Sabarian + LuBu',
   'Saint Titus',
   'Salten rundt',
   'Sam23',
@@ -907,7 +920,7 @@ my @MULTI_WORDS =
   'Spjett Spjong',
   'Stabby with Youngsters',
   'Stara Gara',
-  'Steng Oslo nå'.
+  'Steng Oslo nå!'.
   'Still Going Turbo',
   'Still Water Runners',
   'Stone Cutters',
@@ -1044,6 +1057,7 @@ my @MULTI_WORDS =
   'Triple Nine',
   'Troll i eske',
   'Trump No More',
+  'Trzech i Czech',
   'Tut tut',
   'Twitch Chat',
 
@@ -1171,6 +1185,7 @@ my %MULTI_TYPOS =
   'Babes Amazones' => ['babes-amazones'],
   'Bağcı Döven' => ['bagci doven'],
   Baneet => ["Baneet's IV"],
+  'Bangkok Kimono' => ['bangkok kimino'],
   Begijntje => ['begijnt je'],
   'Best uten kort' => ['best uden kort'],
   'Beverly Hillbillies' => ['beverly hillbillie'],
@@ -1264,6 +1279,7 @@ my %MULTI_TYPOS =
   'Kisa metraj' => ['ksk kisa metraj'],
   'Koos Bros' => ['Koos Bro´s', "koos bro's"],
   'Kungshamns Sega Gubbar' => ['kungshamns sega gub'],
+  'Kuvayi Milliye' => ['kuvai milliye'],
 
   "L'Orange" => ["l' orange"],
   'La Linea med eller uten ball' => ['la linea med ell', 
@@ -1293,6 +1309,7 @@ my %MULTI_TYPOS =
   'Missão Impossivel' => ['missão impossível'],
   'Monotone Memories' => ['monotona memories',
     'monotona memoirs'],
+  'Monty Zeebergs FC' => ['monty zeebergs', 'minty zeebergs fc'],
   'Mr Blackout' => ['mr.blackout'],
   'Ms. Guggenheim' => ['ms. gugenheim'],
   'Murphys lag' => ['murpyhs lag'],
@@ -1337,7 +1354,7 @@ my %MULTI_TYPOS =
   'Superheroes in Training' => ['superheroes in trai'],
   'Support from Holland' => ['support from hollan'],
 
-  'Team NRK' => ['tram nrk'],
+  'Team NRK' => ['tram nrk', 'tm nrk'],
   'Tempo-Knektene' => ['tempo-knehtene'],
   'Texan Aces' => ['texa aces', 'texaan aces', 'texan  aces',
     'tn aces'],
@@ -1409,7 +1426,7 @@ my @SINGLE_WORDS = qw(
    Frirond Frivolt 
 
    Galaxy Gehaktmolen Gentle Geriatrix Geysir Giants GloryGlory 
-   Goldcat Gosho Grand Grads Gris Guests Gulebjorn Gunsmoke 
+   Goldcat Gosho Grand Grads Gris Gruken Guests Gulebjorn Gunsmoke 
    Gwenchanna
 
    Hangarounds Happy Hawks Hästpojkarna HERZdame HeSa Hey 

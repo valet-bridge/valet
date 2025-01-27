@@ -22,6 +22,7 @@ my @MULTI_WORDS =
   'ABB Tomas',
   'Ai Bait',
   'Air Traffic Management',
+  'AJD & Varna',
   'Aka Maru',
   'Aklindo Musi 88',
   'Alunand Plus',
@@ -89,6 +90,7 @@ my @MULTI_WORDS =
   'DK Nationalchampion',
   'DK-Tworzywa',
   'DKI Maesa',
+  'Doca Bridge',
   'Dong Ming',
   'Dong Qi 9',
   'Dr. Gittipatq',
@@ -163,6 +165,7 @@ my @MULTI_WORDS =
   'KM 23',
   'KOC67',
   'Kong Chou',
+  'Korry and Trenk',
   'Kozyrnye Oleni',
   'KM AT',
   'KSK Deniz',
@@ -196,6 +199,7 @@ my @MULTI_WORDS =
   'Mike Lawrence Club',
   'Minas Trith',
   'Mo i Raneran',
+  'Mo Yan',
   'Moki011',
   'Monte Carlos',
   'Multi Gen Indonesia',
@@ -228,6 +232,7 @@ my @MULTI_WORDS =
   'Park Bridge',
   'Poismenon Vaari',
   'POL-CH',
+  'Polar Star',
   "Pradeep's Four",
   "President's Team",
   "Priya's Four",
@@ -276,6 +281,7 @@ my @MULTI_WORDS =
   'Team Lanka',
   'Team Z',
   'Teyzenin Yeri',
+  'Tida-Steli',
   'The Lombard',
   "The Naising's",
   'Til Valhall',
@@ -292,6 +298,7 @@ my @MULTI_WORDS =
   'Umisen Yamasen',
   'Umut Baris',
   'Unelmien Piina',
+  'University Union Team',
 
   'Valar Morghulis',
   'Villi Jr.',
@@ -309,7 +316,8 @@ my @MULTI_WORDS =
   'Yura Taschit',
 
   'Zara Bridge',
-  'Zen Ho'
+  'Zen Ho',
+  'Zuid West'
 );
 
 my %MULTI_TYPOS =
@@ -318,7 +326,10 @@ my %MULTI_TYPOS =
   'AIC' => ['a i c'],
   'Air Traffic Management' => ['air traffic managem', 'air-trfc',
     'air-trf'],
+  'AJD & Varna' => ['ajd&varna'],
   'Aklindo Musi 88' => ['musi 88', 'musi88'],
+  'Alunand Plus' => ['alunand pdg prm',
+    'alunand pdgpariaman', 'alunand pdg pariama'],
   Arnab => ["arnab's"],
   Azores => ['açores team'],
   Ayan => ["ayan's"],
@@ -371,6 +382,8 @@ my %MULTI_TYPOS =
   'Multi Gen Indonesia' => ['multi gen ina'],
   'Møllers Team' => ['møllers t'],
 
+  Obezit => ['obezit tatilde', 'obezit intl'],
+
   "Pal's Four" => ["pal's"],
   "Pradeep's Four" => ["pradeep's 4", "Pradeep's Team"],
   "President's Team" => ["president's"],
@@ -387,6 +400,9 @@ my %MULTI_TYPOS =
   'Spring Foursomes' => ['spring 4s', 'spring fours', "spring 4's"],
 
   "Tor Ivar's" => ['tor ivars'],
+
+  'University Union Team' => ['union team', 'university unions',
+    'university union'],
 
   'Valar Morghulis' => ['valar morgulis'],
 
@@ -449,10 +465,10 @@ my @SINGLE_WORDS = qw(
    Lianas Liban Lillebaluba Lipa Lira Livius Ljónin LNWers Lo 
    Loaknath Lolly Longzhu LOS Lowel Löparn LPMS LXA Lyubcho 
 
-   Makara Makriköy Malmölaget Marosamitawa Marynarz Masal Matujona 
-   Mavs Mayamira Mer Mesna MGM MGTH Minut MMRMC Mochu 
-   Monaconf Morot Mostingan Movember Mölnlycke MPEC MRSMC Muumio 
-   Mýna Møremix 
+   Makara Makriköy Malmölaget Marosamitawa Marpalaki Marynarz Masal 
+   Matujona Mavs Mayamira Mer Mercury Mesna MGM MGTH Minut MMRMC 
+   Mochu Monaconf Morot Mostingan Movember Mölnlycke MPEC MRSMC 
+   Muumio Mýna Møremix 
 
    Nadide Narbisk Narre Necos Neduk Nessuno Nikotiimi 
    Nislije NMRT NoNed Noralia Norsu NOS Noto NTiosagutta Nula
@@ -549,6 +565,7 @@ my %SINGLE_TYPOS =
   Pagonia => ['pagonya'],
   Patagonia => ['patagonya'],
   Paulistas => ['paulistanas'],
+  'Polar Star' => ['polar star'],
   Prasetya => ['prasetia'],
   "President's Team" => ['president', 'presidents'],
 

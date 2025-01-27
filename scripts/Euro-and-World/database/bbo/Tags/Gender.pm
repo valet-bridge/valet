@@ -21,7 +21,7 @@ my %MULTI_TYPOS =
   Mixed => ['cat mixtas', 'categorías mixtas'],
   Open => ['open´s', 'open series'],
   Women => ["ladies's", "ladies'", "woman's", "women's", 'for ladies',
-    'womwn'],
+    'womwn', 'damene'],
 );
 
 my @SINGLE_WORDS = qw(

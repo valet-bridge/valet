@@ -61,6 +61,7 @@ my @MULTI_WORDS =
   'Bharat Bhosale',
   'Bimal Sicka',
   'Birkir Jonsson',
+  'Bora Unver',
   'Brian Senior',
   'Brigitta Fischer',
   'Buddy Shah',
@@ -74,6 +75,7 @@ my @MULTI_WORDS =
   'Carlos Santos',
   'Carlos Teixeira',
   'Carole Puillet',
+  'Carolina Pimenta',
   'Chalermpol Wongwaiwit',
   'Charlie Lee',
   'Choo Wai Wong',
@@ -230,6 +232,7 @@ my @MULTI_WORDS =
   'Josef Blass',
   'José Dias',
   'José Moraes',
+  'José Pastor',
   'Jozef Pochron',
   'Jörg Fritsche',
   'Jörgen Lindqvist',
@@ -322,6 +325,7 @@ my @MULTI_WORDS =
   'Murray Green',
   'Lars Møller Sørensen',
   'N. Chakraborty',
+  'N. Gupta',
   'N.R.K. Moorthi',
   'Nabil Chaker',
   'Nabil Edgtton',
@@ -475,6 +479,7 @@ my @MULTI_WORDS =
   'Villas Boas',
   'Vincent LI',
   'Visalakshi Narayanan Ramamoorthy',
+  'Viviane Gonçalves Pereira',
   'W.W. Cho',
   'Waleed El Ahmady',
   'Wang Yuan Wei',
@@ -671,6 +676,7 @@ my %MULTI_TYPOS =
     'jorel8', 
     'castanheira',
     'j.castanheira'],
+  'Jorge Cruzeiro' => ['j cruzeiro'],
   'José Moraes' => ['josé morae', 'jose moraes'],
   'Joshi Sanghi' => ['dr.joshi', "dr.sanghi'siv",
     "dr. joshi's - sangl", "dr. sanghvi's  vi", 'dr. joshi sangli'],
@@ -746,8 +752,8 @@ my %MULTI_TYPOS =
   'Migry Zur-Campanile' => ['zur-campanile'],
   'Miguel Sousa Guedes' => ['miguel s guedes', 'm. sousa guedes',
     'sousa guedes'],
-  'Miguel Teixeira' => ['miguel teixeira', 
-    'm. teixeira', 'm.teixeira'],
+  'Miguel Teixeira' => ['m. teixeira', 'm.teixeira', 
+    'm teixeira'],
   'Mikud Mannid' => ['mikud-mannid'],
   'Mohit Mehta' => ['mohit mehata', 'mohit meheta'],
   'Monica Jajoo' => ['monika jajoo', 'm.jajoo'],
@@ -999,7 +1005,7 @@ my @SINGLE_WORDS = qw(
   Kent Keremida Kersey Kesgin Khandelwal Khazanov Khyuppenen 
   Kilani Kilvington King Kiran Kiriakidoy Kirilenko Kishan 
   Kizikli Klapper Klimacki Klimentowska Klinger Klofa Klukowski 
-  Knap Knight Kocak Koistinen Koivula Kokkes Koken Kokten 
+  Knap Knight Kocak Koistinen Koivula Kokali Kokkes Koken Kokten 
   Kolankaya Kolata Kolesnik Kollnes Kolonkaya Konckier Kondoch 
   Konefal Koneru Kopecky Koppel Korbel Kordov Korkmaz Korkut Korth 
   Kosaka Kosti Kotányi Kotinas Kotronarou Koumetz Kovacs Kovachev 

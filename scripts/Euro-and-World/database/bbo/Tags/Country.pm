@@ -72,6 +72,7 @@ my %MULTI_TYPOS =
   'French Guyana' => ['french guayana', 'french guiana'],
   'Great Britain' => ['g.britain'],
   'Hong Kong' => [
+    'china hong hong', 
     'china hong kong', 
     'china hongkong', 
     'china honk kong',

@@ -23,8 +23,9 @@ my @MULTI_WORDS =
   'Banora Point',
   'Belo Horizonte',
   'Bielsko-Biala',
-  'Buenos Aires',
   'Boven Digoel',
+  'Buenos Aires',
+  'Buri Ram',
   'Chapel Hill',
   'Courseulles-sur-Mer',
   'Cherven Briag',
@@ -81,6 +82,7 @@ my @MULTI_WORDS =
   'San Marino City',
   'San Servolo',
   'São Paulo',
+  'São Vicente',
   'Schwäbisch Hall',
   'Seine-et-Marne',
   'Semburat Jingga',
@@ -142,16 +144,19 @@ my %MULTI_TYPOS =
   'São Paulo' => ['sao paulo'],
   'Siddha Eden Lakeville' => ['siddha eden', 'sidhha eden', 'siddha-eden'],
   'Silesia Gliwice' => ['silezia gliwice', 'silesia i gliwice'],
+  'St Louis' => ['washington st louis'],
   Taicang => ['tai cang'],
   'Taihu Lake' => ['suzhou taihu'],
   Tainan => ['tai nan'],
   Tasikmalaya => ['kota tasikmalaya'],
+  Tula => ['tuhla ruse'],
   'Villa Fabbriche' => ['v.fabbr.', 'villa fabb.', 'v. fabbriche',
     'v.fabbriche'],
   'Vrnjacka Banja' => ['vrnjacka banja - al'],
   Wuhan => ['wu han'],
   Yogyakarta => ['di jogjakarta', 'd i yogyakarta', 'di yogya',
-    'di yogyakarta']
+    'di yogyakarta'],
+  Zavet => ['obshtina zavet']
 );
 
 my @SINGLE_WORDS = qw(
@@ -190,9 +195,9 @@ my @SINGLE_WORDS = qw(
   Farsund Fethiye Firenze Flekkefjord Foca Fosnavåg Frankfurt 
   Fredrikstad Freiburg Fritzlar Funchal Fuzhou Førde
 
-  Galway Garches Gdansk Gdynia Gelibolu Genoa Gent Gevgelija Geyve 
-  Giresun Giza Glasgow Gnesta Gniezno Gorzow Gölcük Göteborg Gresik 
-  Grogol Groningen Guangdong Guangzhou Guayaquil Gudbrandsdal 
+  Galway Garches Gävle Gdansk Gdynia Gelibolu Genoa Gent Gevgelija 
+  Geyve Giresun Giza Glasgow Gnesta Gniezno Gorzow Gölcük Göteborg 
+  Gresik Grogol Groningen Guangdong Guangzhou Guayaquil Gudbrandsdal 
   Gümüşlük Gyor
 
   Haderslev Haikou Hamar Hamburg Hammamet Hangzhou Hanko Hannover 
@@ -231,13 +236,14 @@ my @SINGLE_WORDS = qw(
   Moscow Moss Mragowo Mudanya Muðla Mulund Mumbai Munich 
 
   Nagari Nagpur Nagykanizsa Namsos Nanchang Nanchong Nancy Nanning 
-  Napoli Narlidere Narvik Nashik Nazilli Näsby Newport Nganjuk 
-  Nice Nicosia Niedernhausen Nijmegen Nilüfer Ningbo Niš Noida 
-  Norrbyskär Norrøna Nürnberg Nyon Nysa Nærbø Næstved Nøtterøy
+  Napoli Narlidere Narvik Nashik Nazilli Näsby Nesodden Newport 
+  Nganjuk Nice Nicosia Niedernhausen Nijmegen Nilüfer Ningbo 
+  Niš Noida Norrbyskär Norrøna Nürnberg Nyon Nysa Nærbø Næstved 
+  Nøtterøy
 
   Odense Odmet Ogndal Oldenburg Olrud Olsztyn Oltenita Opatija 
-  Ordu Orhangazi Osaka Ostend Oslo Osnabrück Ottadalen Otepää 
-  Oxford Ozarow Örebro Överum
+  Opole Ordu Orhangazi Osaka Ostend Oslo Osnabrück Ottadalen 
+  Otepää Oxford Ozarow Örebro Överum
 
   Padang Padova Paimado Palembang Palermo Palma Palu Pamukkale 
   Pancevo Panzhihua Pariaman Paris Pärnu Pasuruan Pattaya Pau 
@@ -266,11 +272,12 @@ my @SINGLE_WORDS = qw(
   Stuttgart Sukma Sukomoro Sumedang Sunndalsøra Surabaya Suzhou 
   Svendborg Sydney Szczecinek Szczyrk Szeged Søborg Sørreisa
 
-  Taicang Taichung Tainan Taizhou Takayama Tallinn Tambun Taoyuan
-  Tarakan Targoviste Tarnów Tasikmalaya Taskopru Täby Täfteå 
-  Tekýrdag Telmessos Temuco Thane Thanjavur Thessaloniki Thoisy Tianjin 
-  Tilburg Timisoara Tire Tofta Tokyo Tomohon Tonya Torino 
-  Toshima Toulouse Tours Trabzon Trieste Trondheim Tromsø Tübingen 
+  Taicang Taichung Tainan Taiyuan Taizhou Takayama Tallinn Tambun 
+  Taoyuan Tarakan Targoviste Tarnów Tasikmalaya Taskopru Täby 
+  Täfteå Tekýrdag Telmessos Temuco Thane Thanjavur Thessaloniki 
+  Thoisy Tianjin Tilburg Timisoara Tire Tofta Tokyo Tomohon Tonya 
+  Torino Toshima Toulouse Tours Trabzon Trieste Trondheim Tromsø 
+  Tula Tübingen 
 
   Udaipur Uddevalla Umeå Underberg Uppsala Usak Utrecht Uzunköprü
 
@@ -285,8 +292,8 @@ my @SINGLE_WORDS = qw(
 
   Yambol Yanshi Yarýmca Yatagan Yizhuang Yokohama Yogyakarta Yuquan
 
-  Zagreb Zegrze Zhaoqing Zhenjiang Zhongshan Zhuzhou Zigong Zonguldak
-  Zürich Zyrardow
+  Zagreb Zavet Zegrze Zhaoqing Zhenjiang Zhongshan Zhuzhou Zigong 
+  Zonguldak Zürich Zyrardow
 
   Ørland Østerdal
 

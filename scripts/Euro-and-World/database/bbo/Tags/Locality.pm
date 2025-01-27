@@ -40,7 +40,7 @@ my @SINGLE_WORDS = qw(
   Ege Esenkent
   Fatih Freidorf Fukien
   Gardermoen Göktürk Gundogan
-  Heimdal Huochetou
+  Heimdal Hirabaug Huochetou
   Jarville Jomtien
   Kadikoy Karaçay Kardelen Kartal Katok Kaylaka
   Kocamustafapasa Konak Korwin Kucukcekmece Kurtulus Küp
@@ -59,6 +59,7 @@ my @SINGLE_WORDS = qw(
   Varbergshus Viþnelik
   Wadas Wratislavia Wroble Wujiang
   Yalikavak Yangpu Yarimca Yenisehir Yizhuang Yildirim Yuquan
+  Yvelines
   Zhujiang
 );
 
@@ -73,6 +74,7 @@ my %SINGLE_TYPOS =
   Fatih => ['fatýh'],
   'Fatih Karagümrük' => ['karagümrük', 'karagumruk'],
   Göktürk => ['gokturk'],
+  Hirabaug => ['hirabag'],
   Heimdal => ['heimdalbc'],
   Kadikoy => ['kadiköy'],
   Küp => ['kup'],
