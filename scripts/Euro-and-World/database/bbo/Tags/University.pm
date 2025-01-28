@@ -85,6 +85,7 @@ my @MULTI_WORDS =
   'National Taiwan Ocean University',
   'National Taiwan University',
   'National Tsing Hua University',
+  'National Yang Ming Chiao Tung University',
   'Northwestern University',
   'Osaka University',
   'Osmangazi University',
@@ -145,6 +146,7 @@ my @MULTI_WORDS =
   'Universität Potsdam',
   'Valahia University',
   'Warsaw University of Technology',
+  'Wijaya Kusuma University',
   'Wroclaw University of Science and Technology',
   'Xuzhou Institute of Technology',
   'Yildiz Technical University',
@@ -227,6 +229,7 @@ my %MULTI_TYPOS =
   'National Taiwan University' => ['abc_e', 'btu-p', 'btu-u', 
     'btu-y', 'ntu-pac'],
   'National Tsing Hua University' => ['tsinghua university'],
+  'National Yang Ming Chiao Tung University' => ['nycu-c'],
   'Osaka University' => ['osaka univ', 'osaka.univ'],
   'Osmangazi University' => ['osmangazi uni'],
   'Paris-Sud University' => ['paris-sud universit'],
@@ -302,6 +305,7 @@ my %MULTI_TYPOS =
   'University of Wroclaw' => ['uni wroclaw'],
   'Universität Potsdam' => ['uni potsdam'],
   'Warsaw University of Technology' => ['warsaw ut'],
+  'Wijaya Kusuma University' => ['surabaya kusuma'],
   'Wroclaw University of Science and Technology' => 
     ['polit wroclaw', 'polite wroclaw', 'polit wr', 'politechnika wr', 
     'azs pw', 'politehnica cluj', 'poli cluj', 'poli', 'azs invit'],
@@ -318,7 +322,7 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  'Andalas University' => ['unand'],
+  'Andalas University' => ['unand', 'agbc'],
   'Bilkent University' => ['bilkent'],
   'Brawijaya University' => ['brawijaya'],
   'Chang Gung University' => ['cgu'],

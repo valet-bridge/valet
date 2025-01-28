@@ -34,7 +34,7 @@ my @SINGLE_WORDS = qw(
 
    Ece Edi Eliza Ellen Emre Eren Eric Erikas Erla Ewa
 
-   Felix Fenia Fharon Fifi Frank Franz 
+   Felix Fenia Fharon Fifi Filippo Frank Franz 
 
    Garry George Greta Gulce Guptas Gürsel
 

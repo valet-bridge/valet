@@ -15,6 +15,8 @@ my @MULTI_WORDS =
 (
   '07', 
 
+  'a-TMPC',
+  'Absolut Bridge',
   'A.C.L.A.',
   'A.z.f.e.n.a',
   'A Takimi',
@@ -79,6 +81,7 @@ my @MULTI_WORDS =
   'Daqin Xinghan',
   'Daqin Xinghua',
   'Daqing Xinghan',
+  'Dauna Winazza',
   'Deccan Chargers',
   'Deceptive AHM',
   'Delhi Diamonds',
@@ -211,6 +214,7 @@ my @MULTI_WORDS =
   'Mumbai Indians',
   'MY-Bridge',
   'myvatnhotel.is',
+  'Mýra Kontrat',
   'Møllers Team',
 
   "'n Vidar & Andersen",
@@ -219,6 +223,7 @@ my @MULTI_WORDS =
   'Nazar Boncugu',
   'Nazionale Cantanti',
   'NBS Lind',
+  'New Chi',
   'Novi Tim',
   'NT-iosa-gutta',
 
@@ -253,6 +258,7 @@ my @MULTI_WORDS =
   'Roheline Lammas',
   'RPB Leader',
 
+  'S-K',
   'Saevar Karl',
   'San Sac',
   'San3PDX',
@@ -264,6 +270,7 @@ my @MULTI_WORDS =
   'Scottish President',
   'Seckin C',
   'Sengkol Lombok',
+  'Sfora Bez Cibora',
   'Sham Sharma',
   'Shegoestobadat8',
   'Si Fu Te',
@@ -277,6 +284,7 @@ my @MULTI_WORDS =
   'SPG Club',
   'Spring Foursomes',
   'Stall Dieden',
+  'Stojanov Izbor',
   'Swami Samarth',
   'Såpjohansen & co',
 
@@ -309,6 +317,7 @@ my @MULTI_WORDS =
   'Villi Jr.',
   'Visoki Napon',
 
+  'Waldi-S',
   'Wan Jian Club',
   'Wei De',
   'Wei Ming Dui',
@@ -322,6 +331,7 @@ my @MULTI_WORDS =
   "Yttakjær`s",
   'Yura Taschit',
 
+  'Zabina i Zolza',
   'Zara Bridge',
   'Zen Ho',
   'Zhong Jia Lian Dui',
@@ -350,6 +360,7 @@ my %MULTI_TYPOS =
 
   Crossfatek => ['cross fatek'],
 
+  'Dauna Winazza' => ['daunna winazza', 'dauna winazaa'],
   'Deceptive AHM' => ['deceptive  ahm'],
   'Delhi Gym Aces' => ['d g aces', 'dgc aces'],
   'DK Notus' => ['notus df'],

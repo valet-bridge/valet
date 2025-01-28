@@ -68,8 +68,10 @@ my @MULTI_WORDS =
   'Kepulauan Seribu',
   'Kayong Utara',
   'Khon Kaen',
+  'Kotawaringin Timur',
   'Kutai Kartanegara',
   'KwaZulu Natal',
+  'Lofoten og Vesterålen',
   'Lower Silesia',
   'Madhya Pradesh',
   'Midt Trøndelag',
@@ -181,6 +183,7 @@ my %MULTI_TYPOS =
   'Kabupaten Solok' => ['kab.solok'],
   'Kepulauan Seribu' => ['kep.seribu'],
   'Kutai Kartanegara' => ['kutai kartanega'],
+  'Lofoten og Vesterålen' => ['lofoten og veste'],
   'Lower Silesia' => ['dolny slask'],
   Maharashtra => ['maharashtra e', 'maharashtra f',
     'maharashtra state'],
@@ -190,12 +193,17 @@ my %MULTI_TYPOS =
   'Nakhon Pathom' => ['nakhom prathom', 'nakhon prathom'],
   'Nord Trøndelag' => ['nord -trøndelag', 'nord-trøndelag',
     'nord-trløndelag'],
-  'North Sulawesi' => ['notth sulawesi', 'north sulawsei',
-    'sulawesi utara', 'sulawasi utara', 'suluwesi utara'],
+  'North Sulawesi' => [
+    'north sulawsei',
+    'notth sulawesi', 
+    'sulawasi utara', 
+    'sulawesi utara', 
+    'sulawusi utara',
+    'suluwesi utara'],
   'North Minahasa' => ['minahasa utara'],
-  'North Sulawesi' => ['sulawesi utara', 'sulawusi utara'],
   'North Sumatra' => ['sumatera utara'],
   'Pearl River' => ['pearl riv', 'pearl r'],
+  Prachinburi => ['prachin buri'],
   Qiantang => ['qian tang'],
   Sichuan => ['si chuan'],
   'South Jakarta' => ['jakarta selatan'],
@@ -240,7 +248,7 @@ my @SINGLE_WORDS = qw(
   Natuna Nordafjells Norrland Norrorts Northland Nusantara
   Queensland Qiantang
   Oberloiben Olona Orontes Otago
-  Papua Pomerania Porong Punjab
+  Papua Pomerania Porong Prachinburi Punjab
   Rajasthan Rajputana Ratchaburi Rhodes Rogaland Rosfjord 
   Sakarya Salten Shandong Shanxi Siberia Sichuan Silesia Silla Sindh 
   Sintang Skåne Slask Southland Suvalkija Sydvest
@@ -275,6 +283,7 @@ my %SINGLE_TYPOS =
   Kansai => ['kinki'],
   'Kayong Utara' => ['kayong'],
   'Kepulauan Riau' => ['riau', 'kepri'],
+  'Kotawaringin Timur' => ['kotim'],
   Marmara => ['marmar'],
   'Midt Trøndelag' => ['midttrøndelag'],
   Minahasa => ['mnhasa'],

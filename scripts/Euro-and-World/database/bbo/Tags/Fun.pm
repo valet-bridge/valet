@@ -71,6 +71,7 @@ my @MULTI_WORDS =
   'After Eight',
   'AG laget',
   'Against All Odds',
+  'Aina Malttia',
   'Ala vill til Himlen',
   'Albayrak 67',
   'Albrekts T-Bone',
@@ -149,6 +150,7 @@ my @MULTI_WORDS =
   'Big L',
   'Big Makie',
   'Big Mi?',
+  'Big Utao',
   'Binua Landak',
   'Bizim takim',
   'Bjuda på',
@@ -232,6 +234,7 @@ my @MULTI_WORDS =
   'Cheap Tricks',
   'Club 7',
   'Coach K',
+  'Coco Cat',
   'Cold Light',
   'Come Farsi',
   'Cood Life',
@@ -290,6 +293,7 @@ my @MULTI_WORDS =
   'Die Schönen und di',
   'Die vier vom Rhein',
   'Die wazige Passers',
+  'Dinamo Bridge',
   'Dinner Club',
   'Disco Ninjas',
   'Dziwiszow Jazz',
@@ -302,8 +306,11 @@ my @MULTI_WORDS =
   'Double Jungle',
   'Double R',
   'Double U',
+  'Double Yusuf',
   'Down Under',
+  'Dr. Dan',
   'Dr. Romantic',
+  'Dr. Worrawat',
   'Dracula 2',
   'Drag Queens',
   'Dragon Cartoon',
@@ -621,8 +628,10 @@ my @MULTI_WORDS =
   "Lise (i)DA",
   'Lite av varje',
   'Little Meck',
+  'Little Top Bridge',
   'Lodz 100%',
   'Lokomotive Franken',
+  'Lope de Vega',
   'Long Dragon',
   'Los Capitanos',
   'Los Escandinavos',
@@ -676,10 +685,12 @@ my @MULTI_WORDS =
   'Midnight Cravings',
   'Miks Et?',
   'Mind and Matter',
+  'Minmin Team',
   'Minus 800',
   'Missão Impossivel',
   'Mix n Match',
   'Mix veg',
+  'Mladi i nadobudni',
   'Modesty Blaise',
   'Molto Bene',
   'Monotone Memories',
@@ -797,6 +808,7 @@ my @MULTI_WORDS =
   'Piger og drenger',
   'Pigerne på tur',
   'Piekni i Bestie',
+  'Pijar',
   'Pink Blend',
   'Pink Panter',
   'Pinot Noir',
@@ -860,6 +872,7 @@ my @MULTI_WORDS =
   'Robin Hood',
   'Robådane på BBO',
   'Rohit Wrappers',
+  'Rooftop Palma',
   'Rotseknots Ernst',
   'Royal Flush',
   'Röda små stugor',
@@ -901,6 +914,7 @@ my @MULTI_WORDS =
   'Siderkongen og kidz',
   'Silence BC',
   'Silver Eagle',
+  'Simba Felis',
   'Simple Minds',
   'Sivves straffdubbl',
   'Six Diamonds',
@@ -929,7 +943,7 @@ my @MULTI_WORDS =
   'Spjett Spjong',
   'Stabby with Youngsters',
   'Stara Gara',
-  'Steng Oslo nå!'.
+  'Steng Oslo nå!',
   'Still Going Turbo',
   'Still Water Runners',
   'Stone Cutters',
@@ -948,6 +962,7 @@ my @MULTI_WORDS =
   'Sweet Is Middle',
   'Sydän Ja Sielu',
   'Syntax Error',
+  'System N K',
   'Søta bror',
 
   'Ta Kau',
@@ -963,6 +978,7 @@ my @MULTI_WORDS =
   'Team Mayhem',
   'Team NRK',
   'Team Paper Moon',
+  'Team Vildmand',
   'Team Yoda',
   'Teddy Bear',
   'Tempo-Knektene',
@@ -1073,6 +1089,7 @@ my @MULTI_WORDS =
   'Tut tut',
   'Twitch Chat',
 
+  'Ueno Panda',
   'Unguru Bulan',
   'Unholy Alliance',
   'Unlimited Intellect',
@@ -1234,6 +1251,7 @@ my %MULTI_TYPOS =
   'Diamonds Are Forever' => ['diamonds are foreve'],
   'Down Under' => ['doun under'],
   'Dr. Romantic' => ['dr.romantic'],
+  'Dr. Worrawat' => ['dr.worrawat'],
   'Dragon Kiddies' => ['dragon kiddie'],
   'Dronninga med prins' => ['drnninga og pri',
     'dronninga med pri', 'dronning og prinses'],
@@ -1470,14 +1488,15 @@ my @SINGLE_WORDS = qw(
    Meta Midas Milady Mirage Mismatch Mixarna Mjøskameratne MMMM 
    Mongos Måsen
 
-   Natural Naturalists Nemesis Neverclaim Nightingale Noctis 
+   Nanda Natural Naturalists Nemesis Neverclaim Nightingale Noctis 
 
-   Octopussy Okay Olavsfestdagene Olrudbanden Olsenbanden Onyx 
+   Octopussy Okay Okra Olavsfestdagene Olrudbanden Olsenbanden Onyx 
    Opal Opera Opps Optimus Osss Outsiders Overivrig 
 
-   Pacers Pacific Pandeka Paradigma Partizan Patriot Patron 
-   Pegasus Perestrojka Pontiac Potlimit Potteplante Powerchicks 
-   Preempters Pretendents Proteus Pusten Påskevennene
+   Pacers Pacific Pandeka Pantherasia Paradigma Partizan Patriot 
+   Patron Pegasus Perestrojka Pontiac Potlimit Potteplante 
+   Powerchicks Prakker Preempters Pretendents Proteus Pusten 
+   Påskevennene
 
    Qingyu Quasar Quattro Quintet Quinze
 
@@ -1568,6 +1587,7 @@ my %SINGLE_TYPOS =
   'Outsiders' => ['outsider'],
 
   Pacific => ['pacyfic'],
+  Pantherasia => ['phanterasia'],
   'Paris Match' => ['parismatch', 'parimatch'],
   Preempters => ['preemptors'],
   Pretendents => ['pretendentas'],

@@ -37,7 +37,7 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  Seniors => [qw(senior senior's seniori seniorit 
+  Seniors => [qw(senior senior's seniori seniorii seniorit 
     senjoorid senyor sr seniiors)],
   Schools => [qw(school)],
   U16 => ['boys'],

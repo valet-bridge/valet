@@ -36,6 +36,7 @@ my @MULTI_WORDS =
   'Atlantic Trade',
   'Atlas Profil',
   'Avia Financial',
+  'Balarampur Chini',
   'Balcova Termal',
   'Baltic Express',
   'Bangkok Bank',
@@ -45,6 +46,7 @@ my @MULTI_WORDS =
   'Bank Nagari',
   'Bank Negara Indonesia',
   'Bank Tabungan Negara',
+  'Bapenda Manado',
   'Baroda Bank',
   'Bayu Kencana',
   'Beijing Capital',
@@ -274,6 +276,7 @@ my @MULTI_WORDS =
   'Lv Hua',
   'Mai Zi Fu Shi',
   'Málning hf',
+  'Manado Cerdas',
   'Mandiri Minahasa',
   'Magpa-Grup',
   'Maksoy-Deniz',
@@ -314,6 +317,7 @@ my @MULTI_WORDS =
   'Palma Karya Mandiri',
   'Pan China Construction',
   'Pasta z Bobra',
+  'Parvomay Tomato',
   'PD Real Estate',
   'PD Times',
   'PD Transnational',
@@ -352,6 +356,7 @@ my @MULTI_WORDS =
   'Rio-Sampa',
   'Ronke Camping',
   'Rosa dei Venti',
+  'RSUD Mandau',
   'Russian Sunday Times',
   'Ryan Express',
   'SAIC VW',
@@ -414,6 +419,7 @@ my @MULTI_WORDS =
   'Shree Radhey',
   'Sichuan Dahe',
   'Siji Changda',
+  'Sing Phil',
   'Sinode GMIM',
   'Siwik Holiday Mragowo',
   'Siwik Intertrade',
@@ -448,9 +454,10 @@ my @MULTI_WORDS =
   'Synergia Ilanka',
   'Synergia Lublin',
   'TAM Dabrowa',
-  'Tata Consulting Services',
+  'Tangerang Raya',
   'Tannlege Kvaran',
   'Taste of Goa',
+  'Tata Consulting Services',
   'Team Audita',
   'Team PharmaService',
   'Team Secure',
@@ -522,7 +529,8 @@ my @MULTI_WORDS =
   'Zhong Yuan',
   'Zhongshan Jiegao',
   'Zhongtong Jiangsu',
-  'Zhu Jiang'
+  'Zhu Jiang',
+  'Zweryfikuj firme',
 );
 
 my %MULTI_TYPOS =
@@ -547,6 +555,7 @@ my %MULTI_TYPOS =
   'Bank Nagari' => ['bank nagari sikoci',
     'bank nagari simpeda', 'bank nagari tahari'],
   'Bank Tabungan Negara' => ['bank btn'],
+  'Bapenda Manado' => ['bappenda manado'],
   'Baroda Bank' => ['baroda bang'],
   'Beidike' => ['bei di ke'],
   'Beijing Century' => ['bei jing shi ji'],
@@ -692,7 +701,9 @@ my %MULTI_TYPOS =
   'Indonesian Power' => ['indo power', 'indonesia power',
     'elektrika ind power', 'elektrika bc', 'i p'],
   'ING Bank' => ['ng bank'],
-  'Íslenskur landbúnaður' => ['íslenskur landbúnað'],
+  'Íslenskur landbúnaður' => [
+    'íslenskur landbúnað',
+    'ísl. landbúnaður'],
   'Jasa Marga Jakarta' => ['jasa marga'],
   'Jet Immo' => ['get immo', 'get-immo'],
   'Jiangxi Hengkang' => ['jiang xi heng kang'],
@@ -872,7 +883,8 @@ my %MULTI_TYPOS =
   'Zhejiang Jingfan' => ['zj jingfan', 'jing fan club', 'jin fan',
     'jing fan'],
   'Zhongshan Jiegao' => ['zhong shan jie gao'],
-  'Zhongtong Jiangsu' => ['zhongtong js']
+  'Zhongtong Jiangsu' => ['zhongtong js'],
+  'Zweryfikuj Firme' => ['zweryfikuj firme.pl']
 );
 
 my @SINGLE_WORDS = qw(
@@ -897,13 +909,13 @@ my @SINGLE_WORDS = qw(
   GAMAX GaoSuDa Gazprom Generali Geologi Genkad Gevalia Gillette Gomad 
   Gözgöz Guowang GSE
 
-  Hana Haoxin Harke Haustak HCL HNA Honesta Hongyu Huachu Huayuan
+  Hana Haoxin Harke Haustak HCL HNA Honesta Hongyu Horsa Huachu Huayuan
 
   IBM IMAX Impress Indoarsip Intan Inteligent Interface Interkala
 
   Jetox Jiegao Jinfan Jinshi Junibacken
 
-  Kadimex Kancelaria Kayseria Kideko Kilogrupp Konstanta Kvika
+  Kadimex Kancelaria Kayseria Kideko Kilogrupp Konstanta Kunhua Kvika
 
   Lacznosc Laima Lavazza LCG Lianbo Likom Longjiangfu Lukomorie 
   Lyfjaver
@@ -924,8 +936,8 @@ my @SINGLE_WORDS = qw(
   Raam Radex Ráðgjöf Ravebo Relpol Ruyi Ryka
 
   Sagaplast Samsung Saniva Scandic Scania Sehati Sevtopolis Shengheng
-  Shichuang Shimuzu Shouchuang Sifute Signity Skeljungur Solakoglu 
-  Solox Sparisjóður 
+  Shichuang Shimuzu Shouchuang Sifute Signity Skeljungur Skobud
+  Solakoglu Solox Sparisjóður 
   SportAccord Srenniw SSDA Stalgast Stiga Stokrotka Struma Synective 
   Synrey Syntex
 

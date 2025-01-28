@@ -71,6 +71,7 @@ my @MULTI_WORDS =
   'Palangka Raya',
   'Piatra Neamt',
   'Piggs Peak',
+  'Ponta Delgada',
   'Reggio Calabria',
   'Reggio Emilia',
   'Rio de Janeiro',
@@ -123,6 +124,7 @@ my %MULTI_TYPOS =
     'd.bakýr sur', 'd.bakýr dicle'],
   'Doliny Narwi' => ['dolina narwi'],
   'Gaziantep Zeugma' => ['g.antep zeugma'],
+  'Greve Strand' => ['greve strands'],
   Guangzhou => ['guang zhou'],
   Helsinki => ['city of helsinki'],
   Istanbul => ['ýstanbul'],
@@ -148,6 +150,7 @@ my %MULTI_TYPOS =
   'Siddha Eden Lakeville' => ['siddha eden', 'sidhha eden', 'siddha-eden'],
   'Silesia Gliwice' => ['silezia gliwice', 'silesia i gliwice'],
   'St Louis' => ['washington st louis'],
+  'Stara Zagora' => ['st.zagora'],
   Taicang => ['tai cang'],
   'Taihu Lake' => ['suzhou taihu'],
   Tainan => ['tai nan'],
@@ -170,7 +173,8 @@ my @SINGLE_WORDS = qw(
   Aral Arendal Asenovec Asenovgrad Askim Asminderød Assis Atakum 
   Atasehir Athens Atlanta Auckland Augsburg Ayacucho Aydin Ayvalik
 
-  Babaeski Baghdad Balchik Balaton Balatonföldvár Balikesir Balikpapan 
+  Babaeski Baghdad Balchik Balarampur Balaton Balatonföldvár Balikesir 
+  Balikpapan 
   Ballerup Ballymena Bamberg Bandung Bangalore Bangkok Banjarmasin 
   Bansi Barcelona Barlinek Batam Bath Batikent Batman Batu Begues 
   Beihai Beijing Beirut Bekasi Belgrade Belfast Bengkalis Bengkulu 
@@ -234,9 +238,10 @@ my @SINGLE_WORDS = qw(
   Maastricht Madrid Magetan Makassar Malang Malatya Malmö 
   Manado Manchester Manila Manisa Manna Mannheim Marbella Mardin 
   Marijampolė Marrakech Marseille Martapura Massy Mautern Medan 
-  Medellin Melbourne Mersin Miaoli Michalovce Midyat Milan Milas 
-  Minsk Miramar Miskolc Monticiano Montpellier Moradabad Morud 
-  Moscow Moss Mragowo Mudanya Muðla Mulund Mumbai Munich 
+  Medellin Melbourne Mersin Miaoli Michalovce Michalowo Midyat 
+  Milan Milas Minsk Miramar Miskolc Monticiano Montpellier 
+  Moradabad Morud Moscow Moss Mragowo Mudanya Muðla Mulund 
+  Mumbai Munich 
 
   Nagari Nagpur Nagykanizsa Namsos Nanchang Nanchong Nancy Nanjing
   Nanning Napoli Narlidere Narvik Nashik Nazilli Näsby Neijiang
@@ -264,31 +269,29 @@ my @SINGLE_WORDS = qw(
   Rottneros Rubbestadneset Ruian Rzepin Rzeszow Rødovre
 
   Saarbrücken Sabadell Salerno Salo Salsomaggiore Samarinda Samobor 
-  Samsun Sandefjord Santiago Sanya Sariyer Sarpsborg Sawahlunto
-  Secunderabad Seferihisar Selfoss Semarang Sendai Senigallia Serang 
-  Shanghai Shangrao 
-  Shaoguan Sharjah Shenyang Shenzhen Shijiazhuang Shumen Sibiu 
-  Sidoarjo Siena Sigulda Silifke Sindi Singsås Siofok 
-  Sivas Skara Skawina 
-  Ski Skien Skopje Slagelse Slawa Sleman Smedstad Smolyan Snåsa 
-  Sofia Solok Sopot Sortland Söke Split Stanford Stargard Stavanger 
-  Steinkjer Stirling Stockholm Stoholm Storsjöbygden Stureby 
-  Stuttgart Sukma Sukomoro Sumedang Sunndalsøra Suqian Surabaya 
-  Suzhou 
-  Svendborg Sydney Szczecinek Szczyrk Szeged Søborg Sørreisa
+  Sampit Samsun Sandefjord Santiago Sanya Sariyer Sarpsborg 
+  Sawahlunto Secunderabad Seferihisar Selfoss Semarang Sendai 
+  Senigallia Serang Shanghai Shangrao Shaoguan Sharjah Shenyang 
+  Shenzhen Shijiazhuang Shumen Sibiu Sidoarjo Siena Sieradz Sigulda 
+  Silifke Sindi Singsås Siofok Sivas Skara Skawina Ski Skien Skopje 
+  Slagelse Slawa Sleman Smedstad Smolyan Snåsa Sofia Solok Sopot 
+  Sortland Söke Split Stanford Stargard Stavanger Steinkjer 
+  Stirling Stockholm Stoholm Storsjöbygden Stureby Stuttgart 
+  Sukma Sukomoro Sumedang Sunndalsøra Suqian Surabaya Suzhou 
+  Svendborg Sydney Szczecinek Szczyrk Szeged Søborg Sømna Sørreisa
 
   Taicang Taichung Tainan Taiyuan Taizhou Takayama Tallinn Tambun 
-  Taoyuan Tarakan Targoviste Tarnów Tasikmalaya Taskopru Täby 
-  Täfteå Tczew Tekýrdag Telmessos Temuco Thane Thanjavur 
-  Thessaloniki Thoisy Tianjin Tilburg Timisoara Tire Tofta Tokyo 
-  Tomohon Tonya Torino Toshima Toulouse Tours Trabzon Trieste 
-  Trondheim Tromsø Tula Tübingen 
+  Tangerang Taoyuan Tarakan Targoviste Tarnów Tarnobrzeg Tasikmalaya 
+  Taskopru Täby Täfteå Tczew Tekýrdag Telmessos Temuco Thane 
+  Thanjavur Thessaloniki Thoisy Tianjin Tilburg Timisoara Tire 
+  Tofta Tokyo Tomohon Tonya Torino Toshima Toulouse Tours Trabzon 
+  Trieste Trondheim Tromsø Tula Tübingen 
 
   Udaipur Uddevalla Umeå Underberg Uppsala Usak Utrecht Uzunköprü
 
   Vadsø Van Vancouver Varanasi Varberg Varese Varna Vasa Västervik 
-  Västerås Vejle Venice Verona Vestfold Vestvågøy Viareggio Vienna 
-  Vikersund Vilnius Vorden Vraca
+  Västerås Vejle Venice Verdal Verona Vestfold Vestvågøy Viareggio 
+  Vienna Vikersund Vilnius Vorden Vraca
 
   Waldsolms Waltham Wanzhou Warsaw Wellington Wetzlar Wiesbaden 
   Wisla Worcester Wroclaw Wronie Wuhan Wuxi
