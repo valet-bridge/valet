@@ -105,6 +105,7 @@ my @MULTI_WORDS =
   'Apres-Bridge Champs',
   'Arctic Farmers',
   'Arctic Powerchicks',
+  'As vezes',
   'Atomic Bridge',
   'Ave Magma',
   'Ave Maria mä bihang',
@@ -197,8 +198,10 @@ my @MULTI_WORDS =
   'Bridge Lovers',
   'Bridge over Nations',
   'Bridge Plus',
+  'Bridge View',
   'British Invasion',
   'British Lions',
+  'Bros 1005',
   'Brown Sugar',
   'Brødrene & co',
   'Brødrene Dal',
@@ -224,6 +227,7 @@ my @MULTI_WORDS =
   'Cathy & Ewa',
   'Cat Daddy',
   'Cecils venner',
+  'Centrum Farmers',
   'Cha Cha Cha',
   'Chateau Latour',
   'Cherno More',
@@ -244,6 +248,7 @@ my @MULTI_WORDS =
   'Crashtest Dummies',
   'Crème de la crème',
   'Croatian Pirates',
+  'Crocodylus M. M.',
   'Crush Lack',
   'Curry Eaters',
   'CU+1',
@@ -302,6 +307,7 @@ my @MULTI_WORDS =
   'Don Bernardo',
   'Don Julio',
   'Don Revival',
+  'Dost Atesi',
   'Double Dummy',
   'Double Jungle',
   'Double R',
@@ -372,6 +378,7 @@ my @MULTI_WORDS =
   'Fast and Furious',
   'Fastings disipler',
   'Father and Son',
+  'FC Marcinek',
   'Feel Good',
   'Felices las 4',
   'Fem på nya äventyr',
@@ -580,12 +587,14 @@ my @MULTI_WORDS =
   'Koos Bros',
   'Koridor 10',
   'Kronisk kusma',
+  'Kuaile Huoniao',
   'Kung Sune',
   'Kungshamns Sega Gubbar',
   'Kurt quo vadis',
   'Kusinerna från land',
   'Kuvayi Milliye',
   'Kvalen og nissene',
+  'Kwang-Hwa',
 
   "L'Orange",
   'La Bomba',
@@ -842,6 +851,7 @@ my @MULTI_WORDS =
   'R1F3 Initials',
   'R1S5 Initials',
   'Ra Ma Ra Him',
+  'RADA Czarodziejek',
   'Radio Communication',
   'Radkov Trash',
   'Randers 2.0',
@@ -851,6 +861,7 @@ my @MULTI_WORDS =
   'Real Maramma',
   'Red Ash',
   'Red Beach',
+  'Red Cross',
   'Red Hat',
   'Red Hot',
   'Red Pork Cutlet',
@@ -887,6 +898,7 @@ my @MULTI_WORDS =
 
   'S(h)aman',
   'Sabarian + LuBu',
+  'Sail Karimata',
   'Saint Titus',
   'Salten rundt',
   'Sam23',
@@ -966,6 +978,7 @@ my @MULTI_WORDS =
   'Søta bror',
 
   'Ta Kau',
+  'Tak czy owak',
   'Take Off',
   'Tare Fare',
   'Tartu 14',
@@ -1118,6 +1131,7 @@ my @MULTI_WORDS =
   'Viking Natural & Hi',
   "Vincent's Friends",
   'Vinir Gylfa',
+  'VIP Travel',
   'Visst nappar det',
   'Vitamin',
   'Viva Plambata',
@@ -1273,6 +1287,8 @@ my %MULTI_TYPOS =
   'Freak City' => ['freak-city'],
 
   'Game On' => ['game-on'],
+  'Gammel Oppland m/co' => ['gammel oppland',
+    'gammel opland m/co'],
   "Gary's Boys" => ['garys boys', 'gary´s boys'],
   'Good Men' => ['good man'],
 
@@ -1314,8 +1330,10 @@ my %MULTI_TYPOS =
   'King Geoffrey' => ['king groffrey'],
   'Kisa metraj' => ['ksk kisa metraj'],
   'Koos Bros' => ['Koos Bro´s', "koos bro's"],
+  'Kuaile Huoniao' => ['Kuaile Houniao'],
   'Kungshamns Sega Gubbar' => ['kungshamns sega gub'],
   'Kuvayi Milliye' => ['kuvai milliye'],
+  'Kwang Hwa' => ['kwuang-hwua'],
 
   "L'Orange" => ["l' orange"],
   'La Linea med eller uten ball' => ['la linea med ell', 
@@ -1370,6 +1388,7 @@ my %MULTI_TYPOS =
   'Queen and Knights' => ["queen's & knight"],
 
   'Rapan & Jezus' => ['rapan and ezis'],
+  'Real Maramma' => ['real maremma'],
   'Reps und Wodniansky' => ['reps und wodniansk'],
 
   'Saint Titus' => ['st titus', 'st. titus'],
@@ -1454,12 +1473,13 @@ my @SINGLE_WORDS = qw(
    Comrade Contact Contra Corner Counterstrike Crash Cremaster 
    
    Danger Debutantes Deceptive Desperados Destroyers Dialect Doctors 
-   Donjulio Donvito Dracula Dragon DuckNDales Dusteforbundet Dyret
+   Donjulio Donvito Dracula Dragon DuckNDales Durum
+   Dusteforbundet Dyret
 
    Eagles Eastward Eliminator Emerald Engineers Enigma Enjoy 
    Everest Evil 
 
-   Fantasia Fant4stic Farmen Farmers Fenesta Filbyter Filosofene 
+   Fantasia Fant4stic Farmen Fenesta Filbyter Filosofene 
    Finest Fisk Forfot Formidables Frenemies Friends Francophones 
    Freak Frirond Frivolt 
 
@@ -1504,13 +1524,13 @@ my @SINGLE_WORDS = qw(
    Robocop Rollers Rovers 
 
    Sabres Saga Sailor Sakura Sakurai Saladmasters Salokin Sammartini
-   Sapphire Saturn Scandinavia Schneewittchen Scientists Secure 
-   Senator Sheep Shengxing Show Silverfox Simple Sindbad Singapole 
-   Sirius Sjøsamen Skip Skitur Slappfisker Slufsa Småveitjan Snapper 
-   Snipers Soho Solaris Sonata Spark Spartans Specialist Spekkhogger 
-   Squeeze Stampede Star Starmen Statusquo Stayman Stifinnern 
-   Strategen Streamline Stålfarfar Sunset Sunshine Syttisju 
-   Sømnakameratene Såpeopera
+   Sapphire Saturn Saudagar Scandinavia Schneewittchen Scientists 
+   Secure Senator Sheep Shengxing Show Silverfox Simple Sindbad 
+   Singapole Sirius Sjøsamen Skip Skitur Slappfisker Slufsa 
+   Småveitjan Snapper Snipers Soho Solaris Sonata Spark Spartans 
+   Specialist Spekkhogger Squeeze Stampede Star Starmen Statusquo 
+   Stayman Stifinnern Strategen Streamline Stålfarfar Sunset 
+   Sunshine Syttisju Sømnakameratene Såpeopera
 
    Takeoff Tannlegene Taurus Tbone Tecza Tempo Tequendama Theme 
    Theseus Tibetmunkene Tigers Titanik Titans Tohundre Tolerant 
@@ -1527,7 +1547,7 @@ my @SINGLE_WORDS = qw(
 
    Xman Xtrouble XXX XXXL XXXSL XXXXXYXY
 
-   Zhanma Zombi Zorro Zugzwang 
+   Zambet Zhanma Zombi Zorro Zugzwang 
 );
 
 my %SINGLE_TYPOS =
@@ -1538,6 +1558,7 @@ my %SINGLE_TYPOS =
   Anglers => ['anglelers'],
   'Apollo Soyuz' => ['apollosoyuz', 'apollosoyouz'],
   Appellkameratene => ['apellkameratene'],
+  'As vezes' => ['asvezes'],
   'Atomic Bridge' => ['atomic'],
 
   Barracuda => ['barakuda', 'baracuda'],

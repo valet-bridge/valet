@@ -55,6 +55,7 @@ my @MULTI_WORDS =
   'Las Vegas',
   'Le Bouscat',
   'Mandobo Bodi',
+  'Maha Sarakham',
   'Mar del Plata',
   'Meilin Qingcheng',
   'Mian Yang',
@@ -83,6 +84,7 @@ my @MULTI_WORDS =
   'San Luis',
   'San Marino City',
   'San Servolo',
+  'Santa Clara',
   'São Paulo',
   'São Vicente',
   'Schwäbisch Hall',
@@ -147,6 +149,7 @@ my %MULTI_TYPOS =
   'San Giorgio del Sannio' => ['sg del sannio', 's.g.sannio',
     's.giorgio sannio', 'san giorgio del san'],
   'São Paulo' => ['sao paulo'],
+  Shenzhen => ['shen zhen'],
   'Siddha Eden Lakeville' => ['siddha eden', 'sidhha eden', 'siddha-eden'],
   'Silesia Gliwice' => ['silezia gliwice', 'silesia i gliwice'],
   'St Louis' => ['washington st louis'],
@@ -229,9 +232,9 @@ my @SINGLE_WORDS = qw(
   Kütahya Kverndalen Kyoto Kyustendil Køge Kølabånn
 
   Langkat Lanzhou Laodikya Lappeenranta Larnaca Larvik 
-  Lausanne Lecco Leiden Leipzig Leksand 
-  Lerum Leszno Leuven Leverkusen Lhokseumawe Liepaja Lille Lima 
-  Lincoln Lindesberg Linköping Lisbon Liushu Ljubljana Lodi Lodz 
+  Lausanne Lecco Leiden Leipzig Leksand Lerum Lesno Leszno 
+  Leuven Leverkusen Lhokseumawe Liepaja Lille Lima Lincoln 
+  Lindesberg Linköping Lisbon Liushu Ljubljana Lodi Lodz 
   Lojdy Lokotok Lom Lomza London Lowicz Lublin Ludvikabygden 
   Lufeng Luleburgaz Lumajang Luzern Lyon
 
@@ -272,13 +275,14 @@ my @SINGLE_WORDS = qw(
   Sampit Samsun Sandefjord Santiago Sanya Sariyer Sarpsborg 
   Sawahlunto Secunderabad Seferihisar Selfoss Semarang Sendai 
   Senigallia Serang Shanghai Shangrao Shaoguan Sharjah Shenyang 
-  Shenzhen Shijiazhuang Shumen Sibiu Sidoarjo Siena Sieradz Sigulda 
-  Silifke Sindi Singsås Siofok Sivas Skara Skawina Ski Skien Skopje 
-  Slagelse Slawa Sleman Smedstad Smolyan Snåsa Sofia Solok Sopot 
-  Sortland Söke Split Stanford Stargard Stavanger Steinkjer 
-  Stirling Stockholm Stoholm Storsjöbygden Stureby Stuttgart 
-  Sukma Sukomoro Sumedang Sunndalsøra Suqian Surabaya Suzhou 
-  Svendborg Sydney Szczecinek Szczyrk Szeged Søborg Sømna Sørreisa
+  Shenzhen Shijiazhuang Shimla Shumen Sibiu Sidoarjo Siena Sieradz 
+  Sigulda Silifke Silistra Sindi Singsås Siofok Sivas Skara 
+  Skawina Ski Skien Skopje Slagelse Slawa Sleman Smedstad Smolyan 
+  Snåsa Sofia Solok Sopot Sortland Söke Split Stanford Stargard 
+  Stavanger Steinkjer Stirling Stockholm Stoholm Storsjöbygden 
+  Stureby Stuttgart Sukma Sukomoro Sumedang Sunndalsøra Suqian 
+  Surabaya Suzhou Svendborg Sydney Szczecinek Szczyrk Szeged 
+  Søborg Sømna Sørreisa
 
   Taicang Taichung Tainan Taiyuan Taizhou Takayama Tallinn Tambun 
   Tangerang Taoyuan Tarakan Targoviste Tarnów Tarnobrzeg Tasikmalaya 

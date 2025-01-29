@@ -31,13 +31,15 @@ my %MULTI_TYPOS =
   Nanshan => ['nan shan'],
   Pudong => ['pu dong'],
   Taihu => ['tai hu'],
+  Ulus => ['ulus-der'],
   Wenang => ['wenang sp'],
 );
 
 my @SINGLE_WORDS = qw(
   Akçeşme Albena Amanora Arjasa Atakoy Avren
-  Bahce Bahcesehir Balcova Baragnon Barrière Bayrampaþa Beroe Bieniewo 
-  Bogazici Borivli Bormali Bornova Bozdogan Brotteaux Buca Buitenhof
+  Bahce Bahcesehir Balcova Balgat Baragnon Barrière Bayrampaþa Beroe 
+  Bieniewo Bogazici Borivli Bormali Bornova Bozdogan Brotteaux Buca 
+  Buitenhof
   Çayyolu Cemara Changning Chelsea Chislehurst Courseulles
   Ege Esenkent
   Fatih Freidorf Fukien
@@ -58,7 +60,7 @@ my @SINGLE_WORDS = qw(
   Sabadel Sancaktar Sansar Sarniak Senayan Serdika Shihua Simal 
   Sirinyer Slaska Sredec Sukomoro Suleymanpasa Suralaya
   Taihu Tengah Tianya
-  Uccle Unaós
+  Uccle Ulus Unaós
   Varbergshus Viþnelik
   Wadas Wenang Wratislavia Wroble Wujiang Wuyuanhe
   Yalikavak Yangpu Yarimca Yenisehir Yizhuang Yildirim Yuquan

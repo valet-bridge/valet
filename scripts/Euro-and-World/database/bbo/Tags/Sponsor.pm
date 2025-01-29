@@ -189,6 +189,7 @@ my @MULTI_WORDS =
   'Haining Ziwei',
   'Haiyang Ruixiang',
   'Hangzhou Jinjiang',
+  'HCI Indonesia',
   'Heilongjiang Tea',
   'Heng Yuan Xiang',
   'Hengsha Haijiu',
@@ -238,6 +239,7 @@ my @MULTI_WORDS =
   'Jin Jing',
   'Jing Tie',
   'Jinsheng Development',
+  'JL Car',
   'JP Morgan',
   'K.W. Tam',
   'Kale Park',
@@ -276,6 +278,7 @@ my @MULTI_WORDS =
   'Lv Hua',
   'Mai Zi Fu Shi',
   'Málning hf',
+  'Manado Berkat',
   'Manado Cerdas',
   'Mandiri Minahasa',
   'Magpa-Grup',
@@ -314,6 +317,7 @@ my @MULTI_WORDS =
   'OICO Maesa',
   'Oly-Star',
   'Orbis Investment Management',
+  'Org Reignwood',
   'Palma Karya Mandiri',
   'Pan China Construction',
   'Pasta z Bobra',
@@ -326,6 +330,7 @@ my @MULTI_WORDS =
   'Perusahaan Listrik Negara',
   'PGN Jakarta',
   'Pharma Plus',
+  'PHE Philippines',
   'Phoenix Mills',
   'Phoenix TV',
   'Pliska XO',
@@ -380,6 +385,7 @@ my @MULTI_WORDS =
   'See Fah/Thai',
   'Semangat Baru Makassar',
   'Semen Gresik',
+  'Set ehf',
   'Shan Hai',
   'Shanghai Automobile',
   'Shanghai Chenyi',
@@ -420,7 +426,6 @@ my @MULTI_WORDS =
   'Sichuan Dahe',
   'Siji Changda',
   'Sing Phil',
-  'Sinode GMIM',
   'Siwik Holiday Mragowo',
   'Siwik Intertrade',
   'Skinney-Þinganes',
@@ -499,8 +504,10 @@ my @MULTI_WORDS =
   'Vinex Preslav',
   'Viru Valge',
   'VVE Beheer',
+  'Wenang Sintesa',
   'Worldbridgetour.com',
   'Wuhan Dongfang',
+  "Xia'er Xili",
   'Xiamen Xiashun',
   'Xiao Ying',
   'Xin He Jin Tai',
@@ -740,6 +747,7 @@ my %MULTI_TYPOS =
     'lögrfæðistofa íslan'],
   'Lögfræðistofa Bjarna' => ['lögfr.st bjarna', 'lögfr.stofa bjarna',
     'lögfr.stofa ´bjarna'],
+  Macakizi => ['maca kizi'],
   'Magpa-Grup' => ['magma-grup'],
   'Malermester Mathisen' => ['malermester mathise',
     'malermester martins'],
@@ -747,6 +755,7 @@ my %MULTI_TYPOS =
   'Manzoya Casual' => ['manzova casual'],
   'Meditepe Tip' => ['medýtepe tip', 'meditepe týp'],
   'Mega Bekasi Hypermall' => ['mega bekasi', 'mega bekasi hyperma'],
+  Metaforsa => ['gbc metaforsa'],
   Modalfa => ['modalfa/umw'],
   'Mutiara Energy' => ['mutiara energy indo', 'mutiara energi indo',
     'mutiara energi p.', 'mutiara energi.p'],
@@ -754,6 +763,7 @@ my %MULTI_TYPOS =
   'Nangang Power' => ['nanguang power'],
   'Nanyuan' => ['nan-yuan'],
   'Nuo Hui Jian Kang' => ['nuohui jiankang'],
+  'OCI Copper' => ['oci coppers'],
   'Odak Göz' => ['odak goz'],
   'Oly-Star' => ['oly star'],
   'PD Times' => ['p d times', 'pd shidai', 'pd  shidai', 'pd  times'],
@@ -833,7 +843,7 @@ my %MULTI_TYPOS =
     'sree  cement',
     'sri cements'],
   'Shree Radhey' => ['shree radhye', 'shri radhey', 'shri radheya',
-    'sree radhye'],
+    'sree radhye', 'shree radkeya', 'sri radhey'],
   'Siwik Holiday Mragowo' => ['siwik holiday bt', 'siwik holiday mrag',
     'siwik mragowo'],
   'Société Générale' => ['societe generale', 'societè general'],
@@ -869,9 +879,11 @@ my %MULTI_TYPOS =
   'Value Media' => ['value media team', 'synis value'],
   'Viego Regnskap' => ['viego regnskap as'],
   'VVE Beheer' => ['vve-beheer'],
+  'Wenang Sintesa' => ['wenang sintesa p'],
   'Worldbridgetour.com' => ['worldtourbridge.org',
     'worldbridgetour.org', 'world bridge tour', 'wbt bridge app'],
   'Wuhan Dongfang' => ['dongfang'],
+  "Xia'er Xili" => ['xia er xi li'],
   'Xiao Ying' => ['xiao ying inn'],
   'Yalu Group' => ['js yalu'],
   'Yeh Bros' => ['yeh brothers', 'yer bros', "yeh's bros", 'yehs bros',
@@ -920,7 +932,7 @@ my @SINGLE_WORDS = qw(
   Lacznosc Laima Lavazza LCG Lianbo Likom Longjiangfu Lukomorie 
   Lyfjaver
 
-  Makus Malkia Melchemie Metaforsa Mireo Mitratani Modalfa 
+  Macakizi Makus Malkia Melchemie Metaforsa Mireo Mitratani Modalfa 
   Morgunblaðið Multicoms Myndform
 
   NALCO Nanyuan Navachaitanya Navayuga Nazwa NEC Nefka Niewiem Nongken 
@@ -938,14 +950,15 @@ my @SINGLE_WORDS = qw(
   Sagaplast Samsung Saniva Scandic Scania Sehati Sevtopolis Shengheng
   Shichuang Shimuzu Shouchuang Sifute Signity Skeljungur Skobud
   Solakoglu Solox Sparisjóður 
-  SportAccord Srenniw SSDA Stalgast Stiga Stokrotka Struma Synective 
+  SportAccord Srenniw SSDA Stalgast Stiga Stokrotka Struma Suiyi
+  Synective 
   Synrey Syntex
 
   Tekser Telkom Termika Termoavion Termochem Timah Topeko Transearly 
   Tricon Tridaya Tryggingamiðstöðin Tsingtao Tundem Twentebelt
   Tyco Tzilis
 
-  UMW Unibet Unicat
+  UMW Unibet Unicat Uras
 
   Velbazhd Velbujd Videocon Vinabær Virnet VÍS Visoft Vito Vyceska
 
@@ -1013,7 +1026,7 @@ my %SINGLE_TYPOS =
   'Kosmos Delhi' => ['kosmos'],
   'Krishnapatnam Port' => ['krishnapatnamport'],
   'Lianzhong Shi Jie' => ['lianzhongshijie'],
-  'Lv Hua' => ['lv hua'],
+  'Lv Hua' => ['lvhua'],
   'Magpa-Grup' => ['magpa'],
   'Málning hf' => ['málning'],
   Metaforsa => ['metaphorsa'],

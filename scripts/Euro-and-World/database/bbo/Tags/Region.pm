@@ -39,6 +39,7 @@ my @MULTI_WORDS =
   'Eastern Cape',
   'Fylke Innlandet',
   'Gabungan Malaku',
+  'Himachal Pradesh',
   'Indragiri Hulu',
   'Java Bali',
   'Kabupaten Bekasi',
@@ -74,12 +75,14 @@ my @MULTI_WORDS =
   'Lofoten og Vesterålen',
   'Lower Silesia',
   'Madhya Pradesh',
+  'Mount Mahawu',
   'Midt Trøndelag',
   'Møre Romsdal',
   'Nakhon Nayok',
   'Nakhon Pathom',
   'Nakhon Sawan',
   'Nakhon Si Thammarat',
+  'National Capital Region',
   'New Caledonia',
   'New South Wales',
   'Nord Trøndelag',
@@ -250,9 +253,10 @@ my @SINGLE_WORDS = qw(
   Oberloiben Olona Orontes Otago
   Papua Pomerania Porong Prachinburi Punjab
   Rajasthan Rajputana Ratchaburi Rhodes Rogaland Rosfjord 
-  Sakarya Salten Shandong Shanxi Siberia Sichuan Silesia Silla Sindh 
-  Sintang Skåne Slask Southland Suvalkija Sydvest
-  Tambun Tasmania Telemark Telengana Thrace Tianya
+  Sakarya Salten Sambas Sanggau Shandong Shanxi Siberia Sichuan 
+  Silesia Silla Sindh Sintang Skåne Slask Southland Suvalkija 
+  Sydvest
+  Tala Tambun Tasmania Telemark Telengana Thrace Tianya
   Tigris Tinglin Tuncelý
   Uttarakhand
   Victoria Vojvodina
@@ -276,6 +280,7 @@ my %SINGLE_TYPOS =
   'Gabungan Malaku' => ['gabmin', 'gabmo'],
   Ganges => ['genges'],
   Hegyvidék  => ['hegyvidek'],
+  'Himachal Pradesh' => ['himachal'],
   Hordaland => ['hordland'],
   Hunan => ['hunnan'],
   'Java Bali' => ['jb'],
@@ -287,8 +292,10 @@ my %SINGLE_TYPOS =
   Marmara => ['marmar'],
   'Midt Trøndelag' => ['midttrøndelag'],
   Minahasa => ['mnhasa'],
+  'Mount Mahawu' => ['mahawu'],
   'Møre Romsdal' => ['moreromsdal'],
   'Nakhon Nayok' => ['nakhonnayok'],
+  'National Capital Region' => ['ncr'],
   'New South Wales' => ['nsw'],
   'North Sulawesi' => ['sulut'],
   'North Sumatra' => ['sumut'],

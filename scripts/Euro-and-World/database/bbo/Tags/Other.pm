@@ -51,8 +51,10 @@ my @MULTI_WORDS =
   'Bimal Sicca',
   'BMW J',
   'Brans BS',
+  'Bric Klinik',
   'Bridgekam 17',
   'Bridgerama Milan',
+  'Bu Mu',
   'Buyur Teyze',
 
   'Can Aren',
@@ -89,6 +91,7 @@ my @MULTI_WORDS =
   'DELTA 2',
   'Dersim38',
   'Deutsche Senioren',
+  'Director Team',
   'Diren Noname',
   'DK Notus',
   'DK Nationalchampion',
@@ -97,10 +100,12 @@ my @MULTI_WORDS =
   'Doca Bridge',
   'Dong Ming',
   'Dong Qi 9',
+  'Dr. Cladius',
   'Dr. Gittipatq',
   'DS 1',
 
   'e-bridge',
+  'EBL Emeritus President',
   'Ege & Besli Major',
   'El Gezira',
   'El Hazem',
@@ -119,6 +124,7 @@ my @MULTI_WORDS =
 
   'Figo-Fago',
   'Fire Club',
+  'First Club',
   "Flint's Crew",
   'Former J',
   'Frankie Holidays',
@@ -127,9 +133,11 @@ my @MULTI_WORDS =
   'FT 79',
 
   'Garuda Sakti',
+  'Gatwick WC',
   'Gerganin Izvor',
   'Gobbi San Siro',
   'Gold Cup',
+  'Gosti Ch.B',
   'Goyancho Sayeba',
   'Grefstad and co',
   'Greswe Axon',
@@ -158,6 +166,9 @@ my @MULTI_WORDS =
   'Jin Hui',
   'Jin Mei',
   'Jiu Jiu',
+  'JJ Maxrod',
+  'JL Crew',
+  'JM&Co',
   'JT2',
   'Juras Ezi',
 
@@ -186,16 +197,17 @@ my @MULTI_WORDS =
   'Leonardonun Robotu',
   'Lew Lodzki',
   'Limo Puzzi',
-  'Little Top Bridge',
   'Logos GPS',
   'Los Feos',
   'Los Malos',
   'Los Salgado',
   'Los Tollos',
   'Loy Krathong',
+  'LT Ilanka',
   'Lucy-Ellena',
   'LV 2014',
 
+  'Maa Sarada',
   'MAJB Lommorna',
   'Mal - Phi',
   'Malatya Basket',
@@ -204,6 +216,7 @@ my @MULTI_WORDS =
   'Massachusetts Association',
   'Mavý Ankara',
   'Meng Qing Xin',
+  'Mid Open',
   'Mike Lawrence Club',
   'Minas Trith',
   'Mo i Raneran',
@@ -215,6 +228,7 @@ my @MULTI_WORDS =
   'MY-Bridge',
   'myvatnhotel.is',
   'Mýra Kontrat',
+  'MW&P',
   'Møllers Team',
 
   "'n Vidar & Andersen",
@@ -283,6 +297,8 @@ my @MULTI_WORDS =
   'South Zone',
   'SPG Club',
   'Spring Foursomes',
+  'Sredna Vashtar',
+  'Staff Team',
   'Stall Dieden',
   'Stojanov Izbor',
   'Swami Samarth',
@@ -314,6 +330,7 @@ my @MULTI_WORDS =
   'University Union Team',
 
   'Valar Morghulis',
+  'Vesko M',
   'Villi Jr.',
   'Visoki Napon',
 
@@ -321,6 +338,7 @@ my @MULTI_WORDS =
   'Wan Jian Club',
   'Wei De',
   'Wei Ming Dui',
+  'World All Star',
 
   'X.D.X.J',
   'Xiao Jun Gan Dui',
@@ -331,9 +349,11 @@ my @MULTI_WORDS =
   "Yttakjær`s",
   'Yura Taschit',
 
+  'Z Lasu',
   'Zabina i Zolza',
   'Zara Bridge',
   'Zen Ho',
+  'ZG HC',
   'Zhong Jia Lian Dui',
   'Zuid West'
 );
@@ -364,8 +384,11 @@ my %MULTI_TYPOS =
   'Deceptive AHM' => ['deceptive  ahm'],
   'Delhi Gym Aces' => ['d g aces', 'dgc aces'],
   'DK Notus' => ['notus df'],
+  'Dr. Cladius' => ['dr cladius'],
 
   'El Gezira' => ['el-gezira'],
+  'EBL Emeritus President' => ['EBL Emer.Presi',
+    'EBL. Emer. Presi'],
   'England and Pharon' => ['england plus pharon'],
   'Equator 1771' => ['equator1771'],
   'Esso-sveitin' => ['esso - sveitin', 'esso -sveitin'],
@@ -384,6 +407,7 @@ my %MULTI_TYPOS =
   'Jan Wellem' => ['jan wel'],
   'Ji Jin' => ['ji jing'],
   'Jian Hua Club' => ['jian hua'],
+  'JM&Co' => ['jm& co'],
 
   Kebiya => ['ke bi ya', 'ke bi ya club'],
   'Kent Romeos venner' => ['kent romeos veenner'],
@@ -396,6 +420,7 @@ my %MULTI_TYPOS =
   'Lew Lodzki' => ['new lodzki'],
   'Logos GPS' => ['logos gpg'],
 
+  'Maa Sarada' => ['maa sarda', 'maa saarada'],
   'Massachusetts Association' => ['massachussets assoc'],
   'Mike Lawrence Club' => ['lawrence club'],
   MMRMC => ['mmrmc(pkb)'],
@@ -407,6 +432,7 @@ my %MULTI_TYPOS =
 
   "Pal's Four" => ["pal's"],
   "Pradeep's Four" => ["pradeep's 4", "Pradeep's Team"],
+  Preservasi => ['preservasi plus'],
   "President's Team" => ["president's"],
   "Priya's Four" => ["priya's iv", "priya's4"],
   'P.S.' => ['p. s.'],
@@ -420,6 +446,7 @@ my %MULTI_TYPOS =
   SMBC => ['s m b c'],
   'SM BTC' => ['sm-btc'],
   'Spring Foursomes' => ['spring 4s', 'spring fours', "spring 4's"],
+  'Sredna Vashtar' => ['sredni vashtar'],
 
   "Tor Ivar's" => ['tor ivars'],
 
@@ -451,11 +478,11 @@ my @SINGLE_WORDS = qw(
    CS CSTO Czteropak
 
    Dallas DanEng DanFar Dash Debonecos DeeJee Defne Demony Demýrbaþ 
-   DenmarS Deppo Dilligaf Dimmat Dingyuan Dino Dinos DJB Doki 
+   DenmarS Deppo Dilligaf Dimmat Dingyuan Dino Dinos DJB Dombo Doki 
    Duros Dvizhenie 
 
    Econ Efsane Egesarpdoruk Eikka Ekenboda Ekoap Elektrownia 
-   Elio Elips EMA Engelen Ephesus Epsilon Equator Era Ertým ErUS 
+   Elio Elips EMA EMBO Engelen Ephesus Epsilon Equator Era Ertým ErUS 
    ESA Eses Esesss Esperanza 
 
    Fakel FAM² FAMA Farta Fenix Ferfi Feszek Fil Filur Flagship 
@@ -479,7 +506,7 @@ my @SINGLE_WORDS = qw(
    Kaardivägi Kagama Kalbar Kalca Kalkarna Kaltim Kamyk Karaarslan 
    Kark Kasty Kasuang Katipunan KBA KBC Kebiya Kenlong Kerasus Kibe 
    Kjelskos Klasik Klio KMC Knösel Kodin Koiraperhe Kokoelma Kolbasti 
-   Komleposs Kordam Korsikalý Kortai Koukouselis KrASK 
+   Kombinasi Komleposs Kordam Korsikalý Kortai Koukouselis KrASK 
    Kratos Krem Ksenia KSOS Kultur Kvazar Kwiecisty
 
    Lahjattomat LAKT Laleler Lancia Langy Laplas Lataka Lateria 
@@ -502,9 +529,9 @@ my @SINGLE_WORDS = qw(
 
    Pagonia Palukas Panteros Pasam Pasanci Passé Patagonia Paulistas 
    PBL PCBA PDC Pennant Perjuangan Piast Piryoli Pjäxa PKM Pleschi 
-   Pleyada Plia PMC PMS Pojat Polirish Polus Pompapompa 
-   Poss Prapar Prasetya Prijatelj Prim Primabridge Prosan Proto Ptacol 
-   PTT Pude Pyon Pyton PZIM 
+   Pleyada Plia PMC PMS Pojat Polirish Polus Pompapompa Poss Prapar 
+   Prasetya Preservasi Prijatelj Prim Primabridge Prosan Proto 
+   Ptacol PTT Pude Pyon Pyton PZIM 
 
    QLJB Quantum 
 
@@ -518,8 +545,8 @@ my @SINGLE_WORDS = qw(
    Simpleksas SISU Sivves Siyabend Skalman Skaronga SKB 
    SKBS Skotii SKR Þlem Slostria SMBC SMJ SMK SNAP SNP Soba Sober 
    Sobers Sogn Solo Sonchel Soumitra Spamirs Spandan Spartak Spektr 
-   Spin Spring Srimapuna Srykeir SSBC SSSR Stafani Stagge Starsbridge 
-   STB Steinars Steinlager Strata StZ St?vel Sucharek 
+   Spin Spring Srimapuna Sriwijaya Srykeir SSBC SSSR Stafani Stagge 
+   Starsbridge STB Steinars Steinlager Strata StZ St?vel Sucharek 
    SuHuQiaoYou SweDanes SweNor Swest Syabas SYL Syly SYT SZPAK 
    SZPAR Sør 
 

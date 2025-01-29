@@ -30,6 +30,7 @@ my @MULTI_WORDS =
   'Ami Zamir',
   'Amir Levin',
   'Amiya Ranjan Das',
+  'Ana Brito',
   'Ana Tadeu',
   'Anders Hagen',
   'Anders Johansson',
@@ -79,6 +80,7 @@ my @MULTI_WORDS =
   'Carolina Pimenta',
   'Chalermpol Wongwaiwit',
   'Charlie Lee',
+  'Chen Yeh',
   'Choo Wai Wong',
   'Christal Henner-Welland',
   'Christophe Grosset',
@@ -86,6 +88,7 @@ my @MULTI_WORDS =
   'C.V. Rao',
   'D Banerjee',
   "D'Avossa",
+  'Da Rosa',
   'Da Silva',
   'Dam Mortensen',
   'Daniel Gigello Gheorghe',
@@ -119,12 +122,14 @@ my @MULTI_WORDS =
   'Diana Damyanova',
   'Diane Gordy',
   'Ding Yuan',
+  'Dinis Sottomayor',
   'Djordje Dunjic',
   'Dmitri Marchessini',
   "D'Orsi",
   "D'Ovidio",
   'Dr. Anand',
   'Dr. Ashwani Mehta',
+  'Dr. Behre',
   'Duronto Rajshahi',
   'Ece Mizrahi',
   'Edmund Tse',
@@ -222,6 +227,7 @@ my @MULTI_WORDS =
   'Jerzy Zaremba',
   'Jesper Buus Thomsen',
   'Jessica Hayman',
+  'Jimmie Feidie Eman',
   'Jin Zhuo',
   'João Fanha',
   'Joao Ferreira',
@@ -237,6 +243,7 @@ my @MULTI_WORDS =
   'Jorge Monteiro Dos Santos',
   'Jorge Petrucci',
   'Josef Blass',
+  'Jose Carlos Sousa Santos',
   'José Dias',
   'José Moraes',
   'José Pastor',
@@ -245,6 +252,7 @@ my @MULTI_WORDS =
   'Jörgen Lindqvist',
   'Juan Carlos Ventin',
   'Juan Valdez',
+  'Juei-Yu Shih',
   'Julia Hoffman',
   'Juliano Barbosa',
   'Júlíus Sigurjónsson',
@@ -268,6 +276,7 @@ my @MULTI_WORDS =
   'Kusuma Dilaga',
   'Kwok-Fai Mak',
   "L'Écuyer",
+  'La Chapelle',
   'Lanpikul Thongchairit',
   'Lars Peter Damgaard',
   'Lauge Pedersen',
@@ -317,7 +326,9 @@ my @MULTI_WORDS =
   'Miguel Silva',
   'Miguel Sousa Guedes',
   'Miguel Teixeira',
+  'Mikael Arnberg',
   'Mikud Mannid',
+  'Mila Senior',
   'Modi Kenigsberg',
   'Mohamed Manaf Saleh',
   'Mohit Mehta',
@@ -464,6 +475,7 @@ my @MULTI_WORDS =
   'Teresa Kay',
   'Thomas Vang Larsen',
   'Tiago Canelas',
+  'Tomas Ruth',
   'Tomi Gotard',
   'Tone Torkelsen Svendsen',
   'Tor Helness',
@@ -490,7 +502,8 @@ my @MULTI_WORDS =
   'Vijay Anand Singh',
   'Vijay K Khan',
   'Villas Boas',
-  'Vincent LI',
+  'Vinay Mohan Lal',
+  'Vincent Li',
   'Visalakshi Narayanan Ramamoorthy',
   'Viviane Gonçalves Pereira',
   'W.W. Cho',
@@ -533,6 +546,7 @@ my %MULTI_TYPOS =
   'Alvensleben' => ['v.alvensleben', 'v. alvensleben'],
   'Ami Zamir' => ['zamir ami'],
   'Amiya Ranjan Das' => ['a r dass'],
+  'Ana Brito' => ['a brito'],
   'Andrea Landry'=> ['landry andrea'],
   Angelini => ['squadra angelýný', 'squadra angelini'],
   'Anoop Dhawan' => [
@@ -780,7 +794,9 @@ my %MULTI_TYPOS =
     'sousa guedes'], 
   'Miguel Teixeira' => ['m. teixeira', 'm.teixeira', 
     'm teixeira'],
+  'Mikael Arnberg' => ['Arnbergs team'],
   'Mikud Mannid' => ['mikud-mannid'],
+  'Mila Senior' => ['mila senyor'],
   'Mohit Mehta' => ['mohit mehata', 'mohit meheta'],
   'Monica Jajoo' => ['monika jajoo', 'm.jajoo'],
   'N. Chakraborty' => ["n.c hakraborty's iv"],
@@ -890,6 +906,7 @@ my %MULTI_TYPOS =
   'Van den Bos' => ['van des bos'],
   'Véronique Bessis' => ['mme bessis'],
   'Vijay K Khan' => ['vijay k klan'],
+  'Vinay Mohan Lal' => ['v m lal'],
   'Thomas Vang Larsen' => ['van larsen', 'vang larsen',
     'vang-larsen', 'vanglarsen'],
   'W.W. Cho' => ['WW Cho'],
@@ -990,8 +1007,8 @@ my @SINGLE_WORDS = qw(
   Fruewirth Frukacz Frutos Fu Fucik Fuglestad Fuller Fung Furunes 
   Furuta Fyrun
 
-  Gaede Gagliardi Gaglietto Gardiner Galinsky Gallus 
-  Gana Gandoglia Ganzer Garateguy Garbosi Garg Garoufalis Garrido 
+  Gaede Gagliardi Gaglietto Gardiner Galinsky Gallus Gana 
+  Gandoglia Ganzer Garateguy Garbosi Garcia Garg Garoufalis Garrido 
   Garrone Garvey Garner Gartaganis Gary Gaspar Gaviard Gawel Gawrys 
   Gelberg Geller Genc Generosi Gentili Georgescu Gerber Gerli 
   Gero Gerrard Geyer Gezer Ghionis Giangkos Giannessi Gidman 
@@ -1011,8 +1028,8 @@ my @SINGLE_WORDS = qw(
   Hamman Hampson Hampton Hanna Hans Hansen Hanlon Hantveit
   Harangozo Harari Harasimowicz Harding Harley Harper Harries Harris 
   Harrison Harsanyi Hasenson Hassett Hauge Haughie Häusler Havas Hayman
-  Hegedus Heifer Helekar Helgemo Helle Helman Helmer Helmich Helms Henault
-  Henclik Henneberg Henriques Herman Herrera Herscap
+  Hegedus Heibø Heifer Helekar Helgemo Helle Helman Helmer Helmich 
+  Helms Henault Henclik Henneberg Henriques Herman Herrera Herscap
   Heskje Hill Hillman Hinden Hindon Hinge Hiraki Hirchwald Hirst Hitti 
   Hliapas Hobeika Hoff Hoffa Hoffman Hollands Hollman Honti Hooda 
   Hopfenheit Hornibrook Horowitz Horton Horwitz Howard Howe Hu 
@@ -1062,10 +1079,11 @@ my @SINGLE_WORDS = qw(
 
   Maas MacDonald Macedo Machado Madsen Magee Maggio Maglietta 
   Mahaffey Maia Maiolani Malarme Maksymetz Malaczynski Malani 
-  Malavasi Maluish Mamidaki Manara Mancuso Mandecka Mandelot Mane 
-  Manfield Manganella Mangelrød Manglik Manni Mannix Mantica 
-  Manyawar Maoilani Marani Marashev Marchioni Marek Margarida 
-  Margiotta Mari Marill Marina Marincho Marinescu Marino Markey 
+  Malavasi Maluish Mamidaki Manalang Manara Mancuso Mandecka 
+  Mandelot Mane Manfield Manganella Mangelrød Manglik Manni 
+  Mannix Mantica Manyawar Maoilani Marani Marashev Marchioni 
+  Marek Margarida Margiotta Mari Marill Marina Marincho Marinescu 
+  Marino Markey 
   Markowicz Marks Marmonti Marquardsen Marsonis Marston Marta 
   Martel Martellini Martens Martin Martini Martins Marupe Masana 
   Masini Mason Matei Matheson Matisons Matteucci Matushko 
@@ -1101,16 +1119,17 @@ my @SINGLE_WORDS = qw(
 
   Pacareu Pacault Pacini Paganus Paiva Pajak Paladino Palatinus 
   Palau Palmeira Palmer Pals Panagaki Panto Panopoulos Papahatzis 
-  Papakyriakopoulos Papaxatzis Parker Partearroyo Parviainen Pasquarè
-  Passarinho Passaro Passell Pastore Pattinson Pattison Paulissen 
-  Pauncz Pavlicek Payen Pazur Peake Pedzinski Peirão Pekkinen Peksen 
-  Penfold Percario Pereira Peres Periasamy Perisic Persiani Petculescu 
-  Petrescu Pettersson Phelan Piasecki Piedra Piekarek 
-  Pietraszek Piganeau Pilon Pineles Pinguello Pinto Piper Pisak 
-  Pisani Pitt Plaut Poizat Pollack Pollak Polledro Polowan 
-  Pont Popescu Popova Potier Potts Poulat Pownall Pozzi Pradhan 
-  Preddy Prescott Previde Priano Primavera Proukakis Procter 
-  Prohorov Prusa Pryor Puczynski Pulkrab Purkarthofer Pszczola
+  Papakyriakopoulos Papaxatzis Parekh Parker Partearroyo Parviainen 
+  Pasquarè Passarinho Passaro Passell Pastore Pattinson Pattison 
+  Paulissen Pauncz Pavlicek Payen Pazur Peake Pedzinski Peirão 
+  Pekkinen Peksen Penfold Percario Pereira Peres Periasamy Perisic 
+  Persiani Petculescu Petrescu Pettersson Phelan Piasecki Piedra 
+  Piekarek Pietraszek Piganeau Pilon Pineles Pinguello Pinto 
+  Piper Pisak Pisani Pitt Plaut Poizat Pollack Pollak Polledro 
+  Polowan Pont Popescu Popova Potier Potts Poulat Pownall 
+  Pozzi Pradhan Preddy Prescott Previde Priano Primavera Proukakis 
+  Procter Prohorov Prusa Pryor Puczynski Pulkrab Purkarthofer 
+  Pszczola
 
   Quail Quantin Queran Quinn
 
@@ -1132,8 +1151,8 @@ my @SINGLE_WORDS = qw(
   Sapounakis Sargos Sarten Sarundajang Sauvage Savchenko Savelli 
   Savin Savorani Savski Sawicki Sayaca Saydi Sayer Sayilkan Sayýlkan 
   Sbarigia Scanavino Scerri Schaltz Scherders Schermer Schlicker 
-  Schneider Schnetzer Scholes Schonning Schoolmann Schuett Schulle 
-  Schulz Schüller Schroeder Schreckenberger Scoltock Scudder 
+  Schmidt Schneider Schnetzer Scholes Schonning Schoolmann Schuett 
+  Schulle Schulz Schüller Schroeder Schreckenberger Scoltock Scudder 
   Scullin Schwartz Schwerdt Sealy Sebbane Seguineau Selberg Selcuk 
   Seligman Selway Semenov Semerci Sen Serenella Serf Serifoglu 
   Serpoi Sesyilmaz Setton Sezginsoy Shadyro Sharif Sharp Sher 
@@ -1294,10 +1313,12 @@ my %SINGLE_TYPOS =
   'Jeovani Salomao' => ['jeovani'],
   'Jeroo Mango' => ['mango'],
   'Jerzy Zaremba' => ['zaremba'],
+  'Jimmie Feidie Eman' => ['jfe'],
   'Joao Silva Neto' => ['silvaneto'],
   'John Holland' => ['j holland'],
   'Jorge Petrucci' => ['petrucci'],
   'Josef Blass' => ['blass'],
+  'Jose Carlos Sousa Santos' => ['jcss'],
   'José Moraes' => ['moraes'],
   'Jörg Fritsche' => ['fritsche', 'joefri'],
   'Juan Carlos Ventin' => ['ventin'],
@@ -1418,7 +1439,7 @@ my %SINGLE_TYPOS =
   Stephenson => ['stephenso'],
   Stoyanov => ['stojanov'],
   'Saumitra Basu' => ['saumitra'],
-  'Sunil Machhar' => ['macchar', 'sinilmachar'],
+  'Sunil Machhar' => ['macchar', 'machhar', 'sinilmachar'],
   Svendsen => ['svends'],
   Svindahl => ['svindhal'],
   'Sylvie Willard' => ['willard'],

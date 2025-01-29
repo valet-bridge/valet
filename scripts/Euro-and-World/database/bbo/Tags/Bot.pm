@@ -19,6 +19,7 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  GIB => ['g.i.b'],
 );
 
 my @SINGLE_WORDS = qw(
