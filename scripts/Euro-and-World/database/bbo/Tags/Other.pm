@@ -22,6 +22,7 @@ my @MULTI_WORDS =
   'A Takimi',
   'ABA Nuno Paz',
   'ABB Tomas',
+  'Ace Metes',
   'Ai Bait',
   'Air Traffic Management',
   'AJD & Varna',
@@ -29,6 +30,7 @@ my @MULTI_WORDS =
   'Aklindo Musi 88',
   'Alunand Plus',
   'Andrea L.',
+  'Ar Tush',
   "Archie's",
   "Asha's 4",
   'Asketické samice',
@@ -103,6 +105,7 @@ my @MULTI_WORDS =
   'Dr. Cladius',
   'Dr. Gittipatq',
   'DS 1',
+  'Duo Bid Online',
 
   'e-bridge',
   'EBL Emeritus President',
@@ -121,6 +124,7 @@ my @MULTI_WORDS =
   'Esso-sveitin',
   'Etna Bridge',
   'Eviza Plambata',
+  'EX S',
 
   'Figo-Fago',
   'Fire Club',
@@ -132,6 +136,7 @@ my @MULTI_WORDS =
   'Friends of Lalit',
   'FT 79',
 
+  'G&HGK',
   'Garuda Sakti',
   'Gatwick WC',
   'Gerganin Izvor',
@@ -182,11 +187,13 @@ my @MULTI_WORDS =
   'KM 23',
   'KOC67',
   'Kong Chou',
+  'Kontrat Kirmizi',
   'Korry and Trenk',
   'Kozyrnye Oleni',
   'KM AT',
   'KSK Deniz',
 
+  'Lal Mati',
   'Las Flores',
   'Las Olas',
   'Las Overum',
@@ -211,10 +218,12 @@ my @MULTI_WORDS =
   'MAJB Lommorna',
   'Mal - Phi',
   'Malatya Basket',
+  'Malung Janne',
   'Manny Herrings',
   'Marki-Macki',
   'Massachusetts Association',
   'Mavý Ankara',
+  'Mega-S',
   'Meng Qing Xin',
   'Mid Open',
   'Mike Lawrence Club',
@@ -237,6 +246,7 @@ my @MULTI_WORDS =
   'Nazar Boncugu',
   'Nazionale Cantanti',
   'NBS Lind',
+  'New Bridge',
   'New Chi',
   'Novi Tim',
   'NT-iosa-gutta',
@@ -308,6 +318,7 @@ my @MULTI_WORDS =
   'Team Bru',
   'Team Zang',
   'Team Lanka',
+  'Team Saju',
   'Team Z',
   'Teyzenin Yeri',
   'Tida-Steli',
@@ -398,6 +409,7 @@ my %MULTI_TYPOS =
   'Friends of Academy' => ['friends of akademy'],
   'Frankie Holidays' => ['frankie hollydays'],
 
+  Hotmix => ['gbc hotmix'],
   'Hum Paanch' => ['hum paach'],
   'Hungarian Olympic' => ['hungar olimp', 'hungarian olimp',
     'hungar olimpics', 'hungar olimpic'],
@@ -461,15 +473,16 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
    1den1e
 
-   AABC ABBK ABBKI ABC Acolvik ACR Aeras AIC Alertplus Alioth Alpha 
-   ASDBB Aslanli Aspe Asya Atrium AUE Augerne Aurora AUTBUL AUTHOL 
-   Avagard Aytalus Azores Azure
+   AABC ABBK ABBKI ABC Acolvik ACR Aeras AFTA AIC Alertplus Alioth 
+   Alpha ASDBB Aslanli Aspe Asya Atrium AUE Augerne Aurora 
+   AUTBUL AUTHOL Avagard Aytalus Azores Azure
 
    BAB BABK Bacch Bade BAHABAWI Bahaj Baias Bajm Bajozero BAK Balti
    Baltic BARC BARP BAST Bat Batmix Bato Batusida BBN BBO BCBR
    Begigütje BEIH BELSPA Bem Beton BHDM Bhide Bhinneka
    Biachite BIN Biriceri BKSE Blandat Blund BMAL BMP BNS BNT
-   BOC Boek Boriana Borko Bridgebutikken BRK Buaigh Bubu Busiaki Butler
+   BOC Boek Boriana Borko Brica Bridgebutikken BRK Buaigh Bubu 
+   Busiaki Butler
 
    Cabal Cabriole Calaca Cammello Camrose Canadonia Canukusa
    Carsi Cask Catz Cavendish CBLTI Cendrawasih Center Cerkez
@@ -477,9 +490,9 @@ my @SINGLE_WORDS = qw(
    Coopers Coor Costantina Couples Croanglopol Crockfords Crossfatek
    CS CSTO Czteropak
 
-   Dallas DanEng DanFar Dash Debonecos DeeJee Defne Demony Demýrbaþ 
-   DenmarS Deppo Dilligaf Dimmat Dingyuan Dino Dinos DJB Dombo Doki 
-   Duros Dvizhenie 
+   Dallas DanEng DanFar Dash DBS Debonecos DeeJee Defne Demony 
+   Demýrbaþ DenmarS Deppo Dilligaf Dimmat Dingyuan Dino Dinos DJB 
+   Dombo Doki Duros Dvizhenie 
 
    Econ Efsane Egesarpdoruk Eikka Ekenboda Ekoap Elektrownia 
    Elio Elips EMA EMBO Engelen Ephesus Epsilon Equator Era Ertým ErUS 
@@ -494,7 +507,7 @@ my @SINGLE_WORDS = qw(
    Greecoura GRNC Grup Guayacos Gudok Gullberg Gullvi 
 
    Hade Hai Hakl Hansa HayirlisI Hebat Helgeness Hellé Heliopolis 
-   HengSha Hist HKES Holders Holifera Holport House Huispaus 
+   HengSha Hist HKES Holders Holifera Holport Hotmix House Huispaus 
 
    IBBSK IBE Iff Ijseide IMAN IMLUK InFran Irukangi Ismo Israbel 
    Isrmany ITB Itnoraunz ITS IVAR Iza
@@ -507,7 +520,7 @@ my @SINGLE_WORDS = qw(
    Kark Kasty Kasuang Katipunan KBA KBC Kebiya Kenlong Kerasus Kibe 
    Kjelskos Klasik Klio KMC Knösel Kodin Koiraperhe Kokoelma Kolbasti 
    Kombinasi Komleposs Kordam Korsikalý Kortai Koukouselis KrASK 
-   Kratos Krem Ksenia KSOS Kultur Kvazar Kwiecisty
+   Kratos Krem Ksenia KSOS Kultur Kvazar Kwai Kwiecisty
 
    Lahjattomat LAKT Laleler Lancia Langy Laplas Lataka Lateria 
    LatSwe LBC LBSK LCF Legeanka Lema Lemanus Lenz Letve Leveni 
@@ -547,8 +560,8 @@ my @SINGLE_WORDS = qw(
    Sobers Sogn Solo Sonchel Soumitra Spamirs Spandan Spartak Spektr 
    Spin Spring Srimapuna Sriwijaya Srykeir SSBC SSSR Stafani Stagge 
    Starsbridge STB Steinars Steinlager Strata StZ St?vel Sucharek 
-   SuHuQiaoYou SweDanes SweNor Swest Syabas SYL Syly SYT SZPAK 
-   SZPAR Sør 
+   SuHuQiaoYou SweDanes SweNor Swest Syabas SYL Syly SYSS SYT 
+   Szlem SZPAK SZPAR Sør 
 
    TAC Take Takk Takým Taksim Tally Tangra Task Tefo Tiglatpalasar 
    Tihkur Tiz Toar Todremor Tollemache Tongxin Topozero Totani 

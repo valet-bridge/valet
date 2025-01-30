@@ -55,7 +55,7 @@ my @SINGLE_WORDS = qw(
   Olgiata
   Parioli Piloni Pinarbasi Polonezkoy Poncol Pudong Puzhong
   Qiaoxie
-  Palaiseau Pasham
+  Palaiseau Pasham Pato
   Radkov Recoleta Ridabu
   Sabadel Sancaktar Sansar Sarniak Senayan Serdika Shihua Simal 
   Sirinyer Slaska Sredec Sukomoro Suleymanpasa Suralaya

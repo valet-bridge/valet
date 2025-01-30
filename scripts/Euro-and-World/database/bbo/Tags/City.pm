@@ -134,7 +134,8 @@ my %MULTI_TYPOS =
     'dki jaya'],
   Kalyani => ["kalyani's"],
   Kristiansand => ['kr.sand'],
-  'Miercurea Ciuc' => ['m ciuc', 'm. ciuc', 'm.ciuc'],
+  'Miercurea Ciuc' => ['m ciuc', 'm. ciuc', 'm.ciuc',
+    'mercurea cinc'],
   Milas => ['milas beledýyesi', 'mýlas beledýyespor'],
   'Monte Carlo' => ['monte-carlo'],
   'Nea Moudania' => ['moydania'],
@@ -171,7 +172,7 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
   Aabenraa Aachen Aalborg Adalar Adana Adapazan Adelaide Agresar 
   Ahmedabad Airmadidi Akhisar Aladag Alcobaça Alexandria Aliaga 
-  Allahabad Alta Altea Altinova Altrincham Alytus Ambon Amman 
+  Allahabad Alta Altea Altinova Altrincham Alytus Ambon Amed Amman 
   Amsterdam Ankara Annecy Antakya Antalya Antony Antwerpen Aqaba 
   Aral Arendal Asenovec Asenovgrad Askim Asminderød Assis Atakum 
   Atasehir Athens Atlanta Auckland Augsburg Ayacucho Aydin Ayvalik
@@ -233,7 +234,7 @@ my @SINGLE_WORDS = qw(
 
   Langkat Lanzhou Laodikya Lappeenranta Larnaca Larvik 
   Lausanne Lecco Leiden Leipzig Leksand Lerum Lesno Leszno 
-  Leuven Leverkusen Lhokseumawe Liepaja Lille Lima Lincoln 
+  Leuven Leverkusen Lhokseumawe Liepaja Lille Lima Limboto Lincoln 
   Lindesberg Linköping Lisbon Liushu Ljubljana Lodi Lodz 
   Lojdy Lokotok Lom Lomza London Lowicz Lublin Ludvikabygden 
   Lufeng Luleburgaz Lumajang Luzern Lyon
@@ -269,14 +270,14 @@ my @SINGLE_WORDS = qw(
 
   Radkov Rakvere Rastignano Ravnkilde Rayong Reims Rennes Reykjavik 
   Riau Rieneck Riga Rijeka Rimini Romana Rome Roskilde Rotterdam 
-  Rottneros Rubbestadneset Ruian Rzepin Rzeszow Rødovre
+  Rottneros Rubbestadneset Rugao Ruian Rzepin Rzeszow Rødovre
 
   Saarbrücken Sabadell Salerno Salo Salsomaggiore Samarinda Samobor 
   Sampit Samsun Sandefjord Santiago Sanya Sariyer Sarpsborg 
   Sawahlunto Secunderabad Seferihisar Selfoss Semarang Sendai 
   Senigallia Serang Shanghai Shangrao Shaoguan Sharjah Shenyang 
-  Shenzhen Shijiazhuang Shimla Shumen Sibiu Sidoarjo Siena Sieradz 
-  Sigulda Silifke Silistra Sindi Singsås Siofok Sivas Skara 
+  Shenzhen Shijiazhuang Shimla Shouguang Shumen Sibiu Sidoarjo Siena 
+  Sieradz Sigulda Silifke Silistra Sindi Singsås Siofok Sivas Skara 
   Skawina Ski Skien Skopje Slagelse Slawa Sleman Smedstad Smolyan 
   Snåsa Sofia Solok Sopot Sortland Söke Split Stanford Stargard 
   Stavanger Steinkjer Stirling Stockholm Stoholm Storsjöbygden 
@@ -295,15 +296,15 @@ my @SINGLE_WORDS = qw(
 
   Vadsø Van Vancouver Varanasi Varberg Varese Varna Vasa Västervik 
   Västerås Vejle Venice Verdal Verona Vestfold Vestvågøy Viareggio 
-  Vienna Vikersund Vilnius Vorden Vraca
+  Vienna Vikersund Villeurbanne Vilnius Vorden Vraca
 
   Waldsolms Waltham Wanzhou Warsaw Wellington Wetzlar Wiesbaden 
   Wisla Worcester Wroclaw Wronie Wuhan Wuxi
 
   Xiamen Xian Xiantao Xinyi Xuzhou
 
-  Yambol Yanshi Yantai Yarýmca Yatagan Yizhuang Yokohama Yogyakarta 
-  Yuquan Yuzhou
+  Yambol Yancheng Yanshi Yantai Yarýmca Yatagan Yingshan Yizhuang 
+  Yokohama Yogyakarta Yuquan Yuzhou
 
   Zagreb Zavet Zegrze Zhaoqing Zhenjiang Zhongshan Zhuzhou Zigong 
   Zonguldak Zürich Zyrardow

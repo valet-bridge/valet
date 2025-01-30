@@ -63,6 +63,7 @@ my @MULTI_WORDS =
   'Bharat Bhosale',
   'Bimal Sicka',
   'Birkir Jonsson',
+  'Björk Jonsdottir',
   'Bora Unver',
   'Brian Senior',
   'Brigitta Fischer',
@@ -810,6 +811,7 @@ my %MULTI_TYPOS =
   "O'Rourke" => ['o rourke', 'o;rourke', "o'rouke"],
   'Ofek Tal' => ['ofel tal'],
   'Olivier Bessis' => ['bessis.o'],
+  'Ömer Abi' => ['omer abi'],
   'Pascale Thuillez' => ['mme thuillez'],
   'Patanè' => ["patane'"],
   'Paul Hackett' => ['p hackett', 'pd hackett', 'hackett p'],
@@ -1086,7 +1088,7 @@ my @SINGLE_WORDS = qw(
   Marino Markey 
   Markowicz Marks Marmonti Marquardsen Marsonis Marston Marta 
   Martel Martellini Martens Martin Martini Martins Marupe Masana 
-  Masini Mason Matei Matheson Matisons Matteucci Matushko 
+  Masini Mason Matei Matheson Matisons Matos Matteucci Matushko 
   Mauberquez Mavridis Mayorga Mazurkiewicz Maybach Mäkikangas 
   Märsylä McAllister McCance McDonald McGann McGinley McGowan 
   McGrath McIntosh McKellar McLeish McLeod McKinnon McLeish 
@@ -1247,6 +1249,7 @@ my %SINGLE_TYPOS =
   Bytskevich => ['bytskevitch'],
   'Carlos Ferreira' => ['ferreira'],
   'Carole Puillet' => ['puillet'],
+  Cernato => ['chernato'],
   'Chalermpol Wongwaiwit' => ['chalermpol'],
   'Christal Henner-Welland' => ['henner'],
   'Christophe Grosset' => ['grosset'],

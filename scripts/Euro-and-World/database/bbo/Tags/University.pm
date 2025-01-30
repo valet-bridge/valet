@@ -244,7 +244,7 @@ my %MULTI_TYPOS =
   'Renmin University High School' => ['Ren Da Fu Zhong',
     'rsfz hu'],
   'Rhein-Waal University' => ['rhine university'],
-  'Riau University' => ['universitas riau'],
+  'Riau University' => ['universitas riau', 'uko unri'],
   'Sam Ratulangi University' => ['univ. samratulangi',
     'univ. sam ratulangi'],
   'Sekolah Tinggi Ilmu Statistik' => [
