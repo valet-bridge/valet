@@ -16,6 +16,7 @@ my @MULTI_WORDS =
   '07', 
 
   'a-TMPC',
+  'A-chanzu',
   'Absolut Bridge',
   'A.C.L.A.',
   'A.z.f.e.n.a',
@@ -31,9 +32,11 @@ my @MULTI_WORDS =
   'Alunand Plus',
   'Andrea L.',
   'Ar Tush',
+  'Arab Club',
   "Archie's",
   "Asha's 4",
   'Asketické samice',
+  'Aslinda Bric',
   'AV Maria',
   'Avesta',
   'Aylan Kurdý',
@@ -56,6 +59,7 @@ my @MULTI_WORDS =
   'Bric Klinik',
   'Bridgekam 17',
   'Bridgerama Milan',
+  'Bridgetime 45',
   'Bu Mu',
   'Buyur Teyze',
 
@@ -140,6 +144,7 @@ my @MULTI_WORDS =
   'Garuda Sakti',
   'Gatwick WC',
   'Gerganin Izvor',
+  'GG Bridge',
   'Gobbi San Siro',
   'Gold Cup',
   'Gosti Ch.B',
@@ -179,6 +184,7 @@ my @MULTI_WORDS =
 
   'Kacho Fugetsu',
   'KaiCheng RL',
+  'Karamel IN',
   'Kawanua Selection',
   'Ke Da',
   'Keda Xiaoyou',
@@ -204,6 +210,7 @@ my @MULTI_WORDS =
   'Leonardonun Robotu',
   'Lew Lodzki',
   'Limo Puzzi',
+  'Liu Miu',
   'Logos GPS',
   'Los Feos',
   'Los Malos',
@@ -215,6 +222,7 @@ my @MULTI_WORDS =
   'LV 2014',
 
   'Maa Sarada',
+  'Maccabi dacordar',
   'MAJB Lommorna',
   'Mal - Phi',
   'Malatya Basket',
@@ -223,6 +231,7 @@ my @MULTI_WORDS =
   'Marki-Macki',
   'Massachusetts Association',
   'Mavý Ankara',
+  'MBS Meski',
   'Mega-S',
   'Meng Qing Xin',
   'Mid Open',
@@ -232,6 +241,7 @@ my @MULTI_WORDS =
   'Mo Yan',
   'Moki011',
   'Monte Carlos',
+  'MPM Mix',
   'Multi Gen Indonesia',
   'Mumbai Indians',
   'MY-Bridge',
@@ -286,6 +296,7 @@ my @MULTI_WORDS =
   'Saevar Karl',
   'San Sac',
   'San3PDX',
+  'Sana Rival',
   'Sang ae',
   'Sanghi Tivoli',
   'Sarunta Toar',
@@ -328,7 +339,9 @@ my @MULTI_WORDS =
   'Tim Team',
   'Tinutuan Manado',
   'TRK - V',
+  'Top Bucuresti',
   "Tor Ivar's",
+  'Transfer 6',
   'Tupac Amaru',
   'Turk Kahvesi',
   'Tzoko-Mokko',
@@ -358,6 +371,7 @@ my @MULTI_WORDS =
 
   'Yitang QIAO',
   "Yttakjær`s",
+  'Yun-Kai',
   'Yura Taschit',
 
   'Z Lasu',
@@ -467,6 +481,8 @@ my %MULTI_TYPOS =
 
   'Valar Morghulis' => ['valar morgulis'],
 
+  'Waldi-S' => ['waldi s'],
+
   'Yitang QIAO' => ['qiao yi tang']
 );
 
@@ -478,7 +494,7 @@ my @SINGLE_WORDS = qw(
    AUTBUL AUTHOL Avagard Aytalus Azores Azure
 
    BAB BABK Bacch Bade BAHABAWI Bahaj Baias Bajm Bajozero BAK Balti
-   Baltic BARC BARP BAST Bat Batmix Bato Batusida BBN BBO BCBR
+   Baltic BARC BARP BAST Bat Batmix Bato Batusida BBCF BBN BBO BCBR
    Begigütje BEIH BELSPA Bem Beton BHDM Bhide Bhinneka
    Biachite BIN Biriceri BKSE Blandat Blund BMAL BMP BNS BNT
    BOC Boek Boriana Borko Brica Bridgebutikken BRK Buaigh Bubu 
@@ -498,7 +514,7 @@ my @SINGLE_WORDS = qw(
    Elio Elips EMA EMBO Engelen Ephesus Epsilon Equator Era Ertým ErUS 
    ESA Eses Esesss Esperanza 
 
-   Fakel FAM² FAMA Farta Fenix Ferfi Feszek Fil Filur Flagship 
+   Fakel FAM² FAMA Farta Fenix Ferfi Feszek Fil Filur Fit Flagship 
    FNCC Formosa Fortuna Fortune FOS Foundation Francest Frieolt 
    Frusci Fundacja FWK
 
@@ -509,8 +525,8 @@ my @SINGLE_WORDS = qw(
    Hade Hai Hakl Hansa HayirlisI Hebat Helgeness Hellé Heliopolis 
    HengSha Hist HKES Holders Holifera Holport Hotmix House Huispaus 
 
-   IBBSK IBE Iff Ijseide IMAN IMLUK InFran Irukangi Ismo Israbel 
-   Isrmany ITB Itnoraunz ITS IVAR Iza
+   IBBSK IBE Iff Ijseide IMAN IMLUK InFran Inwitofitka Irukangi 
+   Ismo Israbel Isrmany ITB Itnoraunz ITS IVAR Iza
 
    JanTC JAPCAN JAS JASS Jassica Javel Jaya Jecization Jinjing 
    Jirin Jiujiu Joter Juanval Juls Juste Justplay 
@@ -518,13 +534,14 @@ my @SINGLE_WORDS = qw(
 
    Kaardivägi Kagama Kalbar Kalca Kalkarna Kaltim Kamyk Karaarslan 
    Kark Kasty Kasuang Katipunan KBA KBC Kebiya Kenlong Kerasus Kibe 
-   Kjelskos Klasik Klio KMC Knösel Kodin Koiraperhe Kokoelma Kolbasti 
-   Kombinasi Komleposs Kordam Korsikalý Kortai Koukouselis KrASK 
-   Kratos Krem Ksenia KSOS Kultur Kvazar Kwai Kwiecisty
+   Kings Kjelskos Klasik Klio KMC Knösel Kodin Koiraperhe Kokoelma 
+   Kolbasti Kombinasi Komleposs Kopru Kordam Korsikalý Kortai 
+   Koukouselis KrASK Kratos Krem Ksenia KSOS Kultur Kvazar Kwai 
+   Kwiecisty
 
    Lahjattomat LAKT Laleler Lancia Langy Laplas Lataka Lateria 
    LatSwe LBC LBSK LCF Legeanka Lema Lemanus Lenz Letve Leveni 
-   Lianas Liban Lillebaluba Lipa Lira Livius Ljónin LNWers Lo 
+   Lianas Liban Lillebaluba Lio Lipa Lira Livius Ljónin LNWers Lo 
    Loaknath Lolly Longzhu LOS Lowel Löparn LPMS LXA Lyubcho 
 
    Makara Makriköy Malmölaget Marosamitawa Marpalaki Marynarz Masal 
@@ -533,7 +550,7 @@ my @SINGLE_WORDS = qw(
    Muumio Mýna Møremix 
 
    Nadide Narbisk Narre Necos Neduk Nessuno Nikotiimi 
-   Nislije NMRT NoNed Noralia Norsu NOS Noto NTiosagutta Nula
+   Nislije NMRT NoNed Noralia Norsu NOS Noto NRC NTiosagutta Nula
 
    Obezit OEI Ognisty Oksijen Olimp OMC Omega Omelas Onnela Onu 
    Oprosti Orakulas OSA Osam OSMO Oto Otta Oyzum Ozbiljni
@@ -553,9 +570,9 @@ my @SINGLE_WORDS = qw(
    RS Rüya Rylai Rylal Ryo
 
    Sabari SAGG Salost Salvo Sansouci SANY Sargam SaTu Saty Sbamby 
-   Sbanda SBC Scapros Schmuckles Scot SDK Senaattorit SFG SGG Shan 
-   Shaoshen Sherdils SHHG Sigdonnemann Sigma Sihai Silbersee 
-   Simpleksas SISU Sivves Siyabend Skalman Skaronga SKB 
+   Sbanda SBC Scapros Schmuckles Scot SDK Senaattorit Sensei Sepuluh 
+   SFG SGG Shan Shaoshen Sherdils SHHG Sigdonnemann Sigma Sihai 
+   Silbersee Simpleksas SISU Sivves Siyabend Skalman Skaronga SKB 
    SKBS Skotii SKR Þlem Slostria SMBC SMJ SMK SNAP SNP Soba Sober 
    Sobers Sogn Solo Sonchel Soumitra Spamirs Spandan Spartak Spektr 
    Spin Spring Srimapuna Sriwijaya Srykeir SSBC SSSR Stafani Stagge 

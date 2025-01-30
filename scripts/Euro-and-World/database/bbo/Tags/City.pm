@@ -177,17 +177,17 @@ my @SINGLE_WORDS = qw(
   Aral Arendal Asenovec Asenovgrad Askim Asminderød Assis Atakum 
   Atasehir Athens Atlanta Auckland Augsburg Ayacucho Aydin Ayvalik
 
-  Babaeski Baghdad Balchik Balarampur Balaton Balatonföldvár Balikesir 
-  Balikpapan 
+  Babaeski Baghdad Balchik Bakauheni Balarampur Balaton 
+  Balatonföldvár Balikesir Balikpapan 
   Ballerup Ballymena Bamberg Bandung Bangalore Bangkok Banjarmasin 
   Bansi Barcelona Barlinek Batam Bath Batikent Batman Batu Begues 
   Beihai Beijing Beirut Bekasi Belgrade Belfast Bengkalis Bengkulu 
   Beograd Bereket Bergen Bergues Berkeley Berlin Beyoglu Bhilwara 
   Bhubaneshwar Bialystok Biarritz Bielefeld Bikaner Bitung Blitar 
-  Bodrum Bodø Bogor Bogotá Boleslawiec Bologna Bonn Bordeaux Böblingen 
-  Braila Brandbu Brasilia Brasov Bremen Brevik Brighton Brisbane 
-  Broadbeach Bromölla Bruges Brussels Bucharest Budapest Buffalo
-  Burghausen Bursa Burdur Buzios Bydgoszcz Bytom Bø
+  Bodrum Bodø Bogor Bogotá Boleslawiec Bologna Bonn Bordeaux Bormali
+  Böblingen Braila Brandbu Brasilia Brasov Bremen Brevik Brighton 
+  Brisbane Broadbeach Bromölla Bruges Brussels Bucharest Budapest 
+  Buffalo Burghausen Bursa Burdur Buzios Bydgoszcz Bytom Bø
 
   Caen Cairns Cairo Canakkale Canberra Cankaya Cannareggio Canterbury 
   Caracas Casablanca Cascais Catania Cerkezkoy Cesme Changhua Changzhou 
@@ -212,9 +212,9 @@ my @SINGLE_WORDS = qw(
   Gümüşlük Gyor
 
   Haderslev Haikou Hamar Hamburg Hammamet Hangzhou Hanko Hannover 
-  Harplinge Harstad Haskovo Hatay Havirov Hebi Hedemora Heikendorf 
-  Heledia Helsinki Hendek Herning Hillerød Hobro Hornbæk Hsinchu 
-  Huldretråkket Hyderabad
+  Harplinge Harmanli Harstad Haskovo Hatay Havirov Hebi Hedemora 
+  Heikendorf Heledia Helsinki Hendek Herning Hillerød Hobro Hornbæk 
+  Hsinchu Huldretråkket Hyderabad
 
   Iasi Indore Iskenderun Isparta Istanbul Ithaca Izmir
 
@@ -270,20 +270,21 @@ my @SINGLE_WORDS = qw(
 
   Radkov Rakvere Rastignano Ravnkilde Rayong Reims Rennes Reykjavik 
   Riau Rieneck Riga Rijeka Rimini Romana Rome Roskilde Rotterdam 
-  Rottneros Rubbestadneset Rugao Ruian Rzepin Rzeszow Rødovre
+  Rottneros Rozanka Rubbestadneset Rugao Ruian Rzepin Rzeszow 
+  Rødovre
 
   Saarbrücken Sabadell Salerno Salo Salsomaggiore Samarinda Samobor 
   Sampit Samsun Sandefjord Santiago Sanya Sariyer Sarpsborg 
   Sawahlunto Secunderabad Seferihisar Selfoss Semarang Sendai 
   Senigallia Serang Shanghai Shangrao Shaoguan Sharjah Shenyang 
   Shenzhen Shijiazhuang Shimla Shouguang Shumen Sibiu Sidoarjo Siena 
-  Sieradz Sigulda Silifke Silistra Sindi Singsås Siofok Sivas Skara 
-  Skawina Ski Skien Skopje Slagelse Slawa Sleman Smedstad Smolyan 
-  Snåsa Sofia Solok Sopot Sortland Söke Split Stanford Stargard 
-  Stavanger Steinkjer Stirling Stockholm Stoholm Storsjöbygden 
-  Stureby Stuttgart Sukma Sukomoro Sumedang Sunndalsøra Suqian 
-  Surabaya Suzhou Svendborg Sydney Szczecinek Szczyrk Szeged 
-  Søborg Sømna Sørreisa
+  Sieradz Sigulda Silifke Silistra Sindi Singaraja Singsås Siofok 
+  Sivas Skara Skawina Ski Skien Skopje Slagelse Slawa Sleman 
+  Smedstad Smolyan Snåsa Sofia Solok Sopot Sortland Söke Split 
+  Stanford Stargard Stavanger Steinkjer Stirling Stockholm Stoholm 
+  Storsjöbygden Stureby Stuttgart Sukma Sukomoro Sumedang 
+  Sunndalsøra Suqian Surabaya Suzhou Svendborg Sydney Szczecinek 
+  Szczyrk Szeged Søborg Sømna Sørreisa
 
   Taicang Taichung Tainan Taiyuan Taizhou Takayama Tallinn Tambun 
   Tangerang Taoyuan Tarakan Targoviste Tarnów Tarnobrzeg Tasikmalaya 

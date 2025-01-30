@@ -97,6 +97,7 @@ my %MULTI_TYPOS =
   NIBU => ['northern ireland bridge union'],
   NZB => ['new zealand bridge'],
   ÖBV => ['austrian bridge federation'],
+  PBA => ['punjab bridge association'],
   PBF => ['pakistani bridge federation'],
   PuBA => ['Punjab Bridge Association', 'punjab bridge assn'],
   PRBA => ['Pune Region Bridge Association'],

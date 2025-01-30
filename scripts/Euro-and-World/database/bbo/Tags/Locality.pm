@@ -18,7 +18,8 @@ my @MULTI_WORDS =
   'Lawang Salapan',
   'Poiana Brasov',
   'Raewaya Hills',
-  'Saint Honoré'
+  'Saint Honoré',
+  'Siger Lampung'
 );
 
 my %MULTI_TYPOS =

@@ -36,7 +36,7 @@ my @SINGLE_WORDS = qw(
 
    Felix Fenia Fharon Fifi Filippo Frank Franz 
 
-   Garry George Greta Gulce Guptas Gürsel
+   Garry George Gerard Greta Gulce Guptas Gürsel
 
    Hanan Hande Harvin Havin Hayet Heino Heis Hel Hella Hilda Hridhaan 
    Hubsi Hunaja 

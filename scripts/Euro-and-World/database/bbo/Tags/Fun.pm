@@ -361,6 +361,7 @@ my @MULTI_WORDS =
   'Euro Step',
   'European Aces',
   'Eva og Ingeborg',
+  'Evakossa pilviin',
   'Ex Fijanova +',
   'Expired Youth',
   'Eye of the Tiger',
@@ -412,6 +413,7 @@ my @MULTI_WORDS =
   'Full Moon',
   'Full Spectrum',
 
+  'Gaek Bana',
   'Gallo en la canasta',
   'Game On',
   'Game Over',
@@ -506,6 +508,7 @@ my @MULTI_WORDS =
   'Hurlumhei',
   'Husk of Hares',
   'Hvalen og tjukkasene', 
+  'Hvani varni',
   'Hvor er mine babes',
   'Høyland & Kjell-Vidar',
   'Håkken hårt hårr',
@@ -547,6 +550,7 @@ my @MULTI_WORDS =
   'Jósef smiður',
   'Joy Division',
   'Joyjits Army',
+  'Julek po Filadelfii',
   'Junioren mit Upgrade',
   'Juniorproffen co',
   'Juniors Disipler',
@@ -651,6 +655,7 @@ my @MULTI_WORDS =
   'Los Mismos',
   'Losing Finesse Erf',
   'Lovende ung',
+  'Lowca Dam',
   'Lucky 4',
   'Lucky Bandana',
   'Lucky Losers',
@@ -820,6 +825,7 @@ my @MULTI_WORDS =
   'Pearl of the Orient',
   'Pen Pineapple Apple Pen',
   'Pepsi-Colas',
+  'Pian paras',
   'Pieni karhu',
   'Piger og drenger',
   'Pigerne på tur',
@@ -1323,9 +1329,17 @@ my %MULTI_TYPOS =
   'Ice Jacks' => ['ice jack', 'ice jaks'],
   'Ikke akkurat kjedelig' => ['ikke akkurat kjedel'],
   'India Blues' => ['indian blues'],
-  'Indian Mavericks' => ['india mavericks', 'indian mavricks',
-    'mavericks all stars', 'mav prodigies', 'mavericks prodigies',
-    'maverick all star', 'maverick all stars'],
+  'Indian Mavericks' => [
+    'india mavericks', 
+    'indian mavricks',
+    'mav prodigies', 
+    'maverick all star', 
+    'maverick all stars',
+    'mavericks prodigies',
+    'mavericks all stars', 
+    'mavericks all star', 
+    'the maverick',
+    'the mavericks'],
   'Itinérants du bridge' => ['iti du bridge', 'itin du bridge'],
   'Iyi Takim' => ['Ýyý Takim'],
 
@@ -1475,9 +1489,9 @@ my @SINGLE_WORDS = qw(
    Astronotlar Atlantic Atom Autostrada Avalanche Avatar 
 
    Bachelor Badger Badminton Bager Banana Bananasplit BarDeZi 
-   Barracuda Barsss Baryton Beauty BeRe Bingbang Binkie Blackwood 
-   Bling Blondie Blues Blueberry Blues Bolero Boogies Boomz 
-   BOVE Bricklayer Bridgeministeriet Brigada Brother 
+   Barracuda Barsss Baryton Beauty BeRe Bingbang Binkie Biscuit
+   Blackwood Bling Blondie Blues Blueberry Blues Bolero Boogies 
+   Boomz BOVE Bricklayer Bridgeministeriet Brigada Brother 
    Brudarna Bubba Buddies Bulk Bulldozer Bumerangas Bunnies
 
    Cancan Cardtossers Cargo Cartoon Casuals Censored Challengers 
