@@ -1010,6 +1010,7 @@ my %SINGLE_TYPOS =
   Cimentas => ['çimentaþ'],
   Computerland => ['computerlan'],
   CONNECTOR => ['conector'],
+  'Dagensbridge.dk' => ['dagensbridge'],
   'Data Steel' => ['datasteel'],
   'Dhampur Sugar' => ['dhampur', 'dsm'],
   DISKI => ['dsi', 'dsý',],
