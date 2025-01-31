@@ -21,55 +21,59 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-   Aditya Ahmetizm Akinom Alex Alf Alfredo Ali Alizee Allam Amrapali 
-   Amul Andrzejki Anna Anni Anol Anuj Apaçý Apek Arangan Arnab Arno 
-   Arunas Auni Ayan
+   Aditya Ahmetizm Akinom Alex Alf Alfredo Alejandro Alexander Alfa
+   Ali Alice Alizee Allam Amalia Amanda Amilcar Amrapali Amul Ana 
+   Andrzejki Anna Anni Anol Anuj Apaçý Apek Arangan Aris Arnab Arno 
+   Arunas Athena Auni Ayan
 
-   Bauhinia Ben Beniaminek Berik Bilal Bodo Breno
+   Bachar Bas Bauhinia Ben Beniaminek Berik Berk Bilal Blanka Bob 
+   Bodo Breno
 
-   Carlitos Cathy Cem Chiranjeev Claudili Conie
+   Carlitos Cathy Cem Charles Chiranjeev Claudili Cleo Conie
 
-   Dada Dadya Dahsyat Daisy Daniel Dauna Dawn Diana Didi Dido Diego 
-   Dieter Dion Dora Dukens 
+   Dada Dadya Dahsyat Daisy Daniel Dauna Dawn Daya Desi Diana Didi 
+   Dido Diego Dieter Dion Disa Dora Dukens 
 
-   Ece Edi Eliza Ellen Emre Eren Eric Erikas Erla Ewa
+   Ece Edi Ekin Eliza Ellen Emre Emilio Eren Eric Erikas Erla 
+   Ernis Esra Ewa
 
-   Felix Fenia Fharon Fifi Filippo Frank Franz 
+   Farida Felix Fenia Fharon Fifi Filippo Francesca Frank Franz 
 
-   Garry George Gerard Greta Gulce Guptas Gürsel
+   Garry Gene George Gerard Greta Gudrun Gulce Guptas Gürsel
 
-   Hanan Hande Harvin Havin Hayet Heino Heis Hel Hella Hilda Hridhaan 
-   Hubsi Hunaja 
+   Hanan Hande Haoran Harvin Havin Hayet Heino Heis Hel Hella Henrique
+   Hilda Hortensia Hridhaan Hubsi Hunaja 
 
    Ida Ilya Imanuel Iris 
 
-   Jagg Jaiganesh Janko Jans Jelena Jessi Jessica Jóannes Jonathan 
-   Justyna Justynka 
+   Jagg Jaiganesh Jake Janko Janne Jans Jelena Jenny Jerzy Jessi Jessica 
+   Joanna Jóannes Joao Jonathan Joy Justyna Justynka 
 
-   Kamlakars Karin Kasiyahan Keni Kenji Kinga Kitty Kris Kriston 
-   Krisztina 
+   Kalin Kamlakars Karin Karl Kasiyahan Keni Kenji Kinga Kira Kitty 
+   Kris Kriston Krisztina 
 
-   Larry Lasse Lea Lebron Leszek Leta Lili Loloc 
+   Larry Lasse Laure Lea Lebron Leszek Leta Lili Lola Loloc Luc
 
-   Macak Mach Madhav Mads Magnus Maija Maj Malaila Mali Malinka 
-   Manashda Manena Manno Mano Manu Manywar Margitta Marianne Mark 
-   Matilde Mats Mia Michal Mihai Mikke Miguel Milo Miro Moritz 
-   Munawar Myoni 
+   Macak Mach Madhav Mads Magnus Maija Maj Malaila Malene Mali Malin
+   Malinka Malou Manashda Manena Manno Mano Manu Manywar Margitta 
+   Marlene Marianne Mark Matilde Mats Mauricio Max Mia Michal Midori
+   Mihaela Mihai Mikke Miguel Mila Milo Mira Miro Moritz Munawar Myoni 
 
-   Nabil Natalia Nathans Nico Nik Nikita Nikitopoulos Niko Nikos Nina 
-   Nis Noriko 
+   Nabil Natalia Nathans Nell Nevena Nico Nik Nikita Nikitopoulos Niko 
+   Nikos Nina Nis Noriko 
 
-   Oguzhan Olena Onirepsou Oyku 
+   Oguzhan Ole Olena Onirepsou Oyku 
 
-   Paco Pal Paoli Paulette Paulina Pero Peter Petra Pia Piter 
+   Paco Pal Panjaroon Paoli Paulette Paulina Pero Peter Petra Pia 
+   Pierre Piter Pradeep Pratap
 
    Qingjun
 
-   Rafael Ramkumar Rene Rica Rob Rike Rima Robertinho Robi 
+   Rado Rafael Ramkumar Rene Rica Rike Rima Rob Robertinho Robi Roger
 
-   Sabina Sara Sarp Selin Severin Sevil Shane Shankars Shavaz Shona 
-   Shrikant Shuai Shushi Sid Siddheshwar Sigrid Simonetta Sindhu 
-   Stefany Steliana Steve Sue Suz Svetla Swanand 
+   Sabina Sami Sandra Sara Sarp Selin Severin Sevil Shane Shankars 
+   Shavaz Shona Shrikant Shuai Shushi Sid Siddheshwar Sigrid Silvana
+   Simon Simonetta Sindhu Stefany Steliana Steve Sue Suz Svetla Swanand 
 
    Tadeu Tamae Tita Tofi Toma Tomas Tushar 
 
@@ -79,9 +83,9 @@ my @SINGLE_WORDS = qw(
 
    Wael Wafa Wala Waldi 
 
-   Yelena Ylajai 
+   Yael Yelena Ylajai Yves Yvonne
 
-   Zara Zen Ziggy Zlatan 
+   Zara Zen Zeynep Ziggy Zip Zlatan 
 );
 
 my %SINGLE_TYPOS =

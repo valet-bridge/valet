@@ -73,7 +73,7 @@ my @MULTI_WORDS =
   'Against All Odds',
   'Aina Malttia',
   'Ala vill til Himlen',
-  'Albayrak 67',
+  'Albayrak67',
   'Albrekts T-Bone',
   'Alex is Beautiful',
   'All Female Panel',
@@ -142,7 +142,7 @@ my @MULTI_WORDS =
   'Berre Lækkert',
   'Beverly Hillbillies',
   'Beyaz Marti',
-  'Bid 72',
+  'Bid72',
   'B.I.G.',
   'Big Bang',
   'Big Boss',
@@ -201,7 +201,7 @@ my @MULTI_WORDS =
   'Bridge View',
   'British Invasion',
   'British Lions',
-  'Bros 1005',
+  'Bros1005',
   'Brown Sugar',
   'Brødrene & co',
   'Brødrene Dal',
@@ -464,7 +464,7 @@ my @MULTI_WORDS =
   'Gunnars Gunners',
   'Gutta fra nord',
   'Gutta på tur',
-  'Guyub 57',
+  'Guyub57',
   'Gyllene Prag',
   'Gøta-Hesten',
 
@@ -1052,7 +1052,6 @@ my @MULTI_WORDS =
   'The Magic Dogs',
   'The Maltese Falcons',
   'The Marx Brothers',
-  'The Maverick',
   'The Metropolis',
   'The Ninjas',
   'The Other Junior Girls',
@@ -1235,6 +1234,7 @@ my %MULTI_TYPOS =
   '6 Notrump' => ['6 no trump'],
 
   'AG laget' => ['ag-laget'],
+  'Albayrak67' => ['albayrak 67'],
   'Alex is Beautiful' => ['alex is beatiful'],
   'All Stars' => ['all-stars'],
   'Alle presidentens menn' => ['alle presidentens'],
@@ -1250,6 +1250,7 @@ my %MULTI_TYPOS =
   Begijntje => ['begijnt je'],
   'Best uten kort' => ['best uden kort'],
   'Beverly Hillbillies' => ['beverly hillbillie'],
+  'Bid72' => ['bid 72'],
   'Big Guns' => ['big gun'],
   'Big Makie' => ['big makie och co'],
   'BK Gröna Kvistar' => ['BK Grön Kvistar'],
@@ -1258,6 +1259,7 @@ my %MULTI_TYPOS =
   'Bodø Glimt førr evig' => ['bodø glimt førr evi'],
   'Boro Boss' => ['boro-boss'],
   'Brian Is Beautiful' => ['brian is beatiful'],
+  'Bros1005' => ['bros 1005'],
   'Butterfly from HK' => ['babochka s hk'],
 
   'Ca. et halvt tonn' => ['ca et halvt tonn'],
@@ -1307,6 +1309,7 @@ my %MULTI_TYPOS =
     'gammel opland m/co'],
   "Gary's Boys" => ['garys boys', 'gary´s boys'],
   'Good Men' => ['good man'],
+  'Guyub57' => ['guyub 57'],
 
   "Hagen's Heroes" => ["hagen`s heroes", 'hagens heroes'],
   Hammershark => ['hammershark deluxe'],
@@ -1579,7 +1582,6 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   'Adams Family' => ['adamsfamily'],
-  'Albayrak 67' => ['albayrak67'],
   Ambassador => ['ambassadors', 'ambassdor'],
   Anglers => ['anglelers'],
   'Apollo Soyuz' => ['apollosoyuz', 'apollosoyouz'],
@@ -1588,7 +1590,6 @@ my %SINGLE_TYPOS =
   'Atomic Bridge' => ['atomic'],
 
   Barracuda => ['barakuda', 'baracuda'],
-  'Bid 72' => ['bid72'],
   'Bleu Lights' => ['bleulights'],
   'Bosse Superettan' => ['bosse'],
   Buaigh => ['buaijh'],
@@ -1605,12 +1606,12 @@ my %SINGLE_TYPOS =
 
   'Green Eyes' => ['greeneyes'],
   Gunsmoke => ['gunnsmoke'],
-  'Guyub 57' => ['guyub57'],
 
   Hästpojkarna => ['hastpojkarna'],
 
   Imponderables => ['impoderables'],
   'India Blues' => ['indiablues'],
+  'Indian Mavericks' => ['mavericks'],
   'Indonesian National Sports Week' => ['pon'],
 
   'Jamm & Co' => ['jamm'],

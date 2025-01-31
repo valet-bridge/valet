@@ -59,7 +59,7 @@ my @MULTI_WORDS =
   'Bric Klinik',
   'Bridgekam 17',
   'Bridgerama Milan',
-  'Bridgetime 45',
+  'Bridgetime45',
   'Bu Mu',
   'Buyur Teyze',
 
