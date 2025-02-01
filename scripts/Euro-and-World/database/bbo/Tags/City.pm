@@ -42,11 +42,13 @@ my @MULTI_WORDS =
   'Kamphaeng Phet',
   'Kansas City',
   'Khan Yunis',
+  'Khon Kaen',
   'Kota Bandung',
   'Kota Bekasi',
   'Kota Bogor',
   'Kota Mataram',
   'Kuala Lumpur',
+  'Kubu Raya',
   'La Baule-Escoublac',
   'La Chaux-de-Fonds',
   'La Marina',
@@ -110,7 +112,8 @@ my @MULTI_WORDS =
   'Vrnjacka Banja',
   'Xin Zhu',
   'Yedi Eylul',
-  'Zhong Jian'
+  'Zhong Jian',
+  'Zielona Gora'
 );
 
 my %MULTI_TYPOS =
@@ -200,21 +203,21 @@ my @SINGLE_WORDS = qw(
   Dobrich Doha Dombivli Dongguan Dortmund Dörtyol Drammen Dubai 
   Dubrovnik Durban Düsseldorf
 
-  Eastbourne Edinburgh Edirne Elblag Elmadag Enschede Eregli 
-  Ergene Erzurum Esbjerg Eskisehir Essen Estoril Evanston
+  Eastbourne Edinburgh Edirne Egirdir Elblag Elmadag Enschede Erdek
+  Eregli Ergene Erzurum Esbjerg Eskisehir Essen Estoril Evanston
 
-  Farsund Fethiye Firenze Flekkefjord Foca Fosnavåg Frankfurt 
+  Farsund Fernetti Fethiye Firenze Flekkefjord Foca Fosnavåg Frankfurt 
   Fredrikstad Freiburg Fritzlar Funchal Fuzhou Førde
 
-  Galway Garches Gävle Gdansk Gdynia Gelibolu Genoa Gent Gevgelija 
+  Galway Gajaki Garches Gävle Gdansk Gdynia Gelibolu Genoa Gent Gevgelija 
   Geyve Giresun Giza Glasgow Gnesta Gniezno Gorzow Gölcük Göteborg 
-  Gresik Grogol Groningen Guangdong Guangzhou Guayaquil Gudbrandsdal 
-  Gümüşlük Gyor
+  Gresik Grobogan Grogol Groningen Guangdong Guangzhou Guayaquil 
+  Gudbrandsdal Gümüşlük Gyor
 
-  Haderslev Haikou Hamar Hamburg Hammamet Hangzhou Hanko Hannover 
+  Haderslev Haikou Hamar Hamburg Hammamet Hangzhou Hani Hanko Hannover 
   Harplinge Harmanli Harstad Haskovo Hatay Havirov Hebi Hedemora 
-  Heikendorf Heledia Helsinki Hendek Herning Hillerød Hobro Hornbæk 
-  Hsinchu Huldretråkket Hyderabad
+  Heikendorf Heledia Helsinki Hendek Herning Hillerød Hjørring Hobro 
+  Hornbæk Hsinchu Huldretråkket Hyderabad
 
   Iasi Indore Iskenderun Isparta Istanbul Ithaca Izmir
 
@@ -222,93 +225,97 @@ my @SINGLE_WORDS = qw(
   Jiangyou Jianshe Jinchang Jincheng Jinjiang Jiujiang  Jixiexiang
   Jurmala
 
-  Kadirli Kaisei Kalisz Kalundborg Kalyani Kanpur Kaohsiung Karimun 
+  Kadirli Kaisei Kalisz Kalundborg Kalyani Kanchanaburi Kanha Kanpur 
+  Kaohsiung Karimun 
   Karlovo Karlsruhe Karsiyaka Kashi Kassel Kastamonu Katowice 
   Kayseri Kediri Kedungwaru Keelung Kemalpasa Kesten Ketsch Kiel 
-  Kielce Kiev Kinali Kirkeby Kirklarelý Kirsehir Klabat Klepp 
+  Kielce Kiev Kinali Kirkeby Kirklarelý Kirsehir Kista Kiten Kitka 
+  Klabat Klepp 
   Kleve Kocaeli Kolbotn Kolkata Konga Kongsberg Konnerud Konya 
-  Kópavogur 
-  Korfez Kornik Kosice Koszalin Kota Koycegiz Köln Kragerø Krakow 
-  Kraljevica Kristiansand Kudus Kunshan Kutno Kuopio Kusadasi 
+  Kópavogur Korfez Kornik Kosice Koszalin Kota Koycegiz Köln Kragerø 
+  Krakow Kraljevica Kristiansand Kudus Kunshan Kutno Kuopio Kusadasi 
   Kütahya Kverndalen Kyoto Kyustendil Køge Kølabånn
 
-  Langkat Lanzhou Laodikya Lappeenranta Larnaca Larvik 
-  Lausanne Lecco Leiden Leipzig Leksand Lerum Lesno Leszno 
-  Leuven Leverkusen Lhokseumawe Liepaja Lille Lima Limboto Lincoln 
-  Lindesberg Linköping Lisbon Liushu Ljubljana Lodi Lodz 
-  Lojdy Lokotok Lom Lomza London Lowicz Lublin Ludvikabygden 
-  Lufeng Luleburgaz Lumajang Luzern Lyon
+  Landak Langkat Lanzhou Laodikya Lappeenranta Larnaca Larvik 
+  Lausanne Lebork Lecco Leiden Leipzig Leksand Lerum Lesno Leszno 
+  Leuven Leverkusen Lhokseumawe Liandui Liepaja Lille Lima Limboto Lincoln 
+  Lindesberg Linköping Lisbon Liushu Livane Ljubljana Lodi Lodz 
+  Lojdy Lokotok Lom Lomza London Lovech Lowicz Lublin Lubomino 
+  Ludvikabygden Lufeng Luleburgaz Lumajang Luzern Lyon
 
   Maastricht Madrid Magetan Makassar Malang Malatya Malmö 
-  Manado Manchester Manila Manisa Manna Mannheim Marbella Mardin 
-  Marijampolė Marrakech Marseille Martapura Massy Mautern Medan 
-  Medellin Melbourne Mersin Miaoli Michalovce Michalowo Midyat 
-  Milan Milas Minsk Miramar Miskolc Monticiano Montpellier 
-  Moradabad Morud Moscow Moss Mragowo Mudanya Muðla Mulund 
+  Manado Manchester Manila Manisa Manna Mannheim Marbella Marcelli
+  Mardin Marijampolė Marrakech Marseille Martapura Massy Mautern Medan 
+  Medellin Melawi Melbourne Mersin Miaoli Michalovce Michalowo Midyat 
+  Milan Milas Minsk Miramar Miskolc Monticiano Montoro Montpellier 
+  Moradabad Morsø Morud Moscow Moss Mragowo Mudanya Muðla Mulund 
   Mumbai Munich 
 
   Nagari Nagpur Nagykanizsa Namsos Nanchang Nanchong Nancy Nanjing
-  Nanning Napoli Narlidere Narvik Nashik Nazilli Näsby Neijiang
-  Nesodden Newport 
-  Nganjuk Nice Nicosia Niedernhausen Nijmegen Nilüfer Ningbo 
-  Niš Noida Norrbyskär Norrøna Nürnberg Nyon Nysa Nærbø Næstved 
-  Nøtterøy
+  Nanning Napoli Narlidere Narvik Nashik Nazilli Näsby Nebakan
+  Neijiang Nesodden Newport Nganjuk Nice Nicosia Niedernhausen 
+  Nijmegen Nilüfer Ningbo Niš Noida Nonthaburi Norrbyskär Norrøna 
+  Nusaybin Nürnberg Nyon Nysa Nærbø Næstved Nøtterøy
 
   Odense Odmet Ogndal Oldenburg Olrud Olsztyn Oltenita Opatija 
-  Opole Ordu Orhangazi Osaka Ostend Oslo Osnabrück Ottadalen 
+  Opole Ordu Orneta Orhangazi Osaka Ostend Oslo Osnabrück Ottadalen 
   Otepää Oxford Ozarow Örebro Överum
 
-  Padang Padova Paimado Palembang Palermo Palma Palu Pamukkale 
-  Pancevo Panzhihua Pariaman Paris Pärnu Pasuruan Pattaya Pau 
-  Pazar Pecs Peebles 
-  Pekanbaru Pelotas Penajam Pernik Perth Perula Pesaro Pescara 
-  Petersfield Philadelphia Pisa Pittsburgh Pleven Plock Plovdiv 
-  Pontianak Popovo Porto Potsdam Poznan Prague Preslav Probolinggo 
-  Protaras Ptuj Pula Pulawy Pune Puri Pushkar Puutalo
+  Pacitan Padang Padova Paimado Palembang Palermo Palma Palu Pamukkale 
+  Pancevo Panzhihua Pariaman Paris Pärnu Parvomay Pasuruan Pattaya Pau 
+  Pazar Pazardjik Pecs Peebles Pekanbaru Pelotas Penajam Pernik Perth 
+  Perula Pervera Pesaro Pescara Petersfield Petrelik Philadelphia 
+  Phitsanulok Phokai Phuket Piedimonte Pijnacker Pisa Pitane Pittsburgh 
+  Pleven Plock Plovdiv Pontianak Popovo Porto Potsdam Poznan Prague 
+  Preslav Priboi Primorsko Probolinggo Protaras Ptuj Pula Pulawy Pune 
+  Puri Pushkar Puutalo
 
   Qingdao
 
-  Radkov Rakvere Rastignano Ravnkilde Rayong Reims Rennes Reykjavik 
-  Riau Rieneck Riga Rijeka Rimini Romana Rome Roskilde Rotterdam 
-  Rottneros Rozanka Rubbestadneset Rugao Ruian Rzepin Rzeszow 
-  Rødovre
+  Radkov Rakovski Rakvere Rastignano Ravnkilde Rayong Reims Rennes 
+  Reykjavik Riau Rieneck Riga Rijeka Rimini Romana Rome Roskilde 
+  Rotterdam Rottneros Rozanka Rubbestadneset Rugao Ruian Ruse Rzepin 
+  Rzeszow Rødovre Rønne
 
   Saarbrücken Sabadell Salerno Salo Salsomaggiore Samarinda Samobor 
   Sampit Samsun Sandefjord Santiago Sanya Sariyer Sarpsborg 
   Sawahlunto Secunderabad Seferihisar Selfoss Semarang Sendai 
-  Senigallia Serang Shanghai Shangrao Shaoguan Sharjah Shenyang 
+  Senigallia Seoul Serang Shanghai Shangrao Shaoguan Sharjah Shenyang 
   Shenzhen Shijiazhuang Shimla Shouguang Shumen Sibiu Sidoarjo Siena 
-  Sieradz Sigulda Silifke Silistra Sindi Singaraja Singsås Siofok 
-  Sivas Skara Skawina Ski Skien Skopje Slagelse Slawa Sleman 
-  Smedstad Smolyan Snåsa Sofia Solok Sopot Sortland Söke Split 
-  Stanford Stargard Stavanger Steinkjer Stirling Stockholm Stoholm 
+  Sieradz Sigulda Silifke Silistra Sindi Singaraja Singkawang
+  Singsås Siofok Sivas Skara Skawina Ski Skien Skopje Slagelse Slawa 
+  Sleman Smedstad Smolyan Smyrna Snåsa Sofia Solok Songkhla Sopot 
+  Sortland Söke Sozopol Split Stanford Stargard Stavanger Steinkjer 
+  Stirling Stockholm Stoholm 
   Storsjöbygden Stureby Stuttgart Sukma Sukomoro Sumedang 
   Sunndalsøra Suqian Surabaya Suzhou Svendborg Sydney Szczecinek 
-  Szczyrk Szeged Søborg Sømna Sørreisa
+  Szczyrk Szeged Sztum Søborg Sømna Sørreisa Sørvoll
 
   Taicang Taichung Tainan Taiyuan Taizhou Takayama Tallinn Tambun 
   Tangerang Taoyuan Tarakan Targoviste Tarnów Tarnobrzeg Tasikmalaya 
-  Taskopru Täby Täfteå Tczew Tekýrdag Telmessos Temuco Thane 
+  Taskopru Täby Täfteå Tczew Tekýrdag Telmessos Temuco Ternopil Thane 
   Thanjavur Thessaloniki Thoisy Tianjin Tilburg Timisoara Tire 
   Tofta Tokyo Tomohon Tonya Torino Toshima Toulouse Tours Trabzon 
-  Trieste Trondheim Tromsø Tula Tübingen 
+  Tralles Trieste Trondheim Tromsø Tula Tübingen 
 
-  Udaipur Uddevalla Umeå Underberg Uppsala Usak Utrecht Uzunköprü
+  Udaipur Uddevalla Ulricehamn Umeå Underberg Uppsala Usak Utrecht 
+  Uzunköprü
 
   Vadsø Van Vancouver Varanasi Varberg Varese Varna Vasa Västervik 
   Västerås Vejle Venice Verdal Verona Vestfold Vestvågøy Viareggio 
-  Vienna Vikersund Villeurbanne Vilnius Vorden Vraca
+  Viborg Vienna Vikersund Villeurbanne Vilnius Vodskov Vorden Vraca
+  Våge
 
   Waldsolms Waltham Wanzhou Warsaw Wellington Wetzlar Wiesbaden 
-  Wisla Worcester Wroclaw Wronie Wuhan Wuxi
+  Wisla Wolverhampton Worcester Wroclaw Wronie Wuhan Wuxi
 
   Xiamen Xian Xiantao Xinyi Xuzhou
 
-  Yambol Yancheng Yanshi Yantai Yarýmca Yatagan Yingshan Yizhuang 
-  Yokohama Yogyakarta Yuquan Yuzhou
+  Yambol Yancheng Yanshi Yantai Yarýmca Yasothon Yatagan Yaykin 
+  Yingshan Yizhuang Yokohama Yogyakarta Yuquan Yuzhou
 
-  Zagreb Zavet Zegrze Zhaoqing Zhenjiang Zhongshan Zhuzhou Zigong 
-  Zonguldak Zürich Zyrardow
+  Zagreb Zavet Zawady Zegrze Zhaoqing Zhenjiang Zhongshan Zhuzhou 
+  Zigong Zonguldak Zuzenberk Zürich Zyrardow
 
   Ørland Østerdal
 
@@ -342,7 +349,9 @@ my %SINGLE_TYPOS =
   Cankaya => ['Çankaya'],
   Cerkezkoy => ['çerkezköy', 'cerk'],
   Chennai => ['madras'],
+  Chumphon => ['chumpon'],
   Copenhagen => ['kopenhagen'],
+  Corlu => ['çorlu'],
   Deauville => ['deauille'],
   Diyarbakir => ['dýyarbakir', 'diyarbakýr'],
   Dongguan => ['dongguang'],
@@ -360,8 +369,13 @@ my %SINGLE_TYPOS =
   Izmir => ['ýzmýr', 'izmýr', 'ýzmir'],
   Jakarta => ['dki', 'jakar', 'jkt'],
   Jianshe => ['js'],
+  Jiangsu => ['jjiansu'],
   Kalundborg => ['kallundborg'],
+  'Kamphaeng Phet' => ['kampangphet', 'kamphaengphet', 'kamphang',
+    'kampheangphet'],
+  Kanchanaburi => ['Kanjanaburi'],
   Karsiyaka => ['Karþiyaka'],
+  'Khon Kaen' => ['khonkaen'],
   Kocaeli => ['Kocaelý'],
   Kolkata => ['calcutta', 'kolkta', 'kolktata', 'kol'],
   Kosice => ['cassovia'],
@@ -369,12 +383,16 @@ my %SINGLE_TYPOS =
   Krakow => ['kraków', 'cracow'],
   Kristiansand => ['kristiansands'],
   'Kuala Lumpur' => ['kl'],
+  'Kubu Raya' => ['kuburaya'],
   Kyustendil => ['kjustend'],
   'La Marina' => ['lamarina'],
   Langkat => ['lankat'],
   Lhokseumawe => ['lhoeksemawe'],
   Linköping => ['linkoping'],
+  Livane => ['lývane'],
+  Lovech => ['melta'],
   Luleburgaz => ['lüleburgaz'],
+  'Maha Sarakham' => ['mahasarakham'],
   Makassar => ['makasar'],
   Malmö => ['malmo', 'malmoe'],
   Manado => ['menado'],
@@ -384,7 +402,7 @@ my %SINGLE_TYPOS =
   'Mitra Vihar' => ['mitravihar'],
   'Monte Carlo' => ['montecarlo'],
   Mumbai => ['mum', 'bombay'],
-  Munich => ['münchen'],
+  Munich => ['münchen', 'muenchen'],
   Nagpur => ['nagpor'],
   Nanchang => ['nancang'],
   Napoli => ['naples'],
@@ -400,7 +418,9 @@ my %SINGLE_TYPOS =
   Pamukkale => ['pamuk'],
   Panzhihua => ['panzhihuabc'],
   Pau => ['puau'],
+  Pazardjik => ['pazrdzik'],
   Petersfield => ['peterfield'],
+  Phuket => ['puket'],
   'Piatra Neamt' => ['neamt'],
   Porto => ['invicta', 'oporto'],
   Potsdam => ['postdam'],
@@ -415,7 +435,9 @@ my %SINGLE_TYPOS =
   Samsun => ['amisos'],
   Shenzhen => ['sz'],
   Singsås => ['singsaas'],
+  Skopje => ['skopije'],
   Slawa => ['s£awa', 's³awa'],
+  Songkhla => ['Songkha'],
   'South Tangerang' => ['tangsel'],
   Storsjöbygden => ['storsjöbygdens'],
   Söke => ['soke'],
@@ -438,10 +460,12 @@ my %SINGLE_TYPOS =
   Varanasi => ['baranasi'],
   Verona => ['veron'],
   Vienna => ['wien'],
+  Vilnius => ['wilno'],
   Warsaw => ['warsow', 'warszawa'],
   Wroclaw => ['wr'],
   Yogyakarta => ['diy', 'yogya'],
   Zagreb => ['zgb', 'zg'],
+  'Zielona Gora' => ['zielona'],
   Zürich => ['zurich'],
   'Zhong Jian' => ['zhongjian'],
   Åkirkeby => ['aakirkeby'],

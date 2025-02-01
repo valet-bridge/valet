@@ -742,6 +742,7 @@ my @MULTI_WORDS =
   'Nem pó',
   'Nestors trappar upp',
   'Never Claim',
+  'Nevada Turkey',
   'New Amsterdam',
   'New Friends',
   'New Combination',
@@ -926,6 +927,7 @@ my @MULTI_WORDS =
   'Salten rundt',
   'Sam23',
   'Samfund Slingers',
+  'Sana Soz',
   'Sannas Änglar',
   'Saras Friends',
   'Sayin Abim',
@@ -1523,7 +1525,7 @@ my @SINGLE_WORDS = qw(
    Etik Everest Evil 
 
    Familia Fantasia Fantasy Fant4stic Farmen Fenesta Filbyter Filosofene 
-   Finest Fisk Flamboyant Forehand Foreigner Forfot Formidables 
+   Finest Fisk Flamboyant fopen Forehand Foreigner Forfot Formidables 
    Frenemies Friends Francophones Freak Frirond Frivolt Frogs 
    Froh Funny
 
@@ -1532,7 +1534,7 @@ my @SINGLE_WORDS = qw(
    Gosho Grand Grads Gris Gruken Gryphon Guests Gulebjorn Gunsmoke 
    Gwenchanna
 
-   Hangarounds Happy Hawks Hästpojkarna Hermitage Heros HERZdame 
+   Hangarounds Haoyun Happy Hawks Hästpojkarna Hermitage Heros HERZdame 
    HeSa Hexagon Hey Highlanders Hiiimmm Hiphiphurra Hjerterdamer 
    Hobbits Hobby Hollywood Holmenkollen Honeymoon Hopfenkönig 
    Hornets Hufflefluffs Huhu Hunhun Hurra Hurrablondina Hurricane 
@@ -1542,67 +1544,79 @@ my @SINGLE_WORDS = qw(
    Imponderables Inception Indi Infinity Instructor Invincible 
 
    Jackalls Jenterne Jeparadise Jegenspiel Jernbaneverket JJJ Job 
-   Jocker JoJo Joker Journalists Jugermaister Juice Jupiter 
-   Juubilar Juveniles
+   Jocker JoJo Joker Journalists Jugermaister Juice Jumentos
+   Jupiter Juryn Juubilar Juveniles
 
-   Kaktus Kamelåså Kamikaze Kangaroo Kanin Karo Kartalite Kartel 
-   Kat Kayal Kingkong Kingpin Kings KISS KKKQ Knife Kompisarna Kuglana 
-   Kuhmilch 
+   Kaktus Kalmaar Kamelåså Kamikaze Kampai Kangaroo Kanin Karo Kartalite 
+   Kartel Kat Kayal Kiminoto Kingkong Kingpin Kings Kismetli
+   KISS KKKQ Knife 
+   Kompisarna Kuglana Kuhmilch 
 
    Lady Lalaland Lanterfanters Laplanders Lazy Lebensohl Leviathan 
    Liggeunderlaget Lion Lions Lirarna Liverbird Lucky LVBridgeBums 
    Lykkeland Løwene
 
    Maestros Maestroi Magi Magic Magister Maharaja Major MajorB Majorn 
-   Majority Marihønelaget Mars Marvelous Masdjävlar Mask Masterminds
-   Masters Matrix Maven Maxi Mercury Meta Microchiroptera Midas 
-   Milady Mirage Mismatch Mixarna Mjøskameratne MMMM Mojito Mongos 
-   Måsen
+   Majority Malambo Mamahai Marihønelaget Marres Mars Marvelous Mascot 
+   Masdjävlar Mask Masterminds Masters Matrix Matruska Maven Maxi 
+   Maximus Meow Mercury Meta Microchiroptera Midas 
+   Miklagard Milady Mingo Mirage Mismatch Mixarna Mjøskameratne MMMM 
+   Mojito Mongos Muhabbet Muscolo Måsen
 
-   Nanda Natural Naturalists Nemesis Neverclaim Nightingale Noctis 
+   Nanda NASA Natural Naturalists NEDBULL Nemesis Nemo Neverclaim 
+   Nightingale Noctis 
 
    Octopus Octopussy Okay Okra Olavsfestdagene Olrudbanden Olsenbanden 
-   Onyx Opal Opera Opps Optimists Optimus Osss Outsiders Overdeck 
+   Onyx Opal Opera Opps Optimists Optimus Orca Osss Outsiders Overdeck 
    Overivrig 
 
    Pacers Pacific Pandeka Pantherasia Paradigma Partizan Partypack
    Passifistene Patriot Patron Pegasus Pelegrinners Pentagon 
-   Perestrojka Piglet Pingüinos Pioneers Playwell Pontiac Potlimit 
-   Potteplante Powerchicks Prakker Preempters Pretendents Proteus 
-   Pusten Påskevennene
+   Perestrojka Phatake Piekni Piglet Pikkukarhu Pingüinos Pioneers 
+   Playwell Pompeiopolis Pontiac Poppeye Potlimit Potteplante 
+   Powerchicks Prakker Preempters Pretendents Promise Proteus 
+   ProWenger Psychobilly Pusten Påskevennene
 
-   Qingyu Quasar Quattro Quintet Quinze
+   Qingyu Quasar Quattro Queens Quintet Quinze
 
-   Rampage Rapid Real Reklamtrion Relaxation Reloaded Riviera 
-   Robocop Rollers Rovers Ruterdamene
+   Rampage Rapid Räddarna Real Reklamtrion Relaxation Reloaded Rippy
+   Riviera Rivok Robocop Rollers Rovers Ruterdamene
 
    Sabres Saga Sailor Sakura Sakurai Saladmasters Salokin Sammartini
    Sapphire Saturn Saudagar Scandinavia Scarecrow Schneewittchen Scientists 
-   Secure Senator Sheep Shengxing Show Sildesalgslaget Silverfox 
-   Simple Sindbad Singapole Sirius Sjøsamen Skip Skitur Slammers 
+   Secure Senator Sheep Shengxing Show Shokolata Sieja Sildesalgslaget 
+   Silverfox 
+   Simple Sindbad Singapole Sirius Sjøsamen Skip Skitur Skylark 
+   Skywalker Slammers 
    Slappfisker Slufsa Smash Småveitjan Snapper Snipers Soho Solaris 
-   Sonata Space Spark Spartans Specialist Spekkhogger Squeeze Stampede 
+   Sonata Space Spark Spartans Specialist Spekkhogger Squeeze 
+   Stamina Stampede 
    Star Starmen Statusquo Stayman Stifinnern Strategen Streamline 
    Stålfarfar Sunset Sunshine Syttisju Sømnakameratene Såpeopera
 
-   Takeoff Takeout Tannlegene Taurus Tbone Tecza Tempo Tequendama 
-   Theme Theseus Tibetmunkene Tigers Titanik Titans Tohundre Tolerant 
+   Takalaiton Takeoff Takeout Talasam Talliri Tank Tannlegene 
+   Taurus Tbone Tecza 
+   Tempo Tequendama Theater Theme Theseus Thrash Tibetmunkene 
+   Tiborones Tigers Titanik Titans Tivoli Tohundre Tolerant 
    Tootsie Torpedo Tosca Trèfles Tricksters Trickstar Triton 
-   Trollene Truft Tsunami Tulip Turbo Turbofart Tusio Tutu Tvist
+   Trollene Truft Tsunami Tulip Turbo Turbofart Turnips Turquoise 
+   Tusio Tutarli Tutu Tvist
 
    UFO Ugh Ulvene Underdogs Unexpected Ungdomslaget Upplyfting 
-   Utkantnorge 
+   Upsurt Uragan Utkantnorge 
 
-   Vaffelrøre Vendetta Venteliste Vermonsters Veteranerna Vibrant 
-   Victory Vietcong Viking Villmarksgutta Vilttiketsu Vintage 
-   Volcanes Vulcano
+   Vaffelrøre Valle Vendetta Vengadores Venteliste Vermonsters 
+   Veteranerna Vibrant Victory Vietcong Viking Villmarksgutta 
+   Villspikka Vilttiketju Vintage Volcanes Vulcano
 
    Walpurga Warriors Welovebridge Westward Windrunners Winkiboy 
    Wizards 
 
    Xman Xtrouble XXX XXXL XXXSL XXXXXYXY
 
-   Zambet Zhanma Zombi Zorro Zugzwang 
+   Yengec
+
+   Zadra Zambet Zeus Zhanma Zhiguli Zombi Zorro Zugzwang Zwierzak
 );
 
 my %SINGLE_TYPOS =
@@ -1678,13 +1692,14 @@ my %SINGLE_TYPOS =
   Mjøskameratne => ['Mjöskameratene'],
   Måsen => ['Måsan'],
 
+  Natural => ['naturel'],
   Naturalists => ['nature', 'naturalistene'],
 
   'Occupy Taksim' => ['occupytaksim'],
   'Off the Bend' => ['offthebend'],
   Onyx => ['onix'],
   Opps => ['opsy'],
-  'Outsiders' => ['outsider'],
+  'Outsiders' => ['outsider', 'outsiderne'],
 
   Pacific => ['pacyfic'],
   Pantherasia => ['phanterasia'],
@@ -1695,13 +1710,16 @@ my %SINGLE_TYPOS =
   Pretendents => ['pretendentas'],
 
   'Quanzhou Development' => ['qzfd'],
+  Quattro => ['quatro'],
 
   'Red Sky' => ['redsky'],
   'River Friend' => ['riverfriend'],
 
   Sammartini => ['sammarti'],
+  'Sana Soz' => ['sanasoz'],
   Scientists => ['science'],
   Sildesalgslaget => ['Sidesalaglsaget'],
+  Silverfox => ['silfurrefir'],
   'Spade Squad' => ['spadesquad'],
   Spartans => ['saprtans', 'spartan'],
   Squeeze => ['squeze'],
@@ -1712,12 +1730,16 @@ my %SINGLE_TYPOS =
 
   'Texan Aces' => ['texanaces', 'tnaces'],
   'The Pirates' => ['pirates'],
+  Theater => ['teatr'],
   Titans => ['titan'],
   Tricksters => ['trcksters'],
+  Turquoise => ['turkuaz'],
 
   Underdogs => ['underdog'],
 
   'Vegetable Hotpot' => ['vegetable'],
+  Vilttiketju => ['viltiketju', 'villtiketju', 'vilttiketsu',
+    'viltti'],
 
   Welovebridge =>['welovedbridge'],
   'Wild Griffins' => ['wildgriffin', 'wildgriffins'],

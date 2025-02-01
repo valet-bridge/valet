@@ -272,6 +272,7 @@ my @MULTI_WORDS =
   'Fukien Athletic Club',
   'Førde BK',
   'Gabrial University of Indonesia',
+  'Gabrikotas Club',
   'Gabungan Bridge Bandung',
   'Gala Tawa Bridge Club',
   'Ganesha Bridge Club',
@@ -526,6 +527,7 @@ my @MULTI_WORDS =
   'Trabzon Club',
   'Tromsø BK',
   'TSS Surabaya',
+  'Tunaras SK',
   'UAE Club',
   'Ullensaker Kisa',
   'Ulusal Folklor GSKD',
@@ -858,6 +860,7 @@ my %MULTI_TYPOS =
     'gabrial ui-y g', 
     'gabrial ui yg',
     'gabriel - ui'],
+  'Gabrikotas Club' => ['Gabungan Bridge Kota Tasikmalaya'],
   'Gabungan Bridge Bandung' => [
     'gab bridge bandung',
     'gbb bandung',
@@ -1143,6 +1146,7 @@ my %MULTI_TYPOS =
     'trabzon brýç kulübü',
     'trabzon karadeniz',
     'trabzon ýdman oca'],
+  'Tunaras SK' => ['tunaras spor'],
   'Ullensaker Kisa' => ['gull/kisa'],
   'Ulusal Folklor GSKD' => ['ulusal f.a.m. gskd'],
   'Underberg BC' => ['underberg bridgeclu'],
@@ -1200,7 +1204,7 @@ my @SINGLE_WORDS = qw(
   NBK
   Pelatnas Polýsgücü
   Qizhong
-  Sitespor Sivasspor Solli Spezia Spojnia
+  Sekirovo Sitespor Sivasspor Slynce Solli Spezia Spojnia
   TGR Tonyaspor Trifolium
   Unia Uppsalabridgen
   Västeråsbridgen Vestri
@@ -1258,7 +1262,7 @@ my %SINGLE_TYPOS =
   'Crvena Zvezda' => ['zvezda'],
   'BC de Zeerob' => ['zeerob'],
   'Delhi Gymkhana Club' => ['dgc', 'dg'],
-  'El Ahly' => ['ahly'],
+  'El Ahly' => ['ahly', 'alahly'],
   'El-Karma' => ['karma'],
   'ESBS Elblag' => ['esbs'],
   'Eskisehir Sports' => ['eskisehirspor'],
@@ -1313,6 +1317,7 @@ my %SINGLE_TYPOS =
   'Studentenes BK' => ['studentenes', 'studentene'],
   'Sølvknekt BK' => ['Sølvknekt'],
   "'t Onstein" => ['onstein'],
+  'Tekirdað Club' => ['tekirdagspor'],
   'Tennis Club Parioli' => ['tcp', 'rm'],
   TGR => ['tgrs'],
   'The West End Mumbai' => ['twem'],
@@ -1325,7 +1330,7 @@ my %SINGLE_TYPOS =
   'Wawa Brydz' => ['wawabrydz'],
   'Witte Huis' => ['whitehouse'],
   Yildirimspor => ['yildirim', 'yýldýrým'],
-  Zmrzlina => ['zmerzlina'],
+  Zmrzlina => ['zmerzlina', 'zmirzlina'],
   Örebridgen => ['Örebridge', 'orebridgen']
 );
 

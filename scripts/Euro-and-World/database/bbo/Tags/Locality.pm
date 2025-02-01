@@ -42,17 +42,17 @@ my @SINGLE_WORDS = qw(
   Bieniewo Bogazici Borivli Bormali Bornova Bozdogan Brotteaux Buca 
   Buitenhof
   Çayyolu Cemara Changning Chelsea Chislehurst Courseulles
-  Ege Esenkent
-  Fatih Freidorf Fukien
-  Gardermoen Göktürk Gucheng Gundogan
+  Ege Esenkent Estrela
+  Fatih Fijanova Freidorf Fukien
+  Gardermoen Göktürk Gucheng Gundogan Gunebakan
   Heimdal Hirabaug Huochetou
   Incirli
   Jarville Jomtien
-  Kadikoy Karaçay Kardelen Kartal Katok Kaylaka
-  Kocamustafapasa Konak Korwin Kucukcekmece Kurtulus Küp
+  Kadikoy Karaçay Kardelen Kartal Katok Kaylaka Khalkedon 
+  Kirim Kocamustafapasa Konak Korwin Kucukcekmece Kurtulus Küp
   Lappee Leilem Lemvourgeio Losari Lozenets
-  Maadi Makaliwe Manahasa Männiku Meski Mrzenci Muratpasa
-  Nagbagan Nanshan Narita Narlidere Niski
+  Maadi Makaliwe Manahasa Männiku Meski Monceau Mrzenci Muratpasa
+  Nagbagan Nanshan Narbel Narita Narlidere Niski
   Olgiata
   Parioli Piloni Pinarbasi Polonezkoy Poncol Pudong Puzhong
   Qiaoxie
@@ -60,10 +60,10 @@ my @SINGLE_WORDS = qw(
   Radkov Recoleta Ridabu
   Sabadel Sancaktar Sansar Sarniak Senayan Serdika Shihua Simal 
   Sirinyer Slaska Sredec Sukomoro Suleymanpasa Suralaya
-  Taihu Tengah Tianya
+  Taihu Tama Tengah Tianya
   Uccle Ulus Unaós
-  Varbergshus Viþnelik
-  Wadas Wenang Wratislavia Wroble Wujiang Wuyuanhe
+  Varbergshus Vefa Viþnelik
+  Wadas Wenang Wightwick Wratislavia Wroble Wujiang Wuyuanhe
   Yalikavak Yangpu Yarimca Yenisehir Yizhuang Yildirim Yuquan
   Yvelines
   Zaohe Zhujiang

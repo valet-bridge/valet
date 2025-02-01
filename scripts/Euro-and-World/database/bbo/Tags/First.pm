@@ -39,53 +39,56 @@ my @SINGLE_WORDS = qw(
 
    Farida Felix Fenia Fharon Fifi Filippo Francesca Frank Franz 
 
-   Garry Gene George Gerard Greta Gudrun Gulce Guptas Gürsel
+   Garry Gene George Gerard Greta Gudrun Gulcan Gulce Guptas Gürsel
 
    Hanan Hande Haoran Harvin Havin Hayet Heino Heis Hel Hella Henrique
-   Hilda Hortensia Hridhaan Hubsi Hunaja 
+   Hilda Hjördís Hortensia Hridhaan Hubsi Hunaja 
 
    Ida Ilya Imanuel Iris 
 
    Jagg Jaiganesh Jake Janko Janne Jans Jelena Jenny Jerzy Jessi Jessica 
-   Joanna Jóannes Joao Jonathan Joy Justyna Justynka 
+   Joanna Jóannes Joao Jonathan Joy Julek Justyna Justynka 
 
    Kalin Kamlakars Karin Karl Kasiyahan Keni Kenji Kinga Kira Kitty 
    Kris Kriston Krisztina 
 
-   Larry Lasse Laure Lea Lebron Leszek Leta Lili Lola Loloc Luc
+   Larry Lasse Laure Lea Lebron Lemmy Leszek Leta Lili Lola Loloc Luc
 
    Macak Mach Madhav Mads Magnus Maija Maj Malaila Malene Mali Malin
    Malinka Malou Manashda Manena Manno Mano Manu Manywar Margitta 
    Marlene Marianne Mark Matilde Mats Mauricio Max Mia Michal Midori
-   Mihaela Mihai Mikke Miguel Mila Milo Mira Miro Moritz Munawar Myoni 
+   Mihaela Mihai Mikke Miguel Miki Mila Milo Mira Miro Moritz 
+   Munawar Myoni 
 
-   Nabil Natalia Nathans Nell Nevena Nico Nik Nikita Nikitopoulos Niko 
-   Nikos Nina Nis Noriko 
+   Nabil Nadya Natalia Nathans Naz Nell Nevena Nico Nik Nikita 
+   Nikitopoulos Niko Nikos Nina Nis Noriko 
 
    Oguzhan Ole Olena Onirepsou Oyku 
 
    Paco Pal Panjaroon Paoli Paulette Paulina Pero Peter Petra Pia 
-   Pierre Piter Pradeep Pratap
+   Pierre Piter Pradeep Pramote Pratap
 
    Qingjun
 
-   Rado Rafael Ramkumar Rene Rica Rike Rima Rob Robertinho Robi Roger
+   Rado Rafael Ramkumar Rene Renia Rica Richie Rike Rima Rob Robertinho 
+   Robi Romek Roger
 
    Sabina Sami Sandra Sara Sarp Selin Severin Sevil Shane Shankars 
-   Shavaz Shona Shrikant Shuai Shushi Sid Siddheshwar Sigrid Silvana
-   Simon Simonetta Sindhu Stefany Steliana Steve Sue Suz Svetla Swanand 
+   Shavaz Shona Shrikant Shuai Shushi Sid Siddharth Siddheshwar 
+   Sigrid Silvana Simon Simonetta Sindhu Solbjort Sören Stefany 
+   Steliana Steve Sue Suz Svetla Swanand 
 
-   Tadeu Tamae Tita Tofi Toma Tomas Tushar 
+   Tadeu Tamae Teerataht Tita Tofi Toma Tomas Tsutsing Tulla Tushar 
 
    Umut Unlu
 
-   Valentino Vicky Victor Virginia Vivi 
+   Valentino Vicky Victor Virginia Vivi Vladut
 
-   Wael Wafa Wala Waldi 
+   Wael Wafa Wala Waldi Waltinho
 
-   Yael Yelena Ylajai Yves Yvonne
+   Yael Yelena Ylajai Yudum Yves Yvonne
 
-   Zara Zen Zeynep Ziggy Zip Zlatan 
+   Zara Zen Zeynep Ziggy Zip Ziyue Zlatan 
 );
 
 my %SINGLE_TYPOS =
@@ -105,7 +108,8 @@ my %SINGLE_TYPOS =
 
   Natalia => ['nataliya'],
 
-  Shrikant => ['srikant']
+  Shrikant => ['srikant'],
+  Solbjort => ['sólbjört']
 );
 
 

@@ -77,6 +77,7 @@ my @MULTI_WORDS =
   'Lofoten og Vesterålen',
   'Lower Silesia',
   'Madhya Pradesh',
+  'Maha Sarakham',
   'Mount Mahawu',
   'Midt Trøndelag',
   'Møre Romsdal',
@@ -116,6 +117,7 @@ my @MULTI_WORDS =
   'South Sweden',
   'Southeast Sulawesi',
   'Suphan Buri',
+  'Suzhou Taihu',
   'Sør-Trøndelag',
   'Tamil Nadu',
   'Tanah Laut',
@@ -235,31 +237,33 @@ my @SINGLE_WORDS = qw(
   Aceh Agder Akdeniz Akkad Anhui Ayrshire
   Badung Bairrada Bali Banten Belitung Bengkayang Bihar Borneo 
   Bornholm Bungo Buskerud
-  Cappadocia Catalonia Corsica Crete
+  Cappadocia Catalonia Chengmai Corsica Crete
   Dersým Druts
   Eyjafjallajokull
-  Feixiang Fjends Florida
+  Feixiang Fjends Flakstad Florida Fujian
   Ganges Gansu Gauteng Goa Gorontalo Guangdong Guangxi 
   Guizhou Gujarat
   Hainan Haixing Hatay Haugaland Hebei Hedmark Hegyvidék Henan
   Hordaland Huabei Hubei Hunan
   Iberia
   Jalisco Jharkhand Jiangsu Jiangxi Jilin
-  Kansai Kanto Karadeniz Karnataka Kawanua Kedungwaru Kerala 
-  Krabi
+  Kaldbakur Kansai Kanto Karadeniz Karnataka Kawanua Kedungwaru Kerala 
+  Kizil Krabi
   Lampung Lebak Liaoning Liguria Lombok 
-  Madeira Maharashtra Maluku Marmara Matopos Midtsjælland 
-  Minahasa Minang Missouri Mjøsa Muallim Munzur Mysia
-  Natuna Nordafjells Norrland Norrorts Northland Nusantara
+  Madeira Maharashtra Maluku Malwa Manle Marmara Matopos Mazovia 
+  Midtsjælland Minahasa Minang Missouri Misya Mjøsa Muallim Munzur 
+  Mysia
+  Narathiwat Natuna Nordafjells Norrland Norrorts Northland Nusantara
   Queensland Qiantang
-  Oberloiben Olona Orontes Otago
-  Papua Pomerania Porong Prachinburi Punjab
+  Oberloiben Odisha Olona Orontes Otago
+  Papua Pasha Phatthalung Pomerania Porong Prachinburi Punjab
   Rajasthan Rajputana Ratchaburi Rhodes Rogaland Rosfjord 
-  Sakarya Salten Sambas Sanggau Shandong Shanxi Siberia Sichuan 
-  Silesia Silla Sindh Sintang Skåne Slask Southland Suvalkija 
+  Sahyadri Sakarya Sallière Salten Sambas Samutsakorn Sanggau 
+  Shandong Shanxi Siberia Sichuan Silesia Silla Sindh Sintang
+  Sitaro Skåne Slask Southland Suvalkija Sørlandet
   Sydvest
-  Tala Tambun Tasmania Telemark Telengana Thrace Tianya
-  Tigris Tinglin Tuncelý
+  Tala Tambun Tasmania Telemark Telengana Tenerife Thassos Thrace 
+  Tianya Tigris Tinglin Tuncelý
   Uttarakhand
   Victoria Vojvodina
   Wachau Waikato Wujin
@@ -292,27 +296,35 @@ my %SINGLE_TYPOS =
   'Kepulauan Riau' => ['riau', 'kepri'],
   'Kotawaringin Timur' => ['kotim'],
   'Kutai Timur' => ['kutim'],
+  'Maha Sarakham' => ['mahasarakham'],
   Marmara => ['marmar'],
   'Midt Trøndelag' => ['midttrøndelag'],
   Minahasa => ['mnhasa'],
   'Mount Mahawu' => ['mahawu'],
   'Møre Romsdal' => ['moreromsdal'],
   'Nakhon Nayok' => ['nakhonnayok'],
+  'Nakhon Pathom' => ['nakhonpathom'],
   'National Capital Region' => ['ncr'],
   'New South Wales' => ['nsw'],
   'North Sulawesi' => ['sulut'],
   'North Sumatra' => ['sumut'],
   'Northern Territory' => ['nt'],
+  Odisha => ['odisa'],
+  Prachinburi => ['prajinburi'],
   Queensland => ['qld'],
   Qiantang => ['Qiangtang'],
   Rajasthan => ['rajsthan'],
-  'Samut Prakan' => ['samutprakan'],
-  'Samut Sakhon' => ['samutsakhon'],
+  'Sa Kaeo' => ['sakaeo'],
+  'Samut Prakan' => ['samutprakan', 'sumutprakan'],
+  'Samut Sakhon' => ['samutsakhon', 'samutsakorn'],
+  'Si Sa Ket' => ['sisaket'],
   Slask => ['l¹sk'],
   'South Australia' => ['sa'],
-  'Suphan Buri' => ['suphanburi'],
+  'Suphan Buri' => ['suphanburi', 'supanburi'],
   Suvalkija => ['sudovia'],
+  'Suzhou Taihu' => ['suzhoutaiho'],
   'Tamil Nadu' => ['tamilnadu'],
+  Telengana => ['telangana'],
   Tinglin => ['tingling'],
   'Uttar Pradesh' => ['up', 'upba'],
   Uttarakhand => ['uttaranchal'],

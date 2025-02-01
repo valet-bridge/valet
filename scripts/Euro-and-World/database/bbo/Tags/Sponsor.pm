@@ -920,8 +920,8 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  ABAX Abnegat Accenture Actavis Aerospace AIA Akaylar Akebono
-  Aklindo Allianz Altinay Apical Apullum Aquatrans Arboned 
+  ABAX Abakash Abnegat Accenture Actavis Aerospace AIA Akaylar 
+  Akebono Aklindo Allianz Altinay Apical Apullum Aquatrans Arboned 
   Argento Arkas Arma Artotec Asindo Avia Ayýntab
 
   Bajaj Baykar Beibao Beidike Belisol Bnerg BridgePlus Budimex
@@ -930,49 +930,52 @@ my @SINGLE_WORDS = qw(
   Cimentas COMAL Compensa Computerland CONNECTOR CONSUS Constellation 
   Continental Copia Cosmos
 
-  Datang Denizgucu Dermika Derofe Dianwang DISKI Djarum 
+  Datang Denizgucu Dermika Derofe Dianwang DISKI Divitas Djarum 
   Dongfeng Dostlar Druva
 
   EcoSoft Effcontrol Eimskip Eksprompt Elastron Elektrika Elektrociepl
   Energetyk Enorma Enterprise ESSO Evertrust
 
-  Fatek Forbo Forta Frissan FullBridge Funbridge
+  Famika Fatek Forbo Forta Frissan FullBridge Funbridge
 
-  GAMAX GaoSuDa Gazprom Generali Geologi Genkad Gevalia Gillette Gomad 
-  Gözgöz Guowang GSE
+  Gaflarar GAMAX GaoSuDa Gazprom Generali Geologi Genkad Gevalia 
+  Gillette Gomad Gözgöz Guowang GSE
 
   Hana Haoxin Harke Haustak HCL HNA Honesta Hongyu Horsa Huachu Huayuan
 
   IBM IMAX Impress Indoarsip Intan Inteligent Interface Interkala
+  Isokarhu
 
   Jetox Jiegao Jinfan Jinshi Junibacken
 
-  Kadimex Kancelaria Kayseria Kideko Kilogrupp Konstanta Kunhua Kvika
+  Kadimex Kancelaria Kayseria Kideko Kilogrupp Kjörís Konstanta Kunhua 
+  Kvika
 
-  Lacznosc Laima Lavazza LCG Lianbo Likom Longjiangfu Lukomorie 
+  Lacznosc Laima Lavazza LCG Lianbo Likom Loluda Longjiangfu Lukomorie 
   Lyfjaver
 
-  Macakizi Makus Malkia Melchemie Metaforsa Mireo Mitratani Modalfa 
-  Morgunblaðið Multicoms Myndform
+  Macakizi Makrikoy Makus Malkia Manushka Maoyuan Melchemie 
+  Melita Metaforsa Mikadinho Mireo Mitratani Modalfa Moltek
+  Moreto Morgunblaðið Multicoms Myllan Myndform Mýla
 
-  NALCO Nanyuan Navachaitanya Navayuga Nazwa NEC Nefka Niewiem Nongken 
-  Norco Nortemp NOTUS Näkösoppi
+  NALCO Nakkas Nanyuan Navachaitanya Navayuga Nazwa NEC Nefka Niewiem 
+  Nongken Norco Nortemp NOTUS Näkösoppi
 
-  Ozyuva
+  Onko Ozyuva
 
-  P2TEL Paulaner Pealinn Penline Pertagas Pertamina Petroconas Pexis 
-  Petro Pharon Pimara POLFA Praterm Prokom Printerikeskus Pufa Pusula
+  P2TEL Parytet Paulaner Paywell Pealinn Pellon Penline Perelik 
+  Pertagas Pertamina Pessel Petroconas Pexis Petro Pharon Pimara 
+  POLFA Pravaha Praterm Prayas Prokom Printerikeskus Pufa Pusula
 
   Qiaoyou Qinjia
 
   Raam Radex Ráðgjöf Ravebo Relpol Ruyi Ryka
 
-  Sagaplast Samsung Saniva Scandic Scania Sehati Sevtopolis Shengheng
-  Shichuang Shimuzu Shouchuang Sifute Signity Skeljungur Skobud
-  Solakoglu Solox Sparisjóður 
+  Sagaplast Samsung Saniva Scandic Scania Sehati Sevtopolis 
+  Shengheng Shichuang Shimuzu Shivachi Shouchuang Shubuo Sifute 
+  Signity Skeljungur Skobud Solakoglu Solox Sparisjóður 
   SportAccord Srenniw SSDA Stalgast Stiga Stokrotka Struma Suiyi
-  Synective 
-  Synrey Syntex
+  Synective Synrey Syntex
 
   Tekser Telkom Termika Termoavion Termochem Timah Topeko Transearly 
   Tricon Tridaya Tryggingamiðstöðin Tsingtao Tundem Twentebelt
@@ -980,13 +983,14 @@ my @SINGLE_WORDS = qw(
 
   UMW Unibet Unicat Uras
 
-  Velbazhd Velbujd Videocon Vinabær Virnet VÍS Visoft Vito Vyceska
+  Vélasalan Velbazhd Velbujd Vepidan Versai Videocon Vinabær Virnet 
+  VÍS Visoft Vito Vopnabræður Vyceska
 
   Wellknit Wellwise Wise
 
-  Yuetao
+  Yade Yelkovan Yenova Yuetao
 
-  Zhaoeng Zhonghai Zolza
+  Zagorka Zerya Zhaoeng Zhiyijia Zhonghai Zolza
 );
 
 my %SINGLE_TYPOS =
@@ -1043,12 +1047,14 @@ my %SINGLE_TYPOS =
   'Kale Park' => ['kalepark'],
   'KH Power' => ['khpower'],
   'Kideko' => ['kideco'],
+  Kjörís => ['kjöris', 'kjoris'],
   'KONKRET Chelmno' => ['konkret'],
   'Kosmos Delhi' => ['kosmos'],
   'Krishnapatnam Port' => ['krishnapatnamport'],
+  Lavazza => ['lavasa', 'lavassa'],
   'Lianzhong Shi Jie' => ['lianzhongshijie'],
   'Lv Hua' => ['lvhua'],
-  'Magpa-Grup' => ['magpa'],
+  'Magpa-Grup' => ['magpa', 'makpa'],
   'Málning hf' => ['málning'],
   Metaforsa => ['metaphorsa'],
   'Meilin Qing Cheng' => ['meilinqingcheng'],
@@ -1067,12 +1073,14 @@ my %SINGLE_TYPOS =
   'PU Minsel' => ['minsel'],
   'Perusahaan Listrik Negara' => ['pln'],
   'Phoenix TV' => ['fenghuang'],
+  'Pliska XO' => ['pliska'],
   'PT Bayu Buana Gemilang' => ['bbg'],
   'Rigainvites.lv' => ['rigainvites'],
   'SAIC VW' => ['saic'],
   'Samadhan Academy' => ['samadhan', 'samadgan'],
   'Samtronic Constanta' => ['samtronic'],
   'San Chen' => ['sanchen'],
+  'Sarla Fibers' => ['sarala'],
   'SD Associates' => ['sdassociates'],
   'SD Enterprises' => ['sdenterprises', 'sdenterprizes'],
   'Shanghai Automobile' => ['shangqi'],
@@ -1082,8 +1090,10 @@ my %SINGLE_TYPOS =
   'Shi You' => ['shiyou'],
   'Shiji Changda' => ['changda'],
   'Shree Cement' => ['shreecement', 'shree'],
+  'Shree Radhey' => ['shriradhye'],
   'Sichuan Dahe' => ['sichuandahe'],
   'Siwik Holiday Mragowo' => ['siwik'],
+  'SLG Skeidar' => ['skeidar'],
   'Son Dakika' => ['sondakika'],
   'Sparisjóður' => ['sparisjodur'],
   'SPS Construction' => ['sps'],
@@ -1094,11 +1104,12 @@ my %SINGLE_TYPOS =
   Tsingtao => ['tsingthao'],
   'TTK Healthcare' => ['ttk'],
   'UTI Bank' => ['utibank'],
-  'Value Media' => ['synis'],
+  'Value Media' => ['synis', 'pomaranczowy'],
   Velbazhd => ['velbuzhd'],
   Videocon => ['videcon'],
   'Viego Regnskap' => ['viego'],
   'Vinex Preslav' => ['vinex'],
+  Vopnabræður => ['Vopnabraedur'],
   Wellwise => ['wellwiss'],
   'Xiamen Xiashun' => ['xiashun'],
   'Xin He Jin Tai' => ['xhjt'],
