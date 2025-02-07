@@ -122,7 +122,7 @@ my @SINGLE_WORDS = qw(
   Albania Andorra Angora Argentina Australia Austria 
   Bahrain Bangladesh Barbados Belarus Belgium Bermuda 
   Bolivia Bosnia Botswana Brazil Bulgaria
-  Canada Chile Colombia Croatia Cuba Cyprus
+  Canada Chile Colombia Comoros Croatia Cuba Cyprus
   Denmark 
   Ecuador Egypt England Estonia 
   Finland France
@@ -157,9 +157,10 @@ my %SINGLE_TYPOS =
   Bermuda => ['bemruda'],
   'Bosnia & Herzegovina' => ['bih'],
   Brazil => ['brasil'],
-  Bulgaria => ['bg', 'bulgarya', 'bul', 'bulgar', 'bulgari'],
+  Bulgaria => ['bg', 'bulgarya', 'bul', 'bulgar', 'bulgari',
+    'bulgria'],
   Canada => ['kanada'],
-  'Czech Republic' => ['czr'],
+  'Czech Republic' => ['czr', 'czechia'],
   'Chinese Taipei' => ['taipei'],
   Colombia => ['columbia'],
   Croatia => ['croatie', 'cro'],
@@ -169,19 +170,20 @@ my %SINGLE_TYPOS =
   England => ['eng', 'angleterre', 'englnd'],
   Estonia => ['estonie', 'est'],
   Finland => ['finnland', 'fi', 'fin'],
+  'Faroe Islands' => ['faroes'],
   France => ['fra', 'fnc', 'frandce'],
   'French Guyana' => ['guyana', 'guayana', 'guayana'],
   Germany => ['deutschland', 'ger'],
   'Great Britain' => ['gb'],
   Greece => ['gre', 'hellas'],
   Guadeloupe => ['guadelupe'],
-  'Hong Kong' => ['hk', 'hongkong'],
+  'Hong Kong' => ['hk', 'hongkong', 'xianggang'],
   Hungary => ['hungar', 'hun'],
   Iceland => ['ice', 'islande'],
   India => ['indýa', 'hindusthan', 'hidusthan', 'indiaa'],
   Indonesia => ['timnas', 'ina'],
-  Italy => ['italia', 'it', 'ita'],
   Israel => ['isreal', 'israil', 'isarel', 'israël', 'isr'],
+  Italy => ['italia', 'it', 'ita', 'italie'],
   Jordan => ['jor'],
   Latvia => ['lavtia', 'latvija', 'lat'],
   Lebanon => ['leb'],
@@ -197,7 +199,7 @@ my %SINGLE_TYPOS =
   'Northern Ireland' => ['nireland', 'ni'],
   Norway => ['norge', 'norges', 'norwegen', 'nor', 'norja'],
   Palestine => ['palastine'],
-  Philippines => ['philipppines', 'phillipina'],
+  Philippines => ['philipppines', 'phillipina', 'phillipines'],
   Poland => ['polen', 'pologne', 'polska', 'pol', 'polland',
     'porland'],
   Portugal => ['por', 'pl', 'portogallo'],
@@ -209,9 +211,10 @@ my %SINGLE_TYPOS =
   'Saudi Arabia' => ['ksa'],
   'Serbia and Montenegro' => ['serbia&mon', 'srbija'],
   Scotland => ['scotlsnd', 'scotlands', 'scotlans', 'sco'],
+  Singapore => ['sgp'],
   Slovenia => ['sovenia', 'slovenija'],
   'South Korea' => ['korea'],
-  Spain => ['esp', 'españa'],
+  Spain => ['esp', 'españa', 'espana'],
   'Sri Lanka' => ['srilanka'],
   Sweden => ['swe', 'swedem', 'schweden', 'sweeden'],
   Switzerland => ['suitzerland', 'switserland', 'swiitzerland'],

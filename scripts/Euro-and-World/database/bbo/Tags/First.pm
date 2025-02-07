@@ -18,47 +18,52 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  Bubbo => ["bubbo's", "bubbo´s"],
+  Sham => ["sham's"]
 );
 
 my @SINGLE_WORDS = qw(
-   Aditya Ahmetizm Akinom Alex Alf Alfredo Alejandro Alexander Alfa
-   Ali Alice Alizee Allam Amalia Amanda Amilcar Amrapali Amul Ana 
+   Aditya Ahmetizm Aivars Akinom Alex Alf Alfredo Alejandro Alexander 
+   Alfa Ali Alice Alizee Allam Amalia Amanda Amilcar Amrapali Amul Ana 
    Andrzejki Anna Anni Anol Anuj Apaçý Apek Arangan Aris Arnab Arno 
    Arunas Athena Auni Ayan
 
-   Bachar Bas Bauhinia Ben Beniaminek Berik Berk Bilal Blanka Bob 
-   Bodo Breno
+   Bachar Bas Basek Bauhinia Ben Beniaminek Beppo Berik Berk Berlita
+   Beto Bilal Blanka Bob Bobi Bodo Breno Bubbo
 
-   Carlitos Cathy Cem Charles Chiranjeev Claudili Cleo Conie
+   Carlitos Cathy Cem Cemre Charles Chiranjeev Claudili Cleo Conie
 
-   Dada Dadya Dahsyat Daisy Daniel Dauna Dawn Daya Desi Diana Didi 
-   Dido Diego Dieter Dion Disa Dora Dukens 
+   Dada Dadya Dahsyat Daisy Daniel Danka Dauna Dawn Daya Deniz Desi 
+   Diana Didi Dido Diego Dieter Dion Disa Dora Dukens 
 
-   Ece Edi Ekin Eliza Ellen Emre Emilio Eren Eric Erikas Erla 
+   Ece Edi Ekin Eliza Ellen Emre Emilio Eren Eric Erik Erikas Erla 
    Ernis Esra Ewa
 
-   Farida Felix Fenia Fharon Fifi Filippo Francesca Frank Franz 
+   Farida Federico Felix Fenia Feride Fharon Fifi Filippo Francesca 
+   Frank Franz 
 
-   Garry Gene George Gerard Greta Gudrun Gulcan Gulce Guptas Gürsel
+   Gabriel Gabríel Garry Gene George Gerard Greta Gudrun Gulcan Gulce 
+   Guptas Gürsel
 
    Hanan Hande Haoran Harvin Havin Hayet Heino Heis Hel Hella Henrique
-   Hilda Hjördís Hortensia Hridhaan Hubsi Hunaja 
+   Hilda Hjördís Hortensia Hridhaan Hubsi Hunaja Hungju
 
    Ida Ilya Imanuel Iris 
 
-   Jagg Jaiganesh Jake Janko Janne Jans Jelena Jenny Jerzy Jessi Jessica 
-   Joanna Jóannes Joao Jonathan Joy Julek Justyna Justynka 
+   Jagg Jaiganesh Jake Janko Janne Jans Janya Jelena Jenny Jerzy Jessi 
+   Jessica Jhantu Jingsuo Joanna Jóannes Joao Jonathan Joy Julek 
+   Justyna Justynka 
 
-   Kalin Kamlakars Karin Karl Kasiyahan Keni Kenji Kinga Kira Kitty 
-   Kris Kriston Krisztina 
+   Kalin Kamlakars Karin Karl Kasiyahan Katarzyna Keni Kenji Kinga 
+   Kira Kitty Kris Kriston Krisztina 
 
    Larry Lasse Laure Lea Lebron Lemmy Leszek Leta Lili Lola Loloc Luc
 
    Macak Mach Madhav Mads Magnus Maija Maj Malaila Malene Mali Malin
    Malinka Malou Manashda Manena Manno Mano Manu Manywar Margitta 
-   Marlene Marianne Mark Matilde Mats Mauricio Max Mia Michal Midori
-   Mihaela Mihai Mikke Miguel Miki Mila Milo Mira Miro Moritz 
-   Munawar Myoni 
+   Marlene Marianne Mark Matilde Mats Mauricio Max Menekse Mia Michal 
+   Midori Mihaela Mihai Mikke Miguel Mijaela Miki Mila Milo Mira Miro 
+   Miya Moritz Munawar Myoni 
 
    Nabil Nadya Natalia Nathans Naz Nell Nevena Nico Nik Nikita 
    Nikitopoulos Niko Nikos Nina Nis Noriko 
@@ -73,12 +78,13 @@ my @SINGLE_WORDS = qw(
    Rado Rafael Ramkumar Rene Renia Rica Richie Rike Rima Rob Robertinho 
    Robi Romek Roger
 
-   Sabina Sami Sandra Sara Sarp Selin Severin Sevil Shane Shankars 
+   Sabina Sami Sandra Sara Sarp Selin Severin Sevil Sham Shane Shankars 
    Shavaz Shona Shrikant Shuai Shushi Sid Siddharth Siddheshwar 
    Sigrid Silvana Simon Simonetta Sindhu Solbjort Sören Stefany 
    Steliana Steve Sue Suz Svetla Swanand 
 
-   Tadeu Tamae Teerataht Tita Tofi Toma Tomas Tsutsing Tulla Tushar 
+   Tadeu Tamae Teerataht Tianyu Tita Tofi Toma Tomas Tsutsing Tulla 
+   Tushar 
 
    Umut Unlu
 
@@ -98,13 +104,21 @@ my %SINGLE_TYPOS =
 
   Bilal => ['balil'],
 
+  Deniz => ['denýz'],
+
   Erikas => ['ericas'],
+
+  Gabriel => ['gabiel'],
 
   Hridhaan => ['hridhan', 'haridhaan', 'hrridhaan', 'hrridhaan', 'hridaan'],
 
   Imanuel => ['imanual'],
 
   Jonathan => ['joanthan'],
+
+  Katarzyna => ['katardzhina', 'katardzyna'],
+
+  Miya => ['mýya'],
 
   Natalia => ['nataliya'],
 

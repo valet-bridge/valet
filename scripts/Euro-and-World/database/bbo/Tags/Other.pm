@@ -14,9 +14,17 @@ our @EXPORT = qw(set_hashes);
 my @MULTI_WORDS =
 (
   '07', 
+  '08SQ',
+  '16Flights',
+  '2Mark',
+  '3Punkti',
+  '4XL',
 
   'a-TMPC',
   'A-chanzu',
+  'AAA',
+  'AAMM',
+  'AB2P2S',
   'Absolut Bridge',
   'A.C.L.A.',
   'A.z.f.e.n.a',
@@ -125,6 +133,7 @@ my @MULTI_WORDS =
   'Equator 1771',
   'Erdal Abi',
   'Erdal Tekin',
+  "Erni's",
   'Esso-sveitin',
   'Etna Bridge',
   'Eviza Plambata',
@@ -199,6 +208,7 @@ my @MULTI_WORDS =
   'KM AT',
   'KSK Deniz',
 
+  "L'Argent",
   'Lal Mati',
   'Las Flores',
   'Las Olas',
@@ -219,6 +229,7 @@ my @MULTI_WORDS =
   'Loy Krathong',
   'LT Ilanka',
   'Lucy-Ellena',
+  'Lupii Galbeni',
   'LV 2014',
 
   'Maa Sarada',
@@ -277,6 +288,7 @@ my @MULTI_WORDS =
   'Poismenon Vaari',
   'POL-CH',
   'Polar Star',
+  'Polish Ekstraklasa',
   "Pradeep's Four",
   "President's Team",
   "Priya's Four",
@@ -491,128 +503,153 @@ my %MULTI_TYPOS =
 my @SINGLE_WORDS = qw(
    1den1e
 
-   AABC ABBK ABBKI ABC Acolvik ACR Aeras AFTA AIC Alertplus Alioth 
-   Alpha Arvechico ASDBB Aslanli Aspe Asya Atrium AUE Augerne Aurora 
-   AUTBUL AUTHOL Avagard Aytalus Azores Azure
+   AABC ABBK ABBKI ABC ABCT Abisco Access Accord Acolvik ACR Acropolis
+   AdAyAzrA Aeras AFTA Aganus AIC Airoldi Airways AKYA Alertplus Alioth 
+   Alli Alpha ALWI Amalin Anbaklupa Ania Anka Antre Apaheili Archi 
+   AREA Armander Armex Arrow Armut Arvechico Arya ASDBB Aslanli Aspe 
+   Asya Atena Atmosfera Atrium AUE Augerne Aurora AusPolRus AUTBUL 
+   AUTHOL Avagard Ayranka Aytalus Azores Azure
 
-   BAB BABK Bacch Bade BAHABAWI Bahaj Baias Bajm Bajozero BAK Balti
-   Baltic BARC BARP BAST Bat Batmix Bato Batusida BBCF BBN BBO BCBR
-   Begigütje BEIH BELSPA Bem Beton BHDM Bhide Bhinneka
-   Biachite BIN Biriceri BKSE Blandat Blund BMAL BMP BNS BNT
-   BOC Boek Boriana Borko Brica Bridgebutikken BRK Buaigh Bubu 
-   Busiaki Butler
+   BAB BABK Bacch Badajara Bade Baden Badoell BAHABAWI Bahaj Baias Bajm 
+   Bajozero BAK Balia Balti Baltic Bambu Bappa BARC BARP Barsa BAST 
+   BASZ Bat Batmix Bato Batusida BBCF BBN BBO BCBR BEAlert Begigütje 
+   BEIH BELSPA Bem Bemix Bergmen Berksma Beton BHDM Bhide Bhinneka
+   Biachite BICI BIN Biriceri Biz BKSE Blaca Blanda Blandat Blund BMAL 
+   BMP BMS BNS BNT BOC Boek Boriana Borko Brica Bridgebutikken Broen
+   BRK Brulibu Buaigh Bubu BulGer BulNed Busiaki Butler
 
-   Cabal Cabriole Calaca Cammello Camrose Canadonia Canukusa
+   Cabal Cabriole Calaca Cammello Camrose Canadonia Canukusa Cardano
    Carsi Cask Catz Cavendish CBLTI Cendrawasih Center Cerkez
-   Chass Chateau Chime CHPIK Chuanpit Cité CMN Colorado Concurrent
-   Coopers Coor Costantina Couples Croanglopol Crockfords Crossfatek
-   CS CSTO Czteropak
+   Champicann Chass Chateau Chill Chikan Chikorita Chime CHPIK 
+   Chuanpit Cicek Ciger Cios Circle Cité Clairis CMN Cocacolos Colorado 
+   Comfort Compass Concurrent Coopers Coor Coriandre Cosmic Costantina 
+   Couples Croanglopol Crockfords Cross Crossfatek CRSCB CS CSTO CUHK 
+   Czela Czerbia Czteropak
 
-   Dallas DanEng DanFar Dash DBS Debonecos DeeJee Defne Demony 
-   Demýrbaþ DenmarS Deppo Dilligaf Dimmat Dingyuan Dino Dinos DJB 
-   Dombo Doki Duros Dvizhenie 
+   DAE Dalas Dalida Dallas DanEng DanFar DanMar Darff Dash Dasky DBC
+   DBL DBS DCLIM Debonecos DeeJee Defne DEJT Demony Demýrbaþ DenmarS 
+   Deppo Dharmawangsa Diazem Dilligaf Dimmat Dingyuan Dino Dinos 
+   Dinotask Dinozorlar Diofa Disk DJB Doksandokuz Dolphin Dombo Doki 
+   Doubl DoVar DÖF DUBB Duniya Duros Dvizhenie 
 
-   Econ Efsane Egesarpdoruk Eikka Ekenboda Ekoap Elektrownia 
-   Elio Elips EMA EMBO Engelen Ephesus Epsilon Equator Era Ertým ErUS 
-   ESA Eses Esesss Esperanza 
+   EAV Econ ECU Eferuh Efsane Egetor Egesarpdoruk Eikat Eikka EISK 
+   Ekenboda Ekinsu Ekoap Elacz Elektrownia Elfida Elio Elips Elit 
+   Ellee Elte EMA EMBO Emmer Engelen EngRom Ephesus Epik Epsilon 
+   Equator Era Ertým ErUS ESA Esbrici Eses Esesss Esperanza Evici 
+   Express Exprompt Ezis
 
-   Fakel FAM² FAMA Farta Fasulye Fenix Fepanandra Ferfi Feszek Fevbazi
-   Fil Filur Fit Flagship FNCC Formosa Fortuna Fortune FOS Foundation 
-   Francest Frieolt Frusci Fundacja FWK
+   Fakel FAM² FAMA Farta Fasulye Federal Fenix Fepanandra Ferfi Feszek 
+   Fevbazi FII Fil Filur Findik Fit Flagship FNCC Formosa Fortuna Fortune 
+   FOS Foundation Frak Francest Frieolt Frusci FSM Fuli Fundacja Future 
+   ZZFWK
 
-   Gabrisem Galim Gambitas Gamma Garp Garuda Gata Gelin 
-   Gewanna Gezi Gibs Gjesp Gkobra GMM Goroco Göktürk GP 
-   Greecoura Greisnor GRNC Grup Guayacos Gudok Gullberg Gullvi 
+   Gabrisem Galaktika Galim Gambitas Gamma Gaoshan Garp Garuda Gata 
+   GBRD Gelin Gepi Gerilim Gewanna Gezi Gezzer Ghandi Gibs Gjesp 
+   Gkobra GMM Goldwest Goroco Gorsi Göktürk GP Greecoura Greisnor 
+   Greps GRNC Grup Guayacos Gudok Gullberg Gullvi Guronii Guti
 
-   Hade Hai Hakl Hansa HayirlisI Hebat Helgeness Hellé Heliopolis 
-   HengSha Hist HKES Holders Holifera Holport Hotmix House Huispaus 
+   Hade Hai Hakl Hane Hansa Haribda Haruss Hasvel Hayir HayirlisI Hazirat 
+   Hebat Helgeness Hellé Heliopolis HengSha HIK Hist Hit HKB HKES Hodor
+   Holders Holifera Holport Hotmix House Huispaus Hypochondriac
 
-   IBBSK IBE Iff Ijseide IMAN IMLUK InFran Inwitofitka Irukangi 
-   Ismo Israbel Isrmany ITB Itnoraunz ITS IVAR Iza
+   IBSK IBBSK IBE IBISK Icerde Iff Ijseide IMAN IMLUK InFran Inremawi
+   Instruktor Inwitofitka IRG Irukangi Isant ISE Ismo IsPolta Israbel 
+   Isrmany Italianos iTeam ITB Itnoraunz ITS ITSRC IVAR Iyiler Iza
 
-   JanTC JAPCAN Jareja JAS JASS Jassica Javel Jaya Jecization Jinjing 
-   Jirin Jiujiu Johha Joter Juanval Juls Junisar Juste Justplay 
+   Jakabaya JANC JanTC Japaradise JAPCAN Jareja JAS JASS Jassica Javel Jaya 
+   Jecization Jinjing 
+   Jirin Jiujiu Jobilato Johha Joter Juanval Juls Junisar Juste Justplay 
    Jutek JuuTools
 
-   Kaardivägi Kaczan Kadimera Kagama Kalbar Kalca Kalkarna KALM
-   Kaltim Kampisky Kamyk Karaarslan 
-   Kark Kasty Kasuang Katipunan KBA KBC Kebiya Kenlong Kerasus Kibe Kiko
-   Kings Kjelskos Klasik Klio KMC Knösel Kodin Koiraperhe Kokoelma 
+   Kaardivägi Kaczan Kadimera Kagama Kalbar Kalca Kalkarna KALM Kaltim 
+   Kampisky Kamyk Kaptenen Kaptenerna Karaarslan Kark Kartagena Kasty 
+   Kasuang Katipunan KBA KBC Kebiya Kenlong Kerasus Kibe Kiko Kings 
+   Kjelskos KK Klasik Klio KMC Knösel Kodin Kohoch Koiraperhe Kokoelma 
    Kolbasti Kombinasi Komleposs Kopru Kordam Kormoran Korsikalý Kortai 
-   Kosing Koukouselis KrASK Kratos Krem Ksenia KSOS Kultur Kuzeyata
-   Kvazar Kwai 
-   Kwiecisty
+   Kosing Kote Koukouselis KrASK Kratos Krem Kritik Ksenia KSOS Kultur 
+   Kuzeyata Kvazar Kwai Kwiecisty
 
-   Lahjattomat LAKT Laleler Lancia Langy Laplas Lataka Lateria 
-   LatSwe LBC LBSK LCF Legeanka Lema Lemanus Lemoss Lenz Leones Lepsi 
-   Lesh Letve Levant Leveni Lianas Liban Lillebaluba Lio Lipa Lira 
-   Livius Ljónin LNWers Lo Loaknath Lolly Loluda Longzhu Lorin LOS 
-   Loti Lowel Löparn LPMS LXA Lyubcho Lyuil
+   Lacznosc Lahjattomat LAKT Laleler Lancia Langy Laplas Laposte Lataka 
+   Lateria LatSwe LBC LBSK LCF Legeanka Lema Lemanus Lemoss Lenz Leo
+   Leones Lepsi Lesh Letve Levant Leveni Lianas Liban Liberty Lillebaluba 
+   Lio Lipa Lira Liro Livius Ljónin LNWers Lo Loaknath Lolly Loluda 
+   Longzhu Lorin LOS Loti Lowel Löparn LPMS LTC Lupii LXA Lyubcho Lyuil 
+   LZSS
 
-   Maca Mahoscay Makara Makriköy MALE Malmölaget Mamalire Manucho 
-   Marieli Marosamitawa Marpalaki Marron Marynarz Masal Matujona Mavilo 
-   Mavs Mayamira Mazeto Mer Mercury Mesna Mey MGM MGTH MHDlev Minut 
-   MMRMC Mochu Monaconf Monas Monperi Morot Mostingan Movember 
+   Maca Maestro Magenta Magistrati Mahoscay Makara Makriköy MALE 
+   Malmölaget Mamalire Manucho Marieli Marosamitawa Marpalaki Marron 
+   Marynarz Masal Matujona Mavilo Mavs Mayamira Mazeto MBSK Mer Mercury 
+   Mesna Mey MFF MGM MGTH MHDlev MHMS Milus Minerva Minut MMRMC MNEPO 
+   Mochu Monaconf Monas Monperi Morot Mostingan Mountain Movember 
    Mölnlycke MPEC MRSMC Mufreze Mutos Muumio Mýna Møremix 
 
-   Nadide Nambawan Narbisk Narre Navjyoti Nawrot Nayaka Naytingel 
-   Nebbinn Necos Neduk Nessuno Nikotiimi Nislije NMRT Nokon Nonage 
-   NoNed Nopasaran Noralia Norsu NOS Noto NRC NTiosagutta Nula
+   Nadide Nambawan Narbisk Naresuan Narre Nautilus Navjyoti Nawrot Nayaka 
+   Naytingel Nebbinn Necos Neduk Nessuno NIB Nikotiimi Nislije NMRT 
+   Nokon Nonage NoNed Nopasaran Noralia Norsu NOS Noto Nova Novo NPP 
+   NRC NSK NTiosagutta NTTW Nula
 
-   Obezit OEI Ognisty Oksijen Olimp OMC Omega Omelas Onnela Onu 
-   Oprosti Orakulas Orion OSA Osam OSMO Oto Otta Oyzum Ozbiljni
+   Obezit Obezyum Objectivity Oceania Odwoj OEI Ogama Ognisty Oksijen 
+   Olimp OMC Omega Omelas Onnela Onu Oprosti Opustoshitelite Orakulas 
+   Orfoz Orion OSA Osam OSMO Oto Otta Oyzum Ozbiljni
 
    Öncü
 
-   Pagonia Palapa Palukas Panteros Pasam Pasanci Passé Patagonia 
-   Paulistas Pawkol PBL PCBA PDC Pennant Perjuangan Petras Phoenix
-   Piast Pikonli Piryoli Piqwiz Piro Pisoy Pjäxa PKM Pleemar Pleschi 
-   Pleyada Plia PMC PMS Poasp Pobeditel Pojat Polirish Polonez Polus 
-   Pompapompa Ponks Poptoom Poss Pottkieker Prapar Prasetya 
-   Preservasi Prijatelj Prim Primabridge Prosan Proto Ptacol PTT 
-   Pude Puente Pyon Pyton PZIM 
+   Pagonia Palapa Palcan Palukas Panteros Paragon Pasam Pasanci Pass 
+   Passé Patagonia Paulistas Pawkol PBL PCBA PDC Pennant Perjuangan 
+   Petras Phelcyldrm Phoenix Piast Pikonlu Pingo Piryoli Piqwiz Piro 
+   Pisoy Pjäxa PKM Pleemar Pleschi Pleyada Plia PMC PMS Poasp Pobeditel 
+   Pojat Pokoman Polirish Polonez Polus Pompapompa PomSonata Ponks 
+   Poptoom Portalia Portos Portugalês Poss Pottkieker Prapar Prasetya 
+   Preservasi Prijatelj Prim Primabridge Prosan Proto PSV Ptacol PTK 
+   PTT Pude Puente Pyon Pyton PZIM 
 
    QLJB Quantum Quartet
 
-   Radeks Radhey RAG Raifles Raiga Rakinnett RAM RASH Raskasammen 
-   RBP Recaptan Regeldur Rem Ribitas Rio RKK Rofoi Rosajora Royston 
-   Rozle RS Rüya Rylai Rylal Ryo
+   Radca Radeks Radhey RAG Raifles Raiga Rakinnett RAM Rams RASH 
+   Raskasammen RBP Recaptan Reconstruction Redouble Regeldur Relation
+   Rem Rembros Resi Respect Rest Revuelta Riba Ribitas Rich Rio RKK 
+   Rofoi Romamiami Rosajora Royston Rozle RPG RPIH RS Rüya RVG Rylai 
+   Rylal Ryo Rys
 
-   Sabari SAGG Salost Salvo Sandfia Sangam Sansouci SANY Sargam Sarj 
-   SaTu Saty Sbamby Sbanda SBC Scapros Schmuckles Scorway Scot SDK 
-   Senaattorit Sensei Sepuluh SFG SGG Shan Shaoshen Sherdils SHHG 
-   Sigdonnemann Sigma Sihai Sikorka Silbersee Simpleksas Sinantos 
-   SISU Sivves Siyabend Skaffatar Skalman Skam Skaronga SKB 
-   SKBS Skotii SKR Skurets Þlem Slostria Sky SMBC SMJ SMK Smysio
-   SNAP SNP Soba Sober Sobers Sogn Soley Solo Sommai Sonchel Soumitra 
-   Spaima Spamirs Spandan Sparta Spartak Spektr Spin Spring Srimapuna 
-   Sriwijaya Srykeir SSBC SSSR Stafani Stagge Starka Starsbridge STB 
-   Steinars Steinlager Strata Strela StZ St?vel Sucharek SuHuQiaoYou 
-   Sukhothai SweDanes SweNor Swest Syabas SYL Syly SYSS Sysyt SYT 
-   Szaika Szlem SZPAK SZPAR Szpilki Sør Sørlendingane
+   Sabari SAGG Salost Salvo Sammarty Sampicann Sandfia Sangam Sansouci 
+   SANY Sargam Sarj SaTu Saty SaX Sbamby Sbanda SBC SBS Scapros 
+   Schmuckles Scorway Scot SDK Senaattorit Sensei Sepuluh SFG SGG Shan 
+   Shaoshen Sherdils SHHG Shinpi Shiraz Sigdonnemann Sigma Sihai 
+   Sikorka Silbersee Silpersnanev Simpleksas Sinantos SinPhi SISU 
+   Sivves Siyabend Sjunjuang Skaffatar Skalman Skam Skaronga SKB 
+   SKBS Skol Skotii SKR Skurets Þlem Slostria Sky Sly SMBC SMJ SMK 
+   Smysio SNAP SNP Soba Sober Sobers Sogn Soley Solo Sommai Sonchel 
+   Soumitra Spaima Spamirs Spandan Sparta Spartak Spektr Spin Spring 
+   SQR Srimapuna Sriwijaya Srykeir SSAB SSBC SSSR Stafani Stagge 
+   Starka Starsbridge STB Steinars Steinlager STG Strata Strela 
+   StZ St?vel Sucharek SuHuQiaoYou Sukhothai Superformiweldig 
+   Südwest SweDanes Sweece SweNed SweNor Swest SWOP Syabas 
+   Sydsydvest SYL Syly Synsyn SYSS Sysyt SYT Szaika Szlem SZPAK 
+   SZPAR Szpilki Sør Sørlendingane
 
-   TAC Take Takk Takým Taksim Tally Tangra Task Tefo Teraz Tianya 
-   Tiglatpalasar 
-   Tihkur Tiz Toar Todremor TOFO Tollemache Tongxin Toopet Topozero 
-   Topping Toranaga Tornatae Totani Totoro Tömör TPI Traker Triks 
-   Troll Trøndermøringen Tuason Tubi Tulipano Turuncu 
+   TAC Take Takk Takým Taksim Tally Tangra Task TBA TBRT TBW Tefo 
+   Teraz Tianya Tiglatpalasar Tihkur Tiz TNT Toar Todremor TOFO 
+   Tollemache Tongxin Toopet Topozero Topping TOPS Toranaga 
+   Tornatae Totani Totoro Toyota Tömör TPI Traker Triks Troll 
+   Trump Trøndermøringen TSDB TTIM Tuason Tubi Tulipano Turuncu 
 
-   UAB Udarnik Úlfurinn Underberg Upos Urcsus UTU
+   UAB Udarnik Úlfurinn Ultraneglinka Underberg Upos Urcsus Uski UTU
 
    VAJM Vahaboðlu Vahakabinetti Vajra Vakrandi Valen Valyo Vanko Varan 
-   Varoslu Vasallid Västanfläkten Vedic Veegees Vega* Veggen Verder 
-   Verons Vicho Vilmar Vilttiketju Vilttiukko Viña Visnelik Voff Volta 
-   Vucko Vurgun Vürst Vytas
+   Varoslu VarSofWar Vasallid Västanfläkten Vedic Veegees Vega* Veggen 
+   Verder Verons VFJ Vicho Vilmar Vilttiketju Vilttiukko Viña Visnelik 
+   Viva Voff Volqueteros Volta VQP Vucko Vurgun Vürst Vytas
 
-   Walec Wanghong WBack WBBA WBFIT WBGO WDP Wega Weiqun Wengens 
+   Walec Wanghong Watt WBack WBBA WBFIT WBG WBGO WDP Wega Weiqun Wengens 
    Winatalya WinBridge Winterfell Wiz WLKP Wolf WSWT Wynn
 
-   Xatzopoulos XC XFIP Xinhai XMing 
+   Xatzopoulos XC XFIP Xinhai XMing XXXYXXXY XYZ
 
-   Ybs YBM Yaðmur Yamata Yansimasiz YeJun Yildizlar Yogakshema 
-   Yokozuna YSD YYD YYY
+   Ybs YBM YBO YBT Yaðmur Yamata Yansimasiz YeJun Yildizlar Yogakshema 
+   Yokozuna YSD Yuanlong Yuma Yuzbir YYD YYY
 
-   Zabavljaci Zaehringens Zamek Zamer Zana Zang Zaraz Zeyno Zhihaole 
+   Zabavljaci Zaehringens Zamek Zamer Zana Zang Zapata Zaraz Zeyno 
+   Zhihaole 
    Zimba Zimmkonis Zivac ZKS Zmaj Zozoura Zurzits Zvanger Zwederland 
    Zweili
 
@@ -621,31 +658,50 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
+  'Ace Metes' => ['acemates'],
   Acolvik => ['acolvick'],
   'Alunand Plus' => ['alunand'],
 
+  'Besli Major' => ['beslimajor'],
   Bhinneka => ['bhineka', 'bhinneke'],
   Boriana => ['boryana'],
 
+  Chikorita => ['cikorita'],
+  Cicek => ['cýcek'],
+
+  Darff => ['darfff'],
+  Dasky => ['daski'],
+  Diazem => ['dýazem', 'dýyazem'],
   Dilligaf => ['dilligraf'],
   Dingyuan => ['dinyuan'],
+  Dinozorlar => ['dýnozorlar'],
+  Dolphin => ['dolfin'],
 
+  Egetor => ['egator'],
   Eikka => ['eikkaa'],
   'El Gezira' => ['elgezira'],
+  Elit => ['elýt'],
   'Eviza Plambata' => ['plambata'],
+  Express => ['expres'],
 
   Feszek => ['Fészek'],
+  Fevbazi => ['fevzabi'],
 
   Gelin => ['gelýn'],
   Göktürk => ['gokturk'],
 
+  Hypochondriac => ['hýpokondrýyak'],
   'HZ Connection' => ['hzconnection'],
 
   'Ji Jin' => ['jijin'],
+  Jobilato => ['jobalito'],
   Juls => ['julst'],
 
   Kibe => ['kýbe'],
+  Kaptenen => ['kapten'],
+  'KOC67' => ['koç67'],
 
+  Lacznosc => ['lacznasc'],
   'Late S.S. Jain' => ['lssjain'],
   'Le Romain boys' => ['leromain', 'leroumain'],
   Lemanus => ['lémanus'],
@@ -654,6 +710,7 @@ my %SINGLE_TYPOS =
   Lorin => ['lorýn'],
   'Loy Krathong' => ['longkatong'],
   Löparn => ['loparn'],
+  'Lupii Galbeni' => ['lupiigalbeni'],
 
   'Meng Qing Xin' => ['mengqingxin'],
 
@@ -663,9 +720,12 @@ my %SINGLE_TYPOS =
   Olimp => ['olymp'],
 
   Pagonia => ['pagonya'],
+  Pass => ['paaass'],
   Patagonia => ['patagonya'],
   Paulistas => ['paulistanas'],
   Phoenix =>['pheonix'],
+  Pikonlu => ['pikonli'],
+  Pleemar => ['plemaar'],
   'Polar Star' => ['polarstar'],
   Prasetya => ['prasetia'],
   "President's Team" => ['president', 'presidents'],
@@ -674,8 +734,10 @@ my %SINGLE_TYPOS =
 
   Raiga => ['raica'],
   'Ram Charan' => ['ramcharan'],
+  Redouble => ['recontra'],
 
   'Sanna Kathrine' => [
+    'kathrineföljarna',
     'sannaKathrine', 
     'sannakathrineföljar',
     'sannaakathrinefölja'],
@@ -689,7 +751,7 @@ my %SINGLE_TYPOS =
   'Stall Dieden' => ['dieden'],
   Syabas => ['syahbas'],
 
-  Tornatae => ['torentae'],
+  Tornatae => ['torentae', 'torantae', 'tornatau', 'tornatoae'],
 
   Valyo => ['valýo'],
   Vedic => ['vedik'],

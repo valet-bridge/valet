@@ -144,14 +144,15 @@ my %MULTI_TYPOS =
 (
   Aceh => ['di aceh', 'n a d'],
   Borneo => ['borneo banua'],
-    'Central Java' => ['jawa tengah', 'jawah tengah', 'jateng'],
-    'Central Anatolia' => ['ic anadolu'],
-    'Central Sulawesi' => ['sulawesi tengah'],
-    'Dogu Akdeniz' => ['dogu akdeniz region', 'akdeniz region'],
-    'East Jakarta' => ['jakarta timur'],
-    'East Java' => ['jawa timur', 'jatim'],
-    'East Kalimantan' => ['kalimantan timur'],
-    'Fylke Innlandet' => ['hedmark og oppland'],
+  Buriram => ['buri ram'],
+  'Central Java' => ['jawa tengah', 'jawah tengah', 'jateng'],
+  'Central Anatolia' => ['ic anadolu'],
+  'Central Sulawesi' => ['sulawesi tengah'],
+  'Dogu Akdeniz' => ['dogu akdeniz region', 'akdeniz region'],
+  'East Jakarta' => ['jakarta timur'],
+  'East Java' => ['jawa timur', 'jatim'],
+  'East Kalimantan' => ['kalimantan timur'],
+  'Fylke Innlandet' => ['hedmark og oppland'],
   'East Nusa Tenggara' => ['nusa tenggara timur'],
   Guangdong => ['guangdong province', 'guang dong'],
   Hainan => ['hai nan'],
@@ -234,21 +235,21 @@ my %MULTI_TYPOS =
 );
 
 my @SINGLE_WORDS = qw(
-  Aceh Agder Akdeniz Akkad Anhui Ayrshire
-  Badung Bairrada Bali Banten Belitung Bengkayang Bihar Borneo 
-  Bornholm Bungo Buskerud
+  Aceh Agder Akdeniz Akkad Anhui Ararat Ayrshire
+  Badung Bahia Bairrada Bali Banten Belitung Bengal Bengkayang Bihar 
+  Bogø Borneo Bornholm Bungo Buriram Buskerud
   Cappadocia Catalonia Chengmai Corsica Crete
   Dersým Druts
   Eyjafjallajokull
   Feixiang Fjends Flakstad Florida Fujian
   Ganges Gansu Gauteng Goa Gorontalo Guangdong Guangxi 
   Guizhou Gujarat
-  Hainan Haixing Hatay Haugaland Hebei Hedmark Hegyvidék Henan
-  Hordaland Huabei Hubei Hunan
-  Iberia
+  Hainan Haixing Hatay Haugaland Hebei Hedmark Hegyvidék Heilongjiang
+  Henan Hordaland Huabei Hubei Hunan
+  Iberia Iskele
   Jalisco Jharkhand Jiangsu Jiangxi Jilin
-  Kaldbakur Kansai Kanto Karadeniz Karnataka Kawanua Kedungwaru Kerala 
-  Kizil Krabi
+  Kaldbakur Kansai Kanto Karadon Karadeniz Karimata Karnataka Kawanua 
+  Kedungwaru Kerala Kizil Krabi
   Lampung Lebak Liaoning Liguria Lombok 
   Madeira Maharashtra Maluku Malwa Manle Marmara Matopos Mazovia 
   Midtsjælland Minahasa Minang Missouri Misya Mjøsa Muallim Munzur 
@@ -256,7 +257,8 @@ my @SINGLE_WORDS = qw(
   Narathiwat Natuna Nordafjells Norrland Norrorts Northland Nusantara
   Queensland Qiantang
   Oberloiben Odisha Olona Orontes Otago
-  Papua Pasha Phatthalung Pomerania Porong Prachinburi Punjab
+  Papua Pasha Phatthalung Pomerania Porong Prachinburi Pudong Pufa
+  Punjab
   Rajasthan Rajputana Ratchaburi Rhodes Rogaland Rosfjord 
   Sahyadri Sakarya Sallière Salten Sambas Samutsakorn Sanggau 
   Shandong Shanxi Siberia Sichuan Silesia Silla Sindh Sintang
@@ -264,12 +266,12 @@ my @SINGLE_WORDS = qw(
   Sydvest
   Tala Tambun Tasmania Telemark Telengana Tenerife Thassos Thrace 
   Tianya Tigris Tinglin Tuncelý
-  Uttarakhand
+  Uludag Uttarakhand Uzungol
   Victoria Vojvodina
   Wachau Waikato Wujin
-  Xinjiang
-  Yongjia Yongjiang Yunnan
-  Zhejiang
+  Xizang Xinjiang
+  Yongjia Yongjiang Yozgat Yunnan
+  Zhejiang Zhongshan
 );
 
 my %SINGLE_TYPOS =
@@ -278,6 +280,7 @@ my %SINGLE_TYPOS =
   'Aegean Sea' => ['aegean'],
   'Australian Central Territory' => ['act'],
   'Bangka Belitung' => ['babel'],
+  Buriram => ['burirum'],
   'Kabupaten Bekasi' => ['bekasi'],
   Cappadocia => ['kapadokya', 'kapodokya'],
   Catalonia => ['catalunya', 'cataluña'],
@@ -285,11 +288,14 @@ my %SINGLE_TYPOS =
   Corsica => ['korsikali'],
   'Gabungan Malaku' => ['gabmin', 'gabmo'],
   Ganges => ['genges'],
+  Gujarat => ['gujrat', 'gujrath'],
+  Hebei => ['heibei'],
   Hegyvidék  => ['hegyvidek'],
   'Himachal Pradesh' => ['himachal'],
   Hordaland => ['hordland'],
   Hunan => ['hunnan'],
   'Java Bali' => ['jb'],
+  'Kabupaten Ketapang' => ['ketapang'],
   Karadeniz => ['karadenýz'],
   Kansai => ['kinki'],
   'Kayong Utara' => ['kayong'],
@@ -299,10 +305,11 @@ my %SINGLE_TYPOS =
   'Maha Sarakham' => ['mahasarakham'],
   Marmara => ['marmar'],
   'Midt Trøndelag' => ['midttrøndelag'],
-  Minahasa => ['mnhasa'],
+  Midtsjælland => ['midtsjaelland'],
+  Minahasa => ['mnhasa', 'miinahasa'],
   'Mount Mahawu' => ['mahawu'],
   'Møre Romsdal' => ['moreromsdal'],
-  'Nakhon Nayok' => ['nakhonnayok'],
+  'Nakhon Nayok' => ['nakhonnayok', 'nakornnayok'],
   'Nakhon Pathom' => ['nakhonpathom'],
   'National Capital Region' => ['ncr'],
   'New South Wales' => ['nsw'],
@@ -314,6 +321,7 @@ my %SINGLE_TYPOS =
   Queensland => ['qld'],
   Qiantang => ['Qiangtang'],
   Rajasthan => ['rajsthan'],
+  Ratchaburi => ['ratchanuri'],
   'Sa Kaeo' => ['sakaeo'],
   'Samut Prakan' => ['samutprakan', 'sumutprakan'],
   'Samut Sakhon' => ['samutsakhon', 'samutsakorn'],
@@ -331,6 +339,8 @@ my %SINGLE_TYPOS =
   'Victoria' => ['vic', 'viic'],
   Vojvodina => ['voj'],
   'West Sumatra' => ['sumbar'],
+  Xizang => ['tibet'],
+  Yozgat => ['bozok'],
   'Østfold Follo' => ['ostfoldfollo']
 );
 

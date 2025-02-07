@@ -14,6 +14,7 @@ our @EXPORT = qw(set_hashes);
 my @MULTI_WORDS =
 (
   'Fatih Karagümrük',
+  'Ko Shing',
   'Isen Mulang',
   'Lawang Salapan',
   'Poiana Brasov',
@@ -38,13 +39,14 @@ my %MULTI_TYPOS =
 
 my @SINGLE_WORDS = qw(
   Akçeşme Albena Amanora Arjasa Atakoy Avren
-  Bahce Bahcesehir Balcova Balgat Baragnon Barrière Bayrampaþa Beroe 
-  Bieniewo Bogazici Borivli Bormali Bornova Bozdogan Brotteaux Buca 
-  Buitenhof
-  Çayyolu Cemara Changning Chelsea Chislehurst Courseulles
+  Bahce Bahcesehir Balcova Balgat Baragnon Barrière Bayrampaþa Bellagatta
+  Beroe Bieniewo Bogazici Borivli Bormali Bornova Bosphorus Bozdogan 
+  Brotteaux Buca Buitenhof
+  Çayyolu Cemara Cesmealti Changning Chelsea Chislehurst Civyork
+  Cossipore Courseulles
   Ege Esenkent Estrela
   Fatih Fijanova Freidorf Fukien
-  Gardermoen Göktürk Gucheng Gundogan Gunebakan
+  Gaogang Gardermoen Göktürk Gucheng Gundogan Gunebakan
   Heimdal Hirabaug Huochetou
   Incirli
   Jarville Jomtien
@@ -72,9 +74,11 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   Akçeşme => ['akcesme', 'akçeþme'],
+  Amanora => ['amonara'],
   Atakoy => ['ataköy'],
   Bahcesehir => ['bahçeþehýr', 'bahcesehýr', 'bahçesehir'],
   Barrière => ['barriere'],
+  Bogazici => ['boðaziçi', 'boðazýçý', 'bogazýcý'],
   Borivli => ['borivali'],
   Çayyolu => ['cayyolu'],
   Fatih => ['fatýh'],
@@ -83,6 +87,7 @@ my %SINGLE_TYPOS =
   Hirabaug => ['hirabag'],
   Heimdal => ['heimdalbc'],
   Kadikoy => ['kadiköy'],
+  'Ko Shing' => ['koshing'],
   Küp => ['kup'],
   Manahasa => ['mnhasa'],
   Narlidere => ['narlýdere'],
