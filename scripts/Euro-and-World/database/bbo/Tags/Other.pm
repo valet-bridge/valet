@@ -139,6 +139,7 @@ my @MULTI_WORDS =
   'Eviza Plambata',
   'EX S',
 
+  'FISA Team',
   'Figo-Fago',
   'Fire Club',
   'First Club',
@@ -519,7 +520,7 @@ my @SINGLE_WORDS = qw(
    BRK Brulibu Buaigh Bubu BulGer BulNed Busiaki Butler
 
    Cabal Cabriole Calaca Cammello Camrose Canadonia Canukusa Cardano
-   Carsi Cask Catz Cavendish CBLTI Cendrawasih Center Cerkez
+   Carsi Cask Catz Cavendish CBLTI Cendrawasih Center Cerkez CFSC
    Champicann Chass Chateau Chill Chikan Chikorita Chime CHPIK 
    Chuanpit Cicek Ciger Cios Circle Cité Clairis CMN Cocacolos Colorado 
    Comfort Compass Concurrent Coopers Coor Coriandre Cosmic Costantina 
@@ -548,7 +549,7 @@ my @SINGLE_WORDS = qw(
    Gkobra GMM Goldwest Goroco Gorsi Göktürk GP Greecoura Greisnor 
    Greps GRNC Grup Guayacos Gudok Gullberg Gullvi Guronii Guti
 
-   Hade Hai Hakl Hane Hansa Haribda Haruss Hasvel Hayir HayirlisI Hazirat 
+   Hade Hai Hakl Hane Hansa Haribda Haruss Hasvel Hayir HayirlisI Haziran 
    Hebat Helgeness Hellé Heliopolis HengSha HIK Hist Hit HKB HKES Hodor
    Holders Holifera Holport Hotmix House Huispaus Hypochondriac
 
@@ -557,9 +558,8 @@ my @SINGLE_WORDS = qw(
    Isrmany Italianos iTeam ITB Itnoraunz ITS ITSRC IVAR Iyiler Iza
 
    Jakabaya JANC JanTC Japaradise JAPCAN Jareja JAS JASS Jassica Javel Jaya 
-   Jecization Jinjing 
-   Jirin Jiujiu Jobilato Johha Joter Juanval Juls Junisar Juste Justplay 
-   Jutek JuuTools
+   Jecization Jinjing Jirin Jiujiu JMMT Jobilato Johha Joter Juanval 
+   Juls Junisar Juste Justplay Jutek JuuTools
 
    Kaardivägi Kaczan Kadimera Kagama Kalbar Kalca Kalkarna KALM Kaltim 
    Kampisky Kamyk Kaptenen Kaptenerna Karaarslan Kark Kartagena Kasty 
@@ -623,7 +623,7 @@ my @SINGLE_WORDS = qw(
    SQR Srimapuna Sriwijaya Srykeir SSAB SSBC SSSR Stafani Stagge 
    Starka Starsbridge STB Steinars Steinlager STG Strata Strela 
    StZ St?vel Sucharek SuHuQiaoYou Sukhothai Superformiweldig 
-   Südwest SweDanes Sweece SweNed SweNor Swest SWOP Syabas 
+   Südwest SweDanes Sweece SweNed SweNor Swest SWOP SXPEONY Syabas 
    Sydsydvest SYL Syly Synsyn SYSS Sysyt SYT Szaika Szlem SZPAK 
    SZPAR Szpilki Sør Sørlendingane
 
@@ -690,6 +690,7 @@ my %SINGLE_TYPOS =
   Gelin => ['gelýn'],
   Göktürk => ['gokturk'],
 
+  Haziran => ['hazýran'],
   Hypochondriac => ['hýpokondrýyak'],
   'HZ Connection' => ['hzconnection'],
 

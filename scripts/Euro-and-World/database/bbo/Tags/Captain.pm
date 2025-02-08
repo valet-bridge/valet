@@ -203,6 +203,7 @@ my @MULTI_WORDS =
   'Hong Niu',
   'Hong Ru',
   'Huijun Song',
+  'Ian Lindsay',
   'Ilan Herbst',
   'Ilko Popov',
   'Ingvar Erga',
@@ -1125,7 +1126,7 @@ my @SINGLE_WORDS = qw(
   Lesniewski Lesnik Lester Lev Levi Levinger Levin Levine Levinson 
   Levoni Levoy Levski Levy Lewis Lhuissier Li Lian Libbrecht Libman 
   Licursi Lie Lien Liu Liggins Lilienstein Lillevik Lilley Limor Lin 
-  Linczmayer Lindner Lindsay Lindstedt Lipkin Lishkov Lisik Lisle 
+  Linczmayer Lindner Lindstedt Lipkin Lishkov Lisik Lisle 
   Livgård Llopart Locatelli Lockwood Longinotti Lopez Lorentz Lorenzini 
   Loreto Lormant Louchart Lovrecz Lowe Lowry Lu Luba Lubinski Lucena 
   Lucchesi Lucignano Luczeczko Ludewig Lui Lund Lundberg Luppi Lupsan 
@@ -1404,6 +1405,7 @@ my %SINGLE_TYPOS =
   'Hong NIU' => ['hongniu'],
   Hoogervorst => ['hoogercorst'],
   Huberschwiller => ['huberschwi'],
+  'Ian Lindsay' => ['lindsay'],
   'Ilan Bareket' => ['bareket'],
   'Ilan Herbst' => ['herbst'],
   Ilmez => ['Ýlmez'],

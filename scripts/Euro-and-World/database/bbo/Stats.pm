@@ -87,7 +87,10 @@ sub print_length
 
   print '-' x 46, "\n";
   printf("%6s%10d%10d%10d%10d\n\n", "Sum",
-    $csum{OPEN}, $csum{COMPLETE}, $csum{KILLED}, $csum{EXPLAINED});
+    $csum{OPEN} // 0, 
+    $csum{COMPLETE} // 0, 
+    $csum{KILLED} // 0, 
+    $csum{EXPLAINED} // 0);
 }
 
 

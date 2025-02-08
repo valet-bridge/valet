@@ -96,13 +96,13 @@ sub post_process_abbr
       elsif (find_field_in_chains($chains, 'REGION', \$cno_found))
       {
         # TODO Match these as well (add a city).
-        print "MATRIX with REGION\n";
+        print "MATRIX with REGION ($bbono)\n";
         return;
       }
       elsif (find_field_in_chains($chains, 'LOCALITY', \$cno_found))
       {
         # TODO Match these as well (add a city).
-        print "MATRIX with LOCALITY\n";
+        print "MATRIX with LOCALITY ($bbono)\n";
         return;
       }
       elsif (find_field_in_chains($chains, 'UNIVERSITY', \$cno_found))
@@ -111,7 +111,7 @@ sub post_process_abbr
         $chain->complete_if_last_is(0, 'KILLED');
         return;
       }
-      print "MATRIX No city, region, club or university\n";
+      print "MATRIX No city, region, club or university ($bbono)\n";
       return;
     }
 
@@ -132,12 +132,12 @@ sub post_process_abbr
       }
       else
       {
-        print "MATRIX Matching $city to ", $club_list->[0], "\n";
+        print "MATRIX Matching $city to ", $club_list->[0], " ($bbono)\n";
       }
     }
     else
     {
-      print "MATRIX No club list\n";
+      print "MATRIX No club list ($bbono)\n";
     }
     return;
   }
