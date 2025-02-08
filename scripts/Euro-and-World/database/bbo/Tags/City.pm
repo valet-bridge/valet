@@ -146,7 +146,9 @@ my %MULTI_TYPOS =
   Kristiansand => ['kr.sand'],
   'Miercurea Ciuc' => ['m ciuc', 'm. ciuc', 'm.ciuc',
     'mercurea cinc'],
-  Milas => ['milas beledýyesi', 'mýlas beledýyespor'],
+  Milas => [
+    'milas beledýyesi', 
+    'mýlas beledýyespor'],
   'Monte Carlo' => ['monte-carlo'],
   'Nea Moudania' => ['moydania'],
   Ningbo => ['ning bo'],

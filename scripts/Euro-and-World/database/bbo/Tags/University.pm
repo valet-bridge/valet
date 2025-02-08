@@ -174,6 +174,7 @@ my %MULTI_TYPOS =
 (
   'Airmadidi Senior High School' => ['sman 1 airmadidi'],
   'Akdeniz University' => [
+    'akdeniz bld', 
     'akdeniz uni.', 
     'akdeniz universites',
     'akdenýz üný', 
@@ -227,7 +228,9 @@ my %MULTI_TYPOS =
     'koc universitesi',
     'koç uni',
     'koc uni'],
-  'Kocaeli University' => ['kocaeli üni'],
+  'Kocaeli University' => [
+    'kocaeli üni',
+    'kocaeli uni sk'],
   'Kozminski University' => ['kozminski uni',
     'kozminski univ'],
   'Kyoto University' => [
@@ -306,6 +309,7 @@ my %MULTI_TYPOS =
   'University of Catania' => ['univ of catania'],
   'University of Chicago' => ['u chicago'],
   'University of Craiova' => [
+    'bc craiova',
     'u craiova',
     'u. craiova',
     'univ craiova',
@@ -333,7 +337,9 @@ my %MULTI_TYPOS =
     ['polit wroclaw', 'polite wroclaw', 'polit wr', 'politechnika wr', 
     'azs pw', 'politehnica cluj', 'poli cluj', 'poli', 'azs invit'],
   'Xuzhou Institute of Technology' => ['xuzhou iot'],
-  'Yildiz Technical University' => ['yildiz sp.'],
+  'Yildiz Technical University' => [
+    'yildiz sk',
+    'yildiz sp.'],
   'Zagreb University' => [
     'inst.of chem.tech.',
     'inst.of chem.techn.'],

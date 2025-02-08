@@ -69,6 +69,7 @@ my @MULTI_WORDS =
   'Bridgerama Milan',
   'Bridgetime45',
   'Bu Mu',
+  'Bul-Bel',
   'Buyur Teyze',
 
   'Can Aren',
@@ -401,6 +402,7 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   'ABA Nuno Paz' => ['ABA - Nuno Paz', 'ABA-Nuno Paz'],
+  'ACR' => ['acr bridge club'],
   'AIC' => ['a i c'],
   'Air Traffic Management' => ['air traffic managem', 'air-trfc',
     'air-trf'],
@@ -469,7 +471,11 @@ my %MULTI_TYPOS =
   'Multi Gen Indonesia' => ['multi gen ina'],
   'Møllers Team' => ['møllers t'],
 
-  Obezit => ['obezit tatilde', 'obezit intl', 'öz obezýt'],
+  Obezit => [
+    'ak obezit', 
+    'obezit tatilde', 
+    'obezit intl', 
+    'öz obezýt'],
 
   "Pal's Four" => ["pal's"],
   "Pradeep's Four" => ["pradeep's 4", "Pradeep's Team"],

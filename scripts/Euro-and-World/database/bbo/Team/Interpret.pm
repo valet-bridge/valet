@@ -120,7 +120,7 @@ sub post_process_abbr
     {
       if ($#$club_list > 0)
       {
-        print "MATRIX Multiple clubs in $city: ",
+        print "MATRIX Multiple clubs in $city ($bbono): ",
           join(', ', @$club_list), "\n";
       }
       elsif (exists $CLUB_MATCHES{$bbono})

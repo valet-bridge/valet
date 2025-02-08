@@ -1437,6 +1437,7 @@ my %MULTI_TYPOS =
 
   'Pen Pineapple Apple Pen' => ['ppap (midori)'],
   'Pigerne på tur' => ['pigerne pa tur'],
+  'Plan B' => ['plan b bridgeklub'],
 
   'Quanzhou Development' => ['quanzhou fazhan'],
   'Queen and Knights' => ["queen's & knight"],
