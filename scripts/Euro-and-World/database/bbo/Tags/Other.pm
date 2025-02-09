@@ -548,11 +548,11 @@ my @SINGLE_WORDS = qw(
    Fakel FAM² FAMA Farta Fasulye Federal Fenix Fepanandra Ferfi Feszek 
    Fevbazi FII Fil Filur Findik Fit Flagship FNCC Formosa Fortuna Fortune 
    FOS Foundation Frak Francest Frieolt Frusci FSM Fuli Fundacja Future 
-   ZZFWK
+   FWK
 
    Gabrisem Galaktika Galim Gambitas Gamma Gaoshan Garp Garuda Gata 
    GBRD Gelin Gepi Gerilim Gewanna Gezi Gezzer Ghandi Gibs Gjesp 
-   Gkobra GMM Goldwest Goroco Gorsi Göktürk GP Greecoura Greisnor 
+   Gkobra GMM Goldcat Goldwest Goroco Gorsi Göktürk GP Greecoura Greisnor 
    Greps GRNC Grup Guayacos Gudok Gullberg Gullvi Guronii Guti
 
    Hade Hai Hakl Hane Hansa Haribda Haruss Hasvel Hayir HayirlisI Haziran 

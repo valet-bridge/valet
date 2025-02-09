@@ -221,10 +221,10 @@ my @SINGLE_WORDS = qw(
   Farsund Fernetti Fethiye Firenze Flekkefjord Foca Fosnavåg Frankfurt 
   Fredrikstad Freiburg Fritzlar Funchal Fuzhou Førde
 
-  Galway Gajaki Garches Gävle Gdansk Gdynia Gelibolu Genoa Gent Gevgelija 
-  Geyve Giresun Giza Glasgow Gnesta Gniezno Gorzow Gölcük Göteborg 
-  Graz Gresik Grobogan Grogol Groningen Guangdong Guangzhou Guayaquil 
-  Gudbrandsdal Gudivada Guoxing Gümüşlük Gyor
+  Galway Gajaki Garches Gävle Gdansk Gdynia Gelibolu Geneva Genoa Gent 
+  Gevgelija Geyve Giresun Giza Glasgow Gnesta Gniezno Gorzow Gölcük 
+  Göteborg Graz Gresik Grobogan Grogol Groningen Guangdong Guangzhou 
+  Guayaquil Gudbrandsdal Gudivada Guoxing Gümüşlük Gyor
 
   Haderslev Haikou Hamar Hamburg Hammamet Hangzhou Hani Hanko Hannover 
   Harplinge Harmanli Harstad Haskovo Hatay Havirov Hebi Hedemora 
@@ -354,6 +354,7 @@ my %SINGLE_TYPOS =
   Bansi => ["bansi's"],
   Barcelona => ['bcn'],
   Beijing => ['peking', 'pekin', 'pékin', 'bijing'],
+  Bhubaneswar => ['Bhubaneshwar'],
   Buyukada => ['büyükada'],
   Buzios => ['bruzios'],
   Canakkale => ['çanakkale'],
