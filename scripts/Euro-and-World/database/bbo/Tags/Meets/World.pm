@@ -16,6 +16,7 @@ my @MULTI_WORDS =
 (
   'FISU World University Championships',
   'IMSA Elite Mind Games',
+  'IMSA World Masters Championships',
   'World Olympiad',
   'World Series',
   'World Mind Games',
@@ -26,6 +27,12 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'IMSA Elite Mind Games' => [
+    'imsaelitemindgames',
+    'imsaelitemindsgames',
+    'imsaeliteminggames'],
+  'IMSA World Masters Championships' => [
+    'imsa wmc'],
   'World Series' => ['world bridge series'],
   'World Mind Games' => [
     'mind sports games', 

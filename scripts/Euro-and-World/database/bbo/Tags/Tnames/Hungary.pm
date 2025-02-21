@@ -21,6 +21,7 @@ my @MULTI_WORDS =
   'Hungarian Open Pairs',
   'Hungarian Open Teams',
   'Hungarian Open Trials',
+  'Hungarian Santa Invitational',
   'Hungarian Senior Trials',
   'Hungarian Women Trials'
 );
@@ -47,7 +48,10 @@ my %MULTI_TYPOS =
     'hungary teams'],
   'Hungarian Open Trials' => [
     'hungarian team trial',
-    'hungarian team trials'],
+    'hungarian team trials',
+    'hungarian teams trials'],
+  'Hungarian Santa Invitational' => [
+    'santa invitational'],
   'Hungarian Women Trials' => [
     'hungarian woman trials',
     "hungarian woman's trials"]

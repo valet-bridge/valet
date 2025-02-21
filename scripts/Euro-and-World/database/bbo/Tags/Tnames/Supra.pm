@@ -54,10 +54,14 @@ my %MULTI_TYPOS =
     'computer bridge', 
     'computer bridge championship',
     'computer world bridge championships'],
-  'NYSA Euroregion Nations Cup' => ['cup of euroregion nysa'],
+  'NYSA Euroregion Nations Cup' => [
+    'cup of euroregion nysa',
+    'euroregion nysa cup'],
   'Paris Youth Open Teams' => [
     'youth open bridge paris',
     'youth paris open bridge'],
+  'Stern-Cornell Trophy' => [
+    'stern-cornell trans-tasman trophy'],
 );
 
 my %SINGLE_TYPOS =

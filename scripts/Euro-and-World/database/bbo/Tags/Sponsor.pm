@@ -513,6 +513,7 @@ my @MULTI_WORDS =
   'Tin Fok',
   'TJ Jabung Brt',
   'Tolani Shipping Ltd',
+  'Tony Bemrose Insurance Brokers',
   'Torunlar Gayrimenkul',
   'Trambak Rubber',
   'Tricon Infotech',
@@ -999,7 +1000,7 @@ my @SINGLE_WORDS = qw(
 
   Onko Optimed Ozyuva Özbuğday
 
-  P2TEL Parytet Paulaner Paywell Pealinn Pellon Penline Perelik 
+  P2TEL Panatop Parytet Paulaner Paywell Pealinn Pellon Penline Perelik 
   Pertagas Pertamina Pessel Petroconas Pexis Petro Pharon Pimara 
   POLFA Pravaha Praterm Prayas Prokom Pro3Max Prowin Printerikeskus 
   Pufa Pusula
@@ -1195,6 +1196,7 @@ my %SINGLE_TYPOS =
   'Tata Consulting Services' => ['tcs'],
   'Team Audita' => ['teamaudita', 'audita'],
   'Timah' => ['tima'],
+  'Tony Bemrose Insurance Brokers' => ['tbib'],
   'Torunlar Gayrimenkul' => ['torunlargayrimenkul'],
   'Tricon Infotech' => ['tricon'],
   'Trygginga Miðstöðin' => ['Tryggingamiðstöðin',

@@ -15,6 +15,8 @@ our @EXPORT = qw(set_hash);
 my @MULTI_WORDS =
 (
   "Chairman's Cup",
+  'Falcon Cup',
+  'Falkenberg Pro-Am',
   'Filbyter Cup',
   'Park Hotell Swiss Teams',
   'S:t Erik Championship Series',
@@ -24,6 +26,8 @@ my @MULTI_WORDS =
   'Swedish District Teams',
   'Swedish Juniors Pairs',
   'Swedish Juniors Teams',
+  'Swedish Junior Team Trials',
+  'Swedish Mixed Team Trials',
   'Swedish Mixed Teams',
   'Swedish Open Pairs',
   'Swedish Open Teams',
@@ -40,9 +44,22 @@ my %MULTI_TYPOS =
   "Chairman's Cup" => [
     'chairmans cup', 
     "chairmans's cup", 
+    'charimans cup',
     "chariman's cup",
     "swedish chairman's cup"],
+  'Falkenberg Pro-Am' => ['pro-am falkenberg'],
   'Filbyter Cup' => ['filbyer cup'],
+  'S:t Erik Championship Series' => [
+    'bk s:t erik mästerserien',
+    'mästarseriens cupspel bridgeklubben s:t erik',
+    'mästarserien cup s:t erik',
+    's:t erik mästerserien',
+    'st_erik ligafinalen',
+    'st:erik ligafinalen',
+    'st eriks bk league',
+    'st eriks bridgeklubb league',
+    'st eriks league',
+    'sterik ligafinalen'],
   'Stockholm Teams' => [
     'stockholm teams cs', 
     'stockholms teams'],
@@ -71,6 +88,12 @@ my %MULTI_TYPOS =
   'Swedish Juniors Teams' => ['swedish juniors teams cs',
     'swedish juniors teams cs', 'swedish junior teams',
     'swedish junior team', 'swedish junior team championship'],
+  'Swedish Junior Team Trials' => [
+    'sweden u26 trials'],
+  'Swedish Mixed Teams' => [
+    'sm lag mixed',
+    'sm mixed lag'],
+  'Swedish Mixed Team Trials' => ['swedish mixed teams trials'],
   'Swedish Open Pairs' => [
     'open swedish pairs championship',
     'sweden national pairs',
@@ -82,10 +105,13 @@ my %MULTI_TYPOS =
   'Swedish Open Teams' => ['swedish teams'],
   'Swedish Open Team Trials' => [
     'swedish open trials',
+    'swedish open teams trials',
     'swedish team trials',
+    'swedish teams trial',
     'swedish teams trials',
     'swedish team trial'],
   'Swedish Premier League' => [
+    'swedish bridge league',
     'swedish club teams',
     'swedish elite series',
     'swedish elitserien',

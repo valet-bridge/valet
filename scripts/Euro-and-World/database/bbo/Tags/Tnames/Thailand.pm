@@ -17,11 +17,18 @@ my @MULTI_WORDS =
   'Bangkok Open Teams',
   'Thailand Mixed Teams',
   'Thailand Open Teams',
+  'Thailand Open Team Trials',
   'Thailand Women Teams',
+  'Thailand University Games',
+  'Thailand Youth Games Mixed Teams',
+  'Thailand Youth Games Open Teams',
 );
 
 my %MULTI_TYPOS =
 (
+  'Thailand University Games' => [
+    'university game of thailand',
+    'university games of thailand']
 );
 
 my %SINGLE_TYPOS =

@@ -18,6 +18,7 @@ my @MULTI_WORDS =
   'Chilean Copa de Plata',
   'Chilean Cup',
   'Chilean Invitational Teams',
+  'Chilean Mixed Trials',
   'Chilean Open Pairs',
   'Chilean Open Teams',
   'Chilean Open Trials',
@@ -28,16 +29,28 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  'Chilean Copa de Oro' => ['copa de oro'],
-  'Chilean Copa de Plata' => ['copa de plata'],
+  'Chilean Copa de Oro' => [
+    'copa oro chile',
+    'copa de oro'],
+  'Chilean Copa de Plata' => [
+    'copa de plata',
+    'copa plata chile'],
   'Chilean Cup' => ['copa aniversario'],
+  'Chilean Mixed Trials' => ['seleccion mixta chile'],
   'Chilean Open Pairs' => ['chilean pairs'],
   'Chilean Open Teams' => ['torneo nacional de chile'],
   'Chilean Open Trials' => [
     'chile open team trials',
+    'chile seleccion libre',
+    'chile seleccion libres',
+    'chile selección libres',
     'chile team trials',
     'chilean team trials',
-    'chilean open trials'],
+    'chilean open trials',
+    'seleccion chile libre',
+    'seleccion chile libres',
+    'seleccion libre chile',
+    'seleccion libres chile'],
 );
 
 my %SINGLE_TYPOS =

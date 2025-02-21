@@ -27,6 +27,7 @@ my @MULTI_WORDS =
   'Jean Besse',
   'John Arkinstall',
   'Justice JM Lal',
+  'Krishan Kumar Modi',
   'Lalit Mohanka',
   'LC Sunil Rajendra',
   'Leszek Kwiatkowski',
@@ -56,7 +57,8 @@ my @MULTI_WORDS =
   'Staszek Wybranowski',
   'Thanos Kapayannidis',
   'Vasil Levski',
-  'Willy Brown'
+  'Willy Brown',
+  'Yelda Baysal Mumcuoglu'
 );
 
 my %MULTI_TYPOS =
@@ -72,6 +74,7 @@ my %MULTI_TYPOS =
   'Jean Besse' => ['jean besser'],
   'Justice JM Lal' => ['justice j m lal', 'j m lal', 'justice lal',
     'justice j_m_lal', 'jistice j m lal'],
+  'Krishan Kumar Modi' => ['k k modi'],
   'LC Sunil Rajendra' => ['l_c_sunil rajendra'],
   'M Keni' => ['m keny'],
   'Maharaja Yeshwantrao Holkar' => ['m yeshwantrao holkar',
@@ -89,7 +92,8 @@ my %MULTI_TYPOS =
   'Rai Bahadur Modi' => ['rai bahadur'],
   'R N Bagla' => ['rn bagla', 'r_nbagla', 'r_n_bagla'],
   'Staszek Wybranowski' => ['Staszka Wybranowskiego'],
-  'Thanos Kapayannidis' => ['thanos capayiannides']
+  'Thanos Kapayannidis' => ['thanos capayiannides'],
+  'Yelda Baysal Mumcuoglu' => ['yelde mb']
 );
 
 my @SINGLE_WORDS = qw(

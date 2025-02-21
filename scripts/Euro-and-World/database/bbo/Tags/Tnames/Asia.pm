@@ -28,6 +28,7 @@ my @MULTI_WORDS =
   'ASEAN Women Club Teams',
   'ASEAN Youngsters Club Teams',
   'Asia Junior Teams Cup',
+  'Asia Open Team Trials',
   'Asia Open Teams Cup',
   'Asia Senior Teams Cup',
   'Asia Women Teams Cup',
@@ -54,6 +55,8 @@ my %MULTI_TYPOS =
     'asean open teams'],
   'ASEAN Mixed Club Teams' => [
     'asean mixed teams'],
+  'Asia Open Team Trials' => [
+    'test event road to asian games'],
   'Asian University Championship' => [
     'asian university bridge championship'],
   'South Pacific Open Teams' => [

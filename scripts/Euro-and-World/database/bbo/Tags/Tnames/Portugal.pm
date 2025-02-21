@@ -16,13 +16,17 @@ my @MULTI_WORDS =
 (
   'Azores Open Teams',
   'FullBridge International Teams',
+  'Lisbon Open Pairs',
   'Lisbon Open Teams',
   'Madeira Open Teams',
+  'Portuguese First Division',
   'Portuguese Grand Prix',
   'Portuguese IMP Pairs',
+  'Portuguese Mixed Team Trials',
   'Portuguese Open Teams',
   'Portuguese Open Trials',
   'Portuguese Northern Regional Open Teams',
+  'Portuguese Senior Team Trials',
   'Rui Pinto Cup'
 );
 
@@ -31,6 +35,8 @@ my %MULTI_TYPOS =
   'FullBridge International Teams' => [
     'internacional equipos full bridge',
     'internacional full bridge'],
+  'Lisbon Open Pairs' => [
+    'lisbon masters'],
   'Madeira Open Teams' => [
     'madeira internacional',
     'madeira internacional open',
@@ -42,6 +48,8 @@ my %MULTI_TYPOS =
     'madeira swiss teams',
     'madeira teams',
     'swiss teams madeira'],
+  'Portuguese First Division' => [
+    'portuguese national inter-clubs 1st division'],
   'Portuguese Grand Prix' => [
     'estoril internacional teams',
     'estoril international teams',
@@ -56,6 +64,10 @@ my %MULTI_TYPOS =
     "nacional pares por imp's",
     'nacional pares imps portugal',
     "campeonato nacional pares por imp's"],
+  'Portuguese Mixed Team Trials' => [
+    'portuguese mixed team selection',
+    'portuguese mixed teams trial',
+    'portuguese mixed teams trials'],
   'Portuguese Open Teams' => [
     'campeonato nacional equipas open',
     'equipas open pt',
@@ -63,8 +75,10 @@ my %MULTI_TYPOS =
     'portugal open teams championship',
     'portuguese cneo',
     'portuguese national teams',
+    'portuguese national teams open',
     'portuguese teams'],
   'Portuguese Open Trials' => [
+    'portuguese open team trials',
     'portuguese open trial',
     'portuguese slection trials',
     'portuguese trials',
@@ -73,7 +87,10 @@ my %MULTI_TYPOS =
   'Portuguese Northern Regional Open Teams' => [
     'northern regional open teams',
     'northern regional teams open'],
+  'Portuguese Senior Team Trials' => [
+    'portuguese senior teams trial'],
   'Rui Pinto Cup' => [
+    'taca rui pinto',
     'taça rui pinto']
 );
 

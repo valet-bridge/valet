@@ -37,8 +37,10 @@ my %MULTI_TYPOS =
     'vereinspokal',
     'dbv-cup',
     'dbv cup',
-    'dbv-pokal'],
+    'dbv-pokal',
+    'dbv vereinspokal'],
   'German Mixed Teams' => [
+    'mixed teammeisterschaft',
     'deutsche mixed-teammeisterschaft',
     'deutsche mixed teammeisterschaft'],
   'German Open Pairs' => [
@@ -49,6 +51,7 @@ my %MULTI_TYPOS =
     'dr_-heinz-von-rotteck-pokal',
     'v_-rotteck-pokal'],
   'German Open Teams' => [
+    'deutsche teammeisterschaft',
     'offene deutsche teammeisterschaft',
     'offene team meisterschaft',
     'offene team meistershaft',
@@ -70,7 +73,7 @@ my %MULTI_TYPOS =
 
 my %SINGLE_TYPOS =
 (
-  'German Bundesliga' => ['bundesliga'],
+  'German Bundesliga' => ['bundesliga', 'bundesligen'],
   "Gro's Supercup" => ['grocup'],
 );
 

@@ -22,6 +22,10 @@ my @MULTI_WORDS =
   'South American Senior Teams',
   'South American Women Teams',
   'South American Women Trials',
+  'South American Zonal Mixed Teams',
+  'South American Zonal Open Teams',
+  'South American Zonal Senior Teams',
+  'South American Zonal Women Teams',
 );
 
 my %MULTI_TYPOS =
@@ -43,12 +47,22 @@ my %MULTI_TYPOS =
     'clasificacion sudamericano seniors'],
   'South American Senior Teams' => [
     'south american senior championship'],
+  'South American Senior Trials' => [
+    'seleccion sudamericano senior'],
   'South American Women Teams' => [
     'clasificatoria damas equipos',
     'clasificatoria equipos damas',
     'sudamericano damas'],
-  'South American Senior Trials' => [
-    'seleccion sudamericano senior'],
+  'South American Zonal Mixed Teams' => [
+    'sabc mixed zonal'],
+  'South American Zonal Open Teams' => [
+    'sabc open zonal',
+    'sabc zonal open'],
+  'South American Zonal Senior Teams' => [
+    'sabc zonal seniors'],
+  'South American Zonal Women Teams' => [
+    'sabc zonal women',
+    'sabc women zonal'],
 );
 
 my %SINGLE_TYPOS =

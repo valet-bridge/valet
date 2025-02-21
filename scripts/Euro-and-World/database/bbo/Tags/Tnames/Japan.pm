@@ -15,14 +15,24 @@ our @EXPORT = qw(set_hash);
 my @MULTI_WORDS =
 (
   'Japanese District KO Teams',
+  'Japanese Intercollege Teams',
   'Japanese Open Trials',
   'Kanto Teams',
+  'Kyoto University Teams',
   'NEC Cup',
   'Prince Takamatsu Cup',
+  'Yokohama Cup'
 );
 
 my %MULTI_TYPOS =
 (
+  'Japanese Intercollege Teams' => [
+    'japan intercollege championships',
+    'japan intercollege contract bridge championships',
+    'japan spring intercollegiate championships',
+    'summer japan intercollege championships'],
+  'Kyoto University Teams' => [
+    'kubc trial'],
   'Japanese Open Trials' => ['japanese open team trial',
     'japanese open team trials'],
   'NEC Cup' => [

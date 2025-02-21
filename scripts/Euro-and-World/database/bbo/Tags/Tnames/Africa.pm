@@ -17,6 +17,7 @@ my @MULTI_WORDS =
   'African Zonal Open Teams',
   'African Zonal Senior Teams',
   'African Zonal Women Teams',
+  'Hammamet Cup',
   'Marmara Mixed Teams',
   'Marmara Open Teams',
   'Morocco Open Pairs',
@@ -36,6 +37,7 @@ my %MULTI_TYPOS =
     'african zonal women trials',
     'zonal africa ladies',
     'zonal africa women'],
+  'Hammamet Cup' => ['coupe hammamet']
 );
 
 my %SINGLE_TYPOS =

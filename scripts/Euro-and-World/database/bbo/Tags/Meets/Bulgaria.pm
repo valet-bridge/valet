@@ -18,6 +18,7 @@ my @MULTI_WORDS =
   'Cherven Briag Festival',
   'Dobrich Bridge Festival',
   'Lozenets Bridge Festival',
+  'Pavel Banya Bridge Festival',
   'Plovdiv Bridge Festival',
   'Serdika Bridge Festival',
   'Shumen Bridge Festival',
@@ -35,6 +36,12 @@ my %MULTI_TYPOS =
   'Dobrich Bridge Festival' => [
     'ibf dobrich'],
   'Lozenets Bridge Festival' => ['bridge festival lozenets'],
+  'Pavel Banya Bridge Festival' => [
+    'bridge festival pavel banya',
+    'international bridge festival pavel banya',
+    'international bridge holidays pavel banya',
+    'international festival pavel banya',
+    'pro ead pavel banya'],
   'Plovdiv Bridge Festival' => [
     'bridge festival plovdiv',
     'international bridge festival plovdiv',
@@ -53,7 +60,9 @@ my %MULTI_TYPOS =
     'bridge festival-bulgaria-stara zagora',
     'international bridge festival stara zagora'],
   'Varna Bridge Festival' => [
-    'international bridge festival varna'],
+    'ibf varna',
+    'international bridge festival varna',
+    'international festival varna'],
 );
 
 my %SINGLE_TYPOS =

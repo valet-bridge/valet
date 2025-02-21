@@ -18,9 +18,13 @@ my @MULTI_WORDS =
   'Moscow Sunday Times Teams',
   'NN Cup',
   'Russian IMSA Cup',
+  'Russian Mixed Team Trials',
   'Russian Open Teams',
+  'Russian Open Team Trials',
   'Russian Premier League',
+  'Russian Women Team Trials',
   'Slava Cup',
+  'Tennet Mixed Pairs Cup',
 );
 
 my %MULTI_TYPOS =
@@ -30,15 +34,21 @@ my %MULTI_TYPOS =
     'goulyash by e_gladysh',
     'nn-cup'],
   'Russian IMSA Cup' => ['imsa cup'],
+  'Russian Mixed Team Trials' => [
+    'russian mixed trials',
+    'russian mixed trails'],
   'Russian Open Teams' => [
     'russian teams championship',
     'russian team championship'],
+  'Russian Open Team Trials' => ['russian open trials'],
+  'Russian Women Team Trials' => ['russian women trials'],
   'Russian Premier League' => ['russian premiere league'],
   'Slava Cup' => [
     'bkbt match',
     'bkbt teams',
     'cup slava', 
     'salava cup'],
+  'Tennet Mixed Pairs Cup' => ['tennet cup']
 );
 
 my %SINGLE_TYPOS =

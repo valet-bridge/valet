@@ -23,6 +23,7 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   'Azores Festival' => [
+    'azores bridge festival',
     'azores bridge open',
     'azores bridge teams', 
     'azores festiva',
@@ -31,7 +32,9 @@ my %MULTI_TYPOS =
     'azores team festval', 
     'azores teams',
     'festival azores',
-    'festival azores bridge'], 
+    'festival azores bridge', 
+    'festival bridge azores', 
+    'festival internacional azores'],
   'Estoril Bridge Festival' => [
     'estoril festival'],
   'Lisbon International Festival' => [
@@ -39,6 +42,7 @@ my %MULTI_TYPOS =
     'international teams festival avgp'],
   'Madeira International Festival' => [
     'international madeira',
+    'madeira bridge open',
     'madeira open'],
 );
 

@@ -65,7 +65,7 @@ my %MEETS_JORDAN =
         YEAR => 2016,
         CITY => 'Amman',
         DATE_START => '2016-10-19',
-        DATE_END => '2016-10-23'
+        DATE_END => '2016-10-28'
       },
       '2018' =>
       {

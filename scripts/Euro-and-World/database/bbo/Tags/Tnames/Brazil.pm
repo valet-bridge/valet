@@ -14,9 +14,10 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
-  'Brazilian Senior Trials',
+  'Brazilian Mixed Trials',
   'Brazilian Open Teams',
   'Brazilian Open Trials',
+  'Brazilian Senior Trials',
   'Brazilian Women Trials',
   'Buzios Open Teams',
   'Rio de Janeiro Open Teams',
@@ -39,6 +40,16 @@ my %MULTI_TYPOS =
     'brazilian team',
     'brazilian teams',
     'open brazilian championship'],
+  'Brazilian Open Trials' => [
+    'braisil team trials',
+    'brasil teams trial',
+    'brasilian trial',
+    'brazil team trials',
+    'brazil trial',
+    'brazil trials',
+    'brazilian open trals',
+    'brazilian team trial',
+    'seleçao brasil'],
   'Brazilian Senior Trials' => ['brazilian senior'],
   'Brazilian Women Trials' => ['brazilian ladies trials'],
   'Rio de Janeiro Open Teams' => [
@@ -57,6 +68,7 @@ my %MULTI_TYPOS =
     'sap paulo state championship',
     'são paulo state championship',
     'sp champ',
+    'sp state champ',
     'sao paulo state'],
 );
 

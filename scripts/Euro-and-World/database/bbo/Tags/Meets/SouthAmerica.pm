@@ -16,6 +16,7 @@ my @MULTI_WORDS =
 (
   'South American Team Championship',
   'South American Trials',
+  'South American Zonal Trials',
 );
 
 my %MULTI_TYPOS =

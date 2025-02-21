@@ -17,11 +17,14 @@ my @MULTI_WORDS =
   'Hong Kong Inter-City Open Teams',
   'Hong Kong Inter-City Women Teams',
   'Hong Kong New Year Teams',
+  'Hong Kong Mixed Team Trials',
+  'Hong Kong Open Team Trials',
 );
 
 my %MULTI_TYPOS =
 (
   'Hong Kong Inter-City Open Teams' => [
+    'ella graca open teams',
     'hong kong iner-city',
     'hong kong inter-city',
     'JP Morgan Inter-City Championship',
@@ -30,6 +33,12 @@ my %MULTI_TYPOS =
     'JP Morgan Intercity Bridge Championships-Open',
     'JP Morgan Intercity Bridge Championships-Open T_',
     'JP Morgan Intercity Bridge Championships-Open  T_'],
+  'Hong Kong Mixed Team Trials' => [
+    'hk mixed team trial',
+    'hkcba mixed team trial',
+    'hkcba mixed trial'],
+  'Hong Kong Open Team Trials' => [
+    'apbf hk open team trial'],
 );
 
 my %SINGLE_TYPOS =

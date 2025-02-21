@@ -21,6 +21,22 @@ my %GLOBAL =
 
 my %MEETS_SWEDEN =
 (
+  'Falkenberg Bridgefestival' =>
+  {
+    %GLOBAL,
+
+    EDITIONS => 
+    {
+      '2018' =>
+      {
+        YEAR => 2018,
+        CITY => 'Falkenberg',
+        DATE_START => '2018-07-14',
+        DATE_END => '2018-07-19'
+      },
+    }
+  },
+
   'Swedish Bridge Festival' =>
   {
     %GLOBAL,

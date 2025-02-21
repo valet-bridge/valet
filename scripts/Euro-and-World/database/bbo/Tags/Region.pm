@@ -238,7 +238,7 @@ my @SINGLE_WORDS = qw(
   Aceh Agder Akdeniz Akkad Anhui Ararat Ayrshire
   Badung Bahia Bairrada Bali Banten Belitung Bengal Bengkayang Bihar 
   Bogø Borneo Bornholm Bungo Buriram Buskerud
-  Cappadocia Catalonia Chengmai Corsica Crete
+  Cappadocia Catalonia Chengmai Comandatuba Corsica Crete
   Dersým Druts
   Eyjafjallajokull
   Feixiang Fjends Flakstad Florida Fujian

@@ -20,6 +20,7 @@ my @MULTI_WORDS =
   "Missouri Braggin' Rights",
   'Philadelphia Solomon Teams',
   'Reisinger BAM Teams',
+  'Soloway Teams',
   'Spingold Teams',
   "Sternberg Women's BAM Teams",
   'US Girls Trials',
@@ -41,6 +42,9 @@ my %MULTI_TYPOS =
 (
 
   'Collegiate Bowl' => [
+    'acbl collegiate bridge bowl',
+    'college bowl',
+    'collegiate bridge bowl',
     'collegiate championship',
     'collegiate championships', 
     'collegiate champs'],
@@ -51,6 +55,10 @@ my %MULTI_TYPOS =
   "Missouri Braggin' Rights" => ['bragging rights'],
   'Philadelphia Solomon Teams' => [
     'solomon teams'],
+  'Soloway Teams' => [
+    'soloway',
+    'soloway ko team',
+    'soloway ko teams'],
   'Spingold Teams' => [
     'spingold knockout',
     'spingold knockout teams'],
@@ -117,9 +125,22 @@ my %SINGLE_TYPOS =
     'collegiates'],
   'Grand National Teams' => ['gnt'],
   'Reisinger BAM Teams' => [
+    'reienger',
+    'reisibger',
+    'reilsinger',
+    'reinsinger',
+    'reinseinger',
+    'reisenger',
     'reisiger',
+    'reisingef',
     'reisinger',
-    'resisinger'],
+    'reisisnger',
+    'reisneger',
+    'reisnger',
+    'resisinger',
+    'riesinger',
+    'teisenger',
+    'teisnger'],
   'Spingold Teams' => ['spingold'],
   'US Junior Trials' => ['usjbc', 'jusbc'],
   'US Juniors Training' => ['jtp'],

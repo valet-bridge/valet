@@ -54,13 +54,16 @@ my %MULTI_TYPOS =
   'European Small Federation Games' => [
     'ebl small federation trophy',
     'ebl small federations trophy',
-    'games of small federations',
+    'european small fed cup',
+    'european small fed games',
+    'european small feds games',
     'european small federations games',
+    'games of small federations',
     'small federation games',
+    'small federations',
     'small federations games',
     'small ffederations games',
     'small federation cup',
-    'european small feds games',
     'small f federations games',
     'europian small federation games'],
   'European Transnational Mixed Teams' => [

@@ -69,7 +69,8 @@ my %MULTI_TYPOS =
     'israel open team trials',
     'israel open trials',
     'israel team trials',
-    'israeli open team trials'],
+    'israeli open team trials',
+    'israeli open trials'],
   'Israel School Trials' => [
     'israel schools trials',
     'israel schools team trials',

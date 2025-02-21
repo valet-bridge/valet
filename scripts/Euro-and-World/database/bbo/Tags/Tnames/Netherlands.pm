@@ -16,6 +16,7 @@ my @MULTI_WORDS =
 (
   'ArboNed Team Cup',
   'Arnhem Interbridge Tournament',
+  'Buskruit Open Teams',
   'Carrousel Cup',
   'Dutch Knock-Out Cup',
   'Dutch Meesterklasse',
@@ -46,7 +47,8 @@ my %MULTI_TYPOS =
     'dutch mk',
     'dutch team',
     'dutch teams',
-    'dutch club teams'],
+    'dutch club teams',
+    'dutch premier league'],
   'Forbo-Krommenie Nations Cup' => [
     'forbo krommenie teams',
     'forbo nations cup',
@@ -58,6 +60,7 @@ my %MULTI_TYPOS =
     'krommenie nations cup'],
   'Jaap Kokkes Tournament' => [
     'jaap kokkes toernooi',
+    'jaap kokkestoernooi',
     'jaap kookes toernooi',
     'jaap kokkes'],
   'Petit Grand Prix van Driene' => [
@@ -88,6 +91,7 @@ my %MULTI_TYPOS =
 
 my %SINGLE_TYPOS =
 (
+  'Buskruit Open Teams' => ['buskruit'],
   'Dutch Meesterklasse' => ['meesterklasse'],
   'Top Circuit' => ['topcircuit'],
   'White House Juniors' => ['whj'],

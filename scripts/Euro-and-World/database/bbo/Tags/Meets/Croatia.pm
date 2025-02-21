@@ -22,6 +22,7 @@ my %MULTI_TYPOS =
 (
   'Pula Bridge Festival' => [
     'international festival pula',
+    'pula brdige festival',
     'pula bridge festiwal'],
   'Samobor Bridge Meeting' => [
     'bridge meeting samobor',

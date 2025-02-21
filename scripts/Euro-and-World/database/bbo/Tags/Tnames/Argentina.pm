@@ -25,6 +25,7 @@ my @MULTI_WORDS =
   'Argentinian Seniors Teams',
   'Argentinian Senior Trials',
   'Argentinian Women Trials',
+  'Copa Fundadores',
   'Copa Zanalda River Plate',
   'Mar del Plata Open Teams',
 );
@@ -35,7 +36,8 @@ my %MULTI_TYPOS =
   'Argentinian Mixed Pairs' => ['argentina national mixed pairs'],
   'Argentinian Mixed Teams' => [
     'argentina equipos mixtos',
-    'campeonato nacional equipos mixtos argentino'],
+    'campeonato nacional equipos mixtos argentino',
+    'equipos mixtos argentina'],
   'Argentinian Open Teams' => [
     'argentina national team championship',
     'argentina open team',

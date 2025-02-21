@@ -17,6 +17,7 @@ my @MULTI_WORDS =
   'APBF Championships',
   'APBF Youth Championships',
   'ASEAN Club Championship',
+  'ASEAN University Games',
   'Asia Cup',
   'Southeast Asian Games'
 );

@@ -92,12 +92,15 @@ my %MULTI_TYPOS =
   'Marit Sveaas Open Pairs' => [
     'marit sveaas international bridge tournament',
     'marit sveaas international  bridge tournament',
-    'marit sveaas tournament'],
+    'marit sveaas tournament',
+    'marit sveås ibt',
+    'marit sveaas ibt'],
   'Namsos Pairs Cup' => ['namsos cup'],
   'Norwegian Club Teams' => [
     'codan cup',  
     'codan teams cup',
     'club team championship norway',
+    'nbf 1_ division',
     'nor club teams ch_ship',
     'nor_club teams ch_ship',
     'nor club teams',
@@ -137,6 +140,10 @@ my %MULTI_TYPOS =
     'norwegain pairs',
     'norwegian pairs'],
   'Norwegian Open Teams' => [
+    'nm klubblag',
+    'nm lag',
+    'nm-lag',
+    'nm lagfinale',
     'nm open teams',
     'norwegian championship open teams',
     'norwegian chship teams',

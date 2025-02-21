@@ -110,7 +110,7 @@ my %MULTI_TYPOS =
 my %SINGLE_TYPOS =
 (
   'Bermuda Bowl' => ['bb'],
-  "d'Orsi" => ['sb', 'dosb'],
+  "d'Orsi" => ['sb', 'dosb', 'dot'],
   'McConnell Cup' => ['mcconnell'],
   'Rosenblum Cup' => ['rosenblum'],
   'Venice Cup' => ['vc', 'venice'],

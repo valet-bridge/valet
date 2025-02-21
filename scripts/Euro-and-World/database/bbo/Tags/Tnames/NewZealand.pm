@@ -16,6 +16,7 @@ my @MULTI_WORDS =
 (
   'Centre Island Open Teams',
   'New Zealand Inter-Provincial Open Teams',
+  'New Zealand Mixed Trials',
   'New Zealand Open Teams',
   'New Zealand Open Trials',
   'New Zealand Women Trials',
@@ -27,8 +28,18 @@ my %MULTI_TYPOS =
   'New Zealand Inter-Provincial Open Teams' => [
     'nz interprovincial',
     'nz interprovincials',
+    'nz ips',
+    'nz ip imtermidiate',
     'new zealand inter provincials'],
+  'New Zealand Mixed Trials' => [
+    'nz mixed trial',
+    'nz mixed trials'],
   'New Zealand Open Teams' => ['nz teams'],
+  'New Zealand Open Trials' => [
+    'nz opentrial',
+    'nzopen trials',
+    'nz open trial',
+    'nz open team trial'],
 );
 
 my %SINGLE_TYPOS =

@@ -47,6 +47,7 @@ my %MULTI_TYPOS =
   'Danish Cup' => [
     'danmark pokal',
     'danmark pokal match',
+    'dansk pokalfinale',
     'denmark pokal',
     'vinoble cup'],
   'Danish First Division' => [

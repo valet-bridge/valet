@@ -15,16 +15,21 @@ our @EXPORT = qw(set_hash);
 my @MULTI_WORDS =
 (
   'Antonio Chong Cup',
+  'NCCU Cup',
   'NTU Cup',
+  'Taiwan School Open Cup',
   'Taiwan University Open Cup',
   'Taiwan University Teachers Cup',
   'Taiwan University Women Cup',
+  'Taiwanese Mixed Trials',
   'Taiwanese Open Trials',
-  'Taiwanese Senior Trials'
+  'Taiwanese Senior Trials',
+  'Taiwanese Youngster Trials',
 );
 
 my %MULTI_TYPOS =
 (
+  'NCCU Cup' => ['nccu bridge cup'],
   'Taiwan University Open Cup' => [
     'taiwan university cup',
     'taiwan university championship'],
@@ -33,7 +38,10 @@ my %MULTI_TYPOS =
   'Taiwan University Teachers Cup' => [
     'taiwan university cup teachers',
     "taiwan university cup teacher's section"],
+  'Taiwanese Mixed Trials' => [
+    'chinese taipei mixed team trials'],
   'Taiwanese Open Trials' => [
+    'chinese taipei open trails',
     'chinese taipei open trials',
     'ctcba chinese taipei open team trials',
     'ctcba chinese taipei open trial',
@@ -53,7 +61,12 @@ my %MULTI_TYPOS =
     'taiwanese team trial',
     'taiwanese trials'],
   'Taiwanese Senior Trials' => [
-    'ctcba senior team trial']
+    'chinese taipei senior team trials',
+    "chinese taipei seniors' team trials",
+    'ctcba senior team trial'],
+  'Taiwanese Youngster Trials' => [
+    'chinese taipei young team trials',
+    "chinese taipei young's team trials"],
 );
 
 my %SINGLE_TYPOS =

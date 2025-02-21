@@ -14,10 +14,16 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
+  'Hong Kong Trials',
 );
 
 my %MULTI_TYPOS =
 (
+  'Hong Kong Trials' => [
+    'hkcba apbf selection trial',
+    'hkcba selection trial for apbf',
+    'hkcba selection trial for wbg',
+    'hkcba selection trial of apbf'],
 );
 
 my %SINGLE_TYPOS =

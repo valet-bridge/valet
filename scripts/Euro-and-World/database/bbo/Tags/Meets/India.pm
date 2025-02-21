@@ -36,6 +36,8 @@ my %MULTI_TYPOS =
     'hcl bridge tournament',
     'hcl championship',
     'hcl international bridge championship',
+    'hcl international bridge champinoship',
+    'hcl international champoinship',
     'hcl international open',
     'hcl international open championship',
     'hcl open',
@@ -43,6 +45,7 @@ my %MULTI_TYPOS =
     'hcl open international',
     'hcl open international tournament',
     'hcl open tournament'],
+  'Goa Bridge Festival' => ['goa festival'],
   'Indian South Zone Championship' => [
     'south zone championship',
     'southzone championship',
@@ -62,6 +65,9 @@ my %MULTI_TYPOS =
     'dr_ tolani open summer nationals',
     'dr_ tolani summar nationals',
     'dr_ tolani summer nationals'],
+  'Indian Winter Nationals' => [
+    'diamond jubileewinter nationals',
+    'diamond jubilee winter nationals'],
   'Maharaja Holkar National Championship' => [
     'maharaja holakar championship',
     'maharaja holar national open',

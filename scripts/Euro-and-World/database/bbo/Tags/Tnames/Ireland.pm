@@ -14,17 +14,22 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
+  'Egan Trophy',
   'Irish Invitational Pairs',
   'Irish Open Trials',
+  'Irish Premier Pairs',
   'Full Tilt Irish Bridge Masters',
 );
 
 my %MULTI_TYPOS =
 (
+  'Egan Trophy' => ['eagan trophy'],
   'Irish Invitational Pairs' => [
     'ireland invitational pairs',
     'irish invitational matchpoints'],
   'Irish Open Trials' => [
+    'camrose trials cbai',
+    'ibu open trials',
     'ibu trials',
     'ireland trials',
     'ireland camrose trials',
@@ -32,7 +37,10 @@ my %MULTI_TYPOS =
     'irish bridge union trials',
     'irish bridge union open trials',
     'irish camrose trials',
+    'irish teltscher trials',
     'irish trials'],
+  'Irish Premier Pairs' => [
+    'ireland premier pairs'],
 );
 
 my %SINGLE_TYPOS =

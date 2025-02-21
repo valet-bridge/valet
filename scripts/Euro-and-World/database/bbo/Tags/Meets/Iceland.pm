@@ -24,6 +24,14 @@ my %MULTI_TYPOS =
     'iceland bridgefestival',
     'iceland express bridge festival',
     'icelandic express bridge festival',
+    'rekjavikbridgefestival',
+    'reykjaikbridgefestival',
+    'reykjavibridgefestival',
+    'reykjavik bridgefestival',
+    'reykjavík bridge festival',
+    'reykjavík bridgefestival',
+    'reykjavíkbridgefestival',
+    'reykjavíkbridgefstival',
     'reykavik bridge festival'],
 );
 

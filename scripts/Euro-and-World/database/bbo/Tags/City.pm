@@ -228,8 +228,8 @@ my @SINGLE_WORDS = qw(
 
   Haderslev Haikou Hamar Hamburg Hammamet Hangzhou Hani Hanko Hannover 
   Harplinge Harmanli Harstad Haskovo Hatay Havirov Hebi Hedemora 
-  Heikendorf Heledia Helsinki Hendek Herning Hillerød Hjørring Hobro 
-  Hornbæk Hsinchu Huayin Huldretråkket Huwei Hyderabad
+  Heikendorf Heledia Helsinki Hendek Herning Hillerød Hjørring Hobart
+  Hobro Hornbæk Hsinchu Huayin Huldretråkket Huwei Hyderabad
 
   Iasi Indore Iskenderun Isparta Istanbul Ithaca Izmir
 
@@ -247,8 +247,8 @@ my @SINGLE_WORDS = qw(
   Kutno Kuopio Kusadasi Kütahya Kverndalen Kyoto Kyustendil Køge 
   Kølabånn
 
-  Landak Langkat Lanzhou Laodikya Lappeenranta Larnaca Larvik Lausanne 
-  Lebork Lecco Leiden Leipzig Leksand Lerum Lesno Leszno Leuven 
+  Lahore Landak Langkat Lanzhou Laodikya Lappeenranta Larnaca Larvik 
+  Lausanne Lebork Lecco Leiden Leipzig Leksand Lerum Lesno Leszno Leuven 
   Leverkusen Lhokseumawe Liandui Liepaja Lille Lima Limboto Lincoln 
   Lindesberg Linköping Lisbon Liushu Livane Ljubljana Lodi Lodz Lojdy 
   Lokotok Lom Lomza London Lovech Lowicz Lublin Lubomino Ludvikabygden 
@@ -273,6 +273,7 @@ my @SINGLE_WORDS = qw(
   Otepää Oxford Ozarow Örebro Överum
 
   Pacitan Padang Padova Paimado Palembang Palermo Palma Palu Pamukkale 
+  Panaji
   Pancevo Panzhihua Pariaman Paris Pärnu Parvomay Pasuruan Pattaya Pau 
   Pazar Pazardjik Pecs Peebles Pekanbaru Pelitli Pelotas Penajam Pernik 
   Perth Perula Pervera Pesaro Pescara Petersfield Petrelik Philadelphia 
@@ -295,7 +296,7 @@ my @SINGLE_WORDS = qw(
   Shenzhen Shijiazhuang Shimla Shouguang Shumen Sibiu Sidoarjo Siena 
   Sieradz Sigulda Silifke Silistra Sindi Singaraja Singkawang
   Singsås Siofok Sivas Skara Skawina Ski Skien Skopje Slagelse Slawa 
-  Sleman Smedstad Smolyan Smyrna Snåsa Sofia Solok Songkhla Sopot 
+  Sleman Smedstad Smolyan Smyrna Snåsa Sofia Solapur Solok Songkhla Sopot 
   Sortland Söke Sozopol Split Stanford Stargard Stavanger Steinkjer 
   Stirling Stockholm Stoholm Storsjöbygden Stureby Stuttgart Sukma 
   Sukomoro Sumedang Sunndalsøra Suqian Surabaya Suzhou Svendborg 
@@ -314,8 +315,8 @@ my @SINGLE_WORDS = qw(
 
   Vadsø Van Vancouver Varanasi Varberg Varese Varna Vasa Västervik 
   Västerås Vejle Venice Verdal Verona Vestfold Vestvågøy Viareggio 
-  Viborg Vienna Vikersund Villeurbanne Vilnius Vodskov Vorden Vraca
-  Våge
+  Viborg Vienna Vikersund Villeurbanne Vilnius Vishakhapatanam
+  Vodskov Vorden Vraca Våge
 
   Waldsolms Waltham Wanzhou Warsaw Wellington Wetzlar Wiesbaden 
   Wisla Wolverhampton Worcester Wroclaw Wronie Wuhan Wuxi Wuzhishan
@@ -438,6 +439,7 @@ my %SINGLE_TYPOS =
   Padang => ['padan'],
   Palembang => ['plg', 'palemb'],
   Pamukkale => ['pamuk'],
+  Panaji => ['panjim'],
   Panzhihua => ['panzhihuabc'],
   Pau => ['puau'],
   Pazardjik => ['pazrdzik'],
@@ -486,6 +488,7 @@ my %SINGLE_TYPOS =
   Verona => ['veron'],
   Vienna => ['wien'],
   Vilnius => ['wilno'],
+  Vishakhapatanam => ['yzac', 'vizag', 'vizac'],
   Warsaw => ['warsow', 'warszawa'],
   Wroclaw => ['wr'],
   Wuzhishan => ['wuzishan'],

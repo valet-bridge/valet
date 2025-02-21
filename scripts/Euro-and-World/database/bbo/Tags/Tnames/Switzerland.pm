@@ -19,6 +19,7 @@ my @MULTI_WORDS =
   'Swiss Cup',
   'Swiss Open IMP Pairs',
   'Swiss Open Teams',
+  'Swiss Open Team Trials',
   'Zurich Open Pairs',
   'Zurich Open Teams',
 );
@@ -36,6 +37,7 @@ my %MULTI_TYPOS =
     'swisss interclubs',
     'swiss interclub'],
   'Swiss Cup' => [
+    'copa zurich',
     'coupe suisse',
     'swiss open cup',
     'swiss cuo',

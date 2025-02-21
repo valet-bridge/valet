@@ -21,11 +21,12 @@ my @MULTI_WORDS =
   'Italian Men Cup',
   'Italian Mixed Cup',
   'Italian Mixed Pairs',
+  'Italian Mixed Team Trials',
   'Italian Mixed Teams',
   'Italian O55 Cup',
   'Italian Open Cup',
   'Italian Open Teams',
-  'Italian Open Trials',
+  'Italian Open Team Trials',
   'Italian Senior Cup',
   'Italian Senior Trials',
   'Italian U36 Teams',
@@ -50,16 +51,23 @@ my %MULTI_TYPOS =
     'italian club women championships'],
   'Italian Mixed Cup' => ['italy mixed cup'],
   'Italian Mixed Pairs' => ['italy mixed pairs'],
+  'Italian Mixed Team Trials' => [
+    'italian trial mixed teams',
+    'italian trials mixed teams'],
   'Italian Mixed Teams' => ['italian mixed teams championships'],
   'Italian Open Teams' => [
     'camp.it.squadre',
     'camp.it. squadre',
     'italian open team championships',
     'italian team championship'],
-  'Italian Open Trials' => ['italian open teams trials'],
-  'Italian Senior Trials' => ['italian senior teams trials'],
+  'Italian Open Team Trials' => ['italian open teams trials'],
+  'Italian Senior Trials' => [
+    'italian trials senior',
+    'italian senior teams trials'],
   'Italian U36 Teams' => ['Italian Master U36'],
   'Milan Trophy' => [
+    'citta di milano',
+    'città di milano',
     "citta' di milano",
     "trofeo citta' di milano"], 
   'Olona International Teams' => [
@@ -67,6 +75,8 @@ my %MULTI_TYPOS =
   'Rome Challenger Trophy' => [
     'challenge trofeo città di roma',
     'trofeo challenger città di roma'],
+  'Torneo di Rastignano' => [
+    'torneo rastignano'],
   'Torneo di Roma' => [
     'angelini teams',
     'torneo di roma angelini'],

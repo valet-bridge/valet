@@ -17,6 +17,7 @@ my @MULTI_WORDS =
   'Las Palmas Simultaneous Pairs',
   'Las Palmas Women Pairs',
   'Madrid Senior Teams',
+  'Mutton Individual Cup',
   'Open Catalunya Preferent Pairs',
   'Open Catalunya Preferent Teams',
   'Spanish Central Zone Teams',
@@ -30,6 +31,9 @@ my %MULTI_TYPOS =
 (
   'Las Palmas Simultaneous Pairs' => ['simultaneo de mayo las palmas'],
   'Madrid Senior Teams' => ['equipos senior madrid'],
+  'Mutton Individual Cup' => [
+    'mutton cup', 
+    'mutton-cup'],
   'Open Catalunya Preferent Pairs' => [
     'open cataluña preferent',
     'open catalunya preferent',
@@ -42,12 +46,20 @@ my %MULTI_TYPOS =
     'equipos zonal centro',
     'zonal centro equipos'],
   'Spanish Mixed Teams' => [
+    'cn españa mixto',
     'spanish mixed national teams'],
   'Spanish Open Teams' => [
     'camp esp',
     'campeonato de españa por equipos',
     'campeonato espan',
     'campeonato espanaonda',
+    'cn españa equipos',
+    'cn españa open',
+    'cn españa tm',
+    'cn españa tm open',
+    'cpto equipos españa',
+    'cpto españa equipos',
+    'cpto_españa equipos',
     'spanish national championship',
     'spanish national teams',
     'spanish national teams championship',

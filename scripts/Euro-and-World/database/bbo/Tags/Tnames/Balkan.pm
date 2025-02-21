@@ -22,6 +22,8 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'Balkan Open Teams' => [
+    'open bridge balkanchampionship'],
 );
 
 my %SINGLE_TYPOS =

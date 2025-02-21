@@ -37,7 +37,11 @@ my @SINGLE_WORDS = qw(
 
 my %SINGLE_TYPOS =
 (
-  Barometer => ['barometr'],
+  Barometer => [
+    'barometr',
+    'barometre',
+    'baromètre',
+    'baromtre'],
   Goulash => ['goullash', 'goulyash'],
   'Round-robin' => ['rr', 'roundrobin', 'rrr', 'rrobin'],
   Swiss => ['suisse', 'swis', 'sw', 'monrad']

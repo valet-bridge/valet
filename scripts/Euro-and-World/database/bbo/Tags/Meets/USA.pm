@@ -28,6 +28,7 @@ my %MULTI_TYPOS =
     'us bridge championship',
     'u_s_b_c'], 
   'United States Youth Bridge Championship' => [
+    'michael seamon jusbc',
     'junior usbc'],
 );
 

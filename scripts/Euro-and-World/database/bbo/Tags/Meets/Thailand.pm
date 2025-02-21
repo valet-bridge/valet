@@ -16,6 +16,7 @@ my @MULTI_WORDS =
 (
   'Bangkok Bridge Festival',
   'Thailand National Games',
+  'Thailand National Youth Games',
 );
 
 my %MULTI_TYPOS =
@@ -25,9 +26,16 @@ my %MULTI_TYPOS =
 my %SINGLE_TYPOS =
 (
   'Bangkok Bridge Festival' => [
+    'amazing thailand bridge',
     'amazing thailand bridge festival',
     'bbf', 
     'bff'],
+  'Thailand National Games' => [
+    'thailand nation games'],
+  'Thailand National Youth Games' => [
+    'thailand nationnal youth games',
+    'thailand youth national games',
+    'thailand youth games'],
 );
 
 sub set_hash

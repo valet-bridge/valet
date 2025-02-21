@@ -25,6 +25,7 @@ my @MULTI_WORDS =
   'Greek Open Team Trials',
   'Greek Women Pair Trials',
   'Greek Women Team Trials',
+  'Mentererum Invitational Pairs',
   'Thanos Capayiannides Memorial Simultaneous',
 );
 
@@ -45,6 +46,8 @@ my %MULTI_TYPOS =
     'greek open team championship',
     'greek team',
     'greek teams',
+    'greek teams grand final',
+    'greek teams grand finals',
     'hellenic teams championship'],
   'Greek Open Team Trials' => [
     'greek national team trials',
@@ -53,14 +56,19 @@ my %MULTI_TYPOS =
     'greek open nationa team trials',
     'greek open national team trials',
     'greek open team trials',
-    'greek trials',
+    'greek open teams trial',
+    'greek open teams trials',
+    'greek open trials',
     'grekk open national team trials',
+    'greek trials',
     'helenic national team trials',
     'hellenic national team trials',
     'hellenic national teams trials',
     'hellenic open team trials',
     'hellenic team trials',
     'hellenic teams trials'],
+  'Mentererum Invitational Pairs' => [
+    'mentererum invitational'],
   'Thanos Capayiannides Memorial Simultaneous' => [
     'thanos capayiannides'],
 );
