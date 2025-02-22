@@ -19,6 +19,7 @@ my @MULTI_WORDS =
   'BFAME Senior Teams',
   'BFAME Women Teams',
   'Pan Arab Inter-Club Championship',
+  'Saudi-Arabian Open Trials'
 );
 
 my %MULTI_TYPOS =
@@ -30,6 +31,7 @@ my %MULTI_TYPOS =
     'pan arab inter-club',
     'pan arab inter club',
     'pan arab interclub'],
+  'Saudi-Arabian Open Trials' => ['ksa trials']
 );
 
 my %SINGLE_TYPOS =

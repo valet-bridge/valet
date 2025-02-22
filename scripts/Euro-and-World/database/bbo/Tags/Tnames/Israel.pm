@@ -22,10 +22,12 @@ my @MULTI_WORDS =
   'Israel Juniors Trials',
   'Israel IMP Pairs',
   'Israel Open Pairs',
+  'Israel League',
   'Israel Open Teams',
   'Israel Open Teams Cup',
   'Israel Open Trials',
   'Israel School Trials',
+  'Israel U21 Trials',
   'Israel Women Pairs',
   'Maccabi Games',
   'Rand Pairs Cup',
@@ -46,6 +48,8 @@ my %MULTI_TYPOS =
     'israel juniors team trials',
     'israeli juniors trials',
     'israeli juniors team trials'],
+  'Israel League' => [
+    'israeli league'],
   'Israel Open Pairs' => [
     'israel pairs',
     'israel pairs champ',
@@ -75,6 +79,9 @@ my %MULTI_TYPOS =
     'israel schools trials',
     'israel schools team trials',
     'israel schools teams trials'],
+  'Israel U21 Trials' => [
+    'israeli u21 trials',
+    'israeli trials u21'],
   'Maccabi Games' => ['maccabi-games', 'europ_ maccabi games'],
 );
 

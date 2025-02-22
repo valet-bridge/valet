@@ -36,6 +36,7 @@ my %SINGLE_TYPOS =
 (
   'North American Bridge Championship' => ['nabc'],
   'United States Bridge Championship' => ['usbc'],
+  'United States Youth Bridge Championship' => ['msjusbc'],
 );
 
 sub set_hash

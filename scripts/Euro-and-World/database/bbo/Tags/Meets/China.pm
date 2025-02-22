@@ -25,10 +25,12 @@ my %MULTI_TYPOS =
 (
   'All China Games' => ['all-china games'],
   'China Elite Tournament' => [
-    'china elite inivitational tournament',
+    'bridge elite tournament china',
     'china bridge elite tournament',
     'china bridge elite invitational tournament',
-    'bridge elite tournament china'],
+    'china elite inivitational tournament',
+    'china mind games',
+    'china national mind games'],
   'Chinese Club Championships' => [
     'china bridge club championship',
     'chinese club championship',

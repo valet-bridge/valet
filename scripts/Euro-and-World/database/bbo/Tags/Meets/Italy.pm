@@ -17,6 +17,7 @@ my @MULTI_WORDS =
   'Festival della Matematica',
   'Italian Club Championship',
   'Italy Cup',
+  'Venice Bridge Festival'
 );
 
 my %MULTI_TYPOS =
@@ -42,6 +43,8 @@ my %MULTI_TYPOS =
     'italian interclub',
     'interclub italian'],
   'Italy Cup' => ['coppa italia'],
+  'Venice Bridge Festival' => [
+    'festival bridge venezia'],
 );
 
 my %SINGLE_TYPOS =

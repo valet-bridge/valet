@@ -23,10 +23,13 @@ my @MULTI_WORDS =
   'French Intercircle',
   'French Junior Trials',
   'French Mixed Teams',
+  'French Mixed Trials',
   'French Open Teams',
   'French Open Trials',
   'French Senior Trials',
+  'French U26 Trials',
   'French U28 Trials',
+  'French U31 Trials',
   'French Women Trials',
   'Shield of Thoisy',
 );
@@ -35,7 +38,7 @@ my %MULTI_TYPOS =
 (
   'French Cup' => [
     'coupe de france', 
-    'de la coupe de france'],
+    'la coupe de france'],
   'French First Division' => [
     'div_nat',
     'div_ nat_',
@@ -75,10 +78,15 @@ my %MULTI_TYPOS =
     'nationale division 1',
     'nationale interclub d1'],
   'French Intercircle' => ['finale intercercle'],
-  'French Junior Trials' => ['french junior trial',
-    'french juniors trials', 'french juniors trial',
+  'French Junior Trials' => [
+    'french junior trial',
+    'french juniors trial',
+    'french juniors trials', 
     'sélection junior france',
     'selection junior france'],
+  'French Mixed Trials' => [
+    'selection mixte',
+    'sélection mixte'],
   'French Open Teams' => ['french teams championship'],
   'French Open Trials' => [
     'french opentrial',
@@ -102,12 +110,23 @@ my %MULTI_TYPOS =
     'french seniors trials',
     'selection senior france',
     'selection senior pau', 
+    'sélection senior',
     'sélection senior pau',
-    'selection senior pekin'],
+    'selection senior pekin',
+    'sélection sénior',
+    'sélection séniors'],
+  'French U26 Trials' => [
+    'sélection U26'],
   'French U28 Trials' => [
     'selection junior pekin', 
     'selection u28 pekin'],
-  'French Women Trials' => ['entrainement venice cup'],
+  'French U31 Trials' => [
+    'sélection u31'],
+  'French Women Trials' => [
+    'entrainement venice cup',
+    'selection dames',
+    'sélection dames',
+    'sélection dames france'],
 );
 
 

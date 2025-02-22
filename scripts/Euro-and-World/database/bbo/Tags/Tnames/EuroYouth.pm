@@ -79,6 +79,8 @@ my %MULTI_TYPOS =
     'european uni championship'],
   'European University Team Championship' => [
     'european universities bridge trophy',
+    'eusa mind games',
+    'eusa mind sports',
     'eusa games'],
 );
 

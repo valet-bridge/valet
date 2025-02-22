@@ -22,6 +22,7 @@ my @MULTI_WORDS =
   'Gardermoen Airport Hotel Teams',
   "Jessheim New Year's Pairs",
   "Jessheim New Year's Teams",
+  'Jotun Open Teams',
   'Marit Sveaas Open Pairs',
   'Mo i Rana Ladies Invitational',
   'Namsos Pairs Cup',
@@ -30,6 +31,7 @@ my @MULTI_WORDS =
   'Norwegian Corporate Championship',
   'Norwegian Mixed Pairs',
   'Norwegian Mixed Teams',
+  'Norwegian Mixed Team Trials',
   'Norwegian Open IMP Pairs',
   'Norwegian Open Pairs',
   'Norwegian Open Teams',
@@ -49,6 +51,7 @@ my @MULTI_WORDS =
   'Rosfjord Swiss Teams',
   'Ruter 7 Open Pairs',
   'Snåsa Pairs Cup',
+  'Telemark Club Pairs',
   'Trondheim Pairs Cup',
   'Trondheim Teams Cup',
   'Vest-Agder Regional Team Championship',
@@ -89,6 +92,8 @@ my %MULTI_TYPOS =
     'jessheim new years cup',
     'jesshiem new years cup',
     'jessheim new years cup swiss teams'],
+  'Jotun Open Teams' => [
+    'jotun bridge open teams'],
   'Marit Sveaas Open Pairs' => [
     'marit sveaas international bridge tournament',
     'marit sveaas international  bridge tournament',
@@ -100,7 +105,6 @@ my %MULTI_TYPOS =
     'codan cup',  
     'codan teams cup',
     'club team championship norway',
-    'nbf 1_ division',
     'nor club teams ch_ship',
     'nor_club teams ch_ship',
     'nor club teams',
@@ -116,7 +120,8 @@ my %MULTI_TYPOS =
     'norway club team championship',
     'norway club-team championship',
     'norway km teams'],
-  'Norwegian Corporate Championship' => ['norwegian corp_ championship'],
+  'Norwegian Corporate Championship' => [
+    'norwegian corp_ championship'],
   'Norwegian Mixed Pairs' => [
     'nm mix pairs',
     'nor mixed pairs ch_ship',
@@ -128,6 +133,8 @@ my %MULTI_TYPOS =
     'norwegian mixed pair championship',
     'norwegian mixed pairs championship',
     'norwegian mix pairs championship'],
+  'Norwegian Mixed Team Trials' => [
+    'norwegian mix team trials'],
   'Norwegian Mixed Teams' => [
     'norwegian championship mix swiss teams',
     'norwegian championship mix teams'],
@@ -151,14 +158,22 @@ my %MULTI_TYPOS =
     'norwgian open teams championship',
     'norwegian chmp teams'],
   'Norwegian Premier League' => [
-    'norw premier league',
-    'norway sm',
-    'norwegian prremier league',
+    'nbf 1_division',
+    'nbf 1_divisjon',
+    'nbf 1_ division',
     'nbf premier league',
+    'nor team clubs',
     'nor premier league',
     'norvegian premier league',
+    'norw premier league',
+    'norway sm',
+    'norwegian 1_division',
+    'norwegian 1_ division',
+    'norwegian 1 division',
+    'norwegian prremier league',
     'sm norway'],
-  'Norwegian Senior Teams' => ['nbf senior team championship'],
+  'Norwegian Senior Teams' => [
+    'nbf senior team championship'],
   'Norwegian Swiss Pairs' => [
     'nm monrad pairs',
     'nm swiss pairs',
@@ -179,11 +194,14 @@ my %MULTI_TYPOS =
   'Norwegian Team Trials' => ['nor team trials',
     'norwegian open trials',
     'norwegian wbg qualification'],
-  'Norwegian Women Teams' => ['norwegian ladies team championship',
-    'norwegian ladies teams',
+  'Norwegian Women Teams' => [
+    'nbf nm damer lag',
     'nbf women team championship',
     'nbf women teams championship',
     'nbf womens team championship',
+    'norwegian ladies team championship',
+    'norwegian ladies teams',
+    'norwegian women swiss teams',
     'norwegian women team championship',
     'norwegian womens team championship'],
   'Olrud Easter Mixed Pairs' => ['olrud easter mixed'],
@@ -219,6 +237,8 @@ my %MULTI_TYPOS =
     'ruter 7 open'],
   'Snåsa Pairs Cup' => [
     'snåsa cup'],
+  'Telemark Club Pairs' => [
+    'km par telemark'],
   'Trondheim Pairs Cup' => ['trondheim cup swiss pairs'],
   'Trondheim Teams Cup' => [
     'trondheim cup swiss teams',

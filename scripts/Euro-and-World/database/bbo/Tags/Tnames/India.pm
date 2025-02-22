@@ -21,6 +21,7 @@ my @MULTI_WORDS =
   'All India Open Pairs',
   'All India Shree Cement',
   'All India UTI Bank Masters Championship',
+  "Ahmedabad President's Cup",
   'Ashok Kapur Memorial Swiss Pairs',
   'B L Rao Memorial Open',
   'Bhabha Atomic Research Centre Open',
@@ -30,11 +31,15 @@ my @MULTI_WORDS =
   'Godfrey Phillips All India Open',
   'Hindusthan Club Teams',
   'Indian Inter-State Teams',
+  'Indian Men Trials',
+  'Indian Mixed Trials',
   'Indian Open Trials',
   'Indian Senior Trials',
   'Indian State Championship',
   'Indian Western Zone Championship',
+  'Indian Women Trials',
   'Jaya Jain Memorial',
+  'JHIC Silver Jubilee Open Teams',
   'Justice J M Lal All India Open Pairs',
   'Justice J M Lal All India Open Teams',
   'Kalani Trophy',
@@ -131,6 +136,12 @@ my %MULTI_TYPOS =
     'dgc centenary celebrations',
     'dgc centenary tournament',
     'dgc open championship'],
+  'Indian Men Trials' => [
+    'indian men national camp',
+    'indian men qualification camp'],
+  'Indian Mixed Trials' => [
+    'indian mixed national camp',
+    'indian mixed national qualification camp'],
   'Indian Open Trials' => [
     'indian open selection trial',
     'indian open selection trials',
@@ -159,7 +170,12 @@ my %MULTI_TYPOS =
     'state level bridgee championship'],
   'Indian Western Zone Championship' => [
     'cba wz India'],
+  'Indian Women Trials' => [
+    'indian women national camp'],
   'Jaya Jain Memorial' => ['mrs_ jaya jain memorial'],
+  'JHIC Silver Jubilee Open Teams' => [
+    'jhic silver jub',
+    'jhic silver jubilee tourney'],
   'Justice J M Lal All India Open Teams' => [
     'justice j m lal all india open',
     'justice j m lal memorial',

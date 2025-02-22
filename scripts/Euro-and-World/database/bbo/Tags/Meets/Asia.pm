@@ -49,7 +49,11 @@ my %MULTI_TYPOS =
     'asean bridge finals',
     'asean club championships'],
   'Southeast Asian Games' => [
+    'asian games bridge competition',
     'sea games',
+    'seabf championship',
+    'seabf championships',
+    'south east asia bridge club championships',
     'south east asian games'],
 );
 

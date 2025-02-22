@@ -17,6 +17,7 @@ my @MULTI_WORDS =
   'FISU World University Championships',
   'IMSA Elite Mind Games',
   'IMSA World Masters Championships',
+  'World Bridge Tour',
   'World Olympiad',
   'World Series',
   'World Mind Games',
@@ -33,6 +34,10 @@ my %MULTI_TYPOS =
     'imsaeliteminggames'],
   'IMSA World Masters Championships' => [
     'imsa wmc'],
+  'World Bridge Tour' => [
+    'wbt masters',
+    'worldbridge tour',
+    'worldbrýdge tour'],
   'World Series' => ['world bridge series'],
   'World Mind Games' => [
     'mind sports games', 
@@ -61,17 +66,24 @@ my %MULTI_TYPOS =
     'world youth bridge congress',
     'workd youth bridge congress',
     'worlf youth bridge congress',
-    'wboyc',
-    'wyobc',
     'youth world bridge congress'],
 );
 
 my %SINGLE_TYPOS =
 (
+  'World Bridge Tour' => [
+    'wbt',
+    'worldbridgetour',
+    'worldbrýdgetour'],
   'World Olympiad' => ['olympiad', 'olympiads', 'wbo'],
   'World Series' => ['wbs'],
-  'World Team Championships' => ['wbtc'],
+  'World Team Championships' => ['wbtc', 'wtbc', 'wtc'],
   'World Youth Championships' => ['wytc', 'wybtc'],
+  'World Youth Open Championships' => [
+    'wboyc',
+    'wyobc',
+    'wyoc',
+    'wyotc'],
 );
 
 sub set_hash

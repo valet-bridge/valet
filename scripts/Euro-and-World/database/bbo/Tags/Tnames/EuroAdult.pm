@@ -14,13 +14,13 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
-  "European Open Champions' Cup",
   'European National Mixed Teams',
   'European National Open Teams',
   'European National Seniors Pairs',
   'European National Seniors Teams',
   'European National Women Pairs',
   'European National Women Teams',
+  "European Open Champions' Cup",
   'European Small Federation Games',
   'European Transnational Mixed Pairs',
   'European Transnational Mixed Teams',
@@ -77,6 +77,9 @@ my %MULTI_TYPOS =
 
 my %SINGLE_TYPOS =
 (
+  'European National Mixed Teams' => ['emtbc'],
+  'European National Open Teams' => ['entc'],
+  'European National Women Teams' => ['ewtc'],
   'European Small Federation Games' => ['esfg', 'sfc'],
   'European Winter Teams' => ['zc']
 );

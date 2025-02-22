@@ -1121,7 +1121,10 @@ my %CITY_TO_CLUB =
 my %COUNTRY_TO_SPONSOR =
 (
   Argentina => ['Burladero', 'Conex'],
-  Australia => ['Derofe', 'Penline'],
+  Australia => [
+    'Derofe', 
+    'Penline',
+    'Tony Bemrose Insurance Brokers'],
   Austria => ['Lupo Veloce'],
   Belarus => ['MB-Transit'],
   Belgium => ['belisol'],

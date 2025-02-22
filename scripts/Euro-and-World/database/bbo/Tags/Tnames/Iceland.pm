@@ -19,6 +19,7 @@ my @MULTI_WORDS =
   'Icelandair Open Pairs',
   'Icelandair Open Teams',
   'Icelandic Cup',
+  'Icelandic First Division',
   'Icelandic Open Teams',
 );
 
@@ -34,6 +35,9 @@ my %MULTI_TYPOS =
     'icelandic champions cup',
     'icelandoc cup',
     'iceland cup'],
+  'Icelandic First Division' => [
+    'iceland league',
+    'icelandic league cup'],
   'Icelandic Open Teams' => [
     'iceland teams',
     'icelandic team',

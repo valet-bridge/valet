@@ -15,6 +15,7 @@ our @EXPORT = qw(set_hash);
 my @MULTI_WORDS =
 (
   'South American Junior Teams',
+  'South American Mixed Trials',
   'South American Open Pairs',
   'South American Open Teams',
   'South American Open Trials',

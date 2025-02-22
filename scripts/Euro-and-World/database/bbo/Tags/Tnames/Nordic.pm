@@ -17,6 +17,7 @@ my @MULTI_WORDS =
   'Nordic Cup',
   'Nordic Junior Pairs',
   'Nordic Junior Teams',
+  'Nordic Open Pairs',
   'Nordic Open Teams',
   'Nordic Security Pro-Am Pairs',
   'Nordic Women Teams',
@@ -35,7 +36,11 @@ my %MULTI_TYPOS =
     'nordic junior team championship',
     'nordic junior team championships',
     'nordic junior teams championship',
-    'nordic junior teams championships'],
+    'nordic junior teams championships',
+    'nordic youth team championship',
+    'nordic youth teams championship'],
+  'Nordic Open Pairs' => [
+    'nordic pair championships'],
   'Nordic Open Teams' => [
     'nordic championship open class',
     'nordic open championship'],

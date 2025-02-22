@@ -171,7 +171,9 @@ my %MULTI_TYPOS =
     'polish premier leuge',
     'polish premier leaugue',
     'polish premiere league'],
-  'Polish Second League' => ['polish 2 league'],
+  'Polish Second League' => [
+    'polish 2 league',
+    'polish 2nd league'],
   'Polish Third League' => ['polish league: division 3'],
   'Polish U16 Teams' => [
     'polish u-16 championships',

@@ -27,6 +27,7 @@ use Tags::Tnames::Canada;
 use Tags::Tnames::CentralAmerica;
 use Tags::Tnames::Chile;
 use Tags::Tnames::China;
+use Tags::Tnames::Colombia;
 use Tags::Tnames::Croatia;
 use Tags::Tnames::Czech;
 use Tags::Tnames::Denmark;
@@ -97,6 +98,7 @@ my %DIVISIONS =
   CENTRALAMERICA => \&Tags::Tnames::CentralAmerica::set_hash,
   CHILE => \&Tags::Tnames::Chile::set_hash,
   CHINA => \&Tags::Tnames::China::set_hash,
+  COLOMBIA => \&Tags::Tnames::Colombia::set_hash,
   CROATIA => \&Tags::Tnames::Croatia::set_hash,
   CZECH => \&Tags::Tnames::Czech::set_hash,
   DENMARK => \&Tags::Tnames::Denmark::set_hash,

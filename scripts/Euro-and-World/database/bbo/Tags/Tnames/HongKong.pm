@@ -19,6 +19,7 @@ my @MULTI_WORDS =
   'Hong Kong New Year Teams',
   'Hong Kong Mixed Team Trials',
   'Hong Kong Open Team Trials',
+  'Rose Bowl',
 );
 
 my %MULTI_TYPOS =

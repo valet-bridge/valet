@@ -16,6 +16,7 @@ my @MULTI_WORDS =
 (
   'Brasov Open Pairs',
   'Brasov Open Teams',
+  'Contra Open Cup',
   'Romanian League',
   'Romanian Second League',
   'Romanian Open Teams',
@@ -26,6 +27,8 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'Contra Open Cup' => [
+    'contra cup'],
   'Romanian League' => [
     'cn ecgipe',
     'cn echipe',

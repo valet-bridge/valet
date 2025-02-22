@@ -18,6 +18,7 @@ my @MULTI_WORDS =
   'All-China Open Teams',
   'All-China Women Teams',
   'Aoda Cup',
+  'Beibu Gulf Open Teams',
   'China Elite Spring Teams',
   'China Elite Winter Teams',
   'China Friend City Senior Teams',
@@ -25,6 +26,7 @@ my @MULTI_WORDS =
   'Chinese First League',
   'Chinese Inter-City Teams',
   'Chinese Mixed Teams',
+  'Chinese Mixed Trials',
   'Chinese Open Teams',
   'Chinese Open Trials',
   'Chinese Women First League',
@@ -33,7 +35,9 @@ my @MULTI_WORDS =
   'Cross Strait Invitational',
   'Dongfeng Cup',
   'Dongming Knock-out Teams',
+  'G60 Cup',
   'GHTD Cup',
+  'Guang Qing Memorial Open Teams',
   'Guangdong Club Championship',
   'Guangdong Elite Tournament',
   'Guangzhou-HK-Macau Interport',
@@ -42,13 +46,19 @@ my @MULTI_WORDS =
   'High-Tech Zone Workers Invitational',
   'JPD Open Cup',
   'JPD Women Cup',
+  'Jia-Wei Memorial Open Teams',
+  'Jiangsu Province Open Teams',
   'Jianshe Cup',
   'Jili Cup',
   'Jinfan Mixed Teams Cup',
   'Jinfan Open Teams Cup',
   'Mountain Sea Cup',
+  'Nanshan Mixed Teams Cup',
+  'Nanshan Open Teams Cup',
+  'Ruihai Shuicheng Senior Teams',
   'Sanchen Cup',
   'Sanya Cup',
+  'Shanqing Mountain Open Teams',
   'Shenhua Cup',
   'Shenyang Spring Teams',
   'Shenzhen Lanpu Cup',
@@ -62,12 +72,17 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'Beibu Gulf Open Teams' => [
+    'china beibu gulf national bridge open'],
   'China Friend City Senior Teams' => [
     'china friend city senior team tournament'],
   'Chinese First League' => [
     'china first league',
+    'china national bridge a club league final to',
+    'china national bridge club championships',
     'china premier league',
     'china primier league',
+    'club-a grand final china',
     'national club league china',
     'national club league',
     'the national class a club league'],
@@ -84,11 +99,19 @@ my %MULTI_TYPOS =
   'Chinese Mixed Teams' => [
     'ccba mix teams',
     'mixed teams china'],
+  'Chinese Mixed Trials' => [
+   'china national mixed team trial'],
   'Chinese Open Teams' => ['team championship china'],
+  'Chinese Open Trials' => [
+   'chinese open team trials'],
+  'Chinese Women First League' => [
+    'china national women league'],
   'Dongming Knock-out Teams' => [
     'dong ming knockour teams', 
     'dong ming knockout teams',
     'ding ming knockout teams'],
+  'Guang Qing Memorial Open Teams' => [
+    'guang qing memorial cup'],
   'Guangdong Club Championship' => [
     'guangdong club invitational',
     'guangdong province the bridge club invitational t',
@@ -104,7 +127,23 @@ my %MULTI_TYPOS =
     'hna openteams',
     'hna open team',
     "hna's hainan bridge tournament"],
+  'Jia-Wei Memorial Open Teams' => [
+    'jia-wei memorial tournament'],
+  'Jiangsu Province Open Teams' => [
+    'jiangsu province bridge team championship',
+    'jiangsu province bridge teams championship',
+    'jiangsu province grand-a tournament'],
   'Jinfan Open Teams Cup' => ['jinfan cup'],
+  'Nanshan Mixed Teams Cup' => [
+    'nanshan cup mixed team',
+    'nanshan cup mixed teams'],
+  'Ruihai Shuicheng Senior Teams' => [
+    'ruihai shuicheng senior team'],
+  'Shanqing Mountain Open Teams' => [
+   'sanqing mountain cup national bridge o',
+   'sanqing mountain cup national bridge op',
+   'sanqing mountain national bridge open team to',
+   'shanqingshan open tournament bridge Contest'],
   'Shenhua Cup' => ['shen hua cup'],
   'Shenyang Spring Teams' => ['shenyang spring'],
   'Vanke Open Teams Cup' => [

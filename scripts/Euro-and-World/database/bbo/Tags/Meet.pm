@@ -27,6 +27,7 @@ use Tags::Meets::Canada;
 use Tags::Meets::CentralAmerica;
 use Tags::Meets::Chile;
 use Tags::Meets::China;
+use Tags::Meets::Colombia;
 use Tags::Meets::Croatia;
 use Tags::Meets::Czech;
 use Tags::Meets::Denmark;
@@ -97,6 +98,7 @@ my %DIVISIONS =
   CENTRALAMERICA => \&Tags::Meets::CentralAmerica::set_hash,
   CHILE => \&Tags::Meets::Chile::set_hash,
   CHINA => \&Tags::Meets::China::set_hash,
+  COLOMBIA => \&Tags::Meets::Colombia::set_hash,
   CROATIA => \&Tags::Meets::Croatia::set_hash,
   CZECH => \&Tags::Meets::Czech::set_hash,
   DENMARK => \&Tags::Meets::Denmark::set_hash,

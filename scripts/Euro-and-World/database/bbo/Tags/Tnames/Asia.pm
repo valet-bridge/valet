@@ -59,6 +59,8 @@ my %MULTI_TYPOS =
     'test event road to asian games'],
   'Asian University Championship' => [
     'asian university bridge championship'],
+  'SEA Open Teams' => [
+    'SEABF Team Championships'],
   'South Pacific Open Teams' => [
     'south pacific zone 7 championship',
     'spbf championship',

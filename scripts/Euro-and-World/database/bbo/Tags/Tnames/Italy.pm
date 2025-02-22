@@ -14,6 +14,7 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
+  'Altea Cup',
   'Bologna Trophy',
   'Festival della Matematica Open Teams',
   'Italian Club Open Championship',
@@ -31,6 +32,7 @@ my @MULTI_WORDS =
   'Italian Senior Trials',
   'Italian U36 Teams',
   'Italian Women Cup',
+  'Italian Women Team Trials',
   'Milan Trophy',
   'Olona International Teams',
   'Rome Challenger Trophy',
@@ -49,6 +51,7 @@ my %MULTI_TYPOS =
   'Italian Club Women Championship' => [
     'italian club team champ women',
     'italian club women championships'],
+  'Italian Men Cup' => ['italy men cup'],
   'Italian Mixed Cup' => ['italy mixed cup'],
   'Italian Mixed Pairs' => ['italy mixed pairs'],
   'Italian Mixed Team Trials' => [
@@ -65,6 +68,9 @@ my %MULTI_TYPOS =
     'italian trials senior',
     'italian senior teams trials'],
   'Italian U36 Teams' => ['Italian Master U36'],
+  'Italian Women Cup' => ['italy women cup'],
+  'Italian Women Team Trials' => [
+    'italian trials women'],
   'Milan Trophy' => [
     'citta di milano',
     'città di milano',

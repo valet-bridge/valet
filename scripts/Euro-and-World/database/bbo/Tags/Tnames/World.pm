@@ -66,6 +66,7 @@ my @MULTI_WORDS =
   'WMG Women Individual',
   'WMG Women Pairs',
   'WMG Women Teams',
+  'Wuhan Cup',
 );
 
 my %MULTI_TYPOS =
@@ -77,8 +78,10 @@ my %MULTI_TYPOS =
   "d'Orsi" => ["d'orsi senior bowl",
     'seniors bowl', 'senior bowl'],
   'Huayuan Cup' => [
-    'hua yuan cup'],
+    'hua yuan cup',
+    'huayuan cup wbt'],
   'IMSA Elite Women Teams' => [
+    'hua yuan cup world women elite bridg',
     'hua yuan cup world women elite tournament',
     'huayuan cup world women elite tournament',
     'women elite tournament',
@@ -112,11 +115,13 @@ my %SINGLE_TYPOS =
   'Bermuda Bowl' => ['bb'],
   "d'Orsi" => ['sb', 'dosb', 'dot'],
   'McConnell Cup' => ['mcconnell'],
+  'Rona Cup' => ['rona'],
   'Rosenblum Cup' => ['rosenblum'],
   'Venice Cup' => ['vc', 'venice'],
   'World Transnational Mixed Teams' => ['wtmt'],
   'World Transnational Open Teams' => ['wtot'],
   'World University Teams' => ['wuc'],
+  'Wuhan Cup' => ['whc'],
 
 );
 
