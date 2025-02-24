@@ -21,13 +21,14 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'Bangkok Bridge Festival' => [
+    'amazing thailand bridge',
+    'amazing thailand bridge festival'],
 );
 
 my %SINGLE_TYPOS =
 (
   'Bangkok Bridge Festival' => [
-    'amazing thailand bridge',
-    'amazing thailand bridge festival',
     'bbf', 
     'bff'],
   'Thailand National Games' => [

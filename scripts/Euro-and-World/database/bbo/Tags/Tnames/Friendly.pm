@@ -37,6 +37,7 @@ my @MULTI_WORDS =
   'Hungary Practice',
   'Iceland Exhibition',
   'Iceland Friendly',
+  'India Exhibition',
   'Ireland Friendly',
   'Israel Practice',
   'Italy Friendly',
@@ -74,6 +75,10 @@ my %MULTI_TYPOS =
 
 my %SINGLE_TYPOS =
 (
+  'Denmark Practice' => [
+    'landsholdsobservation',
+    'landsholdstræning',
+    'observationsturnering'],
 );
 
 sub set_hash

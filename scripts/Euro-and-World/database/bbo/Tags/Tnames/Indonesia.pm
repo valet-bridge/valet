@@ -21,6 +21,7 @@ my @MULTI_WORDS =
   'Gabrial UI Bastaman Cup',
   'Geologi Cup',
   'IBWI Women Cup',
+  'IKA UNDIP Open Teams',
   'Indonesian Inter-City Championship',
   'Indonesian Inter-Club Championship',
   'Indonesian Inter-Province Championship',
@@ -51,6 +52,7 @@ my @MULTI_WORDS =
   'Indonesian Women Trials',
   "Kepri Governor's Cup",
   'MBH Invitational Cup',
+  'Manado Fiesta Open Teams',
   'Menpora-Pertamina Cup',
   'Pahlawan Cup',
   'Pertamina Field Tambun Cup',
@@ -61,7 +63,7 @@ my @MULTI_WORDS =
   'Sarundajang Cup',
   'Semen Padang Cup',
   'Telkom Indonesia Open',
-  'Tugu Mada Cup',
+  'Tugu Muda Cup',
   'West Java Open Teams'
 );
 
@@ -71,14 +73,18 @@ my %MULTI_TYPOS =
     'indonesian sea open team trials',
     'test event sea games'],
   'East Java Open Teams' => [
+    'kejuaraan provinsi bridge jatim',
+    'kejuaraan provinsi bridge jawa timur',
     'kejurprov jatim'],
-  'FTBC Tanjungpura University' => ['ftbc university tanjungpura'],
+  'FTBC Tanjungpura University' => [
+    'ftbc university tanjungpura'],
   'Gabrial UI Bastaman Cup' => [
     'bastaman cup',
     'gabrial-ui cup',
     'gabrial ui cup'],
   'Geologi Cup' => ['geo cup'],
   'IBWI Women Cup' => ['ibwi cup'],
+  'IKA UNDIP Open Teams' => ['ika undip'],
   'Indonesian U26 Women Pair Trials' => [
     'indonesian girls u26 selection',
     'indonesia girls u26 selection'],
@@ -96,6 +102,7 @@ my %MULTI_TYPOS =
     'indonesian kids national selection',
     'indonesian kids trials'],
   'Indonesian Premier League' => [
+    'liga bridge indonesia',
     'indonesian bridge league',
     'indonesia bridge league',
     'indonesia premier league'],
@@ -126,6 +133,9 @@ my %MULTI_TYPOS =
     'kepri international tournament',
     'kepri international bridge tournament'],
   'MBH Invitational Cup' => ['mbh cup'],
+  'Manado Fiesta Open Teams' => [
+    'manado fiesta bridge tournament'],
+  'Pahlawan Cup' => ['piala pahlawan'],
   'Pertamina Field Tambun Cup' => ['pertamina ep field tambun cup'],
   'PLN Cup' => ['pln fortuga'],
   'PT Timah Invitational Teams' => [
@@ -139,6 +149,11 @@ my %MULTI_TYPOS =
     'pt_ timah limited invitation teams',
     'pt_ timah limited invitational teams',
     'pt_ timah ltd invitational teams'],
+  'Rector University of Brawijaya Cup' => [
+    'rc ugm',
+    'rektor cup tanjungpura of university',
+    'rektor cup ugm',
+    'rektor ugm cup'],
   'Sarundajang Cup' => ['the sarundajang cup'],
   'Telkom Indonesia Open' => [
     'telkom cup',

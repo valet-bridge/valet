@@ -14,6 +14,7 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
+  'Gunnars Birgisson Memorial',
   'Iceland Express Pairs',
   'Iceland Express Teams',
   'Icelandair Open Pairs',
@@ -25,6 +26,10 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'Gunnars Birgisson Memorial' => [
+    'minningarmót gunnars b',
+    'minningarmót gunnars birgisson',
+    'minningarmót gunnars birgissonar'],
   'Iceland Express Teams' => ['iceland express team'],
   'Icelandair Open Teams' => [
     'icelandair open',
@@ -36,6 +41,10 @@ my %MULTI_TYPOS =
     'icelandoc cup',
     'iceland cup'],
   'Icelandic First Division' => [
+    'iceland 1_ division',
+    'iceland 1 division',
+    'iceland 1 vision',
+    'iceland division 1',
     'iceland league',
     'icelandic league cup'],
   'Icelandic Open Teams' => [
@@ -46,7 +55,12 @@ my %MULTI_TYPOS =
     'icelandic team chapmionship',
     'icelandic team championships',
     'icelandic teamhampionship',
-    'icelandic teams'],
+    'icelandic teams',
+    'isl_mot i sveitakeppni',
+    'Ísl_mót í sveitakeppni',
+    'íslandsmót svk',
+    'Þristamótið',
+    'thristamotid'],
 );
 
 my %SINGLE_TYPOS =

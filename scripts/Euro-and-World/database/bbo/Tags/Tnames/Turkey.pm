@@ -29,6 +29,7 @@ my @MULTI_WORDS =
   'Fatih Kiral Pairs',
   'Gelibolu Peace Teams',
   'Goksu-Yalikavak Pairs',
+  'Hakan Peksen Open Teams',
   'Istanbul Club Teams',
   'Istanbul Summer Teams',
   'Istanbul Winter Open Teams',

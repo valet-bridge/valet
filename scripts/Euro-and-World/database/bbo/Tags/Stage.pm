@@ -84,7 +84,10 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   Consolation => ['conso'],
-  Elimination => ['eliminations'],
+  Elimination => [
+    'eliminations',
+    'penyisihan',
+    'peyisihan'],
   Final => ['finala', 'finalds', 'finale', 'finali', 'finals',
     'finales', 'finall', 'finar', 'finas', 'finat', 'finsl', 
     'finais', 'finalns', 'fina³', 'fianal', 'fianl', 'fianls',

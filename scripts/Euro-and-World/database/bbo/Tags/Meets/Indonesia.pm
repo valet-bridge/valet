@@ -17,6 +17,7 @@ my @MULTI_WORDS =
   'Indonesian National Championship Week',
   'Indonesian National Games',
   'Indonesian National Pre-Sports Week',
+  'Indonesian Province Sports Week',
   'Indonesian Student Championship',
   'Indonesian University Championship',
 );
@@ -53,6 +54,7 @@ my %MULTI_TYPOS =
 my %SINGLE_TYPOS =
 (
   'Indonesian National Pre-Sports Week' => ['prapon'],
+  'Indonesian Province Sports Week' => ['porprov'],
 );
 
 sub set_hash

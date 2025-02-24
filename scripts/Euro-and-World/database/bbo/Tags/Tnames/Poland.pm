@@ -249,6 +249,8 @@ my %MULTI_TYPOS =
     'rozgrywek pucharowych pwzbs'],
   'SPS Trophy' => [
     'lojdy cup', 
+    'meeting sps construction',
+    'mityng sps construction',
     'sps construction trophy'],
   'Staszek Wybranowski Memorial' => ['memorial staszka wybranowskiego'],
   'Warsaw Online Teams' => [

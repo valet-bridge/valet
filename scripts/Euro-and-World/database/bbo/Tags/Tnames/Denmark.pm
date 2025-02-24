@@ -20,6 +20,7 @@ my @MULTI_WORDS =
   'Danish Club Teams',
   'Danish Cup',
   'Danish First Division',
+  'Danish First Division Women',
   'Danish Junior Teams',
   'Danish Mixed Pairs',
   'Danish Mixed Teams',
@@ -27,7 +28,9 @@ my @MULTI_WORDS =
   'Danish Open Pairs Trials',
   'Danish Open Team Trials',
   'Danish Open Teams',
+  'Danish Senior Teams',
   'Danish Women Pairs',
+  'Fyn Club Teams',
   'Hecht Cup',
   'Prince Henrik Trophy',
   'Vinoble Open'
@@ -54,18 +57,25 @@ my %MULTI_TYPOS =
     '1_ division danmark',
     'danish 1st division',
     'danish 1_division',
+    'danish 1_ division',
     'danish team',
     'danish team champions',
     'danish team championship',
     'danish team championships',
     'danish teams championship',
+    'danmark 1_ div',
     'danmark 1_ division',
     'danmark 1_division',
     'danmark 1st division',
     'denmark 1st division',
+    'denmark 1_ div',
+    'denmark 1_ division',
     'denmark 1_division',
     'denmark team championship',
-    'dm hold'],
+    'dm hold',
+    'slutspil 1_ division'],
+  'Danish First Division Women' => [
+    'danmark damedivision'],
   'Danish Junior Teams' => [
     'danish junior team championship',
     'dansih junior team championship',
@@ -73,6 +83,7 @@ my %MULTI_TYPOS =
   'Danish Mixed Pairs' => [
     'dm mix',
     'dm mix par',
+    'dm mixed par',
     'danish championship mixed pairs',
     'danish mix-pair championship',
     'danish mix pair championship',
@@ -85,6 +96,8 @@ my %MULTI_TYPOS =
     'denmark national open pairs championship',
     'danish open pairs championships',
     'danish pairs championship',
+    'dm aaben par',
+    'dm åben par',
     'open pairs - danish championship'],
   'Danish Open Teams' => [
     'danish open',
@@ -96,10 +109,16 @@ my %MULTI_TYPOS =
     'danish team trial',
     'danish team trials',
     'denmark team test'],
+  'Danish Senior Teams' => [
+    'danmark seniorhold',
+    'senior dm',
+    'senior dm danmark'],
   'Danish Women Pairs' => [
     'danish championship ladies pairs',
     'danish champoinship ladies pairs',
-    'ladies pairs - danish championship']
+    'ladies pairs - danish championship'],
+  'Fyn Club Teams' => [
+    'fynsmesterskaber i klubhold'],
 );
 
 my %SINGLE_TYPOS =

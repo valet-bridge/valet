@@ -249,10 +249,10 @@ my @SINGLE_WORDS = qw(
 
   Lahore Landak Langkat Lanzhou Laodikya Lappeenranta Larnaca Larvik 
   Lausanne Lebork Lecco Leiden Leipzig Leksand Lerum Lesno Leszno Leuven 
-  Leverkusen Lhokseumawe Liandui Liepaja Lille Lima Limboto Lincoln 
-  Lindesberg Linköping Lisbon Liushu Livane Ljubljana Lodi Lodz Lojdy 
-  Lokotok Lom Lomza London Lovech Lowicz Lublin Lubomino Ludvikabygden 
-  Lufeng Luleburgaz Lumajang Luzern Lyon
+  Leverkusen Lhokseumawe Liandui Liepaja Lille Lillehammer Lima Limboto 
+  Lincoln Lindesberg Linköping Lisbon Liushu Livane Ljubljana Lodi Lodz 
+  Lojdy Lokotok Lom Lomza London Lovech Lowicz Lublin Lubomino Ludhiana
+  Ludvikabygden Lufeng Luleburgaz Lumajang Luzern Lyon
 
   Maastricht Madrid Magetan Makassar Malang Malatya Malmö Manado 
   Manchester Manila Manisa Manna Mannheim Marbella Marcelli Mardin 
@@ -260,7 +260,7 @@ my @SINGLE_WORDS = qw(
   Medellin Melawi Melbourne Mersin Miaoli Michalovce Michalowo Midyat 
   Milan Milas Minsk Miramar Miskolc Monticiano Montoro Montpellier 
   Moradabad Morsø Morud Moscow Moss Mragowo Mudanya Muðla Mulund 
-  Mumbai Munich 
+  Mumbai Munich Mysore
 
   Nagari Nagpur Nagykanizsa Namsos Nanchang Nanchong Nancy Nanjing
   Nanning Nantong Napoli Narlidere Narvik Nashik Nazilli Näsby Nebakan
@@ -294,14 +294,14 @@ my @SINGLE_WORDS = qw(
   Sawahlunto Secunderabad Seferihisar Selfoss Semarang Sendai 
   Senigallia Seoul Serang Shanghai Shangrao Shaoguan Sharjah Shenyang 
   Shenzhen Shijiazhuang Shimla Shouguang Shumen Sibiu Sidoarjo Siena 
-  Sieradz Sigulda Silifke Silistra Sindi Singaraja Singkawang
-  Singsås Siofok Sivas Skara Skawina Ski Skien Skopje Slagelse Slawa 
-  Sleman Smedstad Smolyan Smyrna Snåsa Sofia Solapur Solok Songkhla Sopot 
-  Sortland Söke Sozopol Split Stanford Stargard Stavanger Steinkjer 
-  Stirling Stockholm Stoholm Storsjöbygden Stureby Stuttgart Sukma 
-  Sukomoro Sumedang Sunndalsøra Suqian Surabaya Suzhou Svendborg 
-  Svinninge Sydney Szczecinek Szczyrk Szeged Sztum Søborg Sømna 
-  Sørreisa Sørvoll
+  Sieradz Siglufjordur Sigulda Silifke Silistra Sindi Singaraja 
+  Singkawang Singsås Siofok Sivas Skara Skawina Ski Skien Skopje 
+  Slagelse Slawa Sleman Smedstad Smolyan Smyrna Snåsa Sofia Solapur 
+  Solok Songkhla Sopot Sortland Söke Sozopol Split Stanford Stargard 
+  Stavanger Steinkjer Stirling Stockholm Stoholm Storsjöbygden Stureby 
+  Stuttgart Sukma Sukomoro Sumedang Sunndalsøra Suqian Surabaya Suzhou 
+  Svendborg Svinninge Sydney Szczecinek Szczyrk Szeged Sztum Søborg 
+  Sømna Sørreisa Sørvoll
 
   Taicang Taichung Tainan Taiyuan Taizhou Takayama Tallinn Tambun 
   Tangerang Taoyuan Tarakan Targoviste Tarnów Tarnobrzeg Tasikmalaya 
@@ -337,7 +337,7 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
   Adelaide => ['adeliade'],
-  Ahmedabad => ['ahemadabad'],
+  Ahmedabad => ['ahemadabad', 'ahmadabad'],
   Akhisar => ['Akhýsar'],
   Allahabad => ['alahabad'],
   'Al-Rabwa' => ['rabwa'],
@@ -386,6 +386,7 @@ my %SINGLE_TYPOS =
   Indore => ['indor'],
   Iskenderun => ['iskendurun'],
   Izmir => ['ýzmýr', 'izmýr', 'ýzmir'],
+  Jaipur => ['jaipu'],
   Jakarta => ['dki', 'jakar', 'jkt'],
   Jianshe => ['js'],
   Jiangsu => ['jjiansu'],

@@ -296,6 +296,7 @@ my %SINGLE_TYPOS =
   Hunan => ['hunnan'],
   'Java Bali' => ['jb'],
   'Kabupaten Ketapang' => ['ketapang'],
+  'West Kalimantan' => ['kalbar'],
   Karadeniz => ['karadenýz'],
   Kansai => ['kinki'],
   'Kayong Utara' => ['kayong'],

@@ -22,15 +22,21 @@ my @MULTI_WORDS =
   'All India Shree Cement',
   'All India UTI Bank Masters Championship',
   "Ahmedabad President's Cup",
+  'Amla Ruia Women Pairs',
   'Ashok Kapur Memorial Swiss Pairs',
   'B L Rao Memorial Open',
   'Bhabha Atomic Research Centre Open',
   'Dainik Navjyoti All India Inter-State',
+  'Delhi Gymkhana Club Dhampur Trophy',
   'Delhi Gymkhana Club Open Pairs',
   'Delhi Gymkhana Club Open Teams',
+  'Denny Sacul Memorial Open Teams',
+  'Fenesta Open Teams',
   'Godfrey Phillips All India Open',
   'Hindusthan Club Teams',
   'Indian Inter-State Teams',
+  'Indian Masters Invitational Pairs',
+  'Indian Masters Open Teams',
   'Indian Men Trials',
   'Indian Mixed Trials',
   'Indian Open Trials',
@@ -42,9 +48,11 @@ my @MULTI_WORDS =
   'JHIC Silver Jubilee Open Teams',
   'Justice J M Lal All India Open Pairs',
   'Justice J M Lal All India Open Teams',
+  'Kabra Women IMP Pairs',
   'Kalani Trophy',
   'Karnataka State Teams',
   'Karnik-Vaidya Open',
+  'Kr. Murli Manohar National Masters',
   'Krishnapatnam Port National Masters',
   'L C Sunil Rajendra Memorial',
   'Lalit Mohanka Memorial',
@@ -54,6 +62,8 @@ my @MULTI_WORDS =
   'Maharaja Yeshwantrao Holkar National Teams',
   'Maharashtra State Pairs',
   'Maharashtra State Teams',
+  'Mall of the Millenium Pairs Cup',
+  'Mavericks Premier League',
   'Mohan Sicka BAM Teams',
   'Mohan Sicka Pairs',
   'Mohanlal Bhartia Memorial Grand Prix',
@@ -61,9 +71,11 @@ my @MULTI_WORDS =
   'Nandu Oke Memorial IAF Swiss Pairs',
   'Narain Bhojwani Memorial',
   'Otters Inter-Club Teams',
+  'P Singhania All India Open Pairs',
   'PSN Sarma Centenary Memorial Pairs',
   'PSN Sarma Centenary Memorial Teams',
   'PYC Hindu Gymkhana Royale',
+  'Phoenix Mixed Pairs',
   'Poddar National Masters',
   'Prashant Desai Memorial',
   'Pune State Level Open Teams',
@@ -76,6 +88,7 @@ my @MULTI_WORDS =
   'Ruia Gold Cup',
   'Ruia Silver Cup',
   'Shree Keni Trophy',
+  'Smt. Vijya Jajoo Mixed Pairs',
   'Summer Monsoon League',
   'TATA Open',
   'Thane Champion of Champions Teams',
@@ -84,6 +97,7 @@ my @MULTI_WORDS =
   'Tolani Silver Cup',
   'Uttar Pradesh State Pairs',
   'Uttar Pradesh State Teams',
+  'West Bengal Open Team Trials',
   'Willingdon Sports Club Swiss Pairs',
   'WCG Open'
 );
@@ -97,10 +111,14 @@ my %MULTI_TYPOS =
     'all india invitational corporate',
     'corporate pairs',
     'corporate invitational pairs'],
+  'All India Shree Cement' => [
+    'all india shri cement'],
   'All India UTI Bank Masters Championship' => [
     'ull aindia uti bank masters championship',
     'all india uti national masters championship',
     'all india utibank masters championship'],
+  'Amla Ruia Women Pairs' => [
+    'amla ladies pairs'],
   'Ashok Kapur Memorial Swiss Pairs' => [
     'ashok kapoor memorial swiss pairs',
     'ashok kapoor memorial  swiss pairs',
@@ -119,6 +137,8 @@ my %MULTI_TYPOS =
   'Dainik Navjyoti All India Inter-State' => [
     'Dainik Navjyoti All India Interstate',
     'Dainik Navjyoti All India Inter -State'],
+  'Delhi Gymkhana Club Dhampur Trophy' => [
+    'dgc india open dhampur trophy'],
   'Delhi Gymkhana Club Open Pairs' => [
     'delhi gymkhana open pairs'],
   'Delhi Gymkhana Club Open Teams' => [
@@ -136,6 +156,8 @@ my %MULTI_TYPOS =
     'dgc centenary celebrations',
     'dgc centenary tournament',
     'dgc open championship'],
+  'Denny Sacul Memorial Open Teams' => [
+    'denny sacul mamorial bridge tournament'],
   'Indian Men Trials' => [
     'indian men national camp',
     'indian men qualification camp'],
@@ -143,6 +165,7 @@ my %MULTI_TYPOS =
     'indian mixed national camp',
     'indian mixed national qualification camp'],
   'Indian Open Trials' => [
+    'india open selection trials',
     'indian open selection trial',
     'indian open selection trials',
     'indian open team selection trials',
@@ -154,8 +177,8 @@ my %MULTI_TYPOS =
     'indian senior selection triaals',
     'indian senior selection trials',
     'indian senior team selection',
-    'indian senior team selection triaals',
     'indian senior team selection trial',
+    'indian senior team selection triaals',
     'indian senior team selection trials',
     'indian senior teams selection',
     'indian senior teams selection trial',
@@ -186,6 +209,8 @@ my %MULTI_TYPOS =
     'justice  j m lal memorial all india open',
     'justice lal memorial',
     'j m lal memorial'],
+  'Kabra Women IMP Pairs' => [
+    "kabra women' imp pairs"],
   'Kalani Trophy' => ['kalani bridge championship', 'kalani trohy',
     'kalani bridge champioship'],
   'Karnataka State Teams' => [
@@ -193,6 +218,10 @@ my %MULTI_TYPOS =
   'Karnik-Vaidya Open' => [
     'karnik vaidya open',
     'karnik-vaidya annual'],
+  'Kr. Murli Manohar National Masters' => [
+    'kr murli manohar national masters',
+    'kr_ murli manohar national master',
+    'kr_ murli manohar national masters'],
   'L C Sunil Rajendra Memorial' => ['l_c_sunil rajendra memorial'],
   'Lalit Mohanka Memorial' => [
     'lalit mohanka memorials'],
@@ -221,6 +250,8 @@ my %MULTI_TYPOS =
     'mitravihar centenary state level',
     'mitravihar club centenary state level',
     'mitravihar nasik centenary state level'],
+  'Mall of the Millenium Pairs Cup' => [
+    'mall of the millenium cup'],
   'Mohan Sicka BAM Teams' => [
     'mohan sicka',
     'mohan sicka bam',
@@ -261,7 +292,14 @@ my %MULTI_TYPOS =
   'Otters Inter-Club Teams' => [
     'otters club open',
     'otters interclub championship'],
+  'P Singhania All India Open Pairs' => [
+    'all india sir p singhania memorial',
+    'all india sir padmapat singhania memorial bridge',
+    'all india sps memorial bridge tournament',
+    'dr singhania swiss pairs'],
   'PYC Hindu Gymkhana Royale' => ['pyc royale'],
+  'Phoenix Mixed Pairs' => [
+    'phonix mixed pairs'],
   'Poddar National Masters' => [
     'poddar national master',
     'poddar nationals masters', 
@@ -299,6 +337,8 @@ my %MULTI_TYPOS =
     'm keni trophy', 
     'm keni  trophy', 
     'm keny trophy'],
+  'Smt. Vijya Jajoo Mixed Pairs' => [
+    'smt_ vijya jajoo mixed pairs'],
   'Summer Monsoon League' => [
     'samadhan summer league',
     'samadhan bridge league',
@@ -356,7 +396,9 @@ my %MULTI_TYPOS =
   'WCG Open' => [
     'videocon wcg Open',
     'videcon wcg open',
-    'wcg annual']
+    'wcg annual'],
+  'West Bengal Open Team Trials' => [
+    'west bengal interstate selection trial'],
 );
 
 my %SINGLE_TYPOS =

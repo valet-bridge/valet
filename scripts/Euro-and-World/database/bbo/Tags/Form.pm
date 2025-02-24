@@ -31,7 +31,7 @@ my %SINGLE_TYPOS =
 (
   Individual => ['individuals', 'indivual', 'indiv', 'ind'],
   Teams => [qw(team teamów teamow teamc teamevent takim tim
-    teamy équipes equipas equipos equipo lag
+    teamy équipes equipas equipos equipo lag beregu
     takimlar squadre kadra dörtlü tm teamd terms)],
   Pairs => [qw(pair par paires parejas pary paýrs psirs)]
 );

@@ -23,6 +23,7 @@ my @MULTI_WORDS =
   'Maharashtra State Championship',
   'Rajasthan Invitational Championship',
   'Uttar Pradesh State Championship',
+  'West Bengal State Championship',
   'West Indian Regional'
 );
 
@@ -64,8 +65,12 @@ my %MULTI_TYPOS =
     'dr_ tolani open summer nations',
     'dr_ tolani open summer nationals',
     'dr_ tolani summar nationals',
-    'dr_ tolani summer nationals'],
+    'dr_ tolani summer nationals',
+    'mavericks summer national',
+    'mavericks summer national bridge championship'],
   'Indian Winter Nationals' => [
+    'ashok ruia memorial winter national',
+    'ashok ruia memorial winter nationals',
     'diamond jubileewinter nationals',
     'diamond jubilee winter nationals'],
   'Maharaja Holkar National Championship' => [
@@ -95,6 +100,9 @@ my %MULTI_TYPOS =
     'rajasthan invitational tournament'],
   'Uttar Pradesh State Championship' => [
     'up state championship'],
+  'West Bengal State Championship' => [
+    'east zone bridge championship',
+    'east zone & wb state championship'],
 );
 
 my %SINGLE_TYPOS =
