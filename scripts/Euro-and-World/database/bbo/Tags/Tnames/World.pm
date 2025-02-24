@@ -53,6 +53,7 @@ my @MULTI_WORDS =
   'World Transnational Open Teams',
   'World University Teams',
   'World Youngster Teams',
+  'World Online Juniors Teams',
   'WMG Men Individual',
   'WMG Men Pairs',
   'WMG Men Teams',
@@ -99,6 +100,8 @@ my %MULTI_TYPOS =
   'Venice Cup' => ['<venive <cup'],
   'World Masters Individual' => ['masters individual',
     'world masters'],
+  'World Online Juniors Teams' => [
+    'wbf Youth world online team championships'],
   'World Open Pairs' => ['world pairs championship'],
   'World Transnational Open Teams' => [
     'world transnational teams'],

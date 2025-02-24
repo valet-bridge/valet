@@ -48,7 +48,8 @@ my %SINGLE_TYPOS =
     junios juniot juniours junniors junor juniori
     yuniors yunior juniorit jun juniorerna
     students)],
-  Girls => [qw(girl gir jenter dziewczêta)]
+  Girls => [qw(girl gir jenter dziewczêta
+    dziewczeta dziewczyny)]
 );
 
 

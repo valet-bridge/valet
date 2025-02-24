@@ -16,15 +16,18 @@ my @MULTI_WORDS =
 (
   'Bermuda Triangle Cup',
   'bridge24.pl Trophy',
+  'Elblag Twin Towns Open Teams',
   'Forest Trophy',
   'Grand Prix of Poland Pairs',
   'Grand Prix of Poland Teams',
   'Janina Wielkoszewska Memorial Open',
   'Janos Levai Memorial',
   'Józef Pochron Jubilee Pairs',
+  'Jurek Gres Open Teams Memorial',
   'Krakow Spring Teams',
   'Leszek Kwiatkowski Memorial Pairs',
   'Leszek Kwiatkowski Memorial Teams',
+  'Lodz Twin Towns Open Teams',
   'Mondi Cup',
   'MTP Cup',
   'Palace Pairs Cup',
@@ -41,7 +44,10 @@ my @MULTI_WORDS =
   'Polish Individual Championship',
   'Polish Junior Pairs Trials',
   'Polish Mixed Pairs',
+  'Polish Mixed Pairs Trials',
   'Polish Mixed Teams',
+  'Polish Mixed Team Trials',
+  'Polish Online Open Teams',
   'Polish Open Pairs',
   'Polish Open Teams',
   'Polish Open Trials',
@@ -56,7 +62,11 @@ my @MULTI_WORDS =
   'Polish U16 Pairs',
   'Polish U16 Teams',
   'Polish U20 Trials',
+  'Polish U21 Pair Trials',
+  'Polish U21 Team Trials',
   'Polish U25 Trials',
+  'Polish U26 Women Team Trials',
+  'Polish U31 Pair Trials',
   'Polish Women Pairs',
   'Polish Women Trials',
   'Pomerania Cup',
@@ -70,9 +80,14 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
-  'Bermuda Triangle Cup' => ['bermuda triangle teams cup'],
-  'bridge24.pl Trophy' => ['bridge24_pl trophy'],
-  'Forest Trophy' => ['forest bridge trophy'],
+  'Bermuda Triangle Cup' => [
+    'bermuda triangle teams cup'],
+  'bridge24.pl Trophy' => [
+    'bridge24_pl trophy'],
+  'Elblag Twin Towns Open Teams' => [
+    'twin towns elblag'],
+  'Forest Trophy' => [
+    'forest bridge trophy'],
   'Grand Prix of Poland Pairs' => [
     'gp polski par',
     'gpp mpp open',
@@ -82,10 +97,13 @@ my %MULTI_TYPOS =
     'gran prix pairs of poland',
     'grand prix polski par',
     'otp puchar grodu staszica gpp',
-    'pair grand prix of poland'],
+    'pair grand prix of poland',
+    'pairs grand prix of poland'],
   'Grand Prix of Poland Teams' => [
     'gp of poland teams',
     'gpp teamow',
+    'gppt of poland',
+    'gpt of poland',
     'grand prix of poland zulawski teams',
     'grand prix polski teamow',
     'grand prix team of poland',
@@ -101,16 +119,28 @@ my %MULTI_TYPOS =
     'levai janos memorial'],
   'Józef Pochron Jubilee Pairs' => [
     'around 52 cards in 80 years by joe pochron'],
+  'Jurek Gres Open Teams Memorial' => [
+    'jurek gres in memoriam',
+    'the jurek memorial',
+    'memorial jurka gresia',
+    'the jurek gres memorial'],
   'Krakow Spring Teams' => [
     'krakowska wiosna',
     'spring of cracow'],
   'Leszek Kwiatkowski Memorial Teams' => [
     'teams memorial of leszek kwiatkowski'],
-  'Plock District League' => ['plockiej ligi okregowej'],
-  'Polish BAM Teams' => ['bam team championship of poland'],
-  'Polish Boys Championship' => ['polish championship boys'],
-  'Polish Business League' => ['blb'],
-  'Polish Girls Championship' => ['polish championship girls'],
+  'Lodz Twin Towns Open Teams' => [
+    'lodz twin towns'],
+  'Plock District League' => [
+    'plockiej ligi okregowej'],
+  'Polish BAM Teams' => [
+    'bam team championship of poland'],
+  'Polish Boys Championship' => [
+    'polish championship boys'],
+  'Polish Business League' => [
+    'blb'],
+  'Polish Girls Championship' => [
+    'polish championship girls'],
   'Polish IMP Pairs' => [
     'butler polish championship',
     'butler (imp) polish pairs championship'],
@@ -130,10 +160,17 @@ my %MULTI_TYPOS =
   'Polish Mixed Teams' => [
     'mistrzostwa polski teamów mikst',
     'polish mixt team championships'],
+  'Polish Mixed Team Trials' => [
+    'polish mixed trials',
+    'polish national mxt team trials',
+    'polish national mixed team trials'],
+  'Polish Online Open Teams' => [
+    'polish online teams'],
   'Polish Open Pairs' => [
     'forumbridge.pl top pairs',
     'forumbridge_pl top pairs',
     'inea cup',
+    'mistrzostwa polski teamów',
     'open pairs championship of poland',
     'pairs championship od poland',
     'pairs championship of poland',
@@ -149,8 +186,13 @@ my %MULTI_TYPOS =
     'teams championship of poland'],
   'Polish Open Trials' => [
     'polish bermuda bowl trials',
+    'polish national open trials',
+    'polish national team trials',
+    'polish national teams trials',
     'polish national trials',
+    'polish open team trials',
     'polish team trials',
+    'polish teams trials',
     'polish trials',
     'polish trials open'],
   'Polish Patton Teams' => [
@@ -174,12 +216,26 @@ my %MULTI_TYPOS =
   'Polish Second League' => [
     'polish 2 league',
     'polish 2nd league'],
-  'Polish Third League' => ['polish league: division 3'],
+  'Polish Senior Trials' => [
+    'polish seniors national trials',
+    'polish seniors trials'],
+  'Polish Third League' => [
+    'podlaska 3 liga',
+    'podlaska 3rd division',
+    'polish league: division 3'],
   'Polish U16 Teams' => [
     'polish u-16 championships',
     'polish u16 championships'],
-  'Polish U20 Trials' => ['u20 polish trials'],
+  'Polish U20 Trials' => [
+    'u20 polish trials'],
+  'Polish U21 Pair Trials' => [
+    'polish u21 trials pairs',
+    'rozgrywki kadry u-21'],
   'Polish U25 Trials' => ['poish u25 trials'],
+  'Polish U26 Women Team Trials' => [
+    'polish national girls team trials'],
+  'Polish U31 Pair Trials' => [
+    'rozgrywki kadr u-21 i u-26'],
   'Polish Women Pairs' => [
     'women pairs championship of poland'],
   'Polish Women Trials' => [
@@ -195,14 +251,20 @@ my %MULTI_TYPOS =
     'lojdy cup', 
     'sps construction trophy'],
   'Staszek Wybranowski Memorial' => ['memorial staszka wybranowskiego'],
-  'Warsaw Online Teams' => ['enthusiast bridge zlot',
-    'warsaw bboers champ', 'warsaw bboers championship'],
-  'Zulawski Cup' => ['zulawski teams']
+  'Warsaw Online Teams' => [
+    'enthusiast bridge zlot',
+    'warsaw bboers champ', 
+    'warsaw bboers championship'],
+  'Zulawski Cup' => [
+    'cup zulawy',
+    'zulawy cup',
+    'zulawski teams']
 );
 
 my %SINGLE_TYPOS =
 (
-  'Grand Prix of Poland Pairs' => ['gppp']
+  'Grand Prix of Poland Pairs' => ['gppp'],
+  'Grand Prix of Poland Teams' => ['gppt']
 );
 
 sub set_hash

@@ -25,6 +25,7 @@ my @MULTI_WORDS =
   'Polish Grand Prix Teams Legs',
   'Polish Pairs Championship',
   'Polish School Championship',
+  'Polish Youth Olympics',
   'Poznan Congress',
   'Slawa Congress',
   'Warsaw Grand Prix',
@@ -47,6 +48,7 @@ my %MULTI_TYPOS =
   'Poznan Congress' => [
     'bridge meeting poznan',
     'kongres poznanski',
+    'kongres poznañski',
     'poznan bridge congress',
     'poznanski kongres brydzowy'],
   'Slawa Congress' => [

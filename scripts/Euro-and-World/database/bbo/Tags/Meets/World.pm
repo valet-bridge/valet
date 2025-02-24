@@ -38,7 +38,9 @@ my %MULTI_TYPOS =
     'wbt masters',
     'worldbridge tour',
     'worldbrýdge tour'],
-  'World Series' => ['world bridge series'],
+  'World Series' => [
+    'world bridge series',
+    'world bridge games'],
   'World Mind Games' => [
     'mind sports games', 
     'word mind games', 
@@ -76,7 +78,7 @@ my %SINGLE_TYPOS =
     'worldbridgetour',
     'worldbrýdgetour'],
   'World Olympiad' => ['olympiad', 'olympiads', 'wbo'],
-  'World Series' => ['wbs'],
+  'World Series' => ['wbs', 'wbg'],
   'World Team Championships' => ['wbtc', 'wtbc', 'wtc'],
   'World Youth Championships' => ['wytc', 'wybtc'],
   'World Youth Open Championships' => [

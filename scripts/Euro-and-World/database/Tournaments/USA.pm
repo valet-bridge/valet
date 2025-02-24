@@ -1005,7 +1005,7 @@ my %MEETS_USA =
         YEAR => 2017,
         CITY => 'Schaumburg',
         DATE_START => '2017-05-15',
-        DATE_END => '2017-05-17'
+        DATE_END => '2017-05-19'
       },
       '2018' =>
       {
@@ -1029,7 +1029,7 @@ my %MEETS_USA =
         YEAR => 2019,
         CITY => 'Schaumburg',
         DATE_START => '2019-05-31',
-        DATE_END => '2019-06-01'
+        DATE_END => '2019-06-09'
       },
       '2021A' =>
       {
@@ -4613,7 +4613,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2017,
             DATE_START => '2017-05-15',
-            DATE_END => '2017-05-17'
+            DATE_END => '2017-05-19'
           } 
         }
       },
@@ -4628,7 +4628,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2019,
             DATE_START => '2019-05-31',
-            DATE_END => '2019-06-01'
+            DATE_END => '2019-06-09'
           } 
         }
       },

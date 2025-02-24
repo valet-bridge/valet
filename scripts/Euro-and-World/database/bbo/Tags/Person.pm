@@ -14,6 +14,7 @@ our @EXPORT = qw(set_hashes);
 my @MULTI_WORDS =
 (
   'Andrzej Wilkosz',
+  'Andrzej Zurek',
   'Ashok Kapur',
   'B L Rao',
   'Boris Schapiro',
@@ -28,6 +29,7 @@ my @MULTI_WORDS =
   'John Arkinstall',
   'Justice JM Lal',
   'Krishan Kumar Modi',
+  'Krzysztof Bader',
   'Lalit Mohanka',
   'LC Sunil Rajendra',
   'Leszek Kwiatkowski',
@@ -64,6 +66,11 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   'Andrzej Wilkosz' => ['a_ wilkosz'],
+  'Andrzej Zurek' => [
+    'andrzej zurek memorial',
+    'mem of andrzej zurek',
+    'memorial of andrzej zurek',
+    'memory of andrzej zurek'],
   'Ashok Kapur' => ['ashok kapoor'],
   'B L Rao' => ['b_l_rao'],
   'Brahmin Sabha' => ['brhman sabha'],
@@ -75,6 +82,7 @@ my %MULTI_TYPOS =
   'Justice JM Lal' => ['justice j m lal', 'j m lal', 'justice lal',
     'justice j_m_lal', 'jistice j m lal'],
   'Krishan Kumar Modi' => ['k k modi'],
+  'Krzysztof Bader' => ['Memory of Krzysztof Bader'],
   'LC Sunil Rajendra' => ['l_c_sunil rajendra'],
   'M Keni' => ['m keny'],
   'Maharaja Yeshwantrao Holkar' => ['m yeshwantrao holkar',
