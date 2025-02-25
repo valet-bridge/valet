@@ -102,6 +102,7 @@ my @MULTI_WORDS =
   'Pearl River',
   'Ren Shou',
   'Rio de Janeiro State',
+  'Rusenski Lom',
   'Sa Kaeo',
   'Samut Prakan',
   'Samut Sakhon',

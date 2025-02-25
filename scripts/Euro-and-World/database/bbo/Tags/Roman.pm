@@ -64,7 +64,8 @@ my %SINGLE_TYPOS =
   '38' => ['xxxviii'],
   '39' => ['xxxix', 'xxxixth'],
   '40' => ['xl', 'xlth'],
-  '53' => ['liii']
+  '53' => ['liii'],
+  '70' => ['lxx']
 );
 
 

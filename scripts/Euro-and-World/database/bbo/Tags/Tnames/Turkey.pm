@@ -74,6 +74,7 @@ my @MULTI_WORDS =
   'Turkish Women Team Trials',
   'Turkish Women Teams',
   'Western Mediterranean Club Teams',
+  'Yalcin Atabey Open Teams',
 );
 
 my %MULTI_TYPOS =
@@ -390,6 +391,9 @@ my %MULTI_TYPOS =
     'türkýye kadin mýllý takim seçmesý'],
   'Western Mediterranean Club Teams' => [
     'western mediterranean clubs team championship'],
+  'Yalcin Atabey Open Teams' => [
+    'yalcin atabey open',
+    'yalcin atabey summer open'],
 );
 
 my %SINGLE_TYPOS =

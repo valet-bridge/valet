@@ -15,6 +15,9 @@ our @EXPORT = qw(set_hash);
 my @MULTI_WORDS =
 (
   'Alex Nurdin Cup',
+  'Bank Nagari Cup',
+  'Batam Open Teams',
+  'Bupati Badung Cup',
   'East Java Open Teams',
   'Electric Cup',
   'FTBC Tanjungpura University',
@@ -37,6 +40,7 @@ my @MULTI_WORDS =
   'Indonesian Open Trials',
   'Indonesian Pre-Sports Open Teams',
   'Indonesian Premier League',
+  'Indonesian Prima Pair Programme',
   'Indonesian U16 Pair Trials',
   'Indonesian U18 Teams',
   'Indonesian U21 Pair Trials',
@@ -54,6 +58,7 @@ my @MULTI_WORDS =
   'MBH Invitational Cup',
   'Manado Fiesta Open Teams',
   'Menpora-Pertamina Cup',
+  'Minangkabau Open Teams',
   'Pahlawan Cup',
   'Pertamina Field Tambun Cup',
   'PLN Cup',
@@ -63,7 +68,9 @@ my @MULTI_WORDS =
   'Sarundajang Cup',
   'Semen Padang Cup',
   'Telkom Indonesia Open',
+  'Tomohon Open Teams',
   'Tugu Muda Cup',
+  'Walikota Solo Pairs Cup',
   'West Java Open Teams'
 );
 
@@ -72,6 +79,10 @@ my %MULTI_TYPOS =
   'Alex Nurdin Cup' => [
     'indonesian sea open team trials',
     'test event sea games'],
+  'Batam Open Teams' => [
+    'batam international bot'],
+  'Bupati Badung Cup' => [
+    'piala bupati badung'],
   'East Java Open Teams' => [
     'kejuaraan provinsi bridge jatim',
     'kejuaraan provinsi bridge jawa timur',
@@ -135,6 +146,8 @@ my %MULTI_TYPOS =
   'MBH Invitational Cup' => ['mbh cup'],
   'Manado Fiesta Open Teams' => [
     'manado fiesta bridge tournament'],
+  'Minangkabau Open Teams' => [
+    'minangkabau bridge open tournament'],
   'Pahlawan Cup' => ['piala pahlawan'],
   'Pertamina Field Tambun Cup' => ['pertamina ep field tambun cup'],
   'PLN Cup' => ['pln fortuga'],
@@ -159,6 +172,11 @@ my %MULTI_TYPOS =
     'telkom cup',
     'telkom speedy',
     'telkom indonesian open'],
+  'Tomohon Open Teams' => [
+    'tomohon international bridge tournament'],
+  'Walikota Solo Pairs Cup' => [
+    'kejurnas 58 solo',
+    'walikota cup'],
   'West Java Open Teams' => [
     'banten sports week',
     'regional west java',
@@ -171,6 +189,7 @@ my %MULTI_TYPOS =
 my %SINGLE_TYPOS =
 (
   "Kepri Governor's Cup" => ['kepricup'],
+  'Rector University of Brawijaya Cup' => ['pilrek'],
 );
 
 sub set_hash

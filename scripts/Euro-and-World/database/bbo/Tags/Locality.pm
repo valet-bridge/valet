@@ -64,7 +64,7 @@ my @SINGLE_WORDS = qw(
   Sirinyer Slaska Sredec Sukomoro Suleymanpasa Suralaya
   Taihu Tama Tengah Tianya
   Uccle Ulus Unaós
-  Varbergshus Vefa Viþnelik
+  Varbergshus Vefa Viþnelik Vitacura
   Wadas Wenang Wightwick Wratislavia Wroble Wujiang Wuyuanhe
   Yalikavak Yangpu Yarimca Yenisehir Yizhuang Yildirim Yuquan
   Yvelines

@@ -17,10 +17,12 @@ my @MULTI_WORDS =
   'Brasov Open Pairs',
   'Brasov Open Teams',
   'Contra Open Cup',
+  'Romanian Butler Pairs',
   'Romanian League',
-  'Romanian Second League',
+  'Romanian Mixed Teams',
   'Romanian Open Teams',
   'Romanian Open Trials',
+  'Romanian Second League',
   'Romanian Senior Team Trials',
   'Romanian Women Team Trials',
 );

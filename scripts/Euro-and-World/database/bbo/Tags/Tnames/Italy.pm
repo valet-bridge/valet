@@ -25,6 +25,8 @@ my @MULTI_WORDS =
   'Italian Mixed Team Trials',
   'Italian Mixed Teams',
   'Italian O55 Cup',
+  'Italian O61 Cup',
+  'Italian O63 Cup',
   'Italian Open Cup',
   'Italian Open Teams',
   'Italian Open Team Trials',
@@ -63,6 +65,10 @@ my %MULTI_TYPOS =
     'camp.it. squadre',
     'italian open team championships',
     'italian team championship'],
+  'Italian O61 Cup' => [
+    'italy cup over 61'],
+  'Italian O63 Cup' => [
+    'italy cup over 63'],
   'Italian Open Team Trials' => ['italian open teams trials'],
   'Italian Senior Trials' => [
     'italian trials senior',

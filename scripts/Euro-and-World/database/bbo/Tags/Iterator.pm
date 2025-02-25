@@ -58,7 +58,7 @@ my %SINGLE_TYPOS =
   Segment => ['seg', 'segm', 'segement', 'segemt', 'segmant',
     'segmen', 'segemnt', 'segmento', 'segments', 'segmetn', 'segmnet', 
     'segnment', 'sgment', 'segt', 'sengemt', 'se', 'eg', 'tempo'],
-  Series => ['seria'],
+  Series => ['seria', 'seri'],
   Session => ['seesion', 'part', 'sesja', 'sess', 'serssion', 'sesion',
     'sesión', 'sesj', 'sesjon', 'sessió', 'sessión', 'ses', 'sesje',
     'sessie', 'sesson', 'sesssion', 'sessions', 'sessão',

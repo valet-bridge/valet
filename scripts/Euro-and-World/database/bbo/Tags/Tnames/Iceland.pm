@@ -45,6 +45,7 @@ my %MULTI_TYPOS =
     'iceland 1 division',
     'iceland 1 vision',
     'iceland division 1',
+    'iceland first division',
     'iceland league',
     'icelandic league cup'],
   'Icelandic Open Teams' => [

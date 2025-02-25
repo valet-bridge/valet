@@ -207,8 +207,8 @@ my @SINGLE_WORDS = qw(
   Caracas Casablanca Cascais Catania Cerkezkoy Cesme Chandigarh Changhua 
   Changsha Changzhou Chavdar Chaville Chelmno Chelopech Chengdu Chennai 
   Chepelare Chiayi Chicago Chongqing Chumphon Cimahi Cirebon Civril
-  Claremont Clichy Cluj Coimbra Copenhagen Corlu Coventry Craiova Csapi 
-  Cuenca Cuneo
+  Claremont Clichy Cluj Coimbra Comandatuba Copenhagen Corlu Coventry 
+  Craiova Csapi Cuenca Cuneo
 
   Dabrowka Dalaman Dalian Darmstadt Datca Deauville Debrecen Delft 
   Delhi Denizli Depok Derpt Deva Devrek Dikili Diyarbakir Dimitrovgrad 
@@ -273,14 +273,13 @@ my @SINGLE_WORDS = qw(
   Otepää Oxford Ozarow Örebro Överum
 
   Pacitan Padang Padova Paimado Palembang Palermo Palma Palu Pamukkale 
-  Panaji
-  Pancevo Panzhihua Pariaman Paris Pärnu Parvomay Pasuruan Pattaya Pau 
-  Pazar Pazardjik Pecs Peebles Pekanbaru Pelitli Pelotas Penajam Pernik 
-  Perth Perula Pervera Pesaro Pescara Petersfield Petrelik Philadelphia 
-  Phitsanulok Phokai Phuket Piedimonte Pijnacker Pisa Pitane Pittsburgh 
-  Pleven Plock Plovdiv Pontianak Popovo Porto Potsdam Poznan Prague 
-  Preslav Priboi Primorsko Probolinggo Protaras Ptuj Pula Pulawy Pune 
-  Puri Pushkar Puutalo
+  Panagyurishte Panaji Pancevo Panzhihua Pariaman Paris Pärnu Parvomay 
+  Pasuruan Pattaya Pau Pazar Pazardjik Pecs Peebles Pekanbaru Pelitli 
+  Pelotas Penajam Pernik Perth Perula Pervera Pesaro Pescara Petersfield 
+  Petrelik Philadelphia Phitsanulok Phokai Phuket Piedimonte Pijnacker 
+  Pisa Pitane Pittsburgh Pleven Plock Plovdiv Pontianak Popovo Porto 
+  Potsdam Poznan Prague Preslav Priboi Primorsko Probolinggo Protaras 
+  Ptuj Pula Pulawy Pune Puri Pushkar Puutalo
 
   Qingdao
 

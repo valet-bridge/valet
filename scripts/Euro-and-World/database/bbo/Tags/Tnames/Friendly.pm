@@ -68,6 +68,8 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'Denmark Practice' => [
+    'danish practice'],
   'Scotland Exhibition' => [
     'm lawrence exhibiton',
     'mike lawrence exhibition'],

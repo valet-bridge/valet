@@ -56,7 +56,7 @@ my %MULTI_TYPOS =
     's_f', 's.f.', 's f',
     'semi-final', 'semi-finals', 'round of 4', 'round-of-four',
     'demi-final', 'demi-finale', 'demi-finales', 'demi finale',
-    'half final', 's-final',
+    'half final', 'halve finale', 's-final',
     'meia final', 'meias finais', 'yf', 'demi-nale', 'dsemi final',
     'yari fi', 'yari final', 'yarý final', 'yari fýnal', 
     'sem fin', 'semi <final', 'simi final',

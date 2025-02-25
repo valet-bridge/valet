@@ -32,6 +32,7 @@ my @MULTI_WORDS =
   'Danish Women Pairs',
   'Fyn Club Teams',
   'Hecht Cup',
+  'One Eyed Jacks Open Teams',
   'Prince Henrik Trophy',
   'Vinoble Open'
 );
@@ -119,6 +120,8 @@ my %MULTI_TYPOS =
     'ladies pairs - danish championship'],
   'Fyn Club Teams' => [
     'fynsmesterskaber i klubhold'],
+  'One Eyed Jacks Open Teams' => [
+    'one eyed jacks jubilæumsturnering'],
 );
 
 my %SINGLE_TYPOS =

@@ -22,8 +22,10 @@ my @MULTI_WORDS =
   'Plovdiv Bridge Festival',
   'Serdika Bridge Festival',
   'Shumen Bridge Festival',
+  'Sofia Bridge Festival',
   'Stara Zagora Bridge Festival',
-  'Varna Bridge Festival'
+  'Varna Bridge Festival',
+  'Vitosha Bridge Festival'
 );
 
 my %MULTI_TYPOS =
@@ -38,7 +40,10 @@ my %MULTI_TYPOS =
   'Lozenets Bridge Festival' => ['bridge festival lozenets'],
   'Pavel Banya Bridge Festival' => [
     'bridge festival pavel banya',
+    'bridge holiday pro ead',
+    'bridge vacation pro ead',
     'international bridge festival pavel banya',
+    'international bridge holiday pro ead',
     'international bridge holidays pavel banya',
     'international festival pavel banya',
     'pro ead pavel banya'],

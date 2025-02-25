@@ -17,6 +17,7 @@ my @MULTI_WORDS =
   'Albena Open Teams',
   'Asenovgrad Open Teams',
   'Bansko Bridge Masters',
+  'Bulgarian Anniversary Open Teams',
   'Bulgarian Open Pairs',
   'Bulgarian Club Teams',
   'Bulgarian Open Teams',
@@ -30,13 +31,16 @@ my @MULTI_WORDS =
   'Karlovo Open Teams',
   'Kaylaka Open Teams',
   'Lozenets Open Teams',
+  'Panagyurishte Open Teams',
   'Pleven Open Teams',
   'Plovdiv Open Teams',
   'Popovo Friendship Open Teams',
+  'Rusenski Lom Open Teams',
   'Serdika Open Teams',
   'Sliven Open Teams',
   'St. Ivan Rilski Open Teams',
   'Shumen Open Teams',
+  'Star Bet Casino Open Teams',
   'Stara Zagora Open Teams',
   'Varna Intercity Teams',
   'Varna Titan Open Teams'
@@ -97,10 +101,15 @@ my %MULTI_TYPOS =
   'Popovo Friendship Open Teams' => [
     'popovo friendship tournament',
     'popovo tournament of friendship'],
+  'Rusenski Lom Open Teams' => [
+    'tournament ruseneski lom',
+    'tournament rusenski lom'],
   'Serdika Open Teams' => ['serdika cup'],
   'St. Ivan Rilski Open Teams' => [
     'international bridge tournament st_ ivan rils',
     'international tournament st_ ivan rilski'],
+  'Star Bet Casino Open Teams' => [
+    'star bet casino sunny beach'],
   'Stara Zagora Open Teams' => ['vito teams'],
   'Varna Titan Open Teams' => [
     'varna titan teams',

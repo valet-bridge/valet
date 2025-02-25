@@ -14,6 +14,7 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
+  'Falkenberg Bridgefestival',
   'Swedish Bridge Festival',
   'Swedish Women Trials',
   'Umea Bridgefestival',

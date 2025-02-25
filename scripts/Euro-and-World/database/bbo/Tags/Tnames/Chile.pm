@@ -18,13 +18,16 @@ my @MULTI_WORDS =
   'Chilean Copa de Plata',
   'Chilean Cup',
   'Chilean Invitational Teams',
+  'Chilean Junior Teams',
   'Chilean Mixed Trials',
   'Chilean Open Pairs',
   'Chilean Open Teams',
   'Chilean Open Trials',
   'Chilean Senior Teams',
+  'Chilean Senior Trials',
   'Chilean Women Teams',
   'Chilean Women Trials',
+  'Vitacura Open Teams Cup'
 );
 
 my %MULTI_TYPOS =
@@ -51,6 +54,9 @@ my %MULTI_TYPOS =
     'seleccion chile libres',
     'seleccion libre chile',
     'seleccion libres chile'],
+  'Vitacura Open Teams Cup' => [
+    'copa club vitacura',
+    'internacional vitacura'],
 );
 
 my %SINGLE_TYPOS =

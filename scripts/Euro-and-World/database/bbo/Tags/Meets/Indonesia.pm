@@ -17,6 +17,7 @@ my @MULTI_WORDS =
   'Indonesian National Championship Week',
   'Indonesian National Games',
   'Indonesian National Pre-Sports Week',
+  'Indonesian National Sports Week',
   'Indonesian Province Sports Week',
   'Indonesian Student Championship',
   'Indonesian University Championship',
@@ -43,6 +44,9 @@ my %MULTI_TYPOS =
     'indonesian national sports week',
     'indonesian national sports weeks'],
   'Indonesian National Pre-Sports Week' => ['pra pon'],
+  'Indonesian National Sports Week' => [
+    'pekan olahraga nasional',
+    'pekan olah raga nasional'],
   'Indonesian Student Championship' => [
     'indonesian student championships',
     'indonesian students championship',
