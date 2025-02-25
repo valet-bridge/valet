@@ -14,11 +14,13 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
+  'AgBC Open Cup',
   'Alex Nurdin Cup',
   'Bank Nagari Cup',
   'Batam Open Teams',
   'Bupati Badung Cup',
   'Denny Sacul Memorial Open Teams',
+  "East Java Governor's Cup",
   'East Java Open Teams',
   'Electric Cup',
   'FTBC Tanjungpura University',
@@ -51,10 +53,12 @@ my @MULTI_WORDS =
   'Indonesian U26 Women Pair Trials',
   'Indonesian U31 Teams',
   'Indonesian U31 Women Teams',
+  'Indonesian University Teams',
   'Indonesian Women Pair Trials',
   'Indonesian Women Pairs',
   'Indonesian Women Teams',
   'Indonesian Women Trials',
+  'Kemenpora Cup',
   "Kepri Governor's Cup",
   'MBH Invitational Cup',
   'Manado Fiesta Open Teams',
@@ -77,6 +81,9 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'AgBC Open Cup' => [
+    'agbc cup',
+    'open tournament bridge agbc cup'],
   'Alex Nurdin Cup' => [
     'indonesian sea open team trials',
     'test event sea games'],
@@ -86,6 +93,8 @@ my %MULTI_TYPOS =
     'piala bupati badung'],
   'Denny Sacul Memorial Open Teams' => [
     'denny sacul memorial bridge tournament'],
+  "East Java Governor's Cup" => [
+    'east java governor cup & btc cup'],
   'East Java Open Teams' => [
     'kejuaraan provinsi bridge jatim',
     'kejuaraan provinsi bridge jawa timur',
@@ -131,6 +140,8 @@ my %MULTI_TYPOS =
   'Indonesian Open Trials' => [
     'indonesian men national selection',
     'indonesian men selection'],
+  'Indonesian University Teams' => [
+    'kejuaraan nasional bridge mahasiswa'],
   'Indonesian Women Trials' => [
     'indonesian women national selection'],
   "Kepri Governor's Cup" => [

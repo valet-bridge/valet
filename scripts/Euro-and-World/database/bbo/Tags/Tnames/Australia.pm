@@ -27,6 +27,7 @@ my @MULTI_WORDS =
   'Australian Open Trials',
   'Australian Senior Pairs',
   'Australian Senior Teams',
+  'Australian Senior Trials',
   'Australian Spring Open Teams',
   'Australian Spring Senior Teams',
   "Australian Spring Women Teams",

@@ -153,6 +153,7 @@ my %MULTI_TYPOS =
   'Monte Carlo' => ['monte-carlo'],
   'Nea Moudania' => ['moydania'],
   Ningbo => ['ning bo'],
+  Padang => ['kota padang'],
   Pasuruan => ['kota pasuruan'],
   'Piatra Neamt' => ['p. neamt', 'p.neamt'],
   Porto => ['cidade invicta'],

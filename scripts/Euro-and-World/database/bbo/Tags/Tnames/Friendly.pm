@@ -71,6 +71,8 @@ my %MULTI_TYPOS =
 (
   'Denmark Practice' => [
     'danish practice'],
+  'France Practice' => [
+    'paris country club exhibition'],
   'Scotland Exhibition' => [
     'm lawrence exhibiton',
     'mike lawrence exhibition'],

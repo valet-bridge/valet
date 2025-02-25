@@ -31,6 +31,7 @@ my @MULTI_WORDS =
   'French U28 Trials',
   'French U31 Trials',
   'French Women Trials',
+  'Mike Dennery Pairs Cup',
   'Shield of Thoisy',
 );
 
@@ -130,6 +131,8 @@ my %MULTI_TYPOS =
     'selection dames',
     'sélection dames',
     'sélection dames france'],
+  'Mike Dennery Pairs Cup' => [
+    'couple mike dennery'],
 );
 
 

@@ -44,6 +44,7 @@ my @MULTI_WORDS =
   'Murat Kilercioglu Turkish Spring Teams',
   'Necmettin Sunget Teams Cup',
   'Okay Gur Winter Teams',
+  'Sadun Su U26 Teams',
   'Salvador Assael IMP Pairs',
   'Salvador Assael Pro-Am Pairs',
   'Sivrioglu BAM Teams',
@@ -61,6 +62,7 @@ my @MULTI_WORDS =
   'Turkish Open Teams',
   'Turkish Senior Team Trials',
   'Turkish Swiss Mixed Teams',
+  'Turkish Swiss Open Teams',
   'Turkish Super Cup',
   'Turkish U16 Pairs',
   'Turkish U21 Open Pair Trials',
@@ -185,6 +187,8 @@ my %MULTI_TYPOS =
     'okay gur winter',
     'okay gur winter champ',
     'okay gur winter champs'],
+  'Sadun Su U26 Teams' => [
+    'sadun su u16 takimlar'],
   'Salvador Assael IMP Pairs' => [
     'assael invitational calcutta',
     "salvador assael imp's across the field"],
@@ -319,6 +323,11 @@ my %MULTI_TYPOS =
   'Turkish Swiss Mixed Teams' => [
     'turkey swiss mixed teams',
     'turkish swiss mýxed teams'],
+  'Turkish Swiss Open Teams' => [
+    'turkiye nakavt-swiss takimlar sampiyonasi',
+    'turkiye nakavt takim sampiyonasi',
+    'turkiye nakavt takimlar sampiyonasi',
+    'turkiye nakavt takimlar þampiyonasi'],
   'Turkish U21 Open Team Trials' => [
     'turkey u21 national team selection',
     'turkey u21 team selection'],

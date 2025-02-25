@@ -21,7 +21,7 @@ my %MULTI_TYPOS =
 (
   Bronze => ['third place', '3rd place', 'bronze-finals', 
     'bronze playoff', 'bronze match', 'small final'],
-  'Elimination' => ['head to head'],
+  'Elimination' => ['head to head', 'eliminacje'],
   'Final' => ['super final', 'final phase', 'fase final',
     'playoff final', 'playoffs final', 'final poule', 'phase finale',
     'f i n a l', 'fin als'],
@@ -93,7 +93,7 @@ my %SINGLE_TYPOS =
     'finales', 'finall', 'finar', 'finas', 'finat', 'finsl', 
     'finais', 'finalns', 'fina³', 'fianal', 'fianl', 'fianls',
     'fiinal', 'fina', 'fýnal', 'finalleri', 'fina³y', 'fn', 'finaller',
-    'filnal', 'fnal', 'fnals', 'ff', 'finaali', 'fýnalleri',
+    'filnal', 'fnal', 'fnals', 'ff', 'finaali', 'fýnalleri', 'fýnallerý',
     'slutspil', 'slutspillet', 'superfinal', 'finalen'],
   'Knock-out' => ['knockour', 'knockout', 'ko', 'kostage', 'knockouts',
     'knock'],
