@@ -138,6 +138,7 @@ my %MULTI_TYPOS =
   'Gaziantep Zeugma' => ['g.antep zeugma'],
   'Greve Strand' => ['greve strands'],
   Guangzhou => ['guang zhou'],
+  'Haskovski Mineralni Bani' => ['mineralni bani'],
   Helsinki => ['city of helsinki'],
   Istanbul => ['ýstanbul'],
   Jakarta => ['jak-tim', 'jak-sel', 'jakarta pusat', 'jakarta utara',
@@ -192,12 +193,12 @@ my @SINGLE_WORDS = qw(
 
   Babaeski Baghdad Baglarbasi Bagodi Baimao Balchik Bakauheni Balarampur 
   Balaton Balatonföldvár Balikesir Balikpapan Ballerup Ballymena 
-  Bamberg Bandung Bangalore Bangkok Banjarmasin Bansi Barcelona Barlinek 
-  Batam Bath Batikent Batman Batu Begues Beihai Beijing Beirut Bekasi 
-  Belene Belgrade Belfast Bengkalis Bengkulu Beograd Bereket Bergen 
-  Bergues Bergule Berkeley Berlin Bevagna Beyoglu Bhatpara Bhilwara 
-  Bhubaneswar Bialystok Biarritz Bielefeld Bikaner Birolo Bitung 
-  Blitar Bodrum Bodø Bogor Bogotá Boleslawiec Bologna Bolu Bonn 
+  Bamberg Bandung Bangalore Bangkok Banjarmasin Bansi Bansko Barcelona 
+  Barlinek Batam Bath Batikent Batman Batu Begues Beihai Beijing Beirut 
+  Bekasi Belene Belgrade Belfast Bengkalis Bengkulu Beograd Bereket 
+  Bergen Bergues Bergule Berkeley Berlin Bevagna Beyoglu Bhatpara 
+  Bhilwara Bhubaneswar Bialystok Biarritz Bielefeld Bikaner Birolo 
+  Bitung Blitar Bodrum Bodø Bogor Bogotá Boleslawiec Bologna Bolu Bonn 
   Bordeaux Borlänge Bormali Böblingen Braila Brandbu Braniewo Brasilia 
   Brasov Bremen Brevik Brighton Brisbane Broadbeach Bromölla Bruges 
   Brussels Bucharest Budapest Buffalo Buonconvento Burghausen Bursa 
@@ -285,7 +286,7 @@ my @SINGLE_WORDS = qw(
 
   Radkov Rakovski Rakvere Randers Rastignano Ravnkilde Rayong Razgrad
   Reims Rennes Reykjavik Riau Rieneck Riga Rijeka Rimini Romana Rome 
-  Ronneby Roskilde Rotterdam Rottneros Rozanka Rubbestadneset Ruen 
+  Ronneby Roskilde Rotterdam Rottneros Royan Rozanka Rubbestadneset Ruen 
   Rugao Ruian Ruse Rzepin Rzeszow Rødovre Rønne
 
   Saarbrücken Sabadell Salerno Salo Salsomaggiore Samarinda Samobor 
@@ -297,10 +298,10 @@ my @SINGLE_WORDS = qw(
   Singkawang Singsås Siofok Sivas Skara Skawina Ski Skien Skopje 
   Slagelse Slawa Sleman Smedstad Smolyan Smyrna Snåsa Sofia Solapur 
   Solok Songkhla Sopot Sortland Söke Sozopol Split Stanford Stargard 
-  Stavanger Steinkjer Stirling Stockholm Stoholm Storsjöbygden Stureby 
-  Stuttgart Sukma Sukomoro Sumedang Sunndalsøra Suqian Surabaya Suzhou 
-  Svendborg Svinninge Sydney Szczecinek Szczyrk Szeged Sztum Søborg 
-  Sømna Sørreisa Sørvoll
+  Stavanger Steinkjer Stirling Stockholm Stokke Stoholm Storsjöbygden 
+  Stureby Stuttgart Sukma Sukomoro Sumedang Sunndalsøra Suqian Surabaya 
+  Suzhou Svendborg Svinninge Sydney Szczecinek Szczyrk Szeged Sztum 
+  Søborg Sømna Sørreisa Sørvoll
 
   Taicang Taichung Tainan Taiyuan Taizhou Takayama Tallinn Tambun 
   Tangerang Taoyuan Tarakan Targoviste Tarnów Tarnobrzeg Tasikmalaya 
@@ -313,9 +314,9 @@ my @SINGLE_WORDS = qw(
   Uzunköprü
 
   Vadsø Van Vancouver Varanasi Varberg Varese Varna Vasa Västervik 
-  Västerås Vejle Venice Verdal Verona Vestfold Vestvågøy Viareggio 
-  Viborg Vienna Vikersund Villeurbanne Vilnius Vishakhapatanam
-  Vodskov Vorden Vraca Våge
+  Västerås Vejle Veldhoven Venice Verdal Verona Vestfold Vestvågøy 
+  Viareggio Viborg Vienna Vikersund Villeurbanne Vilnius 
+  Vishakhapatanam Vodskov Vorden Vraca Våge
 
   Waldsolms Waltham Wanzhou Warsaw Wellington Wetzlar Wiesbaden 
   Wisla Wolverhampton Worcester Wroclaw Wronie Wuhan Wuxi Wuzhishan
@@ -412,6 +413,7 @@ my %SINGLE_TYPOS =
   Linköping => ['linkoping'],
   Livane => ['lývane'],
   Lovech => ['melta'],
+  Lubomino => ['lubominie'],
   Ludvikabygden => ['ludvika'],
   Luleburgaz => ['lüleburgaz'],
   'Maha Sarakham' => ['mahasarakham'],
@@ -488,7 +490,8 @@ my %SINGLE_TYPOS =
   Verona => ['veron'],
   Vienna => ['wien'],
   Vilnius => ['wilno'],
-  Vishakhapatanam => ['yzac', 'vizag', 'vizac'],
+  Vishakhapatanam => ['yzac', 'vizag', 'vizac',
+    'vishakhapatnam'],
   Warsaw => ['warsow', 'warszawa'],
   Wroclaw => ['wr'],
   Wuzhishan => ['wuzishan'],

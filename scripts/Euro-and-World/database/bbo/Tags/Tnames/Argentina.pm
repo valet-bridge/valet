@@ -52,6 +52,7 @@ my %MULTI_TYPOS =
   'Argentinian Open Trials' => [
     'argentina open trials',
     'argentine team trials',
+    'argentinian open trials olympics',
     'argentinian team trials',
     'open argentina team trials',
     'open team argentina trials',
@@ -60,6 +61,7 @@ my %MULTI_TYPOS =
     'seleccion libre argentina',
     'seleccion argentina libre'],
   'Argentinian Seniors Teams' => [
+    'argentinian senior trials olympics',
     'clasificatoria argentina seniors sudamericano',
     'clasificatoria seniors argentina'],
   'Argentinian Senior Trials' => [
@@ -69,6 +71,8 @@ my %MULTI_TYPOS =
     'senior argentina team trials'],
   'Argentinian Women Club Teams' => [
     'interclub damas argentina'],
+  'Argentinian Women Trials' => [
+    'argentinian women trials olympics'],
 );
 
 my %SINGLE_TYPOS =

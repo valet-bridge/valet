@@ -62,7 +62,7 @@ my %MULTI_TYPOS =
     'scdhzy', 'scmy', 'sdlsjy', 'sey', 'sft', 'sjcd', 'sjsd',
     'sxsdlsjy', 'szqy',
     'xdsjjt', 'xhld', 'xmxv', 'xnmf', 'xnwy', 'ycd', 'yy', 'zkwx', 'zqjk',
-    'abc_n', 'cd', 'jj', 'jk', 'pk', 'sv',
+    'abc_n', 'cd', 'jj', 'pk', 'sv',
     'ÄÏÄþÑÅÂ×', 'ÉîÛÚÁª²©', 'ÊÀ¼Í³©´ï', 'º£ÄÏÊÓ´°', 'ÖÐ¹úÆ½°²',
     '¥æ¤j', 'ªþ¾ô±¡¸', 'ªþ¾ô±¡¸t', 'µæ', '§N¥ú', '°¨¥d³q', '¥©§J¤O', '¶Rµæ']
 );

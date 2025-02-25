@@ -518,7 +518,7 @@ my @SINGLE_WORDS = qw(
    AUTHOL Avagard Ayranka Aytalus Azores Azure
 
    BAB BABK Bacch Badajara Bade Baden Badoell BAHABAWI Bahaj Baias Bajm 
-   Bajozero BAK Balia Balti Baltic Bambu Bappa BARC BARP Barsa BAST 
+   Bajozero BAK Balia Balti Baltic Bambu Bappa BARP Barsa BAST 
    BASZ Bat Batmix Bato Batusida BBCF BBN BBO BCBR BEAlert Begigütje 
    BEIH BELSPA Bem Bemix Bergmen Berksma Beton BHDM Bhide Bhinneka
    Biachite BICI BIN Biriceri Biz BKSE Blaca Blanda Blandat Blund BMAL 

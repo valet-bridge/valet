@@ -107,7 +107,8 @@ my %MULTI_TYPOS =
   'Serdika Open Teams' => ['serdika cup'],
   'St. Ivan Rilski Open Teams' => [
     'international bridge tournament st_ ivan rils',
-    'international tournament st_ ivan rilski'],
+    'international tournament st_ ivan rilski',
+    'ivan rilski open teams'],
   'Star Bet Casino Open Teams' => [
     'star bet casino sunny beach'],
   'Stara Zagora Open Teams' => ['vito teams'],

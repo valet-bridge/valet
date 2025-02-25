@@ -21,12 +21,16 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'New Zealand Inter-Provincial Teams' => [
+    'nz ip',
+    'nz ips'],
   'New Zealand Trials' => [
     'nz trials'],
 );
 
 my %SINGLE_TYPOS =
 (
+  'New Zealand Inter-Provincial Teams' => ['nzips'],
 );
 
 sub set_hash

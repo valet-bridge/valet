@@ -38,6 +38,7 @@ my %MULTI_TYPOS =
 (
   'French Cup' => [
     'coupe de france', 
+    'coupe france', 
     'la coupe de france'],
   'French First Division' => [
     'div_nat',
@@ -77,7 +78,9 @@ my %MULTI_TYPOS =
     'nationale interclubs division 1',
     'nationale division 1',
     'nationale interclub d1'],
-  'French Intercircle' => ['finale intercercle'],
+  'French Intercircle' => [
+    'final intercercle',
+    'finale intercercle'],
   'French Junior Trials' => [
     'french junior trial',
     'french juniors trial',

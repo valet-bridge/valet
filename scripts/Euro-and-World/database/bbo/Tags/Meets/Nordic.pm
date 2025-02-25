@@ -30,6 +30,7 @@ my %MULTI_TYPOS =
     'nordic championship',
     'nordic championships',
     'nordic team championships',
+    'nordic teams championships',
     'nordics'],
 );
 

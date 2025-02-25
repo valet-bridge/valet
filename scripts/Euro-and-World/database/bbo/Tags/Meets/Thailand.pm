@@ -24,6 +24,12 @@ my %MULTI_TYPOS =
   'Bangkok Bridge Festival' => [
     'amazing thailand bridge',
     'amazing thailand bridge festival'],
+  'Thailand National Games' => [
+    'thailand nation games'],
+  'Thailand National Youth Games' => [
+    'thailand youth games',
+    'thailand youth national games',
+    'thailand nationnal youth games']
 );
 
 my %SINGLE_TYPOS =

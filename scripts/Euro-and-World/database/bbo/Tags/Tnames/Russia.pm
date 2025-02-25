@@ -40,7 +40,9 @@ my %MULTI_TYPOS =
   'Russian Open Teams' => [
     'russian teams championship',
     'russian team championship'],
-  'Russian Open Team Trials' => ['russian open trials'],
+  'Russian Open Team Trials' => [
+    'russia open trials',
+    'russian open trials'],
   'Russian Women Team Trials' => ['russian women trials'],
   'Russian Premier League' => ['russian premiere league'],
   'Slava Cup' => [

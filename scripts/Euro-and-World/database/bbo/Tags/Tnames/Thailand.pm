@@ -28,7 +28,9 @@ my %MULTI_TYPOS =
 (
   'Thailand University Games' => [
     'university game of thailand',
-    'university games of thailand']
+    'university games of thailand'],
+  'Thailand Youth Games Open Teams' => [
+    'thailand national youth team games'],
 );
 
 my %SINGLE_TYPOS =

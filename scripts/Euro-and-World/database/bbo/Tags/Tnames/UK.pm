@@ -75,6 +75,7 @@ my %MULTI_TYPOS =
     'ebu european mixed teams trial',
     'ebu mixed teams trials',
     'england mixed team trials',
+    'england mixed teams trials',
     'england mixed trials',
     'english european mixed teams trials',
     'english european mixed trials',
