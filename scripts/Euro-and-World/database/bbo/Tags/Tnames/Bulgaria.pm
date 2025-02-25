@@ -96,8 +96,7 @@ my %MULTI_TYPOS =
     'teams tournament gabi',
     "tournament \"gabi\" pleven"],
   'Plovdiv Open Teams' => [
-    'national bridge tournament alert plovdiv',
-    "international bridge  tournament bk \"alert\""],
+    'national bridge tournament alert plovdiv'],
   'Popovo Friendship Open Teams' => [
     'popovo friendship tournament',
     'popovo tournament of friendship'],

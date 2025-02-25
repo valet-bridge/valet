@@ -132,7 +132,7 @@ my %MULTI_TYPOS =
     'sélection dames',
     'sélection dames france'],
   'Mike Dennery Pairs Cup' => [
-    'couple mike dennery'],
+    'coupe mike dennery'],
 );
 
 

@@ -143,7 +143,7 @@ my %MULTI_TYPOS =
    'sanqing mountain cup national bridge o',
    'sanqing mountain cup national bridge op',
    'san qing mountain national bridge open team to',
-   'shanqingshan open tournament bridge Contest'],
+   'shan qingshan open tournament bridge Contest'],
   'Shenhua Cup' => ['shen hua cup'],
   'Shenyang Spring Teams' => ['shenyang spring'],
   'Vanke Open Teams Cup' => [

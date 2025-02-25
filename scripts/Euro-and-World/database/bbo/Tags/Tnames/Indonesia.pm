@@ -60,6 +60,7 @@ my @MULTI_WORDS =
   'Indonesian Women Trials',
   'Kemenpora Cup',
   "Kepri Governor's Cup",
+  'Kijang Mas Open Teams',
   'MBH Invitational Cup',
   'Manado Fiesta Open Teams',
   'Menpora-Pertamina Cup',
@@ -76,7 +77,8 @@ my @MULTI_WORDS =
   'Tomohon Open Teams',
   'Tugu Muda Cup',
   'Walikota Solo Pairs Cup',
-  'West Java Open Teams'
+  'West Java Open Teams',
+  'West Kalimantan Open Teams'
 );
 
 my %MULTI_TYPOS =
@@ -93,8 +95,6 @@ my %MULTI_TYPOS =
     'piala bupati badung'],
   'Denny Sacul Memorial Open Teams' => [
     'denny sacul memorial bridge tournament'],
-  "East Java Governor's Cup" => [
-    'east java governor cup & btc cup'],
   'East Java Open Teams' => [
     'kejuaraan provinsi bridge jatim',
     'kejuaraan provinsi bridge jawa timur',
@@ -157,6 +157,9 @@ my %MULTI_TYPOS =
     'kepri governors cup',
     'kepri international tournament',
     'kepri international bridge tournament'],
+  'Kijang Mas Open Teams' => [
+    'kijang mas bridge open',
+    'kijangmas bridge open'],
   'MBH Invitational Cup' => ['mbh cup'],
   'Manado Fiesta Open Teams' => [
     'manado fiesta bridge tournament'],
@@ -193,11 +196,14 @@ my %MULTI_TYPOS =
     'walikota cup'],
   'West Java Open Teams' => [
     'banten sports week',
+    'porda west java',
     'regional west java',
     'west java regional',
     'west java regional games',
     'west java regional sport games',
     'west java regional spots event'],
+  'West Kalimantan Open Teams' => [
+    'kejurprop kalbar']
 );
 
 my %SINGLE_TYPOS =
