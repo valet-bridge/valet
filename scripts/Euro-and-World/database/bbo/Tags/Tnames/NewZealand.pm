@@ -16,6 +16,7 @@ my @MULTI_WORDS =
 (
   'Centre Island Open Teams',
   'New Zealand Inter-Provincial Open Teams',
+  'New Zealand Inter-Provincial Women Teams',
   'New Zealand Mixed Trials',
   'New Zealand Open Teams',
   'New Zealand Open Trials',

@@ -49,7 +49,8 @@ my %MULTI_TYPOS =
   'Hungarian Open Trials' => [
     'hungarian team trial',
     'hungarian team trials',
-    'hungarian teams trials'],
+    'hungarian teams trials',
+    'hungarian trials'],
   'Hungarian Santa Invitational' => [
     'santa invitational'],
   'Hungarian Women Trials' => [

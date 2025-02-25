@@ -229,6 +229,7 @@ my %MULTI_TYPOS =
   'Polish U20 Trials' => [
     'u20 polish trials'],
   'Polish U21 Pair Trials' => [
+    'polish u21 pairs trials',
     'polish u21 trials pairs',
     'rozgrywki kadry u-21'],
   'Polish U25 Trials' => ['poish u25 trials'],

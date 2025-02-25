@@ -72,6 +72,7 @@ my %MULTI_TYPOS =
     'denmark 1_ div',
     'denmark 1_ division',
     'denmark 1_division',
+    'denmark first division',
     'denmark team championship',
     'dm hold',
     'slutspil 1_ division'],
@@ -90,6 +91,8 @@ my %MULTI_TYPOS =
     'danish mix pair championship',
     'danish mix pairs',
     'danish national mix-pairs championship'],
+  'Danish Mixed Teams' => [
+    'dm mixhold'],
   'Danish Open Pairs' => [
     'danish championship open pairs',
     'danish open pairs championship',

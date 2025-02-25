@@ -30,7 +30,6 @@ my @MULTI_WORDS =
   'Delhi Gymkhana Club Dhampur Trophy',
   'Delhi Gymkhana Club Open Pairs',
   'Delhi Gymkhana Club Open Teams',
-  'Denny Sacul Memorial Open Teams',
   'Fenesta Open Teams',
   'Godfrey Phillips All India Open',
   'Hindusthan Club Teams',
@@ -156,8 +155,6 @@ my %MULTI_TYPOS =
     'dgc centenary celebrations',
     'dgc centenary tournament',
     'dgc open championship'],
-  'Denny Sacul Memorial Open Teams' => [
-    'denny sacul mamorial bridge tournament'],
   'Indian Men Trials' => [
     'indian men national camp',
     'indian men qualification camp'],

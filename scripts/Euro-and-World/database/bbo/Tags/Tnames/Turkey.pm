@@ -63,6 +63,7 @@ my @MULTI_WORDS =
   'Turkish Swiss Mixed Teams',
   'Turkish Super Cup',
   'Turkish U16 Pairs',
+  'Turkish U21 Open Pair Trials',
   'Turkish U21 Open Team Trials',
   'Turkish U26 Open Team Trials',
   'Turkish U26 Women Team Trials',

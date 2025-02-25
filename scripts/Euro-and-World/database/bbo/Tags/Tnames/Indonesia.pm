@@ -18,6 +18,7 @@ my @MULTI_WORDS =
   'Bank Nagari Cup',
   'Batam Open Teams',
   'Bupati Badung Cup',
+  'Denny Sacul Memorial Open Teams',
   'East Java Open Teams',
   'Electric Cup',
   'FTBC Tanjungpura University',
@@ -83,6 +84,8 @@ my %MULTI_TYPOS =
     'batam international bot'],
   'Bupati Badung Cup' => [
     'piala bupati badung'],
+  'Denny Sacul Memorial Open Teams' => [
+    'denny sacul memorial bridge tournament'],
   'East Java Open Teams' => [
     'kejuaraan provinsi bridge jatim',
     'kejuaraan provinsi bridge jawa timur',

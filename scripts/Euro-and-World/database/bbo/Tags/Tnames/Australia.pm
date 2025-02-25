@@ -19,6 +19,7 @@ my @MULTI_WORDS =
   'Australian Grand National Open Teams',
   'Australian Junior Teams',
   'Australian Mixed Teams',
+  'Australian Mixed Trials',
   'Australian National Open Teams',
   'Australian National Senior Teams',
   'Australian National Women Teams',
