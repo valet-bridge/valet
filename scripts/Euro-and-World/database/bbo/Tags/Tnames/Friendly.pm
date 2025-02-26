@@ -54,6 +54,7 @@ my @MULTI_WORDS =
   'Poland Practice',
   'Portugal Friendly',
   'Portugal Practice',
+  'Russia Practice',
   'Scotland Exhibition',
   'Scotland Friendly',
   'Scotland Practice',

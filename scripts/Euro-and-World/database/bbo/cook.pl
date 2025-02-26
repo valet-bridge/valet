@@ -176,7 +176,6 @@ while ($line = <$fh>)
   Title::Interpret::interpret($whole, \@chains_title,
     \$teams{SCORING}, $chunk{BBONO});
 
-next;
 
   # TEAMS
 
@@ -209,7 +208,6 @@ next;
 
 
   # Try to figure out whether it is teams, pairs or individual.
-
 
 
   # EVENTS

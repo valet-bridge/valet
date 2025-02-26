@@ -646,6 +646,7 @@ my %MULTI_TYPOS =
   'China Global Times' => ['chinal global times', 'huan qiu Shi bao'],
   'China State Construction Engineering' => ['cscec. as'],
   'China Trinergy' => ['chinatrinergy'],
+  'Chongqing Jianke' => ['chongqing jk'],
   'CONNECTOR' => ['aj-connector', 'aj connector'],
   'Dalian Aoxin' => ['da lian ao xin'],
   'Data Steel' => ['datta steel'],

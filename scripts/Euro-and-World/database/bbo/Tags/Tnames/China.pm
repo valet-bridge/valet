@@ -29,6 +29,7 @@ my @MULTI_WORDS =
   'Chinese Mixed Trials',
   'Chinese Open Teams',
   'Chinese Open Trials',
+  'Chinese University Teams',
   'Chinese Women First League',
   'Chinese Women Teams',
   'Chung Hua Cup',

@@ -91,7 +91,7 @@ my %SINGLE_TYPOS =
     'peyisihan'],
   Final => ['finala', 'finalds', 'finale', 'finali', 'finals',
     'finales', 'finall', 'finar', 'finas', 'finat', 'finsl', 
-    'finais', 'finalns', 'fina³', 'fianal', 'fianl', 'fianls',
+    'finais', 'finalns', 'fina³', 'fianal', 'fianl', 'fianls', 'finalý',
     'fiinal', 'fina', 'fýnal', 'finalleri', 'fina³y', 'fn', 'finaller',
     'filnal', 'fnal', 'fnals', 'ff', 'finaali', 'fýnalleri', 'fýnallerý',
     'slutspil', 'slutspillet', 'superfinal', 'finalen'],

@@ -65,9 +65,10 @@ my @MULTI_WORDS =
   'Turkish Swiss Open Teams',
   'Turkish Super Cup',
   'Turkish U16 Pairs',
-  'Turkish U21 Open Pair Trials',
-  'Turkish U21 Open Team Trials',
-  'Turkish U26 Open Team Trials',
+  'Turkish U21 Pair Trials',
+  'Turkish U21 Team Trials',
+  'Turkish U26 Teams',
+  'Turkish U26 Team Trials',
   'Turkish U26 Women Team Trials',
   'Turkish U31 Team Trials',
   'Turkish University Teams',
@@ -242,7 +243,8 @@ my %MULTI_TYPOS =
     'turkish east mediterranean',
     'turkish east mediterranean club teams',
     'turkish eastern mediterranean club',
-    'turkish eastern mediterranean club teams'],
+    'turkish eastern mediterranean club teams',
+    'turkiye dogu akdeniz bolge'],
   'Turkish Mixed Team Trials' => [
     'karisik milli takim secme',
     'karýþýk milli takým seçmesi',
@@ -328,10 +330,10 @@ my %MULTI_TYPOS =
     'turkiye nakavt takim sampiyonasi',
     'turkiye nakavt takimlar sampiyonasi',
     'turkiye nakavt takimlar þampiyonasi'],
-  'Turkish U21 Open Team Trials' => [
+  'Turkish U21 Team Trials' => [
     'turkey u21 national team selection',
     'turkey u21 team selection'],
-  'Turkish U26 Open Team Trials' => [
+  'Turkish U26 Team Trials' => [
     'u26 genc milli takim secmeleri',
     'u26 genç milli takým seçmesi',
     'u26 genç mýllý takim seçmesý'],
@@ -373,6 +375,7 @@ my %MULTI_TYPOS =
     'turkiye kis dortlu',
     'turkiye kis takimlar sampiyonasi',
     'turkiye kis acik takimlar sampiyonasi',
+    'turkiye kiþ açik takimlar þampýyonasi',
     'türkýye kiþ açik takimlar þampýyonas',
     'türkýye kiþ açik takimlar þampýyonasi'],
   'Turkish Winter Women Teams' => [
@@ -400,6 +403,7 @@ my %MULTI_TYPOS =
     'turkiye kadin milli secme',
     'turkiye kadin milli secmeleri',
     'turkiye kadin milli takim secme',
+    'turkiye kadin milli takim secmesi',
     'turkiye kadin mýllý seçmesý',
     'türkýye kadin mýllý takim seçmesý'],
   'Western Mediterranean Club Teams' => [

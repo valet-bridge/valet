@@ -342,10 +342,11 @@ my @MULTI_WORDS =
 
   'Tasher Desh',
   'Team Bru',
-  'Team Zang',
+  'Team JK',
   'Team Lanka',
   'Team Saju',
   'Team Z',
+  'Team Zang',
   'Teyzenin Yeri',
   'Tida-Steli',
   'The Lombard',
