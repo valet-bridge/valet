@@ -44,7 +44,8 @@ my %SINGLE_TYPOS =
     'istis', 'pool', 'poule'],
   Half => ['hallf', 'hlf', 'halvleg', 'halv', 'lhf', 'mt', 'ha'],
   Match => ['m', 'mathc', 'kamp', 'incontro', 'matxh', 'macth',
-    'meci', 'matches', 'mo', 'maych', 'mecz', 'mac', 'maç'],
+    'meci', 'matches', 'mo', 'maych', 'mecz', 'mac', 'maç',
+    'maclar', 'maçlar'],
   Phase => ['etap', 'fase'],
   Place => ['puesto', 'lugar'],
   Quarter => ['qtr', 'quaerter'],
@@ -66,7 +67,7 @@ my %SINGLE_TYPOS =
   Set => ['sets'],
   Stage => ['stg'],
   Stanza => ['stanzas', 'stranza', 'stsnza', 'stan', 'stanzaq'],
-  Table => ['t', 'tisch', 'tafel'],
+  Table => ['t', 'tisch', 'tafel', 'tbl'],
   Week => ['wk']
 );
 

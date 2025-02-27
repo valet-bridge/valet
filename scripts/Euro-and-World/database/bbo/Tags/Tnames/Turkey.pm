@@ -26,6 +26,7 @@ my @MULTI_WORDS =
   'Bornova Arena Spring League',
   'Bornova Arena Invitational Pairs',
   'Cappadocia Open Pairs',
+  'Deniz Unlu Open Teams',
   'Fatih Kiral Pairs',
   'Gelibolu Peace Teams',
   'Goksu-Yalikavak Pairs',
@@ -125,6 +126,8 @@ my %MULTI_TYPOS =
   'Bornova Arena Spring League' => [
     'bornova bric kulubu spring league',
     'spring league bornova bridge arena'],
+  'Deniz Unlu Open Teams' => [
+    'deniz unlu teams'],
   'Fatih Kiral Pairs' => [
     'fatih kiral cup'],
   'Gelibolu Peace Teams' => ['gelibolu peace cup'],

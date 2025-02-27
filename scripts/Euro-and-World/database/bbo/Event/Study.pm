@@ -126,6 +126,10 @@ my @LOCAL_SUBS =
   { START => 39721, END => 39730, TEXT => 'R16', CORR => 'Rof16' },
   { START => 39899, END => 39907, TEXT => 'R16', CORR => 'Rof16' },
   { START => 43183, END => 43194, TEXT => 'R16', CORR => 'Rof16' },
+
+  { START => 53497, END => 53894, TEXT => 'Preselection', CORR => '' },
+  { START => 53889, END => 53894, TEXT => 'Preselection', CORR => '' },
+  { START => 55813, END => 55854, TEXT => 'FMBBAM', CORR => 'BAM' },
 );
 
 
