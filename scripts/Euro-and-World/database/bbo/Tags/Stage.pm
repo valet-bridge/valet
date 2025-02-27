@@ -37,6 +37,7 @@ my %MULTI_TYPOS =
     'quater final', 'quater finals', 'round of 8', 'rd of 8', 'r of 8',
     'æwieræfina³y', 'qtr finals', 'phase à 8', 'quoter-finals', 
     'quart de finale',
+    'ceyrek final',
     'quarter f', '1/4 f', '1_4 f', 'quaerter final', '1_4 fin',
     '1_4 final', '1_4 final_', '1_4 fina', '1/4f', '1_4f',
     '1_4 finales', 'quet final', 'quarti finale', '1_4 finale', 
@@ -87,6 +88,7 @@ my %SINGLE_TYPOS =
   Consolation => ['conso'],
   Elimination => [
     'eliminations',
+    'elim',
     'penyisihan',
     'peyisihan'],
   Final => ['finala', 'finalds', 'finale', 'finali', 'finals',

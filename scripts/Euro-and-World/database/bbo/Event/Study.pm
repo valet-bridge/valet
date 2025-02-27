@@ -129,7 +129,22 @@ my @LOCAL_SUBS =
 
   { START => 53497, END => 53894, TEXT => 'Preselection', CORR => '' },
   { START => 53889, END => 53894, TEXT => 'Preselection', CORR => '' },
+  { START => 55562, END => 55598, TEXT => 'Grup ', CORR => 'Round ' },
   { START => 55813, END => 55854, TEXT => 'FMBBAM', CORR => 'BAM' },
+  { START => 65399, END => 66001, TEXT => '^SD-', 
+    CORR => "d'Orsi " },
+  { START => 72015, END => 72023, TEXT => 'SwR', CORR => 'Swiss - Round' },
+  { START => 72887, END => 73251, TEXT => 'første halvleg', 
+    CORR => 'Half 1' },
+  { START => 72890, END => 73253, TEXT => 'anden halvleg', 
+    CORR => 'Half 2' },
+  { START => 73113, END => 73153, TEXT => 'SwR', CORR => 'Swiss - Round' },
+  { START => 75064, END => 75089, TEXT => 'SwR', CORR => 'Swiss - Round' },
+  { START => 77141, END => 77157, TEXT => 'SWISS LEAGUE', 
+    CORR => 'SL' },
+  { START => 79317, END => 79342, TEXT => 'SwR', CORR => 'Swiss - Round' },
+  { START => 80419, END => 80674, TEXT => '^WC-', 
+    CORR => 'Wuhan Cup ' },
 );
 
 

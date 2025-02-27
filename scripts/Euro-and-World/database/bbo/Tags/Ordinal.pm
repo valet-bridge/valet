@@ -26,7 +26,7 @@ my @SINGLE_WORDS = qw(
 my %SINGLE_TYPOS =
 (
     1 => [qw(first 1rst 1er primera fir)],
-    2 => [qw(second segundo segunda sec)],
+    2 => [qw(second segundo segunda sec 2ème 3ème)],
     3 => [qw(third tercer)],
     4 => [qw(fourth 4rth)],
     5 => ['fifth'],
