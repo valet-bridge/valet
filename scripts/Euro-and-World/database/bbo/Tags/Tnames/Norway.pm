@@ -35,6 +35,7 @@ my @MULTI_WORDS =
   'Norwegian Open IMP Pairs',
   'Norwegian Open Pairs',
   'Norwegian Open Teams',
+  'Norwegian Patton Teams',
   'Norwegian Premier League',
   'Norwegian Senior Teams',
   'Norwegian Swiss Pairs',
@@ -123,6 +124,7 @@ my %MULTI_TYPOS =
   'Norwegian Corporate Championship' => [
     'norwegian corp_ championship'],
   'Norwegian Mixed Pairs' => [
+    'nbf mixed pairs',
     'nm mix pairs',
     'nor mixed pairs ch_ship',
     'norwegian championship mix swiss pair',
@@ -136,6 +138,7 @@ my %MULTI_TYPOS =
   'Norwegian Mixed Team Trials' => [
     'norwegian mix team trials'],
   'Norwegian Mixed Teams' => [
+    'nbf mixed teams',
     'norwegian championship mix swiss teams',
     'norwegian championship mix teams'],
   'Norwegian Open Pairs' => [
@@ -157,6 +160,8 @@ my %MULTI_TYPOS =
     'norwegian chships teams',
     'norwgian open teams championship',
     'norwegian chmp teams'],
+  'Norwegian Patton Teams' => [
+    'nbf patton teams'],
   'Norwegian Premier League' => [
     'nbf 1_division',
     'nbf 1_divisjon',

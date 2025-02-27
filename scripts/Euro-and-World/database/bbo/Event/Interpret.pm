@@ -49,6 +49,7 @@ my %ITERATORS_MAJOR_MINOR = (
   'GHTD Cup' => ['ROUND', 'SEGMENT'],
   'Indian Senior Trials' => ['SESSION', 'ROUND'],
   'Norwegian Club Teams' =>  ['ROUND', 'SEGMENT'],
+  'Norwegian Open Teams' =>  ['ROUND', 'SEGMENT'],
   'Norwegian Premier League' => ['ROUND', 'SEGMENT'],
   'Sao Paulo State Championship' => ['SEGMENT', ''],
   'South American Women Teams' => ['SEGMENT', ''],
