@@ -78,6 +78,7 @@ my @SINGLE_WORDS = qw(
   Playoff
   Rof6 Rof12 Rof16 Rof32 Rof64
   Qualifying Quarterfinal
+  Relegation
   Repechage
   Semifinal 
   Tiebreak
