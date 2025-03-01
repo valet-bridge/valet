@@ -22,6 +22,7 @@ my @MULTI_WORDS =
   'Sivrioglu Festival',
   'Turkish-Greek Friendship Festival',
   'Turkish Open Trials', # TODO Is this a Meet?
+  'Turkish Summer Championships',
   'Turkish Winter Championships',
   'Turkish Women Trials' # TODO Is this a Meet?
 );
@@ -53,6 +54,8 @@ my %MULTI_TYPOS =
     'turkish open national team selection',
     'turkish open team selection',
     'turkish open team trials'],
+  'Turkish Summer Championships' => [
+    'turkish summer championship'],
   'Turkish Winter Championships' => [
     'turkish winter championship',
     'turkish winter championsship'],

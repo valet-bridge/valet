@@ -33,6 +33,7 @@ my %MULTI_TYPOS =
     'asia pacific bridge federation champio teams'],
   'APBF Youth Championships' => [
     'apbf open youth championship',
+    'apbf youth teams championships',
     'pabf youth championships'],
   'ASEAN Club Championship' => [
     "aseam bridge club c'ship",

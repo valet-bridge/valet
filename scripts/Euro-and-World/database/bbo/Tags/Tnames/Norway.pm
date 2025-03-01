@@ -180,6 +180,7 @@ my %MULTI_TYPOS =
   'Norwegian Senior Teams' => [
     'nbf senior team championship'],
   'Norwegian Swiss Pairs' => [
+    'nbf swiss pairs',
     'nm monrad pairs',
     'nm swiss pairs',
     'nor swiss pairs',
@@ -188,6 +189,7 @@ my %MULTI_TYPOS =
     'norwegian swiss open pairs',
     'norwegian swiss pairs championship'],
   'Norwegian Swiss Teams' => [
+    'nbf swiss teams',
     'nm-monrad-lag',
     'nm monrad lag',
     'nm-monrad-teams',
