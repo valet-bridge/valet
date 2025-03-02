@@ -16,6 +16,7 @@ my @MULTI_WORDS =
 (
   'Argentina Friendly',
   'Australia Challenge',
+  'Australia Friendly',
   'Australia Practice',
   'Bay Area Challenge',
   'Brighton Exhibition',

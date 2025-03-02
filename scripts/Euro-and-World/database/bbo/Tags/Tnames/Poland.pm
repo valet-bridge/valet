@@ -134,7 +134,8 @@ my %MULTI_TYPOS =
   'Plock District League' => [
     'plockiej ligi okregowej'],
   'Polish BAM Teams' => [
-    'bam team championship of poland'],
+    'bam team championship of poland',
+    'teams bam championship of poland'],
   'Polish Boys Championship' => [
     'polish championship boys'],
   'Polish Business League' => [
@@ -167,6 +168,7 @@ my %MULTI_TYPOS =
   'Polish Online Open Teams' => [
     'polish online teams'],
   'Polish Open Pairs' => [
+    'championship of poland open pairs',
     'forumbridge.pl top pairs',
     'forumbridge_pl top pairs',
     'inea cup',

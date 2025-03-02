@@ -198,6 +198,7 @@ my %MULTI_TYPOS =
   'Jaya Jain Memorial' => ['mrs_ jaya jain memorial'],
   'JHIC Silver Jubilee Open Teams' => [
     'jhic silver jub',
+    'jhic silver jubilee',
     'jhic silver jubilee tourney'],
   'Justice J M Lal All India Open Teams' => [
     'justice j m lal all india open',
