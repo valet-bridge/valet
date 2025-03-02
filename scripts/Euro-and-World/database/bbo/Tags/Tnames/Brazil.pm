@@ -32,6 +32,7 @@ my %MULTI_TYPOS =
   'Brazilian Open Teams' => [
     'brasil champ',
     'brasilian championship',
+    'brasilian open teams',
     'brazilian championship',
     'brazilian championships',
     'brazilian chapionship',
