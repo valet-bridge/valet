@@ -47,8 +47,15 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'APBF Mixed Teams' => [
+    'apbf mixed'],
+  'APBF Open Teams' => [
+    'apbf open'],
   'APBF Senior Teams' => [
+    'apbf senior',
     'apbf seniors'],
+  'APBF Women Teams' => [
+    'apbf ladies'],
   'ASEAN Open Club Pairs' => [
     'asean open pairs'],
   'ASEAN Open Club Teams' => [
