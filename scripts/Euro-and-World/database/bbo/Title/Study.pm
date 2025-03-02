@@ -737,12 +737,14 @@ my @LOCAL_SUBS =
     TEXT => 'T-D1 ', CORR => '' },
   { START => 49381, END => 49389, 
     TEXT => 'Tournament of Twin Towns', CORR => 'Twin Towns Elblag' },
-  { START => 49680, END => 49704, 
-    TEXT => '1_16', CORR => 'Rof16' },
+  { START => 49680, END => 49704, TEXT => '1_16', CORR => 'Rof16' },
   { START => 49866, END => 50023, 
     TEXT => 'Sélection Open', CORR => 'French Open Trials' },
   { START => 50651, END => 50869, 
     TEXT => 'ABF Zonals', CORR => 'African Zonal Championships' },
+  { START => 50692, END => 50722, TEXT => '1_16', CORR => 'Rof16' },
+  { START => 50755, END => 50772, TEXT => '1_8', CORR => 'QF' },
+  { START => 50798, END => 50829, TEXT => '1_4', CORR => 'SF' },
   { START => 51028, END => 51238, 
     TEXT => 'BK S:t Erik Mästarserien Final', 
     CORR => 'S:t Erik Championship Series - Final' },
@@ -795,6 +797,7 @@ my @LOCAL_SUBS =
     CORR => 'Indian Masters Open Teams' },
   { START => 54238, END => 54286, 
     TEXT => 'Intermediate', CORR => '' },
+  { START => 54574, END => 54596, TEXT => 'T. S2', CORR => '' },
   { START => 54665, END => 54717, 
     TEXT => 'Grand Prix of Poland', CORR => 'Grand Prix of Poland Teams' },
   { START => 54674, END => 54686, 
@@ -1027,6 +1030,8 @@ my @LOCAL_SUBS =
     TEXT => 'Pokalturnering', CORR => 'Danish Cup' },
   { START => 72698, END => 72741, 
     TEXT => 'Grand Prix of Poland', CORR => 'Grand Prix of Poland Teams' },
+  { START => 72731, END => 72741, 
+    TEXT => 'Lubomino F', CORR => 'Lubomino Final' },
   { START => 72790, END => 72806, 
     TEXT => 'Open Trials', CORR => 'EBU Open Trials' },
   { START => 72877, END => 72901, 
@@ -1208,8 +1213,6 @@ my @LOCAL_SUBS =
   { START => 81245, END => 81266, 
     TEXT => 'India All Star vs World All Star Team', 
     CORR => 'India Exhibition' },
-  { START => 81332, END => 81381, 
-    TEXT => 'Interklub', CORR => 'Swiss Club Championship' },
   { START => 81451, END => 81457, 
     TEXT => 'KU-BEBAS', CORR => 'Open' },
   { START => 81827, END => 81866, 
@@ -1280,6 +1283,12 @@ my @LOCAL_SUBS =
     TEXT => 'Grand Prix of Poland', CORR => 'Grand Prix of Poland Teams' },
   { START => 85135, END => 85155, 
     TEXT => 'Danmark - 1_ division', CORR => 'Danish First Division' },
+  { START => 85267, END => 85437, 
+    TEXT => 'Buenos Aires-O$', CORR => 'Buenos Aires - Open' },
+  { START => 85267, END => 85437, 
+    TEXT => 'Buenos Aires-S$', CORR => 'Buenos Aires - Seniors' },
+  { START => 85267, END => 85514, 
+    TEXT => 'Buenos Aires-W$', CORR => 'Buenos Aires - Women' },
   { START => 85478, END => 85514, 
     TEXT => 'Danmark - 1_division', CORR => 'Danish First Division' },
   { START => 85590, END => 85671, 
@@ -1295,6 +1304,24 @@ my @LOCAL_SUBS =
     TEXT => 'Grand Prix of Poland', CORR => 'Grand Prix of Poland Teams' },
 );
 
+my @LOCAL_SUBS_INTERPOL =
+(
+  { START => 49428, END => 49491, 
+    TEXT => '2016-2017 (\d+) af 11$', 
+    CORR => '2016-2017 - Round $1 of 11' },
+  { START => 78194, END => 78837, 
+    TEXT => 'Bundesliga 2023 (\d)_9', 
+    CORR => 'Bundesliga 2023 - Round $1 of 9' },
+  { START => 79529, END => 79734, 
+    TEXT => '(\d)-3\)', CORR => 'Segment $1 of 3)' },
+  { START => 81332, END => 81381, 
+    TEXT => 'Interklub 2023 (\d)-2', 
+    CORR => 'Swiss Club Championship - Match $1 of 2' },
+  { START => 82213, END => 82859, 
+    TEXT => 'Bundesliga 2024 (\d)_9', 
+    CORR => 'Bundesliga 2024 - Round $1 of 9' },
+);
+
 
 sub local_substitutions
 {
@@ -1307,7 +1334,23 @@ sub local_substitutions
       $text =~ s/$entry->{TEXT}/$entry->{CORR}/i;
     }
   }
+
+  for my $entry (@LOCAL_SUBS_INTERPOL)
+  {
+    if ($bbono >= $entry->{START} && $bbono <= $entry->{END})
+    {
+      $text =~ s/$entry->{TEXT}/linterpol($1, $2, $entry->{CORR})/ie;
+    }
+  }
   return $text;
+}
+
+
+sub linterpol
+{
+  my ($m1, $m2, $corr) = @_;
+  $corr =~ s/\$1/$m1/;
+  return $corr =~ s/\$2/$m2/r;
 }
 
 

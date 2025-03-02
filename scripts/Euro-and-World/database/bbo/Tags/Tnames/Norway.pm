@@ -129,6 +129,7 @@ my %MULTI_TYPOS =
     'nor mixed pairs ch_ship',
     'norwegian championship mix swiss pair',
     'norwegian championship mix swiss pairs',
+    'norwegian championship mixed pairs',
     'norwegian championship mixed swiss pairs',
     'norwegian championship open mixed pairs',
     'norwegian championships mixed pairs',
@@ -138,11 +139,13 @@ my %MULTI_TYPOS =
   'Norwegian Mixed Team Trials' => [
     'norwegian mix team trials'],
   'Norwegian Mixed Teams' => [
+    'nbf mixed team championship',
     'nbf mixed teams',
     'norwegian championship mix swiss teams',
     'norwegian championship mix teams'],
   'Norwegian Open Pairs' => [
     'nbf norwegian pairs',
+    'nbf pairs',
     'nm pairs',
     'nm-pairs',
     'norwegian championship open pairs',

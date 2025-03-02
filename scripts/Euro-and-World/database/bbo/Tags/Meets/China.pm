@@ -18,6 +18,7 @@ my @MULTI_WORDS =
   'China Elite Tournament',
   'Chinese Club Championships',
   'Chinese Team Championships',
+  'Hainan Bridge Festival',
   'JPD Cup'
 );
 

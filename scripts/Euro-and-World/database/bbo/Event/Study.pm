@@ -128,13 +128,16 @@ my @LOCAL_SUBS =
   { START => 43183, END => 43194, TEXT => 'R16', CORR => 'Rof16' },
 
   { START => 47933, END => 48068, TEXT => '^RR2-', CORR => 'RR ' },
-  { START => 49185, END => 49227, TEXT => '^Segment Q(\d_\d)', 
-    CORR => 'Qualifying - Segment $1' },
+  { START => 52564, END => 52577, TEXT => '1_8', CORR => 'QF' },
   { START => 53497, END => 53894, TEXT => 'Preselection', CORR => '' },
   { START => 53889, END => 53894, TEXT => 'Preselection', CORR => '' },
   { START => 54611, END => 54659, TEXT => 'O L', CORR => 'Open' },
+  { START => 55469, END => 55480, TEXT => '^Swiss A ', 
+    CORR => 'Swiss - Session ' },
   { START => 55562, END => 55598, TEXT => 'Grup ', CORR => 'Round ' },
   { START => 55813, END => 55854, TEXT => 'FMBBAM', CORR => 'BAM' },
+  { START => 58273, END => 58329, TEXT => '^Swiss A ', 
+    CORR => 'Swiss - Session ' },
   { START => 58404, END => 58417, TEXT => '^Silver ', 
     CORR => 'Indian Silver Open Teams ' },
   { START => 58405, END => 58418, TEXT => '^Gold ', 
@@ -149,8 +152,6 @@ my @LOCAL_SUBS =
     CORR => 'Indian Gold Open Teams ' },
   { START => 60699, END => 60717, TEXT => '^Silver ', 
     CORR => 'Indian Silver Open Teams ' },
-  { START => 62377, END => 62538, TEXT => '^(\d+)-(\d)$', 
-    CORR => '$1 of $2' },
   { START => 63131, END => 63261, TEXT => '^WT-', 
     CORR => 'Women Teams - ' },
   { START => 63739, END => 63796, TEXT => '^Silver ', 
@@ -169,16 +170,8 @@ my @LOCAL_SUBS =
   { START => 66027, END => 66063, TEXT => '^LM ', CORR => 'Open Teams ' },
   { START => 67400, END => 67411, TEXT => '^Gold ', 
     CORR => 'Indian Gold Open Teams ' },
-  { START => 69777, END => 69787, TEXT => '^(\d+):(\d)$', 
-    CORR => '$1 of $2' },
-  { START => 69792, END => 69787, TEXT => '^(\d+):12$', 
-    CORR => '$1 of 12' },
-  { START => 69814, END => 69834, TEXT => '^(\d+):12$', 
-    CORR => '$1 of 12' },
   { START => 67982, END => 68005, TEXT => '^DR ', CORR => "RR " },
   { START => 72015, END => 72023, TEXT => 'SwR', CORR => 'Swiss - Round' },
-  { START => 72397, END => 72416, TEXT => '(\d+):12', CORR => '$1 of 12' },
-  { START => 72441, END => 72455, TEXT => '(\d+):14', CORR => '$1 of 14' },
   { START => 72887, END => 73251, TEXT => 'første halvleg', 
     CORR => 'Half 1' },
   { START => 72890, END => 73253, TEXT => 'anden halvleg', 
@@ -187,10 +180,6 @@ my @LOCAL_SUBS =
   { START => 73853, END => 73866, TEXT => 'CEYREK', CORR => 'QF' },
   { START => 75064, END => 75089, TEXT => 'SwR', CORR => 'Swiss - Round' },
   { START => 75090, END => 75098, TEXT => '^DR ', CORR => "RR " },
-  { START => 75506, END => 75538, TEXT => '^(\d+):12$', 
-    CORR => '$1 of 12' },
-  { START => 75595, END => 75631, TEXT => '^(\d+):14$', 
-    CORR => '$1 of 14' },
   { START => 76428, END => 76472, TEXT => '^DR ', CORR => "RR " },
   { START => 76643, END => 76683, TEXT => '^SL *Gold ', 
     CORR => 'SL - Indian Gold Open Teams ' },
@@ -204,8 +193,6 @@ my @LOCAL_SUBS =
     CORR => 'Indian Silver Open Teams ' },
   { START => 77692, END => 77712, TEXT => '^Gold ', 
     CORR => 'Indian Gold Open Teams ' },
-  { START => 79288, END => 79351, TEXT => '^(\d+)-(\d)$', 
-    CORR => '$1 of $2' },
   { START => 79317, END => 79342, TEXT => 'SwR', CORR => 'Swiss - Round' },
   { START => 79346, END => 79362, TEXT => '^DR ', CORR => "RR " },
   { START => 79783, END => 79789, TEXT => '^Silver ', 
@@ -221,15 +208,48 @@ my @LOCAL_SUBS =
     CORR => 'Indian Gold Open Teams ' },
   { START => 82113, END => 82118, TEXT => '^Gold ', 
     CORR => 'Indian Gold Open Teams ' },
-  { START => 83546, END => 83587, TEXT => '^(\d+)-(\d)$', 
-    CORR => '$1 of $2' },
   { START => 84245, END => 84256, TEXT => '^FNRR', CORR => "Final RR " },
-  { START => 84472, END => 84500, TEXT => '^(\d+):(\d+)$', 
-    CORR => '$1 of $2' },
   { START => 84833, END => 84949, TEXT => '^Gold ', 
     CORR => 'Indian Gold Open Teams ' },
   { START => 86039, END => 86098, TEXT => '^Gold ', 
     CORR => 'Indian Gold Open Teams ' },
+);
+
+my @LOCAL_SUBS_INTERPOL =
+(
+  { START => 49185, END => 49228, TEXT => '^Segment Q(\d_\d)', 
+    CORR => 'Qualifying - Segment $1' },
+  { START => 54649, END => 54718, TEXT => 'RR(\d) (\d-\d)', 
+    CORR => 'RR Round $1 - Segment $2' },
+  { START => 62377, END => 62538, TEXT => '^(\d+)-(\d)$', 
+    CORR => '$1 of $2' },
+  { START => 69777, END => 69787, TEXT => '^(\d+):(\d)$', 
+    CORR => '$1 of $2' },
+  { START => 69792, END => 69787, TEXT => '^(\d+):12$', 
+    CORR => '$1 of 12' },
+  { START => 69814, END => 69834, TEXT => '^(\d+):12$', 
+    CORR => '$1 of 12' },
+  { START => 72397, END => 72416, TEXT => '(\d+):12', CORR => '$1 of 12' },
+  { START => 72441, END => 72455, TEXT => '(\d+):14', CORR => '$1 of 14' },
+  { START => 75506, END => 75538, TEXT => '^(\d+):12$', 
+    CORR => '$1 of 12' },
+  { START => 75595, END => 75631, TEXT => '^(\d+):14$', 
+    CORR => '$1 of 14' },
+  { START => 78095, END => 78126, TEXT => '^(\d+)-5$', CORR => '$1 of 5' },
+  { START => 78678, END => 78699, TEXT => '^(\d+):(\d)$', 
+    CORR => 'Match $1 Segment $2' },
+  { START => 79288, END => 79351, TEXT => '^(\d+)-(\d)$', 
+    CORR => '$1 of $2' },
+  { START => 82685, END => 82716, TEXT => '^(\d)-5$', 
+    CORR => 'Segment $1 of 5' },
+  { START => 83546, END => 83587, TEXT => '^(\d+)-(\d)$', 
+    CORR => '$1 of $2' },
+  { START => 84427, END => 84453, TEXT => '^(\d+):(\d+)$', 
+    CORR => '$1 of $2' },
+  { START => 84472, END => 84500, TEXT => '^(\d+):(\d+)$', 
+    CORR => '$1 of $2' },
+  { START => 84872, END => 84882, TEXT => '^Final (\d)-3$', 
+    CORR => 'Final - Segment $1 of 3' },
 );
 
 
@@ -245,11 +265,27 @@ sub local_substitutions
     }
   }
 
+  for my $entry (@LOCAL_SUBS_INTERPOL)
+  {
+    if ($bbono >= $entry->{START} && $bbono <= $entry->{END})
+    {
+      $text =~ s/$entry->{TEXT}/linterpol($1, $2, $entry->{CORR})/ie;
+    }
+  }
+
   if ($bbono >= 28879 && $bbono <= 28887)
   {
     $text =~ s/^(T\d+) (\d+_\d+)$/$1 Round $2/;
   }
   return $text;
+}
+
+
+sub linterpol
+{
+  my ($m1, $m2, $corr) = @_;
+  $corr =~ s/\$1/$m1/;
+  return $corr =~ s/\$2/$m2/r;
 }
 
 
