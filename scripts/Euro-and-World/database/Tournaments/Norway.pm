@@ -318,63 +318,6 @@ my %TOURNAMENTS_NORWAY =
     }
   },
 
-  "Jessheim New Year's Pairs" =>
-  {
-    %GLOBAL,
-    ORIGIN => 'Regional',
-    CITY => 'Jessheim',
-    FORM => 'Pairs',
-    SCORING => 'MP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2015' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2015,
-            major => 'SESSION',
-            DATE_START => '2015-01-02',
-            DATE_END => '2015-01-02'
-          } 
-        }
-      },
-    }
-  },
-
-  "Jessheim New Year's Teams" =>
-  {
-    %GLOBAL,
-    CITY => 'Jessheim',
-    ORIGIN => 'Regional',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2015' =>
-      {
-        CHAPTERS =>
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2015,
-            MOVEMENT => 'Swiss',
-            major => 'ROUND',
-            DATE_START => '2015-01-03',
-            DATE_END => '2015-01-04'
-          } 
-        }
-      },
-    }
-  },
-
   'Farmen Invitational' =>
   {
     %GLOBAL,
@@ -581,6 +524,89 @@ my %TOURNAMENTS_NORWAY =
             DATE_START => '2011-01-09',
             DATE_END => '2011-01-09'
           } 
+        }
+      },
+    }
+  },
+
+  "Jessheim New Year's Pairs" =>
+  {
+    %GLOBAL,
+    ORIGIN => 'Regional',
+    CITY => 'Jessheim',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'SESSION',
+            DATE_START => '2015-01-02',
+            DATE_END => '2015-01-02'
+          } 
+        }
+      },
+    }
+  },
+
+  "Jessheim New Year's Teams" =>
+  {
+    %GLOBAL,
+    CITY => 'Jessheim',
+    ORIGIN => 'Regional',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2015-01-03',
+            DATE_END => '2015-01-04'
+          } 
+        }
+      },
+    }
+  },
+
+  'Jotun Open Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
         }
       },
     }
@@ -1072,6 +1098,32 @@ my %TOURNAMENTS_NORWAY =
     }
   },
 
+  'Norwegian Mixed Team Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Norwegian Mixed Teams' =>
   {
     FORM => 'Teams',
@@ -1418,6 +1470,32 @@ my %TOURNAMENTS_NORWAY =
             DATE_START => '2016-08-04',
             DATE_END => '2016-08-04'
           }
+        }
+      },
+    }
+  },
+
+  'Norwegian Patton Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
         }
       },
     }
@@ -2791,6 +2869,32 @@ my %TOURNAMENTS_NORWAY =
             DATE_START => '2011-11-26',
             DATE_END => '2011-11-26'
           } 
+        }
+      },
+    }
+  },
+
+  'Telemark Club Pairs' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
         }
       },
     }

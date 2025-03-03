@@ -107,6 +107,22 @@ my %MEETS_TURKEY =
     }
   },
 
+  'Merit Bridge Festival' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'Transnational',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        YEAR => 2000,
+        DATE_START => '2000-01-01',
+        DATE_END => '2000-01-01'
+      },
+    }
+  },
+
   'Mersin Bridge Festival' =>
   {
     %GLOBAL,
@@ -219,6 +235,22 @@ my %MEETS_TURKEY =
         YEAR => 2016,
         DATE_START => '2016-07-01',
         DATE_END => '2016-07-03'
+      },
+    }
+  },
+
+  'Turkish Summer Championships' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'Transnational',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        YEAR => 2000,
+        DATE_START => '2000-01-01',
+        DATE_END => '2000-01-01'
       },
     }
   },
@@ -630,6 +662,32 @@ my %TOURNAMENTS_TURKEY =
     }
   },
 
+  'Ankara Winter Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Balikcioglu Open Teams',
   {
     %GLOBAL,
@@ -758,6 +816,84 @@ my %TOURNAMENTS_TURKEY =
     }
   },
 
+  'Bornova Arena Autumn Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
+  'Bornova Arena Invitational Pairs' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
+  'Bornova Arena Spring League' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Cappadocia Open Pairs' =>
   {
     FORM => 'Pairs',
@@ -822,6 +958,32 @@ my %TOURNAMENTS_TURKEY =
             major => 'SESSION',
             DATE_START => '2012-11-03',
             DATE_END => '2012-11-03'
+          },
+        }
+      },
+    }
+  },
+
+  'Deniz Unlu Open Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
           },
         }
       },
@@ -925,6 +1087,58 @@ my %TOURNAMENTS_TURKEY =
     }
   },
 
+  'Hakan Peksen Open Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
+  'Istanbul Club Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Istanbul Summer Teams',
   {
     %GLOBAL,
@@ -966,7 +1180,7 @@ my %TOURNAMENTS_TURKEY =
     }
   },
 
-  'Istanbul Winter Teams',
+  'Istanbul Winter Open Teams' =>
   {
     %GLOBAL,
     ORIGIN => 'National',
@@ -1013,7 +1227,6 @@ my %TOURNAMENTS_TURKEY =
       },
       '2011' =>
       {
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1069,7 +1282,6 @@ my %TOURNAMENTS_TURKEY =
       },
       '2015' =>
       {
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1085,7 +1297,6 @@ my %TOURNAMENTS_TURKEY =
       },
       '2016' =>
       {
-
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -1097,6 +1308,32 @@ my %TOURNAMENTS_TURKEY =
             DATE_START => '2016-01-30',
             DATE_END => '2016-01-31'
           } 
+        }
+      },
+    }
+  },
+
+  'Istanbul Women Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
         }
       },
     }
@@ -1463,6 +1700,32 @@ my %TOURNAMENTS_TURKEY =
     }
   },
 
+  'Mersin Winter Open Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Murat Kilercioglu Turkish Spring Teams',
   {
     %GLOBAL,
@@ -1598,6 +1861,58 @@ my %TOURNAMENTS_TURKEY =
             DATE_START => '2011-12-11',
             DATE_END => '2011-12-11'
           } 
+        }
+      },
+    }
+  },
+
+  'Okay Gur Winter Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
+  'Sadun Su U26 Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
         }
       },
     }
@@ -2808,6 +3123,58 @@ my %TOURNAMENTS_TURKEY =
     }
   },
 
+  'Turkish Senior Team Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
+  'Turkish Super Cup' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Turkish Swiss Mixed Teams',
   {
     %GLOBAL,
@@ -2837,6 +3204,32 @@ my %TOURNAMENTS_TURKEY =
     }
   },
 
+  'Turkish Swiss Open Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Turkish U16 Pairs',
   {
     FORM => 'Pairs',
@@ -2859,6 +3252,162 @@ my %TOURNAMENTS_TURKEY =
             DATE_START => '2016-07-02',
             DATE_END => '2016-07-02'
           } 
+        }
+      },
+    }
+  },
+
+  'Turkish U21 Pair Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
+  'Turkish U21 Team Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
+  'Turkish U26 Team Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
+  'Turkish U26 Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
+  'Turkish U26 Women Team Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
+  'Turkish U31 Team Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
         }
       },
     }
@@ -3701,6 +4250,32 @@ my %TOURNAMENTS_TURKEY =
             major => 'ROUND',
             DATE_START => '2014-05-30',
             DATE_END => '2014-06-01'
+          },
+        }
+      },
+    }
+  },
+
+  'Yalcin Atabey Open Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
           },
         }
       },

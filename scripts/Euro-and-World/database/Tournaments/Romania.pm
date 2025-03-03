@@ -37,6 +37,23 @@ my %MEETS_ROMANIA =
       },
     }
   },
+
+  'Tusnad Festival' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'Transnational',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        YEAR => 2000,
+        DATE_START => '2000-01-01',
+        DATE_END => '2000-01-01'
+      },
+    }
+  },
+
 );
 
 my %TOURNAMENTS_ROMANIA =
@@ -88,6 +105,58 @@ my %TOURNAMENTS_ROMANIA =
             DATE_START => '2009-11-19',
             DATE_END => '2009-11-20'
           } 
+        }
+      },
+    }
+  },
+
+  'Contra Open Cup' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
+  'Romanian Butler Pairs' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
         }
       },
     }
@@ -236,6 +305,32 @@ my %TOURNAMENTS_ROMANIA =
             DATE_START => '2016-02-19',
             DATE_END => '2016-02-21'
           } 
+        }
+      },
+    }
+  },
+
+  'Romanian Mixed Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
         }
       },
     }
@@ -567,6 +662,56 @@ my %TOURNAMENTS_ROMANIA =
     }
   },
 
+  'Romanian Senior Team Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+  'Romanian Women Team Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
 );
 
 

@@ -1272,6 +1272,22 @@ my %MEETS_AUSTRALIA =
     }
   },
 
+  'Queensland Festival of Bridge' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'Regional',
+
+    EDITIONS => 
+    {
+      '2000' =>
+      {
+        YEAR => 2000,
+        DATE_START => '2000-01-01',
+        DATE_END => '2000-01-01'
+      },
+    }
+  },
+
   'Victor Champion Cup' =>
   {
     %GLOBAL,
@@ -2179,6 +2195,56 @@ my %TOURNAMENTS_AUSTRALIA =
             YEAR => 2016,
             DATE_START => '2016-07-01',
             DATE_END => '2016-07-01'
+          } 
+        }
+      },
+    }
+  },
+
+  'Australian Mixed Teams',
+  {
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          } 
+        }
+      },
+    }
+  },
+
+  'Australian Mixed Trials',
+  {
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
           } 
         }
       },
@@ -4050,6 +4116,31 @@ my %TOURNAMENTS_AUSTRALIA =
             YEAR => 2022,
             DATE_START => '2022-04-18',
             DATE_END => '2022-04-23'
+          } 
+        }
+      },
+    }
+  },
+
+  'Australian Senior Trials',
+  {
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Seniors',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
           } 
         }
       },
@@ -6245,6 +6336,32 @@ my %TOURNAMENTS_AUSTRALIA =
     }
   },
 
+  'North Shore Mixed Teams',
+  {
+    %GLOBAL,
+    ORIGIN => 'Regional',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Northern Territory Gold Swiss Pairs' =>
   {
     %GLOBAL,
@@ -6403,6 +6520,32 @@ my %TOURNAMENTS_AUSTRALIA =
             DATE_START => '2014-05-24',
             DATE_END => '2014-05-25'
           },
+        }
+      },
+    }
+  },
+
+  'South Australia Open Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'Regional',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          } 
         }
       },
     }

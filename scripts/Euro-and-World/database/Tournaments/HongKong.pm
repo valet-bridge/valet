@@ -19,6 +19,21 @@ my %GLOBAL = (
 
 my %MEETS_HONGKONG =
 (
+  'Hong Kong Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'Transnational',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        YEAR => 2000,
+        DATE_START => '2000-01-01',
+        DATE_END => '2000-01-01'
+      },
+    }
+  },
 );
 
 my %TOURNAMENTS_HONGKONG =
@@ -292,6 +307,32 @@ my %TOURNAMENTS_HONGKONG =
     }
   },
 
+  'Hong Kong Mixed Team Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Hong Kong New Year Teams' =>
   {
     %GLOBAL,
@@ -328,6 +369,57 @@ my %TOURNAMENTS_HONGKONG =
     }
   },
 
+  'Hong Kong Open Team Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
+  'Rose Bowl' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
 );
 
 

@@ -16,7 +16,6 @@ my @MULTI_WORDS =
 (
   'Jyväskylä Easter Bridge Festival',
   'Pärnu Festival',
-  'Tórshavn Bridgefestival'
 );
 
 my %MULTI_TYPOS =
@@ -24,8 +23,6 @@ my %MULTI_TYPOS =
   'Jyväskylä Easter Bridge Festival' => [
     'easter bridge trophy',
     'jyvaskala easter bridge festival'],
-  'Tórshavn Bridgefestival' => [
-    'tórshavn bridgefestval'],
 );
 
 my %SINGLE_TYPOS =

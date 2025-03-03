@@ -396,28 +396,6 @@ my %TOURNAMENTS_DENMARK =
     }
   },
 
-  'Danish Open Pairs Trials',
-  {
-    COUNTRY => 'Denmark',
-    ZONE => 'Europe',
-
-    EDITIONS =>
-    {
-      '2000' =>
-      {
-        CHAPTERS => 
-        {
-          'SINGLE' => 
-          {
-            YEAR => 2000,
-            DATE_START => '2000-10-25',
-            DATE_END => '2000-10-26'
-          } 
-        }
-      },
-    }
-  },
-
   'Danish Club Teams',
   {
     %GLOBAL,
@@ -1953,6 +1931,32 @@ my %TOURNAMENTS_DENMARK =
     }
   },
 
+  'Danish First Division Women' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Danish Junior Teams',
   {
     %GLOBAL,
@@ -2285,6 +2289,28 @@ my %TOURNAMENTS_DENMARK =
           } 
         }
       }
+    }
+  },
+
+  'Danish Open Pairs Trials',
+  {
+    COUNTRY => 'Denmark',
+    ZONE => 'Europe',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS => 
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2000,
+            DATE_START => '2000-10-25',
+            DATE_END => '2000-10-26'
+          } 
+        }
+      },
     }
   },
 
@@ -2726,6 +2752,32 @@ my %TOURNAMENTS_DENMARK =
     }
   },
 
+  'Danish Senior Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Danish Women Pairs',
   {
     FORM => 'Pairs',
@@ -2780,6 +2832,32 @@ my %TOURNAMENTS_DENMARK =
           } 
         }
       }
+    }
+  },
+
+  'Fyn Club Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
     }
   },
 
@@ -2848,6 +2926,32 @@ my %TOURNAMENTS_DENMARK =
           },
         }
       }
+    }
+  },
+
+  'One Eyed Jacks Open Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
     }
   },
 

@@ -298,6 +298,22 @@ my %MEETS_ASIA =
     }
   },
 
+  'ASEAN University Games' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'Transnational',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        YEAR => 2000,
+        DATE_START => '2000-01-01',
+        DATE_END => '2000-01-01'
+      },
+    }
+  },
+
   'Asia Cup' =>
   {
     %GLOBAL,
@@ -2139,6 +2155,32 @@ my %TOURNAMENTS_ASIA =
     }
   },
 
+  'Asia Open Team Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Asian University Championship' =>
   {
     %GLOBAL,
@@ -2292,6 +2334,32 @@ my %TOURNAMENTS_ASIA =
             DATE_START => '2011-11-14',
             DATE_END => '2011-11-15'
           } 
+        }
+      },
+    }
+  },
+
+  "SEA President's Cup" =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
         }
       },
     }

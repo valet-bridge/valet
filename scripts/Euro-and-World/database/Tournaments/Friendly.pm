@@ -810,6 +810,32 @@ my %TOURNAMENTS_FRIENDLY =
     }
   },
 
+  'Australia Friendly' => 
+  {
+    ORGANIZATION => 'AuBF',
+    COUNTRY => 'Australia',
+    ORIGIN => 'National',
+    ZONE => 'South Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Australia Practice' => 
   {
     ORGANIZATION => 'AuBF',
@@ -1069,6 +1095,32 @@ my %TOURNAMENTS_FRIENDLY =
             DATE_START => '2012-09-12',
             DATE_END => '2012-09-13'
           } 
+        }
+      },
+    }
+  },
+
+  'China Practice' => 
+  {
+    ORGANIZATION => 'CCBA',
+    COUNTRY => 'China',
+    ORIGIN => 'National',
+    ZONE => 'South East Asia',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
         }
       },
     }
@@ -1678,6 +1730,31 @@ my %TOURNAMENTS_FRIENDLY =
     }
   },
 
+  'Germany Practice' => 
+  {
+    ORIGIN => 'National',
+    COUNTRY => 'Germany',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Goulash Practice' => 
   {
     ORIGIN => 'Transnational',
@@ -1936,6 +2013,58 @@ my %TOURNAMENTS_FRIENDLY =
     }
   },
 
+  'Iceland Friendly' => 
+  {
+    ORGANIZATION => 'IceBF',
+    COUNTRY => 'Iceland',
+    ORIGIN => 'Supranational',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
+  'India Exhibition' => 
+  {
+    ORGANIZATION => 'BFI',
+    COUNTRY => 'India',
+    ORIGIN => 'Supranational',
+    ZONE => 'Asia Pacific',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Ireland Friendly' => 
   {
     ORGANIZATION => 'IBU',
@@ -1963,6 +2092,32 @@ my %TOURNAMENTS_FRIENDLY =
             DATE_START => '2011-05-14',
             DATE_END => '2011-05-14'
           } 
+        }
+      },
+    }
+  },
+
+  'Israel Practice' => 
+  {
+    ORGANIZATION => 'IBF',
+    COUNTRY => 'Israel',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
         }
       },
     }
@@ -3214,6 +3369,34 @@ my %TOURNAMENTS_FRIENDLY =
             DATE_START => '2015-06-13',
             DATE_END => '2015-06-14'
           } 
+        }
+      },
+    }
+  },
+
+  'Russia Practice' =>
+  {
+    ORGANIZATION => 'RBL',
+    COUNTRY => 'Russia',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
         }
       },
     }

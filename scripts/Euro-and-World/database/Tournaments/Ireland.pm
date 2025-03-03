@@ -11,6 +11,13 @@ package Tournaments::Ireland;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'IBU',
+  COUNTRY => 'Ireland',
+  ZONE => 'Europe',
+);
+
+
 # TODO Cities are a guess.
 # TODO There are no links to actual results.
 # https://www.bridgewebs.com/cgi-bin/bwoq/bw.cgi?club=cbai&pid=display_home
@@ -24,6 +31,32 @@ my %MEETS_IRELAND =
 
 my %TOURNAMENTS_IRELAND =
 (
+  'Egan Trophy' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Full Tilt Irish Bridge Masters' =>
   {
     COUNTRY => 'Ireland',
@@ -200,7 +233,33 @@ my %TOURNAMENTS_IRELAND =
         }
       }
     }
-  }
+  },
+
+  'Irish Premier Pairs' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
 );
 
 

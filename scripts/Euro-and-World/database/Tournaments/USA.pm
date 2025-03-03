@@ -11,6 +11,13 @@ package Tournaments::USA;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'ACBL',
+  COUNTRY => 'USA',
+  ZONE => 'North America',
+);
+
+
 my %MEETS_USA =
 (
   'North American Bridge Championship' =>
@@ -1797,6 +1804,32 @@ my %TOURNAMENTS_USA =
             ignore => 'GROUP',
             DATE_START => '2015-12-06',
             DATE_END => '2015-12-07'
+          },
+        }
+      },
+    }
+  },
+
+  'Soloway Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
           },
         }
       },

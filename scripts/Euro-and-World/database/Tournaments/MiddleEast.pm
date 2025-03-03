@@ -18,6 +18,22 @@ my %GLOBAL = (
 
 my %MEETS_MIDDLEEAST =
 (
+  'Arab Nations Championship' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'Transnational',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        YEAR => 2000,
+        DATE_START => '2000-01-01',
+        DATE_END => '2000-01-01'
+      },
+    }
+  },
+
   'BFAME Championship' =>
   {
     # https://www.bridgewebs.com/cgi-bin/bwop/bw.cgi?club=bfame&pid=display_page2
@@ -732,6 +748,32 @@ my %TOURNAMENTS_MIDDLEEAST =
             DATE_START => '2024-09-25',
             DATE_END => '2024-09-25'
           } 
+        }
+      },
+    }
+  },
+
+  'Saudi-Arabian Open Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
         }
       },
     }

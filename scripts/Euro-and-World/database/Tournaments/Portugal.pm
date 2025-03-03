@@ -527,6 +527,32 @@ my %TOURNAMENTS_PORTUGAL =
     }
   },
 
+  'Lisbon Open Pairs' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          }
+        }
+      },
+    }
+  },
+
   'Lisbon Open Teams',
   {
     FORM => 'Teams',
@@ -759,6 +785,32 @@ my %TOURNAMENTS_PORTUGAL =
     }
   },
 
+  'Portuguese First Division' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Portuguese Grand Prix',
   {
     FORM => 'Teams',
@@ -969,6 +1021,32 @@ my %TOURNAMENTS_PORTUGAL =
             DATE_START => '2014-10-24',
             DATE_END => '2014-10-26'
           } 
+        }
+      },
+    }
+  },
+
+  'Portuguese Mixed Team Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
         }
       },
     }
@@ -1427,6 +1505,32 @@ my %TOURNAMENTS_PORTUGAL =
             DATE_START => '2009-06-05',
             DATE_END => '2009-06-06'
           } 
+        }
+      },
+    }
+  },
+
+  'Portuguese Senior Team Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
         }
       },
     }

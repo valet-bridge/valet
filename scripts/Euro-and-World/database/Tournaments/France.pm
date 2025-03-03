@@ -19,6 +19,23 @@ my %GLOBAL = (
 
 my %MEETS_FRANCE =
 (
+  'Festival de la Baule' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'Transnational',
+    CITY => 'La Baule-Escoublac',
+
+    EDITIONS => 
+    {
+      '2000' =>
+      {
+        YEAR => 2000,
+        DATE_START => '2000-01-01',
+        DATE_END => '2000-01-01'
+      },
+    }
+  },
+
   'Mondial de Deauville' =>
   {
     # https://festival-international-bridge-deauville.com/#
@@ -1275,6 +1292,32 @@ my %TOURNAMENTS_FRANCE =
     }
   },
 
+  'French Mixed Trials',
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'French Open Teams',
   {
     %GLOBAL,
@@ -1638,6 +1681,58 @@ my %TOURNAMENTS_FRANCE =
     }
   },
 
+  'French U26 Trials',
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U26',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
+  'French U31 Trials',
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U31',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'French Women Trials',
   {
     %GLOBAL,
@@ -1737,6 +1832,30 @@ my %TOURNAMENTS_FRANCE =
             DATE_START => '2008-05-04',
             DATE_END => '2008-05-04'
           } 
+        }
+      },
+    }
+  },
+
+  'Mike Dennery Pairs Cup',
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
         }
       },
     }

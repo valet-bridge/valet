@@ -11,6 +11,9 @@ package Tournaments::Baltic;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = ();
+
+
 my %MEETS_BALTIC =
 (
   'Baltic Cup' =>
@@ -718,6 +721,32 @@ my %TOURNAMENTS_BALTIC =
             DATE_START => '2016-04-24',
             DATE_END => '2016-04-24'
           } 
+        }
+      },
+    }
+  },
+
+  'Estonian Junior Pair Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
         }
       },
     }

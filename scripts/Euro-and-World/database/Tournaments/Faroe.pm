@@ -11,8 +11,30 @@ package Tournaments::Faroe;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'FaBF',
+  COUNTRY => 'Faroe Islands',
+  ZONE => 'Europe',
+);
+
 my %MEETS_FAROE =
 (
+  'Tórshavn Bridge Festival' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'Transnational',
+    CITY => 'Tórshavn',
+
+    EDITIONS => 
+    {
+      '2000' =>
+      {
+        YEAR => 2000,
+        DATE_START => '2000-01-01',
+        DATE_END => '2000-01-01'
+      },
+    }
+  },
 );
 
 my %TOURNAMENTS_FAROE =

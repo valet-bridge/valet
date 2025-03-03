@@ -391,11 +391,54 @@ my %MEETS_ITALY =
         DATE_END => '2024-12-15'
       },
     }
-  }
+  },
+
+  'Venice Bridge Festival' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'Transnational',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        YEAR => 2000,
+        DATE_START => '2000-01-01',
+        DATE_END => '2000-01-01'
+      },
+    }
+  },
+
 );
 
 my %TOURNAMENTS_ITALY =
 (
+  'Altea Cup' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Bologna Trophy' =>
   {
     %GLOBAL,
@@ -1854,6 +1897,32 @@ my %TOURNAMENTS_ITALY =
     }
   },
 
+  'Italian Mixed Team Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Italian Mixed Teams' =>
   {
     %GLOBAL,
@@ -2102,6 +2171,85 @@ my %TOURNAMENTS_ITALY =
           }
         }
       }
+    }
+  },
+
+  'Italian O55 Cup' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'O55',
+
+    EDITIONS =>
+    {
+      '2004' =>
+      {
+        MEET => 'Italy Cup',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            YEAR => '2004',
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2004-06-07',
+            DATE_END => '2004-06-07'
+          },
+        }
+      },
+    }
+  },
+
+  'Italian O61 Cup' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
+  'Italian O63 Cup' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
     }
   },
 
@@ -2659,6 +2807,57 @@ my %TOURNAMENTS_ITALY =
     }
   },
 
+  'Italian Open Team Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        # https://www.federbridge.it/campionati/2014/SSSQOP/indice.asp
+        YEAR => 2014,
+        CITY => 'Salsomaggiore',
+        CHAPTERS => 
+        {
+          'C0' =>
+          {
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2014-01-31',
+            DATE_END => '2014-02-01'
+          },
+          'C1' =>
+          {
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2014-02-02',
+            DATE_END => '2014-02-02'
+          },
+          'C2' =>
+          {
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2014-02-13',
+            DATE_END => '2014-02-14'
+          },
+          'C3' =>
+          {
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2014-02-14',
+            DATE_END => '2014-02-16'
+          } 
+        }
+      }
+    }
+  },
+
   'Italian Open Teams' =>
   {
     %GLOBAL,
@@ -2946,85 +3145,6 @@ my %TOURNAMENTS_ITALY =
           }
         }
       }
-    }
-  },
-
-  'Italian Open Trials' =>
-  {
-    %GLOBAL,
-    ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2014' =>
-      {
-        # https://www.federbridge.it/campionati/2014/SSSQOP/indice.asp
-        YEAR => 2014,
-        CITY => 'Salsomaggiore',
-        CHAPTERS => 
-        {
-          'C0' =>
-          {
-            MOVEMENT => 'Swiss',
-            major => 'ROUND',
-            DATE_START => '2014-01-31',
-            DATE_END => '2014-02-01'
-          },
-          'C1' =>
-          {
-            MOVEMENT => 'Swiss',
-            major => 'ROUND',
-            DATE_START => '2014-02-02',
-            DATE_END => '2014-02-02'
-          },
-
-          'C2' =>
-          {
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2014-02-13',
-            DATE_END => '2014-02-14'
-          },
-          'C3' =>
-          {
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2014-02-14',
-            DATE_END => '2014-02-16'
-          } 
-        }
-      }
-    }
-  },
-
-  'Italian O55 Cup' =>
-  {
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'O55',
-
-    EDITIONS =>
-    {
-      '2004' =>
-      {
-        MEET => 'Italy Cup',
-        CHAPTERS => 
-        {
-          'C0' =>
-          {
-            YEAR => '2004',
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2004-06-07',
-            DATE_END => '2004-06-07'
-          },
-        }
-      },
     }
   },
 
@@ -3739,6 +3859,32 @@ my %TOURNAMENTS_ITALY =
           }
         }
       }
+    }
+  },
+
+  'Italian Women Team Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
     }
   },
 

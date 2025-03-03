@@ -11,12 +11,44 @@ package Tournaments::UK;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(set_links);
 
+my %GLOBAL = (
+  ORGANIZATION => 'EBU',
+  COUNTRY => 'England',
+  ZONE => 'Europe',
+);
+
 my %MEETS_UK =
 (
 );
 
 my %TOURNAMENTS_UK =
 (
+  'Acol BC Invitational Pairs' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'British Gold Cup' => 
   {
     # https://www.bridgewebs.com/cgi-bin/bwor/bw.cgi?club=bgb&pid=docs_Gold%20Cup%20Roll%20of%20Honour.htm
@@ -956,6 +988,58 @@ my %TOURNAMENTS_UK =
     }
   },
 
+  'Crockfords Cup' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
+  'English Mixed Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'English Open Trials' => 
   {
     ORGANIZATION => 'EBU',
@@ -1477,70 +1561,33 @@ my %TOURNAMENTS_UK =
     }
   },
 
-  'English Women Teams' => 
+  'English Women Pair Trials' =>
   {
-    # https://www.ebu.co.uk/information-resources/whitelaw-cup-english-womens-teams-championship
-    ORGANIZATION => 'EBU',
+    %GLOBAL,
     ORIGIN => 'National',
-    ZONE => 'Europe',
-    COUNTRY => 'England',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Women',
+    GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2011' =>
+      '2000' =>
       {
-        # https://www.ebu.co.uk/results/116
         CHAPTERS =>
         {
-          'C0' => 
+          'SINGLE' =>
           {
-            YEAR => 2011,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT',
-            DATE_START => '2011-09-04',
-            DATE_END => '2011-09-04'
-          },
-          'C1' => 
-          {
-            YEAR => 2011,
-            STAGE => 'Final',
-            major => 'SEGMENT',
-            DATE_START => '2011-09-04',
-            DATE_END => '2011-09-04'
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
           },
         }
       },
-      '2012' =>
-      {
-        # https://www.ebu.co.uk/results/116
-        CHAPTERS =>
-        {
-          'C0' => 
-          {
-            YEAR => 2012,
-            STAGE => 'Semifinal',
-            major => 'SEGMENT|SET',
-            DATE_START => '2012-09-02',
-            DATE_END => '2012-09-02'
-          },
-          'C1' => 
-          {
-            YEAR => 2012,
-            STAGE => 'Final',
-            major => 'SEGMENT|STANZA',
-            DATE_START => '2012-09-02',
-            DATE_END => '2012-09-02'
-          },
-        }
-      }
     }
   },
 
-  'English Women Trials' => 
+  'English Women Team Trials' =>
   {
     ORGANIZATION => 'EBU',
     ORIGIN => 'National',
@@ -1718,6 +1765,69 @@ my %TOURNAMENTS_UK =
     }
   },
 
+  'English Women Teams' => 
+  {
+    # https://www.ebu.co.uk/information-resources/whitelaw-cup-english-womens-teams-championship
+    ORGANIZATION => 'EBU',
+    ORIGIN => 'National',
+    ZONE => 'Europe',
+    COUNTRY => 'England',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2011' =>
+      {
+        # https://www.ebu.co.uk/results/116
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2011-09-04',
+            DATE_END => '2011-09-04'
+          },
+          'C1' => 
+          {
+            YEAR => 2011,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2011-09-04',
+            DATE_END => '2011-09-04'
+          },
+        }
+      },
+      '2012' =>
+      {
+        # https://www.ebu.co.uk/results/116
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT|SET',
+            DATE_START => '2012-09-02',
+            DATE_END => '2012-09-02'
+          },
+          'C1' => 
+          {
+            YEAR => 2012,
+            STAGE => 'Final',
+            major => 'SEGMENT|STANZA',
+            DATE_START => '2012-09-02',
+            DATE_END => '2012-09-02'
+          },
+        }
+      }
+    }
+  },
+
   'Garden Cities Teams' => 
   {
     # https://www.ebu.co.uk/competitions/garden-cities
@@ -1832,6 +1942,32 @@ my %TOURNAMENTS_UK =
           },
         }
       }
+    }
+  },
+
+  'Hubert Phillips Bowl' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
     }
   },
 
@@ -3742,6 +3878,33 @@ my %TOURNAMENTS_UK =
       }
     },
   },
+
+  "Young Chelsea Women's Swiss Teams" =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
 
 );
 

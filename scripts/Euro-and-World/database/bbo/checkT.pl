@@ -16,6 +16,51 @@ use Tags::Tname;
 use Tags::Meet;
 use Connections::Matrix;
 
+my $MEET_TEMPLATE =
+"  'MNAME' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'Transnational',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        YEAR => 2000,
+        DATE_START => '2000-01-01',
+        DATE_END => '2000-01-01'
+      },
+    }
+  },";
+
+my $TNAME_TEMPLATE =
+"  'TNAME' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },";
+
+
 # Quite duplicative to read the tournaments and meets twice,
 # but it's only checker...
 use ParseT;
@@ -157,6 +202,7 @@ sub check_same_hash
     if (! exists $hash1->{$k2})
     {
       warn "$text, $value: $k2 not in structure hash";
+      print_correction($text, $k2);
     }
   }
 }
@@ -290,6 +336,29 @@ sub check_field_values
         # warn "$tname, $tag, $ctag";
       }
     }
+  }
+}
+
+
+sub print_correction
+{
+  my ($text, $name) = @_;
+
+  if ($text eq 'Meet')
+  {
+    my $s = $MEET_TEMPLATE;
+    $s =~ s/MNAME/$name/;
+    say $s;
+  }
+  elsif ($text eq 'Tname')
+  {
+    my $s = $TNAME_TEMPLATE;
+    $s =~ s/TNAME/$name/;
+    say $s;
+  }
+  else
+  {
+    die $text;
   }
 }
 

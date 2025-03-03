@@ -16,7 +16,6 @@ my @MULTI_WORDS =
 (
   'Northern Lights Bridge Festival',
   'Reykjavik Bridge Festival',
-  'Tórshavn Bridge Festival',
 );
 
 my %MULTI_TYPOS =
