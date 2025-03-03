@@ -129,16 +129,17 @@ my @LOCAL_SUBS =
 
   { START => 47933, END => 48068, TEXT => '^RR2-', CORR => 'RR ' },
   { START => 52564, END => 52577, TEXT => '1_8', CORR => 'QF' },
-  { START => 52933, END => 52975, TEXT => '^BB\d\+-', CORR => '' },
   { START => 53497, END => 53894, TEXT => 'Preselection', CORR => '' },
   { START => 53889, END => 53894, TEXT => 'Preselection', CORR => '' },
   { START => 54611, END => 54659, TEXT => 'O L', CORR => 'Open' },
   { START => 55469, END => 55480, TEXT => '^Swiss A ', 
     CORR => 'Swiss - Session ' },
   { START => 55562, END => 55598, TEXT => 'Grup ', CORR => 'Round ' },
+  { START => 55665, END => 55853, TEXT => '^ZC-', CORR => '' },
   { START => 55813, END => 55854, TEXT => 'FMBBAM', CORR => 'BAM' },
   { START => 58273, END => 58329, TEXT => '^Swiss A ', 
     CORR => 'Swiss - Session ' },
+  { START => 58338, END => 58359, TEXT => '^Pre QF A ', CORR => 'Pre QF ' },
   { START => 58404, END => 58417, TEXT => '^Silver ', 
     CORR => 'Indian Silver Open Teams ' },
   { START => 58405, END => 58418, TEXT => '^Gold ', 
@@ -221,9 +222,12 @@ my @LOCAL_SUBS_INTERPOL =
 (
   { START => 49185, END => 49228, TEXT => '^Segment Q(\d_\d)', 
     CORR => 'Qualifying - Segment $1' },
+  { START => 52933, END => 52975, TEXT => '^BB\d+-', CORR => '' },
   { START => 54649, END => 54718, TEXT => 'RR(\d) (\d[-_]\d)', 
     CORR => 'RR Round $1 - Segment $2' },
-  { START => 56247, END => 56266, TEXT => '1_(\d+)$', CORR => 'Rof$1' },
+  { START => 55780, END => 55793, TEXT => '^OF(\d)$', 
+    CORR => 'Rof16 Segment $1' },
+  { START => 59755, END => 59848, TEXT => '(\d+)-4$', CORR => '$1 of 4' },
   { START => 59996, END => 60040, TEXT => '^(\d+):(\d+)$', 
     CORR => '$1 of $2' },
   { START => 60199, END => 60240, TEXT => '^(\d)-(\d)$', 
@@ -233,6 +237,8 @@ my @LOCAL_SUBS_INTERPOL =
   { START => 61207, END => 61247, TEXT => '^(\d+)-(\d)$', 
     CORR => '$1 of $2' },
   { START => 62377, END => 62538, TEXT => '^(\d+)-(\d)$', 
+    CORR => '$1 of $2' },
+  { START => 63013, END => 63040, TEXT => '(\d+)-(\d+)$', 
     CORR => '$1 of $2' },
   { START => 63926, END => 64145, TEXT => '^RR(\d+)-(\d+)$', 
     CORR => 'RR $2' },
@@ -248,7 +254,7 @@ my @LOCAL_SUBS_INTERPOL =
     CORR => '$1 of $2' },
   { START => 69814, END => 69834, TEXT => '^(\d+):(\d+)$', 
     CORR => '$1 of $2' },
-  { START => 69837, END => 69847, TEXT => '^(\d+):(\d+)$', 
+  { START => 69837, END => 69849, TEXT => '^(\d+):(\d+)$', 
     CORR => '$1 of $2' },
   { START => 72393, END => 72395, TEXT => '^(\d+):(\d+)$', 
     CORR => '$1 of $2' },
@@ -256,10 +262,16 @@ my @LOCAL_SUBS_INTERPOL =
   { START => 72421, END => 72428, TEXT => '^(\d+):(\d+)$', 
     CORR => '$1 of $2' },
   { START => 72441, END => 72455, TEXT => '(\d+):14', CORR => '$1 of 14' },
+  { START => 72865, END => 72875, TEXT => '^(\d+):(\d)$', 
+    CORR => 'Match $1 Segment $2' },
   { START => 73670, END => 73677, TEXT => '^(\d+):([12])$', 
+    CORR => 'Match $1 Segment $2' },
+  { START => 75480, END => 75496, TEXT => '^(\d+):(\d)$', 
     CORR => 'Match $1 Segment $2' },
   { START => 75506, END => 75538, TEXT => '^(\d+):12$', 
     CORR => '$1 of 12' },
+  { START => 75547, END => 75570, TEXT => '^(\d+):(\d)$', 
+    CORR => 'Match $1 Segment $2' },
   { START => 75595, END => 75631, TEXT => '^(\d+):14$', 
     CORR => '$1 of 14' },
   { START => 77123, END => 77177, TEXT => '(\d+):([45])$', 
@@ -270,12 +282,12 @@ my @LOCAL_SUBS_INTERPOL =
     CORR => 'Match $1 Segment $2' },
   { START => 79288, END => 79351, TEXT => '^(\d+)-(\d)$', 
     CORR => '$1 of $2' },
+  { START => 82823, END => 82830, TEXT => '(\d+)-(\d)$', 
+    CORR => '$1 of $2' },
   { START => 82685, END => 82716, TEXT => '^(\d)-5$', 
     CORR => 'Segment $1 of 5' },
   { START => 82758, END => 82817, TEXT => '^(\d).. S$', 
     CORR => 'Segment $1' },
-  { START => 82926, END => 82951, TEXT => '1_(\d+)$', 
-    CORR => 'Rof$1' },
   { START => 83546, END => 83587, TEXT => '^(\d+)-(\d)$', 
     CORR => '$1 of $2' },
   { START => 84427, END => 84453, TEXT => '^(\d+):(\d+)$', 
@@ -330,9 +342,9 @@ sub event_specific_inline
   $text =~s/#(\d)/$1/g; # Remove hash
 
   $text =~ s/(\d)([a-zA-Z]{2,})/$1 $2/g; # Digit, then 2+ letters
-  $text =~ s/([a-zA-Z]{2,})(\d)/$1 $2/g; # Other way round
+  $text =~ s/([a-zA-TV-Z]{2,})(\d)/$1 $2/g; # Other way round
   $text =~ s/(\d)([g-zG-Z])/$1 $2/g;
-  $text =~ s/([g-zG-Z])(\d)/$1 $2/g;
+  $text =~ s/([g-zG-TV-Z])(\d)/$1 $2/g;
 
   # Various ordinals.
   $text =~ s/(\d)\s+th/$1th /gi;

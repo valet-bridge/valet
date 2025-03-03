@@ -100,6 +100,7 @@ my %MULTI_TYPOS =
     'kejuaraan provinsi bridge jawa timur',
     'kejurprov jatim'],
   'FTBC Tanjungpura University' => [
+    'championship of tanjungpura university',
     'ftbc university tanjungpura'],
   'Gabrial UI Bastaman Cup' => [
     'bastaman cup',
