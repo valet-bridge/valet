@@ -81,6 +81,7 @@ my %MULTI_TYPOS =
   'Australian Junior Teams' => [
     'anc juniors'],
   'Australian Mixed Teams' => [
+    'aust mixed team',
     'aust mixed teams'],
   'Australian National Open Teams' => [
     'abf national open teams',

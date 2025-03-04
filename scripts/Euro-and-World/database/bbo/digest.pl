@@ -134,6 +134,7 @@ while ($entryT->read($fh))
     warn $entryT->bbono() . " not found at all" unless $division_flag;
     next;
   }
+next;
 
   if ($EXPLORE_TOURNAMENTS == 1)
   {

@@ -1549,6 +1549,32 @@ my %TOURNAMENTS_INDIA =
     }
   },
 
+  'Anoop Dhawan Invitational Pairs' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Ashok Kapur Memorial Swiss Pairs',
   {
     %GLOBAL,
@@ -2397,6 +2423,32 @@ my %TOURNAMENTS_INDIA =
     }
   },
 
+  'Indian Mixed Pairs' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Indian Mixed Trials' =>
   {
     %GLOBAL,
@@ -3087,13 +3139,39 @@ my %TOURNAMENTS_INDIA =
     }
   },
 
-  'Kabra Women IMP Pairs' =>
+  'Kabra Open IMP Pairs' =>
   {
     %GLOBAL,
     ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
+  'Kabra Women IMP Pairs' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
     AGE => 'Open',
 
     EDITIONS =>

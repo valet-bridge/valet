@@ -34,6 +34,7 @@ my @MULTI_WORDS =
   'Istanbul Club Teams',
   'Istanbul Summer Teams',
   'Istanbul Winter Open Teams',
+  'Istanbul Winter Women Teams',
   'Istanbul Women Teams',
   'Izmir Teams Cup',
   'Izmir Winter Teams Cup',
@@ -152,8 +153,11 @@ my %MULTI_TYPOS =
     'istanbul kis dortlu takim',
     'istanbul winter champs',
     'istanbul winter team championship',
+    'istanbul winter teams',
     'istanbul wýnter teams',
     'istanbul kis'],
+  'Istanbul Winter Women Teams' => [
+    'istanbul winter teams women'],
   'Istanbul Women Teams' => [
     'istanbul kadin takimlar sampiyonasi',
     'istanbul kadin takimlar þampiyonasi',
@@ -162,14 +166,19 @@ my %MULTI_TYPOS =
   'Izmir Teams Cup' => [
     'izmir open teams championship',
     'izmir open teams championships',
+    'izmir open winter teams',
     'izmir teams',
     'izmir teams championship',
     'izmýr teams cup'],
   'Izmir Winter Teams Cup' => [
     'izmir kis dortlu',
     'izmir kis 4 lu',
+    'izmir play-off open winter teams',
+    'izmir winter open teams',
+    'izmir winter teams',
     'izmir winter teams championship',
-    'turkish winter open teams izmir'],
+    'turkish winter open teams izmir',
+    'winter teams championship izmir'],
   'Lüleburgaz Liberation Cup' => ['luleburgaz kurtulus kupasi'],
   'Marmara Inter-Club Championship' => [
     'marmara club teams championship',
@@ -382,12 +391,14 @@ my %MULTI_TYPOS =
     'türkýye kiþ açik takimlar þampýyonas',
     'türkýye kiþ açik takimlar þampýyonasi'],
   'Turkish Winter Women Teams' => [
+    'turkey winter women teams',
     'turkish winter woman team championship',
     'turkish winter women teams',
     "turkish woman's winter teams",
     "turkish women's winter championship",
     "turkish women's winter teams"],
   'Turkish Women Teams' => [
+    'turkey winter women teams',
     'turkish ladies teams championships',
     'turkish ladies teams',
     'turkish women championships',

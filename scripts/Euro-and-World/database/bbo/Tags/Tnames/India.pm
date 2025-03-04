@@ -23,6 +23,7 @@ my @MULTI_WORDS =
   'All India UTI Bank Masters Championship',
   "Ahmedabad President's Cup",
   'Amla Ruia Women Pairs',
+  'Anoop Dhawan Invitational Pairs',
   'Ashok Kapur Memorial Swiss Pairs',
   'B L Rao Memorial Open',
   'Bhabha Atomic Research Centre Open',
@@ -39,6 +40,7 @@ my @MULTI_WORDS =
   'Indian Masters Invitational Pairs',
   'Indian Masters Open Teams',
   'Indian Men Trials',
+  'Indian Mixed Pairs',
   'Indian Mixed Trials',
   'Indian Open Trials',
   'Indian Senior Trials',
@@ -50,6 +52,7 @@ my @MULTI_WORDS =
   'JHIC Silver Jubilee Open Teams',
   'Justice J M Lal All India Open Pairs',
   'Justice J M Lal All India Open Teams',
+  'Kabra Open IMP Pairs',
   'Kabra Women IMP Pairs',
   'Kalani Trophy',
   'Karnataka State Teams',
@@ -210,6 +213,8 @@ my %MULTI_TYPOS =
     'justice  j m lal memorial all india open',
     'justice lal memorial',
     'j m lal memorial'],
+  'Kabra Open IMP Pairs' => [
+    'kabra national pairs'],
   'Kabra Women IMP Pairs' => [
     "kabra women' imp pairs"],
   'Kalani Trophy' => ['kalani bridge championship', 'kalani trohy',
