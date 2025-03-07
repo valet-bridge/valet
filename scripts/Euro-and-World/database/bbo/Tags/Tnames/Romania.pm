@@ -14,12 +14,17 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
+  'Alba Iulia U26 Teams',
   'Brasov Open Pairs',
   'Brasov Open Teams',
   'Contra Open Cup',
+  'Iasi Open Teams',
   'Romanian Butler Pairs',
+  'Romanian Individual',
   'Romanian League',
+  'Romanian Mixed Pairs',
   'Romanian Mixed Teams',
+  'Romanian Open Pairs',
   'Romanian Open Teams',
   'Romanian Open Trials',
   'Romanian Second League',
@@ -29,8 +34,13 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'Alba Iulia U26 Teams' => [
+    'youth team alba iulia'],
   'Contra Open Cup' => [
     'contra cup'],
+  'Iasi Open Teams' => [
+    'open team iasi',
+    'open teams iasi'],
   'Romanian League' => [
     'cn ecgipe',
     'cn echipe',
@@ -40,9 +50,14 @@ my %MULTI_TYPOS =
     'romanian national teams div a',
     'romanian national division',
     'romanian national teams- div a',
+    'romanian superleague' ,
     'romanian team championship',
     'romanian teams-a division',
     'romanian teams- a division'],
+  'Romanian Mixed Pairs' => [
+    'romanian mixed pairs championship'],
+  'Romanian Open Pairs' => [
+    'romanian national pairs'],
   'Romanian Open Teams' => [
     'romanian national champ_',
     'romanian national champs',

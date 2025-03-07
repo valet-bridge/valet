@@ -17,6 +17,7 @@ my @MULTI_WORDS =
   'Jean Besse Cup',
   'Swiss Club Championship',
   'Swiss Cup',
+  'Swiss Open Pairs',
   'Swiss Open IMP Pairs',
   'Swiss Open Teams',
   'Swiss Open Team Trials',

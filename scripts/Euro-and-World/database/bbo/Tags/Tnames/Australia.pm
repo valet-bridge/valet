@@ -83,6 +83,9 @@ my %MULTI_TYPOS =
   'Australian Mixed Teams' => [
     'aust mixed team',
     'aust mixed teams'],
+  'Australian Mixed Trials' => [
+    'aus mixed teams playoff',
+    'australian mixed team playoff'],
   'Australian National Open Teams' => [
     'abf national open teams',
     'austarlian not',
@@ -103,6 +106,7 @@ my %MULTI_TYPOS =
     'aust open teams trial',
     'aust open trials',
     'austalian open team selections',
+    'australian open playoff',
     'australian open selection',
     'australian open team trials',
     'australian open trials',

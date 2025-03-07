@@ -58,6 +58,7 @@ my @MULTI_WORDS =
   'Polish School Pairs',
   'Polish School Teams',
   'Polish Second League',
+  'Polish Senior Pairs',
   'Polish Senior Trials',
   'Polish U16 Pairs',
   'Polish U16 Teams',
@@ -135,6 +136,7 @@ my %MULTI_TYPOS =
     'plockiej ligi okregowej'],
   'Polish BAM Teams' => [
     'bam team championship of poland',
+    'polish bam championships',
     'teams bam championship of poland'],
   'Polish Boys Championship' => [
     'polish championship boys'],
@@ -183,7 +185,12 @@ my %MULTI_TYPOS =
     'polish open team championship',
     'polish open tems',
     'polish team championship',
+    'polish team championships',
+    'polish team imps',
+    'polich team imp championship',
+    'polish team imp championship',
     'polish teams championship',
+    'polish teams championships',
     'team championship of poland',
     'teams championship of poland'],
   'Polish Open Trials' => [
@@ -218,6 +225,8 @@ my %MULTI_TYPOS =
   'Polish Second League' => [
     'polish 2 league',
     'polish 2nd league'],
+  'Polish Senior Pairs' => [
+    'polish seniors pairs championship'],
   'Polish Senior Trials' => [
     'polish seniors national trials',
     'polish seniors trials'],

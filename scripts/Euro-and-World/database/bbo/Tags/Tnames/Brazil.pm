@@ -25,6 +25,7 @@ my @MULTI_WORDS =
   'Roberto Taunay Cup',
   'Sao Paulo Cup',
   'Sao Paulo State Championship',
+  'Sao Paulo Summer Open Teams',
 );
 
 my %MULTI_TYPOS =
@@ -62,6 +63,9 @@ my %MULTI_TYPOS =
     's o paulo cup',
     'sao paulo state cup',
     'são paulo cup'],
+  'Sao Paulo Summer Open Teams' => [
+    'summer teams sao paulo',
+    'summer teams são paulo'],
   'Sao Paulo State Championship' => [
     'sao paulo champ',
     'sao paulo championship',

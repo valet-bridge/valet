@@ -32,6 +32,7 @@ my @MULTI_WORDS =
   'Italian Open Team Trials',
   'Italian Senior Cup',
   'Italian Senior Trials',
+  'Italian U26 Teams',
   'Italian U36 Teams',
   'Italian Women Cup',
   'Italian Women Team Trials',
@@ -55,7 +56,9 @@ my %MULTI_TYPOS =
     'italian club women championships'],
   'Italian Men Cup' => ['italy men cup'],
   'Italian Mixed Cup' => ['italy mixed cup'],
-  'Italian Mixed Pairs' => ['italy mixed pairs'],
+  'Italian Mixed Pairs' => [
+    'italy mixed pairs',
+    'italy pairs mixed'],
   'Italian Mixed Team Trials' => [
     'italian trial mixed teams',
     'italian trials mixed teams'],
@@ -63,6 +66,8 @@ my %MULTI_TYPOS =
   'Italian Open Teams' => [
     'camp.it.squadre',
     'camp.it. squadre',
+    'italian men teams champ',
+    'italian teams men champ',
     'italian open team championships',
     'italian team championship'],
   'Italian O61 Cup' => [
@@ -73,6 +78,7 @@ my %MULTI_TYPOS =
   'Italian Senior Trials' => [
     'italian trials senior',
     'italian senior teams trials'],
+  'Italian U26 Teams' => ['italian championships under 26'],
   'Italian U36 Teams' => ['Italian Master U36'],
   'Italian Women Cup' => ['italy women cup'],
   'Italian Women Team Trials' => [

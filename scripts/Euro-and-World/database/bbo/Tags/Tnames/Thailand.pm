@@ -16,6 +16,7 @@ my @MULTI_WORDS =
 (
   'Bangkok Open Teams',
   'Thailand Mixed Teams',
+  'Thailand Mixed Team Trials',
   'Thailand Open Teams',
   'Thailand Open Team Trials',
   'Thailand Women Teams',
@@ -26,6 +27,10 @@ my @MULTI_WORDS =
 
 my %MULTI_TYPOS =
 (
+  'Thailand Open Teams' => [
+    'thailand open team championships',
+    'thailand team championship',
+    'thailand teams championship'],
   'Thailand University Games' => [
     'university game of thailand',
     'university games of thailand'],

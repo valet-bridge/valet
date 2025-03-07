@@ -20,11 +20,14 @@ my @MULTI_WORDS =
   'Bulgarian Anniversary Open Teams',
   'Bulgarian Open Pairs',
   'Bulgarian Club Teams',
+  'Bulgarian Open Cup',
   'Bulgarian Open Teams',
   'Bulgarian Open Trials',
   'Bulgarian Women Trials',
   'Chelopech Open Teams',
+  'Dimitrovgrad Open Teams',
   'Dobrich Open Teams',
+  'Harmanli Open Teams',
   'Haskovski Mineralni Bani Open Pairs',
   'Haskovski Mineralni Bani Open Teams',
   'Karlovo Open Pairs',
@@ -56,6 +59,8 @@ my %MULTI_TYPOS =
     'aris cup',
     'bulgaria open pairs championship',
     'bulgarian champions pairs'],
+  'Bulgarian Open Cup' => [
+    'bulgarian bridge federation super final'],
   'Bulgarian Open Teams' => ['bulgarian national teams championship',
     'bulgarian national championship',
     'bulgaria national teams championship'],
@@ -65,15 +70,23 @@ my %MULTI_TYPOS =
     'bulgarian national team qualifications',
     'bulgarian national team trial',
     'bulgarian national team trials',
-    'bulgarian national trials'],
+    'bulgarian national trials',
+    'national team championship bulgaria'],
   'Bulgarian Women Trials' => [
     'bulgaria women national team trials',
     'bulgarian ladies trial'],
+  'Chelopech Open Teams' => [
+    'national bridge tournament chelopech'],
   'Cherven Briag Open Teams' => [
     'cherven briag',
     'cherven briag national tournament',
     'national tournament cgerven briag',
     'national tournament cherven briag'],
+  'Dimitrovgrad Open Teams' => [
+    'bridge tournament dimitrovgrad',
+    'dimitrovgrad teams'],
+  'Harmanli Open Teams' => [
+    'bridge tourney harmanli'],
   'Haskovski Mineralni Bani Open Teams' => [
     'haskovski mineralni bani'],
   'Karlovo Open Pairs' => ['karlovo pairs'],
@@ -112,6 +125,7 @@ my %MULTI_TYPOS =
     'star bet casino sunny beach'],
   'Stara Zagora Open Teams' => ['vito teams'],
   'Varna Titan Open Teams' => [
+    'varna open teams tournament',
     'varna titan teams',
     'teams titan']
 );

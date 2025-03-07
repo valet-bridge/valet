@@ -17,6 +17,7 @@ my @MULTI_WORDS =
   'APBF Girl Teams',
   'APBF Junior Teams',
   'APBF Mixed Teams',
+  'APBF Open Pairs',
   'APBF Open Teams',
   'APBF School Teams',
   'APBF Senior Teams',

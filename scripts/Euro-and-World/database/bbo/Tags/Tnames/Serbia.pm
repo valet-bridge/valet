@@ -27,7 +27,8 @@ my %MULTI_TYPOS =
   'Serbian Cup' => [
     'cup of serbia',
     'cup srbije',
-    'kup srbije'],
+    'kup srbije',
+    'serbian kup'],
   'Serbian Open Teams' => [
     'serbian bridge championship',
     'serbia teams championship',

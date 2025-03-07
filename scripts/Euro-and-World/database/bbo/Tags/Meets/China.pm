@@ -37,7 +37,9 @@ my %MULTI_TYPOS =
     'chinese club championship',
     'club championships china'],
   'Chinese Team Championships' => [
-    'ccba championships'],
+    'ccba championships',
+    'china national championships',
+    'team championship china'],
 );
 
 my %SINGLE_TYPOS =

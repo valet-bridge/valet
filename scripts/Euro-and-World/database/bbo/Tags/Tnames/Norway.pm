@@ -96,6 +96,7 @@ my %MULTI_TYPOS =
   'Jotun Open Teams' => [
     'jotun bridge open teams'],
   'Marit Sveaas Open Pairs' => [
+    'marit sveaas',
     'marit sveaas international bridge tournament',
     'marit sveaas international  bridge tournament',
     'marit sveaas tournament',
@@ -139,16 +140,19 @@ my %MULTI_TYPOS =
   'Norwegian Mixed Team Trials' => [
     'norwegian mix team trials'],
   'Norwegian Mixed Teams' => [
+    'nbf mix teams',
     'nbf mixed team championship',
     'nbf mixed teams',
     'norwegian championship mix swiss teams',
-    'norwegian championship mix teams'],
+    'norwegian championship mix teams',
+    'norwegian mixed team championship'],
   'Norwegian Open Pairs' => [
     'nbf norwegian pairs',
     'nbf pairs',
     'nm pairs',
     'nm-pairs',
     'norwegian championship open pairs',
+    'norwegian pair championship',
     'norwegian pairs championship',
     'norwegain pairs',
     'norwegian pairs'],
@@ -206,6 +210,7 @@ my %MULTI_TYPOS =
     'norwegian wbg qualification'],
   'Norwegian Women Teams' => [
     'nbf nm damer lag',
+    'nbf women swiss teams',
     'nbf women team championship',
     'nbf women teams championship',
     'nbf womens team championship',

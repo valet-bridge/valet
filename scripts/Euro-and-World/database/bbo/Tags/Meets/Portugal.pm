@@ -38,9 +38,11 @@ my %MULTI_TYPOS =
   'Estoril Bridge Festival' => [
     'estoril festival'],
   'Lisbon International Festival' => [
+    'avgp lisbon teams',
     'internacional teams festival avgp',
     'international teams festival avgp'],
   'Madeira International Festival' => [
+    'madeira international bridge open',
     'international madeira',
     'madeira bridge open',
     'madeira open'],

@@ -28,6 +28,7 @@ my %MULTI_TYPOS =
     'ella graca open teams',
     'hong kong iner-city',
     'hong kong inter-city',
+    'hong kong intercity bridge',
     'JP Morgan Inter-City Championship',
     'JP Morgan Inter-City Bridge Championship',
     'JP Morgan Intercity Bridge Championships',

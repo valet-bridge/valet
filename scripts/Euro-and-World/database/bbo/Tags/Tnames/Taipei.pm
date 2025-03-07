@@ -21,9 +21,13 @@ my @MULTI_WORDS =
   'Taiwan University Open Cup',
   'Taiwan University Teachers Cup',
   'Taiwan University Women Cup',
+  'Taiwanese Mixed Teams',
   'Taiwanese Mixed Trials',
+  'Taiwanese Open Teams',
   'Taiwanese Open Trials',
+  'Taiwanese Senior Teams',
   'Taiwanese Senior Trials',
+  'Taiwanese Women Teams',
   'Taiwanese Youngster Trials',
 );
 
@@ -38,8 +42,13 @@ my %MULTI_TYPOS =
   'Taiwan University Teachers Cup' => [
     'taiwan university cup teachers',
     "taiwan university cup teacher's section"],
+  'Taiwanese Mixed Teams' => [
+    'ctcba mix team',
+    'ctcba mixed team'],
   'Taiwanese Mixed Trials' => [
     'chinese taipei mixed team trials'],
+  'Taiwanese Open Teams' => [
+    'ctcba open team'],
   'Taiwanese Open Trials' => [
     'chinese taipei open trails',
     'chinese taipei open trials',
@@ -60,10 +69,14 @@ my %MULTI_TYPOS =
     'taiwanese teal trial',
     'taiwanese team trial',
     'taiwanese trials'],
+  'Taiwanese Senior Teams' => [
+    'ctcba senior team'],
   'Taiwanese Senior Trials' => [
     'chinese taipei senior team trials',
     "chinese taipei seniors' team trials",
     'ctcba senior team trial'],
+  'Taiwanese Women Teams' => [
+    'ctcba women team'],
   'Taiwanese Youngster Trials' => [
     'chinese taipei young team trials',
     "chinese taipei young's team trials"],

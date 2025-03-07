@@ -23,6 +23,7 @@ my @MULTI_WORDS =
   'Portuguese Grand Prix',
   'Portuguese IMP Pairs',
   'Portuguese Mixed Team Trials',
+  'Portuguese Mixed Teams',
   'Portuguese Open Teams',
   'Portuguese Open Trials',
   'Portuguese Northern Regional Open Teams',

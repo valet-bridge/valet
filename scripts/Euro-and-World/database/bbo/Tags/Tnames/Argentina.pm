@@ -48,7 +48,8 @@ my %MULTI_TYPOS =
     'cn equipos libres argentina',
     'equipo libres argentina',
     'equipos libres argentina',
-    'open argentin team'],
+    'open argentin team',
+    'open teams argentina'],
   'Argentinian Open Trials' => [
     'argentina open trials',
     'argentine team trials',

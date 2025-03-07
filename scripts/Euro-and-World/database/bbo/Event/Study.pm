@@ -236,6 +236,8 @@ my @LOCAL_SUBS_INTERPOL =
     CORR => '$1 of $2' },
   { START => 61207, END => 61247, TEXT => '^(\d+)-(\d)$', 
     CORR => '$1 of $2' },
+  { START => 61339, END => 61388, TEXT => '^QL(\d)_4-S(\d)$', 
+    CORR => 'Qualifying - Round $1 of 4 - Session $2' },
   { START => 62377, END => 62538, TEXT => '^(\d+)-(\d)$', 
     CORR => '$1 of $2' },
   { START => 63013, END => 63040, TEXT => '(\d+)-(\d+)$', 

@@ -31,6 +31,7 @@ my %MULTI_TYPOS =
     'bfame chp',
     'bfame championships',
     'bfame bridge championship',
+    'bfame bridge championships',
     'bfame chamionship'],
 );
 

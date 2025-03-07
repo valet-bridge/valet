@@ -268,6 +268,16 @@ while ($line = <$fh>)
   print $knowledge_final->str_csv(';', $chunk{TITLE}, $chunk{BBONO}) 
     if $csv_flag;
 
+if (1)
+{
+  # Print titles that are not matched at all to a MEET or a TNAME.
+  my $meet = $knowledge->get_field('MEET', $chunk{BBONO});
+  my $tname = $knowledge->get_field('TNAME', $chunk{BBONO});
+  if ($meet eq '' && $tname eq '')
+  {
+    print "XXX ", $chunk{BBONO}, ": ", $chunk{TITLE}, "\n";
+  }
+}
 
   next if ! $debug_flag &&
      ! $print_chains &&

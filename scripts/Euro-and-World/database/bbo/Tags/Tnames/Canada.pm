@@ -42,6 +42,7 @@ my %MULTI_TYPOS =
   'Canadian Women Teams Championship' => [
     'can ladies bridge champs',
     'can ladies team champ',
+    "canadian women's teams championship",
     'cbc womens finals',
     'cbf womens final',
     'cbf womens finals'],

@@ -30,6 +30,7 @@ my %MULTI_TYPOS =
     'japan intercollege championships',
     'japan intercollege contract bridge championships',
     'japan spring intercollegiate championships',
+    'japan spring youngster match',
     'summer japan intercollege championships'],
   'Kyoto University Teams' => [
     'kubc trial'],

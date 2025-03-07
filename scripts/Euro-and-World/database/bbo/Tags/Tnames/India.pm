@@ -32,7 +32,10 @@ my @MULTI_WORDS =
   'Delhi Gymkhana Club Open Pairs',
   'Delhi Gymkhana Club Open Teams',
   'Fenesta Open Teams',
+  'Fenesta Women Pairs',
+  'Ganesha Open Teams',
   'Godfrey Phillips All India Open',
+  'HCL Pro-Am Pairs',
   'Hindusthan Club Teams',
   'Indian Gold Open Pairs',
   'Indian Gold Open Teams',
@@ -93,6 +96,7 @@ my @MULTI_WORDS =
   'Ruia Gold Cup',
   'Ruia Silver Cup',
   'Shree Keni Trophy',
+  'Shree Cement Corporate Invitational Teams',
   'Smt. Vijya Jajoo Mixed Pairs',
   'Summer Monsoon League',
   'TATA Open',
@@ -117,7 +121,9 @@ my %MULTI_TYPOS =
     'corporate pairs',
     'corporate invitational pairs'],
   'All India Shree Cement' => [
-    'all india shri cement'],
+    'all india shri cement',
+    'shree cement all india bridge championship',
+    'shree cement championships'],
   'All India UTI Bank Masters Championship' => [
     'ull aindia uti bank masters championship',
     'all india uti national masters championship',
@@ -154,13 +160,22 @@ my %MULTI_TYPOS =
     'delhi gymkhana club championship',
     'delhi gymkhana club open',
     'delhi gymkhana club open championship',
+    'delhi gymkhana club india open bridge tournament',
     'delhi gymkhana open',
     'delhi gymkhana open championship',
     'delhi gymkhana open chmpionship',
     'delhi gymkhana open tournament',
+    'dgc annual open championship',
     'dgc centenary celebrations',
     'dgc centenary tournament',
+    'dgc open annual championship',
     'dgc open championship'],
+  'Fenesta Women Pairs' => [
+    'fenesta ladies pair'],
+  'Ganesha Open Teams' => [
+    'ganesha bridge open tournament'],
+  'HCL Pro-Am Pairs' => [
+    'hcl pro am pairs'],
   'Indian Men Trials' => [
     'indian men national camp',
     'indian men qualification camp'],
@@ -335,6 +350,8 @@ my %MULTI_TYPOS =
     'ruia gols',
     'ruia trophy'],
   'Ruia Silver Cup' => ['ruia silver'],
+  'Shree Cement Corporate Invitational Teams' => [
+    'shree cement corporate invitation tournament'],
   'Shree Keni Trophy' => [
     'keni memorial trophy',
     'keni memorial  trophy', 
@@ -385,11 +402,19 @@ my %MULTI_TYPOS =
     'dr_tolani open summer nationals silver',
     'dr_tolani silver cup summer national',
     'dr_tolani sliver cup summer nationals'],
+  'WCG Open' => [
+    'videocon wcg Open',
+    'videcon wcg open',
+    'wcg annual'],
+  'West Bengal Open Team Trials' => [
+    'west bengal interstate selection trial'],
   'Willingdon Sports Club Swiss Pairs' => [
     'wellingdon swiss pairs',
     'willingdon all india open swiss imp pairs',
     'willingdon club swiss imp pairs',
     'willingdon club swiss pairs',
+    'willingdon sports club annual swiss pairs',
+    'willingdon sports club mumbai swiss imp pairs',
     'willingdon sports club open swiss pairs',
     'willingdon sports club open',
     'willingdon sports club  open',
@@ -399,12 +424,6 @@ my %MULTI_TYPOS =
     'wsc open swiss pairs championship',
     'wsc open swisspairs championship',
     'wsc swiss open pairs'],
-  'WCG Open' => [
-    'videocon wcg Open',
-    'videcon wcg open',
-    'wcg annual'],
-  'West Bengal Open Team Trials' => [
-    'west bengal interstate selection trial'],
 );
 
 my %SINGLE_TYPOS =

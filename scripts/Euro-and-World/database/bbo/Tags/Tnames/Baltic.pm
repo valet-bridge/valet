@@ -46,6 +46,7 @@ my %MULTI_TYPOS =
     'estonia a- league',
     'estonia teams championships', 
     'estonian a- league',
+    'estonian bridge championship',
     'estonian first league',
     'estonian open teams',
     'estonian team championship',
@@ -63,7 +64,9 @@ my %MULTI_TYPOS =
     'estonian latvian team trials',
     'estonian and latvian team trial',
     'estonian and latvian team Trials'],
-  'Lithuanian Open Teams' => ['lithuanian teams championship'],
+  'Lithuanian Open Teams' => [
+    'lithuania open teams',
+    'lithuanian teams championship'],
 
 );
 

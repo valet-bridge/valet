@@ -22,6 +22,7 @@ my @MULTI_WORDS =
   'Russian Open Teams',
   'Russian Open Team Trials',
   'Russian Premier League',
+  'Russian Women Pairs',
   'Russian Women Team Trials',
   'Slava Cup',
   'Tennet Mixed Pairs Cup',
@@ -32,6 +33,7 @@ my %MULTI_TYPOS =
   'NN Cup' => [
     'goulyash by e. gladysh',
     'goulyash by e_gladysh',
+    'moscow goulash',
     'nn-cup'],
   'Russian IMSA Cup' => ['imsa cup'],
   'Russian Mixed Team Trials' => [
@@ -43,6 +45,8 @@ my %MULTI_TYPOS =
   'Russian Open Team Trials' => [
     'russia open trials',
     'russian open trials'],
+  'Russian Women Pairs' => [
+    'russian women pair championship'],
   'Russian Women Team Trials' => ['russian women trials'],
   'Russian Premier League' => ['russian premiere league'],
   'Slava Cup' => [

@@ -26,6 +26,7 @@ my %MULTI_TYPOS =
 (
   'APBF Championships' => [
     'apbf congress',
+    'apbf championship',
     'pabf championship', 
     'pabf c',
     'asia pacific bridge federation championship',

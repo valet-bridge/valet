@@ -21,6 +21,8 @@ my @MULTI_WORDS =
   'South American Open Trials',
   'South American Senior Trials',
   'South American Senior Teams',
+  'South American Transnational Open Teams',
+  'South American Transnational Women Teams',
   'South American Women Teams',
   'South American Women Trials',
   'South American Zonal Mixed Teams',

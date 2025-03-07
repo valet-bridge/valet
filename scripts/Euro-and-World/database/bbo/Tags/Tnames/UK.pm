@@ -20,6 +20,7 @@ my @MULTI_WORDS =
   'Commonwealth Nations Bridge Championships',
   'Corn Cairdis Match',
   'Crockfords Cup',
+  'English Mixed Teams',
   'English Mixed Trials',
   'English Open Trials',
   'English Premier League',
@@ -55,7 +56,8 @@ my %MULTI_TYPOS =
     'acol bc inv pairs',
     'acol bridge club inv pairs',
     'acol bridge club invitational pairs',
-    'acol inv pairs'],
+    'acol inv pairs',
+    'acol invitational pairs'],
   'British Gold Cup' => [
     'bgb gold cup',
     'british gold',
@@ -71,6 +73,8 @@ my %MULTI_TYPOS =
     'commonwealth bridge championship'],
   'Corn Cairdis Match' => ['corn cairdis'],
   'Crockfords Cup' => ["crockford's cup"],
+  'English Mixed Teams' => [
+    'ebu mixed teams'],
   'English Mixed Trials' => [
     'ebu european mixed teams trial',
     'ebu mixed teams trials',
@@ -216,6 +220,8 @@ my %MULTI_TYPOS =
     'tgrs league', 
     'tgrs super league',
     "trg's super league"],
+  'Welsh Invitational Pairs' => [
+    'welsh invitation pairs'],
   'Welsh Open Trials' => ['welsh open trial', 'welsh trials',
     'welsh trial'],
   'Young Chelsea Knock-out' => [
@@ -231,7 +237,8 @@ my %MULTI_TYPOS =
     'yc womens swiss teams',
     "yc women's swiss teams",
     'yc womens teams',
-    'ycbc ladies teams'],
+    'ycbc ladies teams',
+    'young chelsea women swiss teams'],
 );
 
 my %SINGLE_TYPOS =

@@ -102,9 +102,10 @@ my %MULTI_TYPOS =
     'mixed teams china'],
   'Chinese Mixed Trials' => [
    'china national mixed team trial'],
-  'Chinese Open Teams' => ['team championship china'],
   'Chinese Open Trials' => [
    'chinese open team trials'],
+  'Chinese University Teams' => [
+    'china university bridge championships'],
   'Chinese Women First League' => [
     'china national women league'],
   'Dongming Knock-out Teams' => [

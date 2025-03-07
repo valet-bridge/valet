@@ -16,11 +16,13 @@ my @MULTI_WORDS =
 (
   'Finnish Cup',
   'Finnish Open IMP Pairs',
+  'Finnish Open IMP Pairs',
   'Finnish Open Pairs',
   'Finnish Open Pair Trials',
   'Finnish Open Trials',
   'Finnish Open Teams',
   'Finnish Senior Trials',
+  'Finnish Women Pairs',
   'Finnish Women Trials',
   'Hanko Open Teams',
   'Jyväskylä Open Teams',
@@ -42,6 +44,7 @@ my %MULTI_TYPOS =
     'finnish pairs championship',
     'finnish pairs champs'],
   'Finnish Open Teams' => [
+    'finnish imp championship',
     'finnish team championship',
     'finnish team championships',
     'finnish teams championship',
