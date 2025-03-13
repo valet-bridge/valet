@@ -892,6 +892,7 @@ my @LOCAL_SUBS =
     TEXT => 'CN ESPAÑA', CORR => 'Spanish Open Teams' },
   { START => 54917, END => 54943, 
     TEXT => 'Winter Nationals', CORR => 'Indian Winter Nationals' },
+  { START => 55037, END => 55126, TEXT => ' Wk1$', CORR => '' },
   { START => 55139, END => 55190, 
     TEXT => 'European Open Trials', CORR => 'English Open Trials' },
   { START => 55158, END => 55245, 
