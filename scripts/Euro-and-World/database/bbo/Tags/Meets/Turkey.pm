@@ -30,7 +30,9 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   'Assael Festival' => ['salvador assael festival'],
-  'Bodrum Peninsula Festival' => ['bodrum yarýmada bric festivali'],
+  'Bodrum Peninsula Festival' => [
+    'bodrum bridge festival',
+    'bodrum yarýmada bric festivali'],
   'Cappadocia Fairy Chimneys Festival' => [
     'cappadocia bridge fest',
     'kapadokya brýç festývalý',

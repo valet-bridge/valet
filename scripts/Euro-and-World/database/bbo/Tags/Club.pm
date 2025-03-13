@@ -248,6 +248,7 @@ my @MULTI_WORDS =
   'Dorost Havirov',
   'Dörtyol SK',
   'Drammen Arbeiderparti',
+  'Dubai Bridge Club',
   'Dýcle Gençlýk',
   'EBC Solok',
   'Edirne GSK',
@@ -805,6 +806,7 @@ my %MULTI_TYPOS =
   'BUKS Bytom' => ['buks ii bytom'],
   'Bursa BSK' => ['bursa bric skd'],
   'Büyük Kulüp' => ['buyuk kulup'],
+  'Caen BC' => ['caen b.c'],
   'Calcutta Bridge Club' => ['c b c'],
   'Calcutta Cricket & Football Club' => ['cc&fc', 'cc & fc', 'cc &fc',
     'calcutta bridgeclub'],
@@ -870,6 +872,7 @@ my %MULTI_TYPOS =
     'dortyol beledyie', 
     'hatay dortyol'],
   'Drammen Arbeiderparti' => ['drammen arb'],
+  'Dubai Bridge Club' => ['dubai club'],
   'Ege Club' => ['ege bilimsel', 'ege bsk'],
   'EIBC Jakarta' => ['eibc_jakarta'],
   'Ekol BSK' => [
@@ -1130,6 +1133,7 @@ my %MULTI_TYPOS =
   'München Sanzatu' => ['munih sanzatu'],
   'Nachteulen Leverkusen' => ['nachteulen leverk'],
   'Nagari Club' => ['nagari bridge club', 'nagari unj'],
+  'Nancy Jarville BC' => ['nancy jarville b.c'],
   'Narlidere Club' => [
     'narlidere belediye',
     'narlidere bisk',

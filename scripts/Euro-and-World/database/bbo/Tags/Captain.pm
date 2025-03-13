@@ -183,6 +183,7 @@ my @MULTI_WORDS =
   'Hana Shezifi',
   'Hans-Ove Sandin',
   'Haoran Hoyin',
+  'Hansa Narasimhan',
   'Hecht Johansen',
   'Helge Hesselberg',
   'Hema Deora',
@@ -647,6 +648,7 @@ my %MULTI_TYPOS =
   'H.C. Nielsen' => ['hc nielsen'],
   'Hana Shezifi' => ['shezifi hana'],
   'Hans-Ove Sandin' => ['hans-ove', 'hans-ove crew'],
+  'Hansa Narasimhan' => ['h narasimhan', 'h.narasimhan'],
   'Hecht Johansen' => ['hecht-johansen', 'hect johansen'],
   Helekar => ['dr. helekar', 'dr.helekar'],
   'Hemant Jalan' => ['h.jalan', 'hemant  jalan'],
@@ -1220,7 +1222,7 @@ my @SINGLE_WORDS = qw(
   Salonen Saltoglu Salvador Salvadori Sampaio Sancaktar Sandberg 
   Sanden Sanders Sandford Sandqvist Sangiorgio Sankichi Sansom 
   Santolini Santos Saoud Saporta Sapounakis Sargos Sarten Sarundajang 
-  Sauvage Savchenko Savelli Savin Savorani Savski Sawicki Saxena 
+  Sato Sauvage Savchenko Savelli Savin Savorani Savski Sawicki Saxena 
   Sayaca Saydi Sayer Sayilkan Sayýlkan Säflund Sbarigia Scanavino Scerri 
   Schaltz Scherders Schermer Schireson Schlicker Schmidt Schneider 
   Schnetzer Schoellkopf Schoenwald Scholes Schonning Schoolmann 

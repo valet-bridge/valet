@@ -23,10 +23,12 @@ my @MULTI_WORDS =
   'English Mixed Teams',
   'English Mixed Trials',
   'English Open Trials',
+  'English Open Pair Trials',
   'English Premier League',
   'English Senior Trials',
   'English U28 Trials',
   'English Women Teams',
+  'English Women Pair Trials',
   'English Women Team Trials',
   'Garden Cities Teams',
   'Glasgow Transnational Open Teams',
@@ -150,6 +152,7 @@ my %MULTI_TYPOS =
     'english national womens teams',
     'whitelaw cup'],
   'English Women Pair Trials' => [
+    'england women pair trials',
     'lady milne pairs trials'],
   'English Women Team Trials' => [
     'ebu european womens trial',

@@ -120,6 +120,7 @@ my @MULTI_WORDS =
   'Aylan Kurdi',
   'AZS Buboslavia',
 
+  'B1',
   'B Team',
   'Baba Blues',
   'Babes Amazones',

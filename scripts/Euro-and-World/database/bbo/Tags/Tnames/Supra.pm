@@ -14,9 +14,9 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
-  'Buffett Cup Individual',
-  'Buffett Cup Pairs',
-  'Buffett Cup Teams',
+  'Buffett Individual',
+  'Buffett Pairs',
+  'Buffett Teams',
   'Cavendish Open Pairs',
   'Cavendish Women Pairs',
   'Cavendish Teams',

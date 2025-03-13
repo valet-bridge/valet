@@ -348,7 +348,7 @@ my %MEETS_SUPRA =
 
 my %TOURNAMENTS_SUPRA =
 (
-  'Buffett Cup Individual' =>
+  'Buffett Individual' =>
   {
     FORM => 'Individual',
     GENDER => 'Open',
@@ -389,7 +389,7 @@ my %TOURNAMENTS_SUPRA =
     }
   },
 
-  'Buffett Cup Pairs' =>
+  'Buffett Pairs' =>
   {
     FORM => 'Pairs',
     GENDER => 'Open',
@@ -447,7 +447,7 @@ my %TOURNAMENTS_SUPRA =
     }
   },
 
-  'Buffett Cup Teams' =>
+  'Buffett Teams' =>
   {
     FORM => 'Teams',
     SCORING => 'BAM',
