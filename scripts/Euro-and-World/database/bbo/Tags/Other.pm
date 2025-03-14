@@ -21,6 +21,7 @@ my @MULTI_WORDS =
   '4XL',
 
   'a-TMPC',
+  'A-B C',
   'A-chanzu',
   'AAA',
   'AAMM',
