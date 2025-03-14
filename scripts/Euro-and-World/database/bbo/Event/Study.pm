@@ -245,7 +245,7 @@ my @LOCAL_SUBS_INTERPOL =
   { START => 54144, END => 54152, 
     TEXT => '^T\d S(\d)RR(\d)$', CORR => 'Session $1 - RR - Round $2' },
   { START => 54565, END => 54598, 
-    TEXT => '^T\d S(\d)RR(\d)$', CORR => 'Session $1 - RR - Round $2' },
+    TEXT => '^T\d+ S(\d)RR(\d)$', CORR => 'Session $1 - RR - Round $2' },
   { START => 54649, END => 54718, TEXT => 'RR(\d) (\d[-_]\d)', 
     CORR => 'RR Round $1 - Segment $2' },
   { START => 55780, END => 55793, TEXT => '^OF(\d)$', 

@@ -17,6 +17,7 @@ my @MULTI_WORDS =
   'South American Junior Teams',
   'South American Mixed Trials',
   'South American Open Pairs',
+  'South American Open Swiss Teams',
   'South American Open Teams',
   'South American Open Trials',
   'South American Senior Trials',
@@ -34,27 +35,38 @@ my @MULTI_WORDS =
 my %MULTI_TYPOS =
 (
   'South American Junior Teams' => [
+    'sabc juniors',
     'south american junior championship',
     'south american junior championships',
     'south american junioor championships',
     'youth sabc'],
   'South American Open Pairs' => [
+    'sabc open pairs',
     'sudamericano de parejas',
     'sudamericano de parejas libres'],
+  'South American Open Swiss Teams' => [
+    'sabc swiss teams'],
   'South American Open Teams' => [
     'libres sudamericano',
+    'sabc open teams',
     'southamerican open championship',
     'sudamericano libre equipos',
     'sudamericano libres'],
   'South American Senior Trials' => [
     'clasificacion sudamericano seniors'],
   'South American Senior Teams' => [
+    'sabc seniors',
     'south american senior championship'],
   'South American Senior Trials' => [
     'seleccion sudamericano senior'],
+  'South American Transnational Open Teams' => [
+    'sabc transnational'],
   'South American Women Teams' => [
     'clasificatoria damas equipos',
     'clasificatoria equipos damas',
+    'sabc ladies team',
+    'sabc ladies teams',
+    'sabc women teams',
     'sudamericano damas'],
   'South American Zonal Mixed Teams' => [
     'sabc mixed zonal'],

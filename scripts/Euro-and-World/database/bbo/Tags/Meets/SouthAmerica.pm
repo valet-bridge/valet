@@ -44,7 +44,6 @@ my %MULTI_TYPOS =
 
 my %SINGLE_TYPOS =
 (
-  'South American Team Championship' => ['sabc'],
 );
 
 sub set_hash

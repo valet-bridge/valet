@@ -774,6 +774,7 @@ my @LOCAL_SUBS =
     TEXT => 'Tournament of Twin Towns', CORR => 'Twin Towns Elblag' },
   { START => 49395, END => 49479, 
     TEXT => 'National Championship Romania', CORR => 'Romanian League' },
+  { START => 49410, END => 49509, TEXT => '^M\d ', CORR => '' },
   { START => 49468, END => 49501, 
     TEXT => 'Swiss Open 2017 - Teams', CORR => 'Swiss Open Teams 2017' },
   { START => 49533, END => 49553, 
