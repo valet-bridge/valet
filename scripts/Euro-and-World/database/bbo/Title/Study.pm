@@ -1103,6 +1103,7 @@ my @LOCAL_SUBS =
   { START => 63028, END => 63037, 
     TEXT => 'Canadian Senior Team', 
     CORR => 'Canadian Seniors Teams Championship' },
+  { START => 63076, END => 63127, TEXT => '^[A-H] ', CORR => '' },
   { START => 63297, END => 63407, 
     TEXT => '^BBW[1-9] - ', CORR => '' },
   { START => 63326, END => 63472, 
