@@ -134,7 +134,6 @@ while ($entryT->read($fh))
     warn $entryT->bbono() . " not found at all" unless $division_flag;
     next;
   }
-next;
 
   if ($EXPLORE_TOURNAMENTS == 1)
   {
@@ -154,6 +153,7 @@ next;
       $debug_flag, $division_flag);
   $times[2] += time() - $t0;
 
+next;
   if ($tname eq '')
   {
     warn $entryT->bbono() . ": no TNAME found for meet $meet"

@@ -45,6 +45,7 @@ my @MULTI_WORDS =
   'Indonesian Pre-Sports Open Teams',
   'Indonesian Premier League',
   'Indonesian Prima Pair Programme',
+  'Indonesian Student Teams',
   'Indonesian U16 Pair Trials',
   'Indonesian U18 Teams',
   'Indonesian U21 Pair Trials',

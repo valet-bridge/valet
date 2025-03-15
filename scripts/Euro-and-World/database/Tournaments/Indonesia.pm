@@ -2459,6 +2459,32 @@ my %TOURNAMENTS_INDONESIA =
     }
   },
 
+  'Indonesian Student Teams' =>
+  {
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U21',
+
+    EDITIONS =>
+    {
+      '2014' =>
+      {
+        MEET => 'Indonesian Student Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2014,
+            DATE_START => '2014-12-12',
+            DATE_END => '2014-12-15'
+          },
+        }
+      },
+    }
+  },
+
   'Indonesian U16 Pair Trials' =>
   {
     %GLOBAL,

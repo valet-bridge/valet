@@ -1295,6 +1295,32 @@ my %TOURNAMENTS_SOUTHAMERICA =
     }
   },
 
+  'South American Youth Teams' =>
+  {
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U21',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        MEET => 'South American Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2016,
+            DATE_START => '2016-05-25',
+            DATE_END => '2016-05-26'
+          },
+        }
+      },
+    }
+  },
+
   'South American Zonal Women Teams' =>
   {
     %GLOBAL,
