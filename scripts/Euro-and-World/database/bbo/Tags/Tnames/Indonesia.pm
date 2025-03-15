@@ -24,6 +24,7 @@ my @MULTI_WORDS =
   'East Java Open Teams',
   'Electric Cup',
   'FTBC Tanjungpura University',
+  'FTBC Tanjungpura University Pairs',
   'Gabrial UI Bastaman Cup',
   'Geologi Cup',
   'IBWI Women Cup',

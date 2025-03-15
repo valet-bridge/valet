@@ -14,14 +14,14 @@ our @EXPORT = qw(set_hash);
 
 my @MULTI_WORDS =
 (
-  'South American Team Championship',
+  'South American Bridge Championship',
   'South American Trials',
   'South American Zonal Trials',
 );
 
 my %MULTI_TYPOS =
 (
-  'South American Team Championship' => [
+  'South American Bridge Championship' => [
     'southamerica championship',
     'southamerican championship',
     'southamerican open championship',

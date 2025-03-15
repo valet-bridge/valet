@@ -114,6 +114,8 @@ my %FORM_CORRECTIONS = (
   'Indian Summer Nationals' => [
     51856,
     79794],
+  'Indian Winter Nationals' => [
+    77778],
   'Indonesian National Games' => [
     46923, 46924, 46925, 46926, 46927, 46930, 46931, 46933, 46935, 46936,
     46939, 46940, 46942, 46943, 46944, 46945, 46946, 46947, 46948, 46949,
@@ -385,6 +387,8 @@ my %FORM_CORRECTIONS = (
     45817, 45871, 45872, 45979, 45980],
   'Delhi Gymkhana Club Open Pairs' => [
     26245, 26251],
+  'English Women Pair Trials' => [
+    77766],
   'English Women Trials' => [
     21647, 21651, 21656, 21666, 21669,
     26849, 26850, 26872, 26878, 26881, 26901, 26903,
@@ -815,7 +819,8 @@ my %FORM_CORRECTIONS = (
     21233,
     26104,
     31344, 31345, 31347,
-    41943, 41944],
+    41943, 41944,
+    85576],
   'Riga Invitational Pairs' => [
     19565,
     25013,
@@ -936,6 +941,8 @@ my %FORM_CORRECTIONS = (
     45657, 45658, 45659],
   'Turkish U16 Pairs' => [
     45642, 45646],
+  'Turkish U21 Pair Trials' => [
+    73639, 73643], 
   'Turkish Women Pair Trials' => [
     13292, 13304],
   'Venezuelan Swiss Pairs' => [

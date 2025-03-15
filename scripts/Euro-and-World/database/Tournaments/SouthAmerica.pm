@@ -22,7 +22,7 @@ my %GLOBAL = (
 
 my %MEETS_SOUTHAMERICA =
 (
-  'South American Team Championship' =>
+  'South American Bridge Championship' =>
   {
     %GLOBAL,
 
@@ -227,7 +227,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
     {
       '2006' =>
       {
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -272,7 +272,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2016' =>
       {
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -334,7 +334,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
     {
       '2012' =>
       {
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -358,7 +358,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       '2014' =>
       {
         ORDINAL => 5,
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -373,7 +373,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2015' =>
       {
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -388,7 +388,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2016' =>
       {
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -416,7 +416,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
     {
       '2004' =>
       {
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -439,7 +439,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2005' =>
       {
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -462,7 +462,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2006' =>
       {
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -485,7 +485,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2007' =>
       {
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -508,7 +508,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2008' =>
       {
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -531,7 +531,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2009' =>
       {
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -555,7 +555,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2010' =>
       {
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -578,7 +578,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2011' =>
       {
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -602,7 +602,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2012' =>
       {
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -633,7 +633,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2013' =>
       {
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -673,7 +673,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2014' =>
       {
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         ORDINAL => 5,
         CHAPTERS =>
         {
@@ -719,7 +719,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2015B' =>
       {
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         MEET_TAG => '2015',
         CHAPTERS =>
         {
@@ -751,7 +751,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2016' =>
       {
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -850,7 +850,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2015' =>
       {
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -913,7 +913,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
     {
       '2005' =>
       {
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -928,7 +928,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2009' =>
       {
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -943,7 +943,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2010' =>
       {
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -966,7 +966,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2011' =>
       {
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -981,7 +981,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2013' =>
       {
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         CHAPTERS =>
         {
           'C0' => 
@@ -1004,7 +1004,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2014' =>
       {
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         ORDINAL => 5,
         CHAPTERS =>
         {
@@ -1035,7 +1035,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2015B' =>
       {
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         MEET_TAG => '2015',
         CHAPTERS =>
         {
@@ -1067,7 +1067,7 @@ my %TOURNAMENTS_SOUTHAMERICA =
       },
       '2016' =>
       {
-        MEET => 'South American Team Championship',
+        MEET => 'South American Bridge Championship',
         CHAPTERS =>
         {
           'SINGLE' => 
