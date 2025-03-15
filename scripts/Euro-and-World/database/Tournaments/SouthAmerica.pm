@@ -404,6 +404,32 @@ my %TOURNAMENTS_SOUTHAMERICA =
     }
   },
 
+  'South American Open Swiss Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'South American Open Teams',
   {
     ORIGIN => 'Transnational',
@@ -896,6 +922,58 @@ my %TOURNAMENTS_SOUTHAMERICA =
             DATE_START => '2011-03-26',
             DATE_END => '2011-03-27'
           } 
+        }
+      },
+    }
+  },
+
+  'South American Transnational Open Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
+  'South American Transnational Women Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
         }
       },
     }

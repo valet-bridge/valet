@@ -427,6 +427,32 @@ my %TOURNAMENTS_SWITZERLAND =
     }
   },
 
+  'Swiss Open Pairs' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Swiss Open Teams' =>
   {
     %GLOBAL,

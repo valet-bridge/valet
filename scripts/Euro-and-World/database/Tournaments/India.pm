@@ -2083,6 +2083,58 @@ my %TOURNAMENTS_INDIA =
     }
   },
 
+  'Fenesta Women Pairs' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
+  'Ganesha Open Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Godfrey Phillips All India Open' =>
   {
     FORM => 'Teams',
@@ -2113,6 +2165,32 @@ my %TOURNAMENTS_INDIA =
             DATE_START => '2007-12-22',
             DATE_END => '2007-12-22'
           } 
+        }
+      },
+    }
+  },
+
+  'HCL Pro-Am Pairs' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
         }
       },
     }
@@ -5901,6 +5979,32 @@ my %TOURNAMENTS_INDIA =
             DATE_START => '2011-12-06',
             DATE_END => '2011-12-06'
           } 
+        }
+      },
+    }
+  },
+
+  'Shree Cement Corporate Invitational Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'Corporate',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
         }
       },
     }

@@ -1313,6 +1313,32 @@ my %TOURNAMENTS_TURKEY =
     }
   },
 
+  'Istanbul Winter Women Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Istanbul Women Teams' =>
   {
     %GLOBAL,
@@ -1449,6 +1475,32 @@ my %TOURNAMENTS_TURKEY =
             DATE_START => '2016-02-07',
             DATE_END => '2016-02-07'
           } 
+        }
+      },
+    }
+  },
+
+  'Izmir Women Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
         }
       },
     }
@@ -3124,6 +3176,58 @@ my %TOURNAMENTS_TURKEY =
   },
 
   'Turkish Senior Team Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
+  'Turkish Summer Open Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
+  'Turkish Summer Women Teams' =>
   {
     %GLOBAL,
     ORIGIN => 'National',

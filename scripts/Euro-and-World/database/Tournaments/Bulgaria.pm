@@ -860,6 +860,32 @@ my %TOURNAMENTS_BULGARIA =
     }
   },
 
+  'Bulgarian Open Cup' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Bulgarian Open Pairs' =>
   {
     %GLOBAL,
@@ -1257,6 +1283,32 @@ my %TOURNAMENTS_BULGARIA =
     }
   },
 
+  'Dimitrovgrad Open Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2000' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2000,
+            DATE_START => '2000-01-01',
+            DATE_END => '2000-01-01'
+          },
+        }
+      },
+    }
+  },
+
   'Dobrich Open Teams' =>
   {
     FORM => 'Teams',
@@ -1329,7 +1381,7 @@ my %TOURNAMENTS_BULGARIA =
     }
   },
 
-  'Harmanli Open teams' =>
+  'Harmanli Open Teams' =>
   {
     %GLOBAL,
     ORIGIN => 'National',
