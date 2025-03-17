@@ -996,7 +996,7 @@ my %MEETS_USA =
         YEAR => 2017,
         CITY => 'Schaumburg',
         DATE_START => '2017-04-30',
-        DATE_END => '2017-05-06'
+        DATE_END => '2017-05-10'
       },
       '2017B' =>
       {
@@ -1031,6 +1031,14 @@ my %MEETS_USA =
         DATE_END => '2019-05-20'
       },
       '2019B' =>
+      {
+        # Mixed Trials
+        YEAR => 2019,
+        CITY => 'Schaumburg',
+        DATE_START => '2019-05-24',
+        DATE_END => '2019-05-30'
+      },
+      '2019C' =>
       {
         # Senior Trials
         YEAR => 2019,
@@ -1122,7 +1130,7 @@ my %MEETS_USA =
       '2017-18' =>
       {
         DATE_START => '2017-12-27',
-        DATE_END => '2017-12-31'
+        DATE_END => '2018-01-01'
       },
       '2019-20' =>
       {
@@ -3073,15 +3081,28 @@ my %TOURNAMENTS_USA =
           } 
         }
       },
-      '2017' =>
+      '2017-18' =>
       {
         MEET => 'United States Youth Bridge Championship',
+        MEET_TAG => '2017-18',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
             DATE_START => '2017-12-30',
             DATE_END => '2017-12-31'
+          } 
+        }
+      },
+      '2019-20' =>
+      {
+        MEET => 'United States Youth Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            DATE_START => '2019-12-30',
+            DATE_END => '2019-12-31'
           } 
         }
       },
@@ -3222,13 +3243,13 @@ my %TOURNAMENTS_USA =
       {
         # https://www.usbf.org/2017-michael-seamon-junior-usbcs/2017-junior-usbc
         MEET => 'United States Youth Bridge Championship',
+        MEET_TAG => '2017-18',
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2017,
             DATE_START => '2017-12-27',
-            DATE_END => '2017-12-31'
+            DATE_END => '2018-01-01'
           } 
         }
       },
@@ -4084,7 +4105,7 @@ my %TOURNAMENTS_USA =
           {
             YEAR => 2017,
             DATE_START => '2017-04-30',
-            DATE_END => '2017-05-06'
+            DATE_END => '2017-05-10'
           } 
         }
       },
@@ -4217,6 +4238,32 @@ my %TOURNAMENTS_USA =
             major => 'SEGMENT',
             DATE_START => '2016-08-03',
             DATE_END => '2016-08-03'
+          },
+        }
+      },
+    }
+  },
+
+  'US Mixed Trials',
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2019' =>
+      {
+        MEET => 'United States Bridge Championship',
+        MEET_TAG => '2019B',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-05-24',
+            DATE_END => '2019-05-29'
           },
         }
       },
@@ -5099,7 +5146,7 @@ my %TOURNAMENTS_USA =
       {
         # https://www.usbf.org/2019-senior-usbc/2019-senior-usbc
         MEET => 'United States Bridge Championship',
-        MEET_TAG => '2019B',
+        MEET_TAG => '2019C',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -5156,6 +5203,44 @@ my %TOURNAMENTS_USA =
         }
       },
     }
+  },
+
+  'US U16 Trials',
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U16',
+
+    EDITIONS =>
+    {
+      '2017-18' =>
+      {
+        MEET => 'United States Youth Bridge Championship',
+        MEET_TAG => '2017-18',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            DATE_START => '2017-12-29',
+            DATE_END => '2018-01-01'
+          },
+        }
+      },
+      '2019-20' =>
+      {
+        MEET => 'United States Youth Bridge Championship',
+        MEET_TAG => '2019-20',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            DATE_START => '2019-12-29',
+            DATE_END => '2020-01-01'
+          },
+        }
+      },
+    },
   },
 
   'US University Trials',
@@ -5740,6 +5825,19 @@ my %TOURNAMENTS_USA =
             DATE_START => '2015-12-30',
             DATE_END => '2015-12-31'
           } 
+        }
+      },
+      '2017-18' =>
+      {
+        MEET => 'United States Youth Bridge Championship',
+        MEET_TAG => '2017-18',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            DATE_START => '2017-12-29',
+            DATE_END => '2018-01-01'
+          },
         }
       },
       '2019-20' =>
