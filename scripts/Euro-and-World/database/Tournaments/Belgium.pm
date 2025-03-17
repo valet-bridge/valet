@@ -190,7 +190,7 @@ my %TOURNAMENTS_BELGIUM =
           } 
         }
       },
-      '2016' =>
+      '2016A' =>
       {
         CHAPTERS =>
         {
@@ -201,6 +201,20 @@ my %TOURNAMENTS_BELGIUM =
             major => 'SEGMENT|SESSION',
             DATE_START => '2016-01-31',
             DATE_END => '2016-01-31'
+          } 
+        }
+      },
+      '2016B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION',
+            DATE_START => '2016-12-11',
+            DATE_END => '2016-12-11'
           } 
         }
       },

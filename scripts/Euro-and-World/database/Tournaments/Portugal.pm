@@ -1354,7 +1354,7 @@ my %TOURNAMENTS_PORTUGAL =
           } 
         }
       },
-      '2016' =>
+      '2016A' =>
       {
         # https://fpbridge.pt/_wp/wp-content/uploads/2016/05/Classifica%C3%A7%C3%A3o-Final.pdf
         CHAPTERS =>
@@ -1365,6 +1365,35 @@ my %TOURNAMENTS_PORTUGAL =
             major => 'ROUND',
             DATE_START => '2016-05-06',
             DATE_END => '2016-05-08'
+          } 
+        }
+      },
+      '2016B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Quarterfinal',
+            DATE_START => '2016-10-14',
+            DATE_END => '2016-10-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2016-10-15',
+            DATE_END => '2016-10-15'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-10-16',
+            DATE_END => '2016-10-16'
           } 
         }
       },

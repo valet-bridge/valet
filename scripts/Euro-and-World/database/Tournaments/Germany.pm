@@ -86,7 +86,7 @@ my %MEETS_GERMANY =
       {
         MEET_YEAR => 2021,
         DATE_START => '2021-08-14',
-        DATE_END => '2021-08-21'
+        DATE_END => '2021-08-22'
       },
     }
   },
@@ -2303,8 +2303,9 @@ my %TOURNAMENTS_GERMANY =
       '2019' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=11140&site=0&kl=0
+        # Actually 71st?
         MEET => 'German Championship Week',
-        ORDINAL => 71,
+        ORDINAL => 72,
         CHAPTERS => 
         {
           'C0' => 
@@ -2312,24 +2313,25 @@ my %TOURNAMENTS_GERMANY =
             YEAR => 2019,
             MOVEMENT => 'Swiss',
             major => 'ROUND',
-            DATE_START => '2019-08-31',
-            DATE_END => '2019-09-01'
+            DATE_START => '2019-08-28',
+            DATE_END => '2019-08-29'
           },
           'C1' => 
           {
             YEAR => 2019,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
-            DATE_START => '2019-08-31',
-            DATE_END => '2019-09-01'
+            DATE_START => '2019-08-29',
+            DATE_END => '2019-08-30'
           } 
         }
       },
       '2021' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=15580&site=0&kl=0
+        # Actually 72nd?
         MEET => 'German Championship Week',
-        ORDINAL => 72,
+        ORDINAL => 73,
         CHAPTERS => 
         {
           'C0' => 
@@ -2345,17 +2347,18 @@ my %TOURNAMENTS_GERMANY =
             YEAR => 2021,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
-            DATE_START => '2021-08-20',
-            DATE_END => '2021-08-21'
+            DATE_START => '2021-08-21',
+            DATE_END => '2021-08-22'
           } 
         }
       },
       '2022' => 
       {
         # https://ergebnisse.bridge-verband.de/index.php?turid=20873&site=0&kl=0
+        # Actually 73rd?
         MEET => 'German Championships',
         MEET_TAG => '2022D',
-        ORDINAL => 73,
+        ORDINAL => 74,
         CHAPTERS => 
         {
           'C0' => 
@@ -2416,14 +2419,14 @@ my %TOURNAMENTS_GERMANY =
             MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2024-04-12',
-            DATE_END => '2024-04-14'
+            DATE_END => '2024-04-13'
           },
           'C1' => 
           {
             YEAR => 2024,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
-            DATE_START => '2024-04-12',
+            DATE_START => '2024-04-13',
             DATE_END => '2024-04-14'
           } 
         }

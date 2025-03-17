@@ -741,6 +741,12 @@ my %MEETS_FRIENDLY =
         DATE_START => '2016-08-18',
         DATE_END => '2016-08-20'
       },
+      '2016I' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-11-08',
+        DATE_END => '2016-11-08'
+      },
     }
   },
 );
@@ -1694,6 +1700,25 @@ my %TOURNAMENTS_FRIENDLY =
             major => 'ROUND',
             DATE_START => '2016-05-20',
             DATE_END => '2016-05-22'
+          } 
+        }
+      },
+      '2016E' =>
+      {
+        MEET => 'Practice Match',
+        MEET_TAG => '2016I',
+        ORIGIN => 'National',
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND',
+            DATE_START => '2016-11-08',
+            DATE_END => '2016-11-08'
           } 
         }
       },

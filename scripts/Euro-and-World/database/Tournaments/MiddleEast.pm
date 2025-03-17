@@ -676,8 +676,8 @@ my %TOURNAMENTS_MIDDLEEAST =
           'SINGLE' => 
           {
             YEAR => 2016,
-            DATE_START => '2016-11-04',
-            DATE_END => '2016-11-08'
+            DATE_START => '2016-10-26',
+            DATE_END => '2016-10-30'
           } 
         }
       },

@@ -77,7 +77,7 @@ my %FORM_CORRECTIONS = (
   # Says Team 1, Team 2 in BBO file, but is pairs or individual
 
   # These first ones are not a tournament name but a meet, so they 
-  # will never match by name , but they will show up in the flat 
+  # will never match by name, but they will show up in the flat 
   # list of numbers.
   'All India HCL Tournament' => [
     47512,

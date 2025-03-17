@@ -544,7 +544,7 @@ my %MEETS_USA =
         YEAR => 2016,
         CITY => 'Orlando',
         DATE_START => '2016-11-24',
-        DATE_END => '2016-12-04'
+        DATE_END => '2016-12-05'
       },
       '2017A' =>
       {
@@ -568,7 +568,7 @@ my %MEETS_USA =
         YEAR => 2017,
         CITY => 'San Diego',
         DATE_START => '2017-11-23',
-        DATE_END => '2017-12-03'
+        DATE_END => '2017-12-04'
       },
       '2018A' =>
       {
@@ -592,7 +592,7 @@ my %MEETS_USA =
         YEAR => 2018,
         CITY => 'Honolulu',
         DATE_START => '2018-11-22',
-        DATE_END => '2018-12-02'
+        DATE_END => '2018-12-03'
       },
       '2019A' =>
       {
@@ -616,7 +616,7 @@ my %MEETS_USA =
         YEAR => 2019,
         CITY => 'San Francisco',
         DATE_START => '2019-11-28',
-        DATE_END => '2019-12-08'
+        DATE_END => '2019-12-09'
       },
       '2021C' =>
       {
@@ -648,7 +648,7 @@ my %MEETS_USA =
         YEAR => 2022,
         CITY => 'Phoenix',
         DATE_START => '2022-11-24',
-        DATE_END => '2022-12-04'
+        DATE_END => '2022-12-05'
       },
       '2023A' =>
       {
@@ -672,7 +672,7 @@ my %MEETS_USA =
         YEAR => 2023,
         CITY => 'Atlanta',
         DATE_START => '2023-11-23',
-        DATE_END => '2023-12-03'
+        DATE_END => '2023-12-04'
       },
       '2024A' =>
       {
@@ -696,7 +696,7 @@ my %MEETS_USA =
         YEAR => 2024,
         CITY => 'Las Vegas',
         DATE_START => '2024-11-28',
-        DATE_END => '2024-12-08'
+        DATE_END => '2024-12-09'
       },
     }
   },
@@ -1011,8 +1011,8 @@ my %MEETS_USA =
         # Senior Trials
         YEAR => 2017,
         CITY => 'Schaumburg',
-        DATE_START => '2017-05-15',
-        DATE_END => '2017-05-19'
+        DATE_START => '2017-05-18',
+        DATE_END => '2017-05-26'
       },
       '2018' =>
       {
@@ -1127,7 +1127,7 @@ my %MEETS_USA =
       '2019-20' =>
       {
         DATE_START => '2019-12-27',
-        DATE_END => '2019-12-31'
+        DATE_END => '2020-01-01'
       },
       '2024-25' =>
       {
@@ -1272,6 +1272,76 @@ my %TOURNAMENTS_USA =
             DATE_START => '2016-07-24',
             DATE_END => '2016-07-25'
           }
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2017B',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-07-22',
+            DATE_END => '2017-07-24'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2018B',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-08-04',
+            DATE_END => '2018-08-05'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2019B',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-07-26',
+            DATE_END => '2019-07-27'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2022B',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-07-23',
+            DATE_END => '2022-07-23'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2023B',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-07-22',
+            DATE_END => '2023-07-22'
+          },
         }
       },
     }
@@ -1445,6 +1515,90 @@ my %TOURNAMENTS_USA =
             major => 'SEGMENT',
             DATE_START => '2016-07-24',
             DATE_END => '2016-07-25'
+          },
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2017B',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-07-22',
+            DATE_END => '2017-07-24'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2018B',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-07-27',
+            DATE_END => '2018-07-30'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2019B',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-07-19',
+            DATE_END => '2019-07-22'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2022B',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-07-15',
+            DATE_END => '2022-07-17'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2023B',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-07-15',
+            DATE_END => '2023-07-17'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2024B',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-07-20',
+            DATE_END => '2024-07-22'
           },
         }
       },
@@ -1807,13 +1961,109 @@ my %TOURNAMENTS_USA =
           },
         }
       },
+      '2016' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2016C',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-12-03',
+            DATE_END => '2016-12-05'
+          },
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2017C',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-12-02',
+            DATE_END => '2017-12-04'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2018C',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-12-01',
+            DATE_END => '2018-12-03'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2019C',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-12-07',
+            DATE_END => '2019-12-09'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2022C',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-12-03',
+            DATE_END => '2022-12-05'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2023C',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-12-02',
+            DATE_END => '2023-12-04'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2024C',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-12-07',
+            DATE_END => '2024-12-09'
+          },
+        }
+      },
     }
   },
 
   'Soloway Teams' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1821,15 +2071,73 @@ my %TOURNAMENTS_USA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2019C',
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-12-01',
+            DATE_END => '2019-12-06'
+          },
+        }
+      },
+      '2021' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2021C',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2021,
+            DATE_START => '2021-11-29',
+            DATE_END => '2021-12-03'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2022C',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-11-27',
+            DATE_END => '2022-12-02'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2023C',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-11-26',
+            DATE_END => '2023-12-01'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2024C',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-12-01',
+            DATE_END => '2024-12-06'
           },
         }
       },
@@ -2612,6 +2920,90 @@ my %TOURNAMENTS_USA =
           },
         }
       },
+      '2017' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2017B',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-07-25',
+            DATE_END => '2017-07-30'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2018B',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-07-31',
+            DATE_END => '2018-08-05'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2019B',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-07-23',
+            DATE_END => '2019-07-28'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2022B',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-07-19',
+            DATE_END => '2022-07-24'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2023B',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-07-18',
+            DATE_END => '2023-07-24'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2024B',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-07-23',
+            DATE_END => '2024-07-28'
+          },
+        }
+      },
     }
   },
 
@@ -2678,6 +3070,18 @@ my %TOURNAMENTS_USA =
             major => 'SEGMENT',
             DATE_START => '2015-12-28',
             DATE_END => '2015-12-30'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'United States Youth Bridge Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            DATE_START => '2017-12-30',
+            DATE_END => '2017-12-31'
           } 
         }
       },
@@ -2836,9 +3240,8 @@ my %TOURNAMENTS_USA =
         {
           'SINGLE' => 
           {
-            YEAR => 2019,
             DATE_START => '2019-12-27',
-            DATE_END => '2019-12-31'
+            DATE_END => '2020-01-01'
           } 
         }
       },
@@ -4156,6 +4559,48 @@ my %TOURNAMENTS_USA =
           },
         }
       },
+      '2016' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2016C',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-11-26',
+            DATE_END => '2016-12-01'
+          },
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2017C',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-11-25',
+            DATE_END => '2017-11-29'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2018C',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-11-26',
+            DATE_END => '2018-11-27'
+          },
+        }
+      },
     }
   },
 
@@ -4645,8 +5090,8 @@ my %TOURNAMENTS_USA =
           'SINGLE' => 
           {
             YEAR => 2017,
-            DATE_START => '2017-05-15',
-            DATE_END => '2017-05-19'
+            DATE_START => '2017-05-18',
+            DATE_END => '2017-05-26'
           } 
         }
       },
@@ -5295,6 +5740,19 @@ my %TOURNAMENTS_USA =
             DATE_START => '2015-12-30',
             DATE_END => '2015-12-31'
           } 
+        }
+      },
+      '2019-20' =>
+      {
+        MEET => 'United States Youth Bridge Championship',
+        MEET_TAG => '2019-20',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            DATE_START => '2019-12-29',
+            DATE_END => '2020-01-01'
+          },
         }
       },
     }
@@ -5991,6 +6449,90 @@ my %TOURNAMENTS_USA =
             DATE_START => '2016-03-20',
             DATE_END => '2016-03-21'
           } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2017A',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-03-14',
+            DATE_END => '2017-03-19'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2018A',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-03-13',
+            DATE_END => '2018-03-18'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2019A',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-03-26',
+            DATE_END => '2019-03-31'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2022A',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-03-15',
+            DATE_END => '2022-03-20'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2023A',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-03-14',
+            DATE_END => '2023-03-19'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'North American Bridge Championship',
+        MEET_TAG => '2024A',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-03-19',
+            DATE_END => '2024-03-24'
+          },
         }
       },
     }

@@ -2831,7 +2831,7 @@ my %TOURNAMENTS_ASIA =
           {
             YEAR => 2017,
             DATE_START => '2017-07-03',
-            DATE_END => '2017-07-03'
+            DATE_END => '2017-07-07'
           }
         }
       },

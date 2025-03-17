@@ -200,9 +200,9 @@ my %MEETS_INDIA =
         # https://hcl-bridge.com/archive/2022-2/
         MEET_ORDINAL => 19,
         CITY => 'Gurgaon',
-        YEAR => 2023,
-        DATE_START => '2023-10-31',
-        DATE_END => '2023-11-06'
+        YEAR => 2022,
+        DATE_START => '2022-10-11',
+        DATE_END => '2022-10-16'
       },
       '2023' =>
       {
@@ -212,6 +212,14 @@ my %MEETS_INDIA =
         YEAR => 2023,
         DATE_START => '2023-10-31',
         DATE_END => '2023-11-06'
+      },
+      '2024' =>
+      {
+        MEET_ORDINAL => 21,
+        CITY => 'Delhi',
+        YEAR => 2024,
+        DATE_START => '2024-09-14',
+        DATE_END => '2024-09-22'
       },
     }
   },
@@ -548,7 +556,7 @@ my %MEETS_INDIA =
         # https://www.bridgewebs.com/cgi-bin/bwoq/bw.cgi?club=winternationals&pid=display_page14
         MEET_ORDINAL => 59,
         YEAR => 2017,
-        CITY => 'Visakhapatnam',
+        CITY => 'Vishakhapatanam',
         DATE_START => '2017-12-16',
         DATE_END => '2017-12-22'
       },
@@ -575,11 +583,11 @@ my %MEETS_INDIA =
         # https://www.bridgewebs.com/cgi-bin/bwoq/bw.cgi?club=winternationals&pid=display_page13
         MEET_ORDINAL => 64,
         YEAR => 2022,
-        CITY => 'Jabalpur',
+        CITY => 'Jaipur',
         DATE_START => '2022-12-03',
         DATE_END => '2022-12-12'
       },
-      '2024' =>
+      '2024A' =>
       {
         # https://www.bridgewebs.com/cgi-bin/bwoq/bw.cgi?club=winternationals&pid=display_page59
         MEET_ORDINAL => 65,
@@ -587,6 +595,15 @@ my %MEETS_INDIA =
         CITY => 'Jabalpur',
         DATE_START => '2024-01-03',
         DATE_END => '2024-01-09'
+      },
+      '2024B' =>
+      {
+        # https://www.bridgewebs.com/cgi-bin/bwoq/bw.cgi?club=winternationals&pid=display_page60
+        MEET_ORDINAL => 66,
+        YEAR => 2024,
+        CITY => 'Pune',
+        DATE_START => '2024-12-08',
+        DATE_END => '2024-12-18'
       },
     }
   },
@@ -2261,8 +2278,6 @@ my %TOURNAMENTS_INDIA =
 
   'Indian Gold Open Teams' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2270,15 +2285,169 @@ my %TOURNAMENTS_INDIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018B' =>
+      {
+        MEET => 'All India HCL Tournament',
+        MEET_TAG => '2018',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-08-09',
+            DATE_END => '2018-08-14'
+          },
+        }
+      },
+      '2018C' =>
+      {
+        MEET => 'Indian Winter Nationals',
+        MEET_TAG => '2018',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-12-09',
+            DATE_END => '2018-12-13'
+          },
+        }
+      },
+      '2019A' =>
+      {
+        MEET => 'Indian Summer Nationals',
+        MEET_TAG => '2019',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-06-02',
+            DATE_END => '2019-06-05'
+          },
+        }
+      },
+      '2019B' =>
+      {
+        MEET => 'All India HCL Tournament',
+        MEET_TAG => '2019',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-08-05',
+            DATE_END => '2019-08-10'
+          },
+        }
+      },
+      '2019C' =>
+      {
+        MEET => 'Indian Winter Nationals',
+        MEET_TAG => '2019',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-12-10',
+            DATE_END => '2019-12-12'
+          },
+        }
+      },
+      '2022A' =>
+      {
+        MEET => 'All India HCL Tournament',
+        MEET_TAG => '2022',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-10-11',
+            DATE_END => '2022-10-16'
+          },
+        }
+      },
+      '2022B' =>
+      {
+        MEET => 'Indian Winter Nationals',
+        MEET_TAG => '2022',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-12-04',
+            DATE_END => '2022-12-07'
+          },
+        }
+      },
+      '2024A' =>
+      {
+        MEET => 'Indian Winter Nationals',
+        MEET_TAG => '2024A',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-01-05',
+            DATE_END => '2024-01-07'
+          },
+        }
+      },
+      '2024B' =>
+      {
+        MEET => 'All India HCL Tournament',
+        MEET_TAG => '2024',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-09-16',
+            DATE_END => '2024-09-21'
+          },
+        }
+      },
+      '2024C' =>
+      {
+        MEET => 'Indian Winter Nationals',
+        MEET_TAG => '2024B',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-12-12',
+            DATE_END => '2024-12-16'
+          },
+        }
+      },
+    }
+  },
+
+  'Indian Gold Women Pairs' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2022' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2022,
+            DATE_START => '2022-12-12',
+            DATE_END => '2022-12-12'
           },
         }
       },
@@ -2486,15 +2655,15 @@ my %TOURNAMENTS_INDIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2020' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2020,
+            DATE_START => '2020-01-01',
+            DATE_END => '2020-01-01'
           },
         }
       },
@@ -2503,24 +2672,23 @@ my %TOURNAMENTS_INDIA =
 
   'Indian Mixed Pairs' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Pairs',
-    SCORING => 'MP',
-    GENDER => 'Open',
+    SCORING => 'IMP',
+    GENDER => 'Mixed',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2024' =>
       {
+        MEET => 'All India HCL Tournament',
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2024,
+            DATE_START => '2024-09-14',
+            DATE_END => '2024-09-15'
           },
         }
       },
@@ -5938,6 +6106,32 @@ my %TOURNAMENTS_INDIA =
             DATE_START => '2015-11-22',
             DATE_END => '2015-11-22'
           } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Indian Winter Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-12-15',
+            DATE_END => '2016-12-18'
+          },
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Indian Winter Nationals',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-12-18',
+            DATE_END => '2017-12-20'
+          },
         }
       },
     }

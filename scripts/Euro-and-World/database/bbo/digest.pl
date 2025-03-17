@@ -153,7 +153,6 @@ while ($entryT->read($fh))
       $debug_flag, $division_flag);
   $times[2] += time() - $t0;
 
-next;
   if ($tname eq '')
   {
     warn $entryT->bbono() . ": no TNAME found for meet $meet"
@@ -162,7 +161,7 @@ next;
   }
   if ($edition eq '')
   {
-    warn $entryT->bbono() . ": no EDITION found for meet $meet"
+    warn $entryT->bbono() . ": no EDITION found for TNAME $tname"
       unless $division_flag;
     next;
   }
@@ -179,6 +178,7 @@ next;
     print $entryT->str_as_read();
     next;
   }
+next;
 
   $t0 = time();
   my ($header_entry, $chapter_entry) = 
