@@ -250,7 +250,7 @@ my %MEETS_EURO_YOUTH =
         # http://db.eurobridge.org/repository/competitions/19stokke/microsite/results.htm
         MEET_ORDINAL => 27,
         YEAR => 2019,
-        CITY => 'Oslo',
+        CITY => 'Stokke',
         COUNTRY => 'Norway',
         DATE_START => '2019-07-05',
         DATE_END => '2019-07-11'
@@ -275,7 +275,7 @@ my %MEETS_EURO_YOUTH =
         CITY => 'Wroclaw',
         COUNTRY => 'Poland',
         DATE_START => '2024-07-07',
-        DATE_END => '2024-07-12'
+        DATE_END => '2024-07-13'
       }
     }
   }
@@ -837,6 +837,13 @@ my %TOURNAMENTS_EURO_YOUTH =
             MOVEMENT => 'Round-robin',
             DATE_START => '2024-07-07',
             DATE_END => '2024-07-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            MOVEMENT => 'Swiss',
+            DATE_START => '2024-07-13',
+            DATE_END => '2024-07-13'
           }
         }
       },
@@ -1755,7 +1762,7 @@ my %TOURNAMENTS_EURO_YOUTH =
             YEAR => 2024,
             MOVEMENT => 'Round-robin',
             DATE_START => '2024-07-09',
-            DATE_END => '2024-07-12'
+            DATE_END => '2024-07-13'
           }
         }
       },
@@ -1828,6 +1835,13 @@ my %TOURNAMENTS_EURO_YOUTH =
             MOVEMENT => 'Round-robin',
             DATE_START => '2024-07-09',
             DATE_END => '2024-07-12'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            MOVEMENT => 'Swiss',
+            DATE_START => '2024-07-13',
+            DATE_END => '2024-07-13'
           }
         }
       },
@@ -1899,21 +1913,6 @@ my %TOURNAMENTS_EURO_YOUTH =
             STAGE => 'Final',
             DATE_START => '2018-07-15',
             DATE_END => '2018-07-15'
-          }
-        }
-      },
-
-      '2023' =>
-      {
-        MEET => 'European Youth Pairs Championships',
-        CHAPTERS => 
-        {
-          'C0' => 
-          {
-            YEAR => 2023,
-            STAGE => 'Final',
-            DATE_START => '2023-07-29',
-            DATE_END => '2023-07-29'
           }
         }
       },
@@ -2168,6 +2167,18 @@ my %TOURNAMENTS_EURO_YOUTH =
             major => 'ROUND',
             DATE_START => '2016-07-19',
             DATE_END => '2016-07-22'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-07-25',
+            DATE_END => '2019-07-28'
           },
         }
       },

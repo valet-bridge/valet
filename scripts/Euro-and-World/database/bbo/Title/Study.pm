@@ -867,6 +867,7 @@ my @LOCAL_SUBS =
     CORR => 'French First Division - Final' },
   { START => 53308, END => 53324, 
     TEXT => 'VILNIUS CUP GRAND PRIX of POLAND', CORR => 'Vilnius Cup' },
+  { START => 53336, END => 53345, TEXT => '^6th ', CORR => '5th ' },
   { START => 53377, END => 53400, 
     TEXT => 'Pokalsemifinale', CORR => 'Danish Cup - SF' },
   { START => 53409, END => 53432, 
