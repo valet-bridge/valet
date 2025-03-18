@@ -901,11 +901,18 @@ my %TOURNAMENTS_DENMARK =
           'C0' => 
           {
             YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            DATE_START => '2017-09-03',
+            DATE_END => '2017-09-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
             STAGE => 'Semifinal',
             DATE_START => '2017-09-23',
             DATE_END => '2017-09-23'
           },
-          'C1' => 
+          'C2' => 
           {
             YEAR => 2017,
             STAGE => 'Final',
@@ -1603,7 +1610,7 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2017,
             WEEKEND => 1,
             DATE_START => '2017-10-07',
-            DATE_END => '2017-10-07'
+            DATE_END => '2017-10-08'
           },
           'C1' => 
           {
@@ -1779,7 +1786,7 @@ my %TOURNAMENTS_DENMARK =
             YEAR => 2021,
             WEEKEND => 2,
             DATE_START => '2021-11-13',
-            DATE_END => '2021-11-13'
+            DATE_END => '2021-11-14'
           },
           'C2' => 
           {
@@ -1926,6 +1933,58 @@ my %TOURNAMENTS_DENMARK =
             DATE_START => '2024-04-14',
             DATE_END => '2024-04-14'
           }
+        }
+      },
+
+      '2024-25' =>
+      {
+        # https://www2.bridge.dk/Aktivitetskalender%202024-2025.aspx?ID=26475
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            WEEKEND => 1,
+            DATE_START => '2024-10-05',
+            DATE_END => '2024-10-06'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            WEEKEND => 2,
+            DATE_START => '2024-11-09',
+            DATE_END => '2024-11-10'
+          },
+          'C2' => 
+          {
+            YEAR => 2025,
+            WEEKEND => 3,
+            DATE_START => '2025-01-11',
+            DATE_END => '2025-01-12'
+          },
+          'C3' => 
+          {
+            YEAR => 2025,
+            WEEKEND => 4,
+            DATE_START => '2025-03-01',
+            DATE_END => '2025-03-02'
+          },
+          'C4' => 
+          {
+            YEAR => 2025,
+            WEEKEND => 5,
+            STAGE => 'Semifinal',
+            DATE_START => '2025-04-05',
+            DATE_END => '2025-04-05'
+          },
+          'C5' => 
+          {
+            YEAR => 2025,
+            WEEKEND => 5,
+            STAGE => 'Final',
+            DATE_START => '2025-04-06',
+            DATE_END => '2025-04-06'
+          },
         }
       }
     }

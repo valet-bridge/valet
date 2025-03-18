@@ -417,8 +417,21 @@ my %TOURNAMENTS_SPAIN =
           {
             YEAR => 2016,
             major => 'ROUND',
-            DATE_START => '2016-01-17',
+            DATE_START => '2016-01-15',
             DATE_END => '2016-01-17'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            DATE_START => '2017-04-01',
+            DATE_END => '2017-04-01'
           } 
         }
       },
@@ -539,6 +552,71 @@ my %TOURNAMENTS_SPAIN =
             major => 'ROUND',
             DATE_START => '2014-12-20',
             DATE_END => '2014-12-21'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2015,
+            major => 'ROUND',
+            DATE_START => '2015-12-18',
+            DATE_END => '2015-12-20'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND',
+            DATE_START => '2016-12-17',
+            DATE_END => '2016-12-18'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            DATE_START => '2017-12-15',
+            DATE_END => '2017-12-17'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            major => 'ROUND',
+            DATE_START => '2018-12-15',
+            DATE_END => '2018-12-16'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            major => 'ROUND',
+            DATE_START => '2019-12-12',
+            DATE_END => '2019-12-14'
           } 
         }
       },

@@ -1144,6 +1144,8 @@ my @LOCAL_SUBS =
   { START => 65216, END => 65251, 
     TEXT => 'Inter State Bridge Championship', 
     CORR => 'Indian Inter-State Teams' },
+  { START => 65230, END => 65249, 
+    TEXT => 'Danmark - Pokalslutspil', CORR => 'Danish Cup - SF' },
   { START => 66057, END => 66086, 
     TEXT => 'Hainan\(Sanya Nanshan\) International Bridge', 
     CORR => 'HNA Open Teams' },
