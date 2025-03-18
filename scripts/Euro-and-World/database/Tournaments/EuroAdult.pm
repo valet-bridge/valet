@@ -369,6 +369,17 @@ my %MEETS_EUROADULT =
         DATE_END => '2018-06-16'
       },
 
+      '2019' =>
+      {
+        # http://db.eurobridge.org/repository/competitions/19Lisbon/microSite/results.htm
+        YEAR => 2019,
+        MEET_ORDINAL => 1,
+        CITY => 'Lisbon',
+        COUNTRY => 'Portugal',
+        DATE_START => '2019-02-22',
+        DATE_END => '2019-02-28'
+      },
+
       '2022' =>
       {
         # http://db.eurobridge.org/repository/competitions/22Madeira/microsite/results.htm
@@ -537,7 +548,7 @@ my %MEETS_EUROADULT =
         CITY => 'Monte Carlo',
         COUNTRY => 'Monaco',
         DATE_START => '2020-02-29',
-        DATE_END => '2020-03-06'
+        DATE_END => '2020-03-08'
       },
       '2023' =>
       {
@@ -1122,6 +1133,14 @@ my %TOURNAMENTS_EUROADULT =
           'C2' => 
           {
             YEAR => 2016,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2016-11-12',
+            DATE_END => '2016-11-12'
+          },
+          'C3' => 
+          {
+            YEAR => 2016,
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2016-11-12',
@@ -1328,6 +1347,22 @@ my %TOURNAMENTS_EUROADULT =
 
     EDITIONS =>
     {
+      '2019' =>
+      {
+        MEET => 'European National Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2019-02-22',
+            DATE_END => '2019-02-28'
+          } 
+        }
+      },
+
       '2022' =>
       {
         MEET => 'European National Championships',
@@ -2783,8 +2818,8 @@ my %TOURNAMENTS_EUROADULT =
             YEAR => 2017,
             MOVEMENT => 'Round-robin',
             major => 'ROUND',
-            DATE_START => '2017-10-20',
-            DATE_END => '2017-10-22'
+            DATE_START => '2017-11-21',
+            DATE_END => '2017-11-23'
           } 
         }
       },
@@ -2880,6 +2915,25 @@ my %TOURNAMENTS_EUROADULT =
             major => 'ROUND',
             DATE_START => '2023-10-25',
             DATE_END => '2023-10-27'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        # http://db.eurobridge.org/repository/competitions/24jurmala/microsite/results.htm
+        ORDINAL => 16,
+        CITY => 'Jurmala',
+        COUNTRY => 'Lithuania',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2024-10-09',
+            DATE_END => '2024-10-11'
           } 
         }
       },
@@ -3603,7 +3657,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2017,
-            MOVEMENT => 'Round-robin',
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2017-06-10',
             DATE_END => '2017-06-11'
@@ -3650,7 +3704,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2019,
-            MOVEMENT => 'Round-robin',
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2019-06-15',
             DATE_END => '2019-06-16'
@@ -3705,7 +3759,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2023,
-            MOVEMENT => 'Round-robin',
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2023-06-03',
             DATE_END => '2023-06-04'
@@ -4519,7 +4573,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2017,
-            MOVEMENT => 'Round-robin',
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2017-06-17',
             DATE_END => '2017-06-18'
@@ -4566,7 +4620,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2019,
-            MOVEMENT => 'Round-robin',
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2019-06-22',
             DATE_END => '2019-06-23'
@@ -4621,7 +4675,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2023,
-            MOVEMENT => 'Round-robin',
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2023-06-10',
             DATE_END => '2023-06-12'
@@ -5082,6 +5136,32 @@ my %TOURNAMENTS_EUROADULT =
     }
   },
 
+  'European Transnational Women Pairs' => 
+  {
+    ORIGIN => 'Transnational',
+    FORM => 'Pairs',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2017' =>
+      {
+        MEET => 'European Transnational Championships',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-06-22',
+            DATE_END => '2017-06-22'
+          },
+        }
+      },
+    }
+  },
+
   'European Transnational Women Teams' => 
   {
     ORIGIN => 'Transnational',
@@ -5207,7 +5287,48 @@ my %TOURNAMENTS_EUROADULT =
             DATE_END => '2015-07-07'
           },
         }
-      }
+      },
+      '2017' =>
+      {
+        MEET => 'European Transnational Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-06-20',
+            DATE_END => '2017-06-20'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'European Transnational Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-06-25',
+            DATE_END => '2019-06-25'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'European Transnational Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-06-15',
+            DATE_END => '2023-06-15'
+          } 
+        }
+      },
     }
   },
 
@@ -5357,6 +5478,30 @@ my %TOURNAMENTS_EUROADULT =
     }
   },
 
+  'European Winter Pairs' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'MP',
+
+    EDITIONS =>
+    {
+      '2020' =>
+      {
+        MEET => 'European Winter Games',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-03-06',
+            DATE_END => '2020-03-08'
+          },
+        }
+      },
+    }
+  },
+
   'European Winter Teams' =>
   {
     FORM => 'Teams',
@@ -5424,7 +5569,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2018,
-            MOVEMENT => 'Round-robin',
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2018-02-17',
             DATE_END => '2018-02-19'
@@ -5456,6 +5601,14 @@ my %TOURNAMENTS_EUROADULT =
           'C4' => 
           {
             YEAR => 2018,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2018-02-23',
+            DATE_END => '2018-02-23'
+          },
+          'C5' => 
+          {
+            YEAR => 2018,
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2018-02-23',
@@ -5472,7 +5625,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2020,
-            MOVEMENT => 'Round-robin',
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2020-02-29',
             DATE_END => '2020-03-02'
@@ -5504,6 +5657,14 @@ my %TOURNAMENTS_EUROADULT =
           'C4' => 
           {
             YEAR => 2020,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2020-03-06',
+            DATE_END => '2020-03-06'
+          },
+          'C5' => 
+          {
+            YEAR => 2020,
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2020-03-06',
@@ -5520,7 +5681,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2023,
-            MOVEMENT => 'Round-robin',
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2023-04-21',
             DATE_END => '2023-04-23'

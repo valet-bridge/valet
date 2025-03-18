@@ -1577,6 +1577,8 @@ my @LOCAL_SUBS =
     CORR => 'South American Open Teams' },
   { START => 83176, END => 83206, 
     TEXT => 'Slutspil', CORR => 'Danish First Division' },
+  { START => 83207, END => 83317, 
+    TEXT => '2024EWTC$', CORR => ' - 2024 European Winter Teams' },
   { START => 83265, END => 83315, 
     TEXT => 'Greek Trials 2024 \(Selection\)', 
     CORR => 'Greek Open Team Trials 2024' },

@@ -27,9 +27,11 @@ my @MULTI_WORDS =
   'European Transnational Open Pairs',
   'European Transnational Open Teams',
   'European Transnational Seniors Teams',
+  'European Transnational Women Pairs',
   'European Transnational Women Teams',
   'European Winter BAM Trophy',
   'European Winter Teams',
+  'European Winter Pairs',
   'European Winter Transnational Teams',
   "European Women Champions' Cup",
   'Generali European Open Teams',
@@ -78,7 +80,6 @@ my %MULTI_TYPOS =
 my %SINGLE_TYPOS =
 (
   'European National Mixed Teams' => ['emtbc'],
-  'European National Open Teams' => ['entc'],
   'European National Women Teams' => ['ewtc'],
   'European Small Federation Games' => ['esfg', 'sfc'],
   'European Winter Teams' => ['zc']

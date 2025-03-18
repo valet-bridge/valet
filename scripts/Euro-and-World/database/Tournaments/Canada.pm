@@ -129,13 +129,21 @@ my %MEETS_CANADA =
         DATE_START => '2016-05-21',
         DATE_END => '2016-05-29'
       },
-      '2017' =>
+      '2017A' =>
       {
         # https://cbf.ca/BWeek/17files/standings.shtml
         YEAR => 2017,
         CITY => 'Winnipeg',
         DATE_START => '2017-04-29',
         DATE_END => '2017-05-07'
+      },
+      '2017B' =>
+      {
+        # https://cbf.ca/BWeek/17files/standings.shtml
+        YEAR => 2017,
+        CITY => 'Winnipeg',
+        DATE_START => '2017-05-25',
+        DATE_END => '2017-05-29'
       },
       '2018' =>
       {
@@ -727,6 +735,7 @@ my %TOURNAMENTS_CANADA =
       '2017' =>
       {
         MEET => 'Canadian Bridge Championships',
+        MEET_TAG => '2017A',
         CHAPTERS => 
         {
           'SINGLE' => 
@@ -1151,6 +1160,7 @@ my %TOURNAMENTS_CANADA =
       '2017' =>
       {
         MEET => 'Canadian Bridge Championships',
+        MEET_TAG => '2017B',
         CHAPTERS => 
         {
           'C0' => 
@@ -1473,6 +1483,7 @@ my %TOURNAMENTS_CANADA =
       '2017' =>
       {
         MEET => 'Canadian Bridge Championships',
+        MEET_TAG => '2017B',
         CHAPTERS => 
         {
           'C0' => 
