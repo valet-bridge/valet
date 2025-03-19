@@ -163,11 +163,13 @@ my %MEETS_WORLD =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
-        YEAR => 2000,
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
+        # http://db.worldbridge.org/repository/tourn/hengshui.19/microsite/Results.htm
+        YEAR => 2019,
+        CITY => 'Hengshui',
+        DATE_START => '2019-05-14',
+        DATE_END => '2019-05-18'
       },
     }
   },
@@ -179,11 +181,109 @@ my %MEETS_WORLD =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2022A' =>
       {
-        YEAR => 2000,
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
+        YEAR => 2022,
+        DATE_START => '2022-02-07',
+        DATE_END => '2022-02-11'
+      },
+      '2022B' =>
+      {
+        YEAR => 2022,
+        DATE_START => '2022-03-07',
+        DATE_END => '2022-03-09'
+      },
+      '2022C' =>
+      {
+        YEAR => 2022,
+        DATE_START => '2022-04-18',
+        DATE_END => '2022-04-21'
+      },
+      '2022D' =>
+      {
+        YEAR => 2022,
+        CITY => 'Lillehammer',
+        COUNTRY => 'Norway',
+        DATE_START => '2022-05-30',
+        DATE_END => '2022-06-03'
+      },
+      '2022E' =>
+      {
+        YEAR => 2022,
+        DATE_START => '2022-07-04',
+        DATE_END => '2022-07-07'
+      },
+      '2022F' =>
+      {
+        YEAR => 2022,
+        DATE_START => '2022-08-08',
+        DATE_END => '2022-08-10'
+      },
+      '2022G' =>
+      {
+        YEAR => 2022,
+        DATE_START => '2022-09-05',
+        DATE_END => '2022-09-09'
+      },
+      '2022I' =>
+      {
+        YEAR => 2022,
+        CITY => 'Copenhagen',
+        COUNTRY => 'Denmark',
+        DATE_START => '2022-10-10',
+        DATE_END => '2022-10-14'
+      },
+      '2023A' =>
+      {
+        YEAR => 2023,
+        DATE_START => '2023-02-27',
+        DATE_END => '2023-03-01'
+      },
+      '2023B' =>
+      {
+        YEAR => 2023,
+        DATE_START => '2023-03-27',
+        DATE_END => '2023-03-31'
+      },
+      '2023C' =>
+      {
+        YEAR => 2023,
+        CITY => 'Sopot',
+        COUNTRY => 'Poland',
+        DATE_START => '2023-05-15',
+        DATE_END => '2023-05-19'
+      },
+      '2023D' =>
+      {
+        YEAR => 2023,
+        CITY => 'Copenhagen',
+        COUNTRY => 'Denmark',
+        DATE_START => '2023-10-16',
+        DATE_END => '2023-10-20'
+      },
+      '2024A' =>
+      {
+        YEAR => 2024,
+        CITY => 'Reykjavik',
+        COUNTRY => 'Iceland',
+        DATE_START => '2024-01-22',
+        DATE_END => '2024-01-25'
+      },
+      '2024B' =>
+      {
+        YEAR => 2024,
+        CITY => 'Bodø',
+        COUNTRY => 'Norway',
+        DATE_START => '2024-05-20',
+        DATE_END => '2024-05-23'
+      },
+      '2024C' =>
+      {
+        YEAR => 2024,
+        CITY => 'Copenhagen',
+        COUNTRY => 'Denmark',
+        DATE_START => '2024-10-07',
+        DATE_END => '2024-10-11'
       },
     }
   },
@@ -291,6 +391,15 @@ my %MEETS_WORLD =
         DATE_START => '2016-09-03',
         DATE_END => '2016-09-17'
       },
+      '2018' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/orlando.18/microSite/Results.htm
+        YEAR => 2018,
+        CITY => 'Orlando',
+        COUNTRY => 'USA',
+        DATE_START => '2018-09-21',
+        DATE_END => '2018-10-06'
+      },
       '2022' =>
       {
         # http://db.worldbridge.org/Repository/tourn/wroclaw.22/microSite/Results.htm
@@ -299,6 +408,15 @@ my %MEETS_WORLD =
         COUNTRY => 'Poland',
         DATE_START => '2022-08-19',
         DATE_END => '2022-09-03'
+      },
+      '2024' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/BuenosAires.24/microSite/Results.htm
+        YEAR => 2024,
+        CITY => 'Buenos Aires',
+        COUNTRY => 'Argentina',
+        DATE_START => '2024-10-22',
+        DATE_END => '2024-11-03'
       },
     },
   },
@@ -694,8 +812,8 @@ my %MEETS_WORLD =
         YEAR => 2022,
         CITY => 'Salsomaggiore',
         COUNTRY => 'Italy',
-        DATE_START => '2022-10-08',
-        DATE_END => '2022-10-10'
+        DATE_START => '2022-08-07',
+        DATE_END => '2022-08-14'
       },
     }
   },
@@ -1163,6 +1281,102 @@ my %TOURNAMENTS_WORLD =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'World Team Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2017-08-13',
+            DATE_END => '2017-08-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2017-08-20',
+            DATE_END => '2017-08-21'
+          },
+          'C2' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
+            DATE_START => '2017-08-22',
+            DATE_END => '2017-08-23'
+          },
+          'C3' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2017-08-24',
+            DATE_END => '2017-08-26'
+          },
+          'C4' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION',
+            DATE_START => '2017-08-24',
+            DATE_END => '2017-08-26'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'World Team Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2019-09-15',
+            DATE_END => '2019-10-22'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-09-23',
+            DATE_END => '2019-09-24'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
+            DATE_START => '2019-09-25',
+            DATE_END => '2019-09-26'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2019-09-27',
+            DATE_END => '2019-09-28'
+          },
+          'C4' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION',
+            DATE_START => '2019-09-27',
+            DATE_END => '2019-09-28'
+          } 
+        }
+      },
     }
   },
 
@@ -1420,6 +1634,32 @@ my %TOURNAMENTS_WORLD =
             DATE_START => '2016-08-12',
             DATE_END => '2016-08-13'
           } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-08-09',
+            DATE_END => '2018-08-18'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-07-31',
+            DATE_END => '2023-08-07'
+          },
         }
       },
     }
@@ -1865,6 +2105,19 @@ my %TOURNAMENTS_WORLD =
           },
         }
       },
+      '2019' =>
+      {
+        MEET => 'IMSA World Masters Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-05-17',
+            DATE_END => '2019-05-18'
+          },
+        }
+      },
     }
   },
 
@@ -1898,6 +2151,29 @@ my %TOURNAMENTS_WORLD =
             major => 'SEGMENT',
             DATE_START => '2016-02-28',
             DATE_END => '2016-02-28'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'IMSA World Masters Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2019-05-14',
+            DATE_END => '2019-05-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-16',
+            DATE_END => '2019-05-16'
           },
         }
       },
@@ -1954,6 +2230,19 @@ my %TOURNAMENTS_WORLD =
             major => 'SESSION',
             DATE_START => '2016-02-29',
             DATE_END => '2016-03-03'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'IMSA World Masters Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-05-17',
+            DATE_END => '2019-05-18'
           },
         }
       },
@@ -2040,6 +2329,29 @@ my %TOURNAMENTS_WORLD =
             major => 'SEGMENT',
             DATE_START => '2016-02-28',
             DATE_END => '2016-02-28'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'IMSA World Masters Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2019-05-14',
+            DATE_END => '2019-05-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-16',
+            DATE_END => '2019-05-16'
           },
         }
       },
@@ -2176,6 +2488,20 @@ my %TOURNAMENTS_WORLD =
             major => 'SEGMENT',
             DATE_START => '2014-10-22',
             DATE_END => '2014-10-22'
+          },
+        }
+      },
+      '2018' =>
+      {
+        
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-09-23',
+            DATE_END => '2018-10-06'
           },
         }
       },
@@ -2849,7 +3175,21 @@ my %TOURNAMENTS_WORLD =
             DATE_END => '2014-10-22'
           },
         }
-      }
+      },
+      '2018' =>
+      {
+        
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-09-22',
+            DATE_END => '2018-10-06'
+          },
+        }
+      },
     }
   },
 
@@ -3330,6 +3670,103 @@ my %TOURNAMENTS_WORLD =
     }
   },
 
+  'WBT Open Teams' => 
+  {
+    ORIGIN => 'Transnational',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2022A' =>
+      {
+        MEET => 'World Bridge Tour',
+        MEET_TAG => '2022I',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-10-10',
+            DATE_END => '2022-10-14'
+          },
+        }
+      },
+      '2022B' =>
+      {
+        MEET => 'World Bridge Tour',
+        MEET_TAG => '2022D',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-05-30',
+            DATE_END => '2022-06-03'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'World Bridge Tour',
+        MEET_TAG => '2023D',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-10-16',
+            DATE_END => '2023-10-20'
+          },
+        }
+      },
+      '2024A' =>
+      {
+        MEET => 'World Bridge Tour',
+        MEET_TAG => '2024A',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-01-22',
+            DATE_END => '2024-01-25'
+          },
+        }
+      },
+      '2024B' =>
+      {
+        MEET => 'World Bridge Tour',
+        MEET_TAG => '2024B',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-05-20',
+            DATE_END => '2024-05-23'
+          },
+        }
+      },
+      '2024C' =>
+      {
+        MEET => 'World Bridge Tour',
+        MEET_TAG => '2024C',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-10-07',
+            DATE_END => '2024-10-11'
+          },
+        }
+      },
+    }
+  },
+
   'World Kids Teams' =>
   {
     ORIGIN => 'International',
@@ -3447,7 +3884,20 @@ my %TOURNAMENTS_WORLD =
             DATE_END => '2014-10-17'
           },
         }
-      }
+      },
+      '2022' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-08-31',
+            DATE_END => '2022-09-03'
+          },
+        }
+      },
     }
   },
 
@@ -3524,7 +3974,20 @@ my %TOURNAMENTS_WORLD =
             DATE_END => '2014-10-15'
           },
         }
-      }
+      },
+      '2022' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-08-28',
+            DATE_END => '2022-09-03'
+          },
+        }
+      },
     }
   },
 
@@ -3585,7 +4048,72 @@ my %TOURNAMENTS_WORLD =
             DATE_END => '2014-10-25'
           },
         }
-      }
+      },
+      '2022' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-08-26',
+            DATE_END => '2022-08-27'
+          },
+        }
+      },
+    }
+  },
+
+  'World Open Teams' => 
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-09-04',
+            DATE_END => '2016-09-17'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-08-20',
+            DATE_END => '2022-08-27'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-10-22',
+            DATE_END => '2024-11-03'
+          },
+        }
+      },
     }
   },
 
@@ -4140,6 +4668,19 @@ my %TOURNAMENTS_WORLD =
           } 
         }
       },
+      '2022' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-08-08',
+            DATE_END => '2022-08-10'
+          },
+        }
+      },
     }
   },
 
@@ -4334,6 +4875,19 @@ my %TOURNAMENTS_WORLD =
             DATE_START => '2015-08-28',
             DATE_END => '2015-08-28'
           } 
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-08-11',
+            DATE_END => '2022-08-13'
+          },
         }
       },
     }
@@ -4783,6 +5337,58 @@ my %TOURNAMENTS_WORLD =
     }
   },
 
+  'World Senior Teams' => 
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Seniors',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-09-04',
+            DATE_END => '2016-09-17'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-08-28',
+            DATE_END => '2022-09-01'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-10-22',
+            DATE_END => '2024-11-03'
+          },
+        }
+      },
+    }
+  },
+
   'World University Teams' =>
   {
     ORIGIN => 'International',
@@ -4880,6 +5486,110 @@ my %TOURNAMENTS_WORLD =
             DATE_START => '2016-08-23',
             DATE_END => '2016-08-28'
           } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'FISU World University Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-10-18',
+            DATE_END => '2018-10-25'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        MEET => 'FISU World University Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-10-29',
+            DATE_END => '2020-10-30'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'FISU World University Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-09-12',
+            DATE_END => '2022-09-17'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'FISU World University Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-06-25',
+            DATE_END => '2024-06-30'
+          } 
+        }
+      },
+    }
+  },
+
+  'World Women Teams' => 
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-09-04',
+            DATE_END => '2016-09-17'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-08-20',
+            DATE_END => '2022-08-27'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-10-22',
+            DATE_END => '2024-11-03'
+          },
         }
       },
     }
@@ -5085,6 +5795,32 @@ my %TOURNAMENTS_WORLD =
             major => 'SEGMENT',
             DATE_START => '2016-08-12',
             DATE_END => '2016-08-13'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-08-09',
+            DATE_END => '2018-08-18'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-07-31',
+            DATE_END => '2023-08-07'
           },
         }
       },
@@ -6183,21 +6919,57 @@ my %TOURNAMENTS_WORLD =
     ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Mixed',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
+        MEET => 'World Team Championships',
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2019-09-15',
+            DATE_END => '2019-10-22'
           },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Quarterfinal',
+            major => 'SEGMENT',
+            DATE_START => '2019-09-23',
+            DATE_END => '2019-09-24'
+          },
+          'C2' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Semifinal',
+            groupon => 'AUTO',
+            major => 'SEGMENT',
+            DATE_START => '2019-09-25',
+            DATE_END => '2019-09-26'
+          },
+          'C3' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Playoff',
+            major => 'SEGMENT',
+            DATE_START => '2019-09-27',
+            DATE_END => '2019-09-28'
+          },
+          'C4' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION',
+            DATE_START => '2019-09-27',
+            DATE_END => '2019-09-28'
+          } 
         }
       },
     }
