@@ -225,7 +225,7 @@ my %MEETS_WORLD =
         DATE_START => '2022-09-05',
         DATE_END => '2022-09-09'
       },
-      '2022I' =>
+      '2022H' =>
       {
         YEAR => 2022,
         CITY => 'Copenhagen',
@@ -256,6 +256,14 @@ my %MEETS_WORLD =
       '2023D' =>
       {
         YEAR => 2023,
+        CITY => 'Istanbul',
+        COUNTRY => 'Turkey',
+        DATE_START => '2023-09-30',
+        DATE_END => '2023-10-01'
+      },
+      '2023E' =>
+      {
+        YEAR => 2023,
         CITY => 'Copenhagen',
         COUNTRY => 'Denmark',
         DATE_START => '2023-10-16',
@@ -278,6 +286,14 @@ my %MEETS_WORLD =
         DATE_END => '2024-05-23'
       },
       '2024C' =>
+      {
+        YEAR => 2024,
+        CITY => 'Istanbul',
+        COUNTRY => 'Turkey',
+        DATE_START => '2024-09-06',
+        DATE_END => '2024-09-09'
+      },
+      '2024D' =>
       {
         YEAR => 2024,
         CITY => 'Copenhagen',
@@ -814,6 +830,16 @@ my %MEETS_WORLD =
         COUNTRY => 'Italy',
         DATE_START => '2022-08-07',
         DATE_END => '2022-08-14'
+      },
+      '2024' =>
+      {
+        # http://db.worldbridge.org/Repository/tourn/Wroclaw.24/microSite/Results.htm
+        ORDINAL => 8,
+        YEAR => 2024,
+        CITY => 'Wroclaw',
+        COUNTRY => 'Poland',
+        DATE_START => '2024-07-13',
+        DATE_END => '2024-07-18'
       },
     }
   },
@@ -3670,6 +3696,61 @@ my %TOURNAMENTS_WORLD =
     }
   },
 
+  'WBT Open Pairs' => 
+  {
+    ORIGIN => 'Transnational',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2023A' =>
+      {
+        MEET => 'World Bridge Tour',
+        MEET_TAG => '2023C',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-05-15',
+            DATE_END => '2023-05-19'
+          },
+        }
+      },
+      '2023B' =>
+      {
+        MEET => 'World Bridge Tour',
+        MEET_TAG => '2023D',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-09-30',
+            DATE_END => '2023-10-01'
+          },
+        }
+      },
+      '2024C' =>
+      {
+        MEET => 'World Bridge Tour',
+        MEET_TAG => '2024C',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-09-06',
+            DATE_END => '2024-09-09'
+          },
+        }
+      },
+    }
+  },
+
   'WBT Open Teams' => 
   {
     ORIGIN => 'Transnational',
@@ -3683,7 +3764,7 @@ my %TOURNAMENTS_WORLD =
       '2022A' =>
       {
         MEET => 'World Bridge Tour',
-        MEET_TAG => '2022I',
+        MEET_TAG => '2022H',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3708,10 +3789,24 @@ my %TOURNAMENTS_WORLD =
           },
         }
       },
-      '2023' =>
+      '2023A' =>
       {
         MEET => 'World Bridge Tour',
-        MEET_TAG => '2023D',
+        MEET_TAG => '2023C',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-05-15',
+            DATE_END => '2023-05-19'
+          },
+        }
+      },
+      '2023B' =>
+      {
+        MEET => 'World Bridge Tour',
+        MEET_TAG => '2023E',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3753,7 +3848,7 @@ my %TOURNAMENTS_WORLD =
       '2024C' =>
       {
         MEET => 'World Bridge Tour',
-        MEET_TAG => '2024C',
+        MEET_TAG => '2024D',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -3882,6 +3977,19 @@ my %TOURNAMENTS_WORLD =
             ignore => 'TABLE|GROUP',
             DATE_START => '2014-10-13',
             DATE_END => '2014-10-17'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-10-05',
+            DATE_END => '2018-10-05'
           },
         }
       },
@@ -4046,6 +4154,19 @@ my %TOURNAMENTS_WORLD =
             minor => 'TABLE',
             DATE_START => '2014-10-24',
             DATE_END => '2014-10-25'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-09-29',
+            DATE_END => '2018-09-30'
           },
         }
       },
@@ -4480,6 +4601,19 @@ my %TOURNAMENTS_WORLD =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'World Team Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-08-24',
+            DATE_END => '2017-08-25'
+          } 
+        }
+      },
     }
   },
 
@@ -4665,6 +4799,19 @@ my %TOURNAMENTS_WORLD =
             major => 'ROUND',
             DATE_START => '2015-08-21',
             DATE_END => '2015-08-23'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-08-23',
+            DATE_END => '2019-08-24'
           } 
         }
       },
@@ -4877,6 +5024,32 @@ my %TOURNAMENTS_WORLD =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-08-18',
+            DATE_END => '2017-08-23'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-08-24',
+            DATE_END => '2019-08-27'
+          },
+        }
+      },
       '2022' =>
       {
         MEET => 'World Youth Open Championships',
@@ -4887,6 +5060,19 @@ my %TOURNAMENTS_WORLD =
             YEAR => 2022,
             DATE_START => '2022-08-11',
             DATE_END => '2022-08-13'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-07-13',
+            DATE_END => '2024-07-18'
           },
         }
       },
@@ -4915,6 +5101,71 @@ my %TOURNAMENTS_WORLD =
             major => 'ROUND',
             DATE_START => '2006-08-03',
             DATE_END => '2006-08-04'
+          },
+        }
+      },
+    }
+  },
+
+  'World Open U31 Pairs' =>
+  {
+    ORIGIN => 'International',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'U31',
+
+    EDITIONS =>
+    {
+      '2022' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-08-08',
+            DATE_END => '2022-08-09'
+          } 
+        }
+      },
+    }
+  },
+
+  'World Open U31 Teams' =>
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U31',
+
+    EDITIONS =>
+    {
+      '2022' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-08-08',
+            DATE_END => '2022-08-09'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-07-13',
+            DATE_END => '2024-07-18'
           },
         }
       },
@@ -5210,6 +5461,19 @@ my %TOURNAMENTS_WORLD =
           } 
         }
       },
+      '2019' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-08-23',
+            DATE_END => '2019-08-24'
+          } 
+        }
+      },
     }
   },
 
@@ -5277,6 +5541,45 @@ my %TOURNAMENTS_WORLD =
           } 
         }
       },
+      '2019' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-08-24',
+            DATE_END => '2019-08-27'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-08-12',
+            DATE_END => '2022-08-13'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-07-13',
+            DATE_END => '2024-07-18'
+          },
+        }
+      },
     }
   },
 
@@ -5334,6 +5637,45 @@ my %TOURNAMENTS_WORLD =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'World Youth Open Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-08-24',
+            DATE_END => '2017-08-24'
+          } 
+        }
+      },
+    }
+  },
+
+  'World Senior Pairs' => 
+  {
+    ORIGIN => 'International',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Seniors',
+
+    EDITIONS =>
+    {
+      '2022' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-09-03',
+            DATE_END => '2022-09-03'
+          },
+        }
+      },
     }
   },
 
@@ -5360,6 +5702,19 @@ my %TOURNAMENTS_WORLD =
           },
         }
       },
+      '2018' =>
+      {
+        MEET => 'World Series',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-09-26',
+            DATE_END => '2018-09-30'
+          },
+        }
+      },
       '2022' =>
       {
         MEET => 'World Series',
@@ -5383,6 +5738,110 @@ my %TOURNAMENTS_WORLD =
             YEAR => 2024,
             DATE_START => '2024-10-22',
             DATE_END => '2024-11-03'
+          },
+        }
+      },
+    }
+  },
+
+  'World U26 Women Pairs' =>
+  {
+    ORIGIN => 'International',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Women',
+    AGE => 'U26',
+
+    EDITIONS =>
+    {
+      '2023' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-07-31',
+            DATE_END => '2023-08-07'
+          },
+        }
+      },
+    }
+  },
+
+  'World U26 Women Teams' =>
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'U26',
+
+    EDITIONS =>
+    {
+      '2018' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-08-10',
+            DATE_END => '2018-08-18'
+          },
+        }
+      },
+    }
+  },
+
+  'World U31 Pairs' =>
+  {
+    ORIGIN => 'International',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'U31',
+
+    EDITIONS =>
+    {
+      '2023' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-07-31',
+            DATE_END => '2023-08-07'
+          },
+        }
+      },
+    }
+  },
+
+  'World U31 Teams' =>
+  {
+    ORIGIN => 'International',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U31',
+
+    EDITIONS =>
+    {
+      '2023' =>
+      {
+        MEET => 'World Youth Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-07-31',
+            DATE_END => '2023-08-07'
           },
         }
       },
@@ -5496,8 +5955,8 @@ my %TOURNAMENTS_WORLD =
           'SINGLE' => 
           {
             YEAR => 2018,
-            DATE_START => '2018-10-18',
-            DATE_END => '2018-10-25'
+            DATE_START => '2018-10-25',
+            DATE_END => '2018-10-28'
           } 
         }
       },
@@ -6898,15 +7357,15 @@ my %TOURNAMENTS_WORLD =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-08-18',
+            DATE_END => '2019-08-18'
           },
         }
       },
