@@ -239,6 +239,20 @@ my %MEETS_PORTUGAL =
         DATE_START => '2017-05-09',
         DATE_END => '2017-05-14'
       },
+      '2018' =>
+      {
+        ORDINAL => 33,
+        YEAR => 2018,
+        DATE_START => '2018-05-08',
+        DATE_END => '2018-05-10'
+      },
+      '2019' =>
+      {
+        ORDINAL => 34,
+        YEAR => 2019,
+        DATE_START => '2019-05-07',
+        DATE_END => '2019-05-09'
+      },
     }
   },
 
@@ -796,15 +810,15 @@ my %TOURNAMENTS_PORTUGAL =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-05-26',
+            DATE_END => '2017-05-28'
           },
         }
       },
@@ -996,6 +1010,46 @@ my %TOURNAMENTS_PORTUGAL =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'Estoril Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            DATE_START => '2017-05-09',
+            DATE_END => '2017-05-12'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Estoril Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-05-08',
+            DATE_END => '2018-05-10'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Estoril Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-05-07',
+            DATE_END => '2019-05-09'
+          } 
+        }
+      },
     }
   },
 
@@ -1037,15 +1091,15 @@ my %TOURNAMENTS_PORTUGAL =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-10-15',
+            DATE_END => '2017-10-15'
           },
         }
       },
@@ -1063,15 +1117,39 @@ my %TOURNAMENTS_PORTUGAL =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-11-16',
+            DATE_END => '2018-11-19'
+          },
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-11',
+            DATE_END => '2020-01-13'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-10-21',
+            DATE_END => '2023-10-22'
           },
         }
       },
@@ -1397,6 +1475,102 @@ my %TOURNAMENTS_PORTUGAL =
           } 
         }
       },
+      '2017A' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-19',
+            DATE_END => '2017-05-21'
+          },
+        }
+      },
+      '2017B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-09-22',
+            DATE_END => '2017-09-24'
+          },
+        }
+      },
+      '2018A' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-06-01',
+            DATE_END => '2018-06-03'
+          },
+        }
+      },
+      '2018B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-10-12',
+            DATE_END => '2018-10-14'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-10-19',
+            DATE_END => '2019-11-03'
+          },
+        }
+      },
+      '2021' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-11-13',
+            DATE_END => '2021-11-21'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-05-27',
+            DATE_END => '2023-05-28'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-06-15',
+            DATE_END => '2024-06-16'
+          },
+        }
+      },
     }
   },
 
@@ -1505,6 +1679,42 @@ my %TOURNAMENTS_PORTUGAL =
           } 
         }
       },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-10-12',
+            DATE_END => '2019-10-14'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-12-21',
+            DATE_END => '2019-12-22'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-10-07',
+            DATE_END => '2023-10-08'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-10-14',
+            DATE_END => '2023-10-15'
+          }
+        }
+      },
     }
   },
 
@@ -1576,15 +1786,15 @@ my %TOURNAMENTS_PORTUGAL =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2020' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2020,
+            DATE_START => '2020-02-22',
+            DATE_END => '2020-02-23'
           },
         }
       },

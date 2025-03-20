@@ -1160,6 +1160,7 @@ my @LOCAL_SUBS =
     TEXT => 'Italy Cup Over 61', CORR => 'Italian O61 Cup' },
   { START => 66203, END => 66210, 
     TEXT => 'Bridge Great Britain', CORR => 'British Gold Cup' },
+  { START => 66209, END => 66249, TEXT => '2020', CORR => '2019' },
   { START => 66264, END => 66272, 
     TEXT => 'The 3th China Bridge Extre Challange Match', 
     CORR => 'China Practice' },
