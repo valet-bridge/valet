@@ -193,6 +193,8 @@ my @LOCAL_SUBS =
     CORR => 'Indian Silver Open Teams ' },
   { START => 65050, END => 65133, TEXT => '^U26O[ -]', CORR => "U26 " },
   { START => 65399, END => 66001, TEXT => '^SD-', CORR => "d'Orsi " },
+  { START => 65928, END => 66003, TEXT => '^TN-', 
+    CORR => "Transnational " },
   { START => 66027, END => 66063, TEXT => '^LM ', CORR => 'Open Teams ' },
   { START => 67132, END => 67230, TEXT => '^K_O_ ', CORR => 'KO ' },
   { START => 67400, END => 67411, TEXT => '^Gold ', 

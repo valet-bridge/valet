@@ -900,6 +900,7 @@ my @LOCAL_SUBS =
     TEXT => 'Grand Prix of Poland', CORR => 'Grand Prix of Poland Teams' },
   { START => 54674, END => 54686, 
     TEXT => 'State Open Teams', CORR => 'New South Wales Open Teams' },
+  { START => 54635, END => 54727, TEXT => '^BB[1-6]-', CORR => '' },
   { START => 54750, END => 54834, 
     TEXT => '^OT[1-6]-', CORR => '' },
   { START => 54756, END => 54829, 
