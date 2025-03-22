@@ -192,6 +192,42 @@ my %MEETS_ASIA =
         DATE_START => '2015-04-01',
         DATE_END => '2015-04-07'
       },
+      '2017' =>
+      {
+        MEET_ORDINAL => 21,
+        CITY => 'Seoul',
+        COUNTRY => 'South Korea',
+        YEAR => 2017,
+        DATE_START => '2017-05-29',
+        DATE_END => '2017-06-06'
+      },
+      '2018' =>
+      {
+        MEET_ORDINAL => 22,
+        CITY => 'Bogor',
+        COUNTRY => 'Indonesia',
+        YEAR => 2018,
+        DATE_START => '2018-04-14',
+        DATE_END => '2018-04-20'
+      },
+      '2019' =>
+      {
+        MEET_ORDINAL => 23,
+        CITY => 'Bangkok',
+        COUNTRY => 'Thailand',
+        YEAR => 2019,
+        DATE_START => '2019-04-05',
+        DATE_END => '2019-04-11'
+      },
+      '2023' =>
+      {
+        MEET_ORDINAL => 24,
+        CITY => 'Ningbo',
+        COUNTRY => 'China',
+        YEAR => 2023,
+        DATE_START => '2023-05-14',
+        DATE_END => '2023-05-19'
+      },
     }
   },
 
@@ -520,6 +556,70 @@ my %TOURNAMENTS_ASIA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'APBF Youth Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-29',
+            DATE_END => '2017-06-06'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'APBF Youth Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-04-14',
+            DATE_END => '2018-04-20'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'APBF Youth Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-04-05',
+            DATE_END => '2019-04-10'
+          } 
+        }
+      },
+    }
+  },
+
+  'APBF Junior Mixed Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Mixed',
+    AGE => 'U26',
+
+    EDITIONS =>
+    {
+      '2023' =>
+      {
+        MEET => 'APBF Youth Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-05-14',
+            DATE_END => '2023-05-19'
+          } 
+        }
+      },
     }
   },
 
@@ -676,8 +776,85 @@ my %TOURNAMENTS_ASIA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'APBF Youth Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-29',
+            DATE_END => '2017-06-06'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'APBF Youth Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-04-14',
+            DATE_END => '2018-04-20'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'APBF Youth Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-05-14',
+            DATE_END => '2023-05-19'
+          } 
+        }
+      },
     }
   },
+
+  'APBF Kids Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U16',
+
+    EDITIONS =>
+    {
+      '2019' =>
+      {
+        MEET => 'APBF Youth Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-04-05',
+            DATE_END => '2019-04-10'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'APBF Youth Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-05-14',
+            DATE_END => '2023-05-19'
+          } 
+        }
+      },
+    }
+   },
 
   'APBF Mixed Teams' =>
   {
@@ -780,15 +957,15 @@ my %TOURNAMENTS_ASIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-06-20',
+            DATE_END => '2019-06-20'
           },
         }
       },
@@ -1374,6 +1551,19 @@ my %TOURNAMENTS_ASIA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'APBF Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-29',
+            DATE_END => '2017-06-06'
+          } 
+        }
+      },
       '2019' =>
       {
         MEET => 'APBF Championships',
@@ -1397,6 +1587,81 @@ my %TOURNAMENTS_ASIA =
             YEAR => 2023,
             DATE_START => '2023-06-09',
             DATE_END => '2023-06-17'
+          } 
+        }
+      },
+    }
+  },
+
+  'APBF U21 Women Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'U21',
+
+    EDITIONS =>
+    {
+      '2018' =>
+      {
+        MEET => 'APBF Youth Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-04-15',
+            DATE_END => '2018-04-18'
+          } 
+        }
+      },
+    }
+  },
+
+  'APBF U26 Women Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'U26',
+
+    EDITIONS =>
+    {
+      '2023' =>
+      {
+        MEET => 'APBF Youth Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-05-14',
+            DATE_END => '2023-05-19'
+          } 
+        }
+      },
+    }
+  },
+
+  'APBF U31 Open Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U31',
+
+    EDITIONS =>
+    {
+      '2023' =>
+      {
+        MEET => 'APBF Youth Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-05-14',
+            DATE_END => '2023-05-19'
           } 
         }
       },
@@ -1777,6 +2042,58 @@ my %TOURNAMENTS_ASIA =
             minor => 'ROUND',
             DATE_START => '2015-04-02',
             DATE_END => '2015-04-07'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'APBF Youth Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-29',
+            DATE_END => '2017-06-06'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'APBF Youth Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-04-14',
+            DATE_END => '2018-04-20'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'APBF Youth Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-04-05',
+            DATE_END => '2019-04-10'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'APBF Youth Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-05-14',
+            DATE_END => '2023-05-19'
           } 
         }
       },

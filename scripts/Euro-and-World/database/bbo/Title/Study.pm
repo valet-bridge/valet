@@ -900,6 +900,7 @@ my @LOCAL_SUBS =
   { START => 54574, END => 54596, TEXT => 'T. S2', CORR => '' },
   { START => 54625, END => 54724, 
     TEXT => 'Seniors Chile', CORR => 'Chilean Senior Teams' },
+  { START => 54625, END => 54724, TEXT => '2018', CORR => '2017' },
   { START => 54665, END => 54717, 
     TEXT => 'Grand Prix of Poland', CORR => 'Grand Prix of Poland Teams' },
   { START => 54674, END => 54686, 

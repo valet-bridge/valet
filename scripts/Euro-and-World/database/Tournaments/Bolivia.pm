@@ -139,13 +139,38 @@ my %TOURNAMENTS_BOLIVIA =
           } 
         }
       },
+      '2019' =>
+      {
+        CITY => 'Medellin',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-11-15',
+            DATE_END => '2019-11-15'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-09-29',
+            DATE_END => '2023-09-29'
+          },
+        }
+      },
     }
   },
 
   'Bolivian Transnational Teams' =>
   {
     %GLOBAL,
-    ORIGIN => 'National',
+    ORIGIN => 'Transnational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -153,15 +178,15 @@ my %TOURNAMENTS_BOLIVIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2023' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2023,
+            DATE_START => '2023-09-29',
+            DATE_END => '2023-09-30'
           },
         }
       },

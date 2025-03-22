@@ -141,6 +141,48 @@ my %TOURNAMENTS_CHILE =
           },
         }
       },
+      '2017' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-04-07',
+            DATE_END => '2017-04-07'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-04-13',
+            DATE_END => '2018-04-13'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-04-02',
+            DATE_END => '2019-04-02'
+          },
+        }
+      },
     }
   },
 
@@ -166,6 +208,20 @@ my %TOURNAMENTS_CHILE =
             major => 'SEGMENT',
             DATE_START => '2013-04-12',
             DATE_END => '2013-04-12'
+          },
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-04-07',
+            DATE_END => '2017-04-07'
           },
         }
       }
@@ -249,19 +305,19 @@ my %TOURNAMENTS_CHILE =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'U26',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2016,
+            DATE_START => '2016-12-27',
+            DATE_END => '2016-12-27'
           },
         }
       },
@@ -279,15 +335,15 @@ my %TOURNAMENTS_CHILE =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2024' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2024,
+            DATE_START => '2024-03-10',
+            DATE_END => '2024-03-11'
           },
         }
       },
@@ -352,7 +408,19 @@ my %TOURNAMENTS_CHILE =
             DATE_END => '2013-10-21'
           } 
         }
-      }
+      },
+      '2018' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-03-03',
+            DATE_END => '2018-03-05'
+          },
+        }
+      },
     }
   },
 
@@ -417,7 +485,59 @@ my %TOURNAMENTS_CHILE =
             DATE_END => '2012-06-18'
           } 
         }
-      }
+      },
+
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2017,
+            DATE_START => '2017-03-12',
+            DATE_END => '2017-03-13'
+          },
+        }
+      },
+
+      '2018' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-12-09',
+            DATE_END => '2018-12-09'
+          },
+        }
+      },
+
+      '2022' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-12-05',
+            DATE_END => '2022-12-05'
+          },
+        }
+      },
+
+      '2024' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-03-01',
+            DATE_END => '2024-03-04'
+          },
+        }
+      },
     }
   },
 
@@ -453,7 +573,19 @@ my %TOURNAMENTS_CHILE =
             DATE_END => '2013-04-15'
           } 
         }
-      }
+      },
+      '2017' =>
+      {
+        CHAPTERS => 
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-12-08',
+            DATE_END => '2017-12-10'
+          },
+        }
+      },
     }
   },
 
@@ -468,15 +600,15 @@ my %TOURNAMENTS_CHILE =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-03-05',
+            DATE_END => '2017-03-06'
           },
         }
       },
@@ -557,7 +689,20 @@ my %TOURNAMENTS_CHILE =
             DATE_END => '2012-06-18'
           } 
         }
-      }
+      },
+
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-12-17',
+            DATE_END => '2023-12-18'
+          },
+        }
+      },
     }
   },
 

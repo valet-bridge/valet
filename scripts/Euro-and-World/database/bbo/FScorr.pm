@@ -82,6 +82,8 @@ my %FORM_CORRECTIONS = (
   'All India HCL Tournament' => [
     47512,
     84782, 84783, 84789, 84805, 84817],
+  'APBF Open Pairs' => [
+    64169, 64170, 64175],
   'ASEAN Club Championship' => [
     84967, 84968, 84969, 84970, 84971, 84972, 84973, 84974],
   'ASEAN University Games' => [
