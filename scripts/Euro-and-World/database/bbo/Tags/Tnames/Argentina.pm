@@ -62,10 +62,10 @@ my %MULTI_TYPOS =
     'seleccion libre argentina',
     'seleccion argentina libre'],
   'Argentinian Seniors Teams' => [
-    'argentinian senior trials olympics',
     'clasificatoria argentina seniors sudamericano',
     'clasificatoria seniors argentina'],
   'Argentinian Senior Trials' => [
+    'argentinian senior trials olympics',
     'open senior argentina trials',
     'seleccion argetina seniors',
     'seleccion argentina seniors',

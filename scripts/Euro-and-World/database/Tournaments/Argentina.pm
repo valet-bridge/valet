@@ -120,6 +120,18 @@ my %MEETS_ARGENTINA =
         DATE_START => '2022-12-02',
         DATE_END => '2022-12-10'
       },
+      '2023' =>
+      {
+        YEAR => 2023,
+        DATE_START => '2023-12-09',
+        DATE_END => '2023-12-11'
+      },
+      '2024' =>
+      {
+        YEAR => 2024,
+        DATE_START => '2024-12-22',
+        DATE_END => '2024-12-23'
+      },
     }
   }
 );
@@ -238,6 +250,44 @@ my %TOURNAMENTS_ARGENTINA =
           } 
         }
       },
+      '2023' =>
+      {
+        MEET => 'Mar del Plata Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2023-12-09',
+            DATE_END => '2023-12-09'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-12-10',
+            DATE_END => '2023-12-10'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Mar del Plata Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-12-22',
+            DATE_END => '2024-12-23'
+          } 
+        }
+      },
     }
   },
 
@@ -332,6 +382,62 @@ my %TOURNAMENTS_ARGENTINA =
             major => 'SEGMENT',
             DATE_START => '2016-08-21',
             DATE_END => '2016-08-22'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-07-23',
+            DATE_END => '2017-07-23'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-07-09',
+            DATE_END => '2018-07-10'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-07-16',
+            DATE_END => '2023-07-17'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-10-13',
+            DATE_END => '2024-10-13'
           } 
         }
       },
@@ -452,6 +558,48 @@ my %TOURNAMENTS_ARGENTINA =
             major => 'SEGMENT',
             DATE_START => '2016-05-15',
             DATE_END => '2016-05-15'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-04-23',
+            DATE_END => '2017-04-23'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-04-22',
+            DATE_END => '2018-04-23'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-05-05',
+            DATE_END => '2019-05-06'
           } 
         }
       },
@@ -585,6 +733,82 @@ my %TOURNAMENTS_ARGENTINA =
           },
         }
       },
+      '2017' =>
+      {
+        FORM => 'Teams',
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-03-05',
+            DATE_END => '2017-03-06'
+          },
+        }
+      },
+      '2023A' =>
+      {
+        FORM => 'Pairs',
+        SCORING => 'MP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            SCORING => 'MP',
+            DATE_START => '2023-06-02',
+            DATE_END => '2023-06-03'
+          },
+        }
+      },
+      '2023B' =>
+      {
+        FORM => 'Pairs',
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            SCORING => 'IMP',
+            DATE_START => '2023-06-09',
+            DATE_END => '2023-06-12'
+          },
+        }
+      },
+      '2024A' =>
+      {
+        FORM => 'Teams',
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-02-10',
+            DATE_END => '2024-02-12'
+          },
+        }
+      },
+      '2024B' =>
+      {
+        FORM => 'Teams',
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-05-11',
+            DATE_END => '2024-05-12'
+          },
+        }
+      },
     }
   },
 
@@ -650,6 +874,20 @@ my %TOURNAMENTS_ARGENTINA =
             major => 'ROUND',
             DATE_START => '2015-04-10',
             DATE_END => '2015-04-11'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2024-05-18',
+            DATE_END => '2024-05-18'
           } 
         }
       },
@@ -745,6 +983,24 @@ my %TOURNAMENTS_ARGENTINA =
           },
         }
       },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-02-11',
+            DATE_END => '2024-02-13'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-05-12',
+            DATE_END => '2024-05-12'
+          },
+        }
+      },
     }
   },
 
@@ -759,15 +1015,15 @@ my %TOURNAMENTS_ARGENTINA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2023' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2023,
+            DATE_START => '2023-05-12',
+            DATE_END => '2023-05-14'
           },
         }
       },

@@ -75,6 +75,22 @@ my %MEETS_AFRICA =
         DATE_START => '2015-05-08',
         DATE_END => '2015-05-13'
       },
+      '2017' =>
+      {
+        YEAR => 2017,
+        CITY => 'Cape Town',
+        COUNTRY => 'South Africa',
+        DATE_START => '2017-05-06',
+        DATE_END => '2017-05-11'
+      },
+      '2019' =>
+      {
+        YEAR => 2019,
+        CITY => 'Casablanca',
+        COUNTRY => 'Morocco',
+        DATE_START => '2019-06-09',
+        DATE_END => '2019-06-14'
+      },
     }
   },
 
@@ -219,6 +235,34 @@ my %TOURNAMENTS_AFRICA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'African Zonal Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            DATE_START => '2017-05-06',
+            DATE_END => '2017-05-11'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'African Zonal Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            major => 'ROUND',
+            DATE_START => '2019-06-09',
+            DATE_END => '2019-06-14'
+          } 
+        }
+      },
     }
   },
 
@@ -256,6 +300,20 @@ my %TOURNAMENTS_AFRICA =
             major => 'ROUND',
             DATE_START => '2011-06-18',
             DATE_END => '2011-06-23'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'African Zonal Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            DATE_START => '2017-05-06',
+            DATE_END => '2017-05-11'
           } 
         }
       },
@@ -329,6 +387,20 @@ my %TOURNAMENTS_AFRICA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'African Zonal Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            DATE_START => '2017-05-06',
+            DATE_END => '2017-05-11'
+          } 
+        }
+      },
     }
   },
 
@@ -336,22 +408,23 @@ my %TOURNAMENTS_AFRICA =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
+    FORM => 'Pairs',
+    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            MOVEMENT => 'Barometer',
+            DATE_START => '2019-04-12',
+            DATE_END => '2019-04-12'
           },
         }
       },

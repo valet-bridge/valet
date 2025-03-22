@@ -1799,6 +1799,45 @@ my %TOURNAMENTS_TURKEY =
           },
         }
       },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            major => 'ROUND',
+            DATE_START => '2019-05-18',
+            DATE_END => '2019-05-19'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            major => 'ROUND',
+            DATE_START => '2022-07-02',
+            DATE_END => '2022-07-03'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            major => 'ROUND',
+            DATE_START => '2023-05-20',
+            DATE_END => '2023-05-21'
+          },
+        }
+      },
     }
   },
 
