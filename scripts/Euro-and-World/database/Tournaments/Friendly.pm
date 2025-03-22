@@ -747,6 +747,12 @@ my %MEETS_FRIENDLY =
         DATE_START => '2016-11-08',
         DATE_END => '2016-11-08'
       },
+      '2018A' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-05-11',
+        DATE_END => '2018-05-13'
+      },
     }
   },
 );
@@ -3859,6 +3865,23 @@ my %TOURNAMENTS_FRIENDLY =
             major => 'SESSION',
             DATE_START => '2016-05-14',
             DATE_END => '2016-05-15'
+          } 
+        }
+      },
+      '2018A' =>
+      {
+        MEET => 'Practice Match',
+        MEET_TAG => '2018A',
+        GENDER => 'Open',
+        AGE => 'Seniors',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-05-11',
+            DATE_END => '2018-05-13'
           } 
         }
       },

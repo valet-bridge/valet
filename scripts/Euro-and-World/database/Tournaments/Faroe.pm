@@ -27,11 +27,23 @@ my %MEETS_FAROE =
 
     EDITIONS => 
     {
-      '2000' =>
+      '2019' =>
       {
-        YEAR => 2000,
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
+        YEAR => 2019,
+        DATE_START => '2019-03-08',
+        DATE_END => '2019-03-09'
+      },
+      '2020' =>
+      {
+        YEAR => 2020,
+        DATE_START => '2020-03-06',
+        DATE_END => '2020-03-07'
+      },
+      '2022' =>
+      {
+        YEAR => 2022,
+        DATE_START => '2022-03-11',
+        DATE_END => '2022-03-12'
       },
     }
   },
@@ -70,6 +82,57 @@ my %TOURNAMENTS_FAROE =
             DATE_START => '2012-04-21',
             DATE_END => '2012-04-21'
           } 
+        }
+      },
+    }
+  },
+
+  'Tórshavn Open Pairs' => 
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2019' =>
+      {
+        MEET => 'Tórshavn Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-03-08',
+            DATE_END => '2019-03-09'
+          },
+        }
+      },
+      '2020' =>
+      {
+        MEET => 'Tórshavn Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-03-06',
+            DATE_END => '2020-03-07'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Tórshavn Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-03-11',
+            DATE_END => '2022-03-12'
+          },
         }
       },
     }

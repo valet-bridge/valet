@@ -279,6 +279,8 @@ my %FORM_CORRECTIONS = (
     39167, 39168, 39169, 39170,
     64230],
   'Bolivian Open Pairs' => [41934],
+  'Bornova Arena Invitational Pairs' => [
+    68288, 68292, 68293],
   'Brasov Open Pairs' => [
     11908, 11910, 11918, 11919, 11930, 11931],
   'Buffett Individual' => [
@@ -733,6 +735,14 @@ my %FORM_CORRECTIONS = (
     22135],
   'Marit Sveaas Open Pairs' => [
     46107, 46115, 46117, 46132, 46147],
+  'Merit Mixed Pairs' => [
+    56491, 56494,
+    62475, 62478],
+  'Merit Open Pairs' => [
+    56500, 56507, 56508, 56514, 56515,
+    58622, 58623, 58624, 58627, 58628, 58632, 58633, 58636, 58637,
+    62461, 62467, 62468, 62473, 62474, 62475, 62478,
+    66145, 66150, 66157],
   'Mersin Open Pairs' => [
     20179],
   'Mohan Sicka Pairs' => [
@@ -959,6 +969,10 @@ my %FORM_CORRECTIONS = (
      7630,  7631,  7632,  7633,  7634,  7635,  7637,  7638,
      7882,  7883,  7884,  7885,
      9209,  9210],
+  'Tórshavn Open Pairs' => [
+    61840, 61847, 61849, 61876, 61896,
+    68826, 68831, 68852, 68864,
+    73898, 73905, 73913],
   'Trondheim Pairs Cup' => [
     17764, 17774],
   'Turkish-Greek Open Pairs' => [
@@ -973,9 +987,20 @@ my %FORM_CORRECTIONS = (
   'Turkish U16 Pairs' => [
     45642, 45646],
   'Turkish U21 Pair Trials' => [
+    48999,
+    50038,
     73639, 73643], 
+  'Turkish U26 Pair Trials' => [
+    48998,
+    49983, 50012],
+  'Turkish U26 Women Pair Trials' => [
+    48900, 49000,
+    49916,
+    50030, 50034, 50053],
   'Turkish Women Pair Trials' => [
-    13292, 13304],
+    13292, 13304,
+    53963, 53964, 53965, 53966,
+    78349, 78353, 78354, 78358, 78361, 78363, 78370, 78376, 78377],
   'Venezuelan Swiss Pairs' => [
     14100,
     17324, 17336],

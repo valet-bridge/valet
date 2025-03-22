@@ -48,6 +48,12 @@ my %MEETS_TURKEY =
         DATE_START => '2014-06-03',
         DATE_END => '2014-06-08'
       },
+      '2016' =>
+      {
+        YEAR => 2016,
+        DATE_START => '2016-09-24',
+        DATE_END => '2016-09-25'
+      },
     }
   },
 
@@ -114,11 +120,29 @@ my %MEETS_TURKEY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018A' =>
       {
-        YEAR => 2000,
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
+        YEAR => 2018,
+        DATE_START => '2018-04-09',
+        DATE_END => '2018-04-12'
+      },
+      '2018B' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-09-03',
+        DATE_END => '2018-09-06'
+      },
+      '2019A' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-04-15',
+        DATE_END => '2019-04-18'
+      },
+      '2019B' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-10-07',
+        DATE_END => '2019-10-10'
       },
     }
   },
@@ -236,6 +260,30 @@ my %MEETS_TURKEY =
         DATE_START => '2016-07-01',
         DATE_END => '2016-07-03'
       },
+      '2017' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-11-03',
+        DATE_END => '2017-11-12'
+      },
+      '2019' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-09-14',
+        DATE_END => '2019-09-21'
+      },
+      '2022' =>
+      {
+        YEAR => 2022,
+        DATE_START => '2022-03-05',
+        DATE_END => '2022-03-10'
+      },
+      '2024' =>
+      {
+        YEAR => 2024,
+        DATE_START => '2024-01-22',
+        DATE_END => '2024-01-26'
+      },
     }
   },
 
@@ -246,11 +294,35 @@ my %MEETS_TURKEY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
-        YEAR => 2000,
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
+        YEAR => 2017,
+        DATE_START => '2017-05-06',
+        DATE_END => '2017-05-11'
+      },
+      '2019' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-05-11',
+        DATE_END => '2019-05-15'
+      },
+      '2022' =>
+      {
+        YEAR => 2022,
+        DATE_START => '2022-05-21',
+        DATE_END => '2022-05-26'
+      },
+      '2023' =>
+      {
+        YEAR => 2023,
+        DATE_START => '2023-04-29',
+        DATE_END => '2023-05-03'
+      },
+      '2024' =>
+      {
+        YEAR => 2024,
+        DATE_START => '2024-04-28',
+        DATE_END => '2024-05-02'
       },
     }
   },
@@ -358,7 +430,7 @@ my %MEETS_TURKEY =
       {
         YEAR => 2024,
         CITY => 'Antalya',
-        DATE_START => '2024-01-25',
+        DATE_START => '2024-01-22',
         DATE_END => '2024-01-28'
       },
     }
@@ -382,6 +454,42 @@ my %MEETS_TURKEY =
         YEAR => 2011,
         DATE_START => '2011-10-21',
         DATE_END => '2011-10-23'
+      },
+      '2017A' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-01-31',
+        DATE_END => '2017-01-31'
+      },
+      '2017B' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-11-08',
+        DATE_END => '2017-11-08'
+      },
+      '2019' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-09-14',
+        DATE_END => '2019-09-17'
+      },
+      '2022' =>
+      {
+        YEAR => 2022,
+        DATE_START => '2022-03-05',
+        DATE_END => '2022-03-05'
+      },
+      '2023' =>
+      {
+        YEAR => 2023,
+        DATE_START => '2023-03-04',
+        DATE_END => '2023-03-05'
+      },
+      '2024' =>
+      {
+        YEAR => 2024,
+        DATE_START => '2024-02-05',
+        DATE_END => '2024-02-05'
       },
     }
   },
@@ -673,15 +781,75 @@ my %TOURNAMENTS_TURKEY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-02-11',
+            DATE_END => '2017-02-12'
+          },
+        }
+      },
+      '2018A' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-01-19',
+            DATE_END => '2018-01-21'
+          },
+        }
+      },
+      '2018B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-12-22',
+            DATE_END => '2018-12-23'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-01-04',
+            DATE_END => '2019-01-06'
+          },
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-17',
+            DATE_END => '2020-01-19'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-01-22',
+            DATE_END => '2023-01-22'
           },
         }
       },
@@ -827,15 +995,27 @@ my %TOURNAMENTS_TURKEY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-11-21',
+            DATE_END => '2019-11-21'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-11-28',
+            DATE_END => '2019-11-28'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-12-05',
+            DATE_END => '2019-12-05'
           },
         }
       },
@@ -845,23 +1025,23 @@ my %TOURNAMENTS_TURKEY =
   'Bornova Arena Invitational Pairs' =>
   {
     %GLOBAL,
-    ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
+    ORIGIN => 'Invitational',
+    FORM => 'Pairs',
+    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2020' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2020,
+            DATE_START => '2020-02-07',
+            DATE_END => '2020-02-07'
           },
         }
       },
@@ -879,15 +1059,27 @@ my %TOURNAMENTS_TURKEY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-04-25',
+            DATE_END => '2019-04-25'
+          },
+          'C1' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-05-02',
+            DATE_END => '2019-05-02'
+          },
+          'C2' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-05-09',
+            DATE_END => '2019-05-09'
           },
         }
       },
@@ -966,7 +1158,6 @@ my %TOURNAMENTS_TURKEY =
 
   'Deniz Unlu Open Teams' =>
   {
-    %GLOBAL,
     ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -975,15 +1166,16 @@ my %TOURNAMENTS_TURKEY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
+        MEET => 'Assael Festival',
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2016,
+            DATE_START => '2016-09-24',
+            DATE_END => '2016-09-25'
           },
         }
       },
@@ -1098,15 +1290,15 @@ my %TOURNAMENTS_TURKEY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-06-02',
+            DATE_END => '2018-06-03'
           },
         }
       },
@@ -1124,15 +1316,39 @@ my %TOURNAMENTS_TURKEY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2015' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2015,
+            DATE_START => '2015-04-24',
+            DATE_END => '2015-04-26'
+          },
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-20',
+            DATE_END => '2017-05-21'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-05-25',
+            DATE_END => '2024-05-26'
           },
         }
       },
@@ -1310,6 +1526,30 @@ my %TOURNAMENTS_TURKEY =
           } 
         }
       },
+      '2017A' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-02-11',
+            DATE_END => '2017-02-12'
+          } 
+        }
+      },
+      '2017B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-02-24',
+            DATE_END => '2017-02-28'
+          } 
+        }
+      },
     }
   },
 
@@ -1319,20 +1559,20 @@ my %TOURNAMENTS_TURKEY =
     ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Women',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-03-16',
+            DATE_END => '2019-03-17'
           },
         }
       },
@@ -1345,20 +1585,20 @@ my %TOURNAMENTS_TURKEY =
     ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Women',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2020' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2020,
+            DATE_START => '2020-02-01',
+            DATE_END => '2020-02-02'
           },
         }
       },
@@ -1486,20 +1726,20 @@ my %TOURNAMENTS_TURKEY =
     ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Women',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2016,
+            DATE_START => '2016-10-22',
+            DATE_END => '2016-10-22'
           },
         }
       },
@@ -1556,6 +1796,122 @@ my %TOURNAMENTS_TURKEY =
             major => 'ROUND',
             DATE_START => '2012-04-28',
             DATE_END => '2012-04-29'
+          },
+        }
+      },
+    }
+  },
+
+  'Merit Mixed Pairs',
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2018' =>
+      {
+        MEET => 'Merit Bridge Festival',
+        MEET_TAG => '2018A',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-04-09',
+            DATE_END => '2018-04-10'
+          },
+        }
+      },
+      '2019A' =>
+      {
+        MEET => 'Merit Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-04-17',
+            DATE_END => '2019-04-18'
+          },
+        }
+      },
+      '2019B' =>
+      {
+        MEET => 'Merit Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-10-09',
+            DATE_END => '2019-10-10'
+          },
+        }
+      },
+    }
+  },
+
+  'Merit Open Pairs',
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2018A' =>
+      {
+        MEET => 'Merit Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-04-10',
+            DATE_END => '2018-04-12'
+          },
+        }
+      },
+      '2018B' =>
+      {
+        MEET => 'Merit Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-09-03',
+            DATE_END => '2018-09-06'
+          },
+        }
+      },
+      '2019A' =>
+      {
+        MEET => 'Merit Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-04-15',
+            DATE_END => '2019-04-18'
+          },
+        }
+      },
+      '2019B' =>
+      {
+        MEET => 'Merit Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-10-07',
+            DATE_END => '2019-10-09'
           },
         }
       },
@@ -1763,15 +2119,51 @@ my %TOURNAMENTS_TURKEY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-01-15',
+            DATE_END => '2017-01-15'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-11-29',
+            DATE_END => '2018-11-29'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-12-06',
+            DATE_END => '2018-12-06'
+          },
+          'C2' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-12-09',
+            DATE_END => '2018-12-09'
+          },
+          'C3' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-12-13',
+            DATE_END => '2018-12-13'
+          },
+          'C4' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-12-20',
+            DATE_END => '2018-12-20'
           },
         }
       },
@@ -1929,15 +2321,15 @@ my %TOURNAMENTS_TURKEY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2024' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2024,
+            DATE_START => '2024-03-18',
+            DATE_END => '2024-03-23'
           },
         }
       },
@@ -1955,15 +2347,15 @@ my %TOURNAMENTS_TURKEY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2020' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2020,
+            DATE_START => '2020-01-23',
+            DATE_END => '2020-01-23'
           },
         }
       },
@@ -2676,11 +3068,110 @@ my %TOURNAMENTS_TURKEY =
           'C6' => 
           {
             YEAR => 2015,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2015-08-27',
+            DATE_END => '2015-08-27'
+          },
+          'C7' => 
+          {
+            YEAR => 2015,
             STAGE => 'Final',
             major => 'SEGMENT',
             DATE_START => '2015-08-27',
             DATE_END => '2015-08-27'
           } 
+        }
+      },
+      '2016' =>
+      {
+        # TODO Really the same tournament as above?
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-10-11',
+            DATE_END => '2016-10-16'
+          },
+        }
+      },
+      '2017' =>
+      {
+        # TODO Really the same tournament as above?
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-07-29',
+            DATE_END => '2017-08-03'
+          },
+        }
+      },
+      '2018' =>
+      {
+        # TODO Really the same tournament as above?
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-07-21',
+            DATE_END => '2018-07-26'
+          },
+        }
+      },
+      '2019' =>
+      {
+        # TODO Really the same tournament as above?
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-07-20',
+            DATE_END => '2019-07-25'
+          },
+        }
+      },
+      '2022' =>
+      {
+        # TODO Really the same tournament as above?
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-08-06',
+            DATE_END => '2022-08-11'
+          },
+        }
+      },
+      '2023' =>
+      {
+        # TODO Really the same tournament as above?
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-07-22',
+            DATE_END => '2023-07-27'
+          },
+        }
+      },
+      '2024' =>
+      {
+        # TODO Really the same tournament as above?
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-08-26',
+            DATE_END => '2024-08-30'
+          },
         }
       },
     }
@@ -2721,6 +3212,30 @@ my %TOURNAMENTS_TURKEY =
             major => 'ROUND',
             DATE_START => '2014-06-28',
             DATE_END => '2014-06-29'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-06-10',
+            DATE_END => '2017-06-11'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-05-19',
+            DATE_END => '2019-05-19'
           } 
         }
       },
@@ -2789,6 +3304,90 @@ my %TOURNAMENTS_TURKEY =
           } 
         }
       },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-12-01',
+            DATE_END => '2018-12-04'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-11-08',
+            DATE_END => '2019-11-17'
+          },
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-11',
+            DATE_END => '2020-01-14'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-03-14',
+            DATE_END => '2022-03-18'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-12-13',
+            DATE_END => '2023-12-15'
+          },
+        }
+      },
+      '2024A' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-02-27',
+            DATE_END => '2024-02-29'
+          },
+        }
+      },
+      '2024B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-12-11',
+            DATE_END => '2024-12-13'
+          },
+        }
+      },
     }
   },
 
@@ -2843,6 +3442,66 @@ my %TOURNAMENTS_TURKEY =
             major => 'ROUND',
             DATE_START => '2014-12-10',
             DATE_END => '2014-12-12'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-12-14',
+            DATE_END => '2016-12-16'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-12-13',
+            DATE_END => '2017-12-15'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-12-12',
+            DATE_END => '2018-12-14'
+          } 
+        }
+      },
+      '2021' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-12-16',
+            DATE_END => '2021-12-17'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-12-16',
+            DATE_END => '2022-12-16'
           } 
         }
       },
@@ -3172,6 +3831,58 @@ my %TOURNAMENTS_TURKEY =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'Turkish Open Trials',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-11-03',
+            DATE_END => '2017-11-12'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Turkish Open Trials',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-09-14',
+            DATE_END => '2019-09-21'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Turkish Open Trials',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-03-05',
+            DATE_END => '2022-03-10'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Turkish Winter Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-01-22',
+            DATE_END => '2024-01-26'
+          },
+        }
+      },
     }
   },
 
@@ -3182,19 +3893,80 @@ my %TOURNAMENTS_TURKEY =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'Seniors',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-12-22',
+            DATE_END => '2017-12-23'
+          },
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-20',
+            DATE_END => '2020-01-23'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-03-17',
+            DATE_END => '2022-03-18'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-02-12',
+            DATE_END => '2024-02-12'
+          },
+        }
+      },
+    }
+  },
+
+  'Turkish Summer Mixed Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2024' =>
+      {
+        MEET => 'Turkish Summer Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-04-28',
+            DATE_END => '2024-04-28'
           },
         }
       },
@@ -3203,8 +3975,6 @@ my %TOURNAMENTS_TURKEY =
 
   'Turkish Summer Open Teams' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -3212,15 +3982,68 @@ my %TOURNAMENTS_TURKEY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
+        MEET => 'Turkish Summer Championships',
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-05-06',
+            DATE_END => '2017-05-11'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Turkish Summer Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-05-11',
+            DATE_END => '2019-05-15'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Turkish Summer Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-05-21',
+            DATE_END => '2022-05-26'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Turkish Summer Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-04-29',
+            DATE_END => '2023-05-03'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Turkish Summer Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-04-29',
+            DATE_END => '2024-05-02'
           },
         }
       },
@@ -3229,24 +4052,75 @@ my %TOURNAMENTS_TURKEY =
 
   'Turkish Summer Women Teams' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Women',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
+        MEET => 'Turkish Summer Championships',
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-05-10',
+            DATE_END => '2017-05-11'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Turkish Summer Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-05-14',
+            DATE_END => '2019-05-15'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Turkish Summer Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-05-24',
+            DATE_END => '2022-05-25'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Turkish Summer Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-05-01',
+            DATE_END => '2023-05-03'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Turkish Summer Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-05-02',
+            DATE_END => '2024-05-02'
           },
         }
       },
@@ -3264,15 +4138,15 @@ my %TOURNAMENTS_TURKEY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-02-10',
+            DATE_END => '2018-02-15'
           },
         }
       },
@@ -3319,15 +4193,15 @@ my %TOURNAMENTS_TURKEY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-05-19',
+            DATE_END => '2018-05-24'
           },
         }
       },
@@ -3365,74 +4239,72 @@ my %TOURNAMENTS_TURKEY =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
+    FORM => 'Pairs',
+    SCORING => 'MP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'U21',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-01-30',
+            DATE_END => '2017-01-31'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-01-29',
+            DATE_END => '2022-01-30'
           },
         }
       },
     }
   },
 
-  'Turkish U21 Team Trials' =>
+  'Turkish U26 Pair Trials' =>
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
+    FORM => 'Pairs',
+    SCORING => 'MP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'U26',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017A' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-01-29',
+            DATE_END => '2017-01-29'
           },
         }
       },
-    }
-  },
-
-  'Turkish U26 Team Trials' =>
-  {
-    %GLOBAL,
-    ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
-
-    EDITIONS =>
-    {
-      '2000' =>
+      '2017B' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-04-01',
+            DATE_END => '2017-04-01'
           },
         }
       },
@@ -3446,45 +4318,57 @@ my %TOURNAMENTS_TURKEY =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'U26',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2016,
+            DATE_START => '2016-03-06',
+            DATE_END => '2016-03-06'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-07-27',
+            DATE_END => '2018-07-27'
           },
         }
       },
     }
   },
 
-  'Turkish U26 Women Team Trials' =>
+  'Turkish U26 Women Pair Trials' =>
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
+    FORM => 'Pairs',
+    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-01-30',
+            DATE_END => '2017-01-31'
           },
         }
       },
@@ -3498,19 +4382,43 @@ my %TOURNAMENTS_TURKEY =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'U31',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2020' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2020,
+            DATE_START => '2020-03-03',
+            DATE_END => '2020-03-03'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2022,
+            DATE_START => '2022-01-28',
+            DATE_END => '2022-01-29'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-05-21',
+            DATE_END => '2023-05-21'
           },
         }
       },
@@ -4039,13 +4947,38 @@ my %TOURNAMENTS_TURKEY =
         {
           'C0' => 
           {
+            # TODO Probably a different tournament
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2016-03-05',
+            DATE_END => '2016-03-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Rof64',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2016-03-08',
+            DATE_END => '2016-03-08'
+          },
+          'C2' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Rof32',
+            major => 'SEGMENT|ROUND',
+            DATE_START => '2016-03-08',
+            DATE_END => '2016-03-09'
+          },
+          'C3' => 
+          {
             YEAR => 2016,
             STAGE => 'Rof16',
             major => 'SEGMENT|ROUND',
             DATE_START => '2016-03-09',
             DATE_END => '2016-03-10'
           },
-          'C1' => 
+          'C4' => 
           {
             YEAR => 2016,
             STAGE => 'Quarterfinal',
@@ -4053,7 +4986,7 @@ my %TOURNAMENTS_TURKEY =
             DATE_START => '2016-03-10',
             DATE_END => '2016-03-10'
           },
-          'C2' => 
+          'C5' => 
           {
             YEAR => 2016,
             STAGE => 'Semifinal',
@@ -4061,7 +4994,7 @@ my %TOURNAMENTS_TURKEY =
             DATE_START => '2016-03-11',
             DATE_END => '2016-03-11'
           },
-          'C3' => 
+          'C6' => 
           {
             YEAR => 2016,
             STAGE => 'Final',
@@ -4069,6 +5002,96 @@ my %TOURNAMENTS_TURKEY =
             DATE_START => '2016-03-11',
             DATE_END => '2016-03-12'
           } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-02-24',
+            DATE_END => '2017-02-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-03-25',
+            DATE_END => '2017-03-28'
+          },
+        }
+      },
+      '2018A' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-01-06',
+            DATE_END => '2018-01-07'
+          },
+        }
+      },
+      '2018B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-03-19',
+            DATE_END => '2018-03-24'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-02-05',
+            DATE_END => '2019-02-09'
+          },
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-02-11',
+            DATE_END => '2020-02-15'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-04-09',
+            DATE_END => '2022-04-16'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-03-27',
+            DATE_END => '2023-04-01'
+          },
         }
       },
     }
@@ -4177,6 +5200,30 @@ my %TOURNAMENTS_TURKEY =
           } 
         }
       },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-02-20',
+            DATE_END => '2016-02-20'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-03-16',
+            DATE_END => '2017-03-19'
+          } 
+        }
+      },
     }
   },
 
@@ -4204,6 +5251,50 @@ my %TOURNAMENTS_TURKEY =
             DATE_START => '2010-04-05',
             DATE_END => '2010-04-08'
           } 
+        }
+      },
+      '2017A' =>
+      {
+        MEET => 'Turkish Women Trials',
+        MEET_TAG => '2017A',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SESSION',
+            minor => 'ROUND',
+            DATE_START => '2017-01-31',
+            DATE_END => '2017-01-31'
+          } 
+        }
+      },
+      '2017B' =>
+      {
+        MEET => 'Turkish Women Trials',
+        MEET_TAG => '2017B',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-11-08',
+            DATE_END => '2017-11-08'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Turkish Women Trials',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-03-04',
+            DATE_END => '2023-03-05'
+          },
         }
       },
     }
@@ -4240,6 +5331,59 @@ my %TOURNAMENTS_TURKEY =
             DATE_START => '2011-10-22',
             DATE_END => '2011-10-23'
           } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Turkish Women Trials',
+        MEET_TAG => '2017B',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-11-08',
+            DATE_END => '2017-11-08'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Turkish Women Trials',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-09-14',
+            DATE_END => '2019-09-17'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Turkish Women Trials',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-03-05',
+            DATE_END => '2022-03-05'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Turkish Women Trials',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-02-05',
+            DATE_END => '2024-02-05'
+          },
         }
       },
     }
@@ -4330,6 +5474,78 @@ my %TOURNAMENTS_TURKEY =
           } 
         }
       },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-02-20',
+            DATE_END => '2016-02-21'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-03-16',
+            DATE_END => '2017-03-19'
+          } 
+        }
+      },
+      '2018A' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-01-13',
+            DATE_END => '2018-01-14'
+          } 
+        }
+      },
+      '2018B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-05-24',
+            DATE_END => '2018-05-24'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-01-15',
+            DATE_END => '2019-01-18'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-02-29',
+            DATE_END => '2020-03-03'
+          } 
+        }
+      },
     }
   },
 
@@ -4371,15 +5587,15 @@ my %TOURNAMENTS_TURKEY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2024' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2024,
+            DATE_START => '2024-05-03',
+            DATE_END => '2024-05-03'
           },
         }
       },
