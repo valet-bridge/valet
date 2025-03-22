@@ -438,15 +438,27 @@ my %TOURNAMENTS_RUSSIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-12-07',
+            DATE_END => '2018-12-10'
+          },
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-17',
+            DATE_END => '2020-01-19'
           },
         }
       },
@@ -514,15 +526,27 @@ my %TOURNAMENTS_RUSSIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-03-31',
+            DATE_END => '2018-04-01'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-12-20',
+            DATE_END => '2019-12-22'
           },
         }
       },
@@ -562,6 +586,124 @@ my %TOURNAMENTS_RUSSIA =
           } 
         }
       },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2016-09-29',
+            DATE_END => '2016-10-01'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2016-10-02',
+            DATE_END => '2016-10-02'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2017-09-21',
+            DATE_END => '2017-09-23'
+          },
+          'C1' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-09-24',
+            DATE_END => '2017-09-24'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2018-09-13',
+            DATE_END => '2018-09-15'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Bronze',
+            major => 'SEGMENT',
+            DATE_START => '2018-09-16',
+            DATE_END => '2018-09-16'
+          },
+          'C2' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-09-16',
+            DATE_END => '2018-09-16'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2019-09-05',
+            DATE_END => '2019-09-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-09-08',
+            DATE_END => '2019-09-08'
+          } 
+        }
+      },
+      '2021' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2021,
+            MOVEMENT => 'Round-robin',
+            major => 'ROUND',
+            DATE_START => '2021-09-23',
+            DATE_END => '2021-09-25'
+          },
+          'C1' => 
+          {
+            YEAR => 2021,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2021-09-26',
+            DATE_END => '2021-09-26'
+          } 
+        }
+      },
     }
   },
 
@@ -570,21 +712,21 @@ my %TOURNAMENTS_RUSSIA =
     %GLOBAL,
     ORIGIN => 'National',
     FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
+    SCORING => 'MP',
+    GENDER => 'Women',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-12-07',
+            DATE_END => '2019-12-08'
           },
         }
       },
@@ -597,20 +739,20 @@ my %TOURNAMENTS_RUSSIA =
     ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Women',
     AGE => 'Open',
 
     EDITIONS =>
     {
-     '2000' =>
+     '2020' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2020,
+            DATE_START => '2020-02-15',
+            DATE_END => '2020-02-16'
           },
         }
       },
@@ -887,6 +1029,125 @@ my %TOURNAMENTS_RUSSIA =
           } 
         }
       },
+      '2017' =>
+      {
+        ORDINAL => 15,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-02-24',
+            DATE_END => '2017-02-26'
+          },
+        }
+      },
+      '2018' =>
+      {
+        ORDINAL => 16,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-03-02',
+            DATE_END => '2018-03-04'
+          },
+        }
+      },
+      '2019' =>
+      {
+        ORDINAL => 17,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-03-08',
+            DATE_END => '2019-03-10'
+          },
+        }
+      },
+      '2020' =>
+      {
+        ORDINAL => 18,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-02-21',
+            DATE_END => '2020-02-23'
+          },
+        }
+      },
+    }
+  },
+
+  'Slava Pairs Cup',
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    CITY => 'Moscow',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2017' =>
+      {
+        ORDINAL => 15,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-02-24',
+            DATE_END => '2017-02-26'
+          },
+        }
+      },
+      '2018' =>
+      {
+        ORDINAL => 16,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-03-02',
+            DATE_END => '2018-03-04'
+          },
+        }
+      },
+      '2019' =>
+      {
+        ORDINAL => 17,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-03-08',
+            DATE_END => '2019-03-10'
+          },
+        }
+      },
+      '2020' =>
+      {
+        ORDINAL => 18,
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-02-21',
+            DATE_END => '2020-02-23'
+          },
+        }
+      },
     }
   },
 
@@ -894,22 +1155,22 @@ my %TOURNAMENTS_RUSSIA =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
-    GENDER => 'Open',
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Mixed',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2021' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2021,
+            DATE_START => '2021-02-21',
+            DATE_END => '2021-02-21'
           },
         }
       },

@@ -182,15 +182,63 @@ my %TOURNAMENTS_JAPAN =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2022' =>
       {
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2022,
+            DATE_START => '2022-09-08',
+            DATE_END => '2022-09-09'
+          },
+        }
+      },
+      '2023A' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-03-15',
+            DATE_END => '2023-03-18'
+          },
+        }
+      },
+      '2023B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-08-28',
+            DATE_END => '2023-09-01'
+          },
+        }
+      },
+      '2024A' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-03-15',
+            DATE_END => '2024-03-19'
+          },
+        }
+      },
+      '2024B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-09-05',
+            DATE_END => '2024-09-08'
           },
         }
       },
@@ -266,15 +314,15 @@ my %TOURNAMENTS_JAPAN =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2022' =>
       {
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2022,
+            DATE_START => '2022-08-26',
+            DATE_END => '2022-08-28'
           },
         }
       },
@@ -758,6 +806,19 @@ my %TOURNAMENTS_JAPAN =
           },
         }
       },
+      '2017' =>
+      {
+        MEET => 'Yokohama Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-02-07',
+            DATE_END => '2017-02-11'
+          },
+        }
+      },
     }
   },
 
@@ -1023,6 +1084,114 @@ my %TOURNAMENTS_JAPAN =
           } 
         }
       },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-09-25',
+            DATE_END => '2016-09-25'
+          },
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-09-24',
+            DATE_END => '2017-09-24'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-09-22',
+            DATE_END => '2018-09-22'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-09-21',
+            DATE_END => '2019-09-21'
+          },
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-09-20',
+            DATE_END => '2020-09-20'
+          },
+        }
+      },
+      '2021' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-09-19',
+            DATE_END => '2021-09-19'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-09-18',
+            DATE_END => '2022-09-18'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-09-17',
+            DATE_END => '2023-09-17'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-09-21',
+            DATE_END => '2024-09-21'
+          },
+        }
+      },
 
       # https://bridgescanner.com/event/takamatsunomiya-memorial-cup-2020
       # https://bridgescanner.com/event/takamatsunomiya-memorial-cup-2021
@@ -1035,6 +1204,7 @@ my %TOURNAMENTS_JAPAN =
   {
     %GLOBAL,
     ORIGIN => 'National',
+    CITY => 'Yokohama',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -1042,15 +1212,15 @@ my %TOURNAMENTS_JAPAN =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-02-19',
+            DATE_END => '2019-02-23'
           },
         }
       },

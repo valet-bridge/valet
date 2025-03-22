@@ -65,15 +65,23 @@ my %MEETS_JORDAN =
         YEAR => 2016,
         CITY => 'Amman',
         DATE_START => '2016-10-19',
-        DATE_END => '2016-10-28'
+        DATE_END => '2016-10-30'
+      },
+      '2017' =>
+      {
+        MEET_ORDINAL => 36,
+        YEAR => 2017,
+        CITY => 'Amman',
+        DATE_START => '2017-10-26',
+        DATE_END => '2017-10-29'
       },
       '2018' =>
       {
         MEET_ORDINAL => 37,
         YEAR => 2018,
         CITY => 'Amman',
-        DATE_START => '2018-10-17',
-        DATE_END => '2018-10-21'
+        DATE_START => '2018-10-18',
+        DATE_END => '2018-10-28'
       },
       '2019' =>
       {
@@ -82,7 +90,7 @@ my %MEETS_JORDAN =
         YEAR => 2019,
         CITY => 'Amman',
         DATE_START => '2019-10-16',
-        DATE_END => '2019-10-16'
+        DATE_END => '2019-10-17'
       },
       '2022' =>
       {
@@ -132,6 +140,13 @@ my %MEETS_JORDAN =
         YEAR => 2016,
         DATE_START => '2016-04-04',
         DATE_END => '2016-04-05'
+      },
+      '2019' =>
+      {
+        # Maybe
+        YEAR => 2019,
+        DATE_START => '2019-06-13',
+        DATE_END => '2019-06-13'
       },
     }
   },
@@ -187,6 +202,48 @@ my %TOURNAMENTS_JORDAN =
             major => 'SESSION',
             DATE_START => '2015-11-07',
             DATE_END => '2015-11-11'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Jordan Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'SESSION',
+            DATE_START => '2016-10-29',
+            DATE_END => '2016-10-30'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Jordan Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'SESSION',
+            DATE_START => '2017-10-28',
+            DATE_END => '2017-10-29'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Jordan Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            major => 'SESSION',
+            DATE_START => '2018-10-27',
+            DATE_END => '2018-10-28'
           } 
         }
       },
@@ -255,6 +312,62 @@ my %TOURNAMENTS_JORDAN =
             major => 'SESSION',
             DATE_START => '2015-11-04',
             DATE_END => '2015-11-07'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Jordan Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'SESSION',
+            DATE_START => '2016-10-26',
+            DATE_END => '2016-10-28'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Jordan Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'SESSION',
+            DATE_START => '2017-10-26',
+            DATE_END => '2017-10-27'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Jordan Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            major => 'SESSION',
+            DATE_START => '2018-10-18',
+            DATE_END => '2018-10-26'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Jordan Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            major => 'SESSION',
+            DATE_START => '2019-10-16',
+            DATE_END => '2019-10-17'
           } 
         }
       },
@@ -330,7 +443,6 @@ my %TOURNAMENTS_JORDAN =
   'Jordan Spring Open Pairs' => 
   {
     FORM => 'Pairs',
-    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
@@ -339,6 +451,7 @@ my %TOURNAMENTS_JORDAN =
       '2015A' =>
       {
         MEET => 'Jordan Spring Festival',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'C0' => 
@@ -354,6 +467,7 @@ my %TOURNAMENTS_JORDAN =
       {
         # Something to do with BFAME starting 2015-05-27?
         MEET => 'Jordan Spring Festival',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'C0' => 
@@ -373,6 +487,7 @@ my %TOURNAMENTS_JORDAN =
       '2016' =>
       {
         MEET => 'Jordan Spring Festival',
+        SCORING => 'MP',
         CHAPTERS =>
         {
           'SINGLE' => 
@@ -380,6 +495,20 @@ my %TOURNAMENTS_JORDAN =
             YEAR => 2016,
             DATE_START => '2016-04-04',
             DATE_END => '2016-04-04'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Jordan Spring Festival',
+        SCORING => 'IMP',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-06-13',
+            DATE_END => '2019-06-13'
           } 
         }
       },

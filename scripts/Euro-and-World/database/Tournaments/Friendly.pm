@@ -753,6 +753,24 @@ my %MEETS_FRIENDLY =
         DATE_START => '2018-05-11',
         DATE_END => '2018-05-13'
       },
+      '2020A' =>
+      {
+        YEAR => 2020,
+        DATE_START => '2020-08-04',
+        DATE_END => '2020-08-04'
+      },
+      '2021A' =>
+      {
+        YEAR => 2021,
+        DATE_START => '2021-08-04',
+        DATE_END => '2021-08-04'
+      },
+      '2023A' =>
+      {
+        YEAR => 2023,
+        DATE_START => '2023-08-09',
+        DATE_END => '2023-08-09'
+      },
     }
   },
 );
@@ -3445,15 +3463,45 @@ my %TOURNAMENTS_FRIENDLY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2020' =>
       {
+        MEET => 'Practice Match',
+        MEET_TAG => '2020A',
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2020,
+            DATE_START => '2020-08-04',
+            DATE_END => '2020-08-04'
+          },
+        }
+      },
+      '2021' =>
+      {
+        MEET => 'Practice Match',
+        MEET_TAG => '2021A',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2021,
+            DATE_START => '2021-08-04',
+            DATE_END => '2021-08-04'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Practice Match',
+        MEET_TAG => '2023A',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-08-09',
+            DATE_END => '2023-08-09'
           },
         }
       },

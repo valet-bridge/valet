@@ -25,6 +25,7 @@ my @MULTI_WORDS =
   'Russian Women Pairs',
   'Russian Women Team Trials',
   'Slava Cup',
+  'Slava Pairs Cup',
   'Tennet Mixed Pairs Cup',
 );
 

@@ -191,6 +191,18 @@ my %TOURNAMENTS_SERBIA =
           } 
         }
       },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-12-04',
+            DATE_END => '2016-12-04'
+          },
+        }
+      },
     }
   },
 
