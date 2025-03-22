@@ -19,7 +19,9 @@ my @MULTI_WORDS =
   'ASEAN Club Championship',
   'ASEAN University Games',
   'Asia Cup',
-  'Southeast Asian Games'
+  'Asian National Games',
+  'Southeast Asian Games',
+  'South East Asian Championship'
 );
 
 my %MULTI_TYPOS =
@@ -51,13 +53,17 @@ my %MULTI_TYPOS =
     'asean bridge championships',
     'asean bridge finals',
     'asean club championships'],
+  'Asian National Games' => [
+    'asian games bridge competition'],
   'Southeast Asian Games' => [
-    'asian games bridge competition',
     'sea games',
+    'south east asian games'],
+  'South East Asian Championship' => [
     'seabf championship',
     'seabf championships',
+    'seabf team championships',
     'south east asia bridge club championships',
-    'south east asian games'],
+    'test event road to asian games'],
 );
 
 my %SINGLE_TYPOS =

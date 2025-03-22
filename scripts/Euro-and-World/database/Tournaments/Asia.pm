@@ -295,6 +295,15 @@ my %MEETS_ASIA =
         DATE_START => '2015-12-03',
         DATE_END => '2015-12-06'
       },
+      '2024' =>
+      {
+        MEET_ORDINAL => 40,
+        CITY => 'Depok City',
+        COUNTRY => 'Indonesia',
+        YEAR => 2024,
+        DATE_START => '2024-09-25',
+        DATE_END => '2024-09-29'
+      },
     }
   },
 
@@ -305,11 +314,11 @@ my %MEETS_ASIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2024' =>
       {
-        YEAR => 2000,
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
+        YEAR => 2024,
+        DATE_START => '2024-06-27',
+        DATE_END => '2024-06-30'
       },
     }
   },
@@ -357,6 +366,80 @@ my %MEETS_ASIA =
         YEAR => 2022,
         DATE_START => '2022-10-19',
         DATE_END => '2022-10-25'
+      },
+    }
+  },
+
+  'Asian National Games' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'International',
+
+    EDITIONS =>
+    {
+      '2018' =>
+      {
+        MEET_ORDINAL => 18,
+        CITY => 'Jakarta',
+        COUNTRY => 'Indonesia',
+        YEAR => 2018,
+        DATE_START => '2018-08-18',
+        DATE_END => '2018-09-02'
+      },
+    }
+  },
+
+  'South East Asian Championship' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'International',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        MEET_ORDINAL => 1,
+        CITY => 'Singapore',
+        COUNTRY => 'Singapore',
+        YEAR => 2016,
+        DATE_START => '2016-12-09',
+        DATE_END => '2016-12-11'
+      },
+      '2017' =>
+      {
+        MEET_ORDINAL => 2,
+        CITY => 'Jakarta',
+        COUNTRY => 'Indonesia',
+        YEAR => 2017,
+        DATE_START => '2017-11-29',
+        DATE_END => '2017-12-12'
+      },
+      '2018' =>
+      {
+        MEET_ORDINAL => 3,
+        CITY => 'Manila',
+        COUNTRY => 'Philippines',
+        YEAR => 2018,
+        DATE_START => '2018-11-28',
+        DATE_END => '2018-12-02'
+      },
+      '2022' =>
+      {
+        MEET_ORDINAL => 4,
+        CITY => 'Bangkok',
+        COUNTRY => 'Thailand',
+        YEAR => 2022,
+        DATE_START => '2022-12-18',
+        DATE_END => '2022-12-23'
+      },
+      '2023' =>
+      {
+        MEET_ORDINAL => 5,
+        CITY => 'Singapore',
+        COUNTRY => 'Singapore',
+        YEAR => 2023,
+        DATE_START => '2023-12-11',
+        DATE_END => '2023-12-15'
       },
     }
   },
@@ -654,6 +737,32 @@ my %TOURNAMENTS_ASIA =
             YEAR => 2015,
             DATE_START => '2015-05-21',
             DATE_END => '2015-05-31'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'APBF Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-06-11',
+            DATE_END => '2019-06-20'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'APBF Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-06-09',
+            DATE_END => '2023-06-17'
           } 
         }
       },
@@ -969,6 +1078,45 @@ my %TOURNAMENTS_ASIA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'APBF Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-29',
+            DATE_END => '2017-06-07'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'APBF Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-06-11',
+            DATE_END => '2019-06-20'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'APBF Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-06-09',
+            DATE_END => '2023-06-17'
+          } 
+        }
+      },
     }
   },
 
@@ -1226,6 +1374,32 @@ my %TOURNAMENTS_ASIA =
           } 
         }
       },
+      '2019' =>
+      {
+        MEET => 'APBF Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-06-11',
+            DATE_END => '2019-06-20'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'APBF Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-06-09',
+            DATE_END => '2023-06-17'
+          } 
+        }
+      },
     }
   },
 
@@ -1441,6 +1615,45 @@ my %TOURNAMENTS_ASIA =
             minor => 'ROUND',
             DATE_START => '2015-05-30',
             DATE_END => '2015-05-30'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'APBF Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-29',
+            DATE_END => '2017-06-07'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'APBF Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-06-11',
+            DATE_END => '2019-06-20'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'APBF Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-06-09',
+            DATE_END => '2023-06-17'
           } 
         }
       },
@@ -1692,6 +1905,19 @@ my %TOURNAMENTS_ASIA =
           } 
         }
       },
+      '2024' =>
+      {
+        MEET => 'ASEAN Club Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-09-26',
+            DATE_END => '2024-09-26'
+          } 
+        }
+      },
     }
   },
 
@@ -1730,6 +1956,20 @@ my %TOURNAMENTS_ASIA =
             ignore => 'GROUP',
             DATE_START => '2012-12-05',
             DATE_END => '2012-12-09'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'ASEAN Club Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            MOVEMENT => 'Swiss',
+            DATE_START => '2024-09-25',
+            DATE_END => '2024-09-25'
           } 
         }
       },
@@ -1919,6 +2159,170 @@ my %TOURNAMENTS_ASIA =
           } 
         }
       },
+      '2016' =>
+      {
+        MEET => 'South East Asian Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-12-09',
+            DATE_END => '2016-12-11'
+          },
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'South East Asian Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-12-07',
+            DATE_END => '2017-12-10'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'ASEAN Club Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-09-27',
+            DATE_END => '2024-09-29'
+          },
+        }
+      },
+    }
+  },
+
+  'ASEAN U21 Club Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U21',
+
+    EDITIONS =>
+    {
+      '2024' =>
+      {
+        MEET => 'ASEAN Club Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-09-27',
+            DATE_END => '2024-09-29'
+          },
+        }
+      },
+    }
+  },
+
+  'ASEAN U26 Club Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U26',
+
+    EDITIONS =>
+    {
+      '2024' =>
+      {
+        MEET => 'ASEAN Club Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-09-27',
+            DATE_END => '2024-09-29'
+          },
+        }
+      },
+    }
+  },
+
+  'ASEAN University Open Pairs' =>
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2024' =>
+      {
+        MEET => 'ASEAN University Games',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-06-29',
+            DATE_END => '2024-06-30'
+          } 
+        }
+      },
+    }
+  },
+
+  'ASEAN University Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U31',
+
+    EDITIONS =>
+    {
+      '2024' =>
+      {
+        MEET => 'ASEAN University Games',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-06-27',
+            DATE_END => '2024-06-30'
+          } 
+        }
+      },
+    }
+  },
+
+  'ASEAN University Women Pairs' =>
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2024' =>
+      {
+        MEET => 'ASEAN University Games',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-06-29',
+            DATE_END => '2024-06-29'
+          } 
+        }
+      },
     }
   },
 
@@ -1943,6 +2347,19 @@ my %TOURNAMENTS_ASIA =
             DATE_START => '2006-12-17',
             DATE_END => '2006-12-17'
           } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'ASEAN Club Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-09-27',
+            DATE_END => '2024-09-29'
+          },
         }
       },
     }
@@ -2019,6 +2436,96 @@ my %TOURNAMENTS_ASIA =
     }
   },
 
+  'Asia Mixed Pairs' =>
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2018' =>
+      {
+        MEET => 'Asian National Games',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-08-19',
+            DATE_END => '2018-09-01'
+          },
+        }
+      },
+    }
+  },
+
+  'Asia Mixed Teams Cup' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2018A' =>
+      {
+        MEET => 'Asia Cup',
+        MEET_TAG => '2018',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-06-05',
+            DATE_END => '2018-06-10'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Asia Cup',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-10-20',
+            DATE_END => '2022-10-25'
+          },
+        }
+      },
+    }
+  },
+
+  'Asia Mixed Team Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2017,
+            DATE_START => '2017-11-29',
+            DATE_END => '2017-12-03'
+          },
+        }
+      },
+    }
+  },
+
   'Asia Open Teams Cup' =>
   {
     FORM => 'Teams',
@@ -2075,6 +2582,32 @@ my %TOURNAMENTS_ASIA =
           } 
         }
       },
+      '2018' =>
+      {
+        MEET => 'Asia Cup',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-06-05',
+            DATE_END => '2018-06-10'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Asia Cup',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-10-20',
+            DATE_END => '2022-10-25'
+          },
+        }
+      },
     }
   },
 
@@ -2117,6 +2650,32 @@ my %TOURNAMENTS_ASIA =
             DATE_START => '2014-06-22',
             DATE_END => '2014-06-22'
           } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Asia Cup',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-06-05',
+            DATE_END => '2018-06-10'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Asia Cup',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-10-20',
+            DATE_END => '2022-10-25'
+          },
         }
       },
     }
@@ -2178,6 +2737,57 @@ my %TOURNAMENTS_ASIA =
           } 
         }
       },
+      '2018' =>
+      {
+        MEET => 'Asia Cup',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-06-05',
+            DATE_END => '2018-06-10'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Asia Cup',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-10-20',
+            DATE_END => '2022-10-25'
+          },
+        }
+      },
+    }
+  },
+
+  'Asia Open Pairs' =>
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2018' =>
+      {
+        MEET => 'Asian National Games',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-08-19',
+            DATE_END => '2018-09-01'
+          },
+        }
+      },
     }
   },
 
@@ -2192,15 +2802,53 @@ my %TOURNAMENTS_ASIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017A' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-07-15',
+            DATE_END => '2017-07-16'
+          },
+        }
+      },
+      '2017B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2017,
+            DATE_START => '2017-11-29',
+            DATE_END => '2017-12-03'
+          },
+        }
+      },
+    }
+  },
+
+  'Asia Women Team Trials' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2017,
+            DATE_START => '2017-11-29',
+            DATE_END => '2017-12-03'
           },
         }
       },
@@ -2298,6 +2946,45 @@ my %TOURNAMENTS_ASIA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'South East Asian Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-11-29',
+            DATE_END => '2017-12-07'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Asian National Games',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-08-19',
+            DATE_END => '2018-08-27'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'South East Asian Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-12-20',
+            DATE_END => '2022-12-23'
+          },
+        }
+      },
     }
   },
 
@@ -2362,13 +3049,63 @@ my %TOURNAMENTS_ASIA =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'South East Asian Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-11-29',
+            DATE_END => '2017-12-03'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Asian National Games',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-08-20',
+            DATE_END => '2018-09-01'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'South East Asian Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-12-20',
+            DATE_END => '2022-12-23'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'South East Asian Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-12-13',
+            DATE_END => '2023-12-15'
+          },
+        }
+      },
     }
   },
 
   "SEA President's Cup" =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -2376,15 +3113,92 @@ my %TOURNAMENTS_ASIA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
+        MEET => 'South East Asian Championship',
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-12-11',
+            DATE_END => '2017-12-12'
+          },
+        }
+      },
+    }
+  },
+
+  'SEA Senior Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Seniors',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        MEET => 'South East Asian Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-12-11',
+            DATE_END => '2016-12-11'
+          },
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'South East Asian Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-11-29',
+            DATE_END => '2017-12-01'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'South East Asian Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-12-13',
+            DATE_END => '2023-12-15'
+          },
+        }
+      },
+    }
+  },
+
+  'SEA U21 Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U21',
+
+    EDITIONS =>
+    {
+      '2022' =>
+      {
+        MEET => 'South East Asian Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-12-20',
+            DATE_END => '2022-12-23'
           },
         }
       },
@@ -2413,6 +3227,19 @@ my %TOURNAMENTS_ASIA =
             minor => 'ROUND',
             DATE_START => '2011-11-10',
             DATE_END => '2011-11-21'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Asian National Games',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-08-28',
+            DATE_END => '2018-09-01'
           } 
         }
       },
@@ -2449,6 +3276,45 @@ my %TOURNAMENTS_ASIA =
             major => 'SEGMENT',
             DATE_START => '2011-11-14',
             DATE_END => '2011-11-15'
+          },
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'South East Asian Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-11-29',
+            DATE_END => '2017-12-03'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'South East Asian Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-12-23',
+            DATE_END => '2022-12-23'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'South East Asian Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-12-13',
+            DATE_END => '2023-12-15'
           },
         }
       },
@@ -2846,6 +3712,20 @@ my %TOURNAMENTS_ASIA =
             YEAR => 2018,
             DATE_START => '2018-07-01',
             DATE_END => '2018-07-05'
+          }
+        }
+      },
+      '2019' =>
+      {
+        CITY => 'Shanghai',
+        COUNTRY => 'China',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-04-09',
+            DATE_END => '2019-04-13'
           }
         }
       },

@@ -47,6 +47,13 @@ my %MEETS_AUSTRIA =
         DATE_START => '2016-08-10',
         DATE_END => '2016-08-11'
       },
+      '2017' =>
+      {
+        YEAR => 2017,
+        CITY => 'Mautern',
+        DATE_START => '2017-08-03',
+        DATE_END => '2017-08-03'
+      },
       '2018' =>
       {
         # https://www.bridgeaustria.at/turnier/wachauer-bridgewoche-mautern/
@@ -183,6 +190,21 @@ my %TOURNAMENTS_AUSTRIA =
             major => 'ROUND',
             DATE_START => '2016-08-10',
             DATE_END => '2016-08-11'
+          },
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Mautern Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'ROUND',
+            DATE_START => '2017-08-03',
+            DATE_END => '2017-08-03'
           },
         }
       },
