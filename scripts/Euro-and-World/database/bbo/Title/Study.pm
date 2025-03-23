@@ -1652,6 +1652,8 @@ my @LOCAL_SUBS =
     TEXT => 'Pokalsemifinale', CORR => 'Danish Cup - SF' },
   { START => 84790, END => 84822, 
     TEXT => 'Nationale Interclubs', CORR => 'French First Division' },
+  { START => 84887, END => 84908, 
+    TEXT => 'Festival OT', CORR => 'Festival Open Teams' },
   { START => 84967, END => 85055, 
     TEXT => '7th SEABF & 40th ABCC', 
     CORR => '40th ASEAN Club Championship' },

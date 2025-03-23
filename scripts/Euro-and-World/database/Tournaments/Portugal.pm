@@ -99,7 +99,14 @@ my %MEETS_PORTUGAL =
         ORDINAL => 21,
         YEAR => 2017,
         DATE_START => '2017-10-04',
-        DATE_END => '2017-10-04'
+        DATE_END => '2017-10-08'
+      },
+      '2018' =>
+      {
+        ORDINAL => 22,
+        YEAR => 2018,
+        DATE_START => '2018-10-04',
+        DATE_END => '2018-10-08'
       },
       '2019' =>
       {
@@ -277,6 +284,13 @@ my %MEETS_PORTUGAL =
         DATE_START => '2016-03-19',
         DATE_END => '2016-03-20'
       },
+      '2018' =>
+      {
+        ORDINAL => 4,
+        YEAR => 2018,
+        DATE_START => '2018-03-09',
+        DATE_END => '2018-03-11'
+      },
     }
   },
 
@@ -360,7 +374,7 @@ my %MEETS_PORTUGAL =
       },
       '2015' =>
       {
-        #   # https://www.bridge-madeira.com/2015-results/
+        # https://www.bridge-madeira.com/2015-results/
         ORDINAL => 18,
         YEAR => 2015,
         DATE_START => '2015-10-29',
@@ -403,6 +417,12 @@ my %MEETS_PORTUGAL =
         YEAR => 2020,
         DATE_START => '2020-10-29',
         DATE_END => '2020-11-09'
+      },
+      '2021' =>
+      {
+        YEAR => 2021,
+        DATE_START => '2021-11-05',
+        DATE_END => '2021-11-07'
       },
       '2022' =>
       {
@@ -511,6 +531,62 @@ my %TOURNAMENTS_PORTUGAL =
           } 
         }
       },
+      '2016' =>
+      {
+        MEET => 'Azores Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND',
+            DATE_START => '2016-10-04',
+            DATE_END => '2016-10-05'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Azores Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND',
+            DATE_START => '2017-10-07',
+            DATE_END => '2017-10-08'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Azores Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            major => 'ROUND',
+            DATE_START => '2018-10-06',
+            DATE_END => '2018-10-07'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Azores Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            major => 'ROUND',
+            DATE_START => '2019-10-04',
+            DATE_END => '2019-10-05'
+          } 
+        }
+      },
     }
   },
 
@@ -545,22 +621,22 @@ my %TOURNAMENTS_PORTUGAL =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
+    FORM => 'Pairs',
+    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-11-15',
+            DATE_END => '2019-11-16'
           }
         }
       },
@@ -601,6 +677,20 @@ my %TOURNAMENTS_PORTUGAL =
             major => 'ROUND',
             DATE_START => '2016-03-19',
             DATE_END => '2016-03-20'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Lisbon International Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            major => 'ROUND',
+            DATE_START => '2018-03-09',
+            DATE_END => '2018-03-11'
           } 
         }
       },
@@ -793,6 +883,141 @@ my %TOURNAMENTS_PORTUGAL =
             major => 'ROUND',
             DATE_START => '2015-11-06',
             DATE_END => '2015-11-08'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Madeira International Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2016-11-11',
+            DATE_END => '2016-11-13'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Madeira International Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2017-11-10',
+            DATE_END => '2017-11-12'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Madeira International Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2018-11-09',
+            DATE_END => '2018-11-11'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Madeira International Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2019-11-08',
+            DATE_END => '2019-11-10'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        MEET => 'Madeira International Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2020-11-06',
+            DATE_END => '2020-11-08'
+          } 
+        }
+      },
+      '2021' =>
+      {
+        MEET => 'Madeira International Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2021,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2021-11-05',
+            DATE_END => '2021-11-07'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Madeira International Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2022-11-11',
+            DATE_END => '2022-11-13'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Madeira International Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2023-11-10',
+            DATE_END => '2023-11-12'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Madeira International Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2024-11-08',
+            DATE_END => '2024-11-10'
           } 
         }
       },
@@ -1893,6 +2118,50 @@ my %TOURNAMENTS_PORTUGAL =
             STAGE => 'Final',
             DATE_START => '2014-09-27',
             DATE_END => '2014-09-27'
+          } 
+        }
+      },
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-09-19',
+            DATE_END => '2015-09-19'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Semifinal',
+            DATE_START => '2016-12-10',
+            DATE_END => '2016-12-10'
+          },
+          'C1' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            DATE_START => '2016-12-10',
+            DATE_END => '2016-12-10'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-09-30',
+            DATE_END => '2017-09-30'
           } 
         }
       },

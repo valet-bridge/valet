@@ -89,6 +89,42 @@ my %MEETS_BRAZIL =
         DATE_START => '2016-03-21',
         DATE_END => '2016-03-27'
       },
+      '2017' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-01-26',
+        DATE_END => '2017-01-29'
+      },
+      '2018' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-11-01',
+        DATE_END => '2018-11-01'
+      },
+      '2020' =>
+      {
+        YEAR => 2020,
+        DATE_START => '2020-01-23',
+        DATE_END => '2020-01-25'
+      },
+      '2023' =>
+      {
+        YEAR => 2023,
+        DATE_START => '2023-01-23',
+        DATE_END => '2023-01-24'
+      },
+      '2024A' =>
+      {
+        YEAR => 2024,
+        DATE_START => '2024-01-22',
+        DATE_END => '2024-01-24'
+      },
+      '2024B' =>
+      {
+        YEAR => 2024,
+        DATE_START => '2024-05-27',
+        DATE_END => '2024-05-29'
+      },
     }
   },
 
@@ -122,15 +158,15 @@ my %TOURNAMENTS_BRAZIL =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2024' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2024,
+            DATE_START => '2024-06-02',
+            DATE_END => '2024-06-02'
           },
         }
       },
@@ -342,6 +378,78 @@ my %TOURNAMENTS_BRAZIL =
             major => 'SEGMENT|ROUND',
             DATE_START => '2015-11-06',
             DATE_END => '2015-11-07'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-11-03',
+            DATE_END => '2016-11-05'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-09-15',
+            DATE_END => '2017-09-16'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-11-08',
+            DATE_END => '2018-11-10'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-10-10',
+            DATE_END => '2022-10-15'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-10-26',
+            DATE_END => '2023-10-28'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-09-12',
+            DATE_END => '2024-09-14'
           } 
         }
       },
@@ -613,6 +721,84 @@ my %TOURNAMENTS_BRAZIL =
             DATE_START => '2016-03-25',
             DATE_END => '2016-03-27'
           } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Brazilian Trials',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-01-26',
+            DATE_END => '2017-01-29'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Brazilian Trials',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-11-01',
+            DATE_END => '2018-11-01'
+          },
+        }
+      },
+      '2020' =>
+      {
+        MEET => 'Brazilian Trials',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-23',
+            DATE_END => '2020-01-25'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Brazilian Trials',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-01-23',
+            DATE_END => '2023-01-24'
+          },
+        }
+      },
+      '2024A' =>
+      {
+        MEET => 'Brazilian Trials',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-01-22',
+            DATE_END => '2024-01-24'
+          },
+        }
+      },
+      '2024B' =>
+      {
+        MEET => 'Brazilian Trials',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-05-27',
+            DATE_END => '2024-05-29'
+          },
         }
       },
     }
@@ -977,6 +1163,60 @@ my %TOURNAMENTS_BRAZIL =
           } 
         }
       },
+      '2015' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2015,
+            DATE_START => '2015-12-05',
+            DATE_END => '2015-12-05'
+          },
+        }
+      },
+      '2016' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-09-28',
+            DATE_END => '2016-10-02'
+          },
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-11-18',
+            DATE_END => '2017-11-19'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-12-07',
+            DATE_END => '2019-12-07'
+          },
+          'C1' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-12-11',
+            DATE_END => '2019-12-11'
+          },
+        }
+      },
     }
   },
 
@@ -1181,6 +1421,42 @@ my %TOURNAMENTS_BRAZIL =
           } 
         }
       },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-06-10',
+            DATE_END => '2017-06-14'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-06-16',
+            DATE_END => '2018-06-18'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-05-15',
+            DATE_END => '2019-05-16'
+          } 
+        }
+      },
     }
   },
 
@@ -1195,15 +1471,51 @@ my %TOURNAMENTS_BRAZIL =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
-          'SINGLE' =>
+          'C0' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-02-04',
+            DATE_END => '2018-02-04'
+          },
+          'C1' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-02-07',
+            DATE_END => '2018-02-07'
+          },
+          'C2' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-02-17',
+            DATE_END => '2018-02-17'
+          },
+          'C3' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-02-21',
+            DATE_END => '2018-02-21'
+          },
+          'C4' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-02-24',
+            DATE_END => '2018-02-24'
+          },
+          'C5' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-02-28',
+            DATE_END => '2018-02-28'
+          },
+          'C6' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-03-03',
+            DATE_END => '2018-03-03'
           },
         }
       },

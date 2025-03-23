@@ -218,6 +218,48 @@ my %TOURNAMENTS_BELGIUM =
           } 
         }
       },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION',
+            DATE_START => '2017-12-10',
+            DATE_END => '2017-12-10'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION',
+            DATE_START => '2019-01-27',
+            DATE_END => '2019-01-27'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT|SESSION',
+            DATE_START => '2023-02-04',
+            DATE_END => '2023-02-05'
+          } 
+        }
+      },
     }
   },
 

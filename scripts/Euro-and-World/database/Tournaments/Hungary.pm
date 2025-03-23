@@ -203,6 +203,21 @@ my %TOURNAMENTS_HUNGARY =
           } 
         }
       },
+      '2017' =>
+      {
+        ORDINAL => 28,
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-06-04',
+            DATE_END => '2017-06-04'
+          } 
+        }
+      },
     }
   },
 
@@ -459,6 +474,46 @@ my %TOURNAMENTS_HUNGARY =
           }
         }
       },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2017-05-14',
+            DATE_END => '2017-05-14'
+          }
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2018-05-27',
+            DATE_END => '2018-05-27'
+          }
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-05-18',
+            DATE_END => '2019-05-19'
+          }
+        }
+      },
     }
   },
 
@@ -688,6 +743,30 @@ my %TOURNAMENTS_HUNGARY =
           } 
         }
       },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-03-04',
+            DATE_END => '2017-03-05'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-05-13',
+            DATE_END => '2018-05-13'
+          } 
+        }
+      },
     }
   },
 
@@ -752,13 +831,51 @@ my %TOURNAMENTS_HUNGARY =
           } 
         }
       },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-12-09',
+            DATE_END => '2017-12-10'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-02-03',
+            DATE_END => '2018-02-04'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Semifinal',
+            major => 'SEGMENT',
+            DATE_START => '2022-02-12',
+            DATE_END => '2022-02-13'
+          },
+        }
+      },
     }
   },
 
   'Hungarian Santa Invitational' =>
   {
     %GLOBAL,
-    ORIGIN => 'National',
+    ORIGIN => 'Invitational',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
@@ -766,15 +883,15 @@ my %TOURNAMENTS_HUNGARY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2016,
+            DATE_START => '2016-12-16',
+            DATE_END => '2016-12-16'
           },
         }
       },

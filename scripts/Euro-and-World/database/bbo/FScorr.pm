@@ -599,6 +599,8 @@ my %FORM_CORRECTIONS = (
     12552, 12553, 12554, 12558, 12560, 12561, 12562, 12563, 12564,
     12565, 12567, 12581, 12584, 12586, 12587, 12588, 12590, 12593,
     12594, 12595, 12596, 12599, 12600],
+  'Greek Open Pairs' => [
+    54716],
   'Greek Women Pair Trials' => [12526],
   "Gro's Supercup" => [
     15059, 15070, 
@@ -737,6 +739,9 @@ my %FORM_CORRECTIONS = (
     28371],
   'Las Palmas Women Pairs' => [
     28245, 28286, 28320],
+  'Lisbon Open Pairs' => [
+    66797, 66799, 66807, 66808, 66815, 66816, 66841, 66845, 66853,
+    66862, 66863],
   'Maharaja Yeshwantrao Holkar National Pairs' => [
     12268, 12269, 12270,
     16299, 16304,
@@ -747,6 +752,8 @@ my %FORM_CORRECTIONS = (
     22135],
   'Marit Sveaas Open Pairs' => [
     46107, 46115, 46117, 46132, 46147],
+  'Mentererum Invitational Pairs' => [
+    58661, 58676, 58677],
   'Merit Mixed Pairs' => [
     56491, 56494,
     62475, 62478],
@@ -882,6 +889,10 @@ my %FORM_CORRECTIONS = (
     31344, 31345, 31347,
     41943, 41944,
     85576],
+  'Reykjavik Open Pairs' => [
+    55394, 55412, 55431,
+    61254, 61258,
+    68206, 68208, 68218],
   'Riga Invitational Pairs' => [
     19565,
     25013,

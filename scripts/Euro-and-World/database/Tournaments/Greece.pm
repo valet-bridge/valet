@@ -519,21 +519,21 @@ my %TOURNAMENTS_GREECE =
     %GLOBAL,
     ORIGIN => 'National',
     FORM => 'Pairs',
-    SCORING => 'MP',
+    SCORING => 'IMP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2017' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2017,
+            DATE_START => '2017-12-10',
+            DATE_END => '2017-12-10'
           },
         }
       },
@@ -688,6 +688,75 @@ my %TOURNAMENTS_GREECE =
             major => 'SEGMENT',
             DATE_START => '2016-04-08',
             DATE_END => '2016-04-10'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        ORDINAL => 51,
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-03-31',
+            DATE_END => '2017-04-02'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        ORDINAL => 52,
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-04-13',
+            DATE_END => '2018-04-15'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        ORDINAL => 53,
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2019-03-29',
+            DATE_END => '2019-03-31'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2023-04-07',
+            DATE_END => '2023-04-09'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'SEGMENT',
+            DATE_START => '2024-06-14',
+            DATE_END => '2024-06-16'
           } 
         }
       },
@@ -854,6 +923,108 @@ my %TOURNAMENTS_GREECE =
           },
         }
       },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-02-16',
+            DATE_END => '2018-02-18'
+          },
+          'C1' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-02-23',
+            DATE_END => '2018-02-25'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-11-30',
+            DATE_END => '2019-11-30'
+          },
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-17',
+            DATE_END => '2020-01-19'
+          },
+          'C1' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-31',
+            DATE_END => '2020-02-02'
+          },
+          'C2' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-02-14',
+            DATE_END => '2020-02-16'
+          },
+        }
+      },
+      '2022A' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-02-25',
+            DATE_END => '2022-02-26'
+          },
+        }
+      },
+      '2022B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-04-08',
+            DATE_END => '2022-04-10'
+          },
+        }
+      },
+      '2024A' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-03-01',
+            DATE_END => '2024-03-03'
+          },
+        }
+      },
+      '2024B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-04-19',
+            DATE_END => '2024-04-21'
+          },
+        }
+      },
     }
   },
 
@@ -916,22 +1087,22 @@ my %TOURNAMENTS_GREECE =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
+    FORM => 'Pairs',
+    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-09-08',
+            DATE_END => '2018-09-08'
           },
         }
       },

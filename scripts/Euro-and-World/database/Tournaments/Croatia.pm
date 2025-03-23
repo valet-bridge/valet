@@ -104,6 +104,55 @@ my %MEETS_CROATIA =
         DATE_START => '2015-09-05',
         DATE_END => '2015-09-11'
       },
+      '2016' =>
+      {
+        MEET_ORDINAL => 55,
+        YEAR => 2016,
+        DATE_START => '2016-09-04',
+        DATE_END => '2016-09-09'
+      },
+      '2017' =>
+      {
+        MEET_ORDINAL => 56,
+        YEAR => 2017,
+        DATE_START => '2017-09-03',
+        DATE_END => '2017-09-08'
+      },
+      '2018' =>
+      {
+        MEET_ORDINAL => 57,
+        YEAR => 2018,
+        DATE_START => '2018-09-09',
+        DATE_END => '2018-09-14'
+      },
+      '2019' =>
+      {
+        MEET_ORDINAL => 58,
+        YEAR => 2019,
+        DATE_START => '2019-09-08',
+        DATE_END => '2019-09-13'
+      },
+      '2022' =>
+      {
+        MEET_ORDINAL => 60,
+        YEAR => 2022,
+        DATE_START => '2022-09-11',
+        DATE_END => '2022-09-16'
+      },
+      '2023' =>
+      {
+        MEET_ORDINAL => 61,
+        YEAR => 2023,
+        DATE_START => '2023-09-10',
+        DATE_END => '2023-09-15'
+      },
+      '2024' =>
+      {
+        MEET_ORDINAL => 62,
+        YEAR => 2024,
+        DATE_START => '2024-09-15',
+        DATE_END => '2024-09-20'
+      },
     }
   },
 
@@ -256,6 +305,104 @@ my %TOURNAMENTS_CROATIA =
           },
         }
       },
+      '2016' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND|MATCH',
+            DATE_START => '2016-09-04',
+            DATE_END => '2016-09-04'
+          },
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND|MATCH',
+            DATE_START => '2017-09-03',
+            DATE_END => '2017-09-03'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            major => 'ROUND|MATCH',
+            DATE_START => '2018-09-09',
+            DATE_END => '2018-09-09'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            major => 'ROUND|MATCH',
+            DATE_START => '2019-09-08',
+            DATE_END => '2019-09-08'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            major => 'ROUND|MATCH',
+            DATE_START => '2022-09-11',
+            DATE_END => '2022-09-11'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            major => 'ROUND|MATCH',
+            DATE_START => '2023-09-10',
+            DATE_END => '2023-09-10'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            major => 'ROUND|MATCH',
+            DATE_START => '2024-09-15',
+            DATE_END => '2024-09-15'
+          },
+        }
+      },
     }
   },
 
@@ -307,6 +454,62 @@ my %TOURNAMENTS_CROATIA =
             major => 'ROUND|MATCH',
             DATE_START => '2015-09-07',
             DATE_END => '2015-09-07'
+          },
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            major => 'ROUND|MATCH',
+            DATE_START => '2016-09-05',
+            DATE_END => '2016-09-05'
+          },
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            major => 'ROUND|MATCH',
+            DATE_START => '2017-09-04',
+            DATE_END => '2017-09-04'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            major => 'ROUND|MATCH',
+            DATE_START => '2018-09-10',
+            DATE_END => '2018-09-10'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            major => 'ROUND|MATCH',
+            DATE_START => '2019-09-09',
+            DATE_END => '2019-09-09'
           },
         }
       },
@@ -484,6 +687,118 @@ my %TOURNAMENTS_CROATIA =
             minor => 'MATCH',
             DATE_START => '2015-09-09',
             DATE_END => '2015-09-11'
+          },
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            STAGE => 'Final',
+            major => 'ROUND',
+            minor => 'MATCH',
+            DATE_START => '2016-09-07',
+            DATE_END => '2016-09-09'
+          },
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            STAGE => 'Final',
+            major => 'ROUND',
+            minor => 'MATCH',
+            DATE_START => '2017-09-06',
+            DATE_END => '2017-09-08'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            STAGE => 'Final',
+            major => 'ROUND',
+            minor => 'MATCH',
+            DATE_START => '2018-09-12',
+            DATE_END => '2018-09-14'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            STAGE => 'Final',
+            major => 'ROUND',
+            minor => 'MATCH',
+            DATE_START => '2019-09-11',
+            DATE_END => '2019-09-13'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            STAGE => 'Final',
+            major => 'ROUND',
+            minor => 'MATCH',
+            DATE_START => '2022-09-14',
+            DATE_END => '2022-09-16'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            STAGE => 'Final',
+            major => 'ROUND',
+            minor => 'MATCH',
+            DATE_START => '2023-09-13',
+            DATE_END => '2023-09-15'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Pula Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            STAGE => 'Final',
+            major => 'ROUND',
+            minor => 'MATCH',
+            DATE_START => '2024-09-18',
+            DATE_END => '2024-09-20'
           },
         }
       },

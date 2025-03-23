@@ -26,11 +26,29 @@ my %MEETS_ICELAND =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
-        YEAR => 2000,
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
+        YEAR => 2016,
+        DATE_START => '2016-09-23',
+        DATE_END => '2016-09-25'
+      },
+      '2017' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-10-07',
+        DATE_END => '2017-10-08'
+      },
+      '2018' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-09-15',
+        DATE_END => '2018-09-16'
+      },
+      '2019' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-09-14',
+        DATE_END => '2019-09-15'
       },
     }
   },
@@ -79,6 +97,42 @@ my %MEETS_ICELAND =
         DATE_START => '2016-01-29',
         DATE_END => '2016-01-31'
       },
+      '2017' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-01-27',
+        DATE_END => '2017-01-29'
+      },
+      '2018' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-01-25',
+        DATE_END => '2018-01-28'
+      },
+      '2019' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-01-31',
+        DATE_END => '2019-02-03'
+      },
+      '2020' =>
+      {
+        YEAR => 2020,
+        DATE_START => '2020-01-30',
+        DATE_END => '2020-02-02'
+      },
+      '2023' =>
+      {
+        YEAR => 2023,
+        DATE_START => '2023-01-26',
+        DATE_END => '2023-01-29'
+      },
+      '2024' =>
+      {
+        YEAR => 2024,
+        DATE_START => '2024-01-25',
+        DATE_END => '2024-01-28'
+      },
     }
   },
 );
@@ -96,15 +150,15 @@ my %TOURNAMENTS_ICELAND =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2022' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2022,
+            DATE_START => '2022-09-03',
+            DATE_END => '2022-09-04'
           },
         }
       },
@@ -288,6 +342,21 @@ my %TOURNAMENTS_ICELAND =
             major => 'ROUND',
             DATE_START => '2016-01-30',
             DATE_END => '2016-01-31'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Reykjavik Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            MOVEMENT => 'Swiss',
+            major => 'ROUND',
+            DATE_START => '2024-01-25',
+            DATE_END => '2024-01-28'
           } 
         }
       },
@@ -635,6 +704,120 @@ my %TOURNAMENTS_ICELAND =
           } 
         }
       },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-09-02',
+            DATE_END => '2017-09-03'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-09-08',
+            DATE_END => '2018-09-09'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-09-07',
+            DATE_END => '2019-09-08'
+          },
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-08-29',
+            DATE_END => '2020-08-30'
+          },
+        }
+      },
+      '2021' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-09-18',
+            DATE_END => '2021-09-19'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-07-28',
+            DATE_END => '2022-07-28'
+          },
+          'C1' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-09-13',
+            DATE_END => '2022-09-13'
+          },
+          'C2' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-09-17',
+            DATE_END => '2022-09-18'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-09-03',
+            DATE_END => '2023-09-03'
+          },
+          'C1' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-09-17',
+            DATE_END => '2023-09-17'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-09-22',
+            DATE_END => '2024-09-22'
+          },
+        }
+      },
     }
   },
 
@@ -649,15 +832,51 @@ my %TOURNAMENTS_ICELAND =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2022' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2022,
+            DATE_START => '2022-10-23',
+            DATE_END => '2022-10-23'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-10-21',
+            DATE_END => '2023-10-22'
+          },
+          'C1' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-11-19',
+            DATE_END => '2023-11-19'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-10-20',
+            DATE_END => '2024-10-20'
+          },
+          'C1' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-11-24',
+            DATE_END => '2024-11-24'
           },
         }
       },
@@ -890,6 +1109,352 @@ my %TOURNAMENTS_ICELAND =
             major => 'SEGMENT',
             DATE_START => '2016-04-24',
             DATE_END => '2016-04-24'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-04-20',
+            DATE_END => '2017-04-23'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-04-19',
+            DATE_END => '2018-04-22'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-04-25',
+            DATE_END => '2019-04-28'
+          },
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-04-21',
+            DATE_END => '2022-04-24'
+          },
+        }
+      },
+      '2023A' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-04-01',
+            DATE_END => '2023-04-02'
+          },
+        }
+      },
+      '2023B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-04-20',
+            DATE_END => '2023-04-23'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-03-24',
+            DATE_END => '2024-03-24'
+          },
+          'C1' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-04-24',
+            DATE_END => '2024-04-28'
+          },
+        }
+      },
+    }
+  },
+
+  'Northern Lights Open Pairs' =>
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        MEET => 'Northern Lights Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-09-23',
+            DATE_END => '2016-09-23'
+          } 
+        }
+      },
+    }
+  },
+
+  'Northern Lights Open Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2016' =>
+      {
+        MEET => 'Northern Lights Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-09-23',
+            DATE_END => '2016-09-25'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Northern Lights Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-10-07',
+            DATE_END => '2017-10-08'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Northern Lights Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-09-15',
+            DATE_END => '2018-09-16'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Northern Lights Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-09-14',
+            DATE_END => '2019-09-15'
+          } 
+        }
+      },
+    }
+  },
+
+  'Reykjavik Open Pairs' =>
+  {
+    FORM => 'Pairs',
+    SCORING => 'MP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2017' =>
+      {
+        MEET => 'Reykjavik Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-01-27',
+            DATE_END => '2017-01-27'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Reykjavik Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-01-25',
+            DATE_END => '2018-01-26'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Reykjavik Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-01-31',
+            DATE_END => '2019-02-01'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        MEET => 'Reykjavik Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-30',
+            DATE_END => '2020-02-01'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Reykjavik Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-01-26',
+            DATE_END => '2023-01-27'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Reykjavik Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-01-25',
+            DATE_END => '2024-01-26'
+          } 
+        }
+      },
+    }
+  },
+
+  'Reykjavik Open Teams' =>
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2017' =>
+      {
+        MEET => 'Reykjavik Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-01-28',
+            DATE_END => '2017-01-29'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Reykjavik Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-01-27',
+            DATE_END => '2018-01-28'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Reykjavik Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-02-02',
+            DATE_END => '2019-02-03'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        MEET => 'Reykjavik Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-02-01',
+            DATE_END => '2020-02-02'
+          } 
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Reykjavik Bridge Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-01-28',
+            DATE_END => '2023-01-29'
           } 
         }
       },

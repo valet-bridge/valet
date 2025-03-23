@@ -95,13 +95,22 @@ my %MEETS_BALKAN =
         DATE_START => '2016-10-04',
         DATE_END => '2016-10-08'
       },
+      '2017' =>
+      {
+        MEET_ORDINAL => 10,
+        CITY => 'Stara Zagora',
+        COUNTRY => 'Bulgaria',
+        YEAR => 2017,
+        DATE_START => '2017-10-04',
+        DATE_END => '2017-10-05'
+      },
       '2018' =>
       {
         MEET_ORDINAL => 11,
         CITY => 'Stara Zagora',
         COUNTRY => 'Bulgaria',
         YEAR => 2018,
-        DATE_START => '2018-10-03',
+        DATE_START => '2018-10-01',
         DATE_END => '2018-10-04'
       },
       '2019' =>
@@ -111,7 +120,7 @@ my %MEETS_BALKAN =
         CITY => 'Stara Zagora',
         COUNTRY => 'Bulgaria',
         YEAR => 2019,
-        DATE_START => '2019-10-04',
+        DATE_START => '2019-10-02',
         DATE_END => '2019-10-06'
       },
       '2021' =>
@@ -138,6 +147,15 @@ my %MEETS_BALKAN =
         YEAR => 2023,
         DATE_START => '2023-10-04',
         DATE_END => '2023-10-05'
+      },
+      '2024' =>
+      {
+        MEET_ORDINAL => 16,
+        CITY => 'Stara Zagora',
+        COUNTRY => 'Bulgaria',
+        YEAR => 2024,
+        DATE_START => '2024-10-09',
+        DATE_END => '2024-10-10'
       },
     }
   },
@@ -603,6 +621,110 @@ my %TOURNAMENTS_BALKAN =
             DATE_START => '2015-10-15',
             DATE_END => '2015-10-15'
           } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Balkan Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-10-05',
+            DATE_END => '2016-10-06'
+          },
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Balkan Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-10-04',
+            DATE_END => '2017-10-05'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Balkan Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-10-03',
+            DATE_END => '2018-10-04'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Balkan Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-10-02',
+            DATE_END => '2019-10-03'
+          },
+        }
+      },
+      '2021' =>
+      {
+        MEET => 'Balkan Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-10-06',
+            DATE_END => '2021-10-07'
+          },
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Balkan Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-10-05',
+            DATE_END => '2022-10-06'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'Balkan Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-10-04',
+            DATE_END => '2023-10-05'
+          },
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Balkan Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-10-09',
+            DATE_END => '2024-10-10'
+          },
         }
       },
     }
