@@ -142,6 +142,12 @@ my %MEETS_CHINA =
         DATE_START => '2015-11-06',
         DATE_END => '2015-11-08'
       },
+      '2019' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-11-09',
+        DATE_END => '2019-11-16'
+      },
     }
   },
 
@@ -167,6 +173,24 @@ my %MEETS_CHINA =
         DATE_START => '2013-10-19',
         DATE_END => '2013-10-26'
       },
+      '2018A' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-10-17',
+        DATE_END => '2018-10-24'
+      },
+      '2018B' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-11-14',
+        DATE_END => '2018-11-21'
+      },
+      '2019' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-08-10',
+        DATE_END => '2019-08-15'
+      },
     }
   },
 
@@ -180,6 +204,25 @@ my %MEETS_CHINA =
         DATE_START => '2007-04-15',
         DATE_END => '2007-04-16'
       },
+      '2019' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-05-07',
+        DATE_END => '2019-05-12'
+      },
+    }
+  },
+
+  'Chinese University Championships' =>
+  {
+    EDITIONS =>
+    {
+      '2018' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-07-23',
+        DATE_END => '2018-07-29'
+      },
     }
   },
 
@@ -190,11 +233,29 @@ my %MEETS_CHINA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
-        YEAR => 2000,
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
+        YEAR => 2016,
+        DATE_START => '2016-10-22',
+        DATE_END => '2016-10-27'
+      },
+      '2017' =>
+      {
+        YEAR => 2017,
+        DATE_START => '2017-10-28',
+        DATE_END => '2017-11-11'
+      },
+      '2018' =>
+      {
+        YEAR => 2018,
+        DATE_START => '2018-10-26',
+        DATE_END => '2018-11-08'
+      },
+      '2019' =>
+      {
+        YEAR => 2019,
+        DATE_START => '2019-10-04',
+        DATE_END => '2019-10-05'
       },
     }
   },
@@ -395,15 +456,15 @@ my %TOURNAMENTS_CHINA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-12-06',
+            DATE_END => '2018-12-09'
           },
         }
       },
@@ -471,6 +532,84 @@ my %TOURNAMENTS_CHINA =
     }
   },
 
+  'China Elite Winter Junior Teams' =>
+  {
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'U26',
+
+    EDITIONS =>
+    {
+      '2019' =>
+      {
+        MEET => 'China Elite Tournament',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-11-10',
+            DATE_END => '2019-11-12'
+          } 
+        }
+      },
+    }
+  },
+
+  'China Elite Winter Mixed Teams' =>
+  {
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2019' =>
+      {
+        MEET => 'China Elite Tournament',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-11-09',
+            DATE_END => '2019-11-11'
+          } 
+        }
+      },
+    }
+  },
+
+  'China Elite Winter U26 Women Teams' =>
+  {
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'U26',
+
+    EDITIONS =>
+    {
+      '2019' =>
+      {
+        MEET => 'China Elite Tournament',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-11-10',
+            DATE_END => '2019-11-15'
+          } 
+        }
+      },
+    }
+  },
+
   'China Elite Winter Teams' =>
   {
     ORIGIN => 'National',
@@ -523,6 +662,45 @@ my %TOURNAMENTS_CHINA =
             major => 'ROUND',
             DATE_START => '2015-11-06',
             DATE_END => '2015-11-08'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'China Elite Tournament',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-11-11',
+            DATE_END => '2019-11-16'
+          } 
+        }
+      },
+    }
+  },
+
+  'China Elite Winter Women Teams' =>
+  {
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2019' =>
+      {
+        MEET => 'China Elite Tournament',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-11-11',
+            DATE_END => '2019-11-16'
           } 
         }
       },
@@ -814,6 +992,47 @@ my %TOURNAMENTS_CHINA =
           } 
         }
       },
+      '2024' =>
+      {
+        SPONSOR => 'Geely Automobile',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-08-07',
+            DATE_END => '2024-08-11'
+          },
+        }
+      },
+    }
+  },
+
+  'Chinese Inter-City Mixed Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2024' =>
+      {
+        SPONSOR => 'Geely Automobile',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2024,
+            major => 'ROUND',
+            DATE_START => '2024-08-07',
+            DATE_END => '2024-08-10'
+          },
+        }
+      },
     }
   },
 
@@ -981,6 +1200,57 @@ my %TOURNAMENTS_CHINA =
           },
         }
       },
+      '2018A' =>
+      {
+        MEET => 'Chinese Club Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-10-17',
+            DATE_END => '2018-10-24'
+          },
+        }
+      },
+      '2018B' =>
+      {
+        MEET => 'Chinese Club Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-11-14',
+            DATE_END => '2018-11-21'
+          },
+        }
+      },
+      '2019A' =>
+      {
+        # Really second league.
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-07-05',
+            DATE_END => '2019-07-09'
+          },
+        }
+      },
+      '2019B' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-12-12',
+            DATE_END => '2019-12-19'
+          },
+        }
+      },
     }
   },
 
@@ -1034,20 +1304,20 @@ my %TOURNAMENTS_CHINA =
     ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Mixed',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-01-12',
+            DATE_END => '2019-01-19'
           },
         }
       },
@@ -1096,6 +1366,19 @@ my %TOURNAMENTS_CHINA =
           } 
         }
       },
+      '2019' =>
+      {
+        MEET => 'Chinese Team Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-05-09',
+            DATE_END => '2019-05-12'
+          },
+        }
+      },
     }
   },
 
@@ -1124,29 +1407,69 @@ my %TOURNAMENTS_CHINA =
           } 
         }
       },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-12-07',
+            DATE_END => '2019-12-07'
+          } 
+        }
+      },
     }
   },
 
-  'Chinese University Teams' =>
+  'Chinese University U26 Teams' =>
   {
     %GLOBAL,
     ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'U26',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
+        MEET => 'Chinese University Championships',
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-07-23',
+            DATE_END => '2018-07-29'
+          },
+        }
+      },
+    }
+  },
+
+  'Chinese University U26 Women Teams' =>
+  {
+    %GLOBAL,
+    ORIGIN => 'National',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'U26',
+
+    EDITIONS =>
+    {
+      '2018' =>
+      {
+        MEET => 'Chinese University Championships',
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-07-23',
+            DATE_END => '2018-07-29'
           },
         }
       },
@@ -1192,6 +1515,33 @@ my %TOURNAMENTS_CHINA =
             major => 'SEGMENT',
             DATE_START => '2013-10-25',
             DATE_END => '2013-10-26'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Chinese Club Championships',
+        MEET_TAG => '2018A',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-10-21',
+            DATE_END => '2018-10-24'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Chinese Club Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-08-10',
+            DATE_END => '2019-08-15'
           },
         }
       },
@@ -1268,6 +1618,19 @@ my %TOURNAMENTS_CHINA =
             DATE_START => '2014-04-17',
             DATE_END => '2014-04-18'
           } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Chinese Team Championships',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-05-07',
+            DATE_END => '2019-05-08'
+          },
         }
       },
     }
@@ -1463,15 +1826,15 @@ my %TOURNAMENTS_CHINA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-04-15',
+            DATE_END => '2019-04-21'
           },
         }
       },
@@ -1531,15 +1894,15 @@ my %TOURNAMENTS_CHINA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-07-14',
+            DATE_END => '2018-07-15'
           },
         }
       },
@@ -1731,10 +2094,47 @@ my %TOURNAMENTS_CHINA =
     }
   },
 
+  'HNA Mixed Teams' =>
+  {
+    SPONSOR => 'Hainan Air',
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2017' =>
+      {
+        MEET => 'Hainan Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-11-06',
+            DATE_END => '2017-11-11'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Hainan Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-11-03',
+            DATE_END => '2018-11-06'
+          },
+        }
+      },
+    }
+  },
+
   'HNA Open Teams' =>
   {
-    %GLOBAL,
-    ORIGIN => 'National',
     SPONSOR => 'Hainan Air',
     FORM => 'Teams',
     SCORING => 'IMP',
@@ -1864,6 +2264,58 @@ my %TOURNAMENTS_CHINA =
           },
         }
       },
+      '2016' =>
+      {
+        MEET => 'Hainan Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-10-22',
+            DATE_END => '2016-10-27'
+          },
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Hainan Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-10-28',
+            DATE_END => '2017-11-01'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Hainan Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-10-26',
+            DATE_END => '2018-11-08'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Hainan Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-10-04',
+            DATE_END => '2019-10-05'
+          },
+        }
+      },
     }
   },
 
@@ -1878,15 +2330,15 @@ my %TOURNAMENTS_CHINA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-12-08',
+            DATE_END => '2018-12-08'
           },
         }
       },
@@ -1904,15 +2356,27 @@ my %TOURNAMENTS_CHINA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-11-16',
+            DATE_END => '2018-11-19'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-10-17',
+            DATE_END => '2019-10-20'
           },
         }
       },
@@ -2232,20 +2696,32 @@ my %TOURNAMENTS_CHINA =
     ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
+    GENDER => 'Mixed',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2016,
+            DATE_START => '2016-10-29',
+            DATE_END => '2016-11-02'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2018,
+            DATE_START => '2018-11-09',
+            DATE_END => '2018-11-09'
           },
         }
       },
@@ -2263,15 +2739,27 @@ my %TOURNAMENTS_CHINA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-11-09',
+            DATE_END => '2018-11-09'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-10-06',
+            DATE_END => '2019-10-06'
           },
         }
       },
@@ -2285,19 +2773,19 @@ my %TOURNAMENTS_CHINA =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'Seniors',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2016,
+            DATE_START => '2016-11-03',
+            DATE_END => '2016-11-05'
           },
         }
       },
@@ -2380,15 +2868,27 @@ my %TOURNAMENTS_CHINA =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-11-29',
+            DATE_END => '2018-12-02'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2019,
+            DATE_START => '2019-11-17',
+            DATE_END => '2019-11-24'
           },
         }
       },

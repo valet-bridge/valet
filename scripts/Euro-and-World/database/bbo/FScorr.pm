@@ -164,6 +164,7 @@ my %FORM_CORRECTIONS = (
     54161,
     59930,
     66774,
+    73271,
     77282],
   'Reykjavik Bridge Festival' => [
     61256,
@@ -923,6 +924,8 @@ my %FORM_CORRECTIONS = (
     28432, 28472],
   'Salvador Assael Pro-Am Pairs' => [
     28474, 28501, 28502],
+  'Saudi-Arabian Open Trials' => [
+    62629, 62634],
   'SEA Mixed Pairs' => [
     21189, 21190, 21191, 21192, 21194, 21195, 21196, 21197, 21198,
     21220, 21221, 21222, 21223, 21224, 21225, 21226, 21227],

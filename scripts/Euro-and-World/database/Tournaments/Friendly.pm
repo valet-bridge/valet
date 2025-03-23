@@ -1127,6 +1127,21 @@ my %TOURNAMENTS_FRIENDLY =
           } 
         }
       },
+      '2023' =>
+      {
+        GENDER => 'Open',
+        AGE => 'Open',
+
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-06-25',
+            DATE_END => '2023-06-25'
+          } 
+        }
+      },
     }
   },
 
@@ -1141,15 +1156,39 @@ my %TOURNAMENTS_FRIENDLY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2016' =>
       {
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2016,
+            DATE_START => '2016-10-18',
+            DATE_END => '2016-10-19'
+          },
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-11-22',
+            DATE_END => '2018-11-24'
+          },
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-10-15',
+            DATE_END => '2019-10-15'
           },
         }
       },
@@ -2153,20 +2192,21 @@ my %TOURNAMENTS_FRIENDLY =
     ORIGIN => 'National',
     FORM => 'Teams',
     SCORING => 'IMP',
-    GENDER => 'Open',
-    AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
+        GENDER => 'Open',
+        AGE => 'U26',
+
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-           DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-06-26',
+            DATE_END => '2018-06-26'
           },
         }
       },
@@ -2184,15 +2224,15 @@ my %TOURNAMENTS_FRIENDLY =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
         CHAPTERS =>
         {
           'SINGLE' => 
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-02-08',
+            DATE_END => '2019-02-08'
           },
         }
       },

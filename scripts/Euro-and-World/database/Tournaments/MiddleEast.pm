@@ -25,11 +25,17 @@ my %MEETS_MIDDLEEAST =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
-        YEAR => 2000,
-        DATE_START => '2000-01-01',
-        DATE_END => '2000-01-01'
+        YEAR => 2019,
+        DATE_START => '2019-02-21',
+        DATE_END => '2019-02-25'
+      },
+      '2024' =>
+      {
+        YEAR => 2024,
+        DATE_START => '2024-11-12',
+        DATE_END => '2024-11-17'
       },
     }
   },
@@ -120,7 +126,7 @@ my %MEETS_MIDDLEEAST =
         CITY => 'Dubai',
         COUNTRY => 'UAE',
         YEAR => 2017,
-        DATE_START => '2017-04-03',
+        DATE_START => '2017-04-01',
         DATE_END => '2017-04-11'
       },
       '2019' =>
@@ -129,8 +135,8 @@ my %MEETS_MIDDLEEAST =
         CITY => 'Amman',
         COUNTRY => 'Jordan',
         YEAR => 2019,
-        DATE_START => '2019-05-23',
-        DATE_END => '2019-05-30'
+        DATE_START => '2019-06-23',
+        DATE_END => '2019-06-30'
       },
       '2021' =>
       {
@@ -140,12 +146,84 @@ my %MEETS_MIDDLEEAST =
         DATE_START => '2021-12-08',
         DATE_END => '2021-12-14'
       },
+      '2023' =>
+      {
+        MEET_ORDINAL => 22,
+        CITY => 'Lahore',
+        COUNTRY => 'India',
+        YEAR => 2023,
+        DATE_START => '2023-05-06',
+        DATE_END => '2023-05-13'
+      },
     }
   }
 );
 
 my %TOURNAMENTS_MIDDLEEAST =
 (
+  'Arab Nations Open Teams' => 
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Open',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2019' =>
+      {
+        MEET => 'Arab Nations Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-02-21',
+            DATE_END => '2019-02-25'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Arab Nations Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-11-12',
+            DATE_END => '2024-11-17'
+          } 
+        }
+      },
+    }
+  },
+
+  'Arab Nations Women Teams' => 
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Women',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2024' =>
+      {
+        MEET => 'Arab Nations Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-11-12',
+            DATE_END => '2024-11-17'
+          } 
+        }
+      },
+    }
+  },
+
   'BFAME Friendship Pairs' => 
   {
     FORM => 'Pairs',
@@ -179,6 +257,57 @@ my %TOURNAMENTS_MIDDLEEAST =
             DATE_START => '2015-05-27',
             DATE_END => '2015-05-27'
           } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'BFAME Championship',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-06-23',
+            DATE_END => '2019-06-23'
+          } 
+        }
+      },
+    }
+  },
+
+  'BFAME Mixed Teams' => 
+  {
+    FORM => 'Teams',
+    SCORING => 'IMP',
+    GENDER => 'Mixed',
+    AGE => 'Open',
+
+    EDITIONS =>
+    {
+      '2019' =>
+      {
+        MEET => 'BFAME Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-06-24',
+            DATE_END => '2019-06-30'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'BFAME Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-05-06',
+            DATE_END => '2023-05-13'
+          },
         }
       },
     }
@@ -343,6 +472,45 @@ my %TOURNAMENTS_MIDDLEEAST =
           } 
         }
       },
+      '2017' =>
+      {
+        MEET => 'BFAME Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-04-01',
+            DATE_END => '2017-04-11'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'BFAME Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-06-24',
+            DATE_END => '2019-06-30'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'BFAME Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-05-06',
+            DATE_END => '2023-05-13'
+          },
+        }
+      },
     }
   },
 
@@ -413,6 +581,45 @@ my %TOURNAMENTS_MIDDLEEAST =
             DATE_START => '2015-06-03',
             DATE_END => '2015-06-03'
           } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'BFAME Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-04-01',
+            DATE_END => '2017-04-11'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'BFAME Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-06-24',
+            DATE_END => '2019-06-30'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'BFAME Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-05-06',
+            DATE_END => '2023-05-13'
+          },
         }
       },
     }
@@ -526,6 +733,45 @@ my %TOURNAMENTS_MIDDLEEAST =
             DATE_START => '2015-06-02',
             DATE_END => '2015-06-02'
           } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'BFAME Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-04-01',
+            DATE_END => '2017-04-11'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'BFAME Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-06-24',
+            DATE_END => '2019-06-30'
+          },
+        }
+      },
+      '2023' =>
+      {
+        MEET => 'BFAME Championship',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2023,
+            DATE_START => '2023-05-06',
+            DATE_END => '2023-05-13'
+          },
         }
       },
     }
@@ -667,7 +913,7 @@ my %TOURNAMENTS_MIDDLEEAST =
       },
       '2016' =>
       {
-        # During Tunisian bridge festival
+        # During Tunisian Bridge Festival
         ORDINAL => 12,
         CITY => 'Hammamet',
         COUNTRY => 'Tunisia',
@@ -678,6 +924,43 @@ my %TOURNAMENTS_MIDDLEEAST =
             YEAR => 2016,
             DATE_START => '2016-10-26',
             DATE_END => '2016-10-30'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-10-27',
+            DATE_END => '2017-10-29'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-10-24',
+            DATE_END => '2018-10-28'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        ORDINAL => 11,
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-10-16',
+            DATE_END => '2019-10-20'
           } 
         }
       },
@@ -757,22 +1040,22 @@ my %TOURNAMENTS_MIDDLEEAST =
   {
     %GLOBAL,
     ORIGIN => 'National',
-    FORM => 'Teams',
-    SCORING => 'IMP',
+    FORM => 'Pairs',
+    SCORING => 'MP',
     GENDER => 'Open',
     AGE => 'Open',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2019' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2019,
+            DATE_START => '2019-04-25',
+            DATE_END => '2019-04-25'
           },
         }
       },

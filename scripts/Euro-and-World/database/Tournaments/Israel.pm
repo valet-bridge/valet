@@ -326,7 +326,7 @@ my %MEETS_ISRAEL =
         CITY => 'Eilat',
         YEAR => 2016,
         DATE_START => '2016-11-07',
-        DATE_END => '2016-11-16'
+        DATE_END => '2016-11-17'
       },
       '2017' =>
       {
@@ -526,6 +526,45 @@ my %TOURNAMENTS_ISRAEL =
             DATE_START => '2016-06-08',
             DATE_END => '2016-06-08'
           } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Israel Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-07-05',
+            DATE_END => '2017-07-05'
+          },
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Israel Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-06-27',
+            DATE_END => '2018-06-27'
+          },
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Israel Bridge Festival',
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-06-05',
+            DATE_END => '2019-06-05'
+          },
         }
       },
     }
@@ -745,15 +784,39 @@ my %TOURNAMENTS_ISRAEL =
 
     EDITIONS =>
     {
-      '2000' =>
+      '2022' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2022,
+            DATE_START => '2022-02-19',
+            DATE_END => '2022-02-19'
+          },
+        }
+      },
+      '2023' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2023,
+            DATE_START => '2023-01-14',
+            DATE_END => '2023-01-14'
+          },
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' =>
+          {
+            YEAR => 2024,
+            DATE_START => '2024-04-06',
+            DATE_END => '2024-04-06'
           },
         }
       },
@@ -903,6 +966,42 @@ my %TOURNAMENTS_ISRAEL =
             major => 'SESSION|ROUND',
             DATE_START => '2016-05-21',
             DATE_END => '2016-05-21'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-05-06',
+            DATE_END => '2017-05-06'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-05-12',
+            DATE_END => '2018-05-12'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-04-13',
+            DATE_END => '2019-04-13'
           } 
         }
       },
@@ -1057,6 +1156,54 @@ my %TOURNAMENTS_ISRAEL =
             major => 'SEGMENT',
             DATE_START => '2015-12-12',
             DATE_END => '2015-12-12'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-01-07',
+            DATE_END => '2017-01-07'
+          } 
+        }
+      },
+      '2018A' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-01-06',
+            DATE_END => '2018-01-06'
+          } 
+        }
+      },
+      '2018B' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-12-14',
+            DATE_END => '2018-12-15'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-12-21',
+            DATE_END => '2019-12-21'
           } 
         }
       },
@@ -1227,6 +1374,42 @@ my %TOURNAMENTS_ISRAEL =
           } 
         }
       },
+      '2017' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-09-02',
+            DATE_END => '2017-09-02'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-08-18',
+            DATE_END => '2018-08-18'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-08-03',
+            DATE_END => '2019-08-03'
+          } 
+        }
+      },
     }
   },
 
@@ -1309,6 +1492,54 @@ my %TOURNAMENTS_ISRAEL =
           } 
         }
       },
+      '2018' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-01-26',
+            DATE_END => '2018-01-27'
+          } 
+        }
+      },
+      '2020' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2020,
+            DATE_START => '2020-01-17',
+            DATE_END => '2020-01-18'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-05-01',
+            DATE_END => '2022-05-01'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-01-20',
+            DATE_END => '2024-01-20'
+          } 
+        }
+      },
     }
   },
 
@@ -1346,19 +1577,19 @@ my %TOURNAMENTS_ISRAEL =
     FORM => 'Teams',
     SCORING => 'IMP',
     GENDER => 'Open',
-    AGE => 'Open',
+    AGE => 'U21',
 
     EDITIONS =>
     {
-      '2000' =>
+      '2018' =>
       {
         CHAPTERS =>
         {
           'SINGLE' =>
           {
-            YEAR => 2000,
-            DATE_START => '2000-01-01',
-            DATE_END => '2000-01-01'
+            YEAR => 2018,
+            DATE_START => '2018-01-12',
+            DATE_END => '2018-01-13'
           },
         }
       },
@@ -1436,6 +1667,18 @@ my %TOURNAMENTS_ISRAEL =
             DATE_START => '2011-07-11',
             DATE_END => '2011-07-12'
           } 
+        }
+      },
+      '2019' =>
+      {
+        CHAPTERS =>
+        {
+          'C0' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-07-31',
+            DATE_END => '2019-08-04'
+          },
         }
       },
     }
@@ -1527,6 +1770,97 @@ my %TOURNAMENTS_ISRAEL =
             YEAR => 2015,
             DATE_START => '2015-11-19',
             DATE_END => '2015-11-19'
+          } 
+        }
+      },
+      '2016' =>
+      {
+        MEET => 'Red Sea International Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2016,
+            DATE_START => '2016-11-16',
+            DATE_END => '2016-11-17'
+          } 
+        }
+      },
+      '2017' =>
+      {
+        MEET => 'Red Sea International Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2017,
+            DATE_START => '2017-11-16',
+            DATE_END => '2017-11-16'
+          } 
+        }
+      },
+      '2018' =>
+      {
+        MEET => 'Red Sea International Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2018,
+            DATE_START => '2018-11-15',
+            DATE_END => '2018-11-15'
+          } 
+        }
+      },
+      '2019' =>
+      {
+        MEET => 'Red Sea International Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2019,
+            DATE_START => '2019-11-14',
+            DATE_END => '2019-11-14'
+          } 
+        }
+      },
+      '2021' =>
+      {
+        MEET => 'Red Sea International Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2021,
+            DATE_START => '2021-11-18',
+            DATE_END => '2021-11-18'
+          } 
+        }
+      },
+      '2022' =>
+      {
+        MEET => 'Red Sea International Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2022,
+            DATE_START => '2022-11-17',
+            DATE_END => '2022-11-17'
+          } 
+        }
+      },
+      '2024' =>
+      {
+        MEET => 'Red Sea International Festival',
+        CHAPTERS =>
+        {
+          'SINGLE' => 
+          {
+            YEAR => 2024,
+            DATE_START => '2024-11-14',
+            DATE_END => '2024-11-14'
           } 
         }
       },
