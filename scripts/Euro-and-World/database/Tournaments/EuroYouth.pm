@@ -256,15 +256,15 @@ my %MEETS_EURO_YOUTH =
         DATE_END => '2019-07-11'
       },
 
-      '2023' =>
+      '2022' =>
       {
         # http://db.eurobridge.org/repository/competitions/22Veldhoven/microsite/results.htm
         MEET_ORDINAL => 28,
-        YEAR => 2023,
+        YEAR => 2022,
         CITY => 'Veldhoven',
         COUNTRY => 'Netherlands',
-        DATE_START => '2023-07-20',
-        DATE_END => '2023-07-26'
+        DATE_START => '2022-07-19',
+        DATE_END => '2022-07-26'
       },
 
       '2024' =>
@@ -404,17 +404,17 @@ my %TOURNAMENTS_EURO_YOUTH =
           }
         }
       },
-      '2023' =>
+      '2022' =>
       {
         MEET => 'European Youth Team Championships',
         CHAPTERS => 
         {
           'C0' => 
           {
-            YEAR => 2023,
+            YEAR => 2022,
             MOVEMENT => 'Round-robin',
-            DATE_START => '2023-07-20',
-            DATE_END => '2023-07-23'
+            DATE_START => '2022-07-20',
+            DATE_END => '2022-07-26'
           }
         }
       },
@@ -812,17 +812,17 @@ my %TOURNAMENTS_EURO_YOUTH =
           }
         }
       },
-      '2023' =>
+      '2022' =>
       {
         MEET => 'European Youth Team Championships',
         CHAPTERS => 
         {
           'C0' => 
           {
-            YEAR => 2023,
+            YEAR => 2022,
             MOVEMENT => 'Round-robin',
-            DATE_START => '2023-07-20',
-            DATE_END => '2023-07-26'
+            DATE_START => '2022-07-20',
+            DATE_END => '2022-07-26'
           }
         }
       },
@@ -1358,20 +1358,6 @@ my %TOURNAMENTS_EURO_YOUTH =
           }
         }
       },
-      '2023' =>
-      {
-        MEET => 'European Youth Team Championships',
-        CHAPTERS => 
-        {
-          'C0' => 
-          {
-            YEAR => 2023,
-            MOVEMENT => 'Round-robin',
-            DATE_START => '2023-07-20',
-            DATE_END => '2023-07-26'
-          }
-        }
-      },
       '2024' =>
       {
         MEET => 'European Youth Team Championships',
@@ -1738,17 +1724,17 @@ my %TOURNAMENTS_EURO_YOUTH =
           }
         }
       },
-      '2023' =>
+      '2022' =>
       {
         MEET => 'European Youth Team Championships',
         CHAPTERS => 
         {
           'C0' => 
           {
-            YEAR => 2023,
+            YEAR => 2022,
             MOVEMENT => 'Round-robin',
-            DATE_START => '2023-07-20',
-            DATE_END => '2023-07-23'
+            DATE_START => '2022-07-20',
+            DATE_END => '2022-07-26'
           }
         }
       },
@@ -1810,20 +1796,21 @@ my %TOURNAMENTS_EURO_YOUTH =
 
     EDITIONS =>
     {
-      '2024' =>
+      '2022' =>
       {
         MEET => 'European Youth Team Championships',
         CHAPTERS => 
         {
           'C0' => 
           {
-            YEAR => 2023,
+            YEAR => 2022,
             MOVEMENT => 'Round-robin',
-            DATE_START => '2023-07-20',
-            DATE_END => '2023-07-23'
+            DATE_START => '2022-07-20',
+            DATE_END => '2022-07-26'
           }
         }
       },
+
       '2024' =>
       {
         MEET => 'European Youth Team Championships',

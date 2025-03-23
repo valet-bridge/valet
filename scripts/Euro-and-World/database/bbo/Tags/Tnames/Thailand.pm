@@ -15,12 +15,12 @@ our @EXPORT = qw(set_hash);
 my @MULTI_WORDS =
 (
   'Bangkok Open Teams',
+  'Thailand Junior Teams',
   'Thailand Mixed Teams',
   'Thailand Mixed Team Trials',
   'Thailand Open Teams',
   'Thailand Open Team Trials',
   'Thailand Women Teams',
-  'Thailand University Games',
   'Thailand Youth Games Mixed Teams',
   'Thailand Youth Games Open Teams',
 );
@@ -31,9 +31,6 @@ my %MULTI_TYPOS =
     'thailand open team championships',
     'thailand team championship',
     'thailand teams championship'],
-  'Thailand University Games' => [
-    'university game of thailand',
-    'university games of thailand'],
   'Thailand Youth Games Open Teams' => [
     'thailand national youth team games'],
 );

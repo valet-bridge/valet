@@ -15,8 +15,10 @@ our @EXPORT = qw(set_hash);
 my @MULTI_WORDS =
 (
   'Bangkok Bridge Festival',
+  'Thailand Championship',
   'Thailand National Games',
   'Thailand National Youth Games',
+  'Thailand University Games'
 );
 
 my %MULTI_TYPOS =
@@ -29,7 +31,10 @@ my %MULTI_TYPOS =
   'Thailand National Youth Games' => [
     'thailand youth games',
     'thailand youth national games',
-    'thailand nationnal youth games']
+    'thailand nationnal youth games'],
+  'Thailand University Games' => [
+    'university game of thailand',
+    'university games of thailand'],
 );
 
 my %SINGLE_TYPOS =
@@ -37,12 +42,6 @@ my %SINGLE_TYPOS =
   'Bangkok Bridge Festival' => [
     'bbf', 
     'bff'],
-  'Thailand National Games' => [
-    'thailand nation games'],
-  'Thailand National Youth Games' => [
-    'thailand nationnal youth games',
-    'thailand youth national games',
-    'thailand youth games'],
 );
 
 sub set_hash

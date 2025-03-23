@@ -5738,7 +5738,7 @@ my %TOURNAMENTS_EUROADULT =
           'C0' => 
           {
             YEAR => 2024,
-            MOVEMENT => 'Round-robin',
+            MOVEMENT => 'Swiss',
             major => 'ROUND',
             DATE_START => '2024-04-15',
             DATE_END => '2024-04-17'
